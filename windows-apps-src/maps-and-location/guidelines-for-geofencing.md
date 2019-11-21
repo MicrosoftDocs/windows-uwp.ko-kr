@@ -1,27 +1,27 @@
 ---
 Description: 앱에서 지오펜스에 대한 다음 모범 사례를 따릅니다.
-title: 지오펜스 앱에 대한 지침
+title: 지오펜싱 앱에 대한 지침
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 지오펜싱
 ms.localizationpriority: medium
-ms.openlocfilehash: 4580662bf4caf5124caeb34883023121db7ce30f
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6b1f328d45e626e1c7eb633165aad3671f1645e5
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370672"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260387"
 ---
-# <a name="guidelines-for-geofencing-apps"></a>지오펜스 앱에 대한 지침
+# <a name="guidelines-for-geofencing-apps"></a>지오펜싱 앱에 대한 지침
 
 
 
 
-**중요 한 Api**
+**중요 API**
 
--   [**지역 구분 클래스 (XAML)** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing.Geofence)
--   [**Geolocator 클래스 (XAML)** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator)
+-   [**Geofence class (XAML)** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing.Geofence)
+-   [**Geolocator class (XAML)** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator)
 
 앱에서 [**지오펜스**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing)에 대한 다음 모범 사례를 따릅니다.
 
@@ -129,7 +129,7 @@ GPS가 가장 정확한 위치 정보를 제공할 수 있지만, 지오펜싱�
 
 * [지오펜스 설정](https://docs.microsoft.com/windows/uwp/maps-and-location/set-up-a-geofence)
 * [현재 위치 가져오기](https://docs.microsoft.com/windows/uwp/maps-and-location/get-location)
-* [UWP 위치 샘플 (지리적 위치)](https://go.microsoft.com/fwlink/p/?linkid=533278)
+* [UWP location sample (geolocation)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Geolocation)
  
 
  

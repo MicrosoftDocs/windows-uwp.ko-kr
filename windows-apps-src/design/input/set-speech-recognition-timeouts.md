@@ -8,12 +8,12 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f321b9ec43f2c844854600b8260a7fdc189c0446
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0df5f6c2e12b3b2e761ce45f95930dc179ef367f
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365388"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258260"
 ---
 # <a name="set-speech-recognition-timeouts"></a>음성 인식 시간 제한 설정
 
@@ -31,7 +31,7 @@ ms.locfileid: "66365388"
 -   BabbleTimeout - SpeechRecognizer가 음성 입력이 종료되었다고 가정하고 인식 작업을 종료하기 전에 인식 불가능한 소리(왁자지껄)를 계속 수신하는 시간입니다.
 -   EndSilenceTimeout - SpeechRecognizer가 (인식 결과가 생성된 후에) 침묵을 감지하고 음성 입력이 종료되었다고 가정하는 시간입니다.
 
-**참고**  인식기 당 기준 시간 초과 설정할 수 있습니다.
+**Note**  Timeouts can be set on a per-recognizer basis.
 
  
 
@@ -47,7 +47,7 @@ recognizer.Timeouts.EndSilenceTimeout = TimeSpan.FromSeconds(1.2);
 
 * [음성 조작](speech-interactions.md)
 **샘플**
-* [음성 인식 및 음성 합성 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Speech recognition and speech synthesis sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
  
 
  

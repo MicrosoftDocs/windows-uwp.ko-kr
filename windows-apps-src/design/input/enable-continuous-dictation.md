@@ -8,12 +8,12 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ad23831372b638e6afb36355e3ea8ca322e5d91d
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 73cfb6fd56b5ae06118ea01ef7ef0b3882db60da
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340274"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258000"
 ---
 # <a name="continuous-dictation"></a>연속 받아쓰기
 
@@ -21,12 +21,12 @@ ms.locfileid: "71340274"
 
 > **중요 API**: [**SpeechContinuousRecognitionSession**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession), [**ContinuousRecognitionSession**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.continuousrecognitionsession)
 
-[음성 인식](speech-recognition.md)에서 [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) 개체의 [**RecognizeAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizeasync) 또는 [**RecognizeWithUIAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizewithuiasync) 메서드를 사용하여 상대적으로 짧은 음성 입력을 캡처 및 인식하는 방법을 알아보았습니다. 예를 들어 SMS(Short Message Service) 메시지를 작성하거나 질문을 할 경우입니다.
+[음성 인식](speech-recognition.md)에서 [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizeasync) 개체의 [**RecognizeAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizewithuiasync) 또는 [**RecognizeWithUIAsync**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) 메서드를 사용하여 상대적으로 짧은 음성 입력을 캡처 및 인식하는 방법을 알아보았습니다. 예를 들어 SMS(Short Message Service) 메시지를 작성하거나 질문을 할 경우입니다.
 
 더 긴, 연속 음성 인식 세션(예: 세션 받아쓰기 또는 메일)의 경우 [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.continuousrecognitionsession)의 [**ContinuousRecognitionSession**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) 속성을 사용하여 [**SpeechContinuousRecognitionSession**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession) 개체를 가져오세요.
 
 > [!NOTE]
-> 받아쓰기 언어 지원은 앱이 실행 되는 [장치](https://docs.microsoft.com/windows/uwp/design/devices/) 에 따라 다릅니다. Pc와 노트북의 경우 en-us만 인식 되 고 Xbox 및 휴대폰은 음성 인식에서 지원 되는 모든 언어를 인식할 수 있습니다. 자세한 내용은 [음성 인식기 언어 지정](specify-the-speech-recognizer-language.md)을 참조 하세요.
+> Dictation language support depends on the [device](https://docs.microsoft.com/windows/uwp/design/devices/) where your app is running. For PCs and laptops, only en-US is recognized, while Xbox and phones can recognize all languages supported by speech recognition. For more info, see [Specify the speech recognizer language](specify-the-speech-recognizer-language.md).
 
 ## <a name="set-up"></a>설정
 
@@ -36,7 +36,7 @@ ms.locfileid: "71340274"
 - 받아쓰는 동안 UI를 업데이트하기 위한 UI 디스패처 참조
 - 사용자가 말한 누적된 단어를 추적하는 방법
 
-여기서는 [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) 인스턴스를 코드 숨김 클래스의 프라이빗 필드로 선언합니다. 단일 XAML(Extensible Application Markup Language) 페이지 이후에도 연속 받아쓰기를 유지하려는 경우 앱이 다른 곳에 참조를 저장해야 합니다.
+여기서는 [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) 인스턴스를 코드 숨김 클래스의 전용 필드로 선언합니다. 단일 XAML(Extensible Application Markup Language) 페이지 이후에도 연속 받아쓰기를 유지하려는 경우 앱이 다른 곳에 참조를 저장해야 합니다.
 
 ```CSharp
 private SpeechRecognizer speechRecognizer;
@@ -44,7 +44,7 @@ private SpeechRecognizer speechRecognizer;
 
 받아쓰기를 하는 동안 인식기는 백그라운드 스레드에서 이벤트를 발생시킵니다. 백그라운드 스레드가 XAML에서 UI를 직접 업데이트할 수 없으므로 앱은 디스패처를 사용하여 인식 이벤트에 대한 응답으로 UI를 업데이트해야 합니다.
 
-여기서는 UI 디스패처를 통해 나중에 초기화되는 프라이빗 필드를 선언합니다.
+여기서는 UI 디스패처를 통해 나중에 초기화되는 전용 필드를 선언합니다.
 
 ```CSharp
 // Speech events may originate from a thread other than the UI thread.
@@ -68,12 +68,12 @@ private StringBuilder dictatedTextBuilder;
 - 연속 인식 이벤트 처리기에서 앱의 UI를 업데이트하는 경우 UI 스레드 디스패처를 가져옵니다.
 - 음성 인식기를 초기화합니다.
 - 기본 제공 받아쓰기 문법을 컴파일합니다.
-    **참고**   음성 인식은 인식할 수 있는 어휘를 정의 하기 위한 제약 조건이 하나 이상 필요 합니다. 제약 조건을 지정하지 않으면 미리 정의된 받아쓰기 문법이 사용됩니다. [음성 인식](speech-recognition.md)을 참조하세요.
+    **Note**   Speech recognition requires at least one constraint to define a recognizable vocabulary. 제약 조건을 지정하지 않으면 미리 정의된 받아쓰기 문법이 사용됩니다. [음성 인식](speech-recognition.md)을 참조하세요.
 - 인식 이벤트에 대한 이벤트 수신기를 설정합니다.
 
 이 예제에서는 [**OnNavigatedTo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) 페이지 이벤트에서 음성 인식을 초기화합니다.
 
-1. 음성 인식기에 의해 발생한 이벤트가 백그라운드 스레드에서 발생하므로 UI 스레드 업데이트를 위해 디스패처에 대한 참조를 만듭니다. [**OnNavigatedTo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) 는 항상 UI 스레드에서 호출 됩니다.
+1. 음성 인식기에 의해 발생한 이벤트가 백그라운드 스레드에서 발생하므로 UI 스레드 업데이트를 위해 디스패처에 대한 참조를 만듭니다. [**OnNavigatedTo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) is always invoked on the UI thread.
 ```csharp
 this.dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
 ```
@@ -105,15 +105,15 @@ SpeechRecognitionCompilationResult result =
 
 특히 두 가지 이벤트가 중요합니다.
 
-- 인식기에서 일부 결과를 생성할 때 발생 하는 [**Resultgenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated)입니다.
-- 연속 인식 세션이 종료 될 때 발생 하는 [**완료**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.completed)된입니다.
+- [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated), which occurs when the recognizer has generated some results.
+- [**Completed**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.completed), which occurs when the continuous recognition session has ended.
 
 [  **ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) 이벤트는 사용자가 말할 때 발생합니다. 인식기는 지속적으로 사용자의 말을 수신 대기하고 음성 입력의 청크를 전달하는 이벤트를 주기적으로 발생시킵니다. 이벤트 인수의 [**Result**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.result) 속성을 사용하여 음성 입력을 검사하고, 이벤트 처리기에서 적절한 작업(예: StringBuilder 개체에 텍스트 추가)을 수행해야 합니다.
 
 [  **SpeechRecognitionResult**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResult)의 인스턴스인 [**Result**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.result) 속성은 음성 입력을 허용할 것인지 여부를 확인하는 데 유용합니다. [  **SpeechRecognitionResult**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResult)는 이를 위해 다음과 같은 두 가지 속성을 제공합니다.
 
-- [**상태**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionresult.status) 인식이 성공 했는지 여부를 나타냅니다. 인식은 다양한 이유로 실패할 수 있습니다.
-- [**신뢰도**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionresult.confidence) 는 인식기가 올바른 단어를 이해 했다는 상대적 신뢰도를 나타냅니다.
+- [**Status**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionresult.status) indicates whether the recognition was successful. 인식은 다양한 이유로 실패할 수 있습니다.
+- [**Confidence**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionresult.confidence) indicates the relative confidence that the recognizer understood the correct words.
 
 연속적인 인식을 지원하기 위한 기본 단계는 다음과 같습니다.  
 
@@ -125,7 +125,7 @@ speechRecognizer.ContinuousRecognitionSession.ResultGenerated +=
 
 2.  그런 다음 [**Confidence**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionresult.confidence) 속성을 확인합니다. 신뢰도 값이 [**Medium**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionConfidence) 이상인 경우 StringBuilder에 텍스트를 추가합니다. 또한 입력을 수집할 때 UI를 업데이트합니다.
 
-    **참고**  The [**RESULTGENERATED**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) 이벤트는 UI를 직접 업데이트할 수 없는 백그라운드 스레드에서 발생 합니다. 처리기에서 UI를 업데이트 해야 하는 경우 (\[Speech 및 TTS sample @ no__t-1), 디스패처의 [**Runasync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 메서드를 통해 ui 스레드에 업데이트를 디스패치합니다.
+    **Note**  the [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) event is raised on a background thread that cannot update the UI directly. If a handler needs to update the UI (as the \[Speech and TTS sample\] does), you must dispatch the updates to the UI thread through the [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) method of the dispatcher.
 ```csharp
 private async void ContinuousRecognitionSession_ResultGenerated(
       SpeechContinuousRecognitionSession sender,
@@ -165,7 +165,7 @@ speechRecognizer.ContinuousRecognitionSession.Completed +=
 
 4.  이벤트 처리기는 Status 속성을 확인하여 인식에 성공했는지 여부를 알아봅니다. 또한 사용자가 말하기를 중지하는 경우도 처리합니다. [  **TimeoutExceeded**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionResultStatus)는 사용자가 말하기를 마친 것을 의미하므로, 대개 인식에 성공한 것으로 간주됩니다. 한층 뛰어난 환경을 구현하기 위해 코드에서 이런 경우를 처리해야 합니다.
 
-    **참고**  The [**RESULTGENERATED**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) 이벤트는 UI를 직접 업데이트할 수 없는 백그라운드 스레드에서 발생 합니다. 처리기에서 UI를 업데이트 해야 하는 경우 (\[Speech 및 TTS sample @ no__t-1), 디스패처의 [**Runasync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 메서드를 통해 ui 스레드에 업데이트를 디스패치합니다.
+    **Note**  the [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) event is raised on a background thread that cannot update the UI directly. If a handler needs to update the UI (as the \[Speech and TTS sample\] does), you must dispatch the updates to the UI thread through the [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) method of the dispatcher.
 ```csharp
 private async void ContinuousRecognitionSession_Completed(
       SpeechContinuousRecognitionSession sender,
@@ -207,7 +207,7 @@ private async void ContinuousRecognitionSession_Completed(
 
 따라서 사용자가 계속 말할 때에는 그다지 좋지 않은 환경이 구현되며 [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) 이벤트를 발생시킬 수 있을 정도로 인식기의 신뢰도가 높아질 때까지 어떤 결과도 제공되지 않습니다.
 
-[  **HypothesisGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.hypothesisgenerated) 이벤트를 처리하여 이처럼 명백한 응답성 부족을 개선합니다. 이 이벤트는 인식기가 처리 중인 단어와 일치할 수 있는 새 집합을 생성할 때마다 발생합니다. 이벤트 인수는 현재 일치 항목을 포함하는 [**Hypothesis**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionhypothesisgeneratedeventargs.hypothesis) 속성을 제공합니다. 사용자가 계속 말할 때 해당 속성을 표시하여 처리가 진행되고 있음을 알려 줍니다. 신뢰도가 높고 인식 결과가 결정되면 임시 **Hypothesis** 결과를 [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) 이벤트에 제공된 최종 [**Result**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.result)로 바꿉니다.
+[  **HypothesisGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.hypothesisgenerated) 이벤트를 처리하여 이처럼 명백한 응답성 부족을 개선합니다. 이 이벤트는 인식기가 처리 중인 단어와 일치할 수 있는 새 집합을 생성할 때마다 발생합니다. 이벤트 인수는 현재 일치 항목을 포함하는 [**Hypothesis**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognitionhypothesisgeneratedeventargs.hypothesis) 속성을 제공합니다. 사용자가 계속 말할 때 해당 속성을 표시하여 처리가 진행되고 있음을 알려 줍니다. 신뢰도가 높고 인식 결과가 결정되면 임시 **Hypothesis** 결과를 [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.result) 이벤트에 제공된 최종 [**Result**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated)로 바꿉니다.
 
 여기서는 출력 [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)의 현재 값에 가설 텍스트 및 줄임표("...")를 추가합니다. 새로운 가설이 생성될 때 그리고 [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) 이벤트에서 최종 결과를 가져올 때까지 텍스트 상자의 내용이 업데이트됩니다.
 
@@ -244,8 +244,8 @@ if (speechRecognizer.State == SpeechRecognizerState.Idle)
 
 다음 두 가지 방법으로 인식을 중지할 수 있습니다.
 
--   [**Stopasync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.stopasync) 는 보류 중인 모든 인식 이벤트를 완료할 수 있도록 합니다. ([**resultgenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) 는 보류 중인 모든 인식 작업이 완료 될 때까지 계속 발생 합니다).
--   [**CancelAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.cancelasync) 는 인식 세션을 즉시 종료 하 고 보류 중인 결과를 모두 삭제 합니다.
+-   [**StopAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.stopasync) lets any pending recognition events complete ([**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) continues to be raised until all pending recognition operations are complete).
+-   [**CancelAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.cancelasync) terminates the recognition session immediately and discards any pending results.
 
 음성 인식기의 상태를 확인한 후 음성 인식기의 [**ContinuousRecognitionSession**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.cancelasync) 속성에 대한 [**CancelAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.continuousrecognitionsession) 메서드를 호출하여 세션을 중지합니다.
 
@@ -259,7 +259,7 @@ if (speechRecognizer.State != SpeechRecognizerState.Idle)
 > [!NOTE]
 > [  **ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) 이벤트는 [**CancelAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.cancelasync) 호출 후에 발생할 수 있습니다.  
 > 다중 스레딩 때문에 [**CancelAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated)가 호출될 때 [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.cancelasync) 이벤트가 계속 스택에 남아 있을 수 있습니다. 그런 경우 **ResultGenerated** 이벤트가 계속 발생합니다.  
-> 인식 세션을 취소할 때 프라이빗 필드를 설정한 경우 [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) 처리기에서 해당 값을 항상 확인하세요. 예를 들어 세션을 취소할 때 해당 값을 null로 설정한 경우 필드가 처리기에서 초기화된다고 가정하지 마세요.
+> 인식 세션을 취소할 때 전용 필드를 설정한 경우 [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) 처리기에서 해당 값을 항상 확인하세요. 예를 들어 세션을 취소할 때 해당 값을 null로 설정한 경우 필드가 처리기에서 초기화된다고 가정하지 마세요.
 
  
 
@@ -269,7 +269,7 @@ if (speechRecognizer.State != SpeechRecognizerState.Idle)
 * [음성 조작](speech-interactions.md)
 
 **샘플**
-* [음성 인식 및 음성 합성 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Speech recognition and speech synthesis sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
  
 
  

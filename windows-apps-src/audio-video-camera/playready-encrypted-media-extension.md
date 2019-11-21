@@ -1,31 +1,31 @@
 ---
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: 이 섹션에서는 이전 Windows 8.1 버전에서 Windows 10 버전으로 변경 된 내용을 지원 하도록 PlayReady 웹 앱을 수정 하는 방법을 설명 합니다.
+description: This section describes how to modify your PlayReady web app to support the changes made from the previous Windows 8.1 version to the Windows 10 version.
 title: PlayReady 암호화된 미디어 확장
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f4d72050ca30271a0ad2c6c2c39c857e2c10550
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: b673122d707e152d24c49d3bacf71ed52cdb0ae5
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061945"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256816"
 ---
 # <a name="playready-encrypted-media-extension"></a>PlayReady 암호화된 미디어 확장
 
 
 
-이 섹션에서는 이전 Windows 8.1 버전에서 Windows 10 버전으로 변경 된 내용을 지원 하도록 PlayReady 웹 앱을 수정 하는 방법을 설명 합니다.
+This section describes how to modify your PlayReady web app to support the changes made from the previous Windows 8.1 version to the Windows 10 version.
 
 Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹앱을 만들어, 콘텐츠 공급자가 정의한 액세스 규칙을 적용하는 한편 사용자에게 PlayReady 콘텐츠를 제공할 수 있습니다. 이 섹션에서는 HTML5와 JavaScript만 사용하여 기존 웹앱에 PlayReady 미디어 요소를 추가하는 방법을 설명합니다.
 
 ## <a name="whats-new-in-playready-encrypted-media-extension"></a>PlayReady 암호화된 미디어 확장의 새로운 기능
 
-이 섹션에서는 Windows 10에서 PlayReady 콘텐츠 보호를 사용 하도록 설정 하기 위해 PlayReady EME (암호화 된 미디어 확장)에 적용 된 변경 내용 목록을 제공 합니다.
+This section provides a list of changes made to the PlayReady Encrypted Media Extension (EME) to enable PlayReady content protection on Windows 10.
 
-다음 목록에서는 Windows 10 용 PlayReady 암호화 된 미디어 확장에 대 한 새로운 기능 및 변경 내용을 설명 합니다.
+The following list describes the new features and changes made to PlayReady Encrypted Media Extension for Windows 10:
 
 -   하드웨어 DRM(디지털 권한 관리)이 추가되었습니다.
 
@@ -34,10 +34,10 @@ Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹
 -   비영구적 라이선스를 미리 취득할 수 있습니다.
 -   한 메시지로 여러 라이선스를 취득할 수 있습니다.
 
-    Windows 8.1에서와 같이 여러 키 식별자 (KeyIDs)가 포함 된 PlayReady 개체를 사용 하거나 여러 KeyIDs로 [콘텐츠 암호 해독 모델 데이터 (CDMData)](https://go.microsoft.com/fwlink/p/?LinkID=626819) 를 사용할 수 있습니다.
+    You can either use a PlayReady object with multiple key identifiers (KeyIDs) as in Windows 8.1, or use [content decryption model data (CDMData)](https://docs.microsoft.com/previous-versions/windows/apps/dn457361(v=ieb.10)?redirectedfrom=MSDN) with multiple KeyIDs.
 
     > [!NOTE]
-    > Windows 10에서는 CDMData의 &lt;KeyID&gt;에서 여러 키 식별자를 사용할 수 있습니다.
+    > In Windows 10, multiple key identifiers are supported under &lt;KeyID&gt; in CDMData.
 
 -   실시간 만료 지원 또는 LDL(제한된 기간 라이선스)이 추가되었습니다.
 
@@ -262,13 +262,13 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 ```
 
 > [!NOTE]
-> 위의 샘플에서 보안 중지 데이터의 `<SessionID>B64 encoded session ID</SessionID>`는 기록 된 모든 보안 중지 세션의 와일드 카드를 나타내는 별표 (\*)가 될 수 있습니다. 즉, **SessionID** 태그는 특정 세션 이거나 모든 보안 중지 세션을 선택 하는 와일드 카드 (\*) 일 수 있습니다.
+> The secure stop data’s `<SessionID>B64 encoded session ID</SessionID>` in the sample above can be an asterisk (\*), which is a wild card for all the secure stop sessions recorded. That is, the **SessionID** tag can be a specific session, or a wild card (\*) to select all the secure stop sessions.
 
 ## <a name="programming-considerations-for-encrypted-media-extension"></a>암호화된 미디어 확장에 대한 프로그래밍 고려 사항
 
-이 섹션에는 Windows 10 용 PlayReady 사용 웹 앱을 만들 때 고려해 야 할 프로그래밍 고려 사항이 나열 되어 있습니다.
+This section lists the programming considerations that you should take into account when creating your PlayReady-enabled web app for Windows 10.
 
-앱에서 만든 **MSMediaKeys** 및 **MSMediaKeySession** 개체는 앱을 닫을 때까지 활성화되어 있어야 합니다. 이러한 개체를 활성 상태로 유지하는 한 가지 방법은 해당 개체를 전역 변수로 할당하는 것입니다. 변수가 함수 내부의 로컬 변수로 선언된 경우에는 변수가 범위에서 벗어나게 되며 가비지 수집에 따라 달라질 수 있습니다. 예를 들어 다음 샘플에서는 *g\_msMediaKeys* **및** *g\_mediakeysession* 변수를 전역 변수로 할당 합니다 .이 변수는 칩셋용으로.
+앱에서 만든 **MSMediaKeys** 및 **MSMediaKeySession** 개체는 앱을 닫을 때까지 활성화되어 있어야 합니다. 이러한 개체를 활성 상태로 유지하는 한 가지 방법은 해당 개체를 전역 변수로 할당하는 것입니다. 변수가 함수 내부의 로컬 변수로 선언된 경우에는 변수가 범위에서 벗어나게 되며 가비지 수집에 따라 달라질 수 있습니다. For example, the following sample assigns the variables *g\_msMediaKeys* and *g\_mediaKeySession* as global variables, which are then assigned to the **MSMediaKeys** and **MSMediaKeySession** objects in the function.
 
 ``` syntax
 var g_msMediaKeys;

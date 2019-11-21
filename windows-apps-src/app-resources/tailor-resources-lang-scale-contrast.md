@@ -4,18 +4,18 @@ title: 언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정
 template: detail.hbs
 ms.date: 10/10/2017
 ms.topic: article
-keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
+keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: db5ba7fb6e13d2a5aab4b74014458073aa88e7f4
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 0d6af9d532ecabe517983e8b56cdf8e1b2a2d812
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820219"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254519"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정
 
-이 주제에서는 리소스 한정자의 일반적인 개념, 사용 방법 및 각 한정자 이름의 목적에 대해 설명합니다. 가능한 모든 한정자 값에 대한 참조 테이블은 [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)를 참조하세요.
+이 문서에서는 리소스 한정자의 일반적인 개념, 사용 방법 및 각 한정자 이름의 목적에 대해 설명합니다. 가능한 모든 한정자 값에 대한 참조 테이블은 [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)를 참조하세요.
 
 앱은 표시 언어, 고대비, [디스플레이 배율 인수](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor) 등의 런타임 컨텍스트에 맞게 조정된 자산 및 리소스를 로드할 수 있습니다. 이를 수행하는 방법은 해당 컨텍스트에 해당하는 한정자 이름 및 한정자 값과 일치하도록 리소스의 폴더 또는 파일의 이름을 지정하는 것입니다. 예를 들어, 앱이 고대비 모드에서 다른 이미지 자산 집합을 로드하도록 할 수 있습니다.
 
@@ -29,7 +29,7 @@ ms.locfileid: "67820219"
 | :--------------- | :--------------- | :--------------- |
 | 고대비 설정 | 대비 | 표준, 높음, 검은색, 흰색 |
 
-한정자 이름을 한정자 값과 결합하여 한정자를 구성합니다. `<qualifier name>-<qualifier value>` 한정자의 형식이입니다. `contrast-standard` 한정자의 예시입니다.
+한정자 이름을 한정자 값과 결합하여 한정자를 구성합니다. `<qualifier name>-<qualifier value>` is the format of a qualifier. `contrast-standard` is an example of a qualifier.
 
 따라서 고대비의 경우 한정자 집합은 `contrast-standard`, `contrast-high`, `contrast-black` 및 `contrast-white`입니다. 한정자 이름과 한정자 값은 대소문자를 구분하지 않습니다. 예를 들어, `contrast-standard` 및 `Contrast-Standard`는 동일한 한정자입니다.
 
@@ -102,7 +102,7 @@ ms.locfileid: "67820219"
 \Assets\Images\contrast-high_scale-400\<logo.png, and other image files>
 ```
 
-폴더 이름에서 밑줄로 구분된 여러 한정자를 결합합니다. `<qualifier1>[_<qualifier2>...]` 형식이입니다.
+폴더 이름에서 밑줄로 구분된 여러 한정자를 결합합니다. `<qualifier1>[_<qualifier2>...]` is the format.
 
 동일한 형식의 파일 이름에 여러 한정자를 결합할 수 있습니다.
 
@@ -118,13 +118,13 @@ ms.locfileid: "67820219"
 
 대상 시스템 또는 앱은 `alternateform` 한정자가 일치하는 값을 제공해야 합니다. 자체적인 사용자 지정 `alternateform` 한정자 값에 대해 `msft-` 접두사는 사용하지 않습니다.
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>구성
 
 `configuration` 한정자 이름이 필요할 가능성은 없습니다. 이는 테스트 전용 리소스와 같이 주어진 제작 환경에 적용할 수 있는 리소스를 지정하는 데 사용할 수 있습니다.
 
 `configuration` 한정자는 `MS_CONFIGURATION_ATTRIBUTE_VALUE` 환경 변수의 값과 가장 잘 일치하는 리소스를 로드하는 데 사용됩니다. 따라서 변수를 관련 리소스에 할당된 문자열 값으로 설정할 수 있습니다(예: `designer` 또는 `test`).
 
-## <a name="contrast"></a>이 예와
+## <a name="contrast"></a>대비
 
 `contrast` 한정자는 고대비 설정과 가장 잘 일치하는 리소스를 제공하는 데 사용됩니다.
 
@@ -191,13 +191,13 @@ public void SetLicenseLevel(BrandID brand)
 
 ## <a name="homeregion"></a>HomeRegion
 
-`homeregion` 한정자는 국가 또는 지역에 대한 사용자 설정에 해당합니다. 이는 사용자의 홈 위치를 나타냅니다. 값에는 유효한 [BCP 47 지역 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)가 포함되어 있습니다. 즉, **ISO 1 3166 alpha-2** 두 자리 문자 지역 코드와 구성된 지역에 대한 **ISO 1 3166 숫자** 세 자리 지리적 코드 집합입니다([United Nations Statistic Division M49 지역 코드의 구성](https://go.microsoft.com/fwlink/p/?linkid=247929) 참조). '선택된 경제 및 기타 그룹화"에 대한 코드는 유효하지 않습니다.
+`homeregion` 한정자는 국가 또는 지역에 대한 사용자 설정에 해당합니다. 이는 사용자의 홈 위치를 나타냅니다. 값에는 유효한 [BCP 47 지역 태그](https://tools.ietf.org/html/bcp47)가 포함되어 있습니다. 즉, **ISO 1 3166 alpha-2** 두 자리 문자 지역 코드와 구성된 지역에 대한 **ISO 1 3166 숫자** 세 자리 지리적 코드 집합입니다([United Nations Statistic Division M49 지역 코드의 구성](https://unstats.un.org/unsd/methods/m49/m49regin.htm) 참조). '선택된 경제 및 기타 그룹화"에 대한 코드는 유효하지 않습니다.
 
 ## <a name="language"></a>언어
 
-`language` 한정자는 표시 언어 설정에 해당합니다. 값에는 유효한 [BCP 47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)가 포함되어 있습니다. 언어 목록은 [IANA 언어 하위 태그 레지스트리](https://go.microsoft.com/fwlink/p/?linkid=227303)를 참조하세요.
+`language` 한정자는 표시 언어 설정에 해당합니다. 값에는 유효한 [BCP 47 언어 태그](https://tools.ietf.org/html/bcp47)가 포함되어 있습니다. 언어 목록은 [IANA 언어 하위 태그 레지스트리](https://www.iana.org/assignments/language-subtag-registry)를 참조하세요.
 
-앱에서 다른 표시 언어를 지원하길 원하고 코드 또는 XAML 태그에 문자열 리터럴이 있는 경우, 코드/태그에서 해당 문자열을 리소스 파일(`.resw`)로 이동합니다. 그런 다음 앱에서 지원하는 언어별로 해당 리소스 파일의 번역본을 만들 수 있습니다.
+앱에서 다른 표시 언어를 지원하길 원하고 코드 또는 XAML 태그에 문자열 리터럴이 있는 경우, 코드/태그에서 해당 문자열을 리소스 파일(`.resw`)로 이동합니다. 그러면 앱에서 지원하는 언어별로 해당 리소스 파일의 변환된 복사본을 만들 수 있습니다.
 
 일반적으로 `language` 한정자를 사용하여 리소스 파일(`.resw`)을 포함하는 폴더의 이름을 지정합니다.
 
@@ -226,7 +226,7 @@ public void SetLicenseLevel(BrandID brand)
 
 `layoutdirection` 한정자는 표시 언어 설정의 레이아웃 방향에 해당합니다. 예를 들어 이미지를 아랍어 또는 히브리어와 같이 오른쪽에서 왼쪽으로 쓰는 언어로 미러링해야 할 수 있습니다. [FlowDirection](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection) 속성을 설정하는 경우 UI의 레이아웃 패널 및 이미지가 레이아웃 방향에 적절하게 대응합니다([레이아웃 및 글꼴 조정, RTL 지원](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md) 참조). 하지만 `layoutdirection` 한정자는 단순한 플리핑이 적절하지 않은 경우를 위한 것이며, 보다 일반적인 방법으로 특정 읽기 순서 및 텍스트 정렬의 방향에 대응할 수 있습니다.
 
-## <a name="scale"></a>소수 자릿수
+## <a name="scale"></a>배율
 
 Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 각 디스플레이의 배율을 자동으로 선택합니다. [유효 픽셀 및 배율](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)을 참조하세요. Windows에서 최적 크기를 선택하거나 가장 유사한 크기를 사용하여 확장할 수 있도록 권장된 여러 크기(최소 100, 200, 및 400)에서 이미지를 만들어야 합니다. Windows에서 디스플레이 배율 인수에 대해 올바른 크기의 이미지를 포함하는 실제 파일을 식별할 수 있도록 `scale`한정자를 사용합니다. 리소스의 배율은 [DisplayInformation.ResolutionScale](/uwp/api/windows.graphics.display.displayinformation.ResolutionScale) 값 또는 다음으로 큰 배율의 리소스와 일치합니다.
 
@@ -256,22 +256,22 @@ Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 �
 
 `scale` 및 `targetsize`에 대한 리소스를 한정하는 방법에 대한 내용은 [targetsize에 대한 이미지 리소스 한정](images-tailored-for-scale-theme-contrast.md#qualify-an-image-resource-for-targetsize)을 참조하세요.
 
-## <a name="theme"></a>테마
+## <a name="theme"></a>Theme
 
 `theme` 한정자는 기본 앱 모드 설정 또는 [Application.RequestedTheme](/uwp/api/windows.ui.xaml.application.requestedtheme)를 사용하는 앱의 재정의 설정과 가장 잘 일치하는 리소스를 제공하는 데 사용됩니다.
 
 
-## <a name="shell-light-theme-and-unplated-resources"></a>셸 밝은 테마 및 플레이트 되지 않은 리소스
-합니다 *2019 업데이트할 수 있습니다 Windows 10* Windows 셸에 대 한 새 "light" 테마를 도입 합니다. 결과적으로, 이전에 어두운 배경에 표시 된 일부 응용 프로그램 자산 이제 밝은 배경에 표시 됩니다. 앱에 대 한 해당 앱 제공 하는 altform 플레이트 되지 않은 자산을 연한 배경에 허용 대비 있는지 확인 해야을 작업 표시줄 및 창의 전환기 (Alt + Tab, 작업 보기 등)에 대 한 합니다.
+## <a name="shell-light-theme-and-unplated-resources"></a>Shell light theme and unplated resources
+The *Windows 10 May 2019 Update* introduced a new "light" theme for the Windows Shell. As a result, some application assets that were previously shown on a dark background will now be shown on a light background. For apps that apps that provided altform-unplated assets for the taskbar and window switchers (Alt+Tab, Task View, etc), you should verify that they have acceptable contrast on a light background.
 
-### <a name="providing-light-theme-specific-assets"></a>밝은 테마 특정 자산 제공
-셸 밝은 테마 새 대체 폼 리소스 한정자를 사용 하 여 수에 대 한 맞춤형된 리소스를 제공 하고자 하는 앱: `altform-lightunplated`합니다. 이 한정자를 기존 altform 플레이트 되지 않은 한정자를 미러링합니다. 
+### <a name="providing-light-theme-specific-assets"></a>Providing light theme specific assets
+Apps that want to provide a tailored resource for shell light theme can use a new alternate form resource qualifier: `altform-lightunplated`. This qualifier mirrors the existing altform-unplated qualifier. 
 
-### <a name="downlevel-considerations"></a>하위 수준 고려 사항
-앱을 사용 하지 않아야 합니다 `theme-light` 한정자는 `altform-unplated` 한정자입니다. 그러면 RS5에서 예기치 않은 동작이 및 작업 표시줄에 대 한 이전 버전 Windows의 방식으로 리소스가 로드 됩니다. 이전 버전의 windows에서는 밝은 테마 버전을 올바르게 사용할 수 있습니다. `altform-lightunplated` 한정자는이 문제를 방지 합니다. 
+### <a name="downlevel-considerations"></a>Downlevel considerations
+Apps should not use the `theme-light` qualifier with the `altform-unplated` qualifier. This will cause unpredictable behavior on RS5 and earlier versions of Windows due to the way resources are loaded for the Taskbar. On earlier versions of windows, the theme-light version may be used incorrectly. The `altform-lightunplated` qualifier avoids this issue. 
 
-### <a name="compatibility-behavior"></a>호환성 동작
-이전 버전과 호환성을 위해 Windows 단색 아이콘을 검색 하 고 원하는 배경 대조 됩니다 있는지 여부를 확인 하는 논리가 포함 되어 있습니다. 아이콘 대비 요구 사항에 맞게 못하면 Windows 고대비 흰색 버전의 자산에 대해 살펴보겠습니다. 제공 되지 않는 경우 Windows는 사용 하도록 대체 도금 된 버전의 자산입니다.
+### <a name="compatibility-behavior"></a>Compatibility behavior
+For backwards compatibility, Windows includes logic to detect a monochromatic icons and check whether it contrasts with the intended background. If the icon fails to meet contrast requirements, Windows will look for a contrast-white version of the asset. If that’s not available, Windows will fall back to using the plated version of the asset.
 
 
 
@@ -282,13 +282,13 @@ Windows는 장치의 가시거리와 DPI(인치당 도트 수)를 기준으로 �
 
 ## <a name="related-topics"></a>관련 항목
 
-* [효과적인 픽셀이 고 배율 인수](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
+* [Effective pixels and scale factor](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md#effective-pixels-and-scale-factor)
 * [리소스 관리 시스템](resource-management-system.md)
-* [지역화를 위한 준비 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh967762(v=win.10))
-* [플랫폼 검색 앱에서 실행 되](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
-* [장치 패밀리 개요](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
-* [UI 문자열 지역화](localize-strings-ui-manifest.md)
-* [BCP-47](https://go.microsoft.com/fwlink/p/?linkid=227302)
-* [United Nations 통계 부서 M49 컴퍼지션 지역 코드](https://go.microsoft.com/fwlink/p/?linkid=247929)
-* [IANA 언어 하위 태그 레지스트리](https://go.microsoft.com/fwlink/p/?linkid=227303)
+* [How to prepare for localization](https://docs.microsoft.com/previous-versions/windows/apps/hh967762(v=win.10))
+* [Detecting the platform your app is running on](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
+* [Device families overview](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
+* [Localize your UI strings](localize-strings-ui-manifest.md)
+* [BCP-47](https://tools.ietf.org/html/bcp47)
+* [United Nations Statistic Division M49 composition of region codes](https://unstats.un.org/unsd/methods/m49/m49regin.htm)
+* [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry)
 * [레이아웃 및 글꼴 조정, RTL 지원](../design/globalizing/adjust-layout-and-fonts--and-support-rtl.md)

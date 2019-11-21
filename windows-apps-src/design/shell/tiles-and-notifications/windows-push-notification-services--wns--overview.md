@@ -1,25 +1,25 @@
 ---
 Description: 타사 개발자는 WNS(Windows 푸시 알림 서비스)를 사용하여 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. WNS는 에너지 효율적이며 신뢰할 수 있는 방법으로 사용자에게 새 업데이트를 전달하는 메커니즘을 제공합니다.
-title: WNS(Windows 푸시 알림 서비스) 개요
+title: Windows 푸시 알림 서비스(WNS) 개요
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cf538e6b7c66bfc61574295d5b040db82122e78a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 965d823f48cacf4af4999e45ffd02f421c8927e7
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363353"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259711"
 ---
-# <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요
+# <a name="windows-push-notification-services-wns-overview"></a>Windows 푸시 알림 서비스(WNS) 개요
  
 
 타사 개발자는 WNS(Windows 푸시 알림 서비스)를 사용하여 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. WNS는 에너지 효율적이며 신뢰할 수 있는 방법으로 사용자에게 새 업데이트를 전달하는 메커니즘을 제공합니다.
 
-## <a name="how-it-works"></a>작동 방법
+## <a name="how-it-works"></a>작동 방식
 
 
 다음 다이어그램은 푸시 알림 보내기를 위한 전체 데이터 흐름을 보여 줍니다. 이 작업은 다음 단계로 이루어져 있습니다.
@@ -36,7 +36,7 @@ ms.locfileid: "66363353"
 ## <a name="registering-your-app-and-receiving-the-credentials-for-your-cloud-service"></a>앱을 등록하고 클라우드 서비스용 자격 증명 받기
 
 
-WNS를 사용하여 알림을 보내려면 먼저 스토어 대시보드에 앱을 등록해야 합니다. 이렇게 하면 클라우드 서비스가 WNS로 인증하는 데 사용할 자격 증명을 앱에 제공합니다. 이러한 자격 증명은 패키지 SID(보안 식별자)와 비밀 키로 구성됩니다. 이 등록을 수행 하려면에 로그인 [파트너 센터](https://partner.microsoft.com/dashboard)합니다. 앱을 만든 후에는 **앱 관리 - WNS/MPNS** 페이지의 지침에 따라 자격 증명을 검색할 수 있습니다. Live Services 솔루션을 사용하려면 이 페이지의 **라이브 서비스 사이트** 링크를 따라 이동합니다.
+WNS를 사용하여 알림을 보내려면 먼저 스토어 대시보드에 앱을 등록해야 합니다. 이렇게 하면 클라우드 서비스가 WNS로 인증하는 데 사용할 자격 증명을 앱에 제공합니다. 이러한 자격 증명은 패키지 SID(보안 식별자)와 비밀 키로 구성됩니다. To perform this registration, sign in to [Partner Center](https://partner.microsoft.com/dashboard). 앱을 만든 후에는 **앱 관리 - WNS/MPNS** 페이지의 지침에 따라 자격 증명을 검색할 수 있습니다. Live Services 솔루션을 사용하려면 이 페이지의 **라이브 서비스 사이트** 링크를 따라 이동합니다.
 
 각 앱에는 해당 클라우드 서비스에 사용할 고유 자격 증명 집합이 있습니다. 이 자격 증명은 다른 앱에 알림을 보내는 데 사용할 수 없습니다.
 
@@ -51,7 +51,7 @@ WNS를 사용하여 알림을 보내려면 먼저 스토어 대시보드에 앱�
 
 ### <a name="important-notes"></a>중요 정보
 
--   앱의 알림 채널 URI가 항상 동일하게 유지된다고 보장하지 않습니다. 앱이 실행될 때마다 새 채널을 요청하고 URI 변경 시 해당 서비스를 업데이트하는 것이 좋습니다. 개발자는 채널 URI를 수정하지 않아야 하며 블랙 박스 문자열로 간주해야 합니다. 이때 채널 URI는 30일이 경과하면 만료됩니다. Windows 10 앱 백그라운드에서 해당 채널을 주기적으로 갱신 됩니다 경우 다운로드할 수 있습니다 합니다 [푸시 및 정기 알림 사용 샘플](https://go.microsoft.com/fwlink/p/?linkid=231476) Windows 8.1 및 다시 사용에 대 한 소스 코드 및/또는 패턴을 보여 줍니다.
+-   앱의 알림 채널 URI가 항상 동일하게 유지된다고 보장하지 않습니다. 앱이 실행될 때마다 새 채널을 요청하고 URI 변경 시 해당 서비스를 업데이트하는 것이 좋습니다. 개발자는 채널 URI를 수정하지 않아야 하며 블랙 박스 문자열로 간주해야 합니다. 이때 채널 URI는 30일이 경과하면 만료됩니다. If your Windows 10 app will periodically renew its channel in the background then you can download the [Push and periodic notifications sample](https://code.msdn.microsoft.com/windowsapps/push-and-periodic-de225603) for Windows 8.1 and re-use its source code and/or the pattern it demonstrates.
 -   클라우드 서비스와 클라이언트 앱 간의 인터페이스는 개발자가 구현합니다. 앱은 고유 서비스를 사용하여 인증 프로세스를 거치고 HTTPS 같은 보안 프로토콜을 통해 데이터를 전송하는 것이 좋습니다.
 -   클라우드 서비스는 항상 채널 URI가 "notify.windows.com" 도메인을 사용하는지 확인합니다. 다른 도메인에서는 이 서비스가 알림을 채널로 푸시하지 않아야 합니다. 앱에 대한 콜백이 손상되는 경우 악의적인 공격자가 채널 URI를 제출하여 WNS를 스푸핑할 수 있습니다. 도메인을 검사하지 않으면 클라우드 서비스에서 자신도 모르게 이러한 공격자에게 정보를 공개할 수도 있습니다.
 -   클라우드 서비스에서 만료된 채널에 알림을 전달하려고 시도하면 WNS에서 [응답 코드 410](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))을 반환합니다. 이 코드에 대처하려면 서비스에서 해당 URI에 더 이상 알림을 보내려고 시도하지 않아야 합니다.
@@ -61,7 +61,7 @@ WNS를 사용하여 알림을 보내려면 먼저 스토어 대시보드에 앱�
 
 알림을 보내려면 WNS를 통해 클라우드 서비스를 인증해야 합니다. 이 프로세스의 첫 번째 단계는 Microsoft Store 대시보드를 사용하여 앱을 등록하는 것입니다. 등록 프로세스 중 패키지 SID(보안 식별자) 및 비밀 키를 앱에 제공합니다. 이 정보는 클라우드 서비스가 WNS로 인증하는 데 사용됩니다.
 
-WNS 인증 체계는 [OAuth 2.0](https://go.microsoft.com/fwlink/p/?linkid=226787) 프로토콜의 클라이언트 자격 증명 프로필을 사용하여 구현됩니다. 클라우드 서비스는 WNS를 통해 자격 증명(패키지 SID 및 비밀 키)을 제공하여 인증합니다. 그러면 액세스 토큰을 받습니다. 이러한 액세스 토큰을 통해 클라우드 서비스는 알림을 보낼 수 있습니다. WNS로 보내는 모든 알림 요청에는 이 토큰이 필요합니다.
+WNS 인증 체계는 [OAuth 2.0](https://tools.ietf.org/html/draft-ietf-oauth-v2-23) 프로토콜의 클라이언트 자격 증명 프로필을 사용하여 구현됩니다. 클라우드 서비스는 WNS를 통해 자격 증명(패키지 SID 및 비밀 키)을 제공하여 인증합니다. 그러면 액세스 토큰을 받습니다. 이러한 액세스 토큰을 통해 클라우드 서비스는 알림을 보낼 수 있습니다. WNS로 보내는 모든 알림 요청에는 이 토큰이 필요합니다.
 
 정보 체인을 자세히 보면 다음과 같습니다.
 
@@ -70,9 +70,9 @@ WNS 인증 체계는 [OAuth 2.0](https://go.microsoft.com/fwlink/p/?linkid=22678
 
 ![클라우드 서비스 인증에 대한 WNS 다이어그램](images/wns-diagram-02.png)
 
-WNS를 통한 인증에서는 클라우드 서비스가 SSL(Secure Sockets Layer)을 통해 HTTP 요청을 제출합니다. 매개 변수는 "application/x-www-for-urlencoded" 형식으로 제공됩니다. 패키지 SID를 사용 하 여 제공의 "클라이언트\_id"에 필드 및 비밀 키를 "클라이언트\_비밀" 필드. 구문 정보는 [액세스 토큰 요청](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) 참조를 확인하세요.
+WNS를 통한 인증에서는 클라우드 서비스가 SSL(Secure Sockets Layer)을 통해 HTTP 요청을 제출합니다. 매개 변수는 "application/x-www-for-urlencoded" 형식으로 제공됩니다. Supply your Package SID in the "client\_id" field and your secret key in the "client\_secret" field. 구문 정보는 [액세스 토큰 요청](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) 참조를 확인하세요.
 
-**참고**  는 예제는 사용자 고유의 코드에서 성공적으로 사용할 수 있는 없습니다 잘라내기 및 붙여넣기 코드 뿐입니다.
+**Note**  This is just an example, not cut-and-paste code that you can successfully use in your own code.
 
  
 
@@ -119,7 +119,7 @@ WNS는 클라우드 서비스를 인증하고 인증에 성공하면 "200 OK" �
 
     요청 예는 다음과 같습니다. 구문 정보는 [푸시 알림 응답 코드](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))를 참조하세요.
 
-    알림 페이로드를 작성에 대 한 세부 정보를 참조 하세요. [빠른 시작: 푸시 알림을 보낼](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))합니다. 타일, 알림 메시지 또는 배지 푸시 알림의 페이로드는 정의된 해당 [적응형 타일 스키마](adaptive-tiles-schema.md) 또는 [레거시 타일 스키마](https://docs.microsoft.com/uwp/schemas/tiles/tiles-xml-schema-portal)를 따르는 XML 콘텐츠로 제공됩니다. 원시 알림의 페이로드에는 지정된 구조가 없습니다. 푸시 알림의 페이로드는 오로지 앱에서 정의됩니다.
+    알림 페이로드를 작성하는 방법에 대한 자세한 내용은 [빠른 시작: 푸시 알림 보내기](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))를 참조하세요. 타일, 알림 메시지 또는 배지 푸시 알림의 페이로드는 정의된 해당 [적응형 타일 스키마](adaptive-tiles-schema.md) 또는 [레거시 타일 스키마](https://docs.microsoft.com/uwp/schemas/tiles/tiles-xml-schema-portal)를 따르는 XML 콘텐츠로 제공됩니다. 원시 알림의 페이로드에는 지정된 구조가 없습니다. 푸시 알림의 페이로드는 오로지 앱에서 정의됩니다.
 
     ``` http
      POST https://cloud.notify.windows.com/?token=AQE%bU%2fSjZOCvRjjpILow%3d%3d HTTP/1.1
@@ -133,7 +133,7 @@ WNS는 클라우드 서비스를 인증하고 인증에 성공하면 "200 OK" �
      ....
     ```
 
-2.  WNS는 응답을 통해 알림을 받았으며 가능한 다음 기회에 알림을 전달할 것임을 알려줍니다. 그러나 WNS는 디바이스 또는 애플리케이션에서 알림을 받았는지에 대한 엔드투엔드 확인은 제공하지 않습니다.
+2.  WNS는 응답을 통해 알림을 받았으며 가능한 다음 기회에 알림을 전달할 것임을 알려줍니다. 그러나 WNS는 디바이스 또는 응용 프로그램에서 알림을 받았는지에 대한 종단 간 확인은 제공하지 않습니다.
 
 이 다이어그램은 데이터 흐름을 보여 줍니다.
 
@@ -160,20 +160,20 @@ WNS는 클라우드 서비스를 인증하고 인증에 성공하면 "200 OK" �
 ## <a name="push-notifications-and-battery-saver"></a>푸시 알림 및 배터리 절약 모드
 
 
-배터리 절약 모드는 디바이스의 백그라운드 활동을 제한하여 배터리 사용 시간을 연장합니다. Windows 10에는 배터리가 지정된 된 임계값 아래로 떨어질 경우 자동으로 설정 하도록 배터리 절약 모드를 설정할 수가 있습니다. 배터리 절약 모드가 작동되면 에너지를 절약하기 위해 푸시 알림 받기가 사용되지 않습니다. 그러나 이 경우에는 몇 가지 예외가 있습니다. 다음 Windows 10 배터리 보호기 설정 (에 **설정을** 앱) 배터리 절약 모드에 있을 경우에 푸시 알림을 받도록 앱을 허용 합니다.
+배터리 절약 모드는 디바이스의 백그라운드 활동을 제한하여 배터리 사용 시간을 연장합니다. Windows 10 lets the user set battery saver to turn on automatically when the battery drops below a specified threshold. 배터리 절약 모드가 작동되면 에너지를 절약하기 위해 푸시 알림 받기가 사용되지 않습니다. 그러나 이 경우에는 몇 가지 예외가 있습니다. The following Windows 10 battery saver settings (found in the **Settings** app) allow your app to receive push notifications even when battery saver is on.
 
--   **배터리 절약 모드에 있는 동안 앱에서 푸시 알림을 허용**: 이 모든 앱을 배터리 절약 모드에 있는 동안 푸시 알림을 받을 수 있습니다. 이 설정은 Windows 10 데스크톱 버전 (Home, Pro, Enterprise 및 Education) 에게만 적용 되도록 note 합니다.
--   **항상 허용**: 이 특정 앱을 사용 하는 동안 배터리 절약 모드-푸시 알림 수신을 포함 하 여 백그라운드에서 실행할 수 있습니다. 이 목록은 사용자가 수동으로 유지합니다.
+-   **배터리 절약 모드에 있는 동안 앱에서 푸시 알림 허용**: 이 설정을 사용하면 배터리 절약 모드가 켜져 있는 동안 모든 앱에서 푸시 알림을 받을 수 있습니다. Note that this setting applies only to Windows 10 for desktop editions (Home, Pro, Enterprise, and Education).
+-   **항상 허용**: 이 설정을 사용하면 배터리 절약 모드가 켜져 있는 동안 특정 앱이 백그라운드에서 실행할 수 있습니다(푸시 알림 받기 포함). 이 목록은 사용자가 수동으로 유지합니다.
 
-이러한 두 설정의 상태를 확인할 수 있는 방법은 없지만 배터리 절약 모드의 상태는 확인할 수 있습니다. Windows 10에서 사용 된 [ **EnergySaverStatus** ](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatus) 배터리 보호기 상태를 확인할 속성입니다. 앱에서 [**EnergySaverStatusChanged**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatusChanged) 이벤트를 사용하여 배터리 절약 모드의 변경에도 수신 대기할 수 있습니다.
+이러한 두 설정의 상태를 확인할 수 있는 방법은 없지만 배터리 절약 모드의 상태는 확인할 수 있습니다. In Windows 10, use the [**EnergySaverStatus**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatus) property to check battery saver state. 앱에서 [**EnergySaverStatusChanged**](https://docs.microsoft.com/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatusChanged) 이벤트를 사용하여 배터리 절약 모드의 변경에도 수신 대기할 수 있습니다.
 
-앱에서 푸시 알림을 상당한 많이 받는 경우 사용자에게 배터리 절약 모드가 켜져 있는 동안 알림을 받을 수 없음을 알려 **배터리 절약 모드 설정**을 쉽게 조정할 수 있게 합니다. 배터리 보호기 설정 URI 체계를 사용 하 여 Windows 10에서 `ms-settings:batterysaver-settings`, 설정 앱에 대 한 편리한 링크를 제공할 수 있습니다.
+앱에서 푸시 알림을 상당한 많이 받는 경우 사용자에게 배터리 절약 모드가 켜져 있는 동안 알림을 받을 수 없음을 알려 **배터리 절약 모드 설정**을 쉽게 조정할 수 있게 합니다. Using the battery saver settings URI scheme in Windows 10, `ms-settings:batterysaver-settings`, you can provide a convenient link to the Settings app.
 
-**팁**    배터리 보호기 설정에 대 한 사용자를 알릴 때 나중에 메시지가 표시 되지 않도록 하는 방법을 제공 하는 것이 좋습니다. 예를 들어, 다음 예제의 `dontAskMeAgainBox` 확인란에는 사용자가 [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings)에 지정한 기본 설정을 유지합니다.
+**Tip**   When notifying the user about battery saver settings, we recommend providing a way to suppress the message in the future. 예를 들어, 다음 예제의 `dontAskMeAgainBox` 확인란에는 사용자가 [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings)에 지정한 기본 설정을 유지합니다.
 
  
 
-배터리 절약 모드 Windows 10에서 설정 된 경우를 확인 하는 방법의 예는 다음과 같습니다. 이 예제에서는 설정 앱을 **배터리 절약 모드 설정**으로 시작하고 사용자에게 알립니다. 사용자가 다시 알림을 받고 싶지 않으면 `dontAskAgainSetting`를 사용하여 메시지를 표시하지 않을 수 있습니다.
+Here's an example of how to check if battery saver is turned on in Windows 10. 이 예제에서는 설정 앱을 **배터리 절약 모드 설정**으로 시작하고 사용자에게 알립니다. 사용자가 다시 알림을 받고 싶지 않으면 `dontAskAgainSetting`를 사용하여 메시지를 표시하지 않을 수 있습니다.
 
 ```cs
 using System;
@@ -243,14 +243,14 @@ async public void CheckForEnergySaving()
 ## <a name="related-topics"></a>관련 항목
 
 
-* [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)
-* [빠른 시작: 푸시 알림 보내기](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
-* [푸시 알림을 통해 배지를 업데이트 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
-* [요청, 생성 및 알림 채널을 저장 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
-* [응용 프로그램을 실행 하는 것에 대 한 알림을 차단 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
-* [WNS와 함께 Windows 푸시 알림 서비스 ()를 인증 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
-* [푸시 알림 서비스 요청 및 응답 헤더](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
-* [지침 및 푸시 알림에 대 한 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [Send a local tile notification](sending-a-local-tile-notification.md)
+* [Quickstart: Sending a push notification](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
+* [How to update a badge through push notifications](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
+* [How to request, create, and save a notification channel](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
+* [How to intercept notifications for running applications](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
+* [How to authenticate with the Windows Push Notification Service (WNS)](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
+* [Push notification service request and response headers](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
+* [Guidelines and checklist for push notifications](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
 * [원시 알림](https://docs.microsoft.com/previous-versions/windows/apps/hh761488(v=win.10))
  
 

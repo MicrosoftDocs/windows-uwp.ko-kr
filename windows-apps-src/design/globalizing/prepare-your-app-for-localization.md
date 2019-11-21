@@ -1,20 +1,20 @@
 ---
 Description: 현지화된 앱은 앱에 기능적인 결함은 다루지 않고 다른 시장, 언어 또는 지역에 맞게 현지화할 수 있습니다. 지역화할 앱의 가장 중요한 속성은 실행 코드가 앱의 지역화 리소스와 깔끔하게 분리된 것입니다.
-title: 앱을 현지화할 수 있게 만들기
+title: 앱을 현지화 가능하게 만들기
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: e262a647e8c37d088c3a5b081076275a52cb8071
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 341d46879895da221e3a17ba88f28fd22e7c5e27
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363741"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258095"
 ---
-# <a name="make-your-app-localizable"></a>앱을 현지화할 수 있게 만들기
+# <a name="make-your-app-localizable"></a>앱을 현지화 가능하게 만들기
 
 현지화된 앱은 앱에 기능적인 결함은 다루지 않고 다른 시장, 언어 또는 지역에 맞게 현지화할 수 있습니다. 지역화할 앱의 가장 중요한 속성은 실행 코드가 앱의 지역화 리소스와 깔끔하게 분리된 것입니다. 따라서 앱 리소스 중 어는 부분을 지역화해야 하는지 결정해야 합니다. 앱을 다른 시장용으로 지역화할 경우 무엇을 변경해야 하는지 자문해 봅니다.
 
@@ -22,7 +22,7 @@ ms.locfileid: "66363741"
 
 ## <a name="put-your-strings-into-resources-files-resw"></a>문자열은 리소스 파일(.resw)에 두기
 
-하드 코드 문자열 리터럴을 명령적 코드를 XAML 태그 또는 앱 패키지 매니페스트에 없습니다. 대신 앱이 작성된 이진 코드와 개별적으로 다른 현지 시장에 적용될 수 있도록 문자열을 리소스 파일(.resw)에 둡니다. 자세한 내용은 [UI와 앱 패키지 매니페스트에 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)를 참조하세요.
+Don't hard-code string literals in your imperative code, XAML markup, nor in your app package manifest. 대신 앱이 작성된 이진 코드와 개별적으로 다른 현지 시장에 적용될 수 있도록 문자열을 리소스 파일(.resw)에 둡니다. 자세한 내용은 [UI와 앱 패키지 매니페스트에 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)를 참조하세요.
 
 해당 항목에는 기본 리소스 파일(.resw)에 주석을 추가하는 방법도 나와 있습니다. 예를 들어 비공식 음성 또는 어조를 채택하는 경우 이를 주석에 기술해야 합니다. 또한 비용을 최소화하기 위해 번역해야 하는 문자열만 번역자에게 제공합니다.
 
@@ -50,9 +50,9 @@ ms.locfileid: "66363741"
 
 즉, 모든 컨텍스트에서 활용될 수 있도록 문자열을 작은 단위로 분리합니다. 문자열이 전체 문장이어야 하는 경우도 있습니다.
 
-다음 문자열을 고려 합니다. "는 {0} 동기화 할 수 없습니다."
+Consider the following string: "The {0} could not be synchronized."
 
-다양 한 단어를 바꿀 수 {0}"약속", "작업" 또는 "문서"입니다. 이 예가 영어에는 적절하지만 독일어의 해당 문장에 대해서는 모든 경우에 적합하지 않습니다. 다음 독일어 문자에서 템플릿 문자열의 일부 단어("Der", "Die", "Das")가 매개 변수가 있는 단어와 일치해야 합니다.
+A variety of words could replace {0}, such as "appointment", "task", or "document". 이 예가 영어에는 적절하지만 독일어의 해당 문장에 대해서는 모든 경우에 적합하지 않습니다. 다음 독일어 문자에서 템플릿 문자열의 일부 단어("Der", "Die", "Das")가 매개 변수가 있는 단어와 일치해야 합니다.
 
 | 영어                                    | 독일어                                           |
 |:------------------------------------------ |:------------------------------------------------ |
@@ -60,7 +60,7 @@ ms.locfileid: "66363741"
 | 작업을 동기화할 수 없습니다.        | Die Aufgabe konnte nicht synchronisiert werden.  |
 | 문서를 동기화할 수 없습니다.    | Das Dokument konnte nicht synchronisiert werden. |
 
-또 다른 예로, 문장 것이 좋습니다. "미리 알림 {0} 분입니다." 영어에서는 단어 "minute(s)"가 사용되지만 다른 언어에서는 다른 단어를 사용할 수 있습니다. 예를 들어 폴란드어에서는 문맥에 따라 "minuta", "minuty" 또는 "minut"를 사용합니다.
+As another example, consider the sentence "Remind me in {0} minute(s)." 영어에서는 단어 "minute(s)"가 사용되지만 다른 언어에서는 다른 단어를 사용할 수 있습니다. 예를 들어 폴란드어에서는 문맥에 따라 "minuta", "minuty" 또는 "minut"를 사용합니다.
 
 이 문제를 해결하려면 단어 하나가 아닌 문장 전체를 지역화합니다. 이렇게 하려면 추가 작업이 필요하여 유용한 솔루션이 아닌 것처럼 보일 수도 있지만, 다음과 같은 이유로 인해 가장 적합한 솔루션입니다.
 
@@ -80,24 +80,24 @@ ms.locfileid: "66363741"
 
 앱을 의사 지역화하여 현지화 문제를 다루지 않습니다. 의사 지역화는 지역화의 한 종류로 예행 연습 또는 비공개 테스트와 같은 것입니다. 실제로 번역되지 않은 리소스 집합을 만들며 그러한 방식으로만 보입니다. 문자열이 기본 언어로 40% 더 길게 표시됩니다. 예를 들어, 문자열에 구분 기호가 있어 UI가 잘렸는지 여부를 한눈에 알아볼 수 있습니다.
 
-## <a name="deployment-considerations"></a>배포 고려 사항
+## <a name="deployment-considerations"></a>Deployment Considerations
 
-지역화 된 언어 데이터를 포함 하는 앱을 설치 하면 처음에 여러 언어에 대 한 리소스를 포함 하는 경우에 기본 언어만 앱에 대해 사용할 수 있는지 확인할 수 있습니다. 설치 프로세스는 현재 언어 및 문화권 장치 일치 하는 언어 리소스에만 설치 하도록 최적화 되어 때문입니다. 따라서 장치를 EN-US에 대해 구성 된 경우 EN-US 언어 리소스에만 앱을 사용 하 여 설치 됩니다.
+When you install an app that contains localized language data, you might find that only the default language is available for the app even though you initially included resources for multiple languages. This is because the installation process is optimized to only install language resources that match the current language and culture of the device. Therefore, if your device is configured for en-US, only the en-US language resources are installed with your app.
 
 > [!NOTE]
-> 초기 설치 후 앱에 대 한 추가 언어 지원을 설치 하는 것이 불가능 합니다. 앱을 설치한 후 기본 언어를 변경한 경우 앱을 계속 원래 언어 리소스를 사용 합니다.
+> It is not possible to install additional language support for your app after the initial installation. If you change the default language after installing an app, the app continues to use only the original language resources.
 
-모든 언어 리소스가 사용 가능한 설치가 있는지 확인 하려는 경우 (언어 리소스 포함) 설치 하는 동안 필요한 특정 리소스에 있는지를 지정 하 여 앱 패키지 구성 파일을 만듭니다. 이 최적화 된 설치 기능.appxbundle 응용 프로그램의 패키징 중 생성 되 면 자동으로 활성화 됩니다. 자세한 내용은 [리소스는 장치에 필요한 지 여부에 관계 없이 장치에 설치 되어 있는지 확인](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140))합니다.
+If you want to ensure all language resources are available after installation, create a configuration file for the app package that specifies that certain resources are required during installation (including language resources). This optimized installation feature is automatically enabled when your application's .appxbundle is generated during packaging. For more information, see [Ensure that resources are installed on a device regardless of whether a device requires them](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140)).
 
-필요에 따라 모든 리소스에 확인 (하위 뿐 아니라 집합)를 설치, 앱을 패키지 있습니다.appxbundle 생성을 비활성화할 수 있습니다. 하지만 권장 되지는 않습니다 처럼 앱의 설치 시간을 늘릴 수 있습니다.
+Optionally, to ensure all resources are installed (not just a subset), you can disable .appxbundle generation when you package your app. This is not recommended however as it can increase the installation time of your app.
 
-"앱 번들 생성" 특성 "never"을 설정 하 여 자동으로 생성 된.appxbundle를 사용 하지 않도록 설정:
+Disable automatic generation of the .appxbundle by setting the "Generate App Bundle" attribute to “never”:
 
-1. Visual Studio에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭
-2. 선택 **스토어** -> **앱 패키지 만들기...**
-3. 에 **패키지 만들기** 대화 상자에서 **를 새 앱 이름을 사용 하 여 Microsoft Store 업로드할 패키지를 만들고 싶습니다** 클릭 하 고 **다음**합니다.
-4. 에 **앱 이름 선택** 대화 상자에서 앱 패키지에 대 한 이름 선택/만들기.
-5. 에 **패키지 선택 및 구성** 대화 상자에서 **앱 번들 생성** 에 **Never**합니다.
+1. In Visual Studio, right-click the project name
+2. Select **Store** -> **Create app packages...**
+3. In the **Create Your Packages** dialog, select **I want to create packages to upload to the Microsoft Store using a new app name** and then click **Next**.
+4. In the **Select an app name** dialog, select/create an app name for your package.
+5. In the **Select and Configure Packages** dialog, set **Generate app bundle** to **Never**.
 
 ## <a name="geopolitical-awareness"></a>지리적 인식
 
@@ -115,7 +115,7 @@ ms.locfileid: "66363741"
     string.Format("Every {0} {1}", monthName, dayNumber); // For example, "Every April 1".
 ```
 
-이 예의 형식 문자열은 영어(미국)에서 유효합니다. 그러나 독일어(독일)에는 적합하지 않습니다. 예를 들어 일과 월이 반대 순서로 표시되는 경우가 있습니다. 형식 문자열의 형식 항목의 순서를 반대로 수 있도록 변환기가 각 매개 변수에의 의도 알고 있는 확인 (예를 들어, "{1} {0}") 대상 언어에 적합 하 게 합니다.
+이 예의 형식 문자열은 영어(미국)에서 유효합니다. 그러나 독일어(독일)에는 적합하지 않습니다. 예를 들어 일과 월이 반대 순서로 표시되는 경우가 있습니다. Ensure that the translator knows the intent of each of the parameters so that they can reverse the order of the format items in the format string (for example, "{1} {0}") as appropriate for the target language.
 
 ## <a name="dont-over-localize"></a>과도한 지역화는 금지됩니다.
 
@@ -123,7 +123,7 @@ ms.locfileid: "66363741"
 
 | 번역하지 말 것                   | 번역할 것 |
 |:--------------------------------------- |:-------------------------- |
-| &lt;link&gt;이용 약관&lt;/link&gt;   | 서비스 계약               |
+| &lt;link&gt;이용 약관&lt;/link&gt;   | 이용 약관               |
 | &lt;link&gt;개인 정보 취급 방침&lt;/link&gt; | 개인 정보 취급 방침             |
 
 리소스 파일(.resw)에 `<link>` 태그를 포함해도 번역하기 쉽습니다. 태그가 올바르지 않게 렌더링됩니다. 긴 문자열에서 컨텍스트 및 순서를 올바르게 유지하기 위해 마크업을 포함해야 하는 경우 번역하지 말아야 할 사항을 주석에 명확히 기록합니다.
@@ -134,20 +134,20 @@ ms.locfileid: "66363741"
 
 이러한 옵션을 고려해 보세요.
 
-- **리소스 파일 프로젝트에 직접 열어 번역할 수 있습니다.** 이 방식은 문자열의 양이 적고 2~3개 국어로 번역해야 하는 프로젝트에 적합합니다. 또한 개발자가 여러 언어를 사용하고 번역 프로세스를 처리하려고 하는 경우에 적합할 수 있습니다. 이 방법은 빠르고 도구가 필요 없으며 번역을 잘못할 위험이 최소화된다는 이점이 있습니다. 그러나 확장할 수 없습니다. 특히, 다른 언어의 리소스가 동기화되지 않아서 잘못된 사용자 환경과 유지 관리 문제가 발생할 수 있습니다.
-- **문자열 리소스 파일이 XML 또는 ResJSON 텍스트 형식의 텍스트 편집기를 사용 하 여 변환에 전달 될 수 있도록 합니다. 번역 된 파일은 프로젝트로 다시 복사한 다음입니다.** 이 방식을 사용하면 번역자가 XML 태그를 실수로 편집할 가능성이 있기는 하지만, Microsoft Visual Studio 프로젝트 외부에서 번역 작업을 수행할 수 있습니다. 소수의 언어로만 번역하면 되는 프로젝트에 이 방식이 적합할 수 있습니다. XLIFF 형식은 지역화에 사용하도록 특별히 설계된 XML 형식이며 일부 지역화 공급업체 또는 지역화 도구에서 적절히 지원해야 합니다. [다국어 앱 도구 키트](https://docs.microsoft.com/previous-versions/windows/apps/jj572370(v=win.10))를 사용하여 .resw, .resjson 등의 다른 리소스 파일에서 XLIFF 파일을 생성할 수 있습니다.
+- **The resource files can be translated by opening them directly in the project.** 이 방식은 문자열의 양이 적고 2~3개 국어로 번역해야 하는 프로젝트에 적합합니다. 또한 개발자가 여러 언어를 사용하고 번역 프로세스를 처리하려고 하는 경우에 적합할 수 있습니다. 이 방법은 빠르고 도구가 필요 없으며 번역을 잘못할 위험이 최소화된다는 이점이 있습니다. 그러나 확장할 수 없습니다. 특히, 다른 언어의 리소스가 동기화되지 않아서 잘못된 사용자 환경과 유지 관리 문제가 발생할 수 있습니다.
+- **The string resource files are in XML or ResJSON text format, so could be handed off for translation using any text editor. The translated files would then be copied back into the project.** 이 방식을 사용하면 번역자가 XML 태그를 실수로 편집할 가능성이 있기는 하지만, Microsoft Visual Studio 프로젝트 외부에서 번역 작업을 수행할 수 있습니다. 소수의 언어로만 번역하면 되는 프로젝트에 이 방식이 적합할 수 있습니다. XLIFF 형식은 지역화에 사용하도록 특별히 설계된 XML 형식이며 일부 지역화 공급업체 또는 지역화 도구에서 적절히 지원해야 합니다. [다국어 앱 도구 키트](https://docs.microsoft.com/previous-versions/windows/apps/jj572370(v=win.10))를 사용하여 .resw, .resjson 등의 다른 리소스 파일에서 XLIFF 파일을 생성할 수 있습니다.
 
 > [!NOTE]
-> 지역화는 이미지 및 오디오 파일을 포함 하 여 다른 자산에 대 한 필요할 수도 있습니다.
+> Localization might also be necessary for other assets, including images and audio files.
 
-또한 다음을 고려해 야 있습니다.
+You should also consider the following:
 
-- **지역화 도구** 다양 한 지역화 도구를 리소스 파일을 구문 분석 하 고 변환할 수 있는 문자열에서 편집할 수만 사용할 수 있습니다. 이 접근 방식은 번역자가 실수로 XML 태그를 편집하는 위험을 줄여줍니다. 단, 로컬리제이션 프로세스에 새로운 도구나 프로세스를 도입해야 하는 단점이 있습니다. 지역화 도구는 문자열의 양이 많지만 언어 수가 적은 프로젝트에 적합합니다. 자세한 내용은 [다국어 앱 도구 키트를 사용하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/jj572370(v=win.10))을 참조하세요.
-- **지역화 공급 업체** 응용 프로그램 언어의 많은 수로 변환 해야 하는 광범위 한 문자열을 포함 하는 경우에 지역화 공급 업체를 사용 하는 것이 좋습니다. 지역화 공급업체는 리소스 파일 번역은 물론, 도구 및 프로세스에 대해서도 알려줄 수 있습니다. 이 방법은 이상적인 솔루션이지만, 가장 많은 비용이 들고 번역된 콘텐츠에 대한 소요 시간이 늘어날 수 있습니다.
+- **Localization tools** A number of localization tools are available for parsing resource files and allowing only the translatable strings to be edited by translators. 이 접근 방식은 번역자가 실수로 XML 태그를 편집하는 위험을 줄여줍니다. 단, 로컬리제이션 프로세스에 새로운 도구나 프로세스를 도입해야 하는 단점이 있습니다. 지역화 도구는 문자열의 양이 많지만 언어 수가 적은 프로젝트에 적합합니다. 자세한 내용은 [다국어 앱 도구 키트를 사용하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/jj572370(v=win.10))을 참조하세요.
+- **Localization vendors** Consider using a localization vendor if your application contains extensive strings that need to be translated into a large number of languages. 지역화 공급업체는 리소스 파일 번역은 물론, 도구 및 프로세스에 대해서도 알려줄 수 있습니다. 이 방법은 이상적인 솔루션이지만, 가장 많은 비용이 들고 번역된 콘텐츠에 대한 소요 시간이 늘어날 수 있습니다.
 
 ## <a name="keep-access-keys-and-labels-consistent"></a>액세스 키 및 레이블을 일관되게 유지합니다.
 
-두 문자열 리소스가 두 개의 개별 섹션으로 분류되므로 지역화 과정에서 접근성에 사용되는 액세스 키를 지역화된 액세스 키 표시와 "동기화"하는 데는 어려움이 있습니다. 과 같은 레이블 문자열에 대 한 설명을 제공 해야 합니다. `Make sure that the emphasized shortcut key  is synchronized with the access key.`
+두 문자열 리소스가 두 개의 개별 섹션으로 분류되므로 지역화 과정에서 접근성에 사용되는 액세스 키를 지역화된 액세스 키 표시와 "동기화"하는 데는 어려움이 있습니다. Be sure to provide comments for the label string such as: `Make sure that the emphasized shortcut key  is synchronized with the access key.`
 
 ## <a name="support-furigana-for-japanese-strings-that-can-be-sorted"></a>정렬 가능한 일본어 문자열에 대해 후리가나를 지원합니다.
 
@@ -166,8 +166,8 @@ ms.locfileid: "66363741"
             Resources.resw
     ```
 
-3. 일반 JA-JP에 대 한 Resources.resw에: Appname "希蒼"에 대 한 문자열 리소스를 추가 합니다.
-4. Resources.altform-msft-phonetic.resw 일본어 윗주 리소스에 대 한 합니다. 윗주 값 AppName "のあ"에 대 한 추가
+3. 일반 ja-JP용 Resources.resw: Appname "希蒼"에 대한 문자열 리소스를 추가합니다.
+4. 일본어 후리가나 리소스용 Resources.altform-msft-phonetic.resw: AppName "のあ"에 대한 후리가나 값을 추가합니다.
 
 사용자는 후리가나 값 "のあ"(noa) 및 발음 값(IME(입력기)에서 **GetPhonetic** 함수 사용)"まれあお"(mare-ao)를 모두 사용하여 앱 이름 "希蒼"을 검색할 수 있습니다.
 
@@ -182,12 +182,12 @@ ms.locfileid: "66363741"
 
 ## <a name="related-topics"></a>관련 항목
 
-- [세계화에 대 한 지침](guidelines-and-checklist-for-globalizing-your-app.md)
+- [Guidelines for globalization](guidelines-and-checklist-for-globalizing-your-app.md)
 - [UI 및 앱 패키지 매니페스트의 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)
 - [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md)
 - [레이아웃 및 글꼴 조정, RTL 지원](adjust-layout-and-fonts--and-support-rtl.md)
-- [한정자 값에 대 한 응답에서 업데이트 이미지 변경 이벤트](../../app-resources/images-tailored-for-scale-theme-contrast.md#updating-images-in-response-to-qualifier-value-change-events)
+- [Updating images in response to qualifier value change events](../../app-resources/images-tailored-for-scale-theme-contrast.md#updating-images-in-response-to-qualifier-value-change-events)
 
 ## <a name="samples"></a>샘플
 
-- [응용 프로그램 리소스 및 지역화 샘플](https://go.microsoft.com/fwlink/p/?linkid=254478)
+- [Application resources and localization sample](https://code.msdn.microsoft.com/windowsapps/Application-resources-and-cd0c6eaa)

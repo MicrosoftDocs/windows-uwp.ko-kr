@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 77b2c76b446332ae78024618b04ffbc1b66ffb75
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: d39d2f094dd85c29b51a19e1affcf0d292183ede
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339581"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257771"
 ---
 # <a name="expose-basic-accessibility-information"></a>기본적인 접근성 정보 표시  
 
@@ -64,7 +64,7 @@ UI 자동화 프레임워크에는 UI 자동화 클라이언트가 원시, 컨�
 ## <a name="name-from-inner-text"></a>내부 텍스트의 이름  
 표시되는 UI에 이미 있는 문자열을 접근성 있는 이름 값에 사용하기가 더 쉬워지도록 하기 위해 대부분의 컨트롤 및 기타 UI 요소에서는 요소 내에 있는 내부 텍스트를 기반으로 또는 콘텐츠 속성의 문자열 값에서 기본 접근성 있는 이름을 자동으로 결정하는 기능을 지원합니다.
 
-* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 및 **RichTextBlock** 는 각각 **Text** 속성 값을 기본 액세스 가능한 이름으로 승격 합니다.
+* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) and **RichTextBlock** each promote the value of the **Text** property as the default accessible name.
 * 모든 [**ContentControl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 하위 클래스는 반복적인 "ToString" 기술을 사용하여 [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 값에서 문자열을 찾고 이러한 문자열을 기본 접근성 있는 이름으로 승격시킵니다.
 
 > [!NOTE]
@@ -141,7 +141,7 @@ XAML
 <span id="ACCESSIBLE_NAMES_FROM_DYNAMIC_DATA"/>
 
 ## <a name="accessible-names-from-dynamic-data"></a>동적 데이터의 접근성 있는 이름  
-Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 원본에서 제공되는 값을 표시하는 데 사용할 수 있는 많은 컨트롤을 지원합니다. 데이터 항목으로 목록을 채우는 경우 초기 목록이 채워지면 데이터 바인딩 목록 항목의 접근성 있는 이름을 설정하는 기술을 사용해야 할 수 있습니다. 자세한 내용은 [XAML 접근성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)의 "시나리오 4"를 참조하세요.
+Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 원본에서 제공되는 값을 표시하는 데 사용할 수 있는 많은 컨트롤을 지원합니다. 데이터 항목으로 목록을 채우는 경우 초기 목록이 채워지면 데이터 바인딩 목록 항목의 접근성 있는 이름을 설정하는 기술을 사용해야 할 수 있습니다. 자세한 내용은 [XAML 접근성 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)의 "시나리오 4"를 참조하세요.
 
 <span id="Accessible_names_and_localization"/>
 <span id="accessible_names_and_localization"/>
@@ -155,7 +155,7 @@ Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 �
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>관련 항목  
-* [액세스 가능성](accessibility.md)
+* [접근성](accessibility.md)
 * [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name)
-* [XAML 접근성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [XAML accessibility sample](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
 * [접근성 테스트](accessibility-testing.md)

@@ -8,12 +8,12 @@ keywords: Cortana, Cortana 캔버스, Cortana 디자인, 사용자 인터페이�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 49290d0e0ba96a5dce562ca4148b0ebf53bf0ff5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: fa9001492228cee7427c2b18f2692a6a33fbb16b
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648168"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258028"
 ---
 # <a name="cortana-interactions-in-uwp-apps"></a>UWP 앱에서 Cortana 조작
 
@@ -29,14 +29,14 @@ Cortana 기능 및 서비스에 대한 모든 개발자 설명서는 이제 [Cor
 
 ## <a name="related-articles"></a>관련 문서
 
-* [**VCD 요소 및 특성 v1.2**](https://docs.microsoft.com/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2)
+* [**VCD elements and attributes v1.2**](https://docs.microsoft.com/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2)
 
-**디자이너**
+**Designers**
 * [음성 디자인 지침](speech-interactions.md)
-* [음성 명령에 대 한 Cortana 디자인 지침](https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines)
+* [Cortana design guidelines for voice commands](https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines)
 
 **샘플**
-* [Cortana 음성 명령 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619899)
+* [Cortana voice command sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CortanaVoiceCommand)
  
 
  

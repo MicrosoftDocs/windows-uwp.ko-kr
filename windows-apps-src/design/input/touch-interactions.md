@@ -8,12 +8,12 @@ keywords: 터치, 포인터, 입력, 사용자 조작
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d5de2af483ca000909e60e94fc41d2a88a405219
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 25398f0b48e88e2cebe81f62cc62ac1d9bd92d5c
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365177"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258217"
 ---
 # <a name="touch-interactions"></a>터치 조작
 
@@ -25,7 +25,7 @@ ms.locfileid: "66365177"
 > **중요 API**: [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input), [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core), [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)
 
 
-여러 디바이스에, 입력으로 하나 이상의 손가락을 사용(또는 터치 접촉)하여 지원하는 멀티 터치 화면이 있습니다. 터치 접촉과 해당 움직임은 터치 제스처 및 조작으로 해석되어 다양한 사용자 조작을 지원합니다.
+여러 장치에는 입력으로 하나 이상의 손가락을 사용(또는 터치 접촉)하여 지원하는 멀티 터치 화면이 있습니다. 터치 접촉과 해당 움직임은 터치 제스처 및 조작으로 해석되어 다양한 사용자 조작을 지원합니다.
 
 UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다양한 메커니즘이 많이 포함되어 있으므로, 최종 사용자가 자신 있게 이용할 수 있는 몰입형 환경을 만들 수 있습니다. 본 문서는 UWP 앱에서 터치식 입력을 사용하는 기본 사항을 설명합니다.
 
@@ -57,7 +57,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
 <table>
 <tbody><tr><th>요인</th><th>터치 조작</th><th>마우스, 키보드, 펜/스타일러스 조작</th><th>터치 패드</th></tr>
-<tr><td rowspan="3">전체 자릿수</td><td>손가락 끝의 접촉 영역이 단일 x-y 좌표보다 크므로 의도하지 않은 명령을 활성화할 가능성이 높아집니다.</td><td>마우스 및 펜/스타일러스는 정확한 x-y 좌표를 제공합니다.</td><td>마우스와 동일합니다.</td></tr>
+<tr><td rowspan="3">정밀도</td><td>손가락 끝의 접촉 영역이 단일 x-y 좌표보다 크므로 의도하지 않은 명령을 활성화할 가능성이 높아집니다.</td><td>마우스 및 펜/스타일러스는 정확한 x-y 좌표를 제공합니다.</td><td>마우스와 동일합니다.</td></tr>
 <tr><td>접촉 영역의 모양이 움직이면서 달라집니다.  </td><td>마우스 움직임 및 펜/스타일러스 스트로크는 정확한 x-y 좌표를 제공합니다. 키보드 포커스가 명확합니다.</td><td>마우스와 동일합니다.</td></tr>
 <tr><td>대상 지정을 지원하는 마우스 커서가 없습니다.</td><td>마우스 커서, 펜/스타일러스 커서, 키보드 포커스가 모두 대상 지정을 지원합니다.</td><td>마우스와 동일합니다.</td></tr>
 <tr><td rowspan="3">인체 구조</td><td>하나 이상의 손가락을 사용하여 직선으로 이동하는 것은 어렵기 때문에 손끝을 이용한 이동은 정확하지 않습니다. 이것은 손 마디의 곡률과 동작에 관련된 마디 수 때문입니다.</td><td>손으로 마우스나 펜/스타일러스를 조정할 경우에는 화면의 커서보다 실제로 더 짧은 거리를 이동하게 되므로 이러한 도구로 직선 동작을 수행하는 것이 더 쉽습니다.</td><td>마우스와 동일합니다.</td></tr>
@@ -74,13 +74,13 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
 
 
-**참고**    간접 입력 구체화의 근무 연수가 25 년이 넘는 활용 했습니다. 가리키기로 트리거되는 도구 설명과 같은 기능은 터치 패드, 마우스, 펜/스타일러스 및 키보드 입력을 비롯한 UI 탐색 문제를 해결하도록 디자인되었습니다. 이러한 UI 기능은 다른 장치의 사용자 환경을 손상시키지 않고 터치 입력에서 제공하는 풍부한 환경에 맞게 다시 디자인되었습니다.
+**Note**   Indirect input has had the benefit of more than 25 years of refinement. 가리키기로 트리거되는 도구 설명과 같은 기능은 터치 패드, 마우스, 펜/스타일러스 및 키보드 입력을 비롯한 UI 탐색 문제를 해결하도록 디자인되었습니다. 이러한 UI 기능은 다른 장치의 사용자 환경을 손상시키지 않고 터치 입력에서 제공하는 풍부한 환경에 맞게 다시 디자인되었습니다.
 
  
 
 ## <a name="use-touch-feedback"></a>터치 피드백 사용
 
-앱과 상호 작용 하는 동안 시각적 피드백을 적절 한 사용자 인식, 배우고, 앱 및 Windows 플랫폼 모두에서 상호 작용 해석 하는 방법에 맞게 조정할 수 있습니다. 시각적 피드백은 성공적인 조작을 알리고, 시스템 상태를 전달하고, 제어 기능을 향상시키고, 오류를 줄이고, 사용자가 시스템 및 입력 장치를 이해하는 데 도움을 주고, 조작을 권장할 수 있습니다.
+Appropriate visual feedback during interactions with your app helps users recognize, learn, and adapt to how their interactions are interpreted by both the app and the Windows platform. 시각적 피드백은 성공적인 조작을 알리고, 시스템 상태를 전달하고, 제어 기능을 향상시키고, 오류를 줄이고, 사용자가 시스템 및 입력 장치를 이해하는 데 도움을 주고, 조작을 권장할 수 있습니다.
 
 위치에 따라 정확도와 정밀도를 요구하는 활동에 터치식 입력을 사용할 경우 시각적 피드백이 중요합니다. 터치식 입력이 감지될 때마다 피드백을 표시하면 사용자가 앱 및 컨트롤이 정의하는 사용자 지정 대상 지정 규칙을 이해하는 데 도움이 됩니다.
 
@@ -110,7 +110,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 정확하지 않은 조작에 대해 다음을 사용하여 디자인합니다.
 
 -   사용자가 콘텐츠를 조작할 때 원하는 위치에서 쉽게 멈출 수 있는 끌기 지점
--   손이 약간 호를 그리며 움직일 경우에도 가로 또는 세로로 이동하도록 도와주는 방향 "길" 자세한 내용은 [이동에 대한 지침](guidelines-for-panning.md)을 참조하세요.
+-   손이 약간 호를 그리며 움직일 경우에도 가로 또는 세로로 이동하도록 도와주는 방향 "길"입니다. 자세한 내용은 [이동에 대한 지침](guidelines-for-panning.md)을 참조하세요.
 
 ## <a name="occlusion"></a>폐색
 
@@ -151,7 +151,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 -   조작 방식은 복합적인 조작을 지원해야 합니다. 예를 들어, 손가락을 끌어서 이동하는 동안 손가락을 모아 확대/축소할 경우
 -   조작은 시간으로 구분되어서는 안 됩니다. 같은 조작은 수행하는 데 걸린 시간과 상관 없이 결과가 같아야 합니다. 시간 기반 활성화는 사용자를 강제로 지연시키며 직접 조작의 몰입성과 시스템 응답 성능의 인식 능력을 모두 저하시킵니다.
 
-    **참고**  학습 및 탐색 (예, 키를 누른)를 지원 하기 위해 특정 시간된 상호 작용을 사용할는 예외입니다.
+    **Note**  An exception to this is where you use specific timed interactions to assist in learning and exploration (for example, press and hold).
 
      
 
@@ -174,7 +174,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 ## <a name="custom-touch-interactions"></a>사용자 지정 터치 조작
 
 
-조작 지원을 직접 구현할 경우 사용자들은 앱의 UI 요소와의 직접적 조작이 이루어지는 직관적인 환경을 기대한다는 점에 유의하세요. 플랫폼 컨트롤 라이브러리에서 항목이 일관되고 검색 가능하도록 사용자 지정 조작을 모델링하는 것이 좋습니다. 이러한 라이브러리의 컨트롤은 표준 조작, 애니메이션 효과를 준 물리적 효과, 시각적 피드백 및 접근성을 비롯하여 사용자 조작 환경 전체를 제공합니다. 요구 사항이 명확하게 잘 정의되어 있으며 기본 제스처가 시나리오를 지원하지 않는 경우에만 사용자 지정 조작을 만드세요.
+고유한 조작 지원을 구현하는 경우 사용자들은 앱의 UI 요소를 직접 조작하는 직관적인 환경을 기대한다는 것에 유의하세요. 플랫폼 컨트롤 라이브러리에서 항목이 일관되고 검색 가능하도록 사용자 지정 조작을 모델링하는 것이 좋습니다. 이러한 라이브러리의 컨트롤은 표준 조작, 애니메이션 효과를 준 물리적 효과, 시각적 피드백 및 접근성을 비롯하여 사용자 조작 환경 전체를 제공합니다. 요구 사항이 명확하게 잘 정의되어 있으며 기본 제스처가 시나리오를 지원하지 않는 경우에만 사용자 지정 조작을 만드세요.
 
 사용자 지정 터치 지원을 제공하기 위해 다양한 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 이벤트를 처리할 수 있습니다. 이러한 이벤트는 세 가지의 추상화 수준으로 그룹화됩니다.
 
@@ -192,7 +192,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 
 다음은 UWP에서 지원하는 터치 제스처의 기본 집합입니다.
 
-| 이름           | 형식                 | 설명                                                                            |
+| Name(이름)           | 작업 표시줄의 검색 상자에                 | 설명                                                                            |
 |----------------|----------------------|----------------------------------------------------------------------------------------|
 | 탭하기            | 정적 제스처       | 손가락 하나로 화면을 터치하고 뗍니다.                                            |
 | 길게 누르기 | 정적 제스처       | 손가락 하나로 화면을 터치한 다음 누르고 있습니다.                                      |
@@ -286,7 +286,7 @@ Public Sub New()
 End Sub
 ```
 
-마지막으로, [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트 처리기에서 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 및 [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)를 증가시키며, [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) 및 [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited) 이벤트 처리기에서는 **Height** 및 **Width**를 다시 해당 시작 값으로 설정합니다.
+마지막으로, [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트 처리기에서 [**Rectangle**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height)의 [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) 및 [**Width**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)를 증가시키며, [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) 및 [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited) 이벤트 처리기에서는 **Height** 및 **Width**를 다시 해당 시작 값으로 설정합니다.
 
 ```cpp
 // Handler for pointer exited event.
@@ -418,11 +418,11 @@ End Sub
 
 | 이벤트 또는 클래스                                                                                               | 설명                                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| [**ManipulationStarting 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting)                                   | 조작 프로세서가 처음 만들어질 때 발생 합니다.                                                                                  |
-| [**ManipulationStarted 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted)                                     | 입력 디바이스가 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)에 대한 조작을 시작할 때 발생합니다.                                            |
-| [**ManipulationDelta 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta)                                         | 입력된 장치 위치를 조작 하는 동안 변경 될 때 발생 합니다.                                                                      |
-| [**ManipulationInertiaStarting 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationinertiastartingevent)                | 조작하는 동안 입력 디바이스와 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 개체의 연결이 끊어지고 관성이 시작될 때 발생합니다. |
-| [**ManipulationCompleted 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted)                                 | [  **UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)에 대한 조작 및 관성이 완료될 때 발생합니다.                                          |
+| [**ManipulationStarting event**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting)                                   | 조작 프로세서가 처음 만들어질 때 발생합니다.                                                                                  |
+| [**ManipulationStarted event**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted)                                     | 입력 디바이스가 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)에 대한 조작을 시작할 때 발생합니다.                                            |
+| [**ManipulationDelta event**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta)                                         | 입력 디바이스가 조작 중에 위치를 바꿀 때 발생합니다.                                                                      |
+| [**ManipulationInertiaStarting event**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationinertiastartingevent)                | 조작하는 동안 입력 디바이스와 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 개체의 연결이 끊어지고 관성이 시작될 때 발생합니다. |
+| [**ManipulationCompleted event**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted)                                 | [  **UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)에 대한 조작 및 관성이 완료될 때 발생합니다.                                          |
 | [**ManipulationStartingRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs)               | [  **ManipulationStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting) 이벤트에 대한 데이터를 제공합니다.                                         |
 | [**ManipulationStartedRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs)                 | [  **ManipulationStarted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted) 이벤트에 대한 데이터를 제공합니다.                                           |
 | [**ManipulationDeltaRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs)                     | [  **ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트에 대한 데이터를 제공합니다.                                               |
@@ -436,7 +436,7 @@ End Sub
 
 다음에는 하나 이상의 [**ManipulationDelta**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트가 발생합니다. 예를 들어 화면을 터치한 후 손가락을 화면에서 끌면 이벤트가 발생합니다. 마지막으로 조작이 완료되면 [**ManipulationCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted) 이벤트가 발생합니다.
 
-**참고**  터치 스크린 모니터를 설정 하지 않은 경우 마우스 및 마우스 휠 인터페이스를 사용 하 여 시뮬레이터에서 조작 이벤트 코드를 테스트할 수 있습니다.
+**Note**  If you don't have a touch-screen monitor, you can test your manipulation event code in the simulator using a mouse and mouse wheel interface.
 
  
 
@@ -591,17 +591,17 @@ End Sub
 
 **샘플**
 
-* [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 상호 작용 모드 예제](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 시각적 개체 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Basic input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Low latency input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [User interaction mode sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
-**보관 샘플**
+**Archive Samples**
 
-* [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: XAML 사용자 입력된 이벤트 예제](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [입력: 제스처와 GestureRecognizer 조작](https://go.microsoft.com/fwlink/p/?LinkID=231605)
+* [Input: Device capabilities sample](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Input: XAML user input events sample](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [XAML scrolling, panning, and zooming sample](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [Input: Gestures and manipulations with GestureRecognizer](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
  
 
  

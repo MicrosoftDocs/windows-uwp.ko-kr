@@ -8,12 +8,12 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4bb24002e3738213ba3e784e6b91ff55d970a26a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 5b94c946222f510c7f1b1f7619b67ee83e6c2256
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363624"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258011"
 ---
 # <a name="define-custom-recognition-constraints"></a>사용자 지정 인식 제약 조건 정의
 
@@ -27,11 +27,11 @@ ms.locfileid: "66363624"
 
 [  **SpeechRecognizer.Constraints**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.constraints) 속성을 사용하여 음성 인식기에 제약 조건을 추가합니다.
 
-여기서는 앱 내에서 사용되는 세 종류의 음성 인식 제약 조건에 대해 설명합니다. (Cortana 음성 명령 제약 조건 참조 [Cortana에서 음성 명령 사용 하 여 포그라운드 앱을 시작](https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana).)
+여기서는 앱 내에서 사용되는 세 종류의 음성 인식 제약 조건에 대해 설명합니다. (For Cortana voice command constraints, see [Launch a foreground app with voice commands in Cortana](https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana).)
 
-- [**SpeechRecognitionTopicConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint)-미리 정의 된 문법 (받아쓰기 또는 웹 검색)를 기반으로 제약 조건입니다.
-- [**SpeechRecognitionListConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint)-단어 또는 문구의 목록에 따라 제약 조건입니다.
-- [**SpeechRecognitionGrammarFileConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint)-음성 인식 문법 Specification (SRGS) 파일에 정의 된 제약 조건입니다.
+- [**SpeechRecognitionTopicConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint)—A constraint based on a predefined grammar (dictation or web search).
+- [**SpeechRecognitionListConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint)—A constraint based on a list of words or phrases.
+- [**SpeechRecognitionGrammarFileConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint)—A constraint defined in a Speech Recognition Grammar Specification (SRGS) file.
 
 각 음성 인식기에 하나의 제약 조건 컬렉션을 사용할 수 있습니다. 다음과 같은 제약 조건 조합만 유효합니다.
 
@@ -137,7 +137,7 @@ SRGS 문법은 앱에 대한 복잡한 음성 조작을 구성하는 데 도움�
 - 의미 체계를 사용하여 음성 인식이 앱에 어떤 의미인지를 정의합니다.
 - 문법 또는 lexicon 링크를 통해 인라인으로 발음을 지정합니다.
 
-SRGS 요소 및 특성에 대한 자세한 내용은 [SRGS 문법 XML 참고](https://go.microsoft.com/fwlink/p/?LinkID=269886)를 참조하세요. SRGS 문법 만들기를 시작하려면 [기본 XML 문법을 만드는 방법](https://go.microsoft.com/fwlink/p/?LinkID=269887)을 참조하세요.
+SRGS 요소 및 특성에 대한 자세한 내용은 [SRGS 문법 XML 참고](https://msdn.microsoft.com/library/hh361653)를 참조하세요. SRGS 문법 만들기를 시작하려면 [기본 XML 문법을 만드는 방법](https://msdn.microsoft.com/library/hh361658)을 참조하세요.
 
 다음 사항을 기억하세요.
 
@@ -171,7 +171,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-이 SRGS 파일(srgs.grxml)에는 의미 해석 태그도 포함되어 있습니다. 이러한 태그는 앱에 문법 일치 데이터를 반환하는 메커니즘을 제공합니다. World Wide Web Consortium (W3C) 문법 따라야 [의미 해석에 대 한 음성 인식 (SISR) 1.0](https://go.microsoft.com/fwlink/p/?LinkID=201765) 사양입니다.
+이 SRGS 파일(srgs.grxml)에는 의미 해석 태그도 포함되어 있습니다. 이러한 태그는 앱에 문법 일치 데이터를 반환하는 메커니즘을 제공합니다. Grammars must conform to the World Wide Web Consortium (W3C) [Semantic Interpretation for Speech Recognition (SISR) 1.0](https://www.w3.org/TR/semantic-interpretation/) specification.
 
 여기서는 "yes" 및 "no"의 변형을 수신 대기합니다.
 
@@ -228,4 +228,4 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 
 ### <a name="samples"></a>샘플
 
-- [음성 인식 및 음성 합성 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+- [Speech recognition and speech synthesis sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

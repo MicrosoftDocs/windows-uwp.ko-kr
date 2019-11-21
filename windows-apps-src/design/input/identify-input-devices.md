@@ -8,12 +8,12 @@ keywords: 장치, 디지타이저, 입력, 조작
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 982f787aaef05dabdc356af906e80b28085b5a2d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b2a17d1f4664326cb54d9c53d828eb372ef93fe4
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363387"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257889"
 ---
 # <a name="identify-input-devices"></a>입력 장치 식별
 
@@ -27,7 +27,7 @@ UWP(유니버설 Windows 플랫폼) 장치에 연결된 입력 장치를 식별�
 
 [  **Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) 네임스페이스에는 하나 이상의 연결된 마우스가 제공하는 속성을 검색하는 데 사용되는 [**MouseCapabilities**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseCapabilities) 클래스가 포함되어 있습니다. 새 **MouseCapabilities** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**참고**  여기에 설명 된 속성에서 반환 된 값을 검색 된 모든 mice를 기반으로 합니다. 하나 이상의 마우스에서 특정 기능을 지원 하며 숫자 속성 마우스를 한 번에 의해 노출 되는 최대값을 반환 하는 경우 0이 아닌 반환 하는 부울 속성입니다.
+**Note**  The values returned by the properties discussed here are based on all detected mice: Boolean properties return non-zero if at least one mouse supports a specific capability, and numeric properties return the maximum value exposed by any one mouse.
 
  
 
@@ -65,7 +65,7 @@ private void GetKeyboardProperties()
 
 [  **Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) 네임스페이스에는 터치 디지타이저가 연결되었는지 여부를 검색하는 데 사용되는 [**TouchCapabilities**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.TouchCapabilities) 클래스가 포함되어 있습니다. 새 **TouchCapabilities** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**참고**  여기에 설명 된 속성에서 반환 된 값은 모든 검색 된 터치식 디지타이저에 기반 합니다. 하나 이상의 디지타이저에서 특정 기능을 지원 하 고 숫자 속성 하나 모든 디지타이저에서 노출 되는 최대 값을 반환 하는 경우 0이 아닌 반환 하는 부울 속성입니다.
+**Note**  The values returned by the properties discussed here are based on all detected touch digitizers: Boolean properties return non-zero if at least one digitizer supports a specific capability, and numeric properties return the maximum value exposed by any one digitizer.
 
  
 
@@ -85,7 +85,7 @@ private void GetTouchProperties()
 
 [  **Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) 네임스페이스에는 감지된 장치 지원 포인터 입력(터치, 터치 패드, 마우스 또는 펜)을 지원하는 장치가 연결되어 있는지 여부를 검색하는 데 사용되는 [**PointerDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.PointerDevice) 클래스가 포함되어 있습니다. 새 **PointerDevice** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**참고**  여기에 설명 된 속성에서 반환 된 값은 모든 검색 된 포인터 장치에 기반 합니다. 하나 이상의 장치에서 특정 기능을 지원 하 고 숫자 속성 하나의 포인터가 장치에서 노출 되는 최대 값을 반환 하는 경우 0이 아닌 반환 하는 부울 속성입니다.
+**Note**  The values returned by the properties discussed here are based on all detected pointer devices: Boolean properties return non-zero if at least one device supports a specific capability, and numeric properties return the maximum value exposed by any one pointer device.
 
 다음 코드에서는 표를 사용하여 각 포인터 장치의 속성과 값을 표시합니다.
 
@@ -178,12 +178,12 @@ private void GetPointerDevices()
 
 
 **샘플**
-* [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 상호 작용 모드 예제](https://go.microsoft.com/fwlink/p/?LinkID=619894)
+* [Basic input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Low latency input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [User interaction mode sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
 
-**보관 샘플**
-* [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
+**Archive samples**
+* [Input: Device capabilities sample](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
  
 
  

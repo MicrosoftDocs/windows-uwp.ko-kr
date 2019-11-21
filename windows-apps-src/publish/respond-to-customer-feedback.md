@@ -6,23 +6,23 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 04983b80-2a18-4ace-93d3-e8c33c04bfb9
 ms.localizationpriority: medium
-ms.openlocfilehash: 93d4da26dbb4c5eee1856b3a594214aabbbbaa00
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 9bc305834381fcdddac6e4eacf12144fd9f189c2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645078"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259950"
 ---
 # <a name="respond-to-customer-feedback"></a>고객 피드백에 응답
 
 [피드백 보고서](feedback-report.md)를 사용하여 Windows 10 고객이 피드백 허브에서 앱에 대해 남긴 피드백을 검토한 다음 해당 피드백에 직접 응답할 수 있습니다. 모든 사람이 볼 수 있도록 피드백 허브에 응답을 게시(개인 메모로 남기거나 일부 피드백 상태를 업데이트하고 설명을 추가하는 방식으로 게시)하여 고객에게 새로운 기능 또는 버그 수정에 대해 알리거나 앱을 개선하는 방법에 대한 특정 피드백을 요청할 수 있습니다. 피드백을 남긴 고객에게 직접 메일로 응답을 보낼 수도 있습니다.
 
 > [!TIP]
-> 고객이 직접 [UWP 앱에서 피드백 허브를 시작](../monetize/launch-feedback-hub-from-your-app.md)할 수 있는 컨트롤을 추가하려면 고객이 [Microsoft Store Services SDK](https://aka.ms/store-em-sdk)에서 피드백 API를 사용하여 피드백을 남기도록 권유할 수 있습니다. 피드백 허브를 지원하는 Windows 10 디바이스에 앱을 다운로드한 모든 고객은 피드백 허브 앱을 통해 직접 해당 피드백을 남길 수 있습니다. 이로 인해 앱 내에서 특별히 피드백을 요청하지 않은 경우에도 이 보고서에서 고객 의견을 볼 수 있습니다.
+> 고객이 직접 [UWP 앱에서 피드백 허브를 시작](../monetize/launch-feedback-hub-from-your-app.md)할 수 있는 컨트롤을 추가하려면 고객이 [Microsoft Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK)에서 피드백 API를 사용하여 피드백을 남기도록 권유할 수 있습니다. 피드백 허브를 지원하는 Windows 10 장치에 앱을 다운로드한 모든 고객은 피드백 허브 앱을 통해 직접 해당 피드백을 남길 수 있습니다. 이로 인해 앱 내에서 특별히 피드백을 요청하지 않은 경우에도 이 보고서에서 고객 의견을 볼 수 있습니다.
 
 피드백에 응답을 제공하려면 **피드백 보고서**의 피드백 옆에 나타나는 **피드백에 응답** 링크를 클릭합니다.
 
-[파트너 센터](https://partner.microsoft.com/dashboard) 앱에 대 한 피드백을 제공 하는 고객에 게 응답 하는 것에 대 한 세 가지 옵션을 지원 합니다. 어떤 옵션을 선택하든 각 응답은 1000자로 제한됩니다.
+[Partner Center](https://partner.microsoft.com/dashboard) supports three options for responding to customers who provide feedback about your app. 어떤 옵션을 선택하든 각 응답은 1000자로 제한됩니다.
 
 ## <a name="public-comments-in-feedback-hub"></a>피드백 허브의 공개 메모
 
@@ -31,9 +31,9 @@ ms.locfileid: "57645078"
 입력한 메모가 다른 고객이 제출한 메모와 함께 피드백 허브에 메모로 표시됩니다. 개발자인지 알 수 있도록 게시자 이름과 앱 이름이 메모와 함께 표시됩니다. 피드백에 대해 작성할 수 있는 메모 수에는 제한이 없지만 일단 제출하면 메모를 편집하거나 삭제할 수 없습니다. 피드백에 대한 최근 5개의 메모가 피드백 허브와 **피드백 보고서**에 표시됩니다. 메모가 5개를 넘는 경우 **메모 모두 표시**를 클릭하면 피드백 허브의 모든 메모를 볼 수 있습니다.
 
 
-## <a name="private-responses-via-email"></a>이메일을 통해 프라이빗 응답
+## <a name="private-responses-via-email"></a>메일을 통해 개인 응답
 
-공개 응답을 게시하지 않으려는 경우 **의견을 이메일로 보내기** 확인란을 선택하여 고객(메일 주소를 제공하고 메일로 응답 수신을 옵트아웃(opt out)하지 않은 고객)에게 직접 프라이빗 응답을 보낼 수 있습니다. 이렇게 하면 Microsoft에서 대신 고객에게 메일을 보냅니다. 메일에는 작성한 응답과 원래 피드백이 함께 포함됩니다.
+공개 응답을 게시하지 않으려는 경우 **의견을 메일로 보내기** 확인란을 선택하여 고객(메일 주소를 제공하고 메일로 응답 수신을 옵트아웃(opt out)하지 않은 고객)에게 직접 개인 응답을 보낼 수 있습니다. 이렇게 하면 Microsoft에서 대신 고객에게 메일을 보냅니다. 메일에는 작성한 응답과 원래 피드백이 함께 포함됩니다.
 
 **의견을 메일로 보내기** 확인란을 선택한 후 메모를 입력하고 **제출**을 클릭합니다. 이 옵션을 사용할 경우 **지원 연락처 메일** 필드에 메일 주소를 제공해야 합니다. 기본적으로 계정 연락처 정보에 제공한 메일 주소를 사용합니다. 다른 메일 주소를 사용하려면 **지원 연락처 메일** 필드를 업데이트하여 다른 주소를 사용할 수 있습니다. 응답을 수신하는 고객은 이 메일 주소로 바로 회신할 수 있습니다.
 
@@ -44,9 +44,9 @@ ms.locfileid: "57645078"
 
 이 옵션을 사용하려면 **상태 업데이트** 라디오 단추를 선택합니다. 그런 후 다음 옵션 중 하나를 선택합니다.
 
-- **조사**: 문제를 알고 찾고 있다면 넣습니다.
-- **작업**: 여러분이 문제 해결 또는 요청 된 기능을 추가 합니다.
-- **완료**: 문제를 수정 하거나 기능을 추가에 대 한 업데이트를 게시 했습니다.
+- **조사 중**: 문제를 인식하고 찾고 있습니다.
+- **작업 중**: 문제를 해결하는 중이거나 요청한 기능을 추가하는 중입니다.
+- **완료됨**: 문제를 해결하거나 요청한 기능을 추가하는 업데이트를 게시했습니다.
 
 상태 업데이트와 함께 메모를 입력하여 추가 정보를 제공할 수 있습니다(예: 문제가 해결될 것으로 예상되는 시점이나 최신 변경 사항에 대한 추가 정보). 이 설명은 메모 목록의 상단에 표시되고 피드백 보고서에 현재 상태와 설명이 표시됩니다.
 
@@ -66,4 +66,4 @@ ms.locfileid: "57645078"
 > [!NOTE]
 > 고객은 부적절한 피드백 응답을 받을 경우 개발자를 Microsoft에 보고할 수 있습니다. 피드백 응답을 메일로 받는 것을 옵트아웃(opt out)할 수도 있습니다.
 
-고객과의 관계는 여러분의 책임입니다. 개발자와 고객 간에 분쟁이 있을 경우 Microsoft는 관여하지 않습니다. 그러나 제품에 대한 고객의 피드백 내용이 부적절하다고 생각되는 경우에는 [지원 티켓](https://go.microsoft.com/fwlink/p/?LinkID=401178)을 제출하세요.
+고객과의 관계는 여러분의 책임입니다. 개발자와 고객 간에 분쟁이 있을 경우 Microsoft는 관여하지 않습니다. 그러나 제품에 대한 고객의 피드백 내용이 부적절하다고 생각되는 경우에는 [지원 티켓](https://developer.microsoft.com/windows/support)을 제출하세요.

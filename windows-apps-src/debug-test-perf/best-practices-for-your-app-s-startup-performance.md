@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ecb325566733e57c1ae9d1a13c68b25794e9e87
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ae37ab763b6705fbb3f341569904972ebb181412
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360035"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254680"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>앱 시작 성능 모범 사례
 
@@ -32,7 +32,7 @@ UWP 앱이 고객의 컴퓨터에 도착할 때까지 앱은 .NET 네이티브 �
 
 다음 절차는 Ngen.exe를 실행하여 앱을 프리컴파일하는 방법을 설명합니다.
 
-**Ngen.exe를 실행 하려면**
+**To run Ngen.exe**
 
 1.  앱을 한 번 이상 실행하여 Ngen.exe에서 이를 검색할 수 있게 합니다.
 2.  다음 중 한 가지를 수행하여 **작업 스케줄러**를 엽니다.
@@ -323,7 +323,7 @@ XAML 앱의 시작 성능은 시작하는 동안 만드는 요소 수와 직접�
 > End Class
 > ```
 
-연장된 시작 화면 사용의 예를 보려면 [시작 화면 샘플](https://go.microsoft.com/fwlink/p/?linkid=234889)을 참조하세요.
+연장된 시작 화면 사용의 예를 보려면 [시작 화면 샘플](https://code.msdn.microsoft.com/windowsapps/Splash-screen-sample-89c1dc78)을 참조하세요.
 
 ### <a name="phase-3"></a>3단계
 
@@ -339,7 +339,7 @@ XAML 앱의 시작 성능은 시작하는 동안 만드는 요소 수와 직접�
 
 재사용 가능 코드는 종종 프로젝트에 포함된 모듈(DLL) 형식으로 나타납니다. 이 모듈을 로드하려면 디스크에 액세스해야 하고 예상대로 작업을 수행하는 부담이 추가될 수 있습니다. 이 부담은 콜드 부팅에 가장 큰 영향을 미치지만 웜 부팅에도 영향을 미칠 수 있습니다. C# 및 Visual Basic의 경우 CLR이 요청 시 어셈블리를 로드하는 방식으로 해당 부담을 가능한 많이 지연시킵니다. 즉, 실행된 메서드가 가리킬 때까지 CLR이 모듈을 로드하지 않습니다. 따라서 CLR이 불필요한 모듈을 로드하지 않도록 시작 코드에서 앱 실행에 필요한 어셈블리만 가리키세요. 시작 경로에 불필요한 참조가 포함된 사용되지 않는 코드가 있을 경우 이 코드 경로를 다른 메서드로 이동하여 불필요한 로드를 방지할 수 있습니다.
 
-모듈 로드를 줄이는 다른 방법은 앱 모듈을 결합하는 것입니다. 큰 어셈블리 하나를 로드하는 것이 보통 작업 어셈블리 두 개를 로드하는 것보다 시간이 덜 걸립니다. 항상 가능하지는 않으며 개발자 생산성이나 코드 재사용 가능성에 실질적 차이를 만들지 않는 경우에만 모듈을 결합해야 합니다. [PerfView](https://go.microsoft.com/fwlink/p/?linkid=251609) 또는 [WPA(Windows 성능 분석기)](https://docs.microsoft.com/previous-versions/windows/desktop/xperf/windows-performance-analyzer--wpa-)와 같은 도구를 사용하여 시작 시 로드되는 모듈을 찾을 수 있습니다.
+모듈 로드를 줄이는 다른 방법은 앱 모듈을 결합하는 것입니다. 큰 어셈블리 하나를 로드하는 것이 보통 작업 어셈블리 두 개를 로드하는 것보다 시간이 덜 걸립니다. 항상 가능하지는 않으며 개발자 생산성이나 코드 재사용 가능성에 실질적 차이를 만들지 않는 경우에만 모듈을 결합해야 합니다. [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) 또는 [WPA(Windows 성능 분석기)](https://docs.microsoft.com/previous-versions/windows/desktop/xperf/windows-performance-analyzer--wpa-)와 같은 도구를 사용하여 시작 시 로드되는 모듈을 찾을 수 있습니다.
 
 ### <a name="make-smart-web-requests"></a>효율적인 웹 요청
 

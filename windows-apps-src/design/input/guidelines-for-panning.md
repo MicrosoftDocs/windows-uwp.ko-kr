@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 01754d94cf413317cf204d04f8590028eeabcfc8
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 945368e27c4f6215d2f5df20d52d916ead3597dd
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317318"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257950"
 ---
 # <a name="guidelines-for-panning"></a>이동에 대한 지침
 
@@ -26,17 +26,17 @@ ms.locfileid: "67317318"
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 
-**표시기 및 스크롤 막대를 이동합니다.**
+**Panning indicators and scroll bars**
 
 -   콘텐츠를 앱에 로드하기 전에 이동/스크롤이 가능한지 확인합니다.
 
--   위치 및 크기 신호를 제공하기 위해 이동 표시기와 스크롤 막대를 표시합니다. 사용자 지정 탐색 기능을 제공하는 경우에는 이동 표시기와 스크롤 막대를 숨깁니다.
+-   위치 및 크기 신호를 제공하려면 이동 표시기 및 스크롤 막대를 표시하고, 사용자 지정 탐색 기능을 제공하려면 이를 숨기세요.
 
-    **참고**  달리 표준 스크롤 막대, 표시기 이동은 순수 하 게 정보를 제공 합니다. 입력 장치에 노출되지 않으며 어떤 방식으로도 조작할 수 없습니다.
+    **Note**  Unlike standard scroll bars, panning indicators are purely informative. 입력 장치에 노출되지 않으며 어떤 방식으로도 조작할 수 없습니다.
 
      
 
-**단일 축 (1 차원 오버플로)를 이동 합니다.**
+**Single-axis panning (one-dimensional overflow)**
 
 -   하나의 뷰포트 경계(세로 또는 가로)를 넘어가는 콘텐츠 영역에는 단일 축 이동을 사용합니다.
 
@@ -44,27 +44,27 @@ ms.locfileid: "67317318"
     -   항목 그리드에는 가로 이동을 사용합니다.
 -   사용자가 끌기 지점 간을 이동하고 중지할 수 있어야 하는 경우에는 단일 축 이동에 필수 끌기 지점을 사용하지 마세요. 필수 끌기 지점은 사용자가 끌기 지점에서 중지하도록 합니다. 대신 근접 끌기 지점을 사용하세요.
 
-**자유형 (2 차원 오버플로)를 이동**
+**Freeform panning (two-dimensional overflow)**
 
 -   두 뷰포트 경계(세로 또는 가로)를 모두 넘어가는 콘텐츠 영역에는 2축 이동을 사용합니다.
 
     -   사용자가 여러 방향으로 이동할 가능성이 큰 구조화되지 않은 콘텐츠의 경우 기본 이동 경로 동작을 무시하고 자유형 이동을 사용합니다.
 -   일반적으로 자유형 이동은 이미지나 지도 내에서 탐색하는 데 적합합니다.
 
-**페이지 보기**
+**Paged view**
 
 -   콘텐츠가 별도의 요소로 구성되어 있거나 전체 요소를 표시하려는 경우에는 필수 끌기 지점을 사용합니다. 책이나 잡지 페이지, 항목 열 또는 개별 이미지가 여기에 포함될 수 있습니다.
 
     -   각 논리 범위에 끌기 지점이 있어야 합니다.
     -   각 요소의 크기를 보기에 맞게 조정해야 합니다.
 
-**논리 및 키 요소**
+**Logical and key points**
 
 -   사용자가 멈출 가능성이 큰 핵심 사항이나 논리적 위치가 콘텐츠에 있는 경우에는 근접 끌기 지점을 사용합니다. 예를 들어 섹션 헤더 등이 있습니다.
 
 -   최대 및 최소 크기 제약 조건이나 경계가 정의된 경우 사용자가 해당 경계에 도달하면 표시할 시각적 피드백을 사용합니다.
 
-**체인 포함 또는 중첩 된 콘텐츠**
+**Chaining embedded or nested content**
 
 -   텍스트 및 그리드 기반 콘텐츠에 단일 축 이동(일반적으로 가로) 및 열 레이아웃을 사용합니다. 이러한 경우 콘텐츠는 일반적으로 래핑되고 열 사이에서 자연스럽게 흐르며 UWP 앱에서 사용자 환경을 일관되고 검색 가능하도록 유지합니다.
 
@@ -76,11 +76,11 @@ ms.locfileid: "67317318"
 
 ## <a name="additional-usage-guidance"></a>추가 사용법 지침
 
-터치를 사용하여 이동(하나 이상의 손가락으로 살짝 밀기 또는 밀기 제스처 사용)하는 것은 마우스를 사용하여 스크롤하는 것과 같습니다. 이동 조작 방식은 스크롤 막대를 클릭하는 것보다는 마우스 휠을 회전하거나 스크롤 상자를 미는 것과 가장 유사합니다. 아니면 구분은 API에 대 한 몇 가지 장치별 Windows UI에 필요한, 단순히 참조 모두 상호 작용으로 이동 합니다.
+터치를 사용하여 이동(하나 이상의 손가락으로 살짝 밀기 또는 밀기 제스처 사용)하는 것은 마우스를 사용하여 스크롤하는 것과 같습니다. 이동 조작 방식은 스크롤 막대를 클릭하는 것보다는 마우스 휠을 회전하거나 스크롤 상자를 미는 것과 가장 유사합니다. Unless a distinction is made in an API or required by some device-specific Windows UI, we simply refer to both interactions as panning.
 
 > <div id="main">
-> <strong>Windows 10 Fall Creators Update-동작 변경</strong> 텍스트 선택 하는 대신 기본적으로는 현재 펜 이제 스크롤합니다/계획에서 UWP 앱 (예: 터치, 터치 패드 및 수동 펜).  
-> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 무시하고 이전 동작으로 되돌릴 수 있습니다. 세부 정보에 대 한 API 참조 항목을 참조 합니다 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer 클래스</a>합니다.
+> <strong>Windows 10 Fall Creators Update - Behavior change</strong> By default, instead of text selection, an active pen now scrolls/pans in UWP apps (like touch, touchpad, and passive pen).  
+> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 재정의하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer 클래스</a>의 API 참조 항목을 참조하세요.
 > </div>
 
 입력 장치에 따라 사용자는 다음 중 하나를 사용하여 이동 가능한 영역 내에서 이동합니다.
@@ -93,18 +93,18 @@ ms.locfileid: "67317318"
 
 밀기는 손가락을 이동 방향으로 천천히 움직이는 것과 관련 있습니다. 이때 일대일 관계가 형성되어 콘텐츠가 손가락과 같은 속도 및 거리로 이동합니다. 살짝 밀기는 손가락을 빠르게 밀었다 떼는 것으로, 이때는 이동 애니메이션에 다음과 같은 물리학이 적용됩니다.
 
--   감속 (관성): 감속을 시작 하려면 패닝 손가락 원인을 변환 합니다. 이 동작은 매끄러운 표면을 미끄러지다가 멈추는 것과 비슷합니다.
--   병합 합니다. 맞춤 지점 또는 콘텐츠 영역의 경계에 도달한 경우 약간의 백 바운스 효과 사용 하면 모멘텀 감속 하는 동안 이동 합니다.
+-   감속(관성): 손가락을 들면 이동 속도가 느려집니다. 이 동작은 매끄러운 화면을 미끄러지다가 멈추는 것과 비슷합니다.
+-   흡수: 감속 중 이동 가속도로 인해 끌기 지점이나 콘텐츠 영역 범위에 도달하면 약간 뒤로 튀는 효과가 발생합니다.
 
-**이동 유형**
+**Types of panning**
 
-Windows 8에는 세 가지 유형의 이동을 지원합니다.
+Windows 8 supports three types of panning:
 
 -   단일 축 - 한 방향(가로 또는 세로)에서만 이동이 지원됩니다.
 -   이동 경로 - 모든 방향에서 이동이 지원됩니다. 그러나 사용자가 특정 방향에서 거리 임계값을 넘으면 이동이 해당 축으로 제한됩니다.
 -   자유형 - 모든 방향에서 이동이 지원됩니다.
 
-**UI를 이동합니다.**
+**Panning UI**
 
 이동 조작 환경은 유사한 기능을 제공하지만 입력 디바이스에 고유합니다.
 
@@ -115,7 +115,7 @@ Windows 8에는 세 가지 유형의 이동을 지원합니다.
 -   터치의 이동 표시기
 -   마우스, 터치 패드, 키보드, 스타일러스를 비롯한 다른 입력 장치에 대한 스크롤 막대입니다.
 
-**참고**  이동 표시기 터치 연락처 pannable 지역 내에 있을 때에 표시 됩니다. 마찬가지로, 스크롤 막대도 마우스 커서, 펜/스타일러스 커서 또는 키보드 포커스가 이동 가능 영역 내에 있을 때만 표시됩니다.
+**Note**  Panning indicators are only visible when the touch contact is within the pannable region. 마찬가지로, 스크롤 막대도 마우스 커서, 펜/스타일러스 커서 또는 키보드 포커스가 이동 가능 영역 내에 있을 때만 표시됩니다.
 
  
 
@@ -152,7 +152,7 @@ Windows 8에는 세 가지 유형의 이동을 지원합니다.
 
 ![이동을 제한하는 이동 경로가 있는 화면의 다이어그램](images/ux-panning-rails.png)
 
-**체인 포함 또는 중첩 된 콘텐츠**
+**Chaining embedded or nested content**
 
 사용자가 다른 확대/축소 가능 요소 또는 스크롤 가능 요소 안에 중첩된 요소에 대한 확대/축소 또는 스크롤 한계에 도달할 경우 하위 요소에서 시작된 상위 요소가 확대/축소 또는 스크롤 작업을 상위 요소가 계속해야 할지 여부를 지정할 수 있습니다. 이것을 확대/축소 또는 스크롤 체인이라고 합니다.
 
@@ -171,25 +171,25 @@ Windows 8에는 세 가지 유형의 이동을 지원합니다.
 ## <a name="related-articles"></a>관련 문서
 
 
-* [사용자 지정 사용자 상호 작용](https://docs.microsoft.com/windows/uwp/design/layout/index)
-* [ListView 및 GridView 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)
+* [Custom user interactions](https://docs.microsoft.com/windows/uwp/design/layout/index)
+* [Optimize ListView and GridView](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)
 * [키보드 접근성](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
 
 **샘플**
-* [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 상호 작용 모드 예제](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 시각적 개체 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Basic input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Low latency input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [User interaction mode sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
-**보관 샘플**
-* [입력: XAML 사용자 입력된 이벤트 예제](https://go.microsoft.com/fwlink/p/?linkid=226855)
-* [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
-* [입력: 터치 적중된 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
-* [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [입력: 간소화 된 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
-* [입력: Windows 8 제스처 샘플](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-* [입력: 조작 및 제스처 (C++) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
-* [DirectX 터치 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+**Archive samples**
+* [Input: XAML user input events sample](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [Input: Device capabilities sample](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Input: Touch hit testing sample](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
+* [XAML scrolling, panning, and zooming sample](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [Input: Simplified ink sample](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
+* [Input: Windows 8 gestures sample](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+* [Input: Manipulations and gestures (C++) sample](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
+* [DirectX touch input sample](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
  
 
  

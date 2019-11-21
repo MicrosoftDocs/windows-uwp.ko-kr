@@ -8,12 +8,12 @@ keywords: Windows Ink, Windows Inking, DirectInk, InkPresenter, InkCanvas, ISF, 
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7eb7f085c5e4daa46cfa6c256ec3938be3c13d82
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 2919a2f61f3185d85b91bdf6fd6be22402eb77d0
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365352"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258265"
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Windows Ink 스트로크 데이터 저장 및 검색
 
@@ -29,7 +29,7 @@ Windows 잉크를 지원하는 UWP 앱은 ISF(Ink Serialized Format) 파일에 �
 
 여기서는 [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤에 그려진 잉크 스트로크를 저장하는 방법을 설명합니다.
 
-**이 샘플을 다운로드할 [저장 하 고 잉크 스트로크 잉크 직렬화 형식 (ISF) 파일에서 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
+**Download this sample from [Save and load ink strokes from an Ink Serialized Format (ISF) file](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
 
 1.  먼저 UI를 설정합니다.
 
@@ -161,7 +161,7 @@ public MainPage()
 
 다음은 파일에서 잉크 스트로크를 로드하고 [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤에서 해당 잉크 스트로크를 렌더링하는 방법을 설명합니다.
 
-**이 샘플을 다운로드할 [저장 하 고 잉크 스트로크 잉크 직렬화 형식 (ISF) 파일에서 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
+**Download this sample from [Save and load ink strokes from an Ink Serialized Format (ISF) file](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)**
 
 1.  먼저 UI를 설정합니다.
 
@@ -277,7 +277,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 
 이 예제에서는 펜 단추(또는 마우스 오른쪽 단추)를 사용하여 입력을 수정할 때 스트로크 선택을 사용합니다. 스트로크 선택을 구현하는 방법의 전체 예제는 [펜 및 스타일러스 조작](pen-and-stylus-interactions.md)에서 고급 처리를 위한 통과 입력을 참조하세요.
 
-**이 샘플을 다운로드할 [저장 하 고 클립보드에서 잉크 스트로크를 로드 합니다.](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)**
+**Download this sample from [Save and load ink strokes from the clipboard](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)**
 
 1.  먼저 UI를 설정합니다.
 
@@ -434,19 +434,19 @@ private void btnPaste_Click(object sender, RoutedEventArgs e)
 
 ## <a name="related-articles"></a>관련 문서
 
-* [펜 및 스타일러스 상호 작용](pen-and-stylus-interactions.md)
+* [Pen and stylus interactions](pen-and-stylus-interactions.md)
 
-**항목 샘플**
-* [저장 하 고 잉크 스트로크 잉크 직렬화 형식 (ISF) 파일에서 로드](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)
-* [클립보드에서 잉크 스트로크를 로드 및 저장](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
+**Topic samples**
+* [Save and load ink strokes from an Ink Serialized Format (ISF) file](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store.zip)
+* [Save and load ink strokes from the clipboard](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-store-clipboard.zip)
 
-**다른 샘플**
-* [간단한 잉크 샘플 (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
-* [복잡 한 잉크 샘플 (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
-* [잉크 샘플 (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
-* [자습서 시작 하기: UWP 앱에서 잉크를 지원 합니다.](https://aka.ms/appsample-ink)
-* [색 지정 책 샘플](https://aka.ms/cpubsample-coloringbook)
-* [제품군 정보 샘플](https://aka.ms/cpubsample-familynotessample)
+**Other samples**
+* [Simple ink sample (C#/C++)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
+* [Complex ink sample (C++)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
+* [Ink sample (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
+* [Get Started Tutorial: Support ink in your UWP app](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
+* [Coloring book sample](https://github.com/Microsoft/Windows-appsample-coloringbook)
+* [Family notes sample](https://github.com/Microsoft/Windows-appsample-familynotes)
 
 
 

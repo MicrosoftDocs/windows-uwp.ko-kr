@@ -1,22 +1,22 @@
 ---
-Description: ApplicationView 클래스를 사용 하 여 별도의 창에서 앱의 서로 다른 부분을 볼 수 있습니다.
-title: ApplicationView 클래스를 사용 하 여 앱에 대 한 보조 창 표시
+Description: Use the ApplicationView class to view different parts of your app in separate windows.
+title: Use the ApplicationView class to show secondary windows for an app
 ms.date: 07/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc01894311badd9bb6e88f05c0f8b49c5824736b
-ms.sourcegitcommit: 3cc6eb3bab78f7e68c37226c40410ebca73f82a9
+ms.openlocfilehash: 1a89596979f84c1ec4d698d14deacf8f852a7fbd
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68730531"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258193"
 ---
-# <a name="show-multiple-views-with-applicationview"></a>ApplicationView를 사용 하 여 여러 뷰 표시
+# <a name="show-multiple-views-with-applicationview"></a>Show multiple views with ApplicationView
 
 개별 창에서 앱의 독립 부분을 볼 수 있도록 하여 사용자의 생산성을 높이는 데 도움을 줍니다. 여러 개의 앱 창을 만드는 경우 각 창이 독립적으로 동작합니다. 작업 표시줄에 각 창이 개별적으로 표시됩니다. 사용자는 앱 창을 독립적으로 이동, 크기 조정, 표시 및 숨길 수 있으며, 별도의 앱인 것처럼 앱 창 간에 전환할 수 있습니다. 각 창은 해당 스레드에서 작동합니다.
 
-> **중요 API**: [**Applicationviewswitcher**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewSwitcher), [ **CreateNewView**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)
+> **중요 API**: [**ApplicationViewSwitcher**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewSwitcher), [**CreateNewView**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)
 
 ## <a name="what-is-a-view"></a>보기란?
 
@@ -53,7 +53,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**새 보기를 표시 하려면**
+**To show a new view**
 
 1.  [  **CoreApplication.CreateNewView**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)를 호출하여 보기 콘텐츠에 대한 새 창과 스레드를 만듭니다.
 
@@ -63,7 +63,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 2.  새 보기의 [**Id**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.id)를 추적합니다. 나중에 보기를 표시하는 데 사용합니다.
 
-    만든 보기의 추적에 도움이 되도록 앱에 일부 인프라를 빌드하는 것이 좋습니다. 예제는 [MultipleViews 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620574)의 `ViewLifetimeControl` 클래스를 참조하세요.
+    만든 보기의 추적에 도움이 되도록 앱에 일부 인프라를 빌드하는 것이 좋습니다. 예제는 [MultipleViews 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MultipleViews)의 `ViewLifetimeControl` 클래스를 참조하세요.
 
     ```csharp
     int newViewId = 0;
@@ -71,9 +71,9 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 3.  새 스레드에서 창을 채웁니다.
 
-    [  **CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 메서드를 사용하여 새 보기에 대한 UI 스레드에 작업을 예약합니다. [람다 식](https://go.microsoft.com/fwlink/p/?LinkId=389615)을 사용하여 함수를 **RunAsync** 메서드에 인수로 전달합니다. 람다 함수에서 수행하는 작업이 새 보기의 스레드에서 발생합니다.
+    [  **CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 메서드를 사용하여 새 보기에 대한 UI 스레드에 작업을 예약합니다. [람다 식](https://msdn.microsoft.com/library/bb397687.aspx)을 사용하여 함수를 **RunAsync** 메서드에 인수로 전달합니다. 람다 함수에서 수행하는 작업이 새 보기의 스레드에서 발생합니다.
 
-    XAML에서는 일반적으로 [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window)의 [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content) 속성에 [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)을 추가한 다음 **Frame**에서 앱 콘텐츠를 정의한 XAML [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page)로 이동합니다. 프레임 및 페이지에 대 한 자세한 내용은 [두 페이지 간 피어 투 피어 탐색](../basics/navigate-between-two-pages.md)을 참조 하세요.
+    XAML에서는 일반적으로 [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window)의 [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content) 속성에 [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)을 추가한 다음 **Frame**에서 앱 콘텐츠를 정의한 XAML [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page)로 이동합니다. For more info about frames and pages, see [Peer-to-peer navigation between two pages](../basics/navigate-between-two-pages.md).
 
     새 [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window)가 채워진 후 나중에 **Window**를 표시하려면 **Window**의 [**Activate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.activate) 메서드를 호출해야 합니다. 이 작업은 새 보기의 스레드에서 발생하므로 새 **Window**가 활성화됩니다.
 
@@ -94,7 +94,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 4.  [  **ApplicationViewSwitcher.TryShowAsStandaloneAsync**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewswitcher.tryshowasstandaloneasync)를 호출하여 새 보기를 표시합니다.
 
-    새 보기를 만든 후 [**ApplicationViewSwitcher.TryShowAsStandaloneAsync**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewswitcher.tryshowasstandaloneasync) 메서드를 호출하여 새 창에 표시할 수 있습니다. 이 메서드의 *viewId* 매개 변수는 앱에서 각 보기를 고유하게 식별하는 정수입니다. **ApplicationView.Id** 속성 또는 [**ApplicationView.GetApplicationViewIdForWindow**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.getapplicationviewidforwindow) 메서드를 사용하여 [**Id**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.id) 보기를 검색합니다.
+    새 보기를 만든 후 [**ApplicationViewSwitcher.TryShowAsStandaloneAsync**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewswitcher.tryshowasstandaloneasync) 메서드를 호출하여 새 창에 표시할 수 있습니다. 이 메서드의 *viewId* 매개 변수는 앱에서 각 보기를 고유하게 식별하는 정수입니다. **ApplicationView.Id** 속성 또는 [**ApplicationView.GetApplicationViewIdForWindow**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.id) 메서드를 사용하여 [**Id**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.getapplicationviewidforwindow) 보기를 검색합니다.
 
     ```csharp
     bool viewShown = await ApplicationViewSwitcher.TryShowAsStandaloneAsync(newViewId);
@@ -105,7 +105,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 앱을 시작할 때 생성되는 첫 번째 보기를 *기본 보기*라고 합니다. 이 보기는 [**CoreApplication.MainView**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.mainview) 속성에 저장되고 해당 [**IsMain**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.ismain) 속성은 true입니다. 이 보기는 직접 만들지 않고 앱에 의해 생성됩니다. 기본 보기의 스레드는 앱 관리자 역할을 하며 모든 앱 활성화 이벤트가 이 스레드에서 전달됩니다.
 
-보조 보기가 열려 있으면 기본 보기의 창을 숨길 수 있지만(예: 창 제목 표시줄에서 닫기(x) 단추 클릭) 해당 스레드는 활성 상태로 유지됩니다. 기본 보기의 [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window)에서 [**Close**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.close)를 호출하면 **InvalidOperationException**이 발생합니다. [**응용 프로그램을 닫으려면 응용 프로그램 종료**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.exit) 를 사용 합니다. 주 뷰의 스레드가 종료 되 면 앱이 닫힙니다.
+보조 보기가 열려 있으면 기본 보기의 창을 숨길 수 있지만(예: 창 제목 표시줄에서 닫기(x) 단추 클릭) 해당 스레드는 활성 상태로 유지됩니다. 기본 보기의 [**Window**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.close)에서 [**Close**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window)를 호출하면 **InvalidOperationException**이 발생합니다. 앱을 닫으려면 [**Application.Exit**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.exit)를 사용합니다. 기본 보기의 스레드가 종료되면 앱이 닫힙니다.
 
 ## <a name="secondary-views"></a>보조 보기
 
@@ -127,7 +127,7 @@ await ApplicationViewSwitcher.SwitchAsync(viewIdToShow);
 
 ## <a name="related-topics"></a>관련 항목
 
-- [여러 뷰 표시](show-multiple-views.md)
-- [AppWindow를 사용 하 여 여러 뷰 표시](app-window.md)
+- [Show multiple views](show-multiple-views.md)
+- [Show multiple views with AppWindow](app-window.md)
 - [ApplicationViewSwitcher](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewSwitcher)
 - [CreateNewView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)

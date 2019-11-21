@@ -6,25 +6,25 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: ade80769-17ae-46e9-9c2f-bf08ae5a51ee
 ms.localizationpriority: medium
-ms.openlocfilehash: 3664ecae152b7178709bffc373a877e58a86461a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 95b65e63c081734a560a852a5d064ef76c423ef6
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57590538"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258731"
 ---
 # <a name="xbox-one-developer-mode-activation"></a>Xbox One 개발자 모드 활성화
 
 ## <a name="how-developer-mode-works"></a>개발자 모드의 작동 방식
-Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가지 모드가 있습니다. 정품 모드에서는 Xbox One 콘솔의 모든 고객 또는 사용자가 콘솔을 사용할 수 있는 상태이며 사용자로서 게임을 플레이하고 앱을 실행할 수 있습니다. 개발자 모드에서는 콘솔에 대한 소프트웨어를 개발할 수 있지만 정품 게임을 플레이하거나 소매 앱을 실행할 수 없습니다.
+Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가지 모드가 있습니다. 정품 모드에서는 Xbox One 본체의 모든 고객 또는 사용자가 콘솔을 사용할 수 있는 상태이며 사용자로서 게임을 플레이하고 앱을 실행할 수 있습니다. 개발자 모드에서는 콘솔에 대한 소프트웨어를 개발할 수 있지만 정품 게임을 플레이하거나 소매 앱을 실행할 수 없습니다.
 
-모든 정품 Xbox One 콘솔에서 개발자 모드를 사용할 수 있습니다. 개발자 모드를 사용하도록 설정한 후 정품(**2a**)과 개발자 모드(**2b**) 사이를 전환할 수 있습니다.
+모든 정품 Xbox One 본체에서 개발자 모드를 사용할 수 있습니다. 개발자 모드를 사용하도록 설정한 후 정품(**2a**)과 개발자 모드(**2b**) 사이를 전환할 수 있습니다.
 
 ![Xbox One 모드](images/dev-mode-flow.png)
 
-## <a name="activate-developer-mode-on-your-retail-xbox-one-console"></a>정품 Xbox One 콘솔에서 개발자 모드 활성화
+## <a name="activate-developer-mode-on-your-retail-xbox-one-console"></a>정품 Xbox One 본체에서 개발자 모드 활성화
 
-1.  Xbox One 콘솔을 시작합니다.
+1.  Xbox One 본체를 시작합니다.
 
 2.  Microsoft Store에서 **개발자 모드 활성화** 앱을 검색하여 설치합니다.
 
@@ -38,17 +38,17 @@ Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가�
 
     ![활성화 5단계](images/activation-step-5.png)  
     
-5.  [파트너 센터에서 앱 개발자 계정을 등록](https://developer.microsoft.com/store/register)합니다.  이 게임을 게시 하는 첫 번째 단계 이기도 합니다.
+5.  [Register an app developer account in Partner Center](https://developer.microsoft.com/store/register).  This is also the first step towards publishing your game.
 
-6.  에 로그인 [파트너 센터](https://partner.microsoft.com/dashboard) 유효 하 고 현재 파트너 센터 앱 개발자 계정을 사용 하 여 합니다.  왼쪽 탐색 창에서 여러 옵션이 표시 되지 않습니다 또는 표시 되지 않는 경우는 **새 앱을 만듭니다** 옵션을 **개요** 섹션에서 다음 단계와 활성화 링크 _작동 하지 것입니다_ ; 이전 단계의 앱 개발자 계정의 완벽 하 게 등록 되어 있는지 확인 합니다.
+6.  Sign in to [Partner Center](https://partner.microsoft.com/dashboard) with your valid, current Partner Center app developer account.  If you don't see multiple options in the left hand navigation pane, or don't see the **Create a new app** option in the **Overview** section, the following steps and activation links _will not work_; make sure you fully registered your app developer account from the previous step.
 
-7.  로 이동 [partner.microsoft.com/xboxconfig/devices](https://partner.microsoft.com/xboxconfig/devices)합니다.
+7.  Go to [partner.microsoft.com/xboxconfig/devices](https://partner.microsoft.com/xboxconfig/devices).
 
-8.  개발자 모드 활성화 앱에 표시된 활성화 코드를 입력합니다. 계정에 연결된 활성화 수에는 제한이 있습니다. 개발자 모드를 활성화 한 후 파트너 센터 계정에 연결 된 정품 인증 적 표시 됩니다.
+8.  개발자 모드 활성화 앱에 표시된 활성화 코드를 입력합니다. 계정에 연결된 활성화 수에는 제한이 있습니다. After Developer Mode has been activated, Partner Center will indicate you have used one of the activations associated with your account.
 
     ![활성화 8단계](images/activation-step-8-rs2.png)    
     
-9.  **동의 및 활성화**를 클릭합니다. 페이지가 다시 로드되고 표에 디바이스가 표시됩니다. Xbox One 개발자 모드 정품 인증 프로그램 계약 조건은 [Xbox One 개발자 모드 정품 인증 프로그램](https://go.microsoft.com/fwlink/p/?LinkId=760399)에서 확인할 수 있습니다.
+9.  **동의 및 활성화**를 클릭합니다. 페이지가 다시 로드되고 표에 디바이스가 표시됩니다. Xbox One 개발자 모드 정품 인증 프로그램 계약 조건은 [Xbox One 개발자 모드 정품 인증 프로그램](https://docs.microsoft.com/legal/windows/agreements/xbox-one-developer-mode-activation)에서 확인할 수 있습니다.
 
 10. 활성화 코드를 입력한 후 활성화 절차에 대한 진행 화면이 콘솔에 표시됩니다.  
     
@@ -68,5 +68,5 @@ Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가�
   ![활성화 14단계](images/activation-step-12.png)  
 
 ## <a name="see-also"></a>참고 항목
-- [Xbox 개발자 모드 비활성화](devkit-deactivation.md)
-- [Xbox One에서 UWP](index.md)
+- [Xbox One Developer Mode deactivation](devkit-deactivation.md)
+- [UWP on Xbox One](index.md)

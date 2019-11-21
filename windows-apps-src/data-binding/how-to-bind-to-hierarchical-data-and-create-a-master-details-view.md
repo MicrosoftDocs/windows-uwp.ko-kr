@@ -1,23 +1,23 @@
 ---
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
-title: 계층적 데이터에 바인딩하고 마스터/자세히 보기 만들기
+title: 계층적 데이터를 바인딩하고 마스터/세부 정보 보기 만들기
 description: 체인으로 함께 바인딩된 CollectionViewSource 인스턴스에 항목 컨트롤을 바인딩하여 계층적 데이터에 대한 여러 수준 마스터/세부 정보(목록-세부 정보라고도 함) 보기를 만들 수 있습니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d8695a385dbc6d550a8002a5f64b7d777e95594e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 14b6ab96ac5423d1811618c6a3c91ccf56645664
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360027"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255120"
 ---
-# <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>계층적 데이터에 바인딩하고 마스터/자세히 보기 만들기
+# <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>계층적 데이터를 바인딩하고 마스터/세부 정보 보기 만들기
 
 
 
-> **참고**  도 참조 합니다 [마스터/세부 정보 샘플](https://go.microsoft.com/fwlink/p/?linkid=619991)합니다.
+> **Note**  Also see the [Master/detail sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail).
 
 체인으로 함께 바인딩된 [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) 인스턴스에 항목 컨트롤을 바인딩하여 계층적 데이터에 대한 여러 수준 마스터/세부 정보(목록-세부 정보라고도 함) 보기를 만들 수 있습니다. 이 항목에서는 가능한 경우 [{x:Bind} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)을 사용하며, 필요한 경우 보다 유연한(그러나 성능이 낮은) [{Binding} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension)을 사용합니다.
 
@@ -27,7 +27,7 @@ UWP(유니버설 Windows 플랫폼) 앱의 한 가지 일반적인 구조는 사
 
 ![스포츠 계층 구조의 마스터/세부 정보 보기](images/xaml-masterdetails.png)
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 항목에서는 사용자가 기본 UWP 앱을 만드는 방법을 알고 있다고 가정합니다. 첫 UWP 앱을 만드는 방법은 [C# 또는 Visual Basic을 사용하여 첫 UWP 앱 만들기](https://docs.microsoft.com/previous-versions/windows/apps/hh974581(v=win.10))를 참조하세요.
 

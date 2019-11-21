@@ -6,21 +6,21 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 개발자 계정, 개인, 회사, 비즈니스
 ms.localizationpriority: medium
-ms.openlocfilehash: b8a02079e7589d7c92ececa03496600a82ef427e
-ms.sourcegitcommit: dafda665fd3d25136194e452e7500b5bab076638
+ms.openlocfilehash: 1ac6c3e7c89c091d1080364b8fbbb35d484aee49
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2019
-ms.locfileid: "71982237"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260057"
 ---
 # <a name="account-types-locations-and-fees"></a>계정 유형, 위치 및 수수료
 
-[파트너 센터](https://partner.microsoft.com/dashboard) 의 Windows 프로그램은 여러 [국가 및 지역](#developer-account-and-app-submission-markets)에서 개인 계정과 회사 계정을 모두 제공 합니다. 두 가지 유형의 계정 모두 스토어에 앱을 게시 하 고 추가 Microsoft 프로그램에 참여할 수 있는 액세스 권한을 제공 합니다.
+The Windows program in [Partner Center](https://partner.microsoft.com/dashboard) offers both individual and company accounts in many [countries and regions](#developer-account-and-app-submission-markets). Either type of account gives you access to publish apps to the Store and to participate in additional Microsoft programs.
 
 > [!NOTE]
-> 개발자 계정을 열 때 개발자 계정에 사용 하려는 Microsoft 계정를 사용 하 여 [파트너 센터](https://partner.microsoft.com/dashboard) 에 로그인 해야 합니다. 선택에 따라 나중에 [계정에 사용자를 추가](manage-account-users.md) 할 수 있습니다.
+> When opening your developer account, make sure to sign in to [Partner Center](https://partner.microsoft.com/dashboard) with the Microsoft account that you want to use for your developer account. 선택에 따라 나중에 [계정에 사용자를 추가](manage-account-users.md) 할 수 있습니다.
 
-[등록 프로세스를 시작](https://go.microsoft.com/fwlink/p/?LinkId=615100)할 때는 개인 계정을 만들지 또는 회사 계정을 만들지 여부를 선택해야 합니다. 두 유형의 계정 모두 앱, 게임, 추가 기능 및 서비스를 제출하는 데 사용할 수 있습니다.
+[등록 프로세스를 시작](https://developer.microsoft.com/store/register)할 때는 개인 계정을 만들지 또는 회사 계정을 만들지 여부를 선택해야 합니다. 두 유형의 계정 모두 앱, 게임, 추가 기능 및 서비스를 제출하는 데 사용할 수 있습니다.
 
 회사 계정은 조직 및 비즈니스용입니다. 회사 계정의 경우, 회사를 위해 계정을 설정할 권한이 있는지 검사하기 위해 더 나은 [확인](#account-verification)이 필요합니다. 어떤 유형의 계정이든 선택에 따라 계정 사용자를 추가할 수 있지만, 개별 계정은 혼자서 작업하는 단일 개발자에게 보통 적합합니다.
 
@@ -33,11 +33,11 @@ ms.locfileid: "71982237"
 |--------------------|-----------------|
 | <ul><li>약 $19 USD가 듭니다(일회성 등록 회비로서 정확한 금액은 국가 또는 지역에 따라 달라짐).</li><li>더 짧은 계정 확인 프로세스</li></ul> | <ul><li>약 $99 USD가 듭니다(일회성 등록 회비로서 정확한 금액은 국가 또는 지역에 따라 달라짐).</li><li>더 나은 계정 확인이 필요</li><li>회사가 위치하는 국가 또는 지역에서 회사로 인식되어야 함</li><li>제한된 기능으로 앱을 제출할 수 있음([Microsoft Store 정책](store-policies.md#1014-account-type)에 설명된 대로)</li></ul> |
 
-회사 계정은 비용이 약간 더 드는데 대부분 계정을 설정할 때 회사를 대표할 수 있는 권한을 부여하기 위한 추가 단계를 수행하기 때문입니다. [매장 정책](store-policies.md#1014-account-type)에 따라 재무 계정 정보에 액세스 하거나 보안 전용 타사 인증 공급자를 사용 하지 않고 기본 기능에 액세스 하기 위해 인증이 필요한 특정 기능의 앱입니다. 회사 계정 으로만 게시할 수 있습니다.
+회사 계정은 비용이 약간 더 드는데 대부분 계정을 설정할 때 회사를 대표할 수 있는 권한을 부여하기 위한 추가 단계를 수행하기 때문입니다. Per the [Store Policies](store-policies.md#1014-account-type), apps with certain functionality, such as those that access financial account information or that require authentication to access primary functionality (without using a secure dedicated third party authentication provider), can only be published by company accounts.
 
 ## <a name="account-verification"></a>계정 확인
 
-등록 프로세스를 완료하면 계정 확인 프로세스가 진행됩니다. 개별 계정의 경우 다른 회사에서 사용자의 게시자 표시 이름을 사용하고 있지 않은지 확인해야 합니다. 회사 계정의 경우 검증 파트너 Dun & Bradstreet가 사용자가 대표하고 있는 회사에 대해 계정을 만들 권한이 있는지 확인합니다. 이 프로세스는 며칠에서 몇 주까지 걸릴 수 있으며 종종 회사에 전화를 거는 경우도 있습니다. 따라서 등록 양식을 작성할 때 모든 연락처 정보가 최신 정보인지 확인해야 합니다. 확인 되기 전 까지는 회사 계정에서 앱을 제출할 수 없지만, 대기 하는 동안 [앱 이름을 예약](create-your-app-by-reserving-a-name.md) 하 고 앱을 계속 빌드하고 테스트할 수 있으며, 제출 준비가 완료 될 수 있습니다.
+등록 프로세스를 완료하면 계정 확인 프로세스가 진행됩니다. 개별 계정의 경우 다른 회사에서 사용자의 게시자 표시 이름을 사용하고 있지 않은지 확인해야 합니다. 회사 계정의 경우 검증 파트너 Dun & Bradstreet가 사용자가 대표하고 있는 회사에 대해 계정을 만들 권한이 있는지 확인합니다. 이 프로세스는 며칠에서 몇 주까지 걸릴 수 있으며 종종 회사에 전화를 거는 경우도 있습니다. 따라서 등록 양식을 작성할 때 모든 연락처 정보가 최신 정보인지 확인해야 합니다. You can't submit apps from a company account until it's been verified, but while you're waiting, you can [reserve an app name](create-your-app-by-reserving-a-name.md) continue building and testing apps, and work on getting your submissions ready.
 
 **계정 설정** 페이지에서 확인 상태를 점검할 수 있습니다. 
 
@@ -47,7 +47,7 @@ ms.locfileid: "71982237"
 
 다음 표에서 **등록 회비**는 개발자 계정을 등록하는 데 필요한 현재 가격입니다. 이 비용은 일회성 등록비이고 갱신 요금이 없습니다. 아래 가격은 변경될 수 있습니다.
 
-| 국가/지역                    | 개인 등록 요금 | 회사 등록 요금 |
+| 국가/ 지역                    | 개인 등록 요금 | 회사 등록 요금 |
 |-----------------------------------|---------------------|------------------|
 | 아프가니스탄                       | 19 USD              | 99 USD           |
 | 알바니아                           | 19 USD              | 99 USD           |
@@ -64,7 +64,7 @@ ms.locfileid: "71982237"
 | 바레인                           | 7 BHD               | 38 BHD           |  
 | 방글라데시                        | 1468 BDT            | 7600 BDT         |  
 | 바베이도스                          | 19 USD              | 99 USD           |  
-| 벨로루시                           | 19 USD              | 99 USD           |  
+| 벨라루스                           | 19 USD              | 99 USD           |  
 | 벨기에                           | 14 EUR              | 75 EUR           |  
 | 벨리즈                            | 19 USD              | 99 USD           |  
 | 베냉                             | 19 USD              | 99 USD           |  
@@ -93,7 +93,7 @@ ms.locfileid: "71982237"
 | 코트디부아르                     | 19 USD              | 99 USD           |  
 | 크로아티아                           | 107 HRK             | 500 HRK          |  
 | 키프로스                            | 14 EUR              | 75 EUR           |  
-| 체코                    | 365 CZK             | 1720 CZK         |  
+| 체코 공화국                    | 365 CZK             | 1720 CZK         |  
 | 덴마크                           | 106 DKK             | 530 DKK          |  
 | 지부티                          | 19 USD              | 99 USD           | 
 | 도미니카                          | 19 USD              | 99 USD           | 
@@ -138,7 +138,7 @@ ms.locfileid: "71982237"
 | 카자흐스탄                        | 2897 KZT            | 15038 KZT        |  
 | 케냐                             | 1900 KES            | 9999 KES         |  
 | 키리바시                          | 19 USD              | 99 USD           |  
-| 대한민국                             | 21216 KRW           | 108000 KRW       |  
+| 한국                             | 21216 KRW           | 108000 KRW       |  
 | 쿠웨이트                            | 5 KWD               | 28 KWD           |  
 | 키르기스스탄                        | 19 USD              | 99 USD           |  
 | 라오스                              | 19 USD              | 99 USD           |  
@@ -150,8 +150,8 @@ ms.locfileid: "71982237"
 | 리히텐슈타인                     | 17 CHF              | 93 CHF           |  
 | 리투아니아                         | 14 EUR              | 75 EUR           |  
 | 룩셈부르크                        | 14 EUR              | 75 EUR           |  
-| 마카오 특별 행정구                         | 19 USD              | 99 USD           |  
-| 마케도니아 (FYROM)                 | 19 USD              | 99 USD           |  
+| 마카오 특별행정구                         | 19 USD              | 99 USD           |  
+| 마케도니아어(이전 유고슬라비아 마케도니아 공화국)                 | 19 USD              | 99 USD           |  
 | 마다가스카르                        | 19 USD              | 99 USD           |  
 | 말라위                            | 19 USD              | 99 USD           |  
 | 말레이시아                          | 62 MYR              | 300 MYR          |  
@@ -168,7 +168,7 @@ ms.locfileid: "71982237"
 | 몬테네그로                        | 14 EUR              | 75 EUR           |  
 | 모로코                           | 158 MAD             | 800 MAD          |  
 | 모잠비크                        | 19 USD              | 99 USD           |  
-| 미얀마                           | 19 USD              | 99 USD           |  
+| 미얀마어                           | 19 USD              | 99 USD           |  
 | 나미비아                           | 19 USD              | 99 USD           |  
 | 나우루                             | 19 USD              | 99 USD           |  
 | 네팔                             | 19 USD              | 99 USD           |  
@@ -229,7 +229,7 @@ ms.locfileid: "71982237"
 | 투발루                            | 19 USD              | 99 USD           |  
 | 우간다                            | 19 USD              | 99 USD           |  
 | 우크라이나                           | 156 UAH             | 800 UAH          |  
-| 아랍 에미리트 연합국              | 19 USD              | 99 USD           |  
+| 아랍에미리트              | 19 USD              | 99 USD           |  
 | 영국                    | 12 GBP              | 65 GBP           |  
 | 미국                     | 19 USD              | 99 USD           |  
 | 우루과이                           | 19 USD              | 99 USD           |  

@@ -6,12 +6,12 @@ ms.date: 10/18/2017
 ms.topic: article
 keywords: windows 10, uwp, 오디오, 게임, 샘플
 ms.localizationpriority: medium
-ms.openlocfilehash: ba0b4882803d9e6ddf059ae0f431c5bfba7eb227
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 4cf803b61a280ff3ed803dc7972d7f7eb6993a64
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369151"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258555"
 ---
 # <a name="adding-audio-to-the-marble-maze-sample"></a>Marble Maze 샘플에 오디오 추가
 
@@ -20,7 +20,7 @@ ms.locfileid: "66369151"
 Marble Maze는 백그라운드에서 음악을 재생할 뿐 아니라 게임 플레이 소리를 사용하여 구슬이 벽에 부딪치는 경우와 같은 게임 이벤트를 나타냅니다. 구현의 중요한 부분 중 하나는 Marble Maze가 반향 또는 에코 효과를 사용하여 구슬이 튀어 나갈 때 나는 소리를 시뮬레이트하는 것입니다. 반향 효과 구현에서는 에코가 작은 방에서 더 빠르고 크게 들리고, 큰 방에서 더 조용하고 느리게 들립니다.
 
 > [!NOTE]
-> 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](https://go.microsoft.com/fwlink/?LinkId=624011)에 있습니다.
+> 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](https://github.com/microsoft/Windows-appsample-marble-maze)에 있습니다.
 
 게임에서 오디오 작업을 하는 경우에 대해 논의하는 주요 사항은 다음과 같습니다.
 
@@ -32,7 +32,7 @@ Marble Maze는 백그라운드에서 음악을 재생할 뿐 아니라 게임 �
 
 - 이렇게 하려면 앱이 포커스를 잃거나, 표시되지 않거나, 일시 중단될 때 오디오 재생을 일시 중지합니다. 앱이 포커스를 다시 얻거나, 표시되거나, 다시 시작되면 재생을 다시 시작합니다.
 
-- 각 소리의 역할에 맞게 오디오 범주를 설정합니다. 일반적으로 사용 예를 들어 **AudioCategory\_GameMedia** 게임 백그라운드 오디오 및 **AudioCategory\_GameEffects** 음향 효과 대 한 합니다.
+- 각 소리의 역할에 맞게 오디오 범주를 설정합니다. For example, you typically use **AudioCategory\_GameMedia** for game background audio and **AudioCategory\_GameEffects** for sound effects.
 
 - 모든 오디오 리소스와 인터페이스를 해제하고 다시 만들어 헤드폰을 비롯한 장치 변경을 처리합니다.
 
@@ -106,11 +106,11 @@ UWP 앱에서 [IXAudio2](https://docs.microsoft.com/windows/desktop/api/xaudio2/
 
 ### <a name="creating-the-mastering-voices"></a>마스터 음성 만들기
 
-다음 예제에서는 **Audio::CreateResources** 메서드가 [IXAudio2::CreateMasteringVoice](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2-createmasteringvoice) 메서드를 사용하여 배경 음악에 대한 마스터 음성을 만드는 방법을 보여 줍니다. 이 예에서 **m\_musicMasteringVoice** 되는 [IXAudio2MasteringVoice](https://docs.microsoft.com/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2masteringvoice) 개체입니다. Marble Maze는 출력 채널 2개를 지정하여 반향 효과에 대한 논리를 간소화합니다. 
+다음 예제에서는 **Audio::CreateResources** 메서드가 [IXAudio2::CreateMasteringVoice](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2-createmasteringvoice) 메서드를 사용하여 배경 음악에 대한 마스터 음성을 만드는 방법을 보여 줍니다. In this example, **m\_musicMasteringVoice** is an [IXAudio2MasteringVoice](https://docs.microsoft.com/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2masteringvoice) object. Marble Maze는 출력 채널 2개를 지정하여 반향 효과에 대한 논리를 간소화합니다. 
 
 입력 샘플 속도는 48000으로 지정되어 있습니다. 이 샘플 속도가 선택된 이유는 필요한 CPU 처리량과 오디오 품질 간의 균형을 나타내기 때문입니다. 샘플 속도가 크면 눈에 띄는 품질 이점 없이 필요한 CPU 처리가 증가합니다. 
 
-마지막으로 Marble Maze는 사용자가 게임을 플레이할 때 다른 응용 프로그램에서 음악을 들을 수 있도록 **AudioCategory_GameMedia**를 오디오 스트림 범주로 지정하고 있습니다. Windows에서 만든 모든 음성 음을 소거 음악 앱을 재생할 때 합니다 **AudioCategory\_GameMedia** 옵션입니다. 사용자는 게임 플레이 보이기도 하 여 만들어지기 때문에 여전히 시도해볼 합니다 **AudioCategory\_GameEffects** 옵션입니다. 오디오 범주에 대 한 자세한 내용은 참조 하세요. [오디오\_스트림\_범주](https://docs.microsoft.com/windows/desktop/api/audiosessiontypes/ne-audiosessiontypes-_audio_stream_category)합니다.
+마지막으로 Marble Maze는 사용자가 게임을 플레이할 때 다른 응용 프로그램에서 음악을 들을 수 있도록 **AudioCategory_GameMedia**를 오디오 스트림 범주로 지정하고 있습니다. When a music app is playing, Windows mutes any voices that are created by the **AudioCategory\_GameMedia** option. The user still hears gameplay sounds because they are created by the **AudioCategory\_GameEffects** option. For more info about audio categories, see [AUDIO\_STREAM\_CATEGORY](https://docs.microsoft.com/windows/desktop/api/audiosessiontypes/ne-audiosessiontypes-_audio_stream_category).
 
 ```cpp
 // This sample plays the equivalent of background music, which we tag on the  
@@ -134,7 +134,7 @@ DX::ThrowIfFailed(
 );
 ```
 
-합니다 **Audio::CreateResources** 지정 한다는 점을 제외 하면 게임 플레이 소리에 대 한 마스터 음성 만들려면 유사한 단계를 수행 하는 메서드 **AudioCategory\_GameEffects** 합니다 에대한 *StreamCategory* 매개 변수 기본값입니다.
+The **Audio::CreateResources** method performs a similar step to create the mastering voice for the gameplay sounds, except that it specifies **AudioCategory\_GameEffects** for the *StreamCategory* parameter, which is the default.
 
 ### <a name="creating-the-reverb-effect"></a>반향 효과 만들기
 
@@ -144,9 +144,9 @@ DX::ThrowIfFailed(
 
 1. 효과 개체를 만듭니다.
 
-2. 채우기는 [XAUDIO2\_효과\_설명자](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_effect_descriptor) 효과 데이터로 구조입니다.
+2. Populate an [XAUDIO2\_EFFECT\_DESCRIPTOR](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_effect_descriptor) structure with effect data.
 
-3. 채우기는 [XAUDIO2\_효과\_체인](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_effect_chain) 데이터로 구조입니다.
+3. Populate an [XAUDIO2\_EFFECT\_CHAIN](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_effect_chain) structure with data.
 
 4. 음성에 효과 체인을 적용합니다.
 
@@ -164,7 +164,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-합니다 [XAUDIO2\_효과\_설명자](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_effect_descriptor) 구조는 XAPO 효과 체인, 예를 들어, 출력 채널의 대상 수의 사용에 대 한 정보를 포함 합니다. **Audio::CreateReverb** 메서드를 만듭니다를 **XAUDIO2\_효과\_설명자** 개체 **soundEffectdescriptor**가로 설정 합니다 비활성화 된 상태를 사용 하 여 두 개의 출력 채널 및 참조 **soundEffectXAPO** 반향 효과 대 한 합니다. 효과가 게임 소리 수정을 시작하려면 게임에서 매개 변수를 설정해야 하므로 **soundEffectdescriptor**가 사용 안 함 상태로 시작됩니다. Marble Maze는 출력 채널 2개를 사용하여 반향 효과에 대한 논리를 간소화합니다.
+The [XAUDIO2\_EFFECT\_DESCRIPTOR](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_effect_descriptor) structure contains information about an XAPO for use in an effect chain, for example, the target number of output channels. The **Audio::CreateReverb** method creates an **XAUDIO2\_EFFECT\_DESCRIPTOR** object, **soundEffectdescriptor**, that is set to the disabled state, uses two output channels, and references **soundEffectXAPO** for the reverb effect. 효과가 게임 소리 수정을 시작하려면 게임에서 매개 변수를 설정해야 하므로 **soundEffectdescriptor**가 사용 안 함 상태로 시작됩니다. Marble Maze는 출력 채널 2개를 사용하여 반향 효과에 대한 논리를 간소화합니다.
 
 ```cpp
 soundEffectdescriptor.InitialState = false;
@@ -172,7 +172,7 @@ soundEffectdescriptor.OutputChannels = 2;
 soundEffectdescriptor.pEffect = soundEffectXAPO.Get();
 ```
 
-효과 체인에 여러 효과가 있는 경우 각 효과에 XAUDIO2_EFFECT_DESCRIPTOR 개체가 필요합니다. 합니다 [XAUDIO2\_효과\_체인](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_effect_chain) 구조체의 배열을 보유 [XAUDIO2\_효과\_설명자](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_effect_descriptor) 효과에 참여 하는 개체입니다. 다음 예제에서는 **Audio::CreateReverb** 메서드가 반향을 구현할 효과 하나를 지정하는 방법을 보여 줍니다.
+효과 체인에 여러 효과가 있는 경우 각 효과에 XAUDIO2_EFFECT_DESCRIPTOR 개체가 필요합니다. The [XAUDIO2\_EFFECT\_CHAIN](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_effect_chain) structure holds the array of [XAUDIO2\_EFFECT\_DESCRIPTOR](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_effect_descriptor) objects that participate in the effect. 다음 예제에서는 **Audio::CreateReverb** 메서드가 반향을 구현할 효과 하나를 지정하는 방법을 보여 줍니다.
 
 ```cpp
 XAUDIO2_EFFECT_CHAIN soundEffectChain;
@@ -183,7 +183,7 @@ soundEffectChain.EffectCount = 1;
 soundEffectChain.pEffectDescriptors = &soundEffectdescriptor;
 ```
 
-**Audio::CreateReverb** 메서드는 [IXAudio2::CreateSubmixVoice](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2-createsubmixvoice) 메서드를 호출하여 효과의 서브믹스 음성을 만듭니다. 지정 된 [XAUDIO2\_효과\_체인](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_effect_chain) 개체 **soundEffectChain**에 대 한를 *pEffectChain* 효과 연결할 매개 변수 음성 사용 하 여 체인입니다. 또한 Marble Maze는 출력 채널 2개와 샘플 속도 48kHz를 지정합니다.
+**Audio::CreateReverb** 메서드는 [IXAudio2::CreateSubmixVoice](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2-createsubmixvoice) 메서드를 호출하여 효과의 서브믹스 음성을 만듭니다. It specifies the [XAUDIO2\_EFFECT\_CHAIN](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_effect_chain) object, **soundEffectChain**, for the *pEffectChain* parameter to associate the effect chain with the voice. 또한 Marble Maze는 출력 채널 2개와 샘플 속도 48kHz를 지정합니다.
 
 ```cpp
 DX::ThrowIfFailed(
@@ -194,7 +194,7 @@ DX::ThrowIfFailed(
 > [!TIP]
 > 기존 효과 체인을 기존 서브믹스 음성에 연결하거나 현재 효과 체인을 바꾸려는 경우 [IXAudio2Voice::SetEffectChain](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2voice-seteffectchain) 메서드를 사용합니다.
 
-**Audio::CreateReverb** 메서드는 [IXAudio2Voice::SetEffectParameters](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2voice-seteffectparameters)를 호출하여 효과와 관련된 추가 매개 변수를 설정합니다. 이 메서드는 효과와 관련된 매개 변수 구조체를 사용합니다. [XAUDIO2FX\_반향\_매개 변수](https://docs.microsoft.com/windows/desktop/api/xaudio2fx/ns-xaudio2fx-xaudio2fx_reverb_parameters) 개체 **m_reverbParametersSmall**, 음향 효과 매개 변수를 포함 하는 초기화 되는  **Audio::Initialize** 메서드 모든 반향 효과 동일한 매개 변수를 공유 합니다. 다음 예제에서는 **Audio::Initialize** 메서드가 근거리 반향에 대한 반향 매개 변수를 초기화하는 방법을 보여 줍니다.
+**Audio::CreateReverb** 메서드는 [IXAudio2Voice::SetEffectParameters](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2voice-seteffectparameters)를 호출하여 효과와 관련된 추가 매개 변수를 설정합니다. 이 메서드는 효과와 관련된 매개 변수 구조체를 사용합니다. An [XAUDIO2FX\_REVERB\_PARAMETERS](https://docs.microsoft.com/windows/desktop/api/xaudio2fx/ns-xaudio2fx-xaudio2fx_reverb_parameters) object, **m_reverbParametersSmall**, which contains the effect parameters for reverb, is initialized in the **Audio::Initialize** method because every reverb effect shares the same parameters. 다음 예제에서는 **Audio::Initialize** 메서드가 근거리 반향에 대한 반향 매개 변수를 초기화하는 방법을 보여 줍니다.
 
 ```cpp
 m_reverbParametersSmall.ReflectionsDelay = XAUDIO2FX_REVERB_DEFAULT_REFLECTIONS_DELAY;
@@ -224,7 +224,7 @@ m_reverbParametersSmall.DisableLateField = TRUE;
 
 이 예제는 대부분의 반향 매개 변수에 기본값을 사용하지만 **DisableLateField**를 TRUE로 설정하여 근거리 반향을 지정하고, **EarlyDiffusion**을 4로 설정하여 가까운 평면을 시뮬레이트하고, **LateDiffusion**을 15로 설정하여 멀리 떨어진 확산 표면을 시뮬레이트합니다. 가까운 평면에서는 에코가 더 빠르고 크게 들리고, 멀리 떨어진 확산 표면에서는 에코가 더 조용하고 느리게 들립니다. 게임에서 원하는 효과를 얻기 위해 반향 값을 실험하거나, **ReverbConvertI3DL2ToNative** 메서드를 통해 산업 표준 I3DL2(Interactive 3D Audio Rendering Guidelines Level 2.0) 매개 변수를 사용할 수 있습니다.
 
-다음 예제에서는 **Audio::CreateReverb**가 반향 매개 변수를 설정하는 방법을 보여 줍니다. **newSubmix**는 [IXAudio2SubmixVoice](https://docs.microsoft.com/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2submixvoice)** 개체입니다. **매개 변수** 되는 [XAUDIO2FX\_반향\_매개 변수](https://docs.microsoft.com/windows/desktop/api/xaudio2fx/ns-xaudio2fx-xaudio2fx_reverb_parameters)* 개체입니다.
+다음 예제에서는 **Audio::CreateReverb**가 반향 매개 변수를 설정하는 방법을 보여 줍니다. **newSubmix**는 [IXAudio2SubmixVoice](https://docs.microsoft.com/windows/desktop/api/xaudio2/nn-xaudio2-ixaudio2submixvoice)** 개체입니다. **parameters** is an [XAUDIO2FX\_REVERB\_PARAMETERS](https://docs.microsoft.com/windows/desktop/api/xaudio2fx/ns-xaudio2fx-xaudio2fx_reverb_parameters)* object.
 
 ```cpp
 DX::ThrowIfFailed(
@@ -304,7 +304,7 @@ DX::ThrowIfFailed(
 
 그런 다음 **MediaStreamer::Initialize** 메서드는 [MFCreateMediaType](https://docs.microsoft.com/windows/desktop/api/mfapi/nf-mfapi-mfcreatemediatype)을 사용하여 [IMFMediaType](https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype) 개체를 만들어 오디오 스트림의 형식을 설명합니다. 오디오 형식에는 주 형식과 하위 형식의 두 유형이 있습니다. 주 형식은 동영상, 오디오, 스크립트 등 미디어의 전체 형식을 정의합니다. 하위 형식은 PCM, ADPCM, WMA 등의 형식을 정의합니다.
 
-**MediaStreamer::Initialize** 메서드는 [IMFAttributes::SetGUID](https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setguid) 주요 유형을 지정 하는 방법 ([MF_MT_MAJOR_TYPE](https://docs.microsoft.com/windows/desktop/medfound/mf-mt-major-type-attribute))으로 오디오 ( **MFMediaType\_오디오**) 및 부 형식 ([MF_MT_SUBTYPE](https://docs.microsoft.com/windows/desktop/medfound/mf-mt-subtype-attribute))으로 압축 되지 않은 PCM 오디오 (**MFAudioFormat\_PCM**). **MF_MT_MAJOR_TYPE** 및 **MF_MT_SUBTYPE**은 [미디어 파운데이션 특성](https://docs.microsoft.com/windows/desktop/medfound/media-foundation-attributes)입니다. **MFMediaType_Audio** 및 **MFAudioFormat_PCM**은 형식 및 하위 형식 GUID입니다. 자세한 내용은 [오디오 미디어 형식](https://docs.microsoft.com/windows/desktop/medfound/audio-media-types)을 참조하십시오. [IMFSourceReader::SetCurrentMediaType](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-setcurrentmediatype) 메서드는 미디어 유형을 스트림 판독기에 연결합니다.
+The **MediaStreamer::Initialize** method uses the [IMFAttributes::SetGUID](https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setguid) method to specify the major type ([MF_MT_MAJOR_TYPE](https://docs.microsoft.com/windows/desktop/medfound/mf-mt-major-type-attribute)) as audio (**MFMediaType\_Audio**) and the minor type ([MF_MT_SUBTYPE](https://docs.microsoft.com/windows/desktop/medfound/mf-mt-subtype-attribute)) as uncompressed PCM audio (**MFAudioFormat\_PCM**). **MF_MT_MAJOR_TYPE** 및 **MF_MT_SUBTYPE**은 [미디어 파운데이션 특성](https://docs.microsoft.com/windows/desktop/medfound/media-foundation-attributes)입니다. **MFMediaType_Audio** 및 **MFAudioFormat_PCM**은 형식 및 하위 형식 GUID입니다. 자세한 내용은 [오디오 미디어 형식](https://docs.microsoft.com/windows/desktop/medfound/audio-media-types)을 참조하십시오. [IMFSourceReader::SetCurrentMediaType](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-setcurrentmediatype) 메서드는 미디어 유형을 스트림 판독기에 연결합니다.
 
 ```cpp
 // Set the decoded output format as PCM. 
@@ -350,7 +350,7 @@ CoTaskMemFree(waveFormat);
 
  
 
-합니다 **MediaStreamer::Initialize** 스트림의 길이 계산 하 여 메서드 완료 **m\_maxStreamLengthInBytes**, (바이트)에서입니다. 이 작업을 위해 [IMFSourceReader::GetPresentationAttribute](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-getpresentationattribute) 메서드를 호출하여 오디오 스트림 기간을 100 나노초 단위로 가져오고, 기간을 구역으로 변환한 다음 평균 데이터 전송 속도(초당 바이트 수)를 곱합니다. Marble Maze는 나중에 이 값을 사용하여 각 게임 플레이 소리가 저장된 버퍼를 할당합니다.
+The **MediaStreamer::Initialize** method finishes by computing the length of the stream, **m\_maxStreamLengthInBytes**, in bytes. 이 작업을 위해 [IMFSourceReader::GetPresentationAttribute](https://docs.microsoft.com/windows/desktop/api/mfreadwrite/nf-mfreadwrite-imfsourcereader-getpresentationattribute) 메서드를 호출하여 오디오 스트림 기간을 100 나노초 단위로 가져오고, 기간을 구역으로 변환한 다음 평균 데이터 전송 속도(초당 바이트 수)를 곱합니다. Marble Maze는 나중에 이 값을 사용하여 각 게임 플레이 소리가 저장된 버퍼를 할당합니다.
 
 ```cpp
 // Get the total length of the stream, in bytes.
@@ -387,9 +387,9 @@ enum SoundEvent
 };
 ```
 
-다음 표에서는 이러한 값 간의 관계, 관련 소리 데이터가 포함된 파일 및 각 소리가 나타내는 항목에 대한 간략한 설명을 보여 줍니다. 오디오 파일에는  **\\미디어\\오디오** 폴더입니다.
+다음 표에서는 이러한 값 간의 관계, 관련 소리 데이터가 포함된 파일 및 각 소리가 나타내는 항목에 대한 간략한 설명을 보여 줍니다. The audio files are located in the **\\Media\\Audio** folder.
 
-| SoundEvent 값  |  파일 이름       | 설명                                              |
+| SoundEvent 값  | 파일 이름      | 설명                                              |
 |-------------------|----------------|----------------------------------------------------------|
 | RollingEvent      | MarbleRoll.wav | 구슬이 구를 때 재생됩니다.                              |
 | FallingEvent      | MarbleFall.wav | 구슬이 미로에서 떨어질 때 재생됩니다.               |
@@ -400,7 +400,7 @@ enum SoundEvent
 
  
 
-다음 예제에서는 **Audio::CreateResources** 메서드가 배경 음악에 대한 원본 음성을 만드는 방법을 보여 줍니다. 합니다 [XAUDIO2\_보낼\_설명자](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_send_descriptor) 구조 정의에서 다른 음성 대상 대상 음성 및 필터를 사용할지 여부를 지정 합니다. Marble Maze는 **Audio::SetSoundEffectFilter** 메서드를 호출하여 필터를 통해 구슬이 구를 때 나는 소리를 변경합니다. [XAUDIO2\_VOICE\_보냅니다](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_voice_sends) 구조에서 단일 출력 음성 데이터를 수신 하는 음성의 집합을 정의 합니다. Marble Maze는 원본 음성의 데이터를 마스터 음성(재생 소리의 변경되지 않는 부분)과 재생음의 반향 부분을 구현하는 서브믹스 음성 2개에 보냅니다.
+다음 예제에서는 **Audio::CreateResources** 메서드가 배경 음악에 대한 원본 음성을 만드는 방법을 보여 줍니다. The [XAUDIO2\_SEND\_DESCRIPTOR](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_send_descriptor) structure defines the target destination voice from another voice and specifies whether a filter should be used. Marble Maze는 **Audio::SetSoundEffectFilter** 메서드를 호출하여 필터를 통해 구슬이 구를 때 나는 소리를 변경합니다. The [XAUDIO2\_VOICE\_SENDS](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_voice_sends) structure defines the set of voices to receive data from a single output voice. Marble Maze는 원본 음성의 데이터를 마스터 음성(재생 소리의 변경되지 않는 부분)과 재생음의 반향 부분을 구현하는 서브믹스 음성 2개에 보냅니다.
 
 [IXAudio2::CreateSourceVoice](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2-createsourcevoice) 메서드는 원본 음성을 만들고 구성합니다. 음성에 전송되는 오디오 버퍼의 형식을 정의하는 [WAVEFORMATEX](https://docs.microsoft.com/windows/desktop/api/mmreg/ns-mmreg-twaveformatex) 구조체를 사용합니다. 앞에서 언급했듯이 Marble Maze는 PCM 형식을 사용합니다.
 
@@ -469,7 +469,7 @@ void Audio::Start()
 
 **Audio::CreateResources** 메서드는 미디어 파운데이션을 사용하여 배경 음악을 로드합니다. 그러나 이 시점에는 원본 음성에 작업할 오디오 데이터가 없습니다. 또한 배경 음악은 반복되기 때문에 음악이 계속 재생되도록 정기적으로 원본 음성을 데이터로 업데이트해야 합니다.
 
-원본 음성을 데이터가 채워진 상태로 유지하기 위해 게임 루프는 매 프레임마다 오디오 버퍼를 업데이트합니다. **MarbleMazeMain::Render** 메서드는 **Audio::Render**를 호출하여 배경 음악 오디오 버퍼를 처리합니다. 합니다 **오디오** 클래스에 세 개의 오디오 버퍼의 배열을 정의 **m\_audioBuffers**합니다. 각 버퍼는 64KB(65536바이트)의 데이터를 저장합니다. 루프는 미디어 파운데이션 개체에서 데이터를 읽고, 원본 음성에 대기 중인 버퍼 3개가 있을 때까지 해당 데이터를 원본 음성에 씁니다.
+원본 음성을 데이터가 채워진 상태로 유지하기 위해 게임 루프는 매 프레임마다 오디오 버퍼를 업데이트합니다. **MarbleMazeMain::Render** 메서드는 **Audio::Render**를 호출하여 배경 음악 오디오 버퍼를 처리합니다. The **Audio** class defines an array of three audio buffers, **m\_audioBuffers**. 각 버퍼는 64KB(65536바이트)의 데이터를 저장합니다. 루프는 미디어 파운데이션 개체에서 데이터를 읽고, 원본 음성에 대기 중인 버퍼 3개가 있을 때까지 해당 데이터를 원본 음성에 씁니다.
 
 > [!CAUTION]
 > Marble Maze는 64KB 버퍼를 사용하여 음악 데이터를 저장하지만 더 크거나 작은 버퍼를 사용해야 할 수도 있습니다. 이 크기는 게임의 요구 사항에 따라 달라집니다.
@@ -561,7 +561,7 @@ void MediaStreamer::Restart()
 }
 ```
 
-단일 버퍼에 대 한 (또는 메모리에 완전히 로드 되는 전체 소리) 오디오 반복을 구현 하려면 설정할 수 있습니다 합니다 [XAUDIO2_BUFFER](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_buffer):: LoopCount 필드 **XAUDIO2\_루프\_무한** 소리를 초기화 하는 경우. Marble Maze는 이 기술을 사용하여 구슬이 구르는 소리를 재생합니다.
+To implement audio looping for a single buffer (or for an entire sound that is fully loaded into memory), you can set the [XAUDIO2_BUFFER](https://docs.microsoft.com/windows/desktop/api/xaudio2/ns-xaudio2-xaudio2_buffer)::LoopCount field to **XAUDIO2\_LOOP\_INFINITE** when you initialize the sound. Marble Maze는 이 기술을 사용하여 구슬이 구르는 소리를 재생합니다.
 
 ```cpp
 if (sound == RollingEvent)
@@ -650,7 +650,7 @@ void Audio::PlaySoundEffect(SoundEvent sound)
 
 구르는 소리가 아닌 소리의 경우 **Audio::PlaySoundEffect** 메서드는 [IXAudio2SourceVoice::GetState](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-getstate)를 호출하여 원본 음성이 재생 중인 버퍼 수를 확인합니다. 활성화된 버퍼가 없는 경우 [IXAudio2SourceVoice::SubmitSourceBuffer](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2sourcevoice-submitsourcebuffer)를 호출하여 소리의 오디오 데이터를 음성의 입력 큐에 추가합니다. **Audio::PlaySoundEffect** 메서드를 사용하여 충돌 소리를 차례로 두 번 재생할 수도 있습니다. 예를 들어 구슬이 미로의 모서리에 충돌하는 경우입니다.
 
-앞서 설명한 것 처럼 오디오 클래스에서 사용 하는 **XAUDIO2\_루프\_무한** 롤링 이벤트에 대 한 소리를 초기화할 때 플래그입니다. 이 이벤트에 대해 **Audio::PlaySoundEffect**를 처음 호출하면 소리가 반복 재생을 시작합니다. 구르는 소리에 대한 재생 논리를 간소화하기 위해 Marble Maze는 소리를 중지하는 대신 음소거합니다. 구슬의 속도가 변경될 때 Marble Maze는 소리의 피치와 볼륨을 변경하여 더 사실적인 효과를 줍니다. 다음 예제는 **MarbleMazeMain::Update** 메서드가 구슬 속도가 변경될 때 구슬의 피치와 볼륨을 업데이트하는 방법 및 구슬이 중지될 때 볼륨을 0으로 설정하여 소리를 음소거하는 방법을 보여 줍니다.
+As already described, the Audio class uses the **XAUDIO2\_LOOP\_INFINITE** flag when it initializes the sound for the rolling event. 이 이벤트에 대해 **Audio::PlaySoundEffect**를 처음 호출하면 소리가 반복 재생을 시작합니다. 구르는 소리에 대한 재생 논리를 간소화하기 위해 Marble Maze는 소리를 중지하는 대신 음소거합니다. 구슬의 속도가 변경될 때 Marble Maze는 소리의 피치와 볼륨을 변경하여 더 사실적인 효과를 줍니다. 다음 예제는 **MarbleMazeMain::Update** 메서드가 구슬 속도가 변경될 때 구슬의 피치와 볼륨을 업데이트하는 방법 및 구슬이 중지될 때 볼륨을 0으로 설정하여 소리를 음소거하는 방법을 보여 줍니다.
 
 ```cpp
 // Play the roll sound only if the marble is actually rolling.
@@ -771,7 +771,7 @@ m_musicEngineCallback.Initialize(this);
 m_musicEngine->RegisterForCallbacks(&m_musicEngineCallback);
 ```
 
-Marble Maze는 오디오 처리가 시작되거나 끝날 때 알림이 필요하지 않습니다. 따라서 아무 작업도 하지 않는 [IXAudio2EngineCallback::OnProcessingPassStart](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2enginecallback-onprocessingpassstart) 및 [IXAudio2EngineCallback::OnProcessingPassEnd](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2enginecallback-onprocessingpassend) 메서드를 구현합니다. 에 대 한는 [IXAudio2EngineCallback::OnCriticalError](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2enginecallback-oncriticalerror) 메서드, Marble Maze 호출 합니다 **SetEngineExperiencedCriticalError** 설정 하는 메서드를 **m\_ engineExperiencedCriticalError** 플래그입니다.
+Marble Maze는 오디오 처리가 시작되거나 끝날 때 알림이 필요하지 않습니다. 따라서 아무 작업도 하지 않는 [IXAudio2EngineCallback::OnProcessingPassStart](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2enginecallback-onprocessingpassstart) 및 [IXAudio2EngineCallback::OnProcessingPassEnd](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2enginecallback-onprocessingpassend) 메서드를 구현합니다. For the [IXAudio2EngineCallback::OnCriticalError](https://docs.microsoft.com/windows/desktop/api/xaudio2/nf-xaudio2-ixaudio2enginecallback-oncriticalerror) method, Marble Maze calls the **SetEngineExperiencedCriticalError** method, which sets the **m\_engineExperiencedCriticalError** flag.
 
 ```cpp
 // Audio.cpp
@@ -797,7 +797,7 @@ void SetEngineExperiencedCriticalError()
 }
 ```
 
-오류가 발생하면 오디오 처리가 중지되고 이후의 XAudio2 호출이 모두 실패합니다. 이 오류를 복구하려면 XAudio2 인스턴스를 해제하고 새로 만들어야 합니다. 합니다 **Audio::Render** 라고 하는 게임 루프에서 프레임 마다, 메서드를 먼저 확인 합니다 **m\_engineExperiencedCriticalError** 플래그입니다. 이 플래그가 설정된 경우 플래그를 지우고, 현재 XAudio2 인스턴스를 해제하고, 리소스를 초기화한 다음 배경 음악을 시작합니다.
+오류가 발생하면 오디오 처리가 중지되고 이후의 XAudio2 호출이 모두 실패합니다. 이 오류를 복구하려면 XAudio2 인스턴스를 해제하고 새로 만들어야 합니다. The **Audio::Render** method, which is called from the game loop every frame, first checks the **m\_engineExperiencedCriticalError** flag. 이 플래그가 설정된 경우 플래그를 지우고, 현재 XAudio2 인스턴스를 해제하고, 리소스를 초기화한 다음 배경 음악을 시작합니다.
 
 ```cpp
 if (m_engineExperiencedCriticalError)
@@ -814,7 +814,7 @@ if (m_engineExperiencedCriticalError)
 }
 ```
 
-Marble Maze도 사용 합니다 **m\_engineExperiencedCriticalError** 오디오 장치가 없는 사용 가능한 경우 XAudio2 호출을 방지 하는 플래그입니다. 예를 들어 **MarbleMazeMain::Update** 메서드는 이 플래그가 설정된 경우 구르기 또는 충돌 이벤트에 대한 오디오를 처리하지 않습니다. 앱 오디오 엔진은 프레임 마다; 필요한 경우 복구 하려고 합니다. 그러나 합니다 **m\_engineExperiencedCriticalError** 컴퓨터에는 오디오 장치 또는 헤드폰 연결 되어 있지 않습니다. 없고 다른 사용 가능한 오디오 장치가 없을 경우에 항상 플래그를 설정할 수 있습니다.
+Marble Maze also uses the **m\_engineExperiencedCriticalError** flag to guard against calling into XAudio2 when no audio device is available. 예를 들어 **MarbleMazeMain::Update** 메서드는 이 플래그가 설정된 경우 구르기 또는 충돌 이벤트에 대한 오디오를 처리하지 않습니다. The app attempts to repair the audio engine every frame if it is required; however, the **m\_engineExperiencedCriticalError** flag might always be set if the computer does not have an audio device or the headphones are unplugged and there is no other available audio device.
 
 > [!CAUTION]
 > 일반적으로 엔진 콜백 본문에서 차단 작업을 수행하지 마세요. 이렇게 하면 성능 문제가 발생할 수 있습니다. Marble Maze는 **OnCriticalError** 콜백에 플래그를 설정하고 나중에 일반적인 오디오 처리 단계에서 오류를 처리합니다. XAudio2 콜백에 대한 자세한 내용은 [XAudio2 콜백](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-callbacks)을 참조하세요.
@@ -831,5 +831,5 @@ DirectX를 더 사용해 볼 준비가 되었나요? [DirectX programming](direc
 
 ## <a name="related-topics"></a>관련 항목
 
-* [입력 및 Marble Maze 샘플에 대화형 작업 추가](adding-input-and-interactivity-to-the-marble-maze-sample.md)
-* [UWP 게임 Marble Maze 개발 C++ 와 DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+* [Adding input and interactivity to the Marble Maze sample](adding-input-and-interactivity-to-the-marble-maze-sample.md)
+* [Developing Marble Maze, a UWP game in C++ and DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)

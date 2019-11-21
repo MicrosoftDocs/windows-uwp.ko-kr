@@ -8,41 +8,41 @@ ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 34f8d15b971cc9ed286471010a21d1b44b84af13
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9b1cac04405f18aaf3c8f39f9bfce2b965577807
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363466"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257936"
 ---
-# <a name="guidelines-for-touch-targets"></a>터치 대상에 대 한 지침
+# <a name="guidelines-for-touch-targets"></a>Guidelines for touch targets
 
-유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 모든 대화형 UI 요소는 정확 하 게 액세스 하 고 장치 유형 또는 입력 방법에 관계 없이 사용 하 여 사용자가 충분히 있어야 합니다.
+All interactive UI elements in your Universal Windows Platform (UWP) application must be large enough for users to accurately access and use, regardless of device type or input method.
 
-터치식 디지타이저에서 보고 하는 입력된 데이터의 큰 규모의 더 복잡 한 집합을 결정 하는 대상 크기와 컨트롤 레이아웃 관련 하 여 추가적인 최적화 필요 터치 입력 (및 터치 연락처 영역의 비교적 정확 하지 않은 특성)를 지원 합니다 사용자의 의도 한 (또는 가장 가능성이 높은) 대상입니다.
+Supporting touch input (and the relatively imprecise nature of the touch contact area) requires further optimization with respect to target size and control layout as the larger, more complex set of input data reported by the touch digitizer is used to determine the user's intended (or most likely) target.
 
-모든 UWP 컨트롤 기본 터치 대상 크기 및 레이아웃 편안 하 고 편리 하 게 사용할 수 있는 시각적으로 부하가 분산 되 고 매력적인 앱을 빌드할 수 있도록 설계 되었습니다 및 두려움을 없애고 자신감 합니다.
+All UWP controls have been designed with default touch target sizes and layouts that enable you to build visually balanced and appealing apps that are comfortable, easy to use, and inspire confidence.
 
-이 항목에서는 (해야 앱 해야) 플랫폼 컨트롤 및 사용자 지정 컨트롤을 모두 사용 하는 최대 유용성에 대 한 앱을 디자인할 수 있도록 이러한 기본 동작 설명 합니다.
+In this topic, we describe these default behaviors so you can design your app for maximum usability using both platform controls and custom controls (should your app require them).
 
 > **중요 API**: [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
 
-## <a name="fluent-standard-sizing"></a>Fluent 표준 크기 조정
+## <a name="fluent-standard-sizing"></a>Fluent 표준 크기
 
-*Fluent 표준 크기 조정* 정보 밀도 및 사용자와 쾌적 간의 균형을 이룰 위해 만들어졌습니다. 효과적으로 화면에 있는 모든 항목 UI 요소 표 형식으로 정렬 하 고 적절 하 게 확장할 수 있습니다. 시스템 수준 크기 조정에 기반 하는 40 x 40 효과적인 픽셀 (epx) 대상에 맞춥니다.
+*Fluent 표준 크기*는 정보 밀도와 사용자 편의 간에 균형을 유지하기 위해 개발되었습니다. 화면에 있는 모든 항목을 40x40 유효 픽셀(epx) 대상에 맞추기 때문에 UI 요소를 그리드에 맞추고 시스템 수준 스케일링에 따라 적절하게 크기를 조정할 수 있습니다.
 
 > [!NOTE]
->효과적인 픽셀 및 크기 조정에 대 한 자세한 내용은 참조 하세요. [UWP 앱 디자인 소개](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)
+>유효 픽셀과 크기 조정에 대한 자세한 내용은 [UWP 앱 디자인 소개](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)를 참조하세요.
 >
-> 시스템 수준 크기 조정에 대 한 자세한 내용은 참조 하세요. [맞춤, 여백, 안쪽 여백](../layout/alignment-margin-padding.md)합니다.
+> 시스템 수준 크기 조정에 대한 자세한 내용은 [맞춤, 여백, 안쪽 여백](../layout/alignment-margin-padding.md)을 참조하세요.
 
-## <a name="fluent-compact-sizing"></a>Fluent Compact 크기 조정
+## <a name="fluent-compact-sizing"></a>Fluent 컴팩트 크기
 
-응용 프로그램에 더 높은 수준의 정보 밀도 사용 하 여 표시할 수 있습니다 *Fluent Compact 크기 조정*합니다. Compact 크기 조정 긴밀 한 그리드를 적절 하 게 시스템 수준 크기 조정 기준 크기 조정에 맞게 UI 요소 수는 32 x 32 epx 대상으로 UI 요소를 맞춥니다.
+Applications can display a higher level of information density with *Fluent Compact sizing*. Compact sizing aligns UI elements to a 32x32 epx target, which lets UI elements to align to a tighter grid and scale appropriately based on system level scaling.
 
 ### <a name="examples"></a>예
 
-Compact 크기 조정 페이지 또는 표 수준에서 적용할 수 있습니다.
+Compact sizing can be applied at the page or grid level.
 
 ### <a name="page-level"></a>페이지 수준
 
@@ -52,7 +52,7 @@ Compact 크기 조정 페이지 또는 표 수준에서 적용할 수 있습니�
 </Page.Resources>
 ```
 
-### <a name="grid-level"></a>표 수준
+### <a name="grid-level"></a>그리드 수준
 
 ```xaml
 <Grid>
@@ -62,39 +62,39 @@ Compact 크기 조정 페이지 또는 표 수준에서 적용할 수 있습니�
 </Grid>
 ```
 
-## <a name="target-size"></a>대상 크기
+## <a name="target-size"></a>Target size
 
-일반적으로 터치 대상 크기 7.5 mm 사각형 범위 (135 PPI 화면 고 원으로 확장 x 1.0에서 40 x 40 픽셀)를 설정 합니다. 일반적으로 UWP 컨트롤 (이에 따라 달라질 수 특정 제어 및 모든 일반적인 사용 패턴) 7.5 mm 터치 대상에 맞춰집니다. 참조 [크기와 밀도 제어](../style/spacing.md) 자세한 세부 정보에 대 한 합니다.
+In general, set your touch target size to 7.5mm square range (40x40 pixels on a 135 PPI display at a 1.0x scaling plateau). Typically, UWP controls align with 7.5mm touch target (this can vary based on the specific control and any common usage patterns). See [Control size and density](../style/spacing.md) for more detail.
 
-이러한 권장 대상 크기는 특정 시나리오에 따라 조정될 수 있습니다. 고려할 사항은 다음과 같습니다.
+이러한 권장 대상 크기는 특정 시나리오에 따라 조정될 수 있습니다. Here are some things to consider:
 
-- 터치-빈도 반복적으로 또는 자주 누르는 최소 크기 보다 큰 목표를 수행 하는 것이 좋습니다.
-- 오류 결과-오류에서 작업 하는 경우 심각한 문제가 있는 대상이 큰 안쪽 여백을 콘텐츠 영역의 가장자리 멀리 배치 됩니다. 이는 자주 터치되는 대상의 경우 더 합니다.
-- 콘텐츠 영역에 위치 합니다.
-- 비율 및 화면 크기를 형성 합니다.
-- 손가락 상태입니다.
-- 시각화를 터치 합니다.
+- Frequency of Touches - consider making targets that are repeatedly or frequently pressed larger than the minimum size.
+- Error Consequence - targets that have severe consequences if touched in error should have greater padding and be placed further from the edge of the content area. 이는 자주 터치되는 대상의 경우 더 합니다.
+- Position in the content area.
+- Form factor and screen size.
+- Finger posture.
+- Touch visualizations.
 
 ## <a name="related-articles"></a>관련 문서
 
 - [UWP 앱 디자인 소개](../basics/design-and-ui-intro.md)
-- [컨트롤 크기와 밀도](../style/spacing.md)
+- [Control size and density](../style/spacing.md)
 - [맞춤, 여백, 안쪽 여백](../layout/alignment-margin-padding.md)
 
 ### <a name="samples"></a>샘플
 
-- [기본 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-- [짧은 대기 시간 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-- [사용자 상호 작용 모드 예제](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-- [포커스 시각적 개체 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [Basic input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [Low latency input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [User interaction mode sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 ### <a name="archive-samples"></a>보관 샘플
 
-- [입력: XAML 사용자 입력된 이벤트 예제](https://go.microsoft.com/fwlink/p/?linkid=226855)
-- [입력: 장치 기능 샘플](https://go.microsoft.com/fwlink/p/?linkid=231530)
-- [입력: 터치 적중된 테스트 샘플](https://go.microsoft.com/fwlink/p/?linkid=231590)
-- [XAML 스크롤, 이동 및 샘플을 확대/축소](https://go.microsoft.com/fwlink/p/?linkid=251717)
-- [입력: 간소화 된 잉크 샘플](https://go.microsoft.com/fwlink/p/?linkid=246570)
-- [입력: Windows 8 제스처 샘플](https://go.microsoft.com/fwlink/p/?LinkId=264995)
-- [입력: 조작 및 제스처 (C++) 샘플](https://go.microsoft.com/fwlink/p/?linkid=231605)
-- [DirectX 터치 입력된 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+- [Input: XAML user input events sample](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+- [Input: Device capabilities sample](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+- [Input: Touch hit testing sample](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
+- [XAML scrolling, panning, and zooming sample](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+- [Input: Simplified ink sample](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
+- [Input: Windows 8 gestures sample](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [Input: Manipulations and gestures (C++) sample](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
+- [DirectX touch input sample](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)

@@ -1,30 +1,30 @@
 ---
 ms.assetid: DA495F9D-49B8-45A6-BBE0-27F0C804D240
 title: 계정 설정 및 프로필 정보 관리
-description: 확인 하 고 개발자 계정 설정 및 파트너 센터 계정 설정 섹션에서 프로필 정보를 업데이트할 수 있습니다.
+description: You can view and update your developer account settings and profile info in the Account settings section of Partner Center.
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 개발자 센터, 계정 설정, 프로필, 계정 프로필, 개발자 계정, 개발자 계정 설정
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b7453a3225097d342396aa884f0c40c3c5698de
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: bb17526546d9950ba2dc648aab71e3ea390b8ee6
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63827577"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259975"
 ---
 # <a name="manage-account-settings-and-profile-info"></a>계정 설정 및 프로필 정보 관리
 
-보고 및 개발자 계정 설정을 업데이트 하 고 프로필에 대 한 정보를 **계정 설정** 부분 [파트너 센터](https://partner.microsoft.com/dashboard)합니다. 
+You can view and update your developer account settings and profile info in the **Account settings** section of [Partner Center](https://partner.microsoft.com/dashboard). 
 
 > [!NOTE]
-> 알림 기본 설정 (예: 어떤 유형의 수신 알림과 수신 하는 방법)를 관리할 수 있음 **메시지 센터** (하는 파트너 센터의 위쪽 메시지 아이콘을 선택 하 여 액세스할 수 있습니다).
+> Notification preferences (such as which type of notifications to receive and how to receive them) can be managed in **Message Center** (which you can access by selecting the message icon near the top of Partner Center).
 
 ## <a name="account-settings"></a>계정 설정
 
-계정 설정을 보려는 파트너 센터의 오른쪽 위 모퉁이에서 기어 아이콘을 클릭 하 고 선택한 **개발자 설정을**합니다. 다음 정보를 확인 하 고 다양 한 계정 관련 작업을 수행할 수 있는 다른 페이지의 링크를 확인 하 고 계정에 대 한 정보를 찾을 수 있습니다.
+To view your account settings, click the gear icon in the upper right hand corner of Partner Center and then select **Developer settings**. Here you'll find details about your account and links to other pages where you can view info and perform various account-related tasks.
 
-**계정 세부 정보** 섹션에서는 상태 및 계정 유형을 확인할 수 있습니다. 판매자 ID 및 기타 게시자 ID 정보를 여기서 볼 수 있습니다. 이 값은 고유 하 게 개발자 계정의 식별 하기 위해 Microsoft에서 할당 됩니다 하며 편집할 수 없습니다.
+**계정 세부 정보** 섹션에서는 계정의 상태 및 유형을 확인할 수 있습니다. You can also see your Seller ID and other publisher ID info here. These values are assigned by Microsoft to uniquely identify your developer account and can't be edited.
 
 > [!NOTE]
 > 개별 앱에 대한 ID 세부 정보는 각 앱의 [앱 ID](view-app-identity-details.md) 페이지에서 찾아볼 수 있습니다.
@@ -44,13 +44,13 @@ ms.locfileid: "63827577"
 
 다음은 **계정 설정** 섹션에서 확인할 수 있는 기타 항목들입니다.
 
-- **확인 상태**: 계정의 하는 중 확인 처리 (먼저 등록 하는 경우에 예를 들어, 또는 연락처 정보를 크게 업데이트 후에) 되 면 여기 확인 상태를 검토할 수 있습니다.
-- **지급 계좌** 하 고 **세금 프로필**: 여기 있습니다 [지급 계정 및 세금 양식 설정](setting-up-your-payout-account-and-tax-forms.md)합니다. 앱 또는 추가 기능에 대한 금액을 청구하려면 먼저 이 작업을 수행해야 합니다.
-- **Enterprise 연결**: 단독으로 사용 하는 앱을 게시 하는 기업에서 초대를 수락 합니다. 자세한 내용은 [엔터프라이즈에 LOB 앱 배포](distribute-lob-apps-to-enterprises.md)를 참조하세요.
-- **Users**: 계정에 사용자를 추가 하 고 역할과 사용 권한을 할당 합니다. 자세한 내용은 [계정 사용자 관리](manage-account-users.md)를 참조하세요.
-- **테 넌 트**: 에 Azure AD 테 넌 트 연결을 관리 합니다. 자세한 내용은 참조 하세요. [파트너 센터 계정 사용 하 여 Azure AD 연결](associate-azure-ad-with-dev-center.md)합니다.
-- **프로그램**: 프로그램 참여 하는 지정 하 고 관심 있는 다른 프로그램에 대 한 자세한 정보를 확인 합니다.
-- **계약**: 계정에 허용 되는 계약을 봅니다.
-- **개발 장치**: 보기 및 관리 [Windows Phone 8.x 장치 잠금을 해제할 테스트용](https://go.microsoft.com/fwlink/p/?LinkId=533897) 하 고 [개발에 사용 하도록 설정 하는 Xbox One 콘솔](../xbox-apps/devkit-activation.md)합니다. 
+- **Verification status**: When your account is undergoing the verification process (for example, when you first sign up or after you significantly update your contact info), you can review your verification status here.
+- **지급 계좌** 및 **세금 프로필**: 여기에서 [지급 계좌 및 세금 양식을 설정](setting-up-your-payout-account-and-tax-forms.md)합니다. 앱 또는 추가 기능에 대한 금액을 청구하려면 먼저 이 작업을 수행해야 합니다.
+- **엔터프라이즈 연결**: 독점적으로 사용하기 위해 앱을 게시하고 싶어하는 엔터프라이즈의 초대를 수락합니다. 자세한 내용은 [엔터프라이즈에 LOB 앱 배포](distribute-lob-apps-to-enterprises.md)를 참조하세요.
+- **Users**: Add users to your account and assign them roles and permissions. 자세한 내용은 [계정 사용자 관리](manage-account-users.md)를 참조하세요.
+- **Tenants**: Manage your Azure AD tenant associations. For more info, see [Associate Azure AD with your Partner Center account](associate-azure-ad-with-dev-center.md).
+- **프로그램**: 참여 중인 프로그램에 대한 세부 정보를 확인하고 관심이 있는 다른 프로그램에 대해 알아봅니다.
+- **계약**: 계정을 수락한 계약을 확인합니다.
+- **Dev devices**: View and manage [Windows Phone 8.x devices that you've unlocked for testing](https://docs.microsoft.com/previous-versions/windows/apps/dn614128(v=win.10)?redirectedfrom=MSDN) and [Xbox One consoles enabled for development](../xbox-apps/devkit-activation.md). 
 
 

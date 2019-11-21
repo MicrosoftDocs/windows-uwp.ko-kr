@@ -1,5 +1,5 @@
 ---
-Description: 시각적 피드백을 사용 하 여 UWP 앱과의 상호 작용이 검색, 해석 및 처리 될 때 사용자를 표시 합니다.
+Description: Use visual feedback to show users when their interactions with a UWP app are detected, interpreted, and handled.
 title: 시각적 피드백
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
@@ -8,18 +8,18 @@ keywords: 시각적 피드백, 포커스 피드백, 터치 피드백, 접촉 시
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 56260eb09bc834b2a71e9889b91f0bc439edaa30
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: bba80403934987569c25b96eced9a610226431b5
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340467"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257907"
 ---
 # <a name="guidelines-for-visual-feedback"></a>시각적 피드백에 대한 지침
 
 시각적 피드백을 사용하여 조작이 감지, 해석 및 처리될 때 사용자에게 표시할 수 있습니다. 시각적 피드백은 조작 의지를 북돋아 사용자에게 도움이 될 수 있습니다. 시각적 피드백은 조작이 성공했음을 표시하여 사용자의 제어 감각을 향상합니다. 또한 시스템 상태를 전달하고 오류를 줄여 줍니다.
 
-> **중요 API**:  [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
+> **중요 API**: [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input), [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
 
 ## <a name="recommendations"></a>권장 사항
 
@@ -40,7 +40,7 @@ ms.locfileid: "71340467"
 > [!Important]
 > 기본 제공 제스처의 조작 동작은 변경하지 않는 것이 좋습니다.
 
-**장치 간 피드백**
+**Feedback Across Devices**
 
 시각적 피드백은 일반적으로 입력 디바이스(터치, 터치 패드, 마우스, 펜/스타일러스, 키보드 등)에 따라 달라집니다. 예를 들어 마우스에 대한 기본 제공 피드백은 대체로 커서 이동 및 변경인 반면 터치와 펜에는 접촉 시각화가 필요하고 키보드 입력 및 탐색은 포커스 사각형과 강조 표시를 사용합니다.
 
@@ -62,10 +62,10 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 
 ## <a name="color-branding--customizing"></a>색 브랜딩 및 사용자 지정
 
-**테두리 속성**
+**Border Properties**
 
 높은 가시성 포커스 화면 효과는 기본 테두리와 보조 테두리의 두 부분으로 이루어져 있습니다. 기본 테두리는 **2px** 두께이고 보조 테두리 *외부*에서 실행됩니다. 보조 테두리는 **1px** 두께이고 기본 테두리 *내부*에서 실행됩니다.
-![High visibility focus visual 레드라인 @ no__t-1
+![High visibility focus visual redlines](images/FocusRectRedlines.png)
 
 테두리 유형(기본 또는 보조)의 두께를 변경하려면 각각 **FocusVisualPrimaryThickness** 또는 **FocusVisualSecondaryThickness**를 사용합니다.
 ```XAML
@@ -73,7 +73,7 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 ```
 ![높은 가시성 포커스 화면 효과 여백 두께](images/FocusMargin.png)
 
-여백은 [**Thickness**](https://docs.microsoft.com/dotnet/api/system.windows.thickness) 형식의 속성이므로 컨트롤의 특정 측면에만 표시되도록 사용자 지정할 수 있습니다. 아래 내용을 참조하세요. ![High visibility 포커스 시각적 여백 두께 no__t-1
+여백은 [**Thickness**](https://docs.microsoft.com/dotnet/api/system.windows.thickness) 형식의 속성이므로 컨트롤의 특정 측면에만 표시되도록 사용자 지정할 수 있습니다. See below: ![High visibility focus visual margin thickness bottom only](images/FocusThicknessSide.png)
 
 여백은 컨트롤의 시각적 범위와 포커스 화면 효과 *보조 테두리* 시작 부분 사이의 간격입니다. 기본 여백은 컨트롤 범위에서 **1px**입니다. **FocusVisualMargin** 속성을 변경하여 컨트롤별로 이 여백을 편집할 수 있습니다.
 ```XAML
@@ -81,7 +81,7 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 ```
 ![높은 가시성 포커스 화면 효과 여백 차이](images/FocusPlusMinusMargin.png)
 
-*음수를 조정 하면 컨트롤의 중심에서 테두리가 사라지고 양수 여백이 면 테두리를 컨트롤의 가운데 가까이 이동 합니다.*
+*A negative margin will push the border away from the center of the control, and a positive margin will move the border closer to the center of the control.*
 
 컨트롤의 포커스 화면 효과를 완전히 끄려면 **UseSystemFocusVisuals**를 사용하지 않도록 설정하면 됩니다.
 ```XAML
@@ -90,7 +90,7 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 
 두께, 여백 또는 앱 개발자가 포커스 화면 효과를 사용할지 여부는 컨트롤별로 결정됩니다.
 
-**색 속성**
+**Color Properties**
 
 포커스 화면 효과에는 기본 테두리 색과 보조 테두리 색의 두 가지 색 속성만 있습니다. 이러한 포커스 화면 효과 테두리 색은 페이지 수준에서 컨트롤별로 변경하거나 앱 수준에서 전체적으로 변경할 수 있습니다.
 
@@ -109,26 +109,26 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 ## <a name="related-articles"></a>관련 문서
 
 **디자이너용**
-* [패닝에 대 한 지침](guidelines-for-panning.md)
+* [Guidelines for panning](guidelines-for-panning.md)
 
 **개발자용**:
-* [사용자 지정 사용자 조작](https://docs.microsoft.com/windows/uwp/design/layout/index)
+* [Custom user interactions](https://docs.microsoft.com/windows/uwp/design/layout/index)
 
 **샘플**
-* [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-* [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-* [사용자 상호 작용 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-* [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+* [Basic input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [Low latency input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [User interaction mode sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
-**보관 샘플**
-* [Input: XAML user input events sample @ no__t-0
-* [Input: 장치 기능 샘플 @ no__t-0
-* [Input: 터치 적중 횟수 테스트 샘플 @ no__t-0
-* [XAML 스크롤, 패닝 및 확대/축소 샘플](https://go.microsoft.com/fwlink/p/?linkid=251717)
-* [Input: 단순화 된 잉크 샘플 @ no__t-0
-* [Input: Windows 8 제스처 샘플 @ no__t-0
-* [Input: 조작 및 제스처 (C++) 샘플 @ no__t-1
-* [DirectX touch 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=231627)
+**Archive samples**
+* [Input: XAML user input events sample](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [Input: Device capabilities sample](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [Input: Touch hit testing sample](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
+* [XAML scrolling, panning, and zooming sample](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [Input: Simplified ink sample](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
+* [Input: Windows 8 gestures sample](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+* [Input: Manipulations and gestures (C++) sample](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
+* [DirectX touch input sample](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
  
 
  

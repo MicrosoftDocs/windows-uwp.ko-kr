@@ -6,19 +6,19 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 알려진 문제, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 029d595c41301e62f74c9b08b633bb22bfb12786
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 51192e13c63bf3141989cfbf5d9ebd7fbaf13641
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57641068"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260250"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>앱 광고의 알려진 문제점 및 문제 해결
 
 이 항목은 Microsoft Advertising SDK 최신 릴리스의 알려진 문제를 목록으로 제공합니다. 추가 문제 해결 지침은 다음 항목을 참조하세요.
 
-* [HTML 및 JavaScript 문제 해결 가이드](html-and-javascript-troubleshooting-guide.md)
-* [XAML 및 C# 문제 해결 가이드](xaml-and-c-troubleshooting-guide.md)
+* [HTML and JavaScript troubleshooting guide](html-and-javascript-troubleshooting-guide.md)
+* [XAML and C# troubleshooting guide](xaml-and-c-troubleshooting-guide.md)
 
 ## <a name="adcontrol-interface-unknown-in-xaml"></a>XAML의 알 수 없는 AdControl 인터페이스
 
@@ -32,7 +32,7 @@ ms.locfileid: "57641068"
 
 하드웨어 단추 대신 소프트웨어 **뒤로**, **시작**, 및 **검색** 단추가 있는 휴대폰(또는 에뮬레이터)에서 중간 광고에 대한 카운트다운 타이와 클릭 단추가 가려질 수 있습니다.
 
-## <a name="recently-created-ads-are-not-being-served-to-your-app"></a>최근에 만든된 광고가 앱에 제공되지 않음
+## <a name="recently-created-ads-are-not-being-served-to-your-app"></a>최근에 생성된 광고가 앱에 제공되지 않음
 
 최근(하루 이내)에 광고를 만든 경우 즉시 사용하지 못할 수도 있습니다. 광고의 편집 콘텐츠가 승인되면 광고 서버에서 해당 광고를 처리하고 광고가 제공됩니다. 그러면 광고를 인벤토리로 사용할 수 있게 됩니다.
 
@@ -40,15 +40,15 @@ ms.locfileid: "57641068"
 
 광고를 볼 수 없는 이유는 네트워크 오류를 포함하여 다양합니다. 다양한 이유는 다음과 같습니다.
 
-* 크기 보다 작거나 큰 크기를 사용 하 여 파트너 센터에는 ad 단위를 선택 합니다 **AdControl** 앱의 코드입니다.
+* Selecting an ad unit in Partner Center with a size that is greater or less than the size of the **AdControl** in your app's code.
 
 * 라이브 앱을 실행할 때 광고 단위 ID에 대해 [테스트 모드 값](set-up-ad-units-in-your-app.md#test-ad-units)을 사용하는 경우 광고가 표시되지 않습니다.
 
 * 30분 이내에 새 광고 단위 ID를 만든 경우 서버가 시스템을 통해 새 데이터를 전파할 때까지 광고가 표시되지 않을 수 있습니다. 이전에 광고를 표시했던 기존 ID는 광고를 즉시 표시합니다.
 
-앱에서 테스트 광고를 볼 수 있으면 코드가 작동하는 것이며 광고를 표시할 수 있습니다. 문제가 발생하면 [제품 지원](https://developer.microsoft.com/en-us/windows/support)에 문의하세요. 이 페이지에서 선택 **문의처**합니다.
+앱에서 테스트 광고를 볼 수 있으면 코드가 작동하는 것이며 광고를 표시할 수 있습니다. 문제가 발생하면 [제품 지원](https://developer.microsoft.com/en-us/windows/support)에 문의하세요. On that page, choose **Contact us**.
 
-[포럼](https://go.microsoft.com/fwlink/p/?LinkId=401266)에서 질문을 게시할 수도 있습니다.
+[포럼](https://go.microsoft.com/fwlink/?LinkID=401264)에서 질문을 게시할 수도 있습니다.
 
 ## <a name="test-ads-are-showing-in-your-app-instead-of-live-ads"></a>라이브 광고가 아닌 테스트 광고가 앱에 표시됨
 
@@ -58,7 +58,7 @@ ms.locfileid: "57641068"
 
 * 테스트용으로 로드된 앱 또는 에뮬레이터에서 실행되는 앱에는 라이브 광고가 표시되지 않습니다.
 
-라이브 광고 단위 테스트 광고에 제공 하는 경우 ad 단위 상태 표시 **활성 및 서비스 테스트 광고** 파트너 센터에서. 이러한 특성은 현재 휴대폰 앱에는 적용되지 않습니다.
+When a live ad unit is serving test ads, the ad unit’s status shows **Active and serving test ads** in Partner Center. 이러한 특성은 현재 휴대폰 앱에는 적용되지 않습니다.
 
 
 <span id="reference_errors"/>
@@ -67,7 +67,7 @@ ms.locfileid: "57641068"
 
 Microsoft Advertising SDK를 사용할 때는 프로젝트의 **어떤 CPU**도 대상으로 지정할 수 없습니다. 프로젝트의 대상이 **모든 CPU** 플랫폼인 경우 다음과 유사한 참조를 추가한 후 경고가 나타날 수 있습니다.
 
-![referenceerror\-솔루션 탐색기](images/13-19629921-023c-42ec-b8f5-bc0b63d5a191.jpg)
+![referenceerror\-solutionexplorer](images/13-19629921-023c-42ec-b8f5-bc0b63d5a191.jpg)
 
 이 경고를 제거하려면 아키텍처별 빌드 출력(예: **x86**)을 사용하도록 프로젝트를 업데이트합니다. **구성 관리자**를 사용하여 디버그 및 릴리스 구성에 대한 플랫폼 대상을 설정합니다.
 
@@ -91,7 +91,7 @@ JavaScript/HTML 앱은 예약된 z-순서의 MAX-10 범위에 요소를 배치�
 
 ## <a name="more-information"></a>자세한 정보
 
-Microsoft Advertising SDK와 관련된 최근의 알려진 문제를 알아보고 질문을 게시하려면 [포럼](https://go.microsoft.com/fwlink/p/?LinkId=401266)을 방문하세요.
+Microsoft Advertising SDK와 관련된 최근의 알려진 문제를 알아보고 질문을 게시하려면 [포럼](https://go.microsoft.com/fwlink/?LinkID=401264)을 방문하세요.
 
  
 

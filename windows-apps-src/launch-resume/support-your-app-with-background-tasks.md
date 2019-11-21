@@ -4,14 +4,14 @@ description: 이 섹션의 항목에서는 트리거에 대한 응답으로 백�
 ms.assetid: EFF7CBFB-D309-4ACB-A2A5-28E19D447E32
 ms.date: 08/21/2017
 ms.topic: article
-keywords: windows 10, uwp, 백그라운드 작업
+keywords: windows 10, uwp, background task
 ms.localizationpriority: medium
-ms.openlocfilehash: 73d279ca0afe67fa6c7d2240fb62c91d1ab3c4c3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7ca567d34c98deb75d7ebfa5ec9f70688ad18fdb
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370569"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259415"
 ---
 # <a name="support-your-app-with-background-tasks"></a>백그라운드 작업을 사용하여 앱 지원
 
@@ -42,7 +42,7 @@ In-process 백그라운드 작업을 빠르게 시작하려면 [In-process 백�
 Out-of-process 백그라운드 작업을 빠르게 시작하려면 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
 
 > [!TIP]
-> Windows 10 부터는 더 이상 해야 백그라운드 작업에 대 한 등록에 대 한 필수 구성 요소로 잠금 화면에서 앱을 배치 합니다.
+> Starting with Windows 10, you no longer need to place an app on the lock screen as a prerequisite for registering a background task for it.
 
 ## <a name="background-tasks-for-system-events"></a>시스템 이벤트에 대한 백그라운드 작업
 
@@ -73,7 +73,7 @@ Out-of-process 백그라운드 작업을 빠르게 시작하려면 [Out-of-proce
 
 백그라운드 작업에 **InternetAvailable** 조건을 추가[BackgroundTaskBuilder.AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)하여 네트워크 스택이 실행될 때까지 백그라운드 작업의 트리거를 지연시킵니다. 네트워크가 가동되어야 백그라운드 작업이 실행되기 때문에 이 조건을 적용하면 전원이 절약됩니다. 이 조건은 실시간 정품 인증을 제공하지 않습니다.
 
-백그라운드 작업에 네트워크 연결이 필요한 경우 [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)를 설정하여 백그라운드 작업이 실행되는 동안 네트워크 가동을 유지해야 합니다. 이렇게 하면 디바이스가 연결된 대기 상태 모드인 경우에도 작업 실행 중 네트워크를 계속 유지하도록 백그라운드 작업 인프라에 지시할 수 있습니다. 백그라운드 작업을 설정 하지 않는 경우 **IsNetworkRequested**, 백그라운드 작업 (예: 휴대폰의 화면 기능을 해제 합니다.) 연결 된 대기 모드에 있을 때 네트워크에 액세스할 수 없습니다  
+백그라운드 작업에 네트워크 연결이 필요한 경우 [IsNetworkRequested](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)를 설정하여 백그라운드 작업이 실행되는 동안 네트워크 가동을 유지해야 합니다. 이렇게 하면 디바이스가 연결된 대기 상태 모드인 경우에도 작업 실행 중 네트워크를 계속 유지하도록 백그라운드 작업 인프라에 지시할 수 있습니다. If your background task does not set **IsNetworkRequested**, then your background task will not be able to access the network when in Connected Standby mode (for example, when a phone's screen is turned off.)  
 백그라운드 작업 조건에 대한 자세한 내용은 [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md) 참조하세요.
 
 ## <a name="application-manifest-requirements"></a>응용 프로그램 매니페스트 요구 사항
@@ -86,9 +86,9 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 
 | 실시간 트리거  | 설명 |
 |--------------------|-------------|
-| **컨트롤 채널** | 백그라운드 작업은 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)를 사용하여 연결을 활성 상태로 유지하고 컨트롤 채널에서 메시지를 수신할 수 있습니다. 앱에서 소켓을 수신 대기하는 경우 **ControlChannelTrigger** 대신 소켓 브로커를 사용할 수 있습니다. 소켓 브로커 사용에 대한 자세한 내용은 [SocketActivityTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger)를 참조하세요. **ControlChannelTrigger**는 Windows Phone에서 지원되지 않습니다. |
+| **Control Channel** | 백그라운드 작업은 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)를 사용하여 연결을 활성 상태로 유지하고 컨트롤 채널에서 메시지를 수신할 수 있습니다. 앱에서 소켓을 수신 대기하는 경우 **ControlChannelTrigger** 대신 소켓 브로커를 사용할 수 있습니다. 소켓 브로커 사용에 대한 자세한 내용은 [SocketActivityTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger)를 참조하세요. **ControlChannelTrigger**는 Windows Phone에서 지원되지 않습니다. |
 | **Timer** | [  **TimeTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.TimeTrigger)를 사용하여 백그라운드 작업을 자주(15분마다) 실행하거나 특정 시간에 실행하도록 설정할 수 있습니다. 자세한 내용은 [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)을 참조하세요. |
-| **푸시 알림** | 백그라운드 작업은 [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger)에 응답하여 원시 푸시 알림을 수신합니다. |
+| **Push Notification** | 백그라운드 작업은 [**PushNotificationTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger)에 응답하여 원시 푸시 알림을 수신합니다. |
 
 **참고**  
 
@@ -96,7 +96,7 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 
 업데이트를 릴리스한 후 유니버설 Windows 앱이 계속해서 제대로 실행되도록 하려면 앱이 업데이트된 후 시작될 때 [**RemoveAccess**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.removeaccess) 및 [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync)를 차례로 호출합니다. 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
 
-**트리거 인스턴스 수를 제한 합니다.** 앱에 등록할 수 일부 트리거의 인스턴스 개수에 제한이 있습니다. 앱은 앱 인스턴스당 [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger), [MediaProcessingTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger) 및 [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.deviceusetrigger?f=255&MSPPError=-2147217396)를 한 번씩만 등록할 수 있습니다. 앱이 이 제한을 초과하는 경우 등록이 예외를 throw합니다.
+**트리거 인스턴스 수에 대한 제한:** 앱에서 등록할 수 있는 일부 트리거의 인스턴스 수에 대한 제한이 있습니다. 앱은 앱 인스턴스당 [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger), [MediaProcessingTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger) 및 [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.deviceusetrigger?f=255&MSPPError=-2147217396)를 한 번씩만 등록할 수 있습니다. 앱이 이 제한을 초과하는 경우 등록이 예외를 throw합니다.
 
 ## <a name="system-event-triggers"></a>시스템 이벤트 트리거
 
@@ -138,7 +138,7 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 
 배터리 절약 모드가 켜져 있을 때 앱이 계속해서 백그라운드 작업을 실행하고 푸시 알림을 받을 수 있도록 앱에 예외를 적용하지 않으면, 배터리 절약 모드를 사용하도록 설정한 경우 장치가 외부 전원에 연결되어 있지 않고 배터리가 지정된 전원 잔량보다 적을 때 백그라운드 작업이 실행되지 않습니다. 백그라운드 작업을 등록할 수는 있습니다.
 
-그러나 엔터프라이즈 앱 및 Microsoft Store 게시 되지 것입니다 하는 앱에 대 한 참조 [무기한으로 백그라운드로 실행](run-in-the-background-indefinetly.md) 백그라운드에서 백그라운드 작업 또는 확장된 실행 세션을 실행 하는 기능을 사용 하는 방법을 알아보려면 무기한으로 합니다.
+However, for enterprise apps, and apps that will not be published in the Microsoft Store, see [Run in the background indefinitely](run-in-the-background-indefinetly.md) to learn how to use a capabilities to run a background task or extended execution session in the background indefinitely.
 
 ## <a name="background-task-resource-guarantees-for-real-time-communication"></a>백그라운드 작업 리소스는 실시간 통신을 보장합니다.
 
@@ -157,7 +157,7 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 > [!IMPORTANT]
 > **DeviceUseTrigger** 및 **DeviceServicingTrigger**를 in-process 백그라운드 작업과 함께 사용할 수 없습니다.
 
-장기 실행 펌웨어 업데이트와 같은 일부 중요한 장치 작업은 [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger)로 수행할 수 없습니다. 이러한 작업은 PC에서만 수행할 수 있으며 [**DeviceServicingTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceServicingTrigger)를 사용하는 권한 있는 앱만 수행할 수 있습니다. *권한 있는 앱*은 제조업체가 이러한 작업을 수행할 권한을 부여한 앱입니다. 장치 메타데이터는 장치에 대한 권한 있는 앱(있는 경우)을 지정하는 데 사용합니다. 자세한 내용은 참조 하세요. [장치 동기화 및 Microsoft Store 장치 앱에 대 한 업데이트](https://go.microsoft.com/fwlink/p/?LinkId=306619)
+장기 실행 펌웨어 업데이트와 같은 일부 중요한 디바이스 작업은 [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger)로 수행할 수 없습니다. 이러한 작업은 PC에서만 수행할 수 있으며 [**DeviceServicingTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceServicingTrigger)를 사용하는 권한 있는 앱만 수행할 수 있습니다. *권한 있는 앱*은 제조업체가 이러한 작업을 수행할 권한을 부여한 앱입니다. 장치 메타데이터는 장치에 대한 권한 있는 앱(있는 경우)을 지정하는 데 사용합니다. For more info, see [Device sync and update for Microsoft Store device apps](https://msdn.microsoft.com/library/windows/hardware/dn265139(v=vs.85).aspx)
 
 ## <a name="managing-background-tasks"></a>백그라운드 작업 관리
 
@@ -170,30 +170,30 @@ Out-of-process에서 실행되는 백그라운드 작업을 성공적으로 등�
 
 ## <a name="related-topics"></a>관련 항목
 
-**Windows 10의 멀티 태 스에 대 한 개념적 지침**
+**Conceptual guidance for multitasking in Windows 10**
 
-* [시작, 재개 및 멀티태스킹](index.md)
+* [Launching, resuming, and multitasking](index.md)
 
-**관련 된 백그라운드 작업 지침**
+**Related background task guidance**
 
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업에서 센서 및 디바이스에 액세스](access-sensors-and-devices-from-a-background-task.md)
 * [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
 * [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
-* [Out-of-process-백그라운드 작업을 처리 중인 백그라운드 태스크로 변환](convert-out-of-process-background-task.md)
+* [Convert an out-of-process background task to an in-process background task](convert-out-of-process-background-task.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [백그라운드 작업 등록 그룹화](group-background-tasks.md)
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
-* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱에는 이벤트 (디버깅) 하는 경우](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio)
+* [How to trigger suspend, resume, and background events in UWP apps (when debugging)](https://docs.microsoft.com/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio)
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
-* [백그라운드에서 미디어 재생](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)
+* [Play media in the background](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [백그라운드 작업 등록](register-a-background-task.md)
 * [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
 * [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
-* [UWP 앱이 업데이트 될 때 백그라운드 작업 실행](run-a-background-task-during-updatetask.md)
+* [Run a background task when your UWP app is updated](run-a-background-task-during-updatetask.md)
 * [백그라운드에서 무기한 실행](run-in-the-background-indefinetly.md)
 * [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)
-* [앱에서 백그라운드 작업 트리거](trigger-background-task-from-app.md)
+* [Trigger a background task from your app](trigger-background-task-from-app.md)
 * [백그라운드 작업의 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
 * [유지 관리 트리거 사용](use-a-maintenance-trigger.md)

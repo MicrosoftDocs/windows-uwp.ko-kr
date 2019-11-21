@@ -1,47 +1,47 @@
 ---
 ms.assetid: ''
-description: 이 문서에서는 각 카메라에서 프레임을 검색할 MediaFrameSourceGroup 받고 원격 카메라에 연결 하는 방법을 보여 줍니다.
+description: This article shows you how to connect to remote cameras and get a MediaFrameSourceGroup to retrieve frames from each camera.
 title: 원격 카메라에 연결
 ms.date: 04/19/2019
 ms.topic: article
 ms.custom: 19H1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc719b8dad2adef0542edf284d257846052eac21
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 253eea00ba6c4188197224111909c28a53932b88
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63789583"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257356"
 ---
 # <a name="connect-to-remote-cameras"></a>원격 카메라에 연결
 
-이 문서에서는 하나 이상의 원격 카메라에 연결 하는 방법을 보여 줍니다.는 [ **MediaFrameSourceGroup** ](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) 각 카메라에서 프레임을 읽을 수 있는 개체입니다. 미디어 원본에서 프레임을 읽기에 대 한 자세한 내용은 참조 하세요. [MediaFrameReader 사용 하 여 미디어 프레임 처리](process-media-frames-with-mediaframereader.md)합니다. 장치 쌍에 대 한 자세한 내용은 참조 하세요. [장치 쌍](https://docs.microsoft.com/windows/uwp/devices-sensors/pair-devices)합니다.
+This article shows you how to connect to one or more remote cameras and get a [**MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) object that allows you to read frames from each camera. For more information on reading frames from a media source, see [Process media frames with MediaFrameReader](process-media-frames-with-mediaframereader.md). For more information on pairing with devices, see [Pair devices](https://docs.microsoft.com/windows/uwp/devices-sensors/pair-devices).
 
 > [!NOTE] 
-> 이 문서에 설명 된 기능은 Windows 10 버전 1903부터 사용할 수 있습니다.
+> The features discussed in this article are only available starting with Windows 10, version 1903.
 
-## <a name="create-a-devicewatcher-class-to-watch-for-available-remote-cameras"></a>사용 가능한 원격 카메라에 대 한 보기를 DeviceWatcher 클래스 만들기
+## <a name="create-a-devicewatcher-class-to-watch-for-available-remote-cameras"></a>Create a DeviceWatcher class to watch for available remote cameras
 
-합니다 [ **DeviceWatcher** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher) 클래스는 앱에 사용할 수 있는 장치를 모니터링 하 고 장치 추가 또는 제거 된 경우 앱에 알립니다. 인스턴스를 가져올 **DeviceWatcher** 호출한 [ **DeviceInformation.CreateWatcher**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher#Windows_Devices_Enumeration_DeviceInformation_CreateWatcher_System_String_)의 형식을 식별 하는 고급 쿼리 구문 (AQS) 문자열에 전달 장치를 모니터링 하려면입니다. 네트워크 웹캠 장치를 지정 하는 AQS 문자열 다음과 같습니다.
+The [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher) class monitors the devices available to your app and notifies your app when devices are added or removed. Get an instance of **DeviceWatcher** by calling [**DeviceInformation.CreateWatcher**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher#Windows_Devices_Enumeration_DeviceInformation_CreateWatcher_System_String_), passing in an Advanced Query Syntax (AQS) string that identifies the type of devices you want to monitor. The AQS string specifying network camera devices is the following:
 
 ```
 @"System.Devices.InterfaceClassGuid:=""{B8238652-B500-41EB-B4F3-4234F7F5AE99}"" AND System.Devices.InterfaceEnabled:=System.StructuredQueryType.Boolean#True"
 ```
 
 > [!NOTE] 
-> 도우미 메서드 [ **MediaFrameSourceGroup.GetDeviceSelector** ](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) 로컬로 연결 및 원격 네트워크 카메라 모니터링할 AQS 문자열을 반환 합니다. 네트워크 카메라만을 모니터링 하려면 위의 AQS 문자열을 사용 해야 합니다.
+> The helper method [**MediaFrameSourceGroup.GetDeviceSelector**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) returns an AQS string that will monitor locally-connected and remote network cameras. To monitor only network cameras, you should use the AQS string shown above.
 
 
-시작 하는 경우 반환 된 **DeviceWatcher** 를 호출 하 여 합니다 [ **시작** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.start) 메서드를 발생 시킵니다 합니다 [ **Added** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added) 현재 사용할 수 있는 모든 네트워크 카메라에 대 한 이벤트입니다. 호출 하 여 감시자를 중지 하기 전까지 [ **중지**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.stop)의 **Added** 카메라 네트워크 장치가 새로 추가 사용할 수 있게 되 면 이벤트가 발생 하며 [ **제거 됨** ](https://docs.microsoft.com/en-us/uwp/api/windows.devices.enumeration.devicewatcher.removed) 카메라 장치를 사용할 수 없을 때 이벤트가 발생 합니다.
+When you start the returned **DeviceWatcher** by calling the [**Start**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.start) method, it will raise the [**Added**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added) event for every network camera that is currently available. Until you stop the watcher by calling [**Stop**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.stop), the **Added** event will be raised when new network camera devices become available and the [**Removed**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.enumeration.devicewatcher.removed) event will be raised when a camera device becomes unavailable.
 
-이벤트 인수에 전달 합니다 **Added** 및 **제거** 에 이벤트 처리기를 [ **DeviceInformation** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 또는 [  **DeviceInformationUpdate** ](https://docs.microsoft.com/en-us/uwp/api/windows.devices.enumeration.deviceinformationupdate) 개체를 각각. 이러한 각 개체에 **Id** 속성은 이벤트가 발생 하는 대 한 네트워크 카메라에 대 한 식별자입니다. 이 ID를 전달 합니다 [ **MediaFrameSourceGroup.FromIdAsync** ](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) 메서드를를 [ **MediaFrameSourceGroup** ](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) 를 사용할 수 있는 개체 카메라에서 프레임을 검색 합니다.
+The event args passed into the **Added** and **Removed** event handlers are a [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) or a [**DeviceInformationUpdate**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.enumeration.deviceinformationupdate) object, respectively. Each of these objects has an **Id** property that is the identifier for the network camera for which the event was fired. Pass this ID into the [**MediaFrameSourceGroup.FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) method to get a [**MediaFrameSourceGroup**](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) object that you can use to retrieve frames from the camera.
 
-## <a name="remote-camera-pairing-helper-class"></a>원격 카메라 페어링 하는 도우미 클래스
+## <a name="remote-camera-pairing-helper-class"></a>Remote camera pairing helper class
 
-다음 예제에서는 사용 하는 도우미 클래스를 **DeviceWatcher** 만들고 업데이트 하는 **ObservableCollection** 의 **MediaFrameSourceGroup** 지원 하기 위해 개체 카메라의 목록에 데이터 바인딩입니다. 일반적인 앱은 줄 바꿈 합니다 **MediaFrameSourceGroup** 사용자 지정 모델 클래스에서. 도우미 클래스를 앱에 대 한 참조를 유지 관리 하는 참고 [ **CoreDispatcher** ](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) 카메라에 대 한 호출 내에서 컬렉션을 업데이트 하 고 [ **RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) UI 스레드에서 컬렉션에 바인딩된 UI가 업데이트를 확인 합니다.
+The following example shows a helper class that uses a **DeviceWatcher** to create and update an **ObservableCollection** of **MediaFrameSourceGroup** objects to support data binding to the list of cameras. Typical apps would wrap the **MediaFrameSourceGroup** in a custom model class. Note that the helper class maintains a reference to the app's [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) and updates the collection of cameras within calls to [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) to ensure that the UI bound to the collection is updated on the UI thread.
 
-또한이 예제에서는 처리를 [ **DeviceWatcher.Updated** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.updated) 외에 이벤트를 **Added** 및 **제거** 이벤트입니다. 에 **Updated** 처리기를 연결 된 원격 카메라 장치에서 제거 하 고 다시 컬렉션에 추가 됩니다.
+Also, this example handles the [**DeviceWatcher.Updated**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.updated) event in addition to the **Added** and **Removed** events. In the **Updated** handler, the associated remote camera device is removed from and then added back to the collection.
 
 [!code-cs[SnippetRemoteCameraPairingHelper](./code/Frames_Win10/Frames_Win10/RemoteCameraPairingHelper.cs#SnippetRemoteCameraPairingHelper)]
 
@@ -49,9 +49,9 @@ ms.locfileid: "63789583"
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [카메라 프레임 샘플](https://go.microsoft.com/fwlink/?LinkId=823230)
-* [MediaFrameReader 사용 하 여 미디어 처리 프레임](process-media-frames-with-mediaframereader.md)
+* [Basic photo, video, and audio capture with MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Camera frames sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames)
+* [Process media frames with MediaFrameReader](process-media-frames-with-mediaframereader.md)
  
 
  

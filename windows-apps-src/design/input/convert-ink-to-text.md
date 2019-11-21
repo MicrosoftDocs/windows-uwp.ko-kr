@@ -8,12 +8,12 @@ keywords: Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f402c88efaca909fa5558880825629d94cc2a64b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 266f07385e3f7fd7450c32f8e912035d804a4740
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363752"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258061"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Windows Ink 스트로크를 텍스트 및 셰이프로 인식
 
@@ -30,7 +30,7 @@ Windows Ink에 내장된 인식 기능을 사용하여 잉크 스트로크 및 �
 
 이 예에서는 사용자가 그리기를 마쳤음을 알리는 단추를 클릭하면 인식이 시작됩니다.
 
-**이 샘플을 다운로드할 [잉크 분석 샘플 (basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)**
+**Download this sample from [Ink analysis sample (basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)**
 
 1. 먼저 UI(MainPage.xaml)를 설정합니다. 
 
@@ -215,7 +215,7 @@ private async void RecognizeStrokes_Click(object sender, RoutedEventArgs e)
     }
 ```
 
-6. 다음은 인식 캔버스에 TextBlock을 그리는 함수입니다. 사용 하 여 연결 된 잉크 스트로크의 경계 사각형을 잉크 캔버스에서 TextBlock의 글꼴 크기와 위치를 설정 합니다.
+6. 다음은 인식 캔버스에 TextBlock을 그리는 함수입니다. We use the bounding rectangle of the associated ink stroke on the ink canvas to set the position and font size of the TextBlock.
 
 ```csharp
 /// <summary>
@@ -236,7 +236,7 @@ private void DrawText(string recognizedText, Rect boundingRect)
 }
 ```
 
-7. 다음은 인식 캔버스에 줄임표와 다각형을 그리는 함수입니다. 잉크 캔버스에서 연결된 잉크 스트로크의 경계 사각형 모양의 글꼴 크기와 위치를 설정 하려면 사용 합니다.
+7. 다음은 인식 캔버스에 줄임표와 다각형을 그리는 함수입니다. We use the bounding rectangle of the associated ink stroke on the ink canvas to set the position and font size of the shapes.
 
 ```csharp
     // Draw an ellipse on the recognitionCanvas.
@@ -288,11 +288,11 @@ private void DrawText(string recognizedText, Rect boundingRect)
 이번 섹션에서는 Windows Ink 필기 인식 엔진을 사용하여(잉크 분석 아님) [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)에 필기된 일련의 스트로크를 텍스트로 변환(설치된 기본 언어 팩을 기반으로)하는 방법을 보여 줍니다.
 
 > [!NOTE]
-> 이 섹션에서 보여 주는 기본 필기 인식은 양식 입력처럼 한 줄로 된 텍스트 입력 시나리오에 가장 적합합니다. 분석 및 문서 구조, 목록 항목, 도형 및 텍스트 인식) (외 그리기의 해석을 포함 하는 다양 한 인식 시나리오에 대 한 이전 섹션을 참조 합니다. [잉크 분석을 사용 하 여 자유 형식 인식](#free-form-recognition-with-ink-analysis)합니다.
+> 이 섹션에서 보여 주는 기본 필기 인식은 양식 입력처럼 한 줄로 된 텍스트 입력 시나리오에 가장 적합합니다. 텍스트 인식뿐 아니라 문서 구조, 목록 항목, 셰이프 및 드로잉이 포함된 풍부한 인식 시나리오에 대한 내용은 이전 섹션 [잉크 분석을 통한 풍부한 인식](#free-form-recognition-with-ink-analysis)을 참조하세요.
 
 이 예에서는 사용자가 필기를 마쳤음을 알리는 단추를 클릭하면 인식이 시작됩니다.
 
-**이 샘플을 다운로드할 [잉크 필기 인식 샘플](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)**
+**Download this sample from [Ink handwriting recognition sample](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)**
 
 1. 먼저 UI를 설정합니다.
 
@@ -377,9 +377,9 @@ private void DrawText(string recognizedText, Rect boundingRect)
             new InkRecognizerContainer();
     ```
 
-    [**RecognizeAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkmanager.recognizeasync) 집합을 검색 하기 위해 호출 됩니다 [ **InkRecognitionResult** ](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkRecognitionResult) 개체입니다.
+    [**RecognizeAsync**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkmanager.recognizeasync) is called to retrieve a set of [**InkRecognitionResult**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkRecognitionResult) objects.
 
-    인식 결과에서 발견 된 각 단어에 대해 생성 되는 [ **InkRecognizer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkRecognizer)합니다.
+    Recognition results are produced for each word that is detected by an [**InkRecognizer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkRecognizer).
 
     ```csharp
     // Recognize all ink strokes on the ink canvas.
@@ -389,9 +389,9 @@ private void DrawText(string recognizedText, Rect boundingRect)
                 InkRecognitionTarget.All);
     ```
 
-    각 [ **InkRecognitionResult** ](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkRecognitionResult) 개체 텍스트 후보 집합을 포함 합니다. 이 목록의 맨 위에 있는 항목의 신뢰도 내림차순 나머지 후보 뒤에 최상의 일치 되도록 인식 엔진으로 간주 됩니다.
+    Each [**InkRecognitionResult**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkRecognitionResult) object contains a set of text candidates. The topmost item in this list is considered by the recognition engine to be the best match, followed by the remaining candidates in order of decreasing confidence.
 
-    각 반복 [ **InkRecognitionResult** ](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkRecognitionResult) 후보 목록을 컴파일합니다. 후보 표시 됩니다 및 [ **InkStrokeContainer** ](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) 지워집니다 (또한 지웁니다 합니다 [ **InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)).
+    We iterate through each [**InkRecognitionResult**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkRecognitionResult) and compile the list of candidates. The candidates are then displayed and the [**InkStrokeContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) is cleared (which also clears the [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)).
 
     ```csharp
     string str = "Recognition result\n";
@@ -412,7 +412,7 @@ private void DrawText(string recognizedText, Rect boundingRect)
         inkCanvas.InkPresenter.StrokeContainer.Clear();
     ```
 
-    다음은 전체에서 클릭 처리기 예제입니다.
+    Here's the click handler example, in full.
 
     ```csharp
     // Handle button click to initiate recognition.
@@ -483,7 +483,7 @@ Windows 잉크 플랫폼에 내장된 필기 인식은 Windows에서 지원되�
 
 앱이 설치된 필기 인식 엔진 집합을 쿼리하고 그 중 하나를 사용할 수도 있고, 사용자가 기본 언어를 선택할 수도 있습니다.
 
-**참고**    으로 이동 하 여 사용자가 설치 된 언어의 목록을 볼 수 있습니다 **설정-&gt; 시간 및 언어**합니다. 설치된 언어는 **언어** 아래에 나열됩니다.
+**Note**   Users can see a list of installed languages by going to **Settings -&gt; Time & Language**. 설치된 언어는 **언어** 아래에 나열됩니다.
 
 새 언어 팩을 설치하고 해당 언어에 대해 필기 인식을 사용하도록 설정하려면 다음과 같이 하세요.
 
@@ -870,18 +870,18 @@ string str = "Recognition result\n";
 
 ## <a name="related-articles"></a>관련 문서
 
-- [펜 및 스타일러스 상호 작용](pen-and-stylus-interactions.md)
+- [Pen and stylus interactions](pen-and-stylus-interactions.md)
 
-### <a name="topic-samples"></a>항목 샘플
+### <a name="topic-samples"></a>토픽 샘플
 
-- [잉크 분석 샘플 (basic) (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
-- [잉크 필기 인식 샘플 (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
+- [Ink analysis sample (basic) (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-analysis-basic.zip)
+- [Ink handwriting recognition sample (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-handwriting-reco.zip)
 
 ### <a name="other-samples"></a>기타 샘플
 
-- [간단한 잉크 샘플 (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
-- [복잡 한 잉크 샘플 (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
-- [잉크 샘플 (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
-- [자습서 시작 하기: UWP 앱에서 잉크를 지원 합니다.](https://aka.ms/appsample-ink)
-- [색 지정 책 샘플](https://aka.ms/cpubsample-coloringbook)
-- [제품군 정보 샘플](https://aka.ms/cpubsample-familynotessample)
+- [Simple ink sample (C#/C++)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
+- [Complex ink sample (C++)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
+- [Ink sample (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
+- [Get Started Tutorial: Support ink in your UWP app](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
+- [Coloring book sample](https://github.com/Microsoft/Windows-appsample-coloringbook)
+- [Family notes sample](https://github.com/Microsoft/Windows-appsample-familynotes)

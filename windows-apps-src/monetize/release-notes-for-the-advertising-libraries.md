@@ -6,24 +6,24 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows 10, uwp, 광고, 광고, 릴리스 정보
 ms.localizationpriority: medium
-ms.openlocfilehash: d7a250880d148dd4ca3ced522312904f2786715e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 04d3554620cde44fc9907845a7765d023e1ed03e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57601228"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260203"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>Advertising 라이브러리에 대한 릴리스 정보
 
 
 
 
-이 섹션에서는 Microsoft Advertising 라이브러리의 최신 릴리스 정보를 제공합니다. 이러한 라이브러리는 Windows 10, Windows 8.1, Windows Phone 8.1 및 Windows Phone 8에 대 한 XAML 및 JavaScript/HTML 앱을 지원합니다.
+이 섹션에서는 Microsoft Advertising 라이브러리의 최신 릴리스 정보를 제공합니다. These libraries support XAML and JavaScript/HTML apps for Windows 10, Windows 8.1, Windows Phone 8.1 and Windows Phone 8.
 
 ## <a name="installation"></a>설치
 
 
-Microsoft 광고 라이브러리는 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)의 일부로 제공되고 있습니다. SDK 설치에 대한 자세한 내용은 [Microsoft Advertising SDK 설치](install-the-microsoft-advertising-libraries.md)를 참조하세요.
+Microsoft 광고 라이브러리는 [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)의 일부로 제공되고 있습니다. SDK 설치에 대한 자세한 내용은 [Microsoft Advertising SDK 설치](install-the-microsoft-advertising-libraries.md)를 참조하세요.
 
 ## <a name="uninstall-previous-versions"></a>이전 버전 제거
 
@@ -39,7 +39,7 @@ Microsoft Advertising 라이브러리(**AdControl** 및 **InterstitialAd** 클�
 
 ## <a name="no-toolbox-control"></a>도구 상자 컨트롤 없음
 
-[Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)에 있는 Microsoft Advertising 라이브러리의 현재 릴리스에는 **AdControl** 또는 **InterstitialAd**를 앱의 Design Surface로 끌기 위한 도구 상자 컨트롤이 없습니다. 태그 및 코드에서 이러한 컨트롤을 추가하는 방법에 대한 자세한 내용은 [개발자 연습](developer-walkthroughs.md)을 참조하세요.
+[Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)에 있는 Microsoft Advertising 라이브러리의 현재 릴리스에는 **AdControl** 또는 **InterstitialAd**를 앱의 Design Surface로 끌기 위한 도구 상자 컨트롤이 없습니다. 태그 및 코드에서 이러한 컨트롤을 추가하는 방법에 대한 자세한 내용은 [개발자 연습](developer-walkthroughs.md)을 참조하세요.
 
 ## <a name="latitude-and-longitude-properties-no-longer-available"></a>위도 및 경도 속성을 더 이상 사용할 수 없음
 

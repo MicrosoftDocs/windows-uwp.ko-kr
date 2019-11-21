@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 2452d4bfcce01dfc86e44c9f57a82baa6beb8ce7
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e99aec682ee02463fc282a70a183776d13dd58a8
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368790"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258522"
 ---
 # <a name="directx-11-porting-faq"></a>DirectX 11 포팅 FAQ
 
@@ -28,26 +28,26 @@ Direct3D 11은 Direct3D 9로부터의 중요한 업그레이드입니다. 가상
 ## <a name="what-is-the-new-device-context-for-am-i-supposed-to-replace-my-direct3d-9-device-with-the-direct3d-11-device-the-device-context-or-both"></a>새 디바이스 컨텍스트는 무엇을 위한 것인가요? Direct3D 9 장치를 Direct3D 11 장치, 디바이스 컨텍스트 또는 둘 다로 바꾸어야 할까요?
 
 
-Direct3D 장치는 비디오 메모리에 리소스를 만드는 데 사용하는 반면, 디바이스 컨텍스트는 파이프라인 상태를 설정하고 렌더링 명령을 생성하는 데 사용합니다. 자세한 내용은 다음을 참조하세요. [Direct3D 9 이후 가장 중요 한 변경 내용은 무엇 인가요?](understand-direct3d-11-1-concepts.md)
+Direct3D 장치는 비디오 메모리에 리소스를 만드는 데 사용하는 반면, 디바이스 컨텍스트는 파이프라인 상태를 설정하고 렌더링 명령을 생성하는 데 사용합니다. 자세한 내용은 [Direct3D 9 이후에 가장 중요한 변경 내용은 무엇인가요?](understand-direct3d-11-1-concepts.md)를 참조하세요.
 
 ##  <a name="do-i-have-to-update-my-game-timer-for-uwp"></a>UWP에 대한 게임 타이머를 업데이트해야 할까요?
 
 
-[**QueryPerformanceCounter**](https://docs.microsoft.com/windows/desktop/api/profileapi/nf-profileapi-queryperformancecounter)를 함께 [ **QueryPerformanceFrequency**](https://docs.microsoft.com/windows/desktop/api/profileapi/nf-profileapi-queryperformancefrequency), UWP 앱 용 게임 타이머를 구현 하는 가장 좋은 방법은 그대로입니다.
+[**QueryPerformanceCounter**](https://docs.microsoft.com/windows/desktop/api/profileapi/nf-profileapi-queryperformancecounter), along with [**QueryPerformanceFrequency**](https://docs.microsoft.com/windows/desktop/api/profileapi/nf-profileapi-queryperformancefrequency), is still the best way to implement a game timer for UWP apps.
 
-타이머와 UWP 앱 수명 주기의 미묘한 차이를 알고 있어야 합니다. 일시 중단/다시 시작은 플레이어가 데스크톱 게임을 다시 실행하는 것과는 다른데, 이는 게임이 마지막으로 플레이된 때로부터 시간이 지나 스냅샷을 다시 시작하기 때문입니다. 많은 시간이 경과한 경우(예: 몇 주) 일부 게임 타이머 구현은 정상적으로 동작하지 않을 수 있습니다. 앱 수명 주기 이벤트를 사용하여 게임이 다시 시작될 때 타이머를 초기화할 수 있습니다.
+타이머와 UWP 앱 수명 주기의 미묘한 차이를 알고 있어야 합니다. 일시 중단/다시 시작은 플레이어가 데스크톱 게임을 다시 실행하는 것과는 다른데, 이는 게임이 마지막으로 플레이된 때로부터 시간이 지나 스냅숏을 다시 시작하기 때문입니다. 많은 시간이 경과한 경우(예: 몇 주) 일부 게임 타이머 구현은 정상적으로 동작하지 않을 수 있습니다. 앱 수명 주기 이벤트를 사용하여 게임이 다시 시작될 때 타이머를 초기화할 수 있습니다.
 
 여전히 RDTSC 명령을 사용하는 게임은 업그레이드 해야 합니다. [게임 타이밍 및 멀티 코어 프로세서](https://docs.microsoft.com/windows/desktop/DxTechArts/game-timing-and-multicore-processors)를 참조하세요.
 
 ## <a name="my-game-code-is-based-on-d3dx-and-dxut-is-there-anything-available-that-can-help-me-migrate-my-code"></a>게임이 D3DX 및 DXUT를 기반으로 합니다. 코드를 마이그레이션하는 데 사용할 수 있는 것이 있나요?
 
 
-[DirectXTK(DirectX 도구 키트)](https://go.microsoft.com/fwlink/p/?LinkID=248929) 커뮤니티 프로젝트는 Direct3D 11에 사용할 수 있는 도우미 클래스를 제공합니다.
+[DirectXTK(DirectX 도구 키트)](https://github.com/Microsoft/DirectXTK) 커뮤니티 프로젝트는 Direct3D 11에 사용할 수 있는 도우미 클래스를 제공합니다.
 
-##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>데스크톱 및 Microsoft Store 대 한 코드 경로 유지 관리 하는 방법
+##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>How do I maintain code paths for the desktop and the Microsoft Store?
 
 
-Chuck Walbourn 문서 시리즈 이라는 제목의 [이중 사용 게임 코딩 기술을](https://go.microsoft.com/fwlink/p/?LinkID=286210) 데스크톱 및 Microsoft Store 코드 경로 간에 코드 공유에 대 한 지침을 제공 합니다.
+Chuck Walbourn's article series titled [Dual-use Coding Techniques for Games](https://blogs.msdn.com/b/chuckw/archive/2012/09/17/dual-use-coding-techniques-for-games.aspx) offers guidance on sharing code between the desktop and the Microsoft Store code paths.
 
 ##  <a name="how-do-i-load-image-resources-in-my-directx-uwp-app"></a>DirectX UWP 앱에 이미지 리소스를 로드하는 방법은 무엇인가요?
 
@@ -57,7 +57,7 @@ Chuck Walbourn 문서 시리즈 이라는 제목의 [이중 사용 게임 코딩
 -   콘텐츠 파이프라인에서, Direct3D 텍스처 리소스로 사용되는 DDS 파일로 이미지를 변환합니다. [게임 또는 앱에 3-D 자산 사용](https://docs.microsoft.com/visualstudio/designers/using-3-d-assets-in-your-game-or-app?view=vs-2015)을 참조하세요.
 -   [Windows Imaging Component](https://docs.microsoft.com/windows/desktop/wic/-wic-lh)는 다양한 형식의 이미지를 로드하는 데 사용할 수 있으며, Direct3D 텍스처 리소스 및 Direct2D 비트맵에 사용할 수 있습니다.
 
-또한 [DirectXTK](https://go.microsoft.com/fwlink/p/?LinkID=248929) 또는 [DirectXTex](https://go.microsoft.com/fwlink/p/?LinkID=248926)의 DDSTextureLoader 및 WICTextureLoader를 사용할 수 있습니다.
+또한 [DirectXTK](https://github.com/Microsoft/DirectXTK) 또는 [DirectXTex](https://github.com/Microsoft/DirectXTex)의 DDSTextureLoader 및 WICTextureLoader를 사용할 수 있습니다.
 
 ## <a name="where-is-the-directx-sdk"></a>DirectX SDK 위치
 
@@ -74,7 +74,7 @@ Win32 데스크톱 응용 프로그램에서는 여전히 DirectSetup을 사용�
 ## <a name="is-there-any-way-i-can-update-my-desktop-code-to-directx-11-before-moving-away-from-effects"></a>데스크톱 코드를 효과에서 이전시키기 전에 DirectX 11로 업데이트할 수 있는 방법이 있나요?
 
 
-[Direct3D 11 업데이트에 대한 효과](https://go.microsoft.com/fwlink/p/?LinkId=271568)를 참조하세요. 효과 11은 레거시 DirectX SDK 헤더에 대한 종속성을 없애 줍니다. 효과 11은 포팅 보조 기능으로 사용하도록 고안되었으며, 데스크톱 앱에만 사용할 수 있습니다.
+[Direct3D 11 업데이트에 대한 효과](https://github.com/Microsoft/FX11)를 참조하세요. 효과 11은 레거시 DirectX SDK 헤더에 대한 종속성을 없애 줍니다. 효과 11은 포팅 보조 기능으로 사용하도록 고안되었으며, 데스크톱 앱에만 사용할 수 있습니다.
 
 ##  <a name="is-there-a-path-for-porting-my-directx-8-game-to-uwp"></a>DirectX 8 게임을 UWP로 포팅하는 경로가 있나요?
 
@@ -83,7 +83,7 @@ Win32 데스크톱 응용 프로그램에서는 여전히 DirectSetup을 사용�
 
 -   [Direct3D 9로 변환](https://docs.microsoft.com/windows/desktop/direct3d9/converting-to-directx-9)을 읽어 봅니다.
 -   게임에 고정된 파이프라인의 나머지가 있는지 확인합니다([사용되지 않는 기능](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-programming-guide-api-features-deprecated) 참조).
--   DirectX 9 이식 경로 수행 합니다. [D3D에서 포트 uwp 9](walkthrough--simple-port-from-direct3d-9-to-11-1.md)합니다.
+-   그런 다음 DirectX 9 포팅 경로를 사용합니다([D3D 9에서 UWP로 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md)).
 
 ##  <a name="can-i-port-my-directx-10-or-11-game-to-uwp"></a>DirectX 10 또는 11 게임을 UWP로 포팅할 수 있나요?
 
@@ -98,7 +98,7 @@ DirectX 10.x 및 11 데스크톱 게임은 쉽게 UWP로 포팅됩니다. [Direc
 ## <a name="how-do-i-turn-on-antialiasing"></a>앤티앨리어싱을 켜는 방법은 무엇인가요?
 
 
-Direct3D 장치를 만들 때 앤티앨리어싱(다중 샘플링)을 사용하도록 설정할 수 있습니다. 다중 샘플링 지원 호출 하 여 열거 [ **CheckMultisampleQualityLevels**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkmultisamplequalitylevels), 후 다중 샘플 옵션을 설정 합니다 [ **DXGI\_샘플\_DESC 구조** ](https://docs.microsoft.com/windows/desktop/api/dxgicommon/ns-dxgicommon-dxgi_sample_desc) 호출 하는 경우 [ **CreateSurface**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgidevice-createsurface)합니다.
+Direct3D 장치를 만들 때 앤티앨리어싱(다중 샘플링)을 사용하도록 설정할 수 있습니다. Enumerate multisampling support by calling [**CheckMultisampleQualityLevels**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkmultisamplequalitylevels), then set multisample options in the [**DXGI\_SAMPLE\_DESC structure**](https://docs.microsoft.com/windows/desktop/api/dxgicommon/ns-dxgicommon-dxgi_sample_desc) when you call [**CreateSurface**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgidevice-createsurface).
 
 ## <a name="my-game-renders-using-multithreading-andor-deferred-rendering-what-do-i-need-to-know-for-direct3d-11"></a>다중 스레딩 및/또는 지연 렌더링을 사용하여 게임을 렌더링합니다. Direct3D 11에 대해 알아야 할 사항은 무엇인가요?
 
@@ -110,25 +110,25 @@ Direct3D 장치를 만들 때 앤티앨리어싱(다중 샘플링)을 사용하�
 
 다음 항목을 참조하세요.
 
--   [HLSL 프로그래밍 가이드](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-pguide)
--   [Direct3D 10에 대 한 질문과 대답](https://docs.microsoft.com/windows/desktop/DxTechArts/direct3d10-frequently-asked-questions)
+-   [Programming Guide for HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-pguide)
+-   [Direct3D 10 Frequently Asked Questions](https://docs.microsoft.com/windows/desktop/DxTechArts/direct3d10-frequently-asked-questions)
 
 ## <a name="what-should-i-use-instead-of-the-x-file-format-for-my-models"></a>.x 파일 형식 대신 무엇을 모델에 사용해야 할까요?
 
 
-.x 파일 형식에 대한 공식적인 대체 형식은 없지만 많은 샘플에서는 SDKMesh 형식을 사용합니다. 또한 Visual Studio에는 많이 사용되는 몇 가지 형식을 CMO 파일로 컴파일하는 [콘텐츠 파이프라인](https://docs.microsoft.com/visualstudio/designers/using-3-d-assets-in-your-game-or-app?view=vs-2015)이 포함되어 있으며, 이러한 CMO 파일은 Visual Studio 3D 시작 키트의 코드를 사용하여 로드하거나 [DirectXTK](https://go.microsoft.com/fwlink/p/?LinkID=248929)를 사용하여 로드할 수 있습니다.
+.x 파일 형식에 대한 공식적인 대체 형식은 없지만 많은 샘플에서는 SDKMesh 형식을 사용합니다. 또한 Visual Studio에는 많이 사용되는 몇 가지 형식을 CMO 파일로 컴파일하는 [콘텐츠 파이프라인](https://docs.microsoft.com/visualstudio/designers/using-3-d-assets-in-your-game-or-app?view=vs-2015)이 포함되어 있으며, 이러한 CMO 파일은 Visual Studio 3D 시작 키트의 코드를 사용하여 로드하거나 [DirectXTK](https://github.com/Microsoft/DirectXTK)를 사용하여 로드할 수 있습니다.
 
 ## <a name="how-do-i-debug-my-shaders"></a>셰이더를 디버그하는 방법은 무엇인가요?
 
 
-Microsoft Visual Studio 2015 용 DirectX 그래픽 진단 도구를 포함합니다. [DirectX 그래픽 디버그](https://docs.microsoft.com/visualstudio/debugger/visual-studio-graphics-diagnostics?view=vs-2015)를 참조하세요.
+Microsoft Visual Studio 2015 includes diagnostic tools for DirectX graphics. [DirectX 그래픽 디버그](https://docs.microsoft.com/visualstudio/debugger/visual-studio-graphics-diagnostics?view=vs-2015)를 참조하세요.
 
 ##  <a name="what-is-the-direct3d-11-equivalent-for-x-function"></a>*x* 함수에 해당하는 Direct3D 11의 함수는 무엇인가요?
 
 
 DirectX 11 API에 DirectX 9 기능 매핑에 제공되어 있는 [함수 매핑](feature-mapping.md#function-mapping)을 참조하세요.
 
-##  <a name="what-is-the-dxgiformat-equivalent-of-y-surface-format"></a>DXGI 이란\_형식으로 표현한 *y* 표면 형식을?
+##  <a name="what-is-the-dxgi_format-equivalent-of-y-surface-format"></a>What is the DXGI\_FORMAT equivalent of *y* surface format?
 
 
 DirectX 11 API에 DirectX 9 기능 매핑에 제공되어 있는 [화면 형식 매핑](feature-mapping.md#surface-format-mapping)을 참조하세요.

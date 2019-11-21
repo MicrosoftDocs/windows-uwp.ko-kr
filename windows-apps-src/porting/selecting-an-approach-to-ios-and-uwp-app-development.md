@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9bf23926a1c17615db5ef838d21f9a46a8921c8c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: a76b451a3d268e418ae24998afdd29d32bb43ed6
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57655788"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260134"
 ---
 # <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>iOS 및 UWP 앱 개발 방법 선택
 
@@ -26,19 +26,19 @@ Windows 및 iOS는 양상이 매우 다른 거대한 제품으로 보일 수 있
 
 새로 시작하는 경우 다음을 비롯한 다양한 옵션을 사용할 수 있습니다.
 
--   [Xamarin](https://go.microsoft.com/fwlink/p/?LinkID=320484)
+-   [Xamarin](https://xamarin.com/)
 
     Xamarin을 사용하면 C#으로 앱을 작성하고, Windows에서 실행할 수 있으며 네이티브 iOS 앱도 만들 수 있습니다. Xamarin 지원은 Visual Studio에 기본적으로 제공되므로 올바른 프로젝트 형식만 선택하면 됩니다.
 
--   [Apache Cordova](https://go.microsoft.com/fwlink/p/?LinkID=400439)
+-   [Apache Cordova](https://www.microsoft.com/?ref=go)
 
     Javascript 및 HTML이 더 편리한 경우 Apache Cordova(일명 PhoneGap)가 iOS, Android 및 Windows용 플랫폼 간 앱을 만드는 데 도움이 됩니다. 이 프로젝트 형식 또한 Visual Studio에 기본적으로 제공됩니다.
 
 -   게임 엔진
 
-    [Unity3D](https://go.microsoft.com/fwlink/p/?LinkID=320479) 및 [Unreal Engine](https://go.microsoft.com/fwlink/p/?LinkID=394062)과 같은 도구를 재량껏 사용해서 Windows 및 iOS를 비롯한 다른 많은 플랫폼용 AAA급 품질의 게임을 작성할 수 있습니다. Unity는 C# 스크립팅을 지원하고 Unreal은 C++를 사용합니다.
+    [Unity3D](https://www.unity3d.com/) 및 [Unreal Engine](https://www.unrealengine.com/en-US/)과 같은 도구를 재량껏 사용해서 Windows 및 iOS를 비롯한 다른 많은 플랫폼용 AAA급 품질의 게임을 작성할 수 있습니다. Unity는 C# 스크립팅을 지원하고 Unreal은 C++를 사용합니다.
 
--   [MonoGame](https://go.microsoft.com/fwlink/p/?LinkID=320483)
+-   [MonoGame](http://www.monogame.net/)
 
     XNA의 개념을 이어 받은 후속 제품입니다. 현재는 오픈 소스 플랫폼 간 프레임워크로 사용됩니다. 즉, 물리학 엔진 및 2D/3D 그래픽이 지원되는 많은 플랫폼에서 C#으로 앱을 작성할 수 있습니다.
 
@@ -46,7 +46,7 @@ Windows 및 iOS는 양상이 매우 다른 거대한 제품으로 보일 수 있
 
 기존 iOS 앱을 사용하는 경우에는 사용 가능한 옵션이 약간 더 제한됩니다. 그러나 기능을 구현하는 것이 불가능하지는 않습니다.
 
--   [iOS용 Windows 브리지](https://go.microsoft.com/fwlink/p/?LinkId=619014)
+-   [iOS용 Windows 브리지](https://github.com/Microsoft/WinObjC)
 
     Project Islandwood라고도 하는 이 도구는 Visual Studio로 직접 Xcode 프로젝트를 가져올 수 있는 개발 중인 도구입니다. Objective-C 코드는 Visual Studio 내에서 빌드 및 디버깅할 수 있습니다. 프로젝트에서 그래픽용 Cocos와 같은 라이브러리를 사용하면 이것이 앱을 빠르게 포팅하는 유용한 방법이라는 것을 알게 됩니다.
 
@@ -54,13 +54,13 @@ Windows 및 iOS는 양상이 매우 다른 거대한 제품으로 보일 수 있
 
     핵심 비즈니스 논리를 Objective-C 또는 Swift가 아닌 C++로 작성하는 경우 프로젝트를 사소하게 변경할 때만 이 코드를 사용하는 것이 좋습니다. 그런 후 다른 Windows 앱처럼 XAML을 사용하여 UI를 정의하고, 필요할 때 C++ 코드로 불러올 수 있습니다.
 
--   [각도 사용 하 여 Windows에서 OpenGL ES를 실행 하려면](https://go.microsoft.com/fwlink/p/?linkid=618387)
+-   [Use ANGLE to run OpenGL ES on Windows](https://github.com/microsoft/angle/wiki)
 
     OpenGL ES 2.0 프로젝트를 포팅하는 중간 단계에서 ANGLE을 사용합니다. ANGLE을 사용하면 OpenGL ES API 호출을 DirectX 11 API 호출로 변환하여 Windows에서 OpenGL ES 콘텐츠를 실행할 수 있습니다.
 
 ## <a name="other-cross-platform-authoring-tools"></a>기타 플랫폼 간 제작 도구
 
--   [GameSalad](https://go.microsoft.com/fwlink/p/?LinkID=320480)
+-   [GameSalad](https://gamesalad.com/)
 
     게임 제작 환경입니다.
 
@@ -68,31 +68,31 @@ Windows 및 iOS는 양상이 매우 다른 거대한 제품으로 보일 수 있
 
     게임 제작 환경입니다.
 
--   [티타늄 달걀 Studio](https://go.microsoft.com/fwlink/p/?LinkID=320482)
+-   [Titanium Studio](https://www.appcelerator.com/platform/titanium-studio/)
 
     플랫폼 간 제작 환경입니다.
 
--   [Cocos2D-x](https://go.microsoft.com/fwlink/p/?LinkID=320485)
+-   [Cocos2D-x](https://www.cocos2d-x.org/)
 
     스프라이트 처리 및 물리학 모델링을 위한 플랫폼 간 코드 라이브러리입니다.
 
--   [Impact.js](https://go.microsoft.com/fwlink/p/?LinkID=320486)
+-   [Impact.js](https://impactjs.com/)
 
     HTML 기반 게임 라이브러리입니다.
 
--   [Marmalade](https://go.microsoft.com/fwlink/p/?LinkID=320487)
+-   [Marmalade](http://madewithmarmalade.com/)
 
     플랫폼 간 SDK입니다.
 
--   [OpenFL](https://go.microsoft.com/fwlink/p/?LinkID=320488)
+-   [OpenFL](https://www.openfl.org/)
 
     플랫폼 간 개발 도구입니다.
 
--   [GameMaker](https://go.microsoft.com/fwlink/p/?LinkID=320490)
+-   [GameMaker](https://www.yoyogames.com/gamemaker/studio)
 
     게임용 제작 환경입니다.
 
--   [PlayCanvas](https://go.microsoft.com/fwlink/p/?LinkID=394061)
+-   [PlayCanvas](https://playcanvas.com/)
 
     HTML 기반 게임 개발 도구입니다.
 

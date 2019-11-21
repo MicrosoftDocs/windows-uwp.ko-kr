@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 99ffa0dcae3412d49aef9da5bc3dfea255173ecb
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7344e5004e6ac398673734cb03ddbdde93b3bd0d
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66358942"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254313"
 ---
 # <a name="manual-camera-controls-for-photo-and-video-capture"></a>사진 및 비디오 캡처를 위한 수동 카메라 컨트롤
 
@@ -21,16 +21,16 @@ ms.locfileid: "66358942"
 
 이 문서에서 설명하는 컨트롤은 모두 동일한 패턴을 사용하여 앱에 추가됩니다. 먼저, 앱이 실행 중인 현재 디바이스에서 컨트롤이 지원되는지를 확인합니다. 컨트롤이 지원되는 경우 컨트롤에 대해 원하는 모드를 설정합니다. 일반적으로 특정 컨트롤이 현재 디바이스에서 지원되지 않으면 사용자가 기능을 사용하도록 설정할 수 있는 UI 요소를 사용하지 않도록 설정하거나 숨겨야 합니다.
 
-이 문서의 코드는 [카메라 수동 컨트롤 SDK 샘플](https://go.microsoft.com/fwlink/?linkid=845228)에서 조정되었습니다. 샘플을 다운로드하여 상황에 맞게 사용되는 코드를 참조하거나 자체 앱을 처음 빌드하기 시작할 때 샘플을 사용할 수 있습니다.
+이 문서의 코드는 [카메라 수동 컨트롤 SDK 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraManualControls)에서 조정되었습니다. 샘플을 다운로드하여 상황에 맞게 사용되는 코드를 참조하거나 자체 앱을 처음 빌드하기 시작할 때 샘플을 사용할 수 있습니다.
 
 > [!NOTE]
 > 이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 보다 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본적인 미디어 캡처 패턴을 파악하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
 
-이 문서에서 다루는 모든 API 디바이스 컨트롤은 [**Windows.Media.Devices**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices) 네임스페이스의 멤버입니다.
+이 문서에서 다루는 모든 API 디바이스 컨트롤은 [**Windows.Media.Devices**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices) 네임스페이스의 구성원입니다.
 
 [!code-cs[VideoControllersUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoControllersUsing)]
 
-## <a name="exposure"></a>Exposure
+## <a name="exposure"></a>노출
 
 [  **ExposureControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ExposureControl)을 사용하면 사진 또는 비디오 캡처 중에 사용되는 셔터 속도를 설정할 수 있습니다.
 
@@ -77,7 +77,7 @@ ms.locfileid: "66358942"
 
 [!code-cs[EvValueChanged](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetEvValueChanged)]
 
-## <a name="flash"></a>Flash
+## <a name="flash"></a>플래시
 
 [  **FlashControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.FlashControl)을 사용하면 플래시를 사용하거나 사용하지 않도록 설정하거나 자동 플래시를 사용하도록 설정하여 시스템이 동적으로 플래시 사용 여부를 결정할 수 있습니다. 또한 이 컨트롤을 사용하면 자동 적목 현상 감소를 지원하는 디바이스에서 이를 사용하도록 설정할 수 있습니다. 이러한 설정은 모두 사진 캡처에 적용됩니다. [  **TorchControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.TorchControl)은 비디오 캡처를 위해 토치를 켜거나 끄기 위한 별도의 컨트롤입니다.
 
@@ -104,13 +104,13 @@ ms.locfileid: "66358942"
 > [!NOTE] 
 >  [  **TorchControl.Enabled**](https://docs.microsoft.com/uwp/api/windows.media.devices.torchcontrol.enabled)가 true로 설정되어도 장치에 실행 중인 미리 보기 스트림이 없어서 적극적으로 비디오를 캡처하지 않는 경우 일부 장치에서는 토치가 빛을 발하지 않습니다. 권장되는 작업 순서는 비디오 미리 보기를 켠 다음 **Enabled**를 true로 설정하고 비디오 캡처를 시작하는 것입니다. 일부 디바이스에서는 미리 보기가 시작된 다음 토치가 밝게 표시됩니다. 다른 디바이스에서는 비디오 캡처가 시작될 때까지 토치가 밝게 표시되지 않을 수 있습니다.
 
-## <a name="focus"></a>Focus
+## <a name="focus"></a>초점
 
 카메라의 초점을 조정하기 위해 [**FocusControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.FocusControl) 개체에서 일반적으로 사용하는 세 가지 다른 방법은 연속 자동 초점, 탭하여 초점 맞추기 및 수동 초점입니다. 카메라 앱이 이러한 세 가지 메서드를 모두 지원할 수 있지만 읽기 쉽게 하기 위해 이 문서에서는 각 기술을 개별적으로 다룹니다. 또한 이 섹션에서는 초점 도우미 광원을 사용하도록 설정하는 방법도 설명합니다.
 
 ### <a name="continuous-autofocus"></a>연속 자동 초점
 
-연속 자동 초점을 사용하도록 설정하면 사진 또는 비디오 대상의 초점이 맞춰지도록 카메라에게 초점을 동적으로 조정하라는 지시를 내립니다.  이 예제에서는 라디오 단추를 사용하여 연속 자동 초점을 켜고 끄는 것을 전환합니다.
+연속 자동 초점을 사용하도록 설정하면 사진 또는 비디오 대상의 초점이 맞춰지도록 카메라에게 초점을 동적으로 조정하라는 지시를 내립니다. 이 예제에서는 라디오 단추를 사용하여 연속 자동 초점을 켜고 끄는 것을 전환합니다.
 
 [!code-xml[CAFXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetCAFXAML)]
 
@@ -149,13 +149,13 @@ ms.locfileid: "66358942"
 
 다음 단계는 캡처 미리 보기 스트림을 현재 표시하는 [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CaptureElement)의 [**Tapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped) 이벤트를 처리하여 사용자가 화면을 탭할 때 이벤트를 수신 대기하는 것입니다. 카메라가 현재 미리 보고 있는 중이 아니거나 탭하여 초점 맞추기 모드가 사용되지 않는 경우에는 아무 작업도 수행하지 않고 처리기에서 반환합니다.
 
-경우 추적 변수의  *\_isFocused* 가 false로 전환 및 카메라 포커스 중 현재 없는 경우 (기준를 [ **FocusState** ](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.focusstate) 속성을 **FocusControl**), 탭-중심 프로세스를 시작 합니다. 사용자의 탭 위치를 이벤트 인수에서 처리기로 전달합니다. 이 예제에서는 이 기회를 사용해 초점을 맞출 영역의 크기를 선택합니다. 이 경우 크기는 가장 작은 캡처 요소 치수의 1/4입니다. 탭 위치 및 영역 크기를 다음 섹션에서 정의되는 **TapToFocus** 도우미 메서드로 전달합니다.
+If the tracking variable *\_isFocused* is toggled to false, and if the camera isn't currently in the process of focus (determined by the [**FocusState**](https://docs.microsoft.com/uwp/api/windows.media.devices.focuscontrol.focusstate) property of the **FocusControl**), begin the tap-to-focus process. 사용자의 탭 위치를 이벤트 인수에서 처리기로 전달합니다. 이 예제에서는 이 기회를 사용해 초점을 맞출 영역의 크기를 선택합니다. 이 경우 크기는 가장 작은 캡처 요소 치수의 1/4입니다. 탭 위치 및 영역 크기를 다음 섹션에서 정의되는 **TapToFocus** 도우미 메서드로 전달합니다.
 
-경우는  *\_isFocused* 설정/해제 설정 됩니다 true 이면 사용자 탭 이전 지역에서 포커스를 지워야 합니다. 이 작업은 아래 나와 있는 **TapUnfocus** 도우미 메서드에서 수행됩니다.
+If the *\_isFocused* toggle is set to true, the user tap should clear the focus from the previous region. 이 작업은 아래 나와 있는 **TapUnfocus** 도우미 메서드에서 수행됩니다.
 
 [!code-cs[TapFocusPreviewControl](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetTapFocusPreviewControl)]
 
-에 **TapToFocus** 도우미 메서드를 첫 번째 집합의  *\_isFocused* 다음 화면 탭 탭된 영역에서 포커스를 출시 됩니다 있도록 true로 설정/해제 합니다.
+In the **TapToFocus** helper method, first set the *\_isFocused* toggle to true so that the next screen tap will release the focus from the tapped region.
 
 이 도우미 메서드의 다음 작업은 초점 컨트롤에 할당될 미리 보기 스트림 내의 사각형을 결정하는 것입니다. 이 작업은 두 단계가 필요합니다. 첫 번째 단계는 [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CaptureElement) 컨트롤 내에서 미리 보기 스트림이 차지하는 사각형을 결정하는 것입니다. 이는 미리 보기 스트림의 크기 및 디바이스 방향에 따라 다릅니다. 이 섹션의 끝에 나와 있는 도우미 메서드 **GetPreviewStreamRectInControl**이 이 작업을 수행하고 미리 보기 스트림이 포함된 사각형을 반환합니다.
 
@@ -265,7 +265,7 @@ OIS 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지원합니�
 ## <a name="powerline-frequency"></a>Powerline 주파수
 일부 카메라 디바이스는 현재 환경에서 powerline의 AC 주파수를 아는 데 따른 깜박임 방지 처리를 지원합니다. 일부 디바이스는 powerline 주파수의 자동 결정을 지원하는 반면 다른 디바이스는 주파수를 수동으로 설정해야 합니다. 다음 코드 예제에서는 디바이스에서 powerline 주파수 지원을 결정하는 방법 및 필요에 따라 주파수를 수동으로 설정하는 방법을 보여 줍니다. 
 
-먼저 **VideoDeviceController** 메서드 [**TryGetPowerlineFrequency**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.trygetpowerlinefrequency)를 호출하여 [**PowerlineFrequency**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.PowerlineFrequency) 형식의 출력 매개 변수를 전달합니다. 이 호출이 실패할 경우 powerline 주파수 컨트롤은 현재 디바이스에서 지원되지 않습니다. 기능이 지원되는 경우 자동 모드 설정을 시도하여 디바이스에서 자동 모드를 사용할 수 있는지 확인할 수 있습니다. [  **TrySetPowerlineFrequency**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.trysetpowerlinefrequency)를 호출하고 값 **Auto**를 전달하여 이 작업을 수행합니다. 호출이 성공하면 자동 powerline 주파수가 지원됨을 의미합니다. powerline 주파수 컨트롤러는 디바이스에서 지원되고 자동 주파수 감지는 지원되지 않는 경우 **TrySetPowerlineFrequency**를 사용하여 수동으로 주파수를 설정할 수 있습니다. 이 예제에서 **MyCustomFrequencyLookup**은 디바이스의 현재 위치에 대한 올바른 주파수를 결정하기 위해 구현하는 사용자 지정 메서드입니다. 
+먼저 **VideoDeviceController** 메서드 [**TryGetPowerlineFrequency**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.trygetpowerlinefrequency)를 호출하여 [**PowerlineFrequency**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.PowerlineFrequency) 형식의 출력 매개 변수를 전달합니다. 이 호출이 실패할 경우 powerline 주파수 컨트롤은 현재 디바이스에서 지원되지 않습니다. 기능이 지원되는 경우 자동 모드 설정을 시도하여 디바이스에서 자동 모드를 사용할 수 있는지 확인할 수 있습니다. Do this by calling [**TrySetPowerlineFrequency**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.trysetpowerlinefrequency) and passing in the value **Auto**. If the call succeeds, that means that your auto powerline frequency is supported. powerline 주파수 컨트롤러는 디바이스에서 지원되고 자동 주파수 감지는 지원되지 않는 경우 **TrySetPowerlineFrequency**를 사용하여 수동으로 주파수를 설정할 수 있습니다. 이 예제에서 **MyCustomFrequencyLookup**은 디바이스의 현재 위치에 대한 올바른 주파수를 결정하기 위해 구현하는 사용자 지정 메서드입니다. 
 
 [!code-cs[PowerlineFrequency](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetPowerlineFrequency)]
 
@@ -299,7 +299,7 @@ OIS 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지원합니�
 > [!IMPORTANT]
 > **ColorTemperaturePreset.Auto** 미리 설정 값이 시스템에 화이트 밸런스 수준을 자동으로 조정하도록 지시합니다. 일부 시나리오의 경우 각 프레임에 대해 화이트 밸런스 수준이 같아야 하는 사진 시퀀스 캡처와 같이 컨트롤을 현재 자동 값으로 잠글 수 있습니다. 그러려면 [**SetPresetAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.whitebalancecontrol.setpresetasync)를 호출하고, **Manual** 미리 설정을 지정하고, [**SetValueAsync**](https://docs.microsoft.com/uwp/api/windows.media.devices.whitebalancecontrol.setvalueasync)를 사용하는 컨트롤에 대한 값은 설정하지 않습니다. 그러면 디바이스가 현재 값을 잠그게 됩니다. 이 값은 올바르다고 보장되지 않으므로 현재 컨트롤 값을 읽고 반환된 값을 **SetValueAsync**로 전달하려고 시도하지 마세요.
 
-## <a name="zoom"></a>확대/축소
+## <a name="zoom"></a>Zoom
 
 [  **ZoomControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ZoomControl)을 통해 사진 또는 비디오 캡처 중에 사용되는 확대/축소 수준을 설정할 수 있습니다.
 
@@ -335,7 +335,7 @@ OIS 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지원합니�
 
 **ManipulationDelta** 이벤트에 대한 처리기에서 사용자의 손가락 모으기 제스처의 변화에 따라 확대/축소 배율을 업데이트합니다. [  **ManipulationDelta.Scale**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.ManipulationDelta) 값은 손가락 모으기 크기가 약간 증가하면 1.0보다 약간 더 큰 숫자가 되고 손가락 모으기 크기가 약간 감소하면 1.0보다 약간 더 작은 숫자가 되도록 손가락 모으기 제스처의 크기 변경을 나타냅니다. 이 예제에서는 확대/축소 컨트롤의 현재 값에 배율 델타를 곱합니다.
 
-확대/축소 배율을 설정하기 전에 해당 값이 디바이스에서 지원되는 최소값([**ZoomControl.Min**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.min) 속성으로 지정)보다 작지 않은지 확인해야 합니다. 또한 해당 값은 [**ZoomControl.Max**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.max) 값보다 작거나 같아야 합니다. 마지막으로, 확대/축소 비율을 표시 된 대로 장치에서 지원 되는 확대/축소 단계 크기의 배수 인지 확인 해야 합니다 [ **단계** ](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.step) 속성입니다. 확대/축소 배율이 이러한 요구를 충족하지 못하면 캡처 디바이스에서 확대/축소 수준을 설정하려고 할 때 예외가 발생됩니다.
+확대/축소 배율을 설정하기 전에 해당 값이 디바이스에서 지원되는 최소값([**ZoomControl.Min**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.min) 속성으로 지정)보다 작지 않은지 확인해야 합니다. 또한 해당 값은 [**ZoomControl.Max**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.max) 값보다 작거나 같아야 합니다. Finally, you must make sure that the zoom factor is a multiple of the zoom step size supported by the device as indicated by the [**Step**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.step) property. 확대/축소 배율이 이러한 요구를 충족하지 못하면 캡처 디바이스에서 확대/축소 수준을 설정하려고 할 때 예외가 발생됩니다.
 
 새 [**ZoomSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ZoomSettings) 개체를 만들어 캡처 디바이스의 확대/축소 수준을 설정합니다. [  **Mode**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomsettings.mode) 속성을 [**ZoomTransitionMode.Smooth**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ZoomTransitionMode)로 설정한 다음 [**Value**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomsettings.value) 속성을 원하는 확대/축소 배율로 설정합니다. 마지막으로 [**ZoomControl.Configure**](https://docs.microsoft.com/uwp/api/windows.media.devices.zoomcontrol.configure)를 호출하여 디바이스에 대해 새 확대/축소 값을 설정합니다. 디바이스는 새 확대/축소 값으로 원활하게 전환됩니다.
 
@@ -344,4 +344,4 @@ OIS 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지원합니�
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Basic photo, video, and audio capture with MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)

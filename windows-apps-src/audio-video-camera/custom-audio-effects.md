@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bebf9533ab045822902d44f87f68eec55c11074
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: e4bcd5294031e64aa9f21371fa389978b5e708ab
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318568"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257417"
 ---
 # <a name="custom-audio-effects"></a>사용자 지정 오디오 효과
 
@@ -22,7 +22,7 @@ ms.locfileid: "67318568"
 
 사용자 지정 오디오 효과는 [**IBasicAudioEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IBasicAudioEffect) 인터페이스를 구현하는 클래스에 정의됩니다. 이 클래스를 앱의 프로젝트에 직접 포함할 수는 없습니다. 대신 Windows 런타임 구성 요소를 사용하여 오디오 효과 클래스를 호스트해야 합니다.
 
-**오디오 효과 대 한 Windows 런타임 구성 요소를 추가 합니다.**
+**Add a Windows Runtime component for your audio effect**
 
 1.  Microsoft Visual Studio에서 솔루션을 열고 **파일** 메뉴로 이동한 후 **추가-&gt;새 프로젝트**를 선택합니다.
 2.  **Windows 런타임 구성 요소(유니버설 Windows)** 프로젝트 유형을 선택합니다.
@@ -93,7 +93,7 @@ ms.locfileid: "67318568"
 
 ### <a name="close-method"></a>Close 메서드
 
-시스템은 호출 된 [ **닫기** ](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.close) [ **닫기** ](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.close) 효과 종료 해야 하는 경우 클래스에서 메서드. 이 메서드를 사용하여 생성된 모든 리소스를 삭제해야 합니다. 이 메서드에 대한 인수는 효과가 정상적으로 닫혔는지, 오류가 발생했는지 또는 효과가 필수 인코딩 형식을 지원하지 않는지를 알 수 있도록 하는 [**MediaEffectClosedReason**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.MediaEffectClosedReason)입니다.
+The system will call the [**Close**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.close) [**Close**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.close) method on your class when the effect should shut down. 이 메서드를 사용하여 생성된 모든 리소스를 삭제해야 합니다. 이 메서드에 대한 인수는 효과가 정상적으로 닫혔는지, 오류가 발생했는지 또는 효과가 필수 인코딩 형식을 지원하지 않는지를 알 수 있도록 하는 [**MediaEffectClosedReason**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.MediaEffectClosedReason)입니다.
 
 [!code-cs[Close](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetClose)]
 
@@ -123,7 +123,7 @@ TimeIndependent[**TimeIndependent**](https://docs.microsoft.com/uwp/api/windows.
 
 1.  솔루션 탐색기에서 앱 프로젝트 아래에 있는 **참조**를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다.
 2.  **프로젝트** 탭을 확장하고 **솔루션**을 선택한 다음 효과 프로젝트 이름에 대한 확인란을 선택합니다. 이 예제에서 이름은 *AudioEffectComponent*입니다.
-3.  **확인**을 클릭합니다.
+3.  **확인** 클릭
 
 오디오 효과 클래스에서 다른 네임스페이스로 선언되는 경우 해당 네임스페이스를 코드 파일에 포함해야 합니다.
 
@@ -145,9 +145,9 @@ TimeIndependent[**TimeIndependent**](https://docs.microsoft.com/uwp/api/windows.
 
 
 ## <a name="related-topics"></a>관련 항목
-* [간단한 카메라 미리 보기 액세스](simple-camera-preview-access.md)
+* [Simple camera preview access](simple-camera-preview-access.md)
 * [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)
-* [Win2D 설명서](https://go.microsoft.com/fwlink/p/?LinkId=519078)
+* [Win2D documentation](https://microsoft.github.io/Win2D/html/Introduction.htm)
 * [미디어 재생](media-playback.md)
 
  

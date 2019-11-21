@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: afcb94ca0e6692d5dfede526f1368b71920ab771
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 57236b6780a7afe996fb1e68ac474d8d8077ca69
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318201"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255899"
 ---
 # <a name="composition-effects"></a>컴퍼지션 효과
 
@@ -27,25 +27,25 @@ ms.locfileid: "67318201"
 
 ## <a name="effect-features"></a>효과 기능
 
-- [효과 라이브러리](./composition-effects.md#effect-library)
-- [효과 체인](./composition-effects.md#chaining-effects)
-- [애니메이션 지원](./composition-effects.md#animation-support)
-- [상수 및 애니메이션된 적용 속성](./composition-effects.md#constant-vs-animated-effect-properties)
-- [독립적인 속성을 사용 하 여 여러 효과 인스턴스](./composition-effects.md#multiple-effect-instances-with-independent-properties)
+- [Effect Library](./composition-effects.md#effect-library)
+- [Chaining Effects](./composition-effects.md#chaining-effects)
+- [Animation Support](./composition-effects.md#animation-support)
+- [Constant vs. Animated Effect Properties](./composition-effects.md#constant-vs-animated-effect-properties)
+- [Multiple Effect Instances with Independent Properties](./composition-effects.md#multiple-effect-instances-with-independent-properties)
 
 ### <a name="effect-library"></a>효과 라이브러리
 
 현재 컴퍼지션은 다음과 같은 효과를 지원합니다.
 
-| 영향               | 설명                                                                                                                                                                                                                |
+| 효과               | 설명                                                                                                                                                                                                                |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2D 아핀 변형  | 2D 아핀 변형 매트릭스를 이미지에 적용합니다. 효과 [샘플](https://go.microsoft.com/fwlink/?LinkId=785341)에서 이 효과를 사용하여 알파 마스크에 애니메이션 효과를 주었습니다.       |
-| 산술 합성 | 유연한 수식을 사용하여 두 개의 이미지를 결합합니다. [샘플](https://go.microsoft.com/fwlink/?LinkId=785341)에서 산술 합성을 사용하여 크로스페이드 효과를 만들었습니다. |
+| 2D 아핀 변형  | 2D 아핀 변형 매트릭스를 이미지에 적용합니다. 효과 [샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/Demos/Reference Demos/BasicCompositonEffects)에서 이 효과를 사용하여 알파 마스크에 애니메이션 효과를 주었습니다.       |
+| 산술 합성 | 유연한 수식을 사용하여 두 개의 이미지를 결합합니다. [샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/Demos/Reference Demos/BasicCompositonEffects)에서 산술 합성을 사용하여 크로스페이드 효과를 만들었습니다. |
 | 혼합 효과         | 두 개의 이미지를 결합하는 혼합 효과를 만듭니다. 컴퍼지션은 Win2D에서 지원되는 26개의 [혼합 모드](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_Effects_BlendEffectMode.htm) 중에서 21개를 제공합니다.        |
 | 색 소싱         | 단색을 포함하는 이미지를 생성합니다.                                                                                                                                                                               |
 | 합성            | 두 개의 이미지를 결합합니다. 컴퍼지션은 Win2D에서 지원되는 13개의 [합성 모드](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasComposite.htm)를 모두 제공합니다.                                              |
-| 이 예와             | 이미지의 대비를 늘리거나 줄입니다.                                                                                                                                                                           |
-| Exposure             | 이미지의 노출을 늘리거나 줄입니다.                                                                                                                                                                           |
+| 대비             | 이미지의 대비를 늘리거나 줄입니다.                                                                                                                                                                           |
+| 노출             | 이미지의 노출을 늘리거나 줄입니다.                                                                                                                                                                           |
 | 회색조            | 이미지를 단색형 회색으로 변환합니다.                                                                                                                                                                                   |
 | 감마 전달       | 채널당 감마 전달 함수를 적용하여 이미지의 색을 변경합니다.                                                                                                                                           |
 | 색상 회전           | 색상 값을 회전하여 이미지의 색을 변경합니다.                                                                                                                                                                   |
@@ -54,7 +54,7 @@ ms.locfileid: "67318201"
 | 세피아                | 이미지를 세피아 톤으로 변환합니다.                                                                                                                                                                                          |
 | 온도 및 색조 | 이미지의 온도 및/또는 색조를 조정합니다.                                                                                                                                                                           |
 
-자세한 내용은 Win2D의 [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) 네임스페이스를 참조하세요. 컴퍼지션에서 지원 되지 않습니다 효과 이라고 명시 \[NoComposition\]합니다.
+자세한 내용은 Win2D의 [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) 네임스페이스를 참조하세요. Effects not supported in composition are noted as \[NoComposition\].
 
 ### <a name="chaining-effects"></a>효과 연결
 
@@ -123,22 +123,22 @@ ScalarKeyFrameAnimation effectAnimation = _compositor.CreateScalarKeyFrameAnimat
 catEffect.Properties.StartAnimation("saturationEffect.Saturation", effectAnimation);
 ```
 
-키 프레임으로 애니메이션 효과를 준 효과 속성에 대해서는 [채도 감소 - 애니메이션 샘플](https://go.microsoft.com/fwlink/?LinkId=785342)을 참조하고, 효과 및 식 사용에 대해서는 [AlphaMask 샘플](https://go.microsoft.com/fwlink/?LinkId=785343)을 참조하세요.
+키 프레임으로 애니메이션 효과를 준 효과 속성에 대해서는 [채도 감소 - 애니메이션 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/Demos/Reference Demos/BasicCompositonEffects/Desaturation - Animation)을 참조하고, 효과 및 식 사용에 대해서는 [AlphaMask 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/Demos/Reference Demos/BasicCompositonEffects/AlphaMask)을 참조하세요.
 
 ### <a name="multiple-effect-instances-with-independent-properties"></a>독립 속성이 있는 여러 효과 인스턴스
 
-효과를 컴파일하는 동안 매개 변수가 동적이어야 한다고 지정하면 해당 매개 변수를 효과 인스턴스에서 개별적으로 변경할 수 있습니다. 그러면 두 시각적 개체가 동일한 효과를 사용하지만 다른 효과 속성으로 렌더링됩니다. 자세한 내용은 색 소싱 및 혼합 [샘플](https://go.microsoft.com/fwlink/?LinkId=785344)을 참조하세요.
+효과를 컴파일하는 동안 매개 변수가 동적이어야 한다고 지정하면 해당 매개 변수를 효과 인스턴스에서 개별적으로 변경할 수 있습니다. 그러면 두 시각적 개체가 동일한 효과를 사용하지만 다른 효과 속성으로 렌더링됩니다. 자세한 내용은 색 소싱 및 혼합 [샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/Demos/Reference Demos/BasicCompositonEffects/ColorSource and Blend)을 참조하세요.
 
 ## <a name="getting-started-with-composition-effects"></a>컴퍼지션 효과 시작하기
 
 이 빠른 시작 자습서는 효과의 몇 가지 기본적인 기능의 사용 방법을 보여줍니다.
 
-- [Visual Studio 설치](./composition-effects.md#installing-visual-studio)
-- [새 프로젝트 만들기](./composition-effects.md#creating-a-new-project)
-- [Win2D 설치](./composition-effects.md#installing-win2d)
-- [컴퍼지션 사항을 설정합니다.](./composition-effects.md#setting-your-composition-basics)
-- [CompositionSurface 브러시 만들기](./composition-effects.md#creating-a-compositionsurface-brush)
-- [만들기, 컴파일 및 효과 적용](./composition-effects.md#creating-compiling-and-applying-effects)
+- [Installing Visual Studio](./composition-effects.md#installing-visual-studio)
+- [Creating a new project](./composition-effects.md#creating-a-new-project)
+- [Installing Win2D](./composition-effects.md#installing-win2d)
+- [Setting your Composition Basics](./composition-effects.md#setting-your-composition-basics)
+- [Creating a CompositionSurface Brush](./composition-effects.md#creating-a-compositionsurface-brush)
+- [Creating, Compiling and Applying Effects](./composition-effects.md#creating-compiling-and-applying-effects)
 
 ### <a name="installing-visual-studio"></a>Visual Studio 설치
 
@@ -168,7 +168,7 @@ Win2D는 Nuget.org 패키지로 출시되며 Win2D가 설치되어야 효과를 
 ![원본 이미지](images/composition-cat-source.png)
 ### <a name="setting-your-composition-basics"></a>컴퍼지션 기본 사항 설정
 
-루트 ContainerVisual, Windows.UI.Composition 작성자를 설정하여 핵심 창에 연결하는 방법의 예를 보려면 GitHub의 [컴퍼지션 시각적 트리 샘플](https://go.microsoft.com/fwlink/?LinkId=785345)을 참조하세요.
+루트 ContainerVisual, Windows.UI.Composition 작성자를 설정하여 핵심 창에 연결하는 방법의 예를 보려면 GitHub의 [컴퍼지션 시각적 트리 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/Demos/Reference Demos/CompositionImageSample)을 참조하세요.
 
 ```cs
 _compositor = new Compositor();
@@ -235,14 +235,14 @@ LoadImage(surfaceBrush);
 
 ![흐릿한 이미지](images/composition-cat-desaturated.png)
 
-## <a name="more-information"></a>추가 정보
+## <a name="more-information"></a>자세한 정보
 
-- [Microsoft-컴퍼지션 GitHub](https://github.com/microsoft/WindowsCompositionSamples)
+- [Microsoft – Composition GitHub](https://github.com/microsoft/WindowsCompositionSamples)
 - [**Windows.UI.Composition**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
-- [Twitter의 Windows 컴퍼지션 팀](https://twitter.com/wincomposition)
-- [컴퍼지션 개요](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
-- [시각적 트리 기본 사항](composition-visual-tree.md)
-- [컴퍼지션 브러시](composition-brushes.md)
+- [Windows Composition team on Twitter](https://twitter.com/wincomposition)
+- [Composition Overview](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
+- [Visual Tree Basics](composition-visual-tree.md)
+- [Composition Brushes](composition-brushes.md)
 - [XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)
-- [애니메이션 개요](composition-animation.md)
-- [컴퍼지션 네이티브 DirectX 및 Direct2D와의 상호 운용 BeginDraw 및 EndDraw](composition-native-interop.md)
+- [Animation Overview](composition-animation.md)
+- [Composition native DirectX and Direct2D interoperation with BeginDraw and EndDraw](composition-native-interop.md)

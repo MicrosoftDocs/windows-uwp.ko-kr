@@ -4,14 +4,14 @@ description: 앱 매니페스트에서 백그라운드 작업을 확장으로 �
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, 백그라운드 작업
+keywords: windows 10, uwp, background task
 ms.localizationpriority: medium
-ms.openlocfilehash: cf114ed3d2ffce95f9e9aba6ceb222029d23819c
-ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
+ms.openlocfilehash: 53fb8c0b213705a5a79680356bb4f1773594dcdc
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73052023"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260482"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>응용 프로그램 매니페스트에서 백그라운드 작업 선언
 
@@ -20,8 +20,8 @@ ms.locfileid: "73052023"
 
 **중요 API**
 
--   [**BackgroundTasks 스키마**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
--   [**Windows ApplicationModel. 배경**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
+-   [**BackgroundTasks Schema**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
+-   [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
 
 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다.
 
@@ -37,7 +37,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 
 응용 프로그램 매니페스트(Package.appxmanifest)를 열고 Application 요소로 이동합니다. Extensions 요소가 없는 경우 새로 만듭니다.
 
-다음 조각은 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)에서 가져온 것입니다.
+다음 조각은 [백그라운드 작업 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask)에서 가져온 것입니다.
 
 ```xml
 <Application Id="App"
@@ -90,7 +90,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 
 2.  Task Type 특성 목록을 변경하여 이 백그라운드 작업과 함께 사용된 작업 등록 유형을 나타냅니다. 백그라운드 작업을 여러 트리거 유형과 함께 등록할 경우 유형별로 다른 Task 요소 및 Type 특성을 추가합니다.
 
-    사용 중인 각 트리거 유형을 나열 해야 합니다. 그렇지 않으면 백그라운드 작업이 선언 되지 않은 트리거 유형에 등록 되지 않습니다 ( [**register**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) 메서드가 실패 하 고 예외를 throw 함) **.  **
+    **Note**  Make sure to list each of the trigger types you're using, or the background task will not register with the undeclared trigger types (the [**Register**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) method will fail and throw an exception).
 
     이 조각 예에서는 시스템 이벤트 트리거 및 푸시 알림 사용을 나타냅니다.
 
@@ -209,7 +209,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 
 ### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>SupportsMultipleInstances 특성을 사용하여 트리거가 실행될 때마다 새 프로세스에서 실행
 
-이 예에서는 새 트리거가 실행될 때마다 자체 리소스 제한(메모리 및 CPU)을 가져오는 새 프로세스에서 실행되는 백그라운드 작업을 선언합니다. `SupportsMultipleInstances`를 사용하면 이 동작이 활성화됩니다. 이 특성을 사용 하려면 SDK 버전 ' 10.0.15063 ' (Windows 10 크리에이터 업데이트) 이상을 대상으로 해야 합니다.
+이 예에서는 새 트리거가 실행될 때마다 자체 리소스 제한(메모리 및 CPU)을 가져오는 새 프로세스에서 실행되는 백그라운드 작업을 선언합니다. `SupportsMultipleInstances`를 사용하면 이 동작이 활성화됩니다. In order to use this attribute you must target SDK version '10.0.15063' (Windows 10 Creators Update) or higher.
 
 ```xml
 <Package

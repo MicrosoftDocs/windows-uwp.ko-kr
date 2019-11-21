@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: c8130c6a8e4d8441fdf8ff60c702bd1ae30bae6e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0b870bd59cb5b6c524cf85165fa182314b93c855
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372261"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259817"
 ---
 # <a name="web-authentication-broker"></a>웹 인증 브로커
 
@@ -21,7 +21,7 @@ ms.locfileid: "66372261"
 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱을 OpenID 또는 OAuth 인증 프로토콜을 사용하는 온라인 ID 공급자(예: Facebook, Twitter, Flickr, Instagram 등)에 연결하는 방법을 설명합니다. [  **AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) 메서드는 온라인 ID 공급자로 요청을 보내고 앱이 액세스할 수 있는 공급자 리소스에 대해 설명하는 액세스 토큰을 다시 가져옵니다.
 
 >[!NOTE]
->완전한 코드 샘플을 사용하려면 [GitHub의 WebAuthenticationBroker 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=620622)를 복제하세요.
+>완전한 코드 샘플을 사용하려면 [GitHub의 WebAuthenticationBroker 리포지토리](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker)를 복제하세요.
 
  
 
@@ -87,14 +87,14 @@ catch (Exception ex)
 ```
 
 >[!WARNING]
->[  **AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) 외에 [**Windows.Security.Authentication.Web**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web) 네임스페이스는 [**AuthenticateAndContinue**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.WebAuthenticationBroker#methods) 메서드를 포함합니다. 이 메서드를 호출 하지 마세요. Windows Phone 8.1에만 대상으로 하는 앱에 대 한 설계 되었으며 Windows 10을 사용 하 여 시작 하는 사용 되지 않습니다.
+>[  **AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) 외에 [**Windows.Security.Authentication.Web**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web) 네임스페이스는 [**AuthenticateAndContinue**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.WebAuthenticationBroker#methods) 메서드를 포함합니다. 이 메서드를 호출하지 마세요. It is designed for apps targeting Windows Phone 8.1 only and is deprecated starting with Windows 10.
 
 ## <a name="connecting-with-single-sign-on-sso"></a>SSO(Single Sign-On)로 연결
 
 
 기본적으로 웹 인증 브로커는 쿠키가 유지되는 것을 허용하지 않습니다. 따라서 앱 사용자가 계속 로그인한 상태로 유지하고 있음을 표시(예: 공급자의 로그인 대화 상자에서 확인란 선택)해도 해당 공급자에 대한 리소스에 액세스할 때마다 로그인해야 합니다. SSO로 로그인하려면 온라인 ID 공급자는 웹 인증 브로커에 SSO를 사용하도록 설정해야 하며 앱은 *callbackUri* 매개 변수를 사용하지 않는 [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync)의 오버로드를 호출해야 합니다. 이렇게 하면 웹 인증 브로커가 영구적 쿠키를 저장할 수 있기 때문에 향후 같은 앱에서 인증을 호출할 때 사용자가 반복적으로 로그인을 할 필요가 없습니다(액세스 토큰이 만료될 때까지 사용자가 효과적으로 "로그인").
 
-SSO를 지원하려면 온라인 공급자가 `ms-app://<appSID>` 형식의 리디렉션 URI 등록할 수 있도록 허용해야 합니다. 여기서 `<appSID>`는 앱의 SID입니다. 앱의 SID는 앱의 앱 개발자 페이지에서나 [**GetCurrentApplicationCallbackUri**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.getcurrentapplicationcallbackuri) 메서드를 호출하여 확인할 수 있습니다.
+SSO를 지원하려면 온라인 공급자가 `ms-app://<appSID>` 형식의 리디렉션 URI 등록할 수 있도록 허용해야 합니다. 여기서 `<appSID>`는 앱의 SID입니다. 앱의 SID는 앱 개발자 페이지에서, 또는 [**GetCurrentApplicationCallbackUri**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.getcurrentapplicationcallbackuri) 메서드를 호출하여 확인할 수 있습니다.
 
 ```cs
 string result;
@@ -136,30 +136,30 @@ catch (Exception ex)
 
 ### <a name="operational-logs"></a>작업 로그
 
-대체로 작업 로그를 사용하여 작동하지 않는 항목을 확인할 수 있습니다. Microsoft-Windows-WebAuth 위한 전용된 이벤트 로그 채널\\웹 사이트 개발자가 웹 인증 브로커에서 해당 웹 페이지를 처리 하는 방법을 이해할 수 있도록 작동 합니다. 사용 하려면 시작 eventvwr.exe 사용 Operational 로그 및 응용 프로그램 및 서비스\\Microsoft\\Windows\\WebAuth 합니다. 또한 웹 인증 브로커는 웹 서버에서 자신을 식별하는 고유 문자열을 사용자 에이전트 문자열 뒤에 추가합니다. 해당 문자열은 "MSAuthHost/1.0"입니다. 버전 번호는 나중에 변경될 수 있으므로 사용자 코드에 이 버전 번호를 사용하면 안 됩니다. 전체 디버깅 단계가 뒤에 나오는 전체 사용자 에이전트 문자열의 예는 다음과 같습니다.
+대체로 작업 로그를 사용하여 작동하지 않는 항목을 확인할 수 있습니다. There is a dedicated event log channel Microsoft-Windows-WebAuth\\Operational that allows website developers to understand how their web pages are being processed by the Web authentication broker. To enable it, launch eventvwr.exe and enable Operational log under the Application and Services\\Microsoft\\Windows\\WebAuth. 또한 웹 인증 브로커는 웹 서버에서 자신을 식별하는 고유 문자열을 사용자 에이전트 문자열 뒤에 추가합니다. 해당 문자열은 "MSAuthHost/1.0"입니다. 버전 번호는 나중에 변경될 수 있으므로 사용자 코드에 이 버전 번호를 사용하면 안 됩니다. 전체 디버깅 단계가 뒤에 나오는 전체 사용자 에이전트 문자열의 예는 다음과 같습니다.
 
 `User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0; MSAuthHost/1.0)`
 
 1.  작업 로그 사용.
 2.  Contoso 소셜 앱 실행. ![webauth 작업 로그를 표시하는 이벤트 뷰어](images/wab-event-viewer-1.png)
 3.  생성된 로그 항목을 사용하여 웹 인증 브로커의 동작을 자세히 파악할 수 있습니다. 이 경우 다음과 같은 항목이 포함될 수 있습니다.
-    -   탐색 시작: 로그는 AuthHost 시작 되 고 시작 및 종료 Url에 대 한 정보를 포함 하는 경우입니다.
+    -   탐색 시작: AuthHost가 시작된 시간을 기록하고 시작 및 종료 URL에 대한 정보를 포함합니다.
     -   ![탐색 시작의 세부 정보를 보여 줍니다.](images/wab-event-viewer-2.png)
-    -   탐색 완료: 웹 페이지 로드의 완료를 기록 합니다.
-    -   Meta 태그: 로그 메타 태그 세부 정보를 포함 하 여 발생 하는 경우입니다.
-    -   탐색을 종료 합니다. 사용자에 의해 종료를 탐색 합니다.
-    -   탐색 오류: AuthHost에서 HttpStatusCode이 포함 된 URL에서 탐색 오류가 발생 합니다.
-    -   탐색 끝: URL을 종료 발생 합니다.
+    -   탐색 완료: 웹 페이지 로드 완료를 기록합니다.
+    -   메타 태그: 메타 태그가 발견된 시간을 기록하며 세부 정보를 포함합니다.
+    -   탐색 종료: 사용자가 종료한 탐색입니다.
+    -   탐색 오류: AuthHost가 URL에서 탐색 오류를 발견했으며 HttpStatusCode를 포함합니다.
+    -   탐색 종료: 종료 URL이 발견되었습니다.
 
 ### <a name="fiddler"></a>Fiddler
 
 앱에서 Fiddler 웹 디버거를 사용할 수 있습니다.
 
-1.  AuthHost 자체 앱 컨테이너에서 실행 되므로 개인 네트워크 기능을 제공 하는 레지스트리 키를 설정 해야 합니다. Windows 레지스트리 편집기 버전 5.00
+1.  Since the AuthHost runs in its own app container, to give it the private network capability you must set a registry key: Windows Registry Editor Version 5.00
 
-    **HKEY\_로컬\_MACHINE**\\**소프트웨어**\\**Microsoft**\\**Windows NT** \\ **CurrentVersion**\\**Image File Execution Options**\\**authhost.exe** \\ **EnablePrivateNetwork** 00000001 =
+    **HKEY\_LOCAL\_MACHINE**\\**SOFTWARE**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**Image File Execution Options**\\**authhost.exe**\\**EnablePrivateNetwork** = 00000001
 
-    이 레지스트리 키가 경우에 관리자 권한으로 명령 프롬프트에서 만들 수 있습니다.
+    If you do not have this registry key, you can create it in a Command Prompt with administrator privileges.
 
     ```cmd 
     REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\authhost.exe" /v EnablePrivateNetwork /t REG_DWORD /d 1 /f

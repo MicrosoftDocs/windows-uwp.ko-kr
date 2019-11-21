@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ff067729e71ed4d4a49a082adf9fc754804836a6
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 17ca27e9f9c10ba59edbe0af84118a1bee0a44a3
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317596"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254347"
 ---
 # <a name="audio-graphs"></a>오디오 그래프
 
@@ -32,7 +32,7 @@ ms.locfileid: "67317596"
 오디오 그래프에 오디오 효과를 추가하면 추가 시나리오도 가능해집니다. 오디오 그래프의 모든 노드는 노드를 통해 지나가는 오디오를 처리하는 0개 이상의 오디오 효과로 채울 수 있습니다. 단지 몇 줄의 코드로 오디오 노드에 연결될 수 있는 에코, 이퀄라이저, 제한, 반향 등의 몇 가지 기본 제공 효과가 있습니다. 기본 제공 효과와 정확히 동일하게 작동하는 고유한 사용자 지정 오디오 효과를 만들 수도 있습니다.
 
 > [!NOTE]
-> [AudioGraph UWP 샘플](https://go.microsoft.com/fwlink/?LinkId=619481)은 이 개요에서 설명한 코드를 구현합니다. 샘플을 다운로드하여 상황에 따른 코드를 참조하거나 자체 앱을 처음 빌드하기 시작할 때 사용할 수 있습니다.
+> [AudioGraph UWP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AudioCreation)은 이 개요에서 설명한 코드를 구현합니다. 샘플을 다운로드하여 상황에 따른 코드를 참조하거나 자체 앱을 처음 빌드하기 시작할 때 사용할 수 있습니다.
 
 ## <a name="choosing-windows-runtime-audiograph-or-xaudio2"></a>Windows 런타임 AudioGraph 또는 XAudio2 선택
 
@@ -43,7 +43,7 @@ Windows 런타임 오디오 그래프 API:
 -   XAudio2보다 훨씬 더 쉽게 사용할 수 있습니다.
 -   C++에 대해 지원될 뿐 아니라 C#에서도 사용할 수 있습니다.
 -   압축된 파일 형식을 포함하여 오디오 파일을 직접 사용할 수 있습니다. XAudio2는 오디오 버퍼에만 작동하며 파일 I/O 기능을 제공하지 않습니다.
--   Windows 10에서 지연율이 낮은 오디오 파이프라인을 사용할 수 있습니다.
+-   Can use the low-latency audio pipeline in Windows 10.
 -   기본 끝점 매개 변수를 사용할 때 자동 끝점 자동 전환을 지원합니다. 예를 들어 사용자가 디바이스의 스피커에서 헤드셋으로 전환하면 오디오는 새 입력으로 자동 리디렉션됩니다.
 
 ## <a name="audiograph-class"></a>AudioGraph 클래스
@@ -54,8 +54,8 @@ Windows 런타임 오디오 그래프 API:
 
 [!code-cs[InitAudioGraph](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetInitAudioGraph)]
 
--   모든 오디오 노드 형식 만들기를 사용 하 여 만들어집니다\* 의 메서드를 **AudioGraph** 클래스입니다.
--   [  **AudioGraph.Start**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.start) 메서드를 사용하면 오디오 그래프가 오디오 데이터를 처리하기 시작합니다. [  **AudioGraph.Stop**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.stop) 메서드는 오디오 처리를 중지합니다. 그래프의 각 노드는 그래프가 실행되는 동안 독립적으로 시작 및 중지할 수 있지만 그래프가 중지되면 노드가 활성화되지 않습니다. [**ResetAllNodes** ](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.resetallnodes) 오디오 해당 버퍼에 현재 있는 모든 데이터를 삭제 하려면 그래프의 모든 노드를 발생 합니다.
+-   All audio node types are created by using the Create\* methods of the **AudioGraph** class.
+-   [  **AudioGraph.Start**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.start) 메서드를 사용하면 오디오 그래프가 오디오 데이터를 처리하기 시작합니다. [  **AudioGraph.Stop**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.stop) 메서드는 오디오 처리를 중지합니다. 그래프의 각 노드는 그래프가 실행되는 동안 독립적으로 시작 및 중지할 수 있지만 그래프가 중지되면 노드가 활성화되지 않습니다. [**ResetAllNodes**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.resetallnodes) causes all nodes in the graph to discard any data currently in their audio buffers.
 -   그래프가 오디오 데이터의 새 퀀텀 처리를 시작하면 [**QuantumStarted**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.quantumstarted) 이벤트가 발생합니다. 퀀텀 처리가 완료되면 [**QuantumProcessed**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.quantumprocessed) 이벤트가 발생합니다.
 
 -   필요한 유일한 [**AudioGraphSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraphSettings) 속성은 [**AudioRenderCategory**](https://docs.microsoft.com/uwp/api/Windows.Media.Render.AudioRenderCategory)입니다. 이 값을 지정하면 시스템은 지정된 범주에 대해 오디오 파이프라인을 최적화할 수 있습니다.
@@ -80,7 +80,7 @@ Windows 런타임 오디오 그래프 API:
 
 [!code-cs[CreateDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceInputNode)]
 
-장치 입력된 노드에 대 한 특정 오디오 캡처 장치를 지정 하려는 경우 사용할 수 있습니다 합니다 [ **Windows.Devices.Enumeration.DeviceInformation** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 시스템의 사용 가능한 오디오의 목록을 가져오려면 클래스 호출 하 여 장치를 캡처 [ **FindAllAsync** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) 반환한 오디오 렌더링 장치 선택기에 전달 [  **Windows.Media.Devices.MediaDevice.GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector)합니다. 반환된 **DeviceInformation** 개체 중 하나를 프로그래밍 방식으로 선택하거나 사용자가 디바이스를 선택한 후 해당 디바이스를 [**CreateDeviceInputNodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createdeviceinputnodeasync)에 전달할 수 있도록 하는 UI를 표시할 수 있습니다.
+If you want to specify a specific audio capture device for the device input node, you can use the [**Windows.Devices.Enumeration.DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) class to get a list of the system's available audio capture devices by calling [**FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) and passing in the audio render device selector returned by [**Windows.Media.Devices.MediaDevice.GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector). 반환된 **DeviceInformation** 개체 중 하나를 프로그래밍 방식으로 선택하거나 사용자가 디바이스를 선택한 후 해당 디바이스를 [**CreateDeviceInputNodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createdeviceinputnodeasync)에 전달할 수 있도록 하는 UI를 표시할 수 있습니다.
 
 [!code-cs[EnumerateAudioCaptureDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioCaptureDevices)]
 
@@ -161,7 +161,7 @@ Windows 런타임 오디오 그래프 API:
 
 [!code-cs[ComImportIMemoryBufferByteAccess](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetComImportIMemoryBufferByteAccess)]
 
-다음 코드에서는 [**AudioFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioFrame)을 만든 후 오디오 데이터로 채우는 **GenerateAudioData** 도우미 메서드의 구현 예제를 보여 줍니다.
+다음 코드는 [**AudioFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioFrame)을 만든 후 오디오 데이터로 채우는 **GenerateAudioData** 도우미 메서드의 구현 예제를 보여 줍니다.
 
 [!code-cs[GenerateAudioData](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetGenerateAudioData)]
 
@@ -203,7 +203,7 @@ Windows 런타임 오디오 그래프 API:
 
 [!code-cs[AddOutgoingConnection1](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddOutgoingConnection1)]
 
-입력 노드에서 다른 노드로의 연결을 두 개 이상 만들 수 있습니다. 다음 예제에서는 [**AudioFileInputNode**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioFileInputNode)에서 [**AudioFileOutputNode**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioFileOutputNode)로의 또 다른 연결을 추가합니다. 이제 오디오 파일의 오디오는 디바이스 스피커로 재생된 후 오디오 파일에도 쓰여집니다.
+입력 노드에서 다른 노드로의 연결을 두 개 이상 만들 수 있습니다. 다음 예제에서는 [**AudioFileInputNode**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioFileInputNode)에서 [**AudioFileOutputNode**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioFileOutputNode)로의 또 다른 연결을 추가합니다. 이제 오디오 파일의 오디오는 디바이스 스피커로 재생된 후 오디오 파일에도 작성됩니다.
 
 [!code-cs[AddOutgoingConnection2](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddOutgoingConnection2)]
 
@@ -230,7 +230,7 @@ Windows 런타임 오디오 그래프 API:
 [!code-cs[AddEffect](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddEffect)]
 
 -   모든 오디오 효과는 [**IAudioEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IAudioEffectDefinition)을 구현합니다. 모든 노드는 해당 노드에 적용되는 효과 목록을 나타내는 **EffectDefinitions** 속성을 노출합니다. 목록에 해당 정의 개체를 추가하여 효과를 추가합니다.
--   **Windows.Media.Audio** 네임스페이스에 제공되는 여러 효과 정의 클래스가 있습니다. 이러한 개체는 다음과 같습니다.
+-   **Windows.Media.Audio** 네임스페이스에 제공되는 여러 효과 정의 클래스가 있습니다. 다음이 포함됩니다.
     -   [**EchoEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.EchoEffectDefinition)
     -   [**EqualizerEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.EqualizerEffectDefinition)
     -   [**LimiterEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.LimiterEffectDefinition)
@@ -264,7 +264,7 @@ Windows 10 버전 1607부터 **AudioGraph**는 입력 또는 서브믹스 노드
 
 기본적으로 공간 오디오는 모양, 속도, 수신기에 대한 상대 위치에 따라 오디오를 줄이기 위해 Microsoft의 HRTF(Head-Relative Transfer Function) 알고리즘을 사용하여 계산됩니다. [  **SpatialAudioModel**](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitter.spatialaudiomodel) 속성을 **FoldDown**으로 설정하여 공간 오디오를 시뮬레이션하는 간단한 스테레오 믹스 방법을 사용할 수 있습니다. 이 방법은 덜 정확하지만 더 적은 CPU와 메모리 리소스를 필요로 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 - [미디어 재생](media-playback.md)
  
 

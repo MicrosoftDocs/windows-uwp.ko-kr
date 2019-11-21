@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d445e5164d542a7e10f136a5fb238c575f35c2d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c647d91213ddf1fd8a3dafd80c6888a026cda576
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57656018"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258933"
 ---
 # <a name="export-restrictions-on-cryptography"></a>암호화에 대한 내보내기 제한
 
@@ -21,19 +21,19 @@ ms.locfileid: "57656018"
 
 미국 상무부의 BIS(Bureau of Industry and Security)에서는 특정 유형의 암호화를 사용하는 기술의 수출을 규제합니다. 앱 파일은 미국에 저장되므로 Microsoft Store에 나열된 모든 앱은 이러한 법과 규정을 따라야 합니다. 미국 외부에 배포하기 위해 다른 나라에서 앱 개발자가 업로드한 앱도 이러한 규정을 따라야 합니다. 따라서 모든 앱 개발자는 Microsoft Store에 앱을 제출할 때 이러한 규정에 따라 제한되는 기술이 앱에 포함되지 않도록 해야 합니다.
 
-> **참고**  여기에 제공 된 정보를 몇 가지 지침을 제공 하지만 앱이 모든 관련 법률 및 규정 준수 하는지 확인 하려면 Microsoft Store 앱을 게시 하는 앱 개발자의 책임입니다.
+> **Note**  The information provided here provides some guidance, but it is your responsibility as the app developer who is publishing apps in the Microsoft Store to make sure that your app complies with all applicable laws and regulations.
 
  
 
-미국에 대 한 자세한 내용은 세이프 산업 및 보안을 참조 하세요 [에 대 한 the 산업 및 보안](https://go.microsoft.com/fwlink/p/?LinkID=245644)합니다.
+미국 상무부 및 BIS(Bureau of Industry and Security)에 대한 자세한 내용은 [Bureau of Industry and Security 정보](https://www.bis.doc.gov/about/index.htm)를 참조하세요.
 
-암호화가 포함된 기술의 수출을 규제하는 EAR(수출 관리 규정)에 대한 자세한 내용은 [암호화를 사용하는 항목에 대한 EAR 통제](https://go.microsoft.com/fwlink/p/?LinkID=245645)를 참조하세요.
+암호화가 포함된 기술의 수출을 규제하는 EAR(수출 관리 규정)에 대한 자세한 내용은 [암호화를 사용하는 항목에 대한 EAR 통제](https://www.bis.doc.gov/index.php/policy-guidance/encryption)를 참조하세요.
 
 ## <a name="governed-uses"></a>규제된 사용
 
 먼저 앱이 EAR(수출 관리 규정)에서 통제되는 암호화 유형을 사용하는지 확인합니다. 이 질문에는 아래 목록에 표시된 예가 포함되지만 가능한 모든 암호화 응용이 목록에 포함되어 있는 것은 아닙니다.
 
-> **중요**  앱 하지만 또한 모든 소프트웨어 라이브러리, 유틸리티 및 앱에 연결 되거나가 포함 된 운영 체제 구성 요소에 대 한 작성 한 코드 뿐만 아니라는 것이 좋습니다.
+> **Important**  Consider not only the code you wrote for your app, but also all the software libraries, utilities and operating system components that your app includes or links to.
 
 -   디지털 서명 사용(예: 인증 또는 무결성 검사)
 -   앱이 사용하거나 액세스하는 데이터 또는 파일 암호화
@@ -43,7 +43,7 @@ ms.locfileid: "57656018"
 -   복사 방지 또는 DRM(디지털 권한 관리)
 -   바이러스 백신 보호
 
-암호화 응용 프로그램의 최신 전체 목록은 [EAR Controls for Items That Use Encryption](https://go.microsoft.com/fwlink/p/?LinkID=245645)을 참조하세요.
+암호화 응용 프로그램의 최신 전체 목록은 [EAR Controls for Items That Use Encryption](https://www.bis.doc.gov/index.php/policy-guidance/encryption)을 참조하세요.
 
 ## <a name="non-restricted-uses"></a>비 제한 사용
 
@@ -55,8 +55,8 @@ ms.locfileid: "57656018"
 -   디지털 권한 관리
 -   디지털 서명 사용
 
-암호화 응용 프로그램의 최신 전체 목록은 [EAR Controls for Items That Use Encryption](https://go.microsoft.com/fwlink/p/?LinkID=245645)을 참조하세요.
+암호화 응용 프로그램의 최신 전체 목록은 [EAR Controls for Items That Use Encryption](https://www.bis.doc.gov/index.php/policy-guidance/encryption)을 참조하세요.
 
 앱이 이 목록에 없는 작업에 대해 암호화를 호출, 지원, 포함 또는 사용하는 경우 앱에 ECCN(Export Commodity Classification Number)이 필요합니다.
 
-ECCN이 없는 경우 [ECCN Questions and Answers](https://go.microsoft.com/fwlink/p/?LinkID=245646)를 참조하세요.
+ECCN이 없는 경우 [ECCN Questions and Answers](https://www.bis.doc.gov/licensing/do_i_needaneccn.html)를 참조하세요.

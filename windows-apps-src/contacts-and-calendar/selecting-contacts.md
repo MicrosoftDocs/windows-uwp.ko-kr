@@ -6,12 +6,12 @@ keywords: 연락처, 연락처 선택, 단일 연락처 선택, 여러 연락처
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: facad25446dca286ac150e59d0418c2dd8bfc896
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 634b72032b37fe4a6bc4ea44a2e4fe27abede47d
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361266"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255069"
 ---
 # <a name="select-contacts"></a>연락처 선택
 
@@ -230,4 +230,4 @@ public class ContactItemAdapter
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
-지금까지 연락처 선택 기능을 사용하여 연락처 정보를 검색하는 방법을 간략히 살펴보았습니다. 연락처 및 연락처 선택 기능을 사용하는 방법에 대한 더 많은 예제를 보려면 GitHub에서 [유니버설 Windows 앱 샘플](https://go.microsoft.com/fwlink/p/?linkid=619979)을 다운로드합니다.
+지금까지 연락처 선택 기능을 사용하여 연락처 정보를 검색하는 방법을 간략히 살펴보았습니다. 연락처 및 연락처 선택 기능을 사용하는 방법에 대한 더 많은 예제를 보려면 GitHub에서 [유니버설 Windows 앱 샘플](https://github.com/Microsoft/Windows-universal-samples)을 다운로드합니다.

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: adb80c3396002a76b3c22a9ce8a8e2893ea728ac
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 279f0d007be927e29632986ce8178c4e0b9778b3
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340503"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259852"
 ---
 # <a name="dependency-properties-overview"></a>종속성 속성 개요
 
@@ -21,7 +21,7 @@ ms.locfileid: "71340503"
 
 종속성 속성은 특수한 유형의 속성입니다. 구체적으로 말해, 속성의 값이 Windows 런타임의 일부인 전용 속성 시스템에 의해 추적되고 영향을 받는 속성입니다.
 
-종속성 속성을 지원하기 위해 이 속성을 정의하는 개체는 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)(즉, **DependencyObject** 기본 클래스가 어디서든 상속된 클래스)여야 합니다. XAML을 사용 하는 UWP 앱에 대 한 UI 정의에 사용 하는 대부분의 형식은 **DependencyObject** 하위 클래스가 되며 종속성 속성을 지원 합니다. 하지만 이름에 "XAML"이 포함되지 않은 Windows 런타임 네임스페이스에서 가져온 유형은 종속성 속성을 지원하지 않습니다. 이 유형의 속성은 속성 시스템의 종속성 동작을 가지지 않는 일반적인 속성입니다.
+종속성 속성을 지원하기 위해 이 속성을 정의하는 개체는 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)(즉, **DependencyObject** 기본 클래스가 어디서든 상속된 클래스)여야 합니다. Many of the types you use for your UI definitions for a UWP app with XAML will be a **DependencyObject** subclass, and will support dependency properties. 하지만 이름에 "XAML"이 포함되지 않은 Windows 런타임 네임스페이스에서 가져온 유형은 종속성 속성을 지원하지 않습니다. 이 유형의 속성은 속성 시스템의 종속성 동작을 가지지 않는 일반적인 속성입니다.
 
 종속성 속성의 목적은 다른 입력(실행 중에 앱 내에서 발생하는 다른 속성, 이벤트 및 상태)을 기반으로 속성 값을 계산하는 체계적인 방법을 제공하는 것입니다. 이러한 다른 입력으로는 다음을 들 수 있습니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "71340503"
 - 리소스 및 스타일 같은 다중 사용 템플릿 지정 패턴
 - 개체 트리의 다른 요소와 부모-자식 관계를 맺음으로써 알게 된 값
 
-종속성 속성은 UI C#에 대 한 XAML을 사용 하 여 Windows 런타임 앱을 정의 하는 프로그래밍 모델의 특정 기능 또는 코드에 대 한 C++ Microsoft Visual Basic 또는C++/cx (시각적 구성 요소 확장)를 나타내거나 지원 합니다. 이러한 기능은 다음과 같습니다.
+A dependency property represents or supports a specific feature of the programming model for defining a Windows Runtime app with XAML for UI and C#, Microsoft Visual Basic or Visual C++ component extensions (C++/CX) for code. 이러한 기능은 다음과 같습니다.
 
 - 데이터 바인딩
 - 스타일
@@ -41,7 +41,7 @@ ms.locfileid: "71340503"
 
 ## <a name="dependency-properties-and-windows-runtime-properties"></a>종속성 속성 및 Windows 런타임 속성
 
-종속성 속성은 런타임에 앱의 모든 종속성 속성을 지원하는 전역 내부 속성 저장소를 제공함으로써 기본 Windows 런타임 속성 기능을 확장합니다. 속성 정의 클래스에서 private인 프라이빗 필드로 속성을 지원하는 표준 패턴의 대안으로 사용됩니다. 이 내부 속성 저장소는 특정 개체에 대해 존재하는 속성 식별자와 값의 집합으로 간주될 수 있습니다([**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)인 경우). 저장소의 각 속성은 이름으로 식별되는 대신 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 인스턴스로 식별됩니다. 그러나 속성 시스템은 대개 이 구현 정보를 숨기므로, 사용자는 일반적으로 간단한 이름(사용하는 코드 언어의 프로그래밍 속성 이름 또는 XAML 작성 시의 특성 이름)을 사용하여 종속성 속성에 액세스할 수 있습니다.
+종속성 속성은 런타임에 앱의 모든 종속성 속성을 지원하는 전역 내부 속성 저장소를 제공함으로써 기본 Windows 런타임 속성 기능을 확장합니다. 속성 정의 클래스에서 private인 개인 필드로 속성을 지원하는 표준 패턴의 대안으로 사용됩니다. 이 내부 속성 저장소는 특정 개체에 대해 존재하는 속성 식별자와 값의 집합으로 간주될 수 있습니다([**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)인 경우). 저장소의 각 속성은 이름으로 식별되는 대신 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 인스턴스로 식별됩니다. 그러나 속성 시스템은 대개 이 구현 정보를 숨기므로, 사용자는 일반적으로 간단한 이름(사용하는 코드 언어의 프로그래밍 속성 이름 또는 XAML 작성 시의 특성 이름)을 사용하여 종속성 속성에 액세스할 수 있습니다.
 
 종속성 속성 시스템의 기초를 제공하는 기본 형식은 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)입니다. **DependencyObject**는 종속성 속성에 액세스할 수 있는 메서드를 정의하고, **DependencyObject** 파생 클래스의 인스턴스는 이전에 언급한 속성 저장소 개념을 내부적으로 지원합니다.
 
@@ -74,7 +74,7 @@ public bool IsSpinning
 ```
 
 > [!NOTE]
-> 앞의 예제는 사용자 지정 종속성 속성을 만드는 방법에 대 한 전체 예제로 제공 되지 않습니다. 코드를 통한 개념 학습을 선호하는 사용자를 위해 종속성 속성 개념을 표시하기 위한 것입니다. 자세한 예를 보려면 [사용자 지정 종속성 속성](custom-dependency-properties.md)을 참조하세요.
+> The preceding example is not intended as the complete example for how to create a custom dependency property. 코드를 통한 개념 학습을 선호하는 사용자를 위해 종속성 속성 개념을 표시하기 위한 것입니다. 자세한 예를 보려면 [사용자 지정 종속성 속성](custom-dependency-properties.md)을 참조하세요.
 
 ## <a name="dependency-property-value-precedence"></a>종속성 속성 값 우선 순위
 
@@ -86,11 +86,11 @@ public bool IsSpinning
 
 속성 시스템에서 종속성 속성의 런타임 값을 할당할 때 사용하는 정의된 순서는 다음과 같습니다. 가장 높은 우선 순위가 가장 먼저 나와 있습니다. 이 목록 바로 뒤에서 더 자세한 설명을 찾을 수 있습니다.
 
-1. **애니메이션 된 값:** [**HoldEnd**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FillBehavior) 동작을 사용 하는 활성 애니메이션, 시각적 상태 애니메이션 또는 애니메이션입니다. 실제적인 효과를 주려면 속성에 적용된 애니메이션이 기준(애니메이션 효과를 주지 않은) 값보다 우선해야 합니다. 이는 해당 값이 로컬로 설정된 경우에도 해당합니다.
-1. **로컬 값:** 속성 래퍼를 편리 하 게 사용 하 여 로컬 값을 설정할 수 있습니다 .이는 XAML의 특성 또는 속성 요소로 설정 하거나 특정 인스턴스의 속성을 사용 하 여 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 메서드를 호출 하는 것과 같습니다. 바인딩이나 고정 리소스를 사용하여 로컬 값을 설정하는 경우 이러한 항목이 각각 로컬 값이 설정된 것처럼 우선 순위대로 작동하고 바인딩 또는 리소스 참조는 새 로컬 값이 설정되면 지워집니다.
-1. **템플릿 속성:** [**ControlTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) 또는 [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)에서 템플릿의 일부로 생성 된 요소는 이러한 요소를 포함 합니다.
-1. **스타일 setter:** 페이지 또는 응용 프로그램 리소스의 스타일 내에 있는 [**Setter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter) 의 값입니다.
-1. **기본값:** 종속성 속성은 메타 데이터의 일부로 기본값을 가질 수 있습니다.
+1. **애니메이션 효과를 준 값:** 활성 애니메이션, 시각적 상태 애니메이션 또는 [**HoldEnd**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FillBehavior) 동작이 있는 애니메이션. 실제적인 효과를 주려면 속성에 적용된 애니메이션이 기준(애니메이션 효과를 주지 않은) 값보다 우선해야 합니다. 이는 해당 값이 로컬로 설정된 경우에도 해당합니다.
+1. **로컬 값:** 로컬 값은 편리한 속성 래퍼를 통해 설정될 수 있습니다. 이는 XAML에서 특성 또는 속성 요소로 설정하거나 특정 인스턴스의 속성을 사용하여 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 메서드를 호출하는 것과도 같습니다. 바인딩이나 고정 리소스를 사용하여 로컬 값을 설정하는 경우 이러한 항목이 각각 로컬 값이 설정된 것처럼 우선 순위대로 작동하고 바인딩 또는 리소스 참조는 새 로컬 값이 설정되면 지워집니다.
+1. **템플릿 기반 속성:** 요소가 템플릿([**ControlTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) 또는 [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate))의 일부로 만들어진 경우 요소에 템플릿 기반 속성이 있습니다.
+1. **스타일 setter:** 페이지 또는 응용 프로그램 리소스의 스타일에 있는 [**Setter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter)의 값입니다.
+1. **기본값:** 종속성 속성에는 메타데이터의 일부로 기본값이 있을 수 있습니다.
 
 ### <a name="templated-properties"></a>템플릿 기반 속성
 
@@ -119,7 +119,7 @@ public bool IsSpinning
 
 자세한 내용은 [스토리보드 애니메이션](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)을 참조하세요.
 
-### <a name="default-values"></a>기본값
+### <a name="default-values"></a>기본 값
 
 [  **PropertyMetadata**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyMetadata) 값을 사용하여 종속성 속성의 기본값을 설정하는 작업은 [사용자 지정 종속성 속성](custom-dependency-properties.md) 항목에서 자세히 설명합니다.
 
@@ -149,7 +149,7 @@ public bool IsSpinning
 XAML 대신 코드를 사용하여 바인딩을 설정할 수도 있습니다. [  **SetBinding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.setbinding)을 참조하세요.
 
 > [!NOTE]
-> 이와 같은 바인딩은 종속성 속성 값 우선 순위를 위해 로컬 값으로 처리 됩니다. 원래 [**Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding) 값이 포함된 속성에 대해 다른 로컬 값을 설정하면 바인딩의 런타임 값뿐만 아니라 바인딩을 완전히 덮어씁니다. {x:Bind} 바인딩은 속성의 로컬 값을 설정하는 생성된 코드를 사용하여 구현됩니다. {x:Bind}를 사용하는 속성의 로컬 값을 설정하면 원본 개체의 속성 변경을 관찰할 때처럼 다음에 바인딩이 평가될 때 해당 값이 바뀝니다.
+> Bindings like this are treated as a local value for purposes of dependency property value precedence. 원래 [**Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding) 값이 포함된 속성에 대해 다른 로컬 값을 설정하면 바인딩의 런타임 값뿐만 아니라 바인딩을 완전히 덮어씁니다. {x:Bind} 바인딩은 속성의 로컬 값을 설정하는 생성된 코드를 사용하여 구현됩니다. {x:Bind}를 사용하는 속성의 로컬 값을 설정하면 원본 개체의 속성 변경을 관찰할 때처럼 다음에 바인딩이 평가될 때 해당 값이 바뀝니다.
 
 ### <a name="binding-sources-binding-targets-the-role-of-frameworkelement"></a>바인딩 소스, 바인딩 대상, FrameworkElement의 역할
 
@@ -162,7 +162,7 @@ XAML 대신 코드를 사용하여 바인딩을 설정할 수도 있습니다. [
 바인딩 연결은 대부분의 데이터 바인딩 시나리오에 필요한 여러 요소 중 하나입니다. 단방향 또는 양방향 바인딩이 적용되려면 원본 속성이 바인딩 시스템과 대상으로 전파되는 변경 알림을 지원해야 합니다. 사용자 지정 바인딩 원본의 경우 이는 속성이 종속성 속성이거나 개체가 [**INotifyPropertyChanged**](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged)를 지원해야 함을 의미합니다. 컬렉션은 [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged)를 지원해야 합니다. 특정 클래스는 해당 구현에서 이러한 인터페이스를 지원하므로 데이터 바인딩 시나리오를 위한 기본 클래스로 유용합니다. 이러한 클래스의 예는 [**ObservableCollection&lt;T&gt;** ](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1)입니다. 데이터 바인딩 및 데이터 바인딩과 속성 시스템의 관계에 대한 자세한 내용은 [데이터 바인딩 심층 분석](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)을 참조하세요.
 
 > [!NOTE]
-> 여기에 나열 된 형식은 Microsoft .NET 데이터 소스를 지원 합니다. C++/CX 데이터 원본은 변경 알림 또는 식별 가능한 동작에 대해 다른 인터페이스를 사용합니다. [데이터 바인딩 심층 분석](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)을 참조하세요.
+> The types listed here support Microsoft .NET data sources. C++/CX 데이터 원본은 변경 알림 또는 식별 가능한 동작에 대해 다른 인터페이스를 사용합니다. [데이터 바인딩 심층 분석](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)을 참조하세요.
 
 ### <a name="styles-and-templates"></a>스타일 및 템플릿
 
@@ -188,7 +188,7 @@ Windows 10에는 [**RegisterPropertyChangedCallback**](https://docs.microsoft.co
 
 ### <a name="default-value-and-clearvalue"></a>기본값 및 **ClearValue**
 
-종속성 속성에는 속성 메타데이터의 일부로 정의된 기본값이 있을 수 있습니다. 종속성 속성의 경우 기본값은 속성을 처음 설정한 후에는 관련성이 없어집니다. 값 우선 순위에서 다른 결정자가 사라질 때마다 런타임에 기본값을 다시 적용할 수 있습니다. 종속성 속성 값 우선 순위는 다음 섹션에서 설명 합니다. 예를 들어 속성에 적용 되는 스타일 값 또는 애니메이션을 의도적으로 제거할 수 있지만 이렇게 한 후에는 값을 적절 한 기본값으로 지정할 수 있습니다. 종속성 속성 기본값은 각 속성의 값을 추가 단계로 특정하게 지정하지 않고도 이 값을 제공할 수 있습니다.
+종속성 속성에는 속성 메타데이터의 일부로 정의된 기본값이 있을 수 있습니다. 종속성 속성의 경우 기본값은 속성을 처음 설정한 후에는 관련성이 없어집니다. 값 우선 순위에서 다른 결정자가 사라질 때마다 런타임에 기본값을 다시 적용할 수 있습니다. (종속성 속성 값 우선 순위에 대해서는 다음 섹션에서 설명합니다.) 예를 들어 속성에 적용되는 스타일 값이나 애니메이션을 의도적으로 제거한 후 값이 적당한 기본값이 되기를 원할 수 있습니다. 종속성 속성 기본값은 각 속성의 값을 추가 단계로 특정하게 지정하지 않고도 이 값을 제공할 수 있습니다.
 
 이미 로컬 값을 사용하여 속성을 설정한 후에도 속성을 의도적으로 기본값으로 설정할 수 있습니다. 값을 기본값으로 다시 설정할 뿐 아니라 우선 순위에서 기본값을 재정의할 수 있지만 로컬 값이 아닌 다른 값을 사용하도록 설정하려면 [**ClearValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.clearvalue) 메서드를 호출합니다(메서드 매개 변수로서 해당 속성 참조 지우기). 속성에서 기본값을 문자 그대로 사용하지 않게 설정하려는 경우도 있지만, 로컬 값을 지우고 기본값으로 되돌리면 컨트롤 템플릿의 스타일 setter에서 가져온 값을 사용하는 등 현재 적용하려는 다른 우선 순위 항목이 활성화될 수 있습니다.
 
@@ -205,11 +205,11 @@ Windows 10에는 [**RegisterPropertyChangedCallback**](https://docs.microsoft.co
 - [사용자 지정 종속성 속성](custom-dependency-properties.md)
 - [연결된 속성 개요](attached-properties-overview.md)
 - [데이터 바인딩 심층 분석](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)
-- [Storyboarded 애니메이션](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)
-- [Windows 런타임 구성 요소 만들기](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
-- [XAML 사용자 및 사용자 지정 컨트롤 샘플](https://go.microsoft.com/fwlink/p/?linkid=238581)
+- [Storyboarded animations](https://docs.microsoft.com/windows/uwp/graphics/storyboarded-animations)
+- [Creating Windows Runtime components](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
+- [XAML user and custom controls sample](https://code.msdn.microsoft.com/windowsapps/XAML-user-and-custom-a8a9505e)
 
-## <a name="apis-related-to-dependency-properties"></a>종속성 속성과 관련 된 Api
+## <a name="apis-related-to-dependency-properties"></a>APIs related to dependency properties
 
 - [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)
 - [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty)

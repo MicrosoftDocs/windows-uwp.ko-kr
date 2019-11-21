@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 비디오, 스케줄러, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 69fef2bc5deb21be8685badb0cf18f38769170cb
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 1a214288c778505d16707fd64391a9b8cedbbb32
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57603848"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260353"
 ---
 # <a name="show-ads-in-video-content"></a>비디오 콘텐츠에 광고 표시
 
@@ -26,7 +26,7 @@ ms.locfileid: "57603848"
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-* Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 설치합니다.
+* Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)를 설치합니다.
 
 * 프로젝트는 [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) 컨트롤을 사용하여 광고가 예약되는 비디오 콘텐츠를 제공해야 합니다. 이 컨트롤은 GitHub의 Microsoft에서 사용할 수 있는 라이브러리의 [TVHelpers](https://github.com/Microsoft/TVHelpers) 컬렉션에서 사용할 수 있습니다.
 
@@ -51,7 +51,7 @@ ms.locfileid: "57603848"
 
 3. 프로젝트에 **Microsoft Advertising SDK for JavaScript** 라이브러리에 대한 참조를 추가합니다.
 
-    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가.** 를 선택합니다.
+    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 선택합니다.
     2. **참조 관리자**에서 **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for JavaScript**(버전 10.0) 옆의 확인란을 선택합니다.
     3. **참조 관리자**에서 확인을 클릭합니다.
 
@@ -142,7 +142,7 @@ ms.locfileid: "57603848"
 
 ### <a name="requesttimeout"></a>requestTimeout
 
-이 속성에는 시간이 초과 되기 전에 ad 요청 응답을 기다릴 밀리초 수를 설정 하거나 가져옵니다. 값 0은 시스템이 절대 시간 초과되지 않음을 나타냅니다. 기본값은 30000밀리초(30초)입니다.
+이 속성은 시간 초과되기 전에 요청 응답을 기다리는 시간(밀리초)을 가져오거나 설정합니다. 값 0은 시스템이 절대 시간 초과되지 않음을 나타냅니다. 기본값은 30000밀리초(30초)입니다.
 
 ### <a name="schedule"></a>schedule
 
@@ -152,9 +152,9 @@ ms.locfileid: "57603848"
 
 재생이 사분위 검사점에 도달하면 이 이벤트가 발생합니다. 이 이벤트 처리기(*eventInfo*)의 두 번째 매개 변수는 다음 멤버가 포함된 JSON 개체입니다.
 
-* **진행률**: Ad 재생 상태 (중 하나는 **MediaProgress** AdScheduler.js에 정의 된 열거형 값).
-* **클립**: 재생 중인 비디오 클립 합니다. 이 개체는 사용자 코드에서 사용되지 않습니다.
-* **adPackage**: 재생 중인 광고에 해당 하는 ad 페이로드 부분을 나타내는 개체입니다. 이 개체는 사용자 코드에서 사용되지 않습니다.
+* **progress**: 광고 재생 상태(AdScheduler.js에 정의된 **MediaProgress** 열거형 값 중 하나)입니다.
+* **clip**: 재생되는 비디오 클립입니다. 이 개체는 사용자 코드에서 사용되지 않습니다.
+* **adPackage**: 재생되는 광고에 해당하는 광고 페이로드의 일부를 나타내는 개체입니다. 이 개체는 사용자 코드에서 사용되지 않습니다.
 
 ### <a name="onallcomplete"></a>onAllComplete  
 
@@ -168,8 +168,8 @@ ms.locfileid: "57603848"
 
 이 이벤트는 광고가 재생되는 중에 발생하며 현재 포드에 남아 있는 시간을 표시합니다. 이 이벤트 처리기(*eventData*)의 두 번째 매개 변수는 다음 멤버가 포함된 JSON 개체입니다.
 
-* **remainingAdTime**: 현재 ad에 대해 남은 시간 (초) 수입니다.
-* **remainingPodTime**: 현재 pod에 대 한 남은 시간 (초) 수입니다.
+* **remainingAdTime**: 현재 광고의 남아 있는 시간(초)입니다.
+* **remainingPodTime**: 현재 포드의 남아 있는 시간(초)입니다.
 
 > [!NOTE]
 > 포드는 중간 광고 시간 동안 재생되는 광고 그룹처럼 순서대로 재생되는 광고 그룹입니다. 자세한 내용은 IAB 디지털 VAST(Video Ad Serving Template) 사양을 참조하세요.
@@ -178,12 +178,12 @@ ms.locfileid: "57603848"
 
 이 이벤트는 광고 포드가 종료될 때 발생합니다. 이 이벤트 처리기(*eventData*)의 두 번째 매개 변수는 다음 멤버가 포함된 JSON 개체입니다.
 
-* **startTime**: Pod의 시작 시간 (초)입니다.
-* **pod**: Pod를 나타내는 개체입니다. 이 개체는 사용자 코드에서 사용되지 않습니다.
+* **startTime**: 포드의 시작 시간(초)입니다.
+* **pod**: 포드를 나타내는 개체입니다. 이 개체는 사용자 코드에서 사용되지 않습니다.
 
 ### <a name="onpodstart"></a>onPodStart
 
 이 이벤트는 포드가 시작될 때 발생합니다. 이 이벤트 처리기(*eventData*)의 두 번째 매개 변수는 다음 멤버가 포함된 JSON 개체입니다.
 
-* **startTime**: Pod의 시작 시간 (초)입니다.
-* **pod**: Pod를 나타내는 개체입니다. 이 개체는 사용자 코드에서 사용되지 않습니다.
+* **startTime**: 포드의 시작 시간(초)입니다.
+* **pod**: 포드를 나타내는 개체입니다. 이 개체는 사용자 코드에서 사용되지 않습니다.

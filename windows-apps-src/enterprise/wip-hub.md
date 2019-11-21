@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp, Windows Information Protection, 엔터프라이즈 데이터, 엔터프라이즈 데이터 보호, edp, 인식 앱
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 ms.localizationpriority: medium
-ms.openlocfilehash: 42f08127567704b1c8623ac64857cc5afe0ef882
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: f6e3839ac2c15c1f976a9135b121ffea26174d41
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321388"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259612"
 ---
 # <a name="windows-information-protection-wip"></a>WIP(Windows Information Protection)
 
@@ -41,13 +41,13 @@ WIP와 MDM을 함께 사용하면 조직이 관리하는 디바이스에서 데�
 
 ![WIP 수명 주기](images/wip-lifecycle.png)
 
-> **WIP에 대해 자세히 알아보기** <br>
-* [Windows Information Protection 소개](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/bg-p/Windows10Blog)
-* [Windows 정보 보호 (WIP)를 사용 하 여 엔터프라이즈 데이터 보호](https://docs.microsoft.com/windows/whats-new/edp-whats-new-overview)
+> **Read more about WIP** <br>
+* [Introducing Windows Information Protection](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/bg-p/Windows10Blog)
+* [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/whats-new/edp-whats-new-overview)
 
 앱이 허용 목록에 있는 경우 앱에 의해 생성된 모든 데이터에는 정책 제한이 적용됩니다. 즉, 관리자가 엔터프라이즈 데이터에 대한 사용자의 액세스를 해지하면 해당 사용자는 앱에서 생성한 모든 데이터에 액세스할 수 없습니다.
 
-엔터프라이즈 용도로만 설계된 앱일 경우에 좋습니다. 사용자의 개인적인 데이터가 생성될 경우 앱이 엔터프라이즈와 개인 데이터를 지능적으로 구별하여 *인식*할 수 있으면 좋을 것입니다. 이러한 앱은 사용자 개인 데이터의 무결성을 유지하면서 엔터프라이즈 정책을 적절하게 적용할 수 있기 때문에 이런 유형의 앱을 *엔터프라이즈 지원*이라고 합니다.
+엔터프라이즈 용도로만 설계된 앱일 경우에 좋습니다. 사용자의 개인적인 데이터가 생성될 경우 앱이 엔터프라이즈와 개인 데이터를 지능적으로 구별하여 *인식*할 수 있으면 좋을 것입니다. 이러한 앱은 사용자 개인 데이터의 무결성을 유지하면서 엔터프라이즈 정책을 적절하게 적용할 수 있기 때문에 이런 유형의 앱을 *엔터프라이즈 인식*이라고 합니다.
 
 ## <a name="create-an-enterprise-enlightened-app"></a>엔터프라이즈 인식 앱 만들기
 
@@ -61,13 +61,13 @@ WIP API를 사용하여 앱을 지원한 다음 엔터프라이즈 인식 앱으
 
 앱을 인식할 준비가 되면 다음 가이드 중 하나를 참조하세요.
 
-**사용 하 여 작성 하는 유니버설 Windows 플랫폼 (UWP) 앱에 대 한C#**
+**For Universal Windows Platform (UWP) apps that you build by using C#**
 
 [WIP(Windows Information Protection) 개발자 가이드](wip-dev-guide.md).
 
-**사용 하 여 작성 하는 데스크톱 앱C++**
+**For Desktop apps that you build by using C++**
 
-[WIP(Windows Information Protection) 개발자 가이드(C++)](https://go.microsoft.com/fwlink/?LinkId=822192).
+[WIP(Windows Information Protection) 개발자 가이드(C++)](https://docs.microsoft.com/previous-versions/windows/desktop/EDP/wip-developer-guide?redirectedfrom=MSDN).
 
 
 ## <a name="create-non-enlightened-enterprise-app"></a>미인식 엔터프라이즈 앱 만들기

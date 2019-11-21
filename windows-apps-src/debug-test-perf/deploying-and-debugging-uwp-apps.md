@@ -6,18 +6,18 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: Windows 10, uwp, 디버그, 테스트, 성능
 ms.localizationpriority: medium
-ms.openlocfilehash: c75eec01a41d31270e55b0da6f11ed38c971e8cb
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: cdfcdfddb2b595a589c70d1facc24559c63b98da
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820335"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254789"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>UWP 앱 배포 및 디버그
 
 이 문서에서는 다양한 배포를 대상으로 지정하고 대상을 디버깅하는 단계를 안내합니다.
 
-Microsoft Visual Studio를 사용 하면 배포 하 고 다양 한 Windows 10 장치에서 유니버설 Windows 플랫폼 (UWP) 앱을 디버깅할 수 있습니다. Visual Studio는 대상 디바이스에 앱을 빌드하고 등록하는 프로세스를 처리합니다.
+Microsoft Visual Studio allows you to deploy and debug your Universal Windows Platform (UWP) apps on a variety of Windows 10 devices. Visual Studio는 대상 디바이스에 앱을 빌드하고 등록하는 프로세스를 처리합니다.
 
 ## <a name="picking-a-deployment-target"></a>배포 대상 선택
 
@@ -25,11 +25,11 @@ Microsoft Visual Studio를 사용 하면 배포 하 고 다양 한 Windows 10 �
 
 ![디버그 디바이스 대상 목록](images/debug-device-target-list.png)
 
-- **시뮬레이터**가 현재 개발 컴퓨터의 시뮬레이트된 환경에 앱을 배포합니다. 이 옵션은만 사용할 수 있는 경우 앱의 **대상 플랫폼 최소입니다. 버전** 개발 컴퓨터에 운영 체제 보다 작거나 같음.
-- **로컬 컴퓨터**가 현재 개발 컴퓨터에 앱을 배포합니다. 이 옵션은만 사용할 수 있는 경우 앱의 **대상 플랫폼 최소입니다. 버전** 개발 컴퓨터에 운영 체제 보다 작거나 같음.
+- **시뮬레이터**가 현재 개발 컴퓨터의 시뮬레이트된 환경에 앱을 배포합니다. 이 옵션은 앱의 **대상 플랫폼 최소 버전**이 개발 컴퓨터의 운영 체제보다 작거나 같을 경우에만 사용할 수 있습니다.
+- **로컬 컴퓨터**가 현재 개발 컴퓨터에 앱을 배포합니다. 이 옵션은 앱의 **대상 플랫폼 최소 버전**이 개발 컴퓨터의 운영 체제보다 작거나 같을 경우에만 사용할 수 있습니다.
 - **원격 컴퓨터**에서 원격 대상을 지정하여 앱을 배포할 수 있습니다. 원격 컴퓨터에 배포하는 방법에 대한 자세한 내용은 [원격 디바이스 지정](#specifying-a-remote-device)에서 볼 수 있습니다.
 - **디바이스**가 USB 연결 디바이스에 앱을 배포합니다. 장치는 개발자가 잠금 해제해야 하며 화면이 잠금 해제되어 있어야 합니다.
-- **에뮬레이터** 대상이 부팅되고 해당 이름에 지정된 구성으로 에뮬레이터에 앱을 배포합니다. 에뮬레이터는 Hyper-v에서 사용할 수 있는 Windows 8.1 실행 하는 컴퓨터를 사용 하는 전용 또는 초과입니다.
+- **에뮬레이터** 대상이 부팅되고 해당 이름에 지정된 구성으로 에뮬레이터에 앱을 배포합니다. Emulators are only available on Hyper-V enabled machines running Windows 8.1 or beyond.
 
 ## <a name="debugging-deployed-apps"></a>배포된 앱 디버깅
 
@@ -45,7 +45,7 @@ UWP 앱은 Windows 8.1 이상에서 개발하고 컴파일할 수 있지만 실�
 
 ## <a name="package-layout"></a>패키지 레이아웃
 
-Visual Studio 2015 업데이트 3부터 UWP 앱에 대 한 레이아웃 경로 지정 하는 개발자를 위한 옵션을 추가 했습니다. 이 옵션은 앱을 빌드할 때 패키지 레이아웃을 복사할 디스크의 위치를 결정합니다. 기본적으로 이 속성은 프로젝트의 루트 디렉터리를 기준으로 설정됩니다. 이 속성을 수정하지 않으면 이전 버전의 Visual Studio와 동일한 동작이 유지됩니다.
+As of Visual Studio 2015 Update 3, we have added the option for developers to specify the layout path for their UWP apps. 이 옵션은 앱을 빌드할 때 패키지 레이아웃을 복사할 디스크의 위치를 결정합니다. 기본적으로 이 속성은 프로젝트의 루트 디렉터리를 기준으로 설정됩니다. 이 속성을 수정하지 않으면 이전 버전의 Visual Studio와 동일한 동작이 유지됩니다.
 
 이 속성은 프로젝트의 **디버그** 속성에서 수정할 수 있습니다.
 
@@ -65,7 +65,7 @@ C# 또는 Microsoft Visual Basic 앱에 대한 원격 컴퓨터를 지정하려�
 
 ![원격 연결 대화 상자](images/debug-remote-connections.png)
 
-이 대화 상자로 돌아가려면 프로젝트 속성을 열고 **디버그** 탭으로 이동합니다. 여기에서 **원격 컴퓨터:** 옆의 **찾기**를 선택합니다.
+To return to this dialog, you can open project properties and go to the **Debug** tab. From there, select **Find** next to **Remote machine:**
 
 ![디버그 탭](images/debug-remote-machine-config.png)
 
@@ -73,7 +73,7 @@ C# 또는 Microsoft Visual Basic 앱에 대한 원격 컴퓨터를 지정하려�
 
 ### <a name="c-and-javascript"></a>C++ 및 JavaScript
 
-원격 컴퓨터의 대상 지정 하는 C++ 또는 JavaScript UWP 앱:
+To specify a remote machine target for a C++ or JavaScript UWP app:
 
 1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.
 2. **디버깅** 설정으로 이동하여 **실행할 디버거**에서 **원격 컴퓨터**를 선택합니다.
@@ -88,20 +88,20 @@ C# 또는 Microsoft Visual Basic 앱에 대한 원격 컴퓨터를 지정하려�
 > [!NOTE]
 > 이러한 지침은 이전 버전의 Windows 10에서만 필요합니다.  크리에이터스 업데이트부터 PC를 Xbox와 같이 처리할 수 있습니다.  즉, PC의 개발자 모드에서 장치 검색을 사용하도록 설정하고, 유니버설 인증을 사용하여 PIN 페어링하고 PC에 연결할 수 있습니다.
 
-크리에이터스 업데이트 이전 버전의 원격 PC에 배포하려면 대상 PC에 Visual Studio 원격 도구가 설치되어 있어야 합니다. 원격 PC는 버전 보다 크거나 같은 앱에는 Windows의 실행도 해야 **대상 플랫폼 최소입니다. 버전** 속성입니다. 원격 도구를 설치한 후 대상 PC에서 원격 디버거를 실행해야 합니다.
+크리에이터스 업데이트 이전 버전의 원격 PC에 배포하려면 대상 PC에 Visual Studio 원격 도구가 설치되어 있어야 합니다. 원격 PC에도 앱의 **대상 플랫폼 최소 버전** 속성보다 크거나 같은 버전의 Windows가 실행되고 있어야 합니다. 원격 도구를 설치한 후 대상 PC에서 원격 디버거를 실행해야 합니다.
 
 이렇게 하려면 **시작** 메뉴에서 **원격 디버거**를 검색하여 열고 메시지가 나타나면 디버거에서 방화벽 설정을 구성하도록 허용합니다. 기본적으로 디버거는 Windows 인증을 사용하여 실행됩니다. 따라서 로그인된 사용자가 두 PC에서 동일하지 않으면 사용자 자격 증명이 필요합니다.
 
-로 변경 하도록 **인증 없음**를 **원격 디버거**로 이동 하세요 **도구**  - &gt; **옵션**, 및 로 설정한 **인증 없음**합니다. 원격 디버거를 설정한 후 호스트 디바이스를 [개발자 모드](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)로 설정했는지도 확인해야 합니다. 그런 다음 개발 컴퓨터에서 배포할 수 있습니다.
+To change it to **no authentication**, in the **Remote Debugger**, go to **Tools** -&gt; **Options**, and then set it to **No Authentication**. 원격 디버거를 설정한 후 호스트 디바이스를 [개발자 모드](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)로 설정했는지도 확인해야 합니다. 그런 다음 개발 컴퓨터에서 배포할 수 있습니다.
 
 자세한 내용은 [Visual Studio 다운로드 센터](https://visualstudio.microsoft.com/downloads/)를 참조하세요.
 
 ## <a name="passing-command-line-debug-arguments"></a>명령줄 디버그 인수 전달
 
-Visual Studio 2019에서 UWP 응용 프로그램 디버깅을 시작할 때 명령줄 디버그 인수를 전달할 수 있습니다. [  **응용 프로그램**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.application) 클래스의 **OnLaunched** 메서드에 있는 *args* 매개 변수에서 명령줄 디버그 인수에 액세스할 수 있습니다. 명령줄 디버그 인수를 지정하려면 프로젝트 속성을 열고 **디버그** 탭으로 이동합니다.
+In Visual Studio 2019, you can pass command line debug arguments when you start debugging UWP applications. [  **응용 프로그램**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.application) 클래스의 **OnLaunched** 메서드에 있는 *args* 매개 변수에서 명령줄 디버그 인수에 액세스할 수 있습니다. 명령줄 디버그 인수를 지정하려면 프로젝트 속성을 열고 **디버그** 탭으로 이동합니다.
 
 > [!NOTE]
-> 이 기능은 C#, VB, C++용 Visual Studio 2017(버전 15.1)에 사용할 수 있습니다. JavaScript는 이후 버전에서 사용할 수 있습니다. 명령줄 디버그 인수는 시뮬레이터를 제외한 모든 배포 형식에서 사용할 수 있습니다.
+> 이 기능은 C#, VB, C++용 Visual Studio 2017(버전 15.1)에 사용할 수 있습니다. JavaScript is available in later versions. 명령줄 디버그 인수는 시뮬레이터를 제외한 모든 배포 형식에서 사용할 수 있습니다.
 
 C# 및 VB UWP 프로젝트의 경우 **시작 옵션** 아래에 **명령줄 인수** 필드가 나타납니다.
 
@@ -119,13 +119,13 @@ C++ 및 JS UWP 프로젝트의 경우 **디버깅 속성**에 **명령줄 인수
 
 원격 컴퓨터 배포에 세 가지 인증 모드를 사용할 수 있습니다.
 
-- **유니버설 (암호화 되지 않은 프로토콜)** : 원격 장치에 배포할 때마다이 인증 모드를 사용 합니다. 현재 이 인증 모드는 IoT 디바이스, Xbox 디바이스 및 HoloLens 디바이스, 크리에이터스 업데이트 버전 이상의 PC용입니다. 유니버설(암호화되지 않은 프로토콜)은 신뢰할 수 있는 네트워크에서만 사용해야 합니다. 디버깅 연결은 개발 컴퓨터와 원격 컴퓨터 간에 전달되는 데이터를 가로채고 변경할 수 있는 악의적인 사용자에게 취약합니다.
-- **Windows**: 이 인증 모드는 원격 PC (데스크톱 또는 랩톱)에 사용 되는 것만 Visual Studio 원격 도구를 실행 합니다. 대상 컴퓨터의 로그인된 사용자의 자격 증명에 액세스할 수 있는 경우 이 인증 모드를 사용합니다. 원격 배포에 가장 안전한 채널입니다.
-- **없음**: 이 인증 모드는 원격 PC (데스크톱 또는 랩톱)에 사용 되는 것만 Visual Studio 원격 도구를 실행 합니다. 테스트 계정이 로그인되어 있는 환경에서 테스트 컴퓨터가 설정되어 있고 자격 증명을 입력할 수 없는 경우 이 인증 모드를 사용합니다. 원격 디버거 설정이 인증 없음을 허용하도록 설정되어 있는지 확인합니다.
+- **유니버설(암호화되지 않은 프로토콜)** : 원격 장치에 배포할 때마다 이 인증 모드를 사용합니다. 현재 이 인증 모드는 IoT 디바이스, Xbox 디바이스 및 HoloLens 디바이스, 크리에이터스 업데이트 버전 이상의 PC용입니다. 유니버설(암호화되지 않은 프로토콜)은 신뢰할 수 있는 네트워크에서만 사용해야 합니다. 디버깅 연결은 개발 컴퓨터와 원격 컴퓨터 간에 전달되는 데이터를 가로채고 변경할 수 있는 악의적인 사용자에게 취약합니다.
+- **Windows**: 이 인증 모드는 Visual Studio 원격 도구를 실행하는 원격 PC 배포(데스크톱 또는 노트북)에만 사용할 수 있습니다. 대상 컴퓨터의 로그인된 사용자의 자격 증명에 액세스할 수 있는 경우 이 인증 모드를 사용합니다. 원격 배포에 가장 안전한 채널입니다.
+- **없음**: 이 인증 모드는 Visual Studio 원격 도구를 실행하는 원격 PC 배포(데스크톱 또는 노트북)에만 사용할 수 있습니다. 테스트 계정이 로그인되어 있는 환경에서 테스트 컴퓨터가 설정되어 있고 자격 증명을 입력할 수 없는 경우 이 인증 모드를 사용합니다. 원격 디버거 설정이 인증 없음을 허용하도록 설정되어 있는지 확인합니다.
 
 ## <a name="advanced-remote-deployment-options"></a>고급 원격 배포 옵션
 
-Visual Studio 2015 업데이트 3 및 Windows 10 1 주년 업데이트의 릴리스는 특정 Windows 10 장치 새 고급 원격 배포 옵션입니다. 고급 원격 배포 옵션은 프로젝트 속성의 **디버그** 메뉴에 있습니다.
+As of the release of Visual Studio 2015 Update 3, and the Windows 10 Anniversary Update, there are new advanced remote deployment options for certain Windows 10 devices. 고급 원격 배포 옵션은 프로젝트 속성의 **디버그** 메뉴에 있습니다.
 
 새 속성은 다음과 같습니다.
 
@@ -137,7 +137,7 @@ Visual Studio 2015 업데이트 3 및 Windows 10 1 주년 업데이트의 릴리
 
 고급 원격 배포 옵션을 활용하려면 다음 요구 사항을 충족해야 합니다.
 
-- Visual Studio 2015 업데이트 3 또는 일부 이후 Visual Studio 버전 1.4.1 Windows 10 도구를 사용 하 여 설치 된 이상을 포함 하는 Windows 10 1 주년 업데이트 SDK 모든 표시 되도록 업데이트를 사용 하 여 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다는 최신 개발 및 보안 기능입니다.
+- Have Visual Studio 2015 Update 3 or some later Visual Studio release installed with Windows 10 Tools 1.4.1 or later(which includes the Windows 10 Anniversary Update SDK) We recommend that you use the latest version of Visual Studio with updates to ensure you get all the newest development and security features.
 - Windows 10 1주년 업데이트 Xbox 원격 디바이스 또는 Windows 10 크리에이터스 업데이트 PC를 대상으로 지정
 - 유니버설 인증 모드 사용
 
@@ -160,7 +160,7 @@ C++ UWP 앱의 경우 속성 페이지는 다음과 같이 표시됩니다.
 > [!NOTE]
 > **디바이스에 파일 복사**는 현재 Windows 10 1주년 업데이트를 실행하는 Xbox 또는 Windows 10 크리에이터스 업데이트를 실행하는 PC에서 지원됩니다.
 
-원격 장치에서 레이아웃 다음 기본 위치에 복사 합니다. `\\MY-DEVKIT\DevelopmentFiles\PACKAGE-REGISTRATION-PATH`
+On the remote device, the layout gets copied to the following default location: `\\MY-DEVKIT\DevelopmentFiles\PACKAGE-REGISTRATION-PATH`
 
 ### <a name="register-layout-from-network"></a>네트워크에서 레이아웃 등록
 
@@ -171,12 +171,12 @@ C++ UWP 앱의 경우 속성 페이지는 다음과 같이 표시됩니다.
 이 작업에 대한 도움말은 다음 예제를 참조하세요.
 
 - 예제 1(네트워크 공유로 액세스할 수 있는 로컬 레이아웃 폴더):
-  - **레이아웃 폴더 경로** = `D:\Layouts\App1`
-  - **패키지 등록 경로** = `\\NETWORK-SHARE\Layouts\App1`
+  - **Layout folder path** = `D:\Layouts\App1`
+  - **Package registration path** = `\\NETWORK-SHARE\Layouts\App1`
 
 - 예제 2(네트워크 레이아웃 폴더):
-  - **레이아웃 폴더 경로** = `\\NETWORK-SHARE\Layouts\App1`
-  - **패키지 등록 경로** = `\\NETWORK-SHARE\Layouts\App1`
+  - **Layout folder path** = `\\NETWORK-SHARE\Layouts\App1`
+  - **Package registration path** = `\\NETWORK-SHARE\Layouts\App1`
 
 네트워크에서 레이아웃을 처음 등록할 경우 대상 디바이스에 자격 증명이 캐시되므로 반복해서 로그인할 필요가 없습니다. 캐시된 자격 증명을 제거하려면 Windows 10 SDK에서 **deletecreds** 명령이 있는 [WinAppDeployCmd.exe 도구](https://docs.microsoft.com/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool)를 사용할 수 있습니다.
 
@@ -185,35 +185,35 @@ C++ UWP 앱의 경우 속성 페이지는 다음과 같이 표시됩니다.
 > [!NOTE]
 > **네트워크에서 레이아웃 등록**은 현재 Windows 10 1주년 업데이트를 실행하는 Xbox 또는 Windows 10 크리에이터스 업데이트를 실행하는 PC에서 지원됩니다.
 
-장치 제품군에 따라 다음 기본 위치에 원격 장치에서 레이아웃 등록 가져옵니다: `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` -이 symlink를 **패키지 등록 경로** PC는 symlink를 사용 하지 않습니다 및 instead 직접 등록 된 **패키지 등록 경로**
+On the remote device, the layout gets registered to the following default location depending on the device family: `Xbox: \\MY-DEVKIT\DevelopmentFiles\XrfsFiles` - this is a symlink to the **package registration path** PC does not use a symlink and instead directly registers the **package registration path**
 
 ## <a name="debugging-options"></a>디버깅 옵션
 
-Windows 10에서 UWP 앱의 시작 성능을 적극적으로 시작 하 여 개선 되 고 호출 후 기술에서 앱을 일시 중단 [막기 위 함](https://docs.microsoft.com/windows/uwp/launch-resume/handle-app-prelaunch)합니다. 대부분의 앱은 이 모드에서 작동되기 위해 특별히 수행해야 할 작업은 없지만 일부 앱에서는 동작을 조정해야 할 수 있습니다. 코드 경로의 문제를 디버깅하기 위해 Visual Studio에서 앱 디버깅을 사전 실행 모드로 시작할 수 있습니다.
+On Windows 10, the startup performance of UWP apps is improved by proactively launching and then suspending apps in a technique called [prelaunch](https://docs.microsoft.com/windows/uwp/launch-resume/handle-app-prelaunch). 대부분의 앱은 이 모드에서 작동되기 위해 특별히 수행해야 할 작업은 없지만 일부 앱에서는 동작을 조정해야 할 수 있습니다. 코드 경로의 문제를 디버깅하기 위해 Visual Studio에서 앱 디버깅을 사전 실행 모드로 시작할 수 있습니다.
 
-디버깅 지원 되며 Visual Studio 프로젝트에서 모두 (**디버그**  - &gt; **기타 디버그 대상**  - &gt; **유니버설 디버그 Windows 앱 사전 실행**)를 한 컴퓨터에 이미 설치 된 앱 (**디버그**  - &gt; **기타 디버그 대상**  - &gt; **디버그 Installed App Package** 를 선택 하 여 합니다 **사전 실행을 사용 하 여 활성화 앱** 확인란) 합니다. 자세한 내용은 [UWP 사전 실행 디버그](https://go.microsoft.com/fwlink/p/?LinkId=717245)를 참조하세요.
+Debugging is supported both from a Visual Studio project (**Debug** -&gt; **Other Debug Targets** -&gt; **Debug Universal Windows App Prelaunch**), and for apps already installed on the machine (**Debug** -&gt; **Other Debug Targets** -&gt; **Debug Installed App Package** by selecting the **Activate app with Prelaunch** check box). 자세한 내용은 [UWP 사전 실행 디버그](https://blogs.msdn.com/b/visualstudioalm/archive/2015/11/30/debug-uwp-prelaunch-with-vs2015.aspx)를 참조하세요.
 
 시작 프로젝트의 **디버그** 속성 페이지에서 다음 배포 옵션을 설정할 수 있습니다.
 
-- **로컬 네트워크 루프백 허용**
+- **Allow local network loopback**
 
-  보안 상의 이유로, 표준 방식으로 설치되는 UWP 앱은 이 앱이 설치되는 장치에 네트워크 호출이 허용되지 않습니다. 기본적으로 Visual Studio 배포에서는 배포된 앱에 대해 이 규칙이 면제됩니다. 이러한 예외를 통해 단일 컴퓨터에서 통신 절차를 테스트할 수 있습니다. Microsoft Store 앱을 제출 하기 전에 예외 없이 앱을 테스트 해야 합니다.
+  보안 상의 이유로, 표준 방식으로 설치되는 UWP 앱은 이 앱이 설치되는 장치에 네트워크 호출이 허용되지 않습니다. 기본적으로 Visual Studio 배포에서는 배포된 앱에 대해 이 규칙이 면제됩니다. 이러한 예외를 통해 단일 컴퓨터에서 통신 절차를 테스트할 수 있습니다. Before submitting your app to the Microsoft Store, you should test your app without the exemption.
 
   앱에서 네트워크 루프백 예외를 제거하려면 다음을 수행하세요.
 
-  - 에 C# 및 Visual Basic **디버그** 속성 페이지에서의 선택을 취소 합니다 **로컬 네트워크 루프백 허용** 확인란 합니다.
+  - On the C# and Visual Basic **Debug** property page, clear the **Allow local network loopback** check box.
   - JavaScript 및 C++ **디버깅** 속성 페이지에서 **로컬 네트워크 루프백 허용** 값을 **아니요**로 설정합니다.
 
-- **/ 하지 마십시오를 시작 하지만 시작 시 코드 디버그 시작 응용 프로그램**
+- **Do not launch, but debug my code when it starts / Launch Application**
 
   앱이 실행될 때 디버깅 세션이 자동으로 시작되도록 배포를 구성하려면 다음을 수행하세요.
 
-  - 에 C# 및 Visual Basic **디버그** 속성 페이지를 선택 합니다 **시작 하지 않음 시작 시 코드를 디버그** 확인란 합니다.
+  - On the C# and Visual Basic **Debug** property page, select the **Do not launch, but debug my code when it starts** check box.
   - JavaScript 및 C++ **디버깅** 속성 페이지에서, **응용 프로그램 실행** 값을 **예**로 설정합니다.
 
 ## <a name="symbols"></a>기호
 
-기호 파일에는 변수, 함수 이름, 진입점 주소 등 코드를 디버그할 때 유용한 여러 데이터가 포함되어 있으므로 예외 및 호출 스택 실행 순서를 이해하는 데 도움이 됩니다. 대부분의 Windows 변형에 대한 기호는 [Microsoft 기호 서버](https://msdl.microsoft.com/download/symbols)를 통해 사용할 수 있거나, 더 빨리 오프라인에서 조회하기 위해 [Windows 기호 패키지 다운로드](https://aka.ms/winsymbols)에서 다운로드할 수 있습니다.
+기호 파일에는 변수, 함수 이름, 진입점 주소 등 코드를 디버그할 때 유용한 여러 데이터가 포함되어 있으므로 예외 및 호출 스택 실행 순서를 이해하는 데 도움이 됩니다. 대부분의 Windows 변형에 대한 기호는 [Microsoft 기호 서버](https://msdl.microsoft.com/download/symbols)를 통해 사용할 수 있거나, 더 빨리 오프라인에서 조회하기 위해 [Windows 기호 패키지 다운로드](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-symbols)에서 다운로드할 수 있습니다.
 
 Visual Studio에 대한 기호 옵션을 설정하려면 **도구 &gt; 옵션**을 선택한 다음 대화 창에서 **디버깅 &gt; 기호**로 이동합니다.
 
@@ -226,11 +226,11 @@ Visual Studio에 대한 기호 옵션을 설정하려면 **도구 &gt; 옵션**�
 .reload
 ```
 
-`‘;’` 구분 기호를 사용하여 경로를 더 추가하거나 `.sympath+` 명령을 사용할 수 있습니다. WinDbg를 사용하는 고급 기호 작업의 경우 [공용 및 프라이빗 기호](https://docs.microsoft.com/windows-hardware/drivers/debugger/public-and-private-symbols)를 참조하세요.
+`‘;’` 구분 기호를 사용하여 경로를 더 추가하거나 `.sympath+` 명령을 사용할 수 있습니다. WinDbg를 사용하는 고급 기호 작업의 경우 [공용 및 개인 기호](https://docs.microsoft.com/windows-hardware/drivers/debugger/public-and-private-symbols)를 참조하세요.
 
 ## <a name="windbg"></a>WinDbg
 
-WinDbg는 [Windows SDK](https://go.microsoft.com/fwlink/p/?LinkID=271979)에 포함된 Windows용 디버깅 도구 제품군의 일부로 제공되는 강력한 디버거입니다. Windows SDK 설치를 사용하면 Windows용 디버깅 도구를 독립 실행형 제품으로 설치할 수 있습니다. 네이티브 코드 디버깅에 매우 유용하지만 관리 코드 또는 HTML5로 작성된 앱에는 WinDbg를 사용하지 않는 것이 좋습니다.
+WinDbg는 [Windows SDK](https://developer.microsoft.com/)에 포함된 Windows용 디버깅 도구 제품군의 일부로 제공되는 강력한 디버거입니다. Windows SDK 설치를 사용하면 Windows용 디버깅 도구를 독립 실행형 제품으로 설치할 수 있습니다. 네이티브 코드 디버깅에 매우 유용하지만 관리 코드 또는 HTML5로 작성된 앱에는 WinDbg를 사용하지 않는 것이 좋습니다.
 
 UWP 앱으로 WinDbg를 사용하려면 [PLM(프로세스 수명 관리) 테스트 및 디버깅 도구](testing-debugging-plm.md)에서 설명한 대로 먼저 PLMDebug를 사용하여 앱 패키지에 대해 PLM(프로세스 수명 관리)을 사용하지 않도록 설정해야 합니다.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2dec80e4b79a93fc5b6f1e2990ad89570d62c5f1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 406af54cfaae8710cea2d989278a16f28c8dd619
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361441"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256213"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>카메라 프레임 분석 효과
 
@@ -97,7 +97,7 @@ ms.locfileid: "66361441"
 
 [!code-cs[RegisterFaceDetectionHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterFaceDetectionHandler)]
 
-이벤트에 대한 처리기에서 [**FaceDetectedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.FaceDetectedEventArgs)의 [**FaceDetectionEffectFrame.DetectedFaces**](https://docs.microsoft.com/uwp/api/windows.media.core.facedetectioneffectframe.detectedfaces) 속성에 액세스하여 프레임에서 감지된 모든 얼굴의 목록을 가져올 수 있습니다. [  **FaceBox**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.detectedface.facebox) 속성은 감지된 얼굴이 포함된 사각형을 미리 보기 스트림 크기에 대해 상대적인 단위로 설명하는 [**BitmapBounds**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapBounds) 구조입니다. 미리 보기 스트림 좌표를 화면 좌표로 변환하는 샘플 코드를 보려면 [얼굴 감지 UWP 샘플](https://go.microsoft.com/fwlink/?LinkId=619486)을 참조하세요.
+이벤트에 대한 처리기에서 [**FaceDetectedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.FaceDetectedEventArgs)의 [**FaceDetectionEffectFrame.DetectedFaces**](https://docs.microsoft.com/uwp/api/windows.media.core.facedetectioneffectframe.detectedfaces) 속성에 액세스하여 프레임에서 감지된 모든 얼굴의 목록을 가져올 수 있습니다. [  **FaceBox**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.detectedface.facebox) 속성은 감지된 얼굴이 포함된 사각형을 미리 보기 스트림 크기에 대해 상대적인 단위로 설명하는 [**BitmapBounds**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapBounds) 구조입니다. 미리 보기 스트림 좌표를 화면 좌표로 변환하는 샘플 코드를 보려면 [얼굴 감지 UWP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFaceDetection)을 참조하세요.
 
 [!code-cs[FaceDetected](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetected)]
 
@@ -116,7 +116,7 @@ ms.locfileid: "66361441"
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Basic photo, video, and audio capture with MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  

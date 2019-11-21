@@ -6,12 +6,12 @@ ms.date: 11/13/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e27256fbf19ed31a7b087e94dea9e5514db516f
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 07e087dbb0cb2fcbd4dd1d098f84c49543f3a885
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57648268"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258149"
 ---
 # <a name="multilingual-app-toolkit-40-faq--troubleshooting"></a>다국어 앱 도구 키트 4.0 FAQ 및 문제 해결
 
@@ -83,7 +83,7 @@ MAT를 효과적으로 사용하려면 먼저 앱을 지역화할 수 있어야 
 
 ## <a name="what-is-microsoft-translator"></a>Microsoft Translator란 무엇인가요?
 
-Microsoft Translator는 기계 번역을 제공하는 클라우드 기반 서비스입니다. 기계 번역은 합리적인 방식으로 사람의 번역을 얻지 못할 경우 번역을 제공받고자 할 때 이상적입니다. [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)에서 더 자세히 알아볼 수 있습니다.
+Microsoft Translator는 기계 번역을 제공하는 클라우드 기반 서비스입니다. 기계 번역은 합리적인 방식으로 사람의 번역을 얻지 못할 경우 번역을 제공받고자 할 때 이상적입니다. [Microsoft Translator](https://www.microsofttranslator.com/)에서 더 자세히 알아볼 수 있습니다.
 
 도구 키트는 Microsoft Translator 서비스를 사용하여 사용자에게 번역 제안을 제공합니다. Microsoft Translator 아이콘이 번역 언어 대화 상자에 나타날 때 Microsoft Translator에서 지원하는 언어를 확인할 수 있습니다.
 
@@ -142,7 +142,7 @@ msbuild /t:rebuild <project-name>
 
 ## <a name="what-if-my-translator-doesnt-have-windows-10-andor-visual-studio-andor-the-multilingual-app-toolkit-installed"></a>번역자의 시스템에 Windows 10 및/또는 Visual Studio 및/또는 다국어 앱 도구 키트가 설치되어 있지 않은 경우 어떻게 하나요?
 
-선택 하면 **출력: 전자 메일로** 내보내기 문자열 리소스 대화 상자에서 전자 메일 다운로드 하 여 다국어 앱 도구 키트 (신체가 안전 하 게) 4.0을 설치 링크를 포함 합니다. 번역자는 시스템에 Windows 10 또는 Visual Studio가 설치되어 있지 않아도 MAT 4.0 독립 실행형 다국어 편집기 도구를 설치할 수 있습니다.
+문자열 리소스 내보내기 대화 상자에서 **출력: 메일 수신자**를 선택하면 MAT(다국어 앱 도구 키트) 4.0을 다운로드하고 설치할 수 있는 링크가 이메일에 포함됩니다. 번역자는 시스템에 Windows 10 또는 Visual Studio가 설치되어 있지 않아도 MAT 4.0 독립 실행형 다국어 편집기 도구를 설치할 수 있습니다.
 
 자세한 내용은 [다국어 앱 도구 키트 4.0 사용](use-mat.md)을 참조하세요.
 
@@ -177,6 +177,6 @@ Microsoft Store 인증 과정을 시작하기 전에 프로젝트에서 `<projec
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Multilingual App Toolkit 4.0 사용](use-mat.md)
-* [Microsoft Translator](https://go.microsoft.com/fwlink/p/?LinkId=258220)
-* [MakePri.exe 명령줄 옵션](../../app-resources/makepri-exe-command-options.md)
+* [Use the Multilingual App Toolkit 4.0](use-mat.md)
+* [Microsoft Translator](https://www.microsofttranslator.com/)
+* [MakePri.exe command-line options](../../app-resources/makepri-exe-command-options.md)

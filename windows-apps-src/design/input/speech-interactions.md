@@ -8,12 +8,12 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ef8cdad247a57ce5fab461e70c2725fda4231efd
-ms.sourcegitcommit: ed32219e04f814a12ea018348e9cf678fcfd5e3a
+ms.openlocfilehash: 4d36368fab267370e2301e52731d99bc7b146fbd
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67253065"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258244"
 ---
 # <a name="speech-interactions"></a>음성 조작
 
@@ -58,7 +58,7 @@ ms.locfileid: "67253065"
 
 인식이 끝났음을 나타내는 침묵 시간 즉, 음성 입력이 없는 시간을 지정합니다. 이는 일반적으로 사용자가 앱 참여를 중지했음을 나타내므로 이 시간 이후에 인식을 자동으로 다시 시작하지 마세요.
 
-네트워크 연결을 사용할 수 없는 경우 모든 연속 인식 UI를 비활성화하고 인식 세션을 종료합니다. 연속 인식 네트워크 연결이 필요 합니다.
+네트워크 연결을 사용할 수 없는 경우 모든 연속 인식 UI를 비활성화하고 인식 세션을 종료합니다. Continuous recognition requires a network connection.
 
 ## <a name="commanding"></a>명령
 
@@ -157,7 +157,7 @@ ms.locfileid: "67253065"
 직접 디자인하고 작성하는 사용자 지정 문법은 앱과 함께 설치됩니다. 사용자 지정 제약 조건을 사용하는 음성 인식은 장치에서 수행됩니다.
 
 -   프로그래밍 방식 목록 제약 조건은 단어 또는 구 목록을 사용하여 간단한 문법을 만드는 가벼운 방법을 제공합니다. 짧고 고유한 구를 인식하는 데는 목록 제약 조건이 유용합니다. 음성 인식 엔진이 일치를 확인하기 위해서만 음성을 처리해야 하므로 문법의 모든 단어를 명시적으로 지정하면 인식 정확도도 향상됩니다. 또한 목록은 프로그래밍 방식으로도 업데이트할 수 있습니다.
--   SRGS 문법은 프로그래밍 방식 목록 제약 조건과 달리 [SRGS 버전 1.0](https://go.microsoft.com/fwlink/p/?LinkID=262302)에서 정의한 XML 형식을 사용한 정적 문서입니다. SRGS 문법을 사용하면 단일 인식에서 여러 시맨틱 의미를 캡처할 수 있으므로 음성 인식 환경을 가장 잘 제어할 수 있습니다.
+-   SRGS 문법은 프로그래밍 방식 목록 제약 조건과 달리 [SRGS 버전 1.0](https://www.w3.org/TR/speech-grammar/)에서 정의한 XML 형식을 사용한 정적 문서입니다. SRGS 문법을 사용하면 단일 인식에서 여러 시맨틱 의미를 캡처할 수 있으므로 음성 인식 환경을 가장 잘 제어할 수 있습니다.
 
     다음은 SRGS 문법 작성을 위한 몇 가지 팁입니다.
 
@@ -200,18 +200,18 @@ TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 -   비정상적인 단어 순서로 연결하거나 문장 구성 숫자 또는 문장 부호를 발음하면 구를 이해할 수 없게 될 수 있습니다.
 -   원어민이 구를 말하는 방식과 음성 운율 또는 억양이 다른 경우 음성이 부자연스럽게 들릴 수 있습니다.
 
-일반 텍스트 대신 SSML 음성 신시사이저에 대 한 입력으로 사용 하 여 두 가지 문제를 해결할 수 있습니다. SSML에 대한 자세한 내용은 [SSML을 사용하여 합성된 음성 제어](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) 및 [음성 합성 생성 언어 참조](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378377(v=office.14))를 참조하세요.
+Both issues can be addressed by using SSML instead of plain text as input to the speech synthesizer. SSML에 대한 자세한 내용은 [SSML을 사용하여 합성된 음성 제어](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378454(v=office.14)) 및 [음성 합성 생성 언어 참조](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh378377(v=office.14))를 참조하세요.
 
 ## <a name="other-articles-in-this-section"></a>이 섹션의 다른 문서 
 
 | 항목 | 설명 |
 | --- | --- |
 | [음성 인식](speech-recognition.md) | 음성 인식 기능을 사용하여 입력을 제공하고, 동작이나 명령을 지정하고 작업을 수행합니다. |
-| [음성 인식기의 언어를 지정 합니다.](specify-the-speech-recognizer-language.md) | 음성 인식에 사용하기 위해 설치된 언어를 선택하는 방법에 대해 알아봅니다. |
+| [Specify the speech recognizer language](specify-the-speech-recognizer-language.md) | 음성 인식에 사용하기 위해 설치된 언어를 선택하는 방법에 대해 알아봅니다. |
 | [사용자 지정 인식 제약 조건 정의](define-custom-recognition-constraints.md) | 음성 인식에 대한 사용자 지정 제약 조건을 정의하고 사용하는 방법을 알아봅니다. |
 | [연속 받아쓰기 사용](enable-continuous-dictation.md) |긴 형식의 연속 받아쓰기 음성 입력을 캡처 및 인식하는 방법을 알아봅니다. |
-| [오디오 입력을 사용 하 여 문제를 관리 합니다.](manage-issues-with-audio-input.md) | 오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다. |
-| [음성 인식 시간 제한 설정](set-speech-recognition-timeouts.md) | 음성 인식기에서 무음 또는 인식할 수 없는 소리(왁자지껄)를 무시하고 계속해서 음성 입력에 대해 수신 대기하는 시간을 설정합니다. |
+| [Manage issues with audio input](manage-issues-with-audio-input.md) | 오디오 입력 품질로 인해 발생하는 음성 인식 정확도와 관련된 문제를 관리하는 방법을 알아봅니다. |
+| [Set speech recognition timeouts](set-speech-recognition-timeouts.md) | 음성 인식기에서 무음 또는 인식할 수 없는 소리(왁자지껄)를 무시하고 계속해서 음성 입력에 대해 수신 대기하는 시간을 설정합니다. |
 
 ## <a name="related-articles"></a>관련 문서
 
@@ -220,7 +220,7 @@ TTS는 일반 텍스트 또는 SSML에서 음성 출력을 생성합니다.
 
  **샘플**
 
-* [음성 인식 및 음성 합성 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619897)
+* [Speech recognition and speech synthesis sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
  
 
  

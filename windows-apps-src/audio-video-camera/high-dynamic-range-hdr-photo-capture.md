@@ -1,19 +1,19 @@
 ---
 ms.assetid: 0186EA01-8446-45BA-A109-C5EB4B80F368
 description: 이 문서에서는 AdvancedPhotoCapture 클래스를 사용하여 HDR(High Dynamic Range) 및 낮은 조명 사진을 캡처하는 방법을 보여 줍니다.
-title: HDR(High Dynamic Range) 및 낮은 조명 사진 캡처
+title: HDR(High Dynamic Range) 및 어두운 조명 사진 캡처
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b5a8e19961fa7cd1dd67e52339f49fd012f21f06
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 04133cc4a58ddbdbd45ba68b4c0635cd47ca2ca8
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361739"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257000"
 ---
-# <a name="high-dynamic-range-hdr-and-low-light-photo-capture"></a>HDR(High Dynamic Range) 및 낮은 조명 사진 캡처
+# <a name="high-dynamic-range-hdr-and-low-light-photo-capture"></a>HDR(High Dynamic Range) 및 어두운 조명 사진 캡처
 
 
 
@@ -30,7 +30,7 @@ HDR 캡처와 관련된 기타 문서는 다음과 같습니다.
 
 
 > [!NOTE] 
-> Windows 10, 버전 1709부터는 비디오 녹화와 **AdvancedPhotoCapture** 동시 사용이 지원됩니다.  이 기능은 이전 버전에서 지원되지 않습니다. 이러한 변화 덕분에 **[LowLagMediaRecording](https://docs.microsoft.com/uwp/api/windows.media.capture.lowlagmediarecording)** 및 **[AdvancedPhotoCapture](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture)** 를 동시에 준비할 수 있습니다.  **[MediaCapture.PrepareAdvancedPhotoCaptureAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.prepareadvancedphotocaptureasync)** 호출과 **[AdvancedPhotoCapture.FinishAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.FinishAsync)** 호출 사이에 비디오 녹화를 시작하거나 중지할 수 있습니다. 또한 비디오를 녹화하는 동안 **[AdvancedPhotoCapture.CaptureAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.CaptureAsync)** 를 호출할 수도 있습니다. 그러나 비디오 녹화 중에 HDR 사진 캡처와 같은 일부 **AdvancedPhotoCapture** 시나리오를 사용하면 HDR 캡처로 인해 일부 비디오 프레임이 변경되어 부정적인 사용자 환경을 유발할 수 있습니다. 이러한 이유로 **[AdvancedPhotoControl.SupportedModes](https://docs.microsoft.com/uwp/api/windows.media.devices.advancedphotocontrol.SupportedModes)** 에서 반환한 모드 목록은 비디오가 녹화되는 동안 다릅니다. 비디오 녹화를 시작하거나 중지한 직후에 이 값을 확인하여 현재 비디오 녹화 상태에서 원하는 모드가 지원되고 있는지 확인해야 합니다.
+> Windows 10, 버전 1709부터는 비디오 녹화와 **AdvancedPhotoCapture** 동시 사용이 지원됩니다.  이 기능은 이전 버전에서 지원되지 않습니다. 이러한 변화 덕분에 **[LowLagMediaRecording](https://docs.microsoft.com/uwp/api/windows.media.capture.lowlagmediarecording)** 및 **[AdvancedPhotoCapture](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture)** 를 동시에 준비할 수 있습니다. **[MediaCapture.PrepareAdvancedPhotoCaptureAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.prepareadvancedphotocaptureasync)** 호출과 **[AdvancedPhotoCapture.FinishAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.FinishAsync)** 호출 사이에 비디오 녹화를 시작하거나 중지할 수 있습니다. 또한 비디오를 녹화하는 동안 **[AdvancedPhotoCapture.CaptureAsync](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.CaptureAsync)** 를 호출할 수도 있습니다. 그러나 비디오 녹화 중에 HDR 사진 캡처와 같은 일부 **AdvancedPhotoCapture** 시나리오를 사용하면 HDR 캡처로 인해 일부 비디오 프레임이 변경되어 부정적인 사용자 환경을 유발할 수 있습니다. 이러한 이유로 **[AdvancedPhotoControl.SupportedModes](https://docs.microsoft.com/uwp/api/windows.media.devices.advancedphotocontrol.SupportedModes)** 에서 반환한 모드 목록은 비디오가 녹화되는 동안 다릅니다. 비디오 녹화를 시작하거나 중지한 직후에 이 값을 확인하여 현재 비디오 녹화 상태에서 원하는 모드가 지원되고 있는지 확인해야 합니다.
 
 
 > [!NOTE] 
@@ -39,7 +39,7 @@ HDR 캡처와 관련된 기타 문서는 다음과 같습니다.
 > [!NOTE] 
 > 이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 보다 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본적인 미디어 캡처 패턴을 파악하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
 
-컨텍스트에서 또는 해당 앱의 시작점으로 사용된 API를 확인하는 데 사용할 수 있는 **AdvancedPhotoCapture** 클래스의 사용을 보여 주는 범용 Windows 샘플이 있습니다. 자세한 내용은 [카메라 고급 캡처 샘플](https://go.microsoft.com/fwlink/?LinkID=620517)을 참조하세요.
+컨텍스트에서 또는 해당 앱의 시작점으로 사용된 API를 확인하는 데 사용할 수 있는 **AdvancedPhotoCapture** 클래스의 사용을 보여 주는 범용 Windows 샘플이 있습니다. 자세한 내용은 [카메라 고급 캡처 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraAdvancedCapture)을 참조하세요.
 
 ## <a name="advanced-photo-capture-namespaces"></a>고급 사진 캡처 네임스페이스
 
@@ -51,7 +51,7 @@ HDR 캡처와 관련된 기타 문서는 다음과 같습니다.
 
 ### <a name="determine-if-hdr-photo-capture-is-supported-on-the-current-device"></a>현재 디바이스에서 HDR 사진 캡처가 지원되는지 확인
 
-이 문서에 설명된 HDR 캡처 기술은 [**AdvancedPhotoCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.AdvancedPhotoCapture) 개체를 사용하여 수행됩니다. 모든 장치가 **AdvancedPhotoCapture**를 통해 HDR 캡처를 지원하는 것은 아닙니다. **MediaCapture** 개체의 [**VideoDeviceController**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.VideoDeviceController)를 가져온 다음 [**AdvancedPhotoControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.AdvancedPhotoControl) 속성을 가져와 앱이 현재 실행 중인 디바이스가 이 기술을 지원하는지 확인합니다. 비디오 장치 컨트롤러의 [**SupportedModes**](https://docs.microsoft.com/uwp/api/windows.media.devices.advancedphotocontrol.supportedmodes) 컬렉션을 확인하여 [**AdvancedPhotoMode.Hdr**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.AdvancedPhotoMode)이 포함되어 있는지 검토합니다. 포함되어 있으면 **AdvancedPhotoCapture**를 사용하는 HDR 캡처가 지원됩니다.
+이 문서에 설명된 HDR 캡처 기술은 [**AdvancedPhotoCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.AdvancedPhotoCapture) 개체를 사용하여 수행됩니다. 모든 장치가 **AdvancedPhotoCapture**를 통해 HDR 캡처를 지원하는 것은 아닙니다. **MediaCapture** 개체의 [**VideoDeviceController**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.VideoDeviceController)를 가져온 다음 [**AdvancedPhotoControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.AdvancedPhotoControl) 속성을 가져와 앱이 현재 실행 중인 디바이스가 이 기술을 지원하는지 확인합니다. 비디오 디바이스 컨트롤러의 [**SupportedModes**](https://docs.microsoft.com/uwp/api/windows.media.devices.advancedphotocontrol.supportedmodes) 컬렉션을 확인하여 [**AdvancedPhotoMode.Hdr**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.AdvancedPhotoMode)가 포함되어 있는지 확인합니다. 포함된 경우 **AdvancedPhotoCapture**를 사용한 HDR 캡처가 지원됩니다.
 
 [!code-cs[HdrSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetHdrSupported)]
 
@@ -61,7 +61,7 @@ HDR 캡처와 관련된 기타 문서는 다음과 같습니다.
 
 [!code-cs[DeclareAdvancedCapture](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareAdvancedCapture)]
 
-앱에서 **MediaCapture** 개체를 초기화한 후에 새 [**AdvancedPhotoCaptureSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.AdvancedPhotoCaptureSettings) 개체를 만들고 해당 모드를 [**AdvancedPhotoMode.Hdr**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.AdvancedPhotoMode)로 설정합니다. [  **AdvancedPhotoControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.AdvancedPhotoControl) 개체의 [**Configure**](https://docs.microsoft.com/uwp/api/windows.media.devices.advancedphotocontrol.configure) 메서드를 호출하고 만든 **AdvancedPhotoCaptureSettings** 개체를 전달합니다.
+앱에서 **MediaCapture** 개체를 초기화한 후 [**AdvancedPhotoCaptureSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.AdvancedPhotoCaptureSettings) 개체를 만들고 이 모드를 [**AdvancedPhotoMode.Hdr**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.AdvancedPhotoMode)로 설정합니다. [**AdvancedPhotoControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.AdvancedPhotoControl) 개체의 [**Configure**](https://docs.microsoft.com/uwp/api/windows.media.devices.advancedphotocontrol.configure) 메서드에 호출하여 만든 **AdvancedPhotoCaptureSettings** 개체를 전달합니다.
 
 **MediaCapture** 개체의 [**PrepareAdvancedPhotoCaptureAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.prepareadvancedphotocaptureasync)를 호출하고 캡처에 사용될 인코딩 유형을 지정하는 [**ImageEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.ImageEncodingProperties) 개체를 전달합니다. **ImageEncodingProperties** 클래스는 **MediaCapture**에서 지원되는 이미지 인코딩을 만들기 위한 정적 메서드를 제공합니다.
 
@@ -84,7 +84,7 @@ HDR 캡처와 관련된 기타 문서는 다음과 같습니다.
 HDR 프로세스는 여러 프레임을 캡처한 후, 모든 프레임 캡처가 완료된 다음 단일 이미지로 합성합니다. 캡처 후, 전체 HDR 프로세스를 완료하기 전에 [**OptionalReferencePhotoCaptured**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.optionalreferencephotocaptured) 이벤트를 처리하여 프레임에 대한 액세스 권한을 얻을 수 있습니다. 최종 HDR 사진 결과에만 관심이 있는 경우 이 작업을 수행할 필요가 없습니다.
 
 > [!IMPORTANT]
-> [**OptionalReferencePhotoCaptured** ](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.optionalreferencephotocaptured) 참조 프레임을 생성 하지 않습니다 및 HDR 하드웨어를 지 원하는 장치에서 발생 하지 않습니다. 앱은 이 이벤트가 발생하지 않는 경우를 처리해야 합니다.
+> [**OptionalReferencePhotoCaptured**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.optionalreferencephotocaptured) is not raised on devices that support hardware HDR and therefore do not generate reference frames. 앱은 이 이벤트가 발생하지 않는 경우를 처리해야 합니다.
 
 참조 프레임은 **CaptureAsync** 호출에 대한 컨텍스트 정보 없이 도착하므로 **OptionalReferencePhotoCaptured** 처리기에 컨텍스트 정보를 제공하기 위한 메커니즘이 제공됩니다. 먼저 컨텍스트 정보가 포함될 개체를 호출해야 합니다. 이 개체의 이름과 내용은 사용자가 결정합니다. 이 예제에서는 캡처의 파일 이름 및 카메라 방향을 추적하기 위한 멤버가 있는 개체를 정의합니다.
 
@@ -142,7 +142,7 @@ Windows 10 버전 1607부터 **AdvancedPhotoCapture**를 사용하여 낮은 조
 [!code-cs[CleanUpAdvancedPhotoCapture](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpAdvancedPhotoCapture)]
 
 ## <a name="working-with-advancedcapturedphoto-objects"></a>AdvancedCapturedPhoto 개체 작업
-[**AdvancedPhotoCapture.CaptureAsync** ](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.captureasync) 반환을 [ **AdvancedCapturedPhoto** ](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.AdvancedCapturedPhoto) 캡처된 사진을 나타내는 개체입니다. 이 개체는 이미지를 나타내는 [**CapturedFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CapturedFrame) 개체를 반환하는 [**Frame**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedcapturedphoto.frame) 속성을 표시합니다. 또한 [**OptionalReferencePhotoCaptured**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.optionalreferencephotocaptured) 이벤트는 해당 이벤트 인수에 **CapturedFrame** 개체를 제공합니다. 이 유형의 개체를 가져온 후 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 만들기, 파일에 이미지 저장 등 다양한 작업을 수행할 수 있습니다. 
+[**AdvancedPhotoCapture.CaptureAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.captureasync) returns an [**AdvancedCapturedPhoto**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.AdvancedCapturedPhoto) object representing the captured photo. 이 개체는 이미지를 나타내는 [**CapturedFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CapturedFrame) 개체를 반환하는 [**Frame**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedcapturedphoto.frame) 속성을 표시합니다. 또한 [**OptionalReferencePhotoCaptured**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.optionalreferencephotocaptured) 이벤트는 해당 이벤트 인수에 **CapturedFrame** 개체를 제공합니다. 이 유형의 개체를 가져온 후 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 만들기, 파일에 이미지 저장 등 다양한 작업을 수행할 수 있습니다. 
 
 ## <a name="get-a-softwarebitmap-from-a-capturedframe"></a>CapturedFrame에서 SoftwareBitmap 가져오기
 개체의 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframe.softwarebitmap) 속성에 액세스하기만 하면 **CapturedFrame** 개체에서 **SoftwareBitmap**을 쉽게 가져올 수 있습니다. 그러나 대부분의 인코딩 형식은 **AdvancedPhotoCapture**에서 **SoftwareBitmap**을 지원하지 않으므로 사용하기 전에 속성이 null이 아닌지 확인해야 합니다.
@@ -169,4 +169,4 @@ Windows 10 버전 1607부터 **AdvancedPhotoCapture**를 사용하여 낮은 조
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Basic photo, video, and audio capture with MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)

@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ddd35e0365efcc8c224e717b66f53734af32123d
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 2a13f0779414f60784ac1703fa32ac1ef5c89635
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339758"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256547"
 ---
 # <a name="process-media-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 미디어 프레임 처리
 
-이 문서에서는 [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader)와 [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture)를 사용하여 색, 깊이, 적외선 카메라, 오디오 장치, 사용자 지정 프레임 원본(예: 골격 추적 프레임을 생성하는 프레임 원본) 등 하나 이상의 사용 가능한 원본에서 미디어 프레임을 가져오는 방법을 보여 줍니다. 이 기능은 확대된 현실 및 깊이 인식 카메라 앱과 같이 미디어 프레임의 실시간 처리를 수행하는 앱에 사용되도록 설계되었습니다.
+이 문서에서는 [**MediaFrameReader**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader)와 [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture)를 사용하여 색, 깊이, 적외선 카메라, 오디오 장치, 사용자 지정 프레임 원본(예: 골격 추적 프레임을 생성하는 프레임 원본) 등 하나 이상의 사용 가능한 원본에서 미디어 프레임을 가져오는 방법을 보여 줍니다. 이 기능은 증강 현실 및 깊이 인식 카메라 앱과 같이 미디어 프레임의 실시간 처리를 수행하는 앱에 사용되도록 설계되었습니다.
 
 일반적인 사진 앱 등 단순히 비디오 또는 사진을 캡처하려면 [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture)에서 지원하는 다른 캡처 기술 중 하나를 사용할 수 있습니다. 미디어 캡처 기술 및 사용 방법을 보여 주는 문서 목록은 [**카메라**](camera.md)를 참조하세요.
 
@@ -23,7 +23,7 @@ ms.locfileid: "71339758"
 > 이 문서에 설명된 기능은 Windows 10 버전 1607부터 사용할 수 있습니다.
 
 > [!NOTE] 
-> 유니버설 Windows 앱 샘플에서는 **MediaFrameReader**를 사용하여 색, 깊이, 적외선 카메라 등 다른 프레임 원본의 프레임을 표시하는 방법을 보여 줍니다. 자세한 내용은 [카메라 프레임 샘플](https://go.microsoft.com/fwlink/?LinkId=823230)을 참조하세요.
+> 유니버설 Windows 앱 샘플에서는 **MediaFrameReader**를 사용하여 색, 깊이, 적외선 카메라 등 다른 프레임 원본의 프레임을 표시하는 방법을 보여 줍니다. 자세한 내용은 [카메라 프레임 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames)을 참조하세요.
 
 > [!NOTE] 
 > 오디오 데이터가 포함된 **MediaFrameReader**를 사용하기 위한 새로운 API 세트가 Windows 10, 1803 버전에 도입되었습니다. 자세한 내용은 [MediaFrameReader를 사용하여 오디오 프레임 처리](process-audio-frames-with-mediaframereader.md)를 참조하세요.
@@ -32,7 +32,7 @@ ms.locfileid: "71339758"
 ## <a name="setting-up-your-project"></a>프로젝트 설정
 **MediaCapture**를 사용하는 앱의 경우 카메라 장치에 액세스하기 전에 앱에서 *웹캠* 기능을 사용하도록 선언해야 합니다. 앱이 오디오 장치에서 캡처하는 경우 *마이크* 장치 기능도 선언해야 합니다. 
 
-**앱 매니페스트에 기능 추가**
+**Add capabilities to the app manifest**
 
 1.  Microsoft Visual Studio의 **솔루션 탐색기**에서 **package.appxmanifest** 항목을 두 번 클릭하여 응용 프로그램 매니페스트 디자이너를 엽니다.
 2.  **접근 권한 값** 탭을 선택합니다.
@@ -44,11 +44,11 @@ ms.locfileid: "71339758"
 [!code-cs[FramesUsing](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFramesUsing)]
 
 ## <a name="select-frame-sources-and-frame-source-groups"></a>프레임 원본과 프레임 원본 그룹 선택
-미디어 프레임을 처리하는 대부분의 앱은 장치의 색과 깊이 카메라 등 여러 원본의 프레임을 한 번에 가져와야 합니다. [**Mediaframesourcegroup**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) 개체는 동시에 사용할 수 있는 미디어 프레임 원본 집합을 나타냅니다. 정적 메서드 [**MediaFrameSourceGroup.FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.findallasync)를 호출하여 현재 장치에서 지원하는 모든 프레임 원본 그룹의 목록을 가져옵니다.
+미디어 프레임을 처리하는 대부분의 앱은 장치의 색과 깊이 카메라 등 여러 원본의 프레임을 한 번에 가져와야 합니다. The [**MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) object represents a set of media frame sources that can be used simultaneously. 정적 메서드 [**MediaFrameSourceGroup.FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.findallasync)를 호출하여 현재 장치에서 지원하는 모든 프레임 원본 그룹의 목록을 가져옵니다.
 
 [!code-cs[FindAllAsync](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetFindAllAsync)]
 
-Devicewatcher을 사용 하 여 [**Devicewatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) 를 만들 수도 있습니다 [ **. createwatcher**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher) 와 장치에서 사용 가능한 프레임 소스 그룹이 있는 경우 알림을 받기 위해 [**wdeviceselector**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) 에서 반환 된 값 외부 카메라가 연결 된 경우와 같은 변경 자세한 내용은 [**장치 열거**](https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices)를 참조하세요.
+You can also create a [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) using [**DeviceInformation.CreateWatcher**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher) and the value returned from [**MediaFrameSourceGroup.GetDeviceSelector**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) to receive notifications when the available frame source groups on the device changes, such as when an external camera is plugged in. 자세한 내용은 [**장치 열거**](https://docs.microsoft.com/windows/uwp/devices-sensors/enumerate-devices)를 참조하세요.
 
 [  **MediaFrameSourceGroup**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup)에는 그룹에 포함된 프레임 원본을 설명하는 [**MediaFrameSourceInfo**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceInfo) 개체 컬렉션이 있습니다. 장치에서 사용할 수 있는 프레임 원본 그룹을 검색한 후에는 원하는 프레임 원본을 노출하는 그룹을 선택할 수 있습니다.
 
@@ -79,12 +79,12 @@ Devicewatcher을 사용 하 여 [**Devicewatcher**](https://docs.microsoft.com/u
 
 [!code-cs[DeclareMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetDeclareMediaCapture)]
 
-생성자를 호출하여 **MediaCapture** 개체의 인스턴스를 만듭니다. 그런 다음 **MediaCapture** 개체를 초기화 하는 데 사용 되는 [**MediaCaptureInitializationSettings**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings) 개체를 만듭니다. 이 예제에서는 다음 설정이 사용됩니다.
+생성자를 호출하여 **MediaCapture** 개체의 인스턴스를 만듭니다. Next, create a [**MediaCaptureInitializationSettings**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings) object that will be used to initialize the **MediaCapture** object. 이 예제에서는 다음 설정이 사용됩니다.
 
-* [**Sourcegroup**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sourcegroup) -이는 프레임을 가져오는 데 사용 하는 원본 그룹을 시스템에 알려 줍니다. 원본 그룹은 동시에 사용할 수 있는 미디어 프레임 원본 집합을 정의합니다.
-* [**SharingMode**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sharingmode) -캡처 원본 장치를 독점적으로 제어 해야 하는지 여부를 시스템에 알려 줍니다. 이 값을 [**ExclusiveControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureSharingMode)로 설정하면 생성할 프레임 형식 등의 캡처 장치 설정을 변경할 수 있다는 의미입니다. 그러나 다른 앱에서 이미 단독으로 제어하는 경우 미디어 캡처 장치를 초기화하려고 하면 오류가 발생합니다. 이 값을 [**SharedReadOnly**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureSharingMode)로 설정하면 다른 앱에서 사용되어도 프레임 원본의 프레임을 수신할 수 있지만 장치의 설정을 변경할 수는 없습니다.
+* [**SourceGroup**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sourcegroup) - This tells the system which source group you will be using to get frames. 원본 그룹은 동시에 사용할 수 있는 미디어 프레임 원본 집합을 정의합니다.
+* [**SharingMode**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.sharingmode) - This tells the system whether you need exclusive control over the capture source devices. 이 값을 [**ExclusiveControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureSharingMode)로 설정하면 생성할 프레임 형식 등의 캡처 장치 설정을 변경할 수 있다는 의미입니다. 그러나 다른 앱에서 이미 단독으로 제어하는 경우 미디어 캡처 장치를 초기화하려고 하면 오류가 발생합니다. 이 값을 [**SharedReadOnly**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureSharingMode)로 설정하면 다른 앱에서 사용되어도 프레임 원본의 프레임을 수신할 수 있지만 장치의 설정을 변경할 수는 없습니다.
 * [**MemoryPreference**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.memorypreference) - [**cpu**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureMemoryPreference)를 지정 하는 경우 시스템은 cpu 메모리를 사용하여 프레임이 도착할 때 이를 보장 하는 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 개체를 사용할 수 있습니다. [  **Auto**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCaptureMemoryPreference)로 지정할 경우 시스템에서는 프레임을 저장하는 데 가장 적합한 메모리 위치를 동적으로 선택합니다. 시스템에서 GPU 메모리를 사용하도록 선택한 경우 미디어 프레임이 **SoftwareBitmap**이 아닌 [**IDirect3DSurface**](https://docs.microsoft.com/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) 개체로 수신됩니다.
-* [**StreamingCaptureMode**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.streamingcapturemode) -오디오를 스트리밍할 필요가 없음을 나타내려면 [**비디오**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.StreamingCaptureMode) 로 설정 합니다.
+* [**StreamingCaptureMode**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacaptureinitializationsettings.streamingcapturemode) - Set this to [**Video**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.StreamingCaptureMode) to indicate that audio doesn't need to be streamed.
 
 [  **InitializeAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.initializeasync)를 호출하여 **MediaCapture**를 원하는 설정으로 초기화합니다. 초기화가 실패하는 경우 *try* 블록 내에서 호출해야 합니다.
 
@@ -151,7 +151,7 @@ XAML에서 프레임을 표시하는 첫 번째 단계는 이미지 컨트롤을
 응용 프로그램이 일시 중지될 때 미디어 캡처 개체 정리에 대한 자세한 내용은 [**카메라 미리 보기 표시**](simple-camera-preview-access.md)를 참조하세요.
 
 ## <a name="the-framerenderer-helper-class"></a>FrameRenderer 도우미 클래스
-유니버설 Windows [카메라 프레임 샘플](https://go.microsoft.com/fwlink/?LinkId=823230)은 앱의 색, 적외선 및 깊이 원본을 통해 프레임을 쉽게 표시할 수 있는 도우미 클래스를 제공합니다. 일반적으로 단순히 화면에 표시하는 대신 색과 적외선 데이터를 사용하여 더 많은 작업을 수행하려고 하지만 이 도우미 클래스를 사용하면 프레임 읽기 프로그램 기능을 보여 주고 프레임 읽기 프로그램 구현을 디버깅할 수 있습니다.
+유니버설 Windows [카메라 프레임 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames)은 앱의 색, 적외선 및 깊이 원본을 통해 프레임을 쉽게 표시할 수 있는 도우미 클래스를 제공합니다. 일반적으로 단순히 화면에 표시하는 대신 색과 적외선 데이터를 사용하여 더 많은 작업을 수행하려고 하지만 이 도우미 클래스를 사용하면 프레임 읽기 프로그램 기능을 보여 주고 프레임 읽기 프로그램 구현을 디버깅할 수 있습니다.
 
 **FrameRenderer** 도우미 클래스는 다음 메서드를 구현합니다.
 
@@ -252,8 +252,8 @@ Windows 버전 1709부터 XAML 페이지의 **[MediaPlayerElement](https://docs.
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture를 사용 하는 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [카메라 프레임 샘플](https://go.microsoft.com/fwlink/?LinkId=823230)
+* [Basic photo, video, and audio capture with MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [Camera frames sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames)
  
 
  
