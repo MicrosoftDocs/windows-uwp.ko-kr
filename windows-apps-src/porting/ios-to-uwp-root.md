@@ -7,12 +7,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d66962971844f1983b527c6cea436dba03d63b8b
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 266a5f147b57e522088dab2ec298b54596ef77b7
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322337"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260154"
 ---
 # <a name="move-from-ios-to-uwp"></a>iOS에서 UWP로 이동
 
@@ -26,12 +26,12 @@ Windows 10 및 UWP(유니버설 Windows 플랫폼)가 포함될 수 있도록 �
 
 | 항목 | 설명 |
 |-------|-------------|
-| [IOS 및 UWP 앱 개발 방법 선택](selecting-an-approach-to-ios-and-uwp-app-development.md) | 플랫폼 간 앱을 개발할 때 어떤 방법을 선택할 수 있나요? |
+| [IOS 및 UWP 앱 개발에 대 한 접근 방식 선택](selecting-an-approach-to-ios-and-uwp-app-development.md) | 플랫폼 간 앱을 개발할 때 어떤 방법을 선택할 수 있나요? |
 | [IOS 개발자를 위한 UWP 시작](getting-started-with-uwp-for-ios-developers.md) | Windows 10용 개발을 고려하는 iOS 개발자인 경우 이러한 문서는 시작하는 데 도움이 됩니다. |
 | [Windows 10을 사용 하 여 Mac 설정](setting-up-your-mac-with-windows-10.md) | 현재 Mac 컴퓨터를 사용하여 Windows용 앱을 개발합니다. |
 
 ## <a name="related-topics"></a>관련 항목
 
-**디자이너 및 개발자를 위한**
-* [모든 Windows 장치에 대 한 유니버설 Windows 앱 빌드](https://go.microsoft.com/fwlink/p/?LinkID=397871)
+**디자이너 및 개발자 용**
+* [모든 Windows 장치용 유니버설 Windows 앱 빌드](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
 * [UWP 앱에 대 한 디자인 자산 다운로드](https://docs.microsoft.com/windows/uwp/design/downloads/index)

@@ -1,21 +1,21 @@
 ---
-Description: 앱에 고객 장치의 특정 설정과 일치하는 리소스가 없으면, 앱의 기본 리소스가 사용됩니다. 이 항목에서는 그러한 기본 리소스를 지정하는 방법에 대해 설명합니다.
+Description: 앱에 고객 디바이스의 특정 설정과 일치하는 리소스가 없으면 앱의 기본 리소스가 사용됩니다. 이 문서에서는 이러한 기본 리소스를 지정하는 방법에 대해 설명합니다.
 title: 앱에서 사용하는 기본 리소스 지정
 template: detail.hbs
 ms.date: 11/14/2017
 ms.topic: article
-keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
+keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: b11f6dfec2941ae4eaa277f37de66965bd1ea4aa
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 5dfd09f2a1a3ab326c09434ee2c613ae57214d59
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593988"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254640"
 ---
 # <a name="specify-the-default-resources-that-your-app-uses"></a>앱에서 사용하는 기본 리소스 지정
 
-앱에 고객 장치의 특정 설정과 일치하는 리소스가 없으면, 앱의 기본 리소스가 사용됩니다. 이 항목에서는 그러한 기본 리소스를 지정하는 방법에 대해 설명합니다.
+앱에 고객 디바이스의 특정 설정과 일치하는 리소스가 없으면 앱의 기본 리소스가 사용됩니다. 이 문서에서는 이러한 기본 리소스를 지정하는 방법에 대해 설명합니다.
 
 고객이 Microsoft Store로부터 앱을 설치하면 고객의 장치 설정이 앱의 사용 가능 리소스와 매칭됩니다. 이러한 매칭은 해당 사용자가 적합한 리소스만 다운로드하고 설치하도록 하기 위해 수행됩니다. 예를 들어, 해당 사용자의 언어 기본 설정, 장치의 해상도와 DPI 설정에 가장 잘 맞는 문자열과 이미지만 사용됩니다. 예를 들어, `200`이 `scale`의 기본값이지만, 원하는 경우 이를 덮어쓸 수 있습니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "57593988"
    </default>
    ```
    
-   **참고** 값 `LANGUAGE-TAG(S)`는 앱의 기본 언어와 동기화되어야 합니다. 단일 [BCP 47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)인 경우, 앱의 기본 언어가 이와 동일한 태그여야 합니다. 쉼표로 구분된 언어 태그 목록인 경우, 앱의 기본 언어가 목록의 첫 번째 태그여야 합니다. 앱 패키지 매니페스트 소스 파일(`Package.appxmanifest`)의 **응용 프로그램** 탭에 있는 **기본 언어** 필드에서 앱의 기본 언어를 설정합니다.
+   **참고** 값 `LANGUAGE-TAG(S)`는 앱의 기본 언어와 동기화되어야 합니다. 단일 [BCP 47 언어 태그](https://tools.ietf.org/html/bcp47)인 경우, 앱의 기본 언어가 이와 동일한 태그여야 합니다. 쉼표로 구분된 언어 태그 목록인 경우, 앱의 기본 언어가 목록의 첫 번째 태그여야 합니다. 앱 패키지 매니페스트 소스 파일( **)의** 응용 프로그램**탭에 있는**기본 언어`Package.appxmanifest` 필드에서 앱의 기본 언어를 설정합니다.
 
 4. 각 `<qualifier>` 요소는 각 한정자 이름의 기본값으로 사용할 값을 Visual Studio에 알려줍니다. 지금까지의 파일 내용으로는, Visual Studio의 동작이 변경되지 않습니다. 다시 말하면, 이러한 내용은 기본값이므로 Visual Studio는 이 파일에 해당 내용이 있는 것처럼 *이미 동작하고 있습니다*. 따라서 자신만의 기본값으로 기본값을 덮어쓰려면 파일의 값을 변경해야 합니다. 다음은 처음 세 값을 편집했을 경우 파일의 모습을 보여주는 예입니다.
    ```xml
@@ -64,7 +64,7 @@ ms.locfileid: "57593988"
 
 덮어쓴 기본값이 제대로 적용되고 있는지 확인하려면 `<ProjectFolder>\obj\<ReleaseConfiguration folder>\priconfig.xml` 파일을 찾아 내용이 덮어쓴 값과 일치하는지 확인합니다. 일치하는 경우, 앱이 기본적으로 사용할 리소스 한정자 값을 성공적으로 구성한 것입니다. 사용자 설정과 일치하는 값이 없는 경우, 여기서 설정한 기본 한정자 값이 들어 있는 폴더나 파일 이름에 리소스가 사용됩니다.
 
-### <a name="how-does-this-work"></a>어떻게 작동합니까?
+### <a name="how-does-this-work"></a>어떻게 작동하나요?
 
 백그라운드에서 Visual Studio는 `MakePri.exe`라는 도구를 실행하여 PRI(패키지 리소스 인덱스)라고 하는 파일을 생성합니다. 이 파일에는 기본 리소스임을 나타내는 등 모든 앱 리소스에 대한 설명이 들어 있습니다. 이 도구에 대한 자세한 내용은 [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)을 참조하세요. Visual Studio가 구성 파일을 `MakePri.exe`에 전달합니다. `priconfig.default.xml` 파일의 내용이 해당 구성 파일의 `<default>` 요소로 사용됩니다. 이는 기본값으로 적용될 한정자 값 설정을 지정하는 부분입니다. 따라서 `priconfig.default.xml`을 추가하고 편집하면 Visual Studio가 앱에 대해 생성하는 패키지 리소스 인덱스 파일의 내용에 영향이 미치며 해당 내용이 앱 패키지에 포함됩니다.
 
@@ -103,5 +103,5 @@ ms.locfileid: "57593988"
 ## <a name="related-topics"></a>관련 항목
 
 * [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](tailor-resources-lang-scale-contrast.md)
-* [BCP-47 언어 태그](https://go.microsoft.com/fwlink/p/?linkid=227302)
+* [BCP-47 언어 태그](https://tools.ietf.org/html/bcp47)
 * [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)

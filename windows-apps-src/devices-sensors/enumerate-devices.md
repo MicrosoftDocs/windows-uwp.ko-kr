@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cddd7fbcff62f070fa4c4e181e012ec871f1c0c2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: b562dd139705e983bc8a8ad10962d923cff55559
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370159"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259676"
 ---
 # <a name="enumerate-devices"></a>디바이스 열거
 
@@ -26,7 +26,7 @@ async void enumerateSnapshot(){
 }
 ```
 
-[  **Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) API의 고급 사용법을 보여 주는 샘플을 다운로드하려면 [여기](https://go.microsoft.com/fwlink/?LinkID=620536)를 클릭하세요.
+[  **Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) API의 고급 사용법을 보여 주는 샘플을 다운로드하려면 [여기](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing)를 클릭하세요.
 
 ## <a name="enumeration-apis"></a>열거형 API
 
@@ -42,9 +42,9 @@ async void enumerateSnapshot(){
 -   물리적으로 연결된 버스. PCI 및 USB가 여기에 포함됩니다. 예를 들면 **장치 관리자**에서 볼 수 있는 모든 항목입니다.
 -   [UPnP](https://docs.microsoft.com/windows/desktop/UPnP/universal-plug-and-play-start-page)
 -   DLNA(Digital Living Network Alliance)
--   [**검색 및 시작 (전화)** ](https://docs.microsoft.com/uwp/api/Windows.Media.DialProtocol)
--   [**DNS 서비스 검색 (DNS-SD)** ](https://docs.microsoft.com/uwp/api/Windows.Networking.ServiceDiscovery.Dnssd)
--   [장치 (WSD)에서 웹 서비스](https://docs.microsoft.com/windows/desktop/WsdApi/wsd-portal)
+-   [**검색 및 시작 (전화 걸기)** ](https://docs.microsoft.com/uwp/api/Windows.Media.DialProtocol)
+-   [**Dns 서비스 검색 (DNS SD)** ](https://docs.microsoft.com/uwp/api/Windows.Networking.ServiceDiscovery.Dnssd)
+-   [장치 (WSD)의 웹 서비스](https://docs.microsoft.com/windows/desktop/WsdApi/wsd-portal)
 -   [Bluetooth](https://docs.microsoft.com/windows/desktop/Bluetooth/bluetooth-start-page)
 -   [**Wi-Fi Direct**](https://docs.microsoft.com/uwp/api/Windows.Devices.WiFiDirect)
 -   WiGig
@@ -77,12 +77,12 @@ async void enumerateSnapshot(){
 
 -   [  **SupportedDeviceSelectors**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceselectors)와 [**SupportedDeviceClasses**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepickerfilter.supporteddeviceclasses) 중 하나 또는 둘 다를 [**DevicePicker.Filter**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.filter)에 추가하여 UI에 표시되는 장치를 제어할 수 있습니다. 대부분의 경우에서 하나의 선택기나 클래스만 추가하면 되지만 여러 개가 필요한 경우 여러 개를 추가할 수 있습니다. 여러 선택기 또는 클래스를 추가하는 경우 OR 논리 함수를 사용하여 결합합니다.
 -   장치를 검색할 속성을 지정할 수 있습니다. [  **DevicePicker.RequestedProperties**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.requestedproperties)에 속성을 추가하면 됩니다.
--   [  **Appearance**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.appearance)를 사용하여 [**DevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePicker)의 모양을 변경할 수 있습니다.
+-   [  **Appearance**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePicker)를 사용하여 [**DevicePicker**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepicker.appearance)의 모양을 변경할 수 있습니다.
 -   [  **DevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePicker)를 표시할 때 크기와 위치를 지정할 수 있습니다.
 
 [  **DevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePicker)가 표시되어 있는 동안 장치가 추가, 제거 또는 업데이트되면 UI의 내용이 자동으로 업데이트됩니다.
 
-**참고**  지정할 수 없습니다는 [ **DeviceInformationKind** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationkind) 사용 하는 [ **DevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePicker)합니다. 특정 **DeviceInformationKind**의 디바이스를 사용하려면 [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher)를 빌드하고 고유한 UI를 제공해야 합니다.
+**참고**  [**DevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePicker)를 사용 하 여 [**deviceinformationkind**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationkind) 를 지정할 수 없습니다. 특정 **DeviceInformationKind**의 디바이스를 사용하려면 [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher)를 빌드하고 고유한 UI를 제공해야 합니다.
 
  
 
@@ -112,7 +112,7 @@ async void enumerateSnapshot(){
 -   관심 있는 속성이 변경되는 경우 업데이트 알림
 -   장치를 더 이상 사용할 수 있거나 장치가 필터와 더 이상 일치하지 않는 경우 제거 알림
 
-[  **DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher)를 사용하는 경우 대부분 장치 목록을 유지 관리하고 목록에 장치를 추가하거나, 목록에서 항목을 제거하거나, 감시자가 감시 중인 장치에서 업데이트를 받을 때 항목을 업데이트할 수 있습니다. 업데이트 알림을 받는 경우 업데이트된 정보를 [**DeviceInformationUpdate**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationupdate) 개체로 사용할 수 있습니다. 장치 목록을 업데이트하려면 먼저 변경된 적절 한 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation)를 찾습니다. 그런 다음 **DeviceInformationUpdate** 개체를 제공하여 해당 개체의 [**Update**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.update) 메서드를 호출합니다. 이 편리한 기능은 **DeviceInformation** 개체를 자동으로 업데이트합니다.
+[  **DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher)를 사용하는 경우 대부분 장치 목록을 유지 관리하고 목록에 장치를 추가하거나, 목록에서 항목을 제거하거나, 감시자가 감시 중인 장치에서 업데이트를 받을 때 항목을 업데이트할 수 있습니다. 업데이트 알림을 받는 경우 업데이트된 정보를 [**DeviceInformationUpdate**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationupdate) 개체로 사용할 수 있습니다. 장치 목록을 업데이트하려면 먼저 변경된 적절 한 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation)를 찾습니다. 그런 다음 [DeviceInformationUpdate**개체를 제공하여 해당 개체의**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.update)Update 메서드를 호출합니다. 이 편리한 기능은 **DeviceInformation** 개체를 자동으로 업데이트합니다.
 
 [  **DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher)는 디바이스가 도착할 때와 변경될 때 알림을 보내므로 네트워킹 또는 무선 프로토콜을 통해 열거되는 **AssociationEndpoint**, **AssociationEndpointContainer** 또는 **AssociationEndpointService** 개체에 관심이 있는 경우 이 방법을 사용하여 디바이스를 열거해야 합니다.
 
@@ -121,9 +121,9 @@ async void enumerateSnapshot(){
 ## <a name="watch-devices-as-a-background-task"></a>백그라운드 작업으로 장치 감시
 
 
-백그라운드 작업으로 장치를 감시하는 작업은 위에서 설명한 [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) 만들기와 유사합니다. 실제로 이전 섹션에 설명된 대로 먼저 일반 **DeviceWatcher** 개체를 만들어야 합니다. 이 개체를 만들었으면 [**DeviceWatcher.Start**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.start) 대신 [**GetBackgroundTrigger**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.enumerationcompleted)를 호출합니다. **GetBackgroundTrigger**를 호출할 때 받고 싶은 알림의 종류 즉, 추가, 제거 또는 업데이트를 지정해야 합니다. 업데이트 또는 제거를 요청하려면 추가도 요청해야 합니다. 트리거를 등록하면 **DeviceWatcher**가 백그라운드에서 즉시 실행되기 시작합니다. 이때부터 기준에 일치하는 응용 프로그램에 대한 새로운 알림을 받을 때마다 백그라운드 작업이 트리거되고 응용 프로그램을 마지막으로 트리거한 이후의 최신 변경 내용을 제공합니다.
+백그라운드 작업으로 장치를 감시하는 작업은 위에서 설명한 [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) 만들기와 유사합니다. 실제로 이전 섹션에 설명된 대로 먼저 일반 **DeviceWatcher** 개체를 만들어야 합니다. 이 개체를 만들었으면 [**DeviceWatcher.Start**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.enumerationcompleted) 대신 [**GetBackgroundTrigger**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.start)를 호출합니다. **GetBackgroundTrigger**를 호출할 때 받고 싶은 알림의 종류 즉, 추가, 제거 또는 업데이트를 지정해야 합니다. 업데이트 또는 제거를 요청하려면 추가도 요청해야 합니다. 트리거를 등록하면 **DeviceWatcher**가 백그라운드에서 즉시 실행되기 시작합니다. 이때부터 기준에 일치하는 응용 프로그램에 대한 새로운 알림을 받을 때마다 백그라운드 작업이 트리거되고 응용 프로그램을 마지막으로 트리거한 이후의 최신 변경 내용을 제공합니다.
 
-**중요**  처음을 [ **DeviceWatcherTrigger** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceWatcherTrigger) 감시자에 도달 하면 될 응용 프로그램 트리거는 **EnumerationCompleted**  상태입니다. 따라서 초기 결과가 모두 포함됩니다. 이후 응용 프로그램을 트리거할 때는 마지막 트리거 이후 발생한 추가, 업데이트 및 제거 알림만 포함됩니다. 이와 약간 다르게 포그라운드 [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) 개체의 경우 초기 결과가 한번에 하나씩 제공되지 않고 **EnumerationCompleted**에 도달한 후 번들로만 제공됩니다.
+  **중요** 한 [**DeviceWatcherTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceWatcherTrigger) 는 감시자가 **enumerationcompleted** 상태에 도달할 때 응용 프로그램을 트리거하는 첫 번째 시점입니다. 따라서 초기 결과가 모두 포함됩니다. 이후 응용 프로그램을 트리거할 때는 마지막 트리거 이후 발생한 추가, 업데이트 및 제거 알림만 포함됩니다. 이와 약간 다르게 포그라운드 [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) 개체의 경우 초기 결과가 한번에 하나씩 제공되지 않고 **EnumerationCompleted**에 도달한 후 번들로만 제공됩니다.
 
  
 
@@ -142,7 +142,7 @@ async void enumerateSnapshot(){
 ## <a name="using-deviceinformationkind"></a>DeviceInformationKind 사용
 
 
-대부분의 시나리오에서는 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체의 [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationkind)는 신경 쓰지 않아도 됩니다. 사용 중인 장치 API에서 반환되는 장치 선택기에서는 해당 API와 함께 사용할 적절한 장치 종류를 가져오도록 보장하는 경우가 많기 때문입니다. 그러나 일부 시나리오에서는 장치에 대한 **DeviceInformation**를 가져오려고 하지만 장치 선택기를 제공하는 해당하는 장치 API가 없을 수 있습니다. 이러한 경우 선택기를 직접 빌드해야 합니다. 예를 들어 Web Services on Devices는 전용 API 없지만 [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) API를 사용하여 해당 장치를 검색하고 장치에 대한 정보를 가져온 다음 소켓 API를 사용하여 장치를 사용할 수 있습니다.
+대부분의 시나리오에서는 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationkind) 개체의 [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation)는 신경 쓰지 않아도 됩니다. 사용 중인 장치 API에서 반환되는 장치 선택기에서는 해당 API와 함께 사용할 적절한 장치 종류를 가져오도록 보장하는 경우가 많기 때문입니다. 그러나 일부 시나리오에서는 장치에 대한 **DeviceInformation**를 가져오려고 하지만 장치 선택기를 제공하는 해당하는 장치 API가 없을 수 있습니다. 이러한 경우 선택기를 직접 빌드해야 합니다. 예를 들어 Web Services on Devices는 전용 API 없지만 [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) API를 사용하여 해당 장치를 검색하고 장치에 대한 정보를 가져온 다음 소켓 API를 사용하여 장치를 사용할 수 있습니다.
 
 장치 개체를 열거하는 장치 선택기를 직접 빌드하는 경우 [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationkind)에 대해 이해해야 합니다. 가능한 모든 종류 및 다른 종류와의 관계는 **DeviceInformationKind**의 참조 페이지에 설명되어 있습니다. **DeviceInformationKind**의 가장 일반적인 용도 중 하나는 장치 선택기와 함께 쿼리를 제출할 때 검색할 장치 종류를 지정하는 것입니다. 이렇게 하면 제공된 **DeviceInformationKind**와 일치하는 장치만 열거할 수 있습니다. 예를 들어 **DeviceInterface** 개체를 찾은 다음 부모 **Device** 개체에 대한 정보를 가져오는 쿼리를 실행할 수 있습니다. 해당 부모 개체는 추가 정보를 포함할 수 있습니다.
 
@@ -153,7 +153,7 @@ async void enumerateSnapshot(){
 ## <a name="save-a-device-for-later-use"></a>나중에 사용하기 위해 장치 저장
 
 
-모든 [ **DeviceInformation** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체는 두 가지 정보 조합으로 고유 하 게 식별 됩니다. [**DeviceInformation.Id** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) 하 고 [ **DeviceInformation.Kind**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.kind)합니다. 이 두 가지 정보를 유지하면 **DeviceInformation** 개체가 손실된 후 [**CreateFromIdAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createfromidasync)에 이 정보를 제공하여 개체를 다시 만들 수 있습니다. 이 작업을 수행하는 경우 앱과 통합되는 장치에 대한 사용자 기본 설정을 저장할 수 있습니다.
+모든 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체는 [**DeviceInformation.Id**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id)와 [**DeviceInformation.Kind**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.kind)라는 두 가지 정보의 조합으로 고유하게 식별됩니다. 이 두 가지 정보를 유지하면 **DeviceInformation** 개체가 손실된 후 [**CreateFromIdAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.createfromidasync)에 이 정보를 제공하여 개체를 다시 만들 수 있습니다. 이 작업을 수행하는 경우 앱과 통합되는 장치에 대한 사용자 기본 설정을 저장할 수 있습니다.
 
 
  

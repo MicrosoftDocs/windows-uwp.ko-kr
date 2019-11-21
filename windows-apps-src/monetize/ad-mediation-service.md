@@ -5,16 +5,16 @@ ms.date: 06/05/2018
 ms.topic: article
 keywords: Windows 10 uwp, 광고, 광고, 광고 조정
 ms.localizationpriority: medium
-ms.openlocfilehash: 9197dd4b62df26ff63e469063573789da948c767
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 700a80aff4c991f4fa3bff681ba995b113025fec
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57592258"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259331"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Microsoft 광고 조정 서비스
 
-[Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 사용하여 [앱에서 광고를 표시](display-ads-in-your-app.md)할 때, 필요에 따라 Microsoft 광고 조정 서비스를 사용하여 광고 수익을 최대화할 수 있습니다. 이 문서에서는 광고 조정 서비스와 그 목표에 대해 설명합니다.
+[Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)를 사용하여 [앱에서 광고를 표시](display-ads-in-your-app.md)할 때, 필요에 따라 Microsoft 광고 조정 서비스를 사용하여 광고 수익을 최대화할 수 있습니다. 이 문서에서는 광고 조정 서비스와 그 목표에 대해 설명합니다.
 
 광고 조정 서비스는 [Microsoft 광고 수익 창출 플랫폼](https://developer.microsoft.com/windows/ad-monetization-platform)의 일부입니다. 이 플랫폼은 다음 부분으로 구성됩니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "57592258"
 
 ## <a name="manage-complexity-of-ad-network-relationships"></a>광고 네트워크 관계의 복잡성 관리  
 
-이 작업을 할 필요가 없도록 광고 조정 서비스는 다양한 광고 네트워크에 통합되어 있습니다. Microsoft Advertising SDK를 사용 하 여 앱의 광고를 표시할 ad 중재 설정을 수정할 수 있습니다 [파트너 센터에서](../publish/in-app-ads.md#mediation-settings) 여러 ad 네트워크에서 광고 표시 합니다. 코드를 변경하지 않고 새 광고 네트워크에서 광고를 표시하는 혜택을 얻을 수 있습니다.
+이 작업을 할 필요가 없도록 광고 조정 서비스는 다양한 광고 네트워크에 통합되어 있습니다. Microsoft Advertising SDK를 사용 하 여 앱에 광고를 표시 한 후 [파트너 센터에서](../publish/in-app-ads.md#mediation-settings) ad 중재 설정을 수정 하 여 여러 ad 네트워크의 광고를 표시할 수 있습니다. 코드를 변경하지 않고 새 광고 네트워크에서 광고를 표시하는 혜택을 얻을 수 있습니다.
 
 귀하를 대신하여 광고 네트워크와의 종단 간 관계를 관리합니다. 광고 네트워크 통합에서 광고 제공까지 귀하가 더 이상 추가 작업할 필요 없이 Microsoft가 보고 및 지급을 모두 담당합니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "57592258"
 
 자동으로 새로운 광고 네트워크가 포함되며 학습 예산을 통해 성능이 평가됩니다. 짧은 시간 내에 일련의 광고에서 위치를 찾습니다. 이렇게 하면 광고 네트워크의 경쟁력이 놓아지며 개발자는 앱을 통해 가장 높은 수익을 창출할 수 있습니다.
 
-우리의 [권장 조정 설정](../publish/in-app-ads.md#mediation-settings)을 사용하여 앱의 광고에서 수익을 극대화하는 것이 좋습니다. 이를 사용하면 알고리즘이 앱을 위한 최상의 수익을 산출할 수 있습니다. 그러나 해야 자유롭게 보다 세부적으로 제어할 광고 및 수행 하는 순서를 제공 하는 ad 네트워크를 통해 파트너 센터에서 사용자 고유의 중재 설정을 선택 하도록 합니다.
+우리의 [권장 조정 설정](../publish/in-app-ads.md#mediation-settings)을 사용하여 앱의 광고에서 수익을 극대화하는 것이 좋습니다. 이를 사용하면 알고리즘이 앱을 위한 최상의 수익을 산출할 수 있습니다. 그러나 파트너 센터에서 사용자의 중재 설정을 자유롭게 선택 하 여 광고를 제공 하는 ad 네트워크와 해당 네트워크에서 수행 하는 순서를 보다 세밀 하 게 제어할 수 있습니다.
 
 ## <a name="rich-data-and-signals"></a>풍부한 데이터와 신호
 
@@ -55,6 +55,6 @@ ms.locfileid: "57592258"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)
+* [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)
 * [중재 설정](../publish/in-app-ads.md#mediation-settings)
 * [광고 성과 보고서](../publish/advertising-performance-report.md)

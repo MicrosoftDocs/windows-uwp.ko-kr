@@ -11,18 +11,18 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: 6d1b97e76dc1bf15bded6f44c38a67f40babf7b6
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: f912e6212346a4019d8421c542a81eb2318dc5d9
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370531"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260405"
 ---
 # <a name="handle-app-suspend"></a>앱 일시 중단 처리
 
-**중요 한 Api**
+**중요 API**
 
-- [**일시 중단**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending)
+- [**일시**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending)
 
 시스템에서 앱을 일시 중단할 때 중요한 응용 프로그램 데이터를 저장하는 방법을 배웁니다. 아래의 예제에서는 [**Suspending**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending) 이벤트용 이벤트 처리기를 등록하고 문자열을 파일에 저장합니다.
 
@@ -137,22 +137,22 @@ void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
 
 시스템은 앱 종료 시 앱에 알리지 않으므로, 앱은 일시 중단될 때 응용 프로그램 데이터를 저장하고 단독 리소스와 파일 핸들을 해제하며 앱이 종료 후 활성화될 때 이 리소스와 파일 핸들을 복원해야 합니다.
 
-처리기 내에서 비동기 호출을 수행하면 컨트롤이 해당 비동기 호출에서 즉시 반환됩니다. 즉, 비동기 호출이 아직 완료되지 않은 경우에도 실행이 이벤트 처리기에서 반환될 수 있고 앱이 다음 상태로 이동합니다. 이벤트 처리기에 전달된 [**EnteredBackgroundEventArgs**](https://aka.ms/Ag2yh4) 개체의 [**GetDeferral**](https://aka.ms/Kt66iv) 메서드를 사용하여 반환된 [**Windows.Foundation.Deferral**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral) 개체에서 [**Complete**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete) 메서드가 호출될 때까지 일시 중단을 지연할 수 있습니다.
+처리기 내에서 비동기 호출을 수행하면 컨트롤이 해당 비동기 호출에서 즉시 반환됩니다. 즉, 비동기 호출이 아직 완료되지 않은 경우에도 실행이 이벤트 처리기에서 반환될 수 있고 앱이 다음 상태로 이동합니다. 이벤트 처리기에 전달된 [**EnteredBackgroundEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel?redirectedfrom=MSDN) 개체의 [**GetDeferral**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel?redirectedfrom=MSDN) 메서드를 사용하여 반환된 [**Windows.Foundation.Deferral**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete) 개체에서 [**Complete**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral) 메서드가 호출될 때까지 일시 중단을 지연할 수 있습니다.
 
 지연을 사용해도 앱이 종료되기 전에 코드를 실행할 수 있는 시간이 증가하지는 않습니다. 단지 지연의 *Complete* 메서드 호출이나 기한 경과 중 *더 빠른 시간*까지 종료가 지연됩니다. 일시 중단 상태에서 시간을 연장하려면 [**ExtendedExecutionSession**](run-minimized-with-extended-execution.md)을 사용합니다.
 
 > [!NOTE]
-> Windows 8.1 시스템 응답성 향상을 위해 앱 낮은 우선 순위 액세스 권한을 부여 리소스 후 일시 중단 됩니다. 이 새 우선 순위를 지원하기 위해 일시 중단 작업 제한 시간이 확장되어 앱에 Windows의 일반 우선 순위에 대한 5초 제한 시간이나 Windows Phone의 1-10초 제한 시간에 해당하는 제한 시간이 부여됩니다. 이 제한 시간은 확장하거나 변경할 수 없습니다.
+> Windows 8.1에서 시스템 응답성을 개선 하기 위해 앱은 일시 중단 된 후 리소스에 대 한 우선 순위가 낮은 액세스를 제공 합니다. 이 새 우선 순위를 지원하기 위해 일시 중단 작업 제한 시간이 확장되어 앱에 Windows의 일반 우선 순위에 대한 5초 제한 시간이나 Windows Phone의 1-10초 제한 시간에 해당하는 제한 시간이 부여됩니다. 이 제한 시간은 확장하거나 변경할 수 없습니다.
 
-**Visual Studio를 사용 하 여 디버깅 하는 방법에 대 한 메모:** Visual Studio 디버거에 연결 된 앱을 일시 중단에서 Windows를 방지 합니다. 이렇게 하는 것은 앱이 실행되는 동안 Visual Studio 디버그 UI를 사용자가 볼 수 있도록 하기 위한 것입니다. 앱을 디버그할 때에는 Visual Studio를 사용하여 앱을 일시 중단 이벤트로 보낼 수 있습니다. **디버그 위치** 도구 모음이 표시되는지 확인한 다음 **일시 중단** 아이콘을 클릭합니다.
+**Visual Studio를 사용하는 디버깅에 대한 참고 사항:** Visual Studio에서는 Windows가 디버거에 연결되어 있는 앱을 일시 중단하지 못하도록 합니다. 이렇게 하는 것은 앱이 실행되는 동안 Visual Studio 디버그 UI를 사용자가 볼 수 있도록 하기 위한 것입니다. 앱을 디버그할 때에는 Visual Studio를 사용하여 앱을 일시 중단 이벤트로 보낼 수 있습니다. **디버그 위치** 도구 모음이 표시되는지 확인한 다음 **일시 중단** 아이콘을 클릭합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [앱 수명 주기](app-lifecycle.md)
 * [앱 활성화 처리](activate-an-app.md)
 * [앱 다시 시작 처리](resume-an-app.md)
-* [시작에 대 한 UX 지침을 일시 중단 및 다시 시작](https://docs.microsoft.com/windows/uwp/launch-resume/index)
-* [확장된 실행](run-minimized-with-extended-execution.md)
+* [시작, 일시 중단 및 다시 시작에 대 한 UX 지침](https://docs.microsoft.com/windows/uwp/launch-resume/index)
+* [확장 된 실행](run-minimized-with-extended-execution.md)
 
  
 

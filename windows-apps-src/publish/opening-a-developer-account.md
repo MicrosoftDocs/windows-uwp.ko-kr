@@ -6,33 +6,33 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 78974903d52cf34c2e91e460efbfb1c054afd8fa
-ms.sourcegitcommit: 99595e4938213aafdb49635d684d8ba8eb3f697a
+ms.openlocfilehash: d00fcee11b8cf813144a6f8ea021dc40829056d2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69487815"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259958"
 ---
 # <a name="opening-a-developer-account"></a>개발자 계정 열기
 
 이 문서에서는 [파트너 센터](https://partner.microsoft.com/dashboard)에서 Windows 개발자 계정을 등록 하는 방법을 설명 합니다.
 
 > [!NOTE]
-> 개발자 계정에 등록 하는 경우 귀하의 연락처 정보에 제공 하는 전자 메일 주소를 사용 하 여 계정과 관련 된 메시지를 보냅니다. 프로그램에 대 한 정보를 포함 하는 경우도 있습니다. 이러한 정보 전자 메일을 [옵트아웃 (opt out](https://go.microsoft.com/fwlink/p/?LinkId=533280) ) 하도록 선택 하는 경우에도 여전히 트랜잭션 메시지를 전송 합니다. 예를 들어 앱이 인증을 통과 했거나 지불 하 고 있음을 알 수 있습니다. 이러한 트랜잭션 전자 메일은 계정의 필수 부분이 며 계정을 닫지 않는 한 계정을 계속 받게 됩니다.
+> 개발자 계정에 등록 하는 경우 귀하의 연락처 정보에 제공 하는 전자 메일 주소를 사용 하 여 계정과 관련 된 메시지를 보냅니다. 프로그램에 대 한 정보를 포함 하는 경우도 있습니다. 이러한 정보 전자 메일을 [옵트아웃 (opt out](https://account.microsoft.com/account/Account?ru=https%3A%2F%2Faccount.microsoft.com%2Fprofile%2Fcontact-info&destrt=profile-landing) ) 하도록 선택 하는 경우에도 여전히 트랜잭션 메시지를 전송 합니다. 예를 들어 앱이 인증을 통과 했거나 지불 하 고 있음을 알 수 있습니다. 이러한 트랜잭션 전자 메일은 계정의 필수 부분이 며 계정을 닫지 않는 한 계정을 계속 받게 됩니다.
 
 ## <a name="the-account-signup-process"></a>계정 등록 프로세스
 
 > [!NOTE]
 > 개발자 계정에 등록할 때 표시 되는 화면 및 필드는 다음 단계에 설명 된 것과 약간 다를 수 있습니다. 그러나 기본 정보 및 프로세스는 이러한 단계에서 설명 하는 내용과 일치 합니다.
 
-1.  [등록 페이지로](https://go.microsoft.com/fwlink/p/?LinkId=615100) 이동 하 고 등록을선택 합니다.
+1.  [등록 페이지로](https://developer.microsoft.com/store/register) 이동 하 **고 등록을 선택 합니다**.
 2.  Microsoft 계정으로 로그인하지 않았다면 로그인을 하거나, 새 Microsoft 계정을 생성하세요. 여기에서 사용 하는 Microsoft 계정 개발자 계정에 로그인 하는 데 사용 됩니다.
 3.  거주 하는 [국가/지역 또는 비즈니스가 위치한 국가/지역을](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) 선택 합니다. 이는 나중에 변경할 수 없습니다.
 4.  [개발자 계정 유형](account-types-locations-and-fees.md)(개인 또는 회사)을 선택합니다. 나중에 변경할 수 없으므로 올바른 유형의 계정을 선택해야 합니다.
 5.  사용 하려는 **게시자 표시 이름** (50 자이 하)을 입력 합니다. 고객이 이 이름을 검색할 때 보고 이 이름으로 앱을 알게 되므로 신중하게 이름을 선택합니다. 회사 계정의 경우, 조직의 등록된 회사 이름이 거래 이름을 사용해야 합니다. 다른 사용자가 이미 선택한 이름을 입력 하거나 다른 사용자에 게 해당 이름을 사용할 권한이 있는 경우에는 해당 이름을 사용할 수 없습니다.
 
     > [!NOTE]
-    > 여기에 입력하는 이름을 사용할 권한이 있는지 확인하세요. 선택한 이름의 상표권 또는 저작권이 다른 사람에게 있는 경우 계정이 폐쇄될 수 있습니다. 자세한 내용은 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 을 참조 하세요. 다른 사람이 사용자가 상표 또는 다른 법적 권한을 보유하는 판매자 표시 이름을 사용하는 경우 [Microsoft에 문의](https://go.microsoft.com/fwlink/p/?LinkId=233777)하세요.    
+    > 여기에 입력하는 이름을 사용할 권한이 있는지 확인하세요. 선택한 이름의 상표권 또는 저작권이 다른 사람에게 있는 경우 계정이 폐쇄될 수 있습니다. 자세한 내용은 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 을 참조 하세요. 다른 사람이 사용자가 상표 또는 다른 법적 권한을 보유하는 판매자 표시 이름을 사용하는 경우 [Microsoft에 문의](https://www.microsoft.com/info/cpyrtInfrg.html)하세요.    
 
 6.  개발자 계정에 사용할 연락처 정보를 입력합니다.
 
@@ -59,20 +59,20 @@ ms.locfileid: "69487815"
 
 여러 사용자가 계정에 추가 된 개별 사용자가 아니라 해당 계정을 연 Microsoft 계정 로그인 하 여 회사 계정에 액세스할 수 있도록 하려면 다음 지침을 참조 하세요.
 
--   사용자에 게 아직 속하지 않은 전자 메일 주소 또는와 MyCompany_PartnerCenter@outlook.com같은 다른 개인을 사용 하 여 Microsoft 계정를 만듭니다. 회사의 도메인에서 전자 메일 주소를 사용 하지 마세요. 특히 회사에서 이미 Azure AD를 사용 하는 경우입니다. 앞에서 설명한 대로 나중에 회사의 Azure AD 서비스에서 사용자를 더 추가할 수 있습니다.
+-   사용자에 게 아직 속하지 않은 전자 메일 주소를 사용 하거나 MyCompany_PartnerCenter@outlook.com와 같은 다른 개인을 사용 하 여 Microsoft 계정를 만듭니다. 회사의 도메인에서 전자 메일 주소를 사용 하지 마세요. 특히 회사에서 이미 Azure AD를 사용 하는 경우입니다. 앞에서 설명한 대로 나중에 회사의 Azure AD 서비스에서 사용자를 더 추가할 수 있습니다.
 -   이 Microsoft 계정에 대 한 액세스를 가장 적은 수의 사용자로 제한 합니다.
 -   개발자 계정에 액세스 해야 하는 모든 사용자를 포함 하는 회사 전자 메일 메일 그룹을 설정 합니다. [Microsoft 계정 연결 된 보안 정보](https://account.microsoft.com/security)에이 전자 메일 주소를 추가 합니다. 이 접근 방식을 사용 하면 목록에 있는 모든 직원이이 별칭으로 전송 되는 보안 코드를 받을 수 있습니다. 메일 그룹을 설정 하는 것이 불가능 한 경우 개인의 전자 메일 주소를 보안 정보에 추가할 수 있습니다. 그러나 해당 전자 메일 주소의 소유자는 메시지가 표시 될 때 (예: 새 보안 정보가 계정에 추가 되거나 새 장치에서 계정에 액세스 하는 경우) 보안 코드에 액세스 하 고 공유할 수 있는 유일한 사람이 됩니다.
 -   Microsoft 계정의 보안 정보에 회사 전화 번호를 추가 합니다. 확장이 필요 하지 않으며 주요 팀 멤버에 액세스할 수 있는 숫자를 사용 하십시오.
 -   개발자가 [신뢰할 수 있는 장치](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) 를 사용 하 여 회사의 개발자 계정에 로그인 하도록 권장 합니다. 모든 주요 팀 구성원은 신뢰할 수 있는 디바이스에 대한 액세스 권한이 있어야 합니다. 이렇게 하면 팀 멤버가 계정에 액세스할 때 보안 코드가 전송 될 필요성이 줄어듭니다. 주별 계정 마다 생성할 수 있는 코드의 수에는 제한이 있습니다.
 -   신뢰할 수 없는 PC에서의 계정 액세스를 허용해야 하는 경우 그러한 액세스 권한을 최대 5명의 개발자로 제한합니다. 이러한 개발자는 동일한 지역 및 네트워크 위치를 공유하는 컴퓨터에서 계정에 액세스하는 것이 가장 좋습니다.
--   에서 https://account.microsoft.com/security 회사의 보안 정보를 자주 검토 하 여 모두 최신 인지 확인 합니다.
+-   https://account.microsoft.com/security에서 회사의 보안 정보를 자주 검토 하 여 모두 최신 인지 확인 합니다.
 
 
 ## <a name="microsoft-account-security"></a>Microsoft 계정 보안
 
 Microsoft는 개발자가 제공하는 보안 정보를 사용하여 개발자 계정을 여러 형식의 ID에 연결함으로써 Microsoft 계정의 보안 수준을 높입니다. 그러면 Microsoft 계정(및 개발자 계정)에 무단으로 액세스하는 것이 훨씬 더 어려워집니다. 또한 암호를 잊은 경우 나 누군가가 계정에 액세스 하려고 하는 경우 사용자에 게 연락 하 여 소유권을 확인 하거나 계정에 대 한 적절 한 제어를 다시 설정할 수 있습니다.
 
-Microsoft 계정에는 전자 메일 주소 또는 전화 번호가 2 개 이상 있어야 합니다. 가능한 한 많이 추가하는 것이 좋습니다. 일부 보안 정보는 확인을 거쳐야 유효해집니다. 또한 보안 정보를 자주 검토 하 고 최신 상태 인지 확인 해야 합니다. Microsoft 계정로 이동 https://account.microsoft.com/security 하 고 로그인 하 여 보안 정보를 관리할 수 있습니다. 자세한 내용은 [계정 보안 정보 & 확인 코드](https://support.microsoft.com/help/12428/microsoft-account-security-info-verification-codes)를 참조 하세요.
+Microsoft 계정에는 전자 메일 주소 또는 전화 번호가 2 개 이상 있어야 합니다. 가능한 한 많이 추가하는 것이 좋습니다. 일부 보안 정보는 확인을 거쳐야 유효해집니다. 또한 보안 정보를 자주 검토 하 고 최신 상태 인지 확인 해야 합니다. https://account.microsoft.com/security로 이동 하 여 Microsoft 계정에 로그인 하 여 보안 정보를 관리할 수 있습니다. 자세한 내용은 [계정 보안 정보 & 확인 코드](https://support.microsoft.com/help/12428/microsoft-account-security-info-verification-codes)를 참조 하세요.
 
 Microsoft 계정를 통해 파트너 센터에 로그인 하면 보안 코드를 전송 하 여 id를 확인 하 라는 메시지가 표시 될 수 있습니다. 보안 코드는 로그인 프로세스를 완료 하기 위해 입력 해야 합니다. 자주 사용 하는 Pc를 *신뢰할 수 있는 장치로*지정 하는 것이 좋습니다. 신뢰할 수 있는 장치에서 로그인 하는 경우 일반적으로 특정 상황에서 메시지를 표시 하거나 오랜 시간 동안 해당 장치에서 로그인 하지 않은 경우에는 코드를 입력 하 라는 메시지가 표시 되지 않습니다. 자세한 내용은 [Microsoft 계정에 신뢰할 수 있는 장치 추가](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device)를 참조 하세요.
 

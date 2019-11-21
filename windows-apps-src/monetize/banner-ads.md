@@ -5,12 +5,12 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, 배너 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f8aea8f204127a0f783f9b751a9f4178667753e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: cd3e57ebf5a7f7770adf2a8defcd92e66ad1e3a0
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57627248"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260334"
 ---
 # <a name="banner-ads"></a>배너 광고
 
@@ -24,12 +24,12 @@ ms.locfileid: "57627248"
 
 |  항목    | 설명 |               
 |----------|-------|
-| [XAML 및.NET의 AdControl](adcontrol-in-xaml-and--net.md)     | XAML/.NET 앱에 배너 광고를 추가합니다.        |
-| [Html 5 AdControl 및 Javascript](adcontrol-in-html-5-and-javascript.md)     | HTML5/JavaScript 앱에 배너 광고를 추가합니다.        |
+| [XAML 및 .NET의 AdControl](adcontrol-in-xaml-and--net.md)     | XAML/.NET 앱에 배너 광고를 추가합니다.        |
+| [HTML 5 및 Javascript의 AdControl](adcontrol-in-html-5-and-javascript.md)     | HTML5/JavaScript 앱에 배너 광고를 추가합니다.        |
 | [지원 되는 배너 광고 크기](supported-ad-sizes-for-banner-ads.md)    |  UWP 앱의 배너 광고에 지원되는 크기를 검토합니다.        |
 
 
 ## <a name="related-topics"></a>관련 항목
 
-* [GitHub의 광고 샘플](https://aka.ms/githubads)
-* [설정 앱에 대 한 ad 단위](set-up-ad-units-in-your-app.md)
+* [GitHub의 광고 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)
+* [앱에 대 한 ad 단위 설정](set-up-ad-units-in-your-app.md)

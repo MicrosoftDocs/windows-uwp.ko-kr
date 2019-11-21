@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 14f5fa06cfa0a6a7e393f3e2d513af0898d1f822
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 617b5d013c8452733fae2a1fa7c16180d37fbe57
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360935"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259717"
 ---
 # <a name="periodic-notification-overview"></a>정기 알림 개요
  
@@ -25,11 +25,11 @@ ms.locfileid: "66360935"
 
 정기 알림을 사용하면 최소한의 클라우드 서비스와 클라이언트 투자로 앱에서 라이브 타일 업데이트를 받을 수 있습니다. 정기 알림은 동일한 콘텐츠를 다양한 대상에게 배포하는 데 좋은 전달 방법입니다.
 
-**참고**    다운로드 하 여 자세히 알아볼 수 있습니다 합니다 [푸시 및 정기 알림 사용 샘플](https://go.microsoft.com/fwlink/p/?linkid=231476) Windows 8.1 및 Windows 10 앱의 소스 코드를 다시 사용 합니다.
+Windows 8.1에 대 한 [푸시 및 정기 알림 샘플](https://code.msdn.microsoft.com/windowsapps/push-and-periodic-de225603) 을 다운로드 하 고 Windows 10 앱에서 소스 코드를 다시 사용 하 여 자세한 내용을 알아볼 **수  .**
 
  
 
-## <a name="how-it-works"></a>작동 방법
+## <a name="how-it-works"></a>작동 방식
 
 
 정기 알림을 사용하기 위해서는 앱이 클라우드 서비스를 호스트해야 합니다. 이 서비스는 앱을 설치한 모든 사용자가 정기적으로 폴링합니다. 각 폴링 간격(예: 한 시간에 한 번)에 Windows는 URI에 HTTP GET 요청을 보내고, 요청에 응답하여 제공되는 요청된 타일 또는 배지 콘텐츠를 XML로 다운로드하고, 콘텐츠를 앱의 타일에 표시합니다.
@@ -48,9 +48,9 @@ ms.locfileid: "66360935"
 
 다음 메서드 중 하나를 호출하여 폴링을 시작합니다.
 
--   [**StartPeriodicUpdate** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (타일)
--   [**StartPeriodicUpdate** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (배지)
--   [**StartPeriodicUpdateBatch** ](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (타일)
+-   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (타일)
+-   [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.BadgeUpdater#Windows_UI_Notifications_BadgeUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (배지)
+-   [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_) (타일)
 
 이러한 메서드 중 하나를 호출하면 URI가 즉시 폴링되고 타일 또는 배지가 수신된 콘텐츠로 업데이트됩니다. 이 초기 폴링 후 Windows는 요청된 간격에 따라 업데이트를 계속 제공합니다. 폴링은 명시적으로 중지([**TileUpdater.StopPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater.StopPeriodicUpdate) 사용)하거나 앱을 제거할 때까지 계속되며 보조 타일의 경우 타일이 제거될 때가지 계속됩니다. 그렇지 않으면 앱이 다시 시작되지 않는 경우에도 Windows에서 타일 또는 배지에 대한 업데이트를 계속 폴링합니다.
 
@@ -77,7 +77,7 @@ URI는 장치가 온라인 상태인 경우에만 폴링됩니다. 네트워크�
 
 기본적으로 정기 타일 및 배지 알림은 다운로드한 시간으로부터 3일 내에 만료됩니다. 알림이 만료되면 콘텐츠가 배지, 타일 또는 큐에서 제거되고 더 이상 사용자에게 표시되지 않습니다. 앱 또는 알림에 적합한 시간을 사용하여 모든 정기 타일 및 배지 알림에 대한 명시적 만료 시간을 설정함으로써 콘텐츠를 관련이 있을 때까지만 유지하는 것이 좋습니다. 명시적 만료 시간은 수명이 정의되어 있는 콘텐츠에 필수적입니다. 또한 클라우드 서비스에 연결할 수 없게 되는 경우나 사용자의 네트워크 연결이 장기간 끊긴 경우에 부실 콘텐츠 제거도 수행합니다.
 
-클라우드 서비스는 응답 페이로드에 X-WNS-Expires HTTP 헤더를 포함하여 알림의 만료 날짜 및 시간을 설정합니다. X-WNS-Expires HTTP 헤더는 [HTTP 날짜 형식](https://go.microsoft.com/fwlink/p/?linkid=253706)에 맞아야 합니다. 자세한 내용은 [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) 또는 [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_)를 참조하세요.
+클라우드 서비스는 응답 페이로드에 X-WNS-Expires HTTP 헤더를 포함하여 알림의 만료 날짜 및 시간을 설정합니다. X-WNS-Expires HTTP 헤더는 [HTTP 날짜 형식](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.3.1)에 맞아야 합니다. 자세한 내용은 [**StartPeriodicUpdate**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdate_Windows_Foundation_Uri_Windows_Foundation_DateTime_Windows_UI_Notifications_PeriodicUpdateRecurrence_) 또는 [**StartPeriodicUpdateBatch**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdater#Windows_UI_Notifications_TileUpdater_StartPeriodicUpdateBatch_Windows_Foundation_Collections_IIterable_1_Windows_UI_Notifications_PeriodicUpdateRecurrence_)를 참조하세요.
 
 예를 들어 주식 시장의 활황 거래일 동안 주가 업데이트에 대한 만료를 폴링 간격의 두 배(예: 30분마다 폴링할 경우 접수 1시간 후)로 설정할 수 있습니다. 다른 예로 뉴스 앱에서는 일간 뉴스 타일 업데이트에 적절한 만료 시간을 1일로 결정할 수 있습니다.
 
@@ -105,5 +105,5 @@ Windows가 타일에 대해 다운로드할 각 알림의 고유한 URI를 제�
 
 * [정기 알림에 대 한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-periodic-notification-overview)
 * [배지에 대 한 정기 알림을 설정 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
-* [타일에 대 한 정기 알림을 설정 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
+* [타일에 대 한 주기적인 알림을 설정 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh761476(v=win.10))
  

@@ -6,19 +6,19 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: 557f5c03bda68d11507ba3b3b3b12823dbe6fd9f
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: c90a3257f8a54202e7ac50395e7e73f0538a484a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282406"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259874"
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 
 이 문서는 Windows 10 웹 계정 관리자 API를 사용하여 **[AccountsSettingsPane](https://docs.microsoft.com/uwp/api/Windows.UI.ApplicationSettings.AccountsSettingsPane)** 에서 UWP(유니버설 Windows 플랫폼) 앱을 외부 ID 공급자(예: Microsoft, Facebook)에 연결하는 방법에 대해 설명합니다. 사용자의 사용 권한에서 Microsoft 계정을 사용하도록 요청하고, 액세스 토큰을 받고, 이를 사용하여 기본 작업(프로필 데이터 가져오기, OneDrive 계정에 파일 업로드)을 수행하는 방법에 대해 살펴보겠습니다. 해당 단계는 웹 계정 관리자를 지원하는 ID 공급자를 사용하여 사용자 권한 및 액세스를 획득하는 과정과 비슷합니다.
 
 > [!NOTE]
-> 전체 코드 샘플을 보려면 [GitHub의 WebAccountManagement 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620621)을 참조하세요.
+> 전체 코드 샘플을 보려면 [GitHub의 WebAccountManagement 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement)을 참조하세요.
 
 ## <a name="get-set-up"></a>설정
 
@@ -116,7 +116,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 }
 ```
 
-다음으로 WebAuthenticationCoreManager.FindAccountProviderAsync 메서드를 사용하여 공급자를 가져옵니다. 공급자의 URL은 공급자에 따라 다르며 공급자 설명서에서 찾을 수 있습니다. Microsoft 계정과 Azure Active Directory의 경우 "https @ no__t-0//"입니다. 
+다음으로 WebAuthenticationCoreManager.FindAccountProviderAsync 메서드를 사용하여 공급자를 가져옵니다. 공급자의 URL은 공급자에 따라 다르며 공급자 설명서에서 찾을 수 있습니다. Microsoft 계정과 Azure Active Directory의 경우 "https\://login.microsoft.com"입니다. 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s,
@@ -133,7 +133,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 
 또한 선택적 *authority* 매개 변수에 문자열 "consumers"를 전달합니다. Microsoft는 두 가지 유형의 인증, 즉 “consumers"의 경우는 MSA(Microsoft 계정)를, “organizations"의 경우는 AAD(Azure Active Directory)를 제공하기 때문입니다. "consumers" 권한은 MSA 옵션을 원한다는 것을 나타냅니다. 엔터프라이즈 앱을 개발하는 경우 문자열 "organizations"를 대신 사용합니다.
 
-마지막으로 다음과 같은 새 **[WebAccountProviderCommand](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.webaccountprovidercommand)** 를 만들어 **AccountsSettingsPane**에 공급자를 추가합니다. 
+마지막으로 다음과 같은 새WebAccountProviderCommand **[를 만들어 ](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.webaccountprovidercommand)AccountsSettingsPane**에 공급자를 추가합니다. 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s,
@@ -420,7 +420,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 이론적으로는 모든 경우에 설정 명령을 사용할 수 있습니다. 그러나 위에 설명된 것과 같은 계정과 관련된 직관적인 시나리오로 사용을 제한하는 것이 좋습니다. 
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [Windows... i a.](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core)
 
@@ -430,6 +430,6 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 [웹 인증 브로커](web-authentication-broker.md)
 
-[웹 계정 관리 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620621)
+[웹 계정 관리 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement)
 
 [점심 스케줄러 앱](https://github.com/Microsoft/Windows-appsample-lunch-scheduler)

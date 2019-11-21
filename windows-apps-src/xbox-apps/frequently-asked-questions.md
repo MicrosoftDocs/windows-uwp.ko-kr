@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 265fe827-bd4a-48d4-b362-8793b9b25705
 ms.localizationpriority: medium
-ms.openlocfilehash: 38b5144d9b70e6e2825ef11a64be8873ec5b7d63
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: e134e64c441aececdc50b1ac868efeb2b31bd5e5
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57614558"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259825"
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
-예상하는 대로 작동하지 않나요? 질문과 대답 페이지를 검토합니다. 또한 [알려진 문제](known-issues.md) 항목 및 [유니버설 Windows 앱 개발](https://go.microsoft.com/fwlink/?linkid=839446) 포럼을 확인합니다. 
+예상하는 대로 작동하지 않나요? 질문과 대답 페이지를 검토합니다. 또한 [알려진 문제](known-issues.md) 항목 및 [유니버설 Windows 앱 개발](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop) 포럼을 확인합니다. 
 
 ### <a name="why-arent-my-games-and-apps-working"></a>게임과 앱이 작동하지 않는 이유는 무엇인가요?
 
@@ -59,15 +59,15 @@ Xbox는 이제 x86 앱 개발이나 x86 Microsoft Store로의 앱 전송을 지�
 
 ### <a name="i-sold-my-xbox-one-and-left-it-in-developer-mode-how-do-i-deactivate-developer-mode"></a>Xbox One을 팔고 개발자 모드에서 종료했습니다. 개발자 모드를 비활성화하는 방법은 무엇인가요?
 
-Xbox One에 대 한 액세스 이상 있는 경우에 Windows 파트너 센터에서 비활성화할 수 없습니다. 세부 정보를 참조 하세요.는 **파트너 센터를 사용 하 여 콘솔 비활성화** 섹션을 [Xbox 하나 개발자 모드 비활성화](devkit-deactivation.md#deactivate-your-console-using-partner-center) 항목. 
+Xbox One에 더 이상 액세스할 수 없는 경우 Windows 파트너 센터에서이를 비활성화할 수 있습니다. 자세한 내용은 [Xbox One Developer Mode 비활성화](devkit-deactivation.md#deactivate-your-console-using-partner-center) 항목에서 **파트너 센터를 사용 하 여 콘솔 비활성화** 섹션을 참조 하세요. 
 
-### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>파트너 센터를 사용 하 여 개발자 프로그램을 퇴사 했지만 여전히 개발자 모드에서입니다. 어떻게 해야 하나요?
+### <a name="i-left-the-developer-program-using-partner-center-but-im-in-still-developer-mode-what-do-i-do"></a>파트너 센터를 사용 하 여 개발자 프로그램을 사용 했지만 여전히 개발자 모드입니다. 어떻게 해야 하나요?
 
 개발자 홈을 시작하고 **Leave developer mode(개발자 모드 나가기)** 단추를 선택합니다. 이렇게 하면 정품 모드로 콘솔이 다시 시작됩니다. 
 
 ### <a name="can-i-publish-my-app"></a>내 앱을 게시할 수 있나요?
 
-할 수 있습니다 [앱을 게시할](../publish/index.md) 있다면 파트너 센터를 통해를 [개발자 계정](https://developer.microsoft.com/store/register)합니다. 정품 Xbox One 본체에서 만들고 테스트한 UWP 앱은 현재 Windows가 수행하는 동일한 수집, 검토 및 게시 프로세스를 진행하며 최신 Xbox One 표준을 충족하는지 추가적으로 검토합니다.
+[개발자 계정이](https://developer.microsoft.com/store/register)있는 경우 파트너 센터를 통해 [앱을 게시할](../publish/index.md) 수 있습니다. 정품 Xbox One 본체에서 만들고 테스트한 UWP 앱은 현재 Windows가 수행하는 동일한 수집, 검토 및 게시 프로세스를 진행하며 최신 Xbox One 표준을 충족하는지 추가적으로 검토합니다.
 
 ### <a name="can-i-publish-my-game"></a>내 게임을 게시할 수 있나요?
 
@@ -99,7 +99,7 @@ Visual Studio에서 앱을 배포할 수 없는 경우 다음 단계가 문제 �
 Visual Studio에서 Xbox One에 연결할 수 없는 경우에는 다음을 확인합니다.
 
 1. 개발자 모드에 있는지 확인합니다(이 페이지의 앞에서 설명함).
-2. 개발 PC를 올바르게 설정했는지 확인합니다. [Xbox One에서 UWP 앱 개발 시작](getting-started.md)에 있는 지침을 *모두* 따랐나요? 
+2. 개발 PC를 올바르게 설정했는지 확인합니다. *Xbox One에서 UWP 앱 개발 시작*에 있는 지침을 [모두](getting-started.md) 따랐나요? 
 
 3. 아직 따르지 않았다면 [개발 환경 설정](development-environment-setup.md) 항목 및 [Xbox One 도구 소개](introduction-to-xbox-tools.md) 항목을 참조하세요.
 
@@ -117,6 +117,6 @@ TVHelpers는 JavaScript 및 XAML/C#의 샘플 및 라이브러리 집합으로�
 자세한 내용은 [TVHelpers](https://github.com/Microsoft/TVHelpers) 프로젝트 및 프로젝트 [wiki](https://github.com/Microsoft/TVHelpers/wiki)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
-- [Xbox One에 UWP의 알려진된 문제](known-issues.md)
-- [Xbox One에서 UWP](index.md)
-- [Xbox One에서 UWP](index.md)
+- [Xbox One에서 UWP의 알려진 문제](known-issues.md)
+- [Xbox One의 UWP](index.md)
+- [Xbox One의 UWP](index.md)

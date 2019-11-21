@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e87fba21f74140e14688194864ccdc416ea227d
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 4f2cb92dca3da2d1f8e3eccfade6558f363c5b13
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73062313"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257872"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 
@@ -52,7 +52,7 @@ Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 �
 ## <a name="installing-uninstalling-and-running-the-emulator"></a>에뮬레이터 설치, 제거 및 실행
 
 ### <a name="installing"></a>설치
-Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows 10 SDK의 일부로 제공됩니다. Windows 10 SDK 및 에뮬레이터는 Visual Studio 설치 과정에서 설치될 수 있습니다. [Visual Studio 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkId=534785)를 참조하세요.
+Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows 10 SDK의 일부로 제공됩니다. Windows 10 SDK 및 에뮬레이터는 Visual Studio 설치 과정에서 설치될 수 있습니다. [Visual Studio 다운로드 페이지](https://developer.microsoft.com/windows/downloads)를 참조하세요.
 
 또한 [Microsoft 에뮬레이터 설정](https://go.microsoft.com/fwlink/p/?LinkID=615095)을 사용하여 Windows 10 Mobile용 Microsoft 에뮬레이터를 설치할 수 있습니다.
 
@@ -62,7 +62,7 @@ Visual Studio 설치/복구를 사용하여 Windows 10 Mobile용 Microsoft 에�
 
 Windows 10 Mobile K용 Microsoft 에뮬레이터를 제거할 때 에뮬레이터에서 사용하도록 생성된 Hyper-V 가상 이더넷 어댑터는 자동으로 제거되지 않습니다. 이 가상 어댑터는 **제어판**의 **네트워크 연결**에서 수동으로 제거할 수 있습니다.
 
-### <a name="running"></a>Running
+### <a name="running"></a>실행 중
 
 에뮬레이터에서 앱을 실행 하려면 Visual Studio의 **실행** 드롭다운 메뉴에서 에뮬레이트된 장치를 선택 하면 됩니다.
 
@@ -237,7 +237,7 @@ HCE(호스트 카드 에뮬레이션) 모드에서 POS(Point of Sale) 터미널�
 -   스크립트 편집기 창 아래의 **MasterCard 수신기 사용** 확인란을 선택하고 MasterCard의 시뮬레이터를 시작합니다.
 -   도구를 사용하면 NFC 도구를 통해 에뮬레이터에서 실행 중인 응용 프로그램에 전달되는 명령을 생성할 수 있습니다.
 
-HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대한 자세한 내용을 알아보려면 [Microsoft NFC 팀 블로그](https://go.microsoft.com/fwlink/?LinkId=534749)를 참조하세요.
+HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대한 자세한 내용을 알아보려면 [Microsoft NFC 팀 블로그](https://blogs.msdn.com/b/nfc/)를 참조하세요.
 
 ### <a name="how-to-create-scripts-for-hce-testing"></a>HCE 테스트를 위한 스크립트를 작성하는 방법
 
@@ -365,7 +365,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 | 속도 제한 | 경로의 속도 제한 | 해당 없음   | 게시된 제한 속도로 경로를 횡단합니다. |
 | 보행     | 5km/h                   | 1.39 m           | 5km/h의 자연스러운 보행 속도로 경로를 횡단합니다. |
 | 자전거      | 25 km/h                  | 6.94 m           | 25km/h의 자연스러운 자전거 속도로 경로를 횡단합니다. |
-| 패스트        |                          |                  |게시된 제한 속도보다 빠르게 경로를 횡단합니다. | 
+| 빠름        |                          |                  |게시된 제한 속도보다 빠르게 경로를 횡단합니다. | 
 
 **경로 모드**
 
@@ -492,7 +492,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
             앱에서 WNS 알림을 사용하고 사용자가 **알림** 메시지 형식을 선택하는 경우 시뮬레이션 탭에 **태그**와 **그룹** 필드가 표시됩니다. 이 옵션을 선택하고 **태그**와 **그룹** 값을 입력하여 알림 센터에서 알림 메시지를 관리할 수 있습니다.
 
         -   Tile
-        -   Badge
+        -   배지
 
     -   다음과 같은 MPN 알림 형식이 지원됩니다.
 
@@ -565,7 +565,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 |--------------------|--------------------------|---------------------------|
 | 해상도         | 640 x 480(VGA)          | 640 x 480(VGA) 이상 |
 | 자동 초점          | 예                      | 예                       |
-| 플래시              | 아니요                       | 예                       |
+| Flash              | 아니요                       | 예                       |
 | Zoom               | 2x(디지털 또는 광학)  | 2x(디지털 또는 광학)   |
 | 비디오 해상도   | 640 x 480(VGA)          | 640 x 480(VGA) 이상 |
 | 미리 보기 해상도 | 640 x 480(VGA)          | 640 x 480(VGA)           |
@@ -656,7 +656,7 @@ Microsoft 에뮬레이터는 모든 VM, diff 디스크 및 에뮬레이터 특�
 
 ## <a name="support-resources"></a>지원 리소스
 
-Windows 10 도구를 사용하여 작업을 시작할 때 해답을 찾아 문제를 해결하려면 [Windows 10 도구 포럼](https://go.microsoft.com/fwlink/?LinkId=534765)을 방문하세요. Windows 10 개발을 위한 모든 포럼을 확인하려면 [이 링크](https://go.microsoft.com/fwlink/?LinkId=535000)를 방문하세요.
+Windows 10 도구를 사용하여 작업을 시작할 때 해답을 찾아 문제를 해결하려면 [Windows 10 도구 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues)을 방문하세요. Windows 10 개발을 위한 모든 포럼을 확인하려면 [이 링크](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/home?forum=wpdevelop)를 방문하세요.
 
 ## <a name="related-topics"></a>관련 항목
 

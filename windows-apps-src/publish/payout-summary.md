@@ -6,18 +6,18 @@ ms.date: 08/02/2019
 ms.topic: article
 keywords: Windows 10, uwp, 지급액 요약, 내역서, 결제, 수익, 지급액, 결제, 수익
 ms.localizationpriority: medium
-ms.openlocfilehash: 89cb689f0dce4f7dbaec96e9ce109e60d4292f92
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: d609af268cfe304b34797cea4bf91e36d1475c29
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282483"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259011"
 ---
 # <a name="payout-summary"></a>지급 요약
 
 **지급 요약** 은 Microsoft에서 달성 한 비용에 대 한 세부 정보를 보여줍니다. 또한, 지급 요약을 통해 언제 지급받을 수 있는지와 지급받는 금액도 알 수 있습니다.
 
-Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공적인 지급에 대한 정보가 표시됩니다. Azure 마켓플레이스 지급에 대한 자세한 내용은 [Microsoft Azure 마켓플레이스 참가 정책](https://go.microsoft.com/fwlink/p/?LinkId=722436) 및 [Microsoft Azure 마켓플레이스 게시자 계약](https://go.microsoft.com/fwlink/p/?LinkID=699560 )을 참조하세요.
+Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공적인 지급에 대한 정보가 표시됩니다. Azure 마켓플레이스 지급에 대한 자세한 내용은 [Microsoft Azure 마켓플레이스 참가 정책](https://docs.microsoft.com/legal/marketplace/participation-policy) 및 [Microsoft Azure 마켓플레이스 게시자 계약](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3ypvt)을 참조하세요.
 
 > [!NOTE]
 > 지급에 적합 하려면 진행이 $50의 [지불 임계값](payment-thresholds-methods-and-timeframes.md) 에 도달 해야 합니다. 지불 임계값에 대 한 자세한 내용은이 페이지를 참조 하 고 앱 개발자 규약을 검토 하세요.
@@ -53,13 +53,13 @@ Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공�
 
 ## <a name="payment-status"></a>지급 상태
 
-| 상태 획득           | Reason                                                                                                                                      | 파트너 작업이 필요 한가요?                                   |
+| 상태 획득           | 이유                                                                                                                                      | 파트너 작업이 필요 한가요?                                   |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
 | 일별              | 이러한 획득은 지불에 적합 합니다. 이 상태는 동기 프로그램의 프로그램 가이드에 정의 된 대로 냉각 기간 동안 유지 됩니다. | 아니요                                                         |
 | 그                 | 지불을 처리 하기 전에 지불 주문에서 내부 검토를 생성 했습니다.                                                               | 아니요                                                         |
 | 보류 중인 세금 청구서      | 세금 송장이 불완전 하거나 잘못 되었습니다.                                                                                                  | 지불 하려면 세금 청구서를 업데이트 해야 합니다. |
 | 검토 중 거부 됨   | 검토 하는 동안 결제를 거부 했습니다.                                                                                                     | 자세한 내용은 [Microsoft 지원](https://developer.microsoft.com/en-us/windows/support) 에 문의 하세요.                      |
-| 실패                   | Microsoft 시스템 오류로 인해 지불 하지 못했습니다.                                                                                         | 자세한 내용은 [Microsoft 지원](https://developer.microsoft.com/en-us/windows/support) 에 문의 하세요.                      |
+| Failed                   | Microsoft 시스템 오류로 인해 지불 하지 못했습니다.                                                                                         | 자세한 내용은 [Microsoft 지원](https://developer.microsoft.com/en-us/windows/support) 에 문의 하세요.                      |
 | 진행 중              | 지불이 진행 중입니다.                                                                                                                 | 아니요                                                         |
 | 잘못 된 결제        | 지불 recouping 진행 중입니다.                                                                                                       | 아니요                                                         |
 | 냈                     | 요금을 은행으로 보냈습니다.                                                                                                     | 아니요                                                         |

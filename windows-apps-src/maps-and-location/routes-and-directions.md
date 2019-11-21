@@ -6,12 +6,12 @@ ms.date: 09/20/2017
 ms.topic: article
 keywords: windows 10, uwp, 경로, 지도, 위치, 길 찾기
 ms.localizationpriority: medium
-ms.openlocfilehash: 196cb4801436e8094dae4ead363ff86cc746034e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: e9e464f9a3b49d3a94edbc8593df58e1e7c24515
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371689"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259335"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>지도에 경로 및 길 찾기 표시
 
@@ -20,7 +20,7 @@ ms.locfileid: "66371689"
 경로 및 길 찾기를 요청하고 앱에 표시합니다.
 
 >[!Note]
->앱에서 지도 사용에 대한 자세한 내용을 알아보려면 [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하세요.
+>앱에서 지도 사용에 대한 자세한 내용을 알아보려면 [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)을 다운로드하세요.
 >지도가 앱의 핵심 기능이 아닌 경우 대신 Windows 지도 앱을 실행하는 것이 좋습니다. `bingmaps:`, `ms-drive-to:` 및 `ms-walk-to:` URI 스키마로 Windows 지도 앱을 실행하여 특정 지도 및 턴바이턴 길 찾기를 표시할 수 있습니다. 자세한 내용은 [Windows 지도 앱 실행](https://docs.microsoft.com/windows/uwp/launch-resume/launch-maps-app)을 참조하세요.
 
  
@@ -31,11 +31,11 @@ ms.locfileid: "66371689"
 
 * [  **MapRouteFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinder) 클래스에는 경로와 길 찾기를 가져오는 메서드가 있습니다. 이러한 메서드는 [**MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult)를 반환합니다.
 
-* [  **MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult)에는 [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) 개체가 포함되어 있습니다. **MapRouteFinderResult**의 [**Route**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinderresult.route) 속성을 통해 이 개체에 액세스합니다.
+* [  **MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult)에는 [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) 개체가 포함되어 있습니다. [MapRouteFinderResult**의** ](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinderresult.route)Route 속성을 통해 이 개체에 액세스합니다.
 
-* [  **MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute)에는 [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg) 개체 컬렉션이 포함됩니다. **MapRoute**의 [**Legs**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproute.legs) 속성을 통해 이 컬렉션에 액세스합니다.
+* [  **MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute)에는 [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg) 개체 컬렉션이 포함됩니다. [MapRoute**의** ](https://docs.microsoft.com/uwp/api/windows.services.maps.maproute.legs)Legs 속성을 통해 이 컬렉션에 액세스합니다.
 
-* 각 [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg)에는 [**MapRouteManeuver**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteManeuver) 개체 컬렉션이 포함됩니다. **MapRouteLeg**의 [**Maneuvers**](https://docs.microsoft.com/uwp/api/windows.services.maps.maprouteleg.maneuvers) 속성을 통해 이 컬렉션에 액세스합니다.
+* 각 [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg)에는 [**MapRouteManeuver**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteManeuver) 개체 컬렉션이 포함됩니다. [MapRouteLeg**의** ](https://docs.microsoft.com/uwp/api/windows.services.maps.maprouteleg.maneuvers)Maneuvers 속성을 통해 이 컬렉션에 액세스합니다.
 
 [  **MapRouteFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinder) 클래스의 메서드를 호출하여 운전 또는 보행 경로와 길 찾기를 가져옵니다. 예를 들어 [**GetDrivingRouteAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getdrivingrouteasync) 또는 [**GetWalkingRouteAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getwalkingrouteasync)입니다.
 
@@ -53,7 +53,7 @@ ms.locfileid: "66371689"
 
 ## <a name="display-directions"></a>길 찾기 표시
 
-[  **MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult) 개체에는 [**Route**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinderresult.route) 속성을 통해 액세스할 수 있는 [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) 개체가 포함됩니다.
+[  **MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult) 개체에는 [**Route**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) 속성을 통해 액세스할 수 있는 [**MapRoute**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinderresult.route) 개체가 포함됩니다.
 
 계산된 [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute)에는 경로를 따라 이동하는 데 소요되는 시간, 경로 길이, 그리고 경로 구간을 포함하는 [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg) 개체를 제공하는 속성이 있습니다. 각 **MapRouteLeg** 개체에는 [**MapRouteManeuver**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteManeuver) 개체 컬렉션이 포함됩니다. **MapRouteManeuver** 개체에는 [**InstructionText**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutemaneuver.instructiontext) 속성을 통해 액세스할 수 있는 길 찾기가 포함됩니다.
 
@@ -138,7 +138,7 @@ You have reached your destination.
 ## <a name="display-routes"></a>경로 표시
 
 
-[**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)에 [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute)를 표시하려면 **MapRoute**를 사용하여 [**MapRouteView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapRouteView)를 생성합니다. 그런 다음 **MapRouteView**를 **MapControl**의 [**Routes**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.routes) 컬렉션에 추가합니다.
+[  **MapControl**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute)에 [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)를 표시하려면 [MapRoute**를 사용하여** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapRouteView)MapRouteView를 생성합니다. 그런 다음 **MapRouteView**를 [MapControl**의** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.routes)Routes 컬렉션에 추가합니다.
 
 >[!IMPORTANT]
 >지도 서비스 또는 지도 컨트롤을 사용하려면 먼저 지도 인증 키를 지정해야 합니다. 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
@@ -190,7 +190,7 @@ private async void ShowRouteOnMap()
 }
 ```
 
-다음 예제에서는 **MapWithRoute**라는 [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 컨트롤에 다음을 표시합니다.
+다음 예제에서는 [MapWithRoute**라는** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)MapControl 컨트롤에 다음을 표시합니다.
 
 ![경로를 표시하는 지도 컨트롤](images/routeonmap.png)
 
@@ -242,7 +242,7 @@ private async void ShowRouteOnMap()
 ## <a name="related-topics"></a>관련 항목
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
-* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [UWP 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [지도에 대한 디자인 지침](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
-* [빌드 2015 비디오: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [빌드 2015 비디오: Windows 앱의 휴대폰, 태블릿 및 PC에서 맵 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP 교통 앱 샘플](https://github.com/Microsoft/Windows-appsample-trafficapp)

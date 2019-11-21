@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 약속, 일정
 ms.localizationpriority: medium
-ms.openlocfilehash: 5fd4fc62a393e6439458ddc38f37bbb0680fb9b1
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 52200d7896c9edea727bf31c69c04c4c1bd02bb2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282232"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255490"
 ---
 # <a name="manage-appointments"></a>약속 관리
 
@@ -282,7 +282,7 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**참고**  For Windows Phone 스토어 앱, [**Showaddappointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) [**ShowEditNewAppointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) 와 마찬가지로 약속을 추가 하기 위해 표시 되는 대화 상자를 편집할 수 있습니다.
+Windows Phone 스토어 앱에 대 **한  약속** 을 추가 하기 위해 표시 되는 대화 상자를 편집할 수 있는 [**ShowEditNewAppointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) 와 마찬가지로 [**showaddappointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) 작동 합니다.
 
 ## <a name="replace-an-appointment-in-the-users-calendar"></a>사용자의 일정에서 약속 바꾸기
 
@@ -565,11 +565,11 @@ private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
-지금까지 약속을 관리하는 방법을 간략히 살펴보았습니다. 약속을 관리하는 방법에 대한 더 많은 예제를 보려면 GitHub에서 [유니버설 Windows 앱 샘플](https://go.microsoft.com/fwlink/p/?linkid=619979)을 다운로드합니다.
+지금까지 약속을 관리하는 방법을 간략히 살펴보았습니다. 약속을 관리하는 방법에 대한 더 많은 예제를 보려면 GitHub에서 [유니버설 Windows 앱 샘플](https://github.com/Microsoft/Windows-universal-samples)을 다운로드합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [약속 API 샘플](https://go.microsoft.com/fwlink/p/?linkid=309836)
+* [약속 API 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Appointments)
  
 
  

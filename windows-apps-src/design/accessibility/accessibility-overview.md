@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e5ff5d8e1a63522a70b37c3226b01a2fc680c368
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 30f361aad321feb44240e66c03003646c560a4f5
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318968"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257810"
 ---
 # <a name="accessibility-overview"></a>접근성 개요  
 
@@ -103,7 +103,7 @@ XAML용 컨트롤은 기본적으로 키보드를 지원할 뿐만 아니라 및
 
 * 도구에서 텍스트를 탭 시퀀스 통과의 일부로 읽을 수 있는지 전체 문서 표현의 일부로만 읽을 수 있는지를 결정해야 합니다. 텍스트를 표시하는 데 적절한 요소를 선택하거나 해당 텍스트 요소의 속성을 조정하여 이 결정을 제어할 수 있습니다. 각 텍스트 요소에는 특정 용도가 있으며 이 용도에는 대개 해당하는 UI 자동화 역할이 있습니다. 잘못된 요소를 사용하면 잘못된 역할을 UI 자동화에 보고하여 보조 기술 사용자에게 혼란을 줄 수 있습니다.
 * 텍스트가 배경과 적절한 대비를 이루지 못할 경우 많은 사용자가 텍스트를 읽기 어렵게 만드는 약간의 제한이 있습니다. 이 제한이 사용자에게 영향을 주는 방식은 해당 제한이 없는 앱 디자이너에게 직관적이지 않을 수 있습니다. 예를 들어 색맹인 사용자의 경우 디자인 단계에서 색을 잘못 선택하면 일부 사용자가 텍스트를 읽을 수 없습니다. 처음에 웹 콘텐츠용으로 만들어진 접근성 요구 사항은 앱에서도 이러한 문제가 발생하지 않도록 하는 대비 표준을 정의합니다. 자세한 내용은 [접근성 있는 텍스트 요구 사항](accessible-text-requirements.md)을 참조하세요.
-* 많은 사용자는 매우 작은 텍스트를 읽는 데 어려움을 겪습니다. 앱 UI의 텍스트를 첫 번째 위치에서 적절히 크게 표시하면 이 문제를 방지할 수 있습니다. 그러나 많은 양의 텍스트를 표시하거나 다른 시각적 요소로 텍스트가 분산되는 앱에서는 그리 쉽지 않습니다. 이런 경우 앱이 디스플레이를 확대하여 앱의 텍스트가 함께 확대되도록 하는 시스템 기능을 올바르게 조작하도록 해야 합니다. 일부 사용자는 접근성 옵션으로 dpi 값을 변경합니다. 이 옵션은 **접근성**의 **화면의 항목을 더 크게 표시**에서 사용할 수 있으며 **모양 및 개인 설정** / **디스플레이**를 위한 **제어판** UI로 리디렉션됩니다.
+* 많은 사용자는 매우 작은 텍스트를 읽는 데 어려움을 겪습니다. 앱 UI의 텍스트를 첫 번째 위치에서 적절히 크게 표시하면 이 문제를 방지할 수 있습니다. 그러나 많은 양의 텍스트를 표시하거나 다른 시각적 요소로 텍스트가 분산되는 앱에서는 그리 쉽지 않습니다. 이런 경우 앱이 디스플레이를 확대하여 앱의 텍스트가 함께 확대되도록 하는 시스템 기능을 올바르게 조작하도록 해야 합니다. 일부 사용자는 접근성 옵션으로 dpi 값을 변경합니다. 이 옵션은 **접근성**의 **화면의 항목을 더 크게 표시**에서 사용할 수 있으며 **모양 및 개인 설정**디스플레이 / 를 위한 **제어판** UI로 리디렉션됩니다.
 
 <span id="Supporting_high-contrast_themes"/>
 <span id="supporting_high-contrast_themes"/>
@@ -188,11 +188,11 @@ private void ShowAccessibleUICheckBox_Click(object sender, RoutedEventArgs e)
 <span id="ASSISTIVE_TECHNOLOGY_SUPPORT_IN_APPS_THAT_SUPPORT_XAML___MICROSOFT_DIRECTX_INTEROP"/>
 
 ## <a name="assistive-technology-support-in-apps-that-support-xaml--microsoft-directx-interop"></a>XAML/Microsoft DirectX interop를 지원하는 앱의 보조 기술 지원  
-XAML UI([**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) 또는 [**SurfaceImageSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) 사용)에서 호스트되는 Microsoft DirectX 콘텐츠에는 기본적으로 액세스할 수 없습니다. [XAML SwapChainPanel DirectX interop 샘플](https://go.microsoft.com/fwlink/p/?LinkID=309155)에서는 호스트된 DirectX 콘텐츠에 대한 UI 자동화 피어를 만드는 방법을 보여 줍니다. 이 방법을 사용하면 UI 자동화를 통해 호스트된 콘텐츠에 액세스할 수 있습니다.
+XAML UI([**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) 또는 [**SurfaceImageSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) 사용)에서 호스트되는 Microsoft DirectX 콘텐츠에는 기본적으로 액세스할 수 없습니다. [XAML SwapChainPanel DirectX interop 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-SwapChainPanel-00cb688b)에서는 호스트된 DirectX 콘텐츠에 대한 UI 자동화 피어를 만드는 방법을 보여 줍니다. 이 방법을 사용하면 UI 자동화를 통해 호스트된 콘텐츠에 액세스할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목  
-* [**Windows.UI.Xaml.Automation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation)
-* [내게 필요한 옵션에 대 한 디자인](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
-* [XAML 액세스 가능성 샘플](https://go.microsoft.com/fwlink/p/?linkid=238570)
+* [**Windows. .Xaml.** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation)
+* [접근성을 위한 디자인](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
+* [XAML 접근성 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
 * [액세스 가능성](accessibility.md)
-* [내레이터를 사용 하 여 시작](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)
+* [내레이터 시작](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)

@@ -6,12 +6,12 @@ ms.date: 10/16/2017
 ms.topic: article
 keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 7564060e28d3e78608c6f30b1400179087db2b86
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 8627bd7f9f405509cb1bff40d94f10552241f4ce
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061846"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254593"
 ---
 # <a name="uri-schemes"></a>URI 체계
 
@@ -19,9 +19,9 @@ ms.locfileid: "73061846"
 
 ## <a name="common-features-of-the-uri-schemes"></a>URI 스키마의 일반적인 기능
 
-이 항목에 설명된 모든 스키마는 표준화 및 리소스 검색에 대한 일반적인 URI 스키마 규칙을 따릅니다. URI의 일반적인 구문에 대해 [RFC 3986](https://go.microsoft.com/fwlink/p/?LinkId=263444)을 참조하세요.
+이 항목에 설명된 모든 스키마는 표준화 및 리소스 검색에 대한 일반적인 URI 스키마 규칙을 따릅니다. URI의 일반적인 구문에 대해 [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt)을 참조하세요.
 
-모든 URI 스키마는 [RFC 3986](https://go.microsoft.com/fwlink/p/?LinkId=263444)에 따라 계층 구조 부분을 기관과 URI의 경로 구성 요소로 정의합니다.
+모든 URI 스키마는 [RFC 3986](https://www.ietf.org/rfc/rfc3986.txt)에 따라 계층 구조 부분을 기관과 URI의 경로 구성 요소로 정의합니다.
 
 ```syntax
 URI         = scheme ":" hier-part [ "?" query ] [ "#" fragment ]
@@ -41,7 +41,7 @@ hier-part   = "//" authority path-abempty
 
 이 항목에 설명된 모든 URI 스키마는 스키마에 대한 표준화 및 리소스 검색에 대한 일반적인 URI 스키마 규칙(RFC 3986)을 따릅니다. 이러한 URI의 표준화된 형태는 대소문자 및 퍼센트 디코드 RFC 3986 예약되지 않은 문자를 유지합니다.
 
-이 항목에 설명된 모든 URI 스키마의 경우 *스키마*, *기관*, 및 *경로*는 표준 방법으로 대/소문자를 구분하거나 시스템에 의해 대/소문자 구분이 처리됩니다. **참고** 규칙의 예외는 `ms-resource`*기관*이 있으며 대/소문자를 구분합니다.
+이 항목에 설명된 모든 URI 스키마의 경우 *스키마*, *기관*, 및 *경로*는 표준 방법으로 대/소문자를 구분하거나 시스템에 의해 대/소문자 구분이 처리됩니다. **참고** 규칙의 예외는기관`ms-resource`이 있으며 대/소문자를 구분합니다.
 
 ## <a name="ms-appx-and-ms-appx-web"></a>ms-appx 및 ms-appx-web
 
@@ -269,7 +269,7 @@ ms-resource:///Hello%23World/String1
 
 ## <a name="related-topics"></a>관련 항목
 
-* [URI (Uniform Resource Identifier): 제네릭 구문](https://go.microsoft.com/fwlink/p/?LinkId=263444)
+* [URI (Uniform Resource Identifier): 제네릭 구문](https://www.ietf.org/rfc/rfc3986.txt)
 * [앱 패키징](../packaging/index.md)
 * [XAML 태그 및 코드에서 이미지 또는 기타 자산 참조](images-tailored-for-scale-theme-contrast.md#reference-an-image-or-other-asset-from-xaml-markup-and-code)
 * [설정 및 기타 앱 데이터 저장 및 검색](../design/app-settings/store-and-retrieve-app-data.md)

@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.assetid: d99de93b-e33b-45a9-b19f-31417f1e9354
 ms.localizationpriority: medium
-ms.openlocfilehash: f37ffe21795fc68ff72b4e6f1de591c96d2f8b90
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9ee8a0e6538abd879921dd9d1496d29a61054a02
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366208"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260510"
 ---
 # <a name="create-and-register-an-in-process-background-task"></a>In-process 백그라운드 작업 만들기 및 등록
 
-**중요 한 Api**
+**중요 API**
 
 -   [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
 -   [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
@@ -29,7 +29,7 @@ In-process 백그라운드 작업은 Out-of-process 백그라운드 작업보다
 
 ## <a name="fundamentals"></a>기본 사항
 
-In-process 모델은 앱이 포그라운드 또는 백그라운드에 있는 때를 더 잘 알려줌으로써 응용 프로그램 수명 주기를 향상시킵니다. 두 개의 새 이벤트가 이러한 전환에 대 한 응용 프로그램 개체에서 사용할 수 있습니다. [**EnteredBackground** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground) 하 고 [ **LeavingBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground)합니다. 이러한 이벤트는 응용 프로그램의 표시 상태를 기반하는 응용 프로그램 수명 주기에 맞습니다. [앱 수명 주기](app-lifecycle.md)에서 이러한 이벤트에 대한 내용과 이러한 이벤트가 응용 프로그램의 수명 주기에 어떻게 영향을 미치는지를 참조하세요.
+In-process 모델은 앱이 포그라운드 또는 백그라운드에 있는 때를 더 잘 알려줌으로써 응용 프로그램 수명 주기를 향상시킵니다. 이러한 전환에 대해 응용 프로그램 개체에서 두 가지 새로운 이벤트인 [**EnteredBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground) 및 [**LeavingBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground)를 사용할 수 있습니다. 이러한 이벤트는 응용 프로그램의 표시 상태를 기반하는 응용 프로그램 수명 주기에 맞습니다. [앱 수명 주기](app-lifecycle.md)에서 이러한 이벤트에 대한 내용과 이러한 이벤트가 응용 프로그램의 수명 주기에 어떻게 영향을 미치는지를 참조하세요.
 
 개략적으로 **EnteredBackground** 이벤트를 처리하여 앱이 백그라운드에서 실행되는 동안 실행할 코드를 실행하고 **LeavingBackground**를 처리하여 앱이 포그라운드로 이동한 때를 알게 됩니다.
 
@@ -68,7 +68,7 @@ In-process 백그라운드 작업의 경우 `TaskEntryPoint.`를 설정하지 �
 
 ## <a name="place-your-background-activity-code-in-onbackgroundactivated"></a>OnBackgroundActivated()에서 백그라운드 작업 코드 배치
 
-에 백그라운드 작업 코드를 입력 [OnBackgroundActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onbackgroundactivated) 발생 하면 백그라운드 트리거가 응답할 수 있습니다. [IBackgroundTask.Run](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run?f=255&MSPPError=-2147217396)과 똑같이 **OnBackgroundActivated**를 처리할 수 있습니다. 메서드가 [BackgroundActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.backgroundactivatedeventargs) 모든 항목이 포함 된 매개 변수는 합니다 **실행** 메서드 제공 합니다. App.xaml.cs에서 예를 들어:
+백그라운드 작업 코드를 [OnBackgroundActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onbackgroundactivated) 에 배치 하 여 발생 하는 백그라운드 트리거에 응답 합니다. **IBackgroundTask.Run**과 똑같이 [OnBackgroundActivated](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask.run?f=255&MSPPError=-2147217396)를 처리할 수 있습니다. 메서드에는 **실행** 메서드에서 제공 하는 모든 항목을 포함 하는 [BackgroundActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.backgroundactivatedeventargs) 매개 변수가 있습니다. 예를 들어 App.xaml.cs에서 다음을 수행 합니다.
 
 ``` cs
 using Windows.ApplicationModel.Background;
@@ -88,7 +88,7 @@ sealed partial class App : Application
 }
 ```
 
-에 대 한 풍부 **OnBackgroundActivated** 예제에서는 참조 [해당 호스트 응용 프로그램과 동일한 프로세스에서 실행 되도록 app service를 변환](convert-app-service-in-process.md)합니다.
+더 다양 한 **OnBackgroundActivated** 예제는 [호스트 앱과 동일한 프로세스에서 실행 되도록 app service 변환](convert-app-service-in-process.md)을 참조 하세요.
 
 ## <a name="handle-background-task-progress-and-completion"></a>백그라운드 작업 진행 및 완료 처리
 
@@ -112,7 +112,7 @@ API 참조, 백그라운드 작업 개념 지침, 백그라운드 작업을 사�
 
 **자세한 백그라운드 작업 지침 항목**
 
-* [Out-of-process-백그라운드 작업을 처리 중인 백그라운드 태스크로 변환](convert-out-of-process-background-task.md)
+* [Out-of-process 백그라운드 작업을 in-process 백그라운드 작업으로 변환](convert-out-of-process-background-task.md)
 * [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
 * [백그라운드에서 미디어 재생](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)
 * [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
@@ -127,8 +127,8 @@ API 참조, 백그라운드 작업 개념 지침, 백그라운드 작업을 사�
 
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
-* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱에는 이벤트 (디버깅) 하는 경우](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
 
 **백그라운드 작업 API 참조**
 
-* [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
+* [**Windows ApplicationModel. 배경**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)

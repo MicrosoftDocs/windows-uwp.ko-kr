@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e02d74df59bae4dd4bdaa909c97866da754db93
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 1af36b43e02c9ee08373098f57ba29c10badb6c8
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339927"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259065"
 ---
 # <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>Silverlight에서 UWP API 매핑 Windows Phone
 
@@ -22,7 +22,7 @@ ms.locfileid: "71339927"
 
 **표를 사용 하는 방법:  ** 먼저 사용 중인 클래스의 이름을 검색 합니다. 매핑이 네임스페이스 이름을 변경하는 것보다 더 복잡할 경우 클래스가 나열됩니다. 클래스가 나열되지 않는 경우 매핑 시 네임스페이스만 변경하면 됩니다. 따라서 클래스의 네임스페이스 이름을 찾고 해당하는 UWP 네임스페이스 이름을 찾습니다. 클래스가 해당 네임스페이스에 있습니다. 네임스페이스가 나열되지 않는 경우 이름이 변경되지 않은 것입니다.
 
-**참고**  Windows 10은 Windows Phone 스토어 앱이 수행 하는 것 보다 훨씬 많은 .NET Framework를 지원 합니다. 예를 들어, Windows 10에 @no__t는 System.Net, System.net.networkinformation 및 시스템 .Net. n e t.
+**참고**  Windows 10은 Windows Phone 스토어 앱이 수행 하는 것 보다 훨씬 더 많은 .NET Framework를 지원 합니다. 예를 들어 Windows 10에는 여러 System.servicemodel이 있습니다. System.Net, System.net.networkinformation 및 시스템 .Net. n e t.\*
 또한 Windows 10 앱에서 MSIL을 고유 하 게 실행 가능한 기계어 코드로 변환 하는 미리 컴파일 기술인 .NET 네이티브의 이점을 누릴 수 있습니다. .NET 네이티브 앱은 해당 MSIL 앱보다 더 빠르게 시작되고 메모리와 배터리를 더 적게 사용합니다.
 
 | Silverlight Windows Phone | Windows 런타임 |
@@ -52,11 +52,11 @@ ms.locfileid: "71339927"
 | (SWT = **System.Windows.Threading**) <br/> **SWT.DispatcherTimer** 클래스 | [**Dispatchertimer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DispatcherTimer) 클래스 |
 | Visual Studio용 Blend | |
 | (MEDC = **Microsoft.Expression.Drawing.Core**) <br/> **MEDC.GeometryHelper** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
-| **Microsoft.Expression.Interactivity** 네임스페이스 | [Microsoft.Xaml.Interactivity](https://go.microsoft.com/fwlink/p/?LinkId=328776) 네임스페이스 |
-| **Microsoft.Expression.Interactivity.Core** 네임스페이스 | [Microsoft.Xaml.Interactions.Core](https://go.microsoft.com/fwlink/p/?LinkId=328773) 네임스페이스 |
+| **Microsoft.Expression.Interactivity** 네임스페이스 | [Microsoft.Xaml.Interactivity](https://msdn.microsoft.com/library/windows/apps/microsoft.xaml.interactivity.aspx) 네임스페이스 |
+| **Microsoft.Expression.Interactivity.Core** 네임스페이스 | [Microsoft.Xaml.Interactions.Core](https://msdn.microsoft.com/library/windows/apps/microsoft.xaml.interactions.core.aspx) 네임스페이스 |
 | (MEIC = **Microsoft.Expression.Interactivity.Core**) <br/> **MEIC.ExtendedVisualStateManager** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | **Microsoft.Expression.Interactivity.Input** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. |
-| **Microsoft.Expression.Interactivity.Media** 네임스페이스 | [Microsoft.Xaml.Interactions.Media](https://go.microsoft.com/fwlink/p/?LinkId=328775) 네임스페이스 |
+| **Microsoft.Expression.Interactivity.Media** 네임스페이스 | [Microsoft.Xaml.Interactions.Media](https://msdn.microsoft.com/library/windows/apps/microsoft.xaml.interactions.media.aspx) 네임스페이스 |
 | **Microsoft.Expression.Shapes** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. |
 | (MI = **Microsoft.Internal**) <br/> **MI.IManagedFrameworkInternalHelper** 인터페이스 | 직접적으로 해당하는 항목이 없습니다. |
 | 연락처 및 일정 데이터 | |
@@ -116,12 +116,12 @@ ms.locfileid: "71339927"
 | **Microsoft.Devices.Sensors.Accelerometer**, **Compass** 클래스 | [  **Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors) 네임스페이스에서 |
 | **Microsoft.Devices.Sensors.Gyroscope** 클래스 | [**회전 계**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Gyrometer) 클래스 |
 | **Microsoft.Devices.Sensors.Motion** 클래스 | [**경사 계**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Inclinometer) 클래스 |
-| 전역화 | |
+| 세계화 | |
 | **System.Globalization** 네임스페이스 | [**Windows 세계화**](https://docs.microsoft.com/uwp/api/Windows.Globalization) 네임 스페이스 |
 | (ST = **System.Threading**) <br/> **ST.Thread.CurrentCulture** 속성 | (SG = **System.Globalization**) <br/> **S.CultureInfo.CurrentCulture** 속성 |
 | (ST = **System.Threading**) <br/> **ST.Thread.CurrentUICulture** 속성 | (SG = **System.Globalization**) <br/> **S.CultureInfo.CurrentUICulture** 속성 |
 | 그래픽 및 애니메이션 | |
-| **Microsoft xna. \*** 네임 스페이스, [Xna Framework 클래스 라이브러리](https://go.microsoft.com/fwlink/p/?LinkId=263769), [콘텐츠 파이프라인 클래스 라이브러리](https://go.microsoft.com/fwlink/p/?LinkId=263770) | 직접적으로 해당하는 항목이 없습니다. 일반적으로 C++로 작성한 [Microsoft DirectX](https://docs.microsoft.com/windows/desktop/directx)를 사용합니다. [게임 개발](https://docs.microsoft.com/previous-versions/windows/apps/hh452744(v=win.10)) 및 [DirectX 및 XAML interop](https://docs.microsoft.com/previous-versions/windows/apps/hh825871(v=win.10))을 참조하세요. |
+| **Microsoft xna.\*** 네임 스페이스, [Xna Framework 클래스 라이브러리](https://msdn.microsoft.com/library/bb203940.aspx), [콘텐츠 파이프라인 클래스 라이브러리](https://msdn.microsoft.com/library/bb195587(v=XNAGameStudio.40).aspx) | 직접적으로 해당하는 항목이 없습니다. 일반적으로 C++로 작성한 [Microsoft DirectX](https://docs.microsoft.com/windows/desktop/directx)를 사용합니다. [게임 개발](https://docs.microsoft.com/previous-versions/windows/apps/hh452744(v=win.10)) 및 [DirectX 및 XAML interop](https://docs.microsoft.com/previous-versions/windows/apps/hh825871(v=win.10))을 참조하세요. |
 | **Microsoft.Xna.Framework.Audio.Microphone** 클래스 | [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) 클래스 |
 | **Microsoft.Xna.Framework.Audio.SoundEffect** 클래스 | [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) 클래스 |
 | **Microsoft.Xna.Framework.GamerServices** 네임스페이스 | (WPS = **Windows.Phone.System**) <br/> [**WPS. GameServices**](https://docs.microsoft.com/uwp/api/Windows.Phone.System.UserProfile.GameServices.Core) 네임 스페이스 |
@@ -208,7 +208,7 @@ ms.locfileid: "71339927"
 | **System.Reflection.Emit.ILGenerator** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | 반응적 확장 | |
 | **Microsoft.Phone.Reactive** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. |
-| 반사 | |
+| 리플렉션 | |
 | **System.Type** 클래스 | **System.Reflection.TypeInfo** 클래스. [UWP 앱용 .NET Framework의 리플렉션](https://docs.microsoft.com/dotnet/framework/reflection-and-codedom/reflection-for-windows-store-apps)을 참조하세요. |
 | 리소스 | |
 | **System.Resources.ResourceManager** 클래스 | (WA = **Windows.ApplicationModel**)<br/>[**WA. 리소스. Core**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core) 및 [**WA. 리소스**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources) 네임 스페이스, [**ResourceManager**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceManager) 클래스 [Windows 런타임 앱에서 리소스 만들기 및 검색](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))을 참조하세요. |
@@ -242,7 +242,7 @@ ms.locfileid: "71339927"
 | **System.IO.Stream** 클래스 | 아직 지원되긴 하지만 BeginRead()/EndRead() 및 BeginWrite()/EndWrite() 대신 ReadAsync() 및 WriteAsync()를 사용하세요. |
 | 전자지갑 | |
 | **Microsoft.Phone.Wallet** 네임스페이스 | [**Windows ApplicationModel.** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Wallet) |
-| xml | |
+| Xml | |
 | (SX = **System.Xml**) | **SX.XmlConvert.ToDateTime** 메서드 |
 | (SX = **System.Xml**) | **SX.XmlConvert.ToDateTimeOffset** 메서드 |
 

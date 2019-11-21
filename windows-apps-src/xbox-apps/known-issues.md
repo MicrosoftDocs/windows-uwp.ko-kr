@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 ms.localizationpriority: medium
-ms.openlocfilehash: 01bc72051e9efa69adbbab574b932da829c83e72
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 34425a0e754d62a1d9d7716bca3576463aec3ba5
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57626638"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259722"
 ---
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제
 
 이 항목에서는 Xbox One 개발자 프로그램에서 UWP에 대해 알려진 문제를 설명합니다. 이 프로그램에 대한 자세한 내용은 [Xbox의 UWP](index.md)를 참조하세요. 
 
-\[여기서는 API 참조 항목의 링크에서 제공 하 고 유니버설 장치 제품군 API 정보를 찾고 있다면 하세요 [Xbox에서 아직 지원 되지 않는 UWP 기능](https://go.microsoft.com/fwlink/?LinkID=760755)합니다.\]
+\[API 참조 항목의 링크를 통해 여기에서 제공 했으며 유니버설 장치 패밀리 API 정보를 찾고 있는 경우 [Xbox에서 아직 지원 되지 않는 UWP 기능](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN)을 참조 하세요.\]
 
 다음 목록에는 발생할 수 있는 몇 가지 알려진 문제가 요약되어 있습니다. 
 
@@ -60,7 +60,7 @@ Xbox One 장치의 UWP(유니버설 Windows 플랫폼) 앱은 범위 [57344, 655
 
 ## <a name="uwp-api-coverage"></a>UWP API 검사
 
-일부 UWP API는 Xbox에서 지원되지 않습니다. 작동하지 않는다고 알고 있는 API 목록은 [Xbox에서 아직 지원되지 않는 UWP 기능](https://go.microsoft.com/fwlink/p/?LinkId=760755)을 참조하세요. 다른 API에서 문제가 발견된 경우 포럼에서 신고하세요. 
+일부 UWP API는 Xbox에서 지원되지 않습니다. 작동하지 않는다고 알고 있는 API 목록은 [Xbox에서 아직 지원되지 않는 UWP 기능](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN)을 참조하세요. 다른 API에서 문제가 발견된 경우 포럼에서 신고하세요. 
 
 
 ## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>WDP로 이동하면 인증서 경고가 표시됨
@@ -117,4 +117,4 @@ namespace TestDNLA {
 
 ## <a name="see-also"></a>참고 항목
 - [질문과 대답](frequently-asked-questions.md)
-- [Xbox One에서 UWP](index.md)
+- [Xbox One의 UWP](index.md)

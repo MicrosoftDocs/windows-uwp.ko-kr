@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a660512abe5f18f7b1955853dc5389dc902fd2e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0b5e0ea6deef7dfe3531c8d0406e08bfae80f0e2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371272"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260455"
 ---
 # <a name="free-memory-when-your-app-moves-to-the-background"></a>앱이 백그라운드로 이동할 때 메모리 회수
 
@@ -72,11 +72,11 @@ Windows 10 버전 1607에는 두 개의 새 응용 프로그램 수명 주기 �
 
 [!code-cs[MainPageUnloaded](./code/ReduceMemory/cs/App.xaml.cs#SnippetMainPageUnloaded)]
 
-[**LeavingBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground) 이벤트 처리기에서 추적 변수(`isInBackgroundMode`)를 설정하여 앱이 더 이상 백그라운드에서 실행되지 않음을 나타내야 합니다. 그런 다음 현재 창의 [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content)가 `null`인지 확인합니다. 백그라운드에서 실행하는 동안 메모리를 지우기 위해 앱 보기를 삭제한 경우 null이 됩니다. 창 콘텐츠가 `null`이면 앱 보기를 다시 작성합니다. 이 예제에서는 창 콘텐츠가 도우미 메서드 **CreateRootFrame**에서 만들어집니다.
+[  **LeavingBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground) 이벤트 처리기에서 추적 변수(`isInBackgroundMode`)를 설정하여 앱이 더 이상 백그라운드에서 실행되지 않음을 나타내야 합니다. 그런 다음 현재 창의 [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content)가 `null`인지 확인합니다. 백그라운드에서 실행하는 동안 메모리를 지우기 위해 앱 보기를 삭제한 경우 null이 됩니다. 창 콘텐츠가 `null`이면 앱 보기를 다시 작성합니다. 이 예제에서는 창 콘텐츠가 도우미 메서드 **CreateRootFrame**에서 만들어집니다.
 
 [!code-cs[LeavingBackground](./code/ReduceMemory/cs/App.xaml.cs#SnippetLeavingBackground)]
 
-**CreateRootFrame** 도우미 메서드는 앱 보기 콘텐츠를 다시 만듭니다. 이 메서드의 코드는 기본 프로젝트 템플릿에 제공된 [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) 처리기 코드와 거의 같습니다. 한 가지 차이점은 **Launching** 처리기는 [**LaunchActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)의 [**PreviousExecutionState**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.previousexecutionstate) 속성에서 이전 실행 상태를 확인하고 **CreateRootFrame** 메서드는 단순히 인수로 전달된 이전 실행 상태를 가져온다는 것입니다. 중복 코드를 최소화하기 위해 **CreateRootFrame**을 호출하도록 기본 **Launching** 이벤트 처리기 코드를 리팩터링할 수 있습니다.
+**CreateRootFrame** 도우미 메서드는 앱 보기 콘텐츠를 다시 만듭니다. 이 메서드의 코드는 기본 프로젝트 템플릿에 제공된 [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) 처리기 코드와 거의 같습니다. 한 가지 차이점은 **Launching** 처리기는 [**LaunchActivatedEventArgs**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.previousexecutionstate)의 [**PreviousExecutionState**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) 속성에서 이전 실행 상태를 확인하고 **CreateRootFrame** 메서드는 단순히 인수로 전달된 이전 실행 상태를 가져온다는 것입니다. 중복 코드를 최소화하기 위해 **CreateRootFrame**을 호출하도록 기본 **Launching** 이벤트 처리기 코드를 리팩터링할 수 있습니다.
 
 [!code-cs[CreateRootFrame](./code/ReduceMemory/cs/App.xaml.cs#SnippetCreateRootFrame)]
 
@@ -103,5 +103,5 @@ Windows 10 버전 1607에는 두 개의 새 응용 프로그램 수명 주기 �
 
 ## <a name="related-topics"></a>관련 항목
 
-* [백그라운드 미디어 재생 샘플](https://go.microsoft.com/fwlink/p/?LinkId=800141) - 앱이 백그라운드 상태로 이동할 때 메모리를 해제하는 방법을 보여 줍니다.
+* [백그라운드 미디어 재생 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback) - 앱이 백그라운드 상태로 이동할 때 메모리를 해제하는 방법을 보여 줍니다.
 * [진단 도구](https://devblogs.microsoft.com/devops/diagnostic-tools-debugger-window-in-visual-studio-2015/) - 진단 도구를 사용하여 가비지 수집 이벤트를 관찰하고 앱이 올바른 방법으로 메모리를 해제하고 있는지 확인합니다.

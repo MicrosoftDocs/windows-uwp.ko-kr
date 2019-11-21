@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a8a9a4e5b79950cb15b5d364598c72b8a190d8c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 1da466cf12a8a5f959af7e863f7a300f3c713961
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366641"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258720"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping"></a>XAML 네임스페이스 및 네임스페이스 매핑
 
@@ -37,11 +37,11 @@ XAML 파일은 거의 항상 해당 루트 요소에서 기본 XAML 네임스페
 
 ## <a name="the-default-and-xaml-language-xaml-namespace-declarations"></a>기본 및 XAML 언어 XAML 네임스페이스 선언
 
-대부분의 XAML 파일의 루트 요소 내에는 두 개의 **xmlns** 선언이 있습니다. 첫 번째 선언 기본 XAML 네임 스페이스를 매핑합니다. `xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"`
+대부분의 XAML 파일의 루트 요소 내에는 두 개의 **xmlns** 선언이 있습니다. 첫 번째 선언은 XAML 네임 스페이스를 기본값으로 매핑합니다. `xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"`
 
 XAML을 UI 정의 태그 형식으로 사용하는 여러 이전 Microsoft 기술에 사용된 XAML 네임스페이스 식별자와 동일합니다. 동일한 식별자 사용은 의도적이며 C++, C# 또는 Visual Basic으로 작성한 Windows 런타임 앱으로 이전에 정의된 UI를 마이그레이션하는 경우에 유용합니다.
 
-두 번째 선언 "x:" 접두사 (보통) 매핑 XAML 정의 하는 언어 요소에 대 한 별도 XAML 네임 스페이스를 매핑합니다. `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`
+두 번째 선언은 XAML 정의 언어 요소에 대 한 별도의 XAML 네임 스페이스를 매핑하고 (일반적으로)를 "x:" 접두사에 매핑합니다. `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`
 
 이 **xmlns** 값과, 이 값이 매핑된 "x:" 접두사도 XAML을 사용하는 몇 가지 이전 Microsoft 기술에 사용된 정의와 동일합니다.
 
@@ -51,30 +51,30 @@ XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 X
 
 ## <a name="code-namespaces-that-map-to-the-default-xaml-namespace"></a>기본 XAML 네임 스페이스에 매핑되는 코드 네임 스페이스
 
-다음에는 현재 기본 XAML 네임 스페이스에 매핑되는 코드 네임 스페이스의 목록입니다.
+다음는 현재 기본 XAML 네임 스페이스에 매핑되는 코드 네임 스페이스의 목록입니다.
 
 * Windows.UI
 * Windows.UI.Xaml
 * Windows.UI.Xaml.Automation
-* Windows.UI.Xaml.Automation.Peers
-* Windows.UI.Xaml.Automation.Provider
-* Windows.UI.Xaml.Automation.Text
-* Windows.UI.Xaml.Controls
+* Windows. .Xaml.
+* Windows. .Xaml. 공급자
+* Windows. .Xaml. 텍스트
+* Windows. .Xaml. 컨트롤
 * Windows.UI.Xaml.Controls.Primitives
-* Windows.UI.Xaml.Data
-* Windows.UI.Xaml.Documents
+* Windows. .Xaml.
+* Windows. .Xaml.
 * Windows.UI.Xaml.Input
-* Windows.UI.Xaml.Interop
-* Windows.UI.Xaml.Markup
+* Windows. .Xaml.
+* Windows. .Xaml. 태그
 * Windows.UI.Xaml.Media
 * Windows.UI.Xaml.Media.Animation
-* Windows.UI.Xaml.Media.Imaging
+* Windows. x m l. x m l. x m l.
 * Windows.UI.Xaml.Media.Media3D
 * Windows.UI.Xaml.Navigation
-* Windows.UI.Xaml.Resources
+* Windows. .Xaml. .Resources
 * Windows.UI.Xaml.Shapes
-* Windows.UI.Xaml.Threading
-* Windows.UI.Text
+* Windows. .Xaml. 스레딩
+* Windows. UI. 텍스트
 
 <span id="other-XAML-namespaces"/>
 
@@ -84,15 +84,15 @@ XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 X
 
 ### <a name="d-httpschemasmicrosoftcomexpressionblend2008"></a>**d: (`http://schemas.microsoft.com/expression/blend/2008`)**
 
-"D:" XAML 네임 스페이스는 Microsoft Visual Studio의 XAML 디자인 화면에서 디자이너 지 원하는 디자이너 지원에 대 한 것입니다. "D" XAML 네임 스페이스에는 디자이너 또는 XAML 요소에 디자인 타임 특성 수 있습니다. 이러한 디자이너 특성은 XAML 작동 방식의 디자인 측면에만 영향을 줍니다. 앱 실행 시 Windows 런타임 XAML 파서에 동일한 XAML이 로드되면 디자이너 특성은 무시됩니다. 일반적으로 디자이너 특성은 모든 XAML 요소에서 유효하지만 실제로 디자이너 특성 적용이 적절한 시나리오는 한정되어 있습니다. 특히 많은 디자이너 특성이 데이터 바인딩을 사용하는 코드와 XAML을 개발하는 동안 데이터 컨텍스트와 데이터 원본 조작 환경을 향상시키기 위한 것입니다.
+"d:" XAML 네임스페이스는 디자이너 지원 특히 Microsoft Visual Studio의 XAML 디자인 화면에서 디자이너를 지원하기 위한 것입니다. "d:" XAML 네임스페이스를 통해 XAML 요소에서 디자이너 또는 디자인-시간 특성을 사용할 수 있습니다. 이러한 디자이너 특성은 XAML 작동 방식의 디자인 측면에만 영향을 줍니다. 앱 실행 시 Windows 런타임 XAML 파서에 동일한 XAML이 로드되면 디자이너 특성은 무시됩니다. 일반적으로 디자이너 특성은 모든 XAML 요소에서 유효하지만 실제로 디자이너 특성 적용이 적절한 시나리오는 한정되어 있습니다. 특히 많은 디자이너 특성이 데이터 바인딩을 사용하는 코드와 XAML을 개발하는 동안 데이터 컨텍스트와 데이터 원본 조작 환경을 향상시키기 위한 것입니다.
 
--   **d:DesignHeight 및 d:DesignWidth 특성:** 이러한 특성 Visual Studio 또는 다른 XAML 디자이너 화면을 만듭니다는 XAML 파일의 루트에 따라 적용 됩니다. 예를 들어 앱 프로젝트에 새 **UserControl**을 추가할 경우 만들어지는 XAML의 [**UserControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl) 루트에 이 특성이 설정됩니다. 두 특성을 사용하여 XAML 콘텐츠 컴퍼지션을 쉽게 디자인할 수 있으므로 XAML 콘텐츠를 컨트롤 인스턴스나 큰 UI 페이지의 다른 부분에 사용할 경우 발생할 수 있는 레이아웃 제약 조건을 어느 정도 예상할 수 있습니다.
+-   **d:DesignHeight 및 d:DesignWidth 특성:** 경우에 따라 두 특성은 Visual Studio 또는 다른 XAML 디자이너 화면에서 만드는 XAML 파일의 루트에 적용됩니다. 예를 들어 앱 프로젝트에 새 [UserControl**을 추가할 경우 만들어지는 XAML의** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl)UserControl 루트에 이 특성이 설정됩니다. 두 특성을 사용하여 XAML 콘텐츠 컴퍼지션을 쉽게 디자인할 수 있으므로 XAML 콘텐츠를 컨트롤 인스턴스나 큰 UI 페이지의 다른 부분에 사용할 경우 발생할 수 있는 레이아웃 제약 조건을 어느 정도 예상할 수 있습니다.
 
-   **참고**  Microsoft Silverlight에서 XAML을 마이그레이션하려는 경우 전체 UI 페이지를 나타내는 루트 요소에서 이러한 특성을 할 수 있습니다. 이 경우 특성을 제거하는 것이 좋습니다. 시뮬레이터 같은 XAML 디자이너의 다른 기능은 **d:DesignHeight** 및 **d:DesignWidth**를 사용한 고정 크기 페이지 레이아웃보다 크기 조정 및 보기 상태를 처리하는 페이지 레이아웃 디자인에 더 유용합니다.
+   **참고**  Microsoft SILVERLIGHT에서 XAML을 마이그레이션하는 경우 전체 UI 페이지를 나타내는 루트 요소에 이러한 특성이 있을 수 있습니다. 이 경우 특성을 제거하는 것이 좋습니다. 시뮬레이터 같은 XAML 디자이너의 다른 기능은 **d:DesignHeight** 및 **d:DesignWidth**를 사용한 고정 크기 페이지 레이아웃보다 크기 조정 및 보기 상태를 처리하는 페이지 레이아웃 디자인에 더 유용합니다.
 
--   **d:DataContext 특성:** 모든 명시적 또는 상속 된 페이지 루트 또는 재정의 하기 위한 컨트롤에서이 특성을 설정할 수 있습니다 [ **DataContext** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) 그렇지 않은 경우 해당 개체에 있습니다.
--   **d:DesignSource 특성:** 에 대 한 디자인 타임 데이터 소스를 지정 된 [ **CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)재정의 [ **소스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.collectionviewsource.source)합니다.
--   **d:DesignInstance 및 d:DesignData 태그 확장:** 이러한 태그 확장에 대 한 디자인 타임 데이터 리소스를 제공 하 되 **d:DataContext** 하거나 **d:DesignSource**합니다. 디자인 타임 데이터 리소스를 사용하는 방법에 대해서는 여기서 자세히 설명하지 않습니다. 자세한 내용은 [디자인 타임 특성](https://go.microsoft.com/fwlink/p/?LinkId=272504)을 참조하세요. 일부 사용 예제는 [디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터](https://docs.microsoft.com/windows/uwp/data-binding/displaying-data-in-the-designer)를 참조하세요.
+-   **d:DataContext 특성:** 페이지 루트나 컨트롤에 이 특성을 설정하면 특성이 없을 경우 개체에 포함되는 명시적 또는 상속된 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext)를 재정의할 수 있습니다.
+-   **d:DesignSource 특성:** [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)에 대해 디자인 타임 데이터 원본을 지정하고 [**Source**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.collectionviewsource.source)를 재정의합니다.
+-   **d:DesignInstance 및 d:DesignData 태그 확장:** 두 태그 확장은 **d:DataContext** 또는 **d:DesignSource**에 대한 디자인 타임 데이터 리소스를 제공하는 데 사용됩니다. 디자인 타임 데이터 리소스를 사용하는 방법에 대해서는 여기서 자세히 설명하지 않습니다. 자세한 내용은 [디자인 타임 특성](https://msdn.microsoft.com/library/ff602277(v=VS.95).aspx)을 참조하세요. 일부 사용 예제는 [디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터](https://docs.microsoft.com/windows/uwp/data-binding/displaying-data-in-the-designer)를 참조하세요.
 
 ### <a name="mc-httpschemasopenxmlformatsorgmarkup-compatibility2006"></a>**mc: (`http://schemas.openxmlformats.org/markup-compatibility/2006`)**
 
@@ -102,7 +102,7 @@ XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 X
 
 "local:" 템플릿 기반의 UWP 앱 프로젝트에 대해 XAML 페이지 내에서 자주 매핑되는 접두사입니다. [x:Class 특성](x-class-attribute.md) 및 app.xaml을 비롯한 모든 XAML 파일에 대한 코드를 포함하도록 생성된 동일한 네임스페이스를 참조하도록 매핑되어 있습니다. 이 동일한 네임스페이스에서 XAML에 사용할 사용자 지정 클래스를 정의하는 경우 **local:** 접두사를 사용하여 XAML의 사용자 지정 유형을 참조할 수 있습니다. 템플릿 기반의 UWP 앱 프로젝트에서 가져온 관련 접두사는 **common:** 입니다. 이 접두사는 변환기 및 명령과 같은 유틸리티 클래스를 포함하고 있는 중첩된 "Common" 네임스페이스를 참조하며, 개발자는 **솔루션 탐색기** 보기에서 Common 폴더에 있는 정의를 찾을 수 있습니다.
 
-### <a name="vsm"></a>**vsm:**
+### <a name="vsm"></a>**vsm**
 
 사용하지 마십시오. "vsm:"은 다른 Microsoft 기술에서 가져온 이전 XAML 템플릿에서 볼 수 있는 접두사입니다. 이 네임스페이스는 원래 레거시 네임스페이스 도구 문제를 해결했습니다. Windows 런타임용으로 사용하는 모든 XAML에서 "vsm:"에 대한 XAML 네임스페이스 정의를 삭제하고 [**VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState), [**VisualStateGroup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateGroup) 및 관련 개체에 대한 접두사 사용을, 기본 XAML 네임스페이스를 대신 사용하도록 변경해야 합니다. XAML 마이그레이션에 대한 자세한 내용은 [Windows 런타임 앱으로 Silverlight 또는 WPF XAML/코드 마이그레이션](https://docs.microsoft.com/previous-versions/windows/apps/br229571(v=win.10))을 참조하세요.
 
@@ -112,7 +112,7 @@ XAML 언어는 특정 언어 요소를 지정하며 이러한 요소는 각각 X
 
 **xmlns** 정의는 접두사 명명은 물론 값도 포함합니다. 이 값은 등호 뒤, 따옴표 안에 오는 문자열입니다. 일반적인 XML 규칙은 고유성 및 식별 규칙이 존재하도록 XML 네임스페이스를 URI(Uniform Resource Identifier)와 연결하는 것입니다. Windows 런타임 XAML에서 드물게 사용되는 일부 XAML 네임스페이스는 물론 기본 XAML 네임스페이스와 XAML 언어 XAML 네임스페이스에서도 이 규칙을 볼 수 있습니다. 그러나 URI를 지정하지 않고 사용자 지정 유형을 매핑하는 XAML 네임스페이스의 경우 "using:" 토큰을 사용하여 접두사 정의를 시작합니다. "using:" 토큰 다음에는 코드 네임스페이스를 명명합니다.
 
-예를 들어, "CustomClasses" 네임 스페이스를 참조 하 고 XAML 개체 요소와 해당 네임 스페이스 또는 어셈블리의 클래스를 사용할 수 있는 "사용자 지정 1" 접두사를 매핑할 XAML 페이지 루트 요소에 다음 매핑이 포함 되어야 합니다. `xmlns:custom1="using:CustomClasses"`
+예를 들어 "CustomClasses" 네임 스페이스를 참조 하 고 해당 네임 스페이스 또는 어셈블리의 클래스를 XAML의 개체 요소로 사용할 수 있도록 하는 "custom1" 접두사를 매핑하려면 XAML 페이지에 다음 매핑이 루트 요소에 포함 되어야 합니다. `xmlns:custom1="using:CustomClasses"`
 
 동일한 페이지 범위의 partial 클래스는 매핑할 필요가 없습니다. 예를 들어 페이지 XAML UI 정의의 이벤트를 처리하기 위해 정의한 이벤트 처리기를 참조하는 데는 접두사가 필요하지 않습니다. C++, C# 또는 Visual Basic으로 작성된 Windows 런타임 앱 프로젝트가 생성된 Visual Studio의 여러 시작 XAML 페이지도 이미 프로젝트에서 지정한 기본 네임스페이스와 partial 클래스 정의에 사용된 네임스페이스를 참조하는 "local:" 접두사를 매핑합니다.
 
@@ -138,8 +138,8 @@ XAML 네임스페이스에 대한 지원 유형을 정의하는 어셈블리 이
 
 * [XAML 개요](xaml-overview.md)
 * [XAML 구문 가이드](xaml-syntax-guide.md)
-* [Windows 런타임 구성 요소 만들기 C# 및 Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
-* [C#VB 및 C++ Windows 런타임 앱에 대 한 프로젝트 템플릿](https://docs.microsoft.com/previous-versions/windows/apps/hh768232(v=win.10))
-* [마이그레이션 Silverlight 또는 WPF XAML/Windows 런타임 앱에 코드](https://docs.microsoft.com/previous-versions/windows/apps/br229571(v=win.10))
+* [및 Visual Basic에서 C# Windows 런타임 구성 요소 만들기](https://docs.microsoft.com/previous-versions/windows/apps/hh441572(v=vs.140))
+* [C#, VB 및 C++ Windows 런타임 앱 용 프로젝트 템플릿](https://docs.microsoft.com/previous-versions/windows/apps/hh768232(v=win.10))
+* [Silverlight 또는 WPF XAML/코드를 Windows 런타임 앱으로 마이그레이션](https://docs.microsoft.com/previous-versions/windows/apps/br229571(v=win.10))
  
 

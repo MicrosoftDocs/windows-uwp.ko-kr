@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: fce2c9230add569c4494b01546f1b3ced81d488b
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 37d0ca71adf43891628a02d60d6873e7934d749b
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57612928"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258183"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>화면 크기 및 중단점
 
-UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치라면 어디에서든지 실행할 수 있습니다. 엄청난 수의 장치 대상 및 각 장치에 대 한 UI를 최적화 하는 것이 아니라 에코 시스템을 Windows 10에서 화면 크기, 디자인을 "중단점" 라고도 하는 몇 가지 주요 너비 범주에 대 한 것이 좋습니다. 
+UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치라면 어디에서든지 실행할 수 있습니다. 각 장치에 대해 UI를 최적화 하는 대신 Windows 10 에코 시스템에서 많은 수의 장치 대상과 화면 크기를 사용 하는 경우 몇 가지 주요 너비 범주 ("중단점" 라고도 함)를 디자인 하는 것이 좋습니다. 
 - 소형(640px 이하)
 - 중간(641px ~ 1007px)
 - 대형(1008px 이상)
@@ -47,7 +47,7 @@ UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치�
 <td style="vertical-align:top;">320x569, 360x640, 480x854</td>
 </tr>
 <tr class="odd">
-<td style="vertical-align:top;">미디어</td>
+<td style="vertical-align:top;">보통</td>
 <td style="vertical-align:top;">641px - 1007px</td>
 <td style="vertical-align:top;">7&quot; ~ 12&quot;</td>
 <td style="vertical-align:top;">패블릿, 태블릿</td>
@@ -84,13 +84,13 @@ UWP 앱은 모든 Windows 10 장치에서 앱을 쉽게 알아볼 수 있도록 
 - [탐색 창](../controls-and-patterns/navigationview.md)을 오버레이 모드로 전환하여 화면 공간 절약
 - [마스터 세부 정보 패턴](../controls-and-patterns/master-details.md)을 사용하는 경우 누적된 프레젠테이션 모드를 사용하여 화면 공간을 절약할 수 있습니다.
 
-### <a name="medium"></a>미디어
+### <a name="medium"></a>보통
 - 왼쪽 및 오른쪽 창 여백을 24픽셀로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.
 - [앱 바](../controls-and-patterns/app-bars.md) 등의 명령 요소를 앱 창의 맨 위에 배치합니다.
 - 열/영역은 최대 2개까지 사용합니다.
 - 검색 상자를 표시합니다.
 - 좁은 아이콘 스트립이 항상 표시되도록 [탐색 창](../controls-and-patterns/navigationview.md)을 작은 모드로 전환합니다.
-- [TV 환경](https://go.microsoft.com/fwlink/?LinkId=760736)에 맞는 추가 조정을 고려합니다.
+- [TV 환경](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN)에 맞는 추가 조정을 고려합니다.
 
 ### <a name="large"></a>대
 - 왼쪽 및 오른쪽 창 여백을 24픽셀로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.
@@ -100,6 +100,6 @@ UWP 앱은 모든 Windows 10 장치에서 앱을 쉽게 알아볼 수 있도록 
 - 항상 표시되도록 [탐색 창](../controls-and-patterns/navigationview.md)을 도킹 모드로 전환합니다.
 
 >[!TIP] 
-> 사용 하 여 [ **휴대폰에 대 한 연속**](https://go.microsoft.com/fwlink/p/?LinkID=699431), 사용자는 모니터, 마우스 및 키보드 랩톱 처럼 작동 하 고 휴대폰을 확인 하려면 호환 되는 Windows 10 모바일 장치를 연결할 수 있습니다. 특정 중단점에 대해 디자인할 때 이 새로운 기능에 유의하세요. 휴대폰이 항상 크기 클래스로 유지되지는 않습니다.
+> [**휴대폰에 대 한 Continuum**](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN)을 사용 하면 사용자는 호환 되는 Windows 10 mobile 장치를 모니터, 마우스 및 키보드에 연결 하 여 해당 휴대폰을 랩톱 처럼 작동 하도록 할 수 있습니다. 특정 중단점에 대해 디자인할 때 이 새로운 기능에 유의하세요. 휴대폰이 항상 크기 클래스로 유지되지는 않습니다.
 
 

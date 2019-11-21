@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c11a812aaa62e9fa4d27fddc1d55739fe491bd20
-ms.sourcegitcommit: 04683376dbdbff987601f546f058748442170068
+ms.openlocfilehash: 1d6c1b4c477bfe5c4f584227491ef5a94e375fa2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340839"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255667"
 ---
 # <a name="using-the-visual-layer-with-xaml"></a>XAML로 시각적 계층 사용
 
 시각적 계층 기능을 사용하는 대부분의 앱은 XAML을 사용하여 기본 UI 콘텐츠를 정의합니다. Windows 10 1주년 업데이트에는 XAML 프레임워크 및 시각적 계층에 대한 새로운 기능이 있으며 이 두 가지 기술을 쉽게 결합하여 매력적인 사용자 환경을 만들 수 있습니다.
-XAML 및 시각적 계층 interop 기능은 XAML API를 단독으로 사용하여 구현할 수 없는 고급 애니메이션 및 효과를 만드는 데 사용할 수 있습니다. 다음을 포함합니다.
+XAML 및 시각적 계층 interop 기능은 XAML API를 단독으로 사용하여 구현할 수 없는 고급 애니메이션 및 효과를 만드는 데 사용할 수 있습니다. 여기에는 다음이 포함됩니다.
 
 - 흐리고 불투명한 유리 효과 같은 브러시 효과
 - 동적 조명 효과
@@ -33,7 +33,7 @@ XAML 및 시각적 계층 interop 기능은 XAML API를 단독으로 사용하�
 
 XAML UI와 브러시 사용에 대한 자세한 내용은 [**브러시**](/windows/uwp/design/style/brushes#xamlcompositionbrushbase) 섹션을 참조하세요.
 
-코드 샘플은 [**XamlCompositionBrushBase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)에 대한 참조 페이지를 참조하세요.
+코드 샘플은 [**XamlCompositionBrushBase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)의 참조 페이지를 참조하세요.
 
 ## <a name="the-xamllight-class"></a>XamlLight 클래스
 
@@ -47,10 +47,10 @@ XAML UI 요소 조명을 포함한 조명 사용에 대한 자세한 내용은 [
 
 [**ElementCompositionPreview**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview) 는 XAML 및 비주얼 계층 interop 기능을 제공 하는 정적 클래스입니다. 시각적 계층 및 해당 기능의 개요는 [시각적 계층](https://docs.microsoft.com/windows/uwp/graphics/visual-layer)을 참조하세요. **ElementCompositionPreview** 클래스는 다음 메서드를 제공합니다.
 
--   [**Getelementvisual 개체**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): 이 요소를 렌더링 하는 데 사용 되는 "유인물" 시각적 개체 가져오기
--   [**Setelementchildvisual 개체**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual): "수동" 시각적 개체를이 요소의 시각적 트리의 마지막 자식으로 설정 합니다. 이 시각적 개체는 나머지 요소의 맨 위에 표시됩니다. 
--   [**Getelementchildvisual 개체**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): **Setelementchildvisual** 개체를 사용 하 여 시각적 집합 검색
--   [**GetScrollViewerManipulationPropertySet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): **ScrollViewer** 의 스크롤 오프셋을 기반으로 60fps 애니메이션을 만드는 데 사용할 수 있는 개체를 가져옵니다.
+-   [**Getelementvisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual)개체:이 요소를 렌더링 하는 데 사용 되는 "유인물" 시각적 개체 가져오기
+-   [**Setelementchildvisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual)개체: "수동" 시각적 개체를이 요소의 시각적 트리의 마지막 자식으로 설정 합니다. 이 시각적 개체는 나머지 요소의 맨 위에 표시됩니다. 
+-   [**Getelementchildvisual 개체**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): **setelementchildvisual** 개체를 사용 하 여 시각적 집합 검색
+-   [**GetScrollViewerManipulationPropertySet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): **ScrollViewer** 에서 스크롤 오프셋을 기반으로 60fps 애니메이션을 만드는 데 사용할 수 있는 개체를 가져옵니다.
 
 ## <a name="remarks-on-elementcompositionpreviewgetelementvisual"></a>ElementCompositionPreview.GetElementVisual에 대한 설명
 
@@ -199,7 +199,7 @@ private void InitializeDropShadow(UIElement shadowHost, Shape shadowTarget)
 }
 ```
 
-다음 두 가지 목록은 동일한 XAML 구조를 사용하는 이전 C# 코드의 [C++/WinRT](https://aka.ms/cppwinrt) 및 [C++/CX](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx) 등가를 표시합니다.
+다음 두 가지 목록은 동일한 XAML 구조를 사용하는 이전 C# 코드의 [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index) 및 [C++/CX](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx) 등가를 표시합니다.
 
 ```cppwinrt
 #include <winrt/Windows.UI.Composition.h>

@@ -1,32 +1,32 @@
 ---
 ms.assetid: 2f76c520-84a3-4066-8eb3-ecc0ecd198a7
 title: Windows 데스크톱 브리지 앱 테스트
-description: 데스크톱 브리지의 기본 제공 테스트를 사용 하 여 데스크톱 앱을 UWP 앱에 해당 변환에 대 한 최적화 되도록 되도록 합니다.
+description: 데스크톱 브리지의 기본 제공 테스트를 사용 하 여 데스크톱 앱을 UWP 앱으로 변환 하기 위해 최적화 되어 있는지 확인 합니다.
 ms.date: 12/18/2017
 ms.topic: article
-keywords: windows 10 uwp 앱 인증
+keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: a28c344ed7c8645f3788719185aac71c7a036d5c
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: dcdac5130af673d1b0d1ab1a9713902e9ab22830
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317411"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257827"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Windows 데스크톱 브리지 앱 테스트
 
-[데스크톱 브리지 앱](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) Windows 데스크톱 응용 프로그램을 사용 하는 유니버설 Windows 플랫폼 (UWP) 앱으로 변환 되는 [데스크톱 브리지](https://developer.microsoft.com/en-us/windows/bridges/desktop)합니다. 변환 후에는 Windows 데스크톱 응용 프로그램이 Windows 10 데스크톱을 대상으로 하는 UWP 앱 패키지(.appx 또는 .appxbundle)의 형태로 패키징되고, 서비스되고, 배포됩니다.
+[데스크톱 브리지 앱](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root) 은 [데스크톱 브리지](https://developer.microsoft.com/en-us/windows/bridges/desktop)를 사용 하 여 유니버설 Windows 플랫폼 (UWP) 앱으로 변환 된 Windows 데스크톱 응용 프로그램입니다. 변환 후에는 Windows 데스크톱 응용 프로그램이 Windows 10 데스크톱을 대상으로 하는 UWP 앱 패키지(.appx 또는 .appxbundle)의 형태로 패키징되고, 서비스되고, 배포됩니다.
 
 ## <a name="required-versus-optional-tests"></a>필수 테스트와 선택 테스트
-Windows 데스크톱 브리지 앱에 대 한 선택적 테스트는 정보용 으로만 및 Microsoft Store 온 보 딩 하는 동안 앱을 평가 하는 사용 되지 않습니다. 조사 하는 것이 좋습니다 이러한 고품질 앱을 더 나은 결과 테스트 합니다. 스토어 온보딩에 대한 전반적인 성공/실패는 이러한 선택적 테스트가 아닌 필수 테스트에 의해 결정됩니다.
+Windows 데스크톱 브리지 앱에 대 한 선택적 테스트는 정보 제공 용 이며 Microsoft Store 온 보 딩 중에 앱을 평가 하는 데 사용 되지 않습니다. 이러한 테스트 결과를 조사 하 여 품질이 우수한 앱을 생성 하는 것이 좋습니다. 스토어 온보딩에 대한 전반적인 성공/실패는 이러한 선택적 테스트가 아닌 필수 테스트에 의해 결정됩니다.
 
 ## <a name="current-optional-tests"></a>현재 선택적 테스트
 
-### <a name="1-digitally-signed-file-test"></a>1. 디지털 서명 된 파일 테스트 
+### <a name="1-digitally-signed-file-test"></a>1. 디지털 서명된 파일 테스트 
 **배경**  
 이 테스트는 모든 PE(이식 가능한 실행 파일) 파일에 유효한 서명이 포함되어 있는지 확인합니다. 디지털 서명된 파일이 있으면 사용자가 해당 소프트웨어가 정품인지 알 수 있습니다.
 
-**테스트 세부 정보**  
+**테스트 정보**  
 테스트는 패키지의 모든 PE 파일을 검색하고 서명에 대한 파일의 헤더를 검사합니다. 모든 PE 파일에 디지털 서명이 권장됩니다. PE 파일이 서명되지 않은 경우 경고가 생성됩니다.
  
 **정정 작업**  
@@ -36,23 +36,23 @@ Windows 데스크톱 브리지 앱에 대 한 선택적 테스트는 정보용 �
 **배경**  
 이 테스트는 패키지 레지스트리를 검색하여 파일 연결 동사가 등록되어 있는지 검사합니다. 
 
-**테스트 세부 정보**  
+**테스트 정보**  
 광범위한 UWP(유니버설 Windows 플랫폼) API를 사용하여 변환된 데스크톱 앱을 향상시킬 수 있습니다. 이 테스트는 앱의 UWP 바이너리에서 비-UWP API를 호출하지 않는지 검사합니다. UWP 바이너리에는 **AppContainer** 플래그 설정이 있습니다.
 
 **정정 작업**  
-참조 [UWP 브리지에 데스크톱: 앱 확장](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions) 올바르게 사용 하는 방법과 이러한 확장에 대 한 설명은 합니다. 
+이러한 확장 기능에 대한 설명 및 이를 적절히 사용하는 방법은 [데스크톱-UWP 브리지: 앱 확장](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions)을 참조하세요. 
 
 ### <a name="3-debug-configuration-test"></a>3. 디버그 구성 테스트
 이 테스트는 appx가 디버그 빌드가 아닌지 확인합니다.
  
 **배경**  
-Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야 디버그 및 실행 파일의 디버그 버전을 참조 하지 않아야 합니다. 또한 앱에서 이 테스트를 통과하려면 최적화된 상태로 코드를 빌드해야 합니다.
+Microsoft Store에 대 한 인증을 받기 위해 응용 프로그램은 디버그에 대해 컴파일되지 않으며 실행 파일의 디버그 버전을 참조 하지 않아야 합니다. 또한 앱에서 이 테스트를 통과하려면 최적화된 상태로 코드를 빌드해야 합니다.
  
-**테스트 세부 정보**  
+**테스트 정보**  
 앱을 테스트하여 디버그 빌드가 아니고 디버그 프레임워크에 링크되지 않았는지 확인합니다.
  
 **정정 작업**  
-* Microsoft Store 제출 하기 전에 릴리스 빌드를로 앱을 빌드하십시오.
+* 앱을 Microsoft Store에 제출 하기 전에 릴리스 빌드로 빌드합니다.
 * 올바른 버전의 .NET Framework를 설치했는지 확인합니다.
 * 앱이 디버그 버전의 프레임워크에 연결되어 있지 않은지, 릴리스 버전으로 빌드되고 있는지 확인합니다. 이 앱에 .NET 구성 요소가 포함되어 있을 경우 올바른 버전의 .NET Framework를 설치했는지 확인합니다.
 
@@ -62,7 +62,7 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 **배경**  
 이 테스트는 [Windows 10 S](https://www.microsoft.com/windows/windows-10-s) 컴퓨터에서 실행되는 더 나은 데스크톱 브리지 앱을 만드는 데 도움이 됩니다.
 
-**테스트 세부 정보**  
+**테스트 정보**  
 이 테스트는 압축된 파일 또는 자동 압축 풀기 콘텐츠 내의 모든 실행 파일을 검사합니다. 이러한 형식의 콘텐츠에 포함된 실행 파일은 Windows 스토어에 온보딩 시 서명되지 않으며, 앱이 Windows 10 S 시스템에서 예상대로 실행되지 않을 수 있습니다.
  
 **정정 작업**
@@ -74,7 +74,7 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 **배경**  
 이 테스트는 [Windows 10 S](https://www.microsoft.com/windows/windows-10-s) 컴퓨터에서 실행되는 더 나은 데스크톱 브리지 앱을 만드는 데 도움이 됩니다. 
 
-**테스트 세부 정보**  
+**테스트 정보**  
 이 테스트는 앱이 Windows 10 S 시스템에서 제한된 실행 파일을 시작하려고 시도하는지 검사합니다. 이 기능에 의존하는 앱은 Windows 10 S 시스템에서 예상한 대로 실행되지 않을 수 있습니다. 
 
 **정정 작업**  
@@ -84,12 +84,12 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 
 ## <a name="current-required-tests"></a>현재 필수 테스트
 
-### <a name="1-app-capabilities-test-special-use-capabilities"></a>1. 앱 기능 테스트 (특별 한 용도로 사용 기능)
+### <a name="1-app-capabilities-test-special-use-capabilities"></a>1. 앱 기능 테스트(특별한 사용 접근 권한 값)
 
 **배경**  
 특수 사용 접근 권한 값은 특정 시나리오를 위한 것입니다. 회사 계정만 이러한 접근 권한 값을 사용할 수 있습니다. 
 
-**테스트 세부 정보**  
+**테스트 정보**  
 앱이 아래 접근 권한 값 중 하나를 선언하는지 확인합니다. 
 * EnterpriseAuthentication
 * SharedUserCertificates
@@ -100,11 +100,11 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 **정정 작업**  
 앱에 필요하지 않은 경우 특수 사용 접근 권한 값을 제거하는 것이 좋습니다. 또한 이 접근 권한 값의 사용에는 추가 온보딩 정책 검토가 적용됩니다.
 
-### <a name="2-app-manifest-resources-tests"></a>2. 응용 프로그램 매니페스트 리소스 테스트 
+### <a name="2-app-manifest-resources-tests"></a>2. 앱 매니페스트 리소스 테스트 
 #### <a name="21-app-resources-validation"></a>2.1 앱 리소스 유효성 검사
 앱의 매니페스트에 선언된 문자열 또는 이미지가 잘못된 경우 앱이 제대로 설치되지 않을 수 있습니다. 앱을 설치할 때 이러한 오류가 발생하면 앱의 로고나 기타 이미지가 올바로 표시되지 않을 수 있습니다.    
 
-**테스트 세부 정보**  
+**테스트 정보**  
 앱 매니페스트에 정의된 리소스를 검사하여 리소스가 있고 유효한지 확인합니다.
 
 **정정 작업**  
@@ -121,7 +121,7 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 이미지에서 TargetSize 한정자를 사용하지 않고 둘 이상의 변형을 정의해야 합니다. 이미지에서 Scale 한정자를 정의하거나 Scale 및 TargetSize를 지정하지 않은 상태로 유지하여 기본값 Scale-100으로 설정해야 합니다.  | 자세한 정보는 [반응형 디자인](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design) 및 [앱 리소스](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data)에 대한 가이드를 참조하세요. 
 패키지에 "resources.pri" 파일이 없습니다.  | 앱 매니페스트에 지역화 가능한 콘텐츠가 있는 경우 앱 패키지에 유효한 resources.pri 파일이 있는지 확인하세요. 
 "resources.pri" 파일에는 패키지 이름 {package full name}과(와) 일치하는 이름을 사용하는 리소스 맵이 있어야 합니다.  | 매니페스트가 변경되어 resources.pri의 리소스 맵 이름이 매니페스트의 패키지 이름과 더 이상 일치하지 않는 경우 이 오류가 발생할 수 있습니다. 실제 메시지에서는 resources.pri에 포함되어야 하는 패키지 이름이 {package full name}에 포함됩니다. 이 오류를 해결하려면 resources.pri를 다시 빌드해야 하며 앱 패키지를 다시 빌드하면 이 작업을 가장 간단하게 수행할 수 있습니다. 
-"resources.pri" 파일에서 자동 병합을 사용할 수 있도록 설정해서는 안 됩니다.  | MakePRI.exe는 AutoMerge라는 옵션을 지원합니다. AutoMerge의 기본값은 off입니다. 이 옵션을 사용하면 AutoMerge에서 런타임에 앱의 언어 팩 리소스를 단일 resources.pri에 병합합니다. Microsoft Store 통해 배포 하려는 앱에 대 한이 권장 하지 않습니다. Microsoft Store 통해 배포 되는 앱의 resources.pri 앱의 패키지의 루트에 하 고 앱을 지 원하는 모든 언어 참조를 포함 해야 합니다. 
+"resources.pri" 파일에서 자동 병합을 사용할 수 있도록 설정해서는 안 됩니다.  | MakePRI.exe는 AutoMerge라는 옵션을 지원합니다. AutoMerge의 기본값은 off입니다. 이 옵션을 사용하면 AutoMerge에서 런타임에 앱의 언어 팩 리소스를 단일 resources.pri에 병합합니다. Microsoft Store를 통해 배포 하려는 앱에는이 방법을 권장 하지 않습니다. Microsoft Store를 통해 배포 되는 앱의 리소스 .pri는 앱 패키지의 루트에 있고 앱이 지 원하는 모든 언어 참조를 포함 해야 합니다. 
 {string} 문자열에서 {number}자의 최대 길이 제한을 준수하지 못했습니다.  | [앱 패키지 요구 사항](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements)을 참조하세요. 실제 메시지에서는 {string}이(가) 오류가 있는 문자열로 대체되고 {number}에는 최대 길이가 포함됩니다. 
 {string} 문자열에는 선행/후행 공백이 없어야 합니다.  | 앱 매니페스트에 있는 요소에 대한 스키마에서는 선행 또는 후행 공백 문자를 허용하지 않습니다. 실제 메시지에서는 {string}이(가) 오류가 있는 문자열로 대체됩니다. resources.pri에 있는 매니페스트 필드의 지역화된 값에 선행 또는 후행 공백 문자가 없는지 확인하세요. 
 문자열은 비어 있으면 안 되며 길이가 0보다 커야 합니다.  | 자세한 내용은 [앱 패키지 요구 사항](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements)을 참조하세요. 
@@ -136,27 +136,27 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 **배경**  
 데스크톱 브리지 앱의 모든 기능이 완벽하게 제대로 작동해야 합니다. 템플릿 또는 SDK 샘플의 기본 이미지를 사용하는 앱은 부적절한 사용자 환경을 제공하며 스토어 카탈로그에서 쉽게 식별할 수 없습니다.
 
-**테스트 세부 정보**  
+**테스트 정보**  
 이 테스트는 앱이 사용하는 이미지가 SDK 샘플 또는 Visual Studio의 기본 이미지가 아닌지 검증합니다. 
 
 **정정 작업**  
 기본 이미지를 보다 개성적이고 앱을 잘 나타내는 이미지로 바꿉니다.
 
-### <a name="3-package-compliance-tests"></a>3. 패키지 호환성 테스트
+### <a name="3-package-compliance-tests"></a>3. 패키지 준수 테스트
 #### <a name="31-app-manifest"></a>3.1 앱 매니페스트
 앱 매니페스트의 내용을 테스트하여 내용이 올바른지 확인합니다.
 
 **배경**  
 앱의 매니페스트가 형식이 올발라야 합니다.
 
-**테스트 세부 정보**  
+**테스트 정보**  
 앱 매니페스트를 검사하여 [앱 패키지 요구 사항](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements)에 설명된 대로 내용이 올바른지 확인합니다. 이 테스트에서 다음 검사가 수행됩니다.
-* **파일 확장명과 프로토콜**  
+* **파일 확장명 및 프로토콜**  
 앱에서 관련된 파일 유형을 선언할 수 있습니다. 많은 수의 흔하지 않은 파일 유형에 대한 선언은 사용자 환경을 저하시킵니다. 이 테스트에서는 앱이 연결할 수 있는 파일 확장명 수를 제한합니다.
 * **프레임 워크 종속성 규칙**  
 이 테스트에서는 앱이 UWP에 적절하게 종속되는 요구 사항을 선언합니다. 부적절한 종속성이 있으면 이 테스트가 실패합니다. 앱의 대상인 OS 버전과 프레임워크 종속성 간에 불일치가 있으면 테스트가 실패합니다. 또한 앱이 프레임워크 dll의 "미리 보기" 버전을 참조하는 경우에도 테스트가 실패합니다.
-* **프로세스 간 통신 (IPC) 확인**  
-이 테스트에서는 데스크톱 브리지 앱이 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신하지 않는 요구 사항을 적용합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. `DesktopApplicationPath`와 동일한 이름으로 [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute)를 지정하는 앱은 이 테스트에 실패합니다.  
+* **IPC (프로세스 간 통신) 확인**  
+이 테스트에서는 데스크톱 브리지 앱이 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신하지 않는 요구 사항을 적용합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. [와 동일한 이름으로ActivatableClassAttribute](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute)`DesktopApplicationPath`를 지정하는 앱은 이 테스트에 실패합니다.  
 
 **정정 작업**  
 앱의 매니페스트가 [앱 패키지 요구 사항](https://docs.microsoft.com/en-us/windows/uwp/publish/app-package-requirements)에 설명된 요구 사항에 맞는지 검토합니다.
@@ -168,7 +168,7 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 **배경**  
 이 테스트는 스토어 정책에 따라 구현됩니다. 
 
-**테스트 세부 정보**  
+**테스트 정보**  
 이 테스트는 번들에서 .appx 패키지의 총 개수가 512 미만이며 번들에서 "기본" 패키지가 하나 있는지 확인합니다. 또한 번들 버전의 수정 버전 번호가 0으로 설정되어 있는지 확인합니다. 
 
 **정정 작업**  
@@ -179,7 +179,7 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 **배경**  
 이 테스트는 응용 프로그램에서 새 서비스나 드라이버를 설치하거나 업데이트하는지 검사합니다.
 
-**테스트 세부 정보**  
+**테스트 정보**  
 테스트는 registry.dat 파일 내에서 새로운 서비스 또는 등록되는 드라이버를 표시하는 특정 레지스트리 위치로의 업데이트를 찾습니다. 앱이 드라이버나 서비스를 설치하려고 시도한다면 테스트는 실패합니다.  
 
 **정정 작업**  
@@ -192,7 +192,7 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 **배경**  
 이 테스트는 앱 패키지의 바이너리에서 아키텍처 충돌을 검사합니다. 앱 패키지는 매니페스트에 지정된 프로세서 아키텍처에 사용할 수 없는 바이너리를 포함하면 안 됩니다. 지원되지 않는 바이너리를 포함하면 앱 크래시가 발생하거나 불필요하게 앱 패키지 크기가 늘어날 수 있습니다. 
 
-**테스트 세부 정보**  
+**테스트 정보**  
 앱 패키지 매니페스트 프로세서 아키텍처 선언과 상호 참조될 때 PE(이식 가능한 실행 파일) 헤더에서 각 파일의 "비트 수"가 적절한지 확인합니다. 
 
 **정정 작업**  
@@ -208,49 +208,49 @@ Microsoft Store 대 한 인증 되려면 앱 하지에 대해 컴파일되어야
 **배경**  
 데스크톱 브리지 앱은 최신 API(UWP 구성 요소)와 함께 일부 레거시 Win32 API를 활용할 수 있습니다. 테스트는 지원되지 않는 API를 사용하여 관리되는 이진을 식별합니다.
  
-**테스트 세부 정보**  
+**테스트 정보**  
 이 테스트는 앱의 모든 UWP 구성 요소를 검사합니다.
-* 각 관리 되는 이진 앱 패키지에 종속 되지 않습니다. 이진 파일의 가져오기 주소 테이블을 확인 하 여 UWP 앱 개발을 위한 지원 되지 않는 Win32 api를 확인 합니다.
+* 앱 패키지 내의 각 관리 이진 파일이 이진 파일의 가져오기 주소 테이블을 확인 하 여 UWP 앱 개발에 지원 되지 않는 Win32 API에 종속 되지 않는지 확인 합니다.
 * 앱 패키지 내의 각 관리되는 이진 파일이 승인된 프로필 외부의 기능에 종속하지 않는지 확인합니다. 
 
 **정정 작업**  
 앱이 디버그 빌드가 아닌 릴리스 빌드로 컴파일된 것을 확인하여 수정할 수 있습니다. 
 
 > [!NOTE]
-> 앱의 디버그 빌드를이 테스트는 앱만 사용 하는 경우에 실패 [UWP 앱 용 Api](https://docs.microsoft.com/uwp/)합니다. UWP 앱 용 API 허용된 되지 않는 있는 API를 식별 하는 오류 메시지를 검토 합니다. 
+> 앱에서 [UWP 앱 용 api](https://docs.microsoft.com/uwp/)만 사용 하는 경우에도 응용 프로그램의 디버그 빌드에서는이 테스트가 실패 합니다. 오류 메시지를 검토 하 여 UWP 앱에 대해 허용 되는 API가 아닌 API를 확인 합니다. 
 
 > [!NOTE]
-> C++디버그 구성에 기본 제공 되는 앱 구성만 UWP 앱 용 Windows SDK에서 Api를 사용 하는 경우에이 테스트를 실패 합니다. 참조 [UWP 앱에서 Windows Api에 대 한 대안](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps) 자세한 내용은 합니다.
+> C++구성에서 UWP 앱에 대 한 Windows SDK Api를 사용 하는 경우에도 디버그 구성에서 빌드된 앱은이 테스트에 실패 합니다. 자세한 내용은 [UWP 앱에서 Windows api에](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps) 대 한 대체 항목을 참조 하세요.
 
-### <a name="6-user-account-control-uac-test"></a>6. 사용자 계정 컨트롤 (UAC) 테스트  
+### <a name="6-user-account-control-uac-test"></a>6. UAC(사용자 계정 컨트롤) 테스트  
 
 **배경**  
 앱 실행 시 사용자 계정 컨트롤을 요청하지 않는지 확인합니다.
 
-**테스트 세부 정보**  
-앱은 Microsoft Store 정책에 따라 관리자 권한 상승 또는 UIAccess 요청할 수 없습니다. 승격된 보안 권한이 지원되지 않습니다. 
+**테스트 정보**  
+앱은 Microsoft Store 정책 당 관리자 권한 상승 또는 UIAccess를 요청할 수 없습니다. 승격된 보안 권한이 지원되지 않습니다. 
 
 **정정 작업**  
-대화형 사용자로서 앱을 실행해야 합니다. 자세한 내용은 [UI 자동화 보안 개요](https://go.microsoft.com/fwlink/?linkid=839440)를 참조하세요.
+대화형 사용자로서 앱을 실행해야 합니다. 자세한 내용은 [UI 자동화 보안 개요](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-security-overview?redirectedfrom=MSDN)를 참조하세요.
 
  
 ### <a name="7-windows-runtime-metadata-validation"></a>7. Windows 런타임 메타데이터 유효성 검사
 **배경**  
 앱에 포함된 구성 요소가 UWP 형식 시스템을 준수하는지 확인합니다.
 
-**테스트 세부 정보**  
+**테스트 정보**  
 이 테스트는 적절한 형식 사용과 관련된 다양한 플래그를 throw합니다.
 
 **정정 작업**  
 * **ExclusiveTo 특성**  
 UWP 클래스가 다른 클래스에 ExclusiveTo로 표시된 인터페이스를 구현하지 않는지 확인합니다.
-* **일반 메타 데이터 수정**  
+* **일반 메타 데이터 정확성**  
 사용 중인 형식을 생성하는 컴파일러가 최신 UWP 사양으로 업데이트되었는지 확인합니다.
 * **Properties**  
 UWP 클래스의 모든 속성이 `get` 메서드를 지니는지 확인합니다(`set` 메서드는 선택 사항입니다). 모든 속성에 대해 `get` 메서드가 반환하는 형식이 `set` 메서드 입력 매개 변수 형식과 일치하는지 확인합니다.
-* **위치 유형**  
+* **형식 위치**  
 모든 UWP 형식에 대한 메타데이터가 앱 패키지에서 네임스페이스와 일치하는 가장 긴 이름을 가진 winmd 파일에 있는지 확인합니다.
-* **형식 이름 대/소문자 구분**  
+* **유형 이름 대/소문자 구분**  
 모든 UWP 형식에 앱 패키지 내 고유한 대/소문자가 구분된 이름이 있는지 확인합니다. 또한 UWP 이름이 앱 패키지 내에서 네임스페이스 이름으로도 사용되지 않았는지 확인합니다.
 * **형식 이름 정확성**  
 글로벌 네임스페이스 또는 Windows 최상위 네임스페이스에 UWP 형식이 없는지 확인합니다.
@@ -263,13 +263,13 @@ UWP 클래스의 모든 속성이 `get` 메서드를 지니는지 확인합니�
 **배경**  
 특정 파일이 중요한 보안, 안정성 또는 기타 향상된 기능으로 업데이트되었습니다. 오래된 버전은 위험에 노출될 수 있으므로 Windows 데스크톱 브리지 앱은 최신 버전의 파일을 포함해야 합니다. Windows 앱 인증 키트는 모든 앱에서 현재 버전을 사용하도록 이러한 파일을 차단합니다.
 
-**테스트 세부 정보**  
+**테스트 정보**  
 Windows 앱 인증 키트에서 금지된 파일 검사는 현재 다음 파일을 검사합니다.
 * *Bing.Maps.JavaScript\js\veapicore.js*  
 이 검사는 앱이 최신 공식 릴리스 대신 "Release Preview" 버전의 파일을 사용하는 경우 일반적으로 실패합니다. 
 
 **정정 작업**  
-이 문제를 해결 하려면 최신 버전의를 사용 합니다 [Bing Maps SDK](https://go.microsoft.com/fwlink/p/?linkid=614880) UWP 앱에 대 한 합니다.
+이를 해결 하려면 최신 버전의 UWP 앱 용 [Bing MAPS SDK](https://www.bingmapsportal.com/) 를 사용 합니다.
 
 #### <a name="82-private-code-signing"></a>8.2 전용 코드 서명
 앱 패키지 내에 프라이빗 코드 서명 이진이 있는지 테스트합니다. 
@@ -277,7 +277,7 @@ Windows 앱 인증 키트에서 금지된 파일 검사는 현재 다음 파일�
 **배경**  
 프라이빗 코드 서명 파일은 손상될 경우 악의적인 용도로 사용될 수 있으므로 프라이빗으로 보관해야 합니다. 
 
-**테스트 세부 정보**  
+**테스트 정보**  
 앱 패키지 내에서 .pfx 또는 .snk 확장명을 사용하며 개인 서명 키가 포함되었음을 나타내는 파일을 검사합니다. 
 
 **정정 작업**  

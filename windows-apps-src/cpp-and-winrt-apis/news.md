@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 새로운 기능
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 24abdb26cf884367d9a9521d30b09b443d2e4e00
-ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
+ms.openlocfilehash: d5a2c3d10f2cbfcc608d212a9465ca738e1ca15e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72998622"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74255042"
 ---
 # <a name="whats-new-in-cwinrt"></a>C++/WinRT의 새로운 기능
 
@@ -19,7 +19,7 @@ ms.locfileid: "72998622"
 
 ## <a name="news-and-changes-in-cwinrt-20"></a>C++/WinRT 2.0의 새로운 기능 및 변경 내용
 
-[C++/WinRT Visual Studio 확장(VSIX)](https://aka.ms/cppwinrt/vsix), [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) 및 `cppwinrt.exe` 도구(다운로드 및 설치 방법 포함)에 대한 자세한 내용은 [C++/WinRT, XAML, VSIX 확장 및 NuGet 패키지에 대한 Visual Studio 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
+[C++/WinRT Visual Studio 확장(VSIX)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264), [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) 및 `cppwinrt.exe` 도구(다운로드 및 설치 방법 포함)에 대한 자세한 내용은 [C++/WinRT, XAML, VSIX 확장 및 NuGet 패키지에 대한 Visual Studio 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
 
 ### <a name="changes-to-the-cwinrt-visual-studio-extension-vsix-for-version-20"></a>버전 2.0용 C++/WinRT Visual Studio 확장(VSIX)의 변경 내용
 
@@ -302,7 +302,7 @@ struct MainPage : PageT<MainPage>
 - 스마트 포인터가 강화되었습니다. 이전에는 새 값을 이동 할당할 때 이벤트 취소자가 호출되지 않았습니다. 이를 통해 스마트 포인터가 루트가 [**winrt::com_ptr struct template**](/uwp/cpp-ref-for-winrt/com-ptr)인 자체 할당을 안정적으로 처리하지 않는 문제를 파악할 수 있었습니다. **winrt::com_ptr**이 수정되었으며, 이벤트 취소자는 이동 의미 체계를 제대로 처리하여 할당 시 취소되도록 수정되었습니다.
 
 > [!IMPORTANT]
-> 버전 1.0.181002.2 및 이후 버전 1.0.190128.4에서 모두 [C++/WinRT Visual Studio 확장(VSIX)](https://aka.ms/cppwinrt/vsix)에 대한 주요 변경 내용이 있습니다. 이 변경 내용에 대한 자세한 내용과 이 변경 내용이 기존 프로젝트에 어떻게 영향을 미치는지 알아보려면 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 및 [이전 버전의 VSIX 확장](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension)을 참조하세요.
+> 버전 1.0.181002.2 및 이후 버전 1.0.190128.4에서 모두 [C++/WinRT Visual Studio 확장(VSIX)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264)에 대한 주요 변경 내용이 있습니다. 이 변경 내용에 대한 자세한 내용과 이 변경 내용이 기존 프로젝트에 어떻게 영향을 미치는지 알아보려면 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 및 [이전 버전의 VSIX 확장](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension)을 참조하세요.
 
 ### <a name="isolation-from-windows-sdk-header-files"></a>Windows SDK 헤더 파일에서 격리
 
@@ -329,7 +329,7 @@ C++/WinRT는 컴파일하기 위해 더 이상 Windows SDK의 헤더 파일을 �
 
 이 두 가지 방법 중 하나를 사용한 후 컴파일러 또는 링커 오류가 발생하면 다시 빌드하기 전에 솔루션을 정리할 수 있습니다(**빌드** > **솔루션 정리** 및/또는 수동으로 모든 임시 폴더와 파일 삭제).
 
-C++ 컴파일러에서 “오류 C2039: ‘IUnknown’: '\`전역 네임스페이스''의 멤버가 아닙니다.”가 생성되면 C++/WinRT 헤더를 포함하기 전에 `#include <unknwn.h>`를 `pch.h` 파일의 맨 위에 추가합니다. 
+C++ 컴파일러에서 “오류 C2039: ‘IUnknown’: '\`전역 네임스페이스''의 멤버가 아닙니다.”가 생성되면 C++/WinRT 헤더를 포함하기 전에 `#include <unknwn.h>`를 `pch.h` 파일의 맨 위에 추가합니다.*
 
 또한 그 뒤에 `#include <hstring.h>`을 추가해야 할 수 있습니다.
 

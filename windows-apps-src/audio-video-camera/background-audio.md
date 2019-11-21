@@ -6,26 +6,26 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 19b3aa80bee643087a0aa92f714349004f6ec1c1
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: fb43e5b7006c7c81875651a926e87eb8f76621fe
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359157"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74254307"
 ---
 # <a name="play-media-in-the-background"></a>백그라운드에서 미디어 재생
 이 문서에서는 앱이 포그라운드에서 백그라운드로 이동될 때 미디어가 계속 재생되도록 앱을 구성하는 방법을 보여 줍니다. 즉, 사용자가 홈 화면에서 반환된 앱을 최소화했거나 다른 방법으로 앱에서 외부로 이동한 후에도 앱은 오디오를 계속 재생할 수 있습니다. 
 
 백그라운드 오디오 재생 시나리오는 다음과 같습니다.
 
--   **장기 실행 재생:** 사용자 선택 하 고 시작 재생 목록에는 사용자가 백그라운드에서 재생을 계속 하 여 재생을 기대 하는 포그라운드 앱을 간단 하 게 나타납니다.
+-   **오래 실행되는 재생 목록:** 사용자가 간단하게 포그라운드 앱을 표시하여 재생 목록을 선택하고 시작할 수 있으며, 그 후 사용자는 예상대로 백그라운드에서 재생 목록을 계속 재생할 수 있습니다.
 
--   **작업 전환기를 사용합니다.** 간단 하 게 사용자 오디오 재생을 시작 하는 포그라운드 응용 프로그램을 표시 하 작업 전환기를 사용 하 여 다른 앱 열기 전환 됩니다. 사용자는 예상대로 백그라운드에서 오디오를 계속 재생할 수 있습니다.
+-   **작업 전환기 사용:** 사용자가 간단하게 포그라운드 앱을 표시하여 오디오 재생을 시작한 다음 작업 전환을 사용하여 열려 있는 다른 앱으로 전환할 수 있습니다. 사용자는 예상대로 백그라운드에서 오디오를 계속 재생할 수 있습니다.
 
 이 문서에 설명된 배경 오디오 구현을 사용하면 모바일, 데스크톱, Xbox 등의 모든 Windows 디바이스에서 앱을 실행할 수 있습니다.
 
 > [!NOTE]
-> 이 문서의 코드는 UWP [배경 오디오 샘플](https://go.microsoft.com/fwlink/p/?LinkId=800141)에서 조정되었습니다.
+> 이 문서의 코드는 UWP [배경 오디오 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback)에서 조정되었습니다.
 
 ## <a name="explanation-of-one-process-model"></a>단일 프로세스 모델에 대한 설명
 Windows 10 버전 1607에서는 배경 오디오를 사용하도록 설정하는 프로세스를 훨씬 간소화하는 새로운 단일 프로세스 모델이 도입되었습니다. 이전에는 앱이 포그라운드 앱뿐 아니라 백그라운드 프로세스도 관리한 다음 두 프로세스 간에 상태 변경을 수동으로 통신해야 했습니다. 새 모델에서는 앱 매니페스트에 배경 오디오 접근 권한 값을 추가하기만 하면 앱이 백그라운드로 이동될 때 자동으로 오디오 재생을 계속합니다. 새로운 두 가지 응용 프로그램 수명 주기 이벤트인 [**EnteredBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground) 및 [**LeavingBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground)를 사용하면 앱이 백그라운드로 이동하고 나가는 시기를 알 수 있습니다. 앱이 백그라운드로 이동하거나 나갈 때 시스템에서 적용하는 메모리 제약 조건이 변경될 수 있으므로 이러한 이벤트를 사용하여 현재 메모리 사용을 확인하고 제한 아래로 유지하기 위해 리소스를 해제할 수 있습니다.
@@ -36,7 +36,7 @@ Windows 10 버전 1607에서는 배경 오디오를 사용하도록 설정하�
 앱이 백그라운드에 있는 동안 오디오를 재생하려면 다음 요구 사항을 충족해야 합니다.
 
 * 이 문서의 뒷부분에 설명된 대로 앱 매니페스트에 **백그라운드 미디어 재생** 접근 권한 값을 추가합니다.
-* 앱이 [**CommandManager.IsEnabled**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanager.isenabled) 속성을 false로 설정하는 등 **MediaPlayer**와 SMTC(시스템 미디어 전송 컨트롤)의 자동 통합을 사용하지 않도록 설정하는 경우 백그라운드 미디어 재생을 사용하려면 SMTC와 수동 통합을 구현해야 합니다. **MediaPlayer** 이외의 API(예: [**AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph))를 사용하여 오디오를 재생하는 경우에도 앱이 백그라운드로 이동할 때 오디오 재생을 계속하려면 수동으로 SMTC와 통합해야 합니다. 최소 SMTC 통합 요구 사항은 [시스템 미디어 전송 컨트롤의 수동 컨트롤](system-media-transport-controls.md)에서 "배경 오디오에 대한 시스템 미디어 전송 컨트롤 사용" 섹션에 설명되어 있습니다.
+* 앱이CommandManager.IsEnabled[**속성을 false로 설정하는 등**MediaPlayer](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanager.isenabled)와 SMTC(시스템 미디어 전송 컨트롤)의 자동 통합을 사용하지 않도록 설정하는 경우 백그라운드 미디어 재생을 사용하려면 SMTC와 수동 통합을 구현해야 합니다. **MediaPlayer** 이외의 API(예: [**AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph))를 사용하여 오디오를 재생하는 경우에도 앱이 백그라운드로 이동할 때 오디오 재생을 계속하려면 수동으로 SMTC와 통합해야 합니다. 최소 SMTC 통합 요구 사항은 [시스템 미디어 전송 컨트롤의 수동 컨트롤](system-media-transport-controls.md)에서 "배경 오디오에 대한 시스템 미디어 전송 컨트롤 사용" 섹션에 설명되어 있습니다.
 * 앱이 백그라운드에 있는 동안 시스템에서 백그라운드 앱에 대해 설정한 메모리 사용량 제한 아래로 유지해야 합니다. 백그라운드에 있는 동안 메모리를 관리하기 위한 지침은 이 문서의 뒷부분에 제공되어 있습니다.
 
 ## <a name="background-media-playback-manifest-capability"></a>백그라운드 미디어 재생 매니페스트 접근 권한 값
@@ -58,7 +58,7 @@ Windows 10 버전 1607에서는 배경 오디오를 사용하도록 설정하�
   IgnorableNamespaces="uap uap3 mp">
 ```
 
-**Capabilities** 요소에 *backgroundMediaPlayback* 접근 권한 값을 추가합니다.
+*Capabilities* 요소에 **backgroundMediaPlayback** 접근 권한 값을 추가합니다.
 ```xml
 <Capabilities>
     <uap3:Capability Name="backgroundMediaPlayback"/>
@@ -86,15 +86,15 @@ Windows 10 버전 1607에서는 배경 오디오를 사용하도록 설정하�
 포그라운드와 백그라운드 간의 전환 처리 작업 중 가장 중요한 부분은 앱에서 사용하는 메모리를 관리하는 것입니다. 백그라운드에서 실행할 경우 시스템에서 앱에 허용하는 메모리 리소스가 줄어들기 때문에 [**AppMemoryUsageIncreased**](https://docs.microsoft.com/uwp/api/windows.system.memorymanager.appmemoryusageincreased) 및 [**AppMemoryUsageLimitChanging**](https://docs.microsoft.com/uwp/api/windows.system.memorymanager.appmemoryusagelimitchanging) 이벤트도 등록해야 합니다. 이러한 이벤트는 발생하는 경우 앱의 현재 메모리 사용량과 현재 제한을 확인한 다음 필요한 경우 메모리 사용을 줄이세요. 백그라운드에서 실행하는 동안 메모리 사용량을 감소하는 방법에 대한 자세한 내용은 [앱이 백그라운드로 이동할 때 메모리 회수](../launch-resume/reduce-memory-usage.md)를 참조하세요.
 
 ## <a name="network-availability-for-background-media-apps"></a>백그라운드 미디어 앱에 대한 네트워크 가용성
-스트림이나 파일에서 생성되지 않은 모든 네트워크 인식 미디어 원본은 원격 콘텐츠를 검색하는 동안 네트워크 연결을 활성 상태로 유지하고 검색하지 않을 때 해제합니다. [**MediaStreamSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaStreamSource), 특히 응용 프로그램을 사용 하 여 플랫폼에 올바른 버퍼링 된 범위를 올바르게 보고할 의존 [ **SetBufferedRange**](https://docs.microsoft.com/uwp/api/windows.media.core.mediastreamsource.setbufferedrange)합니다. 전체 콘텐츠가 완전히 버퍼링된 후에는 더 이상 앱을 위해 네트워크가 예약되지 않습니다.
+스트림이나 파일에서 생성되지 않은 모든 네트워크 인식 미디어 원본은 원격 콘텐츠를 검색하는 동안 네트워크 연결을 활성 상태로 유지하고 검색하지 않을 때 해제합니다. 특히 [**Mediastreamsource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaStreamSource)는 응용 프로그램을 사용 하 여 [**SetBufferedRange**](https://docs.microsoft.com/uwp/api/windows.media.core.mediastreamsource.setbufferedrange)를 사용 하는 플랫폼에 올바른 버퍼링 된 범위를 올바르게 보고 합니다. 전체 콘텐츠가 완전히 버퍼링된 후에는 더 이상 앱을 위해 네트워크가 예약되지 않습니다.
 
 미디어에서 다운로드하지 않을 때 백그라운드에서 발생하는 네트워크 호출을 만들려면 [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) 또는 [**TimeTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.TimeTrigger)와 같은 적절한 작업에 포함되어야 합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](https://docs.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 * [미디어 재생](media-playback.md)
-* [오디오 및 MediaPlayer를 사용 하 여 비디오를 재생 합니다.](play-audio-and-video-with-mediaplayer.md)
-* [전송 컨트롤 시스템 미디어를 사용 하 여 통합](integrate-with-systemmediatransportcontrols.md)
-* [백그라운드 오디오 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback)
+* [MediaPlayer를 사용 하 여 오디오 및 비디오 재생](play-audio-and-video-with-mediaplayer.md)
+* [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)
+* [배경 오디오 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundMediaPlayback)
 
  
 

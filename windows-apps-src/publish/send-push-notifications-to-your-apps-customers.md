@@ -1,23 +1,23 @@
 ---
-Description: 파트너 센터에서 앱 등급 또는 추가 기능 구매 등의 작업을 수행 하는 고객의 그룹을 장려 하기 위해 앱에 알림을 보내는 방법에 알아봅니다.
+Description: 파트너 센터에서 앱으로 알림을 보내는 방법에 대해 알아봅니다 .이를 통해 고객 그룹이 앱 등급을 평가 하거나 추가 기능을 구입 하는 등의 작업을 수행할 수 있습니다.
 title: 앱의 고객에게 대상 푸시 알림 보내기
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 대상 알림, 푸시 알림, 알림, 타일
 ms.assetid: 16386c81-702d-47cd-9f91-67659f5dca73
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c9a2f4a7dfd7af1eb0e0f74496e71f738b65b63
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 8ac9d464588cada11cd9d41cf0eb7858f593a0f2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788297"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259934"
 ---
 # <a name="send-notifications-to-your-apps-customers"></a>앱의 고객에게 알림 보내기
 
 올바른 시간에 올바른 메시지로 고객의 참여를 유도하는 것이 앱 개발자로서 성공하기 위한 핵심입니다. 알림을 보내 앱 평가, 추가 기능 구매, 새 기능 체험, 다른 앱 다운로드 등 고객의 참여를 유도할 수 있습니다(제공하는 [홍보 코드](generate-promotional-codes.md)를 이용해 무료로).
 
-[파트너 센터](https://partner.microsoft.com/dashboard) 제공 데이터 기반 고객 참여 플랫폼에 모든 앱의 고객에 게 알림을 보내는 데 사용 하거나만 대상으로 하는 에서정의한조건을충족하는앱의Windows10고객의하위집합[고객 세그먼트](create-customer-segments.md)합니다. 또한 앱의 두 개 이상의 고객에 게 보낼 알림을 만들 수 있습니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 는 모든 앱 고객에 게 알림을 보내거나 [고객 부문](create-customer-segments.md)에서 정의한 조건을 충족 하는 앱의 Windows 10 고객의 하위 집합을 대상으로 하는 데 사용할 수 있는 데이터 기반 고객 참여 플랫폼을 제공 합니다. 또한 둘 이상의 앱을 고객에 게 보낼 알림을 만들 수 있습니다.
 
 > [!IMPORTANT]
 > 이러한 알림은 UWP 앱에만 사용할 수 있습니다.
@@ -35,27 +35,27 @@ ms.locfileid: "63788297"
 
 고객 참여를 유도하기 위한 알림을 사용하려면 상위 수준에서 세 가지를 수행해야 합니다.
 
-1. **푸시 알림을 받도록 앱을 등록 합니다.** 앱에서 Microsoft Store Services SDK 대 한 참조를 추가 하 고 다음 파트너 센터와 앱 사이의 알림 채널을 등록 하는 코드 몇 줄을 추가 하 여이 작업을 수행 합니다. 고객에게 알림을 전달하는 데 이 채널을 사용하게 됩니다. 자세한 내용은 [앱에서 대상 푸시 알림 구성](../monetize/configure-your-app-to-receive-dev-center-notifications.md)을 참조하세요.
-2. **고객을 대상으로 결정 합니다.** 앱의 모든 고객에게, 또는 단일 앱에 대해 생성된 알림의 경우 인구 통계 또는 수익 기준에 따라 정의할 수 있는 *세그먼트*라고 하는 고객 그룹에게 알림을 보낼 수 있습니다. 자세한 내용은 [고객층 만들기](create-customer-segments.md)를 참조하세요.
-3. **알림 콘텐츠를 만들고 보냅니다.** 예를 들어, 앱을 평가 하려면 새 고객을 권장 하는 알림을 만들거나 추가 기능을 구매할 특가 상품 승격 알림을 보낼 수 있습니다.
+1. **푸시 알림을 수신 하도록 앱을 등록 합니다.** 앱에서 Microsoft Store Services SDK에 대 한 참조를 추가한 다음 파트너 센터와 앱 간에 알림 채널을 등록 하는 코드를 몇 줄 추가 하 여이 작업을 수행 합니다. 고객에게 알림을 전달하는 데 이 채널을 사용하게 됩니다. 자세한 내용은 [앱에서 대상 푸시 알림 구성](../monetize/configure-your-app-to-receive-dev-center-notifications.md)을 참조하세요.
+2. **대상으로 할 고객을 결정 합니다.** 앱의 모든 고객에게, 또는 단일 앱에 대해 생성된 알림의 경우 인구 통계 또는 수익 기준에 따라 정의할 수 있는 *세그먼트*라고 하는 고객 그룹에게 알림을 보낼 수 있습니다. 자세한 내용은 [고객층 만들기](create-customer-segments.md)를 참조하세요.
+3. **알림 콘텐츠를 만들고 전송합니다.** 예를 들어 새로운 고객에게 앱을 평가하도록 권장하는 알림을 만들거나 추가 기능을 구매하도록 유도하는 특가를 홍보하는 알림을 보낼 수 있습니다.
 
 
 ## <a name="to-create-and-send-a-notification"></a>알림을 만들어서 보내려면
 
-파트너 센터에서 알림을 만들고 특정 고객 세그먼트에 전송 하려면 다음이 단계를 따릅니다.
+파트너 센터에서 알림을 만들어 특정 고객 세그먼트로 보내려면 다음 단계를 수행 합니다.
 
 > [!NOTE]
-> 앱 파트너 센터에서 알림을 받을 수 있습니다, 전에 먼저를 호출 해야 합니다 [RegisterNotificationChannelAsync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) 알림을 받도록 앱을 등록 하 여 앱에서 메서드. 이 메서드는 [Microsoft Store Services SDK](https://aka.ms/store-em-sdk)에서 사용할 수 있습니다. 코드 예제와 함께 이 메서드를 호출하는 방법은 [앱에서 대상 푸시 알림 구성](../monetize/configure-your-app-to-receive-dev-center-notifications.md)을 참조하세요.
+> 앱이 파트너 센터에서 알림을 받을 수 있으려면 먼저 앱에서 [Registernotificationchannelasync](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) 메서드를 호출 하 여 알림을 수신 하도록 앱을 등록 해야 합니다. 이 메서드는 [Microsoft Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK)에서 사용할 수 있습니다. 코드 예제와 함께 이 메서드를 호출하는 방법은 [앱에서 대상 푸시 알림 구성](../monetize/configure-your-app-to-receive-dev-center-notifications.md)을 참조하세요.
 
-1. [파트너 센터](https://partner.microsoft.com/dashboard)를 확장 합니다 **참여** 섹션을 선택한 후 **알림을**합니다.
+1. [파트너 센터](https://partner.microsoft.com/dashboard)에서 **참여** 섹션을 확장 한 다음 **알림**을 선택 합니다.
 2. **알림** 페이지에서 **새 알림**을 선택합니다.
-3. 에 **템플릿을 선택** 섹션을 선택 합니다 [알림 유형을](#notification-template-types) 보내고 클릭 하려는 **확인**합니다.
-4. 다음 페이지에서 드롭다운 메뉴를 사용하여 알림을 생성하고자 하는 **단일 앱** 또는 **여러 앱**을 선택합니다. 앱에만 선택할 수 있습니다 [Microsoft Store Services SDK 사용 하 여 알림을 수신 하도록 구성 된](../monetize/configure-your-app-to-receive-dev-center-notifications.md)합니다.
-5. **알림 설정** 섹션에서 알림의 **이름**을 선택하고, 적용 가능한 경우, 알림을 보낼 **고객 그룹**을 선택합니다. (여러 앱에 게 보내는 알림에 이러한 앱의 모든 고객에 게만 전송 가능 합니다.) 아직 만들지 않은 고객층을 사용하고자 하는 경우 **새 고객 그룹 만들기**를 선택합니다. 알림에 새 고객층을 사용할 수 있으려면 24시간이 소요됩니다. 자세한 내용은 [고객층 만들기](create-customer-segments.md)를 참조하세요.
+3. **템플릿 선택** 섹션에서 전송 하려는 [알림 유형을](#notification-template-types) 선택한 다음 **확인**을 클릭 합니다.
+4. 다음 페이지에서 드롭다운 메뉴를 사용하여 알림을 생성하고자 하는 **단일 앱** 또는 **여러 앱**을 선택합니다. [Microsoft Store SERVICES SDK를 사용 하 여 알림을 받도록 구성](../monetize/configure-your-app-to-receive-dev-center-notifications.md)된 앱만 선택할 수 있습니다.
+5. **알림 설정** 섹션에서 알림의 **이름**을 선택하고, 적용 가능한 경우, 알림을 보낼 **고객 그룹**을 선택합니다. (여러 앱에 전송된 알림은 해당 앱의 모든 고객에게만 보낼 수 있습니다.) 아직 만들지 않은 세그먼트를 사용하려는 경우 **새 고객 그룹 만들기**를 선택합니다. 알림에 새 고객층을 사용할 수 있으려면 24시간이 소요됩니다. 자세한 내용은 [고객층 만들기](create-customer-segments.md)를 참조하세요.
 6. 알림을 보낼 시간을 지정하고자 하는 경우 **즉시 알림 보내기** 확인란의 선택을 취소하고 특정 날짜 및 시간을 선택합니다(모든 고객의 현지 시간대를 지정하지 않는 이상 모든 고객에 대해 UTC 형식으로).
 7. 알림의 만료 시점을 지정하려면 **알림 만료 없음** 확인란을 지우고 특정 만료 날짜와 시간(UTC 형식으로)을 선택합니다.
-8. **단일 앱에 알림:** 특정 언어 사용자, 특정 시간대의 사용자에게만 알림을 전달하기 위해 수신자를 필터링하려면 **필터 사용** 확인란을 클릭하세요. 사용하고 싶은 언어 및/또는 시간대를 지정할 수 있습니다.
-8. **여러 앱에 알림:** (고객) 당 각 장치에서 마지막 활성 앱에만 또는 각 장치에서 모든 앱에 알림을 보낼지 여부를 지정 합니다.
+8. **단일 앱에 대한 알림의 경우:** 특정 언어 사용자, 특정 시간대의 사용자에게만 알림을 전달하기 위해 수신자를 필터링하려면 **필터 사용** 확인란을 체크합니다. 사용하고 싶은 언어 및/또는 시간대를 지정할 수 있습니다.
+8. **여러 앱에 대한 알림의 경우:** (고객당)각 디바이스의 마지막 활성 앱 또는 각 디바이스의 모든 앱에 알림을 보낼 것인지 여부를 지정합니다.
 10. **알림 콘텐츠** 섹션의 **언어** 메뉴에서 알림을 표시할 언어를 선택합니다. 자세한 내용은 [알림 번역](#translate-your-notifications)을 참조하세요.
 11. **옵션** 섹션에서 텍스트를 입력하고 원하는 다른 옵션을 구성합니다. 템플릿으로 시작한 경우 몇몇 옵션은 기본적으로 제공되지만 원하는 대로 변경할 수 있습니다.
 
@@ -82,23 +82,23 @@ ms.locfileid: "63788297"
 
 다양한 알림 템플릿 중에서 선택할 수 있습니다.
 
--   **빈 값 (알림)입니다.** 사용자 지정 가능한 비어 있는 알림 메시지로 시작합니다. 알림 메시지란 고객이 다른 앱, 시작 화면 또는 데스크톱에 있을 때 앱과 통신하도록 허용하는, 화면에 표시되는 팝업 UI입니다.
--   **(타일) 비어 있습니다.** 사용자 지정 가능한 비어 있는 타일 알림으로 시작합니다. 타일은 시작 화면에서 앱이 표시되는 방식입니다. 타일은 "라이브"일 수 있습니다. 즉, 표시되는 내용이 알림에 응답하여 변경될 수 있습니다.
--   **등급에 대 한 요청 (알림).** 고객에게 앱 평가를 요청하는 알림 메시지. 알림을 선택하면 앱에 대한 스토어 평점 페이지가 표시됩니다.
--   **피드백 (알림)에 대 한 요청 합니다.** 고객에게 앱 피드백을 요청하는 알림 메시지. 알림을 선택하면 앱에 대한 피드백 허브 페이지가 표시됩니다.
+-   **Blank (알림).** 사용자 지정 가능한 비어 있는 알림 메시지로 시작합니다. 알림 메시지란 고객이 다른 앱, 시작 화면 또는 데스크톱에 있을 때 앱과 통신하도록 허용하는, 화면에 표시되는 팝업 UI입니다.
+-   **Blank (타일)** 사용자 지정 가능한 비어 있는 타일 알림으로 시작합니다. 타일은 시작 화면에서 앱이 표시되는 방식입니다. 타일은 "라이브"일 수 있습니다. 즉, 표시되는 내용이 알림에 응답하여 변경될 수 있습니다.
+-   **등급 (알림)을 요청 합니다.** 고객에게 앱 평가를 요청하는 알림 메시지. 알림을 선택하면 앱에 대한 스토어 평점 페이지가 표시됩니다.
+-   **사용자 의견 (알림)을 요청 합니다.** 고객에게 앱 피드백을 요청하는 알림 메시지. 알림을 선택하면 앱에 대한 피드백 허브 페이지가 표시됩니다.
     > [!NOTE]
     > **시작** 상자에서 이 템플릿 유형을 선택하는 경우 {PACKAGE_FAMILY_NAME} 자리 표시자 값을 앱의 실제 PFN(패키지 패밀리 이름)으로 교체해야 합니다. [앱 ID](view-app-identity-details.md) 페이지에서 앱의 PFN을 찾을 수 있습니다(**앱 관리** > **앱 ID**).
 
     ![피드백 알림 시작 상자](images/push-notifications-feedback-toast-launch-box.png)
 
--   **크로스-승격 (알림)입니다.** 선택한 다른 앱을 홍보하기 위한 알림 메시지. 고객이 알림을 선택하면 다른 앱의 스토어 목록이 표시됩니다.
+-   **알림 (알림).** 선택한 다른 앱을 홍보하기 위한 알림 메시지. 고객이 알림을 선택하면 다른 앱의 스토어 목록이 표시됩니다.
     > [!NOTE]
     > **시작** 상자에서 이 템플릿 유형을 선택하는 경우 **{여기에 홍보할 ProductId 입력}** 자리 표시자 값을 교차 홍보할 항목의 실제 Microsoft Store ID로 교체해야 합니다. [앱 ID](view-app-identity-details.md) 페이지에서 스토어 ID를 찾을 수 있습니다(**앱 관리** > **앱 ID**).
 
     ![교차 홍보 알림 시작 상자](images/push-notifications-promote-toast-launch-box.png)
 
--   **판매 (알림)을 승격 합니다.** 앱 특가 판매를 발표하기 위해 사용할 수 있는 알림 메시지. 고객이 알림을 선택하면 앱의 스토어 목록이 표시됩니다.
--   **업데이트 (알림)에 대 한 메시지를 표시 합니다.** 앱의 이전 버전을 실행 중인 고객에게 최신 버전을 설치하도록 권고하는 알림 메시지. 고객이 알림을 선택하면 Microsoft Store 앱이 실행되며 **다운로드 및 업데이트** 목록이 표시됩니다. 이 템플릿은 하나의 앱으로만 사용할 수 있으며 특정 고객층을 대상으로 지정하거나 이를 전송할 시간을 정의할 수 없습니다. 이 알림은 항상 24시간 내에 전송되도록 되어 있으며 아직 최신 버전의 앱을 실행하지 않는 모든 사용자를 대상으로 지정할 수 있도록 노력하고 있습니다.
+-   **판매 (알림)를 홍보 합니다.** 앱 특가 판매를 발표하기 위해 사용할 수 있는 알림 메시지. 고객이 알림을 선택하면 앱의 스토어 목록이 표시됩니다.
+-   **업데이트 확인 (알림)** 앱의 이전 버전을 실행 중인 고객에게 최신 버전을 설치하도록 권고하는 알림 메시지. 고객이 알림을 선택하면 Microsoft Store 앱이 실행되며 **다운로드 및 업데이트** 목록이 표시됩니다. 이 템플릿은 하나의 앱으로만 사용할 수 있으며 특정 고객층을 대상으로 지정하거나 이를 전송할 시간을 정의할 수 없습니다. 이 알림은 항상 24시간 내에 전송되도록 되어 있으며 아직 최신 버전의 앱을 실행하지 않는 모든 사용자를 대상으로 지정할 수 있도록 노력하고 있습니다.
 
 
 ## <a name="measure-notification-performance"></a>알림 성과 측정
@@ -109,36 +109,36 @@ ms.locfileid: "63788297"
 ### <a name="to-measure-notification-performance"></a>알림 성과를 측정하려면
 
 1.  알림을 만들 때 **알림 콘텐츠** 섹션에서 **앱 시작 속도 추적** 확인란을 선택합니다.
-2.  앱에서 호출 된 [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) 앱 대상 알림에 대 한 응답으로 시작 된는 파트너 센터 알림 방법입니다. 이 메서드는 Microsoft Store Services SDK에서 제공됩니다. 이 메서드를 호출 하는 방법에 대 한 자세한 내용은 참조 하십시오 [파트너 센터 알림을 받도록 앱 구성](../monetize/configure-your-app-to-receive-dev-center-notifications.md)합니다.
+2.  앱에서 [ParseArgumentsAndTrackAppLaunch](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.parseargumentsandtrackapplaunch) 메서드를 호출 하 여 대상 알림에 대 한 응답으로 앱이 시작 되었음을 파트너 센터에 알립니다. 이 메서드는 Microsoft Store Services SDK에서 제공됩니다. 이 메서드를 호출 하는 방법에 대 한 자세한 내용은 [파트너 센터 알림을 받도록 앱 구성](../monetize/configure-your-app-to-receive-dev-center-notifications.md)을 참조 하세요.
 
 
 ### <a name="to-view-notification-performance"></a>알림 성과 보기
 
-위에서 설명한 것 처럼 알림 성능을 측정 하는 알림 및 앱을 구성한 경우 알림을 수행 하는 정도 확인할 수 있습니다.
+위에서 설명한 대로 알림 성능을 측정 하도록 알림과 앱을 구성한 경우 알림이 얼마나 잘 수행 되는지 확인할 수 있습니다.
 
-각 알림에 대 한 자세한 데이터를 검토 합니다.
+각 알림에 대 한 자세한 데이터를 검토 하려면 다음을 수행 합니다.
 
-1.  파트너 센터에서를 확장 합니다 **참여** 선택한 섹션 **알림을**합니다.
-2.  기존 알림 테이블에서 선택 **진행에서** 또는 **Completed**를 찾은 후에 **배달 속도** 및 **앱 시작 속도**열을 각 알림의 상위 수준 성능을 참조 하세요.
+1.  파트너 센터에서 **참여** 섹션을 확장 하 고 **알림**을 선택 합니다.
+2.  기존 알림 표에서 **진행** 중 또는 **완료 됨**을 선택한 다음 **배달 속도** 와 **앱 시작 속도** 열을 확인 하 여 각 알림의 상위 수준 성능을 확인 합니다.
 3.  좀 더 자세한 성과 세부 정보를 보려면 알림 이름을 선택합니다. **배달 통계** 섹션이 나타나고, 다음 알림**상태** 유형에 대한 **개수** 및 **백분율** 정보가 표시됩니다.
-    * **실패 한**: 어떤 이유로 알림을 배달 하지 못했습니다. 예를 들어 Windows 알림 서비스에서 문제가 발생하는 경우 이 오류가 발생할 수 있습니다.
-    * **만료 오류 채널**: 앱 및 파트너 센터 간의 채널 만료 되었기 때문에 알림을 배달할 수 없습니다. 예를 들어 고객이 오랫동안 앱을 열지 않은 경우 이 오류가 발생할 수 있습니다.
-    * **보내는**: 알림 전송 될 큐에서입니다.
-    * **전송**: 알림을 보냈습니다.
-    * **시작**: 알림이 전송 된 하 고 고객을 클릭 한 후 앱 결과적으로 열었습니다. 여기에서는 앱 시작만 추적합니다. 다른 작업(예: 스토어를 시작하여 평가 남기기)을 수행하도록 고객을 초대하는 알림은 이 상태에 포함되지 않습니다.
+    * **실패**: 어떤 이유에서든 알림이 배달되지 않았습니다. 예를 들어 Windows 알림 서비스에서 문제가 발생하는 경우 이 오류가 발생할 수 있습니다.
+    * **채널 만료 오류**: 앱과 파트너 센터 간 채널이 만료 되어 알림을 배달할 수 없습니다. 예를 들어 고객이 오랫동안 앱을 열지 않은 경우 이 오류가 발생할 수 있습니다.
+    * **보내는 중**: 전송할 큐에 알림이 있습니다.
+    * **보냄**: 알림을 보냈습니다.
+    * **시작**: 알림을 보냈고 고객이 클릭했으며 그 결과 앱이 열렸습니다. 여기에서는 앱 시작만 추적합니다. 다른 작업(예: 스토어를 시작하여 평가 남기기)을 수행하도록 고객을 초대하는 알림은 이 상태에 포함되지 않습니다.
     * **알 수 없음**: 이 알림의 상태를 확인할 수 없습니다.
 
-모든 알림의 사용자 동작 데이터를 분석.
+모든 알림에 대 한 사용자 활동 데이터를 분석 하려면:
 
-1.  파트너 센터에서를 확장 합니다 **참여** 선택한 섹션 **알림을**합니다.
-2.  에 **알림을** 페이지를 클릭 합니다 **분석** 탭 합니다. 이 탭에는 다음 데이터가 표시 됩니다.
-    * 다양 한 사용자 동작 상태 알림 및 알림 센터 알림 뷰를 그래프로 표시 합니다.
-    * 전 세계 지도 보기의 클릭---요금 알림 및 작업에 대해 알림 센터입니다.
-3. 페이지 위쪽에서 데이터가 표시되는 기간을 선택할 수 있습니다. 기본 설정은 30D (30일)이지만, 3개월, 6개월 또는 12개월 동안 데이터를 표시하거나 사용자가 지정한 데이터 범위에서 데이터를 표시하도록 선택할 수 있습니다. 또한 확장할 수 있습니다 **필터** 모든 앱을 시장 데이터를 필터링 합니다.
+1.  파트너 센터에서 **참여** 섹션을 확장 하 고 **알림**을 선택 합니다.
+2.  **알림** 페이지에서 **분석** 탭을 클릭 합니다. 이 탭에는 다음 데이터가 표시 됩니다.
+    * 알림을 및 알림 센터 알림에 대 한 다양 한 사용자 작업 상태의 그래프 보기입니다.
+    * 알림을 및 알림 센터 알림에 대 한 클릭 속도의 세계 지도 보기입니다.
+3. 페이지 위쪽에서 데이터가 표시되는 기간을 선택할 수 있습니다. 기본 설정은 30D (30일)이지만, 3개월, 6개월 또는 12개월 동안 데이터를 표시하거나 사용자가 지정한 데이터 범위에서 데이터를 표시하도록 선택할 수 있습니다. **필터** 를 확장 하 여 앱 및 시장의 모든 데이터를 필터링 할 수도 있습니다.
 
 ## <a name="translate-your-notifications"></a>알림 번역
 
-알림의 영향을 최대화하려면 고객이 기본적으로 사용하는 언어로 알림을 번역하는 것이 좋습니다. 파트너 센터를 사용 하면 쉽게 활용 하 여 알림을 자동으로 변환 하는 [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) 서비스입니다.
+알림의 영향을 최대화하려면 고객이 기본적으로 사용하는 언어로 알림을 번역하는 것이 좋습니다. 파트너 센터를 사용 하면 [Microsoft Translator](https://www.microsoft.com/translator/home.aspx) 서비스의 기능을 활용 하 여 자동으로 알림을 쉽게 번역할 수 있습니다.
 
 1.  기본 언어로 알림을 작성한 후 **언어 추가**(**알림 콘텐츠** 섹션의 **언어** 메뉴 아래)를 선택합니다.
 2.  **언어 추가** 창에서 알림을 표시할 추가 언어를 선택한 다음 **업데이트**를 선택합니다.
@@ -154,4 +154,4 @@ ms.locfileid: "63788297"
 - [UWP 앱에 대 한 타일](../design/shell/tiles-and-notifications/creating-tiles.md)
 - [WNS(Windows 푸시 알림 서비스) 개요](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)
 - [알림 시각화 도우미 앱](https://www.microsoft.com/store/apps/9nblggh5xsl1)
-- [StoreServicesEngagementManager.RegisterNotificationChannelAsync() | registerNotificationChannelAsync() method](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync)
+- [StoreServicesEngagementManager () | registerNotificationChannelAsync () 메서드](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx 9, directx 11, 포팅
 ms.localizationpriority: medium
-ms.openlocfilehash: 51bc293a779a96db75ce83da68cb3beea54b9618
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c5c86ad836c94d990f5728ce9f7cfe49c754ce19
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368720"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259522"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>DirectX 11 API에 DirectX 9 기능 매핑
 
@@ -19,8 +19,8 @@ ms.locfileid: "66368720"
 
 **요약**
 
--   [DirectX 포트를 계획 합니다.](plan-your-directx-port.md)
--   [Direct3D 9에서 Direct3D 11의 중요 한 변경입니다.](understand-direct3d-11-1-concepts.md)
+-   [DirectX 포트 계획](plan-your-directx-port.md)
+-   [Direct3D 9에서 Direct3D 11로 중요 한 변경 내용](understand-direct3d-11-1-concepts.md)
 -   기능 매핑
 
 
@@ -55,7 +55,7 @@ D3DX 및 DXUT는 더 이상 사용되지 않으며 UWP 게임에서 사용할 �
 
 -   [Direct3D 9에서 UWP로의 간단한 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습에서는 창을 설정하고, Direct3D를 초기화하고, 기본 3D 렌더링을 수행하는 방법을 보여 줍니다.
 -   [DirectX로 작성한 간단한 UWP 게임](tutorial--create-your-first-uwp-directx-game.md) 연습에서는 그래픽, 파일 로드, UI, 컨트롤 및 소리를 비롯한 일반적인 게임 프로그래밍 작업을 보여 줍니다.
--   [DirectX 도구 키트](https://go.microsoft.com/fwlink/p/?LinkID=248929) 커뮤니티 프로젝트는 Direct3D 11 및 UWP 앱에 사용할 수 있는 도우미 클래스를 제공합니다.
+-   [DirectX 도구 키트](https://github.com/Microsoft/DirectXTK) 커뮤니티 프로젝트는 Direct3D 11 및 UWP 앱에 사용할 수 있는 도우미 클래스를 제공합니다.
 
 ## <a name="move-shader-programs-from-fx-to-hlsl"></a>FX에서 HLSL로 셰이더 프로그램 이동
 
@@ -66,7 +66,7 @@ Visual Studio에서는 여전히 내부의 FXC를 사용하여 셰이더 개체�
 
 셰이더 리소스 로드를 간단히 살펴보려면 [Direct3D 9에서 UWP로의 간단한 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md)을 참조하세요.
 
-Direct3D 11 기능 수준 Direct3D 11을 해야 하는 셰이더 모델 5 도입\_0 (이상). [Direct3D 11용 HLSL 셰이더 모델 5 기능](https://docs.microsoft.com/windows/desktop/direct3dhlsl/overviews-direct3d-11-hlsl)을 참조하세요.
+Direct3D 11에는 Direct3D 기능 수준 11\_0 이상이 필요한 셰이더 모델 5가 도입 되었습니다. [Direct3D 11용 HLSL 셰이더 모델 5 기능](https://docs.microsoft.com/windows/desktop/direct3dhlsl/overviews-direct3d-11-hlsl)을 참조하세요.
 
 ## <a name="replace-xnamath-and-d3dxmath"></a>XNAMath 및 D3DXMath 바꾸기
 
@@ -101,17 +101,17 @@ DirectShow는 더 이상 DirectX API(또는 Windows API)의 일부가 아닙니�
 
 Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서비스를 사용하는 경우 UWP 요구 사항을 준수하는 네트워킹 코드를 제공해야 합니다. 다음 API를 사용합니다.
 
--   [(네트워킹) (Windows) UWP 앱 용 Win32 및 COM](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps)
--   [**Windows.Networking 네임 스페이스 (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.Networking)
--   [**Windows.Networking.Sockets 네임 스페이스 (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
--   [**Windows.Networking.Connectivity 네임 스페이스 (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity)
--   [**Windows.ApplicationModel.Background 네임 스페이스 (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
+-   [UWP 앱 용 Win32 및 COM (네트워킹) (Windows)](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps)
+-   [**Windows. 네트워킹 네임 스페이스 (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.Networking)
+-   [**Windows. 네트워킹용 네임 스페이스 (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
+-   [**Windows. 연결 네임 스페이스 (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity)
+-   [**Windows ApplicationModel. Background 네임 스페이스 (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
 
 다음 문서는 네트워킹 기능을 추가하고 앱의 패키지 매니페스트에 네트워킹에 대한 지원을 선언하는 데 도움이 됩니다.
 
--   [소켓을 사용 하 여 연결 (UWP 앱을 사용 하 여 C#/VB/C++ 및 XAML) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
--   [Websocket을 사용 하 여 연결 (UWP 앱을 사용 하 여 C#/VB/C++ 및 XAML) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh994396(v=win.10))
--   [웹 서비스에 연결 (UWP 앱을 사용 하 여 C#/VB/C++ 및 XAML) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
+-   [소켓 (/Sb/C++ 및 XAML C#을 사용 하 여 UWP 앱)에 연결 (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
+-   [Websocket (/Sb/C++ 및 XAML C#을 사용 하는 UWP 앱)에 연결 (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh994396(v=win.10))
+-   [웹 서비스 (/Vb/ C#C++ 및 XAML을 사용 하는 UWP 앱)에 연결 (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
 -   [네트워킹 기본 사항](https://docs.microsoft.com/windows/uwp/networking/networking-basics)
 
 모든 UWP 앱(게임 포함)은 특정 유형의 백그라운드 작업을 사용하여, 앱이 일시 중단된 동안에도 연결을 유지합니다. 게임이 일시 중단된 동안 연결 상태를 유지해야 하는 경우 [네트워킹 기본 사항](https://docs.microsoft.com/windows/uwp/networking/networking-basics)을 참조하세요.
@@ -146,8 +146,8 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <p><a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgidevice3">IDXGIDevice3</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-present">IDirect3DDevice9::Present</a></p></td>
-<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::Present1</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-present">IDirect3DDevice9::P 다시 보낸</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-testcooperativelevel">IDirect3DDevice9::TestCooperativeLevel</a></p></td>
@@ -180,27 +180,27 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/direct3d9/id3dxeffectstatemanager--setrenderstate">IDirect3DDevice9::SetRenderState</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/direct3d9/id3dxeffectstatemanager--setsamplerstate">IDirect3DDevice9::SetSamplerState</a></p></td>
+<p><a href="https://docs.microsoft.com/windows/desktop/direct3d9/id3dxeffectstatemanager--setsamplerstate">IDirect3DDevice9:: SetSamplerState</a></p></td>
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11blendstate1">ID3D11BlendState1</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11depthstencilstate">ID3D11DepthStencilState</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11rasterizerstate1">ID3D11RasterizerState1</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11samplerstate">ID3D11SamplerState</a></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawindexedprimitive">IDirect3DDevice9::DrawIndexedPrimitive</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawprimitive">IDirect3DDevice9::DrawPrimitive</a></p></td>
-<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-draw">ID3D11DeviceContext::Draw</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed">ID3D11DeviceContext::DrawIndexed</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-drawindexedinstanced">ID3D11DeviceContext::DrawIndexedInstanced</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-drawinstanced">ID3D11DeviceContext::DrawInstanced</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-iasetprimitivetopology">ID3D11DeviceContext::IASetPrimitiveTopology</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-drawauto">ID3D11DeviceContext::DrawAuto</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawindexedprimitive">IDirect3DDevice9::D rawIndexedPrimitive</a></p>
+<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawprimitive">IDirect3DDevice9::D rawPrimitive</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-draw">ID3D11DeviceContext: 원시:D</a></p>
+<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed">ID3D11DeviceContext::D rawIndexed</a></p>
+<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-drawindexedinstanced">ID3D11DeviceContext::D rawIndexedInstanced</a></p>
+<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-drawinstanced">ID3D11DeviceContext::D rawInstanced</a></p>
+<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-iasetprimitivetopology">ID3D11DeviceContext:: IASetPrimitiveTopology</a></p>
+<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-drawauto">ID3D11DeviceContext::D rawAuto</a></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-beginscene">IDirect3DDevice9::BeginScene</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-endscene">IDirect3DDevice9::EndScene</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawprimitiveup">IDirect3DDevice9::DrawPrimitiveUP</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawindexedprimitiveup">IDirect3DDevice9::DrawIndexedPrimitiveUP</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-beginscene">IDirect3DDevice9:: BeginScene</a></p>
+<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-endscene">IDirect3DDevice9:: EndScene</a></p>
+<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawprimitiveup">IDirect3DDevice9::D rawPrimitiveUP</a></p>
+<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawindexedprimitiveup">IDirect3DDevice9::D rawIndexedPrimitiveUP</a></p></td>
 <td align="left"><p>직접적으로 해당하는 항목이 없습니다.</p></td>
 </tr>
 <tr class="odd">
@@ -210,27 +210,27 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>표준 커서 API를 사용합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-reset">IDirect3DDevice9::Reset</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-reset">IDirect3DDevice9:: Reset</a></p></td>
 <td align="left"><p>LOST 장치 및 POOL_MANAGED는 더 이상 존재하지 않습니다. <a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::Present1</a>은 <a href="https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-error">DXGI_ERROR_DEVICE_REMOVED</a> 반환 값에서 실패할 수 있습니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawrectpatch">IDirect3DDevice9:DrawRectPatch</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawtripatch">IDirect3DDevice9:DrawTriPatch</a></p>
+<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawtripatch">IDirect3DDevice9: DrawTriPatch</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-lightenable">IDirect3DDevice9:LightEnable</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-multiplytransform">IDirect3DDevice9:MultiplyTransform</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/direct3d9/id3dxeffectstatemanager--setlight">IDirect3DDevice9:SetLight</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setmaterial">IDirect3DDevice9:SetMaterial</a></p>
+<p><a href="https://docs.microsoft.com/windows/desktop/direct3d9/id3dxeffectstatemanager--setlight">IDirect3DDevice9: SetLight</a></p>
+<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setmaterial">IDirect3DDevice9: SetMaterial</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setnpatchmode">IDirect3DDevice9:SetNPatchMode</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settransform">IDirect3DDevice9:SetTransform</a></p>
+<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settransform">IDirect3DDevice9: SetTransform</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-setfvf">IDirect3DDevice9:SetFVF</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexturestagestate">IDirect3DDevice9:SetTextureStageState</a></p></td>
 <td align="left"><p>고정 함수 파이프라인은 사용되지 않습니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-checkdepthstencilmatch">IDirect3DDevice9:CheckDepthStencilMatch</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-checkdeviceformat">IDirect3DDevice9:CheckDeviceFormat</a></p>
+<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-checkdeviceformat">IDirect3DDevice9: CheckDeviceFormat</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-getdevicecaps">IDirect3DDevice9:GetDeviceCaps</a></p>
-<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-validatedevice">IDirect3DDevice9:ValidateDevice</a></p></td>
+<p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-validatedevice">IDirect3DDevice9: ValidateDevice</a></p></td>
 <td align="left"><p>기능 비트는 기능 수준으로 바뀌었습니다. 일부 형식 및 기능 사용 사례만 지정된 기능 수준에 대해 선택적입니다. <a href="https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport">ID3D11Device::CheckFeatureSupport</a> 및 <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-checkformatsupport">ID3D11Device::CheckFormatSupport</a>를 통해 이들을 확인할 수 있습니다.</p></td>
 </tr>
 </tbody>
@@ -341,8 +341,8 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <tr class="odd">
 <td align="left"><p>D3DFMT_L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8_UNORM</p>
-<div class="alert">
-<strong>참고</strong>    빨간색 Direct3D 9 동작을 가져오도록 다른 구성 요소를 복제 하는 셰이더에서 사용 하 여.r swizzle 합니다.
+<div class="alert">   
+<strong>참고</strong> Direct3D 9 동작을 얻으려면 셰이더에 Swizzle를 사용 하 여 빨간색을 다른 구성 요소에 복제 합니다.
 </div>
 <div>
  
@@ -352,7 +352,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_A8L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>    셰이더의 swizzle.rrrg를 사용 하 여 빨간색 중복을 녹색 Direct3D 9 동작을 가져오도록 알파 구성 요소를 이동 합니다.
+<strong>참고</strong>   rrrg를 셰이더에 사용 하 여 빨간색을 복제 하 고 녹색을 알파 구성 요소로 이동 하 여 Direct3D 9 동작을 가져옵니다.
 </div>
 <div>
  
@@ -398,7 +398,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_R8G8_B8G8</p></td>
 <td align="left"><p>DXGI_FORMAT_G8R8_G8B8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>    Direct3D 9 데이터 255.0f, 상향 조정 된 있지만 셰이더에이 처리할 수 있습니다.
+<strong>참고</strong>   Direct3D 9에서 데이터는 255.0 f에 의해 확장 되었지만 셰이더에 서 처리할 수 있습니다.
 </div>
 <div>
  
@@ -412,7 +412,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_G8R8_G8B8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_B8G8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>    Direct3D 9 데이터 255.0f, 상향 조정 된 있지만 셰이더에이 처리할 수 있습니다.
+<strong>참고</strong>   Direct3D 9에서 데이터는 255.0 f에 의해 확장 되었지만 셰이더에 서 처리할 수 있습니다.
 </div>
 <div>
  
@@ -426,7 +426,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_DXT2</p></td>
 <td align="left"><p>DXGI_FORMAT_BC1_UNORM 및 DXGI_FORMAT_BC1_UNORM_SRGB</p>
 <div class="alert">
-<strong>참고</strong>    DXT1 및 DXT2는 API/하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
+<strong>참고</strong>   DXT1 및 DXT2은 a p i/하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
 </div>
 <div>
  
@@ -440,7 +440,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_DXT4</p></td>
 <td align="left"><p>DXGI_FORMAT_BC2_UNORM 및 DXGI_FORMAT_BC2_UNORM_SRGB</p>
 <div class="alert">
-<strong>참고</strong>    DXT3 및 DXT4는 API/하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
+<strong>참고</strong>   DXT3 및 DXT4은 a p i/하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
 </div>
 <div>
  
@@ -506,7 +506,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_L16</p></td>
 <td align="left"><p>DXGI_FORMAT_R16_UNORM</p>
 <div class="alert">
-<strong>참고</strong>    빨간색 D3D9 동작을 가져오도록 다른 구성 요소를 복제 하는 셰이더에서 사용 하 여.r swizzle 합니다.
+<strong>참고</strong>   D3D9 동작을 얻으려면 셰이더에에서 r Swizzle를 사용 하 여 빨간색을 다른 구성 요소에 복제 합니다.
 </div>
 <div>
  
@@ -579,8 +579,8 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_UBYTE4</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8B8A8_UINT</p>
-<div class="alert">
-<strong>참고</strong>    셰이더 UINT 값을 가져오지만 Direct3D 9 스타일 정수 경우 float가 필요 (0.0f, 1.0f... 255.f), UINT 셰이더에서 float32 바로 변환 될 수 있습니다.
+<div class="alert">셰이더는 UINT 값을 가져오지만 Direct3D 9 style 정수 계열 float가 필요한 경우 (0.0 f, 1.0 f 
+<strong>...  </strong> 255. f), UINT는 셰이더의 float32로만 변환할 수 있습니다.
 </div>
 <div>
  
@@ -589,8 +589,8 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPE_SHORT2</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16_SINT</p>
-<div class="alert">
-<strong>참고</strong>    셰이더 SINT 값을 가져오지만 Direct3D 9 스타일 정수 부동 소수점 수를 필요한 경우 SINT만 변환할 수 셰이더에서 float32입니다.
+<div class="alert">셰이더에는 값을 가져오지만, Direct3D 9 style 정수 계열 float가 필요한 경우에는 셰이더에서 a를 float32로만 변환할 수 있습니다 
+<strong>.  </strong>
 </div>
 <div>
  
@@ -599,8 +599,8 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_SHORT4</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16B16A16_SINT</p>
-<div class="alert">
-<strong>참고</strong>    셰이더 SINT 값을 가져오지만 Direct3D 9 스타일 정수 부동 소수점 수를 필요한 경우 SINT만 변환할 수 셰이더에서 float32입니다.
+<div class="alert">셰이더에는 값을 가져오지만, Direct3D 9 style 정수 계열 float가 필요한 경우에는 셰이더에서 a를 float32로만 변환할 수 있습니다 
+<strong>.  </strong>
 </div>
 <div>
  
@@ -646,7 +646,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>FourCC 'ATI1'</p></td>
 <td align="left"><p>DXGI_FORMAT_BC4_UNORM</p>
 <div class="alert">
-<strong>참고</strong>    10.0 이상 기능 수준이 필요
+<strong>참고</strong>  에는 기능 수준 10.0 이상이 필요 합니다.
 </div>
 <div>
  
@@ -656,7 +656,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>FourCC 'ATI2'</p></td>
 <td align="left"><p>DXGI_FORMAT_BC5_UNORM</p>
 <div class="alert">
-<strong>참고</strong>    10.0 이상 기능 수준이 필요
+<strong>참고</strong>  에는 기능 수준 10.0 이상이 필요 합니다.
 </div>
 <div>
  

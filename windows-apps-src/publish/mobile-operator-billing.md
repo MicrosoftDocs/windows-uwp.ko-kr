@@ -1,17 +1,17 @@
 ---
-Description: Microsoft Store 제공 Mobile 연산자 청구 지불 방법으로 모바일 운영자가이 기능을 지원 합니다.
+Description: Microsoft Store는이 기능을 지 원하는 모바일 운영자를 위한 지불 방법으로 모바일 운영자 요금 청구 기능을 제공 합니다.
 title: 통신사 청구
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows 10, uwp, 통신사, 모바일 청구, 통신사 청구
 ms.localizationpriority: medium
-ms.openlocfilehash: 760c7ea7929d287c241ddcba48bc6687e9bc2b51
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: 606267080ced6ea8dd41f8f05ddcdee4d33b00f2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63827658"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259965"
 ---
 # <a name="mobile-operator-billing"></a>통신사 청구
 
@@ -19,7 +19,7 @@ ms.locfileid: "63827658"
 Microsoft Store는 Windows 10을 실행하는 디바이스, Windows 10 Mobile을 실행하는 휴대폰 및 Xbox One 본체에 대한 결제 방법으로 휴대폰 통신사 청구를 제공합니다. 고객의 통신사가 이러한 기능을 제공할 경우 고객은 통신사 청구를 지불 방법으로 추가하고 이를 사용하여 모바일 계정으로 Microsoft Store에서 구매할 수 있습니다.
 
 > [!TIP]
->  고객의 모바일 운영자 Mobile 연산자 청구를 제공 하지만 고객이 자신의 장치에서이 옵션을 찾을 수 없습니다 경우 검토 [단계](https://go.microsoft.com/fwlink/p/?LinkId=523993)합니다.
+>고객의 모바일 운영자가 모바일 운영자 요금 청구 기능을 제공 하지만 고객이 장치에서이 옵션을 찾을 수 없는 경우에는 다음 [단계](https://support.microsoft.com/instantanswers/b25d6dd6-fb8b-3710-1e13-4d30eb01b51f)를 검토 하세요.   
 
 Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법의 이용 범위를 확장하고 있습니다. 아래 목록에 없는 통신사를 추천하려면 해당 통신사로 연락하여 이 결제 방법을 추가하도록 요청하세요.
 
@@ -35,14 +35,14 @@ Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법�
 | 덴마크              | 3, TDC / YouSee, Telenor, Telia                         |
 | 핀란드              | DNA, Elisa                                              |
 | 프랑스               | Orange                                                  |
-| 독일              | O2 Telekom Deutschland Vodafone                       |
+| 독일              | O2, Telekom Deutschland, Vodafone                       |
 | 헝가리              | Telenor                                                 |
 | 이탈리아                | Wind, Tre                                               |
 | 말레이시아             | Digi                                                    |
-| 네덜란드          | KPN / Telfort                                           |
-| 노르웨이               | Telenor / Talkmore, Telia / OneCall                     |
+| 네덜란드          | KPN/통신 요새                                           |
+| 노르웨이               | Telenor/Talkmore, Telia/OneCall                     |
 | 폴란드               | 주황, 재생                                            |
-| 싱가포르            | M1 Limited, StarHub                                     |
+| 싱가포르            | M1 제한 된 StarHub                                     |
 | 슬로바키아             | Slovak Telekom                                          |
 | 스페인                | Orange                                                  |
 | 스웨덴               | Telenor, 3                                              |

@@ -7,20 +7,20 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 84835449c7c259c45423a93716b4fbc85fa0a7ab
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 85d42e69b376e2f3f455e44eb1dce3d41e890971
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369950"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258644"
 ---
 # <a name="pair-devices"></a>디바이스 페어링
 
 
 
-**중요 한 Api**
+**중요 API**
 
-- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
+- [**Windows. Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
 
 일부 디바이스는 페어링해야 사용할 수 있습니다. [  **Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) 네임스페이스는 세 가지 방법으로 디바이스를 페어링하도록 지원합니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "66369950"
 -   기본 페어링
 -   사용자 지정 페어링
 
-**팁**  일부 장치를 사용 하려면 연결할 필요가 없습니다. 이는 자동 페어링에 대한 섹션에서 설명합니다.
+**팁**  일부 장치는 사용 하기 위해 페어링된 필요가 없습니다. 이는 자동 페어링에 대한 섹션에서 설명합니다.
 
  
 
@@ -57,9 +57,9 @@ ms.locfileid: "66369950"
 
 사용자 지정 페어링을 지원하려면 [**PairingRequested**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationcustompairing.pairingrequested) 이벤트에 대한 처리기를 만들어야 합니다. 이 처리기가 사용자 지정 페어링 시나리오에서 사용할 수 있는 여러 가지의 모든 [**DevicePairingKinds**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePairingKinds)를 고려하도록 확인합니다. 수행할 적절한 작업은 이벤트 인수의 일부로 제공되는 **DevicePairingKinds**에 따라 달라집니다.
 
-사용자 지정 페어링이 항상 시스템 수준 작업이라는 것을 인식해야 합니다. 이 때문에 데스크톱 또는 Windows Phone에서 작업할 때 페어링이 발생할 경우 시스템 대화 상자가 사용자에게 항상 표시됩니다. 이는 해당하는 두 플랫폼이 모두 사용자 동의가 필요한 사용자 환경을 보유하기 때문입니다. 대화 상자가 자동으로 생성되므로 이러한 플랫폼에서 작업하는 경우 **ConfirmOnly**의 [**DevicePairingKinds**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePairingKinds)를 선택할 때 고유한 대화 상자를 만들지 않아도 됩니다. 다른 **DevicePairingKinds**의 경우 특정 **DevicePairingKinds** 값에 따라 어떤 특별한 처리를 수행해야 합니다. 다른 **DevicePairingKinds** 값에 대해 사용자 지정 페어링을 처리하는 방법의 예제는 샘플을 참조하세요.
+사용자 지정 페어링이 항상 시스템 수준 작업이라는 것을 인식해야 합니다. 이 때문에 데스크톱 또는 Windows Phone에서 작업할 때 페어링이 발생할 경우 시스템 대화 상자가 사용자에게 항상 표시됩니다. 이는 해당하는 두 플랫폼이 모두 사용자 동의가 필요한 사용자 환경을 보유하기 때문입니다. 대화 상자가 자동으로 생성되므로 이러한 플랫폼에서 작업하는 경우 [ConfirmOnly**의** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePairingKinds)DevicePairingKinds를 선택할 때 고유한 대화 상자를 만들지 않아도 됩니다. 다른 **DevicePairingKinds**의 경우 특정 **DevicePairingKinds** 값에 따라 어떤 특별한 처리를 수행해야 합니다. 다른 **DevicePairingKinds** 값에 대해 사용자 지정 페어링을 처리하는 방법의 예제는 샘플을 참조하세요.
 
-Windows 10, 버전 1903, 새부터 **DevicePairingKinds** 지원 됩니다 **ProvidePasswordCredential**합니다. 이 값에는 앱에서에서 요청 해야 사용자 이름과 암호를 사용자 쌍으로 연결 된 장치를 사용 하 여 인증 하기 위해 의미 합니다. 이 사례를 처리 하려면 호출을 [ **AcceptWithPasswordCredential** ](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepairingrequestedeventargs.acceptwithpasswordcredential?branch=release-19h1#Windows_Devices_Enumeration_DevicePairingRequestedEventArgs_AcceptWithPasswordCredential_Windows_Security_Credentials_PasswordCredential_) 의 이벤트 인수는 메서드를 **PairingRequested** 페어링을 허용 하도록 이벤트 처리기입니다. 전달 된 [ **PasswordCredential** ](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordcredential) 사용자 이름 및 암호 매개 변수를 캡슐화 하는 개체입니다. 사용자 이름 및 원격 장치에 대 한 암호는 구별 및 종종 동일 하지는 않습니다에서 로컬로 로그온 한 사용자의 자격 증명입니다.
+Windows 10 버전 1903부터 새 **DevicepProvidePasswordCredential Ing종류가** 지원 됩니다 (). 이 값은 연결 된 장치로 인증 하기 위해 앱에서 사용자의 사용자 이름과 암호를 요청 해야 함을 의미 합니다. 이 경우를 처리 하려면 **PairingRequested** 이벤트 처리기의 이벤트 인수에 대 한 [**Acceptwithpasswordcredential**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepairingrequestedeventargs.acceptwithpasswordcredential?branch=release-19h1#Windows_Devices_Enumeration_DevicePairingRequestedEventArgs_AcceptWithPasswordCredential_Windows_Security_Credentials_PasswordCredential_) 메서드를 호출 하 여 페어링을 적용 합니다. 사용자 이름 및 암호를 매개 변수로 캡슐화 하는 [**Passwordcredential**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordcredential) 개체를 전달 합니다. 원격 장치에 대 한 사용자 이름 및 암호는 로컬에 로그인 한 사용자에 대 한 자격 증명과는 다르며 종종 동일 하지 않습니다.
 
 ## <a name="unpairing"></a>언페어링
 
@@ -71,7 +71,7 @@ Windows 10, 버전 1903, 새부터 **DevicePairingKinds** 지원 됩니다 **Pro
 ## <a name="sample"></a>샘플
 
 
-[  **Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) API를 사용하는 방법을 보여 주는 샘플을 다운로드하려면 [여기](https://go.microsoft.com/fwlink/?LinkID=620536)를 클릭하세요.
+[  **Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) API를 사용하는 방법을 보여 주는 샘플을 다운로드하려면 [여기](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing)를 클릭하세요.
 
  
 

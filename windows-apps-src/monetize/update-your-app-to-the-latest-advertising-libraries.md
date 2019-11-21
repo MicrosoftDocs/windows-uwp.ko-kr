@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, AdMediatorControl, 마이그레이션
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
-ms.openlocfilehash: ff0ea54f55803e652964203899f429faf196805e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: f33210f14df3fb855c5744ffcab3ecbc66e1ff58
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57620468"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259235"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>배너 광고용 최신 광고 라이브러리로 앱 업데이트
 
@@ -19,7 +19,7 @@ ms.locfileid: "57620468"
 
 ## <a name="overview"></a>개요
 
-배너 광고를 게시하는 UWP 앱은 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)에 배포된 광고 라이브러리의**AdControl**을 사용해야 합니다. 이 SDK는 IAB(Interactive Advertising Bureau)의 [MRAID(Mobile Rich-media Ad Interface Definitions) 1.0 사양](https://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf)를 통해 HTML5 리치 미디어를 서비스하는 기능을 포함하여 최소한의 광고 기능을 지원합니다. 많은 광고주가 이러한 기능을 원하고 있으며, 이에 따라 Microsoft는 광고주들에게 앱 에코시스템을 더욱 매력적으로 어필하고 개발자에게 더 많은 수익을 안길 수 있도록 앱 개발자에게 이러한 SDK 릴리스 중 하나를 의무적으로 사용하도록 요구하고 있습니다.
+배너 광고를 게시하는 UWP 앱은 **Microsoft Advertising SDK**에 배포된 광고 라이브러리의[AdControl](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)을 사용해야 합니다. 이 SDK는 IAB(Interactive Advertising Bureau)의 [MRAID(Mobile Rich-media Ad Interface Definitions) 1.0 사양](https://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf)를 통해 HTML5 리치 미디어를 서비스하는 기능을 포함하여 최소한의 광고 기능을 지원합니다. 많은 광고주가 이러한 기능을 원하고 있으며, 이에 따라 Microsoft는 광고주들에게 앱 에코시스템을 더욱 매력적으로 어필하고 개발자에게 더 많은 수익을 안길 수 있도록 앱 개발자에게 이러한 SDK 릴리스 중 하나를 의무적으로 사용하도록 요구하고 있습니다.
 
 이 SDK가 릴리스되기 전, 이전 버전의 광고 SDK 릴리스를 통해 **AdControl** 클래스를 여러 차례 제공했습니다. 이러한 기존 광고 SDK 릴리스는 위에서 설명한 최소 광고 기능을 지원하지 않기 때문에 더 이상 지원되지 않습니다. 2017년 4월 1일부터는 지원되지 않는 광고 SDK 릴리스를 사용하는 앱에 더 이상 배너 광고가 제공되지 않습니다. 여전히 지원되지 않는 광고 SDK 릴리스를 사용하는 앱은 다음과 같은 동작을 보입니다.
 
@@ -27,14 +27,14 @@ ms.locfileid: "57620468"
 
 * 앱의 **AdControl**이 새 광고를 요청하는 경우 컨트롤의 **ErrorOccurred** 이벤트가 발생하고 이벤트 인수의 **ErrorCode** 속성이 **NoAdAvailable** 값을 갖게 됩니다.
 
-* 해당 앱과 관련된 모든 광고 단위가 비활성화됩니다. DePartnerv 센터 계정에서 이러한 비활성화 ad 단위를 제거할 수 없습니다. [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 사용하도록 앱을 업데이트하는 경우 이러한 광고 단위를 무시하고 새 광고 단위를 만드세요.
+* 해당 앱과 관련된 모든 광고 단위가 비활성화됩니다. DePartnerv Center 계정에서 비활성화 되는 이러한 ad 단위를 제거할 수 없습니다. [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)를 사용하도록 앱을 업데이트하는 경우 이러한 광고 단위를 무시하고 새 광고 단위를 만드세요.
 
 * 두 개 이상의 앱에서 사용되는 광고 단위에도 더 이상 배너 광고가 제공되지 않습니다. 따라서 각 광고 단위를 한 앱에만 사용해야 합니다.
 
-**AdControl**을 사용하여 배너 광고를 표시하는 기존 앱(이미 Store에 있거나 아직 개발 중인 앱)이 있고 앱에서 어떤 광고 SDK가 사용되는지 잘 모르는 경우 이 문서의 지침을 따라 해당 앱을 지원되는 SDK로 업데이트해야 하는지 확인하세요. 문제가 발생하거나 도움이 필요한 경우 [지원 서비스에 문의](https://go.microsoft.com/fwlink/?LinkId=393643)하세요.
+**AdControl**을 사용하여 배너 광고를 표시하는 기존 앱(이미 Store에 있거나 아직 개발 중인 앱)이 있고 앱에서 어떤 광고 SDK가 사용되는지 잘 모르는 경우 이 문서의 지침을 따라 해당 앱을 지원되는 SDK로 업데이트해야 하는지 확인하세요. 문제가 발생하거나 도움이 필요한 경우 [지원 서비스에 문의](https://support.microsoft.com/getsupport/hostpage.aspx?locale=EN-US&supportregion=EN-US&ccfcode=US&ln=EN-US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=32136151)하세요.
 
 > [!NOTE]
-> 앱이 이미 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)(UWP 앱용)를 사용하는 경우 앱을 더 변경할 필요가 없습니다.
+> 앱이 이미 [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)(UWP 앱용)를 사용하는 경우 앱을 더 변경할 필요가 없습니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -46,7 +46,7 @@ ms.locfileid: "57620468"
 
 <span id="part-1" />
 
-## <a name="part-1-determine-whether-you-need-to-update-your-uwp-app"></a>1부: UWP 앱을 업데이트 해야 하는지 여부를 결정 합니다.
+## <a name="part-1-determine-whether-you-need-to-update-your-uwp-app"></a>1부: UWP 앱을 업데이트해야 하는지 여부 결정
 
 다음 섹션의 지침에 따라 앱을 업데이트해야 하는지 결정합니다.
 
@@ -59,7 +59,7 @@ ms.locfileid: "57620468"
 
 <span id="part-2" />
 
-## <a name="part-2-install-the-latest-sdk"></a>2부: 최신 SDK를 설치 합니다.
+## <a name="part-2-install-the-latest-sdk"></a>2부: 최신 SDK 설치
 
 앱이 이전 SDK 릴리스를 사용하는 경우 다음 지침에 따라 개발 컴퓨터에 최신 SDK가 있는지 확인하세요.
 
@@ -76,14 +76,14 @@ ms.locfileid: "57620468"
     MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
     ```
 
-3.  [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 설치합니다.
+3.  [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)를 설치합니다.
 
-## <a name="part-3-update-your-project"></a>3부: 프로젝트를 업데이트 합니다.
+## <a name="part-3-update-your-project"></a>3부: 프로젝트 업데이트
 
 프로젝트에서 Microsoft Advertising 라이브러리에 대한 기존의 모든 참조를 제거하고 [이 지침](install-the-microsoft-advertising-libraries.md#reference)에 따라 필요한 참조를 추가합니다. 이렇게 하면 프로젝트에서 올바른 라이브러리가 사용될 수 있습니다. 기존 태그 및 코드를 유지할 수 있습니다.
 
-## <a name="part-4-test-and-republish-your-app"></a>4부: 테스트 하 고 앱을 다시 게시
+## <a name="part-4-test-and-republish-your-app"></a>4단계: 앱 테스트 및 다시 게시
 
 앱을 테스트하여 앱이 예상대로 배너 광고를 표시하는지 확인합니다.
 
-이전 버전의 앱 스토어에서 사용할 수 있는 이미 있으면 [새로운 서브 미션을 만들](../publish/app-submissions.md) 앱을 다시 게시 하려면 파트너 센터에서 업데이트 된 앱에 대 한 합니다.
+이전 버전의 앱을 스토어에서 이미 사용할 수 있는 경우 파트너 센터에서 업데이트 된 앱에 대 한 [새 제출을 만들어](../publish/app-submissions.md) 앱을 다시 게시 합니다.

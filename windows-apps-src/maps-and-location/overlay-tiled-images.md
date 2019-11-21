@@ -6,18 +6,18 @@ ms.date: 07/19/2018
 ms.topic: article
 keywords: Windows 10, uwp, 지도, 위치, 이미지, 오버레이
 ms.localizationpriority: medium
-ms.openlocfilehash: e9b4d439958e6cfbf0845aaf5bcd31644ff39432
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 501e28f88d07a85c1ded3ae880d1e679169ac36a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371679"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260380"
 ---
 # <a name="overlay-tiled-images-on-a-map"></a>지도에서 바둑판식 이미지 오버레이
 
 타일 소스를 사용하여 지도에 타사 또는 사용자 지정 바둑판식 이미지를 오버레이합니다. 타일 소스를 사용하여 특수 정보(예제: 날씨 데이터, 인구 데이터, 지진 데이터 등)를 오버레이하거나 기본 지도를 전체적으로 바꿉니다.
 
-**팁** 앱에서 지도 사용에 대한 자세한 내용을 보려면 Github에서 [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하세요.
+**팁** 앱에서 지도 사용에 대한 자세한 내용을 보려면 Github에서 [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)을 다운로드하세요.
 
 <a id="tileintro" />
 
@@ -25,9 +25,9 @@ ms.locfileid: "66371679"
 
 지도 서비스(예제: Nokia 지도 및 Bing 지도)에서는 빠른 검색과 표시를 위해 지도를 사각형 타일로 자릅니다. 이 타일은 256x256픽셀 크기이며 여러 수준의 정보에 미리 렌더링되어 있습니다. 또한 여러 타사 서비스에서 타일로 잘라낸 지도 기반 데이터를 제공합니다. 타일 소스를 사용하여 타사 타일을 검색하거나 사용자 지정 타일을 만든 다음 [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)에 표시된 지도에서 타일을 오버레이합니다.
 
-**중요**    타일 소스를 사용 하면 요청 하거나 개별 타일 배치 하려면 코드를 작성할 필요가 없습니다. [  **MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)이 필요한 타일을 요청합니다. 각 요청은 개별 타일의 X 및 Y 좌표와 확대/축소 수준을 지정합니다. 사용할 URI 또는 파일 이름의 형식만 지정하여 **UriFormatString** 속성에서 타일을 검색합니다. 즉, 기본 URI 또는 파일 이름에 대체 가능한 매개 변수를 삽입하여 각 타일에 대해 X 및 Y 좌표와 확대/축소 수준을 전달할 위치를 나타냅니다.
+**중요**   타일 소스를 사용 하는 경우 개별 타일을 요청 하거나 배치 하는 코드를 작성할 필요가 없습니다. [  **MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)이 필요한 타일을 요청합니다. 각 요청은 개별 타일의 X 및 Y 좌표와 확대/축소 수준을 지정합니다. 사용할 URI 또는 파일 이름의 형식만 지정하여 **UriFormatString** 속성에서 타일을 검색합니다. 즉, 기본 URI 또는 파일 이름에 대체 가능한 매개 변수를 삽입하여 각 타일에 대해 X 및 Y 좌표와 확대/축소 수준을 전달할 위치를 나타냅니다.
 
-다음 예에서는 X 및 Y 좌표와 확대/축소 수준에 대한 대체 가능한 매개 변수를 표시하는 [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource)의 [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring) 속성을 보여 줍니다.
+다음 예에서는 X 및 Y 좌표와 확대/축소 수준에 대한 대체 가능한 매개 변수를 표시하는 [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring)의 [**UriFormatString**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource) 속성을 보여 줍니다.
 
 ```syntax
 http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
@@ -35,7 +35,7 @@ http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}
 
 X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타일 위치를 나타냅니다. 타일 번호 지정 시스템은 지도의 왼쪽 위 모서리를 기준으로 {0, 0}부터 시작합니다. 예를 들어 {1, 2}의 타일은 타일 그리드의 세 번째 행의 두 번째 열에 있습니다.
 
-매핑 서비스에서 사용되는 타일 시스템에 대한 자세한 내용은 [Bing 지도 타일 시스템](https://go.microsoft.com/fwlink/p/?LinkId=626692)을 참조하세요.
+매핑 서비스에서 사용되는 타일 시스템에 대한 자세한 내용은 [Bing 지도 타일 시스템](https://docs.microsoft.com/bingmaps/articles/bing-maps-tile-system?redirectedfrom=MSDN)을 참조하세요.
 
 ### <a name="overlay-tiles-from-a-tile-source"></a>타일 소스의 타일 오버레이
 
@@ -49,16 +49,16 @@ X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타�
 
     기본 URI 또는 파일 이름에 대체 가능한 매개 변수를 삽입하여 타일을 요청하는 데 사용할 **UriFormatString**을 구성합니다.
 
-    다음 예에서는 [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource)를 인스턴스화합니다. 이 예제에서는 **HttpMapTileDataSource**의 생성자에서 [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring) 값을 지정합니다.
+    다음 예에서는 [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource)를 인스턴스화합니다. 이 예제에서는 [HttpMapTileDataSource**의 생성자에서** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring)UriFormatString 값을 지정합니다.
 
     ```csharp
         HttpMapTileDataSource dataSource = new HttpMapTileDataSource(
           "http://www.<web service name>.com/z={zoomlevel}&x={x}&y={y}");
     ```
 
-2.  [  **MapTileSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource)를 인스턴스화하고 구성합니다. 이전 단계에서 구성한 [**MapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileDataSource)를 **MapTileSource**의 [**DataSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.datasource)로 지정합니다.
+2.  [  **MapTileSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource)를 인스턴스화하고 구성합니다. 이전 단계에서 구성한 [**MapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileDataSource)를 [MapTileSource**의** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.datasource)DataSource로 지정합니다.
 
-    다음 예에서는 [**MapTileSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource)의 생성자에서 [**DataSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.datasource)를 지정합니다.
+    다음 예에서는 [**MapTileSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.datasource)의 생성자에서 [**DataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource)를 지정합니다.
 
     ```csharp
         MapTileSource tileSource = new MapTileSource(dataSource);
@@ -71,7 +71,7 @@ X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타�
 
     선택적으로, 타일 표시 또는 로드에 영향을 주는 [**MapTileSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource)의 다른 속성(예제: [**Layer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.layer), [**AllowOverstretch**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.allowoverstretch), [**IsRetryEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.isretryenabled), [**IsTransparencyEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.istransparencyenabled))을 구성합니다.
 
-3.  [  **MapTileSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource)를 [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)의 [**TileSources**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.tilesources) 컬렉션에 추가합니다.
+3.  [  **MapTileSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource)를 [**MapControl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.tilesources)의 [**TileSources**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 컬렉션에 추가합니다.
 
     ```csharp
          MapControl1.TileSources.Add(tileSource);
@@ -219,10 +219,10 @@ void MainPage::AddHttpMapTileSource()
 
 ## <a name="provide-a-custom-uri"></a>사용자 지정 URI 제공
 
-[  **HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource)의 [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring) 속성 또는 [**LocalMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource)의 [**UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.localmaptiledatasource.uriformatstring) 속성과 함께 사용할 수 있는 대체 가능한 매개 변수가 타일을 검색하는 데 충분하지 않은 경우 사용자 지정 URI를 만들어야 합니다. **UriRequested** 이벤트에 대한 사용자 지정 처리기를 제공하여 사용자 지정 URI를 만들고 반환합니다. 각 개별 타일에 대해 **UriRequested** 이벤트가 발생합니다.
+[  **HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring)의 [**UriFormatString**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource) 속성 또는 [**LocalMapTileDataSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.localmaptiledatasource.uriformatstring)의 [**UriFormatString**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.LocalMapTileDataSource) 속성과 함께 사용할 수 있는 대체 가능한 매개 변수가 타일을 검색하는 데 충분하지 않은 경우 사용자 지정 URI를 만들어야 합니다. **UriRequested** 이벤트에 대한 사용자 지정 처리기를 제공하여 사용자 지정 URI를 만들고 반환합니다. 각 개별 타일에 대해 **UriRequested** 이벤트가 발생합니다.
 
-1.  **UriRequested** 이벤트에 대한 사용자 지정 처리기에서 필수 사용자 지정 인수를 [**MapTileUriRequestedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs)의 [**X**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequestedeventargs.x), [**Y**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequestedeventargs.y) 및 [**ZoomLevel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequestedeventargs.zoomlevel) 속성과 결합하여 사용자 지정 URI를 만듭니다.
-2.  [  **MapTileUriRequestedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs)의 [**Request**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequestedeventargs.request) 속성에 포함된 [**MapTileUriRequest**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileUriRequest)의 [**Uri**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequest.uri) 속성에 사용자 지정 URI를 반환합니다.
+1.  **UriRequested** 이벤트에 대한 사용자 지정 처리기에서 필수 사용자 지정 인수를 [**MapTileUriRequestedEventArgs**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequestedeventargs.x)의 [**X**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequestedeventargs.y), [**Y**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequestedeventargs.zoomlevel) 및 [**ZoomLevel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs) 속성과 결합하여 사용자 지정 URI를 만듭니다.
+2.  [  **MapTileUriRequestedEventArgs**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequest.uri)의 [**Request**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileUriRequest) 속성에 포함된 [**MapTileUriRequest**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptileurirequestedeventargs.request)의 [**Uri**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileUriRequestedEventArgs) 속성에 사용자 지정 URI를 반환합니다.
 
 다음 예에서는 **UriRequested** 이벤트에 대한 사용자 지정 처리기를 만들어 사용자 지정 URI를 제공하는 방법을 보여 줍니다. 또한 사용자 지정 URI를 만들기 위해 비동기적으로 작업을 수행해야 하는 경우에 지연 패턴을 구현하는 방법을 보여 줍니다.
 
@@ -268,10 +268,10 @@ using System.Threading.Tasks;
 
 사용자 지정 타일을 만들거나 로드하려면 [**BitmapRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.custommaptiledatasource.bitmaprequested) 이벤트에 대한 사용자 지정 처리기를 제공합니다. 각 개별 타일에 대해 **BitmapRequested** 이벤트가 발생합니다.
 
-1.  [  **BitmapRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.custommaptiledatasource.bitmaprequested) 이벤트에 대한 사용자 지정 처리기에서 필수 사용자 지정 인수를 [**MapTileBitmapRequestedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs)의 [**X**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.x), [**Y**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.y) 및 [**ZoomLevel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.zoomlevel) 속성과 결합하여 사용자 지정 타일을 만들거나 검색합니다.
-2.  [  **MapTileBitmapRequestedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs)의 [**Request**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.request) 속성에 포함된 [**MapTileBitmapRequest**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequest)의 [**PixelData**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequest.pixeldata) 속성에 사용자 지정 타일을 반환합니다. **PixelData** 속성은 [**IRandomAccessStreamReference**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IRandomAccessStreamReference) 형식입니다.
+1.  [  **BitmapRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.custommaptiledatasource.bitmaprequested) 이벤트에 대한 사용자 지정 처리기에서 필수 사용자 지정 인수를 [**MapTileBitmapRequestedEventArgs**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.x)의 [**X**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.y), [**Y**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.zoomlevel) 및 [**ZoomLevel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs) 속성과 결합하여 사용자 지정 타일을 만들거나 검색합니다.
+2.  [  **MapTileBitmapRequestedEventArgs**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequest.pixeldata)의 [**Request**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequest) 속성에 포함된 [**MapTileBitmapRequest**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.request)의 [**PixelData**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs) 속성에 사용자 지정 타일을 반환합니다. **PixelData** 속성은 [**IRandomAccessStreamReference**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IRandomAccessStreamReference) 형식입니다.
 
-다음 예에서는 **BitmapRequested** 이벤트에 대한 사용자 지정 처리기를 만들어 사용자 지정 타일을 제공하는 방법을 보여 줍니다. 이 예에서는 부분적으로 불투명하고 동일한 빨간색 타일을 만듭니다. 이 예에서는 [**MapTileBitmapRequestedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs)의 [**X**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.x), [**Y**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.y) 및 [**ZoomLevel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.zoomlevel) 속성을 무시합니다. 실제 사례는 아니지만 이 예에서는 메모리 내 사용자 지정 타일을 즉시 만드는 방법을 보여 줍니다. 또한 사용자 지정 타일을 만들기 위해 비동기적으로 작업을 수행해야 하는 경우에 지연 패턴을 구현하는 방법을 보여 줍니다.
+다음 예에서는 **BitmapRequested** 이벤트에 대한 사용자 지정 처리기를 만들어 사용자 지정 타일을 제공하는 방법을 보여 줍니다. 이 예에서는 부분적으로 불투명하고 동일한 빨간색 타일을 만듭니다. 이 예에서는 [**MapTileBitmapRequestedEventArgs**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.x)의 [**X**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.y), [**Y**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilebitmaprequestedeventargs.zoomlevel) 및 [**ZoomLevel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileBitmapRequestedEventArgs) 속성을 무시합니다. 실제 사례는 아니지만 이 예에서는 메모리 내 사용자 지정 타일을 즉시 만드는 방법을 보여 줍니다. 또한 사용자 지정 타일을 만들기 위해 비동기적으로 작업을 수행해야 하는 경우에 지연 패턴을 구현하는 방법을 보여 줍니다.
 
 ```csharp
 using Windows.UI.Xaml.Controls.Maps;
@@ -415,13 +415,13 @@ InMemoryRandomAccessStream^ TileSources::CustomRandomAccessStream::get()
 
 기본 지도를 타사 또는 사용자 지정 타일로 완전히 바꾸려면
 
--   [**MapTileLayer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileLayer).**BackgroundReplacement**를 [**MapTileSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource)의 [**Layer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.layer) 속성 값으로 지정합니다.
--   [**MapStyle**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapStyle).**None**를 [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)의 [**Style**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.style) 속성 값으로 지정합니다.
+-   [  **MapTileLayer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileLayer).**BackgroundReplacement**를 [**MapTileSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.layer)의 [**Layer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapTileSource) 속성 값으로 지정합니다.
+-   [  **MapStyle**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapStyle).**None**를 [**MapControl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.style)의 [**Style**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 속성 값으로 지정합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
-* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [UWP 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [지도에 대한 디자인 지침](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
-* [빌드 2015 비디오: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [빌드 2015 비디오: Windows 앱의 휴대폰, 태블릿 및 PC에서 맵 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP 교통 앱 샘플](https://github.com/Microsoft/Windows-appsample-trafficapp)

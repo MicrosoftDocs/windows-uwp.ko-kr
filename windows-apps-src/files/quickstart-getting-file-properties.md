@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 01eda8eefea7e1b3b1102ef154a019e1630e80c2
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 81fcb4b62f9a10e8ff1fcb233c95317746cdb3b0
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66369312"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259582"
 ---
 # <a name="get-file-properties"></a>파일 속성 가져오기
 
@@ -24,7 +24,7 @@ ms.locfileid: "66369312"
 [  **StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 개체로 표시되는 파일의 최상위, 기본 및 확장 속성을 가져옵니다.
 
 > [!NOTE]
-> 전체 샘플에 대해서는 [파일 액세스 샘플](https://go.microsoft.com/fwlink/p/?linkid=619995)을 참조하세요.
+> 전체 샘플에 대해서는 [파일 액세스 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -88,9 +88,9 @@ foreach (Windows.Storage.StorageFile file in files)
 
 ## <a name="getting-a-files-extended-properties"></a>파일의 확장 속성 가져오기
 
-최상위 및 기본 파일 속성 외에도 파일의 내용과 연결된 많은 속성이 있습니다. 이러한 확장 속성은 [**BasicProperties.RetrievePropertiesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.basicproperties.retrievepropertiesasync) 메서드를 호출하여 액세스합니다. ([**BasicProperties**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileProperties.BasicProperties) 개체는 [**StorageFile.Properties**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.properties) 속성을 호출하여 가져옵니다.) 최상위 및 기본 파일 속성은 각각 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 및 **BasicProperties** 클래스의 속성으로 액세스할 수 있지만 확장 속성은 검색할 속성의 이름을 나타내는 [String](https://go.microsoft.com/fwlink/p/?LinkID=325032) 개체의 [IEnumerable](https://go.microsoft.com/fwlink/p/?LinkID=313091) 컬렉션을 **BasicProperties.RetrievePropertiesAsync** 메서드로 전달하여 가져옵니다. 그러면 이 메서드에서 [IDictionary](https://go.microsoft.com/fwlink/p/?LinkId=325238) 컬렉션을 반환합니다. 그러면 컬렉션에서 이름 또는 인덱스로 각 확장 속성을 검색합니다.
+최상위 및 기본 파일 속성 외에도 파일의 내용과 연결된 많은 속성이 있습니다. 이러한 확장 속성은 [**BasicProperties.RetrievePropertiesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.basicproperties.retrievepropertiesasync) 메서드를 호출하여 액세스합니다. ([**BasicProperties**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileProperties.BasicProperties) 개체는 [**StorageFile.Properties**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.properties) 속성을 호출하여 가져옵니다.) 최상위 및 기본 파일 속성은 각각 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 및 **BasicProperties** 클래스의 속성으로 액세스할 수 있지만 확장 속성은 검색할 속성의 이름을 나타내는 [String](https://msdn.microsoft.com/library/system.string.aspx) 개체의 [IEnumerable](https://msdn.microsoft.com/library/system.collections.ienumerable.aspx) 컬렉션을 **BasicProperties.RetrievePropertiesAsync** 메서드로 전달하여 가져옵니다. 그러면 이 메서드에서 [IDictionary](https://msdn.microsoft.com/library/system.collections.idictionary.aspx) 컬렉션을 반환합니다. 그러면 컬렉션에서 이름 또는 인덱스로 각 확장 속성을 검색합니다.
 
-다음 예제에서는 사진 라이브러리의 모든 파일을 열거하고 [List](https://go.microsoft.com/fwlink/p/?LinkID=325246) 개체에서 원하는 속성(**DataAccessed** 및 **FileOwner**)의 이름을 지정한 다음 해당 [List](https://go.microsoft.com/fwlink/p/?LinkID=325246) 개체를 [**BasicProperties.RetrievePropertiesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.basicproperties.retrievepropertiesasync)에 전달하여 해당 속성을 검색하고 반환된 [IDictionary](https://go.microsoft.com/fwlink/p/?LinkId=325238) 개체에서 이름으로 해당 속성을 검색합니다.
+다음 예제에서는 사진 라이브러리의 모든 파일을 열거하고 [List](https://msdn.microsoft.com/library/6sh2ey19.aspx) 개체에서 원하는 속성(**DataAccessed** 및 **FileOwner**)의 이름을 지정한 다음 해당 [List](https://msdn.microsoft.com/library/6sh2ey19.aspx) 개체를 [**BasicProperties.RetrievePropertiesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.basicproperties.retrievepropertiesasync)에 전달하여 해당 속성을 검색하고 반환된 [IDictionary](https://msdn.microsoft.com/library/system.collections.idictionary.aspx) 개체에서 이름으로 해당 속성을 검색합니다.
 
 파일의 확장 속성 전체 목록은 [Windows 핵심 속성](https://docs.microsoft.com/windows/desktop/properties/core-bumper)을 참조하세요.
 

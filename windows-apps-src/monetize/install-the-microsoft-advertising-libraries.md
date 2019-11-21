@@ -6,19 +6,19 @@ ms.date: 08/23/2017
 ms.topic: article
 keywords: Windows 10, uwp, 광고, 설치, SDK, 광고 라이브러리
 ms.localizationpriority: medium
-ms.openlocfilehash: d348b1b7a7b057388b437fab9952bb8eaffe9957
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 37e57d49ba40814891154aef2ec0de6b3b7e560c
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320226"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260265"
 ---
 # <a name="install-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK 설치
 
-Windows 10용 UWP 앱에 광고를 표시하려면 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 설치합니다. 이 SDK는 Visual Studio 2015 이상 버전의 확장입니다.
+Windows 10용 UWP 앱에 광고를 표시하려면 [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)를 설치합니다. 이 SDK는 Visual Studio 2015 이상 버전의 확장입니다.
 
 > [!NOTE]
-> JavaScript/HTML UWP 앱을 개발 하는 및 Windows 10 SDK 버전 10.0.14393 (1 주년 업데이트)를 설치 하거나 나중에 설치 해야 합니다 [WinJS](https://github.com/winjs/winjs) 라이브러리입니다. 이전 Windows 10 SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다.
+> JavaScript/HTML UWP 앱을 개발 하 고 있고 Windows 10 SDK 버전 10.0.14393 (기념일 업데이트) 이상을 설치한 경우 [WinJS](https://github.com/winjs/winjs) 라이브러리도 설치 해야 합니다. 이전 Windows 10 SDK 버전에는 이 라이브러리가 포함되어 있었지만, 10.0.14393(1주년 업데이트) 버전부터는 라이브러리를 별도로 설치해야 합니다.
 
 <span id="install-msi" />
 
@@ -35,7 +35,7 @@ MSI 설치 관리자를 통해 Microsoft Advertising Services SDK를 설치:
     MsiExec.exe /x{6AC81125-8485-463D-9352-3F35A2508C11}
     ```
 
-3.  [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)를 다운로드하여 설치합니다. 설치하는 데 몇 분 정도 걸릴 수 있습니다. 프로세스가 완료되었는지 확인하고 완료될 때까지 기다립니다.
+3.  [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)를 다운로드하여 설치합니다. 설치하는 데 몇 분 정도 걸릴 수 있습니다. 프로세스가 완료되었는지 확인하고 완료될 때까지 기다립니다.
 
 4.  Visual Studio를 다시 시작합니다.
 
@@ -94,14 +94,14 @@ Microsoft Advertising SDK를 설치한 후에는 다음 지침에 따라 광고 
 
 * [중간 광고](interstitial-ads.md)
 * [기본 광고](native-ads.md)
-* [XAML 및.NET의 AdControl](adcontrol-in-xaml-and--net.md)
-* [Html 5 AdControl 및 Javascript](adcontrol-in-html-5-and-javascript.md)
+* [XAML 및 .NET의 AdControl](adcontrol-in-xaml-and--net.md)
+* [HTML 5 및 Javascript의 AdControl](adcontrol-in-html-5-and-javascript.md)
 
 <span id="framework" />
 
 ## <a name="understanding-framework-packages-in-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK의 프레임워크 패키지 이해
 
-UWP 앱용 [Microsoft Advertising SDK](https://aka.ms/ads-sdk-uwp)의 Microsoft.Advertising.dll 라이브러리는 *프레임워크 패키지*로 구성됩니다. 이 라이브러리에는 [Microsoft.Advertising](https://docs.microsoft.com/uwp/api/microsoft.advertising) 및 [Microsoft.Advertising.WinRT.UI](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui) 네임스페이스의 광고 API가 포함되어 있습니다.
+UWP 앱용 [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)의 Microsoft.Advertising.dll 라이브러리는 *프레임워크 패키지*로 구성됩니다. 이 라이브러리에는 [Microsoft.Advertising](https://docs.microsoft.com/uwp/api/microsoft.advertising) 및 [Microsoft.Advertising.WinRT.UI](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui) 네임스페이스의 광고 API가 포함되어 있습니다.
 
 이 라이브러리는 프레임워크 패키지입니다. 다시 말해서 사용자가 이 라이브러리를 사용하는 앱 버전을 설치하면 수정 및 성능 향상이 포함된 새 버전의 라이브러리가 게시될 때마다 Windows 업데이트를 통해 사용자 디바이스의 라이브러리가 자동으로 업데이트됩니다. 따라서 고객의 디바이스에 항상 사용 가능한 최신 버전의 라이브러리가 설치됩니다.
 

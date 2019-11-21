@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d45c907215f21977b0a59acede5a8314d6ed168
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: b3143247eab0bd8ed4266b78e34ec54dafa4dd7e
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66369321"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259564"
 ---
 # <a name="open-files-and-folders-with-a-picker"></a>선택기를 사용하여 파일 및 폴더 열기
 
@@ -24,7 +24,7 @@ ms.locfileid: "66369321"
 사용자가 선택기를 조작할 수 있도록 하여 파일 및 폴더에 액세스합니다. [  **FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) 및 [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) 클래스를 사용하여 파일에 액세스하고 [**FolderPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FolderPicker) 클래스를 사용하여 폴더에 액세스할 수 있습니다.
 
 > [!NOTE]
-> 전체 샘플에 대해서는 [파일 선택기 샘플](https://go.microsoft.com/fwlink/p/?linkid=619994)을 참조하세요.
+> 전체 샘플에 대해서는 [파일 선택기 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FilePicker)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -109,7 +109,7 @@ else
 
     -   [  **PickerLocationId.PicturesLibrary**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation)를 사용하여 [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerLocationId)을 사진으로 설정하면 사용자가 사진을 찾을 수 있을 것 같은 위치에서 시작됩니다. **SuggestedStartLocation**을 선택하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
 
-    -   [  **FileTypeFilter**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.filetypefilter)를 사용하여 파일 형식을 지정하면 사용자가 관련 있는 파일을 선택하는 데 집중할 수 있습니다. **FileTypeFilter**의 이전 파일 형식을 새 항목으로 대체하려면 [**Add**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileextensionvector.append) 대신 [**ReplaceAll**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileextensionvector.replaceall)을 사용합니다.
+    -   [  **FileTypeFilter**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.filetypefilter)를 사용하여 파일 형식을 지정하면 사용자가 관련 있는 파일을 선택하는 데 집중할 수 있습니다. **FileTypeFilter**의 이전 파일 형식을 새 항목으로 대체하려면 [**Add**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileextensionvector.replaceall) 대신 [**ReplaceAll**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileextensionvector.append)을 사용합니다.
 
 2.  **FileOpenPicker 표시**
 

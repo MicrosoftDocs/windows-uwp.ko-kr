@@ -10,16 +10,16 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: d8e4a84b0e927be8e1b89e6189e80acd2d3e4266
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 79e511d20874470dfea8413bdf88365bba86d087
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371314"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260467"
 ---
 # <a name="monitor-background-task-progress-and-completion"></a>백그라운드 작업 진행 및 완료 모니터링
 
-**중요 한 Api**
+**중요 API**
 
 - [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration)
 - [**BackgroundTaskProgressEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskprogresseventhandler)
@@ -34,9 +34,9 @@ out-of-process로 실행되는 백그라운드 작업이 보고하는 진행 및
 ## <a name="create-an-event-handler-to-handle-completed-background-tasks"></a>완료된 백그라운드 작업을 처리하는 이벤트 처리기를 만듭니다.
 
 ### <a name="step-1"></a>1단계
-완료된 백그라운드 작업을 처리하는 이벤트 처리기 함수를 만듭니다. 이 코드를 사용 하는 특정 공간을 수행 해야 하는 [ **IBackgroundTaskRegistration** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskRegistration) 개체와 [ **BackgroundTaskCompletedEventArgs** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs) 개체입니다.
+완료된 백그라운드 작업을 처리하는 이벤트 처리기 함수를 만듭니다. 이 코드는 [**IBackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskRegistration) 개체 및 [**BackgroundTaskCompletedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskCompletedEventArgs) 개체를 사용 하는 특정 공간을 따라야 합니다.
 
-에 대 한 다음 필요한 공간을 사용 합니다 **OnCompleted** 백그라운드 작업 이벤트 처리기 메서드.
+**Oncompleted** background task 이벤트 처리기 메서드에 대해 다음 공간을 사용 합니다.
 
 ```csharp
 private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
@@ -64,7 +64,7 @@ auto completed = [this](BackgroundTaskRegistration^ task, BackgroundTaskComplete
 ### <a name="step-2"></a>2단계
 백그라운드 작업 완료를 처리하는 이벤트 처리기에 코드를 추가합니다.
 
-예를 들어 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)은 UI를 업데이트합니다.
+예를 들어 [백그라운드 작업 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask)은 UI를 업데이트합니다.
 
 ```csharp
 private void OnCompleted(IBackgroundTaskRegistration task, BackgroundTaskCompletedEventArgs args)
@@ -122,7 +122,7 @@ auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressE
 ### <a name="step-2"></a>2단계
 백그라운드 작업 완료를 처리하는 이벤트 처리기에 코드를 추가합니다.
 
-예를 들어 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)에서는 *args* 매개 변수를 통해 전달된 진행 상태로 UI를 업데이트합니다.
+예를 들어 [백그라운드 작업 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask)에서는 *args* 매개 변수를 통해 전달된 진행 상태로 UI를 업데이트합니다.
 
 ```csharp
 private void OnProgress(IBackgroundTaskRegistration task, BackgroundTaskProgressEventArgs args)
@@ -158,7 +158,7 @@ auto progress = [this](BackgroundTaskRegistration^ task, BackgroundTaskProgressE
 ### <a name="step-1"></a>1단계
 앱에서는 백그라운드 작업을 처음으로 등록할 때 앱이 포그라운드에서 활성화된 상태에서 작업이 실행될 경우 작업에 대한 진행 및 완료 업데이트를 수신하도록 등록해야 합니다.
 
-예를 들어 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)에서는 등록된 각 백그라운드 작업에 대해 다음 함수를 호출합니다.
+예를 들어 [백그라운드 작업 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask)에서는 등록된 각 백그라운드 작업에 대해 다음 함수를 호출합니다.
 
 ```csharp
 private void AttachProgressAndCompletedHandlers(IBackgroundTaskRegistration task)
@@ -217,7 +217,7 @@ void SampleBackgroundTask::AttachProgressAndCompletedHandlers(IBackgroundTaskReg
 ### <a name="step-2"></a>2단계
 앱은 시작되거나 백그라운드 작업 상태와 관련된 새 페이지로 이동할 때 현재 등록된 백그라운드 작업의 목록을 가져와서 진행 및 완료 이벤트 처리기 함수에 연결합니다. 응용 프로그램에 의해 현재 등록된 백그라운드 작업 목록은 [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration).[**AllTasks**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.alltasks) 속성에 보관됩니다.
 
-예를 들어 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)에서는 SampleBackgroundTask 페이지로 이동할 때 다음 코드를 사용하여 이벤트 처리기를 연결합니다.
+예를 들어 [백그라운드 작업 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask)에서는 SampleBackgroundTask 페이지로 이동할 때 다음 코드를 사용하여 이벤트 처리기를 연결합니다.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -299,4 +299,4 @@ void SampleBackgroundTask::OnNavigatedTo(NavigationEventArgs^ e)
 * [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
-* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱에는 이벤트 (디버깅) 하는 경우](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)

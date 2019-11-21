@@ -6,12 +6,12 @@ ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 65436d7efd1de6e9c3649ad27b29b925bc632d95
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 13e6f4ac59a99463cd891e936f51449baf4ea7c2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820656"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259533"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>C++/CX로 "Hello world" 앱 만들기
 
@@ -25,7 +25,7 @@ Microsoft Visual Studio에서는 C++/CX를 사용하여 XAML(Extensible Applicat
 
 ## <a name="before-you-start"></a>시작하기 전 확인 사항
 
--   이 자습서를 완료하려면 Windows 10을 실행하는 컴퓨터에서 Visual Studio Community 또는 Visual Studio의 비 Community 버전 중 하나를 사용해야 합니다. 다운로드하려면 [도구 얻기](https://go.microsoft.com/fwlink/p/?LinkId=532666)를 참조하세요.
+-   이 자습서를 완료하려면 Windows 10을 실행하는 컴퓨터에서 Visual Studio Community 또는 Visual Studio의 비 Community 버전 중 하나를 사용해야 합니다. 다운로드하려면 [도구 얻기](https://visualstudio.microsoft.com/downloads/)를 참조하세요.
 -   C++/CX, XAML 및 [XAML 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-overview)에 나오는 개념을 기본적으로 이해하고 있어야 합니다.
 -   여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃으로 재설정하려면 메뉴 모음에서 **창** > **창 레이아웃 다시 설정**을 선택합니다.
 
@@ -231,7 +231,7 @@ MainPage::MainPage()
 
 디버깅을 중지하고 앱을 닫으려면 Visual Studio로 돌아가서 Shift+F5를 누릅니다.
 
-자세한 내용은 [Visual Studio에서 스토어 앱 실행](https://go.microsoft.com/fwlink/p/?LinkId=619619)을 참조하세요.
+자세한 내용은 [Visual Studio에서 스토어 앱 실행](https://msdn.microsoft.com/library/windows/apps/xaml/Hh441477(v=VS.140).aspx)을 참조하세요.
 
 앱에서는 [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)에 입력할 수도 있지만 [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)를 클릭해도 아무런 작동을 하지 않습니다. 이후 단계에서는 단추의 [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트에 대해 개인 설정 인사말을 표시하는 이벤트 처리기를 만듭니다.
 
@@ -397,6 +397,6 @@ MainPage::MainPage()
 
 ## <a name="next-steps"></a>다음 단계
 
-Windows 8.1 및/또는 Windows Phone 8.1을 대상으로 하는 Windows 유니버설 앱 프로젝트가 있는 경우 해당 프로젝트를 Windows 10으로 포팅할 수 있습니다. 이 포팅 작업을 위한 자동 프로세스가 없지만 수동으로 수행하면 됩니다. 새 Windows 유니버설 프로젝트로 시작하여 이 항목의 지침에 따라 최신 프로젝트 시스템 구조 및 매니페스트 파일을 다운로드하고, 프로젝트의 디렉터리 구조에 코드 파일을 복사하며, 프로젝트에 항목을 추가하고, [**VisualStateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager)를 사용하여 XAML을 다시 작성하세요. 자세한 내용은 [Windows 런타임 8 프로젝트를 UWP(유니버설 Windows 플랫폼) 프로젝트로 포팅](https://docs.microsoft.com/windows/uwp/porting/w8x-to-uwp-porting-to-a-uwp-project) 및 [유니버설 Windows 플랫폼으로 포팅(C++)](https://go.microsoft.com/fwlink/p/?LinkId=619525)을 참조하세요.
+Windows 8.1 및/또는 Windows Phone 8.1을 대상으로 하는 Windows 유니버설 앱 프로젝트가 있는 경우 해당 프로젝트를 Windows 10으로 포팅할 수 있습니다. 이 포팅 작업을 위한 자동 프로세스가 없지만 수동으로 수행하면 됩니다. 새 Windows 유니버설 프로젝트로 시작하여 이 항목의 지침에 따라 최신 프로젝트 시스템 구조 및 매니페스트 파일을 다운로드하고, 프로젝트의 디렉터리 구조에 코드 파일을 복사하며, 프로젝트에 항목을 추가하고, [**VisualStateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager)를 사용하여 XAML을 다시 작성하세요. 자세한 내용은 [Windows 런타임 8 프로젝트를 UWP(유니버설 Windows 플랫폼) 프로젝트로 포팅](https://docs.microsoft.com/windows/uwp/porting/w8x-to-uwp-porting-to-a-uwp-project) 및 [유니버설 Windows 플랫폼으로 포팅(C++)](https://msdn.microsoft.com/library/mt186164.aspx)을 참조하세요.
 
-기존 애플리케이션의 새 UWP UI를 만드는 등의 목적으로 UWP 앱과 통합하려는 기존 C++ 코드가 있는 경우 [방법: 유니버설 Windows 프로젝트에서 기존 C++ 코드 사용](https://go.microsoft.com/fwlink/p/?LinkId=619623)을 참조하세요.
+기존 애플리케이션의 새 UWP UI를 만드는 등의 목적으로 UWP 앱과 통합하려는 기존 C++ 코드가 있는 경우 [방법: 유니버설 Windows 프로젝트에서 기존 C++ 코드 사용](https://msdn.microsoft.com/library/mt186162.aspx)을 참조하세요.

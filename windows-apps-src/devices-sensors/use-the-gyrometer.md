@@ -6,22 +6,22 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e7ee2cac1ae53ca59b8ec60d917e39a737a049ad
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a5898d4157b216175c77356e5a27b4c58d049d9a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369636"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259634"
 ---
 # <a name="use-the-gyrometer"></a>회전계 사용
 
 
-**중요 한 Api**
+**중요 API**
 
--   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
+-   [**Windows. 장치. 센서**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
 -   [**회전 계**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Gyrometer)
 
-**샘플**
+**샘플이**
 
 -   더 완전한 구현은 [회전계 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/gyrometer)을 참조하세요.
 
@@ -29,9 +29,9 @@ ms.locfileid: "66369636"
 
 회전계는 가속도계를 게임 컨트롤러로서 보완합니다. 가속도계는 선형 동작을 측정할 수고 회전계는 각속도 또는 회전 동작을 측정합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
-사용 하 여 Extensible Application Markup Language (XAML), Microsoft Visual 친숙 해야 C#, 및 이벤트입니다.
+Extensible Application Markup Language (XAML), Microsoft 시각적 개체 C#및 이벤트에 대해 잘 알고 있어야 합니다.
 
 사용하는 장치 또는 에뮬레이터가 회전계를 지원해야 합니다.
 
@@ -180,4 +180,4 @@ GyrometerReadingChangedEventArgs>(ReadingChanged);
 
  ## <a name="related-topics"></a>관련 항목
 
-* [회전 계 샘플](https://go.microsoft.com/fwlink/p/?linkid=241379)
+* [회전 계 샘플](https://code.msdn.microsoft.com/windowsapps/Gyrometer-Sensor-Sample-4fe891d9)

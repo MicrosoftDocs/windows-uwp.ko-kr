@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 087f60ae3a16ad4cd38137d692fe079ce6c58bf4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c80419a5353386872356eee7a677f10d616a9f6a
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371738"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259431"
 ---
 # <a name="register-a-background-task"></a>백그라운드 작업 등록
 
 
-**중요 한 Api**
+**중요 API**
 
 -   [**BackgroundTaskRegistration 클래스**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration)
 -   [**BackgroundTaskBuilder 클래스**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
@@ -39,7 +39,7 @@ ms.locfileid: "66371738"
 이 메서드는 작업 진입점, 작업 이름, 미리 구성된 백그라운드 작업 트리거 및 백그라운드 작업에 대한 [**SystemCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition)(옵션)을 받아들입니다. 이 메서드는 [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration) 개체를 반환합니다.
 
 > [!Important]
-> `taskEntryPoint` -out-of-process에서 실행 되는 백그라운드 작업에 대 한이 생성 해야 하는 네임 스페이스 이름으로 '.', 및 배경 클래스를 포함 하는 클래스의 이름입니다. 문자열은 대/소문자를 구분합니다.  예를 들어 백그라운드 클래스 코드가 포함된 "BackgroundTask1" 클래스와 "MyBackgroundTasks" 네임스페이스가 있는 경우 `taskEntryPoint` 문자열은 "MyBackgroundTasks.BackgroundTask1"이 됩니다.
+> `taskEntryPoint`-out-of-process에서 실행 되는 백그라운드 작업의 경우 네임 스페이스 이름, '. ' 및 백그라운드 클래스를 포함 하는 클래스의 이름으로 생성 되어야 합니다. 문자열은 대/소문자를 구분합니다.  예를 들어 백그라운드 클래스 코드가 포함된 "BackgroundTask1" 클래스와 "MyBackgroundTasks" 네임스페이스가 있는 경우 `taskEntryPoint` 문자열은 "MyBackgroundTasks.BackgroundTask1"이 됩니다.
 > 백그라운드 작업이 앱과 동일한 프로세스로 실행되는 경우(즉, in-process 백그라운드 작업) `taskEntryPoint`를 설정하지 않아야 합니다.
 
 > [!div class="tabbedCodeSnippets"]
@@ -147,8 +147,8 @@ ms.locfileid: "66371738"
 
 그런 다음 새 [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 개체를 사용하여 작업을 등록합니다. 이 코드에서는 조건 매개 변수가 null인지 확인하고 그렇지 않으면 등록 개체에 조건을 추가해야 합니다. [  **BackgroundTaskBuilder.Register**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration) 메서드에서 반환된 [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register)을 반환합니다.
 
-> **참고**  백그라운드 작업에 대 한 등록 매개 변수는 등록 중에 유효성이 검사 됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
-> **참고** 앱과 동일한 프로세스에서 실행되는 백그라운드 작업을 등록하는 경우 `taskEntryPoint` 매개 변수에 대해 `String.Empty` 또는 `null`을 전송합니다.
+> **  백그라운드** 작업 등록 매개 변수는 등록 시 유효성 검사가 수행 됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
+> **참고** 앱과 동일한 프로세스에서 실행되는 백그라운드 작업을 등록하는 경우 `String.Empty` 매개 변수에 대해 `null` 또는 `taskEntryPoint`을 전송합니다.
 
 다음 예제에서는 기존 작업을 반환하거나 백그라운드 작업(선택적 시스템 조건(있는 경우) 포함)을 등록하는 코드를 추가합니다.
 
@@ -387,4 +387,4 @@ ms.locfileid: "66371738"
 * [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
-* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱에는 이벤트 (디버깅) 하는 경우](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)

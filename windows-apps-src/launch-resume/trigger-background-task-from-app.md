@@ -3,20 +3,20 @@ title: 앱 내에서 백그라운드 작업 트리거
 description: 응용 프로그램 내에서 백그라운드 작업을 트리거하는 방법을 설명합니다.
 ms.date: 07/06/2018
 ms.topic: article
-keywords: 백그라운드 작업 트리거를 백그라운드 작업
+keywords: 백그라운드 작업 트리거, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: d5d163d36b51e414a403986d1fdd73db7925cc0b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 3d8917c6ed181607459d6126aa295d270cfea838
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371890"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259404"
 ---
 # <a name="trigger-a-background-task-from-within-your-app"></a>앱 내에서 백그라운드 작업 트리거
 
 [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger)를 사용하여 앱 내에서 백그라운드 작업을 활성화하는 방법을 알아봅니다.
 
-응용 프로그램 트리거를 만드는 방법의 예제를 참조 하세요 [예제에서는](https://github.com/Microsoft/Windows-universal-samples/blob/v2.0.0/Samples/BackgroundTask/cs/BackgroundTask/Scenario5_ApplicationTriggerTask.xaml.cs)합니다.
+응용 프로그램 트리거를 만드는 방법에 대 한 예제는이 [예제](https://github.com/Microsoft/Windows-universal-samples/blob/v2.0.0/Samples/BackgroundTask/cs/BackgroundTask/Scenario5_ApplicationTriggerTask.xaml.cs)를 참조 하세요.
 
 이 항목에서는 응용 프로그램에서 활성화하려는 백그라운드 작업이 이미 있다고 가정합니다. 백그라운드 작업이 아직 없는 경우 [BackgroundActivity.cs](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackgroundActivation/cs/BackgroundActivity.cs)에 샘플 백그라운드 작업이 있습니다. 또는 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)의 단계에 따라 백그라운드 작업을 하나 만듭니다.
 
@@ -56,7 +56,7 @@ ApplicationTrigger ^ _AppTrigger = ref new ApplicationTrigger();
 
 작업이 실행되는 시간을 제어하는 백그라운드 작업 조건을 만들 수 있습니다. 조건이 맞을 때까지 조건이 백그라운드 작업 실행을 막습니다. 자세한 내용은 [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)을 참조하세요.
 
-이 예제에서는 조건으로 설정 됩니다 **InternetAvailable** 트리거할 수 있도록, 한 번에 작업 인터넷 액세스를 사용할 수 있으면을 실행 합니다. 가능한 조건 목록은 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)을 참조하세요.
+이 예제에서 조건은 **Internetavailable** 로 설정 되므로 트리거된 후에는 인터넷 액세스를 사용할 수 있게 되 면 태스크가 실행 됩니다. 가능한 조건 목록은 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)을 참조하세요.
 
 ```csharp
 SystemCondition internetCondition = new SystemCondition(SystemConditionType.InternetAvailable);
@@ -134,16 +134,16 @@ var result = await _AppTrigger.RequestAsync();
 
 [BackgroundExecutionManager.RequestAccessAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager)를 사용하면 사용자가 앱의 백그라운드 작업을 제한하기로 결정했는지 확인할 수 있습니다. 배터리 사용 정보를 파악하고 사용자가 원하는 작업을 완료해야 하는 경우에 백그라운드에서만 실행해야 합니다. 사용자가 백그라운드 작업에 대한 설정을 제어하는 방법은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)를 참조하세요.  
 
-- 메모리: 앱의 메모리 및 에너지 사용 하 여 튜닝는 운영 체제를 실행 하 여 백그라운드 작업을 사용할 수 있음을 보장 하는 키입니다. [메모리 관리 API](https://docs.microsoft.com/uwp/api/windows.system.memorymanager)를 사용하면 백그라운드 작업에서 사용 중인 메모리의 양을 확인할 수 있습니다. 백그라운드 작업이 사용하는 메모리가 많을수록 다른 앱이 포그라운드에 있을 때 OS에서 백그라운드 작업을 계속 실행하기 어렵습니다. 사용자는 앱이 수행할 수 있는 모든 백그라운드 작업을 근본적으로 제어하며 앱이 배터리 사용에 미치는 영향을 한 눈에 볼 수 있게 됩니다.  
-- CPU 시간: 백그라운드 작업 트리거 형식에 따라 가져오기는 벽 시계 사용 기간으로 제한 됩니다. Application 트리거로 트리거된 백그라운드 작업은 약 10초로 제한됩니다.
+- 메모리: 앱의 메모리와 에너지 사용을 조정하는 일은 운영 체제에서 백그라운드 작업이 실행될 수 있는지 확인하는 것이 관건입니다. [메모리 관리 API](https://docs.microsoft.com/uwp/api/windows.system.memorymanager)를 사용하면 백그라운드 작업에서 사용 중인 메모리의 양을 확인할 수 있습니다. 백그라운드 작업이 사용하는 메모리가 많을수록 다른 앱이 포그라운드에 있을 때 OS에서 백그라운드 작업을 계속 실행하기 어렵습니다. 사용자는 앱이 수행할 수 있는 모든 백그라운드 작업을 근본적으로 제어하며 앱이 배터리 사용에 미치는 영향을 한 눈에 볼 수 있게 됩니다.  
+- CPU 시간: 백그라운드 작업은 트리거 유형에 따라 가져오는 벽시계로 측정하는 시간으로 제한됩니다. Application 트리거로 트리거된 백그라운드 작업은 약 10초로 제한됩니다.
 
 백그라운드 작업에 적용되는 리소스 제약 조건은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-Windows 10 부터는 더 이상 필요는 백그라운드 작업을 사용 하려면 잠금 화면에 앱을 추가 하려면 사용자에 대 한.
+Windows 10부터 백그라운드 작업을 활용 하기 위해 사용자가 잠금 화면에 앱을 추가 하는 것은 더 이상 필요 하지 않습니다.
 
-백그라운드 작업은 [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync)를 먼저 호출한 경우에만 **ApplicationTrigger**를 사용하여 실행됩니다.
+백그라운드 작업은RequestAccessAsync[**를 먼저 호출한 경우에만** ApplicationTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync)를 사용하여 실행됩니다.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -155,7 +155,7 @@ Windows 10 부터는 더 이상 필요는 백그라운드 작업을 사용 하�
 * [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [앱이 백그라운드로 이동할 때 메모리 회수](reduce-memory-usage.md)
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
-* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱에는 이벤트 (디버깅) 하는 경우](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
 * [확장 실행을 사용하여 앱 일시 중단 연기](run-minimized-with-extended-execution.md)
 * [백그라운드 작업 등록](register-a-background-task.md)

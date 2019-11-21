@@ -6,18 +6,18 @@ ms.date: 07/06/2018
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 4eaff7142c3c14f04b780b93a7e98e1447f068d8
-ms.sourcegitcommit: 4ca51472d0474be96fa3184e311b729f58998234
+ms.openlocfilehash: b0d3c9401ff71475e379b2959a1f0cdc03fe8d8b
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399606"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260441"
 ---
 # <a name="run-a-background-task-on-a-timer"></a>타이머에 따라 백그라운드 작업 실행
 
 [  **TimeTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.TimeTrigger)를 사용하여 일회성 백그라운드 작업을 예약하거나 정기적 백그라운드 작업을 실행하는 방법을 알아봅니다.
 
-이 항목에서 설명하는 시간으로 트리거되는 백그라운드 작업을 구현하는 방법의 예는 [백그라운드 활성화 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundActivation)의 **Scenario4**를 참조하세요.
+이 항목에서 설명하는 시간으로 트리거되는 백그라운드 작업을 구현하는 방법의 예는 **백그라운드 활성화 샘플**의 [Scenario4](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundActivation)를 참조하세요.
 
 이 항목에서는 정기적으로 또는 특정 시간에 실행해야 하는 백그라운드 작업이 있다고 가정합니다. 백그라운드 작업이 아직 없는 경우 [BackgroundActivity.cs](https://github.com/Microsoft/Windows-universal-samples/blob/master/Samples/BackgroundActivation/cs/BackgroundActivity.cs)에 샘플 백그라운드 작업이 있습니다. [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)의 단계에 따라 백그라운드 작업을 하나 만들 수도 있습니다.
 
@@ -32,9 +32,9 @@ ms.locfileid: "67399606"
 - *FreshnessTime*이 15분으로 설정되고 *OneShot*이 false이면 작업이 등록된 시간부터 15분에서 30분 사이에 시작하여 15분마다 실행되도록 예약됩니다. n분으로 설정되고 *OneShot*이 false이면 작업이 등록 후 n+15분 사이에 시작하여 n분마다 실행되도록 예약됩니다.
 
 > [!NOTE]
-> 하는 경우 *FreshnessTime* 백그라운드 작업을 등록 하려고 할 때 예외가 throw 됩니다에 보다 작거나 15 분으로 설정 합니다.
+> *FreshnessTime* 을 15 분 미만으로 설정 하면 백그라운드 작업을 등록 하려고 할 때 예외가 throw 됩니다.
 
-예를 들어,이 트리거를 사용 하면 시간에 한 번 실행 하는 백그라운드 작업 합니다.
+예를 들어이 트리거는 백그라운드 작업이 한 시간에 한 번 실행 되도록 합니다.
 
 ```cs
 TimeTrigger hourlyTrigger = new TimeTrigger(60, false);
@@ -87,7 +87,7 @@ if (requestStatus != BackgroundAccessStatus.AlwaysAllowed)
 백그라운드 작업 등록 함수를 호출하여 백그라운드 작업을 등록합니다. 백그라운드 작업 등록에 대한 자세한 내용과 아래 샘플 코드의 **RegisterBackgroundTask()** 메서드 정의를 보려면 [백그라운드 작업 등록](register-a-background-task.md)을 참조하세요.
 
 > [!IMPORTANT]
-> 백그라운드 앱와 동일한 프로세스에서 실행 되는 작업에 대 한 설정 하지 않으면 `entryPoint`합니다. 앱에서 별도의 프로세스로 실행 되는 백그라운드 작업에 대 한 설정 `entryPoint` 네임 스페이스를 '.', 및 백그라운드 작업 구현을 포함 하는 클래스의 이름입니다.
+> 앱과 동일한 프로세스에서 실행 되는 백그라운드 작업의 경우 `entryPoint`설정 하지 마십시오. 응용 프로그램에서 별도의 프로세스로 실행 되는 백그라운드 작업의 경우 `entryPoint`를 네임 스페이스, '. ' 및 백그라운드 작업 구현이 포함 된 클래스의 이름으로 설정 합니다.
 
 ```cs
 string entryPoint = "Tasks.ExampleBackgroundTaskClass";
@@ -117,16 +117,16 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 
 [BackgroundExecutionManager.RequestAccessAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager)를 사용하면 사용자가 앱의 백그라운드 작업을 제한하기로 결정했는지 확인할 수 있습니다. 배터리 사용 정보를 파악하고 사용자가 원하는 작업을 완료해야 하는 경우에 백그라운드에서만 실행해야 합니다. 사용자가 백그라운드 작업에 대한 설정을 제어하는 방법은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)를 참조하세요.
 
-- 메모리: 앱의 메모리 및 에너지 사용 하 여 튜닝는 운영 체제를 실행 하 여 백그라운드 작업을 사용할 수 있음을 보장 하는 키입니다. [메모리 관리 API](https://docs.microsoft.com/uwp/api/windows.system.memorymanager)를 사용하면 백그라운드 작업에서 사용 중인 메모리의 양을 확인할 수 있습니다. 백그라운드 작업이 사용하는 메모리가 많을수록 다른 앱이 포그라운드에 있을 때 OS에서 백그라운드 작업을 계속 실행하기 어렵습니다. 사용자는 앱이 수행할 수 있는 모든 백그라운드 작업을 근본적으로 제어하며 앱이 배터리 사용에 미치는 영향을 한 눈에 볼 수 있게 됩니다.  
-- CPU 시간: 백그라운드 작업 트리거 형식에 따라 가져오기는 벽 시계 사용 기간으로 제한 됩니다.
+- 메모리: 앱의 메모리와 에너지 사용을 조정하는 일은 운영 체제에서 백그라운드 작업이 실행될 수 있는지 확인하는 것이 관건입니다. [메모리 관리 API](https://docs.microsoft.com/uwp/api/windows.system.memorymanager)를 사용하면 백그라운드 작업에서 사용 중인 메모리의 양을 확인할 수 있습니다. 백그라운드 작업이 사용하는 메모리가 많을수록 다른 앱이 포그라운드에 있을 때 OS에서 백그라운드 작업을 계속 실행하기 어렵습니다. 사용자는 앱이 수행할 수 있는 모든 백그라운드 작업을 근본적으로 제어하며 앱이 배터리 사용에 미치는 영향을 한 눈에 볼 수 있게 됩니다.  
+- CPU 시간: 백그라운드 작업은 트리거 유형에 따라 가져오는 벽시계로 측정하는 시간으로 제한됩니다.
 
 백그라운드 작업에 적용되는 리소스 제약 조건은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-Windows 10 부터는 더 이상 필요는 백그라운드 작업을 사용 하려면 잠금 화면에 앱을 추가 하려면 사용자에 대 한.
+Windows 10부터 백그라운드 작업을 활용 하기 위해 사용자가 잠금 화면에 앱을 추가 하는 것은 더 이상 필요 하지 않습니다.
 
-백그라운드 작업은 [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync)를 먼저 호출한 경우에만 **TimeTrigger**를 사용하여 실행됩니다.
+백그라운드 작업은RequestAccessAsync[**를 먼저 호출한 경우에만** TimeTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync)를 사용하여 실행됩니다.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -138,7 +138,7 @@ Windows 10 부터는 더 이상 필요는 백그라운드 작업을 사용 하�
 * [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [앱이 백그라운드로 이동할 때 메모리 회수](reduce-memory-usage.md)
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
-* [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱에는 이벤트 (디버깅) 하는 경우](https://go.microsoft.com/fwlink/p/?linkid=254345)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
 * [확장 실행을 사용하여 앱 일시 중단 연기](run-minimized-with-extended-execution.md)
 * [백그라운드 작업 등록](register-a-background-task.md)

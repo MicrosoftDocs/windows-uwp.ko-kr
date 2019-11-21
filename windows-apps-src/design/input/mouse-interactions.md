@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b68e736cc6d413196205f84467b7e159c53cb98e
-ms.sourcegitcommit: e7589fa25d8de86c36b6ce6d90d360337718ef93
+ms.openlocfilehash: 0d54ab79926ef20bb54a83346c12df2ea383167d
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71311236"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258346"
 ---
 # <a name="mouse-interactions"></a>마우스 조작
 
@@ -58,8 +58,8 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 <tr class="even">
 <td align="left"><p>마우스 오른쪽 단추를 클릭하여 명령 선택</p></td>
 <td align="left"><p>마우스 오른쪽 단추를 클릭하여 탐색 모음 (사용 가능한 경우) 및 글로벌 명령이 포함된 앱 바를 표시합니다. 요소를 마우스 오른쪽 단추로 클릭하여 선택하고 선택한 요소에 대한 상황에 맞는 명령이 포함된 앱 바를 표시합니다.</p>
-<div class="alert">
-<strong></strong>참고  선택 또는 앱 바 명령이 적절 한 UI 동작이 아니면 마우스 오른쪽 단추를 클릭 하 여 상황에 맞는 메뉴를 표시 합니다. 그러나 모든 명령 동작에 앱 바를 사용하는 것이 좋습니다.
+<div class="alert">선택 또는 앱 바 명령이 적절 한 UI 동작이 아닌 경우 마우스 오른쪽 단추를 클릭 하 여 상황에 맞는 메뉴를 
+<strong>표시  .</strong> 그러나 모든 명령 동작에 앱 바를 사용하는 것이 좋습니다.
 </div>
 <div>
  
@@ -86,7 +86,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 
 ## <a name="mouse-input-events"></a>마우스 입력 이벤트
 
-대부분의 마우스 입력은 모든 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 개체에서 지 원하는 일반적인 라우트된 입력 이벤트를 통해 처리할 수 있습니다. 이러한 개체는 다음과 같습니다.
+대부분의 마우스 입력은 모든 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 개체에서 지 원하는 일반적인 라우트된 입력 이벤트를 통해 처리할 수 있습니다. 확인할 수 있습니다.
 
 - [**BringIntoViewRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
 - [**CharacterReceived**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.characterreceived)
@@ -127,7 +127,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 
 그러나 [Windows](https://docs.microsoft.com/uwp/api/windows.ui.input)의 포인터, 제스처 및 조작 이벤트를 사용 하 여 각 장치 (예: 마우스 휠 이벤트)의 특정 기능을 활용할 수 있습니다.
 
-**표본의** 의 [Basicinput 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)을 참조 하세요.
+**샘플:** 의 [Basicinput 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)을 참조 하세요.
 
 ## <a name="guidelines-for-visual-feedback"></a>시각적 피드백에 대한 지침
 
@@ -162,7 +162,7 @@ UWP(유니버설 Windows 플랫폼) 앱 디자인을 터치식 입력에 최적�
 
 ### <a name="samples"></a>샘플
 
-- [기본 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620302)
-- [짧은 대기 시간 입력 샘플](https://go.microsoft.com/fwlink/p/?LinkID=620304)
-- [사용자 상호 작용 모드 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619894)
-- [포커스 화면 효과 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619895)
+- [기본 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [짧은 대기 시간 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [사용자 상호 작용 모드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)

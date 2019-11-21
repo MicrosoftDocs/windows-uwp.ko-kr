@@ -6,12 +6,12 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: 433c9589876ef7dac1c5c2b862176ff0eb47b1b3
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 0575127096a016c54c1ee84c1e57c2f22054384b
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339947"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260222"
 ---
 # <a name="manage-app-submissions"></a>앱 제출 관리
 
@@ -55,7 +55,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 비롯하여 앱 제
 <td align="left"><a href="get-status-for-an-app-submission.md">기존 앱 제출의 상태를 가져옵니다.</a></td>
 </tr>
 <tr>
-<td align="left">올리기</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions</td>
 <td align="left"><a href="create-an-app-submission.md">새 앱 제출 만들기</a></td>
 </tr>
@@ -65,7 +65,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 비롯하여 앱 제
 <td align="left"><a href="update-an-app-submission.md">기존 앱 제출 업데이트</a></td>
 </tr>
 <tr>
-<td align="left">올리기</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/commit</td>
 <td align="left"><a href="commit-an-app-submission.md">신규 또는 업데이트 된 앱 제출을 커밋합니다.</a></td>
 </tr>
@@ -98,7 +98,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 비롯하여 앱 제
     응답 본문에는 새 제출의 ID, Azure Blob Storage 제출용 관련 파일(앱 패키지, 목록 이미지, 예고편 파일 등)을 업로드 할 수 있는 SAS URI, 기타 새 제출 데이터 일체(목록 및 가격 정보 등)가 포함된 [앱 제출](#app-submission-object) 리소스가 포함되어 있습니다.
 
     > [!NOTE]
-    > SAS URI는 계정 키를 요구하지 않고 Azure Storage의 보안 리소스에 대한 액세스를 제공합니다. SAS Uri 및 Azure Blob storage에서의 사용에 대 한 배경 정보는 [Shared 액세스 서명, 1 부: SAS 모델 이해 @ no__t-0 및 [Shared Access 서명, 2 부: Blob 저장소 @ no__t-0을 사용 하 여 SAS를 만들고 사용 합니다.
+    > SAS URI는 계정 키를 요구하지 않고 Azure Storage의 보안 리소스에 대한 액세스를 제공합니다. SAS URI 및 Azure Blob Storage를 통한 SAS URI 사용에 대한 배경 정보는 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/) 및 [공유 액세스 서명, 2부: Blob Storage를 사용하여 SAS 만들기 및 사용](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-2/)을 참조하세요.
 
 4. 제출에 대한 새 패키지, 목록 이미지, 예고편 파일을 추가하려면 [앱 패키지를 준비](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)하고 [앱 스크린샷 및 이미지, 예고편을 준비](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images)합니다. ZIP 보관 파일에 이러한 파일을 모두 추가합니다.
 
@@ -175,17 +175,17 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 비롯하여 앱 제
 <td align="left"><a href="get-package-rollout-info-for-an-app-submission.md">앱 제출에 대 한 점진적 출시 정보 가져오기</a></td>
 </tr>
 <tr>
-<td align="left">올리기</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/updatepackagerolloutpercentage</td>
 <td align="left"><a href="update-the-package-rollout-percentage-for-an-app-submission.md">앱 전송에 대 한 점진적 출시 비율 업데이트</a></td>
 </tr>
 <tr>
-<td align="left">올리기</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/haltpackagerollout</td>
 <td align="left"><a href="halt-the-package-rollout-for-an-app-submission.md">앱 제출을 위한 점진적 롤아웃 중지</a></td>
 </tr>
 <tr>
-<td align="left">올리기</td>
+<td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}/finalizepackagerollout</td>
 <td align="left"><a href="finalize-the-package-rollout-for-an-app-submission.md">앱 전송에 대 한 점진적 출시 마무리</a></td>
 </tr>
@@ -206,9 +206,9 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 비롯하여 앱 제
 
 ## <a name="storebroker-powershell-module"></a>StoreBroker PowerShell 모듈
 
-Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈도 제공합니다. 이 모듈을 [StoreBroker](https://aka.ms/storebroker)라고 합니다. 이 모듈을 사용하여 Microsoft Store 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 많은 자사 응용 프로그램이 스토어에 제출되는 기본 방식으로 Microsoft 내에서 많이 사용됩니다.
+Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령줄 인터페이스를 구현하는 오픈 소스 PowerShell 모듈도 제공합니다. 이 모듈을 [StoreBroker](https://github.com/Microsoft/StoreBroker)라고 합니다. 이 모듈을 사용하여 Microsoft Store 제출 API를 직접 호출하는 대신 명령줄에서 앱, 플라이트 및 추가 기능 제출을 관리할 수 있습니다. 또는 소스에서 이 API를 호출하는 방법에 대한 예제를 더 찾아볼 수 있습니다. StoreBroker 모듈은 많은 자사 응용 프로그램이 스토어에 제출되는 기본 방식으로 Microsoft 내에서 많이 사용됩니다.
 
-자세한 내용은 [GitHub의 StoreBroker 페이지](https://aka.ms/storebroker)를 참조하세요.
+자세한 내용은 [GitHub의 StoreBroker 페이지](https://github.com/Microsoft/StoreBroker)를 참조하세요.
 
 <span/>
 
@@ -339,11 +339,11 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |------------|--------|-------------------|
 | id            | string  | 제출의 ID입니다. 이 ID는 [앱 제출 만들기](create-an-app-submission.md), [모든 앱 가져오기](get-all-apps.md) 및 [앱 가져오기](get-an-app.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 만든 제출의 경우이 ID는 파트너 센터의 제출 페이지에 대 한 URL 에서도 사용할 수 있습니다.  |
 | applicationCategory           | string  |   앱에 대한 [범주 및/또는 하위 범주](https://docs.microsoft.com/windows/uwp/publish/category-and-subcategory-table)를 지정하는 문자열입니다. 범주와 하위 범주는 **BooksAndReference_EReader**처럼 밑줄(_) 문자를 사용하여 단일 문자열로 연결합니다.      |  
-| pricing           |  개체(object)  | 앱에 대한 가격 정보를 포함하는 [가격 리소스](#pricing-object)입니다.        |   
-| visibility           |  string  |  앱의 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>숨김</li><li>Public</li><li>프라이빗</li><li>NotSet</li></ul>       |   
+| pricing           |  object  | 앱에 대한 가격 정보를 포함하는 [가격 리소스](#pricing-object)입니다.        |   
+| visibility           |  string  |  앱의 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Hidden</li><li>Public</li><li>프라이빗</li><li>NotSet</li></ul>       |   
 | targetPublishMode           | string  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>수동</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |  
-| listings           |   개체(object)  |  키와 값 쌍의 사전입니다. 여기서 각 키는 국가 코드이며 각 값은 앱에 대한 목록 정보를 포함하는 [목록 리소스](#listing-object)입니다.       |   
+| listings           |   object  |  키와 값 쌍의 사전입니다. 여기서 각 키는 국가 코드이며 각 값은 앱에 대한 목록 정보를 포함하는 [목록 리소스](#listing-object)입니다.       |   
 | hardwarePreferences           |  배열  |   앱에 대한 [하드웨어 기본 설정](https://docs.microsoft.com/windows/uwp/publish/enter-app-properties)을 정의하는 문자열의 배열입니다. 다음 값 중 하나일 수 있습니다. <ul><li>터치</li><li>키보드</li><li>마우스</li><li>카메라</li><li>NfcHce</li><li>Nfc</li><li>BluetoothLE</li><li>Telephony</li></ul>     |   
 | automaticBackupEnabled           |  boolean  |   Windows에서 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://docs.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.   |   
 | canInstallOnRemovableMedia           |  boolean  |   고객이 이동식 저장소에 앱을 설치할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://docs.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.     |   
@@ -353,13 +353,13 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | meetAccessibilityGuidelines           |    boolean           |  이 앱이 접근성 지침을 준수하도록 테스트되었는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](https://docs.microsoft.com/windows/uwp/publish/app-declarations)을 참조하세요.      |   
 | notesForCertification           |  string  |   앱의 [인증에 대한 참고 사항](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification)이 포함됩니다.    |    
 | 상태           |   string  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>릴리스</li><li>ReleaseFailed</li></ul>      |    
-| statusDetails           |   개체(object)  | 오류에 대한 정보를 비롯하여 제출 상태에 대한 추가 세부 정보가 포함된 [상태 세부 정보 리소스](#status-details-object)입니다.       |    
+| statusDetails           |   object  | 오류에 대한 정보를 비롯하여 제출 상태에 대한 추가 세부 정보가 포함된 [상태 세부 정보 리소스](#status-details-object)입니다.       |    
 | fileUploadUrl           |   string  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지, 목록 이미지, 예고편 파일을 추가하는 경우 패키지 및 이미지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [앱 제출 만들기](#create-an-app-submission)를 참조하세요.       |    
 | applicationPackages           |   배열  | 제출의 각 패키지에 대한 세부 정보를 제공하는 [응용 프로그램 패키지 리소스](#application-package-object) 배열입니다. |    
-| packageDeliveryOptions    | 개체(object)  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함하는 [패키지 전송 옵션 리소스](#package-delivery-options-object)입니다.  |
+| packageDeliveryOptions    | object  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함하는 [패키지 전송 옵션 리소스](#package-delivery-options-object)입니다.  |
 | enterpriseLicensing           |  string  |  앱의 엔터프라이즈 라이선스 동작을 나타내는 [엔터프라이즈 라이선스 값](#enterprise-licensing) 값 중 하나입니다.  |    
 | allowMicrosoftDecideAppAvailabilityToFutureDeviceFamilies           |  boolean   |  Microsoft에서 [이후의 Windows 10 디바이스 패밀리에 앱을 제공하도록](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability) 허용할지 여부를 나타냅니다.    |    
-| allowTargetFutureDeviceFamilies           | 개체(object)   |  키와 값 쌍의 사전입니다. 여기서 각 키는 [Windows 10 장치 패밀리](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)이며 각 값은 앱이 지정된 장치 패밀리를 대상으로 허용할지 여부를 나타내는 부울입니다.     |    
+| allowTargetFutureDeviceFamilies           | object   |  키와 값 쌍의 사전입니다. 여기서 각 키는 [Windows 10 장치 패밀리](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability)이며 각 값은 앱이 지정된 장치 패밀리를 대상으로 허용할지 여부를 나타내는 부울입니다.     |    
 | FriendlyName           |   string  |  파트너 센터에 표시 된 것 처럼 전송의 이름입니다. 이 값은 제출을 만들 때 생성됩니다.       |  
 | trailers           |  배열 |   앱 목록에 대한 비디오 예고편을 나타내는 최대 15개의 [예고편 리소스](#trailer-object) 가 포함된 배열입니다.<br/><br/>   |  
 
@@ -373,9 +373,9 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | 값           | 형식    | 설명        |
 |-----------------|---------|------|
 |  trialPeriod               |    string     |  앱에 대한 평가 기간을 지정하는 문자열입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
-|  marketSpecificPricings               |    개체(object)     |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *priceId* 값으로 지정된 기본 가격을 재정의합니다.      |     
+|  marketSpecificPricings               |    object     |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *priceId* 값으로 지정된 기본 가격을 재정의합니다.      |     
 |  sales               |   배열      |  **사용되지 않음**. 앱에 대한 판매 정보를 포함하는 [판매 리소스](#sale-object) 배열입니다.   |     
-|  priceId               |   string      |  앱에 대한 [기본 가격](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)을 지정하는 [기준 가격](#price-tiers)입니다.   |     
+|  priceId               |   string      |  앱에 대한 [기본 가격](#price-tiers)을 지정하는 [기준 가격](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)입니다.   |     
 |  isAdvancedPricingModel               |   boolean      |  **true**인 경우, 개발자 계정은 .99 USD에서 1999.99 USD까지의 확장된 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. **false**인 경우, 개발자 계정은 .99 USD에서 999.99 USD까지의 원래 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. 여러 계층에 대한 자세한 내용은 [기준 가격](#price-tiers)을 참조하세요.<br/><br/>**참고**&nbsp;&nbsp;이 필드는 읽기 전용입니다.   |
 
 
@@ -398,7 +398,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  basePriceId               |   string      |  판매의 기본 가격으로 사용할 [기준 가격](#price-tiers)입니다.    |     
 |  startDate               |   string      |   판매의 시작 날짜(ISO 8601 형식)입니다.  |     
 |  endDate               |   string      |  판매의 종료 날짜(ISO 8601 형식)입니다.      |     
-|  marketSpecificPricings               |   개체(object)      |   키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *basePriceId* 값으로 지정된 기본 가격을 재정의합니다.    |
+|  marketSpecificPricings               |   object      |   키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 앱에 대한 사용자 지정 가격](https://docs.microsoft.com/windows/uwp/publish/define-pricing-and-market-selection)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *basePriceId* 값으로 지정된 기본 가격을 재정의합니다.    |
 
 
 <span id="listing-object" />
@@ -409,8 +409,8 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값           | 형식    | 설명                  |
 |-----------------|---------|------|
-|  baseListing               |   개체(object)      |  모든 플랫폼에 대한 기본 목록 정보를 정의하는 앱의 [기본 목록](#base-listing-object) 정보입니다.   |     
-|  platformOverrides               | 개체(object) |   키와 값 쌍의 사전입니다. 여기서 각 키는 목록 정보를 재정의할 플랫폼을 식별하는 문자열이며 각 값은 지정된 플랫폼에 대해 재정의할 목록 정보를 지정하는 [기본 목록](#base-listing-object) 리소스(제목에 대한 설명 값만 포함)입니다. 키는 다음 값을 가질 수 있습니다. <ul><li>알 수 없음</li><li>Windows80</li><li>Windows81</li><li>WindowsPhone71</li><li>WindowsPhone80</li><li>WindowsPhone81</li></ul>     |      |     
+|  baseListing               |   object      |  모든 플랫폼에 대한 기본 목록 정보를 정의하는 앱의 [기본 목록](#base-listing-object) 정보입니다.   |     
+|  platformOverrides               | object |   키와 값 쌍의 사전입니다. 여기서 각 키는 목록 정보를 재정의할 플랫폼을 식별하는 문자열이며 각 값은 지정된 플랫폼에 대해 재정의할 목록 정보를 지정하는 [기본 목록](#base-listing-object) 리소스(제목에 대한 설명 값만 포함)입니다. 키는 다음 값을 가질 수 있습니다. <ul><li>알 수 없음</li><li>Windows80</li><li>Windows81</li><li>WindowsPhone71</li><li>WindowsPhone80</li><li>WindowsPhone81</li></ul>     |      |     
 
 <span id="base-listing-object" />
 
@@ -493,16 +493,16 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  isLocalCooperative               |   boolean      |  게임이 로컬 협동 게임을 지원하는지 나타냅니다.    |     
 |  isOnlineMultiplayer               |   boolean      |  게임이 온라인 멀티플레이어를 지원하는지 나타냅니다.    |     
 |  isOnlineCooperative               |   boolean      |  게임이 온라인 협동 게임을 지원하는지 나타냅니다.    |     
-|  localMultiplayerMinPlayers               |   ssNoversion      |   게임이 로컬 멀티플레이어에서 지원하는 플레이어의 최소 수를 지정합니다.   |     
-|  localMultiplayerMaxPlayers               |   ssNoversion      |   게임이 로컬 멀티플레이어에서 지원하는 플레이어의 최대 수를 지정합니다.  |     
-|  localCooperativeMinPlayers               |   ssNoversion      |   게임이 로컬 협동 게임에서 지원하는 플레이어의 최소 수를 지정합니다.  |     
-|  localCooperativeMaxPlayers               |   ssNoversion      |   게임이 로컬 협동 게임에서 지원하는 플레이어의 최대 수를 지정합니다.  |     
+|  localMultiplayerMinPlayers               |   int      |   게임이 로컬 멀티플레이어에서 지원하는 플레이어의 최소 수를 지정합니다.   |     
+|  localMultiplayerMaxPlayers               |   int      |   게임이 로컬 멀티플레이어에서 지원하는 플레이어의 최대 수를 지정합니다.  |     
+|  localCooperativeMinPlayers               |   int      |   게임이 로컬 협동 게임에서 지원하는 플레이어의 최소 수를 지정합니다.  |     
+|  localCooperativeMaxPlayers               |   int      |   게임이 로컬 협동 게임에서 지원하는 플레이어의 최대 수를 지정합니다.  |     
 |  isBroadcastingPrivilegeGranted               |   boolean      |  게임이 브로드캐스팅을 지원하는지 나타냅니다.   |     
 |  isCrossPlayEnabled               |   boolean      |   게임이 Windows 10 PC와 Xbox 플레이어 간 멀티플레이어 세션을 지원하는지 나타냅니다.  |     
 |  kinectDataForExternal               |   string      |  다음 문자열 값은 게임이 Kinect 데이터를 수집해 외부 서비스로 전송할 수 있는지 나타냅니다. <ul><li>NotSet</li><li>알 수 없음</li><li>Enabled</li><li>사용 안 함</li></ul>   |
 
 > [!NOTE]
-> Microsoft Store 제출 API를 개발자에게 처음 출시한 후 2017년 5월에 *gamingOptions* 리소스가 추가되었습니다. 이 리소스가 도입되기 전에 제출 API를 통해 앱 제출을 생성했고, 이 제출이 아직 진행 중이라면 제출을 성공적으로 커밋하거나 삭제하기 전에 이 리소스는 앱 제출에 대해 널 상태가 됩니다. 앱 제출에 *gamingOptions* 리소스를 사용할 수 없는 경우 [앱 가져오기](get-an-app.md) 메서드에서 반환된 [응용 프로그램 리소스](get-app-data.md#application_object)의 *hasAdvancedListingPermission* 필드는 false입니다.
+> Microsoft Store 제출 API를 개발자에게 처음 출시한 후 2017년 5월에 *gamingOptions* 리소스가 추가되었습니다. 이 리소스가 도입되기 전에 제출 API를 통해 앱 제출을 생성했고, 이 제출이 아직 진행 중이라면 제출을 성공적으로 커밋하거나 삭제하기 전에 이 리소스는 앱 제출에 대해 널 상태가 됩니다. 앱 제출에 *gamingOptions* 리소스를 사용할 수 없는 경우 *앱 가져오기* 메서드에서 반환된 [응용 프로그램 리소스](get-app-data.md#application_object)의 [hasAdvancedListingPermission](get-an-app.md) 필드는 false입니다.
 
 <span id="status-details-object" />
 
@@ -512,9 +512,9 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값           | 형식    | 설명         |
 |-----------------|---------|------|
-|  errors               |    개체(object)     |   제출에 대한 오류 세부 정보가 포함된 [상태 세부 정보 리소스](#status-detail-object)의 배열입니다.    |     
-|  warnings               |   개체(object)      | 제출에 대한 경고 세부 정보가 포함된 [상태 세부 정보 리소스](#status-detail-object)의 배열입니다.      |
-|  certificationReports               |     개체(object)    |   제출에 대한 인증 보고서 데이터에 대한 액세스를 제공하는 [인증 보고서 리소스](#certification-report-object)의 배열입니다. 인증에 실패할 경우 이러한 보고서에서 자세한 내용을 확인할 수 있습니다.   |  
+|  errors               |    object     |   제출에 대한 오류 세부 정보가 포함된 [상태 세부 정보 리소스](#status-detail-object)의 배열입니다.    |     
+|  warnings               |   object      | 제출에 대한 경고 세부 정보가 포함된 [상태 세부 정보 리소스](#status-detail-object)의 배열입니다.      |
+|  certificationReports               |     object    |   제출에 대한 인증 보고서 데이터에 대한 액세스를 제공하는 [인증 보고서 리소스](#certification-report-object)의 배열입니다. 인증에 실패할 경우 이러한 보고서에서 자세한 내용을 확인할 수 있습니다.   |  
 
 
 <span id="status-detail-object" />
@@ -526,7 +526,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | 값           | 형식    | 설명        |
 |-----------------|---------|------|
 |  code               |    string     |   오류 또는 경고의 유형을 설명하는 [제출 상태 코드](#submission-status-code)입니다.   |     
-|  자세히               |     string    |  문제에 대한 자세한 정보가 있는 메시지입니다.     |
+|  details               |     string    |  문제에 대한 자세한 정보가 있는 메시지입니다.     |
 
 
 <span id="application-package-object" />
@@ -569,7 +569,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값           | 형식    | 설명                   |
 |-----------------|---------|------|
-| fileName   |   string      |  패키지의 이름입니다.    |  
+| fileName   |   string      |  패키지 이름입니다.    |  
 | fileStatus    | string    |  패키지의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
 | id    |  string   |  패키지를 고유하게 식별하는 ID입니다. 이 값은 파트너 센터에서 제공 합니다.   |     
 | version    |  string   |  앱 패키지의 버전입니다. 자세한 내용은 [패키지 버전 번호](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering)를 참조하세요.   |   
@@ -619,7 +619,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값           | 형식    | 설명        |
 |-----------------|---------|------|
-| packageRollout   |   개체(object)      |  제출에 대한 점진적 패키지 출시 설정을 포함하는 [패키지 출시 리소스](#package-rollout-object)입니다.   |  
+| packageRollout   |   object      |  제출에 대한 점진적 패키지 출시 설정을 포함하는 [패키지 출시 리소스](#package-rollout-object)입니다.   |  
 | isMandatoryUpdate    | boolean    |  이 제출의 패키지를 앱 업데이트 자동 설치를 필수 구성 요소로 처리할지 여부를 나타냅니다. 앱 업데이트 자동 설치를 필수 패키지에 대한 자세한 내용은 [앱에 대한 패키지 업데이트 다운로드 및 설치](../packaging/self-install-package-updates.md)를 참조하세요.    |  
 | mandatoryUpdateEffectiveDate    |  date   |  이 제출의 패키지가 필수가 되는 날짜 및 시간을 ISO 8601 형식 및 UTC 표준 시간대로 나타낸 것입니다.   |        
 
@@ -632,7 +632,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | 값           | 형식    | 설명        |
 |-----------------|---------|------|
 | isPackageRollout   |   boolean      |  제출에 대해 점진적 패키지 출시를 사용하도록 설정할지 여부를 나타냅니다.    |  
-| packageRolloutPercentage    | FLOAT    |  점진적 출시에서 패키지를 받을 사용자의 백분율입니다.    |  
+| packageRolloutPercentage    | float    |  점진적 출시에서 패키지를 받을 사용자의 백분율입니다.    |  
 | packageRolloutStatus    |  string   |  점진적 패키지 출시의 상태를 나타내는 다음 문자열 중 하나입니다. <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
 | fallbackSubmissionId    |  string   |  점진적 출시 패키지를 가져오지 않는 고객이 수신할 제출의 ID입니다.   |          
 
@@ -645,7 +645,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 이 리소스는 앱 목록의 비디오 예고편을 나타냅니다. 이 리소스의 값은 파트너 센터의 서브 미션에 대 한 [트레일러](../publish/app-screenshots-and-images.md#trailers) 옵션에 해당 합니다.
 
-최대 15개의 예고편 리소스를 [앱 제출 리소스](#app-submission-object)의 *예고편* 배열에 추가할 수 있습니다. 제출용으로 예고편 비디오 파일과 미리 보기 이미지를 업로드하려면, 이 파일을 제출용 패키지 및 목록 이미지가 든 동일한 ZIP 보관 파일에 추가한 다음 ZIP 보관 파일을 제출용 SAS URI로 업로드 합니다. ZIP 보관 파일을 SAS URI로 업로드하는 것에 대한 자세한 내용은 [앱 제출 생성](#create-an-app-submission)을 참조하세요.
+최대 15개의 예고편 리소스를 *앱 제출 리소스*의 [예고편](#app-submission-object) 배열에 추가할 수 있습니다. 제출용으로 예고편 비디오 파일과 미리 보기 이미지를 업로드하려면, 이 파일을 제출용 패키지 및 목록 이미지가 든 동일한 ZIP 보관 파일에 추가한 다음 ZIP 보관 파일을 제출용 SAS URI로 업로드 합니다. ZIP 보관 파일을 SAS URI로 업로드하는 것에 대한 자세한 내용은 [앱 제출 생성](#create-an-app-submission)을 참조하세요.
 
 ```json
 {
@@ -678,10 +678,10 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  id               |    string     |   예고편 ID입니다. 이 값은 파트너 센터에서 제공 합니다.   |
 |  videoFileName               |    string     |    제출용 파일이 든 ZIP 보관 파일의 예고편 비디오 파일 이름입니다.    |     
 |  videoFileId               |   string      |  예고편 비디오 파일 ID입니다. 이 값은 파트너 센터에서 제공 합니다.   |     
-|  trailerAssets               |   개체(object)      |  키와 값 쌍의 사전입니다. 여기서 각 키는 언어 코드이며 각 값은 예고편에 대한 지역에 특정적인 추가 자산이 포함된 [예고편 자산 리소스](#trailer-assets-object)입니다. 지원 언어 코드에 대한 자세한 내용은 [지원 언어](https://docs.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
+|  trailerAssets               |   object      |  키와 값 쌍의 사전입니다. 여기서 각 키는 언어 코드이며 각 값은 예고편에 대한 지역에 특정적인 추가 자산이 포함된 [예고편 자산 리소스](#trailer-assets-object)입니다. 지원 언어 코드에 대한 자세한 내용은 [지원 언어](https://docs.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
 
 > [!NOTE]
-> Microsoft Store 제출 API를 개발자에게 처음 출시한 후 2017년 5월에 *예고편* 리소스가 추가되었습니다. 이 리소스가 도입되기 전에 제출 API를 통해 앱 제출을 생성했고, 이 제출이 아직 진행 중이라면 제출을 성공적으로 커밋하거나 삭제하기 전에 이 리소스는 앱 제출에 대해 널 상태가 됩니다. 앱 제출에 *예고편* 리소스를 사용할 수 없는 경우 [앱 가져오기](get-an-app.md) 메서드에서 반환된 [응용 프로그램 리소스](get-app-data.md#application_object)의 *hasAdvancedListingPermission* 필드는 false입니다.
+> Microsoft Store 제출 API를 개발자에게 처음 출시한 후 2017년 5월에 *예고편* 리소스가 추가되었습니다. 이 리소스가 도입되기 전에 제출 API를 통해 앱 제출을 생성했고, 이 제출이 아직 진행 중이라면 제출을 성공적으로 커밋하거나 삭제하기 전에 이 리소스는 앱 제출에 대해 널 상태가 됩니다. 앱 제출에 *예고편* 리소스를 사용할 수 없는 경우 *앱 가져오기* 메서드에서 반환된 [응용 프로그램 리소스](get-app-data.md#application_object)의 [hasAdvancedListingPermission](get-an-app.md) 필드는 false입니다.
 
 <span id="trailer-assets-object" />
 
@@ -709,7 +709,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 <span/>
 
-## <a name="enums"></a>열거형
+## <a name="enums"></a>열거
 
 이러한 메서드는 다음 열거형을 사용합니다.
 
@@ -724,7 +724,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  기본               |   기준 가격이 설정되지 않았습니다. 앱에 대한 기본 가격을 사용합니다.      |     
 |  NotAvailable              |   지정된 영역에 앱을 사용할 수 없습니다.    |     
 |  무료              |   앱은 무료입니다.    |    
-|  계층*xxx*               |   앱에 대한 기준 가격을 **계층<em>xxxx</em>** 형식으로 지정하는 문자열입니다. 현재 다음 범위의 기준 가격이 지원됩니다.<br/><br/><ul><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **true**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier1012** - **Tier1424**입니다.</li><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **false**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier2** - **Tier96**입니다.</li></ul>각 계층과 관련 된 시장 특정 가격을 비롯 하 여 개발자 계정에 사용할 수 있는 가격 책정 계층의 전체 표를 보려면 파트너 센터의 앱 서브 미션에 대 한 **가격 책정 및 가용성** 페이지로 이동 하세요. **시장 및 사용자 지정 가격** 섹션에서 **테이블 보기** 링크를 클릭 합니다 (일부 개발자 계정의 경우이 링크는 **가격 책정** 섹션에 있습니다).    |
+|  계층*xxx*               |   앱에 대한 기준 가격을 **계층<em>xxxx</em>** 형식으로 지정하는 문자열입니다. 현재 다음 범위의 기준 가격이 지원됩니다.<br/><br/><ul><li>*가격 리소스*의 [isAdvancedPricingModel](#pricing-object) 값이 **true**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier1012** - **Tier1424**입니다.</li><li>*가격 리소스*의 [isAdvancedPricingModel](#pricing-object) 값이 **false**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier2** - **Tier96**입니다.</li></ul>각 계층과 관련 된 시장 관련 가격을 비롯 하 여 개발자 계정에 사용할 수 있는 가격 책정 계층의 전체 표를 보려면 파트너 센터에서 앱 서브 미션에 대 한 **가격 책정 및 가용성** 페이지로 이동 하 고 **시장 및 사용자 지정 가격** 섹션에서 **테이블 보기** 링크를 클릭 합니다 (일부 개발자 계정의 경우이 링크는 **가격 책정** 섹션에 있음).    |
 
 
 <span id="enterprise-licensing" />

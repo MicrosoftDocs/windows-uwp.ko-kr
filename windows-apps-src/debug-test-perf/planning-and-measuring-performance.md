@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b6177e565e98c725326122fefad7c7ee23948b49
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 59397f12ec66bfa2864d830eaf80a9dcaaf06592
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359784"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257878"
 ---
 # <a name="planning-for-performance"></a>성능 계획
 
@@ -104,7 +104,7 @@ ms.locfileid: "66359784"
 
 **앱 시작 및 다시 시작**
 
--   앱의 시작 화면을 지연시키고 필요한 경우에 아니면 앱의 시작 화면을 확장하지 않습니다. 자세한 내용은 [빠르고 유연한 앱 실행 환경 만들기](https://go.microsoft.com/fwlink/p/?LinkId=317595) 및 [오랫동안 시작 화면 표시](https://docs.microsoft.com/windows/uwp/launch-resume/create-a-customized-splash-screen)를 참조하세요.
+-   앱의 시작 화면을 지연시키고 필요한 경우에 아니면 앱의 시작 화면을 확장하지 않습니다. 자세한 내용은 [빠르고 유연한 앱 실행 환경 만들기](https://blogs.msdn.com/b/windowsappdev/archive/2012/05/21/creating-a-fast-and-fluid-app-launch-experience.aspx) 및 [오랫동안 시작 화면 표시](https://docs.microsoft.com/windows/uwp/launch-resume/create-a-customized-splash-screen)를 참조하세요.
 -   시작 화면이 해제된 직후에 발생하는 애니메이션은 앱 시작 시간이 지연되는 인상만 주기 때문에 사용하지 않도록 설정합니다.
 
 **적응 UI 및 방향**
@@ -152,7 +152,7 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
 // ...
 ```
 
-[로깅 샘플](https://go.microsoft.com/fwlink/p/?LinkId=529576)도 참조하세요.
+[로깅 샘플](https://github.com/Microsoft/Windows-universal-samples)도 참조하세요.
 
 앱을 계측한 후에는 앱의 성능을 테스트하고 측정할 수 있습니다.
 
@@ -165,19 +165,19 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
 -   올인원 및 데스크톱 PC, 랩톱 및 울트라북, 태블릿 및 기타 모바일 디바이스 등 광범위한 하드웨어 구성을 테스트합니다.
 -   다양한 화면 크기에 대해 테스트합니다. 화면 크기가 클수록 더 많은 콘텐츠를 표시할 수 있지만 추가 콘텐츠를 모두 표시하면 성능에 부정적인 영향을 줄 수 있습니다.
 -   테스트 변수를 최대한 많이 제거합니다.
-    -   테스트 디바이스에서 백그라운드 앱을 끕니다. Windows에서이 위해 선택 **설정을** 시작 메뉴에서 &gt; **개인 설정** &gt; **잠금 화면**합니다. 각 활성 앱을 선택하고 **없음**을 선택합니다.
+    -   테스트 디바이스에서 백그라운드 앱을 끕니다. 이렇게 하려면 Windows의 시작 메뉴에서 **설정** 을 선택 하 &gt; **개인 설정** &gt; **잠금 화면**을 선택 합니다. 각 활성 앱을 선택하고 **없음**을 선택합니다.
     -   테스트 디바이스에 배포하기 전에 릴리스 구성에서 작성하여 네이티브 코드로 앱을 컴파일합니다.
     -   자동 유지 관리가 테스트 디바이스의 성능에 영향을 주지 않도록 하려면 수동으로 트리거하고 완료될 때까지 기다립니다. Windows의 시작 메뉴에서 **보안 및 유지 관리**를 검색합니다. **유지 관리** 영역의 **자동 유지 관리** 아래에서 **유지 관리 시작**을 선택하고 상태가 **유지 관리 진행 중**에서 변경될 때까지 기다립니다.
     -   앱을 여러 번 실행하여 임의 테스트 변수를 제거하고 일관된 측정을 보장합니다.
 -   절전 사용 여부 테스트 사용자의 디바이스는 개발 컴퓨터보다 전원이 훨씬 적을 수 있습니다. Windows는 모바일 디바이스와 같은 절전 디바이스를 염두에 두고 설계되었습니다. 플랫폼에서 실행되는 앱은 이러한 디바이스에서 제대로 작동해야 합니다. 경험적으로 절전 디바이스는 데스크톱 컴퓨터보다 4배 정도 더 느릴 것으로 예상되므로 이에 따라 목표를 설정하세요.
 -   Microsoft Visual Studio 및 Windows Performance Analyzer와 같은 도구를 함께 사용하여 앱 성능을 측정합니다. Visual Studio는 소스 코드 링크와 같은 앱 중심 분석을 제공하도록 설계되었습니다. Windows Performance Analyzer는 시스템 정보 제공, 터치 조작 이벤트에 대한 정보, 디스크 I/O(입출력) 및 GPU(그래픽 처리 디바이스) 비용에 대한 정보 등 시스템 중심 분석을 제공하도록 설계되었습니다. 두 도구 모두 추적 캡처 및 내보내기를 제공하며 공유된 추적 및 사후 추적을 다시 열 수 있습니다.
--   인증을 위해 스토어에 앱을 제출 하기 전에 통합 해야 테스트 계획에 성능 관련 테스트 사례는 "성능 테스트" 섹션에 설명 된 대로 [Windows 앱 인증 키트 테스트](windows-app-certification-kit-tests.md) 및 "성능 및 안정성" 부분 [UWP 앱 테스트 사례](https://docs.microsoft.com/previous-versions/windows/apps/dn275879(v=win.10))합니다.
+-   인증을 위해 스토어에 앱을 제출 하기 전에 [Windows 앱 인증 키트 테스트](windows-app-certification-kit-tests.md) 의 "성능 테스트" 섹션 및 [UWP 앱 테스트 사례의](https://docs.microsoft.com/previous-versions/windows/apps/dn275879(v=win.10))"성능 및 안정성" 섹션에 설명 된 대로 성능 관련 테스트 사례를 테스트 계획에 통합 해야 합니다.
 
 자세한 내용은 다음과 같은 리소스 및 프로파일링 도구를 참조하세요.
 
 -   [Windows 성능 분석기](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10))
 -   [Windows Performance Toolkit](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh162945(v=win.10))
--   [Visual Studio 진단 도구를 사용 하 여 성능을 분석 합니다.](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015)
+-   [Visual Studio 진단 도구를 사용 하 여 성능 분석](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015)
 -   //Build/ 세션 [XAML 성능](https://channel9.msdn.com/Events/Build/2015/3-698)
 -   //Build/ 세션 [Visual Studio 2015의 새로운 XAML 도구](https://channel9.msdn.com/Events/Build/2015/2-697)
 

@@ -10,33 +10,33 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 832a13f8b1f4a6e6e221b4fa0ce328b5edabac7d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: c59982c174909a3fb8ab0b21d5dd792969cfeebc
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371670"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259479"
 ---
 # <a name="handle-a-cancelled-background-task"></a>취소된 백그라운드 작업 처리
 
-**중요 한 Api**
+**중요 API**
 
 -   [**BackgroundTaskCanceledEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskcanceledeventhandler)
 -   [**IBackgroundTaskInstance**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)
--   [**ApplicationData.Current**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.current)
+-   [**ApplicationData. Current**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.current)
 
 영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다.
 
-이 항목에서는 백그라운드 태스크 클래스를 이미 만들었다고 가정 포함 하는 **실행** 백그라운드 태스크 시작 지점으로 사용 되는 메서드. 백그라운드 작업 구축을 빠르게 시작하려면 [ 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md) 또는 [ 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)을 참조하세요. 조건 및 트리거에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
+이 항목에서는 백그라운드 작업 진입점으로 사용 되는 **Run** 메서드를 포함 하 여 백그라운드 작업 클래스를 이미 만든 것으로 가정 합니다. 백그라운드 작업 구축을 빠르게 시작하려면 [ 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md) 또는 [ 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)을 참조하세요. 조건 및 트리거에 대한 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)을 참조하세요.
 
-이 항목은 In-process 백그라운드 작업에도 적용할 수 있습니다. 대신 합니다 **실행할** 메서드를 대체 **OnBackgroundActivated**합니다. In-process 백그라운드 작업은 백그라운드 작업이 포그라운드 앱과 같은 프로세스에서 실행되므로 앱 상태를 사용하여 취소 통신이 가능하기 때문에 취소 신호를 보내기 위해 영구적 저장소를 사용할 필요가 없습니다.
+이 항목은 In-process 백그라운드 작업에도 적용할 수 있습니다. 그러나 **Run** 메서드 대신 **OnBackgroundActivated**를 대체 합니다. In-process 백그라운드 작업은 백그라운드 작업이 포그라운드 앱과 같은 프로세스에서 실행되므로 앱 상태를 사용하여 취소 통신이 가능하기 때문에 취소 신호를 보내기 위해 영구적 저장소를 사용할 필요가 없습니다.
 
 ## <a name="use-the-oncanceled-method-to-recognize-cancellation-requests"></a>OnCanceled 메서드를 사용하여 취소 요청 인식
 
 취소 이벤트를 처리하는 메서드를 씁니다.
 
 > [!NOTE]
-> 데스크톱을 제외한 모든 디바이스 패밀리의 경우 장치의 메모리가 부족해지면 백그라운드 작업이 종료될 수 있습니다. 메모리 부족 예외가 노출 하지 않습니다 또는 앱에서 처리 하지 않는 경우 다음 백그라운드 작업이 종료 됩니다 OnCanceled 이벤트가 발생 하지 않고 경고 없이 합니다. 이는 포그라운드에서 앱의 사용자 환경을 확인하는 데 도움이 됩니다. 백그라운드 작업은 이 시나리오를 처리하도록 설계되어야 합니다.
+> 데스크톱을 제외한 모든 디바이스 패밀리의 경우 장치의 메모리가 부족해지면 백그라운드 작업이 종료될 수 있습니다. 메모리 부족 예외가 표시 되지 않거나 앱에서 처리 하지 않는 경우 백그라운드 작업은 경고 없이 종료 되 고 OnCanceled 이벤트를 발생 시 키 지 않습니다. 이는 포그라운드에서 앱의 사용자 환경을 확인하는 데 도움이 됩니다. 백그라운드 작업은 이 시나리오를 처리하도록 설계되어야 합니다.
 
 다음과 같이 **OnCanceled**라는 메서드를 만듭니다. 이 메서드는 백그라운드 작업에 대한 취소 요청이 생성될 때 Windows 런타임에서 호출되는 진입점입니다.
 
@@ -67,7 +67,7 @@ void ExampleBackgroundTask::OnCanceled(
 }
 ```
 
-라는 플래그 변수 추가  **\_CancelRequested** 백그라운드 작업 클래스에 있습니다. 이 변수는 취소가 요청된 시점을 나타내는 데 사용됩니다.
+백그라운드 작업 클래스에 **CancelRequested\_** 이라는 플래그 변수를 추가 합니다. 이 변수는 취소가 요청된 시점을 나타내는 데 사용됩니다.
 
 ```csharp
 volatile bool _CancelRequested = false;
@@ -83,9 +83,9 @@ private:
     volatile bool CancelRequested;
 ```
 
-에 **OnCanceled** 플래그 변수를 설정 하는 1 단계에서 만든 메서드에  **\_CancelRequested** 에 **true**합니다.
+1 단계에서 만든 **Oncanceled** 메서드에서 플래그 변수 **\_cancelrequested** 됨을 **true**로 설정 합니다.
 
-전체 [백그라운드 작업 샘플]( https://go.microsoft.com/fwlink/p/?linkid=227509) **OnCanceled** 메서드 집합  **\_CancelRequested** 하 **true** 쓰고 유용할 수 있는 디버그 출력입니다.
+전체 [백그라운드 작업 샘플]( https://go.microsoft.com/fwlink/p/?linkid=227509) **oncanceled** 메서드는 **\_cancelrequested** 을 **true** 로 설정 하 고 잠재적으로 유용한 디버그 출력을 기록 합니다.
 
 ```csharp
 private void OnCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
@@ -115,7 +115,7 @@ void ExampleBackgroundTask::OnCanceled(IBackgroundTaskInstance^ taskInstance, Ba
 }
 ```
 
-백그라운드 태스크에서 **실행** 메서드를 등록 합니다 **OnCanceled** 작업을 시작 하기 전에 이벤트 처리기 메서드. In-process 백그라운드 작업에서 응용 프로그램 초기화의 일부로 이 등록을 수행할 수 있습니다. 예를 들어, 다음 코드 줄을 사용 합니다.
+백그라운드 작업의 **Run** 메서드에서 작업을 시작 하기 전에 **oncanceled** 이벤트 처리기 메서드를 등록 합니다. In-process 백그라운드 작업에서 응용 프로그램 초기화의 일부로 이 등록을 수행할 수 있습니다. 예를 들어 다음 코드 줄을 사용 합니다.
 
 ```csharp
 taskInstance.Canceled += new BackgroundTaskCanceledEventHandler(OnCanceled);
@@ -131,11 +131,11 @@ taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &Exam
 
 ## <a name="handle-cancellation-by-exiting-your-background-task"></a>백그라운드 작업을 종료하여 취소 처리
 
-메서드는 백그라운드 작업 하는 작업을 중지 하 고 시기를 인식 하 여 종료 해야 취소 요청을 받으면  **\_cancelRequested** 로 설정 되어 **true**합니다. 프로세스에서 백그라운드 작업에 대 한이 의미에서 반환 된 **OnBackgroundActivated** 메서드. Out-of-process-백그라운드 작업에 대 한이 의미에서 반환 된 **실행** 메서드.
+취소 요청을 받으면 백그라운드 작업을 수행 하는 메서드가 작업을 중지 하 고 **cancelrequested\_** **true**로 설정 된 경우를 인식 하 여 종료 해야 합니다. In-process 백그라운드 작업의 경우이는 **OnBackgroundActivated** 메서드에서 반환 하는 것을 의미 합니다. Out-of-process 백그라운드 작업의 경우이는 **Run** 메서드에서 반환 하는 것을 의미 합니다.
 
-작업 중인 동안 플래그 변수를 확인하도록 백그라운드 작업 클래스 코드를 수정합니다. 하는 경우  **\_cancelRequested** true이 고, 중지 작업을 계속할 수 없습니다 설정 됩니다.
+작업 중인 동안 플래그 변수를 확인하도록 백그라운드 작업 클래스 코드를 수정합니다. **\_cancelRequested** 됨이 true로 설정 되 면 작업을 계속 진행 합니다.
 
-합니다 [백그라운드 태스크 예제](https://go.microsoft.com/fwlink/p/?LinkId=618666) 백그라운드 작업이 취소 되 면 주기적 타이머 콜백이 중지 하는 확인란이 포함 됩니다.
+백그라운드 작업 [샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask) 에는 백그라운드 작업이 취소 되는 경우 정기 타이머 콜백을 중지 하는 검사가 포함 되어 있습니다.
 
 ```csharp
 if ((_cancelRequested == false) && (_progress < 100))
@@ -177,11 +177,11 @@ else
 ```
 
 > [!NOTE]
-> 사용 하 여 위에 표시 된 코드 샘플은 [ **IBackgroundTaskInstance**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance).[ **진행률** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.progress) 백그라운드 작업 진행률을 기록 하는 데 사용 되는 속성입니다. [  **BackgroundTaskProgressEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs) 클래스를 사용하여 진행률이 앱에 다시 보고됩니다.
+> 위에 표시 된 코드 샘플에서는 [**IBackgroundTaskInstance**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)를 사용 합니다. 백그라운드 작업 진행률을 기록 하는 데 사용 되는 [**진행률**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.progress) 속성입니다. [  **BackgroundTaskProgressEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs) 클래스를 사용하여 진행률이 앱에 다시 보고됩니다.
 
-수정 된 **실행** 작업 완료 또는 취소 된 기록 메서드 후 작업을 중지 합니다. 백그라운드 작업이 취소되면 프로세스 간에 통신할 방법이 필요하므로 이 단계는 Out-of-process 백그라운드 작업에 적용됩니다. In-process 백그라운드 작업에서는 단순하게 응용 프로그램과 상태를 공유하여 작업이 취소되었음을 나타낼 수 있습니다.
+작업을 중지 한 후 작업이 완료 되었는지 또는 취소 되었는지 기록 하도록 **Run** 메서드를 수정 합니다. 백그라운드 작업이 취소되면 프로세스 간에 통신할 방법이 필요하므로 이 단계는 Out-of-process 백그라운드 작업에 적용됩니다. In-process 백그라운드 작업에서는 단순하게 응용 프로그램과 상태를 공유하여 작업이 취소되었음을 나타낼 수 있습니다.
 
-합니다 [백그라운드 태스크 예제](https://go.microsoft.com/fwlink/p/?LinkId=618666) LocalSettings의 상태를 기록 합니다.
+[백그라운드 작업 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask) 은 LocalSettings의 상태를 기록 합니다.
 
 ```csharp
 if ((_cancelRequested == false) && (_progress < 100))
@@ -255,13 +255,13 @@ else
 
 ## <a name="remarks"></a>설명
 
-[백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)을 다운로드하여 메서드 컨텍스트에서 이러한 코드 예제를 확인할 수 있습니다.
+[백그라운드 작업 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask)을 다운로드하여 메서드 컨텍스트에서 이러한 코드 예제를 확인할 수 있습니다.
 
-설명 목적으로 샘플 코드에서는 부분만 합니다 **실행** 메서드 (및 콜백 타이머)에서 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666)합니다.
+설명 목적으로 샘플 코드는 [백그라운드 작업 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask)에서 **Run** 메서드 (및 콜백 타이머)의 일부만 표시 합니다.
 
 ## <a name="run-method-example"></a>Run 메서드 예
 
-전체 **실행할** 메서드와 타이머 콜백 코드에서 합니다 [백그라운드 작업 샘플](https://go.microsoft.com/fwlink/p/?LinkId=618666) 컨텍스트에 대 한 아래에 표시 됩니다.
+[백그라운드 작업 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask) 에서 전체 **실행** 메서드 및 타이머 콜백 코드는 컨텍스트에 대해 아래와 같이 표시 됩니다.
 
 ```csharp
 // The Run method is the entry point of a background task.
@@ -414,4 +414,4 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 - [백그라운드 작업의 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
 - [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
 - [백그라운드 작업 디버그](debug-a-background-task.md)
-- [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 UWP 앱에는 이벤트 (디버깅) 하는 경우](https://go.microsoft.com/fwlink/p/?linkid=254345)
+- [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)

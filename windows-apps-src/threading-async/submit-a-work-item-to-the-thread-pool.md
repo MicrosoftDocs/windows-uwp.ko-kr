@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 스레드, 스레드 풀
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ff0eca18eeab72dbf0a2f9a539e452a5923392d
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: d3dcd162e0a139328ef5885ac26edec04a279134
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322022"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259802"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>스레드 풀에 작업 항목 제출
 
-\[ Windows 10의 UWP 앱을 업데이트합니다. Windows 8.x 아티클에 대 한 참조를 [보관](https://go.microsoft.com/fwlink/p/?linkid=619132) \]
+Windows 10에서 UWP 앱에 대 한 \[ 업데이트 되었습니다. Windows 8.x 문서의 경우 [보관](https://docs.microsoft.com/previous-versions/windows/apps/mt244353(v=win.10)?redirectedfrom=MSDN) 을 참조 하세요 \]
 
-<b>중요 한 Api</b>
+<b>중요 API</b>
 
 -   [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync)
 -   [**IAsyncAction**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)
@@ -31,7 +31,7 @@ ms.locfileid: "67322022"
 선택적으로 작업 항목의 우선 순위를 지정하고 다른 작업 항목과 동시에 실행할지 여부를 제어할 수 있도록 세 가지 버전의 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync)를 사용할 수 있습니다.
 
 >[!NOTE]
->사용 하 여 [ **CoreDispatcher.RunAsync** ](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) UI 스레드에 액세스 하 여 작업 항목에서 진행률을 표시 합니다.
+>[**CoreDispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 를 사용 하 여 UI 스레드에 액세스 하 고 작업 항목에서 진행률을 표시 합니다.
 
 다음 예제에서는 작업 항목을 만들고 작업을 수행할 람다를 제공합니다.
 
@@ -350,7 +350,7 @@ asyncAction.Completed = new AsyncActionCompletedHandler(
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
-이 빠른 시작에서 코드를 다운로드 하 여 자세히 알아볼 수 있습니다 합니다 [ThreadPool 작업 샘플 항목을 만드는](https://go.microsoft.com/fwlink/p/?LinkID=328569) 다시는 win에서 소스 코드를 사용 하 여 Windows 8.1 용으로 작성 된\_unap Windows 10 앱.
+Windows 8.1 용으로 작성 된 [ThreadPool 작업 항목 만들기 샘플](https://code.msdn.microsoft.com/windowsapps/Creating-a-ThreadPool-work-9665cdff) 에서이 빠른 시작의 코드를 다운로드 하 고 win\_Unap Windows 10 앱에서 소스 코드를 다시 사용 하 여 자세한 내용을 알아볼 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 

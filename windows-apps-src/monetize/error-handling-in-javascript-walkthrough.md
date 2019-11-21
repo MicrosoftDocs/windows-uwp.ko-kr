@@ -6,18 +6,18 @@ ms.date: 05/11/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 오류 처리, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: df33dc84823d5bcdc02d892820967b74ff0e5f65
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 9b68979bfa6b1f661ca7765ebc2598b201f013e2
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645908"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260297"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>JavaScript에서 오류 처리 연습
 
 이 연습에서는 JavaScript 앱에서 광고 관련 오류를 검색하는 방법을 보여 줍니다. 이 연습은 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol)을 사용하여 배너를 표시하는 것을 안내하지만 일반적인 개념은 중간 광고 및 기본 광고에도 적용됩니다.
 
-이러한 예제에서는 **AdControl**이 포함된 JavaScript 앱이 있다고 가정합니다. 앱에 **AdControl**을 추가하는 방법을 보여 주는 단계별 지침은 [HTML 5 및 Javascript의 AdControl](adcontrol-in-html-5-and-javascript.md)을 참조하세요. JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](https://aka.ms/githubads)을 참조하세요.
+이러한 예제에서는 **AdControl**이 포함된 JavaScript 앱이 있다고 가정합니다. 앱에 **AdControl**을 추가하는 방법을 보여 주는 단계별 지침은 [HTML 5 및 Javascript의 AdControl](adcontrol-in-html-5-and-javascript.md)을 참조하세요. JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)을 참조하세요.
 
 1.  default.html 파일에서 **AdControl**의 **div**에서 **data-win-options**를 정의하는 경우 **onErrorOccurred**에 대한 값을 추가합니다. default.html 파일에서 다음 코드를 찾습니다.
     ``` HTML
@@ -66,4 +66,4 @@ ms.locfileid: "57645908"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [GitHub의 광고 샘플](https://aka.ms/githubads)
+* [GitHub의 광고 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)
