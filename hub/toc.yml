@@ -1,7 +1,7 @@
 - name: Windows용 앱 빌드
   items:
     - name: 개요
-      href: apps/index.md
+      href: apps/index.yml
     - name: 데스크톱 앱 빌드
       items:
         - name: 개요
