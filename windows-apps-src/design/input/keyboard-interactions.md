@@ -28,9 +28,9 @@ ms.locfileid: "74258355"
 
 ![키보드 및 게임 패드 이미지](images/keyboard/keyboard-gamepad.jpg)
 
-***Common interaction patterns are shared between keyboard and gamepad***
+***일반적인 상호 작용 패턴은 키보드와 게임 패드 간에 공유 됩니다.***
 
-이 항목에서는 PC의 키보드 입력에 대한 UWP 앱 디자인을 중점적으로 살펴보겠습니다. However, a well-designed keyboard experience is important for supporting accessibility tools such as Windows Narrator, using [software keyboards](#software-keyboard) such as the touch keyboard and the On-Screen Keyboard (OSK), and for handling other input device types, such as the Xbox gamepad and remote control.
+이 항목에서는 PC의 키보드 입력에 대한 UWP 앱 디자인을 중점적으로 살펴보겠습니다. 그러나 Windows 내레이터와 같은 내게 필요한 옵션 도구를 지원 하 고, 터치 키보드 및 화상 키보드 (OSK)와 같은 [소프트웨어 키보드](#software-keyboard) 를 사용 하 고, Xbox 게임 및 원격 제어와 같은 기타 입력 장치 유형을 처리 하는 데에는 잘 디자인 된 키보드 환경이 중요 합니다.
 
 [포커스 화면 효과](#focus-visuals), [선택키](#access-keys), [UI 탐색](#navigation)을 포함하여 여기서 다루는 여러 지침과 권장 사항은 다른 시나리오에도 적용할 수 있습니다.
 
@@ -44,20 +44,20 @@ ms.locfileid: "74258355"
 
 ![키보드와 전화 이미지](images/keyboard/keyboard-phone.jpg)
 
-***UWP supports keyboard with any device***
+***UWP는 모든 장치에서 키보드 지원***
 
 ## <a name="basic-experiences"></a>기본 환경
 ![포커스 기반 디바이스](images/keyboard/focus-based-devices.jpg)
 
 앞서 언급했듯이, Xbox 게임 패드 및 리모컨 같은 입력 디바이스와 내레이터 같은 접근성 도구는 탐색과 명령에 사용되는 키보드 입력 환경의 상당 부분을 공유합니다. 이처럼 여러 입력 유형 및 도구에서 공통 환경을 공유하기 때문에 추가 작업이 최소화되고 유니버설 Windows 플랫폼의 "한 번 빌드하여 어디서나 실행" 목표에도 부합합니다.
 
-Where necessary, we'll identify key differences you should be aware of and describe any mitigations you should consider.
+필요한 경우 알아두어야 하는 주요 차이점을 확인 하 고 고려해 야 할 모든 완화 방법을 설명 합니다.
 
 다음은 이 항목에서 다룰 디바이스와 도구입니다.
 
 | 디바이스/도구                       | 설명     |
 |-----------------------------------|-----------------|
-|키보드(하드웨어 및 소프트웨어)   |In addition to the standard hardware keyboard, UWP applications support two software keyboards: the [touch (or software) keyboard](#software-keyboard) and the [On-Screen Keyboard](#on-screen-keyboard).|
+|키보드(하드웨어 및 소프트웨어)   |UWP 응용 프로그램은 표준 하드웨어 키보드 외에도 [터치 (또는 소프트웨어) 키보드](#software-keyboard) 와 [화상 키보드](#on-screen-keyboard)라는 두 가지 소프트웨어 키보드를 지원 합니다.|
 |게임 패드 및 리모컨         |Xbox 게임 패드 및 리모컨은 [3m 환경](../devices/designing-for-tv.md)의 핵심 입력 디바이스입니다. UWP의 게임 패드 및 리모컨 지원에 대한 자세한 내용은 [게임 패드 및 리모컨 조작](gamepad-and-remote-interactions.md)을 참조하세요.|
 |화면 읽기 프로그램(내레이터)          |내레이터는 고유한 조작 환경과 기능을 제공하는 Windows의 기본 화면 읽기 프로그램이지만 여전히 기본 키보드 탐색 및 입력을 사용합니다. 내레이터에 대한 자세한 내용은 [내레이터 시작](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)을 참조하세요.|
 
@@ -69,12 +69,12 @@ Where necessary, we'll identify key differences you should be aware of and descr
     - "내부 탐색"에 화살표 키 탐색 제공([탐색](#navigation) 참조)
 - 키보드 바로 가기 지원
     - 바로 가기를 위한 바로 가기 키 제공([바로 가기](#accelerators) 참조)
-    - Provide access keys to navigate your application's UI (see [Access keys](access-keys.md))
+    - 응용 프로그램의 UI를 탐색 하기 위한 액세스 키 제공 ( [액세스 키](access-keys.md)참조)
 
-### <a name="focus-visuals"></a>Focus visuals
+### <a name="focus-visuals"></a>시각적 개체 포커스
 
 UWP는 모든 입력 유형과 환경에서 원활하게 작동하는 하나의 포커스 화면 효과 디자인을 지원합니다.
-![Focus visual](images/keyboard/focus-visual.png)
+포커스 시각적 개체 ![](images/keyboard/focus-visual.png)
 
 포커스 화면 효과의 특징:
 
@@ -87,29 +87,29 @@ UWP는 모든 입력 유형과 환경에서 원활하게 작동하는 하나의 
 
 ### <a name="tab-stops"></a>탭 정지
 
-키보드에서 컨트롤(탐색 요소 포함)을 사용하려면 컨트롤에 포커스가 있어야 합니다. One way for a control to receive keyboard focus is to make it accessible through tab navigation by identifying it as a tab stop in your application's tab order.
+키보드에서 컨트롤(탐색 요소 포함)을 사용하려면 컨트롤에 포커스가 있어야 합니다. 컨트롤에서 키보드 포커스를 수신 하는 한 가지 방법은 응용 프로그램의 탭 순서에서 탭 정지로 식별 하 여 탭 탐색을 통해 액세스할 수 있도록 하는 것입니다.
 
-For a control to be included in the tab order, the [IsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_IsEnabled) property must be set to **true** and the [IsTabStop](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) property must be set to **true**.
+탭 순서에 컨트롤을 포함 하려면 [IsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_IsEnabled) 속성을 **true** 로 설정 하 고 [istabstop](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) 속성을 **true**로 설정 해야 합니다.
 
-To specifically exclude a control from the tab order, set the [IsTabStop](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) property to **false**.
+탭 순서에서 컨트롤을 구체적으로 제외 하려면 [Istabstop](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) 속성을 **false**로 설정 합니다.
 
 기본적으로 탭 순서는 UI 요소가 생성된 순서를 반영합니다. 예를 들어 `StackPanel`에 `Button`, `Checkbox` 및 `TextBox`가 포함된 경우 탭 순서는 `Button`, `Checkbox`, `TextBox`입니다.
 
-You can override the default tab order by setting the [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) property.
+[TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) 속성을 설정 하 여 기본 탭 순서를 재정의할 수 있습니다.
 
 #### <a name="tab-order-should-be-logical-and-predictable"></a>탭 순서는 논리적이고 예측 가능해야 함
 
 논리적이고 예측 가능한 탭 순서를 사용하여 키보드 탐색 모델을 적절하게 디자인하면 앱의 직관성이 향상되고 사용자가 좀 더 효율적으로 기능을 탐색, 검색 및 액세스할 수 있습니다.
 
-All interactive controls should have tab stops (unless they are in a [group](#control-group)), while non-interactive controls, such as labels, should not.
+모든 대화형 컨트롤은 [그룹](#control-group)에 있는 경우를 제외 하 고 탭 정지를 가져야 하지만 레이블과 같은 비 대화형 컨트롤은 그렇지 않아야 합니다.
 
 포커스가 응용 프로그램 내에서 무질서하게 이동하도록 사용자 지정 탭 순서를 지정하면 안 됩니다. 예를 들어 양식의 컨트롤 목록은 탭 순서가 위에서 아래로, 왼쪽에서 오른쪽으로 흘러야 합니다(로캘에 따라 다름).
 
-See [Keyboard accessibility](../accessibility/keyboard-accessibility.md) for more details about customizing tab stops.
+탭 정지 사용자 지정에 대 한 자세한 내용은 [키보드 접근성](../accessibility/keyboard-accessibility.md) 을 참조 하세요.
 
 #### <a name="try-to-coordinate-tab-order-and-visual-order"></a>탭 정지 및 시각적 순서를 조정
 
-Coordinating tab order and visual order (also referred to as reading order or display order) helps reduce confusion for users as they navigate through your application's UI.
+탭 순서 및 시각적 순서 (읽기 순서 또는 표시 순서 라고도 함)를 조정 하면 사용자가 응용 프로그램의 UI를 탐색할 때 혼동을 줄일 수 있습니다.
 
 명령, 컨트롤 및 콘텐츠의 순위를 정하고 탭 순서와 시각적 순서에서 가장 중요한 항목을 맨 처음에 제공하도록 노력합니다. 그러나 실제 표시 위치는 부모 레이아웃 컨테이너 및 레이아웃에 영향을 주는 자식 요소의 특정 속성에 따라 달라질 수 있습니다. 특히, 그리드 메타포 또는 테이블 메타포를 사용하는 레이아웃은 시각적 순서가 탭 순서와 상당히 다를 수 있습니다.
 
@@ -117,9 +117,9 @@ Coordinating tab order and visual order (also referred to as reading order or di
 
 ### <a name="initial-focus"></a>초기 포커스
 
-초기 포커스는 응용 프로그램 또는 페이지가 처음으로 시작되거나 활성화될 때 UI 요소에서 받는 포커스를 지정합니다. When using a keyboard, it is from this element that a user starts interacting with your application's UI.
+초기 포커스는 응용 프로그램 또는 페이지가 처음으로 시작되거나 활성화될 때 UI 요소에서 받는 포커스를 지정합니다. 키보드를 사용 하는 경우이 요소에서 사용자가 응용 프로그램의 UI와 상호 작용 하기 시작 합니다.
 
-For UWP apps, initial focus is set to the element with the highest [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) that can receive focus. 컨테이너 컨트롤의 자식 요소는 무시됩니다. 타일에서는 시각적 트리의 첫 번째 요소가 포커스를 받습니다.
+UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높은 [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) 가 있는 요소로 설정 됩니다. 컨테이너 컨트롤의 자식 요소는 무시됩니다. 타일에서는 시각적 트리의 첫 번째 요소가 포커스를 받습니다.
 
 #### <a name="set-initial-focus-on-the-most-logical-element"></a>가장 논리적인 요소에 초기 포커스 설정
 
@@ -127,11 +127,11 @@ For UWP apps, initial focus is set to the element with the highest [TabIndex](ht
 -   갤러리의 첫 번째 항목에 포커스가 설정되는 사진 앱
 -   재생 단추에 포커스가 설정되는 음악 앱
 
-#### <a name="dont-set-initial-focus-on-an-element-that-exposes-a-potentially-negative-or-even-disastrous-outcome"></a>Don't set initial focus on an element that exposes a potentially negative, or even disastrous, outcome
+#### <a name="dont-set-initial-focus-on-an-element-that-exposes-a-potentially-negative-or-even-disastrous-outcome"></a>잠재적으로 부정적인 결과 또는 치명적인 결과를 노출 하는 요소에 초기 포커스를 설정 하지 마세요.
 
-This level of functionality should be a user's choice. 중요한 결과가 포함된 요소에 초기 포커스를 설정하면 의도치 않은 데이터 손실이나 시스템 액세스로 이어질 수 있습니다. For example, don't set focus to the delete button when navigating to an e-mail.
+이 기능 수준은 사용자가 선택 해야 합니다. 중요한 결과가 포함된 요소에 초기 포커스를 설정하면 의도치 않은 데이터 손실이나 시스템 액세스로 이어질 수 있습니다. 예를 들어 전자 메일로 이동할 때 포커스를 삭제 단추로 설정 하지 마세요.
 
-See [Focus navigation](focus-navigation.md) for more details about overriding tab order.
+탭 순서를 재정의 하는 방법에 대 한 자세한 내용은 [포커스 탐색](focus-navigation.md) 을 참조 하세요.
 
 ### <a name="navigation"></a>탐색
 
@@ -143,28 +143,28 @@ See [Focus navigation](focus-navigation.md) for more details about overriding ta
 -   **Tab 키** - 탭 순서에 따라 실행 가능/활성 컨트롤을 탐색합니다.
 -   **Shift + Tab** - 탭 순서의 역방향으로 컨트롤을 탐색합니다. 사용자가 화살표 키를 사용하여 컨트롤 내부를 탐색한 경우 컨트롤 내부의 마지막으로 알려진 값에 포커스가 설정됩니다.
 -   **화살표 키** - 컨트롤 관련 "내부 탐색"을 노출합니다. 사용자가 "내부 탐색"을 입력하면 화살표 키가 컨트롤 외부를 탐색하지 않습니다. 예를 들면 다음과 같습니다.
-    -   Up/Down arrow key moves focus inside `ListView` and `MenuFlyout`
-    -   Modify currently selected values for `Slider` and `RatingsControl`
-    -   Move caret inside `TextBox`
-    -   Expand/collapse items inside `TreeView`
+    -   위쪽/아래쪽 화살표 키 `ListView` 내부에서 포커스를 이동 `MenuFlyout`
+    -   `Slider` 및 `RatingsControl`에 대해 현재 선택 되어 있는 값을 수정 합니다.
+    -   `TextBox` 내에서 캐럿 이동
+    -   `TreeView` 내에서 항목 확장/축소
 
-Use these default behaviors to optimize your application's keyboard navigation.
+이러한 기본 동작을 사용 하 여 응용 프로그램의 키보드 탐색을 최적화 합니다.
 
 #### <a name="use-inner-navigation-with-sets-of-related-controls"></a>관련 컨트롤 집합에 "내부 탐색" 사용
 
-Providing arrow key navigation into a set of related controls reinforces their relationship within the overall organization of your application's UI.
+응용 프로그램 UI의 전체 구성 내에서 관계를 강화 하는 일련의 관련 컨트롤에 화살표 키 탐색을 제공 합니다.
 
 예를 들어 여기에 표시된 `ContentDialog` 컨트롤은 기본적으로 가로 행 단추에 대한 내부 탐색을 제공합니다(사용자 지정 컨트롤에 대한 내용은 [컨트롤 그룹](#control-group) 섹션 참조).
 
 ![대화 상자 예제](images/keyboard/dialog.png)
 
-***Interaction with a collection of related buttons is made easier with arrow key navigation***
+***화살표 키 탐색을 사용 하 여 관련 단추 컬렉션과의 상호 작용을 쉽게 수행할 수 있습니다.***
 
 항목이 한 열에 표시되는 경우 위쪽/아래쪽 화살표 키가 항목을 탐색합니다. 항목이 한 행에 표시되는 경우 왼쪽/오른쪽 화살표 키가 항목을 탐색합니다. 항목이 여러 열인 경우 4개 화살표 키가 항목을 탐색합니다.
 
-#### <a name="define-a-single-tab-stop-for-a-collection-of-related-controls"></a>Define a single tab stop for a collection of related controls
+#### <a name="define-a-single-tab-stop-for-a-collection-of-related-controls"></a>관련 컨트롤의 컬렉션에 대 한 단일 탭 정지를 정의 합니다.
 
-By defining a single tab stop for a collection of related, or complementary, controls, you can minimize the number of overall tab stops in your app.
+관련 컨트롤 또는 보완 컨트롤의 컬렉션에 대해 단일 탭 정지를 정의 하면 앱에서 전체 탭 정지의 수를 최소화할 수 있습니다.
 
 예를 들어 다음 그림은 두 개의 누적된 `ListView`컨트롤을 보여 줍니다. 왼쪽 그림은 탭 정지와 함께 `ListView` 컨트롤을 탐색하는 데 사용된 화살표 키 탐색을 보여 주고, 오른쪽 이미지는 Tab 키로 부모 컨트롤을 트래버스할 필요성을 제거하여 자식 요소 간의 탐색을 좀 더 쉽고 효율적으로 하는 방법을 보여 줍니다.
 
@@ -174,7 +174,7 @@ By defining a single tab stop for a collection of related, or complementary, con
   <td><img src="images/keyboard/arrow-only.png" alt="arrow only" /></td>
 </table>
 
-***Interaction with two stacked ListView controls can be made easier and more efficient by eliminating the tab stop and navigating with just arrow keys.***
+***탭 정지를 제거 하 고 화살표 키를 사용 하 여 탐색 하 여 두 개의 누적 된 ListView 컨트롤과 상호 작용할 수 있습니다.***
 
 응용 프로그램 UI에 최적화 예제를 적용하는 방법을 알아보려면 [제어 그룹](#control-group) 섹션을 방문하세요.
 
@@ -235,30 +235,30 @@ Esc 키를 통해 사용자는 임시 UI(해당 UI에서 진행 중인 작업과
 
 ### <a name="keyboard-shortcuts"></a>바로 가기 키
 
-Keyboard shortcuts can make your app easier to use by providing both enhanced support for accessibility and improved efficiency for keyboard users.
+바로 가기 키를 사용 하면 내게 필요한 옵션에 대 한 향상 된 지원과 키보드 사용자의 효율성 향상을 모두 제공 하 여 앱을 더 쉽게 사용할 수 있습니다.
 
-In addition to supporting keyboard navigation and activation in your app, it is also good practice to provide shortcuts for your application's functionality. Tab navigation provides a good, basic level of keyboard support, but with more complex UI you might want to add support for shortcut keys as well. 
+앱에서 키보드 탐색 및 활성화를 지 원하는 것 외에도 응용 프로그램의 기능에 대 한 바로 가기를 제공 하는 것이 좋습니다. 탭 탐색 기능을 사용 하면 기본 제공 되는 기본 수준의 키보드 지원이 제공 되지만 보다 복잡 한 UI를 사용 하면 바로 가기 키에 대 한 지원도 추가할 수 있습니다. 
 
 바로 가기는 사용자가 앱 기능에 효율적으로 액세스할 수 있도록 하여 생산성을 향상하는 키보드 조합입니다. 다음과 같은 두 종류의 바로 가기가 있습니다.
--   [Accelerators](#accelerators) are shortcuts that invoke an app command. Your app may or may not provide specific UI that corresponds to the command. Accelerators typically consist of the Ctrl key plus a letter key.
--   [Access keys](#access-keys) are shortcuts that set focus to specific UI in your application. Access keys typicaly consist of the Alt key plus a letter key.
+-   [액셀러레이터](#accelerators) 는 응용 프로그램 명령을 호출 하는 바로 가기입니다. 앱은 명령에 해당 하는 특정 UI를 제공 하거나 제공 하지 않을 수 있습니다. 액셀러레이터 키는 일반적으로 Ctrl 키와 문자 키로 구성 됩니다.
+-   [액세스 키는](#access-keys) 응용 프로그램에서 특정 UI에 포커스를 설정 하는 바로 가기입니다. 액세스 키 typicaly는 Alt 키와 문자 키로 구성 됩니다.
 
-Providing consistent keyboard shortcuts that support similar tasks across applications makes them much more useful and powerful and helps users remember them.
+응용 프로그램 간에 유사한 작업을 지 원하는 일관 된 바로 가기 키를 제공 하면 훨씬 더 유용 하 고 강력 하며 사용자를 쉽게 기억할 수 있습니다.
 
 #### <a name="accelerators"></a>바로 연결
 
-Accelerators help users perform common actions in an application much more quickly and efficiently. 
+가속기를 통해 사용자는 응용 프로그램에서 일반적인 작업을 보다 빠르고 효율적으로 수행할 수 있습니다. 
 
 바로 가기의 예:
--   Pressing Ctrl + N key anywhere in the **Mail** app launches a new mail item.
--   Pressing Ctrl + E key anywhere in Microsoft Edge (and many Microsoft Store applications) launches search.
+-   **메일** 앱의 아무 곳에서 나 Ctrl + N 키를 누르면 새 메일 항목이 시작 됩니다.
+-   Microsoft Edge의 어디에서 나 Ctrl + E 키를 누르면 (그리고 많은 Microsoft Store 응용 프로그램) 검색을 시작 합니다.
 
 바로 가기의 특징은 다음과 같습니다.
--   They primarily use Ctrl and Function key sequences (Windows system shortcut keys also use Alt + non-alphanumeric keys and the Windows logo key).
+-   주로 Ctrl 및 함수 키 시퀀스를 사용 합니다. Windows 시스템 바로 가기 키는 Alt + 영숫자가 아닌 키와 Windows 로고 키도 사용 합니다.
 -   바로 가기 키는 가장 자주 사용하는 명령에만 할당됩니다.
 -   바로 가기 키는 기억해야 하며, 메뉴, 도구 설명 및 도움말에만 기록됩니다.
--   They have effect throughout the entire application, when supported.
--   They should be assigned consistently as they are memorized and not directly documented.
+-   이는 지원 될 때 전체 응용 프로그램 전체에 적용 됩니다.
+-   Memorized는 일관 되 게 문서화 되지 않고 일관 되 게 할당 되어야 합니다.
 
 #### <a name="access-keys"></a>선택키
 
@@ -266,25 +266,25 @@ UWP로 선택키를 지원하는 방법에 대한 자세한 내용은 [선택키
 
 선택키는 거동 장애가 있는 사용자가 한 번에 하나의 키를 눌러 UI의 특정 항목을 수행할 수 있게 도와줍니다. 뿐만 아니라 선택키를 추가 바로 가기 키와 통신하는 데 사용하면 고급 사용자가 신속하게 작업을 수행할 수 있습니다.
 
-선택키의 특징은 다음과 같습니다.
+선택키의 특성은 다음과 같습니다.
 -   선택키는 Alt 키와 영숫자 키를 사용합니다.
 -   선택키는 주로 접근성을 위한 기능입니다.
--   They are documented directly in the UI, adjacent to the control, through [Key Tips](access-keys.md).
+-   [핵심 팁](access-keys.md)을 통해 컨트롤에 인접 하 여 UI에 직접 설명 되어 있습니다.
 -   선택키는 현재 창에만 영향을 주며 해당 메뉴 항목이나 컨트롤로 이동합니다.
--   Access keys should be assigned consistently to commonly used commands (especially commit buttons), whenever possible.
+-   가능 하면 일반적으로 사용 되는 명령 (특히 커밋 단추)에 액세스 키를 일관 되 게 할당 해야 합니다.
 -   선택키는 지역화됩니다.
 
 #### <a name="common-keyboard-shortcuts"></a>일반적인 바로 가기 키
 
-The following table is a small sample of frequently used keyboard shortcuts. 
+다음 표는 자주 사용 되는 바로 가기 키의 작은 샘플입니다. 
 
 | 작업                               | 키 명령                                      |
 |--------------------------------------|--------------------------------------------------|
 | 모두 선택                           | Ctrl+A                                           |
 | 계속해서 선택                  | Shift+화살표 키                                  |
-| 저장                                 | Ctrl+S                                           |
-| 그런 다음                                 | Ctrl+F                                           |
-| 인쇄                                | Ctrl+P                                           |
+| Save                                 | Ctrl+S                                           |
+| 찾기                                 | Ctrl+F                                           |
+| Print                                | Ctrl+P                                           |
 | 복사                                 | Ctrl+C                                           |
 | 잘라내기                                  | Ctrl+X                                           |
 | 붙여넣기                                | Ctrl+V                                           |
@@ -293,47 +293,47 @@ The following table is a small sample of frequently used keyboard shortcuts.
 | 탭 닫기                            | Ctrl+F4 또는 Ctrl+W                                |
 | 시맨틱 줌                        | Ctrl++ 또는 Ctrl+-                                 |
 
-For a comprehensive list of Windows system shortcuts, see [keyboard shortcuts for Windows](https://support.microsoft.com/help/12445/windows-keyboard-shortcuts). For common application shortcuts, see [keyboard shortcuts for Microsoft applications](https://support.microsoft.com/help/13805/windows-keyboard-shortcuts-in-apps).
+Windows 시스템 바로 가기의 포괄적인 목록은 [windows 용 바로 가기 키](https://support.microsoft.com/help/12445/windows-keyboard-shortcuts)를 참조 하세요. 일반적인 응용 프로그램 바로 가기에 대 한 자세한 내용은 [Microsoft 응용 프로그램의 바로 가기 키](https://support.microsoft.com/help/13805/windows-keyboard-shortcuts-in-apps)를 참조 하세요.
 
 ## <a name="advanced-experiences"></a>고급 환경
 
 이 섹션에서는 앱을 다른 디바이스 및 다른 도구와 함께 사용할 때 알아야 하는 일부 동작과 함께, UWP 앱에서 지원되는 좀 더 복잡한 키보드 조작 환경 중 일부를 살펴보겠습니다.
 
-### <a name="control-group"></a>Control group
+### <a name="control-group"></a>컨트롤 그룹
 
 관련 컨트롤 또는 상호 보완적 컨트롤 집합을 "컨트롤 그룹"(또는 방향 영역)으로 그룹화할 수 있으며, 이렇게 하면 화살표 키를 사용하여 "내부 탐색"이 가능합니다. 컨트롤 그룹은 단일 탭 정지일 수도 있고, 개발자가 컨트롤 그룹 내에서 여러 탭 정지를 지정할 수도 있습니다.
 
 #### <a name="arrow-key-navigation"></a>화살표 키 탐색
 
 UI 영역에 서로 관련이 있는 비슷한 컨트롤 그룹이 있으면 사용자는 화살표 키 탐색이 지원될 것으로 기대합니다.
--   `AppBarButtons` in a `CommandBar`
--   `ListItems` or `GridItems` inside `ListView` or `GridView`
--   `Buttons` inside `ContentDialog`
+-   `CommandBar` `AppBarButtons`
+-   `ListView` 또는 `GridView` 내에서 `ListItems` 또는 `GridItems`
+-   `ContentDialog` 내부 `Buttons`
 
 UWP 컨트롤은 기본적으로 화살표 키 탐색을 지원합니다. 사용자 지정 레이아웃 및 컨트롤 그룹의 경우 `XYFocusKeyboardNavigation="Enabled"`를 사용하여 유사한 동작을 제공합니다.
 
-Consider adding support for arrow key navigation when using the following controls:
+다음 컨트롤을 사용할 때 화살표 키 탐색 지원을 추가 하는 것이 좋습니다.
 
 <table>
   <tr>
     <td>
       <p><img src="images/keyboard/dialog.png" alt="Dialog buttons"/></p>
-      <p><sup>Dialog buttons</sup></p>
+      <p><sup>대화 상자 단추</sup></p>
       <p><img src="images/keyboard/radiobutton.png" alt="Radio buttons"/></p>
-      <p><sup>RadioButtons</sup></p>     
+      <p><sup>라디오</sup></p>     
     </td>
     <td>
       <p><img src="images/keyboard/appbar.png" alt="AppBar buttons"/></p>
-      <p><sup>AppBarButtons</sup></p>
+      <p><sup>App바 단추</sup></p>
       <p><img src="images/keyboard/list-and-grid-items.png" alt="List and Grid items"/></p>
-      <p><sup>ListItems and GridItems</sup></p>
+      <p><sup>ListItems 및 GridItems</sup></p>
     </td>    
   </tr>
 </table>
 
 #### <a name="tab-stops"></a>탭 정지
 
-Depending on your application's functionality and layout, the best navigation option for a control group might be a single tab stop with arrow navigation to child elements, multiple tab stops, or some combination.
+응용 프로그램의 기능 및 레이아웃에 따라 컨트롤 그룹에 대 한 가장 적합 한 탐색 옵션은 자식 요소, 여러 탭 정지 또는 일부 조합에 대 한 화살표 탐색이 있는 단일 탭 정지 일 수 있습니다.
 
 ##### <a name="use-multiple-tab-stops-and-arrow-keys-for-buttons"></a>단추에 다중 탭 정지와 화살표 키 사용
 
@@ -347,7 +347,7 @@ Depending on your application's functionality and layout, the best navigation op
 
 예를 들면 다음과 같습니다.
 -   `RadioButtons`
--   Multiple `ListViews` that look like and behave like a single `ListView`
+-   처럼 보이지만 단일 `ListView` 처럼 동작 하는 여러 `ListViews`
 -   모양과 동작이 타일 그리드(예: 시작 메뉴 타일)와 비슷한 UI
 
 #### <a name="specifying-control-group-behavior"></a>컨트롤 그룹 동작 지정
@@ -377,17 +377,17 @@ UWP 키보드 동작과 내레이터에서 지원하는 동작의 차이점은 �
 
 ![자동 제안 키보드 포커스](images/keyboard/auto-suggest-keyboard.png)
 
-*With keyboard, users press the* ***Enter*** *key to submit search query*
+*키보드를 사용 하 여 사용자* 는 ***enter*** 키를 눌러 *검색 쿼리를 제출* 합니다.
 
 <table>
   <tr>
     <td>
       <p><img src="images/keyboard/auto-suggest-narrator-1.png" alt="autosuggest narrator focus"/></p>
-      <p><em>With Narrator, users press the <strong>Enter</strong> key to submit search query</em></p>
+      <p><em>내레이터를 사용 하 여 사용자는 <strong>enter</strong> 키를 눌러 검색 쿼리를 제출 합니다.</em></p>
     </td>
     <td>
       <p><img src="images/keyboard/auto-suggest-narrator-2.png" alt="autosuggest narrator focus on search"/></p>
-      <p><em>With Narrator, users are also able to access the search button using the <strong>Caps Lock + Right arrow key</strong>, then pressing <strong>Space</strong> key</em></p>
+      <p><em>내레이터를 사용 하면 사용자는 <strong>Caps lock + Right 화살표 키</strong>를 사용 하 여 검색 단추에 액세스 한 다음 <strong>Space</strong> 키를 누를 수도 있습니다.</em></p>
     </td>
   </tr>
 </table>
@@ -396,15 +396,15 @@ UWP 키보드 동작과 내레이터에서 지원하는 동작의 차이점은 �
 
 Xbox 게임 패드 및 리모컨은 여러 UWP 키보드 동작과 환경을 지원합니다. 그러나 키보드에서 사용할 수 있는 다양한 키 옵션이 부족하기 때문에 게임 패드 및 리모컨은 여러 키보드 최적화가 부족합니다(리모컨이 게임 패드보다 훨씬 제한적).
 
-See [Gamepad and remote control interactions](gamepad-and-remote-interactions.md) for more detail on UWP support for gamepad and remote control input.
+게임 패드 및 원격 제어 입력에 대 한 UWP 지원에 대 한 자세한 내용은 [게임 패드 및 원격 제어 상호 작용](gamepad-and-remote-interactions.md) 을 참조 하세요.
 
 다음은 키보드, 게임 패드 및 리모컨 사이의 몇 가지 키 매핑을 보여 줍니다.
 
-| **키보드**  | **게임 패드**                         | **Remote control**  |
+| **키보드**  | **게임 패드**                         | **원격 제어**  |
 |---------------|-------------------------------------|---------------------|
-| Space         | A 단추                            | 선택 단추       |
-| Enter         | A 단추                            | 선택 단추       |
-| Escape        | B 단추                            | 뒤로 단추         |
+| Space         | A 버튼                            | 선택 단추       |
+| Enter         | A 버튼                            | 선택 단추       |
+| 이스케이프        | B 버튼                            | 뒤로 단추         |
 | Home/End      | 해당 없음                                 | 해당 없음                 |
 | Page Up/Down  | 세로 방향 스크롤을 위한 트리거 단추, 가로 방향 스크롤을 위한 범퍼 단추   | 해당 없음                 |
 
@@ -417,11 +417,11 @@ See [Gamepad and remote control interactions](gamepad-and-remote-interactions.md
 
     **참고** 게임 패드 및 리모컨은 방향 키를 누를 때와 시각적 순서가 동일한 항목만 탐색합니다. 포커스를 받을 수 있는 후속 요소가 없는 경우 해당 방향으로 탐색을 사용할 수 없습니다. 상황에 따라 키보드 사용자에게 항상 이 제한이 적용되는 것은 아닙니다. 자세한 내용은 [기본 키보드 최적화](#built-in-keyboard-optimization) 섹션을 참조하세요.
 
-#### <a name="directional-navigation"></a>Directional navigation
+#### <a name="directional-navigation"></a>방향 탐색
 
 방향 탐색은 눌린 방향 키(화살표 키, D 패드)를 가져와서 해당 시각적 방향으로 포커스를 이동하려고 시도하는 UWP [포커스 관리자](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.FocusManager) 도우미 클래스를 통해 관리됩니다.
 
-Unlike the keyboard, when an app opts out of [Mouse Mode](gamepad-and-remote-interactions.md#mouse-mode), directional navigation is applied across the entire application for gamepad and remote control. See [Gamepad and remote control interactions](gamepad-and-remote-interactions.md) for more detail on directional navigation optimization.
+키보드와는 달리, 앱이 [마우스 모드](gamepad-and-remote-interactions.md#mouse-mode)에서 opts 면 전체 응용 프로그램에 대 한 방향성 탐색이 게임 패드 및 원격 제어에 적용 됩니다. 방향성 탐색 최적화에 대 한 자세한 내용은 [게임 패드 및 원격 제어 상호 작용](gamepad-and-remote-interactions.md) 을 참조 하세요.
 
 **참고** 키보드 Tab 키를 사용한 탐색은 방향 탐색으로 간주되지 않습니다. 자세한 내용은 [탭 정지](#tab-stops) 섹션을 참조하세요.
 
@@ -429,16 +429,16 @@ Unlike the keyboard, when an app opts out of [Mouse Mode](gamepad-and-remote-int
   <tr>
     <td>
       <p><img src="images/keyboard/directional-navigation.png" alt="directional navigation"/></p>
-      <p><em><strong>Directional navigation supported</strong></br>Using directional keys (keyboard arrows, gamepad and remote control D-pad), user can navigate between different controls.</em></p>
+      <p><em><strong>방향성 탐색 지원</strong></br>사용자는 방향 키 (키보드 화살표, 게임 패드 및 원격 제어)를 사용 하 여 여러 컨트롤 간에 이동할 수 있습니다.</em></p>
     </td>
     <td>
       <p><img src="images/keyboard/no-directional-navigation.png" alt="no directional navigation"/></p>
-      <p><em><strong>Directional navigation not supported</strong> </br>사용자가 방향 키를 사용하여 여러 컨트롤을 탐색할 수 없습니다. Other methods of navigating between controls (tab key) are not impacted.</em></p>
+      <p><em><strong>방향성 탐색은 지원 되지 않습니다</strong> </br>사용자가 방향 키를 사용하여 여러 컨트롤을 탐색할 수 없습니다. 컨트롤 (tab 키) 사이를 탐색 하는 다른 방법은 영향을 받지 않습니다.</em></p>
     </td>
   </tr>
 </table>
 
-### <a name="built-in-keyboard-optimization"></a>Built in keyboard optimization
+### <a name="built-in-keyboard-optimization"></a>기본 제공 키보드 최적화
 
 사용되는 레이아웃과 컨트롤에 따라 UWP 앱을 특별히 키보드 입력에 맞게 최적화할 수 있습니다.
 
@@ -446,15 +446,15 @@ Unlike the keyboard, when an app opts out of [Mouse Mode](gamepad-and-remote-int
 
 ![단일 열 화살표 키 탐색](images/keyboard/single-column-arrow.png)
 
-***Single Column Arrow Key Navigation***
+***단일 열 화살표 키 탐색***
 
 ![단일 행 화살표 키 탐색](images/keyboard/single-row-arrow.png)
 
-***Single Row Arrow Key Navigation***
+***단일 행 화살표 키 탐색***
 
 ![다중 열 및 행 화살표 키 탐색](images/keyboard/multiple-column-and-row-navigation.png)
 
-***Multiple Column/Row Arrow Key Navigation***
+***여러 열/행 화살표 키 탐색***
 
 #### <a name="wrapping-homogeneous-list-and-grid-view-items"></a>동종 목록 및 그리드 보기 항목 래핑
 
@@ -472,58 +472,58 @@ Unlike the keyboard, when an app opts out of [Mouse Mode](gamepad-and-remote-int
   <tr>
     <td>
       <p><img src="images/keyboard/row-major-keyboard.png" alt="row major keyboard navigation"/></p>
-      <p><em>Row major keyboard navigation</em></p>
+      <p><em>행 주요 키보드 탐색</em></p>
     </td>
     <td>
       <p><img src="images/keyboard/column-major-keyboard.png" alt="column major keyboard navigation"/></p>
-      <p><em>Column major keyboard navigation</em></p>
+      <p><em>열 주요 키보드 탐색</em></p>
     </td>
   </tr>
 </table>
 
 #### <a name="popup-ui"></a>Popup UI
 
-As mentioned, you should try to ensure directional navigation corresponds to the visual order of the controls in your application's UI.
+앞서 언급 했 듯이 방향 탐색을 응용 프로그램 UI에 있는 컨트롤의 시각적 순서와 일치 하는지 확인 해야 합니다.
 
-Some controls (such as the context menu, CommandBar overflow menu, and AutoSuggest menu) display a menu popup in a location and direction (downwards by default) relative to the primary control and available screen space. Note that the opening direction can be affected by a variety of factors at run time.
+상황에 맞는 메뉴, 명령 모음 오버플로 메뉴, AutoSuggest 메뉴 등의 일부 컨트롤에는 기본 컨트롤 및 사용 가능한 화면 공간에 상대적인 위치 및 방향 (기본적으로 아래쪽)에 메뉴 팝업이 표시 됩니다. 열기 방향은 런타임에 다양 한 요인에 의해 영향을 받을 수 있습니다.
 
 <table>
   <td><img src="images/keyboard/command-bar-open-down.png" alt="command bar opens down with down arrow key" /></td>
   <td><img src="images/keyboard/command-bar-open-up.png" alt="command bar opens up with down arrow key" /></td>
 </table>
 
-For these controls, when the menu is first opened (and no item has been selected by the user), the Down arrow key always sets focus to the first item while the Up arrow key always sets focus to the last item on the menu. 
+이러한 컨트롤의 경우 메뉴가 처음 열릴 때 (사용자가 항목을 선택 하지 않은 경우) 아래쪽 화살표 키를 누르면 항상 첫 번째 항목으로 포커스를 설정 하는 반면 위쪽 화살표 키는 항상 메뉴의 마지막 항목으로 포커스를 설정 합니다. 
 
-If the last item has focus and the Down arrow key is pressed, focus moves to the first item on the menu. Similarly, if the first item has focus and the Up arrow key is pressed, focus moves to the last item on the menu. This behavior is referred to as *cycling* and is useful for navigating popup menus that can open in unpredictable directions.
+마지막 항목에 포커스가 있고 아래쪽 화살표 키를 누르면 포커스가 메뉴의 첫 번째 항목으로 이동 합니다. 마찬가지로, 첫 번째 항목에 포커스가 있는 상태에서 위쪽 화살표 키를 누르면 포커스가 메뉴의 마지막 항목으로 이동 합니다. 이 동작을 *순환* 이라고 하며 예측할 수 없는 방향으로 열 수 있는 팝업 메뉴를 탐색 하는 데 유용 합니다.
 
 > [!NOTE]
-> Cycling should be avoided in non-popup UIs where users might come to feel trapped in an endless loop. 
+> 사용자가 무한 루프에서 트랩 된 느낌을 받을 수 있는 비 팝업 Ui에서는 순환을 피해 야 합니다. 
 
-We recommend that you emulate these same behaviors in your custom controls. Code sample on how to implement this behavior can be found in [Programmatic focus navigation](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) documentation.
+사용자 지정 컨트롤에서 이와 동일한 동작을 에뮬레이트하는 것이 좋습니다. 이 동작을 구현 하는 방법에 대 한 코드 샘플은 [프로그래밍 방식 포커스 탐색](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) 설명서에서 찾을 수 있습니다.
 
 ## <a name="test-your-app"></a>앱 테스트
 
 지원되는 모든 입력 디바이스로 앱을 테스트하여 UI 요소를 일관적이고 직관적인 방법으로 탐색할 수 있고 예상치 못한 요소가 원하는 탭 순서에 방해가 되지 않는지 확인합니다.
 
 ## <a name="related-articles"></a>관련 문서
-* [Keyboard events](keyboard-events.md)
+* [키보드 이벤트](keyboard-events.md)
 * [입력 디바이스 식별](identify-input-devices.md)
-* [Respond to the presence of the touch keyboard](respond-to-the-presence-of-the-touch-keyboard.md)
+* [터치 키보드의 현재 상태에 대 한 응답](respond-to-the-presence-of-the-touch-keyboard.md)
 * [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 ## <a name="appendix"></a>부록
 
-### <a name="software-keyboard"></a>Software keyboard
+### <a name="software-keyboard"></a>소프트웨어 키보드
 
 소프트웨어 키보드는 화면에 표시되는 키보드이며 사용자가 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기타 포인팅 장치로 데이터를 입력하는 데 사용할 수 있습니다(터치 스크린이 필요하지 않음). 터치 스크린에서 이러한 키보드를 직접 터치하여 텍스트를 입력할 수도 있습니다. Xbox One 디바이스에서는 게임 패드 또는 리모컨을 사용하여 포커스 화면 효과를 이동하거나 바로 가기 키를 사용하여 개별 키를 선택해야 합니다.
 
 ![Windows 10 터치 키보드](images/keyboard/default.png)
 
-***Windows 10 Touch Keyboard***
+***Windows 10 Touch 키보드***
 
 ![Xbox one 화상 키보드](images/keyboard/xbox-onscreen-keyboard.png)
 
-***Xbox One Onscreen Keyboard***
+***Xbox One 온스크린 키보드***
 
 디바이스에 따라 소프트웨어 키보드는 텍스트 필드나 다른 편집 가능한 텍스트 컨트롤이 포커스를 받을 때 또는 사용자가 **알림 센터**를 통해 수동으로 설정할 때 나타납니다.
 
@@ -552,15 +552,15 @@ We recommend that you emulate these same behaviors in your custom controls. Code
 
 ![기본 레이아웃 모드의 터치 키보드](images/keyboard/default.png)
 
-***The touch keyboard in default layout mode***
+***기본 레이아웃 모드의 터치 키보드***
 
 ![확장 레이아웃 모드의 터치 키보드](images/keyboard/extendedview.png)
 
-***The touch keyboard in expanded layout mode***
+***확장 된 레이아웃 모드의 터치 키보드***
 
 성공적인 키보드 조작을 통해 사용자는 키보드만 사용하여 기본 앱 시나리오를 수행할 수 있습니다. 즉, 사용자는 모든 대화형 요소에 액세스하고 기본 기능을 활성화할 수 있습니다. 키보드 탐색, 내게 필요한 옵션에 대한 선택키, 고급 사용자를 위한 바로 가기 등 다양한 요소가 성공의 수준에 영향을 미칠 수 있습니다.
 
-**NOTE**  The touch keyboard does not support toggle and most system commands.
+터치 키보드는 토글 및 대부분의 시스템 명령을 지원 **하지  합니다** .
 
 #### <a name="on-screen-keyboard"></a>화상 키보드
 소프트웨어 키보드와 마찬가지로, 화상 키보드는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기타 포인팅 장치로 데이터를 입력하는 데 사용할 수 있는 시각적 가상 키보드입니다(터치 스크린이 필요하지 않음). 실제 키보드가 없는 시스템이나 움직일 수 없어서 일반적인 입력 장치를 사용할 수 없는 사용자는 화상 키보드를 사용할 수 있습니다. 화상 키보드는 하드웨어 키보드의 기능을 전부는 아니라도 대부분 에뮬레이트합니다.
@@ -571,7 +571,7 @@ We recommend that you emulate these same behaviors in your custom controls. Code
 
 ![화상 키보드](images/keyboard/osk.png)
 
-***On-Screen Keyboard***
+***화상 키보드***
 
 화상 키보드에 대한 자세한 내용은 [화상 키보드 페이지](https://support.microsoft.com/help/10762/windows-use-on-screen-keyboard)를 참조하세요.
 

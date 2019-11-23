@@ -60,33 +60,33 @@ WSL에서 실행할 수 있는 몇 가지 Linux 배포판이 있습니다. Micro
 
     ![Microsoft Store의 Linux 배포판](../images/store-linux-distros.png)
 
-@No__t-0을 입력 하 여 현재 사용 중인 Linux 배포를 확인할 수 있습니다. Ubuntu 배포를 업데이트 하려면 `sudo apt update && sudo apt upgrade`을 사용 합니다. 최신 패키지를 유지 하기 위해 정기적으로 업데이트 하는 것이 좋습니다. 이 업데이트는 Windows에서 자동으로 처리 되지 않습니다. Microsoft Store, 대체 설치 방법 또는 문제 해결에서 사용할 수 있는 다른 Linux 배포에 대 한 링크는 windows [10 용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/windows/wsl/install-win10)를 참조 하세요.
+`lsb_release -dc`를 입력 하 여 현재 사용 중인 Linux 배포를 확인할 수 있습니다. Ubuntu 배포를 업데이트 하려면 `sudo apt update && sudo apt upgrade`을 사용 합니다. 최신 패키지를 유지 하기 위해 정기적으로 업데이트 하는 것이 좋습니다. 이 업데이트는 Windows에서 자동으로 처리 되지 않습니다. Microsoft Store, 대체 설치 방법 또는 문제 해결에서 사용할 수 있는 다른 Linux 배포에 대 한 링크는 windows [10 용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/windows/wsl/install-win10)를 참조 하세요.
 
 ## <a name="install-wsl-2"></a>WSL 2 설치
 
 WSL 2는 Linux 배포판이 Windows와 상호 작용 하 여 성능을 향상 시키고 전체 시스템 호출 호환성을 추가 하는 방법을 변경 하는 WSL의 [새 아키텍처 버전](https://docs.microsoft.com/windows/wsl/wsl2-about) 입니다.
 
-1. PowerShell에서 다음 명령을 입력 합니다. `wsl -l`을 입력 하 여 컴퓨터에 설치한 WSL 배포 목록을 표시 합니다. 이제이 목록에 Ubuntu-18.04이 표시 됩니다.
-2. 이제 @no__t를 입력 하 여 Ubuntu 설치를 WSL 2를 사용 하도록 설정 합니다.
-3. 설치 된 각 배포에 대해 `wsl --list --verbose` (또는 `wsl -l -v`)과 함께 사용 하는 WSL의 버전을 확인 합니다.
+1. PowerShell에서 `wsl -l` 다음 명령을 입력 하 여 컴퓨터에 설치한 WSL 배포 목록을 볼 수 있습니다. 이제이 목록에 Ubuntu-18.04이 표시 됩니다.
+2. 이제 `wsl --set-version Ubuntu-18.04 2` 명령을 입력 하 여 Ubuntu 설치를 WSL 2를 사용 하도록 설정 합니다.
+3. 설치 된 각 배포가 `wsl --list --verbose` (또는 `wsl -l -v`)를 사용 하 고 있는지 확인 합니다.
 
     ![Linux 용 Windows 하위 시스템 집합 버전](../images/wsl-versions.png)
 
 > [!TIP]
-> 동일한 지침 (PowerShell 사용)을 사용 하 여 설치 된 모든 Linux 배포를 WSL 2로 설정할 수 있습니다. ' Ubuntu-18.04 '을 대상으로 하는 설치 된 배포판의 이름으로 변경 합니다. WSL 1로 다시 변경 하려면 위와 동일한 명령을 실행 하지만 ' 2 '를 ' 1 '로 바꿉니다.  @No__t-0을 입력 하 여 새로 설치 된 배포에 대 한 기본으로 WSL 2를 설정할 수도 있습니다.
+> 동일한 지침 (PowerShell 사용)을 사용 하 여 설치 된 모든 Linux 배포를 WSL 2로 설정할 수 있습니다. ' Ubuntu-18.04 '을 대상으로 하는 설치 된 배포판의 이름으로 변경 합니다. WSL 1로 다시 변경 하려면 위와 동일한 명령을 실행 하지만 ' 2 '를 ' 1 '로 바꿉니다.  `wsl --set-default-version 2`를 입력 하 여 새로 설치 된 배포에 대 한 기본으로 WSL 2를 설정할 수도 있습니다.
 
 ## <a name="install-nvm-nodejs-and-npm"></a>Nvm, node.js 및 npm 설치
 
 Node.js를 설치 하는 방법에는 여러 가지가 있습니다. 버전 변경이 매우 빠르게 변경 되 면 버전 관리자를 사용 하는 것이 좋습니다. 작업 하는 다른 프로젝트의 요구에 따라 여러 버전 간에 전환 해야 할 수도 있습니다. 노드 버전 관리자 (일반적으로 nvm 이라고 함)는 여러 버전의 node.js를 설치 하는 가장 인기 있는 방법입니다. Nvm을 설치 하 고이를 사용 하 여 node.js 및 npm (Node Package Manager)를 설치 하는 단계를 안내 합니다. 다음 섹션에서 설명 하는 것과 같은 [대체 버전 관리자](#alternative-version-managers) 가 있습니다.
 
 > [!IMPORTANT]
-> 버전 관리자를 설치 하기 전에 운영 체제에서 node.js 또는 npm의 기존 설치를 제거 하는 것이 좋습니다 .이 경우에는 다른 유형의 설치로 인해 비정상적이 고 혼란 스러운 충돌이 발생할 수 있습니다. 예를 들어 Ubuntu의 `apt-get` 명령으로 설치할 수 있는 노드 버전은 현재 오래 된 버전입니다. 이전 설치 제거에 대 한 도움말은 [ubuntu에서 nodejs를 제거 하는 방법](https://askubuntu.com/questions/786015/how-to-remove-nodejs-from-ubuntu-16-04)을 참조 하세요.
+> 버전 관리자를 설치 하기 전에 운영 체제에서 node.js 또는 npm의 기존 설치를 제거 하는 것이 좋습니다 .이 경우에는 다른 유형의 설치로 인해 비정상적이 고 혼란 스러운 충돌이 발생할 수 있습니다. 예를 들어 Ubuntu의 `apt-get` 명령을 사용 하 여 설치할 수 있는 노드 버전은 현재 오래 된 버전입니다. 이전 설치 제거에 대 한 도움말은 [ubuntu에서 nodejs를 제거 하는 방법](https://askubuntu.com/questions/786015/how-to-remove-nodejs-from-ubuntu-16-04)을 참조 하세요.
 
 1. Ubuntu 18.04 명령줄을 엽니다.
 2. 다음을 사용 하 여 말아 (명령줄에서 인터넷에서 콘텐츠를 다운로드 하는 데 사용 되는 도구)를 설치 합니다. `sudo apt-get install curl`
 3. 다음을 사용 하 여 nvm 설치: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`
 4. 설치를 확인 하려면 다음을 입력 합니다. `command -v nvm` ... ' n e t e r '를 반환 해야 합니다. ' command not found '를 수신 하거나 응답이 없으면 현재 터미널을 닫고 다시 연 후 다시 시도 하세요. [Nvm github 리포지토리에서 자세히 알아보세요](https://github.com/nvm-sh/nvm).
-5. 현재 설치 되어 있는 노드 버전 나열 (이 시점에서 없어야 함): `nvm ls`
+5. 현재 설치 된 노드 버전 나열 (이 시점에서 없어야 함): `nvm ls`
 
     ![노드 버전을 표시 하지 않는 n VM 목록](../images/nvm-no-node.png)
 
@@ -96,8 +96,8 @@ Node.js를 설치 하는 방법에는 여러 가지가 있습니다. 버전 변�
 
     ![LTS 및 현재 노드 버전을 보여 주는 NVM 목록](../images/nvm-node-installed.png)
 
-9. Node.js가 설치 되어 있고 현재 기본 버전인 `node --version` 인지 확인 합니다. 그런 다음 `npm --version`을 사용 하 여 npm를 확인 합니다. 즉, `which node` 또는 `which npm`를 사용 하 여 기본 버전에 사용 되는 경로를 확인할 수도 있습니다.
-10. 프로젝트에 사용 하려는 node.js의 버전을 변경 하려면 새 프로젝트 디렉터리 `mkdir NodeTest`을 만들고 @no__t 디렉터리를 입력 한 다음 `nvm use node`를 입력 하 여 현재 버전으로 전환 하거나 `nvm use --lts`을 입력 하 여 LTS 버전으로 전환 합니다. @No__t-0과 같이 설치한 모든 추가 버전에 대해 특정 번호를 사용할 수도 있습니다. 사용 가능한 node.js의 모든 버전을 나열 하려면 다음 명령을 사용 합니다. `nvm ls-remote`).
+9. Node.js가 설치 되어 있고 현재 기본 버전인: `node --version`이 설치 되어 있는지 확인 합니다. 그런 다음 npm `npm --version`를 사용 하 여도 있는지 확인 합니다. (`which node` 또는 `which npm`를 사용 하 여 기본 버전에 사용 되는 경로를 볼 수도 있습니다.)
+10. 프로젝트에 사용할 node.js의 버전을 변경 하려면 `mkdir NodeTest`새 프로젝트 디렉터리를 만들고 디렉터리 `cd NodeTest`를 입력 한 다음 `nvm use node`를 입력 하 여 현재 버전으로 전환 하거나, `nvm use --lts` LTS 버전으로 전환 합니다. 또한 `nvm use v8.2.1`같이 설치한 모든 추가 버전에 대해 특정 번호를 사용할 수 있습니다. 사용 가능한 node.js의 모든 버전을 나열 하려면 다음 명령을 사용 합니다. `nvm ls-remote`).
 
 > [!TIP]
 > NVM을 사용 하 여 node.js 및 NPM을 설치 하는 경우 SUDO 명령을 사용 하 여 새 패키지를 설치할 필요가 없습니다.
@@ -110,11 +110,11 @@ Node.js를 설치 하는 방법에는 여러 가지가 있습니다. 버전 변�
 
 Nvm은 현재 노드당 가장 널리 사용 되는 버전 관리자 이지만 다음과 같은 몇 가지 방법을 고려해 야 합니다.
 
-- [n](https://www.npmjs.com/package/n#installation) 은 약간 다른 명령으로 동일한 작업을 수행 하 고 bash 스크립트 대신 `npm`를 통해 설치 되는 장기 `nvm` 대체입니다.
-- [fnm](https://github.com/Schniz/fnm#using-a-script) 은 최신 버전 관리자로, `nvm` 보다 훨씬 빠르게 주장 합니다. (또한 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops)를 사용 합니다.)
+- [n](https://www.npmjs.com/package/n#installation) 은 몇 가지 명령을 사용 하 여 동일한 작업을 수행 하 고 bash 스크립트가 아닌 `npm`를 통해 설치 되는 장기 `nvm` 대안입니다.
+- [fnm](https://github.com/Schniz/fnm#using-a-script) 은 `nvm`보다 훨씬 빠르게 주장 하는 최신 버전의 관리자입니다. (또한 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops)를 사용 합니다.)
 - [Volta](https://github.com/volta-cli/volta#installing-volta) 는 향상 된 속도 및 플랫폼 간 지원을 제공 하는 LinkedIn 팀의 새로운 버전 관리자입니다.
 - [asdf-vm](https://asdf-vm.com/#/core-manage-asdf-vm) 은 ike gvm, nvm, rssisdb v & pyenv 등의 여러 언어에 대 한 단일 CLI입니다.
-- [nvs](https://github.com/jasongin/nvs) (Node 버전 전환기)는 [VS Code와 통합할](https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md)수 있는 플랫폼 간 `nvm` 대안입니다.
+- [nvs](https://github.com/jasongin/nvs) (노드 버전 전환기)는 [VS Code와 통합할](https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md)수 있는 플랫폼 간 `nvm` 대안입니다.
 
 ## <a name="install-your-favorite-code-editor"></a>즐겨 찾는 코드 편집기 설치
 
@@ -127,7 +127,7 @@ Node.js 프로젝트용 **원격-WSL 확장** 에 **Visual Studio Code** 를 사
 터미널 기반 텍스트 편집기 (vim, emacs, nano)는 콘솔 내에서 바로 빠르게 변경 하는 데에도 유용 합니다. ([이 문서](https://medium.com/linode-cube/emacs-nano-or-vim-choose-your-terminal-based-text-editor-wisely-8f3826c92a68) 에서는 차이점을 설명 하 고 각각을 사용 하는 방법을 설명 하는 유용한 작업을 수행 합니다.)
 
 > [!NOTE]
-> 일부 GUI 편집기 (Atom, Sublime, Eclipse)는 WSL 공유 네트워크 위치에 액세스 하는 데 문제가 있을 수 있습니다 (\\wsl $ \Ubuntu\home @ no__t-1) .이는 사용자가 원하는 대로 Windows 도구를 사용 하 여 Linux 파일 빌드를 시도 합니다. VS Code의 원격 WSL 확장은이 호환성을 처리 합니다.
+> 일부 GUI 편집기 (Atom, Sublime, Eclipse)는 WSL 공유 네트워크 위치에 액세스 하는 데 문제가 있을 수 있습니다 (\\wsl $ \Ubuntu\home\) .이는 원하는 것이 아닐 수 있는 Windows 도구를 사용 하 여 Linux 파일 빌드를 시도 합니다. VS Code의 원격 WSL 확장은이 호환성을 처리 합니다.
 
 VS Code 및 원격-WSL 확장을 설치 하려면:
 
@@ -165,7 +165,7 @@ Node.js 확장 팩을 설치 하려면:
 
 ## <a name="install-windows-terminal-optional"></a>Windows 터미널 설치 (선택 사항)
 
-새 Windows 터미널을 사용 하면 여러 탭 (명령 프롬프트, PowerShell 또는 여러 Linux 배포 간을 신속 하 게 전환), 사용자 지정 키 바인딩 (열기 또는 닫기 탭에 대 한 바로 가기 키 만들기, 복사 + 붙여넣기 등),이 모 지 ☺ 및 사용자 지정 테마 ( 색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도). [자세한 내용을 알아보세요](https://devblogs.microsoft.com/commandline/).
+새 Windows 터미널을 사용 하면 여러 탭 (명령 프롬프트, PowerShell 또는 여러 Linux 배포 간을 신속 하 게 전환), 사용자 지정 키 바인딩 (열기 또는 닫기 탭에 대 한 사용자 고유의 바로 가기 키 만들기, 복사 + 붙여넣기 등),이 모 지 ☺ 및 사용자 지정 테마 (색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도)를 사용할 수 있습니다. [자세한 내용을 알아보세요](https://devblogs.microsoft.com/commandline/).
 
 1. [Microsoft Store에서 Windows 터미널 (미리 보기)](https://www.microsoft.com/store/apps/9n0dx20hk701)가져오기: 스토어를 통해 설치 하면 업데이트가 자동으로 처리 됩니다.
 
@@ -177,7 +177,7 @@ Node.js 확장 팩을 설치 하려면:
 
 다른 사용자와 공동 작업 하거나, GitHub와 같은 오픈 소스 사이트에서 프로젝트를 호스트 하는 경우 VS Code [Git에서 버전 제어](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)를 지원 합니다. VS Code의 소스 제어 탭은 모든 변경 내용을 추적 하 고 UI에 바로 적용 되는 일반적인 Git 명령 (추가, 커밋, 푸시, 끌어오기)을 포함 합니다.
 
-1. Git은 Linux 배포판에 대 한 Windows 하위 시스템과 함께 설치 되지만 git 구성 파일을 설정 해야 합니다. 이렇게 하려면 터미널에서 `git config --global user.name "Your Name"`을 입력 한 다음-1을 @no__t 합니다. 아직 Git 계정이 없는 경우 [GitHub에서 하나에 등록할](https://github.com/join)수 있습니다. 이전에 Git로 작업 한 적이 없는 경우 [GitHub 가이드](https://guides.github.com/) 를 사용 하 여 시작 하는 데 도움을 받을 수 있습니다. Git config를 편집 해야 하는 경우 nano: `nano ~/.gitconfig`과 같은 기본 제공 텍스트 편집기를 사용 하 여이 작업을 수행할 수 있습니다.
+1. Git은 Linux 배포판에 대 한 Windows 하위 시스템과 함께 설치 되지만 git 구성 파일을 설정 해야 합니다. 이렇게 하려면 터미널에서 `git config --global user.name "Your Name"`를 입력 한 후 `git config --global user.email "youremail@domain.com"`합니다. 아직 Git 계정이 없는 경우 [GitHub에서 하나에 등록할](https://github.com/join)수 있습니다. 이전에 Git로 작업 한 적이 없는 경우 [GitHub 가이드](https://guides.github.com/) 를 사용 하 여 시작 하는 데 도움을 받을 수 있습니다. Git config를 편집 해야 하는 경우 nano: `nano ~/.gitconfig`와 같은 기본 제공 텍스트 편집기를 사용 하 여이를 수행할 수 있습니다.
 
 2. 노드 프로젝트에 [.gitignore 파일](https://help.github.com/en/articles/ignoring-files) 을 추가 하는 것이 좋습니다. [Node.js에 대 한 GitHub의 기본 .gitignore 템플릿은](https://github.com/github/gitignore/blob/master/Node.gitignore)다음과 같습니다. [GitHub 웹 사이트를 사용 하 여 새 리포지토리를 만들도록](https://help.github.com/articles/create-a-repo)선택한 경우에는 추가 정보 파일인 .gitignore 파일을 사용 하 여 리포지토리를 초기화 하 고, 필요한 경우 라이선스를 추가 하는 옵션을 사용할 수 있습니다.
 

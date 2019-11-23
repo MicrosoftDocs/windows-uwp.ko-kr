@@ -20,8 +20,8 @@ ms.locfileid: "74258463"
 **요약**
 
 -   DirectX 포트 계획
--   [Important changes from Direct3D 9 to Direct3D 11](understand-direct3d-11-1-concepts.md)
--   [Feature mapping](feature-mapping.md)
+-   [Direct3D 9에서 Direct3D 11로 중요 한 변경 내용](understand-direct3d-11-1-concepts.md)
+-   [기능 매핑](feature-mapping.md)
 
 
 DirectX 9에서 11 DirectX 및 UWP(유니버설 Windows 플랫폼)로 게임 포팅 프로젝트를 계획하세요. 그래픽 코드를 업그레이드 하 고 Windows 런타임 환경에서 게임을 저장합니다.
@@ -35,11 +35,11 @@ Direct3D 9에서 Direct3D 11로 업그레이드하면 검색 및 바꾸기 변�
 
 고유한 도우미 라이브러리 또는 커뮤니티 도구로 D3DX 및 DXUT 도우미 라이브러리를 교체해야 합니다. 자세한 내용은 [기능 매핑](feature-mapping.md) 섹션을 참조하세요.
 
-> **Note**   You can use the [DirectX Tool Kit](https://github.com/Microsoft/DirectXTK) or [DirectXTex](https://github.com/Microsoft/DirectXTex) to replace some functionality that was formerly provided by D3DX and DXUT.
+> **참고**   [DirectX Tool Kit](https://github.com/Microsoft/DirectXTK) 또는 [DIRECTXTEX](https://github.com/Microsoft/DirectXTex) 를 사용 하 여 D3DX 및 DXUT에서 이전에 제공한 일부 기능을 대체할 수 있습니다.
 
  
 
-Shaders written in assembly language should be upgraded to HLSL using shader model 4 level 9\_1 or 9\_3 functionality, and shaders written for the Effects library will need to be updated to a more recent version of HLSL syntax. 자세한 내용은 [기능 매핑](feature-mapping.md) 섹션을 참조하세요.
+어셈블리 언어로 작성 된 셰이더는 셰이더 모델 4 level 9\_1 또는 9\_3 기능을 사용 하 여 HLSL로 업그레이드 해야 하 고 효과 라이브러리에 대해 작성 된 셰이더를 최신 버전의 HLSL 구문으로 업데이트 해야 합니다. 자세한 내용은 [기능 매핑](feature-mapping.md) 섹션을 참조하세요.
 
 여러 [Direct3D 기능 수준](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro)에 익숙해지세요. 기능 수준은 알려진 기능 집합을 정의하여 다양한 범위의 비디오 하드웨어를 분류합니다. 각 집합은 대략 각각 9.1에서 11.2까지 Direct3D 버전에 해당합니다. 모든 기능 수준은 DirectX 11 API를 사용합니다.
 

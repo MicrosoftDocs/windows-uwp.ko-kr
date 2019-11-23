@@ -37,7 +37,7 @@ Windows 10 버전 1803부터 [Windows.Graphics.Capture](https://docs.microsoft.c
 
 ## <a name="launch-the-system-ui-to-start-screen-capture"></a>시스템 UI를 실행하여 화면 캡처 시작
 
-시스템 UI를 시작하기 전에 현재 응용 프로그램이 현재 화면 캡처 지원하는지 확인할 수 있습니다. 디바이스가 하드웨어 요구 사항을 충족하지 못하는 경우나 캡처 대상 응용 프로그램이 화면 캡처를 차단하는 경우를 포함하여 응용 프로그램이 화면 캡처를 사용할 수 없는 몇 가지 이유가 있습니다. [GraphicsCaptureSession](https://docs.microsoft.com/uwp/api/windows.graphics.capture.graphicscapturesession) 클래스에서 **IsSupported** 메서드를 사용하여 UWP 화면 캡처 지원 여부를 결정합니다.
+시스템 UI를 시작하기 전에 현재 응용 프로그램이 현재 화면 캡처 지원하는지 확인할 수 있습니다. 디바이스가 하드웨어 요구 사항을 충족하지 못하는 경우나 캡처 대상 응용 프로그램이 화면 캡처를 차단하는 경우를 포함하여 응용 프로그램이 화면 캡처를 사용할 수 없는 몇 가지 이유가 있습니다. **GraphicsCaptureSession** 클래스에서 [IsSupported](https://docs.microsoft.com/uwp/api/windows.graphics.capture.graphicscapturesession) 메서드를 사용하여 UWP 화면 캡처 지원 여부를 결정합니다.
 
 ```cs
 // This runs when the application starts.
@@ -59,7 +59,7 @@ Public Sub OnInitialization()
 End Sub
 ```
 
-화면 캡처가 지원되는지 확인한 후 [GraphicsCapturePicker](https://docs.microsoft.com/uwp/api/windows.graphics.capture.graphicscapturepicker) 클래스를 사용하여 시스템 선택기 UI를 호출합니다. 최종 사용자는 이 UI를 사용하여 화면 캡처를 실행할 디스플레이 또는 응용 프로그램 창을 선택합니다. 선택기는 다음과 같이 **GraphicsCaptureSession**을 만드는 데 사용할 [GraphicsCaptureItem](https://docs.microsoft.com/uwp/api/windows.graphics.capture.graphicscaptureitem)을 반환합니다.
+화면 캡처가 지원되는지 확인한 후 [GraphicsCapturePicker](https://docs.microsoft.com/uwp/api/windows.graphics.capture.graphicscapturepicker) 클래스를 사용하여 시스템 선택기 UI를 호출합니다. 최종 사용자는 이 UI를 사용하여 화면 캡처를 실행할 디스플레이 또는 응용 프로그램 창을 선택합니다. 선택기는 다음과 같이 [GraphicsCaptureSession](https://docs.microsoft.com/uwp/api/windows.graphics.capture.graphicscaptureitem)을 만드는 데 사용할 **GraphicsCaptureItem**을 반환합니다.
 
 ```cs
 public async Task StartCaptureAsync()
@@ -113,7 +113,7 @@ Await window.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
 
 ## <a name="create-a-capture-frame-pool-and-capture-session"></a>캡처 프레임 풀 및 캡처 세션 만들기
 
-**GraphicsCaptureItem**를 사용 하 여 D3D 장치로 [Direct3D11CaptureFramePool](https://docs.microsoft.com/uwp/api/windows.graphics.capture.direct3d11captureframepool) , 지원 되는 픽셀 형식 (**DXGI @ no__t 형식 @ no__t-4B8G8R8A8 @ no__t-5orm**), 원하는 프레임 수 (정수 일 수 있음)를 만듭니다. ) 및 프레임 크기를 조정 합니다. **GraphicsCaptureItem** 클래스의 **ContentSize** 속성을 프레임의 크기로 사용할 수 있습니다.
+**GraphicsCaptureItem**를 사용 하 여 D3D 장치, 지원 되는 픽셀 형식 (**DXGI\_형식\_B8G8R8A8\_unorm**), 원하는 프레임 수 (정수) 및 프레임 크기를 사용 하 여 [Direct3D11CaptureFramePool](https://docs.microsoft.com/uwp/api/windows.graphics.capture.direct3d11captureframepool) 를 만듭니다. **GraphicsCaptureItem** 클래스의 **ContentSize** 속성을 프레임의 크기로 사용할 수 있습니다.
 
 ```cs
 private GraphicsCaptureItem _item;
@@ -224,7 +224,7 @@ End Sub
 
 응용 프로그램은 **Direct3D11CaptureFrame** 개체에 대한 참조를 저장하지 말아야 하며 프레임을 다시 확인한 후에 기본 Direct3D 표면에 대한 참조를 저장해서도 안 됩니다.
 
-프레임을 처리하는 동안 응용 프로그램은 **Direct3D11CaptureFramePool** 개체와 연결된 동일한 디바이스에서 [ID3D11Multithread](https://docs.microsoft.com/windows/desktop/api/d3d11_4/nn-d3d11_4-id3d11multithread) 잠금을 가져오는 것이 좋습니다.
+프레임을 처리하는 동안 응용 프로그램은 [Direct3D11CaptureFramePool](https://docs.microsoft.com/windows/desktop/api/d3d11_4/nn-d3d11_4-id3d11multithread) 개체와 연결된 동일한 디바이스에서 **ID3D11Multithread** 잠금을 가져오는 것이 좋습니다.
 
 기본 Direct3D 표면은 **Direct3D11CaptureFramePool**을 만들거나 다시 만들 때 항상 지정된 크기가 됩니다. 콘텐츠가 프레임보다 크면 콘텐츠가 프레임 크기로 잘립니다. 콘텐츠가 프레임보다 작은 경우 나머지 프레임에는 정의되지 않은 데이터를 포함합니다. 정의되지 않은 콘텐츠가 표시되지 않도록 응용 프로그램에서 이 **Direct3D11CaptureFrame**에 대한 **ContentSize** 속성을 사용하여 하위 리소스를 복사하는 것이 좋습니다.
 
@@ -259,7 +259,7 @@ using (var fileStream = await file.OpenAsync(FileAccessMode.ReadWrite))
 
 ## <a name="putting-it-all-together"></a>요약
 
-다음 코드 조각은 UWP 응용 프로그램에서 화면 캡처를 구현 하는 방법의 종단 간 예제입니다. 이 샘플에는 프런트 엔드에 두 개의 단추가 있습니다. 하나는 **Button_ClickAsync**를 호출 하 고 다른 하나는 **ScreenshotButton_ClickAsync**를 호출 합니다.
+다음 코드 조각은 UWP 응용 프로그램에서 화면 캡처를 구현 하는 방법의 종단 간 예제입니다. 이 샘플에는 프런트 엔드에 두 개의 단추가 있습니다. 하나는 **Button_ClickAsync**호출 하 고 다른 하나는 **ScreenshotButton_ClickAsync**를 호출 합니다.
 
 > [!NOTE]
 > 이 코드 조각은 2D 그래픽용 라이브러리인 [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm)를 사용 합니다. 프로젝트에 맞게 설정 하는 방법에 대 한 자세한 내용은 해당 설명서를 참조 하세요.
@@ -688,6 +688,6 @@ End Class
 
 응용 프로그램의 비디오를 기록 하려는 경우에는 [Windows.](https://docs.microsoft.com/uwp/api/windows.media.apprecording)p a d. 데스크톱 확장 SDK의 일부 이므로 데스크톱 에서만 작동 하므로 프로젝트에서이에 대 한 참조를 추가 해야 합니다. 자세한 내용은 [장치 패밀리 개요](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) 를 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 * [Windows. Graphics. Capture 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.graphics.capture)

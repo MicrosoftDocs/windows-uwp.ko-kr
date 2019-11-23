@@ -16,7 +16,7 @@ ms.locfileid: "71339615"
 # <a name="listview-and-gridview-data-virtualization"></a>ListView 및 GridView 데이터 가상화
 
 
-**참고**  For는 [사용자가 GridView 및 ListView에서 많은 양의 데이터와 상호 작용할 때 build/session을 사용 하면 성능이 크게 향상](https://channel9.msdn.com/Events/Build/2013/3-158)됩니다.
+**참고**  자세한 내용은 [사용자가 GridView 및 ListView에서 많은 양의 데이터와 상호 작용할 때 build/session을 사용 하면 성능이 크게 향상](https://channel9.msdn.com/Events/Build/2013/3-158)됩니다.
 
 데이터 가상화를 통해 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 및 [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) 성능과 시작 시간이 향상됩니다. UI 가상화, 요소 감소 및 항목의 점진적인 업데이트를 보려면 [ListView 및 GridView UI 최적화](optimize-gridview-and-listview.md)를 참조하세요.
 
@@ -27,7 +27,7 @@ ms.locfileid: "71339615"
 -   데이터 집합의 소스(로컬 디스크, 네트워크 또는 클라우드)
 -   앱의 전체 메모리 소비
 
-**참고**  은 사용자가 빠르게 이동/스크롤 하는 동안 임시 자리 표시자 시각적 개체를 표시 하는 ListView 및 GridView에 대해 기본적으로 기능을 사용 하도록 설정 합니다. 데이터가 로드되면 이러한 자리 표시자 화면 효과가 항목 템플릿으로 바뀝니다. [  **ListViewBase.ShowsScrollingPlaceholders**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders)를 false로 설정하여 이 기능을 끌 수 있지만 이렇게 하는 경우 x:Phase 특성을 사용하여 항목 템플릿의 요소를 점진적으로 렌더링하는 것이 좋습니다. [점진적으로 ListView 및 GridView 항목 업데이트](optimize-gridview-and-listview.md#update-items-incrementally)를 참조하세요.
+**참고**  사용자가 빠르게 이동/스크롤 하는 동안 임시 자리 표시자 시각적 개체를 표시 하는 ListView 및 GridView에 대해 기본적으로 기능이 사용 됩니다. 데이터가 로드되면 이러한 자리 표시자 화면 효과가 항목 템플릿으로 바뀝니다. [  **ListViewBase.ShowsScrollingPlaceholders**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders)를 false로 설정하여 이 기능을 끌 수 있지만 이렇게 하는 경우 x:Phase 특성을 사용하여 항목 템플릿의 요소를 점진적으로 렌더링하는 것이 좋습니다. [점진적으로 ListView 및 GridView 항목 업데이트](optimize-gridview-and-listview.md#update-items-incrementally)를 참조하세요.
 
 증분 및 임의 액세스 데이터 가상화 기술에 대한 자세한 내용은 다음과 같습니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "71339615"
 증분 데이터 가상화에서는 데이터가 순차적으로 로드됩니다. 증분 데이터 가상화를 사용하는 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)는 100만 항목의 컬렉션을 보는 데 사용될 수 있지만 초기에는 50개의 항목만 로드됩니다. 사용자가 이동/스크롤하면 다음 50개가 로드됩니다. 항목이 로드됨에 따라 스크롤 막대의 위치 조정 컨트롤의 크기가 줄어듭니다. 이 데이터 가상화 유형의 경우 이러한 인터페이스를 구현하는 데이터 원본 클래스를 작성합니다.
 
 -   [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist)
--   [INotifyCollectionChanged](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) (C#/vb) 또는 [IObservableVector @ no__t-5t @ no__t](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/cx)
+-   [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) (C#/vb) 또는 [**IObservableVector&lt;t&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/cx)
 -   [**은 isupportincrementalloading**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.ISupportIncrementalLoading)
 
 이와 같은 데이터 원본은 지속적으로 확장될 수 있는 메모리 내 목록입니다. 항목 컨트롤은 표준 [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist) 인덱서 및 개수 속성을 사용하는 항목을 요청합니다. 개수는 데이터 집합의 실제 크기가 아니라 항목 수를 로컬로 나타내야 합니다.
@@ -48,7 +48,7 @@ ms.locfileid: "71339615"
 임의 액세스 데이터 가상화에서는 데이터 집합의 임의 지점에서 데이터를 로드할 수 있습니다. 100만 개의 항목을 보는 데 사용되는 임의 액세스 데이터 가상화를 사용하는 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)는 100,000~100,050개의 항목을 로드할 수 있습니다. 사용자가 목록의 시작 부분으로 이동하면 컨트롤이 1~50개의 항목을 로드합니다. 스크롤 막대의 위치 조정 컨트롤은 항상 **ListView**에 100만 개의 항목이 포함되어 있음을 나타냅니다. 스크롤 막대의 위치 조정 컨트롤 위치는 컬렉션의 전체 데이터 집합에서 표시된 항목이 있는 위치를 기준으로 합니다. 이 유형의 데이터 가상화는 메모리 요구 사항 및 컬렉션 로드 시간을 크게 줄일 수 있습니다. 이를 지원하려면 필요에 따라 데이터를 가져오고 로컬 캐시를 관리하며 이러한 인터페이스를 구현하는 데이터 원본 클래스를 작성해야 합니다.
 
 -   [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist)
--   [INotifyCollectionChanged](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) (C#/vb) 또는 [IObservableVector @ no__t-5t @ no__t](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/cx)
+-   [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) (C#/vb) 또는 [**IObservableVector&lt;t&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) (C++/cx)
 -   (선택적으로) [**IItemsRangeInfo**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.IItemsRangeInfo)
 -   (선택적으로) [**ISelectionInfo**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.ISelectionInfo)
 

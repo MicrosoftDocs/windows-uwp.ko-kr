@@ -22,7 +22,7 @@ ms.locfileid: "71339856"
 
 UI 유형 만들기 및 해당 멤버 액세스를 포함하여 UI 스레드에 대한 거의 모든 변경 작업에는 UI 스레드를 사용해야 합니다. 백그라운드 스레드에서 UI를 업데이트할 수는 없지만 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)를 사용하여 코드가 해당 위치에서 실행되도록 메시지를 게시할 수 있습니다.
 
-> **참고**  The 한 가지 예외는 입력 처리 방법 또는 기본 레이아웃에 영향을 주지 않는 UI 변경을 적용할 수 있는 별도의 렌더링 스레드가 있다는 것입니다. 예를 들어 레이아웃에 영향을 주지 않는 많은 애니메이션 및 전환은 이 렌더링 스레드에서 실행할 수 있습니다.
+> **단,** 한 가지 예외는 입력 처리 방법 또는 기본 레이아웃에 영향을 주지 않는 UI 변경을 적용할 수 있는 별도의 렌더링 스레드가 있다는 것입니다.   예를 들어 레이아웃에 영향을 주지 않는 많은 애니메이션 및 전환은 이 렌더링 스레드에서 실행할 수 있습니다.
 
 ## <a name="delay-element-instantiation"></a>요소 인스턴스화 지연
 
@@ -101,7 +101,7 @@ public class AsyncExample
 
 이 예제에서는 UI 스레드의 응답을 유지하기 위해 `NextMove_Click` 처리기가 **await**에서 반환합니다. 그러나 백그라운드 스레드에서 실행되는 `ComputeNextMove`가 완료된 후에는 해당 처리기에서 실행이 다시 선택됩니다. 처리기의 나머지 코드는 결과와 함께 UI를 업데이트합니다.
 
-> **참고**@no__t-비슷한 시나리오에 사용할 수 있는 UWP에 대 한 [**ThreadPool**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPool) 및 [**windows.system.threading.threadpooltimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer) API도 있습니다. 자세한 내용은 [스레딩 및 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/index)을 참조하세요.
+> 비슷한 시나리오에 사용할 수 있는 UWP 용 [**ThreadPool**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPool) 및 [**Windows.system.threading.threadpooltimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer) API도 있습니다 **.  ** 자세한 내용은 [스레딩 및 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/index)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 

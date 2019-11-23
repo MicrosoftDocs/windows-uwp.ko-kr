@@ -83,7 +83,7 @@ Printing3DMesh 개체가 유효한 꼭짓점 및 삼각형의 집합을 포함�
 [!code-cs[BaseMaterialGroup](./code/3dprinthowto/cs/Generate3MFMethods.cs#SnippetBaseMaterialGroup)]
 
 > [!NOTE]
->@no__t 3D 제조 장치는 3MF에 저장 된 가상 자재 요소에 대해 사용 가능한 실제 자료 맵을 결정 합니다. 재료 매핑은 1:1일 필요는 없습니다. 3D 프린터가 하나의 재료만 사용하는 경우 해당 프린터는 다른 재료가 할당된 개체 또는 면에 상관없이 해당 재료의 전체 모델을 인쇄합니다.
+>3D 제조 장치  3 MF에 저장 된 가상 자재 요소에 대 한 사용 가능한 물리적 재질 지도를 결정 합니다. 재료 매핑은 1:1일 필요는 없습니다. 3D 프린터가 하나의 재료만 사용하는 경우 해당 프린터는 다른 재료가 할당된 개체 또는 면에 상관없이 해당 재료의 전체 모델을 인쇄합니다.
 
 ### <a name="color-materials"></a>색 재료
 

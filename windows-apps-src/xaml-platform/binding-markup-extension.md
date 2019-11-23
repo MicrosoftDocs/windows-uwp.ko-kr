@@ -1,6 +1,6 @@
 ---
 description: Binding 태그 확장은 XAML 로드 시 Binding 클래스의 인스턴스로 변환됩니다.
-title: Binding 태그 확장
+title: 바인딩 태그 확장
 ms.assetid: 3BAFE7B5-AF33-487F-9AD5-BEAFD65D04C3
 ms.date: 02/08/2017
 ms.topic: article
@@ -43,8 +43,8 @@ ms.locfileid: "72998605"
 | 용어 | 설명 |
 |------|-------------|
 | *propertyPath* | 바인딩의 속성 경로를 지정하는 문자열. 자세한 내용은 [속성 경로](#property-path) 섹션을 참조하세요. |
-| *bindingProperties* | *속성 이름*=*값*\[, *속성 이름*=*값*\]*<br/>이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
-| *속성* | [  **Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding) 개체에 설정할 속성의 문자열 이름. 예: "Converter" |
+| *bindingProperties* | *propName*=*value*\[, *propName*=*value*\]*<br/>이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
+| *propName* | [  **Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding) 개체에 설정할 속성의 문자열 이름. 예: "Converter" |
 | *value* | 속성을 설정할 값. 인수 구문은 아래 [{Binding}으로 설정할 수 있는 Binding 클래스의 속성](#properties-of-the-binding-class-that-can-be-set-with-binding) 섹션의 속성에 따라 달라집니다. |
 
 ## <a name="property-path"></a>속성 경로
@@ -57,7 +57,7 @@ ms.locfileid: "72998605"
 
 데이터 원본이 컬렉션인 경우 속성 패치가 컬렉션에서 위치 또는 색인별로 항목을 지정할 수 있습니다. 예를 들어 "팀\[0\]. 플레이어 ". 여기서"\[\]"리터럴은 컬렉션의 첫 번째 항목을 지정 하는" 0 "을 포함 합니다.
 
-기존 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)에 대한 [**ElementName**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.elementname) 바인딩을 사용하는 경우 연결된 속성을 속성 경로의 일부로 사용할 수 있습니다. 연결된 속성 이름의 중간 점이 속성 경로의 단계로 간주되지 않도록 연결된 속성을 구분하려면 소유자가 한정한 연결된 속성 이름을 괄호로 묶습니다(예: `(AutomationProperties.Name)`).
+기존 [**DependencyObject**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.elementname)에 대한 [**ElementName**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) 바인딩을 사용하는 경우 연결된 속성을 속성 경로의 일부로 사용할 수 있습니다. 연결된 속성 이름의 중간 점이 속성 경로의 단계로 간주되지 않도록 연결된 속성을 구분하려면 소유자가 한정한 연결된 속성 이름을 괄호로 묶습니다(예: `(AutomationProperties.Name)`).
 
 속성 경로 중간 개체는 런타임 표현에서 [**PropertyPath**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyPath) 개체로 저장되지만 대부분의 시나리오는 코드에서 **PropertyPath** 개체를 조작할 필요가 없습니다. 일반적으로 XAML을 사용하여 필요한 바인딩 정보를 지정할 수 있습니다.
 
@@ -66,7 +66,7 @@ ms.locfileid: "72998605"
 ## <a name="properties-of-the-binding-class-that-can-be-set-with-binding"></a>{Binding}으로 설정할 수 있는 Binding 클래스의 속성
 
 
-태그 확장에서 설정될 수 있는 [**Binding**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding)의 읽기/쓰기 속성이 여러 개이기 때문에 **{Binding}** 은 *bindingProperties* 자리 표시자 구문을 통해 설명됩니다. 쉼표로 구분된 *propName*=*value* 쌍으로 순서에 상관없이 속성을 설정할 수 있습니다. 일부 속성에는 형식 변환이 없는 형식이 필요하므로 해당 태그 확장이 **{Binding}** 에 중첩되어야 합니다.
+태그 확장에서 설정될 수 있는Binding의 읽기/쓰기 속성이 여러 개이기 때문에 [{Binding}**은** bindingProperties](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.Binding) 자리 표시자 구문을 통해 설명됩니다. 쉼표로 구분된 *propName*=*value* 쌍으로 순서에 상관없이 속성을 설정할 수 있습니다. 일부 속성에는 형식 변환이 없는 형식이 필요하므로 해당 태그 확장이 **{Binding}** 에 중첩되어야 합니다.
 
 | 속성 | 설명 |
 |----------|-------------|

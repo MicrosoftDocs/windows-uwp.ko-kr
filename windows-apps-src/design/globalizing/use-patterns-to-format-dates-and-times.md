@@ -1,5 +1,5 @@
 ---
-Description: Use the Windows.Globalization.DateTimeFormatting API with custom templates and patterns to display dates and times in exactly the format you wish.
+Description: 사용자 지정 템플릿 및 패턴으로 Windows.globalization.datetimeformatting API를 사용 하 여 원하는 형식으로 날짜 및 시간을 표시 합니다.
 title: 날짜 및 시간 형식 지정 패턴 사용
 ms.assetid: 012028B3-9DA2-4E72-8C0E-3E06BEC3B3FE
 label: Use patterns to format dates and times
@@ -15,17 +15,17 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74258125"
 ---
-# <a name="use-templates-and-patterns-to-format-dates-and-times"></a>날짜 및 시간 형식을 지정하는 템플릿 및 패턴 사용
+# <a name="use-templates-and-patterns-to-format-dates-and-times"></a>날짜 및 시간 형식 지정 템플릿 및 패턴 사용
 
 날짜 및 시간을 원하는 형식으로 정확히 표시하려면 [**Windows.Globalization.DateTimeFormatting**](/uwp/api/windows.globalization.datetimeformatting?branch=live) 네임스페이스와 사용자 지정 템플릿에 클래스를 사용하세요.
 
 ## <a name="introduction"></a>소개
 
-[  **DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live) 클래스는 세계 여러 국가와 언어에 맞게 적절하게 날짜 및 시간의 형식을 지정하는 다양한 방법을 제공합니다. 년, 월, 일 등에 표준 형식을 사용할 수 있습니다. 또는 **DateTimeFormatter** 생성자의 *formatTemplate* 인수에 "긴 날짜 형식" 또는 "월 일"과 같은 형식 템플릿을 전달할 수 있습니다.
+[  **DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live) 클래스는 세계 여러 국가와 언어에 맞게 적절하게 날짜 및 시간의 형식을 지정하는 다양한 방법을 제공합니다. 년, 월, 일 등에 표준 형식을 사용할 수 있습니다. 또는 *DateTimeFormatter* 생성자의 **formatTemplate** 인수에 "긴 날짜 형식" 또는 "월 일"과 같은 형식 템플릿을 전달할 수 있습니다.
 
 그러나 표시하려는 [**DateTime**](/uwp/api/windows.foundation.datetime?branch=live) 개체 구성 요소의 순서 및 형식을 조금 더 제어하려는 경우 생성자의 *formatTemplate* 인수에 형식 패턴을 전달할 수 있습니다. 형식 패턴은 특수 구문을 사용하므로 **DateTime** 개체의 개별 구성 요소인 월 이름만 또는 연도 값만을 가져와 직접 선택한 사용자 지정 형식으로 표시할 수 있습니다. 또한 다른 언어 및 지역에 맞게 패턴을 지역화할 수 있습니다.
 
-**Note**  This is only an overview of format patterns. 형식 템플릿 및 형식 패턴에 대한 자세한 내용은 [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live) 클래스의 설명 섹션을 참조하세요.
+**참고**  이는 형식 패턴의 개요입니다. 형식 템플릿 및 형식 패턴에 대한 자세한 내용은 [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live) 클래스의 설명 섹션을 참조하세요.
 
 ## <a name="the-difference-between-format-templates-and-format-patterns"></a>형식 템플릿과 형식 패턴의 차이점
 
@@ -39,7 +39,7 @@ var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatt
 
 이 템플릿은 현재 컨텍스트의 언어와 지역 값을 기반으로 포맷터를 만듭니다. 형식 템플릿의 구성 요소 순서는 상관이 없습니다. 포맷터는 현재 언어에 맞는 순서로 표시합니다. 따라서 영어(미국)는 "January 1"이고, 프랑스어(프랑스)는 "1 janvier"이며, 일본어(일본)의 경우는 "1月1日"입니다.
 
-반면 형식 패턴은 문화권마다 다릅니다. Let's access the format pattern for our format template.
+반면 형식 패턴은 문화권마다 다릅니다. 서식 템플릿에 대 한 형식 패턴에 액세스 하겠습니다.
 
 ```csharp
 IReadOnlyList<string> monthDayPatterns = dateFormatter.Patterns;
@@ -59,7 +59,7 @@ Ja-JP: "{month.integer}月{day.integer}日"
 var dateFormatter = new Windows.Globalization.DateTimeFormatting.DateTimeFormatter("{month.full} {day.integer}");
 ```
 
-The formatter above returns culture-specific values for the individual components inside the brackets {}. 그러나 형식 패턴의 구성 요소 순서는 고정되어 있습니다. 원하는 정확한 결과를 얻게 되지만 문화적으로 적절할 수도 있고 그렇지 않을 수 있습니다. 이 포맷터는 영어(미국)에는 유효하지만 프랑스어(프랑스)나 일본어에는 유효하지 않습니다.
+위의 포맷터는 {}대괄호 안의 개별 구성 요소에 대 한 문화권별 값을 반환 합니다. 그러나 형식 패턴의 구성 요소 순서는 고정되어 있습니다. 원하는 정확한 결과를 얻게 되지만 문화적으로 적절할 수도 있고 그렇지 않을 수 있습니다. 이 포맷터는 영어(미국)에는 유효하지만 프랑스어(프랑스)나 일본어에는 유효하지 않습니다.
 
 ``` syntax
 En-US: January 1
@@ -76,14 +76,14 @@ Ja-JP: 1月1 (inappropriate for Japan; the day symbol 日 is missing)
 
 형식 템플릿과 형식 패턴 간의 차이점을 다음과 같이 요약할 수 있습니다.
 
-**Format templates, such as "month day"**
+**서식 템플릿 (예: "월 일")**
 
 -   월과 일에 대한 값을 특정 순서로 포함하는 [DateTime](/uwp/api/windows.foundation.datetime?branch=live) 형식의 추상적 표현입니다.
 -   Windows에서 지원하는 모든 언어-국가 값에 대해 유효한 표준 형식을 반환하도록 보장됩니다.
 -   지정된 언어-국가에 대해 문화권에 알맞게 형식이 지정된 문자열을 제공하도록 보장됩니다.
 -   모든 구성 요소의 조합이 유효하지는 않습니다. 예를 들어 "요일 일"은 유효하지 않습니다.
 
-**Format patterns, such as "{month.full} {day.integer}"**
+**형식 패턴 (예: "{month. full} {day. 정수}")**
 
 -   전체 월 이름, 공백, 일 정수순으로 또는 지정하는 특정 형식 패턴으로 나타내도록 명시적으로 순서가 지정된 문자열입니다.
 -   언어-국가 쌍에 대해 유효한 표준 형식에 해당하지 않을 수 있습니다.
@@ -98,7 +98,7 @@ Ja-JP: 1月1 (inappropriate for Japan; the day symbol 日 is missing)
 June 25 | 1:38 PM
 ```
 
-날짜 부분은 "월 일" 형식 템플릿에 해당하고, 시간 부분은 "시간 분" 형식 템플릿에 해당합니다. So, you can construct formatters for the relevant date and time format templates, and then concatenate their output together using a localizable format string.
+날짜 부분은 "월 일" 형식 템플릿에 해당하고, 시간 부분은 "시간 분" 형식 템플릿에 해당합니다. 따라서 관련 날짜 및 시간 서식 템플릿에 대 한 포맷터를 구성한 다음 지역화할 수 있는 형식 문자열을 사용 하 여 해당 출력을 함께 연결할 수 있습니다.
 
 ```csharp
 var dateToFormat = System.DateTime.Now;
@@ -113,7 +113,7 @@ var time = timeFormatter.Format(dateToFormat);
 string output = string.Format(resourceLoader.GetString("CustomDateTimeFormatString"), date, time);
 ```
 
-`CustomDateTimeFormatString` is a resource identifier referring to a localizable resource in a Resources File (.resw). For a default language of English (United States), this would be set to a value of "{0} | {1}" along with a comment indicating that "{0}" is the date and "{1}" is the time. 이런 방식으로 번역자는 필요에 따라 형식 항목을 조정할 수 있습니다. 예를 들어, 일부 언어나 지역에서 시간이 날짜 앞에 오는 것이 더 자연스럽게 느껴지면 항목의 순서를 변경할 수 있습니다. 또는 "|"를 다른 구분 기호 문자로 바꿀 수 있습니다.
+`CustomDateTimeFormatString`는 리소스 파일 (. resw)에서 지역화할 수 있는 리소스를 참조 하는 리소스 식별자입니다. 영어 (미국)의 기본 언어의 경우 "{0} | 값으로 설정 됩니다. "{0}"가 날짜이 고 "{1}"가 시간 임을 나타내는 주석과 함께 {1}. 이런 방식으로 번역자는 필요에 따라 형식 항목을 조정할 수 있습니다. 예를 들어, 일부 언어나 지역에서 시간이 날짜 앞에 오는 것이 더 자연스럽게 느껴지면 항목의 순서를 변경할 수 있습니다. 또는 "|"를 다른 구분 기호 문자로 바꿀 수 있습니다.
 
 이 예를 구현하는 또다른 방법은 형식 패턴에 2개의 포맷터를 쿼리하고 함께 연결한 다음 결과 형식 패턴에서 세 번째 포맷터를 구성하는 것입니다.
 
@@ -135,10 +135,10 @@ string output = patternFormatter.Format(System.DateTime.Now);
 
 ## <a name="important-apis"></a>중요 API
 
-* [Windows.Globalization.DateTimeFormatting](/uwp/api/windows.globalization.datetimeformatting?branch=live)
+* [Windows.globalization.datetimeformatting](/uwp/api/windows.globalization.datetimeformatting?branch=live)
 * [DateTimeFormatter](/uwp/api/windows.globalization.datetimeformatting?branch=live)
-* [DateTime](/uwp/api/windows.foundation.datetime?branch=live)
+* [날짜](/uwp/api/windows.foundation.datetime?branch=live)
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Date and time formatting sample](https://code.msdn.microsoft.com/windowsapps/Date-and-time-formatting-2361f348)
+* [날짜 및 시간 형식 지정 샘플](https://code.msdn.microsoft.com/windowsapps/Date-and-time-formatting-2361f348)

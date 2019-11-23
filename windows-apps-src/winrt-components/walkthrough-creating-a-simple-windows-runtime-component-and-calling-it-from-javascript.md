@@ -17,7 +17,7 @@ ms.locfileid: "72578156"
 
 이 연습에서는 Visual Basic를 사용 하 여 .NET을 사용 C# 하거나 Windows 런타임 구성 요소에 패키지 된 고유한 Windows 런타임 형식을 만들고이 구성 요소를 UWP (JavaScript 유니버설 Windows 플랫폼) 앱에서 호출 하는 방법을 보여 줍니다.
 
-Visual Studio를 사용 하면 또는 Visual Basic으로 C# 작성 된 WRC (Windows 런타임 구성 요소) 프로젝트 내에서 고유한 사용자 지정 Windows 런타임 형식을 작성 하 고 배포한 후 JavaScript 응용 프로그램 프로젝트에서 해당 WRC를 참조 하 고이를 사용할 수 있습니다. 해당 응용 프로그램의 사용자 지정 형식입니다.
+Visual Studio를 사용 하면 또는 Visual Basic으로 C# 작성 된 WRC (Windows 런타임 구성 요소) 프로젝트 내에서 고유한 사용자 지정 Windows 런타임 형식을 작성 하 고 배포한 후 JavaScript 응용 프로그램 프로젝트에서 해당 WRC를 참조 하 고 해당 응용 프로그램에서 해당 사용자 지정 형식을 사용할 수 있습니다.
 
 내부적으로 Windows 런타임 형식은 UWP 응용 프로그램에서 허용 되는 모든 .NET 기능을 사용할 수 있습니다.
 
@@ -31,7 +31,7 @@ Visual Studio를 사용 하면 또는 Visual Basic으로 C# 작성 된 WRC (Wind
 
 ## <a name="prerequisites"></a>필수 조건:
 
-- Windows 10
+- Windows 10
 - [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/)
 
 ## <a name="creating-a-simple-windows-runtime-class"></a>간단한 Windows 런타임 클래스 만들기
@@ -104,7 +104,7 @@ function basics2() {
 
 JavaScript 프로젝트에서 default.html 파일을 열고 다음 코드에 표시된 대로 본문을 업데이트합니다. 이 코드는 예제 앱에 대한 전체 컨트롤 집합을 포함하며 클릭 이벤트에 대한 함수 이름을 지정합니다.
 
-> 앱을 먼저 **실행   When Basics1** 및 basics2 단추만 단추만 지원 됩니다.
+> **참고**  앱을 처음 실행할 때 Basics1 및 basics2 단추만 단추만 지원 됩니다.
 
 ```html
 <body>
@@ -180,7 +180,7 @@ Basics 1 단추를 선택하여 정적 GetAnswer 메서드의 반환 값을 출�
 
 Basics 2 단추를 선택하여 SampleProperty 속성 값을 증분하고 출력 영역에 새 값을 표시합니다. 문자열 및 숫자와 같은 기본 형식을 매개 변수 형식 및 반환 형식으로 사용할 수 있으며 관리 코드와 JavaScript 간에 전달할 수 있습니다. JavaScript의 숫자는 배정밀도 부동 소수점 형식으로 저장되므로 .NET Framework 숫자 형식으로 변환됩니다.
 
-> **참고**   By 기본값은 JavaScript 코드에만 중단점을 설정할 수 있습니다. Visual Basic 또는 C# 코드를 디버깅 하려면에서 C# Windows 런타임 구성 요소 만들기 및 Visual Basic를 참조 하세요.
+> **참고**  기본적으로 JavaScript 코드에만 중단점을 설정할 수 있습니다. Visual Basic 또는 C# 코드를 디버깅 하려면에서 C# Windows 런타임 구성 요소 만들기 및 Visual Basic를 참조 하세요.
 
 디버깅을 중지하고 앱을 닫으려면 앱에서 Visual Studio로 전환하고 Shift+F5를 선택합니다.
 
@@ -188,7 +188,7 @@ Basics 2 단추를 선택하여 SampleProperty 속성 값을 증분하고 출력
 
 JavaScript 또는 관리 코드에서 Windows 런타임을 호출할 수 있습니다. 둘 간에 Windows 런타임 개체를 전달할 수 있으며, 어느 한 쪽에서 이벤트를 처리할 수 있습니다. 그러나 JavaScript와 .NET은 Windows 런타임를 다르게 지원 하기 때문에 두 환경에서 Windows 런타임 형식을 사용 하는 방법은 약간 다릅니다. 다음 예제에서는 [Windows.Foundation.Collections.PropertySet](/uwp/api/windows.foundation.collections.propertyset) 클래스를 사용하여 이러한 차이를 보여 줍니다. 이 예제에서는 관리 코드에서 PropertySet 컬렉션의 인스턴스를 만들고 이벤트 처리기를 등록하여 컬렉션의 변경 내용을 추적합니다. 그런 다음 컬렉션을 가져오고 자체 이벤트 처리기를 등록한 다음 컬렉션을 사용하는 JavaScript 코드를 추가합니다. 마지막으로, 관리 코드에서 컬렉션을 변경하고 관리되는 예외를 처리하는 JavaScript를 표시하는 메서드를 추가합니다.
 
-> **중요**   In이 예제에서는 UI 스레드에서 이벤트가 발생 합니다. 백그라운드 스레드(예: 비동기 호출)에서 이벤트가 발생하는 경우 JavaScript에서 이벤트를 처리하려면 몇 가지 추가 작업을 수행해야 합니다. 자세한 내용은 [Windows 런타임 구성 요소에서 이벤트 발생](raising-events-in-windows-runtime-components.md)을 참조 하세요.
+> **중요**  이 예제에서는 UI 스레드에서 이벤트가 발생 합니다. 백그라운드 스레드(예: 비동기 호출)에서 이벤트가 발생하는 경우 JavaScript에서 이벤트를 처리하려면 몇 가지 추가 작업을 수행해야 합니다. 자세한 내용은 [Windows 런타임 구성 요소에서 이벤트 발생](raising-events-in-windows-runtime-components.md)을 참조 하세요.
 
 SampleComponent 프로젝트에서 PropertySetStats라는 새 **public sealed** 클래스(Visual Basic의 경우 **Public NotInheritable** 클래스)를 추가합니다. 클래스는 PropertySet 컬렉션을 래핑하고 해당 MapChanged 이벤트를 처리합니다. 이벤트 처리기가 발생하는 각 종류의 변경 내용 수를 추적하고, DisplayStats 메서드는 html로 형식이 지정된 보고서를 생성합니다. 추가 **using** 문(Visual Basic의 경우 **Imports** 문)을 확인합니다. 덮어쓰는 대신 기존 **using** 문에 이 문을 추가해야 합니다.
 
@@ -262,7 +262,7 @@ SampleComponent 프로젝트에서 PropertySetStats라는 새 **public sealed** 
 > End Class
 > ```
 
-이벤트 전송자 (이 경우 PropertySet 개체)가 시각적 개체의 IObservableMap &lt;string, 개체 &gt; 인터페이스 (IObservableMap (Of String, Object))로 캐스팅 되는 경우를 제외 하 고 이벤트 처리기는 익숙한 .NET Framework 이벤트 패턴을 따릅니다. Basic)은 Windows 런타임 인터페이스 [IObservableMap &lt;K, V &gt;](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)의 인스턴스화입니다. 필요한 경우 발신자를 해당 형식으로 캐스팅할 수 있습니다. 또한 이벤트 인수는 개체가 아닌 인터페이스로 제공 됩니다.
+이벤트 전송자 (이 경우 PropertySet 개체)가 IObservableMap&lt;string, 개체&gt; 인터페이스 ( [Windows 런타임 ](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)Visual Basic의 IObservableMap (of String, object))로 캐스팅 되는 경우를 제외 하 고, 이벤트 처리기는 익숙한 .NET Framework 이벤트 패턴을 따릅니다.&lt;&gt; 필요한 경우 발신자를 해당 형식으로 캐스팅할 수 있습니다. 또한 이벤트 인수는 개체가 아닌 인터페이스로 제공 됩니다.
 
 default.js 파일에서 Runtime1 함수를 표시된 대로 추가합니다. 이 코드는 PropertySetStats 개체를 만들고, 해당 PropertySet 컬렉션을 가져오고, 자체 이벤트 처리기인 onMapChanged 함수를 추가하여 MapChanged 이벤트를 처리합니다. 컬렉션을 변경한 후 runtime1은 DisplayStats 메서드를 호출하여 변경 유형에 대한 요약을 표시합니다.
 
@@ -367,7 +367,7 @@ runtimeButton2.addEventListener("click", runtime2, false);
 
 앱을 실행하려면 F5 키를 선택합니다. **Runtime 1**, **Runtime 2**를 차례로 선택합니다. JavaScript 이벤트 처리기가 컬렉션에 대한 첫 번째 변경 내용을 보고합니다. 그러나 두 번째 변경 내용은 중복 키를 갖습니다. .NET Framework 사전의 사용자는 Add 메서드에서 예외가 발생할 것을 예상하며 실제로 예외가 발생합니다. JavaScript는 .NET 예외를 처리 합니다.
 
-> **참고**   You JavaScript 코드에서 예외의 메시지를 표시할 수 없습니다. 메시지 텍스트가 스택 추적으로 바뀝니다. 자세한 내용은 및 Visual Basic에서 C# Windows 런타임 구성 요소 만들기에서 "예외 throw"를 참조 하세요.
+> **참고**  JavaScript 코드에서 예외의 메시지를 표시할 수 없습니다. 메시지 텍스트가 스택 추적으로 바뀝니다. 자세한 내용은 및 Visual Basic에서 C# Windows 런타임 구성 요소 만들기에서 "예외 throw"를 참조 하세요.
 
 반면, JavaScript에서 중복 키를 사용하여 insert 메서드를 호출한 경우 항목의 값이 변경되었습니다. 이러한 동작의 차이는 [및 Visual Basic를 사용 C# 하 Windows 런타임 구성 요소](creating-windows-runtime-components-in-csharp-and-visual-basic.md)에 설명 된 대로 JavaScript 및 .net에서 Windows 런타임를 지 원하는 다양 한 방법으로 인해 발생 합니다.
 
@@ -404,7 +404,7 @@ runtimeButton2.addEventListener("click", runtime2, false);
 
 사전은 [Dictionary&lt;TKey, TValue&gt;](/dotnet/api/system.collections.generic.dictionary-2)에 의해 구현되고 Windows 런타임 인터페이스에 매핑되는 인터페이스로 반환되어야 합니다. 이 경우 인터페이스는 IDictionary&lt;int, string&gt;(Visual Basic의 경우 IDictionary(Of Integer, String))입니다. Windows 런타임 형식 IMap&lt;int, string&gt;은 관리 코드에 전달될 때 IDictionary&lt;int, string&gt;으로 표시되며 관리 형식이 JavaScript에 전달될 때는 그 반대가 됩니다.
 
-**중요**   When 관리 되는 형식이 여러 인터페이스를 구현 하는 JavaScript에서는 목록에서 가장 먼저 나타나는 인터페이스를 사용 합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
+**중요**  관리 되는 형식이 여러 인터페이스를 구현 하는 경우 JavaScript에서는 목록에서 가장 먼저 나타나는 인터페이스를 사용 합니다. 예를 들어 Dictionary&lt;int, string&gt;을 JavaScript 코드로 반환하는 경우 반환 형식으로 지정한 인터페이스에 관계없이 IDictionary&lt;int, string&gt;으로 나타납니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
 
  
 
@@ -463,7 +463,7 @@ returnsButton2.addEventListener("click", returns2, false);
 
 다른 예기치 않은 동작이 있습니다. 할당되지 않은 JavaScript 변수를 문자열 인수로 전달하는 경우 "undefined" 문자열을 가져옵니다. 즉, JavaScript 코드에 .NET Framework 컬렉션 형식을 전달할 때는 주의하세요.
 
-> 연결할 많은 양의 텍스트가 **있는   If** showmap 함수와 같이 코드를 .NET Framework 메서드로 이동 하 고 StringBuilder 클래스를 사용 하 여 보다 효율적으로이 작업을 수행할 수 있습니다.
+> **참고**  연결할 많은 양의 텍스트가 있는 경우 showmap 함수와 같이 코드를 .NET Framework 메서드로 이동 하 고 StringBuilder 클래스를 사용 하 여 보다 효율적으로이 작업을 수행할 수 있습니다.
 
 Windows 런타임 구성 요소에서 고유한 제네릭 형식을 표시할 수는 없지만 다음과 같은 코드를 사용하여 Windows 런타임 클래스에 대한 .NET Framework 제네릭 컬렉션을 반환할 수 있습니다.
 
@@ -665,7 +665,7 @@ GetPrimesInRangeAsync는 매우 간단한 소수 찾기이며 이는 의도된 �
     -   [WinJS.Promise](/previous-versions/windows/apps/br211867(v=win.10)) 개체는 반환된 결과를 처리하고, 취소에 대응하고, 진행률 보고서를 처리할 함수를 제공합니다.
     -   AsyncInfo.Run 메서드는 취소 원본과 IProgress&lt;T&gt; 인터페이스를 구현하는 개체를 만듭니다. 대리자에게 취소 원본의 [CancellationToken](/dotnet/api/system.threading.cancellationtoken) 토큰 및 [IProgress&lt;T&gt;](/dotnet/api/system.iprogress-1) 인터페이스 둘 다를 전달합니다.
 
-        > 약속 개체는 취소에 대응 하는 함수를 제공 하지 않습니다. System.runtime.interopservices.windowsruntime.asyncinfo는 취소할 수 있는 토큰을 계속 전달 하 고 취소가 발생할 수 있습니다 **.   If** Promise 개체가 진행률 업데이트를 처리하는 함수를 제공하지 않는 경우에도 AsyncInfo.Run은 IProgress&lt;T&gt;를 구현하는 개체를 제공하지만 해당 보고서는 무시됩니다.
+        > 약속 개체가 취소에 대응 하는 함수를 제공 하지 않는 경우 System.runtime.interopservices.windowsruntime.asyncinfo는 계속 취소할 수 있는 토큰을 전달 하 고 취소가 발생할 수 있습니다 **.  ** Promise 개체가 진행률 업데이트를 처리하는 함수를 제공하지 않는 경우에도 AsyncInfo.Run은 IProgress&lt;T&gt;를 구현하는 개체를 제공하지만 해당 보고서는 무시됩니다.
 
     -   대리자는 [Task.Run&lt;TResult&gt;(Func&lt;TResult&gt;, CancellationToken](/dotnet/api/system.threading.tasks.task.run#System_Threading_Tasks_Task_Run__1_System_Func___0__System_Threading_CancellationToken_)) 메서드를 통해 토큰과 진행률 인터페이스를 사용하는 시작된 작업을 만듭니다. 시작된 작업에 대한 대리자는 원하는 결과를 계산하는 람다 함수에 의해 제공됩니다. 잠시 후에 자세히 설명하겠습니다.
     -   AsyncInfo.Run 메서드는 [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_) 인터페이스를 구현하는 개체를 만들고, Windows 런타임 취소 메커니즘을 토큰 원본에 연결하고, Promise 개체의 진행률 보고 함수를 &lt;T&gt; 인터페이스에 연결합니다.
@@ -674,7 +674,7 @@ GetPrimesInRangeAsync는 매우 간단한 소수 찾기이며 이는 의도된 �
 -   시작된 작업이 나타내는 람다 함수는 인수를 사용하지 않습니다. 람다 함수이기 때문에 토큰 및 IProgress 인터페이스에 액세스할 수 있습니다. 후보 숫자를 평가할 때마다 람다 함수는 다음을 수행합니다.
 
     -   진행률의 다음 백분율 지점에 도달했는지 여부를 확인합니다. 도달한 경우 람다 함수는 IProgress&lt;T&gt;.Report 메서드를 호출하며, Promise 개체가 진행률 보고를 위해 지정한 함수에 백분율이 전달됩니다.
-    -   취소 토큰을 사용하여 작업이 취소된 경우 예외를 발생시킵니다. IAsyncOperationWithProgress&lt;TResult, TProgress&gt; 인터페이스가 상속하는 [IAsyncInfo.Cancel](/uwp/api/windows.foundation.iasyncinfo.cancel) 메서드가 호출된 경우 AsyncInfo.Run 메서드가 설정하는 연결은 취소 토큰이 알림을 받도록 합니다.
+    -   취소 토큰을 사용하여 작업이 취소된 경우 예외를 발생시킵니다. IAsyncOperationWithProgress[TResult, TProgress](/uwp/api/windows.foundation.iasyncinfo.cancel) 인터페이스가 상속하는 &lt;IAsyncInfo.Cancel&gt; 메서드가 호출된 경우 AsyncInfo.Run 메서드가 설정하는 연결은 취소 토큰이 알림을 받도록 합니다.
 -   람다 함수가 소수 목록을 반환하는 경우 WinJS.Promise 개체가 결과 처리를 위해 지정한 함수에 목록이 전달됩니다.
 
 JavaScript promise를 만들고 취소 메커니즘을 설정하려면 default.js에 asyncRun 및 asyncCancel 함수를 추가합니다.

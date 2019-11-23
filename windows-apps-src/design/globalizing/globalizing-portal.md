@@ -18,9 +18,9 @@ ms.locfileid: "72302255"
 ---
 # <a name="globalization-and-localization"></a>세계화 및 지역화
 
-Windows는 전 세계에서 언어, 지역, 문화 측면에서 다양한 사용자가 사용합니다. 사용자는 다양한 국가와 지역에서 다양한 언어를 사용합니다. 일부 사용자는 2개국어 이상을 사용합니다. 따라서 앱은 언어, 지역 및 문화 시스템 설정이 다양하게 조합된 구성에서 실행됩니다. *세계화* 및 *지역화*를 사용하여 앱을 쉽게 조정할 수 있도록 디자인하면 앱의 잠재 시장을 늘릴 수 있습니다.
+Windows는 전 세계에서 언어, 지역, 문화가 다양한 사용자가 사용합니다. 사용자는 다양한 국가와 지역에서 다양한 언어를 사용합니다. 일부 사용자는 2개국어 이상을 사용합니다. 따라서 앱은 언어, 지역 및 문화 시스템 설정이 다양하게 조합된 구성에서 실행됩니다. *세계화* 및 *지역화*를 사용하여 앱을 쉽게 조정할 수 있도록 디자인하면 앱의 잠재 시장을 늘릴 수 있습니다.
 
-이 비디오에서는 전 세계에 대해 앱을 준비 하는 방법을 간략하게 소개 합니다. [세계화 및 지역화에 대해 소개](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization)합니다.
+이 동영상에는 세계에 판매하기 위해 앱을 준비하는 방법을 간략히 소개하는 [세계화 및 지역화 소개](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization)가 포함되어 있습니다.
 
 **세계화**는 문화에 따라 변경 또는 사용자 지정할 필요 없이 서로 다른 세계 시장(다른 언어 및 문화로 구성된 시스템)에서 적절하게 작동하는 방식으로 앱을 디자인하고 개발하는 과정입니다.
 
@@ -38,7 +38,7 @@ Windows는 전 세계에서 언어, 지역, 문화 측면에서 다양한 사용
 - 정렬 규칙
 
 >[!NOTE]
-> Windows 운영 체제 버전에서 지원 되는 로캘 이름 목록은 [Appendix A에 있는 테이블의 언어 태그 열을 참조 하세요. [WINDOWS LCID (언어 코드 식별자) 참조](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f)의 제품 동작 @ no__t-0입니다.
+> Windows 운영 체제 버전에서 지원 되는 로캘 이름 목록은 [WINDOWS LCID (언어 코드 식별자) 참조](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f)의 [부록 a: 제품 동작](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) 에서 표 태그 열을 참조 하세요.
 
 **지역화**는 세계화된 앱을 현지화하기 위해 준비하고 앱이 현지화되기 위한 준비가 되었는지 확인하는 과정입니다. 앱이 올바르게 현지화되도록 하면 나중에 현지화 과정에서 앱의 작동 문제를 다루지 않아도 됩니다. 지역화할 앱의 가장 중요한 속성은 실행 코드가 앱의 지역화 리소스와 깔끔하게 분리된 것입니다.
 
@@ -62,9 +62,9 @@ Windows는 전 세계에서 언어, 지역, 문화 측면에서 다양한 사용
 | [날짜/시간/숫자 서식 전역화](use-global-ready-formats.md) | 날짜, 시간, 숫자, 전화 번호 및 통화의 형식을 적절하게 지정하여 세계화를 대비한 앱을 디자인합니다. 그러면 나중에 전 세계 지역/국가의 다른 문화, 지역 및 언어에 맞춰 앱을 조정할 수 있습니다. |
 | [템플릿과 패턴을 사용 하 여 날짜 및 시간 형식 지정](use-patterns-to-format-dates-and-times.md) | 날짜 및 시간을 원하는 형식으로 정확히 표시하려면 [**Windows.Globalization.DateTimeFormatting**](/uwp/api/windows.globalization.datetimeformatting?branch=live) 네임스페이스와 사용자 지정 템플릿에 클래스를 사용하세요. |
 | [레이아웃 및 글꼴 조정, RTL 지원](adjust-layout-and-fonts--and-support-rtl.md) | RTL(오른쪽에서 왼쪽) 방향으로 읽는 것을 포함하여 여러 언어의 레이아웃과 글꼴을 지원하기 위해 앱을 설계합니다. |
-| [NumeralSystem 값](glob-numeralsystem-values.md) | 이 항목에서는 [**Windows.Globalization**](/uwp/api/windows.globalization?branch=live) 네임스페이스의 다양한 **NumeralSystem** 속성 클래스에 대해 사용할 수 있는 값을 나열합니다. |
+| [NumeralSystem 값](glob-numeralsystem-values.md) | 이 항목에서는Windows.Globalization[**네임스페이스의 다양한**NumeralSystem](/uwp/api/windows.globalization?branch=live) 속성 클래스에 대해 사용할 수 있는 값을 나열합니다. |
 | [앱을 지역화할 수 있도록 설정](prepare-your-app-for-localization.md) | 현지화된 앱은 앱에 기능적인 결함은 다루지 않고 다른 시장, 언어 또는 지역에 맞게 현지화할 수 있습니다. 지역화할 앱의 가장 중요한 속성은 실행 코드가 앱의 지역화 리소스와 깔끔하게 분리된 것입니다. |
-| [국제 글꼴](loc-international-fonts.md) | 이 항목에서는 미국 이외의 언어로 지역화 된 UWP 앱에 사용할 수 있는 글꼴을 나열 합니다. 사용합니다. |
+| [국제 글꼴](loc-international-fonts.md) | 이 항목에서는 미국 영어 이외의 언어로 지역화되어 UWP 앱에 사용할 수 있는 글꼴을 나열합니다. |
 | [양방향 텍스트에 대 한 앱 디자인](design-for-bidi-text.md) | 왼쪽에서 오른쪽 및 오른쪽에서 왼쪽 쓰기 시스템으로 구성된 스크립트를 결합할 수 있도록 양방향 텍스트 지원을 제공하도록 앱을 디자인합니다. |
 | [다국어 앱 도구 키트 4.0 사용](use-mat.md) | 다국어 앱 도구 키트 (대만) 4.0는 Microsoft Visual Studio 2017 이상과 통합 되어, 번역 지원, 번역 파일 관리 및 편집기 도구를 사용 하 여 UWP 앱을 제공 합니다. |
 | [다국어 앱 도구 키트 4.0 FAQ & 문제 해결](mat-faq-troubleshooting.md) | 이 항목에는 자주 묻는 질문과 대답, 다국어 앱 도구 키트(MAT) 4.0과 관련된 문제가 나와 있습니다. |

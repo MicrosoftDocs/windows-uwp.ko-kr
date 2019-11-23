@@ -78,19 +78,19 @@ Windows 데스크톱의 장치 포털은 표준 페이지 세트를 제공합니
 
 ### <a name="registry-based-configuration-for-device-portal"></a>장치 포털의 레지스트리 기반 구성
 
-Device Portal용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음 레지스트리 키를 설정할 수 있습니다.
+장치 포털용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음 레지스트리 키를 설정할 수 있습니다.
 
-- @No__t에서-0
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service`에서
     - `UseDynamicPorts`: 필수 DWORD입니다. 선택한 포트 번호를 유지하려면 이 항목을 0으로 설정합니다.
-    - `HttpPort`: 필수 DWORD입니다. Device Portal이 HTTP 연결을 수신 대기하는 포트 번호를 포함합니다.    
+    - `HttpPort`: 필수 DWORD입니다. 장치 포털이 HTTP 연결을 수신 대기하는 포트 번호를 포함합니다.    
     - `HttpsPort`: 필수 DWORD입니다. Device Portal이 HTTPS 연결을 수신 대기하는 포트 번호를 포함합니다.
     
 동일한 regkey 경로에서 인증 요구 사항을 헤제할 수 있습니다.
-- 사용 하지 @no__t 않도록 설정 된 `UseDefaultAuthorizer` @ no__t-1 @ no__t  
+- 사용 하지 않도록 설정 된  - `0` `UseDefaultAuthorizer`사용 하도록 `1`.  
     - 이는 각 연결과 HTTP에서 HTTPS로의 기본적인 인증 요구 사항을 모두 제어합니다.  
     
 ### <a name="command-line-options-for-device-portal"></a>장치 포털의 명령줄 옵션
-관리자 명령 프롬프트에서 장치 포털의 일부를 사용하도록 설정하고 구성할 수 있습니다. 빌드에 대해 지원 되는 최신 명령 집합을 보려면 `webmanagement /?`을 실행 하면 됩니다.
+관리자 명령 프롬프트에서 장치 포털의 일부를 사용하도록 설정하고 구성할 수 있습니다. 빌드에 대해 지원 되는 최신 명령 집합을 보려면 `webmanagement /?`를 실행 하면 됩니다.
 
 - `sc start webmanagement` 또는 `sc stop webmanagement` 
     - 서비스 켜기 또는 끄기. 이 경우에도 개발자 모드를 사용하도록 설정해야 합니다. 
@@ -113,7 +113,7 @@ Device Portal용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음
 
 Windows 10의 시험판 빌드에 개발자 패키지를 설치 하려고 하면이 오류가 발생할 수 있습니다. 이러한 주문형 (주문형) 패키지는 Windows 업데이트에서 호스팅되며 시험판 빌드 시 해당 패키지를 다운로드 하려면 flighting 옵트인 해야 합니다. 설치가 올바른 빌드 및 링 조합에 대해 플 라이팅 옵트인 하지 않는 경우 페이로드가 다운로드 되지 않습니다. 다음을 두 번 확인 합니다.
 
-1. **설정 > 업데이트 & 보안 > Windows Insider Program** 로 이동 하 여 **windows 참가자 계정** 섹션에 올바른 계정 정보가 있는지 확인 합니다. 해당 섹션이 표시 되지 않으면 **Windows 참가자 계정 연결**을 선택 하 고 전자 메일 계정을 추가 하 고 **windows 참가자 계정** 제목 아래에 표시 되는지 확인 합니다 (windows **참가자 계정** 에 두 번 연결을 선택 해야 할 수 있음). 실제로 새로 추가 된 계정을 연결 합니다.
+1. **설정 > 업데이트 & 보안 > Windows Insider Program** 로 이동 하 여 **windows 참가자 계정** 섹션에 올바른 계정 정보가 있는지 확인 합니다. 해당 섹션이 표시 되지 않으면 **Windows 참가자 계정 연결**을 선택 하 고 전자 메일 계정을 추가 하 고 **windows 참가자 계정** 제목 아래에 표시 되는지 확인 합니다 ( **windows 참가자 계정 연결** 을 선택 하 여 실제로 새로 추가한 계정을 연결 하려면 두 번 선택 해야 할 수 있음).
  
 2. **어떤 종류의 콘텐츠를 받고 싶으세요?** 에서 **Windows의 활성 개발** 이 선택 되어 있는지 확인 합니다.
  
@@ -121,7 +121,7 @@ Windows 10의 시험판 빌드에 개발자 패키지를 설치 하려고 하면
  
 4. 이제는 Ods를 설치할 수 있습니다. Windows 참가자가 신속 하 게 진행 중이 고 여전히 해당 Ds를 설치할 수 없는 경우 사용자 의견을 제공 하 고 **C:\Windows\Logs\CBS**아래에 로그 파일을 첨부 하세요.
 
-### <a name="sc-startservice-openservice-failed-1060-the-specified-service-does-not-exist-as-an-installed-service"></a>번체 StartService OpenService 실패 1060: 지정 된 서비스가 설치 된 서비스로 존재 하지 않습니다.
+### <a name="sc-startservice-openservice-failed-1060-the-specified-service-does-not-exist-as-an-installed-service"></a>번체 StartService: OpenService FAILED 1060: 지정 된 서비스가 설치 된 서비스로 존재 하지 않습니다.
 
 개발자 패키지가 설치 되지 않은 경우이 오류가 발생할 수 있습니다. 개발자 패키지가 없으면 웹 관리 서비스가 없습니다. 개발자 패키지를 다시 설치 해 보세요.
 
@@ -129,7 +129,7 @@ Windows 10의 시험판 빌드에 개발자 패키지를 설치 하려고 하면
 
 요금제 인터넷 연결을 사용할 경우이 오류가 발생할 수 있습니다. 데이터 통신 연결에서 개발자 패키지를 다운로드할 수 없습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 * [Windows 장치 포털 개요](device-portal.md)
 * [장치 포털 코어 API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

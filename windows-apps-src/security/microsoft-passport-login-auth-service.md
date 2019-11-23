@@ -19,7 +19,7 @@ ms.locfileid: "72282344"
 
 이 프로젝트를 빌드하려면 C# 및 XAML을 사용해 본 경험이 있어야 합니다. 또한 Windows 10 컴퓨터에서 Visual Studio 2015(Community Edition 이상)를 사용해야 합니다.
 
-## <a name="exercise-1-server-side-logic"></a>연습 1: 서버측 논리
+## <a name="exercise-1-server-side-logic"></a>연습 1: 서버 쪽 논리
 
 
 이 연습에서는 첫 번째 랩에 빌드된 Windows Hello 응용 프로그램을 시작하고 로컬 모의 서버와 데이터베이스를 만듭니다. 이 실습 교육의 목적은 Windows Hello를 기존 시스템에 통합하는 방법을 알려드리는 것입니다. 모의 서버와 모의 데이터베이스를 사용하여 관련이 없는 많은 설치가 제거됩니다. 자체 응용 프로그램에서는 실제 서비스 및 데이터베이스로 모의 개체를 교체해야 합니다.
@@ -182,7 +182,7 @@ ms.locfileid: "72282344"
     }
 ```
 
--   Load 메서드에서 InitializeSampleUserAccounts 메서드가 주석으로 처리된 것을 알 수 있습니다. 이 메서드를 MockStore.cs에서 만들어야 합니다. 이 메서드는 로그인이 수행될 수 있도록 사용자 계정 목록을 채웁니다. 실제 환경에서 사용자 데이터베이스는 이미 채워집니다. 이 단계에서 사용자 목록 및 호출 부하를 초기화할 생성자도 만듭니다.
+-   Load 메서드에서 InitializeSampleUserAccounts 메서드가 주석으로 처리된 것을 알 수 있습니다. MockStore.cs에서 이 메서드를 만들어야 합니다. 이 메서드는 로그인이 수행될 수 있도록 사용자 계정 목록을 채웁니다. 실제 환경에서 사용자 데이터베이스는 이미 채워집니다. 이 단계에서 사용자 목록 및 호출 부하를 초기화할 생성자도 만듭니다.
 
     ```cs
     namespace PassportLogin.AuthService
@@ -804,7 +804,7 @@ ms.locfileid: "72282344"
     }
     ```
 
--   계정을 제거할 때 AuthService를 사용할 때 @ no__t-0Forget @ no__t-1User @ no__t-2Click 메서드를 제거할 수 있습니다. 이제 메서드가 아래와 같이 표시됩니다.
+-   계정을 제거할 때 AuthService를 사용 하 고\_\_사용자\_클릭 하 여 제거할 수 있습니다. 이제 메서드가 아래와 같이 표시됩니다.
 
     ```cs
     private void Button_Forget_User_Click(object sender, RoutedEventArgs e)
@@ -1060,7 +1060,7 @@ ms.locfileid: "72282344"
     }
     ```
 
--   방금 추가한 GetKeyAttestationAsync 메서드에서 마지막 줄이 주석으로 처리된 것을 알 수 있습니다. 이 마지막 줄은 새로 만들 메서드로서, 모든 Windows Hello 정보를 AuthService로 보냅니다. 실제 환경에서는 이를 Web API가 있는 실제 서버에 전송해야 합니다.
+-   방금 추가한 GetKeyAttestationAsync 메서드에서 마지막 행이 주석 처리되었음을 알았을 수 있습니다. 이 마지막 행은 사용자 만드는 새로운 메서드가 되며 모든 Windows Hello 정보를 AuthService로 보냅니다. 실제 환경에서는 이를 Web API가 있는 실제 서버에 전송해야 합니다.
 
     ```cs
     using System.Runtime.InteropServices.WindowsRuntime;

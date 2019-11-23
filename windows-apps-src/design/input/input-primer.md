@@ -43,11 +43,11 @@ UWP는 "스마트"한 상황별 상호 작용 시스템을 사용하여 대부�
 
 ### <a name="more-info"></a>추가 정보
 
-[Gaze interactions and eye tracking](gaze-interactions.md)
+[상호 작용 및 눈 추적 응시](gaze-interactions.md)
 
 ## <a name="surface-dial"></a>Surface Dial
 
-**Windows 10 1주년 업데이트**를 위해 Windows Wheel이라는 새로운 입력 장치 범주가 도입되었습니다. Surface Dial은 이 클래스의 장치에서 제일 첫 번째 장치입니다.
+**Windows 10 1주년 업데이트**를 위해 Windows Wheel이라는 새로운 입력 장치 범주가 도입되었습니다. Surface Dial은 이 장치급에서 제일 첫 번째 장치입니다.
 
 ### <a name="device-support"></a>장치 지원
 
@@ -60,11 +60,11 @@ UWP는 "스마트"한 상황별 상호 작용 시스템을 사용하여 대부�
 
 ### <a name="more-info"></a>추가 정보
 
-[Surface Dial design guidelines](windows-wheel-interactions.md)
+[노출 다이얼 디자인 지침](windows-wheel-interactions.md)
 
 ## <a name="cortana"></a>Cortana
 
-In Windows 10, **Cortana** extensibility lets you handle voice commands from a user and launch your application to carry out a single action.
+Windows 10에서 **Cortana** 확장성을 사용 하면 사용자의 음성 명령을 처리 하 고 응용 프로그램을 시작 하 여 단일 작업을 수행할 수 있습니다.
 
 ### <a name="device-support"></a>장치 지원
 
@@ -82,14 +82,14 @@ In Windows 10, **Cortana** extensibility lets you handle voice commands from a 
 
 음성 명령은 **Cortana**를 통해 설치된 앱에 대한 VCD(음성 명령 정의) 파일에 정의된 한 번의 말하기입니다. 조작의 수준 및 복잡성에 따라 앱은 포그라운드 또는 백그라운드에서 시작될 수 있습니다. 예를 들어 추가 컨텍스트 또는 사용자 입력을 요구하는 음성 명령은 포그라운드에서 가장 잘 처리되는 반면, 기본 명령은 백그라운드에서 처리될 수 있습니다.
 
-앱의 기본 기능을 통합하고 사용자가 앱을 직접 열지 않고도 대부분의 작업을 수행할 수 있는 중앙 진입점을 제공하면 **Cortana**가 앱과 사용자 간의 연락을 담당하는 역할을 할 수 있습니다. 많은 경우 이 덕분에 사용자는 시간과 노력을 상당히 줄일 수 있습니다. 자세한 내용은 [Cortana 디자인 지침](https://docs.microsoft.com/cortana/skills/cortana-design-guidelines)을 참조하세요.
+앱의 기본 기능을 통합하고 사용자가 앱을 직접 열지 않고도 대부분의 작업을 수행할 수 있는 중앙 진입점을 제공하면 **Cortana**가 앱과 사용자 간의 연락을 담당하는 역할을 할 수 있습니다. 많은 경우 이렇게 하면 사용자의 시간과 노력을 상당히 줄일 수 있습니다. 자세한 내용은 [Cortana 디자인 지침](https://docs.microsoft.com/cortana/skills/cortana-design-guidelines)을 참조하세요.
 
 ### <a name="more-info"></a>추가 정보
 
 [Cortana 디자인 지침](https://docs.microsoft.com/cortana/skills/cortana-design-guidelines)
  
 
-## <a name="speech"></a>음성으로
+## <a name="speech"></a>음성 명령
 
 음성 명령은 사람들이 응용 프로그램을 조작하는 효과적이고 자연스러운 방법입니다. 응용 프로그램과 통신하는 쉽고 정확한 방법이며 다양한 상황에서 사람들이 생산성을 유지하고 최신 정보를 얻을 수 있도록 합니다.
 
@@ -107,13 +107,13 @@ In Windows 10, **Cortana** extensibility lets you handle voice commands from a 
 -   Xbox
 -   HoloLens
 
-![음성](images/input-interactions/icons-speech01.png)
+![음성 명령](images/input-interactions/icons-speech01.png)
 
 ### <a name="typical-usage"></a>일반적인 용도
 
 음성 조작에는 세 가지 모드가 있습니다.
 
-**Natural language**
+**자연어**
 
 자연어는 정기적으로 사람들과 구두로 상호 작용하는 방법입니다. 음성 명령은 사람마다 그리고 상황마다 다르며 일반적으로 이해할 수 있습니다. 그렇지 않은 경우 동일한 아이디어를 나타내는 데 종종 다른 단어와 단어 순서를 사용하기도 합니다.
 
@@ -121,13 +121,13 @@ In Windows 10, **Cortana** extensibility lets you handle voice commands from a 
 
 자연어는 가장 뛰어난 음성 조작 모드이며 **Cortana**를 통해 구현되고 표시될 수 있습니다.
 
-**Command and control**
+**명령 및 제어**
 
 명령 및 제어는 음성 명령을 사용하여 단추를 클릭하거나 메뉴 항목을 선택하는 등의 컨트롤 및 기능을 활성화하는 것입니다.
 
-성공적인 사용자 환경에서는 명령 및 제어가 중요하므로 단일 입력 유형은 일반적으로 권장되지 않습니다. 음성은 일반적으로 기본 설정이나 하드웨어 기능을 기반으로 사용자에게 제공되는 여러 가지 입력 옵션 중 하나입니다.
+성공적인 사용자 환경에서는 명령 및 제어가 중요하므로 단일 입력 형식은 일반적으로 권장되지 않습니다. 음성은 일반적으로 기본 설정이나 하드웨어 기능을 기반으로 사용자에게 제공되는 여러 가지 입력 옵션 중 하나입니다.
 
-**Dictation**
+**받아쓰기**
 
 가장 기본적인 음성 입력 방법입니다. 각 말하기가 텍스트로 변환됩니다.
 
@@ -142,7 +142,7 @@ In Windows 10, **Cortana** extensibility lets you handle voice commands from a 
 
 펜(또는 스타일러스)은 마우스와 같은 픽셀 단위의 정밀성을 지닌 포인팅 장치 역할을 할 수 있으며 디지털 잉크 입력에 최적화된 장치입니다.
 
-**Note**  There are two types of pen devices: active and passive.
+펜 장치에는 활성 및 수동 이라는 두 가지 **유형이  있습니다** .
   -   수동 펜은 전자 장치를 포함하지 않으며 손가락의 터치식 입력을 효과적으로 에뮬레이트합니다. 접촉 압력을 기반으로 입력을 인식하는 기본 장치 디스플레이가 필요합니다. 사용자가 입력 표면에 무언가를 쓰는 것처럼 손을 두는 경우 입력 데이터가 실패한 팜 거부로 인해 훼손될 수 있습니다.
   -   활성 펜은 전자 장치를 포함하며 복잡한 장치 디스플레이와 함께 작동하여 훨씬 더 광범위한 입력 데이터(가리키기 또는 근접 데이터 포함)를 시스템 및 앱에 제공할 수 있습니다. 팜 거부는 훨씬 더 강력합니다.
 
@@ -197,7 +197,7 @@ Surface Hub 장치는 100개의 고유한 동시 터치 접촉을 인식합니�
 
 일반적으로 터치는 다음 특징이 있습니다.
 
--   공동 작업이 강조되는 Surface Hub와 같은 Microsoft Team 장치와 함께 사용되지 않는 한 단일 사용자입니다.
+-   협업이 강조되는 Surface Hub와 같은 Microsoft Team 장치와 함께 사용되지 않는 한 단일 사용자입니다.
 -   장치 방향으로 제한되지 않습니다.
 -   텍스트 입력(터치 키보드) 및 수동 입력(앱 구성)을 포함하여 모든 조작에 사용됩니다.
 
@@ -227,14 +227,14 @@ Surface Hub 장치는 100개의 고유한 동시 터치 접촉을 인식합니�
 
 ### <a name="more-info"></a>추가 정보
 
-[Touchpad design guidelines](https://docs.microsoft.com/windows/uwp/input-and-devices/touch-interactions)
+[터치 패드 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/touch-interactions)
  
 
 ## <a name="keyboard"></a>키보드
 
 키보드는 텍스트를 위한 기본 입력 장치이며, 일반적으로 키보드가 앱을 조작하는 보다 빠르고 효율적인 방법이라고 생각하는 사용자나 일정한 장애가 있는 사람들에게는 필수 도구입니다.
 
-With [Continuum for Phone](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN), a new experience for compatible Windows 10 mobile devices, users can connect their phones to a mouse and keyboard to make their phones work like a laptop.
+호환 되는 Windows 10 mobile 장치에 대 한 새로운 환경인, 휴대폰을 [위한 Continuum](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN)을 사용 하면 휴대폰을 마우스와 키보드에 연결 하 여 휴대폰을 랩톱 처럼 작동 하도록 할 수 있습니다.
 
 ### <a name="device-support"></a>장치 지원
 
@@ -256,7 +256,7 @@ OSK는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기
 
 터치 키보드는 터치식 입력과 함께 텍스트 입력에 사용되는 시각적 가상 키보드입니다. 터치 키보드는 텍스트 입력에만 사용되고(하드웨어 키보드를 에뮬레이트하지 않음) 텍스트 필드나 다른 편집 가능한 텍스트 컨트롤에 포커스가 있을 때만 표시되므로 OSK를 대체하지 않습니다. 터치 키보드는 앱 또는 시스템 명령을 지원하지 않습니다.
 
-**Note**  The OSK has priority over the touch keyboard, which won't be shown if the OSK is present.
+OSK는 터치 키보드 보다 우선 순위가 높습니다. OSK이 있는 경우 표시 되지 않습니다 **.  **
 
 일반적으로 키보드는 다음 특징이 있습니다.
 
@@ -267,7 +267,7 @@ OSK는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기
 
 ### <a name="more-info"></a>추가 정보
 
-[Keyboard design guidelines](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
+[키보드 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
  
 
 ## <a name="mouse"></a>마우스
@@ -294,7 +294,7 @@ OSK는 실제 키보드 대신 터치, 마우스, 펜/스타일러스 또는 기
 
 ### <a name="more-info"></a>추가 정보
 
-[Mouse design guidelines](https://docs.microsoft.com/windows/uwp/input-and-devices/mouse-interactions)
+[마우스 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/mouse-interactions)
  
 
 ## <a name="gesture"></a>제스처

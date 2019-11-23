@@ -32,7 +32,7 @@ UWP 앱의 주요 측면은 매끄러운 조작입니다. 여기에는 "손가�
 -   제로 기간 애니메이션
 -   [  **Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) 및 [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top) 속성에 대한 애니메이션
 -   [  **UIElement.Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) 속성에 대한 애니메이션
--   [  **SolidColorBrush.Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 하위 속성을 대상으로 할 때 유형 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush)의 속성에 대한 애니메이션
+-   [  **SolidColorBrush.Color**](/uwp/api/Windows.UI.Xaml.Media.Brush) 하위 속성을 대상으로 할 때 유형 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color)의 속성에 대한 애니메이션
 -   반환 값 유형의 하위 속성을 대상으로 할 때 다음 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 속성에 대한 애니메이션
 
     -   [**System.windows.uielement.rendertransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform)
@@ -44,7 +44,7 @@ UWP 앱의 주요 측면은 매끄러운 조작입니다. 여기에는 "손가�
 
 XAML 프레임워크의 거의 모든 애니메이션은 기본적으로 독립적이므로 몇 가지 작업으로 이 최적화를 비활성화할 수 있습니다. 특히 다음과 같은 경우에 주의하세요.
 
--   종속 애니메이션이 UI 스레드에서 실행될 수 있도록 [**EnableDependentAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.pointanimation.enabledependentanimation) 속성을 설정할 경우. 이 애니메이션을 독립 버전으로 변환합니다. 예를 들어 개체의 [**Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) 및 [**Height**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height)가 아니라 [**ScaleTransform.ScaleX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.scaletransform.scalex) 및 [**ScaleTransform.ScaleY**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.scaletransform.scaley)를 애니메이션합니다. 이미지, 텍스트와 같은 개체의 크기를 주저 없이 조정하세요. 프레임워크에서는 [**ScaleTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ScaleTransform)이 애니메이션되는 동안 쌍선형 크기 조정을 적용합니다. 이미지/텍스트는 최종 크기로 다시 변환되므로 항상 분명하게 표시됩니다.
+-   종속 애니메이션이 UI 스레드에서 실행될 수 있도록 [**EnableDependentAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.pointanimation.enabledependentanimation) 속성을 설정할 경우. 이 애니메이션을 독립 버전으로 변환합니다. 예를 들어 개체의 [**Width**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.scaletransform.scalex) 및 [**Height**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.scaletransform.scaley)가 아니라 [**ScaleTransform.ScaleX**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) 및 [**ScaleTransform.ScaleY**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height)를 애니메이션합니다. 이미지, 텍스트와 같은 개체의 크기를 주저 없이 조정하세요. 프레임워크에서는 [**ScaleTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ScaleTransform)이 애니메이션되는 동안 쌍선형 크기 조정을 적용합니다. 이미지/텍스트는 최종 크기로 다시 변환되므로 항상 분명하게 표시됩니다.
 -   종속 애니메이션에 효과적인 프레임당 업데이트를 만드는 경우. 이와 같은 예는 [**CompositonTarget.Rendering**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.compositiontarget.rendering) 이벤트 처리기의 변형에 적용됩니다.
 -   [  **CacheMode**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.cachemode) 속성이 **BitmapCache**로 설정된 요소에서 독립적으로 간주된 애니메이션을 실행하는 경우. 각 프레임에 대한 캐시가 다시 변환되어야 하므로 이 애니메이션은 종속으로 간주됩니다.
 
@@ -54,7 +54,7 @@ XAML 프레임워크의 거의 모든 애니메이션은 기본적으로 독립�
 
 마찬가지로 [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement) 애니메이션도 바람직한 방법이 아닙니다. 성능이 손상될 뿐만 아니라 재생할 동영상 콘텐츠에서 작은 흠이나 기타 아티팩트가 생길 수 있습니다.
 
-> **참고**  이 **MediaPlayerElement** 에 대 한이 문서의 권장 사항은 [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement)에도 적용 됩니다. **MediaPlayerElement**는 Windows 10 버전 1607에서만 사용할 수 있으므로 이전 버전의 Windows용 앱을 만들려는 경우 **MediaElement**를 사용해야 합니다.
+> **참고**   **MediaPlayerElement** 에 대 한이 문서의 권장 사항은 [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement)에도 적용 됩니다. **MediaPlayerElement**는 Windows 10 버전 1607에서만 사용할 수 있으므로 이전 버전의 Windows용 앱을 만들려는 경우 **MediaElement**를 사용해야 합니다.
 
 ### <a name="use-infinite-animations-sparingly"></a>꼭 필요한 경우에만 무한 애니메이션 사용
 
@@ -85,7 +85,7 @@ XAML 프레임워크의 거의 모든 애니메이션은 기본적으로 독립�
 
 ### <a name="display-full-screen-video-playback-when-possible"></a>가능한 경우 전체 화면 동영상 재생 표시
 
-UWP 앱에서는 항상 [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement)에서 [**IsFullWindow**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.isfullwindow) 속성을 사용하여 전체 창 렌더링을 사용하거나 사용하지 않습니다. 그러면 미디어를 재생하는 동안 시스템 수준 최적화가 사용됩니다.
+UWP 앱에서는 항상 [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.isfullwindow)에서 [**IsFullWindow**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement) 속성을 사용하여 전체 창 렌더링을 사용하거나 사용하지 않습니다. 그러면 미디어를 재생하는 동안 시스템 수준 최적화가 사용됩니다.
 
 XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표시를 최적화하므로 전원이 덜 사용되고 프레임 속도가 높아진 환경이 이루어집니다. 가장 효율적인 미디어 재생을 위해 **MediaPlayerElement** 크기를 화면 너비 및 높이로 설정하며 기타 XAML 요소를 표시하지 않습니다.
 
@@ -117,7 +117,7 @@ XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표�
 
 ### <a name="delay-setting-the-source-for-a-mediaplayerelement"></a>MediaPlayerElement에 대한 소스 설정 지연
 
-미디어 엔진은 부담이 큰 개체이고 XAML 프레임워크에서는 dll 로드 및 큰 개체 만들기를 최대한 오래 지연합니다. [  **소스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) 속성을 통해 소스가 설정된 후 [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement)가 이 작업을 수행해야 합니다. 사용자가 실제로 미디어를 재생할 준비가 될 때 이 항목을 설정하면 **MediaPlayerElement**와 관련된 대부분의 부담이 최대한 오래 지연됩니다.
+미디어 엔진은 부담이 큰 개체이고 XAML 프레임워크에서는 dll 로드 및 큰 개체 만들기를 최대한 오래 지연합니다. [  **소스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement) 속성을 통해 소스가 설정된 후 [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source)가 이 작업을 수행해야 합니다. 사용자가 실제로 미디어를 재생할 준비가 될 때 이 항목을 설정하면 **MediaPlayerElement**와 관련된 대부분의 부담이 최대한 오래 지연됩니다.
 
 ### <a name="set-mediaplayerelementpostersource"></a>MediaPlayerElement.PosterSource 설정
 
@@ -127,7 +127,7 @@ XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표�
 
 언제나 스크러빙은 미디어 플랫폼의 응답 성능을 실현하기 위한 힘든 작업입니다. 일반적으로 사람들은 슬라이더 값을 변경하여 이 목적을 달성합니다. 다음은 스크러빙을 가능한 효율적으로 만드는 방법에 대한 몇 가지 팁입니다.
 
--   [  **MediaPlayerElement.MediaPlayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.mediaplayer)의 [**Position**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.position)을 쿼리하는 타이머에 따라 [**Slider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) 값을 업데이트합니다. 타이머에 대한 적절한 업데이트 빈도를 사용해야 합니다. **Position** 속성만 재생하는 동안 모든 250밀리초마다 업데이트합니다.
+-   [  **MediaPlayerElement.MediaPlayer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider)의 [**Position**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.position)을 쿼리하는 타이머에 따라 [**Slider**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.mediaplayer) 값을 업데이트합니다. 타이머에 대한 적절한 업데이트 빈도를 사용해야 합니다. **Position** 속성만 재생하는 동안 모든 250밀리초마다 업데이트합니다.
 -   슬라이더에서 단계 빈도 크기는 동영상 길이를 통해 조정되어야 합니다.
 -   슬라이더에서 [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed), [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved), [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) 이벤트를 구독하여 사용자가 슬라이더의 위치 조정 컨트롤을 끌 때 [**PlaybackRate**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.playbackrate) 속성을 0으로 설정합니다.
 -   [  **PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) 이벤트 처리기에서 수동으로 미디어 위치를 슬라이더 위치 값으로 설정하여 스크러빙하는 동안 최적의 위치 조정 컨트롤 끌기를 제공합니다.
@@ -190,7 +190,7 @@ DecodePixelWidth/DecodePixelHeight가 이미지가 화면에 표시되는 것보
 -   호스트 이미지 요소 또는 브러시 또는 부모 요소에서 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)를 0으로 설정하거나 [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility)를 **Collapsed**로 설정해서 이미지가 숨겨졌습니다.
 -   이미지 컨트롤 또는 브러시가 [**Stretch**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Stretch)**None**을 사용합니다.
 -   이미지가 [**NineGrid**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.ninegrid)로 사용됩니다.
--   `CacheMode="BitmapCache"`은 image 요소 또는 부모 요소에 대해 설정 됩니다.
+-   `CacheMode="BitmapCache"`는 이미지 요소 또는 부모 요소에 대해 설정 됩니다.
 -   이미지 브러시가 사각형이 아닙니다(예: 모양 또는 텍스트에 적용되는 경우).
 
 위의 시나리오에서는 명시적인 디코드 크기를 설정하는 것이 유일하게 메모리를 절약할 수 있는 방법입니다.
@@ -250,7 +250,7 @@ myImage.Source = bitmapImage;
 XAML은 소프트웨어 메모리에서 중간 표면을 요구하지 않고 하드웨어 메모리의 표면에 비동기적으로 이미지 콘텐츠를 디코딩할 수 있는 내부 최적화가 있습니다. 그러므로 최고 메모리 사용 및 렌더링 대기 시간이 줄어듭니다. 다음 조건 중 하나가 충족되는 경우에는 이 기능이 사용되지 않습니다.
 
 -   이미지가 [**NineGrid**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image.ninegrid)로 사용됩니다.
--   `CacheMode="BitmapCache"`은 image 요소 또는 부모 요소에 대해 설정 됩니다.
+-   `CacheMode="BitmapCache"`는 이미지 요소 또는 부모 요소에 대해 설정 됩니다.
 -   이미지 브러시가 사각형이 아닙니다(예: 모양 또는 텍스트에 적용되는 경우).
 
 ### <a name="softwarebitmapsource"></a>SoftwareBitmapSource
@@ -259,7 +259,7 @@ XAML은 소프트웨어 메모리에서 중간 표면을 요구하지 않고 하
 
 또한 원본 정보를 제공하는 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap)은 사용자 지정 [**IWICBitmap**](https://docs.microsoft.com/windows/desktop/api/wincodec/nn-wincodec-iwicbitmap)을 사용할 수 있도록 구성하여 필요할 때마다 앱에서 메모리를 다시 매핑할 수 있는 재로드 가능 백업 저장소를 제공할 수 있습니다. 이는 고급 C++ 사용 사례입니다.
 
-이미지를 생성하고 사용하는 다른 WinRT API와 상호 작용하려면 앱에서 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 및 [**SoftwareBitmapSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource)를 사용해야 합니다. 그리고 [**WriteableBitmap**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.WriteableBitmap)을 사용하는 대신 압축되지 않은 이미지 데이터를 로드할 때 앱에서 **SoftwareBitmapSource**를 사용해야 합니다.
+이미지를 생성하고 사용하는 다른 WinRT API와 상호 작용하려면 앱에서 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 및 [**SoftwareBitmapSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource)를 사용해야 합니다. 그리고WriteableBitmap[**을 사용하는 대신 압축되지 않은 이미지 데이터를 로드할 때 앱에서** SoftwareBitmapSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Imaging.WriteableBitmap)를 사용해야 합니다.
 
 ### <a name="use-getthumbnailasync-for-thumbnails"></a>미리 보기에 GetThumbnailAsync 사용
 

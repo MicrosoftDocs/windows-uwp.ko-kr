@@ -30,7 +30,7 @@ ms.locfileid: "74258014"
 
 대신 사용자 지정 텍스트 편집 컨트롤을 만들어야 할 경우 [**Windows.UI.Text.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Text.Core) API를 사용하세요. 이러한 API는 모든 언어로 된 텍스트 입력 처리 시 많은 유연성을 제공하도록 디자인되어 앱에 가장 적합한 텍스트 환경을 제공할 수 있도록 합니다. 코어 텍스트 API로 작성된 텍스트 입력 및 편집 컨트롤은 Windows 장치의 모든 기존 텍스트 입력 방법, [텍스트 서비스 프레임워크](https://docs.microsoft.com/windows/desktop/TSF/text-services-framework) 기반 IME(입력기), PC의 필기, 모바일 장치의 WordFlow 키보드(자동 수정, 예측 및 받아쓰기를 제공함)에서 텍스트 입력을 받을 수 있습니다.
 
-## <a name="architecture"></a>Architecture
+## <a name="architecture"></a>아키텍처
 
 
 다음은 텍스트 입력 시스템을 간단하게 표현한 것입니다.
@@ -56,12 +56,12 @@ ms.locfileid: "74258014"
 
 | 필드                  | 데이터 형식                                                                 | 설명                                                                      |
 |------------------------|---------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| **StartCaretPosition** | **Number** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | 범위의 시작 위치는 첫 번째 문자 바로 앞의 ACP입니다. |
-| **EndCaretPosition**   | **Number** \[JavaScript\] | **System.Int32** \[.NET\] | **int32** \[C++\] | 범위의 끝 위치는 마지막 문자 바로 뒤의 ACP입니다.     |
+| **StartCaretPosition** | JavaScript\] \[**수** | **System.object** \[.net\] | **int32** \[C++\] | 범위의 시작 위치는 첫 번째 문자 바로 앞의 ACP입니다. |
+| **EndCaretPosition**   | JavaScript\] \[**수** | **System.object** \[.net\] | **int32** \[C++\] | 범위의 끝 위치는 마지막 문자 바로 뒤의 ACP입니다.     |
 
  
 
-For example, in the text range shown previously, the range \[0, 5\] specifies the word "Hello". **StartCaretPosition**은 항상 **EndCaretPosition**보다 작거나 같아야 합니다. The range \[5, 0\] is invalid.
+예를 들어 앞에 표시 된 텍스트 범위에서 0, 5\] \[범위는 "Hello" 라는 단어를 지정 합니다. **StartCaretPosition**은 항상 **EndCaretPosition**보다 작거나 같아야 합니다. 범위 \[5, 0\] 잘못 되었습니다.
 
 ### <a name="insertion-point"></a>삽입 지점
 
@@ -73,7 +73,7 @@ For example, in the text range shown previously, the range \[0, 5\] specifies th
 
 다음 텍스트 스트림을 예로 들어보겠습니다.
 
-![example text stream diagram](images/coretext/stream-2.png) There are two selections: \[0, 1\] and \[6, 11\]. The edit control must report only one of them; either \[0, 1\] or \[6, 11\].
+예 ![텍스트 스트림 다이어그램](images/coretext/stream-2.png) \[0, 1\], \[6, 11\]의 두 가지 선택 항목이 있습니다. 편집 컨트롤은 그 중 하나만 보고 해야 합니다. \[0, 1\] 또는 \[6, 11\]중 하나입니다.
 
 ## <a name="working-with-text"></a>텍스트 작업
 
@@ -94,13 +94,13 @@ For example, in the text range shown previously, the range \[0, 5\] specifies th
 2.  [  **CoreTextTextUpdatingEventArgs.NewSelection**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.newselection)에 지정된 위치에 선택 항목을 배치합니다.
 3.  [  **CoreTextTextUpdatingEventArgs.Result**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.result)를 [**CoreTextTextUpdatingResult.Succeeded**](https://docs.microsoft.com/uwp/api/Windows.UI.Text.Core.CoreTextTextUpdatingResult)로 설정하여 업데이트 성공을 시스템에 알립니다.
 
-예를 들어 다음은 사용자가 "d"를 입력하기 전의 편집 컨트롤 상태입니다. The insertion point is at \[10, 10\].
+예를 들어 다음은 사용자가 "d"를 입력하기 전의 편집 컨트롤 상태입니다. 삽입 지점은 \[10, 10\]에 있습니다.
 
-![example text stream diagram](images/coretext/stream-3.png) When the user types "d", a [**TextUpdating**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) event is raised with the following [**CoreTextTextUpdatingEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs) data:
+![예제 텍스트 스트림 다이어그램](images/coretext/stream-3.png) 사용자가 "d"를 입력 하면 [**Textupdating**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) 이벤트가 다음 [**CoreTextTextUpdatingEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs) 데이터로 발생 합니다.
 
--   [**Range**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.range) = \[10, 10\]
+-   [**범위**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.range) = \[10, 10\]
 -   [**Text**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.text) = "d"
--   [**NewSelection**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.newselection) = \[11, 11\]
+-   [**Newselection**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.newselection) = \[11, 11\]
 
 편집 컨트롤에서 지정된 변경 내용을 적용하고 [**Result**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.result)를 **Succeeded**로 설정합니다. 다음은 변경 내용이 적용된 후 컨트롤의 상태입니다.
 
@@ -115,15 +115,15 @@ For example, in the text range shown previously, the range \[0, 5\] specifies th
 
 텍스트를 붙여넣거나 텍스트가 자동 수정되는 등의 경우에 편집 컨트롤은 텍스트를 변경합니다. 이러한 경우 [**NotifyTextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.notifytextchanged) 메서드를 호출하여 텍스트 서비스에 이러한 변경 내용을 알려야 합니다.
 
-예를 들어 다음은 사용자가 "World"를 붙여넣기 전의 편집 컨트롤 상태입니다. The insertion point is at \[6, 6\].
+예를 들어 다음은 사용자가 "World"를 붙여넣기 전의 편집 컨트롤 상태입니다. 삽입 지점은 \[6, 6\]에 있습니다.
 
-![example text stream diagram](images/coretext/stream-5.png) The user performs the paste action and the edit control ends up with the following text:
+사용자가 붙여넣기 작업을 수행 하 고 편집 컨트롤이 다음 텍스트를 사용 하](images/coretext/stream-5.png) 예제 텍스트 스트림 다이어그램을 ![합니다.
 
-![example text stream diagram](images/coretext/stream-4.png) When this happens, you should call [**NotifyTextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.notifytextchanged) with these arguments:
+![예제 텍스트 스트림 다이어그램](images/coretext/stream-4.png)이 경우 다음 인수를 사용 하 여 [**NotifyTextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.notifytextchanged) 를 호출 해야 합니다.
 
 -   *modifiedRange* = \[6, 6\]
 -   *newLength* = 5
--   *newSelection* = \[11, 11\]
+-   *Newselection* = \[11, 11\]
 
 하나 이상의 [**TextRequested**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textrequested) 이벤트가 뒤이어 발생하며, 텍스트 서비스에서 작업 중인 텍스트를 업데이트하기 위해 이러한 이벤트를 처리합니다.
 
@@ -131,17 +131,17 @@ For example, in the text range shown previously, the range \[0, 5\] specifies th
 
 편집 컨트롤에서 자동 수정 기능을 제공하기 위해 텍스트 업데이트를 재정의할 수 있습니다.
 
-축약형을 형식화하는 수정 기능을 제공하는 편집 컨트롤을 예로 들어보겠습니다. 다음은 사용자가 스페이스 키를 입력하여 수정을 트리거하기 전의 편집 컨트롤 상태입니다. The insertion point is at \[3, 3\].
+축약형을 형식화하는 수정 기능을 제공하는 편집 컨트롤을 예로 들어보겠습니다. 다음은 사용자가 스페이스 키를 입력하여 수정을 트리거하기 전의 편집 컨트롤 상태입니다. 삽입 지점은 \[3, 3\]에 있습니다.
 
-![example text stream diagram](images/coretext/stream-6.png) The user presses the space key and a corresponding [**TextUpdating**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) event is raised. 편집 컨트롤에서 텍스트 업데이트를 수락합니다. 다음은 수정이 완료되기 전 잠깐의 편집 컨트롤 상태입니다. The insertion point is at \[4, 4\].
+사용자가 space 키를 누르고 해당 [**Textupdating**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) 이벤트가 발생](images/coretext/stream-6.png) 예제 텍스트 스트림 다이어그램을 ![합니다. 편집 컨트롤에서 텍스트 업데이트를 수락합니다. 다음은 수정이 완료되기 전 잠깐의 편집 컨트롤 상태입니다. 삽입 지점은 \[4, 4\]에 있습니다.
 
-![example text stream diagram](images/coretext/stream-7.png) Outside of the [**TextUpdating**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) event handler, the edit control makes the following correction. 다음은 수정이 완료된 후 편집 컨트롤 상태입니다. The insertion point is at \[5, 5\].
+예 ![텍스트 스트림 다이어그램은 [**Textupdating**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) 이벤트 처리기 외부](images/coretext/stream-7.png) 편집 컨트롤은 다음과 같이 수정 합니다. 다음은 수정이 완료된 후 편집 컨트롤 상태입니다. 삽입 지점은 \[5, 5\]에 있습니다.
 
-![example text stream diagram](images/coretext/stream-8.png) When this happens, you should call [**NotifyTextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.notifytextchanged) with these arguments:
+![예제 텍스트 스트림 다이어그램](images/coretext/stream-8.png)이 경우 다음 인수를 사용 하 여 [**NotifyTextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.notifytextchanged) 를 호출 해야 합니다.
 
 -   *modifiedRange* = \[1, 2\]
 -   *newLength* = 2
--   *newSelection* = \[5, 5\]
+-   *Newselection* = \[5, 5\]
 
 하나 이상의 [**TextRequested**](https://docs.microsoft.com/uwp/api/windows.ui.text.core.coretexteditcontext.textrequested) 이벤트가 뒤이어 발생하며, 텍스트 서비스에서 작업 중인 텍스트를 업데이트하기 위해 이러한 이벤트를 처리합니다.
 
@@ -154,8 +154,8 @@ For example, in the text range shown previously, the range \[0, 5\] specifies th
 ## <a name="related-articles"></a>관련 문서
 
 **샘플**
-* [Custom Edit Control sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl)  
-**Archive samples**
-* [XAML text editing sample](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
+* [사용자 지정 편집 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl)  
+**Archive 샘플**
+* [XAML 텍스트 편집 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
 
 

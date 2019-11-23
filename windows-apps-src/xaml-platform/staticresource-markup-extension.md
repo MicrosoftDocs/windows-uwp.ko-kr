@@ -28,7 +28,7 @@ ms.locfileid: "74259851"
 
 | 용어 | 설명 |
 |------|-------------|
-| 키 | 요청된 리소스에 대한 키입니다. 이 키는 처음에 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 의해 할당됩니다. 리소스 키는 XamlName 문법에 정의된 문자열일 수 있습니다. |
+| 키 | 요청한 리소스의 키입니다. 이 키는 처음에 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 의해 할당됩니다. 리소스 키는 XamlName 문법에 정의된 문자열일 수 있습니다. |
 
 ## <a name="remarks"></a>설명
 
@@ -38,7 +38,7 @@ ms.locfileid: "74259851"
 
 **StaticResource**가 리소스 사전의 항목으로 확인하는 규칙은 이 항목에서 설명하지 않습니다. 이 규칙은 참조 및 리소스가 모두 템플릿에 있는지, 병합된 리소스 사전이 사용되는지 등에 따라 다릅니다. 리소스 정의 방법과 샘플 코드를 포함한 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)의 적절한 사용 방법에 대한 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://docs.microsoft.com/windows/uwp/controls-and-patterns/resourcedictionary-and-xaml-resource-references)를 확인하세요.
 
-**Important**   A **StaticResource** must not attempt to make a forward reference to a resource that is defined lexically further within the XAML file. 이러한 시도는 지원되지 않습니다. 전방 참조가 실패하지 않더라도 전방 참조를 만들려고 하면 성능이 저하됩니다. 최상의 결과를 얻으려면 전방 참조를 피할 수 있도록 리소스 사전의 컴퍼지션을 조정하세요.
+**중요**   **StaticResource** 는 XAML 파일 내에서 어휘 적으로 정의 된 리소스에 대 한 전방 참조를 만들려고 해서는 안 됩니다. 이러한 시도는 지원되지 않습니다. 전방 참조가 실패하지 않더라도 전방 참조를 만들려고 하면 성능이 저하됩니다. 최상의 결과를 얻으려면 전방 참조를 피할 수 있도록 리소스 사전의 컴퍼지션을 조정하세요.
 
 확인할 수 없는 키에 **StaticResource**를 지정하려고 하면 런타임에 XAML 구문 분석 예외가 발생합니다. 디자인 도구에서 경고나 오류를 제공할 수도 있습니다.
 
@@ -46,7 +46,7 @@ Windows 런타임 XAML 프로세서 구현에는 **StaticResource** 기능을 �
 
 [{ThemeResource} 태그 확장](themeresource-markup-extension.md)은 다른 위치에 있는 명명된 리소스를 참조하는 비슷한 태그 확장입니다. 차이점은 {ThemeResource} 태그 확장에는 현재 시스템 테마에 따라 여러 다른 리소스를 반환하는 기능이 있다는 점입니다. 자세한 내용은 [{ThemeResource} 태그 확장](themeresource-markup-extension.md)을 참조하세요.
 
-**StaticResource**은 태그 확장입니다. 태그 확장은 특정 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 구현되며, 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. All markup extensions in XAML use the "\{" and "\}" characters in their attribute syntax, which is the convention by which a XAML processor recognizes that a markup extension must process the attribute.
+**StaticResource**은 태그 확장입니다. 태그 확장은 특성 값을 리터럴 값 또는 처리기 이름이 아닌 다른 값이 되도록 이스케이프해야 하는 요구 사항이 있는 경우 일반적으로 구현되며 이러한 요구 사항은 특정 형식 또는 속성에 형식 변환기를 배치하는 것보다 더 포괄적입니다. XAML의 모든 태그 확장은 특성 구문에서 "\{" 및 "\}" 문자를 사용 합니다 .이는 XAML 프로세서가 태그 확장이 특성을 처리 해야 함을 인식 하는 데 사용 되는 규칙입니다.
 
 ### <a name="an-example-staticresource-usage"></a>{StaticResource} 사용 예제
 
@@ -75,7 +75,7 @@ Windows 런타임 XAML 프로세서 구현에는 **StaticResource** 기능을 �
 
 ## <a name="design-time-tools-support-for-the-staticresource-markup-extension"></a>**{StaticResource}** 태그 확장을 위한 디자인 타임 도구 지원
 
-Microsoft Visual Studio 2013 can include possible key values in the Microsoft IntelliSense dropdowns when you use the **{StaticResource}** markup extension in a XAML page. 예를 들어 "{StaticResource"를 입력하기 시작하면 즉시 현재 조회 범위의 리소스 키가 IntelliSense 드롭다운에 표시됩니다. 페이지 수준([**FrameworkElement.Resources**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.resources)) 및 앱 수준([**Application.Resources**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resources))에 있는 일반적인 리소스 외에, [XAML 테마 리소스](https://docs.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources) 및 프로젝트에서 사용 중인 확장의 리소스도 표시됩니다.
+Microsoft Visual Studio 2013에는 XAML 페이지에서 **{StaticResource}** 태그 확장을 사용할 때 Microsoft IntelliSense 드롭다운에 가능한 키 값이 포함 될 수 있습니다. 예를 들어 "{StaticResource"를 입력하기 시작하면 즉시 현재 조회 범위의 리소스 키가 IntelliSense 드롭다운에 표시됩니다. 페이지 수준([**FrameworkElement.Resources**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.resources)) 및 앱 수준([**Application.Resources**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.resources))에 있는 일반적인 리소스 외에, [XAML 테마 리소스](https://docs.microsoft.com/windows/uwp/controls-and-patterns/xaml-theme-resources) 및 프로젝트에서 사용 중인 확장의 리소스도 표시됩니다.
 
 리소스 키가 **{StaticResource}** 에서 일부로 사용되어 존재하는 경우 **정의로 이동**(F12) 기능이 해당 리소스를 확인하고 리소스가 정의되어 있는 사전을 표시할 수 있습니다. 테마 리소스의 경우에는 디자인 타임의 generic.xaml에 적용됩니다.
 
@@ -84,5 +84,5 @@ Microsoft Visual Studio 2013 can include possible key values in the Microsoft I
 * [ResourceDictionary 및 XAML 리소스 참조](https://docs.microsoft.com/windows/uwp/controls-and-patterns/resourcedictionary-and-xaml-resource-references)
 * [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)
 * [x:Key 특성](x-key-attribute.md)
-* [{ThemeResource} markup extension](themeresource-markup-extension.md)
+* [태그 확장 ({themeresource})](themeresource-markup-extension.md)
 

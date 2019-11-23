@@ -53,7 +53,7 @@ ms.locfileid: "72282524"
 ### <a name="span-idconverting_from_a_lower_range_representation_to_a_higher_range_representationspanspan-idconverting_from_a_lower_range_representation_to_a_higher_range_representationspanspan-idconverting_from_a_lower_range_representation_to_a_higher_range_representationspanconverting-from-a-lower-range-representation-to-a-higher-range-representation"></a><span id="Converting_from_a_lower_range_representation_to_a_higher_range_representation"></span><span id="converting_from_a_lower_range_representation_to_a_higher_range_representation"></span><span id="CONVERTING_FROM_A_LOWER_RANGE_REPRESENTATION_TO_A_HIGHER_RANGE_REPRESENTATION"></span>더 낮은 범위 표현에서 더 높은 범위 표현으로 변환
 
 -   더 낮은 범위 형식의 NaN은 더 높은 범위 형식의 NaN 표현이 있을 경우 더 높은 범위 형식의 NaN 표현으로 변환됩니다. 더 높은 범위 형식에 NaN 표현이 없으면 0으로 변환됩니다.
--   더 낮은 범위 형식의 INF는 더 높은 범위 형식의 INF 표현이 있을 경우 더 높은 범위 형식의 INF 표현으로 변환됩니다. 상위 형식에 INF 표현이 없으면 표현할 수 있는 최대값으로 변환 됩니다 (해당 형식의 MAX @ no__t-0FLOAT). 대상 형식에서 사용할 수 있다면 부호는 유지됩니다.
+-   더 낮은 범위 형식의 INF는 더 높은 범위 형식의 INF 표현이 있을 경우 더 높은 범위 형식의 INF 표현으로 변환됩니다. 상위 형식에 INF 표현이 없으면 표현할 수 있는 최대값 (해당 형식의 최대\_FLOAT)으로 변환 됩니다. 대상 형식에서 사용할 수 있다면 부호는 유지됩니다.
 -   낮은 범위 형식의 Denorm은 더 높은 범위 형식이 가능할 경우 정규화된 표현으로 변환됩니다. 또는 더 높은 범위 형식의 Denorm 표현이 있을 경우 이로 표현됩니다. 더 높은 범위 형식에 Denorm 표현이 없어 변환에 실패할 경우, 0으로 변환됩니다. 대상 형식에서 사용할 수 있다면 부호는 유지됩니다. 32비트 부동 소수점 숫자는 Denorm 표현 없는 형식으로 계산됩니다(32비트 부동 소수점에 대한 연산에서 Denorm은 부호 있는 0으로 플러시되기 때문).
 
 ## <a name="span-idinteger_conversionspanspan-idinteger_conversionspanspan-idinteger_conversionspaninteger-conversion"></a><span id="Integer_Conversion"></span><span id="integer_conversion"></span><span id="INTEGER_CONVERSION"></span>정수 변환
@@ -170,7 +170,7 @@ ms.locfileid: "72282524"
 <tr class="odd">
 <td align="left">SINT</td>
 <td align="left">더 많은 비트를 가진 UINT</td>
-<td align="left"><p>더 많은 비트를 사용 하 여 a:에서 UINT로 변환 하려면 음수 이면 값이 0으로 고정 됩니다. 그렇지 않으면 숫자가 대상 형식의 LSB로 복사되고 추가 MSB는 0으로 채워집니다.</p></td>
+<td align="left"><p>SINT를 더 많은 비트를 가진 UINT로 변환하려면, 음수인 경우 값은 0으로 고정됩니다. 그렇지 않으면 숫자가 대상 형식의 LSB로 복사되고 추가 MSB는 0으로 채워집니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left">UINT</td>
@@ -228,7 +228,7 @@ ms.locfileid: "72282524"
 <li>n &gt;= FixedMax인 경우 결과는 Fixedmax*2<sup>f</sup>이며, n &lt;= FixedMin인 경우 결과는 FixedMin*2<sup>f</sup>입니다.</li>
 <li>다른 경우 n*2<sup>f</sup>를 계산하고 정수로 변환합니다.</li>
 </ul>
-<p>위 마지막 단계 후 무한 정밀 값인 n*2<sup>f</sup> 대신, 정수 결과에서 D3D<em>xx</em>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP 마지막 위치 단위 오차 범위 내의 구현이 허용됩니다.</p></td>
+<p>위 마지막 단계 후 무한 정밀 값인 n*2<em>f</em> 대신, 정수 결과에서 D3D<sup>xx</sup>_FLOAT32_TO_INTEGER_TOLERANCE_IN_ULP 마지막 위치 단위 오차 범위 내의 구현이 허용됩니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left">고정 소수점 정수</td>

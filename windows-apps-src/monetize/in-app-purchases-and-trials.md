@@ -19,7 +19,7 @@ Windows SDK는 UWP(유니버설 Windows 플랫폼) 앱에서 더 많은 수익�
 
 * **앱에서 바로 구매**&nbsp;&nbsp;앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠 또는 새 앱 기능(예: 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다.
 
-* **평가판 기능**&nbsp; @ no__t-1. [파트너 센터에서 앱을 무료 평가판으로 구성](../publish/set-app-pricing-and-availability.md#free-trial)하면 평가판 기간 중 일부 기능을 제외 하거나 제한 하 여 앱의 전체 버전을 구입 하도록 고객이 유도할 수 있습니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
+* **평가판 기능**&nbsp;&nbsp;[파트너 센터에서 무료 평가판으로 앱을 구성](../publish/set-app-pricing-and-availability.md#free-trial)하는 경우 평가판 기간 중 일부 기능을 제외 하거나 제한 하 여 앱의 전체 버전을 구입 하도록 유도할 수 있습니다. 또한 고객이 앱을 구매하기 전 체험 기간 동안에만 표시되는 배너 또는 워터마크와 같은 기능을 사용하도록 설정할 수도 있습니다.
 
 이 문서에서는 앱에서 바로 구매와 평가판이 UWP 앱에서 작동하는 방식에 대해 간략하게 보여 줍니다.
 
@@ -29,12 +29,12 @@ Windows SDK는 UWP(유니버설 Windows 플랫폼) 앱에서 더 많은 수익�
 
 앱에서 바로 구매와 평가판 기능을 UWP 앱에 추가하는 데 사용할 수 있는 네임스페이스는 앱에서 대상을 지정한 Windows 10 버전에 따라 서로 다른 두 가지가 있습니다. 두 네임스페이스의 API는 동일한 역할을 하지만 완전히 다르게 디자인되었으며 두 API 간에 코드가 호환되지 않습니다.
 
-* No__t &nbsp; @-3 **[부터 windows 10](https://docs.microsoft.com/uwp/api/windows.services.store)** 버전 1607부터 앱은이 네임 스페이스의 API를 사용 하 여 앱 내 구매 및 평가판을 구현할 수 있습니다. 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 경우 이 네임스페이스의 멤버를 사용하는 것이 좋습니다. 이 네임 스페이스는 저장소 관리 사용 가능 추가 기능과 같은 최신 추가 기능 형식을 지원 하며, 파트너 센터 및 스토어에서 지원 되는 이후 유형의 제품과 기능과 호환 되도록 설계 되었습니다. 이 네임스페이스에 대한 자세한 내용은 이 문서의 [Windows.Services.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판 이용](#api_intro) 섹션을 참조하세요.
+* &nbsp; **[&nbsp;windows](https://docs.microsoft.com/uwp/api/windows.services.store)** 10 버전 1607부터 앱은이 네임 스페이스의 API를 사용 하 여 앱 내 구매 및 평가판을 구현할 수 있습니다. 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 경우 이 네임스페이스의 멤버를 사용하는 것이 좋습니다. 이 네임 스페이스는 저장소 관리 사용 가능 추가 기능과 같은 최신 추가 기능 형식을 지원 하며, 파트너 센터 및 스토어에서 지원 되는 이후 유형의 제품과 기능과 호환 되도록 설계 되었습니다. 이 네임스페이스에 대한 자세한 내용은 이 문서의 [Windows.Services.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판 이용](#api_intro) 섹션을 참조하세요.
 
-* No__t &nbsp; @-3 모든 버전의 Windows 10에서는이 네임 스페이스의 앱 내 구매 및 평가판에 대 한 이전 API도 지원 **[합니다.](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store)** **Windows.ApplicationModel.Store** 네임스페이스에 대한 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
+* Windows 10의 모든 버전 &nbsp;&nbsp;Windows 10에서는이 네임 스페이스의 앱 내 구매 및 평가판에 대 한 이전 API도 지원 **[합니다](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store)** . **Windows.ApplicationModel.Store** 네임스페이스에 대한 자세한 내용은 [Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)을 참조하세요.
 
 > [!IMPORTANT]
-> **Windows.ApplicationModel.Store** 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 앱에서 가능한 경우 **Windows.Services.Store** 네임스페이스를 대신 사용하는 것이 좋습니다. [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop) 를 사용 하는 windows 데스크톱 응용 프로그램 또는 파트너 센터에서 개발 샌드박스를 사용 하는 앱 또는 게임에서 **Windows. applicationmodel. Store** 네임 스페이스는 지원 되지 않습니다. 예를 들어,이 경우에는 Xbox Live와 통합).
+> **Windows.ApplicationModel.Store** 네임스페이스는 더 이상 새 기능으로 업데이트되지 않으므로 앱에서 가능한 경우 **Windows.Services.Store** 네임스페이스를 대신 사용하는 것이 좋습니다. [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop) 를 사용 하는 windows 데스크톱 응용 프로그램 또는 파트너 센터에서 개발 샌드박스를 사용 하는 앱 또는 게임 (예: Xbox Live와 통합 되는 게임의 경우)은 **windows** 데스크톱 응용 프로그램에서 지원 되지 않습니다.
 
 <span id="concepts" />
 
@@ -64,7 +64,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 ## <a name="in-app-purchases-and-trials-using-the-windowsservicesstore-namespace"></a>Windows.Services.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판
 
-이 섹션은 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 중요한 작업과 개념에 대한 개요를 제공합니다. 이 네임스페이스는 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스(여기에서는 Windows 10, 버전 1607에 해당)를 대상으로 하는 앱에서만 사용할 수 있습니다. 가능하면 [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) 네임스페이스 대신 **Windows.Services.Store** 네임스페이스를 사용하는 앱이 좋습니다. **Windows.ApplicationModel.Store** 네임스페이스에 대한 자세한 내용은 [이 문서](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)를 참조하세요.
+이 섹션은 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 중요한 작업과 개념에 대한 개요를 제공합니다. 이 네임스페이스는 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스(여기에서는 Windows 10, 버전 1607에 해당)를 대상으로 하는 앱에서만 사용할 수 있습니다. 가능하면 **Windows.ApplicationModel.Store** 네임스페이스 대신 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) 네임스페이스를 사용하는 앱이 좋습니다. **Windows.ApplicationModel.Store** 네임스페이스에 대한 자세한 내용은 [이 문서](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)를 참조하세요.
 
 **이 섹션의 내용**
 
@@ -154,7 +154,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 <span id="testing" />
 
-### <a name="test-your-in-app-purchase-or-trial-implementation"></a>앱에서 바로 구매 또는 평가판 구현 테스트
+### <a name="test-your-in-app-purchase-or-trial-implementation"></a>앱 내 구매 또는 평가판 구현 테스트
 
 앱에서 앱 내 구매 또는 평가판 기능을 구현하기 위해 **Windows.Services.Store** 네임스페이스의 API를 사용하고 있다면, 테스트 라이선스를 사용하기 위해 앱을 Store에 제출하고, 앱을 개발자 장치에 다운로드해야 합니다. 다음 프로세스로 코드를 테스트합니다.
 
@@ -162,7 +162,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 2. 그다음에 아래 작업을 완료해야 합니다.
 
-    * **Windows.Services.Store** 네임스페이스에서 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 클래스 및 기타 관련 형식을 사용하는 앱에서 코드를 작성하여 [앱에서 바로 구매](#implement-iap) 또는 [평가판 기능](#implement-trial)을 구현합니다.
+    * [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 네임스페이스에서 **StoreContext** 클래스 및 기타 관련 형식을 사용하는 앱에서 코드를 작성하여 [앱에서 바로 구매](#implement-iap) 또는 [평가판 기능](#implement-trial)을 구현합니다.
     * 앱이 고객이 구매할 수 있는 추가 기능을 제공 하는 경우 [파트너 센터에서 앱에 대 한 추가 기능 제출을 만듭니다](https://docs.microsoft.com/windows/uwp/publish/add-on-submissions).
     * 앱 평가판에서 일부 기능을 제외 하거나 제한 하려면 [파트너 센터에서 무료 평가판으로 앱을 구성](../publish/set-app-pricing-and-availability.md#free-trial)하세요.
 
@@ -227,7 +227,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 스토어의 모든 제품에는 *SKU*가 하나 이상 있으며, 각 SKU에 *가용성*이 하나 이상 있습니다. 이러한 개념은 파트너 센터의 대부분의 개발자 로부터 추상화 되며 대부분의 개발자는 앱 또는 추가 기능에 대 한 Sku 또는 전반를 정의 하지 않습니다. 그러나 일부 시나리오에서는 **Windows.Services.Store** 네임스페이스의 스토어 제품에 대한 개체 모델에는 SKU와 가용성이 포함되어 있으므로 이러한 개념에 대한 기본적인 이해가 도움이 될 수 있습니다.
 
-| Object |  설명  |
+| 개체 |  설명  |
 |---------|-------------------|
 | Product  |  *제품*은 앱이나 추가 기능을 포함, 스토어에서 사용할 수 있는 모든 유형의 제품을 나타냅니다. <p/><p/> 스토어의 각 제품에는 해당되는 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) 개체가 있습니다. 이 클래스는 제품의 스토어 ID, 스토어 목록에 사용할 이미지 및 비디오, 가격 정보 등의 데이터에 액세스하는 데 사용할 수 있는 속성을 제공합니다. 또한 제품을 구매하는 데 사용할 수 있는 메서드를 제공합니다. |
 | SKU |  *SKU*는 자체 설명, 가격 및 기타 고유한 제품 정보가 있는 특정 버전의 제품입니다. 앱이나 추가 기능마다 기본 SKU가 있습니다. 대부분의 개발자가 앱용 SKU를 여러 개 사용할 때는 전체 버전의 앱과 평가판을 게시하는 경우뿐입니다(스토어 카탈로그에서 이러한 각 버전은 동일한 앱의 다른 SKU임). <p/><p/> 일부 판매자는 해당 SKU를 정의할 수 있습니다. 예를 들어 대규모 게임 판매자가 빨간색 피를 허용하지 않는 지역/국가에서 녹색 피를 표시하는 SKU와 다른 모든 지역/국가에서 빨간색 피를 표시하는 SKU로 게임을 출시할 수 있습니다. 또는 디지털 비디오 콘텐츠의 판매자가 HD 버전용 SKU와 표준 화질 버전용 SKU의 두 SKU를 게시할 수 있습니다. <p/><p/> 스토어의 각 SKU에는 해당되는 [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku) 개체가 있습니다. 각 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct)에는 제품 SKU에 엑세스하기 위해 사용할 수 있는 [Skus](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.skus) 속성이 있습니다. |
@@ -243,14 +243,14 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 * 앱의 경우 파트너 센터의 [앱 id 페이지](../publish/view-app-identity-details.md) 에서 상점 id를 가져올 수 있습니다.
 * 추가 기능의 경우 파트너 센터의 추가 기능 개요 페이지에서 상점 ID를 가져올 수 있습니다.
-* 또한 어느 제품이든 제품에 해당되는 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct)의 [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.storeid)를 사용해 프로그래밍 방식으로 스토어 ID를 얻을 수 있습니다.
+* 또한 어느 제품이든 제품에 해당되는 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.storeid)의 [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct)를 사용해 프로그래밍 방식으로 스토어 ID를 얻을 수 있습니다.
 
 SKU와 가용성이 있는 제품의 경우, SKU와 가용성에 형식이 다른 스토어 ID가 있습니다.
 
-| Object |  스토어 ID 형식  |
+| 개체 |  스토어 ID 형식  |
 |---------|-------------------|
-| SKU |  SKU 스토어 ID는 ```<product Store ID>/xxxx```라는 형식을 사용합니다. 여기서 ```xxxx```는 제품의 SKU를 식별하는 4자리 영숫자 문자열입니다. 예를 들어, ```9NBLGGH4R315/000N```을 입력합니다. 이 ID는 [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku) 개체의 [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.storeid) 속성에서 반환하며 *SKU 스토어 ID*라고도 합니다. |
-| 가용성  |  가용성 스토어 ID는 ```<product Store ID>/xxxx/yyyyyyyyyyyy``` 형식을 사용합니다. 여기서 ```xxxx```는 제품의 SKU를 식별하는 4자리 영숫자 문자열이고, ```yyyyyyyyyyyy```는 SKU의 가용성을 식별하는 12자리 영숫자 문자열입니다. 예를 들어, ```9NBLGGH4R315/000N/4KW6QZD2VN6X```을 입력합니다. 이 ID는 [StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability) 개체의 [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability.storeid) 속성에서 반환하며  *스토어 ID*라고도 합니다.  |
+| SKU |  SKU 스토어 ID는 ```<product Store ID>/xxxx```라는 형식을 사용합니다. 여기서 ```xxxx```는 제품의 SKU를 식별하는 4자리 영숫자 문자열입니다. 예를 들면 ```9NBLGGH4R315/000N```입니다. 이 ID는 [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.storeid) 개체의 [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storesku) 속성에서 반환하며 *SKU 스토어 ID*라고도 합니다. |
+| 가용성  |  가용성 스토어 ID는 ```<product Store ID>/xxxx/yyyyyyyyyyyy``` 형식을 사용합니다. 여기서 ```xxxx```는 제품의 SKU를 식별하는 4자리 영숫자 문자열이고, ```yyyyyyyyyyyy```는 SKU의 가용성을 식별하는 12자리 영숫자 문자열입니다. 예를 들면 ```9NBLGGH4R315/000N/4KW6QZD2VN6X```입니다. 이 ID는 [StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability.storeid) 개체의 [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability) 속성에서 반환하며 *스토어 ID*라고도 합니다.  |
 
 <span id="product-ids" />
 

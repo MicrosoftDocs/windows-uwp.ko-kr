@@ -27,7 +27,7 @@ UWP(유니버설 Windows 플랫폼) 장치에 연결된 입력 장치를 식별�
 
 [  **Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) 네임스페이스에는 하나 이상의 연결된 마우스가 제공하는 속성을 검색하는 데 사용되는 [**MouseCapabilities**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseCapabilities) 클래스가 포함되어 있습니다. 새 **MouseCapabilities** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**Note**  The values returned by the properties discussed here are based on all detected mice: Boolean properties return non-zero if at least one mouse supports a specific capability, and numeric properties return the maximum value exposed by any one mouse.
+**참고**  여기에 설명 된 속성에서 반환 되는 값은 검색 된 모든 마우스를 기준으로 합니다. 하나 이상의 마우스가 특정 기능을 지 원하는 경우 부울 속성은 0이 아닌 값을 반환 하 고 숫자 속성은 한 마우스에서 노출 하는 최대값을 반환 합니다.
 
  
 
@@ -65,7 +65,7 @@ private void GetKeyboardProperties()
 
 [  **Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) 네임스페이스에는 터치 디지타이저가 연결되었는지 여부를 검색하는 데 사용되는 [**TouchCapabilities**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.TouchCapabilities) 클래스가 포함되어 있습니다. 새 **TouchCapabilities** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**Note**  The values returned by the properties discussed here are based on all detected touch digitizers: Boolean properties return non-zero if at least one digitizer supports a specific capability, and numeric properties return the maximum value exposed by any one digitizer.
+**참고**  여기서 설명 하는 속성에 의해 반환 되는 값은 검색 된 모든 터치 디지타이저를 기준으로 합니다. 하나 이상의 디지타이저가 특정 기능을 지 원하는 경우 부울 속성은 0이 아닌 값을 반환 하 고 숫자 속성은 단일 디지타이저에서 노출 하는 최대값을 반환 합니다.
 
  
 
@@ -85,7 +85,7 @@ private void GetTouchProperties()
 
 [  **Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) 네임스페이스에는 감지된 장치 지원 포인터 입력(터치, 터치 패드, 마우스 또는 펜)을 지원하는 장치가 연결되어 있는지 여부를 검색하는 데 사용되는 [**PointerDevice**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.PointerDevice) 클래스가 포함되어 있습니다. 새 **PointerDevice** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**Note**  The values returned by the properties discussed here are based on all detected pointer devices: Boolean properties return non-zero if at least one device supports a specific capability, and numeric properties return the maximum value exposed by any one pointer device.
+**여기서 설명** 하는 속성에 의해 반환 되는 값은 검색 된 모든 포인터 장치를 기반으로 합니다. 하나 이상의 장치에서 특정 기능을 지 원하는 경우 부울 속성은 0이 아닌 값을 반환 하 고, 숫자 속성은 하나의 포인터 장치에서 노출 하는 최대값을 반환 합니다.  
 
 다음 코드에서는 표를 사용하여 각 포인터 장치의 속성과 값을 표시합니다.
 
@@ -178,12 +178,12 @@ private void GetPointerDevices()
 
 
 **샘플**
-* [Basic input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-* [Low latency input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
-* [User interaction mode sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [기본 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [짧은 대기 시간 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [사용자 상호 작용 모드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
 
-**Archive samples**
-* [Input: Device capabilities sample](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+**보관 샘플**
+* [입력: 장치 기능 샘플](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
  
 
  

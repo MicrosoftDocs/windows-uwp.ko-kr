@@ -26,7 +26,7 @@ Windows의 낮은 수준 버스에 대한 사용자 모드 액세스는 기존 `
 
 ## <a name="asl-by-example"></a>예제별 ASL
 
-Raspberry Pi 2에 대한 rhproxy 디바이스 노드 선언을 살펴보겠습니다. 먼저 @no__t 64, _SB 범위에서 ACPI 장치 선언을 만듭니다.
+Raspberry Pi 2에 대한 rhproxy 디바이스 노드 선언을 살펴보겠습니다. 먼저 \\_SB 범위에서 ACPI 장치 선언을 만듭니다.
 
 ```cpp
 Device(RHPX)
@@ -37,11 +37,11 @@ Device(RHPX)
 }
 ```
 
-* _HID – 하드웨어 ID. 공급업체 특정 하드웨어 ID로 설정합니다.
-* _CID – 호환 가능 ID. "MSFT8000"이어야 합니다.
-* _UID – 고유한 ID. 1로 설정합니다.
+* _HID – Hardware Id. 공급업체 특정 하드웨어 ID로 설정합니다.
+* _CID – Compatible Id. “MSFT8000”입니다.
+* _UID – Unique Id. 1로 설정되어 있습니다.
 
-다음으로 사용자 모드에 노출해야 하는 각 GPIO 및 SPB 리소스를 선언합니다. 리소스 인덱스는 속성을 리소스와 연결하는 데 사용되므로 리소스가 선언되는 순서는 중요합니다. 여러 I2C 또는 SPI 버스가 노출된 경우 첫 번째로 선언된 버스가 해당 유형의 '기본' 버스로 간주되고 [Windows.Devices.I2c.I2cController](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2ccontroller) 및 [Windows.Devices.Spi.SpiController](https://docs.microsoft.com/uwp/api/windows.devices.spi.spicontroller)의 `GetDefaultAsync()` 메서드에 의해 반환되는 인스턴스가 됩니다.
+다음으로 사용자 모드에 노출해야 하는 각 GPIO 및 SPB 리소스를 선언합니다. 리소스 인덱스는 속성을 리소스와 연결하는 데 사용되므로 리소스가 선언되는 순서는 중요합니다. 여러 I2C 또는 SPI 버스가 노출된 경우 첫 번째로 선언된 버스가 해당 유형의 '기본' 버스로 간주되고 `GetDefaultAsync()`Windows.Devices.I2c.I2cController[ 및 ](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2ccontroller)Windows.Devices.Spi.SpiController[의 ](https://docs.microsoft.com/uwp/api/windows.devices.spi.spicontroller) 메서드에 의해 반환되는 인스턴스가 됩니다.
 
 ### <a name="spi"></a>SPI
 
@@ -159,7 +159,7 @@ Package(2) { "bus-SPI-SPI1", Package() { 2 }},
 * [MITT SPI 테스트](https://docs.microsoft.com/windows-hardware/drivers/spb/spi-tests-in-mitt)를 통과한 것이어야 합니다.
 * 4Mhz 클럭 속도를 지원해야 합니다.
 * 8비트 데이터 길이를 지원해야 합니다.
-* 모든 SPI 모드를 지원 해야 합니다. 0, 1, 2, 3
+* 모든 SPI 모드(0, 1, 2, 3)를 지원해야 합니다.
 
 ### <a name="i2c"></a>I2C
 
@@ -228,7 +228,7 @@ GpioInt(Edge, ActiveBoth, Shared, PullUp, 0, “\\_SB.GPI0”,) { 5 }
 
 GPIO 핀을 선언하는 경우 다음 요구 사항은 준수해야 합니다.
 
-* 메모리 매핑 GPIO 컨트롤러만 지원됩니다. I2C/SPI를 통해 연결되는 GPIO 컨트롤러는 지원되지 않습니다. 컨트롤러 드라이버가 [CLIENT_QueryControllerBasicInformation](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/nc-gpioclx-gpio_client_query_controller_basic_information) 콜백에 대한 응답으로 [CLIENT_CONTROLLER_BASIC_INFORMATION](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/ns-gpioclx-_client_controller_basic_information) 구조의 [MemoryMappedController](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/ns-gpioclx-_controller_attribute_flags) 플래그에 설정되는 경우 메모리 매핑 컨트롤러에 해당합니다.
+* 메모리 매핑 GPIO 컨트롤러만 지원됩니다. I2C/SPI를 통해 연결되는 GPIO 컨트롤러는 지원되지 않습니다. 컨트롤러 드라이버가 [CLIENT_QueryControllerBasicInformation](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/ns-gpioclx-_controller_attribute_flags) 콜백에 대한 응답으로 [CLIENT_CONTROLLER_BASIC_INFORMATION](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/ns-gpioclx-_client_controller_basic_information) 구조의 [MemoryMappedController](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/nc-gpioclx-gpio_client_query_controller_basic_information) 플래그에 설정되는 경우 메모리 매핑 컨트롤러에 해당합니다.
 * 각 핀에는 GpioIO 및 GpioInt 리소스가 둘 다 필요합니다. GpioInt 리소스는 GpioIO 리소스 바로 뒤에 나와야 하고 동일한 핀 번호를 참조해야 합니다.
 * GPIO 리소스는 핀 번호를 늘려 정렬해야 합니다.
 * 각 GpioIO 및 GpioInt 리소스는 핀 목록에 정확히 1개의 핀 번호만 포함해야 합니다.
@@ -282,13 +282,13 @@ Package (2) { “GPIO-UseDescriptorPinNumbers”, 1 },
 Package (2) { “GPIO-PinCount”, 54 },
 ```
 
-**PinCount** 속성은 `GpioClx` 드라이버의 [CLIENT_QueryControllerBasicInformation](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/nc-gpioclx-gpio_client_query_controller_basic_information) 콜백에 포함된 **TotalPins** 속성을 통해 반환되는 값과 일치해야 합니다.
+**PinCount** 속성은 **드라이버의**CLIENT_QueryControllerBasicInformation[ 콜백에 포함된 ](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/gpioclx/nc-gpioclx-gpio_client_query_controller_basic_information)TotalPins`GpioClx` 속성을 통해 반환되는 값과 일치해야 합니다.
 
 보드에 대해 발표된 기존 설명서와 가장 잘 호환되는 번호 매기기 체계를 선택합니다. 예를 들어 Raspberry Pi는 기존의 많은 핀아웃 다이어그램이 BCM2835 핀 번호를 사용하기 때문에 네이티브 핀 번호 매기기를 사용합니다. MinnowBoardMax는 기존의 핀아웃 다이어그램이 거의 없고, 200개 넘는 핀 중에서 10개만 노출되므로 순차 핀 번호 매기기가 개발자 환경을 간소화하기 때문에 순차 핀 번호 매기기를 사용합니다. 순차 핀 번호 매기기를 사용할지 또는 네이티브 핀 번호 매개기를 사용할지 결정할 때는 개발자 혼동을 줄이기 것을 고려해야 합니다.
 
 #### <a name="gpio-driver-requirements"></a>GPIO 드라이버 요구 사항
 
-* @No__t 사용 해야 합니다.
+* `GpioClx` 사용 해야 합니다.
 * SOC 메모리 매핑되어야 합니다.
 * 에뮬레이트된 ActiveBoth 인터럽트 처리를 사용해야 합니다.
 
@@ -347,7 +347,7 @@ Windows의 [GpioClx](https://docs.microsoft.com/windows-hardware/drivers/ddi/con
 * 핀 muxing 클라이언트 - 핀 muxing을 소비하는 드라이버입니다. 핀 muxing 클라이언트는 ACPI 펌웨어에서 핀 muxing 리소스를 받습니다. 핀 muxing 리소스는 일종의 연결 리소스로, 리소스 허브에 의해 관리됩니다. 핀 muxing 클라이언트는 리소스에 대한 핸들을 열어 핀 muxing 리소스를 예약합니다. 하드웨어 변경 내용을 적용하려면 클라이언트는 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* 요청을 보내 구성을 커밋해야 합니다. 클라이언트는 핸들을 닫아 핀 muxing 리소스를 해제하며 이때 muxing 구성은 기본 상태로 복구됩니다.
 * ACPI 펌웨어 - `MsftFunctionConfig()` 리소스를 사용한 muxing 구성을 지정합니다. MsftFunctionConfig 리소스는 muxing 구성에는 클라이언트에 의해 요청되는 핀을 나타냅니다. MsftFunctionConfig 리소스에는 기능 번호, 풀 구성 및 핀 번호 목록이 포함되어 있습니다. MsftFunctionConfig 리소스는 GPIO 및 SPB 연결 리소스의 경우와 비슷하게 PrepareHardware 콜백에서 드라이버에 의해 수신되는 하드웨어 리소스로서 핀 muxing 클라이언트에 제공됩니다. 클라이언트는 리소스에 대한 핸들을 여는 데 사용할 수 있는 리소스 허브 ID를 수신합니다.
 
-> `MsftFunctionConfig()` 설명자는 ACPI 작업 위원회에서 검토 중이므로 `/MsftInternal` 명령줄 스위치를 `asl.exe`에 전달하여 이 설명자가 포함된 ASL 파일을 컴파일해야 합니다. 예: `asl.exe /MsftInternal dsdt.asl`
+> `/MsftInternal` 설명자는 ACPI 작업 위원회에서 검토 중이므로 `asl.exe` 명령줄 스위치를 `MsftFunctionConfig()`에 전달하여 이 설명자가 포함된 ASL 파일을 컴파일해야 합니다. 예를 들면 다음과 같습니다. `asl.exe /MsftInternal dsdt.asl`
 
 핀 muxing과 관련된 작업 순서는 다음과 같습니다.
 
@@ -369,7 +369,7 @@ Windows의 [GpioClx](https://docs.microsoft.com/windows-hardware/drivers/ddi/con
 
 #### <a name="parsing-resources"></a>리소스 구문 분석
 
-WDF 드라이버는 해당 [EvtDevicePrepareHardware()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfdevice/nc-wdfdevice-evt_wdf_device_prepare_hardware) 루틴에서 `MsftFunctionConfig()` 리소스를 수신합니다. MsftFunctionConfig 리소스는 다음 필드로 식별할 수 있습니다.
+WDF 드라이버는 해당 `MsftFunctionConfig()`EvtDevicePrepareHardware()[ 루틴에서 ](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdfdevice/nc-wdfdevice-evt_wdf_device_prepare_hardware) 리소스를 수신합니다. MsftFunctionConfig 리소스는 다음 필드로 식별할 수 있습니다.
 
 ```cpp
 CM_PARTIAL_RESOURCE_DESCRIPTOR::Type = CmResourceTypeConnection
@@ -553,7 +553,7 @@ FunctionNumber의 의미는 서버에 의해 정의되며 서버가 이 필드�
 
 ### <a name="authoring-guidelines-for-acpi-tables"></a>ACPI 테이블에 대한 제작 지침
 
-이 섹션에서는 클라이언트 드라이버에 muxing 리소스를 제공하는 방법을 설명합니다. `MsftFunctionConfig()` 리소스가 포함된 테이블을 컴파일하려면 Microsoft ASL 컴파일러 빌드 14327 이상이 필요합니다. `MsftFunctionConfig()` 리소스는 muxing 클라이언트를 하드웨어 리소스로 고정 하기 위해 제공 됩니다. 고정 muxing 변경 (일반적으로 SPB 및 직렬 컨트롤러 드라이버)을 요구 하는 드라이버에 `MsftFunctionConfig()` 리소스를 제공 해야 하지만, 컨트롤러 드라이버가 muxing 구성을 처리 하므로 SPB 및 직렬 주변 장치 드라이버에 제공 하면 안 됩니다.
+이 섹션에서는 클라이언트 드라이버에 muxing 리소스를 제공하는 방법을 설명합니다. `MsftFunctionConfig()` 리소스가 포함된 테이블을 컴파일하려면 Microsoft ASL 컴파일러 빌드 14327 이상이 필요합니다. muxing 클라이언트를 하드웨어 리소스로 고정 하기 위해 리소스가 제공 됩니다. `MsftFunctionConfig()` 고정 muxing 변경 (일반적으로 SPB 및 직렬 컨트롤러 드라이버)이 필요한 드라이버에는 리소스를 제공 해야 하지만, 컨트롤러 드라이버가 muxing 구성을 처리 하므로 SPB 및 직렬 주변 장치 드라이버에 제공 하면 안 됩니다. `MsftFunctionConfig()`
 `MsftFunctionConfig()` ACPI 매크로는 다음과 같이 정의됩니다.
 
 ```cpp
@@ -605,11 +605,11 @@ Device(I2C1)
 }
 ```
 
-컨트롤러 드라이버에 일반적으로 필요한 메모리 및 인터럽트 리소스 외에, `MsftFunctionConfig()` 리소스도 지정됩니다. 이 리소스를 사용 하면 I2C 컨트롤러 드라이버가 @no__t 64, _SB의 장치 노드에 의해 2 및 3 핀을 관리할 수 있습니다. GPIO0 – 풀 저항기를 사용 하는 함수 4에서
+컨트롤러 드라이버에 일반적으로 필요한 메모리 및 인터럽트 리소스 외에, `MsftFunctionConfig()` 리소스도 지정됩니다. 이 리소스를 사용 하면 I2C 컨트롤러 드라이버가 \\_SB에서 장치 노드에 의해 고정 2와 3으로 관리 되도록 설정할 수 있습니다. GPIO0 – 풀 저항기를 사용 하는 함수 4에서
 
 ## <a name="supporting-muxing-support-in-gpioclx-client-drivers"></a>GpioClx 클라이언트 드라이버의 muxing 지원
 
-`GpioClx`은 pin muxing를 기본적으로 지원 합니다. GpioClx 미니 포트 드라이버("GpioClx 클라이언트 드라이버"라고도 함)는 GPIO 컨트롤러 하드웨어를 구동합니다. Windows 10 빌드 14327 현재, GpioClx 미니 포트 드라이버는 다음 두 가지 새로운 DDI를 구현하여 핀 muxing 지원을 추가할 수 있습니다.
+`GpioClx`는 고정 muxing를 기본적으로 지원 합니다. GpioClx 미니 포트 드라이버("GpioClx 클라이언트 드라이버"라고도 함)는 GPIO 컨트롤러 하드웨어를 구동합니다. Windows 10 빌드 14327 현재, GpioClx 미니 포트 드라이버는 다음 두 가지 새로운 DDI를 구현하여 핀 muxing 지원을 추가할 수 있습니다.
 
 * CLIENT_ConnectFunctionConfigPins – 지정된 muxing 구성을 적용할 것을 미니 포트 드라이버에 명령하기 위해 `GpioClx`에 의해 호출됩니다.
 * CLIENT_DisconnectFunctionConfigPins – muxing 구성을 복구할 것을 미니 포트 드라이버에 명령하기 위해 `GpioClx`에 의해 호출됩니다.
@@ -633,11 +633,11 @@ Windows 10 빌드 14327 현재, `SpbCx` 및 `SerCx` 프레임워크에는 해당
 
 디바이스가 초기화되면 `SpbCx` 및 `SerCx` 프레임워크는 디바이스에 하드웨어 리소스로 제공된 모든 `MsftFunctionConfig()` 리소스를 구문 분석합니다. 그러면 SpbCx/SerCx는 핀 muxing 리소스를 획득한 후 필요할 때 해제합니다.
 
-`SpbCx`은 클라이언트 드라이버의 [Evtspbtargetconnect ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_connect) 콜백을 호출 하기 직전에 *IRP_MJ_CREATE* handler에 고정 muxing 구성을 적용 합니다. muxing 구성을 적용할 수 없으면 컨트롤러 드라이버의 `EvtSpbTargetConnect()` 콜백이 호출되지 않습니다. 따라서 SPB 컨트롤러 드라이버는 `EvtSpbTargetConnect()` 호출 시에 핀이 SPB 기능에 muxing된다고 간주할 수 있습니다.
+`SpbCx`는 클라이언트 드라이버의 [Evtspbtargetconnect ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_connect) 콜백을 호출 하기 바로 전에 *IRP_MJ_CREATE* 처리기에서 pin muxing 구성을 적용 합니다. muxing 구성을 적용할 수 없으면 컨트롤러 드라이버의 `EvtSpbTargetConnect()` 콜백이 호출되지 않습니다. 따라서 SPB 컨트롤러 드라이버는 `EvtSpbTargetConnect()` 호출 시에 핀이 SPB 기능에 muxing된다고 간주할 수 있습니다.
 
-`SpbCx`은 컨트롤러 드라이버의 [Evtspbtargetdisconnect ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_disconnect) 콜백을 호출한 후에 *IRP_MJ_CLOSE* handler에서 pin muxing 구성을 되돌립니다. 결과적으로 주변 장치 드라이버가 SPB 컨트롤러 드라이버에 대한 핸들을 열 때마다 핀이 SPB 기능에 muxing되고, 주변 장치 드라이버가 해당 핸들을 닫으면 muxing이 해제됩니다.
+`SpbCx`는 컨트롤러 드라이버의 [Evtspbtargetdisconnect ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_disconnect) 콜백을 호출한 후에 *IRP_MJ_CLOSE* 처리기에서 pin muxing 구성을 되돌립니다. 결과적으로 주변 장치 드라이버가 SPB 컨트롤러 드라이버에 대한 핸들을 열 때마다 핀이 SPB 기능에 muxing되고, 주변 장치 드라이버가 해당 핸들을 닫으면 muxing이 해제됩니다.
 
-`SerCx`은 비슷하게 동작 합니다. `SerCx`은 컨트롤러 드라이버의 [EvtSerCx2FileOpen ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileopen) 콜백을 호출 하기 직전에 *IRP_MJ_CREATE* 처리기의 모든 `MsftFunctionConfig()` 리소스를 가져오고, 컨트롤러를 호출한 후에도 해당 IRP_MJ_CLOSE handler의 모든 리소스를 해제 합니다. 드라이버의 [EvtSerCx2FileClose](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileclose) 콜백입니다.
+`SerCx` 비슷하게 동작 합니다. `SerCx`는 컨트롤러 드라이버의 [EvtSerCx2FileOpen ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileopen) 콜백을 호출 하기 직전에 *IRP_MJ_CREATE* 처리기의 모든 `MsftFunctionConfig()` 리소스를 가져오고, 컨트롤러 드라이버의 [EvtSerCx2FileClose](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileclose) 콜백을 호출한 후에도 IRP_MJ_CLOSE 처리기의 모든 리소스를 해제 합니다.
 
 `SerCx` 및 `SpbCx` 컨트롤러 드라이버에 대해 동적 핀 muxing이 진행되면 특정 시간에 SPB/UART 기능에서 muxing 해제되는 핀을 허용할 수 있어야 합니다. 컨트롤러 드라이버는 `EvtSpbTargetConnect()` 또는 `EvtSerCx2FileOpen()`이 호출될 때까지 핀이 muxing되지 않는다고 가정해야 합니다. 핀이 다음 콜백 동안 SPB/UART 기능에 반드시 muxing되어야 하는 것은 아닙니다. 다음은 전체 목록이 아니지만 컨트롤러 드라이버에 의해 구현되는 가장 일반적인 PNP 루틴을 나타냅니다.
 
@@ -652,7 +652,7 @@ rhproxy 테스트를 준비가 되면 다음과 같이 단계별 절차를 사�
 
 1. 각각의 `SpbCx`, `GpioClx` 및 `SerCx` 컨트롤러 드라이버가 올바르게 로드 및 작동 중인지 확인
 1. `rhproxy`가 시스템에 존재하는지 확인하세요. Windows의 일부 버전 및 빌드에는 없습니다.
-1. @No__t를 사용 하 여 rhproxy 노드 컴파일 및 로드-0
+1. `ACPITABL.dat`를 사용 하 여 rhproxy 노드 컴파일 및 로드
 1. `rhproxy` 디바이스 노드가 존재하는지 확인
 1. `rhproxy`가 로드 및 시작 중인지 확인
 1. 예상되는 디바이스가 사용자 모드에 노출되는지 확인
@@ -701,7 +701,7 @@ DefinitionBlock ("ACPITABL.dat", "SSDT", 1, "MSFT", "RHPROXY", 1)
 }
 ```
 
-2. [WDK](https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk) 를 다운로드 하 고 `C:\Program Files (x86)\Windows Kits\10\Tools\x64\ACPIVerify`에서 `asl.exe`을 찾습니다.
+2. [WDK](https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk) 를 다운로드 하 고 `asl.exe`를 찾습니다 `C:\Program Files (x86)\Windows Kits\10\Tools\x64\ACPIVerify`
 3. 다음 명령을 실행하여 ACPITABL.dat을 생성합니다.
 
 ```ps
@@ -744,7 +744,7 @@ rhproxy가 시작된 것으로 출력에 나타나면 rhproxy가 제대로 로�
 
 rhproxy가 실행 중이면 사용자 모드에서 액세스가 가능한 디바이스 인터페이스가 생성된 것입니다. 몇 가지 명령줄 도구를 사용하여 디바이스를 열거하고 이들이 존재하는지 확인하게 됩니다.
 
-[@No__t 1](https://github.com/ms-iot/samples) 리포지토리를 복제 하 고 `GpioTestTool`, `I2cTestTool`, `SpiTestTool` 및 @no__t 샘플을 빌드합니다. 테스트 동안 디바이스로 도구를 복사하고 다음 명령을 사용하여 디바이스를 열거합니다.
+[https://github.com/ms-iot/samples](https://github.com/ms-iot/samples) 리포지토리를 복제 하 고 `GpioTestTool`, `I2cTestTool`, `SpiTestTool`및 `Mincomm` 샘플을 빌드합니다. 테스트 동안 디바이스로 도구를 복사하고 다음 명령을 사용하여 디바이스를 열거합니다.
 
 ```ps
 I2cTestTool.exe -list
@@ -800,7 +800,7 @@ MinComm "\\?\ACPI#FSCL0007#3#{86e0d1e0-8089-11d0-9ce4-08003e301f73}\000000000000
 
 다음 샘플을 사용하여 UWP에서 디바이스가 작동하는지 확인합니다.
 
-| 예제 | 링크 |
+| 샘플 | Link |
 |------|------|
 | IoT-GPIO | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-GPIO |
 | IoT-I2C | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-I2C |
@@ -835,7 +835,7 @@ HLK 관리자에서 "리소스 허브 프록시 장치"를 선택합니다.
 
 ## <a name="resources"></a>리소스
 
-| Destination | 링크 |
+| Destination | Link |
 |-------------|------|
 | ACPI 5.0 사양 | http://acpi.info/spec.htm |
 | Asl.exe(Microsoft ASL 컴파일러) | https://msdn.microsoft.com/library/windows/hardware/dn551195.aspx |

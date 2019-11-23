@@ -36,16 +36,16 @@ Direct3D 11 그래픽 파이프라인은 [**ID3D11DeviceContext1**](https://docs
 -   [입력 어셈블러 단계](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-input-assembler-stage) - 입력 어셈블러 단계는 파이프라인에 데이터(삼각형, 선 및 점)를 제공합니다. 이 단계를 지 원하는 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 메서드에는 "IA" 접두사가 붙습니다.
 -   [꼭짓점 셰이더 단계](https://docs.microsoft.com/previous-versions/bb205146(v=vs.85)) - 꼭짓점 셰이더 단계에서는 꼭짓점을 처리하며, 일반적으로 변환, 스킨 지정 및 조명과 같은 작업을 수행합니다. 꼭짓점 셰이더는 항상 단일 입력 꼭짓점을 사용하여 단일 출력 꼭짓점을 생성합니다. 이 단계를 지 원하는 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 메서드에는 "VS" 접두사가 붙습니다.
 -   [스트림 출력 단계](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-output-stream-stage) - 스트림 출력 단계에서는 파이프라인에서 메모리를 거쳐 래스터라이저로 기본 요소 데이터를 스트림합니다. 데이터를 스트림 출력하거나 래스터라이저로 전달할 수 있습니다. 메모리로 스트림 출력된 데이터는 입력 데이터 또는 CPU에서 다시 읽기로 파이프라인으로 다시 재순환될 수 있습니다. 이 단계를 지 원하는 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 메서드에는 "그렇다면" 접두사가 붙습니다.
--   [래스터라이저 단계](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-rasterizer-stage) - 래스터라이저는 기본 요소를 잘라내고, 픽셀 셰이더에 대해 기본 요소를 준비하고, 픽셀 셰이더를 호출하는 방법을 결정합니다. 파이프라인에 픽셀 셰이더 ( [**ID3D11DeviceContext::P SSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader)를 사용 하 여 픽셀 셰이더 단계를 NULL로 설정)를 표시 하 고 깊이 및 스텐실 테스트를 사용 하지 않도록 설정 하 여 래스터화를 사용 하지 않도록 설정할 수 있습니다 (DepthEnable 및 StencilEnable를에서 [**FALSE로 설정). D3D11 @ no__t-4DEPTH @ no__t-5DB@ no__t-6DESC**](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_depth_stencil_desc)). 사용하지 않도록 설정되어 있는 동안 래스터화 관련 파이프라인 카운터는 업데이트되지 않습니다.
+-   [래스터라이저 단계](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-rasterizer-stage) - 래스터라이저는 기본 요소를 잘라내고, 픽셀 셰이더에 대해 기본 요소를 준비하고, 픽셀 셰이더를 호출하는 방법을 결정합니다. 파이프라인에 픽셀 셰이더 ( [**ID3D11DeviceContext::P SSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader)를 사용 하 여 픽셀 셰이더 단계를 NULL로 설정)를 표시 하 고 깊이 및 스텐실 테스트를 사용 하지 않도록 설정 하 여 래스터화를 사용 하지 않도록 설정할 수 있습니다. [**D3D11\_depth\_스텐실\_DESC**](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_depth_stencil_desc)에서 DEPTHENABLE 및 StencilEnable를 FALSE로 설정 합니다. 사용하지 않도록 설정되어 있는 동안 래스터화 관련 파이프라인 카운터는 업데이트되지 않습니다.
 -   [픽셀 셰이더 단계](https://docs.microsoft.com/previous-versions/bb205146(v=vs.85)) - 픽셀 셰이더 단계는 기본 요소에 대한 보간된 데이터를 받아 픽셀별 데이터(예: 색)를 생성합니다. 이 단계를 지 원하는 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 메서드에는 "PS" 접두사가 붙습니다.
 -   [출력 병합기 단계](https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-output-merger-stage) - 출력 병합기 단계는 다양한 유형의 출력 데이터(픽셀 셰이더 값, 깊이 및 스텐실 정보)를 렌더링 대상 및 깊이/스텐실 버퍼의 내용과 결합하여 최종 파이프라인 결과를 생성합니다. 이 단계를 지 원하는 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 메서드에는 "OM" 접두사가 붙습니다.
 
-기 하 도형 셰이더, 선체 셰이더, tesselators 및 도메인 셰이더에 대 한 단계도 있지만 OpenGL ES 2.0에는 analogues 없기 때문에 여기서는 설명 하지 않습니다. 이러한 단계에 대 한 전체 메서드 목록은 [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) 및 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 참조 페이지를 참조 하세요. **ID3D11DeviceContext1**은 Direct3D 11용으로 **ID3D11DeviceContext**를 확장합니다.
+(기하 도형 셰이더, 헐 셰이더, 테설레이터 및 도메인 셰이더에 대한 단계도 있지만 이러한 단계는 OpenGL ES 2.0에 아날로그가 없으므로 여기서 다루지 않습니다.) 이러한 단계에 대한 전체 메서드 목록은 [**ID3D11DeviceContext**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) 및 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 참조 페이지를 참조하세요. **ID3D11DeviceContext1**은 Direct3D 11용으로 **ID3D11DeviceContext**를 확장합니다.
 
 ## <a name="creating-a-shader"></a>셰이더 만들기
 
 
-Direct3D에서는 셰이더 리소스를 컴파일 및 로드하기 전에 셰이더 리소스가 만들어지지 않습니다. 대신 이 리소스는 HLSL이 로드될 때 만들어집니다. 따라서 glCreateShader에는 직접적으로 유사한 함수가 없습니다 .이 함수는 특정 형식의 초기화 된 셰이더 리소스 (예: GL @ no__t-0VERTEX @ no__t-1SHADER 또는 GL @ no__t-2FRAGMENT @ no__t-3SHADER)를 만듭니다. 대신 셰이더는 [**ID3D11Device1::CreateVertexShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader) 및 [**ID3D11Device1::CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader)와 같은 특정 함수를 통해 HLSL이 로드된 후 만들어지며, 이러한 함수는 형식과 컴파일된 HLSL을 매개 변수로 사용합니다.
+Direct3D에서는 셰이더 리소스를 컴파일 및 로드하기 전에 셰이더 리소스가 만들어지지 않습니다. 대신 이 리소스는 HLSL이 로드될 때 만들어집니다. 따라서 glCreateShader에는 직접적으로 유사한 함수가 없습니다 .이 함수는 특정 형식의 초기화 된 셰이더 리소스 (예: GL\_VERTEX\_셰이더 또는 GL\_조각\_셰이더)를 만듭니다. 대신 셰이더는 [**ID3D11Device1::CreateVertexShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader) 및 [**ID3D11Device1::CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader)와 같은 특정 함수를 통해 HLSL이 로드된 후 만들어지며, 이러한 함수는 형식과 컴파일된 HLSL을 매개 변수로 사용합니다.
 
 | OpenGL ES 2.0  | Direct3D 11                                                                                                                                                                                                                                                             |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -56,7 +56,7 @@ Direct3D에서는 셰이더 리소스를 컴파일 및 로드하기 전에 셰�
 ## <a name="compiling-a-shader"></a>셰이더 컴파일
 
 
-Direct3D 셰이더는 유니버설 Windows 플랫폼 (UWP) 앱에서 컴파일된 셰이더 개체 (.cas) 파일로 미리 컴파일되어 Windows 런타임 파일 Api 중 하나를 사용 하 여 로드 해야 합니다. 데스크톱 앱은 런타임에 텍스트 파일 또는 문자열에서 셰이더를 컴파일할 수 있습니다. Cso 파일은 Microsoft Visual Studio 프로젝트에 포함 되는 모든. m a c 파일을 기반으로 하며, 확장명이 .cafile 인 경우에만 동일한 이름을 유지 합니다. 배포 시 CSO 파일이 패키지에 포함되어 있는지 확인하세요!
+Direct3D 셰이더는 유니버설 Windows 플랫폼 (UWP) 앱에서 컴파일된 셰이더 개체 (.cas) 파일로 미리 컴파일되어 Windows 런타임 파일 Api 중 하나를 사용 하 여 로드 해야 합니다. (데스크톱 앱은 런타임에 텍스트 파일이나 문자열에서 셰이더를 컴파일할 수 있습니다). CSO 파일은 Microsoft Visual Studio 프로젝트의 일부인 .hlsl 파일에서 작성되며 .cso 파일 확장명만 포함하면서 동일한 이름을 유지합니다. 배포 시 CSO 파일이 패키지에 포함되어 있는지 확인하세요!
 
 | OpenGL ES 2.0                          | Direct3D 11                                                                                                                                                                   |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -90,7 +90,7 @@ OpenGL ES 2.0에는 실행을 위한 여러 셰이더가 포함되어 있는 "�
 
  
 
-정적 [**D3D11CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) 메서드를 사용하여 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 및 [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2)의 인스턴스를 만듭니다.
+정적 [**D3D11CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 메서드를 사용하여 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2) 및 [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice)의 인스턴스를 만듭니다.
 
 ``` syntax
 Microsoft::WRL::ComPtr<ID3D11Device1>          m_d3dDevice;
@@ -115,9 +115,9 @@ D3D11CreateDevice(
 ## <a name="setting-the-viewports"></a>뷰포트 설정
 
 
-Direct3D 11에서 뷰포트를 설정하는 작업은 OpenGL ES 2.0에서 뷰포트를 설정하는 방법과 매우 유사합니다. Direct3D 11에서 구성 된 [**CD3D11 @ no__t-4VIEWPORT**](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/jj151722(v=vs.85))를 사용 하 여 [**ID3D11DeviceContext:: RSSetViewports**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-rssetviewports) 를 호출 합니다.
+Direct3D 11에서 뷰포트를 설정하는 작업은 OpenGL ES 2.0에서 뷰포트를 설정하는 방법과 매우 유사합니다. Direct3D 11에서 구성 된 [**CD3D11\_뷰포트**](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/jj151722(v=vs.85))를 사용 하 여 [**ID3D11DeviceContext:: RSSetViewports**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-rssetviewports) 를 호출 합니다.
 
-Direct3D 11: 뷰포트 설정
+Direct3D 11: 뷰포트를 설정합니다.
 
 ``` syntax
 CD3D11_VIEWPORT viewport(
@@ -131,7 +131,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
 | OpenGL ES 2.0 | Direct3D 11                                                                                                                                  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| glViewport    | [**CD3D11 @ no__t-2viewport**](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/jj151722(v=vs.85)), [ **ID3D11DeviceContext:: RSSetViewports**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-rssetviewports) |
+| glViewport    | [**CD3D11\_뷰포트**](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/jj151722(v=vs.85)), [ **ID3D11DeviceContext:: RSSetViewports**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-rssetviewports) |
 
  
 
@@ -168,7 +168,7 @@ m_d3dContext->RSSetViewports(1, &viewport);
 
 | OpenGL ES 2.0  | Direct3D 11                                                                                                                                                                                                                                         |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| glDrawElements | [**ID3D11DeviceContext1::D raw**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-draw), [**ID3D11DeviceContext1::D rawindexed**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed) (또는 다른 그리기 @ No__t-4 메서드 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)). |
+| glDrawElements | [**ID3D11DeviceContext1::D raw**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-draw), [**ID3D11DeviceContext1::D rawindexed**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed) 또는 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)의 다른 그리기\* 메서드). |
 | eglSwapBuffers | [**IDXGISwapChain1::Present1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1)                                                                                                                                                                              |
 
  
@@ -181,7 +181,7 @@ GLSL과 HLSL은 복합 형식 지원 및 구문(일부 전체 구문)을 제외�
 | 셰이더 언어           | GLSL 기능 버전                                                                                                                                                                                                      | Direct3D 셰이더 모델 |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|
 | Direct3D 11 HLSL          | ~4.30.                                                                                                                                                                                                                    | SM 5.0                |
-| OpenGL ES 2.0용 GLSL ES | 1.40. OpenGL ES 2.0용 GLSL ES의 이전 구현에서는 1.10~1.30을 사용할 수도 있습니다. GlGetString (GL @ no__t-0SHADING @ no__t-1LANGUAGE @ no__t-2VERSION) 또는 glGetString (SHADING @ no__t-3LANGUAGE @ no__t-4VERSION)를 사용 하 여 원래 코드를 확인 하 여 확인 합니다. | ~SM 2.0               |
+| OpenGL ES 2.0용 GLSL ES | 1.40. OpenGL ES 2.0용 GLSL ES의 이전 구현에서는 1.10~1.30을 사용할 수도 있습니다. GlGetString (GL\_SHADING\_LANGUAGE\_VERSION) 또는 glGetString (SHADING\_LANGUAGE\_VERSION)를 사용 하 여 원본 코드를 확인 하 여 확인 합니다. | ~SM 2.0               |
 
  
 
@@ -190,21 +190,21 @@ GLSL과 HLSL은 복합 형식 지원 및 구문(일부 전체 구문)을 제외�
 ## <a name="porting-the-opengl-intrinsics-to-hlsl-semantics"></a>OpenGL 내부 기능을 HLSL 의미 체계로 포팅
 
 
-Direct3D 11 HLSL 의미 체계는 uniform 또는 특성 이름과 같은 문자열로서, 앱과 셰이더 프로그램 간에 전달되는 값을 식별하는 데 사용됩니다. 이러한 의미 체계는 가능한 다양한 문자열 중 어느 것도 될 수 있지만, 모범 사례는 용도를 나타내는 POSITION 또는 COLOR와 같은 문자열을 사용하는 것입니다. 상수 버퍼 또는 버퍼 입력 레이아웃을 만들 때 이러한 의미 체계를 할당합니다. 또한 유사한 값에 대해 별도의 레지스터를 사용하도록 0과 7 사이의 숫자를 의미 체계에 추가할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. COLOR0, COLOR1, COLOR2 ...
+Direct3D 11 HLSL 의미 체계는 uniform 또는 특성 이름과 같은 문자열로서, 앱과 셰이더 프로그램 간에 전달되는 값을 식별하는 데 사용됩니다. 이러한 의미 체계는 가능한 다양한 문자열 중 어느 것도 될 수 있지만, 모범 사례는 용도를 나타내는 POSITION 또는 COLOR와 같은 문자열을 사용하는 것입니다. 상수 버퍼 또는 버퍼 입력 레이아웃을 만들 때 이러한 의미 체계를 할당합니다. 또한 유사한 값에 대해 별도의 레지스터를 사용하도록 0과 7 사이의 숫자를 의미 체계에 추가할 수 있습니다. 예를 들어 COLOR0, COLOR1, COLOR2...와 같이 합니다.
 
-"SV @ no__t-0"으로 시작 하는 의미 체계는 셰이더 프로그램에 의해 작성 된 시스템 값 의미 체계입니다. 앱 자체 (CPU에서 실행)는 수정할 수 없습니다. 일반적으로 여기에는 그래픽 파이프라인의 다른 셰이더 단계의 입력 또는 출력인 값이나, 전적으로 GPU에 의해 생성된 값이 포함됩니다.
+"SV\_" 접두사가 붙은 의미 체계는 셰이더 프로그램에 의해 작성 된 시스템 값 의미 체계입니다. 앱 자체 (CPU에서 실행)는 수정할 수 없습니다. 일반적으로 여기에는 그래픽 파이프라인의 다른 셰이더 단계의 입력 또는 출력인 값이나, 전적으로 GPU에 의해 생성된 값이 포함됩니다.
 
-또한 SV @ no__t-0 의미 체계는 셰이더 단계에서의 입력 또는 출력을 지정 하는 데 사용 될 때 서로 다른 동작을 포함 합니다. 예를 들어 SV @ no__t-0POSITION (출력)에는 꼭 짓 점 셰이더 단계 중에 변환 된 꼭 짓 점 데이터가 포함 되 고, SV @ no__t-1POSITION (입력)에는 래스터화 중 보간된 픽셀 위치 값이 포함 됩니다.
+또한 SV\_ 의미 체계는 셰이더 단계에서의 입력 또는 출력을 지정 하는 데 사용 될 때 서로 다른 동작을 포함 합니다. 예를 들어, SV\_위치 (출력)에는 꼭 짓 점 셰이더 단계 동안 변환 된 꼭 짓 점 데이터가 포함 되 고, SV\_위치 (입력)에는 래스터화 중 보간된 픽셀 위치 값이 포함 됩니다.
 
 다음은 일반적인 OpenGL ES 2.0 셰이더 내부 기능에 대한 몇 가지 매핑입니다.
 
 | OpenGL 시스템 값 | 이 HLSL 의미 체계 사용                                                                                                                                                   |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| gl @ no__t-0Position        | 꼭짓점 버퍼 데이터의 POSITION(n). SV @ no__t-0POSITION은 픽셀 셰이더에 픽셀 위치를 제공 하며 앱에서 쓸 수 없습니다.                                        |
-| gl @ no__t-0Normal          | 꼭짓점 버퍼에서 제공하는 일반 데이터의 NORMAL(n)                                                                                                                 |
-| gl @ no__t-0TexCoord @ no__t-1n @ no__t-2   | 셰이더에 제공되는 텍스처 UV(일부 OpenGL 설명서에서는 ST) 좌표 데이터의 TEXCOORD(n)                                                                       |
-| gl @ no__t-0FragColor       | 셰이더에 제공되는 RGBA 색 데이터의 COLOR(n). 좌표 데이터에 대해 동일하게 처리됩니다. 의미 체계는 단순히 해당 데이터가 색 데이터임을 식별할 수 있도록 도와줄 뿐입니다. |
-| gl @ no__t-0FragData @ no__t-1n @ no__t-2   | SV @ no__t-0Target @ no__t-1n no__t-2-픽셀 셰이더에서 대상 질감 또는 기타 픽셀 버퍼로 쓰기                                                                               |
+| gl\_위치        | 꼭짓점 버퍼 데이터의 POSITION(n). SV\_위치는 픽셀 셰이더에 픽셀 위치를 제공 하며 앱에서 쓸 수 없습니다.                                        |
+| gl\_보통          | 꼭짓점 버퍼에서 제공하는 일반 데이터의 NORMAL(n)                                                                                                                 |
+| gl\_TexCoord\[n\]   | 셰이더에 제공되는 텍스처 UV(일부 OpenGL 설명서에서는 ST) 좌표 데이터의 TEXCOORD(n)                                                                       |
+| gl\_FragColor       | 셰이더에 제공되는 RGBA 색 데이터의 COLOR(n). 좌표 데이터에 대해 동일하게 처리됩니다. 의미 체계는 단순히 해당 데이터가 색 데이터임을 식별할 수 있도록 도와줄 뿐입니다. |
+| gl\_FragData\[n\]   | \_대상\[n\] 픽셀 셰이더에서 대상 질감이 나 기타 픽셀 버퍼로 쓰기 위해 사용할 수 있습니다.                                                                               |
 
  
 
@@ -239,7 +239,7 @@ float4 main(PixelShaderInput input) : SV_TARGET
 }
 ```
 
-이 경우, SV @ no__t-0TARGET은 셰이더가 실행을 완료할 때 픽셀 색 (4 개의 float 값이 있는 벡터로 정의 됨)이 기록 되는 렌더링 대상의 위치입니다.
+이 경우, SV\_대상은 픽셀 색 (float 값이 4 개인 벡터로 정의 됨)이 실행이 완료 될 때에 기록 되는 렌더링 대상의 위치입니다.
 
 Direct3D에서 의미 체계를 사용하는 방법에 대한 자세한 내용은 [HLSL 의미 체계](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics)를 읽어 보세요.
 

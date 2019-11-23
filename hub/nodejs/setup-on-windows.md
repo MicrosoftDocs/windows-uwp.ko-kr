@@ -40,8 +40,8 @@ Node.js를 설치 하는 방법에는 여러 가지가 있습니다. 버전 변�
 
     ![노드 버전을 표시 하지 않는 n VM 목록](../images/windows-nvm-powershell-no-node.png)
 
-6. 최신 기능 개선 사항을 테스트 하기 위해 현재 node.js의 릴리스를 설치 하 고 LTS 버전 보다 문제가 있을 가능성이 높습니다. `nvm install latest`
-7. 먼저 현재 LTS 버전 번호를 사용 하 여 현재 LTS 버전 번호를 확인 하 고 (권장), 다음을 사용 하 여 LTS 버전 번호를 설치 합니다. (권장): `nvm install <version>` (`<version>`를 숫자로 바꿈 `nvm install 10.16.3`)을 (를) @no__t.
+6. 최신 기능 개선 사항을 테스트 하기 위해 최신 버전의 node.js를 설치 합니다. 단, LTS 버전 보다 문제가 있을 가능성이 높습니다. `nvm install latest`
+7. 먼저 현재 LTS 버전 번호를 `nvm list available`사용 하 여 현재 lts 버전 번호를 확인 하 고 (권장), 다음을 사용 하 여 LTS 버전 번호를 설치 합니다 (권장). `nvm install <version>` (`<version>`를 숫자로 바꾸는 방법: `nvm install 10.16.3`).
 
     ![사용 가능한 버전의 n v m 목록](../images/windows-nvm-list.png)
 
@@ -49,15 +49,15 @@ Node.js를 설치 하는 방법에는 여러 가지가 있습니다. 버전 변�
 
     ![설치 된 노드 버전을 보여 주는 NVM 목록](../images/windows-nvm-node-installs.png)
 
-9. 현재 node.js 버전이 기본값 인지 확인 하려면 다음을 입력 합니다. `node --version`
-10. 프로젝트에 사용 하려는 node.js의 버전을 변경 하려면 새 프로젝트 디렉터리 `mkdir NodeTest`을 만들고 @no__t 디렉터리를 입력 한 다음-3 `<version>`을 사용할 버전 번호 (ie v 10.16.3 ')로 바꿉니다 @no__t을 입력 합니다.
-11. @No__t-0과 함께 설치 된 npm 버전을 확인 합니다 .이 버전 번호는 현재 node.js 버전과 연결 된 npm 버전으로 자동 변경 됩니다.
+9. 현재 node.js 버전을 확인 하려면 다음을 입력 합니다. `node --version`
+10. 프로젝트에 사용 하려는 node.js의 버전을 변경 하려면 `mkdir NodeTest`새 프로젝트 디렉터리를 만들고 `cd NodeTest`디렉터리를 입력 한 다음 `<version>`를 사용 하려는 버전 번호로 바꿉니다 `nvm use <version>`를 입력 합니다 (ie v 10.16.3 ').
+11. Npm가 설치 된 버전을 확인 합니다. `npm --version`이 버전 번호는 현재 node.js 버전과 연결 된 npm 버전으로 자동 변경 됩니다.
 
 ## <a name="alternative-version-managers"></a>대체 버전 관리자
 
 Windows-nvm은 현재 노드당 가장 인기 있는 버전 관리자입니다.
 
-- [nvs](https://github.com/jasongin/nvs) (Node 버전 전환기)는 [VS Code와 통합할](https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md)수 있는 플랫폼 간 `nvm` 대안입니다.
+- [nvs](https://github.com/jasongin/nvs) (노드 버전 전환기)는 [VS Code와 통합할](https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md)수 있는 플랫폼 간 `nvm` 대안입니다.
 - 
 - [Volta](https://github.com/volta-cli/volta#installing-volta) 는 향상 된 속도 및 플랫폼 간 지원을 제공 하는 LinkedIn 팀의 새로운 버전 관리자입니다.
 
@@ -76,7 +76,7 @@ Node.js 확장 팩을 설치 하려면:
 
 1. VS Code에서 **확장** 창 (Ctrl + Shift + X)을 엽니다.
 2. 확장 창의 맨 위에 있는 검색 상자에 "노드 확장 팩" (또는 찾고 있는 모든 확장의 이름)을 입력 합니다.
-3. **설치**를 선택 합니다. 설치가 끝나면 확장이 **확장** 창의 "사용" 폴더에 표시 됩니다. 새 확장의 설명 옆에 있는 기어 아이콘을 선택 하 여 설정을 사용 하지 않도록 설정 하거나, 제거 하거나, 구성할 수 있습니다.
+3. **설치**를 선택합니다. 설치가 끝나면 확장이 **확장** 창의 "사용" 폴더에 표시 됩니다. 새 확장의 설명 옆에 있는 기어 아이콘을 선택 하 여 설정을 사용 하지 않도록 설정 하거나, 제거 하거나, 구성할 수 있습니다.
 
 고려해 야 할 몇 가지 추가 확장은 다음과 같습니다.
 

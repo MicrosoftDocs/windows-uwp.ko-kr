@@ -24,23 +24,23 @@ C++, C#, Microsoft Visual Basic 및 JavaScript를 사용하여 개발할 수 있
 
 이 도움말에서는 C#을 기반으로 하지만 언어마다 살펴볼 수 있는 고유한 이점이 있습니다. 예를 들어 앱의 성능이 주요 고려 사항인 경우, 특히 그래픽이 많이 나오는 경우 C++를 선택하는 것이 좋습니다. Visual Basic의 Microsoft .NET 버전은 Visual Basic 앱 개발자에게 유용합니다. HTML5로 작성한 JavaScript는 웹 개발 경험이 있는 개발자에게 유용합니다. 자세한 내용은 다음 중 하나를 참조하세요.
 
--   [Create your first UWP app using C++](../get-started/create-a-basic-windows-10-app-in-cpp.md)
--   [Create your first UWP app using C# or Visual Basic](../get-started/create-a-hello-world-app-xaml-universal.md)
--   [Create your first UWP app using JavaScript](../get-started/create-a-hello-world-app-js-uwp.md)
+-   [를 사용 하 여 첫 번째 UWP 앱 만들기C++](../get-started/create-a-basic-windows-10-app-in-cpp.md)
+-   [또는 Visual Basic를 사용 하 여 C# 첫 번째 UWP 앱 만들기](../get-started/create-a-hello-world-app-xaml-universal.md)
+-   [JavaScript를 사용 하 여 첫 번째 UWP 앱 만들기](../get-started/create-a-hello-world-app-js-uwp.md)
 
-**Note**  For apps that use 3D graphics, the OpenGL and OpenGL ES standards are not natively available for UWP apps. OpenGL ES 코드를 Microsoft DirectX에 다시 작성하지 않으려는 경우 **Angle**이 유용할 수 있습니다. Angle은 OpenGL API 호출을 DirectX API 호출로 변환하여 OpenGL을 DirectX로 변환하도록 디자인된 진행 중인 프로젝트입니다. 자세한 내용은 다음을 참조하세요.
--   [Angle](https://bugs.chromium.org/p/angleproject/)
--   [Create your first UWP app using DirectX](https://docs.microsoft.com/previous-versions/windows/apps/br229580(v=win.10))
--   [UWP app samples that use DirectX](https://code.msdn.microsoft.com/windowsapps/site/search?f%5B0%5D.Type=Technology&f%5B0%5D.Value=DirectX)
--   [Where is the DirectX SDK?](https://docs.microsoft.com/windows/desktop/directx-sdk--august-2009-)
+  **참고** 3d 그래픽을 사용 하는 앱의 경우에는 UWP 앱에서 OpenGL 및 opengl ES 표준을 기본적으로 사용할 수 있는 것은 아닙니다. OpenGL ES 코드를 Microsoft DirectX에 다시 작성하지 않으려는 경우 **Angle**이 유용할 수 있습니다. Angle은 OpenGL API 호출을 DirectX API 호출로 변환하여 OpenGL을 DirectX로 변환하도록 디자인된 진행 중인 프로젝트입니다. 자세한 내용은 다음을 참조하세요.
+-   [각도](https://bugs.chromium.org/p/angleproject/)
+-   [DirectX를 사용 하 여 첫 번째 UWP 앱 만들기](https://docs.microsoft.com/previous-versions/windows/apps/br229580(v=win.10))
+-   [DirectX를 사용 하는 UWP 앱 샘플](https://code.msdn.microsoft.com/windowsapps/site/search?f%5B0%5D.Type=Technology&f%5B0%5D.Value=DirectX)
+-   [DirectX SDK는 어디에 있나요?](https://docs.microsoft.com/windows/desktop/directx-sdk--august-2009-)
 
 ## <a name="giving-c-a-go"></a>C#
 
 iOS 개발자는 Objective-C 및 Swift에 익숙합니다. 두 언어 모두에 가장 가까운 Microsoft 프로그래밍 언어는 C#입니다. 대부분의 개발자와 대부분의 앱의 경우 가장 쉽고 짧은 기간 안에 배워서 사용할 수 있는 언어는 C#이므로 이 문서의 정보와 연습에서는 이 언어를 중심으로 설명합니다. C#에 대한 자세한 내용은 다음을 참조하세요.
 
--   [Create your first UWP app using C# or Visual Basic](../get-started/create-a-hello-world-app-xaml-universal.md)
--   [UWP app samples that use C#](https://code.msdn.microsoft.com/windowsapps/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)
--   [Visual C#](https://msdn.microsoft.com/library/kx37x362.aspx)
+-   [또는 Visual Basic를 사용 하 여 C# 첫 번째 UWP 앱 만들기](../get-started/create-a-hello-world-app-xaml-universal.md)
+-   [을 사용 하는 UWP 앱 샘플C#](https://code.msdn.microsoft.com/windowsapps/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)
+-   [개체C#](https://msdn.microsoft.com/library/kx37x362.aspx)
 
 다음은 Objective-C와 C#으로 작성된 클래스입니다. Objective-C 버전이 먼저 표시되고 다음에 C# 버전이 표시됩니다.
 
@@ -142,4 +142,4 @@ C#은 간편한 언어이며 .NET을 구성하는 많은 지원 클래스 및 �
 
 ## <a name="next-step"></a>다음 단계
 
-[Getting started: Getting around in Visual Studio](getting-started-getting-around-in-visual-studio.md)
+[시작 하기: Visual Studio에서 살펴보기](getting-started-getting-around-in-visual-studio.md)

@@ -22,16 +22,16 @@ ms.locfileid: "74259452"
 
 **중요 API**
 
--   [**Windows.ApplicationModel.Activation.FileActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
--   [**Windows.UI.Xaml.Application.OnFileActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)
+-   [**FileActivatedEventArgs입니다.** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
+-   [**Windows. .Xaml. OnFileActivated 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)
 
-Your app can register to become the default handler for a certain file type. Windows 데스크톱 응용 프로그램과 UWP(유니버설 Windows 플랫폼) 앱 모두 기본 파일 처리기로 등록할 수 있습니다. 사용자가 앱을 특정 파일 형식의 기본 처리기로 선택하면 해당 형식의 파일을 시작할 때 앱이 활성화됩니다.
+앱은 특정 파일 형식에 대 한 기본 처리기가 되도록 등록할 수 있습니다. Windows 데스크톱 응용 프로그램과 UWP(유니버설 Windows 플랫폼) 앱 모두 기본 파일 처리기로 등록할 수 있습니다. 사용자가 앱을 특정 파일 형식의 기본 처리기로 선택하면 해당 형식의 파일을 시작할 때 앱이 활성화됩니다.
 
 해당 형식의 파일에 대해 모든 파일 시작을 처리하려는 경우에만 파일 형식을 등록하는 것이 좋습니다. 앱에서 파일 형식을 내부적으로만 사용해야 할 경우에는 기본 처리기로 등록할 필요가 없습니다. 파일 형식을 등록할 경우에는 앱이 해당 파일 형식에 대해 활성화될 때 기대되는 기능을 최종 사용자에게 제공해야 합니다. 예를 들어 사진 뷰어 앱은 .jpg 파일을 표시하도록 등록할 수 있습니다. 파일 연결에 대한 자세한 내용은 [파일 형식 및 URI에 대한 지침](https://docs.microsoft.com/windows/uwp/files/index)을 참조하세요.
 
 다음 단계에서는 사용자 지정 파일 형식인 .alsdk를 등록하는 방법 및 사용자가 .alsdk 파일을 시작할 때 앱을 활성화하는 방법을 보여 줍니다.
 
-> **Note**  In UWP apps, certain URIs and file extensions are reserved for use by built-in apps and the operating system. 예약된 URI 또는 파일 확장명에 앱을 등록하려고 하면 무시됩니다. 자세한 내용은 [예약된 파일 및 URI 스키마 이름](reserved-uri-scheme-names.md)을 참조하세요.
+> **참고**  UWP 앱에서 특정 uri 및 파일 확장은 기본 제공 앱 및 운영 체제에서 사용 하도록 예약 되어 있습니다. 예약된 URI 또는 파일 확장명에 앱을 등록하려고 하면 무시됩니다. 자세한 내용은 [예약된 파일 및 URI 스키마 이름](reserved-uri-scheme-names.md)을 참조하세요.
 
 ## <a name="step-1-specify-the-extension-point-in-the-package-manifest"></a>1단계: 패키지 매니페스트에서 확장점 지정
 
@@ -43,16 +43,16 @@ Your app can register to become the default handler for a certain file type. Win
 
 | 필드 | 설명 |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Display Name** | 파일 형식 그룹에 대한 표시 이름을 지정합니다. 표시 이름은 **제어판**의 [기본 프로그램 설정](https://docs.microsoft.com/windows/desktop/shell/default-programs)에서 파일 형식을 식별하는 데 사용됩니다. |
-| **Logo** | 데스크톱 및 **제어판**의 [기본 프로그램 설정](https://docs.microsoft.com/windows/desktop/shell/default-programs)에서 파일 형식을 식별하는 데 사용되는 로고를 지정합니다. 로고를 지정하지 않으면 응용 프로그램의 작은 로고가 사용됩니다. |
-| **Info Tip** | 파일 형식 그룹에 대한 [정보 팁](https://docs.microsoft.com/windows/desktop/shell/fa-progids)을 지정합니다. 이 도구 설명 텍스트는 사용자가 이 파일 형식의 아이콘을 가리키면 표시됩니다. |
+| **표시 이름** | 파일 형식 그룹에 대한 표시 이름을 지정합니다. 표시 이름은 [제어판](https://docs.microsoft.com/windows/desktop/shell/default-programs)의 **기본 프로그램 설정**에서 파일 형식을 식별하는 데 사용됩니다. |
+| **로고나** | 데스크톱 및 [제어판](https://docs.microsoft.com/windows/desktop/shell/default-programs)의 **기본 프로그램 설정**에서 파일 형식을 식별하는 데 사용되는 로고를 지정합니다. 로고를 지정하지 않으면 응용 프로그램의 작은 로고가 사용됩니다. |
+| **정보 팁** | 파일 형식 그룹에 대한 [정보 팁](https://docs.microsoft.com/windows/desktop/shell/fa-progids)을 지정합니다. 이 도구 설명 텍스트는 사용자가 이 파일 형식의 아이콘을 가리키면 표시됩니다. |
 | **이름** | 동일한 표시 이름, 로고, 정보 팁 및 편집 플래그를 공유하는 파일 형식 그룹의 이름을 선택합니다. 앱 업데이트 간에 동일하게 유지될 수 있는 그룹 이름을 선택합니다. **참고** 이름은 모두 소문자여야 합니다. |
-| **Content Type** | 특정 파일 형식에 대해 **image/jpeg** 같은 MIME 콘텐츠 형식을 지정합니다. **허용된 콘텐츠 형식에 대한 중요 정보:** 다음은 예약되거나 금지되어 있기 때문에 패키지 매니페스트에 입력할 수 없는 MIME 콘텐츠 형식의 사전순 목록입니다. **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
-| **File type** | 앞에 마침표를 추가하여 등록할 파일 형식을 지정합니다(예제: ".jpeg"). **예약되거나 금지된 파일 형식** 예약되거나 금지되어 UWP 앱에 등록할 수 없는 기본 제공 앱의 파일 형식에 대한 사전순 목록은 [예약된 URI 체계 이름 및 파일 형식](reserved-uri-scheme-names.md)을 참조하세요. |
+| **콘텐츠 형식** | 특정 파일 형식에 대해 **image/jpeg** 같은 MIME 콘텐츠 형식을 지정합니다. **허용된 콘텐츠 형식에 대한 중요 정보:** 다음은 예약되거나 금지되어 있기 때문에 패키지 매니페스트에 입력할 수 없는 MIME 콘텐츠 형식의 사전순 목록입니다. **application/force-download**, **application/octet-stream**, **application/unknown**, **application/x-msdownload**. |
+| **파일 형식** | 앞에 마침표를 추가하여 등록할 파일 형식을 지정합니다(예제: ".jpeg"). **예약되거나 금지된 파일 형식** 예약되거나 금지되어 UWP 앱에 등록할 수 없는 기본 제공 앱의 파일 형식에 대한 사전순 목록은 [예약된 URI 체계 이름 및 파일 형식](reserved-uri-scheme-names.md)을 참조하세요. |
 
-2.  **이름**으로 `alsdk`를 입력합니다.
-3.  **파일 형식**으로 `.alsdk`를 입력합니다.
-4.  Enter “images\\Icon.png” as the Logo.
+2.  `alsdk`이름**으로** 를 입력합니다.
+3.  `.alsdk`파일 형식**으로** 를 입력합니다.
+4.  "Images\\Icon .png"를 로고로 입력 합니다.
 5.  Ctrl+S를 눌러 package.appxmanifest에 변경 사항을 저장합니다.
 
 위 단계는 이와 같은 [**Extension**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-1-extension) 요소를 패키지 매니페스트에 추가합니다. **windows.fileTypeAssociation** 범주는 앱이 `.alsdk` 확장명을 가진 파일을 처리한다는 것을 나타냅니다.
@@ -121,11 +121,11 @@ void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEv
 ```
 
 > [!NOTE]
-> When launched via File Contract, make sure that Back button takes the user back to the screen that launched the app and not to the app's previous content.
+> 파일 계약을 통해 시작 하는 경우 뒤로 단추를 누르면 사용자가 앱의 이전 콘텐츠가 아닌 앱을 시작한 화면으로 다시 이동 해야 합니다.
 
-We recommend that you create a new XAML **Frame** for each activation event that opens a new page. That way, the navigation backstack for the new XAML Frame doesn't contain any previous content that the app might have on the current window when suspended. If you decide to use a single XAML **Frame** for Launch and for File Contracts, then you should clear the pages in the **Frame**'s navigation journal before navigating to a new page.
+새 페이지를 여는 각 활성화 이벤트에 대해 새 XAML **프레임** 을 만드는 것이 좋습니다. 이렇게 하면 새 XAML 프레임에 대 한 탐색 백 스택에 일시 중단 될 때 앱이 현재 창에 있을 수 있는 이전 콘텐츠가 포함 되지 않습니다. 시작 및 파일 계약에 단일 XAML **프레임** 을 사용 하기로 결정 한 경우에는 새 페이지로 이동 하기 전에 **프레임**의 탐색 저널에 있는 페이지를 지워야 합니다.
 
-When your app is launched via File activation, you should consider including UI that allows the user to go back to the top page of the app.
+앱이 파일 활성화를 통해 시작 되는 경우 사용자가 앱의 맨 위 페이지로 돌아갈 수 있는 UI를 포함 하는 것을 고려해 야 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -135,22 +135,22 @@ When your app is launched via File activation, you should consider including UI 
 
 ### <a name="complete-example"></a>전체 예제
 
-* [Association launching sample](https://code.msdn.microsoft.com/windowsapps/Association-Launching-535d2cec)
+* [연결 시작 샘플](https://code.msdn.microsoft.com/windowsapps/Association-Launching-535d2cec)
 
 ### <a name="concepts"></a>개념
 
-* [Default Programs](https://docs.microsoft.com/windows/desktop/shell/default-programs)
-* [File Type and Protocol Associations Model](https://docs.microsoft.com/windows/desktop/w8cookbook/file-type-and-protocol-associations-model)
+* [기본 프로그램](https://docs.microsoft.com/windows/desktop/shell/default-programs)
+* [파일 형식 및 프로토콜 연결 모델](https://docs.microsoft.com/windows/desktop/w8cookbook/file-type-and-protocol-associations-model)
 
-### <a name="tasks"></a>작업
+### <a name="tasks"></a>태스크
 
 * [파일에 대한 기본 앱 시작](launch-the-default-app-for-a-file.md)
 * [URI 활성화 처리](handle-uri-activation.md)
 
 ### <a name="guidelines"></a>지침
 
-* [Guidelines for file types and URIs](https://docs.microsoft.com/windows/uwp/files/index)
+* [파일 형식 및 Uri에 대 한 지침](https://docs.microsoft.com/windows/uwp/files/index)
 
 ### <a name="reference"></a>참고자료
-* [Windows.ApplicationModel.Activation.FileActivatedEventArgs](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
-* [Windows.UI.Xaml.Application.OnFileActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)
+* [FileActivatedEventArgs입니다.](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
+* [Windows. .Xaml. OnFileActivated 됨](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)

@@ -40,7 +40,7 @@ Microsoft Silverlight 또는 WPF(Windows Presentation Foundation)에 대해 잘 
 
 대부분의 경우 스토리보드 애니메이션은 XAML을 작성하여 정의합니다. Microsoft Visual Studio와 같은 도구를 사용하는 경우 XAML이 자동으로 생성됩니다. 코드를 사용하여 스토리보드 애니메이션을 정의할 수도 있지만 덜 일반적입니다.
 
-간간한 예제를 살펴보겠습니다. 이 XAML 예제에서는 특정 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 개체에 대한 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) 속성에 애니메이션 효과를 줍니다.
+간간한 예제를 살펴보겠습니다. 이 XAML 예제에서는 특정 [**Rectangle**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) 개체에 대한 [**Opacity**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 속성에 애니메이션 효과를 줍니다.
 
 ```xaml
 <Page ...>
@@ -64,7 +64,7 @@ Microsoft Silverlight 또는 WPF(Windows Presentation Foundation)에 대해 잘 
 
 ### <a name="identifying-the-object-to-animate"></a>애니메이션 효과를 줄 개체 식별
 
-이전의 예제에서는 스토리보드가 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) 속성에 애니메이션 효과를 줍니다. 개체 자체에 대한 애니메이션을 선언하지 않습니다. 대신 스토리보드의 애니메이션 정의 내에서 이 작업을 수행합니다. 일반적으로 스토리보드는 애니메이션 효과를 줄 개체의 XAML UI 정의에 바로 근접해 있지 않는 XAML에 정의되어 있습니다. 대신 XAML 리소스로 설정됩니다.
+이전의 예제에서는 스토리보드가 [**Rectangle**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)의 [**Opacity**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 속성에 애니메이션 효과를 줍니다. 개체 자체에 대한 애니메이션을 선언하지 않습니다. 대신 스토리보드의 애니메이션 정의 내에서 이 작업을 수행합니다. 일반적으로 스토리보드는 애니메이션 효과를 줄 개체의 XAML UI 정의에 바로 근접해 있지 않는 XAML에 정의되어 있습니다. 대신 XAML 리소스로 설정됩니다.
 
 애니메이션을 대상에 연결하려면 식별하는 프로그래밍 이름으로 대상을 참조합니다. 항상 XAML UI 정의의 [x:Name 특성](https://docs.microsoft.com/windows/uwp/xaml-platform/x-name-attribute)을 적용하여 애니메이션 효과를 줄 개체의 이름을 지정해야 합니다. 그런 다음 애니메이션 정의 내에서 [**Storyboard.TargetName**](https://docs.microsoft.com/dotnet/api/system.windows.media.animation.storyboard.targetname)을 설정하여 애니메이션 효과를 줄 개체를 대상으로 지정합니다. **Storyboard.TargetName** 값에 대해 대상 개체의 이름 문자열을 사용하며, 이전에 및 다른 위치에서 x:Name 특성을 사용하여 설정한 문자열입니다.
 
@@ -74,7 +74,7 @@ Microsoft Silverlight 또는 WPF(Windows Presentation Foundation)에 대해 잘 
 
 경우에 따라 대상 개체의 직접 속성이 아닌 속성을 대상으로 지정해야 하지만 그러면 개체-속성 관계에서 더 깊게 중첩됩니다. 애니메이션 효과를 줄 수 있는 속성 형식([**Double**](https://docs.microsoft.com/dotnet/api/system.double), [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color))을 참조할 때까지 영향을 주는 일련의 개체 및 속성 값으로 드릴다운하려면 이렇게 해야 하는 경우가 종종 있습니다. 이 개념을 *간접 대상*이라고 하고 이 방식으로 속성을 대상 지정하는 구문을 *속성 경로*라고 합니다.
 
-예를 들면 다음과 같습니다. 스토리보드 애니메이션에 대한 일반적인 시나리오 한 가지는 앱 UI 또는 컨트롤 일부의 색상을 변경하여 컨트롤을 특정 상태로 나타내는 것입니다. 예를 들어 빨간색에서 녹색으로 바뀌도록 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)의 [**Foreground**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.foreground)에 애니메이션 효과를 주려고 합니다. [  **ColorAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ColorAnimation)이 관련된다고 예상할 것이며 그 예상이 맞습니다. 그러나 개체의 색상에 영향을 주는 UI 요소의 속성이 모두 실제로는 [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 형식이 아닙니다. 대신 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 형식입니다. 따라서 실제로 애니메이션의 대상으로 지정해야 하는 항목은 [**SolidColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) 클래스의 [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 속성으로, 이러한 색상 관련 UI 속성에 일반적으로 사용되는 **Brush** 파생 형식입니다. 또한 다음은 애니메이션의 속성 대상 지정을 위한 속성 경로 구성 측면에서 어떻게 표시되는지를 보여 줍니다.
+예제는 다음과 같습니다. 스토리보드 애니메이션에 대한 일반적인 시나리오 한 가지는 앱 UI 또는 컨트롤 일부의 색상을 변경하여 컨트롤을 특정 상태로 나타내는 것입니다. 예를 들어 빨간색에서 녹색으로 바뀌도록 [**TextBlock**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.foreground)의 [**Foreground**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)에 애니메이션 효과를 주려고 합니다. [  **ColorAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ColorAnimation)이 관련된다고 예상할 것이며 그 예상이 맞습니다. 그러나 개체의 색상에 영향을 주는 UI 요소의 속성이 모두 실제로는 [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Color) 형식이 아닙니다. 대신 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 형식입니다. 따라서 실제로 애니메이션의 대상으로 지정해야 하는 항목은 [**SolidColorBrush**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 클래스의 [**Color**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) 속성으로, 이러한 색상 관련 UI 속성에 일반적으로 사용되는 **Brush** 파생 형식입니다. 또한 다음은 애니메이션의 속성 대상 지정을 위한 속성 경로 구성 측면에서 어떻게 표시되는지를 보여 줍니다.
 
 ```xaml
 <Storyboard x:Name="myStoryboard">
@@ -95,7 +95,7 @@ Microsoft Silverlight 또는 WPF(Windows Presentation Foundation)에 대해 잘 
 
 - [**Rendertransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform)에 적용 되는 [**system.windows.media.translatetransform.x**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform)의 [**X**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.translatetransform.x) 값에 애니메이션 효과 주기: `(UIElement.RenderTransform).(TranslateTransform.X)`
 - [**채우기에**](/uwp/api/Windows.UI.Xaml.Shapes.Shape.Fill)적용 되는 [**system.windows.media.lineargradientbrush.startpoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.LinearGradientBrush)의 [**GradientStop**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.GradientStop) 내에서 [**색**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 에 애니메이션 효과 주기: `(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)`
-- [**Rendertransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform)에 적용 된 것과 같이 [**system.windows.media.transformgroup>** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TransformGroup)에서 4 개의 변형 인 [**system.windows.media.translatetransform.x**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform)의 [**X**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.translatetransform.x) 값에 애니메이션 효과를 적용 합니다 @no__t.
+- [**Rendertransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform)에 적용 된 것과 같이 [**system.windows.media.transformgroup>** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TransformGroup)에서 4 개의 변환 인 [**system.windows.media.translatetransform.x**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform)의 [**X**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.translatetransform.x) 값에 애니메이션 효과를 적용 합니다`(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)`.
 
 이러한 예제 중 일부에서 숫자 주위에 대괄호를 사용하는 것을 확인할 수 있습니다. 이는 인덱서이며, 앞에 오는 속성 이름에는 컬렉션이 값으로 포함되며 해당 컬렉션에서 0부터 시작하는 색인으로 식별되는 항목이 필요함을 나타냅니다.
 
@@ -127,7 +127,7 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
 
 이전 XAML 예제로 다시 돌아가 **From** 및 **To** 값과 **Duration**을 다시 살펴보겠습니다. 이 예제에서는 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) 속성에 애니메이션 효과를 주며 **Opacity**의 속성 형식은 [**Double**](https://docs.microsoft.com/dotnet/api/system.double)입니다. 따라서 여기서 사용하는 애니메이션은 [**DoubleAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DoubleAnimation)입니다.
 
-`From="1.0" To="0.0"`은 애니메이션이 실행 될 때 [**불투명도**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) 속성이 1로 시작 하 고 0에 애니메이션을 적용 하도록 지정 합니다. 즉, **Opacity** 속성에 대한 이러한 [**Double**](https://docs.microsoft.com/dotnet/api/system.double) 값의 의미와 관련하여 이 애니메이션은 개체가 불투명하게 시작된 다음 투명하게 페이드되도록 합니다.
+`From="1.0" To="0.0"` 애니메이션이 실행 될 때 [**불투명도**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) 속성이 1 값에서 시작 하 여 0에 애니메이션을 적용 하도록 지정 합니다. 즉, [Opacity**속성에 대한 이러한**](https://docs.microsoft.com/dotnet/api/system.double)Double 값의 의미와 관련하여 이 애니메이션은 개체가 불투명하게 시작된 다음 투명하게 페이드되도록 합니다.
 
 ```xaml
 ...
@@ -140,7 +140,7 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
 ...
 ```
 
-`Duration="0:0:1"`은 애니메이션이 지속 되는 기간, 즉 사각형의 속도를 지정 합니다. [  **Duration**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.duration) 속성은 *시*:*분*:*초* 형식으로 지정합니다. 이 예제의 기간은 1초입니다.
+애니메이션 지속 시간, 즉 사각형의 속도를 지정 `Duration="0:0:1"` 합니다. [  **Duration**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.duration) 속성은 *시*:*분*:*초* 형식으로 지정합니다. 이 예제의 기간은 1초입니다.
 
 [  **Duration**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Duration) 값 및 XAML 구문에 대한 자세한 내용은 [**Duration**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Duration)을 참조하세요.
 
@@ -149,7 +149,7 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
 
 ### <a name="fromtoby-are-nullable"></a>nullable인 From/To/By
 
-앞에서 **From**, **To** 또는 **By**를 생략하여 애니메이션 효과를 주지 않은 현재 값을 누락된 값을 대체하는 값으로 사용할 수 있다고 설명했습니다. 애니메이션의 **From**, **To** 또는 **By** 속성이 추측할 수 있는 형식이 아닙니다. 예를 들어 [**DoubleAnimation.To**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.doubleanimation.easingfunction) 속성의 형식이 [**Double**](https://docs.microsoft.com/dotnet/api/system.double)이 아닙니다. 대신 **Double**에 대한 [**Nullable**](https://docs.microsoft.com/dotnet/api/system.nullable-1)입니다. 또한 기본값도 0이 아닌 **null**입니다. 해당 **null** 값은 애니메이션 시스템에서 **From**, **To** 또는 **By** 속성에 대한 값을 특별히 설정하지 않았음을 구분하는 방법입니다. /Cx C++ (C++시각적 구성 요소 확장)에는 **Nullable** 형식이 없으므로 대신 [IReference](https://docs.microsoft.com/uwp/api/Windows.Foundation.IReference_T_) 를 사용 합니다.
+앞에서 **From**, **To** 또는 **By**를 생략하여 애니메이션 효과를 주지 않은 현재 값을 누락된 값을 대체하는 값으로 사용할 수 있다고 설명했습니다. 애니메이션의 **From**, **To** 또는 **By** 속성이 추측할 수 있는 형식이 아닙니다. 예를 들어 [**DoubleAnimation.To**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.doubleanimation.easingfunction) 속성의 형식이 [**Double**](https://docs.microsoft.com/dotnet/api/system.double)이 아닙니다. 대신 [Double**에 대한** ](https://docs.microsoft.com/dotnet/api/system.nullable-1)Nullable입니다. 또한 기본값도 0이 아닌 **null**입니다. 해당 **null** 값은 애니메이션 시스템에서 **From**, **To** 또는 **By** 속성에 대한 값을 특별히 설정하지 않았음을 구분하는 방법입니다. /Cx C++ (C++시각적 구성 요소 확장)에는 **Nullable** 형식이 없으므로 대신 [**IReference**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IReference_T_) 를 사용 합니다.
 
 ### <a name="other-properties-of-an-animation"></a>애니메이션의 다른 속성
 
@@ -165,7 +165,7 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
 
 [  **RepeatBehavior**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.repeatbehavior) 속성은 타임라인이 재생되는 횟수 또는 타임라인이 반복되어야 하는 더 큰 기간을 지정합니다. 기본적으로 타임라인에는 "1x"의 반복 횟수가 있으며 해당 [**Duration**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.duration) 동안 한 번 재생되고 반복되지 않는다는 의미입니다.
 
-애니메이션이 여러 번 반복하여 재생되도록 할 수 있습니다. 예를 들어, 값이 "3x"이면 애니메이션이 세 번 재생됩니다. 또는 [**RepeatBehavior**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.repeatbehavior)에 대해 다른 [**Duration**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Duration)을 지정할 수 있습니다. 효율성을 높이려면 해당 **Duration**이 애니메이션 자체의 **Duration**보다 길어야 합니다. 예를 들어 [**Duration**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.duration)이 "0:0:2"인 애니메이션에 대해 **RepeatBehavior**를 "0:0:10"으로 지정하면 해당 애니메이션은 5번 반복됩니다. 이러한 값이 똑같이 나누어지지 않으면 **RepeatBehavior** 시간에 도달할 때 애니메이션이 잘려 중간까지만 실행될 수 있습니다. 마지막으로 특수한 값 "Forever"를 지정하여 애니메이션이 의도적으로 중지될 때까지 무한 실행되도록 할 수 있습니다.
+애니메이션이 여러 번 반복하여 재생되도록 할 수 있습니다. 예를 들어, 값이 "3x"이면 애니메이션이 세 번 재생됩니다. 또는 [**RepeatBehavior**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Duration)에 대해 다른 [**Duration**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.repeatbehavior)을 지정할 수 있습니다. 효율성을 높이려면 해당 **Duration**이 애니메이션 자체의 **Duration**보다 길어야 합니다. 예를 들어Duration[**이 "0:0:2"인 애니메이션에 대해** RepeatBehavior](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.duration)를 "0:0:10"으로 지정하면 해당 애니메이션은 5번 반복됩니다. 이러한 값이 똑같이 나누어지지 않으면 **RepeatBehavior** 시간에 도달할 때 애니메이션이 잘려 중간까지만 실행될 수 있습니다. 마지막으로 특수한 값 "Forever"를 지정하여 애니메이션이 의도적으로 중지될 때까지 무한 실행되도록 할 수 있습니다.
 
 [  **RepeatBehavior**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepeatBehavior) 값 및 XAML 구문에 대한 자세한 내용은 [**RepeatBehavior**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepeatBehavior)를 참조하세요.
 
@@ -179,11 +179,11 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
 
 ### <a name="speedratio"></a>**System.windows.media.animation.timeline.speedratio**
 
-[  **Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)에 둘 이상의 애니메이션이 있는 경우 **Storyboard**를 기준으로 여러 애니메이션의 시간 속도를 변경할 수 있습니다. 애니메이션이 실행되는 동안 [**Duration**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Duration) 시간이 경과되는 방식을 궁극적으로 제어하는 것은 부모 **Storyboard**입니다. 이 속성이 자주 사용되지는 않습니다. 자세한 내용은 [**SpeedRatio**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.speedratio)를 참조하세요.
+[  **Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)에 둘 이상의 애니메이션이 있는 경우 **Storyboard**를 기준으로 여러 애니메이션의 시간 속도를 변경할 수 있습니다. 애니메이션이 실행되는 동안Duration[**시간이 경과되는 방식을 궁극적으로 제어하는 것은 부모**Storyboard](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Duration)입니다. 이 속성이 자주 사용되지는 않습니다. 자세한 내용은 [**SpeedRatio**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.speedratio)를 참조하세요.
 
 ## <a name="defining-more-than-one-animation-in-a-storyboard"></a>**Storyboard**에서 둘 이상의 애니메이션 정의
 
-[  **Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)의 콘텐츠는 둘 이상의 애니메이션 정의가 될 수 있습니다. 관련 애니메이션을 동일한 대상 개체의 두 속성에 적용하려는 경우 둘 이상의 애니메이션을 사용할 수 있습니다. 예를 들어 UI 요소의 [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform)로 사용된 [**TranslateTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform)의 [**TranslateX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.compositetransform.translatex) 및 [**TranslateY**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.compositetransform.translatey) 속성을 모두 변경할 수 있습니다. 그러면 요소가 대각선으로 변환됩니다. 이 작업을 수행하려면 두 개의 다른 애니메이션이 필요하지만 이러한 두 애니메이션을 항상 함께 실행하려고 하므로 애니메이션이 동일한 **Storyboard**의 일부가 되도록 할 수 있습니다.
+[  **Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)의 콘텐츠는 둘 이상의 애니메이션 정의가 될 수 있습니다. 관련 애니메이션을 동일한 대상 개체의 두 속성에 적용하려는 경우 둘 이상의 애니메이션을 사용할 수 있습니다. 예를 들어 UI 요소의 [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.compositetransform.translatex)로 사용된 [**TranslateTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.compositetransform.translatey)의 [**TranslateX**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) 및 [**TranslateY**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform) 속성을 모두 변경할 수 있습니다. 그러면 요소가 대각선으로 변환됩니다. 이 작업을 수행하려면 두 개의 다른 애니메이션이 필요하지만 이러한 두 애니메이션을 항상 함께 실행하려고 하므로 애니메이션이 동일한 **Storyboard**의 일부가 되도록 할 수 있습니다.
 
 애니메이션이 동일한 형식이거나 동일한 개체를 대상으로 지정할 필요는 없습니다. 다른 기간을 사용할 수 있으며 속성 값을 공유하지 않아도 됩니다.
 
@@ -223,11 +223,11 @@ Windows 런타임 애니메이션 시스템에는 스토리보드 애니메이�
 page.xaml이나 app.xaml 같은 XAML 파일의 XAML 루트에서 리소스를 정의하는 것은 XAML에서 키 입력 리소스를 구성하는 방법에 일반적인 사례입니다. 리소스를 별도의 파일로 인수화하여 앱이나 페이지에 병합할 수도 있습니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://docs.microsoft.com/windows/uwp/controls-and-patterns/resourcedictionary-and-xaml-resource-references)를 확인하세요.
 
 > [!NOTE]
-> Windows 런타임 XAML은 [x:Key 특성](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute) 또는 [x:Name 특성](https://docs.microsoft.com/windows/uwp/xaml-platform/x-name-attribute)을 사용한 리소스 식별을 지원합니다. 결국에는 변수 이름으로 참조하여 [**Begin**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.begin) 메서드를 호출하고 애니메이션을 실행할 수 있기 때문에 x:Name 특성 사용이 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)에 더 일반적입니다. [x:Key 특성](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute)을 사용하면 [**Item**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.item) 인덱서와 같은 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) 메서드를 사용하여 키 입력 리소스로 검색한 다음 검색된 개체를 **Storyboard**에 캐스트하여 **Storyboard** 메서드를 사용해야 합니다.
+> Windows 런타임 XAML은 [x:Key 특성](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute) 또는 [x:Name 특성](https://docs.microsoft.com/windows/uwp/xaml-platform/x-name-attribute)을 사용한 리소스 식별을 지원합니다. 결국에는 변수 이름으로 참조하여 [**Begin**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard) 메서드를 호출하고 애니메이션을 실행할 수 있기 때문에 x:Name 특성 사용이 [**Storyboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.begin)에 더 일반적입니다. [x:Key 특성](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute)을 사용하면 [**Item**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) 인덱서와 같은 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.item) 메서드를 사용하여 키 입력 리소스로 검색한 다음 검색된 개체를 **Storyboard**에 캐스트하여 **Storyboard** 메서드를 사용해야 합니다.
 
 ### <a name="storyboards-for-visual-states"></a>시각적 상태에 대한 스토리보드
 
-또한 컨트롤의 시각적 모양에 대한 시각적 상태 애니메이션을 선언할 때 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard) 단위 내에 애니메이션을 배치합니다. 이 경우 정의한**Storyboard** 요소는 [**Style**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style)에 더욱 깊게 중첩된 [**VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState) 컨테이너로 이동합니다. **Style**은 키 입력 리소스입니다. **VisualState**에는 [**VisualStateManager**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstatemanager)가 호출할 수 있는 대상 이름이 있으므로 이 경우 **Storyboard**에 대한 키 또는 이름이 필요하지 않습니다. 컨트롤의 스타일은 페이지 또는 앱 **Resources** 컬렉션에 배치되지 않고 별도의 XAML [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) 파일로 인수화되기도 합니다. 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://docs.microsoft.com/previous-versions/windows/apps/jj819808(v=win.10))을 참조하세요.
+또한 컨트롤의 시각적 모양에 대한 시각적 상태 애니메이션을 선언할 때 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard) 단위 내에 애니메이션을 배치합니다. 이 경우 정의한**Storyboard** 요소는 [**Style**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState)에 더욱 깊게 중첩된 [**VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) 컨테이너로 이동합니다. **Style**은 키 입력 리소스입니다. **VisualState**에는VisualStateManager[**가 호출할 수 있는 대상 이름이 있으므로 이 경우** Storyboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstatemanager)에 대한 키 또는 이름이 필요하지 않습니다. 컨트롤의 스타일은 페이지 또는 앱 [Resources**컬렉션에 배치되지 않고 별도의 XAML**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)ResourceDictionary 파일로 인수화되기도 합니다. 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://docs.microsoft.com/previous-versions/windows/apps/jj819808(v=win.10))을 참조하세요.
 
 ## <a name="dependent-and-independent-animations"></a>종속 애니메이션과 독립 애니메이션
 
@@ -239,7 +239,7 @@ UI 스레드의 속도를 저하시킬 약간의 위험이 있는 것으로 확�
 
 -   애니메이션의 [**Duration**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.duration)이 0초입니다(경고 참조).
 -   애니메이션이 [**UIElement.Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)를 대상으로 합니다.
--   애니메이션은 이러한 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 속성의 하위 속성 값을 대상으로 합니다. [**Transform3D**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.transform3d), [**rendertransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform), [**프로젝션**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.projection), [**클립**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.clip)
+-   애니메이션이 [**Transform3D**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement), [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.transform3d), [**Projection**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform), [**Clip**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.projection) 같은 [**UIElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.clip) 속성의 하위 속성 값을 대상으로 합니다.
 -   애니메이션이 [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) 또는 [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top)을 대상으로 합니다.
 -   애니메이션이 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush) 값을 대상으로 하고 [**SolidColorBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush)를 사용하여 해당 [**Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color)에 애니메이션 효과를 줍니다.
 -   애니메이션이 [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames)입니다.
@@ -270,11 +270,11 @@ UI 스레드의 속도를 저하시킬 약간의 위험이 있는 것으로 확�
 
 ## <a name="starting-and-controlling-an-animation"></a>애니메이션 시작 및 제어
 
-지금까지 살펴본 모든 내용은 실제로 애니메이션이 실행되거나 적용되도록 하지 않습니다. 애니메이션이 시작되고 실행될 때까지 애니메이션이 XAML에서 선언하는 값 변경 내용은 숨어 있으며 아직 수행되지 않습니다. 앱 수명이나 사용자 환경과 관련이 있는 애니메이션을 어떤 방식으로든 명시적으로 시작해야 합니다. 가장 간단한 수준으로 애니메이션의 부모인 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)에서 [**Begin**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.begin) 메서드를 호출하여 해당 애니메이션을 시작합니다. 메서드를 XAML에서 직접 호출할 수는 없으므로 애니메이션을 사용하도록 설정하기 위해 수행하는 작업은 무엇이든 코드에서 수행해야 합니다. 해당 작업은 앱의 페이지 또는 구성 요소에 대해 코드 숨김이거나 사용자 지정 컨트롤 클래스를 정의하는 경우에는 컨트롤의 논리일 수 있습니다.
+지금까지 살펴본 모든 내용은 실제로 애니메이션이 실행되거나 적용되도록 하지 않습니다. 애니메이션이 시작되고 실행될 때까지 애니메이션이 XAML에서 선언하는 값 변경 내용은 숨어 있으며 아직 수행되지 않습니다. 앱 수명이나 사용자 환경과 관련이 있는 애니메이션을 어떤 방식으로든 명시적으로 시작해야 합니다. 가장 간단한 수준으로 애니메이션의 부모인 [**Storyboard**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.begin)에서 [**Begin**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard) 메서드를 호출하여 해당 애니메이션을 시작합니다. 메서드를 XAML에서 직접 호출할 수는 없으므로 애니메이션을 사용하도록 설정하기 위해 수행하는 작업은 무엇이든 코드에서 수행해야 합니다. 해당 작업은 앱의 페이지 또는 구성 요소에 대해 코드 숨김이거나 사용자 지정 컨트롤 클래스를 정의하는 경우에는 컨트롤의 논리일 수 있습니다.
 
 일반적으로 [**Begin**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.begin)을 호출하고 기간이 완료될 때까지 애니메이션이 실행되도록 하면 됩니다. 그러나 고급 애니메이션 제어 시나리오에 사용되는 다른 API뿐만 아니라 [**Pause**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.pause), [**Resume**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.resume) 및 [**Stop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.stop) 메서드를 사용하여 런타임에 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)를 제어할 수도 있습니다.
 
-무한 반복(`RepeatBehavior="Forever"`)되는 애니메이션을 포함하는 스토리보드에서 [**Begin**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.begin)을 호출하면 해당 애니메이션을 포함하는 페이지가 언로드되거나 특별히 [**Pause**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.pause) 또는 [**Stop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.stop)을 호출할 때까지 해당 애니메이션이 실행됩니다.
+무한 반복([)되는 애니메이션을 포함하는 스토리보드에서Begin](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.begin)`RepeatBehavior="Forever"`을 호출하면 해당 애니메이션을 포함하는 페이지가 언로드되거나 특별히 [**Pause**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.pause) 또는 [**Stop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.stop)을 호출할 때까지 해당 애니메이션이 실행됩니다.
 
 ### <a name="starting-an-animation-from-app-code"></a>앱 코드에서 애니메이션 시작
 
@@ -288,7 +288,7 @@ UI 스레드의 속도를 저하시킬 약간의 위험이 있는 것으로 확�
   Width="300" Height="200" Fill="Blue"/>
 ```
 
-이벤트 처리기는 **Storyboard**의 [**Begin**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.begin) 메서드를 사용하여 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)(애니메이션)를 시작합니다.
+이벤트 처리기는 [Storyboard**의** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)Begin[**메서드를 사용하여**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.begin)Storyboard(애니메이션)를 시작합니다.
 
 ```csharp
 myStoryboard.Begin();
@@ -315,7 +315,7 @@ myStoryBoard.Begin()
 
 ### <a name="animations-for-visual-states"></a>시각적 상태에 대한 애니메이션
 
-컨트롤의 시각적 상태를 정의하는 데 사용되는 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)의 실행 동작은 앱에서 스토리보드를 직접 실행하는 방식과 다릅니다. XAML의 시각적 상태 정의에 적용된 대로 **Storyboard**는 포함하는 [**VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState)의 요소이며 전체 상태는 [**VisualStateManager**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstatemanager) API를 사용하여 제어됩니다. 포함된 모든 애니메이션은 포함하는 **VisualState**가 컨트롤에서 사용될 때 해당 애니메이션 값 및 [**Timeline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Timeline) 속성에 따라 실행됩니다. 자세한 내용은 [시각적 상태에 대한 스토리보드](https://docs.microsoft.com/previous-versions/windows/apps/jj819808(v=win.10))를 참조하세요. 시각적 상태의 경우 명확한 [**FillBehavior**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.fillbehavior)가 다릅니다. 시각적 상태가 다른 상태로 변경되면 이전 시각적 상태에 의해 적용된 모든 속성 변경과 해당 애니메이션은 새로운 시각적 상태가 속성에 새 애니메이션을 특별히 적용하지 않는 경우에도 취소됩니다.
+컨트롤의 시각적 상태를 정의하는 데 사용되는 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)의 실행 동작은 앱에서 스토리보드를 직접 실행하는 방식과 다릅니다. XAML의 시각적 상태 정의에 적용된 대로 **Storyboard**는 포함하는 [**VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState)의 요소이며 전체 상태는 [**VisualStateManager**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstatemanager) API를 사용하여 제어됩니다. 포함된 모든 애니메이션은 포함하는 [VisualState**가 컨트롤에서 사용될 때 해당 애니메이션 값 및** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Timeline)Timeline 속성에 따라 실행됩니다. 자세한 내용은 [시각적 상태에 대한 스토리보드](https://docs.microsoft.com/previous-versions/windows/apps/jj819808(v=win.10))를 참조하세요. 시각적 상태의 경우 명확한 [**FillBehavior**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.fillbehavior)가 다릅니다. 시각적 상태가 다른 상태로 변경되면 이전 시각적 상태에 의해 적용된 모든 속성 변경과 해당 애니메이션은 새로운 시각적 상태가 속성에 새 애니메이션을 특별히 적용하지 않는 경우에도 취소됩니다.
 
 ### <a name="storyboard-and-eventtrigger"></a>**Storyboard** 및 **EventTrigger**
 
@@ -323,7 +323,7 @@ XAML에서 완전히 선언할 수 있는 애니메이션을 시작하는 방법
 
 ## <a name="animating-xaml-attached-properties"></a>XAML 연결 속성에 애니메이션 효과 주기
 
-일반적인 시나리오는 아니지만 애니메이션 효과를 준 값을 XAML 연결 속성에 적용할 수 있습니다. 연결 속성의 정의와 작동 방식에 대한 자세한 내용은 [연결 속성 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/attached-properties-overview)를 참조하세요. 연결된 속성을 대상으로 지정하려면 속성 이름을 괄호로 묶는 [속성 경로 구문](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax)이 필요합니다. 별도의 정수 값을 적용하는 [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames)를 사용하여 [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v=vs.95)) 같은 기본 제공된 연결 속성에 애니메이션 효과를 줄 수 있습니다. 그러나 Windows 런타임 XAML 구현의 기존 제한점은 사용자 지정 연결 속성에 애니메이션 효과를 줄 수 없다는 것입니다.
+일반적인 시나리오는 아니지만 애니메이션 효과를 준 값을 XAML 연결 속성에 적용할 수 있습니다. 연결 속성의 정의와 작동 방식에 대한 자세한 내용은 [연결 속성 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/attached-properties-overview)를 참조하세요. 연결된 속성을 대상으로 지정하려면 속성 이름을 괄호로 묶는 [속성 경로 구문](https://docs.microsoft.com/windows/uwp/xaml-platform/property-path-syntax)이 필요합니다. 별도의 정수 값을 적용하는 [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v=vs.95))를 사용하여 [**Canvas.ZIndex**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames) 같은 기본 제공된 연결 속성에 애니메이션 효과를 줄 수 있습니다. 그러나 Windows 런타임 XAML 구현의 기존 제한점은 사용자 지정 연결 속성에 애니메이션 효과를 줄 수 없다는 것입니다.
 
 ## <a name="more-animation-types-and-next-steps-for-learning-about-animating-your-ui"></a>추가 애니메이션 형식 및 UI에 애니메이션 효과를 주는 방법을 알아보는 다음 단계
 

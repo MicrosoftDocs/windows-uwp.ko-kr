@@ -20,20 +20,20 @@ ms.locfileid: "74257972"
 
 **중요 API**
 
--   [**CrossSliding**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.crosssliding)
+-   [**상대 슬라이딩**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.crosssliding)
 -   [**CrossSlideThresholds**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.crossslidethresholds)
--   [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
+-   [**Windows. UI. 입력**](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
 
 교차 방향으로 밀기를 사용하면 살짝 밀기 제스처를 이용한 항목 선택과 밀기 제스처를 이용한 끌기(이동) 조작을 지원할 수 있습니다.
 
-## <a name="span-iddos_and_don_tsspanspan-iddos_and_don_tsspanspan-iddos_and_don_tsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Dos and don'ts
+## <a name="span-iddos_and_don_tsspanspan-iddos_and_don_tsspanspan-iddos_and_don_tsspandos-and-donts"></a><span id="Dos_and_don_ts"></span><span id="dos_and_don_ts"></span><span id="DOS_AND_DON_TS"></span>Dos 및 일과
 
 
 -   단일 방향으로 스크롤되는 목록이나 모음에는 교차 방향으로 밀기를 사용합니다.
 -   탭 조작이 다른 용도로 사용되는 경우 항목 선택에 교차 방향으로 밀기를 사용합니다.
 -   큐에 항목을 추가할 때는 교차 방향으로 밀기를 사용하지 마세요.
 
-## <a name="span-idadditional_usage_guidancespanspan-idadditional_usage_guidancespanspan-idadditional_usage_guidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>Additional usage guidance
+## <a name="span-idadditional_usage_guidancespanspan-idadditional_usage_guidancespanspan-idadditional_usage_guidancespanadditional-usage-guidance"></a><span id="Additional_usage_guidance"></span><span id="additional_usage_guidance"></span><span id="ADDITIONAL_USAGE_GUIDANCE"></span>추가 사용 지침
 
 
 선택 및 끌기는 한 방향(세로 또는 가로)으로 이동 가능한 콘텐츠 영역 내에서만 사용할 수 있습니다. 다른 조작이 작동하려면 하나의 이동 방향을 잠그고 이동 방향에 수직으로 제스처를 수행해야 합니다.
@@ -56,7 +56,7 @@ ms.locfileid: "74257972"
 
 단일 방향으로 스크롤되는 목록이나 모음에는 교차 방향으로 밀기를 사용합니다. 자세한 내용은 [ListView 컨트롤 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh465382(v=win.10))를 참조하세요.
 
-**Note**  In cases where the content area can be panned in two directions, such as web browsers or e-readers, the press-and-hold timed interaction should be used to invoke the context menu for objects such as images and hyperlinks.
+**  콘텐츠** 영역을 웹 브라우저 또는 전자 판독기와 같은 두 방향으로 따라 이동 수 있는 경우에는 이미지 및 하이퍼링크와 같은 개체에 대 한 상황에 맞는 메뉴를 호출 하는 데 길게 누르기 시간 간격 지정을 사용 해야 합니다.
 
  
 
@@ -69,7 +69,7 @@ ms.locfileid: "74257972"
 
 ### <span id="selection"></span><span id="SELECTION"></span>
 
-**Selecting**
+**선택 하**
 
 선택이란 하나 이상의 개체를 시작하거나 활성화하지 않고 단순히 표시하는 것입니다. 이 동작은 하나 이상의 개체를 마우스로 한 번 클릭하거나 Shift 키를 누른 채로 클릭하는 것과 비슷합니다.
 
@@ -97,7 +97,7 @@ ms.locfileid: "74257972"
 
 유일한 기본 동작인 경우 응용 프로그램에서 한 번 탭하여 선택을 수행합니다. 가로질러 밀기 자체 노출 애니메이션은 이러한 표준 탭하기 조작의 기능을 명확히 보여 줌으로써 활성화 및 탐색에 도움을 주기 위해 표시됩니다.
 
-**Selection basket**
+**선택 바구니**
 
 선택 바스켓은 응용 프로그램의 기본 목록이나 모음에서 선택된 항목에 대한 시각적으로 고유한 동적 표현입니다. 이 기능은 선택한 항목을 추적하는 데 유용하며, 다음이 가능한 응용 프로그램에서 사용해야 합니다.
 
@@ -111,7 +111,7 @@ ms.locfileid: "74257972"
 
 선택 바스켓이 사용되지 않고 목록이나 모음의 다른 항목이 활성화될 때도 현재 선택 내용이 지워집니다. 예를 들어 받은 편지함 메시지를 선택하면 미리 보기 창이 업데이트됩니다. 그런 후 또 다른 받은 편지함 메시지를 선택하면 이전 메시지 선택이 취소되고 미리 보기 창이 업데이트됩니다.
 
-**Queues**
+**쿼리**
 
 큐는 선택 바스켓 목록과 다르므로 별도로 취급해야 합니다. 주요 차이점은 다음과 같습니다.
 
@@ -123,29 +123,29 @@ ms.locfileid: "74257972"
 
 ### <span id="draganddrop"></span><span id="DRAGANDDROP"></span>
 
-**Drag**
+**옵니다**
 
 끌기를 사용하여 하나 이상의 개체를 한 위치에서 다른 위치로 이동할 수 있습니다.
 
 여러 개체를 이동해야 하는 경우 사용자가 여러 항목을 선택한 다음 모든 항목을 한 번에 끌 수 있게 합니다.
 
-## <a name="span-idrelated_topicsspanrelated-articles"></a><span id="related_topics"></span>Related articles
+## <a name="span-idrelated_topicsspanrelated-articles"></a><span id="related_topics"></span>관련 문서
 
 
 **샘플**
-* [Basic input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-* [Low latency input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
-* [User interaction mode sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [기본 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [짧은 대기 시간 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [사용자 상호 작용 모드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
 * [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 **보관 샘플**
-* [Input: XAML user input events sample](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
-* [Input: Device capabilities sample](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
-* [Input: Touch hit testing sample](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
-* [XAML scrolling, panning, and zooming sample](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
-* [Input: Simplified ink sample](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
-* [Input: Windows 8 gestures sample](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
-* [Input: Manipulations and gestures (C++) sample](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
-* [DirectX touch input sample](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
+* [Input: XAML 사용자 입력 이벤트 샘플](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [입력: 장치 기능 샘플](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [입력: 터치 적중 테스트 샘플](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
+* [XAML 스크롤, 패닝 및 확대/축소 샘플](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [입력: 간소화 된 잉크 샘플](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
+* [입력: Windows 8 제스처 샘플](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+* [Input: 조작과 제스처 (C++) 샘플](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
+* [DirectX touch 입력 샘플](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
  
 
  

@@ -121,7 +121,7 @@ UI 가상화는 _필요할 때_까지 ui 개체 생성을 지연 하는 것을 �
 > [!NOTE]
 > 이 문서에서 다루지 않았지만 스크롤 시나리오에서 UI 가상화를 사용 하도록 설정 하는 것과 동일한 기능을 스크롤하지 않는 시나리오에서 적용할 수 있습니다.  예를 들어 표시 되는 명령의 수명을 관리 하 고 표시 되는 영역과 오버플로 메뉴 간에 요소를 재활용/이동 하 여 사용 가능한 공간의 변경에 응답 하는 데이터 기반 도구 모음 컨트롤이 있습니다.
 
-## <a name="getting-started"></a>시작하기
+## <a name="getting-started"></a>시작
 
 먼저, 만들어야 하는 레이아웃에서 UI 가상화를 지원 해야 하는지 여부를 결정 합니다.
 
@@ -261,7 +261,7 @@ Windows에서 스크롤하면 UI 스레드에 대해 비동기적으로 수행 �
 
 지정 된 인덱스에 대 한 요소를 요청 하면 해당 요소가 해당 레이아웃 패스에 대해 "사용 중"으로 표시 됩니다. 요소가 아직 없는 경우에는 해당 요소가 인식 되 고 자동으로 사용 준비 됩니다. 예를 들어 DataTemplate에 정의 된 UI 트리를 않아서 하 고 데이터 바인딩을 처리 하는 등의 작업을 수행 합니다.  그렇지 않으면 기존 인스턴스의 풀에서 검색 됩니다.
 
-각 측정값이 끝난 후에는 "사용 중"으로 표시되지 않은 모든 기존 요소를 다시 사용할 수 있는 것으로 간주합니다. 단,[GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat)를 통해 요소를 검색할 때 [SuppressAutoRecycle](/uwp/api/microsoft.ui.xaml.controls.elementrealizationoptions)를 사용 하는 옵션이 사용 되지 않는 경우 프레임 워크는 자동으로이를 재활용 풀로 이동 하 여 사용할 수 있도록 합니다. 이후에 다른 컨테이너에서 사용할 수 있습니다. 요소를 다시 부모로 지정할 때 몇 가지 비용이 발생 하므로 프레임 워크는 가능한 경우이를 방지 하려고 시도 합니다.
+각 측정값이 끝난 후에는 "사용 중"으로 표시되지 않은 모든 기존 요소를 다시 사용할 수 있는 것으로 간주합니다. 단,[GetOrCreateElementAt](/uwp/api/microsoft.ui.xaml.controls.elementrealizationoptions)를 통해 요소를 검색할 때 [SuppressAutoRecycle](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat)를 사용 하는 옵션이 사용 되지 않는 경우 프레임 워크는 자동으로이를 재활용 풀로 이동 하 여 사용할 수 있도록 합니다. 이후에 다른 컨테이너에서 사용할 수 있습니다. 요소를 다시 부모로 지정할 때 몇 가지 비용이 발생 하므로 프레임 워크는 가능한 경우이를 방지 하려고 시도 합니다.
 
 가상화 레이아웃을 통해 각 측정 시작 부분에서 요소가 인식 영역에 더 이상 포함 되지 않는 것을 알고 있는 경우 다시 사용을 최적화할 수 있습니다. 프레임 워크의 기본 동작에 의존 하지 않습니다. 레이아웃에서는 [RecycleElement](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recycleelement) 메서드를 사용 하 여 미리 요소를 재생 풀로 이동할 수 있습니다.  새 요소를 요청 하기 전에이 메서드를 호출 하면 레이아웃에서 나중에 요소에 연결 되지 않은 인덱스에 대해 [Getorcreateelementat](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.getorcreateelementat) 요청을 실행할 때 기존 요소를 사용할 수 있습니다.
 
@@ -712,7 +712,7 @@ XAML은 스크롤 컨트롤이 [IScrollAnchorPovider](/uwp/api/windows.ui.xaml.c
 * 는 연속 되지 않은 잠재적 불연속 뷰포트 변화를 인식 합니다.
 * 이러한 이동에 대 한 고려 사항에 레이아웃 수정을 적용 합니다.
 
-** 사용: 태그 @ no__t-0
+**사용법: 태그**
 
 ```xaml
 <ScrollViewer>
@@ -741,7 +741,7 @@ XAML은 스크롤 컨트롤이 [IScrollAnchorPovider](/uwp/api/windows.ui.xaml.c
 </ScrollViewer>
 ```
 
-** 코드 숨김: 주 .cs @ no__t-0
+**Codebehind: Main.cs**
 
 ```csharp
 string _lorem = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet erat vel massa rutrum, eget mollis massa vulputate. Vivamus semper augue leo, eget faucibus nulla mattis nec. Donec scelerisque lacus at dui ultricies, eget auctor ipsum placerat. Integer aliquet libero sed nisi eleifend, nec rutrum arcu lacinia. Sed a sem et ante gravida congue sit amet ut augue. Donec quis pellentesque urna, non finibus metus. Proin sed ornare tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet erat vel massa rutrum, eget mollis massa vulputate. Vivamus semper augue leo, eget faucibus nulla mattis nec. Donec scelerisque lacus at dui ultricies, eget auctor ipsum placerat. Integer aliquet libero sed nisi eleifend, nec rutrum arcu lacinia. Sed a sem et ante gravida congue sit amet ut augue. Donec quis pellentesque urna, non finibus metus. Proin sed ornare tellus.";
@@ -757,7 +757,7 @@ var data = new ObservableCollection<Recipe>(Enumerable.Range(0, 300).Select(k =>
 repeater.ItemsSource = data;
 ```
 
-** 코드: VirtualizingStackLayout @ no__t-0
+**코드: VirtualizingStackLayout.cs**
 
 ```csharp
 // This is a sample layout that stacks elements one after
