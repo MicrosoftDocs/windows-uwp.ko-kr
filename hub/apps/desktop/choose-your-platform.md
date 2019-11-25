@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, 데스크톱 개발
-ms.openlocfilehash: c931991c283bb0b31f55c3e5539eac5ddeda9575
-ms.sourcegitcommit: cf88f5e8e1de476ed2635e791a5e5e82ae4bd8cf
+ms.openlocfilehash: d0d87f8e4b6524471ff5e2ada9012a22641b06d7
+ms.sourcegitcommit: ddf0137929945eddf01041a81aa4d26038e70f46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056849"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74392088"
 ---
 # <a name="choose-your-app-platform"></a>앱 플랫폼 선택
 
@@ -69,7 +69,8 @@ Windows Forms는 경량 UI 모델과 .NET Core 또는 전체 .NET Framework에 �
 Windows Forms에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 * [Windows Forms 시작](https://docs.microsoft.com/dotnet/framework/winforms/getting-started-with-windows-forms)
-* [첫 번째 앱 만들기](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application/)
+* [첫 번째 Windows Forms 앱 만들기](/dotnet/framework/winforms/creating-a-new-windows-form)
+* [자습서: 사진 뷰어 만들기](/visualstudio/ide/tutorial-1-create-a-picture-viewer?view=vs-2019)
 * [API 참조(.NET)](https://docs.microsoft.com/dotnet/api/index)
 * [Windows Forms 앱 강화](/dotnet/framework/winforms/advanced/)
 
