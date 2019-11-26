@@ -1,6 +1,6 @@
 ---
 title: 백그라운드 작업에서 센서 및 장치에 액세스
-description: DeviceUseTrigger를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 디바이스에 액세스할 수 있습니다.
+description: DeviceUseTrigger를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 장치에 액세스할 수 있습니다.
 ms.assetid: B540200D-9FF2-49AF-A224-50877705156B
 ms.date: 02/08/2017
 ms.topic: article
@@ -33,7 +33,7 @@ ms.locfileid: "74259496"
 
 ### <a name="limitation-critical-device-operations"></a>제한 사항: 중요한 장치 작업
 
-장기 실행 펌웨어 업데이트와 같은 일부 중요한 장치 작업은 [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger)로 수행할 수 없습니다. 이러한 작업은 PC에서만 수행할 수 있으며 [**DeviceServicingTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceServicingTrigger)를 사용하는 권한 있는 앱만 수행할 수 있습니다. *권한 있는 앱*은 제조업체가 이러한 작업을 수행할 권한을 부여한 앱입니다. 장치 메타데이터는 장치에 대한 권한 있는 앱(있는 경우)을 지정하는 데 사용합니다. 자세한 내용은 [Microsoft Store 장치 앱용 장치 동기화 및 업데이트](https://msdn.microsoft.com/library/windows/hardware/dn265139(v=vs.85).aspx)를 참조하세요.
+장기 실행 펌웨어 업데이트와 같은 일부 중요한 디바이스 작업은 [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger)로 수행할 수 없습니다. 이러한 작업은 PC에서만 수행할 수 있으며 [**DeviceServicingTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceServicingTrigger)를 사용하는 권한 있는 앱만 수행할 수 있습니다. *권한 있는 앱*은 제조업체가 이러한 작업을 수행할 권한을 부여한 앱입니다. 장치 메타데이터는 장치에 대한 권한 있는 앱(있는 경우)을 지정하는 데 사용합니다. 자세한 내용은 [Microsoft Store 장치 앱용 장치 동기화 및 업데이트](https://msdn.microsoft.com/library/windows/hardware/dn265139(v=vs.85).aspx)를 참조하세요.
 
 ## <a name="protocolsapis-supported-in-a-deviceusetrigger-background-task"></a>DeviceUseTrigger 백그라운드 작업에서 지원되는 프로토콜/API
 
@@ -118,8 +118,8 @@ Windows는 앱이 [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Wind
 | 지원되는 주변 장치 API(USB, HID, Bluetooth, 센서 등의 Windows 런타임 API)를 사용하여 앱이 장치에 액세스할 수 있습니다. 앱이 장치 또는 센서에 액세스할 수 없는 경우 백그라운드 작업에 대한 액세스가 거부됩니다. | ![정책이 적용됨](images/ap-tools.png) |
 | 앱에서 제공하는 백그라운드 작업 진입점이 앱 패키지 매니페스트에 등록되어 있습니다. | ![정책이 적용됨](images/ap-tools.png) |
 | 앱당 하나의 [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) 백그라운드 작업만 실행합니다. | ![정책이 적용됨](images/ap-tools.png) |
-| 앱이 실행 중인 장치에서 아직 [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger)백그라운드 작업의 최대수에 도달하지 않았습니다. | **데스크톱 장치 패밀리**: 개수에 제한 없이 작업을 등록하고 병렬로 실행할 수 있습니다. **모바일 장치 패밀리**: 512MB 장치에서는 1개의 작업, 그 외 장치에서는 2개의 작업을 등록하고 병렬로 실행할 수 있습니다. |
-| 지원되는 API/프로토콜을 사용할 때 앱이 단일 [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) 백그라운드 작업에서 액세스할 수 있는 주변 장치나 센서의 최대수입니다. | 제한 없음 |
+| 앱이 실행 중인 장치에서 아직 [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) 백그라운드 작업의 최대 수에 도달하지 않았습니다. | **데스크톱 장치 패밀리**: 개수에 제한 없이 작업을 등록하고 병렬로 실행할 수 있습니다. **모바일 장치 패밀리**: 512MB 장치에서는 1개의 작업, 그 외 장치에서는 2개의 작업을 등록하고 병렬로 실행할 수 있습니다. |
+| 지원되는 API/프로토콜을 사용할 때 앱이 단일 [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) 백그라운드 작업에서 액세스할 수 있는 주변 장치나 센서의 최대수입니다. | 무제한 |
 | 백그라운드 작업은 화면이 잠겨 있는 경우 분당 또는 화면이 잠겨 있지 않은 경우 5분당 400ms CPU 시간(1GHz CPU 가정)을 소모합니다. 이 정책을 준수하지 않으면 작업이 취소될 수 있습니다. | ![정책이 적용됨](images/ap-tools.png) |
 
 ### <a name="runtime-policy-checks"></a>런타임 정책 검사
@@ -133,7 +133,7 @@ Windows는 앱이 [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Wind
 | 장치가 시스템에 연결되어 있거나 무선 장치의 범위에 있습니다. | ![정책 검사가 적용됨](images/ap-tools.png) |
 | 작업에서 장치에 정기적인 I/O를 수행하고 있습니다(5초마다 1 I/O). | ![정책 검사가 적용됨](images/ap-tools.png) |
 | 앱이 작업을 취소하지 않았습니다. | ![정책 검사가 적용됨](images/ap-tools.png) |
-| 벽시계 시간 제한 – 앱 작업이 백그라운드에서 실행될 수 있는 총 시간입니다. | **데스크톱 장치 패밀리**: 10분. **모바일 장치 패밀리**: 시간 제한 없음. 리소스를 절약하기 위해 한 번에 1 또는 2개 이상의 작업을 실행할 수 없습니다. |
+| 벽시계 시간 제한 – 앱 작업이 백그라운드에서 실행될 수 있는 총 시간입니다. | **데스크톱 장치 패밀리**: 10분. **모바일 장치 패밀리**: 시간 제한 없음. 리소스를 절약하기 위해 한 번에 한두 개 작업만 실행할 수 있습니다. |
 | 앱이 종료되지 않았습니다. | ![정책 검사가 적용됨](images/ap-tools.png) |
 
 ## <a name="best-practices"></a>모범 사례

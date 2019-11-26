@@ -34,7 +34,7 @@ Xbox 개발 환경에서 UWP(유니버설 Windows 플랫폼)는 로컬 네트워
 
     ![Visual Studio 2015 업데이트 2 설치](images/vs_install_tools.png)
 
-## <a name="windows-10-sdk-setup"></a>Windows 10 SDK 설치
+## <a name="windows-10-sdk-setup"></a>Windows 10 SDK 설정
 
 최신 Windows 10 SDK를 설치합니다. 이는 Visual Studio 설치에 포함되지만 이를 별도로 다운로드하려면 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)를 참조하세요.
 
@@ -91,7 +91,7 @@ Xbox One에 앱을 배포하려면 먼저 사용자가 본체에 로그인되어
 
    b. **디버깅** 탭에서 **실행할 디버거**를 **원격 컴퓨터**로 변경합니다.
 
-   c. **컴퓨터의 이름**에 시스템 IP 주소 또는 Xbox One 본체의 호스트 이름을 입력합니다. IP 주소 또는 호스트 이름을 얻는 방법에 대한 자세한 내용은 [Xbox One 도구 소개](introduction-to-xbox-tools.md)를 참조하세요.
+   c. **컴퓨터 이름**에 시스템 IP 주소 또는 Xbox One 본체의 호스트 이름을 입력합니다. IP 주소 또는 호스트 이름을 얻는 방법에 대한 자세한 내용은 [Xbox One 도구 소개](introduction-to-xbox-tools.md)를 참조하세요.
 
    d. **인증 유형** 드롭다운 목록에서 **유니버설(암호화되지 않은 프로토콜)** 을 선택합니다.
 

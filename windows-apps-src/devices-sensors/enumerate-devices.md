@@ -18,7 +18,7 @@ ms.locfileid: "74259676"
 
 ## <a name="samples"></a>샘플
 
-모든 사용 가능한 디바이스를 열거하는 가장 간단한 방법은 [**FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) 명령을 사용하여 스냅샷을 만드는 것입니다(아래 섹션에서 자세히 설명함).
+모든 사용 가능한 디바이스를 열거하는 가장 간단한 방법은 [**FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) 명령을 사용하여 스냅숏을 만드는 것입니다(아래 섹션에서 자세히 설명함).
 
 ```CSharp
 async void enumerateSnapshot(){
@@ -46,7 +46,7 @@ async void enumerateSnapshot(){
 -   [**Dns 서비스 검색 (DNS SD)** ](https://docs.microsoft.com/uwp/api/Windows.Networking.ServiceDiscovery.Dnssd)
 -   [장치 (WSD)의 웹 서비스](https://docs.microsoft.com/windows/desktop/WsdApi/wsd-portal)
 -   [Bluetooth](https://docs.microsoft.com/windows/desktop/Bluetooth/bluetooth-start-page)
--   [**Wi-Fi Direct**](https://docs.microsoft.com/uwp/api/Windows.Devices.WiFiDirect)
+-   [**Wi-fi Direct**](https://docs.microsoft.com/uwp/api/Windows.Devices.WiFiDirect)
 -   WiGig
 -   [**서비스 지점**](https://docs.microsoft.com/uwp/api/Windows.Devices.PointOfService)
 
@@ -62,11 +62,11 @@ async void enumerateSnapshot(){
 
 열거형 API로 작업할 때 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체를 사용해야 하는 경우가 자주 있습니다. 이러한 개체는 사용 가능한 장치 정보의 대부분을 포함하고 있습니다. 다음 표에서는 관심을 가질 만한 **DeviceInformation** 속성 중 일부를 설명합니다. 전체 목록은 **DeviceInformation**에 대한 참조 페이지를 참조하세요.
 
-| 속성                         | 주석                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 속성                         | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **DeviceInformation.Id**         | 장치의 고유 식별자이며, 문자열 변수로 제공됩니다. 대부분의 경우 메서드 간에 전달하는 것만으로 관심 있는 특정 장치를 나타낼 수 있는 불투명 값입니다. 앱을 닫았다가 다시 연 후에도 이 속성 및 **DeviceInformation.Kind** 속성을 사용할 수 있습니다. 그러면 동일한 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체를 복구하고 다시 사용할 수 있습니다. |
-| **DeviceInformation.Kind**       | [  **DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체로 표시되는 장치 개체의 종류를 나타냅니다. 장치 범주나 장치 유형이 아닙니다. 단일 장치를 다른 종류의 여러 **DeviceInformation** 개체로 나타낼 수 있습니다. 이 속성에 사용할 수 있는 값 및 값 간의 관계가 [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationkind)에 나와 있습니다.                           |
-| **DeviceInformation.Properties** | 이 속성 모음은 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체에 대해 요청된 정보를 포함합니다. 가장 일반적인 속성은 **DeviceInformation** 개체의 속성(예: [**DeviceInformation.Name**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.name))으로 쉽게 참조됩니다. 자세한 내용은 [장치 정보 속성](device-information-properties.md)을 참조하세요.                                                                |
+| **DeviceInformation입니다. Kind**       | [  **DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체로 표시되는 장치 개체의 종류를 나타냅니다. 장치 범주나 장치 유형이 아닙니다. 단일 장치를 다른 종류의 여러 **DeviceInformation** 개체로 나타낼 수 있습니다. 이 속성에 사용할 수 있는 값 및 값 간의 관계가 [**DeviceInformationKind**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationkind)에 나와 있습니다.                           |
+| **DeviceInformation. 속성** | 이 속성 모음은 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체에 대해 요청된 정보를 포함합니다. 가장 일반적인 속성은 **DeviceInformation** 개체의 속성(예: [**DeviceInformation.Name**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.name))으로 쉽게 참조됩니다. 자세한 내용은 [장치 정보 속성](device-information-properties.md)을 참조하세요.                                                                |
 
  
 
@@ -88,14 +88,14 @@ async void enumerateSnapshot(){
 
 미디어 콘텐츠 캐스팅 및 DIAL도 사용하려는 경우 각각 고유한 선택기를 제공합니다. 고유한 선택기는 각각 [**CastingDevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Media.Casting.CastingDevicePicker) 및 [**DialDevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Media.DialProtocol.DialDevicePicker)입니다.
 
-## <a name="enumerate-a-snapshot-of-devices"></a>장치의 스냅샷 열거
+## <a name="enumerate-a-snapshot-of-devices"></a>장치의 스냅숏 열거
 
 
 일부 시나리오에서는 [**DevicePicker**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePicker)가 요구에 적합하지 않으며 더 유연한 클래스가 필요합니다. 아마도 고유한 UI를 빌드하거나 사용자에게 UI를 표시하지 않고 장치를 열거해야 할 수 있습니다. 이러한 경우 장치의 스냅샷을 열거할 수 있습니다. 여기에는 경우 현재 시스템에 연결되거나 페어링된 장치를 확인하는 작업이 포함됩니다. 그러나 이 방법은 사용 가능한 장치의 스냅샷만 찾으므로 목록을 열거한 후 연결되는 장치를 찾을 수는 없습니다. 또한 장치가 업데이트 또는 제거되는 경우 알려주지 않습니다. 또 다른 잠재적 단점은 전체 열거형이 완료될 때까지 아무 결과도 표시되지 않는다는 점입니다. 그렇기 때문에 **AssociationEndpoint** **AssociationEndpointContainer** 또는 **AssociationEndpointService** 개체에 관심이 있는 경우에는 이 방법을 사용해서는 안 됩니다. 이러한 개체는 네트워크 또는 무선 프로토콜을 통해 검색됩니다. 이 방법은 완료하는 데 최대 30초가 걸릴 수 있습니다. 해당 시나리오에서는 [**DeviceWatcher**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceWatcher) 개체를 만들어 가능한 장치를 열거해야 합니다.
 
-장치의 스냅샷을 열거하려면 [**FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) 메서드를 사용합니다. 이 메서드는 전체 열거 프로세스가 완료될 때까지 대기하고 모든 결과를 하나의 [**DeviceInformationCollection**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationcollection) 개체로 반환합니다. 또한 이 메서드는 결과를 필터링하고 관심 있는 장치로 제한할 수 있는 여러 옵션을 제공하기 위해 오버로드됩니다. 이를 위해 [**DeviceClass**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceClass)를 제공하거나 장치 선택기를 전달할 수 있습니다. 장치 선택기는 열거할 장치를 지정하는 AQS 문자열입니다. 자세한 내용은 [장치 선택기 빌드](build-a-device-selector.md)를 참조하세요.
+장치의 스냅숏을 열거하려면 [**FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) 메서드를 사용합니다. 이 메서드는 전체 열거 프로세스가 완료될 때까지 대기하고 모든 결과를 하나의 [**DeviceInformationCollection**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationcollection) 개체로 반환합니다. 또한 이 메서드는 결과를 필터링하고 관심 있는 장치로 제한할 수 있는 여러 옵션을 제공하기 위해 오버로드됩니다. 이를 위해 [**DeviceClass**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceClass)를 제공하거나 장치 선택기를 전달할 수 있습니다. 장치 선택기는 열거할 장치를 지정하는 AQS 문자열입니다. 자세한 내용은 [장치 선택기 빌드](build-a-device-selector.md)를 참조하세요.
 
-디바이스 열거형 스냅샷의 예는 다음과 같습니다.
+디바이스 열거형 스냅숏의 예는 다음과 같습니다.
 
 
 

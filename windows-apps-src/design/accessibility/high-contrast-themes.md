@@ -82,7 +82,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 ## <a name="high-contrast-colors"></a>고대비 색
 
-*설정 &gt; 접근성 &gt; 고대비* 페이지에는 기본적으로 4개의 고대비 테마가 있습니다. 
+*설정 > 접근성 > 고대비* 페이지에는 기본값으로 4가지 고대비 테마가 있습니다. 
 
 
 ![고대비 설정](images/high-contrast-settings.png)  
@@ -95,7 +95,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 각 **SytemColor*Color** 리소스는 사용자가 고대비 테마를 전환할 때 자동으로 색을 업데이트하는 변수입니다. 다음은 각 리소스를 사용할 위치 및 시기에 대한 지침입니다.
 
-리소스 | 사용 |
+리소스 | 사용법 |
 |--------|-------|
 **SystemColorWindowTextColor** | 본문 복사, 제목, 목록, 조작할 수 없는 모든 텍스트 |
 | **SystemColorHotlightColor** | 하이퍼링크 |
@@ -148,7 +148,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 </Application.Resources>
 ```
 
-나중에 해당 앱에서 이제 배경을 설정할 수 있습니다.
+나중에 해당 앱에서 배경을 설정할 수 있습니다.
 
 ```xaml
 <Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
@@ -234,7 +234,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 > 앱이 초기화되어 이미 콘텐츠를 표시하고 있는 범위에서 **AccessibilitySettings** 생성자를 호출해야 합니다.
 
 ## <a name="related-topics"></a>관련 항목  
-* [액세스 가능성](accessibility.md)
+* [접근성](accessibility.md)
 * [UI 대비 및 설정 샘플](https://code.msdn.microsoft.com/windowsapps/High-Contrast-UI-Settings-9a310961)
 * [XAML 접근성 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
 * [XAML 고대비 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-high-contrast-style-c0ce936f)

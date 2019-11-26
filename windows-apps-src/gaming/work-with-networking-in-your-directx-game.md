@@ -41,14 +41,14 @@ ms.locfileid: "74258411"
 ## <a name="design-considerations"></a>디자인 고려 사항
 
 
-DirectX 게임에서는 다양한 네트워킹 API를 사용할 수 있습니다. 따라서 올바른 API를 선택하는 것이 중요합니다. Windows는 앱이 인터넷이나 개인 네트워크를 통해 다른 컴퓨터 및 장치와 통신하는 데 사용할 수 있는 다양한 네트워킹 API를 지원합니다. 첫 번째로 수행할 단계는 앱에 필요한 네트워킹 기능이 무엇인지 파악하는 것입니다.
+DirectX 게임에서는 다양한 네트워킹 API를 사용할 수 있습니다. 따라서 올바른 API를 선택하는 것이 중요합니다. Windows는 앱이 인터넷이나 프라이빗 네트워크를 통해 다른 컴퓨터 및 디바이스와 통신하는 데 사용할 수 있는 다양한 네트워킹 API를 지원합니다. 첫 번째로 수행할 단계는 앱에 필요한 네트워킹 기능이 무엇인지 파악하는 것입니다.
 
 게임에 많이 사용되는 네트워크 API는 다음과 같습니다.
 
--   TCP 및 소켓 - 안정적인 연결을 제공합니다. 보안이 필요 없는 게임 작업에는 TCP를 사용합니다. TCP를 사용하면 서버가 쉽게 확장되므로 인프라(클라이언트-서버 또는 인터넷 피어 투 피어) 모델을 사용하는 게임에서 자주 사용됩니다. Wi-Fi Direct 및 Bluetooth를 통해 애드혹(로컬 피어 투 피어) 게임에서 TCP를 사용할 수도 있습니다. TCP는 게임 개체 이동, 문자 조작, 텍스트 채팅 및 기타 작업에 주로 사용됩니다. The [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) class provides a TCP socket that can be used in Microsoft Store games. **StreamSocket** 클래스는 [**Windows::Networking::Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets) 네임스페이스의 관련 클래스와 함께 사용됩니다.
+-   TCP 및 소켓 - 안정적인 연결을 제공합니다. 보안이 필요 없는 게임 작업에는 TCP를 사용합니다. TCP를 사용하면 서버가 쉽게 확장되므로 인프라(클라이언트-서버 또는 인터넷 피어 투 피어) 모델을 사용하는 게임에서 자주 사용됩니다. Wi-Fi Direct 및 Bluetooth를 통해 애드혹(로컬 피어 투 피어) 게임에서 TCP를 사용할 수도 있습니다. TCP는 게임 개체 이동, 문자 조작, 텍스트 채팅 및 기타 작업에 주로 사용됩니다. [**Streamsocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) 클래스는 Microsoft Store 게임에서 사용할 수 있는 TCP 소켓을 제공 합니다. **StreamSocket** 클래스는 [**Windows::Networking::Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets) 네임스페이스의 관련 클래스와 함께 사용됩니다.
 -   SSL을 사용한 TCP 및 소켓 - 도청을 차단하는 안정적인 연결을 제공합니다. 보안이 필요한 게임 작업에는 SSL과 함께 TCP 연결을 사용합니다. SSL의 암호화 및 오버헤드로 인해 대기 시간과 성능이 저하되므로 보안이 필요할 때만 사용됩니다. SSL을 사용한 TCP는 로그인, 구매 및 거래 자산, 게임 문자 생성 및 관리에 주로 사용됩니다. [  **StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) 클래스는 SSL을 지원하는 TCP 소켓을 제공합니다.
--   UDP 및 소켓 - 오버헤드가 작은 신뢰할 수 없는 네트워크 전송을 제공합니다. UDP는 짧은 대기 시간이 필요하고 일부 패킷 손실을 허용할 수 있는 게임 작업에 사용됩니다. 전투 게임, 슈팅 및 추적 프로그램, 네트워크 오디오 및 음성 채팅에 주로 사용됩니다. The [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket) class provides a UDP socket that can be used in Microsoft Store games. **DatagramSocket** 클래스는 [**Windows::Networking::Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets) 네임스페이스의 관련 클래스와 함께 사용됩니다.
--   HTTP 클라이언트 - HTTP 서버에 대한 안정적인 연결을 제공합니다. 가장 일반적인 네트워킹 시나리오는 정보를 검색하거나 저장하기 위해 웹 사이트에 액세스하는 것입니다. 간단한 예로 웹 사이트를 사용하여 사용자 정보와 게임 점수를 저장하는 게임이 있습니다. 보안을 위해 SSL과 함께 사용할 경우 HTTP 클라이언트를 로그인, 구매, 거래 자산, 게임 문자 생성 및 관리에 사용할 수 있습니다. The [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) class provides a modern HTTP client API for use in Microsoft Store games. **HttpClient** 클래스는 [**Windows::Web::Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) 네임스페이스의 관련 클래스와 함께 사용됩니다.
+-   UDP 및 소켓 - 오버헤드가 작은 신뢰할 수 없는 네트워크 전송을 제공합니다. UDP는 짧은 대기 시간이 필요하고 일부 패킷 손실을 허용할 수 있는 게임 작업에 사용됩니다. 전투 게임, 슈팅 및 추적 프로그램, 네트워크 오디오 및 음성 채팅에 주로 사용됩니다. [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket) 클래스는 Microsoft Store 게임에서 사용할 수 있는 UDP 소켓을 제공 합니다. **DatagramSocket** 클래스는 [**Windows::Networking::Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets) 네임스페이스의 관련 클래스와 함께 사용됩니다.
+-   HTTP 클라이언트 - HTTP 서버에 대한 안정적인 연결을 제공합니다. 가장 일반적인 네트워킹 시나리오는 정보를 검색하거나 저장하기 위해 웹 사이트에 액세스하는 것입니다. 간단한 예로 웹 사이트를 사용하여 사용자 정보와 게임 점수를 저장하는 게임이 있습니다. 보안을 위해 SSL과 함께 사용할 경우 HTTP 클라이언트를 로그인, 구매, 거래 자산, 게임 문자 생성 및 관리에 사용할 수 있습니다. [**Httpclient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스는 Microsoft Store 게임에서 사용할 최신 HTTP 클라이언트 API를 제공 합니다. **HttpClient** 클래스는 [**Windows::Web::Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) 네임스페이스의 관련 클래스와 함께 사용됩니다.
 
 ## <a name="handling-network-exceptions-in-your-directx-game"></a>DirectX 게임에서 네트워크 예외 처리
 
@@ -222,7 +222,7 @@ using namespace Windows::Networking::Sockets;
 
 ### <a name="exceptions-in-windowswebhttp"></a>Windows.Web.Http의 예외
 
-전달된 문자열이 유효한 URI가 아닌 경우(URI에 허용되지 않는 문자 포함) [**Windows::Web::Http::HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient)과(와) 함께 사용되는 [**Windows::Foundation::Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri) 클래스의 생성자가 예외를 일으킬 수 있습니다. C++에는 URI에 대한 문자열을 시도 및 구문 분석할 메서드가 없습니다. 앱이 **Windows::Foundation::Uri**에 대해 사용자 입력을 받으면 생성자는 try/catch 블록에 있게 됩니다. 예외가 발생하면 앱은 사용자에게 알리고 새 URI를 요청할 수 있습니다.
+전달된 문자열이 유효한 URI가 아닌 경우(URI에 허용되지 않는 문자 포함) [**Windows::Web::Http::HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri)과(와) 함께 사용되는 [**Windows::Foundation::Uri**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스의 생성자가 예외를 일으킬 수 있습니다. C++에는 URI에 대한 문자열을 시도 및 구문 분석할 메서드가 없습니다. 앱이 **Windows::Foundation::Uri**에 대해 사용자 입력을 받으면 생성자는 try/catch 블록에 있게 됩니다. 예외가 발생하면 앱은 사용자에게 알리고 새 URI를 요청할 수 있습니다.
 
 앱은 또한 URI의 스키마가 HTTP 또는 HTTPS인지 확인해야 합니다. [**Windows::Web::Http::HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient)에서는 이 두 가지 스키마만 지원하기 때문입니다.
 
@@ -368,27 +368,27 @@ using namespace Windows::Web::Http;
 ## <a name="related-topics"></a>관련 항목
 
 
-**Other resources**
+**기타 참고 자료**
 
-* [Connecting with a datagram socket](https://docs.microsoft.com/previous-versions/windows/apps/jj635238(v=win.10))
-* [Connecting to a network resource with a stream socket](https://docs.microsoft.com/previous-versions/windows/apps/jj150599(v=win.10))
-* [Connecting to network services](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
-* [Connecting to web services](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
+* [데이터 그램 소켓을 사용 하 여 연결](https://docs.microsoft.com/previous-versions/windows/apps/jj635238(v=win.10))
+* [스트림 소켓을 사용 하 여 네트워크 리소스에 연결](https://docs.microsoft.com/previous-versions/windows/apps/jj150599(v=win.10))
+* [네트워크 서비스에 연결](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
+* [웹 서비스에 연결](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
 * [네트워킹 기본 사항](https://docs.microsoft.com/windows/uwp/networking/networking-basics)
-* [How to configure network isolation capabilities](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
-* [How to enable loopback and debug network isolation](https://docs.microsoft.com/previous-versions/windows/apps/hh780593(v=win.10))
+* [네트워크 격리 기능을 구성 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
+* [루프백 및 디버그 네트워크 격리를 사용 하도록 설정 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh780593(v=win.10))
 
-**Reference**
+**참조일**
 
 * [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket)
 * [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient)
 * [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket)
-* [**Windows::Web::Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http)
-* [**Windows::Networking::Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
+* [**Windows:: Web:: Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http)
+* [**Windows:: 네트워킹:: 소켓**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
 
 **샘플**
 
-* [DatagramSocket sample](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)
-* [HttpClient Sample]( https://go.microsoft.com/fwlink/p/?linkid=242550)
-* [Proximity sample](https://code.msdn.microsoft.com/windowsapps/Proximity-Sample-88129731)
+* [DatagramSocket 샘플](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)
+* [HttpClient 샘플]( https://go.microsoft.com/fwlink/p/?linkid=242550)
+* [근접 샘플](https://code.msdn.microsoft.com/windowsapps/Proximity-Sample-88129731)
 * [StreamSocket 샘플](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)

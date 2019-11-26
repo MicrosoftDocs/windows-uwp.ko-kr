@@ -21,9 +21,9 @@ CS(계산 셰이더) 단계는 일반적인 용도의 고속 계산을 제공하
 
 여러 스레드에서 병렬로 계산 셰이더를 실행할 수 있습니다.
 
-계산 셰이더는 [DirectCompute](https://blogs.msdn.com/b/chuckw/archive/2010/07/14/directcompute.aspx) 기술을 사용하여 Direct3D를 그래픽 프로그래밍 이상으로 확장하는 [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl) 프로그래밍 가능 셰이더 단계입니다.
+계산 셰이더는 [DirectCompute](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl) 기술을 사용하여 Direct3D를 그래픽 프로그래밍 이상으로 확장하는 [HLSL](https://blogs.msdn.com/b/chuckw/archive/2010/07/14/directcompute.aspx) 프로그래밍 가능 셰이더 단계입니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>Related topics
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [컴퓨팅 파이프라인](compute-pipeline.md)

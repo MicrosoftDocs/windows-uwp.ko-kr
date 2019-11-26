@@ -34,7 +34,7 @@ ms.locfileid: "74259276"
 > [!NOTE]
 > 중간 광고용 API는 동영상 재생 시를 제외하고 어떠한 사용자 인터페이스도 처리하지 않습니다. 앱에 중간 광고를 통합하는 방법을 고려할 때 수행할 작업 및 피할 작업에 대한 지침을 보려면 [중간 광고 모범 사례](ui-and-user-experience-guidelines.md#interstitialbestpractices10)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 * Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)를 설치합니다. 설치 지침은 [이 문서](install-the-microsoft-advertising-libraries.md)를 참조하세요.
 
@@ -60,7 +60,7 @@ ms.locfileid: "74259276"
 
 3. 프로젝트에 Microsoft Advertising SDK 참조를 추가합니다.
 
-    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가.** 를 선택합니다.
+    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 선택합니다.
     2.  **참조 관리자**에서 **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for XAML**(버전 10.0) 옆의 확인란을 선택합니다.
     3.  **참조 관리자**에서 확인을 클릭합니다.
 
@@ -111,7 +111,7 @@ ms.locfileid: "74259276"
 
 3. 프로젝트에 Microsoft Advertising SDK 참조를 추가합니다.
 
-    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가.** 를 선택합니다.
+    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 선택합니다.
     2.  **참조 관리자**에서 **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for JavaScript**(버전 10.0) 옆의 확인란을 선택합니다.
     3.  **참조 관리자**에서 확인을 클릭합니다.
 
@@ -156,7 +156,7 @@ ms.locfileid: "74259276"
 
 <span id="interstitialadsdirectx10"/>
 
-### <a name="c-directx-interop"></a>C++(DirectX interop)
+### <a name="c-directx-interop"></a>C++(DirectX Interop)
 
 이 샘플에서는 사용자가 Visual Studio에서 C++ **DirectX 및 XAML 앱(유니버설 Windows)** 프로젝트를 만들었으며 특정 CPU 아키텍처를 대상으로 한다고 가정합니다.
  
@@ -164,7 +164,7 @@ ms.locfileid: "74259276"
 
 3. 프로젝트에 Microsoft Advertising SDK 참조를 추가합니다.
 
-    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가.** 를 선택합니다.
+    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 선택합니다.
     2.  **참조 관리자**에서 **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for XAML**(버전 10.0) 옆의 확인란을 선택합니다.
     3.  **참조 관리자**에서 확인을 클릭합니다.
 

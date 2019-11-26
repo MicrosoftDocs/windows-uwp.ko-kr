@@ -27,7 +27,7 @@ ms.locfileid: "74260449"
 
 [  **SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다.
 
-이 항목에서는 앱에 대해 작성된 백그라운드 작업 클래스가 있고, 인터넷 가용성이 변경되거나 사용자가 로그인하는 등 시스템에서 트리거된 이벤트에 응답하여 이 작업을 실행해야 한다고 가정합니다. 이 항목에서는 [**SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 클래스에 중점을 둡니다. 백그라운드 작업 클래스를 작성하는 방법은 [in-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
+이 항목에서는 앱에 대해 작성된 백그라운드 작업 클래스가 있고, 인터넷 가용성이 변경되거나 사용자가 로그인하는 등 시스템에서 트리거된 이벤트에 응답하여 이 작업을 실행해야 한다고 가정합니다. 이 항목에서는 [**SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 클래스에 중점을 둡니다. 백그라운드 작업 클래스를 작성하는 방법은 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
 
 ## <a name="create-a-systemtrigger-object"></a>SystemTrigger 개체 만들기
 

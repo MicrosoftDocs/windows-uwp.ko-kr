@@ -65,7 +65,7 @@ Xbox One 장치의 UWP(유니버설 Windows 플랫폼) 앱은 범위 [57344, 655
 
 ## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>WDP로 이동하면 인증서 경고가 표시됨
 
-Xbox One 콘솔에서 서명한 보안 인증서는 신뢰할 수 있는 잘 알려진 게시자로 간주되지 않으므로 제공된 인증서에 대해 다음 스크린샷과 유사한 경고가 표시됩니다. Windows Device Portal에 액세스하려면 **이 웹 사이트를 계속 탐색합니다**를 클릭합니다.
+Xbox One 본체에서 서명한 보안 인증서는 신뢰할 수 있는 잘 알려진 게시자로 간주되지 않으므로 제공된 인증서에 대해 다음 스크린샷과 유사한 경고가 표시됩니다. Windows 장치 포털에 액세스하려면 **이 웹 사이트를 계속 탐색합니다**를 클릭합니다.
 
 ![웹 사이트 보안 인증서 경고](images/security_cert_warning.jpg)
 

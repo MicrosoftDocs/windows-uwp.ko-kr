@@ -151,6 +151,6 @@ void App::OnFileActivated(Windows::ApplicationModel::Activation::FileActivatedEv
 
 * [파일 형식 및 Uri에 대 한 지침](https://docs.microsoft.com/windows/uwp/files/index)
 
-### <a name="reference"></a>참고자료
+### <a name="reference"></a>참조
 * [FileActivatedEventArgs입니다.](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.FileActivatedEventArgs)
 * [Windows. .Xaml. OnFileActivated 됨](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated)

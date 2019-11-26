@@ -24,7 +24,7 @@ ms.locfileid: "74258614"
 
 ![작업 중인 응용 프로그램의 기본 페이지](images/customer-database-tutorial/customer-list.png)
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>전제 조건
 
 * [최신 버전의 Visual Studio 및 Windows 10 SDK가 있는지 확인 합니다.](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * [고객 데이터베이스를 복제 하거나 다운로드 자습서 샘플](https://github.com/microsoft/windows-tutorials-customer-database)
@@ -38,7 +38,7 @@ ms.locfileid: "74258614"
 
 앱을 연 후 바로 앱을 실행 하면 빈 화면 위쪽에 몇 가지 단추가 표시 됩니다. 사용자에 게 표시 되지 않지만 응용 프로그램에는 소수의 테스트 고객과 함께 프로 비전 된 로컬 SQLite 데이터베이스가 이미 포함 되어 있습니다. 여기에서 먼저 해당 고객을 표시 하는 UI 컨트롤을 구현한 다음 데이터베이스에 대 한 작업에서 추가로 이동 합니다. 시작 하기 전에 다음 작업을 수행 합니다.
 
-### <a name="views"></a>보기
+### <a name="views"></a>뷰
 
 **Customerlistpage. xaml** 은이 자습서의 단일 페이지에 대 한 UI를 정의 하는 앱의 뷰입니다. UI의 시각적 요소를 추가 하거나 변경 해야 하는 경우 언제 든 지이 파일에서 작업을 수행할 수 있습니다. 이 자습서에서는 다음 요소를 추가 하는 과정을 안내 합니다.
 
@@ -421,7 +421,7 @@ ms.locfileid: "74258614"
 
 ## <a name="conclusion"></a>결론
 
-축하합니다. 이 작업이 완료 되 면 이제 앱은 전체 범위의 로컬 데이터베이스 작업을 수행 합니다. UI 내에서 고객을 만들고, 읽고, 업데이트 하 고, 삭제할 수 있으며 이러한 변경 내용은 데이터베이스에 저장 되며 응용 프로그램의 다른 시작에서 유지 됩니다.
+지금까지 이 작업이 완료 되 면 이제 앱은 전체 범위의 로컬 데이터베이스 작업을 수행 합니다. UI 내에서 고객을 만들고, 읽고, 업데이트 하 고, 삭제할 수 있으며 이러한 변경 내용은 데이터베이스에 저장 되며 응용 프로그램의 다른 시작에서 유지 됩니다.
 
 이제 완료 되었으므로 다음 사항을 고려 하세요.
 * 앱을 빌드하는 이유에 대 한 자세한 내용은 [앱 구조 개요](../enterprise/customer-database-app-structure.md) 를 참조 하세요.

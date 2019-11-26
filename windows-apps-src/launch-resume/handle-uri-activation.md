@@ -184,7 +184,7 @@ URI를 통해 앱을 실행하는 방법에 대한 자세한 내용은 [URI에 �
 
 - [파일 형식 및 Uri에 대 한 지침](https://docs.microsoft.com/windows/uwp/files/index)
 
-### <a name="reference"></a>참고자료
+### <a name="reference"></a>참조
 
 - [AppX 패키지 매니페스트](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-extension)
 - [ProtocolActivatedEventArgs입니다.](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs)

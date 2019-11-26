@@ -21,7 +21,7 @@ ms.locfileid: "74260214"
 > [!NOTE]
 > 현재 Windows 10용 XAML 기반 UWP 앱에서만 기본 광고를 지원하고 있습니다. HTML과 JavaScript를 사용해 작성한 UWP 앱은 향후 Microsoft Advertising SK 릴리스에서 지원할 예정입니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 * Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)를 설치합니다. 설치 지침은 [이 문서](install-the-microsoft-advertising-libraries.md)를 참조하세요.
 
@@ -47,7 +47,7 @@ ms.locfileid: "74260214"
 
 5.  앱의 적절한 위치(예: ```MainPage``` 또는 다른 페이지)에서 [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) 개체를 비롯하여 중간 광고 응용 프로그램 ID 및 광고 단위 ID를 나타내는 여러 문자열 필드를 선언합니다. 다음 코드 예제에서는 `myAppId` 및 `myAdUnitId` 필드를 기본 광고에 대한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units)에 할당합니다.
     > [!NOTE]
-    > 모든 **NativeAdsManagerV2**에는 컨트롤할 기본 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. Before you publish your app to the Store, you must [replace these test values with live values](#release) from Partner Center.
+    > 모든 **NativeAdsManagerV2**에는 컨트롤할 기본 광고를 지원하는 서비스가 사용하는 *광고 단위*가 있고, 모든 광고 단위는 *광고 단위 ID*와 *응용 프로그램 ID*로 구성되어 있습니다. 이 단계에서 컨트롤에 테스트 광고 단위 ID와 응용 프로그램 ID 값을 할당하세요. 이 테스트 값은 앱 테스트 버전에서만 사용할 수 있습니다. 스토어에 앱을 게시 하기 전에 이러한 테스트 값을 파트너 센터의 [라이브 값으로 바꾸어야](#release) 합니다.
 
     [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Variables)]
 
@@ -109,17 +109,17 @@ ms.locfileid: "74260214"
 
 1.  기본 광고를 구현하려면 [기본 광고에 대한 지침](ui-and-user-experience-guidelines.md#guidelines-for-native-ads)을 따라야 합니다.
 
-2.  In Partner Center, go to the [In-app ads](../publish/in-app-ads.md) page and [create an ad unit](set-up-ad-units-in-your-app.md#live-ad-units). 광고 단위 유형으로 **기본**을 지정합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
+2.  파트너 센터에서 [앱 내 광고](../publish/in-app-ads.md) 페이지로 이동 하 여 [ad 단위를 만듭니다](set-up-ad-units-in-your-app.md#live-ad-units). 광고 단위 유형으로 **기본**을 지정합니다. 광고 단위 ID와 응용 프로그램 ID를 적어둡니다.
     > [!NOTE]
-    > 테스트 광고 단위와 라이브 UWP 광고 단위의 응용 프로그램 ID 값은 형식이 서로 다릅니다. 테스트 응용 프로그램 ID 값은 GUID입니다. When you create a live UWP ad unit in Partner Center, the application ID value for the ad unit always matches the Store ID for your app (an example Store ID value looks like 9NBLGGH4R315).
+    > 테스트 광고 단위와 라이브 UWP 광고 단위의 응용 프로그램 ID 값은 형식이 서로 다릅니다. 테스트 응용 프로그램 ID 값은 GUID입니다. 파트너 센터에서 라이브 UWP ad 단위를 만들 때 ad 단위의 응용 프로그램 ID 값은 항상 앱에 대 한 저장소 ID와 일치 합니다. 예를 들어 매장 ID 값은 9NBLGGH4R315와 같습니다.
 
-3. [인앱 광고](../publish/in-app-ads.md) 페이지의 [조정 설정](../publish/in-app-ads.md#mediation) 섹션에서 설정을 구성하여, 기본 광고의 광고 조정을 사용하는 방법도 있습니다. 광고 조정으로 여러 광고 네트워크에서 광고를 표시해 광고 수익과 앱 홍보 기능을 극대화 할 수 있습니다.
+3. [인앱 광고](../publish/in-app-ads.md#mediation) 페이지의 [조정 설정](../publish/in-app-ads.md) 섹션에서 설정을 구성하여, 기본 광고의 광고 조정을 사용하는 방법도 있습니다. 광고 조정으로 여러 광고 네트워크에서 광고를 표시해 광고 수익과 앱 홍보 기능을 극대화 할 수 있습니다.
 
-4.  In your code, replace the test ad unit values (that is, the *applicationId* and *adUnitId* parameters of the [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor) constructor) with the live values you generated in Partner Center.
+4.  코드에서 테스트 ad 단위 값 (즉, [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.-ctor) 생성자의 *ApplicationId* 및 *adunit Id* 매개 변수)을 파트너 센터에서 생성 한 라이브 값으로 바꿉니다.
 
-5.  [Submit your app](../publish/app-submissions.md) to the Store using Partner Center.
+5.  파트너 센터를 사용 하 여 스토어에 [앱을 제출](../publish/app-submissions.md) 합니다.
 
-6.  Review your [advertising performance reports](../publish/advertising-performance-report.md) in Partner Center.
+6.  파트너 센터에서 [광고 성능 보고서](../publish/advertising-performance-report.md) 를 검토 합니다.
 
 ## <a name="manage-ad-units-for-multiple-native-ads-in-your-app"></a>앱에서 여러 기본 광고에 대한 광고 단위 관리
 
@@ -130,6 +130,6 @@ ms.locfileid: "74260214"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Guidelines for native ads](ui-and-user-experience-guidelines.md#guidelines-for-native-ads)
+* [네이티브 광고에 대 한 지침](ui-and-user-experience-guidelines.md#guidelines-for-native-ads)
 * [앱 내 광고](../publish/in-app-ads.md)
-* [Set up ad units for your app](set-up-ad-units-in-your-app.md)
+* [앱에 대 한 ad 단위 설정](set-up-ad-units-in-your-app.md)

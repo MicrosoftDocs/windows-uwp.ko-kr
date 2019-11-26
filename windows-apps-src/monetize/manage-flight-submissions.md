@@ -1,6 +1,6 @@
 ---
 ms.assetid: 2A454057-FF14-40D2-8ED2-CEB5F27E0226
-description: Use these methods in the Microsoft Store submission API to manage package flight submissions for apps that are registered to your Partner Center account.
+description: Microsoft Store 제출 API에서 이러한 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 패키지 비행 제출을 관리할 수 있습니다.
 title: 패키지 플라이트 제출 관리
 ms.date: 04/16/2018
 ms.topic: article
@@ -18,13 +18,13 @@ ms.locfileid: "74259261"
 Microsoft Store 제출 API는 점진적 패키지 출시를 포함하여 앱의 패키지 플라이트 제출을 관리하는 데 사용할 수 있는 메서드를 제공합니다. API 사용을 위한 필수 조건을 비롯하여 Microsoft Store 제출 API에 대한 자세한 내용은 [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
 > [!IMPORTANT]
-> If you use the Microsoft Store submission API to create a submission for a package flight, be sure to make further changes to the submission only by using the API, rather than Partner Center. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
+> Microsoft Store 제출 API를 사용 하 여 패키지 항공편에 대 한 제출을 만들려면 파트너 센터가 아닌 API를 사용 하 여 제출을 추가로 변경 해야 합니다. 대시보드를 사용하여 원래 API로 만든 제출을 변경하는 경우 더 이상 API를 사용하여 해당 제출을 변경하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
 
 <span id="methods-for-package-flight-submissions" />
 
 ## <a name="methods-for-managing-package-flight-submissions"></a>패키지 플라이트 제출 관리 메서드
 
-패키지 플라이트 제출 가져오기, 만들기, 업데이트, 커밋, 삭제 작업에는 다음 메서드를 사용합니다. Before you can use these methods, the package flight must already exist in Partner Center. You can create a package flight [in Partner Center](https://docs.microsoft.com/windows/uwp/publish/package-flights) or by using the Microsoft Store submission API methods in described in [Manage package flights](manage-flights.md).
+패키지 플라이트 제출 가져오기, 만들기, 업데이트, 커밋, 삭제 작업에는 다음 메서드를 사용합니다. 이러한 방법을 사용 하기 전에 패키지 비행이 파트너 센터에 이미 있어야 합니다. [파트너 센터에서](https://docs.microsoft.com/windows/uwp/publish/package-flights) 또는 [패키지 관리 항공편](manage-flights.md)에 설명 된의 Microsoft Store 제출 API 메서드를 사용 하 여 패키지를 만들 수 있습니다.
 
 <table>
 <colgroup>
@@ -41,34 +41,34 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 포함하여 앱의 
 </thead>
 <tbody>
 <tr>
-<td align="left">GET</td>
+<td align="left">가져오기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
-<td align="left"><a href="get-a-flight-submission.md">Get an existing package flight submission</a></td>
+<td align="left"><a href="get-a-flight-submission.md">기존 패키지 비행 제출 가져오기</a></td>
 </tr>
 <tr>
-<td align="left">GET</td>
+<td align="left">가져오기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status</td>
-<td align="left"><a href="get-status-for-a-flight-submission.md">Get the status of an existing package flight submission</a></td>
+<td align="left"><a href="get-status-for-a-flight-submission.md">기존 패키지 비행 전송의 상태를 가져옵니다.</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions</td>
-<td align="left"><a href="create-a-flight-submission.md">Create a new package flight submission</a></td>
+<td align="left"><a href="create-a-flight-submission.md">새 패키지 비행 전송 만들기</a></td>
 </tr>
 <tr>
 <td align="left">PUT</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
-<td align="left"><a href="update-a-flight-submission.md">Update an existing package flight submission</a></td>
+<td align="left"><a href="update-a-flight-submission.md">기존 패키지 비행 제출 업데이트</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit</td>
-<td align="left"><a href="commit-a-flight-submission.md">Commit a new or updated package flight submission</a></td>
+<td align="left"><a href="commit-a-flight-submission.md">신규 또는 업데이트 된 패키지 비행 전송 커밋</a></td>
 </tr>
 <tr>
 <td align="left">DELETE</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
-<td align="left"><a href="delete-a-flight-submission.md">Delete a package flight submission</a></td>
+<td align="left"><a href="delete-a-flight-submission.md">패키지 비행 전송 삭제</a></td>
 </tr>
 </tbody>
 </table>
@@ -79,7 +79,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 포함하여 앱의 
 
 패키지 플라이트에 대한 제출을 만들려면 이 프로세스를 따릅니다.
 
-1. If you have not yet done so, complete the prerequisites described in [Create and manage submissions using Microsoft Store services](create-and-manage-submissions-using-windows-store-services.md), including associating an Azure AD application with your Partner Center account and obtaining your client ID and key. 이 작업은 한 번만 수행하면 됩니다. 클라이언트 ID와 키를 얻은 후에는 새 Azure AD 액세스 토큰을 만들어야 할 때마다 다시 사용할 수 있습니다.  
+1. 아직 수행 하지 않은 경우 Azure AD 응용 프로그램을 파트너 센터 계정에 연결 하 고 클라이언트 ID 및 키를 가져오는 등 [Microsoft Store 서비스를 사용 하 여 전송 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)에 설명 된 필수 구성 요소를 완료 합니다. 이 작업은 한 번만 수행하면 됩니다. 클라이언트 ID와 키를 얻은 후에는 새 Azure AD 액세스 토큰을 만들어야 할 때마다 다시 사용할 수 있습니다.  
 
 2. [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Microsoft Store 제출 API의 메서드에 이 액세스 토큰을 전달해야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
@@ -106,9 +106,9 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 포함하여 앱의 
 
 4. 제출에 대한 새 패키지를 추가하는 경우 이전에 호출한 POST 메서드의 응답 본문에 제공된 SAS URI를 사용하여 [Azure Blob Storage](https://docs.microsoft.com/azure/storage/storage-introduction#blob-storage)에 ZIP 보관 파일을 업로드합니다. 다음과 같이 다양한 플랫폼에서 이 작업을 수행할 수 있는 여러 Azure 라이브러리가 있습니다.
 
-    * [Azure Storage Client Library for .NET](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
-    * [Azure Storage SDK for Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
-    * [Azure Storage SDK for Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
+    * [.NET 용 Azure Storage 클라이언트 라이브러리](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
+    * [Java 용 Azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
+    * [Python 용 Azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
     다음 C# 코드 예제는 .NET용 Azure Storage Client Library의 [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob) 클래스를 사용하여 Azure Blob Storage에 ZIP 보관 파일을 업로드하는 방법을 보여 줍니다. 이 예제에서는 ZIP 보관 파일이 이미 스트림 개체에 기록되어 있다고 가정합니다.
 
@@ -119,7 +119,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 포함하여 앱의 
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. 다음 메서드를 실행하여 [패키지 플라이트 제출을 커밋](commit-a-flight-submission.md)합니다. This will alert Partner Center that you are done with your submission and that your updates should now be applied to your account.
+5. 다음 메서드를 실행하여 [패키지 플라이트 제출을 커밋](commit-a-flight-submission.md)합니다. 그러면 전송 작업을 수행 하 고 사용자의 계정에 업데이트가 적용 되도록 파트너 센터에 경고를 표시 합니다.
 
     ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit
@@ -133,7 +133,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 포함하여 앱의 
 
     제출 상태를 확인하려면 응답 본문에서 *status* 값을 검토합니다. 이 값은 요청이 성공한 경우 **CommitStarted**에서 **PreProcessing**으로, 요청에 오류가 발생한 경우 **CommitFailed**로 변경됩니다. 오류가 있는 경우 *statusDetails* 필드에 오류에 대한 추가 정보가 포함됩니다.
 
-7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. You can continue to monitor the submission progress by using the previous method, or by visiting Partner Center.
+7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 방법을 사용 하거나 파트너 센터를 방문 하 여 제출 진행 상황을 계속 모니터링할 수 있습니다.
 
 <span/>
 
@@ -141,9 +141,9 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 포함하여 앱의 
 
 다음 문서는 여러 다른 프로그래밍 언어로 패키지 플라이트 제출을 만드는 방법을 보여 주는 자세한 코드 예제를 제공합니다.
 
-* [C# code examples](csharp-code-examples-for-the-windows-store-submission-api.md)
-* [Java code examples](java-code-examples-for-the-windows-store-submission-api.md)
-* [Python code examples](python-code-examples-for-the-windows-store-submission-api.md)
+* [C#코드 예제](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [Java 코드 예제](java-code-examples-for-the-windows-store-submission-api.md)
+* [Python 코드 예제](python-code-examples-for-the-windows-store-submission-api.md)
 
 ## <a name="storebroker-powershell-module"></a>StoreBroker PowerShell 모듈
 
@@ -155,7 +155,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 ## <a name="manage-a-gradual-package-rollout-for-a-package-flight-submission"></a>패키지 플라이트 제출의 점진적 패키지 출시 관리
 
-패키지 플라이트 제출에서 업데이트된 패키지를 앱의 Windows 10 고객의 비율로 점진적으로 배포할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들지 않고도 게시된 제출에 대한 배포 백분율을 변경(또는 업데이트를 중단)할 수 있습니다. For more details, including instructions for how to enable and manage a gradual package rollout in Partner Center, see [this article](../publish/gradual-package-rollout.md).
+패키지 플라이트 제출에서 업데이트된 패키지를 앱의 Windows 10 고객의 비율로 점진적으로 배포할 수 있습니다. 이렇게 하면 피드백 및 분석 데이터를 모니터링하여 보다 광범위하게 출시하기 전에 업데이트의 품질을 확인할 수 있습니다. 새 제출을 만들지 않고도 게시된 제출에 대한 배포 백분율을 변경(또는 업데이트를 중단)할 수 있습니다. 파트너 센터에서 점진적 패키지 출시를 사용 하도록 설정 하 고 관리 하는 방법에 대 한 지침을 비롯 한 자세한 내용은 [이 문서](../publish/gradual-package-rollout.md)를 참조 하세요.
 
 Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세스를 따르면 패키지 플라이트 제출에 대해 프로그래밍 방식으로 점진적 패키지 출시를 사용하도록 설정할 수 있습니다.
 
@@ -180,24 +180,24 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 </thead>
 <tbody>
 <tr>
-<td align="left">GET</td>
+<td align="left">가져오기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/packagerollout</td>
-<td align="left"><a href="get-package-rollout-info-for-a-flight-submission.md">Get the gradual rollout info for a package flight submission</a></td>
+<td align="left"><a href="get-package-rollout-info-for-a-flight-submission.md">패키지 비행 전송에 대 한 점진적 출시 정보 가져오기</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage</td>
-<td align="left"><a href="update-the-package-rollout-percentage-for-a-flight-submission.md">Update the gradual rollout percentage for a package flight submission</a></td>
+<td align="left"><a href="update-the-package-rollout-percentage-for-a-flight-submission.md">패키지 비행 전송에 대 한 점진적 출시 비율 업데이트</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/haltpackagerollout</td>
-<td align="left"><a href="halt-the-package-rollout-for-a-flight-submission.md">Halt the gradual rollout for a package flight submission</a></td>
+<td align="left"><a href="halt-the-package-rollout-for-a-flight-submission.md">패키지 비행 전송에 대 한 점진적 출시를 중지 합니다.</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/finalizepackagerollout</td>
-<td align="left"><a href="finalize-the-package-rollout-for-a-flight-submission.md">Finalize the gradual rollout for a package flight submission</a></td>
+<td align="left"><a href="finalize-the-package-rollout-for-a-flight-submission.md">패키지 비행 전송에 대 한 점진적 출시 마무리</a></td>
 </tr>
 </tbody>
 </table>
@@ -255,18 +255,18 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값      | 작업 표시줄의 검색 상자에   | 설명              |
+| 값      | 형식   | 설명              |
 |------------|--------|------------------------------|
-| id            | 문자열  | 제출 ID입니다.  |
-| flightId           | 문자열  |  제출이 연결된 패키지 플라이트의 ID입니다.  |  
-| status           | 문자열  | 제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>릴리스</li><li>ReleaseFailed</li></ul>   |
+| id            | string  | 제출 ID입니다.  |
+| flightId           | string  |  제출이 연결된 패키지 플라이트의 ID입니다.  |  
+| 상태           | string  | 제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>릴리스</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  오류에 대한 정보를 비롯하여 제출 상태에 대한 추가 세부 정보가 포함된 [상태 세부 정보 리소스](#status-details-object)입니다.  |
 | flightPackages           | 배열  | 제출의 각 패키지에 대한 세부 정보를 제공하는 [플라이트 패키지 리소스](#flight-package-object)가 포함됩니다.   |
 | packageDeliveryOptions    | object  | 제출에 대한 점진적 패키지 출시 및 필수 업데이트 설정을 포함하는 [패키지 전송 옵션 리소스](#package-delivery-options-object)입니다.   |
-| fileUploadUrl           | 문자열  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지를 추가하는 경우 패키지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [패키지 플라이트 제출 만들기](#create-a-package-flight-submission)를 참조하세요.  |
-| targetPublishMode           | 문자열  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>Manual</li><li>SpecificDate</li></ul> |
-| targetPublishDate           | 문자열  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |
-| notesForCertification           | 문자열  |  테스트 계정 자격 증명, 기능 액세스 및 확인 단계 등 인증 테스터에 대한 추가 정보를 제공합니다. 자세한 내용은 [인증에 대한 참고 사항](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification)을 참조하세요. |
+| fileUploadUrl           | string  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지를 추가하는 경우 패키지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [패키지 플라이트 제출 만들기](#create-a-package-flight-submission)를 참조하세요.  |
+| targetPublishMode           | string  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>수동</li><li>SpecificDate</li></ul> |
+| targetPublishDate           | string  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |
+| notesForCertification           | string  |  테스트 계정 자격 증명, 기능 액세스 및 확인 단계 등 인증 테스터에 대한 추가 정보를 제공합니다. 자세한 내용은 [인증에 대한 참고 사항](https://docs.microsoft.com/windows/uwp/publish/notes-for-certification)을 참조하세요. |
 
 <span id="status-details-object" />
 
@@ -274,7 +274,7 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 
 이 리소스에는 제출 상태에 대한 추가 세부 정보가 포함됩니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 작업 표시줄의 검색 상자에    | 설명                   |
+| 값           | 형식    | 설명                   |
 |-----------------|---------|------|
 |  errors               |    object     |   제출에 대한 오류 세부 정보가 포함된 [상태 세부 정보 리소스](#status-detail-object)의 배열입니다.   |     
 |  warnings               |   object      | 제출에 대한 경고 세부 정보가 포함된 [상태 세부 정보 리소스](#status-detail-object)의 배열입니다.     |
@@ -287,10 +287,10 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 
 이 리소스에는 제출과 관련된 오류 또는 경고에 대한 추가 정보가 포함되어 있습니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 작업 표시줄의 검색 상자에    | 설명       |
+| 값           | 형식    | 설명       |
 |-----------------|---------|------|
-|  code               |    문자열     |   오류 또는 경고의 유형을 설명하는 [제출 상태 코드](#submission-status-code)입니다. |  
-|  details               |     문자열    |  문제에 대한 자세한 정보가 있는 메시지입니다.     |
+|  code               |    string     |   오류 또는 경고의 유형을 설명하는 [제출 상태 코드](#submission-status-code)입니다. |  
+|  details 정보               |     string    |  문제에 대한 자세한 정보가 있는 메시지입니다.     |
 
 
 <span id="certification-report-object" />
@@ -299,10 +299,10 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 
 이 리소스는 제출의 인증 보고서 데이터에 대한 액세스를 제공합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 작업 표시줄의 검색 상자에    | 설명         |
+| 값           | 형식    | 설명         |
 |-----------------|---------|------|
-|     date            |    문자열     |  The date and time the report was generated, in ISO 8601 format.    |
-|     reportUrl            |    문자열     |  보고서에 액세스할 수 있는 URL입니다.    |
+|     date            |    string     |  보고서가 생성 된 날짜와 시간 (ISO 8601 형식)입니다.    |
+|     reportUrl            |    string     |  보고서에 액세스할 수 있는 URL입니다.    |
 
 
 <span id="flight-package-object" />
@@ -331,19 +331,19 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 이 리소스의 값은 다음과 같습니다.
 
 > [!NOTE]
-> [update a package flight submission](update-a-flight-submission.md) 메서드를 호출할 때는 요청 본문에 이 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. The other values are populated by Partner Center.
+> [update a package flight submission](update-a-flight-submission.md) 메서드를 호출할 때는 요청 본문에 이 개체의 *fileName*, *fileStatus*, *minimumDirectXVersion* 및 *minimumSystemRam* 값만 필요합니다. 다른 값은 파트너 센터에서 채워집니다.
 
-| 값           | 작업 표시줄의 검색 상자에    | 설명              |
+| 값           | 형식    | 설명              |
 |-----------------|---------|------|
-| fileName   |   문자열      |  패키지 이름입니다.    |  
-| fileStatus    | 문자열    |  패키지의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
-| id    |  문자열   |  패키지를 고유하게 식별하는 ID입니다. This value is used by Partner Center.   |     
-| version    |  문자열   |  앱 패키지의 버전입니다. 자세한 내용은 [패키지 버전 번호](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering)를 참조하세요.   |   
-| architecture    |  문자열   |  앱 패키지의 아키텍처(예: ARM)입니다.   |     
+| fileName   |   string      |  패키지의 이름입니다.    |  
+| fileStatus    | string    |  패키지의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
+| id    |  string   |  패키지를 고유하게 식별하는 ID입니다. 이 값은 파트너 센터에서 사용 됩니다.   |     
+| version    |  string   |  앱 패키지의 버전입니다. 자세한 내용은 [패키지 버전 번호](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering)를 참조하세요.   |   
+| architecture    |  string   |  앱 패키지의 아키텍처(예: ARM)입니다.   |     
 | languages    | 배열    |  앱에서 지원하는 언어의 언어 코드 배열입니다. 자세한 내용은 [지원되는 언어](https://docs.microsoft.com/windows/uwp/publish/supported-languages)를 참조하세요.    |     
 | capabilities    |  배열   |  패키지에 필요한 접근 권한 값의 배열입니다. 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.   |     
-| minimumDirectXVersion    |  문자열   |  앱 패키지에서 지원되는 최소 DirectX 버전입니다. Windows 8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
-| minimumSystemRam    | 문자열    |  앱 패키지에 필요한 최소 RAM입니다. Windows 8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>Memory2GB</li></ul>   |    
+| minimumDirectXVersion    |  string   |  앱 패키지에서 지원되는 최소 DirectX 버전입니다. Windows 8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
+| minimumSystemRam    | string    |  앱 패키지에 필요한 최소 RAM입니다. Windows 8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 버전을 대상으로 하는 앱에 대해서는 무시됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>Memory2GB</li></ul>   |    
 
 
 <span id="package-delivery-options-object" />
@@ -369,10 +369,10 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 작업 표시줄의 검색 상자에    | 설명        |
+| 값           | 형식    | 설명        |
 |-----------------|---------|------|
 | packageRollout   |   object      |   제출에 대한 점진적 패키지 출시 설정을 포함하는 [패키지 출시 리소스](#package-rollout-object)입니다.    |  
-| isMandatoryUpdate    | 부울    |  이 제출의 패키지를 앱 업데이트 자동 설치를 필수 구성 요소로 처리할지 여부를 나타냅니다. 앱 업데이트 자동 설치를 필수 패키지에 대한 자세한 내용은 [앱에 대한 패키지 업데이트 다운로드 및 설치](../packaging/self-install-package-updates.md)를 참조하세요.    |  
+| isMandatoryUpdate    | boolean    |  이 제출의 패키지를 앱 업데이트 자동 설치를 필수 구성 요소로 처리할지 여부를 나타냅니다. 앱 업데이트 자동 설치를 필수 패키지에 대한 자세한 내용은 [앱에 대한 패키지 업데이트 다운로드 및 설치](../packaging/self-install-package-updates.md)를 참조하세요.    |  
 | mandatoryUpdateEffectiveDate    |  date   |  이 제출의 패키지가 필수가 되는 날짜 및 시간을 ISO 8601 형식 및 UTC 표준 시간대로 나타낸 것입니다.   |        
 
 <span id="package-rollout-object" />
@@ -381,19 +381,19 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 
 이 리소스는 제출에 대한 점진적 [패키지 출시 설정](#manage-gradual-package-rollout)을 포함합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 작업 표시줄의 검색 상자에    | 설명        |
+| 값           | 형식    | 설명        |
 |-----------------|---------|------|
-| isPackageRollout   |   부울      |  제출에 대해 점진적 패키지 출시를 사용하도록 설정할지 여부를 나타냅니다.    |  
+| isPackageRollout   |   boolean      |  제출에 대해 점진적 패키지 출시를 사용하도록 설정할지 여부를 나타냅니다.    |  
 | packageRolloutPercentage    | float    |  점진적 출시에서 패키지를 받을 사용자의 백분율입니다.    |  
-| packageRolloutStatus    |  문자열   |  점진적 패키지 출시의 상태를 나타내는 다음 문자열 중 하나입니다. <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
-| fallbackSubmissionId    |  문자열   |  점진적 출시 패키지를 가져오지 않는 고객이 수신할 제출의 ID입니다.   |          
+| packageRolloutStatus    |  string   |  점진적 패키지 출시의 상태를 나타내는 다음 문자열 중 하나입니다. <ul><li>PackageRolloutNotStarted</li><li>PackageRolloutInProgress</li><li>PackageRolloutComplete</li><li>PackageRolloutStopped</li></ul>  |  
+| fallbackSubmissionId    |  string   |  점진적 출시 패키지를 가져오지 않는 고객이 수신할 제출의 ID입니다.   |          
 
 > [!NOTE]
-> The *packageRolloutStatus* and *fallbackSubmissionId* values are assigned by Partner Center, and are not intended to be set by the developer. 요청 본문에 이러한 값을 포함하면 값이 무시됩니다.
+> *PackageRolloutStatus* 및 *FallbackSubmissionId* 값은 파트너 센터에서 할당 되며 개발자가 설정 하기 위한 것이 아닙니다. 요청 본문에 이러한 값을 포함하면 값이 무시됩니다.
 
 <span/>
 
-## <a name="enums"></a>Enums
+## <a name="enums"></a>열거형
 
 이러한 메서드는 다음 열거형을 사용합니다.
 
@@ -403,7 +403,7 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 
 다음 코드는 제출 상태를 나타냅니다.
 
-| Code           |  설명      |
+| 코드           |  설명      |
 |-----------------|---------------|
 |  없음            |     코드가 지정되지 않았습니다.         |     
 |      InvalidArchive        |     패키지가 포함된 ZIP 보관 파일이 잘못되거나 인식할 수 없는 보관 파일 형식입니다.  |
@@ -424,11 +424,11 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Create and manage submissions using Microsoft Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage package flights using the Microsoft Store submission API](manage-flights.md)
-* [Get a package flight submission](get-a-flight-submission.md)
-* [Create a package flight submission](create-a-flight-submission.md)
-* [Update a package flight submission](update-a-flight-submission.md)
-* [Commit a package flight submission](commit-a-flight-submission.md)
-* [Delete a package flight submission](delete-a-flight-submission.md)
-* [Get the status of a package flight submission](get-status-for-a-flight-submission.md)
+* [Microsoft Store 서비스를 사용 하 여 제출 작성 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+* [Microsoft Store 제출 API를 사용 하 여 항공편 패키지 관리](manage-flights.md)
+* [패키지 비행 제출 가져오기](get-a-flight-submission.md)
+* [패키지 비행 전송 만들기](create-a-flight-submission.md)
+* [패키지 비행 제출 업데이트](update-a-flight-submission.md)
+* [패키지 비행 제출 커밋](commit-a-flight-submission.md)
+* [패키지 비행 전송 삭제](delete-a-flight-submission.md)
+* [패키지 비행 제출의 상태를 가져옵니다.](get-status-for-a-flight-submission.md)

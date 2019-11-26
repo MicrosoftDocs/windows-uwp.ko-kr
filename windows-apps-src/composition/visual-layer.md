@@ -15,7 +15,7 @@ ms.locfileid: "74255521"
 ---
 # <a name="visual-layer"></a>시각적 계층
 
-시각적 계층은 고성능, 그래픽 유지 모드 API, 효과 및 애니메이션을 제공하며 Windows 장치 전체에서 모든 UI의 기반이 됩니다. You define your UI in a declarative manner and the Visual layer relies on graphics hardware acceleration to ensure your content, effects and animations are rendered in a smooth, glitch-free manner independent of the app's UI thread.
+시각적 계층은 고성능, 그래픽 유지 모드 API, 효과 및 애니메이션을 제공하며 Windows 장치 전체에서 모든 UI의 기반이 됩니다. 선언적 방식으로 UI를 정의 하 고 시각적 계층은 그래픽 하드웨어 가속을 사용 하 여 응용 프로그램의 UI 스레드와 상관 없이 부드러운, 결함 없는 방식으로 콘텐츠, 효과 및 애니메이션이 렌더링 되도록 합니다.
 
 눈에 띄는 주요 사항은 다음과 같습니다.
 
@@ -38,7 +38,7 @@ Windows UWP 앱은 이미 UI 프레임 워크 중 하나를 통해 시각적 계
 
 ### <a name="content"></a>콘텐츠
 
-시각을 사용하여 애니메이션 및 효과가 사용할 수 있도록 콘텐츠는 호스팅 및 변환됩니다. 클래스 계층의 기반에는 작성자에서 시각 상태에 대한 앱 프로세스의 가벼운 스레드 민첩 프록시인 [**시각**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual) 클래스가 있습니다. Sub-classes of Visual include  [**ContainerVisual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ContainerVisual) to allow for children to create trees of visuals and [**SpriteVisual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual) that contains content and can be painted with either solid colors, custom drawn content or visual effects. 함께 이러한 시각 유형은 2D UI에 대한 시각적 트리 구조 및 대부분의 XAML FrameworkElements를 차지합니다.
+시각을 사용하여 애니메이션 및 효과가 사용할 수 있도록 콘텐츠는 호스팅 및 변환됩니다. 클래스 계층의 기반에는 작성자에서 시각 상태에 대한 앱 프로세스의 가벼운 스레드 민첩 프록시인 [**시각**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual) 클래스가 있습니다. 시각적 개체의 하위 클래스에는 자식에서 콘텐츠를 포함 하 고 단색, 사용자 지정 그리기 내용 또는 시각적 효과를 사용 하 여 그릴 수 있는 시각적 개체 및 [**SpriteVisual**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.SpriteVisual) 의 트리를 만들 수 있도록 하는  [**system.windows.media.containervisual>** ](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ContainerVisual) 가 포함 되어 있습니다. 함께 이러한 시각 유형은 2D UI에 대한 시각적 트리 구조 및 대부분의 XAML FrameworkElements를 차지합니다.
 
 자세한 내용은 [컴퍼지션 시각](composition-visual-tree.md) 개요를 참조하세요.
 
@@ -52,26 +52,26 @@ Windows UWP 앱은 이미 UI 프레임 워크 중 하나를 통해 시각적 계
 
 ### <a name="animations"></a>애니메이션
 
-시각적 계층의 애니메이션 시스템으로 시작을 이동하고 효과를 애니메이션화하고 전화, 클립 및 기타 속성을 유발할 수 있습니다.  It is a framework agnostic system that has been designed from the ground up with performance in mind.  It runs independently from the UI thread to ensure smoothness and scalability.  While it lets you use familiar KeyFrame animations to drive property changes over time, it also lets you set up mathematical relationships between different properties, including user input, letting you directly craft seamless choreographed experiences.
+시각적 계층의 애니메이션 시스템으로 시작을 이동하고 효과를 애니메이션화하고 전화, 클립 및 기타 속성을 유발할 수 있습니다.  이러한 시스템은 성능 향상을 고려 하 여 처음부터 설계 된 프레임 워크와 무관 한 시스템입니다.  이는 부드러운 및 확장성을 보장 하기 위해 UI 스레드와 독립적으로 실행 됩니다.  친숙 한 키 프레임 애니메이션을 사용 하 여 시간에 따른 속성 변경을 구동 하는 반면, 사용자 입력을 비롯 한 다양 한 속성 간의 수학적 관계를 설정 하 여 원활한 조율 환경을 직접 만들 수 있습니다.
 
 자세한 내용은 [컴퍼지션 애니메이션](composition-animation.md) 개요를 참조하세요.
 
 ### <a name="working-with-your-xaml-uwp-app"></a>XAML UWP 앱 사용
 
-XAML 프레임워크에서 생성한 시각을 가져와 [**Windows.UI.Xaml.Hosting**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting)에서 [**ElementCompositionPreview**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview) 클래스를 사용하여 시각적 FrameworkElement를 백업할 수 있습니다. 프레임워크에서 사용자를 위해 만든 시각 효과는 사용자 지정에 제한이 있을 수 있습니다. 이는 프레임워크가 오프셋, 변환 및 수명을 관리하기 때문입니다. 하지만 직접 시각 효과를 만들고 ElementCompositionPreview를 통해 또는 시각 트리 구조의 어딘가에 있는 기존 ContainerVisual에 추가하여 기존 XAML 요소에 이를 연결할 수 있습니다.
+XAML 프레임워크에서 생성한 시각을 가져와 [**Windows.UI.Xaml.Hosting**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview)에서 [**ElementCompositionPreview**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting) 클래스를 사용하여 시각적 FrameworkElement를 백업할 수 있습니다. 프레임워크에서 사용자를 위해 만든 시각 효과는 사용자 지정에 제한이 있을 수 있습니다. 이는 프레임워크가 오프셋, 변환 및 수명을 관리하기 때문입니다. 하지만 직접 시각 효과를 만들고 ElementCompositionPreview를 통해 또는 시각 트리 구조의 어딘가에 있는 기존 ContainerVisual에 추가하여 기존 XAML 요소에 이를 연결할 수 있습니다.
 
 자세한 내용은 [XAML로 시각 계층 사용](using-the-visual-layer-with-xaml.md) 개요를 참조하세요.
 
-### <a name="working-with-your-desktop-app"></a>Working with your desktop app
+### <a name="working-with-your-desktop-app"></a>데스크톱 앱 작업
 
-You can use the Visual layer to enhance the look, feel, and functionality of your WPF, Windows Forms, and C++ Win32 desktop apps. You can migrate islands of content to use the Visual layer and keep the rest of your UI in its existing framework. This means you can make significant updates and enhancements to your application UI without needing to make extensive changes to your existing code base.
+시각적 계층을 사용 하 여 WPF, Windows Forms 및 C++ Win32 데스크톱 응용 프로그램의 모양, 느낌 및 기능을 향상 시킬 수 있습니다. 시각적 계층을 사용 하 고 나머지 UI는 기존 프레임 워크에 유지 하기 위해 콘텐츠의 아일랜드를 마이그레이션할 수 있습니다. 즉, 기존 코드 베이스를 광범위 하 게 변경할 필요 없이 응용 프로그램 UI에 대 한 중요 업데이트 및 향상을 만들 수 있습니다.
 
 자세한 내용은 [시각적 계층을 사용하여 데스크톱 앱 현대화](/windows/apps/desktop/modernize/visual-layer-in-desktop-apps)를 참조하세요.
 
 ## <a name="additional-resources"></a>추가 리소스
 
-* [**Full reference documentation for the API**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
+* [**API에 대 한 전체 참조 설명서**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
 * [WindowsUIDevLabs GitHub](https://github.com/microsoft/WindowsCompositionSamples)의 고급 UI 및 Composition 샘플
-* [Windows.UI.Composition Sample Gallery](https://www.microsoft.com/store/apps/9pp1sb5wgnww)
-* [@windowsui Twitter feed ](https://twitter.com/windowsui)
+* [Windows. ui&gt 샘플 갤러리](https://www.microsoft.com/store/apps/9pp1sb5wgnww)
+* [@windowsui Twitter 피드](https://twitter.com/windowsui)
 * 이 API에 대한 Kenny Kerr의 MSDN 문서 [그래픽 및 애니메이션 - Windows Composition(Windows 10)](https://msdn.microsoft.com/magazine/mt590968)을 참조하세요.

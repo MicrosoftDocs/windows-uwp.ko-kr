@@ -54,7 +54,7 @@ var accessStatus = await Geolocator.RequestAccessAsync();
 
 
 
-[  **RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.requestaccessasync) 메서드는 사용자에게 위치 액세스 권한을 허용하라고 메시지를 표시합니다. 이 메시지는 앱당 한 번만 표시됩니다. 사용자가 최초로 권한을 부여하거나 거부한 후에는 사용자에게 더 이상 권한을 묻지 않습니다. 메시지가 표시된 후 나중에 사용자가 위치 권한을 변경할 수 있도록 이 항목의 뒷부분에 설명된 것처럼 위치 설정에 대한 링크를 제공하는 것이 좋습니다.
+[  **RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.requestaccessasync) 메서드는 사용자에게 위치 엑세스 권한을 허용하라고 메시지를 표시합니다. 이 메시지는 앱당 한 번만 표시됩니다. 사용자가 최초로 권한을 부여하거나 거부한 후에는 사용자에게 더 이상 권한을 묻지 않습니다. 메시지가 표시된 후 나중에 사용자가 위치 권한을 변경할 수 있도록 이 항목의 뒷부분에 설명된 것처럼 위치 설정에 대한 링크를 제공하는 것이 좋습니다.
 
 >참고: 거칠게 배치 기능을 사용 하면 앱에서 사용자의 명시적 사용 권한을 가져오지 않고 의도적으로 난독 처리 된 (부정확 한) 위치를 가져올 수 있습니다. 그러나 시스템 전체 위치 스위치는 여전히 **켜져**있어야 합니다. 앱에서 거칠게 위치를 활용 하는 방법을 알아보려면 [**Geolocator**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator) 클래스에서 [**AllowFallbackToConsentlessPositions**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.allowfallbacktoconsentlesspositions) 메서드를 참조 하세요.
 

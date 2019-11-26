@@ -38,7 +38,7 @@ Surface Dial은 펜, 터치, 마우스와 같은 기본 입력 디바이스와 �
 - 메뉴가 활성화된 경우 회전시켜 메뉴 항목을 강조 표시하거나 메뉴가 활성화되지 않은 경우 앱에서 현재 작업을 수정합니다.
 - 메뉴가 활성화된 경우 클릭하여 강조 표시된 메뉴 항목을 선택하거나 메뉴가 활성화되지 않은 경우 앱의 명령을 호출합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 * Windows 10 크리에이터 업데이트 이상을 실행하는 컴퓨터(또는 가상 컴퓨터)
 * [Visual Studio 2019](https://developer.microsoft.com/windows/downloads)
@@ -634,7 +634,7 @@ Surface Dial을 Surface Studio와 함께 사용하면 더 고유한 사용자 �
 
 ### <a name="samples"></a>샘플
 
-#### <a name="topic-samples"></a>토픽 샘플
+#### <a name="topic-samples"></a>항목 샘플
 
 [RadialController 사용자 지정](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-radialcontroller-customization.zip)
 

@@ -113,15 +113,15 @@ ms.locfileid: "74259692"
 ## <a name="other-resources"></a>다른 리소스
 
 
-You can learn more by downloading the [Raw notifications sample](https://code.msdn.microsoft.com/windowsapps/Raw-notifications-sample-3bc28c5d) for Windows 8.1, and the [Push and periodic notifications sample](https://code.msdn.microsoft.com/windowsapps/push-and-periodic-de225603) for Windows 8.1, and re-using their source code in your Windows 10 app.
+Windows 8.1에 대 한 [원시 알림 샘플](https://code.msdn.microsoft.com/windowsapps/Raw-notifications-sample-3bc28c5d) 및 Windows 8.1에 대 한 [푸시 및 정기 알림 샘플](https://code.msdn.microsoft.com/windowsapps/push-and-periodic-de225603) 을 다운로드 하 고 Windows 10 앱에서 소스 코드를 다시 사용 하 여 자세히 알아볼 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Guidelines for raw notifications](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-raw-notification-overview)
-* [Quickstart: Creating and registering a raw notification background task](https://docs.microsoft.com/previous-versions/windows/apps/jj676800(v=win.10))
-* [Quickstart: Intercepting push notifications for running apps](https://docs.microsoft.com/previous-versions/windows/apps/jj709908(v=win.10))
+* [원시 알림에 대 한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-raw-notification-overview)
+* [빠른 시작: 원시 알림 백그라운드 작업 만들기 및 등록](https://docs.microsoft.com/previous-versions/windows/apps/jj676800(v=win.10))
+* [빠른 시작: 실행 중인 앱에 대 한 푸시 알림 가로채기](https://docs.microsoft.com/previous-versions/windows/apps/jj709908(v=win.10))
 * [**RawNotification**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.RawNotification)
-* [**BackgroundExecutionManager.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_)
+* [**BackgroundExecutionManager**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundExecutionManager#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessAsync_System_String_)
  
 
  

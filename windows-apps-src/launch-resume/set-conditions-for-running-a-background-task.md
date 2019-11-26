@@ -4,7 +4,7 @@ description: 백그라운드 작업이 실행되는 시간을 제어하는 조�
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
 ms.date: 07/06/2018
 ms.topic: article
-keywords: windows 10, uwp, background task
+keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
 dev_langs:
 - csharp
@@ -31,7 +31,7 @@ ms.locfileid: "74260415"
 
 백그라운드 작업에 조건을 설정하면 작업이 불필요하게 실행되지 않으므로 배터리 사용 시간과 CPU가 절약됩니다. 예를 들어 백그라운드 작업이 타이머에 따라 실행되고 인터넷 연결이 필요한 경우 작업을 등록하기 전에 **InternetAvailable** 조건을 [**TaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)에 추가합니다. 그러면 타이머가 경과*되고* 인터넷을 사용할 수 있을 때 백그라운드 작업만 실행하여 작업에서 시스템 리소스와 배터리를 불필요하게 사용하는 것을 방지할 수 있습니다.
 
-동일한 [**TaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)에서 **AddCondition**을 여러 번 호출하여 여러 조건을 결합할 수도 있습니다. **UserPresent** 및 **UserNotPresent**와 같은 충돌하는 조건을 추가하지 않도록 주의하세요.
+동일한TaskBuilder[**에서** AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)을 여러 번 호출하여 여러 조건을 결합할 수도 있습니다. **UserPresent** 및 **UserNotPresent**와 같은 충돌하는 조건을 추가하지 않도록 주의하세요.
 
 ## <a name="create-a-systemcondition-object"></a>SystemCondition 개체 만들기
 
@@ -41,7 +41,7 @@ ms.locfileid: "74260415"
 
 조건을 추가하기 전에 백그라운드 작업이 실행되기 위해 충족해야 하는 조건을 나타낼 [**SystemCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition) 개체를 만듭니다. 생성자에서 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType) 열거형 값으로 충족해야 하는 조건을 지정합니다.
 
-다음 코드는 **InternetAvailable** 조건을 지정하는 [**SystemCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition) 개체를 만듭니다.
+다음 코드는 [InternetAvailable**조건을 지정하는**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition)SystemCondition 개체를 만듭니다.
 
 ```csharp
 SystemCondition internetCondition = new SystemCondition(SystemConditionType.InternetAvailable);
@@ -105,9 +105,9 @@ BackgroundTaskRegistration ^ task = taskBuilder->Register();
 여러 조건을 추가하려면 앱에서 [**AddCondition**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.addcondition) 메서드를 여러 번 호출합니다. 이러한 호출은 작업 등록이 적용되기 전에 수행되어야 합니다.
 
 > [!NOTE]
-> Take care not to add conflicting conditions to a background task.
+> 충돌 하는 조건을 백그라운드 작업에 추가 하지 않도록 주의 합니다.
 
-The following snippet shows multiple conditions in the context of creating and registering a background task.
+다음 코드 조각에서는 백그라운드 작업을 만들고 등록 하는 컨텍스트에서 여러 조건을 보여 줍니다.
 
 ```csharp
 // Set up the background task.
@@ -178,7 +178,7 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ## <a name="remarks"></a>설명
 
 > [!NOTE]
-> Choose conditions for your background task so that it only runs when it's needed, and doesn't run when it shouldn't. 다른 백그라운드 작업 조건에 대한 자세한 내용은 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)을 참조하세요.
+> 필요한 경우에만 실행 되 고, 그렇지 않으면 실행 되지 않도록 백그라운드 작업에 대 한 조건을 선택 합니다. 다른 백그라운드 작업 조건에 대한 자세한 내용은 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -194,4 +194,4 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 * [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
-* [How to trigger suspend, resume, and background events in UWP apps (when debugging)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)

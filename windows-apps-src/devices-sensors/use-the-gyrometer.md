@@ -29,7 +29,7 @@ ms.locfileid: "74259634"
 
 회전계는 가속도계를 게임 컨트롤러로서 보완합니다. 가속도계는 선형 동작을 측정할 수고 회전계는 각속도 또는 회전 동작을 측정합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 Extensible Application Markup Language (XAML), Microsoft 시각적 개체 C#및 이벤트에 대해 잘 알고 있어야 합니다.
 

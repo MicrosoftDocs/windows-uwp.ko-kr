@@ -1,6 +1,6 @@
 ---
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
-title: 계층적 데이터에 바인딩하고 마스터/자세히 보기 만들기
+title: 계층적 데이터를 바인딩하고 마스터/세부 정보 보기 만들기
 description: 체인으로 함께 바인딩된 CollectionViewSource 인스턴스에 항목 컨트롤을 바인딩하여 계층적 데이터에 대한 여러 수준 마스터/세부 정보(목록-세부 정보라고도 함) 보기를 만들 수 있습니다.
 ms.date: 02/08/2017
 ms.topic: article
@@ -13,7 +13,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74255120"
 ---
-# <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>계층적 데이터에 바인딩하고 마스터/자세히 보기 만들기
+# <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>계층적 데이터를 바인딩하고 마스터/세부 정보 보기 만들기
 
 
 
@@ -27,11 +27,11 @@ UWP(유니버설 Windows 플랫폼) 앱의 한 가지 일반적인 구조는 사
 
 ![스포츠 계층 구조의 마스터/세부 정보 보기](images/xaml-masterdetails.png)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 항목에서는 사용자가 기본 UWP 앱을 만드는 방법을 알고 있다고 가정합니다. 첫 UWP 앱을 만드는 방법은 [C# 또는 Visual Basic을 사용하여 첫 UWP 앱 만들기](https://docs.microsoft.com/previous-versions/windows/apps/hh974581(v=win.10))를 참조하세요.
 
-## <a name="create-the-project"></a>프로젝트 만들기
+## <a name="create-the-project"></a>프로젝트를 만듭니다.
 
 **비어 있는 응용 프로그램(Windows 유니버설)** 프로젝트를 만듭니다. 이름을 "MasterDetailsBinding"으로 지정합니다.
 

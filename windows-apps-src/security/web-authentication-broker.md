@@ -35,7 +35,7 @@ ms.locfileid: "74259817"
 
 요청 URI는 앱 ID 또는 암호, 인증 완료 후 사용자에게 전송되는 리디렉션 URI 및 예상 응답 유형과 같은 기타 필수 정보가 추가된 인증 요청을 온라인 공급자에 보내는 주소로 구성됩니다. 필요한 매개 변수는 공급자에서 확인할 수 있습니다.
 
-요청 URI는 [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) 메서드의 *requestUri* 매개 변수로 전송됩니다. `https://`로 시작하는 보안 주소여야 합니다.
+요청 URI는AuthenticateAsync[**메서드의**requestUri](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) 매개 변수로 전송됩니다. `https://`로 시작하는 보안 주소여야 합니다.
 
 다음 예에서는 요청 URI를 작성하는 방법을 보여 줍니다.
 
@@ -87,12 +87,12 @@ catch (Exception ex)
 ```
 
 >[!WARNING]
->[  **AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) 외에 [**Windows.Security.Authentication.Web**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web) 네임스페이스는 [**AuthenticateAndContinue**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.WebAuthenticationBroker#methods) 메서드를 포함합니다. 이 메서드를 호출하지 마세요. It is designed for apps targeting Windows Phone 8.1 only and is deprecated starting with Windows 10.
+>[  **AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync) 외에 [**Windows.Security.Authentication.Web**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web) 네임스페이스는 [**AuthenticateAndContinue**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.WebAuthenticationBroker#methods) 메서드를 포함합니다. 이 메서드를 호출 하지 마세요. Windows Phone 8.1만을 대상으로 하는 앱 용으로 설계 되었으며 Windows 10부터 사용 되지 않습니다.
 
 ## <a name="connecting-with-single-sign-on-sso"></a>SSO(Single Sign-On)로 연결
 
 
-기본적으로 웹 인증 브로커는 쿠키가 유지되는 것을 허용하지 않습니다. 따라서 앱 사용자가 계속 로그인한 상태로 유지하고 있음을 표시(예: 공급자의 로그인 대화 상자에서 확인란 선택)해도 해당 공급자에 대한 리소스에 액세스할 때마다 로그인해야 합니다. SSO로 로그인하려면 온라인 ID 공급자는 웹 인증 브로커에 SSO를 사용하도록 설정해야 하며 앱은 *callbackUri* 매개 변수를 사용하지 않는 [**AuthenticateAsync**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync)의 오버로드를 호출해야 합니다. 이렇게 하면 웹 인증 브로커가 영구적 쿠키를 저장할 수 있기 때문에 향후 같은 앱에서 인증을 호출할 때 사용자가 반복적으로 로그인을 할 필요가 없습니다(액세스 토큰이 만료될 때까지 사용자가 효과적으로 "로그인").
+기본적으로 웹 인증 브로커는 쿠키가 유지되는 것을 허용하지 않습니다. 따라서 앱 사용자가 계속 로그인한 상태로 유지하고 있음을 표시(예: 공급자의 로그인 대화 상자에서 확인란 선택)해도 해당 공급자에 대한 리소스에 액세스할 때마다 로그인해야 합니다. SSO로 로그인하려면 온라인 ID 공급자는 웹 인증 브로커에 SSO를 사용하도록 설정해야 하며 앱은 [callbackUri**매개 변수를 사용하지 않는**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.authenticateasync)AuthenticateAsync의 오버로드를 호출해야 합니다. 이렇게 하면 웹 인증 브로커가 영구적 쿠키를 저장할 수 있기 때문에 향후 같은 앱에서 인증을 호출할 때 사용자가 반복적으로 로그인을 할 필요가 없습니다(액세스 토큰이 만료될 때까지 사용자가 효과적으로 "로그인").
 
 SSO를 지원하려면 온라인 공급자가 `ms-app://<appSID>` 형식의 리디렉션 URI 등록할 수 있도록 허용해야 합니다. 여기서 `<appSID>`는 앱의 SID입니다. 앱의 SID는 앱 개발자 페이지에서, 또는 [**GetCurrentApplicationCallbackUri**](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.webauthenticationbroker.getcurrentapplicationcallbackuri) 메서드를 호출하여 확인할 수 있습니다.
 
@@ -136,7 +136,7 @@ catch (Exception ex)
 
 ### <a name="operational-logs"></a>작업 로그
 
-대체로 작업 로그를 사용하여 작동하지 않는 항목을 확인할 수 있습니다. There is a dedicated event log channel Microsoft-Windows-WebAuth\\Operational that allows website developers to understand how their web pages are being processed by the Web authentication broker. To enable it, launch eventvwr.exe and enable Operational log under the Application and Services\\Microsoft\\Windows\\WebAuth. 또한 웹 인증 브로커는 웹 서버에서 자신을 식별하는 고유 문자열을 사용자 에이전트 문자열 뒤에 추가합니다. 해당 문자열은 "MSAuthHost/1.0"입니다. 버전 번호는 나중에 변경될 수 있으므로 사용자 코드에 이 버전 번호를 사용하면 안 됩니다. 전체 디버깅 단계가 뒤에 나오는 전체 사용자 에이전트 문자열의 예는 다음과 같습니다.
+대체로 작업 로그를 사용하여 작동하지 않는 항목을 확인할 수 있습니다. 웹 사이트 개발자가 웹 인증 브로커에서 웹 페이지를 처리 하는 방법을 이해 하는 데 사용할 수 있는 전용 이벤트 로그 채널 Microsoft Windows-WebAuth\\작동 합니다. 이 기능을 사용 하도록 설정 하려면 eventvwr을 시작 하 고 Microsoft\\Windows\\WebAuth\\응용 프로그램 및 서비스에서 작업 로그를 사용 하도록 설정 합니다. 또한 웹 인증 브로커는 웹 서버에서 자신을 식별하는 고유 문자열을 사용자 에이전트 문자열 뒤에 추가합니다. 해당 문자열은 "MSAuthHost/1.0"입니다. 버전 번호는 나중에 변경될 수 있으므로 사용자 코드에 이 버전 번호를 사용하면 안 됩니다. 전체 디버깅 단계가 뒤에 나오는 전체 사용자 에이전트 문자열의 예는 다음과 같습니다.
 
 `User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Win64; x64; Trident/6.0; MSAuthHost/1.0)`
 
@@ -155,11 +155,11 @@ catch (Exception ex)
 
 앱에서 Fiddler 웹 디버거를 사용할 수 있습니다.
 
-1.  Since the AuthHost runs in its own app container, to give it the private network capability you must set a registry key: Windows Registry Editor Version 5.00
+1.  AuthHost는 자체 앱 컨테이너에서 실행 되므로 개인 네트워크 기능을 제공 하려면 레지스트리 키를 설정 해야 합니다. Windows 레지스트리 편집기 버전 5.00
 
-    **HKEY\_LOCAL\_MACHINE**\\**SOFTWARE**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**Image File Execution Options**\\**authhost.exe**\\**EnablePrivateNetwork** = 00000001
+    **HKEY\_로컬\_MACHINE**\\**소프트웨어**\\**Microsoft**\\**Windows NT**\\**CurrentVersion**\\**이미지 파일 실행 옵션**\\**authhost**\\**EnablePrivateNetwork** = 00000001
 
-    If you do not have this registry key, you can create it in a Command Prompt with administrator privileges.
+    이 레지스트리 키가 없는 경우 관리자 권한으로 명령 프롬프트에서 만들 수 있습니다.
 
     ```cmd 
     REG ADD "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\authhost.exe" /v EnablePrivateNetwork /t REG_DWORD /d 1 /f

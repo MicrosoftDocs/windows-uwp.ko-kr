@@ -1,5 +1,5 @@
 ---
-Description: The first step in creating a new app in Partner Center is reserving an app name. 앱 이름을 예약하는 방법을 살펴보고 적합한 앱 이름을 선택하기 위한 제안을 확인하세요.
+Description: 파트너 센터에서 새 앱을 만드는 첫 번째 단계는 앱 이름을 예약 하는 것입니다. 앱 이름을 예약하는 방법을 살펴보고 적합한 앱 이름을 선택하기 위한 제안을 확인하세요.
 title: 이름을 예약하여 앱 만들기
 keywords: Windows 10, UWP, 이름 예약, 앱 이름, 앱 이름들, 이름들, 제품 이름, 이름 지정, 예약 이름, 제목, 이름들, 제목들
 ms.assetid: 6DC58A9A-DF47-4652-8D13-0AC9289F5950
@@ -15,19 +15,19 @@ ms.locfileid: "74259024"
 ---
 # <a name="create-your-app-by-reserving-a-name"></a>이름을 예약하여 앱 만들기
 
-The first step in creating a new app in [Partner Center](https://partner.microsoft.com/dashboard) is reserving an app name. 각 예약 이름 (앱의 *제목*이라고도 불림)은 Microsoft Store 전반에서 고유해야 합니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 에서 새 앱을 만드는 첫 번째 단계는 앱 이름을 예약 하는 것입니다. 각 예약 이름 (앱의 *제목*이라고도 불림)은 Microsoft Store 전반에서 고유해야 합니다.
 
-앱 빌드를 아직 시작하지 않은 경우에 앱에 대한 이름을 예약할 수 있습니다. We recommend doing so as soon as possible, so that nobody else can use the name. 이름의 사용 예약을 유지하려면 3개월 내에 앱을 제출해야 합니다.
+앱 빌드를 아직 시작하지 않은 경우에 앱에 대한 이름을 예약할 수 있습니다. 다른 사용자가 이름을 사용할 수 없도록 가능한 한 빨리이 작업을 수행 하는 것이 좋습니다. 이름의 사용 예약을 유지하려면 3개월 내에 앱을 제출해야 합니다.
 
 [앱 패키지를 업로드](upload-app-packages.md) 할 때 [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) 값은 앱용으로 예약한 이름과 일치해야 합니다. Microsoft Visual Studio를 사용하여 앱 패키지를 만들 경우 이 특성은 자동으로 채워집니다.
 
 > [!IMPORTANT]
-> You can reserve additional names for an app, and you may choose to use one of those in the published version of your app instead of the one you reserve when you first create your app in Partner Center. However, be aware that the first name you enter here will be used in some of your app's [identity details](view-app-identity-details.md), such as the **Package Family Name (PFN)** . These values may be visible to some users, and cannot be changed, so make sure that the name you reserve is appropriate for this use.
+> 앱에 대 한 추가 이름을 예약 하 고 파트너 센터에서 앱을 처음 만들 때 예약 된 버전 대신 앱의 게시 된 버전 중 하나를 사용 하도록 선택할 수 있습니다. 그러나 여기에 입력 한 이름은 **PFN (패키지 패밀리 이름)** 와 같은 일부 앱의 [id 세부 정보](view-app-identity-details.md)에 사용 됩니다. 이러한 값은 일부 사용자에 게 표시 될 수 있으며 변경할 수 없습니다. 따라서 예약 된 이름이이 사용에 적합 한지 확인 해야 합니다.
 
 
 ## <a name="create-your-app-by-reserving-a-new-name"></a>새 이름을 예약하여 앱 만들기
 
-Reserving a name is the first step in creating an app in Partner Center. 
+이름 예약은 파트너 센터에서 앱을 만드는 첫 번째 단계입니다. 
 
 1.  **개요** 페이지에서 **새 앱 만들기**를 클릭합니다.
 2.  텍스트 상자에 사용할 이름을 입력하고 **가용성 확인**을 선택합니다. 이름을 사용할 수 있으면 녹색 확인 표시가 보입니다. 입력한 이름이 다른 개발자에 의해 이미 예약되었거나 사용 중이면 이름을 사용할 수 없다는 메시지가 표시됩니다.
@@ -45,18 +45,18 @@ Reserving a name is the first step in creating an app in Partner Center.
 
 올바른 앱 이름 선택은 중요한 작업입니다. 고객의 흥미를 끌고 앱을 자세히 알아보도록 유도하는 이름을 선택하세요. 다음은 유용한 앱 이름을 선택하기 위한 몇 가지 팁입니다.
 
--   **Keep it short.** 대부분의 경우 앱 이름을 표시할 공간이 제한되어 있으므로 이름을 최대한 짧게 사용하는 것이 좋습니다. 앱 이름은 최대 256자까지 가능하면 이름이 길면 이름 끝부분이 고객에게 표시되지 않을 수도 있습니다.
+-   **잠시 두십시오.** 대부분의 경우 앱 이름을 표시할 공간이 제한되어 있으므로 이름을 최대한 짧게 사용하는 것이 좋습니다. 앱 이름은 최대 256자까지 가능하면 이름이 길면 이름 끝부분이 고객에게 표시되지 않을 수도 있습니다.
     > [!NOTE]
-    > 다양한 위치에 표시되는 실제 문자 수는 할당된 길이와 앱 이름에 사용된 문자 유형에 따라 달라집니다. 예를 들어 Windows에서 사용되는 맑은 고딕 글꼴의 경우 "I"자 약 30개가 "W"자 10개와 동일한 공간을 차지합니다. Because of this variation, be sure to test your app and verify how its name appears on its tiles (if you choose to overlay the app name), in search results, and within the app itself. 앱을 제공하는 각 언어도 고려하세요. 동아시아 문자는 라틴 문자보다 폭이 더 넓은 경향이 있으므로 더 적은 수의 문자가 표시된다는 점을 유의하세요.
--   **Be original.** 앱 이름이 기존 앱과 쉽게 혼동되지 않고 구별되도록 하세요.
--   **Don't use names trademarked by others.** 예약하는 이름을 사용할 권한을 가지고 있어야 합니다. 이름의 상표권이 다른 사람에게 있는 경우 위반을 보고할 수 있으며, 이 경우 해당 이름을 계속해서 사용할 수 없습니다. 앱이 게시된 후 이런 문제가 발생하면 앱이 Microsoft Store에서 제거됩니다. 이 경우 앱과 해당 콘텐츠 전체에서 앱의 이름을 모두 변경해야 다시 인증을 받기 위해 [앱을 제출](app-submissions.md)할 수 있습니다.
--   **Avoid adding differentiating info at the end of the name.** 여러 앱을 구분하는 정보를 이름의 끝에 추가할 경우, 특히 이름이 긴 경우에는 고객이 앱을 찾지 못할 수 있습니다. 모든 앱이 동일한 이름을 갖는 것처럼 보일 수 있습니다. If this is unavoidable, use different logos and app images to make it easier to differentiate one app from another.
--   **Don't include emojis in your name.** 이모지 또는 지원되지 않는 기타 문자가 포함된 이름은 예약할 수 없습니다.
+    > 다양한 위치에 표시되는 실제 문자 수는 할당된 길이와 앱 이름에 사용된 문자 유형에 따라 달라집니다. 예를 들어 Windows에서 사용되는 맑은 고딕 글꼴의 경우 "I"자 약 30개가 "W"자 10개와 동일한 공간을 차지합니다. 이러한 변형으로 인해 앱을 테스트 하 고 해당 타일이 타일에 표시 되는 방식 (앱 이름 오버레이를 선택 하는 경우), 검색 결과 및 앱 자체 내에 표시 되는 방식을 확인 해야 합니다. 앱을 제공하는 각 언어도 고려하세요. 동아시아 문자는 라틴 문자보다 폭이 더 넓은 경향이 있으므로 더 적은 수의 문자가 표시된다는 점을 유의하세요.
+-   **원본 이어야 합니다.** 앱 이름이 기존 앱과 쉽게 혼동되지 않고 구별되도록 하세요.
+-   **다른 이름을 상표 이름을 사용 하지 마세요.** 예약하는 이름을 사용할 권한을 가지고 있어야 합니다. 이름의 상표권이 다른 사람에게 있는 경우 위반을 보고할 수 있으며, 이 경우 해당 이름을 계속해서 사용할 수 없습니다. 앱이 게시된 후 이런 문제가 발생하면 앱이 Microsoft Store에서 제거됩니다. 이 경우 앱과 해당 콘텐츠 전체에서 앱의 이름을 모두 변경해야 다시 인증을 받기 위해 [앱을 제출](app-submissions.md)할 수 있습니다.
+-   **이름 끝에 차별화 정보를 추가 하지 마세요.** 여러 앱을 구분하는 정보를 이름의 끝에 추가할 경우, 특히 이름이 긴 경우에는 고객이 앱을 찾지 못할 수 있습니다. 모든 앱이 동일한 이름을 갖는 것처럼 보일 수 있습니다. 피할 수 없는 경우 다른 로고 및 앱 이미지를 사용 하 여 한 앱에서 다른 앱을 보다 쉽게 구분할 수 있도록 합니다.
+-   **이름에이 모 지를 포함 하지 않습니다.** 이모지 또는 지원되지 않는 기타 문자가 포함된 이름은 예약할 수 없습니다.
 
 
 ## <a name="manage-additional-app-names"></a>추가 앱 이름 관리
 
-You can add and manage additional names on the **Manage app names** page in the **App management** section for each of your apps in Partner Center.
+파트너 센터의 각 앱에 대 한 **앱 관리** 섹션의 **앱 이름 관리** 페이지에서 추가 이름을 추가 하 고 관리할 수 있습니다.
 
 경우에 따라 동일한 앱에 사용할 여러 이름을 예약할 수도 있습니다. 예를 들어 앱을 여러 언어로 제공하고 각 언어에 대해 서로 다른 이름을 사용하려는 경우가 여기에 해당합니다. 앱 이름을 완전히 변경하려면 추가 이름을 예약해야 합니다.
 

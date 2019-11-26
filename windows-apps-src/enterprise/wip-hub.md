@@ -41,9 +41,9 @@ WIP와 MDM을 함께 사용하면 조직이 관리하는 디바이스에서 데�
 
 ![WIP 수명 주기](images/wip-lifecycle.png)
 
-> **Read more about WIP** <br>
-* [Introducing Windows Information Protection](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/bg-p/Windows10Blog)
-* [Protect your enterprise data using Windows Information Protection (WIP)](https://docs.microsoft.com/windows/whats-new/edp-whats-new-overview)
+> **WIP에 대해 자세히 읽기** <br>
+* [Windows Information Protection 소개](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/bg-p/Windows10Blog)
+* [WIP (Windows Information Protection)를 사용 하 여 엔터프라이즈 데이터 보호](https://docs.microsoft.com/windows/whats-new/edp-whats-new-overview)
 
 앱이 허용 목록에 있는 경우 앱에 의해 생성된 모든 데이터에는 정책 제한이 적용됩니다. 즉, 관리자가 엔터프라이즈 데이터에 대한 사용자의 액세스를 해지하면 해당 사용자는 앱에서 생성한 모든 데이터에 액세스할 수 없습니다.
 
@@ -61,11 +61,11 @@ WIP API를 사용하여 앱을 지원한 다음 엔터프라이즈 인식 앱으
 
 앱을 인식할 준비가 되면 다음 가이드 중 하나를 참조하세요.
 
-**For Universal Windows Platform (UWP) apps that you build by using C#**
+**를 사용 하 여 빌드하는 UWP (유니버설 Windows 플랫폼) 앱의 경우C#**
 
 [WIP(Windows Information Protection) 개발자 가이드](wip-dev-guide.md).
 
-**For Desktop apps that you build by using C++**
+**를 사용 하 여 빌드하는 데스크톱 앱의 경우C++**
 
 [WIP(Windows Information Protection) 개발자 가이드(C++)](https://docs.microsoft.com/previous-versions/windows/desktop/EDP/wip-developer-guide?redirectedfrom=MSDN).
 

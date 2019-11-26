@@ -42,9 +42,9 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개
 
 ### <a name="inspect"></a>**검사**  
 
-[**Inspect**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) enables you to select any UI element and view its accessibility data. 사용자는 Microsoft UI 자동화 속성 및 컨트롤 패턴을 보고 UI 자동화 트리에서 자동화 요소의 탐색 구조를 테스트할 수 있습니다. UI를 개발할 때 **Inspect**를 사용하여 접근성 특성이 UI 자동화에 어떻게 표시되는지 확인하세요. 경우에 따라 특성은 기본 XAML 컨트롤에 대해 이미 구현된 UI 자동화 지원에서 제공됩니다. 다른 경우 특성은 XAML 태그에서 [**AutomationProperties**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties) 연결된 속성으로 설정한 특정 값에서 제공됩니다.
+[**검사**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) 를 통해 UI 요소를 선택 하 고 해당 액세스 가능성 데이터를 볼 수 있습니다. 사용자는 Microsoft UI 자동화 속성 및 컨트롤 패턴을 보고 UI 자동화 트리에서 자동화 요소의 탐색 구조를 테스트할 수 있습니다. UI를 개발할 때 **Inspect**를 사용하여 접근성 특성이 UI 자동화에 어떻게 표시되는지 확인하세요. 경우에 따라 특성은 기본 XAML 컨트롤에 대해 이미 구현된 UI 자동화 지원에서 제공됩니다. 다른 경우 특성은 XAML 태그에서 [**AutomationProperties**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties) 연결된 속성으로 설정한 특정 값에서 제공됩니다.
 
-다음 이미지는 메모장에서 **편집** 메뉴 요소의 UI 자동화 속성을 쿼리하는 [**Inspect**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) 도구를 보여 줍니다.
+다음 이미지는 메모장에서 [편집**메뉴 요소의 UI 자동화 속성을 쿼리하는**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects)Inspect 도구를 보여 줍니다.
 
 ![검사 도구의 스크린샷](./images/inspect.png)
 
@@ -64,7 +64,7 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개
 <span id="ACCESSIBLE_EVENT_WATCHER"/>
 
 ### <a name="accessible-event-watcher"></a>**접근성 있는 이벤트 감시자**  
-[**Accessible Event Watcher (AccEvent)** ](https://docs.microsoft.com/windows/desktop/WinAuto/accessible-event-watcher) tests whether an app's UI elements fire proper UI Automation and Microsoft Active Accessibility events when UI changes occur. UI는 포커스가 변경되거나 UI 요소가 호출, 선택 또는 상태나 속성이 변경될 때 변경될 수 있습니다.
+[**액세스 가능한 이벤트 감시자 (AccEvent)** ](https://docs.microsoft.com/windows/desktop/WinAuto/accessible-event-watcher) 는 ui 변경이 발생할 때 응용 프로그램의 ui 요소가 적절 한 ui 자동화 및 Microsoft Active Accessibility 이벤트를 발생 시키는 지 여부를 테스트 합니다. UI는 포커스가 변경되거나 UI 요소가 호출, 선택 또는 상태나 속성이 변경될 때 변경될 수 있습니다.
 
 > [!NOTE]
 > 설명서에 나오는 대부분의 접근성 테스트 도구는 PC에서 실행되며 휴대폰에서는 실행되지 않습니다. 개발하고 에뮬레이터를 사용하는 동안 일부 도구를 실행할 수 있지만, 이 도구의 대부분은 에뮬레이터 내에서 UI 자동화 트리를 노출할 수 없습니다.
@@ -105,7 +105,7 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Narrator-and-Dev-Mode/player]
 
-**Use these steps to test your app using Narrator with a mouse and keyboard:**
+**마우스 및 키보드를 사용 하 여 내레이터를 사용 하 여 앱을 테스트 하려면 다음 단계를 따르세요.**
 1.  _Windows 로고 키 + Ctrl + Enter_를 눌러 내레이터를 시작합니다. Windows 10 버전 1607 이전 버전에서는 _Windows 로고 키 + Enter_를 눌러 내레이터를 시작합니다.
 2.  키보드의 _Tab_ 키, 화살표 키 및 _Caps Lock + 화살표 키_를 사용하여 앱을 탐색합니다.
 3.  앱을 탐색할 때 내레이터가 UI의 요소를 읽는 내용을 듣고 다음을 확인합니다.
@@ -118,16 +118,16 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK 도구 폴더(개
 
 Windows 10 버전 1607부터 내레이터에 새 개발자 모드가 도입되었습니다. 내레이터가 이미 실행 중인 경우 _Caps Lock + Shift + F12_를 눌러 개발자 모드를 켭니다. 개발자 모드를 사용하면 화면이 마스크되고 액세스할 수 있는 개체와 내레이터에 프로그래밍 방식으로 노출되는 관련 텍스트만 강조 표시됩니다. 이렇게 하면 내레이터에 노출되는 정보를 한눈에 확인할 수 있습니다.
 
-**Use these steps to test your app using Narrator's touch mode:**
+**다음 단계를 사용 하 여 내레이터의 터치 모드를 사용 하 여 앱을 테스트 합니다.**
 
 > [!NOTE]
 > 4개 이상의 접점을 지원하는 장치에서는 내레이터가 터치 모드를 자동으로 시작합니다. 내레이터는 주 화면에서 다중 모니터 시나리오나 멀티 터치 디지타이저를 지원하지 않습니다.
 
 1.  UI에 익숙해지고 레이아웃을 탐색합니다.
 
-    * **Navigate through the UI by using single-finger swipe gestures.** 왼쪽 또는 오른쪽 살짝 밀기를 사용하여 항목 간을 이동하고 위쪽 또는 아래쪽 살짝 밀기를 사용하여 탐색하는 항목의 범주를 변경합니다. 범주에는 모든 항목, 링크, 테이블, 머리글 등이 포함됩니다. 한 손가락으로 살짝 밀기 제스처를 사용한 탐색은 _Caps Lock + Arrow_를 사용한 탐색과 유사합니다.
-    * **Use tab gestures to navigate through focusable elements.** 오른쪽 또는 왼쪽으로 세 손가락 살짝 밀기는 키보드의 _Tab_ 키 및 _Shift + Tab_을 사용한 탐색과 유사합니다.
-    * **Spatially investigate the UI with a single finger.** 한 손가락을 위쪽과 아래쪽 또는 왼쪽과 오른쪽으로 끌어 내레이터가 손가락 아래의 항목을 읽게 합니다. 마우스도 한 손가락 끌기와 동일한 적중 테스트 논리를 사용하므로 마우스를 대신 사용할 수 있습니다.
+    * **단일 손가락 살짝 밀기 제스처를 사용 하 여 UI를 탐색 합니다.** 왼쪽 또는 오른쪽 살짝 밀기를 사용하여 항목 간을 이동하고 위쪽 또는 아래쪽 살짝 밀기를 사용하여 탐색하는 항목의 범주를 변경합니다. 범주에는 모든 항목, 링크, 테이블, 머리글 등이 포함됩니다. 한 손가락으로 살짝 밀기 제스처를 사용한 탐색은 _Caps Lock + Arrow_를 사용한 탐색과 유사합니다.
+    * **탭 제스처를 사용 하 여 포커스를 받을 수 있는 요소를 탐색할 수 있습니다.** 오른쪽 또는 왼쪽으로 세 손가락 살짝 밀기는 키보드의 _Tab_ 키 및 _Shift + Tab_을 사용한 탐색과 유사합니다.
+    * **단일 손가락으로 UI를 공간적으로 조사 합니다.** 한 손가락을 위쪽과 아래쪽 또는 왼쪽과 오른쪽으로 끌어 내레이터가 손가락 아래의 항목을 읽게 합니다. 마우스도 한 손가락 끌기와 동일한 적중 테스트 논리를 사용하므로 마우스를 대신 사용할 수 있습니다.
     * **세 손가락 위로 살짝 밀기로 전체 창과 모든 콘텐츠 읽기**. 이 동작은 _Caps Lock + W_를 사용하는 것과 동일합니다.
 
     중요 UI에 연결할 수 없는 경우 접근성 문제가 발생할 수 있습니다.
@@ -163,5 +163,5 @@ Windows 10 버전 1607부터 내레이터에 새 개발자 모드가 도입되�
 * [접근성](accessibility.md)
 * [피해야 할 사례](practices-to-avoid.md)
 * [UI 자동화](https://docs.microsoft.com/windows/desktop/WinAuto/entry-uiauto-win32)
-* [Accessibility in Windows](https://www.microsoft.com/accessibility/)
-* [Get started with Narrator](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)
+* [Windows의 내게 필요한 옵션](https://www.microsoft.com/accessibility/)
+* [내레이터 시작](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)

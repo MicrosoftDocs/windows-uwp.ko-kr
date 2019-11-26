@@ -23,12 +23,12 @@ ms.locfileid: "74259652"
 |
 
 
-| 제조업체  | Model                          | 기능 | 연결    | 형식         | 모드                      |
+| 제조업체  | Model                          | 접근 권한 값 | 연결    | 형식         | 모드                      |
 |---------------|--------------------------------|------------|--------------|--------------|---------------------------|
-| Code          | 판독기™ 950                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Code          | 판독기™ 1021                   | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Code          | 판독기™ 1421                   | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
-| Code          | 판독기™ 5000                   | 2D         | USB          | 발표 | HID POS 스캐너           |
+| 코드          | 판독기™ 950                    | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| 코드          | 판독기™ 1021                   | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| 코드          | 판독기™ 1421                   | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
+| 코드          | 판독기™ 5000                   | 2D         | USB          | 발표 | HID POS 스캐너           |
 | Honeywell     | Genesis 7580g                  | 2D         | USB          | 발표 | HID POS 스캐너           |
 | Honeywell     | Granit 198Xi 크                   | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |
 | Honeywell     | Granit 191Xi                   | 2D         | USB          | 핸드헬드     | HID POS 스캐너           |

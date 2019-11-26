@@ -1,5 +1,5 @@
 ---
-Description: Learn about receiving payments for your apps, add-ons (in-app products), and advertising earnings.
+Description: 앱, 추가 기능 (앱 내 제품) 및 광고 수입에 대 한 지불을 받는 방법에 대해 알아봅니다.
 title: 지급 받기
 ms.assetid: 37D1EF45-C4A8-4849-8819-3D4A4898215C
 ms.date: 03/05/2019
@@ -14,10 +14,10 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74260001"
 ---
 # <a name="getting-paid"></a>지급 받기
-Here’s some important info about receiving payment for your apps, add-ons, and advertising earnings.
+앱, 추가 기능 및 광고 수입에 대 한 결제를 수신 하는 방법에 대 한 몇 가지 중요 한 정보는 다음과 같습니다.
 
 > [!IMPORTANT]
-> Before you can receive money from app sales in the Microsoft Store, you need to [set up your payout account and fill out the necessary tax forms](setting-up-your-payout-account-and-tax-forms.md).
+> Microsoft Store의 앱 판매에서 돈을 받으려면 먼저 [지급 계정을 설정 하 고 필요한 세금 양식을 작성](setting-up-your-payout-account-and-tax-forms.md)해야 합니다.
 
 ## <a name="store-fee"></a>Microsoft Store 수수료
 
@@ -46,7 +46,7 @@ Microsoft Store 수수료는 추가 기능을 포함하여 Microsoft Store가 �
 
 ## <a name="payout-reporting"></a>지급 보고
 
-You can access details about your payment info and download reports in the **Payout summary** of [Partner Center](https://partner.microsoft.com/dashboard). 여기에 표시된 정보와 Microsoft에서 개발자가 번 돈을 분류하는 방법에 대한 자세한 내용은 [지급 요약](payout-summary.md)을 참조하세요.
+지불 정보에 대 한 세부 정보에 액세스 하 고 [파트너 센터](https://partner.microsoft.com/dashboard)의 **지급 요약** 에서 보고서를 다운로드할 수 있습니다. 여기에 표시된 정보와 Microsoft에서 개발자가 번 돈을 분류하는 방법에 대한 자세한 내용은 [지급 요약](payout-summary.md)을 참조하세요.
 
 
 ## <a name="payout-timeframe"></a>지급 기간
@@ -56,14 +56,14 @@ You can access details about your payment info and download reports in the **Pay
 
 ##  <a name="payout-hold-status"></a>지급 보류 상태
 
-기본적으로 위에서 설명한 대로 월 단위로 결제 대금을 보냅니다. However, you have the option to put your payouts for a program on hold, which will prevent us from sending payments to your account. 지급을 보류하도록 선택하는 경우에도 계속해서 모든 수익을 기록하고 **지급 요약**에 세부 정보를 제공합니다. 그러나 보류를 제거할 때까지 결제 대금을 계좌로 보내지 않습니다.
+기본적으로 위에서 설명한 대로 월 단위로 결제 대금을 보냅니다. 그러나 프로그램에 대 한 지급를 보류 중으로 설정 하 여 계정에 대 한 지불을 보내지 못하게 하는 옵션이 있습니다. 지급을 보류하도록 선택하는 경우에도 계속해서 모든 수익을 기록하고 **지급 요약**에 세부 정보를 제공합니다. 그러나 보류를 제거할 때까지 결제 대금을 계좌로 보내지 않습니다.
 
-To place your payments on hold, go to **Developer settings**. Under **Payout and tax**, in the **Payout and tax profile assignment** section, locate the program for which you would like payments held. Click the **Hold my Payment** checkbox to hold payments for this program. 언제든지 지급 보류 상태를 변경할 수 있지만 결정은 다음 월별 지급에 적용된다는 것에 유의하세요. 예를 들어 4월 지급을 보류하려는 경우 3월 말 전에 지급 보류 상태를 **켜짐**으로 설정해야 합니다.
+지불을 보류 하려면 **개발자 설정**으로 이동 합니다. **지급 및**세금의 **지급 및 세금 프로필 할당** 섹션에서 지불을 보유 하려는 프로그램을 찾습니다. 이 프로그램에 대 한 지불을 유지 하려면 **지불 유지** 확인란을 클릭 합니다. 언제든지 지급 보류 상태를 변경할 수 있지만 결정은 다음 월별 지급에 적용된다는 것에 유의하세요. 예를 들어 4월 지급을 보류하려는 경우 3월 말 전에 지급 보류 상태를 **켜짐**으로 설정해야 합니다.
 
-Once you have set your payout hold status to **On**, all payouts for this program will be on hold until you toggle the slider back to **Off**. 다시 전환하면 다음 월별 지급 주기 중에 포함됩니다(해당 지급 임계값이 충족된 경우). 예를 들어 지급을 보류했지만 6월에 지급이 생성되게 하려는 경우 5월 말 전에 지급 보류 상태를 **꺼짐**으로 전환해야 합니다.
+지급 보류가 상태를 **On**으로 설정 하면 슬라이더를 다시 **Off**로 전환할 때까지이 프로그램의 모든 지급가 보류 중으로 설정 됩니다. 다시 전환하면 다음 월별 지급 주기 중에 포함됩니다(해당 지급 임계값이 충족된 경우). 예를 들어 지급을 보류했지만 6월에 지급이 생성되게 하려는 경우 5월 말 전에 지급 보류 상태를 **꺼짐**으로 전환해야 합니다.
 
 > [!NOTE]
-> Your **Payout hold status** applies to each program individually (Microsoft Store, advertising, Azure Marketplace, etc.). If you wish to hold payments on all of your programs, you must hold payments on each program individually.
+> **지급 보류 상태** 는 각 프로그램에 개별적으로 적용 됩니다 (Microsoft Store, 광고, Azure Marketplace 등). 모든 프로그램에 대 한 지불을 유지 하려는 경우 각 프로그램에 대해 개별적으로 지불을 유지 해야 합니다.
 
 
  

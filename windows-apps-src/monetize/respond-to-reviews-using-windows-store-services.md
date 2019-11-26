@@ -15,7 +15,7 @@ ms.locfileid: "74260194"
 ---
 # <a name="respond-to-reviews-using-store-services"></a>스토어 서비스를 사용하여 리뷰에 응답
 
-*Microsoft Store 리뷰 API*를 사용하여 Microsoft Store의 앱 리뷰에 프로그래밍 방식으로 응답할 수 있습니다. This API is especially useful for developers who want to bulk respond to many reviews without using Partner Center. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
+*Microsoft Store 리뷰 API*를 사용하여 Microsoft Store의 앱 리뷰에 프로그래밍 방식으로 응답할 수 있습니다. 이 API는 파트너 센터를 사용 하지 않고 많은 검토에 대량으로 응답 하려는 개발자에 게 특히 유용 합니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
 
 다음 단계에서는 종단 간 프로세스를 설명합니다.
 
@@ -24,7 +24,7 @@ ms.locfileid: "74260194"
 3.  [Microsoft Store 리뷰 API를 호출](#call-the-windows-store-reviews-api)합니다.
 
 > [!NOTE]
-> In addition to using the Microsoft Store reviews API to programmatically respond to reviews, you can alternatively respond to reviews [using Partner Center](../publish/respond-to-customer-reviews.md).
+> Microsoft Store 리뷰 API를 사용 하 여 리뷰에 프로그래밍 방식으로 응답 하는 것 외에도 [파트너 센터를 사용 하 여](../publish/respond-to-customer-reviews.md)리뷰에 응답할 수 있습니다.
 
 <span id="prerequisites" />
 
@@ -32,17 +32,17 @@ ms.locfileid: "74260194"
 
 Microsoft Store 리뷰 API를 호출하는 코드를 작성하기 전에 다음과 같은 필수 조건을 완료했는지 확인합니다.
 
-* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. Otherwise, you can [create a new Azure AD in Partner Center](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) for no additional charge.
+* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 그렇지 않으면 추가 비용 없이 [파트너 센터에서 새 AZURE AD를 만들](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
 
-* You must associate an Azure AD application with your Partner Center account, retrieve the tenant ID and client ID for the application and generate a key. Azure AD 응용 프로그램은 Microsoft Store 리뷰 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
+* Azure AD 응용 프로그램을 파트너 센터 계정에 연결 하 고, 응용 프로그램에 대 한 테 넌 트 ID와 클라이언트 ID를 검색 하 고, 키를 생성 해야 합니다. Azure AD 응용 프로그램은 Microsoft Store 리뷰 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
     > [!NOTE]
     > 이 작업은 한 번만 수행하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키는 Azure AD 액세스 토큰을 새로 만들 때마다 다시 사용할 수 있습니다.
 
-To associate an Azure AD application with your Partner Center account and retrieve the required values:
+Azure AD 응용 프로그램을 파트너 센터 계정에 연결 하 고 필요한 값을 검색 하려면 다음을 수행 합니다.
 
-1.  In Partner Center, [associate your organization's Partner Center account with your organization's Azure AD directory](../publish/associate-azure-ad-with-partner-center.md).
+1.  파트너 센터에서 조직의 [파트너 센터 계정을 조직의 AZURE AD 디렉터리와 연결](../publish/associate-azure-ad-with-partner-center.md)합니다.
 
-2.  Next, from the **Users** page in the **Account settings** section of Partner Center, [add the Azure AD application](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) that represents the app or service that you will use to respond to reviews. 이 응용 프로그램에 **관리자** 역할을 할당하도록 합니다. If the application doesn't exist yet in your Azure AD directory, you can [create a new Azure AD application in Partner Center](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account). 
+2.  다음으로, 파트너 센터의 **계정 설정** 섹션에 있는 **사용자** 페이지에서 리뷰에 응답 하는 데 사용할 앱 또는 서비스를 나타내는 [Azure AD 응용 프로그램을 추가](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) 합니다. 이 응용 프로그램에 **관리자** 역할을 할당하도록 합니다. 응용 프로그램이 아직 Azure AD 디렉터리에 존재 하지 않는 경우 [파트너 센터에서 새 AZURE ad 응용 프로그램을 만들](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account)수 있습니다. 
 
 3.  **사용자** 페이지로 돌아가서 Azure AD 응용 프로그램의 이름을 클릭하여 응용 프로그램 설정으로 이동하고 **테넌트 ID** 및 **클라이언트 ID** 값을 복사합니다.
 
@@ -67,7 +67,7 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-For the *tenant\_id* value in the POST URI and the *client\_id* and *client\_secret* parameters, specify the tenant ID, client ID and the key for your application that you retrieved from Partner Center in the previous section. *resource* 매개 변수에는 ```https://manage.devcenter.microsoft.com```을 지정해야 합니다.
+POST URI에 있는 *테 넌 트\_id* 값과 *클라이언트\_id* 및 *클라이언트\_비밀* 매개 변수에 대해 이전 섹션에서 파트너 센터에서 검색 한 응용 프로그램의 테 넌 트 id, 클라이언트 id 및 키를 지정 합니다. *resource* 매개 변수에는 ```https://manage.devcenter.microsoft.com```을 지정해야 합니다.
 
 만료된 액세스 토큰은 [여기](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens)의 지침에 따라 새로 고칠 수 있습니다.
 
@@ -79,15 +79,15 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 리뷰 API를 호출할 �
 
 Microsoft Store 리뷰 API에는 주어진 리뷰에 대한 응답이 허용되는지 여부 및 하나 이상의 리뷰에 대한 응답 제출이 허용되는지 여부를 결정하는 데 사용할 수 있는 몇 가지 메서드가 포함되어 있습니다. 이 API를 사용하려면 다음 과정에 따릅니다.
 
-1. 응답하려는 리뷰의 ID를 가져옵니다. 리뷰 ID는 Microsoft Store 분석 API의 [앱 리뷰 가져오기](get-app-reviews.md) 메서드의 응답 데이터와 [리뷰 보고서](../publish/reviews-report.md)의 [오프라인 다운로드](../publish/download-analytic-reports.md)에서 사용할 수 있습니다.
+1. 응답하려는 리뷰의 ID를 가져옵니다. 리뷰 ID는 Microsoft Store 분석 API의 [앱 리뷰 가져오기](get-app-reviews.md) 메서드의 응답 데이터와 [리뷰 보고서](../publish/download-analytic-reports.md)의 [오프라인 다운로드](../publish/reviews-report.md)에서 사용할 수 있습니다.
 2. [앱 리뷰용 응답 정보 가져오기](get-response-info-for-app-reviews.md) 메서드를 호출해 리뷰에 응답할 수 있는지 여부를 결정합니다. 리뷰를 제출하는 고객은 해당 리뷰에 대한 응답을 받지 않기로 선택할 수 있습니다. 리뷰 응답을 받지 않기로 선택한 고객이 제출한 리뷰에는 응답할 수 없습니다.
 3. [앱 리뷰에 대한 응답 제출](submit-responses-to-app-reviews.md) 메서드를 호출하여 프로그래밍 방식으로 리뷰에 응답합니다.
 
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Get app reviews](get-app-reviews.md)
-* [Get response info for app reviews](get-response-info-for-app-reviews.md)
-* [Submit responses to app reviews](submit-responses-to-app-reviews.md)
+* [앱 리뷰 가져오기](get-app-reviews.md)
+* [앱 리뷰에 대 한 응답 정보 가져오기](get-response-info-for-app-reviews.md)
+* [앱 리뷰에 응답 제출](submit-responses-to-app-reviews.md)
 
  

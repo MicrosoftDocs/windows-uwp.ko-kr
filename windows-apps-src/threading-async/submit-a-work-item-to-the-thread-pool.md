@@ -1,7 +1,7 @@
 ---
 ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
 title: 스레드 풀에 작업 항목 제출
-description: 스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아봅니다.
+description: 스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아보세요.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 스레드, 스레드 풀
@@ -22,7 +22,7 @@ Windows 10에서 UWP 앱에 대 한 \[ 업데이트 되었습니다. Windows 8.x
 -   [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync)
 -   [**IAsyncAction**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)
 
-스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아봅니다. 스레드 풀을 사용하면 오랜 시간이 걸리는 작업을 완료하는 동시에 응답하는 UI를 유지하고 여러 작업을 병렬로 완료할 수 있습니다.
+스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아보세요. 스레드 풀을 사용하면 오랜 시간이 걸리는 작업을 완료하는 동시에 응답하는 UI를 유지하고 여러 작업을 병렬로 완료할 수 있습니다.
 
 ## <a name="create-and-submit-the-work-item"></a>작업 항목 만들기 및 제출
 

@@ -30,7 +30,7 @@ ms.locfileid: "74257749"
 
 대부분의 경우, XAML에서 컨트롤을 정의한 방법에 따른 기본 순서가 특히 화면 읽기 프로그램에서 컨트롤을 읽는 순서이므로 최적의 순서입니다. 그러나 기본 순서가 시각적 순서와 반드시 일치하는 것은 아닙니다. 실제 디스플레이 위치는 레이아웃에 적용하기 위해 자식 요소에 설정할 수 있는 부모 레이아웃 컨테이너 및 특정 속성에 따라 달라질 수 있습니다. 앱이 적합한 탭 순서를 갖도록 하려면 이 동작을 직접 테스트하세요. 특히 레이아웃에 대한 그리드 메타포 또는 테이블 메타포가 있는 경우 사용자가 읽는 순서와 탭 순서가 달라질 수 있습니다. 이것은 자체로는 항상 문제는 아닙니다. 하지만 터치 가능한 UI와 키보드로 액세스 가능한 UI로서의 앱의 기능을 테스트하여 두 방식 모두 UI가 제대로 작동하는지 확인해야 합니다.
 
-XAML을 조정하여 탭 순서가 시각적 순서와 일치하도록 할 수 있습니다. 또는 열 우선 탭 탐색을 사용하는 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) 레이아웃의 다음 예에 표시된 대로 [**TabIndex**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.tabindex) 속성을 설정하여 기본 탭 순서를 재정의할 수 있습니다.
+XAML을 조정하여 탭 순서가 시각적 순서와 일치하도록 할 수 있습니다. 또는 열 우선 탭 탐색을 사용하는 [**Grid**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.tabindex) 레이아웃의 다음 예에 표시된 대로 [**TabIndex**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) 속성을 설정하여 기본 탭 순서를 재정의할 수 있습니다.
 
 XAML
 ```xml
@@ -144,7 +144,7 @@ XAML
 ```
 
 > [!IMPORTANT]
-> Setting the [**AutomationProperties.AcceleratorKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.acceleratorkeyproperty) or [**AutomationProperties.AccessKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accesskeyproperty) doesn't enable keyboard functionality. 이 설정은 사용해야 하는 키를 UI 자동화 프레임워크에 보고하여 보조 기술을 통해 이러한 정보를 사용자에게 전달할 수 있도록 하는 역할만 합니다. 키 처리 구현은 XAML이 아니라 코드에서 수행해야 합니다. 앱에서 바로 가기 키 동작을 실제로 구현하려면 관련 컨트롤에 [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) 또는 [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트 처리기를 연결해야 합니다. 또한 액세스 키에 대한 밑줄로 표시된 텍스트 장식은 자동으로 제공되지 않습니다. UI에서 밑줄로 표시된 텍스트를 표시하려면 니모닉에서 명시적으로 특정 키의 텍스트에 밑줄을 인라인 [**Underline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Underline) 서식으로 표시해야 합니다.
+> [**AcceleratorKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.acceleratorkeyproperty) 또는 [**Automationproperties. AccessKey**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accesskeyproperty) 를 설정 하면 키보드 기능을 사용할 수 없습니다. 이 설정은 사용해야 하는 키를 UI 자동화 프레임워크에 보고하여 보조 기술을 통해 이러한 정보를 사용자에게 전달할 수 있도록 하는 역할만 합니다. 키 처리 구현은 XAML이 아니라 코드에서 수행해야 합니다. 앱에서 바로 가기 키 동작을 실제로 구현하려면 관련 컨트롤에 [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) 또는 [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트 처리기를 연결해야 합니다. 또한 액세스 키에 대한 밑줄로 표시된 텍스트 장식은 자동으로 제공되지 않습니다. UI에서 밑줄로 표시된 텍스트를 표시하려면 니모닉에서 명시적으로 특정 키의 텍스트에 밑줄을 인라인 [**Underline**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Underline) 서식으로 표시해야 합니다.
 
 간단하게 하기 위해 위 예제에서는 "Ctrl+A" 같은 문자열에 대한 리소스 사용을 생략합니다. 그러나 지역화할 때도 바로 가기 키를 고려해야 합니다. 바로 가기 키로 사용할 키의 선택은 일반적으로 해당 요소에 대해 표시되는 텍스트 레이블에 따라 달라지므로 바로 가기 키 지역화가 관련이 있습니다.
 
@@ -203,7 +203,7 @@ XAML
 </ControlTemplate>
 ```
 
-지금까지는 단순히 컴퍼지션이었습니다. 포커스 표시기의 표시 형식을 제어하려면 [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) 속성을 전환하는 시각적 상태를 정의합니다. This is done using the [VisualStateManager](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager) and the VisualStateManager.VisualStateGroups attached property, as applied to the root element that defines the composition.
+지금까지는 단순히 컴퍼지션이었습니다. 포커스 표시기의 표시 형식을 제어하려면 [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) 속성을 전환하는 시각적 상태를 정의합니다. 이 작업은 컴퍼지션을 정의 하는 루트 요소에 적용 된 [r](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager) 및 r를 사용 하 여 연결 된 속성을 사용 합니다.
 
 XAML
 ```xml
@@ -248,6 +248,6 @@ Windows Phone 장치에는 일반적으로 전용 하드웨어 키보드가 없�
 ## <a name="related-topics"></a>관련 항목
 
 * [접근성](accessibility.md)
-* [Keyboard interactions](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
-* [Touch keyboard sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [XAML accessibility sample](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
+* [키보드 상호 작용](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
+* [터치 키보드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
+* [XAML 접근성 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)

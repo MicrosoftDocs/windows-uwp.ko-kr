@@ -36,7 +36,7 @@ ms.locfileid: "74258000"
 - 받아쓰는 동안 UI를 업데이트하기 위한 UI 디스패처 참조
 - 사용자가 말한 누적된 단어를 추적하는 방법
 
-여기서는 [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) 인스턴스를 코드 숨김 클래스의 프라이빗 필드로 선언합니다. 단일 XAML(Extensible Application Markup Language) 페이지 이후에도 연속 받아쓰기를 유지하려는 경우 앱이 다른 곳에 참조를 저장해야 합니다.
+여기서는 [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) 인스턴스를 코드 숨김 클래스의 전용 필드로 선언합니다. 단일 XAML(Extensible Application Markup Language) 페이지 이후에도 연속 받아쓰기를 유지하려는 경우 앱이 다른 곳에 참조를 저장해야 합니다.
 
 ```CSharp
 private SpeechRecognizer speechRecognizer;
@@ -44,7 +44,7 @@ private SpeechRecognizer speechRecognizer;
 
 받아쓰기를 하는 동안 인식기는 백그라운드 스레드에서 이벤트를 발생시킵니다. 백그라운드 스레드가 XAML에서 UI를 직접 업데이트할 수 없으므로 앱은 디스패처를 사용하여 인식 이벤트에 대한 응답으로 UI를 업데이트해야 합니다.
 
-여기서는 UI 디스패처를 통해 나중에 초기화되는 프라이빗 필드를 선언합니다.
+여기서는 UI 디스패처를 통해 나중에 초기화되는 전용 필드를 선언합니다.
 
 ```CSharp
 // Speech events may originate from a thread other than the UI thread.
@@ -259,7 +259,7 @@ if (speechRecognizer.State != SpeechRecognizerState.Idle)
 > [!NOTE]
 > [  **ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) 이벤트는 [**CancelAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.cancelasync) 호출 후에 발생할 수 있습니다.  
 > 다중 스레딩 때문에 [**CancelAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated)가 호출될 때 [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.cancelasync) 이벤트가 계속 스택에 남아 있을 수 있습니다. 그런 경우 **ResultGenerated** 이벤트가 계속 발생합니다.  
-> 인식 세션을 취소할 때 프라이빗 필드를 설정한 경우 [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) 처리기에서 해당 값을 항상 확인하세요. 예를 들어 세션을 취소할 때 해당 값을 null로 설정한 경우 필드가 처리기에서 초기화된다고 가정하지 마세요.
+> 인식 세션을 취소할 때 전용 필드를 설정한 경우 [**ResultGenerated**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated) 처리기에서 해당 값을 항상 확인하세요. 예를 들어 세션을 취소할 때 해당 값을 null로 설정한 경우 필드가 처리기에서 초기화된다고 가정하지 마세요.
 
  
 

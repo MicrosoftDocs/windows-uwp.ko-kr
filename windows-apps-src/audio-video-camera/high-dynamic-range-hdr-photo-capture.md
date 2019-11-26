@@ -71,7 +71,7 @@ HDR 캡처와 관련된 기타 문서는 다음과 같습니다.
 
 ### <a name="capture-an-hdr-photo"></a>HDR 사진 캡처
 
-[  **AdvancedPhotoCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.AdvancedPhotoCapture) 개체의 [**CaptureAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.captureasync) 메서드를 호출하여 HDR 사진을 캡처합니다. 이 메서드는 해당 [**Frame**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedcapturedphoto.frame) 속성에 캡처한 사진을 제공하는 [**AdvancedCapturedPhoto**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.AdvancedCapturedPhoto) 개체를 반환합니다.
+[  **AdvancedPhotoCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.AdvancedPhotoCapture) 개체의 [**CaptureAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.captureasync) 메서드를 호출하여 HDR 사진을 캡처합니다. 이 메서드는 해당 [**Frame**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.AdvancedCapturedPhoto) 속성에 캡처한 사진을 제공하는 [**AdvancedCapturedPhoto**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedcapturedphoto.frame) 개체를 반환합니다.
 
 [!code-cs[CaptureHdrPhotoAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCaptureHdrPhotoAsync)]
 
@@ -84,7 +84,7 @@ HDR 캡처와 관련된 기타 문서는 다음과 같습니다.
 HDR 프로세스는 여러 프레임을 캡처한 후, 모든 프레임 캡처가 완료된 다음 단일 이미지로 합성합니다. 캡처 후, 전체 HDR 프로세스를 완료하기 전에 [**OptionalReferencePhotoCaptured**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.optionalreferencephotocaptured) 이벤트를 처리하여 프레임에 대한 액세스 권한을 얻을 수 있습니다. 최종 HDR 사진 결과에만 관심이 있는 경우 이 작업을 수행할 필요가 없습니다.
 
 > [!IMPORTANT]
-> [**OptionalReferencePhotoCaptured**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.optionalreferencephotocaptured) is not raised on devices that support hardware HDR and therefore do not generate reference frames. 앱은 이 이벤트가 발생하지 않는 경우를 처리해야 합니다.
+> [**OptionalReferencePhotoCaptured**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.optionalreferencephotocaptured) 는 하드웨어 HDR를 지 원하는 장치에서 발생 하지 않으므로 참조 프레임을 생성 하지 않습니다. 앱은 이 이벤트가 발생하지 않는 경우를 처리해야 합니다.
 
 참조 프레임은 **CaptureAsync** 호출에 대한 컨텍스트 정보 없이 도착하므로 **OptionalReferencePhotoCaptured** 처리기에 컨텍스트 정보를 제공하기 위한 메커니즘이 제공됩니다. 먼저 컨텍스트 정보가 포함될 개체를 호출해야 합니다. 이 개체의 이름과 내용은 사용자가 결정합니다. 이 예제에서는 캡처의 파일 이름 및 카메라 방향을 추적하기 위한 멤버가 있는 개체를 정의합니다.
 
@@ -94,7 +94,7 @@ HDR 프로세스는 여러 프레임을 캡처한 후, 모든 프레임 캡처�
 
 [!code-cs[CaptureWithContext](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCaptureWithContext)]
 
-[  **OptionalReferencePhotoCaptured**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.optionalreferencephotocaptured) 이벤트 처리기에서 [**OptionalReferencePhotoCapturedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.OptionalReferencePhotoCapturedEventArgs) 개체의 [**Context**](https://docs.microsoft.com/uwp/api/windows.media.capture.optionalreferencephotocapturedeventargs.context) 속성을 컨텍스트 개체 클래스로 캐스팅합니다. 이 예제에서는 최종 HDR 이미지에서 참조 프레임 이미지를 구분하기 위해 파일 이름을 수정하고 **SaveCapturedFrameAsync** 도우미 메서드를 호출하여 이미지를 저장합니다.
+[  **OptionalReferencePhotoCaptured**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.optionalreferencephotocaptured) 이벤트 처리기에서 [**OptionalReferencePhotoCapturedEventArgs**](https://docs.microsoft.com/uwp/api/windows.media.capture.optionalreferencephotocapturedeventargs.context) 개체의 [**Context**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.OptionalReferencePhotoCapturedEventArgs) 속성을 컨텍스트 개체 클래스로 캐스팅합니다. 이 예제에서는 최종 HDR 이미지에서 참조 프레임 이미지를 구분하기 위해 파일 이름을 수정하고 **SaveCapturedFrameAsync** 도우미 메서드를 호출하여 이미지를 저장합니다.
 
 [!code-cs[OptionalReferencePhotoCaptured](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetOptionalReferencePhotoCaptured)]
 
@@ -106,7 +106,7 @@ HDR 사진 캡처는 두 단계로 진행됩니다. 먼저, 여러 프레임이 
 
 ### <a name="clean-up-the-advancedphotocapture-object"></a>AdvancedPhotoCapture 개체 정리
 
-앱 캡처가 완료되고, **MediaCapture** 개체를 해제하기 전에, [**FinishAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.finishasync)를 설정하고 멤버 변수를 null로 설정하여 [**AdvancedPhotoCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.AdvancedPhotoCapture) 개체를 종료해야 합니다.
+앱 캡처가 완료되고, **MediaCapture** 개체를 해제하기 전에, [**FinishAsync**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.AdvancedPhotoCapture)를 설정하고 멤버 변수를 null로 설정하여 [**AdvancedPhotoCapture**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.finishasync) 개체를 종료해야 합니다.
 
 [!code-cs[CleanUpAdvancedPhotoCapture](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpAdvancedPhotoCapture)]
 
@@ -142,10 +142,10 @@ Windows 10 버전 1607부터 **AdvancedPhotoCapture**를 사용하여 낮은 조
 [!code-cs[CleanUpAdvancedPhotoCapture](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpAdvancedPhotoCapture)]
 
 ## <a name="working-with-advancedcapturedphoto-objects"></a>AdvancedCapturedPhoto 개체 작업
-[**AdvancedPhotoCapture.CaptureAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.captureasync) returns an [**AdvancedCapturedPhoto**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.AdvancedCapturedPhoto) object representing the captured photo. 이 개체는 이미지를 나타내는 [**CapturedFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CapturedFrame) 개체를 반환하는 [**Frame**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedcapturedphoto.frame) 속성을 표시합니다. 또한 [**OptionalReferencePhotoCaptured**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.optionalreferencephotocaptured) 이벤트는 해당 이벤트 인수에 **CapturedFrame** 개체를 제공합니다. 이 유형의 개체를 가져온 후 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 만들기, 파일에 이미지 저장 등 다양한 작업을 수행할 수 있습니다. 
+[**AdvancedPhotoCapture CaptureAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.captureasync) 는 캡처된 사진을 나타내는 [**AdvancedCapturedPhoto**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.AdvancedCapturedPhoto) 개체를 반환 합니다. 이 개체는 이미지를 나타내는 [**CapturedFrame**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedcapturedphoto.frame) 개체를 반환하는 [**Frame**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CapturedFrame) 속성을 표시합니다. 또한 [**OptionalReferencePhotoCaptured**](https://docs.microsoft.com/uwp/api/windows.media.capture.advancedphotocapture.optionalreferencephotocaptured) 이벤트는 해당 이벤트 인수에 **CapturedFrame** 개체를 제공합니다. 이 유형의 개체를 가져온 후 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 만들기, 파일에 이미지 저장 등 다양한 작업을 수행할 수 있습니다. 
 
 ## <a name="get-a-softwarebitmap-from-a-capturedframe"></a>CapturedFrame에서 SoftwareBitmap 가져오기
-개체의 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframe.softwarebitmap) 속성에 액세스하기만 하면 **CapturedFrame** 개체에서 **SoftwareBitmap**을 쉽게 가져올 수 있습니다. 그러나 대부분의 인코딩 형식은 **AdvancedPhotoCapture**에서 **SoftwareBitmap**을 지원하지 않으므로 사용하기 전에 속성이 null이 아닌지 확인해야 합니다.
+개체의SoftwareBitmap 속성에 액세스하기만 하면 [CapturedFrame**개체에서**SoftwareBitmap](https://docs.microsoft.com/uwp/api/windows.media.capture.capturedframe.softwarebitmap)을 쉽게 가져올 수 있습니다. 그러나 대부분의 인코딩 형식은 **AdvancedPhotoCapture**에서 **SoftwareBitmap**을 지원하지 않으므로 사용하기 전에 속성이 null이 아닌지 확인해야 합니다.
 
 [!code-cs[SoftwareBitmapFromCapturedFrame](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSoftwareBitmapFromCapturedFrame)]
 
@@ -169,4 +169,4 @@ Windows 10 버전 1607부터 **AdvancedPhotoCapture**를 사용하여 낮은 조
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [Basic photo, video, and audio capture with MediaCapture](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaCapture를 사용 하는 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)

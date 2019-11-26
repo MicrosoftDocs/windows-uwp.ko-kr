@@ -17,8 +17,8 @@ ms.locfileid: "74260250"
 
 이 항목은 Microsoft Advertising SDK 최신 릴리스의 알려진 문제를 목록으로 제공합니다. 추가 문제 해결 지침은 다음 항목을 참조하세요.
 
-* [HTML and JavaScript troubleshooting guide](html-and-javascript-troubleshooting-guide.md)
-* [XAML and C# troubleshooting guide](xaml-and-c-troubleshooting-guide.md)
+* [HTML 및 JavaScript 문제 해결 가이드](html-and-javascript-troubleshooting-guide.md)
+* [XAML 및 C# 문제 해결 가이드](xaml-and-c-troubleshooting-guide.md)
 
 ## <a name="adcontrol-interface-unknown-in-xaml"></a>XAML의 알 수 없는 AdControl 인터페이스
 
@@ -40,13 +40,13 @@ ms.locfileid: "74260250"
 
 광고를 볼 수 없는 이유는 네트워크 오류를 포함하여 다양합니다. 다양한 이유는 다음과 같습니다.
 
-* Selecting an ad unit in Partner Center with a size that is greater or less than the size of the **AdControl** in your app's code.
+* 앱 코드에서 **Adcontrol** 크기 보다 크거나 작은 크기의 파트너 센터에서 ad 단위를 선택 합니다.
 
 * 라이브 앱을 실행할 때 광고 단위 ID에 대해 [테스트 모드 값](set-up-ad-units-in-your-app.md#test-ad-units)을 사용하는 경우 광고가 표시되지 않습니다.
 
 * 30분 이내에 새 광고 단위 ID를 만든 경우 서버가 시스템을 통해 새 데이터를 전파할 때까지 광고가 표시되지 않을 수 있습니다. 이전에 광고를 표시했던 기존 ID는 광고를 즉시 표시합니다.
 
-앱에서 테스트 광고를 볼 수 있으면 코드가 작동하는 것이며 광고를 표시할 수 있습니다. 문제가 발생하면 [제품 지원](https://developer.microsoft.com/en-us/windows/support)에 문의하세요. On that page, choose **Contact us**.
+앱에서 테스트 광고를 볼 수 있으면 코드가 작동하는 것이며 광고를 표시할 수 있습니다. 문제가 발생하면 [제품 지원](https://developer.microsoft.com/en-us/windows/support)에 문의하세요. 해당 페이지에서 **문의처**를 선택 합니다.
 
 [포럼](https://go.microsoft.com/fwlink/?LinkID=401264)에서 질문을 게시할 수도 있습니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "74260250"
 
 * 테스트용으로 로드된 앱 또는 에뮬레이터에서 실행되는 앱에는 라이브 광고가 표시되지 않습니다.
 
-When a live ad unit is serving test ads, the ad unit’s status shows **Active and serving test ads** in Partner Center. 이러한 특성은 현재 휴대폰 앱에는 적용되지 않습니다.
+라이브 ad 단위가 테스트 광고를 처리 하는 경우 ad 단위의 상태는 파트너 센터에서 **활성 및 테스트 광고** 를 표시 합니다. 이러한 특성은 현재 휴대폰 앱에는 적용되지 않습니다.
 
 
 <span id="reference_errors"/>
@@ -89,7 +89,7 @@ JavaScript/HTML 앱은 예약된 z-순서의 MAX-10 범위에 요소를 배치�
 
 **AdControl**에 의해 부모 클래스에서 상속된 테두리 관련 속성을 설정하면 광고 배치가 잘못될 수 있습니다.
 
-## <a name="more-information"></a>자세한 정보
+## <a name="more-information"></a>추가 정보
 
 Microsoft Advertising SDK와 관련된 최근의 알려진 문제를 알아보고 질문을 게시하려면 [포럼](https://go.microsoft.com/fwlink/?LinkID=401264)을 방문하세요.
 

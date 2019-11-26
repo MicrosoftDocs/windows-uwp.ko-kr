@@ -1,10 +1,10 @@
 ---
-Description: 이전 항목(리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법)은 일반적으로 한정자 일치를 살펴봅니다. 여기서는 언어 태그 일치에 집중하고 있습니다.
+Description: 이전 항목(리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법)은 일반적으로 한정자 일치를 살펴봅니다. 이 항목은 언어-태그-일치에 대해 더 자세히 알아봅니다.
 title: 리소스 관리 시스템이 언어 태그를 일치하는 방법
 template: detail.hbs
 ms.date: 11/02/2017
 ms.topic: article
-keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
+keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 2db4c7d98924ffb25800b1c615e929495b279fdc
 ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
@@ -15,7 +15,7 @@ ms.locfileid: "74254665"
 ---
 # <a name="how-the-resource-management-system-matches-language-tags"></a>리소스 관리 시스템이 언어 태그를 일치하는 방법
 
-앞의 문서([리소스 관리 시스템에서 리소스를 일치시키고 선택하는 방법](how-rms-matches-and-chooses-resources.md))에서는 일반적으로 한정자 일치를 살펴보지만, 여기서는 언어 태그 일치에 집중하고 있습니다.
+이전 항목([리소스 관리 시스템이 리소스를 일치시키고 선택하는 방법](how-rms-matches-and-chooses-resources.md))은 일반적으로 한정자 일치를 살펴봅니다. 이 항목은 언어-태그-일치에 대해 더 자세히 알아봅니다.
 
 ## <a name="introduction"></a>소개
 
@@ -42,7 +42,7 @@ Windows가 두 언어를 비교할 때마다 일반적으로 보다 큰 프로�
 
 두 개의 언어 태그를 비교할 때 비교는 일치 근접성을 기준으로 점수를 지정합니다.
 
-| 일치 | 점수 매기기 | 예 |
+| 일치 | 점수 매기기 | 예제 |
 | ----- | ----- | ------- |
 | 정확한 일치 | 최고 | en-AU : en-AU |
 | 변형 일치(언어, 스크립트, 지역, 변형) |  | en-AU-variant1 : en-AU-variant1-t-ja |
@@ -70,7 +70,7 @@ Windows가 두 언어를 비교할 때마다 일반적으로 보다 큰 프로�
 
 ### <a name="partial-matches"></a>부분 일치
 
-태그는 언어 및 스크립트 하위 태그에 대해 일치하지만 지역 또는 일부 다른 하위 태그에서 다릅니다. For example, en-US matches en, or en-US matches en-\*.
+태그는 언어 및 스크립트 하위 태그에 대해 일치하지만 지역 또는 일부 다른 하위 태그에서 다릅니다. 예를 들어 en-us는 en-us와 일치 하 고 en-us는\*en-us와 일치 합니다.
 
 #### <a name="macro-region-match"></a>매크로 지역 일치
 
@@ -190,5 +190,5 @@ Windows가 두 언어를 비교할 때마다 일반적으로 보다 큰 프로�
 
 * [리소스 관리 시스템에서 리소스를 일치시키고 선택하는 방법](how-rms-matches-and-chooses-resources.md)
 * [BCP-47](https://tools.ietf.org/html/bcp47)
-* [Understand user profile languages and app manifest languages](../design/globalizing/manage-language-and-region.md)
-* [Composition of macro geographic (continental) regions, geographical sub-regions, and selected economic and other groupings](https://unstats.un.org/unsd/methods/m49/m49regin.htm)
+* [사용자 프로필 언어 및 앱 매니페스트 언어 이해](../design/globalizing/manage-language-and-region.md)
+* [본토 (매크로 지리) 지역, 지리적 하위 지역, 선택 된 경제 및 기타 그룹화의 컴퍼지션](https://unstats.un.org/unsd/methods/m49/m49regin.htm)

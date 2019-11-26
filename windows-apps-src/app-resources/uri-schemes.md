@@ -1,10 +1,10 @@
 ---
-Description: 앱의 패키지, 앱의 데이터 폴더 또는 클라우드에서 제공하는 파일을 참조하는 데 사용할 수 있는 몇 가지 URI(Uniform Resource Identifier) 체계가 있습니다. URI 체계를 사용하여 앱의 리소스 파일(.resw)에서 로드되는 문자열을 참조할 수도 있습니다.
-title: URI 체계
+Description: 앱 패키지, 앱의 데이터 폴더 또는 클라우드에서 파일을 참조하는 데 사용할 수 있는 몇 가지 URI (Uniform Resource Identifier) 스키마가 있습니다. URI 스키마를 사용하여 앱의 리소스 파일(.resw)에서 로드되는 문자열을 참조할 수 있습니다.
+title: URI 스키마
 template: detail.hbs
 ms.date: 10/16/2017
 ms.topic: article
-keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
+keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 8627bd7f9f405509cb1bff40d94f10552241f4ce
 ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
@@ -13,9 +13,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74254593"
 ---
-# <a name="uri-schemes"></a>URI 체계
+# <a name="uri-schemes"></a>URI 스키마
 
-앱의 패키지, 앱의 데이터 폴더 또는 클라우드에서 제공하는 파일을 참조하는 데 사용할 수 있는 몇 가지 URI(Uniform Resource Identifier) 체계가 있습니다. URI 체계를 사용하여 앱의 리소스 파일(.resw)에서 로드되는 문자열을 참조할 수도 있습니다. 코드, XAML 태그, 앱 패키지 매니페스트, 또는 사용자 타일 및 알림 메시지 템플릿에서 이러한 URI 스키마를 사용할 수 있습니다.
+앱 패키지, 앱의 데이터 폴더 또는 클라우드에서 파일을 참조하는 데 사용할 수 있는 몇 가지 URI (Uniform Resource Identifier) 스키마가 있습니다. URI 스키마를 사용하여 앱의 리소스 파일(.resw)에서 로드되는 문자열을 참조할 수 있습니다. 코드, XAML 태그, 앱 패키지 매니페스트, 또는 사용자 타일 및 알림 메시지 템플릿에서 이러한 URI 스키마를 사용할 수 있습니다.
 
 ## <a name="common-features-of-the-uri-schemes"></a>URI 스키마의 일반적인 기능
 

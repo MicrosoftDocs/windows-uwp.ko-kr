@@ -20,7 +20,7 @@ Microsoft Store의 앱 판매에서 돈을 받으려면 지급 계정을 설정 
 앱에서 바로 구매를 제공하거나 Microsoft Advertising을 사용하지 않고 무료 앱 목록만 올리려면 지급액 계좌를 설정하거나 세금 양식을 작성할 필요가 없습니다. 나중에이 점을 변경 하 고 앱 (또는 추가 기능)을 판매 하려는 경우에는 지급 계정을 설정 하 고 세금 양식을 작성할 수 있습니다. 지급 계좌와 세금 프로필이 완료될 때까지 유료 앱 또는 추가 기능을 제출할 수 없습니다.
 
 > [!NOTE]
-> [특정 시장](account-types-locations-and-fees.md#developer-account-and-app-submission-markets)에서는 개발자가 무료 앱만 제출할 수 있습니다. 계정이 이러한 시장 중 하나에 등록되어 있는 경우 지급액 계좌를 설정하는 옵션이 제공되지 않습니다.
+> [특정 시장](account-types-locations-and-fees.md#developer-account-and-app-submission-markets)에서는 개발자가 무료 앱만 제출할 수 있습니다. 계정이 이러한 시장 중 하나에 등록되어 있는 경우 지급 계좌를 설정하는 옵션이 제공되지 않습니다.
 
 [개발자 계정을 설정한](opening-a-developer-account.md)후에는 두 가지 작업을 수행 해야 Microsoft Store에서 앱 (또는 추가 기능)을 판매할 수 있습니다.
 

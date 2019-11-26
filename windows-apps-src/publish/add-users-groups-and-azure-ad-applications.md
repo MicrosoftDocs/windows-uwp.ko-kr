@@ -67,7 +67,7 @@ ms.locfileid: "74260075"
 
 1.  **계정 설정**에서 **사용자** 페이지에서 **사용자 추가**를 선택 하 고 **새 사용자 만들기**를 선택 합니다.
 2.  새 사용자의 이름, 성 및 사용자 이름을 입력합니다.
-3.  조직 디렉터리에서 새 사용자에게 [전역 관리자 계정](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)을 부여하려면 **Azure AD에서 이 사용자를 전역 관리자로 지정하여 모든 디렉터리 리소스에 대한 모든 권한을 부여** 상자를 선택합니다. 이렇게 하면 해당 사용자에게 회사 Azure AD의 모든 관리 기능에 대한 모든 권한이 부여됩니다. 조직의 디렉터리에서 사용자를 추가 하 고 관리할 수 있습니다. 단, 계정에 적절 한 [역할/권한을](set-custom-permissions-for-account-users.md)부여 하지 않는 한 파트너 센터에서는 그렇지 않습니다. 이 상자를 선택하면 사용자의 **암호 복구 메일**을 제공해야 합니다.
+3.  조직 디렉터리에서 새 사용자에게 [전역 관리자 계정](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)을 부여하려면 **Azure AD에서 이 사용자를 전역 관리자로 지정하여 모든 디렉터리 리소스에 대한 모든 권한을 부여** 상자를 선택합니다. 이렇게 하면 해당 사용자에게 회사 Azure AD의 모든 관리 기능에 대한 모든 권한이 부여됩니다. 조직의 디렉터리에서 사용자를 추가 하 고 관리할 수 있습니다. 단, 계정에 적절 한 [역할/권한을](set-custom-permissions-for-account-users.md)부여 하지 않는 한 파트너 센터에서는 그렇지 않습니다. 이 상자를 선택하면 사용자에게 **암호 복구 메일**을 보내야 합니다.
 4.  **Azure AD에서 이 사용자를 전역 관리자로 지정** 확인란을 선택한 경우 사용자가 암호를 복구해야 하는 경우 사용할 수 있는 메일 주소를 입력합니다.
 5.  **그룹 구성원** 섹션에서 새 사용자가 속하게 될 그룹을 선택합니다.
 6.  **역할** 섹션에서 해당 사용자에 대한 [역할 또는 사용자 지정 권한](set-custom-permissions-for-account-users.md) 을 지정합니다.

@@ -60,7 +60,7 @@ contacts = await contactPicker.PickContactsAsync();
 
 선택 기능이 반환되면 사용자가 연락처를 선택했는지 확인합니다. 선택한 경우 연락처 정보를 처리합니다.
 
-다음 예제에서는 단일 연락처를 처리하는 방법을 보여 줍니다. 여기서는 연락처의 이름을 검색하여 *OutputName*이라는 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 컨트롤로 복사합니다.
+다음 예제에서는 단일 연락처를 처리하는 방법을 보여 줍니다. 여기서는 연락처의 이름을 검색하여 [OutputName**이라는** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)TextBlock 컨트롤로 복사합니다.
 
 ```cs
 if (contact != null)
@@ -167,7 +167,7 @@ private void AppendContactFieldValues<T>(TextBlock content, IList<T> fields)
 
 ## <a name="complete-example-multiple-contacts"></a>완전한 예제(여러 연락처)
 
-이 예제에서는 연락처 선택 기능을 사용하여 여러 연락처를 검색한 다음 `OutputContacts`라는 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 컨트롤에 연락처를 추가합니다.
+이 예제에서는 연락처 선택 기능을 사용하여 여러 연락처를 검색한 다음 [라는ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)`OutputContacts` 컨트롤에 연락처를 추가합니다.
 
 ```cs
 MainPage rootPage = MainPage.Current;

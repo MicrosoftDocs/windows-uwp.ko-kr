@@ -33,9 +33,9 @@ Direct3D 장치는 비디오 메모리에 리소스를 만드는 데 사용하�
 ##  <a name="do-i-have-to-update-my-game-timer-for-uwp"></a>UWP에 대한 게임 타이머를 업데이트해야 할까요?
 
 
-[**QueryPerformanceCounter**](https://docs.microsoft.com/windows/desktop/api/profileapi/nf-profileapi-queryperformancecounter), along with [**QueryPerformanceFrequency**](https://docs.microsoft.com/windows/desktop/api/profileapi/nf-profileapi-queryperformancefrequency), is still the best way to implement a game timer for UWP apps.
+[**QueryPerformanceFrequency**](https://docs.microsoft.com/windows/desktop/api/profileapi/nf-profileapi-queryperformancefrequency)와 함께 [**queryperformancecounter**](https://docs.microsoft.com/windows/desktop/api/profileapi/nf-profileapi-queryperformancecounter)는 아직 UWP 앱에 대 한 게임 타이머를 구현 하는 가장 좋은 방법입니다.
 
-타이머와 UWP 앱 수명 주기의 미묘한 차이를 알고 있어야 합니다. 일시 중단/다시 시작은 플레이어가 데스크톱 게임을 다시 실행하는 것과는 다른데, 이는 게임이 마지막으로 플레이된 때로부터 시간이 지나 스냅숏을 다시 시작하기 때문입니다. 많은 시간이 경과한 경우(예: 몇 주) 일부 게임 타이머 구현은 정상적으로 동작하지 않을 수 있습니다. 앱 수명 주기 이벤트를 사용하여 게임이 다시 시작될 때 타이머를 초기화할 수 있습니다.
+타이머와 UWP 앱 수명 주기의 미묘한 차이를 알고 있어야 합니다. 일시 중단/다시 시작은 플레이어가 데스크톱 게임을 다시 실행하는 것과는 다른데, 이는 게임이 마지막으로 플레이된 때로부터 시간이 지나 스냅샷을 다시 시작하기 때문입니다. 많은 시간이 경과한 경우(예: 몇 주) 일부 게임 타이머 구현은 정상적으로 동작하지 않을 수 있습니다. 앱 수명 주기 이벤트를 사용하여 게임이 다시 시작될 때 타이머를 초기화할 수 있습니다.
 
 여전히 RDTSC 명령을 사용하는 게임은 업그레이드 해야 합니다. [게임 타이밍 및 멀티 코어 프로세서](https://docs.microsoft.com/windows/desktop/DxTechArts/game-timing-and-multicore-processors)를 참조하세요.
 
@@ -44,10 +44,10 @@ Direct3D 장치는 비디오 메모리에 리소스를 만드는 데 사용하�
 
 [DirectXTK(DirectX 도구 키트)](https://github.com/Microsoft/DirectXTK) 커뮤니티 프로젝트는 Direct3D 11에 사용할 수 있는 도우미 클래스를 제공합니다.
 
-##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>How do I maintain code paths for the desktop and the Microsoft Store?
+##  <a name="how-do-i-maintain-code-paths-for-the-desktop-and-the-microsoft-store"></a>데스크톱 및 Microsoft Store에 대 한 코드 경로를 유지 어떻게 할까요?
 
 
-Chuck Walbourn's article series titled [Dual-use Coding Techniques for Games](https://blogs.msdn.com/b/chuckw/archive/2012/09/17/dual-use-coding-techniques-for-games.aspx) offers guidance on sharing code between the desktop and the Microsoft Store code paths.
+Walbourn의 문서 시리즈는 [게임에 대 한 이중 사용 코딩 기술](https://blogs.msdn.com/b/chuckw/archive/2012/09/17/dual-use-coding-techniques-for-games.aspx) 에서 데스크톱과 Microsoft Store 코드 경로 간의 코드 공유에 대 한 지침을 제공 합니다.
 
 ##  <a name="how-do-i-load-image-resources-in-my-directx-uwp-app"></a>DirectX UWP 앱에 이미지 리소스를 로드하는 방법은 무엇인가요?
 
@@ -93,12 +93,12 @@ DirectX 10.x 및 11 데스크톱 게임은 쉽게 UWP로 포팅됩니다. [Direc
 ## <a name="how-do-i-choose-the-right-display-device-in-a-multi-monitor-system"></a>다중 모니터 시스템에서 적합한 디스플레이 장치를 선택하는 방법은 무엇인가요?
 
 
-사용자가 앱이 표시되는 모니터를 선택합니다. 첫 번째 매개 변수를 **nullptr**로 설정하여 [**D3D11CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice)를 호출함으로써 Windows가 올바른 어댑터를 제공하도록 합니다. 그런 다음 장치의 [**IDXGIDevice interface**](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgidevice)를 가져오고 [**GetAdapter**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgidevice-getadapter)를 호출한 다음 DXGI 어댑터를 사용하여 스왑 체인을 만듭니다.
+사용자가 앱이 표시되는 모니터를 선택합니다. 첫 번째 매개 변수를 [nullptr**로 설정하여** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice)D3D11CreateDevice를 호출함으로써 Windows가 올바른 어댑터를 제공하도록 합니다. 그런 다음 장치의 [**IDXGIDevice interface**](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgidevice)를 가져오고 [**GetAdapter**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgidevice-getadapter)를 호출한 다음 DXGI 어댑터를 사용하여 스왑 체인을 만듭니다.
 
 ## <a name="how-do-i-turn-on-antialiasing"></a>앤티앨리어싱을 켜는 방법은 무엇인가요?
 
 
-Direct3D 장치를 만들 때 앤티앨리어싱(다중 샘플링)을 사용하도록 설정할 수 있습니다. Enumerate multisampling support by calling [**CheckMultisampleQualityLevels**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkmultisamplequalitylevels), then set multisample options in the [**DXGI\_SAMPLE\_DESC structure**](https://docs.microsoft.com/windows/desktop/api/dxgicommon/ns-dxgicommon-dxgi_sample_desc) when you call [**CreateSurface**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgidevice-createsurface).
+Direct3D 장치를 만들 때 앤티앨리어싱(다중 샘플링)을 사용하도록 설정할 수 있습니다. [**CheckMultisampleQualityLevels**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkmultisamplequalitylevels)를 호출 하 여 다중 샘플링 지원을 열거 한 다음 [**CreateSurface**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgidevice-createsurface)를 호출할 때 [**DXGI\_SAMPLE\_DESC 구조**](https://docs.microsoft.com/windows/desktop/api/dxgicommon/ns-dxgicommon-dxgi_sample_desc) 에서 다중 샘플 옵션을 설정 합니다.
 
 ## <a name="my-game-renders-using-multithreading-andor-deferred-rendering-what-do-i-need-to-know-for-direct3d-11"></a>다중 스레딩 및/또는 지연 렌더링을 사용하여 게임을 렌더링합니다. Direct3D 11에 대해 알아야 할 사항은 무엇인가요?
 
@@ -110,8 +110,8 @@ Direct3D 장치를 만들 때 앤티앨리어싱(다중 샘플링)을 사용하�
 
 다음 항목을 참조하세요.
 
--   [Programming Guide for HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-pguide)
--   [Direct3D 10 Frequently Asked Questions](https://docs.microsoft.com/windows/desktop/DxTechArts/direct3d10-frequently-asked-questions)
+-   [HLSL 프로그래밍 가이드](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-pguide)
+-   [Direct3D 10 질문과 대답](https://docs.microsoft.com/windows/desktop/DxTechArts/direct3d10-frequently-asked-questions)
 
 ## <a name="what-should-i-use-instead-of-the-x-file-format-for-my-models"></a>.x 파일 형식 대신 무엇을 모델에 사용해야 할까요?
 
@@ -121,14 +121,14 @@ Direct3D 장치를 만들 때 앤티앨리어싱(다중 샘플링)을 사용하�
 ## <a name="how-do-i-debug-my-shaders"></a>셰이더를 디버그하는 방법은 무엇인가요?
 
 
-Microsoft Visual Studio 2015 includes diagnostic tools for DirectX graphics. [DirectX 그래픽 디버그](https://docs.microsoft.com/visualstudio/debugger/visual-studio-graphics-diagnostics?view=vs-2015)를 참조하세요.
+Microsoft Visual Studio 2015에는 DirectX 그래픽용 진단 도구가 포함 되어 있습니다. [DirectX 그래픽 디버그](https://docs.microsoft.com/visualstudio/debugger/visual-studio-graphics-diagnostics?view=vs-2015)를 참조하세요.
 
 ##  <a name="what-is-the-direct3d-11-equivalent-for-x-function"></a>*x* 함수에 해당하는 Direct3D 11의 함수는 무엇인가요?
 
 
 DirectX 11 API에 DirectX 9 기능 매핑에 제공되어 있는 [함수 매핑](feature-mapping.md#function-mapping)을 참조하세요.
 
-##  <a name="what-is-the-dxgi_format-equivalent-of-y-surface-format"></a>What is the DXGI\_FORMAT equivalent of *y* surface format?
+##  <a name="what-is-the-dxgi_format-equivalent-of-y-surface-format"></a>*Y* 표면 형식에 해당 하는 DXGI\_형식은 무엇입니까?
 
 
 DirectX 11 API에 DirectX 9 기능 매핑에 제공되어 있는 [화면 형식 매핑](feature-mapping.md#surface-format-mapping)을 참조하세요.

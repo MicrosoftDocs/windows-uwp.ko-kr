@@ -159,7 +159,7 @@ Out-of-process 백그라운드 작업은 앱 매니페스트에서 선언해야 
 
 ### <a name="run-in-the-same-process-as-your-foreground-application"></a>포그라운드 응용 프로그램과 동일한 프로세스에서 실행
 
-다음은 포그라운드 응용 프로그램과 같은 프로세스에서 실행되는 백그라운드 작업을 선언하는 예제 XML입니다.
+다음은 포그라운드 응용 프로그램과 같은 프로세스에서 실행되는 백그라운드 작업을 선언하는 XML 예입니다.
 
 ```xml
 <Extensions>

@@ -29,7 +29,7 @@ VAT(부가가치세) 번호는 유럽 연합의 국가 또는 지역에 사용�
 Microsoft는 세금 관련 조언을 제공하지 않으며 다음 표는 지침용으로만 제공됩니다. 이 지침을 통해 Microsoft에 VAT 번호를 제공할 수 없는 경우 현지 조세 기관에 최근 변경 내용이 있는지 확인해야 합니다.
 
 <table Responsive="true">
-<tr><th>국가/지역</th><th>VAT 정보</th></tr>
+<tr><th>국가/ 지역</th><th>VAT 정보</th></tr>
 <tr><td data-th="Country/region">오스트리아
 </td><td data-th="VAT info">
 <ul>

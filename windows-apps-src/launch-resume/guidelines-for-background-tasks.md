@@ -43,7 +43,7 @@ ms.locfileid: "74260494"
 
 또는 지연을 요청하고 **async/await**를 사용하여 비동기 메서드 호출을 완료합니다. **await** 메서드가 호출된 후 지연을 닫습니다.
 
-**앱 매니페스트 업데이트:**  Out-of-process로 실행되는 백그라운드 작업의 경우 응용 프로그램 매니페스트에서 각 백그라운드 작업을 사용되는 트리거 유형과 함께 선언합니다. 그렇지 않으면 앱에서 런타임에 백그라운드 작업을 등록할 수 없습니다.
+**앱 매니페스트 업데이트:** Out-of-process로 실행되는 백그라운드 작업의 경우 응용 프로그램 매니페스트에서 각 백그라운드 작업을 사용되는 트리거 유형과 함께 선언합니다. 그렇지 않으면 앱에서 런타임에 백그라운드 작업을 등록할 수 없습니다.
 
 백그라운드 작업이 여러 개 있는 경우 동일한 호스트 프로세스에서 실행할지 다른 호스트 프로세스에 분리할지 고려하는 것이 좋습니다. 한 백그라운드 작업의 장애가 다른 백그라운드 작업을 중단시킬 것이 우려되는 경우 별도 호스트 프로세스에 놓습니다.  매니페스트 디자이너에서 **리소스 그룹** 항목을 사용하여 백그라운드 작업을 다른 호스트 프로세스로 그룹화합니다. 
 
@@ -90,7 +90,7 @@ UWP(유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정되지 않아�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
+* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md).
 * [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
 * [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [백그라운드에서 미디어 재생](https://docs.microsoft.com/windows/uwp/audio-video-camera/background-audio)

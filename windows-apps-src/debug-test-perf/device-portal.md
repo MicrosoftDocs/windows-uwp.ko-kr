@@ -1,6 +1,6 @@
 ---
 ms.assetid: 60fc48dd-91a9-4dd6-a116-9292a7c1f3be
-title: Windows Device Portal 개요
+title: Windows 장치 포털 개요
 description: Windows Device Portal을 사용하여 네트워크 또는 USB 연결을 통해 원격으로 디바이스를 구성하고 관리할 수 있는 방법에 대해 알아봅니다.
 ms.date: 04/09/2019
 ms.topic: article
@@ -13,7 +13,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74254759"
 ---
-# <a name="windows-device-portal-overview"></a>Windows Device Portal 개요
+# <a name="windows-device-portal-overview"></a>Windows 장치 포털 개요
 
 Windows Device Portal을 사용하면 네트워크 또는 USB 연결을 통해 원격으로 디바이스를 구성하고 관리할 수 있습니다. 또한 Windows 장치의 실시간 성능을 확인 하 고 해결 하는 데 도움이 되는 고급 진단 도구를 제공 합니다.
 
@@ -23,7 +23,7 @@ Windows 장치 포털은 각 장치 제품군에서 사용할 수 있지만 각 
 
 Windows 장치 포털의 기능은 직접 데이터에 액세스 하 고 장치를 프로그래밍 방식으로 제어 하는 데 사용할 수 있는 [REST api](device-portal-api-core.md) 를 사용 하 여 구현 됩니다.
 
-## <a name="setup"></a>설치
+## <a name="setup"></a>설정
 
 각 디바이스에는 디바이스 포털에 연결하기 위한 특정 지침이 있지만 각 디바이스 모두 다음과 같은 일반적인 단계가 필요합니다.
 
@@ -38,8 +38,8 @@ Windows 장치 포털의 기능은 직접 데이터에 액세스 하 고 장치�
 HoloLens | 예, 개발자 모드에서 | 80(기본값) | 443(기본값) | http://127.0.0.1:10080
 IoT | 예, 개발자 모드에서 | 8080 | regkey를 통해 사용 설정 | 해당 없음
 Xbox | 개발자 모드 내에서 사용 설정 | 사용 안 함 | 11443 | 해당 없음
-데스크톱| 개발자 모드 내에서 사용 설정 | 50080\* | 50043\* | 해당 없음
-전화 | 개발자 모드 내에서 사용 설정 | 80| 443 | http://127.0.0.1:10080
+Desktop| 개발자 모드 내에서 사용 설정 | 50080\* | 50043\* | 해당 없음
+Phone | 개발자 모드 내에서 사용 설정 | 80| 443 | http://127.0.0.1:10080
 
 \* 장치에서 기존 포트 클레임에 대 한 충돌을 방지 하기 위해 임시 범위 (> 50000)의 데스크톱 클레임 포트에서 장치 포털을 사용 하는 경우도 있습니다. 자세한 내용은 데스크톱용 [포트 설정](device-portal-desktop.md#registry-based-configuration-for-device-portal) 섹션을 참조하세요.  
 
@@ -180,7 +180,7 @@ ETW 로깅 사용에 대 한 자세한 내용은 [장치 포털을 사용 하 �
 
 빼앗. [Windows 성능 분석기](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10))에서 분석을 위해 ETL 파일을 열 수 있습니다.
 
-### <a name="device-manager"></a>디바이스 관리자
+### <a name="device-manager"></a>장치 관리자
 
 장치 관리자 페이지는 장치에 연결 된 모든 주변 장치를 열거 합니다. 설정 아이콘을 클릭 하 여 각 속성의 속성을 볼 수 있습니다.
 

@@ -1,6 +1,6 @@
 ---
 Description: 날짜, 시간, 숫자, 전화 번호 및 통화의 형식을 적절하게 지정하여 세계화를 대비한 앱을 디자인합니다. 그러면 나중에 전 세계 지역/국가의 다른 문화, 지역 및 언어에 맞춰 앱을 조정할 수 있습니다.
-title: 날짜/시간/숫자 형식 세계화
+title: 날짜/시간 숫자 형식 세계화
 ms.assetid: 6ECE8BA4-9A7D-49A6-81EE-AB2BE7F0254F
 template: detail.hbs
 ms.date: 11/07/2017
@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74258046"
 ---
-# <a name="globalize-your-datetimenumber-formats"></a>날짜/시간/숫자 형식 세계화
+# <a name="globalize-your-datetimenumber-formats"></a>날짜/시간 숫자 형식 세계화
 
 날짜, 시간, 숫자, 전화 번호 및 통화의 형식을 적절하게 지정하여 세계화를 대비한 앱을 디자인합니다. 그러면 나중에 전 세계 지역/국가의 다른 문화, 지역 및 언어에 맞춰 앱을 조정할 수 있습니다.
 
@@ -116,9 +116,9 @@ ms.locfileid: "74258046"
 
 전화 번호는 지역에 따라 형식이 다르게 지정됩니다. 자릿수, 숫자 그룹화 방법, 전화 번호 중 특정 부분의 의미는 국가마다 다릅니다. Windows 10 버전 1607부터 [**PhoneNumberFormatting**](/uwp/api/windows.globalization.phonenumberformatting?branch=live)네임스페이스에 클래스를 사용하여 전화 번호의 형식을 현재 지역에 맞게 설정할 수 있습니다.
 
-[**PhoneNumberInfo**](/uwp/api/windows.globalization.phonenumberformatting.phonenumberinfo?branch=live) parses a string of digits and allows you to: determine whether the digits are a valid phone number in the current region; compare two numbers for equality; and to extract the different functional parts of the phone number, such as country code or geographical area code.
+[**PhoneNumberInfo**](/uwp/api/windows.globalization.phonenumberformatting.phonenumberinfo?branch=live) 는 숫자 문자열을 구문 분석 하 여 숫자가 현재 지역에서 유효한 전화 번호 인지 여부를 확인 하는 데 사용할 수 있습니다. 두 숫자가 같은지 비교 합니다. 전화 번호의 다양 한 기능 부분 (예: 국가 코드 또는 지역 번호)을 추출 합니다.
 
-[**PhoneNumberFormatter**](/uwp/api/windows.globalization.phonenumberformatting.phonenumberformatter?branch=live) formats a string of digits or a **PhoneNumberInfo** for display, even when the string of digits represents a partial phone number. 이 부분 숫자 형식을 사용하여 사용자가 숫자를 입력할 때 숫자의 형식을 설정할 수 있습니다.
+[**PhoneNumberFormatter**](/uwp/api/windows.globalization.phonenumberformatting.phonenumberformatter?branch=live) 는 숫자 문자열이 부분 전화 번호를 나타내는 경우에도 숫자 문자열이 나 표시에 대 한 **PhoneNumberInfo** 형식을 지정 합니다. 이 부분 숫자 형식을 사용하여 사용자가 숫자를 입력할 때 숫자의 형식을 설정할 수 있습니다.
 
 아래 예에서는 전화 번호를 입력할 때 **PhoneNumberFormatter**를 사용하여 전화 번호의 형식을 설정하는 방법을 보여 줍니다. phoneNumberInputTextBox라는 이름의 **TextBox**에서 텍스트가 변경될 때마다 입력란의 내용이 현재 기본 지역을 사용하여 형식이 설정되고 phoneNumberOutputTextBlock라는 **TextBlock**에 표시됩니다. 여기서는 설명을 위해 뉴질랜드 지역을 사용하여 문자열의 형식이 설정되고 phoneNumberOutputTextBlockNZ라는 TextBlock에 표시됩니다.
   
@@ -160,20 +160,20 @@ ms.locfileid: "74258046"
 ## <a name="important-apis"></a>중요 API
 
 * [DateTimeFormatter](/uwp/api/windows.globalization.datetimeformatting?branch=live)
-* [NumberFormatting](/uwp/api/windows.globalization.numberformatting?branch=live)
-* [Calendar](/uwp/api/windows.globalization.calendar?branch=live)
+* [Windows.globalization.numberformatting](/uwp/api/windows.globalization.numberformatting?branch=live)
+* [캘린더](/uwp/api/windows.globalization.calendar?branch=live)
 * [PhoneNumberFormatting](/uwp/api/windows.globalization.phonenumberformatting?branch=live)
 * [GlobalizationPreferences](/uwp/api/windows.system.userprofile.globalizationpreferences?branch=live)
 
 ## <a name="related-topics"></a>관련 항목
 
 * [달력, 날짜 및 시간 컨트롤](../controls-and-patterns/date-and-time.md)
-* [Understand user profile languages and app manifest languages](manage-language-and-region.md)
+* [사용자 프로필 언어 및 앱 매니페스트 언어 이해](manage-language-and-region.md)
 * [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md)
 
 ## <a name="samples"></a>샘플
 
-* [Calendar details and math sample](https://code.msdn.microsoft.com/windowsapps/Calendar-details-and-math-b1683bb7)
-* [Date and time formatting sample](https://code.msdn.microsoft.com/windowsapps/Date-and-time-formatting-2361f348)
-* [Globalization preferences sample](https://code.msdn.microsoft.com/windowsapps/Globalization-preferences-6654eb36)
-* [Number formatting and parsing sample](https://code.msdn.microsoft.com/windowsapps/Number-formatting-and-bb10ba3d)
+* [달력 세부 정보 및 수학 샘플](https://code.msdn.microsoft.com/windowsapps/Calendar-details-and-math-b1683bb7)
+* [날짜 및 시간 형식 지정 샘플](https://code.msdn.microsoft.com/windowsapps/Date-and-time-formatting-2361f348)
+* [세계화 기본 설정 샘플](https://code.msdn.microsoft.com/windowsapps/Globalization-preferences-6654eb36)
+* [숫자 형식 지정 및 구문 분석 샘플](https://code.msdn.microsoft.com/windowsapps/Number-formatting-and-bb10ba3d)

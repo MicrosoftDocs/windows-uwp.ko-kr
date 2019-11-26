@@ -1,6 +1,6 @@
 ---
-Description: Use the ApplicationView class to view different parts of your app in separate windows.
-title: Use the ApplicationView class to show secondary windows for an app
+Description: ApplicationView 클래스를 사용 하 여 별도의 창에서 앱의 서로 다른 부분을 볼 수 있습니다.
+title: ApplicationView 클래스를 사용 하 여 앱에 대 한 보조 창 표시
 ms.date: 07/19/2019
 ms.topic: article
 keywords: windows 10, uwp
@@ -12,7 +12,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74258193"
 ---
-# <a name="show-multiple-views-with-applicationview"></a>Show multiple views with ApplicationView
+# <a name="show-multiple-views-with-applicationview"></a>ApplicationView를 사용 하 여 여러 뷰 표시
 
 개별 창에서 앱의 독립 부분을 볼 수 있도록 하여 사용자의 생산성을 높이는 데 도움을 줍니다. 여러 개의 앱 창을 만드는 경우 각 창이 독립적으로 동작합니다. 작업 표시줄에 각 창이 개별적으로 표시됩니다. 사용자는 앱 창을 독립적으로 이동, 크기 조정, 표시 및 숨길 수 있으며, 별도의 앱인 것처럼 앱 창 간에 전환할 수 있습니다. 각 창은 해당 스레드에서 작동합니다.
 
@@ -24,7 +24,7 @@ ms.locfileid: "74258193"
 
 보기는 [**CoreApplication**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.CoreApplication) 개체에 의해 관리됩니다. [  **CoreApplication.CreateNewView**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)를 호출하여 [**CoreApplicationView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.CoreApplicationView) 개체를 만듭니다. **CoreApplicationView**는 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 및 [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher)([**CoreWindow**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.corewindow) 및 [**Dispatcher**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.dispatcher) 속성에 저장됨)를 한 곳에서 표시합니다. **CoreApplicationView**는 Windows 런타임이 핵심 Windows 시스템과 상호 작용하는 데 사용하는 개체로 간주할 수 있습니다.
 
-일반적으로 [**CoreApplicationView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.CoreApplicationView)를 직접 사용하지는 않습니다. 대신, Windows 런타임은 [**Windows.UI.ViewManagement**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationView) 네임스페이스의 [**ApplicationView**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement) 클래스를 제공합니다. 이 클래스는 앱이 창 시스템과 상호 작용할 때 사용하는 속성, 메서드 및 이벤트를 제공합니다. **ApplicationView**를 사용하려면 현재 **CoreApplicationView**의 스레드에 연결된 **ApplicationView** 인스턴스를 가져오는 정적 [**ApplicationView.GetForCurrentView**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.getforcurrentview) 메서드를 호출합니다.
+일반적으로 [**CoreApplicationView**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.CoreApplicationView)를 직접 사용하지는 않습니다. 대신, Windows 런타임은 [**Windows.UI.ViewManagement**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationView) 네임스페이스의 [**ApplicationView**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement) 클래스를 제공합니다. 이 클래스는 앱이 창 시스템과 상호 작용할 때 사용하는 속성, 메서드 및 이벤트를 제공합니다. **ApplicationView**를 사용하려면 현재 [CoreApplicationView**의 스레드에 연결된** ApplicationView](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.getforcurrentview) 인스턴스를 가져오는 정적ApplicationView.GetForCurrentView 메서드를 호출합니다.
 
 마찬가지로, XAML 프레임워크는 [**Windows.UI.XAML.Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 개체에 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) 개체를 래핑합니다. XAML 앱에서는 일반적으로 **CoreWindow**를 직접 사용하는 대신 **Window** 개체를 조작합니다.
 
@@ -53,7 +53,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-**To show a new view**
+**새 보기를 표시 하려면**
 
 1.  [  **CoreApplication.CreateNewView**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)를 호출하여 보기 콘텐츠에 대한 새 창과 스레드를 만듭니다.
 
@@ -63,7 +63,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 2.  새 보기의 [**Id**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.id)를 추적합니다. 나중에 보기를 표시하는 데 사용합니다.
 
-    만든 보기의 추적에 도움이 되도록 앱에 일부 인프라를 빌드하는 것이 좋습니다. 예제는 [MultipleViews 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MultipleViews)의 `ViewLifetimeControl` 클래스를 참조하세요.
+    만든 보기의 추적에 도움이 되도록 앱에 일부 인프라를 빌드하는 것이 좋습니다. 예제는 `ViewLifetimeControl`MultipleViews 샘플[의 ](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MultipleViews) 클래스를 참조하세요.
 
     ```csharp
     int newViewId = 0;
@@ -73,9 +73,9 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
     [  **CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 메서드를 사용하여 새 보기에 대한 UI 스레드에 작업을 예약합니다. [람다 식](https://msdn.microsoft.com/library/bb397687.aspx)을 사용하여 함수를 **RunAsync** 메서드에 인수로 전달합니다. 람다 함수에서 수행하는 작업이 새 보기의 스레드에서 발생합니다.
 
-    XAML에서는 일반적으로 [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window)의 [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content) 속성에 [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)을 추가한 다음 **Frame**에서 앱 콘텐츠를 정의한 XAML [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page)로 이동합니다. For more info about frames and pages, see [Peer-to-peer navigation between two pages](../basics/navigate-between-two-pages.md).
+    XAML에서는 일반적으로 [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)의 [**Content**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) 속성에 [**Frame**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content)을 추가한 다음 **Frame**에서 앱 콘텐츠를 정의한 XAML [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page)로 이동합니다. 프레임 및 페이지에 대 한 자세한 내용은 [두 페이지 간 피어 투 피어 탐색](../basics/navigate-between-two-pages.md)을 참조 하세요.
 
-    새 [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window)가 채워진 후 나중에 **Window**를 표시하려면 **Window**의 [**Activate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.activate) 메서드를 호출해야 합니다. 이 작업은 새 보기의 스레드에서 발생하므로 새 **Window**가 활성화됩니다.
+    새 [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window)가 채워진 후 나중에 **Window**를 표시하려면 [Window**의** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.activate)Activate 메서드를 호출해야 합니다. 이 작업은 새 보기의 스레드에서 발생하므로 새 **Window**가 활성화됩니다.
 
     마지막으로, 나중에 보기를 표시하는 데 사용할 새 보기의 [**Id**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.id)를 가져옵니다. 마찬가지로 이 작업은 새 보기의 스레드에서 발생하므로 [**ApplicationView.GetForCurrentView**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.getforcurrentview)는 새 보기의 **Id**를 가져옵니다.
 
@@ -94,7 +94,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 
 4.  [  **ApplicationViewSwitcher.TryShowAsStandaloneAsync**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewswitcher.tryshowasstandaloneasync)를 호출하여 새 보기를 표시합니다.
 
-    새 보기를 만든 후 [**ApplicationViewSwitcher.TryShowAsStandaloneAsync**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewswitcher.tryshowasstandaloneasync) 메서드를 호출하여 새 창에 표시할 수 있습니다. 이 메서드의 *viewId* 매개 변수는 앱에서 각 보기를 고유하게 식별하는 정수입니다. **ApplicationView.Id** 속성 또는 [**ApplicationView.GetApplicationViewIdForWindow**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.id) 메서드를 사용하여 [**Id**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.getapplicationviewidforwindow) 보기를 검색합니다.
+    새 보기를 만든 후 [**ApplicationViewSwitcher.TryShowAsStandaloneAsync**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationviewswitcher.tryshowasstandaloneasync) 메서드를 호출하여 새 창에 표시할 수 있습니다. 이 메서드의 *viewId* 매개 변수는 앱에서 각 보기를 고유하게 식별하는 정수입니다. [ApplicationView.Id**속성 또는**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.id)ApplicationView.GetApplicationViewIdForWindow 메서드를 사용하여 [**Id**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.getapplicationviewidforwindow) 보기를 검색합니다.
 
     ```csharp
     bool viewShown = await ApplicationViewSwitcher.TryShowAsStandaloneAsync(newViewId);
@@ -127,7 +127,7 @@ await ApplicationViewSwitcher.SwitchAsync(viewIdToShow);
 
 ## <a name="related-topics"></a>관련 항목
 
-- [Show multiple views](show-multiple-views.md)
-- [Show multiple views with AppWindow](app-window.md)
+- [여러 뷰 표시](show-multiple-views.md)
+- [AppWindow를 사용 하 여 여러 뷰 표시](app-window.md)
 - [ApplicationViewSwitcher](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewSwitcher)
 - [CreateNewView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)

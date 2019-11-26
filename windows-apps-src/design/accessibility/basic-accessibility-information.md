@@ -44,7 +44,7 @@ ms.locfileid: "74257771"
 ## <a name="role-and-value"></a>역할 및 값  
 XAML 용어의 일부인 컨트롤 및 기타 UI 요소는 해당 정의의 일부로 역할 및 값을 보고하기 위해 UI 자동화 지원을 구현합니다. UI 자동화 도구를 사용하여 컨트롤에 대한 역할 및 값 정보를 검사하거나 각 컨트롤의 [**AutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 구현에 대한 설명서를 읽어볼 수 있습니다. UI 자동화 프레임워크에서 사용 가능한 역할은 [**AutomationControlType**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType) 열거에 정의되어 있습니다. 보조 기술과 같은 UI 자동화 클라이언트는 UI 자동화 프레임워크가 컨트롤의 **AutomationPeer**를 사용하여 노출하는 메서드를 호출하여 역할 정보를 구할 수 있습니다.
 
-일부 컨트롤에는 값이 없습니다. 값이 없는 컨트롤은 해당 컨트롤에서 지원하는 피어 및 패턴을 통해 UI 자동화에 이 정보를 보고합니다. 예를 들어 [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 양식 요소에는 값이 있습니다. 보조 기술이 UI 자동화 클라이언트가 될 수 있으므로 값이 존재하는지와 해당 값이 무엇인지를 검색할 수 있습니다. 이 특정한 경우에 **TextBox**는 [**TextBoxAutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.TextBoxAutomationPeer) 정의를 통해 [**IValueProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Provider.IValueProvider) 패턴을 지원합니다.
+일부 컨트롤에는 값이 없습니다. 값이 없는 컨트롤은 해당 컨트롤에서 지원하는 피어 및 패턴을 통해 UI 자동화에 이 정보를 보고합니다. 예를 들어 [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 양식 요소에는 값이 있습니다. 보조 기술이 UI 자동화 클라이언트가 될 수 있으므로 값이 존재하는지와 해당 값이 무엇인지를 검색할 수 있습니다. 이 특정한 경우에 **TextBox**는 [**TextBoxAutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Provider.IValueProvider) 정의를 통해 [**IValueProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.TextBoxAutomationPeer) 패턴을 지원합니다.
 
 > [!NOTE]
 > [  **AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name)이나 기타 기술을 사용하여 접근성 있는 이름을 명시적으로 제공하는 경우 컨트롤 역할이나 형식 정보에서 사용하는 것과 동일한 텍스트를 접근성 있는 이름에 포함하지 마세요. 예를 들어 "단추"나 "목록" 같은 문자열을 이름에 포함하지 마세요. 역할 및 형식 정보는 UI 자동화를 위한 기본 컨트롤 지원에서 제공하는 다양한 UI 자동화 속성(**LocalizedControlType**)에서 제공됩니다. 많은 보조 기술에서 **LocalizedControlType**을 접근성 있는 이름에 추가하므로 접근성 있는 이름에서 역할을 중복하면 단어가 불필요하게 반복될 수 있습니다. 예를 들어 [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 컨트롤에 액세스 가능한 "단추" 이름을 지정하거나 "단추"라는 단어를 이름의 마지막 부분으로 포함하는 경우 화면 읽기 프로그램에서는 이를 "단추 단추"로 읽을 수 있습니다. 내레이터를 사용하여 접근성 정보의 다음 측면을 테스트해야 합니다.
@@ -64,7 +64,7 @@ UI 자동화 프레임워크에는 UI 자동화 클라이언트가 원시, 컨�
 ## <a name="name-from-inner-text"></a>내부 텍스트의 이름  
 표시되는 UI에 이미 있는 문자열을 접근성 있는 이름 값에 사용하기가 더 쉬워지도록 하기 위해 대부분의 컨트롤 및 기타 UI 요소에서는 요소 내에 있는 내부 텍스트를 기반으로 또는 콘텐츠 속성의 문자열 값에서 기본 접근성 있는 이름을 자동으로 결정하는 기능을 지원합니다.
 
-* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) and **RichTextBlock** each promote the value of the **Text** property as the default accessible name.
+* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 및 **RichTextBlock** 는 각각 **Text** 속성 값을 기본 액세스 가능한 이름으로 승격 합니다.
 * 모든 [**ContentControl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 하위 클래스는 반복적인 "ToString" 기술을 사용하여 [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 값에서 문자열을 찾고 이러한 문자열을 기본 접근성 있는 이름으로 승격시킵니다.
 
 > [!NOTE]
@@ -125,7 +125,7 @@ XAML
 
 내레이터 화면 읽기 프로그램은 사용자가 CapsLock + F를 눌러 요소에 대한 추가 정보를 요청하는 경우에만 요소의 접근성 있는 설명을 읽습니다.
 
-접근성 있는 이름은 컨트롤의 동작을 완전히 문서화하기 위한 것이 아니라 컨트롤을 식별하기 위한 것입니다. 간략한 설명이 컨트롤을 설명하기에 충분하지 않으면 [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name) 외에 [**AutomationProperties.HelpText**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.helptext) 연결된 속성을 추가로 설정할 수 있습니다.
+접근성 있는 이름은 컨트롤의 동작을 완전히 문서화하기 위한 것이 아니라 컨트롤을 식별하기 위한 것입니다. 간략한 설명이 컨트롤을 설명하기에 충분하지 않으면 [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.helptext) 외에 [**AutomationProperties.HelpText**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name) 연결된 속성을 추가로 설정할 수 있습니다.
 
 <span id="Testing_accessibility_early_and_often"/>
 <span id="testing_accessibility_early_and_often"/>
@@ -150,12 +150,12 @@ Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 �
 ## <a name="accessible-names-and-localization"></a>접근성 있는 이름 및 지역화  
 접근성 있는 이름이 지역화되는 요소도 되도록 하려면 지역화 가능한 문자열을 리소스로 저장한 다음 [x:Uid directive](https://docs.microsoft.com/windows/uwp/xaml-platform/x-uid-directive) 값으로 리소스 연결을 참조하는 올바른 기술을 사용해야 합니다. 접근성 있는 이름이 명시적으로 설정된 [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name) 사용에서 제공되는 경우 해당 문자열도 지역화할 수 있는지 확인합니다.
 
-[  **AutomationProperties**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.AutomationProperties) 속성과 같은 연결된 속성은 특수 정식 구문을 리소스 이름으로 사용하여, 리소스는 특정 요소에 적용된 연결된 속성을 참조합니다. 예를 들어 `MediumButton`이라는 UI 요소에 적용된 [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name)은 `MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name`입니다.
+[  **AutomationProperties**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.AutomationProperties) 속성과 같은 연결된 속성은 특수 정식 구문을 리소스 이름으로 사용하여, 리소스는 특정 요소에 적용된 연결된 속성을 참조합니다. 예를 들어 [이라는 UI 요소에 적용된AutomationProperties.Name](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name)`MediumButton`은 `MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name`입니다.
 
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>관련 항목  
 * [접근성](accessibility.md)
 * [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name)
-* [XAML accessibility sample](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
+* [XAML 접근성 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
 * [접근성 테스트](accessibility-testing.md)

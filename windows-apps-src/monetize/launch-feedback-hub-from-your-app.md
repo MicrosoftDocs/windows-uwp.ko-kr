@@ -20,7 +20,7 @@ ms.locfileid: "74259244"
 앱에서 피드백 허브를 시작하려면 [Microsoft Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK)에서 제공하는 API를 사용합니다. 이 API를 사용하여 디자인 지침을 따르는 앱의 UI 요소에서 피드백 허브를 시작하는 것이 좋습니다.
 
 > [!NOTE]
-> 피드백 허브는 데스크톱과 모바일 [ 패밀리](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)를 기반으로 하는 Windows 10 OS 버전 10.0.14271 이상을 실행하는 디바이스에서만 사용할 수 있습니다. 사용자 장치에서 피드백 허브를 사용할 수 있는 경우에만 앱에 피드백 컨트롤을 표시하는 것이 좋습니다. 이 항목의 코드는 이 작업을 수행하는 방법을 보여 줍니다.
+> 피드백 허브는 데스크톱과 모바일 [ 패밀리](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)를 기반으로 하는 Windows 10 OS 버전 10.0.14271 이상을 실행하는 장치에서만 사용할 수 있습니다. 사용자 장치에서 피드백 허브를 사용할 수 있는 경우에만 앱에 피드백 컨트롤을 표시하는 것이 좋습니다. 이 항목의 코드는 이 작업을 수행하는 방법을 보여 줍니다.
 
 ## <a name="how-to-launch-feedback-hub-from-your-app"></a>앱에서 피드백 허브를 시작하는 방법
 
@@ -44,7 +44,7 @@ ms.locfileid: "74259244"
     <Button x:Name="feedbackButton" FontFamily="Segoe MDL2 Assets" Content="&#xE939;" HorizontalAlignment="Left" Margin="138,352,0,0" VerticalAlignment="Top" Visibility="Collapsed"  Click="feedbackButton_Click"/>
     ```
 
-7. 피드백 컨트롤을 호스트하는 앱 페이지의 초기화 코드에서 [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported) 클래스의 정적 [IsSupported](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) 메서드를 사용하여 사용자 디바이스에서 피드백 허브를 사용할 수 있는지 여부를 확인합니다. 피드백 허브는 데스크톱과 모바일 [ 패밀리](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)를 기반으로 하는 Windows 10 OS 버전 10.0.14271 이상을 실행하는 디바이스에서만 사용할 수 있습니다.
+7. 피드백 컨트롤을 호스트하는 앱 페이지의 초기화 코드에서 [StoreServicesFeedbackLauncher](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher.issupported) 클래스의 정적 [IsSupported](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) 메서드를 사용하여 사용자 장치에서 피드백 허브를 사용할 수 있는지 여부를 확인합니다. 피드백 허브는 데스크톱과 모바일 [ 패밀리](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)를 기반으로 하는 Windows 10 OS 버전 10.0.14271 이상을 실행하는 장치에서만 사용할 수 있습니다.
 
     이 속성이 **true**를 반환하는 경우 컨트롤을 표시되도록 설정합니다. 다음 코드는 [Button](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button)에 대해 이 작업을 수행하는 방법을 보여 줍니다.
 

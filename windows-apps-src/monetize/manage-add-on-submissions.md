@@ -1,6 +1,6 @@
 ---
 ms.assetid: 66400066-24BF-4AF2-B52A-577F5C3CA474
-description: Use these methods in the Microsoft Store submission API to manage add-on submissions for apps that are registered to your Partner Center account.
+description: Microsoft Store 제출 API에서 이러한 메서드를 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 추가 기능 제출을 관리할 수 있습니다.
 title: 추가 기능 제출 관리
 ms.date: 04/17/2018
 ms.topic: article
@@ -18,13 +18,13 @@ ms.locfileid: "74260234"
 Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 앱에 대한 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 제출을 관리할 수 있습니다. API 사용을 위한 필수 조건을 비롯하여 Microsoft Store 제출 API에 대한 자세한 내용은 [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
 
 > [!IMPORTANT]
-> If you use the Microsoft Store submission API to create a submission for an add-on, be sure to make further changes to the submission only by using the API, rather than making changes in Partner Center. If you use Partner Center to change a submission that you originally created by using the API, you will no longer be able to change or commit that submission by using the API. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
+> Microsoft Store 제출 API를 사용 하 여 추가 기능에 대 한 제출을 만드는 경우 파트너 센터에서 변경 하는 대신 API를 사용 하 여 제출을 추가로 변경 해야 합니다. 파트너 센터를 사용 하 여 원래 API를 사용 하 여 만든 제출을 변경 하는 경우 API를 사용 하 여 해당 제출을 변경 하거나 커밋할 수 없습니다. 경우에 따라 제출이 제출 프로세스를 더 이상 진행할 수 없는 오류 상태로 남을 수 있습니다. 이러한 문제가 발생하는 경우, 해당 제출을 삭제하고 새 제출을 생성해야 합니다.
 
 <span id="methods-for-add-on-submissions" />
 
 ## <a name="methods-for-managing-add-on-submissions"></a>추가 기능 제출 관리 메서드
 
-추가 기능 제출의 가져오기, 만들기, 업데이트, 커밋, 삭제에는 다음 메서드를 사용합니다. Before you can use these methods, the add-on must already exist in your Partner Center account. You can create an add-on in Partner Center by [defining its product type and product ID](../publish/set-your-add-on-product-id.md) or by using the Microsoft Store submission API methods in described in [Manage add-ons](manage-add-ons.md).
+추가 기능 제출의 가져오기, 만들기, 업데이트, 커밋, 삭제에는 다음 메서드를 사용합니다. 이러한 방법을 사용 하려면 먼저 파트너 센터 계정에 추가 기능이 있어야 합니다. 파트너 센터에서 [제품 유형 및 제품 ID를 정의](../publish/set-your-add-on-product-id.md) 하거나 [추가 기능 관리](manage-add-ons.md)에 설명 된의 Microsoft Store 제출 API 메서드를 사용 하 여 추가 기능을 만들 수 있습니다.
 
 <table>
 <colgroup>
@@ -41,34 +41,34 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
 </thead>
 <tbody>
 <tr>
-<td align="left">GET</td>
+<td align="left">가져오기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}</td>
-<td align="left"><a href="get-an-add-on-submission.md">Get an existing add-on submission</a></td>
+<td align="left"><a href="get-an-add-on-submission.md">기존 추가 기능 제출 가져오기</a></td>
 </tr>
 <tr>
-<td align="left">GET</td>
+<td align="left">가져오기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/status</td>
-<td align="left"><a href="get-status-for-an-add-on-submission.md">Get the status of an existing add-on submission</a></td>
+<td align="left"><a href="get-status-for-an-add-on-submission.md">기존 추가 기능 제출의 상태 가져오기</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions</td>
-<td align="left"><a href="create-an-add-on-submission.md">Create a new add-on submission</a></td>
+<td align="left"><a href="create-an-add-on-submission.md">새 추가 기능 제출 만들기</a></td>
 </tr>
 <tr>
 <td align="left">PUT</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}</td>
-<td align="left"><a href="update-an-add-on-submission.md">Update an existing add-on submission</a></td>
+<td align="left"><a href="update-an-add-on-submission.md">기존 추가 기능 제출 업데이트</a></td>
 </tr>
 <tr>
 <td align="left">POST</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit</td>
-<td align="left"><a href="commit-an-add-on-submission.md">Commit a new or updated add-on submission</a></td>
+<td align="left"><a href="commit-an-add-on-submission.md">신규 또는 업데이트 된 추가 기능 제출을 커밋합니다.</a></td>
 </tr>
 <tr>
 <td align="left">DELETE</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}</td>
-<td align="left"><a href="delete-an-add-on-submission.md">Delete an add-on submission</a></td>
+<td align="left"><a href="delete-an-add-on-submission.md">추가 기능 제출을 삭제 합니다.</a></td>
 </tr>
 </tbody>
 </table>
@@ -79,7 +79,7 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
 
 추가 기능에 대한 제출을 만들려면 이 프로세스를 따릅니다.
 
-1. If you have not yet done so, complete the prerequisites described in [Create and manage submissions using Microsoft Store services](create-and-manage-submissions-using-windows-store-services.md), including associating an Azure AD application with your Partner Center account and obtaining your client ID and key. 이 작업은 한 번만 수행하면 됩니다. 클라이언트 ID와 키를 얻은 후에는 새 Azure AD 액세스 토큰을 만들어야 할 때마다 다시 사용할 수 있습니다.  
+1. 아직 수행 하지 않은 경우 Azure AD 응용 프로그램을 파트너 센터 계정에 연결 하 고 클라이언트 ID 및 키를 가져오는 등 [Microsoft Store 서비스를 사용 하 여 전송 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)에 설명 된 필수 구성 요소를 완료 합니다. 이 작업은 한 번만 수행하면 됩니다. 클라이언트 ID와 키를 얻은 후에는 새 Azure AD 액세스 토큰을 만들어야 할 때마다 다시 사용할 수 있습니다.  
 
 2. [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). Microsoft Store 제출 API의 메서드에 이 액세스 토큰을 전달해야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
 
@@ -106,9 +106,9 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
 
 4. 제출에 대한 새 아이콘을 추가하는 경우 이전에 호출한 POST 메서드의 응답 본문에 제공된 SAS URI를 사용하여 [Azure Blob Storage](https://docs.microsoft.com/azure/storage/storage-introduction#blob-storage)에 ZIP 보관 파일을 업로드합니다. 다음과 같이 다양한 플랫폼에서 이 작업을 수행할 수 있는 여러 Azure 라이브러리가 있습니다.
 
-    * [Azure Storage Client Library for .NET](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
-    * [Azure Storage SDK for Java](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
-    * [Azure Storage SDK for Python](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
+    * [.NET 용 Azure Storage 클라이언트 라이브러리](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-blobs)
+    * [Java 용 Azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-java-how-to-use-blob-storage)
+    * [Python 용 Azure Storage SDK](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
 
     다음 C# 코드 예제는 .NET용 Azure Storage Client Library의 [CloudBlockBlob](https://docs.microsoft.com/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob) 클래스를 사용하여 Azure Blob Storage에 ZIP 보관 파일을 업로드하는 방법을 보여 줍니다. 이 예제에서는 ZIP 보관 파일이 이미 스트림 개체에 기록되어 있다고 가정합니다.
 
@@ -119,7 +119,7 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
     await blockBob.UploadFromStreamAsync(stream);
     ```
 
-5. 다음 메서드를 실행하여 제출을 커밋합니다. This will alert Partner Center that you are done with your submission and that your updates should now be applied to your account. 자세한 내용은 [추가 기능 제출 커밋](commit-an-add-on-submission.md)을 참조하세요.
+5. 다음 메서드를 실행하여 제출을 커밋합니다. 그러면 전송 작업을 수행 하 고 사용자의 계정에 업데이트가 적용 되도록 파트너 센터에 경고를 표시 합니다. 자세한 내용은 [추가 기능 제출 커밋](commit-an-add-on-submission.md)을 참조하세요.
 
     ```json
     POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit
@@ -133,7 +133,7 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
 
     제출 상태를 확인하려면 응답 본문에서 *status* 값을 검토합니다. 이 값은 요청이 성공한 경우 **CommitStarted**에서 **PreProcessing**으로, 요청에 오류가 발생한 경우 **CommitFailed**로 변경됩니다. 오류가 있는 경우 *statusDetails* 필드에 오류에 대한 추가 정보가 포함됩니다.
 
-7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. You can continue to monitor the submission progress by using the previous method, or by visiting Partner Center.
+7. 커밋이 성공적으로 완료되면 수집을 위해 제출이 스토어로 전송됩니다. 이전 방법을 사용 하거나 파트너 센터를 방문 하 여 제출 진행 상황을 계속 모니터링할 수 있습니다.
 
 <span/>
 
@@ -141,9 +141,9 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
 
 다음 문서는 여러 다른 프로그래밍 언어로 추가 기능 제출을 만드는 방법을 보여 주는 자세한 코드 예제를 제공합니다.
 
-* [C# code examples](csharp-code-examples-for-the-windows-store-submission-api.md)
-* [Java code examples](java-code-examples-for-the-windows-store-submission-api.md)
-* [Python code examples](python-code-examples-for-the-windows-store-submission-api.md)
+* [C#코드 예제](csharp-code-examples-for-the-windows-store-submission-api.md)
+* [Java 코드 예제](java-code-examples-for-the-windows-store-submission-api.md)
+* [Python 코드 예제](python-code-examples-for-the-windows-store-submission-api.md)
 
 ## <a name="storebroker-powershell-module"></a>StoreBroker PowerShell 모듈
 
@@ -228,22 +228,22 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값      | 작업 표시줄의 검색 상자에   | 설명        |
+| 값      | 형식   | 설명        |
 |------------|--------|----------------------|
-| id            | 문자열  | 제출의 ID입니다. 이 ID는 [추가 기능 제출 만들기](create-an-add-on-submission.md), [모든 추가 기능 가져오기](get-all-add-ons.md) 및 [추가 기능 가져오기](get-an-add-on.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. For a submission that was created in Partner Center, this ID is also available in the URL for the submission page in Partner Center.  |
-| contentType           | 문자열  |  추가 기능에 제공된 [콘텐츠의 유형](../publish/enter-add-on-properties.md#content-type)입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
+| id            | string  | 제출의 ID입니다. 이 ID는 [추가 기능 제출 만들기](create-an-add-on-submission.md), [모든 추가 기능 가져오기](get-all-add-ons.md) 및 [추가 기능 가져오기](get-an-add-on.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 만든 제출의 경우이 ID는 파트너 센터의 제출 페이지에 대 한 URL 에서도 사용할 수 있습니다.  |
+| contentType           | string  |  추가 기능에 제공된 [콘텐츠의 유형](../publish/enter-add-on-properties.md#content-type)입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
 | 키워드           | 배열  | 추가 기능에 대한 [키워드](../publish/enter-add-on-properties.md#keywords)를 최대 10개까지 포함하는 문자열의 배열입니다. 앱에서 이러한 키워드를 사용하여 추가 기능을 쿼리할 수 있습니다.   |
-| lifetime           | 문자열  |  추가 기능의 수명입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
+| lifetime           | string  |  추가 기능의 수명입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
 | listings           | object  |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 추가 기능에 대한 목록 정보를 포함하는 [목록 리소스](#listing-object)입니다.  |
 | pricing           | object  | 추가 기능에 대한 가격 정보를 포함하는 [가격 리소스](#pricing-object)입니다.   |
-| targetPublishMode           | 문자열  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>Manual</li><li>SpecificDate</li></ul> |
-| targetPublishDate           | 문자열  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |
-| 태그           | 문자열  |  추가 기능에 대한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data)(이 정보를 이전에는 *태그*라고 지칭함)입니다.   |
-| visibility  | 문자열  |  추가 기능의 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Hidden</li><li>Public</li><li>개인 정보 보호</li><li>NotSet</li></ul>  |
-| status  | 문자열  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>릴리스</li><li>ReleaseFailed</li></ul>   |
+| targetPublishMode           | string  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>수동</li><li>SpecificDate</li></ul> |
+| targetPublishDate           | string  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |
+| 태그           | string  |  추가 기능에 대한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data)(이 정보를 이전에는 *태그*라고 지칭함)입니다.   |
+| visibility  | string  |  추가 기능의 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Hidden</li><li>Public</li><li>개인 정보 보호</li><li>NotSet</li></ul>  |
+| 상태  | string  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>릴리스</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  오류에 대한 정보를 비롯하여 제출 상태에 대한 추가 세부 정보가 포함된 [상태 세부 정보 리소스](#status-details-object)입니다. |
-| fileUploadUrl           | 문자열  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지를 추가하는 경우 패키지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [추가 기능 제출 만들기](#create-an-add-on-submission)를 참조하세요.  |
-| FriendlyName  | 문자열  |  The friendly name of the submission, as shown in Partner Center. 이 값은 제출을 만들 때 생성됩니다.  |
+| fileUploadUrl           | string  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지를 추가하는 경우 패키지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [추가 기능 제출 만들기](#create-an-add-on-submission)를 참조하세요.  |
+| FriendlyName  | string  |  파트너 센터에 표시 된 것 처럼 전송의 이름입니다. 이 값은 제출을 만들 때 생성됩니다.  |
 
 <span id="listing-object" />
 
@@ -251,11 +251,11 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 이 리소스는 [추가 기능에 대한 목록 정보](../publish/create-add-on-store-listings.md)를 포함합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 작업 표시줄의 검색 상자에    | 설명       |
+| 값           | 형식    | 설명       |
 |-----------------|---------|------|
-|  description               |    문자열     |   추가 기능 목록에 대한 설명입니다.   |     
-|  아이콘               |   object      |추가 기능 목록의 아이콘에 대한 데이터를 포함하는 [아이콘 리소스](#icon-object)입니다.    |
-|  title               |     문자열    |   추가 기능 목록의 제목입니다.   |  
+|  설명               |    string     |   추가 기능 목록에 대한 설명입니다.   |     
+|  icon               |   object      |추가 기능 목록의 아이콘에 대한 데이터를 포함하는 [아이콘 리소스](#icon-object)입니다.    |
+|  title               |     string    |   추가 기능 목록의 제목입니다.   |  
 
 <span id="icon-object" />
 
@@ -263,10 +263,10 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 이 리소스에는 추가 기능 목록에 대한 아이콘 데이터가 포함되어 있습니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 작업 표시줄의 검색 상자에    | 설명     |
+| 값           | 형식    | 설명     |
 |-----------------|---------|------|
-|  fileName               |    문자열     |   제출을 위해 업로드한 ZIP 보관 파일에 있는 아이콘 파일의 이름입니다. 아이콘은 정확히 300 x 300픽셀의 .png 파일이어야 합니다.   |     
-|  fileStatus               |   문자열      |  아이콘 파일의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
+|  fileName               |    string     |   제출을 위해 업로드한 ZIP 보관 파일에 있는 아이콘 파일의 이름입니다. 아이콘은 정확히 300 x 300픽셀의 .png 파일이어야 합니다.   |     
+|  fileStatus               |   string      |  아이콘 파일의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
 
 <span id="pricing-object" />
 
@@ -274,12 +274,12 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 이 리소스는 추가 기능에 대한 가격 정보를 포함합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 작업 표시줄의 검색 상자에    | 설명    |
+| 값           | 형식    | 설명    |
 |-----------------|---------|------|
 |  marketSpecificPricings               |    object     |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 추가 기능에 대한 사용자 지정 가격](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *priceId* 값으로 지정된 기본 가격을 재정의합니다.     |     
 |  sales               |   배열      |  **사용되지 않음**. 추가 기능에 대한 판매 정보를 포함하는 [판매 리소스](#sale-object) 배열입니다.     |     
-|  priceId               |   문자열      |  추가 기능에 대한 [기본 가격](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability)을 지정하는 [기준 가격](#price-tiers)입니다.    |    
-|  isAdvancedPricingModel               |   부울      |  **true**인 경우, 개발자 계정은 .99 USD에서 1999.99 USD까지의 확장된 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. **false**인 경우, 개발자 계정은 .99 USD에서 999.99 USD까지의 원래 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. 여러 계층에 대한 자세한 내용은 [기준 가격](#price-tiers)을 참조하세요.<br/><br/>**참고**&nbsp;&nbsp;이 필드는 읽기 전용입니다.   |
+|  priceId               |   string      |  추가 기능에 대한 [기본 가격](#price-tiers)을 지정하는 [기준 가격](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability)입니다.    |    
+|  isAdvancedPricingModel               |   boolean      |  **true**인 경우, 개발자 계정은 .99 USD에서 1999.99 USD까지의 확장된 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. **false**인 경우, 개발자 계정은 .99 USD에서 999.99 USD까지의 원래 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. 여러 계층에 대한 자세한 내용은 [기준 가격](#price-tiers)을 참조하세요.<br/><br/>**참고**&nbsp;&nbsp;이 필드는 읽기 전용입니다.   |
 
 
 <span id="sale-object" />
@@ -290,17 +290,17 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 > [!IMPORTANT]
 > **판매** 리소스는 더 이상 지원되지 않으며, 현재 Microsoft Store 제출 API를 사용하여 추가 기능 제출에 대한 판매 데이터를 가져오거나 수정할 수 없습니다. 앞으로 Microsoft Store 제출 API를 업데이트하여 추가 기능 제출에 대한 판매 정보에 프로그래밍 방식으로 액세스하는 새로운 방법을 도입할 예정입니다.
->    * [GET 메서드를 호출하여 추가 기능 제출을 가져오면](get-an-add-on-submission.md)*판매* 값이 빈 상태로 표시됩니다. You can continue to use Partner Center to get the sale data for your add-on submission.
->    * [PUT 메서드를 호출하여 추가 기능 제출을 업데이트하는 경우](update-an-add-on-submission.md)*판매* 값의 정보는 무시됩니다. You can continue to use Partner Center to change the sale data for your add-on submission.
+>    * [GET 메서드를 호출하여 추가 기능 제출을 가져오면](get-an-add-on-submission.md)*판매* 값이 빈 상태로 표시됩니다. 파트너 센터를 계속 사용 하 여 추가 기능 제출에 대 한 판매 데이터를 가져올 수 있습니다.
+>    * [PUT 메서드를 호출하여 추가 기능 제출을 업데이트하는 경우](update-an-add-on-submission.md)*판매* 값의 정보는 무시됩니다. 파트너 센터를 계속 사용 하 여 추가 기능 제출에 대 한 판매 데이터를 변경할 수 있습니다.
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 작업 표시줄의 검색 상자에    | 설명           |
+| 값           | 형식    | 설명           |
 |-----------------|---------|------|
-|  name               |    문자열     |   판매의 이름입니다.    |     
-|  basePriceId               |   문자열      |  판매의 기본 가격으로 사용할 [기준 가격](#price-tiers)입니다.    |     
-|  startDate               |   문자열      |   판매의 시작 날짜(ISO 8601 형식)입니다.  |     
-|  endDate               |   문자열      |  판매의 종료 날짜(ISO 8601 형식)입니다.      |     
+|  name               |    string     |   판매의 이름입니다.    |     
+|  basePriceId               |   string      |  판매의 기본 가격으로 사용할 [기준 가격](#price-tiers)입니다.    |     
+|  startDate               |   string      |   판매의 시작 날짜(ISO 8601 형식)입니다.  |     
+|  endDate               |   string      |  판매의 종료 날짜(ISO 8601 형식)입니다.      |     
 |  marketSpecificPricings               |   object      |   키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 추가 기능에 대한 사용자 지정 가격](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *basePriceId* 값으로 지정된 기본 가격을 재정의합니다.    |
 
 <span id="status-details-object" />
@@ -309,7 +309,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 이 리소스에는 제출 상태에 대한 추가 세부 정보가 포함됩니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 작업 표시줄의 검색 상자에    | 설명       |
+| 값           | 형식    | 설명       |
 |-----------------|---------|------|
 |  errors               |    object     |   제출에 대한 오류 세부 정보가 포함된 [상태 세부 정보 리소스](#status-detail-object)의 배열입니다.   |     
 |  warnings               |   object      | 제출에 대한 경고 세부 정보가 포함된 [상태 세부 정보 리소스](#status-detail-object)의 배열입니다.     |
@@ -321,10 +321,10 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 이 리소스에는 제출과 관련된 오류 또는 경고에 대한 추가 정보가 포함되어 있습니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 작업 표시줄의 검색 상자에    | 설명    |
+| 값           | 형식    | 설명    |
 |-----------------|---------|------|
-|  code               |    문자열     |   오류 또는 경고의 유형을 설명하는 [제출 상태 코드](#submission-status-code)입니다.   |     
-|  details               |     문자열    |  문제에 대한 자세한 정보가 있는 메시지입니다.     |
+|  code               |    string     |   오류 또는 경고의 유형을 설명하는 [제출 상태 코드](#submission-status-code)입니다.   |     
+|  details 정보               |     string    |  문제에 대한 자세한 정보가 있는 메시지입니다.     |
 
 <span id="certification-report-object" />
 
@@ -332,12 +332,12 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 이 리소스는 제출의 인증 보고서 데이터에 대한 액세스를 제공합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 작업 표시줄의 검색 상자에    | 설명               |
+| 값           | 형식    | 설명               |
 |-----------------|---------|------|
-|     date            |    문자열     |  The date and time the report was generated, in ISO 8601 format.    |
-|     reportUrl            |    문자열     |  보고서에 액세스할 수 있는 URL입니다.    |
+|     date            |    string     |  보고서가 생성 된 날짜와 시간 (ISO 8601 형식)입니다.    |
+|     reportUrl            |    string     |  보고서에 액세스할 수 있는 URL입니다.    |
 
-## <a name="enums"></a>Enums
+## <a name="enums"></a>열거형
 
 이러한 메서드는 다음 열거형을 사용합니다.
 
@@ -352,7 +352,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  기본               |   기준 가격이 설정되지 않았습니다. 추가 기능에 대한 기본 가격을 사용합니다.      |     
 |  NotAvailable              |   지정된 영역에 추가 기능을 사용할 수 없습니다.    |     
 |  무료              |   추가 기능은 무료입니다.    |    
-|  계층*xxxx*               |   추가 기능에 대한 기준 가격을 **계층<em>xxxx</em>** 형식으로 지정하는 문자열입니다. 현재 다음 범위의 기준 가격이 지원됩니다.<br/><br/><ul><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **true**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier1012** - **Tier1424**입니다.</li><li>[가격 리소스](#pricing-object)의 *isAdvancedPricingModel* 값이 **false**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier2** - **Tier96**입니다.</li></ul>To see the complete table of price tiers that are available for your developer account, including the market-specific prices that are associated with each tier, go to the **Pricing and availability** page for any of your app submissions in Partner Center and click the **view table** link in the **Markets and custom prices** section (for some developer accounts, this link is in the **Pricing** section).     |
+|  계층*xxxx*               |   추가 기능에 대한 기준 가격을 **계층<em>xxxx</em>** 형식으로 지정하는 문자열입니다. 현재 다음 범위의 기준 가격이 지원됩니다.<br/><br/><ul><li>*가격 리소스*의 [isAdvancedPricingModel](#pricing-object) 값이 **true**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier1012** - **Tier1424**입니다.</li><li>*가격 리소스*의 [isAdvancedPricingModel](#pricing-object) 값이 **false**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier2** - **Tier96**입니다.</li></ul>각 계층과 관련 된 시장 관련 가격을 비롯 하 여 개발자 계정에 사용할 수 있는 가격 책정 계층의 전체 표를 보려면 파트너 센터에서 앱 서브 미션에 대 한 **가격 책정 및 가용성** 페이지로 이동 하 고 **시장 및 사용자 지정 가격** 섹션에서 **테이블 보기** 링크를 클릭 합니다 (일부 개발자 계정의 경우이 링크는 **가격 책정** 섹션에 있음).     |
 
 <span id="submission-status-code" />
 
@@ -381,6 +381,6 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Create and manage submissions using Microsoft Store services](create-and-manage-submissions-using-windows-store-services.md)
-* [Manage add-ons using the Microsoft Store submission API](manage-add-ons.md)
-* [Add-on submissions in Partner Center](https://docs.microsoft.com/windows/uwp/publish/iap-submissions)
+* [Microsoft Store 서비스를 사용 하 여 제출 작성 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+* [Microsoft Store 제출 API를 사용 하 여 추가 기능 관리](manage-add-ons.md)
+* [파트너 센터의 추가 기능 제출](https://docs.microsoft.com/windows/uwp/publish/iap-submissions)

@@ -22,7 +22,7 @@ ms.locfileid: "74257417"
 
 사용자 지정 오디오 효과는 [**IBasicAudioEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IBasicAudioEffect) 인터페이스를 구현하는 클래스에 정의됩니다. 이 클래스를 앱의 프로젝트에 직접 포함할 수는 없습니다. 대신 Windows 런타임 구성 요소를 사용하여 오디오 효과 클래스를 호스트해야 합니다.
 
-**Add a Windows Runtime component for your audio effect**
+**오디오 효과에 대 한 Windows 런타임 구성 요소 추가**
 
 1.  Microsoft Visual Studio에서 솔루션을 열고 **파일** 메뉴로 이동한 후 **추가-&gt;새 프로젝트**를 선택합니다.
 2.  **Windows 런타임 구성 요소(유니버설 Windows)** 프로젝트 유형을 선택합니다.
@@ -83,7 +83,7 @@ ms.locfileid: "74257417"
 
  
 
-이제 효과에 **ProcessFrame** 메서드 구현을 추가할 수 있습니다. 먼저 이 메서드는 입력 및 출력 오디오 프레임에서 [**AudioBuffer**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioBuffer) 개체를 가져옵니다. 쓰기 작업을 위해 출력 프레임이 열려 있고 읽기 작업을 위해 입력 프레임이 열려 있는지 확인합니다. 다음으로 [**CreateReference**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.createreference)를 호출하여 각 버퍼에 대해 [**IMemoryBufferReference**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IMemoryBufferReference)를 획득합니다. 그런 후 **IMemoryBufferReference** 개체를 위에 정의된 COM interop 인터페이스인 **IMemoryByteAccess**로 캐스팅한 후 **GetBuffer**를 호출하여 실제 데이터 버퍼를 획득합니다.
+이제 효과에 **ProcessFrame** 메서드 구현을 추가할 수 있습니다. 먼저 이 메서드는 입력 및 출력 오디오 프레임에서 [**AudioBuffer**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioBuffer) 개체를 가져옵니다. 쓰기 작업을 위해 출력 프레임이 열려 있고 읽기 작업을 위해 입력 프레임이 열려 있는지 확인합니다. 다음으로 [**CreateReference**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IMemoryBufferReference)를 호출하여 각 버퍼에 대해 [**IMemoryBufferReference**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.createreference)를 획득합니다. 그런 후 **IMemoryBufferReference** 개체를 위에 정의된 COM interop 인터페이스인 **IMemoryByteAccess**로 캐스팅한 후 **GetBuffer**를 호출하여 실제 데이터 버퍼를 획득합니다.
 
 이제 데이터 버퍼를 획득했으므로 입력 버퍼에서 읽고 출력 버퍼에 쓸 수 있습니다. 입력 버퍼에 있는 각 샘플에 대해 값을 가져와 1 - **Mix**로 곱하여 효과가 없는 신호 값을 설정합니다. 다음으로 샘플은 에코 버퍼의 현재 위치에서 가져와 **Mix**로 곱하여 효과가 적용된 값을 설정합니다. 출력 샘플은 효과 적용 전과 후의 값의 합계로 설정됩니다. 마지막으로 각 입력 샘플은 에코 버퍼에 저장되며 현재 샘플 인덱스는 증가합니다.
 
@@ -93,7 +93,7 @@ ms.locfileid: "74257417"
 
 ### <a name="close-method"></a>Close 메서드
 
-The system will call the [**Close**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.close) [**Close**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.close) method on your class when the effect should shut down. 이 메서드를 사용하여 생성된 모든 리소스를 삭제해야 합니다. 이 메서드에 대한 인수는 효과가 정상적으로 닫혔는지, 오류가 발생했는지 또는 효과가 필수 인코딩 형식을 지원하지 않는지를 알 수 있도록 하는 [**MediaEffectClosedReason**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.MediaEffectClosedReason)입니다.
+시스템은 효과가 종료 될 때 클래스에서 [**close**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.close) [**close**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.close) 메서드를 호출 합니다. 이 메서드를 사용하여 생성된 모든 리소스를 삭제해야 합니다. 이 메서드에 대한 인수는 효과가 정상적으로 닫혔는지, 오류가 발생했는지 또는 효과가 필수 인코딩 형식을 지원하지 않는지를 알 수 있도록 하는 [**MediaEffectClosedReason**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.MediaEffectClosedReason)입니다.
 
 [!code-cs[Close](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetClose)]
 
@@ -111,7 +111,7 @@ TimeIndependent[**TimeIndependent**](https://docs.microsoft.com/uwp/api/windows.
 
 ### <a name="useinputframeforoutput-property"></a>UseInputFrameForOutput 속성
 
-[  **UseInputFrameForOutput**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.useinputframeforoutput) 속성을 **true**로 설정하여 효과가 출력을 [**OutputFrame**](https://docs.microsoft.com/uwp/api/windows.media.effects.processaudioframecontext.outputframe)에 기록하는 대신 [**ProcessFrame**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.processframe)로 전달된 [**ProcessAudioFrameContext**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.ProcessAudioFrameContext)의 [**InputFrame**](https://docs.microsoft.com/uwp/api/windows.media.effects.processaudioframecontext.inputframe) 오디오 버퍼에 기록한다고 시스템에 알립니다. 
+[  **UseInputFrameForOutput**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.useinputframeforoutput) 속성을 **true**로 설정하여 효과가 출력을 [**OutputFrame**](https://docs.microsoft.com/uwp/api/windows.media.effects.processaudioframecontext.inputframe)에 기록하는 대신 [**ProcessFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.ProcessAudioFrameContext)로 전달된 [**ProcessAudioFrameContext**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicaudioeffect.processframe)의 [**InputFrame**](https://docs.microsoft.com/uwp/api/windows.media.effects.processaudioframecontext.outputframe) 오디오 버퍼에 기록한다고 시스템에 알립니다. 
 
 [!code-cs[UseInputFrameForOutput](./code/AudioGraph/AudioEffectComponent/ExampleAudioEffect.cs#SnippetUseInputFrameForOutput)]
 
@@ -130,7 +130,7 @@ TimeIndependent[**TimeIndependent**](https://docs.microsoft.com/uwp/api/windows.
 [!code-cs[UsingAudioEffectComponent](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetUsingAudioEffectComponent)]
 
 ### <a name="add-your-custom-effect-to-an-audiograph-node"></a>AudioGraph 노드에 사용자 지정 효과 추가
-오디오 그래프를 사용하는 방법에 대한 일반적인 내용은 [오디오 그래프](audio-graphs.md)를 참조하세요. 다음 코드 조각은 이 문서에 나오는 에코 효과 예제를 오디오 그래프 노드에 추가하는 방법을 보여 줍니다. 먼저 효과에서 정의한 대로 [**PropertySet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.PropertySet)이 만들어지고 **Mix** 속성에 대한 값이 설정됩니다. 다음으로 [**AudioEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.AudioEffectDefinition) 생성자가 호출되어 사용자 지정 효과 유형 및 속성 집합의 전체 클래스 이름에 전달합니다. 마지막으로 효과 정의가 기존 [**FileInputNode**](https://docs.microsoft.com/uwp/api/windows.media.audio.createaudiofileinputnoderesult.fileinputnode)의 [**EffectDefinitions**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiofileinputnode.effectdefinitions) 속성에 추가되어 이로 인해 방출된 오디오가 사용자 지정 효과로 처리됩니다. 
+오디오 그래프를 사용하는 방법에 대한 일반적인 내용은 [오디오 그래프](audio-graphs.md)를 참조하세요. 다음 코드 조각은 이 문서에 나오는 에코 효과 예제를 오디오 그래프 노드에 추가하는 방법을 보여 줍니다. 먼저 효과에서 정의한 대로 [**PropertySet**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.PropertySet)이 만들어지고 **Mix** 속성에 대한 값이 설정됩니다. 다음으로 [**AudioEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.AudioEffectDefinition) 생성자가 호출되어 사용자 지정 효과 유형 및 속성 집합의 전체 클래스 이름에 전달합니다. 마지막으로 효과 정의가 기존 [**FileInputNode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiofileinputnode.effectdefinitions)의 [**EffectDefinitions**](https://docs.microsoft.com/uwp/api/windows.media.audio.createaudiofileinputnoderesult.fileinputnode) 속성에 추가되어 이로 인해 방출된 오디오가 사용자 지정 효과로 처리됩니다. 
 
 [!code-cs[AddCustomEffect](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetAddCustomEffect)]
 
@@ -145,9 +145,9 @@ TimeIndependent[**TimeIndependent**](https://docs.microsoft.com/uwp/api/windows.
 
 
 ## <a name="related-topics"></a>관련 항목
-* [Simple camera preview access](simple-camera-preview-access.md)
+* [간단한 카메라 미리 보기 액세스](simple-camera-preview-access.md)
 * [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)
-* [Win2D documentation](https://microsoft.github.io/Win2D/html/Introduction.htm)
+* [Win2D 설명서](https://microsoft.github.io/Win2D/html/Introduction.htm)
 * [미디어 재생](media-playback.md)
 
  

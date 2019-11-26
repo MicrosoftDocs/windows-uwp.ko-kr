@@ -1,5 +1,5 @@
 ---
-Description: Use visual feedback to show users when their interactions with a UWP app are detected, interpreted, and handled.
+Description: 시각적 피드백을 사용 하 여 UWP 앱과의 상호 작용이 검색, 해석 및 처리 될 때 사용자를 표시 합니다.
 title: 시각적 피드백
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
@@ -40,7 +40,7 @@ ms.locfileid: "74257907"
 > [!Important]
 > 기본 제공 제스처의 조작 동작은 변경하지 않는 것이 좋습니다.
 
-**Feedback Across Devices**
+**장치 간 피드백**
 
 시각적 피드백은 일반적으로 입력 디바이스(터치, 터치 패드, 마우스, 펜/스타일러스, 키보드 등)에 따라 달라집니다. 예를 들어 마우스에 대한 기본 제공 피드백은 대체로 커서 이동 및 변경인 반면 터치와 펜에는 접촉 시각화가 필요하고 키보드 입력 및 탐색은 포커스 사각형과 강조 표시를 사용합니다.
 
@@ -62,10 +62,10 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 
 ## <a name="color-branding--customizing"></a>색 브랜딩 및 사용자 지정
 
-**Border Properties**
+**테두리 속성**
 
 높은 가시성 포커스 화면 효과는 기본 테두리와 보조 테두리의 두 부분으로 이루어져 있습니다. 기본 테두리는 **2px** 두께이고 보조 테두리 *외부*에서 실행됩니다. 보조 테두리는 **1px** 두께이고 기본 테두리 *내부*에서 실행됩니다.
-![High visibility focus visual redlines](images/FocusRectRedlines.png)
+![높은 시각적 표시 시각적 레드라인](images/FocusRectRedlines.png)
 
 테두리 유형(기본 또는 보조)의 두께를 변경하려면 각각 **FocusVisualPrimaryThickness** 또는 **FocusVisualSecondaryThickness**를 사용합니다.
 ```XAML
@@ -73,7 +73,7 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 ```
 ![높은 가시성 포커스 화면 효과 여백 두께](images/FocusMargin.png)
 
-여백은 [**Thickness**](https://docs.microsoft.com/dotnet/api/system.windows.thickness) 형식의 속성이므로 컨트롤의 특정 측면에만 표시되도록 사용자 지정할 수 있습니다. See below: ![High visibility focus visual margin thickness bottom only](images/FocusThicknessSide.png)
+여백은 [**Thickness**](https://docs.microsoft.com/dotnet/api/system.windows.thickness) 형식의 속성이므로 컨트롤의 특정 측면에만 표시되도록 사용자 지정할 수 있습니다. 아래를 참조 하세요. ![높은 표시 유형 포커스 시각적 여백 두께 아래쪽만](images/FocusThicknessSide.png)
 
 여백은 컨트롤의 시각적 범위와 포커스 화면 효과 *보조 테두리* 시작 부분 사이의 간격입니다. 기본 여백은 컨트롤 범위에서 **1px**입니다. **FocusVisualMargin** 속성을 변경하여 컨트롤별로 이 여백을 편집할 수 있습니다.
 ```XAML
@@ -81,7 +81,7 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 ```
 ![높은 가시성 포커스 화면 효과 여백 차이](images/FocusPlusMinusMargin.png)
 
-*A negative margin will push the border away from the center of the control, and a positive margin will move the border closer to the center of the control.*
+*음수를 조정 하면 컨트롤의 중심에서 테두리가 사라지고 양수 여백이 면 테두리를 컨트롤의 가운데 가까이 이동 합니다.*
 
 컨트롤의 포커스 화면 효과를 완전히 끄려면 **UseSystemFocusVisuals**를 사용하지 않도록 설정하면 됩니다.
 ```XAML
@@ -90,7 +90,7 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 
 두께, 여백 또는 앱 개발자가 포커스 화면 효과를 사용할지 여부는 컨트롤별로 결정됩니다.
 
-**Color Properties**
+**색 속성**
 
 포커스 화면 효과에는 기본 테두리 색과 보조 테두리 색의 두 가지 색 속성만 있습니다. 이러한 포커스 화면 효과 테두리 색은 페이지 수준에서 컨트롤별로 변경하거나 앱 수준에서 전체적으로 변경할 수 있습니다.
 
@@ -109,26 +109,26 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 ## <a name="related-articles"></a>관련 문서
 
 **디자이너용**
-* [Guidelines for panning](guidelines-for-panning.md)
+* [패닝에 대 한 지침](guidelines-for-panning.md)
 
 **개발자용**:
-* [Custom user interactions](https://docs.microsoft.com/windows/uwp/design/layout/index)
+* [사용자 지정 사용자 조작](https://docs.microsoft.com/windows/uwp/design/layout/index)
 
 **샘플**
-* [Basic input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-* [Low latency input sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
-* [User interaction mode sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+* [기본 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+* [짧은 대기 시간 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+* [사용자 상호 작용 모드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
 * [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
-**Archive samples**
-* [Input: XAML user input events sample](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
-* [Input: Device capabilities sample](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
-* [Input: Touch hit testing sample](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
-* [XAML scrolling, panning, and zooming sample](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
-* [Input: Simplified ink sample](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
-* [Input: Windows 8 gestures sample](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
-* [Input: Manipulations and gestures (C++) sample](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
-* [DirectX touch input sample](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
+**보관 샘플**
+* [Input: XAML 사용자 입력 이벤트 샘플](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
+* [입력: 장치 기능 샘플](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
+* [입력: 터치 적중 테스트 샘플](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
+* [XAML 스크롤, 패닝 및 확대/축소 샘플](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+* [입력: 간소화 된 잉크 샘플](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
+* [입력: Windows 8 제스처 샘플](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+* [Input: 조작과 제스처 (C++) 샘플](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
+* [DirectX touch 입력 샘플](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
  
 
  

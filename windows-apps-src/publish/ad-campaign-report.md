@@ -70,7 +70,7 @@ ms.locfileid: "74260071"
 결과적으로, 앱 설치 추적은 광고 캠페인으로 생성된 실제 설치 수보다 적게 보고할 수 있습니다. 파트너 센터의 [구매](acquisitions-report.md) 보고서에는 앱에 대 한 총 설치 수 (캠페인을 통해)를 볼 수 있습니다.
 
 
-## <a name="account-billing-history"></a>계정 청구 기록
+## <a name="account-billing-history"></a>계정 청구 내역
 
 계정과 관련된 모든 광고 캠페인 거래를 보려면 왼쪽 탐색 메뉴에서 **청구 내역**을 선택합니다.
 

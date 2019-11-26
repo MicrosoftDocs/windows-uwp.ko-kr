@@ -25,7 +25,7 @@ ms.locfileid: "74258217"
 > **중요 API**: [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input), [**Windows.UI.Core**](https://docs.microsoft.com/uwp/api/Windows.UI.Core), [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)
 
 
-여러 디바이스에, 입력으로 하나 이상의 손가락을 사용(또는 터치 접촉)하여 지원하는 멀티 터치 화면이 있습니다. 터치 접촉과 해당 움직임은 터치 제스처 및 조작으로 해석되어 다양한 사용자 조작을 지원합니다.
+여러 장치에는 입력으로 하나 이상의 손가락을 사용(또는 터치 접촉)하여 지원하는 멀티 터치 화면이 있습니다. 터치 접촉과 해당 움직임은 터치 제스처 및 조작으로 해석되어 다양한 사용자 조작을 지원합니다.
 
 UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다양한 메커니즘이 많이 포함되어 있으므로, 최종 사용자가 자신 있게 이용할 수 있는 몰입형 환경을 만들 수 있습니다. 본 문서는 UWP 앱에서 터치식 입력을 사용하는 기본 사항을 설명합니다.
 
@@ -174,7 +174,7 @@ UWP(유니버설 Windows 플랫폼)에는 터치식 입력을 처리하는 다�
 ## <a name="custom-touch-interactions"></a>사용자 지정 터치 조작
 
 
-조작 지원을 직접 구현할 경우 사용자들은 앱의 UI 요소와의 직접적 조작이 이루어지는 직관적인 환경을 기대한다는 점에 유의하세요. 플랫폼 컨트롤 라이브러리에서 항목이 일관되고 검색 가능하도록 사용자 지정 조작을 모델링하는 것이 좋습니다. 이러한 라이브러리의 컨트롤은 표준 조작, 애니메이션 효과를 준 물리적 효과, 시각적 피드백 및 접근성을 비롯하여 사용자 조작 환경 전체를 제공합니다. 요구 사항이 명확하게 잘 정의되어 있으며 기본 제스처가 시나리오를 지원하지 않는 경우에만 사용자 지정 조작을 만드세요.
+고유한 조작 지원을 구현하는 경우 사용자들은 앱의 UI 요소를 직접 조작하는 직관적인 환경을 기대한다는 것에 유의하세요. 플랫폼 컨트롤 라이브러리에서 항목이 일관되고 검색 가능하도록 사용자 지정 조작을 모델링하는 것이 좋습니다. 이러한 라이브러리의 컨트롤은 표준 조작, 애니메이션 효과를 준 물리적 효과, 시각적 피드백 및 접근성을 비롯하여 사용자 조작 환경 전체를 제공합니다. 요구 사항이 명확하게 잘 정의되어 있으며 기본 제스처가 시나리오를 지원하지 않는 경우에만 사용자 지정 조작을 만드세요.
 
 사용자 지정 터치 지원을 제공하기 위해 다양한 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 이벤트를 처리할 수 있습니다. 이러한 이벤트는 세 가지의 추상화 수준으로 그룹화됩니다.
 
@@ -226,8 +226,8 @@ For more info about gestures, manipulations, and interactions, see [Custom user 
 |----------------------------------------------------------------------|---------------------------------------------------------------|
 | [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed)             | 한 손가락으로 화면을 터치하는 경우 발생합니다.               |
 | [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)           | 해당하는 동일 터치 접촉을 떼면 발생합니다.                |
-| [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved)                 | 포인터를 화면에서 끌 때 발생합니다.         |
-| [**PointerEntered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered)             | 포인터가 요소의 적중 횟수 테스트 범위에 들어갈 때 발생합니다. |
+| [**PointerMoved 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved)                 | 포인터를 화면에서 끌 때 발생합니다.         |
+| [**PointerEntered 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered)             | 포인터가 요소의 적중 횟수 테스트 범위에 들어갈 때 발생합니다. |
 | [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited)               | 포인터가 요소의 적중 횟수 테스트 범위를 벗어날 때 발생합니다.  |
 | [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled)           | 터치 접촉이 비정상적으로 손실될 때 발생합니다.               |
 | [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost)     | 다른 요소에 의해 포인터 캡처가 수행될 때 발생합니다.    |
@@ -420,7 +420,7 @@ End Sub
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | [**System.windows.uielement.manipulationstarting> 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting)                                   | 조작 프로세서가 처음 만들어질 때 발생 합니다.                                                                                  |
 | [**System.windows.uielement.manipulationstarted> 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted)                                     | 입력 디바이스가 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)에 대한 조작을 시작할 때 발생합니다.                                            |
-| [**System.windows.uielement.manipulationdelta> 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta)                                         | 입력된 장치 위치를 조작 하는 동안 변경 될 때 발생 합니다.                                                                      |
+| [**System.windows.uielement.manipulationdelta> 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta)                                         | 입력 디바이스가 조작 중에 위치를 바꿀 때 발생합니다.                                                                      |
 | [**System.windows.uielement.manipulationinertiastarting> 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationinertiastartingevent)                | 조작하는 동안 입력 디바이스와 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 개체의 연결이 끊어지고 관성이 시작될 때 발생합니다. |
 | [**System.windows.uielement.manipulationcompleted> 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted)                                 | [  **UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)에 대한 조작 및 관성이 완료될 때 발생합니다.                                          |
 | [**ManipulationStartingRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs)               | [  **ManipulationStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting) 이벤트에 대한 데이터를 제공합니다.                                         |

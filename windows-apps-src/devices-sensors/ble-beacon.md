@@ -18,7 +18,7 @@ ms.locfileid: "74259684"
 
 **중요 API**
 
--   [**Windows.Devices.Bluetooth.Advertisement**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement)
+-   [**Windows. 장치.** ](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement)
 
 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱용 Bluetooth LE(저에너지) 광고 비콘의 개요를 제공합니다.  
 

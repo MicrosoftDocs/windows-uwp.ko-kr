@@ -17,7 +17,7 @@ ms.locfileid: "74254999"
 
 이 항목에서는 사용자가 SMS 메시지를 보낼 수 있도록 SMS 작성 대화 상자를 시작하는 방법을 보여 줍니다. 대화 상자를 표시하기 전에 SMS 필드에 데이터를 미리 채울 수 있습니다. 메시지는 사용자가 보내기 단추를 탭할 때까지 전송되지 않습니다.
 
-To call this code, declare the **chat**, **smsSend**, and **chatSystem** capabilities in your package manifest. These are [restricted capabilities](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) but you can use them in your app. You need approval only if you intend to publish your app to the Store. See [Account types, locations, and fees](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees).
+이 코드를 호출 하려면 패키지 매니페스트에서 **채팅**, **Smssend**및 기타 **시스템** 기능을 선언 합니다. 이러한 [기능은 제한](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations#special-and-restricted-capabilities) 되어 있지만 앱에서 사용할 수 있습니다. 스토어에 앱을 게시 하려는 경우에만 승인이 필요 합니다. [계정 유형, 위치 및 요금](https://docs.microsoft.com/windows/uwp/publish/account-types-locations-and-fees)을 참조 하세요.
 
 ## <a name="launch-the-compose-sms-dialog"></a>SMS 작성 대화 상자 시작
 
@@ -52,7 +52,7 @@ private async void ComposeSms(Windows.ApplicationModel.Contacts.Contact recipien
 }
 ```
 
-You can use the following code to determine whether the device that is running your app is able to send SMS messages.
+다음 코드를 사용 하 여 앱을 실행 하는 장치에서 SMS 메시지를 보낼 수 있는지 여부를 확인할 수 있습니다.
 
 ```csharp
 if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.ApplicationModel.Chat"))

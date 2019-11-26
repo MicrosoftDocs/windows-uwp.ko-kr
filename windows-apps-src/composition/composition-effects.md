@@ -27,11 +27,11 @@ ms.locfileid: "74255899"
 
 ## <a name="effect-features"></a>효과 기능
 
-- [Effect Library](./composition-effects.md#effect-library)
-- [Chaining Effects](./composition-effects.md#chaining-effects)
-- [Animation Support](./composition-effects.md#animation-support)
-- [Constant vs. Animated Effect Properties](./composition-effects.md#constant-vs-animated-effect-properties)
-- [Multiple Effect Instances with Independent Properties](./composition-effects.md#multiple-effect-instances-with-independent-properties)
+- [효과 라이브러리](./composition-effects.md#effect-library)
+- [연결 효과](./composition-effects.md#chaining-effects)
+- [애니메이션 지원](./composition-effects.md#animation-support)
+- [상수와 애니메이션 효과 속성 비교](./composition-effects.md#constant-vs-animated-effect-properties)
+- [독립적인 속성이 있는 여러 효과 인스턴스](./composition-effects.md#multiple-effect-instances-with-independent-properties)
 
 ### <a name="effect-library"></a>효과 라이브러리
 
@@ -54,7 +54,7 @@ ms.locfileid: "74255899"
 | 세피아                | 이미지를 세피아 톤으로 변환합니다.                                                                                                                                                                                          |
 | 온도 및 색조 | 이미지의 온도 및/또는 색조를 조정합니다.                                                                                                                                                                           |
 
-자세한 내용은 Win2D의 [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) 네임스페이스를 참조하세요. Effects not supported in composition are noted as \[NoComposition\].
+자세한 내용은 Win2D의 [Microsoft.Graphics.Canvas.Effects](https://microsoft.github.io/Win2D/html/N_Microsoft_Graphics_Canvas_Effects.htm) 네임스페이스를 참조하세요. 컴퍼지션에서 지원 되지 않는 효과는 NoComposition\]\[으로 표시 됩니다.
 
 ### <a name="chaining-effects"></a>효과 연결
 
@@ -133,12 +133,12 @@ catEffect.Properties.StartAnimation("saturationEffect.Saturation", effectAnimati
 
 이 빠른 시작 자습서는 효과의 몇 가지 기본적인 기능의 사용 방법을 보여줍니다.
 
-- [Installing Visual Studio](./composition-effects.md#installing-visual-studio)
-- [Creating a new project](./composition-effects.md#creating-a-new-project)
-- [Installing Win2D](./composition-effects.md#installing-win2d)
-- [Setting your Composition Basics](./composition-effects.md#setting-your-composition-basics)
-- [Creating a CompositionSurface Brush](./composition-effects.md#creating-a-compositionsurface-brush)
-- [Creating, Compiling and Applying Effects](./composition-effects.md#creating-compiling-and-applying-effects)
+- [Visual Studio 설치](./composition-effects.md#installing-visual-studio)
+- [새 프로젝트 만들기](./composition-effects.md#creating-a-new-project)
+- [Win2D 설치](./composition-effects.md#installing-win2d)
+- [컴퍼지션 기본 설정](./composition-effects.md#setting-your-composition-basics)
+- [CompositionSurface 브러시 만들기](./composition-effects.md#creating-a-compositionsurface-brush)
+- [효과 생성, 컴파일 및 적용](./composition-effects.md#creating-compiling-and-applying-effects)
 
 ### <a name="installing-visual-studio"></a>Visual Studio 설치
 
@@ -235,14 +235,14 @@ LoadImage(surfaceBrush);
 
 ![흐릿한 이미지](images/composition-cat-desaturated.png)
 
-## <a name="more-information"></a>자세한 정보
+## <a name="more-information"></a>추가 정보
 
-- [Microsoft – Composition GitHub](https://github.com/microsoft/WindowsCompositionSamples)
-- [**Windows.UI.Composition**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
-- [Windows Composition team on Twitter](https://twitter.com/wincomposition)
-- [Composition Overview](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
-- [Visual Tree Basics](composition-visual-tree.md)
-- [Composition Brushes](composition-brushes.md)
+- [Microsoft-컴퍼지션 GitHub](https://github.com/microsoft/WindowsCompositionSamples)
+- [**Windows. UI. 컴퍼지션**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition)
+- [Twitter의 Windows 컴퍼지션 팀](https://twitter.com/wincomposition)
+- [컴퍼지션 개요](https://blogs.windows.com/buildingapps/2015/12/08/awaken-your-creativity-with-the-new-windows-ui-composition/)
+- [시각적 트리 기본 사항](composition-visual-tree.md)
+- [컴퍼지션 브러시](composition-brushes.md)
 - [XamlCompositionBrushBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)
-- [Animation Overview](composition-animation.md)
-- [Composition native DirectX and Direct2D interoperation with BeginDraw and EndDraw](composition-native-interop.md)
+- [애니메이션 개요](composition-animation.md)
+- [BeginDraw 및 EndDraw를 사용한 컴퍼지션 네이티브 DirectX 및 Direct2D 상호 운용성](composition-native-interop.md)

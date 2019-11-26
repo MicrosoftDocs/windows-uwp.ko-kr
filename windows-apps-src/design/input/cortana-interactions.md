@@ -29,14 +29,14 @@ Cortana 기능 및 서비스에 대한 모든 개발자 설명서는 이제 [Cor
 
 ## <a name="related-articles"></a>관련 문서
 
-* [**VCD elements and attributes v1.2**](https://docs.microsoft.com/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2)
+* [**VCD 요소 및 특성 v 1.2**](https://docs.microsoft.com/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2)
 
-**Designers**
+**디자이너**
 * [음성 디자인 지침](speech-interactions.md)
-* [Cortana design guidelines for voice commands](https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines)
+* [음성 명령의 Cortana 디자인 지침](https://docs.microsoft.com/cortana/voice-commands/voicecommand-design-guidelines)
 
 **샘플**
-* [Cortana voice command sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CortanaVoiceCommand)
+* [Cortana 음성 명령 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CortanaVoiceCommand)
  
 
  

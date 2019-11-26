@@ -22,12 +22,12 @@ LOB 앱을 스토어에서 광범위하게 사용할 수 있도록 하지 않고
 > 지금은 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 통해 무료 앱만 독점적으로 엔터프라이즈에 배포할 수 있습니다. LOB로 유료 앱을 제출하는 경우 엔터프라이즈에서 사용할 수 없습니다. 
 
 > [!IMPORTANT]
-> [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 LOB 앱을 엔터프라이즈에 직접 게시할 수 없습니다. All submissions for LOB apps must be published through Partner Center.
+> [Microsoft Store 제출 API](../monetize/create-and-manage-submissions-using-windows-store-services.md)를 사용하여 LOB 앱을 엔터프라이즈에 직접 게시할 수 없습니다. LOB 앱에 대 한 모든 제출은 파트너 센터를 통해 게시 되어야 합니다.
 
 
 ## <a name="set-up-the-enterprise-association"></a>엔터프라이즈 연결 설정
 
-LOB 앱을 엔터프라이즈에 독점적으로 게시하는 첫 번째 단계는 계정과 엔터프라이즈의 개인 저장소 간에 연결을 설정하는 것입니다.
+LOB 앱을 엔터프라이즈에 독점적으로 게시하는 첫 번째 단계는 계정과 엔터프라이즈의 프라이빗 저장소 간에 연결을 설정하는 것입니다.
 
 > [!IMPORTANT]
 > 이 연결 프로세스는 엔터프라이즈에 의해 시작되어야 하고 개발자 계정을 만들 때 사용한 Microsoft 계정과 연결된 메일 주소를 사용해야 합니다. 자세한 내용은 [기간 업무 앱 작업](https://docs.microsoft.com/microsoft-store/working-with-line-of-business-apps)을 참조하세요.
@@ -68,7 +68,7 @@ LOB 앱의 경우 제출 프로세스의 [연령별 등급](age-ratings.md) 단�
 
 ## <a name="enterprise-deployment-of-lob-apps"></a>LOB 앱의 엔터프라이즈 배포
 
-**스토어에 제출**을 클릭한 후 앱이 인증 프로세스를 거칩니다. 준비가 되면 엔터프라이즈 관리자가 해당 앱을 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어 포털의 개인 저장소에 추가해야 합니다. 이제 엔터프라이즈에서 사용자에게 앱을 배포할 수 있습니다.
+**스토어에 제출**을 클릭한 후 앱이 인증 프로세스를 거칩니다. 준비가 되면 엔터프라이즈 관리자가 해당 앱을 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어 포털의 개인 저장소에 추가해야 합니다. 그런 다음 엔터프라이즈에서 사용자에게 앱을 배포할 수 있습니다.
 
 > [!NOTE]
 > LOB 앱을 가져오려면 조직이 [지원 시장](https://docs.microsoft.com/windows/whats-new/windows-store-for-business-overview#supported-markets)에 위치해 있어야 하며, 앱을 제출할 때 [해당 시장을 제외](define-pricing-and-market-selection.md)하지 않아야 합니다. 
@@ -92,7 +92,7 @@ LOB 앱의 경우 제출 프로세스의 [연령별 등급](age-ratings.md) 단�
 
 비즈니스용 Microsoft 스토어와 교육용 Microsoft 스토어를 통해 엔터프라이즈가 앱을 사용할 수 있도록 하면 앱이 스토어에서 서명되었고 표준 스토어 정책을 준수함을 보장할 수 있습니다.
 
-In some cases, companies may not want their LOB apps to be submitted through Partner Center (such as for compliance reasons or for apps that need additional capabilities). 이 경우 엔터프라이즈에서 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 사용하지 않고 테스트용 로드를 통해 컴퓨터에 직접 앱을 배포할 수 있습니다.
+경우에 따라 회사는 파트너 센터 (예: 규정 준수 이유 또는 추가 기능이 필요한 앱)를 통해 LOB 앱을 제출 하지 않으려고 할 수 있습니다. 이 경우 엔터프라이즈에서 비즈니스용 Microsoft 스토어나 교육용 Microsoft 스토어를 사용하지 않고 테스트용 로드를 통해 컴퓨터에 직접 앱을 배포할 수 있습니다.
 
 자세한 내용은 [Windows 10에서 LOB 앱을 테스트용으로 로드](https://docs.microsoft.com/windows/application-management/sideload-apps-in-windows-10)를 참조하세요.
 

@@ -19,13 +19,13 @@ ms.locfileid: "74257828"
 
 앱을 인증 하기 위해 [Windows 인증](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) 을 받거나 [Microsoft Store 게시](https://docs.microsoft.com/windows/uwp/publish/app-submissions)를 위해 준비 하려면 먼저 로컬에서 유효성을 검사 하 고 테스트 해야 합니다. 이 항목에서는 [Windows 앱 인증 키트](https://msdn.microsoft.com/en-US/windows/apps/bg127575) 를 설치 하 고 실행 하 여 앱이 안전 하 고 효율적인 지 확인 하는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 유니버설 Windows 앱을 테스트하기 위한 필수 구성 요소:
 
 -   Windows 10을 설치 하 고 실행 해야 합니다.
 -   Windows 10 용 windows SDK (소프트웨어 개발 키트)에 포함 된 [Windows 앱 인증 키트 버전 10]( https://go.microsoft.com/fwlink/p/?LinkID=309666)을 설치 해야 합니다.
--   [개발을 위해 디바이스를 사용](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)하도록 설정해야 합니다.
+-   [디바이스를 개발에 사용하도록 설정](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)해야 합니다.
 -   테스트할 Windows 앱을 컴퓨터에 배포해야 합니다.
 
 **현재 위치의 업그레이드에 대 한 참고 사항**

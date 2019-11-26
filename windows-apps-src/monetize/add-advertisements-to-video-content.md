@@ -24,7 +24,7 @@ ms.locfileid: "74260353"
 
 비디오 콘텐츠의 광고는 프로그램이 10분 이내(짧은 양식)인지 또는 10분을 초과(긴 양식)하는지에 따라 다릅니다. 후자는 서비스에 설정하기가 더 복잡하지만 실제로는 클라이언트 쪽 코드를 작성하는 방법에서 차이가 없습니다. **AdScheduler**가 매니페스트 대신에 단일 광고가 있는 VAST 페이로드를 받는 경우 매니페스트에서 단일 프리롤 광고를 요구한 것처럼 처리됩니다(00:00 시점에 한 번 중단).
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 * Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)를 설치합니다.
 

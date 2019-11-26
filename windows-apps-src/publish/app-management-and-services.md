@@ -1,5 +1,5 @@
 ---
-Description: Manage and view details related to each of your apps in Partner Center, and configure services such as A/B testing and maps.
+Description: 파트너 센터에서 각 앱과 관련 된 세부 정보를 관리 하 고 보고 A/B 테스트 및 맵과 같은 서비스를 구성 합니다.
 title: 앱 관리 및 서비스
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
 ms.date: 03/21/2019
@@ -15,9 +15,9 @@ ms.locfileid: "74260035"
 ---
 # <a name="app-management-and-services"></a>앱 관리 및 서비스
 
-You can manage and view details related to each of your apps in [Partner Center](https://partner.microsoft.com/dashboard), and configure services such as notifications, A/B testing, and maps.
+[파트너 센터](https://partner.microsoft.com/dashboard)에서 각 앱과 관련 된 세부 정보를 관리 하 고 볼 수 있으며 알림, A/B 테스트, 지도 등의 서비스를 구성할 수 있습니다.
 
-When working with an app in Partner Center, you'll see sections in the left navigation menu for **Services** and **App management**. 이들 섹션을 확장하여 아래 설명된 기능에 액세스할 수 있습니다.
+파트너 센터에서 앱을 사용 하는 경우 **서비스** 및 **앱 관리**의 왼쪽 탐색 메뉴에 섹션이 표시 됩니다. 이들 섹션을 확장하여 아래 설명된 기능에 액세스할 수 있습니다.
 
 ## <a name="services"></a>서비스
 
@@ -25,9 +25,9 @@ When working with an app in Partner Center, you'll see sections in the left navi
 
 ## <a name="xbox-live"></a>Xbox Live
 
-If you are publishing a game, you can enable the [Xbox Live Creators Program](https://www.xbox.com/developers/creators-program) on this page. This lets you start configuring and testing Xbox Live features, and eventually publish your Xbox Live Creators Program game.
+게임을 게시 하는 경우이 페이지에서 [Xbox Live 크리에이터 프로그램](https://www.xbox.com/developers/creators-program) 을 사용 하도록 설정할 수 있습니다. 그러면 Xbox Live 기능 구성 및 테스트를 시작 하 고, 궁극적으로 Xbox Live 크리에이터 프로그램 게임을 게시할 수 있습니다.
 
-For more info, see [Get started with the Xbox Live Creators Program](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators) and [Create a new Xbox Live Creators Program title and publish to the test environment](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/create-and-test-a-new-creators-title).
+자세한 내용은 [Xbox Live 크리에이터 프로그램 시작](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators) 및 [새 Xbox live 크리에이터 프로그램 제목 만들기 및 테스트 환경에 게시](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/create-and-test-a-new-creators-title)를 참조 하세요.
 
 ## <a name="experimentation"></a>실험
 
@@ -37,21 +37,21 @@ For more info, see [Get started with the Xbox Live Creators Program](https://doc
 
 ## <a name="maps"></a>맵
 
-Windows 10 또는 Windows 8.x를 대상으로 하는 앱에서 지도 서비스를 사용하려면 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)를 방문하세요. For info about how to request a maps authentication key from the Bing Maps Developer Center and add it to your app, see [Request a maps authentication key](../maps-and-location/authentication-key.md) for more info. 
+Windows 10 또는 Windows 8.x를 대상으로 하는 앱에서 지도 서비스를 사용하려면 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)를 방문하세요. Bing Maps 개발자 센터에서 지도 인증 키를 요청 하 고 앱에 추가 하는 방법에 대 한 자세한 내용은 [맵 인증 키 요청](../maps-and-location/authentication-key.md) 을 참조 하세요. 
 
-Use the **Maps** page only for previously-published apps for Windows Phone 8.1 and earlier. To use map services in these apps, you'll need to request a map service application ID and a token to include in your app's code. When you click **Get token**, we'll generate a Map service Application ID (**ApplicationID**) and Map service Authentication Token (**AuthenticationToken**) for your app. Be sure to add these values to your code before you package and submit your app. 자세한 내용은 [지도 컨트롤을 페이지에 추가하는 방법(Windows Phone 8.1)](https://docs.microsoft.com/previous-versions/windows/apps/jj207033(v=vs.105)?redirectedfrom=MSDN)을 참조하세요.
+이전에 게시 된 앱에 대해서만 **맵** 페이지를 사용 하 Windows Phone 8.1 이전 버전을 사용 합니다. 이러한 앱에서 map services를 사용 하려면 응용 프로그램 코드에 포함할 map service 응용 프로그램 ID와 토큰을 요청 해야 합니다. **토큰 가져오기**를 클릭 하면 앱에 대 한 맵 서비스 응용 프로그램 ID (**ApplicationID**) 및 맵 서비스 인증 토큰 (**authenticationtoken**)이 생성 됩니다. 앱을 패키지 하 고 제출 하기 전에 이러한 값을 코드에 추가 해야 합니다. 자세한 내용은 [지도 컨트롤을 페이지에 추가하는 방법(Windows Phone 8.1)](https://docs.microsoft.com/previous-versions/windows/apps/jj207033(v=vs.105)?redirectedfrom=MSDN)을 참조하세요.
 
 ## <a name="product-collections-and-purchases"></a>제품 컬렉션 및 구입
 
-To use the Microsoft Store collection API and the Microsoft Store purchase API to access ownership information for apps and add-ons, you need to enter the associated Azure AD client IDs here. 변경 사항이 적용되려면 최대 16시간까지 걸릴 수도 있습니다.
+Microsoft Store 컬렉션 API 및 Microsoft Store 구매 API를 사용 하 여 앱 및 추가 기능에 대 한 소유권 정보에 액세스 하려면 여기에 연결 된 Azure AD 클라이언트 Id를 입력 해야 합니다. 변경 사항이 적용되려면 최대 16시간까지 걸릴 수도 있습니다.
 
 자세한 내용은 [서비스에서 제품 권리 유형 관리](../monetize/view-and-grant-products-from-a-service.md)를 참조하세요.
 
-## <a name="administrator-consent"></a>Administrator consent
+## <a name="administrator-consent"></a>관리자 동의
 
-If your product integrates with Azure AD and calls APIs that request either [application permissions or delegated permissions](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) that require administrator consent, enter your Azure AD Client ID here. This lets administrators who acquire the app for their organization grant consent for your product to act on behalf of all users in the tenant.
+제품이 Azure AD와 통합 되 고 [응용 프로그램 사용 권한 또는](https://developer.microsoft.com/graph/docs/concepts/permissions_reference) 관리자 동의가 필요한 위임 된 권한을 요청 하는 api를 호출 하는 경우 여기에 Azure AD 클라이언트 ID를 입력 합니다. 이렇게 하면 조직의 앱을 확보 하는 관리자는 테 넌 트의 모든 사용자를 대신 하 여 제품에 대 한 동의를 부여할 수 있습니다.
 
-For more info, see [Requesting consent for an entire tenant](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant).
+자세한 내용은 [전체 테 넌 트에 대 한 동의 요청](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#requesting-consent-for-an-entire-tenant)을 참조 하세요.
 
 ## <a name="app-management"></a>앱 관리
 
@@ -78,22 +78,22 @@ For more info, see [Requesting consent for an entire tenant](https://docs.micros
 
 각 패키지의 이름, 버전 및 아키텍처가 표시됩니다. **세부 정보**를 클릭하여 지원되는 언어, 앱 기능 및 파일 크기와 같은 추가 정보를 표시합니다. 각 패키지에 대해 표시되는 정보는 대상 운영 체제 및 기타 요소에 따라 다를 수 있습니다. 
 
-OEM 권한이 있는 개발자는 **현재 패키지** 페이지에서 [사전 설치 패키지를 생성](generate-preinstall-packages-for-oems.md)할 수도 있습니다.
+OEM 권한이 있는 개발자는 [현재 패키지](generate-preinstall-packages-for-oems.md) 페이지에서 **사전 설치 패키지를 생성**할 수도 있습니다.
 
 ## <a name="wnsmpns"></a>WNS/MPNS
 
-The **WNS/MPNS** section provides options to help you create and send notifications to your app's customers. 
+**WNS/MPNS** 섹션에서는 앱의 고객에 게 알림을 만들고 보내는 데 사용할 수 있는 옵션을 제공 합니다. 
 
 > [!TIP]
-> For UWP apps, we suggest using the **Notifications** feature in Partner Center. This feature lets you send notifications to all of your app's customers, or to a targeted subset of your Windows 10 customers who meet the criteria you’ve defined in a [customer segment](create-customer-segments.md). 자세한 내용은 [앱의 고객에게 알림 보내기](send-push-notifications-to-your-apps-customers.md)를 참조하세요.
+> UWP 앱의 경우 파트너 센터의 **알림** 기능을 사용 하는 것이 좋습니다. 이 기능을 사용 하면 모든 앱의 고객 또는 [고객 부문](create-customer-segments.md)에서 정의한 조건을 충족 하는 Windows 10 고객의 대상 하위 집합에 알림을 보낼 수 있습니다. 자세한 내용은 [앱의 고객에게 알림 보내기](send-push-notifications-to-your-apps-customers.md)를 참조하세요.
 
-Depending on your app's package type and its specific requirements, you can also use one of the following options: 
+앱의 패키지 형식 및 특정 요구 사항에 따라 다음 옵션 중 하나를 사용할 수도 있습니다. 
 
 -   **WNS(Windows 푸시 알림 서비스)** 를 통해 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. 자세한 내용은 [WNS(Windows 푸시 알림 서비스) 개요](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)를 참조하세요.
 
 -   **Microsoft Azure 모바일 앱**를 통해 푸시 알림을 보내고, 앱 사용자를 인증 및 관리하고, 앱 데이터를 클라우드에 저장할 수 있습니다. 자세한 내용은 [모바일 앱 설명서](https://docs.microsoft.com/azure/app-service-mobile/)를 참조하세요.
 
--   **Microsoft Push Notifications Service (MPNS)** can be used with previously published .xap packages for Windows Phone. 여기에서 구성을 하지 않고 제한적으로 인증되지 않은 알림을 보낼 수 있지만 대역폭 제한을 방지하려면 인증된 알림을 사용하는 것이 좋습니다. If you're using MPNS, you'll need to upload a certificate to the field provided on the **WNS/MPNS** page. 자세한 내용은 [Windows Phone 8에서 인증된 웹 서비스가 푸시 알림을 보내도록 설정](https://docs.microsoft.com/previous-versions/windows/apps/ff941099(v=vs.105)?redirectedfrom=MSDN)을 참조하세요.
+-   **MPNS (Microsoft 푸시 알림 서비스)** 는 Windows Phone에 대해 이전에 게시 된 xap 패키지와 함께 사용할 수 있습니다. 여기에서 구성을 하지 않고 제한적으로 인증되지 않은 알림을 보낼 수 있지만 대역폭 제한을 방지하려면 인증된 알림을 사용하는 것이 좋습니다. MPNS를 사용 하는 경우 **WNS/MPNS** 페이지에 제공 된 필드에 인증서를 업로드 해야 합니다. 자세한 내용은 [Windows Phone 8에서 인증된 웹 서비스가 푸시 알림을 보내도록 설정](https://docs.microsoft.com/previous-versions/windows/apps/ff941099(v=vs.105)?redirectedfrom=MSDN)을 참조하세요.
  
 
  

@@ -149,7 +149,7 @@ Windows 10부터 백그라운드 작업을 활용 하기 위해 사용자가 잠
 
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask)
-* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
+* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md).
 * [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)

@@ -19,6 +19,6 @@ UWP(유니버설 Windows 플랫폼) DirectX 앱을 시작, 일시 중단 및 다
 
 |항목|설명|
 |-|-|
-|[How to activate an app](how-to-activate-an-app-directx-and-cpp.md)|이 항목에서는 UWP DirectX 앱에 대한 활성화 환경을 정의하는 방법을 보여 줍니다.|
-|[How to suspend an app](how-to-suspend-an-app-directx-and-cpp.md)|이 항목에서는 시스템이 UWP DirectX 앱을 일시 중단할 때 중요한 시스템 상태 및 앱 데이터를 저장하는 방법을 보여 줍니다.|
-|[How to resume an app](how-to-resume-an-app-directx-and-cpp.md)|이 항목에서는 시스템이 UWP DirectX 앱을 다시 시작할 때 중요한 응용 프로그램 데이터를 복원하는 방법을 보여 줍니다.|
+|[앱을 활성화 하는 방법](how-to-activate-an-app-directx-and-cpp.md)|이 항목에서는 UWP DirectX 앱에 대한 활성화 환경을 정의하는 방법을 보여 줍니다.|
+|[앱을 일시 중단 하는 방법](how-to-suspend-an-app-directx-and-cpp.md)|이 항목에서는 시스템이 UWP DirectX 앱을 일시 중단할 때 중요한 시스템 상태 및 앱 데이터를 저장하는 방법을 보여 줍니다.|
+|[앱을 다시 시작 하는 방법](how-to-resume-an-app-directx-and-cpp.md)|이 항목에서는 시스템이 UWP DirectX 앱을 다시 시작할 때 중요한 응용 프로그램 데이터를 복원하는 방법을 보여 줍니다.|

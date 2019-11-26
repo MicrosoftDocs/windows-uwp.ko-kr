@@ -1,5 +1,5 @@
 ---
-Description: The Feedback report in Partner Center lets you see the problems, suggestions, and upvotes that your Windows 10 customers have submitted through Feedback Hub.
+Description: 파트너 센터의 사용자 의견 보고서를 사용 하면 Windows 10 고객이 피드백 허브를 통해 제출한 문제, 제안 및 투표를 확인할 수 있습니다.
 title: 피드백 보고서
 ms.assetid: 9EA8B456-CA57-40CE-A55B-7BFDC55CA8A8
 ms.date: 10/31/2018
@@ -15,19 +15,19 @@ ms.locfileid: "74259012"
 ---
 # <a name="feedback-report"></a>피드백 보고서
 
-The **Feedback report** in Partner Center lets you see the problems, suggestions, and upvotes that your Windows 10 customers have submitted through Feedback Hub. You can view this data in Partner Center, or export the data to view offline.
+파트너 센터의 **사용자 의견 보고서** 를 사용 하면 Windows 10 고객이 피드백 허브를 통해 제출한 문제, 제안 및 투표를 확인할 수 있습니다. 파트너 센터에서이 데이터를 보거나 오프 라인으로 볼 데이터를 내보낼 수 있습니다.
 
 > [!NOTE]
 > 이 보고서에서 직접 [피드백에 응답](respond-to-customer-feedback.md)하여 고객의 의견을 경청하고 있음을 고객에게 알릴 수도 있습니다.
 
 고객에게 앱에 대한 피드백을 제공하도록 권유하는 것은 고객이 가장 중요한 문제와 기능을 알게 하는 좋은 방법입니다. 고객이 직접 피드백을 보낼 수 있다는 사실을 알게 되면 스토어에서 해당 피드백을 부정적인 리뷰로 남길 가능성은 적습니다.
 
-[Microsoft Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK)의 피드백 API를 사용하여 고객이 [직접 앱에서 피드백 허브를 시작](../monetize/launch-feedback-hub-from-your-app.md)하도록 할 수 있습니다. 피드백 허브를 지원하는 Windows 10 장치에 앱을 다운로드한 모든 고객은 피드백 허브 앱을 사용하여 해당 피드백을 남길 수 있습니다. Because of this, you may see customer feedback in this report even if you have not specifically asked for feedback from within your app.
+[Microsoft Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK)의 피드백 API를 사용하여 고객이 [직접 앱에서 피드백 허브를 시작](../monetize/launch-feedback-hub-from-your-app.md)하도록 할 수 있습니다. 피드백 허브를 지원하는 Windows 10 장치에 앱을 다운로드한 모든 고객은 피드백 허브 앱을 사용하여 해당 피드백을 남길 수 있습니다. 따라서 앱 내에서 사용자 의견을 특별히 요청 하지 않은 경우에도이 보고서에 고객 피드백이 표시 될 수 있습니다.
 
-Feedback can also be helpful when using [package flighting](package-flights.md), since the **Feedback** report shows you the specific package that each customer had installed on their device when they left the feedback.
+사용자 **의견 보고서는** 사용자가 피드백을 받을 때 각 고객이 장치에 설치한 특정 패키지를 표시 하므로 [패키지 플 라이팅](package-flights.md)사용 하는 경우에도 도움이 될 수 있습니다.
 
 > [!TIP]
-> For a quick look at the reviews, ratings, and user feedback across all of your apps in the last 30 days, expand **Engage** in the left navigation menu and select **Reviews and feedback.** 
+> 최근 30 일 동안 모든 앱에서 리뷰, 등급 및 사용자 의견을 신속 하 게 확인 하려면 왼쪽 탐색 메뉴에서 **참여** 를 확장 하 고 **검토 및 피드백을 선택 합니다.** 
 
 
 ## <a name="apply-filters"></a>필터 적용
@@ -54,14 +54,14 @@ Feedback can also be helpful when using [package flighting](package-flights.md),
 - **인기 앱**: 최근 활동이 있는 피드백으로 시작하여 최근 7일 이내에 다른 고객이 찬성한 피드백을 표시합니다.
 - **최근**: 최근에 남겨진 피드백으로 시작하여 모든 피드백을 표시합니다.
 
-각 메모 옆에 피드백이 남겨진 날짜와 피드백 유형이 표시됩니다. You’ll also see the customer’s market, the specific package that was installed on the device they were using when they left the feedback, the type of that device, and **Windows Insider** if the customer submitting the feedback is a member of the Windows Insider program.
+각 메모 옆에 피드백이 남겨진 날짜와 피드백 유형이 표시됩니다. 또한 피드백을 제출 하는 고객이 Windows Insider program의 멤버인 경우 피드백을 남겨둘 때 사용 하 던 장치에 설치 된 특정 패키지, 고객의 시장, 해당 장치의 유형 및 **Windows 참가자** 가 표시 됩니다.
 
 [피드백에 응답](respond-to-customer-feedback.md)하기 위한 옵션도 여기에 표시됩니다.
 
 
 ## <a name="translating-feedback"></a>피드백 번역
 
-By default, feedback that was not written in your preferred language is translated for you. 필요하면 페이지 필터 근처 오른쪽 위에서 **번역 피드백** 확인란을 선택 취소하여 피드백 번역을 사용하지 않을 수 있습니다.
+기본적으로 기본 설정 언어로 작성 되지 않은 피드백은 사용자를 위해 번역 됩니다. 필요하면 페이지 필터 근처 오른쪽 위에서 **번역 피드백** 확인란을 선택 취소하여 피드백 번역을 사용하지 않을 수 있습니다.
 
 피드백은 자동 번역 시스템에 의해 번역되므로 번역 결과가 항상 정확하지는 않을 수 있습니다. 원본 텍스트를 번역과 비교하거나 다른 의미로 번역하고 싶은 경우를 대비해서 원본 텍스트가 제공됩니다.
 

@@ -109,7 +109,7 @@ m_accelerometer = Windows::Devices::Sensors::Accelerometer::GetDefault();
 
 ###  <a name="tracking-xbox-controller-input"></a>Xbox 컨트롤러 입력 추적
 
-현재 디바이스에 연결된 게임 패드를 추적하기 위해 **MarbleMazeMain**는 [Windows::Gaming::Input::Gamepad](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad) 개체 모음인 멤버 변수 **m_myGamepads**를 정의합니다. 생성자에서 다음과 같이 초기화됩니다.
+현재 디바이스에 연결된 게임 패드를 추적하기 위해 **MarbleMazeMain**는 **Windows::Gaming::Input::Gamepad** 개체 모음인 멤버 변수 [m_myGamepads](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad)를 정의합니다. 생성자에서 다음과 같이 초기화됩니다.
 
 ```cpp
 m_myGamepads = ref new Vector<Gamepad^>();
@@ -198,7 +198,7 @@ if (m_gamepad != nullptr)
 }
 ```
 
-**m_oldReading**을 통해 마지막 프레임에서 얻은 입력 판독값과 [Gamepad::GetCurrentReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad.GetCurrentReading)을 호출하여 얻은 **m_newReading**을 통한 최신 입력 판독값이 추적됩니다. 그리고 게임 패드의 현재 상태에 대한 정보가 포함된 [GamepadReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepadreading) 개체가 반환됩니다.
+**m_oldReading**을 통해 마지막 프레임에서 얻은 입력 판독값과 **Gamepad::GetCurrentReading**을 호출하여 얻은 [m_newReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad.GetCurrentReading)을 통한 최신 입력 판독값이 추적됩니다. 그리고 게임 패드의 현재 상태에 대한 정보가 포함된 [GamepadReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepadreading) 개체가 반환됩니다.
 
 방금 버튼을 눌렀는지 놓았는지 확인하려면 현재 프레임과 마지막 프레임에서의 버튼 판독값을 비교하는  **MarbleMazeMain::ButtonJustPressed** 및 **MarbleMazeMain::ButtonJustReleased**를 정의합니다. 이렇게 하면 단추를 계속 누르고 있을 때가 아니라 처음 누르거나 놓았을 때만 작업을 수행할 수 있습니다.
 
@@ -324,7 +324,7 @@ case GameState::InGamePaused:
 
 ### <a name="tracking-touch-and-mouse-input"></a>터치식 및 마우스 입력 추적
 
-터치식 및 마우스 입력의 경우 사용자가 터치하거나 클릭하면 메뉴 항목이 선택됩니다. 다음 예제에서는 **MarbleMazeMain::Update** 메서드가 포인터 입력을 처리하여 메뉴 항목을 선택하는 방법을 보여줍니다. The **m\_pointQueue** member variable tracks the locations where the user touched or clicked on the screen. Marble Maze가 포인터 입력을 수집하는 방법은 이 문서의 뒷부분에 있는 [포인터 입력 처리](#processing-pointer-input) 섹션에서 자세히 설명합니다.
+터치식 및 마우스 입력의 경우 사용자가 터치하거나 클릭하면 메뉴 항목이 선택됩니다. 다음 예제에서는 **MarbleMazeMain::Update** 메서드가 포인터 입력을 처리하여 메뉴 항목을 선택하는 방법을 보여줍니다. **M\_pointQueue** 멤버 변수는 사용자가 화면에서 작업 하거나 클릭 한 위치를 추적 합니다. Marble Maze가 포인터 입력을 수집하는 방법은 이 문서의 뒷부분에 있는 [포인터 입력 처리](#processing-pointer-input) 섹션에서 자세히 설명합니다.
 
 ```cpp
 // Check whether the user chose a button from the UI. 
@@ -541,7 +541,7 @@ if ((oppositeSquared + adjacentSquared) > m_deadzoneSquared)
 
 ###  <a name="applying-input-to-the-game-state"></a>게임 상태에 입력 적용
 
-장치는 각기 다른 방법으로 입력 값을 보고합니다. 예를 들어 포인터 입력은 화면 좌표이고 컨트롤러 입력은 완전히 다른 형식일 수 있습니다. 여러 장치의 입력을 하나의 입력 값 집합으로 결합하는 경우의 한 가지 문제는 정규화, 즉 값을 공통 형식으로 변환하는 것입니다. Marble Maze normalizes values by scaling them to the range \[-1.0, 1.0\]. 이 섹션의 앞부분에서 설명한 **PointToTouch** 함수는 약 -1.0에서 +1.0 사이의 정규화된 값으로 화면 좌표를 변환합니다.
+장치는 각기 다른 방법으로 입력 값을 보고합니다. 예를 들어 포인터 입력은 화면 좌표이고 컨트롤러 입력은 완전히 다른 형식일 수 있습니다. 여러 장치의 입력을 하나의 입력 값 집합으로 결합하는 경우의 한 가지 문제는 정규화, 즉 값을 공통 형식으로 변환하는 것입니다. 대리석은 \[-1.0, 1.0\]범위로 크기를 조정 하 여 값을 정규화 합니다. 이 섹션의 앞부분에서 설명한 **PointToTouch** 함수는 약 -1.0에서 +1.0 사이의 정규화된 값으로 화면 좌표를 변환합니다.
 
 > [!TIP]
 > 응용 프로그램이 하나의 입력 방법을 사용하는 경우에도 항상 입력 값을 정규화하는 것이 좋습니다. 이렇게 하면 물리학 시뮬레이션 등 게임의 다른 구성 요소에서 입력이 해석되는 방식을 간소화할 수 있으며, 각기 다른 화면 해상도에서 작동하는 게임을 더 쉽게 작성할 수 있습니다.
@@ -613,9 +613,9 @@ if (marblePosition.z >= resetDepth)
 ## <a name="related-topics"></a>관련 항목
 
 
-* [Adding audio to the Marble Maze sample](adding-audio-to-the-marble-maze-sample.md)
-* [Adding visual content to the Marble Maze sample](adding-visual-content-to-the-marble-maze-sample.md)
-* [Developing Marble Maze, a UWP game in C++ and DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+* [대리석에 오디오 추가 미로 샘플](adding-audio-to-the-marble-maze-sample.md)
+* [대리석에 시각적 콘텐츠 추가 미로 샘플](adding-visual-content-to-the-marble-maze-sample.md)
+* [및 DirectX의 C++ UWP 게임, 대리석](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 

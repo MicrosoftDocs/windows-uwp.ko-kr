@@ -1,7 +1,7 @@
 ---
 ms.assetid: F8A741B4-7A6A-4160-8C5D-6B92E267E6EA
-title: 디바이스 페어링
-description: 일부 디바이스는 페어링해야 사용할 수 있습니다. Windows.Devices.Enumeration 네임스페이스는 세 가지 방법으로 디바이스를 페어링하도록 지원합니다.
+title: 장치 페어링
+description: 일부 디바이스는 페어링해야 사용할 수 있습니다. Windows.Devices.Enumeration 네임스페이스는 세 가지 방법의 장치 페어링을 지원합니다.
 ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp
@@ -14,7 +14,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74258644"
 ---
-# <a name="pair-devices"></a>디바이스 페어링
+# <a name="pair-devices"></a>장치 페어링
 
 
 
@@ -68,7 +68,7 @@ Windows 10 버전 1903부터 새 **DevicepProvidePasswordCredential Ing종류가
 
 디바이스를 언페어링하는 첫 번째 단계는 언페어링하려는 디바이스의 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체를 가져오는 것입니다. 그런 다음 [**DeviceInformation.Pairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing) 속성을 검색하고 [**DeviceInformationPairing.UnpairAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationpairing.unpairasync)를 호출해야 합니다. 페어링과 마찬가지로 결과를 **await**합니다. 언페어링 작업의 결과가 반환되며, 오류가 반환되지 않는 한 디바이스가 언페어링됩니다.
 
-## <a name="sample"></a>샘플
+## <a name="sample"></a>예제
 
 
 [  **Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) API를 사용하는 방법을 보여 주는 샘플을 다운로드하려면 [여기](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing)를 클릭하세요.

@@ -17,10 +17,10 @@ ms.locfileid: "74259230"
 
 제품 구매를 성공적으로 이행한 각 Microsoft Store 거래에서 거래 영수증을 선택적으로 반환할 수 있습니다. 이 영수증은 나열된 제품 및 통화 비용에 대한 정보를 고객에게 제공합니다.
 
-사용자가 앱을 구매했거나, Microsoft Store에서 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 구매했는지 확인해야 하는 경우 이 정보에 액세스할 수 있습니다. 예를 들어 다운로드 콘텐츠를 제공하는 게임을 가정해 보겠습니다. 게임 콘텐츠를 구매한 사용자가 다른 장치에서 플레이하려는 경우 사용자가 이미 콘텐츠를 소유하고 있는지 확인해야 합니다. 다음과 같이 하세요.
+사용자가 앱을 구매했거나, Microsoft Store에서 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 구매했는지 확인해야 하는 경우 이 정보에 액세스할 수 있습니다. 예를 들어 다운로드 콘텐츠를 제공하는 게임을 가정해 보겠습니다. 게임 콘텐츠를 구매한 사용자가 다른 장치에서 플레이하려는 경우 사용자가 이미 콘텐츠를 소유하고 있는지 확인해야 합니다. 방법은 다음과 같습니다.
 
 > [!IMPORTANT]
-> 이 문서에서는 [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) 네임스페이스의 멤버를 사용하여 앱에서 바로 구매의 영수증을 가져오고 유효성을 검사하는 방법을 보여 줍니다. 앱에서 바로 구매(Windows 10, 버전 1607에 도입되었으며 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 하는 프로젝트에 사용 가능)를 위해 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store) 네임스페이스를 사용하는 경우, 이 네임스페이스는 앱에서 바로 구매 건의 영수증을 받기 위해 API를 제공하지 않습니다. 그러나 Microsoft Store 컬렉션 API의 REST 메서드를 사용하여 구매 거래 데이터를 가져올 수 있습니다. 자세한 내용은 [앱에서 바로 구매의 영수증](in-app-purchases-and-trials.md#receipts)을 참조하세요.
+> 이 문서에서는 [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) 네임스페이스의 멤버를 사용하여 앱에서 바로 구매의 영수증을 가져오고 유효성을 검사하는 방법을 보여 줍니다. 앱에서 바로 구매(Windows 10, 버전 1607에 도입되었으며 Visual Studio에서 [Windows 10 Anniversary Edition(10.0, 빌드 14393)](https://docs.microsoft.com/uwp/api/Windows.Services.Store) 이상 릴리스를 대상으로 하는 프로젝트에 사용 가능)를 위해 **Windows.Services.Store** 네임스페이스를 사용하는 경우, 이 네임스페이스는 앱에서 바로 구매 건의 영수증을 받기 위해 API를 제공하지 않습니다. 그러나 Microsoft Store 컬렉션 API의 REST 메서드를 사용하여 구매 거래 데이터를 가져올 수 있습니다. 자세한 내용은 [앱에서 바로 구매의 영수증](in-app-purchases-and-trials.md#receipts)을 참조하세요.
 
 ## <a name="requesting-a-receipt"></a>영수증 요청
 
@@ -104,10 +104,10 @@ ms.locfileid: "74259230"
 
 이 파일의 루트 요소는 앱과 앱에서 바로 구매에 대한 정보를 포함하는 **Receipt** 요소입니다. 이 요소에는 다음과 같은 자식 요소가 있습니다.
 
-|  요소  |  필수  |  Quantity  |  설명   |
+|  요소  |  필수  |  수량  |  설명   |
 |-------------|------------|--------|--------|
 |  [AppReceipt](#appreceipt)  |    아니요        |  0 또는 1  |  현재 앱에 대한 구매 정보를 포함합니다.            |
-|  [ProductReceipt](#productreceipt)  |     아니요       |  0개 이상    |   현재 앱에 대한 앱에서 바로 구매 정보를 포함합니다.     |
+|  [제품 수령](#productreceipt)  |     아니요       |  0개 이상    |   현재 앱에 대한 앱에서 바로 구매 정보를 포함합니다.     |
 |  서명  |      예      |  1   |   이 요소는 표준 [DSIG XML 구문](https://www.w3.org/TR/xmldsig-core/)입니다. 영수증 유효성 검사에 사용할 수 있는 서명이 포함된 **SignatureValue** 요소와 **SignedInfo** 요소를 포함합니다.      |
 
 **Receipt**에는 다음 특성이 있습니다.
@@ -129,7 +129,7 @@ ms.locfileid: "74259230"
 
 |  특성  |  설명   |
 |-------------|-------------------|
-|  **Id**  |    구매를 식별합니다.           |
+|  **A-id**  |    구매를 식별합니다.           |
 |  **AppId**  |     OS에서 앱에 사용하는 패키지 패밀리 이름 값입니다.           |
 |  **LicenseType**  |    **Full** - 사용자가 앱의 처음 사용자용 버전을 구매한 경우 **Trial** - 사용자가 앱의 평가판을 다운로드한 경우           |  
 |  **PurchaseDate**  |    앱을 구매한 날짜입니다.          |  |
@@ -144,7 +144,7 @@ ms.locfileid: "74259230"
 
 |  특성  |  설명   |
 |-------------|-------------------|
-|  **Id**  |    구매를 식별합니다.           |
+|  **A-id**  |    구매를 식별합니다.           |
 |  **AppId**  |     사용자가 구매를 수행한 앱을 식별합니다.           |
 |  **ProductId**  |     구매한 제품을 식별합니다.           |
 |  **ProductType**  |    제품 유형을 결정합니다. 현재 **Durable** 값만 지원합니다.          |  

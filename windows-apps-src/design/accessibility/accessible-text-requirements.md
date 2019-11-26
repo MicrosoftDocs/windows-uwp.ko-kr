@@ -46,10 +46,10 @@ ms.locfileid: "74257788"
 ## <a name="text-element-roles"></a>텍스트 요소 역할  
 UWP 앱은 다음과 같은 기본 요소(일반적으로 *텍스트 요소* 또는 *textedit 컨트롤*이라고 함)를 사용할 수 있습니다.
 
-* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock): role is [**Text**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
-* [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox): role is [**Edit**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
-* [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) (and overflow class [**RichTextBlockOverflow**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblockoverflow)): role is [**Text**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
-* [**RichEditBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox): role is [**Edit**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
+* [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock): Role은 [ **Text** 입니다.](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
+* [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox): 역할 [ **편집**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
+* [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) (및 오버플로 클래스 [**RichTextBlockOverflow**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblockoverflow)): role은 [**Text**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType) 입니다.
+* [**RichEditBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox): 역할 [ **편집**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
 
 컨트롤에 [**Edit**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType) 역할이 있는 것으로 보고되면 보조 기술에서는 사용자가 값을 변경할 방법이 있는 것으로 가정합니다. 따라서 [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)에 정적 텍스트를 입력하면 역할을 잘못 보고하여 앱의 구조를 접근성 사용자에게 잘못 보고할 수 있습니다.
 
@@ -70,8 +70,8 @@ XAML의 텍스트 모델에는 정적 텍스트에 주로 사용되는 두 요�
 * 내레이터 포커스를 목록으로 이동할 수 있습니다.
 * 다른 모든 읽기 모드에서 제안을 탐색할 수 있습니다.
 
-![Suggestion list](images/autosuggest-list.png)<br/>
-_Example of a suggestion list_
+![제안 목록](images/autosuggest-list.png)<br/>
+_제안 목록의 예_
 
 <span id="Implementing_auto-suggest"/>
 <span id="implementing_auto-suggest"/>
@@ -82,20 +82,20 @@ _Example of a suggestion list_
 
 상위 수준에는 두 가지 유형의 자동 제안 환경이 있습니다.
 
-**Default selection**  
+**기본 선택**  
 목록에서 기본 선택을 수행하는 경우 내레이터가 데스크톱 앱에서 [**UIA_SelectionItem_ElementSelectedEventId**](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-event-ids) 이벤트를 찾거나, UWP 앱에서 [**AutomationEvents.SelectionItemPatternOnElementSelected**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) 이벤트가 발생합니다. 선택이 변경될 때마다, 사용자가 다른 문자를 입력하고 제안이 업데이트될 때 또는 사용자가 목록을 통해 탐색할 때 **ElementSelected** 이벤트가 발생해야 합니다.
 
-![List with a default selection](images/autosuggest-default-selection.png)<br/>
-_Example where there is a default selection_
+기본 선택이 있는 ![목록](images/autosuggest-default-selection.png)<br/>
+_기본 선택이 있는 예제_
 
-**No default selection**  
+**기본 선택 없음**  
 날씨 앱의 위치 상자와 같이 기본 선택이 없는 경우 내레이터가 데스크톱 [**UIA_LayoutInvalidatedEventId**](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-event-ids) 이벤트를 찾거나, 목록이 업데이트될 때마다 목록에서 UWP [**LayoutInvalidated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) 이벤트가 발생합니다.
 
-![List with no default selection](images/autosuggest-no-default-selection.png)<br/>
-_Example where there is no default selection_
+기본 선택 항목이 없는 ![목록](images/autosuggest-no-default-selection.png)<br/>
+_기본 선택이 없는 예_
 
 ### <a name="xaml-implementation"></a>XAML 구현  
-기본 XAML [**AutosuggestBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)를 사용하는 경우 모든 항목이 이미 연결되어 있습니다. [  **TextBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox)와 목록을 사용하여 고유한 자동 제안 환경을 만드는 경우 **TextBox**에서 목록을 [**AutomationProperties.ControlledPeers**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers)로 설정해야 합니다. 이 속성을 추가하거나 제거할 때마다 [**ControlledPeers**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) 속성에 대한 **AutomationPropertyChanged** 이벤트를 발생하거나, 이 문서의 앞부분에서 설명한 시나리오 유형에 따라 고유한 [**SelectionItemPatternOnElementSelected**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) 이벤트 또는 [**LayoutInvalidated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) 이벤트를 발생해야 합니다.
+기본 XAML [**AutosuggestBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)를 사용하는 경우 모든 항목이 이미 연결되어 있습니다. [  **TextBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox)와 목록을 사용하여 고유한 자동 제안 환경을 만드는 경우 [TextBox**에서 목록을** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers)AutomationProperties.ControlledPeers로 설정해야 합니다. 이 속성을 추가하거나 제거할 때마다ControlledPeers[**속성에 대한**AutomationPropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) 이벤트를 발생하거나, 이 문서의 앞부분에서 설명한 시나리오 유형에 따라 고유한 [**SelectionItemPatternOnElementSelected**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) 이벤트 또는 [**LayoutInvalidated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.automationevents) 이벤트를 발생해야 합니다.
 
 ### <a name="html-implementation"></a>HTML 구현  
 HTML에서 내장 컨트롤을 사용하는 경우 UIA 구현이 이미 매핑되어 있습니다. 다음은 이미 연결되어 있는 구현의 예입니다.
@@ -122,23 +122,23 @@ HTML에서 내장 컨트롤을 사용하는 경우 UIA 구현이 이미 매핑�
 <span id="text_font_size"/>
 <span id="TEXT_FONT_SIZE"/>
 
-## <a name="text-font-size-and-scale"></a>Text font size and scale
+## <a name="text-font-size-and-scale"></a>텍스트 글꼴 크기 및 배율
 
-Users can have difficulty reading text in an app when the fonts uses are simply too small, so make sure any text in your application is a reasonable size in the first place.
+사용자는 글꼴이 매우 작은 경우에만 앱에서 텍스트를 읽는 데 어려움이 있으므로 응용 프로그램의 텍스트가 첫 번째 위치의 적당 한 크기 인지 확인 합니다.
 
-Once you've done the obvious, Windows includes various accessibility tools and settings that users can take advantage of and adjust to their own needs and preferences for reading text. 다음이 포함됩니다.
+명확 하 게 완료 되 면 Windows에는 사용자가 활용할 수 있는 다양 한 내게 필요한 옵션 도구 및 설정이 포함 되며,이를 통해 사용자는 자신의 요구와 텍스트 읽기를 위한 기본 설정을 변경할 수 있습니다. 다음이 포함됩니다.
 
-* The Magnifier tool, which enlarges a selected area of the UI. You should ensure the layout of text in your app doesn't make it difficult to use Magnifier for reading.
-* Global scale and resolution settings in **Settings->System->Display->Scale and layout**. Exactly which sizing options are available can vary as this depends on the capabilities of the display device.
-* Text size settings in **Settings->Ease of access->Display**. Adjust the **Make text bigger** setting to specify only the size of text in supporting controls across all applications and screens (all UWP text controls support the text scaling experience without any customization or templating). 
+* UI의 선택한 영역을 확대 하는 돋보기 도구입니다. 앱에서 텍스트의 레이아웃을 사용 하 여 편집용으로 돋보기를 사용 하는 것이 어려울 수 있도록 해야 합니다.
+* **설정-> 시스템-> 디스플레이 > 크기 조정 및 레이아웃에 대**한 전역 크기 조정 및 해상도 설정 사용 가능한 크기 옵션은 표시 장치의 기능에 따라 달라질 수 있습니다.
+* 설정의 텍스트 크기 설정 **-접근성 > 표시를 >** 합니다. **텍스트 크게 만들기** 설정을 조정 하 여 모든 응용 프로그램 및 화면에서 지원 컨트롤의 텍스트 크기만 지정 합니다. 모든 UWP 텍스트 컨트롤은 사용자 지정 또는 템플릿 없이 텍스트 크기 조정 환경을 지원 합니다. 
 > [!NOTE]
-> The **Make everything bigger** setting lets a user specify their preferred size for text and apps in general on their primary screen only.
+> **모든 항목을 크게** 설정 하면 사용자가 기본 화면 에서만 일반 텍스트 및 앱에 대 한 기본 설정 크기를 지정할 수 있습니다.
 
-다양한 텍스트 요소와 컨트롤에 [**IsTextScaleFactorEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled) 속성이 있습니다. 이 속성은 기본적으로 **true** 값으로 설정됩니다. When **true**, the size of text in that element can be scaled. The scaling affects text that has a small **FontSize** to a greater degree than it affects text that has a large **FontSize**. You can disable automatic resizing by setting an element's **IsTextScaleFactorEnabled** property to **false**. 
+다양한 텍스트 요소와 컨트롤에 [**IsTextScaleFactorEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled) 속성이 있습니다. 이 속성은 기본적으로 **true** 값으로 설정됩니다. **True 이면**해당 요소의 텍스트 크기를 조정할 수 있습니다. 크기 **조정은 크기가 작은**텍스트에 영향을 주는 것 보다 작은 **fontsize** 의 텍스트에 영향을 줍니다. 요소의 **IsTextScaleFactorEnabled** 속성을 **false**로 설정 하 여 자동 크기 조정을 사용 하지 않도록 설정할 수 있습니다. 
 
-See [Text scaling](https://docs.microsoft.com/windows/uwp/design/input/text-scaling) for more details.
+자세한 내용은 [텍스트 크기 조정](https://docs.microsoft.com/windows/uwp/design/input/text-scaling) 을 참조 하세요.
 
-Add the following markup to an app and run it. Adjust the **Text size** setting, and see what happens to each **TextBlock**.
+앱에 다음 태그를 추가 하 고 실행 합니다. **텍스트 크기** 설정을 조정 하 고 각 **TextBlock**에 발생 하는 결과를 확인 합니다.
 
 XAML
 ```xml
@@ -149,7 +149,7 @@ XAML
     Style="{StaticResource BodyTextBlockStyle}" IsTextScaleFactorEnabled="False"/>
 ```  
 
-We don't recommend that you disable text scaling as scaling UI text universally across all apps is an important accessibility experience for users.
+모든 앱에서 전체적으로 UI 텍스트 크기를 조정 하는 것은 사용자에 게 중요 한 액세스 가능성 환경 이므로 텍스트 크기 조정을 사용 하지 않는 것이 좋습니다.
 
 [  **TextScaleFactorChanged**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) 이벤트와 [**TextScaleFactor**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactor) 속성을 사용하여 휴대폰의 **텍스트 크기** 설정에 대한 변경 사항을 확인할 수도 있습니다. 방법은 다음과 같습니다.
 
@@ -169,23 +169,23 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 }
 ```
 
-The value of **TextScaleFactor** is a double in the range \[1,2.25\]. 가장 작은 텍스트는 이 값만큼 확대됩니다. 값을 사용하여 텍스트에 맞게 그래픽의 크기를 조정할 수 있습니다. 하지만 모든 텍스트가 같은 배율로 크기가 조정되지는 않습니다. 일반적으로 텍스트 크기가 클수록 크기 조정의 영향을 덜 받습니다.
+**TextScaleFactor** 값은 1, 2.25\]\[범위에서 double입니다. 가장 작은 텍스트는 이 값만큼 확대됩니다. 값을 사용하여 텍스트에 맞게 그래픽의 크기를 조정할 수 있습니다. 하지만 모든 텍스트가 같은 배율로 크기가 조정되지는 않습니다. 일반적으로 텍스트 크기가 클수록 크기 조정의 영향을 덜 받습니다.
 
 다음 형식에는 **IsTextScaleFactorEnabled** 속성이 있습니다.  
 * [**ContentPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentPresenter)
-* [**Control**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) and derived classes
+* [**컨트롤**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) 및 파생 클래스
 * [**FontIcon**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FontIcon)
 * [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock)
 * [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
-* [**TextElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.TextElement) and derived classes
+* [**Textelement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.TextElement) 및 파생 클래스
 
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>관련 항목  
 
-* [Text scaling](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
+* [텍스트 크기 조정](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
 * [접근성](accessibility.md)
-* [Basic accessibility information](basic-accessibility-information.md)
-* [XAML text display sample](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
-* [XAML text editing sample](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
-* [XAML accessibility sample](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d) 
+* [기본 접근성 정보](basic-accessibility-information.md)
+* [XAML 텍스트 표시 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
+* [XAML 텍스트 편집 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
+* [XAML 접근성 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d) 

@@ -28,7 +28,7 @@ ms.locfileid: "74259851"
 
 | 용어 | 설명 |
 |------|-------------|
-| 키 | 요청한 리소스의 키입니다. 이 키는 처음에 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 의해 할당됩니다. 리소스 키는 XamlName 문법에 정의된 문자열일 수 있습니다. |
+| Key | 요청한 리소스의 키입니다. 이 키는 처음에 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 의해 할당됩니다. 리소스 키는 XamlName 문법에 정의된 문자열일 수 있습니다. |
 
 ## <a name="remarks"></a>설명
 

@@ -20,7 +20,7 @@ ms.locfileid: "74259874"
 > [!NOTE]
 > 전체 코드 샘플을 보려면 [GitHub의 WebAccountManagement 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement)을 참조하세요.
 
-## <a name="get-set-up"></a>설정
+## <a name="get-set-up"></a>설정하기
 
 먼저 Visual Studio에서 비어 있는 새 솔루션을 만듭니다. 
 

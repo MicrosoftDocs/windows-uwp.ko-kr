@@ -18,7 +18,7 @@ ms.locfileid: "74260203"
 
 
 
-이 섹션에서는 Microsoft Advertising 라이브러리의 최신 릴리스 정보를 제공합니다. These libraries support XAML and JavaScript/HTML apps for Windows 10, Windows 8.1, Windows Phone 8.1 and Windows Phone 8.
+이 섹션에서는 Microsoft Advertising 라이브러리의 최신 릴리스 정보를 제공합니다. 이러한 라이브러리는 Windows 10, Windows 8.1 Windows Phone 8.1 및 Windows Phone 8 용 XAML 및 JavaScript/HTML 앱을 지원 합니다.
 
 ## <a name="installation"></a>설치
 

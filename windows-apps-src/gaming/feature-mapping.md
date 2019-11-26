@@ -261,7 +261,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R8G8B8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8R8G8B8</p></td>
@@ -279,7 +279,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X1R5G5B5</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A1R5G5B5</p></td>
@@ -291,7 +291,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_R3G3B2</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A8</p></td>
@@ -299,11 +299,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8R3G3B2</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X4R4G4B4</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A2B10G10R10</p></td>
@@ -316,7 +316,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_X8B8G8R8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_G16R16</p></td>
@@ -324,7 +324,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A2R10G10B10</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A16B16G16R16</p></td>
@@ -332,11 +332,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8P8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_P8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L8</p></td>
@@ -360,7 +360,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A4L4</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_V8U8</p></td>
@@ -368,11 +368,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L6V5U5</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X8L8V8U8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_Q8W8V8U8</p></td>
@@ -384,15 +384,15 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_W11V11U10</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A2W10V10U10</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_UYVY</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R8G8_B8G8</p></td>
@@ -406,7 +406,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_YUY2</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_G8R8_G8B8</p></td>
@@ -456,23 +456,23 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D32</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D15S1</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D24S8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D24X8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D24X4S4</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D16</p></td>
@@ -484,11 +484,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D24FS8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_S1D15</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_S8D24</p></td>
@@ -496,11 +496,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_X8D24</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X4S4D24</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L16</p></td>
@@ -526,7 +526,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_MULTI2_ARGB8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R16F</p></td>
@@ -554,7 +554,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_CxV8U8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPE_FLOAT1</p></td>
@@ -574,7 +574,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPED3DCOLOR</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_UBYTE4</p></td>
@@ -628,11 +628,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_UDEC3</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPE_DEC3N</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용 불가능</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_FLOAT16_2</p></td>

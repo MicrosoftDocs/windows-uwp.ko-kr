@@ -54,7 +54,7 @@ Windows 및 iOS는 양상이 매우 다른 거대한 제품으로 보일 수 있
 
     핵심 비즈니스 논리를 Objective-C 또는 Swift가 아닌 C++로 작성하는 경우 프로젝트를 사소하게 변경할 때만 이 코드를 사용하는 것이 좋습니다. 그런 후 다른 Windows 앱처럼 XAML을 사용하여 UI를 정의하고, 필요할 때 C++ 코드로 불러올 수 있습니다.
 
--   [Use ANGLE to run OpenGL ES on Windows](https://github.com/microsoft/angle/wiki)
+-   [각도를 사용 하 여 Windows에서 OpenGL ES 실행](https://github.com/microsoft/angle/wiki)
 
     OpenGL ES 2.0 프로젝트를 포팅하는 중간 단계에서 ANGLE을 사용합니다. ANGLE을 사용하면 OpenGL ES API 호출을 DirectX 11 API 호출로 변환하여 Windows에서 OpenGL ES 콘텐츠를 실행할 수 있습니다.
 
@@ -64,11 +64,11 @@ Windows 및 iOS는 양상이 매우 다른 거대한 제품으로 보일 수 있
 
     게임 제작 환경입니다.
 
--   [Construct 2]( https://go.microsoft.com/fwlink/p/?LinkID=320481)
+-   [생성 2]( https://go.microsoft.com/fwlink/p/?LinkID=320481)
 
     게임 제작 환경입니다.
 
--   [Titanium Studio](https://www.appcelerator.com/platform/titanium-studio/)
+-   [티타늄 Studio](https://www.appcelerator.com/platform/titanium-studio/)
 
     플랫폼 간 제작 환경입니다.
 
@@ -76,11 +76,11 @@ Windows 및 iOS는 양상이 매우 다른 거대한 제품으로 보일 수 있
 
     스프라이트 처리 및 물리학 모델링을 위한 플랫폼 간 코드 라이브러리입니다.
 
--   [Impact.js](https://impactjs.com/)
+-   [영향 .js](https://impactjs.com/)
 
     HTML 기반 게임 라이브러리입니다.
 
--   [Marmalade](http://madewithmarmalade.com/)
+-   [마말레이](http://madewithmarmalade.com/)
 
     플랫폼 간 SDK입니다.
 

@@ -1,6 +1,6 @@
 ---
 title: Windows 10 게임 개발 가이드
-description: UWP(유니버설 Windows 플랫폼) 게임 개발용 리소스 및 정보에 대한 엔드투엔드 가이드입니다.
+description: UWP(유니버설 Windows 플랫폼) 게임 개발용 리소스 및 정보에 대한 종합 가이드입니다.
 ms.assetid: 6061F498-96A8-44EF-9711-68AE5A1218C9
 ms.date: 04/16/2018
 ms.topic: article
@@ -186,7 +186,7 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
     </tr>
     <tr>
         <td>Direct3D 11 그래픽 샘플</td>
-        <td><a href="https://github.com/walbourn/directx-sdk-samples">directx-sdk-samples</a></td>
+        <td><a href="https://github.com/walbourn/directx-sdk-samples">directx-sdk-샘플</a></td>
     </tr>
     <tr>
         <td>Direct3D 11 1인칭 게임 샘플</td>
@@ -206,11 +206,11 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
     </tr>
     <tr>
         <td>Xbox 고급 기술 그룹 공개 샘플</td>
-        <td><a href="https://github.com/Microsoft/Xbox-ATG-Samples">Xbox-ATG-Samples</a></td>
+        <td><a href="https://github.com/Microsoft/Xbox-ATG-Samples">Xbox-ATG-샘플</a></td>
     </tr>
     <tr>
         <td>Xbox Live 샘플</td>
-        <td><a href="https://github.com/Microsoft/xbox-live-samples">xbox-live-samples</a></td>
+        <td><a href="https://github.com/Microsoft/xbox-live-samples">xbox 라이브 샘플</a></td>
     </tr>
     <tr>
         <td>Xbox One 게임 샘플(XGD)</td>
@@ -910,7 +910,7 @@ BabylonJS는 HTML5, WebGL, WebVR 및 웹 오디오를 사용하여 3D 게임을 
     </tr>
     <tr>
         <td>ANGLE을 사용하여 OpenGL ES에서 Direct3D 11로</td>
-        <td><a href="https://github.com/microsoft/angle/wiki">ANGLE</a></td>
+        <td><a href="https://github.com/microsoft/angle/wiki">각도</a></td>
     </tr>
     <tr>
         <td>UWP에도 제공되는 클래식 Windows API</td>
@@ -1121,7 +1121,7 @@ UX 디자인과는 별도로 게임 플레이 디자인(예: 레벨 디자인, �
 
 #### <a name="ui-map"></a>UI 맵
 
-UI 맵은 게임 탐색 및 순서도로 표현된 메뉴의 레이아웃입니다. UI 맵을 통해 참여하는 모든 관련자가 게임 인터페이스 및 탐색 경로를 쉽게 이해할 수 있으며 개발 주기의 초기에 잠재적인 장애물과 문제점을 알아낼 수 있습니다.
+UI 맵은 게임 탐색 및 순서도로 표현된 메뉴의 레이아웃입니다. UI 맵을 통해 참여하는 모든 관계자가 게임 인터페이스 및 탐색 경로를 쉽게 이해할 수 있으며 개발 주기의 초기에 잠재적인 장애물과 문제점을 알아낼 수 있습니다.
 
 <table>
     <colgroup>
@@ -1311,7 +1311,7 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh 기
 </table>
 
 
-## <a name="production"></a>프로덕션
+## <a name="production"></a>Production
 
 
 이제 팀 전체에 작업이 배포되면서 스튜디오가 완전히 참여하고 프로덕션 주기로 이동합니다. 프로토타입을 다듬고 리팩터링하고 확장하면서 전체 게임으로 만들어갑니다.
@@ -1665,7 +1665,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
 
 ### <a name="visual-studio-application-insights"></a>Visual Studio Application Insights
 
-Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원격 분석 및 사용량 현황 분석을 제공합니다. Application Insights는 게임이 릴리스된 후 문제를 검색 및 해결하고, 지속적으로 사용을 모니터링 및 개선하며, 플레이어가 어떻게 계속해서 게임과 상호 작용하는지를 이해하도록 도와줍니다. Application Insights는 [Azure 포털](https://portal.azure.com/)에 원격 분석을 전송하는 SDK를 앱에 추가하여 작동합니다.
+Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원격 분석 및 사용 현황 분석을 제공합니다. Application Insights는 게임이 릴리스된 후 문제를 검색 및 해결하고, 지속적으로 사용을 모니터링 및 개선하며, 플레이어가 어떻게 계속해서 게임과 상호 작용하는지를 이해하도록 도와줍니다. Application Insights는 [Azure Portal](https://portal.azure.com/)에 원격 분석을 전송하는 SDK를 앱에 추가하여 작동합니다.
 
 <table>
     <colgroup>

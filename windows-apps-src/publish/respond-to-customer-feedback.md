@@ -18,11 +18,11 @@ ms.locfileid: "74259950"
 [피드백 보고서](feedback-report.md)를 사용하여 Windows 10 고객이 피드백 허브에서 앱에 대해 남긴 피드백을 검토한 다음 해당 피드백에 직접 응답할 수 있습니다. 모든 사람이 볼 수 있도록 피드백 허브에 응답을 게시(개인 메모로 남기거나 일부 피드백 상태를 업데이트하고 설명을 추가하는 방식으로 게시)하여 고객에게 새로운 기능 또는 버그 수정에 대해 알리거나 앱을 개선하는 방법에 대한 특정 피드백을 요청할 수 있습니다. 피드백을 남긴 고객에게 직접 메일로 응답을 보낼 수도 있습니다.
 
 > [!TIP]
-> 고객이 직접 [UWP 앱에서 피드백 허브를 시작](../monetize/launch-feedback-hub-from-your-app.md)할 수 있는 컨트롤을 추가하려면 고객이 [Microsoft Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK)에서 피드백 API를 사용하여 피드백을 남기도록 권유할 수 있습니다. 피드백 허브를 지원하는 Windows 10 장치에 앱을 다운로드한 모든 고객은 피드백 허브 앱을 통해 직접 해당 피드백을 남길 수 있습니다. 이로 인해 앱 내에서 특별히 피드백을 요청하지 않은 경우에도 이 보고서에서 고객 의견을 볼 수 있습니다.
+> 고객이 직접 [UWP 앱에서 피드백 허브를 시작](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK)할 수 있는 컨트롤을 추가하려면 고객이 [Microsoft Store Services SDK](../monetize/launch-feedback-hub-from-your-app.md)에서 피드백 API를 사용하여 피드백을 남기도록 권유할 수 있습니다. 피드백 허브를 지원하는 Windows 10 장치에 앱을 다운로드한 모든 고객은 피드백 허브 앱을 통해 직접 해당 피드백을 남길 수 있습니다. 이로 인해 앱 내에서 특별히 피드백을 요청하지 않은 경우에도 이 보고서에서 고객 의견을 볼 수 있습니다.
 
 피드백에 응답을 제공하려면 **피드백 보고서**의 피드백 옆에 나타나는 **피드백에 응답** 링크를 클릭합니다.
 
-[Partner Center](https://partner.microsoft.com/dashboard) supports three options for responding to customers who provide feedback about your app. 어떤 옵션을 선택하든 각 응답은 1000자로 제한됩니다.
+[파트너 센터](https://partner.microsoft.com/dashboard) 는 앱에 대 한 피드백을 제공 하는 고객에 게 응답 하기 위한 세 가지 옵션을 지원 합니다. 어떤 옵션을 선택하든 각 응답은 1000자로 제한됩니다.
 
 ## <a name="public-comments-in-feedback-hub"></a>피드백 허브의 공개 메모
 

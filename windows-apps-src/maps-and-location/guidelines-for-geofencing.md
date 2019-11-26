@@ -20,8 +20,8 @@ ms.locfileid: "74260387"
 
 **중요 API**
 
--   [**Geofence class (XAML)** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing.Geofence)
--   [**Geolocator class (XAML)** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator)
+-   [**지 오 클래스 (XAML)** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing.Geofence)
+-   [**Geolocator 클래스 (XAML)** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator)
 
 앱에서 [**지오펜스**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geofencing)에 대한 다음 모범 사례를 따릅니다.
 
@@ -129,7 +129,7 @@ GPS가 가장 정확한 위치 정보를 제공할 수 있지만, 지오펜싱�
 
 * [지오펜스 설정](https://docs.microsoft.com/windows/uwp/maps-and-location/set-up-a-geofence)
 * [현재 위치 가져오기](https://docs.microsoft.com/windows/uwp/maps-and-location/get-location)
-* [UWP location sample (geolocation)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Geolocation)
+* [UWP 위치 샘플 (지리적 위치)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Geolocation)
  
 
  

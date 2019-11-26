@@ -15,7 +15,7 @@ ms.locfileid: "74260331"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK를 사용하여 앱에 광고 표시
 
-Microsoft Advertising SDK를 사용해 Windows 10용 유니버설 Windows 플랫폼(UWP) 앱에 광고를 삽입하여 수익 기회를 늘리세요. Our ad monetization platform offers a variety of ad formats that can be seamlessly integrated into your apps and supports mediation with many popular ad networks. 이 플랫폼은 OpenRTB, VAST 2.x, MRAID 2 및 VPAID 3 표준을 준수하며 MOAT 및 IAS와 호환됩니다. 
+Microsoft Advertising SDK를 사용해 Windows 10용 유니버설 Windows 플랫폼(UWP) 앱에 광고를 삽입하여 수익 기회를 늘리세요. Ad 수익 화 플랫폼은 앱에 원활 하 게 통합 될 수 있고 널리 사용 되는 여러 ad 네트워크를 통한 중재를 지 원하는 다양 한 ad 형식을 제공 합니다. 이 플랫폼은 OpenRTB, VAST 2.x, MRAID 2 및 VPAID 3 표준을 준수하며 MOAT 및 IAS와 호환됩니다. 
 
 <br/>
 
@@ -32,23 +32,23 @@ Microsoft Advertising SDK를 사용해 Windows 10용 유니버설 Windows 플랫
 <tr>
 <td align="left"><img src="images/install-sdk.png" alt="Install SDK icon" /></td>
 <td align="left"><b>시작</b><br/><br/>
-    <a href="https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK">Install the Microsoft Advertising SDK</a>
-</td>
+    <a href="https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK">MICROSOFT ADVERTISING SDK
+를 설치 합니다</a> .</td>
 <td align="left"><img src="images/write-code.png" alt="Develop icon" /></td>
-<td align="left"><b>Developer guides</b><br/><br/>
-    <a href="banner-ads.md">Banner ads</a>
+<td align="left"><b>개발자 가이드</b><br/><br/>
+    <a href="banner-ads.md">배너 광고</a>
     <br/>
-    <a href="interstitial-ads.md">Interstitial ads</a>
+    <a href="interstitial-ads.md">중간 광고</a>
     <br/>
-    <a href="native-ads.md">Native ads</a>
+    <a href="native-ads.md">네이티브 광고</a>
     </td>
 <td align="left"><img src="images/api-reference.png" alt="API ref icon" /></td>
-<td align="left"><b>Other resources</b><br/><br/>
-    <a href="set-up-ad-units-in-your-app.md">Set up ad units in your app</a>
+<td align="left"><b>기타 참고 자료</b><br/><br/>
+    <a href="set-up-ad-units-in-your-app.md">앱에서 ad 단위 설정</a>
     <br/>
-    <a href="best-practices-for-ads-in-apps.md">Best practices</a>
+    <a href="best-practices-for-ads-in-apps.md">모범 사례</a>
     <br/>
-    <a href="https://docs.microsoft.com/uwp/api/overview/advertising">API reference</a>
+    <a href="https://docs.microsoft.com/uwp/api/overview/advertising">API 참조</a>
     </td>
 </tr>
 </tbody>
@@ -90,7 +90,7 @@ Microsoft Advertising SDK는 앱에서 사용할 수 있는 여러 유형의 광
 
 ## <a name="step-3-create-an-ad-unit-and-configure-mediation"></a>3단계: 광고 단위 생성 및 조정 구성
 
-After you finish testing your app and you are ready to submit it to the Store, create an ad unit on the [In-app ads](../publish/in-app-ads.md) page in Partner Center. 그런 다음, 이 광고 단위를 사용하도록 앱 코드를 업데이트하면 앱에 실제 광고가 게재됩니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+앱 테스트를 마치고 스토어에 제출할 준비가 되 면 파트너 센터의 [앱 내 광고](../publish/in-app-ads.md) 페이지에서 ad 단위를 만듭니다. 그런 다음, 이 광고 단위를 사용하도록 앱 코드를 업데이트하면 앱에 실제 광고가 게재됩니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
 기본적으로 앱에는 유료 광고에 대한 Microsoft 네트워크의 광고가 표시됩니다. 광고 수익을 극대화하기 위해 Taboola 및 Smaato 등 추가 유료 광고 네트워크의 광고를 표시하도록 광고 단위에 대한 [광고 조정](ad-mediation-service.md)을 사용할 수 있습니다. Microsoft 앱 홍보 캠페인에 광고를 제공하여 앱 홍보 기능을 향상시킬 수 있습니다.
 
@@ -98,9 +98,9 @@ UWP 앱의 광고 조정을 사용하기 시작하려면, 광고 단위의 [광�
 
 ## <a name="step-4-submit-your-app-and-review-performance"></a>4단계: 앱을 제출하고 성능 검토
 
-After you finish developing your app with ads, you can [submit your updated app](https://docs.microsoft.com/windows/uwp/publish/app-submissions) in Partner Center to make it available in the Store. 광고를 표시하는 앱은 [Microsoft Store 정책 섹션 10.10](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) 및 [앱 개발자 계약 별첨 E](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 규정된 추가 요구 사항을 충족해야 합니다.
+광고를 사용 하 여 앱 개발을 마친 후에는 [업데이트 된 앱](https://docs.microsoft.com/windows/uwp/publish/app-submissions) 을 파트너 센터에서 제출 하 여 스토어에서 사용할 수 있도록 할 수 있습니다. 광고를 표시하는 앱은 [Microsoft Store 정책 섹션 10.10](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) 및 [앱 개발자 계약 별첨 E](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 규정된 추가 요구 사항을 충족해야 합니다.
 
-After your app is published and available in the Store, you can review your [advertising performance reports](../publish/advertising-performance-report.md) in Partner Center and continue to make changes to your mediation settings to optimize the performance of your ads. 광고 수익은 [지급액 요약](../publish/payout-summary.md)에 포함되어 있습니다.
+앱을 게시 하 고 스토어에서 사용할 수 있게 되 면 파트너 센터에서 [광고 성능 보고서](../publish/advertising-performance-report.md) 를 검토 하 고 중재 설정을 변경 하 여 광고의 성능을 최적화할 수 있습니다. 광고 수익은 [지급액 요약](../publish/payout-summary.md)에 포함되어 있습니다.
 
 <span id="additional-help" />
 
@@ -108,7 +108,7 @@ After your app is published and available in the Store, you can review your [adv
 
 Microsoft Advertising SDK 사용에 대한 추가 도움말은 다음 리소스를 사용하세요.
 
-|  작업    | 리소스 |               
+|  태스크    | 리소스 |               
 |----------|-------|
 | 버그 보고 또는 광고 지원 받기     | [지원 페이지](https://developer.microsoft.com/en-us/windows/support)를 방문하여 **인앱 광고**를 선택합니다.        |
 | 커뮤니티 지원 받기     | [포럼](https://go.microsoft.com/fwlink/?LinkID=401264)을 방문하세요.       |
@@ -123,4 +123,4 @@ Windows 8.1 및 Windows Phone 8.x 앱의 경우 [Microsoft Advertising SDK for 
 
 * [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)
 * [광고 성과 보고서](../publish/advertising-performance-report.md)
-* [Windows Premium Ads Publishers Program](windows-premium-ads-publishers-program.md)
+* [Windows Premium Ads 게시자 프로그램](windows-premium-ads-publishers-program.md)

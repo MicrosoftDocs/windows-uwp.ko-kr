@@ -21,7 +21,7 @@ ms.locfileid: "74258967"
 
 ## <a name="types-of-tax-forms"></a>세금 양식의 유형
 
-| IRS 세금 양식 | 설명 | 사용 가능한 시기 |
+| IRS 세금 양식 | 설명 | 가용성 |
 |--------------|-------------|--------------|
 |1099-MISC, 1099-K | Microsoft 마켓플레이스 참여에 대한 지급금 및/또는 판매 활동과 관련된 세금 양식입니다. | 인쇄 된 양식은 **1 월 31**일 이전에 postmarked, .pdf 복사본은 [파트너 센터](https://partner.microsoft.com/dashboard) ( **계정 설정 > 세금 프로필**)에서 동시에 사용할 수 있습니다. |
 |1042-S | 미국 원천징수가 적용되는 지급금과 관련된 세금 양식입니다. | 인쇄 된 양식은 **3 월 15**일 또는 그 이전에 postmarked 되며, .pdf 복사본은 파트너 센터 ( **계정 설정 > 세금 프로필**)에서 동시에 사용할 수 있습니다. |
@@ -61,13 +61,13 @@ ms.locfileid: "74258967"
   <tr> 
      <td valign="top">(i) 브라질과 중국에서 Microsoft Store on Windows 10을 통해 이루어진 앱 매출 또는 (ii) Minecraft 마켓플레이스의 판매에 대해 <b>$10 이상의 지급금</b>을 받은 경우<br>
 <br>
-<b>OR</b><br>
+<b>디스크나</b><br>
 <br>
 해당 세금 년도 (예: 콘테스트 지불 또는 판촉의 지불 또는 판촉)에서 Microsoft의 앱 판매와 관련 되지 않은 지불로 최소 $600을 받았습니다.</td>
     <td valign="top"><b>1099-MISC</b>:<br>지급인: Microsoft Corporation<br>EIN: * * * * * 4442<br><br><b>중요</b>: Microsoft에서 받은 지불 금액에 관계 없이 특정 비즈니스 엔터티에 1099-기타 양식이 수신 되지 않습니다.  자세한 정보는 세무 전문가에게 문의하세요.</td>
   </tr>
   <tr>
-    <td valign="top">해당 사항이 없는 경우</td>
+    <td valign="top">해당 항목이 없습니다.</td>
     <td valign="top">없음</td>
   </tr>
   <tr>

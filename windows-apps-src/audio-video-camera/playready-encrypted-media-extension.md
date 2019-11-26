@@ -1,6 +1,6 @@
 ---
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
-description: This section describes how to modify your PlayReady web app to support the changes made from the previous Windows 8.1 version to the Windows 10 version.
+description: 이 섹션에서는 이전 Windows 8.1 버전에서 Windows 10 버전으로 변경 된 내용을 지원 하도록 PlayReady 웹 앱을 수정 하는 방법을 설명 합니다.
 title: PlayReady 암호화된 미디어 확장
 ms.date: 02/08/2017
 ms.topic: article
@@ -17,27 +17,27 @@ ms.locfileid: "74256816"
 
 
 
-This section describes how to modify your PlayReady web app to support the changes made from the previous Windows 8.1 version to the Windows 10 version.
+이 섹션에서는 이전 Windows 8.1 버전에서 Windows 10 버전으로 변경 된 내용을 지원 하도록 PlayReady 웹 앱을 수정 하는 방법을 설명 합니다.
 
 Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹앱을 만들어, 콘텐츠 공급자가 정의한 액세스 규칙을 적용하는 한편 사용자에게 PlayReady 콘텐츠를 제공할 수 있습니다. 이 섹션에서는 HTML5와 JavaScript만 사용하여 기존 웹앱에 PlayReady 미디어 요소를 추가하는 방법을 설명합니다.
 
 ## <a name="whats-new-in-playready-encrypted-media-extension"></a>PlayReady 암호화된 미디어 확장의 새로운 기능
 
-This section provides a list of changes made to the PlayReady Encrypted Media Extension (EME) to enable PlayReady content protection on Windows 10.
+이 섹션에서는 Windows 10에서 PlayReady 콘텐츠 보호를 사용 하도록 설정 하기 위해 PlayReady EME (암호화 된 미디어 확장)에 적용 된 변경 내용 목록을 제공 합니다.
 
-The following list describes the new features and changes made to PlayReady Encrypted Media Extension for Windows 10:
+다음 목록에서는 Windows 10 용 PlayReady 암호화 된 미디어 확장에 대 한 새로운 기능 및 변경 내용을 설명 합니다.
 
 -   하드웨어 DRM(디지털 권한 관리)이 추가되었습니다.
 
-    하드웨어 기반 콘텐츠 보호 지원을 통해 여러 장치 플랫폼에서 고해상도(HD) 및 초고해상도(UHD) 콘텐츠를 안전하게 재생할 수 있습니다. 개인 키, 콘텐츠 키 및 이러한 키를 파생하거나 잠금 해제하는 데 사용하는 기타 키 자료를 포함하는 키 자료와 암호 해독되어 압축 및 압축 해제된 비디오 샘플은 하드웨어 보안을 활용하여 보호합니다.
+    하드웨어 기반 콘텐츠 보호 지원을 통해 여러 장치 플랫폼에서 고해상도(HD) 및 초고해상도(UHD) 콘텐츠를 안전하게 재생할 수 있습니다. 프라이빗 키, 콘텐츠 키 및 이러한 키를 파생하거나 잠금 해제하는 데 사용하는 기타 키 자료를 포함하는 키 자료와 암호 해독되어 압축 및 압축 해제된 비디오 샘플은 하드웨어 보안을 활용하여 보호합니다.
 
 -   비영구적 라이선스를 미리 취득할 수 있습니다.
 -   한 메시지로 여러 라이선스를 취득할 수 있습니다.
 
-    You can either use a PlayReady object with multiple key identifiers (KeyIDs) as in Windows 8.1, or use [content decryption model data (CDMData)](https://docs.microsoft.com/previous-versions/windows/apps/dn457361(v=ieb.10)?redirectedfrom=MSDN) with multiple KeyIDs.
+    Windows 8.1에서와 같이 여러 키 식별자 (KeyIDs)가 포함 된 PlayReady 개체를 사용 하거나 여러 KeyIDs로 [콘텐츠 암호 해독 모델 데이터 (CDMData)](https://docs.microsoft.com/previous-versions/windows/apps/dn457361(v=ieb.10)?redirectedfrom=MSDN) 를 사용할 수 있습니다.
 
     > [!NOTE]
-    > In Windows 10, multiple key identifiers are supported under &lt;KeyID&gt; in CDMData.
+    > Windows 10에서는 CDMData의 &lt;KeyID&gt;에서 여러 키 식별자를 사용할 수 있습니다.
 
 -   실시간 만료 지원 또는 LDL(제한된 기간 라이선스)이 추가되었습니다.
 
@@ -47,7 +47,7 @@ The following list describes the new features and changes made to PlayReady Encr
 -   이제 출력으로서의 Miracast는 암시적입니다.
 -   보안 중지가 추가되었습니다.
 
-    보안 중지를 통해 PlayReady 디바이스는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다.
+    보안 중지를 통해 PlayReady 장치는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다.
 
 -   오디오 및 동영상 라이선스 분리가 추가되었습니다.
 
@@ -67,7 +67,7 @@ The following list describes the new features and changes made to PlayReady Encr
 
 이 섹션에서는 웹앱에서 PlayReady 하드웨어 DRM을 사용하는 방법과 보호된 콘텐츠에서 하드웨어 DRM을 지원하지 않는 경우 하드웨어 DRM을 사용하지 않도록 설정하는 방법을 설명합니다.
 
-PlayReady 하드웨어 DRM을 사용하려면 JavaScript 웹앱에서 키 시스템 식별자 `com.microsoft.playready.hardware`와 함께 **isTypeSupported** EME 메서드를 사용하여 브라우저에서 PlayReady 하드웨어 DRM 지원을 쿼리해야 합니다.
+PlayReady 하드웨어 DRM을 사용하려면 JavaScript 웹앱에서 키 시스템 식별자 **와 함께** isTypeSupported`com.microsoft.playready.hardware` EME 메서드를 사용하여 브라우저에서 PlayReady 하드웨어 DRM 지원을 쿼리해야 합니다.
 
 경우에 따라 일부 콘텐츠는 하드웨어 DRM에서 지원되지 않습니다. Cocktail 콘텐츠는 하드웨어 DRM에서 지원되지 않습니다. Cocktail 콘텐츠를 재생해야 하는 경우 하드웨어 DRM을 옵트아웃(opt out)해야 합니다. HEVC를 지원하는 하드웨어 DRM도 있고 지원하지 않는 하드웨어 DRM도 있습니다. HEVC 콘텐츠를 재생하려는 경우 DRM에서 HEVC 콘텐츠를 지원하지 않으면 역시 하드웨어 DRM을 옵트아웃(opt out)할 수 있습니다.
 
@@ -78,7 +78,7 @@ PlayReady 하드웨어 DRM을 사용하려면 JavaScript 웹앱에서 키 시스
 
 이 섹션에서는 웹앱에 보안 중지를 추가하는 방법을 설명합니다.
 
-보안 중지를 통해 PlayReady 디바이스는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다. 이 기능은 미디어 스트리밍 서비스가 지정된 계정에 대해 다양한 디바이스의 사용 제한을 정확하게 적용하고 보고하도록 합니다.
+보안 중지를 통해 PlayReady 장치는 지정된 콘텐츠에 대해 미디어 재생이 중지된 미디어 스트리밍 서비스로 안정적으로 어설션됩니다. 이 기능은 미디어 스트리밍 서비스가 지정된 계정에 대해 다양한 장치의 사용 제한을 정확하게 적용하고 보고하도록 합니다.
 
 보안 중지 챌린지를 보내는 주요 시나리오는 두 가지가 있습니다.
 
@@ -262,13 +262,13 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 ```
 
 > [!NOTE]
-> The secure stop data’s `<SessionID>B64 encoded session ID</SessionID>` in the sample above can be an asterisk (\*), which is a wild card for all the secure stop sessions recorded. That is, the **SessionID** tag can be a specific session, or a wild card (\*) to select all the secure stop sessions.
+> 위의 샘플에서 보안 중지 데이터의 `<SessionID>B64 encoded session ID</SessionID>`는 기록 된 모든 보안 중지 세션의 와일드 카드를 나타내는 별표 (\*)가 될 수 있습니다. 즉, **SessionID** 태그는 특정 세션 이거나 모든 보안 중지 세션을 선택 하는 와일드 카드 (\*) 일 수 있습니다.
 
 ## <a name="programming-considerations-for-encrypted-media-extension"></a>암호화된 미디어 확장에 대한 프로그래밍 고려 사항
 
-This section lists the programming considerations that you should take into account when creating your PlayReady-enabled web app for Windows 10.
+이 섹션에는 Windows 10 용 PlayReady 사용 웹 앱을 만들 때 고려해 야 할 프로그래밍 고려 사항이 나열 되어 있습니다.
 
-앱에서 만든 **MSMediaKeys** 및 **MSMediaKeySession** 개체는 앱을 닫을 때까지 활성화되어 있어야 합니다. 이러한 개체를 활성 상태로 유지하는 한 가지 방법은 해당 개체를 전역 변수로 할당하는 것입니다. 변수가 함수 내부의 로컬 변수로 선언된 경우에는 변수가 범위에서 벗어나게 되며 가비지 수집에 따라 달라질 수 있습니다. For example, the following sample assigns the variables *g\_msMediaKeys* and *g\_mediaKeySession* as global variables, which are then assigned to the **MSMediaKeys** and **MSMediaKeySession** objects in the function.
+앱에서 만든 **MSMediaKeys** 및 **MSMediaKeySession** 개체는 앱을 닫을 때까지 활성화되어 있어야 합니다. 이러한 개체를 활성 상태로 유지하는 한 가지 방법은 해당 개체를 전역 변수로 할당하는 것입니다. 변수가 함수 내부의 로컬 변수로 선언된 경우에는 변수가 범위에서 벗어나게 되며 가비지 수집에 따라 달라질 수 있습니다. 예를 들어 다음 샘플에서는 *g\_msMediaKeys* 및 *g\_mediakeysession* 변수를 전역 변수로 할당 합니다 .이 변수는 함수에서 **Msmediakeys** 및 **msmediakeysession** 개체에 할당 됩니다.
 
 ``` syntax
 var g_msMediaKeys;

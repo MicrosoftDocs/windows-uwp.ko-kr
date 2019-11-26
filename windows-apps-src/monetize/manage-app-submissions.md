@@ -340,7 +340,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | id            | string  | 제출의 ID입니다. 이 ID는 [앱 제출 만들기](create-an-app-submission.md), [모든 앱 가져오기](get-all-apps.md) 및 [앱 가져오기](get-an-app.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 만든 제출의 경우이 ID는 파트너 센터의 제출 페이지에 대 한 URL 에서도 사용할 수 있습니다.  |
 | applicationCategory           | string  |   앱에 대한 [범주 및/또는 하위 범주](https://docs.microsoft.com/windows/uwp/publish/category-and-subcategory-table)를 지정하는 문자열입니다. 범주와 하위 범주는 **BooksAndReference_EReader**처럼 밑줄(_) 문자를 사용하여 단일 문자열로 연결합니다.      |  
 | pricing           |  object  | 앱에 대한 가격 정보를 포함하는 [가격 리소스](#pricing-object)입니다.        |   
-| visibility           |  string  |  앱의 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Hidden</li><li>Public</li><li>프라이빗</li><li>NotSet</li></ul>       |   
+| visibility           |  string  |  앱의 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Hidden</li><li>Public</li><li>개인 정보 보호</li><li>NotSet</li></ul>       |   
 | targetPublishMode           | string  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>수동</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |  
 | listings           |   object  |  키와 값 쌍의 사전입니다. 여기서 각 키는 국가 코드이며 각 값은 앱에 대한 목록 정보를 포함하는 [목록 리소스](#listing-object)입니다.       |   
@@ -426,11 +426,11 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  privacyPolicy                |   string      |   이 값은 사용 되지 않습니다. 앱에 대 한 개인 정보 보호 정책 URL을 설정 하거나 변경 하려면 파트너 센터의 [속성](../publish/enter-app-properties.md#privacy-policy-url) 페이지에서이 작업을 수행 해야 합니다. 제출 API에 대한 호출에서 이 값을 생략할 수 있습니다. 이 값을 설정하면 값이 무시됩니다.       |
 |  supportContact                |   string      |  이 값은 사용 되지 않습니다. 앱에 대 한 지원 연락처 URL 또는 메일 주소를 설정 하거나 변경 하려면 파트너 센터의 [속성](../publish/enter-app-properties.md#support-contact-info) 페이지에서이 작업을 수행 해야 합니다. 제출 API에 대한 호출에서 이 값을 생략할 수 있습니다. 이 값을 설정하면 값이 무시됩니다.        |
 |  websiteUrl                |   string      |  이 값은 사용 되지 않습니다. 앱에 대 한 웹 페이지의 URL을 설정 하거나 변경 하려면 파트너 센터의 [속성](../publish/enter-app-properties.md#website) 페이지에서이 작업을 수행 해야 합니다. 제출 API에 대한 호출에서 이 값을 생략할 수 있습니다. 이 값을 설정하면 값이 무시됩니다.      |    
-|  description               |    string     |   앱 목록에 대한 [설명](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions)입니다.   |     
+|  설명               |    string     |   앱 목록에 대한 [설명](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions)입니다.   |     
 |  기능               |    배열     |  앱의 [기능](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions)을 나열하는 최대 20개 문자열의 배열입니다.     |
 |  releaseNotes               |  string       |  앱의 [릴리스 정보](https://docs.microsoft.com/windows/uwp/publish/create-app-descriptions)입니다.    |
 |  이미지               |   배열      |  앱 목록의 [이미지 및 아이콘](#image-object) 리소스의 배열입니다.  |
-|  recommendedHardware               |   배열      |  앱의 [권장되는 하드웨어 구성](../publish/create-app-store-listings.md#additional-information)을 나열하는 최대 11개 문자열의 배열입니다.     |
+|  recommendedHardware               |   배열      |  앱의 [권장 하드웨어 구성](../publish/create-app-store-listings.md#additional-information)을 나열하는 최대 11개 문자열의 배열입니다.     |
 |  minimumHardware               |     string    |  앱의 [최소 하드웨어 구성](../publish/create-app-store-listings.md#additional-information)을 나열하는 최대 11개 문자열의 배열입니다.    |  
 |  title               |     string    |   앱 목록에 대한 제목입니다.   |  
 |  shortDescription               |     string    |  게임에서만 사용됩니다. 이 설명은 Xbox One에 있는 Game Hub의 **정보** 섹션에 표시가 되며, 고객이 게임에 대해 자세히 이해하는 데 도움이 됩니다.   |  
@@ -450,7 +450,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |  fileName               |    string     |   제출을 위해 업로드한 ZIP 보관 파일에 있는 이미지 파일의 이름입니다.    |     
 |  fileStatus               |   string      |  이미지 파일의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>   |
 |  id  |  string  | 이미지 ID입니다. 이 값은 파트너 센터에서 제공 합니다.  |
-|  description  |  string  | 이미지에 대한 설명입니다.  |
+|  설명  |  string  | 이미지에 대한 설명입니다.  |
 |  imageType  |  string  | 이미지의 형식을 나타냅니다. 현재 다음 문자열을 지원하고 있습니다. <p/>[스크린샷 이미지](../publish/app-screenshots-and-images.md#screenshots): <ul><li>스크린샷(데스크톱 스크린샷에 이 값을 사용)</li><li>MobileScreenshot</li><li>XboxScreenshot</li><li>SurfaceHubScreenshot</li><li>HoloLensScreenshot</li></ul><p/>[스토어 로고](../publish/app-screenshots-and-images.md#store-logos):<ul><li>StoreLogo9x16 </li><li>StoreLogoSquare</li><li>아이콘(1:1 300 x 300 픽셀 로고에 이 값을 사용)</li></ul><p/>[홍보 이미지](../publish/app-screenshots-and-images.md#promotional-images): <ul><li>PromotionalArt16x9</li><li>PromotionalArtwork2400X1200</li></ul><p/>[Xbox 이미지](../publish/app-screenshots-and-images.md#xbox-images): <ul><li>XboxBrandedKeyArt</li><li>XboxTitledHeroArt</li><li>XboxFeaturedPromotionalArt</li></ul><p/>[선택할 수 있는 홍보 이미지](../publish/app-screenshots-and-images.md#optional-promotional-images): <ul><li>SquareIcon358X358</li><li>BackgroundImage1000X800</li><li>PromotionalArtwork414X180</li></ul><p/> <!-- The following strings are also recognized for this field, but they correspond to image types that are no longer for listings in the Store.<ul><li>PromotionalArtwork846X468</li><li>PromotionalArtwork558X756</li><li>PromotionalArtwork414X468</li><li>PromotionalArtwork558X558</li><li>WideIcon358X173</li><li>Unknown</li></ul> -->   |
 
 
@@ -526,7 +526,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | 값           | 형식    | 설명        |
 |-----------------|---------|------|
 |  code               |    string     |   오류 또는 경고의 유형을 설명하는 [제출 상태 코드](#submission-status-code)입니다.   |     
-|  details               |     string    |  문제에 대한 자세한 정보가 있는 메시지입니다.     |
+|  details 정보               |     string    |  문제에 대한 자세한 정보가 있는 메시지입니다.     |
 
 
 <span id="application-package-object" />
@@ -569,7 +569,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값           | 형식    | 설명                   |
 |-----------------|---------|------|
-| fileName   |   string      |  패키지 이름입니다.    |  
+| fileName   |   string      |  패키지의 이름입니다.    |  
 | fileStatus    | string    |  패키지의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
 | id    |  string   |  패키지를 고유하게 식별하는 ID입니다. 이 값은 파트너 센터에서 제공 합니다.   |     
 | version    |  string   |  앱 패키지의 버전입니다. 자세한 내용은 [패키지 버전 번호](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering)를 참조하세요.   |   
@@ -705,11 +705,11 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |-----------------|---------|------|
 |  fileName               |    string     |   제출을 위해 업로드한 ZIP 보관 파일에 있는 미리 보기 이미지 파일의 이름입니다.    |     
 |  id  |  string  | 미리 보기 이미지 ID입니다. 이 값은 파트너 센터에서 제공 합니다.  |
-|  description  |  string  | 미리 보기 이미지에 대한 설명입니다. 이 값은 메타데이터입니다. 그리고 사용자에게 표시되지 않습니다.   |
+|  설명  |  string  | 미리 보기 이미지에 대한 설명입니다. 이 값은 메타데이터입니다. 그리고 사용자에게 표시되지 않습니다.   |
 
 <span/>
 
-## <a name="enums"></a>열거
+## <a name="enums"></a>열거형
 
 이러한 메서드는 다음 열거형을 사용합니다.
 

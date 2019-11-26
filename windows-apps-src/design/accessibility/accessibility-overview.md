@@ -194,5 +194,5 @@ XAML UI([**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.
 * [**Windows. .Xaml.** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation)
 * [접근성을 위한 디자인](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-overview)
 * [XAML 접근성 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
-* [액세스 가능성](accessibility.md)
+* [접근성](accessibility.md)
 * [내레이터 시작](https://support.microsoft.com/help/22798/windows-10-complete-guide-to-narrator)

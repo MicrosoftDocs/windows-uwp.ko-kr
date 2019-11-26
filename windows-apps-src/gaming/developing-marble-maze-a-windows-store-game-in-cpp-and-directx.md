@@ -39,7 +39,7 @@ Marble Maze는 사용자가 게임판을 조작하는 여러 가지 방법을 �
 
 ![Marble Maze 게임의 스크린샷](images/marblemaze-2.png)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 
 -   Windows 10 크리에이터 스 업데이트

@@ -1,6 +1,6 @@
 ---
 description: 선언적 XAML 태그 형식으로 UI를 정의하는 방법을 사용하면 유니버설 8.1 앱에서 UWP(유니버설 Windows 플랫폼) 앱으로 매우 원활하게 변환됩니다.
-title: Windows 런타임 8.x XAML 및 UI를 UWP로 포팅'
+title: Windows 런타임 8.x XAML 및 UI를 UWP로 포팅
 ms.assetid: 78b86762-7359-474f-b1e3-c2d7cf9aa907
 ms.date: 02/08/2017
 ms.topic: article
@@ -93,7 +93,7 @@ Windows 10에서 실행 되는 Universal 8.1 앱은 컨트롤에 대 한 8.1 모
 
 다음은 컨트롤에 대한 변경의 더욱 구체적인 몇 가지 예입니다.
 
-| 컨트롤 이름 | Change(영문) |
+| 컨트롤 이름 | 변화 |
 |--------------|--------|
 | **AppBar**   | **Appbar** 컨트롤을 사용 하는 경우 (대신[**명령 모음**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBar) 을 사용 하는 것이 좋습니다) Windows 10 앱에서 기본적으로 숨겨져 있지 않습니다. [  **AppBar.ClosedDisplayMode**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.closeddisplaymode) 속성으로 이를 제어할 수 있습니다. |
 | **AppBar**, [**CommandBar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBar) | Windows 10 앱에서 **Appbar** 및 [**CommandBar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBar) 는 **자세히 보기** 단추 (줄임표)를 포함 합니다. |
@@ -116,7 +116,7 @@ Windows 10에서 실행 되는 Universal 8.1 앱은 컨트롤에 대 한 8.1 모
 | [**상자로**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | Windows 런타임 8pt 앱에서 [**텍스트 상자**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)에 대 한 맞춤법 검사는 기본적으로 해제 되어 있습니다. Windows Phone 스토어 앱 및 Windows 10 앱에서 기본적으로 설정 되어 있습니다. |
 | [**상자로**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | [  **TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)의 기본 글꼴 크기가 11에서 15로 변경되었습니다. |
 | [**상자로**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) | [  **TextBox.TextReadingOrder**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.textreadingorder)의 기본값이 **Default**에서 **DetectFromContent**로 변경되었습니다. 값이 적합하지 않으면 **UseFlowDirection**을 사용합니다. **Default**는 사용되지 않습니다. |
-| Various | 강조 색은 Windows Phone 스토어 앱 및 Windows 10 앱에 적용 되지만 Windows 런타임 8.x 앱에는 적용 되지 않습니다.  |
+| 다양한 | 강조 색은 Windows Phone 스토어 앱 및 Windows 10 앱에 적용 되지만 Windows 런타임 8.x 앱에는 적용 되지 않습니다.  |
 
 UWP 앱 컨트롤에 대한 자세한 내용은 [기능별 컨트롤](https://docs.microsoft.com/windows/uwp/controls-and-patterns/controls-by-function), [컨트롤 목록](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/) 및 [컨트롤에 대한 지침](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/index)을 참조하세요.
 
@@ -196,7 +196,7 @@ Windows 10에서 변경 되거나 지원 되지 않는 [**GridView**](https://do
 |                     | PointerOverPressed      |                   | [사용할 수 없음]       |
 |                     | 사용 안 함                |                   | [사용할 수 없음]       |
 |                     | [사용할 수 없음]           |                   | PointerOverSelected |
-|                     | [사용할 수 없음]           |                   | Selected            |
+|                     | [사용할 수 없음]           |                   | 선택            |
 |                     | [사용할 수 없음]           |                   | PressedSelected     |
 | [사용할 수 없음]       |                         | DisabledStates    |                     |
 |                     | [사용할 수 없음]           |                   | 사용 안 함            |
@@ -214,7 +214,7 @@ Windows 10에서 변경 되거나 지원 되지 않는 [**GridView**](https://do
 |                     | UnselectedPointerOver   |                   | [사용할 수 없음]       |
 |                     | UnselectedSwiping       |                   | [사용할 수 없음]       |
 |                     | 선택               |                   | [사용할 수 없음]       |
-|                     | Selected                |                   | [사용할 수 없음]       |
+|                     | 선택                |                   | [사용할 수 없음]       |
 |                     | SelectedSwiping         |                   | [사용할 수 없음]       |
 |                     | SelectedUnfocused       |                   | [사용할 수 없음]       |
 
@@ -450,7 +450,7 @@ Windows 런타임 .x **SettingsPane** 클래스는 Windows 10에 적합 하지 �
 
 설정 페이지는 앱 창 전체를 채워야 하며, 설정 페이지에도 정보 및 피드백이 있어야 합니다. 설정 페이지의 디자인에 대한 지침은 [앱 설정에 대한 지침](https://docs.microsoft.com/windows/uwp/app-settings/guidelines-for-app-settings)을 참조하세요.
 
-## <a name="text"></a>텍스트
+## <a name="text"></a>Text
 
 텍스트(또는 입력 체계)는 UWP 앱의 중요한 측면이며, 포팅하는 동안 보기가 새 디자인 언어와 조화를 이루도록 보기의 시각적 디자인을 다시 검토할 수 있습니다. 다음 그림을 사용하여 사용 가능한 UWP(유니버설 Windows 플랫폼)  **TextBlock** 시스템 스타일을 찾을 수 있습니다. 사용한 Windows Phone Silverlight 스타일에 해당 하는 항목을 찾습니다. 또는 고유한 범용 스타일을 만들고 Windows Phone Silverlight 시스템 스타일에서 해당 속성을 복사할 수 있습니다.
 

@@ -41,15 +41,15 @@ WIP 및 인식 앱에 대한 자세한 내용은 [WIP(Windows Information Protec
 
 다음 작업을 수행합니다.
 
-* [Install the WIP Setup Developer Assistant onto your test VM](#install-assistant)
+* [테스트 VM에 WIP 설정 개발자 도우미 설치](#install-assistant)
 
-* [Create a protection policy by using the WIP Setup Developer Assistant](#create-protection-policy)
+* [WIP 설정 개발자 도우미를 사용 하 여 보호 정책 만들기](#create-protection-policy)
 
-* [Setup a Visual Studio project](#setup-vs-project)
+* [Visual Studio 프로젝트 설정](#setup-vs-project)
 
-* [Setup remote debugging](#setup-remote-debugging)
+* [원격 디버깅 설정](#setup-remote-debugging)
 
-* [Add namespaces to your code files](#add-namespaces)
+* [코드 파일에 네임 스페이스 추가](#add-namespaces)
 
 <a id="install-assistant" />
 
@@ -159,16 +159,16 @@ Windows Information Protection은 앱이 보호 정책의 허용된 목록에 �
 
 **이 섹션의 내용:**
 
-* [Read data from a file](#read-file)
-* [Read data from a network endpoint](#read-network)
-* [Read data from the clipboard](#read-clipboard)
-* [Read data from a Share contract](#read-share)
+* [파일에서 데이터 읽기](#read-file)
+* [네트워크 끝점에서 데이터 읽기](#read-network)
+* [클립보드에서 데이터 읽기](#read-clipboard)
+* [공유 계약에서 데이터 읽기](#read-share)
 
 <a id="read-file" />
 
 ### <a name="read-data-from-a-file"></a>파일에서 데이터 읽기
 
-**Step 1: Get the file handle**
+**1 단계: 파일 핸들 가져오기**
 
 ```csharp
     Windows.Storage.StorageFolder storageFolder =
@@ -178,7 +178,7 @@ Windows Information Protection은 앱이 보호 정책의 허용된 목록에 �
         await storageFolder.GetFileAsync(fileName);
 ```
 
-**Step 2: Determine whether your app can open the file**
+**2 단계: 앱이 파일을 열 수 있는지 확인**
 
 [FileProtectionManager.GetProtectionInfoAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectionmanager.getprotectioninfoasync)를 호출하여 앱에서 파일을 열 수 있는지 확인합니다.
 
@@ -205,17 +205,17 @@ else if (protectionInfo.Status == FileProtectionStatus.Revoked)
 [FileProtectionManager.GetProtectionInfoAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectionmanager.getprotectioninfoasync)<br>
 [FileProtectionInfo](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectioninfo)<br>
 [FileProtectionStatus](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectionstatus)<br>
-[ProtectionPolicyManager.IsIdentityManaged](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.isidentitymanaged)
+[ProtectionPolicyManager](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.isidentitymanaged)
 
-**Step 3: Read the file into a stream or buffer**
+**3 단계: 파일을 스트림 또는 버퍼에 읽기**
 
-*Read the file into a stream*
+*파일을 스트림으로 읽기*
 
 ```csharp
 var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite);
 ```
 
-*Read the file into a buffer*
+*파일을 버퍼로 읽기*
 
 ```csharp
 var buffer = await Windows.Storage.FileIO.ReadBufferAsync(file);
@@ -226,7 +226,7 @@ var buffer = await Windows.Storage.FileIO.ReadBufferAsync(file);
 
 엔터프라이즈 끝점에서 읽기 위해 보호된 스레드 컨텍스트를 만듭니다.
 
-**Step 1: Get the identity of the network endpoint**
+**1 단계: 네트워크 끝점의 id 가져오기**
 
 ```csharp
 Uri resourceURI = new Uri("http://contoso.com/stockData.xml");
@@ -244,7 +244,7 @@ string identity = await ProtectionPolicyManager.
 [ProtectionPolicyManager.GetPrimaryManagedIdentityForNetworkEndpointAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.getprimarymanagedidentityfornetworkendpointasync)
 
 
-**Step 2: Create a protected thread context**
+**2 단계: 보호 된 스레드 컨텍스트 만들기**
 
 끝점이 정책에 따라 관리되는 경우 보호된 스레드 컨텍스트를 만듭니다. 그러면 동일한 스레드에서 만든 네트워크 연결에 ID로 태그가 지정됩니다.
 
@@ -272,10 +272,10 @@ else
 
 > **APIs** <br>
 [ProtectionPolicyManager.GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview)<br>
-[ProtectionPolicyManager.Identity](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)<br>
+[ProtectionPolicyManager](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)<br>
 [ProtectionPolicyManager.CreateCurrentThreadNetworkContext](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.createcurrentthreadnetworkcontext)
 
-**Step 3: Read the resource into a buffer**
+**3 단계: 리소스를 버퍼로 읽기**
 
 ```csharp
 private static async Task<IBuffer> GetDataFromNetworkHelperMethod(Uri resourceURI)
@@ -290,7 +290,7 @@ private static async Task<IBuffer> GetDataFromNetworkHelperMethod(Uri resourceUR
 }
 ```
 
-**(Optional) Use a header token instead of creating a protected thread context**
+**필드 보호 된 스레드 컨텍스트를 만드는 대신 헤더 토큰을 사용 합니다.**
 
 ```csharp
 public static async Task<IBuffer> GetDataFromNetworkbyUsingHeader(Uri resourceURI)
@@ -330,7 +330,7 @@ private static async Task<IBuffer> GetDataFromNetworkbyUsingHeaderHelperMethod(H
 }
 ```
 
-**Handle page redirects**
+**페이지 리디렉션 처리**
 
 경우에 따라 웹 서버는 리소스의 현재 버전으로 트래픽을 리디렉션합니다.
 
@@ -383,13 +383,13 @@ private static async Task<IBuffer> GetDataFromNetworkRedirectHelperMethod(Uri re
 [ProtectionPolicyManager.GetPrimaryManagedIdentityForNetworkEndpointAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.getprimarymanagedidentityfornetworkendpointasync)<br>
 [ProtectionPolicyManager.CreateCurrentThreadNetworkContext](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.createcurrentthreadnetworkcontext)<br>
 [ProtectionPolicyManager.GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview)<br>
-[ProtectionPolicyManager.Identity](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)
+[ProtectionPolicyManager](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)
 
 <a id="read-clipboard" />
 
 ### <a name="read-data-from-the-clipboard"></a>클립보드에서 데이터 읽기
 
-**Get permission to use data from the clipboard**
+**클립보드의 데이터를 사용할 수 있는 권한 가져오기**
 
 클립보드에서 데이터를 가져오려면 Windows에 권한을 요청합니다. 이를 위해 [**DataPackageView.RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackageview.requestaccessasync)를 사용합니다.
 
@@ -412,9 +412,9 @@ public static async Task PasteText(TextBox textBox)
 ```
 
 > **APIs** <br>
-[DataPackageView.RequestAccessAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackageview.requestaccessasync)
+[DataPackageView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackageview.requestaccessasync)
 
-**Hide or disable features that use clipboard data**
+**클립보드 데이터를 사용 하는 기능 숨기기 또는 사용 안 함**
 
 현재 보기에 클립보드의 데이터를 가져올 권한이 있는지 여부를 결정합니다.
 
@@ -441,9 +441,9 @@ private bool IsClipboardAllowedAsync()
 > **APIs** <br>
 [ProtectionPolicyEvaluationResult](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicyevaluationresult)<br>
 [ProtectionPolicyManager.GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview)<br>
-[ProtectionPolicyManager.Identity](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)
+[ProtectionPolicyManager](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)
 
-**Prevent users from being prompted with a consent dialog box**
+**사용자에 게 동의 대화 상자가 표시 되지 않도록 방지**
 
 새 문서는 *개인* 또는 *엔터프라이즈* 문서가 아닙니다. 그저 새 문서입니다. 엔터프라이즈 데이터를 새 문서에 붙여넣으면 정책이 적용되고 동의하라는 대화 상자가 표시됩니다. 이 코드는 이러한 대화 상자가 표시되지 않도록 합니다. 이 작업은 데이터 보호와는 관련이 없습니다. 앱이 완전히 새로운 항목을 만드는 경우에 사용자에게 동의 확인 대화 상자가 표시되지 않도록 하는 작업입니다.
 
@@ -479,9 +479,9 @@ private async void PasteText(bool isNewEmptyDocument)
 ```
 
 > **APIs** <br>
-[DataPackageView.RequestAccessAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackageview.requestaccessasync)<br>
+[DataPackageView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackageview.requestaccessasync)<br>
 [ProtectionPolicyEvaluationResult](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicyevaluationresult)<br>
-[ProtectionPolicyManager.TryApplyProcessUIPolicy](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy)
+[ProtectionPolicyManager에 대 한](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy)
 
 <a id="read-share" />
 
@@ -535,9 +535,9 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 ```
 
 > **APIs** <br>
-[ProtectionPolicyManager.RequestAccessAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.requestaccessasync)<br>
+[ProtectionPolicyManager](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.requestaccessasync)<br>
 [ProtectionPolicyEvaluationResult](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicyevaluationresult)<br>
-[ProtectionPolicyManager.TryApplyProcessUIPolicy](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy)
+[ProtectionPolicyManager에 대 한](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy)
 
 ## <a name="protect-enterprise-data"></a>엔터프라이즈 데이터 보호
 
@@ -545,15 +545,15 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 
 **이 섹션의 내용:**
 
-* [Protect data that appears in pages](#protect-pages)
-* [Protect data to a file as a background process](#protect-background)
-* [Protect part of a file](#protect-part-file)
-* [Read the protected part of a file](#read-protected)
-* [Protect data to a folder](#protect-folder)
-* [Protect data to a network end point](#protect-network)
-* [Protect data that your app shares through a share contract](#protect-share)
-* [Protect files that you copy to another location](#protect-other-location)
-* [Protect enterprise data when the screen of the device is locked](#protect-locked)
+* [페이지에 표시 되는 데이터 보호](#protect-pages)
+* [파일에 대 한 데이터를 백그라운드 프로세스로 보호](#protect-background)
+* [파일의 일부 보호](#protect-part-file)
+* [파일의 보호 된 부분 읽기](#read-protected)
+* [폴더에 대 한 데이터 보호](#protect-folder)
+* [네트워크 끝점으로 데이터 보호](#protect-network)
+* [공유 계약을 통해 앱이 공유 하는 데이터 보호](#protect-share)
+* [다른 위치로 복사 하는 파일 보호](#protect-other-location)
+* [장치의 화면이 잠길 때 엔터프라이즈 데이터 보호](#protect-locked)
 
 <a id="protect-pages" />
 
@@ -563,7 +563,7 @@ protected override async void OnShareTargetActivated(ShareTargetActivatedEventAr
 
 보기 또는 프로세스에 태그를 지정하면 Windows가 정책을 적용합니다. 이렇게 하면 앱이 제어하지 않는 작업으로 인해 발생하는 데이터 누출을 방지할 수 있습니다. 예를 들어 컴퓨터에서 사용자는 CTRL-V를 사용하여 보기에서 엔터프라이즈 정보를 복사한 다음 해당 정보를 다른 앱에 붙여넣을 수 있습니다. Windows가 이러한 동작을 방지합니다. 또한 Windows는 공유 계약을 적용할 수 있습니다.
 
-**Tag the current app view**
+**현재 앱 보기에 태그 표시**
 
 일부 보기는 엔터프라이즈 데이터를 사용하고 일부는 개인 데이터를 사용하는 여러 보기가 앱에 있을 경우 이 작업을 수행합니다.
 
@@ -579,9 +579,9 @@ ProtectionPolicyManager.GetForCurrentView().Identity = String.Empty;
 
 > **APIs** <br>
 [ProtectionPolicyManager.GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview)<br>
-[ProtectionPolicyManager.Identity](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)
+[ProtectionPolicyManager](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)
 
-**Tag the process**
+**프로세스 태그**
 
 앱의 모든 보기가 한 가지 유형의 데이터(개인 또는 엔터프라이즈)만으로 작동하는 경우 이 작업을 수행합니다.
 
@@ -600,7 +600,7 @@ ProtectionPolicyManager.ClearProcessUIPolicy();
 ```
 
 > **APIs** <br>
-[ProtectionPolicyManager.TryApplyProcessUIPolicy](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy)
+[ProtectionPolicyManager에 대 한](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.tryapplyprocessuipolicy)
 
 <a id="protect-file" />
 
@@ -608,7 +608,7 @@ ProtectionPolicyManager.ClearProcessUIPolicy();
 
 보호된 파일을 만들고 이 파일에 씁니다.
 
-**Step 1: Determine if your app can create an enterprise file**
+**1 단계: 앱에서 엔터프라이즈 파일을 만들 수 있는지 확인**
 
 ID 문자열이 정책에 따라 관리되고 앱이 해당 정책의 허용 목록에 있는 경우 앱이 엔터프라이즈 파일을 만들 수 있습니다.
 
@@ -617,10 +617,10 @@ ID 문자열이 정책에 따라 관리되고 앱이 해당 정책의 허용 목
 ```
 
 > **APIs** <br>
-[ProtectionPolicyManager.IsIdentityManaged](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.isidentitymanaged)
+[ProtectionPolicyManager](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.isidentitymanaged)
 
 
-**Step 2: Create the file and protect it to the identity**
+**2 단계: 파일을 만들고 id로 보호**
 
 ```csharp
 StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
@@ -634,9 +634,9 @@ FileProtectionInfo fileProtectionInfo =
 > **APIs** <br>
 [FileProtectionManager.ProtectAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectionmanager.protectasync)
 
-**Step 3: Write that stream or buffer to the file**
+**3 단계: 해당 스트림 또는 버퍼를 파일에 씁니다.**
 
-*Write a stream*
+*스트림 작성*
 
 ```csharp
     if (fileProtectionInfo.Status == FileProtectionStatus.Protected)
@@ -654,7 +654,7 @@ FileProtectionInfo fileProtectionInfo =
     }
 ```
 
-*Write a buffer*
+*버퍼 작성*
 
 ```csharp
      if (fileProtectionInfo.Status == FileProtectionStatus.Protected)
@@ -679,7 +679,7 @@ FileProtectionInfo fileProtectionInfo =
 
 파일을 만들 때 파일 핸들을 열어 두는 방법을 사용해야 합니다.  
 
-**Step 1: Determine if you can create an enterprise file**
+**1 단계: 엔터프라이즈 파일을 만들 수 있는지 확인**
 
 사용 중인 ID가 정책에 따라 관리되고 앱이 해당 정책의 허용 목록에 있는 경우 엔터프라이즈 파일을 만들 수 있습니다.
 
@@ -688,9 +688,9 @@ if (!ProtectionPolicyManager.IsIdentityManaged(identity)) return false;
 ```
 
 > **APIs** <br>
-[ProtectionPolicyManager.IsIdentityManaged](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.isidentitymanaged)
+[ProtectionPolicyManager](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.isidentitymanaged)
 
-**Step 2: Create a file and protect it to the identity**
+**2 단계: 파일을 만들고 id로 보호**
 
 [  **FileProtectionManager.CreateProtectedAndOpenAsync**](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectionmanager.createprotectedandopenasync)는 보호된 파일을 만들고 그 파일에 작성하는 동안 파일 핸들을 열어 둡니다.
 
@@ -705,7 +705,7 @@ ProtectedFileCreateResult protectedFileCreateResult =
 > **APIs** <br>
 [FileProtectionManager.CreateProtectedAndOpenAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectionmanager.createprotectedandopenasync)
 
-**Step 3: Write a stream or buffer to the file**
+**3 단계: 파일에 스트림 또는 버퍼 작성**
 
 이 예제에서는 파일에 스트림을 작성합니다.
 
@@ -734,7 +734,7 @@ else if (protectedFileCreateResult.ProtectionInfo.Status == FileProtectionStatus
 > **APIs** <br>
 [ProtectedFileCreateResult.ProtectionInfo](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectedfilecreateresult.protectioninfo)<br>
 [FileProtectionStatus](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectionstatus)<br>
-[ProtectedFileCreateResult.Stream](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectedfilecreateresult.stream)<br>
+[ProtectedFileCreateResult](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectedfilecreateresult.stream)<br>
 
 <a id="protect-part-file" />
 
@@ -744,7 +744,7 @@ else if (protectedFileCreateResult.ProtectionInfo.Status == FileProtectionStatus
 
 엔터프라이즈 데이터를 암호화하지만 전체 파일을 암호화하지는 않습니다. 이렇게 하면 사용자가 MDM에서 등록을 취소하거나 해당 엔터프라이즈 데이터 액세스 권한이 해지되더라도 계속해서 해당 파일을 사용할 수 있습니다. 또한 앱은 파일을 메모리로 다시 읽을 때 보호해야 할 데이터를 알 수 있도록 암호화하는 데이터를 계속 추적해야 합니다.
 
-**Step 1: Add enterprise data to an encrypted stream or buffer**
+**1 단계: 암호화 된 스트림 또는 버퍼에 엔터프라이즈 데이터 추가**
 
 ```csharp
 string enterpriseDataString = "<employees><employee><name>Bill</name><social>xxx-xxx-xxxx</social></employee></employees>";
@@ -759,11 +759,11 @@ enterpriseData= result.Buffer;
 ```
 
 > **APIs** <br>
-[DataProtectionManager.ProtectAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.dataprotectionmanager.protectasync)<br>
-[BufferProtectUnprotectResult.buffer](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.bufferprotectunprotectresult.buffer)
+[Microsoft.systemcenter.dataprotectionmanager.2012.reporting.mp. ProtectAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.dataprotectionmanager.protectasync)<br>
+[BufferProtectUnprotectResult](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.bufferprotectunprotectresult.buffer)
 
 
-**Step 2: Add personal data to an unencrypted stream or buffer**
+**2 단계: 암호화 되지 않은 스트림 또는 버퍼에 개인 데이터 추가**
 
 ```csharp
 string personalDataString = "<recipies><recipe><name>BillsCupCakes</name><cooktime>30</cooktime></recipe></recipies>";
@@ -772,7 +772,7 @@ var personalData = Windows.Security.Cryptography.CryptographicBuffer.ConvertStri
     personalDataString, Windows.Security.Cryptography.BinaryStringEncoding.Utf8);
 ```
 
-**Step 3: Write both streams or buffers to a file**
+**3 단계: 파일에 스트림 또는 버퍼 작성**
 
 ```csharp
 StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
@@ -797,7 +797,7 @@ using (var outputStream = stream.GetOutputStreamAt(0))
 }
 ```
 
-**Step 4: Keep track of the location of your enterprise data in the file**
+**4 단계: 파일에서 엔터프라이즈 데이터의 위치 추적**
 
 엔터프라이즈 데이터를 소유한 해당 파일의 데이터를 추적하는 것은 앱의 책임입니다.
 
@@ -819,7 +819,7 @@ await Windows.Storage.FileIO.WriteTextAsync
 
 해당 파일에서 엔터프라이즈 데이터를 읽는 방법은 다음과 같습니다.
 
-**Step 1: Get the position of your enterprise data in the file**
+**1 단계: 파일에서 엔터프라이즈 데이터의 위치를 가져옵니다.**
 
 ```csharp
 Windows.Storage.StorageFolder storageFolder =
@@ -841,7 +841,7 @@ uint endPosition =
     Convert.ToUInt16((doc.FirstChild.Attributes.GetNamedItem("end")).InnerText);
 ```
 
-**Step 2: Open the data file and make sure that it's not protected**
+**2 단계: 데이터 파일을 열고 보호 되지 않는지 확인 합니다.**
 
 ```csharp
 Windows.Storage.StorageFile dataFile =
@@ -859,7 +859,7 @@ if (protectionInfo.Status == FileProtectionStatus.Protected)
 [FileProtectionInfo](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectioninfo)<br>
 [FileProtectionStatus](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectionstatus)<br>
 
-**Step 3: Read the enterprise data from the file**
+**3 단계: 파일에서 엔터프라이즈 데이터 읽기**
 
 ```csharp
 var stream = await dataFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite);
@@ -871,7 +871,7 @@ Windows.Storage.Streams.Buffer tempBuffer = new Windows.Storage.Streams.Buffer(5
 IBuffer enterpriseData = await stream.ReadAsync(tempBuffer, endPosition, InputStreamOptions.None);
 ```
 
-**Step 4: Decrypt the buffer that contains enterprise data**
+**4 단계: 엔터프라이즈 데이터를 포함 하는 버퍼 암호 해독**
 
 ```csharp
 DataProtectionInfo dataProtectionInfo =
@@ -892,7 +892,7 @@ else if (dataProtectionInfo.Status == DataProtectionStatus.Revoked)
 
 > **APIs** <br>
 [DataProtectionInfo](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.dataprotectioninfo)<br>
-[DataProtectionManager.GetProtectionInfoAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.dataprotectionmanager.getstreamprotectioninfoasync)<br>
+[Microsoft.systemcenter.dataprotectionmanager.2012.reporting.mp. GetProtectionInfoAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.dataprotectionmanager.getstreamprotectioninfoasync)<br>
 
 <a id="protect-folder" />
 
@@ -924,10 +924,10 @@ private async Task<bool> CreateANewFolderAndProtectItAsync(string folderName, st
 보호하기 전에 폴더는 비어 있어야 합니다. 이미 항목이 포함된 폴더는 보호할 수 없습니다.
 
 > **APIs** <br>
-[ProtectionPolicyManager.IsIdentityManaged](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.isidentitymanaged)<br>
+[ProtectionPolicyManager](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.isidentitymanaged)<br>
 [FileProtectionManager.ProtectAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectionmanager.protectasync)<br>
-[FileProtectionInfo.Identity](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectioninfo.identity)<br>
-[FileProtectionInfo.Status](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectioninfo.status)
+[FileProtectionInfo](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectioninfo.identity)<br>
+[FileProtectionInfo](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.fileprotectioninfo.status)
 
 <a id="protect-network" />
 
@@ -935,7 +935,7 @@ private async Task<bool> CreateANewFolderAndProtectItAsync(string folderName, st
 
 보호된 스레드 컨텍스트를 만들어 엔터프라이즈 끝점으로 데이터를 보냅니다.  
 
-**Step 1: Get the identity of the network endpoint**
+**1 단계: 네트워크 끝점의 id 가져오기**
 
 ```csharp
 Windows.Networking.HostName hostName =
@@ -948,7 +948,7 @@ string identity = await ProtectionPolicyManager.
 > **APIs** <br>
 [ProtectionPolicyManager.GetPrimaryManagedIdentityForNetworkEndpointAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.getprimarymanagedidentityfornetworkendpointasync)
 
-**Step 2: Create a protected thread context and send data to the network endpoint**
+**2 단계: 보호 된 스레드 컨텍스트를 만들고 네트워크 끝점으로 데이터 보내기**
 
 ```csharp
 HttpClient client = null;
@@ -980,7 +980,7 @@ else
 
 > **APIs** <br>
 [ProtectionPolicyManager.GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview)<br>
-[ProtectionPolicyManager.Identity](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)<br>
+[ProtectionPolicyManager](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)<br>
 [ProtectionPolicyManager.CreateCurrentThreadNetworkContext](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.createcurrentthreadnetworkcontext)
 
 <a id="protect-share" />
@@ -1014,7 +1014,7 @@ private void OnDataRequested(DataTransferManager sender, DataRequestedEventArgs 
 
 > **APIs** <br>
 [ProtectionPolicyManager.GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview)<br>
-[ProtectionPolicyManager.Identity](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)
+[ProtectionPolicyManager](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)
 
 <a id="protect-other-location" />
 
@@ -1089,17 +1089,17 @@ private async void ProtectionPolicyManager_ProtectedAccessSuspending(object send
 > **APIs** <br>
 [ProtectionPolicyManager.ProtectedAccessSuspending](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.protectedaccesssuspending)<br>
 [ProtectionPolicyManager.GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview)<br>
-[ProtectionPolicyManager.Identity](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)</br>
-[DataProtectionManager.ProtectAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.dataprotectionmanager.protectasync)<br>
-[BufferProtectUnprotectResult.buffer](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.bufferprotectunprotectresult.buffer)<br>
-[ProtectedAccessSuspendingEventArgs.GetDeferral](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectedaccesssuspendingeventargs.getdeferral)<br>
-[Deferral.Complete](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete)<br>
+[ProtectionPolicyManager](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)</br>
+[Microsoft.systemcenter.dataprotectionmanager.2012.reporting.mp. ProtectAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.dataprotectionmanager.protectasync)<br>
+[BufferProtectUnprotectResult](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.bufferprotectunprotectresult.buffer)<br>
+[ProtectedAccessSuspendingEventArgs. GetDeferral](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectedaccesssuspendingeventargs.getdeferral)<br>
+[지연 완료](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete)<br>
 
 #### <a name="add-back-sensitive-data-when-the-device-is-unlocked"></a>디바이스 잠금이 해제될 때 중요한 데이터 다시 추가
 
-[**ProtectionPolicyManager.ProtectedAccessResumed**](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.protectedaccessresumed) is raised when the device is unlocked and the keys are available on the device again.
+[**ProtectionPolicyManager**](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.protectedaccessresumed) 장치를 잠금 해제 하 고 장치에서 키를 다시 사용할 수 있는 경우 ProtectedAccessResumed이 발생 합니다.
 
-[**ProtectedAccessResumedEventArgs.Identities**](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectedaccessresumedeventargs.identities) is an empty collection if the administrator hasn't configured a secure data protection under lock policy.
+관리자가 잠금 정책에서 보안 데이터 보호를 구성 하지 않은 경우에는 ProtectedAccessResumedEventArgs가 빈 컬렉션입니다 [ **.** ](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectedaccessresumedeventargs.identities)
 
 이 예제에서는 이전 예제의 반대로 작업을 수행합니다. 버퍼의 암호를 해독하고 해당 버퍼의 정보를 textbox에 다시 추가한 다음 버퍼를 삭제합니다.
 
@@ -1126,9 +1126,9 @@ private async void ProtectionPolicyManager_ProtectedAccessResumed(object sender,
 > **APIs** <br>
 [ProtectionPolicyManager.ProtectedAccessResumed](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.protectedaccessresumed)<br>
 [ProtectionPolicyManager.GetForCurrentView](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager.getforcurrentview)<br>
-[ProtectionPolicyManager.Identity](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)</br>
-[DataProtectionManager.UnprotectAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.dataprotectionmanager.unprotectasync)<br>
-[BufferProtectUnprotectResult.Status](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.bufferprotectunprotectresult)<br>
+[ProtectionPolicyManager](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicymanager)</br>
+[Microsoft.systemcenter.dataprotectionmanager.2012.reporting.mp. UnprotectAsync](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.dataprotectionmanager.unprotectasync)<br>
+[BufferProtectUnprotectResult](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.bufferprotectunprotectresult)<br>
 
 ## <a name="handle-enterprise-data-when-protected-content-is-revoked"></a>보호된 콘텐츠 해지 시 엔터프라이즈 데이터 처리
 
@@ -1163,4 +1163,4 @@ private void ProtectionPolicyManager_ProtectedContentRevoked(object sender, Prot
 
 ## <a name="related-topics"></a>관련 항목
 
-[Windows Information Protection (WIP) sample](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/EnterpriseDataProtection)
+[WIP (Windows Information Protection) 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/EnterpriseDataProtection)

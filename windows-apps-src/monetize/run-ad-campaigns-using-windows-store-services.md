@@ -17,7 +17,7 @@ ms.locfileid: "74260185"
 
 *Microsoft Store 프로 모션 API* 를 사용 하 여 또는 조직의 파트너 센터 계정에 등록 된 앱에 대 한 프로 모션 광고 캠페인을 프로그래밍 방식으로 관리 합니다. 이 API를 사용하여 대상 지정 및 창작 광고와 같은 캠페인 및 기타 관련 자산을 만들고 업데이트하고 모니터링할 수 있습니다. 이 API는 특히 파트너 센터를 사용 하지 않고 많은 양의 캠페인을 만드는 개발자에 게 유용 합니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
 
-다음 단계에서는 엔드투엔드 프로세스를 설명합니다.
+다음 단계에서는 종단 간 프로세스를 설명합니다.
 
 1.  [필수 조건](#prerequisites)을 모두 완료했는지 확인합니다.
 2.  Microsoft Store 프로모션 API에서 메서드를 호출하기 전에 [Azure AD 액세스 토큰을 가져옵니다](#obtain-an-azure-ad-access-token). 토큰을 가져온 후 만료되기 전에 이 토큰을 Microsoft Store 프로모션 API에 대한 호출에 사용할 수 있는 시간은 60분입니다. 토큰이 만료된 후 새 토큰을 생성할 수 있습니다.
@@ -54,7 +54,7 @@ Azure AD 응용 프로그램을 파트너 센터 계정에 연결 하 고 필요
 
 <span id="obtain-an-azure-ad-access-token" />
 
-## <a name="step-2-obtain-an-azure-ad-access-token"></a>단계 2: Azure AD 액세스 토큰 가져오기
+## <a name="step-2-obtain-an-azure-ad-access-token"></a>2단계: Azure AD 액세스 토큰 가져오기
 
 Microsoft Store 프로모션 API에서 메서드를 호출하기 전에 먼저 API에 있는 각 메서드의 **Authorization** 헤더에 전달하는 Azure AD 액세스 토큰을 가져와야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 API에 대한 추가 호출에 계속 사용할 수 있도록 해당 토큰을 새로 고칠 수 있습니다.
 
@@ -86,7 +86,7 @@ Microsoft Store 프로모션 API 컨텍스트에서 광고 캠페인은 캠페�
 이러한 개체 및 관련 메서드에 대한 자세한 내용은 다음 표를 참조하세요.
 
 
-| 개체       | 설명   |
+| Object       | 설명   |
 |---------------|-----------------|
 | 캠페인 |  이 개체는 광고 캠페인을 나타내며, 광고 캠페인의 개체 모델 계층에서 상단에 위치합니다. 이 개체는 실행 중인 캠페인의 유형(유료, 하우스 또는 커뮤니티), 캠페인 목표, 캠페인의 배달 라인 및 기타 세부 정보를 식별합니다. 각 캠페인은 한 앱에만 연결할 수 있습니다.<br/><br/>이 개체와 관련된 메서드에 대한 자세한 내용은 [광고 캠페인 관리](manage-ad-campaigns.md)를 참조하세요.<br/><br/>**참고**&nbsp;&nbsp;광고 캠페인을 만든 후 [Microsoft Store 분석 API](get-ad-campaign-performance-data.md)의 [광고 캠페인 성과 데이터 가져오기](access-analytics-data-using-windows-store-services.md) 메서드를 사용하여 캠페인의 성과 데이터를 검색할 수 있습니다.  |
 | 배달 라인 | 각 캠페인에는 인벤토리를 구매하고 광고를 전달하는 데 사용되는 배달 라인이 하나 이상 있습니다. 각 배달 라인에 대해 타기팅을 설정하고, 입찰 가격을 설정할 수 있으며, 예산을 설정하고 사용할 크리에이티브와 연결하여 지출할 금액을 결정할 수 있습니다.<br/><br/>이 개체와 관련된 메서드에 대한 자세한 내용은 [광고 캠페인 배달 라인 관리](manage-delivery-lines-for-ad-campaigns.md)를 참조하세요. |

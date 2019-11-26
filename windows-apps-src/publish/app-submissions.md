@@ -38,12 +38,12 @@ ms.locfileid: "74260029"
 제공하거나 지정해야 하는 항목은 다음과 같습니다. 일부 영역은 옵션이거나 원하는 대로 변경할 수 있는 기본값이 제공되어 있습니다. 여기에 나열 된 순서 대로 이러한 섹션에서 작업을 수행할 필요가 없습니다.
 
 ### <a name="pricing-and-availability-page"></a>가격 책정 및 가용성 페이지
-| 필드 이름                    | 참고                                       | 자세한 정보                                                             |
+| 필드 이름                    | 메모                                       | 자세한 정보                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **시장**                   | 기본값: 모든 가능한 시장  | [가격 책정 및 시장 선택 정의](define-pricing-and-market-selection.md)         |
 | **그룹**                | 기본값: 공중 대상 | [그룹](choose-visibility-options.md#audience) |
 | **검색 기능**                | 기본값: 이 앱을 Store에서 다운로드해 사용할 수 있도록 설정 | [검색 기능](choose-visibility-options.md#discoverability) |
-| **일정**                  | 기본값: 최대한 빨리 게시        | [정확한 릴리스 일정 구성](configure-precise-release-scheduling.md) |
+| **일정과**                  | 기본값: 최대한 빨리 게시        | [정확한 릴리스 일정 구성](configure-precise-release-scheduling.md) |
 | **기본 가격**                | 필수                                    | [앱 가격 설정 및 예약](set-and-schedule-app-pricing.md)              |
 | **무료 평가판**                | 기본값: 무료 평가판 없음                      | [무료 평가판](set-app-pricing-and-availability.md#free-trial)              |
 | **할인 판매 가격 책정**              | 선택 사항                                    | [Put apps and add-ons on sale](put-apps-and-add-ons-on-sale.md)(앱 및 추가 기능 판매)           |
@@ -53,11 +53,11 @@ ms.locfileid: "74260029"
 
 ### <a name="properties-page"></a>속성 페이지
 
-| 필드 이름                    | 참고                                       | 자세한 정보                                                             |
+| 필드 이름                    | 메모                                       | 자세한 정보                                                             |
 |-------------------------------|---------------------------------------------|---------------------------------------------------------------------------|
 | **범주 및 하위 범주**  | 필수                                    | [범주 및 하위 범주 테이블](category-and-subcategory-table.md)       |
 | **개인 정보 취급 방침 URL**            | 많은 앱에 필요. [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책](store-policies.md#105-personal-information)을 참조하세요. | [개인 정보 취급 방침 URL](enter-app-properties.md#privacy-policy-url)        |
-| **웹 사이트**                   | 선택 사항                                    | [웹 사이트](enter-app-properties.md#website)                   |
+| **사이트나**                   | 선택 사항                                    | [사이트나](enter-app-properties.md#website)                   |
 | **지원 연락처 정보**      | Xbox에서 제품을 사용할 수 있는 경우에는 필수이지만, 그 외의 경우에는 선택 사항입니다(그러나 권장 사항).                                   | [지원 연락처 정보](enter-app-properties.md#support-contact-info)              |
 | **게임 설정**             | 선택 사항(게임에만 해당)         | [게임 설정](enter-app-properties.md#game-settings) |
 | **디스플레이 모드**             | 선택 사항                   | [디스플레이 모드](enter-app-properties.md#display-mode) |
@@ -68,7 +68,7 @@ ms.locfileid: "74260029"
 
 ### <a name="age-ratings-page"></a>연령별 등급 페이지
 
-| 필드 이름                    | 참고                                       | 자세한 정보                          |
+| 필드 이름                    | 메모                                       | 자세한 정보                          |
 |-------------------------------|---------------------------------------------|----------------------------------------|
 | **연령별 등급**               | 필수                                    | [연령별 등급](age-ratings.md)          |
 
@@ -76,7 +76,7 @@ ms.locfileid: "74260029"
 
 ### <a name="packages-page"></a>패키지 페이지
 
-| 필드 이름                    | 참고                                  | 자세한 정보                          |
+| 필드 이름                    | 메모                                  | 자세한 정보                          |
 |-------------------------------|----------------------------------------|----------------------------------------|
 | **패키지 업로드 제어**    | 필수(패키지 하나 이상)        | [앱 패키지 업로드](upload-app-packages.md) |
 | **장치 제품군 가용성** | 기본값: 패키지에 따름       | [장치 제품군 가용성](device-family-availability.md) |
@@ -84,11 +84,11 @@ ms.locfileid: "74260029"
 | **필수 업데이트**          | 옵션(업데이트에만 해당)            | [필수 업데이트](upload-app-packages.md#mandatory-update)
 
 
-### <a name="store-listings"></a>스토어 목록
+### <a name="store-listings"></a>Store 목록
 
-앱에서 지원하는 하나 이상의 언어에 대한 필수 정보가 모두 필요합니다. 앱이 지원하는 모든 언어로 [스토어 목록](create-app-store-listings.md)을 제공하는 것이 좋으며 [추가 언어로 스토어 목록을 제공](create-app-store-listings.md#store-listing-languages)할 수도 있습니다. 동일한 제품에 대해 여러 목록을 손쉽게 관리할 수 있도록 [Store 목록 가져오기 및 내보내기](import-and-export-store-listings.md)가 가능합니다.
+앱에서 지원하는 하나 이상의 언어에 대한 필수 정보가 모두 필요합니다. 앱에서 지원하는 모든 언어로 [Store 목록](create-app-store-listings.md)을 제공하는 것이 좋으며 [추가 언어로 Store 목록을 제공](create-app-store-listings.md#store-listing-languages)할 수도 있습니다. 동일한 제품에 대해 여러 목록을 손쉽게 관리할 수 있도록 [Store 목록 가져오기 및 내보내기](import-and-export-store-listings.md)가 가능합니다.
 
-| 필드 이름                    | 참고                                       | 자세한 정보                                                     |
+| 필드 이름                    | 메모                                       | 자세한 정보                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **설명**               | 필수                                    | [훌륭한 앱 설명 작성](write-a-great-app-description.md) |
 | **이 버전의 새로운 기능**   | 선택 사항                                 | [릴리스 정보](create-app-store-listings.md#whats-new-in-this-version)       |
@@ -109,7 +109,7 @@ ms.locfileid: "74260029"
 
 ### <a name="submission-options-page"></a>제출 옵션 페이지
 
-| 필드 이름                    | 참고                                       | 자세한 정보                                                     |
+| 필드 이름                    | 메모                                       | 자세한 정보                                                     |
 |-------------------------------|---------------------------------------------|-------------------------------------------------------------------|
 | **게시 보류 옵션**     | 기본값: 인증을 통과하는 즉시(또는 "일정" 섹션에서 선택한 날짜에 따라) 이 제출을 게시      | [게시 보류 옵션](manage-submission-options.md#publishing-hold-options)    
 | **인증에 대 한 참고 사항**     | 권장          | [인증에 대 한 참고 사항](notes-for-certification.md)             |

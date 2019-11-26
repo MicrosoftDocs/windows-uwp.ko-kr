@@ -62,7 +62,7 @@ Windows 앱이 OS의 이후 버전에서 실행할 수 있는지 확인합니다
 
 Windows 앱 인증 키트는 HighVersionLie를 사용하여 OS 버전 확인 방법을 검색합니다. 앱이 충돌 하는 경우 앱은 이 테스트에 실패합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
 앱은 버전 API 도우미 함수를 사용하여 이를 확인해야 합니다. 자세한 내용은 [운영 체제 버전](https://docs.microsoft.com/windows/desktop/SysInfo/operating-system-version)을 참조하세요.
 
@@ -78,7 +78,7 @@ Windows 앱 인증 키트는 HighVersionLie를 사용하여 OS 버전 확인 방
 
 앱이 시작되고, 일시 중단되며 앱의 백그라운드가 아닌 부분이 종료됩니다. 그런 다음 이 앱과 연결된 백그라운드 작업이 취소됩니다. 앱의 상태가 확인되며, 앱이 계속 실행 중인 경우 이 테스트에 실패 합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
 앱에 취소 처리기를 추가합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](https://docs.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks)을 참조하세요.
 
@@ -96,7 +96,7 @@ Windows Phone 8.1 앱의 경우 테스트는 번들에 포함된 총 appx 패키
 
 Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 설정되었는지 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
 테스트 정보에서 앱 패키지 및 번들이 위의 요구 사항을 충족하는지 확인합니다.
 
@@ -126,7 +126,7 @@ Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 
 
     이 테스트는 UWP 앱이 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신 하지 않도록 요구 하는 요구 사항을 적용 합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. "DesktopApplicationPath"와 동일한 이름으로 [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute)를 지정하는 앱은 이 테스트에 실패합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>수정 동작
 
 앱의 매니페스트가 [앱 패키지 요구 사항](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)에 설명된 요구 사항에 맞는지 검토합니다.
 
@@ -145,7 +145,7 @@ Binscope 이진 분석기 테스트는 앱의 이진 파일을 검사하여 앱�
 BinScope 이진 분석기 테스트는 다음과 같은 보안 관련 기능이 올바로 사용되는지 확인합니다.
 
 -   BinScope 이진 분석기 테스트
--   프라이빗 코드 서명
+-   전용 코드 서명
 
 ### <a name="binscope-binary-analyzer-tests"></a>BinScope 이진 분석기 테스트
 
@@ -282,7 +282,7 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 *페이지\-크기* 는 실행 파일에 대 한 기본 *섹션 맞춤* 입니다.
 
-### <a name="private-code-signing"></a>프라이빗 코드 서명
+### <a name="private-code-signing"></a>전용 코드 서명
 
 앱 패키지 내에 프라이빗 코드 서명 이진이 있는지 테스트합니다.
 
@@ -371,7 +371,7 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 다음 표의 지침을 따르세요.
 
 <table>
-<tr><th>오류 메시지</th><th>주석</th></tr>
+<tr><th>오류 메시지</th><th>설명</th></tr>
 <tr><td>
 <p>{image name} 이미지에서 Scale 및 TargetSize 한정자를 정의합니다. 한정자는 한 번에 하나만 정의할 수 있습니다.</p>
 </td><td>

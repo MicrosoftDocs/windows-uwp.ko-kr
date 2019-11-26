@@ -123,7 +123,7 @@ UWP 게임은 초기화될 때 일반적으로 Direct3D, Direct2D, 사용하는 
     });
 ```
 
-The **MarbleMazeMain** class defines the *m\_deferredResourcesReady* flag to indicate that asynchronous loading is complete. **MarbleMazeMain::LoadDeferredResources** 메서드는 게임 리소스를 로드한 다음 이 플래그를 설정합니다. 앱의 업데이트(**MarbleMazeMain::Update**) 및 렌더링(**MarbleMazeMain::Render**) 단계에서 이 플래그를 검사합니다. 이 플래그가 설정된 경우 게임이 정상적으로 계속됩니다. 플래그가 설정되지 않은 경우 게임에 대기 화면이 표시됩니다.
+**MarbleMazeMain** 클래스는 비동기 로드가 완료 되었음을 나타내는 *m\_deferredResourcesReady* 플래그를 정의 합니다. **MarbleMazeMain::LoadDeferredResources** 메서드는 게임 리소스를 로드한 다음 이 플래그를 설정합니다. 앱의 업데이트(**MarbleMazeMain::Update**) 및 렌더링(**MarbleMazeMain::Render**) 단계에서 이 플래그를 검사합니다. 이 플래그가 설정된 경우 게임이 정상적으로 계속됩니다. 플래그가 설정되지 않은 경우 게임에 대기 화면이 표시됩니다.
 
 UWP 앱용 비동기 프로그래밍에 대한 자세한 내용은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요.
 
@@ -195,7 +195,7 @@ enum class GameState
 };
 ```
 
-예를 들어 **MainMenu** 상태는 주 메뉴가 표시되고 게임이 활성화되지 않은 상태를 정의합니다. 반대로, **InGameActive** 상태는 게임이 활성화되고 메뉴가 표시되지 않는 상태를 정의합니다. The **MarbleMazeMain** class defines the **m\_gameState** member variable to hold the active game state.
+예를 들어 **MainMenu** 상태는 주 메뉴가 표시되고 게임이 활성화되지 않은 상태를 정의합니다. 반대로, **InGameActive** 상태는 게임이 활성화되고 메뉴가 표시되지 않는 상태를 정의합니다. **MarbleMazeMain** 클래스는 활성 게임 상태를 유지 하는 **m\_gameState** 멤버 변수를 정의 합니다.
 
 **MarbleMazeMain::Update** 및 **MarbleMazeMain::Render** 메서드는 switch 문을 사용하여 현재 상태에 대한 논리를 수행합니다. 다음 예제에서는 이 switch 문이 **MarbleMazeMain::Update** 메서드에서 어떻게 표시되는지를 보여 줍니다(구조를 설명하기 위해 세부 정보는 제거됨).
 
@@ -423,9 +423,9 @@ void MarbleMazeMain::LoadState()
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Adding visual content to the Marble Maze sample](adding-visual-content-to-the-marble-maze-sample.md)
-* [Marble Maze sample fundamentals](marble-maze-sample-fundamentals.md)
-* [Developing Marble Maze, a UWP game in C++ and DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+* [대리석에 시각적 콘텐츠 추가 미로 샘플](adding-visual-content-to-the-marble-maze-sample.md)
+* [대리석 미로 샘플 기본 사항](marble-maze-sample-fundamentals.md)
+* [및 DirectX의 C++ UWP 게임, 대리석](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 

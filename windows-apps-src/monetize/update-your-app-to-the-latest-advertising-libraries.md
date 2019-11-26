@@ -31,12 +31,12 @@ ms.locfileid: "74259235"
 
 * 두 개 이상의 앱에서 사용되는 광고 단위에도 더 이상 배너 광고가 제공되지 않습니다. 따라서 각 광고 단위를 한 앱에만 사용해야 합니다.
 
-**AdControl**을 사용하여 배너 광고를 표시하는 기존 앱(이미 Store에 있거나 아직 개발 중인 앱)이 있고 앱에서 어떤 광고 SDK가 사용되는지 잘 모르는 경우 이 문서의 지침을 따라 해당 앱을 지원되는 SDK로 업데이트해야 하는지 확인하세요. 문제가 발생하거나 도움이 필요한 경우 [지원 서비스에 문의](https://support.microsoft.com/getsupport/hostpage.aspx?locale=EN-US&supportregion=EN-US&ccfcode=US&ln=EN-US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=32136151)하세요.
+**AdControl**을 사용하여 배너 광고를 표시하는 기존 앱(이미 Store에 있거나 아직 개발 중인 앱)이 있고 앱에서 어떤 광고 SDK가 사용되는지 잘 모르는 경우 이 문서의 지침을 따라 해당 앱을 지원되는 SDK로 업데이트해야 하는지 확인하세요. 문제가 발생하거나 지원이 필요할 경우 [고객 지원 센터에 문의](https://support.microsoft.com/getsupport/hostpage.aspx?locale=EN-US&supportregion=EN-US&ccfcode=US&ln=EN-US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=32136151)하세요.
 
 > [!NOTE]
 > 앱이 이미 [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)(UWP 앱용)를 사용하는 경우 앱을 더 변경할 필요가 없습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 * **AdControl**을 사용하는 앱에 대한 전체 소스 코드 및 Visual Studio 프로젝트 파일입니다.
 * 앱에 대한 .appx 패키지입니다.

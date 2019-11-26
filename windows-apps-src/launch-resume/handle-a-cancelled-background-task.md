@@ -402,7 +402,7 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 
 ## <a name="related-topics"></a>관련 항목
 
-- [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
+- [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md).
 - [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
 - [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 - [백그라운드 작업 지침](guidelines-for-background-tasks.md)

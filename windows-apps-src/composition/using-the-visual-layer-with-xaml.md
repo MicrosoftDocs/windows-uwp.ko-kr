@@ -1,7 +1,7 @@
 ---
 ms.assetid: b7a4ac8a-d91e-461b-a060-cc6fcea8e778
-title: XAML로 시각적 계층 사용
-description: 고급 애니메이션 및 효과를 만드는 데 기존 XAML 콘텐츠와 함께 시각적 계층 API를 사용하기 위한 기술을 알아봅니다.
+title: 시각적 계층을 XAML과 함께 사용
+description: 시각적 계층 API를 기존 XAML 콘텐츠와 함께 사용하여 고급 애니메이션 및 효과를 만드는 기술을 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -13,10 +13,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74255667"
 ---
-# <a name="using-the-visual-layer-with-xaml"></a>XAML로 시각적 계층 사용
+# <a name="using-the-visual-layer-with-xaml"></a>시각적 계층을 XAML과 함께 사용
 
 시각적 계층 기능을 사용하는 대부분의 앱은 XAML을 사용하여 기본 UI 콘텐츠를 정의합니다. Windows 10 1주년 업데이트에는 XAML 프레임워크 및 시각적 계층에 대한 새로운 기능이 있으며 이 두 가지 기술을 쉽게 결합하여 매력적인 사용자 환경을 만들 수 있습니다.
-XAML 및 시각적 계층 interop 기능은 XAML API를 단독으로 사용하여 구현할 수 없는 고급 애니메이션 및 효과를 만드는 데 사용할 수 있습니다. 여기에는 다음이 포함됩니다.
+XAML 및 시각적 계층 interop 기능은 XAML API를 단독으로 사용하여 구현할 수 없는 고급 애니메이션 및 효과를 만드는 데 사용할 수 있습니다. 다음을 포함합니다.
 
 - 흐리고 불투명한 유리 효과 같은 브러시 효과
 - 동적 조명 효과
@@ -33,7 +33,7 @@ XAML 및 시각적 계층 interop 기능은 XAML API를 단독으로 사용하�
 
 XAML UI와 브러시 사용에 대한 자세한 내용은 [**브러시**](/windows/uwp/design/style/brushes#xamlcompositionbrushbase) 섹션을 참조하세요.
 
-코드 샘플은 [**XamlCompositionBrushBase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)의 참조 페이지를 참조하세요.
+코드 샘플은 [**XamlCompositionBrushBase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)에 대한 참조 페이지를 참조하세요.
 
 ## <a name="the-xamllight-class"></a>XamlLight 클래스
 

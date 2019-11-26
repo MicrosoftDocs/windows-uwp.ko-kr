@@ -1,6 +1,6 @@
 ---
 title: 보안 Windows 앱 개발 소개
-description: This introductory article helps app architects and developers better understand the various Windows 10 platform capabilities that accelerate creating secure Universal Windows Platform (UWP) apps.
+description: 이 소개 문서를 통해 앱 설계자와 개발자는 UWP (secure 유니버설 Windows 플랫폼) 앱을 빠르게 만들 수 있는 다양 한 Windows 10 플랫폼 기능을 보다 잘 이해할 수 있습니다.
 ms.assetid: 6AFF9D09-77C2-4811-BB1A-BBF4A6FF511E
 ms.date: 02/08/2017
 ms.topic: article
@@ -18,7 +18,7 @@ ms.locfileid: "74258944"
 
 
 
-This introductory article helps app architects and developers better understand the various Windows 10 platform capabilities that accelerate creating secure Universal Windows Platform (UWP) apps. 인증, 진행 데이터(data-in-flight) 및 저장 데이터(data-at-rest) 등 다음 각 단계에서 사용할 수 있는 Windows 보안 기능을 사용하는 방법을 자세히 설명합니다. 각 항목에 대한 자세한 내용은 각 장에 포함된 추가 리소스를 검토하여 찾을 수 있습니다.
+이 소개 문서를 통해 앱 설계자와 개발자는 UWP (secure 유니버설 Windows 플랫폼) 앱을 빠르게 만들 수 있는 다양 한 Windows 10 플랫폼 기능을 보다 잘 이해할 수 있습니다. 인증, 진행 데이터(data-in-flight) 및 저장 데이터(data-at-rest) 등 다음 각 단계에서 사용할 수 있는 Windows 보안 기능을 사용하는 방법을 자세히 설명합니다. 각 항목에 대한 자세한 내용은 각 장에 포함된 추가 리소스를 검토하여 찾을 수 있습니다.
 
 ## <a name="1-introduction"></a>1 소개
 
@@ -161,7 +161,7 @@ Azure AD는 단일 요소 인증을 구현할 수도 있지만 기업은 일반�
 ## <a name="24-windows-hello"></a>2.4 Windows Hello
 
 
-Windows 10에서는 편리한 다단계 인증 메커니즘이 운영 체제에 빌드되었습니다. Windows Hello는 Windows 10에 새롭게 기본 제공되는 생체 인식 로그인 시스템입니다. 이 시스템은 운영 체제에 내장되어 있기 때문에 얼굴 또는 지문 식별을 통해 사용자 장치의 잠금을 해제할 수 있습니다. Windows 보안 자격 증명 저장소는 장치의 생체 인식 데이터를 보호합니다.
+Windows 10에서는 편리한 다단계 인증 메커니즘이 운영 체제에 빌드되었습니다. Windows Hello는 Windows 10에 새롭게 기본 제공되는 생체 인식 로그인 시스템입니다. 이 시스템은 운영 체제에 내장되어 있기 때문에 얼굴 또는 지문 식별을 통해 사용자 장치의 잠금을 해제할 수 있습니다. Windows 보안 자격 증명 저장소는 디바이스의 생체 인식 데이터를 보호합니다.
 
 Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강력한 방법으로, 사용자와 요청된 서비스 또는 데이터 항목 간의 경로에 대한 첫 번째 부분을 해결합니다. 디바이스에서 사용자를 인식한 후 요청된 리소스에 대한 액세스를 허용할지 여부를 결정하려면 먼저 사용자를 인증해야 합니다. Windows Hello도 Windows에 완전히 통합된 강력한 2FA(2단계 인증)를 제공하며 재사용 가능한 암호를 특정 장치 및 생체 인식 제스처 또는 PIN의 조합으로 대체합니다. PIN은 Microsoft 계정 등록의 일부로 사용자가 지정합니다.
 
@@ -192,7 +192,7 @@ Windows Hello에 대한 자세한 내용은 [Windows Hello 가이드](https://do
 
 웹 서비스 통신에 대한 보안 요구 사항은 직접 연결 시나리오의 보안 요구 사항보다 높습니다. 이는 데이터가 더 이상 보안 네트워크의 일부가 아니며 데이터를 가로채려는 악의적인 공격자가 될 가능성도 더 높기 때문입니다. 다양한 유형의 디바이스가 서비스에 액세스할 것이므로 WCF와는 반대로 RESTful 서비스로 빌드될 가능성이 큽니다. 따라서 서비스 인증 및 권한 부여 또한 새로운 문제를 가져오게 됩니다. 원격 시스템 보안 통신을 위한 두 가지 요구 사항에 대해 설명하겠습니다.
 
-첫 번째 요구 사항은 메시지 기밀성입니다. 클라이언트와 웹 서비스 간에 전달되는 정보(예: 사용자 ID 및 개인 정보)는 전송 동안에 제3자가 읽을 수 없어야 합니다. 이 작업은 일반적으로 메시지가 전송되는 연결을 암호화하고 메시지 자체를 암호화하여 수행됩니다. 개인/공개 키 암호화에 있어서 공개 키는 누구든지 사용할 수 있으며 특정 수신자로 보낼 메시지를 암호화하는 데 사용됩니다. 개인 키는 수신자만 보유하며 메시지의 암호를 해독하는 데만 사용됩니다.
+첫 번째 요구 사항은 메시지 기밀성입니다. 클라이언트와 웹 서비스 간에 전달되는 정보(예: 사용자 ID 및 개인 정보)는 전송 동안에 제3자가 읽을 수 없어야 합니다. 이 작업은 일반적으로 메시지가 전송되는 연결을 암호화하고 메시지 자체를 암호화하여 수행됩니다. 프라이빗/공개 키 암호화에 있어서 공개 키는 누구든지 사용할 수 있으며 특정 수신자로 보낼 메시지를 암호화하는 데 사용됩니다. 프라이빗 키는 수신자만 보유하며 메시지의 암호를 해독하는 데만 사용됩니다.
 
 두 번째 요구 사항은 메시지 무결성입니다. 클라이언트 및 웹 서비스는 받은 메시지가 상대방이 보내려던 메시지이고 해당 메시지가 전송 중에 변경되지 않았는지 확인할 수 있어야 합니다. 이를 수행하는 방법은 디지털 서명을 사용하여 메시지를 서명하고 인증서 인증을 사용하는 것입니다.
 
@@ -286,7 +286,7 @@ Azure API 관리는 서비스(제한이라는 프로시저)에 API 호출 수를
 
 일반적으로 Windows에는 앱에 대한 정의가 없습니다. 가장 흔히 실행 파일(.exe)이라고 하지만 설치, 상태 저장, 실행 길이, 버전 관리, OS 통합 및 앱 간 통신은 정의에 들어가지 않습니다. 유니버설 Windows 플랫폼 모델에서는 설치, 런타임 환경, 리소스 관리, 업데이트, 데이터 모델 및 설치 제거를 다루는 앱 모델을 정의합니다.
 
-Windows 10 apps run in a container, which means that they have limited privileges by default (additional privileges can be requested and granted by the user). 예를 들어, 앱에서 시스템 파일에 액세스하려는 경우 [**Windows.Storage.Pickers**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers) 네임스페이스의 파일 선택기를 사용하여 사용자에게 파일을 선택하도록 할 수 있습니다(파일에 직접 액세스는 불가). 다른 예로, 앱에서 사용자의 위치 데이터에 액세스하려면 위치 디바이스 정보 값 요구를 선언하여 다운로드 시에 이 앱이 사용자에게 사용자 위치 액세스를 요청할 수 있도록 해야 합니다. 그에 앞서 앱이 처음으로 사용자의 위치에 액세스하려는 경우에는 데이터 액세스 권한을 요청하는 추가 동의 확인 프롬프트가 나타납니다.
+Windows 10 앱은 컨테이너에서 실행 됩니다. 즉, 기본적으로 권한이 제한 되어 있습니다 (사용자가 추가 권한을 요청 하 고 부여할 수 있음). 예를 들어, 앱에서 시스템 파일에 액세스하려는 경우 [**Windows.Storage.Pickers**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers) 네임스페이스의 파일 선택기를 사용하여 사용자에게 파일을 선택하도록 할 수 있습니다(파일에 직접 액세스는 불가). 다른 예로, 앱에서 사용자의 위치 데이터에 액세스하려면 위치 디바이스 정보 값 요구를 선언하여 다운로드 시에 이 앱이 사용자에게 사용자 위치 액세스를 요청할 수 있도록 해야 합니다. 그에 앞서 앱이 처음으로 사용자의 위치에 액세스하려는 경우에는 데이터 액세스 권한을 요청하는 추가 동의 확인 프롬프트가 나타납니다.
 
 이 앱 모델은 앱에 대한 "감옥" 역할을 합니다. 다시 말하면 접근할 수는 없지만 외부에서 다가가지 못할 "성"은 아니라는 것입니다(물론 관리자 권한을 가진 응용 프로그램은 액세스 가능). 조직/IT가 어떤 (Win32) 앱의 실행을 허용할지 지정할 수 있게 하는 Windows 10의 Device Guard는 이 액세스를 추가로 제한하는 데 도움이 될 수 있습니다.
 
@@ -301,14 +301,14 @@ Windows 10 apps run in a container, which means that they have limited privileg
 
 인증된 서비스에 액세스하는 Windows 앱은 로컬 디바이스에 해당 자격 증명을 저장하는 옵션을 사용자에게 제공하는 경우가 많습니다. 이는 사용자에게 편리한 기능입니다. 사용자가 사용자 이름 및 암호를 제공한 경우 다음에 앱을 시작할 때 자동으로 해당 사용자 이름 및 암호를 사용합니다. 공격자가 저장된 이 데이터에 대한 액세스 권한을 얻는 경우 보안 문제가 될 수 있으므로 Windows 10은 Windows 앱이 보안 자격 증명 보관에 사용자 자격 증명을 저장하는 기능을 제공합니다. 앱은 앱의 저장소 컨테이너에 자격 증명을 저장하지 않고 자격 증명 보관 API를 호출하여 자격 증명 보관에 저장하고 검색합니다. 자격 증명 보관은 운영 체제에서 관리되지만 액세스가 자격 증명을 저장하는 앱에 제한되며 자격 증명 저장을 위해 안전한 관리형 솔루션을 제공합니다.
 
-사용자가 저장할 자격 증명을 제공하는 경우 앱은 [**Windows.Security.Credentials**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials) 네임스페이스의 [**PasswordVault**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordVault) 개체를 사용하여 자격 증명 보관에 대한 참조를 가져옵니다. 그런 다음 Windows 앱에 대한 식별자와 사용자 이름 및 암호가 포함된 [**PasswordCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordCredential) 개체를 만듭니다. 이는 자격 증명 보관에 자격 증명을 저장하기 위한 [**PasswordVault.Add**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordvault.add) 메서드로 전달됩니다. 다음의 C# 코드 예제에서는 이를 수행하는 방법을 보여 줍니다.
+사용자가 저장할 자격 증명을 제공하는 경우 앱은 [**Windows.Security.Credentials**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordVault) 네임스페이스의 [**PasswordVault**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials) 개체를 사용하여 자격 증명 보관에 대한 참조를 가져옵니다. 그런 다음 Windows 앱에 대한 식별자와 사용자 이름 및 암호가 포함된 [**PasswordCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordCredential) 개체를 만듭니다. 이는 자격 증명 보관에 자격 증명을 저장하기 위한 [**PasswordVault.Add**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordvault.add) 메서드로 전달됩니다. 다음의 C# 코드 예제에서는 이를 수행하는 방법을 보여 줍니다.
 
 ```cs
 var vault = new PasswordVault();
 vault.Add(new PasswordCredential("My App", username, password));
 ```
 
-다음 C# 코드 예제에서 앱이 [**PasswordVault**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordVault) 개체의 [**FindAllByResource**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordvault.findallbyresource) 메서드를 호출하여 앱에 해당하는 모든 자격 증명을 요청합니다. 둘 이상 반환되면 해당 사용자의 이름을 입력하라는 메시지가 사용자에게 표시됩니다. 자격 증명이 자격 증명 보관에 없는 경우 앱에서 이를 위한 메시지가 사용자에게 표시됩니다. 그러면 사용자가 자격 증명을 사용하여 서버에 로그인됩니다.
+다음 C# 코드 예제에서 앱이 [**PasswordVault**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordvault.findallbyresource) 개체의 [**FindAllByResource**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordVault) 메서드를 호출하여 앱에 해당하는 모든 자격 증명을 요청합니다. 둘 이상 반환되면 해당 사용자의 이름을 입력하라는 메시지가 사용자에게 표시됩니다. 자격 증명이 자격 증명 보관에 없는 경우 앱에서 이를 위한 메시지가 사용자에게 표시됩니다. 그러면 사용자가 자격 증명을 사용하여 서버에 로그인됩니다.
 
 ```cs
 private string resourceName = "My App";
@@ -374,7 +374,7 @@ private PasswordCredential GetCredentialFromLocker()
 
 이에 대한 한 가지 해결책은 공개/개인 키 쌍이 사용되는 비대칭형 암호화입니다. 공개 키는 메시지를 암호화하는 모두가 자유롭게 공유할 수 있습니다. 개인 키는 사용자만 데이터의 암호를 해독하기 위해 사용할 수 있도록 항상 비밀로 유지됩니다. 공개 키의 검색에 허용되는 일반적인 기술은 간단히 인증서라고도 하는 디지털 인증서를 사용하는 것입니다. 인증서에는 공개 키뿐만 아니라 이름, 발급자, 메일 주소 및 국가와 같은 사용자 또는 서버에 대한 정보가 들어 있습니다.
 
-Windows 앱 개발자는 [**SymmetricKeyAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider) 및 [**AsymmetricKeyAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider) 클래스를 사용하여 해당 UWP 앱에서 대칭형 및 비대칭형 암호화를 구현할 수 있습니다. 또한 [**CryptographicEngine**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicEngine) 클래스가 데이터를 암호화하고 암호 해독하고 콘텐츠를 서명하고 디지털 서명을 확인하는 데 사용할 수 있습니다. 또한 앱은 [**Windows.Security.Cryptography.DataProtection**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection) 네임스페이스의 [**DataProtectionProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection.DataProtectionProvider) 클래스를 사용하여 저장된 로컬 데이터를 암호화하고 암호 해독할 수 있습니다.
+Windows 앱 개발자는 [**SymmetricKeyAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.SymmetricKeyAlgorithmProvider) 및 [**AsymmetricKeyAlgorithmProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.AsymmetricKeyAlgorithmProvider) 클래스를 사용하여 해당 UWP 앱에서 대칭형 및 비대칭형 암호화를 구현할 수 있습니다. 또한 [**CryptographicEngine**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core.CryptographicEngine) 클래스가 데이터를 암호화하고 암호 해독하고 콘텐츠를 서명하고 디지털 서명을 확인하는 데 사용할 수 있습니다. 또한 앱은 [**Windows.Security.Cryptography.DataProtection**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection.DataProtectionProvider) 네임스페이스의 [**DataProtectionProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection) 클래스를 사용하여 저장된 로컬 데이터를 암호화하고 암호 해독할 수 있습니다.
 
 ## <a name="432-detecting-message-tampering-macs-hashes-and-signatures"></a>4.3.2 메시지 변조(MAC, 해시 및 서명) 검색
 
@@ -437,13 +437,13 @@ public void SampleReusableHash()
 디지털 서명된 저장 메시지의 데이터 무결성은 MAC 인증과 유사한 방식으로 확인됩니다. 디지털 서명 워크플로가 작동하는 방법은 다음과 같습니다.
 
 -   발신자가 해시 알고리즘에 대한 입력으로 메시지를 사용하여 해시 값(다이제스트라고도 함)을 파생합니다.
--   발신자가 개인 키를 사용하여 다이제스트를 암호화합니다.
+-   발신자가 프라이빗 키를 사용하여 다이제스트를 암호화합니다.
 -   발신자가 메시지, 암호화된 다이제스트 및 사용된 해시 알고리즘 이름을 보냅니다.
 -   수신자가 공개 키를 사용하여 수신한 암호화된 다이제스트를 암호 해독합니다. 그런 다음 메시지를 해시하는 해시 알고리즘을 사용하여 고유한 다이제스트를 만듭니다. 마지막으로 수신자가 두 개의 다이제스트(수신해서 암호 해독한 다이제스트 및 만든 다이제스트)를 비교합니다. 두 개가 일치하면 수신자는 개인 키의 소유자가 보낸 메시지라고 확신할 수 있습니다. 그러므로 소유자가 자신이 누구인지 말한 것이 사실이고 전송 중에 메시지가 변조되지 않은 것입니다.
 
 ![디지털 서명](images/secure-digital-signatures.png)
 
-해시 알고리즘은 매우 빠르므로 대용량 메시지에서도 해시 값이 빠르게 파생될 수 있습니다. 결과로 파생된 해시 값은 임의의 길이이며 전체 메시지보다 짧을 수 있으므로 전체 메시지가 아닌 다이제스트만 암호화하고 암호 해독하도록 공개 키 및 개인 키를 사용하는 것이 최적의 방법입니다.
+해시 알고리즘은 매우 빠르므로 대용량 메시지에서도 해시 값이 빠르게 파생될 수 있습니다. 결과로 파생된 해시 값은 임의의 길이이며 전체 메시지보다 짧을 수 있으므로 전체 메시지가 아닌 다이제스트만 암호화하고 암호 해독하도록 공개 키 및 프라이빗 키를 사용하는 것이 최적의 방법입니다.
 
 자세한 내용은 [디지털 서명](https://docs.microsoft.com/windows/desktop/SecCrypto/digital-signatures), [MAC, 해시, 서명](macs-hashes-and-signatures.md) 및 [암호화](cryptography.md)에 관한 기사를 참조하세요.
 
@@ -465,9 +465,9 @@ Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드�
 -   [Windows Hello](microsoft-passport.md)
 -   [자격 증명 보관](credential-locker.md)
 -   [웹 인증 브로커](web-authentication-broker.md)
--   [Fingerprint biometrics](fingerprint-biometrics.md)
+-   [지문 생체 인식](fingerprint-biometrics.md)
 -   [스마트 카드](smart-cards.md)
--   [Shared certificates](share-certificates.md)
+-   [공유 인증서](share-certificates.md)
 -   [암호화](cryptography.md)
 -   [인증서](certificates.md)
 -   [암호화 키](cryptographic-keys.md)
@@ -479,26 +479,26 @@ Windows 10의 유니버설 Windows 플랫폼은 다양한 보안 앱을 만드�
 ### <a name="62-code-samples"></a>6.2 코드 샘플
 
 -   [자격 증명 보관](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PasswordVault)
--   [Credential picker](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CredentialPicker)
--   [Device lockdown with Azure login](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceLockdownAzureLogin)
--   [Enterprise data protection](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/EnterpriseDataProtection)
+-   [자격 증명 선택](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CredentialPicker)
+-   [Azure 로그인을 사용 하 여 장치 잠금](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceLockdownAzureLogin)
+-   [엔터프라이즈 데이터 보호](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/EnterpriseDataProtection)
 -   [KeyCredentialManager](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/KeyCredentialManager)
 -   [스마트 카드](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SmartCard)
--   [Web account management](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement)
+-   [웹 계정 관리](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement)
 -   [WebAuthenticationBroker](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker)
 
 ### <a name="63-api-reference"></a>6.3 API 참조
 
--   [**Windows.Security.Authentication.OnlineId**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.OnlineId)
--   [**Windows.Security.Authentication.Web**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web)
--   [**Windows.Security.Authentication.Web.Core**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Core)
--   [**Windows.Security.Authentication.Web.Provider**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Provider)
--   [**Windows.Security.Credentials**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials)
--   [**Windows.Security.Credentials**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials)
--   [**Windows.Security.Credentials.UI**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI)
--   [**Windows.Security.Cryptography**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography)
--   [**Windows.Security.Cryptography.Certificates**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates)
--   [**Windows.Security.Cryptography.Core**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core)
--   [**Windows.Security.Cryptography.DataProtection**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection)
--   [**Windows.Security.ExchangeActiveSyncProvisioning**](https://docs.microsoft.com/uwp/api/Windows.Security.ExchangeActiveSyncProvisioning)
--   [**Windows.Security.EnterpriseData**](https://docs.microsoft.com/uwp/api/Windows.Security.EnterpriseData)
+-   [**Windows.security.authentication.onlineid.** ](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.OnlineId)
+-   [**Windows. 웹 인증**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web)
+-   [**Windows. 보안**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Core)
+-   [**Windows. 웹 공급자**](https://docs.microsoft.com/uwp/api/Windows.Security.Authentication.Web.Provider)
+-   [**Windows. 보안 자격 증명**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials)
+-   [**Windows. 보안 자격 증명**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials)
+-   [**Windows. Security. Credentials. UI**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI)
+-   [**Windows. 보안 암호화**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography)
+-   [**Windows. 보안 인증서**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Certificates)
+-   [**Windows. 보안과 같은**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.Core)
+-   [**Windows. 보안-암호화**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection)
+-   [**Windows.security.exchangeactivesyncprovisioning**](https://docs.microsoft.com/uwp/api/Windows.Security.ExchangeActiveSyncProvisioning)
+-   [**창. 보안과 데이터**](https://docs.microsoft.com/uwp/api/Windows.Security.EnterpriseData)

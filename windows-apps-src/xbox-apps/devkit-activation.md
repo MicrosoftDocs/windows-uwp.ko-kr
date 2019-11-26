@@ -38,13 +38,13 @@ Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가�
 
     ![활성화 5단계](images/activation-step-5.png)  
     
-5.  [Register an app developer account in Partner Center](https://developer.microsoft.com/store/register).  This is also the first step towards publishing your game.
+5.  [파트너 센터에 앱 개발자 계정을 등록](https://developer.microsoft.com/store/register)합니다.  게임을 게시 하기 위한 첫 번째 단계 이기도 합니다.
 
-6.  Sign in to [Partner Center](https://partner.microsoft.com/dashboard) with your valid, current Partner Center app developer account.  If you don't see multiple options in the left hand navigation pane, or don't see the **Create a new app** option in the **Overview** section, the following steps and activation links _will not work_; make sure you fully registered your app developer account from the previous step.
+6.  유효한 현재 파트너 센터 앱 개발자 계정으로 [파트너 센터](https://partner.microsoft.com/dashboard) 에 로그인 합니다.  왼쪽 탐색 창에 여러 옵션이 표시 되지 않거나 **개요** 섹션에 **새 앱 만들기** 옵션이 표시 되지 않으면 다음 단계와 활성화 링크가 _작동 하지_않습니다. 이전 단계에서 앱 개발자 계정을 완전히 등록 했는지 확인 합니다.
 
-7.  Go to [partner.microsoft.com/xboxconfig/devices](https://partner.microsoft.com/xboxconfig/devices).
+7.  [Partner.microsoft.com/xboxconfig/devices](https://partner.microsoft.com/xboxconfig/devices)로 이동 합니다.
 
-8.  개발자 모드 활성화 앱에 표시된 활성화 코드를 입력합니다. 계정에 연결된 활성화 수에는 제한이 있습니다. After Developer Mode has been activated, Partner Center will indicate you have used one of the activations associated with your account.
+8.  개발자 모드 활성화 앱에 표시된 활성화 코드를 입력합니다. 계정에 연결된 활성화 수에는 제한이 있습니다. 개발자 모드가 활성화 된 후 파트너 센터는 계정과 연결 된 활성화 중 하나를 사용 했음을 표시 합니다.
 
     ![활성화 8단계](images/activation-step-8-rs2.png)    
     
@@ -68,5 +68,5 @@ Xbox One에는 *정품* 모드(**1**) 및 *개발자* 모드(**2**)의 두 가�
   ![활성화 14단계](images/activation-step-12.png)  
 
 ## <a name="see-also"></a>참고 항목
-- [Xbox One Developer Mode deactivation](devkit-deactivation.md)
-- [UWP on Xbox One](index.md)
+- [Xbox One Developer 모드 비활성화](devkit-deactivation.md)
+- [Xbox One의 UWP](index.md)

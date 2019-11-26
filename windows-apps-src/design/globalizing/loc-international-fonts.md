@@ -23,10 +23,10 @@ ms.locfileid: "74258074"
 | --------- | ----------- | -------------------- |
 | 아프리칸스어 | af-ZA | Segoe UI |
 | 알바니아어 | sq-AL | Segoe UI |
-| 암하라어 | am-ET | Ebrima |
+| 암하라어 | 오전 ET | Ebrima |
 | 아랍어 | ar-SA | Segoe UI |
 | 아르메니아어 | hy-AM | Segoe UI |
-| 아샘어 | as-IN | Nirmala UI |
+| Assamese | IN으로 | Nirmala UI |
 | 아제르바이잔어(라틴 문자) | az-Latn-AZ | Segoe UI |
 | 벵골어(방글라데시) | bn-BD | Nirmala UI |
 | 벵골어(인도) | bn-IN | Nirmala UI |
@@ -45,7 +45,7 @@ ms.locfileid: "74258074"
 | 덴마크어 | da-DK | Segoe UI |
 | 다리어 | prs-AF | Segoe UI |
 | 네덜란드어 | nl-NL | Segoe UI |
-| 영어(영국) | en-GB | Segoe UI |
+| English (United Kingdom) | en-GB | Segoe UI |
 | 에스토니아어 | et-EE | Segoe UI |
 | 필리핀어 | fil-PH | Segoe UI |
 | 핀란드어 | fi-FI | Segoe UI |
@@ -57,7 +57,7 @@ ms.locfileid: "74258074"
 | 구자라트어 | gu-IN | Nirmala UI |
 | 하우사어(라틴 문자) | ha-Latn-NG | Segoe UI |
 | 히브리어 | he-IL | Segoe UI |
-| 힌디어 | hi-IN | Nirmala UI |
+| 힌디어 | 안녕하세요-IN | Nirmala UI |
 | 헝가리어 | hu-HU | Segoe UI |
 | 아이슬란드어 | is-IS | Segoe UI |
 | 이그보어 | ig-NG | Segoe UI |
@@ -66,31 +66,31 @@ ms.locfileid: "74258074"
 | 코사어 | xh-ZA | Segoe UI |
 | 줄루어 | zu-ZA | Segoe UI |
 | 이탈리아어 | it-IT | Segoe UI |
-| 일본어 | ja-JP | Yu Gothic UI |
-| 카나다어 | kn-IN | Nirmala UI |
+| Japanese | ja-JP | Yu Gothic UI |
+| 칸나다어 | kn-IN | Nirmala UI |
 | 카자흐어 | kk-KZ | Segoe UI |
 | 크메르어 | km-KH | Leelawadee UI |
 | 끼체어 | qut-GT | Segoe UI |
 | 키냐르완다어 | rw-RW | Segoe UI |
 | 스와힐리어 | sw-KE | Segoe UI |
-| 콘칸어 | kok-IN | Nirmala UI |
+| 콘칸어 | kok IN | Nirmala UI |
 | 한국어 | ko-KR | Malgun Gothic |
 | 키르기스어 | ky-KG | Segoe UI |
 | 라트비아어 | lv-LV | Segoe UI |
 | 리투아니아어 | lt-LT | Segoe UI |
 | 룩셈부르크어 | lb-LU | Segoe UI |
-| 마케도니아어 | mk-MK | Segoe UI |
+| 북마케도니아어 | mk-MK | Segoe UI |
 | 말레이어 | ms-MY | Segoe UI |
-| 말라얄람어 | ml-IN | Nirmala UI |
+| 말라얄람어 | ml에 | Nirmala UI |
 | 몰타어 | mt-MT | Segoe UI |
 | 마오리어 | mi-NZ | Segoe UI |
-| 마라티어 | mr-IN | Nirmala UI |
+| 마라티어 | mr IN | Nirmala UI |
 | 몽골어(키릴 자모) | mn-MN | Segoe UI |
 | 네팔어 | ne-NP | Nirmala UI |
 | 노르웨이어(복말) | nb-NO | Segoe UI |
 | 노르웨이어(니노르스크) | nn-NO | Segoe UI |
-| 오디아어 | or-IN | Nirmala UI |
-| 이란어 | fa-IR | Segoe UI |
+| 오디아어 | 또는-IN | Nirmala UI |
+| 페르시아어 | fa-IR | Segoe UI |
 | 폴란드어 | pl-PL | Segoe UI |
 | 포르투갈어(브라질) | pt-BR | Segoe UI |
 | 포르투갈어(포르투갈) | pt-PT | Segoe UI |
@@ -114,7 +114,7 @@ ms.locfileid: "74258074"
 | 타지키스칸어(키릴 자모) | tg-Cyrl-TJ | Segoe UI |
 | 타밀어 | ta-IN | Nirmala UI |
 | 타타르어 | tt-RU | Segoe UI |
-| 텔루구어 | te-IN | Nirmala UI |
+| 텔루구어 | te IN | Nirmala UI |
 | 태국어 | th-TH | Leelawadee UI |
 | 티그리니아어 | ti-ET | Ebrima |
 | 터키어 | tr-TR | Segoe UI |
@@ -131,5 +131,5 @@ ms.locfileid: "74258074"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [BCP-47 language tag](https://tools.ietf.org/html/bcp47)
+* [BCP-47 언어 태그](https://tools.ietf.org/html/bcp47)
 * [지원되는 언어](../../publish/supported-languages.md)

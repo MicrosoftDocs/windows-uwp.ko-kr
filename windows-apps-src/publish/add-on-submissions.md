@@ -32,7 +32,7 @@ ms.locfileid: "74259053"
 
 ### <a name="create-a-new-add-on-page"></a>새 추가 기능 페이지 만들기
 
-| 필드 이름                    | 참고                            |
+| 필드 이름                    | 메모                            |
 |-------------------------------|----------------------------------|
 | [**제품 유형**](set-your-add-on-product-id.md#product-type)      | 필수 |  
 | [**제품 ID**](set-your-add-on-product-id.md#product-id)          | 필수 |        
@@ -40,7 +40,7 @@ ms.locfileid: "74259053"
 
 ### <a name="properties-page"></a>속성 페이지
 
-| 필드 이름                    | 참고                              |   
+| 필드 이름                    | 메모                              |   
 |-------------------------------|------------------------------------|
 | [**제품 수명**](enter-add-on-properties.md#product-lifetime)  | 제품 유형이 **지속형**인 경우 필수입니다. 기타 제품 형식에는 적용되지 않습니다. |
 | [**판매량**](enter-add-on-properties.md#quantity)  | 제품 형식이 **스토어 관리 소모성**인 경우 필요합니다. 기타 제품 형식에는 적용되지 않습니다. |
@@ -53,7 +53,7 @@ ms.locfileid: "74259053"
 
 ### <a name="pricing-and-availability-page"></a>가격 책정 및 가용성 페이지
 
-| 필드 이름                    | 참고                                       |
+| 필드 이름                    | 메모                                       |
 |-------------------------------|---------------------------------------------|
 | [**시장**](set-add-on-pricing-and-availability.md#markets)  | 기본값: 모든 가능한 시장 |
 | [**잘**](set-add-on-pricing-and-availability.md#visibility)   | 기본값: 구매 가능 앱 목록에 표시될 수 있음 |
@@ -62,11 +62,11 @@ ms.locfileid: "74259053"
 | [**판매 가격**](put-apps-and-add-ons-on-sale.md)               | 선택 사항                    |
 
 
-### <a name="store-listings"></a>스토어 목록
+### <a name="store-listings"></a>Store 목록
 
-하나의 스토어 목록이 필요합니다. 앱에서 지원하는 모든 [언어](create-add-on-store-listings.md#store-listing-languages)에 대한 스토어 목록을 제공하는 것이 좋습니다.
+하나의 Store 목록이 필요합니다. 앱에서 지원하는 모든 [언어](create-add-on-store-listings.md#store-listing-languages)에 대한 Store 목록을 제공하는 것이 좋습니다.
 
-| 필드 이름                    | 참고                                       |
+| 필드 이름                    | 메모                                       |
 |-------------------------------|---------------------------------------------|
 | [**제목과**](create-add-on-store-listings.md#title)                    | 필수(100자 제한)           |
 | [**한**](create-add-on-store-listings.md#description)       | 선택 사항(200자 제한)            |

@@ -25,7 +25,7 @@ ms.locfileid: "74258660"
 
 이 섹션에서는 인쇄 옵션 및 인쇄 미리 보기 UI의 설정을 사용자 지정하는 방법을 설명합니다. 인쇄에 대한 자세한 내용은 [앱에서 인쇄](print-from-your-app.md)를 참조하세요.
 
-**팁**  이 항목의 대부분은 인쇄 샘플을 기반으로 합니다. 전체 코드를 보려면 GitHub의 [Windows-universal-samples repo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Printing)에서 [UWP(유니버설 Windows 플랫폼) 인쇄 샘플](https://github.com/Microsoft/Windows-universal-samples)을 다운로드하세요.
+**팁**  이 항목의 대부분은 인쇄 샘플을 기반으로 합니다. 전체 코드를 보려면 GitHub의 [Windows-universal-samples repo](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Printing)에서 [Universal Windows Platform (UWP) print sample](https://github.com/Microsoft/Windows-universal-samples)을 다운로드하세요.
 
  
 

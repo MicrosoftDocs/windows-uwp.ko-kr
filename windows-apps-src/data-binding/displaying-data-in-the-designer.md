@@ -132,7 +132,7 @@ XAML 대신 JSON 샘플 데이터 파일을 사용하는 경우에는 **Type** �
     d:Source="{d:DesignData /SampleData/RecordingsSampleData.json, Type=local:Recordings}"
 ```
 
-지금까지는 **d:DesignData**를 사용하여 XAML 또는 JSON 파일에서 디자인 타임 샘플 데이터를 로드했습니다. 다른 방법으로 **d:DesignInstance** 태그 확장이 있는데, 이 경우에는 디자인 타임 원본이 **Type** 속성에서 지정하는 클래스를 기반으로 합니다. 예를 들면 다음과 같습니다.
+지금까지는 **d:DesignData**를 사용하여 XAML 또는 JSON 파일에서 디자인 타임 샘플 데이터를 로드했습니다. 다른 방법으로 **d:DesignInstance** 태그 확장이 있는데, 이 경우에는 디자인 타임 원본이 **Type** 속성에서 지정하는 클래스를 기반으로 합니다. 예제는 다음과 같습니다.
 
 ``` xaml
     <CollectionViewSource x:Name="RecordingsCollection" Source="{Binding Recordings}"

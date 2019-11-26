@@ -177,6 +177,6 @@ Microsoft Store 인증 과정을 시작하기 전에 프로젝트에서 `<projec
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Use the Multilingual App Toolkit 4.0](use-mat.md)
+* [다국어 앱 도구 키트 4.0 사용](use-mat.md)
 * [Microsoft Translator](https://www.microsofttranslator.com/)
-* [MakePri.exe command-line options](../../app-resources/makepri-exe-command-options.md)
+* [MakePri 명령줄 옵션](../../app-resources/makepri-exe-command-options.md)

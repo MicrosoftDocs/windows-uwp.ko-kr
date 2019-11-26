@@ -1,5 +1,5 @@
 ---
-Description: You can create ad campaigns in Partner Center to help promote your app and grow your app's user base.
+Description: 파트너 센터에서 ad 캠페인을 만들어 앱을 홍보 하 고 앱의 사용자 기반을 높일 수 있습니다.
 title: 앱 광고 캠페인 만들기
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
 ms.date: 10/31/2018
@@ -15,18 +15,18 @@ ms.locfileid: "74260017"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>앱 광고 캠페인 만들기
 
-You can create ad campaigns in [Partner Center](https://partner.microsoft.com/dashboard) to help promote your app and grow its user base. By default, we will choose the target audience for your ads based on the settings for your app in Partner Center, but you can optionally define your own audience. 광고 템플릿의 기본 설정을 사용하거나 고유한 광고 디자인을 업로드할 수도 있습니다. 광고 캠페인에 대한 자세한 내용은 [광고 캠페인에 대한 일반적인 질문](common-questions.md)을 참조하세요.
+[파트너 센터](https://partner.microsoft.com/dashboard) 에서 ad 캠페인을 만들어 앱을 홍보 하 고 사용자 기반을 높일 수 있습니다. 기본적으로 파트너 센터의 앱에 대 한 설정을 기반으로 광고의 대상 사용자를 선택 하지만 필요에 따라 사용자 고유의 사용자를 정의할 수 있습니다. 광고 템플릿의 기본 설정을 사용하거나 고유한 광고 디자인을 업로드할 수도 있습니다. 광고 캠페인에 대한 자세한 내용은 [광고 캠페인에 대한 일반적인 질문](common-questions.md)을 참조하세요.
 
 [앱 인증 프로세스](the-app-certification-process.md)의 최종 게시 단계를 통과한 앱을 위한 광고 캠페인만 만들 수 있습니다.
 
 > [!NOTE]
-> This section of the documentation describes how to create an ad campaign in Partner Center. Other campaign options to create and manage ad campaigns programmatically include [Vungle](https://vungle.com/) and the [Microsoft Store promotions API](../monetize/run-ad-campaigns-using-windows-store-services.md).
+> 설명서의이 섹션에서는 파트너 센터에서 ad 캠페인을 만드는 방법을 설명 합니다. Ad 캠페인을 만들고 관리 하는 다른 캠페인 옵션에는 [Vungle](https://vungle.com/) 및 [MICROSOFT STORE 프로 모션 API](../monetize/run-ad-campaigns-using-windows-store-services.md)가 포함 됩니다.
 
 ## <a name="instructions"></a>지침
 
 앱을 홍보하는 광고 캠페인을 만드는 방법은 다음과 같습니다.
 
-1.  From the left navigation menu of [Partner Center](https://partner.microsoft.com/dashboard), expand **Attract** and then select **Ad campaigns**.
+1.  [파트너 센터](https://partner.microsoft.com/dashboard)의 왼쪽 탐색 메뉴에서 **관심** 을 확장 한 다음 **광고 캠페인**을 선택 합니다.
 2.  **캠페인 만들기**를 선택합니다(이전에 캠페인을 만든 경우에는 **새 캠페인**을 선택).
 3.  새 페이지의 **목표 유형** 섹션에서 다음 중 하나를 선택합니다.
     * **회원님의 앱에 대한 설치 늘리기**. 광고 캠페인을 통해 앱 설치를 유도하게 하려면 이 옵션을 선택합니다.
@@ -46,11 +46,11 @@ You can create ad campaigns in [Partner Center](https://partner.microsoft.com/da
 
         광고 캠페인을 만든 달의 월별 예산은 비례 배분 방식으로 지출됩니다. 즉, 보름을 지나 광고 캠페인을 만드는 경우 해당 월의 월별 예산 중 절반이 청구됩니다.
 
-    * **새 결제 방법 추가**를 클릭하여 광고 캠페인에 대한 결제 방법을 설정하고 계정 세부 정보를 입력합니다. 결제 수단을 이미 제공한 경우에는 **다른 결제 방법 선택**을 클릭하여 업데이트를 해야 합니다. The country/region of your payment method's billing address must match the country/region associated with your developer account.
+    * **새 결제 방법 추가**를 클릭하여 광고 캠페인에 대한 결제 방법을 설정하고 계정 세부 정보를 입력합니다. 결제 수단을 이미 제공한 경우에는 **다른 결제 방법 선택**을 클릭하여 업데이트를 해야 합니다. 지불 방법 청구 주소의 국가/지역은 개발자 계정에 연결 된 국가/지역과 일치 해야 합니다.
 
     * Microsoft 담당자로부터 쿠폰을 받고 광고 캠페인을 받고 결제하려면 **Use a coupon**(쿠폰 사용)을 클릭하고, 쿠폰 코드를 입력한 다음 **적용**을 클릭하여 캠페인에 쿠폰을 적용합니다.
 
-    완료하면 **저장 및 다음 단계**를 클릭하여 **대상** 단계로 진행합니다. This step is not available for House ad campaigns, since they run only in your own apps.
+    완료하면 **저장 및 다음 단계**를 클릭하여 **대상** 단계로 진행합니다. 이 단계는 자신의 앱 에서만 실행 되므로 사내 ad 캠페인에는 사용할 수 없습니다.
 
 9.  **대상** 페이지에는 캠페인을 권장할 대상 설정이 표시됩니다. 선택에 따라 이 정보를 조정할 수 있습니다.
     * **국가/지역**: 광고를 표시할 국가 또는 지역을 최대 5개 선택합니다. 지원되는 국가 또는 지역 목록은 [광고 캠페인에 대한 일반적인 질문](common-questions.md#where-will-my-ad-appear)을 참조하세요.
@@ -67,10 +67,10 @@ You can create ad campaigns in [Partner Center](https://partner.microsoft.com/da
 
     이 섹션에는 **예상 도달** 그래프도 표시됩니다. 이 그래프에는 선택한 시장에서 모든 Windows 광고 지원 앱 사용자의 백분율로 볼 때 현재의 대상 시정 선택으로 도달할 수 있는 대상이 표시됩니다.
 
-10.  캠페인 목표로 **앱 참여 늘리기**를 선택한 경우 대상으로 지정할 고객층 중 하나를 선택할 수 있습니다. 이 캠페인을 사용하여 만든 광고는 고객층에 포함된 고객에게만 표시됩니다. 세그먼트는 광고 캠페인당 하나만 선택할 수 있습니다. 세그먼트에 대한 자세한 내용은 [고객층 만들기](create-customer-segments.md)를 참조하세요. 완료하면 **저장 및 다음 단계**를 클릭하여 **광고 디자인** 단계로 진행합니다. This step is not available for House ad campaigns, because they run only in your own apps.
+10.  캠페인 목표로 **앱 참여 늘리기**를 선택한 경우 대상으로 지정할 고객층 중 하나를 선택할 수 있습니다. 이 캠페인을 사용하여 만든 광고는 고객층에 포함된 고객에게만 표시됩니다. 세그먼트는 광고 캠페인당 하나만 선택할 수 있습니다. 세그먼트에 대한 자세한 내용은 [고객층 만들기](create-customer-segments.md)를 참조하세요. 완료하면 **저장 및 다음 단계**를 클릭하여 **광고 디자인** 단계로 진행합니다. 이 단계는 자신의 앱 에서만 실행 되기 때문에 사내 ad 캠페인에는 사용할 수 없습니다.
 
 11.  **광고 디자인** 페이지에서 다음 옵션 중 하나를 선택합니다.
-    * **자동 생성**. This is the default option, and it allows you to create an ad from our default templates. 옵션을 선택하여 광고 콘텐츠를 사용자 지정할 수 있으며, 옵션에 따른 광고 모양을 미리 볼 수 있습니다(선택 시 자동 업데이트).
+    * **자동 생성**. 이 옵션은 기본 옵션으로, 기본 템플릿에서 ad를 만들 수 있습니다. 옵션을 선택하여 광고 콘텐츠를 사용자 지정할 수 있으며, 옵션에 따른 광고 모양을 미리 볼 수 있습니다(선택 시 자동 업데이트).
         * **언어** 드롭다운 목록에서 광고에 사용할 언어를 선택합니다. Microsoft Store 배지에 대한 텍스트가 선택한 언어로 표시됩니다.
         * 광고에 추가 텍스트 줄을 더하려면 **사용자 지정 태그 줄** 필드에 텍스트를 입력합니다.
             > [!NOTE]
@@ -82,7 +82,7 @@ You can create ad campaigns in [Partner Center](https://partner.microsoft.com/da
             * **내 앱을 무료로 표시**. 선택한 모든 시장에서 앱이 무료인 경우 이 확인란을 선택할 수 있는 옵션도 있습니다.
             * **동작 호출**. 캠페인 목표로 **앱 참여 늘리기**를 선택한 경우 광고의 동작 호출 단추를 **열기**, **재생**, **읽기**, **듣기** 또는 **쇼핑**으로 설정할 수 있습니다.  
 
-    * **사용자 지정**. 자신의 광고 디자인을 사용하려면 이 옵션을 선택합니다. Note that if you selected a customer segment earlier, you must use custom creatives. 사용 가능한 각 광고 크기에 대해 다른 파일을 업로드할 수 있습니다. 파일은 다음 요구 사항 및 지침을 충족해야 합니다.
+    * **사용자 지정**. 자신의 광고 디자인을 사용하려면 이 옵션을 선택합니다. 이전에 고객 세그먼트를 선택한 경우 사용자 지정 creatives를 사용 해야 합니다. 사용 가능한 각 광고 크기에 대해 다른 파일을 업로드할 수 있습니다. 파일은 다음 요구 사항 및 지침을 충족해야 합니다.
         * 각 파일은 .png 또는.jpg로 40KB 이하여야 합니다.
         * 광고 디자인은 [Microsoft Creative Acceptance Policy](https://about.ads.microsoft.com/solutions/ad-products/display-advertising/creative-acceptance-policies)에 지정된 요구 사항을 충족해야 합니다.
         * 광고 디자인의 콘텐츠는 홍보하는 앱과 관련이 있어야 합니다. 앱과 관련되지 않은 광고 디자인은 다른 앱에서 광고로 배포되지 않습니다.
@@ -90,7 +90,7 @@ You can create ad campaigns in [Partner Center](https://partner.microsoft.com/da
 
 12.  [프리미엄 계정](common-questions.md#how-can-i-increase-the-maximum-monthly-budget-amount-allowed-for-my-ad-campaign)이 있는 경우 **대상 URL** 상자를 사용하여 고객이 광고를 클릭할 때 발생하는 상황을 제어할 수 있습니다.
     * 상자를 비워 두면 고객이 광고를 클릭할 때 앱의 스토어 목록이 표시됩니다.
-    * If you are using Adjust, Kochava, Tune, or Vungle to measure install analytics for your app, enter your install tracking URL. 캠페인을 저장할 때 추적 URL이 Microsoft Store의 앱 목록 페이지로 확인되는지 검사하기 위해 추적 URL의 유효성이 검사됩니다. For more information about install tracking with these services, see the [Adjust](https://docs.adjust.com/en/), [Kochava](https://support.kochava.com/), [Tune](https://help.tune.com/hasoffers/), and [Vungle](https://support.vungle.com/hc/en-us) documentation.
+    * 조정, Kochava, 튜닝 또는 Vungle을 사용 하 여 앱에 대 한 설치 분석을 측정 하는 경우 설치 추적 URL을 입력 합니다. 캠페인을 저장할 때 추적 URL이 Microsoft Store의 앱 목록 페이지로 확인되는지 검사하기 위해 추적 URL의 유효성이 검사됩니다. 이러한 서비스를 사용 하 여 추적을 설치 하는 방법에 대 한 자세한 내용은 [조정](https://docs.adjust.com/en/), [Kochava](https://support.kochava.com/), [튜닝](https://help.tune.com/hasoffers/)및 [vungle](https://support.vungle.com/hc/en-us) 설명서를 참조 하세요.
     * 캠페인 목표로 **앱 참여 늘리기**를 선택한 경우 [딥 링크 URI](../launch-resume/handle-uri-activation.md)를 지정하여 선택한 고객층을 앱 내의 특정 페이지로 리디렉션할 수 있습니다.
     * 앱 설명 페이지 또는 앱 내부 페이지가 아닌 대상을 지정하면 캠페인이 자동으로 일시 중지됩니다.
 

@@ -40,7 +40,7 @@ UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치�
 </thead>
 <tbody>
 <tr class="even">
-<td style="vertical-align:top;">소</td>
+<td style="vertical-align:top;">소형</td>
 <td style="vertical-align:top;">640px 이하</td>
 <td style="vertical-align:top;">4&quot; ~ 6&quot;; 20&quot; ~ 65&quot;</td>
 <td style="vertical-align:top;">휴대폰, TV</td>
@@ -48,13 +48,13 @@ UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 장치�
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;">보통</td>
-<td style="vertical-align:top;">641px - 1007px</td>
+<td style="vertical-align:top;">641px ~ 1007px</td>
 <td style="vertical-align:top;">7&quot; ~ 12&quot;</td>
 <td style="vertical-align:top;">패블릿, 태블릿</td>
 <td style="vertical-align:top;">960 x 540</td>
 </tr>
 <tr class="even">
-<td style="vertical-align:top;">대</td>
+<td style="vertical-align:top;">대형</td>
 <td style="vertical-align:top;">1008px 이상</td>
 <td style="vertical-align:top;">13&quot; 이상</td>
 <td style="vertical-align:top;">PC, 노트북, Surface Hub</td>
@@ -76,8 +76,8 @@ UWP 앱은 모든 Windows 10 장치에서 앱을 쉽게 알아볼 수 있도록 
 
 ## <a name="general-recommendations"></a>일반 권장 사항
 
-### <a name="small"></a>소
-- 왼쪽 및 오른쪽 창 여백을 12픽셀로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.
+### <a name="small"></a>소형
+- 왼쪽 및 오른쪽 창 여백을 12px로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.
 - 접근성 향상을 위해 창의 맨 아래에 [앱 바](../controls-and-patterns/app-bars.md)를 도킹합니다.
 - 한 번에 하나의 열/영역을 사용합니다.
 - 아이콘을 사용하여 검색을 나타냅니다(검색 상자를 표시하지 않음).
@@ -85,15 +85,15 @@ UWP 앱은 모든 Windows 10 장치에서 앱을 쉽게 알아볼 수 있도록 
 - [마스터 세부 정보 패턴](../controls-and-patterns/master-details.md)을 사용하는 경우 누적된 프레젠테이션 모드를 사용하여 화면 공간을 절약할 수 있습니다.
 
 ### <a name="medium"></a>보통
-- 왼쪽 및 오른쪽 창 여백을 24픽셀로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.
+- 왼쪽 및 오른쪽 창 여백을 24px로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.
 - [앱 바](../controls-and-patterns/app-bars.md) 등의 명령 요소를 앱 창의 맨 위에 배치합니다.
 - 열/영역은 최대 2개까지 사용합니다.
 - 검색 상자를 표시합니다.
 - 좁은 아이콘 스트립이 항상 표시되도록 [탐색 창](../controls-and-patterns/navigationview.md)을 작은 모드로 전환합니다.
 - [TV 환경](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN)에 맞는 추가 조정을 고려합니다.
 
-### <a name="large"></a>대
-- 왼쪽 및 오른쪽 창 여백을 24픽셀로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.
+### <a name="large"></a>대형
+- 왼쪽 및 오른쪽 창 여백을 24px로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.
 - [앱 바](../controls-and-patterns/app-bars.md) 등의 명령 요소를 앱 창의 맨 위에 배치합니다.
 - 열/영역은 최대 3개까지 사용합니다.
 - 검색 상자를 표시합니다.

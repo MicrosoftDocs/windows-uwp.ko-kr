@@ -192,7 +192,7 @@ private async void ShowRouteOnMap()
 
 다음 예제에서는 [MapWithRoute**라는** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)MapControl 컨트롤에 다음을 표시합니다.
 
-![경로를 표시하는 지도 컨트롤](images/routeonmap.png)
+![경로를 표시하는 지도 컨트롤.](images/routeonmap.png)
 
 다음은 두 *정지* 웨이포인트 사이에 *경유* 웨이포인트를 사용하는 이 예제의 버전입니다.
 

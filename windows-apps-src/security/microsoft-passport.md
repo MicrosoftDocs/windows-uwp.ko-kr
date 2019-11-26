@@ -50,25 +50,25 @@ Windows Hello는 기존 자격 증명을 확인하고 생체 인식 또는 PIN �
 
 ## <a name="2-what-is-windows-hello"></a>2 Windows Hello란?
 
-Windows Hello는 Windows 10에서 기본 제공되는 새 생체 인식 로그인 시스템의 이름입니다. 이 시스템은 운영 체제에 내장되어 있기 때문에 얼굴 또는 지문 식별을 통해 사용자 디바이스의 잠금을 해제할 수 있습니다. 사용자가 장치별 자격 증명에 액세스하기 위해 고유한 생체 인식 식별자를 제공하면 인증이 시작됩니다. 이는 장치를 훔친 공격자에게 PIN이 없으면 로그온할 수 없음을 뜻합니다. Windows 보안 자격 증명 저장소는 디바이스의 생체 인식 데이터를 보호합니다. Windows Hello를 사용하여 장치 잠금을 해제하면 권한 있는 사용자가 모든 Windows 환경, 앱, 데이터, 웹 사이트 및 서비스에 액세스할 수 있습니다.
+Windows Hello는 Windows 10이 기본 제공하는 새로운 생체 인식 로그인 시스템의 이름입니다. 이 시스템은 운영 체제에 내장되어 있기 때문에 얼굴 또는 지문 식별을 통해 사용자 장치의 잠금을 해제할 수 있습니다. 사용자가 장치별 자격 증명에 액세스하기 위해 고유한 생체 인식 식별자를 제공하면 인증이 시작됩니다. 이는 장치를 훔친 공격자에게 PIN이 없으면 로그온할 수 없음을 뜻합니다. Windows 보안 자격 증명 저장소는 디바이스의 생체 인식 데이터를 보호합니다. Windows Hello를 사용하여 장치 잠금을 해제하면 권한 있는 사용자가 모든 Windows 환경, 앱, 데이터, 웹 사이트 및 서비스에 액세스할 수 있습니다.
 
 Windows Hello 인증자를 Hello라고 합니다. Hello는 개별 디바이스 및 특정 사용자의 조합에만 있습니다. Hello는 디바이스 간에 로밍되지 않고 서버 또는 호출 앱과 공유되지 않으며 디바이스에서 쉽게 추출할 수 없습니다. 여러 사용자가 디바이스를 공유하는 경우 각 사용자가 자신의 계정을 설정해야 합니다. 모든 계정이 해당 디바이스의 고유 Hello를 갖게 됩니다. Hello는 저장된 자격 증명을 잠금 해제하는 데 사용할 수 있는 토큰이라고 생각할 수 있습니다. Hello 자체는 사용자를 앱이나 서비스에 인증하지 않지만 인증할 수 있는 자격 증명을 해제합니다. 즉, Hello는 사용자 자격 증명이 아니라 인증 프로세스에 대한 두 번째 요소입니다.
 
 ### <a name="21-windows-hello-authentication"></a>2.1 Windows Hello 인증
 
-Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강력한 방법으로, 사용자와 요청된 서비스 또는 데이터 항목 간의 경로에 대한 첫 번째 부분을 해결합니다. 디바이스에서 사용자를 인식한 후 요청된 리소스에 대한 액세스를 허용할지 결정하려면 먼저 사용자를 인증해야 합니다. Windows Hello는 Windows에 완전히 통합된 강력한 2FA 방식이며 재사용할 수 있는 암호를 특정 디바이스와 생체 인식 제스처 또는 PIN의 조합으로 대체합니다.
+Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강력한 방법으로, 사용자와 요청된 서비스 또는 데이터 항목 간의 경로에 대한 첫 번째 부분을 해결합니다. 디바이스에서 사용자를 인식한 후 요청된 리소스에 대한 액세스를 허용할지 여부를 결정하려면 먼저 사용자를 인증해야 합니다. Windows Hello는 Windows에 완전히 통합된 강력한 2FA 방식이며 재사용할 수 있는 암호를 특정 디바이스와 생체 인식 제스처 또는 PIN의 조합으로 대체합니다.
 
 그러나 Windows Hello는 기존 2FA 시스템을 대체하는 데 그치는 것은 아닙니다. 개념적으로 보면 스마트 카드와 유사합니다. 문자열 비교 대신 암호화 기본 방식을 사용하여 인증을 수행하고 사용자의 주요 자료를 변조 방지 하드웨어 내에서 보호합니다. Windows Hello에는 스마트 카드 배포에 필요한 추가 인프라 구성 요소도 필요하지 않습니다. 특히, 현재 없는 경우는 인증서 관리를 위한 인프라 PKI(공개 키)가 필요 없습니다. Windows Hello는 가상 스마트 카드의 배포 유연성과 물리적 스마트 카드의 강력한 보안과 같은 스마트 카드 기술의 주요 장점만 가져오고 단점은 제외하였습니다.
 
 ### <a name="22-how-windows-hello-works"></a>2.2 Windows Hello의 작동 방식
 
-사용자가 자신의 컴퓨터에서 Windows Hello를 설정하면 Windows Hello는 해당 디바이스에 새 공개-개인 키 쌍을 만듭니다. TPM([신뢰할 수 있는 플랫폼 모듈](https://docs.microsoft.com/windows/keep-secure/trusted-platform-module-overview))은 이 프라이빗 키를 생성하고 보호합니다. 디바이스에 TPM 칩이 없는 경우 프라이빗 키는 소프트웨어에 의해 암호화되고 보호됩니다. 그 외에도 TPM 지원 디바이스는 TPM에 키가 바인딩되어 있음을 증명하는 데 사용할 수 있는 데이터 블록을 생성합니다. 예를 들어 솔루션에서 이 증명 정보를 사용하여 사용자에게 다른 권한 부여 수준이 지정되었는지 여부를 확인할 수 있습니다.
+사용자가 자신의 컴퓨터에서 Windows Hello를 설정하면 Windows Hello는 해당 디바이스에 새 공개-개인 키 쌍을 만듭니다. TPM([신뢰할 수 있는 플랫폼 모듈](https://docs.microsoft.com/windows/keep-secure/trusted-platform-module-overview))은 이 개인 키를 생성하고 보호합니다. 디바이스에 TPM 칩이 없는 경우 프라이빗 키는 소프트웨어에 의해 암호화되고 보호됩니다. 그 외에도 TPM 지원 디바이스는 TPM에 키가 바인딩되어 있음을 증명하는 데 사용할 수 있는 데이터 블록을 생성합니다. 예를 들어 솔루션에서 이 증명 정보를 사용하여 사용자에게 다른 권한 부여 수준이 승인되었는지 여부를 확인할 수 있습니다.
 
 디바이스에서 Windows Hello를 사용하려면 사용자가 Azure Active Directory 계정 또는 Windows 설정에 연결된 Microsoft 계정이 있어야 합니다.
 
 #### <a name="221-how-keys-are-protected"></a>2.2.1 키 보호 방법
 
-키 자료가 생성될 때마다 공격으로부터 보호해야 합니다. 가장 강력한 보호 방법은 특수 하드웨어를 사용하는 것입니다. 오랫동안 보안에 중요한 응용 프로그램의 키를 생성, 저장 및 처리하는 데 HSM(하드웨어 보안 모듈)이 사용되었습니다. 스마트 카드는 특수한 형식의 HSM으로서, 신뢰할 수 있는 컴퓨팅 그룹 TPM 표준 규격의 디바이스입니다. 가능한 경우 Windows Hello 구현은 온보드 TPM 하드웨어를 이용하여 키를 생성, 저장, 처리합니다. 그러나 Windows Hello과 Windows Hello for Work는 온보드 TPM이 필요하지 않습니다.
+키 자료가 생성될 때마다 공격으로부터 보호해야 합니다. 가장 강력한 보호 방법은 특수 하드웨어를 사용하는 것입니다. 오랫동안 보안에 중요한 응용 프로그램의 키를 생성, 저장 및 처리하는 데 HSM(하드웨어 보안 모듈)이 사용되었습니다. 스마트 카드는 특수한 형식의 HSM으로서, 신뢰할 수 있는 컴퓨팅 그룹 TPM 표준 규격의 장치입니다. 가능한 경우 Windows Hello 구현은 온보드 TPM 하드웨어를 이용하여 키를 생성, 저장, 처리합니다. 그러나 Windows Hello과 Windows Hello for Work는 온보드 TPM이 필요하지 않습니다.
 
 가능한 경우 TPM 하드웨어를 사용하는 것이 좋습니다. TPM은 PIN 무차별 암호 대입 공격(brute-force attack)을 포함하여 여러 가지 알려진 잠재적 공격으로부터 보호합니다. TPM은 계정 잠금 이후 추가 보호 계층도 제공합니다. TPM이 키 자료를 잠그면 사용자는 PIN을 재설정해야 합니다. PIN을 재설정한다는 것은 이전 키 자료로 암호화된 모든 키와 인증서가 제거된다는 의미입니다.
 
@@ -82,7 +82,7 @@ Windows Hello는 디바이스에서 개별 사용자를 인식하기 위한 강�
 
 Windows Hello 작동 방식에 대해 기본적인 사항을 이해했으므로 이제 응용 프로그램에서 Windows Hello를 구현하는 방법에 대해 살펴보겠습니다.
 
-Windows Hello를 사용하여 구현할 수 있는 여러 가지 시나리오가 있습니다. 예를 들어 디바이스에서 앱에 로그온하는 경우 또는 다른 일반적인 예로 서비스에 대해 인증하는 경우를 들 수 있습니다. 로그온 이름과 암호를 사용하는 대신 Windows Hello를 사용하게 됩니다. 다음 장에서는 Windows Hello를 사용하여 서비스에 대해 인증하는 방법, 기존 사용자 이름/암호 시스템을 Windows Hello 시스템으로 변환하는 방법 등을 포함하여 몇 가지 시나리오 구현에 대해 살펴보겠습니다.
+Windows Hello를 사용하여 구현할 수 있는 여러 가지 시나리오가 있습니다. 예를 들어 디바이스에서 앱에 로그온하는 경우가 있습니다. 또는 다른 일반적인 예로 서비스에 대해 인증하는 경우를 들 수 있습니다. 로그온 이름과 암호를 사용하는 대신 Windows Hello를 사용하게 됩니다. 다음 장에서는 Windows Hello를 사용하여 서비스에 대해 인증하는 방법, 기존 사용자 이름/암호 시스템을 Windows Hello 시스템으로 변환하는 방법 등을 포함하여 몇 가지 시나리오 구현에 대해 살펴보겠습니다.
 
 마지막으로, Windows Hello API는 앱에 사용할 운영 체제와 일치하는 Windows 10 SDK를 사용해야 한다는 점에 유의하세요. 즉, Windows 10에 배포될 앱에는 10.0.10240 Windows SDK를 사용하고 Windows 10 버전 1511에 배포될 앱에는 10.0.10586을 사용해야 합니다.
 
@@ -124,7 +124,7 @@ var keyCreationResult = await KeyCredentialManager.RequestCreateAsync(
     AccountId, KeyCredentialCreationOption.ReplaceExisting);
 ```
 
-[**RequestCreateAsync**](https://docs.microsoft.com/previous-versions/windows/dn973048(v=win.10))는 공개 키 및 프라이빗 키를 만드는 부분입니다. 디바이스에 적절한 TPM 칩이 있는 경우 API는 프라이빗 키와 공개 키를 만들어 그 결과를 저장하도록 이 TPM 칩에 요청합니다. 이러한 TPM 칩이 없으면 OS에서 코드에 키 쌍이 만들어집니다. 생성된 프라이빗 키에 대해 앱에서 직접 액세스하는 방법은 없습니다. 키 쌍 생성의 일부분이 결과 증명 정보이기도 합니다. 증명에 대한 자세한 내용은 다음 섹션을 참조하세요.
+[  **RequestCreateAsync**](https://docs.microsoft.com/previous-versions/windows/dn973048(v=win.10))는 공개 키 및 개인 키를 만드는 부분입니다. 디바이스에 적절한 TPM 칩이 있는 경우 API는 프라이빗 키와 공개 키를 만들어 그 결과를 저장하도록 이 TPM 칩에 요청합니다. 이러한 TPM 칩이 없으면 OS에서 코드에 키 쌍이 만들어집니다. 생성된 프라이빗 키에 대해 앱에서 직접 액세스하는 방법은 없습니다. 키 쌍 생성의 일부분이 결과 증명 정보이기도 합니다. 증명에 대한 자세한 내용은 다음 섹션을 참조하세요.
 
 디바이스에서 키 쌍과 증명 정보가 만들어지면 공개 키, (선택적으로) 증명 정보, 고유 식별자(예: 메일 주소) 등을 백 엔드 등록 서비스로 전송하여 백 엔드에 저장해야 합니다.
 
@@ -235,7 +235,7 @@ if (consentResult.Equals(UserConsentVerificationResult.Verified))
 
 ### <a name="34-authentication-at-the-backend"></a>3.4 백 엔드에서 인증
 
-앱에서 보호된 백 엔드 서비스에 액세스하려는 경우 서비스는 앱에 시도를 보냅니다. 앱에서는 사용자의 프라이빗 키를 사용하여 시도에 서명하고 시도를 다시 서버로 보냅니다. 서버에서는 사용자의 공개 키를 저장했으므로 표준 암호 API를 사용하여 메시지가 올바른 프라이빗 키를 사용해 서명되었는지 확인합니다. 클라이언트 서명은 Windows Hello API를 통해 이루어지며, 개발자는 모든 사용자의 개인 키에 액세스할 수 없습니다.
+앱에서 보호된 백 엔드 서비스에 액세스하려는 경우 서비스는 앱에 시도를 보냅니다. 앱에서는 사용자의 프라이빗 키를 사용하여 시도에 서명하고 시도를 다시 서버로 보냅니다. 서버에서는 사용자의 공개 키를 저장했으므로 표준 암호 API를 사용하여 메시지가 올바른 개인 키를 사용해 서명되었는지 확인합니다. 클라이언트 서명은 Windows Hello API를 통해 이루어지며, 개발자는 모든 사용자의 개인 키에 액세스할 수 없습니다.
 
 서비스에서는 키를 검사하는 것 외에도 키 증명을 확인하여 디바이스에서 키가 저장되는 방법에 대해 제한이 호출되었는지 여부를 확인할 수도 있습니다. 예를 들어 디바이스에서 TPM을 사용하여 키를 보호하는 경우 TPM 없이 키를 저장하는 디바이스에 비해 더 안전합니다. 백 엔드 논리는 예를 들어 TPM이 사용되지 않은 경우 위험을 줄이기 위해 사용자가 특정 금액만 이체할 수 있도록 결정할 수 있습니다.
 
@@ -267,11 +267,11 @@ if (openKeyResult.Status == KeyCredentialStatus.Success)
 }
 ```
 
-첫 번째 줄 [**KeyCredentialManager.OpenAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.keycredentialmanager.openasync)에서는 키 핸들을 열도록 OS에 요청합니다. 이 과정이 완료되면 [**KeyCredential.RequestSignAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.keycredential.requestsignasync) 메서드를 사용하여 시도 메시지에 서명할 수 있으며, 이 경우 Windows Hello를 통해 OS에서 사용자 PIN 또는 생체 인식 정보를 요청합니다. 개발자는 절대로 사용자의 프라이빗 키에 액세스할 수 없습니다. API를 통해 모두 안전하게 보관됩니다.
+첫 번째 줄 [**KeyCredentialManager.OpenAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.keycredentialmanager.openasync)에서는 키 핸들을 열도록 OS에 요청합니다. 이 과정이 완료되면 [**KeyCredential.RequestSignAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.keycredential.requestsignasync) 메서드를 사용하여 시도 메시지에 서명할 수 있으며, 이 경우 Windows Hello를 통해 OS에서 사용자 PIN 또는 생체 인식 정보를 요청합니다. 개발자는 절대로 사용자의 개인 키에 액세스할 수 없습니다. API를 통해 모두 안전하게 보관됩니다.
 
 API는 프라이빗 키를 사용해 챌린지에 서명하도록 OS에 요청합니다. 그러면 시스템은 사용자에게 PIN 코드나 구성된 생체 인식 로그온을 요구합니다. 올바른 정보가 입력되면 시스템은 암호화 기능을 수행하고 시도에 서명하도록 TPM 칩에 요청합니다. TPM을 사용할 수 없는 경우에는 대체 소프트웨어 솔루션을 사용할 수 있습니다. 클라이언트는 서명된 시도를 다시 서버에 전송해야 합니다.
 
-기본 시도-응답 흐름이 이 시퀀스 다이어그램에 표시됩니다.
+기본 시도-응답 흐름은 다음 순서도에 나와 있습니다.
 
 ![Windows Hello 시도 응답](images/passport-challenge-response.png)
 
@@ -387,7 +387,7 @@ UI는 다음과 같습니다.
 
 ![Windows Hello UI](images/passport-ui.png)
 
-사용자가 Windows Hello를 사용하기로 한 경우, 앞의 설명대로 [**KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential)을 만듭니다. 백 엔드 등록 서버에서는 데이터베이스에 공개 키와 (선택적으로) 증명서를 추가합니다. 사용자가 이미 사용자 이름 및 암호를 사용하여 인증되었기 때문에 서버에서는 새 자격 증명을 데이터베이스에 있는 현재 사용자 정보에 연결할 수 있습니다. 데이터베이스 모델은 앞에서 설명한 예제와 동일한 것일 수 있습니다.
+사용자가 Windows Hello를 사용하기로 한 경우, 앞의 설명대로 [**KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential)을 만듭니다. 백 엔드 등록 서버는 데이터베이스에 공개 키와 증명서(선택 사항)를 추가합니다. 사용자가 이미 사용자 이름 및 암호를 사용하여 인증되었기 때문에 서버에서는 새 자격 증명을 데이터베이스에 있는 현재 사용자 정보에 연결할 수 있습니다. 데이터베이스 모델은 앞에서 설명한 예제와 동일한 것일 수 있습니다.
 
 앱에서 사용자 [**KeyCredential**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.KeyCredential)을 만든 경우 이 사용자 ID를 격리된 저장소에 저장하여 앱 재시작 시 사용자가 목록에서 이 계정을 선택할 수 있도록 합니다. 이 시점부터는 이전 장에서 설명한 예제와 흐름이 정확히 동일합니다.
 
@@ -415,7 +415,7 @@ Windows 10에서는 수준이 더 높으면서도 간편하게 구현할 수 있
 
 | | |
 |-|-|
-| AIK | 증명 ID 키는 마이그레이션 불가능한 키의 속성에 서명하고 확인을 위해 신뢰 당사자에게 속성 및 서명을 제공함으로써 암호화 증명(TPM 키 증명)을 제공하는 데 사용됩니다. 결과로 얻게 되는 서명을 "증명서"라고 합니다. 서명은 AIK 프라이빗 키(이 키를 생성한 TPM에서만 사용 가능)를 사용하여 생성되므로 신뢰 당사자는 증명된 키가 진정으로 마이그레이션 불가능한 키이며 해당 TPM 외부에서 사용할 수 없다는 점을 신뢰할 수 있습니다. |
+| AIK | 증명 ID 키는 마이그레이션 불가능한 키의 속성에 서명하고 확인을 위해 신뢰 당사자에게 속성 및 서명을 제공함으로써 암호화 증명(TPM 키 증명)을 제공하는 데 사용됩니다. 결과로 얻게 되는 서명을 "증명서"라고 합니다. 서명은 AIK 개인 키(이 키를 생성한 TPM에서만 사용 가능)를 사용하여 생성되므로 신뢰 당사자는 증명된 키가 진정으로 마이그레이션 불가능한 키이며 해당 TPM 외부에서 사용할 수 없다는 점을 신뢰할 수 있습니다. |
 | AIK 인증서 | AIK 인증서는 TPM 내에서 AIK의 존재를 입증하는 데 사용됩니다. 또한 AIK에서 인증된 다른 키가 이 특정 TPM에서 발생했음을 입증하는 데에도 사용됩니다. |
 | IDP | IDP는 ID 공급자입니다. Microsoft 계정에 대해 Microsoft에서 제공하는 IDP 빌드를 예로 들 수 있습니다. 응용 프로그램에서 MSA를 사용하여 인증해야 할 때마다 MSA IDP를 호출할 수 있습니다. |
 | PKI | 공개 키 인프라로서, 일반적으로 조직 자체에서 호스트되는 환경을 가리키는 데 사용되며 키 생성, 키 호출 등을 담당합니다. |

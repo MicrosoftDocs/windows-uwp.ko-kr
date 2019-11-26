@@ -40,7 +40,7 @@ Windows 10 버전 1607에는 두 개의 새 응용 프로그램 수명 주기 �
 
 [!code-cs[RegisterEvents](./code/ReduceMemory/cs/App.xaml.cs#SnippetRegisterEvents)]
 
-[  **EnteredBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground) 이벤트가 발생하면 추적 변수를 설정하여 현재 백그라운드에서 실행 중임을 나타냅니다. 이 처리기는 메모리 사용량을 줄이기 위한 코드를 작성할 때 유용합니다.
+[  **EnteredBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground) 이벤트가 발생하면 추적 변수를 설정하여 현재 백그라운드에서 실행 중임을 나타냅니다. 이는 메모리 사용량을 줄이기 위한 코드를 작성할 때 유용합니다.
 
 [!code-cs[EnteredBackground](./code/ReduceMemory/cs/App.xaml.cs#SnippetEnteredBackground)]
 
@@ -72,7 +72,7 @@ Windows 10 버전 1607에는 두 개의 새 응용 프로그램 수명 주기 �
 
 [!code-cs[MainPageUnloaded](./code/ReduceMemory/cs/App.xaml.cs#SnippetMainPageUnloaded)]
 
-[  **LeavingBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground) 이벤트 처리기에서 추적 변수(`isInBackgroundMode`)를 설정하여 앱이 더 이상 백그라운드에서 실행되지 않음을 나타내야 합니다. 그런 다음 현재 창의 [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content)가 `null`인지 확인합니다. 백그라운드에서 실행하는 동안 메모리를 지우기 위해 앱 보기를 삭제한 경우 null이 됩니다. 창 콘텐츠가 `null`이면 앱 보기를 다시 작성합니다. 이 예제에서는 창 콘텐츠가 도우미 메서드 **CreateRootFrame**에서 만들어집니다.
+[  **LeavingBackground**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground) 이벤트 처리기에서 추적 변수(`isInBackgroundMode`)를 설정하여 앱이 더 이상 백그라운드에서 실행되지 않음을 나타냅니다. 그런 다음 현재 창의 [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.content)가 `null`인지 확인합니다. 백그라운드에서 실행하는 동안 메모리를 지우기 위해 앱 보기를 삭제한 경우 null이 됩니다. 창 콘텐츠가 `null`이면 앱 보기를 다시 작성합니다. 이 예제에서는 창 콘텐츠가 도우미 메서드 **CreateRootFrame**에서 만들어집니다.
 
 [!code-cs[LeavingBackground](./code/ReduceMemory/cs/App.xaml.cs#SnippetLeavingBackground)]
 

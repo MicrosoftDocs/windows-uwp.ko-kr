@@ -23,10 +23,10 @@ ms.locfileid: "74260261"
 
 이 샘플 앱은 2개의 버튼을 사용하여 중간 광고를 요청한 다음 실행합니다. Visual Studio에서 생성된 main.js 및 index.html은 수정되었으며 아래와 같습니다. 아래의 script.js 파일에는 샘플의 코드 대부분이 포함되어 있으므로 이 파일을 프로젝트의 **js** 폴더에 추가해야 합니다.
 
-Replace the values of the ```applicationId``` and ```adUnitId``` variables with live values from Partner Center before submitting your app to the Store. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+앱을 스토어에 제출 하기 전에 ```applicationId``` 및 ```adUnitId``` 변수 값을 파트너 센터의 라이브 값으로 바꿉니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
 > [!NOTE]
-> 동영상 중간 광고 대신 배너 중간 광고를 표시하도록 이 예제를 변경하려면 [RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드의 첫 번째 매개 변수에 **InterstitialAdType.video** 대신 **InterstitialAdType.display** 값을 전달하세요. 자세한 내용은 [중간 광고](interstitial-ads.md)를 참조하세요.
+> 동영상 중간 광고 대신 배너 중간 광고를 표시하도록 이 예제를 변경하려면 **RequestAd** 메서드의 첫 번째 매개 변수에 [InterstitialAdType.video](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 대신 **InterstitialAdType.display** 값을 전달하세요. 자세한 내용은 [중간 광고](interstitial-ads.md)를 참조하세요.
 
 ### <a name="indexhtml"></a>index.html
 

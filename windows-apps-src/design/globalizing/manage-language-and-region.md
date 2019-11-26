@@ -1,5 +1,5 @@
 ---
-Description: This topic defines the terms user profile language list, app manifest language list, and app runtime language list. 이 항목 및 이 기능 영역의 다른 항목에서 이러한 용어를 사용할 예정이므로 이 용어의 의미를 알아 두는 것이 중요합니다.
+Description: 이 항목에서는 사용자 프로필 언어 목록, 앱 매니페스트 언어 목록 및 앱 런타임 언어 목록 이라는 용어를 정의 합니다. 이 항목 및 이 기능 영역의 다른 항목에서 이러한 용어를 사용할 예정이므로 이 용어의 의미를 알아 두는 것이 중요합니다.
 title: 사용자 프로필 언어 및 앱 매니페스트 언어 이해
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 template: detail.hbs
@@ -35,7 +35,7 @@ UWP 앱의 경우 언어는 [BCP-47 언어 태그](https://tools.ietf.org/html/b
 ## <a name="app-manifest-language-list"></a>앱 매니페스트 언어 목록
 앱 매니페스트 언어 목록은 앱에서 지원을 선언하거나 선언할 언어 목록입니다. 이 목록은 개발 주기 동안 앱이 진행됨에 따라 지역화 과정까지 확장될 수 있습니다.
 
-목록은 컴파일할 때 결정되지만 어떻게 나타날지 제어할 수 있는 두 가지 옵션이 있습니다. 한 가지 방법은 Visual Studio가 사용자의 프로젝트 파일에서 목록을 결정하는 것입니다. 그렇게 하려면 먼저 앱 패키지 매니페스트 소스 파일(`Package.appxmanifest`)의 **응용 프로그램** 탭에 있는 **기본 언어**를 설정합니다. 그런 다음 동일한 파일이 이 구성을 포함하는지 확인합니다(기본적으로 이렇게 포함됨).
+목록은 컴파일할 때 결정되지만 어떻게 나타날지 제어할 수 있는 두 가지 옵션이 있습니다. 한 가지 방법은 Visual Studio가 사용자의 프로젝트 파일에서 목록을 결정하는 것입니다. 그렇게 하려면 먼저 앱 패키지 매니페스트 소스 파일( **)의** 응용 프로그램**탭에 있는**기본 언어`Package.appxmanifest`를 설정합니다. 그런 다음 동일한 파일이 이 구성을 포함하는지 확인합니다(기본적으로 이렇게 포함됨).
 
 ```xml
   <Resources>
@@ -53,7 +53,7 @@ Visual Studio에서 작성된 앱 패키지 매니페스트 파일(`AppxManifest
   </Resources>
 ```
 
-나머지 옵션은 앱 패키지 매니페스트 소스 파일(`Package.appxmanifest`)의 "x-generate" `<Resource>` 요소 하나를 `<Resource>` 요소의 확장된 목록으로 교체하는 것입니다(기본 언어를 먼저 나열함에 주의할 것). 이 옵션에는 유지 관리할 사항이 더 많지만 사용자 지정 빌드 시스템을 사용할 경우 적합한 옵션일 수 있습니다.
+나머지 옵션은 앱 패키지 매니페스트 소스 파일(`<Resource>`)의 "x-generate" `Package.appxmanifest` 요소 하나를 `<Resource>` 요소의 확장된 목록으로 교체하는 것입니다(기본 언어를 먼저 나열함에 주의할 것). 이 옵션에는 유지 관리할 사항이 더 많지만 사용자 지정 빌드 시스템을 사용할 경우 적합한 옵션일 수 있습니다.
 
 시작하려면 앱 매니페스트 언어 목록에 한 가지 언어만 포함되어야 합니다. 아마도 en-US일 것입니다. 하지만 결국 매니페스트를 수동으로 구성하거나 번역된 리소스를 프로젝트에 추가함에 따라 해당 목록은 길어질 것입니다.
 
@@ -93,23 +93,23 @@ Visual Studio에서 작성된 앱 패키지 매니페스트 파일(`AppxManifest
 **참고** 사용자 프로필 언어 및 앱 매니페스트 언어의 지역 변수가 서로의 지역 변수인 경우 사용자의 지역 변수가 앱 런타임 언어로 사용됩니다. 예를 들어 사용자가 en-GB를 선호하고 앱에서 en-US를 지원하는 경우 앱 런타임 언어는 en-GB입니다. 따라서 날짜, 시간 및 숫자 형식은 사용자의 예상(en-GB)에 가깝게 지정되지만, 언어 일치로 인해 지역화된 리소스는 여전히 앱에서 지원되는 언어(en-US)로 로드됩니다.
 
 ## <a name="qualify-resource-files-with-their-language"></a>해당 언어와 관련하여 리소스 파일을 인증합니다.
-언어 리소스 한정자를 사용하여 리소스 파일 또는 폴더의 이름을 지정합니다. 리소스 한정자에 대한 자세한 내용은 [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md)을 참조하세요. A resource file can be an image (or other asset), or it can be a resource container file, such as a *.resw* that contains text strings.
+언어 리소스 한정자를 사용하여 리소스 파일 또는 폴더의 이름을 지정합니다. 리소스 한정자에 대한 자세한 내용은 [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md)을 참조하세요. 리소스 파일은 이미지 (또는 다른 자산) 이거나 텍스트 문자열을 포함 하는 *resw* 와 같은 리소스 컨테이너 파일 일 수 있습니다.
 
-**Note** Even resources in your app's default language must specify the language qualifier. For example, if your app's default language is English (United States), then qualify your assets as `\Assets\Images\en-US\logo.png`.
+**참고** 앱의 기본 언어에 포함 된 리소스도 언어 한정자를 지정 해야 합니다. 예를 들어, 앱의 기본 언어가 영어 (미국) 인 경우 자산을 `\Assets\Images\en-US\logo.png`으로 한정 합니다.
 
-- Windows performs complex matching, including across regional variants such as en-US and en-GB. So include the region sub-tag as appropriate. [리소스 관리 시스템이 언어 태그를 일치하는 방법](../../app-resources/how-rms-matches-lang-tags.md)을 참조하세요.
-- Specify a language script sub-tag in the qualifier when there is no Suppress-Script value defined for the language. For example, instead of zh-CN or zh-TW, use zh-Hant, zh-Hant-TW, or zh-Hans (for more detail, see the [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry)).
-- For languages that have a single standard dialect, there is no need to include the region qualifier. For example, use ja instead of ja-JP.
+- Windows는 en-us 및 en-us와 같은 지역 변형을 포함 하 여 복잡 한 일치를 수행 합니다. 따라서 지역 하위 태그를 적절 하 게 포함 합니다. [리소스 관리 시스템이 언어 태그를 일치하는 방법](../../app-resources/how-rms-matches-lang-tags.md)을 참조하세요.
+- 언어에 대해 정의 된 표시 안 함-스크립트 값이 없는 경우 한정자에서 언어 스크립트 하위 태그를 지정 합니다. 예를 들어 zh-cn 또는 zh-cn를 사용 하는 대신 zh-cn-Zh-hant, zh-cn-Zh-hant-zh-cn-Hans를 사용 합니다 (자세한 내용은 [IANA 언어 하위 태그 레지스트리](https://www.iana.org/assignments/language-subtag-registry)참조).
+- 표준 언어가 하나인 언어의 경우 지역 한정자를 포함할 필요가 없습니다. 예를 들어 ja-jp 대신 ja-jp를 사용 합니다.
 - 일부 도구와 기계 번역기와 같은 다른 구성 요소가 데이터 이해에 도움이 되는 사투리 정보와 같은 특정 언어 태그를 찾을 수도 있습니다.
 
-### <a name="not-all-resources-need-to-be-localized"></a>Not all resources need to be localized
+### <a name="not-all-resources-need-to-be-localized"></a>모든 리소스를 지역화 해야 하는 것은 아닙니다.
 
-Localization might not be required for all resources.
+모든 리소스에 대해 지역화가 필요 하지 않을 수 있습니다.
 
-- At a minimum, ensure all resources exist in the default language.
-- A subset of some resources might suffice for a closely related language (partial localization). 예를 들어 앱에 스페인어로 된 전체 리소스 집합이 있을 경우 앱의 일부 UI는 카탈로니아어로 지역화되지 않을 수 있습니다. For users who speak Catalan and then Spanish, the resources that are not available in Catalan appear in Spanish.
-- Some resources might require exceptions for specific languages, while the majority of other resources map to a common resource. In this case, mark the resource intended to be used for all languages with the undetermined language tag 'und'. Windows interprets the 'und' language tag as a wildcard (similar to '\*') in that it matches the top app language after any other specific match. 예를 들어 몇 개의 리소스가 핀란드어에 대해 서로 다르지만 나머지 리소스가 모든 언어에 대해 동일할 경우 핀란드어 리소스는 핀란드어 태그로 표시하고 나머지는 'und'로 표시해야 합니다.
-- For resources that are based on a language script, such as a font or height of text, use the undetermined language tag with a specified script: 'und-&lt;script&gt;'. 예를 들어, 라틴 글꼴은 `und-Latn\\fonts.css`를 사용하고 키릴 글꼴은 `und-Cryl\\fonts.css`를 사용합니다.
+- 최소한 모든 리소스가 기본 언어로 존재 하는지 확인 합니다.
+- 일부 리소스의 하위 집합은 밀접 하 게 관련 된 언어 (부분 지역화)에 충분 합니다. 예를 들어 앱에 스페인어로 된 전체 리소스 집합이 있을 경우 앱의 일부 UI는 카탈로니아어로 지역화되지 않을 수 있습니다. 카탈로니아어와 스페인어를 말하는 사용자의 경우 카탈로니아어에서 사용할 수 없는 리소스는 스페인어로 표시 됩니다.
+- 일부 리소스는 특정 언어에 대 한 예외가 필요할 수 있으며, 대부분의 다른 리소스는 공통 리소스에 매핑됩니다. 이 경우 ' und ' 언어 태그가 결정 되지 않은 모든 언어에 사용할 리소스를 표시 합니다. Windows에서는 ' und ' 언어 태그를 와일드 카드 ('\*'과 유사)로 해석 하 여 다른 특정 일치 항목 후에 최상위 앱 언어와 일치 합니다. 예를 들어 몇 개의 리소스가 핀란드어에 대해 서로 다르지만 나머지 리소스가 모든 언어에 대해 동일할 경우 핀란드어 리소스는 핀란드어 태그로 표시하고 나머지는 'und'로 표시해야 합니다.
+- 텍스트의 글꼴 또는 높이와 같은 언어 스크립트를 기반으로 하는 리소스의 경우 지정 된 스크립트와 함께 결정 되지 않은 언어 태그를 사용 합니다. ' und-&lt;script&gt;'. 예를 들어, 라틴 글꼴은 `und-Latn\\fonts.css`를 사용하고 키릴 글꼴은 `und-Cryl\\fonts.css`를 사용합니다.
 
 ## <a name="set-the-http-accept-language-request-header"></a>HTTP Accept Language 요청 헤더 설정
 호출하는 웹 서비스의 지역화 정도가 앱에서 호출하는 것과 동일한지 고려합니다. 일반 웹 요청 및 XHR(XMLHttpRequest)에서 UWP 앱 및 데스크톱 앱의 HTTP 요청에서는 표준 HTTP Accept-Language 요청 헤더를 사용합니다. 기본적으로 HTTP 헤더는 사용자 프로필 언어 목록으로 설정됩니다. 목록의 각 언어는 언어 중립과 가중치(q)를 포함하도록 확장됩니다. 예를 들어 fr-FR 및 en-US로 구성된 사용자의 언어 목록은 HTTP Accept-Language 요청 헤더가 fr-FR, fr, en-US, en("fr-FR,fr;q=0.8,en-US;q=0.5,en;q=0.3")으로 나타납니다. 그러나 예를 들어 날씨 앱의 UI가 프랑스어(프랑스)로 표시되지만 사용자의 기본 설정 목록에 독일어가 최상위 언어로 표시되는 경우 해당 앱에서 일관되게 표시되도록 서비스에서 프랑스어(프랑스)를 명시적으로 요청해야 합니다.
@@ -150,35 +150,35 @@ Localization might not be required for all resources.
 <tr>
 <td align="left">영어(GB)(기본값); 독일어(독일)</td>
 <td align="left">영어(GB)</td>
-<td align="left">none</td>
+<td align="left">없음</td>
 <td align="left">영어(GB)</td>
 <td align="left">UI: 영어(GB)<br>날짜/시간/숫자: 영어(GB)</td>
 </tr>
 <tr>
 <td align="left">독일어(독일)(기본값); 프랑스어(프랑스); 이탈리아어(이탈리아)</td>
 <td align="left">프랑스어(오스트리아)</td>
-<td align="left">none</td>
+<td align="left">없음</td>
 <td align="left">프랑스어(오스트리아)</td>
 <td align="left">UI: 프랑스어(프랑스) (프랑스어(오스트리아)에서 대체)<br>날짜/시간/숫자: 프랑스어(오스트리아)</td>
 </tr>
 <tr>
 <td align="left">영어(미국)(기본값); 프랑스어(프랑스); 영어(GB)</td>
 <td align="left">영어(캐나다); 프랑스어(캐나다)</td>
-<td align="left">none</td>
+<td align="left">없음</td>
 <td align="left">영어(캐나다); 프랑스어(캐나다)</td>
 <td align="left">UI: 영어(US)(영어(캐나다)에서 대체)<br>날짜/시간/숫자: 영어(캐나다)</td>
 </tr>
 <tr>
 <td align="left">스페인어(스페인)(기본값); 스페인어(멕시코); 스페인어(라틴 아메리카); 포르투갈어(브라질)</td>
 <td align="left">영어(미국)</td>
-<td align="left">none</td>
+<td align="left">없음</td>
 <td align="left">스페인어(스페인)</td>
 <td align="left">UI: 스페인어(스페인)(영어에 대해 사용 가능한 대체 언어가 없으므로 기본값 사용)<br>날짜/시간/숫자 스페인어(스페인)</td>
 </tr>
 <tr>
 <td align="left">카탈로니아어(기본값); 스페인어(스페인); 프랑스어(프랑스)</td>
 <td align="left">카탈로니아어; 프랑스어(프랑스)</td>
-<td align="left">none</td>
+<td align="left">없음</td>
 <td align="left">카탈로니아어; 프랑스어(프랑스)</td>
 <td align="left">UI: 대부분 카탈로니아어 및 일부 프랑스어(프랑스)(일부 문자열이 카탈로니아어로 되어 있지 않음)<br>날짜/시간/숫자: 카탈로니아어</td>
 </tr>
@@ -193,27 +193,27 @@ Localization might not be required for all resources.
 </table>
 
 >[!NOTE]
-> For a list of standard country/region codes used by Microsoft, see the [Official Country/Region List](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion).
+> Microsoft에서 사용 하는 표준 국가/지역 코드 목록은 [공식 국가/지역 목록을](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion)참조 하세요.
 
 ## <a name="important-apis"></a>중요 API
-* [GlobalizationPreferences.Languages](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages)
-* [ApplicationLanguages.ManifestLanguages](/uwp/api/windows.globalization.applicationlanguages.ManifestLanguages)
+* [GlobalizationPreferences](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages)
+* [ApplicationLanguages](/uwp/api/windows.globalization.applicationlanguages.ManifestLanguages)
 * [PrimaryLanguageOverride](/uwp/api/Windows.Globalization.ApplicationLanguages.PrimaryLanguageOverride)
-* [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
-* [ResourceContext.Languages](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.Languages)
-* [ApplicationLanguages.Languages](/uwp/api/windows.globalization.applicationlanguages.Languages)
+* [ResourceContext](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)
+* [ResourceContext. 언어](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.Languages)
+* [ApplicationLanguages. 언어](/uwp/api/windows.globalization.applicationlanguages.Languages)
 * [Windows.Globalization](/uwp/api/windows.globalization?branch=live)
 * [언어](/uwp/api/windows.globalization.language?branch=live)
 * [GlobalizationPreferences.HomeGeographicRegion](/uwp/api/windows.system.userprofile.globalizationpreferences.HomeGeographicRegion)
 * [GeographicRegion](/uwp/api/windows.globalization.geographicregion?branch=live)
 
 ## <a name="related-topics"></a>관련 항목
-* [BCP-47 language tag](https://tools.ietf.org/html/bcp47)
-* [IANA language subtag registry](https://www.iana.org/assignments/language-subtag-registry)
+* [BCP-47 언어 태그](https://tools.ietf.org/html/bcp47)
+* [IANA 언어 하위 태그 레지스트리](https://www.iana.org/assignments/language-subtag-registry)
 * [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [지원되는 언어](../../publish/supported-languages.md)
-* [Globalize your date/time/number formats](use-global-ready-formats.md)
+* [날짜/시간/숫자 서식 전역화](use-global-ready-formats.md)
 * [리소스 관리 시스템에서 언어 태그를 일치시키는 방법](../../app-resources/how-rms-matches-lang-tags.md)
 
 ## <a name="samples"></a>샘플
-* [Application resources and localization sample](https://code.msdn.microsoft.com/windowsapps/Application-resources-and-cd0c6eaa)
+* [응용 프로그램 리소스 및 지역화 샘플](https://code.msdn.microsoft.com/windowsapps/Application-resources-and-cd0c6eaa)

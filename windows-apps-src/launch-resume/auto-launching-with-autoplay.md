@@ -1,6 +1,6 @@
 ---
 title: 자동 실행을 사용한 자동 시작
-description: 자동 실행을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라, 미디어 플레이어 등의 비볼륨 장치나 USB 썸 드라이브(thumb drive), SD 카드, DVD 등의 볼륨 장치가 포함됩니다.
+description: 자동 실행을 사용하면 사용자가 디바이스를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어 등의 볼륨 이외의 디바이스나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 디바이스가 포함됩니다.
 ms.assetid: AD4439EA-00B0-4543-887F-2C1D47408EA7
 ms.date: 02/08/2017
 ms.topic: article
@@ -15,11 +15,11 @@ ms.locfileid: "74259471"
 ---
 # <a name="span-iddev_launch_resumeauto-launching_with_autoplayspanauto-launching-with-autoplay"></a><span id="dev_launch_resume.auto-launching_with_autoplay"></span>자동 실행으로 자동 시작
 
-**자동 실행**을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라, 미디어 플레이어 등의 비볼륨 장치나 USB 썸 드라이브(thumb drive), SD 카드, DVD 등의 볼륨 장치가 포함됩니다. 또한 **자동 실행**을 사용하면 사용자가 근접 연결(탭하기)을 사용하여 두 PC 간에 파일을 공유할 때 앱을 옵션으로 제공할 수 있습니다.
+**자동 실행**을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라 또는 미디어 플레이어 등의 볼륨 이외의 디바이스나 USB 드라이브, SD 카드 또는 DVD 등의 볼륨 디바이스가 포함됩니다. 또한 **자동 실행**을 사용하면 사용자가 근접 연결(탭하기)을 사용하여 두 PC 간에 파일을 공유할 때 앱을 옵션으로 제공할 수 있습니다.
 
 > **참고**  장치 제조업체 이며 [Microsoft Store 장치 앱](https://msdn.microsoft.com/library/windows/hardware/Dn265154(v=vs.85).aspx) 을 장치에 대 한 **자동 실행** 핸들러로 연결 하려면 장치 메타 데이터에서 해당 앱을 식별할 수 있습니다. 자세한 내용은 [Microsoft Store 장치 앱의 자동 실행](https://msdn.microsoft.com/library/windows/hardware/dn265136(v=vs.85).aspx)을 참조하세요.
 
-## <a name="register-for-autoplay-content"></a>콘텐츠 자동 실행을 위해 등록
+## <a name="register-for-autoplay-content"></a>자동 실행 콘텐츠 등록
 
 **자동 실행** 콘텐츠 이벤트에 대한 옵션으로 앱을 등록할 수 있습니다. **자동 실행** 콘텐츠 이벤트는 카메라 메모리 카드, 썸 드라이브(thumb drive) 또는 DVD 같은 볼륨 장치가 PC에 삽입될 때 발생합니다. 여기서는 카메라에서 볼륨 장치가 삽입될 때 앱을 **자동 실행** 옵션으로 식별하는 방법을 보여 줍니다.
 

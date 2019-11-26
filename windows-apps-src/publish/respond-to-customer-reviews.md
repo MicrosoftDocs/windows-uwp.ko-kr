@@ -4,7 +4,7 @@ title: 고객 리뷰에 응답
 ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
 ms.date: 10/31/2018
 ms.topic: article
-keywords: windows 10, uwp, responding, responses, review
+keywords: windows 10, uwp, 응답, 응답, 검토
 ms.localizationpriority: medium
 ms.openlocfilehash: b640fc56e1d95bc5fb3085e09960048a16633669
 ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
@@ -16,23 +16,23 @@ ms.locfileid: "74259928"
 # <a name="respond-to-customer-reviews"></a>고객 리뷰에 응답
 
 
-You can respond to reviews of your app to let customers know you’re listening to their feedback. 리뷰 응답에서는 고객 의견을 기반으로 추가한 기능이나 수정한 버그에 대해 고객에게 알려 주거나, 앱 개선 방도에 대한 구체적인 의견을 얻을 수 있습니다. Your responses will be displayed in the Microsoft Store for all Windows 10 customers to see. You can also choose to send your response by email to the customer (if they haven’t opted out and are using a device running Windows 10, version 1803 or higher).
+앱의 리뷰에 응답 하 여 고객에 게 피드백을 수신 대기 하 고 있음을 알릴 수 있습니다. 리뷰 응답에서는 고객 의견을 기반으로 추가한 기능이나 수정한 버그에 대해 고객에게 알려 주거나, 앱 개선 방도에 대한 구체적인 의견을 얻을 수 있습니다. 응답은 모든 Windows 10 고객에 게 표시 되는 Microsoft Store에 표시 됩니다. 또한 고객에 게 전자 메일로 응답을 보내도록 선택할 수 있습니다 (옵트아웃 (opt out) 하 고 Windows 10 버전 1803 이상을 실행 하는 장치를 사용 하는 경우).
 
-To view your app's reviews and provide responses, find the app in [Partner Center](https://partner.microsoft.com/dashboard). 왼쪽 탐색 메뉴에서 **분석**을 확장하고 **리뷰**를 클릭하여 [리뷰 보고서](reviews-report.md)를 표시합니다. Select **Respond to review** to provide your response.
+앱의 리뷰를 보고 응답을 제공 하려면 [파트너 센터](https://partner.microsoft.com/dashboard)에서 앱을 찾습니다. 왼쪽 탐색 메뉴에서 **분석**을 확장하고 **리뷰**를 클릭하여 [리뷰 보고서](reviews-report.md)를 표시합니다. 응답을 제공 하려면 **검토에 응답** 을 선택 합니다.
 
 > [!TIP]
-> In addition to using Partner Center to respond to reviews, you can respond to reviews [programmatically](../monetize/submit-responses-to-app-reviews.md).
+> 파트너 센터를 사용 하 여 리뷰에 응답 하는 것 외에도 [프로그래밍 방식](../monetize/submit-responses-to-app-reviews.md)으로 검토에 응답할 수 있습니다.
 
-By default, your response will be posted in the Store, directly below the original customer review. These responses will be visible to any customer viewing the Store on a Windows 10 device. If the customer who left the review is using a device running Windows 10, version 1803 or higher, and they haven't opted out of receiving email responses, a copy of your response will also be sent to that customer by email.  You'll need to provide a valid email address in order to submit your response, which we will include in the email to the customer. They can then use this email address to contact you directly.
+기본적으로 응답은 원래 고객 검토 바로 아래에 저장소에 게시 됩니다. 이러한 응답은 Windows 10 장치에서 스토어를 보는 모든 고객이 볼 수 있습니다. 검토를 떠난 고객이 Windows 10, 버전 1803 이상을 실행 하는 장치를 사용 하 고 전자 메일 응답을 수신 하지 않은 경우에도 전자 메일을 통해 해당 고객에 게 응답의 복사본이 전송 됩니다.  응답을 제출 하기 위해 유효한 전자 메일 주소를 제공 해야 하며,이는 고객에 게 전자 메일에 포함 될 것입니다. 그러면이 메일 주소를 사용 하 여 사용자에 게 직접 연락할 수 있습니다.
 
-If you don't want your response to appear in the Store, and instead want to respond only via email to the customer, uncheck the **Make this response public** box. Note that you will not be able to uncheck this box if the customer has opted out of receiving email responses and/or if they are using a device that is not running Windows 10, version 1803 or higher.
+응답을 스토어에 표시 하지 않고 대신 고객에 게 전자 메일을 통해서만 응답 하려는 경우 **이 응답을 공개로 설정** 확인란의 선택을 취소 합니다. 고객이 전자 메일 응답을 수신 하지 못하거나 Windows 10, 버전 1803 이상을 실행 하지 않는 장치를 사용 하는 경우에는이 확인란의 선택을 취소할 수 없습니다.
 
 ## <a name="guidelines-for-responses"></a>응답 지침
 
-고객 리뷰에 응답할 때 다음 지침에 따라야 합니다. These apply to all responses, whether they are public or not.
+고객 리뷰에 응답할 때 다음 지침에 따라야 합니다. 이러한 설정은 공용 인지 여부에 관계 없이 모든 응답에 적용 됩니다.
 
 > [!IMPORTANT]
-> You won’t be able to change the responses you post to the Store (unless the customer revises their original review), so review your response carefully. If a customer revises the original review, your response will be removed from the app's  Store listing page. You then have the option to submit a new response to the revised review by selecting **Update your response**.
+> 고객이 원래 검토를 수정 하지 않은 경우 스토어에 게시 하는 응답을 변경할 수 없으므로 응답을 신중 하 게 검토 합니다. 고객이 원래 검토를 수정 하면 앱의 스토어 목록 페이지에서 응답이 제거 됩니다. 그런 다음 **응답 업데이트**를 선택 하 여 수정 된 검토에 대 한 새 응답을 제출 하는 옵션을 사용할 수 있습니다.
 
 -   응답은 1,000자 이내여야 합니다.
 -   앱 평가 변경을 위해 디지털 앱 항목을 포함하여 어떠한 유형의 보상도 사용자에게 제공할 수 없습니다. [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 따라 평점 조작은 허용되지 않습니다.
@@ -42,7 +42,7 @@ If you don't want your response to appear in the Store, and instead want to resp
 -   응답에 비속어나 공격적, 개인적 또는 악의적인 내용을 포함하지 마세요. 항상 공손하게 응답하고, 앱에 만족하는 고객이 앱을 가장 잘 홍보할 수 있다는 점을 염두에 두세요.
 
 > [!NOTE]
-> 고객은 개발자의 부적절한 리뷰 응답을 Microsoft에 보고할 수 있습니다. They can also opt out of receiving review responses by email.
+> 고객은 개발자의 부적절한 리뷰 응답을 Microsoft에 보고할 수 있습니다. 또한 전자 메일을 통해 검토 응답을 수신 하지 않도록 선택할 수 있습니다.
 >
 > Microsoft는 부적절한 응답 보고서가 너무 많이 발생하거나 리뷰 응답을 받지 않겠다고 선택한 고객이 너무 많은 경우를 포함하여 어떤 이유로든 개발자가 응답을 보낼 권한을 해지할 권리를 가지고 있습니다.
 

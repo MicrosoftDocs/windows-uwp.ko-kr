@@ -33,7 +33,7 @@ ms.locfileid: "74258396"
 
 Windows Ink를 사용하면 상상할 수 있는 거의 모든 펜과 종이 환경과 동일한 디지털 환경을 고객에게 제공할 수 있습니다. 이를 통해 빠른 필기 노트, 화이트보드 데모에 주석 추가, 건축 및 엔지니어링 도면에서 개인 작품에 이르기까지 모든 것을 적고 그릴 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 * Windows 10 최신 버전을 실행하는 Windows 컴퓨터(또는 가상 컴퓨터)
 * [Visual Studio 2019 및 RS2 SDK](https://developer.microsoft.com/windows/downloads)
@@ -119,7 +119,7 @@ RadialController 샘플 앱을 다운로드한 후 실행되는지 확인합니�
     <InkCanvas x:Name="inkCanvas" />
 ```
 
-간단하죠. 
+정말 간단하죠. 
 
 이제 앱을 다시 실행합니다. 낙서하거나, 이름을 쓰거나, 거울이 있거나 기억력이 좋다면 자신의 얼굴을 그려 보십시오.
 

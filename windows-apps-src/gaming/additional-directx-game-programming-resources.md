@@ -23,29 +23,29 @@ Windows의 게임 프로그래밍에 대한 자세한 내용은 다음 리소스
 ## <a name="game-programming-reference"></a>게임 프로그래밍 참조
 
 
--   [Graphics and Gaming](https://docs.microsoft.com/windows/desktop/graphics-and-multimedia)
--   [OpenGL reference](https://www.opengl.org/sdk/docs/man4/)
+-   [그래픽 및 게임](https://docs.microsoft.com/windows/desktop/graphics-and-multimedia)
+-   [OpenGL 참조](https://www.opengl.org/sdk/docs/man4/)
 
 ## <a name="game-design-guidance"></a>게임 디자인 지침
 
 
--   [Index of UX guidelines for UWP apps](https://developer.microsoft.com/windows/apps/design)
+-   [UWP 앱에 대 한 UX 지침의 인덱스](https://developer.microsoft.com/windows/apps/design)
 
 ## <a name="blogs"></a>블로그
 
 
--   [Games for Windows and the DirectX SDK]( https://go.microsoft.com/fwlink/p/?LinkID=288873)
--   [DirectX Developer Blog]( https://go.microsoft.com/fwlink/p/?LinkID=288874)
+-   [Windows 용 게임과 DirectX SDK]( https://go.microsoft.com/fwlink/p/?LinkID=288873)
+-   [DirectX 개발자 블로그]( https://go.microsoft.com/fwlink/p/?LinkID=288874)
 -   [Shawn Hargreaves 블로그]( https://go.microsoft.com/fwlink/p/?LinkID=288872)(XNA 게임 정보).
 
 ## <a name="toolkits"></a>도구 키트
 
 
--   [DirectX Tool Kit](  https://go.microsoft.com/fwlink/p/?LinkID=248929)
--   [DirectXTex texture processing library](  https://go.microsoft.com/fwlink/p/?LinkID=248926)
+-   [DirectX 도구 키트](  https://go.microsoft.com/fwlink/p/?LinkID=248929)
+-   [DirectXTex 텍스처 처리 라이브러리](  https://go.microsoft.com/fwlink/p/?LinkID=248926)
 -   Microsoft Visual Studio [그래픽 진단](https://docs.microsoft.com/visualstudio/debugger/overview-of-visual-studio-graphics-diagnostics?view=vs-2015)
 -   [Win2D](https://github.com/Microsoft/Win2D) - GPU 가속으로 렌더링하는 직접 실행 모드 2D 그래픽에 사용하기 쉬운 Windows 런타임 API입니다.
--   [ANGLE for Microsoft Store](https://github.com/microsoft/angle/wiki) - Runs OpenGL ES content on Windows by translating OpenGL ES API calls to DirectX 11 API calls.
+-   [Microsoft Store에 대 한 각도](https://github.com/microsoft/angle/wiki) -OPENGL es api 호출을 DIRECTX 11 api 호출로 변환 하 여 Windows에서 opengl es 콘텐츠를 실행 합니다.
 
 ## <a name="gdc-2015-game-dev-session-videos"></a>GDC 2015 게임 개발 세션 동영상
 

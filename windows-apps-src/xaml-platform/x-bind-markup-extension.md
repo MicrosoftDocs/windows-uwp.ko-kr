@@ -50,8 +50,8 @@ XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에�
 |------|-------------|
 | _propertyPath_ | 바인딩의 속성 경로를 지정하는 문자열. 자세한 내용은 [속성 경로](#property-path) 섹션을 참조하세요. |
 | _bindingProperties_ |
-| _propName_=_value_\[, _propName_=_value_\]* | 이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
-| _propName_ | 바인딩 개체에 설정할 속성의 문자열 이름. 예: "Converter" |
+| _속성 이름_=_값_\[, _속성 이름_=_값_\]* | 이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
+| _속성_ | 바인딩 개체에 설정할 속성의 문자열 이름. 예: "Converter" |
 | _value_ | 속성을 설정할 값. 인수 구문은 설정할 속성에 따라 다릅니다. 다음은 값 자체가 태그 확장인 _propName_=_value_ 사용법의 예입니다. `Converter={StaticResource myConverterClass}`. 자세한 내용은 아래의 [{x:Bind}로 설정할 수 있는 속성](#properties-that-you-can-set-with-xbind)을 참조하세요. |
 
 ## <a name="examples"></a>예
@@ -83,7 +83,7 @@ XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에�
 
 예를 들어 페이지에서 **Text="{x:Bind Employee.FirstName}"** 은 **Employee** 멤버를 찾은 다음 **Employee**에서 반환되는 개체에서 **FirstName** 멤버를 찾습니다. 직원의 부양가족을 포함하는 속성에 항목 컨트롤을 바인딩하는 경우 속성 경로는 "Employee.Dependents"일 수 있으며 항목 컨트롤의 항목 템플릿은 "Dependents" 항목의 표시를 담당합니다.
 
-C++/CX의 경우 **{x:Bind}** 는 페이지 또는 데이터 모델의 프라이빗 필드 및 속성에 바인딩할 수 없습니다. 바인딩하려면 공용 속성이 있어야 합니다. 관련 메타데이터를 가져올 수 있도록 바인딩 노출 영역을 CX 클래스/인터페이스로 노출해야 합니다. **\[바인딩 가능한\]** 특성은 필요 하지 않습니다.
+C++/CX의 경우 **{x:Bind}** 는 페이지 또는 데이터 모델의 전용 필드 및 속성에 바인딩할 수 없습니다. 바인딩하려면 공용 속성이 있어야 합니다. 관련 메타데이터를 가져올 수 있도록 바인딩 노출 영역을 CX 클래스/인터페이스로 노출해야 합니다. **\[바인딩 가능한\]** 특성은 필요 하지 않습니다.
 
 **x:Bind**를 사용하면 **ElementName=xxx**를 바인딩 식의 일부로 사용할 필요가 없습니다. 대신, 명명 된 요소가 루트 바인딩 소스를 나타내는 페이지 또는 사용자 정의 컨트롤 내의 필드가 되기 때문에 요소의 이름을 바인딩에 대 한 경로의 첫 번째 부분으로 사용할 수 있습니다. 
 
@@ -135,15 +135,15 @@ Windows 10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리
 
 | 속성 | 설명 |
 |----------|-------------|
-| **경로** | 위의 [속성 경로](#property-path) 섹션을 참조하세요. |
+| **Path** | 위의 [속성 경로](#property-path) 섹션을 참조하세요. |
 | **변환기** | 바인딩 엔진이 호출하는 변환기 개체를 지정합니다. 변환기는 XAML에서 설정할 수 있지만 리소스 사전의 해당 개체에 대한 [{StaticResource} 태그 확장](staticresource-markup-extension.md) 참조에서 할당한 개체 인스턴스를 참조하는 경우에만 설정할 수 있습니다. |
 | **ConverterLanguage** | 변환기가 사용할 문화권을 지정합니다. **ConverterLanguage**를 설정하는 경우 **Converter**도 설정해야 합니다. 문화권은 표준 기반 식별자로 설정됩니다. 자세한 내용은 [**ConverterLanguage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterlanguage)를 참조하세요. |
 | **ConverterParameter** | 변환기 논리에서 사용될 수 있는 변환기 매개 변수를 지정합니다. **ConverterParameter**를 설정하는 경우 **Converter**도 설정해야 합니다. 대부분의 변환기는 전달된 값에서 변환에 필요한 모든 정보를 가져오는 간단한 논리를 사용하므로 **ConverterParameter** 값이 필요하지 않습니다. **ConverterParameter** 매개 변수는 **ConverterParameter**에서 전달되는 내용을 수용하는 여러 논리가 있는 고급 변환기를 구현하기 위한 것입니다. 문자열이 아닌 값을 사용하는 변환기를 작성할 수도 있지만 일반적이지 않습니다. 자세한 내용은 [**ConverterParameter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterparameter)에서 설명을 참조하세요. |
 | **FallbackValue** | 원본 또는 경로를 확인할 수 없을 때 표시할 값을 지정합니다. |
 | **모드** | “OneTime”, “OneWay” 또는 “TwoWay” 문자열 중 하나로 바인딩 모드를 지정합니다. 기본값은 "OneTime"입니다. 이 값은 **{Binding}** 에 대한 기본값(대부분의 경우 "OneWay"임)과 다릅니다. |
 | **TargetNullValue** | 원본 값이 확인되지만 명시적으로 **null**이 아닌 경우 표시할 값을 지정합니다. |
-| **BindBack** | 양방향 바인딩의 반대 방향으로 사용할 함수를 지정합니다. |
-| **UpdateSourceTrigger** | TwoWay 바인딩에서 컨트롤에서 모델로 변경을 다시 적용하는 시기를 지정합니다. 텍스트 상자를 제외한 모든 속성의 기본값은 PropertyChanged입니다. TextBox. Text는 LostFocus입니다.|
+| **바인드백** | 양방향 바인딩의 반대 방향으로 사용할 함수를 지정합니다. |
+| **System.windows.data.binding.updatesourcetrigger** | TwoWay 바인딩에서 컨트롤에서 모델로 변경을 다시 적용하는 시기를 지정합니다. 텍스트 상자를 제외한 모든 속성의 기본값은 PropertyChanged입니다. TextBox. Text는 LostFocus입니다.|
 
 > [!NOTE]
 > **{Binding}** 에서 **{x:Bind}** 로 태그를 변환하는 경우 **모드** 속성에 대한 기본값의 차이에 주의하세요.

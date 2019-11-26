@@ -15,7 +15,7 @@ ms.locfileid: "74255147"
 # <a name="adding-my-people-support-to-an-application"></a>응용 프로그램에 내 피플 지원 추가
 
 > [!Note]
-> As of the Windows 10 May 2019 Update (version 1903), new Windows 10 installations will no longer show ‘People in the taskbar’ by default. Customers can enable the feature by right-clicking on the taskbar and pressing “Show People on the taskbar.” Developers are discouraged from adding My People support to their applications, and should visit the [Windows Developer Blog](https://blogs.windows.com/windowsdeveloper/) for more information about optimizing apps for Windows 10.
+> Windows 10에서 2019 업데이트 (버전 1903)를 기준으로 새 Windows 10 설치에는 기본적으로 ' 작업 표시줄의 사람 '이 더 이상 표시 되지 않습니다. 고객은 작업 표시줄을 마우스 오른쪽 단추로 클릭 하 고 "작업 표시줄에 사람 표시"를 눌러 기능을 사용 하도록 설정할 수 있습니다. 개발자는 내 사용자 지원을 응용 프로그램에 추가 하지 않는 것이 좋습니다. windows 10 용 응용 프로그램을 최적화 하는 방법에 대 한 자세한 내용은 [Windows 개발자 블로그](https://blogs.windows.com/windowsdeveloper/) 를 참조 하세요.
 
 사용자는 내 피플 기능을 사용하여 응용 프로그램에서 바로 작업 표시줄에 연락처를 고정할 수 있으며, 이렇게 하면 사용자가 여러 가지 방법으로 상호 작용할 수 있는 새 연락처 개체가 생성됩니다. 이 문서에서는 사용자가 앱에서 바로 연락처를 고정할 수 있도록 이 기능에 대한 지원을 추가하는 방법을 보여 줍니다. 연락처가 고정되면 [내 피플 공유](my-people-sharing.md) 및 [알림](my-people-notifications.md) 같은 새로운 유형의 사용자 상호 작용을 사용할 수 있게 됩니다.
 
@@ -30,8 +30,8 @@ ms.locfileid: "74255147"
 
 응용 프로그램에서 내 피플 기능을 사용할 수 있게 하려면 세 가지를 수행해야 합니다.
 
-1. [Declare support for the shareTarget activation contract in your application manifest.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
-2. [Annotate the contacts that the users can share to using your app.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
+1. [응용 프로그램 매니페스트에서 Windows.sharetarget 활성화 계약에 대 한 지원을 선언 합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
+2. [사용자가 앱을 사용 하 여 공유할 수 있는 연락처에 주석을 추가 합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
 3.  동시에 실행되는 여러 응용 프로그램 인스턴스를 지원합니다. 사용자가 연락처 패널에서 응용 프로그램을 사용하는 동안 응용 프로그램의 전체 버전과 상호 작용할 수 있어야 합니다.  사용자가 동시에 여러 연락처 패널에서 응용 프로그램을 사용할 수도 있습니다.  이 상황을 지원하려면 응용 프로그램이 여러 보기를 동시에 실행할 수 있어야 합니다. 자세한 방법은 ["앱에 대한 여러 보기 표시"](https://docs.microsoft.com/windows/uwp/design/layout/show-multiple-views)를 참조하세요.
 
 여기까지 마치면 주석 처리된 연락처의 연락처 패널에 응용 프로그램이 표시됩니다.
@@ -182,17 +182,17 @@ ContactPanel 개체에는 응용 프로그램에서 수신 대기해야 하는 �
 
 ## <a name="supporting-notification-badging"></a>지원 알림 배지
 
-앱에서 해당 인물에 관한 새 알림을 수신할 경우 작업 표시줄에 고정된 연락처가 배지로 표시되도록 하려면, [알림 메시지](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts)와 명시적인 [내 피플 알림](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications)에 **hint-people** 매개 변수를 포함시켜야 합니다.
+앱에서 해당 인물에 관한 새 알림을 수신할 경우 작업 표시줄에 고정된 연락처가 배지로 표시되도록 하려면, **알림 메시지**와 명시적인 [내 피플 알림](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts)에 [hint-people](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications) 매개 변수를 포함시켜야 합니다.
 
 ![피플 알림 배지](images/my-people-badging.png)
 
 연락처를 배지로 표시하려면 최상위 알림 메시지 노드에는 발신 또는 관련 연락처를 나타내는 hint-people 매개 변수가 포함되어야 합니다. 이 매개 변수에 가능한 값은 다음과 같습니다.
-+ **Email address** 
-    + 예: [https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/](mailto:johndoe@mydomain.com)
-+ **Telephone number** 
-    + 예: tel:888-888-8888
-+ **Remote ID** 
-    + 예: remoteid:1234
++ **전자 메일 주소** 
+    + 예를 들어 mailto:johndoe@mydomain.com
++ **전화 번호** 
+    + 예를 들어 tel:888-888-8888
++ **원격 ID** 
+    + 예를 들어 remoteid:1234
 
 다음은 특정 사람과 관련된 알림 메시지를 구별하는 방법의 예입니다.
 ```XML
@@ -253,9 +253,9 @@ async Task PinMultipleContacts(Contact[] contacts)
 
 ## <a name="see-also"></a>참고 항목
 + [내 피플 공유](my-people-sharing.md)
-+ [My People notificatons](my-people-notifications.md)
-+ [Channel 9 video on adding My People support to an application](https://channel9.msdn.com/Events/Build/2017/P4056)
-+ [My People integration sample](https://github.com/tonyPendolino/MyPeopleBuild2017)
-+ [Contact Card sample](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
-+ [PinnedContactManager class documentation](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
++ [내 사람들 알림](my-people-notifications.md)
++ [응용 프로그램에 사용자 지원을 추가 하는 Channel 9 비디오](https://channel9.msdn.com/Events/Build/2017/P4056)
++ [내 피플 통합 샘플](https://github.com/tonyPendolino/MyPeopleBuild2017)
++ [연락처 카드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
++ [Pinnee지도 관리자 클래스 설명서](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
 + [연락처 카드의 작업에 앱 연결](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)

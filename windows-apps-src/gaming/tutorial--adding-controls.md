@@ -39,7 +39,7 @@ Windows 10에서 UWP 앱에 대 한 \[ 업데이트 되었습니다. Windows 8.x
 
 터치 컨트롤 및 마우스/키보드 컨트롤의 핵심 구현은 매우 유사합니다. UWP 앱에서 포인터는 화면에 표시되는 점일 뿐입니다. 마우스를 밀거나 터치 스크린에서 손가락을 밀어 이동할 수 있습니다. 따라서 단일 이벤트 집합을 등록할 수 있으며 플레이어가 포인터를 이동하고 누르는 데 마우스를 사용하는지 터치 스크린을 사용하는지에 대해 걱정하지 않아도 됩니다.
 
-게임 샘플에서 **MoveLookController** 클래스를 초기화하면 4개의 포인터 관련 이벤트와 1개의 마우스 관련 이벤트를 등록합니다.
+게임 샘플의 **MoveLookController** 클래스를 초기화하면 4개의 포인터 관련 이벤트와 1개의 마우스 관련 이벤트가 등록됩니다.
 
 이벤트 | 설명
 :------ | :-------
@@ -86,7 +86,7 @@ State | 설명
 :----- | :-------
 **없음** | 컨트롤러의 초기화된 상태입니다. 게임에서 어떤 컨트롤러 입력도 예상되지 않기 때문에 모든 입력이 무시됩니다.
 **WaitForInput** | 컨트롤러는 왼쪽 마우스 클릭, 터치 이벤트 또는 게임 패드의 메뉴 단추를 사용하여 플레이어가 게임에서 메시지를 승인하는 동안 기다립니다.
-**활성** | 컨트롤러는 활성 게임 플레이 모드에 있습니다.
+**Directory** | 컨트롤러는 활성 게임 플레이 모드에 있습니다.
 
 
 
@@ -121,7 +121,7 @@ Game 샘플의 [**Update**](https://github.com/Microsoft/Windows-universal-sampl
 
 
 
-게임 루프에서 **IsFiring** 메서드를 **MoveLookController** 인스턴스에서 호출하면 플레이어가 실행 중인지 테스트하여 확인할 수 있습니다. **MoveLookController**는 플레이어가 세 개의 입력 유형 중 하나에서 실행 단추를 눌렀는지 확인합니다.
+게임 루프는 **MoveLookController** 인스턴스에서 **IsFiring** 메서드를 호출하여 플레이어가 실행 중인지 여부를 알아보기 위한 테스트를 할 수 있습니다. **MoveLookController**는 플레이어가 세 개의 입력 유형 중 하나에서 실행 단추를 눌렀는지 확인합니다.
 
 ```cpp
 bool MoveLookController::IsFiring()
@@ -401,7 +401,7 @@ window->PointerReleased +=
 
 여기에서 **MoveLookController**는 이벤트를 실행한 포인터의 포인터 ID를 보기 영역에 해당되는 특정 변수에 할당합니다. 모양 영역에서 터치가 발생 하는 경우 **m\_lookPointerID** 변수는 이벤트를 발생 시킨 포인터 ID로 설정 됩니다. 부울 변수인 **m\_lookInUse**는 컨트롤이 아직 해제 되지 않았음을 나타내기 위해 설정 됩니다.
 
-이제 게임 샘플에서 [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) 터치 스크린 이벤트를 처리하는 방법을 살펴보겠습니다.
+이제 게임 샘플이 [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointermoved) 터치 스크린 이벤트를 처리하는 방법에 대해 살펴보겠습니다.
 
 
 **MoveLookController::OnPointerMoved** 메서드 내에서 어떤 종류의 포인터 ID가 이벤트에 할당되었는지 확인합니다. **m_lookPointerID**의 경우에는 포인터의 위치에서 변경을 계산합니다.
