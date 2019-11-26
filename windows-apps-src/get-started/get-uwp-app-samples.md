@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 샘플 코드, 코드 샘플
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b0e30804eabb7e50c5a7319bba9a6b2c83e1d7e
-ms.sourcegitcommit: 99595e4938213aafdb49635d684d8ba8eb3f697a
+ms.openlocfilehash: ac3c99bc364e81386a362f1d1b5530bee9d462c4
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69487842"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259520"
 ---
 # <a name="get-uwp-app-samples"></a>UWP 앱 샘플 다운로드
 
@@ -25,12 +25,12 @@ UWP(유니버설 Windows 플랫폼) 앱 샘플은 GitHub 리포지토리에서 �
 
 ![샘플 다운로드](images/SamplesDownloadButton.png)
 
-또한 이 문서에서 [샘플](https://github.com/Microsoft/Windows-universal-samples/archive/master.zip "유니버설 Windows 플랫폼 앱 샘플 zip 파일 다운로드")을 다운로드할 수 있습니다.
+이 문서에서 [샘플을 다운로드](https://github.com/Microsoft/Windows-universal-samples/archive/master.zip "유니버설 Windows 플랫폼 앱 샘플 zip 파일 다운로드")할 수도 있습니다.
 
 샘플 다운로드 .zip 파일에는 항상 최신 샘플이 있습니다. 파일을 다운로드하기 위해 GitHub 계정이 필요하지 않습니다. SDK 업데이트가 릴리스되거나 최신 변경 내용과 추가 사항을 선택하려면 최신 zip 파일을 다운로드하기만 하면 됩니다.
 
 > [!NOTE]
-> UWP 샘플을 열고, 빌드하고, 실행하려면 Visual Studio 2015 이상 및 Windows SDK가 있어야 합니다. [Visual Studio Community]의 평가판 복사본(https://go.microsoft.com/fwlink/p/?LinkID=280676 "Windows 개발 도구 다운로드")을 얻을 수 있습니다. Visual Studio Community는 UWP 앱 빌드를 지원합니다.  
+> UWP 샘플을 열고, 빌드하고, 실행하려면 Visual Studio 2015 이상 및 Windows SDK가 있어야 합니다. [Visual Studio Community의 체험판 복사본](https://www.microsoft.com/?ref=go)을 가져올 수 있습니다. Visual Studio Community는 UWP 앱 빌드를 지원합니다.  
 >
 > 샘플이 제대로 작동하려면 개별 샘플이 아니라 전체 보관 파일의 압축을 풀어야 합니다. 샘플은 모두 보관 파일의 SharedContent 폴더에 따라 달라집니다. UWP 기능 샘플에서는 Visual Studio에서 연결된 파일을 사용하여 샘플 템플릿 파일과 이미지 자산과 같은 공통 파일이 중복되지 않게 합니다. 공용 파일은 리포지토리의 루트에 있는 SharedContent 폴더에 저장됩니다. 링크는 프로젝트 파일에서 공용 파일을 참조하는 데 사용됩니다.
 > 

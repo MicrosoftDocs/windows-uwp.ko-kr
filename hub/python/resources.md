@@ -1,5 +1,5 @@
 ---
-title: Windows에서 Python을 사용 하 여 개발 하기 위한 리소스
+title: Windows에서 Python으로 개발하기 위한 리소스
 description: Windows에서 Python으로 개발하기 위한 리소스 목록입니다.
 author: mattwojo
 ms.author: mattwoj
@@ -10,69 +10,69 @@ ms.localizationpriority: medium
 ms.date: 07/19/2019
 ms.openlocfilehash: 64d4fc1c85ae4056da02f987ca654305a883d2c6
 ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72313412"
 ---
-# <a name="resources-for-developing-with-python-on-windows"></a>Windows에서 Python을 사용 하 여 개발 하기 위한 리소스
+# <a name="resources-for-developing-with-python-on-windows"></a>Windows에서 Python으로 개발하기 위한 리소스
 
-Windows 10을 실행 하는 컴퓨터에서 작업 하는 Python 개발자에 게 권장 되는 링크 목록입니다.
+Windows 10을 실행하는 머신으로 작업하는 Python 개발자에게 권장하는 링크 목록입니다.
 
-## <a name="general"></a>일반
+## <a name="general"></a>일반 사항
 
-- [Microsoft Dev 블로그: Python @ no__t-0: Microsoft에서 Python 모든 항목에 대 한 최신 업데이트를 읽으십시오.
+- [Microsoft 개발자 블로그: Python](https://devblogs.microsoft.com/python/): Microsoft에서 Python에 대한 최신 업데이트를 알아보세요.
 
-- [WSL 및 Visual Studio Code를 사용 하 여 Windows에서 Linux를 개발 하는 방법에 대 한 자세한 자습서](https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/) 개발자 않고도를 설정 하 고 Python 앱을 만들고 몇 가지 디버깅을 수행 하는 방법에 대 한 연습입니다.
+- [Windows에서 WSL 및 Visual Studio Code를 사용하여 Linux를 개발하는 방법에 대한 자세한 자습서](https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/) 개발 환경을 설정하고, Python 앱을 만들고, 디버깅을 수행하는 방법에 대한 연습입니다.
 
-- [Windows에서 Python 사용](https://docs.python.org/3/using/windows.html): 이 Python.org 설명서에서는 Microsoft Windows에서 Python을 사용할 때 알아야 할 Windows 관련 동작에 대 한 개요를 제공 합니다.
+- [Windows에서 Python 사용](https://docs.python.org/3/using/windows.html): 이 Python.org 설명서에서는 Microsoft Windows에서 Python을 사용할 때 알아야 하는 Windows 관련 동작에 대한 개요를 제공합니다.
 
-- [Python 클라우드 개발자를 위한 Azure](https://docs.microsoft.com/azure/python/): 서버를 사용 하지 않는 함수로 Python 코드를 실행 하기 위해 Azure에서 Python 웹 앱을 빌드 및 배포 하는 것부터 모두 다루는 문서입니다.
+- [Python 클라우드 개발자용 Azure](https://docs.microsoft.com/azure/python/): Python 웹앱을 빌드하고 배포하는 방법부터 Python 코드를 서버리스 함수로 실행하는 방법까지 모든 것을 다루는 문서입니다.
 
-- ["Python" 및 "windows"를 포함 하는 Stackoverflow 게시물](https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows/12476379): StackOverflow 커뮤니티는 질문을 해결 하는 데 매우 유용 합니다. 이 커뮤니티를 적극적으로 모니터링 하 고 지 원하는 것을 목표로 합니다.
+- ["python" 및 "windows"를 포함하는 StackOverflow 게시물](https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows/12476379): StackOverflow 커뮤니티는 궁금한 점을 해결하는 데 있어서 매우 유용합니다. Microsoft는 이 커뮤니티를 적극적으로 모니터링하고 지원하는 것을 목표로 합니다.
 
-- [예정 된 Python 이벤트](https://www.python.org/events/python-events): 다른 Pythonistas 및 Pythoneers를 사용 하 여 연결 합니다.
+- [예정된 Python 이벤트](https://www.python.org/events/python-events): 다른 Python 개발자 및 Python 사용자와 교류할 수 있는 기회입니다.
 
-- [Python.org의 책, websites, 자습서 ](https://wiki.python.org/moin/BeginnersGuide/Programmers): 사용자 커뮤니티에서 제공 하는 Python 학습을 위한 다른 리소스 목록입니다.
+- [python.org에 대한 서적, 웹 사이트, 자습서](https://wiki.python.org/moin/BeginnersGuide/Programmers): 사용자 커뮤니티에서 제공하는 Python 학습을 위한 또 다른 리소스 목록입니다.
 
-- [Python.org의 faq](https://docs.python.org/3/faq/): ' Python 이란? '의 모든 사항을 다룹니다. to ['는 C의 "?:" 삼항 연산자? '와 동일](https://docs.python.org/3/faq/programming.html#is-there-an-equivalent-of-c-s-ternary-operator)합니다.
+- [Python.org의 FAQ](https://docs.python.org/3/faq/): 'Python이란?'부터 ['C의 “?:” 삼항 연산자와 동일한 기능이 있나요?'](https://docs.python.org/3/faq/programming.html#is-there-an-equivalent-of-c-s-ternary-operator)라는 질문까지 모든 내용을 다룹니다.
 
-- [Python doc 언어](https://wiki.python.org/moin/Languages): 영어 이외의 언어로 Python 문서에 연결 합니다.
+- [Python 문서 언어](https://wiki.python.org/moin/Languages): 영어 이외의 언어로 작성된 Python 문서의 링크입니다.
 
-- [PYTHON API 브라우저](https://docs.microsoft.com/python/api/?view=azure-python): Microsoft의 모든 Python 기반 Api에 대 한 원스톱 상점입니다.
+- [Python API 브라우저](https://docs.microsoft.com/python/api/?view=azure-python): Microsoft의 모든 Python 기반 API를 얻을 수 있는 원스톱 매장입니다.
 
-- [Python을 사용 하는 Azure 코드 샘플](https://azure.microsoft.com/en-us/resources/samples/?platform=python&sort=0): Python 코드를 사용 하 여 Azure 서비스와 상호 작용 하는 방법을 알아봅니다.
+- [Python을 사용하는 Azure 코드 샘플](https://azure.microsoft.com/en-us/resources/samples/?platform=python&sort=0): Python 코드를 사용하여 Azure 서비스와 상호 작용하는 방법을 배웁니다.
 
-- [Python 및 Visual Studio Code](https://code.visualstudio.com/docs/languages/python): VS Code에서 Python을 사용 하는 방법에 대 한 개요입니다.
+- [Python 및 Visual Studio Code](https://code.visualstudio.com/docs/languages/python): VS Code에서 Python을 사용하는 방법에 대한 개요입니다.
 
 ## <a name="online-courses"></a>온라인 과정
 
-- [Microsoft Learn의 Python 소개](https://docs.microsoft.com/en-us/learn/modules/intro-to-python/): 대화형 Microsoft Learn 플랫폼을 사용해 보고, 기본 Python 코드를 작성 하 고, 변수를 선언 하 고, 콘솔 입력 및 출력을 사용 하는 방법에 대 한 기본 사항을 설명 하는이 모듈을 완료 하기 위한 경험 사항을 알아봅니다. 대화형 샌드박스 환경을 사용 하면 Python 개발 환경이 아직 설정 되지 않은 사람들에 게이를 시작할 수 있습니다.
+- [Microsoft Learn의 Python 소개](https://docs.microsoft.com/en-us/learn/modules/intro-to-python/): 대화형 Microsoft Learn 플랫폼을 사용해 보고 기본 Python 코드를 작성하고, 변수를 선언하고, 콘솔 입력 및 출력을 작업하는 방법에 대한 기본 사항을 다루는 이 모듈을 완료하기 위한 경험을 쌓을 수 있습니다. 대화형 샌드박스 환경은 아직 Python 개발 환경을 설정하지 않은 사람들이 개발을 시작하기에 좋은 장소입니다.
 
-- Pluralsight의 [Python: 8 과정, 29 시간 @ no__t-0: Pluralsight의 Python 학습 경로는 기술을 측정 하 고 차이를 찾는 도구를 비롯 하 여 Python과 관련 된 다양 한 주제를 다루는 온라인 과정을 제공 합니다.
+- [Pluralsight의 Python: 8개 과정, 29시간](https://app.pluralsight.com/paths/skills/python): Pluralsight의 Python 학습 경로는 학습자의 기술을 측정하고 격차를 알아볼 수 있는 도구를 포함하여 Python과 관련된 다양한 토픽을 다루는 온라인 과정을 제공합니다.
 
-- [LearnPython.org 자습서](https://www.learnpython.org/): DataCamp의 사람들에 게 제공 되는 무료 대화형 Python 자습서를 사용 하 여 모든 것을 설치 하거나 설정할 필요 없이 Python 학습을 시작 하세요.
+- [LearnPython.org 자습서](https://www.learnpython.org/): DataCamp 사용자들이 제공하는 이 무료 대화형 Python 자습서를 사용하면 아무 것도 설치하거나 설정할 필요 없이 Python 학습을 시작할 수 있습니다.
 
-- [Python.org 자습서](https://docs.python.org/3/tutorial/index.html): 에서는 Python 언어 및 시스템의 기본 개념 및 기능을 비공식적으로 소개 합니다.
+- [Python.org 자습서](https://docs.python.org/3/tutorial/index.html): Python 언어 및 시스템의 기본 개념과 기능을 자유로운 형식으로 소개합니다.
 
-- [Lynda.com에서 Python 학습](https://www.lynda.com/Python-tutorials/Learning-Python/661773-2.html): Python에 대 한 기본적인 소개
+- [Lynda.com의 Python 학습](https://www.lynda.com/Python-tutorials/Learning-Python/661773-2.html): Python에 대한 기본적인 내용을 소개합니다.
 
 ## <a name="web-development"></a>웹 개발
 
-- [Flask 웹 프레임 워크 문서](https://flask.palletsprojects.com/en/1.1.x/): 전체 API 참조를 사용 하 여 Flask의 각 구성 요소에 대 한 빠른 시작, 자습서 및 설명입니다.
+- [Flask 웹 프레임워크 문서](https://flask.palletsprojects.com/en/1.1.x/): 전체 API 참조를 사용하는 각 Flask 구성 요소에 대한 빠른 시작, 자습서 및 설명입니다.
 
-- [Django 웹 프레임 워크 문서](https://docs.djangoproject.com/en/2.2/): 자습서, 토픽 가이드, API 참조 및 방법 가이드를 참조 하세요.
+- [Django 웹 프레임워크 문서](https://docs.djangoproject.com/en/2.2/): 자습서, 토픽 가이드, API 참조 및 방법 가이드입니다.
 
-- [기타 Python 웹 프레임 워크](https://wiki.python.org/moin/WebFrameworks): Python.org에서 간략하게 설명 하는 Python 웹 프레임 워크의 목록입니다.
+- [기타 Python 웹 프레임워크](https://wiki.python.org/moin/WebFrameworks): Python.org의 간단한 설명이 포함된 Python 웹 프레임워크 목록입니다.
 
-- [자습서: Azure Cognitive Services @ no__t를 사용 하 여 Flask 앱 빌드-0: Azure Cognitive Services를 사용 하 여 텍스트를 번역 하 고, 감정 분석 하 고, 번역 된 텍스트를 음성으로 합성 하는 Flask 웹 앱을 빌드합니다.
+- [자습서: Azure Cognitive Services를 사용하여 Flask 앱 만들기](https://docs.microsoft.com/azure/cognitive-services/translator/tutorial-build-flask-app-translation-synthesis): Azure Cognitive Services를 사용하여 텍스트를 번역하고, 감정을 분석하고, 번역된 텍스트를 음성으로 합성하는 Flask 웹앱을 빌드합니다.
 
-- [Azure Stack에서 VM에 Python 웹 앱을 배포](https://docs.microsoft.com/azure-stack/user/azure-stack-dev-start-howto-vm-python)합니다. Azure Stack에서 Python 웹 앱을 호스트 하는 VM을 만듭니다.
+- [Azure Stack에서 VM에 Python 웹앱 배포](https://docs.microsoft.com/azure-stack/user/azure-stack-dev-start-howto-vm-python): Azure Stack에서 Python 웹앱을 호스팅할 VM을 만듭니다.
 
-- [Azure Cosmos DB의 MONGODB API를 사용 하 여 Python 앱 빌드](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-flask): Azure Cosmos DB 에뮬레이터 및 Azure Cosmos DB의 MongoDB API를 사용 하 여 간단한 할 일 Flask 앱을 빌드 하세요.
+- [Azure Cosmos DB의 API for MongoDB를 사용하여 Python 앱 빌드](https://docs.microsoft.com/azure/cosmos-db/create-mongodb-flask): Azure Cosmos DB 에뮬레이터 및 Azure Cosmos DB의 API for MongoDB를 사용하여 간단한 To-Do Flask 앱을 빌드합니다.
 
-- [Azure App Service에서 Python 및 PostgreSQL 앱을 빌드](https://docs.microsoft.com/azure/app-service/containers/tutorial-python-postgresql-app)하세요. Linux의 App Service에서 실행 되는 데이터베이스 백 엔드에서 PostgreSQL를 사용 하 여 데이터 기반 Django 응용 프로그램을 만듭니다.
+- [Azure App Service에서 Python 및 PostgreSQL 앱 빌드](https://docs.microsoft.com/azure/app-service/containers/tutorial-python-postgresql-app): PostgreSQL을 데이터베이스 백 엔드로 사용하여 Linux의 App Service에서 실행되는 데이터 기반 Django 애플리케이션을 만듭니다.
 
-- [Microsoft Graph를 사용 하 여 Python Django Apps 빌드](https://docs.microsoft.com/graph/tutorials/python): Microsoft Graph API를 사용 하 여 사용자에 대 한 일정 정보를 검색 하는 Python Django 웹 앱을 빌드합니다.
+- [Microsoft Graph를 사용하여 Python Django 앱 빌드](https://docs.microsoft.com/graph/tutorials/python): Microsoft Graph API를 사용하여 사용자의 일정 정보를 검색하는 Python Django 웹앱을 빌드합니다.
 
-- [연습: Python의 Bing Ads API 웹 응용 프로그램 @ no__t-0: Bing Ads Python SDK, Visual Studio Code IDE 및 Django 웹 프레임 워크를 사용 하 여 Microsoft Advertising 웹 응용 프로그램을 실행 하기 시작 합니다.
+- [연습: Python의 Bing Ads API 웹 애플리케이션](https://docs.microsoft.com/advertising/guides/walkthrough-web-application-python?view=bingads-13): Bing Ads Python SDK, Visual Studio Code IDE 및 Django 웹 프레임워크를 사용하여 Microsoft Advertising 웹 애플리케이션을 실행합니다.

@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5f040060b1c3931e9ef1634fddd65febb1be7dbc
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: efe67707edc5f556301ded466f3f2919ec04873e
+ms.sourcegitcommit: 49a34e957433966ac8d4822b5822f21087aa61c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867724"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74153730"
 ---
 # <a name="color"></a>색
 
@@ -58,7 +58,7 @@ UWP 앱은 밝거나 어두운 애플리케이션 테마를 사용할 수 있습
 
 ![어두운 테마](images/color/dark-theme.svg)
 
-기본적으로 UWP 앱의 테마는 Windows 설정의 사용자 테마 기본 설정이거나 디바이스의 기본 테마(XBox의 어두운 색)입니다. 하지만 UWP 앱의 테마를 설정할 수 있습니다.
+기본적으로 UWP 앱의 테마는 Windows 설정의 사용자 테마 기본 설정이거나 디바이스의 기본 테마(예: XBox의 어두운 색)입니다. 하지만 UWP 앱의 테마를 설정할 수 있습니다.
 
 ### <a name="changing-the-theme"></a>테마 변경
 

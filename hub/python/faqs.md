@@ -1,80 +1,80 @@
 ---
-title: Windows에서 Python 사용에 대 한 질문과 대답
-description: Windows에서 Python 사용에 대 한 질문과 대답
+title: Windows에서 Python 사용에 대한 질문과 대답입니다.
+description: Windows에서 Python 사용에 대한 질문과 대답입니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
-keywords: python, windows 10, microsoft, pip, py, 파일 경로, PYTHONPATH, python 배포, python 패키징
+keywords: python, windows 10, microsoft, pip, py.exe, 파일 경로, PYTHONPATH, python 배포, python 패키징
 ms.localizationpriority: medium
 ms.date: 07/19/2019
 ms.openlocfilehash: 4132ef0089ee707367666b4d6340333e538b1130
 ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72313380"
 ---
-# <a name="frequently-asked-questions-about-using-python-on-windows"></a>Windows에서 Python 사용에 대 한 질문과 대답
+# <a name="frequently-asked-questions-about-using-python-on-windows"></a>Windows에서 Python 사용에 대한 질문과 대답입니다.
 
-## <a name="why-cant-i-pip-install-a-certain-package"></a>특정 패키지를 "pip 설치" 할 수 없는 이유는 무엇입니까?
+## <a name="why-cant-i-pip-install-a-certain-package"></a>특정 패키지를 "pip 설치"할 수 없는 이유는 무엇입니까?
 
-설치에 실패 하는 여러 가지 이유가 있습니다. 대부분의 경우 적절 한 솔루션은 패키지 개발자에 게 문의 하는 것입니다.
+설치가 실패하는 여러 이유가 있으며, 대부분은 패키지 개발자에게 문의하는 것이 가장 좋은 방법입니다.
 
-문제의 가장 일반적인 원인은 수정할 권한이 없는 위치에 설치 하는 것입니다. 예를 들어 기본 설치 위치에는 관리 권한이 필요할 수 있지만 기본적으로 Python에는 포함 되지 않습니다. 가장 좋은 해결 방법은 가상 환경을 만들고이를 설치 하는 것입니다.
+문제가 발생하는 가장 일반적인 원인은 수정할 권한이 없는 위치에 설치하려고 시도하는 것입니다. 예를 들어 기본 설치 위치는 관리 권한이 필요할 수 있지만, 기본적으로 Python은 관리 권한을 갖고 있지 않습니다. 가장 좋은 해결 방법은 가상 환경을 만들고 거기에 설치하는 것입니다.
 
-일부 패키지에는 C 또는 C++ 컴파일러가 설치 되어야 하는 네이티브 코드가 포함 됩니다. 일반적으로 패키지 개발자는 미리 컴파일된 버전을 게시 해야 하지만 그렇지 않은 경우도 있습니다. [Visual Studio 용 빌드 도구를 설치](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019) 하 고 C++ 옵션을 선택 하는 경우 이러한 패키지 중 일부를 사용할 수 있지만 대부분의 경우 패키지 개발자에 게 문의 해야 합니다.
+일부 패키지에는 C 또는 C++ 컴파일러를 설치해야 하는 네이티브 코드가 포함되어 있습니다. 일반적으로 패키지 개발자는 미리 컴파일된 버전을 게시해야 하지만, 게시하지 않는 경우도 자주 있습니다. [Build Tools for Visual Studio를 설치](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)하고 C++ 옵션을 선택하면 이러한 패키지 중 일부가 작동하기도 하지만, 대부분은 패키지 개발자에게 문의해야 합니다.
 
-[StackOverflow에 대 한 설명을 따르세요](https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows/12476379).
+[StackOverflow의 설명을 따르세요](https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows/12476379).
 
-## <a name="what-is-pyexe"></a>Py 란?
+## <a name="what-is-pyexe"></a>py.exe란?
 
-여러 유형의 Python 프로젝트에서 작업 하 고 있으므로 컴퓨터에 여러 버전의 Python이 설치 될 수 있습니다. 모두 `python` 명령을 사용 하기 때문에 사용 중인 Python 버전을 명확 하 게 알 수 없습니다. 표준으로 `python3` 명령을 사용 하거나 `python3.7`을 사용 하 여 특정 버전을 선택 하는 것이 좋습니다.
+여러 유형의 Python 프로젝트를 작업하게 되므로, 머신에 여러 버전의 Python이 설치될 수 있습니다. 모든 버전이 `python` 명령을 사용하기 때문에, 현재 어떤 Python 버전을 사용 중인지 명확하게 알 수 없는 경우가 있습니다. 일반적으로 `python3` 명령(또는 특정 버전을 선택하려면 `python3.7`)을 사용하는 것이 좋습니다.
 
-[Py 시작 관리자](https://docs.python.org/3/using/windows.html#launcher) 는 설치한 Python의 최신 버전을 자동으로 선택 합니다. @No__t-0과 같은 명령을 사용 하 여 특정 버전을 선택 하거나 `py --list`을 사용 하 여 사용할 수 있는 버전을 확인할 수도 있습니다. **그러나** [python.org](https://www.python.org/downloads/windows/)에서 설치 된 Python 버전을 사용 하는 경우에만 py 시작 관리자가 작동 합니다. Microsoft Store에서 Python을 설치 하는 경우 `py` 명령이 **포함 되지 않습니다**. Linux, macOS, WSL 및 Microsoft Store 버전의 Python의 경우 `python3` (또는 `python3.7`) 명령을 사용 해야 합니다.
+[py.exe 시작 관리자](https://docs.python.org/3/using/windows.html#launcher)는 설치된 가장 최신 버전의 Python을 자동으로 선택합니다. `py -3.7` 명령을 사용하여 특정 버전을 선택하거나, `py --list` 명령을 사용하여 어떤 버전을 사용할 수 있는지 확인할 수도 있습니다. **그러나** [python.org](https://www.python.org/downloads/windows/)에서 설치된 Python 버전을 사용하는 경우에만 py.exe 시작 관리자가 작동합니다. Microsoft Store에서 Python을 설치하는 경우 `py` 명령이 **포함되지 않습니다**. Linux, macOS, WSL 및 Microsoft Store 버전의 Python에서는 `python3`(또는 `python3.7`) 명령을 사용해야 합니다.
 
-## <a name="why-does-running-pythonexe-open-the-microsoft-store"></a>Python .exe를 실행 하 여 Microsoft Store을 여는 이유는 무엇 인가요?
+## <a name="why-does-running-pythonexe-open-the-microsoft-store"></a>python.exe를 실행하면 Microsoft Store가 열리는 이유는 무엇인가요?
 
-새 사용자가 Python을 올바르게 설치 하는 것을 지원 하기 위해 Microsoft Store에 게시 된 커뮤니티 패키지의 최신 버전으로 바로 이동 하는 바로 가기를 Windows에 추가 했습니다. 이 패키지는 관리자 권한 없이 쉽게 설치할 수 있으며 기본 `python` 및 `python3` 명령을 실제 명령으로 바꿉니다.
+신규 사용자가 Python을 올바르게 설치하도록 도와주기 위해, Microsoft Store에 게시된 최신 버전의 커뮤니티 패키지로 바로 이동하는 바로 가기가 Windows에 추가되었습니다. 이 패키지는 관리자 권한 없이 쉽게 설치할 수 있으며, 기본 `python` 및 `python3` 명령을 실제 명령으로 바꿉니다.
 
-명령줄 인수를 사용 하 여 바로 가기 실행 파일을 실행 하면 Python이 설치 되지 않았음을 나타내는 오류 코드가 반환 됩니다. 이는 배치 파일 및 스크립트가 의도 하지 않을 때 스토어 앱을 열지 못하도록 하기 위한 것입니다.
+명령줄 인수를 사용하여 바로 가기 실행 파일을 실행하면 Python이 설치되지 않았다는 오류 코드가 반환됩니다. 이는 일괄 처리 파일 및 스크립트가 의도치 않게 Store 앱을 열지 못하게 방지하는 동작입니다.
 
-[Python.org](https://www.python.org/downloads/windows/) 의 설치 관리자를 사용 하 여 Python을 설치 하 고 "경로에 추가" 옵션을 선택 하면 새 `python` 명령이 바로 가기 보다 우선적으로 적용 됩니다. 다른 설치 관리자는 기본 제공 바로 가기 보다 _낮은_ 우선 순위로 `python`을 추가할 수 있습니다.
+[python.org](https://www.python.org/downloads/windows/)의 설치 관리자를 사용하여 Python을 설치하고 "PATH에 추가" 옵션을 선택하면 새 `python` 명령이 바로 가기보다 우선적으로 적용됩니다. 다른 설치 관리자는 기본 제공 바로 가기보다 _낮은_ 우선 순위로 `python`을 추가할 수 있습니다.
 
-시작에서 "앱 실행 별칭 관리"를 열고 "App Installer" Python 항목을 찾은 다음 "끄기"로 전환 하 여 Python을 설치 하지 않고 바로 가기를 사용 하지 않도록 설정할 수 있습니다.
+[시작]에서 "앱 실행 별칭 관리"를 열고, "앱 설치 관리자" Python 항목을 찾아 "끄기"로 전환하면 Python을 설치하지 않고 바로 가기를 비활성화할 수 있습니다.
 
-## <a name="why-dont-file-paths-work-in-python-when-i-copy-paste-them"></a>파일 경로를 복사 하 여 붙여넣을 때 Python에서 파일 경로가 작동 하지 않는 이유는 무엇 인가요?
+## <a name="why-dont-file-paths-work-in-python-when-i-copy-paste-them"></a>파일 경로를 복사하여 붙여넣을 때 Python에서 파일 경로가 작동하지 않는 이유는 무엇인가요?
 
-Python 문자열은 특수 문자에 대해 "이스케이프"를 사용 합니다. 예를 들어, 문자열에 줄 바꿈 문자를 삽입 하려면 `\n`을 입력 합니다. Windows의 파일 경로는 백슬래시를 사용 하기 때문에 일부 부분은 특수 문자로 변환 될 수 있습니다.
+Python 문자열은 특수 문자에 "이스케이프"를 사용합니다. 예를 들어 문자열에 줄 바꿈 문자를 삽입하려면 `\n`을 입력합니다. Windows의 파일 경로는 백슬래시를 사용하기 때문에 경로의 일부가 특수 문자로 변환될 수 있습니다.
 
-Python에서 경로를 문자열로 붙여넣으려면 `r` 접두사를 추가 합니다. 이는 `raw` 문자열 임을 나타내며 \ "를 제외 하 고 이스케이프 문자를 사용 하지 않습니다 (경로에서 마지막 백슬래시를 제거 해야 할 수 있음). 따라서 경로는 r "C:\Users\MyName\Documents\Document.txt"와 같을 수 있습니다.
+Python에서 경로를 문자열로 붙여넣으려면 `r` 접두사를 추가합니다. 이렇게 하면 `raw` 문자열임을 나타내며, \”를 제외하고 이스케이프 문자를 사용하지 않습니다(경로에서 마지막 백슬래시를 제거해야 할 수 있음). 그러면 r"C:\Users\MyName\Documents\Document.txt"와 비슷한 경로가 생성됩니다.
 
-Python에서 경로로 작업할 때는 표준 pathlib 모듈을 사용 하는 것이 좋습니다. 이렇게 하면 슬래시 또는 백슬래시를 사용 하 여 여러 운영 체제에서 코드를 효율적으로 사용할 수 있는지 여부에 관계 없이 경로 조작을 일관 되 게 수행할 수 있는 풍부한 경로 개체로 문자열을 변환할 수 있습니다.
+Python에서 경로를 작업할 때는 표준 pathlib 모듈을 사용하는 것이 좋습니다. 이렇게 하면 슬래시 또는 백슬래시 사용 여부에 관계없이 일관적으로 경로를 조작할 수 있는 풍부한 Path 개체로 문자열을 변환할 수 있으며, 코드가 여러 운영 체제에서 보다 효율적으로 작동합니다.
 
-## <a name="what-is-pythonpath"></a>PYTHONPATH 란?
+## <a name="what-is-pythonpath"></a>PYTHONPATH란?
 
-PYTHONPATH 환경 변수는 Python에서 모듈을 가져올 수 있는 디렉터리 목록을 지정 하는 데 사용 됩니다. 을 실행 하는 경우 `sys.path` 변수를 검사 하 여 항목을 가져올 때 검색할 디렉터리를 확인할 수 있습니다.
+PYTHONPATH 환경 변수는 Python에서 모듈을 가져올 수 있는 디렉터리 목록을 지정하는 데 사용됩니다. 실행 중인 동안 `sys.path` 변수를 검사하면 항목을 가져올 때 어떤 디렉터리가 검색되는지 확인할 수 있습니다.
 
-명령 프롬프트에서이 변수를 설정 하려면 `set PYTHONPATH=list;of;paths`을 사용 합니다.
+명령 프롬프트에서 이 변수를 설정하려면 `set PYTHONPATH=list;of;paths`를 사용합니다.
 
-PowerShell에서이 변수를 설정 하려면 Python을 시작 하기 직전에 `$env:PYTHONPATH=’list;of;paths’`을 사용 합니다.
+PowerShell에서 이 변수를 설정하려면 Python을 시작하기 직전에 `$env:PYTHONPATH=’list;of;paths’`를 사용합니다.
 
-**환경 변수** 설정을 통해 전역으로이 변수를 설정 하는 것은 사용 하려는 것이 아닌 모든 버전의 Python에서 사용할 수 있기 때문에 사용 **하지 않는** 것이 좋습니다.
+**환경 변수** 설정을 통해 이 변수를 전역적으로 설정하면 사용하려는 버전이 아닌 다른 Python 버전에서 이 변수를 사용할 수 있으므로, 권장하지 **않습니다**.
 
-## <a name="where-can-i-find-help-with-packaging-and-deployment"></a>패키징 및 배포에 대 한 도움말은 어디에서 찾을 수 있나요?
+## <a name="where-can-i-find-help-with-packaging-and-deployment"></a>패키징 및 배포에 대한 도움은 어디서 찾을 수 있나요?
 
-[Docker](https://code.visualstudio.com/docs/azure/docker): [Vscode 확장](https://code.visualstudio.com/docs/azure/docker) 을 사용 하면 Dockerfile 및 docker-compose.ci.build.yml 템플릿을 사용 하 여 신속 하 게 패키지 하 고 배포할 수 있습니다 (프로젝트에 적합 한 docker 파일 생성).
+[Docker](https://code.visualstudio.com/docs/azure/docker): [VSCode 확장](https://code.visualstudio.com/docs/azure/docker)을 사용하면 Dockerfile 및 docker-compose.yml 템플릿을 사용하여 신속하게 패키징하고 배포할 수 있습니다(프로젝트에 적합한 Docker 파일 생성).
 
-[AKS (Azure Kubernetes Service)](https://docs.microsoft.com/azure/aks/) 를 사용 하면 주문형 리소스를 확장 하는 동시에 컨테이너 화 된 응용 프로그램을 배포 하 고 관리할 수 있습니다.
+[AKS(Azure Kubernetes Service)](https://docs.microsoft.com/azure/aks/)를 사용하면 컨테이너화된 애플리케이션을 배포하고 관리하는 한편, 주문형 리소스를 확장할 수 있습니다.
 
-## <a name="what-if-i-need-to-work-across-different-machines"></a>여러 컴퓨터에서 작업 해야 하는 경우는 어떻게 되나요?
+## <a name="what-if-i-need-to-work-across-different-machines"></a>여러 머신에서 작업해야 하는 경우에는 어떻게 하나요?
 
-[설정 동기화](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) 를 사용 하면 GitHub를 사용 하 여 여러 설치에서 VS Code 설정을 동기화 할 수 있습니다. 여러 컴퓨터에서 작업 하는 경우이를 통해 환경을 일관 되 게 유지할 수 있습니다.
+[설정 동기화](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)를 사용하면 GitHub를 사용하는 여러 설치에서 VS Code 설정을 동기화할 수 있습니다. 여러 머신에서 작업하는 경우 이렇게 하면 여러 머신의 환경을 일관되게 유지할 수 있습니다.
 
-## <a name="what-if-im-used-to-using-pycharm-atom-sublime-text-emacs-or-vim"></a>PyCharm, Atom, Sublime Text, Emacs 또는 Vim를 사용 하는 데 사용 되는 경우는 어떻게 되나요?
+## <a name="what-if-im-used-to-using-pycharm-atom-sublime-text-emacs-or-vim"></a>PyCharm, Atom, Sublime Text, Emacs 또는 Vim에 익숙한 경우에는 어떻게 하나요?
 
-VSCode 확장 [Keymaps](https://marketplace.visualstudio.com/search?target=VSCode&category=Keymaps&sortBy=Downloads) 는 환경에서 집에 바로 느낌을 주는 데 도움이 될 수 있습니다.
+VSCode 확장 [Keymaps](https://marketplace.visualstudio.com/search?target=VSCode&category=Keymaps&sortBy=Downloads)를 사용하면 편안한 환경에서 작업할 수 있습니다.
 
-## <a name="how-do-mac-shortcut-keys-map-to-windows-shortcut-keys"></a>Mac 바로 가기 키를 Windows 바로 가기 키에 매핑하는 방법
+## <a name="how-do-mac-shortcut-keys-map-to-windows-shortcut-keys"></a>Mac 바로 가기 키는 어떤 방식으로 Windows 바로 가기 키에 매핑되나요?
 
-Windows 컴퓨터와 Macintosh에서 키보드 단추와 시스템 바로 가기 중 일부가 약간 다릅니다. 이 [Mac To Windows 전환 가이드](../dev-environment/mac-to-windows.md) 에서는 기본 사항을 다룹니다.
+Windows 머신과 Macintosh의 일부 키보드 단추 및 시스템 바로 가기는 서로 약간 다릅니다. [Mac에서 Windows로 전환 가이드](../dev-environment/mac-to-windows.md)에서 이에 대한 기본 사항을 다룹니다.

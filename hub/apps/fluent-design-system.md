@@ -10,7 +10,7 @@ ms.author: mcleans
 author: mcleanbyron
 ms.openlocfilehash: f3a2575b17cc4228d7c4db273845478aecf65f29
 ms.sourcegitcommit: f0936ce8e88d78b1af99998794a8765094f6a487
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/25/2019
 ms.locfileid: "72915101"
@@ -25,15 +25,15 @@ Fluent 디자인 시스템은 아름답고 공감할 수 있는 적응형 사용
 
 ## <a name="principles"></a>원칙
 
-**적응: 각 장치에서 자연스럽 게 흐름 경험**
+**적응형: 각 디바이스에서 자연스럽게 느낄 수 있는 Fluent 환경**
 
 Fluent 환경은 환경에 맞게 조정됩니다. Fluent 환경은 태블릿, 데스크톱 PC 및 Xbox에서 편안함을 느낄 수 있을 뿐만 아니라 혼합 현실 헤드셋에도 훌륭하게 작동합니다. PC용 추가 모니터와 같은 하드웨어가 추가되면 Fluent 환경에서 이 하드웨어를 활용합니다.
 
-**Empathetic: 흐름 환경은 직관적이 고 강력 합니다.**
+**공감: 직관적이고 강력한 Fluent 환경**
 
 Fluent 환경은 동작이나 의도에 맞게 조정되어 요구 사항을 인식하고 예상합니다. 지구의 반대편에 있거나 지금 바로 옆에 있는 사람인지 여부에 관계없이 모든 사람과 아이디어를 하나로 결합합니다.
 
-**아름 다운: 흐름 환경**
+**아름다움: 매력적이고 몰입도가 높은 Fluent 환경**
 
 Fluent 환경은 실제 세계의 요소를 통합하여 기본 작업을 활용합니다. 조명, 그림자, 움직임, 깊이 및 질감을 사용하여 직관적이고 본능적으로 느낄 수 있는 방식으로 정보를 구성합니다.
 
@@ -72,11 +72,11 @@ Fluent 디자인 문서에는 디자인 지침 외에도 디자인을 수행하�
         ![fpo 이미지](images/fluent/thumbnail-size-classes.jpg)
     :::column-end:::
     :::column span="2":::
-**올바른 중단점 디자인**
+**적합한 중단점에 따른 디자인**
 
-개별 화면 크기에 맞춰 설계하지 않고 몇 가지 주요 너비("중단점")를 중심으로 설계할 경우 디자인 및 코드가 크게 간소화될 뿐만 아니라 중소형 화면에서도 앱이 멋지게 보이도록 할 수 있습니다.
+개별 화면 크기에 맞춰 설계하지 않고 몇 가지 주요 너비(“중단점”이라고도 함)를 중심으로 설계할 경우 디자인 및 코드가 크게 간소화될 뿐만 아니라 소형부터 대형 화면에서도 앱을 제대로 표시할 수 있습니다.
 
-[화면 크기 및 중단점에 대해 알아보기](/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design)
+[화면 크기 및 중단점에 대한 알아보기](/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design)
     :::column-end:::
 :::row-end:::
 
@@ -85,11 +85,11 @@ Fluent 디자인 문서에는 디자인 지침 외에도 디자인을 수행하�
         ![fpo 이미지](images/fluent/rspd-resize.gif)
     :::column-end:::
     :::column span="2":::
-**반응 형 레이아웃 만들기**
+**반응형 레이아웃 만들기**
 
-응용 프로그램은 자연스럽 게 사용할 수 있도록 다양 한 화면 크기와 장치로 레이아웃을 조정 해야 합니다. 자동 크기 조정, 레이아웃 패널, 시각적 상태 및 XAML의 개별 UI 정의를 사용 하 여 응답성이 뛰어난 UI를 만들 수 있습니다.
+앱을 자연스럽게 보이게 하려면 다양한 화면 크기와 디바이스로 레이아웃을 조정해야 합니다. XAML에서 자동 크기 조정, 레이아웃 패널, 시각적 상태 및 별도의 UI 정의를 사용하여 반응형 UI를 만들 수 있습니다.
 
-[응답성이 뛰어난 설계에 대해 알아보기](/windows/uwp/design/layout/responsive-design)
+[반응형 디자인 알아보기](/windows/uwp/design/layout/responsive-design)
     :::column-end:::
 :::row-end:::
 
@@ -98,11 +98,11 @@ Fluent 디자인 문서에는 디자인 지침 외에도 디자인을 수행하�
         ![fpo 이미지](images/fluent/devices.jpg)
     :::column-end:::
     :::column span="2":::
-**장치 스펙트럼 디자인**
+**디바이스 스펙트럼에 대한 디자인**
 
-UWP 앱은 광범위한 Windows 기반 장치에서 실행됩니다. 어떤 장치가 사용 가능한지, 개발 이유가 무엇인지, 그리고 사용자와 앱 간 상호 작용 방법이 무엇인지 이해하는 데 유용합니다.
+UWP 앱은 광범위한 Windows 기반 디바이스에서 실행될 수 있습니다. 어떤 디바이스를 사용할 수 있는지, 개발 이유가 무엇인지, 그리고 사용자와 앱이 어떻게 상호 작용하는지에 대해 이해하는 데 유용합니다.
 
-[UWP 장치에 대 한 자세한 정보](/windows/uwp/design/devices/)
+[UWP 디바이스에 대해 알아보기](/windows/uwp/design/devices/)
 :::row-end:::
 
 :::row:::
@@ -110,11 +110,11 @@ UWP 앱은 광범위한 Windows 기반 장치에서 실행됩니다. 어떤 장�
         ![fpo 이미지](images/fluent/keyboard-shortcuts.jpg)
     :::column-end:::
     :::column span="2":::
-**오른쪽 입력에 대해 최적화**
+**적절한 입력에 최적화**
 
-UWP 앱은 일반 마우스, 키보드, 펜, 터치 조작을 자동으로 지원하여 사용자가 따로 해야 할 것이 없습니다. 하지만 펜이나 Surface Dial 같은 특정 입력 장치에 최적화된 지원 방식을 통해 앱을 개선할 수 있습니다.
+&mdash;UWP 앱은 일반 마우스, 키보드, 펜 및 터치 조작을 자동으로 지원하여 사용자가 따로 해야 할 것이 없습니다. 하지만 펜이나 Surface Dial 같은 특정 입력에 최적화된 지원 방식을 통해 앱을 개선할 수 있습니다.
 
-[입력 및 상호 작용에 대 한 자세한 정보](/windows/uwp/design/input/input-primer)
+[입력 및 상호 작용에 대해 알아보기](/windows/uwp/design/input/input-primer)
 :::row-end:::
 
 ## <a name="make-it-intuitive"></a>직관적 환경 만들기
@@ -130,11 +130,11 @@ Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하므로 사용�
         ![fpo 이미지](images/fluent/thumbnail-navview.png)
     :::column-end:::
     :::column span="2":::
-**올바른 탐색 제공**
+**적합한 탐색 제공**
 
-올바른 앱 구조 및 탐색 구성 요소를 사용 하 여 간편한 환경을 만듭니다.
+올바른 앱 구조 및 탐색 구성 요소를 사용하여 간편한 환경을 만듭니다.
 
-[탐색에 대 한 자세한 정보](/windows/uwp/design/basics/navigation-basics/)
+[탐색에 대한 자세한 정보](/windows/uwp/design/basics/navigation-basics/)
 :::row-end:::
 
 :::row:::
@@ -144,9 +144,9 @@ Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하므로 사용�
     :::column span="2":::
 **대화형**
 
-사용자가 앱과 상호 작용할 수 있는 단추, 명령 모음, 바로 가기 키 및 상황에 맞는 메뉴 정적 환경을 동적으로 변경 하는 도구입니다.
+사용자가 앱과 상호 작용할 수 있는 단추, 명령 모음, 바로 가기 키 및 상황에 맞는 메뉴는 정적 환경을 동적으로 변경하는 도구입니다.
 
-[명령에 대 한 자세한 정보](/windows/uwp/design/basics/commanding-basics/)
+[명령에 대해 알아보기](/windows/uwp/design/basics/commanding-basics/)
 :::row-end:::
 
 :::row:::
@@ -154,11 +154,11 @@ Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하므로 사용�
         ![fpo 이미지](images/fluent/thumbnail-controls-2.jpg)
     :::column-end:::
     :::column span="2":::
-**작업에 적합 한 컨트롤 사용**
+**적합한 작업 컨트롤 사용**
 
-컨트롤은 사용자 인터페이스의 빌딩 블록입니다. 따라서 적합한 컨트롤을 사용할 경우 사용자가 기대하는 대로 작동하는 사용자 인터페이스를 만들 수 있습니다. UWP는 간단한 버튼부터 강력한 데이터 제어 기능에 이르기까지 45가지가 넘는 컨트롤을 제공합니다.
+컨트롤은 사용자 인터페이스의 구성 요소입니다. 따라서 적합한 컨트롤을 사용할 경우 사용자가 기대하는 대로 작동하는 사용자 인터페이스를 만들 수 있습니다. UWP는 간단한 단추부터 강력한 데이터 제어 기능에 이르기까지 45가지가 넘는 컨트롤을 제공합니다.
 
-[UWP 컨트롤에 대 한 자세한 정보](/windows/uwp/design/controls-and-patterns/)
+[UWP 컨트롤 알아보기](/windows/uwp/design/controls-and-patterns/)
 :::row-end:::
 
 :::row:::
@@ -166,9 +166,9 @@ Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하므로 사용�
         ![포함 이미지](images/fluent/thumbnail-inclusive.png)
     :::column-end:::
     :::column span="2":::
-**포함** 잘 디자인 된 앱은 장애가 있는 사용자가 액세스할 수 있습니다. 일부 코딩만 추가하면 자신의 앱을 전 세계 사용자와 서로 공유할 수 있습니다.
+**포괄적** 올바르게 디자인된 앱은 장애인들에게도 접근성을 보장합니다. 일부 코딩만 추가하면 자신의 앱을 전 세계 사용자와 서로 공유할 수 있습니다.
 
-[유용성에 대 한 자세한 정보](/windows/uwp/design/usability/)
+[유용성 알아보기](/windows/uwp/design/usability/)
 :::row-end:::
 
 ## <a name="be-engaging-and-immersive"></a>매력적이고 몰입도가 높은 환경
@@ -188,7 +188,7 @@ Fluent 디자인은 화려한 효과와 관련된 것이 아닙니다. 사람의
     :::column span="2":::
 **강조 표시**
 
-[강조 표시](/windows/uwp/design/style/reveal)는 조명을 사용하여 요소를 돋보이게 합니다. 조명은 사용자가 상호 작용할 수 있는 대화형 요소를 비추고, 숨겨진 테두리를 표시합니다. 목록 보기나 그리드 보기 같은 일부 컨트롤에서는 표시가 자동으로 활성화됩니다. 다른 컨트롤에서는 사전 설정된 강조 표시 스타일을 적용하여 활성화할 수 있습니다.
+[강조 표시](/windows/uwp/design/style/reveal)를 사용하여 대화형 요소가 돋보이도록 합니다. 빛으로 숨겨진 테두리를 표시함으로써 사용자가 상호 작용할 수 있는 요소를 비춥니다. 목록 보기나 그리드 보기 같은 일부 컨트롤에서는 표시가 자동으로 활성화됩니다. 다른 컨트롤에서는 사전 설정된 강조 표시 스타일을 적용하여 활성화할 수 있습니다.
 :::row-end:::
 
 :::row:::
@@ -198,7 +198,7 @@ Fluent 디자인은 화려한 효과와 관련된 것이 아닙니다. 사람의
     :::column span="2":::
 **포커스 표시**
 
-[포커스 표시](/windows/uwp/design/style/reveal-focus)는 조명을 사용하여 현재 포커스가 맞춰진 요소에 대한 주의를 불러일으킵니다.
+[포커스 표시](/windows/uwp/design/style/reveal-focus)는 조명을 사용하여 현재 포커스가 맞춰진 요소에 집중할 수 있도록 합니다.
 :::row-end:::
 
 ## <a name="create-a-sense-of-depth"></a>깊이 감각 만들기
@@ -230,7 +230,7 @@ Fluent 디자인은 화려한 효과와 관련된 것이 아닙니다. 사람의
     :::column span="2":::
 **연결된 애니메이션**
 
-[연결된 애니메이션](/windows/uwp/design/motion/connected-animation)은 장면이 매끄럽게 전환되도록 하여, 사용자가 맥락을 이해하는 데 도움을 줍니다.
+[연결된 애니메이션](/windows/uwp/design/motion/connected-animation)은 장면들이 매끄럽게 전환되도록 하여, 사용자가 맥락을 이해하는 데 도움을 줍니다.
 :::row-end:::
 
 ## <a name="build-it-with-the-right-material"></a>올바른 소재를 사용하여 빌드
@@ -246,7 +246,7 @@ Fluent 디자인은 화려한 효과와 관련된 것이 아닙니다. 사람의
     :::column span="2":::
 **아크릴**
 
-[아크릴](/windows/uwp/design/style/acrylic)은 반투명한 재질로, 사용자가 콘텐츠 계층을 확인하고 UI 요소의 계층 구조를 설정할 수 있습니다.
+[아크릴](/windows/uwp/design/style/acrylic)은 반투명한 재질로, 사용자가 콘텐츠 레이어를 확인하고 UI 요소의 계층 구조를 설정할 수 있습니다.
 :::row-end:::
 
 ## <a name="design-toolkits-and-code-samples"></a>디자인 도구 키트 및 코드 샘플

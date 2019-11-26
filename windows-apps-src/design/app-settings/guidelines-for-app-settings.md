@@ -10,16 +10,16 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c08dad36929c7889f1896404df862230040e3499
 ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/09/2019
 ms.locfileid: "72163711"
 ---
 # <a name="guidelines-for-app-settings"></a>앱 설정에 대한 지침
 
-앱 설정은 앱 설정 페이지를 통해 액세스할 수 있는 사용자 지정이 가능한 유니버설 Windows 플랫폼 (UWP) 앱의 부분입니다. 예를 들어 뉴스 읽기 권한자 앱을 사용 하면 사용자가 표시할 뉴스 소스를 지정 하거나 화면에 표시할 열 수를 지정할 수 있습니다. 반면 날씨 앱은 사용자가 섭씨와 화씨를 선택할 수 있습니다. 이 문서에서는 앱 설정을 만들고 표시 하기 위한 권장 사항 및 모범 사례를 제공 합니다.
+앱 설정은 앱 설정 페이지를 통해 UWP(유니버설 Windows 플랫폼) 앱에서 사용자 지정이 가능한 부분입니다. 예를 들어 사용자는 뉴스 리더 앱을 사용하여 표시할 뉴스 소스를 지정하거나 화면에 표시할 칼럼 수를 지정할 수 있는 한편, 날씨 앱의 설정을 사용하여 섭씨 및 화씨 중에서 기본 측정 단위를 선택할 수 있습니다. 이 문서에서는 앱 설정을 만들고 표시하기 위한 권장 사항 및 모범 사례에 대해 설명합니다.
 
-## <a name="when-to-provide-a-settings-page"></a>설정 페이지를 제공 해야 하는 경우
+## <a name="when-to-provide-a-settings-page"></a>설정 페이지를 제공해야 하는 경우
 
 다음은 앱 설정 페이지에 속한 앱 옵션의 예입니다.
 
@@ -50,19 +50,19 @@ ms.locfileid: "72163711"
 
 **앱 바**
 
-[앱 바](../controls-and-patterns/app-bars.md) 또는 도구 모음을 사용하는 경우, "자세히" 오버플로 메뉴에서 설정 진입점을 마지막 항목으로 배치합니다. 설정 진입점이 눈에 잘 띄어야 하는 앱의 경우에는 오버플로가 아니라 앱 바에 직접 진입점을 배치하세요.
+[앱 바](../controls-and-patterns/app-bars.md) 또는 도구 모음을 사용하는 경우, “자세히” 오버플로 메뉴에서 설정 진입점을 마지막 항목으로 배치합니다. 설정 진입점이 눈에 잘 띄어야 하는 앱의 경우에는 오버플로 내부가 아니라 앱 바에 직접 진입점을 배치하세요.
 
 ![앱 바의 앱 설정 진입점](images/appsettings-entrypoint-tabs.png)
 
 **허브**
 
-허브 레이아웃을 사용하고 있으면 앱 설정 진입점을 앱 바의 "자세히" 오버플로 메뉴 내부에 배치해야 합니다.
+허브 레이아웃을 사용하고 있으면 앱 설정 진입점을 앱 바의 “자세히” 오버플로 메뉴 내부에 배치해야 합니다.
 
 **탭/피벗**
 
-탭 또는 피벗 레이아웃에서는 앱 설정 진입점을 탐색 창 내의 최상위 항목 중 하나로 배치하지 않는 것이 좋습니다. 대신 앱 설정 진입점을 앱 바의 "자세히" 오버플로 메뉴 내부에 배치해야 합니다.
+탭 또는 피벗 레이아웃에서는 앱 설정 진입점을 탐색 창 내의 최상위 항목 중 하나로 배치하지 않는 것이 좋습니다. 대신 앱 설정 진입점을 앱 바의 “자세히” 오버플로 메뉴 내부에 배치해야 합니다.
 
-**마스터-세부 정보**
+**마스터-세부**
 
 앱 설정 진입점을 마스터-세부 창 내에 깊이 포함하는 대신 마스터 창의 최상위에 마지막 고정 항목으로 설정합니다.
 
@@ -79,17 +79,17 @@ ms.locfileid: "72163711"
 
 ![휴대폰의 앱 설정 페이지 레이아웃](images/appsettings-layout-navpane-mobile.png)
 
-## <a name="color-mode-settings"></a>"컬러 모드" 설정
+## <a name="color-mode-settings"></a>“컬러 모드” 설정
 
 
-앱에서 사용자가 앱의 색 모드를 선택하도록 허용하는 경우, "앱 모드 선택" 헤더와 함께 [라디오 단추](../controls-and-patterns/radio-button.md) 또는 [콤보 상자](../controls-and-patterns/combo-box.md)를 사용하여 이러한 옵션을 표시합니다. 포함할 수 있는 옵션
+앱에서 사용자가 앱의 색 모드를 선택하도록 허용하는 경우, “앱 모드 선택” 헤더와 함께 [라디오 단추](../controls-and-patterns/radio-button.md) 또는 [콤보 상자](../controls-and-patterns/combo-box.md)를 사용하여 이러한 옵션을 표시합니다. 포함할 수 있는 옵션
 - 밝게
 - 어둡게
 - Windows 기본값
 
-또 사용자가 현재 기본 앱 모드에 액세스 해 수정할 수 있도록 Windows 설정 앱의 색 페이지에 하이퍼링크를 추가하는 것이 좋습니다. 하이퍼링크 스트링에 "Windows 색 설정"이라는 문자열을 사용하십시오.
+또한 사용자가 현재 기본 앱 모드에 액세스하여 수정할 수 있도록 Windows 설정 앱의 색 페이지에 하이퍼링크를 추가하는 것이 좋습니다. 하이퍼링크 텍스트에 “Windows 색 설정”이라는 문자열을 사용하십시오.
 
-!["모드 선택" 섹션](images/appsettings_mode.png)
+![“모드 선택” 섹션](images/appsettings_mode.png)
 
 <!--
 <div class="microsoft-internal-note">
@@ -97,12 +97,12 @@ Detailed redlines showing preferred text strings for the "Choose a mode" section
 </div>
 -->
 
-## <a name="about-section-and-feedback-button"></a>섹션과 피드백 단추
+## <a name="about-section-and-feedback-button"></a>정보 섹션과 피드백 단추
 
 
-앱에 전용 페이지나 고유의 섹션으로 "이 앱에 대한 정보" 섹션을 배치하는 것이 좋습니다. "피드백 보내기" 단추가 필요하면 "이 앱에 대한 정보" 페이지의 맨 아래쪽으로 배치합니다.
+앱에 전용 페이지나 고유의 섹션으로 “이 앱에 대한 정보” 섹션을 배치하는 것이 좋습니다. “피드백 보내기” 단추가 필요하면 “이 앱에 대한 정보” 페이지의 맨 아래쪽으로 배치합니다.
 
-"법"과 관련된 하위 머리글 아래 "서비스 계약"과 "개인정보 처리 방침"(텍스트 줄 바꿈이 있는 [하이퍼링크 단추](../controls-and-patterns/hyperlinks.md)과 저작권 같은 법과 관련된 추가 정보를 배치합니다.
+“법”과 관련된 하위 머리글 아래 “사용 약관”과 “개인정보처리방침”(텍스트 줄 바꿈이 있는 [하이퍼링크 단추](../controls-and-patterns/hyperlinks.md)여야 함)과 저작권 같은 추가 법적 정보를 배치합니다.
 
 !["피드백 보내기" 단추가 있는 "이 앱에 대한 정보" 섹션](images/appsettings-about.png)
 
@@ -124,11 +124,11 @@ Detailed redlines showing preferred text strings for the "Choose a mode" section
 - 필요한 경우 스크롤 가능한 단일 열에 위쪽에서 아래쪽으로 콘텐츠를 제공합니다. 스크롤을 화면 높이의 최대 두 배로 제한합니다.
 - 앱 설정에 다음 컨트롤을 사용합니다.
 
-    - [스위치](../controls-and-patterns/toggles.md)전환: 사용자가 값을 설정 하거나 해제할 수 있습니다.
-    - [라디오 단추](../controls-and-patterns/radio-button.md): 사용자가 최대 5 개의 함께 사용할 수 없는 관련 옵션 집합에서 한 항목을 선택할 수 있습니다.
-    - [텍스트 입력 상자](../controls-and-patterns/text-block.md): 사용자가 텍스트를 입력할 수 있도록 합니다. 메일이나 암호와 같이, 사용자로부터 얻는 텍스트 형식에 해당하는 텍스트 입력 상자 형식을 사용합니다.
-    - [하이퍼링크](../controls-and-patterns/hyperlinks.md): 사용자를 앱 내의 다른 페이지 또는 외부 웹 사이트로 이동 합니다. 사용자가 하이퍼링크를 클릭하면 설정 플라이아웃이 해제됩니다.
-    - [단추](../controls-and-patterns/buttons.md): 사용자가 현재 설정 플라이 아웃을 해제 하지 않고 즉각적인 작업을 시작할 수 있도록 합니다.
+    - [토글 스위치](../controls-and-patterns/toggles.md): 사용자가 값을 설정하거나 해제할 수 있습니다.
+    - [라디오 단추](../controls-and-patterns/radio-button.md): 사용자가 함께 사용할 수 없는 최대 5개의 관련 옵션으로 이루어진 세트에서 한 항목을 선택할 수 있습니다.
+    - [텍스트 입력 상자](../controls-and-patterns/text-block.md): 사용자가 텍스트를 입력할 수 있습니다. 메일이나 암호와 같이, 사용자로부터 얻는 텍스트 형식에 해당하는 텍스트 입력 상자 형식을 사용합니다.
+    - [하이퍼링크](../controls-and-patterns/hyperlinks.md): 사용자를 앱 내의 다른 페이지나 외부 웹 사이트로 이동합니다. 사용자가 하이퍼링크를 클릭하면 설정 플라이아웃이 해제됩니다.
+    - [단추](../controls-and-patterns/buttons.md): 사용자가 현재 설정 플라이아웃을 해제하지 않고 즉각적인 작업을 시작할 수 있습니다.
 - 컨트롤 중 하나가 비활성화되면 설명 메시지를 추가합니다. 이 메시지를 비활성화된 컨트롤 위에 배치합니다.
 - 설정 플라이아웃 및 헤더에 애니메이션 효과를 준 후 단일 블록으로 콘텐츠 및 컨트롤에 애니메이션 효과를 줍니다. 100px 왼쪽 오프셋과 함께 [**enterPage**](https://docs.microsoft.com/previous-versions/windows/apps/br212672(v=win.10)) 또는 [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) 애니메이션을 사용하여 콘텐츠에 애니메이션 효과를 줍니다.
 - 필요한 경우 구역 머리글, 단락 및 레이블을 사용하여 콘텐츠를 구성하고 명확하게 표시합니다.
@@ -141,6 +141,6 @@ Detailed redlines showing preferred text strings for the "Choose a mode" section
 ## <a name="related-articles"></a>관련 문서
 
 * [명령 디자인 기본 사항](https://docs.microsoft.com/windows/uwp/layout/commanding-basics)
-* [진행률 컨트롤에 대 한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/progress-controls)
+* [진행률 컨트롤에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/progress-controls)
 * [앱 데이터 저장 및 검색](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
 * [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition)

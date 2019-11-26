@@ -10,16 +10,16 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 0eb7ef49d0ce1876635dc36e84f43432c13e1791
 ms.sourcegitcommit: f561efbda5c1d47b85601d91d70d86c5332bbf8c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/21/2019
 ms.locfileid: "72690362"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>설정 및 기타 앱 데이터 저장 및 검색
 
-*앱 데이터* 는 특정 앱에서 만들고 관리 하는 변경 가능한 데이터입니다. 런타임 상태, 앱 설정, 사용자 기본 설정, 참조 콘텐츠 (예: 사전 앱의 사전 정의) 및 기타 설정을 포함 합니다. 앱 데이터는 사용자가 앱을 사용할 때 만들고 관리하는 데이터인 *사용자 데이터*와 다릅니다. 사용자 데이터에는 문서 또는 미디어 파일, 메일 또는 통신 기록, 사용자가 만든 콘텐츠를 보유하는 데이터베이스 레코드 등이 포함됩니다. 사용자 데이터는 둘 이상의 앱에 유용하거나 의미가 있을 수 있습니다. 사용자가 앱 자체와 별개로 문서와 같은 엔터티로 전송하거나 조작하려는 데이터인 경우가 많습니다.
+*앱 데이터*는 특정 앱에서 생성되고 관리되는 변경 가능한 데이터입니다. 이 데이터에는 런타임 상태, 앱 설정, 사용자 기본 설정, 참조 콘텐츠(예: 사전 앱의 사전 정의) 및 기타 설정이 포함됩니다. 앱 데이터는 사용자가 앱을 사용할 때 만들고 관리하는 데이터인 *사용자 데이터*와 다릅니다. 사용자 데이터에는 문서 또는 미디어 파일, 메일 또는 통신 기록, 사용자가 만든 콘텐츠를 보유하는 데이터베이스 레코드 등이 포함됩니다. 사용자 데이터는 둘 이상의 앱에 유용하거나 의미가 있을 수 있습니다. 사용자가 앱 자체와 별개로 문서와 같은 엔터티로 전송하거나 조작하려는 데이터인 경우가 많습니다.
 
-**앱 데이터에 대한 중요 정보:**  - 앱 데이터의 수명은 앱의 수명으로 제한됩니다. 앱이 제거되면 결과적으로 앱 데이터가 모두 손실됩니다. 사용자에게 중요하거나 대체할 수 없는 사용자 데이터나 항목을 저장하는 데 앱 데이터를 사용하지 마세요. 이러한 종류의 정보는 사용자 라이브러리 및 Microsoft OneDrive를 사용하여 저장하는 것이 좋습니다. 앱 데이터는 앱 관련 사용자 기본 설정, 설정 및 즐겨찾기를 저장하는 데 적합합니다.
+**앱 데이터에 대한 중요 정보:** 앱 데이터의 수명은 앱의 수명으로 제한됩니다. 앱이 제거되면 결과적으로 앱 데이터가 모두 손실됩니다. 사용자에게 중요하거나 대체할 수 없는 사용자 데이터나 항목을 저장하는 데 앱 데이터를 사용하지 마세요. 이러한 종류의 정보는 사용자 라이브러리 및 Microsoft OneDrive를 사용하여 저장하는 것이 좋습니다. 앱 데이터는 앱 관련 사용자 기본 설정, 설정 및 즐겨찾기를 저장하는 데 적합합니다.
 
 ## <a name="types-of-app-data"></a>앱 데이터의 유형
 
@@ -32,12 +32,12 @@ ms.locfileid: "72690362"
 앱 설정에 사용할 수 있는 데이터 형식은 다음과 같습니다.
 
 - **UInt8**, **Int16**, **UInt16**, **Int32**, **UInt32**, **Int64**, **UInt64**, **Single**, **Double**
-- **부울**
+- **Boolean**
 - **Char16**, **String**
-- [**DateTime**](/uwp/api/Windows.Foundation.DateTime), [ **TimeSpan**](/uwp/api/Windows.Foundation.TimeSpan)
-    - /.Net의 C# [**경우: system.xml**](/dotnet/api/system.datetimeoffset?view=dotnet-uwp-10.0), system.object를 사용 [**합니다**](/dotnet/api/system.timespan?view=dotnet-uwp-10.0) .
+- [**DateTime**](/uwp/api/Windows.Foundation.DateTime), [**TimeSpan**](/uwp/api/Windows.Foundation.TimeSpan)
+    - C#/.Net의 다음을 사용합니다. [**System.DateTimeOffset**](/dotnet/api/system.datetimeoffset?view=dotnet-uwp-10.0), [**System.TimeSpan**](/dotnet/api/system.timespan?view=dotnet-uwp-10.0)
 - **GUID**, [**Point**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [**Size**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size), [**Rect**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Rect)
-- [**ApplicationDataCompositeValue**](/uwp/api/Windows.Storage.ApplicationDataCompositeValue): 원자성으로 직렬화 및 deserialize 되어야 하는 관련 앱 설정 집합입니다. 상호 의존적인 설정의 원자성 업데이트를 쉽게 처리하려면 복합 설정을 사용합니다. 시스템은 동시 액세스 및 로밍 중에 복합 설정의 무결성을 보장합니다. 복합 설정은 소량의 데이터에 최적화되어 있으며 대규모 데이터 집합에 사용할 경우에는 성능이 저하됩니다.
+- [**ApplicationDataCompositeValue**](/uwp/api/Windows.Storage.ApplicationDataCompositeValue): 원자 단위로 직렬화 및 역직렬화해야 하는 관련 앱 설정의 세트입니다. 상호 의존적인 설정의 원자성 업데이트를 쉽게 처리하려면 복합 설정을 사용합니다. 시스템은 동시 액세스 및 로밍 중에 복합 설정의 무결성을 보장합니다. 복합 설정은 소량의 데이터에 최적화되어 있으며 대규모 데이터 집합에 사용할 경우에는 성능이 저하됩니다.
 
 ### <a name="files"></a>파일
 
@@ -169,11 +169,11 @@ OS에서는 각 앱이 로밍할 수 있는 앱 데이터의 크기를 제한합
 - 장치와 관련된 앱 데이터는 로밍하지 않습니다. 로컬 파일 리소스의 경로 이름과 같은 일부 정보는 로컬에만 관련됩니다. 로컬 정보를 로밍하려는 경우 정보가 보조 장치에서 유효하지 않으면 앱을 복구할 수 있는지 확인해야 합니다.
 - 큰 앱 데이터 집합은 로밍하지 않습니다. 앱에서 로밍할 수 있는 앱 데이터의 양에는 제한이 있습니다. [**RoamingStorageQuota**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingstoragequota) 속성을 사용하여 최대값을 가져옵니다. 앱이 이 제한에 도달하면 앱 데이터 저장소의 크기가 이 제한을 더 이상 초과하지 않을 때까지 데이터가 로밍되지 않습니다. 앱을 디자인할 때는 큰 데이터에 대한 제한을 두어 제한을 초과하지 않도록 하는 방법을 고려해야 합니다. 예를 들어 게임 상태 저장에 각각 10KB가 필요한 경우 앱에서 사용자가 최대 10개의 게임을 저장하도록 허용할 수 있습니다.
 - 즉각적인 동기화를 사용하는 데이터에는 로밍을 사용하지 않습니다. Windows는 즉각적인 동기화를 보증하지 않으므로 사용자가 오프라인 상태이거나 지연 시간이 긴 네트워크에 있을 경우 로밍이 현저하게 지연될 수 있습니다. UI가 즉각적인 동기화를 사용하지 않는지 확인하세요.
-- 자주 변경 되는 데이터에는 로밍을 사용 하지 마세요. 예를 들어 앱이 노래의 초 단위 위치와 같이 자주 변경되는 정보를 추적하는 경우 이 정보를 로밍 앱 데이터로 저장하지 마세요. 대신 현재 재생 중인 노래와 같이 좋은 사용자 환경을 제공하는 자주 사용되지 않는 표현을 선택합니다.
+- 자주 변경되는 데이터에는 로밍을 사용하지 않습니다. 예를 들어 앱이 노래의 초 단위 위치와 같이 자주 변경되는 정보를 추적하는 경우 이 정보를 로밍 앱 데이터로 저장하지 마세요. 대신 현재 재생 중인 노래와 같이 좋은 사용자 환경을 제공하는 자주 사용되지 않는 표현을 선택합니다.
 
 ### <a name="roaming-pre-requisites"></a>로밍 필수 조건
 
-Microsoft 계정을 사용하여 장치에 로그온한 사용자는 누구나 로밍 앱 데이터를 활용할 수 있습니다. 그러나 사용자 및 그룹 정책 관리자는 언제든지 장치에서 로밍 앱 데이터를 전환할 수 있습니다. 사용자가 Microsoft 계정를 사용 하지 않거나 로밍 데이터 기능을 사용 하지 않도록 선택 하는 경우 앱을 계속 사용할 수 있지만 앱 데이터는 각 장치에 대해 로컬입니다.
+Microsoft 계정을 사용하여 장치에 로그온한 사용자는 누구나 로밍 앱 데이터를 활용할 수 있습니다. 그러나 사용자 및 그룹 정책 관리자는 언제든지 장치에서 로밍 앱 데이터를 전환할 수 있습니다. 사용자가 Microsoft 계정을 사용하지 않도록 선택하거나 데이터 로밍 기능을 사용하지 않도록 설정하면 앱은 계속 사용할 수 있지만 앱 데이터는 각 디바이스에 대해 로컬이 됩니다.
 
 [  **PasswordVault**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.PasswordVault)에 저장된 데이터는 사용자가 장치를 "신뢰할 수 있는 장치"로 지정한 경우에만 전환됩니다. 장치를 신뢰할 수 없으면 이 자격 증명 모음에 보관된 데이터가 로밍되지 않습니다.
 
@@ -435,8 +435,8 @@ localSettings.DeleteContainer("exampleContainer");
 
 ## <a name="related-articles"></a>관련 문서
 
-* [**Windows. ApplicationData**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData)
-* [**Windows. RoamingSettings**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingsettings)
-* [**Windows. RoamingFolder**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingfolder)
-* [**Windows. RoamingStorageQuota**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingstoragequota)
-* [**ApplicationDataCompositeValue**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataCompositeValue)
+* [**Windows.Storage.ApplicationData**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData)
+* [**Windows.Storage.ApplicationData.RoamingSettings**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingsettings)
+* [**Windows.Storage.ApplicationData.RoamingFolder**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingfolder)
+* [**Windows.Storage.ApplicationData.RoamingStorageQuota**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.roamingstoragequota)
+* [**Windows.Storage.ApplicationDataCompositeValue**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataCompositeValue)

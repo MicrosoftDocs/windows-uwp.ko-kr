@@ -12,16 +12,20 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d309ce7e18a8dc62a24bc0e7f51f0015042a5f84
-ms.sourcegitcommit: 3bb982f35c057e30c742ab9f1eea119bae627a5f
+ms.openlocfilehash: 4605f759c554c12368325a7c1e42143319eddede
+ms.sourcegitcommit: 503fa613c65236660350794b4f066eccebe9ac8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74086860"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74162349"
 ---
 # <a name="collections-and-lists"></a>컬렉션 및 목록
 
-컬렉션과 목록은 모두 함께 표시되는 여러 관련 데이터 항목의 표현을 나타냅니다. 컬렉션은 다양한 컬렉션 컨트롤(컬렉션 보기라고도 함)에서 여러 가지 방법으로 표현할 수 있습니다. 컬렉션 컨트롤은 연락처 목록, 날짜 목록, 이미지 컬렉션 등과 같은 컬렉션 기반 콘텐츠와의 상호 작용을 표시하고 사용하도록 설정합니다.  이 문서에서 설명하는 컨트롤은 다음과 같습니다.
+컬렉션과 목록은 모두 함께 표시되는 여러 관련 데이터 항목의 표현을 나타냅니다. 컬렉션은 다양한 컬렉션 컨트롤(컬렉션 보기라고도 함)에서 여러 가지 방법으로 표현할 수 있습니다. 컬렉션 컨트롤은 연락처 목록, 날짜 목록, 이미지 컬렉션 등과 같은 컬렉션 기반 콘텐츠와의 상호 작용을 표시하고 사용하도록 설정합니다.
+
+> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [FlipView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview), [TreeView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview), [ItemsRepeater 클래스](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)
+
+이 문서에서 설명하는 컨트롤은 다음과 같습니다.
 
 - 목록 보기 - 주로 텍스트가 많은 콘텐츠 모음을 표시하는 데 사용됨
 - 그리드 보기 - 주로 이미지가 많은 콘텐츠 모음을 표시하는 데 사용됨
@@ -29,20 +33,14 @@ ms.locfileid: "74086860"
 - 트리 보기 - 특정 계층 구조에서 텍스트가 많은 콘텐츠 컬렉션을 표시하는 데 주로 사용됩니다.
 - ItemsRepeater - 사용자 지정 컬렉션 컨트롤을 만들 수 있는 사용자 지정 가능한 구성 요소입니다.
 
-
 디자인 지침 - 각 컨트롤에 대한 디자인 지침, 기능 및 예제가 아래에 나와 있습니다.
 
 이러한 각 컨트롤(ItemsRepeater 제외)은 기본 제공 스타일 지정 및 상호 작용을 제공합니다. 그러나 컬렉션 보기의 시각적 모양과 내부의 항목을 추가로 사용자 지정하려면 [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)을 사용합니다. 데이터 템플릿에 대한 자세한 내용과 컬렉션 보기의 모양을 사용자 지정하는 방법은 [항목 컨테이너 및 템플릿](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/item-containers-templates) 페이지에서 찾을 수 있습니다.
 
 이러한 각 컨트롤(ItemsRepeater 제외)에는 하나 또는 여러 항목을 선택할 수 있는 기본 제공 동작도 있습니다. 자세히 알아보려면 [선택 모드 개요](selection-modes.md)를 참조하세요.
 
-> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [FlipView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview), [TreeView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview), [ItemsRepeater 클래스](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)
-
-> <div id="main">  
-> <strong>Windows 10 Fall Creators Update - 동작 변경</strong>  
-> </div>  
-> 이제 기본적으로 선택을 수행하는 대신 터치, 터치패드, 패시브 펜 등의 활성 펜이 UWP 앱의 목록을 스크롤/이동합니다.  
-> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 재정의하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">Scroll Viewer 클래스</a>에 대한 API 참조 항목을 참조하세요.  
+> **Windows 10 Fall Creators Update - 동작 변경 사항** 이제 기본적으로 선택을 수행하는 대신 터치, 터치패드, 패시브 펜 등의 활성 펜이 UWP 앱의 목록을 스크롤/이동합니다.
+> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 재정의하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 [Scroll Viewer 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer)에 대한 API 참조 항목을 참조하세요.
 
 ## <a name="examples"></a>예
 
