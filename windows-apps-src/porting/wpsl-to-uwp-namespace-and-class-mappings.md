@@ -18,7 +18,7 @@ ms.locfileid: "74259065"
 
 이 항목에서는 Windows Phone Silverlight Api를 해당 유니버설 Windows 플랫폼 (UWP)에 대응 하는 포괄적인 매핑을 제공 합니다. 일반적으로는 기능이 일대일로 매핑되지는 않지만 각 플랫폼의 네임스페이스 또는 클래스에 비슷한 기능이 있을 수 있습니다.
 
-이 매핑 테이블은 UWP 프로젝트에서 작업 하는 동안 Windows Phone Silverlight 프로젝트에서 소스 코드를 다시 사용 하는 경우 도움이 됩니다. 두 플랫폼 간에는 네임스페이스와 클래스의 이름(UI 컨트롤 포함)이 다릅니다. 대부분의 경우 간단히 네임스페이스 이름을 변경하면 코드가 컴파일됩니다. 클래스 또는 API 이름이 네임스페이스 이름과 함께 변경된 경우도 있습니다. 매핑이 더 복잡하여 접근 방법을 변경해야 하는 경우도 있습니다.
+이 매핑 테이블은 UWP 프로젝트에서 작업 하는 동안 Windows Phone Silverlight 프로젝트에서 소스 코드를 다시 사용 하는 경우 도움이 됩니다. 두 플랫폼 간에는 네임스페이스와 클래스의 이름(UI 컨트롤 포함)이 다릅니다. 대부분의 경우 간단히 네임스페이스 이름을 변경하면 코드가 컴파일됩니다. 클래스 또는 API 이름이 네임스페이스 이름과 함께 변경된 경우도 있습니다. 드물기는 하지만, 매핑이 더 복잡하여 접근 방법을 변경해야 하는 경우도 있습니다.
 
 **표를 사용 하는 방법:  ** 먼저 사용 중인 클래스의 이름을 검색 합니다. 매핑이 네임스페이스 이름을 변경하는 것보다 더 복잡할 경우 클래스가 나열됩니다. 클래스가 나열되지 않는 경우 매핑 시 네임스페이스만 변경하면 됩니다. 따라서 클래스의 네임스페이스 이름을 찾고 해당하는 UWP 네임스페이스 이름을 찾습니다. 클래스가 해당 네임스페이스에 있습니다. 네임스페이스가 나열되지 않는 경우 이름이 변경되지 않은 것입니다.
 
@@ -105,7 +105,7 @@ ms.locfileid: "74259065"
 | **System.Data.Linq.Mapping.ColumnAttribute** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | **System.Data.Linq.SqlClient.SqlHelpers** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | 장치 | |
-| **Microsoft.Devices**, **Microsoft.Devices.Sensors** 네임스페이스 | [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration), [**Windows.Devices.Enumeration.Pnp**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.Pnp), [**Windows.Devices.Input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input), [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors) namespaces |
+| **Microsoft.Devices**, **Microsoft.Devices.Sensors** 네임스페이스 | [**Windows**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration). n e t. i n t. [**p**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.Pnp)s e. i n [**t,** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)windows [](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors) |
 | **Microsoft.Devices.Camera**, **Microsoft.Devices.PhotoCamera** 클래스 | [**MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) 클래스입니다. 또한 [**CameraCaptureUI**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CameraCaptureUI) 클래스(Windows 전용). |
 | **Microsoft.Devices.CameraButtons** 클래스 | [**HardwareButtons**](https://docs.microsoft.com/uwp/api/Windows.Phone.UI.Input.HardwareButtons) 클래스 |
 | **Microsoft.Devices.CameraVideoBrushExtensions** 클래스 | [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CaptureElement) 클래스 |
@@ -116,7 +116,7 @@ ms.locfileid: "74259065"
 | **Microsoft.Devices.Sensors.Accelerometer**, **Compass** 클래스 | [  **Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors) 네임스페이스에서 |
 | **Microsoft.Devices.Sensors.Gyroscope** 클래스 | [**회전 계**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Gyrometer) 클래스 |
 | **Microsoft.Devices.Sensors.Motion** 클래스 | [**경사 계**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Inclinometer) 클래스 |
-| 세계화 | |
+| 전역화 | |
 | **System.Globalization** 네임스페이스 | [**Windows 세계화**](https://docs.microsoft.com/uwp/api/Windows.Globalization) 네임 스페이스 |
 | (ST = **System.Threading**) <br/> **ST.Thread.CurrentCulture** 속성 | (SG = **System.Globalization**) <br/> **S.CultureInfo.CurrentCulture** 속성 |
 | (ST = **System.Threading**) <br/> **ST.Thread.CurrentUICulture** 속성 | (SG = **System.Globalization**) <br/> **S.CultureInfo.CurrentUICulture** 속성 |
@@ -157,7 +157,7 @@ ms.locfileid: "74259065"
 | 위치 | |
 | **System.Device.Location** 네임스페이스 | [**Windows. 장치. 지리적**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation) 위치 네임 스페이스 |
 | **System.Device.GeoCoordinateWatcher** 클래스 | [**Geolocator**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator) 클래스 |
-| 지도 | |
+| 맵 | |
 | **Microsoft.Phone.Maps** 네임스페이스 | [**Windows 서비스 맵**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps) 네임 스페이스 |
 | **Microsoft.Phone.Maps.Controls** 네임스페이스 | [**Windows. .xaml**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps) 네임 스페이스 |
 | **Microsoft.Phone.Maps.Controls.Map** 클래스 | [**없습니다**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 클래스 |
@@ -208,7 +208,7 @@ ms.locfileid: "74259065"
 | **System.Reflection.Emit.ILGenerator** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | 반응적 확장 | |
 | **Microsoft.Phone.Reactive** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. |
-| 리플렉션 | |
+| 반사 | |
 | **System.Type** 클래스 | **System.Reflection.TypeInfo** 클래스. [UWP 앱용 .NET Framework의 리플렉션](https://docs.microsoft.com/dotnet/framework/reflection-and-codedom/reflection-for-windows-store-apps)을 참조하세요. |
 | 리소스 | |
 | **System.Resources.ResourceManager** 클래스 | (WA = **Windows.ApplicationModel**)<br/>[**WA. 리소스. Core**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core) 및 [**WA. 리소스**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources) 네임 스페이스, [**ResourceManager**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceManager) 클래스 [Windows 런타임 앱에서 리소스 만들기 및 검색](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))을 참조하세요. |

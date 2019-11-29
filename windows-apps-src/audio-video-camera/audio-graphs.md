@@ -43,26 +43,26 @@ Windows 런타임 오디오 그래프 API:
 -   XAudio2보다 훨씬 더 쉽게 사용할 수 있습니다.
 -   C++에 대해 지원될 뿐 아니라 C#에서도 사용할 수 있습니다.
 -   압축된 파일 형식을 포함하여 오디오 파일을 직접 사용할 수 있습니다. XAudio2는 오디오 버퍼에만 작동하며 파일 I/O 기능을 제공하지 않습니다.
--   Can use the low-latency audio pipeline in Windows 10.
+-   Windows 10에서 대기 시간이 짧은 오디오 파이프라인을 사용할 수 있습니다.
 -   기본 끝점 매개 변수를 사용할 때 자동 끝점 자동 전환을 지원합니다. 예를 들어 사용자가 디바이스의 스피커에서 헤드셋으로 전환하면 오디오는 새 입력으로 자동 리디렉션됩니다.
 
 ## <a name="audiograph-class"></a>AudioGraph 클래스
 
-[  **AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph) 클래스는 그래프를 구성하는 모든 노드의 부모입니다. 이 개체를 사용하여 모든 오디오 노드 유형의 인스턴스를 만들 수 있습니다. [  **AudioGraphSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraphSettings) 개체를 초기화하고, 그래프의 구성 설정을 포함한 후 [**AudioGraph.CreateAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createasync)를 호출하여 **AudioGraph** 클래스의 인스턴스를 만듭니다. 반환된 [**CreateAudioGraphResult**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.CreateAudioGraphResult)는 만들어진 오디오 그래프에 대한 액세스를 제공하고, 오디오 그래프 만들기가 실패하는 경우 오류 값을 제공합니다.
+[  **AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph) 클래스는 그래프를 구성하는 모든 노드의 부모입니다. 이 개체를 사용하여 모든 오디오 노드 유형의 인스턴스를 만들 수 있습니다. **** AudioGraphSettings[**개체를 초기화하고, 그래프의 구성 설정을 포함한 후**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraphSettings)AudioGraph.CreateAsync[**를 호출하여** AudioGraph](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createasync) 클래스의 인스턴스를 만듭니다. 반환된 [**CreateAudioGraphResult**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.CreateAudioGraphResult)는 만들어진 오디오 그래프에 대한 액세스를 제공하고, 오디오 그래프 만들기가 실패하는 경우 오류 값을 제공합니다.
 
 [!code-cs[DeclareAudioGraph](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareAudioGraph)]
 
 [!code-cs[InitAudioGraph](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetInitAudioGraph)]
 
--   All audio node types are created by using the Create\* methods of the **AudioGraph** class.
--   [  **AudioGraph.Start**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.start) 메서드를 사용하면 오디오 그래프가 오디오 데이터를 처리하기 시작합니다. [  **AudioGraph.Stop**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.stop) 메서드는 오디오 처리를 중지합니다. 그래프의 각 노드는 그래프가 실행되는 동안 독립적으로 시작 및 중지할 수 있지만 그래프가 중지되면 노드가 활성화되지 않습니다. [**ResetAllNodes**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.resetallnodes) causes all nodes in the graph to discard any data currently in their audio buffers.
+-   모든 오디오 노드 형식은 오디오 **그래프** 클래스의 Create\* 메서드를 사용 하 여 만듭니다.
+-   [  **AudioGraph.Start**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.start) 메서드를 사용하면 오디오 그래프가 오디오 데이터를 처리하기 시작합니다. [  **AudioGraph.Stop**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.stop) 메서드는 오디오 처리를 중지합니다. 그래프의 각 노드는 그래프가 실행되는 동안 독립적으로 시작 및 중지할 수 있지만 그래프가 중지되면 노드가 활성화되지 않습니다. [**ResetAllNodes**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.resetallnodes) 를 설정 하면 그래프의 모든 노드가 현재 오디오 버퍼에 있는 모든 데이터를 삭제 합니다.
 -   그래프가 오디오 데이터의 새 퀀텀 처리를 시작하면 [**QuantumStarted**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.quantumstarted) 이벤트가 발생합니다. 퀀텀 처리가 완료되면 [**QuantumProcessed**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.quantumprocessed) 이벤트가 발생합니다.
 
 -   필요한 유일한 [**AudioGraphSettings**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraphSettings) 속성은 [**AudioRenderCategory**](https://docs.microsoft.com/uwp/api/Windows.Media.Render.AudioRenderCategory)입니다. 이 값을 지정하면 시스템은 지정된 범주에 대해 오디오 파이프라인을 최적화할 수 있습니다.
--   오디오 그래프의 퀀텀 크기는 한 번에 처리되는 샘플 수를 결정합니다. 기본적으로 퀀텀 크기는 기본 샘플 속도에 따라 10밀리초입니다. [  **DesiredSamplesPerQuantum**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.desiredsamplesperquantum) 속성을 설정하여 사용자 지정 퀀텀 크기를 지정하는 경우 [**QuantumSizeSelectionMode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.quantumsizeselectionmode) 속성도 **ClosestToDesired**로 설정해야 합니다. 그러지 않으면 제공된 값이 무시됩니다. 이 값을 사용하는 경우 시스템은 사용자가 지정한 값에 최대한 가까운 퀀텀 크기를 선택합니다. 실제 퀀텀 크기를 확인하려면 만들어진 후 **AudioGraph**의 [**SamplesPerQuantum**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.samplesperquantum)을 확인합니다.
+-   오디오 그래프의 퀀텀 크기는 한 번에 처리되는 샘플 수를 결정합니다. 기본적으로 퀀텀 크기는 기본 샘플 속도에 따라 10밀리초입니다. [  **DesiredSamplesPerQuantum**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.desiredsamplesperquantum) 속성을 설정하여 사용자 지정 퀀텀 크기를 지정하는 경우 [**QuantumSizeSelectionMode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.quantumsizeselectionmode) 속성도 **ClosestToDesired**로 설정해야 합니다. 그러지 않으면 제공된 값이 무시됩니다. 이 값을 사용하는 경우 시스템은 사용자가 지정한 값에 최대한 가까운 퀀텀 크기를 선택합니다. 실제 퀀텀 크기를 확인하려면 만들어진 후 [AudioGraph**의** ](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.samplesperquantum)SamplesPerQuantum을 확인합니다.
 -   오디오 그래프를 파일로만 사용하고 오디오 장치로 출력하지 않으려는 경우 [**DesiredSamplesPerQuantum**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.desiredsamplesperquantum) 속성을 설정하지 말고 기본 퀀텀 크기를 사용하는 것이 좋습니다.
 -   [  **DesiredRenderDeviceAudioProcessing**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.desiredrenderdeviceaudioprocessing) 속성은 장치가 오디오 그래프의 출력에 대해 수행하는 기본 렌더 처리량을 결정합니다. **Default** 설정을 사용하면 시스템은 통해 지정된 오디오 렌더 범주에 대해 기본 오디오 처리를 사용할 수 있습니다. 이러한 처리 방식을 사용하면 특히 작은 스피커가 달린 모바일 장치와 같은 일부 장치에서 오디오 사운드가 크게 향상될 수 있습니다. **Raw** 설정은 수행되는 신호 처리량을 최소화하여 성능을 향상시킬 수 있지만 일부 장치에서 사운드 품질이 저하될 수 있습니다.
--   [  **QuantumSizeSelectionMode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.quantumsizeselectionmode)가 **LowestLatency**로 설정되면 오디오 그래프는 [**DesiredRenderDeviceAudioProcessing**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.desiredrenderdeviceaudioprocessing)에 대해 자동으로 **Raw**를 사용합니다.
+-   [  **QuantumSizeSelectionMode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.quantumsizeselectionmode)가 **LowestLatency**로 설정되면 오디오 그래프는DesiredRenderDeviceAudioProcessing[**에 대해 자동으로** Raw](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.desiredrenderdeviceaudioprocessing)를 사용합니다.
 - Windows 10, 버전 1803부터 [**AudioGraphSettings.MaxPlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.maxplaybackspeedfactor) 속성을 설정하여 [**AudioFileInputNode.PlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiofileinputnode.playbackspeedfactor), [**AudioFrameInputNode.PlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeinputnode.playbackspeedfactor), [**MediaSourceInputNode.PlaybackSpeedFactor**](https://docs.microsoft.com/uwp/api/windows.media.audio.mediasourceinputnode.playbackspeedfactor) 속성에 사용되는 최대값을 설정할 수 있습니다. 오디오 그래프가 1보다 큰 재생 속도 비율을 지원하면 시스템은 충분한 오디오 데이터 버퍼를 유지하기 위해 추가 메모리를 할당해야 합니다. 그렇기 때문에 **MaxPlaybackSpeedFactor**를 앱에 필요한 최소값으로 설정하면 앱의 메모리 사용량이 감소합니다. 앱이 정상 속도로만 콘텐츠를 재생할 경우 MaxPlaybackSpeedFactor를 1로 설정하는 것이 좋습니다.
 -   [  **EncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.encodingproperties)는 그래프에서 사용되는 오디오 형식을 결정합니다. 32비트 부동 소수점 형식만이 지원됩니다.
 -   [  **PrimaryRenderDevice**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.primaryrenderdevice)는 오디오 그래프에 대한 기본 렌더 장치를 설정합니다. 이를 설정하지 않으면 기본 시스템 장치가 사용됩니다. 기본 렌더 장치는 그래프의 다른 노드에 대한 퀀텀 크기를 계산하는 데 사용됩니다. 시스템에 오디오 렌더 장치가 없으면 오디오 그래프가 만들어지지 않습니다.
@@ -73,20 +73,20 @@ Windows 런타임 오디오 그래프 API:
 
 ##  <a name="device-input-node"></a>디바이스 입력 노드
 
-장치 입력 노드는 마이크와 같이 시스템에 연결된 오디오 캡처 장치에서 그래프로 오디오를 공급합니다. [  **CreateDeviceInputNodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createdeviceinputnodeasync)를 호출하여 시스템의 기본 오디오 캡처 장치를 사용하는 [**DeviceInputNode**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioDeviceInputNode) 개체를 만듭니다. [  **AudioRenderCategory**](https://docs.microsoft.com/uwp/api/Windows.Media.Render.AudioRenderCategory)를 제공하여 시스템에서 지정된 범주에 대해 오디오 파이프라인을 최적화할 수 있도록 합니다.
+장치 입력 노드는 마이크와 같이 시스템에 연결된 오디오 캡처 장치에서 그래프로 오디오를 공급합니다. [  **CreateDeviceInputNodeAsync**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioDeviceInputNode)를 호출하여 시스템의 기본 오디오 캡처 장치를 사용하는 [**DeviceInputNode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createdeviceinputnodeasync) 개체를 만듭니다. [  **AudioRenderCategory**](https://docs.microsoft.com/uwp/api/Windows.Media.Render.AudioRenderCategory)를 제공하여 시스템에서 지정된 범주에 대해 오디오 파이프라인을 최적화할 수 있도록 합니다.
 
 [!code-cs[DeclareDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareDeviceInputNode)]
 
 
 [!code-cs[CreateDeviceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateDeviceInputNode)]
 
-If you want to specify a specific audio capture device for the device input node, you can use the [**Windows.Devices.Enumeration.DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) class to get a list of the system's available audio capture devices by calling [**FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) and passing in the audio render device selector returned by [**Windows.Media.Devices.MediaDevice.GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector). 반환된 **DeviceInformation** 개체 중 하나를 프로그래밍 방식으로 선택하거나 사용자가 디바이스를 선택한 후 해당 디바이스를 [**CreateDeviceInputNodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createdeviceinputnodeasync)에 전달할 수 있도록 하는 UI를 표시할 수 있습니다.
+장치 입력 노드에 대 한 특정 오디오 캡처 장치를 지정 하려면 [**FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) 를 호출 하 고 [**GetAudioCaptureSelector**](https://docs.microsoft.com/uwp/api/windows.media.devices.mediadevice.getaudiocaptureselector)에서 반환 된 오디오 렌더링 장치 선택기를 전달 하 여 시스템의 사용 가능한 오디오 캡처 장치 목록을 가져오려면 [**windows**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) . x s e. m i c. m a c. 반환된 **DeviceInformation** 개체 중 하나를 프로그래밍 방식으로 선택하거나 사용자가 디바이스를 선택한 후 해당 디바이스를 [**CreateDeviceInputNodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createdeviceinputnodeasync)에 전달할 수 있도록 하는 UI를 표시할 수 있습니다.
 
 [!code-cs[EnumerateAudioCaptureDevices](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetEnumerateAudioCaptureDevices)]
 
 ##  <a name="device-output-node"></a>디바이스 출력 노드
 
-장치 출력 노드는 그래프의 오디오를 스피커 또는 헤드셋과 같은 오디오 렌더 장치로 밀어넣습니다. [  **CreateDeviceOutputNodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createdeviceoutputnodeasync)를 호출하여 [**DeviceOutputNode**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioDeviceOutputNode)를 만듭니다. 출력 노드는 오디오 그래프의 [**PrimaryRenderDevice**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.primaryrenderdevice)를 사용합니다.
+장치 출력 노드는 그래프의 오디오를 스피커 또는 헤드셋과 같은 오디오 렌더 장치로 밀어넣습니다. [  **CreateDeviceOutputNodeAsync**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioDeviceOutputNode)를 호출하여 [**DeviceOutputNode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createdeviceoutputnodeasync)를 만듭니다. 출력 노드는 오디오 그래프의 [**PrimaryRenderDevice**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographsettings.primaryrenderdevice)를 사용합니다.
 
 [!code-cs[DeclareDeviceOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareDeviceOutputNode)]
 
@@ -94,7 +94,7 @@ If you want to specify a specific audio capture device for the device input node
 
 ##  <a name="file-input-node"></a>파일 입력 노드
 
-파일 입력 노드를 사용하여 오디오 파일의 데이터를 그래프에 공급할 수 있습니다. [  **CreateFileInputNodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createfileinputnodeasync)를 호출하여 [**AudioFileInputNode**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioFileInputNode)를 만듭니다.
+파일 입력 노드를 사용하여 오디오 파일의 데이터를 그래프에 공급할 수 있습니다. [  **CreateFileInputNodeAsync**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioFileInputNode)를 호출하여 [**AudioFileInputNode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createfileinputnodeasync)를 만듭니다.
 
 [!code-cs[DeclareFileInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareFileInputNode)]
 
@@ -109,7 +109,7 @@ If you want to specify a specific audio capture device for the device input node
 
 ##  <a name="mediasource-input-node"></a>MediaSource 입력 노드
 
-[  **MediaSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaSource) 클래스는 다양한 소스에서 미디어를 참조하는 일반적인 방법을 제공하며 디스크, 스트림 또는 적응형 스트리밍 네트워크 소스의 파일일 수 있는 기본 미디어 형식에 관계없이 미디어 데이터에 액세스하기 위한 공통 모델을 공개합니다. [**MediaSourceAudioInputNode](https://docs.microsoft.com/uwp/api/windows.media.audio.mediasourceaudioinputnode) 노드를 사용하여 **MediaSource**의 오디오 데이터를 오디오 파일로 보낼 수 있습니다. [  **CreateMediaSourceAudioInputNodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createmediasourceaudioinputnodeasync#Windows_Media_Audio_AudioGraph_CreateMediaSourceAudioInputNodeAsync_Windows_Media_Core_MediaSource_)를 호출하여 **MediaSourceAudioInputNode**를 만들고 재생할 콘텐츠를 대표하는 **MediaSource** 개체를 전달합니다. 작동 상태를 결정하기 위해 사용할 수 있는 [**CreateMediaSourceAudioInputNodeResult](https://docs.microsoft.com/uwp/api/windows.media.audio.createmediasourceaudioinputnoderesult)를 반환하기 위해 [**Status**](https://docs.microsoft.com/uwp/api/windows.media.audio.createmediasourceaudioinputnoderesult.status) 속성을 확인합니다. 상태가 **Success**인 경우 만들어진 **MediaSourceAudioInputNode**를 가져오려면 [**Node**](https://docs.microsoft.com/uwp/api/windows.media.audio.createmediasourceaudioinputnoderesult.node) 속성에 액세스합니다. 네트워크를 통해 콘텐츠 스트리밍을 나타내는 AdaptiveMediaSource 개체에서 노드를 생성하는 예는 다음과 같습니다. **MediaSource** 작업에 대한 자세한 내용은 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)을 참조하세요. 인터넷을 통한 스트리밍 미디어 콘텐츠에 대한 자세한 내용은 [적응 스트리밍](adaptive-streaming.md)을 참조하세요.
+[  **MediaSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaSource) 클래스는 다양한 소스에서 미디어를 참조하는 일반적인 방법을 제공하며 디스크, 스트림 또는 적응형 스트리밍 네트워크 소스의 파일일 수 있는 기본 미디어 형식에 관계없이 미디어 데이터에 액세스하기 위한 공통 모델을 공개합니다. [**MediaSourceAudioInputNode](https://docs.microsoft.com/uwp/api/windows.media.audio.mediasourceaudioinputnode) 노드를 사용하여 **MediaSource**의 오디오 데이터를 오디오 파일로 보낼 수 있습니다. **** CreateMediaSourceAudioInputNodeAsync[**를 호출하여** MediaSourceAudioInputNode](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createmediasourceaudioinputnodeasync#Windows_Media_Audio_AudioGraph_CreateMediaSourceAudioInputNodeAsync_Windows_Media_Core_MediaSource_)를 만들고 재생할 콘텐츠를 대표하는 **MediaSource** 개체를 전달합니다. 작동 상태를 결정하기 위해 사용할 수 있는 [**CreateMediaSourceAudioInputNodeResult](https://docs.microsoft.com/uwp/api/windows.media.audio.createmediasourceaudioinputnoderesult)를 반환하기 위해 [**Status**](https://docs.microsoft.com/uwp/api/windows.media.audio.createmediasourceaudioinputnoderesult.status) 속성을 확인합니다. 상태가 **Success**인 경우 만들어진 **MediaSourceAudioInputNode**를 가져오려면 [**Node**](https://docs.microsoft.com/uwp/api/windows.media.audio.createmediasourceaudioinputnoderesult.node) 속성에 액세스합니다. 네트워크를 통해 콘텐츠 스트리밍을 나타내는 AdaptiveMediaSource 개체에서 노드를 생성하는 예는 다음과 같습니다. **MediaSource** 작업에 대한 자세한 내용은 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)을 참조하세요. 인터넷을 통한 스트리밍 미디어 콘텐츠에 대한 자세한 내용은 [적응 스트리밍](adaptive-streaming.md)을 참조하세요.
 
 [!code-cs[DeclareMediaSourceInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareMediaSourceInputNode)]
 
@@ -129,7 +129,7 @@ If you want to specify a specific audio capture device for the device input node
 
 ##  <a name="file-output-node"></a>파일 출력 노드
 
-파일 출력 노드를 사용하여 그래프의 오디오 데이터를 오디오 파일로 보낼 수 있습니다. [  **CreateFileOutputNodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createfileoutputnodeasync)를 호출하여 [**AudioFileOutputNode**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioFileOutputNode)를 만듭니다.
+파일 출력 노드를 사용하여 그래프의 오디오 데이터를 오디오 파일로 보낼 수 있습니다. [  **CreateFileOutputNodeAsync**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioFileOutputNode)를 호출하여 [**AudioFileOutputNode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createfileoutputnodeasync)를 만듭니다.
 
 [!code-cs[DeclareFileOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareFileOutputNode)]
 
@@ -137,11 +137,11 @@ If you want to specify a specific audio capture device for the device input node
 [!code-cs[CreateFileOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetCreateFileOutputNode)]
 
 -   파일 출력 노드는 wav, mp3, wma, m4a 파일 형식을 지원합니다.
--   [  **AudioFileOutputNode.FinalizeAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiofileoutputnode.finalizeasync)를 호출하기 전에 [**AudioFileOutputNode.Stop**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiofileoutputnode.stop)을 호출하여 노드 처리를 중지해야 합니다. 그러지 않으면 예외가 발생합니다.
+-   [  **AudioFileOutputNode.FinalizeAsync**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiofileoutputnode.stop)를 호출하기 전에 [**AudioFileOutputNode.Stop**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiofileoutputnode.finalizeasync)을 호출하여 노드 처리를 중지해야 합니다. 그러지 않으면 예외가 발생합니다.
 
 ##  <a name="audio-frame-input-node"></a>오디오 프레임 입력 노드
 
-오디오 프레임 입력 노드를 사용하면 자체 코드에서 생성하는 오디오 데이터를 오디오 그래프에 밀어넣을 수 있습니다. 이를 통해 주문형 소프트웨어 신시사이저를 만들 수 있습니다. [  **CreateFrameInputNode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createframeinputnode)를 호출하여 [**AudioFrameInputNode**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioFrameInputNode)를 만듭니다.
+오디오 프레임 입력 노드를 사용하면 자체 코드에서 생성하는 오디오 데이터를 오디오 그래프에 밀어넣을 수 있습니다. 이를 통해 주문형 소프트웨어 신시사이저를 만들 수 있습니다. [  **CreateFrameInputNode**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioFrameInputNode)를 호출하여 [**AudioFrameInputNode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createframeinputnode)를 만듭니다.
 
 [!code-cs[DeclareFrameInputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareFrameInputNode)]
 
@@ -152,7 +152,7 @@ If you want to specify a specific audio capture device for the device input node
 
 [!code-cs[QuantumStarted](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetQuantumStarted)]
 
--   **QuantumStarted** 이벤트 처리기에 전달된 [**FrameInputNodeQuantumStartedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs) 개체는 오디오 그래프가 처리를 위해 퀀텀을 채워야 하는 샘플 수를 나타내는 [**RequiredSamples**](https://docs.microsoft.com/uwp/api/windows.media.audio.frameinputnodequantumstartedeventargs.requiredsamples) 속성을 노출합니다.
+-   [QuantumStarted**이벤트 처리기에 전달된**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.FrameInputNodeQuantumStartedEventArgs)FrameInputNodeQuantumStartedEventArgs 개체는 오디오 그래프가 처리를 위해 퀀텀을 채워야 하는 샘플 수를 나타내는 [**RequiredSamples**](https://docs.microsoft.com/uwp/api/windows.media.audio.frameinputnodequantumstartedeventargs.requiredsamples) 속성을 노출합니다.
 -   [  **AudioFrameInputNode.AddFrame**](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeinputnode.addframe)을 호출하여 오디오 데이터로 채워진 [**AudioFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioFrame) 개체를 그래프에 전달합니다.
 - 오디오 데이터가 포함된 **MediaFrameReader**를 사용하기 위한 새로운 API 세트가 Windows 10, 1803 버전에 도입되었습니다. 이러한 API를 통해 **AddFrame** 메서드를 사용하여 **FrameInputNode**로 전달할 수 있는 미디어 프레임 소스에서 **AudioFrame** 개체를 얻을 수 있습니다. 자세한 내용은 [MediaFrameReader를 사용하여 오디오 프레임 처리](process-audio-frames-with-mediaframereader.md)를 참조하세요.
 -   **GenerateAudioData** 도우미 메서드의 구현 예제는 다음과 같습니다.
@@ -161,20 +161,20 @@ If you want to specify a specific audio capture device for the device input node
 
 [!code-cs[ComImportIMemoryBufferByteAccess](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetComImportIMemoryBufferByteAccess)]
 
-다음 코드는 [**AudioFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioFrame)을 만든 후 오디오 데이터로 채우는 **GenerateAudioData** 도우미 메서드의 구현 예제를 보여 줍니다.
+다음 코드는AudioFrame[**을 만든 후 오디오 데이터로 채우는** GenerateAudioData](https://docs.microsoft.com/uwp/api/Windows.Media.AudioFrame) 도우미 메서드의 구현 예제를 보여 줍니다.
 
 [!code-cs[GenerateAudioData](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetGenerateAudioData)]
 
 -   이 메서드는 Windows 런타임 형식의 기반이 되는 원시 버퍼에 액세스하므로 **unsafe** 키워드를 사용하여 선언해야 합니다. 또한, 안전하지 않은 코드의 컴파일을 허용하도록 Microsoft Visual Studio에서 프로젝트를 구성해야 합니다. 그러려면 프로젝트의 **속성** 페이지를 열고 **빌드** 속성 페이지를 클릭한 후 **안전하지 않은 코드 허용** 확인란을 선택합니다.
--   원하는 버퍼 크기를 생성자로 전달하여 **Windows.Media** 네임스페이스에서 [**AudioFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioFrame)의 새 인스턴스를 초기화합니다. 버퍼 크기는 샘플 수에 각 샘플의 크기를 곱한 값입니다.
--   [  **LockBuffer**](https://docs.microsoft.com/uwp/api/windows.media.audioframe.lockbuffer)를 호출하여 오디오 프레임의 [**AudioBuffer**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioBuffer)를 가져옵니다.
--   [  **CreateReference**](https://docs.microsoft.com/uwp/api/windows.media.audiobuffer.createreference)를 호출하여 오디오 버퍼에서 [**IMemoryBufferByteAccess**](https://docs.microsoft.com/previous-versions/mt297505(v=vs.85)) COM 인터페이스의 인스턴스를 가져옵니다.
+-   원하는 버퍼 크기를 생성자로 전달하여 [Windows.Media**네임스페이스에서**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioFrame)AudioFrame의 새 인스턴스를 초기화합니다. 버퍼 크기는 샘플 수에 각 샘플의 크기를 곱한 값입니다.
+-   [  **LockBuffer**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioBuffer)를 호출하여 오디오 프레임의 [**AudioBuffer**](https://docs.microsoft.com/uwp/api/windows.media.audioframe.lockbuffer)를 가져옵니다.
+-   [  **CreateReference**](https://docs.microsoft.com/previous-versions/mt297505(v=vs.85))를 호출하여 오디오 버퍼에서 [**IMemoryBufferByteAccess**](https://docs.microsoft.com/uwp/api/windows.media.audiobuffer.createreference) COM 인터페이스의 인스턴스를 가져옵니다.
 -   [  **IMemoryBufferByteAccess.GetBuffer**](https://docs.microsoft.com/windows/desktop/WinRT/imemorybufferbyteaccess-getbuffer)를 호출한 후 오디오 데이터의 샘플 데이터 형식으로 캐스팅하여 원시 오디오 버퍼 데이터에 대한 포인터를 가져옵니다.
 -   데이터로 버퍼를 채우고 오디오 그래프로 제출하기 위해 [**AudioFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioFrame)을 반환합니다.
 
 ##  <a name="audio-frame-output-node"></a>오디오 프레임 출력 노드
 
-오디오 프레임 출력 노드를 사용하여 오디오 그래프에서 오디오 데이터 출력을 받은 후 사용자가 만든 사용자 지정 코드로 처리할 수 있습니다. 이에 대한 예제 시나리오는 오디오 출력에 대해 신호 분석을 수행하는 것입니다. [  **CreateFrameOutputNode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createframeoutputnode)를 호출하여 [**AudioFrameOutputNode**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioFrameOutputNode)를 만듭니다.
+오디오 프레임 출력 노드를 사용하여 오디오 그래프에서 오디오 데이터 출력을 받은 후 사용자가 만든 사용자 지정 코드로 처리할 수 있습니다. 이에 대한 예제 시나리오는 오디오 출력에 대해 신호 분석을 수행하는 것입니다. [  **CreateFrameOutputNode**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioFrameOutputNode)를 호출하여 [**AudioFrameOutputNode**](https://docs.microsoft.com/uwp/api/windows.media.audio.audiograph.createframeoutputnode)를 만듭니다.
 
 [!code-cs[DeclareFrameOutputNode](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetDeclareFrameOutputNode)]
 
@@ -183,7 +183,7 @@ If you want to specify a specific audio capture device for the device input node
 오디오 그래프가 오디오 데이터의 퀀텀 처리를 시작하면 [**AudioGraph.QuantumStarted**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph.QuantumStarted) 이벤트가 발생합니다. 이 이벤트의 처리기 내에서 오디오 데이터에 액세스할 수 있습니다. 
 
 > [!NOTE]
-> 오디오 그래프와 동기화를 유지하며 규칙적인 흐름에 따라 오디오 프레임을 검색하려면 동시 **QuantumStarted** 이벤트 처리기 내에서 [AudioFrameOutputNode.GetFrame](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeoutputnode.GetFrame)을 호출하세요. **QuantumProcessed** 이벤트는 오디오 엔진이 오디오 처리를 완료함과 동시에 발생하므로 흐름이 불규칙적일 수 있습니다. 따라서 오디오 프레임 데이터 처리를 동기화하려면 **QuantumProcessed** 이벤트를 사용해서는 안 됩니다.
+> 오디오 그래프와 동기화를 유지하며 규칙적인 흐름에 따라 오디오 프레임을 검색하려면 동시 [QuantumStarted](https://docs.microsoft.com/uwp/api/windows.media.audio.audioframeoutputnode.GetFrame) 이벤트 처리기 내에서 **AudioFrameOutputNode.GetFrame**을 호출하세요. **QuantumProcessed** 이벤트는 오디오 엔진이 오디오 처리를 완료함과 동시에 발생하므로 흐름이 불규칙적일 수 있습니다. 따라서 오디오 프레임 데이터 처리를 동기화하려면 **QuantumProcessed** 이벤트를 사용해서는 안 됩니다.
 
 [!code-cs[SnippetQuantumStartedFrameOutput](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetQuantumStartedFrameOutput)]
 
@@ -193,8 +193,8 @@ If you want to specify a specific audio capture device for the device input node
 [!code-cs[ProcessFrameOutput](./code/AudioGraph/cs/MainPage.xaml.cs#SnippetProcessFrameOutput)]
 
 -   위의 오디오 프레임 입력 노드 예제와 마찬가지로, **IMemoryBufferByteAccess** COM 인터페이스를 선언하고 안전하지 않은 코드를 허용하도록 프로젝트를 구성하여 기본 오디오 버퍼에 액세스할 수 있도록 해야 합니다.
--   [  **LockBuffer**](https://docs.microsoft.com/uwp/api/windows.media.audioframe.lockbuffer)를 호출하여 오디오 프레임의 [**AudioBuffer**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioBuffer)를 가져옵니다.
--   [  **CreateReference**](https://docs.microsoft.com/uwp/api/windows.media.audiobuffer.createreference)를 호출하여 오디오 버퍼에서 **IMemoryBufferByteAccess** COM 인터페이스의 인스턴스를 가져옵니다.
+-   [  **LockBuffer**](https://docs.microsoft.com/uwp/api/Windows.Media.AudioBuffer)를 호출하여 오디오 프레임의 [**AudioBuffer**](https://docs.microsoft.com/uwp/api/windows.media.audioframe.lockbuffer)를 가져옵니다.
+-   **** CreateReference[**를 호출하여 오디오 버퍼에서** IMemoryBufferByteAccess](https://docs.microsoft.com/uwp/api/windows.media.audiobuffer.createreference) COM 인터페이스의 인스턴스를 가져옵니다.
 -   **IMemoryBufferByteAccess.GetBuffer**를 호출한 후 오디오 데이터의 샘플 데이터 형식으로 캐스팅하여 원시 오디오 버퍼 데이터에 대한 포인터를 가져옵니다.
 
 ## <a name="node-connections-and-submix-nodes"></a>노드 연결 및 서브믹스 노드

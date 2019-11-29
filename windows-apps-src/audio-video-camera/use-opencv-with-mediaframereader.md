@@ -58,7 +58,7 @@ ms.locfileid: "74255952"
 
 
 ## <a name="handle-the-framearrived-event"></a>FrameArrived 이벤트 처리
-프레임 읽기 프로그램에서 새 프레임을 사용할 수 있을 때마다 **FrameArrived** 이벤트가 발생합니다. **[TryAcquireLatestFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.TryAcquireLatestFrame)** 을 호출하여, 프레임이 있을 경우 가져옵니다. MediaFrameReference **[에서 ](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference)SoftwareBitmap** 을 가져옵니다. 이 예제에 사용된 **CVHelper** 클래스의 이미지는 프리멀티플라이된 알파가 있는 BRGA8 픽셀 형식을 사용해야 합니다. 이벤트로 전달된 프레임의 형식이 다른 경우 **SoftwareBitmap**을 올바른 형식으로 변환합니다. 그런 다음, 흐림 작업의 대상으로 사용할 **SoftwareBitmap**을 생성합니다. 소스 이미지 속성이 생성자에 대한 인수로 사용되어, 해당하는 형식으로 비트맵을 만듭니다. 도우미 클래스 **Blur** 메서드를 호출하여 프레임을 처리합니다. 마지막으로, 초기화에 사용된 XAML **Image** 컨트롤로 이미지를 표시하는 **FrameRenderer** 도우미 클래스의 메서드 **PresentSoftwareBitmap**으로 흐림 작업의 출력 이미지를 전달합니다.
+프레임 읽기 프로그램에서 새 프레임을 사용할 수 있을 때마다 **FrameArrived** 이벤트가 발생합니다. **[TryAcquireLatestFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader.TryAcquireLatestFrame)** 을 호출하여, 프레임이 있을 경우 가져옵니다. **** MediaFrameReference **[에서 ](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference)SoftwareBitmap**을 가져옵니다. 이 예제에 사용된 **CVHelper** 클래스의 이미지는 프리멀티플라이된 알파가 있는 BRGA8 픽셀 형식을 사용해야 합니다. 이벤트로 전달된 프레임의 형식이 다른 경우 **SoftwareBitmap**을 올바른 형식으로 변환합니다. 그런 다음, 흐림 작업의 대상으로 사용할 **SoftwareBitmap**을 생성합니다. 소스 이미지 속성이 생성자에 대한 인수로 사용되어, 해당하는 형식으로 비트맵을 만듭니다. 도우미 클래스 **Blur** 메서드를 호출하여 프레임을 처리합니다. 마지막으로, 초기화에 사용된 XAML **Image** 컨트롤로 이미지를 표시하는 **FrameRenderer** 도우미 클래스의 메서드 **PresentSoftwareBitmap**으로 흐림 작업의 출력 이미지를 전달합니다.
 
 [!code-cs[OpenCVFrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameArrived)]
 

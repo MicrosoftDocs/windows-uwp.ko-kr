@@ -6,23 +6,23 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 지도 인증 키, 지도 컨트롤
 ms.localizationpriority: medium
-ms.openlocfilehash: bb6cf66a6725e8231fac693a81a39bc2f0b15fd2
-ms.sourcegitcommit: 68051d2adcf3facc036c9f4c76d82bb4d342a75f
+ms.openlocfilehash: c3bc74d83c3f713149e9001de4ec10fe0a4706de
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67498896"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259385"
 ---
 # <a name="request-a-maps-authentication-key"></a>지도 인증 키 요청
 
 
 
 
-[**Windows.Services.Maps**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps) 네임스페이스에서 [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 및 지도 서비스를 사용하려면 먼저 [유니버설 Windows 앱](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)을 인증해야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 항목에서는 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 지도 인증 키를 요청하고 이를 앱에 추가하는 방법을 설명합니다.
+[  ](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)Windows.Services.Maps[**네임스페이스에서**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)MapControl[**및 지도 서비스를 사용하려면 먼저**유니버설 Windows 앱](https://docs.microsoft.com/uwp/api/Windows.Services.Maps)을 인증해야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 항목에서는 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 지도 인증 키를 요청하고 이를 앱에 추가하는 방법을 설명합니다.
 
-**팁** 앱에서 지도를 사용하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](https://go.microsoft.com/fwlink/p/?LinkId=619979)에서 다음 샘플을 다운로드하세요.
+**팁** 앱에서 지도를 사용하는 방법을 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](https://github.com/Microsoft/Windows-universal-samples)에서 다음 샘플을 다운로드하세요.
 
--   [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+-   [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 
 ## <a name="get-a-key"></a>키 가져오기
 
@@ -31,7 +31,7 @@ ms.locfileid: "67498896"
 
 새 키를 만들려면
 
-1.  브라우저에서 Bing Maps 개발자 센터로 이동 ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/)).
+1.  브라우저에서 Bing Maps 개발자 센터 ([https://www.bingmapsportal.com](https://www.bingmapsportal.com/))로 이동 합니다.
 
 2.  로그인하라는 메시지가 표시되면 Microsoft 계정을 입력하고 **로그인**을 클릭합니다.
 
@@ -46,9 +46,9 @@ ms.locfileid: "67498896"
 7.  **키 만들기** 양식을 작성한 다음 **만들기**를 클릭합니다.
 
     -   **응용 프로그램 이름:** 응용 프로그램의 이름입니다.
-    -   **응용 프로그램 URL (선택 사항):** 응용 프로그램의 URL입니다.
-    -   **키 형식:** 선택 **기본적인** 하거나 **Enterprise**합니다.
-    -   **응용 프로그램 형식:** 선택 **Windows 응용 프로그램** 유니버설 Windows 앱에서 사용 합니다.
+    -   **응용 프로그램 URL(옵션):** 응용 프로그램의 URL입니다.
+    -   **키 유형:** **기본**또는 **엔터프라이즈**를 선택합니다.
+    -   **응용 프로그램 유형:** 유니버설 Windows 앱에서 사용할 **Windows 응용 프로그램** 을 선택 합니다.
 
     다음은 양식이 표시되는 모양의 예입니다.
 
@@ -90,7 +90,7 @@ ms.locfileid: "67498896"
 ## <a name="related-topics"></a>관련 항목
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
-* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [UWP 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [지도에 대한 디자인 지침](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
-* [빌드 2015 비디오: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)
+* [빌드 2015 비디오: Windows 앱의 휴대폰, 태블릿 및 PC에서 맵 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP 교통 앱 샘플](https://github.com/Microsoft/Windows-appsample-trafficapp)

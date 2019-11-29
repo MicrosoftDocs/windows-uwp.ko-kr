@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, microsoft, windows 10, 자습서, 온라인 과정, 블로그, 이벤트
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 64d4fc1c85ae4056da02f987ca654305a883d2c6
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: 8870c1e269eb2c5f049c5431d6360e8c11570c0b
+ms.sourcegitcommit: 4cb3ee28baa8020ec925b0bdd896ab197a1ddadb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313412"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74309166"
 ---
 # <a name="resources-for-developing-with-python-on-windows"></a>Windows에서 Python으로 개발하기 위한 리소스
 
@@ -56,6 +56,8 @@ Windows 10을 실행하는 머신으로 작업하는 Python 개발자에게 권�
 - [Python.org 자습서](https://docs.python.org/3/tutorial/index.html): Python 언어 및 시스템의 기본 개념과 기능을 자유로운 형식으로 소개합니다.
 
 - [Lynda.com의 Python 학습](https://www.lynda.com/Python-tutorials/Learning-Python/661773-2.html): Python에 대한 기본적인 내용을 소개합니다.
+
+- [Real Python](https://realpython.com/): Python 개발자 리소스 센터 - Python 자습서, 비디오 코스, 퀴즈, 책, 코드 예제 등.
 
 ## <a name="web-development"></a>웹 개발
 

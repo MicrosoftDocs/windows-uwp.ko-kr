@@ -6,18 +6,18 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 지도 컨트롤, 지도 보기
 ms.localizationpriority: medium
-ms.openlocfilehash: 366a6212f8974ef3d3fedffa8f2d657e08a1b549
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: cc12f6c9b9177bce9a91288fdd2c43c118be5f61
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318668"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74260425"
 ---
 # <a name="display-maps-with-2d-3d-and-streetside-views"></a>2D, 3D 및 Streetside 뷰가 있는 지도 표시
 
 지도 *장소 카드*라는 빠른 해제 가능 창 또는 전체 기능을 갖춘 지도 컨트롤에서 지도를 표시할 수 있습니다.
 
-[지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)을 다운로드하여 이 가이드에 설명된 몇 가지 기능을 시도해 보세요.
+[지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)을 다운로드하여 이 가이드에 설명된 몇 가지 기능을 시도해 보세요.
 
 <a id="placecard" />
 
@@ -137,14 +137,14 @@ pageGrid.Children.Add(MapControl2);
 
 ### <a name="get-and-set-a-maps-authentication-key"></a>지도 인증 키 얻기 및 설정
 
-[  **MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 및 지도 서비스를 사용하려면 지도 인증 키를 [**MapServiceToken**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken) 속성 값으로 지정해야 합니다. 위 예제에서 `EnterYourAuthenticationKeyHere`을 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 가져온 키로 바꿉니다. 텍스트 **경고: 지정 되지 않은 MapServiceToken** 컨트롤 아래에 표시 되 지도 인증 키를 지정할 때까지 계속 됩니다. 지도 인증 키를 얻고 설정하는 방법에 대한 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
+[  **MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 및 지도 서비스를 사용하려면 지도 인증 키를 [**MapServiceToken**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken) 속성 값으로 지정해야 합니다. 위 예제에서 `EnterYourAuthenticationKeyHere`을 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)에서 가져온 키로 바꿉니다. 지도 인증 키를 지정할 때까지 텍스트 **경고: MapServiceToken이 지정되지 않음**이 컨트롤 아래에 계속 표시됩니다. 지도 인증 키를 얻고 설정하는 방법에 대한 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
 
 ## <a name="set-the-location-of-a-map"></a>지도의 위치 설정
 지도에서 원하는 위치를 가리키거나 사용자의 현재 위치를 사용합니다.  
 
 ### <a name="set-a-starting-location-for-the-map"></a>지도의 시작 위치 설정
 
-코드에서 [**MapControl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.center)의 [**Center**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 속성을 지정하거나 XAML 태그에서 속성을 바인딩하여 지도에 표시할 위치를 지정합니다. 다음 예에서는 시애틀시를 중심으로 하여 지도를 표시합니다.
+코드에서 [**MapControl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.center)의 [**Center**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 속성을 지정하거나 XAML 태그에서 속성을 바인딩하여 지도에 표시할 위치를 지정합니다. 다음 예에서는 시애틀 시를 중심으로 하여 지도를 표시합니다.
 
 > [!NOTE]
 > 문자열을 [**Geopoint**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint)로 변환할 수 없으므로 데이터 바인딩을 사용하지 않을 경우 XAML 태그에서 [**Center**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.center) 속성 값을 지정할 수 없습니다. 이 제한 사항은 [**MapControl.Location**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.setlocation) 연결된 속성에도 적용됩니다.
@@ -168,7 +168,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 ### <a name="set-the-current-location-of-the-map"></a>지도의 현재 위치 설정
 
-앱이 사용자 위치에 액세스할 수 있으려면 먼저 [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.requestaccessasync) 메서드를 호출해야 합니다. 이때 앱이 포그라운드에 있어야 하고 **RequestAccessAsync**가 UI 스레드에서 호출되어야 합니다. 사용자가 자신의 위치에 대한 권한을 앱에 부여하기 전에는 앱이 위치 데이터에 액세스할 수 없습니다.
+앱이 사용자 위치에 액세스할 수 있으려면 먼저 [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.requestaccessasync) 메서드를 호출해야 합니다. 이때 앱이 포그라운드에 있어야 하고 **RequestAccessAsync**이(가) UI 스레드에서 호출되어야 합니다. 사용자가 자신의 위치에 대한 권한을 앱에 부여하기 전에는 앱이 위치 데이터에 액세스할 수 없습니다.
 
 [  **Geolocator**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.getgeopositionasync) 클래스의 [**GetGeopositionAsync**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geolocator) 메서드를 사용하여 장치의 현재 위치를 가져옵니다(위치를 사용할 수 없는 경우). 해당 [**Geopoint**](https://docs.microsoft.com/uwp/api/Windows.Devices.Geolocation.Geopoint)를 가져오려면 지리적 위치의 지리적 좌표에 대한 [**Point**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geocoordinate.point) 속성을 사용합니다. 자세한 내용은 [현재 위치 가져오기](get-location.md)를 참조하세요.
 
@@ -222,7 +222,7 @@ myMap.StyleSheet = MapStyleSheet.RoadDark();
 
 JSON을 사용하여 사용자 지정 스타일을 정의한 다음, 이 JSON을 사용하여 [**MapStyleSheet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet) 개체를 만들 수 있습니다.
 
-스타일 시트를 사용 하 여 대화형으로 JSON을 만들 수 있습니다 합니다 [맵 스타일 시트 편집기](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) 응용 프로그램입니다.
+스타일 시트 JSON은 [지도 스타일 시트 편집기](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft) 응용 프로그램을 사용 하 여 대화형으로 만들 수 있습니다.
 
 ```csharp
 myMap.StyleSheet = MapStyleSheet.ParseFromJson(@"
@@ -284,24 +284,24 @@ myMap.StyleSheet = MapStyleSheet.Combine(new List<MapStyleSheet> { builtInSheet,
 
 원하는 효과에 맞는 각도를 얻기 위해 지도 카메라를 확대, 축소, 회전, 이동합니다. 다음 속성을 시도해 보세요.
 
--   [  **Center**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.center) 속성을 설정하여 지도의 **center**를 지리적 지점으로 설정합니다.
--   [  **ZoomLevel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.zoomlevel) 속성을 1과 20 사이의 값으로 설정하여 지도의 **zoom level**을 설정합니다.
--   [  **Heading**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.heading) 속성을 설정하여 지도의 **rotation**을 설정합니다. 여기서 0 또는 360도 = North, 90 = East, 180 = South 및 270 = West입니다.
--   [  **DesiredPitch**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.desiredpitch) 속성을 0도에서 65도 사이의 값으로 설정하여 지도의 **tilt**를 설정합니다.
+-   **** Center[**속성을 설정하여 지도의**center](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.center)를 지리적 지점으로 설정합니다.
+-   **** ZoomLevel[**속성을 1과 20 사이의 값으로 설정하여 지도의**zoom level](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.zoomlevel)을 설정합니다.
+-   **** Heading[**속성을 설정하여 지도의**rotation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.heading)을 설정합니다. 여기서 0 또는 360도 = North, 90 = East, 180 = South 및 270 = West입니다.
+-   **** DesiredPitch[**속성을 0도에서 65도 사이의 값으로 설정하여 지도의**tilt](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.desiredpitch)를 설정합니다.
 
 ## <a name="show-and-hide-map-features"></a>지도 기능 표시 및 숨김
 
 다음 [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)의 속성 값을 설정하여 도로와 랜드마크 같은 지도의 기능을 표시하거나 숨깁니다.
 
-* [  **LandmarksVisible**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.landmarksvisible) 속성을 사용하거나 사용하지 않도록 설정하여 지도에 **buildings and landmarks**를 표시합니다.
+* **** LandmarksVisible[**속성을 사용하거나 사용하지 않도록 설정하여 지도에**buildings and landmarks](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.landmarksvisible)를 표시합니다.
 
   > [!NOTE]
   > 건물을 표시하거나 숨길 수는 있지만 3D로 표시되지 않도록 할 수는 없습니다.  
 
-* [  **PedestrianFeaturesVisible**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.pedestrianfeaturesvisible) 속성을 사용하거나 사용하지 않도록 설정하여 지도에 **pedestrian features**을 표시합니다.
-* [  **TrafficFlowVisible**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.trafficflowvisible) 속성을 사용하거나 사용하지 않도록 설정하여 지도에 **traffic**을 표시합니다.
-* [  **WatermarkMode**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.watermarkmode) 속성을 [**MapWatermarkMode**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapWatermarkMode) 상수 중 하나로 설정하여 **watermark**를 지도에 표시할지 여부를 지정합니다.
-* [  **MapRouteView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapRouteView)를 지도 컨트롤의 [**Routes**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.routes) 컬렉션에 추가하여 지도에 **driving or walking route**를 표시합니다. 자세한 내용과 예제는 [지도에 경로 및 길 찾기 표시](routes-and-directions.md)를 참조하세요.
+* **** PedestrianFeaturesVisible[**속성을 사용하거나 사용하지 않도록 설정하여 지도에**pedestrian features](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.pedestrianfeaturesvisible)을 표시합니다.
+* **** TrafficFlowVisible[**속성을 사용하거나 사용하지 않도록 설정하여 지도에**traffic](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.trafficflowvisible)을 표시합니다.
+* **** WatermarkMode[**속성을**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.watermarkmode)MapWatermarkMode[**상수 중 하나로 설정하여**watermark](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapWatermarkMode)를 지도에 표시할지 여부를 지정합니다.
+* **** MapRouteView[**를 지도 컨트롤의** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapRouteView)Routes[**컬렉션에 추가하여 지도에**driving or walking route](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.routes)를 표시합니다. 자세한 내용과 예제는 [지도에 경로 및 길 찾기 표시](routes-and-directions.md)를 참조하세요.
 
 [  **MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)에서 고정핀, 셰이프 및 XAML 컨트롤을 표시하는 방법에 대한 자세한 내용은 [지도에 POI(안내 표시) 표시](display-poi.md)를 참조하세요.
 
@@ -323,7 +323,7 @@ Streetside 뷰를 표시하려면
 
 이 예제에서는 이전 이미지와 유사한 Streetside 뷰를 표시하는 방법을 보여 줍니다.
 
-**참고**  지도 컨트롤 크기가 너무 작아서 경우 개요 맵을 표시 되지 것입니다.
+지도 컨트롤 크기가 너무 작은 경우에는 개요 맵이 나타나지 않습니다 **.  **
 
  
 
@@ -377,7 +377,7 @@ private async void showStreetsideView()
 
 1.  [  **Is3DSupported**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.is3dsupported)를 확인하여 3D 뷰가 장치에서 지원되는지 확인합니다.
 2.  3D 뷰가 지원되는 경우 지도 컨트롤의 [**Style**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.style) 속성을 [**MapStyle.Aerial3DWithRoads**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapStyle)로 설정합니다.
-3.  [  **CreateFromLocationAndRadius**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapScene) 및 [**CreateFromCamera**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapscene.createfromlocationandradius)와 같은 다양한 **CreateFrom** 메서드 중 하나를 사용하여 [**MapScene**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapscene.createfromcamera) 개체를 만듭니다.
+3.  [  **CreateFromLocationAndRadius**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapScene) 및CreateFromCamera[**와 같은 다양한** CreateFrom](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapscene.createfromlocationandradius) 메서드 중 하나를 사용하여 [**MapScene**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapscene.createfromcamera) 개체를 만듭니다.
 4.  [  **TrySetSceneAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.trysetsceneasync)를 호출하여 3D 뷰를 표시합니다. 또한 [**MapAnimationKind**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapAnimationKind) 열거형에서 상수를 제공하여 보기가 변경될 때 사용할 애니메이션(옵션)을 지정할 수도 있습니다.
 
 다음 예제에서는 3D 뷰를 표시하는 방법을 보여 줍니다.
@@ -421,28 +421,28 @@ private async void display3DLocation()
 
 [  **MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)의 다음 메서드를 호출하여 지도의 위치에 대한 정보를 가져옵니다.
 
--   [**TryGetLocationFromOffset** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.getlocationfromoffset) 메서드-Get 지도 컨트롤의 뷰포트에 지정된 된 지점에 해당 하는 지리적 위치입니다.
--   [**GetOffsetFromLocation** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.getoffsetfromlocation) 메서드-Get 뷰포트에 지정된 된 지리적 위치에 해당 하는 지도 컨트롤의 지점입니다.
--   [**IsLocationInView** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.islocationinview) 메서드-지정된 된 지리적 위치 지도 컨트롤의 뷰포트에 현재 표시 되는지 확인 합니다.
--   [**FindMapElementsAtOffset** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.findmapelementsatoffset) 메서드-지도 컨트롤의 뷰포트에 지정된 된 지점에 있는 지도 요소를 가져옵니다.
+-   [**TryGetLocationFromOffset**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.getlocationfromoffset) 메서드-지도 컨트롤의 뷰포트에 지정 된 지점에 해당 하는 지리적 위치를 가져옵니다.
+-   [**GetOffsetFromLocation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.getoffsetfromlocation) method-지정 된 지리적 위치에 해당 하는 지도 컨트롤의 뷰포트에 있는 점을 가져옵니다.
+-   [**Islocationinview**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.islocationinview) 메서드-지정 된 지리적 위치가 지도 컨트롤의 뷰포트에 현재 표시 되는지 여부를 확인 합니다.
+-   [**FindMapElementsAtOffset**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.findmapelementsatoffset) 메서드-지도 컨트롤 뷰포트의 지정 된 지점에 있는 지도에서 요소를 가져옵니다.
 
 ## <a name="handle-interaction-and-changes"></a>조작 및 변경 내용 처리
 
 
 [  **MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)의 다음 이벤트를 처리하여 지도에서 사용자 입력 제스처를 처리합니다. [  **MapInputEventArgs**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapinputeventargs.location)의 [**Location**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapinputeventargs.position) 및 [**Position**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapInputEventArgs) 속성 값을 확인하려면 지도의 지리적 위치와 제스처가 발생한 뷰포트의 실제 위치에 대한 정보를 가져옵니다.
 
--   [**MapTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.maptapped)
+-   [**MapTapped 때**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.maptapped)
 -   [**MapDoubleTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapdoubletapped)
 -   [**MapHolding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapholding)
 
 컨트롤의 [**LoadingStatusChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.loadingstatuschanged) 이벤트를 처리하여 지도가 로드 중이거나 완전히 로드되었는지 여부를 확인합니다.
 
-사용자나 앱에서 [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)의 다음 이벤트를 처리하여 지도의 설정을 변경할 때 발생하는 변경 사항을 처리합니다. [지도 대 한 지침](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
+사용자나 앱에서 [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)의 다음 이벤트를 처리하여 지도의 설정을 변경할 때 발생하는 변경 사항을 처리합니다. [Maps에 대 한 지침](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
 
--   [**CenterChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.centerchanged)
+-   [**가운데 변경 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.centerchanged)
 -   [**HeadingChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.headingchanged)
 -   [**PitchChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.pitchchanged)
--   [**ZoomLevelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.zoomlevelchanged)
+-   [**확대/확대/변경**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.zoomlevelchanged)
 
 ## <a name="best-practice-recommendations"></a>모범 사례 권장 사항
 
@@ -455,10 +455,10 @@ private async void display3DLocation()
 ## <a name="related-topics"></a>관련 항목
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
-* [UWP 지도 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619977)
+* [UWP 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [현재 위치 가져오기](get-location.md)
 * [위치 인식 앱에 대한 디자인 지침](https://docs.microsoft.com/windows/uwp/maps-and-location/guidelines-and-checklist-for-detecting-location)
 * [지도에 대한 디자인 지침](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
-* [빌드 2015 비디오: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
-* [UWP 교통 앱 샘플](https://go.microsoft.com/fwlink/p/?LinkId=619982)
-* [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)
+* [빌드 2015 비디오: Windows 앱의 휴대폰, 태블릿 및 PC에서 맵 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [UWP 교통 앱 샘플](https://github.com/Microsoft/Windows-appsample-trafficapp)
+* [**없습니다**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)

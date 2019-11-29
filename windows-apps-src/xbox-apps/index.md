@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 2d935f53-84db-4108-86dc-cb6a0749782f
 ms.localizationpriority: medium
-ms.openlocfilehash: f8f31630fed64e2a22b21e4572eaba76440a82fc
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 0b5ca136b969ca238226d6f6b63b8e2fcff3207f
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334771"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74259735"
 ---
 # <a name="uwp-on-xbox-one"></a>Xbox One의 UWP
 
@@ -40,7 +40,7 @@ Xbox One의 UWP는 앱과 게임 개발을 둘 다 지원합니다. Xbox에서 �
 |[다중 사용자 애플리케이션 소개](multi-user-applications.md)| Xbox One의 MUA(다중 사용자 응용 프로그램)에 대해 설명합니다. |
 | [Xbox One 개발 작업 자동화](https://github.com/Microsoft/WindowsDevicePortalWrapper/tree/v0.9.4) | GitHub의 WindowsDevicePortalWrapper 프로젝트는 앱을 배포하거나 시작하는 등의 일반적인 개발 작업을 자동화할 수 있는 라이브러리를 제공합니다. 이 프로젝트에는 일반적인 작업에 API를 사용하는 방법을 보여주는 XboxWdpDriver.exe 샘플이 포함되어 있습니다. |
 |[기존 게임을 Xbox로 가져오기](development-lanes-landing.md)|게임이 제작된 기반 기술을 바탕으로 UWP를 사용하여 게임을 Xbox로 가져오는 프로세스를 촉진할 수 있는 단계별 지침을 안내할 수 있습니다.|
-|[Xbox One에서 아직 지원되지 않는 UWP 기능](https://go.microsoft.com/fwlink/p/?LinkId=760755)|  Xbox One에서 아직 완전히 작동하지 않는 UWP 기능 영역을 설명합니다.|
+|[Xbox One에서 아직 지원되지 않는 UWP 기능](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN)|  Xbox One에서 아직 완전히 작동하지 않는 UWP 기능 영역을 설명합니다.|
 
 ## <a name="videos"></a>비디오
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 044d759d2e62dedf9660f2536eca9064dbf8315b
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 031f3f8f5b15f839348c05c1fd26b7711856d659
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66361396"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74256240"
 ---
 # <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>MediaCapture용 형식, 해상도 및 프레임 속도 선택
 
@@ -21,7 +21,7 @@ ms.locfileid: "66361396"
 
 카메라 프로필은 카메라의 스트림 속성을 검색하고 설정하는 고급 방법을 추가로 제공하지만, 일부 장치는 카메라 프로필을 지원하지 않습니다. 자세한 내용은 [카메라 프로필](camera-profiles.md)을 참조하세요.
 
-이 문서의 코드는 [CameraResolution 샘플](https://go.microsoft.com/fwlink/p/?LinkId=624252&clcid=0x409)에서 조정되었습니다. 샘플을 다운로드하여 상황에 맞게 사용되는 코드를 참조하거나 자체 앱을 처음 빌드하기 시작할 때 샘플을 사용할 수 있습니다.
+이 문서의 코드는 [CameraResolution 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraResolution)에서 조정되었습니다. 샘플을 다운로드하여 상황에 맞게 사용되는 코드를 참조하거나 자체 앱을 처음 빌드하기 시작할 때 샘플을 사용할 수 있습니다.
 
 > [!NOTE] 
 > 이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 좀 더 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본 미디어 캡처 패턴을 좀 더 잘 이해하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
@@ -30,7 +30,7 @@ ms.locfileid: "66361396"
 
 [  **IMediaEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.IMediaEncodingProperties) 인터페이스의 기능을 래핑하는 간단한 도우미 클래스를 만들면 특정 조건을 충족하는 인코딩 속성 집합을 선택하기가 쉬워집니다. 이 도우미 클래스는 다음과 같은 인코딩 속성의 동작 기능 때문에 특히 유용합니다.
 
-**경고**    는 [ **VideoDeviceController.GetAvailableMediaStreamProperties** ](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.getavailablemediastreamproperties) 의 멤버를 사용 하는 메서드를 [ **MediaStreamType**  ](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType) 열거와 같은 **VideoRecord** 또는 **사진**의 목록을 반환 하 고 [ **ImageEncodingProperties** ](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.ImageEncodingProperties) 나 [ **VideoEncodingProperties** ](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.VideoEncodingProperties) 캡처된 사진 또는 비디오의 해상도 등의 설정을 인코딩 스트림을 전달 하는 개체입니다. **GetAvailableMediaStreamProperties** 호출의 결과에는 어떤 **MediaStreamType** 값을 지정했는지와 상관없이 **ImageEncodingProperties** 또는 **VideoEncodingProperties**가 포함될 수 있습니다. 이러한 이유로 항상 반환된 각 값의 형식을 확인하고 적절한 형식으로 캐스팅한 이후에 속성 값에 액세스해야 합니다.
+**경고**   [**GetAvailableMediaStreamProperties**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.getavailablemediastreamproperties) 메서드는 **VideoRecord** 또는 **photo**와 같은 [**mediastreamtype**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType) 열거의 멤버를 사용 하 고 캡처된 사진 또는 비디오의 해상도와 같이 스트림 인코딩 설정을 전달 하는 [**ImageEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.ImageEncodingProperties) 또는 [**VideoEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.VideoEncodingProperties) 개체의 목록을 반환 합니다. **GetAvailableMediaStreamProperties** 호출의 결과에는 어떤 **MediaStreamType** 값을 지정했는지와 상관없이 **ImageEncodingProperties** 또는 **VideoEncodingProperties**가 포함될 수 있습니다. 이러한 이유로 항상 반환된 각 값의 형식을 확인하고 적절한 형식으로 캐스팅한 이후에 속성 값에 액세스해야 합니다.
 
 아래에 정의된 도우미 클래스가 [**ImageEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.ImageEncodingProperties) 또는 [**VideoEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.VideoEncodingProperties)에 대한 형식 확인 및 캐스팅을 처리하므로 앱 코드가 두 형식을 구별하지 않아도 됩니다. 이 외에도 도우미 클래스는 속성의 가로 세로 비율, 프레임 속도(비디오 인코딩 속성에만 해당) 및 앱의 UI에서 인코딩 속성을 더 쉽게 표시하는 데 활용되는 식별 이름에 대한 속성을 표시합니다.
 
@@ -48,7 +48,7 @@ ms.locfileid: "66361396"
 
 ## <a name="get-a-list-of-available-stream-properties"></a>사용 가능한 스트림 속성 목록 가져오기
 
-앱의 [MediaCapture](capture-photos-and-video-with-mediacapture.md) 개체에 대한 [**VideoDeviceController**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.VideoDeviceController)를 가져온 후 [**GetAvailableMediaStreamProperties**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.getavailablemediastreamproperties)를 호출하고 [**MediaStreamType**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType) 값 중 하나에서 **VideoPreview**, **VideoRecord** 또는 **Photo**를 전달함으로써 캡처 디바이스에 대해 사용 가능한 스트림 속성 목록 가져옵니다. 이 예제에서는 Linq 구문이 **GetAvailableMediaStreamProperties**에서 반환된 각각의 [**IMediaEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.IMediaEncodingProperties) 값에 대해 **StreamPropertiesHelper** 개체(이 문서의 앞에 정의되어 있음)의 목록을 만드는 데 사용됩니다. 이 예제에서는 먼저, Linq 확장 메서드를 사용하여 해상도에 따라 반환되는 속성을 정렬한 후 프레임 속도에 따라 반환되는 속성을 순서대로 정렬합니다.
+앱의 [MediaCapture**개체에 대한**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.VideoDeviceController)VideoDeviceController[](capture-photos-and-video-with-mediacapture.md)를 가져온 후 [**GetAvailableMediaStreamProperties**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.getavailablemediastreamproperties)를 호출하고 [**MediaStreamType**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType) 값 중 하나에서 **VideoPreview**, **VideoRecord** 또는 **Photo**를 전달함으로써 캡처 장치에 대해 사용 가능한 스트림 속성 목록 가져옵니다. 이 예제에서는 Linq 구문이 **GetAvailableMediaStreamProperties**에서 반환된 각각의 [**IMediaEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.IMediaEncodingProperties) 값에 대해 **StreamPropertiesHelper** 개체(이 문서의 앞에 정의되어 있음)의 목록을 만드는 데 사용됩니다. 이 예제에서는 먼저, Linq 확장 메서드를 사용하여 해상도에 따라 반환되는 속성을 정렬한 후 프레임 속도에 따라 반환되는 속성을 순서대로 정렬합니다.
 
 앱에 특정 해상도 또는 프레임 속도 요구 사항이 있는 경우 미디어 인코딩 속성 집합을 프로그래밍 방식으로 선택할 수 있습니다. 그러나 일반적인 카메라 앱은 UI에 사용 가능한 속성 목록을 표시하여 사용자가 원하는 설정을 선택할 수 있도록 합니다. 목록의 **StreamPropertiesHelper** 개체 목록에서 각 항목에 대해 **ComboBoxItem**을 생성합니다. 연결된 인코딩 속성을 검색하는 데 나중에 사용할 수 있도록 콘텐츠는 도우미 클래스를 통해 반환된 식별 이름으로 설정되고 태그는 도우미 클래스 자체로 설정됩니다. 그런 다음 메서드로 전달된 **ComboBox**에 각 **ComboBoxItem**을 추가합니다.
 
@@ -74,7 +74,7 @@ ms.locfileid: "66361396"
 
 -   필요 이상의 픽셀이 미리 보기 스트림 파이프라인을 통과하지 않도록 [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CaptureElement)의 크기에 가장 가까운 미리 보기 해상도를 선택합니다.
 
-**중요**    일부 장치의 카메라의 스트림 미리 보기에 대 한 다른 가로 세로 비율을 설정 하 고 stream 캡처를 수 있습니다. 이러한 불일치 때문에 발생하는 프레임 자르기로 인해 미리 보기에는 표시되지 않았던 콘텐츠가 캡처된 미디어에 표시되어 부정적인 사용자 환경을 야기할 수 있습니다. 따라서 허용 오차 범위를 작게 해서 동일한 가로 세로 비율을 미리 보기 및 캡처 스트림에 사용하는 것이 좋습니다. 가로 세로 비율이 거의 일치하는 한 캡처 및 미리 보기에 완전히 다른 해상도를 사용하는 것도 괜찮습니다.
+**중요**   카메라의 미리 보기 스트림과 캡처 스트림에 대해 다른 가로 세로 비율을 설정 하기 위해 일부 장치에서 가능 합니다. 이러한 불일치 때문에 발생하는 프레임 자르기로 인해 미리 보기에는 표시되지 않았던 콘텐츠가 캡처된 미디어에 표시되어 부정적인 사용자 환경을 야기할 수 있습니다. 따라서 허용 오차 범위를 작게 해서 동일한 가로 세로 비율을 미리 보기 및 캡처 스트림에 사용하는 것이 좋습니다. 가로 세로 비율이 거의 일치하는 한 캡처 및 미리 보기에 완전히 다른 해상도를 사용하는 것도 괜찮습니다.
 
 
 사진 또는 동영상 캡처 스트림이 미리 보기 스트림의 가로 세로 비율과 일치하도록 보장하기 위해 이 예제에서는 [**VideoDeviceController.GetMediaStreamProperties**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.getmediastreamproperties)를 호출하고 **VideoPreview** 열거형 값을 전달하여 미리 보기 스트림에 대한 현재 스트림 속성을 요청합니다. 그런 다음 미리 보기 스트림과 정확하게 같지는 않지만 거의 일치하는 가로 세로 비율을 포함할 수 있도록 가로 세로 비율의 허용 오차를 작게 정의합니다. 이제 Linq 확장 메서드를 사용하여 가로 세로 비율이 미리 보기 스트림의 정의된 허용 범위 내에 있는 **StreamPropertiesHelper** 개체만 선택합니다.

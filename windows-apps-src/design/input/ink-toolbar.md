@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
 ms.localizationpriority: medium
-ms.openlocfilehash: 05e10fd728930ea23615e11ffd5a004a420c9b64
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8ae67e5d4d6da3cc9716c5f0efd276023bae9af0
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365834"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258377"
 ---
 # <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱에 InkToolbar 추가
 
 
 
-유니버설 Windows 플랫폼 (UWP) 앱에 잉크 입력을 쉽게 수행할 수 있는 다른 컨트롤을 두 가지가 있습니다. [**InkCanvas** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) 하 고 [ **InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)합니다.
+UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하는 두 가지 컨트롤은 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) 및 [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)입니다.
 
 [  **InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) 컨트롤은 기본적인 Windows Ink 기능을 제공합니다. 이 컨트롤을 사용하여 펜 입력을 잉크 스트로크(색과 두께에 기본 설정 사용) 또는 지우기 스트로크로 렌더링할 수 있습니다.
 
@@ -35,14 +35,14 @@ ms.locfileid: "66365834"
 
   이 항목에서는 InkToolbar에 대해 설명합니다.
 
-> **중요 API**: [**InkCanvas 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)를 [ **InkToolbar 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)하십시오 [ **InkPresenter 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter), [ **Windows.UI.Input.Inking**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)
+> **중요 API**: [**InkCanvas 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), [**InkToolbar 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar), [**InkPresenter 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter), [**Windows.UI.Input.Inking**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)
 
 ## <a name="default-inktoolbar"></a>기본 InkToolbar
 
 기본적으로 [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)에는 스텐실(눈금자 또는 각도기)을 그리고 지우고 강조하고 표시하는 단추가 포함되어 있습니다. 기능에 따라 잉크 색, 스트로크 두께, 모든 잉크 지우기 등의 기타 설정 및 명령이 플라이아웃에 제공됩니다.
 
 ![InkToolbar](./images/ink/ink-tools-invoked-toolbar-small.png)  
-*기본 Windows 잉크 도구 모음*
+*기본 Windows Ink 도구 모음*
 
 기본 [**InkToolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)를 수동 입력 앱에 추가하려면, [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)와 동일한 페이지에 배치하고 두 개의 컨트롤을 연결합니다.
 
@@ -90,7 +90,7 @@ ms.locfileid: "66365834"
 | 기본값 | 명시적 |
 | --- | --- |
 | ![기본 잉크 도구 모음 위치 및 방향](./images/ink/location-default-small.png) | ![명시적 잉크 도구 모음 위치 및 방향](./images/ink/location-explicit-small.png) |
-| *Windows Ink 도구 모음 기본 위치 및 방향* | *Windows Ink 도구 모음에 대 한 명시적 위치 및 방향* |
+| *Windows 잉크 도구 모음 기본 위치 및 방향* | *Windows Ink 도구 모음 명시적 위치 및 방향* |
 
 다음은 XAML에서 잉크 도구 모음의 위치와 방향을 명시적으로 설정하는 코드입니다.
 ```xaml
@@ -101,16 +101,16 @@ ms.locfileid: "66365834"
     TargetInkCanvas="{x:Bind inkCanvas}" />
 ```
 
-**사용자 기본 설정이 나 장치 상태에 따라 초기화**
+**사용자 기본 설정 또는 장치 상태에 따라 초기화**
 
 어떤 경우에는 사용자 기본 설정 또는 장치 상태에 따라 잉크 도구 모음의 위치와 방향을 설정하고자 할 수도 있습니다. 다음은 **설정 > 장치 > 펜 및 Windows Ink > 펜 > 글을 쓸 때 사용하는 손 선택**에서 지정한 왼손 또는 오른손 쓰기 기본 설정에 따라 잉크 도구 모음의 위치와 방향을 설정하는 방법을 보여주는 예입니다.
 
-![기준 손 모양 설정](./images/ink/location-handedness-setting.png)  
-*기준 손 모양 설정*
+![기준 손을 설정](./images/ink/location-handedness-setting.png)  
+*기준 설정*
 
 Windows.UI.ViewManagement의 HandPreference 속성을 통해 이 설정을 쿼리하고 반환된 값에 따라 [HorizontalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.HorizontalAlignment)를 설정할 수 있습니다. 이 예에서는 왼손을 주로 사용하는 사용자를 위해 앱의 왼쪽에 그리고 오른손을 주로 사용하는 사용자를 위해 오른쪽에 도구 모음을 배치합니다.
 
-**이 샘플을 다운로드할 [잉크 도구 모음 위치와 방향을 샘플 (basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)**
+**[잉크 도구 모음 위치 및 방향 샘플](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip) 에서이 샘플 다운로드 (기본)**
 
 ```csharp
 public MainPage()
@@ -131,7 +131,7 @@ public MainPage()
 
 바인딩을 사용하여 사용자 기본 설정, 장치 설정 또는 장치 상태에 따른 UI 업데이트를 검색할 수도 있습니다. 다음 예에서는 이전 예제를 확장하여 바인딩, ViewMOdel 개체 및 [INotifyPropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged) 인터페이스를 사용하여 장치 방향에 따라 잉크 도구 모음을 동적으로 위치 조정하는 방법을 보여줍니다. 
 
-**이 샘플을 다운로드할 [잉크 도구 모음 위치와 방향을 샘플 (동적)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)**
+**[잉크 도구 모음 위치 및 방향 샘플 (동적)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip) 에서이 샘플 다운로드**
 
 1. 먼저, ViewModel을 추가하겠습니다.
     1. 프로젝트에 새 폴더를 추가하고 이름을 **ViewModels**라고 지정합니다.
@@ -170,7 +170,7 @@ public MainPage()
         }
         ```
 
-    1. InkToolbarSnippetHostViewModel 클래스에 두 가지 부울 속성을 추가 합니다. **LeftHandedLayout** (이전 XAML 전용 예제와 동일한 기능) 및 **PortraitLayout** (장치 방향).
+    1. InkToolbarSnippetHostViewModel 클래스에 두 개의 부울 속성(**LeftHandedLayout**(이전의 XAML 전용 예제와 기능 동일) 및 **PortraitLayout**(장치의 방향))을 추가합니다.
         >[!NOTE] 
         > PortraitLayout 속성은 설정 가능하며 [PropertyChanged](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) 이벤트에 대한 정의를 포함합니다.
 
@@ -280,10 +280,10 @@ public MainPage()
         ```
 
 1. 이제 MainPage.xaml.cs 파일을 엽니다.
-    1. 추가 `using using locationandorientation.ViewModels` 이 ViewModel에 연결할 네임 스페이스의 목록입니다.
-    1. 추가 `using Windows.UI.ViewManagement` 장치 방향 변경에 대 한 수신 대기를 사용 하도록 설정 하려면 네임 스페이스의 목록입니다.
-    1. 추가 된 [WindowSizeChangedEventHandler](https://docs.microsoft.com/uwp/api/windows.ui.xaml.windowsizechangedeventhandler) 코드입니다.
-    1. 설정 된 [DataContext](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement.DataContext) InkToolbarSnippetHostViewModel 클래스의 singleton 인스턴스로 뷰에 대 한 합니다. 
+    1. `using using locationandorientation.ViewModels`를 네임 스페이스 목록에 추가 하 여 ViewModel을 연결 합니다.
+    1. 장치 방향에 대 한 변경 내용을 수신할 수 있도록 네임 스페이스 목록에 `using Windows.UI.ViewManagement`를 추가 합니다.
+    1. [WindowSizeChangedEventHandler](https://docs.microsoft.com/uwp/api/windows.ui.xaml.windowsizechangedeventhandler) 코드를 추가 합니다.
+    1. 뷰의 [DataContext](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement.DataContext) 를 InkToolbarSnippetHostViewModel 클래스의 singleton 인스턴스로 설정 합니다. 
     ```csharp
     using Windows.UI.Xaml;
     using Windows.UI.Xaml.Controls;
@@ -319,8 +319,8 @@ public MainPage()
     }
     ```
 
-1. 다음으로 MainPage.xaml 파일을 엽니다.
-    1. 추가 `xmlns:converters="using:locationandorientation.Converters"` 에 `Page` 이 변환기에 대 한 바인딩에 요소입니다.
+1. 다음으로 MainPage .xaml 파일을 엽니다.
+    1. 변환기에 바인딩하기 위해 `Page` 요소에 `xmlns:converters="using:locationandorientation.Converters"`를 추가 합니다.
         ```xaml
         <Page
         x:Class="locationandorientation.MainPage"
@@ -333,7 +333,7 @@ public MainPage()
         mc:Ignorable="d">
         ```
 
-    1. 추가 `PageResources` 요소가 변환기에 대 한 참조를 지정 합니다.
+    1. `PageResources` 요소를 추가 하 고 변환기에 대 한 참조를 지정 합니다.
         ```xaml
         <Page.Resources>
             <converters:HorizontalAlignmentFromHandednessConverter x:Key="HorizontalAlignmentConverter"/>
@@ -341,7 +341,7 @@ public MainPage()
         </Page.Resources>
         ```
 
-    1. InkCanvas 및 InkToolbar 요소를 추가 하 고는 InkToolbar의 HorizontalAlignment와 VerticalAlignment 속성을 바인딩하십시오.
+    1. InkCanvas 및 InkToolbar 요소를 추가 하 고 InkToolbar의 VerticalAlignment 및 HorizontalAlignment 속성을 바인딩합니다.
         ```xaml
         <InkCanvas x:Name="inkCanvas" />
         <InkToolbar x:Name="inkToolbar" 
@@ -351,7 +351,7 @@ public MainPage()
                     TargetInkCanvas="{x:Bind inkCanvas}" />
         ```
 
-1. 추가할 InkToolbarSnippetHostViewModel.cs 파일로 반환 우리의 `PortraitLayout` 및 `LeftHandedLayout` bool 속성을 합니다 `InkToolbarSnippetHostViewModel` 리바인딩에 대 한 지원과 함께 클래스 `PortraitLayout` 해당 속성 값이 변경 되는 경우. 
+1. InkToolbarSnippetHostViewModel.cs 파일을 반환 하 여 `PortraitLayout`를 추가 하 고 bool 속성 `LeftHandedLayout` `InkToolbarSnippetHostViewModel` 클래스에 추가 하 고 해당 속성 값이 변경 될 때 `PortraitLayout` 리바인딩을 지원 합니다. 
     ```csharp
     public bool LeftHandedLayout
     {
@@ -398,11 +398,11 @@ public MainPage()
     #endregion
     ```
 
-이제 사용자의 두 주요 직접 기본에 맞게 조정 하 고 사용자의 장치 방향으로 동적으로 응답 하는 잉크 입력 기능 앱이 있어야 합니다.
+이제 사용자의 주요 기본 설정에 맞게 조정 되 고 사용자 장치의 방향에 동적으로 응답 하는 잉크 앱이 있습니다.
 
 ### <a name="specify-the-selected-button"></a>선택되는 단추 지정  
-![초기화 시 선택한 연필 단추](./images/ink/ink-tools-default-toolbar.png)  
-*초기화 시 선택한 연필 단추를 사용 하 여 Windows 잉크 도구 모음*
+초기화할 때 연필 단추가 선택 ![](./images/ink/ink-tools-default-toolbar.png)  
+*초기화할 때 연필 단추가 선택 된 Windows Ink 도구 모음*
 
 기본적으로 앱을 실행하고 도구 모음을 초기화하면 첫 번째(또는 맨 왼쪽) 단추가 선택됩니다. 기본 Windows Ink 도구 모음에서는 볼펜 단추입니다.
 
@@ -431,7 +431,7 @@ public MainPage()
 3. [Loaded](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.loaded) 이벤트 처리기에서 다음을 수행합니다.
     1. 기본 제공 [InkToolbarPencilButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton)에 대한 참조를 가져옵니다.
 
-    [GetToolButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar.gettoolbutton) 메서드에 [InkToolbarTool.Pencil](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbartool) 개체를 전달하면 [InkToolbarPencilButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton)에 대한 [InkToolbarToolButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbartoolbutton) 개체가 반환됩니다.
+    [GetToolButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbartool) 메서드에 [InkToolbarTool.Pencil](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar.gettoolbutton) 개체를 전달하면 [InkToolbarPencilButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbartoolbutton)에 대한 [InkToolbarToolButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton) 개체가 반환됩니다.
 
     2. [ActiveTool](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar.activetool)을 이전 단계에서 반환된 개체로 설정합니다.
 
@@ -452,8 +452,8 @@ private void inkToolbar_Loaded(object sender, RoutedEventArgs e)
 
 ### <a name="specify-the-built-in-buttons"></a>기본 제공 단추 지정
 
-![초기화 시 포함 하는 특정 단추](./images/ink/ink-tools-specific.png)  
-*초기화 시 포함 하는 특정 단추*
+초기화에 포함 된 특정 단추 ![](./images/ink/ink-tools-specific.png)  
+*초기화 시 포함 되는 특정 단추*
 
 설명했듯이 Windows Ink 도구 모음에는 기본 제공 단추 컬렉션이 포함되어 있습니다. 이러한 단추는 다음 순서(왼쪽에서 오른쪽)로 표시됩니다.
 
@@ -509,7 +509,7 @@ XAML 또는 코드 숨김을 사용하여 이 작업을 수행할 수 있습니�
 </Grid>
 ```
 
-**Code-behind**
+**코드 숨김**
 1. 첫 번째 예제의 InkCanvas 및 InkToolbar에 대한 XAML 선언을 사용합니다.
 
   ```xaml
@@ -534,7 +534,7 @@ XAML 또는 코드 숨김을 사용하여 이 작업을 수행할 수 있습니�
   </Grid>
   ```
 
-2. 코드 숨김에서 [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) 개체의 [Loading](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.loading) 이벤트 처리기를 설정합니다.
+2. 코드 숨김에서 [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.loading) 개체의 [Loading](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) 이벤트 처리기를 설정합니다.
 
   ```csharp
   /// <summary>
@@ -596,7 +596,7 @@ InkToolbar는 다음 두 가지 그룹의 단추 유형으로 이루어져 있�
 > **참고**&nbsp;&nbsp;기능 선택은 함께 사용할 수 없습니다.
 
 2. 기본 제공 눈금자 단추를 포함하는 "토글" 단추 그룹. 사용자 지정 토글이 여기에 추가됩니다.
-> **참고**&nbsp;&nbsp;배타적이 아닌 기능과 다른 활성 도구와 동시에 사용할 수 있습니다.
+> **참고**&nbsp;&nbsp;기능은 함께 사용할 수 없으며 다른 활성 도구와 동시에 사용할 수 있습니다.
 
 응용 프로그램 및 필요한 수동 입력 기능에 따라 사용자 지정 잉크 기능에 바인딩된 다음 단추를 InkToolbar에 추가할 수 있습니다.
 
@@ -604,18 +604,18 @@ InkToolbar는 다음 두 가지 그룹의 단추 유형으로 이루어져 있�
 - 사용자 지정 도구 - 호스트 앱에서 정의된 펜 이외의 도구입니다.
 - 사용자 지정 토글 - 앱에서 정의된 기능의 상태를 켜짐 또는 꺼짐으로 설정합니다. 켜진 경우 기능이 활성 도구와 함께 작동합니다.
 
-> **참고**&nbsp;&nbsp;기본 단추의 표시 순서를 변경할 수 없습니다. 기본 표시 순서 다음과 같습니다. 볼펜, 연필, 형광펜, eraser 및 눈금자 사용자 지정 펜은 마지막 기본 펜 뒤에 추가되고, 사용자 지정 도구 단추는 마지막 펜 단추와 지우개 단추 사이에 추가되고, 사용자 지정 토글 단추는 눈금자 단추 뒤에 추가됩니다. 사용자 지정 단추는 지정된 순서대로 추가됩니다.
+> **참고**&nbsp;&nbsp;기본 제공 단추의 표시 순서를 변경할 수 없습니다. 기본 표시 순서는 볼펜, 연필, 형광펜, 지우개, 눈금자 순입니다. 사용자 지정 펜은 마지막 기본 펜 뒤에 추가되고, 사용자 지정 도구 단추는 마지막 펜 단추와 지우개 단추 사이에 추가되고, 사용자 지정 토글 단추는 눈금자 단추 뒤에 추가됩니다. 사용자 지정 단추는 지정된 순서대로 추가됩니다.
 
 ### <a name="custom-pen"></a>사용자 지정 펜
 
 사용자 지정 펜(사용자 지정 펜 단추를 통해 활성화됨)을 만들어 잉크 색상표와 펜 팁 속성(예: 모양, 회전, 크기)을 정의합니다.
 
-![사용자 지정 붓 단추](./images/ink/ink-tools-custompen.png)  
-*사용자 지정 붓 단추*
+사용자 지정 붓글씨 펜 단추를 ![](./images/ink/ink-tools-custompen.png)  
+*사용자 지정 붓글씨 펜 단추*
 
 이 예제에서는 기본 붓글씨 잉크 스트로크를 사용하도록 설정하는 광범위한 팁을 가진 사용자 지정 펜을 정의합니다. 단추 플라이아웃에 표시되는 색상표의 브러시 컬렉션도 사용자 지정합니다.
 
-**Code-behind**
+**코드 숨김**
 
 먼저, 사용자 지정 펜을 정의하고 코드 숨김에서 그리기 특성을 지정합니다. 나중에서 XAML에서 이 사용자 지정 펜을 참조합니다.
 
@@ -734,7 +734,7 @@ MainPage.xaml에서 사용자 지정 펜에 필요한 참조를 추가합니다.
 앱이 시작 될 때 펜 수동 입력만 지원되며 터치는 수동 입력 화면을 확대/축소하거나 이동하는 데 사용됩니다. 터치식 수동 입력을 사용하도록 설정하면 수동 입력 화면은 터치 입력을 통해 이동하거나 확대/축소되지 않습니다.
 
 > [!NOTE]
-> [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 및 [**InkToolbar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar) UX 지침 관련 내용은 [수동 입력 컨트롤](../controls-and-patterns/inking-controls.md)을 참조하세요. 다음 권장 사항이 이 예제와 관련이 있습니다.
+> [  ](../controls-and-patterns/inking-controls.md)InkCanvas[**및**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)InkToolbar[**UX 지침 관련 내용은**수동 입력 컨트롤](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar)을 참조하세요. 다음 권장 사항이 이 예제와 관련이 있습니다.
 > - [  **InkToolbar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar) 및 일반적인 수동 입력은 활성 펜을 통해 가장 잘 작동합니다. 그러나 앱에 필요한 경우 마우스와 터치를 사용한 수동 입력을 지원할 수 있습니다. 
 > - 터치식 입력을 사용한 수동 입력을 지원하는 경우 “터치 쓰기” 도구 설명과 함께 "Segoe MLD2 자산" 글꼴의 "ED5F" 아이콘을 토글 단추에 사용하는 것이 좋습니다. 
 
@@ -805,7 +805,7 @@ MainPage.xaml에서 사용자 지정 펜에 필요한 참조를 추가합니다.
 </Grid>
 ```
 
-**Code-behind**
+**코드 숨김**
 
 2. 이전 코드 조각에서터치식 수동 입력을 위한 사용자 지정 토글 단추(toggleButton)에 클릭 이벤트 수신기와 처리기(Toggle_Custom)를 선언했습니다. 이 처리기는 InkPresenter의 InputDeviceTypes 속성을 통해 CoreInputDeviceTypes.Touch에 대한 지원을 토글합니다.
 
@@ -913,13 +913,13 @@ namespace Ink_Basic_InkToolbar
 </Grid>
 ```
 
-**Code-behind**
+**코드 숨김**
 
 2. 그런 다음 MainPage.xaml.cs 코드 숨김 파일에서 [**InkToolbarCustomToolButton**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbarCustomToolButton)에 대한 클릭 이벤트를 처리합니다.
 
    이 처리기는 [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter)에서 처리되지 않은 입력을 앱으로 전달하도록 구성합니다. 
 
-   이 코드를 통해 자세한 단계의:  고급 처리 부분에 대 한 통과 입력 [UWP 앱에서 상호 작용 및 Windows 잉크 펜](pen-and-stylus-interactions.md)합니다.
+   이 코드를 통해 자세한 단계는 [UWP 앱에서 펜 조작 및 Windows Ink](pen-and-stylus-interactions.md)의 고급 처리를 위한 통과 입력 섹션을 참조하세요.
 
    또한 SymbolIcon 요소 및 코드 숨김 파일 (SelectIcon)에 정의된 필드로 바인딩하는 {x: Bind} 태그 확장을 사용하여 단추에 아이콘도 지정했습니다.
 
@@ -1125,14 +1125,14 @@ namespace Ink_Basic_InkToolbar
 
 ### <a name="topic-samples"></a>항목 샘플
 
-- [(기본) 하는 도구 모음 위치와 방향을 샘플 잉크](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)
-- [잉크 도구 모음 위치와 방향을 샘플 (동적)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)
+- [잉크 도구 모음 위치 및 방향 샘플 (기본)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)
+- [잉크 도구 모음 위치 및 방향 샘플 (동적)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)
 
 ### <a name="other-samples"></a>기타 샘플
 
-- [간단한 잉크 샘플 (C#/C++)](https://go.microsoft.com/fwlink/p/?LinkID=620312)
-- [복잡 한 잉크 샘플 (C++)](https://go.microsoft.com/fwlink/p/?LinkID=620314)
-- [잉크 샘플 (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
-- [자습서 시작 하기: UWP 앱에서 잉크를 지원 합니다.](https://aka.ms/appsample-ink)
-- [색 지정 책 샘플](https://aka.ms/cpubsample-coloringbook)
-- [제품군 정보 샘플](https://aka.ms/cpubsample-familynotessample)
+- [단순 잉크 샘플 (C#/C++)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk)
+- [복합 잉크 샘플 (C++)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)
+- [Ink 샘플 (JavaScript)](https://go.microsoft.com/fwlink/p/?LinkID=620308)
+- [초보자를 위한 자습서: UWP 앱에서 잉크 지원](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink)
+- [서적 샘플 강조](https://github.com/Microsoft/Windows-appsample-coloringbook)
+- [제품군 정보 샘플](https://github.com/Microsoft/Windows-appsample-familynotes)

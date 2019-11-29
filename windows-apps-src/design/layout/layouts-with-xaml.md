@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 480029fd98a302fcc166067cbb383d7e9f8d1829
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 738190034f7418658958847172ded47bcbdc1b09
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820540"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74258165"
 ---
 # <a name="responsive-layouts-with-xaml"></a>XAML을 사용한 반응형 레이아웃
 
@@ -22,16 +22,16 @@ XAML 레이아웃 시스템은 반응형 UI를 만들 수 있는 자동 크기 �
 
 XAML 레이아웃 시스템은 고정 레이아웃과 가변 레이아웃을 모두 지원합니다. 고정 레이아웃에서는 컨트롤에 정확한 픽셀 크기와 위치를 제공합니다. 사용자가 장치의 해상도나 방향을 변경해도 UI가 바뀌지 않습니다. 고정 레이아웃은 다양한 폼 요소 및 디스플레이 크기에서 잘릴 수 있습니다. 반면에 유동 레이아웃은 장치에서 사용할 수 있는 가시 공간에 맞게 축소, 확대 또는 재배치됩니다. 
 
-실제로는 고정 및 가변 요소의 조합을 사용하여 UI를 만듭니다. 여전히 일부 위치에서는 정적 요소와 값을 사용 하지만 전체 UI를 다양 한 해상도, 화면 크기 및 뷰를 응답 인지 확인 합니다.
+실제로는 고정 및 가변 요소의 조합을 사용하여 UI를 만듭니다. 일부 위치에서 정적 요소 및 값을 계속 사용 하지만 전체 UI가 다른 해상도, 화면 크기 및 보기에 반응 하는지 확인 합니다.
 
 여기서는 XAML 속성 및 레이아웃 패널을 사용하여 유동 레이아웃을 만드는 방법을 살펴봅니다.
 
 ### <a name="layout-properties"></a>레이아웃 속성
-레이아웃 속성은 요소의 크기 및 위치를 제어합니다. 유연한 레이아웃을 만들 하려면 요소에 대 한 비례 또는 자동 크기 조정을 사용 하 고 필요에 따라 해당 자식 항목을 배치 하려면 레이아웃 패널을 허용 합니다. 
+레이아웃 속성은 요소의 크기 및 위치를 제어합니다. 유체 레이아웃을 만들려면 요소에 대해 자동 또는 비례 크기 조정을 사용 하 고 레이아웃 패널에서 필요에 따라 자식 항목의 위치를 지정할 수 있습니다. 
 
 다음은 몇 가지 공통 레이아웃 속성과 이러한 속성을 사용하여 유동 레이아웃을 만드는 방법입니다.
 
-**높이 너비**
+**높이 및 너비**
 
 [  **높이**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height) 및 [**너비**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.width) 속성은 요소의 크기를 지정합니다. 유효 픽셀로 측정된 고정 값을 사용하거나 자동 또는 가변 크기 조정을 사용할 수 있습니다. 
 
@@ -40,7 +40,7 @@ XAML 레이아웃 시스템은 고정 레이아웃과 가변 레이아웃을 모
 > [!NOTE]
 > 요소의 크기가 콘텐츠 또는 컨테이너 중에서 어떤 것에 맞게 조정될지는 부모 컨테이너가 자식의 크기 조정을 처리하는 방식에 따라 결정됩니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [레이아웃 패널](#layout-panels)을 참조하세요.
 
-*배율 크기 조정*이라고도 하는 가변 크기 조정은 가중 비율에 따라 그리드의 행과 열 사이에서 사용 가능한 공간을 분배합니다. XAML에서 별표 값으로 표현 됩니다 \* (또는 *n* \* 가중치 별 크기 조정에 대 한). 예를 들어, 하나의 열은 2 열 레이아웃의 두 번째 열 보다 5 배 더 큰를 지정 하려면 사용 하 여 "5\*"및"\*"에 대 한 합니다 [ **너비** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.columndefinition.width) 속성에는 [ **ColumnDefinition** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) 요소입니다.
+*배율 크기 조정*이라고도 하는 가변 크기 조정은 가중 비율에 따라 그리드의 행과 열 사이에서 사용 가능한 공간을 분배합니다. XAML에서 별모양 값은 \* (또는가 중 별 크기 조정의 경우 *n*\*)으로 표현 됩니다. 예를 들어 열 하나를 2 열 레이아웃의 두 번째 열 보다 5 배 더 크게 지정 하려면 [**Columndefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) 요소의 [**Width**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.columndefinition.width) 속성에 "5\*" 및 "\*"를 사용 합니다.
 
 이 예제에서는 4개의 열을 가진 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)에서 고정, 자동, 가변 크기 조정을 조합합니다.
 
@@ -77,7 +77,7 @@ UI에서 자동 크기 조정을 사용하는 경우 여전히 요소 크기에 
 
 Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeight/MaxHeight는 행 정의에 사용할 수도 있습니다.
 
-**맞춤**
+**할당**
 
 [  **HorizontalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment) 및 [**VerticalAlignment**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment) 속성을 사용하여 해당 부모 컨테이너 내에서 요소의 위치가 지정되는 방법을 지정합니다.
 - **HorizontalAlignment**에 대한 값은 **Left**, **Center**, **Right** 및 **Stretch**입니다.
@@ -90,12 +90,12 @@ Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeig
 
 **표시 여부**
 
-표시 하거나 설정 하 여 요소를 숨길 수 있습니다 해당 [ **가시성** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) 속성 중 하나에 [ **가시성** 열거형](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Visibility) 값: **표시** 나 **축소**합니다. 요소가 Collapsed인 경우 UI 레이아웃에서 공간을 차지하지 않습니다.
+해당 [**Visibility**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility) 속성을 [**Visibility**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Visibility) 열거형 값인 **Visible** 또는 **Collapsed**로 설정하여 요소를 표시하거나 숨길 수 있습니다. 요소가 Collapsed인 경우 UI 레이아웃에서 공간을 차지하지 않습니다.
 
 코드 또는 시각적 상태에서 요소의 Visibility 속성을 변경할 수 있습니다. 요소의 Visibility가 변경되는 경우 해당하는 모든 자식 요소도 변경됩니다. 한 패널을 표시하고 다른 패널은 축소하여 UI의 섹션을 바꿀 수 있습니다.
 
 > [!Tip]
-> UI의 요소를 설치한 경우 **Collapsed** 기본적으로 개체는 여전히 생성 시작 시 표시 하지 않더라도 합니다. **x:DeferLoadStrategy 특성**을 "Lazy"로 설정하면 이러한 요소가 표시될 때까지 로드하는 것을 연기할 수 있습니다. 그러면 시작 성능이 향상될 수 있습니다. 자세한 내용은 [x:DeferLoadStrategy 특성](../../xaml-platform/x-deferloadstrategy-attribute.md)을 참조하세요.
+> UI에 기본적으로 **축소** 된 요소가 있는 경우 해당 개체는 표시 되지 않더라도 시작할 때 계속 만들어집니다. **x:DeferLoadStrategy 특성**을 "Lazy"로 설정하면 이러한 요소가 표시될 때까지 로드하는 것을 연기할 수 있습니다. 그러면 시작 성능이 향상될 수 있습니다. 자세한 내용은 [x:DeferLoadStrategy 특성](../../xaml-platform/x-deferloadstrategy-attribute.md)을 참조하세요.
 
 ### <a name="style-resources"></a>스타일 리소스
 
@@ -111,13 +111,13 @@ Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeig
 
 패널 컨트롤 | 설명
 --------------|------------
-[**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) | **Canvas**는 유동 UI를 지원하지 않으며 개발자가 자식 요소의 위치 지정 및 크기 조정과 관련한 모든 측면을 제어합니다. 일반적으로 이 컨트롤은 그래픽 만들기와 같은 특수한 경우에 사용하거나 더 큰 적응형 UI의 작은 고정 영역을 정의하는 데 사용합니다. 코드나 시각적 상태를 사용하여 런타임 시 요소의 위치를 변경할 수 있습니다.<li>요소가 Canvas.Top 및 Canvas.Left 연결된 속성을 사용하여 절대 위치의 위치가 지정됩니다.</li><li>계층화는 Canvas.ZIndex 연결된 속성을 사용하여 명시적으로 지정할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다. 요소의 크기가 명시적으로 설정되지 않은 경우 콘텐츠에 맞게 조정됩니다.</li><li>자식 콘텐츠가 패널보다 더 크면 시각적으로 잘리지 않습니다. </li><li>자식 콘텐츠가 패널 범위에 의해 제한되지 않습니다.</li>
-[**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) | **Grid**는 자식 요소의 유동 크기 조정을 지원합니다. 코드나 시각적 상태를 사용하여 요소의 위치를 변경하고 재배치할 수 있습니다.<li>요소가 Grid.Row 및 Grid.Column 연결된 속성을 사용하여 행과 열에 배열됩니다.</li><li>연결 속성인 Grid.RowSpan 및 Grid.ColumnSpan을 사용하여 요소를 여러 행과 열에 걸쳐 표시할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 유지됩니다. 요소의 크기가 명시적으로 설정되지 않은 경우 늘어나서 그리드 셀의 사용 가능한 공간을 채웁니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다.</li>
+[**캔버스**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) | **Canvas**는 유동 UI를 지원하지 않으며 개발자가 자식 요소의 위치 지정 및 크기 조정과 관련한 모든 측면을 제어합니다. 일반적으로 이 컨트롤은 그래픽 만들기와 같은 특수한 경우에 사용하거나 더 큰 적응형 UI의 작은 고정 영역을 정의하는 데 사용합니다. 코드나 시각적 상태를 사용하여 런타임 시 요소의 위치를 변경할 수 있습니다.<li>요소가 Canvas.Top 및 Canvas.Left 연결된 속성을 사용하여 절대 위치의 위치가 지정됩니다.</li><li>계층화는 Canvas.ZIndex 연결된 속성을 사용하여 명시적으로 지정할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다. 요소의 크기가 명시적으로 설정되지 않은 경우 콘텐츠에 맞게 조정됩니다.</li><li>자식 콘텐츠가 패널보다 더 크면 시각적으로 잘리지 않습니다. </li><li>자식 콘텐츠가 패널 범위에 의해 제한되지 않습니다.</li>
+[**그리드에**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) | **Grid**는 자식 요소의 유동 크기 조정을 지원합니다. 코드나 시각적 상태를 사용하여 요소의 위치를 변경하고 재배치할 수 있습니다.<li>요소가 Grid.Row 및 Grid.Column 연결된 속성을 사용하여 행과 열에 배열됩니다.</li><li>연결 속성인 Grid.RowSpan 및 Grid.ColumnSpan을 사용하여 요소를 여러 행과 열에 걸쳐 표시할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 유지됩니다. 요소의 크기가 명시적으로 설정되지 않은 경우 늘어나서 그리드 셀의 사용 가능한 공간을 채웁니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다.</li>
 [**RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) | <li>요소가 패널 가장자리 또는 중심과 서로를 기준으로 정렬됩니다.</li><li>패널 맞춤, 형제 맞춤 및 형제 위치를 제어하는 다양한 연결된 속성을 사용하여 요소의 위치가 지정됩니다. </li><li>맞춤에 대한 RelativePanel 연결된 속성으로 늘이기가 발생하지 않는 경우(예를 들어 요소가 패널의 오른쪽과 왼쪽 가장자리에 배열되는 경우) HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다. 요소의 크기가 명시적으로 설정되지 않아 늘어나지 않는 경우에는 콘텐츠에 맞게 조정됩니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다.</li>
 [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) |<li>요소가 세로 또는 가로로 한 줄에 스택 형태로 쌓입니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 Orientation 속성의 반대 방향으로 유지됩니다. 요소의 크기가 명시적으로 설정되지 않은 경우 늘려서 사용 가능한 너비(또는 Orientation이 Horizontal인 경우에는 높이)를 채웁니다. Orientation 속성에서 지정된 방향으로 요소가 해당 콘텐츠에 맞게 크기가 조정됩니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 Orientation 속성에서 지정된 방향의 패널 범위에 의해 제한되지 않으므로 스크롤 가능한 콘텐츠가 패널 범위 이상으로 늘어나고 스크롤 막대는 표시하지 않습니다. 스크롤 막대를 표시하려면 자식 콘텐츠의 높이나 너비를 명시적으로 제한해야 합니다.</li>
 [**VariableSizedWrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.VariableSizedWrapGrid) |<li>요소가 행이나 열 형태로 배열되며 MaximumRowsOrColumns 값에 도달할 경우 새 행이나 열로 자동 줄 바꿈됩니다.</li><li>요소를 행으로 배치할지 열로 배치할지 여부는 Orientation 속성을 통해 지정됩니다.</li><li>연결 속성인 VariableSizedWrapGrid.RowSpan 및 VariableSizedWrapGrid.ColumnSpan을 사용하여 요소를 여러 행과 열에 걸쳐 표시할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다. 요소의 크기는 ItemHeight 및 ItemWidth 속성에 지정된 대로 조정됩니다. 이러한 속성이 설정되지 않은 경우 첫 번째 셀의 항목이 해당 콘텐츠에 맞게 크기가 조정된 다음 다른 모든 셀은 이 크기를 상속합니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다.</li>
 
-이러한 패널에 대한 자세한 정보 및 예제는 [레이아웃 패널](layout-panels.md)과 [반응형 기술 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620024)을 참조하세요.
+이러한 패널에 대한 자세한 정보 및 예제는 [레이아웃 패널](layout-panels.md)과 [반응형 기술 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlResponsiveTechniques)을 참조하세요.
 
 레이아웃 패널을 통해 UI를 논리적 컨트롤 그룹으로 구성할 수 있습니다. 적절한 속성 설정과 함께 레이아웃 패널을 사용하면 UI 요소의 자동 크기 조정, 위치 변경 및 재배치에 대한 일부 지원을 받을 수 있습니다. 그러나 창 크기가 크게 변경되는 경우 대부분의 UI 레이아웃을 추가로 수정해야 합니다. 이 경우 시각적 상태를 사용하면 됩니다.
 
@@ -132,7 +132,7 @@ Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeig
 
 코드에서 시각적 상태를 적용하려면 [**VisualStateManager.GoToState**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstatemanager.gotostate) 메서드를 호출합니다. 예를 들어 앱 창이 특정한 크기인 상태를 적용하려면 [**SizeChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.sizechanged) 이벤트를 처리하고 **GoToState**를 호출하여 적절한 상태를 적용합니다.
 
-여기서는 [**VisualStateGroup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateGroup)에 2개의 VisualState 정의가 포함되어 있습니다. 첫 번째 정의인 `DefaultState`는 비어 있습니다. 적용되면 XAML 페이지에서 정의된 값이 적용됩니다. 두 번째 정의인 `WideState`는 [**SplitView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SplitView)의 [**DisplayMode**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview.displaymode) 속성을 **Inline**으로 변경하고 창을 엽니다. 이 상태는 창 너비가 640 유효 픽셀 이상인 경우 SizeChanged 이벤트 처리기에서 적용됩니다.
+여기서는 [**VisualStateGroup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateGroup)에 2개의 VisualState 정의가 포함되어 있습니다. 첫 번째 정의인 `DefaultState`는 비어 있습니다. 적용되면 XAML 페이지에서 정의된 값이 적용됩니다. 두 번째 정의인 `WideState`는 [**SplitView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview.displaymode)의 [**DisplayMode**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SplitView) 속성을 **Inline**으로 변경하고 창을 엽니다. 이 상태는 창 너비가 640 유효 픽셀 이상인 경우 SizeChanged 이벤트 처리기에서 적용됩니다.
 
 > [!NOTE]
 > Windows에서는 앱이 실행되는 특정 디바이스를 앱 내에서 검색하는 방법을 제공하지 않습니다. 물론 앱이 실행 중인 디바이스 패밀리(모바일, 데스크톱, 등), 유효 해상도 및 앱에서 사용할 수 있는 화면 공간 크기(앱의 창 크기)는 알 수 있습니다. 따라서 [화면 크기 및 중단점](screen-sizes-and-breakpoints-for-responsive-design.md)에 대해 시각적 상태를 정의하는 것이 좋습니다.
@@ -232,13 +232,13 @@ Windows 10부터는 여기 나와 있는 것처럼 간소화된 [**Setter**](htt
 ```
 
 > [!Important]
-> 이전 예제에서는 연결 된 VisualStateManager.VisualStateGroups 속성에서 설정 됩니다는 **그리드** 요소입니다. StateTriggers를 사용하는 경우 트리거가 자동으로 적용되도록 VisualStateGroups가 루트의 첫 번째 자식에 연결되어 있는지 항상 확인합니다. (여기서 **Grid**는 루트 **Page** 요소의 첫 번째 자식입니다.)
+> 이전 예제에서 r는 **Grid** 요소에 대해 연결 된 속성을 설정 합니다. StateTriggers를 사용하는 경우 트리거가 자동으로 적용되도록 VisualStateGroups가 루트의 첫 번째 자식에 연결되어 있는지 항상 확인합니다. (여기서 **Grid**는 루트 **Page** 요소의 첫 번째 자식입니다.)
 
 ### <a name="attached-property-syntax"></a>연결된 속성 구문
 
 VisualState에서, 일반적으로 컨트롤 속성 또는 컨트롤을 포함하는 패널의 연결된 속성 중 하나에 대한 값을 설정합니다. 연결된 속성을 설정할 때 연결된 속성 이름 주위에 괄호를 사용합니다.
 
-이 예제는 `myTextBox`라는 TextBox에서 [**RelativePanel.AlignHorizontalCenterWithPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.alignhorizontalcenterwithpanelproperty) 연결된 속성을 설정하는 방법을 보여 줍니다. 첫 번째 XAML은 [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames) 구문을 사용하고 두 번째 XAML은 **Setter** 구문을 사용합니다.
+이 예제는 [라는 TextBox에서RelativePanel.AlignHorizontalCenterWithPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.alignhorizontalcenterwithpanelproperty)`myTextBox` 연결된 속성을 설정하는 방법을 보여 줍니다. 첫 번째 XAML은 [**ObjectAnimationUsingKeyFrames**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ObjectAnimationUsingKeyFrames) 구문을 사용하고 두 번째 XAML은 **Setter** 구문을 사용합니다.
 
 ```xaml
 <!-- Set an attached property using ObjectAnimationUsingKeyFrames. -->
@@ -254,13 +254,13 @@ VisualState에서, 일반적으로 컨트롤 속성 또는 컨트롤을 포함�
 
 ### <a name="custom-state-triggers"></a>상태 트리거 사용자 지정
 
-[  **StateTrigger**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.StateTrigger) 클래스를 확장하여 광범위한 시나리오에 대해 사용자 지정 트리거를 만들 수 있습니다. 예를 들어 StateTrigger를 만들어 입력 형식에 따라 서로 다른 상태를 트리거한 다음 입력 형식을 터치할 때 컨트롤 주위의 여백을 늘릴 수 있습니다. 또는 StateTrigger를 만들어 앱이 실행되는 장치 패밀리에 따라 서로 다른 상태를 적용할 수 있습니다. 사용자 지정 트리거를 구성하고 이를 사용하여 단일 XAML 보기에서 최적화된 UI 환경을 만드는 방법에 대한 예제는 [상태 트리거 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620025)을 참조하세요.
+[  **StateTrigger**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.StateTrigger) 클래스를 확장하여 광범위한 시나리오에 대해 사용자 지정 트리거를 만들 수 있습니다. 예를 들어 StateTrigger를 만들어 입력 형식에 따라 서로 다른 상태를 트리거한 다음 입력 형식을 터치할 때 컨트롤 주위의 여백을 늘릴 수 있습니다. 또는 StateTrigger를 만들어 앱이 실행되는 장치 패밀리에 따라 서로 다른 상태를 적용할 수 있습니다. 사용자 지정 트리거를 구성하고 이를 사용하여 단일 XAML 보기에서 최적화된 UI 환경을 만드는 방법에 대한 예제는 [상태 트리거 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlStateTriggers)을 참조하세요.
 
 ### <a name="visual-states-and-styles"></a>시각적 상태 및 스타일
 
 시각적 상태에서 Style 리소스를 사용하면 속성 변경 집합을 여러 컨트롤에 적용할 수 있습니다. 스타일을 사용하는 방법에 대한 자세한 내용은 [컨트롤의 스타일 지정](../controls-and-patterns/xaml-styles.md)을 참조하세요.
 
-상태 트리거 샘플의 이 간소화된 XAML에서 마우스 또는 터치식 입력에 대한 크기 및 여백을 조정하기 위해 Style 리소스가 Button에 적용되었습니다. 사용자 지정 상태 트리거에 대한 전체 코드 및 정의는 [상태 트리거 샘플](https://go.microsoft.com/fwlink/p/?LinkId=620025)을 참조하세요.
+상태 트리거 샘플의 이 간소화된 XAML에서 마우스 또는 터치식 입력에 대한 크기 및 여백을 조정하기 위해 Style 리소스가 Button에 적용되었습니다. 사용자 지정 상태 트리거에 대한 전체 코드 및 정의는 [상태 트리거 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlStateTriggers)을 참조하세요.
 
 ```xaml
 <Page ... >
@@ -334,7 +334,7 @@ VisualState에서, 일반적으로 컨트롤 속성 또는 컨트롤을 포함�
 
 XAML 보기를 사용하여 동일한 코드 숨김을 공유하는 다른 UI 정의를 만듭니다. 각 장치 패밀리에 고유한 UI 정의를 제공할 수 있습니다. 이러한 단계를 수행하여 앱에 XAML 보기를 추가합니다.
 
-**앱에 XAML 보기를 추가 하려면**
+**응용 프로그램에 XAML 뷰를 추가 하려면**
 1. 프로젝트 &gt; 새 항목 추가를 선택합니다. 새 항목 추가 대화 상자가 열립니다.
     > **팁**&nbsp;&nbsp;솔루션이 아닌 폴더나 프로젝트가 솔루션 탐색기에서 선택되었는지 확인합니다.
 2. 왼쪽 창의 Visual C# 또는 Visual Basic에서 XAML 템플릿 종류를 선택합니다.
@@ -356,7 +356,7 @@ MainPage.xaml이라는 파일에 대한 예를 살펴보겠습니다. 태블릿 
 
 **폴더 이름 사용**
 
-폴더를 사용하여 Visual Studio 프로젝트에서 보기를 구성하려면 폴더에 한정자 이름을 사용하면 됩니다. 이렇게 하려면 다음과 같은 폴더 이름: DeviceFamily- *[qualifierString]* . 이 경우 각 XAML 보기 파일의 이름이 같습니다. 파일 이름에는 한정자를 포함하지 마세요.
+폴더를 사용하여 Visual Studio 프로젝트에서 보기를 구성하려면 폴더에 한정자 이름을 사용하면 됩니다. 그러려면 폴더 이름을 DeviceFamily- *[qualifierString]* 과 같이 지정합니다. 이 경우 각 XAML 보기 파일의 이름이 같습니다. 파일 이름에는 한정자를 포함하지 마세요.
 
 다음 예제에서도 MainPage.xaml이라는 파일을 사용합니다. 태블릿 장치에 대한 보기를 만들려면 "DeviceFamily-Tablet"이라는 폴더를 만들고 MainPage.xaml이라는 XAML 보기를 배치합니다. PC 장치에 대한 보기를 만들려면 "DeviceFamily-Desktop"이라는 폴더를 만들고 MainPage.xaml이라는 다른 XAML 보기를 배치합니다. Visual Studio에서 해당 솔루션이 다음과 같이 보입니다.
 
@@ -368,7 +368,7 @@ MainPage.xaml이라는 파일에 대한 예를 살펴보겠습니다. 태블릿 
 
 고유한 보기 및 기능을 제공하려면 별도의 Page 파일을 만든 다음(XAML 및 코드) 해당 페이지가 필요할 때 적절한 페이지로 이동합니다.
 
-**앱에 XAML 페이지를 추가 하려면**
+**응용 프로그램에 XAML 페이지를 추가 하려면**
 1. 프로젝트 &gt; 새 항목 추가를 선택합니다. 새 항목 추가 대화 상자가 열립니다.
     > **팁**&nbsp;&nbsp;솔루션이 아닌 프로젝트가 솔루션 탐색기에서 선택되었는지 확인합니다.
 2. 왼쪽 창의 Visual C# 또는 Visual Basic에서 XAML 템플릿 종류를 선택합니다.
@@ -389,10 +389,10 @@ else
 }
 ```
 
-또한 다른 조건을 사용하여 이동할 페이지를 결정할 수도 있습니다. 더 많은 예제는 [**GetIntegratedDisplaySize**](https://docs.microsoft.com/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getintegrateddisplaysize) 함수를 사용하여 통합된 디스플레이의 실제 크기를 확인하는 [맞춤형 여러 보기](https://go.microsoft.com/fwlink/p/?LinkId=620636) 샘플을 참조하세요.
+또한 다른 조건을 사용하여 이동할 페이지를 결정할 수도 있습니다. 더 많은 예제는 [](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlTailoredMultipleViews)GetIntegratedDisplaySize[**함수를 사용하여 통합된 디스플레이의 실제 크기를 확인하는**맞춤형 여러 보기](https://docs.microsoft.com/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getintegrateddisplaysize) 샘플을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 - [자습서: 적응 레이아웃 만들기](../basics/xaml-basics-adaptive-layout.md)
 - [응답성 기술 샘플 (GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlResponsiveTechniques)
 - [상태 트리거 샘플 (GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlStateTriggers)
-- [맞는 여러 뷰 샘플 (GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlTailoredMultipleViews)
+- [조정 된 다중 뷰 샘플 (GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlTailoredMultipleViews)

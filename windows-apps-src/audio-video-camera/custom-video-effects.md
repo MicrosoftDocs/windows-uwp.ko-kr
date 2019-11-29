@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
-ms.openlocfilehash: 819f0b4a5ba17a866eb50539f5138460eefd0eec
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 1be4bf71d99bd6560ce4ed753b55dacdfcceb868
+ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318396"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74257189"
 ---
 # <a name="custom-video-effects"></a>사용자 지정 비디오 효과
 
@@ -28,7 +28,7 @@ ms.locfileid: "67318396"
 
 사용자 지정 비디오 효과는 [**IBasicVideoEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IBasicVideoEffect) 인터페이스를 구현하는 클래스에 정의됩니다. 이 클래스를 앱의 프로젝트에 직접 포함할 수는 없습니다. 대신 Windows 런타임 구성 요소를 사용하여 비디오 효과 클래스를 호스트해야 합니다.
 
-**비디오 효과 대 한 Windows 런타임 구성 요소를 추가 합니다.**
+**비디오 효과에 대 한 Windows 런타임 구성 요소 추가**
 
 1.  Microsoft Visual Studio에서 솔루션을 열고 **파일** 메뉴로 이동한 후 **추가-&gt;새 프로젝트**를 선택합니다.
 2.  **Windows 런타임 구성 요소(유니버설 Windows)** 프로젝트 유형을 선택합니다.
@@ -93,7 +93,7 @@ ms.locfileid: "67318396"
 
 
 > [!NOTE] 
-> **SupportedEncodingProperties**에서 [**VideoEncodingProperties**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.VideoEncodingProperties) 개체의 빈 목록을 반환하는 경우 시스템에서는 기본적으로 ARGB32 인코딩이 사용됩니다.
+> [SupportedEncodingProperties**에서** ](https://docs.microsoft.com/uwp/api/Windows.Media.MediaProperties.VideoEncodingProperties)VideoEncodingProperties 개체의 빈 목록을 반환하는 경우 시스템에서는 기본적으로 ARGB32 인코딩이 사용됩니다.
 
  
 
@@ -152,7 +152,7 @@ ms.locfileid: "67318396"
 
  
 
-이제 **ProcessFrame** 메서드 구현을 추가할 수 있습니다. 먼저 이 메서드는 입력 및 출력 소프트웨어 비트맵에서 [**BitmapBuffer**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapBuffer) 개체를 가져옵니다. 쓰기 작업을 위해 출력 프레임이 열려 있고 읽기 작업을 위해 입력 프레임이 열려 있는지 확인합니다. 다음으로 [**CreateReference**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.createreference)를 호출하여 각 버퍼에 대해 [**IMemoryBufferReference**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IMemoryBufferReference)를 획득합니다. 그런 후 **IMemoryBufferReference** 개체를 위에 정의된 COM interop 인터페이스인 **IMemoryByteAccess**로 캐스팅한 후 **GetBuffer**를 호출하여 실제 데이터 버퍼를 획득합니다.
+이제 **ProcessFrame** 메서드 구현을 추가할 수 있습니다. 먼저 이 메서드는 입력 및 출력 소프트웨어 비트맵에서 [**BitmapBuffer**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapBuffer) 개체를 가져옵니다. 쓰기 작업을 위해 출력 프레임이 열려 있고 읽기 작업을 위해 입력 프레임이 열려 있는지 확인합니다. 다음으로 [**CreateReference**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IMemoryBufferReference)를 호출하여 각 버퍼에 대해 [**IMemoryBufferReference**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.createreference)를 획득합니다. 그런 후 **IMemoryBufferReference** 개체를 위에 정의된 COM interop 인터페이스인 **IMemoryByteAccess**로 캐스팅한 후 **GetBuffer**를 호출하여 실제 데이터 버퍼를 획득합니다.
 
 이제 데이터 버퍼를 획득했으므로 입력 버퍼에서 읽고 출력 버퍼에 쓸 수 있습니다. 버퍼의 너비, 진행 속도 및 초기 오프셋에 대한 정보를 제공하는 [**GetPlaneDescription**](https://docs.microsoft.com/uwp/api/windows.graphics.imaging.bitmapbuffer.getplanedescription)을 호출하여 버퍼의 레이아웃을 획득합니다. 픽셀당 비트 수는 이전에 [**SetEncodingProperties**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties) 메서드를 사용하여 설정한 인코딩 속성에 의해 결정됩니다. 버퍼 형식 정보는 각 픽셀에 대한 버퍼의 인덱스를 찾는 데 사용됩니다. 원본 버퍼의 픽셀 값이 대상 버퍼로 복사되고, 색 값을 이 효과에 대해 정의된FadeValue 속성과 곱하여 지정된 크기만큼 흐리게 나타납니다.
 
@@ -162,11 +162,11 @@ ms.locfileid: "67318396"
 ## <a name="implement-the-ibasicvideoeffect-interface-using-hardware-processing"></a>하드웨어 처리를 사용하여 IBasicVideoEffect 인터페이스를 구현합니다.
 
 
-하드웨어(GPU)를 사용하여 사용자 지정 비디오 효과를 만드는 작업은 위에 설명된 소프트웨어 처리를 사용하는 방법과 거의 동일합니다. 이 섹션에서는 하드웨어 처리를 사용하는 효과의 몇 가지 차이점을 보여 줍니다. 이 예제에서는 Win2D Windows 런타임 API를 사용합니다. Win2D에 대한 자세한 내용은 [Win2D 설명서](https://go.microsoft.com/fwlink/?LinkId=519078)를 참조하세요.
+하드웨어(GPU)를 사용하여 사용자 지정 비디오 효과를 만드는 작업은 위에 설명된 소프트웨어 처리를 사용하는 방법과 거의 동일합니다. 이 섹션에서는 하드웨어 처리를 사용하는 효과의 몇 가지 차이점을 보여 줍니다. 이 예제에서는 Win2D Windows 런타임 API를 사용합니다. Win2D에 대한 자세한 내용은 [Win2D 설명서](https://microsoft.github.io/Win2D/html/Introduction.htm)를 참조하세요.
 
 이 문서 맨 처음에 나오는 **앱에 사용자 지정 효과 추가** 섹션에 설명된 것처럼 다음 단계에 따라 생성된 프로젝트에 Win2D NuGet 패키지를 추가합니다.
 
-**결과 프로젝트에 Win2D NuGet 패키지를 추가 하려면**
+**Win2D NuGet 패키지를 효과 프로젝트에 추가 하려면**
 
 1.  **솔루션 탐색기**에서 **VideoEffectComponent** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
 2.  창 위쪽에서 **찾아보기** 탭을 선택합니다.
@@ -180,7 +180,7 @@ ms.locfileid: "67318396"
 [!code-cs[UsingWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetUsingWin2D)]
 
 
-이 효과는 이미지 데이터에 작동하기 위해 GPU 메모리를 사용하므로 [**SupportedMemoryTypes**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.supportedmemorytypes) 속성에서 [**MediaMemoryTypes.Gpu**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.MediaMemoryTypes)를 반환해야 합니다.
+이 효과는 이미지 데이터에 작동하기 위해 GPU 메모리를 사용하므로 [**SupportedMemoryTypes**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.MediaMemoryTypes) 속성에서 [**MediaMemoryTypes.Gpu**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.supportedmemorytypes)를 반환해야 합니다.
 
 [!code-cs[SupportedMemoryTypesWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetSupportedMemoryTypesWin2D)]
 
@@ -190,7 +190,7 @@ ms.locfileid: "67318396"
 [!code-cs[SupportedEncodingPropertiesWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetSupportedEncodingPropertiesWin2D)]
 
 
-[  **SetEncodingProperties**](/uwp/api/windows.graphics.imaging.softwarebitmap.convert) 메서드를 사용하여 해당 메서드에 전달된 [**IDirect3DDevice**](https://docs.microsoft.com/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice)에서 새 Win2D **CanvasDevice** 개체를 만듭니다.
+[  **SetEncodingProperties**](/uwp/api/windows.graphics.imaging.softwarebitmap.convert) 메서드를 사용하여 해당 메서드에 전달된IDirect3DDevice[**에서 새 Win2D** CanvasDevice](https://docs.microsoft.com/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice) 개체를 만듭니다.
 
 [!code-cs[SetEncodingPropertiesWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetSetEncodingPropertiesWin2D)]
 
@@ -204,7 +204,7 @@ ms.locfileid: "67318396"
 
 마지막 단계는 이미지 데이터를 실제로 처리하는 [**ProcessFrame**](https://docs.microsoft.com/uwp/api/windows.media.effects.ibasicvideoeffect.processframe) 메서드를 구현하는 것입니다.
 
-Win2D API를 사용하면 입력 프레임의 [**Direct3DSurface**](https://docs.microsoft.com/uwp/api/windows.media.videoframe.direct3dsurface) 속성에서 **CanvasBitmap**이 만들어집니다. **CanvasRenderTarget**은 출력 프레임의 **Direct3DSurface**에서 만들어지고 **CanvasDrawingSession**은 이 렌더링 대상에서 만들어집니다. [  **SetProperties**](https://docs.microsoft.com/uwp/api/windows.media.imediaextension.setproperties)를 통해 효과가 노출하는 **BlurAmount** 속성을 사용하여 새 Win2D **GaussianBlurEffect**가 초기화됩니다. 마지막으로 **CanvasDrawingSession.DrawImage** 메서드가 호출되면서 흐림 효과를 사용하여 입력 비트맵을 렌더링 대상에 그립니다.
+Win2D API를 사용하면 입력 프레임의Direct3DSurface[**속성에서**CanvasBitmap](https://docs.microsoft.com/uwp/api/windows.media.videoframe.direct3dsurface)이 만들어집니다. **CanvasRenderTarget**은 출력 프레임의 **Direct3DSurface**에서 만들어지고 **CanvasDrawingSession**은 이 렌더링 대상에서 만들어집니다. **** SetProperties를 통해 효과가 노출하는 [BlurAmount**속성을 사용하여 새 Win2D**GaussianBlurEffect](https://docs.microsoft.com/uwp/api/windows.media.imediaextension.setproperties)가 초기화됩니다. 마지막으로 **CanvasDrawingSession.DrawImage** 메서드가 호출되면서 흐림 효과를 사용하여 입력 비트맵을 렌더링 대상에 그립니다.
 
 [!code-cs[ProcessFrameWin2D](./code/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffectWin2D.cs#SnippetProcessFrameWin2D)]
 
@@ -232,7 +232,7 @@ Win2D API를 사용하면 입력 프레임의 [**Direct3DSurface**](https://docs
 
 ### <a name="add-your-custom-effect-to-a-clip-in-a-mediacomposition"></a>MediaComposition의 클립에 사용자 지정 효과 추가
 
-비디오 클립에서 미디어 컴퍼지션을 만드는 방법에 대한 일반적인 지침은 [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)을 참조하세요. 다음 코드 조각은 사용자 지정 비디오 효과를 사용하는 간단한 미디어 컴퍼지션을 만드는 방법을 보여 줍니다. [  **FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker)로 사용자가 선택한 비디오 파일을 전달하여 [**CreateFromFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.editing.mediaclip.createfromfileasync)를 호출함으로써 [**MediaClip**](https://docs.microsoft.com/uwp/api/Windows.Media.Editing.MediaClip) 개체가 만들어지고 새 [**MediaComposition**](https://docs.microsoft.com/uwp/api/Windows.Media.Editing.MediaComposition)에 클립이 추가됩니다. 다음으로 새 [**VideoEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.VideoEffectDefinition) 개체가 만들어지고 효과에 대한 네임스페이스와 클래스 이름이 생성자에 전달됩니다. 마지막으로 효과 정의가 **MediaClip** 개체의 [**VideoEffectDefinitions**](https://docs.microsoft.com/uwp/api/windows.media.editing.mediaclip.videoeffectdefinitions) 컬렉션에 추가됩니다.
+비디오 클립에서 미디어 컴퍼지션을 만드는 방법에 대한 일반적인 지침은 [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)을 참조하세요. 다음 코드 조각은 사용자 지정 비디오 효과를 사용하는 간단한 미디어 컴퍼지션을 만드는 방법을 보여 줍니다. [  **FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Media.Editing.MediaClip)로 사용자가 선택한 비디오 파일을 전달하여 [**CreateFromFileAsync**](https://docs.microsoft.com/uwp/api/windows.media.editing.mediaclip.createfromfileasync)를 호출함으로써 [**MediaClip**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) 개체가 만들어지고 새 [**MediaComposition**](https://docs.microsoft.com/uwp/api/Windows.Media.Editing.MediaComposition)에 클립이 추가됩니다. 다음으로 새 [**VideoEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.VideoEffectDefinition) 개체가 만들어지고 효과에 대한 네임스페이스와 클래스 이름이 생성자에 전달됩니다. 마지막으로 효과 정의가 [MediaClip**개체의**](https://docs.microsoft.com/uwp/api/windows.media.editing.mediaclip.videoeffectdefinitions)VideoEffectDefinitions 컬렉션에 추가됩니다.
 
 
 [!code-cs[AddEffectToComposition](./code/VideoEffect_Win10/cs/VideoEffect_Win10/MainPage.xaml.cs#SnippetAddEffectToComposition)]
@@ -241,5 +241,5 @@ Win2D API를 사용하면 입력 프레임의 [**Direct3DSurface**](https://docs
 ## <a name="related-topics"></a>관련 항목
 * [간단한 카메라 미리 보기 액세스](simple-camera-preview-access.md)
 * [미디어 컴퍼지션 및 편집](media-compositions-and-editing.md)
-* [Win2D 설명서](https://go.microsoft.com/fwlink/p/?LinkId=519078)
+* [Win2D 설명서](https://microsoft.github.io/Win2D/html/Introduction.htm)
 * [미디어 재생](media-playback.md)
