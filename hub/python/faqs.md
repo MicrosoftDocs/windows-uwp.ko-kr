@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, pip, py.exe, 파일 경로, PYTHONPATH, python 배포, python 패키징
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 4132ef0089ee707367666b4d6340333e538b1130
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: 6dbf86e0f9435e44140159ebb2bcbc3d67928999
+ms.sourcegitcommit: c8634b15b10bd196e7e2f876ae26e1205e160c91
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313380"
+ms.lasthandoff: 11/29/2019
+ms.locfileid: "74663560"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Windows에서 Python 사용에 대한 질문과 대답입니다.
 
@@ -47,7 +47,7 @@ ms.locfileid: "72313380"
 
 Python 문자열은 특수 문자에 "이스케이프"를 사용합니다. 예를 들어 문자열에 줄 바꿈 문자를 삽입하려면 `\n`을 입력합니다. Windows의 파일 경로는 백슬래시를 사용하기 때문에 경로의 일부가 특수 문자로 변환될 수 있습니다.
 
-Python에서 경로를 문자열로 붙여넣으려면 `r` 접두사를 추가합니다. 이렇게 하면 `raw` 문자열임을 나타내며, \”를 제외하고 이스케이프 문자를 사용하지 않습니다(경로에서 마지막 백슬래시를 제거해야 할 수 있음). 그러면 r"C:\Users\MyName\Documents\Document.txt"와 비슷한 경로가 생성됩니다.
+Python에서 경로를 문자열로 붙여넣으려면 `r` 접두사를 추가합니다. 이렇게 하면 `raw` 문자열임을 나타내며, \”를 제외하고 이스케이프 문자를 사용하지 않습니다(경로에서 마지막 백슬래시를 제거해야 할 수 있음). 따라서 경로는 `r"C:\Users\MyName\Documents\Document.txt"`와 같을 수 있습니다.
 
 Python에서 경로를 작업할 때는 표준 pathlib 모듈을 사용하는 것이 좋습니다. 이렇게 하면 슬래시 또는 백슬래시 사용 여부에 관계없이 일관적으로 경로를 조작할 수 있는 풍부한 Path 개체로 문자열을 변환할 수 있으며, 코드가 여러 운영 체제에서 보다 효율적으로 작동합니다.
 

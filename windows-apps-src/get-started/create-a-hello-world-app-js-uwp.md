@@ -6,12 +6,12 @@ ms.date: 09/12/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f4ab5b177539bc286ce24d480cd949d43a51e17
-ms.sourcegitcommit: bd41fb6f59dfbd7021b14ff749b8b0f83f883c0f
+ms.openlocfilehash: a161a5e26bd647a37b06a270ef6714d54bc16d80
+ms.sourcegitcommit: ac9fb37fe58cc728df2fa0495e36ee4d7b811a23
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70963619"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467414"
 ---
 # <a name="create-a-hello-world-app-js"></a>"Hello, world" 앱 만들기(JS)
 
@@ -23,13 +23,13 @@ ms.locfileid: "70963619"
 > [!WARNING]
 > Javascript UWP 앱 개발은 Visual Studio 2019에서 지원되지 않습니다. Javascript UWP 앱을 개발하려면 Visual Studio 2017을 사용해야 합니다.
 
-여기에서는 다음에 대한 방법을 알아봅니다.
+이 문서에서는 다음 작업을 수행하는 방법을 알아봅니다.
 
 -   **Windows 10** 및 **UWP**를 대상으로 하는 새 **Visual Studio 2017** 프로젝트를 만듭니다.
--   HTML 및 JavaScript 콘텐츠 추가
--   Visual Studio의 로컬 데스크톱에서 프로젝트 실행
+-   HTML 및 JavaScript 콘텐츠를 추가합니다.
+-   Visual Studio의 로컬 데스크톱에서 프로젝트를 실행합니다.
 
-## <a name="before-you-start"></a>시작하기 전에...
+## <a name="before-you-start"></a>시작하기 전 확인 사항
 
 -   [UWP 앱이란 무엇인가요?](universal-application-platform-guide.md)
 -   이 자습서를 완료하려면 Windows 10 및 Visual Studio가 필요합니다. [설정 방법](get-set-up.md)
@@ -39,16 +39,16 @@ ms.locfileid: "70963619"
 
 1.  Visual Studio 2017을 시작합니다.
 
-2.  **파일** 메뉴에서 **새로 만들기 > 프로젝트...** 를 선택하여 *새 프로젝트 만들기* 대화 상자를 엽니다.
+2.  **파일** 메뉴에서 **새로 만들기 > 프로젝트**를 선택하여 **새 프로젝트 만들기** 대화 상자를 엽니다.
 
 3.  **비어 있는 앱(유니버설 Windows) JavaScript**를 선택한 후 **다음**을 선택합니다.
 
-    (유니버설 템플릿이 보이지 않으면 UWP 앱을 만들기 위한 구성 요소가 누락된 것일 수 있습니다. 설치 과정을 다시 실행하고 *새 프로젝트 만들기* 대화 상자에서 **Visual Studio 설치 관리자 열기**를 클릭하여 UWP 지원을 추가할 수 있습니다. [설정 방법](get-set-up.md) 보기
+    (유니버설 템플릿이 보이지 않으면 UWP 앱을 만들기 위한 구성 요소가 누락된 것일 수 있습니다. 설치 과정을 다시 실행하고 **새 프로젝트 만들기** 대화 상자에서 **Visual Studio 설치 관리자 열기**를 선택하여 UWP 지원을 추가할 수 있습니다. [설정 방법](get-set-up.md)을 참조하세요.
 
-4.  *새 프로젝트 구성* 대화 상자에서 **프로젝트 이름**으로 "HelloWorld"를 입력한 후 **만들기**를 선택합니다.
+4.  **새 프로젝트 구성** 대화 상자에서 **프로젝트 이름**으로 **HelloWorld**를 입력한 다음, **만들기**를 선택합니다.
 
 > [!NOTE]
-> Visual Studio를 처음 사용하는 경우 **개발자 모드**를 사용하도록 설정하라는 설정 대화 상자가 표시될 수 있습니다. 개발자 모드는 앱을 Store에서만 실행하는 것이 아니라 직접 실행할 수 있는 권한처럼 특정 기능을 활성화하는 특수 설정입니다. 자세한 내용은 [디바이스를 개발에 사용하도록 설정](enable-your-device-for-development.md)을 읽어보세요. 이 가이드를 계속하려면 **개발자 모드**를 선택하고 **예**를 클릭하여 대화 상자를 닫습니다.
+> Visual Studio를 처음 사용하는 경우 **개발자 모드**를 사용하도록 설정하라는 설정 대화 상자가 표시될 수 있습니다. 개발자 모드는 앱을 Store에서만 실행하는 것이 아니라 직접 실행할 수 있는 권한처럼 특정 기능을 활성화하는 특수 설정입니다. 자세한 내용은 [디바이스를 개발에 사용하도록 설정](enable-your-device-for-development.md)을 읽어보세요. 이 가이드를 계속하려면 **개발자 모드**를 선택하고 **예**를 선택한 다음, 대화 상자를 닫습니다.
 
  ![개발자 모드 활성화 대화 상자](images/win10-cs-00.png)
 
@@ -80,13 +80,13 @@ ms.locfileid: "70963619"
 - 앱의 웹 페이지로, 앱이 실행될 때 로드되어 표시됩니다.
 
 *로고 이미지 세트*
--   Assets/Square150x150Logo.scale-200.png는 시작 메뉴에서 앱을 나타냅니다.
+-   Assets/Square150x150Logo.scale-200.png는 **시작** 메뉴에서 앱을 나타냅니다.
 -   Assets/StoreLogo.png는 Microsoft Store에 앱을 나타냅니다.
 -   Assets/SplashScreen.scale-200.png는 앱 시작 시 표시되는 시작 화면입니다.
 
 ## <a name="step-2-adding-a-button"></a>2단계: 단추 추가
 
-편집기에서 *index.html*을 클릭하여 선택하고, 읽기 위해 포함된 HTML을 변경합니다.
+**index.html**을 선택하여 편집기에서 선택하고 읽기 위해 포함된 HTML을 다음과 같이 변경합니다.
 
 ```html
 <!DOCTYPE html>
@@ -116,7 +116,7 @@ ms.locfileid: "70963619"
 
 ## <a name="step-3-adding-some-javascript"></a>3단계: 일부 JavaScript 추가
 
-이제 JavaScript를 추가하겠습니다. *main.js*를 클릭하여 선택하고, 다음 항목을 추가합니다.
+이제 JavaScript를 추가하겠습니다. **main.js**를 선택하여 선택한 후, 다음 항목을 추가합니다.
 
 ```javascript
 // Your code here!
@@ -146,7 +146,7 @@ function sayHello() {
 
 ## <a name="step-4-run-the-app"></a>4단계: 앱을 실행합니다.
 
-이제 F5 키를 눌러 앱을 실행할 수 있습니다. 앱이 로드되고 웹 페이지가 표시됩니다. 단추를 클릭하면 메시지 대화 상자가 나타납니다.
+이제 F5 키를 눌러 앱을 실행할 수 있습니다. 앱이 로드되고 웹 페이지가 표시됩니다. 단추를 선택하면 메시지 대화 상자가 팝업됩니다.
 
  ![프로젝트 실행](images/win10-js-05.png)
 

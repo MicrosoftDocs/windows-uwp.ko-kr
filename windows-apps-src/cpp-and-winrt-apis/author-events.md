@@ -5,16 +5,16 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: e8bb86bd8d52ff96f010bf41758f1e4602330d52
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 55d512faccfa318156fb0dc28d3f804b53f0fe3d
+ms.sourcegitcommit: 102fdfdf32ba12a8911018d234d71d67ebef61ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393476"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551658"
 ---
 # <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 
-이번 항목에서는 차변 발생 시 이벤트가 발생하는 은행 계좌 런타임 클래스를 포함해 Windows 런타임 구성 요소를 작성하는 방법에 대해서 설명합니다. 또한 은행 계좌 런타임 클래스를 사용하면서 함수를 호출하여 잔액을 조정하거나, 발생하는 이벤트를 처리하는 주요 앱에 대해서도 설명합니다.
+이 항목에서는 해당 잔액이 차변으로 전환될 때 이벤트가 발생하는 은행 계좌 &mdash;를 나타내는 런타임 클래스를 포함하는 Windows 런타임 구성 요소를 작성하는 방법에 대해서 설명합니다. 이 항목에서는 은행 계좌 런타임 클래스를 사용하면서 함수를 호출하여 잔액을 조정하거나, 발생하는 모든 이벤트를 처리하는 주요 앱에 대해서도 설명합니다.
 
 > [!NOTE]
 > 프로젝트 템플릿 및 빌드 지원을 함께 제공하는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
@@ -24,7 +24,7 @@ ms.locfileid: "70393476"
 
 ## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Windows 런타임 구성 요소(BankAccountWRC) 만들기
 
-먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Windows 런타임 구성 요소(C++/WinRT)** 프로젝트를 만든 다음, 이름을 *BankAccountWRC*("은행 계좌 Windows 런타임 구성 요소"인 경우)로 지정합니다. 아직 프로젝트를 빌드하지 마세요.
+먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Windows 런타임 구성 요소(C++/WinRT)** 프로젝트를 만든 다음, 이름을 *BankAccountWRC*("은행 계좌 Windows 런타임 구성 요소"인 경우)로 지정합니다. 프로젝트 이름을 *BankAccountWRC*로 지정하면 이 항목의 나머지 단계를 가장 쉽게 수행할 수 있습니다. 아직 프로젝트를 빌드하지 마세요.
 
 새로 만든 프로젝트에는 `Class.idl`이라는 이름의 파일이 포함되어 있습니다. 해당 파일의 이름을 바꿉니다`BankAccount.idl`(`.idl` 파일의 이름을 바꾸면 자동으로 종속 `.h` 및 `.cpp` 파일의 이름도 바뀜). `BankAccount.idl`의 콘텐츠를 아래 목록으로 바꿉니다.
 
@@ -45,7 +45,7 @@ namespace BankAccountWRC
 
 빌드 프로세스에서 `midl.exe` 도구가 실행되어 구성 요소의 Windows 런타임 메타데이터 파일(`\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`)을 생성합니다. 그런 다음, `cppwinrt.exe` 도구가 실행되어(`-component` 옵션과 함께) 구성 요소를 작성하도록 지원하는 원본 코드 파일을 생성합니다. 원본 코드 파일에는 IDL로 선언한 **BankAccount** 런타임 클래스의 구현을 시작할 수 있는 스텁이 포함됩니다. 이 스텁이 `\BankAccountWRC\BankAccountWRC\Generated Files\sources\BankAccount.h`와 `BankAccount.cpp`입니다.
 
-프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **파일 탐색기에서 폴더 열기**를 클릭합니다. 파일 탐색기에서 프로젝트 폴더가 열립니다. 여기에서 `\BankAccountWRC\BankAccountWRC\Generated Files\sources\` 폴더에서 스텁 파일 `BankAccount.h` 및 `BankAccount.cpp`를 복사하여 프로젝트 파일을 포함하는 폴더인 `\BankAccountWRC\BankAccountWRC\`에 붙여넣고 대상에서 파일을 바꿉니다. 이제 `BankAccount.h`와 `BankAccount.cpp`를 열고 런타임 클래스를 구현합니다. `BankAccount.h`에서 프라이빗 멤버 두 개를 BankAccount 구현(팩터리 구현 ‘아님’)에 추가합니다. 
+프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **파일 탐색기에서 폴더 열기**를 클릭합니다. 파일 탐색기에서 프로젝트 폴더가 열립니다. 여기에서 `\BankAccountWRC\BankAccountWRC\Generated Files\sources\` 폴더에서 스텁 파일 `BankAccount.h` 및 `BankAccount.cpp`를 복사하여 프로젝트 파일을 포함하는 폴더인 `\BankAccountWRC\BankAccountWRC\`에 붙여넣고 대상에서 파일을 바꿉니다. 이제 `BankAccount.h`와 `BankAccount.cpp`를 열고 런타임 클래스를 구현합니다. `BankAccount.h`에서 프라이빗 멤버 두 개를 **BankAccount** 구현(팩터리 구현 *아님*)에 추가합니다.
 
 ```cppwinrt
 // BankAccount.h
@@ -102,9 +102,12 @@ namespace winrt::BankAccountWRC::implementation
 
 ## <a name="create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component"></a>주요 앱(BankAccountCoreApp)을 만들어 Windows 런타임 구성 요소 테스트
 
-이제 새 프로젝트를 만듭니다(`BankAccountWRC` 솔루션에서, 혹은 새로운 솔루션에서). **주요 앱(C++/WinRT)** 프로젝트를 만들어서 이름을 *BankAccountCoreApp*이라고 지정합니다.
+이제 *BankAccountWRC* 솔루션 또는 새로운 솔루션에서 새 프로젝트를 만듭니다. **주요 앱(C++/WinRT)** 프로젝트를 만들어서 이름을 *BankAccountCoreApp*이라고 지정합니다.
 
-참조를 추가하고 `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`로 이동하거나, 두 프로젝트가 동일한 솔루션에 있는 경우 프로젝트 간 참조를 추가합니다. **추가**, **확인**을 차례로 클릭합니다. 이제 BankAccountCoreApp을 빌드합니다. 드물지만 페이로드 파일인 `readme.txt`가 존재하지 않는다는 오류가 표시되는 경우에는 해당 파일을 Windows 런타임 구성 요소 프로젝트에서 제외하여 다시 빌드한 다음, BankAccountCoreApp을 다시 빌드합니다.
+> [!NOTE]
+> 앞에서 설명한 것처럼 Windows 런타임 구성 요소에 대한 Windows 런타임 메타데이터 파일(*BankAccountWRC*라는 프로젝트)이 `\BankAccountWRC\Debug\BankAccountWRC\` 폴더에 생성됩니다. 해당 경로의 첫 번째 세그먼트는 솔루션 파일이 포함된 폴더의 이름입니다. 다음 세그먼트는 `Debug`라는 하위 디렉터리입니다. 마지막 세그먼트는 Windows 런타임 구성 요소에 대해 이름이 지정된 하위 디렉터리입니다. 프로젝트 *BankAccountWRC*의 이름을 지정하지 않은 경우 메타데이터 파일은 `\<YourProjectName>\Debug\<YourProjectName>\` 폴더에 있습니다.
+
+이제 핵심 앱 프로젝트(*BankAccountCoreApp*)에서 참조를 추가하고 `\BankAccountWRC\Debug\BankAccountWRC\BankAccountWRC.winmd`로 이동하거나, 두 프로젝트가 동일한 솔루션에 있는 경우 프로젝트 간 참조를 추가합니다. **추가**, **확인**을 차례로 클릭합니다. 이제 *BankAccountCoreApp*을 빌드합니다. 드물지만 페이로드 파일인 `readme.txt`가 존재하지 않는다는 오류가 표시되는 경우에는 해당 파일을 Windows 런타임 구성 요소 프로젝트에서 제외하여 다시 빌드한 다음, *BankAccountCoreApp*을 다시 빌드합니다.
 
 빌드 프로세스에서 `cppwinrt.exe` 도구가 실행되면서 참조된 `.winmd` 파일을 원본 코드 파일로 처리합니다. 이 원본 코드 파일에는 구성 요소를 사용할 때 지원할 목적으로 프로젝션된 형식이 포함되어 있습니다. 구성 요소의 런타임 클래스에 맞게 프로젝션된 형식의 헤더(`BankAccountWRC.h`)가 `\BankAccountCoreApp\BankAccountCoreApp\Generated Files\winrt\` 폴더로 생성됩니다.
 
@@ -114,7 +117,7 @@ namespace winrt::BankAccountWRC::implementation
 #include <winrt/BankAccountWRC.h>
 ```
 
-또한 `App.cpp`에서 다음 코드를 추가하여 BankAccount(프로젝션된 형식의 기본 생성자 사용)를 인스턴스화하고, 이벤트 처리기를 등록하고, 계좌에서 차변이 발생하도록 합니다.
+또한 `App.cpp`에서 다음 코드를 추가하여 **BankAccount**(프로젝션된 형식의 기본 생성자 사용)를 인스턴스화하고 이벤트 처리기를 등록한 다음, 계좌에서 차변이 발생하도록 합니다.
 
 `WINRT_ASSERT`는 매크로 정의이며 [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)로 확장됩니다.
 

@@ -6,16 +6,16 @@ ms.date: 05/08/2018
 ms.topic: article
 keywords: Windows 10, uwp, 연령별 등급, 게임 등급, iarc, 등급, 설문지, 등급 위원회, 콘텐츠 등급
 ms.localizationpriority: medium
-ms.openlocfilehash: bab98b50b1d53451708b7631f74d15947c60d4c8
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 2e8ffdcf1daf9198ded9658c471e765acf5ab8f3
+ms.sourcegitcommit: 7754c1cb1a348f3311417ea7df3e9d168fe39517
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260050"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74694779"
 ---
 # <a name="age-ratings"></a>연령별 등급
 
-**앱 제출 프로세스**의 [연령별 등급](app-submissions.md) 페이지를 사용하면 [IARC(국제 연령 등급 연합)](https://www.globalratings.com/) 등급 시스템에서 관리하는 적합한 연령 및 콘텐츠 등급을 수신할 수 있도록 앱에 대한 정보를 제공할 수 있습니다. 연령별 등급은 앱 대상 그룹의 연령보다는 앱의 콘텐츠 적합성에 따라 부여됩니다.
+[앱 제출 프로세스](app-submissions.md)의 **연령별 등급** 페이지를 사용하면 [IARC(국제 연령 등급 연합)](https://www.globalratings.com/) 등급 시스템에서 관리하는 적합한 연령 및 콘텐츠 등급을 수신할 수 있도록 앱에 대한 정보를 제공할 수 있습니다. 연령별 등급은 앱 대상 그룹의 연령보다는 앱의 콘텐츠 적합성에 따라 부여됩니다.
 
 ## <a name="answering-the-age-ratings-questionnaire"></a>연령별 등급 설문지에 답변하기
 
@@ -33,9 +33,6 @@ ms.locfileid: "74260050"
 다음에 앱을 업데이트하면 모든 앱에 할당된 등급이 이 페이지에 표시됩니다. 또한 **편집**을 클릭하여 앱의 콘텐츠가 변경되어 답변을 조정해야 하는 경우 설문지를 다시 작성할 수 있습니다. IARC가 질문을 수시로 업데이트할 수도 있습니다. 그런 경우에는 업데이트를 제출할 때 설문지를 다시 작성하라는 메시지가 나타날 수도 있습니다.
 
 <span id="boards" />
-
-> [!NOTE]
-> 대한민국 법률에 따라 대한민국에서 사용할 수 있는 게임은 대한민국 [게임물관리위원회](https://www.grb.or.kr/Default.aspx)를 통해 등급을 지정받아야 합니다. 게임을 제출하고 이 게임을 대한민국에서 제공하려면 이 추가 섹션을 작성하고 등급 인증서를 업로드해야 합니다. 앱이 게임이 아니거나 이 앱을 대한민국에서 제공하지 않으려면 이 섹션을 비워 둘 수 있습니다.
 
 > [!NOTE]
 > 대만에서 사용할 수 있는 게임을 제출하는 경우 법률의 요구에 따라 [이 양식](https://www.gamerating.org.tw/company_login.php)을 사용하여 제공되는 CSRR 등급을 등록해야 합니다. 

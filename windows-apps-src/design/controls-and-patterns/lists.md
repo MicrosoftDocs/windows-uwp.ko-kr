@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4605f759c554c12368325a7c1e42143319eddede
-ms.sourcegitcommit: 503fa613c65236660350794b4f066eccebe9ac8e
+ms.openlocfilehash: 06cd49ce68de6f1c7a7a29b94c80f0a004a2eca3
+ms.sourcegitcommit: 6b29f0cbdc6e66b44150b3b60e95d67e1f7f56bf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74162349"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74478534"
 ---
 # <a name="collections-and-lists"></a>컬렉션 및 목록
 
@@ -84,7 +84,7 @@ ms.locfileid: "74162349"
 
 ![반전된 목록 보기](images/listview-inverted-2.png)
 
-### <a name="related-articles"></a>관련된 문서
+### <a name="related-articles"></a>관련 문서
 <table>
 <colgroup>
 <col width="50%" />
