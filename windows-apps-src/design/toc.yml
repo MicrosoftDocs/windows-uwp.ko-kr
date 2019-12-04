@@ -130,6 +130,8 @@
               href: controls-and-patterns/swipe.md
             - name: 당겨서 새로 고침
               href: controls-and-patterns/pull-to-refresh.md
+            - name: 컬렉션 필터링
+              href: controls-and-patterns/listview-filtering.md
         - name: 추가 컬렉션 옵션 및 사용자 지정
           items:
             - name: 반전된 목록
