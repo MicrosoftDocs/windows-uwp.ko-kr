@@ -1,5 +1,5 @@
 ---
-Description: 패키지 된 데스크톱 응용 프로그램 배포 (데스크톱 브리지)
+Description: 데스크톱 브리지를 사용 하 여 패키지 된 앱 배포
 title: 패키지 된 데스크톱 응용 프로그램을 Microsoft Store에 게시 하거나 하나 이상의 장치에 테스트용으로 로드.
 ms.date: 05/18/2018
 ms.topic: article
@@ -8,12 +8,12 @@ ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 597a283fd28b571ed968255312059c7049f3f700
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 15970afbeb5d9dee1c2079cd5933b1250ecb2f09
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682570"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74734779"
 ---
 # <a name="distribute-your-packaged-desktop-app"></a>패키지 된 데스크톱 앱 배포
 
@@ -28,7 +28,7 @@ ms.locfileid: "68682570"
 
 응용 프로그램을 Microsoft Store에 게시 하 여 가장 광범위 한 대상에 연결 합니다. 또한 조직 고객은 응용 프로그램을 획득 하 여 [비즈니스를 위해 Microsoft Store](https://businessstore.microsoft.com/store)를 통해 조직에 내부적으로 배포할 수 있습니다.
 
-Microsoft Store에 게시하려는 경우 제출 프로세서의 일환으로 몇 가지 추가 질문을 받게 됩니다. 패키지 매니페스트가 **runFullTrust**라는 제한된 접근 권한 값을 선언하기 때문이며, 해당 접근 권한 값을 사용하여 응용 프로그램을 승인해야 합니다. 이 요구 사항에 대 한 자세한 내용은 다음을 참조 하세요. [제한 된 기능](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities).
+Microsoft Store에 게시하려는 경우 제출 프로세서의 일환으로 몇 가지 추가 질문을 받게 됩니다. 패키지 매니페스트가 **runFullTrust**라는 제한된 접근 권한 값을 선언하기 때문이며, 해당 접근 권한 값을 사용하여 응용 프로그램을 승인해야 합니다. 이 요구 사항에 대한 자세한 내용은 [제한된 접근 권한 값](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities)을 참조하세요.
 
 스토어에 제출 하기 전에 응용 프로그램에 서명할 필요가 없습니다.
 

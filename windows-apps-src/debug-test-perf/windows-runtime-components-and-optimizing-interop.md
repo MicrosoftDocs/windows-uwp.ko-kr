@@ -1,17 +1,17 @@
 ---
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
-title: 유니버설 Windows 플랫폼 구성 요소 및 interop 최적화
+title: UWP 구성 요소에 대 한 interop 최적화
 description: Interop 성능 문제를 방지하면서 네이티브 형식과 관리되는 형식 간의 Interop 및 UWP(유니버설 Windows 플랫폼) 구성 요소를 사용하는 UWP 앱을 만듭니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 685f862ea0b381195db2670de45c35df67b5fcb9
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 7cc68520bbf83ec637c0814c333dfada2f974d1e
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339533"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735008"
 ---
 # <a name="uwp-components-and-optimizing-interop"></a>UWP 구성 요소 및 interop 최적화
 
@@ -80,7 +80,7 @@ UWP를 통해 개발자는 각 언어로 사용 가능한 UWP API의 프로젝�
 
 앱을 측정하고 interop가 앱 실행 시간의 많은 부분을 차지하고 있는지 확인한 다음 interop 비용을 최적화해야 합니다. Visual Studio에서 앱의 성능을 분석할 때 **함수** 보기를 사용하여 UWP를 호출하는 메서드에 소요된 포괄 시간을 확인하여 interop 비용의 상한값을 쉽게 알 수 있습니다.
 
-interop 오버헤드로 인해 앱이 느려지면 활발한 코드 경로에서 UWP API에 대한 호출을 줄여 성능을 개선할 수 있습니다. 예를 들어 [**UIElements**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)의 위치 및 크기를 지속적으로 쿼리하여 많은 물리학 계산을 수행하고 있는 게임 엔진이 필요한 정보를 **UIElements**에서 로컬 변수로 저장하고 이 캐시된 값에서 계산을 수행하고 계산이 완료된 후 최종 결과를 다시 **UIElements**에 할당하여 많은 시간을 절약할 수 있습니다. 다른 예제: C# 또는 Visual Basic 코드에서 컬렉션에 많이 액세스하는 경우에는 [**Windows.Foundation.Collections**](https://docs.microsoft.com/dotnet/api/system.collections) 네임스페이스의 컬렉션이 아니라 [**System.Collections**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections) 네임스페이스의 컬렉션을 사용하는 것이 보다 효율적입니다. UWP 구성 요소에 대한 호출을 통합할 수도 있습니다. 이것이 가능한 한 가지 예제는 [**Windows.Storage.BulkAccess**](https://docs.microsoft.com/uwp/api/Windows.Storage.BulkAccess) API를 사용하는 것입니다.
+interop 오버헤드로 인해 앱이 느려지면 활발한 코드 경로에서 UWP API에 대한 호출을 줄여 성능을 개선할 수 있습니다. 예를 들어 [**UIElements**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)의 위치 및 크기를 지속적으로 쿼리하여 많은 물리학 계산을 수행하고 있는 게임 엔진이 필요한 정보를 **UIElements**에서 로컬 변수로 저장하고 이 캐시된 값에서 계산을 수행하고 계산이 완료된 후 최종 결과를 다시 **UIElements**에 할당하여 많은 시간을 절약할 수 있습니다. 다른 예제: C# 또는 Visual Basic 코드에서 컬렉션에 많이 액세스하는 경우에는 [**Windows.Foundation.Collections**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections) 네임스페이스의 컬렉션이 아니라 [**System.Collections**](https://docs.microsoft.com/dotnet/api/system.collections) 네임스페이스의 컬렉션을 사용하는 것이 보다 효율적입니다. UWP 구성 요소에 대한 호출을 통합할 수도 있습니다. 이것이 가능한 한 가지 예제는 [**Windows.Storage.BulkAccess**](https://docs.microsoft.com/uwp/api/Windows.Storage.BulkAccess) API를 사용하는 것입니다.
 
 ### <a name="building-a-uwp-component"></a>UWP 구성 요소 빌드
 

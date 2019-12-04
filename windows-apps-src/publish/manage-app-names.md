@@ -6,19 +6,19 @@ ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 앱 이름, 앱 이름 변경, 앱 이름 업데이트, 게임 이름, 제품 이름
 ms.localizationpriority: medium
-ms.openlocfilehash: 0022c53dc3afc7e710495900898d3fc5c81ea45a
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: 38cedf40d4ecf997f6fbced2186cd5b27c6d5e4f
+ms.sourcegitcommit: 2d709ddcc31f52d2a4ace1134aea45057d99a615
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682681"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74782594"
 ---
 # <a name="manage-app-names"></a>앱 이름 관리
 
 **앱 이름 관리** 를 사용 하 여 앱에 대해 예약 된 모든 이름을 확인 하 고, 다른 언어에 대 한 추가 이름을 예약 하거나, 앱 이름을 변경 하 고, 필요 하지 않은 이름을 삭제할 수 있습니다. [파트너 센터](https://partner.microsoft.com/dashboard) 에서 앱의 왼쪽 탐색 메뉴에 있는 **앱 관리** 섹션을 확장 하 여이 페이지를 찾을 수 있습니다.
 
 > [!IMPORTANT]
-> 앱의 추가 이름을 예약할 수 있으며 파트너 센터에서 앱을 처음 만들 때 예약한 앱이 아닌 게시 된 버전의 앱 중 하나를 사용 하도록 선택할 수 있습니다. 그러나 제품에 대해 예약한 이름이 **PFN (패키지 패밀리 이름)** 와 같은 일부 [id 세부 정보](view-app-identity-details.md)에 사용 되는 것에 유의 해야 합니다. 이러한 값은 일부 사용자에 게 표시 될 수 있으며 변경 될 수 없으므로 먼저 예약 하는 이름이이 용도에 적합 한지 확인 해야 합니다.
+> 앱의 추가 이름을 예약할 수 있으며 파트너 센터에서 앱을 처음 만들 때 예약한 앱이 아닌 게시 된 버전의 앱 중 하나를 사용 하도록 선택할 수 있습니다. 그러나 제품에 대해 예약한 이름이 **PFN (패키지 패밀리 이름)** 와 같은 일부 [id 세부 정보](view-app-identity-details.md)에 사용 됩니다. 이러한 값은 일부 사용자에 게 표시 될 수 있으며 변경 될 수 없으므로 먼저 예약 하는 이름이이 용도에 적합 한지 확인 해야 합니다.
 
 
 ## <a name="reserve-additional-names-for-your-app"></a>앱 이름을 추가로 예약
@@ -45,7 +45,7 @@ ms.locfileid: "68682681"
 앱이 이미 스토어에 있는데 이름을 바꾸려면 위에 설명된 단계에 따라 앱용으로 새 이름을 예약하고 앱에 대한 새 제출을 만듭니다. 
 
 이전 이름을 새 이름으로 바꾸고 업데이트 된 패키지를 제출에 업로드 하려면 앱의 패키지를 업데이트 해야 합니다.
-- 먼저, 새 이름을 사용할 수 있도록 Package.StoreAssociation.xml 파일을 수동으로 또는 Visual Studio를 사용하여 업데이트합니다(**프로젝트 > 스토어 > 스토어에 앱 연결...** ). 자세한 내용은 [Visual Studio를 사용 하 여 UWP 앱 패키지](/windows/msix/package/packaging-uwp-apps)를 참조 하세요.
+- 먼저, 수동으로 또는 Visual Studio를 사용 하 여 새 이름을 사용 하도록 패키지 파일을 업데이트 합니다. 즉,**프로젝트 > 저장소 > 앱을 스토어에 연결**...). 자세한 내용은 [Visual Studio를 사용 하 여 UWP 앱 패키지](/windows/msix/package/packaging-uwp-apps)를 참조 하세요.
 - 앱 매니페스트의 [**Package/Properties/DisplayName**](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-displayname) 요소를 업데이트하고 앱 이름을 포함하는 그래픽이나 텍스트를 업데이트해야 합니다. 
   > [!IMPORTANT]
   > 앱 매니페스트에서 **Package/Properties/DisplayName**을 변경하기에 앞서 Package.StoreAssociation.xml 파일을 업데이트해야 합니다. 그렇지 않으면 오류가 발생할 수 있습니다.

@@ -1,21 +1,21 @@
 ---
-Description: 일부 앱(다국어 사전, 번역 도구 등)은 앱 번들의 기본 동작을 재정의하고, 리소스를 별도의 리소스 패키지에 두는 대신 앱 패키지에 빌드해야 합니다. 이 항목에서는 이러한 작업을 수행하는 방법을 설명합니다.
-title: 리소스 팩 대신 앱 패키지에 리소스 빌드
+Description: 몇 가지 종류의 앱(다국어 사전, 번역 도구 등)은 앱 번들의 기본 동작을 재정의하고, 리소스를 별도의 리소스 패키지에 포함하지 않고 앱 패키지에 빌드해야 합니다. 이 문서에서는 이러한 작업을 수행하는 방법에 대해 설명합니다.
+title: 앱 패키지에 리소스 빌드
 template: detail.hbs
 ms.date: 11/14/2017
 ms.topic: article
-keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
+keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: f7acabc9858f5a2fa0b6b76d752d2a342959f41f
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: d7a63c44ac8cb6f6b17951cf6515fad33fb83ee9
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682508"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74734948"
 ---
 # <a name="build-resources-into-your-app-package-instead-of-into-a-resource-pack"></a>리소스 팩 대신 앱 패키지에 리소스 빌드
 
-일부 앱(다국어 사전, 번역 도구 등)은 앱 번들의 기본 동작을 재정의하고, 리소스를 별도의 리소스 패키지(또는 리소스 팩)에 두는 대신 앱 패키지에 빌드해야 합니다. 이 항목에서는 이러한 작업을 수행하는 방법을 설명합니다.
+일부 앱(다국어 사전, 번역 도구 등)은 앱 번들의 기본 동작을 재정의하고, 리소스를 별도의 리소스 패키지(또는 리소스 팩)에 두는 대신 앱 패키지에 빌드해야 합니다. 이 문서에서는 이러한 작업을 수행하는 방법에 대해 설명합니다.
 
 기본적으로 [앱 번들(.appxbundle)](/windows/msix/package/packaging-uwp-apps)을 빌드하면, 언어, 크기 및 DirectX 기능 수준에 대한 기본 리소스만 앱 패키지에 빌드됩니다. 번역된 리소스&mdash;및 기본 이외 크기에 맞게 조정된 리소스 및/또는 DirectX 기능 수준&mdash;는 리소스 패키지에 빌드되며, 필요한 장치에만 다운로드됩니다. 고객이 언어 기본 설정이 스페인어인 장치를 사용하여 Microsoft Store로부터 앱을 구매하게 되면, 앱과 스페인어 리소스 패키지만 다운로드 및 설치됩니다. 동일한 사용자가 나중에 **설정**에서 언어 기본 설정을 스페인어로 변경하게 되면, 앱의 프랑스어 리소스 패키지가 다운로드 및 설치됩니다. 크기 및 DirectX 기능 수준에 대한 기준을 충족하는 리소스에 유사한 동작이 발생합니다. 대부분의 앱에서는 이러한 동작 덕분에 효율성이 높아지므로 사용자와 고객 모두가 *원하는* 바를 충족해준다고 볼 수 있습니다.
 
@@ -57,7 +57,7 @@ Visual Studio가 앱 패키지에 리소스를 빌드하도록 구성하는 데�
    </default>
 ```
 
-### <a name="how-does-this-work"></a>어떻게 작동합니까?
+### <a name="how-does-this-work"></a>어떻게 작동하나요?
 
 백그라운드에서 Visual Studio는 `MakePri.exe`라는 도구를 실행하여 패키지 리소스 인덱스라고 하는 파일을 생성합니다. 이 파일에는 자동 분할의 기준이 되는 리소스 한정자 이름을 나타내는 등 모든 앱 리소스에 대한 설명이 들어 있습니다. 이 도구에 대한 자세한 내용은 [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)을 참조하세요. Visual Studio가 구성 파일을 `MakePri.exe`에 전달합니다. `priconfig.packaging.xml` 파일의 내용이 자동 분할을 결정하는 부분인 구성 파일의 `<packaging>` 요소로 사용됩니다. 따라서 `priconfig.packaging.xml`을 추가하고 편집하면 Visual Studio가 앱에 대해 생성하는 패키지 리소스 인덱스 파일의 내용뿐만 아니라 앱 번들에 있는 패키지의 내용에도 영향이 미칩니다.
 

@@ -1,17 +1,17 @@
 ---
 description: UI의 뒤에는 비즈니스 및 데이터 계층이 있습니다.
-title: Windows Phone Silverlight 비즈니스 및 데이터 계층을 UWP로 포팅
+title: WPSL 비즈니스 및 데이터 계층을 UWP로 포팅
 ms.assetid: 27c66759-2b35-41f5-9f7a-ceb97f4a0e3f
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 25d8bba5e1b26613185017642d63128cc2b1f7f6
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 9548026f0cae4ac414da15ad4ad2aa86f6226cbc
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259088"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74734918"
 ---
 #  <a name="porting-windowsphone-silverlight-business-and-data-layers-to-uwp"></a>Windows Phone Silverlight 비즈니스 및 데이터 계층을 UWP로 포팅
 
