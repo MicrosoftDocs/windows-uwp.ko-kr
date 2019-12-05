@@ -1,17 +1,17 @@
 ---
 description: 이 항목에서는 Windows Phone Silverlight Api를 해당 유니버설 Windows 플랫폼 (UWP)에 대응 하는 포괄적인 매핑을 제공 합니다.
-title: Silverlight에서 UWP 네임 스페이스 및 클래스 매핑 Windows Phone
+title: UWP 네임 스페이스 및 클래스 매핑 WPSL
 ms.assetid: 33f06706-4790-48f3-a2e4-ebef9ddb61a4
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1af36b43e02c9ee08373098f57ba29c10badb6c8
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: fdb1dc8ad4b4e61e1ffec294cfbf17e8abcc8586
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259065"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735058"
 ---
 # <a name="windowsphone-silverlight-to-uwp-api-mappings"></a>Silverlight에서 UWP API 매핑 Windows Phone
 
@@ -20,7 +20,7 @@ ms.locfileid: "74259065"
 
 이 매핑 테이블은 UWP 프로젝트에서 작업 하는 동안 Windows Phone Silverlight 프로젝트에서 소스 코드를 다시 사용 하는 경우 도움이 됩니다. 두 플랫폼 간에는 네임스페이스와 클래스의 이름(UI 컨트롤 포함)이 다릅니다. 대부분의 경우 간단히 네임스페이스 이름을 변경하면 코드가 컴파일됩니다. 클래스 또는 API 이름이 네임스페이스 이름과 함께 변경된 경우도 있습니다. 드물기는 하지만, 매핑이 더 복잡하여 접근 방법을 변경해야 하는 경우도 있습니다.
 
-**표를 사용 하는 방법:  ** 먼저 사용 중인 클래스의 이름을 검색 합니다. 매핑이 네임스페이스 이름을 변경하는 것보다 더 복잡할 경우 클래스가 나열됩니다. 클래스가 나열되지 않는 경우 매핑 시 네임스페이스만 변경하면 됩니다. 따라서 클래스의 네임스페이스 이름을 찾고 해당하는 UWP 네임스페이스 이름을 찾습니다. 클래스가 해당 네임스페이스에 있습니다. 네임스페이스가 나열되지 않는 경우 이름이 변경되지 않은 것입니다.
+**표를 사용 하는 방법:  ** 먼저 사용 중인 클래스의 이름을 검색 합니다. 매핑이 네임스페이스 이름을 변경하는 것보다 더 복잡한 모든 경우에 클래스가 나열됩니다. 클래스가 나열되지 않는 경우 매핑 시 네임스페이스만 변경하면 됩니다. 따라서 클래스의 네임스페이스 이름을 찾고 해당하는 UWP 네임스페이스 이름을 찾습니다. 클래스가 해당 네임스페이스에 있습니다. 네임스페이스가 나열되지 않는 경우 이름이 변경되지 않은 것입니다.
 
 **참고**  Windows 10은 Windows Phone 스토어 앱이 수행 하는 것 보다 훨씬 더 많은 .NET Framework를 지원 합니다. 예를 들어 Windows 10에는 여러 System.servicemodel이 있습니다. System.Net, System.net.networkinformation 및 시스템 .Net. n e t.\*
 또한 Windows 10 앱에서 MSIL을 고유 하 게 실행 가능한 기계어 코드로 변환 하는 미리 컴파일 기술인 .NET 네이티브의 이점을 누릴 수 있습니다. .NET 네이티브 앱은 해당 MSIL 앱보다 더 빠르게 시작되고 메모리와 배터리를 더 적게 사용합니다.
@@ -116,7 +116,7 @@ ms.locfileid: "74259065"
 | **Microsoft.Devices.Sensors.Accelerometer**, **Compass** 클래스 | [  **Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors) 네임스페이스에서 |
 | **Microsoft.Devices.Sensors.Gyroscope** 클래스 | [**회전 계**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Gyrometer) 클래스 |
 | **Microsoft.Devices.Sensors.Motion** 클래스 | [**경사 계**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Inclinometer) 클래스 |
-| 전역화 | |
+| 세계화 | |
 | **System.Globalization** 네임스페이스 | [**Windows 세계화**](https://docs.microsoft.com/uwp/api/Windows.Globalization) 네임 스페이스 |
 | (ST = **System.Threading**) <br/> **ST.Thread.CurrentCulture** 속성 | (SG = **System.Globalization**) <br/> **S.CultureInfo.CurrentCulture** 속성 |
 | (ST = **System.Threading**) <br/> **ST.Thread.CurrentUICulture** 속성 | (SG = **System.Globalization**) <br/> **S.CultureInfo.CurrentUICulture** 속성 |
@@ -208,7 +208,7 @@ ms.locfileid: "74259065"
 | **System.Reflection.Emit.ILGenerator** 클래스 | 직접적으로 해당하는 항목이 없습니다. |
 | 반응적 확장 | |
 | **Microsoft.Phone.Reactive** 네임스페이스 | 직접적으로 해당하는 항목이 없습니다. |
-| 반사 | |
+| 리플렉션 | |
 | **System.Type** 클래스 | **System.Reflection.TypeInfo** 클래스. [UWP 앱용 .NET Framework의 리플렉션](https://docs.microsoft.com/dotnet/framework/reflection-and-codedom/reflection-for-windows-store-apps)을 참조하세요. |
 | 리소스 | |
 | **System.Resources.ResourceManager** 클래스 | (WA = **Windows.ApplicationModel**)<br/>[**WA. 리소스. Core**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core) 및 [**WA. 리소스**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources) 네임 스페이스, [**ResourceManager**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Resources.Core.ResourceManager) 클래스 [Windows 런타임 앱에서 리소스 만들기 및 검색](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))을 참조하세요. |
