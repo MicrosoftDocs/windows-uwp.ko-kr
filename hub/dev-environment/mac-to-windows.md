@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Mac에서 Windows로 전환, 바로 가기 키 매핑, Unix에서 windows로 전환, windows에서 windows로 전환, Macintosh 사용자에 대해 Windows를 사용 하는 방법, macintosh 사용자에 게 Windows를 사용 하는 방법, windows에서 Windows로 전환 하는 방법, 도움을 주는 Mac OS X 도움말 Mac에서 PC로 이동
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 563a8ad659cfff1396049aae78342642d1db3e72
-ms.sourcegitcommit: 4cb3ee28baa8020ec925b0bdd896ab197a1ddadb
+ms.openlocfilehash: a4e71143730184db094df2a7e8f1416cbaf244c4
+ms.sourcegitcommit: f5bb4e35d1373b982259e61547b3b1765da0e78c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74309158"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74881276"
 ---
 # <a name="guide-for-changing-your-dev-environment-from-mac-to-windows"></a>개발 환경을 Mac에서 Windows로 변경 하기 위한 가이드
 
@@ -24,23 +24,23 @@ ms.locfileid: "74309158"
 
 ## <a name="keyboard-shortcuts"></a>바로 가기 키
 
-| **연산의** | **Mac** | **Windows** |
+| **연산** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
-| 복사 | 명령 + C | Ctr + C |
-| 잘라내기 | 명령 + X | Ctr + X |
-| 붙여넣기 | 명령 + V | Ctr + V |
+| 복사 | 명령 + C | Ctrl+C |
+| 잘라내기 | 명령 + X | Ctrl+X |
+| 붙여넣기 | 명령 + V | Ctrl+V |
 | 실행 취소 | 명령 + Z | Ctrl+Z |
-| Save | 명령 + S | Ctrl+S |
-| 열기 | 명령 + O | Ctrl+O |
-| 컴퓨터 잠금 | 명령 + 컨트롤 + Q | WindowKey + L |
-| 바탕 화면 표시 | 명령 + F3 | WindowKey + D |
-| 창 최소화 | 명령 + M | Windows 키 + M |
-| 검색 | 명령 + 공백 | Windows 키 |
+| 저장 | 명령 + S | Ctrl+S |
+| 먼저 | 명령 + O | Ctrl+O |
+| 컴퓨터 잠금 | 명령 + 컨트롤 + Q | WindowsKey + L |
+| 바탕 화면 표시 | 명령 + F3 | WindowsKey + D |
+| 창 최소화 | 명령 + M | WindowsKey + M |
+| 검색 | 명령 + 공백 | WindowsKey |
 | 활성 창 닫기 | 명령 + W | 컨트롤 + W |
 | 현재 작업 전환 | 명령 + 탭 | Alt+Tab |
-| 화면 저장 (스크린샷) | 명령 + Shift + 3 | Windows + Shift + S |
-| 창 저장 | 명령 + Shift + 4 | Windows + Shift + S |
-| 항목 정보 보기 또는 속성 | 명령 + I | Alt + Enter |
+| 화면 저장 (스크린샷) | 명령 + Shift + 3 | WindowsKey + Shift + S |
+| 창 저장 | 명령 + Shift + 4 | WindowsKey + Shift + S |
+| 항목 정보 보기 또는 속성 | 명령 + I | Alt+Enter |
  | 모든 항목 선택 | 명령 + A | Ctrl+A |
 | 목록에서 두 개 이상의 항목 선택 (인접 하지 않음) | 명령을 클릭 한 다음 각 항목을 클릭 합니다. | 컨트롤을 클릭 한 다음 각 항목을 클릭 합니다. |
 | 특수 문자 입력 | Option + 문자 키 | Alt + 문자 키|
@@ -49,7 +49,7 @@ ms.locfileid: "74309158"
 
 참고: 이러한 바로 가기 중 일부에는 Surface 장치의 트랙 패드 및 기타 타사 랩톱과 같은 "Precision 트랙 패드"가 필요 합니다.
 
- **연산의** | **Mac** | **Windows** |
+ **연산** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
 | Scroll | 두 손가락 세로 살짝 밀기 | 두 손가락 세로 살짝 밀기 |
 | Zoom | 손가락으로 두 손가락으로 | 손가락으로 두 손가락으로 |
@@ -70,7 +70,7 @@ Windows는 Mac의 터미널 에뮬레이터에 대 한 여러 가지 대안을 �
 
 1. Windows 명령줄
 
-Windows 명령줄은 DOS 명령을 수락 하 고 Windows에서 가장 일반적으로 사용 되는 명령줄 도구입니다. 열려면 **Windows + R** 을 눌러 **실행** 상자를 열고 **Cmd** 를 입력 한 다음 **확인**을 클릭 합니다. 관리자 명령줄을 열려면 **cmd** 를 입력 한 다음 **ctrl + Shift + enter**를 누릅니다. 
+Windows 명령줄은 DOS 명령을 수락 하 고 Windows에서 가장 일반적으로 사용 되는 명령줄 도구입니다. 열려면 **Windowskey + R** 을 눌러 **실행** 상자를 열고 **Cmd** 를 입력 한 다음 **확인**을 클릭 합니다. 관리자 명령줄을 열려면 **cmd** 를 입력 한 다음 **ctrl + Shift + enter**를 누릅니다.
 
 2. PowerShell
 
@@ -80,11 +80,11 @@ PowerShell은 [Mac 에서도 사용할 수](https://docs.microsoft.com/powershel
 
 3. Linux용 Windows 하위 시스템(WSL)
 
-WSL을 사용 하면 Windows 내에서 Linux 셸을 실행할 수 있습니다. 즉, 선택 및 특정 Linux 배포판 설치에 따라 *bash** 또는 기타 셸을 실행할 수 있습니다. WSL을 사용 하면 Mac 사용자에 게 가장 익숙한 환경의 종류를 제공할 수 있습니다. 예를 들어 Windows 명령줄에서와 같이 **dir** 이 아닌 현재 디렉터리에 파일을 나열 하는 경우는 **ls** 입니다. Instaling 및 WSL 사용에 대 한 자세한 내용은 windows [10 용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/en-us/windows/wsl/install-win10)를 참조 하세요.
+WSL을 사용 하면 Windows 내에서 Linux 셸을 실행할 수 있습니다. 즉, 선택 및 특정 Linux 배포판 설치에 따라 *bash** 또는 기타 셸을 실행할 수 있습니다. WSL을 사용 하면 Mac 사용자에 게 가장 익숙한 환경의 종류를 제공할 수 있습니다. 예를 들어 Windows 명령줄에서와 같이 **dir** 이 아닌 현재 디렉터리에 파일을 나열 하는 경우는 **ls** 입니다. Instaling 및 WSL 사용에 대 한 자세한 내용은 windows [10 용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/windows/wsl/install-win10)를 참조 하세요.
 
 ## <a name="apps-and-utilities"></a>앱 및 유틸리티
 
- **다운로드** | **Mac** | **Windows** |
+ **앱** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
 | 설정 및 기본 설정 | 시스템 기본 설정 | 설정 |
 | 작업 관리자 | 작업 모니터 | 작업 관리자 |
