@@ -260,6 +260,8 @@
       href: style/reveal.md
     - name: 포커스 표시
       href: style/reveal-focus.md
+    - name: 모퉁이 반경
+      href: style/rounded-corner.md
     - name: 소리
       href: style/sound.md
     - name: 간격
