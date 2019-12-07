@@ -232,6 +232,8 @@
           href: controls-and-patterns/rich-edit-box.md
         - name: 비밀번호 상자
           href: controls-and-patterns/password-box.md
+        - name: 숫자 상자
+          href: controls-and-patterns/number-box.md
         - name: Labels(레이블)
           href: controls-and-patterns/labels.md
         - name: 콘텐츠 링크
