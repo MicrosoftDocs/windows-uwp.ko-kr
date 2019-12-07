@@ -5,14 +5,14 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 70876ab6-8222-4940-b4fb-65b581a77d6a
-ms.openlocfilehash: 71c47767cf026b962f682fb30ca93758dbd5e227
-ms.sourcegitcommit: bad7ed6def79acbb4569de5a92c0717364e771d9
+ms.openlocfilehash: 52f333af73084ed14982b9d09b6770c8294980f7
+ms.sourcegitcommit: 6169660ea437915265165c4631d9702587e4793d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59244079"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74902523"
 ---
-#<a name="xbox-live-user-management"></a>Xbox Live 사용자 관리 #
+# <a name="xbox-live-user-management"></a>Xbox Live 사용자 관리
 
 ## <a name="request"></a>요청
 
@@ -20,7 +20,7 @@ ms.locfileid: "59244079"
 
 | 메서드        | 요청 URI     | 
 | ------------- |-----------------|
-| 가져오기           | /ext/user |
+| GET           | /ext/user |
 | PUT           | /ext/user |
 
 
@@ -38,12 +38,12 @@ PUT 호출에는 다음 구조를 사용하는 JSON 배열이 포함되어야 �
 
 * 사용자
   * AutoSignIn(선택 사항): EmailAddress 또는 UserId로 지정된 계정에 대해 자동 로그인을 사용하거나 사용하지 않도록 설정하는 부울입니다.
-  * 전자 메일 주소 (선택 사항-UserId 후원을 받은 사용자를 로그인 하지 않는 한 제공 되지 않는 경우 제공 해야 합니다). 전자 메일 주소를 수정/추가/삭제 하려면 사용자 지정 합니다.
-  * 암호 (선택 사항-사용자는 콘솔에 현재 없는 경우 제공 해야 합니다). 콘솔에 새 사용자를 추가 하는 것에 대 한 사용 암호입니다.
+  * EmailAddress(선택 사항 - 보증된 사용자를 로그인하지 않는 한 UserId가 제공되지 않은 경우 제공해야 함): 수정/추가/삭제할 사용자를 지정하는 메일 주소입니다.
+  * 암호(선택 사항 - 사용자가 현재 콘솔에 없을 경우 제공해야 함): 콘솔에 새 사용자를 추가하는 데 사용되는 암호입니다.
   * SignedIn(선택 사항): 제공된 계정을 로그인 또는 로그아웃해야 하는지를 지정하는 부울입니다.
-  * 사용자 Id (선택 사항-EmailAddress 후원을 받은 사용자를 로그인 하지 않는 한 제공 되지 않는 경우 제공 해야 합니다). UserId 수정/추가/삭제 하려면 사용자 지정 합니다.
+  * UserId(선택 사항 - 보증된 사용자를 로그인하지 않는 한 EmailAddress가 제공되지 않은 경우 제공해야 함): 수정/추가/삭제할 사용자를 지정하는 UserId입니다.
   * SponsoredUser(선택 사항): 보증된 사용자를 추가할지 여부를 지정하는 부울입니다.
-  * Delete (선택 사항): 콘솔에서이 사용자를 삭제 하려면 지정 하는 부울
+  * Delete (선택 사항): 콘솔에서이 사용자를 삭제 하도록 지정 하는 부울
 
 ## <a name="response"></a>응답
 
