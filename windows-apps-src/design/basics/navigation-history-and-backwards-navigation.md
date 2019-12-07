@@ -1,18 +1,18 @@
 ---
 Description: UWP 앱 내에서 사용자의 탐색 기록을 살펴볼 수 있도록 뒤로 탐색하는 기능을 구현하는 방법을 알아봅니다.
-title: 탐색 기록 및 뒤로 탐색(Windows 앱)
+title: 탐색 기록 및 뒤로 탐색
 template: detail.hbs
 op-migration-status: ready
 ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: de2e70a09f75ed5380a47bed225c0689eb029e89
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.openlocfilehash: 05b435eb6f070634507c143bd028d2cb051c97bc
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713794"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735028"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-uwp-apps"></a>UWP 앱에 대한 탐색 기록 및 뒤로 탐색
 
