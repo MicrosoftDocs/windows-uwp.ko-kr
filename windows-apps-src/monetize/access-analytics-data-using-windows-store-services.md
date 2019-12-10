@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 71c59049b76219d6f9360748e9ca11ea84542e47
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 3b732da8f92c258647f905e6939dc3cb1b9c9f87
+ms.sourcegitcommit: 3e47987fb4f86a6349ffe8262675f50971c77472
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259313"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74954067"
 ---
 # <a name="access-analytics-data-using-store-services"></a>스토어 서비스를 사용하여 분석 데이터에 액세스
 
@@ -89,7 +89,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 |---------------|--------------------|
 | 인수, 변환, 설치 및 사용 |  <ul><li>[앱 인수 가져오기](get-app-acquisitions.md) (레거시)</li><li>[앱 취득 깔때기 데이터 가져오기](get-acquisition-funnel-data.md) (레거시)</li><li>[채널을 통해 앱 변환 가져오기](get-app-conversions-by-channel.md)</li><li>[추가 기능 인수 가져오기](get-in-app-acquisitions.md)</li><li>[구독 추가 기능 가져오기](get-subscription-acquisitions.md)</li><li>[채널별 추가 기능 변환 가져오기](get-add-on-conversions-by-channel.md)</li><li>[앱 설치 가져오기](get-app-installs.md)</li><li>[매일 앱 사용 가져오기](get-app-usage-daily.md)</li><li>[월간 앱 사용 가져오기](get-app-usage-monthly.md)</li></ul> |
 | 앱 오류 | <ul><li>[오류 보고 데이터 가져오기](get-error-reporting-data.md)</li><li>[앱에서 오류에 대 한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md)</li><li>[앱에서 오류에 대 한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[앱에서 오류에 대 한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
-| Insights | <ul><li>[앱에 대 한 통찰력 데이터 가져오기](get-insights-data-for-your-app.md)</li></ul>  |
+| Betekintő adatok | <ul><li>[앱에 대 한 통찰력 데이터 가져오기](get-insights-data-for-your-app.md)</li></ul>  |
 | 평점 및 리뷰 | <ul><li>[앱 등급 가져오기](get-app-ratings.md)</li><li>[앱 리뷰 가져오기](get-app-reviews.md)</li></ul> |
 | 앱 내 광고 및 광고 캠페인 | <ul><li>[Ad 성능 데이터 가져오기](get-ad-performance-data.md)</li><li>[Ad 캠페인 성능 데이터 가져오기](get-ad-campaign-performance-data.md)</li></ul> |
 
@@ -102,7 +102,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 | 설치 |  <ul><li>[데스크톱 응용 프로그램 설치 가져오기](get-desktop-app-installs.md)</li></ul> |
 | 블록 |  <ul><li>[데스크톱 응용 프로그램에 대 한 업그레이드 블록 가져오기](get-desktop-block-data.md)</li><li>[데스크톱 응용 프로그램에 대 한 업그레이드 블록 세부 정보 가져오기](get-desktop-block-data-details.md)</li></ul> |
 | 응용 프로그램 오류 |  <ul><li>[데스크톱 응용 프로그램에 대 한 오류 보고 데이터 가져오기](get-desktop-application-error-reporting-data.md)</li><li>[데스크톱 응용 프로그램에서 오류에 대 한 세부 정보 가져오기](get-details-for-an-error-in-your-desktop-application.md)</li><li>[데스크톱 응용 프로그램에서 오류에 대 한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[데스크톱 응용 프로그램에서 오류에 대 한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
-| Insights | <ul><li>[데스크톱 응용 프로그램에 대 한 정보 얻기](get-insights-data-for-your-desktop-app.md)</li></ul>  |
+| Betekintő adatok | <ul><li>[데스크톱 응용 프로그램에 대 한 정보 얻기](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-live-services"></a>Xbox Live 서비스의 메서드
 
@@ -113,15 +113,6 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 | 일반 분석 |  <ul><li>[Xbox Live 분석 데이터 가져오기](get-xbox-live-analytics.md)</li><li>[Xbox Live 성과 데이터 가져오기](get-xbox-live-achievements-data.md)</li><li>[Xbox Live 동시 사용 현황 데이터 가져오기](get-xbox-live-concurrent-usage-data.md)</li></ul> |
 | 상태 분석 |  <ul><li>[Xbox Live health 데이터 가져오기](get-xbox-live-health-data.md)</li></ul> |
 | 커뮤니티 분석 |  <ul><li>[Xbox Live 게임 허브 데이터 가져오기](get-xbox-live-game-hub-data.md)</li><li>[Xbox Live 클럽 데이터 가져오기](get-xbox-live-club-data.md)</li><li>[Xbox Live 멀티 플레이 데이터 가져오기](get-xbox-live-multiplayer-data.md)</li></ul>  |
-
-### <a name="methods-for-xbox-one-games"></a>Xbox One 게임의 메서드
-
-Xbox 개발자 포털 (XDP)을 통해 수집 하 고 XDP Analytics 대시보드에서 사용할 수 있는 Xbox One 게임과 함께 개발자 계정에서 사용할 수 있는 추가 방법은 다음과 같습니다.
-
-| 시나리오       | 메서드      |
-|---------------|--------------------|
-| 구입 |  <ul><li>[Xbox One 게임 구매 가져오기](get-xbox-one-game-acquisitions.md)</li><li>[Xbox One 추가 기능 가져오기](get-xbox-one-add-on-acquisitions.md)</li></ul> |
-| 오류 |  <ul><li>[Xbox One 게임에 대 한 오류 보고 데이터 가져오기](get-error-reporting-data-for-your-xbox-one-game.md)</li><li>[Xbox One 게임에서 오류에 대 한 세부 정보 가져오기](get-details-for-an-error-in-your-xbox-one-game.md)</li><li>[Xbox One 게임에서 오류에 대 한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-xbox-one-game.md)</li><li>[Xbox One 게임에서 오류에 대 한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-xbox-one-game.md)</li></ul> |
 
 ### <a name="methods-for-hardware-and-drivers"></a>하드웨어 및 드라이버의 메서드
 
