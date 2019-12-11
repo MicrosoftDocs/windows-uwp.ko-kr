@@ -4,7 +4,7 @@ title: 진행률 컨트롤에 대한 지침
 ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
 label: Progress controls
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 11/29/2019
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: kisai
@@ -12,32 +12,54 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 67315518238bda1359862f36acd398e25e8481e3
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 3e5ff5d0e9172432110d60a007228e59e48785b9
+ms.sourcegitcommit: 27cb7c4539bb6417d32883824ccea160bb948c15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258161"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74830804"
 ---
 # <a name="progress-controls"></a>진행률 컨트롤
 
- 
-
 진행률 컨트롤은 긴 작업을 진행 중인 사용자에게 피드백을 제공합니다. 이는 진행률 표시기가 표시될 때 사용자가 앱을 조작할 수 없다는 의미이며 사용되는 표시기에 따라 대기 시간을 예측할 수도 있다는 의미입니다.
 
-> **중요 API**: [ProgressBar 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar), [IsIndeterminate 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate), [ProgressRing 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [IsActive 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring.isactive)
+| **플랫폼 API** | **Windows UI 라이브러리 API** |
+| - | - |
+| [ProgressBar 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar), [IsIndeterminate 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate), [ProgressRing 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [IsActive 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring.isactive) | [ProgressBar 클래스](https://docs.microsoft.com/uwp/api/Microsoft.UI.Xaml.Controls.ProgressBar), [IsIndeterminate 속성](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.progressbar.isindeterminate) |
+
+| **Windows UI 라이브러리 가져오기** |
+| - |
+| 이 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+> [!NOTE]
+> ProgressBar 컨트롤에는 두 가지 버전이 있습니다. 하나는 Windows.UI.Xaml 네임스페이스로 표현되는 플랫폼에 있고, 다른 하나는 Microsoft.UI.Xaml 네임스페이스로 표현되는 Windows UI 라이브러리에 있습니다. ProgressBar용 API는 동일하지만 컨트롤의 모양은 이러한 두 버전에서 다릅니다. 이 문서에서는 최신 Windows UI 라이브러리 버전의 이미지가 나옵니다.
+이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 다음을 [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page) 요소에 추가했습니다.
+
+```xaml
+xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+```
+
+코드 숨김에서는 C#의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 다음 **using** 문을 파일 맨 위에 추가했습니다.
+
+```csharp
+using muxc = Microsoft.UI.Xaml.Controls;
+```
+
+```vb
+Imports muxc = Microsoft.UI.Xaml.Controls
+```
 
 ## <a name="types-of-progress"></a>진행률 유형
 
 사용자에게 작업 진행을 표시하기 위해 ProgressBar 또는 ProgressRing 두 가지 컨트롤이 있습니다.
 
--   ProgressBar *확정* 상태는 작업의 완료율을 표시합니다. 기간이 알려진 작업 중 사용되지만 해당 진행률이 사용자의 앱 조작을 차단하지 않아야 합니다.
+-   ProgressBar *확정* 상태는 작업의 완료율을 표시합니다. 기간이 알려진 작업 중에 사용되지만 해당 진행률이 사용자의 앱 조작을 차단하지 않아야 합니다.
 -   ProgressBar *확정되지 않음* 상태는 작업이 진행 중이며 사용자의 앱 조작을 차단하지 않고 완료 시간을 알 수 없다는 의미입니다.
 -   ProgressRing은 *확정되지 않음* 상태로만 설정할 수 있으며 작업이 완료될 때까지 추가 사용자 조작이 차단될 때 사용되어야 합니다.
 
 또한 진행률 컨트롤은 읽기 전용이므로 조작할 수 없습니다. 즉, 사용자가 이러한 컨트롤을 직접 호출하거나 사용할 수 없다는 의미입니다.
 
-![ProgressBar 상태](images/ProgressBar_TwoStates.png)
+![ProgressBar 상태](images/progress-bar-two-states.png)
 
 *위쪽에서 아래쪽 - 미확정 ProgressBar 및 확정 ProgressBar*
 
@@ -119,13 +141,13 @@ ms.locfileid: "74258161"
 
 **ProgressBar - 확정**
 
-![ProgressBar 확정 예제](images/PB_DeterminateExample.png)
+![ProgressBar 확정 예제](images/progress-bar-determinate-example.png)
 
 첫 번째 예제는 확정 ProgressBar입니다. 작업 기간을 알고 있는 경우나 설치, 다운로드, 설정하는 경우 등에는 확정 ProgressBar가 가장 적합합니다.
 
 **ProgressBar - 미확정**
 
-![ProgressBar 확정되지 않음 예제](images/PB_IndeterminateExample.png)
+![ProgressBar 확정되지 않음 예제](images/progress-bar-indeterminate-example.png)
 
 작업 기간을 알 수 없는 경우 확정되지 않음 ProgressBar를 사용합니다. 확정되지 않음 ProgressBar는 가상화된 목록을 채우고 확정되지 않음 ProgressBar에서 확정 ProgressBar로의 자연스러운 시각적 전환을 만들 때도 좋습니다.
 
@@ -168,7 +190,7 @@ progressRing.IsActive = true;
 
 ```XAML
 <ProgressRing IsActive="True" Height="100" Width="100" Foreground="Blue"/>
-<ProgressBar Width="100" Foreground="Green"/>
+<muxc:ProgressBar Width="100" Foreground="Green"/>
 ```
 
 ProgressRing의 전경색을 변경하면 점의 색도 변경됩니다. ProgressBar의 전경 속성은 막대의 채우기 색을 변경합니다. 막대의 채워지지 않은 부분을 변경하려면 배경 속성을 재정의합니다.
