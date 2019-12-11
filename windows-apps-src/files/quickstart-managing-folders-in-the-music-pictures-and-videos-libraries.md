@@ -1,17 +1,17 @@
 ---
 ms.assetid: 1AE29512-7A7D-4179-ADAC-F02819AC2C39
-title: 음악, 사진 및 비디오 라이브러리의 파일 및 폴더
+title: 음악, 사진 및 비디오 라이브러리 관리
 description: 음악, 사진 또는 비디오의 기존 폴더를 해당 라이브러리에 추가합니다. 라이브러리에서 폴더를 제거하고, 라이브러리에 폴더 목록을 가져오고, 저장된 사진, 음악 및 동영상을 검색할 수도 있습니다.
 ms.date: 06/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f9dba57d8e75ba105a2154be5add5b101a4a6aa4
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 4c75bd62fb5548cc03247772427fb5aabac4fb5a
+ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66369329"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735078"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>음악, 사진 및 비디오 라이브러리의 파일 및 폴더
 

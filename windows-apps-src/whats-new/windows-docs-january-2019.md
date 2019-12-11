@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 01/17/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ac5f7e058a616117e73defde2c48bf4c66f68d2e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 7947fb6e71a9f2ddbedcd8e3ee8bab7b720dc444
+ms.sourcegitcommit: 6169660ea437915265165c4631d9702587e4793d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259746"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74902467"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-january-2019"></a>2019년 1월 Windows 개발자 문서의 새로운 내용
 
@@ -22,7 +22,7 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 
 ### <a name="windows-development-on-microsoft-learn"></a>Microsoft Learn에서 Windows 개발
 
-Microsoft Learn에서는 Microsoft 개발자에게 새 실습 학습 및 교육 기회를 제공합니다. Windows 앱을 개발하는 방법을 알고 싶은 경우 [새 학습 경로](https://docs.microsoft.com/learn/paths/develop-windows10-apps/)에서 플랫폼, 도구에 대한 자세한 소개와 첫 번째 앱을 작성하는 방법을 확인하세요.
+Microsoft Learn에서는 Microsoft 개발자에게 새 실습 학습 및 교육 기회를 제공합니다. Windows 앱을 개발하는 방법을 알고 싶은 경우 [새 학습 경로](/learn/paths/develop-windows10-apps/)에서 플랫폼, 도구에 대한 자세한 소개와 첫 번째 앱을 작성하는 방법을 확인하세요.
 
 ![Windows 개발 학습 경로의 이미지](images/windows-learn.png)
 
@@ -32,7 +32,7 @@ Microsoft Learn에서는 Microsoft 개발자에게 새 실습 학습 및 교육 
 
 ### <a name="msix-modification-packages"></a>MSIX 수정 패키지
 
-Windows 10 버전 1809은 [MSIX 수정 패키지](https://docs.microsoft.com/windows/msix/modification-package-1809-update)에 대한 지원이 향상되었습니다. 수정 패키지에 레지스트리 기반 플러그 인 및 관련 사용자 지정을 포함할 수 있으며 MSIX를 통해 배포된 애플리케이션에서 가상 레지스트리를 사용하고 예상대로 실행될 수 있습니다.
+Windows 10 버전 1809은 [MSIX 수정 패키지](/windows/msix/modification-package-1809-update)에 대한 지원이 향상되었습니다. 수정 패키지에 레지스트리 기반 플러그 인 및 관련 사용자 지정을 포함할 수 있으며 MSIX를 통해 배포된 애플리케이션에서 가상 레지스트리를 사용하고 예상대로 실행될 수 있습니다.
 
 ![MSIX 수정 패키지 만들기](images/msix-modification-package.png)
 
@@ -42,13 +42,13 @@ Windows 10 버전 1809은 [MSIX 수정 패키지](https://docs.microsoft.com/win
 
 ### <a name="progressive-web-apps-for-xbox"></a>Xbox용 점진적 웹앱
 
-[Xbox One용 점진적 웹앱](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/xbox-considerations)을 사용하면 기존 프레임워크, CDN 및 서버 백 엔드를 계속 사용하면서 웹 애플리케이션을 확장하고 Microsoft Store를 통해 Xbox One 앱으로 사용하도록 제공할 수 있습니다. 대부분의 경우 Windows와 동일한 방식으로 Xbox One용 PWA를 패키지화할 수 있지만 몇 가지 중요한 차이점이 있으며, 이 가이드에서는 차이점을 안내합니다.
+[Xbox One용 점진적 웹앱](/microsoft-edge/progressive-web-apps/xbox-considerations)을 사용하면 기존 프레임워크, CDN 및 서버 백 엔드를 계속 사용하면서 웹 애플리케이션을 확장하고 Microsoft Store를 통해 Xbox One 앱으로 사용하도록 제공할 수 있습니다. 대부분의 경우 Windows와 동일한 방식으로 Xbox One용 PWA를 패키지화할 수 있지만 몇 가지 중요한 차이점이 있으며, 이 가이드에서는 차이점을 안내합니다.
 
 ### <a name="windows-machine-learning"></a>Windows Machine Learning
 
-[WinML API의 방문 페이지](https://docs.microsoft.com/windows/ai/api-reference)가 재구성되고, WinML 사용자 지정 연산자 및 네이티브 API에 대한 새로운 설명서가 추가되었습니다.
+[WinML API의 방문 페이지](/windows/ai/api-reference)가 재구성되고, WinML 사용자 지정 연산자 및 네이티브 API에 대한 새로운 설명서가 추가되었습니다.
 
-[PyTorch로 모델 학습](https://docs.microsoft.com/windows/ai/train-model-pytorch)에는 로컬 또는 클라우드에서 PyTorch 프레임워크를 사용하여 모델을 학습시키는 방법에 대한 지침이 제공됩니다. 그런 다음이 모델을 ONNX 파일로 다운로드하여 WinML 애플리케이션에서 사용할 수 있습니다.
+[PyTorch로 모델 학습](/windows/ai/train-model-pytorch)에는 로컬 또는 클라우드에서 PyTorch 프레임워크를 사용하여 모델을 학습시키는 방법에 대한 지침이 제공됩니다. 그런 다음이 모델을 ONNX 파일로 다운로드하여 WinML 애플리케이션에서 사용할 수 있습니다.
 
 ![WinML 그래픽](images/winml-graphic.png)
 
@@ -56,15 +56,15 @@ Windows 10 버전 1809은 [MSIX 수정 패키지](https://docs.microsoft.com/win
 
 ### <a name="choose-your-platform"></a>플랫폼 선택
 
-새 데스크톱 애플리케이션을 만드는 데 관심이 있나요? 개선된 [플랫폼 선택](https://docs.microsoft.com/windows/desktop/choose-your-technology) 페이지에서 UWP, WPF 및 Windows Forms에 대한 자세한 설명과 비교 결과 및 Win32 API에 대한 자세한 내용을 확인하세요.
+새 데스크톱 애플리케이션을 만드는 데 관심이 있나요? 개선된 [플랫폼 선택](/windows/desktop/choose-your-technology) 페이지에서 UWP, WPF 및 Windows Forms에 대한 자세한 설명과 비교 결과 및 Win32 API에 대한 자세한 내용을 확인하세요.
 
 ### <a name="faqs-on-win32-webview"></a>Win32 WebView에 대한 FAQ
 
-[질문과 대답](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/webview#frequently-asked-questions-faqs)에서는 데스크톱 애플리케이션에서 Microsoft Edge WebView를 사용할 때 일반적으로 발생하는 질문과 대답 뿐 아니라 샘플 및 추가 리소스에 대한 링크를 제공합니다.
+[질문과 대답](/windows/communitytoolkit/controls/wpf-winforms/webview#frequently-asked-questions-faqs)에서는 데스크톱 애플리케이션에서 Microsoft Edge WebView를 사용할 때 일반적으로 발생하는 질문과 대답 뿐 아니라 샘플 및 추가 리소스에 대한 링크를 제공합니다.
 
 ### <a name="japanese-era-change"></a>일본 연호 변경
 
-[일본의 시대 변경을 대비한 애플리케이션 준비](../design/globalizing/japanese-era-change.md)에서는 Windows 애플리케이션에서 2019년 5월 1일에 일본 연호 변경 세트가 적용될 준비를 수행하는 방법을 보여줍니다. [또한 이 페이지는 일본어로도 제공됩니다](https://docs.microsoft.com/ja-jp/windows/uwp/design/globalizing/japanese-era-change).
+[일본의 시대 변경을 대비한 애플리케이션 준비](../design/globalizing/japanese-era-change.md)에서는 Windows 애플리케이션에서 2019년 5월 1일에 일본 연호 변경 세트가 적용될 준비를 수행하는 방법을 보여줍니다. [또한 이 페이지는 일본어로도 제공됩니다](/windows/uwp/design/globalizing/japanese-era-change).
 
 ## <a name="videos"></a>비디오
 
@@ -82,9 +82,10 @@ Microsoft 개발자는 One Dev Question 동영상 시리즈에서 오랫동안 W
 
 Raymond Chen:
 
-* [프로그램과 프로그램(x86)이 있는 이유가 무엇인가요?](https://youtu.be/N7o9eJpFYco)
+* [프로그램과 프로그램(x86)이 있는 이유가 무엇인가요?](https://youtu.be/qRb6otsHG5c)
+* [Microsoft에서 첫 인터뷰는 어땠나요?](https://youtu.be/MfzzbNp8kfw)
 
 Larry Osterman:
 
-* [COM은 왜 그렇게 복잡한가요?](https://youtu.be/-gkXAV-StVA )
-* [Microsoft에서 첫 인터뷰는 어땠나요?](https://youtu.be/qRb6otsHG5c)
+* [COM은 왜 그렇게 복잡한가요?](https://youtu.be/-gkXAV-StVA)
+* [Microsoft에서 첫 인터뷰는 어땠나요?](https://youtu.be/N7o9eJpFYco)

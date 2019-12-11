@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Python, Windows 10, Microsoft, Windows의 Python, WSL을 사용하는 Python 웹, Linux용 Windows 하위 시스템을 사용하는 Python 웹앱, Windows에서 Python 웹 개발, Windows의 Flask 앱, Windows의 Django 앱, Python 웹, Windows에서 Flask 웹 개발, Windows에서 Django 웹 개발, Python을 사용한 Windows 웹 개발, VS Code Python 웹 개발, Remote - WSL 확장, Ubuntu, WSL, venv, pip, Microsoft Python 확장, Windows에서 Python 실행, Windows에서 Python 사용, Windows에서 Python으로 빌드
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 285e5149778f2d5cb63554a5af63bb9ae23809dc
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: d883007168e0baf35f8a0ab0827505b683cfd291
+ms.sourcegitcommit: f5bb4e35d1373b982259e61547b3b1765da0e78c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314947"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74881288"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>웹 개발을 위해 Windows에서 Python 사용 시작
 
@@ -46,6 +46,9 @@ WSL에서 실행할 수 있는 몇 가지 Linux 배포가 있습니다. Microsof
 3. 배포를 처음 실행하는 경우 계정 이름과 암호를 만들라는 메시지가 표시됩니다. 이후에는 기본적으로 이 사용자로 자동으로 로그인됩니다. 임의의 사용자 이름과 암호를 선택할 수 있습니다. Windows 사용자 이름과는 관련이 없습니다.
 
 `lsb_release -d`를 입력하여 현재 사용 중인 Linux 배포를 확인할 수 있습니다. Ubuntu 배포를 업데이트하려면 `sudo apt update && sudo apt upgrade`를 사용합니다. 최신 패키지를 유지하기 위해 정기적으로 업데이트하는 것이 좋습니다. 이 업데이트는 Windows에서 자동으로 처리하지 않습니다. Microsoft Store에서 사용 가능한 다른 Linux 배포에 대한 링크, 대체 구현 설치 방법 또는 문제 해결은 [Windows 10에 Linux용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/windows/wsl/install-win10)를 참조하세요.
+
+> [!TIP]
+> 여러 명령줄(Ubuntu, PowerShell, Windows 명령 프롬프트 등)을 사용하려는 경우 또는 텍스트, 배경색, 키 바인딩 등을 비롯한 [터미널을 사용자 지정](https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md)하려는 경우 새 [Windows 터미널](https://github.com/microsoft/terminal/blob/master/doc/user-docs/index.md)을 사용해 보세요.
 
 ## <a name="set-up-visual-studio-code"></a>Visual Studio Code 설정
 
@@ -114,9 +117,9 @@ VS Code는 이전에 설치된 Remote - WSL 확장을 사용하여 Linux 하위 
 
 Remote - WSL용 VS Code 확장을 설치해야 합니다. VS Code에 이미 로컬로 설치된 확장은 자동으로 사용할 수 없습니다. [자세한 내용을 알아보십시오](https://code.visualstudio.com/docs/remote/wsl#_managing-extensions).
 
-1. **Ctrl+Shift+X**를 입력하거나 메뉴에서 **보기** > **확장**으로 차례로 이동하여 VS Code 확장 창을 엽니다.
+1. **Ctrl+Shift+X**를 입력하거나 메뉴에서 **보기** > **확장**으로 이동하여 VS Code 확장 창을 엽니다.
 
-2. 위쪽의 **마켓플레이스에서 확장 검색** 상자에서  **Python**을 입력합니다.
+2. 위쪽의 **마켓플레이스에서 확장 검색** 상자에  **Python**을 입력합니다.
 
 3. **Python (ms-python.python) by Microsoft** 확장을 찾아 녹색 **설치** 단추를 선택합니다.
 
@@ -124,7 +127,7 @@ Remote - WSL용 VS Code 확장을 설치해야 합니다. VS Code에 이미 로�
 
 ## <a name="run-a-simple-python-program"></a>간단한 Python 프로그램 실행
 
-Python은 해석된 언어이며 다양한 유형의 인터프리터(Python2, Anaconda, PyPy 등)를 지원합니다. VS Code는 프로젝트와 연결되는 인터프리터를 기본값으로 설정해야 합니다. 변경해야 하는 이유가 있으면 VS Code 창의 아래쪽에 있는 파란색 표시줄에 현재 표시된 인터프리터를 선택하거나, **명령 팔레트**(Ctrl+Shift+P)를 열고 **Python: Select Interpreter**(인터프리터 선택) 명령을 입력합니다. 그러면 현재 설치한 Python 인터프리터의 목록이 표시됩니다. [Python 환경 구성에 대해 자세히 알아보세요](https://code.visualstudio.com/docs/python/environments).
+Python은 해석된 언어이며 다양한 유형의 인터프리터(Python2, Anaconda, PyPy 등)를 지원합니다. VS Code는 프로젝트와 연결되는 인터프리터를 기본값으로 설정해야 합니다. 변경해야 하는 이유가 있으면 VS Code 창의 아래쪽에 있는 파란색 표시줄에 현재 표시된 인터프리터를 선택하거나, **명령 팔레트**(Ctrl+Shift+P)를 열고 **Python: Select Interpreter**(인터프리터 선택) 명령을 입력합니다. 그러면 현재 설치된 Python 인터프리터 목록이 표시됩니다. [Python 환경 구성에 대해 자세히 알아보세요](https://code.visualstudio.com/docs/python/environments).
 
 간단한 Python 프로그램을 테스트용으로 만들어 실행하고, 올바른 Python 인터프리터를 선택했는지 확인합니다.
 

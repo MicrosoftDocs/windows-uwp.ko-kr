@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: eba0e6312bc22153d8cb62eb97d32635184f0fdc
-ms.sourcegitcommit: f34deba1d4460d85ed08fe9648999fe03ff6a3dd
+ms.openlocfilehash: 84c0e9315950541e51bf49f5c0eec370f3188c4d
+ms.sourcegitcommit: 58f6643510a27d6b9cd673da850c191ee23b813e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71317118"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74701486"
 ---
 # <a name="author-apis-with-cwinrt"></a>C++/WinRT를 사용하여 API 작성
 
@@ -239,7 +239,7 @@ IDL을 사용하여 런타임 클래스 및 해당 멤버를 선언하는 워크
 예를 들면 다음과 같습니다.
 
 - 매개 변수 형식을 완화할 수 있습니다. 예를 들어 IDL에서 메서드가 **SomeClass**를 가져오는 경우 구현에서 이를 **IInspectable**로 변경하도록 선택할 수 있습니다. 이는 모든 **SomeClass**를 **IInspectable**로 전달할 수 있기 때문에 가능합니다(물론 반대로는 작동하지 않습니다).
-- 참조 대신 값으로 복사 가능한 매개 변수를 허용할 수 있습니다. 예를 들어 `SomeClass const&`를 `SomeClass const&`로 변경할 수 있습니다. 코루틴에 대한 참조를 캡처하지 못하도록 해야 할 때 필요합니다([매개 변수 전달](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing) 참조).
+- 참조 대신 값으로 복사 가능한 매개 변수를 허용할 수 있습니다. 예를 들어 `SomeClass`를 `SomeClass const&`로 변경할 수 있습니다. 코루틴에 대한 참조를 캡처하지 못하도록 해야 할 때 필요합니다([매개 변수 전달](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing) 참조).
 - 반환 값을 완화할 수 있습니다. 예를 들어 **void**를 [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget)으로 변경할 수 있습니다.
 
 마지막 둘은 비동기 이벤트 처리기를 작성할 때 매우 유용합니다.
@@ -276,7 +276,13 @@ namespace MyProject
 }
 ```
 
-**MyType**에서 프로젝션 과정 중 사용하거나 반환할 수 있는 **IStringable** 또는 **IClosable** 개체로 이동하려면 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 함수 템플릿을 호출해야 합니다. **make**는 구현 형식의 기본 인터페이스를 반환합니다.
+구현 형식을 직접 할당할 수 없습니다.
+
+```cppwinrt
+MyType myimpl; // error C2259: 'MyType': cannot instantiate abstract class
+```
+
+**MyType**에서 프로젝션 과정 중 사용하거나 반환할 수 있는 **IStringable** 또는 **IClosable** 개체로 이동하려면 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 함수 템플릿을 호출하면 됩니다. **make**는 구현 형식의 기본 인터페이스를 반환합니다.
 
 ```cppwinrt
 IStringable istringable = winrt::make<MyType>();
@@ -329,36 +335,73 @@ impl.copy_from(winrt::get_self<MyType>(from));
 // com_ptr::copy_from ensures that AddRef is called.
 ```
 
-구현 형식 자체는 **winrt::Windows::Foundation::IUnknown**에서 파생되지 않기 때문에 **as** 함수가 없습니다. 그렇더라도 하나를 인스턴스화하여 모든 인터페이스의 멤버에 액세스할 수 있습니다. 단, 이렇게 할 경우 원시 구현 형식 인스턴스를 호출자에게 반환하지 마세요. 대신 위에서 언급한 기법 중 한 가지를 사용하여 프로젝션된 인터페이스, 즉 **com_ptr**을 반환하세요.
+구현 형식 자체는 **winrt::Windows::Foundation::IUnknown**에서 파생되지 않기 때문에 **as** 함수가 없습니다. 위의 **ImplFromIClosable** 함수에서 볼 수 있듯이 모든 인터페이스의 멤버에 액세스할 수 있습니다. 단, 이렇게 할 경우 원시 구현 형식 인스턴스를 호출자에게 반환하지 마세요. 대신 이미 나온 기법 중 한 가지를 사용하여 프로젝션된 인터페이스 또는 **com_ptr**을 반환하세요.
+
+구현 형식 인스턴스가 있고 이 인스턴스를 해당하는 프로젝션된 형식이 필요한 함수에 전달해야 하는 경우 그렇게 할 수 있습니다. 아래 코드 예제를 확인하세요. 구현 형식에는 이것을 가능하게 하는 변환 연산자가 존재하기 때문입니다(단, 구현 형식이 `cppwinrt.exe` 도구에서 생성된 경우에 한해). 해당하는 프로젝션된 형식의 값이 필요한 메서드에 직접 구현 형식 값을 전달할 수 있습니다. 구현 형식 멤버 함수에서, 해당하는 프로젝션된 형식의 값이 필요한 메서드에 `*this`를 전달할 수 있습니다.
 
 ```cppwinrt
-MyType myimpl;
-myimpl.ToString();
-myimpl.Close();
-IClosable ic1 = myimpl.as<IClosable>(); // error
-```
-
-구현 형식 인스턴스가 있고 이 인스턴스를 해당하는 프로젝션된 형식이 필요한 함수에 전달해야 하는 경우 그렇게 할 수 있습니다. 구현 형식에는 이것을 가능하게 하는 변환 연산자가 존재하기 때문입니다(단, 구현 형식이 `cppwinrt.exe` 도구에서 생성된 경우에 한해). 해당하는 프로젝션된 형식의 값이 필요한 메서드에 직접 구현 형식 값을 전달할 수 있습니다. 구현 형식 멤버 함수에서, 해당하는 프로젝션된 형식의 값이 필요한 메서드에 `*this`를 전달할 수 있습니다.
-
-```cppwinrt
-// MyProject::MyType is the projected type; the implementation type would be MyProject::implementation::MyType.
-
-void MyOtherType::DoWork(MyProject::MyType const&){ ... }
-
-...
-
-void FreeFunction(MyProject::MyOtherType const& ot)
+// MyClass.idl
+import "MyOtherClass.idl";
+namespace MyProject
 {
-    MyType myimpl;
-    ot.DoWork(myimpl);
+    runtimeclass MyClass
+    {
+        MyClass();
+        void MemberFunction(MyOtherClass oc);
+    }
 }
 
+// MyClass.h
+...
+namespace winrt::MyProject::implementation
+{
+    struct MyClass : MyClassT<MyClass>
+    {
+        MyClass() = default;
+        void MemberFunction(MyProject::MyOtherClass const& oc) { oc.DoWork(*this); }
+    };
+}
 ...
 
-void MyType::MemberFunction(MyProject::MyOtherType const& ot)
+// MyOtherClass.idl
+import "MyClass.idl";
+namespace MyProject
 {
-    ot.DoWork(*this);
+    runtimeclass MyOtherClass
+    {
+        MyOtherClass();
+        void DoWork(MyClass c);
+    }
 }
+
+// MyOtherClass.h
+...
+namespace winrt::MyProject::implementation
+{
+    struct MyOtherClass : MyOtherClassT<MyOtherClass>
+    {
+        MyOtherClass() = default;
+        void DoWork(MyProject::MyClass const& c){ /* ... */ }
+    };
+}
+...
+
+//main.cpp
+#include "pch.h"
+#include <winrt/base.h>
+#include "MyClass.h"
+#include "MyOtherClass.h"
+using namespace winrt;
+
+// MyProject::MyClass is the projected type; the implementation type would be MyProject::implementation::MyClass.
+
+void FreeFunction(MyProject::MyOtherClass const& oc)
+{
+    auto defaultInterface = winrt::make<MyProject::implementation::MyClass>();
+    MyProject::implementation::MyClass* myimpl = winrt::get_self<MyProject::implementation::MyClass>(defaultInterface);
+    oc.DoWork(*myimpl);
+}
+...
 ```
 
 ## <a name="deriving-from-a-type-that-has-a-non-default-constructor"></a>기본이 아닌 생성자를 갖고 있는 형식에서 파생

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, python 학습, 초보자를 위한 windows 기반 python, microsoft store에서 python 설치, vs code를 사용하는 python, windows의 pygame
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: d4c1cb6d65eb38a93e8bf9f0c34afd9e28f20129
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: 688ae004dad8653e70d86b3b91652b6898c1e9d3
+ms.sourcegitcommit: f5bb4e35d1373b982259e61547b3b1765da0e78c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314927"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74881281"
 ---
 # <a name="get-started-using-python-on-windows-for-beginners"></a>초보자를 위한 Windows에서 Python 사용 시작
 
@@ -21,7 +21,7 @@ ms.locfileid: "72314927"
 
 ## <a name="set-up-your-development-environment"></a>개발 환경 설정
 
-Python을 처음 접하는 초보자는 [Microsoft Store에서 Python 설치](https://www.microsoft.com/en-us/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab)를 권장합니다. Microsoft Store를 통해 설치하면 기본 Python3 인터프리터를 사용하지만, 자동 업데이트를 제공할 뿐 아니라 현재 사용자의 PATH 설정까지 처리합니다(관리자가 액세스할 필요 없음). 교육 환경에 속해 있거나 머신에서 사용 권한 또는 관리 액세스를 제한하는 조직에 소속된 경우에 특히 유용합니다.
+Python을 처음 접하는 초보자는 [Microsoft Store에서 Python 설치](https://www.microsoft.com/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab)를 권장합니다. Microsoft Store를 통해 설치하면 기본 Python3 인터프리터를 사용하지만, 자동 업데이트를 제공할 뿐 아니라 현재 사용자의 PATH 설정까지 처리합니다(관리자가 액세스할 필요 없음). 교육 환경에 속해 있거나 머신에서 사용 권한 또는 관리 액세스를 제한하는 조직에 소속된 경우에 특히 유용합니다.
 
 **웹 개발**에 Windows 기반 Python을 사용하는 경우 개발 환경에 다른 설정을 사용하는 것이 좋습니다. Windows에 직접 설치하는 대신, Linux용 Windows 하위 시스템을 통해 Python을 설치하고 사용하는 것이 좋습니다. 도움말은 [웹 개발을 위해 Windows에서 Python 사용 시작](./web-frameworks.md) 가이드를 참조하세요. 운영 체제에서 일반적인 작업을 자동화하는 데 관심이 있는 경우 [스크립팅 및 자동화를 위해 Windows에서 Python 사용 시작](./scripting.md) 가이드를 참조하세요. 고급 시나리오의 경우(예: Python의 설치 파일을 액세스/수정하거나, 이진 파일을 복사하거나, Python DLL을 직접 사용해야 하는 시나리오) [python.org](https://www.python.org/downloads/)에서 특정 Python 릴리스를 직접 다운로드하거나 Anaconda, Jython, PyPy, WinPython, IronPython 등과 같은 [대체 구현](https://www.python.org/download/alternatives)을 설치하는 것이 좋습니다. 대체 구현을 선택하는 특별한 이유가 있는 고급 Python 프로그래머인 경우에만 이를 추천합니다.
 
@@ -45,15 +45,17 @@ VS Code에는 Windows 명령 프롬프트, PowerShell 또는 원하는 도구를
 
 1. VS Code를 설치하려면 Windows용 VS Code를 다운로드하여 설치합니다([https://code.visualstudio.com](https://code.visualstudio.com)).
 
-2. Python은 해석형 언어이며, Python 코드를 실행하려면 어떤 인터프리터를 사용할 것인지 VS Code에 알려주어야 합니다. 다른 항목을 선택해야 하는 특별한 이유가 없다면 Python 3.7를 사용하는 것이 좋습니다. **명령 팔레트**를 열고(Ctrl+Shift+P) **Python: 인터프리터 선택** 명령을 입력하기 시작한 다음, 명령을 선택하여 Python 3 인터프리터를 선택합니다. 사용 가능한 경우 아래쪽 상태 표시줄에서 **Python 환경 선택** 옵션을 사용할 수도 있습니다(선택한 인터프리터가 이미 표시될 수 있음). 이 명령은 가상 환경을 포함하여 VS Code가 자동으로 찾을 수 있는 사용 가능한 인터프리터 목록을 표시합니다. 원하는 인터프리터가 보이지 않으면 [Python 환경 구성](https://code.visualstudio.com/docs/python/environments)을 참조하세요.
+2. VS Code가 설치되면 Python 확장도 설치해야 합니다. Python 확장을 설치하려면 [VS Code Marketplace 링크](https://marketplace.visualstudio.com/items?itemName=ms-python.python)를 선택하거나 VS Code를 열고 확장 메뉴(Ctrl+Shift+X)에서 **Python**을 검색합니다.
+
+3. Python은 해석형 언어이며, Python 코드를 실행하려면 어떤 인터프리터를 사용할 것인지 VS Code에 알려주어야 합니다. 다른 항목을 선택해야 하는 특별한 이유가 없다면 Python 3.7를 사용하는 것이 좋습니다. Python 확장을 설치했으면 **명령 팔레트**를 열고(Ctrl+Shift+P) **Python: 인터프리터 선택** 명령을 입력하기 시작한 다음, 명령을 선택하여 Python 3 인터프리터를 선택합니다. 사용 가능한 경우 아래쪽 상태 표시줄에서 **Python 환경 선택** 옵션을 사용할 수도 있습니다(선택한 인터프리터가 이미 표시될 수 있음). 이 명령은 가상 환경을 포함하여 VS Code가 자동으로 찾을 수 있는 사용 가능한 인터프리터 목록을 표시합니다. 원하는 인터프리터가 보이지 않으면 [Python 환경 구성](https://code.visualstudio.com/docs/python/environments)을 참조하세요.
 
     ![VS Code에서 Python 인터프리터 선택](../images/interpreterselection.gif)
 
-3. VS Code에서 터미널을 열려면 **보기** > **터미널**을 선택하거나 바로 가기 키 **Ctrl+`** (백틱 문자 사용)을 사용합니다. 기본 터미널은 PowerShell입니다.
+4. VS Code에서 터미널을 열려면 **보기** > **터미널**을 선택하거나 바로 가기 키 **Ctrl+`** (백틱 문자 사용)을 사용합니다. 기본 터미널은 PowerShell입니다.
 
-4. VS Code 터미널 내에서 간단하게 `python` 명령을 입력하여 Python을 엽니다.
+5. VS Code 터미널 내에서 간단하게 `python` 명령을 입력하여 Python을 엽니다.
 
-5. `print("Hello World")`를 입력하여 Python 인터프리터를 사용해 봅니다. Python이 "Hello World" 문을 반환합니다.
+6. `print("Hello World")`를 입력하여 Python 인터프리터를 사용해 봅니다. Python이 "Hello World" 문을 반환합니다.
 
     ![VS Code의 Python 명령줄](../images/python-in-vscode.png)
 
@@ -188,7 +190,7 @@ Windows에서 Python으로 개발하는 방법을 계속 학습할 수 있도록
 
 ### <a name="online-courses-for-learning-python"></a>Python 학습을 위한 온라인 과정
 
-- [Microsoft Learn의 Python 소개](https://docs.microsoft.com/en-us/learn/modules/intro-to-python/): 대화형 Microsoft Learn 플랫폼을 사용해 보고 기본 Python 코드를 작성하고, 변수를 선언하고, 콘솔 입력 및 출력을 작업하는 방법에 대한 기본 사항을 다루는 이 모듈을 완료하기 위한 경험을 쌓을 수 있습니다. 대화형 샌드박스 환경은 아직 Python 개발 환경을 설정하지 않은 사람들이 개발을 시작하기에 좋은 장소입니다.
+- [Microsoft Learn의 Python 소개](https://docs.microsoft.com/learn/modules/intro-to-python/): 대화형 Microsoft Learn 플랫폼을 사용해 보고 기본 Python 코드를 작성하고, 변수를 선언하고, 콘솔 입력 및 출력을 작업하는 방법에 대한 기본 사항을 다루는 이 모듈을 완료하기 위한 경험을 쌓을 수 있습니다. 대화형 샌드박스 환경은 아직 Python 개발 환경을 설정하지 않은 사람들이 개발을 시작하기에 좋은 장소입니다.
 
 - [Pluralsight의 Python: 8개 과정, 29시간](https://app.pluralsight.com/paths/skills/python): Pluralsight의 Python 학습 경로는 학습자의 기술을 측정하고 격차를 알아볼 수 있는 도구를 포함하여 Python과 관련된 다양한 토픽을 다루는 온라인 과정을 제공합니다.
 

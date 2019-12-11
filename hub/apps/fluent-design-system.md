@@ -8,12 +8,12 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: f3a2575b17cc4228d7c4db273845478aecf65f29
-ms.sourcegitcommit: f0936ce8e88d78b1af99998794a8765094f6a487
+ms.openlocfilehash: f46d6ba99d4342e1e4fe7a9926082a5981fd690a
+ms.sourcegitcommit: 11c5cb559c949b6fe645499c2265434885882d8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72915101"
+ms.lasthandoff: 12/01/2019
+ms.locfileid: "74666906"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Windows 앱 작성자용 Fluent 디자인 시스템
 
@@ -112,7 +112,7 @@ UWP 앱은 광범위한 Windows 기반 디바이스에서 실행될 수 있습�
     :::column span="2":::
 **적절한 입력에 최적화**
 
-&mdash;UWP 앱은 일반 마우스, 키보드, 펜 및 터치 조작을 자동으로 지원하여 사용자가 따로 해야 할 것이 없습니다. 하지만 펜이나 Surface Dial 같은 특정 입력에 최적화된 지원 방식을 통해 앱을 개선할 수 있습니다.
+UWP 앱은 일반 마우스, 키보드, 펜 및 터치 조작을 자동으로 지원합니다. 사용자가 따로 해야 할 것이 없습니다. 하지만 펜이나 Surface Dial 같은 특정 입력에 최적화된 지원 방식을 통해 앱을 개선할 수 있습니다.
 
 [입력 및 상호 작용에 대해 알아보기](/windows/uwp/design/input/input-primer)
 :::row-end:::

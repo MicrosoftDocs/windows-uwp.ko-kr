@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: 55d512faccfa318156fb0dc28d3f804b53f0fe3d
-ms.sourcegitcommit: 102fdfdf32ba12a8911018d234d71d67ebef61ce
+ms.openlocfilehash: 6fb9b98ec362b59ad2593bbce24654f1dcfc7638
+ms.sourcegitcommit: 27cb7c4539bb6417d32883824ccea160bb948c15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74551658"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74830781"
 ---
 # <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 
@@ -253,8 +253,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 ```
 
 ## <a name="parameterized-delegates-simple-signals-and-callbacks-within-a-project"></a>프로젝트 내의 매개 변수가 있는 대리자, 단순 신호 및 콜백
-
-C++/WinRT 프로젝트 내에서 내부적으로만 이벤트를 사용하는 경우에는 [**winrt::event**](/uwp/cpp-ref-for-winrt/event) 구조체 템플릿을 사용하지만, 참조로 계산되는 효율적인 대리자인 C++/WinRT의 Windows가 아닌 런타임 [**winrt::delegate&lt;... T&gt;** ](/uwp/cpp-ref-for-winrt/delegate) 구조체 템플릿을 사용하여 매개 변수로 설정합니다. 이는 제한 없이 매개 변수를 지원하며 Windows 런타임 형식으로 제한되지 않습니다.
+Visual Studio 프로젝트 내부에 있는 이벤트가 필요한 경우(이진 파일이 아닌) 해당 이벤트가 Windows 런타임 형식으로 제한되지 않는 경우에도 [**winrt::event**](/uwp/cpp-ref-for-winrt/event)\<Delegate\> 클래스 템플릿을 사용할 수 있습니다. **winrt::delegate**도 비 Windows 런타임 매개 변수를 지원하므로 간단히 실제 Windows 런타임 대리자 형식 대신 [**winrt::delegate**](/uwp/cpp-ref-for-winrt/delegate)를 사용하면 됩니다.
 
 아래 예제에서는 매개 변수(기본적으로 단순 신호)를 사용하지 않는 대리자 서명을 보여 준 후 문자열을 사용하는 대리자 서명을 보여 줍니다.
 
