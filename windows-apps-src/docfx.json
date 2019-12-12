@@ -22,7 +22,7 @@
         "breadcrumb_path":  "/windows/uwp/breadcrumbs/toc.json",
 	"feedback_system": "GitHub",
         "feedback_github_repo": "MicrosoftDocs/windows-uwp",
-        "feedback_product_url": "https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app",
+        "feedback_product_url": "https://docs.microsoft.com/answers/topics/uwp.html?sort=active&filter=all",
         "extendBreadcrumb": false,
 		    "htmlDangerZone":  true,
         "searchScope": ["UWP"],
@@ -204,9 +204,12 @@
 			"design/shell/**.md": "hickeys",
 			"design/style/**.md": "hickeys",
 			"design/usability/**.md": "Karl-Bridge-Microsoft",
-			"design/windows-template-studio/**.md": "QuinnRadich"			 
-
-		 }		 
+			"design/windows-template-studio/**.md": "QuinnRadich"
+		 },	 
+		 "feedback_product_url": 
+		 {
+			"design/**.md": "https://github.com/microsoft/microsoft-ui-xaml/issues/new/choose"	
+		 }
 	},
     "externalReference": [
     ],
