@@ -5,12 +5,12 @@ ms.date: 07/15/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, 프로젝션, 이식, 마이그레이션, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: a63d38db613ebe6425a05ed20563405242ffd441
-ms.sourcegitcommit: ba4a046793be85fe9b80901c9ce30df30fc541f9
+ms.openlocfilehash: 17900829388bfe0b3cc325e27d0807b139ccaa27
+ms.sourcegitcommit: 2c6aac8a0cc02580df0987f0b7dba5924e3472d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68328864"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74958963"
 ---
 # <a name="move-to-cwinrt-from-c"></a>C#에서 C++/WinRT로 이동
 
@@ -264,7 +264,7 @@ C++/CX 및 C#에서는 값 형식에 대한 null 포인터를 unboxing하려고 
 | o가 null인 경우 | `System.NullReferenceException` | 작동 중단 |
 | o가 boxing된 정수가 아닌 경우 | `System.InvalidCastException` | 작동 중단 |
 | 정수 unboxing, null인 경우 대체 사용, 다른 항목이 있는 경우 작동 중단 | `i = o != null ? (int)o : fallback;` | `i = o ? unbox_value<int>(o) : fallback;` |
-| 가능한 경우 정수 unboxing, 다른 항목이 있는 경우 대체 사용 | `var box = o as int?;`<br>`i = box != null ? box.Value : fallback;` | `i = unbox_value_or<int>(o, fallback);` |
+| 가능한 경우 정수 unboxing, 다른 항목이 있는 경우 대체 사용 | `i = as int? ?? fallback;` | `i = unbox_value_or<int>(o, fallback);` |
 
 ### <a name="boxing-and-unboxing-a-string"></a>문자열 boxing 및 unboxing
 
@@ -274,24 +274,23 @@ C++/CX 및 C#에서는 값 형식에 대한 null 포인터를 unboxing하려고 
 
 C#은 Windows 런타임 문자열을 참조 형식으로 나타내는 반면, C++/WinRT는 문자열을 값 형식으로 프로젝션합니다. 즉, boxing된 null 문자열은 해당 문자열을 가져온 방식에 따라 다르게 표현될 수 있습니다.
 
+| 동작 | C# | C++/WinRT|
+|-|-|-|
+| 선언 | `object o;`<br>`string s;` | `IInspectable o;`<br>`hstring s;` |
+| 문자열 형식 범주 | 참조 형식 | 값 유형 |
+| null **HSTRING**에서 프로젝션하는 형식 | `""` | `hstring{}` |
+| null 및 `""`가 동일한가요? | 아니오 | 예 |
+| null의 유효성 | `s = null;`<br>`s.Length`에서 NullReferenceException 발생 | `s = hstring{};`<br>`s.size() == 0`(유효) |
+| 개체에 null 문자열을 할당하는 경우 | `o = (string)null;`<br>`o == null` | `o = box_value(hstring{});`<br>`o != nullptr` |
+| 개체에 `""`을(를) 할당하는 경우 | `o = "";`<br>`o != null` | `o = box_value(hstring{L""});`<br>`o != nullptr` |
+
+기본 boxing 및 unboxing.
+
 | 작업 | C# | C++/WinRT|
 |-|-|-|
-| 문자열 형식 범주 | 참조 형식 | 값 유형 |
-| null **HSTRING**에서 프로젝션하는 형식 | `""` | `hstring{ nullptr }` |
-| null 및 `""`가 동일한가요? | 아니오 | 예 |
-| null의 유효성 | `s = null;`<br>`s.Length`에서 **NullReferenceException** 발생 | `s = nullptr;`<br>`s.size() == 0`(유효) |
-| 문자열 boxing | `o = s;` | `o = box_value(s);` |
-| `s`가 `null`인 경우 | `o = (string)null;`<br>`o == null` | `o = box_value(hstring{nullptr});`<br>`o != nullptr` |
-| `s`가 `""`인 경우 | `o = "";`<br>`o != null;` | `o = box_value(hstring{L""});`<br>`o != nullptr;` |
-| null을 유지하는 문자열 boxing | `o = s;` | `o = s.empty() ? nullptr : box_value(s);` |
-| 문자열 강제 boxing | `o = PropertyValue.CreateString(s);` | `o = box_value(s);` |
-| 알려진 문자열 unboxing | `s = (string)o;` | `s = unbox_value<hstring>(o);` |
-| `o`가 null인 경우 | `s == null; // not equivalent to ""` | 작동 중단 |
-| `o`가 boxing된 문자열이 아닌 경우 | `System.InvalidCastException` | 작동 중단 |
-| 문자열 unboxing, null인 경우 대체 사용, 다른 항목이 있는 경우 작동 중단 | `s = o != null ? (string)o : fallback;` | `s = o ? unbox_value<hstring>(o) : fallback;` |
-| 가능한 경우 문자열 unboxing, 다른 항목이 있는 경우 대체 사용 | `var s = o as string ?? fallback;` | `s = unbox_value_or<hstring>(o, fallback);` |
-
-위에 있는 두 개의 *대체 사용 unboxing*의 경우에서는 null 문자열이 강제 boxing되었을 수 있으며, 이 경우 대체가 사용되지 않습니다. 결과 값은 boxing된 문자열이므로 빈 문자열이 됩니다.
+| 문자열 boxing | `o = s;`<br>빈 문자열은 null이 아닌 개체가 됩니다. | `o = box_value(s);`<br>빈 문자열은 null이 아닌 개체가 됩니다. |
+| 알려진 문자열 unboxing | `s = (string)o;`<br>Null 개체는 null 문자열이 됩니다.<br>문자열이 아닌 경우 InvalidCastException이 발생합니다. | `s = unbox_value<hstring>(o);`<br>Null 개체가 충돌합니다.<br>문자열이 아닌 경우 충돌이 발생합니다. |
+| 가능한 문자열 Unbox | `s = o as string;`<br>Null 개체 또는 비문자열은 null 문자열이 됩니다.<br><br>또는<br><br>`s = o as string ?? fallback;`<br>Null 또는 비문자열이 대체됩니다.<br>빈 문자열이 유지됩니다. | `s = unbox_value_or<hstring>(o, fallback);`<br>Null 또는 비문자열이 대체됩니다.<br>빈 문자열이 유지됩니다. |
 
 ## <a name="derived-classes"></a>파생 클래스
 

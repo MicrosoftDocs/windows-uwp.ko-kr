@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 92088906078a3a705e5fae052a50fc914561c77c
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: d540474140e4734320b06d852933b30fa20b61be
+ms.sourcegitcommit: 2c6aac8a0cc02580df0987f0b7dba5924e3472d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393455"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74958973"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>C++/CX에서 C++/WinRT로 이동
 
@@ -468,24 +468,23 @@ C++/CX는 Windows 런타임 문자열을 참조 형식으로 나타내는 반면
 
 또한 C++/CX를 사용하면 null **String^** 을 역참조할 수 있으며, 이 경우 `""` 문자열처럼 작동합니다.
 
-| 작업 | C++/CX | C++/WinRT|
+| 동작 | C++/CX | C++/WinRT|
 |-|-|-|
+| 선언 | `Object^ o;`<br>`String^ s;` | `IInspectable o;`<br>`hstring s;` |
 | 문자열 형식 범주 | 참조 형식 | 값 유형 |
 | null **HSTRING**에서 프로젝션하는 형식 | `(String^)nullptr` | `hstring{}` |
 | null 및 `""`가 동일한가요? | 예 | 예 |
-| null의 유효성 | `s = nullptr;`<br>`s->Length == 0`(유효) | `s = nullptr;`<br>`s.size() == 0`(유효) |
-| 문자열 boxing | `o = s;` | `o = box_value(s);` |
-| `s`가 `null`인 경우 | `o = (String^)nullptr;`<br>`o == nullptr` | `o = box_value(hstring{});`<br>`o != nullptr` |
-| `s`가 `""`인 경우 | `o = "";`<br>`o == nullptr` | `o = box_value(hstring{L""});`<br>`o != nullptr;` |
-| null을 유지하는 문자열 boxing | `o = s;` | `o = s.empty() ? nullptr : box_value(s);` |
-| 문자열 강제 boxing | `o = PropertyValue::CreateString(s);` | `o = box_value(s);` |
-| 알려진 문자열 unboxing | `s = (String^)o;` | `s = unbox_value<hstring>(o);` |
-| `o`가 null인 경우 | `s == nullptr; // equivalent to ""` | 작동 중단 |
-| `o`가 boxing된 문자열이 아닌 경우 | `Platform::InvalidCastException` | 작동 중단 |
-| 문자열 unboxing, null인 경우 대체 사용, 다른 항목이 있는 경우 작동 중단 | `s = o ? (String^)o : fallback;` | `s = o ? unbox_value<hstring>(o) : fallback;` |
-| 가능한 경우 문자열 unboxing, 다른 항목이 있는 경우 대체 사용 | `auto box = dynamic_cast<IBox<String^>^>(o);`<br>`s = box ? box->Value : fallback;` | `s = unbox_value_or<hstring>(o, fallback);` |
+| null의 유효성 | `s = nullptr;`<br>`s->Length == 0`(유효) | `s = hstring{};`<br>`s.size() == 0`(유효) |
+| 개체에 null 문자열을 할당하는 경우 | `o = (String^)nullptr;`<br>`o == nullptr` | `o = box_value(hstring{});`<br>`o != nullptr` |
+| 개체에 `""`을(를) 할당하는 경우 | `o = "";`<br>`o == nullptr` | `o = box_value(hstring{L""});`<br>`o != nullptr` |
 
-위에 있는 두 개의 *대체 사용 unboxing*의 경우에서는 null 문자열이 강제 boxing되었을 수 있으며, 이 경우 대체가 사용되지 않습니다. 결과 값은 boxing된 문자열이므로 빈 문자열이 됩니다.
+기본 boxing 및 unboxing.
+
+| 작업 | C++/CX | C++/WinRT|
+|-|-|-|
+| 문자열 boxing | `o = s;`<br>빈 문자열은 nullptr이 됩니다. | `o = box_value(s);`<br>빈 문자열은 null이 아닌 개체가 됩니다. |
+| 알려진 문자열 unboxing | `s = (String^)o;`<br>Null 개체는 빈 문자열이 됩니다.<br>문자열이 아닌 경우 InvalidCastException이 발생합니다. | `s = unbox_value<hstring>(o);`<br>Null 개체가 충돌합니다.<br>문자열이 아닌 경우 충돌이 발생합니다. |
+| 가능한 문자열 Unbox | `s = dynamic_cast<String^>(o);`<br>Null 개체 또는 비문자열은 빈 문자열이 됩니다. | `s = unbox_value_or<hstring>(o, fallback);`<br>Null 또는 비문자열이 대체됩니다.<br>빈 문자열이 유지됩니다. |
 
 ## <a name="concurrency-and-asynchronous-operations"></a>동시성 및 비동기 작업
 
