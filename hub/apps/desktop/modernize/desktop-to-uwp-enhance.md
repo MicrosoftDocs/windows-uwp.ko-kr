@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: ca9e91233206f0e97d17fdbdd7b0fd09a2897cd8
-ms.sourcegitcommit: 3710117f24adb8555aa94b372db814e5d30ae45a
+ms.openlocfilehash: 78d9760c5ef21b29d09babaace0f4379b6a51209
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73427084"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302607"
 ---
 # <a name="call-uwp-apis-in-desktop-apps"></a>데스크톱 앱에서 UWP Api 호출
 
@@ -247,18 +247,12 @@ void UWP::ShowToast()
 
 ## <a name="related-samples"></a>관련 샘플
 
-* [Hello World 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/HelloWorldSample)
+* [Hello World 예제](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/HelloWorldSample)
 * [보조 타일](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/SecondaryTileSample)
 * [저장소 API 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/StoreSample)
 * [UWP UpdateTask을 구현 하는 응용 프로그램](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/WinFormsUpdateTaskSample)
 * [UWP 샘플에 대 한 데스크톱 앱 브리지](https://github.com/Microsoft/DesktopBridgeToUWP-Samples)
 
-## <a name="support-and-feedback"></a>지원 및 피드백
-
-**질문에 대 한 답변 찾기**
+## <a name="find-answers-to-your-questions"></a>질문에 대한 답변 찾기
 
 질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
-
-**피드백 제공 또는 기능 제안**
-
-[UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial)를 참조하세요.

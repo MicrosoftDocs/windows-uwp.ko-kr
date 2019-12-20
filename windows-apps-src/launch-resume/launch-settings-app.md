@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 7dd8604d9c9f32c374161ec1478221ebee6972c6
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 6387cc75047371666ac55b9fb70ae73d3e4c4d64
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282497"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302667"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
@@ -22,7 +22,7 @@ ms.locfileid: "72282497"
 -   [**PreferredApplicationPackageFamilyName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)
 -   [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview)
 
-Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 **ms 설정** 에 대해 설명 합니다. URI 체계입니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
+Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 **ms-settings:** URI 스키마를 설명합니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
 
 설정 앱 실행은 개인 정보 인식 앱 작성의 중요한 부분입니다. 앱에서 중요한 리소스에 액세스할 수 없는 경우 사용자에게 해당 리소스의 개인 정보 설정에 대한 편리한 링크를 제공하는 것이 좋습니다. 자세한 내용은 [개인 정보 인식 앱에 대한 지침](https://docs.microsoft.com/windows/uwp/security/index)을 참조하세요.
 
@@ -44,7 +44,7 @@ Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서�
 </TextBlock>
 ```
 
-또는 앱이 [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출하여 **설정** 앱을 시작할 수 있습니다. 이 예제에서는 `ms-settings:privacy-webcam` URI를 사용하여 카메라에 대한 개인 설정 페이지를 시작하는 방법을 보여 줍니다.
+또는 앱이 [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출하여 **설정** 앱을 시작할 수 있습니다. 이 예제에서는 `ms-settings:privacy-webcam` URI를 사용하여 카메라에 대한 개인 정보 설정 페이지를 시작하는 방법을 보여 줍니다.
 
 ```cs
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-webcam"));
@@ -56,7 +56,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:
 
 URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 앱 실행](launch-default-app.md)을 참조하세요.
 
-## <a name="ms-settings-uri-scheme-reference"></a>ms-settings: URI 체계 참조
+## <a name="ms-settings-uri-scheme-reference"></a>ms-settings: URI 스키마 참조
 
 다음 URI를 사용하여 설정 앱의 여러 페이지를 열 수 있습니다.
 
@@ -85,7 +85,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | Windows Hello 설정 | ms-settings:signinoptions-launchfaceenrollment<br>ms-settings:signinoptions-launchfingerprintenrollment |
 | 사용자 정보 | ms-settings:yourinfo |
 
-## <a name="apps"></a>앱
+## <a name="apps"></a>앱을 선택하고
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -124,8 +124,8 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 프린터 및 스캐너 | ms-settings:printers |
 | 터치 패드 | ms-settings:devices-touchpad(터치 패드 하드웨어가 있는 경우에만 사용 가능) |
 | 타이핑 | ms-settings:typing |
-| USB | ms-settings:usb |
-| 휠 | ms-settings:wheel(Dial이 페어링된 경우에만 사용 가능) |
+| USB를 선택합니다 | ms-settings:usb |
+| Wheel | ms-settings:wheel(Dial이 페어링된 경우에만 사용 가능) |
 | 사용자 전화 | ms-settings:mobile-devices  |
 
 ## <a name="ease-of-access"></a>접근성
@@ -135,17 +135,17 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 오디오 | ms-settings:easeofaccess-audio |
 | 자막 | ms-settings:easeofaccess-closedcaptioning |
 | 색 필터 | ms-설정: easeofaccess-colorfilter |
-| 커서 & 포인터 크기 | ms-설정: easeofaccess-cursorandpointersize |
-| 표시 | ms-settings:easeofaccess-display |
+| 커서 및 포인터 크기 | ms-설정: easeofaccess-cursorandpointersize |
+| Display | ms-settings:easeofaccess-display |
 | 아이 컨트롤 | ms-settings:easeofaccess-eyecontrol |
 | 글꼴 | ms-settings:fonts |
 | 고대비 | ms-settings:easeofaccess-highcontrast |
 | 키보드 | ms-settings:easeofaccess-keyboard |
 | 돋보기 | ms-settings:easeofaccess-magnifier |
 | 마우스 | ms-settings:easeofaccess-mouse |
-| 내레이터 | ms-settings:easeofaccess-narrator |
+| Narrator | ms-settings:easeofaccess-narrator |
 | 기타 옵션 | easeofaccess: otheroptions (**Windows 10 버전 1809 이상에서 사용 되지 않음**) |
-| 음성 명령 | ms-settings:easeofaccess-speechrecognition |
+| 음성으로 | ms-settings:easeofaccess-speechrecognition |
 
 ## <a name="extras"></a>추가 콘텐츠
 
@@ -181,7 +181,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 오디오 및 음성 | ms-settings:holographic-audio |
 | 환경 | holographic: 개인 정보-환경 |
 | 헤드셋 표시 | ms-설정: holographic-헤드셋 |
-| Uninstall | ms-설정: holographic |
+| 제거 | ms-설정: holographic |
 
 ## <a name="network--internet"></a>네트워크 및 인터넷
 
@@ -192,32 +192,32 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 데이터 사용량 | ms-settings:datausage |
 | 전화 걸기 | ms-settings:network-dialup |
 | DirectAccess | ms-settings:network-directaccess(DirectAccess가 활성화된 경우에만 사용 가능) |
-| 이더넷 | ms-settings:network-ethernet |
+| Ethernet | ms-settings:network-ethernet |
 | 알려진 네트워크 관리 | ms-settings:network-wifisettings |
 | 모바일 핫스팟 | ms-settings:network-mobilehotspot |
 | NFC | ms-settings:nfctransactions |
-| Proxy (프록시) | ms-settings:network-proxy |
-| Status | ms-settings:network-status<br/>ms-설정: 네트워크 |
+| Proxy(프록시) | ms-settings:network-proxy |
+| 상태 | ms-settings:network-status<br/>ms-설정: 네트워크 |
 | VPN | ms-settings:network-vpn |
 | Wi-Fi | ms-settings:network-wifi(장치에 wifi 어댑터가 있는 경우에만 사용 가능) |
 | Wi-Fi 통화 | ms-settings:network-wificalling(Wi-Fi 호출이 활성화된 경우에만 사용 가능) |
 
-## <a name="personalization"></a>Personalization
+## <a name="personalization"></a>꺼서
 
 |설정 페이지| URI |
 |-------------|-----|
-| 배경 | ms-settings:personalization-background |
+| 백그라운드 | ms-settings:personalization-background |
 | 시작 화면에 표시되는 폴더 선택 | ms-settings:personalization-start-places |
 | 색 | ms-settings:personalization-colors<br/>ms-설정: 색 |
 | 한 눈에 보기 | ms-설정: 개인 설정-개요 (**Windows 10, 버전 1809 이상에서 사용 되지 않음**) |
 | 잠금 화면 | ms-settings:lockscreen |
 | 탐색 모음 | ms-chap: 개인 설정-탐색 모음 (**Windows 10 버전 1809 이상에서 사용 되지 않음**) |
 | 개인 설정(범주) | ms-settings:personalization |
-| Start | ms-settings:personalization-start |
+| 시작 | ms-settings:personalization-start |
 | 작업 표시줄 | ms-settings:taskbar |
 | 테마 | ms-settings:themes |
 
-## <a name="phone"></a>Phone
+## <a name="phone"></a>전화
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -233,28 +233,28 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 광고 ID | ms-설정: 개인 정보-advertisingid (**Windows 10 버전 1809 이상에서는 사용 되지 않음**) |
 | 나타납니다 | ms-settings:privacy-appdiagnostics |
 | 자동 파일 다운로드 | ms-settings:privacy-automaticfiledownloads |
-| 배경 앱 | ms-settings:privacy-backgroundapps |
-| 달력 | ms-settings:privacy-calendar |
+| 백그라운드 앱 | ms-settings:privacy-backgroundapps |
+| 일정 | ms-settings:privacy-calendar |
 | 통화 기록 | ms-settings:privacy-callhistory |
 | 카메라 | ms-settings:privacy-webcam |
 | 연락처 | ms-settings:privacy-contacts |
 | 문서 | ms-settings:privacy-documents |
-| EMail | ms-settings:privacy-email |
+| 이메일 | ms-settings:privacy-email |
 | 아이 트래커 | ms-settings:privacy-eyetracker(eyetracker 하드웨어 필요) |
 | 피드백 및 진단 | ms-settings:privacy-feedback |
 | 파일 시스템 | ms-settings:privacy-broadfilesystemaccess |
 | 일반 | ms-settings:privacy-general |
 | 위치 | ms-settings:privacy-location |
-| Messaging(메시징) | ms-settings:privacy-messaging |
-| 마이크 | ms-settings:privacy-microphone |
+| Messaging | ms-settings:privacy-messaging |
+| Microphone | ms-settings:privacy-microphone |
 | 동작 | ms-settings:privacy-motion |
 | 알림 | ms-settings:privacy-notifications |
 | 기타 장치 | ms-settings:privacy-customdevices |
 | 사진 | ms-settings:privacy-pictures |
 | 전화 통화 | ms-설정: 개인 정보-phonecalls |
-| 무선 | ms-settings:privacy-radios |
+| 라디오 | ms-settings:privacy-radios |
 | 음성, 수동 입력 및 입력 |ms-settings:privacy-speechtyping |
-| 태스크 | ms-settings:privacy-tasks |
+| 작업 | ms-settings:privacy-tasks |
 | 비디오 | ms-settings:privacy-videos |
 | 음성 활성화 | ms-설정: 개인 정보-voiceactivation |
 
@@ -279,29 +279,29 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 배터리 절약 모드 설정 | ms-settings:batterysaver-settings(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
 | 배터리 사용 | ms-settings:batterysaver-usagedetails(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
 | 클립보드 | ms-설정: 클립보드 |
-| 표시 | ms-settings:display |
+| Display | ms-settings:display |
 | 기본 저장 위치 | ms-settings:savelocations |
-| 표시 | ms-settings:screenrotation |
+| Display | ms-settings:screenrotation |
 | 내 디스플레이 복제 | ms-settings:quietmomentspresentation |
 | 이 시간 동안 | ms-settings:quietmomentsscheduled |
 | 암호화 | ms-settings:deviceencryption |
 | 집중 지원 | ms-settings:quiethours <br> ms-settings:quietmomentshome |
 | 그래픽 설정 | ms-settings:display-advancedgraphics(고급 그래픽 옵션을 지원하는 장치에서만 사용 가능) |
-| Messaging(메시징) | ms-settings:messaging |
+| Messaging | ms-settings:messaging |
 | 멀티태스킹 | ms-settings:multitasking |
 | 야간 설정 | ms-settings:nightlight |
-| Phone | ms-settings:phone-defaultapps |
-| 이 PC에 표시 | ms-settings:project |
+| 전화 | ms-settings:phone-defaultapps |
+| 이 PC에 표시하는 중으로 | ms-settings:project |
 | 공유 환경 | ms-settings:crossdevice |
 | 태블릿 모드 | ms-settings:tabletmode |
 | 작업 표시줄 | ms-settings:taskbar |
-| 알림 및 동작 | ms-settings:notifications |
+| 알림 및 작업 | ms-settings:notifications |
 | 원격 데스크톱 | ms-settings:remotedesktop |
-| Phone | ms-chap: phone (**Windows 10 버전 1809 이상에서 사용 되지 않음**) |
+| 전화 | ms-chap: phone (**Windows 10 버전 1809 이상에서 사용 되지 않음**) |
 | 전원 및 절전 | ms-settings:powersleep |
 | 소리 | ms-설정: 사운드 |
-| 스토리지 | ms-settings:storagesense |
-| 저장 공간 센스 | ms-settings:storagepolicies |
+| 저장소 | ms-settings:storagesense |
+| 저장소 센스 | ms-settings:storagepolicies |
 
 ## <a name="time-and-language"></a>시간 및 언어
 
@@ -309,9 +309,10 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 |-------------|-----|
 | 날짜 및 시간 | ms-settings:dateandtime |
 | 일본 IME 설정 | ms-settings:regionlanguage-jpnime(Microsoft 일본 입력기가 설치된 경우 사용 가능) |
+| 국가 | ms-설정: 지역 서식 |
 | 언어 | ms-설정: 키보드<br/>ms-settings:regionlanguage<br/>ms-설정: 지역 언어-bpmfime<br/>ms-설정: 지역 언어-cangjieime<br/>밀리초-설정: 지역 언어-chsime-병음-domainlexicon<br/>밀리초-설정: 지역 언어-chsime-병음-keyconfig<br/>밀리초-설정: 지역 언어-chsime-병음-udp<br/>wubi: 지역 언어-chsime-udp<br/>ms-설정: 지역 언어-quickime |
 | Pinyin IME 설정 | ms-settings:regionlanguage-chsime-pinyin(Microsoft 병음 입력기가 설치된 경우 사용 가능) |
-| 음성 명령 | ms-settings:speech |
+| 음성으로 | ms-settings:speech |
 | Wubi IME 설정  | ms-settings:regionlanguage-chsime-wubi(Microsoft Wubi 입력기가 설치된 경우 사용 가능) |
 
 ## <a name="update--security"></a>업데이트 및 보안
@@ -321,13 +322,13 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 활성화 | ms-settings:activation |
 | 백업 | ms-settings:backup |
 | 배달 최적화 | ms-settings:delivery-optimization |
-| 내 디바이스 찾기 | ms-settings:findmydevice |
+| 내 장치 찾기 | ms-settings:findmydevice |
 | 개발자용 | ms-settings:developers |
 | 복구 | ms-settings:recovery |
 | 문제 해결 | ms-settings:troubleshoot |
 | Windows 보안 | ms-settings:windowsdefender |
 | Windows 참가자 프로그램 | ms-settings:windowsinsider(사용자가 WIP에 등록한 경우에만 표시)<br/>ms-settings: windowsinsider-optin |
-| Windows 업데이트 | ms-settings:windowsupdate<br>ms-settings:windowsupdate-action |
+| Windows 업데이트에서 | ms-settings:windowsupdate<br>ms-settings:windowsupdate-action |
 | Windows 업데이트-고급 옵션 | ms-settings:windowsupdate-options |
 | Windows 업데이트-다시 시작 옵션 | ms-settings:windowsupdate-restartoptions |
 | Windows 업데이트-업데이트 기록 보기 | ms-settings:windowsupdate-history |

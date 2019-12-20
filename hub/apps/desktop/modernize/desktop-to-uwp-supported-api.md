@@ -9,12 +9,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 481b326c3f4b3608d0d3f5f7a8cec943f1d6c437
-ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
+ms.openlocfilehash: 60a735af077d2121868e2613cb0f33e194e4330c
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142531"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302537"
 ---
 # <a name="uwp-apis-available-to-desktop-apps"></a>데스크톱 앱에서 사용할 수 있는 UWP Api
 
@@ -383,10 +383,4 @@ UWP Api를 사용 하는 방법에 대 한 예제는 GitHub의 [데스크톱 브
 
 ## <a name="next-steps"></a>다음 단계
 
-**질문에 대 한 답변 찾기**
-
 질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
-
-**피드백 제공 또는 기능 제안**
-
-[UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial)를 참조하세요.

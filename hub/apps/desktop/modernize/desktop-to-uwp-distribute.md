@@ -8,12 +8,12 @@ ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 15970afbeb5d9dee1c2079cd5933b1250ecb2f09
-ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
+ms.openlocfilehash: 14ad6707b7203dddd9aa7be186e76da677bbd675
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74734779"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302707"
 ---
 # <a name="distribute-your-packaged-desktop-app"></a>패키지 된 데스크톱 앱 배포
 
@@ -164,12 +164,6 @@ private void RemoveDesktopApp()
 
 ## <a name="next-steps"></a>다음 단계
 
-**질문에 대 한 답변 찾기**
-
 질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
 
 Microsoft Store에 응용 프로그램을 게시할 때 문제가 발생하는 경우 이 [블로그 게시물](https://blogs.msdn.microsoft.com/appconsult/2017/09/25/preparing-a-desktop-bridge-application-for-the-store-submission/)에는 몇 가지 유용한 팁을 제공합니다.
-
-**피드백 제공 또는 기능 제안**
-
-[UserVoice](https://wpdev.uservoice.com/forums/110705-universal-windows-platform/category/161895-desktop-bridge-centennial)를 참조하세요.
