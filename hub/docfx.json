@@ -1,17 +1,29 @@
 {
   "build": {
-    "content":
-      [
-        {
-          "files": ["**/**.md", "**/**.yml"],
-          "exclude": ["**/obj/**", "**/includes/**", "README.md", "LICENSE", "LICENSE-CODE"]
-        }
-      ],
+    "content": [
+      {
+        "files": [
+          "**/**.md",
+          "**/**.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE"
+        ]
+      }
+    ],
     "resource": [
-        {
-          "files": ["**/images/**"],
-          "exclude": ["**/obj/**"]
-        }
+      {
+        "files": [
+          "**/images/**"
+        ],
+        "exclude": [
+          "**/obj/**"
+        ]
+      }
     ],
     "overwrite": [],
     "externalReference": [],
@@ -20,27 +32,31 @@
       "ms.prod": "uwp",
       "Search.Product": "eADQiWindows 10XVcnh",
       "uhfHeaderId": "MSDocsHeader-WinDevCenter",
-      "breadcrumb_path":  "/windows/breadcrumbs/toc.json",
+      "breadcrumb_path": "/windows/breadcrumbs/toc.json",
       "extendBreadcrumb": false,
       "_op_documentIdPathDepotMapping": {
-          "./": {
+        "./": {
           "depot_name": "MSDN.hub",
           "folder_relative_path_in_docset": "./"
-          }
-        }		  
+        }
       },
+      "disable_contribution_on_translation_quality": [
+        "MT",
+        "MTE75",
+        "MTE95",
+        "Blank"
+      ]
+    },
     "fileMetadata": {
-      "ms.prod":
-      {
+      "ms.prod": {
         "python/**.md": "dev-environment",
         "nodejs/**.md": "dev-environment",
         "dev-environment/**.md": "dev-environment"
       },
-      "ms.technology":
-      {
-      "apps/**.md": "apps",
-      "python/**.md": "windows-python",
-      "nodejs/**.md": "windows-nodejs"
+      "ms.technology": {
+        "apps/**.md": "apps",
+        "python/**.md": "windows-python",
+        "nodejs/**.md": "windows-nodejs"
       }
     },
     "template": [],
