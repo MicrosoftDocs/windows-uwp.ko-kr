@@ -1,20 +1,20 @@
 ---
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
-title: 디바이스 포털 핵심 API 참조
+title: 장치 포털 핵심 API 참조
 description: 데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 Windows Device Portal 핵심 REST API에 대해 알아봅니다.
 ms.custom: 19H1
 ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e6b505dfd24a57f03169df3ed38402e7b3e9bb0
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 86724b084edb9350adfd2ed2623623d255302b70
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282117"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683461"
 ---
-# <a name="device-portal-core-api-reference"></a>디바이스 포털 핵심 API 참조
+# <a name="device-portal-core-api-reference"></a>장치 포털 핵심 API 참조
 
 모든 장치 포털의 기능은 개발자가 직접 액세스 리소스를 호출하고 장치를 프로그래밍 방식으로 컨트롤 할 수 있는 REST API를 기반으로 구축되어 있습니다.
 
@@ -28,7 +28,7 @@ ms.locfileid: "72282117"
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/app/packagemanager/package |
+| POST | /api/app/packagemanager/package |
 
 **URI 매개 변수**
 
@@ -77,7 +77,7 @@ ms.locfileid: "72282117"
 
 | 메서드      | 요청 URI |
 | :------     | :------ |
-| 올리기 | /api/app/packagemanager/package |
+| POST | /api/app/packagemanager/package |
 
 **URI 매개 변수**
 
@@ -126,7 +126,7 @@ ms.locfileid: "72282117"
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/app/packagemanager/networkapp |
+| POST | /api/app/packagemanager/networkapp |
 
 **URI 매개 변수**
 
@@ -178,7 +178,7 @@ ms.locfileid: "72282117"
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/app/packagemanager/networkapp |
+| POST | /api/app/packagemanager/networkapp |
 
 **URI 매개 변수**
 
@@ -239,7 +239,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/app/packagemanager/state |
+| GET | /api/app/packagemanager/state |
 
 **URI 매개 변수**
 
@@ -329,7 +329,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/app/packagemanager/packages |
+| GET | /api/app/packagemanager/packages |
 
 
 **URI 매개 변수**
@@ -353,7 +353,7 @@ ms.locfileid: "72282117"
         "Name": string,
         "PackageFamilyName": string,
         "PackageFullName": string,
-        "PackageOrigin": int, (https://msdn.microsoft.com/en-us/library/windows/desktop/dn313167(v=vs.85).aspx)
+        "PackageOrigin": int, (https://msdn.microsoft.com/library/windows/desktop/dn313167(v=vs.85).aspx)
         "PackageRelativeId": string,
         "Publisher": string,
         "Version": {
@@ -403,7 +403,7 @@ ms.locfileid: "72282117"
  
 | 메서드        | 요청 URI |
 | :------          | :------ |
-| 가져오기           | /api/bt/getradios |
+| GET           | /api/bt/getradios |
 | GET/WebSocket | /api/bt/getradios |
 
 
@@ -461,7 +461,7 @@ ms.locfileid: "72282117"
  
 | 메서드 | 요청 URI |
 | :------   | :------ |
-| 올리기   | /api/bt/setradio |
+| POST   | /api/bt/setradio |
 
 **URI 매개 변수**
 
@@ -469,8 +469,8 @@ ms.locfileid: "72282117"
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| id            | (**필수**) Bluetooth 송수신 장치에 대한 장치 ID이며 Base 64로 인코딩되어야 합니다. |
-| State         | (**필수**) @No__t-1 또는 `"Off"` 일 수 있습니다. |
+| ID            | (**필수**) Bluetooth 송수신 장치에 대한 장치 ID이며 Base 64로 인코딩되어야 합니다. |
+| State         | (**필수**) `"On"` 또는 `"Off"`수 있습니다. |
 
 **요청 헤더**
 
@@ -507,7 +507,7 @@ ms.locfileid: "72282117"
 
 | 메서드        | 요청 URI       |
 | :---          | :---              |
-| 가져오기           | /api/bt/getpaired |
+| GET           | /api/bt/getpaired |
 | GET/WebSocket | /api/bt/getpaired |
 
 **URI 매개 변수**
@@ -545,7 +545,7 @@ ms.locfileid: "72282117"
 
 | 메서드        | 요청 URI          |
 | :---          | :---                 |
-| 가져오기           | /api/bt/getavailable |
+| GET           | /api/bt/getavailable |
 | GET/WebSocket | /api/bt/getavailable |
 
 **URI 매개 변수**
@@ -581,13 +581,13 @@ ms.locfileid: "72282117"
 
 | 메서드       | 요청 URI           |
 | :---         | :---                  |
-| 올리기         | //> |
+| POST         | //> |
 
 **URI 매개 변수**
 
 | URI 매개 변수 | 설명 |
 | :---          | :--- |
-| id            | (**필수**) Bluetooth 장치에 대 한 연결 끝점 ID는 b a s e 64로 인코딩해야 합니다. |
+| ID            | (**필수**) Bluetooth 장치에 대 한 연결 끝점 ID는 b a s e 64로 인코딩해야 합니다. |
 
 **요청 헤더**
 
@@ -625,13 +625,13 @@ ms.locfileid: "72282117"
 
 | 메서드       | 요청 URI              |
 | :---         | :---                     |
-| 올리기         | /api/bt/disconnectdevice |
+| POST         | /api/bt/disconnectdevice |
 
 **URI 매개 변수**
 
 | URI 매개 변수 | 설명 |
 | :---          | :--- |
-| id            | (**필수**) Bluetooth 장치에 대 한 연결 끝점 ID는 b a s e 64로 인코딩해야 합니다. |
+| ID            | (**필수**) Bluetooth 장치에 대 한 연결 끝점 ID는 b a s e 64로 인코딩해야 합니다. |
 
 **요청 헤더**
 
@@ -660,7 +660,7 @@ ms.locfileid: "72282117"
 * IoT
 
 ---
-## <a name="device-manager"></a>디바이스 관리자
+## <a name="device-manager"></a>장치 관리자
 <hr>
 
 ### <a name="get-the-installed-devices-on-the-machine"></a>컴퓨터에 설치된 디바이스 가져오기
@@ -671,7 +671,7 @@ ms.locfileid: "72282117"
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/devicemanager/devices |
+| GET | /api/devicemanager/devices |
 
 **URI 매개 변수**
 
@@ -728,7 +728,7 @@ ms.locfileid: "72282117"
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /ext/devices/usbdevices |
+| GET | /ext/devices/usbdevices |
 
 
 **URI 매개 변수**
@@ -817,7 +817,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/debug/dump/usermode/dumps |
+| GET | /api/debug/dump/usermode/dumps |
 
 
 **URI 매개 변수**
@@ -863,7 +863,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/debug/dump/usermode/crashcontrol |
+| GET | /api/debug/dump/usermode/crashcontrol |
 
 
 **URI 매개 변수**
@@ -1013,7 +1013,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/debug/dump/usermode/crashdump |
+| GET | /api/debug/dump/usermode/crashdump |
 
 
 **URI 매개 변수**
@@ -1064,7 +1064,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/debug/dump/usermode/crashcontrol |
+| POST | /api/debug/dump/usermode/crashcontrol |
 
 
 **URI 매개 변수**
@@ -1110,7 +1110,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/debug/dump/kernel/dumplist |
+| GET | /api/debug/dump/kernel/dumplist |
 
 
 **URI 매개 변수**
@@ -1160,7 +1160,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/debug/dump/kernel/dump |
+| GET | /api/debug/dump/kernel/dump |
 
 
 **URI 매개 변수**
@@ -1209,7 +1209,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/debug/dump/kernel/crashcontrol |
+| GET | /api/debug/dump/kernel/crashcontrol |
 
 
 **URI 매개 변수**
@@ -1240,11 +1240,11 @@ ms.locfileid: "72282117"
 
 0: 사용 안 함
 
-1: 전체 메모리 덤프 (모든 사용 중인 메모리 수집)
+1: 전체 메모리 덤프(사용 중 메모리 모두 수집)
 
-2: 커널 메모리 덤프 (사용자 모드 메모리 무시)
+2: 커널 메모리 덤프(사용자 모드 메모리 무시)
 
-3: 커널 미니 덤프 제한
+3: 제한된 커널 미니덤프
 
 **상태 코드**
 
@@ -1271,7 +1271,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/debug/dump/livekernel |
+| GET | /api/debug/dump/livekernel |
 
 
 **URI 매개 변수**
@@ -1315,7 +1315,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/debug/dump/usermode/live |
+| GET | /api/debug/dump/usermode/live |
 
 
 **URI 매개 변수**
@@ -1363,7 +1363,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/debug/dump/kernel/crashcontrol |
+| POST | /api/debug/dump/kernel/crashcontrol |
 
 
 **URI 매개 변수**
@@ -1511,7 +1511,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/etw/providers |
+| GET | /api/etw/providers |
 
 
 **URI 매개 변수**
@@ -1563,7 +1563,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/etw/customproviders |
+| GET | /api/etw/customproviders |
 
 
 **URI 매개 변수**
@@ -1604,7 +1604,7 @@ ms.locfileid: "72282117"
 
 <hr>
 
-## <a name="location"></a>위치
+## <a name="location"></a>Location
 
 <hr>
 
@@ -1616,7 +1616,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /ext/location/override |
+| GET | /ext/location/override |
 
 
 **URI 매개 변수**
@@ -1716,7 +1716,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /ext/location/position |
+| GET | /ext/location/position |
 
 
 **URI 매개 변수**
@@ -1831,7 +1831,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/os/machinename |
+| GET | /api/os/machinename |
 
 
 **URI 매개 변수**
@@ -1882,7 +1882,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/os/info |
+| GET | /api/os/info |
 
 
 **URI 매개 변수**
@@ -1939,7 +1939,7 @@ ms.locfileid: "72282117"
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/os/devicefamily |
+| GET | /api/os/devicefamily |
 
 
 **URI 매개 변수**
@@ -1994,7 +1994,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/os/machinename |
+| POST | /api/os/machinename |
 
 
 **URI 매개 변수**
@@ -2003,7 +2003,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| name | (**필수**) 컴퓨터의 새 이름입니다. |
+| 이름 | (**필수**) 컴퓨터의 새 이름입니다. |
 
 **요청 헤더**
 
@@ -2045,7 +2045,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/users/activeuser |
+| GET | /api/users/activeuser |
 
 
 **URI 매개 변수**
@@ -2111,7 +2111,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/resourcemanager/processes |
+| GET | /api/resourcemanager/processes |
 | GET/WebSocket | /api/resourcemanager/processes |
 
 
@@ -2173,7 +2173,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/resourcemanager/systemperf |
+| GET | /api/resourcemanager/systemperf |
 | GET/WebSocket | /api/resourcemanager/systemperf |
 
 이 WebSocket 연결로 업그레이드할 수도 있습니다.  1초에 한 번씩 아래 동일한 JSON 데이터를 제공합니다. 
@@ -2245,7 +2245,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 <hr>
 
-## <a name="power"></a>Power
+## <a name="power"></a>전원
 
 <hr>
 
@@ -2257,7 +2257,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/power/battery |
+| GET | /api/power/battery |
 
 
 **URI 매개 변수**
@@ -2315,7 +2315,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/power/activecfg |
+| GET | /api/power/activecfg |
 
 
 **URI 매개 변수**
@@ -2362,7 +2362,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/power/cfg/ *<power scheme path>* |
+| GET | /api/power/cfg/ *<power scheme path>* |
 
 옵션:
 - SCHEME_CURRENT
@@ -2406,7 +2406,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/power/state |
+| GET | /api/power/state |
 
 
 **URI 매개 변수**
@@ -2454,7 +2454,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/power/activecfg |
+| POST | /api/power/activecfg |
 
 
 **URI 매개 변수**
@@ -2500,7 +2500,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/power/cfg/ *<power scheme path>* |
+| POST | /api/power/cfg/ *<power scheme path>* |
 
 
 **URI 매개 변수**
@@ -2543,7 +2543,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/power/sleepstudy/report |
+| GET | /api/power/sleepstudy/report |
 
 다음 요청 형식을 사용하여 절전 연구 보고서를 가져올 수 있습니다.
 
@@ -2589,7 +2589,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/power/sleepstudy/reports |
+| GET | /api/power/sleepstudy/reports |
 
 
 **URI 매개 변수**
@@ -2641,7 +2641,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/power/sleepstudy/transform |
+| GET | /api/power/sleepstudy/transform |
 
 
 **URI 매개 변수**
@@ -2677,7 +2677,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 <hr>
 
-## <a name="remote-control"></a>원격 제어
+## <a name="remote-control"></a>리모컨
 
 <hr>
 
@@ -2689,7 +2689,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/control/restart |
+| POST | /api/control/restart |
 
 
 **URI 매개 변수**
@@ -2732,7 +2732,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/control/shutdown |
+| POST | /api/control/shutdown |
 
 
 **URI 매개 변수**
@@ -2781,7 +2781,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/taskmanager/app |
+| POST | /api/taskmanager/app |
 
 
 **URI 매개 변수**
@@ -2932,7 +2932,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/networking/ipconfig |
+| GET | /api/networking/ipconfig |
 
 
 **URI 매개 변수**
@@ -3033,7 +3033,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | PrimaryDNS | ( *IPAddress* 가 null이 아닌 경우**필수** ) 설정할 정적 기본 DNS입니다. |
 | SecondayDNS | ( *Primarydns* 가 null이 아닌 경우**필수** ) 설정할 정적 보조 DNS입니다. |
 
-명확 하 게 하기 위해 인터페이스를 DHCP로 설정 하려면 네트워크에서 `AdapterName`만 직렬화 합니다.
+명확 하 게 하기 위해 인터페이스를 DHCP로 설정 하려면 네트워크의 `AdapterName`만 serialize 합니다.
 
 ```json
 {
@@ -3079,7 +3079,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/wifi/interfaces |
+| GET | /api/wifi/interfaces |
 
 
 **URI 매개 변수**
@@ -3142,7 +3142,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/wifi/networks |
+| GET | /api/wifi/networks |
 
 
 **URI 매개 변수**
@@ -3151,7 +3151,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| 인터페이스   | (**필수**) 무선 네트워크 검색에 사용할 네트워크 인터페이스의 GUID입니다(괄호 없음). |
+| interface   | (**필수**) 무선 네트워크 검색에 사용할 네트워크 인터페이스의 GUID입니다(괄호 없음). |
 
 **요청 헤더**
 
@@ -3213,7 +3213,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/wifi/network |
+| POST | /api/wifi/network |
 
 
 **URI 매개 변수**
@@ -3222,10 +3222,10 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| 인터페이스   | (**필수**) 네트워크 연결에 사용할 네트워크 인터페이스에 대한 GUID입니다. |
+| interface   | (**필수**) 네트워크 연결에 사용할 네트워크 인터페이스에 대한 GUID입니다. |
 | op   | (**필수**) 수행할 작업을 나타냅니다. 가능한 값은 connect 또는 disconnect입니다.|
 | ssid   | ( ***op* == connect인 경우 필수**) 연결할 SSID입니다. |
-| Key   | ( ***op* == connect이고 네트워크에 인증이 필요한 경우 필수**) 공유 키입니다. |
+| 키   | ( ***op* == connect이고 네트워크에 인증이 필요한 경우 필수**) 공유 키입니다. |
 | createprofile | (**필수**) 디바이스에서 네트워크에 대한 프로필을 만듭니다.  이렇게 하면 다음부터 디바이스에서 네트워크에 자동 연결합니다. **예** 또는 **아니요**일 수 있습니다. |
 
 **요청 헤더**
@@ -3273,8 +3273,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| 인터페이스   | (**필수**) 삭제할 프로필과 연결된 네트워크 인터페이스의 GUID입니다. |
-| profiles   | (**필수**) 삭제할 프로필의 이름입니다. |
+| interface   | (**필수**) 삭제할 프로필과 연결된 네트워크 인터페이스의 GUID입니다. |
+| profile   | (**필수**) 삭제할 프로필의 이름입니다. |
 
 **요청 헤더**
 
@@ -3316,7 +3316,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/wer/report/file |
+| GET | /api/wer/report/file |
 
 
 **URI 매개 변수**
@@ -3325,10 +3325,10 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| 사용자   | (**필수**) 보고서와 연결된 사용자 이름입니다. |
-| type   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
-| name   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. |
-| files   | (**필수**) 보고서에서 다운로드할 파일의 이름입니다. Base64 인코드되어야 합니다. |
+| user   | (**필수**) 보고서와 연결된 사용자 이름입니다. |
+| 유형   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
+| 이름   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. |
+| file   | (**필수**) 보고서에서 다운로드할 파일의 이름입니다. Base64 인코드되어야 합니다. |
 
 **요청 헤더**
 
@@ -3368,7 +3368,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/wer/report/files |
+| GET | /api/wer/report/files |
 
 
 **URI 매개 변수**
@@ -3377,9 +3377,9 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| 사용자   | (**필수**) 보고서와 연결된 사용자입니다. |
-| type   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
-| name   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. |
+| user   | (**필수**) 보고서와 연결된 사용자입니다. |
+| 유형   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
+| 이름   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. |
 
 **요청 헤더**
 
@@ -3424,7 +3424,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/wer/reports |
+| GET | /api/wer/reports |
 
 
 **URI 매개 변수**
@@ -3487,7 +3487,7 @@ WER 보고서 형식은 다음과 같습니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/wpr/customtrace |
+| POST | /api/wpr/customtrace |
 
 
 **URI 매개 변수**
@@ -3540,7 +3540,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/wpr/boottrace |
+| POST | /api/wpr/boottrace |
 
 
 **URI 매개 변수**
@@ -3549,7 +3549,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| profiles   | (**필수**) 시작 시 이 매개 변수가 필요합니다. 성능 추적 세션을 시작해야 하는 프로필의 이름입니다. 가능한 프로필은 perfprofiles/profiles.json에 저장됩니다. |
+| profile   | (**필수**) 시작 시 이 매개 변수가 필요합니다. 성능 추적 세션을 시작해야 하는 프로필의 이름입니다. 가능한 프로필은 perfprofiles/profiles.json에 저장됩니다. |
 
 **요청 헤더**
 
@@ -3597,7 +3597,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/wpr/boottrace |
+| GET | /api/wpr/boottrace |
 
 
 **URI 매개 변수**
@@ -3614,7 +3614,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 
 **응답**
 
--  없음  **참고:** 이 작업을 실행하는 데는 오랜 시간이 소요됩니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.
+-  없음.  **참고:** 장기 실행 작업입니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.
 
 **상태 코드**
 
@@ -3643,7 +3643,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/wpr/trace |
+| POST | /api/wpr/trace |
 
 
 **URI 매개 변수**
@@ -3652,7 +3652,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| profiles   | (**필수**) 성능 추적 세션을 시작해야 하는 프로필의 이름입니다. 가능한 프로필은 perfprofiles/profiles.json에 저장됩니다. |
+| profile   | (**필수**) 성능 추적 세션을 시작해야 하는 프로필의 이름입니다. 가능한 프로필은 perfprofiles/profiles.json에 저장됩니다. |
 
 **요청 헤더**
 
@@ -3700,7 +3700,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/wpr/trace |
+| GET | /api/wpr/trace |
 
 
 **URI 매개 변수**
@@ -3717,7 +3717,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 
 **응답**
 
-- 없음  **참고:** 이 작업을 실행하는 데는 오랜 시간이 소요됩니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.  
+- 없음.  **참고:** 장기 실행 작업입니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.  
 
 **상태 코드**
 
@@ -3746,7 +3746,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/wpr/status |
+| GET | /api/wpr/status |
 
 
 **URI 매개 변수**
@@ -3799,7 +3799,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/wpr/tracefiles |
+| GET | /api/wpr/tracefiles |
 
 
 **URI 매개 변수**
@@ -3857,7 +3857,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/wpr/tracefile |
+| GET | /api/wpr/tracefile |
 
 
 **URI 매개 변수**
@@ -3961,7 +3961,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/dns-sd/tags |
+| GET | /api/dns-sd/tags |
 
 
 **URI 매개 변수**
@@ -4108,7 +4108,7 @@ DNS-SD 알림에 태그를 추가합니다.
  
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/dns-sd/tag |
+| POST | /api/dns-sd/tag |
 
 
 **URI 매개 변수**
@@ -4158,7 +4158,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/filesystem/apps/knownfolders |
+| GET | /api/filesystem/apps/knownfolders |
 
 
 **URI 매개 변수**
@@ -4209,7 +4209,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/filesystem/apps/files |
+| GET | /api/filesystem/apps/files |
 
 
 **URI 매개 변수**
@@ -4270,7 +4270,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 가져오기 | /api/filesystem/apps/file |
+| GET | /api/filesystem/apps/file |
 
 **URI 매개 변수**
 
@@ -4319,7 +4319,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/filesystem/apps/rename |
+| POST | /api/filesystem/apps/rename |
 
 
 **URI 매개 변수**
@@ -4350,7 +4350,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | HTTP 상태 코드      | 설명 |
 | :------     | :----- |
-| 200 | 확인 |을 선택합니다. 파일 이름이 변경되었습니다.
+| 200 | 확인 |. 파일 이름이 변경되었습니다.
 | 404 | 파일을 찾을 수 없습니다. |
 | 5XX | 오류 코드 |
 
@@ -4401,7 +4401,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | HTTP 상태 코드      | 설명 |
 | :------     | :----- |
-| 200 | 확인 |을 선택합니다. 파일이 삭제되었습니다. |
+| 200 | 확인 |. 파일이 삭제되었습니다. |
 | 404 | 파일을 찾을 수 없습니다. |
 | 5XX | 오류 코드 |
 
@@ -4423,7 +4423,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | 메서드      | 요청 URI |
 | :------     | :----- |
-| 올리기 | /api/filesystem/apps/file |
+| POST | /api/filesystem/apps/file |
 
 **URI 매개 변수**
 
@@ -4449,7 +4449,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | HTTP 상태 코드      | 설명 |
 | :------     | :----- |
-| 200 | 확인 |을 선택합니다. 파일이 업로드되었습니다. |
+| 200 | 확인 |. 파일이 업로드되었습니다. |
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 

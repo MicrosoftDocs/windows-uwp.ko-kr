@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: f8ace0d56e6e647ed5f977cbe6860d8f91bb2b5f
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 23d090422c7c5aabb146d9cd1ff40cc64a485bdb
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282361"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683976"
 ---
 # <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 앱 개념 매핑
 
@@ -42,7 +42,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>디자인 언어.</strong><br><br>플랫폼의 앱 모양과 동작을 규정하는 규칙 집합입니다.</td>
 <td align="left"><strong>Android 자료 디자인</strong> 지침에서는 Android 디자이너 및 개발자를 위한 시각적 언어를 제공합니다.</td>
 <td align="left"><strong>휴먼 인터페이스 지침</strong>에서는 iOS 디자이너 및 개발자를 위한 권장 사항을 제공합니다.</td>
-<td align="left"><a href="https://developer.microsoft.com/en-us/windows/apps/design"><strong>UWP Windows 앱 디자인</strong></a> 에서는 모든 Windows 10 장치에서 멋진 응용 프로그램을 만드는 방법을 보여 줍니다. UI(사용자 인터페이스) 디자인 기본 사항, 반응형 디자인 기술 및 자세한 지침의 전체 목록을 찾을 수 있습니다.<br/></td>
+<td align="left"><a href="https://developer.microsoft.com/windows/apps/design"><strong>UWP Windows 앱 디자인</strong></a> 에서는 모든 Windows 10 장치에서 멋진 응용 프로그램을 만드는 방법을 보여 줍니다. UI(사용자 인터페이스) 디자인 기본 사항, 반응형 디자인 기술 및 자세한 지침의 전체 목록을 찾을 수 있습니다.<br/></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>사용자 인터페이스 태그 언어입니다.</strong> <br><br>UI와 해당 구성 요소를 렌더링 및 설명하는 생성 언어입니다. 각 플랫폼은 디자인 및 태그 편집을 위한 편집기를 제공합니다.<br/></td>
@@ -121,25 +121,25 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>레이아웃.</strong> <br><br>레이아웃은 사용자 인터페이스의 구조를 정의합니다.</td>
 <td align="left">레이아웃은 다른 보기 그룹 또는 보기를 중첩할 수 있는 <strong>LinearLayout</strong> 및 <strong>RelativeLayout</strong> 등의 <strong>보기 그룹</strong>으로 구성됩니다.</td>
 <td align="left">레이아웃은 중첩 가능한 <strong>UIView</strong>를 포함하는 <strong>UIViewController</strong>로 구성됩니다.</td>
-<td align="left">정적 및 반응형 레이아웃을 위한Canvas<strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas">, </a></strong>Grid<strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid">, </a></strong>RelativePanel<strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel"> 및 </a></strong>StackPanel<strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel"> 등의 </a>레이아웃 패널 클래스</strong>로 구성된 유연한 레이아웃 시스템을 제공하는 XAML입니다. <strong><a href="https://docs.microsoft.com/visualstudio/ide/reference/properties-window?view=vs-2015">속성</a></strong> 은 요소의 크기와 위치를 제어 하는 데 사용 됩니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml">XAML을 사용하여 레이아웃 정의</a><br/></td>
+<td align="left">정적 및 반응형 레이아웃을 위한 <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas">Canvas</a></strong>, <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid">Grid</a></strong>, <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel">RelativePanel</a></strong> 및 <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel">StackPanel</a></strong> 등의 <strong>레이아웃 패널 클래스</strong>로 구성된 유연한 레이아웃 시스템을 제공하는 XAML입니다. <strong><a href="https://docs.microsoft.com/visualstudio/ide/reference/properties-window?view=vs-2015">속성</a></strong> 은 요소의 크기와 위치를 제어 하는 데 사용 됩니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml">XAML을 사용하여 레이아웃 정의</a><br/></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>피어 탐색.</strong> <br><br>사용자에게 계층적 중요도가 동일한 페이지 간을 이동하는 방법을 제공합니다.</td>
 <td align="left"><strong>탭</strong>, <strong>살짝 밀기 보기</strong> 및 <strong>탐색 창</strong>은 <strong>측면 탐색</strong>을 제공합니다.</td>
 <td align="left"><strong>탭 바 컨트롤러</strong>, <strong>분할 보기 컨트롤러</strong> 및 <strong>페이지 보기 컨트롤러</strong>를 사용하면 동일한 계층의 보기 간을 탐색할 수 있습니다.</td>
-<td align="left"><strong><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/tabs-pivot">탭/피벗</a></strong>을 사용하여 콘텐츠 위에 링크/탭의 영구 목록을 표시할 수 있습니다. <strong><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/split-view">탐색 창/분할 보기</a></strong>를 사용하면 콘텐츠와 함께 링크 목록을 표시할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/layout/navigation-basics">내비게이션</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/layout/navigate-between-two-pages">두 페이지 간 이동</a></td>
+<td align="left"><strong><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/tabs-pivot">탭/피벗</a></strong>을 사용하여 콘텐츠 위에 링크/탭의 영구 목록을 표시할 수 있습니다. <strong><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/split-view">탐색 창/분할 보기</a></strong>를 사용하면 콘텐츠와 함께 링크 목록을 표시할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/layout/navigation-basics">탐색</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/layout/navigate-between-two-pages">두 페이지 간 이동</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>계층적 탐색.</strong> <br><br>계층에서 부모와 자식 페이지 간을 탐색합니다.</td>
 <td align="left"><strong>목록</strong>, <strong>눈금 목록</strong>, <strong>단추</strong> 및 기타 컨트롤은 <strong>의도</strong>와 함께 사용하여 다른 <strong>활동</strong>을 로드할 때 <strong>하위 탐색</strong>을 제공합니다.</td>
 <td align="left"><strong>탐색 컨트롤러</strong>를 사용하면 사용자가 계층 구조 수준 간을 탐색할 수 있습니다.</td>
-<td align="left"><strong><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/hub">허브</a></strong> 를 사용 하면 사용자에 게 하위 페이지로 이동 하도록 선택할 수 있는 콘텐츠의 미리 보기를 표시할 수 있습니다. <strong><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/master-details">마스터/세부 정보</a></strong> 는 사용자가 해당 세부 정보 섹션 옆에 표시 되는 항목 요약 목록에서 선택할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/layout/navigation-basics">내비게이션</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/layout/navigate-between-two-pages">두 페이지 간 이동</a></td>
+<td align="left"><strong><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/hub">허브</a></strong> 를 사용 하면 사용자에 게 하위 페이지로 이동 하도록 선택할 수 있는 콘텐츠의 미리 보기를 표시할 수 있습니다. <strong><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/master-details">마스터/세부 정보</a></strong> 는 사용자가 해당 세부 정보 섹션 옆에 표시 되는 항목 요약 목록에서 선택할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/layout/navigation-basics">탐색</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/layout/navigate-between-two-pages">두 페이지 간 이동</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>뒤로 단추 탐색.</strong> <br><br>응용 프로그램을 통해 뒤로 탐색합니다.</td>
 <td align="left">작업 모음 내의 <strong>뒤로</strong> 및 <strong>위로</strong> 단추는 <strong>백 스택</strong>을 사용하여 <strong>상위</strong> 및 <strong>임시</strong> 탐색을 제공합니다.</td>
 <td align="left"><strong>탐색 컨트롤러</strong>에 뒤로 단추를 추가할 수 있습니다.<br/></td>
-<td align="left">사용자가 <strong>탐색 기록<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.backstack">을 트래버스할 수 있는 </a></strong>백 스택 속성을 사용하여 소프트웨어 또는 하드웨어 뒤로 단추 누르기를 쉽게 처리할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/layout/navigation-history-and-backwards-navigation">뒤로 단추 탐색</a></td>
+<td align="left">사용자가 <strong>탐색 기록</strong>을 트래버스할 수 있는 <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.backstack">백 스택 속성</a></strong>을 사용하여 소프트웨어 또는 하드웨어 뒤로 단추 누르기를 쉽게 처리할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/layout/navigation-history-and-backwards-navigation">뒤로 단추 탐색</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>시작 화면.</strong> <br><br>앱 실행 시 이미지를 표시하며 브랜딩에 주로 사용됩니다.</td>
@@ -180,7 +180,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </tr>
 </tbody>
 </table>
-<h2 id="data">data</h2>
+<h2 id="data">데이터</h2>
 <table style="width:100%">
 <colgroup>
 <col width="20%" />
@@ -201,7 +201,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>로컬 응용 프로그램 데이터입니다.</strong> <br><br>앱 관련 설정 및 파일을 로컬로 앱에 저장합니다.</td>
 <td align="left">로컬 파일은 <strong>openFileOutput</strong> 및 <strong>openFileInput</strong>을 사용하여 저장할 수 있습니다. <strong>공유 기본 설정 파일</strong>의 설정은 <strong>getSharedPreferences</strong>를 사용하여 액세스할 수 있습니다.</td>
 <td align="left">로컬 파일은 <strong>NSFileManager</strong> 클래스를 통해 액세스되는 <strong>응용 프로그램 지원</strong> 디렉터리에 저장할 수 있습니다. <strong>기본 설정</strong> 파일의 설정은 <strong>NSUserDefaults</strong> 클래스에서 액세스할 수 있습니다.</td>
-<td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/Windows.Storage">Windows.Storage</a></strong> 클래스는 통합된 방식으로 로컬 데이터 저장소를 처리합니다. <strong><a href="https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataContainer">ApplicationData.LocalSettings</a></strong> 속성을 통해 액세스하는 <strong><a href="https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localsettings">ApplicationDataContainer</a></strong> 개체로 설정을 저장합니다. <strong><a href="https://docs.microsoft.com/uwp/api/windows.storage.storagefolder">ApplicationData.LocalFolder</a></strong> 속성을 통해 액세스하는 <strong><a href="https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder">StorageFolder</a></strong> 개체에 파일을 저장합니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data">설정 및 기타 앱 데이터 저장 및 검색</a></td>
+<td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/Windows.Storage">Windows.Storage</a></strong> 클래스는 통합된 방식으로 로컬 데이터 저장소를 처리합니다. <strong><a href="https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localsettings">ApplicationData.LocalSettings</a></strong> 속성을 통해 액세스하는 <strong><a href="https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationDataContainer">ApplicationDataContainer</a></strong> 개체로 설정을 저장합니다. <strong><a href="https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder">ApplicationData.LocalFolder</a></strong> 속성을 통해 액세스하는 <strong><a href="https://docs.microsoft.com/uwp/api/windows.storage.storagefolder">StorageFolder</a></strong> 개체에 파일을 저장합니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data">설정과 기타 앱 데이터의 저장 및 검색</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>로컬 데이터베이스 저장소입니다.</strong> <br><br>해당하는 경우 ORM(개체 관계형 매퍼)을 사용하여 관계형 데이터베이스에 앱 데이터를 저장합니다.</td>
@@ -242,7 +242,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <tr class="even">
 <td align="left"><strong>OAuth 라이브러리.</strong> <br><br>타사 OAuth 공급자에 대한 액세스를 허용하는 OAuth 라이브러리와 플랫폼에 기본 제공되는 계정 관리입니다.</td>
 <td align="left">일반 OAuth 라이브러리는 제공되지 않습니다. Google Play Services를 사용한 OAuth 인증을 위해 <strong>GoogleAuthUtil</strong> 클래스가 제공됩니다.<br/></td>
-<td align="left">일반 OAuth 라이브러리는 제공되지 않습니다. <strong>계정 프레임워크</strong>는 Facebook 및 Twitter와 같이 디바이스에 이미 저장된 사용자 계정에 대한 액세스를 제공합니다.</td>
+<td align="left">일반 OAuth 라이브러리는 제공되지 않습니다. <strong>계정 프레임워크</strong>는 Facebook 및 Twitter와 같이 장치에 이미 저장된 사용자 계정에 대한 액세스를 제공합니다.</td>
 <td align="left">일반 OAuth 라이브러리 <strong><a href="https://docs.microsoft.com/windows/uwp/security/web-authentication-broker">웹 인증 브로커</a></strong>를 사용하여 타사 ID 공급자 서비스에 연결할 수 있습니다. <strong><a href="https://docs.microsoft.com/windows/uwp/security/credential-locker">자격 증명 보관</a></strong>을 사용하여 사용자가 로그인을 저장하고 여러 디바이스에서 사용하도록 할 수 있습니다. <strong><a href="https://docs.microsoft.com/previous-versions/office/developer/onedrive-live-sdk-reference/dn896755(v=office.15)">Microsoft.Live</a></strong> 네임스페이스를 사용하면 Microsoft 서비스 액세스를 위해 Live SDK OAuth에 쉽게 액세스할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/security/authentication-and-user-identity">인증 및 사용자 ID</a><br/><br/><a href="https://docs.microsoft.com/uwp/api/windows.security.authentication.web">Windows. 웹 API 설명서</a><br/><br/><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAuthenticationBroker">WebAuthenticationBroker 코드 예제</a></td>
 </tr>
 </tbody>
@@ -302,7 +302,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left">응용 프로그램의 <strong>앱 실행 상태</strong>는 NotRunning, Activated, Running, Suspending, Suspended 및 Resuming입니다.<br/><br/>상태가 변경될 때 앱에서 <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.application">응용 프로그램 클래스</a></strong> 메서드 OnLaunched, OnActivated, Suspending 또는 Resuming을 구현하여 코드를 실행할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/launch-resume/app-lifecycle">앱 수명 주기</a></td>
 </tr>
 <tr class="even">
-<td align="left"><strong>백그라운드 작업.</strong> <br><br>앱이 포그라운드에 없을 때 백그라운드 작업을 수행하고 실행을 계속하는 작업입니다.</td>
+<td align="left"><strong>백그라운드 작업.</strong> <br><br>앱이 전경에 없을 때 백그라운드 작업을 수행하고 실행을 계속하는 작업입니다.</td>
 <td align="left">앱이 전경에 없을 때 앱에서 백그라운드 작업을 수행하는 <strong>서비스</strong>를 시작할 수 있습니다. 서비스에는 자체 <strong>수명 주기</strong>가 있으며 매니페스트에 등록됩니다.</td>
 <td align="left"><strong>백그라운드 실행</strong>은 특정 작업 유형에만 사용할 수 있습니다.<br/><br/><strong>UIBackgroundModes</strong>를 사용하여 앱에서 Info.plist 파일에 <strong>지원되는 백그라운드 작업</strong>을 선언합니다.<br/><br/>시스템은 백그라운드 작업을 실행할 시기와 기간을 제어합니다.</td>
 <td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask">IBackgroundTask</a></strong> 인터페이스를 구현하고 응용 프로그램 매니페스트에 작업을 등록하여 백그라운드 작업을 만들 수 있습니다. <a href="https://docs.microsoft.com/windows/uwp/launch-resume/run-a-background-task-on-a-timer-">  <strong>타이머</strong></a>, <a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.systemtriggertype"><strong>시스템 트리거</strong></a>, 및 <a href="https://docs.microsoft.com/windows/uwp/launch-resume/use-a-maintenance-trigger"><strong>유지 관리 트리거</strong></a>를 사용하여 트리거할 작업을 설정할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks">백그라운드 작업을 사용 하 여 앱 지원</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/launch-resume/create-and-register-a-background-task">백그라운드 작업 만들기 및 등록</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/launch-resume/guidelines-for-background-tasks">백그라운드 작업 지침</a></td>
@@ -334,7 +334,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </tr>
 <tr class="even">
 <td align="left"><strong>응답성이 뛰어난 UI에 대 한 최적화를 확인 합니다.</strong> <br><br>보기를 최적화하여 성능을 향상시킵니다.</td>
-<td align="left">계층적 뷰어 도구를 사용한 <strong>레이아웃 계층</strong> 최적화, <strong>레이아웃 다시 사용</strong> 및 <strong>주문형 보기</strong> 로드는 UI 스레드 응답을 유지하고 &quot;ANR&quot;(<strong>응용 프로그램이 응답하지 않음</strong>) 대화 상자를 방지하는 기술입니다.<br/></td>
+<td align="left">계층적 뷰어 도구를 사용한 <strong>레이아웃 계층</strong> 최적화, <strong>레이아웃 다시 사용</strong> 및 <strong>주문형 보기</strong> 로드는 UI 스레드 응답을 유지하고 <strong>ANR</strong>(&quot;응용 프로그램이 응답하지 않음&quot;) 대화 상자를 방지하는 기술입니다.<br/></td>
 <td align="left"><strong>핵심 애니메이션</strong> 도구를 사용하여 <strong>오프스크린 렌더링</strong>, <strong>혼합 계층</strong>, <strong>래스터화</strong>를 통해 UI 문제를 해결하면 UI 스레드 응답을 유지할 수 있습니다.</td>
 <td align="left">몇 가지 간단한 단계에 따라 XAML <strong>태그</strong> 및 <strong>레이아웃</strong>을 쉽게 <strong>최적화</strong>할 수 있습니다. 기술에는 레이아웃 구조 줄이기, 요소 수 최소화 및 과도한 그리기 최소화가 포함됩니다. <br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/keep-the-ui-thread-responsive">UI 스레드 응답을 유지 합니다.</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-xaml-loading">XAML 태그 최적화</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-your-xaml-layout">XAML 레이아웃 최적화</a></td>
 </tr>
@@ -342,7 +342,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>스레딩.</strong> <br><br>스레딩을 사용하여 <strong>반응형 UI</strong>를 유지하고 여러 <strong>작업을 병렬로</strong> 실행합니다.</td>
 <td align="left">스레딩은 <strong>Runnable</strong>, <strong>Handler</strong>, <strong>ThreadPoolExecutor</strong> 및 높은 수준 <strong>AsyncTask</strong> 클래스를 통해 사용할 수 있습니다.</td>
 <td align="left">스레딩은 <strong>NSThread</strong>, <strong>Grand Central Dispatch</strong> 및 높은 수준 <strong>NSOperation</strong>을 통해 사용할 수 있습니다.</td>
-<td align="left"><strong></strong>RunAsync를 사용하여 <strong>작업 항목<a href="https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync">을 </a>threadpool</strong>에 제출하여 스레드 작업을 수행할 수 있습니다. 타이머를 사용하여 <strong><a href="https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer">CreateTimer</a></strong>로 작업 항목을 제출하고 <strong><a href="https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createperiodictimer">CreatePeriodicTimer</a></strong>로 반복 작업 항목을 만들 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/submit-a-work-item-to-the-thread-pool">스레드 풀에 작업 항목 제출</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/use-a-timer-to-submit-a-work-item">타이머를 사용하여 작업 항목 제출</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/create-a-periodic-work-item">정기 작업 항목 만들기</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/best-practices-for-using-the-thread-pool">스레드 풀 사용 모범 사례</a></td>
+<td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync">RunAsync</a></strong>를 사용하여 <strong>작업 항목</strong>을 <strong>threadpool</strong>에 제출하여 스레드 작업을 수행할 수 있습니다. 타이머를 사용하여 <strong><a href="https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer">CreateTimer</a></strong>로 작업 항목을 제출하고 <strong><a href="https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createperiodictimer">CreatePeriodicTimer</a></strong>로 반복 작업 항목을 만들 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/submit-a-work-item-to-the-thread-pool">스레드 풀에 작업 항목 제출</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/use-a-timer-to-submit-a-work-item">타이머를 사용하여 작업 항목 제출</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/create-a-periodic-work-item">정기 작업 항목 만들기</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/threading-async/best-practices-for-using-the-thread-pool">스레드 풀 사용 모범 사례</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>비동기 프로그래밍.</strong> <br><br>비동기 프로그래밍 패턴을 통해 UI 스레드 응답을 유지하여 스레딩 복잡성을 방지합니다.</td>
@@ -354,7 +354,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>목록 뷰 최적화입니다.</strong> <br><br>데이터 목록 최적화를 지원하는 기본 제공 패턴이며 많은 양의 데이터를 표시해야 할 경우 성능이 저하될 수 있습니다.</td>
 <td align="left"><strong>ViewHolder</strong> 디자인 패턴은 여러 보기 조회를 방지하는 데 사용됩니다. 이를 통해 재사용 가능한 UI 요소를 사용할 수 있습니다.</td>
 <td align="left">다양한 최적화를 통해 <strong>UITableView</strong>의 성능을 향상시킬 수 있습니다. 기본 제공되는 항목은 없습니다.</td>
-<td align="left">기본 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview">UI 가상화</a>를 제공하는 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview">ListView</a> 및 <strong>GridView</strong> 컨트롤을 사용하여 이동 및 스크롤 환경을 제공하고 시작 시간을 단축할 수 있습니다. 데이터 원본에서 <a href="https://docs.microsoft.com/dotnet/api/system.collections.ilist">IList</a> 및 <a href="https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged">INotifyCollectionChanged</a>를 구현하여 <strong>데이터 가상화</strong> 및 개선된 성능을 제공할 수도 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview">ListView 및 GridView UI 최적화</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/listview-and-gridview-data-optimization">ListView 및 GridView 데이터 가상화</a></td>
+<td align="left">기본 <strong>UI 가상화</strong>를 제공하는 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview">ListView</a> 및 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview">GridView</a> 컨트롤을 사용하여 이동 및 스크롤 환경을 제공하고 시작 시간을 단축할 수 있습니다. 데이터 원본에서 <a href="https://docs.microsoft.com/dotnet/api/system.collections.ilist">IList</a> 및 <a href="https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged">INotifyCollectionChanged</a>를 구현하여 <strong>데이터 가상화</strong> 및 개선된 성능을 제공할 수도 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview">ListView 및 GridView UI 최적화</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/listview-and-gridview-data-optimization">ListView 및 GridView 데이터 가상화</a></td>
 </tr>
 </tbody>
 </table>
@@ -379,7 +379,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>앱에서 바로 구매.</strong> <br><br>사용자가 앱에서 구매할 수 있는 플랫폼 기능입니다.</td>
 <td align="left"><strong>앱에서 바로 청구</strong>는 Google 서비스에서 제공됩니다. 제품이 <strong>Google Play 개발자 콘솔</strong>에 추가됩니다. 앱에서 바로 구매는 <strong>Google Play Billing Library</strong>를 통해 구현됩니다.</td>
 <td align="left">제품이 <strong>iTunes Connect</strong>에 추가됩니다. 앱에서 바로 구매는 <strong>StoreKit</strong> 프레임워크를 사용하여 구현됩니다.<br/><br/>제품은 <strong>SKMutablePayment</strong> 및 <strong>SKPaymentQueue</strong>를 사용하여 구매합니다.</td>
-<td align="left"><a href="https://docs.microsoft.com/windows/uwp/publish/iap-submissions">앱에 추가하고 스토어에 제출</a>하여 앱에서 바로 구매 제품 구매를 만듭니다. <br/><br/><strong><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp">CurrentApp 클래스</a></strong>를 사용하여 앱에서 바로 구매를 정의합니다. <br/><br/><strong><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync">CurrentApp.RequestProductPurchaseAsync</a></strong>를 사용하여 고객이 제품을 구매할 수 있는 UI를 표시합니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/monetize/enable-in-app-product-purchases">앱에서 바로 제품 구매 사용</a></td>
+<td align="left"><a href="https://docs.microsoft.com/windows/uwp/publish/iap-submissions">앱에 추가하고 Microsoft Store에 제출</a>하여 앱에서 바로 구매 제품 구매를 만듭니다. <br/><br/><strong><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp">CurrentApp 클래스</a></strong>를 사용하여 앱에서 바로 구매를 정의합니다. <br/><br/><strong><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync">CurrentApp.RequestProductPurchaseAsync</a></strong>를 사용하여 고객이 제품을 구매할 수 있는 UI를 표시합니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/monetize/enable-in-app-product-purchases">앱에서 바로 제품 구매 사용</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>앱에서 바로 구매를 사용할 때</strong> <br><br>앱에서 바로 구매 제품은 구매하고 사용한 다음 다시 구매할 수 있습니다.</td>
@@ -388,7 +388,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left">스토어에 <a href="https://docs.microsoft.com/windows/uwp/publish/enter-iap-properties">제출할 때 제품 형식을 소모성으로 정의</a>하여 소모성 제품을 지원할 수 있습니다. 그런 다음 고객이 소모성 제품에 액세스할 수 있게 되면<strong><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.reportconsumablefulfillmentasync"> CurrentApp.ReportConsumableFulfillmentAsync</a></strong>를 호출할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/monetize/enable-consumable-in-app-product-purchases">앱에서 사용할 수 있는 구매 사용</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>앱에서 바로 구매를 테스트 합니다.</strong> <br><br>스토어에 앱을 추가하지 않고 앱에서 바로 구매 코드를 테스트할 수 있습니다.</td>
+<td align="left"><strong>앱에서 바로 구매를 테스트 합니다.</strong> <br><br>Microsoft Store에 앱을 추가하지 않고 앱에서 바로 구매 코드를 테스트할 수 있습니다.</td>
 <td align="left"><strong>앱에서 바로 청구 샌드박스</strong>가 테스트에 사용됩니다.</td>
 <td align="left"><strong>샌드박스 테스터 계정</strong>이 테스트에 사용됩니다.</td>
 <td align="left">CurrentApp 대신 <strong><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator">CurrentAppSimulator</a></strong> 클래스를 사용하여 간단히 앱에서 바로 구매를 테스트할 수 있습니다.<br/><br/></td>
@@ -396,7 +396,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <tr class="even">
 <td align="left"><strong>평가판.</strong> <br><br>앱의 평가판을 기준으로 쉽게 콘텐츠를 제한하거나 광고를 제거할 수 있습니다.</td>
 <td align="left">Google Play는 <strong>앱 평가판을 공식적으로 지원하지 않습니다</strong>. 평가판 또는 광고 제거 버전을 얻으려면 앱에서 바로 구매를 만들고 구매를 완료했을 때 받은 적절한 코드 경로를 사용해야 합니다.</td>
-<td align="left">앱 스토어는 <strong>앱 평가판을 공식적으로 지원하지 않습니다</strong>. 평가판 또는 광고 제거 버전을 얻으려면 앱에서 바로 구매를 만들고 구매를 완료했을 때 받은 적절한 코드 경로를 사용해야 합니다.</td>
+<td align="left">앱 Microsoft Store는 <strong>앱 평가판을 공식적으로 지원하지 않습니다</strong>. 평가판 또는 광고 제거 버전을 얻으려면 앱에서 바로 구매를 만들고 구매를 완료했을 때 받은 적절한 코드 경로를 사용해야 합니다.</td>
 <td align="left">Microsoft Store에 앱을 제출할 때 <strong><a href="https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability">'무료 평가판' 옵션</a></strong>을 사용하여 앱의 무료 평가판 버전을 제공할 수 있습니다. 그런 다음 <strong><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.licenseinformation.istrial">LicenseInformation.IsTrial</a></strong>을 사용하여 앱의 평가판 상태를 확인하고 그에 따라 다른 코드 경로를 제공합니다. 앱 실행 중 사용자가 평가판 상태를 변경할 때 알릴 <a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.licenseinformation.licensechanged">LicenseChanged</a> 이벤트를 등록할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app">평가판 버전의 기능 제외 또는 제한</a></td>
 </tr>
 </tbody>
@@ -437,13 +437,13 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstate">VisualState</a></strong>, <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstatemanager">VisualStateManager</a></strong> 및 <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.adaptivetrigger">AdaptiveTrigger</a></strong>를 사용한 창 크기 변경에 대한 응답으로 런타임 시 UI에 대해 쉽게 재배치, 위치 변경, 크기 변경, 노출 또는 섹션 바꾸기 등을 수행할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml">XAML을 사용 하 여 레이아웃 정의-시각적 상태 및 상태 트리거</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design">응답성이 뛰어난 디자인 101</a></td>
 </tr>
 <tr class="even">
-<td align="left"><strong>다른 장치 기능을 지원 합니다.</strong> <br><br>고급 하드웨어 기능을 활용하고 이러한 기능이 없는 디바이스를 지원합니다.</td>
-<td align="left">런타임 시 <strong>PackageManager.hasSystemFeature</strong>를 사용하여 디바이스 기능을 테스트하면 하드웨어 관련 코드 실행 가능 여부를 확인할 수 있습니다.</td>
+<td align="left"><strong>다른 장치 기능을 지원 합니다.</strong> <br><br>고급 하드웨어 기능을 활용하고 이러한 기능이 없는 장치를 지원합니다.</td>
+<td align="left">런타임 시 <strong>PackageManager.hasSystemFeature</strong>를 사용하여 장치 기능을 테스트하면 하드웨어 관련 코드 실행 가능 여부를 확인할 수 있습니다.</td>
 <td align="left">런타임 시 장치 기능을 테스트하기 위해 수행할 수 있는 <strong>단일 검사는 없으며</strong> 특정 방법으로 각 기능을 테스트하여 하드웨어 관련 코드를 실행할 수 있는지 확인합니다.</td>
 <td align="left"><strong>플랫폼 확장 SDK</strong>를 패키지에 추가하여 휴대폰, 데스크톱, IoT 등 다른 장치 패밀리의 추가 기능을 대상으로 할 수 있습니다. <strong><a href="https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation">ApiInformation API</a></strong>를 사용하여 런타임 시 형식과 멤버의 존재 여부를 테스트하고 있는 경우에만 이러한 형식 및 멤버를 호출할 수 있습니다.</td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>다른 장치 기능을 지원 합니다.</strong> <br><br>고급 하드웨어 기능을 활용하고 이러한 기능이 없는 디바이스를 지원합니다.</td>
+<td align="left"><strong>다른 장치 기능을 지원 합니다.</strong> <br><br>고급 하드웨어 기능을 활용하고 이러한 기능이 없는 장치를 지원합니다.</td>
 <td align="left"><strong>Android 지원 라이브러리</strong>를 앱과 패키징하면 이전 버전의 Android 앱에서 일부 최신 API를 사용할 수 있습니다. 런타임 시 API 수준에 대한 테스트는 <strong>Build.Version.SDK_INT</strong>를 사용하여 수행할 수 있습니다.</td>
 <td align="left">표준 런타임 검사는 API 사용 가능 여부를 확인하는 데 사용됩니다. 예를 들어 <strong>class</strong> 메서드는 클래스 존재 여부를 확인하고 <strong>respondsToSelector:</strong>는 클래스의 메서드를 확인합니다.</td>
 <td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.isapicontractpresent">ApiInformation.IsApiContractPresent</a></strong>를 사용하여 지정된 주 및 부 번호의 API 계약이 있는지 확인할 수 있습니다. 또한 <strong><a href="https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation">ApiInformation API</a></strong>를 사용하여 런타임 시 형식과 멤버의 존재 여부를 테스트하고 있는 경우에만 이러한 형식 및 멤버를 호출할 수 있습니다.</td>
@@ -508,7 +508,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>미디어 캡처.</strong> <br><br>오디오 및 동영상 콘텐츠를 기록합니다.</td>
 <td align="left">MediaStore.ACTION_VIDEO_CAPTURE 등의 <strong>의도</strong>를 사용하여 기존 카메라 앱으로 미디어를 캡처할 수 있습니다. <strong>android.hardware.camera2</strong> 또는 <strong>카메라</strong> 라이브러리를 사용하여 사용자 지정 카메라 인터페이스를 구현할 수 있습니다. <strong>MediaRecorder</strong> API를 사용하여 오디오를 캡처할 수 있습니다.</td>
 <td align="left"><strong>UIImagePickerController</strong>를 사용하면 시스템 UI로 동영상 및 사진을 캡처할 수 있습니다. <strong>AVCaptureSession</strong> 등의 <strong>AVFoundation</strong> 클래스를 사용하면 카메라에 직접 액세스할 수 있습니다. <br/><strong>AVAudioRecorder</strong> 클래스를 사용하면 오디오를 녹음할 수 있습니다.</td>
-<td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CameraCaptureUI">CameraCaptureUI 클래스</a></strong>를 통해 기본 제공 카메라 UI를 사용하여 사진 및 동영상을 캡처할 수 있습니다. <strong><a href="https://docs.microsoft.com/uwp/api/Windows.Media.Capture">MediaCapture API</a></strong> 등 <strong><a href="https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture">Windows.Media.Capture</a></strong>의 클래스를 사용하여 낮은 수준 카메라를 조작하고 오디오를 캡처할 수 있습니다. <br/><br/><a href="https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui">CameraCaptureUI를 사용 하 여 사진 및 비디오 캡처</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-mediacapture">MediaCapture를 사용 하 여 사진 및 비디오 캡처</a></td>
+<td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/Windows.Media.Capture.CameraCaptureUI">CameraCaptureUI 클래스</a></strong>를 통해 기본 제공 카메라 UI를 사용하여 사진 및 동영상을 캡처할 수 있습니다. <strong><a href="https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture">MediaCapture API</a></strong> 등 <strong><a href="https://docs.microsoft.com/uwp/api/Windows.Media.Capture">Windows.Media.Capture</a></strong>의 클래스를 사용하여 낮은 수준 카메라를 조작하고 오디오를 캡처할 수 있습니다. <br/><br/><a href="https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui">CameraCaptureUI를 사용 하 여 사진 및 비디오 캡처</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/audio-video-camera/capture-photos-and-video-with-mediacapture">MediaCapture를 사용 하 여 사진 및 비디오 캡처</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>미디어 재생.</strong> <br><br>오디오 및 동영상 파일을 재생합니다.</td>
@@ -520,7 +520,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>미디어를 편집 합니다.</strong> <br><br>기존 녹음에서 새 미디어 파일을 작성하고 특수 효과를 적용합니다.</td>
 <td align="left"><strong>MediaCodec</strong>, <strong>MediaMuxer</strong> 및 <strong>android.media.effect</strong>와 같은 낮은 수준 클래스를 콘텐츠 편집을 위해 사용할 수 있습니다.</td>
 <td align="left">콘텐츠 편집을 위해 <strong>AVMutableComposition</strong>, <strong>AVMutableVideoComposition</strong> 및 <strong>AVMutableAudioMix</strong>와 같은 <strong>AV Foundation</strong> 프레임워크의 클래스를 사용할 수 있습니다.</td>
-<td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/windows.media.editing">MediaComposition</a></strong> 및 <strong><a href="https://docs.microsoft.com/uwp/api/windows.media.editing.mediacomposition">MediaClip</a></strong>과 같은 <strong><a href="https://docs.microsoft.com/uwp/api/windows.media.editing.mediaclip">Windows.Media.Editing</a></strong> API를 사용하여 오디오 및 동영상 파일에서 미디어 컴퍼지션을 만들 수 있습니다. 동영상 및 이미지 오버레이 추가, 비디오 클립 결합, 백그라운드 오디오 추가, 오디오 및 동영상 효과를 적용할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/audio-video-camera/media-compositions-and-editing">미디어 컴퍼지션 및 편집</a></td>
+<td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/windows.media.editing.mediacomposition">MediaComposition</a></strong> 및 <strong><a href="https://docs.microsoft.com/uwp/api/windows.media.editing.mediaclip">MediaClip</a></strong>과 같은 <strong><a href="https://docs.microsoft.com/uwp/api/windows.media.editing">Windows.Media.Editing</a></strong> API를 사용하여 오디오 및 동영상 파일에서 미디어 컴퍼지션을 만들 수 있습니다. 동영상 및 이미지 오버레이 추가, 비디오 클립 결합, 백그라운드 오디오 추가, 오디오 및 동영상 효과를 적용할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/audio-video-camera/media-compositions-and-editing">미디어 컴퍼지션 및 편집</a></td>
 </tr>
 </tbody>
 </table>
@@ -542,7 +542,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 </thead>
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
-<td align="left"><strong>센서.</strong> <br><br>디바이스 이동, 위치 및 환경 속성을 검색합니다.</td>
+<td align="left"><strong>센서.</strong> <br><br>장치 이동, 위치 및 환경 속성을 검색합니다.</td>
 <td align="left"><strong>센서 프레임워크</strong>는 <strong>SensorManager</strong> 및 <strong>SensorEvent</strong> 등의 클래스를 사용하여 하드웨어 및 소프트웨어 센서에 액세스할 수 있습니다.</td>
 <td align="left"><strong>Core Motion 프레임워크</strong>는 원시 및 처리된 센서 데이터에 액세스하는 데 사용됩니다.</td>
 <td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/windows.devices.sensors">Windows.Devices.Sensors</a></strong>의 클래스를 사용하여 센서 읽기 및 센서에서 새 읽기 데이터가 수신될 때 트리거되는 이벤트에 액세스할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/devices-sensors/sensors">센서</a></td>
@@ -588,13 +588,13 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>지 오 코딩 및 reverse 지 오 코딩.</strong> <br><br>주소를 지리적 위치로 변환하고(지오코딩) 지리적 위치를 주소로 변환합니다(리버스 지오코딩).<br/></td>
 <td align="left"><strong>Geocoder</strong> 클래스는 지오코딩 및 리버스 지오코딩에 사용됩니다.</td>
 <td align="left"><strong>CLGeocoder</strong> 클래스는 지오코딩에 사용됩니다.</td>
-<td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps.maplocationfinder">Windows.Services.Maps</a></strong>의 <strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps">MapLocationFinder 클래스</a></strong>를 사용하여 지오코딩을 수행할 수 있습니다. 지오코딩에 <strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps.maplocationfinder.findlocationsasync">FindLocationsAsync</a></strong>, 리버스 지오코딩에 <strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps.maplocationfinder.findlocationsatasync">FindLocationsAtAsync</a></strong>를 사용합니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/maps-and-location/geocoding">지오코딩 및 역방향 지오코딩 수행</a></td>
+<td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps">Windows.Services.Maps</a></strong>의 <strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps.maplocationfinder">MapLocationFinder 클래스</a></strong>를 사용하여 지오코딩을 수행할 수 있습니다. 지오코딩에 <strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps.maplocationfinder.findlocationsasync">FindLocationsAsync</a></strong>, 리버스 지오코딩에 <strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps.maplocationfinder.findlocationsatasync">FindLocationsAtAsync</a></strong>를 사용합니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/maps-and-location/geocoding">지오코딩 및 역방향 지오코딩 수행</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>경로 및 방향.</strong> <br><br>경로, 거리 및 두 지리적 위치 간의 길 찾기를 제공합니다.</td>
 <td align="left">Google에서는 SDK가 제공되지 않지만 Android에서 사용할 수 있는 웹 서비스인 <strong>Google 지도 방향 API</strong>를 제공합니다.</td>
 <td align="left">지도 키트는 경로 및 길 찾기에 대한 정보를 가져올 수 있는 <strong>MKDirections</strong> API를 제공합니다.</td>
-<td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder">Windows.Services.Maps</a></strong>의 <strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps">MapRouteFinder</a></strong> 클래스를 사용하여 도보 또는 운전 경로를 요청할 수 있습니다. 경로는 MapControl에 쉽게 표시할 수 있는 <strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps.maproute">MapRoute</a></strong> 인스턴스로 반환됩니다. 길 찾기는 <strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps.maproutemaneuver">MapRouteManeuver</a></strong> 개체 내에 반환됩니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/maps-and-location/routes-and-directions">지도에 경로 및 방향 표시</a></td>
+<td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps">Windows.Services.Maps</a></strong>의 <strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder">MapRouteFinder</a></strong> 클래스를 사용하여 도보 또는 운전 경로를 요청할 수 있습니다. 경로는 MapControl에 쉽게 표시할 수 있는 <strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps.maproute">MapRoute</a></strong> 인스턴스로 반환됩니다. 길 찾기는 <strong><a href="https://docs.microsoft.com/uwp/api/windows.services.maps.maproutemaneuver">MapRouteManeuver</a></strong> 개체 내에 반환됩니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/maps-and-location/routes-and-directions">지도에 경로 및 방향 표시</a></td>
 </tr>
 </tbody>
 </table>
@@ -617,7 +617,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>다른 앱 호출</strong> <br><br>다른 앱을 시작하고 필요에 따라 링크, 텍스트, 사진, 동영상 및 파일을 공유합니다.</td>
-<td align="left"><strong>암시적 의도</strong>는 <strong>의도</strong>에서 <strong>작업</strong> 및 선택적 데이터를 정의하고 <strong>startActivityForResult</strong>를 통해 호출하여 다른 앱을 실행하는 데 사용됩니다.<br/></td>
+<td align="left"><strong>암시적 의도</strong>는 <strong>의도</strong>에서 <strong>작업</strong> 및 옵션 데이터를 정의하고 <strong>startActivityForResult</strong>를 통해 호출하여 다른 앱을 실행하는 데 사용됩니다.<br/></td>
 <td align="left"><strong>앱 확장</strong>은 앱 데이터에 대한 액세스를 다른 앱에 제공하는 데 사용할 수 있습니다. <strong>URL 체계</strong>를 사용하면 URL을 다른 앱에 전달할 수 있습니다.</td>
 <td align="left"><strong><a href="https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync">Launcher.LaunchUriAsync</a></strong> 또는 <strong><a href="https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriforresultsasync">Launcher.LaunchUriForResultsAsync</a></strong>를 사용하여 URI에 등록된 다른 앱을 실행하여 결과를 실행하고 실행된 앱에서 데이터를 다시 가져올 수 있습니다. <strong><a href="https://docs.microsoft.com/uwp/api/windows.system.launcher.launchfileasync">Launcher.LaunchFileAsync</a></strong>를 사용하여 다른 앱에서 처리하도록 파일을 전달할 수 있습니다.<br/><br/><strong>공유 계약</strong>을 사용하여 앱 간에 데이터를 쉽게 공유할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/launch-resume/launch-default-app">URI에 대한 기본 앱 실행</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/launch-resume/how-to-launch-an-app-for-results">결과를 위한 앱 실행</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/launch-resume/launch-the-default-app-for-a-file">파일에 대한 기본 앱 시작</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/app-to-app/share-data">데이터 공유</a></td>
 </tr>
@@ -625,13 +625,13 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>앱을 호출할 수 있도록 허용 합니다.</strong> <br><br>앱에서 다른 앱의 요청에 응답할 수 있습니다.</td>
 <td align="left">앱은 <strong>의도 필터</strong>로 <strong>의도 처리 활동</strong>을 등록하여 다른 앱의 암시적 의도에 응답합니다.</td>
 <td align="left"><strong>앱 확장</strong>을 패키징하면 다른 앱과 데이터를 공유할 수 있습니다. Info.plist의 <strong>CFBundleURLTypes</strong> 키를 사용하여 앱에서 <strong>사용자 지정 URL 체계</strong>를 등록할 수 있습니다.</td>
-<td align="left">패키지 매니페스트에프로토콜<strong><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.activationkind#Protocol">을 등록하고, </a></strong>Application.OnActivated<strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated"> 이벤트 처리기를 업데이트하고, 선택적으로 결과를 반환하여 앱이 </a>URI 체계 이름</strong>에 대한 기본 처리기가 되도록 등록할 수 있습니다. 마찬가지로 패키지 매니페스트에 선언을 추가하고, <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated">Application.OnFileActivated</a></strong> 이벤트를 처리하여 앱을 특정 파일 형식에 대한 기본 처리기가 되도록 등록할 수 있습니다.<br/><br/>매니페스트에 공유 대상으로 앱을 등록하고, <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onsharetargetactivated">Application.OnShareTargetActivated</a></strong> 이벤트를 처리하여 공유 계약 요청을 처리할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/launch-resume/how-to-launch-an-app-for-results">결과를 위한 앱 실행</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/launch-resume/handle-file-activation">파일 활성화 처리</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/app-to-app/receive-data">데이터 받기</a></td>
+<td align="left">패키지 매니페스트에 <strong><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.activationkind#Protocol">프로토콜</a></strong>을 등록하고, <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated">Application.OnActivated</a></strong> 이벤트 처리기를 업데이트하고, 선택적으로 결과를 반환하여 앱이 <strong>URI 체계 이름</strong>에 대한 기본 처리기가 되도록 등록할 수 있습니다. 마찬가지로 패키지 매니페스트에 선언을 추가하고, <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onfileactivated">Application.OnFileActivated</a></strong> 이벤트를 처리하여 앱을 특정 파일 형식에 대한 기본 처리기가 되도록 등록할 수 있습니다.<br/><br/>매니페스트에 공유 대상으로 앱을 등록하고, <strong><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onsharetargetactivated">Application.OnShareTargetActivated</a></strong> 이벤트를 처리하여 공유 계약 요청을 처리할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/launch-resume/how-to-launch-an-app-for-results">결과를 위한 앱 실행</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/launch-resume/handle-file-activation">파일 활성화 처리</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/app-to-app/receive-data">데이터 받기</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>복사 하 여 붙여 넣습니다.</strong> <br><br>앱 간에 텍스트 및 기타 콘텐츠를 복사하고 붙여넣습니다.</td>
 <td align="left"><strong>클립보드 프레임워크</strong>를 사용하여 <strong>ClipboardManager</strong> 및 <strong>ClipData</strong> 클래스로 복사 및 붙여넣기를 구현할 수 있습니다.</td>
 <td align="left"><strong>UIPasteboard</strong>, <strong>UIMenuController</strong> 및 <strong>UIResponderStandardEditActions</strong>를 사용하여 복사 및 붙여넣기를 구현할 수 있습니다.</td>
-<td align="left">많은 기본 XAML 컨트롤은 이미 복사 및 붙여넣기를 지원합니다. <strong><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage">Windows.ApplicationModel.DataTransfer</a></strong>의 <strong><a href="https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.Clipboard">DataPackage</a></strong> 및 <strong><a href="https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer">Clipboard</a></strong> 클래스를 사용하여 복사 및 붙여넣기를 구현할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/app-to-app/copy-and-paste">복사 및 붙여넣기</a></td>
+<td align="left">많은 기본 XAML 컨트롤은 이미 복사 및 붙여넣기를 지원합니다. <strong><a href="https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer">Windows.ApplicationModel.DataTransfer</a></strong>의 <strong><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage">DataPackage</a></strong> 및 <strong><a href="https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.Clipboard">Clipboard</a></strong> 클래스를 사용하여 복사 및 붙여넣기를 구현할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/app-to-app/copy-and-paste">복사 및 붙여넣기</a></td>
 </tr>
 <tr class="even">
 <td align="left"><strong>끌어 놓습니다.</strong> <br><br>앱 간에 콘텐츠를 끌어서 놓습니다.</td>
@@ -662,7 +662,7 @@ Android 또는 iOS 기술이나 코드를 사용하고 Windows 10 및 UWP(유니
 <td align="left"><strong>소프트웨어 디자인 패턴.</strong> <br><br>플랫폼에 대해 권장되거나 사용에 적합한 패턴입니다.</td>
 <td align="left">베타 데이터 바인딩 프레임워크는 <strong>MVVM(Model-View-ViewModel)</strong> 패턴을 더 광범위하게 사용할 수 있지만 Android 개발에 대해 권장되거나 제공되는 공식 패턴은 없습니다. 많은 타사 문서 및 프레임워크에서 <strong>MVP(Model-View-Presenter)</strong> 및 <strong>MVVM</strong> 접근 방식을 권장합니다.</td>
 <td align="left"><strong>MVC(Model-View-Controller)</strong>는 iOS와 함께 사용되고 플랫폼에 통합된 일반 패턴입니다.</td>
-<td align="left">UWP를 빌드할 때 특정 패턴으로 제한되지는 않습니다.<br/><br/>기본 제공 <a href="https://docs.microsoft.com/windows/uwp/data-binding/index">데이터 바인딩</a> 패턴을 사용하여 데이터 관심사와 UI 관심사를 분리할 수 있으며 속성 값을 업데이트하는 UI 이벤트 처리기를 코딩할 필요가 없습니다.<br/><br/><strong>MVVM Light Toolkit</strong>와 같은 타사 MVVM 라이브러리를 사용하거나 고유 라이브러리를 롤링하거나 논리를 숨겨진 코드 밖에 유지함으로써 데이터 바인딩을 확장하여 <a href="https://archive.codeplex.com/?p=mvvmlight">MVVM(Model-View-ViewModel)</a> 패턴을 따를 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/previous-versions/msp-n-p/hh848246(v=pandp.10)">MVVM 패턴</a><br/><br/><a href="https://github.com/Windows-XAML/Template10/wiki">템플릿 10 Visual Studio 프로젝트 템플릿</a></td>
+<td align="left">UWP를 빌드할 때 특정 패턴으로 제한되지는 않습니다.<br/><br/>기본 제공 <a href="https://docs.microsoft.com/windows/uwp/data-binding/index">데이터 바인딩</a> 패턴을 사용하여 데이터 관심사와 UI 관심사를 분리할 수 있으며 속성 값을 업데이트하는 UI 이벤트 처리기를 코딩할 필요가 없습니다.<br/><br/><a href="https://archive.codeplex.com/?p=mvvmlight">MVVM Light Toolkit</a>와 같은 타사 MVVM 라이브러리를 사용하거나 고유 라이브러리를 롤링하거나 논리를 숨겨진 코드 밖에 유지함으로써 데이터 바인딩을 확장하여 <strong>MVVM(Model-View-ViewModel)</strong> 패턴을 따를 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/previous-versions/msp-n-p/hh848246(v=pandp.10)">MVVM 패턴</a><br/><br/><a href="https://github.com/Windows-XAML/Template10/wiki">템플릿 10 Visual Studio 프로젝트 템플릿</a></td>
 </tr>
 </tbody>
 </table>

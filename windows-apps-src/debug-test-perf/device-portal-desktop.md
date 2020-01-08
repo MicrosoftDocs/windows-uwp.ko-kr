@@ -6,16 +6,16 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f25e882f53bb4f673aa5003495f37d553208721
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 73f7e827c0ec8ca289d3523da06601de978a91d2
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281997"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681974"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Windows 데스크톱의 장치 포털
 
-Windows 장치 포털을 사용하면 진단 정보를 보거나 브라우저 창에서 HTTP를 통해 데스크톱을 조작할 수 있습니다. Device Portal을 사용하여 다음 작업을 수행할 수 있습니다.
+Windows 장치 포털을 사용하면 진단 정보를 보거나 브라우저 창에서 HTTP를 통해 데스크톱을 조작할 수 있습니다. 장치 포털을 사용하여 다음 작업을 수행할 수 있습니다.
 - 실행 중인 프로세스 목록 확인 및 조작
 - 앱 설치, 삭제, 시작 및 종료
 - Wi-Fi 프로필 변경, 신호 강도 보기 및 ipconfig 확인
@@ -50,7 +50,7 @@ Windows 10 1607 버전부터 데스크톱의 새로운 기능 중 일부는 개�
 * Localhost: `http://127.0.0.1:<PORT>` 또는 `http://localhost:<PORT>`
 * 로컬 네트워크: `https://<IP address of the desktop>:<PORT>`
 
-인증 및 보안 통신을 위해 HTTPS가 필요합니다.
+인증 및 보안 통신에 HTTPS가 필요합니다.
 
 로컬 네트워크에 있는 모든 사용자를 신뢰하고, 디바이스에 개인 정보가 없고, 고유한 요구 사항이 있는 테스트 랩 같은 보호 환경에서 Device Portal을 사용하는 경우 인증 옵션을 사용하지 않도록 설정할 수 있습니다. 이렇게 하면 암호화되지 않은 통신이 가능하며 컴퓨터의 IP 주소를 가진 모든 사용자가 연결해 제어할 수 있습니다.
 
@@ -62,16 +62,16 @@ Windows 데스크톱의 장치 포털은 표준 페이지 세트를 제공합니
 - 파일 탐색기
 - 실행 프로세스
 - 성능
-- 디버그
+- Debug
 - ETW(Windows용 이벤트 추적)
 - 성능 추적
-- 디바이스 관리자
+- 장치 관리자
 - 네트워킹
 - 크래시 데이터
 - 기능
 - 혼합 현실
 - 스트리밍 설치 디버거
-- 위치
+- Location
 - 스크래치
 
 ## <a name="more-device-portal-options"></a>기타 장치 포털 옵션
@@ -83,7 +83,7 @@ Windows 데스크톱의 장치 포털은 표준 페이지 세트를 제공합니
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WebManagement\Service`에서
     - `UseDynamicPorts`: 필수 DWORD입니다. 선택한 포트 번호를 유지하려면 이 항목을 0으로 설정합니다.
     - `HttpPort`: 필수 DWORD입니다. 장치 포털이 HTTP 연결을 수신 대기하는 포트 번호를 포함합니다.    
-    - `HttpsPort`: 필수 DWORD입니다. Device Portal이 HTTPS 연결을 수신 대기하는 포트 번호를 포함합니다.
+    - `HttpsPort`: 필수 DWORD입니다. 장치 포털이 HTTPS 연결을 수신 대기하는 포트 번호를 포함합니다.
     
 동일한 regkey 경로에서 인증 요구 사항을 헤제할 수 있습니다.
 - 사용 하지 않도록 설정 된  - `0` `UseDefaultAuthorizer`사용 하도록 `1`.  
@@ -103,7 +103,7 @@ Windows 데스크톱의 장치 포털은 표준 페이지 세트를 제공합니
     - 그러면 자신의 SSL 인증서를 설치해 장치 포털에 자주 표시되는 SSL 경고 페이지를 해결할 수 있습니다. 
 - `-Debug <various options for authentication, port selection, and tracing level>`
     - 특정한 구성과 표시되는 디버그 메시지로 독립 실행형 장치 포털 버전을 실행합니다. 이는 [패키지된 플러그인](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-plugin) 구성에 가장 유용합니다. 
-    - 패키지된 플러그인을 테스트하기 위해 이를 실행하는 방법에 대한 자세한 내용은 [MSDN 잡지 문서](https://msdn.microsoft.com/en-us/magazine/mt826332.aspx)를 참조하세요.
+    - 패키지된 플러그인을 테스트하기 위해 이를 실행하는 방법에 대한 자세한 내용은 [MSDN 잡지 문서](https://msdn.microsoft.com/magazine/mt826332.aspx)를 참조하세요.
 
 ## <a name="common-errors-and-issues"></a>일반적인 오류 및 문제
 

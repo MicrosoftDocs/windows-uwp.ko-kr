@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ba05e958a8746874becd4cfa17ec0e8f255ff00
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 9e58334dafa35004080b7ed109fa90e253399040
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74255147"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683481"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>응용 프로그램에 내 피플 지원 추가
 
@@ -23,15 +23,15 @@ ms.locfileid: "74255147"
 
 ## <a name="requirements"></a>요구 사항
 
-+ Windows 10 및 Microsoft Visual Studio 2019. 설치 세부 정보는 [Visual Studio를 사용하여 설정](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up)을 참조하세요.
-+ C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. C#을 시작하려면 ["Hello, world" 앱 만들기](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)를 참조하세요.
++ Windows 10 및 Microsoft Visual Studio 2019. 설치 세부 정보는 [Visual Studio를 사용하여 설정](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)을 참조하세요.
++ C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. C#을 시작하려면 ["Hello, world" 앱 만들기](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)를 참조하세요.
 
 ## <a name="overview"></a>개요
 
 응용 프로그램에서 내 피플 기능을 사용할 수 있게 하려면 세 가지를 수행해야 합니다.
 
-1. [응용 프로그램 매니페스트에서 Windows.sharetarget 활성화 계약에 대 한 지원을 선언 합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
-2. [사용자가 앱을 사용 하 여 공유할 수 있는 연락처에 주석을 추가 합니다.](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
+1. [응용 프로그램 매니페스트에서 Windows.sharetarget 활성화 계약에 대 한 지원을 선언 합니다.](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/my-people-sharing#declaring-support-for-the-share-contract)
+2. [사용자가 앱을 사용 하 여 공유할 수 있는 연락처에 주석을 추가 합니다.](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/my-people-sharing#annotating-contacts)
 3.  동시에 실행되는 여러 응용 프로그램 인스턴스를 지원합니다. 사용자가 연락처 패널에서 응용 프로그램을 사용하는 동안 응용 프로그램의 전체 버전과 상호 작용할 수 있어야 합니다.  사용자가 동시에 여러 연락처 패널에서 응용 프로그램을 사용할 수도 있습니다.  이 상황을 지원하려면 응용 프로그램이 여러 보기를 동시에 실행할 수 있어야 합니다. 자세한 방법은 ["앱에 대한 여러 보기 표시"](https://docs.microsoft.com/windows/uwp/design/layout/show-multiple-views)를 참조하세요.
 
 여기까지 마치면 주석 처리된 연락처의 연락처 패널에 응용 프로그램이 표시됩니다.
@@ -172,7 +172,7 @@ override protected void OnActivated(IActivatedEventArgs e)
 }
 ```
 
-이 계약을 통해 응용 프로그램이 활성화되면 응용 프로그램에서 [ContactPanelActivatedEventArgs 개체](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.activation.contactpanelactivatedeventargs)를 수신합니다.  이 개체에는 응용 프로그램이 시작 시 상호 작용을 시도하는 연락처 ID와 [ContactPanel](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactpanel) 개체가 포함되어 있습니다. 이 ContactPanel 개체에 대한 참조를 유지해야 하며, 그래야만 패널과 상호 작용할 수 있습니다.
+이 계약을 통해 응용 프로그램이 활성화되면 응용 프로그램에서 [ContactPanelActivatedEventArgs 개체](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.contactpanelactivatedeventargs)를 수신합니다.  이 개체에는 응용 프로그램이 시작 시 상호 작용을 시도하는 연락처 ID와 [ContactPanel](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactpanel) 개체가 포함되어 있습니다. 이 ContactPanel 개체에 대한 참조를 유지해야 하며, 그래야만 패널과 상호 작용할 수 있습니다.
 
 ContactPanel 개체에는 응용 프로그램에서 수신 대기해야 하는 두 이벤트가 들어 있습니다.
 + 모든 응용 프로그램 전체가 고유의 창에서 실행되도록 요청하는 UI 요소를 사용자가 호출하면 **LaunchFullAppRequested** 이벤트가 전송됩니다.  응용 프로그램은 스스로를 시작하고 필요한 모든 컨텍스트를 전달해야 합니다.  하지만 이 작업은 원하는 대로 자유롭게 수행하면 됩니다(예: 프로토콜 실행을 통해).
@@ -182,17 +182,17 @@ ContactPanel 개체에는 응용 프로그램에서 수신 대기해야 하는 �
 
 ## <a name="supporting-notification-badging"></a>지원 알림 배지
 
-앱에서 해당 인물에 관한 새 알림을 수신할 경우 작업 표시줄에 고정된 연락처가 배지로 표시되도록 하려면, **알림 메시지**와 명시적인 [내 피플 알림](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts)에 [hint-people](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/my-people-notifications) 매개 변수를 포함시켜야 합니다.
+앱에서 해당 인물에 관한 새 알림을 수신할 경우 작업 표시줄에 고정된 연락처가 배지로 표시되도록 하려면, [알림 메시지](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts)와 명시적인 [내 피플 알림](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/my-people-notifications)에 **hint-people** 매개 변수를 포함시켜야 합니다.
 
 ![피플 알림 배지](images/my-people-badging.png)
 
 연락처를 배지로 표시하려면 최상위 알림 메시지 노드에는 발신 또는 관련 연락처를 나타내는 hint-people 매개 변수가 포함되어야 합니다. 이 매개 변수에 가능한 값은 다음과 같습니다.
-+ **전자 메일 주소** 
-    + 예를 들어 mailto:johndoe@mydomain.com
++ **메일 주소** 
+    + 예: [https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/](mailto:johndoe@mydomain.com)
 + **전화 번호** 
-    + 예를 들어 tel:888-888-8888
+    + 예: tel:888-888-8888
 + **원격 ID** 
-    + 예를 들어 remoteid:1234
+    + 예: remoteid:1234
 
 다음은 특정 사람과 관련된 알림 메시지를 구별하는 방법의 예입니다.
 ```XML
@@ -206,12 +206,12 @@ ContactPanel 개체에는 응용 프로그램에서 수신 대기해야 하는 �
 ```
 
 > [!NOTE]
-> 앱에서 PC에 저장된 연락처를 원격으로 저장된 연락처와 연결하기 위해 [ContactStore Api](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactstore) 및 [StoredContact.RemoteId](https://docs.microsoft.com/en-us/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) 속성을 사용하는 경우 RemoteId 속성의 값이 반드시 안정적이고 고유해야 합니다. 즉, 원격 ID는 단일 사용자 계정을 일관적으로 식별해야 하며, 다른 앱 소유의 연락처를 포함하여 PC에 있는 다른 연락처의 원격 ID와 충돌하지 않도록 보장하는 고유의 태그를 포함해야 합니다.
+> 앱에서 PC에 저장된 연락처를 원격으로 저장된 연락처와 연결하기 위해 [ContactStore Api](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactstore) 및 [StoredContact.RemoteId](https://docs.microsoft.com/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) 속성을 사용하는 경우 RemoteId 속성의 값이 반드시 안정적이고 고유해야 합니다. 즉, 원격 ID는 단일 사용자 계정을 일관적으로 식별해야 하며, 다른 앱 소유의 연락처를 포함하여 PC에 있는 다른 연락처의 원격 ID와 충돌하지 않도록 보장하는 고유의 태그를 포함해야 합니다.
 > 앱에서 사용하는 원격 ID가 안정적이고 고유하다는 보장이 없는 경우 이 항목의 뒷부분에 나오는 RemoteIdHelper 클래스를 사용하여 모든 원격 ID를 시스템에 추가하기 전에 고유의 태그를 추가하면 됩니다. 또는 RemoteId 속성을 전혀 사용하지 않고, 그 대신 연락처의 원격 ID를 저장하는 사용자 지정 확장 속성을 만드는 방법을 선택할 수 있습니다.
 
 ## <a name="the-pinnedcontactmanager-class"></a>PinnedContactManager 클래스
 
-[PinnedContactManager](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager) 클래스는 작업 표시줄에 고정되는 연락처를 관리하는 데 사용됩니다. 이 클래스를 사용하여 연락처를 고정 및 고정 해제하고, 연락처가 고정되었는지 확인하고, 현재 응용 프로그램이 실행되고 있는 시스템에서 특정 화면에 고정하는 것을 지원하는지 여부를 확인할 수 있습니다.
+[PinnedContactManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager) 클래스는 작업 표시줄에 고정되는 연락처를 관리하는 데 사용됩니다. 이 클래스를 사용하여 연락처를 고정 및 고정 해제하고, 연락처가 고정되었는지 확인하고, 현재 응용 프로그램이 실행되고 있는 시스템에서 특정 화면에 고정하는 것을 지원하는지 여부를 확인할 수 있습니다.
 
 **GetDefault** 메서드를 사용하여 PinnedContactManager 개체를 검색할 수 있습니다.
 
@@ -257,5 +257,5 @@ async Task PinMultipleContacts(Contact[] contacts)
 + [응용 프로그램에 사용자 지원을 추가 하는 Channel 9 비디오](https://channel9.msdn.com/Events/Build/2017/P4056)
 + [내 피플 통합 샘플](https://github.com/tonyPendolino/MyPeopleBuild2017)
 + [연락처 카드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/ContactCardIntegration)
-+ [Pinnee지도 관리자 클래스 설명서](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
-+ [연락처 카드의 작업에 앱 연결](https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/integrating-with-contacts)
++ [Pinnee지도 관리자 클래스 설명서](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.pinnedcontactmanager)
++ [연락처 카드의 작업에 앱 연결](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/integrating-with-contacts)

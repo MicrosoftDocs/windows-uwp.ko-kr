@@ -6,12 +6,12 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: Windows 10, uwp, 디버그, 테스트, 성능
 ms.localizationpriority: medium
-ms.openlocfilehash: cdfcdfddb2b595a589c70d1facc24559c63b98da
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d948af1ce10b3752ba9f20454d8dea72916de692
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74254789"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683856"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>UWP 앱 배포 및 디버그
 
@@ -98,7 +98,7 @@ C++ 또는 JavaScript UWP 앱에 대 한 원격 컴퓨터 대상을 지정 하�
 
 ## <a name="passing-command-line-debug-arguments"></a>명령줄 디버그 인수 전달
 
-Visual Studio 2019에서는 UWP 응용 프로그램 디버깅을 시작할 때 명령줄 디버그 인수를 전달할 수 있습니다.  응용 프로그램 클래스의 [OnLaunched**메서드에 있는**args](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.application) 매개 변수에서 명령줄 디버그 인수에 액세스할 수 있습니다. 명령줄 디버그 인수를 지정하려면 프로젝트 속성을 열고 **디버그** 탭으로 이동합니다.
+Visual Studio 2019에서는 UWP 응용 프로그램 디버깅을 시작할 때 명령줄 디버그 인수를 전달할 수 있습니다. [  **응용 프로그램**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application) 클래스의 **OnLaunched** 메서드에 있는 *args* 매개 변수에서 명령줄 디버그 인수에 액세스할 수 있습니다. 명령줄 디버그 인수를 지정하려면 프로젝트 속성을 열고 **디버그** 탭으로 이동합니다.
 
 > [!NOTE]
 > 이 기능은 C#, VB, C++용 Visual Studio 2017(버전 15.1)에 사용할 수 있습니다. JavaScript는 이후 버전에서 사용할 수 있습니다. 명령줄 디버그 인수는 시뮬레이터를 제외한 모든 배포 형식에서 사용할 수 있습니다.
@@ -111,7 +111,7 @@ C++ 및 JS UWP 프로젝트의 경우 **디버깅 속성**에 **명령줄 인수
 
 ![명령줄 인수 C++ 및 JS](images/command-line-arguments-cpp.png)
 
-명령줄 인수를 지정하면 앱의 **OnLaunched** 메서드에서 인수 값에 액세스할 수 있습니다. [  **LaunchActivatedEventArgs**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) 개체 *args*는 **인수** 속성을 가지며 값이 **명령줄 인수** 필드에서 문자로 설정됩니다.
+명령줄 인수를 지정하면 앱의 **OnLaunched** 메서드에서 인수 값에 액세스할 수 있습니다. [  **LaunchActivatedEventArgs**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) 개체 *args*는 **인수** 속성을 가지며 값이 **명령줄 인수** 필드에서 문자로 설정됩니다.
 
 ![명령줄 인수 C++ 및 JS](images/command-line-arguments-debugging.png)
 
@@ -178,7 +178,7 @@ C++ UWP 앱의 경우 속성 페이지는 다음과 같이 표시됩니다.
   - **레이아웃 폴더 경로** = `\\NETWORK-SHARE\Layouts\App1`
   - **패키지 등록 경로** = `\\NETWORK-SHARE\Layouts\App1`
 
-네트워크에서 레이아웃을 처음 등록할 경우 대상 디바이스에 자격 증명이 캐시되므로 반복해서 로그인할 필요가 없습니다. 캐시된 자격 증명을 제거하려면 Windows 10 SDK에서 [deletecreds](https://docs.microsoft.com/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool) 명령이 있는 **WinAppDeployCmd.exe 도구**를 사용할 수 있습니다.
+네트워크에서 레이아웃을 처음 등록할 경우 대상 디바이스에 자격 증명이 캐시되므로 반복해서 로그인할 필요가 없습니다. 캐시된 자격 증명을 제거하려면 Windows 10 SDK에서 **deletecreds** 명령이 있는 [WinAppDeployCmd.exe 도구](https://docs.microsoft.com/windows/uwp/packaging/install-universal-windows-apps-with-the-winappdeploycmd-tool)를 사용할 수 있습니다.
 
 원격 디바이스에 실제로 복사된 파일이 없기 때문에 네트워크에서 레이아웃을 등록할 때 **디바이스에 모든 파일 보관**을 선택할 수 없습니다.
 
@@ -191,7 +191,7 @@ C++ UWP 앱의 경우 속성 페이지는 다음과 같이 표시됩니다.
 
 Windows 10 [에서는 사전 실행](https://docs.microsoft.com/windows/uwp/launch-resume/handle-app-prelaunch)이라는 기법으로 앱을 사전에 시작 하 고 일시 중단 하 여 UWP 앱의 시작 성능이 향상 됩니다. 대부분의 앱은 이 모드에서 작동되기 위해 특별히 수행해야 할 작업은 없지만 일부 앱에서는 동작을 조정해야 할 수 있습니다. 코드 경로의 문제를 디버깅하기 위해 Visual Studio에서 앱 디버깅을 사전 실행 모드로 시작할 수 있습니다.
 
-디버깅은 Visual Studio 프로젝트 (**디버그** -&gt; **기타 디버그 대상** -&gt; **유니버설 Windows 앱 사전 디버그**)와 컴퓨터에 이미 설치 된 앱 ( **사전 인증을 사용 하 여 앱 활성화** 확인란 을 선택 하 여 설치 된 **앱 패키지** - **&gt; 디버그)** 에서 모두 지원 됩니다. -&gt; 자세한 내용은 [UWP 사전 실행 디버그](https://blogs.msdn.com/b/visualstudioalm/archive/2015/11/30/debug-uwp-prelaunch-with-vs2015.aspx)를 참조하세요.
+디버깅은 Visual Studio 프로젝트 (**디버그** -&gt; **기타 디버그 대상** -&gt; **유니버설 Windows 앱 사전 디버그**)와 컴퓨터에 이미 설치 된 앱 ( **사전 인증을 사용 하 여 앱 활성화** 확인란 을 선택 하 여 설치 된 **앱 패키지** - **&gt; 디버그)** 에서 모두 지원 됩니다. 자세한 내용은 [UWP 사전 실행 디버그](https://blogs.msdn.com/b/visualstudioalm/archive/2015/11/30/debug-uwp-prelaunch-with-vs2015.aspx)를 참조하세요.
 
 시작 프로젝트의 **디버그** 속성 페이지에서 다음 배포 옵션을 설정할 수 있습니다.
 

@@ -7,12 +7,12 @@ ms.topic: article
 ms.custom: 19H1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 253eea00ba6c4188197224111909c28a53932b88
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: c7b876cff994f775b770d22c103d27271047b269
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257356"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683636"
 ---
 # <a name="connect-to-remote-cameras"></a>원격 카메라에 연결
 
@@ -33,9 +33,9 @@ ms.locfileid: "74257356"
 > 도우미 메서드 [**MediafAQS Esourcegroup. GetDeviceSelector**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) 는 로컬로 연결 되 고 원격 네트워크 카메라를 모니터링 하는 문자열을 반환 합니다. 네트워크 카메라만 모니터링 하려면 위에 표시 된 AQS 문자열을 사용 해야 합니다.
 
 
-[**Start**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.start) 메서드를 호출 하 여 반환 된 **devicewatcher** 를 시작 하면 현재 사용할 수 있는 모든 네트워크 카메라에 대해 [**추가**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added) 된 이벤트가 발생 합니다. [**중지**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.stop)를 호출 하 여 감시자를 중지 하기 전에는 새 네트워크 카메라 장치를 사용할 수 있게 되 면 **추가** 된 이벤트가 발생 하 고 카메라 장치를 사용할 수 없게 되 면 [**제거**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.enumeration.devicewatcher.removed) 된 이벤트가 발생 합니다.
+[**Start**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.start) 메서드를 호출 하 여 반환 된 **devicewatcher** 를 시작 하면 현재 사용할 수 있는 모든 네트워크 카메라에 대해 [**추가**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added) 된 이벤트가 발생 합니다. [**중지**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.stop)를 호출 하 여 감시자를 중지 하기 전에는 새 네트워크 카메라 장치를 사용할 수 있게 되 면 **추가** 된 이벤트가 발생 하 고 카메라 장치를 사용할 수 없게 되 면 [**제거**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.removed) 된 이벤트가 발생 합니다.
 
-**추가** 및 **제거** 된 이벤트 처리기에 전달 되는 이벤트 인수는 각각 [**Deviceinformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 또는 [**deviceinformationupdate**](https://docs.microsoft.com/en-us/uwp/api/windows.devices.enumeration.deviceinformationupdate) 개체입니다. 이러한 각 개체에는 이벤트가 발생 한 네트워크 카메라의 식별자 인 **Id** 속성이 있습니다. 이 ID를 [**MediafFromIdAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) 메서드에 전달 하 여 카메라에서 프레임을 검색 하는 데 사용할 수 있는 [**mediaframesourcegroup**](https://docs.microsoft.com/en-us/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) 개체를 가져옵니다.
+**추가** 및 **제거** 된 이벤트 처리기에 전달 되는 이벤트 인수는 각각 [**Deviceinformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 또는 [**deviceinformationupdate**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationupdate) 개체입니다. 이러한 각 개체에는 이벤트가 발생 한 네트워크 카메라의 식별자 인 **Id** 속성이 있습니다. 이 ID를 [**MediafFromIdAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) 메서드에 전달 하 여 카메라에서 프레임을 검색 하는 데 사용할 수 있는 [**mediaframesourcegroup**](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup.fromidasync) 개체를 가져옵니다.
 
 ## <a name="remote-camera-pairing-helper-class"></a>원격 카메라 페어링 도우미 클래스
 

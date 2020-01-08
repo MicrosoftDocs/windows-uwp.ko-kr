@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 41f1c19f62482dc28bc067adb2e60b2c6fafa509
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 1c106df0efc7952895f882ec5c05cc1af52bcfac
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061890"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683501"
 ---
 # <a name="my-people-notifications"></a>내 피플 알림
 
@@ -20,8 +20,8 @@ ms.locfileid: "73061890"
 
 ## <a name="requirements"></a>요구 사항
 
-+ Windows 10 및 Microsoft Visual Studio 2019. 설치 세부 정보는 [Visual Studio를 사용하여 설정](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up)을 참조하세요.
-+ C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. C#을 시작하려면 ["Hello, world" 앱 만들기](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)를 참조하세요.
++ Windows 10 및 Microsoft Visual Studio 2019. 설치 세부 정보는 [Visual Studio를 사용하여 설정](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)을 참조하세요.
++ C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. C#을 시작하려면 ["Hello, world" 앱 만들기](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)를 참조하세요.
 
 ## <a name="how-it-works"></a>작동 방식
 
@@ -49,7 +49,7 @@ experienceType="shoulderTap"
 
 바인딩 내부의 이미지 노드에 다음 매개 변수가 포함되어야 합니다.
 
-+ **소스**
++ **src**
     + 자산의 URI입니다. HTTP/HTTPS 웹 URI, msappx URI 또는 로컬 파일의 경로일 수 있습니다.
 + **spritesheet-src**
     + 자산의 URI입니다. HTTP/HTTPS 웹 URI, msappx URI 또는 로컬 파일의 경로일 수 있습니다. 스프라이트시트 애니메이션에만 필요합니다.
@@ -59,7 +59,7 @@ experienceType="shoulderTap"
     + 초당 프레임(FPS)입니다. 스프라이트시트 애니메이션에만 필요합니다. 1-120 범위의 값만 지원됩니다.
 + **spritesheet-startingFrame**
     + 애니메이션을 시작하는 프레임 수입니다. 스프라이트시트 애니메이션에만 사용되며 값을 입력하지 않으면 기본값 0이 사용됩니다.
-+ **#b0**
++ **alt**
     + 화면 읽기 프로그램 내레이터에 사용되는 텍스트 문자열입니다.
 
 > [!NOTE]
@@ -67,7 +67,7 @@ experienceType="shoulderTap"
 
 또한 최상위 알림 메시지 노드에는 보내는 연락처를 지정하는 **hint-people** 매개 변수가 포함되어야 합니다. 이 매개 변수에 가능한 값은 다음과 같습니다.
 
-+ **전자 메일 주소** 
++ **메일 주소** 
     + 예: ` mailto:johndoe@mydomain.com `
 + **전화 번호** 
     + 예: tel:888-888-8888
@@ -75,7 +75,7 @@ experienceType="shoulderTap"
     + 예: remoteid:1234
 
 > [!NOTE]
-> 앱에서 PC에 저장된 연락처를 원격으로 저장된 연락처와 연결하기 위해 [ContactStore Api](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.contacts.contactstore) 및 [StoredContact.RemoteId](https://docs.microsoft.com/en-us/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) 속성을 사용하는 경우 RemoteId 속성의 값이 반드시 안정적이고 고유해야 합니다. 즉, 원격 ID는 단일 사용자 계정을 일관적으로 식별해야 하며, 다른 앱 소유의 연락처를 포함하여 PC에 있는 다른 연락처의 원격 ID와 충돌하지 않도록 보장하는 고유의 태그를 포함해야 합니다.
+> 앱에서 PC에 저장된 연락처를 원격으로 저장된 연락처와 연결하기 위해 [ContactStore Api](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactstore) 및 [StoredContact.RemoteId](https://docs.microsoft.com/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) 속성을 사용하는 경우 RemoteId 속성의 값이 반드시 안정적이고 고유해야 합니다. 즉, 원격 ID는 단일 사용자 계정을 일관적으로 식별해야 하며, 다른 앱 소유의 연락처를 포함하여 PC에 있는 다른 연락처의 원격 ID와 충돌하지 않도록 보장하는 고유의 태그를 포함해야 합니다.
 > 앱에서 사용하는 원격 ID가 안정적이고 고유하다는 보장이 없는 경우 [RemoteIdHelper 클래스](https://docs.microsoft.com/previous-versions/windows/apps/jj207024(v=vs.105)#BKMK_UsingtheRemoteIdHelperclass)를 사용하여 모든 원격 ID를 시스템에 추가하기 전에 고유의 태그를 추가하면 됩니다. 또는 RemoteId 속성을 전혀 사용하지 않고, 그 대신 연락처의 원격 ID를 저장하는 사용자 지정 확장 속성을 만드는 방법을 선택할 수 있습니다.
 
 두 번째 바인딩 및 페이로드 외에도 첫 번째 바인딩에 대체 알림을 위한 또 다른 페이로드를 포함해야 합니다. 일반 알림으로 되돌려야 할 경우 알림에서 사용합니다([이 문서의 후반부](/windows/uwp/contacts-and-calendar/my-people-notifications#falling-back-to-toast)에서 자세하게 설명함).
@@ -93,7 +93,7 @@ experienceType="shoulderTap"
             <text>Add your fallback toast content here</text>
         </binding>
         <binding template="ToastGeneric" experienceType="shoulderTap">
-            <image src="https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/images/shoulder-tap-static-payload.png"/>
+            <image src="https://docs.microsoft.com/windows/uwp/contacts-and-calendar/images/shoulder-tap-static-payload.png"/>
         </binding>
     </visual>
 </toast>
@@ -113,8 +113,8 @@ experienceType="shoulderTap"
             <text>Add your fallback toast content here</text>
         </binding>
         <binding template="ToastGeneric" experienceType="shoulderTap">
-            <image src="https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/images/shoulder-tap-pizza-static.png"
-                spritesheet-src="https://docs.microsoft.com/en-us/windows/uwp/contacts-and-calendar/images/shoulder-tap-pizza-spritesheet.png"
+            <image src="https://docs.microsoft.com/windows/uwp/contacts-and-calendar/images/shoulder-tap-pizza-static.png"
+                spritesheet-src="https://docs.microsoft.com/windows/uwp/contacts-and-calendar/images/shoulder-tap-pizza-spritesheet.png"
                 spritesheet-height='80' spritesheet-fps='25' spritesheet-startingFrame='15'/>
         </binding>
     </visual>
@@ -154,4 +154,4 @@ ToastNotificationManager.CreateToastNotifier().Show(notification);
 + [내 사용자 알림 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/MyPeopleNotifications)
 + [내 사용자 지원 추가](my-people-support.md)
 + [적응 알림 메시지](../design/shell/tiles-and-notifications/adaptive-interactive-toasts.md)
-+ [To Notification 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastnotification)
++ [To Notification 클래스](https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastnotification)

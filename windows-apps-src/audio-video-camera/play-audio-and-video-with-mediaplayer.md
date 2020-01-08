@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d2d95711196a9bf2ab113527e5fc8f44459dc3d
-ms.sourcegitcommit: d8ce1a25ac0373acafb394837eb5c0737f6efec8
+ms.openlocfilehash: a53c03c10089856cfd738a5c071c37502a34e9a5
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486427"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683626"
 ---
 # <a name="play-audio-and-video-with-mediaplayer"></a>MediaPlayer를 사용하여 오디오 및 비디오 재생
 
@@ -20,7 +20,7 @@ ms.locfileid: "67486427"
 이 문서에서는 일반적인 미디어 재생 앱에서 사용하는 **MediaPlayer** 기능을 단계별로 안내합니다. **MediaPlayer**는 [**MediaSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaSource) 클래스를 모든 미디어 항목의 컨테이너로 사용합니다. 이 클래스를 사용하면 로컬 파일, 메모리 스트림 및 네트워크 소스를 비롯한 다양한 소스에서 모두 동일한 인터페이스를 사용하여 미디어를 로드 및 재생할 수 있습니다. [  **MediaPlaybackItem**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackItem)과 [**MediaPlaybackList**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackList) 등, 재생 목록과 같은 고급 기능과 여러 오디오, 비디오와 미디어 소스를 관리하는 기능 및 메타데이터 추적 기능을 제공하는 **MediaSource**에서 작동하는 상위 수준 클래스도 있습니다. **MediaSource** 및 관련 API에 대한 자세한 내용은 [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)을 참조하세요.
 
 > [!NOTE] 
-> Windows 10 N 및 Windows 10 KN 버전에는 재생을 위해 **MediaPlayer**를 사용하는 데 필요한 미디어 기능이 포함되지 않습니다. 이러한 기능을 수동으로 설치할 수 있습니다. 자세한 내용은 [Windows 10 N 및 Windows 10 KN 버전에 대한 미디어 기능 팩](https://support.microsoft.com/en-us/help/3010081/media-feature-pack-for-windows-10-n-and-windows-10-kn-editions)을 참조하세요.
+> Windows 10 N 및 Windows 10 KN 버전에는 재생을 위해 **MediaPlayer**를 사용하는 데 필요한 미디어 기능이 포함되지 않습니다. 이러한 기능을 수동으로 설치할 수 있습니다. 자세한 내용은 [Windows 10 N 및 Windows 10 KN 버전에 대한 미디어 기능 팩](https://support.microsoft.com/help/3010081/media-feature-pack-for-windows-10-n-and-windows-10-kn-editions)을 참조하세요.
 
 ## <a name="play-a-media-file-with-mediaplayer"></a>MediaPlayer를 사용하여 미디어 파일 재생  
 **MediaPlayer**를 사용한 기본 미디어 재생은 매우 간단히 구현할 수 있습니다. 먼저 **MediaPlayer** 클래스의 새 인스턴스를 만듭니다. 앱에는 한 번에 여러 개의 **MediaPlayer** 인스턴스가 활성화될 수 있습니다. 다음으로 [**MediaSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.MediaSource), [**MediaPlaybackItem**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackItem) 또는 [**MediaPlaybackList**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackList)와 같이 [**IMediaPlaybackSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.IMediaPlaybackSource)를 구현하는 개체에 플레이어의 [**Source**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.source) 속성을 설정합니다. 이 예제에서는 앱의 로컬 저장소에 있는 파일에서 **MediaSource**가 생성되고 소스에서 **MediaPlaybackItem**이 생성된 다음 플레이어의 **Source** 속성에 할당됩니다.
@@ -47,7 +47,7 @@ XAML에 표시하지 않고 **MediaPlayer**에서 미디어를 재생할 수는 
 [!code-cs[GetPlayerFromElement](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetGetPlayerFromElement)]
 
 > [!NOTE] 
-> [**IsEnabled**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanager.isenabled)를 false로 설정하여 [**MediaPlayer**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer)의 [**MediaPlaybackCommandManager**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManager)를 비활성화하면, **MediaPlayer** 및 [**TransportControls**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.transportcontrols)(**MediaPlayerElement**에서 제공) 간 연결이 끊어지므로 기본 제공 전송 컨트롤이 플레이어의 재생을 더 이상 자동으로 제어할 수 없게 됩니다. 대신 고유한 컨트롤을 구현하여 **MediaPlayer**를 제어해야 합니다.
+> [  **IsEnabled**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanager.isenabled)를 false로 설정하여 [**MediaPlayer**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer)의 [**MediaPlaybackCommandManager**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManager)를 비활성화하면, **MediaPlayer** 및 [**TransportControls**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.transportcontrols)(**MediaPlayerElement**에서 제공) 간 연결이 끊어지므로 기본 제공 전송 컨트롤이 플레이어의 재생을 더 이상 자동으로 제어할 수 없게 됩니다. 대신 고유한 컨트롤을 구현하여 **MediaPlayer**를 제어해야 합니다.
 
 ## <a name="common-mediaplayer-tasks"></a>일반적인 MediaPlayer 작업
 이 섹션에서는 **MediaPlayer**의 몇 가지 기능을 사용하는 방법을 보여 줍니다.
@@ -104,7 +104,7 @@ Windows 10 버전 1803부터 **MediaPlayer**에 표시되는 비디오의 회전
 
 [!code-cs[DeclareSourceRect](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareSourceRect)]
 
-**ManipulationDelta** 처리기는 확대/축소 사각형의 배율 또는 변환을 조정합니다. 델타 배율 값이 1이 아니면 사용자가 축소 제스처를 수행했다는 의미입니다. 값이 1보다 큰 경우 콘텐츠를 확대하려면 소스 사각형을 더 작게 만들어야 합니다. 값이 1보다 작은 경우 축소하려면 소스 사각형을 더 크게 만들어야 합니다. 새 배율 값을 설정하기 전에 결과 사각형이 완전히 (0,0,1,1) 한도 내에 있는지 확인합니다.
+**ManipulationDelta** 처리기는 확대/축소 사각형의 배율 또는 변환을 조정합니다. 델타 배율 값이 1이 아니면 사용자가 축소 제스처를 수행했다는 의미입니다. 값이 1보다 큰 경우 콘텐츠를 확대하려면 소스 사각형을 더 작게 만들어야 합니다. 값이 1보다 작은 경우 소스 사각형을 확대하여 축소해야 합니다. 새 배율 값을 설정하기 전에 결과 사각형을 확인하여 완전히 (0,0,1,1) 한도 내에 있도록 해야 합니다.
 
 배율 값이 1이면 변환 제스처가 처리됩니다. 사각형은 단순히 컨트롤의 너비와 높이로 나눈 제스처의 픽셀 수로 변환됩니다. 마찬가지로 결과 사각형이 (0,0,1,1) 범위 안에 있는지 확인합니다.
 
@@ -143,7 +143,7 @@ Windows 10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSur
 
 [!code-cs[SetTimelineController](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetSetTimelineController)]
 
-**주의**[**MediaPlaybackCommandManager**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManager)는 **MediaPlayer**와 SMTC(시스템 미디어 전송 컨트롤) 간에 자동 통합을 제공하지만 이 자동 통합은 **MediaTimelineController**로 제어되는 미디어 플레이어와 함께 사용할 수 없습니다. 따라서 플레이어의 타임라인 컨트롤러를 설정하기 전에 미디어 플레이어에 대한 명령 관리자를 사용하지 않도록 설정해야 합니다. 이렇게 하면 다음 메시지와 함께 예외가 발생 합니다. "미디어 타임 라인 컨트롤러 연결 차단 됩니다 개체의 현재 상태로 인해." SMTC와 미디어 플레이어 통합에 대한 자세한 내용은 [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)을 참조하세요. **MediaTimelineController**를 사용 중이면 SMTC를 수동으로 계속 제어할 수 있습니다. 자세한 내용은 [시스템 미디어 전송 컨트롤의 수동 제어](system-media-transport-controls.md)를 참조하세요.
+**주의**[**MediaPlaybackCommandManager**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManager)는 **MediaPlayer**와 SMTC(시스템 미디어 전송 컨트롤) 간에 자동 통합을 제공하지만 이 자동 통합은 **MediaTimelineController**로 제어되는 미디어 플레이어와 함께 사용할 수 없습니다. 따라서 플레이어의 타임라인 컨트롤러를 설정하기 전에 미디어 플레이어에 대한 명령 관리자를 사용하지 않도록 설정해야 합니다. 그러지 않으면 예외가 발생하고 "Attaching Media Timeline Controller is blocked because of the current state of the object(개체의 현재 상태 때문에 미디어 타임라인 컨트롤러의 연결이 차단되었습니다.)" 메시지가 표시됩니다. SMTC와 미디어 플레이어 통합에 대한 자세한 내용은 [시스템 미디어 전송 컨트롤과 통합](integrate-with-systemmediatransportcontrols.md)을 참조하세요. **MediaTimelineController**를 사용 중이면 SMTC를 수동으로 계속 제어할 수 있습니다. 자세한 내용은 [시스템 미디어 전송 컨트롤의 수동 제어](system-media-transport-controls.md)를 참조하세요.
 
 하나 이상의 미디어 플레이어에 **MediaTimelineController**를 연결한 후 컨트롤러에서 노출하는 메서드를 사용하여 재생 상태를 제어할 수 있습니다. 다음 예제에서는 [**Start**](https://docs.microsoft.com/uwp/api/windows.media.mediatimelinecontroller.start)를 호출하여 미디어 시작 시 모든 관련 미디어 플레이어의 재생을 시작합니다.
 
@@ -161,7 +161,7 @@ Windows 10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSur
 
 [!code-cs[CreateSourceWithOpenCompleted](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetCreateSourceWithOpenCompleted)]
 
-**OpenOperationCompleted** 처리기는 미디어 소스 콘텐츠의 기간을 검색하는 데 사용됩니다. 기간이 결정되면 **Slider** 컨트롤의 최대값은 미디어 항목의 총 시간(초)으로 설정됩니다. 값은 UI 스레드에서 실행되도록 하는 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)에 대한 호출 내에 설정됩니다.
+**OpenOperationCompleted** 처리기는 미디어 소스 콘텐츠의 기간을 검색하는 데 사용됩니다. 기간이 결정되면 **Slider** 컨트롤의 최대값은 미디어 항목의 총 시간(초)으로 설정됩니다. 이 값은 UI 스레드에서 실행되도록 하는 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)에 대한 호출 내에 설정됩니다.
 
 [!code-cs[DeclareDuration](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetDeclareDuration)]
 
@@ -189,7 +189,7 @@ Windows 10 버전 1607부터 **MediaPlayer**를 사용하여 [**ICompositionSur
 ## <a name="play-spherical-video-with-mediaplayer"></a>MediaPlayer를 사용하여 구형 비디오 재생
 Windows 10 버전 1703부터 **MediaPlayer**에서 구형 비디오 재생에 대해 정방형 프로젝션을 지원합니다. 구형 동영상 콘텐츠는 일반 동영상과 차이가 없으며 비디오 인코딩이 지원되는 한 **MediaPlayer**의 플랫 비디오에서 비디오가 렌더링됩니다. 비디오가 정방형 프로젝션을 사용하도록 지정하는 메타데이터 태그를 포함하는 구형 비디오의 경우 **MediaPlayer**는 지정한 필드의 보기 및 보기 방향을 사용하여 비디오를 렌더링할 수 있습니다. 이를 통해 탑재된 디스플레이로 가상 현실 비디오 재생 또는 마우스 또는 키보드 입력을 통해 사용자에게 구면 비디오 콘텐츠를 이동하도록 설정 등의 시나리오가 가능합니다.
 
-구면 비디오를 재생하려면 이 문서에서 이전에 설명한 동영상 콘텐츠 재생에 대한 단계를 사용합니다. 하나의 추가 단계에 대 한 처리기를 등록 하는 것은 [ **MediaPlayer.MediaOpened** ](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer#Windows_Media_Playback_MediaPlayer_MediaOpened) 이벤트입니다. 이 이벤트는 구형 비디오 재생 매개변수를 활성화하고 제어할 수 있는 기회를 제공합니다.
+구면 비디오를 재생하려면 이 문서에서 이전에 설명한 동영상 콘텐츠 재생에 대한 단계를 사용합니다. 추가 단계 중 하나는 [**MediaPlayer에서 연**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer#Windows_Media_Playback_MediaPlayer_MediaOpened) 이벤트에 대 한 처리기를 등록 하는 것입니다. 이 이벤트는 구형 비디오 재생 매개변수를 활성화하고 제어할 수 있는 기회를 제공합니다.
 
 [!code-cs[OpenSphericalVideo](./code/MediaPlayer_RS1/cs/MainPage.xaml.cs#SnippetOpenSphericalVideo)]
 
@@ -228,7 +228,7 @@ Windows 10 버전 1703부터 프레임 서버 모드에서 **MediaPlayer**를 �
 
 Win2D에 대한 자세한 내용은 [Win2D GitHub 저장소](https://github.com/Microsoft/Win2D)를 참조하세요. 위의 샘플 코드 사용해 보려면 다음 지침을 사용하여 프로젝트에 Win2D NuGet 패키지를 추가해야 합니다.
 
-**결과 프로젝트에 Win2D NuGet 패키지를 추가 하려면**
+**Win2D NuGet 패키지를 효과 프로젝트에 추가 하려면**
 
 1.  **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
 2.  창 위쪽에서 **찾아보기** 탭을 선택합니다.
@@ -258,9 +258,9 @@ Windows 10, 버전 1803부터는 시스템이 현재 사용 중인 **MediaPlayer
 
 ## <a name="related-topics"></a>관련 항목
 * [미디어 재생](media-playback.md)
-* [미디어 항목, 재생 및 추적](media-playback-with-mediasource.md)
-* [Sytem 미디어 전송 컨트롤을 사용 하 여 통합](integrate-with-systemmediatransportcontrols.md)
-* [만들기, 예약 및 미디어 나누기를 관리 합니다.](create-schedule-and-manage-media-breaks.md)
+* [미디어 항목, 재생 목록 및 트랙](media-playback-with-mediasource.md)
+* [을 (를) 사용 하 여 시스템과 통합](integrate-with-systemmediatransportcontrols.md)
+* [미디어 나누기 만들기, 예약 및 관리](create-schedule-and-manage-media-breaks.md)
 * [백그라운드에서 미디어 재생](background-audio.md)
 
 

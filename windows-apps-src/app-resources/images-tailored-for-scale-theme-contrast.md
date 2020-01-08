@@ -4,14 +4,14 @@ title: 배율, 테마, 고대비 등에 맞춘 이미지 및 자산 로드
 template: detail.hbs
 ms.date: 10/10/2017
 ms.topic: article
-keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
+keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 236365bc729bb6b9a2615720c4b69aea21296e5f
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 2aadcb8dc3d414db7951dc571855e01bddb03a99
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339469"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683646"
 ---
 # <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>배율, 테마, 고대비 등에 맞춘 이미지 및 자산 로드
 앱은 [디스플레이 배율 인수](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), 테마, 고대비 및 기타 런타임 컨텍스트에 맞게 조정된 이미지 리소스 파일(또는 기타 자산 파일)을 로드할 수 있습니다. 이러한 이미지는 명령적 코드 또는 XAML 태그에서 참조할 수 있으며 예를 들어 **이미지**의 **Source** 속성입니다. 앱 패키지 매니페스트 소스 파일(`Package.appxmanifest`의 파일)에 표시될 수도 있습니다. 예를 들면 Visual Studio 매니페스트 디자이너의 시각적 자산 탭에 앱 아이콘으로 또는 타일 또는 알림에 표시됩니다. 이미지의 파일 이름에 한정자를 사용하고 선택적으로 이를 [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)를 사용하여 동적으로 로드하여 디스플레이 배율, 테마, 고대비, 언어 및 다른 컨텍스트에 대한 사용자의 런타임 설정과 가장 적합한 가장 적절한 이미지 파일이 로드되도록 할 수 있습니다.
@@ -86,12 +86,12 @@ var storagefile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsy
 this.myXAMLWebViewElement.Source = new Uri("ms-appx-web:///Pages/default.html");
 ```
 
-이러한 예에 제공된 모든 시나리오는 [UriKind](https://docs.microsoft.com/dotnet/api/system.urikind)를 유추하는 [Uri 생성자](https://docs.microsoft.com/en-us/dotnet/api/system.uri.-ctor?view=netcore-2.0#System_Uri__ctor_System_String_) 오버로드를 사용합니다. 스키마 또는 기관을 포함하는 유효한 절대 URI를 지정하거나 위의 예에서와 같이 앱 패키지 기관 기본값을 기다립니다.
+이러한 예에 제공된 모든 시나리오는 [UriKind](https://docs.microsoft.com/dotnet/api/system.urikind)를 유추하는 [Uri 생성자](https://docs.microsoft.com/dotnet/api/system.uri.-ctor?view=netcore-2.0#System_Uri__ctor_System_String_) 오버로드를 사용합니다. 스키마 또는 기관을 포함하는 유효한 절대 URI를 지정하거나 위의 예에서와 같이 앱 패키지 기관 기본값을 기다립니다.
 
 이 예 URI에서 스키마("`ms-appx`" 또는 "`ms-appx-web`") 다음에 "`://`"로 시작하는 절대 경로가 나오는 것을 확인하세요. 절대 경로에서 처음 "`/`"는 패키지 루트에서 경로를 해석하도록 합니다.
 
 > [!NOTE]
-> @No__t-0 ( [문자열 리소스](localize-strings-ui-manifest.md)의 경우) 및 `ms-appx(-web)` (이미지 및 기타 자산의 경우) URI 체계는 자동 한정자 일치를 수행 하 여 현재 컨텍스트에 가장 적합 한 리소스를 찾습니다. `ms-appdata` URI 스키마(앱 데이터를 로드하는 데 사용됨)는 모든 이러한 자동 일치를 수행하지 않지만 [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)의 콘텐츠에 응답할 수 있으며 URI에 전체 실제 파일 이름을 사용하는 앱 데이터에서 명시적으로 적절한 자산을 로드할 수 있습니다. 앱 데이터에 대한 자세한 내용은 [설정 및 기타 앱 데이터 저장 및 검색](../design/app-settings/store-and-retrieve-app-data.md)을 참조하세요. 웹 URI 스키마(`http`, `https`, `ftp` 등)는 자동 일치를 수행하지 않습니다. 이 경우 수행할 작업에 대한 정보는 [클라우드에 이미지 호스팅 및 로드](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md#hosting-and-loading-images-in-the-cloud)를 참조하세요.
+> `ms-resource` ( [문자열 리소스](localize-strings-ui-manifest.md)의 경우) 및 `ms-appx(-web)` (이미지 및 기타 자산의 경우) URI 스키마는 자동 한정자 일치를 수행 하 여 현재 컨텍스트에 가장 적합 한 리소스를 찾습니다. `ms-appdata` URI 스키마(앱 데이터를 로드하는 데 사용됨)는 모든 이러한 자동 일치를 수행하지 않지만 [ResourceContext.QualifierValues](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)의 콘텐츠에 응답할 수 있으며 URI에 전체 실제 파일 이름을 사용하는 앱 데이터에서 명시적으로 적절한 자산을 로드할 수 있습니다. 앱 데이터에 대한 자세한 내용은 [설정 및 기타 앱 데이터 저장 및 검색](../design/app-settings/store-and-retrieve-app-data.md)을 참조하세요. 웹 URI 스키마(`http`, `https`, `ftp` 등)는 자동 일치를 수행하지 않습니다. 이 경우 수행할 작업에 대한 정보는 [클라우드에 이미지 호스팅 및 로드](../design/shell/tiles-and-notifications/tile-toast-language-scale-contrast.md#hosting-and-loading-images-in-the-cloud)를 참조하세요.
 
 이미지 파일이 프로젝트 구조의 위치에 있는 경우 절대 경로가 좋은 선택입니다. 이미지 파일을 이동하려고 하지만 참조 XAML 태그 파일과 관련된 동일한 위치에 있도록 하고자 하는 경우 절대 경로 대신 포함하는 태그 파일과 관련된 경로를 사용하고자 할 수 있습니다. 이렇게 하면 URI 스키마를 사용하지 않아도 됩니다. 이 경우 XAML 태그에서 상대 경로 사용하기 때문에 자동 한정자 일치를 여전히 사용할 수 있습니다.
 

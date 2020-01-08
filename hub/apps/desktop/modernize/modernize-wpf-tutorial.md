@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml 제도
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 3e78bd81531750ac419c5ca3628e72a3e8505038
-ms.sourcegitcommit: f34deba1d4460d85ed08fe9648999fe03ff6a3dd
+ms.openlocfilehash: de84cbb2e1927d9426eefaaf7b0d70d604427da1
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71317080"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683816"
 ---
 # <a name="tutorial-modernize-a-wpf-app"></a>자습서: WPF 앱 현대화 
 
@@ -51,13 +51,13 @@ Contoso는 직원 들이 비용 보고서를 보다 효율적으로 만들 수 �
 * 적응 카드와 Windows 10 알림을 앱에 통합 합니다.
 * MSIX으로 앱을 패키지 하 고 Azure DevOps에서 CI/CD 파이프라인을 설정 하 여 새 버전의 앱을 사용할 수 있는 즉시 테스터 및 사용자에 게 자동으로 제공할 수 있도록 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 
 이 자습서를 수행 하려면 개발 컴퓨터에 다음과 같은 필수 구성 요소가 설치 되어 있어야 합니다.
 
 * Windows 10, 버전 1903 (빌드 18362) 이상 버전
 * [Visual Studio 2019](https://www.visualstudio.com).
-* [.Net Core 3 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) (최신 버전 설치).
+* [.Net Core 3 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) (최신 버전 설치)
 
 Visual Studio 2019을 사용 하 여 다음 작업 및 선택적 기능을 설치 해야 합니다.
 
@@ -69,12 +69,12 @@ Visual Studio 2019을 사용 하 여 다음 작업 및 선택적 기능을 설�
 
 자습서를 시작 하기 전에 Contoso 지출 앱에 대 한 소스 코드를 다운로드 하 고 Visual Studio에서 코드를 빌드할 수 있는지 확인 합니다.
 
-1. [Appconsult 워크숍 리포지토리의](https://github.com/Microsoft/AppConsult-WinAppsModernizationWorkshop) **릴리스** 탭에서 앱 소스 코드를 다운로드 합니다. 직접 링크 [https://aka.ms/wamwc](https://aka.ms/wamwc)는입니다.
-2. Zip 파일을 열고 **C:\\**  드라이브의 루트에 모든 콘텐츠를 추출 합니다. **C:\WinAppsModernizationWorkshop**라는 폴더를 만듭니다.
+1. [Appconsult 워크숍 리포지토리의](https://github.com/Microsoft/AppConsult-WinAppsModernizationWorkshop) **릴리스** 탭에서 앱 소스 코드를 다운로드 합니다. 직접 링크를 [https://aka.ms/wamwc](https://aka.ms/wamwc)합니다.
+2. Zip 파일을 열고 **C:\\** 드라이브의 루트에 모든 콘텐츠를 추출 합니다. **C:\WinAppsModernizationWorkshop**라는 폴더를 만듭니다.
 3. Visual Studio 2019를 열고 **C:\WinAppsModernizationWorkshop\Lab\Exercise1\01-Start\ContosoExpenses\ContosoExpenses.sln** 파일을 두 번 클릭 하 여 솔루션을 엽니다.
 4. **시작** 단추 또는 CTRL + F5 키를 눌러 CONTOSO 지출 WPF 프로젝트를 빌드, 실행 및 디버그할 수 있는지 확인 합니다.
 
-## <a name="get-started"></a>시작
+## <a name="get-started"></a>시작하기
 
 Contoso 지출 샘플 앱에 대 한 소스 코드를 만든 후 Visual Studio에서 빌드할 수 있는지 확인할 수 있습니다. 자습서를 시작할 준비가 되었습니다.
 
@@ -98,7 +98,7 @@ Windows 10에서 Microsoft는 [유니버설 Windows 플랫폼 (UWP)](/windows/uw
 
 ### <a name="msix-packaging"></a>MSIX 패키징
 
-[Msix](http://aka.ms/msix) (이전의 AppX)는 Windows 앱에 대 한 최신 패키징 모델입니다. MSIX은 UWP 앱 뿐만 아니라 Win32, WPF, Windows Forms, Java, 전자 등과 같은 기술을 사용 하 여 빌드하는 데스크톱 앱을 지원 합니다. MSIX 패키지에서 데스크톱 앱을 패키지 하는 경우 Microsoft Store에 앱을 게시할 수 있습니다. 데스크톱 앱은 패키지 id가 설치 된 경우에도 패키지 id를 가져올 수 있습니다. 그러면 데스크톱 앱에서 광범위 한 WinRT Api 집합을 사용할 수 있습니다.
+[Msix](/windows/msix/) (이전의 AppX)은 Windows 앱에 대 한 최신 패키징 모델입니다. MSIX은 UWP 앱 뿐만 아니라 Win32, WPF, Windows Forms, Java, 전자 등과 같은 기술을 사용 하 여 빌드하는 데스크톱 앱을 지원 합니다. MSIX 패키지에서 데스크톱 앱을 패키지 하는 경우 Microsoft Store에 앱을 게시할 수 있습니다. 데스크톱 앱은 패키지 id가 설치 된 경우에도 패키지 id를 가져올 수 있습니다. 그러면 데스크톱 앱에서 광범위 한 WinRT Api 집합을 사용할 수 있습니다.
 
 자세한 내용은 다음 문서를 참조하세요.
 
@@ -111,7 +111,7 @@ Windows 10 버전 1903부터 *XAML 아일랜드*라는 기능을 사용 하 여 
 
 자세한 내용은 [데스크톱 응용 프로그램의 UWP 컨트롤 (XAML 아일랜드)](/windows/uwp/xaml-platform/xaml-host-controls)을 참조 하세요. 이 자습서에서는 두 가지 유형의 XAML 아일랜드 컨트롤을 사용 하는 과정을 안내 합니다.
 
-* Windows 커뮤니티 도구 키트의 [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [없습니다](https://docs.microsoft.com/en-us/windows/communitytoolkit/controls/wpf-winforms/mapcontrol) . 이러한 WPF 컨트롤은 해당 UWP 컨트롤의 인터페이스 및 기능을 래핑하고 Visual Studio 디자이너의 다른 WPF 컨트롤과 마찬가지로 사용할 수 있습니다.
+* Windows 커뮤니티 도구 키트의 [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [없습니다](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/mapcontrol) . 이러한 WPF 컨트롤은 해당 UWP 컨트롤의 인터페이스 및 기능을 래핑하고 Visual Studio 디자이너의 다른 WPF 컨트롤과 마찬가지로 사용할 수 있습니다.
 
 * UWP [Calendar view](/windows/uwp/design/controls-and-patterns/calendar-view) 컨트롤입니다. Windows 커뮤니티 도구 키트의 [Windowsxamlhost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용 하 여 호스트할 표준 UWP 컨트롤입니다.
 
@@ -121,9 +121,9 @@ Windows 10 버전 1903부터 *XAML 아일랜드*라는 기능을 사용 하 여 
 
 처음 몇 가지 릴리스를 통해 .NET Core는 웹 또는 백 엔드 앱을 지 원하는 데 중점을 둡니다. .NET Core를 사용 하 여 Windows, Linux 또는 Docker 컨테이너와 같은 마이크로 서비스 아키텍처에서 호스팅될 수 있는 확장 가능한 웹 앱 또는 Api를 쉽게 빌드할 수 있습니다.
 
-.NET Core 3은 .NET Core의 최신 릴리스입니다. 이 릴리스의 강조 표시는 Windows Forms 및 WPF 앱을 포함 한 Windows 데스크톱 앱에 대 한 지원입니다. .NET Core 3에서 새로운 기존 Windows 데스크톱 앱을 실행 하 고 .NET Core에서 제공 하는 모든 혜택을 누릴 수 있습니다. [XAML Islands](xaml-islands.md)에 호스트되는 UWP 컨트롤을 .NET Core 3를 대상으로 하는 Windows Forms 및 WPF 앱에서도 사용할 수 있습니다.
+.NET Core 3은 .NET Core의 최신 릴리스입니다. 이 릴리스의 주요 기능은 Windows Forms 및 WPF 앱을 포함하는 Windows 데스크톱 앱에 대한 지원입니다. .NET Core 3에서 신규 및 기존 Windows 데스크톱 앱을 실행하고 .NET Core에서 제공하는 모든 이점을 누릴 수 있습니다. [XAML Islands](xaml-islands.md)에 호스트되는 UWP 컨트롤을 .NET Core 3를 대상으로 하는 Windows Forms 및 WPF 앱에서도 사용할 수 있습니다.
 
 > [!NOTE]
 > WPF 및 Windows Forms는 플랫폼 간이 되지 않으며, Linux 및 MacOS에서 WPF 또는 Windows Forms를 실행할 수 없습니다. WPF 및 Windows Forms UI 구성 요소는 여전히 Windows 렌더링 시스템에 종속 되어 있습니다.
 
-자세한 내용은 [.Net Core 3.0의 새로운 기능](https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0)을 참조 하세요.
+자세한 내용은 [.NET Core 3.0의 새로운 기능](https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0)을 참조하세요.

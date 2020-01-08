@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 3293e91e-6888-4cc3-bad3-61e5a7a7ab4e
 ms.localizationpriority: medium
-ms.openlocfilehash: f542c76d879881af296351ce51a803aa9986ecbb
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 2c03475c0c4007508a18c17645dbe99eeb7d6cb0
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359705"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681984"
 ---
 # <a name="version-adaptive-code"></a>버전 적응 코드
 
-[적응 UI를 만드는](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml) 것과 유사하게 적응 코드 작성에 대해 생각할 수 있습니다. 가장 작은 화면에서 실행될 기본 UI를 디자인한 다음 앱이 더 큰 화면에서 실행되고 있음을 감지하면 요소를 이동하거나 추가할 수 있습니다. 적응 코드를 사용하여 최하위 OS 버전에서 실행될 기본 코드를 작성하고, 앱이 새 기능을 사용할 수 있는 상위 버전에서 실행되고 있음을 감지하면 수동으로 선택한 기능을 추가할 수 있습니다.
+[적응 UI를 만드는](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml) 것은 적응 코드 작성과 유사하게 생각할 수 있습니다. 가장 작은 화면에서 실행될 기본 UI를 디자인한 다음 앱이 더 큰 화면에서 실행되고 있음을 감지하면 요소를 이동하거나 추가할 수 있습니다. 적응 코드를 사용하여 최하위 OS 버전에서 실행될 기본 코드를 작성하고, 앱이 새 기능을 사용할 수 있는 상위 버전에서 실행되고 있음을 감지하면 수동으로 선택한 기능을 추가할 수 있습니다.
 
 ApiInformation, API 계약 및 Visual Studio 구성에 대한 중요한 배경 정보는 [버전 적응 앱](version-adaptive-apps.md)을 참조하세요.
 
@@ -23,7 +23,7 @@ ApiInformation, API 계약 및 Visual Studio 구성에 대한 중요한 배경 �
 
 코드의 조건에서 [Windows.Foundation.Metadata.ApiInformation](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation) 클래스를 사용하여 호출할 API의 존재 여부를 테스트합니다. 그러면 앱이 실행되는 모든 디바이스에서 이 조건이 평가되지만, API가 있어 호출에 사용할 수 있는 디바이스에 대해서만 **true**로 평가합니다. 이렇게 하면 특정 OS 버전에서만 사용할 수 있는 API를 사용하는 앱을 만들기 위해 버전 적응 코드를 작성할 수 있습니다.
 
-여기서는 Windows Insider Preview의 새로운 기능을 대상으로 지정하기 위한 구체적인 예를 살펴봅니다. **ApiInformation** 사용에 대한 일반적인 개요는 [장치 패밀리 개요](https://docs.microsoft.com/en-us/uwp/extension-sdks/device-families-overview#writing-code) 및 [API 계약을 사용하여 동적으로 기능 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/) 블로그 게시물을 참조하세요.
+여기서는 Windows Insider Preview의 새로운 기능을 대상으로 지정하기 위한 구체적인 예를 살펴봅니다. **ApiInformation** 사용에 대한 일반적인 개요는 [장치 패밀리 개요](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview#writing-code) 및 [API 계약을 사용하여 동적으로 기능 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/) 블로그 게시물을 참조하세요.
 
 > [!TIP]
 > 많은 API 런타임 검사는 앱의 성능에 영향을 미칠 수 있습니다. 여기서는 예제에서 즉시 처리되는 검사를 보여 줍니다. 프로덕션 코드에서는 검사를 한 번 수행하고 결과를 캐시한 다음 캐시된 결과를 앱 전체에서 사용해야 합니다. 
@@ -71,9 +71,9 @@ ApiInformation, API 계약 및 Visual Studio 구성에 대한 중요한 배경 �
 
 이 섹션에서는 Windows 10, 버전 1607(Windows Insider Preview)에서 새로 추가된 API를 사용하는 적응 코드의 몇 가지를 예제를 보여 줍니다.
 
-### <a name="example-1-new-enum-value"></a>예 1: 새 열거형 값
+### <a name="example-1-new-enum-value"></a>예제 1: 새 열거형 값
 
-Windows 10 버전 1607에 새 값을 추가 합니다 [InputScopeNameValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopenamevalue) 열거형: **ChatWithoutEmoji**. 이 새로운 입력 범위는 **Chat** 입력 범위와 동일한 입력 동작을 포함하고 있지만(맞춤법 검사, 자동 완성, 자동 대문자 표시), 이모지 단추가 없는 터치 키보드에 매핑됩니다. 이는 고유한 이모지 선택기를 만들고 터치 키보드에서 기본 제공 이모지 단추를 사용하지 않도록 설정하려는 경우에 유용합니다. 
+Windows 10, 버전 1607에서는 새로운 값인 **ChatWithoutEmoji**를 [InputScopeNameValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopenamevalue) 열거형에 추가합니다. 이 새로운 입력 범위는 **Chat** 입력 범위와 동일한 입력 동작을 포함하고 있지만(맞춤법 검사, 자동 완성, 자동 대문자 표시), 이모지 단추가 없는 터치 키보드에 매핑됩니다. 이는 고유한 이모지 선택기를 만들고 터치 키보드에서 기본 제공 이모지 단추를 사용하지 않도록 설정하려는 경우에 유용합니다. 
 
 이 예제에서는 **ChatWithoutEmoji** 열거형 값이 있는지 확인하고 있으면 **TextBox**의 [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성을 설정하는 방법을 보여 줍니다. 이 값이 앱이 실행되는 시스템에 없는 경우 **InputScope**는 대신 **Chat**로 설정됩니다. 표시된 코드는 Page 생성자나 Page.Loaded 이벤트 처리기에 배치될 수 있습니다.
 
@@ -154,7 +154,7 @@ private void messageBox_Loaded(object sender, RoutedEventArgs e)
 
 XAML이나 코드에서 검사 없이 ChatWithoutEmoji 값을 사용하는 경우 이 값이 대상 OS 버전에 있기 때문에 오류 없이 컴파일됩니다. 또한 대상 OS 버전을 사용하는 시스템에서 오류 없이 실행됩니다. 그러나 앱이 최소 OS 버전을 사용하는 시스템에서 실행되는 경우 ChatWithoutEmoji 열거형 값이 없기 때문에 런타임에 작동이 중단됩니다. 따라서 이 값을 코드에서만 사용하고 런타임 API 검사에 래핑하여 현재 시스템에서 지원되는 경우에만 호출되도록 해야 합니다.
 
-### <a name="example-2-new-control"></a>예 2: 새 컨트롤
+### <a name="example-2-new-control"></a>예제 2: 새 컨트롤
 
 일반적으로 새 버전의 Windows에서는 새로운 기능을 플랫폼에 제공하는 새 컨트롤을 UWP API 노출 영역에 제공합니다. 새 컨트롤을 활용하려면 [ApiInformation.IsTypePresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.istypepresent) 메서드를 사용합니다.
 
@@ -267,7 +267,7 @@ namespace MediaApp
 > [!NOTE]
 > `MediaElementUserControl`에 대한 코드 페이지에는 생성된 코드만 포함되어 있으므로 표시되지 않았습니다.
 
-**IsTypePresent 기준으로 컨트롤을 초기화 합니다.**
+**IsTypePresent을 기반으로 컨트롤 초기화**
 
 런타임에 **ApiInformation.IsTypePresent**를 호출하여 MediaPlayerElement가 있는지 검사합니다. 있으면 `MediaPlayerUserControl`을 로드하고, 없으면 `MediaElementUserControl`을 로드합니다.
 
@@ -303,7 +303,7 @@ public MainPage()
 
 나머지 UI에 영향을 주지 않을 서로 다른 OS 버전 간의 작은 UI 변경(예: 컨트롤의 속성 또는 열거형 값 변경)이 있는 경우에만 적응 코드에 상태 트리거를 사용해야 합니다.
 
-### <a name="example-1-new-property"></a>예 1: 새 속성
+### <a name="example-1-new-property"></a>예제 1: 새 속성
 
 확장 가능한 상태 트리거를 설정하는 첫 번째 단계는 [StateTriggerBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.statetriggerbase) 클래스를 하위 클래스화하여 API의 존재 여부에 따라 활성화될 사용자 지정 트리거를 만드는 것입니다. 이 예제에서는 속성 존재 여부가 XAML에서 설정된 `_isPresent` 변수와 일치하는 경우 활성화되는 트리거를 보여 줍니다.
 
@@ -371,7 +371,7 @@ Windows 10 버전 1607에서는 [FrameworkElement](https://docs.microsoft.com/uw
 </Grid>
 ```
 
-### <a name="example-2-new-enum-value"></a>예 2: 새 열거형 값
+### <a name="example-2-new-enum-value"></a>예제 2: 새 열거형 값
 
 이 예제에서는 값의 존재 여부에 따라 다른 열거형 값을 설정하는 방법을 보여 줍니다. 이 예제에서는 사용자 지정 상태 트리거를 사용하여 이전 채팅 예제와 동일한 결과를 얻습니다. 이 예제에서는 디바이스에서 Windows 10, 버전 1607이 실행되면 새로운 ChatWithoutEmoji 입력 범위를 사용하고, 그렇지 않으면 **Chat** 입력 범위를 사용합니다. 이 트리거를 사용하는 시각적 상태는 입력 범위가 새 열거형 값의 존재 여부에 따라 선택되는 *if-else* 스타일에서 설정됩니다.
 
@@ -445,5 +445,5 @@ class IsEnumPresentTrigger : StateTriggerBase
 
 ## <a name="related-articles"></a>관련 문서
 
-- [장치 패밀리 개요](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
-- [API 계약을 사용 하 여 기능을 동적으로 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [장치 제품군 개요](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
+- [API 계약을 사용 하 여 동적으로 기능 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
