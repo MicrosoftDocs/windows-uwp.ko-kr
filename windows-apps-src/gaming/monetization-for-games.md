@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 수익 창출
 ms.localizationpriority: medium
-ms.openlocfilehash: 132f8c1d0ff314b794cc8464ec69cdf84f6a5f3b
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: baef3750b8dc076fd78c239cfc61662256e57c14
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258475"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685250"
 ---
 #  <a name="monetization-for-games"></a>게임의 수익 창출
 
@@ -53,7 +53,7 @@ Microsoft Store를 통해 전 세계 200 개 이상의 국가 및 지역에서 �
 
 스토어에는 _지속성_ 또는 _소모성_의 두 가지 추가 기능 유형을 만들 수 있습니다. 지속성은 지정된 기간 동안 지속되며 만료될 때까지 한 번만 구입할 수 있는 항목을 나타냅니다. 소모성은 반복해서 구입하여 사용할 수 있는 항목을 나타냅니다.
 
-소모성 항목을 만들 때는 이러한 항목을 추적하는 방법을 결정해야 합니다. 즉, &mdash;개발자가 관리하는지_또는_스토어에서 관리하는지_ 여부를 추적해야 합니다(이 기능은 Windows 10 버전 1607부터 사용할 수 있음). 개발자가 관리 하는 기능을 사용 하 여 게이머의 항목 잔액을 추적 해야 합니다. 저장소 관리 기능을 사용 하면 Microsoft Store는 항목의 잔액을 계속 추적 합니다. 자세한 내용은 [소모성 추가 기능 개요](https://docs.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases)를 참조하세요.
+소모성 항목을 만들 때는 이러한 항목을 추적하는 방법을 결정해야 합니다. 즉, _개발자가 관리하는지_ 또는 _스토어에서 관리하는지_ 여부를 추적해야 합니다(이 기능은 Windows 10 버전 1607부터 사용할 수 있음). 개발자가 관리 하는 기능을 사용 하 여 게이머의 항목 잔액을 추적 해야 합니다. 저장소 관리 기능을 사용 하면 Microsoft Store는 항목의 잔액을 계속 추적 합니다. 자세한 내용은 [소모성 추가 기능 개요](https://docs.microsoft.com/windows/uwp/monetize/enable-consumable-add-on-purchases)를 참조하세요.
 
 ### <a name="create-in-game-purchases"></a>게임에서 바로 구매 만들기
 
@@ -206,10 +206,10 @@ Smaato에서는 UWP 앱 및 게임에 배너 광고를 통합할 수 있습니�
 AdDuplex를 사용하여 게임에서 배너 또는 중간 광고를 구현할 수 있습니다.
 
 Windows 10 XAML 프로젝트에 직접 AdDuplex를 통합하는 방법을 알아보려면 AdDuplex 웹 사이트로 이동합니다.
-* 광고 배너: [Windows 10 SDK for XAML](https://adduplex.zendesk.com/hc/en-us/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage)
-* 중간 광고: [Windows 10 XAML AdDuplex 중간 광고 설치 및 사용](https://adduplex.zendesk.com/hc/en-us/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage)
+* 광고 배너: [Windows 10 SDK for XAML](https://adduplex.zendesk.com/hc/articles/204849031-Windows-10-SDK-for-XAML-apps-installation-and-usage)
+* 중간 광고: [Windows 10 XAML AdDuplex 중간 광고 설치 및 사용](https://adduplex.zendesk.com/hc/articles/204849091-Windows-10-XAML-AdDuplex-Interstitial-Ad-Installation-and-Usage)
 
-Unity를 사용하여 만든 Windows 10 UWP 게임에 AdDuplex SDK를 통합하는 방법에 대한 자세한 내용은 [Unity 앱 설치 및 사용에 대한 Windows 10 SDK](https://adduplex.zendesk.com/hc/en-us/articles/207279435-Windows-10-SDK-for-Unity-apps-installation-and-usage)를 참조하세요.
+Unity를 사용하여 만든 Windows 10 UWP 게임에 AdDuplex SDK를 통합하는 방법에 대한 자세한 내용은 [Unity 앱 설치 및 사용에 대한 Windows 10 SDK](https://adduplex.zendesk.com/hc/articles/207279435-Windows-10-SDK-for-Unity-apps-installation-and-usage)를 참조하세요.
 
 ## <a name="maximize-your-games-potential-through-ad-campaigns"></a>광고 캠페인을 통해 게임 잠재력 극대화
 

@@ -6,14 +6,14 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b44558232247de969f22d5767a16d921cfbf252
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 324aff61057103d5aed00e455a7f2a8d0cfe83b4
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367575"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684929"
 ---
-# <a name="rendering-framework-ii-game-rendering"></a>렌더링 프레임 워크 II: 게임 렌더링
+# <a name="rendering-framework-ii-game-rendering"></a>렌더링 프레임워크 II: 게임 렌더링
 
 [렌더링 프레임워크 I](tutorial--assembling-the-rendering-pipeline.md)에서 장면 정보를 가지고 표시 화면에 제시하는 방법을 다루었습니다. 이제 한 단계 돌아가 렌더링하기 위해 데이터를 준비하는 방법을 알아보겠습니다.
 
@@ -25,10 +25,10 @@ ms.locfileid: "66367575"
 목표에 대한 빠른 요약입니다. UWP DirectX 게임의 그래픽 출력을 표시하도록 기본 렌더링 프레임워크를 설정하는 방법을 이해하기 위해 고안되었습니다. 이를 느슨하게 이러한 3단계로 그룹화할 수 있습니다.
 
  1. 그래픽 인터페이스에 연결 구축
- 2. 준비: 그래픽을 그릴 해야 리소스 만들기
- 3. 그래픽을 표시 합니다. 프레임을 렌더링
+ 2. 준비: 그래픽 그리는 데 필요한 리소스 만들기
+ 3. 그래픽 표시: 프레임 렌더링
 
-[렌더링 프레임 워크 i: 렌더링에 대 한 소개](tutorial--assembling-the-rendering-pipeline.md) 1 단계와 3을 다루는, 그래픽을 렌더링 하는 방법을 설명 합니다. 
+[렌더링 프레임워크 I: 렌더링 소개](tutorial--assembling-the-rendering-pipeline.md)에서는 1단계와 3단계에서 다루는 그래픽이 렌더링되는 방식을 설명했습니다. 
 
 이 문서에서는 이 프레임워크의 다른 부분을 설정하고 렌더링하기 전에 필요한 데이터를 준비하는 프로세스의 2단계를 설명합니다.
 
@@ -41,17 +41,17 @@ ms.locfileid: "66367575"
 * 렌더링을 위해 필요한 다양한 데이터를 저장하기 위해 상수 버퍼가 이 클래스에서 정의됩니다.
     * 각각 빈도가 다른 여러 상수 버퍼를 사용하면 프레임당 GPU로 전송해야 하는 데이터 양이 감소합니다. 이 샘플에서는 업데이트해야 하는 빈도를 기준으로 상수를 각기 다른 버퍼로 구분합니다. 이 방법은 Direct3D 프로그래밍의 모범 사례입니다. 
     * 이 게임 샘플에서 4 상수 버퍼가 정의됩니다.
-        1. __m\_constantBufferNeverChanges__ 조명 매개 변수를 포함 합니다. 이는 __FinalizeCreateGameDeviceResources__ 메서드에서 한 번 설정되고 다시 변경되지 않습니다.
-        2. __m\_constantBufferChangeOnResize__ 투영 행렬을 포함 합니다. 프로젝션 행렬은 창의 크기와 가로 세로 비율에 따라 달라집니다. 이는 [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method)에서 설정된 다음 리소스가 [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method) 메서드에 로드된 후 업데이트됩니다. 3D로 렌더링하면 이 또한 프레임별로 두 번 변경됩니다.
-        3. __m\_constantBufferChangesEveryFrame__ 뷰 매트릭스를 포함 합니다. 이 행렬은 카메라 위치와 보기 방향(프로젝션에 수직)에 따라 달라지며 __Render__ 메서드에서 프레임당 한 번 변경됩니다. 이전에 설명한이 __렌더링 프레임 워크 i: 렌더링에 대 한 소개__아래에 있는 합니다 [ __GameRenderer::Render__ 메서드](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method)합니다.
-        4. __m\_constantBufferChangesEveryPrim__ 각 기본 형식의 모델 행렬 및 재질 속성을 포함 합니다. 모델 행렬은 로컬 좌표에서 월드 좌표로 꼭짓점을 변환합니다. 이러한 상수는 각 기본 요소와 관련이 있으며 그리기 호출 시마다 업데이트됩니다. 이전에 설명한이 __렌더링 프레임 워크 i: 렌더링에 대 한 소개__아래에 있는 합니다 [기본 렌더링](tutorial--assembling-the-rendering-pipeline.md#primitive-rendering)합니다.
+        1. __m\_constantBufferNeverChanges__ 는 조명 매개 변수를 포함 합니다. 이는 __FinalizeCreateGameDeviceResources__ 메서드에서 한 번 설정되고 다시 변경되지 않습니다.
+        2. __m\_constantBufferChangeOnResize__ 는 프로젝션 매트릭스를 포함 합니다. 투영 행렬은 창의 크기와 가로 세로 비율에 따라 달라집니다. 이는 [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method)에서 설정된 다음 리소스가 [__FinalizeCreateGameDeviceResources__](#finalizecreategamedeviceresources-method) 메서드에 로드된 후 업데이트됩니다. 3D로 렌더링하면 이 또한 프레임별로 두 번 변경됩니다.
+        3. __m\_constantBufferChangesEveryFrame__ 는 뷰 매트릭스를 포함 합니다. 이 행렬은 카메라 위치와 보기 방향(프로젝션에 수직)에 따라 달라지며 __Render__ 메서드에서 프레임당 한 번 변경됩니다. 이는 이전에 [__GameRenderer::Render__ 메서드](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method) 아래의 __렌더링 프레임워크 I: 렌더링 소개__에서 다루었습니다.
+        4. __m\_constantBufferChangesEveryPrim__ 에는 각 기본 형식의 모델 행렬과 재질 속성이 포함 되어 있습니다. 모델 행렬은 로컬 좌표에서 월드 좌표로 꼭짓점을 변환합니다. 이러한 상수는 각 원형과 관련이 있으며 그리기 호출 시마다 업데이트됩니다. 이는 이전에 [원형 렌더링](tutorial--assembling-the-rendering-pipeline.md#primitive-rendering) 아래의 __렌더링 프레임워크 I: 렌더링 소개__에서 다루었습니다.
 * 이 클래스에서 원형의 텍스처를 포함하는 셰이더 리소스 개체도 정의됩니다.
     * 일부 텍스처는 미리 정의됩니다.([DDS](https://docs.microsoft.com/windows/desktop/direct3ddds/dx-graphics-dds-pguide)는 압축되거나 압축되지 않은 텍스처를 저장하기 위해 사용할 수 있는 파일 형식입니다. DDS 텍스처는 월드의 벽과 마루, 탄약 구형에 사용됩니다.
-    * 이 게임 샘플에서 셰이더 리소스 개체는: __m\_sphereTexture__를 __m\_cylinderTexture__하십시오 __m\_ceilingTexture__하십시오 __m\_floorTexture__하십시오 __m\_wallsTexture__합니다.
+    * 이 게임 샘플에서 셰이더 리소스 개체는 __m\_sphereTexture__, __m\_cylinderTexture__, __m\_ceilingTexture__, __m\_floorTexture__, __m\_wallsTexture__입니다.
 * 이 클래스의 셰이더 개체가 원형 및 텍스처를 계산하기 위해 정의됩니다. 
-    * 이 게임 샘플 셰이더 개체는 __m\_vertexShader__하십시오 __m\_vertexShaderFlat__, 및 __m\_pixelShader__, __m\_pixelShaderFlat__합니다.
-    * 꼭짓점 셰이더는 기본 요소와 기본 조명을 처리하고, 픽셀 셰이더(조각 셰이더라고 함)는 텍스처와 픽셀당 효과를 처리합니다.
-    * 이러한 셰이더는 다른 기본 요소를 렌더링하기 위한 두 가지 버전(일반 및 평면)이 있습니다. 다른 버전이 있는 이유는 평면 버전이 더 단순하며 반사 하이라이트나 픽셀당 조명 효과가 없기 때문입니다. 이 버전은 벽에 사용되며 저전력 디바이스에서 렌더링 속도를 늘립니다.
+    * 이 게임 샘플에서 셰이더 개체는 __m\_vertexShader__, __m\_vertexShaderFlat__및 __m\_shadereffect__, __m\_pixelShaderFlat__입니다.
+    * 꼭짓점 셰이더는 원형과 기본 조명을 처리하고, 픽셀 셰이더(조각 셰이더라고 함)는 텍스처와 픽셀당 효과를 처리합니다.
+    * 이러한 셰이더는 다른 원형을 렌더링하기 위한 두 가지 버전(일반 및 평면)이 있습니다. 다른 버전이 있는 이유는 평면 버전이 더 단순하며 반사 하이라이트나 픽셀당 조명 효과가 없기 때문입니다. 이 버전은 벽에 사용되며 저전력 디바이스에서 렌더링 속도를 늘립니다.
 
 ## <a name="gamerendererh"></a>GameRenderer.h
 
@@ -168,7 +168,7 @@ DirectX 11 앱 템플릿에서 이 메서드는 꼭짓점 및 픽셀 셰이더�
 
 이 게임 샘플의 경우 이 메서드에 무엇이 분할됩니까?
 
-* 변수를 인스턴스화 (__m\_gameResourcesLoaded__ = false 및 __m\_levelResourcesLoaded__ = false) 리소스를 이동 하기 전에 로드 되었는지 여부를 나타내는 비동기적으로 로드 하는 것 이므로, 렌더링할 전달 합니다. 
+* 비동기적으로 로드 하는 중 이므로 렌더링으로 이동 하기 전에 리소스를 로드 했는지 여부를 나타내는 인스턴스화된 변수 (__m\_gameResourcesLoaded__ = false 및 __m\_levelresourcesloaded__ = false)입니다. 
 * HUD 및 오버레이 렌더링은 별도의 클래스 개체이지 때문에 여기에서 __GameHud::CreateDeviceDependentResources__ 및 __GameInfoOverlay::CreateDeviceDependentResources__ 메서드를 호출합니다.
 
 다음은 __GameRenderer::CreateDeviceDependentResources__에 대한 코드입니다.
@@ -241,9 +241,9 @@ GameMain::GameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) 
 
 ## <a name="creategamedeviceresourcesasync-method"></a>CreateGameDeviceResourcesAsync 메서드
 
-__CreateGameDeviceResourcesAsync__ 에서 호출 되는 __GameMain__ 에 대 한 constructor 메서드를 __만들기\_작업__ 게임 리소스를 비동기적으로 로드 하는 것 이므로 루프입니다.
+__CreateGameDeviceResourcesAsync__ 는 게임 리소스를 비동기적으로 로드 하므로 __create\_작업__ 루프의 __GameMain__ constructor 메서드에서 호출 됩니다.
         
-__CreateDeviceResourcesAsync__는 별도의 비동기 작업 집합으로 실행되어 게임 리소스를 로드하는 메서드입니다. 이 메서드는 별도의 스레드에서 실행되어야 하므로 Direct3D 11 디바이스 메서드(__ID3D11Device__에 정의되어 있음)에만 액세스할 수 있고 디바이스 컨텍스트 메서드(__ID3D11DeviceContext__에 정의된 메서드)에는 액세스할 수 없습니다. 따라서 렌더링을 수행하지 않습니다.
+__CreateDeviceResourcesAsync__는 게임 리소스를 로드하기 위해 별도의 비동기 작업 집합으로 실행되는 메서드입니다. 이 메서드는 별도의 스레드에서 실행되어야 하므로 Direct3D 11 디바이스 메서드(__ID3D11Device__에 정의되어 있음)에만 액세스할 수 있고 디바이스 컨텍스트 메서드(__ID3D11DeviceContext__에 정의된 메서드)에는 액세스할 수 없습니다. 따라서 렌더링을 수행하지 않습니다.
 
 __FinalizeCreateGameDeviceResources__ 메서드는 주 스레드에서 실행되고 Direct3D 11 디바이스 컨텍스트 메서드에 액세스할 수 있습니다.
 
@@ -254,13 +254,13 @@ __FinalizeCreateGameDeviceResources__ 메서드는 주 스레드에서 실행되
 * 이 메서드를 사용하여 텍스처(예: .dds 파일) 및 셰이더 정보(예: .cso 파일)를 [셰이더](tutorial--assembling-the-rendering-pipeline.md#shaders)에 로드할 수 있습니다.
 
 이 메서드는 다음을 위해 사용됩니다.
-* 4를 만듭니다 [상수 버퍼](tutorial--assembling-the-rendering-pipeline.md#buffer): __m\_constantBufferNeverChanges__하십시오 __m\_constantBufferChangeOnResize__, __m \_constantBufferChangesEveryFrame__하십시오 __m\_constantBufferChangesEveryPrim__
+* 4 개의 [상수 버퍼](tutorial--assembling-the-rendering-pipeline.md#buffer)를 만듭니다 __. m\_constantBufferNeverChanges__, __m\_constantBufferChangeOnResize__, m __\_constantBufferChangesEveryFrame__, __m\_constantBufferChangesEveryPrim__
 * 텍스처에 대한 샘플 정보를 캡슐화하는 [sampler-state](tutorial--assembling-the-rendering-pipeline.md#sampler-state) 개체 만들기
 * 메서드에서 만든 모든 비동기 작업이 포함된 작업 그룹을 만듭니다. 이러한 모든 비동기 작업이 완료될 때까지 기다린 다음 __FinalizeCreateGameDeviceResources__를 호출합니다.
 * [기본 로더](tutorial--assembling-the-rendering-pipeline.md#basicloader)를 사용하여 로더를 만듭니다. 로더의 비동기 로딩 작업을 이전에 만든 작업 그룹에 추가합니다.
 * __BasicLoader::LoadShaderAsync__ 및 __BasicLoader::LoadTextureAsync__ 등의 메서드가 다음을 로드하는 데 사용됩니다.
     * 컴파일된 셰이더 개체(VertextShader.cso, VertexShaderFlat.cso, PixelShader.cso, PixelShaderFlat.cso). 자세한 내용은 [다양한 셰이더 파일 형식](tutorial--assembling-the-rendering-pipeline.md#various-shader-file-formats)으로 이동합니다.
-    * 특정 질감 게임 (자산\\seafloor.dds metal_texture.dds, cellceiling.dds, cellfloor.dds, cellwall.dds).
+    * game 특정 질감 (자산\\seafloor, metal_texture, 셀, 셀)입니다.
 
 ```cpp
 task<void> GameRenderer::CreateGameDeviceResourcesAsync(_In_ Simple3DGame^ game)
@@ -297,7 +297,7 @@ task<void> GameRenderer::CreateGameDeviceResourcesAsync(_In_ Simple3DGame^ game)
     D3D11_SAMPLER_DESC sampDesc;
 
     // ZeroMemory fills a block of memory with zeros. 
-    // For API ref, go to: https://msdn.microsoft.com/en-us/library/windows/desktop/aa366920(v=vs.85).aspx
+    // For API ref, go to: https://msdn.microsoft.com/library/windows/desktop/aa366920(v=vs.85).aspx
     ZeroMemory(&sampDesc, sizeof(sampDesc));
 
     sampDesc.Filter = D3D11_FILTER_MIN_MAG_MIP_LINEAR;
@@ -363,8 +363,8 @@ __FinalizeCreateGameDeviceResources__ 메서드는 __CreateGameDeviceResourcesAs
 __FinalizeCreateGameDeviceResources__ 및 [__CreateWindowSizeDependentResources__](#createwindowsizedependentresource-method)는 다음과 코드의 유사한 부분을 공유합니다.
 * __SetProjParams__를 사용하여 카메라에 오른쪽 투영 행렬이 있는지 확인합니다. 자세한 내용은 [카메라 및 좌표 공간](tutorial--assembling-the-rendering-pipeline.md#camera-and-coordinate-space)을 참조하세요.
 * 3D 회전 행렬을 카메라의 투영 행렬에 곱하는 포스트로 화면 회전을 처리합니다. 그런 다음 __ConstantBufferChangeOnResize__ 상수 버퍼를 결과 투영 행렬로 업데이트합니다.
-* 설정 된 __m\_gameResourcesLoaded__ __부울__ 리소스 버퍼에서 다음 단계에 대 한 준비에서 이제 로드 되어 있음을 나타내기 위해 전역 변수입니다. 처음에 __GameRenderer::CreateDeviceDependentResources__ 메서드를 통해 __GameRenderer__의 생성자 메서드에서 이 변수를 __FALSE__로 초기화했습니다. 
-* 때이 __m\_gameResourcesLoaded__ 됩니다 __TRUE__, 장면 개체의 렌더링을 수행할 수 있습니다. 검사 된이 __렌더링 프레임 워크 i: 렌더링에 대 한 소개__ 문서를 아래 [ __GameRenderer::Render 메서드__](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method)합니다.
+* __GameResourcesLoaded__ __부울__ 전역 변수를\_설정 하 여 리소스가 버퍼에 로드 되었음을 표시 하 고 다음 단계를 준비 합니다. 처음에 __GameRenderer::CreateDeviceDependentResources__ 메서드를 통해 __GameRenderer__의 생성자 메서드에서 이 변수를 __FALSE__로 초기화했습니다. 
+* 이 __m\_gameResourcesLoaded__ 가 __TRUE__인 경우 장면 개체 렌더링이 수행 될 수 있습니다. 이는 이전에 [__GameRenderer::Render 메서드__](tutorial--assembling-the-rendering-pipeline.md#gamerendererrender-method) 아래의 __렌더링 프레임워크 I: 렌더링 소개__ 문서에서 다루었습니다.
 
 ```cpp
 // When creating this sample game using the DirectX 11 App template, this method needs to be created.
@@ -581,7 +581,7 @@ void GameRenderer::FinalizeCreateGameDeviceResources()
 
 ## <a name="createwindowsizedependentresource-method"></a>CreateWindowSizeDependentResource 메서드
 
-CreateWindowSizeDependentResources 메서드는 창 크기, 방향, 스테레오 활성화 렌더링, 또는 해상도 변경 시마다 호출됩니다. 프로젝션 매트릭스의 업데이트 샘플 게임에서 __ConstantBufferChangeOnResize__합니다.
+CreateWindowSizeDependentResources 메서드는 창 크기, 방향, 스테레오 활성화 렌더링, 또는 해상도 변경 시마다 호출됩니다. 샘플 게임에서는 __ConstantBufferChangeOnResize__의 프로젝션 매트릭스를 업데이트 합니다.
 
 창 크기 리소스는 이러한 방식으로 업데이트됩니다. 
 * 앱 프레임워크는 창 상태의 변경을 나타내는 몇 가지 가능한 이벤트 중 하나를 가져옵니다. 

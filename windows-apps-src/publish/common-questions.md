@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6875f5b06bbd253b7fe80fbc53936fe0dcf1a6b9
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c44f93676fd0324ef82ad7b33832bb6653409cda
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57597068"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685160"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>광고 캠페인에 대한 일반적인 질문
 
@@ -25,11 +25,11 @@ ms.locfileid: "57597068"
 
 ### <a name="can-i-run-ads-for-one-of-my-apps-in-my-other-apps"></a>내 다른 앱에서 내 앱 중 하나에 대한 광고를 실행할 수 있나요?
 
-예. *하우스 광고*라는 이러한 광고를 무료로 실행할 수 있습니다! [이 문서](about-house-ads.md)에서 커뮤니티 광고에 대한 자세한 내용을 확인하세요.
+그렇습니다. *하우스 광고*라는 이러한 광고를 무료로 실행할 수 있습니다! [이 문서](about-house-ads.md)에서 커뮤니티 광고에 대한 자세한 내용을 확인하세요.
 
 ### <a name="can-i-cross-promote-my-app-with-apps-from-other-developers-in-the-store"></a>스토어에서 다른 개발자의 앱과 함께 앱을 서로 홍보할 수 있나요?
 
-예. *커뮤니티 광고*라는 이러한 광고를 무료로 실행할 수 있습니다! [커뮤니티 광고에 옵트인(opt in)](about-community-ads.md#opt-in-to-community-ads)하고 [무료 커뮤니티 광고 캠페인을 만들면](create-an-ad-campaign-for-your-app.md) 앱은 커뮤니티 광고에 옵트인(opt in)한 다른 개발자와 홍보용 광고 공간을 공유합니다. 자세한 내용은 [이 문서](about-community-ads.md)에서 확인하세요.
+그렇습니다. *커뮤니티 광고*라는 이러한 광고를 무료로 실행할 수 있습니다! [커뮤니티 광고에 옵트인(opt in)](about-community-ads.md#opt-in-to-community-ads)하고 [무료 커뮤니티 광고 캠페인을 만들면](create-an-ad-campaign-for-your-app.md) 앱은 커뮤니티 광고에 옵트인(opt in)한 다른 개발자와 홍보용 광고 공간을 공유합니다. 자세한 내용은 [이 문서](about-community-ads.md)에서 확인하세요.
 
 ### <a name="how-can-i-customize-my-ad"></a>내 광고는 어떻게 사용자 지정할 수 있나요?
 
@@ -37,7 +37,7 @@ ms.locfileid: "57597068"
 
 ### <a name="where-will-my-ad-appear"></a>내 광고는 어디에 나타납니까?
 
-광고는 앱의 연령별 등급 및 OS 버전을 공유하는 앱에 표시됩니다. Microsoft Store 앱을 게시할 때 이러한 속성을 설정 합니다. "유니버설" 캠페인의 경우 광고가 MSN.com, Outlook.com, Skype 및 기타 Microsoft 프리미엄 제품에도 표시됩니다.
+광고는 앱의 연령별 등급 및 OS 버전을 공유하는 앱에 표시됩니다. Microsoft Store에서 앱을 게시할 때 이러한 속성을 설정 합니다. "유니버설" 캠페인의 경우 광고가 MSN.com, Outlook.com, Skype 및 기타 Microsoft 프리미엄 제품에도 표시됩니다.
 
 광고 캠페인은 현재 다음 국가 및 지역에서 지원됩니다.
 
@@ -59,5 +59,5 @@ ms.locfileid: "57597068"
 
 ### <a name="how-do-i-delete-a-credit-card-or-edit-the-details-of-a-credit-card"></a>어떻게 신용 카드를 삭제하거나 신용 카드의 세부 정보를 편집하나요?
 
-로 <http://commerce.microsoft.com>, Microsoft 계정 자격 증명을 사용 하 여 로그인 하 고 필요한 변경을 수행 합니다.
+[https://commerce.microsoft.com](https://commerce.microsoft.com)로 이동 하 여 Microsoft 계정 자격 증명으로 로그인 하 고 필요한 사항을 변경 합니다.
 

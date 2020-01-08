@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 대상 제품, 제품, 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: 549e09dc71941b1519ebf60918e5c0a22be7a6ed
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.openlocfilehash: fd4cf135e5129ed4f3dbdbcebfb2003e7573182a
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63788234"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685103"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a>대상 제품을 사용하여 참여 및 변환 최대화
 
@@ -23,16 +23,16 @@ ms.locfileid: "63788234"
 
 대상 제품을 사용하려면 상위 수준에서 세 가지를 수행해야 합니다.
 
-1. **제품을 만들 [파트너 센터](https://partner.microsoft.com/dashboard)합니다.** **참여 > 대상 제품** 페이지로 이동해 대상 제품을 만듭니다. 이 프로세스에 대한 자세한 내용은 다음과 같습니다.
-2. **앱에서 경험을 구현 합니다.** 사용 된 *API를 제공 하는 Microsoft Store 대상으로* 지정된 된 사용자에 대 한 사용 가능한 서비스를 검색 하는 앱의 코드에서. 또 대상 제품에 대한 앱 내 환경을 만들어야 합니다. 자세한 내용은 [스토어 서비스를 사용하여 대상 제품 관리](../monetize/manage-targeted-offers-using-windows-store-services.md)를 참조하세요.
-3. **앱 스토어에 제출 합니다.** 대상 제품(들)을 고객이 사용할 수 있도록 앱 내 대상 제품 경험을 구현한 상태에서 앱을 게시해야 합니다.
+1. **[파트너 센터](https://partner.microsoft.com/dashboard)에서 제품을 만듭니다.** **참여 > 대상 제품** 페이지로 이동해 대상 제품을 만듭니다. 이 프로세스에 대한 자세한 내용은 다음과 같습니다.
+2. **앱에서 제공 하는 환경을 구현 합니다.** 앱의 코드에서 *대상 제공 제품 API Microsoft Store* 사용 하 여 지정 된 사용자에 게 제공 되는 제품을 검색 합니다. 또 대상 제품에 대한 앱 내 환경을 만들어야 합니다. 자세한 내용은 [스토어 서비스를 사용하여 대상 제품 관리](../monetize/manage-targeted-offers-using-windows-store-services.md)를 참조하세요.
+3. **스토어에 앱을 제출 합니다.** 대상 제품(들)을 고객이 사용할 수 있도록 앱 내 대상 제품 경험을 구현한 상태에서 앱을 게시해야 합니다.
 
 이 단계를 완료하면, 앱을 사용하는 고객이 대상 제품과 관련된 세그먼트(들)의 구성원 자격 여부에 따라 해당 시점에 사용 가능한 대상 제품을 확인할 수 있습니다. Microsoft는 여러분의 고객들에게 사용 가능한 모든 대상 제품을 제시하기 위해 모든 노력을 다할 것입니다. 그러나 대상 제품 사용에 영향을 주는 문제들이 간헐적으로 발생할 수 있습니다.
 
 
 ## <a name="to-create-and-send-a-targeted-offer"></a>대상 제품 만들기 및 보내기
 
-1.  [파트너 센터](https://partner.microsoft.com/dashboard)를 확장 하 고 **참여** 왼쪽된 탐색 메뉴에서 선택한 **제품을 대상으로**입니다.
+1.  [파트너 센터](https://partner.microsoft.com/dashboard)에서 왼쪽 탐색 메뉴의 **참여** 를 확장 한 다음 **대상 제품**을 선택 합니다.
 2.  **대상 제품** 페이지에서 사용 가능한 대상 제품을 확인합니다. 구현하고 싶은 대상 제품에 대해 **새 대상 제품 만들기**를 선택합니다.
 
     > [!NOTE]
@@ -42,13 +42,13 @@ ms.locfileid: "63788234"
 4.  또 다른 대상 제품을 만들려면 2단계와 3단계를 반복합니다. 각 대상 제품에서 서로 다른 추가 기능을 선택하기만 하면 동일한 앱에 동일한 대상 제품을 한 차례 이상 구현할 수 있습니다. 또 동일한 추가 기능에 여러 개의 대상 제품 유형을 연결할 수 있습니다.
 5.  대상 제품 만들기를 마쳤으면 **저장**을 클릭합니다.
 
-제품에 구현한 후에 반환할 수 있습니다 합니다 **제품을 대상으로** 각 제품에 대 한 총 변환을 보려는 파트너 센터의 페이지입니다.
+제품을 구현한 후 파트너 센터의 **대상 제공** 페이지로 돌아와서 각 제품에 대 한 총 변환을 볼 수 있습니다.
 
 대상 제품을 사용하지 않기로 결정했다면(또는 더 이상 사용하지 않는 경우), **삭제**를 클릭합니다.
 
 > [!IMPORTANT]
 > 특정 사용자를 대상으로 사용 가능한 대상 제품을 검색하고 앱 내 경험을 구현하기 위한 코드를 게시했는지 확인합니다. 자세한 내용은 [스토어 서비스를 사용하여 대상 제품 관리](../monetize/manage-targeted-offers-using-windows-store-services.md)를 참조하세요.
 >
-> 대상 제품 콘텐츠를 고려할 때, 앱 콘텐츠와 마찬가지로 대상 제품의 콘텐츠는 스토어 [콘텐츠 정책](https://docs.microsoft.com/en-us/legal/windows/agreements/store-policies)을 준수해야 한다는 점에 유의하세요.
+> 대상 제품 콘텐츠를 고려할 때, 앱 콘텐츠와 마찬가지로 대상 제품의 콘텐츠는 스토어 [콘텐츠 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)을 준수해야 한다는 점에 유의하세요.
 >
 > 여러분의 앱을 사용하는 고객(또는 고객층 멤버 자격을 판단할 때 Microsoft 계정으로 로그인이 된) 장치를 다른 사람에게 사용하라고 주었을 경우, 원래 목표한 고객이 아닌 다른 사람이 대상 제품을 확인할 수 있음을 기억하세요.

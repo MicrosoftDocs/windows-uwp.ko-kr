@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: 4772edb9c99426396b7fa3a8734e2f45391c3a0f
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 346639a222228ce74d68735d2223815585d1ca08
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257828"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681914"
 ---
 # <a name="windows-app-certification-kit"></a>Windows 앱 인증 키트
 
 
 
-앱을 인증 하기 위해 [Windows 인증](https://msdn.microsoft.com/windows/desktop/jj134964.aspx) 을 받거나 [Microsoft Store 게시](https://docs.microsoft.com/windows/uwp/publish/app-submissions)를 위해 준비 하려면 먼저 로컬에서 유효성을 검사 하 고 테스트 해야 합니다. 이 항목에서는 [Windows 앱 인증 키트](https://msdn.microsoft.com/en-US/windows/apps/bg127575) 를 설치 하 고 실행 하 여 앱이 안전 하 고 효율적인 지 확인 하는 방법을 보여 줍니다.
+앱을 인증 하기 위해 [Windows 인증](https://docs.microsoft.com/windows/win32/win_cert/windows-certification-portal) 을 받거나 [Microsoft Store 게시](https://docs.microsoft.com/windows/uwp/publish/app-submissions)를 위해 준비 하려면 먼저 로컬에서 유효성을 검사 하 고 테스트 해야 합니다. 이 항목에서는 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit) 를 설치 하 고 실행 하 여 앱이 안전 하 고 효율적인 지 확인 하는 방법을 보여 줍니다.
 
 ## <a name="prerequisites"></a>전제 조건
 

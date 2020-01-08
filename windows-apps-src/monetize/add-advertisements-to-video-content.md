@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 비디오, 스케줄러, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a214288c778505d16707fd64391a9b8cedbbb32
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 6178758cd67471d56b1d65e293104e987e81fb9b
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260353"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681924"
 ---
 # <a name="show-ads-in-video-content"></a>비디오 콘텐츠에 광고 표시
 
@@ -70,7 +70,7 @@ ms.locfileid: "74260353"
     > [!NOTE]
     > 이 줄은 `<head>` 섹션에서 main.js를 포함한 후에 추가해야 합니다. 그러지 않으면 프로젝트를 빌드할 때 오류가 발생합니다.
 
-6.  프로젝트의 main.js 파일에 새 **AdScheduler** 개체를 만드는 코드를 추가합니다. 비디오 콘텐츠를 호스트하는 **MediaPlayer**를 전달합니다. 이 코드는 [WinJS.UI.processAll](https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh440975) 후에 실행되도록 배치해야 합니다.
+6.  프로젝트의 main.js 파일에 새 **AdScheduler** 개체를 만드는 코드를 추가합니다. 비디오 콘텐츠를 호스트하는 **MediaPlayer**를 전달합니다. 이 코드는 [WinJS.UI.processAll](https://docs.microsoft.com/previous-versions/windows/apps/hh440975) 후에 실행되도록 배치해야 합니다.
 
     [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet2)]
 

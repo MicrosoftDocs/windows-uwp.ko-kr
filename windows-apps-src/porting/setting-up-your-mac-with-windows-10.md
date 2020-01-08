@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 55165e0369c6bda64c19dc384c5c2addf224b8ba
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: b8ff6d6b3b15992f0598bfb371e6bfb1023d6dc1
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259114"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684999"
 ---
 # <a name="setting-up-your-mac-with-windows-10"></a>Windows 10에서 Mac 설정
 
@@ -24,7 +24,7 @@ ms.locfileid: "74259114"
 
 **참고**  디스크 또는 USB 플래시 드라이브에 Windows 10 부팅 가능 이미지가 필요 합니다. MSDN 구독자인 경우 MSDN 구독자 다운로드 센터에서 설치 이미지를 다운로드할 수 있습니다. 구독자가 아닌 경우 [Microsoft Store](https://www.microsoft.com/store/apps)에서 설치 관리자를 구입할 수 있습니다. 이미 Windows를 실행하고 있으며 업그레이드하려는 경우에는 [이 위치](https://www.microsoft.com/software-download/windows10)에서 다운로드하는 것이 유용할 수도 있습니다.
 
-Windows를 실행 한 후 [에는 windows 10 용 개발자 다운로드](https://developer.microsoft.com/en-us/windows/downloads) 에서 최신 버전의 Visual Studio를 설치 하 고 앱 작성을 시작할 수 있습니다.
+Windows를 실행 한 후 [에는 windows 10 용 개발자 다운로드](https://developer.microsoft.com/windows/downloads) 에서 최신 버전의 Visual Studio를 설치 하 고 앱 작성을 시작할 수 있습니다.
 
 **참고**  Visual Studio 장치 에뮬레이터를 사용 하려는 경우 64 비트 (x64) 버전의 Windows 10 Pro 이상 버전을 설치 **해야** 합니다. 하지만 일부 이전 Mac은 64비트 Windows를 실행할 수 없습니다. Apple에 문의하여 이 [Apple 지원 페이지](https://support.apple.com/kb/HT5634)에서 하드웨어가 호환되는지 확인하세요.
 

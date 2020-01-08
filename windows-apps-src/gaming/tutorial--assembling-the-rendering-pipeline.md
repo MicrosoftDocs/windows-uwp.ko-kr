@@ -6,16 +6,16 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
-ms.openlocfilehash: 0eeb515f07d9bc2e48ba97f6ef4d71afd0226ace
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8daf07d08dd760da680044938e9a6601e41108d3
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367728"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685022"
 ---
-# <a name="rendering-framework-i-intro-to-rendering"></a>렌더링 프레임 워크 i: 렌더링 소개
+# <a name="rendering-framework-i-intro-to-rendering"></a>렌더링 프레임워크 I: 렌더링 소개
 
-지금까지 UWP(유니버설 Windows 플랫폼) 게임을 구조화하는 방법과 게임의 흐름을 처리하도록 상태 시스템을 정의하는 방법에 대해 살펴보았습니다. 이제, 렌더링 프레임워크를 어셈블하는 방법에 대해 알아볼 차례입니다. 샘플 게임 Direct3D 11 (DirectX 11 라고 함)를 사용 하 여 게임 장면을 렌더링 하는 방법에 대해 살펴보겠습니다.
+지금까지 UWP(유니버설 Windows 플랫폼) 게임을 구조화하는 방법과 게임의 흐름을 처리하도록 상태 시스템을 정의하는 방법에 대해 살펴보았습니다. 이제, 렌더링 프레임워크를 어셈블하는 방법에 대해 알아볼 차례입니다. 샘플 게임에서 Direct3D 11 (일반적으로 DirectX 11 이라고 함)을 사용 하 여 게임 장면을 렌더링 하는 방법을 살펴보겠습니다.
 
 >[!Note]
 >이 샘플의 최신 게임 코드를 다운로드하지 않은 경우 [Direct3D 게임 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX)로 이동합니다. 이 샘플은 UWP 기능 샘플의 큰 컬렉션의 일부입니다. 샘플을 다운로드하는 방법에 대한 지침은 [GitHub에서 UWP 샘플 가져오기](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)를 참조하세요.
@@ -36,9 +36,9 @@ UWP DirectX 게임에 그래픽 출력을 표시하도록 기본 렌더링 프�
 
 이 문서에서는 그래픽 렌더링 과정을 1 ~ 3단계로 설명합니다.
 
-[렌더링 프레임 워크 II: 게임 렌더링](tutorial-game-rendering.md) 2 단계; 렌더링 프레임 워크를 설정 하는 방법 및 렌더링 발생 수 전에 데이터가 준비 되는 방법에 대해 설명 합니다.
+[렌더링 프레임 워크 II: 게임 렌더링](tutorial-game-rendering.md)은 2단계에 해당하며, 렌더링 프레임워크를 설정하는 방법과 렌더링에 앞서 데이터를 준비하는 방법을 보여줍니다.
 
-## <a name="get-started"></a>시작
+## <a name="get-started"></a>시작하기
 
 시작에 앞서 기본적인 그래픽 및 렌더링 개념을 숙지해야 합니다. Direct3D 및 렌더링 개념을 처음 접하셨다면 [용어 및 개념](#terms-and-concepts)을 참조하여 이 문서에서 사용되는 그래픽 및 렌더링 용어에 대해 간략히 숙지하세요.
 
@@ -50,7 +50,7 @@ UWP DirectX 게임에 그래픽 출력을 표시하도록 기본 렌더링 프�
 
 렌더링을 위해 하드웨어에 액세스하는 방법은 [__App::Initialize__](tutorial--building-the-games-uwp-app-framework.md#appinitialize-method) 아래의 UWP 프레임워크 문서를 참조하세요.
 
-합니다 __확인\_함수를 공유__표시 된 것 처럼 [아래](#appinitialize-method)를 만드는 데 사용 되는 __공유\_ptr__ 를 [ __DX::D eviceResources__](#dxdeviceresources), 장치에 대 한 액세스도 제공 하는 합니다. 
+[아래](#appinitialize-method)와 같이 __\_공유 함수__를 사용 하 여 [__DX::D eviceresources__](#dxdeviceresources)에 대 한 __공유\_ptr__ 을 만듭니다 .이를 통해 장치에 대 한 액세스도 제공 합니다. 
 
 Direct3D 11에서는 [디바이스](#device)가 개체의 할당 및 삭제, 원형 렌더링, 그래픽 드라이버를 통한 그래픽 카드와의 통신에 사용됩니다.
 
@@ -75,8 +75,8 @@ void App::Initialize(
 
 간단한 흐름은 다음과 같습니다.
 1. __업데이트__
-2. __Render__
-3. __현재__
+2. __렌더링__
+3. __있음__
 
 ### <a name="gamemainrun-method"></a>GameMain::Run 메서드
 
@@ -122,7 +122,7 @@ void GameMain::Run()
 }
 ```
 
-### <a name="update"></a>Update
+### <a name="update"></a>탭을
 
 [  __App::Update__ and __GameMain::Update__](tutorial-game-flow-management.md#appupdate-method) 메서드에서 게임 상태를 업데이트하는 방법에 대한 자세한 내용은 [게임 흐름 관리](tutorial-game-flow-management.md) 문서를 참조하세요.
 
@@ -130,7 +130,7 @@ void GameMain::Run()
 
 __GameMain::Run__에서 [__GameRenderer::Render__](#gamerendererrender-method) 메서드를 호출하면 렌더링이 실행됩니다.
 
-[스테레오 렌더링](#stereo-rendering)이 활성화되어 있으면 두 가지 렌더링 패스가 존재하는데, 하나는 오른쪽 눈을 위한 것이고 다른 하나는 왼쪽 눈을 위한 것입니다. 각 렌더링 패스에서 렌더링 대상과 깊이 스텐실 뷰에 바인딩하기만 장치입니다. 깊이 - 스텐실 보기는 이후에 삭제가 됩니다.
+[스테레오 렌더링](#stereo-rendering)이 활성화되어 있으면 두 가지 렌더링 패스가 존재하는데, 하나는 오른쪽 눈을 위한 것이고 다른 하나는 왼쪽 눈을 위한 것입니다. 각 렌더링 패스에서 렌더링 대상과 깊이 스텐실 뷰를 장치에 바인딩합니다. 깊이 - 스텐실 보기는 이후에 삭제가 됩니다.
 
 > [!Note]
 > 꼭지점 인스턴스화나 기하 도형 셰이더를 사용하는 단일 패스 스테레오 같은 다른 메서드를 사용해 스테레오 렌더링을 수행할 수 있습니다. 두 개의 렌더링 패스 메서드를 사용하면 느리지만 보다 편리하게 스테레오 렌더링을 수행할 수 있습니다.
@@ -146,10 +146,10 @@ __GameMain::Run__에서 [__GameRenderer::Render__](#gamerendererrender-method) �
 
 입력 꼭지점 레이아웃을 사용하여 Direct3D 컨텍스트를 설정합니다. 입력 - 레이아웃 개체는 꼭지점 버퍼 데이터가 [렌더링 파이프라인](#rendering-pipeline)에 어떻게 스트리밍되는지 설명합니다. 
 
-다음으로 사용 되는 이전에 정의 된 상수 버퍼를 사용 하도록 Direct3D 컨텍스트를 설정 해야 합니다 [꼭 짓 점 셰이더](#vertex-shaders-and-pixel-shaders) 파이프라인 단계의 하며 [픽셀 셰이더](#vertex-shaders-and-pixel-shaders) 파이프라인 단계의 합니다. 
+다음으로, 이전에 정의 된 상수 버퍼를 사용 하도록 Direct3D 컨텍스트를 설정 합니다 .이는 [꼭 짓 점 셰이더](#vertex-shaders-and-pixel-shaders) 파이프라인 단계와 [픽셀 셰이더](#vertex-shaders-and-pixel-shaders) 파이프라인 단계에서 사용 됩니다. 
 
 > [!Note]
-> 참조 [렌더링 프레임 워크 II: 게임 렌더링](tutorial-game-rendering.md) 상수 버퍼 정의 대 한 자세한 내용은 합니다.
+> 상수 버퍼의 정의에 대한 자세한 내용은 [렌더링 프레임워크 II: 게임 렌더링](tutorial-game-rendering.md)을 참조하세요.
 
 파이프라인에 존재하는 모든 셰이더에서 동일한 입력 레이아웃과 상수 버퍼 집합이 사용되므로 프레임마다 한 번씩 설정됩니다.
 
@@ -334,14 +334,14 @@ void GameRenderer::Render()
 
 장면을 렌더링할 때 렌더링이 필요한 모든 개체를 반복합니다. 각 개체(원형)에 대해 아래 단계가 반복됩니다.
 
-* 상수 버퍼를 업데이트 (__m\_constantBufferChangesEveryPrim__)는 모델을 사용 하 여 [월드 변형 매트릭스](#world-transform-matrix) 및 재질 정보입니다.
-* 합니다 __m\_constantBufferChangesEveryPrim__ 각 개체에 대 한 매개 변수를 포함 합니다.  여기에는 월드 변환 매트릭스에 대한 개체를 비롯하여 조명 계산을 위한 색과 반사 지수 같은 재질 속성이 포함되어 있습니다.
+* 모델의 [세계 변환 매트릭스](#world-transform-matrix) 및 재질 정보를 사용 하 여 상수 버퍼 (__m\_constantBufferChangesEveryPrim__)를 업데이트 합니다.
+* __M\_constantBufferChangesEveryPrim__ 는 각 개체에 대 한 매개 변수를 포함 합니다.  여기에는 월드 변환 매트릭스에 대한 개체를 비롯하여 조명 계산을 위한 색과 반사 지수 같은 재질 속성이 포함되어 있습니다.
 * 메시 개체 데이터가 [렌더링 파이프라인](#rendering-pipeline)의 입력 어셈블러(IA) 단계에 스트리밍될 수 있도록 입력 꼭지점 레이아웃을 사용하도록 Direct3D 컨텍스트를 설정합니다.
 * IA 단계에서 [인덱스 버퍼](#index-buffer)를 사용하도록 Direct3D 컨텍스트를 설정합니다. 원형 정보(유형, 데이터 순서 등)를 제공합니다.
-* 인덱싱된 비 인스턴스 원형을 그리기 위해 그리기 호출을 제출합니다. __GameObject::Render__ 메서드는 원형의 [상수 버퍼](#constant-buffer-or-shader-constant-buffer)를 지정된 원형 고유의 데이터로 업데이트합니다. 그러면 각 원형의 기하 도형을 그릴 수 있도록 컨텍스트에서 __DrawIndexed__가 호출됩니다. 구체적으로 설명하자면 이러한 그리기 호출은 상수 버퍼 데이터에 의해 매개 변수화되어 그래픽 처리 장치(GPU)의 대기열에 명령 및 데이터를 저장합니다. 각 그리기 호출 꼭 짓 점 셰이더를 꼭 짓 점 당 한 번 실행 한 다음 합니다 [픽셀 셰이더](#vertex-shaders-and-pixel-shaders) 기본 형식에 각 삼각형의 모든 픽셀에 대해 한 번입니다. 텍스처는 픽셀 셰이더가 렌더링을 수행하는 데 사용하는 상태의 일부입니다.
+* 인덱싱된 비 인스턴스 원형을 그리기 위해 그리기 호출을 제출합니다. __GameObject::Render__ 메서드는 원형의 [상수 버퍼](#constant-buffer-or-shader-constant-buffer)를 지정된 원형 고유의 데이터로 업데이트합니다. 그러면 각 원형의 기하 도형을 그릴 수 있도록 컨텍스트에서 __DrawIndexed__가 호출됩니다. 구체적으로 설명하자면 이러한 그리기 호출은 상수 버퍼 데이터에 의해 매개 변수화되어 그래픽 처리 장치(GPU)의 대기열에 명령 및 데이터를 저장합니다. 각 그리기 호출에서 꼭 짓 점 마다 한 번씩 꼭 짓 점 셰이더를 실행 한 다음 기본 형식에서 각 삼각형의 픽셀 마다 한 번씩 [픽셀 셰이더](#vertex-shaders-and-pixel-shaders) 를 실행 합니다. 텍스처는 픽셀 셰이더가 렌더링을 수행하는 데 사용하는 상태의 일부입니다.
 
 상수 버퍼가 여러 개인 이유는 다음과 같습니다.
-    * 게임에서는 여러 상수 버퍼를 사용하지만 이러한 버퍼는 원형당 한 번만 업데이트해야 합니다. 앞서 설명했듯이 상수 버퍼는 각 원형에서 실행되는 셰이더에 대한 입력과 같습니다. 일부 데이터는 정적 (__m\_constantBufferNeverChanges__); 프레임을 통해 일부 데이터는 상수 (__m\_constantBufferChangesEveryFrame__), 카메라의 위치와 같은 일부 데이터가 특정 기본 형식으로 해당 색 등 질감 및 (__m\_constantBufferChangesEveryPrim__)
+    * 게임에서는 여러 상수 버퍼를 사용하지만 이러한 버퍼는 원형당 한 번만 업데이트해야 합니다. 앞서 설명했듯이 상수 버퍼는 각 원형에서 실행되는 셰이더에 대한 입력과 같습니다. 일부 데이터는 정적 (__m\_constantBufferNeverChanges__)입니다. 일부 데이터는 카메라의 위치와 같이 프레임 (__m\_constantBufferChangesEveryFrame__)을 통해 일정 합니다. 일부 데이터는 색 및 질감 (__m\_constantBufferChangesEveryPrim__)과 같은 기본 형식에만 적용 됩니다.
     * 게임 렌더러에서는 이러한 입력을 서로 다른 상수 버퍼로 분리하여 CPU 및 GPU에서 사용하는 메모리 대역폭을 최적화합니다. 이러한 접근 방식은 GPU에서 추적해야 하는 데이터의 양을 최소화하는 데도 도움이 됩니다. GPU에는 대형 명령 대기열이 있어서 게임에서 __Draw__를 호출할 때마다 해당 명령이 관련 데이터와 함께 대기열에 저장됩니다. 게임에서 원형 상수 버퍼를 업데이트하고 다음 __Draw__ 명령을 실행하면 그래픽 드라이버에서 이 다음 명령과 관련 데이터를 대기열에 추가합니다. 게임에서 100개의 원형을 그리면 대기열에 상수 버퍼 데이터 복사본 100개가 생성될 수 있습니다. 게임에서 GPU로 보내는 데이터의 양을 최소화하려고 하므로 게임에서는 각 원형에 대한 업데이트만 포함하는 별도의 원형 상수 버퍼를 사용합니다.
 
 #### <a name="gameobjectrender-method"></a>GameObject::Render 메서드
@@ -425,7 +425,7 @@ void MeshObject::Render(\_In\_ ID3D11DeviceContext *context)
 }
 ```
 
-### <a name="present"></a>있음
+### <a name="present"></a>표시
 
 __DX::DeviceResources::Present__ 메서드를 호출하여 배치한 콘텐츠를 버퍼에 저장하고 이를 표시합니다.
 
@@ -473,7 +473,7 @@ void DX::DeviceResources::Present()
 
 ## <a name="next-steps"></a>다음 단계
 
-이 문서에는 디스플레이에서 그래픽이 렌더링되는 방법이 설명되어 있고, 사용되고 있는 일부 렌더링 용어를 간략하게 설명되어 있습니다. 렌더링 하는 방법에 대 한 자세한 정보는 [렌더링 프레임 워크 II: 게임 렌더링](tutorial-game-rendering.md) , 문서를 렌더링 하기 전에 필요한 데이터를 준비 하는 방법을 알아봅니다.
+이 문서에는 디스플레이에서 그래픽이 렌더링되는 방법이 설명되어 있고, 사용되고 있는 일부 렌더링 용어를 간략하게 설명되어 있습니다. [렌더링 프레임워크 II: 게임 렌더링](tutorial-game-rendering.md) 문서에서 렌더링에 대한 자세한 내용을 확인하고 렌더링 전에 필요한 데이터를 준비하는 방법을 알아보세요.
 
 ## <a name="terms-and-concepts"></a>용어 및 개념
 
@@ -490,9 +490,9 @@ void DX::DeviceResources::Present()
 렌더링 파이프라인은 3D 장면 정보가 화면에 표시되는 이미지로 변환되는 프로세스입니다. Direct3D 11에서 이 파이프라인은 프로그래밍이 가능합니다. 렌더링 요구를 지원하도록 단계를 조정할 수 있습니다. 공통 셰이더 코어를 사용하는 단계는 HLSL 프로그래밍 언어를 사용하여 프로그래밍할 수 있습니다. 이를 그래픽 렌더링 파이프라인 또는 간단하게 파이프라인이라고 합니다.
 
 이러한 파이프라인을 손쉽게 만들기 위해서는 다음을 숙지해야 합니다.
-* [HLSL](#HLSL). UWP DirectX 게임에서 HLSL 셰이더 모델 5.1 이상을 사용하는 것이 좋습니다.
-* [셰이더](#Shaders)
-* [꼭 짓 점 셰이더 및 픽셀 셰이더](#vertext-shaders-pixel-shaders)
+* [HLSL](#hlsl). UWP DirectX 게임에서 HLSL 셰이더 모델 5.1 이상을 사용하는 것이 좋습니다.
+* [셰이더](#shaders)
+* [꼭 짓 점 셰이더 및 픽셀 셰이더](#vertex-shaders-and-pixel-shaders)
 * [셰이더 단계](#shader-stages)
 * [다양 한 셰이더 파일 형식](#various-shader-file-formats)
 
@@ -533,11 +533,11 @@ Direct3D 9 셰이더는 셰이더 모델 1, 셰이더 모델 2 및 셰이더 모
 
 Direct3D 11은 게임 같이 그래픽 집약적이어서 집약적 연산을 처리할 수 있는 뛰어난 그래픽 카드가 요구되는 응용 프로그램에서 그래픽을 생성하도록 도와주는 API 집합입니다. 이 섹션에는 리소스, 하위 리소스, 디바이스, 디바이스 컨텍스트와 같은 Direct3D 11 그래픽 프로그램 개념에 대해 간략하게 설명되어 있습니다.
 
-#### <a name="resource"></a>Resource
+#### <a name="resource"></a>리소스
 
-이 개념을 처음 접하는 사람들은 리소스(디바이스 리소스라고도 함)를 텍스처, 위치, 색상 같은 개체를 렌더링하는 방법에 대한 정보로 생각할 수 있습니다. 리소스는 파이프라인에 정보를 제공하고 장면에서 렌더링되는 내용을 정의합니다. 리소스는 게임 미디어에서 로드하거나 실행 시 동적으로 생성할 수 있습니다.
+이 개념을 처음 접하는 사람들은 리소스(디바이스 리소스라고도 함)를 텍스처, 위치, 색상 같은 개체를 렌더링하는 방법에 대한 정보로 생각할 수 있습니다. 리소스는 파이프라인에 정보를 제공하고 장면에서 렌더링되는 내용을 정의합니다. 리소스는 게임 미디어에서 로드하거나 런타임에 동적으로 만들 수 있습니다.
 
-실제로 리소스는 Direct3D [파이프라인](#rendering-pipeline)에서 액세스할 수 있는 메모리의 영역을 뜻합니다. 파이프라인에서 메모리에 효율적으로 액세스하려면 파이프라인에 제공된 데이터(입력 기하 도형, 셰이더 리소스, 텍스처 등)를 리소스에 저장해야 합니다. 모든 Direct3D 리소스가 파생되는 두 가지 리소스 종류는 버퍼와 질감입니다. 각 파이프라인 단계에 최대 128개 리소스를 활성화할 수 있습니다. 자세한 내용은 [Resources](../graphics-concepts/resources.md)를 참조하세요.
+실제로 리소스는 Direct3D [파이프라인](#rendering-pipeline)에서 액세스할 수 있는 메모리의 영역을 뜻합니다. 파이프라인에서 메모리에 효율적으로 액세스하려면 파이프라인에 제공되는 데이터(입력 기하 도형, 셰이더 리소스, 질감 등)를 리소스에 저장해야 합니다. 모든 Direct3D 리소스가 파생되는 두 가지 리소스 종류는 버퍼와 질감입니다. 각 파이프라인 단계마다 최대 128개의 리소스를 활성화할 수 있습니다. 자세한 내용은 [리소스](../graphics-concepts/resources.md)를 참조하세요.
 
 #### <a name="subresource"></a>하위 리소스
 
@@ -549,7 +549,7 @@ Direct3D 11은 게임 같이 그래픽 집약적이어서 집약적 연산을 �
 
 깊이 정보는 다각형의 어떤 영역이 보기에서 숨겨지지 않고 렌더링되는지를 알려줍니다. 스텐실 정보는 어떤 픽셀이 마스킹되는지 알려줍니다. 이 정보는 픽셀이 그려져 있는지 여부를 판단하여 1 또는 0으로 설정하기 때문에 특수 효과를 내는 데 사용할 수 있습니다. 
 
-참조 항목: [깊이 스텐실 뷰](../graphics-concepts/depth-stencil-view--dsv-.md)하십시오 [깊이 버퍼](../graphics-concepts/depth-buffers.md), 및 [스텐실 버퍼](../graphics-concepts/stencil-buffers.md)합니다.
+자세한 내용은 [깊이 - 스텐실 보기](../graphics-concepts/depth-stencil-view--dsv-.md), [깊이 버퍼](../graphics-concepts/depth-buffers.md) 및 [스텐실 버퍼](../graphics-concepts/stencil-buffers.md)를 참조하세요.
 
 #### <a name="render-target"></a>렌더링 대상
 
@@ -567,7 +567,7 @@ Direct3D 11이 처음인 사용자는 개체를 할당 및 삭제하고 원형�
 
 다양한 버전의 ID3D11Device가 있으며, [ID3D11Device5](https://docs.microsoft.com/windows/desktop/api/d3d11_4/nn-d3d11_4-id3d11device5)는 ID3D11Device4에 새 메서드를 추가한 최신 버전입니다. Direct3D가 기반 하드웨어와 어떻게 통신하는지에 대한 자세한 내용은 [Windows 장치 드라이버 모델(WDDM) 아키텍처](https://docs.microsoft.com/windows-hardware/drivers/display/windows-vista-and-later-display-driver-model-architecture)를 참조하세요.
 
-각 응용 프로그램에는 최소 하나의 디바이스가 있어야 하고, 대부분의 응용 프로그램은 오직 하나의 디바이스만 생성합니다. 호출 하 여 컴퓨터에 설치 되어 하드웨어 드라이버 중 하나에 대 한 장치를 만드는 __D3D11CreateDevice__ 하거나 __D3D11CreateDeviceAndSwapChain__ D3D를 사용 하 여 드라이버 종류를 지정 하 고\_ 드라이버\_형식 플래그. 각 디바이스는 원하는 기능에 따라 디바이스 컨텍스트를 하나 이상 사용할 수 있습니다. 자세한 내용은 [D3D11CreateDevice 함수](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice)를 참조하세요.
+각 응용 프로그램에는 최소 하나의 디바이스가 있어야 하고, 대부분의 응용 프로그램은 오직 하나의 디바이스만 생성합니다. __D3D11CreateDevice__ 또는 __D3D11CreateDeviceAndSwapChain__ 를 호출 하 고 D3D\_드라이버\_유형 플래그를 사용 하 여 드라이버 유형을 지정 하 여 컴퓨터에 설치 된 하드웨어 드라이버 중 하나에 대 한 장치를 만듭니다. 각 디바이스는 원하는 기능에 따라 디바이스 컨텍스트를 하나 이상 사용할 수 있습니다. 자세한 내용은 [D3D11CreateDevice 함수](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice)를 참조하세요.
 
 #### <a name="device-context"></a>디바이스 컨텍스트
 
@@ -577,7 +577,7 @@ Direct3D 11은 두 가지 유형의 디바이스 컨텍스트를 구현하는데
 
 __ID3D11DeviceContext__ 인터페이스는 다양한 버전이 있으며, __ID3D11DeviceContext4__는 __ID3D11DeviceContext3__에 새 메서드를 추가한 버전입니다.
 
-참고: __ID3D11DeviceContext4__ 의 최신 버전 이며 Windows 10 크리에이터 스 업데이트에서 도입 된 합니다 __ID3D11DeviceContext__ 인터페이스입니다. Windows 10 크리에이터스 업데이트를 대상으로 하는 응용 프로그램은 이전 버전이 아니라 이 버전의 인터페이스를 사용해야 합니다. 자세한 내용은 [ID3D11DeviceContext4](https://docs.microsoft.com/windows/desktop/api/d3d11_3/nn-d3d11_3-id3d11devicecontext4)를 참조하세요.
+참고: Windows 10 크리에이터스 업데이트에 도입된 __ID3D11DeviceContext4__는 __ID3D11DeviceContext__ 인터페이스의 최신 버전입니다. Windows 10 크리에이터스 업데이트를 대상으로 하는 응용 프로그램은 이전 버전이 아니라 이 버전의 인터페이스를 사용해야 합니다. 자세한 내용은 [ID3D11DeviceContext4](https://docs.microsoft.com/windows/desktop/api/d3d11_3/nn-d3d11_3-id3d11devicecontext4)를 참조하세요.
 
 #### <a name="dxdeviceresources"></a>DX::DeviceResources
 
@@ -587,7 +587,7 @@ __DX::DeviceResources__ 클래스는 __DeviceResources.cpp__/ __.h__ 파일에 �
 
 버퍼 리소스는 완벽하게 입력된 데이터를 수집한 것이며 요소로 그룹화됩니다. 버퍼를 사용하면 위치 벡터, 법선 벡터, 꼭지점 버퍼의 텍스처 좌표, 인덱스 버퍼의 인덱스, 디바이스 상태 같이 다양한 데이터를 저장할 수 있습니다. 버퍼 요소에는 압축된 데이터 값(R8G8B8A8 표면 값), 8비트 정수 하나 또는 32비트 부동 소수점 값 네 개가 포함될 수 있습니다.
 
-세 가지 유형의 버퍼는 사용할 수 있습니다. 꼭 짓 점 버퍼, 인덱스 버퍼 및 상수 버퍼입니다.
+버퍼의 유형은 꼭지점 버퍼, 인덱스 버퍼, 상수 버퍼 등 세 가지입니다.
 
 #### <a name="vertex-buffer"></a>꼭지점 버퍼
 
@@ -616,7 +616,7 @@ __ID3D11Buffer__ 인터페이스에서 모든 버퍼 형식이 캡슐화되므�
 
 ### <a name="dxgi"></a>DXGI
 
-Microsoft DirectX 그래픽 인프라 (DXGI)는 일부의 Direct3D 10에 필요한 하위 수준 작업을 캡슐화 하는 Windows vista에 도입 된 새로운 하위 시스템을 10.1, 11 및 11.1 합니다. 교착 상태가 발생하지 않도록 하려면 다중 스레딩된 응용 프로그램에서 DXGI를 사용할 때 특히 주의를 기울여야 합니다. 자세한 내용은 참조 하세요. [DirectX 그래픽 인프라 (DXGI): 모범 사례-다중 스레딩](https://docs.microsoft.com/windows/desktop/direct3darticles/dxgi-best-practices)
+Microsoft DXGI (DirectX Graphics Infrastructure)는 Direct3D 10, 10.1, 11 및 11.1에 필요한 하위 수준 작업 중 일부를 캡슐화 하는 Windows Vista에 도입 된 새로운 하위 시스템입니다. 교착 상태가 발생하지 않도록 하려면 다중 스레딩된 응용 프로그램에서 DXGI를 사용할 때 특히 주의를 기울여야 합니다. 자세한 내용은 [DirectX Graphics Infrastructure(DXGI): 모범 사례 - 다중 스레딩](https://docs.microsoft.com/windows/desktop/direct3darticles/dxgi-best-practices)을 참조하세요.
 
 ### <a name="feature-level"></a>기능 수준
 
@@ -624,9 +624,9 @@ Microsoft DirectX 그래픽 인프라 (DXGI)는 일부의 Direct3D 10에 필요�
 
 각 비디오 카드는 설치된 GPU에 따라 특정 수준의 DirectX 기능을 구현합니다. Microsoft Direct3D의 이전 버전에서는 비디오 카드에 구현된 Direct3D 버전을 찾아서 그에 따라 응용 프로그램을 프로그래밍할 수 있었습니다. 
 
-기능 수준을 사용하면 디바이스를 만들 때 요청하고자 하는 기능 수준에 맞게 디바이스를 생성하려고 시도할 있습니다. 디바이스 생성이 진행되면 기능 수준이 지원되는 것이고, 그렇지 않으면 하드웨어에서 기능 수준이 지원되지 않는 것입니다. 더 낮은 기능 수준에서 디바이스를 다시 생성해 보거나 응용 프로그램을 종료하는 방법을 선택할 수 있습니다. 예를 들어 12\_Direct3D 11.3 및 Direct3D 12에서 셰이더 모델 5.1 0 기능 수준이 필요 합니다. 자세한 내용은 참조 하세요. [Direct3D 기능 수준: 각 기능 수준에 대 한 개요](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro)합니다.
+기능 수준을 사용하면 디바이스를 만들 때 요청하고자 하는 기능 수준에 맞게 디바이스를 생성하려고 시도할 있습니다. 디바이스 생성이 진행되면 기능 수준이 지원되는 것이고, 그렇지 않으면 하드웨어에서 기능 수준이 지원되지 않는 것입니다. 더 낮은 기능 수준에서 디바이스를 다시 생성해 보거나 애플리케이션을 종료하는 방법을 선택할 수 있습니다. 예를 들어 12\_0 기능 수준에는 Direct3D 11.3 또는 Direct3D 12와 셰이더 모델 5.1이 필요 합니다. 자세한 내용은 [Direct3D 기능 수준: 각 기능 수준에 대한 개요](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro)를 참조하세요.
 
-기능 수준을 사용 하 여, Direct3D 9, Microsoft Direct3D 10 또는 Direct3D 11에 대 한 응용 프로그램을 개발할 수 있으며 다음 9, 10 또는 11 하드웨어 (몇 가지 예외 포함)에서 실행 수도 있습니다. 자세한 내용은 [Direct3D 기능 수준](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro)을 참조하세요.
+기능 수준을 사용 하 여 Direct3D 9, Microsoft Direct3D 10 또는 Direct3D 11 용 응용 프로그램을 개발 하 고 9, 10 또는 11 하드웨어 (몇 가지 예외 포함)에서 실행할 수 있습니다. 자세한 내용은 [Direct3D 기능 수준](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro)을 참조하세요.
 
 ### <a name="stereo-rendering"></a>스테레오 렌더링
 
@@ -646,14 +646,14 @@ Microsoft DirectX 그래픽 인프라 (DXGI)는 일부의 Direct3D 10에 필요�
 
 V(디바이스) = V(모델) x M(모델 - 월드) x M(월드 - 보기) x M(보기 - 디바이스)
 
-각 항목이 나타내는 의미는 다음과 같습니다. 
+각 항목은 다음을 의미합니다. 
 * M(모델 - 월드)은 모델 좌표를 월드 좌표로 변환하는 매트릭스로, [월드 변환 매트릭스](#world-transform-matrix)라고도 합니다. 이 매트릭스는 원형에서 제공합니다.
 * M(월드 - 보기)는 월드 좌표를 보기 좌표로 변환하는 매트릭스로, [보기 변환 매트릭스](#view-transform-matrix)라고도 합니다.
     * 이 매트릭스는 카메라의 보기 매트릭스에서 제공합니다. 보기 벡터(카메라에서 장면을 직접 가리키는 "정면 보기" 벡터 및 카메라와 수직으로 위쪽을 가리키는 "위 보기" 벡터)와 함께 카메라의 위치에 의해 정의됩니다.
-    * 샘플 게임에서 __m\_viewMatrix__ 뷰 변환 매트릭스는 및를 사용 하 여 계산 됩니다 __Camera::SetViewParams__ 
+    * 샘플 게임에서 __m\_viewMatrix__ 는 뷰 변환 매트릭스 이며 __Camera:: setviewparams__ 를 사용 하 여 계산 됩니다. 
 * M(보기 - 디바이스)은 보기 좌표를 디바이스 좌표로 변환하는 매트릭스로 [투영 변환 매트릭스](#projection-transform-matrix)라고도 합니다.
     * 이 매트릭스는 카메라의 투영에서 제공합니다. 해당 공간에서 어느 정도가 최종 장면에 실제로 표시될 것인지에 대한 정보를 제공합니다. 시야각(FoV), 가로 세로 비율 및 클리핑 평면은 투영 변환 매트릭스를 정의합니다.
-    * 샘플 게임에서 __m\_projectionMatrix__ 변환을 사용 하 여 계산 된 프로젝션 좌표로 정의 __Camera::SetProjParams__ (스테레오 프로젝션에 사용할 두 개의 프로젝션 매트릭스: 각 모니터링 보기에 대 한 합니다.) 
+    * 샘플 게임에서 __m\_projectionMatrix__ 는 __카메라:: SetProjParams__ 를 사용 하 여 계산 되는 프로젝션 좌표에 대 한 변환을 정의 합니다. 스테레오 프로젝션의 경우 각 눈동자 보기에 대해 하나씩 두 개의 프로젝션 매트릭스를 사용 합니다. 
 
 VertexShader.hlsl의 셰이더 코드는 이러한 벡터 및 매트릭스와 함께 상수 버퍼에서 로드되며, 모든 꼭지점에 대해 이 변환을 수행합니다.
 

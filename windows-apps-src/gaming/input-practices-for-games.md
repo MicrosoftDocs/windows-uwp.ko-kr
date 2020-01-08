@@ -1,19 +1,19 @@
 ---
-title: 게임용 입력 시스템
+title: 게임 입력 장치 사용 방법
 description: 입력 장치를 효과적으로 사용하기 위한 패턴 및 기술을 알아봅니다.
 ms.assetid: CBAD3345-3333-4924-B6D8-705279F52676
 ms.date: 11/20/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 입력
 ms.localizationpriority: medium
-ms.openlocfilehash: 73e0ba3e563b57c2e392809097567b7e6739c90d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.openlocfilehash: 8235b2c2029b2bb3b9351263a3c908879b4beba9
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634948"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684987"
 ---
-# <a name="input-practices-for-games"></a>게임용 입력 시스템
+# <a name="input-practices-for-games"></a>게임 입력 장치 사용 방법
 
 이 페이지는 UWP(유니버설 Windows 플랫폼) 게임에서 입력 장치를 효과적으로 사용하기 위한 패턴 및 기술을 설명합니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "57634948"
 
 한편 플레이어에서 컨트롤러를 분리하거나 새 컨트롤러를 연결하면 어떻게 되나요? 이러한 이벤트를 처리하고 이에 따라 목록을 업데이트해야 합니다. 자세한 내용은 [게임 패드 추가 및 제거](gamepad-and-vibration.md#adding-and-removing-gamepads)를 참조하세요(다시 말하지만 컨트롤러 유형마다 자체 주제에 대해 비슷한 이름을 가진 섹션이 존재).
 
-추가 및 제거된 이벤트가 비동기적으로 발생하기 때문에 컨트롤러 목록을 처리할 때 잘못된 결과를 얻을 수 있습니다. 따라서 컨트롤러 목록에 액세스할 때는 언제든지 한번에 오직 하나의 스레드만 하나의 목록에 액세스할 수 있도록 잠금을 설정해야 합니다.  **&lt;ppl.h&gt;** 의 [동시성 런타임](https://docs.microsoft.com/cpp/parallel/concrt/concurrency-runtime), 구체적으로 [critical_section 클래스](https://docs.microsoft.com/cpp/parallel/concrt/reference/critical-section-class)를 통해 이것이 가능합니다.
+추가 및 제거된 이벤트가 비동기적으로 발생하기 때문에 컨트롤러 목록을 처리할 때 잘못된 결과를 얻을 수 있습니다. 따라서 컨트롤러 목록에 액세스할 때는 언제든지 한번에 오직 하나의 스레드만 하나의 목록에 액세스할 수 있도록 잠금을 설정해야 합니다. **&lt;ppl.h&gt;** 의 [동시성 런타임](https://docs.microsoft.com/cpp/parallel/concrt/concurrency-runtime), 구체적으로 [critical_section 클래스](https://docs.microsoft.com/cpp/parallel/concrt/reference/critical-section-class)를 통해 이것이 가능합니다.
 
 또 하나 생각할 것은 연결 컨트롤러 목록이 처음에는 비어있다가 채워지는 데 1 ~ 2초가 걸린다는 사실입니다. 따라서 시작 메서드에서 현재 게임 패드를 할당만 하면 값이 **null**이 됩니다!
 
@@ -298,13 +298,13 @@ if (buttonArrangement == buttonSelection)
 
 ## <a name="get-the-state-of-the-battery"></a>배터리 상태 가져오기
 
-[IGameControllerBatteryInfo](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo) 인터페이스를 구현하는 게임 컨트롤러에서는 컨트롤러 인스턴스에 대한 [TryGetBatteryReport](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo.TryGetBatteryReport)를 호출하여 컨트롤러에 배터리에 대한 정보를 제공하는 [BatteryReport](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport) 개체를 얻을 수 있습니다. 배터리가 충전되고 있는 속도([ChargeRateInMilliwatts](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.ChargeRateInMilliwatts)), 새 배터리의 예상 에너지 용량([DesignCapacityInMilliwattHours](https://docs.microsoft.com/en-us/uwp/api/windows.devices.power.batteryreport.DesignCapacityInMilliwattHours)), 현재 배터리의 완전 충전 시 에너지 용량([FullChargeCapacityInMilliwattHours](https://docs.microsoft.com/en-us/uwp/api/windows.devices.power.batteryreport.FullChargeCapacityInMilliwattHours)) 같은 속성들을 얻을 수 있습니다.
+[IGameControllerBatteryInfo](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo) 인터페이스를 구현하는 게임 컨트롤러에서는 컨트롤러 인스턴스에 대한 [TryGetBatteryReport](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontrollerbatteryinfo.TryGetBatteryReport)를 호출하여 컨트롤러에 배터리에 대한 정보를 제공하는 [BatteryReport](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport) 개체를 얻을 수 있습니다. 배터리가 충전되고 있는 속도([ChargeRateInMilliwatts](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.ChargeRateInMilliwatts)), 새 배터리의 예상 에너지 용량([DesignCapacityInMilliwattHours](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.DesignCapacityInMilliwattHours)), 현재 배터리의 완전 충전 시 에너지 용량([FullChargeCapacityInMilliwattHours](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.FullChargeCapacityInMilliwattHours)) 같은 속성들을 얻을 수 있습니다.
 
 상세 배터리 보고를 지원하는 게임 컨트롤러에서는 [배터리 정보 가져오기](../devices-sensors/get-battery-info.md)에 자세히 설명되어 있는 대로 이 속성과 배터리에 대한 자세한 정보를 얻을 수 있습니다. 그러나 대부분의 게임 컨트롤러는 배터리 보고 수준을 지원하지 않고 대신에 저가 하드웨어를 사용합니다. 이러한 컨트롤러에서는 다음 사항을 항상 유념해야 합니다.
 
 * **ChargeRateInMilliwatts** 및 **DesignCapacityInMilliwattHours**는 항상 **NULL**입니다.
 
-* [RemainingCapacityInMilliwattHours](https://docs.microsoft.com/en-us/uwp/api/windows.devices.power.batteryreport.RemainingCapacityInMilliwattHours) / **FullChargeCapacityInMilliwattHours**를 계산하여 배터리 비율(%)을 얻을 수 있습니다. 이러한 속성의 값을 무시하고 계산된 비율만 처리해야 합니다.
+* [RemainingCapacityInMilliwattHours](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.RemainingCapacityInMilliwattHours) / **FullChargeCapacityInMilliwattHours**를 계산하여 배터리 비율(%)을 얻을 수 있습니다. 이러한 속성의 값을 무시하고 계산된 비율만 처리해야 합니다.
 
 * 이전의 글머리 기호에서의 비율은 항상 다음 중 하나가 됩니다.
 
@@ -317,6 +317,6 @@ if (buttonArrangement == buttonSelection)
 
 ## <a name="see-also"></a>참고 항목
 
-* [Windows.System.User 클래스](https://docs.microsoft.com/uwp/api/windows.system.user)
-* [Windows.Gaming.Input.IGameController 인터페이스](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
-* [Windows.Gaming.Input.GamepadButtons 열거형](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepadbuttons)
+* [Windows. User 클래스](https://docs.microsoft.com/uwp/api/windows.system.user)
+* [IGameController 인터페이스입니다.](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
+* [Windows GamepadButtons 열거형](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepadbuttons)

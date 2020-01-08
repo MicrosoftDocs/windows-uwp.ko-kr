@@ -6,12 +6,12 @@ ms.date: 06/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 48b4df662b990f64adcbfe2e7e03dc5303b2962e
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 0d636b5689d604c0eaa3b66763709251a2445deb
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340429"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685212"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>URI에 대한 기본 앱 실행
 
@@ -28,7 +28,7 @@ URI 스키마를 사용하면 하이퍼링크를 클릭하여 앱을 열 수 있
 
 이 항목에서는 Windows에 기본 제공되는 다음 URI 스키마를 설명합니다.
 
-| URI 체계 | 시작 |
+| URI 스키마 | 시작 |
 | ----------:|----------|
 |[bingmaps:, ms-to: 및 ms 연습:](#maps-app-uri-schemes) | 지도 앱 |
 |[http](#http-uri-scheme) | 기본 웹 브라우저 |
@@ -102,7 +102,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriBing, promptOption
 
 권장 사항은 둘 이상의 앱이 URI 스키마를 처리하도록 등록된 경우에도 유용합니다. 특정 앱을 권장하면 Windows에서 해당 앱(이미 설치된 경우)을 엽니다.
 
-권장하려면 [**LauncherOptions.preferredApplicationPackageFamilyName**](https://docs.microsoft.com/en-us/uwp/api/windows.system.launcher.launchuriasync#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_Windows_System_LauncherOptions_)을 스토어에서 권장하려는 앱의 패키지 패밀리 이름으로 설정하여 [**Windows.System.Launcher.LaunchUriAsync(Uri, LauncherOptions)** ](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname) 메서드를 호출합니다. 운영 체제에서는 이 정보를 사용하여 스토어에서 앱을 검색하는 일반적인 옵션을 스토어에서 권장 앱을 다운로드하는 특정 옵션으로 바꿉니다.
+권장하려면 [**LauncherOptions.preferredApplicationPackageFamilyName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)을 스토어에서 권장하려는 앱의 패키지 패밀리 이름으로 설정하여 [**Windows.System.Launcher.LaunchUriAsync(Uri, LauncherOptions)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_Windows_System_LauncherOptions_) 메서드를 호출합니다. 운영 체제에서는 이 정보를 사용하여 스토어에서 앱을 검색하는 일반적인 옵션을 스토어에서 권장 앱을 다운로드하는 특정 옵션으로 바꿉니다.
 
 ```cs
 // Set the recommended app
@@ -119,7 +119,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 [  **LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)를 호출하는 원본 앱은 URI가 시작된 후 화면에 유지되도록 요청할 수 있습니다. 기본적으로 Windows는 URI를 처리하는 대상 앱과 원본 앱 사이에 모든 사용 가능한 공간을 동일하게 공유하려고 합니다. 원본 앱은 [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview) 속성을 사용하여 앱 창이 거의 모든 사용 가능한 공간을 사용하려고 한다는 것을 운영 체제에 나타냅니다. **DesiredRemainingView**를 사용하여 URI가 시작된 후 원본 앱이 화면에서 유지될 필요가 없고 대상 앱으로 완전히 대체될 수 있다는 것을 나타낼 수도 있습니다. 이 속성은 호출 앱의 기본 창 크기만 지정합니다. 화면에 동시에 나타날 수도 있는 다른 앱의 동작은 지정하지 않습니다.
 
-**참고**  Windows는 원본 앱의 최종 창 크기 (예: 원본 앱의 기본 설정, 화면에 있는 앱의 수, 화면 방향 등)를 결정 하는 여러 가지 요인을 고려 합니다. [  **DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview)를 설정해도 원본 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.
+**참고**  Windows는 원본 앱의 최종 창 크기 (예: 원본 앱의 기본 설정, 화면에 있는 앱의 수, 화면 방향 등)를 결정 하는 여러 가지 요인을 고려 합니다. [  **DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview)를 설정해도 원본 앱에 대한 특정 창 작업 동작이 보장되지 않습니다.
 
 ```cs
 // Set the desired remaining view.
@@ -138,7 +138,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 **ms-call:** URI 스키마를 사용하여 통화 앱을 실행할 수 있습니다.
 
-| URI 체계       | 결과                   |
+| URI 스키마       | 결과                   |
 |------------------|--------------------------|
 | ms-call:settings | 호출 앱 설정 페이지입니다. |
 
@@ -146,7 +146,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 **mailto:** URI 스키마를 사용하여 기본 메일 앱을 실행할 수 있습니다.
 
-| URI 체계 |결과                          |
+| URI 스키마 |결과                          |
 |------------|---------------------------------|
 | mailto:    | 기본 메일 앱을 실행합니다. |
 | mailto:\[전자 메일 주소\] | 메일 앱을 실행하고 받는 사람 줄에 메일 주소를 지정한 새 메서드를 작성합니다. 메일은 사용자가 보내기를 탭해야 전송됩니다. |
@@ -155,7 +155,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 **http:** URI 스키마를 사용하여 기본 웹 브라우저를 실행할 수 있습니다.
 
-| URI 체계 | 결과                           |
+| URI 스키마 | 결과                           |
 |------------|-----------------------------------|
 | http:      | 기본 웹 브라우저를 실행합니다. |
 
@@ -185,7 +185,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 **ms-tonepicker:** URI 스키마를 사용하여 벨소리, 알람 및 시스템 톤을 선택할 수 있습니다. 새 벨소리를 저장하고 톤의 표시 이름을 가져올 수도 있습니다.
 
-| URI 체계 | 결과 |
+| URI 스키마 | 결과 |
 |------------|---------|
 | ms-tonepicker: | 벨소리, 알람 및 시스템 톤을 선택합니다. |
 
@@ -195,7 +195,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 **ms-yellowpage:** URI 스키마를 사용하여 근처 전화 번호 앱을 실행할 수 있습니다.
 
-| URI 체계 | 결과 |
+| URI 스키마 | 결과 |
 |------------|---------|
 | yellowpage:? input =\[키워드\]& method =\[String 또는 T9\] | 근처 전화 번호 앱을 시작합니다.<br>`input`는 검색 하려는 키워드를 참조 합니다.<br>`method`는 검색 유형 (문자열 또는 T9 검색)을 참조 합니다.<br>`method`가 `T9`(키보드의 일종)인 경우 `keyword`는 검색할 T9 키보드 문자에 매핑되는 숫자 문자열이어야 합니다.<br>`method`가 `String`인 경우 `keyword`는 검색할 키워드입니다. |
 
@@ -242,6 +242,6 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 **Msnweather:** URI 체계를 사용 하 여 날씨 앱을 시작 합니다.
 
-| URI 체계 | 결과 |
+| URI 스키마 | 결과 |
 |------------|---------|
 | msnweather:/? la =\[위도\]&//\[경도\] | 위치 지리 좌표를 기준으로 예측 페이지에서 날씨 앱을 시작 합니다.<br>`latitude`는 위치의 위도를 나타냅니다.<br> `longitude`는 위치의 경도를 나타냅니다.<br> |

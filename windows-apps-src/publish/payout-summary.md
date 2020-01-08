@@ -6,12 +6,12 @@ ms.date: 08/02/2019
 ms.topic: article
 keywords: Windows 10, uwp, 지급액 요약, 내역서, 결제, 수익, 지급액, 결제, 수익
 ms.localizationpriority: medium
-ms.openlocfilehash: d609af268cfe304b34797cea4bf91e36d1475c29
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: aff36ace40317ff0b2ff54a8ca75381fe2c24a4e
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259011"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684988"
 ---
 # <a name="payout-summary"></a>지급 요약
 
@@ -47,27 +47,27 @@ Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공�
 
 이 페이지에는 각각에 대 한 날짜, 유형 및 획득을 포함 하 여 개별 소득이 모두 표시 됩니다. 보려는 기간을 선택할 수 있으며 등록 ID, 프로그램, 지불 ID, 획득 유형, 레버 및 상태별로 필터링 할 수도 있습니다. 현재 회계 연도 (7 월 1 일 – 6 월 30 일)와 이전 두 회계 연도에 대해 데이터를 사용할 수 있습니다.
 
-획득에 대 한 자세한 내용을 보려면 페이지의 오른쪽에 있는 아래쪽 화살표를 선택 합니다. 그러면 레버, 수익 금액 및 제품이 표시 됩니다. 어떤 이유로 든이 데이터를 사용할 수 없지만이 데이터에 액세스 해야 하는 경우 [지원](https://developer.microsoft.com/en-us/windows/support)담당자에 게 문의 하세요. 트랜잭션이 아닌 조정 결과가 발생 하는 경우 제품 필드는 표시 되지 않습니다.
+획득에 대 한 자세한 내용을 보려면 페이지의 오른쪽에 있는 아래쪽 화살표를 선택 합니다. 그러면 레버, 수익 금액 및 제품이 표시 됩니다. 어떤 이유로 든이 데이터를 사용할 수 없지만이 데이터에 액세스 해야 하는 경우 [지원](https://developer.microsoft.com/windows/support)담당자에 게 문의 하세요. 트랜잭션이 아닌 조정 결과가 발생 하는 경우 제품 필드는 표시 되지 않습니다.
 
 이 페이지에서 트랜잭션 데이터를 내보내려면 내보내기를 선택한 다음 데이터 내보내기 페이지의 지시를 따릅니다. 트랜잭션 기록 페이지에서 내보낸 파일에는 트랜잭션 통화, 거래 통화 및 미국 달러의 수익, 유료 통화의 유료 값 등의 데이터가 표시 됩니다.
 
 ## <a name="payment-status"></a>지급 상태
 
-| 상태 획득           | Reason                                                                                                                                      | 파트너 작업이 필요 한가요?                                   |
+| 상태 획득           | 이유                                                                                                                                      | 파트너 작업이 필요 한가요?                                   |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
 | 일별              | 이러한 획득은 지불에 적합 합니다. 이 상태는 동기 프로그램의 프로그램 가이드에 정의 된 대로 냉각 기간 동안 유지 됩니다. | 아니요                                                         |
-| 그                 | 지불을 처리 하기 전에 지불 주문에서 내부 검토를 생성 했습니다.                                                               | 아니요                                                         |
+| 예정                 | 지불을 처리 하기 전에 지불 주문에서 내부 검토를 생성 했습니다.                                                               | 아니요                                                         |
 | 보류 중인 세금 청구서      | 세금 송장이 불완전 하거나 잘못 되었습니다.                                                                                                  | 지불 하려면 세금 청구서를 업데이트 해야 합니다. |
-| 검토 중 거부 됨   | 검토 하는 동안 결제를 거부 했습니다.                                                                                                     | 자세한 내용은 [Microsoft 지원](https://developer.microsoft.com/en-us/windows/support) 에 문의 하세요.                      |
-| Failed                   | Microsoft 시스템 오류로 인해 지불 하지 못했습니다.                                                                                         | 자세한 내용은 [Microsoft 지원](https://developer.microsoft.com/en-us/windows/support) 에 문의 하세요.                      |
+| 검토 중 거부 됨   | 검토 하는 동안 결제를 거부 했습니다.                                                                                                     | 자세한 내용은 [Microsoft 지원](https://developer.microsoft.com/windows/support) 에 문의 하세요.                      |
+| Failed                   | Microsoft 시스템 오류로 인해 지불 하지 못했습니다.                                                                                         | 자세한 내용은 [Microsoft 지원](https://developer.microsoft.com/windows/support) 에 문의 하세요.                      |
 | 진행 중              | 지불이 진행 중입니다.                                                                                                                 | 아니요                                                         |
 | 잘못 된 결제        | 지불 recouping 진행 중입니다.                                                                                                       | 아니요                                                         |
-| 냈                     | 요금을 은행으로 보냈습니다.                                                                                                     | 아니요                                                         |
+| 보냄                     | 요금을 은행으로 보냈습니다.                                                                                                     | 아니요                                                         |
 | 다시             | 지불 중에 Microsoft 시스템 오류가 발생 하 여 다시 처리 하는 중입니다.                                                                  | 아니요                                                         |
-| 반대                 | 결제는 은행에 의해 반대 되었으며 다음 지불 주기에 다시 전송 됩니다.                                                     | 아니요                                                         |
-| 세금 송장이 거부 됨     | 검토 하는 동안 세금 송장이 거부 되었습니다. 보류 중인 모든 지불액은 세금 청구서 검토가 완료 될 때까지 보류 중입니다.                 | 자세한 내용은 [Microsoft 지원](https://developer.microsoft.com/en-us/windows/support) 에 문의 하세요.                      |
+| 반대로                 | 결제는 은행에 의해 반대 되었으며 다음 지불 주기에 다시 전송 됩니다.                                                     | 아니요                                                         |
+| 세금 송장이 거부 됨     | 검토 하는 동안 세금 송장이 거부 되었습니다. 보류 중인 모든 지불액은 세금 청구서 검토가 완료 될 때까지 보류 중입니다.                 | 자세한 내용은 [Microsoft 지원](https://developer.microsoft.com/windows/support) 에 문의 하세요.                      |
 | 검토 중인 세금 청구서 | 세금 청구서를 검토 하 고 있습니다. 세금 송장이 승인 되 면 결제는 릴리스됩니다.                                   | 아니요                                                         |
-| 되었으므로                 | 사용자의 은행이 결제를 거부 했습니다.                                                                                                      | 자세한 내용은 은행에 문의 하세요.                             |
+| 거부됨                 | 사용자의 은행이 결제를 거부 했습니다.                                                                                                      | 자세한 내용은 은행에 문의 하세요.                             |
 
 ## <a name="export-data-page"></a>데이터 내보내기 페이지
 
@@ -151,7 +151,7 @@ Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공�
 | Subscription.subscriptionstartdate          | 구독 시작 날짜                                                                                                                  | 동기-일부 프로그램만                                 |
 | Subscription.subscriptionenddate            | 구독 종료 날짜                                                                                                                    | 동기-일부 프로그램만                                 |
 | resellerId                     | 대리점 식별자                                                                                                                      | 동기-일부 프로그램만                                 |
-| resellerName                   | 대리점 이름                                                                                                                            | 동기-일부 프로그램만                                 |
+| resellerName                   | 재판매인 이름                                                                                                                            | 동기-일부 프로그램만                                 |
 | distributorId                  | 배포자 식별자                                                                                                                   | 동기-일부 프로그램만                                 |
 | distributorName                | 배포자 이름                                                                                                                         | 동기-일부 프로그램만                                 |
 | agreementNumber                | 계약 번호                                                                                                                         | 동기-일부 프로그램만                                 |

@@ -6,26 +6,26 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: c05a973dc9a954569531be6e0fea212135532b84
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: a348393a02bab946a128babefc07dc48faea6cd1
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258502"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685072"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows 10 게임 개발 가이드
 
 
 Windows 10 게임 개발 가이드입니다.
 
-이 가이드에서는 UWP(유니버설 Windows 플랫폼) 게임을 개발하는 데 필요한 리소스 및 정보의 엔드투엔드 컬렉션을 제공합니다. 이 가이드의 영어(미국) 버전은 [PDF](https://download.microsoft.com/download/9/C/9/9C9D344F-611F-412E-BB01-259E5C76B17F/Windev_Game_Dev_Guide_Oct_2017.pdf) 형식으로 제공됩니다.
+이 가이드에서는 UWP(유니버설 Windows 플랫폼) 게임을 개발하는 데 필요한 리소스 및 정보의 종단 간 컬렉션을 제공합니다. 이 가이드의 영어(미국) 버전은 [PDF](https://download.microsoft.com/download/9/C/9/9C9D344F-611F-412E-BB01-259E5C76B17F/Windev_Game_Dev_Guide_Oct_2017.pdf) 형식으로 제공됩니다.
 
 ## <a name="introduction-to-game-development-for-the-universal-windows-platform-uwp"></a>UWP(유니버설 Windows 플랫폼)용 게임 개발 기술 소개
 
 
 Windows 10 게임을 만드는 경우 휴대폰, PC 및 Xbox One을 통해 전 세계 수백만 명의 플레이어와 접촉할 수 있습니다. Windows의 Xbox, Xbox Live, 디바이스 간 멀티플레이어, 놀라운 게임 커뮤니티, UWP(유니버설 Windows 플랫폼) 및 DirectX 12와 같은 강력한 새 기능을 지원하는 Windows 10 게임은 모든 연령 및 장르의 플레이어를 열광시킵니다. 새 UWP(유니버설 Windows 플랫폼)는 휴대폰, PC 및 Xbox One용 공통 API를 사용하는 Windows 10 디바이스에서, 각 디바이스 환경에 맞게 게임을 조정하는 도구 및 옵션과 함께 게임에 대한 호환성을 제공합니다.
 
-이 가이드에서는 게임을 개발할 때 도움이 되는 정보 및 리소스의 엔드투엔드 컬렉션을 제공합니다. 게임 개발의 단계에 따라 섹션이 구성되어 있으므로 필요할 때 정보를 찾아 볼 위치를 알 수 있습니다.
+이 가이드에서는 게임을 개발할 때 도움이 되는 정보 및 리소스의 종단 간 컬렉션을 제공합니다. 게임 개발의 단계에 따라 섹션이 구성되어 있으므로 필요할 때 정보를 찾아 볼 위치를 알 수 있습니다.
 
 Windows 또는 Xbox에서 게임을 처음 개발해보는 경우에는 [시작](getting-started.md) 가이드를 참조해서 시작할 수 있습니다. 또한 [게임 개발 리소스](#game-development-resources) 섹션에서는 설명서, 프로그램 및 게임을 만들 때 도움이 되는 기타 리소스에 대한 대략적인 설문 조사도 제공하고 있습니다. 대신에 몇몇 UWP 코드를 살펴보는 것부터 시작하고 싶다면 [게임 샘플](#game-samples)을 참조하세요.
 
@@ -113,7 +113,7 @@ Windows 또는 Xbox에서 게임을 처음 개발해보는 경우에는 [시작]
 
 Microsoft는 Windows 게임을 개발하고 게시하는 데 도움이 되도록 여러 개발자 프로그램을 제공합니다. Xbox One 게임을 개발하고 게임에 Xbox Live 기능을 통합하시려면 개발자 프로그램에 참여하는 방안을 고려해 보세요. Microsoft Store에서 게임을 게시 하려면 [파트너 센터](https://partner.microsoft.com/dashboard) 에서도 개발자 계정을 만들어야 합니다.
 
-#### <a name="xbox-live-creators-program"></a>Xbox Live 크리에이터스 프로그램
+#### <a name="xbox-live-creators-program"></a>Xbox Live Creators 프로그램
 
 Xbox Live 크리에이터스 프로그램을 통해 누구든지 Xbox Live를 타이틀과 통합하고 Xbox One 및 Windows 10에 게시할 수 있습니다. 간소화된 인증 프로세스 덕분에 표준 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)을 벗어난 개념 승인이 필요하지 않습니다.
 
@@ -127,7 +127,7 @@ Xbox Live 크리에이터스 프로그램을 통해 누구든지 Xbox Live를 �
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>Xbox Live 크리에이터스 프로그램</td>
+        <td>Xbox Live Creators 프로그램</td>
         <td><a href="https://developer.microsoft.com/games/xbox/xboxlive/creator">Xbox Live Creators 프로그램에 대해 자세히 알아보기</a></td>
     </tr>
 </table>
@@ -186,7 +186,7 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
     </tr>
     <tr>
         <td>Direct3D 11 그래픽 샘플</td>
-        <td><a href="https://github.com/walbourn/directx-sdk-samples">directx-sdk-샘플</a></td>
+        <td><a href="https://github.com/walbourn/directx-sdk-samples">directx-sdk-samples</a></td>
     </tr>
     <tr>
         <td>Direct3D 11 1인칭 게임 샘플</td>
@@ -206,11 +206,11 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
     </tr>
     <tr>
         <td>Xbox 고급 기술 그룹 공개 샘플</td>
-        <td><a href="https://github.com/Microsoft/Xbox-ATG-Samples">Xbox-ATG-샘플</a></td>
+        <td><a href="https://github.com/Microsoft/Xbox-ATG-Samples">Xbox-ATG-Samples</a></td>
     </tr>
     <tr>
         <td>Xbox Live 샘플</td>
-        <td><a href="https://github.com/Microsoft/xbox-live-samples">xbox 라이브 샘플</a></td>
+        <td><a href="https://github.com/Microsoft/xbox-live-samples">xbox-live-samples</a></td>
     </tr>
     <tr>
         <td>Xbox One 게임 샘플(XGD)</td>
@@ -246,15 +246,15 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
     </colgroup>
     <tr>
         <td>앱 및 게임 개발자 포럼 게시</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsapps">게시 및 광고 앱</a></td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/home?category=windowsapps">게시 및 광고 앱</a></td>
     </tr>
     <tr>
         <td>UWP 앱 개발자 포럼</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?forum=wpdevelop">유니버설 Windows 플랫폼 앱 개발</a></td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/home?forum=wpdevelop">유니버설 Windows 플랫폼 앱 개발</a></td>
     </tr>
     <tr>
         <td>데스크톱 응용 프로그램 개발자 포럼</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsdesktopdev">Windows 데스크톱 응용 프로그램 포럼</a></td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/home?category=windowsdesktopdev">Windows 데스크톱 응용 프로그램 포럼</a></td>
     </tr>
     <tr>
         <td>DirectX Microsoft Store 게임(보관된 포럼 게시물)</td>
@@ -270,7 +270,7 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
     </tr>
     <tr>
         <td>Azure 플랫폼 포럼</td>
-        <td><a href="https://social.msdn.microsoft.com/Forums/en-us/home?category=windowsazureplatform">Azure 포럼</a></td>
+        <td><a href="https://social.msdn.microsoft.com/Forums/home?category=windowsazureplatform">Azure 포럼</a></td>
     </tr>
     <tr>
         <td>Xbox Live 포럼</td>
@@ -322,7 +322,7 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
     </tr>
     <tr>
         <td>Visual C++ 도구 팀 블로그</td>
-        <td><a href="https://devblogs.microsoft.com/cppblog/">시각적 C++ 팀 블로그</a></td>
+        <td><a href="https://devblogs.microsoft.com/cppblog/">Visual C++ 팀 블로그</a></td>
     </tr>
     <tr>
         <td>PIX 팀 블로그</td>
@@ -517,7 +517,7 @@ C++/CX는 속도, 호환성 및 플랫폼 액세스의 강력한 조합을 제�
     </colgroup>
     <tr>
         <td>C++/CX 참조 및 개요</td>
-        <td><a href="https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx">시각적 C++ 언어 참조 (C++/cx)</a></td>
+        <td><a href="https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx">Visual C++ 언어 참조(C++/CX)</a></td>
     </tr>
     <tr>
         <td>Visual C++ 프로그래밍 가이드 및 참조</td>
@@ -894,7 +894,7 @@ BabylonJS는 HTML5, WebGL, WebVR 및 웹 오디오를 사용하여 3D 게임을 
     </tr>
     <tr>
         <td>Xbox 게임을 유니버설 Windows 플랫폼 앱으로 포팅</td>
-        <td><a href="https://developer.xboxlive.com/en-us/platform/development/education/Documents/Porting%20from%20Xbox%20One%20to%20Windows%2010.aspx">Xbox One에서 Windows 10 UWP로 포팅</a></td>
+        <td><a href="https://developer.xboxlive.com/platform/development/education/Documents/Porting%20from%20Xbox%20One%20to%20Windows%2010.aspx">Xbox One에서 Windows 10 UWP로 포팅</a></td>
     </tr>
     <tr>
         <td>DirectX 9에서 DirectX 11로 포팅</td>
@@ -910,7 +910,7 @@ BabylonJS는 HTML5, WebGL, WebVR 및 웹 오디오를 사용하여 3D 게임을 
     </tr>
     <tr>
         <td>ANGLE을 사용하여 OpenGL ES에서 Direct3D 11로</td>
-        <td><a href="https://github.com/microsoft/angle/wiki">각도</a></td>
+        <td><a href="https://github.com/microsoft/angle/wiki">ANGLE</a></td>
     </tr>
     <tr>
         <td>UWP에도 제공되는 클래식 Windows API</td>
@@ -1026,7 +1026,7 @@ Windows 데스크톱 게임을 UWP로 이동하는 데 도움이 되는 몇 가�
     </tr>
     <tr>
         <td>UWP에서 지원하지 않는 CRT 기능</td>
-        <td><a href="https://docs.microsoft.com/cpp/cppcx/crt-functions-not-supported-in-universal-windows-platform-apps">유니버설 Windows 플랫폼 앱에서 CRT 함수가 지원 되지 않음</a></td>
+        <td><a href="https://docs.microsoft.com/cpp/cppcx/crt-functions-not-supported-in-universal-windows-platform-apps">유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수</a></td>
     </tr>
     <tr>
         <td>Windows API에 대한 대안</td>
@@ -1070,7 +1070,7 @@ UX 디자인과는 별도로 게임 플레이 디자인(예: 레벨 디자인, �
     </colgroup>
     <tr>
         <td>UWP 디자인 기초 및 지침</td>
-        <td><a href="https://developer.microsoft.com/en-us/windows/apps/design">UWP 앱 디자인</a></td>
+        <td><a href="https://developer.microsoft.com/windows/apps/design">UWP 앱 디자인</a></td>
     </tr>
     <tr>
         <td>앱 수명 주기 상태에 대한 디자인</td>
@@ -1121,7 +1121,7 @@ UX 디자인과는 별도로 게임 플레이 디자인(예: 레벨 디자인, �
 
 #### <a name="ui-map"></a>UI 맵
 
-UI 맵은 게임 탐색 및 순서도로 표현된 메뉴의 레이아웃입니다. UI 맵을 통해 참여하는 모든 관계자가 게임 인터페이스 및 탐색 경로를 쉽게 이해할 수 있으며 개발 주기의 초기에 잠재적인 장애물과 문제점을 알아낼 수 있습니다.
+UI 맵은 게임 탐색 및 순서도로 표현된 메뉴의 레이아웃입니다. UI 맵을 통해 참여하는 모든 관련자가 게임 인터페이스 및 탐색 경로를 쉽게 이해할 수 있으며 개발 주기의 초기에 잠재적인 장애물과 문제점을 알아낼 수 있습니다.
 
 <table>
     <colgroup>
@@ -1534,7 +1534,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
     </tr>
     <tr>
         <td>GDN (파트너 센터 고급 게시)</td>
-        <td><a href="https://developer.xboxlive.com/en-us/windows/documentation/Pages/home.aspx">파트너 센터 고급 게시 가이드</a></td>
+        <td><a href="https://developer.xboxlive.com/windows/documentation/Pages/home.aspx">파트너 센터 고급 게시 가이드</a></td>
     </tr>
     <tr>
         <td>AAD (Azure Active Directory)를 사용 하 여 파트너 센터 계정에 사용자 추가</td>
@@ -1739,7 +1739,7 @@ Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원�
 
 ## <a name="adding-xbox-live-to-your-game"></a>게임에 Xbox Live 추가
 
-Xbox Live는 전 세계의 수 백만 게이머들을 연결하는 최상의 게임 네트워크입니다. 개발자들은 Xbox Live 프레전스, 리더보드, 클라우드 서비스, 게임 허브, 클럽, 파티 채팅, 게임 DVR을 포함하여 게임 청중들을 조직적으로 유치할 수 있는 Xbox Live 기능에 액세스할 수 있습니다.
+Xbox Live는 전 세계 수 백만 명의 게이머를 연결하는 최고의 게임 네트워크입니다. 개발자들은 Xbox Live 프레전스, 리더보드, 클라우드 서비스, 게임 허브, 클럽, 파티 채팅, 게임 DVR을 포함하여 게임 청중들을 조직적으로 유치할 수 있는 Xbox Live 기능에 액세스할 수 있습니다.
 
 > [!Note]
 > Xbox Live가 지원되는 타이틀을 개발하고 싶다면 몇 가지 옵션을 사용할 수 있습니다. 다양한 프로그램에 대한 내용은 [개발자 프로그램 개요](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview)를 참조하세요.
