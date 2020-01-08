@@ -1,6 +1,6 @@
 ---
 title: 응시 상호 작용
-Description: 디자인 하 고 눈 모양 및 head 추적기에서 응시 입력을 사용 하는 사용자에 대 한 최상의 환경을 제공 하 여 UWP 앱을 최적화 하는 방법에 알아봅니다.
+Description: 눈길 및 헤드 추적기의 입력을 사용 하는 사용자에 게 최상의 환경을 제공 하기 위해 UWP 앱을 설계 하 고 최적화 하는 방법을 알아봅니다.
 label: Gaze interactions
 template: detail.hbs
 keywords: 응시, 눈 추적, 머리 추적, 응시 지점, 입력, 사용자 상호 작용, 접근성, 유용성
@@ -11,12 +11,12 @@ dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3fb07dd9aec475566940dbf98ae6bd1c5f9c1337
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 6176bdce1a725c1024af9f4ecf0c37cabb0f5376
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317334"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684230"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-uwp-apps"></a>UWP 앱의 응시 상호 작용 및 눈 추적
 
@@ -36,7 +36,7 @@ ms.locfileid: "67317334"
 또한 응시 입력은 게임(대상 획득 및 추적 등) 및 기존 입력 장치(키보드, 마우스, 터치)를 사용할 수 없거나 쇼핑 백을 들어야 한다든지 하는 다른 작업을 위해 사용자의 손을 자유롭게 하는 것이 좋은 기존 생산성 응용 프로그램, 키오스크 및 기타 대화형 시나리오에 똑같이 매력적인 기회를 제공합니다.
 
 > [!NOTE]
-> **Windows 10 Fall Creators Update**에서 눈을 사용하여 화면 포인터를 제어하고, 화상 키보드로 입력하고, 텍스트 음성 변환을 사용하여 다른 사람과 소통하는 기본 제공 기능인 [아이 컨트롤](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control)과 함께 추적 하드웨어에 대한 지원이 도입되었습니다. UWP Api 집합입니다 ([Windows.Devices.Input.Preview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)) 눈 상호 작용할 수 있는 응용 프로그램을 구축 하는 것에 대 한 추적 하드웨어는 사용할 수 있습니다 **Windows 10 2018 년 4 월 업데이트 (버전 1803에서 빌드 17134)** 이상.
+> **Windows 10 Fall Creators Update**에서 눈을 사용하여 화면 포인터를 제어하고, 화상 키보드로 입력하고, 텍스트 음성 변환을 사용하여 다른 사람과 소통하는 기본 제공 기능인 [아이 컨트롤](https://support.microsoft.com/help/4043921/windows-10-get-started-eye-control)과 함께 추적 하드웨어에 대한 지원이 도입되었습니다. 아이 추적 하드웨어와 상호 작용할 수 있는 응용 프로그램을 빌드하기 위한 UWP Api ([windows](https://docs.microsoft.com/uwp/api/windows.devices.input.preview). 2018) 집합은 **Windows 10 4 월 업데이트 (버전 1803, 빌드 17134)** 이상에서 사용할 수 있습니다.
 
 ## <a name="privacy"></a>개인 정보
 
@@ -44,7 +44,7 @@ ms.locfileid: "67317334"
 
 또한, 앱이 눈 추적 데이터를 수집, 저장 또는 전송하는 경우 앱의 개인정보처리방침에서 이를 설명해야 하며 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)의 **개인 정보**의 모든 기타 요구 사항을 따라야 합니다.
 
-## <a name="setup"></a>설치 프로그램
+## <a name="setup"></a>설정
 
 UWP 앱에서 응시 API를 사용하려면 다음을 수행해야 합니다. 
 
@@ -70,9 +70,9 @@ UWP 앱에서 응시 API를 사용하려면 다음을 수행해야 합니다.
 
 ![타이머 샘플로 응시 추적](images/gaze/gaze-input-timed2.gif)
 
-*샘플 타이머를 사용 하 여 추적 gaze*
+*Timer로 추적 응시 샘플*
 
-**이 샘플을 다운로드할 [응시 입력된 샘플 (basic)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip)**
+**이 샘플은 [응시 입력 샘플 (기본)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip) 에서 다운로드 합니다.**
 
 1. 먼저 UI(MainPage.xaml)를 설정합니다.
 
@@ -154,7 +154,7 @@ UWP 앱에서 응시 API를 사용하려면 다음을 수행해야 합니다.
 
 2. 그 다음, 앱을 초기화합니다.
 
-    이 조각에서 전역 개체를 선언하고 [응시 장치 감시자](https://docs.microsoft.com/en-us/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview)를 시작하기 위해 [OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) 페이지 이벤트를, 그리고 [응시 장치 감시자](https://docs.microsoft.com/en-us/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview)를 중지하기 위해 [OnNavigatedFrom](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedfrom) 페이지 이벤트를 재정의합니다.
+    이 조각에서 전역 개체를 선언하고 [응시 장치 감시자](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview)를 시작하기 위해 [OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) 페이지 이벤트를, 그리고 [응시 장치 감시자](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview)를 중지하기 위해 [OnNavigatedFrom](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedfrom) 페이지 이벤트를 재정의합니다.
 
     ```csharp
     using System;
@@ -499,9 +499,9 @@ UWP 앱에서 응시 API를 사용하려면 다음을 수행해야 합니다.
     ```
 6. 마지막으로, 다음은 이 앱에 대한 응시 초점 타이머를 관리하는 데 사용하는 방법입니다.
 
-    `DoesElementContainPoint` 진행률 표시줄 위에 게이즈 포인터 인지 확인 합니다. 그렇다면 응시 타이머가 시작되고 각 응시 타이머 눈금에서 진행률 표시줄이 증가합니다.
+    `DoesElementContainPoint`는 응시 포인터가 진행률 표시줄 위에 있는지 여부를 확인 합니다. 그렇다면 응시 타이머가 시작되고 각 응시 타이머 눈금에서 진행률 표시줄이 증가합니다.
 
-    `SetGazeTargetLocation` 진행률 표시줄의 초기 위치를 설정 하 고 (에 따라 게이즈 포커스 타이머) 진행률 표시줄이 완료 되 면 진행률 표시줄을 임의의 위치로 이동 합니다.
+    `SetGazeTargetLocation` 진행률 표시줄의 초기 위치를 설정 하 고 진행률 표시줄이 완료 되 면 (응시 포커스 타이머에 따라) 진행률 표시줄을 임의의 위치로 이동 합니다.
 
     ```csharp
     /// <summary>
@@ -596,12 +596,12 @@ UWP 앱에서 응시 API를 사용하려면 다음을 수행해야 합니다.
     }
     ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 ### <a name="resources"></a>리소스
 
-- [Windows 커뮤니티 도구 키트 Gaze 라이브러리](https://docs.microsoft.com/windows/communitytoolkit/gaze/gazeinteractionlibrary)
+- [Windows 커뮤니티 도구 키트 응시 라이브러리](https://docs.microsoft.com/windows/communitytoolkit/gaze/gazeinteractionlibrary)
 
-### <a name="topic-samples"></a>항목 샘플
+### <a name="topic-samples"></a>토픽 샘플
 
-- [샘플 (기본) gaze (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip)
+- [응시 샘플 (기본) (C#)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-gazeinput-basic.zip)

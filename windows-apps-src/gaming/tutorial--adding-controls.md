@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 컨트롤, 입력
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c2b7031bf8afb047fcfc869e23ee1c398218af8
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: edc790ba949010fb1975317c5113ca02744889a0
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258424"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684559"
 ---
 # <a name="add-controls"></a>컨트롤 추가
 
@@ -86,7 +86,7 @@ State | 설명
 :----- | :-------
 **없음** | 컨트롤러의 초기화된 상태입니다. 게임에서 어떤 컨트롤러 입력도 예상되지 않기 때문에 모든 입력이 무시됩니다.
 **WaitForInput** | 컨트롤러는 왼쪽 마우스 클릭, 터치 이벤트 또는 게임 패드의 메뉴 단추를 사용하여 플레이어가 게임에서 메시지를 승인하는 동안 기다립니다.
-**Directory** | 컨트롤러는 활성 게임 플레이 모드에 있습니다.
+**활성** | 컨트롤러는 활성 게임 플레이 모드에 있습니다.
 
 
 
@@ -160,7 +160,7 @@ bool MoveLookController::IsFiring()
 
 마우스 이동이 감지되면 해당 이동을 사용하여 카메라의 새 피치와 요를 결정할 수 있습니다. 이를 위해 상대 마우스 컨트롤을 구현합니다. 여기서는 이동의 절대 x-y 픽셀 좌표 기록과 반대로 마우스가 이동한 상태 거리(이동의 시작과 정지 사이의 델타)를 처리합니다.
 
-이를 구현하기 위해 [**MouseMoved**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseDelta) 이벤트에서 반환된Windows::Device::Input::MouseEventArgs::MouseDelta[**인수 개체의**](https://docs.microsoft.com/uwp/api/windows.devices.input.mouseeventargs.mousedelta)MouseDelta::X[**및**MouseDelta::Y](https://docs.microsoft.com/uwp/api/windows.devices.input.mousedevice.mousemoved) 필드를 검토하여 X(가로 이동) 및 Y(세로 이동) 좌표의 변경을 확인합니다.
+이를 구현하기 위해 [**MouseMoved**](https://docs.microsoft.com/uwp/api/windows.devices.input.mousedevice.mousemoved) 이벤트에서 반환된 [**Windows::Device::Input::MouseEventArgs::MouseDelta**](https://docs.microsoft.com/uwp/api/windows.devices.input.mouseeventargs.mousedelta) 인수 개체의 [**MouseDelta::X**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseDelta) 및 **MouseDelta::Y** 필드를 검토하여 X(가로 이동) 및 Y(세로 이동) 좌표의 변경을 확인합니다.
 
 ```cpp
 void MoveLookController::OnMouseMoved(
@@ -394,7 +394,7 @@ window->PointerReleased +=
         m_lookInUse = true;
     }
 ```
-**GitHub**에서 [MoveLookController::OnPointerPressed](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L252-L259) 메서드에 대한 전체 코드를 확인할 수 있습니다.
+[GitHub](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L252-L259)에서 **MoveLookController::OnPointerPressed** 메서드에 대한 전체 코드를 확인할 수 있습니다.
 
 
 
@@ -459,7 +459,7 @@ window->PointerReleased +=
 사용자 입력 | 작업
 :------- | :--------
 W | 플레이어를 앞으로 이동
-변수를 잠그기 위한 | 플레이어를 왼쪽으로 이동
+세 번째 유형은 | 플레이어를 왼쪽으로 이동
 S | 플레이어를 뒤로 이동
 D | 플레이어를 오른쪽으로 이동
 X | 보기를 위로 이동
@@ -469,7 +469,7 @@ P | 게임을 일시 중지
 왼쪽 마우스 단추 | 구 실행
 
 
-키보드를 사용하기 위해 게임 샘플은 [**MoveLookController::InitWindow**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keyup) 메서드 내에 2개의 새로운 이벤트([**CoreWindow::KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keydown) 및 [**CoreWindow::KeyDown**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L84-L88))를 등록합니다. 이러한 이벤트는 키 누름과 해제를 처리합니다.
+키보드를 사용하기 위해 게임 샘플은 [**MoveLookController::InitWindow**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L84-L88) 메서드 내에 2개의 새로운 이벤트([**CoreWindow::KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keyup) 및 [**CoreWindow::KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.keydown))를 등록합니다. 이러한 이벤트는 키 누름과 해제를 처리합니다.
 
 ```cpp
 window->KeyDown +=
@@ -482,9 +482,9 @@ window->KeyUp +=
 마우스는 포인터를 사용하기는 하지만 터치 스크롤과 약간 다르게 처리됩니다. 컨트롤 레이아웃에 맞춰지도록 **MoveLookController**는 마우스가 이동될 때마다 카메라를 회전시키고 왼쪽 마우스 단추를 누를 때 이벤트를 실행합니다.
 
 
-이는 [MoveLookController**의** ](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L179-L313)OnPointerPressed 메서드에서 처리됩니다.
+이는 **MoveLookController**의 [**OnPointerPressed**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L179-L313) 메서드에서 처리됩니다.
 
-이 메서드에서 [`Windows::Devices::Input::PointerDeviceType`](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Input.PointerDeviceType) 열거형 값에서 어떤 종류의 포인터 디바이스가 사용되고 있는지 확인합니다. 게임이 **활성** 상태이고 **PointerDeviceType**가 **터치**가 아니면 이를 마우스 입력으로 가정합니다.
+이 메서드에서 [`Windows::Devices::Input::PointerDeviceType`](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.PointerDeviceType) 열거형 값에서 어떤 종류의 포인터 디바이스가 사용되고 있는지 확인합니다. 게임이 **활성** 상태이고 **PointerDeviceType**가 **터치**가 아니면 이를 마우스 입력으로 가정합니다.
 
 ```cpp
     case MoveLookControllerState::Active:
@@ -591,7 +591,7 @@ window->KeyUp +=
 
 ### <a name="the-updatepollingdevices-method"></a>UpdatePollingDevices 메서드
 
-[MoveLookController**인스턴스의**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L654-L782)UpdatePollingDevices 메서드는 즉시 게임 패드의 연결 여부를 확인합니다. 연결이 되어 있으면 [**Gamepad.GetCurrentReading**](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad.GetCurrentReading)로 상태 판독을 시작합니다. 이렇게 하면 [**GamepadReading**](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.GamepadReading) 구조체가 반환되기 때문에 어떤 단추가 클릭되었는지, 어떤 섬스틱이 이동되었는지 확인할 수 있습니다.
+**MoveLookController** 인스턴스의 [**UpdatePollingDevices**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp#L654-L782) 메서드는 즉시 게임 패드의 연결 여부를 확인합니다. 연결이 되어 있으면 [**Gamepad.GetCurrentReading**](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepad.GetCurrentReading)로 상태 판독을 시작합니다. 이렇게 하면 [**GamepadReading**](https://docs.microsoft.com/uwp/api/Windows.Gaming.Input.GamepadReading) 구조체가 반환되기 때문에 어떤 단추가 클릭되었는지, 어떤 섬스틱이 이동되었는지 확인할 수 있습니다.
 
 
 게임의 상태가 **WaitForInput**이면 게임이 재개될 수 있도록 컨트롤러의 시작/메뉴 단추에 대해서만 수신 대기를 합니다 .
@@ -727,7 +727,7 @@ window->KeyUp +=
 
 **Update** 메서드에서 다음과 같이 입력을 확인합니다.
 - 플레이어가 이동 컨트롤러 사각형을 사용하는 경우에는 포인터 위치의 변경 여부를 판단하고, 사용자가 컨트롤러의 데드존 밖으로 포인터를 이동시킨 경우에는 이를 토대로 계산을 합니다. 데드존을 벗어난 경우에는 **m_moveCommand** 벡터 속성이 가상 조이스틱 값으로 업데이트됩니다.
-- 이동 키보드 입력을 누르면 `1.0f` 또는 `-1.0f` 값이 **m_moveCommand** 벡터 &mdash;의 해당 구성 요소에 추가 되 고 앞으로 `1.0f` 됩니다.`-1.0f`
+- 이동 키보드 입력을 누르면 `1.0f` 또는 `-1.0f` 값이 **m_moveCommand** 벡터 &mdash;의 해당 구성 요소에 추가 되 고 앞으로 `1.0f` 됩니다.
 
 
 모든 이동 입력을 고려했다면 이제는 **m_moveCommand** 벡터를 실행하여 몇 가지 계산을 통해 게임 환경과 관련해 플레이어의 방향을 보여주는 새 벡터를 생성합니다.

@@ -1,20 +1,20 @@
 ---
 Description: 현지화된 앱은 앱에 기능적인 결함은 다루지 않고 다른 시장, 언어 또는 지역에 맞게 현지화할 수 있습니다. 지역화할 앱의 가장 중요한 속성은 실행 코드가 앱의 지역화 리소스와 깔끔하게 분리된 것입니다.
-title: 앱을 현지화할 수 있게 만들기
+title: 앱을 현지화 가능하게 만들기
 ms.assetid: 06E1D4BB-59EA-4D71-99AC-7CB93D2A58A7
 template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 341d46879895da221e3a17ba88f28fd22e7c5e27
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 9e0991a8a06054b6136dfc1fd65c15dbeb66e6fd
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258095"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684266"
 ---
-# <a name="make-your-app-localizable"></a>앱을 현지화할 수 있게 만들기
+# <a name="make-your-app-localizable"></a>앱을 현지화 가능하게 만들기
 
 현지화된 앱은 앱에 기능적인 결함은 다루지 않고 다른 시장, 언어 또는 지역에 맞게 현지화할 수 있습니다. 지역화할 앱의 가장 중요한 속성은 실행 코드가 앱의 지역화 리소스와 깔끔하게 분리된 것입니다. 따라서 앱 리소스 중 어는 부분을 지역화해야 하는지 결정해야 합니다. 앱을 다른 시장용으로 지역화할 경우 무엇을 변경해야 하는지 자문해 봅니다.
 
@@ -87,7 +87,7 @@ ms.locfileid: "74258095"
 > [!NOTE]
 > 초기 설치 후에는 앱에 대 한 추가 언어 지원을 설치할 수 없습니다. 앱을 설치한 후 기본 언어를 변경 하면 앱은 계속 원래 언어 리소스만 사용 합니다.
 
-설치 후 모든 언어 리소스를 사용할 수 있도록 하려면 설치 하는 동안 특정 리소스 (언어 리소스 포함)가 필요 하도록 지정 하는 앱 패키지에 대 한 구성 파일을 만듭니다. 이 최적화 된 설치 기능은 패키지 중에 응용 프로그램의 .appxbundle가 생성 될 때 자동으로 사용 하도록 설정 됩니다. 자세한 내용은 [장치에 필요한 지 여부에 관계 없이 장치에 리소스가 설치 되었는지 확인](https://docs.microsoft.com/en-us/previous-versions/dn482043(v=vs.140))을 참조 하세요.
+설치 후 모든 언어 리소스를 사용할 수 있도록 하려면 설치 하는 동안 특정 리소스 (언어 리소스 포함)가 필요 하도록 지정 하는 앱 패키지에 대 한 구성 파일을 만듭니다. 이 최적화 된 설치 기능은 패키지 중에 응용 프로그램의 .appxbundle가 생성 될 때 자동으로 사용 하도록 설정 됩니다. 자세한 내용은 [장치에 필요한 지 여부에 관계 없이 장치에 리소스가 설치 되었는지 확인](https://docs.microsoft.com/previous-versions/dn482043(v=vs.140))을 참조 하세요.
 
 필요에 따라 하위 집합만이 아닌 모든 리소스가 설치 되도록 하려면 앱을 패키지할 때 .appxbundle 생성을 사용 하지 않도록 설정할 수 있습니다. 그러나 앱의 설치 시간이 길어질 수 있으므로이 방법은 권장 되지 않습니다.
 

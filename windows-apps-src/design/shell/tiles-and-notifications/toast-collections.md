@@ -1,5 +1,5 @@
 ---
-Description: 컬렉션을 사용 하 여 관리 센터에서 알림을 그룹화 하는 방법에 알아봅니다.
+Description: 컬렉션을 사용 하 여 관리 센터에서 알림을 그룹화 하는 방법을 알아봅니다.
 title: 알림 컬렉션
 label: Toast Collections
 template: detail.hbs
@@ -7,21 +7,21 @@ ms.date: 05/16/2018
 ms.topic: article
 keywords: Windows 10, uwp, 알림, 컬렉션, 그룹 알림, 알림 그룹화, 그룹, 구성, 알림 센터
 ms.localizationpriority: medium
-ms.openlocfilehash: 71d5edb662b180571aa10f8a7b0ad533cf28a689
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 19fc1ed49fe5a3ea7d628684226b960ef2bc0732
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320792"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684187"
 ---
 # <a name="grouping-toast-notifications-with-collections"></a>컬렉션으로 알림 메시지 그룹화
 컬렉션을 사용하여 알림 센터에서 앱의 알림을 구성할 수 있습니다. 컬렉션은 사용자가 알림 센터에서 정보를 더 쉽게 찾고 개발자가 알림을 관리하는 데 도움이 됩니다.  아래 API를 사용하여 알림 컬렉션을 만들고, 제거하고 업데이트할 수 있습니다.
 
 > [!IMPORTANT]
-> **크리에이터 스 업데이트를 설치 해야**: SDK 15063 대상으로 해야 합니다을 실행 하 고 빌드 15063 알림 컬렉션을 사용 하려면. 관련 API는 [Windows.UI.Notifications.ToastCollection](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastcollection) 및 [Windows.UI.Notifications.ToastCollectionManager](https://docs.microsoft.com/en-us/uwp/api/windows.ui.notifications.toastcollectionmanager) 등이 있습니다.
+> **크리에이터스 업데이트 필요**: 알림 컬렉션을 사용하려면 SDK 15063을 대상으로 하고 빌드 15063 이상을 실행하고 있어야 합니다. 관련 API는 [Windows.UI.Notifications.ToastCollection](https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastcollection) 및 [Windows.UI.Notifications.ToastCollectionManager](https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastcollectionmanager) 등이 있습니다.
 
 아래의 예제에서 채팅 그룹에 따라 알림을 구분하는 메시지 앱을 확인할 수 있습니다. 각 제목(Comp Sci 160A Project Chat, Direct Messages, Lacrosse Team Chat)은 별도 컬렉션입니다.  모든 알림이 동일한 앱의 알림이더라도 개별 앱의 알림인 것처럼 명확하게 알림을 그룹화하는 방법을 알아보세요.  알림을 구성하는 보다 섬세한 방법을 찾고자 하는 경우 [알림 헤더](toast-headers.md)를 참조하세요.  
-![두 개의 다른 그룹의 알림을 사용 하 여 컬렉션 예제](images/toast-collection-example.png)
+서로 다른 두 개의 알림 그룹을 사용 하 ![컬렉션 예제](images/toast-collection-example.png)
 
 ## <a name="creating-collections"></a>컬렉션 만들기
 위 이미지에서와 같이 각 컬렉션을 만들 때 컬렉션 제목의 일부로 알림 센터 내에 표시되는 표시 이름 및 아이콘을 제공해야 합니다. 컬렉션에는 또한 사용자가 컬렉션의 제목을 클릭할 때 앱 내에서 앱이 오른쪽 위치로 이동하기 위해 실행 인수가 필요합니다.  
@@ -188,6 +188,6 @@ collectionHistory.Clear();
 
 ## <a name="related-topics"></a>관련 항목
 
-* [알림 콘텐츠](adaptive-interactive-toasts.md)
-* [알림 메시지 헤더](toast-headers.md)
-* [GitHub (Windows 커뮤니티 도구 키트의 일부)에 대 한 알림 라이브러리](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
+* [알림 내용](adaptive-interactive-toasts.md)
+* [알림 헤더](toast-headers.md)
+* [GitHub의 알림 라이브러리 (Windows 커뮤니티 도구 키트의 일부)](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)

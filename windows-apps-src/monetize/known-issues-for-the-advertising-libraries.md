@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 알려진 문제, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 51192e13c63bf3141989cfbf5d9ebd7fbaf13641
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 6701ff346f41352a108922f82da82fbf52fd7402
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260250"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685095"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>앱 광고의 알려진 문제점 및 문제 해결
 
@@ -46,7 +46,7 @@ ms.locfileid: "74260250"
 
 * 30분 이내에 새 광고 단위 ID를 만든 경우 서버가 시스템을 통해 새 데이터를 전파할 때까지 광고가 표시되지 않을 수 있습니다. 이전에 광고를 표시했던 기존 ID는 광고를 즉시 표시합니다.
 
-앱에서 테스트 광고를 볼 수 있으면 코드가 작동하는 것이며 광고를 표시할 수 있습니다. 문제가 발생하면 [제품 지원](https://developer.microsoft.com/en-us/windows/support)에 문의하세요. 해당 페이지에서 **문의처**를 선택 합니다.
+앱에서 테스트 광고를 볼 수 있으면 코드가 작동하는 것이며 광고를 표시할 수 있습니다. 문제가 발생하면 [제품 지원](https://developer.microsoft.com/windows/support)에 문의하세요. 해당 페이지에서 **문의처**를 선택 합니다.
 
 [포럼](https://go.microsoft.com/fwlink/?LinkID=401264)에서 질문을 게시할 수도 있습니다.
 
@@ -89,7 +89,7 @@ JavaScript/HTML 앱은 예약된 z-순서의 MAX-10 범위에 요소를 배치�
 
 **AdControl**에 의해 부모 클래스에서 상속된 테두리 관련 속성을 설정하면 광고 배치가 잘못될 수 있습니다.
 
-## <a name="more-information"></a>추가 정보
+## <a name="more-information"></a>자세한 정보
 
 Microsoft Advertising SDK와 관련된 최근의 알려진 문제를 알아보고 질문을 게시하려면 [포럼](https://go.microsoft.com/fwlink/?LinkID=401264)을 방문하세요.
 

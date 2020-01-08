@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 76be28f48be4297d1e81e5a7ab7c07ee55212102
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: ca6bba9fcf00d103507a1c24ebde11a7f0a7c588
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259133"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684697"
 ---
 # <a name="getting-started-what-next"></a>시작: 다음에 할 일
 
@@ -27,7 +27,7 @@ ms.locfileid: "74259133"
 -   [C# 또는 Visual Basic을 사용하여 첫 Windows 런타임 앱 만들기](https://msdn.microsoft.com/library/windows/apps/hh974581.aspx): Windows Phone 개발에 초점을 두는 항목입니다.
 -   [iOS 및 Android 개발용 동영상](https://docs.microsoft.com/previous-versions/windows/apps/dn393982(v=win.10)): 시각적 형식의 추가 도움말입니다.
 
-개발자 포럼, 블로그, 개발자 캠프 및 워크샵, 로컬 Microsoft 이벤트 및 계약을 통해 지원을 받고 상호 연결하는 방법은 [커뮤니티 리소스](https://developer.microsoft.com/en-us/windows/support)를 참조하세요.
+개발자 포럼, 블로그, 개발자 캠프 및 워크샵, 로컬 Microsoft 이벤트 및 계약을 통해 지원을 받고 상호 연결하는 방법은 [커뮤니티 리소스](https://developer.microsoft.com/windows/support)를 참조하세요.
 
 Windows 10에서 새로운 앱 빌드 기회를 열도록 생각 합니다. 개발자 여러분이 빌드하는 모든 유용한 앱을 만날 수 있기를 고대합니다.
 

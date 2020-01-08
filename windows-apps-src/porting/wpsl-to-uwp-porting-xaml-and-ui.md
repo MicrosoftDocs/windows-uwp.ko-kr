@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eeb8cb8a8b71123c3a5a94eea316621e5f93fe8e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 29357746b6fca2c6aae52e9516a5b7dc2fca8ef2
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259081"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684627"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>Windows Phone Silverlight XAML 및 UI를 UWP로 포팅
 
@@ -23,21 +23,21 @@ ms.locfileid: "74259081"
 
 ## <a name="a-first-look-at-the-xaml-markup"></a>XAML 태그 살펴보기
 
-이전 항목에서는 XAML 및 코드 숨겨진 파일을 새 Windows 10 Visual Studio 프로젝트에 복사 하는 방법을 살펴보았습니다. Visual Studio XAML 디자이너에서 가장 두드러지는 문제 중 하나로 XAML 파일의 루트에 있는 `PhoneApplicationPage` 요소가 UWP(유니버설 Windows 플랫폼) 프로젝트에 적합하지 않습니다. 이전 항목에서는 Windows 10 프로젝트를 만들 때 Visual Studio에서 생성 한 XAML 파일의 복사본을 저장 했습니다. MainPage.xaml의 해당 버전을 열면 [**Windows.UI.Xaml.Controls**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) 네임스페이스에 있는 [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls) 형식이 루트에 표시됩니다. 따라서 모든 `<phone:PhoneApplicationPage>` 요소를 `<Page>`로 변경하고(속성 요소 구문을 기억해야 함) `xmlns:phone` 선언을 삭제할 수 있습니다.
+이전 항목에서는 XAML 및 코드 숨겨진 파일을 새 Windows 10 Visual Studio 프로젝트에 복사 하는 방법을 살펴보았습니다. Visual Studio XAML 디자이너에서 가장 두드러지는 문제 중 하나로 XAML 파일의 루트에 있는 `PhoneApplicationPage` 요소가 UWP(유니버설 Windows 플랫폼) 프로젝트에 적합하지 않습니다. 이전 항목에서는 Windows 10 프로젝트를 만들 때 Visual Studio에서 생성 한 XAML 파일의 복사본을 저장 했습니다. MainPage.xaml의 해당 버전을 열면 [**Windows.UI.Xaml.Controls**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls) 네임스페이스에 있는 [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) 형식이 루트에 표시됩니다. 따라서 모든 `<phone:PhoneApplicationPage>` 요소를 `<Page>`로 변경하고(속성 요소 구문을 기억해야 함) `xmlns:phone` 선언을 삭제할 수 있습니다.
 
 Windows Phone Silverlight 형식에 해당 하는 UWP 형식을 검색 하는 일반적인 방법은 [네임 스페이스 및 클래스 매핑을](wpsl-to-uwp-namespace-and-class-mappings.md)참조할 수 있습니다.
 
 ## <a name="xaml-namespace-prefix-declarations"></a>XAML 네임스페이스 접두사 선언
 
 
-보기에서 사용자 지정 형식의 인스턴스(예: 보기 모델 인스턴스 또는 값 변환기)를 사용하는 경우 XAML 태그에 XAML 네임스페이스 접두사 선언이 있습니다. 이러한 구문은 Windows Phone Silverlight와 UWP 사이에서 다릅니다. 다음은 몇 가지 예입니다.
+보기에서 사용자 지정 형식의 인스턴스(예: 보기 모델 인스턴스 또는 값 변환기)를 사용하는 경우 XAML 태그에 XAML 네임스페이스 접두사 선언이 있습니다. 이러한 구문은 Windows Phone Silverlight와 UWP 사이에서 다릅니다. 예를 들면 다음과 같습니다.
 
 ```xml
     xmlns:ContosoTradingCore="clr-namespace:ContosoTradingCore;assembly=ContosoTradingCore"
     xmlns:ContosoTradingLocal="clr-namespace:ContosoTradingLocal"
 ```
 
-"clr-namespace"를 "using"으로 변경하고 어셈블리 토큰과 세미콜론을 삭제합니다(어셈블리가 유추됨). 결과 다음과 같습니다.
+"clr-namespace"를 "using"으로 변경하고 어셈블리 토큰과 세미콜론을 삭제합니다(어셈블리가 유추됨). 결과는 다음과 같습니다.
 
 ```xml
     xmlns:ContosoTradingCore="using:ContosoTradingCore"
@@ -84,7 +84,7 @@ Windows 10 앱은 각자의 화면 크기와 해상도를 포함 하 여 다양 
 
 ## <a name="alarms-and-reminders"></a>알람 및 미리 알림
 
-**** BackgroundTaskBuilder 클래스를 사용하여 백그라운드 작업을 만들어 등록하고 해당 시간에 알림을 표시하려면 [Alarm**또는**Reminder](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 클래스를 사용하는 코드를 포팅해야 합니다. [후순위 처리](wpsl-to-uwp-business-and-data.md) 및 [알림](#toasts)을 참조하세요.
+[  **BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 클래스를 사용하여 백그라운드 작업을 만들어 등록하고 해당 시간에 알림을 표시하려면 **Alarm** 또는 **Reminder** 클래스를 사용하는 코드를 포팅해야 합니다. [후순위 처리](wpsl-to-uwp-business-and-data.md) 및 [알림](#toasts)을 참조하세요.
 
 ## <a name="animation"></a>애니메이션
 
@@ -187,7 +187,7 @@ UWP 앱에서 ms-appx[URI 체계](https://docs.microsoft.com/previous-versions/w
 
 Windows Phone Silverlight 앱은 **Microsoft 휴대폰. controls** **네임 스페이스 및 system.xml 네임 스페이스** 에 정의 된 컨트롤을 사용 합니다. XAML UWP 앱은 [**Windows.UI.Xaml.Controls**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls) 네임스페이스에 정의된 컨트롤을 사용합니다. UWP의 XAML 컨트롤 아키텍처와 디자인은 Silverlight 컨트롤 Windows Phone 거의 동일 합니다. 하지만 사용 가능한 컨트롤 집합을 개선하고 Windows 앱과 통합하기 위해 일부를 변경했습니다. 다음은 구체적인 예입니다.
 
-| 컨트롤 이름 | 변화 |
+| 컨트롤 이름 | Change(영문) |
 |--------------|--------|
 | ApplicationBar | [Page.TopAppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.topappbar) 속성입니다. |
 | ApplicationBarIconButton | 해당하는 UWP 속성은 [Glyph](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon.glyph) 속성입니다. PrimaryCommands는 CommandBar의 콘텐츠 속성입니다. XAML 파서는 요소의 내부 xml을 해당 콘텐츠 속성의 값으로 해석합니다. |
@@ -197,7 +197,7 @@ Windows Phone Silverlight 앱은 **Microsoft 휴대폰. controls** **네임 스�
 | 그룹화된 데이터를 포함하는 LongListSelector | Windows Phone Silverlight를 사용 하는 두 가지 방법으로 작동 합니다. 첫째, 키로 그룹화된 데이터(예: 머리글자 문자로 그룹화된 이름 목록)를 표시할 수 있습니다. 둘째, 두 시맨틱 보기 즉, 그룹화된 항목 목록(예: 이름)과 그룹 키 목록(예: 머리글자 문자) 간에 "확대/축소"할 수 있습니다. UWP를 사용하면 [목록 및 그리드 보기 컨트롤에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists)에 따라 그룹화된 데이터를 표시할 수 있습니다. |
 | 플랫 데이터를 포함하는 LongListSelector | 성능상의 이유로 매우 긴 목록의 경우에는 그룹화 되지 않은 플랫 데이터의 경우에도 Windows Phone Silverlight 목록 상자 대신 김 Listselector를 선택 하는 것이 좋습니다. UWP 앱에서는 데이터를 그룹화할 수 있는지 여부와 상관없이 긴 항목 목록에 대해 [GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)가 우선적으로 사용됩니다. |
 | Panorama | Windows Phone Silverlight 파노라마 컨트롤은 Windows 런타임 8gb 앱 및 허브 컨트롤에 대 한 지침에 [대 한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/hub) 에 매핑됩니다. <br/> Panorama 컨트롤은 마지막 섹션에서 첫 번째 섹션까지 래핑하며, 해당 배경 이미지는 섹션을 기준으로 시차 효과를 내면서 이동합니다. [Hub](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Hub) 섹션은 주변을 래핑하지 않으며 시차 효과가 사용되지 않습니다. |
-| 피벗 | Windows Phone Silverlight 피벗 컨트롤과 동일한 UWP는 [Windows](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot). x m l. x m l. x m l. x m l. x m l입니다. 모든 디바이스 패밀리에서 사용할 수 있습니다. |
+| Pivot | Windows Phone Silverlight 피벗 컨트롤과 동일한 UWP는 [Windows](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot). x m l. x m l. x m l. x m l. x m l입니다. 모든 디바이스 패밀리에서 사용할 수 있습니다. |
 
 **참고**   시각적 상태는 Windows 10 앱의 사용자 지정 스타일/템플릿과 관련이 있지만 Windows Phone Silverlight 앱에는 관련이 없습니다. 사용 중인 시스템 리소스 키, 사용 중인 시각적 상태 집합에 대 한 변경 및 Windows 10 기본 스타일/템플릿에 대 한 성능 향상을 비롯 하 여 기존 사용자 지정 스타일/템플릿이 Windows 10 앱에 적합 하지 않을 수 있는 다른 이유가 있습니다. Windows 10 용 컨트롤의 기본 템플릿 복사본을 새로 편집한 다음 스타일 및 템플릿 사용자 지정을 다시 적용 하는 것이 좋습니다.
 
@@ -205,7 +205,7 @@ UWP 컨트롤에 대한 자세한 내용은 [기능별 컨트롤](https://docs.m
 
 ##  <a name="design-language-in-windows10"></a>Windows 10의 디자인 언어
 
-Windows Phone Silverlight 앱과 Windows 10 앱 간의 디자인 언어에는 약간의 차이가 있습니다. 자세한 내용은 [디자인](https://developer.microsoft.com/en-us/windows/apps/design)을 참조하세요. 디자인 언어의 변경에도 불구하고 디자인 원칙은 일관되게 유지됩니다. 즉, 세부 정보에 신경을 쓰지만 항상 크롬이 아니라 콘텐츠에 집중하여 간결함을 추구하며, 시각적 요소를 적극적으로 최소화하고, 디지털 도메인에 대한 인증 상태를 유지하며, 특히 입력 체계에 시각적 계층 구조를 사용하며, 그리드에 디자인을 사용하고 유연한 애니메이션을 사용하여 독창적인 사용자 환경을 제공합니다.
+Windows Phone Silverlight 앱과 Windows 10 앱 간의 디자인 언어에는 약간의 차이가 있습니다. 자세한 내용은 [디자인](https://developer.microsoft.com/windows/apps/design)을 참조하세요. 디자인 언어의 변경에도 불구하고 디자인 원칙은 일관되게 유지됩니다. 즉, 세부 정보에 신경을 쓰지만 항상 크롬이 아니라 콘텐츠에 집중하여 간결함을 추구하며, 시각적 요소를 적극적으로 최소화하고, 디지털 도메인에 대한 인증 상태를 유지하며, 특히 입력 체계에 시각적 계층 구조를 사용하며, 그리드에 디자인을 사용하고 유연한 애니메이션을 사용하여 독창적인 사용자 환경을 제공합니다.
 
 ## <a name="localization-and-globalization"></a>지역화 및 전역화
 
@@ -219,9 +219,9 @@ Windows Phone Silverlight 앱은 **CultureInfo** 클래스를 사용 하 여 앱
 
 UWP 미디어 및 그래픽을 참조할 때 그래픽 복잡성, 혼란 등과 같은 불필요한 항목을 대폭 줄이는 것이 Windows 디자인 원칙입니다. Windows 디자인은 일반적으로 시각 효과, 서체, 동작 등이 선명하고 명확합니다. 앱에서 동일한 원칙을 따를 경우 기본 제공 앱처럼 보입니다.
 
-Windows Phone Silverlight에는 다른 [**브러시**](/uwp/api/Windows.UI.Xaml.Media.Brush) 형식이 있지만 UWP에 없는 **RadialGradientBrush** 형식이 있습니다. 경우에 따라 비트맵으로 비슷한 효과를 얻을 수 있습니다. [Microsoft DirectX](https://docs.microsoft.com/windows/desktop/Direct2D/how-to-create-a-radial-gradient-brush) 및 XAML C++ UWP에서 Direct2D를 사용하여 [방사형 그라데이션 브러시](https://docs.microsoft.com/windows/desktop/directx)를 만들 수 있습니다.
+Windows Phone Silverlight에는 다른 [**브러시**](/uwp/api/Windows.UI.Xaml.Media.Brush) 형식이 있지만 UWP에 없는 **RadialGradientBrush** 형식이 있습니다. 경우에 따라 비트맵으로 비슷한 효과를 얻을 수 있습니다. [Microsoft DirectX](https://docs.microsoft.com/windows/desktop/directx) 및 XAML C++ UWP에서 Direct2D를 사용하여 [방사형 그라데이션 브러시](https://docs.microsoft.com/windows/desktop/Direct2D/how-to-create-a-radial-gradient-brush)를 만들 수 있습니다.
 
-Windows Phone Silverlight에 **OpacityMask** 속성이 있지만이 속성은 UWP [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 형식의 멤버가 아닙니다 (). 경우에 따라 비트맵으로 비슷한 효과를 얻을 수 있습니다. [Microsoft DirectX](https://docs.microsoft.com/windows/desktop/Direct2D/opacity-masks-overview) 및 XAML C++ UWP 앱에서 Direct2D를 사용하여 [방사형 불투명 마스크](https://docs.microsoft.com/windows/desktop/directx)를 만들 수 있습니다. 하지만 **OpacityMask**의 일반 사용 사례는 밝은 테마와 어두운 테마 모두에 맞게 조정되는 단일 비트맵을 사용하는 것입니다. 벡터 그래픽의 경우 테마 인식 시스템 브러시(예: 아래 그림의 원형 차트)를 사용할 수 있습니다. 하지만 테마 인식 비트맵(예: 아래 그림의 확인 표시)을 만들려면 다른 방식으로 접근해야 합니다.
+Windows Phone Silverlight에 **OpacityMask** 속성이 있지만이 속성은 UWP [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 형식의 멤버가 아닙니다 (). 경우에 따라 비트맵으로 비슷한 효과를 얻을 수 있습니다. [Microsoft DirectX](https://docs.microsoft.com/windows/desktop/directx) 및 XAML C++ UWP 앱에서 Direct2D를 사용하여 [방사형 불투명 마스크](https://docs.microsoft.com/windows/desktop/Direct2D/opacity-masks-overview)를 만들 수 있습니다. 하지만 **OpacityMask**의 일반 사용 사례는 밝은 테마와 어두운 테마 모두에 맞게 조정되는 단일 비트맵을 사용하는 것입니다. 벡터 그래픽의 경우 테마 인식 시스템 브러시(예: 아래 그림의 원형 차트)를 사용할 수 있습니다. 하지만 테마 인식 비트맵(예: 아래 그림의 확인 표시)을 만들려면 다른 방식으로 접근해야 합니다.
 
 ![테마 인식 비트맵](images/wpsl-to-uwp-case-studies/wpsl-to-uwp-theme-aware-bitmap.png)
 
@@ -257,7 +257,7 @@ Windows Phone Silverlight에서 **UIElement** 속성은 **기** 하 도형을 �
     </UIElement.Clip>
 ```
 
-[Microsoft DirectX](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-layers-overview) 및 XAML C++ UWP 앱에서 Direct2D를 통해 [임의 기하 도형을 계층의 마스크로 사용](https://docs.microsoft.com/windows/desktop/directx)할 수 있습니다.
+[Microsoft DirectX](https://docs.microsoft.com/windows/desktop/directx) 및 XAML C++ UWP 앱에서 Direct2D를 통해 [임의 기하 도형을 계층의 마스크로 사용](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-layers-overview)할 수 있습니다.
 
 ## <a name="navigation"></a>탐색
 
@@ -305,7 +305,7 @@ URI 매핑 및 조각 탐색은 URI 탐색 기술이므로 URI를 기반으로 �
 
 XAML 태그에 `shell:SystemTray.IsVisible`로 설정되는 시스템 트레이를 상태 표시줄이라고 합니다. 시스템 트레이는 기본적으로 표시됩니다. [  **Windows.UI.ViewManagement.StatusBar.ShowAsync**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.statusbar.showasync) 및 [**HideAsync**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.statusbar.hideasync) 메서드를 호출하여 명령적 코드에서 표시 여부를 제어할 수 있습니다.
 
-## <a name="text"></a>Text
+## <a name="text"></a>텍스트
 
 텍스트(또는 입력 체계)는 UWP 앱의 중요한 측면이며, 포팅하는 동안 보기가 새 디자인 언어와 조화를 이루도록 보기의 시각적 디자인을 다시 검토할 수 있습니다. 다음 그림을 사용하여 사용 가능한 UWP  **TextBlock** 시스템 스타일을 찾을 수 있습니다. 사용한 Windows Phone Silverlight 스타일에 해당 하는 항목을 찾습니다. 또는 고유한 범용 스타일을 만들고 Windows Phone Silverlight 시스템 스타일에서 해당 속성을 복사할 수 있습니다.
 
@@ -313,7 +313,7 @@ XAML 태그에 `shell:SystemTray.IsVisible`로 설정되는 시스템 트레이�
 
 Windows 10 앱에 대 한 시스템 TextBlock 스타일
 
-Windows Phone Silverlight 앱에서 기본 글꼴 패밀리는 Segoe WP입니다. Windows 10 앱에서 기본 글꼴 패밀리는 맑은 고딕 됩니다. 결과적으로 앱에서 글꼴 메트릭은 다르게 보일 수 있습니다. Windows Phone Silverlight 텍스트의 모양을 재현 하려는 경우 [**Lineheight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.lineheight) 및 [**LineStackingStrategy**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.linestackingstrategy)와 같은 속성을 사용 하 여 고유한 메트릭을 설정할 수 있습니다. 자세한 내용은 [글꼴에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/fonts) 및 [UWP 앱 디자인](https://developer.microsoft.com/en-us/windows/apps/design)을 참조하세요.
+Windows Phone Silverlight 앱에서 기본 글꼴 패밀리는 Segoe WP입니다. Windows 10 앱에서 기본 글꼴 패밀리는 맑은 고딕 됩니다. 결과적으로 앱에서 글꼴 메트릭은 다르게 보일 수 있습니다. Windows Phone Silverlight 텍스트의 모양을 재현 하려는 경우 [**Lineheight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.lineheight) 및 [**LineStackingStrategy**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.linestackingstrategy)와 같은 속성을 사용 하 여 고유한 메트릭을 설정할 수 있습니다. 자세한 내용은 [글꼴에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/fonts) 및 [UWP 앱 디자인](https://developer.microsoft.com/windows/apps/design)을 참조하세요.
 
 ## <a name="theme-changes"></a>테마 변경
 

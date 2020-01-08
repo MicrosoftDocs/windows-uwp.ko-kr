@@ -5,12 +5,12 @@ ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f3fc2b2aa10fedf143c55158e521b2c1cd5b75d
-ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
+ms.openlocfilehash: bc3a8afbc0d3ca4655e0b1745090db633bcd92b7
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816694"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684671"
 ---
 # <a name="point-of-service-device-claim-and-enable-model"></a>서비스 지점 장치 클레임 및 모델 사용
 
@@ -81,7 +81,7 @@ ms.locfileid: "72816694"
 
 > [!Warning]
 > 클레임은 다음과 같은 환경에서 실패할 수 있습니다.
-> 1. 다른 앱이 동일한 장치에 대한 클레임을 요청하고 앱이 **ReleaseDeviceRequested** 이벤트에 대한 응답으로 **RetainDevice**를 발급하지 않았습니다.  (자세한 내용은 아래 [클레임 협상](#Claim-negotiation) 섹션을 참조하세요.)
+> 1. 다른 앱이 동일한 장치에 대한 클레임을 요청하고 앱이 **ReleaseDeviceRequested** 이벤트에 대한 응답으로 **RetainDevice**를 발급하지 않았습니다.  (자세한 내용은 아래 [클레임 협상](#claim-negotiation) 섹션을 참조하세요.)
 > 2. 앱이 일시 중단되어 장치 개체가 종료되고 그 결과로 클레임이 더 이상 유효하지 않습니다. (자세한 내용은 [장치 개체 수명 주기](pos-basics-deviceobject.md#device-object-lifecycle)를 참조하세요.)
 
 

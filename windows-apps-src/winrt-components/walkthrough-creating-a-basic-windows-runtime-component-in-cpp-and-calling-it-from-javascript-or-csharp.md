@@ -1,24 +1,24 @@
 ---
 title: C++/Cx Windows 런타임 구성 요소를 만들고 JavaScript 또는에서 호출 하는 연습C#
-description: 이 연습에서는 JavaScript, C#또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다.
+description: 이 연습에서는 JavaScript, C# 또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다.
 ms.assetid: 764CD9C6-3565-4DFF-88D7-D92185C7E452
 ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b12dd09251d8d8a93869ff2f4318233d89fa0e89
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 6dd0a011b4f71f5aefe111eae1900971d3353bf2
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393642"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684700"
 ---
 # <a name="walkthrough-of-creating-a-ccx-windows-runtime-component-and-calling-it-from-javascript-or-c"></a>C++/Cx Windows 런타임 구성 요소를 만들고 JavaScript 또는에서 호출 하는 연습C#
 
 > [!NOTE]
-> 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다. /Winrt를 사용 하 여 C++Windows 런타임 구성 요소를 만드는 방법에 대 한 자세한 내용은 [/Winrt의 C++Author 이벤트](../cpp-and-winrt-apis/author-events.md)를 참조 하세요.
+> 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 헤더 파일 기반 라이브러리로 구현된 WinRT(Windows 런타임) API용 최신의 완전한 표준 C++17 언어 프로젝션이며, 최신 Windows API에 최고 수준의 액세스를 제공하도록 설계되었습니다. /Winrt를 사용 하 여 C++Windows 런타임 구성 요소를 만드는 방법에 대 한 자세한 내용은 [/Winrt의 C++Author 이벤트](../cpp-and-winrt-apis/author-events.md)를 참조 하세요.
 
-이 연습에서는 JavaScript, C#또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다. 이 연습을 시작하기 전에 쉽게 ref 클래스를 사용할 수 있게 해주는 ABI(추상 이진 인터페이스), ref 클래스, Visual C++ 구성 요소 확장 등의 개념을 이해해야 합니다. 자세한 내용은 [/cx를 사용 하 여 C++구성 요소 Windows 런타임](creating-windows-runtime-components-in-cpp.md) 및 [/cx ( C++ C++시각적 언어 참조)](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx)를 참조 하세요.
+이 연습에서는 JavaScript, C# 또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다. 이 연습을 시작하기 전에 쉽게 ref 클래스를 사용할 수 있게 해주는 ABI(추상 이진 인터페이스), ref 클래스, Visual C++ 구성 요소 확장 등의 개념을 이해해야 합니다. 자세한 내용은 [/cx를 사용 하 여 C++구성 요소 Windows 런타임](creating-windows-runtime-components-in-cpp.md) 및 [/cx ( C++ C++시각적 언어 참조)](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx)를 참조 하세요.
 
 ## <a name="creating-the-c-component-dll"></a>C++ 구성 요소 DLL 만들기
 이 예제에서는 구성 요소 프로젝트를 먼저 만들지만 JavaScript 프로젝트를 먼저 만들 수도 있습니다. 순서는 중요하지 않습니다.
@@ -30,7 +30,7 @@ ms.locfileid: "70393642"
 
 2. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual C++** 를 확장하고 유니버설 Windows 앱에 대한 노드를 선택합니다.
 
-3. 가운데 창에서 **Windows 런타임 구성 요소** 를 선택 하 고 프로젝트 이름을 WinRT\_CPP로 선택 합니다.
+3. 가운데 창에서 **Windows 런타임 구성 요소** 를 선택한 다음 프로젝트 이름을 WINRT\_CPP로 합니다.
 
 4. **확인** 단추를 선택합니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "70393642"
 #include <amp_math.h>
 ```
 
-collection.h는 Windows 런타임에서 정의된 언어 중립 인터페이스를 구현하는 Platform::Collections::Vector 클래스 및 Platform::Collections::Map 클래스 등의 C++ 구체적 클래스에 대한 헤더 파일입니다. amp 헤더는 GPU에서 계산을 실행하는 데 사용됩니다. 동등한 Windows 런타임 항목은 없으며 프라이빗이므로 문제가 되지 않습니다. 일반적으로 성능상의 이유로 구성 요소 내에서는 내부적으로 ISO C++ 코드 및 표준 라이브러리를 사용해야 합니다. Windows 런타임 형식으로 표시해야 하는 것은 Windows 런타임 인터페이스뿐입니다.
+collection.h는 Windows 런타임에서 정의된 언어 중립 인터페이스를 구현하는 Platform::Collections::Vector 클래스 및 Platform::Collections::Map 클래스 등의 C++ 구체적 클래스에 대한 헤더 파일입니다. amp 헤더는 GPU에서 계산을 실행하는 데 사용됩니다. 동등한 Windows 런타임 항목은 없으며 private이므로 문제가 되지 않습니다. 일반적으로 성능상의 이유로 구성 요소 내에서는 내부적으로 ISO C++ 코드 및 표준 라이브러리를 사용해야 합니다. Windows 런타임 형식으로 표시해야 하는 것은 Windows 런타임 인터페이스뿐입니다.
 
 ## <a name="to-add-a-delegate-at-namespace-scope"></a>네임스페이스 범위에서 대리자를 추가하려면
 대리자는 메서드에 대한 매개 변수 및 반환 형식을 정의하는 구문입니다. 이벤트는 특정 대리자 형식의 인스턴스이며 이벤트를 구독하는 모든 이벤트 처리기 메서드에 대리자에 지정된 서명이 있어야 합니다. 다음 코드는 int를 받아서 void를 반환하는 대리자 형식을 정의합니다. 그런 후에 코드는 이 형식의 public 이벤트를 선언합니다. 이 경우 클라이언트 코드를 통해 이벤트 발생 시 호출되는 메서드를 제공할 수 있습니다.
@@ -77,8 +77,8 @@ public:
         event PrimeFoundHandler^ primeFoundEvent;
 
 ```
-## <a name="to-add-the-private-members"></a>프라이빗 멤버를 추가하려면
-클래스는 프라이빗 멤버 3개를 포함합니다. 숫자 계산에 사용되는 도우미 메서드 2개와 작업자 스레드의 이벤트 호출을 다시 UI 스레드로 마샬링하는 데 사용되는 CoreDispatcher 개체 1개입니다.
+## <a name="to-add-the-private-members"></a>private 멤버를 추가하려면
+클래스는 private 멤버 3개를 포함합니다. 숫자 계산에 사용되는 도우미 메서드 2개와 작업자 스레드의 이벤트 호출을 다시 UI 스레드로 마샬링하는 데 사용되는 CoreDispatcher 개체 1개입니다.
 
 ```cpp
 private:
@@ -116,7 +116,7 @@ IVector<double>^ Class1::ComputeResult(double input)
     float numbers[] = { 1.0, 10.0, 60.0, 100.0, 600.0, 10000.0 };
     array_view<float, 1> logs(6, numbers);
 
-    // See http://msdn.microsoft.com/en-us/library/hh305254.aspx
+    // See http://msdn.microsoft.com/library/hh305254.aspx
     parallel_for_each(
         logs.extent,
         [=] (index<1> idx) restrict(amp)
@@ -480,7 +480,7 @@ MainPage.xaml의 Grid 요소에 다음 코드를 복사합니다.
 ```
 
 ## <a name="to-add-the-event-handlers-for-the-buttons"></a>단추에 대한 이벤트 처리기를 추가하려면
-솔루션 탐색기에서 MainPage.xaml.cs를 엽니다. 이 파일은 MainPage .xaml 아래에 중첩 될 수 있습니다. System.object에 using 지시문을 추가한 다음 MainPage 클래스에서 로그 계산에 대 한 이벤트 처리기를 추가 합니다.
+솔루션 탐색기에서 MainPage.xaml.cs를 엽니다. MainPage.xaml 아래에 파일이 중첩되어 있을 수 있습니다. System.Text에 대해 using 지시문을 추가한 다음 MainPage 클래스에 로그 계산에 대한 이벤트 처리기를 추가합니다.
 
 ```csharp
 private void Button1_Click_1(object sender, RoutedEventArgs e)
@@ -611,4 +611,4 @@ JavaScript 코드가 구성 요소의 public 속성 또는 메서드를 인식�
 솔루션에서 C++ Windows 런타임 구성 요소 프로젝트를 제거하는 경우 JavaScript 프로젝트에서 프로젝트 참조를 수동으로 제거해야 합니다. 이렇게 하지 않으면 이후 디버그 또는 빌드 작업을 수행할 수 없습니다. 필요한 경우 DLL에 대한 어셈블리 참조를 추가할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
-* [/Cx를 사용 C++하 여 구성 요소 Windows 런타임](creating-windows-runtime-components-in-cpp.md)
+* [C++/CX가 포함된 Windows 런타임 구성 요소](creating-windows-runtime-components-in-cpp.md)

@@ -8,12 +8,12 @@ keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입�
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d36368fab267370e2301e52731d99bc7b146fbd
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: fd33720255a04ffd8669673f027973afb4369086
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258244"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684217"
 ---
 # <a name="speech-interactions"></a>음성 조작
 
@@ -24,7 +24,7 @@ ms.locfileid: "74258244"
 **TTS** TTS는 음성 합성 엔진(음성)을 사용하여 텍스트 문자열을 음성으로 변환합니다. 입력 문자열은 일반적인 기본 텍스트이거나 더욱 복잡한 SSML(Speech Synthesis Markup Language)일 수 있습니다. SSML은 발음, 볼륨, 피치, 비율 또는 속도, 강조 등의 음성 출력 특성을 제어하는 표준 방법을 제공합니다.
 
 **다른 음성 관련 구성 요소:** 
-**Cortana**(Windows 응용 프로그램)는 사용자 지정된 음성 명령(음성 또는 입력)을 사용하여 앱을 포어그라운드에 실행하거나(시작 메뉴에서 시작된 것처럼 앱에 포커스가 지정됨) 백그라운드 서비스로 활성화(**Cortana**에 포커스가 유지되지만 앱의 결과가 표시됨)합니다. [Cortana](https://docs.microsoft.com/en-us/cortana/voice-commands/vcd) UI에 앱 기능을 표시하는 경우 **Cortana 음성 명령(VCD) 지침**을 참조하세요.
+**Cortana**(Windows 응용 프로그램)는 사용자 지정된 음성 명령(음성 또는 입력)을 사용하여 앱을 포어그라운드에 실행하거나(시작 메뉴에서 시작된 것처럼 앱에 포커스가 지정됨) 백그라운드 서비스로 활성화(**Cortana**에 포커스가 유지되지만 앱의 결과가 표시됨)합니다. **Cortana** UI에 앱 기능을 표시하는 경우 [Cortana 음성 명령(VCD) 지침](https://docs.microsoft.com/cortana/voice-commands/vcd)을 참조하세요.
 
 ## <a name="speech-interaction-design"></a>음성 조작 디자인
 

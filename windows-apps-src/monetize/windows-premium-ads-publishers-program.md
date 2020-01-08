@@ -5,12 +5,12 @@ ms.date: 09/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d747d35148965480cb34714cde7859203a7424d
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4db99097516fcead384af6fc9e4c588707b96d41
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57634378"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684447"
 ---
 # <a name="windows-premium-ads-publishers-program"></a>Windows 프리미엄 광고 게시자 프로그램
 
@@ -22,7 +22,7 @@ Windows 개발자가 광고를 통해 앱에서 수익을 창출하도록 지원
 
 [자격 기준](#what-are-the-criteria-for-apps-in-the-program)에 따라 Store에 게시할 앱을 지속적으로 평가합니다. 자격 기준을 충족하는 앱에 대한 엄격한 수동 검토 과정을 거쳐 사용자 환경이 원활하고 명확하게 정의되었는지, 의도하지 않은 클릭을 피하도록 광고가 잘 배치되었는지 확인합니다. 자동 및 수동 심사 프로세스를 모두 통과한 앱이 프로그램에 추가됩니다.
 
-이 프로그램은 현재 초청 전용 프로그램이며, 자격 기준을 충족한다고 해서 앱이 자동으로 프리미엄 프로그램을 구성할 자격을 얻는 것은 아닙니다. 앱 환경을 개선하여 프로그램 자격을 얻는 방법에 대해 자세히 알아보려면 aiacare@microsoft.com으로 문의하세요.
+이 프로그램은 현재 초청 전용 프로그램이며, 자격 기준을 충족한다고 해서 앱이 자동으로 프리미엄 프로그램을 구성할 자격을 얻는 것은 아닙니다. 프로그램에 적합 하도록 앱 환경을 개선 하는 방법에 대 한 자세한 내용은 aiacare@microsoft.com를 참조 하세요.
 
 ## <a name="what-are-the-criteria-for-apps-in-the-program"></a>프로그램에 참여할 수 있는 앱의 기준은 무엇인가요?
 
@@ -41,7 +41,7 @@ Windows 개발자가 광고를 통해 앱에서 수익을 창출하도록 지원
 
 ## <a name="can-apps-get-removed-from-the-program"></a>프로그램에서 앱을 제거할 수 있나요?
 
-프로그램의 앱은 수시로 모니터링되어, 자격 요건을 계속 충족하는지에 대한 확인이 이루어집니다. 일일 최소 광고 요청 볼륨을 유지하려면 시간이 지나도 앱 사용량이 크게 떨어지지 않도록 해야 합니다. [정기적으로 프로모션 캠페인을 실시](https://developer.microsoft.com/en-us/store/promote-your-apps)하는 것도 좋은 방법입니다.
+프로그램의 앱은 수시로 모니터링되어, 자격 요건을 계속 충족하는지에 대한 확인이 이루어집니다. 일일 최소 광고 요청 볼륨을 유지하려면 시간이 지나도 앱 사용량이 크게 떨어지지 않도록 해야 합니다. [정기적으로 프로모션 캠페인을 실시](https://developer.microsoft.com/store/promote-your-apps)하는 것도 좋은 방법입니다.
 
 ## <a name="can-i-provide-additional-marketing-material-to-showcase-my-app-in-the-program"></a>프로그램에 내 앱을 공개하기 위해 추가 마케팅 자료를 제공할 수 있나요? 
 

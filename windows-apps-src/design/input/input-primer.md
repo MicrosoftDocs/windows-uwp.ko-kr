@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f9aab8c4b627b9a4952e7e3e292f1e4b528f992
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: b9fbe76244d37bda69a1737e04f7172a64b3af44
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258386"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684218"
 ---
 # <a name="interaction-primer"></a>조작 입문서
 
@@ -30,7 +30,7 @@ UWP는 "스마트"한 상황별 상호 작용 시스템을 사용하여 대부�
 **Windows 10 2018년 4월 업데이트**에서 눈과 머리 추적 입력 장치를 사용하는 응시 입력에 대한 지원을 도입했습니다. 
 
 > [!NOTE]
-> **Windows 10 Fall Creators Update**에서 눈을 사용하여 화면 포인터를 제어하고, 화상 키보드로 입력하고, 텍스트 음성 변환을 사용하여 다른 사람과 소통하는 기본 제공 기능인 [아이 컨트롤](https://support.microsoft.com/en-us/help/4043921/windows-10-get-started-eye-control)과 함께 추적 하드웨어에 대한 지원이 도입되었습니다.
+> **Windows 10 Fall Creators Update**에서 눈을 사용하여 화면 포인터를 제어하고, 화상 키보드로 입력하고, 텍스트 음성 변환을 사용하여 다른 사람과 소통하는 기본 제공 기능인 [아이 컨트롤](https://support.microsoft.com/help/4043921/windows-10-get-started-eye-control)과 함께 추적 하드웨어에 대한 지원이 도입되었습니다.
 
 ### <a name="device-support"></a>장치 지원
 
@@ -47,7 +47,7 @@ UWP는 "스마트"한 상황별 상호 작용 시스템을 사용하여 대부�
 
 ## <a name="surface-dial"></a>Surface Dial
 
-**Windows 10 1주년 업데이트**를 위해 Windows Wheel이라는 새로운 입력 장치 범주가 도입되었습니다. Surface Dial은 이 장치급에서 제일 첫 번째 장치입니다.
+**Windows 10 1주년 업데이트**를 위해 Windows Wheel이라는 새로운 입력 장치 범주가 도입되었습니다. Surface Dial은 이 클래스의 장치에서 제일 첫 번째 장치입니다.
 
 ### <a name="device-support"></a>장치 지원
 
@@ -89,7 +89,7 @@ Windows 10에서 **Cortana** 확장성을 사용 하면 사용자의 음성 명�
 [Cortana 디자인 지침](https://docs.microsoft.com/cortana/skills/cortana-design-guidelines)
  
 
-## <a name="speech"></a>음성 명령
+## <a name="speech"></a>음성으로
 
 음성 명령은 사람들이 응용 프로그램을 조작하는 효과적이고 자연스러운 방법입니다. 응용 프로그램과 통신하는 쉽고 정확한 방법이며 다양한 상황에서 사람들이 생산성을 유지하고 최신 정보를 얻을 수 있도록 합니다.
 
@@ -107,7 +107,7 @@ Windows 10에서 **Cortana** 확장성을 사용 하면 사용자의 음성 명�
 -   Xbox
 -   HoloLens
 
-![음성 명령](images/input-interactions/icons-speech01.png)
+![음성](images/input-interactions/icons-speech01.png)
 
 ### <a name="typical-usage"></a>일반적인 용도
 
@@ -230,7 +230,7 @@ Surface Hub 장치는 100개의 고유한 동시 터치 접촉을 인식합니�
 [터치 패드 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/touch-interactions)
  
 
-## <a name="keyboard"></a>키보드
+## <a name="keyboard"></a>Keyboard
 
 키보드는 텍스트를 위한 기본 입력 장치이며, 일반적으로 키보드가 앱을 조작하는 보다 빠르고 효율적인 방법이라고 생각하는 사용자나 일정한 장애가 있는 사람들에게는 필수 도구입니다.
 

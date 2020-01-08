@@ -7,20 +7,20 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: e5773a77ccb98a75363184bcb17a6e3282e00932
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 8196131b92c395c0b21f4ff68558ddeb531cf6fa
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370196"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684805"
 ---
 # <a name="enumerate-devices-over-a-network"></a>네트워크를 통해 디바이스 열거
 
 
 
-**중요 한 Api**
+**중요 API**
 
-- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
+- [**Windows. Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)
 
 로컬로 연결된 장치를 검색하는 것 외에 [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) API를 사용하여 무선 및 네트워크 프로토콜을 통해 장치를 열거할 수 있습니다.
 
@@ -45,7 +45,7 @@ ms.locfileid: "66370196"
 | WCN(Windows Connect Now)                    | **{4c1b1ef8-2f62-4b9f-9bc5-b21ab636138f}** |
 | WiGig dock                                  | **{a277f3a5-8764-4f88-8045-4c5e962640b1}** |
 | HP 프린터용 Wi-Fi 프로비저닝           | **{c85ef710-f344-4792-bb6d-85a4346f1e69}** |
-| Bluetooth                                    | **{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}** |
+| Bluetooth                                    | **{e0cbf06c-cd8b-4647-bb8a}** |
 | Bluetooth LE                                 | **{bb7bb05e-5972-42b5-94fc-76eaa7084d49}** |
 | 네트워크 카메라                               | **{b8238652-b500-41eb-b4f3-4234f7f5ae99}** |
 

@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 85d42e69b376e2f3f455e44eb1dce3d41e890971
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 1dbf843d9a45cbf31e5ec5c1a538e6e5e2b53ee2
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258644"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684680"
 ---
 # <a name="pair-devices"></a>장치 페어링
 
@@ -20,7 +20,7 @@ ms.locfileid: "74258644"
 
 **중요 API**
 
-- [**Windows. Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
+- [**Windows. Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)
 
 일부 디바이스는 페어링해야 사용할 수 있습니다. [  **Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) 네임스페이스는 세 가지 방법으로 디바이스를 페어링하도록 지원합니다.
 
@@ -46,7 +46,7 @@ ms.locfileid: "74258644"
 
 기본 페어링을 시도하려면 먼저 관심 있는 디바이스에 대한 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체를 가져와야 합니다. 해당 개체를 받으면 [**DeviceInformation.Pairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing) 속성을 조작합니다. 이제 [**DeviceInformationPairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing) 개체입니다. 페어링을 시도하려면 [**DeviceInformationPairing.PairAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationpairing.pairasync)를 호출하면 됩니다. 페어링 작업을 완료할 시간을 앱에 제공하려면 결과를 **await**해야 합니다. 페어링 작업의 결과가 반환되며, 오류가 반환되지 않는 한 디바이스가 페어링됩니다.
 
-기본 페어링을 사용하는 경우 장치의 페어링 상태에 대한 추가 정보에도 액세스할 수 있습니다. 예를 들어 페어링 상태([**IsPaired**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing.IsPaired)) 및 디바이스를 페어링할 수 있는지 여부([**CanPair**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing.CanPair))를 알 수 있습니다. 이러한 두 가지는 모두 [**DeviceInformationPairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing) 개체의 속성입니다. 자동 페어링을 사용하는 경우 관련 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체를 가져오지 않는 한 이 정보에 액세스하지 못할 수도 있습니다.
+기본 페어링을 사용하는 경우 장치의 페어링 상태에 대한 추가 정보에도 액세스할 수 있습니다. 예를 들어 페어링 상태([**IsPaired**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing.IsPaired)) 및 디바이스를 페어링할 수 있는지 여부([**CanPair**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationPairing.CanPair))를 알 수 있습니다. 이러한 두 가지는 모두 [**DeviceInformationPairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing) 개체의 속성입니다. 자동 페어링을 사용하는 경우 관련 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체를 가져오지 않는 한 이 정보에 액세스하지 못할 수도 있습니다.
 
 ## <a name="custom-pairing"></a>사용자 지정 페어링
 
@@ -57,7 +57,7 @@ ms.locfileid: "74258644"
 
 사용자 지정 페어링을 지원하려면 [**PairingRequested**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationcustompairing.pairingrequested) 이벤트에 대한 처리기를 만들어야 합니다. 이 처리기가 사용자 지정 페어링 시나리오에서 사용할 수 있는 여러 가지의 모든 [**DevicePairingKinds**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePairingKinds)를 고려하도록 확인합니다. 수행할 적절한 작업은 이벤트 인수의 일부로 제공되는 **DevicePairingKinds**에 따라 달라집니다.
 
-사용자 지정 페어링이 항상 시스템 수준 작업이라는 것을 인식해야 합니다. 이 때문에 데스크톱 또는 Windows Phone에서 작업할 때 페어링이 발생할 경우 시스템 대화 상자가 사용자에게 항상 표시됩니다. 이는 해당하는 두 플랫폼이 모두 사용자 동의가 필요한 사용자 환경을 보유하기 때문입니다. 대화 상자가 자동으로 생성되므로 이러한 플랫폼에서 작업하는 경우 [ConfirmOnly**의** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePairingKinds)DevicePairingKinds를 선택할 때 고유한 대화 상자를 만들지 않아도 됩니다. 다른 **DevicePairingKinds**의 경우 특정 **DevicePairingKinds** 값에 따라 어떤 특별한 처리를 수행해야 합니다. 다른 **DevicePairingKinds** 값에 대해 사용자 지정 페어링을 처리하는 방법의 예제는 샘플을 참조하세요.
+사용자 지정 페어링이 항상 시스템 수준 작업이라는 것을 인식해야 합니다. 이 때문에 데스크톱 또는 Windows Phone에서 작업할 때 페어링이 발생할 경우 시스템 대화 상자가 사용자에게 항상 표시됩니다. 이는 해당하는 두 플랫폼이 모두 사용자 동의가 필요한 사용자 환경을 보유하기 때문입니다. 대화 상자가 자동으로 생성되므로 이러한 플랫폼에서 작업하는 경우 **ConfirmOnly**의 [**DevicePairingKinds**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DevicePairingKinds)를 선택할 때 고유한 대화 상자를 만들지 않아도 됩니다. 다른 **DevicePairingKinds**의 경우 특정 **DevicePairingKinds** 값에 따라 어떤 특별한 처리를 수행해야 합니다. 다른 **DevicePairingKinds** 값에 대해 사용자 지정 페어링을 처리하는 방법의 예제는 샘플을 참조하세요.
 
 Windows 10 버전 1903부터 새 **DevicepProvidePasswordCredential Ing종류가** 지원 됩니다 (). 이 값은 연결 된 장치로 인증 하기 위해 앱에서 사용자의 사용자 이름과 암호를 요청 해야 함을 의미 합니다. 이 경우를 처리 하려면 **PairingRequested** 이벤트 처리기의 이벤트 인수에 대 한 [**Acceptwithpasswordcredential**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicepairingrequestedeventargs.acceptwithpasswordcredential?branch=release-19h1#Windows_Devices_Enumeration_DevicePairingRequestedEventArgs_AcceptWithPasswordCredential_Windows_Security_Credentials_PasswordCredential_) 메서드를 호출 하 여 페어링을 적용 합니다. 사용자 이름 및 암호를 매개 변수로 캡슐화 하는 [**Passwordcredential**](https://docs.microsoft.com/uwp/api/windows.security.credentials.passwordcredential) 개체를 전달 합니다. 원격 장치에 대 한 사용자 이름 및 암호는 로컬에 로그인 한 사용자에 대 한 자격 증명과는 다르며 종종 동일 하지 않습니다.
 
@@ -68,7 +68,7 @@ Windows 10 버전 1903부터 새 **DevicepProvidePasswordCredential Ing종류가
 
 디바이스를 언페어링하는 첫 번째 단계는 언페어링하려는 디바이스의 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체를 가져오는 것입니다. 그런 다음 [**DeviceInformation.Pairing**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.pairing) 속성을 검색하고 [**DeviceInformationPairing.UnpairAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationpairing.unpairasync)를 호출해야 합니다. 페어링과 마찬가지로 결과를 **await**합니다. 언페어링 작업의 결과가 반환되며, 오류가 반환되지 않는 한 디바이스가 언페어링됩니다.
 
-## <a name="sample"></a>예제
+## <a name="sample"></a>샘플
 
 
 [  **Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) API를 사용하는 방법을 보여 주는 샘플을 다운로드하려면 [여기](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing)를 클릭하세요.

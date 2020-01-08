@@ -6,12 +6,12 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: Windows 10, UWP, 예고편, 동영상, 스크린샷, 이미지, 아이콘, Store 목록, Store 목록 이미지
 ms.localizationpriority: medium
-ms.openlocfilehash: 25dd6ffe698ae8141a02381d5ca45df31377599b
-ms.sourcegitcommit: a4a595c485a1e4549b02b0e20ca9f56b093c5814
+ms.openlocfilehash: 48a8566c80516588939dc0ef071c3da4b9232d64
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74125232"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684609"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>앱 스크린샷, 이미지 및 예고편
 
@@ -170,7 +170,7 @@ Microsoft Store 목록 페이지의 다른 필드와 마찬가지로, 승인을 
 
 | Video | 오디오 |
 | --- | --- |
-| <ul><li>코덱: [h.264](https://docs.microsoft.com/en-us/windows/desktop/DirectShow/h-264-video-types) (AVC1)  </li><li>프로그레시브 스캔 (인터레이스 없음)</li><li>High Profile</li><li>2개의 연속 B 프레임</li><li>Closed GOP. 절반 프레임 속도의 GOP</li><li>CABAC</li><li>50 MB/s </li><li>색 공간: 4.2.0</li></ul> | <ul><li>코덱: AAC LC</li><li>채널: 스테레오 또는 서라운드 사운드</li><li>샘플 속도: 48 KHz</li><li>오디오 비트 전송률: 스테레오는 384 KB/s, 서라운드 사운드는 512 KB/s</li></ul> |
+| <ul><li>코덱: [h.264](https://docs.microsoft.com/windows/desktop/DirectShow/h-264-video-types) (AVC1)  </li><li>프로그레시브 스캔 (인터레이스 없음)</li><li>High Profile</li><li>2개의 연속 B 프레임</li><li>Closed GOP. 절반 프레임 속도의 GOP</li><li>CABAC</li><li>50 MB/s </li><li>색 공간: 4.2.0</li></ul> | <ul><li>코덱: AAC LC</li><li>채널: 스테레오 또는 서라운드 사운드</li><li>샘플 속도: 48 KHz</li><li>오디오 비트 전송률: 스테레오는 384 KB/s, 서라운드 사운드는 512 KB/s</li></ul> |
 
 > [!WARNING]
 > 고객은 AVC1 이외의 코덱으로 인코딩된 MP4 파일에 대 한 오디오를 듣지 못할 수 있습니다.

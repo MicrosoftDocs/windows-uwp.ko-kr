@@ -1,5 +1,5 @@
 ---
-Description: 정상적으로 진행 하 고 혼합 현실에서 잘 작동 되도록 앱을 디자인 합니다.
+Description: 혼합 현실에서 잘 작동 하도록 앱을 디자인 합니다.
 title: 혼합 현실을 위한 디자인
 ms.assetid: ''
 label: Designing for Mixed Reality
@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e8cee688cbfbda0fe3822017b769560fc0fffe3
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 5aaa5b5a51ab2aea863fece8fb466f274a00ace3
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319378"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684255"
 ---
 # <a name="designing-for-mixed-reality"></a>혼합 현실을 위한 디자인
 
@@ -26,7 +26,7 @@ ms.locfileid: "67319378"
 
 ## <a name="overview"></a>개요
 
-[혼합 현실](https://developer.microsoft.com/windows/mixed-reality/mixed_reality)은 실제 세상과 디지털 세상이 혼합된 결과입니다. 혼합 현실 환경의 스펙트럼은 HoloLens(컴퓨터에서 생성된 콘텐츠를 실제 세상과 혼합하는 장치) 같은 장치부터 시작하여 완전한 몰입형 가상 현실 뷰(Windows Mixed Reality 헤드셋을 통한 뷰)에 이르기까지 매우 광범위합니다. 환경이 어떻게 다른지 나타내는 예는 [혼합 현실 앱의 유형](https://developer.microsoft.com/en-us/windows/mixed-reality/types_of_mixed_reality_apps)을 참조하세요.
+[혼합 현실](https://developer.microsoft.com/windows/mixed-reality/mixed_reality)은 실제 세상과 디지털 세상이 혼합된 결과입니다. 혼합 현실 환경의 스펙트럼은 HoloLens(컴퓨터에서 생성된 콘텐츠를 실제 세상과 혼합하는 장치) 같은 장치부터 시작하여 완전한 몰입형 가상 현실 뷰(Windows Mixed Reality 헤드셋을 통한 뷰)에 이르기까지 매우 광범위합니다. 환경이 어떻게 다른지 나타내는 예는 [혼합 현실 앱의 유형](https://developer.microsoft.com/windows/mixed-reality/types_of_mixed_reality_apps)을 참조하세요.
 
 이번 주제에서 다루는 몇 가지 지침을 따르면 사용자 경험을 개선할 수는 있지만 기존 UWP 앱은 거의 모두 아무런 변경 없이 2D 앱으로도 혼합 현실 환경에서 실행됩니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "67319378"
 
 HoloLens와 Windows Mixed Reality 헤드셋 모두 UWP 플랫폼 기반 응용 프로그램을 지원하며, 동시에 둘 다 서로 다른 유형의 두 가지 환경을 지원하기도 합니다. 
 
-### <a name="2d-vs-immersive-experience"></a>2D vs입니다. 몰입 형 환경
+### <a name="2d-vs-immersive-experience"></a>2D vs 몰입형 환경
 
 몰입형 앱은 사용자에게 보이는 전체 디스플레이를 사용하여 앱에서 생성되는 뷰의 중앙에 사용자를 배치합니다. 예를 들어, 몰입형 게임이라고 하면 사용자가 외계 행성의 지표면에 놓이거나, 혹은 여행 가이드 앱일 경우에는 사용자가 남미 지역의 한 마을에 놓일 수 있습니다. 몰입형 앱을 만들려면 3D 그래픽 또는 캡처된 입체 비디오가 필요합니다. 몰입형 앱은 종종 Unity 같은 타사의 게임 엔진이나 DirectX를 사용해 개발됩니다.
 
@@ -84,7 +84,7 @@ HoloLens와 혼합 현실 플랫폼 모두 키보드 및 마우스가 지원됩�
 * [Clicker 장치](https://developer.microsoft.com/windows/mixed-reality/hardware_accessories)(HoloLens 전용)
 * [모션 컨트롤러](https://docs.microsoft.com/windows/mixed-reality/motion-controllers)(혼합 현실 장치 전용, 위 그림 참조)
 
-위 컨트롤러는 가상 개체와 일어나는 상호 작용이 자연스럽고 정확하게 보일 수 있도록 지원합니다. 일부 상호 작용은 아무런 대가 없이 지원됩니다. 예를 들어는 HoloLens 제스처를 선택 하거나 예상할 수 있겠지만 다시 코딩을 사용 하 여 입력된 응답을 생성 하는 트리거 또는 동작 컨트롤러의 Windows 키를 클릭 하 합니다.
+위 컨트롤러는 가상 개체와 일어나는 상호 작용이 자연스럽고 정확하게 보일 수 있도록 지원합니다. 일부 상호 작용은 아무런 대가 없이 지원됩니다. 예를 들어 HoloLens 선택 제스처 또는 이동 컨트롤러의 Windows 키 또는 트리거를 클릭 하면 사용자에 게 코딩 하지 않고 다시 필요한 입력 응답이 생성 됩니다.
 
 그 밖에 추가로 제공되는 정보나 입력 방식을 활용하려면 코드를 추가해야 하는 경우도 있습니다. 예를 들어, 개체 위치나 버튼 누르기를 고려하여 코드를 작성하는 경우에는 모션 컨트롤러를 사용해 제어를 세분화하여 개체를 조작할 수 있습니다.
 
@@ -92,7 +92,7 @@ HoloLens와 혼합 현실 플랫폼 모두 키보드 및 마우스가 지원됩�
 > 요약하자면 주요 원칙에 따라 최대한 자연스럽고 원활한 입력 방식을 사용자에게 항상 제공해야 합니다.
 
 
-## <a name="2d-app-design-considerations-functionality"></a>2D 앱 디자인 고려 사항: 기능
+## <a name="2d-app-design-considerations-functionality"></a>2D 앱 디자인 시 고려해야 할 사항: 기능성
 
 혼합 현실 플랫폼에서 사용될 가능성이 있는 UWP 앱을 개발할 때는 몇 가지 사항을 염두에 두어야 합니다.
 
@@ -105,7 +105,7 @@ HoloLens와 혼합 현실 플랫폼 모두 키보드 및 마우스가 지원됩�
 * 2D 앱에는 자동으로 [앱 바](https://developer.microsoft.com/windows/mixed-reality/app_bar_and_bounding_box)가 표시되어 사용자가 가상 환경에서 위치를 옮기거나 크기를 조정할 수 있습니다. 시야 각은 수직으로 크기를 조정하거나, 혹은 가로/세로 비율을 동일하게 유지하면서 크기를 조정할 수 있습니다.
 
 
-## <a name="2d-app-design-considerations-uiux"></a>2D 앱 디자인 고려 사항: UI/UX
+## <a name="2d-app-design-considerations-uiux"></a>2D 앱 디자인 시 고려해야 할 사항: UI/UX
 
 * [흐름 디자인 시스템](https://docs.microsoft.com/windows/uwp/design/fluent-design-system/)([탐색 보기](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview) 등)과 효과([아크릴](https://docs.microsoft.com/windows/uwp/design/style/acrylic) 등)를 구현하는 XAML 컨트롤은 모두 2D 혼합 현실 앱에서 특히 효과가 좋습니다.
 
@@ -163,9 +163,9 @@ bool isViewingInMR = Windows.ApplicationModel.Preview.Holographic.HolographicApp
 ## <a name="related-articles"></a>관련 문서
 
 
-* [셸에서 Api를 사용 하 여 앱에 대 한 현재 제한 사항](https://developer.microsoft.com/windows/mixed-reality/current_limitations_for_apps_using_apis_from_the_shell)
+* [셸에서 Api를 사용 하는 앱에 대 한 현재 제한 사항](https://developer.microsoft.com/windows/mixed-reality/current_limitations_for_apps_using_apis_from_the_shell)
 * [2D 앱 빌드](https://developer.microsoft.com/windows/mixed-reality/building_2d_apps)
 * [HoloLens: Microsoft HoloLens 용 UWP 2D 앱 빌드](https://channel9.msdn.com/Events/Build/2016/B854)
-* [조건부 XAML](https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/conditional-xaml)
+* [조건부 XAML](https://docs.microsoft.com/windows/uwp/debug-test-perf/conditional-xaml)
 
 

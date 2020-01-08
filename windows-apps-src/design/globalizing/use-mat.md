@@ -6,12 +6,12 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 802a7a925a08dde94ab59d79e01df94fbbcf495d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 34bc609d06705f1dfa6a5c7370ce6022ae9c3ff8
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258035"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684243"
 ---
 # <a name="use-the-multilingual-app-toolkit-40"></a>다국어 앱 도구 키트 4.0 사용
 
@@ -30,7 +30,7 @@ ms.locfileid: "74258035"
 
 MAT를 효과적으로 사용하려면 먼저 앱을 지역화할 수 있어야 합니다. 특히, 프로젝트에 앱 문자열이 기본 언어로 포함된 하나 이상의 리소스 파일이 들어 있어야 합니다. 자세한 내용은 [UI와 앱 패키지 매니페스트에 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)를 참조하세요. 작업을 수행하고 나면 도구 키트를 통해 추가 언어를 쉽고 빠르게 추가할 수 있습니다.
 
-&mdash;세계화 **,** 현지화**및**지역화**라는 용어의 정의뿐만 아니라 세계화 및 지역화에 대한 가치 제안에 대한 자세한 내용은** 세계화 및 지역화&mdash;를 참조하세요.
+**세계화**, **현지화** 및 **지역화**라는 용어의 정의뿐만 아니라 세계화 및 지역화에 대한 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](globalizing-portal.md)를 참조하세요.
 
 [세계화 지침](guidelines-and-checklist-for-globalizing-your-app.md) 및 [자신의 앱을 현지화 가능하도록 만들기](prepare-your-app-for-localization.md)를 참조하세요.
 
@@ -39,7 +39,7 @@ MAT를 효과적으로 사용하려면 먼저 앱을 지역화할 수 있어야 
 MAT 4.0(다국어 앱 도구 키트 4.0)에는 두 가지 부분이 있으며 각 부분에는 고유한 설치 프로그램이 포함되어 있습니다.
 
 - [Visual Studio 2017 이상용 다국어 앱 도구 키트 4.0 확장](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308) 여기에는 .vsix 설치 관리자의 형태로 Visual Studio 2019의 대/a 4.0 확장이 포함 됩니다.
-- [다국어 앱 도구 키트 4.0 편집기](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit). 여기에는 .msi 설치 프로그램 형식의 MAT 4.0 독립 실행형 다국어 편집기 도구가 포함됩니다. Visual Studio 2015 및 Visual Studio 2013용 MAT 4.0 확장 프로그램도 포함됩니다.
+- [다국어 앱 도구 키트 4.0 편집기](https://developer.microsoft.com/windows/develop/multilingual-app-toolkit). 여기에는 .msi 설치 프로그램 형식의 MAT 4.0 독립 실행형 다국어 편집기 도구가 포함됩니다. Visual Studio 2015 및 Visual Studio 2013용 MAT 4.0 확장 프로그램도 포함됩니다.
 
 Visual Studio 2017 또는 Visual Studio 2019를 사용 하는 경우 두 설치 관리자를 모두 다운로드 하 여 실행 합니다. Visual Studio 2015 또는 Visual Studio 2013을 사용하는 경우 .msi 설치 프로그램을 다운로드하여 실행합니다.
 
@@ -69,7 +69,7 @@ Visual Studio 2017 또는 Visual Studio 2019를 사용 하는 경우 두 설치 
 
 기본 언어 리소스 파일(.resw)을 추가/제거하거나 기본 언어 리소스 파일(.resw) 내에서 문자를 추가/제거할 때마다 .xlf 파일을 다시 동기화하도록 프로젝트를 다시 생성합니다. 이렇게 하면 .xlf 파일에 문자열 집합이 기본 언어로 포함됩니다.
 
-&mdash;Microsoft 언어 포털[ 및 ](https://www.microsoft.com/Language/)Microsoft Translator[와 같은 설치된 번역 제공자를 사용하여 앱 리소스를 번역할 수 있습니다. 공급자가 특정 언어를 지원하는 경우 공급장의 아이콘이 번역 언어 대화 상자의 언어 이름 옆에 표시됩니다.
+[Microsoft 언어 포털](https://www.microsoft.com/Language/) 및 [Microsoft Translator](https://www.microsofttranslator.com/)와 같은 설치된 번역 제공자를 사용하여 앱 리소스를 번역할 수 있습니다. 공급자가 특정 언어를 지원하는 경우 공급장의 아이콘이 번역 언어 대화 상자의 언어 이름 옆에 표시됩니다.
 
 번역 언어 대화 상자에서 도구 키트가 발견한 기존 .xlf 기반 언어는 프로젝트에 이미 포함되어 있음을 나타내도록 선택 상자가 미리 체크됩니다.
 
@@ -102,7 +102,7 @@ Visual Studio 2017 또는 Visual Studio 2019를 사용 하는 경우 두 설치 
 
 #### <a name="option-1-translate-the-strings-yourself"></a>옵션 1. 문자열을 스스로 번역
 
-다국어 편집기를 사용하여 문자열을 각각 번역할 수 있습니다. 이미 언급했듯이 편집기는 [.msi 설치 프로그램](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit)에 포함됩니다.
+다국어 편집기를 사용하여 문자열을 각각 번역할 수 있습니다. 이미 언급했듯이 편집기는 [.msi 설치 프로그램](https://developer.microsoft.com/windows/develop/multilingual-app-toolkit)에 포함됩니다.
 
 - 번역하려는 .xlf 파일을 마우스 오른쪽 단추로 클릭합니다.
 - **다른 프로그램으로 열기...** 를 클릭한 후 다국어 편집기를 선택합니다. 선택적으로 **기본으로 설정**을 클릭할 수 있습니다.
@@ -169,7 +169,7 @@ Microsoft Store 인증 과정을 시작하기 전에 프로젝트에서 `<projec
 ## <a name="downloads"></a>다운로드
 
 * [다국어 앱 도구 키트 4.0. vsix 설치 관리자](https://marketplace.visualstudio.com/items?itemName=MultilingualAppToolkit.MultilingualAppToolkit-18308)
-* [다국어 앱 도구 키트 4.0 .msi 설치 관리자](https://developer.microsoft.com/en-us/windows/develop/multilingual-app-toolkit)
+* [다국어 앱 도구 키트 4.0 .msi 설치 관리자](https://developer.microsoft.com/windows/develop/multilingual-app-toolkit)
 
 ## <a name="translation-services"></a>번역 서비스
 
