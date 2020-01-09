@@ -6,14 +6,14 @@ ms.date: 03/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: fe1c2130c3fae70f8aa5aa18acee83a6b6247ef5
-ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
+ms.openlocfilehash: 4881fe961979243849728d3f835c449e0f71f4b4
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67820153"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683846"
 ---
-# <a name="write-a-custom-plugin-for-device-portal"></a>Device Portal에 대한 사용자 지정 플러그 인 작성
+# <a name="write-a-custom-plugin-for-device-portal"></a>디바이스 포털용 사용자 지정 플러그 인 작성
 
 Windows Device Portal을 사용하여 웹 페이지를 호스팅하고 진단 정보를 제공하는 UWP 앱을 작성하는 방법을 알아보세요.
 
@@ -22,7 +22,7 @@ Windows Device Portal을 사용하여 웹 페이지를 호스팅하고 진단 �
 ## <a name="create-a-new-uwp-app-project"></a>새 UWP앱 프로젝트 만들기
 이 가이드에서는 편의상 모두를 한 솔루션으로 만듭니다.
 
-Microsoft Visual Studio 2019, 새 UWP 앱 프로젝트를 만듭니다. 파일로 이동 > 새로 만들기 > 프로젝트 및 선택 비어 있는 앱 (유니버설 Windows)에 대 한 C#, 다음을 클릭 하 고 있습니다. 새 프로젝트 대화 상자를 구성 합니다. 프로젝트 이름을 "DevicePortalProvider" 고 만들기를 클릭 합니다. 이 앱이 앱 서비스를 포함하는 앱이 됩니다. "Windows 10 크리에이터 스 업데이트 (10.0;를 선택 했는지 확인 빌드 15063) "를 지원 합니다.  Visual Studio를 업데이트하거나 새 SDK를 설치해야 하는 경우 자세한 내용은 [여기](https://blogs.windows.com/buildingapps/2017/04/05/updating-tooling-windows-10-creators-update/)를 참조하세요. 
+Microsoft Visual Studio 2019에서 새 UWP 앱 프로젝트를 만듭니다. 파일 > 새 > 프로젝트로 이동 하 고,의 C#경우 새 앱 (Windows 유니버설)을 선택 하 고 다음을 클릭 합니다. 새 프로젝트 구성 대화 상자에서 프로젝트 이름을 "DevicePortalProvider"로 지정한 다음 만들기를 클릭 합니다. 이 앱이 앱 서비스를 포함하는 앱이 됩니다. "Windows 10 크리에이터 업데이트 (10.0; 빌드 15063) "을 (를) 지원 합니다.  Visual Studio를 업데이트하거나 새 SDK를 설치해야 하는 경우 자세한 내용은 [여기](https://blogs.windows.com/buildingapps/2017/04/05/updating-tooling-windows-10-creators-update/)를 참조하세요. 
 
 ## <a name="add-the-deviceportalprovider-extension-to-your-packageappxmanifest-file"></a>package.appxmanifest 파일에 devicePortalProvider 확장 추가
 앱을 Device Portal 플러그 인으로 작동하게 하기 위해 *package.appxmanifest* 파일에 일부 코드를 추가해야 합니다. 먼저 파일의 위쪽에 다음 네임스페이스 정의를 추가합니다. `IgnorableNamespaces` 특성에도 추가합니다.
@@ -78,7 +78,7 @@ Microsoft Visual Studio 2019, 새 UWP 앱 프로젝트를 만듭니다. 파일�
 > "devicePortalProvider" 기능은 제한되어 있습니다("rescap"). 즉, 앱을 게시하기 전에 스토어에서 사전 승인을 받아야 합니다. 그러나 테스트용 로드를 통해 로컬에서 앱을 테스트할 수는 있습니다. 제한된 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.
 
 ## <a name="set-up-your-background-task-and-winrt-component"></a>백그라운드 작업 및 WinRT 구성 요소 설정
-Device Portal 연결을 설정하려면 앱이 앱 내에서 실행되는 Device Portal 인스턴스로 Device Portal 서비스의 앱 서비스 연결을 연결해야 합니다. 이를 위해 [**IBackgroundTask**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.background.ibackgroundtask)를 구현하는 클래스로 새로운 WinRT 구성 요소를 응용 프로그램에 추가합니다.
+Device Portal 연결을 설정하려면 앱이 앱 내에서 실행되는 Device Portal 인스턴스로 Device Portal 서비스의 앱 서비스 연결을 연결해야 합니다. 이를 위해 [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask)를 구현하는 클래스로 새로운 WinRT 구성 요소를 응용 프로그램에 추가합니다.
 
 ```csharp
 namespace MySampleProvider {
@@ -88,7 +88,7 @@ namespace MySampleProvider {
     }
 ```
 
-해당 이름이 앱 서비스 진입점("MySampleProvider.SampleProvider")에서 설정한 네임스페이스 및 클래스 이름과 일치하는지 확인합니다. Device Portal 공급자에 첫 번째로 요청하면 Device Portal은 요청을 숨기고, 앱의 백그라운드 작업을 시작하고, 이를 **실행** 메서드로 명명하고, [**IBackgroundTaskInstance**](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance)에 전달합니다. 그러면 앱은 이를 사용하여 [**DevicePortalConnection**](https://docs.microsoft.com/en-us/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnection) 인스턴스를 설정합니다.
+해당 이름이 앱 서비스 진입점("MySampleProvider.SampleProvider")에서 설정한 네임스페이스 및 클래스 이름과 일치하는지 확인합니다. Device Portal 공급자에 첫 번째로 요청하면 Device Portal은 요청을 숨기고, 앱의 백그라운드 작업을 시작하고, 이를 **실행** 메서드로 명명하고, [**IBackgroundTaskInstance**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance)에 전달합니다. 그러면 앱은 이를 사용하여 [**DevicePortalConnection**](https://docs.microsoft.com/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnection) 인스턴스를 설정합니다.
 
 ```csharp
 // Implement background task handler with a DevicePortalConnection
@@ -108,10 +108,10 @@ public void Run(IBackgroundTaskInstance taskInstance) {
 }
 ```
 
-가지 루프 처리 요청을 완료 하려면 앱에서 처리 해야 하는 두 개의 이벤트가 있습니다. **닫힌**때마다 장치 포털 서비스 종료에 대 한, 및 [ **RequestReceived**](https://docs.microsoft.com/en-us/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs), 들어오는 HTTP 요청 및 장치 포털의 주요 기능을 제공 하는 화면 공급자입니다. 
+요청 처리 루프를 완료 하기 위해 앱에서 처리 해야 하는 두 가지 이벤트는 **닫혔습니다**. 장치 포털 서비스가 종료 될 때마다, 그리고 [**requestreceived**](https://docs.microsoft.com/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs)는 들어오는 HTTP 요청을 표시 하 고 장치 포털 공급자의 주요 기능을 제공 합니다. 
 
 ## <a name="handle-the-requestreceived-event"></a>RequestReceived 이벤트 처리
-플러그 인의 지정된 처리기 경로에 요청된 모든 HTTP 요청에 대해 **RequestReceived** 이벤트가 한 번 발생합니다. Device Portal 공급자가에 대한 요청 처리 루프는 NodeJS Express의 요청 처리 루프와 비슷합니다. 요청 및 응답 개체는 이벤트에 함께 제공되고 처리기는 응답 개체를 작성하여 응답합니다. Device Portal 공급자에서 **RequestReceived** 이벤트 및 처리기는 [**Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httprequestmessage) 및 [**HttpResponseMessage**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httpresponsemessage) 개체를 사용합니다.   
+플러그 인의 지정된 처리기 경로에 요청된 모든 HTTP 요청에 대해 **RequestReceived** 이벤트가 한 번 발생합니다. Device Portal 공급자가에 대한 요청 처리 루프는 NodeJS Express의 요청 처리 루프와 비슷합니다. 요청 및 응답 개체는 이벤트에 함께 제공되고 처리기는 응답 개체를 작성하여 응답합니다. Device Portal 공급자에서 **RequestReceived** 이벤트 및 처리기는 [**Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/uwp/api/windows.web.http.httprequestmessage) 및 [**HttpResponseMessage**](https://docs.microsoft.com/uwp/api/windows.web.http.httpresponsemessage) 개체를 사용합니다.   
 
 ```csharp
 // Sample RequestReceived echo handler: respond with an HTML page including the query and some additional process information. 
@@ -136,7 +136,7 @@ private void DevicePortalConnection_RequestReceived(DevicePortalConnection sende
 }
 ```
 
-이 샘플 요청 처리기에서는 먼저 *인수* 매개 변수에서 요청 및 응답 개체를 끌어온 다음 요청 URL과 몇 가지 추가 HTML 형식으로 문자열을 만듭니다. 이는 [**HttpStringContent**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.httpstringcontent) 인스턴스로 응답 개체에 추가됩니다. "문자열"과 "버퍼" 등에 대한 다른 [**IHttpContent**](https://docs.microsoft.com/en-us/uwp/api/windows.web.http.ihttpcontent) 클래스 또한 허용됩니다.
+이 샘플 요청 처리기에서는 먼저 *인수* 매개 변수에서 요청 및 응답 개체를 끌어온 다음 요청 URL과 몇 가지 추가 HTML 형식으로 문자열을 만듭니다. 이는 [**HttpStringContent**](https://docs.microsoft.com/uwp/api/windows.web.http.httpstringcontent) 인스턴스로 응답 개체에 추가됩니다. "문자열"과 "버퍼" 등에 대한 다른 [**IHttpContent**](https://docs.microsoft.com/uwp/api/windows.web.http.ihttpcontent) 클래스 또한 허용됩니다.
 
 그러면 응답이 HTTP 응답으로 설정되며 200(확인) 상태 코드가 부여됩니다. 원래 호출한 브라우저에서 예상대로 렌더링되어야 합니다. **RequestReceived** 이벤트 처리기가 반환될 때 응답 메시지는 자동으로 사용자 에이전트에 반환됩니다. 추가 "send" 메서드가 필요 없습니다.
 
@@ -176,7 +176,7 @@ Device Portal 공급자에서 제공되는 정적 콘텐츠는 코어 Device Por
 
 ![장치 포털 플러그 인 출력](images/device-portal/plugin-output.png)
  
-중요한 것은 webbRest에서 HttpPost/DeleteExpect200 메서드를 사용하면 자동으로 웹 페이지에서 상태 변경 REST API를 호출할 수 있도록 하는 [CSRF 처리](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/preventing-cross-site-request-forgery-csrf-attacks)가 수행됩니다.  
+중요한 것은 webbRest에서 HttpPost/DeleteExpect200 메서드를 사용하면 자동으로 웹 페이지에서 상태 변경 REST API를 호출할 수 있도록 하는 [CSRF 처리](https://docs.microsoft.com/aspnet/web-api/overview/security/preventing-cross-site-request-forgery-csrf-attacks)가 수행됩니다.  
 
 > [!NOTE] 
 > Device Portal에 포함된 정적 콘텐츠의 주요 변경 사항은 보증되지 않습니다. API는 자주 변경하지 않는 것이 좋습니다. 특히 공급자는 *common.js* 및 *controls.js* 파일을 사용하지 않아야 합니다. 
@@ -188,7 +188,7 @@ Device Portal 공급자에서 제공되는 정적 콘텐츠는 코어 Device Por
 2.  디버깅 탭 아래에서 시작 작업 섹션에서 "시작하지 않음(시작 시 코드 디버그)"을 선택합니다.  
 ![플러그 인 디버그 모드로 전환](images/device-portal/plugin-debug-mode.png)
 3.  RequestReceived 처리기 함수에서 중단점을 설정합니다.
-![requestreceived 처리기에 중단점](images/device-portal/plugin-requestreceived-breakpoint.png)
+requestreceived 처리기에서 중단점을 ![](images/device-portal/plugin-requestreceived-breakpoint.png)
 > [!NOTE] 
 > 빌드 아키텍처가 대상의 아키텍처와 정확하게 일치하는지 확인합니다. 64비트 PC를 사용하는 경우 AMD64 빌드를 사용하여 배포해야 합니다. 
 4.  F5 키를 눌러 앱을 배포합니다.
@@ -196,7 +196,7 @@ Device Portal 공급자에서 제공되는 정적 콘텐츠는 코어 Device Por
 6.  브라우저에서 공급자의 네임스페이스에 액세스하면 중단점이 발생할 것입니다.
 
 ## <a name="related-topics"></a>관련 항목
-* [Windows Device Portal 개요](device-portal.md)
-* [앱 서비스 만들기 및 사용](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
+* [Windows 장치 포털 개요](device-portal.md)
+* [앱 서비스 만들기 및 사용](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
 
 
