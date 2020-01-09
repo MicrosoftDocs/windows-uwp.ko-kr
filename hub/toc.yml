@@ -64,9 +64,9 @@
               href: apps/desktop/modernize/modernize-wpf-tutorial-4.md
             - name: MSIX로 패키징 및 배포
               href: apps/desktop/modernize/modernize-wpf-tutorial-5.md
-    - name: Fluent 디자인 시스템
+    - name: Fluent Design System
       href: apps/fluent-design-system.md
-    - name: 접근성
+    - name: 내게 필요한 옵션
       href: apps/accessibility.md
     - name: 기능 및 기술
       href: apps/features-and-technologies.md
@@ -96,8 +96,10 @@
       items:
         - name: 개요
           href: nodejs/index.yml
-        - name: 개발 환경 설정
+        - name: WSL2를 사용하여 설정(Linux)
           href: nodejs/setup-on-wsl2.md
+        - name: Windows를 사용하여 설정(초보자)
+          href: nodejs/setup-on-windows.md
         - name: 초보자를 위한 시작
           href: nodejs/beginners.md
         - name: 웹 프레임워크 시작

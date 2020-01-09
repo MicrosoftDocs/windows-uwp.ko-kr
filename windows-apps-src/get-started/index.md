@@ -6,12 +6,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: 시작, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 7439d437dda69bf235bd8681751617b2982be394
-ms.sourcegitcommit: 2d3a7d18edf2715987b26d1b5341ec88eefc99ec
+ms.openlocfilehash: 4f78bdfec6c6e06ffc542bc7741b875e952bc169
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898530"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684897"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Windows 10 앱 시작
 
@@ -30,7 +30,7 @@ ms.locfileid: "74898530"
                         <h3>Windows 10 앱에 대해 알아보기</h3>
                         <p>Windows 10 및 유니버설 Windows 플랫폼에서는 모든 유형의 Windows 디바이스에서 작동하고 제대로 표시되는 앱을 빌드하거나, 최신 기능을 사용하여 기존 앱을 업데이트할 수 있습니다.</p>
                         <ul>
-                          <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">UWP 앱이란 무엇인가요?</a></li>
+                          <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">UWP 앱이란?</a></li>
                         </ul>
                     </div>
                 </div>
@@ -211,7 +211,7 @@ ms.locfileid: "74898530"
                         <p><a href="https://github.com/Microsoft/WindowsTemplateStudio/">Windows Template Studio</a></p>
                         <p><a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Windows 커뮤니티 도구 키트</a></p>
                         <p><a href="//developer.microsoft.com/windows/downloads/virtual-machines">가상 머신</a></p>
-                        <p><a href="//docs.microsoft.com/windows/wsl/about">Bash on Ubuntu on Windows</a>(Windows의 Ubuntu 기반 Bash)</p>
+                        <p><a href="//docs.microsoft.com/windows/wsl/about">Windows의 Ubuntu 기반 Bash</a></p>
                         </div>
                     </div>
                 </div>
@@ -223,7 +223,7 @@ ms.locfileid: "74898530"
                 <div class="card">
                     <div class="cardText">
                         <h3>개발이 처음인가요?</h3>
-                        <p><a href="//docs.microsoft.com/en-us/learn/browse/?products=windows&resource_type=module">Microsoft Learn의 Windows</a></p>
+                        <p><a href="//docs.microsoft.com/learn/browse/?products=windows&resource_type=module">Microsoft Learn의 Windows</a></p>
                         </div>
                     </div>
                 </div>
