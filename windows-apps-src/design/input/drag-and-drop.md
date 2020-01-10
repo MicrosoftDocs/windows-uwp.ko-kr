@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 60d713efd9deeffa0856a5d1dbc92688c229288e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: fec8ef45cff07d7a092fd46bd2d960bfcaf0c50a
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66363576"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684515"
 ---
 # <a name="drag-and-drop"></a>끌어서 놓기
 
@@ -51,13 +51,13 @@ ms.locfileid: "66363576"
 
 대부분의 경우, 데이터 패키지는 자동으로 작성됩니다. 자동으로 처리되는 항목은 다음과 같습니다.
 * 이미지
-* 텍스트 모드 
+* 텍스트 
 
 그 외 콘텐츠의 경우, 사용자가 **DragStarted** 및 **DragCompleted** 이벤트를 처리하고 이를 사용하여 사용자 고유의 [DataPackage](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage)를 만들어야 합니다.
 
 ## <a name="enable-dropping"></a>놓기 사용
 
-다음 태그는 XAML에서 [**AllowDrop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.allowdrop)을 사용하여 앱의 특정 영역을 놓기 작업이 가능하도록 설정하는 방법을 보여 줍니다. 사용자가 다른 위치를 끌려고 해도 시스템에서 허용되지 않습니다. 사용자가 앱의 아무 곳에나 항목을 놓을 수 있게 하려면 전체 배경을 놓기 대상으로 설정합니다.
+다음 태그는 XAML에서 [**AllowDrop**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.allowdrop)을 사용하여 앱의 특정 영역을 놓기를 수행할 수 있는 영역으로 설정하는 방법을 보여줍니다. 사용자가 다른 위치를 끌려고 해도 시스템에서 허용되지 않습니다. 사용자가 앱의 아무 곳에나 항목을 놓을 수 있게 하려면 전체 배경을 놓기 대상으로 설정합니다.
 
 [!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]
 
@@ -98,7 +98,7 @@ ms.locfileid: "66363576"
 
 ## <a name="implementing-custom-drag-and-drop"></a>사용자 지정 끌어서 놓기 구현
 
-[UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) 클래스는 끌어서 놓기를 구현하는 데 필요한 대부분의 작업을 수행해 줍니다. 원한다 면의 Api를 사용 하 여 고유한 버전을 구현할 수 있습니다 하지만 합니다 [Windows.ApplicationModel.DataTransfer.DragDrop.Core 네임 스페이스](https://docs.microsoft.com/en-us/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core)합니다.
+[UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) 클래스는 끌어서 놓기를 구현하는 데 필요한 대부분의 작업을 수행해 줍니다. 하지만 원하는 경우 [DataTransfer 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.dragdrop.core)에서 api를 사용 하 여 고유한 버전을 구현할 수 있습니다.
 
 | 기능 | WinRT API |
 | --- | --- |
@@ -109,14 +109,14 @@ ms.locfileid: "66363576"
 
 
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 * [앱 간 통신](index.md)
-* [AllowDrop](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.allowdrop)
+* [System.windows.uielement.allowdrop](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.allowdrop)
 * [CanDrag](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.candrag)
-* [DragOver](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover)
+* [System.windows.uielement.dragover>](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover)
 * [AcceptedOperation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.acceptedoperation)
-* [DataView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.dataview)
+* [뷰](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.dataview)
 * [DragUIOverride](https://docs.microsoft.com/uwp/api/windows.ui.xaml.drageventargs.draguioverride)
 * [삭제](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
 * [IsDragSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isdragsource)

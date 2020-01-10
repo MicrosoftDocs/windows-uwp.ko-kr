@@ -1,5 +1,5 @@
 ---
-Description: 프로그래밍 방식으로 키보드, 게임 패드, 및 UWP 앱에서 내게 필요한 옵션 도구를 사용 하 여 포커스 탐색을 관리 하는 방법에 알아봅니다.
+Description: UWP 앱에서 키보드, 게임 패드 및 내게 필요한 옵션 도구를 사용 하 여 프로그래밍 방식으로 포커스 탐색을 관리 하는 방법을 알아봅니다.
 title: 키보드, 게임 패드 및 접근성 도구를 사용한 프로그래밍 방식 포커스 탐색
 label: Programmatic focus navigation
 keywords: 키보드, 게임 컨트롤러, 원격 제어, 탐색, 탐색 전략, 입력, 사용자 조작, 접근성, 유용성
@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 00d25896a490b0a6b1d65075852f44dfb89c2e53
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d919a86a44110d5b3b444fdf47d41f31637ccb6b
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662718"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684507"
 ---
 # <a name="programmatic-focus-navigation"></a>프로그래밍 방식 포커스 탐색
 
@@ -123,7 +123,7 @@ private void OnKeyDown(object sender, KeyRoutedEventArgs e)
 }
 ```
 
-포커스 후보 식별 방식을 더 자세히 사용자 지정하려면 [FindNextElementOptions](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.findnextelementoptions)을 사용하세요. 이 개체는 다음과 같은 속성을 제공합니다.
+포커스 후보 식별 방식을 더 자세히 사용자 지정하려면 [FindNextElementOptions](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions)을 사용하세요. 이 개체는 다음과 같은 속성을 제공합니다.
 
 - [SearchRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.findnextelementoptions#Windows_UI_Xaml_Input_FindNextElementOptions_SearchRoot) - 이 DependencyObject의 하위 항목으로 포커스 탐색 후보를 검색하도록 범위 지정합니다. Null은 시각적 트리의 루트에서부터 검색을 시작함을 나타냅니다.
 
@@ -149,13 +149,13 @@ private void OnKeyDown(object sender, KeyRoutedEventArgs e)
 
 ### <a name="nofocuscandidatefound-event"></a>NoFocusCandidateFound 이벤트
 
-탭 및 화살표 키를 눌렀는데 지정된 방향에 포커스 후보가 없는 경우 [UIElement.NoFocusCandidateFound](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement#Windows_UI_Xaml_UIElement_NoFocusCandidateFound) 이벤트가 발생합니다. 이 이벤트는 [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_)에 대해서는 발생하지 않습니다.
+탭 및 화살표 키를 눌렀는데 지정된 방향에 포커스 후보가 없는 경우 [UIElement.NoFocusCandidateFound](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement#Windows_UI_Xaml_UIElement_NoFocusCandidateFound) 이벤트가 발생합니다. 이 이벤트는 [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_)에 대해서는 발생하지 않습니다.
 
 이 이벤트는 라우트된 이벤트이기 때문에 포커스가 설정된 요소에서 다음 부모 개체를 지나 개체 트리의 루트로 버블링됩니다. 이에 따라 해당하는 경우 이벤트를 처리할 수 있습니다.
 
 <a name="split-view-code-sample"></a>
 
-다음은 사용자가 가장 왼쪽에 있는 포커스 가능 컨트롤의 왼쪽으로 포커스를 이동하려고 시도할 때 그리드가 [SplitView](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)를 여는 과정을 보여줍니다([Xbox 및 TV용 디자인](../devices/designing-for-tv.md#navigation-pane) 참조).
+다음은 사용자가 가장 왼쪽에 있는 포커스 가능 컨트롤의 왼쪽으로 포커스를 이동하려고 시도할 때 그리드가 [SplitView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)를 여는 과정을 보여줍니다([Xbox 및 TV용 디자인](../devices/designing-for-tv.md#navigation-pane) 참조).
 
 ```xaml
 <Grid NoFocusCandidateFound="OnNoFocusCandidateFound">
@@ -180,40 +180,40 @@ private void OnNoFocusCandidateFound (
 ```
 
 ### <a name="gotfocus-and-lostfocus-events"></a>GotFocus와 LostFocus 이벤트
-요소가 포커스가 얻거나 잃게 되면 각각 [UIElement.GotFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus) 및 [UIElement.LostFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus) 이벤트가 발생합니다. 이 이벤트는 [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_)에 대해서는 발생하지 않습니다.
+요소가 포커스가 얻거나 잃게 되면 각각 [UIElement.GotFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus) 및 [UIElement.LostFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus) 이벤트가 발생합니다. 이 이벤트는 [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_)에 대해서는 발생하지 않습니다.
 
 이러한 이벤트는 라우트된 이벤트이기 때문에 포커스가 설정된 요소에서 다음 부모 개체를 지나 개체 트리의 루트로 버블링됩니다. 이에 따라 해당하는 경우 이벤트를 처리할 수 있습니다.
 
 ### <a name="gettingfocus-and-losingfocus-events"></a>GettingFocus 및 LosingFocus 이벤트
 
-[UIElement.GettingFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) 및 [UIElement.LosingFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) 이벤트는 각각 [UIElement.GotFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus) 및 [UIElement.LostFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus) 이벤트가 발생하기 전에 발생합니다. 
+[UIElement.GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) 및 [UIElement.LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) 이벤트는 각각 [UIElement.GotFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus) 및 [UIElement.LostFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus) 이벤트가 발생하기 전에 발생합니다. 
 
 이러한 이벤트는 라우트된 이벤트이기 때문에 포커스가 설정된 요소에서 다음 부모 개체를 지나 개체 트리의 루트로 버블링됩니다. 이 이벤트는 포커스 변경이 발생하기 전에 발생하므로 포커스 변경을 리디렉팅하거나 취소할 수 있습니다.
 
-[GettingFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) 및 [LosingFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus)는 동기 이벤트이므로 두 이벤트가 버블링하는 동안 포커스가 이동되지 않습니다. 그러나 [GotFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus) 및 [LostFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus)는 비동기 이벤트이므로 처리기가 실행되기 전에 포커스가 다시 이동하지 않는다는 보장이 없습니다.
+[GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) 및 [LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus)는 동기 이벤트이므로 두 이벤트가 버블링하는 동안 포커스가 이동되지 않습니다. 그러나 [GotFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus) 및 [LostFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus)는 비동기 이벤트이므로 처리기가 실행되기 전에 포커스가 다시 이동하지 않는다는 보장이 없습니다.
 
-[Control.Focus](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_Focus_Windows_UI_Xaml_FocusState_) 호출 동안 포커스가 이동하는 경우, 호출 도중 [GettingFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus)가 발생하는 반면, [GotFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus)는 호출 후 발생합니다.
+[Control.Focus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_Focus_Windows_UI_Xaml_FocusState_) 호출 동안 포커스가 이동하는 경우, 호출 도중 [GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus)가 발생하는 반면, [GotFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus)는 호출 후 발생합니다.
 
-포커스 탐색 대상은 [GettingFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) 및 [LosingFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) 이벤트 동안(포커스 이동 이전) [GettingFocusEventArgs.NewFocusedElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.gettingfocuseventargs#Windows_UI_Xaml_Input_GettingFocusEventArgs_NewFocusedElement) 속성을 통해 변경될 수 있습니다. 대상이 변경되더라도 이벤트는 계속 버블링되며 대상이 다시 변경될 수도 있습니다.
+포커스 탐색 대상은 [GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) 및 [LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) 이벤트 동안(포커스 이동 이전) [GettingFocusEventArgs.NewFocusedElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.gettingfocuseventargs#Windows_UI_Xaml_Input_GettingFocusEventArgs_NewFocusedElement) 속성을 통해 변경될 수 있습니다. 대상이 변경되더라도 이벤트는 계속 버블링되며 대상이 다시 변경될 수도 있습니다.
 
-재진입 문제를 방지하기 위해 이러한 이벤트가 버블링되는 동안 포커스를 이동하려고([TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) 또는 [Control.Focus](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_Focus_Windows_UI_Xaml_FocusState_) 사용) 시도하면 예외가 발생합니다.
+재진입 문제를 방지하기 위해 이러한 이벤트가 버블링되는 동안 포커스를 이동하려고([TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_) 또는 [Control.Focus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_Focus_Windows_UI_Xaml_FocusState_) 사용) 시도하면 예외가 발생합니다.
 
 이러한 이벤트는 포커스가 이동되는 이유(예: 탭 탐색, 방향 탐색 및 프로그래밍 방식 탐색)에 관계없이 발생합니다.
 
 다음은 포커스 이벤트 실행 순서입니다.
 
-1.  [LosingFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) 포커스가 포커스를 잃은 요소로 다시 재설정되거나 [TryCancel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.losingfocuseventargs#Windows_UI_Xaml_Input_LosingFocusEventArgs_TryCancel)이 성공하는 경우 추가 이벤트가 발생하지 않습니다.
-2.  [GettingFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) 포커스가 포커스를 잃은 요소로 다시 재설정되거나 [TryCancel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.gettingfocuseventargs#Windows_UI_Xaml_Input_GettingFocusEventArgs_TryCancel)이 성공하는 경우 추가 이벤트가 발생하지 않습니다.
-3.  [LostFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus)
-4.  [GotFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus)
+1.  [LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) 포커스가 포커스를 잃은 요소로 다시 재설정되거나 [TryCancel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.losingfocuseventargs#Windows_UI_Xaml_Input_LosingFocusEventArgs_TryCancel)이 성공하는 경우 추가 이벤트가 발생하지 않습니다.
+2.  [GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) 포커스가 포커스를 잃은 요소로 다시 재설정되거나 [TryCancel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.gettingfocuseventargs#Windows_UI_Xaml_Input_GettingFocusEventArgs_TryCancel)이 성공하는 경우 추가 이벤트가 발생하지 않습니다.
+3.  [LostFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LostFocus)
+4.  [System.windows.uielement.gotfocus>](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GotFocus)
 
 다음 그림은 A에서 오른쪽으로 이동하는 방법과 시기를 보여 주며, XYFocus는 B4를 후보로 선택합니다. 그런 다음 B4가 GettingFocus 이벤트를 발생시키고 ListView는 B3에 포커스를 다시 할당할 수 있습니다.
 
 ![GettingFocus 이벤트에서 포커스 탐색 대상 변경](images/keyboard/focus-events.png)
 
-*GettingFocus 이벤트 포커스 탐색 대상 변경*
+*Get로 포커스 이벤트에서 포커스 탐색 대상 변경*
 
-다음은 [GettingFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) 이벤트를 처리하고 포커스를 리디렉팅하는 방법을 보여줍니다.
+다음은 [GettingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_GettingFocus) 이벤트를 처리하고 포커스를 리디렉팅하는 방법을 보여줍니다.
 
 ```XAML
 <StackPanel Orientation="Horizontal">
@@ -250,7 +250,7 @@ private void OnGettingFocus(UIElement sender, GettingFocusEventArgs args)
 }
 ```
 
-다음은 [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar)에 대해 [LosingFocus](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) 이벤트를 처리하고 메뉴가 닫힐 때 포커스를 설정하는 방법을 보여줍니다.
+다음은 [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar)에 대해 [LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) 이벤트를 처리하고 메뉴가 닫힐 때 포커스를 설정하는 방법을 보여줍니다.
 
 ```XAML
 <CommandBar x:Name="MyCommandBar" LosingFocus="OnLosingFocus">
@@ -282,7 +282,7 @@ private void OnLosingFocus(UIElement sender, LosingFocusEventArgs args)
 
 ## <a name="find-the-first-and-last-focusable-element"></a>첫 번째 및 마지막 포커스 가능 요소 찾기
 
-[FocusManager.FindFirstFocusableElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindFirstFocusableElement_Windows_UI_Xaml_DependencyObject_) 및 [FocusManager.FindLastFocusableElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindLastFocusableElement_Windows_UI_Xaml_DependencyObject_) 메서드는 개체의 범위 내에 있는 첫 번째 또는 마지막 포커스 가능 요소로 포커스를 이동합니다([UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement)의 요소 트리 또는 [TextElement](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.documents.textelement)의 텍스트 트리). 범위는 호출에 지정되어 있습니다(인수가 null인 경우 범위는 현재 창임).
+[FocusManager.FindFirstFocusableElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindFirstFocusableElement_Windows_UI_Xaml_DependencyObject_) 및 [FocusManager.FindLastFocusableElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindLastFocusableElement_Windows_UI_Xaml_DependencyObject_) 메서드는 개체의 범위 내에 있는 첫 번째 또는 마지막 포커스 가능 요소로 포커스를 이동합니다([UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement)의 요소 트리 또는 [TextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.textelement)의 텍스트 트리). 범위는 호출에 지정되어 있습니다(인수가 null인 경우 범위는 현재 창임).
 
 범위 내에서 포커스 후보를 식별할 수 없으면 null이 반환됩니다.
 

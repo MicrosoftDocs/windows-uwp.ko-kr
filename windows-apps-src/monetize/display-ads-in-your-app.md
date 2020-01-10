@@ -6,12 +6,12 @@ ms.date: 06/20/2018
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 배너, 광고 관리, 중간 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c12d64bde6b16774b9090f7122f3933e0129ddc
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 48aacf03d6e424b7b53052e2c292d4a8589a8d9f
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260331"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684570"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK를 사용하여 앱에 광고 표시
 
@@ -43,7 +43,7 @@ Microsoft Advertising SDK를 사용해 Windows 10용 유니버설 Windows 플랫
     <a href="native-ads.md">네이티브 광고</a>
     </td>
 <td align="left"><img src="images/api-reference.png" alt="API ref icon" /></td>
-<td align="left"><b>기타 참고 자료</b><br/><br/>
+<td align="left"><b>기타 리소스</b><br/><br/>
     <a href="set-up-ad-units-in-your-app.md">앱에서 ad 단위 설정</a>
     <br/>
     <a href="best-practices-for-ads-in-apps.md">모범 사례</a>
@@ -108,16 +108,16 @@ UWP 앱의 광고 조정을 사용하기 시작하려면, 광고 단위의 [광�
 
 Microsoft Advertising SDK 사용에 대한 추가 도움말은 다음 리소스를 사용하세요.
 
-|  태스크    | 리소스 |               
+|  작업    | 리소스 |               
 |----------|-------|
-| 버그 보고 또는 광고 지원 받기     | [지원 페이지](https://developer.microsoft.com/en-us/windows/support)를 방문하여 **인앱 광고**를 선택합니다.        |
+| 버그 보고 또는 광고 지원 받기     | [지원 페이지](https://developer.microsoft.com/windows/support)를 방문하여 **인앱 광고**를 선택합니다.        |
 | 커뮤니티 지원 받기     | [포럼](https://go.microsoft.com/fwlink/?LinkID=401264)을 방문하세요.       |
 | 배너 및 중간 광고를 앱에 추가하는 방법을 보여 주는 샘플 프로젝트를 다운로드합니다.     | [GitHub의 광고 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)을 참조하세요.       |
 | Windows 앱용 최신 수익 창출 기회에 대한 자세한 정보     | [앱으로 수익 창출](https://developer.microsoft.com/store/monetize)을 방문하세요.        |
 
 ## <a name="windows-81-and-windows-phone-8x-apps"></a>Windows 8.1 및 Windows Phone 8.x 앱
 
-Windows 8.1 및 Windows Phone 8.x 앱의 경우 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDKforWindowsandWindowsPhone8x)를 제공합니다. Windows 8.1 및 Windows Phone 8.x 앱에서 이 SDK를 사용해 광고를 표시하는 방법에 대한 자세한 내용은 [이 문서](https://docs.microsoft.com/en-us/previous-versions/windows/apps/dn792120(v=win.10))를 참조하세요.
+Windows 8.1 및 Windows Phone 8.x 앱의 경우 [Microsoft Advertising SDK for Windows 및 Windows Phone 8.x](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDKforWindowsandWindowsPhone8x)를 제공합니다. Windows 8.1 및 Windows Phone 8.x 앱에서 이 SDK를 사용해 광고를 표시하는 방법에 대한 자세한 내용은 [이 문서](https://docs.microsoft.com/previous-versions/windows/apps/dn792120(v=win.10))를 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 

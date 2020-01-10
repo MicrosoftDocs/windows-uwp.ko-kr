@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 8bbff4553dc4ad540f0d9afa2507ad763fa96744
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: 568707cb70fb38c0eddfd37abe1117e016e62103
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867575"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684478"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 
@@ -35,9 +35,9 @@ ms.locfileid: "68867575"
 > [!NOTE]
 > UWP 플랫폼 컨트롤에는 키보드 가속기가 기본으로 제공됩니다. 예를 들어 ListView는 목록의 모든 항목을 선택하기 위해 Ctrl+A를 지원하고 RichEditBox는 텍스트 상자에 Tab을 삽입하기 위해 Ctrl+Tab을 지원합니다. 이러한 기본 제공 키보드 가속기는 **컨트롤 가속기**라고 하며 포커스가 요소 또는 자식 요소 중 하나에 있는 경우에만 실행됩니다. 여기에 설명된 키보드 가속기 API를 사용하여 정의한 가속기를 **앱 가속기**라고 합니다.
 
-키보드 가속기는 모든 작업에 사용할 수 있는 것은 아니지만 종종 메뉴에 표시되는 명령과 연결됩니다(메뉴 항목 콘텐츠로 지정해야 함). 가속기는 동일한 메뉴 항목이 없는 작업과 연결할 수도 있습니다. 그러나 사용자가 응용 프로그램의 메뉴를 사용하여 사용 가능한 명령 집합을 검색하고 알아보므로 가능한 쉽게 바로 가기 검색을 시도해야 합니다(레이블 또는 설정된 패턴을 사용하면 도움이 될 수 있음).
+키보드 가속기는 모든 작업에 사용할 수 있는 것은 아니지만 종종 메뉴에 표시되는 명령과 연결됩니다(메뉴 항목 콘텐츠로 지정해야 함). 액셀러레이터는 동일한 메뉴 항목이 없는 작업과 연결 될 수도 있습니다. 그러나 사용자가 응용 프로그램의 메뉴를 사용하여 사용 가능한 명령 집합을 검색하고 알아보므로 가능한 쉽게 바로 가기 검색을 시도해야 합니다(레이블 또는 설정된 패턴을 사용하면 도움이 될 수 있음).
 
-![메뉴 항목 레이블에 설명 된 키보드 액셀러레이터](images/accelerators/accelerators_menuitemlabel.png)  
+메뉴 항목 레이블에 설명 된 ![키보드 액셀러레이터](images/accelerators/accelerators_menuitemlabel.png)  
 *메뉴 항목 레이블에 설명 된 키보드 액셀러레이터*
 
 ## <a name="when-to-use-keyboard-accelerators"></a>키보드 가속기를 사용해야 하는 경우
@@ -46,7 +46,7 @@ ms.locfileid: "68867575"
 
 - 키보드 액셀러레이터를 사용 하면 한 번에 하나의 키만 누르거나 마우스를 사용 하는 데 어려움이 있는 사용자를 포함 하 여 화물 차 장애가 있는 사용자가 앱에 보다 쉽게 액세스할 수 있습니다. * *
 
-  잘 디자인된 키보드 UI는 소프트웨어 접근성의 중요한 측면입니다. 시각 장애나 특정 거동 장애가 있는 사용자는 키보드 UI를 사용하여 앱을 탐색하고 기능을 조작할 수 있습니다. 이러한 사용자는 마우스를 작동할 수 없으며 다양한 보조 기술(예: 키보드 향상 도구, 화상 키보드, 화면 확대기, 화면 낭독 프로그램 및 음성 입력 유틸리티)을 대신 사용할 수 있습니다. 이러한 사용자에게는 포괄적인 명령 범위가 매우 중요합니다.
+  잘 디자인된 키보드 UI는 소프트웨어 접근성의 중요한 요소입니다. 시각 장애나 특정 거동 장애가 있는 사용자는 키보드 UI를 사용하여 앱을 탐색하고 기능을 조작할 수 있습니다. 이러한 사용자는 마우스를 작동할 수 없으며 다양한 보조 기술(예: 키보드 향상 도구, 화상 키보드, 화면 확대기, 화면 낭독 프로그램 및 음성 입력 유틸리티)을 대신 사용할 수 있습니다. 이러한 사용자에게는 포괄적인 명령 범위가 매우 중요합니다.
 
 - 키보드 액셀러레이터를 사용 하면 키보드를 사용 하는 것을 선호 하는 고급 사용자가 앱을 보다 쉽게 사용할 수 있습니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "68867575"
 
 ## <a name="specify-a-keyboard-accelerator"></a>키보드 가속기 지정
 
-[KeyboardAccelerator](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.keyboardaccelerator.-ctor) API를 사용하여 UWP 앱에서 키보드 가속기를 만들 수 있습니다. 이러한 API를 사용하면 여러 개의 KeyDown 이벤트를 처리하여 키 조합을 감지할 필요가 없으며 앱 리소스에서 가속기를 지역화할 수 있습니다.
+[KeyboardAccelerator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardaccelerator.-ctor) API를 사용하여 UWP 앱에서 키보드 가속기를 만들 수 있습니다. 이러한 API를 사용하면 여러 개의 KeyDown 이벤트를 처리하여 키 조합을 감지할 필요가 없으며 앱 리소스에서 가속기를 지역화할 수 있습니다.
 
 앱의 가장 일반적인 동작에 키보드 가속기를 설정하고 메뉴 항목 레이블 또는 도구 설명을 사용하여 문서화하는 것이 좋습니다. 이 예에서는 Rename 및 Copy 명령에 대해서만 키보드 가속기를 선언합니다.
 
@@ -126,7 +126,7 @@ ms.locfileid: "68867575"
 </CommandBar>
 ```
 
-![도구 설명에 설명 된 키보드 액셀러레이터](images/accelerators/accelerators_tooltip.png)  
+도구 설명에 설명 된 ![키보드 액셀러레이터](images/accelerators/accelerators_tooltip.png)  
 ***도구 설명에 설명 된 키보드 액셀러레이터***
 
 [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) 개체에는 [KeyboardAccelerator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardaccelerator) 컬렉션, [KeyboardAccelerators](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.KeyboardAccelerators)가 있으며 여기에서 사용자 지정 KeyboardAccelerator 개체를 지정하고 키보드 가속기에 대한 키 입력을 정의합니다.
@@ -219,7 +219,7 @@ UIA [컨트롤 패턴]은 공통적인 컨트롤 기능을 공개합니다. 예�
 
 [KeyboardAccelerator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardaccelerator) 개체의 Invoked 이벤트는 가속기가 실행되면 시작됩니다. [KeyboardAcceleratorInvokedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs) 이벤트 개체에는 다음 속성이 포함됩니다.
 
-- [**처리**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.handled) 됨 (부울): 이를 true로 설정 하면 컨트롤 패턴을 트리거하는 이벤트가 방지 되 고 액셀러레이터 이벤트 버블링이 중지 됩니다. 기본값은 false입니다.
+- [**Handled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.handled) (부울):이 값을 True로 설정 하면 컨트롤 패턴을 트리거하는 이벤트가 방지 되 고 액셀러레이터 이벤트 버블링이 중지 됩니다. 기본값은 false입니다.
 - [**요소**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.element) (DependencyObject): 액셀러레이터와 연결 된 개체입니다.
 - [**KeyboardAccelerator**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorinvokedeventargs.keyboardaccelerator): 호출 된 이벤트를 발생 시키는 데 사용 되는 키보드 액셀러레이터입니다.
 
@@ -331,9 +331,9 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 
 이는 앱 간의 기능 차이로 인해 항상 가능한 것은 아닙니다.
 
-| **편집기** | **일반 키보드 액셀러레이터** |
+| **편집** | **일반 키보드 액셀러레이터** |
 | ------------- | ----------------------------------- |
-| 편집 모드 시작 | Ctrl+E |
+| 편집 모드 시작 | Ctrl + E |
 | 포커스가 설정된 컨트롤이나 창에 있는 모든 항목 선택 | Ctrl + A |
 | 검색 및 바꾸기 | Ctrl + H |
 | 실행 취소 | Ctrl + Z |
@@ -343,29 +343,29 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 | 클립보드의 콘텐츠 붙여 넣기 | Ctrl + V, Shift + Insert |
 | 클립보드의 콘텐츠 붙여 넣기(옵션 포함) | Ctrl + Alt + V |
 | 항목 이름 바꾸기 | F2 |
-| 새 항목 추가 | Ctrl+N |
+| 새 항목 추가 | Ctrl + N |
 | 새 보조 항목 추가 | Ctrl + Shift + N |
 | 선택한 항목 삭제(실행 취소 포함) | Del, Ctrl+D |
 | 선택한 항목 삭제(실행 취소 불포함) | Shift + Del |
 | Bold | Ctrl + B |
 | Underline | Ctrl + U |
-| 기울임꼴 | Ctrl + I |
+| Italic | Ctrl + I |
 
-| **내비게이션** | |
+| **탐색** | |
 | ------------- | ----------------------------------- |
-| 포커스가 설정된 컨트롤 또는 창에서 콘텐츠 찾기 | Ctrl+F |
+| 포커스가 설정된 컨트롤 또는 창에서 콘텐츠 찾기 | Ctrl + F |
 | 다음 검색 결과로 이동 | F3 |
 
-| **기타 작업** | |
+| **다른 작업** | |
 | ------------- | ----------------------------------- |
-| 즐겨찾기 추가 | Ctrl+D | 
-| 새로 고침 | F5 또는 Ctrl + R | 
+| 즐겨찾기 추가 | Ctrl + D | 
+| Refresh | F5 또는 Ctrl + R | 
 | 확대 | Ctrl + + | 
 | 축소 | Ctrl + - | 
 | 기본 보기로 확대/축소 | Ctrl + 0 | 
-| 저장 | Ctrl+S | 
-| 닫습니다 | Ctrl+W | 
-| 인쇄 | Ctrl+P | 
+| 저장 | Ctrl + S | 
+| Close | Ctrl + W | 
+| 인쇄 | Ctrl + P | 
 
 일부 조합은 Windows의 지역화된 버전에 유효하지 않습니다. 예를 들어, 스페인어 버전의 Windows에서는 '굵게'에 대해 Ctrl+N이 Ctrl+B 대신 사용됩니다. 앱이 지역화되어 있는 경우 지역화된 바로 가기 키를 제공하는 것이 좋습니다.
 
@@ -386,7 +386,7 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 
 *도구 설명의 액셀러레이터 키 콤보*
 
-[단추](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [App바 단추](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)및 app [togglebutton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) 개체의 경우 키보드 액셀러레이터 키가 컨트롤의 기본 도구 설명에 추가 됩니다. [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) 및 [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) 개체의 경우 플라이 아웃 텍스트와 함께 키보드 액셀러레이터를 표시 합니다.
+[단추](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button), [App바 단추](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton)및 [app togglebutton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) 개체의 경우 키보드 액셀러레이터 키가 컨트롤의 기본 도구 설명에 추가 됩니다. [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) 및 [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) 개체의 경우 플라이 아웃 텍스트와 함께 키보드 액셀러레이터를 표시 합니다.
 
 > [!NOTE]
 > 도구 설명 지정 (다음 예제의 Button1 참조)은이 동작을 재정의 합니다.
@@ -460,7 +460,7 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 
 *MenuFlyoutItem의 텍스트에 추가 된 액셀러레이터 키 콤보*
 
-두 값을 허용 하는 [KeyboardAcceleratorPlacementMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.KeyboardAcceleratorPlacementMode) 속성을 사용 하 여 프레젠테이션 동작을 제어 합니다. [Auto](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode) 또는 [Hidden](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode)입니다.    
+[KeyboardAcceleratorPlacementMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.KeyboardAcceleratorPlacementMode) 속성([자동](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode) 또는 [숨김](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyboardacceleratorplacementmode)의 두 값 허용)을 사용하면 표시 동작을 제어할 수 있습니다.    
 
 ```xaml
 <Button Content="Save" Click="OnSave" KeyboardAcceleratorPlacementMode="Auto">
@@ -493,7 +493,7 @@ UWP 응용 프로그램에서 키보드 바로 가기를 일관되게 만드는 
 
 일부 플랫폼 컨트롤은 기본적으로 이러한 작업을 수행합니다(특히, [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) 및 [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem) 개체). 반면, [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) 및 [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton)은 [명령 모음](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar)의 오버플로 메뉴에 표시될 때에 이를 수행합니다.
 
-![메뉴 항목 레이블에 설명 된 키보드 액셀러레이터](images/accelerators/accelerators_menuitemlabel.png)  
+메뉴 항목 레이블에 설명 된 ![키보드 액셀러레이터](images/accelerators/accelerators_menuitemlabel.png)  
 *메뉴 항목 레이블에 설명 된 키보드 액셀러레이터*
 
 [MenuFlyoutItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem), [ToggleMenuFlyoutItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem), [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton) 및 [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) 컨트롤의 [KeyboardAcceleratorTextOverride](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton.KeyboardAcceleratorTextOverride) 속성을 통해 레이블의 기본 바로 가기 텍스트를 재정의할 수 있습니다(텍스트가 없는 경우 빈 칸 하나 사용). 
@@ -530,8 +530,8 @@ XAML에서는 입력 버블링 파이프라인이 하나만 있는 것처럼 키
 미리 보기 입력 이벤트는 다른 이벤트보다 먼저 발생합니다. 이러한 이벤트를 처리하지 않으면 포커스가 있는 요소의 가속기가 실행된 다음 KeyDown 이벤트가 발생합니다. 두 이벤트 모두 처리될 때까지 버블링됩니다.
 
 
-![키 이벤트 시퀀스](images/accelerators/accelerators_keyevents.png)
-***키 이벤트 시퀀스***
+키 이벤트 시퀀스](images/accelerators/accelerators_keyevents.png)
+***키 이벤트 시퀀스*** 를 ![합니다.
 
 이벤트 순서:
 
@@ -551,9 +551,9 @@ CharacterReceived event PreviewKeyUp events KeyUpEvents
 
 ### <a name="scoping-accelerators-programmatically"></a>프로그래밍 방식으로 가속기 범위 지정
 
-[UIElement.TryInvokeKeyboardAccelerator](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.tryinvokekeyboardaccelerator) 메서드는 요소의 하위 트리에서 일치하는 모든 가속기를 호출합니다.
+[UIElement.TryInvokeKeyboardAccelerator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tryinvokekeyboardaccelerator) 메서드는 요소의 하위 트리에서 일치하는 모든 가속기를 호출합니다.
 
-[UIElement.OnProcessKeyboardAccelerators](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.onprocesskeyboardaccelerators) 메서드는 키보드 가속기보다 먼저 실행됩니다. 이 메서드는 키, 보조 키 및 키보드 가속기의 처리 여부를 나타내는 부울을 포함하는 [ProcessKeyboardAcceleratorArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.processkeyboardacceleratoreventargs)를 전달합니다. 처리된 것으로 표시된 경우 키보드 가속기가 버블링됩니다(외부 키보드 가속기가 호출되지 않음).
+[UIElement.OnProcessKeyboardAccelerators](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.onprocesskeyboardaccelerators) 메서드는 키보드 가속기보다 먼저 실행됩니다. 이 메서드는 키, 보조 키 및 키보드 가속기의 처리 여부를 나타내는 부울을 포함하는 [ProcessKeyboardAcceleratorArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.processkeyboardacceleratoreventargs)를 전달합니다. 처리된 것으로 표시된 경우 키보드 가속기가 버블링됩니다(외부 키보드 가속기가 호출되지 않음).
 
 > [!NOTE]
 > OnProcessKeyboardAccelerator는 처리되거나 처리되지 않더라도 항상 실행됩니다(OnKeyDown 이벤트와 유사함). 이벤트가 처리된 것으로 표시되었는지 확인해야 합니다.
@@ -576,8 +576,8 @@ protected override void OnProcessKeyboardAccelerators(
 
 모든 키보드 가속기를 지역화하는 것이 좋습니다. 이 작업은 XAML 선언의 표준 UWP 리소스(.resw) 파일과 x:Uid 특성을 사용하여 수행할 수 있습니다. 이 예에서 Windows 런타임은 자동으로 리소스를 로드합니다.
 
-![Uwp 리소스를 사용한 키보드 액셀러레이터 키](images/accelerators/accelerators_localization.png)
-파일***키보드 액셀러레이터 uwp 리소스 파일을 사용한*** 지역화
+uwp 리소스 파일을 사용 하 여 키보드 액셀러레이터 지역화 ![***uwp 리소스 파일을 사용 하 여 바로 가기 키***](images/accelerators/accelerators_localization.png)
+
 
 ``` xaml
 <Button x:Uid="myButton" Click="OnSave">

@@ -8,12 +8,12 @@ keywords: Windows Ink, Windows 수동 입력, DirectInk, InkPresenter, InkCanvas
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 031ac1ebc8d164c99240969ce77813f36a311858
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: a8d4299eb361fb804419af687bdcaa25ffa54bb8
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258296"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684475"
 ---
 # <a name="pen-interactions-and-windows-ink-in-uwp-apps"></a>UWP 앱의 펜 조작 및 Windows Ink
 
@@ -45,7 +45,7 @@ Windows Ink UX 지침은 [수동 입력 컨트롤](../controls-and-patterns/inki
 
 ## <a name="components-of-the-windows-ink-platform"></a>Windows Ink 플랫폼의 구성 요소
 
-| 구성 요소 | 설명 |
+| Component | 설명 |
 | --- | --- |
 | [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) | 기본적으로 펜의 모든 입력을 받아 잉크 스트로크 또는 지우기 스트로크로 표시 하는 XAML UI 플랫폼 컨트롤입니다.<br/>InkCanvas를 사용하는 방법은 [Windows Ink 스트로크를 텍스트로 인식](convert-ink-to-text.md) 및 [Windows Ink 스트로크 데이터 저장 및 검색](save-and-load-ink.md)을 참조하세요. |
 | [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) | [  **InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤([**InkCanvas.InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 **InkCanvas**에서 노출하는 모든 기본 수동 입력 기능과 추가 사용자 지정 및 개인 설정을 위한 포괄적인 API 집합을 제공합니다.<br/>InkPresenter를 사용하는 방법은 [Windows Ink 스트로크를 텍스트로 인식](convert-ink-to-text.md) 및 [Windows Ink 스트로크 데이터 저장 및 검색](save-and-load-ink.md)을 참조하세요. |
@@ -109,7 +109,7 @@ Windows Ink UX 지침은 [수동 입력 컨트롤](../controls-and-patterns/inki
 
 기본적으로 잉크는 펜 입력에만 지원됩니다. 여기서 [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter)는 펜과 마우스의 입력 데이터를 모두 잉크 스트로크로 해석하도록 구성됩니다. 또한 스트로크를 [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)로 렌더링하는 데 사용되는 일부 초기 잉크 스트로크 특성도 설정합니다.
 
-마우스와 터치 수동 입력을 사용하려면, [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.InputDeviceTypes)의 [**InputDeviceTypes**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.input.inking.inkpresenter) 속성을 원하는 [**CoreInputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.core.coreinputdevicetypes) 값의 조합으로 설정합니다.
+마우스와 터치 수동 입력을 사용하려면, [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter)의 [**InputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.InputDeviceTypes) 속성을 원하는 [**CoreInputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.core.coreinputdevicetypes) 값의 조합으로 설정합니다.
 
 ```csharp
 public MainPage()
@@ -257,9 +257,9 @@ Windows Ink 플랫폼에서는 스트로크 선택과 같은 수정된 입력을
 
 3.  다음에는 펜 및 마우스의 입력 데이터를 모두 잉크 스트로크로 해석하도록 [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter)를 구성하고, 스트로크 렌더링에 사용되는 일부 초기 잉크 스트로크 특성을 [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)로 설정합니다.
 
-    가장 중요한 것은, [InkPresenter**의** ](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputprocessingconfiguration)InputProcessingConfiguration[](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) 속성을 사용하여 수정된 입력이 앱을 통해 처리되어야 함을 나타내는 것입니다. 수정된 입력은 **InputProcessingConfiguration.RightDragAction**에 [**InkInputRightDragAction.LeaveUnprocessed**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkInputRightDragAction) 값을 할당하여 지정합니다. 이 값이 설정되면 [InkPresenter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter)가 [InkUnprocessedInput](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkunprocessedinput) 클래스(개발자가 처리할 수 있는 포인터 이벤트 집합)를 통과합니다.
+    가장 중요한 것은, [InkPresenter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter)의 [**InputProcessingConfiguration**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.inputprocessingconfiguration) 속성을 사용하여 수정된 입력이 앱을 통해 처리되어야 함을 나타내는 것입니다. 수정된 입력은 **InputProcessingConfiguration.RightDragAction**에 [**InkInputRightDragAction.LeaveUnprocessed**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkInputRightDragAction) 값을 할당하여 지정합니다. 이 값이 설정되면 [InkPresenter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter)가 [InkUnprocessedInput](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkunprocessedinput) 클래스(개발자가 처리할 수 있는 포인터 이벤트 집합)를 통과합니다.
 
-    [  **InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkunprocessedinput.pointerpressed)에 의해 통과되어 처리되지 않은 [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkunprocessedinput.pointermoved), [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkunprocessedinput.pointerreleased) 및 [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) 이벤트를 위해 수신기를 할당합니다. 이러한 이벤트의 처리기에서 모든 선택 기능이 구현됩니다.
+    [  **InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter)에 의해 통과되어 처리되지 않은 [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkunprocessedinput.pointerpressed), [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkunprocessedinput.pointermoved) 및 [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkunprocessedinput.pointerreleased) 이벤트를 위해 수신기를 할당합니다. 이러한 이벤트의 처리기에서 모든 선택 기능이 구현됩니다.
 
     마지막으로 [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkstrokeinput.strokestarted)의 [**StrokeStarted**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.strokeserased) 및 [**StrokesErased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) 이벤트에 대한 수신기를 할당합니다. 새 스트로크가 시작되거나 기존 스트로크가 지워진 경우 이러한 이벤트의 처리기를 선택 UI를 정리합니다.
 

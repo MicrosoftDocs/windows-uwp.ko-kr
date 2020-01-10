@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ae67e5d4d6da3cc9716c5f0efd276023bae9af0
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 48fea83560655b02909b302225f44fa3e9713f00
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258377"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684491"
 ---
 # <a name="add-an-inktoolbar-to-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱에 InkToolbar 추가
 
@@ -87,7 +87,7 @@ UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하�
 
 [VerticalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.VerticalAlignment), [HorizontalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.HorizontalAlignment) 및 [Orientation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar?branch=rs3.Orientation) 속성을 통해 도구 모음의 위치 및 방향을 명시적으로 지정하세요.
 
-| 기본값 | 명시적 |
+| Default | 명시적 |
 | --- | --- |
 | ![기본 잉크 도구 모음 위치 및 방향](./images/ink/location-default-small.png) | ![명시적 잉크 도구 모음 위치 및 방향](./images/ink/location-explicit-small.png) |
 | *Windows 잉크 도구 모음 기본 위치 및 방향* | *Windows Ink 도구 모음 명시적 위치 및 방향* |
@@ -172,7 +172,7 @@ public MainPage()
 
     1. InkToolbarSnippetHostViewModel 클래스에 두 개의 부울 속성(**LeftHandedLayout**(이전의 XAML 전용 예제와 기능 동일) 및 **PortraitLayout**(장치의 방향))을 추가합니다.
         >[!NOTE] 
-        > PortraitLayout 속성은 설정 가능하며 [PropertyChanged](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) 이벤트에 대한 정의를 포함합니다.
+        > PortraitLayout 속성은 설정 가능하며 [PropertyChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) 이벤트에 대한 정의를 포함합니다.
 
         ```csharp
         public bool LeftHandedLayout
@@ -214,7 +214,7 @@ public MainPage()
     1. Converters 폴더에 두 가지 새로운 클래스(이 예의 경우 **HorizontalAlignmentFromHandednessConverter.cs** 및 **VerticalAlignmentFromAppViewConverter.cs**)를 추가합니다.
     1. 각 파일에 `using Windows.UI.Xaml` 및 `using Windows.UI.Xaml.Data` 네임스페이스를 추가합니다.
     1. 각 클래스를 `public`으로 변경하고 [IValueConverter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter) 인터페이스를 구현하도록 지정합니다.
-    1. 그림처럼(ConvertBack 메서드는 구현 안 함) [Convert](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.data.ivalueconverter.convert) 및 [ConvertBack](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.data.ivalueconverter.convertback) 메서드를 각 파일에 추가합니다.
+    1. 그림처럼(ConvertBack 메서드는 구현 안 함) [Convert](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter.convert) 및 [ConvertBack](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter.convertback) 메서드를 각 파일에 추가합니다.
         - HorizontalAlignmentFromHandednessConverter가 잉크 도구 모음의 위치를 오른손 사용자에게는 앱의 오른쪽에, 왼손 사용자에게는 앱의 왼쪽에 배치합니다.
         ```csharp
         using System;
@@ -734,7 +734,7 @@ MainPage.xaml에서 사용자 지정 펜에 필요한 참조를 추가합니다.
 앱이 시작 될 때 펜 수동 입력만 지원되며 터치는 수동 입력 화면을 확대/축소하거나 이동하는 데 사용됩니다. 터치식 수동 입력을 사용하도록 설정하면 수동 입력 화면은 터치 입력을 통해 이동하거나 확대/축소되지 않습니다.
 
 > [!NOTE]
-> [  ](../controls-and-patterns/inking-controls.md)InkCanvas[**및**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)InkToolbar[**UX 지침 관련 내용은**수동 입력 컨트롤](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar)을 참조하세요. 다음 권장 사항이 이 예제와 관련이 있습니다.
+> [  **InkCanvas**](../controls-and-patterns/inking-controls.md) 및 [**InkToolbar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) UX 지침 관련 내용은 [수동 입력 컨트롤](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar)을 참조하세요. 다음 권장 사항이 이 예제와 관련이 있습니다.
 > - [  **InkToolbar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar) 및 일반적인 수동 입력은 활성 펜을 통해 가장 잘 작동합니다. 그러나 앱에 필요한 경우 마우스와 터치를 사용한 수동 입력을 지원할 수 있습니다. 
 > - 터치식 입력을 사용한 수동 입력을 지원하는 경우 “터치 쓰기” 도구 설명과 함께 "Segoe MLD2 자산" 글꼴의 "ED5F" 아이콘을 토글 단추에 사용하는 것이 좋습니다. 
 
@@ -1123,7 +1123,7 @@ namespace Ink_Basic_InkToolbar
 
 - [펜 및 스타일러스 상호 작용](pen-and-stylus-interactions.md)
 
-### <a name="topic-samples"></a>항목 샘플
+### <a name="topic-samples"></a>토픽 샘플
 
 - [잉크 도구 모음 위치 및 방향 샘플 (기본)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness.zip)
 - [잉크 도구 모음 위치 및 방향 샘플 (동적)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip)
