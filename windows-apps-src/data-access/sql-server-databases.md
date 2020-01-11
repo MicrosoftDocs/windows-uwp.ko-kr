@@ -5,12 +5,12 @@ ms.date: 03/28/2019
 ms.topic: article
 keywords: windows 10, uwp, SQL Server, 데이터베이스
 ms.localizationpriority: medium
-ms.openlocfilehash: 05579affd127fd951e233d1492d23e2dad0f4b53
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 54907dac63580794b7df42fa2e61162d16be8a1b
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340030"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302567"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>UWP 앱에서 SQL Server 데이터베이스 사용
 앱에서 [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient) 네임스페이스를 사용하여 SQL Server 데이터베이스에 직접 연결한 다음, 데이터를 저장하고 검색할 수 있습니다.
@@ -95,10 +95,7 @@ public class Product : INotifyPropertyChanged
     public event PropertyChangedEventHandler PropertyChanged;
     private void NotifyPropertyChanged(string propertyName)
     {
-        if (PropertyChanged != null)
-        {
-            PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
 }

@@ -8,18 +8,18 @@ ms.topic: article
 keywords: python, microsoft, windows 10, 자습서, 온라인 과정, 블로그, 이벤트
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 8870c1e269eb2c5f049c5431d6360e8c11570c0b
-ms.sourcegitcommit: 4cb3ee28baa8020ec925b0bdd896ab197a1ddadb
+ms.openlocfilehash: 24bda3a9eb76dac2e584540161e551ce6bb7ff4e
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74309166"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683666"
 ---
 # <a name="resources-for-developing-with-python-on-windows"></a>Windows에서 Python으로 개발하기 위한 리소스
 
 Windows 10을 실행하는 머신으로 작업하는 Python 개발자에게 권장하는 링크 목록입니다.
 
-## <a name="general"></a>일반 사항
+## <a name="general"></a>일반
 
 - [Microsoft 개발자 블로그: Python](https://devblogs.microsoft.com/python/): Microsoft에서 Python에 대한 최신 업데이트를 알아보세요.
 
@@ -41,13 +41,13 @@ Windows 10을 실행하는 머신으로 작업하는 Python 개발자에게 권�
 
 - [Python API 브라우저](https://docs.microsoft.com/python/api/?view=azure-python): Microsoft의 모든 Python 기반 API를 얻을 수 있는 원스톱 매장입니다.
 
-- [Python을 사용하는 Azure 코드 샘플](https://azure.microsoft.com/en-us/resources/samples/?platform=python&sort=0): Python 코드를 사용하여 Azure 서비스와 상호 작용하는 방법을 배웁니다.
+- [Python을 사용하는 Azure 코드 샘플](https://azure.microsoft.com/resources/samples/?platform=python&sort=0): Python 코드를 사용하여 Azure 서비스와 상호 작용하는 방법을 배웁니다.
 
 - [Python 및 Visual Studio Code](https://code.visualstudio.com/docs/languages/python): VS Code에서 Python을 사용하는 방법에 대한 개요입니다.
 
 ## <a name="online-courses"></a>온라인 과정
 
-- [Microsoft Learn의 Python 소개](https://docs.microsoft.com/en-us/learn/modules/intro-to-python/): 대화형 Microsoft Learn 플랫폼을 사용해 보고 기본 Python 코드를 작성하고, 변수를 선언하고, 콘솔 입력 및 출력을 작업하는 방법에 대한 기본 사항을 다루는 이 모듈을 완료하기 위한 경험을 쌓을 수 있습니다. 대화형 샌드박스 환경은 아직 Python 개발 환경을 설정하지 않은 사람들이 개발을 시작하기에 좋은 장소입니다.
+- [Microsoft Learn의 Python 소개](https://docs.microsoft.com/learn/modules/intro-to-python/): 대화형 Microsoft Learn 플랫폼을 사용해 보고 기본 Python 코드를 작성하고, 변수를 선언하고, 콘솔 입력 및 출력을 작업하는 방법에 대한 기본 사항을 다루는 이 모듈을 완료하기 위한 경험을 쌓을 수 있습니다. 대화형 샌드박스 환경은 아직 Python 개발 환경을 설정하지 않은 사람들이 개발을 시작하기에 좋은 장소입니다.
 
 - [Pluralsight의 Python: 8개 과정, 29시간](https://app.pluralsight.com/paths/skills/python): Pluralsight의 Python 학습 경로는 학습자의 기술을 측정하고 격차를 알아볼 수 있는 도구를 포함하여 Python과 관련된 다양한 토픽을 다루는 온라인 과정을 제공합니다.
 
