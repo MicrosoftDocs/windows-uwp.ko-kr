@@ -6,20 +6,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e4b4c89fff2854c36bd76cc680197fad1aa8dff
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: bc8fecd7a5a1596d074c170d7a7211126e88b8ae
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370400"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684859"
 ---
 # <a name="aep-service-class-ids"></a>AEP 서비스 클래스 ID
 
 
 
-**중요 한 Api**
+**중요 API**
 
-- [**Windows.Devices.Enumeration**](https://docs.microsoft.com/en-us/uwp/api/Windows.Devices.Enumeration)
+- [**Windows. Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)
 
 AEP(연결 끝점) 서비스는 디바이스에서 지정된 프로토콜을 통해 지원하는 서비스에 대한 프로그래밍 계약을 제공합니다. 이러한 서비스 중 일부에는 참조할 때 사용해야 하는 식별자가 설정되어 있습니다. 이러한 계약은 **System.Devices.AepService.ServiceClassId** 속성으로 식별됩니다. 이 항목에서는 널리 알려진 몇 가지 AEP 서비스 클래스 ID를 설명합니다. AEP 서비스 클래스 ID는 사용자 지정 클래스 ID를 사용하는 프로토콜에도 적용됩니다.
 
