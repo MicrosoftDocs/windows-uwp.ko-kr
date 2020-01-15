@@ -7,12 +7,12 @@ ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 86724b084edb9350adfd2ed2623623d255302b70
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 9e091cc7ad62f69b9e76541101555493609b8a06
+ms.sourcegitcommit: 8d945e0406818e614eacdc962493e570cc7615ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683461"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75955314"
 ---
 # <a name="device-portal-core-api-reference"></a>장치 포털 핵심 API 참조
 
@@ -2003,7 +2003,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| 이름 | (**필수**) 컴퓨터의 새 이름입니다. |
+| 이름 | (**필수**) 컴퓨터의 새 이름입니다. Base64 인코드되어야 합니다. |
 
 **요청 헤더**
 
