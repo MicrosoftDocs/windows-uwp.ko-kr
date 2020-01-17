@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 6387cc75047371666ac55b9fb70ae73d3e4c4d64
-ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
+ms.openlocfilehash: c67d359120b738458d7397c9558f19b4794888f6
+ms.sourcegitcommit: 87c20c6a40ed54e086adbe80caa509d851f54f57
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302667"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123845"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
@@ -102,7 +102,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 
 |설정 페이지| URI |
 |-------------|-----|
-| 내 장치 간에 Cortana 사용으로 이동합니다 | ms-settings:cortana-notifications |
+| 내 디바이스 간에 Cortana 사용으로 이동합니다 | ms-settings:cortana-notifications |
 | 추가 정보 | ms-settings:cortana-moredetails |
 | 사용 권한 & 기록 | ms-settings:cortana-permissions |
 | Windows 검색 | ms-설정: cortana-windowssearch |
@@ -138,9 +138,9 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 커서 및 포인터 크기 | ms-설정: easeofaccess-cursorandpointersize |
 | Display | ms-settings:easeofaccess-display |
 | 아이 컨트롤 | ms-settings:easeofaccess-eyecontrol |
-| 글꼴 | ms-settings:fonts |
+| Fonts | ms-settings:fonts |
 | 고대비 | ms-settings:easeofaccess-highcontrast |
-| 키보드 | ms-settings:easeofaccess-keyboard |
+| Keyboard | ms-settings:easeofaccess-keyboard |
 | 돋보기 | ms-settings:easeofaccess-magnifier |
 | 마우스 | ms-settings:easeofaccess-mouse |
 | Narrator | ms-settings:easeofaccess-narrator |
@@ -234,26 +234,27 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | 나타납니다 | ms-settings:privacy-appdiagnostics |
 | 자동 파일 다운로드 | ms-settings:privacy-automaticfiledownloads |
 | 백그라운드 앱 | ms-settings:privacy-backgroundapps |
-| 일정 | ms-settings:privacy-calendar |
+| Calendar | ms-settings:privacy-calendar |
 | 통화 기록 | ms-settings:privacy-callhistory |
 | 카메라 | ms-settings:privacy-webcam |
 | 연락처 | ms-settings:privacy-contacts |
-| 문서 | ms-settings:privacy-documents |
+| Documents | ms-settings:privacy-documents |
 | 이메일 | ms-settings:privacy-email |
 | 아이 트래커 | ms-settings:privacy-eyetracker(eyetracker 하드웨어 필요) |
 | 피드백 및 진단 | ms-settings:privacy-feedback |
 | 파일 시스템 | ms-settings:privacy-broadfilesystemaccess |
-| 일반 | ms-settings:privacy-general |
-| 위치 | ms-settings:privacy-location |
+| 일반 | ms-설정: 개인 정보 또는 ms 설정: 개인 정보-일반 |
+| 입력 잉크 & 입력 |ms-settings:privacy-speechtyping |
+| Location | ms-settings:privacy-location |
 | Messaging | ms-settings:privacy-messaging |
 | Microphone | ms-settings:privacy-microphone |
 | 동작 | ms-settings:privacy-motion |
 | 알림 | ms-settings:privacy-notifications |
 | 기타 장치 | ms-settings:privacy-customdevices |
-| 사진 | ms-settings:privacy-pictures |
 | 전화 통화 | ms-설정: 개인 정보-phonecalls |
+| 사진 | ms-settings:privacy-pictures |
 | 라디오 | ms-settings:privacy-radios |
-| 음성, 수동 입력 및 입력 |ms-settings:privacy-speechtyping |
+| 음성으로 | ms-설정: 개인 정보-음성 |
 | 작업 | ms-settings:privacy-tasks |
 | 비디오 | ms-settings:privacy-videos |
 | 음성 활성화 | ms-설정: 개인 정보-voiceactivation |
@@ -272,7 +273,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 
 |설정 페이지| URI |
 |-------------|-----|
-| 정보 | ms-settings:about |
+| 소개 | ms-settings:about |
 | 고급 디스플레이 설정 | ms-settings:display-advanced(고급 디스플레이 옵션을 지원하는 장치에서만 사용 가능) |
 | 앱 볼륨 및 장치 기본 설정 | 밀리초-설정: 앱-볼륨 (**Windows 10, 버전 1903에 추가 됨**)|
 | 배터리 절약 모드 | ms-settings:batterysaver(태블릿 같이 배터리가 있는 장치에서만 사용 가능) |
@@ -319,7 +320,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 
 |설정 페이지| URI |
 |-------------|-----|
-| 활성화 | ms-settings:activation |
+| 정품 인증 | ms-settings:activation |
 | 백업 | ms-settings:backup |
 | 배달 최적화 | ms-settings:delivery-optimization |
 | 내 장치 찾기 | ms-settings:findmydevice |
@@ -333,7 +334,7 @@ URI를 실행하는 방법에 대한 자세한 내용은 [URI에 대한 기본 �
 | Windows 업데이트-다시 시작 옵션 | ms-settings:windowsupdate-restartoptions |
 | Windows 업데이트-업데이트 기록 보기 | ms-settings:windowsupdate-history |
 
-## <a name="user--accounts"></a>사용자 계정
+## <a name="user-accounts"></a>사용자 계정
 
 |설정 페이지| URI |
 |-------------|-----|
