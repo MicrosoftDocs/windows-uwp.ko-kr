@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: dc696c9a57e84e2caade6a2623a72a6048b65621
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 9fb08278391118215063c293b71ffde1ed4443b8
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319103"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684118"
 ---
 # <a name="teaching-tip"></a>교육 팁
 
@@ -71,11 +71,11 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Save automatically"
             Subtitle="When you save your file to OneDrive, we save your changes as you go - so you never have to.">
-        </controls:TeachingTip>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -106,10 +106,10 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to.">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 이 예제에서 TeachingTip은 ResourceDictionary 또는 코드 숨김이 아닌 요소 트리에 있습니다. 이러한 사실은 동작에는 영향을 주지 않습니다. TeachingTip은 열려 있을 때만 표시되며, 레이아웃 공간을 차지하지 않습니다.
@@ -120,7 +120,7 @@ XAML
 
 교육 팁은 TeachingTipPlacementMode 속성을 사용하여 플라이아웃의 [FlyoutPlacementMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode) 배치 동작을 복제합니다. 기본 배치 모드는 대상 있는 교육 팁을 대상 위에 배치하고, 대상 없는 교육 팁을 xaml 루트의 아래쪽에 배치하려고 합니다. 플라이아웃을 사용할 때와 마찬가지로, 기본 설정 배치 모드에서 교육 팁을 표시할 공간이 없으면 다른 배치 모드가 자동으로 선택됩니다. 
 
-게임 패드 입력을 예측하는 애플리케이션의 경우 [게임 패드 및 리모컨 조작]( https://docs.microsoft.com/en-us/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction)을 참조하세요. 앱 UI의 가능한 모든 구성을 사용하여 각 교육 팁의 게임 패드 액세스 가능성을 테스트하는 것이 좋습니다.
+게임 패드 입력을 예측하는 애플리케이션의 경우 [게임 패드 및 리모컨 조작]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction)을 참조하세요. 앱 UI의 가능한 모든 구성을 사용하여 각 교육 팁의 게임 패드 액세스 가능성을 테스트하는 것이 좋습니다.
 
 PreferredPlacement가 "BottomLeft"로 설정된 대상 있는 교육 팁은 교육 팁 본문이 왼쪽으로 이동된 상태로 꼬리가 대상 맨 아래의 중앙에 표시됩니다.
 
@@ -128,12 +128,12 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to."
             PreferredPlacement="BottomLeft">
-        </controls:TeachingTip>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -147,11 +147,11 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to."
     PreferredPlacement="BottomLeft">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 ![왼쪽 아래 모서리에 교육 팁이 표시되는 샘플 앱 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다. 교육 팁의 오른쪽 위 모서리에서 닫기 단추가 있습니다.](../images/teaching-tip-non-targeted-preferred-placement.png)
@@ -164,7 +164,7 @@ XAML
 
 ### <a name="add-a-placement-margin"></a>배치 여백 추가  
 
-PlacementMargin 속성을 사용하여 대상 있는 교육 팁이 해당 대상에서 얼마나 멀리 떨어져 있는지와 대상 없는 교육 팁이 xaml 루트의 가장자리에서 얼마나 멀리 떨어져 있는지를 제어할 수 있습니다. [Margin](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.margin)과 같이, PlacementMargin에는 4가지 값인 left, right, top, bottom이 있으며 해당하는 값만 사용됩니다. 예를 들어, PlacementMargin.Left는 팁이 대상의 왼쪽 또는 xaml 루트의 왼쪽 가장자리에 있을 때 적용됩니다.
+PlacementMargin 속성을 사용하여 대상 있는 교육 팁이 해당 대상에서 얼마나 멀리 떨어져 있는지와 대상 없는 교육 팁이 xaml 루트의 가장자리에서 얼마나 멀리 떨어져 있는지를 제어할 수 있습니다. [Margin](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.margin)과 같이, PlacementMargin에는 4가지 값인 left, right, top, bottom이 있으며 해당하는 값만 사용됩니다. 예를 들어, PlacementMargin.Left는 팁이 대상의 왼쪽 또는 xaml 루트의 왼쪽 가장자리에 있을 때 적용됩니다.
 
 다음 예제에서는 PlacementMargin의 Left/Top/Right/Bottom이 모두 80으로 설정된 대상 없는 팁을 보여 줍니다.
 
@@ -172,12 +172,12 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to."
     PreferredPlacement="BottomLeft"
     PlacementMargin="80">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 ![교육 팁이 위쪽으로 배치되지만 오른쪽 아래 모서리에서 완전히 반대되게 배치되지는 않은 샘플 앱 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다. 교육 팁의 오른쪽 위 모서리에서 닫기 단추가 있습니다.](../images/teaching-tip-placement-margin.png)
@@ -191,7 +191,7 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to.">
@@ -199,7 +199,7 @@ XAML
                     <CheckBox x:Name="HideTipsCheckBox" Content="Don't show tips at start up" IsChecked="{x:Bind HidingTips, Mode=TwoWay}" />
                     <TextBlock>You can change your tip preferences in <Hyperlink NavigateUri="app:/item/SettingsPage">Settings</Hyperlink> if you change your mind.</TextBlock>
                 </StackPanel>
-        </controls:TeachingTip>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -218,7 +218,7 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources> 
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to."
@@ -229,7 +229,7 @@ XAML
                     <CheckBox x:Name="HideTipsCheckBox" Content="Don't show tips at start up" IsChecked="{x:Bind HidingTips, Mode=TwoWay}" />
                     <TextBlock>You can change your tip preferences in <Hyperlink NavigateUri="app:/item/SettingsPage">Settings</Hyperlink> if you change your mind.</TextBlock>
                 </StackPanel>
-        </controls:TeachingTip>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -244,14 +244,14 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources> 
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to.">
-            <controls:TeachingTip.HeroContent>
+            <muxc:TeachingTip.HeroContent>
                 <Image Source="Assets/cloud.png" />
-            </controls:TeachingTip.HeroContent>
-        </controls:TeachingTip>
+            </muxc:TeachingTip.HeroContent>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -266,14 +266,14 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
     <Button.Resources>
-        <controls:TeachingTip x:Name="AutoSaveTip"
+        <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
             Subtitle="We save your changes as you go - so you never have to."
-            <controls:TeachingTip.IconSource>
-                <controls:SymbolIconSource Symbol="Save" />
-            </controls:TeachingTip.IconSource>
-        </controls:TeachingTip>
+            <muxc:TeachingTip.IconSource>
+                <muxc:SymbolIconSource Symbol="Save" />
+            </muxc:TeachingTip.IconSource>
+        </muxc:TeachingTip>
     </Button.Resources>
 </Button>
 ```
@@ -290,11 +290,11 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to."
     IsLightDismissEnabled="True">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 ![오른쪽 아래 모서리에 빠른 해제 교육 팁이 표시되는 샘플 앱 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다.](../images/teaching-tip-light-dismiss.png)
@@ -309,13 +309,13 @@ XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save" />
 
-<controls:TeachingTip x:Name="AutoSaveTip"
+<muxc:TeachingTip x:Name="AutoSaveTip"
     Title="Saving automatically"
     Subtitle="We save your changes as you go - so you never have to."
     PreferredPlacement="BottomRight"
     PlacementMargin="-80,-50,0,0"
     ShouldConstrainToRootBounds="False">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 ![앱의 오른쪽 아래 모서리 밖에 교육 팁이 표시되는 샘플 앱입니다. 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다. 교육 팁의 오른쪽 위 모서리에서 닫기 단추가 있습니다.](../images/teaching-tip-escape-xaml-root.png)
@@ -328,11 +328,11 @@ Closing 이벤트를 사용하여 교육 팁의 닫기를 취소 및/또는 지�
 
 XAML
 ```XAML
-<controls:TeachingTip x:Name="EnableNewSettingsTip"
+<muxc:TeachingTip x:Name="EnableNewSettingsTip"
     Title="New ways to protect your privacy!"
     Subtitle="Please close this tip and review our updated privacy policy and privacy settings."
     Closing="OnTipClosing">
-</controls:TeachingTip>
+</muxc:TeachingTip>
 ```
 
 C#
@@ -357,15 +357,15 @@ public void OnTipClosing(object sender, TeachingTipClosingEventArgs args)
 
 ## <a name="remarks"></a>설명
 
-### <a name="related-articles"></a>관련 문서 
+### <a name="related-articles"></a>관련된 문서 
 
-* [대화 상자 및 플라이아웃](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/index)
+* [대화 상자 및 플라이아웃](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/index)
 
 ### <a name="recommendations"></a>권장 사항
 * 팁은 영구적이지 않으며 애플리케이션 환경에 중요한 정보 또는 옵션을 포함하지 않아야 합니다. 
 * 교육 팁을 너무 자주 표시하지 않도록 합니다. 교육 팁의 긴 세션 전체에서 또는 여러 세션 간에 시차를 적용하면 각 팁이 따로 집중될 수 있습니다.    
 * 팁을 간결하게 유지하고 주제를 명확히 드러냅니다. 연구에 따르면 사용자는 팁과 상호 작용할지 결정하기 전에 평균적으로 3 ~ 5개 단어만 읽으며 2-3개 단어만 이해한다고 합니다.
-* 교육 팁의 게임 패드 액세스 가능성은 보장되지 않습니다. 게임 패드 입력을 예측하는 애플리케이션의 경우 [게임 패드 및 리모컨 조작]( https://docs.microsoft.com/en-us/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction)을 참조하세요. 앱 UI의 가능한 모든 구성을 사용하여 각 교육 팁의 게임 패드 액세스 가능성을 테스트하는 것이 좋습니다.
+* 교육 팁의 게임 패드 액세스 가능성은 보장되지 않습니다. 게임 패드 입력을 예측하는 애플리케이션의 경우 [게임 패드 및 리모컨 조작]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction)을 참조하세요. 앱 UI의 가능한 모든 구성을 사용하여 각 교육 팁의 게임 패드 액세스 가능성을 테스트하는 것이 좋습니다.
 * 교육 팁이 xaml 루트를 이스케이프하도록 설정하는 경우 IsLightDismissEnabled 속성도 사용하도록 설정하고 PreferredPlacement 모드를 xaml 루트의 중심에 가장 가깝게 설정하는 것이 좋습니다. 
 
 ### <a name="reconfiguring-an-open-teaching-tip"></a>열린 교육 팁 다시 구성

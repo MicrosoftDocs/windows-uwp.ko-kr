@@ -11,14 +11,14 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5e464251200812e79474d05d9d0a680b49167871
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: e30e9b2bed5cb4c0b7876ff1c597bb7d1243008a
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "64564540"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684158"
 ---
-# <a name="icons-for-uwp-apps"></a>UWP 앱의 아이콘
+# <a name="icons-for-uwp-apps"></a>UWP 앱용 아이콘
 
 ![아이콘 헤더 이미지](images/icons/header-icons.png)
 
@@ -28,16 +28,14 @@ ms.locfileid: "64564540"
 
 :::row:::
     :::column:::
-        **Icons inside the app**
+        **앱 내의 아이콘**
 
-        ![icons inside the app](images/icons/inside-icons.png)
-앱 내부에서는 아이콘을 사용하여 텍스트 복사 또는 설정 페이지 탐색과 같은 작업을 나타냅니다.
+        ![앱 내의 아이콘](images/icons/inside-icons.png) 앱 내에서 아이콘을 사용하여 텍스트 복사 또는 설정 페이지 탐색과 같은 작업을 나타냅니다.
     :::column-end:::
     :::column:::
 **앱 외부 아이콘**
 
-        ![icons outside the app](images/icons/outside-icons.jpg)
-앱 외부에서 Windows는 아이콘을 사용하여 시작 메뉴와 작업 표시줄에 앱을 나타냅니다. 사용자가 앱을 시작 메뉴에 고정하도록 선택하면 앱의 시작 타일에는 앱 아이콘이 포함될 수 있습니다. 앱 아이콘은 제목 표시줄에 표시되며 앱 로고를 사용하여 시작 화면을 만들 수도 있습니다.
+        ![앱 외부 아이콘](images/icons/outside-icons.jpg) 앱 외부에서 Windows는 아이콘을 사용하여 시작 메뉴와 작업 표시줄에 앱을 나타냅니다. 사용자가 앱을 시작 메뉴에 고정하도록 선택하면 앱의 시작 타일에는 앱 아이콘이 포함될 수 있습니다. 앱 아이콘은 제목 표시줄에 표시되며 앱 로고를 사용하여 시작 화면을 만들 수도 있습니다.
     :::column-end:::
 :::row-end:::
 
@@ -49,14 +47,12 @@ ms.locfileid: "64564540"
 
 :::row:::
     :::column:::
-        ![do](images/do.svg)
-        ![icons standard image](images/icons/icons-standard.svg)<br>
+        ![아이콘 표준 이미지](images/icons/icons-standard.svg) ![실행](images/do.svg)<br>
 
 잘라내기, 복사, 붙여 넣기 및 저장 같은 작업이나 탐색 메뉴의 탐색 항목에 아이콘을 사용합니다.
     :::column-end:::
     :::column:::
-        ![don't](images/dont.svg)
-        ![icons concept image](images/icons/icons-concept.svg)<br>
+        ![아이콘 개념 이미지](images/icons/icons-concept.svg) ![실행 안함](images/dont.svg)<br>
 
 표시할 개념에 대한 아이콘이 이미 있는 경우에는 아이콘을 사용합니다. (아이콘이 있는지 확인하려면 Segoe 아이콘 목록을 확인합니다.)
     :::column-end:::
@@ -64,14 +60,12 @@ ms.locfileid: "64564540"
 
 :::row:::
     :::column:::
-        ![do](images/do.svg)
-        ![icon shopping cart](images/icons/icon-shopping-cart.svg)<br>
+        ![쇼핑 카트 열기](images/icons/icon-shopping-cart.svg) ![실행](images/do.svg)<br>
 
 사용자가 아이콘의 의미를 쉽게 이해할 수 있고 작은 크기로 분명할 만큼 충분히 단순한 경우 아이콘을 사용합니다.
     :::column-end:::
     :::column:::
-        ![dont](images/dont.svg)
-        ![icons concept image](images/icons/icon-bad-example.png)<br>
+        ![아이콘 개념 이미지](images/icons/icon-bad-example.png) ![실행 안함](images/dont.svg)<br>
 
 의미가 명확하지 않거나 분명히 표시하기 위해 복잡한 도형이 필요한 경우에는 아이콘을 사용하지 마세요.
     :::column-end:::
@@ -89,7 +83,7 @@ ms.locfileid: "64564540"
 Microsoft는 Segoe MDL2 자산 글꼴의 형식으로 1000개 이상의 아이콘을 제공합니다. 글꼴에서 아이콘을 가져오는 것이 직관적이지는 않을 수 있지만 Microsoft의 글꼴 표시 기술은 이 아이콘이 모든 디스플레이, 모든 해상도 및 크기에서 선명하고 날카롭게 보이게 합니다. 자세한 내용은 [Segoe MDL2 아이콘](segoe-ui-symbol-font.md)을 참조하세요.
     :::column-end:::
     :::column:::
-        ![pre-defined icon image](images/icons/predefined-icon.png)
+        ![미리 정의된 아이콘 이미지](images/icons/predefined-icon.png)
     :::column-end:::
 :::row-end:::
 
@@ -99,7 +93,7 @@ Microsoft는 Segoe MDL2 자산 글꼴의 형식으로 1000개 이상의 아이�
 Segoe MDL2 자산 글꼴을 사용하지 않아도 됩니다. Wingdings 또는 Webdings 등 시스템에 사용자가 설치한 모든 글꼴을 사용할 수 있습니다.
     :::column-end:::
     :::column:::
-        ![wingdings image](images/icons/wingdings.png)
+        ![wingdings 이미지](images/icons/wingdings.png)
     :::column-end:::
 :::row-end:::
 
@@ -109,7 +103,7 @@ Segoe MDL2 자산 글꼴을 사용하지 않아도 됩니다. Wingdings 또는 W
 SVG 리소스는 모든 크기 또는 해상도에서 항상 선명하게 보이므로 아이콘에 적합합니다. 대부분의 그리기 애플리케이션은 SVG로 내보낼 수 있습니다. 자세한 내용은 [SVGImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.svgimagesource)를 참조하세요.
     :::column-end:::
     :::column:::
-        ![SVG image](images/icons/icon-scale.gif)
+        ![SVG 이미지](images/icons/icon-scale.gif)
     :::column-end:::
 :::row-end:::
 
@@ -119,7 +113,7 @@ SVG 리소스는 모든 크기 또는 해상도에서 항상 선명하게 보이
 SVG 파일과 같이 기하 도형은 벡터 기반 리소스이므로 항상 선명하게 보입니다. 그러나 각 점과 곡선을 개별적으로 지정해야 하므로 기하 도형 만들기는 복잡합니다. 실제로는 앱을 실행(예: 애니메이션)하는 동안 아이콘을 수정해야 하는 경우에만 좋은 선택입니다. 지침은 [기하 도형용 이동 및 그리기 명령](../../xaml-platform/move-draw-commands-syntax.md)을 참조하세요. 
     :::column-end:::
     :::column:::
-        ![Geometry objects image](images/icons/geometry-objects.png)
+        ![기하 도형 개체 이미지](images/icons/geometry-objects.png)
     :::column-end:::
 :::row-end:::
 
@@ -129,8 +123,7 @@ SVG 파일과 같이 기하 도형은 벡터 기반 리소스이므로 항상 �
 비트맵 이미지는 원하는 아이콘의 크기와 화면의 해상도에 따라 확장할 수 있도록 특정 크기로 만들어집니다. 이미지가 크기가 축소되면 흐릿하게 나타날 수 있습니다. 크기가 확장되면 일그러지고 모자이크처럼 나타날 수 있습니다. 비트맵 이미지를 사용하는 경우 JPEG보다 PNG 또는 GIF를 이용하는 것이 좋습니다. 
     :::column-end:::
     :::column:::
-        ![don't](images/dont.svg)
-        ![Bitmap image](images/icons/bitmap-image.png)
+        ![비트맵 이미지](images/icons/bitmap-image.png) ![실행 안 함](images/dont.svg)
     :::column-end:::
 :::row-end:::
 
@@ -148,11 +141,11 @@ SVG 파일과 같이 기하 도형은 벡터 기반 리소스이므로 항상 �
 
 :::row:::
     :::column span="2":::
-        <b>Step 1</b><br>
+        <b>1단계</b><br>
 단추의 글꼴 패밀리를 `Segoe MDL2 Assets`으로 설정하고 이 콘텐츠 속성을 사용할 문자 모양의 유니코드 값으로 설정합니다.
     :::column-end:::
     :::column:::
-        ![Create an icon button step 1](images/icons/create-icon-step-1.svg)
+        ![아이콘 단추 만들기 1단계](images/icons/create-icon-step-1.svg)
     :::column-end:::
 :::row-end:::
 
@@ -162,11 +155,11 @@ SVG 파일과 같이 기하 도형은 벡터 기반 리소스이므로 항상 �
 
 :::row:::
     :::column span="2":::
-        <b>Step 2</b><br>
+        <b>2단계</b><br>
 아이콘 요소 개체 [BitmapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.bitmapicon), [FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon), [PathIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon) 또는 [SymbolIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbolicon) 중 하나를 사용할 수 있습니다. 이를 통해 더 많은 유형의 아이콘을 선택할 수 있으며 원하는 경우 텍스트 등의 다른 유형의 콘텐츠와 아이콘을 결합할 수 있습니다.
     :::column-end:::
     :::column:::
-        ![Create an icon button step 2](images/icons/icon-text-step-2.svg)
+        ![아이콘 단추 만들기 2단계](images/icons/icon-text-step-2.svg)
     :::column-end:::
 :::row-end:::
 
@@ -183,10 +176,10 @@ SVG 파일과 같이 기하 도형은 벡터 기반 리소스이므로 항상 �
 
 :::row:::
     :::column span:::
-잘라내기/복사/붙여넣기 또는 사진 편집 프로그램에 대한 그리기 명령 세트와 같이 함께 사용하는 일련의 명령이 있을 때 [명령 모음](../controls-and-patterns/app-bars.md)에 함께 배치합니다. 명령 모음에는 각각 작업을 나타내는 하나 이상의 앱 바 단추 또는 앱 바 토글 단추가 있습니다. 각 단추에는 표시하는 아이콘을 제어하는 데 사용하는 [Icon](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon) 속성이 있습니다. 아이콘을 지정하는 다양한 방법이 있습니다. 
+잘라내기/복사/붙여넣기 또는 사진 편집 프로그램에 대한 그리기 명령 세트와 같이 함께 사용하는 일련의 명령이 있을 때 [명령 모음](../controls-and-patterns/app-bars.md)에 함께 배치합니다. 명령 모음에는 각각 작업을 나타내는 하나 이상의 앱 바 단추 또는 앱 바 토글 단추가 있습니다. 각 단추에는 표시하는 아이콘을 제어하는 데 사용하는 [Icon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon) 속성이 있습니다. 아이콘을 지정하는 다양한 방법이 있습니다. 
     :::column-end:::
     :::column:::
-        ![Example of a command bar with icons](images/icons/create-icon-command-bar.svg)
+        ![아이콘이 있는 명령 모음의 예](images/icons/create-icon-command-bar.svg)
     :::column-end:::
 :::row-end:::
 
@@ -216,6 +209,6 @@ SVG 파일과 같이 기하 도형은 벡터 기반 리소스이므로 항상 �
 
 
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 * [타일 및 아이콘 자산에 대한 지침](../shell/tiles-and-notifications/app-assets.md)

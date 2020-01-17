@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e454bed6dc1a9429fe313e305dc9ba818d86e765
-ms.sourcegitcommit: 802699ce8d21e7fa4639f0b19b1c5b6c46c2c727
+ms.openlocfilehash: a3cd8a0c988df08047b10911a4d4f55e3ba1cb6e
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68835635"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684109"
 ---
 # <a name="buttons"></a>단추
 
@@ -129,12 +129,12 @@ private async void SubscribeButton_Click(object sender, RoutedEventArgs e)
 
 단추에는 **Click** 동작이 있기 때문에 일반적으로 **Button** 개체에서 하위 수준의 [PointerPressed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트를 처리할 수 없습니다. 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)를 참조하세요.
 
-[ClickMode](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.clickmode) 속성을 변경하여 단추가 **Click** 이벤트를 발생시키는 방법을 변경할 수 있습니다. **ClickMode**의 기본값은 **Release**이지만, 단추의 **ClickMode** 값을 **Hover** 또는 **Press**로 설정할 수도 있습니다. **ClickMode**가 **Hover**인 경우 키보드 또는 터치를 통해 **Click** 이벤트를 발생시킬 수는 없습니다.
+[ClickMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.clickmode) 속성을 변경하여 단추가 **Click** 이벤트를 발생시키는 방법을 변경할 수 있습니다. **ClickMode**의 기본값은 **Release**이지만, 단추의 **ClickMode** 값을 **Hover** 또는 **Press**로 설정할 수도 있습니다. **ClickMode**가 **Hover**인 경우 키보드 또는 터치를 통해 **Click** 이벤트를 발생시킬 수는 없습니다.
 
 
 ### <a name="button-content"></a>단추 콘텐츠
 
-**Button**은 [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl) 클래스의 콘텐츠 컨트롤입니다. 단추의 XAML 콘텐츠 속성은 [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content)이며 XAML에 대해 다음과 같은 구문을 가능하게 합니다. `<Button>A button's content</Button>`. 어떠한 개체라도 단추 콘텐츠로 설정할 수 있습니다. 콘텐츠가 [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 개체인 경우 단추에서 렌더링됩니다. 콘텐츠가 다른 유형의 개체인 경우 해당 문자열 표현이 단추에 표시됩니다.
+**Button**은 [ContentControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl) 클래스의 콘텐츠 컨트롤입니다. 단추의 XAML 콘텐츠 속성은 [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content)이며 XAML에 대해 `<Button>A button's content</Button>`과 같은 구문을 가능하게 합니다. 어떠한 개체라도 단추 콘텐츠로 설정할 수 있습니다. 콘텐츠가 [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 개체인 경우 단추에서 렌더링됩니다. 콘텐츠가 다른 유형의 개체인 경우 해당 문자열 표현이 단추에 표시됩니다.
 
 단추의 콘텐츠는 일반적으로 텍스트입니다. 해당 텍스트를 디자인할 때는 다음 권장 사항을 사용합니다.
 
@@ -217,7 +217,7 @@ private void Decrease_Click(object sender, RoutedEventArgs e)
 
 ## <a name="create-a-drop-down-button"></a>드롭다운 단추 만들기
 
-> **DropDownButton**에는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/) 또는 Windows 10, 버전 1809(SDK 17763) 이상이 필요합니다. 최신 SDK를 다운로드하려면 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)를 참조하고 이전 SDK를 다운로드하려면 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)를 참조하세요.
+> **DropDownButton**에는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/) 또는 Windows 10, 버전 1809(SDK 17763) 이상이 필요합니다. 최신 SDK를 다운로드하려면 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)를 참조하고 이전 SDK를 다운로드하려면 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/windows/downloads/sdk-archive)를 참조하세요.
 
 [DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton)은 더 많은 옵션을 포함하는 연결된 플라이아웃이 있는 시각적 표시기 형태의 갈매기형 펼침 단추를 표시합니다. 플라이아웃을 사용하는 표준 **Button** 컨트롤과 동작은 동일하고, 모양만 다릅니다.
 
@@ -278,7 +278,7 @@ private void AlignmentMenuFlyoutItem_Click(object sender, RoutedEventArgs e)
 ## <a name="create-a-split-button"></a>분할 단추 만들기
 
  > [!IMPORTANT]
- > **SplitButton**에는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/) 또는 Windows 10, 버전 1809(SDK 17763) 이상이 필요합니다. 최신 SDK를 다운로드하려면 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)를 참조하고 이전 SDK를 다운로드하려면 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)를 참조하세요.
+ > **SplitButton**에는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/) 또는 Windows 10, 버전 1809(SDK 17763) 이상이 필요합니다. 최신 SDK를 다운로드하려면 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)를 참조하고 이전 SDK를 다운로드하려면 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/windows/downloads/sdk-archive)를 참조하세요.
 
 [SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) 컨트롤은 개별적으로 호출할 수 있는 두 부분으로 구성됩니다. 한 부분은 표준 단추처럼 동작하며 즉각적인 작업을 호출합니다. 다른 부분은 사용자가 선택할 수 있는 추가 옵션을 포함하는 플라이아웃을 호출합니다.
 
@@ -388,7 +388,7 @@ public sealed partial class MainPage : Page
 ## <a name="create-a-toggle-split-button"></a>설정/해제 분할 단추 만들기
 
 > [!NOTE]
-> **ToggleSplitButton**에는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/) 또는 Windows 10, 버전 1809(SDK 17763) 이상이 필요합니다. 최신 SDK를 다운로드하려면 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)를 참조하고 이전 SDK를 다운로드하려면 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive)를 참조하세요.
+> **ToggleSplitButton**에는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/) 또는 Windows 10, 버전 1809(SDK 17763) 이상이 필요합니다. 최신 SDK를 다운로드하려면 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)를 참조하고 이전 SDK를 다운로드하려면 [Windows SDK 및 에뮬레이터 아카이브](https://developer.microsoft.com/windows/downloads/sdk-archive)를 참조하세요.
 
 [ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) 컨트롤은 개별적으로 호출할 수 있는 두 부분으로 구성됩니다. 한 부분은 끄거나 켤 수 있는 토글 단추처럼 동작합니다. 다른 부분은 사용자가 선택할 수 있는 추가 옵션을 포함하는 플라이아웃을 호출합니다.
 
@@ -522,7 +522,7 @@ private void ApplyListStyle(string listStyle)
 - 확인 대화 상자처럼 동일한 결정에 대한 단추가 여러 개 있는 경우에는 다음과 같은 순서로 커밋 단추를 표시합니다. 여기서 [그렇게 함] 및 [그렇게 하지 않음]은 기본 지침에 대한 구체적인 응답입니다.
   - 확인/[그렇게 함]/예
     - [그렇게 하지 않음]/아니요
-    - Cancel
+    - 취소
 
 - 사용자에게 단추를 한 번에 한 개 또는 두 개만 표시합니다(예: **수락** 및 **취소**). 사용자에게 더 많은 작업을 표시해야 하는 경우 사용자가 하나의 명령 단추로 작업을 선택하여 트리거할 수 있도록 [확인란](checkbox.md) 또는 [라디오 단추](radio-button.md)를 사용하는 것이 좋습니다.
 
@@ -551,12 +551,12 @@ private void ApplyListStyle(string listStyle)
 뒤로 단추는 뒤로 스택 또는 사용자의 탐색 기록을 통해 뒤로 탐색할 수 있게 하는 시스템 제공 UI 요소입니다. 뒤로 단추를 직접 만들지 않아도 되지만 좋은 뒤로 탐색 환경을 사용하려면 일부 작업을 수행해야 할 수 있습니다. 자세한 내용은 [UWP 앱에 대한 탐색 기록 및 뒤로 탐색](../basics/navigation-history-and-backwards-navigation.md)을 참조하세요.
 
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery): 이 샘플에서는 모든 XAML 컨트롤을 대화형 형식으로 보여줍니다.
 
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [Button 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button)
 - [라디오 단추](radio-button.md)

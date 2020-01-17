@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: efe67707edc5f556301ded466f3f2919ec04873e
-ms.sourcegitcommit: 49a34e957433966ac8d4822b5822f21087aa61c3
+ms.openlocfilehash: 7ab504657ae5e3142eb7db1d9517a013e9aaf5f3
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74153730"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684578"
 ---
 # <a name="color"></a>색
 
@@ -136,7 +136,7 @@ UWP 앱은 밝거나 어두운 애플리케이션 테마를 사용할 수 있습
 
 앱에서 테마 브러시를 사용하는 방법에 대한 자세한 내용은 [테마 리소스](../controls-and-patterns/xaml-theme-resources.md)를 참조하세요.
 
-## <a name="accent-color"></a>테마 컬러
+## <a name="accent-color"></a>강조 색
 
 공용 컨트롤은 테마 컬러를 사용하여 상태 정보를 전달할 수 있습니다. 기본적으로 테마 컬러는 설정에서 사용자가 선택하는 `SystemAccentColor`입니다. 그러나 브랜드를 반영하기 위해 앱의 테마 컬러를 사용자 지정할 수 있습니다.
 
@@ -219,13 +219,13 @@ Windows 셸의 테마 컬러 알고리즘은 테마 컬러의 밝은 음영과 �
 
 ## <a name="color-api"></a>색 API
 
-애플리케이션에 색을 추가하는 데 사용할 수 있는 몇 가지 API가 있습니다. 첫째로, [**Colors**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.colors) 클래스는 미리 정의된 색의 큰 목록을 구현합니다. XAML 속성을 통해 자동으로 액세스할 수 있습니다. 아래 예제에서는 단추를 만들고 배경색과 전경색 속성을 **Colors** 클래스의 멤버로 설정합니다.
+애플리케이션에 색을 추가하는 데 사용할 수 있는 몇 가지 API가 있습니다. 첫째로, [**Colors**](https://docs.microsoft.com/uwp/api/windows.ui.colors) 클래스는 미리 정의된 색의 큰 목록을 구현합니다. XAML 속성을 통해 자동으로 액세스할 수 있습니다. 아래 예제에서는 단추를 만들고 배경색과 전경색 속성을 **Colors** 클래스의 멤버로 설정합니다.
 
 ```xaml
 <Button Background="MediumSlateBlue" Foreground="White">Button text</Button>
 ```
 
-XAML에서 [**Color**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.color) 구조체를 사용하여 RGB 또는 16진수 값으로 고유한 색을 만들 수 있습니다.
+XAML에서 [**Color**](https://docs.microsoft.com/uwp/api/windows.ui.color) 구조체를 사용하여 RGB 또는 16진수 값으로 고유한 색을 만들 수 있습니다.
 
 ```xaml
 <Color x:Key="LightBlue">#FF36C0FF</Color>
@@ -240,9 +240,9 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 문자 “Argb”는 네 가지 색 구성 요소인 알파(불투명도), 빨간색, 녹색, 파란색을 나타냅니다. 각 인수의 범위는 0~255입니다. 기본 불투명도 255(100% 불투명)를 제공하는 첫 번째 값을 생략할 수 있습니다.
 
 > [!Note]
-> C++를 사용하는 경우 [**ColorHelper**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.colorhelper) 클래스를 통해 색을 만들어야 합니다.
+> C++를 사용하는 경우 [**ColorHelper**](https://docs.microsoft.com/uwp/api/windows.ui.colorhelper) 클래스를 통해 색을 만들어야 합니다.
 
-단색 UI 요소를 그리는 데 사용할 수 있는 [**SolidColorBrush**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.solidcolorbrush)의 인수로 **Color**를 사용하는 경우가 가장 일반적입니다. 이 브러시는 일반적으로 [**ResourceDictionary**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 정의되어 있으므로 여러 요소에서 재사용할 수 있습니다.
+단색 UI 요소를 그리는 데 사용할 수 있는 [**SolidColorBrush**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.solidcolorbrush)의 인수로 **Color**를 사용하는 경우가 가장 일반적입니다. 이 브러시는 일반적으로 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 정의되어 있으므로 여러 요소에서 재사용할 수 있습니다.
 
 ```xaml
 <ResourceDictionary>
@@ -267,11 +267,11 @@ Color LightBlue = Color.FromArgb(255,54,192,255);
 ### <a name="how-to-use-colorpaletteresources"></a>ColorPaletteResources 사용 방법
 
 ColorPaletteResources는 어디에서, 어떤 리소스로 범위가 지정되는지를 시스템에 알려 주는 API입니다. ColorPaletteResources는 [x:Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute)를 사용해야 하며, 다음 세 가지 선택 항목 중 하나일 수 있습니다.
-- 기본값
+- Default
   * [밝은](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) 테마와 [어두운](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme) 테마에서 모두, 색 변경이 표시됩니다.
-- 밝게
+- Light
   * [밝은 테마](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme)에서만 색 변경이 표시됩니다.
-- 어둡게
+- Dark
   * [어두운 테마](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme)에서만 색 변경이 표시됩니다.
 
 테마 중 하나에서 다른 사용자 지정 모양을 원하는 경우 x:Key를 설정하면 시스템 또는 앱 테마에 맞게 색이 변경됩니다.
@@ -404,7 +404,7 @@ ColorPaletteResources를 사용하면 인라인 대신 내부에서 래퍼로 �
 </ColorPaletteResources>
 ```
 
-## <a name="usability"></a>유용성
+## <a name="usability"></a>사용 편의성
 
 :::row:::
     :::column:::
@@ -441,7 +441,7 @@ ColorPaletteResources를 사용하면 인라인 대신 내부에서 래퍼로 �
     :::column-end:::
 :::row-end:::
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [XAML 스타일](../controls-and-patterns/xaml-styles.md)
 - [XAML 테마 리소스](../controls-and-patterns/xaml-theme-resources.md)

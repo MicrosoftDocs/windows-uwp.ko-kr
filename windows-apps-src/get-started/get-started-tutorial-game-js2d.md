@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 343fa50dbe9a0574914dc96b9fac450475a69b0a
-ms.sourcegitcommit: 87ddc67d31668a6351206bda3546ffbabb7b4551
+ms.openlocfilehash: b2b60354acb2c3d97ced3dce0b3fb7f6d97ac35d
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68807848"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684771"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>JavaScript로 UWP 게임 만들기
 
@@ -260,7 +260,7 @@ UWP 앱을 만들었으니 이제 Microsoft Store에 게시할 수 있습니다.
 
 몇 가지 단계를 처리해야 합니다.
 
-1. Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/register)해야 합니다.
+1. Windows 개발자로 [등록](https://developer.microsoft.com/store/register)해야 합니다.
 2. 앱 제출 [검사 목록](https://docs.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
 3. 앱을 제출하여 [인증](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 
@@ -274,7 +274,7 @@ UWP 앱을 만들었으니 이제 Microsoft Store에 게시할 수 있습니다.
 2. 게임 패드 지원. [API](https://gamedevelopment.tutsplus.com/tutorials/using-the-html5-gamepad-api-to-add-controller-support-to-browser-games--cms-21345)가 제공됩니다.
 3. 좀 더 멋진 게임을 만들어보세요! 이 부분은 개발자에게 달렸지만, 온라인에 다양한 리소스가 제공됩니다. 
 
-## <a name="other-links"></a>다른 링크
+## <a name="other-links"></a>기타 링크
 
 * [JavaScript로 간단한 Windows 게임 만들기](https://www.sitepoint.com/creating-a-simple-windows-8-game-with-javascript-game-basics-createjseaseljs/)
 * [HTML/JS 게임 엔진 선택](https://html5gameengine.com/)

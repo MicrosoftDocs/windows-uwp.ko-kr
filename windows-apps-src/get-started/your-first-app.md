@@ -6,12 +6,12 @@ ms.date: 01/25/2017
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, c#, c + +, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: f386de7ebf9aae2f49a2709d8c1c8ce2595cbf1d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d0870212df4deb7f12f790107ec988fac3eb69ab
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260531"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685157"
 ---
 # <a name="create-your-first-app"></a>첫 번째 앱 만들기
 
@@ -61,17 +61,17 @@ HTML5, CSS3, 및 JavaScript를 사용하여 웹 기술을 활용, 앱을 빌드�
 UWP 이상으로 JavaScript 및 HTML 기술을 확장하여 웹앱 만들기 또는 WebVR을 사용하여 웹에서 가상 현실 탐색
 
 * [Microsoft Edge 개발자 설명서](https://docs.microsoft.com/microsoft-edge/)
-* [Microsoft Edge로 WebVR 사용](https://docs.microsoft.com/en-us/microsoft-edge/webvr/)
+* [Microsoft Edge로 WebVR 사용](https://docs.microsoft.com/microsoft-edge/webvr/)
 
 웹앱을 UWP 프레임워크에 호스트된 웹앱으로 쉽게 패키지화하고 Microsoft Store에서 홍보할 수 있습니다.
 
-* [호스트된 웹앱](https://developer.microsoft.com/windows/pwa)
+* [호스팅된 웹앱](https://developer.microsoft.com/windows/pwa)
 * [웹 애플리케이션을 UWP 앱으로 변환](../porting/hwa-create-windows.md)
 
 
 ## <a name="see-also"></a>참고 항목
 
 * [코딩 시작](create-uwp-apps.md)
-* [UWP 앱이란 무엇인가요?](universal-application-platform-guide.md)
+* [UWP 앱이란?](universal-application-platform-guide.md)
 * [설정하기](get-set-up.md)
 * [Windows 계정 등록](sign-up.md)

@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0810365eeb0023a31862d31213862e2b3bce8db8
-ms.sourcegitcommit: 5687e5340f8d78da95c3ac28304d1c9b8960c47d
+ms.openlocfilehash: 63a7ee8550b72356199645f54b587480275c2bcd
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70930353"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685079"
 ---
 # <a name="reveal-highlight"></a>강조 표시
 
@@ -23,7 +23,7 @@ ms.locfileid: "70930353"
 
 강조 표시는 사용자가 포인터 명령 모음과 같은 대화형 요소로 움직였을 때 이를 강조 표시하는 조명 효과입니다. 
 
-> **중요 API**: [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.VisualState)
+> **중요 API**: [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>작동 방식
 강조 표시는 이 그림에 나타난 것처럼 포인터가 근처에 있을 때 요소의 컨테이너를 표시하여 대화형 요소를 더욱 잘 보이게 합니다.
@@ -76,9 +76,9 @@ ms.locfileid: "70930353"
 
 이 컨트롤은 일반적으로 애플리케이션 주요 포커스 지점의 도우미 컨트롤인 작은 컨트롤이기 때문에 기본적으로 표시가 없지만, 똑같은 앱은 하나도 없으며 이 컨트롤이 앱에서 가장 많이 사용되는 경우를 대비하여 일부 스타일이 제공되었습니다.
 
-| 컨트롤 이름   | Resource Name |
+| 컨트롤 이름   | 리소스 이름 |
 |----------|:-------------:|
-| Button |  ButtonRevealStyle |
+| 단추 |  ButtonRevealStyle |
 | ToggleButton | ToggleButtonRevealStyle |
 | RepeatButton | RepeatButtonRevealStyle |
 | AppBarButton | AppBarButtonRevealStyle |
@@ -268,7 +268,7 @@ ms.locfileid: "70930353"
 - 대화형 요소의 밀도가 높은 영역에 표시 사용(명령 시나리오)
 - 표시 항목 사이에 1px 여백 공간 배치
 
-### <a name="dont"></a>금지 사항
+### <a name="dont"></a>안 함
 - 정적 콘텐츠에 표시를 사용하지 않음(배경, 텍스트)
 - 팝업, 드롭다운 또는 플라이아웃에 표시를 사용하지 않음
 - 격리된 일회성 상황에 표시를 사용하지 않음
@@ -276,15 +276,15 @@ ms.locfileid: "70930353"
 - 사용자에게 제공해야 하는 메시지로부터 주의를 분산시킬 수 있으므로 보안 결정에 표시를 사용하지 않음
 
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="reveal-and-the-fluent-design-system"></a>표시 및 흐름 디자인 시스템
 
  흐름 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질, 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 표시는 앱에 조명을 추가하는 흐름 디자인 시스템의 구성 요소입니다. 자세한 내용은 [UWP용 흐름 디자인 개요](/windows/apps/fluent-design-system)를 참조하세요.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush)
 - [아크릴](acrylic.md)

@@ -5,12 +5,12 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a6a1d93b1deaad084ff25db946199b678b35703c
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: dcbeffc7e3db8f3df9c197e8c388f30faf7ad03d
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66369517"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685245"
 ---
 # <a name="best-practices-for-writing-to-files"></a>파일 쓰기 모범 사례
 
@@ -44,7 +44,7 @@ ms.locfileid: "66369517"
 이 개념을 이해하면 **StorageFile**에서 I/O를 수행할 때 도움이 됩니다. 예를 들어 [파일에 쓰기](quickstart-reading-and-writing-files.md#writing-to-a-file) 섹션에서는 파일에 쓰는 다음과 같은 세 가지 방법을 제공합니다.
 
 * [**FileIO.WriteTextAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileio.writetextasync) 메서드 사용
-* 버퍼를 만든 후 [**FileIO.WriteBufferAsync**](https://docs.microsoft.com/en-us/uwp/api/windows.storage.fileio.writebufferasync) 메서드 호출
+* 버퍼를 만든 후 [**FileIO.WriteBufferAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileio.writebufferasync) 메서드 호출
 * 스트림을 사용하는 4단계 모델:
   1. 파일을 [열어](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.openasync) 스트림을 가져옵니다.
   2. 출력 스트림을 [가져옵니다](https://docs.microsoft.com/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat).
@@ -75,7 +75,7 @@ ms.locfileid: "66369517"
 
 이 표에서는 앱 개발자가 **Write** 메서드를 사용할 때 발생하는 일반적인 오류 코드를 나타냅니다. 이 표의 단계는 이전 다이어그램에 나와 있는 단계에 해당합니다.
 
-|  오류 이름(값)  |  단계  |  원인  |  해결 방법  |
+|  오류 이름(값)  |  단계  |  원인  |  솔루션  |
 |----------------------|---------|----------|-------------|
 |  ERROR_ACCESS_DENIED(0X80070005)  |  5  |  원본 파일은 이전 작업에서 삭제용으로 표시될 수 있습니다.  |  작업을 다시 시도합니다.</br>파일에 대한 액세스 권한이 동기화되었는지 확인합니다.  |
 |  ERROR_SHARING_VIOLATION(0x80070020)  |  5  |  원본 파일을 다른 배타적 쓰기에서 열려 있습니다.   |  작업을 다시 시도합니다.</br>파일에 대한 액세스 권한이 동기화되었는지 확인합니다.  |

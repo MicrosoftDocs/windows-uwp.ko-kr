@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, python 시스템 관리, python 파일 자동화, windows에서 python 스크립트, windows에서 python 설정, windows의 python 개발자 환경, windows의 python 개발 환경, powershell을 사용하는 python, 파일 시스템 작업을 위한 python 스크립트
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 3f8a17de8121fed27e69442d5560f702a04c8e42
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.openlocfilehash: d465d46a0524345a45dff9b1cc7c425e4cb468a4
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314867"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683656"
 ---
 # <a name="get-started-using-python-on-windows-for-scripting-and-automation"></a>스크립팅 및 자동화를 위해 Windows에서 Python 사용 시작
 
@@ -24,7 +24,7 @@ ms.locfileid: "72314867"
 
 ## <a name="set-up-your-development-environment"></a>개발 환경 설정
 
-Python을 사용하여 파일 시스템 작업을 수행하는 스크립트를 작성할 때 [Microsoft Store에서 Python을 설치](https://www.microsoft.com/en-us/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab)하는 것이 좋습니다. Microsoft Store를 통해 설치하면 기본 Python3 인터프리터를 사용하지만, 자동 업데이트를 제공할 뿐 아니라 현재 사용자의 PATH 설정까지 처리합니다(관리자가 액세스할 필요 없음).
+Python을 사용하여 파일 시스템 작업을 수행하는 스크립트를 작성할 때 [Microsoft Store에서 Python을 설치](https://www.microsoft.com/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab)하는 것이 좋습니다. Microsoft Store를 통해 설치하면 기본 Python3 인터프리터를 사용하지만, 자동 업데이트를 제공할 뿐 아니라 현재 사용자의 PATH 설정까지 처리합니다(관리자가 액세스할 필요 없음).
 
 Windows에서 **웹 개발**에 Python을 사용하는 경우 Linux용 Windows 하위 시스템을 사용하는 다른 설치 프로그램을 이용하는 것이 좋습니다. 자세한 설명은 [웹 개발을 위해 Windows에서 Python 사용 시작](./web-frameworks.md) 가이드를 참조하세요. Python을 처음 접하는 경우 [초보자를 위한 Windows에서 Python 사용 시작](./beginners.md) 가이드를 참조하세요. 고급 시나리오의 경우(예: Python의 설치 파일을 액세스/수정하거나, 이진 파일을 복사하거나, Python DLL을 직접 사용해야 하는 시나리오) [python.org](https://www.python.org/downloads/)에서 특정 Python 릴리스를 직접 다운로드하거나 Anaconda, Jython, PyPy, WinPython, IronPython 등과 같은 [대체 구현](https://www.python.org/download/alternatives)을 설치하는 것이 좋습니다. 대체 구현을 선택하는 특별한 이유가 있는 고급 Python 프로그래머인 경우에만 이를 추천합니다.
 
@@ -48,7 +48,7 @@ Windows용 VS Code를 다운로드하고 설치 지침([https://code.visualstudi
 
 ## <a name="install-the-microsoft-python-extension"></a>Microsoft Python 확장 설치
 
-VS Code 지원 기능을 활용하려면 Microsoft Python 확장을 설치해야 합니다. [자세한 내용을 알아보십시오](https://code.visualstudio.com/docs/languages/python).
+VS Code 지원 기능을 활용하려면 Microsoft Python 확장을 설치해야 합니다. [자세한 정보를 알아보세요](https://code.visualstudio.com/docs/languages/python).
 
 1. **Ctrl+Shift+X**를 입력하거나 메뉴에서 **보기** > **확장**으로 이동하여 VS Code 확장 창을 엽니다.
 
@@ -174,7 +174,7 @@ Python 코드를 다른 사람과 협업할 생각이거나 GitHub 같은 오픈
 
 11. Python에서 PowerShell 터미널에 `python3 list-directory-contents.py > food-directory.txt` 명령을 직접 입력하여 해당 파일 시스템 디렉터리 출력을 자체적인 텍스트 파일로 출력합니다.
 
-축하합니다. 방금 만든 디렉터리와 파일을 읽고 Python을 사용하여 디렉터리 구조를 표시한 다음, 자체 텍스트 파일에 출력하는 자동화된 시스템 관리 스크립트가 완성되었습니다.
+축하합니다! 방금 만든 디렉터리와 파일을 읽고 Python을 사용하여 디렉터리 구조를 표시한 다음, 자체 텍스트 파일에 출력하는 자동화된 시스템 관리 스크립트가 완성되었습니다.
 
 ## <a name="example-script-to-modify-all-files-in-a-directory"></a>디렉터리의 모든 파일을 수정하는 예제 스크립트
 

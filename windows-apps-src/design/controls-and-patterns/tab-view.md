@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: acad94c0697f930235af809cc3e2826e4c5befde
-ms.sourcegitcommit: f0588a086cf2499968bf03b10c6bce5f518e90cb
+ms.openlocfilehash: 141a24ca1f828f98231ec35471f7b43229df57e6
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71144963"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684364"
 ---
 # <a name="tabview"></a>TabView
 
@@ -31,7 +31,7 @@ TabView는 UWP 앱에 사용할 수 있는 문서 탭을 제공합니다. 다음
 - 사용자가 문서나 웹 페이지를 탭에서 직접 열 수 있습니다.
 - 사용자가 창 간에 탭을 끌어서 놓을 수 있습니다.
 
-TabView가 앱에 적합하지 않은 경우 [Pivot](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/pivot) 또는 [NavigationView](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/navigationview) 같은 컨트롤을 고려해 보세요.
+TabView가 앱에 적합하지 않은 경우 [Pivot](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/pivot) 또는 [NavigationView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview) 같은 컨트롤을 고려해 보세요.
 
 ## <a name="anatomy"></a>구조
 
@@ -91,7 +91,7 @@ TabView의 기능을 활용하거나 확장하는 여러 가지 방법이 있습
 
 사용자가 제목 표시줄을 통해 창을 끌어 창의 위치를 변경할 수 있으므로, 제목 표시줄을 탭으로 꽉 채우면 안 됩니다. 따라서 제목 표시줄에 탭을 표시할 때 제목 표시줄의 일부를 끌기 가능 영역으로 예약해 두어야 합니다. 끌기 가능 영역을 지정하지 않으면 제목 표시줄 전체가 끌기 가능 영역으로 되며, 이렇게 되면 탭이 입력 이벤트를 받을 수 없습니다. TabView가 창의 제목 표시줄에 표시되는 경우 항상 TabStripFooter를 TabView에 포함하고 끌기 가능 영역으로 표시해야 합니다.
 
-자세한 내용은 [제목 표시줄 사용자 지정](https://docs.microsoft.com/en-us/windows/uwp/design/shell/title-bar)을 참조하세요.
+자세한 내용은 [제목 표시줄 사용자 지정](https://docs.microsoft.com/windows/uwp/design/shell/title-bar)을 참조하세요.
 
 ![제목 표시줄의 탭](images/tabview/tab-extend-to-title.png)
 
@@ -151,7 +151,7 @@ private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sende
 
 | TabWidthMode 값 | 동작                                                                                                                                                    |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Equal              | 새 탭이 추가되면 모든 탭이 매우 작은 최소 너비에 도달할 때까지 가로 방향으로 축소됩니다.                                                       |
+| 같음              | 새 탭이 추가되면 모든 탭이 매우 작은 최소 너비에 도달할 때까지 가로 방향으로 축소됩니다.                                                       |
 | SizeToContent      | 탭은 항상 아이콘과 머리글을 표시하는 데 필요한 최소 크기인 "기본 크기"로 표시됩니다. 탭은 추가되거나 닫힐 때 확장되거나 축소되지 않습니다. |
 
 어떤 값을 선택해도 탭이 너무 많아 탭 스트립에 모두 표시할 수 없는 경우가 있습니다. 이 경우 사용자가 TabStrip을 좌우로 스크롤할 수 있는 스크롤 범퍼가 나타납니다.
@@ -291,8 +291,8 @@ private void NavigateToNumberedTabKeyboardAccelerator_Invoked(KeyboardAccelerato
 }
 ```
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
-- [MasterDetails](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/master-details)
-- [NavigationView](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/navigationview)
-- [피벗](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/pivot)
+- [MasterDetails](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/master-details)
+- [NavigationView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview)
+- [피벗](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/pivot)

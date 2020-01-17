@@ -5,12 +5,12 @@ keywords: 호스트된 웹앱, HWA, REST API, 단일 페이지 앱, SPA
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f5195cc3ed84116797c0b424a637c255b082386
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: b9a6b80034dc8272226c9563960079434dff8e41
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281861"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684778"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>REST API 백 엔드를 사용하는 단일 페이지 웹앱 만들기
 
@@ -32,7 +32,7 @@ ms.locfileid: "72281861"
 
  - [Visual Studio Code](https://code.visualstudio.com/)
 
-Microsoft Azure에서 API 서비스와 기억력 게임 앱을 호스팅하는 최종 단계를 완료하려면 아직 계정이 없는 경우 [체험판 Azure 계정을 만들어야](https://azure.microsoft.com/en-us/free/) 합니다.
+Microsoft Azure에서 API 서비스와 기억력 게임 앱을 호스팅하는 최종 단계를 완료하려면 아직 계정이 없는 경우 [체험판 Azure 계정을 만들어야](https://azure.microsoft.com/free/) 합니다.
 
 Azure 부분을 생략하거나 연기하려면, Azure 호스팅과 Microsoft Store를 위한 앱 패키징을 다루는 1부와 2부의 마지막 섹션을 건너뛰면 됩니다. 빌드할 API 서비스와 웹앱은 사용자 머신에서 로컬로(각각 `http://localhost:8000`과 `http://localhost:3000`) 실행됩니다.
 
@@ -290,7 +290,7 @@ Azure 문서에서는 다음 내용을 설명합니다.
 
  - [Visual Studio Code를 사용한 고급 Node.js 디버깅](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
 
- - [Azure 웹 + 모바일 문서](https://docs.microsoft.com/en-us/azure/#pivot=services&panel=web)
+ - [Azure 웹 + 모바일 문서](https://docs.microsoft.com/azure/#pivot=services&panel=web)
 
  - [Azure DocumentDB 문서](https://azure.microsoft.com/blog/dear-documentdb-customers-welcome-to-azure-cosmos-db/)
 
@@ -616,7 +616,7 @@ memory\public\stylesheets의 style.css 파일을 Start 폴더의 style.css 파�
     이제 사용자가 카드를 클릭하면 카드가 180도 회전됩니다.
 
 ### <a name="6-test-and-play"></a>6. 테스트 및 플레이
-축하합니다. 웹앱을 만들기가 완료되었습니다! 테스트해 보겠습니다. 
+축하합니다! 웹앱을 만들기가 완료되었습니다! 테스트해 보겠습니다. 
 
 1. memory 디렉터리에서 명령 프롬프트를 열고 `npm start` 명령을 입력합니다.
 
@@ -634,8 +634,8 @@ memory\public\stylesheets의 style.css 파일을 Start 폴더의 style.css 파�
 
 Microsoft Store에 게시하는 기본 단계는 다음과 같습니다.
 
- 1. [Windows 개발자](https://developer.microsoft.com/en-us/store/register) 계정을 만듭니다.
- 2. 앱 제출 [검사 목록](https://docs.microsoft.com/en-us/windows/uwp/publish/app-submissions)을 사용합니다.
+ 1. [Windows 개발자](https://developer.microsoft.com/store/register) 계정을 만듭니다.
+ 2. 앱 제출 [검사 목록](https://docs.microsoft.com/windows/uwp/publish/app-submissions)을 사용합니다.
  3. [인증](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process)을 위해 앱을 제출합니다.
 
 더 발전시키기 위한 유용한 몇 가지 리소스는 다음과 같습니다.

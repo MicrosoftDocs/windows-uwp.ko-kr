@@ -5,18 +5,18 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 07/11/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c92de1901c9cc67a30f495e34289bac5d7d2b94
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: f4e9ce391aa485e681fc198e14fe3374edb72aa1
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258792"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684714"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>2018년 7월 Windows 개발자 문서의 새로운 내용
 
 Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 지속적으로 업데이트되고 있습니다. 7월에 제공된 기능 개요, 개발자 지침, 비디오 및 샘플은 다음과 같습니다.
 
-Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 살펴볼 수 있습니다.
 
 ## <a name="features"></a>기능
 
@@ -29,10 +29,10 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 다음 PWA 지침을 확인해 보세요.
 
 * [간단한 웹앱을 PWA로 빌드](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started)
-* [Windows 런타임으로 PWA 향상](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps/windows-features)
+* [Windows 런타임으로 PWA 향상](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
 * [Microsoft Store에 PWA 게시](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/microsoft-store)
 
-### <a name="notepad"></a>Windows 메모장
+### <a name="notepad"></a>메모장
 
 Windows 10 Insider Preview 빌드 17713에서 사용할 수 있는 [메모장이 많은 새로운 기능으로 업데이트되었습니다](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/). 이제 확대/축소, 줄 바꿈 찾기/바꾸기, Unix/Linux(LF) 및 Mac(CR) 줄 끝 지원은 [Windows 참가자](https://insider.windows.com/)에서 사용할 수 있습니다. 
 
@@ -66,7 +66,7 @@ Adobe XD 및 Adobe Illustrator 도구 키트는 새로운 기능으로 업데이
 
 * [Microsoft Edge에서 WebVR 사용](https://docs.microsoft.com/microsoft-edge/webvr/webvr-with-edge): Windows 10 2018년 4월 업데이트에 대한 정보를 포함하도록 업데이트되었습니다.
 
-## <a name="videos"></a>비디오
+## <a name="videos"></a>동영상
 
 ### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>개발자를 위한 시작: Windows 10에서 양식 만들기 및 사용자 지정
 

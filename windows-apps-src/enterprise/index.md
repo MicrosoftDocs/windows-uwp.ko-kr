@@ -2,26 +2,28 @@
 ms.assetid: 4b0c86d3-f05b-450b-bf9c-6ab4d3f07d31
 description: 이 로드맵은 Windows 10 및 UWP(유니버설 Windows 플랫폼) 앱의 주요 엔터프라이즈 기능에 대해 간략하게 설명합니다.
 title: Enterprise
-ms.date: 08/30/2018
+ms.date: 01/16/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e005d388e15efe10bede88e77c3ca021b0acad6b
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 0a95529f40ef5bb1cbf112c91c385e6621620a01
+ms.sourcegitcommit: 7a8aea567b26283c71420e0d305d78f675e1fba7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684940"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125688"
 ---
 # <a name="enterprise"></a>Enterprise
 
 이 문서에서는 Windows 10 앱용 UWP(유니버설 Windows 플랫폼)에서 제공하는 주요 엔터프라이즈 기능에 대해 간략하게 설명합니다. 이러한 기능 중 일부를 자세히 보여 주는 비디오는 [UWP 및 Visual Studio를 사용하여 LOB 애플리케이션을 빠르게 구성](https://channel9.msdn.com/Events/Build/2018/BRK3502)을 참조하세요.
 
+## <a name="feature-highlights"></a>기능 하이라이트
+
 <a id="template-studio" />
 
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
-Windows Template Studio는 마법사 기반 환경을 사용하여 새 UWP(유니버설 Windows 플랫폼) 앱을 신속하게 만들 수 있는 Visual Studio 2017 및 Visual Studio 2019 확장입니다. 그 결과로 얻게 되는 UWP 프로젝트는 검증된 패턴과 모범 사례를 구현하면서도 최신 Windows 10 기능을 통합하는 잘 구성된 읽기 가능한 코드입니다.
+Windows Template Studio는 마법사 기반 환경을 사용하여 새 UWP(유니버설 Windows 플랫폼) 앱의 만들기를 가속화하는 Visual Studio 2019 확장입니다. 그 결과로 얻게 되는 UWP 프로젝트는 검증된 패턴과 모범 사례를 구현하면서도 최신 Windows 10 기능을 통합하는 잘 구성된 읽기 가능한 코드입니다.
 
 ![Windows Template Studio](images/windows-template-studio.png)
 
@@ -58,9 +60,9 @@ Windows UI Library는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 
 
 <a id="xaml-islands" />
 
-### <a name="uwp-controls-in-desktop-applications"></a>데스크톱 애플리케이션의 UWP 컨트롤
+### <a name="uwp-controls-in-desktop-applications-xaml-islands"></a>데스크톱 애플리케이션의 UWP 컨트롤(XAML Islands)
 
-이제 Windows 10을 사용 하면 WPF, Windows Forms 및 C++ Win32 데스크톱 애플리케이션에서 UWP 컨트롤을 사용할 수 있습니다. 즉, Windows Ink 및 Fluent 디자인 시스템을 지원하는 컨트롤과 같은 UWP 컨트롤을 통해서만 사용할 수 있는 최신 Windows 10 UI 기능을 통해 기존 데스크톱 애플리케이션의 모양, 느낌 및 기능을 향상시킬 수 있습니다. 이 기능을 XAML 제도라고 합니다.
+이제 Windows 10을 사용하면 *XAML Islands*라는 기능을 통해 WPF, Windows Forms 및 C++ Win32 데스크톱 애플리케이션에서 UWP 컨트롤을 사용할 수 있습니다. 즉, Windows Ink 및 Fluent 디자인 시스템을 지원하는 컨트롤과 같은 UWP 컨트롤을 통해서만 사용할 수 있는 최신 Windows 10 UI 기능을 통해 기존 데스크톱 애플리케이션의 모양, 느낌 및 기능을 향상시킬 수 있습니다. 이 기능을 XAML 제도라고 합니다.
 
 [데스크톱 애플리케이션에서 UWP 컨트롤 호스팅](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)을 참조하세요.
 
@@ -86,9 +88,7 @@ Windows UI Library는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 
 
 ### <a name="msix-deployment"></a>MSIX 배포
 
-MSIX는 모든 Windows 앱에 최신 패키징 환경을 제공하는 Windows 앱 패키징 형식입니다. MSIX 패키지 형식은 Win32, WPF 및 Windows Forms 앱에 새로운 최신 패키지 및 배포 기능을 사용할 수 있도록 하며, 기존 앱 패키지와 설치 파일의 기능도 유지합니다.
-
-MSIX는 .msi, .appx, App-V 및 ClickOnce 설치 기술의 조합에 따라 안전하고, 안정적이며, 신뢰할 수 있도록 빌드된 패키지 형식입니다.
+MSIX는 MSI, AppX, App-V 및 ClickOnce의 최고의 기능을 결합하여 모든 Windows 앱에 현대적이고 안정적인 패키징 환경을 제공하는 Windows 앱 패키지 형식입니다. MSIX 패키지 형식은 Win32, WPF 및 Windows Forms 앱에 최신 패키지 및 배포 기능을 사용할 수 있도록 하며, 기존 앱 패키지와 설치 파일의 기능도 유지합니다. 
 
 ![MSIX 아이콘](images/MSIX-App-Package.ico)
 
@@ -151,11 +151,12 @@ LOB(기간 업무) 앱은 다양한 다른 시스템에 데이터를 저장하�
 
 ## <a name="deployment"></a>배포
 
-엔터프라이즈 사용자에게 앱을 배포하는 옵션이 있습니다. 비즈니스용 Microsoft Store와 기존 모바일 디바이스 관리를 사용하거나 앱을 디바이스에 사이드로드할 수 있습니다. Microsoft Store에 게시하여 일반 사람들에게 앱을 제공할 수도 있습니다.
+MSIX 패키지를 사용하여 조직의 사용자에게 앱을 배포할 수 있는 옵션이 있습니다. 앱 설치 관리자 기반 배포를 구성하거나, Microsoft Endpoint Configuration Manager 및 Microsoft Intune과 같은 디바이스 관리 도구를 사용하거나, 비즈니스용 Microsoft Store에 게시하거나, 앱을 디바이스에 사이드로드할 수 있습니다. Microsoft Store에 게시하여 일반 사람들에게 앱을 제공할 수도 있습니다.
 
 | 항목 | 설명 |
 |-------|-------------|
-| [엔터프라이즈에 LOB 앱 배포](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) | 일반 사용자에게 광범위하게 LOB(기간 업무) 앱을 제공하지 않고도 비즈니스용 Microsoft Store를 통해 대량 구매할 수 있도록 해당 앱을 엔터프라이즈에 직접 게시할 수 있습니다. |
+| [MSIX 설명서](https://docs.microsoft.com/windows/msix/) | MSIX는 MSI, AppX, App-V 및 ClickOnce의 최고의 기능을 결합하여 현대적이고 안정적인 패키징 환경을 제공하는 Windows 앱 패키지 형식입니다. |
+| [엔터프라이즈에 LOB 앱 배포](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) | 앱 설치 관리자 기반 배포, Microsoft Endpoint Configuration Manager 및 Microsoft Intune, 비즈니스용 Microsoft Store에 게시를 비롯하여 앱을 공개적으로 사용할 수 없도록 하고 LOB(기간 업무) 앱을 배포하기 위한 옵션에 대해 알아봅니다. |
 | [앱 사이드로드](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) | 앱을 테스트용으로 로드할 때 서명된 앱 패키지를 디바이스에 배포합니다. 이러한 앱의 서명, 호스팅 및 배포를 유지 관리합니다. Windows 10에서는 앱을 테스트용으로 로드하는 프로세스가 간소화되었습니다.             |
 | [Microsoft Store에 앱 게시](https://developer.microsoft.com/store/publish-apps) | 통합 Microsoft Store를 사용하면 모든 Windows 디바이스용 앱을 모두 게시하고 관리할 수 있습니다. 시장별 가격 책정, 배포 및 가시성 제어, 기타 옵션을 사용하여 앱의 가용성을 사용자 지정하세요. |
 

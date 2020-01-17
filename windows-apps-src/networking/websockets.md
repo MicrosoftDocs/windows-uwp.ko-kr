@@ -6,17 +6,17 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: Windows 10, uwp, 네트워킹, websocket, messagewebsocket, streamwebsocket
 ms.localizationpriority: medium
-ms.openlocfilehash: eb083b0d8ed0aedfc6e14be9bed9647daa2bb950
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 221ab5e0647fe95e8d715fc320ba2b9c1bee2dfe
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260166"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684967"
 ---
 # <a name="websockets"></a>WebSocket
 WebSocket은 HTTP(S)를 사용하고 UTF-8 및 이진 메시지를 모두 지원하는 웹을 통해 클라이언트와 서버 간의 빠르고 안전한 양방향 통신을 위한 메커니즘을 제공합니다.
 
-[WebSocket 프로토콜](https://tools.ietf.org/html/rfc6455)에서는 데이터가 전이중 단일 소켓 연결을 통해 즉시 전송되므로 두 끝점에서 실시간으로 메시지를 보내고 받을 수 있습니다. WebSocket은 멀티 플레이어 게임(실시간 및 턴 기반 모두), 즉각적인 소셜 네트워크 알림, 주식 또는 날씨 정보의 최신 표시, 보안 및 고속 데이터 전송이 필요한 기타 앱에 적합합니다.
+[WebSocket 프로토콜](https://tools.ietf.org/html/rfc6455)에서는 데이터가 전이중 단일 소켓 연결을 통해 즉시 전송되므로 두 엔드포인트에서 실시간으로 메시지를 보내고 받을 수 있습니다. WebSocket은 멀티 플레이어 게임(실시간 및 턴 기반 모두), 즉각적인 소셜 네트워크 알림, 주식 또는 날씨 정보의 최신 표시, 보안 및 고속 데이터 전송이 필요한 기타 앱에 적합합니다.
 
 WebSocket 연결을 설정하기 위해 특정 HTTP 기반 핸드셰이크가 클라이언트와 서버 간에 교환됩니다. 성공하면 애플리케이션 계층 프로토콜이 이전에 설정된 TCP 연결을 사용하여 HTTP에서 WebSocket으로 "업그레이드"됩니다. 이렇게 되면 HTTP는 완전히 제외됩니다. 데이터는 WebSocket 연결을 종료할 때까지 양쪽 엔드포인트에서 WebSocket 프로토콜을 사용하여 보내거나 받을 수 있습니다.
 
@@ -28,7 +28,7 @@ UWP(유니버설 Windows 플랫폼)는 WebSocket의 클라이언트 및 서버 �
 | - | - |
 | 전체 WebSocket 메시지는 단일 작업으로 읽거나 씁니다. | 메시지 섹션은 각 읽기 작업으로 읽을 수 있습니다. |
 | 메시지가 너무 크지 않은 경우에 적합합니다. | 대용량 파일(예: 사진 또는 동영상)을 전송할 때 적합합니다. |
-| UTF-8 메시지와 바이너리 메시지를 모두 지원합니다. | 바이너리 메시지만 지원합니다. |
+| UTF-8 메시지와 이진 메시지를 모두 지원합니다. | 이진 메시지만 지원합니다. |
 | [UDP 또는 데이터그램 소켓](sockets.md#build-a-basic-udp-socket-client-and-server)과 유사하지만(잦은 작은 메시지용인 면에서) TCP의 안정성, 패킷 순서 보장 및 정체 제어를 지원합니다. | [TCP 또는 스트림 소켓](sockets.md#build-a-basic-tcp-socket-client-and-server)과 유사합니다. |
 
 ## <a name="secure-your-connection-with-tlsssl"></a>TLS/SSL로 연결 보안
@@ -298,7 +298,7 @@ private:
 데이터를 받을 때 **MessageReceived**가 발생합니다. 데이터는 [**MessageWebSocketMessageReceivedEventArgs**](/uwp/api/windows.networking.sockets.messagewebsocketmessagereceivedeventargs)를 통해 액세스할 수 있습니다. 클라이언트 또는 서버가 소켓을 종료할 때 **Closed**가 발생합니다.
  
 ### <a name="send-data-on-a-messagewebsocket"></a>MessageWebSocket에서 데이터 보내기
-연결이 설정되면 서버에 데이터를 보낼 수 있습니다. 데이터를 쓰기 위해 [**MessageWebSocket.OutputStream**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.MessageWebSocket.OutputStream) 속성과 [**DataWriter**](/uwp/api/windows.storage.streams.datawriter)를 사용하여 이 작업을 수행할 수 있습니다. 
+연결이 설정되면 서버에 데이터를 보낼 수 있습니다. 데이터를 쓰기 위해 [**MessageWebSocket.OutputStream**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket.OutputStream) 속성과 [**DataWriter**](/uwp/api/windows.storage.streams.datawriter)를 사용하여 이 작업을 수행할 수 있습니다. 
 
 **참고** **DataWriter**는 출력 스트림의 소유권을 갖습니다. **DataWriter**가 범위 이외에 있을 때 출력 스트림이 연결되어 있으면 **DataWriter**는 출력 스트림의 할당을 취소합니다. 그 이후 출력 스트림을 사용하려는 시도가 HRESULT 값 0x80000013과 함께 실패합니다. 하지만 [**DataWriter.DetachStream**](/uwp/api/windows.storage.streams.datawriter.DetachStream)을 호출하여 **DataWriter**에서 출력 스트림을 분리하고 스트림의 소유권을 **MessageWebSocket**으로 반환할 수 있습니다.
 
@@ -564,12 +564,12 @@ private:
 연결을 설정하고 **StreamWebSocket**을 사용하여 데이터를 보내기 전에 [**StreamWebSocket.Closed**](/uwp/api/windows.networking.sockets.streamwebsocket.Closed) 이벤트를 구독해야 합니다. 클라이언트 또는 서버가 소켓을 종료할 때 **Closed**가 발생합니다.
  
 ### <a name="send-data-on-a-streamwebsocket"></a>StreamWebSocket에서 데이터 보내기
-연결이 설정되면 서버에 데이터를 보낼 수 있습니다. 데이터를 쓰기 위해 [**StreamWebSocket.OutputStream**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.StreamWebSocket.OutputStream) 속성과 [**DataWriter**](/uwp/api/windows.storage.streams.datawriter)를 사용하여 이 작업을 수행할 수 있습니다.
+연결이 설정되면 서버에 데이터를 보낼 수 있습니다. 데이터를 쓰기 위해 [**StreamWebSocket.OutputStream**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket.OutputStream) 속성과 [**DataWriter**](/uwp/api/windows.storage.streams.datawriter)를 사용하여 이 작업을 수행할 수 있습니다.
 
 **참고** 동일한 소켓에 더 많은 데이터를 쓰려는 경우 [**DataWriter.DetachStream**](/uwp/api/windows.storage.streams.datawriter.DetachStream)을 호출하여 **DataWriter**가 범위를 벗어나기 전에 출력 스트림을 **DataWriter**에서 분리해야 합니다. 이 작업은 스트림의 소유권을 **MessageWebSocket**으로 반환합니다.
 
 ### <a name="receive-data-on-a-streamwebsocket"></a>StreamWebSocket에서 데이터 받기
-데이터를 읽기 위해 [**StreamWebSocket.InputStream**](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.StreamWebSocket.InputStream) 속성과 [**DataReader**](/uwp/api/windows.storage.streams.datareader)를 사용할 수 있습니다.
+데이터를 읽기 위해 [**StreamWebSocket.InputStream**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket.InputStream) 속성과 [**DataReader**](/uwp/api/windows.storage.streams.datareader)를 사용할 수 있습니다.
 
 ## <a name="advanced-options-for-messagewebsocket-and-streamwebsocket"></a>MessageWebSocket 및 StreamWebSocket용 고급 옵션
 연결을 설정하기 전에 [**MessageWebSocketControl**](/uwp/api/windows.networking.sockets.messagewebsocketcontrol) 또는 [**StreamWebSocketControl**](/uwp/api/windows.networking.sockets.streamwebsocketcontrol)에서 속성을 설정하여 소켓에서 고급 옵션을 설정할 수 있습니다. 적절한 그 [**MessageWebSocket.Control**](/uwp/api/windows.networking.sockets.messagewebsocket.control) 속성 또는 그 [**StreamWebSocket.Control**](/uwp/api/windows.networking.sockets.streamwebsocket.control) 속성을 통해 소켓 개체 자체에서 이러한 클래스의 인스턴스에 액세스할 수 있습니다.
@@ -615,7 +615,7 @@ auto connectTask = Concurrency::create_task(streamWebSocket->ConnectAsync(ref ne
 이 정보 클래스의 속성은 읽기 전용이지만 이를 사용하여 웹 소켓 개체의 수명 동안 언제든지 정보를 검색할 수 있습니다.
 
 ## <a name="handling-exceptions"></a>예외 처리
-[  **MessageWebSocket**](/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 또는 [**StreamWebSocket**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket) 작업에서 발생한 오류는 **HRESULT** 값으로 반환됩니다. 이 **HRESULT** 값을 [**WebSocketError.GetStatus**](/uwp/api/windows.networking.sockets.websocketerror.getstatus) 메서드로 전달하여 [**WebErrorStatus**](/uwp/api/Windows.Web.WebErrorStatus) 열거형 값으로 변환할 수 있습니다.
+[**MessageWebSocket**](/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 또는 [**StreamWebSocket**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket) 작업에서 발생한 오류는 **HRESULT** 값으로 반환됩니다. 이 **HRESULT** 값을 [**WebSocketError.GetStatus**](/uwp/api/windows.networking.sockets.websocketerror.getstatus) 메서드로 전달하여 [**WebErrorStatus**](/uwp/api/Windows.Web.WebErrorStatus) 열거형 값으로 변환할 수 있습니다.
 
 대부분의 **WebErrorStatus** 열거형 값은 기본 HTTP 클라이언트 작업에서 반환한 오류에 해당합니다. 앱은 특정 **WebErrorStatus** 열거형 값을 켜 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
@@ -814,7 +814,7 @@ protected:
 * [MessageWebSocket.Control](/uwp/api/windows.networking.sockets.messagewebsocket.control)
 * [MessageWebSocket.Information](/uwp/api/Windows.Networking.Sockets.MessageWebSocket.Information)
 * [MessageWebSocket.MessageReceived](/uwp/api/Windows.Networking.Sockets.MessageWebSocket.MessageReceived)
-* [MessageWebSocket.OutputStream](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.MessageWebSocket.OutputStream)
+* [MessageWebSocket.OutputStream](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket.OutputStream)
 * [MessageWebSocketControl](/uwp/api/Windows.Networking.Sockets.MessageWebSocketControl)
 * [MessageWebSocketControl.MessageType](/uwp/api/Windows.Networking.Sockets.MessageWebSocketControl.MessageType)
 * [MessageWebSocketInformation](/uwp/api/Windows.Networking.Sockets.MessageWebSocketInformation)
@@ -825,8 +825,8 @@ protected:
 * [StreamSocket.ConnectAsync](/uwp/api/windows.networking.sockets.streamsocket.connectasync)
 * [StreamWebSocket.Control](/uwp/api/windows.networking.sockets.streamwebsocket.control)
 * [StreamWebSocket.Information](/uwp/api/windows.networking.sockets.streamwebsocket.Information)
-* [StreamWebSocket.InputStream](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.StreamWebSocket.InputStream)
-* [StreamWebSocket.OutputStream](https://docs.microsoft.com/en-us/uwp/api/Windows.Networking.Sockets.StreamWebSocket.OutputStream)
+* [StreamWebSocket.InputStream](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket.InputStream)
+* [StreamWebSocket.OutputStream](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket.OutputStream)
 * [StreamWebSocketControl](/uwp/api/Windows.Networking.Sockets.StreamWebSocketControl)
 * [StreamWebSocketInformation](/uwp/api/Windows.Networking.Sockets.StreamWebSocketInformation)
 * [WebErrorStatus](/uwp/api/Windows.Web.WebErrorStatus) 

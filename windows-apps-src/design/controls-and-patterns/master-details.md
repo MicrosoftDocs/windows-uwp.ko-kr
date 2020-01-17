@@ -1,6 +1,6 @@
 ---
-Description: 마스터/세부 정보 패턴은 현재 선택한 항목에 대한 마스터 목록과 세부 정보를 표시합니다. 이 패턴은 메일 및 연락처 목록/주소록에 자주 사용됩니다.
-title: 마스터/세부
+Description: 마스터/세부 정보 패턴은 현재 선택한 항목에 대한 마스터 목록과 세부 정보를 표시합니다. 이 패턴은 이메일 및 연락처 목록/주소록에 자주 사용됩니다.
+title: 마스터 세부 정보
 ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
 template: detail.hbs
@@ -8,20 +8,20 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b9d8d8a381c0fce186b39853f57d35c1dce4b8f8
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 0b7c21e5e6305c7b2941b46db562c93da0fdfe39
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63773357"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684381"
 ---
 # <a name="masterdetails-pattern"></a>마스터/세부 정보 패턴
 
  
 
-마스터/세부 정보 패턴에는 마스터 창(일반적으로 [목록 보기](lists.md)와 함께) 및 콘텐츠의 세부 정보 창이 있습니다. 마스터 목록의 항목을 선택하면 세부 정보 창이 업데이트됩니다. 이 패턴은 메일 및 주소록에 자주 사용됩니다.
+마스터/세부 정보 패턴에는 마스터 창(일반적으로 [목록 보기](lists.md)와 함께) 및 콘텐츠의 세부 정보 창이 있습니다. 마스터 목록의 항목을 선택하면 세부 정보 창이 업데이트됩니다. 이 패턴은 이메일 및 주소록에 자주 사용됩니다.
 
-> **중요 API**: [ListView 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView), [SplitView 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [SplitView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![마스터/세부 정보 패턴의 예](images/HIGSecOne_MasterDetail.png)
 
@@ -29,9 +29,9 @@ ms.locfileid: "63773357"
 
 다음을 하려는 경우에 마스터/세부 정보 패턴이 제대로 작동합니다.
 
--   메일 앱, 주소록 또는 목록 세부 정보 레이아웃을 기반으로 하는 앱을 빌드합니다.
--   큰 콘텐츠 컬렉션을 찾아 우선 순위를 지정합니다.
--   컨텍스트 간 앞과 뒤에서 작업하는 동안 목록에 항목을 빠르게 추가하고 목록에서 항목을 제거하도록 허용합니다.
+-   이메일 앱, 주소록 또는 목록 세부 정보 레이아웃을 기반으로 하는 앱을 빌드합니다.
+-   큰 콘텐츠 컬렉션을 찾아 우선순위를 지정합니다.
+-   컨텍스트 간 앞뒤로 작업하는 동안 목록에서 항목을 빠르게 추가하고 제거할 수 있습니다.
 
 ## <a name="choose-the-right-style"></a>올바른 스타일 선택
 
@@ -40,7 +40,7 @@ ms.locfileid: "63773357"
 | 사용 가능한 창 너비 | 권장 스타일 |
 |------------------------|-------------------|
 | 320 epx-640 epx        | 누적           |
-| 641 epx 이상       | 가로 정렬      |
+| 641 epx 이상       | 함께 실행      |
 
  
 ## <a name="stacked-style"></a>누적 스타일
@@ -65,11 +65,11 @@ ms.locfileid: "63773357"
 
 ## <a name="side-by-side-style"></a>가로 정렬 스타일
 
-가로 정렬 스타일에서는 마스터 창과 세부 정보 창이 동시에 표시될 수 있습니다.
+가로 정렬 스타일에서는 마스터 창과 세부 정보 창이 동시에 표시됩니다.
 
 ![마스터/세부 정보 패턴](images/patterns-masterdetail-400x227.png)
 
-마스터 창의 목록에는 현재 선택한 항목을 나타내는 선택 시각 효과가 있습니다. 마스터 목록에서 새 항목을 선택하면 세부 정보 창이 업데이트됩니다.
+마스터 창의 목록에는 현재 선택한 항목을 나타내는 선택 시각적 효과가 있습니다. 마스터 목록에서 새 항목을 선택하면 세부 정보 창이 업데이트됩니다.
 
 ### <a name="create-a-side-by-side-masterdetails-pattern"></a>가로 정렬 마스터/세부 정보 패턴 만들기
 
@@ -88,9 +88,9 @@ ms.locfileid: "63773357"
 ![적응형 마스터 세부 정보 레이아웃](images/patterns_masterdetail.png)
 
 ### <a name="create-an-adaptive-masterdetails-pattern"></a>적응형 마스터/세부 정보 패턴 만들기
-적응형 레이아웃을 만들려면 UI에서 서로 다른 [**VisualStates**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.visualstate)를 정의하고 [**AdaptiveTriggers**](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.AdaptiveTrigger)를 통해 서로 다른 상태에 대한 중단점을 선언합니다.
+적응형 레이아웃을 만들려면 UI에서 서로 다른 [**VisualStates**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstate)를 정의하고 [**AdaptiveTriggers**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.AdaptiveTrigger)를 통해 서로 다른 상태에 대한 중단점을 선언합니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 다음 샘플은 적응형 레이아웃을 통해 마스터/세부 정보 패턴을 구현하고 정적, 데이터베이스 및 온라인 리소스에 대한 데이터 바인딩을 보여줍니다. 
 - [마스터/세부 정보 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail) 
@@ -99,10 +99,10 @@ ms.locfileid: "63773357"
 - [고객 주문 데이터베이스 샘플](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
 - [RSS 수집기 샘플](https://github.com/Microsoft/Windows-appsample-rssreader)
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [목록](lists.md)
 - [검색](search.md)
 - [앱 및 명령 모음](app-bars.md)
-- [ListView 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.ListView)
-- [SplitView 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.splitview)
+- [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
+- [SplitView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)

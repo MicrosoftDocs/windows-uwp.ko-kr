@@ -6,12 +6,12 @@ ms.date: 06/03/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 49e126ea0212499361fea58b58237ee13fb76ca2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 42913aae69e5d049530d649c031351f4f3ab9ace
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259175"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684970"
 ---
 # <a name="sockets"></a>소켓
 소켓은 많은 네트워킹 프로토콜이 구현되는 하위 수준 데이터 전송 기술입니다. UWP는 연결이 오래되었거나 설정된 연결이 필요하지 않은지 여부에 관계없이 클라이언트-서버 또는 피어 투 피어 애플리케이션에 대한 TCP 및 UDP 소켓 클래스를 제공합니다.
@@ -1277,7 +1277,7 @@ private:
 -   비동기 쓰기가 완료될 때까지 작성 중인 **IBuffer** 인스턴스의 내용을 수정할 수 없습니다.
 -   **FlushAsync** 패턴은 **StreamSocket.OutputStream** 및 **DatagramSocket.OutputStream**에서만 작동합니다.
 -   **FlushAsync** 패턴은 Windows 10 이상에서만 작동합니다.
--   그 밖의 경우에는 **FlushAsync** 패턴 대신 [**Task.WaitAll**](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___)을 사용합니다.
+-   그 밖의 경우에는 **FlushAsync** 패턴 대신 [**Task.WaitAll**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___)을 사용합니다.
 
 ## <a name="port-sharing-for-datagramsocket"></a>DatagramSocket에 대한 포트 공유
 [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket)을 구성하여 동일한 주소/포트에 바인딩된 다른 Win32 또는 UWP 멀티캐스트 소켓과 함께 사용할 수 있습니다. 소켓을 바인딩 또는 연결하기 전에 [**DatagramSocketControl.MulticastOnly**](/uwp/api/Windows.Networking.Sockets.DatagramSocketControl.MulticastOnly)`true`로 설정하여 이 작업을 수행할 수 있습니다. 이 [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.datagramsocket.Control) 속성을 통해 **DatagramSocket** 개체 자체에서 **DatagramSocketControl**의 인스턴스에 액세스할 수 있습니다.

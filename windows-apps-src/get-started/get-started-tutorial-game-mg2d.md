@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: 01ddc46c80c0ed9a9999ec7c8e67ab9034803a3d
-ms.sourcegitcommit: deb1cdecf34feaa92b0342adc61a5d08f3f10687
+ms.openlocfilehash: 4300bdc0224a18874a7ff9153195f81f8bb8d101
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68332831"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685057"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>MonoGame 2D로 UWP 게임 만들기
 
@@ -25,9 +25,9 @@ ms.locfileid: "68332831"
 MonoGame은 경량의 게임 개발 프레임워크입니다. 이 자습서에서는 콘텐츠를 로드하는 방법, 스프라이트를 그리고 애니메이션하는 방법, 사용자 입력을 처리하는 방법을 포함하여 MonoGame으로 게임을 개발하기 위한 기본 사항을 안내합니다. 충돌 감지나 고 DPI 화면의 크기 조정 같은 일부 고급 개념도 다룹니다. 이 자습서는 30-60분 정도 걸립니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
-+   Windows 10 및 Microsoft Visual Studio 2019.  [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](https://docs.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
++   Windows 10 및 Microsoft Visual Studio 2019.  [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](https://docs.microsoft.com/windows/uwp/get-started/get-set-up).
 + .NET 데스크톱 개발 프레임워크. Visual Studio가 아직 설치되지 않은 경우, Visual Studio 설치 프로그램을 다시 실행하여 Visual Studio 2019 설치를 수정할 수 있습니다.
-+   C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. [C#을 시작하는 방법을 알아보려면 여기를 클릭하세요](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
++   C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. [C#을 시작하는 방법을 알아보려면 여기를 클릭하세요](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 +   클래스, 메서드, 변수 등 기본적인 컴퓨터 공학 개념에 대한 지식.
 
 ## <a name="why-monogame"></a>MonoGame을 사용하는 이유
@@ -692,10 +692,10 @@ if (gameOver)
 ## <a name="publish-to-the-microsoft-store"></a>Microsoft Store에 게시
 이 게임은 UWP 앱입니다. 따라서 이 프로젝트를 Microsoft Store에 게시할 수 있습니다. 몇 가지 단계를 처리해야 합니다.
 
-Windows 개발자로 [등록](https://developer.microsoft.com/en-us/store/register)해야 합니다.
+Windows 개발자로 [등록](https://developer.microsoft.com/store/register)해야 합니다.
 
-[앱 제출 검사 목록](https://docs.microsoft.com/en-us/windows/uwp/publish/app-submissions)을 사용해야 합니다.
+[앱 제출 검사 목록](https://docs.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
 
-앱을 제출하여 [인증](https://docs.microsoft.com/en-us/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
+앱을 제출하여 [인증](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
 
 자세한 내용은 [UWP 앱 게시](https://docs.microsoft.com/windows/uwp/publish/)를 참조하세요.

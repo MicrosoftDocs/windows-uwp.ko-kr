@@ -6,16 +6,16 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1c2e6ee84b143ea13aa3e804f288e4dd9e0becec
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d26d88377aec4306ad0711724760ec13e6568d85
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258857"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684762"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>개발자용 Windows 10 빌드 17763의 새로운 기능
 
-Visual Studio 2019 및 업데이트된 SDK와 함께 Windows 10 빌드 17763(2018년 10월 업데이트 또는 버전 1809라고도 함)은 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Visual Studio 2019 및 업데이트된 SDK와 함께 Windows 10 빌드 17763(2018년 10월 업데이트 또는 버전 1809라고도 함)은 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 살펴볼 수 있습니다.
 
 이는 Windows 개발자가 관심을 갖는 이 릴리스의 새로운 기능, 향상된 기능 및 지침의 모음입니다. Windows SDK에 추가된 새로운 네임스페이스의 전체 목록은 [Windows 10 빌드 17763 API 변경 내용](windows-10-build-17763-api-diff.md)을 참조하세요. Windows 10의 중요한 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://developer.microsoft.com/windows/windows-10-for-developers)을 참조하세요. 그리고 이전에 있었던 그리고 앞으로 있을 Windows 플랫폼 기능 추가에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
 
@@ -33,7 +33,7 @@ Fluent 디자인의 움직임 | Fluent 디자인 시스템에서 움직임을 �
 페이지 전환 | [페이지 전환](../design/motion/page-transitions.md)은 사용자를 앱의 페이지 간에 이동시킵니다. 사용자가 탐색 계층 구조상의 위치를 파악하고 페이지 간의 관계에 대한 피드백을 제공하는 데 도움이 됩니다.
 텍스트 크기 조정 | 새 [텍스트 크기 조정 지침](../design/input/text-scaling.md)에서는 사용자가 OS와 개별 애플리케이션 모두에서 상대 글꼴 크기를 변경할 수 있는 기능을 제공하는 새 텍스트 크기 조정 동작을 수용하도록 애플리케이션을 업데이트하는 방법을 설명합니다. 일반적으로 화면 영역 내의 모든 항목을 확대하고 자체의 유용성 문제를 제기하는 돋보기 앱을 사용하거나, 디스플레이 해상도를 변경하거나, 디스플레이 및 일반 시청 거리에 따라 모든 항목의 크기를 조정하는 DPI 배율을 사용하는 대신, 사용자가 설정에 빠르게 액세스하여 텍스트 크기만 100%(기본 크기)에서 최대 225%까지 조정할 수 있습니다.
 도구 키트 | [Adobe XD 및 Adobe Illustrator 도구 키트](../design/downloads/index.md)는 새로운 기능으로 업데이트되었습니다. 이러한 디자인 도구 키트는 UWP 앱 디자인을 위한 레이아웃 템플릿을 제공합니다.
-UI 명령 | [UWP 명령 인프라](../design/basics/commanding-basics.md)에 대한 업데이트에는 명령 개체(행동, 레이블, 아이콘, 키보드 액셀러레이터 키, 액세스 키 및 설명)와 일반적인 표준 명령 세트(잘라내기, 복사, 붙여넣기, 종료 등)의 더 효율적인 캡슐화가 포함되어 있으므로 이러한 속성을 수동으로 설정할 필요가 없습니다. </br> 새 [XamlUICommand](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.xamluicommand) 클래스는 호출 시 작업을 수행하는 대화형 UI 요소의 명령 동작을 정의하는 기본 클래스를 제공합니다. 이 클래스는 미리 정의된 속성을 사용하여 표준 플랫폼 명령 세트를 공개하는 [StandardUICommand](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.input.standarduicommand)의 부모 클래스입니다. 
+UI 명령 | [UWP 명령 인프라](../design/basics/commanding-basics.md)에 대한 업데이트에는 명령 개체(행동, 레이블, 아이콘, 키보드 액셀러레이터 키, 액세스 키 및 설명)와 일반적인 표준 명령 세트(잘라내기, 복사, 붙여넣기, 종료 등)의 더 효율적인 캡슐화가 포함되어 있으므로 이러한 속성을 수동으로 설정할 필요가 없습니다. </br> 새 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 클래스는 호출 시 작업을 수행하는 대화형 UI 요소의 명령 동작을 정의하는 기본 클래스를 제공합니다. 이 클래스는 미리 정의된 속성을 사용하여 표준 플랫폼 명령 세트를 공개하는 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand)의 부모 클래스입니다. 
 Windows UI Library | [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/)는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. 또한 이러한 패키지는 이전 버전의 Windows 10과도 호환되므로 사용자에게 최신 OS 버전이 없는 경우에도 앱이 작동합니다. </br> Windows UI 라이브러리의 새로운 기능에 대한 자세한 내용은 [NuGet 패키지에 포함된 API 네임스페이스 목록](https://docs.microsoft.com/uwp/api/overview/winui/)을 참조하세요.
 
 ## <a name="develop-windows-apps"></a>Windows 앱 개발
@@ -48,7 +48,7 @@ DXGI(DirectX 그래픽 인프라) | 누락된 DXGI API에 대한 새 설명서�
 시작 | [시작](../get-started/index.md) 콘텐츠가 새 항목으로 활성화되어 Windows 10을 처음 사용하는 개발자가 다음과 같은 일반적인 작업을 수행하는 방법에 대한 정보와 지침을 제공합니다. </br> * [양식 작성](../get-started/construct-form-learning-track.md) </br> * [목록에 고객 표시](../get-started/display-customers-in-list-learning-track.md) </br> * [설정 저장 및 로드](../get-started/settings-learning-track.md) </br> * [파일 작업](../get-started/fileio-learning-track.md)
 맵 스타일시트 편집기 | 새 [맵 스타일시트 편집기](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft?rtc=1#activetab=pivot:overviewtab) 애플리케이션을 사용하여 애플리케이션에 추가하는 맵의 모양을 대화형으로 사용자 지정합니다.
 Microsoft Learn | 새 [Microsoft Learn 사이트](https://www.microsoft.com/learning/default.aspx)는 Microsoft 개발자에게 새 실습 학습 및 교육 기회를 제공합니다. Microsoft Learn은 현재 Microsoft 365, Microsoft Azure, Office 365 및 Windows Server에 대한 학습 및 인증을 제공합니다.
-Windows 메모장 | [메모장이 업데이트](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/)되어 확대/축소, 줄 바꿈 찾기/바꾸기, Unix/Linux(LF) 및 Mac(CR) 줄 끝 지원이 추가되었습니다.
+메모장 | [메모장이 업데이트](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/)되어 확대/축소, 줄 바꿈 찾기/바꾸기, Unix/Linux(LF) 및 Mac(CR) 줄 끝 지원이 추가되었습니다.
 프로젝트 로마 | [프로젝트 로마](https://docs.microsoft.com/windows/project-rome/)는 이제 지원되는 플랫폼과 SDK에서 일관된 프로그래밍 환경을 제공합니다. </br>  새 [Microsoft Graph 알림](https://developer.microsoft.com/graph/docs/concepts/notifications-concept-overview)에서 프로젝트 로마를 사용하여 앱을 위한 사용자 중심의 플랫폼 간 알림 플랫폼을 제공합니다.
 화면 캡처 | 새 [URI 체계](../launch-resume/launch-screen-snipping.md)를 사용하면 앱에서 프로그래밍 방식으로 새 캡처를 열거나 주석에 대한 특정 이미지를 사용하여 캡처 및 스케치 앱을 시작할 수 있습니다.
 데스크톱 애플리케이션의 UWP 컨트롤 | 이제 Windows 10을 사용 하면 WPF, Windows Forms 및 C++ Win32 데스크톱 애플리케이션에서 UWP 컨트롤을 사용할 수 있습니다. 즉, Windows Ink 및 Fluent 디자인 시스템을 지원하는 컨트롤과 같은 UWP 컨트롤을 통해서만 사용할 수 있는 최신 Windows 10 UI 기능을 통해 기존 데스크톱 애플리케이션의 모양, 느낌 및 기능을 향상시킬 수 있습니다. 이 기능을 *XAML 제도*라고 합니다. </br> 사용하는 애플리케이션 플랫폼에 따라 애플리케이션에서 XAML 제도를 사용할 수 있는 몇 가지 방법을 제공합니다. WPF 및 Windows Forms 애플리케이션은 디자이너 중심 개발 환경을 제공하는 [Windows 커뮤니티 도구 키트](https://docs.microsoft.com/windows/uwpcommunitytoolkit/)의 컨트롤 세트를 사용할 수 있습니다. C++ Win32 애플리케이션은 [Windows.UI.Xaml.Hosting](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting) 네임스페이스의 *UWP XAML 호스팅 API*를 사용해야 합니다. 자세한 내용은 [데스크톱 애플리케이션의 UWP 컨트롤](../xaml-platform/xaml-host-controls.md)을 참조하세요. </br> **참고:** XAML 제도를 사용하도록 설정하는 API 및 컨트롤은 현재 개발자 미리 보기로 사용할 수 있습니다. 사용자 고유의 프로토타입 코드에서 사용해 보도록 추천하지만, 프로덕션 코드에는 지금 사용하지 않는 것이 좋습니다.
@@ -72,7 +72,7 @@ Windows.System.Update | 새 [Windows.System.Update 네임스페이스](https://d
 기능 | 설명
  :------ | :------
 EdgeHTML 18 | Windows 10 2018년 10월 업데이트에는 Microsoft Edge 브라우저 및 UWP 앱용 JavaScript 엔진에 대한 최신 업데이트인 [EdgeHTML 18](https://docs.microsoft.com/microsoft-edge/dev-guide)이 제공됩니다. EdgeHTML 18은 웹 인증 API, 새 WebView 컨트롤 기능 등으로 확장된 최신 지원을 제공합니다! 도구 측면에서 EdgeHTML 18은 새 WebDriver 기능, 자동 업데이트, 향상된 Edge DevTools 및 Edge DevTools 프로토콜 기능을 제공합니다. 자세한 내용은 [EdgeHTML 18의 새로운 기능](https://docs.microsoft.com/microsoft-edge/dev-guide) 및 [최신 Windows 10 업데이트의 DevTools(EdgeHTML 18)](https://docs.microsoft.com/microsoft-edge/devtools-guide/whats-new)를 확인하세요.
-점진적 웹앱 | Windows 10 JavaScript 앱(*WWAHost.exe* 프로세스에서 실행되는 웹앱)은 이제 보기가 활성화되기 전에 시작하여 프로세스 기간 동안 실행되는 선택적인 [애플리케이션별 백그라운드 스크립트](https://docs.microsoft.com/en-us/microsoft-edge/dev-guide#progressive-web-apps)를 지원합니다. 이렇게 하면 보기를 활성화하기 전에 탐색을 모니터링 및 수정하고, 탐색 전체의 상태를 추적하고, 탐색 오류를 모니터링하고, 코드를 실행할 수 있습니다. [앱 매니페스트](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/appx-package-manifest)에서 [`StartPage`](https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/appxmanifestschema2010-v2/element-application)로 지정되면 앱의 각 보기(창)가 새 [`WebUIView`](https://docs.microsoft.com/en-us/uwp/api/windows.ui.webui.webuiview) 클래스의 인스턴스로 스크립트에 공개되어 일반(Win32) [WebView](https://docs.microsoft.com/en-us/uwp/api/windows.web.ui.iwebviewcontrol)와 동일한 이벤트, 속성 및 메서드를 제공합니다.
+프로그레시브 웹앱 | Windows 10 JavaScript 앱(*WWAHost.exe* 프로세스에서 실행되는 웹앱)은 이제 보기가 활성화되기 전에 시작하여 프로세스 기간 동안 실행되는 선택적인 [애플리케이션별 백그라운드 스크립트](https://docs.microsoft.com/microsoft-edge/dev-guide#progressive-web-apps)를 지원합니다. 이렇게 하면 보기를 활성화하기 전에 탐색을 모니터링 및 수정하고, 탐색 전체의 상태를 추적하고, 탐색 오류를 모니터링하고, 코드를 실행할 수 있습니다. [앱 매니페스트](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest)에서 [`StartPage`](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema2010-v2/element-application)로 지정되면 앱의 각 보기(창)가 새 [`WebUIView`](https://docs.microsoft.com/uwp/api/windows.ui.webui.webuiview) 클래스의 인스턴스로 스크립트에 공개되어 일반(Win32) [WebView](https://docs.microsoft.com/uwp/api/windows.web.ui.iwebviewcontrol)와 동일한 이벤트, 속성 및 메서드를 제공합니다.
 웹 API 확장 | 브라우저 간 웹 개발용 [레거시 Microsoft API 확장](https://developer.mozilla.org/docs/Web/API/Microsoft_API_extensions) 목록이 Mozilla Developer Network 설명서에 추가되었습니다. 이러한 API 확장은 Internet Explorer 또는 Microsoft Edge 고유의 확장이며, MDN 웹 문서의 호환성 및 브라우저 지원에 대한 기존 정보를 보완합니다. 레거시 Microsoft [CSS 확장](https://developer.mozilla.org/docs/Web/CSS/Microsoft_Extensions) 및 [JavaScript 확장](https://developer.mozilla.org/docs/Web/JavaScript/Microsoft_JavaScript_extensions)도 사용할 수 있으며, [Visual Studio Code](https://code.visualstudio.com/updates/v1_25#_new-css-pseudo-selectors-and-pseudo-elements-from-mdn)에서 표시되는 MDN의 다양한 웹 API 정보를 직접 확인할 수 있습니다.
 WebVR | 홈 페이지를 완전히 다시 디자인하고 목차를 다시 구성하는 기능을 포함하여 [WebVR 개발자 가이드](https://docs.microsoft.com/microsoft-edge/webvr/)에 대한 주요 업데이트가 수행되었습니다. 또한 다음과 같은 몇 가지 새 항목이 작성되었습니다. </br> * [WebVR이란?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr) WebVR의 기본 사항, 사용해야 하는 이유 및 개발을 시작하는 방법을 설명합니다. </br> * [점진적 웹앱의 WebVR](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-pwas): PWA(점진적 웹앱)에 WebVR을 추가하는 방법을 알아봅니다. </br> * [WebView의 WebVR](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-webview): Windows 10 애플리케이션에서 WebVR을 WebView 컨트롤에 추가하는 방법을 알아봅니다. </br> * [WebVR 데모](https://docs.microsoft.com/microsoft-edge/webvr/demos): Microsoft Edge 및 Windows Mixed Reality 몰입형 헤드셋을 사용하여 일부 WebVR 데모를 확인합니다.
 
@@ -80,14 +80,14 @@ WebVR | 홈 페이지를 완전히 다시 디자인하고 목차를 다시 구�
 
 기능 | 설명
  :------ | :------
-MSIX | [MSIX](https://docs.microsoft.com/windows/msix/overview)는 모든 Windows 앱에 최신 패키징 환경을 제공하는 새 Windows 앱 패키징 형식입니다. 오픈 소스 MSIX 형식은 기존의 패키징 기능을 유지하는 동시에 최신 배포 기능을 구현합니다.
+MSIX | [MSIX](https://docs.microsoft.com/windows/msix/overview)는 모든 Windows 앱에 최신 패키징 환경을 제공하는 새 Windows 앱 패키징 형식입니다. 오픈 소스 MSIX 형식은 기존 패키지의 기능을 유지하는 동시에 최신 배포 기능을 활성화합니다.
 MSIX Packaging Tool | 새 [MSIX 패키징 도구](https://docs.microsoft.com/windows/msix/mpt-overview)를 사용하면 소스 코드에 액세스할 수 없는 경우에도 기존 데스크톱 애플리케이션을 MSIX 형식으로 다시 패키지할 수 있습니다. 명령줄 또는 대화형 UI를 통해 실행할 수 있습니다.
 MSIX에 Desktop App Converter 지원 | [Desktop App Converter](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)를 사용하여 `-MakeMSIX` 매개 변수를 통해 MSIX 패키지를 출력할 수 있습니다.
 MSIX에 MakeAppx.exe 도구 지원 | MakeAppx.exe 도구를 사용하여 UWP 앱 또는 기존 데스크톱 애플리케이션용 MSIX 패키지를 만들 수 있습니다. 이 도구는 Windows 10 SDK에 포함되어 있으며 명령 프롬프트 또는 스크립트 파일에서 사용할 수 있습니다. </br> UWP 앱의 경우 [MakeAppx.exe 도구를 사용하여 앱 패키지 만들기](/windows/msix/package/create-app-package-with-makeappx-tool)를 참조하세요. </br> 데스크톱 애플리케이션의 경우 [수동 데스크톱 애플리케이션 패키징](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-manual-conversion)을 참조하세요.
 패키지 지원 프레임워크 | [패키지 지원 프레임워크](https://docs.microsoft.com/windows/msix/package-support-framework-overview)는 소스 코드에 액세스할 수 없는 경우 기존 데스크톱 애플리케이션에 수정 프로그램을 적용하여 MSIX 컨테이너에서 실행할 수 있도록 지원하는 오픈 소스 키트입니다.
 Store 분석 API | [Microsoft Store 분석 API](../monetize/access-analytics-data-using-windows-store-services.md)에는 이제 다음과 같은 새 메서드가 포함되어 있습니다. </br> * [UWP 앱에 대한 인사이트 데이터 가져오기](../monetize/get-insights-data-for-your-app.md) </br> * [데스크톱 애플리케이션에 대한 인사이트 데이터 가져오기](../monetize/get-insights-data-for-your-desktop-app.md) </br>* [데스크톱 애플리케이션에 대한 업그레이드 차단 가져오기](../monetize/get-desktop-block-data.md) </br> * [데스크톱 애플리케이션에 대한 업그레이드 차단 세부 정보 가져오기](../monetize/get-desktop-block-data-details.md)
 
-## <a name="videos"></a>비디오
+## <a name="videos"></a>동영상
 
 다음 비디오는 Fall Creators Update 이후 게시되었으며, 개발자를 위한 Windows 10의 새로운 기능과 향상된 기능을 강조하고 있습니다.
 

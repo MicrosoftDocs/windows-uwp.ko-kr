@@ -1,5 +1,5 @@
 ---
-Description: 소리는 응용 프로그램의 사용자 환경을 완성하고 모든 플랫폼에서 Windows 느낌을 일치시키는 데 필요한 추가 오디오 이점을 제공합니다.
+Description: 소리는 애플리케이션의 사용자 환경을 완성하고 모든 플랫폼에서 Windows 느낌을 일치시키는 데 필요한 추가 오디오 이점을 제공합니다.
 label: Sound
 title: 소리
 template: detail.hbs
@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 31f527cff7588ccf6da2594566cfa3cf13a214f1
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 8ed1344b5ee49244a6c1afcbb873b54fcc28624f
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258677"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684881"
 ---
 # <a name="sound"></a>소리
 
@@ -41,11 +41,11 @@ ms.locfileid: "74258677"
 </tr>
 </table>
 
-## <a name="sound-global-api"></a>소리 전역 API
+## <a name="sound-global-api"></a>소리 글로벌 API
 
 UWP는 단순히 "스위치를 플리핑"하여 전체 앱에서 몰입형 오디오 환경을 얻을 수 있는, 쉽게 액세스할 수 있는 사운드 시스템을 제공합니다.
 
-[**ElementSoundPlayer**](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.elementsoundplayer)는 XAML 내의 통합 사운드 시스템이며, 켤 경우 모든 기본 컨트롤이 자동으로 소리를 재생합니다.
+[**ElementSoundPlayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.elementsoundplayer)는 XAML 내의 통합 사운드 시스템이며, 켤 경우 모든 기본 컨트롤이 자동으로 소리를 재생합니다.
 ```C#
 ElementSoundPlayer.State = ElementSoundPlayerState.On;
 ```
@@ -61,7 +61,7 @@ ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.Off
 
 **SpatialAudioMode** 속성은 다음 값을 취할 수 있습니다. 
 - **자동**: 소리가 켜져 있으면 공간 오디오를 켭니다. 
-- **해제**: 소리가 켜져 있더라도 공간 오디오를 항상 끕니다.
+- **꺼짐**: 소리가 켜져 있더라도 공간 오디오를 항상 끕니다.
 - **켜짐**: 공간 오디오를 항상 재생합니다.
 
 공간 오디오 및 XAML 처리 방법에 대한 자세한 내용은 [AudioGraph - 공간 오디오](/windows/uwp/audio-video-camera/audio-graphs#spatial-audio)를 참조하세요.
@@ -167,11 +167,11 @@ ElementSoundPlayer.Play(ElementSoundKind.Focus);
 
 이 순환 기능의 목적은 포커스 소리가 단조롭게 반복되고 사용자가 알아차릴 수 없게 하기 위한 것입니다. 포커스 소리는 가장 자주 재생되므로 가장 감지하기 힘든 소리여야 합니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 * [Xbox 및 TV용 디자인](/windows/uwp/design/devices/designing-for-tv)
 * [ElementSoundPlayer 클래스 설명서](/uwp/api/windows.ui.xaml.elementsoundplayer)

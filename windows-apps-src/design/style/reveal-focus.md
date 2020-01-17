@@ -9,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: f416db0266c4ab2ec959c926c0bf0b676b66dd95
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 824476cb098d0ff561fca67497a896586c70b8fb
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258702"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681964"
 ---
 # <a name="reveal-focus"></a>포커스 표시
 
@@ -108,7 +108,7 @@ ms.locfileid: "74258702"
 
 ## <a name="customize-the-color"></a>색 사용자 지정
 
-포커스 표시 화면 효과의 색을 변경하려면 [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) 및 [FocusVisualSecondaryBrush](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) 속성을 사용합니다.
+포커스 표시 화면 효과의 색을 변경하려면 [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) 및 [FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) 속성을 사용합니다.
 
 | 속성 | 기본 리소스 | 기본 리소스 값 |
 | ---- | ---- | --- | 
@@ -170,7 +170,7 @@ FocusPrimaryBrush 속성은 **FocusVisualKind**가 **Reveal**로 설정되어 �
 
 포커스 표시는 앱에 조명을 추가하는 흐름 디자인 시스템의 구성 요소입니다. 흐름 디자인 시스템 및 기타 구성 요소에 대한 자세한 내용은 [UWP용 흐름 디자인 개요](/windows/apps/fluent-design-system)를 참조하세요.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [강조 표시](https://docs.microsoft.com/windows/uwp/design/style/reveal)
 - [Xbox 및 TV용 디자인](/windows/uwp/design/devices/designing-for-tv)

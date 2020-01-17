@@ -6,12 +6,12 @@ ms.date: 09/12/2019
 keywords: Windows 10의 접근성, 접근성, 접근성 지원 win32 앱 빌드, 접근성 지원 UWP 앱 빌드, 접근성 지원 WPF 앱 빌드, 접근성 지원 WinForms 앱 빌드
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
-ms.openlocfilehash: 76bbd3f0e04bbb2f729ad0950bae190b2fffb6ac
-ms.sourcegitcommit: 6e7665b457ec4585db19b70acfa2554791ad6e10
+ms.openlocfilehash: fdb1092139602edd00086e17ff4dc7a27cf361dd
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987193"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75681894"
 ---
 # <a name="accessibility-in-windows-10"></a>Windows 10의 접근성
 
@@ -123,7 +123,7 @@ ms.locfileid: "70987193"
       [접근성 있는 웹 사이트 디자인](https://docs.microsoft.com/microsoft-edge/accessibility/design)
    :::column-end:::
    :::column:::
-      [접근성이 구현된 웹 사이트 구축](https://docs.microsoft.com/microsoft-edge/accessibility/build)
+      [접근성 있는 웹 사이트 빌드](https://docs.microsoft.com/microsoft-edge/accessibility/build)
 
       [접근성 지원 웹 사이트 테스트](https://docs.microsoft.com/microsoft-edge/accessibility/test)
    :::column-end:::
@@ -135,7 +135,7 @@ ms.locfileid: "70987193"
 
 :::row:::
    :::column:::
-      [코드 샘플 브라우저](https://docs.microsoft.com/en-us/samples/browse/)
+      [코드 샘플 브라우저](https://docs.microsoft.com/samples/browse/)
 
       MSDN 코드 갤러리를 대체하는 새로운 샘플 브라우저입니다.
    :::column-end:::
@@ -165,7 +165,7 @@ ms.locfileid: "70987193"
    :::column-end:::
 :::row-end:::
 
-## <a name="videos"></a>비디오
+## <a name="videos"></a>동영상
 
 일반적인 접근성 문제에 맞게 접근성 지원 Windows 애플리케이션을 빌드하는 방법과 Microsoft에서 이를 해결하는 방법을 설명하는 다양한 비디오입니다.
 

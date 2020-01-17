@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 93a81501b524826484111419899675fbb99b86fa
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 38f289b21980e2a77fd8669c39750e9b989aa742
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364763"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684389"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
@@ -264,7 +264,7 @@ private async void ScrollViewer_ViewChanged(object sender, ScrollViewerViewChang
 
 [StackLayout](/uwp/api/microsoft.ui.xaml.controls.stacklayout)은 요소를 가로 또는 세로 방향으로 설정할 수 있는 한 줄로 정렬합니다.
 
-[Spacing](/en-us/uwp/api/microsoft.ui.xaml.controls.stacklayout.spacing) 속성을 설정하여 항목 사이의 공간 크기를 조정할 수 있습니다. 간격은 레이아웃의 [방향](/uwp/api/microsoft.ui.xaml.controls.stacklayout.orientation)으로 적용됩니다.
+[Spacing](/uwp/api/microsoft.ui.xaml.controls.stacklayout.spacing) 속성을 설정하여 항목 사이의 공간 크기를 조정할 수 있습니다. 간격은 레이아웃의 [방향](/uwp/api/microsoft.ui.xaml.controls.stacklayout.orientation)으로 적용됩니다.
 
 ![스택 레이아웃 간격](images/stack-layout.png)
 
@@ -300,7 +300,7 @@ private async void ScrollViewer_ViewChanged(object sender, ScrollViewerViewChang
 
 다음 목록은 사용 가능한 값을 보여줍니다. 정의에서는 기본 **방향**을 **가로**로 가정합니다.
 
-- **없음**: 추가 공간이 행의 끝에 사용되지 않은 상태로 남아 있습니다. 기본값으로 설정되어 있습니다.
+- **없음**: 추가 공간이 행의 끝에 사용되지 않은 상태로 남아 있습니다. 이것이 기본값입니다.
 - **Fill**: 사용 가능한 공간(세로 방향인 경우 높이)을 사용하도록 항목에 추가 너비가 제공됩니다.
 - **Uniform**: 사용 가능한 공간을 사용하도록 항목에 추가 너비가 제공되며, 가로 세로 비율을 유지하기 위해 추가 높이가 제공됩니다(세로 방향인 경우 높이와 너비가 전환됨).
 
@@ -312,7 +312,7 @@ private async void ScrollViewer_ViewChanged(object sender, ScrollViewerViewChang
 
 다음 목록은 사용 가능한 값을 보여줍니다. 정의에서는 기본 **방향**을 **가로**로 가정합니다.
 
-- **Start**: 항목을 행의 시작 부분에 맞춥니다. 추가 공간이 행의 끝에 사용되지 않은 상태로 남아 있습니다. 기본값으로 설정되어 있습니다.
+- **Start**: 항목을 행의 시작 부분에 맞춥니다. 추가 공간이 행의 끝에 사용되지 않은 상태로 남아 있습니다. 이것이 기본값입니다.
 - **Center**: 항목을 행의 중심에 맞춥니다. 추가 공간이 행의 시작 부분과 끝부분에 균등하게 분배됩니다.
 - **End**: 항목을 행의 끝에 맞춥니다. 추가 공간은 행의 시작 부분에 사용되지 않은 상태로 남아 있습니다.
 - **SpaceAround**: 항목을 균일하게 분산합니다. 각 항목 앞뒤에 동일한 양의 공간이 추가됩니다.
@@ -642,6 +642,12 @@ public sealed class MediaCollectionView : Control
 
 ```xaml
 <!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
+
+<Page.Resources>
+    <muxc:StackLayout x:Key="MyGroupLayout"/>
+    <muxc:StackLayout x:Key="MyItemLayout" Orientation="Horizontal"/>
+</Page.Resources>
+
 <ScrollViewer>
   <muxc:ItemsRepeater ItemsSource="{x:Bind AppNotifications}"
                       Layout="{StaticResource MyGroupLayout}">
@@ -650,7 +656,7 @@ public sealed class MediaCollectionView : Control
         <!-- Group -->
         <StackPanel>
           <!-- Header -->
-          TextBlock Text="{x:Bind AppTitle}"/>
+          <TextBlock Text="{x:Bind AppTitle}"/>
           <!-- Items -->
           <muxc:ItemsRepeater ItemsSource="{x:Bind Notifications}"
                               Layout="{StaticResource MyItemLayout}"
@@ -663,10 +669,11 @@ public sealed class MediaCollectionView : Control
   </muxc:ItemsRepeater>
 </ScrollViewer>
 ```
-
-이 예제에서는 여기에 나와 있는 것처럼 사용자 기본 설정을 통해 변경할 수 있고 가로 방향으로 스크롤하는 목록으로 제공되는 다양한 범주가 있는 앱의 레이아웃을 보여줍니다.
+아래 이미지는 위의 샘플을 지침으로 사용하여 만든 기본 레이아웃을 보여줍니다.
 
 ![항목 반복기가 있는 중첩된 레이아웃](images/items-repeater-nested-layout.png)
+
+다음 예제에서는 사용자 기본 설정을 통해 변경할 수 있고 가로 방향으로 스크롤하는 목록으로 제공되는 다양한 범주가 있는 앱의 레이아웃을 보여줍니다. 이 예제의 레이아웃은 위의 이미지로도 표시됩니다.
 
 ```xaml
 <!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
@@ -777,7 +784,7 @@ ItemsRepeater는 항목(가상화 여부에 관계 없이)의 기본 탭 순서�
 > [!NOTE]
 > ItemsRepeater는 마지막으로 포커스가 있었던 항목을 자동으로 기억하지 않습니다.  즉, 사용자가 Shift+Tab을 사용할 때 마지막으로 실현된 항목으로 이동될 수 있습니다.
 
-### <a name="announcing-item-x-of-y-in-screen-readers"></a>화면 읽기 프로그램에서 "_Y_의 _X_ 항목" 발표
+### <a name="announcing-item-_x_-of-_y_-in-screen-readers"></a>화면 읽기 프로그램에서 "_Y_의 _X_ 항목" 발표
 
 **PositionInSet** 및 **SizeOfSet**의 값처럼 적절한 자동화 속성을 설정해야 하며, 항목이 추가, 이동, 제거될 때 최신 상태를 유지해야 합니다.
 
@@ -819,7 +826,7 @@ internal sealed class CardControl : CardControlBase
 }
 ```
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [목록](lists.md)
 - [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)

@@ -1,7 +1,7 @@
 ---
 ms.assetid: CC1BF51D-3DAC-4198-ADCB-1770B901C2FC
 Description: TextBox 컨트롤을 사용하면 사용자가 앱에 텍스트를 입력할 수 있습니다.
-title: 입력란
+title: 텍스트 상자
 label: Text box
 template: detail.hbs
 ms.date: 05/19/2017
@@ -11,14 +11,14 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 67c729455c6eb2d8f5e8b07db5e1be7ac13f59b8
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 07da54dddfffe082aa5633ac8eac3f342aaa6a5c
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258173"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302717"
 ---
-# <a name="text-box"></a>입력란
+# <a name="text-box"></a>텍스트 상자
 
 TextBox 컨트롤을 사용하면 사용자가 앱에 텍스트를 입력할 수 있습니다. 일반적으로 한 줄의 텍스트를 캡처하는 데 사용되지만 여러 줄의 텍스트를 캡처하도록 구성할 수 있습니다. 텍스트는 단순하고 균일한 일반 텍스트 형식으로 화면에 표시됩니다.
 
@@ -79,7 +79,7 @@ rootGrid.Children.Add(textBox);
 
 ![간단한 입력란](images/text-box-ex1.png)
 
-### <a name="use-a-text-box-for-data-input-in-a-form"></a>양식의 데이터 입력에는 입력란을 사용합니다.
+### <a name="use-a-text-box-for-data-input-in-a-form"></a>양식의 데이터 입력에 입력란 사용
 
 입력란을 사용하여 양식의 데이터 입력을 수락하고 [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text) 속성을 사용하여 입력란에서 전체 텍스트 문자열을 가져오는 것이 일반적입니다. 일반적으로 제출 단추 클릭과 같은 이벤트를 사용하여 Text 속성에 액세스하지만, 텍스트가 변경될 때 특정 작업을 수행해야 하는 경우 [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) 또는 [TextChanging](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanging) 이벤트를 처리할 수 있습니다.
 
@@ -141,7 +141,7 @@ IsEnabled
 - 텍스트 상자에서 줄 바꿈 또는 리턴 문자를 허용하고 표시할 수 있게 하려면 [AcceptsReturn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.acceptsreturn) 속성을 **true**로 설정합니다.
 - 텍스트 배치를 사용하려면 [TextWrapping](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textwrapping) 속성을 **Wrap**으로 설정합니다. 이렇게 하면 줄 구분 기호에 관계없이 입력란의 가장자리에 도달하면 텍스트가 줄 바꿈됩니다.
 
-> **참고**&nbsp;&nbsp;TextBox와 RichEditBox는 해당 TextWrapping 속성에 대해 **WrapWholeWords** 값을 지원하지 않습니다. TextBox.TextWrapping 또는 RichEditBox.TextWrapping 값으로 WrapWholeWords를 사용하려고 하면 잘못된 인수 예외가 발생합니다.
+> **참고**&nbsp;&nbsp;TextBox와 RichEditBox는 해당 TextWrapping 속성에 대해 **WrapWholeWords** 값을 지원하지 않습니다. TextBox.TextWrapping 또는 RichEditBox.TextWrapping 값으로 WrapWholeWords를 사용하려고 하면 잘못된 인수 예외가 throw됩니다.
 
 여러 줄 입력란은 해당 [Height](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height) 또는 [MaxHeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.maxheight) 속성이나 부모 컨테이너에 의해 제한되지 않을 경우 텍스트를 입력함에 따라 계속 세로로 증가합니다. 여러 줄 입력란이 표시 영역 이상 증가하지 않는지 테스트하고, 증가할 경우 증가를 제한해야 합니다. 항상 여러 줄 입력란에 대해 적절한 높이를 지정하여 사용자가 입력함에 따라 높이가 증가하지 않도록 하는 것이 좋습니다.
 
@@ -199,9 +199,9 @@ textBox.Foreground = new SolidColorBrush(Windows.UI.Colors.Blue);
 rootGrid.Children.Add(textBox);
 ```
 
-이에 따라 표시되는 입력란은 다음과 같습니다.
+결과 입력란은 다음과 같습니다.
 
-![서식 있는 텍스트 상자](images/text-box-formatted.png)
+![서식 있는 입력란](images/text-box-formatted.png)
 
 ### <a name="modify-the-context-menu"></a>상황에 맞는 메뉴 수정
 
@@ -215,7 +215,7 @@ rootGrid.Children.Add(textBox);
 모두 선택 | TextBox에 텍스트가 있는 경우
 실행 취소 | 텍스트가 변경된 경우
 
-상황에 맞는 메뉴에 표시되는 명령을 수정하려면 [ContextMenuOpening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.contextmenuopening) 이벤트를 처리합니다. 이러한 경우의 예제는 [ContextMenu 샘플](https://code.msdn.microsoft.com/windowsapps/Context-menu-sample-40840351)의 시나리오 2를 참조하세요. 디자인 정보는 상황에 맞는 메뉴에 대한 지침을 참조하세요.
+상황에 맞는 메뉴에 표시되는 명령을 수정하려면 [ContextMenuOpening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.contextmenuopening) 이벤트를 처리합니다. 이에 대한 예제는 <a href="xamlcontrolsgallery:/item/RichEditBox">XAML 컨트롤 갤러리</a>에서 **RichEditBox의 CommandBarFlyout 사용자 지정 - '공유' 추가** 예제를 참조하세요. 디자인 정보는 [상황에 맞는 메뉴](menus.md)에 대한 지침을 참조하세요.
 
 ### <a name="select-copy-and-paste"></a>선택, 복사 및 붙여넣기
 
@@ -255,13 +255,13 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 
 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 터치 키보드나 SIP(Soft Input Panel)를 사용한 데이터 입력을 도울 수 있습니다.
 
-터치 키보드는 앱이 터치 스크린이 있는 디바이스에서 실행될 때 텍스트 입력에 사용할 수 있습니다. 터치 키보드는 사용자가 TextBox 또는 RichEditBox 같이 편집 가능한 입력 필드를 탭할 때 호출됩니다. 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 사용자가 앱에서 데이터를 쉽고 빠르게 입력할 수 있도록 지원할 수 있습니다. 입력 범위는 시스템에서 해당 입력 형식에 맞는 특수한 터치 키보드를 제공할 수 있도록 컨트롤에서 예상되는 텍스트 입력 형식에 대한 힌트를 시스템에 제공합니다.
+터치 키보드는 앱이 터치 스크린이 있는 디바이스에서 실행될 때 텍스트 입력에 사용할 수 있습니다. 터치 키보드는 사용자가 TextBox 또는 RichEditBox와 같이 편집 가능한 입력 필드를 탭할 때 호출됩니다. 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 사용자가 앱에서 데이터를 쉽고 빠르게 입력할 수 있도록 지원할 수 있습니다. 입력 범위는 시스템에서 해당 입력 형식에 맞는 특수한 터치 키보드를 제공할 수 있도록 컨트롤에서 예상되는 텍스트 입력 형식에 대한 힌트를 시스템에 제공합니다.
 
 예를 들어 텍스트 상자가 4자리 숫자의 PIN을 입력하는 목적으로만 사용될 경우 [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성을 **Number**로 설정합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다.
 
 > **중요**&nbsp;&nbsp;입력 범위에서는 입력 유효성 검사가 수행되지 않으며, 사용자가 하드웨어 키보드 또는 다른 입력 디바이스를 사용해서 입력할 수 있습니다. 따라서 필요에 따라 입력 코드에 대한 유효성을 검사해야 합니다.
 
-터치 키보드에 영향을 주는 다른 속성은 [IsSpellCheckEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.isspellcheckenabled), [IsTextPredictionEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.istextpredictionenabled) 및 [PreventKeyboardDisplayOnProgrammaticFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus)입니다. 하드웨어 키보드를 사용하는 경우 IsSpellCheckEnabled는 TextBox에도 영향을 줍니다.
+터치 키보드에 영향을 주는 다른 속성은 [IsSpellCheckEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.isspellcheckenabled), [IsTextPredictionEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.istextpredictionenabled) 및 [PreventKeyboardDisplayOnProgrammaticFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus)입니다. (하드웨어 키보드를 사용하는 경우 IsSpellCheckEnabled는 TextBox에도 영향을 줍니다.)
 
 자세한 내용과 예제는 [입력 범위를 사용하여 터치 키보드 변경](https://docs.microsoft.com/windows/uwp/design/input/use-input-scope-to-change-the-touch-keyboard) 및 속성 설명서를 참조하세요.
 
@@ -271,14 +271,14 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 - 입력할 수 있는 값의 범위에 적절한 너비로 텍스트 상자를 설정하세요. 단어 길이는 언어에 따라 달라지므로 앱을 세계화하려는 경우 지역화를 고려해야 합니다.
 - 텍스트 입력란은 일반적으로 한 줄(`TextWrap = "NoWrap"`)입니다. 긴 문자열을 입력하거나 편집해야 하는 경우 텍스트 입력란을 여러 줄(`TextWrap = "Wrap"`)로 설정합니다.
 - 일반적으로 텍스트 입력란은 편집 가능한 텍스트에 사용됩니다. 내용을 읽고, 선택하고, 복사할 수 있지만, 편집할 수 없도록 텍스트 입력란을 읽기 전용으로 설정할 수 있습니다.
-- 보기를 깔끔하게 정리해야 하는 경우 제어 확인란을 선택한 경우에만 텍스트 입력 상자를 표시하도록 설정하는 것이 좋습니다. 사용 상태인 텍스트 입력 상자를 컨트롤(예: 확인란)에 바인딩할 수도 있습니다.
+- 보기를 깔끔하게 정리해야 하는 경우 제어 확인란을 선택한 경우에만 텍스트 입력 상자 세트를 표시하도록 설정하는 것이 좋습니다. 사용 상태인 텍스트 입력 상자를 컨트롤(예: 확인란)에 바인딩할 수도 있습니다.
 - 값이 포함된 텍스트 입력란을 탭할 때 텍스트 입력란이 어떻게 동작하는지를 고려하세요. 기본 동작은 값을 바꾸지 않고 편집하는 데 적합합니다. 삽입 지점은 단어 사이에 있고 아무것도 선택되어 있지 않습니다. 주어진 텍스트 입력란의 가장 일반적인 사용 사례가 바꾸기인 경우 컨트롤이 포커스를 받을 때마다 필드에서 모든 텍스트를 선택할 수 있습니다. 입력이 선택을 대체합니다.
 
 ### <a name="single-line-input-boxes"></a>한 줄 입력란
 
 - 한 줄 입력란을 여러 개 사용하여 다양한 텍스트 정보를 캡처합니다. 입력란이 본질적으로 관련된 경우 함께 그룹화합니다.
 
-- 한 줄 입력란은 예상되는 제일 긴 입력보다 약간 넓게 만듭니다. 이 경우 컨트롤이 너무 넓어지면 두 개의 컨트롤로 분리합니다. 예를 들어 단일 주소 입력을 "주소 1"과 "주소 2"로 분할할 수 있습니다.
+- 한 줄 입력란은 예상되는 제일 긴 입력보다 약간 넓게 만듭니다. 이 경우 컨트롤이 너무 넓어지면 두 개의 컨트롤로 분리합니다. 예를 들어 단일 주소 입력을 "주소란 1"과 "주소란 2"로 분할할 수 있습니다.
 - 입력할 수 있는 문자의 최대 길이를 설정합니다. 지원 데이터 원본이 긴 입력 문자열을 허용하지 않는 경우 입력을 제한하고 유효성 검사 팝업을 사용하여 사용자에게 한계에 도달했음을 알립니다.
 - 한 줄 텍스트 입력 컨트롤을 사용하여 사용자로부터 텍스트 조각들을 수집할 수 있습니다.
 
@@ -286,7 +286,7 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 
     ![기본 데이터 입력](images/guidelines_and_checklist_for_singleline_text_input_type_text.png)
 
-- 짧고 크기가 정해져 있는 한 줄 텍스트 입력 컨트롤 집합을 사용하여 특수한 형식의 데이터를 입력할 수 있습니다.
+- 짧고 크기가 정해져 있는 한 줄 텍스트 입력 컨트롤 세트를 사용하여 특수한 형식의 데이터를 입력할 수 있습니다.
 
     ![서식이 지정된 데이터 입력](images/textinput_example_productkey.png)
 
@@ -307,11 +307,11 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 - 한 줄만 필요한 경우에는 여러 줄 입력란을 사용하지 마세요.
 - 일반 텍스트 컨트롤으로도 충분한 경우 서식 있는 텍스트 컨트롤을 사용하지 마세요.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [텍스트 컨트롤](text-controls.md)
 - [맞춤법 검사에 대한 지침](text-controls.md)

@@ -10,20 +10,20 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ed9feb6edae58b906d4f37f0e1f011d4fa42ee9
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: 55d8ed5fa1e3c4a7ffffaf47583eca3796f081cf
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867730"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683986"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 
 ![영웅 이미지](images/header-acrylic.svg)
 
-아크릴은 반투명 질감을 만드는 유형의 [브러시](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Media.Brush)입니다. 앱 표면에 아크릴을 적용하여 깊이를 추가하고 시각적 계층을 설정할 수 있습니다.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
+아크릴은 반투명 질감을 만드는 유형의 [브러시](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Brush)입니다. 앱 표면에 아크릴을 적용하여 깊이를 추가하고 시각적 계층을 설정할 수 있습니다.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
 
-> **중요 API**: [AcrylicBrush 클래스](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.acrylicbrush), [Background 속성](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.control.Background)
+> **중요 API**: [AcrylicBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.acrylicbrush), [Background 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.Background)
 
 :::row:::
     :::column:::
@@ -330,10 +330,10 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 <br/>아크릴 제작법: 배경, 흐림, 제외 혼합, 색/색조 오버레이, 노이즈
 
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 [**강조 표시**](reveal.md)

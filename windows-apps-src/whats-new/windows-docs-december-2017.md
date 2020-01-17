@@ -5,24 +5,24 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 17238dd886b76e16b0fe63151a73d4a3a5c23704
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: f785ad5d7898f838435e0a05cf8dea5c778e70f3
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259756"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684748"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>2017년 12월 Windows 개발자 문서의 새로운 내용
 
 Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 계속 업데이트되고 있습니다. Fall Creators Update 이후 Windows 개발자를 위한 새 정보와 업데이트된 정보를 포함하는 다음과 같은 기능 개요, 개발자 지침 및 샘플이 추가되었습니다.
 
-Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 살펴볼 수 있습니다.
 
 ## <a name="features"></a>기능
 
 ### <a name="windows-mixed-reality-enthusiasts-guide"></a>Windows Mixed Reality: 마니아 가이드
 
-Mixed Reality의 세계에 대해 보다 깊이 알아보려는 기술 매니아를 대상으로 [마니아 가이드](https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/)는 Windows Mixed Reality에 대해 사람들이 가지는 주요 질문에 답변합니다. 
+Mixed Reality의 세계에 대해 보다 깊이 알아보려는 기술 매니아를 대상으로 [마니아 가이드](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/)는 Windows Mixed Reality에 대해 사람들이 가지는 주요 질문에 답변합니다. 
 
 가이드에는 다음이 나와 있습니다. 
 - 구입하기 전 FAQ 
@@ -44,7 +44,7 @@ Mixed Reality의 세계에 대해 보다 깊이 알아보려는 기술 매니아
 
 ### <a name="microsoft-collaborate"></a>Microsoft Collaborate
 
-Microsoft Collaborate 포털은 엔지니어링 시스템 작업 항목(버그, 기능 요청 등)의 공유와 콘텐츠(빌드, 문서, 사양)의 배포를 활성화하여 Microsoft 에코 시스템 내에서 엔지니어링 협업을 간소화하는 도구와 서비스를 제공합니다. [자세한 내용을 알아보십시오](https://docs.microsoft.com/collaborate/).
+Microsoft Collaborate 포털은 엔지니어링 시스템 작업 항목(버그, 기능 요청 등)의 공유와 콘텐츠(빌드, 문서, 사양)의 배포를 활성화하여 Microsoft 에코 시스템 내에서 엔지니어링 협업을 간소화하는 도구와 서비스를 제공합니다. [자세한 정보를 알아보세요](https://docs.microsoft.com/collaborate/).
 
 ![파트너 센터에서 Microsoft Collaborate](images/microsoft_collaborate_screenshot.PNG)
 
@@ -93,8 +93,8 @@ UWP(유니버설 Windows 플랫폼) 디자인 지침은 세련되고 아름다�
 
 [고객 주문 데이터베이스](https://github.com/Microsoft/Windows-appsample-customers-orders-database) 샘플이 리포지토리 패턴을 사용하고 여러 데이터 소스(Sqlite, SQL Azure, REST 서비스 포함)에 연결하는 방법과 같은 데이터 액세스 관련 모범 사례를 안내하도록 업데이트되었습니다.
 
-## <a name="videos"></a>비디오
+## <a name="videos"></a>동영상
 
 ### <a name="package-a-net-app-in-visual-studio"></a>Visual Studio에서 .NET 앱 패키징
 
-그 어느 때보다도 쉽게 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져올 수 있습니다. [동영상을 시청](https://www.youtube.com/watch?v=fJkbYPyd08w)하여 배포를 위해 .NET 앱을 패키징하는 방법을 알아보고 자세한 내용은 [이 페이지를 확인](../porting/desktop-to-uwp-packaging-dot-net.md)하세요.
+그 어느 때보다도 쉽게 데스크톱 앱을 유니버설 Windows 플랫폼으로 가져올 수 있습니다. [동영상을 시청](https://www.youtube.com/watch?v=fJkbYPyd08w)하여 배포를 위해 .NET 앱을 패키징하는 방법을 알아보고 자세한 내용은 [이 페이지를 확인](../porting/desktop-to-uwp-packaging-dot-net.md)하세요.

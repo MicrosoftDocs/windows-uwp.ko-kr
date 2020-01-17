@@ -11,18 +11,18 @@ design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ec78498cc3941c3c03b33d8c3ab55b40c100a7ea
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 9b9d409718a157c55b28fdb3ccaa28caaa295adf
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73062076"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684279"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>필기 보기를 사용한 텍스트 입력
 
 ![펜으로 탭하면 텍스트 상자가 확장됨](images/handwritingview/handwritingview2.gif)
 
-[TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox) 및 [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox) 같은 컨트롤에서 파생된 컨트롤처럼 UWP 텍스트 컨트롤이 지원하는 잉크를 텍스트로 입력을 위한 기본 제공 필기 보기를 사용자 지정합니다.
+[TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox) 및 [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox) 같은 컨트롤에서 파생된 컨트롤처럼 UWP 텍스트 컨트롤이 지원하는 잉크를 텍스트로 입력을 위한 기본 제공 필기 보기를 사용자 지정합니다.
 
 ## <a name="overview"></a>개요
 
@@ -50,7 +50,7 @@ XAML 텍스트 입력 상자는 [Windows Ink](../input/pen-and-stylus-interactio
 
 애플리케이션에서 이미 동일한 잉크-텍스트 변환 기능을 제공하고 있거나 텍스트 입력 환경이 필기를 통해 사용할 수 없는 형식 지정 또는 특수 문자를 사용하는 경우에는 필기 보기를 사용하지 않도록 설정할 수 있습니다.
 
-이 예에서는 [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) 컨트롤의 [IsHandwritingViewEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.ishandwritingviewenabled) 속성을 false로 설정하여 필기 보기를 사용하지 않겠습니다. 필기 보기를 지원하는 모든 텍스트 컨트롤은 비슷한 속성을 지원합니다.
+이 예에서는 [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox) 컨트롤의 [IsHandwritingViewEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.ishandwritingviewenabled) 속성을 false로 설정하여 필기 보기를 사용하지 않겠습니다. 필기 보기를 지원하는 모든 텍스트 컨트롤은 비슷한 속성을 지원합니다.
 
 ```xaml
 <TextBox Name="SampleTextBox"
@@ -67,7 +67,7 @@ XAML 텍스트 입력 상자는 [Windows Ink](../input/pen-and-stylus-interactio
 
 애플리케이션 UI는 더 큰 컨트롤에 맞게 재배치되지 않으므로 시스템 보기가 중요한 UI를 가릴 수 있습니다.
 
-여기서는 [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview)의 [PlacementAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.placementalignment) 속성을 사용하여 기본 텍스트 컨트롤의 어떤 앵커를 필기 보기 맞춤에 사용할 것인지 지정합니다.
+여기서는 [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox) [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview)의 [PlacementAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview.placementalignment) 속성을 사용하여 기본 텍스트 컨트롤의 어떤 앵커를 필기 보기 맞춤에 사용할 것인지 지정합니다.
 
 ```xaml
 <TextBox Name="SampleTextBox"
@@ -107,7 +107,7 @@ XAML 텍스트 입력 상자는 [Windows Ink](../input/pen-and-stylus-interactio
 
 앱은 이 설정에 액세스하여 텍스트 컨트롤에서 인식된 텍스트에 대해 선택된 글꼴을 사용할 수 있습니다.
 
-이 예제에서는 [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox)의 [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) 이벤트를 수신 대기하다가 텍스트 변경이 HandwritingView에서 시작한 경우 사용자가 선택한 글꼴을 적용합니다(그렇지 않으면 기본 글꼴 적용).
+이 예제에서는 [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox)의 [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) 이벤트를 수신 대기하다가 텍스트 변경이 HandwritingView에서 시작한 경우 사용자가 선택한 글꼴을 적용합니다(그렇지 않으면 기본 글꼴 적용).
 
 ```csharp
 private void SampleTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -121,7 +121,7 @@ private void SampleTextBox_TextChanged(object sender, TextChangedEventArgs e)
 
 ## <a name="access-the-handwritingview-in-composite-controls"></a>복합 컨트롤에서 HandwritingView 액세스
 
-[AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)처럼 [TextBox](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.textbox) 또는 [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox) 컨트롤을 사용하는 복합 컨트롤 역시 [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview)를 지원합니다.
+[AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)처럼 [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox) 또는 [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox) 컨트롤을 사용하는 복합 컨트롤 역시 [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview)를 지원합니다.
 
 복합 컨트롤의 [HandwritingView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.handwritingview)에 액세스하려면 [VisualTreeHelper](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.visualtreehelper) API를 사용합니다.
 

@@ -5,12 +5,12 @@ template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: ff071a2a98c533ad7c089b28165f026de00ba68f
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: e1a5b192ed57d3962b6ba4cbef69e3663bc1e2ec
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67319090"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683996"
 ---
 # <a name="forms"></a>양식
 양식은 사용자가 데이터를 제출할 수 있고 이를 수집할 수 있는 컨트롤 그룹입니다. 일반적으로 양식은 설정 페이지, 설문 조사, 계정 생성 등에 사용됩니다. 
@@ -57,8 +57,8 @@ ms.locfileid: "67319090"
 
 사용자 환경을 지원하고 사용자가 올바른 내용을 입력하도록 하려면 다음 권장 사항을 고려하여 양식 레이아웃을 디자인하세요. 
 
-### <a name="labels"></a>Labels(레이블)
-[레이블](labels.md)은 왼쪽 맞춤으로 정렬되고 입력 컨트롤 위에 놓여야 합니다. 대부분의 컨트롤에는 레이블을 표시하기 위한 기본 제공 Header 속성이 있습니다. 컨트롤에 Header 속성이 없거나 컨트롤 그룹에 레이블을 지정하려는 경우에는 [TextBlock](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.TextBlock)을 사용할 수 있습니다.
+### <a name="labels"></a>레이블
+[레이블](labels.md)은 왼쪽 맞춤으로 정렬되고 입력 컨트롤 위에 놓여야 합니다. 대부분의 컨트롤에는 레이블을 표시하기 위한 기본 제공 Header 속성이 있습니다. 컨트롤에 Header 속성이 없거나 컨트롤 그룹에 레이블을 지정하려는 경우 [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)을 대신 사용할 수 있습니다.
 
 [접근성을 위해 디자인](../accessibility/accessibility.md)하려면 사용자와 화면 읽기 프로그램이 분명히 인식하도록 모든 개별 컨트롤과 컨트롤 그룹에 레이블을 지정하세요. 
 
@@ -66,7 +66,7 @@ ms.locfileid: "67319090"
 
 <div class="mx-responsive-img">
 <table>
-<tr><th>권장 사항</th><th>금지 사항</th></tr>
+<tr><th>수행</th><th>안 함</th></tr>
 <tr>
 <td><img src="../controls-and-patterns/images/forms-shortform1col.png" alt="form with top labels"></td>
 <td><img src="../controls-and-patterns/images/forms-leftlabel-donot1.png" alt="form with left labels don't"></td>
@@ -84,7 +84,7 @@ ms.locfileid: "67319090"
 
 <div class="mx-responsive-img">
 <table>
-<tr><th>권장 사항</th><th>금지 사항</th></tr>
+<tr><th>수행</th><th>안 함</th></tr>
 <tr>
 <td><img src="../controls-and-patterns/images/forms-2cols.png" alt="form with 2 columns"></td>
 <td><img src="../controls-and-patterns/images/forms-2cols-bad.png" alt="form with 2 bad columns"></td>
@@ -108,7 +108,7 @@ ms.locfileid: "67319090"
 입력 컨트롤은 사용자가 양식에 정보를 입력할 수 있는 UI 요소입니다. 양식에 추가할 수 있는 몇 가지 일반적인 컨트롤이 해당 컨트롤을 사용하는 경우에 대한 정보와 함께 나열됩니다.
 
 ### <a name="text-input"></a>텍스트 입력
-컨트롤 | Windows Server Update Services와 함께 | 예
+컨트롤 | Windows Server Update Services와 함께 | 예제
  - | - | -
 [TextBox](text-box.md) | 한 줄 또는 여러 줄의 텍스트 캡처 | 이름, 자유 형식 양식 응답 또는 피드백
 [PasswordBox](password-box.md) | 문자를 숨겨 프라이빗 데이터 수집 | 암호, SSN(사회 보장 번호), PIN, 신용 카드 정보 
@@ -116,7 +116,7 @@ ms.locfileid: "67319090"
 [RichEditBox](rich-edit-box.md) | 서식 있는 텍스트, 하이퍼링크 및 이미지가 있는 텍스트 파일 편집 | 앱에서 파일 업로드, 미리 보기 및 편집
 
 ### <a name="selection"></a>선택
-컨트롤 | Windows Server Update Services와 함께 | 예
+컨트롤 | Windows Server Update Services와 함께 | 예제
 - | - | - 
 | [CheckBox](checkbox.md) | 하나 이상의 작업 항목 선택 또는 선택 취소 | 사용 약관에 동의, 선택적 항목 추가, 적용되는 모든 항목 선택
 [RadioButton](radio-button.md) | 두 가지 이상의 옵션 중 하나 선택 | 인도 유형, 운송 방법 등
@@ -125,14 +125,14 @@ ms.locfileid: "67319090"
 > **참고**: 5개 이상의 선택 항목이 있는 경우 목록 컨트롤을 사용합니다.
 
 ### <a name="lists"></a>목록
-컨트롤 | Windows Server Update Services와 함께 | 예
+컨트롤 | Windows Server Update Services와 함께 | 예제
 - | - | -
 [ComboBox](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists.md#drop-down-lists) | 컴팩트 상태로 시작하고 확장하여 선택 가능한 항목 목록 표시 | 시/도 또는 국가와 같은 긴 항목 목록에서 선택
 [ListView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#list-views) | 항목을 분류하고 그룹 헤더 할당, 항목 끌어서 놓기, 콘텐츠 조정, 항목 순서 변경 | 옵션 순위 지정
 [GridView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#grid-views) | 이미지 기반 컬렉션 정렬 및 찾아보기 | 사진, 색, 디스플레이 테마 선택
 
 ### <a name="numeric-input"></a>숫자 입력
-컨트롤 | Windows Server Update Services와 함께 | 예
+컨트롤 | Windows Server Update Services와 함께 | 예제
 - | - | -
 [슬라이더](slider.md) | 연속 숫자 값 범위에서 숫자 선택 | 백분율, 볼륨, 재생 속도
 [평가](rating.md) | 스타로 평가 | 고객 의견
@@ -234,7 +234,7 @@ UWP 컨트롤의 전체 목록을 보려면 [기능별 컨트롤 인덱스](cont
 ```
 
 ## <a name="customer-orders-database-sample"></a>고객 주문 데이터베이스 샘플
-![고객 주문 데이터베이스 스크린샷](images/customerorderform.png) **Azure** 데이터베이스에 양식 입력을 연결하는 방법을 알아보고 완전히 구현된 양식을 보려면 [고객 주문 데이터베이스](https://github.com/Microsoft/Windows-appsample-customers-orders-database) 앱 샘플을 참조하세요.
+![고객 주문 데이터베이스 스크린샷](images/customerorderform.png)**Azure** 데이터베이스에 양식 입력을 연결하는 방법을 알아보고 완전히 구현된 양식을 보려면 [고객 주문 데이터베이스](https://github.com/Microsoft/Windows-appsample-customers-orders-database) 앱 샘플을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 - [입력 컨트롤](controls-and-events-intro.md)

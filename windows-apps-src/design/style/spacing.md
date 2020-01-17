@@ -6,12 +6,12 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 1c535e4ea4ad3c93acb048de2050d5ae7a9c2c2b
-ms.sourcegitcommit: bf95c8b29145a224957a940512394e6aa97cb90f
+ms.openlocfilehash: 08853a201eff063b49dcc69d5827c9b54e324b75
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71061935"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684876"
 ---
 # <a name="control-size-and-density"></a>컨트롤 크기 및 밀도
 
@@ -72,7 +72,7 @@ Windows 10 2018년 10월 업데이트(버전 1809)의 경우 모든 사용 시�
 
 ### <a name="examples"></a>예
 
-컴팩트 크기는 페이지 수준에서 또는 특정 레이아웃에서 애플리케이션을 사용하여 지정할 수 있는 특수 리소스 사전을 통해 구현됩니다. 리소스 사전은 [WinUI](https://docs.microsoft.com/en-us/uwp/toolkits/winui/) Nuget 패키지에서 사용할 수 있습니다.
+컴팩트 크기는 페이지 수준에서 또는 특정 레이아웃에서 애플리케이션을 사용하여 지정할 수 있는 특수 리소스 사전을 통해 구현됩니다. 리소스 사전은 [WinUI](https://docs.microsoft.com/uwp/toolkits/winui/) Nuget 패키지에서 사용할 수 있습니다.
 
 다음 예제에서는 페이지 및 개별 그리드 컨트롤에 `Compact` 스타일을 적용하는 방법을 보여줍니다.
 
@@ -94,13 +94,13 @@ Windows 10 2018년 10월 업데이트(버전 1809)의 경우 모든 사용 시�
 </Grid>
 ```
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [터치 대상에 대한 지침](../input/guidelines-for-targeting.md)
-- [ResourceDictionary 및 XAML 리소스 참조](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)
-- [리소스 사전](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.resourcedictionary)
-- [XAML 스타일](https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/xaml-styles) 
+- [ResourceDictionary 및 XAML 리소스 참조](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)
+- [리소스 사전](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary)
+- [XAML 스타일](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-styles) 

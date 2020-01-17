@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b0d226a9492a2218edf20e68b8216ea513ca12a
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: fdb06581639391c09c445c8497f67af28a8405df
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260534"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75685010"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
@@ -54,19 +54,19 @@ C++ /WinRT 또는 C++ /CX로 작성된 UWP 앱은 UWP의 일부인 Win32 API에 
 
 UI 요소는 레이아웃과 배율을 조정하여 앱이 실행 중인 화면의 크기와 DPI에 응답합니다. UWP 앱은 키보드, 마우스, 터치, 펜 및 Xbox One 컨트롤러 같이 여러 유형의 입력에서 원활하게 작동합니다. 특정 화면 크기나 디바이스로 UI를 추가적으로 사용자 지정해야 하는 경우에는 앱이 실행되는 다양한 디바이스 및 폼 팩터에 맞게 UI를 디자인할 수 있는 데 새 레이아웃 패널 및 도구를 사용할 수 있습니다.
 
-![Windows 기반 장치](images/1894834-hig-device-primer-01-500.png)
+![Windows 기반 디바이스](images/1894834-hig-device-primer-01-500.png)
 
-Windows에서는 다음과 같은 기능으로 UI를 여러 장치에 맞게 조정하도록 도와줍니다.
+Windows에서는 다음과 같은 기능으로 UI를 여러 디바이스에 맞게 조정하도록 도와줍니다.
 
 - 유니버설 컨트롤 및 레이아웃 패널을 사용하면 디바이스의 화면 해상도에 맞게 UI를 최적화할 수 있습니다. 예를 들어, 단추나 슬라이드 같은 컨트롤은 디바이스의 화면 크기와 DPI 밀도에 자동으로 맞춰집니다. 레이아웃 패널에서는 화면 크기에 따라 콘텐츠 레이아웃을 편리하게 조정할 수 있습니다. 적응형 크기 조정은 디바이스 간의 해상도 및 DPI 차이에 맞게 조정됩니다.
 - 일반적인 입력 처리는 터치, 펜, 마우스, 키보드 또는 Microsoft Xbox 컨트롤러와 같은 컨트롤러를 통해 입력을 받을 수 있도록 해줍니다.
 - 다양한 화면 해상도에 맞게 조정이 가능하도록 UI를 디자인할 수 있는 유용한 도구입니다.
 
-앱 UI의 일부 측면은 장치 간에 자동으로 적응합니다. 그러나 앱의 사용자 환경은 앱이 실행되는 장치에 따라 수동으로 적응해야 할 수도 있습니다. 예를 들어 사진 앱은 소형 핸드헬드 디바이스에서 실행될 때 한손으로 사용하기에 적합하도록 UI를 조정할 수 있습니다. 사진 앱을 데스크톱 컴퓨터에서 실행할 때는 추가 화면 공간을 활용하도록 UI를 조정해야 합니다.
+앱 UI의 일부 측면은 디바이스 간에 자동으로 적응합니다. 그러나 앱의 사용자 환경은 앱이 실행되는 디바이스에 따라 수동으로 적응해야 할 수도 있습니다. 예를 들어 사진 앱은 소형 핸드헬드 디바이스에서 실행될 때 한손으로 사용하기에 적합하도록 UI를 조정할 수 있습니다. 사진 앱을 데스크톱 컴퓨터에서 실행할 때는 추가 화면 공간을 활용하도록 UI를 조정해야 합니다.
 
 ## <a name="theres-one-store-for-all-devices"></a>모든 디바이스를 위한 하나의 Store
 
-통합 앱 Store에서는 PC, 태블릿, Xbox, HoloLens, Surface Hub, IoT(사물 인터넷) 같은 Windows 10 디바이스에서 앱을 사용할 수 있습니다. 앱을 Store에 제출하고 모든 유형의 디바이스에서, 또는 선택한 디바이스에서 이를 사용하도록 할 수 있습니다. 한 곳에서 모든 Windows 장치용 앱을 제출하고 관리합니다. UWP 기능으로 현대화하고 Microsoft Store에서 판매하고 싶은 C++ 데스크톱 앱이 있나요? 그것도 가능합니다.
+통합 앱 Store에서는 PC, 태블릿, Xbox, HoloLens, Surface Hub, IoT(사물 인터넷) 같은 Windows 10 디바이스에서 앱을 사용할 수 있습니다. 앱을 Store에 제출하고 모든 유형의 디바이스에서, 또는 선택한 디바이스에서 이를 사용하도록 할 수 있습니다. 한 곳에서 모든 Windows 디바이스용 앱을 제출하고 관리합니다. UWP 기능으로 현대화하고 Microsoft Store에서 판매하고 싶은 C++ 데스크톱 앱이 있나요? 그것도 가능합니다.
 
 사용자에 대한 이해를 높이고 앱을 개선하는 데 중요한 도구인 상세 원격 분석용 [Application Insights](https://azure.microsoft.com/services/application-insights/)에 UWP 앱이 연결됩니다.
 
@@ -94,7 +94,7 @@ UWP 앱에서 사용자의 참여도를 높이는 방법은 여러 가지가 있
 - 사용자 활동 덕분에 사용자가 디바이스 전반의 걸쳐 앱을 떠나는 지점을 선택할 수 있습니다.
 - 알림 센터에는 앱에서 제공된 알림이 정리되어 있습니다.
 - 백그라운드 실행 및 트리거는 사용자가 필요할 때만 앱을 실행합니다.
-- 사용자가 전 세계와 상호 작용하는 데 도움이 되도록 앱에서 음성 및 Bluetooth LE 장치를 사용할 수 있습니다.
+- 사용자가 전 세계와 상호 작용하는 데 도움이 되도록 앱에서 음성 및 Bluetooth LE 디바이스를 사용할 수 있습니다.
 - 앱에 음성 명령 기능을 추가하려면 Cortana를 연결합니다.
 
 ##  <a name="use-a-language-you-already-know"></a>이미 알고 있는 언어 사용
@@ -115,9 +115,9 @@ UWP 앱은 운영 체제에서 제공되는 네이티브 API인 Windows 런타�
 
 Microsoft의 디자인 시스템을 Fluent라고 합니다. Fluent Design System은 혁신적인 UWP 기능이 결집된 구현체로서 모든 유형의 Windows 기반 디바이스에서 높은 성능을 발휘할 수 있는 앱을 개발하기 위한 모범 사례가 여기에 통합되어 있습니다. Fluent 환경은 태블릿부터 노트북, PC, TV 및 가상 현실 디바이스에 이르기까지 모든 디바이스에 적응하여 자연스러운 경험을 제공합니다. Fluent Design에 대한 내용은 [UWP 앱을 위한 Fluent Design System](https://docs.microsoft.com/windows/uwp/design/fluent-design-system)을 참조하세요.
 
-좋은 [디자인](http://design.windows.com/)이란 모양과 기능 외에도 사용자가 앱과 상호 작용하는 방식을 고려한 것입니다. 사용자 환경은 앱 사용의 즐거움을 결정하는 데 중요한 역할을 하므로 이 단계를 간과해서는 안 됩니다. [디자인 기본 사항](https://developer.microsoft.com/en-us/windows/apps/design)에서는 유니버설 Windows 앱 디자인을 소개합니다. 사용자를 즐겁게 해주는 UWP 앱을 디자인하는 방법은 [디자이너용 UWP(유니버설 Windows 플랫폼) 앱 소개](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro)를 참조하세요. 코딩을 시작하기 전에 [디바이스 입문](../design/devices/index.md)을 참조하면 대상으로 지정하려는 다양한 폼 팩터에서 앱을 사용하는 조작 환경을 생각하는 데 도움이 됩니다.
+좋은 [디자인](http://design.windows.com/)이란 모양과 기능 외에도 사용자가 앱과 상호 작용하는 방식을 고려한 것입니다. 사용자 환경은 앱 사용의 즐거움을 결정하는 데 중요한 역할을 하므로 이 단계를 간과해서는 안 됩니다. [디자인 기본 사항](https://developer.microsoft.com/windows/apps/design)에서는 유니버설 Windows 앱 디자인을 소개합니다. 사용자를 즐겁게 해주는 UWP 앱을 디자인하는 방법은 [디자이너용 UWP(유니버설 Windows 플랫폼) 앱 소개](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro)를 참조하세요. 코딩을 시작하기 전에 [디바이스 입문](../design/devices/index.md)을 참조하면 대상으로 지정하려는 다양한 폼 팩터에서 앱을 사용하는 조작 환경을 고려하는 데 도움이 됩니다.
 
-다양한 디바이스에서의 조작 외에도 여러 디바이스의 이점을 수용하도록 [앱을 계획](https://docs.microsoft.com/windows/uwp/get-started/plan-your-app)해야 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+다양한 디바이스에서의 조작 외에도 여러 디바이스의 이점을 수용하도록 [앱을 계획](https://docs.microsoft.com/windows/uwp/get-started/plan-your-app)해야 합니다. 예:
 
 - [UWP 앱의 탐색 디자인 기본 사항](https://docs.microsoft.com/windows/uwp/layout/navigation-basics)에 따라 모바일, 작은 화면 및 큰 화면 디바이스를 수용하도록 워크플로를 디자인합니다. 다양한 화면 크기와 해상도에 맞게 [사용자 인터페이스를 레이아웃](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design)합니다.
 
@@ -127,7 +127,7 @@ Microsoft의 디자인 시스템을 Fluent라고 합니다. Fluent Design System
 
 - 디바이스 간에 동기화하려면 [클라우드 서비스](https://azure.microsoft.com/documentation/services/cloud-services)를 사용합니다.
 - 앱 환경에서 지원하기 위해 [웹 서비스에 연결](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))하는 방법을 알아보세요.
-- [푸시 알림](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) 및 [앱에서 바로 구매](https://docs.microsoft.com/windows/uwp/monetize/enable-in-app-product-purchases)를 계획에 포함합니다. 이러한 기능은 장치 간에 작동해야 합니다.
+- [푸시 알림](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview) 및 [앱에서 바로 구매](https://docs.microsoft.com/windows/uwp/monetize/enable-in-app-product-purchases)를 계획에 포함합니다. 이러한 기능은 디바이스 간에 작동해야 합니다.
 
 ### <a name="submit-your-app-to-the-store"></a>스토어에 앱 제출
 

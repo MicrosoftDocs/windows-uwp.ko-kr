@@ -7,12 +7,12 @@ ms.date: 12/3/2019
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: anawish
-ms.openlocfilehash: 93f11c31866c50950a1f6c63632a77e01b296038
-ms.sourcegitcommit: e272af7ece8e449f46357b392d80dc1a0f44e625
+ms.openlocfilehash: 24669b81c244339509e30a43a0da8a2b27e67eeb
+ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74799755"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302657"
 ---
 # <a name="filtering-collections-and-lists-through-user-input"></a>사용자 입력을 통해 컬렉션 및 목록 필터링
 컬렉션에 많은 항목이 표시되거나 사용자 상호 작용에 크게 얽매이는 경우 필터링은 구현에 유용한 기능입니다. 이 문서에서 설명하는 메서드를 사용하는 필터링은 [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview) 및 [ItemsRepeater](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)를 비롯한 대부분의 컬렉션 컨트롤에 구현될 수 있습니다. 확인란, 라디오 단추 및 슬라이더와 같은 컬렉션을 필터링하는 데 많은 유형의 사용자 입력을 사용할 수 있습니다. 하지만 이 문서에서는 텍스트 기반 사용자 입력을 수집하여 사용자의 검색에 따라 실시간으로 ListView를 업데이트하는 데 초점을 맞춥니다. 
@@ -35,6 +35,10 @@ ms.locfileid: "74799755"
         <ColumnDefinition Width="1*"></ColumnDefinition>
         <ColumnDefinition Width="1*"></ColumnDefinition>
     </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+            <RowDefinition Height="400"></RowDefinition>
+            <RowDefinition Height="400"></RowDefinition>
+    </Grid.RowDefinitions>
 
     <ListView x:Name="FilteredListView"
                 Grid.Column="0"
@@ -54,8 +58,9 @@ ms.locfileid: "74799755"
 
     </ListView>
 
-    <TextBox x:Name="FilterByLName" Grid.Column="1" Width="150" Header="Last Name" 
-             Margin="8" HorizontalAlignment="Left" TextChanged="FilteredLV_LNameChanged"/>
+    <TextBox x:Name="FilterByLName" Grid.Column="1" Header="Last Name" Width="200"
+             HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,20"
+             TextChanged="FilteredLV_LNameChanged"/>
 </Grid>
 ```
 ## <a name="filtering-the-data"></a>데이터 필터링
@@ -78,7 +83,8 @@ using System.Linq;
 
 public MainPage()
 {
-    // Define People collection to hold all Person objects. Populate collection - i.e. add Person objects (not shown)
+    // Define People collection to hold all Person objects. 
+    // Populate collection - i.e. add Person objects (not shown)
     IList<Person> People = new List<Person>();
 
     // Create PeopleFiltered collection and copy data from original People collection
@@ -92,13 +98,16 @@ public MainPage()
 
 private void FilteredLV_LNameChanged(object sender, TextChangedEventArgs e)
 {
-    // Perform a Linq query to find all Person objects (from the original People collection) that fit the criteria of the filter, save them in a new collection object called TempFiltered.
-    ObservableCollection<Person> TempFiltered = new ObservableCollection<Person>();
+    /* Perform a Linq query to find all Person objects (from the original People collection)
+    that fit the criteria of the filter, save them in a new List called TempFiltered. */
+    List<Person> TempFiltered;
     
-    // Make sure all text is case-insensitive when comparing
-    TempFiltered = People.Where(contact => contact.LastName.ToLower().Contains(FilterByLastName.Text.ToLower()));
+    /* Make sure all text is case-insensitive when comparing, and make sure 
+    the filtered items are in a List object */
+    TempFiltered = people.Where(contact => contact.LastName.Contains(FilterByLName.Text, StringComparison.InvariantCultureIgnoreCase)).ToList();
     
-    // Go through TempFiltered and compare it with the current PeopleFiltered collection, adding and subtracting items as necessary:
+    /* Go through TempFiltered and compare it with the current PeopleFiltered collection,
+    adding and subtracting items as necessary: */
 
     // First, remove any Person objects in PeopleFiltered that are not in TempFiltered
     for (int i = PeopleFiltered.Count - 1; i >= 0; i--)
@@ -110,7 +119,8 @@ private void FilteredLV_LNameChanged(object sender, TextChangedEventArgs e)
         }
     }
 
-    // Next, add back any Person objects that are included in TempFiltered and may not currently be in PeopleFiltered (in case of a backspace)
+    /* Next, add back any Person objects that are included in TempFiltered and may 
+    not currently be in PeopleFiltered (in case of a backspace) */
 
     foreach (var item in TempFiltered)
     {
@@ -126,11 +136,11 @@ private void FilteredLV_LNameChanged(object sender, TextChangedEventArgs e)
 
 ## <a name="next-steps"></a>다음 단계
 
-### <a name="get-the-sample-code"></a>샘플 코드 다운로드
+### <a name="get-the-sample-code"></a>샘플 코드 가져오기
 - XAML 컨트롤 갤러리</strong> 앱이 설치되어 있는 경우 [여기](xamlcontrolsgallery:/item/ListView)를 클릭하여 앱을 열고 ListView 페이지에서 목록 필터링에 관한 더 강력하고 심층적인 예제를 확인하세요.
 - [XAML 컨트롤 갤러리 앱(Microsoft Store)](https://www.microsoft.com/store/productId/9MSVH128X2ZT) 가져오기
 
-### <a name="related-articles"></a>관련 문서
+### <a name="related-articles"></a>관련된 문서
 - [목록](lists.md)
 - [목록 보기 및 그리드 보기](listview-and-gridview.md)
 - [컬렉션 명령](collection-commanding.md)

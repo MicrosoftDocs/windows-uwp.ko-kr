@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 799913688f04421cae6b47f0d4b7db2fb1074ed4
-ms.sourcegitcommit: bf95c8b29145a224957a940512394e6aa97cb90f
+ms.openlocfilehash: de7a430248841722aedd960cd485ea24499fdd00
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71061923"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684271"
 ---
 # <a name="web-view"></a>웹 보기
 
@@ -88,7 +88,7 @@ webView1.Navigate("http://www.contoso.com");
 
 POST 요청과 HTTP 헤더가 포함된 URI로 이동하려면 [NavigateWithHttpRequestMessage](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigatewithhttprequestmessage) 메서드를 사용합니다. 이 메서드는 [HttpRequestMessage.Method](https://docs.microsoft.com/uwp/api/windows.web.http.httprequestmessage.method) 속성 값에 대해 [HttpMethod.Post](https://docs.microsoft.com/uwp/api/windows.web.http.httpmethod.post) 및 [HttpMethod.Get](https://docs.microsoft.com/uwp/api/windows.web.http.httpmethod.get)만 지원합니다. 
 
-앱의 [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder) 또는 [TemporaryFolder](/uwp/api/windows.storage.applicationdata.temporaryfolder) 데이터 저장소에서 압축 및 암호화되지 않은 콘텐츠를 로드하려면 [ms-appdata 체계](/windows/uwp/app-resources/uri-schemes)를 사용하는 **Uri**와 함께 **Navigate** 메서드를 사용합니다. 웹 보기에서 이 체계를 지원하려면 로컬 또는 임시 폴더 아래의 하위 폴더에 콘텐츠를 배치해야 합니다. 이렇게 하면 ms-appdata:///local/*folder*/*file*.html 및 ms-appdata:///temp/*folder*/*file*.html과 같은 URI로 이동할 수 있습니다. 압축 또는 암호화된 파일을 로드하려면 [NavigateToLocalStreamUri](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigatetolocalstreamuri)를 참조하세요. 
+앱의 [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder) 또는 [TemporaryFolder](/uwp/api/windows.storage.applicationdata.temporaryfolder) 데이터 저장소에서 압축 및 암호화되지 않은 콘텐츠를 로드하려면 [ms-appdata 체계](/windows/uwp/app-resources/uri-schemes)를 사용하는 **Uri**와 함께 **Navigate** 메서드를 사용합니다. 웹 보기에서 이 체계를 지원하려면 로컬 또는 임시 폴더 아래의 하위 폴더에 콘텐츠를 배치해야 합니다. 이렇게 하면 ms-appdata:///local/*folder*/*file*.html 및 ms-appdata:///temp/*folder*/*file*.html과 같은 URI로 이동할 수 있습니다. (압축 또는 암호화된 파일을 로드하려면 [NavigateToLocalStreamUri](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigatetolocalstreamuri)를 참조하세요.) 
 
 이러한 각 첫 번째 수준 하위 폴더는 다른 첫 번째 수준 하위 폴더의 콘텐츠와 분리됩니다. 예를 들어 ms-appdata:///temp/folder1/file.html로 이동할 수 있지만 이 파일에서 ms-appdata:///temp/folder2/file.html에 대한 링크를 사용할 수는 없습니다. 그러나 **ms-appx-web scheme**을 사용하여 앱 패키지의 HTML 콘텐츠에 연결하고, **http** 및 **https** URI 체계를 사용하여 웹 콘텐츠에 연결할 수 있습니다.
 
@@ -102,7 +102,7 @@ webView1.Navigate("ms-appdata:///local/intro/welcome.html");
 webView1.Navigate("ms-appx-web:///help/about.html");
 ```
 
-[NavigateToLocalStreamUri](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigatetolocalstreamuri) 메서드를 사용하여 사용자 지정 확인자를 통해 로컬 콘텐츠를 로드할 수 있습니다. 이 기능을 통해 웹 기반 콘텐츠를 오프라인에서 사용하기 위해 다운로드 및 캐시, 압축 파일에서 콘텐츠 추출 등의 고급 시나리오를 사용할 수 있습니다.
+[NavigateToLocalStreamUri](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.navigatetolocalstreamuri) 메서드를 사용하여 사용자 지정 확인자를 통해 로컬 콘텐츠를 로드할 수 있습니다. 이 기능을 통해 웹 기반 콘텐츠를 오프라인에서 사용하기 위해 다운로드 및 캐싱, 압축 파일에서 콘텐츠 추출 등의 고급 시나리오를 사용할 수 있습니다.
 
 ### <a name="responding-to-navigation-events"></a>탐색 이벤트에 응답
 
@@ -214,7 +214,7 @@ private void webView_ContainsFullScreenElementChanged(WebView sender, object arg
 
 [NewWindowRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.newwindowrequested) 이벤트를 사용하여 호스트된 웹 콘텐츠가 팝업 창과 같은 새 창을 표시하도록 요청하는 경우를 처리할 수 있습니다. 다른 WebView 컨트롤을 사용하여 요청된 창의 내용을 표시할 수 있습니다.
 
-특수 기능이 필요한 웹 기능을 사용하도록 설정하려면 [PermissionRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.permissionrequested) 이벤트를 사용합니다. 현재 이러한 기능에는 지리적 위치, IndexedDB 저장소, 사용자 오디오 및 동영상(예: 마이크 또는 webcam에서 제공)이 포함됩니다. 앱이 사용자 위치나 사용자 미디어에 액세스하는 경우에도 앱 매니페스트에서 이 기능을 선언해야 합니다. 예를 들어 지리적 위치를 사용하는 앱은 Package.appxmanifest에 최소한 다음과 같은 기능 선언이 있어야 합니다.
+특수 기능이 필요한 웹 기능을 사용하도록 설정하려면 [PermissionRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.permissionrequested) 이벤트를 사용합니다. 현재 이러한 기능에는 지리적 위치, IndexedDB 스토리지, 사용자 오디오 및 동영상(예: 마이크 또는 webcam에서 제공)이 포함됩니다. 앱이 사용자 위치나 사용자 미디어에 액세스하는 경우에도 앱 매니페스트에서 이 기능을 선언해야 합니다. 예를 들어 지리적 위치를 사용하는 앱은 Package.appxmanifest에 최소한 다음과 같은 기능 선언이 있어야 합니다.
 
 ```xml
   <Capabilities>
@@ -225,7 +225,7 @@ private void webView_ContainsFullScreenElementChanged(WebView sender, object arg
 
 앱에서 [PermissionRequested](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.permissionrequested) 이벤트를 처리하는 것 외에도 사용자는 이러한 기능을 사용할 수 있도록 위치 또는 미디어 기능을 요청하는 앱에 대해 표준 시스템 대화 상자를 승인해야 합니다.
 
-다음은 앱이 Bing 지도에서 지리적 위치를 사용하도록 설정하는 방법의 예입니다.
+다음은 앱이 Bing의 맵에서 지리적 위치를 사용하도록 설정하는 방법의 예입니다.
 
 ```csharp
 // Assume webView is defined in XAML
@@ -321,7 +321,7 @@ private void webView_NavigationStarting(WebView sender, WebViewNavigationStartin
 
 ### <a name="threading-behavior"></a>스레딩 동작
 
-기본적으로 웹 보기 콘텐츠는 데스크톱 디바이스 패밀리의 디바이스에 있는 UI 스레드와 다른 모든 디바이스의 UI 스레드 외부에 호스트됩니다. [WebView.DefaultExecutionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.defaultexecutionmode) 정적 속성을 사용하여 현재 클라이언트의 기본 스레딩 동작을 쿼리할 수 있습니다. 필요한 경우 [WebView(WebViewExecutionMode)](https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.controls.webview.-ctor#Windows_UI_Xaml_Controls_WebView__ctor_Windows_UI_Xaml_Controls_WebViewExecutionMode_) 생성자를 사용하여 이 동작을 재정의할 수 있습니다. 
+기본적으로 웹 보기 콘텐츠는 데스크톱 디바이스 패밀리의 디바이스에 있는 UI 스레드와 다른 모든 디바이스의 UI 스레드 외부에 호스트됩니다. [WebView.DefaultExecutionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.defaultexecutionmode) 정적 속성을 사용하여 현재 클라이언트의 기본 스레딩 동작을 쿼리할 수 있습니다. 필요한 경우 [WebView(WebViewExecutionMode)](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.webview.-ctor#Windows_UI_Xaml_Controls_WebView__ctor_Windows_UI_Xaml_Controls_WebViewExecutionMode_) 생성자를 사용하여 이 동작을 재정의할 수 있습니다. 
 
 > **참고**&nbsp;&nbsp;모바일 디바이스의 UI 스레드에서 콘텐츠를 호스트할 때 성능 문제가 발생할 수도 있으므로 DefaultExecutionMode를 변경하는 경우 모든 대상 디바이스에서 테스트해야 합니다.
 
@@ -330,11 +330,11 @@ UI 스레드 외부에서 콘텐츠를 호스트하는 웹 보기는 웹 보기 
 ## <a name="recommendations"></a>권장 사항
 
 
--   로드된 웹 사이트의 형식이 장치에 맞게 지정되고 앱의 나머지 부분과 일관된 색, 입력 체계, 탐색이 사용되는지 확인합니다.
+-   로드된 웹 사이트의 형식이 디바이스에 맞게 지정되고 앱의 나머지 부분과 일관된 색, 입력 체계, 탐색이 사용되는지 확인합니다.
 -   입력 필드는 크기가 적절해야 합니다. 사용자는 텍스트를 입력하기 위해 확대할 수 있다는 점을 알지 못할 수 있습니다.
 -   웹 보기가 앱의 나머지 부분과 다르게 보일 경우 대체 컨트롤이나 방법을 사용하여 관련 작업을 수행하는 것이 좋습니다. 웹 보기가 앱의 나머지 부분과 일치하는 경우 사용자는 웹 보기를 하나의 완벽한 환경으로 봅니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 

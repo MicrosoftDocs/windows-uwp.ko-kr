@@ -6,16 +6,16 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 4671b3048850197cc33e6878b814b2c26792e36c
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 59b5b6dc3b359aa68b8282375a0fcb1716cdef50
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258844"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684731"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-18362"></a>개발자용 Windows 10 빌드 18362의 새로운 기능
 
-Visual Studio 2019와 Windows 10 빌드 18362(SDK 버전 1903이라고 함)를 함께 사용하면 Windows 앱을 주목할 만하게 만들 수 있는 도구, 기능 및 환경이 제공됩니다. Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Visual Studio 2019와 Windows 10 빌드 18362(SDK 버전 1903이라고 함)를 함께 사용하면 Windows 앱을 주목할 만하게 만들 수 있는 도구, 기능 및 환경이 제공됩니다. Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 살펴볼 수 있습니다.
 
 다음은 이 릴리스에서 Windows 개발자가 관심을 갖는 신규 및 개선 기능 및 안내 모음입니다. Windows SDK에 추가된 새 네임스페이스의 전체 목록은 [Windows 10 빌드 18362 API 변경 내용](windows-10-build-18362-api-diff.md)을 참조하세요. Windows 10의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://developer.microsoft.com/windows/windows-10-for-developers)을 참조하세요.
 
@@ -47,7 +47,7 @@ DirectX HLSL | [HLSL 셰이더 모델 6.4](https://docs.microsoft.com/windows/de
 드라이버 개발 | Windows 드라이버 개발자를 위해 새로운 오디오, 카메라, 디스플레이, 네트워킹, 모바일 광대역, 인쇄, 센서, 스토리지 및 WiFi 기능이 추가되었습니다. [드라이버 개발의 새로운 기능](https://docs.microsoft.com/windows-hardware/drivers/what-s-new-in-driver-development#whats-new-in-windows-10-version-1903-latest)에서 자세한 내용을 확인하세요.
 파일 시스템 작업 | 이 [모범 사례 가이드](../files/best-practices-for-writing-to-files.md)는 최선의 방식으로 Windows.Storage.FileIO 및 Windows.Storage.PathIO 클래스를 사용하여 파일 시스템 I/O 작업을 수행하는 데 유용할 수 있습니다.
 게임 패드 및 리모컨 조작 | [게임 패드 및 리모컨 조작](../design/input/gamepad-and-remote-interactions.md)을 사용하여 유용하고 액세스 가능한 조작 환경을 구축할 수 있습니다. 이러한 조작을 사용하여 애플리케이션에서 3m 떨어진 위치에서도 60cm 정도 떨어진 것처럼 편리하고 쉽게 작업할 수 있습니다.
-일본 연호 변경 | Windows 애플리케이션에서 2019년 5월 1일에 일본 연호 변경 세트가 적용될 준비를 수행하는 방법을 보여 주기 위해 [이러한 지침](../design/globalizing/japanese-era-change.md)을 제공했습니다. [또한 이 페이지는 일본어로도 제공됩니다](https://docs.microsoft.com/ja-jp/windows/uwp/design/globalizing/japanese-era-change).
+일본 연호 변경 | Windows 애플리케이션에서 2019년 5월 1일에 일본 연호 변경 세트가 적용될 준비를 수행하는 방법을 보여 주기 위해 [이러한 지침](../design/globalizing/japanese-era-change.md)을 제공했습니다. 이 페이지는 일본어로도 제공됩니다(문서 하단의 언어 컨트롤을 클릭하고 일본어 선택).
 WPF, Windows Forms 및 WinUI의 오픈 소스 | 이제 GitHub에서 WPF, Windows Forms 및 WinUI UX 프레임워크로도 오픈 소스를 제공하고 있습니다. 자세한 내용과 링크를 보려면 [Windows 앱 빌드 블로그](https://blogs.windows.com/buildingapps/2018/12/04/announcing-open-source-of-wpf-windows-forms-and-winui-at-microsoft-connect-2018/#OKZjJs1VVTrMMtkL.97)를 참조하세요.
 Xbox용 점진적 웹앱 | [Xbox One용 점진적 웹앱](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/xbox-considerations)을 사용하면 기존 프레임워크, CDN 및 서버 백 엔드를 계속 사용하면서 웹 애플리케이션을 확장하고 Microsoft Store를 통해 Xbox One 앱으로 사용하도록 제공할 수 있습니다. 대부분의 경우 PWA를 Windows용으로 패키징하는 것과 마찬가지로 Xbox One용으로도 패키징할 수 있습니다. 이 가이드에서는 이 프로세스를 안내하고 주요 차이점을 강조 표시합니다.
 프로젝트 로마 | 이제 Android 및 iOS용으로 제공되는 프로젝트 “로마” SDK를 사용할 수 있습니다. Graph 알림을 각 플랫폼 [Android](https://docs.microsoft.com/windows/project-rome/notifications/how-to-guide-for-android) 및 [iOS](https://docs.microsoft.com/windows/project-rome/notifications/how-to-guide-for-ios)에 연결하는 방법을 알아보세요.
@@ -83,9 +83,9 @@ Microsoft Learn에서는 Microsoft 개발자에게 새 실습 학습 및 교육 
 
 * [Microsoft Learn의 모든 Windows 개발자 모듈](https://docs.microsoft.com/learn/browse/?products=windows&resource_type=module)을 자유롭게 찾아볼 수도 있습니다.
 
-## <a name="videos"></a>비디오
+## <a name="videos"></a>동영상
 
-### <a name="progressive-web-apps"></a>점진적 웹앱
+### <a name="progressive-web-apps"></a>프로그레시브 웹앱
 
 점진적 웹앱은 다른 브라우저 및 다양한 Windows 10 디바이스에서 네이티브 앱처럼 작동하는 웹 사이트입니다. [비디오를 시청하여](https://youtu.be/ugAewC3308Y) 방법을 알아보고 [관련 문서를 확인하여](https://developer.microsoft.com/windows/pwa) 시작하세요.
 

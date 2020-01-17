@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a615e00513bba0ba21f2f9a18fa0c8cdda31cb3f
-ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
+ms.openlocfilehash: b2003553ae7bf41b9c472f59528b46f39a07900c
+ms.sourcegitcommit: cd185e16d976f2d149312d39d560681538070e3b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414131"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75737656"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2 아이콘
 
@@ -38,7 +38,7 @@ Windows 10 릴리스에서 Windows 8/8.1의 Segoe UI Symbol 아이콘 글꼴이 
 
 **Segoe MDL2 Assets**의 모든 문자 모양은 높이와 왼쪽 원점이 일관된 동일한 고정 너비를 가지므로 서로 위에 직접 문자 모양을 그려 계층화 및 색 지정 효과를 얻을 수 있습니다. 이 예제는 너비가 0인 빨간색 하트 위에 그려진 검은색 윤곽선을 보여 줍니다.
 
-![폭이 0인 문자 모양 사용](images/segoe-ui-symbol-layering.png)
+![너비가 0인 문자 모양 사용](images/segoe-ui-symbol-layering.png)
 
 또한 많은 아이콘에는 아랍어, 페르시아어 및 히브리어와 같은 오른쪽에서 왼쪽 텍스트 방향을 사용하는 언어에 사용할 수 있는 미러링된 양식이 있습니다.
 
@@ -73,7 +73,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 <table style="background-color: white; color: black">
 
  <tr>
-  <td>Symbol</td>
+  <td>기호</td>
   <td>유니코드 포인트</td>
   <td>설명</td>
  </tr>
@@ -91,7 +91,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E703.png" width="32" height="32" alt="Connect" /></td>
   <td>E703</td>
-  <td>연결</td>
+  <td>파일</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E704.png" width="32" height="32" alt="InternetSharing" /></td>
   <td>E704</td>
@@ -115,7 +115,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E709.png" width="32" height="32" alt="Airplane" /></td>
   <td>E709</td>
-  <td>Airplane</td>
+  <td>비행기</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E70A.png" width="32" height="32" alt="Tablet" /></td>
   <td>E70A</td>
@@ -147,15 +147,15 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E711.png" width="32" height="32" alt="Cancel" /></td>
   <td>E711</td>
-  <td>Cancel</td>
+  <td>취소</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E712.png" width="32" height="32" alt="More" /></td>
   <td>E712</td>
-  <td>More</td>
+  <td>자세히</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E713.png" width="32" height="32" alt="Settings" /></td>
   <td>E713</td>
-  <td>설정</td>
+  <td>Settings</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E714.png" width="32" height="32" alt="Video" /></td>
   <td>E714</td>
@@ -163,11 +163,11 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E715.png" width="32" height="32" alt="Mail" /></td>
   <td>E715</td>
-  <td>Mail</td>
+  <td>메일</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E716.png" width="32" height="32" alt="People" /></td>
   <td>E716</td>
-  <td>피플</td>
+  <td>사용자</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E717.png" width="32" height="32" alt="Phone" /></td>
   <td>E717</td>
@@ -179,15 +179,15 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E719.png" width="32" height="32" alt="Shop" /></td>
   <td>E719</td>
-  <td>Shop</td>
+  <td>쇼핑</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E71A.png" width="32" height="32" alt="Stop" /></td>
   <td>E71A</td>
-  <td>Stop</td>
+  <td>중지</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E71B.png" width="32" height="32" alt="Link" /></td>
   <td>E71B</td>
-  <td>Link</td>
+  <td>링크</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E71C.png" width="32" height="32" alt="Filter" /></td>
   <td>E71C</td>
@@ -199,7 +199,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E71E.png" width="32" height="32" alt="Zoom" /></td>
   <td>E71E</td>
-  <td>Zoom</td>
+  <td>확대/축소</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E71F.png" width="32" height="32" alt="ZoomOut" /></td>
   <td>E71F</td>
@@ -219,11 +219,11 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E723.png" width="32" height="32" alt="Attach" /></td>
   <td>E723</td>
-  <td>Attach</td>
+  <td>연결</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E724.png" width="32" height="32" alt="Send" /></td>
   <td>E724</td>
-  <td>Send</td>
+  <td>보내기</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E725.png" width="32" height="32" alt="SendFill" /></td>
   <td>E725</td>
@@ -247,11 +247,11 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E72A.png" width="32" height="32" alt="Forward" /></td>
   <td>E72A</td>
-  <td>Forward</td>
+  <td>앞으로</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E72B.png" width="32" height="32" alt="Back" /></td>
   <td>E72B</td>
-  <td>Back</td>
+  <td>뒤로</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E72C.png" width="32" height="32" alt="Refresh" /></td>
   <td>E72C</td>
@@ -259,11 +259,11 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E72D.png" width="32" height="32" alt="Share" /></td>
   <td>E72D</td>
-  <td>Share</td>
+  <td>공유</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E72E.png" width="32" height="32" alt="Lock" /></td>
   <td>E72E</td>
-  <td>Lock</td>
+  <td>잠금</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E730.png" width="32" height="32" alt="ReportHacked" /></td>
   <td>E730</td>
@@ -363,11 +363,11 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E74A.png" width="32" height="32" alt="Up" /></td>
   <td>E74A</td>
-  <td>위쪽</td>
+  <td>위로</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E74B.png" width="32" height="32" alt="Down" /></td>
   <td>E74B</td>
-  <td>아래쪽</td>
+  <td>아래로</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E74C.png" width="32" height="32" alt="OEM" /></td>
   <td>E74C</td>
@@ -383,7 +383,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E74F.png" width="32" height="32" alt="Mute" /></td>
   <td>E74F</td>
-  <td>Mute</td>
+  <td>음소거</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E750.png" width="32" height="32" alt="BackSpaceQWERTY" /></td>
   <td>E750</td>
@@ -403,7 +403,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E754.png" width="32" height="32" alt="Flashlight" /></td>
   <td>E754</td>
-  <td>Flashlight</td>
+  <td>손전등</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E755.png" width="32" height="32" alt="RotationLock" /></td>
   <td>E755</td>
@@ -475,7 +475,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E768.png" width="32" height="32" alt="Play" /></td>
   <td>E768</td>
-  <td>Play</td>
+  <td>재생</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E769.png" width="32" height="32" alt="Pause" /></td>
   <td>E769</td>
@@ -511,7 +511,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E772.png" width="32" height="32" alt="Devices" /></td>
   <td>E772</td>
-  <td>장치</td>
+  <td>디바이스</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E773.png" width="32" height="32" alt="SearchAndApps" /></td>
   <td>E773</td>
@@ -535,7 +535,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E778.png" width="32" height="32" alt="HangUp" /></td>
   <td>E778</td>
-  <td>Hangup</td>
+  <td>HangUp</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E779.png" width="32" height="32" alt="ContactInfo" /></td>
   <td>E779</td>
@@ -543,15 +543,15 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E77A.png" width="32" height="32" alt="Unpin" /></td>
   <td>E77A</td>
-  <td>Unpin</td>
+  <td>고정 해제</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E77B.png" width="32" height="32" alt="Contact" /></td>
   <td>E77B</td>
-  <td>Contact</td>
+  <td>연락처</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E77C.png" width="32" height="32" alt="Memo" /></td>
   <td>E77C</td>
-  <td>Memo</td>
+  <td>메모</td>
  </tr>
  <tr><td><img src="images/segoe-mdl/E77E.png" width="32" height="32" alt="IncomingCall" /></td>
   <td>E77E</td>
@@ -571,7 +571,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E783.png" width="32" height="32" alt="Error" /></td>
   <td>E783</td>
-  <td>오류</td>
+  <td>Error</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E784.png" width="32" height="32" alt="GripperBarVertical" /></td>
   <td>E784</td>
@@ -583,11 +583,11 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E786.png" width="32" height="32" alt="Slideshow" /></td>
   <td>E786</td>
-  <td>Slideshow</td>
+  <td>슬라이드 쇼</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E787.png" width="32" height="32" alt="Calendar" /></td>
   <td>E787</td>
-  <td>일정</td>
+  <td>캘린더</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E788.png" width="32" height="32" alt="GripperResize" /></td>
   <td>E788</td>
@@ -599,7 +599,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E78A.png" width="32" height="32" alt="Trim" /></td>
   <td>E78A</td>
-  <td>Trim</td>
+  <td>공백 제거</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E78B.png" width="32" height="32" alt="NewWindow" /></td>
   <td>E78B</td>
@@ -623,7 +623,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E793.png" width="32" height="32" alt="Light" /></td>
   <td>E793</td>
-  <td>밝게</td>
+  <td>Light</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E799.png" width="32" height="32" alt="AspectRatio" /></td>
   <td>E799</td>
@@ -635,7 +635,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E7A6.png" width="32" height="32" alt="Redo" /></td>
   <td>E7A6</td>
-  <td>Redo</td>
+  <td>다시 실행</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7A7.png" width="32" height="32" alt="Undo" /></td>
   <td>E7A7</td>
@@ -651,7 +651,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E7AD.png" width="32" height="32" alt="Rotate" /></td>
   <td>E7AD</td>
-  <td>Rotate</td>
+  <td>회전</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7B3.png" width="32" height="32" alt="RedEye" /></td>
   <td>E7B3</td>
@@ -687,15 +687,15 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E7C0.png" width="32" height="32" alt="Train" /></td>
   <td>E7C0</td>
-  <td>기차</td>
+  <td>학습</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7C1.png" width="32" height="32" alt="Flag" /></td>
   <td>E7C1</td>
-  <td>Flag</td>
+  <td>플래그</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7C3.png" width="32" height="32" alt="Page" /></td>
   <td>E7C3</td>
-  <td>Page</td>
+  <td>페이지</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7C4.png" width="32" height="32" alt="TaskView" /></td>
   <td>E7C4</td>
@@ -715,7 +715,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E7C8.png" width="32" height="32" alt="Record" /></td>
   <td>E7C8</td>
-  <td>녹음</td>
+  <td>레코드</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7C9.png" width="32" height="32" alt="TouchPointer" /></td>
   <td>E7C9</td>
@@ -731,7 +731,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E7E6.png" width="32" height="32" alt="Highlight" /></td>
   <td>E7E6</td>
-  <td>Highlight</td>
+  <td>강조 표시</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7E7.png" width="32" height="32" alt="ActionCenterNotification" /></td>
   <td>E7E7</td>
@@ -763,7 +763,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E7EF.png" width="32" height="32" alt="Admin" /></td>
   <td>E7EF</td>
-  <td>관리</td>
+  <td>관리자</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E7F0.png" width="32" height="32" alt="CC" /></td>
   <td>E7F0</td>
@@ -831,7 +831,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E804.png" width="32" height="32" alt="Car" /></td>
   <td>E804</td>
-  <td>Car</td>
+  <td>자동차</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E805.png" width="32" height="32" alt="Walk" /></td>
   <td>E805</td>
@@ -915,7 +915,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E81F.png" width="32" height="32" alt="Accident" /></td>
   <td>E81F</td>
-  <td>Accident</td>
+  <td>사고</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E821.png" width="32" height="32" alt="Work" /></td>
   <td>E821</td>
@@ -923,15 +923,15 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E822.png" width="32" height="32" alt="Construction" /></td>
   <td>E822</td>
-  <td>구성</td>
+  <td>건설업</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E823.png" width="32" height="32" alt="Recent" /></td>
   <td>E823</td>
-  <td>최근 항목</td>
+  <td>최근</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E825.png" width="32" height="32" alt="Bank" /></td>
   <td>E825</td>
-  <td>Bank</td>
+  <td>은행</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E826.png" width="32" height="32" alt="DownloadMap" /></td>
   <td>E826</td>
@@ -955,7 +955,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E82D.png" width="32" height="32" alt="Dictionary" /></td>
   <td>E82D</td>
-  <td>Dictionary</td>
+  <td>사전</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E82E.png" width="32" height="32" alt="DictionaryAdd" /></td>
   <td>E82E</td>
@@ -1011,7 +1011,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E840.png" width="32" height="32" alt="Pinned" /></td>
   <td>E840</td>
-  <td>Pinned</td>
+  <td>고정됨</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E841.png" width="32" height="32" alt="PinFill" /></td>
   <td>E841</td>
@@ -1231,7 +1231,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E877.png" width="32" height="32" alt="Vibrate" /></td>
   <td>E877</td>
-  <td>Vibrate</td>
+  <td>진동</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E878.png" width="32" height="32" alt="RoamingInternational" /></td>
   <td>E878</td>
@@ -1343,15 +1343,15 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E893.png" width="32" height="32" alt="Next" /></td>
   <td>E893</td>
-  <td>다음</td>
+  <td>[다음]</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E894.png" width="32" height="32" alt="Clear" /></td>
   <td>E894</td>
-  <td>Clear</td>
+  <td>지우기</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E895.png" width="32" height="32" alt="Sync" /></td>
   <td>E895</td>
-  <td>Sync</td>
+  <td>동기화</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E896.png" width="32" height="32" alt="Download" /></td>
   <td>E896</td>
@@ -1359,11 +1359,11 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E897.png" width="32" height="32" alt="Help" /></td>
   <td>E897</td>
-  <td>Help</td>
+  <td>도움말</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E898.png" width="32" height="32" alt="Upload" /></td>
   <td>E898</td>
-  <td>Upload</td>
+  <td>업로드</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E899.png" width="32" height="32" alt="Emoji" /></td>
   <td>E899</td>
@@ -1407,7 +1407,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8A4.png" width="32" height="32" alt="Bookmarks" /></td>
   <td>E8A4</td>
-  <td>Bookmarks</td>
+  <td>책갈피</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8A5.png" width="32" height="32" alt="Document" /></td>
   <td>E8A5</td>
@@ -1439,7 +1439,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8AC.png" width="32" height="32" alt="Rename" /></td>
   <td>E8AC</td>
-  <td>Rename</td>
+  <td>이름 바꾸기</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8AD.png" width="32" height="32" alt="Go" /></td>
   <td>E8AD</td>
@@ -1451,15 +1451,15 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8AF.png" width="32" height="32" alt="Remote" /></td>
   <td>E8AF</td>
-  <td>리모컨</td>
+  <td>원격</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B0.png" width="32" height="32" alt="Click" /></td>
   <td>E8B0</td>
-  <td>그룹에 타일을 추가하려면</td>
+  <td>리본 메뉴에서</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B1.png" width="32" height="32" alt="Shuffle" /></td>
   <td>E8B1</td>
-  <td>Shuffle</td>
+  <td>무작위 재생</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B2.png" width="32" height="32" alt="Movies" /></td>
   <td>E8B2</td>
@@ -1475,7 +1475,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B5.png" width="32" height="32" alt="Import" /></td>
   <td>E8B5</td>
-  <td>Import</td>
+  <td>가져오기</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B6.png" width="32" height="32" alt="ImportAll" /></td>
   <td>E8B6</td>
@@ -1487,11 +1487,11 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B8.png" width="32" height="32" alt="Webcam" /></td>
   <td>E8B8</td>
-  <td>Webcam</td>
+  <td>웹캠</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8B9.png" width="32" height="32" alt="Picture" /></td>
   <td>E8B9</td>
-  <td>사진</td>
+  <td>그림</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8BA.png" width="32" height="32" alt="Caption" /></td>
   <td>E8BA</td>
@@ -1507,11 +1507,11 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8BD.png" width="32" height="32" alt="Message" /></td>
   <td>E8BD</td>
-  <td>Message</td>
+  <td>메시지</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8BE.png" width="32" height="32" alt="Leaf" /></td>
   <td>E8BE</td>
-  <td>잎</td>
+  <td>리프</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8BF.png" width="32" height="32" alt="CalendarDay" /></td>
   <td>E8BF</td>
@@ -1523,7 +1523,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8C1.png" width="32" height="32" alt="Characters" /></td>
   <td>E8C1</td>
-  <td>Characters</td>
+  <td>문자</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8C2.png" width="32" height="32" alt="MailReplyAll" /></td>
   <td>E8C2</td>
@@ -1531,7 +1531,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8C3.png" width="32" height="32" alt="Read" /></td>
   <td>E8C3</td>
-  <td>Read</td>
+  <td>읽기</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8C4.png" width="32" height="32" alt="ShowBcc" /></td>
   <td>E8C4</td>
@@ -1563,7 +1563,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8CB.png" width="32" height="32" alt="Sort" /></td>
   <td>E8CB</td>
-  <td>Sort</td>
+  <td>정렬</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8CC.png" width="32" height="32" alt="MobileTablet" /></td>
   <td>E8CC</td>
@@ -1583,7 +1583,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8D0.png" width="32" height="32" alt="Priority" /></td>
   <td>E8D0</td>
-  <td>Priority</td>
+  <td>우선 순위</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8D1.png" width="32" height="32" alt="GotoToday" /></td>
   <td>E8D1</td>
@@ -1591,7 +1591,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8D2.png" width="32" height="32" alt="Font" /></td>
   <td>E8D2</td>
-  <td>Font</td>
+  <td>글꼴</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8D3.png" width="32" height="32" alt="FontColor" /></td>
   <td>E8D3</td>
@@ -1611,7 +1611,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8D7.png" width="32" height="32" alt="Permissions" /></td>
   <td>E8D7</td>
-  <td>권한</td>
+  <td>사용 권한</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8D8.png" width="32" height="32" alt="DisableUpdates" /></td>
   <td>E8D8</td>
@@ -1619,7 +1619,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8D9.png" width="32" height="32" alt="Unfavorite" /></td>
   <td>E8D9</td>
-  <td>Unfavorite</td>
+  <td>즐겨찾기에서 제거</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8DA.png" width="32" height="32" alt="OpenLocal" /></td>
   <td>E8DA</td>
@@ -1627,15 +1627,15 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8DB.png" width="32" height="32" alt="Italic" /></td>
   <td>E8DB</td>
-  <td>Italic</td>
+  <td>기울임꼴</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8DC.png" width="32" height="32" alt="Underline" /></td>
   <td>E8DC</td>
-  <td>Underline</td>
+  <td>밑줄</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8DD.png" width="32" height="32" alt="Bold" /></td>
   <td>E8DD</td>
-  <td>Bold</td>
+  <td>굵게</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8DE.png" width="32" height="32" alt="MoveToFolder" /></td>
   <td>E8DE</td>
@@ -1691,11 +1691,11 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8EB.png" width="32" height="32" alt="Reshare" /></td>
   <td>E8EB</td>
-  <td>Reshare</td>
+  <td>다시 공유</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8EC.png" width="32" height="32" alt="Tag" /></td>
   <td>E8EC</td>
-  <td>Tag</td>
+  <td>태그</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8ED.png" width="32" height="32" alt="RepeatOne" /></td>
   <td>E8ED</td>
@@ -1715,7 +1715,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8F1.png" width="32" height="32" alt="Library" /></td>
   <td>E8F1</td>
-  <td>Library</td>
+  <td>라이브러리</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8F2.png" width="32" height="32" alt="ChatBubbles" /></td>
   <td>E8F2</td>
@@ -1755,7 +1755,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8FB.png" width="32" height="32" alt="Accept" /></td>
   <td>E8FB</td>
-  <td>수락</td>
+  <td>동의</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8FC.png" width="32" height="32" alt="GoToStart" /></td>
   <td>E8FC</td>
@@ -1767,11 +1767,11 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E8FE.png" width="32" height="32" alt="Scan" /></td>
   <td>E8FE</td>
-  <td>Scan</td>
+  <td>검색</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E8FF.png" width="32" height="32" alt="Preview" /></td>
   <td>E8FF</td>
-  <td>Preview</td>
+  <td>미리 보기</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E902.png" width="32" height="32" alt="Group" /></td>
   <td>E902</td>
@@ -1823,7 +1823,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E90F.png" width="32" height="32" alt="Repair" /></td>
   <td>E90F</td>
-  <td>Repair</td>
+  <td>복구</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E910.png" width="32" height="32" alt="Accounts" /></td>
   <td>E910</td>
@@ -1839,7 +1839,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E913.png" width="32" height="32" alt="Street" /></td>
   <td>E913</td>
-  <td>Street</td>
+  <td>거리</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E914.png" width="32" height="32" alt="Printer3D" /></td>
   <td>E914</td>
@@ -1895,7 +1895,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E928.png" width="32" height="32" alt="Fingerprint" /></td>
   <td>E928</td>
-  <td>Fingerprint</td>
+  <td>지문</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E929.png" width="32" height="32" alt="Handwriting" /></td>
   <td>E929</td>
@@ -1919,7 +1919,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E930.png" width="32" height="32" alt="Completed" /></td>
   <td>E930</td>
-  <td>Completed</td>
+  <td>완료</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E931.png" width="32" height="32" alt="ChromeAnnotate" /></td>
   <td>E931</td>
@@ -1963,7 +1963,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E93E.png" width="32" height="32" alt="Streaming" /></td>
   <td>E93E</td>
-  <td>Streaming</td>
+  <td>스트리밍</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E943.png" width="32" height="32" alt="Code" /></td>
   <td>E943</td>
@@ -2027,7 +2027,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E952.png" width="32" height="32" alt="Dock" /></td>
   <td>E952</td>
-  <td>도킹</td>
+  <td>Dock</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E953.png" width="32" height="32" alt="MultimediaDMS" /></td>
   <td>E953</td>
@@ -2067,7 +2067,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E95E.png" width="32" height="32" alt="Health" /></td>
   <td>E95E</td>
-  <td>Health</td>
+  <td>상태</td>
  </tr>
  <tr><td><img src="images/segoe-mdl/E95F.png" width="32" height="32" alt="Wire" /></td>
   <td>E95F</td>
@@ -2087,7 +2087,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E963.png" width="32" height="32" alt="Smartcard" /></td>
   <td>E963</td>
-  <td>Smartcard</td>
+  <td>스마트 카드</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E964.png" width="32" height="32" alt="SmartcardVirtual" /></td>
   <td>E964</td>
@@ -2107,7 +2107,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E968.png" width="32" height="32" alt="Network" /></td>
   <td>E968</td>
-  <td>네트워크</td>
+  <td>Network (네트워크)</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E969.png" width="32" height="32" alt="StorageNetworkWireless" /></td>
   <td>E969</td>
@@ -2179,7 +2179,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E97C.png" width="32" height="32" alt="Type" /></td>
   <td>E97C</td>
-  <td>형식</td>
+  <td>유형</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E97D.png" width="32" height="32" alt="Korean" /></td>
   <td>E97D</td>
@@ -2251,15 +2251,15 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E993.png" width="32" height="32" alt="Volume1" /></td>
   <td>E993</td>
-  <td>Volume1</td>
+  <td>볼륨 1</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E994.png" width="32" height="32" alt="Volume2" /></td>
   <td>E994</td>
-  <td>Volume2</td>
+  <td>볼륨 2</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E995.png" width="32" height="32" alt="Volume3" /></td>
   <td>E995</td>
-  <td>Volume3</td>
+  <td>볼륨 3</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E996.png" width="32" height="32" alt="BatteryUnknown" /></td>
   <td>E996</td>
@@ -2271,7 +2271,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E99A.png" width="32" height="32" alt="Robot" /></td>
   <td>E99A</td>
-  <td>Robot</td>
+  <td>로봇</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E9A1.png" width="32" height="32" alt="TapAndSend" /></td>
   <td>E9A1</td>
@@ -2371,7 +2371,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E9CE.png" width="32" height="32" alt="Unknown" /></td>
   <td>E9CE</td>
-  <td>알 수 없음</td>
+  <td>Unknown</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E9D2.png" width="32" height="32" alt="AreaChart" /></td>
   <td>E9D2</td>
@@ -2383,7 +2383,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/E9D9.png" width="32" height="32" alt="Diagnostic" /></td>
   <td>E9D9</td>
-  <td>Diagnostic</td>
+  <td>진단</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/E9E9.png" width="32" height="32" alt="Equalizer" /></td>
   <td>E9E9</td>
@@ -2427,7 +2427,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/EA24.png" width="32" height="32" alt="Beta" /></td>
   <td>EA24</td>
-  <td>Beta</td>
+  <td>베타</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EA35.png" width="32" height="32" alt="SaveCopy" /></td>
   <td>EA35</td>
@@ -2435,7 +2435,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/EA37.png" width="32" height="32" alt="List" /></td>
   <td>EA37</td>
-  <td>List</td>
+  <td>목록</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EA38.png" width="32" height="32" alt="Asterisk" /></td>
   <td>EA38</td>
@@ -2707,7 +2707,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
  <tr><td><img src="images/segoe-mdl/EAFC.png" width="32" height="32" alt="Market" /></td>
   <td>EAFC</td>
-  <td>지역/국가</td>
+  <td>시장</td>
 </tr>
 <tr><td><img src="images/segoe-mdl/EB05.png" width="32" height="32" alt="PieSingle" /></td>
   <td>EB05</td>
@@ -2731,7 +2731,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/EB42.png" width="32" height="32" alt="Drop" /></td>
   <td>EB42</td>
-  <td>놓기</td>
+  <td>Drop</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EB44.png" width="32" height="32" alt="Radar" /></td>
   <td>EB44</td>
@@ -2775,7 +2775,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/EB50.png" width="32" height="32" alt="Reminder" /></td>
   <td>EB50</td>
-  <td>Reminder</td>
+  <td>미리 알림</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EB51.png" width="32" height="32" alt="Heart" /></td>
   <td>EB51</td>
@@ -2919,7 +2919,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/EB95.png" width="32" height="32" alt="Certificate" /></td>
   <td>EB95</td>
-  <td>Certificate</td>
+  <td>인증서</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EB96.png" width="32" height="32" alt="BackSpaceQWERTYLg" /></td>
   <td>EB96</td>
@@ -3087,7 +3087,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/EBC6.png" width="32" height="32" alt="Project" /></td>
   <td>EBC6</td>
-  <td>Project</td>
+  <td>프로젝트</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EBD2.png" width="32" height="32" alt="AdjustHologram" /></td>
   <td>EBD2</td>
@@ -3119,7 +3119,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/EBDA.png" width="32" height="32" alt="Family" /></td>
   <td>EBDA</td>
-  <td>패밀리</td>
+  <td>제품군</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EBDB.png" width="32" height="32" alt="LockFeedback" /></td>
   <td>EBDB</td>
@@ -3455,7 +3455,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/EC87.png" width="32" height="32" alt="Draw" /></td>
   <td>EC87</td>
-  <td>Draw</td>
+  <td>그리기</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EC88.png" width="32" height="32" alt="DrawSolid" /></td>
   <td>EC88</td>
@@ -3779,11 +3779,11 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/ED63.png" width="32" height="32" alt="Pencil" /></td>
   <td>ED63</td>
-  <td>Pencil</td>
+  <td>연필</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/ED64.png" width="32" height="32" alt="Marker" /></td>
   <td>ED64</td>
-  <td>Marker</td>
+  <td>표식</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/ED65.png" width="32" height="32" alt="InkingCaret" /></td>
   <td>ED65</td>
@@ -3909,9 +3909,9 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
   <td>EDE3</td>
   <td>ButtonMenu</td>
  </tr>
-<tr><td><img src="images/segoe-mdl/EDE4.png" width="32" height="32" alt="CloudSeach" /></td>
+<tr><td><img src="images/segoe-mdl/EDE4.png" width="32" height="32" alt="CloudSearch" /></td>
   <td>EDE4</td>
-  <td>CloudSeach</td>
+  <td>CloudSearch</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EDE5.png" width="32" height="32" alt="PinyinIMELogo" /></td>
   <td>EDE5</td>
@@ -4087,7 +4087,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  </tr>
 <tr><td><img src="images/segoe-mdl/EFA9.png" width="32" height="32" alt="Speech" /></td>
   <td>EFA9</td>
-  <td>음성 명령</td>
+  <td>음성</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F000.png" width="32" height="32" alt="KnowledgeArticle" /></td>
   <td>F000</td>
@@ -5518,10 +5518,10 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 
 
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 * [아이콘에 대한 지침](../style/icons.md)
-* [Symbol 열거형](https://docs.microsoft.com/en-us/uwp/api/Windows.UI.Xaml.Controls.Symbol)
+* [Symbol 열거형](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Symbol)
 * [FontIcon 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
 
 

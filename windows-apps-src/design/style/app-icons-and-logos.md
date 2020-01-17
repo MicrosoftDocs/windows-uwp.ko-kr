@@ -9,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0801ba9036f69aef340881b9c92807e80af6b09f
-ms.sourcegitcommit: e43bc20c2f6e9375f61931c2fce95f06fd1f31df
+ms.openlocfilehash: 25d9df392d6ed2725b171fe6513334a39458410b
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212065"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684593"
 ---
 # <a name="app-icons-and-logos"></a>앱 아이콘 및 로고 
 
@@ -29,7 +29,7 @@ ms.locfileid: "70212065"
         * Microsoft Store에서
     :::column-end:::
     :::column:::
-        ![windows 10 start and tiles](images/assetguidance01.jpg)
+        ![Windows 10 시작 및 타일](images/assetguidance01.jpg)
     :::column-end:::
 :::row-end:::
 
@@ -52,7 +52,7 @@ ms.locfileid: "70212065"
 | 배지 로고 | 앱의 타일 | BadgeLogo.png  |
 | 패키지 로고/Microsoft Store 로고 | 앱 설치 관리자, 파트너 센터, Microsoft Store의 "앱 보고" 옵션, Microsoft Store의 "리뷰 작성" 옵션 | StoreLogo.png  |
 
-\* [업로드된 이미지만 Microsoft Store에 표시](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store)하도록 선택하지 않는 이상 이러한 아이콘이 사용됩니다. 
+\*[업로드된 이미지만 Microsoft Store에 표시](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store)하도록 선택하지 않는 이상 이러한 아이콘이 사용됩니다. 
 
 이러한 아이콘이 모든 화면에서 선명하게 보이게 하려면 여러 표시 배율을 대비하여 동일한 아이콘의 여러 버전을 만들면 됩니다. 
 
@@ -75,7 +75,7 @@ ms.locfileid: "70212065"
 
 "Microsoft Store에서 앱 목록의 이미지를 지정하려면 어떻게 해야 하나요"?
 
-기본적으로 이 페이지의 맨 위에 있는 표에 설명된 것처럼 Microsoft Store의 패키지에 있는 이미지를 사용합니다([제출 프로세스 중에 사용자가 제공하는 다른 이미지](https://docs.microsoft.com/en-us/windows/uwp/publish/app-screenshots-and-images)와 함께). 하지만 Windows 10(Xbox 포함)의 고객에게 목록을 표시할 때 Microsoft Store에서 앱 패키지의 로고 이미지를 사용하지 못하도록 하고, 그 대신 사용자가 업로드한 이미지만 사용하게 할 수도 있습니다. 이렇게 하면 Microsoft Store의 다양한 디스플레이에서 앱 모양을 훨씬 정교하게 제어할 수 있습니다. (제품에서 이전 OS 버전을 지원하는 경우 이 옵션을 사용하더라도 패키지의 이미지가 계속 표시될 수 있습니다.) 이 작업은 제출 프로세스 중에 **Microsoft Store 목록** 단계의 **Microsoft Store 로고** 섹션에서 수행할 수 있습니다.
+기본적으로 이 페이지의 맨 위에 있는 표에 설명된 것처럼 Microsoft Store의 패키지에 있는 이미지를 사용합니다([제출 프로세스 중에 사용자가 제공하는 다른 이미지](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images)와 함께). 하지만 Windows 10(Xbox 포함)의 고객에게 목록을 표시할 때 Microsoft Store에서 앱 패키지의 로고 이미지를 사용하지 못하도록 하고, 그 대신 사용자가 업로드한 이미지만 사용하게 할 수도 있습니다. 이렇게 하면 Microsoft Store의 다양한 디스플레이에서 앱 모양을 훨씬 정교하게 제어할 수 있습니다. (제품에서 이전 OS 버전을 지원하는 경우 이 옵션을 사용하더라도 패키지의 이미지가 계속 표시될 수 있습니다.) 이 작업은 제출 프로세스 중에 **Microsoft Store 목록** 단계의 **Microsoft Store 로고** 섹션에서 수행할 수 있습니다.
 
 ![앱 제출 프로세스 중에 Microsoft Store 로고 지정](images/app-icons/storelogodisplay.png)
 
@@ -133,15 +133,15 @@ Visual Studio는 앱 아이콘을 관리할 수 있는 **매니페스트 디자�
         2. **솔루션 탐색기**에서 Package.appmxanifest 파일을 두 번 클릭합니다.
     :::column-end:::
     :::column:::
-        ![The Visual Studio 2019 Manifest Designer](images/icons/vs-solution-explorer.png)
+        ![Visual Studio 2019 매니페스트 디자이너](images/icons/vs-solution-explorer.png)
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-            Visual Studio displays the Manifest Designer.
+            Visual Studio에는 매니페스트 디자이너가 표시됩니다.
     :::column-end:::
     :::column:::
-            ![The Visual Assets tab](images/icons/vs-manfiest-designer.png)
+            ![시각적 자산 탭](images/icons/vs-manfiest-designer.png)
     :::column-end:::
 :::row-end:::    
 :::row:::
@@ -149,7 +149,7 @@ Visual Studio는 앱 아이콘을 관리할 수 있는 **매니페스트 디자�
         3. **시각적 자산** 탭을 클릭합니다.
     :::column-end:::
     :::column:::
-        ![The Visual Assets tab](images/icons/vs-manfiest-designer-visual-assets.png)
+        ![시각적 자산 탭](images/icons/vs-manfiest-designer-visual-assets.png)
     :::column-end:::
 :::row-end:::        
 
@@ -169,7 +169,7 @@ Visual Studio는 앱 아이콘을 관리할 수 있는 **매니페스트 디자�
 
     b.  **이름 표시**: 중간 타일, 와이드 타일 또는 큰 타일에 짧은 이름을 표시할 것인지 여부를 나타냅니다. 
 
-    c. **타일 배경**: 타일 배경색의 16진수 값 또는 색 이름을 지정합니다. 예를 들면 `#464646`입니다. 기본값은 `transparent`입니다.
+    c. **타일 배경**: 타일 배경색의 16진수 값 또는 색 이름을 지정합니다. 정의합니다(예: `#464646`). 기본값은 `transparent`입니다.
 
     d. **시작 화면 배경**: 시작 화면 배경의 16진수 값 또는 색 이름을 지정합니다. 
 
@@ -198,7 +198,7 @@ Visual Studio는 프로젝트에 필요한 모든 앱 아이콘 자산을 생성
 
 * 점프 목록 시작(데스크톱)
 * 타일의 하단 모서리 시작(데스크톱)
-* 바로 가기 키(데스크톱)
+* 바로 가기(데스크톱)
 * 제어판(데스크톱)
 
 다음은 대상 크기 자산 목록입니다.
@@ -225,20 +225,20 @@ Visual Studio는 프로젝트에 필요한 모든 앱 아이콘 자산을 생성
 
 이러한 자산에 안쪽 여백을 추가하지 않아도 됩니다. 필요한 경우 Windows에서 자동으로 안쪽 여백을 추가합니다. 이러한 자산에서는 16픽셀의 최소 공간을 고려해야 합니다. 
 
-다음은 Windows 작업 표시줄의 아이콘에 나타나는 이러한 자산의 예입니다.
+Windows 작업 표시줄의 아이콘에 나타나는 이러한 자산의 예는 다음과 같습니다.
 
 ![Windows 작업 표시줄의 자산](images/assetguidance21.png)
 
 ### <a name="unplated-assets"></a>플레이트되지 않은 자산
 기본적으로 Windows는 색이 지정된 백플레이트 위에 대상 기반 자산을 사용합니다. 원한다면 대상 기반의 플레이트되지 않은 자산을 제공할 수 있습니다. "플레이트되지 않은"이란 자산이 투명한 배경에 표시된다는 것을 의미합니다. 이러한 자산은 다양한 배경색 위에 표시된다는 것을 기억해 두세요. 
 
-![판이 없는 자산 및 판이 있는 자산](images/assetguidance22.png)
+![플레이트되지 않은 자산 및 플레이트된 자산](images/assetguidance22.png)
 
 다음은 플레이트되지 않은 앱 아이콘 자산을 사용하는 화면입니다.
 * 작업 표시줄 및 작업 표시줄 미리 보기(데스크톱)
 * 작업 표시줄 점프 목록
 * 작업 보기
-* Alt+Tab
+* ALT+TAB
 
 ### <a name="unplated-assets-and-themes"></a>플레이트되지 않은 자산 및 테마
 

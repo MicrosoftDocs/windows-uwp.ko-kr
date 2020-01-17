@@ -5,18 +5,18 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b4cc5f10ba23c942851f34ef64afd887d265dba1
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 824cdb74a809ae3f9ae2ed202a9889535021f711
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259776"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684722"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>2017년 8월 Windows 개발자 문서의 새로운 내용
 
 Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 계속 업데이트되고 있습니다. 다음과 같은 기능 개요, 개발자 지침 및 동영상이 Windows 개발자를 위한 새 정보와 업데이트된 정보를 포함하여 최근에 추가되었습니다.
 
-Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/your-first-app.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/your-first-app.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 살펴볼 수 있습니다.
 
 ## <a name="features"></a>기능
 
@@ -57,7 +57,7 @@ UWP 앱 컨테이너에서 실행해야 하는 최신 XAML UI 및 다른 UWP 환
 
 ### <a name="getting-started-with-point-of-service"></a>서비스 지점 시작
 
-[서비스 지점 디바이스를 시작](https://docs.microsoft.com/en-us/windows/uwp/devices-sensors/pos-get-started)하는 데 도움이 되는 새 가이드를 추가했습니다. 여기에서는 디바이스 열거, 디바이스 기능 확인, 디바이스 클레임, 디바이스 공유에 대해 다룹니다. 
+[서비스 지점 디바이스를 시작](https://docs.microsoft.com/windows/uwp/devices-sensors/pos-get-started)하는 데 도움이 되는 새 가이드를 추가했습니다. 여기에서는 디바이스 열거, 디바이스 기능 확인, 디바이스 클레임, 디바이스 공유에 대해 다룹니다. 
 
 ### <a name="xbox-live"></a>Xbox Live
 
@@ -69,11 +69,11 @@ Xbox Live API를 사용하여 게임을 Xbox Live 소셜 게임 네트워크에 
 
 Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 자세한 내용은 [Xbox Live 개발자 프로그램 개요](https://docs.microsoft.com//gaming/xbox-live/developer-program-overview)를 참조하세요.
 
-## <a name="videos"></a>비디오
+## <a name="videos"></a>동영상
 
 ### <a name="mixed-reality"></a>혼합 현실
 
-[Microsoft HoloLens Course 250](https://developer.microsoft.com/en-us/windows/mixed-reality/mixed_reality_250)에 대한 새로운 자습서 동영상 시리즈가 추가되었습니다. 혼합 현실을 위한 도구를 이미 설치했고 개발의 기본에 친숙하다면, 이 동영상 과정을 확인하여 혼합 현실 디바이스 간에 공유 환경을 만드는 정보를 얻으세요.
+[Microsoft HoloLens Course 250](https://developer.microsoft.com/windows/mixed-reality/mixed_reality_250)에 대한 새로운 자습서 동영상 시리즈가 추가되었습니다. 혼합 현실을 위한 도구를 이미 설치했고 개발의 기본에 친숙하다면, 이 동영상 과정을 확인하여 혼합 현실 디바이스 간에 공유 환경을 만드는 정보를 얻으세요.
 
 ### <a name="narrator-and-dev-mode"></a>내레이터 및 개발자 모드
 

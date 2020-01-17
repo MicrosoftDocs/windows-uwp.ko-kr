@@ -11,18 +11,18 @@ design-contact: kimsea
 dev-contact: kefodero
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c276b232e76afb98d778ef65c7e0e363285c4794
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: a3bf48da5fdfff205b2013341aaf6869064ce341
+ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258205"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75684370"
 ---
 # <a name="person-picture-control"></a>인물 사진 컨트롤
 
-인물 사진 컨트롤은 사람의 아바타 이미지가 있는 경우 해당 이미지를 표시하고, 없는 경우 사람의 이니셜이나 일반 글자 모양을 표시합니다. 컨트롤을 사용하여 사람의 연락처 정보를 관리하는 개체인 [Contact 개체](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact)를 표시하거나 수동으로 표시 이름과 프로필 사진 등의 연락처 정보를 제공할 수 있습니다.  
+인물 사진 컨트롤은 사람의 아바타 이미지가 있는 경우 해당 이미지를 표시하고, 없는 경우 사람의 이니셜이나 일반 글자 모양을 표시합니다. 컨트롤을 사용하여 사람의 연락처 정보를 관리하는 개체인 [Contact 개체](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)를 표시하거나 수동으로 표시 이름과 프로필 사진 등의 연락처 정보를 제공할 수 있습니다.  
 
-> **중요 API**: [PersonPicture 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.personpicture), [Contact 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact), [ContactManager 클래스](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)
+> **중요 API**: [PersonPicture 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.personpicture), [Contact 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact), [ContactManager 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)
 
 이 일러스트레이션은 사용자 이름을 표시하는 두 개의 [텍스트 블록](text-block.md) 요소가 포함된 인물 사진 컨트롤을 보여줍니다. 
 ![인물 사진 컨트롤](images/person-picture/person-picture_hero.png)
@@ -79,7 +79,7 @@ ms.locfileid: "74258205"
 
 ## <a name="using-the-person-picture-control-to-display-a-contact-object"></a>인물 사진 컨트롤을 사용하여 Contact 개체 표시
 
-사람 선택 컨트롤을 사용하여 [Contact](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact) 개체를 표시할 수 있습니다. 
+사람 선택 컨트롤을 사용하여 [Contact](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) 개체를 표시할 수 있습니다. 
 
 ```xaml
 <Page
@@ -167,11 +167,11 @@ namespace SampleApp
 ```
 
 > [!NOTE]
-> 코드를 단순하게 유지하기 위해 이 예제에서는 새 Contact 개체를 만듭니다. 실제 앱에서는 사용자가 연락처를 선택하게 하거나 [ContactManager](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)를 사용하여 연락처 목록을 쿼리합니다. 연락처 검색 및 관리에 대한 자세한 내용은 [연락처 및 일정 문서](../../contacts-and-calendar/index.md)를 참조하세요. 
+> 코드를 단순하게 유지하기 위해 이 예제에서는 새 Contact 개체를 만듭니다. 실제 앱에서는 사용자가 연락처를 선택하게 하거나 [ContactManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)를 사용하여 연락처 목록을 쿼리합니다. 연락처 검색 및 관리에 대한 자세한 내용은 [연락처 및 일정 문서](../../contacts-and-calendar/index.md)를 참조하세요. 
 
 ## <a name="determining-which-info-to-display"></a>표시할 정보 결정
 
-[Contact](https://docs.microsoft.com/en-us/uwp/api/Windows.ApplicationModel.Contacts.Contact) 개체를 제공하면 인물 사진 컨트롤이 이를 평가하여 표시할 수 있는 정보를 결정합니다. 
+[Contact](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) 개체를 제공하면 인물 사진 컨트롤이 이를 평가하여 표시할 수 있는 정보를 결정합니다. 
 
 이미지를 사용할 수 있는 경우 컨트롤에서 찾는 첫 번째 이미지를 다음과 같은 순서로 표시합니다.
 
@@ -183,11 +183,11 @@ PreferSmallImage 속성을 true로 설정하여 선택되는 이미지를 변경
 
 이미지가 없는 경우 컨트롤에서 연락처의 이름이나 이니셜을 표시합니다. 이름 데이터가 없는 경우 컨트롤에서 이메일 주소나 전화 번호 등의 연락처 데이터를 표시합니다. 
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 * [연락처 및 일정](../../contacts-and-calendar/index.md)
 * [연락처 카드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCards)

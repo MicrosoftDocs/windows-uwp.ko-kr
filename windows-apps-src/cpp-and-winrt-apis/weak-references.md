@@ -1,17 +1,17 @@
 ---
 description: Windows 런타임은 참조 계산 시스템입니다. 이러한 시스템에서는 강한 참조와 약한 참조의 중요성과 차이점을 인식해야 합니다.
-title: C++/WinRT의 약한 참조
+title: C++/WinRT의 강한 참조 및 약한 참조
 ms.date: 05/16/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 강한, 약한, 참조
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3ad6bb9a98b0fe2a699580001698740e44cea14f
-ms.sourcegitcommit: cba3ba9b9a9f96037cfd0e07d05bd4502753c809
+ms.openlocfilehash: 781b63f9f32a0fdf7edee6479b60fd82822cc745
+ms.sourcegitcommit: e1bd1d9b2598e40b5d788338a07e12f4e4c58495
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2019
-ms.locfileid: "67870316"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75585396"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>C++/WinRT의 강한 참조 및 약한 참조
 
@@ -253,7 +253,7 @@ event_source.Event([this](auto&& ...)
 
 ### <a name="the-solution"></a>해결 방법
 
-해결 방법은 강한 참조(또는 나중에 확인하겠지만 더 적절한 경우 약한 참조)를 캡처하는 것입니다. 강한 참조는 참조 개수를 ‘증가’시키고 현재 개체를 활성 상태로 ‘유지’합니다.   캡처 변수(이 예제에서 `strong_this` *이*(가) 호출됨)만 선언하고 이 포인터에 대한 강력한 참조 를 검색하는 [**implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)에 대한 호출로 초기화합니다.
+해결 방법은 강한 참조(또는 나중에 확인하겠지만 더 적절한 경우 약한 참조)를 캡처하는 것입니다. 강한 참조는 참조 개수를 ‘증가’시키고 현재 개체를 활성 상태로 ‘유지’합니다.   캡처 변수(이 예제에서 `strong_this`*이*(가) 호출됨)만 선언하고 이 포인터에 대한 강력한 참조 를 검색하는 [**implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)에 대한 호출로 초기화합니다.
 
 > [!IMPORTANT]
 > **get_strong**은 **winrt::implements** 구조체 템플릿의 멤버 함수이므로, C++/WinRT 클래스와 같이 **winrt::implements**에서 직간접적으로 파생된 클래스에서만 호출할 수 있습니다. **winrt::implements**에서 파생하는 방법에 대한 자세한 내용과 예제는 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)을 참조하세요.
