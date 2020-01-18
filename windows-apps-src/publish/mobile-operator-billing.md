@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows 10, uwp, 통신사, 모바일 청구, 통신사 청구
 ms.localizationpriority: medium
-ms.openlocfilehash: 606267080ced6ea8dd41f8f05ddcdee4d33b00f2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: af682d2a17e10bf1c3b3cdcb3485315a6972eb9f
+ms.sourcegitcommit: e38946d8228293fca7d6c2b4d66e8e8f0d349e92
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259965"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76258354"
 ---
 # <a name="mobile-operator-billing"></a>통신사 청구
 
@@ -31,7 +31,7 @@ Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법�
 | 오스트리아              | Hutchison 3G Austria, A1 Telekom, T-Mobile / tele.ring  |
 | 벨기에              | Base, Proximus                                          |
 | 캐나다               | Telus                                                   |
-| 체코       | T-Mobile                                                |
+| 체코 공화국       | T-Mobile                                                |
 | 덴마크              | 3, TDC / YouSee, Telenor, Telia                         |
 | 핀란드              | DNA, Elisa                                              |
 | 프랑스               | Orange                                                  |
@@ -44,12 +44,13 @@ Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법�
 | 폴란드               | 주황, 재생                                            |
 | 싱가포르            | M1 제한 된 StarHub                                     |
 | 슬로바키아             | Slovak Telekom                                          |
+| 남아프리카 공화국         | Vodacom                                                 |
 | 스페인                | Orange                                                  |
 | 스웨덴               | Telenor, 3                                              |
 | 스위스          | Swisscom, Sunrise                                       |
 | 대만               | FarEasTone                                              |
 | 터키               | Turkcell                                                |
-| 아랍 에미리트 연합국 | Etisalat                                                |
+| 아랍에미리트 | Etisalat                                                |
 | 미국        | Sprint, Verizon                                         |
 | 영국       | O2, 3 UK, EE                                            |
 

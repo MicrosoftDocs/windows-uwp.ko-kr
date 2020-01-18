@@ -6,12 +6,12 @@ ms.date: 03/05/2019
 ms.topic: article
 keywords: Windows 10, uwp, 세금, 앱 세금, 세금 요구 사항, 상거래 확장, 세율
 ms.localizationpriority: medium
-ms.openlocfilehash: aa408e803457c9b53cb383158b5a7a91a2c07e14
-ms.sourcegitcommit: 8efeb6672f759b1ea7e3e9e2f90e764480791142
+ms.openlocfilehash: 2dd488fc241de4ef765cd318590ba857faa37003
+ms.sourcegitcommit: ff086bae50e61a351b8c53867ed6579e43d8cf1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728484"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76265034"
 ---
 # <a name="tax-details-for-windows-appgame-developers-and-azure-marketplace-publishers"></a>Windows 앱/게임 개발자 및 Azure Marketplace 게시자에 대 한 세금 정보
 
@@ -275,7 +275,7 @@ ms.locfileid: "75728484"
 ## <a name="mixed-remittance-countriesregions-for-windows-appgame-developers"></a>Windows 앱/게임 개발자를 위한 혼합 송금 국가/지역
 
 
-특정 Microsoft 대금 청구 파트너는 고객이 아래 나열된 국가/지역에서 스토어를 통해 앱 또는 앱에서 바로 구매 제품을 구매할 때 판매, 사용, 물품용역, 부가가치 또는 유사한 세금이 있는 경우 해당 세금을 징수하여 송금할 수 있습니다. Microsoft가 귀하에게 제공하는 [보고서](payout-summary.md#transaction-history-download-export)는 고객이 스토어를 통해 앱 또는 앱에서 바로 구매 제품을 구매할 때 적용되는 판매, 사용, 물품용역, 부가 가치 또는 유사한 세금을 대금 청구 파트너가 징수한 거래를 식별합니다. 이러한 보고 내용에 설명된 거래를 제외하고, Microsoft 및 해당 대금 청구 서비스 공급자는 이러한 국가에서 고객의 앱 또는 앱에서 바로 구매 제품 구매와 관련된 판매, 사용, 물품용역, 부가가치 또는 유사한 세금을 송금하지 않습니다. 귀하에게 제공된 보고 내용을 검토하고 앱 또는 앱에서 바로 구매 제품이 포함된 거래와 관련하여 세금을 등록, 징수 및 송금할 의무가 있는 경우 이를 결정하고 준수하는 것은 귀하의 책임입니다.
+특정 Microsoft 대금 청구 파트너는 고객이 아래 나열된 국가/지역에서 스토어를 통해 앱 또는 앱에서 바로 구매 제품을 구매할 때 판매, 사용, 물품용역, 부가가치 또는 유사한 세금이 있는 경우 해당 세금을 징수하여 송금할 수 있습니다. 0Microsoft에서 제공 하는 [보고서](payout-summary.md#export-data-page) 는 매장에서 판매, 사용, 상품 및 서비스, 부가 가치 또는 앱 내 제품의 취득에 해당 하는 부가 가치 또는 유사한 세금이 수집 된 거래를 식별 합니다. 이러한 보고 내용에 설명된 거래를 제외하고, Microsoft 및 해당 대금 청구 서비스 공급자는 이러한 국가에서 고객의 앱 또는 앱에서 바로 구매 제품 구매와 관련된 판매, 사용, 물품용역, 부가가치 또는 유사한 세금을 송금하지 않습니다. 귀하에게 제공된 보고 내용을 검토하고 앱 또는 앱에서 바로 구매 제품이 포함된 거래와 관련하여 세금을 등록, 징수 및 송금할 의무가 있는 경우 이를 결정하고 준수하는 것은 귀하의 책임입니다.
 
 | 혼합 송금 국가/지역 |
 |------------------------------------|
