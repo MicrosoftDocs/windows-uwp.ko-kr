@@ -96,7 +96,7 @@ switch (accessStatus)
 
 ## <a name="access-the-users-notifications"></a>사용자의 알림에 액세스
 
-알림 수신기를 사용하면 사용자의 현재 알림 목록을 가져올 수 있습니다. [GetNotificationsAsync](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetNotificationsAsync) 메서드를 호출하고, 가져오고자 하는 알림 유형을 지정하기만 하면 됩니다(현재 지원되는 유일한 알림 유형은 알림 메시지).
+알림 수신기를 사용하면 사용자의 현재 알림 목록을 가져올 수 있습니다. [GetNotificationsAsync](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener.GetNotificationsAsync) 메서드를 호출하고, 가져오려는 알림 유형을 지정하기만 하면 됩니다(현재 지원되는 유일한 알림 유형은 알림 메시지).
 
 ```csharp
 // Get the toast notifications

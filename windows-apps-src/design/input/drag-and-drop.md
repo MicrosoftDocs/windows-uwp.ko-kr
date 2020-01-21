@@ -39,7 +39,7 @@ ms.locfileid: "75684515"
 
 요소에 대해 끌기를 설정하려면 [**CanDrag**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.candrag) 속성을 **True**로 설정합니다. 이렇게 하면 요소 및 요소에 포함된 요소(ListView와 같은 모음의 경우)에 끌기를 사용할 수 있습니다.
 
-끌 수 있는 항목을 구체적으로 지정하세요. 사용자는 이미지나 텍스트와 같은 특정 항목만 앱에서 끌고자 할 것입니다. 
+끌 수 있는 항목을 구체적으로 지정하세요. 사용자는 이미지나 텍스트와 같은 특정 항목만 앱에서 끌려고 할 것입니다. 
 
 다음은 [**CanDrag**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.candrag)를 설정하는 방법입니다.
 

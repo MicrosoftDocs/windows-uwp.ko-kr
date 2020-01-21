@@ -103,7 +103,7 @@ Imports muxc = Microsoft.UI.Xaml.Controls
 >
 > **ItemsSource**는 **TreeView.RootNodes**를 대신하여 **TreeView** 컨트롤에 콘텐츠를 삽입하는 대안 메커니즘입니다. **ItemsSource**와 **RootNodes**를 동시에 설정할 수 없습니다. **ItemsSource**를 사용하는 경우 노드가 자동으로 생성되므로 **TreeView.RootNodes** 속성에서 노드에 액세스할 수 있습니다.
 
-다음은 XAML에 선언된 간단한 트리 보기의 예입니다. 사용자는 일반적으로 코드에 노드를 추가하지만, 여기서는 XAML 계층을 보여주고자 합니다. 왜냐하면 노드의 계층이 생성되는 방법을 시각화하는 데 도움이 될 수 있기 때문입니다.
+다음은 XAML에 선언된 간단한 트리 보기의 예입니다. 사용자는 일반적으로 코드에 노드를 추가하지만, 여기서는 XAML 계층을 보여드리려 합니다. 왜냐하면 노드의 계층이 생성되는 방법을 시각화하는 데 도움이 될 수 있기 때문입니다.
 
 ```xaml
 <muxc:TreeView>

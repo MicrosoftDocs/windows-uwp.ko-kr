@@ -22,7 +22,7 @@ XAML을 사용하여 **Grid** 및 **StackPanel** 요소로 간단한 날씨 앱�
 
 ## <a name="prerequisites"></a>필수 구성 요소
 - Windows 10 및 Microsoft Visual Studio 2015 이상. (최신 Visual Studio가 현재 개발 및 보안 업데이트에 대해 권장 됨) [Visual Studio를 사용 하 여 설정 하는 방법을 알아보려면 여기를 클릭](../../get-started/get-set-up.md)하세요.
-- XAML 및 C#을 사용하여 기본 "Hello World" 앱을 만드는 방법에 대한 지식. 아직 살펴보지 않았다면 [여기를 클릭하여 "Hellow World" 앱을 만드는 방법을 알아보세요](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
+- XAML 및 C#을 사용하여 기본 "Hello World" 앱을 만드는 방법에 대한 지식. 아직 살피지 않았다면 [여기를 클릭하여 "Hellow World" 앱을 만드는 방법을 알아보세요](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 ## <a name="step-1-create-a-blank-app"></a>1단계: 빈 앱 만들기
 1. Visual Studio 메뉴에서 **파일** > **새 프로젝트**를 선택합니다.

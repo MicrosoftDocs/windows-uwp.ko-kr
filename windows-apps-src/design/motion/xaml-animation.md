@@ -30,7 +30,7 @@ Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용�
 
 Windows 10 버전 1607에서는 요소가 탐색 중 보기 간에 애니메이션 효과를 주기 위해 표시하는 애니메이션을 구현할 수 있는 새로운 [**ConnectedAnimationService**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice) API를 제공합니다. 이 API의 사용 패턴은 다른 애니메이션 라이브러리 API의 패턴과 다릅니다. **ConnectedAnimationService**의 사용은 [참조 페이지](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)에서 다룹니다.
 
-애니메이션 라이브러리는 모든 가능 시나리오에 대해 애니메이션 효과를 제공하지는 않습니다. XAML에서 사용자 지정 애니메이션을 만들고자 하는 경우가 있을 수 있습니다. 자세한 내용은 [스토리보드 애니메이션](storyboarded-animations.md)을 참조하세요.
+애니메이션 라이브러리는 모든 가능 시나리오에 대해 애니메이션 효과를 제공하지는 않습니다. XAML에서 사용자 지정 애니메이션을 만들려는 경우가 있을 수 있습니다. 자세한 내용은 [스토리보드 애니메이션](storyboarded-animations.md)을 참조하세요.
 
 또한 ScrollViewer의 스크롤 위치에 따라 항목에 애니메이션 효과를 주는 등의 특정 고급 시나리오의 경우 개발자가 시각적 계층 상호 운용을 사용하여 사용자 지정 애니메이션을 구현하려고 할 수 있습니다. 자세한 내용은 [시각적 계층](https://docs.microsoft.com/windows/uwp/composition/visual-layer)을 참조하세요.
 

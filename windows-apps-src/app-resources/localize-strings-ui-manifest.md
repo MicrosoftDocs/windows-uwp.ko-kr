@@ -145,7 +145,7 @@ this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <da
 
 ## <a name="factoring-strings-into-multiple-resources-files"></a>여러 개의 리소스 파일로 문자열 팩터링
 
-모든 문자열을 단일 리소스 파일(resw)에 두거나 여러 리소스 파일에 팩터링할 수 있습니다. 예를 들어 하나의 리소스 파일에 오류 메시지를 두고 앱 패키지 매니페스트 문자열은 다른 파일에, UI 문자열은 세 번째 파일에 두고자 할 수 있습니다. 이 경우 폴더 구조는 이러한 모습입니다.
+모든 문자열을 단일 리소스 파일(resw)에 두거나 여러 리소스 파일에 팩터링할 수 있습니다. 예를 들어 하나의 리소스 파일에 오류 메시지를 두고 앱 패키지 매니페스트 문자열은 다른 파일에, UI 문자열은 세 번째 파일에 둘 수 있습니다. 이 경우 폴더 구조는 이러한 모습입니다.
 
 ![리소스 추가, 영어](images/manifest-resources.png)
 

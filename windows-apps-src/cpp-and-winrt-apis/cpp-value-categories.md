@@ -154,7 +154,7 @@ A&& get_by_rvalue_ref() { ... } // This unnamed rvalue reference is an xvalue.
 ```
 
 ### <a name="im"></a>\!i\&\!m
-ID가 없고 이동할 수 없는 값은 아직 살펴보지 않았습니다. 하지만 이러한 값 범주는 C++ 언어에서 유용하지 않으므로 무시해도 됩니다.
+ID가 없고 이동할 수 없는 값은 아직 살피지 않았습니다. 하지만 이러한 값 범주는 C++ 언어에서 유용하지 않으므로 무시해도 됩니다.
 
 ## <a name="reference-collapsing-rules"></a>참조 축소 규칙
 한 식의 여러 유사 참조(lvalue 참조에 대한 lvalue 참조 또는 rvalue 참조에 대한 rvalue 참조)는 서로를 취소합니다.
