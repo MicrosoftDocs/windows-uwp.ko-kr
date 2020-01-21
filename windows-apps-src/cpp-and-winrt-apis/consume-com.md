@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, COM, 구성 요소, 클래스, 인터페이스
 ms.localizationpriority: medium
-ms.openlocfilehash: bb28ec7afa22f81033bfce2aff530119e53a4b91
-ms.sourcegitcommit: 7585bf66405b307d7ed7788d49003dc4ddba65e6
+ms.openlocfilehash: 88012d96b7c769094cb80d0f34b77060291a3eef
+ms.sourcegitcommit: 80ea5e05f8c15700f6c6fa3d1ed37e479568762b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660155"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75928815"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>C++/WinRT를 통한 COM 구성 요소 사용
 
@@ -18,7 +18,7 @@ ms.locfileid: "67660155"
 
 이 항목의 끝에는 최소 Direct2D 애플리케이션의 전체 소스 코드 목록이 나와 있습니다. 해당 코드에서 발췌한 내용을 사용하여 C++/WinRT 라이브러리의 다양한 기능을 통해 C++/WinRT에서 COM 구성 요소를 사용하는 방법을 설명하겠습니다.
 
-## <a name="com-smart-pointers-winrtcomptruwpcpp-ref-for-winrtcom-ptr"></a>COM 스마트 포인터([**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr))
+## <a name="com-smart-pointers-winrtcom_ptruwpcpp-ref-for-winrtcom-ptr"></a>COM 스마트 포인터([**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr))
 
 COM을 사용하여 프로그래밍하는 경우 개체가 아닌 인터페이스로 직접 작업합니다(COM의 발전된 형태인 Windows 런타임 API의 경우에도 백그라운드에서 동일한 방식으로 작동함). 예를 들어 COM 클래스에서 함수를 호출하려면 클래스를 활성화하고 인터페이스를 다시 가져온 다음, 해당 인터페이스에서 함수를 호출합니다. 개체의 상태에 액세스하려면 데이터 멤버에 직접 액세스하지 않고, 대신 인터페이스에서 접근자 및 변경자 함수를 호출합니다.
 
@@ -81,7 +81,7 @@ DWriteCreateFactory(
     reinterpret_cast<IUnknown**>(dwriteFactory2.put()));
 ```
 
-## <a name="re-seat-a-winrtcomptr"></a>**winrt::com_ptr** 재배치
+## <a name="re-seat-a-winrtcom_ptr"></a>**winrt::com_ptr** 재배치
 
 > [!IMPORTANT]
 > 이미 배치된 [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr)이 있고(내부 원시 포인터에 이미 대상이 있음) 다른 개체를 가리키도록 다시 배치하려는 경우, 아래 코드 예제와 같이 `nullptr`을 먼저 할당해야 합니다. 할당하지 않으면, [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptr_put-function) 또는 [**com_ptr::put_void**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrput_void-function)를 호출할 때 이미 배치된 **com_ptr**에서 내부 포인터가 Null이 아님을 어설션하여 문제가 부각됩니다.
@@ -169,7 +169,11 @@ void ExampleFunction(winrt::com_ptr<ID3D11Device> const& device)
 
 ## <a name="full-source-code-listing-of-a-minimal-direct2d-application"></a>최소 Direct2D 애플리케이션의 전체 소스 코드 목록
 
-이 소스 코드 예제를 빌드 및 실행하려는 경우, 먼저 Visual Studio에서 새 **코어 앱(C++/WinRT)** 을 만듭니다. `Direct2D`는 프로젝트에 적합한 이름이지만, 원하는 이름을 임의로 지정할 수 있습니다. `App.cpp`를 열고 전체 내용을 삭제한 다음, 아래 목록을 붙여넣습니다.
+이 소스 코드 예제를 빌드 및 실행하려는 경우, 먼저 Visual Studio에서 새 **코어 앱(C++/WinRT)** 을 만듭니다. `Direct2D`는 프로젝트에 적합한 이름이지만, 원하는 이름을 임의로 지정할 수 있습니다.
+
+`pch.h`를 열고 `windows.h`를 포함하는 즉시 `#include <unknwn.h>`를 추가합니다.
+
+`App.cpp`를 열고 전체 내용을 삭제한 다음, 아래 목록을 붙여넣습니다.
 
 아래 코드는 가능한 경우 [winrt::com_ptr::capture 함수](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrcapture-function)를 사용합니다. `WINRT_ASSERT`는 매크로 정의이며 [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)로 확장됩니다.
 
