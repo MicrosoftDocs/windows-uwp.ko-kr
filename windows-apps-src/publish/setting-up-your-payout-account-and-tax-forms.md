@@ -2,18 +2,21 @@
 Description: Microsoft Store의 앱 판매에서 돈을 받으려면 지급 계정을 설정 하 고 필요한 세금 양식을 작성 해야 합니다.
 title: 지급 계좌 및 세금 양식 설정
 ms.assetid: 690A2EBC-11B1-4547-B422-54F15A6C26A7
-ms.date: 12/14/2017
+ms.date: 1/17/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a56630a0a2f0acdc71241ac0234cad463e45ace
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: ac23c926e0d7b517fe18321980fc322d7be5b064
+ms.sourcegitcommit: ff086bae50e61a351b8c53867ed6579e43d8cf1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259906"
+ms.lasthandoff: 01/21/2020
+ms.locfileid: "76294832"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>지급 계좌 및 세금 양식 설정
+
+> [!NOTE]
+> 지급 계정 구성, 지급 누락, 지급 배치 또는 기타 항목을 포함 하 여 지급에 대 한 지원을 찾고 있는 경우 [여기](https://partner.microsoft.com/support)에서 지원 담당자에 게 문의 하세요.
 
 Microsoft Store의 앱 판매에서 돈을 받으려면 지급 계정을 설정 하 고 [파트너 센터](https://partner.microsoft.com/dashboard)에서 필요한 세금 양식을 작성 해야 합니다.
 
