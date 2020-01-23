@@ -2,27 +2,27 @@
 description: 이 자습서에서는 UWP XAML 사용자 인터페이스를 추가 하 고, MSIX 개의 패키지를 만들고, 기타 최신 구성 요소를 WPF 앱에 통합 하는 방법을 보여 줍니다.
 title: XAML Islands를 사용하여 UWP InkCanvas 컨트롤 추가
 ms.topic: article
-ms.date: 08/15/2019
+ms.date: 01/10/2010
 ms.author: mcleans
 author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml 제도
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 943b2d90564dc059ed487c1f7fb7b89e689681bb
-ms.sourcegitcommit: 8cbc9ec62a318294d5acfea3dab24e5258e28c52
+ms.openlocfilehash: 1ed4fa54b9987ef0ab5f3dd89aa9d11a00ae695c
+ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70911588"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520438"
 ---
-# <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>2부: XAML Islands를 사용하여 UWP InkCanvas 컨트롤 추가
+# <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>2 부: XAML 아일랜드를 사용 하 여 UWP InkCanvas 컨트롤 추가
 
-이 자습서에서는 Contoso 지출 이라는 샘플 WPF 데스크톱 응용 프로그램을 현대화 하는 방법을 보여 주는 자습서의 두 번째 부분입니다. 샘플 앱을 다운로드 하기 위한 자습서, 필수 구성 요소 및 지침에 대 한 개요를 [보려면 자습서: WPF 앱](modernize-wpf-tutorial.md)을 현대화 합니다. 이 문서에서는 [1 부](modernize-wpf-tutorial-1.md)를 이미 완료 했다고 가정 합니다.
+이 자습서에서는 Contoso 지출 이라는 샘플 WPF 데스크톱 응용 프로그램을 현대화 하는 방법을 보여 주는 자습서의 두 번째 부분입니다. 샘플 앱을 다운로드 하기 위한 자습서, 필수 구성 요소 및 지침에 대 한 개요는 [자습서: WPF 앱 현대화을](modernize-wpf-tutorial.md)참조 하세요. 이 문서에서는 [1 부](modernize-wpf-tutorial-1.md)를 이미 완료 했다고 가정 합니다.
 
 이 자습서의 가상 시나리오에서 Contoso 개발 팀은 Contoso 지출 앱에 디지털 서명 지원을 추가 하려고 합니다. UWP **InkCanvas** 컨트롤은 텍스트와 모양을 인식 하는 기능과 같은 디지털 잉크 및 AI 기반 기능을 지원 하기 때문에이 시나리오에 유용한 옵션입니다. 이렇게 하려면 Windows 커뮤니티 도구 키트에서 제공 되는 [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 래핑된 UWP 컨트롤을 사용 합니다. 이 컨트롤은 WPF 앱에서 사용할 UWP **InkCanvas** 컨트롤의 인터페이스 및 기능을 래핑합니다. 래핑된 UWP 컨트롤에 대 한 자세한 내용은 [데스크톱 앱에서 UWP xaml 컨트롤 호스트 (XAML 아일랜드)](xaml-islands.md)를 참조 하세요.
 
 > [!NOTE]
-> 이 자습서에서 WPF 앱은 Windows SDK에서 자사 UWP 컨트롤만 호스팅합니다. 사용자 지정 UWP 컨트롤을 비롯 한 다른 XAML 고립 시나리오를 지원 하려면 앱 프로젝트에 Windows 커뮤니티 도구 키트에서 `Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication` 제공 하는 클래스의 인스턴스에 대 한 액세스 권한이 있어야 합니다. 이 작업을 수행 하는 권장 방법은 WPF Windows Forms (유니버설 Windows) 프로젝트와 동일한 솔루션에 **빈 앱 (유니버설 Windows)** 프로젝트를 추가 하 고이 프로젝트에서 `App` 기본 클래스를 수정 하는 것입니다. Windows SDK에서 자사 UWP 컨트롤을 호스트 하는 기본적인 시나리오에서는이 단계가 필요 하지 않으므로이 자습서에서는이 단계를 생략 합니다. 자세한 내용은 [이 문서](host-standard-control-with-xaml-islands.md)를 참조 하세요.
+> 이 자습서에서 WPF 앱은 Windows SDK에서 자사 UWP 컨트롤만 호스팅합니다. 사용자 지정 UWP 컨트롤을 비롯 한 다른 XAML 고립 시나리오를 지원 하려면 앱 프로젝트에 Windows 커뮤니티 도구 키트에서 제공 하는 `Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication` 클래스의 인스턴스에 대 한 액세스 권한이 있어야 합니다. 이 작업을 수행 하는 권장 방법은 WPF Windows Forms (유니버설 Windows) 프로젝트와 동일한 솔루션에 **빈 앱 (유니버설 Windows)** 프로젝트를 추가 하 고이 프로젝트에서 기본 `App` 클래스를 수정 하는 것입니다. Windows SDK에서 자사 UWP 컨트롤을 호스트 하는 기본적인 시나리오에서는이 단계가 필요 하지 않으므로이 자습서에서는이 단계를 생략 합니다. 자세한 내용은 [이 문서](host-standard-control-with-xaml-islands.md)를 참조 하세요.
 
 ## <a name="configure-the-project-to-use-xaml-islands"></a>XAML 아일랜드를 사용 하도록 프로젝트 구성
 
@@ -32,23 +32,23 @@ Contoso 지출 앱에 **InkCanvas** 컨트롤을 추가 하려면 먼저 UWP XAM
 
     ![Visual Studio의 NuGet 패키지 관리 메뉴](images/wpf-modernize-tutorial//ManageNuGetPackages.png)
 
-2. **NuGet 패키지 관리자** 창에서 **찾아보기**를 클릭 합니다. **시험판 포함** 옵션을 선택 하 고, `Microsoft.Toolkit.Wpf.UI.Controls` 패키지를 검색 하 고, 결과에 표시 된 패키지의 최신 미리 보기 릴리스를 설치 합니다. 6\.0.0-preview7 이상 버전을 설치 했는지 확인 합니다.
+2. **NuGet 패키지 관리자** 창에서 **찾아보기**를 클릭 합니다. `Microsoft.Toolkit.Wpf.UI.Controls` 패키지를 검색 하 고 버전 6.0.0 이상 버전을 설치 합니다.
 
     > [!NOTE]
-    > 이 패키지에는 **InkCanvas** 래핑된 uwp 컨트롤을 비롯 하 여 WPF 앱에서 UWP XAML 아일랜드를 호스트 하는 데 필요한 모든 인프라가 포함 되어 있습니다. Windows Forms 앱에는 `Microsoft.Toolkit.Forms.UI.Controls` 라는 유사한 패키지를 사용할 수 있습니다.
+    > 이 패키지에는 **InkCanvas** 래핑된 uwp 컨트롤을 비롯 하 여 WPF 앱에서 UWP XAML 아일랜드를 호스트 하는 데 필요한 모든 인프라가 포함 되어 있습니다. `Microsoft.Toolkit.Forms.UI.Controls` 라는 유사한 패키지 Windows Forms 앱에 사용할 수 있습니다.
 
 3. **솔루션 탐색기** 에서 **ContosoExpenses** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **추가 > 새 항목**을 선택 합니다.
 
 4. **응용 프로그램 매니페스트 파일**을 선택 하 고 이름을 **app .manifest**로 선택한 후 **추가**를 클릭 합니다. 응용 프로그램 매니페스트에 대 한 자세한 내용은 [이 문서](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests)를 참조 하세요.
 
-5. 매니페스트 파일에서 Windows 10에 대 한 `<supportedOS>` 다음 요소의 주석 처리를 제거 합니다.
+5. 매니페스트 파일에서 Windows 10에 대 한 다음 `<supportedOS>` 요소에 대 한 주석 처리를 제거 합니다.
 
     ```xml
     <!-- Windows 10 -->
     <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />
     ```
 
-6. 매니페스트 파일에서 다음 주석 처리 `<application>` 된 요소를 찾습니다.
+6. 매니페스트 파일에서 다음 주석 처리 된 `<application>` 요소를 찾습니다.
 
     ```xml
     <!--
@@ -71,7 +71,7 @@ Contoso 지출 앱에 **InkCanvas** 컨트롤을 추가 하려면 먼저 UWP XAM
     </application>
     ```
 
-8. 파일을 `app.manifest` 저장 하 고 닫습니다.
+8. `app.manifest` 파일을 저장하고 닫습니다.
 
 9. **솔루션 탐색기**에서 **ContosoExpenses** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
 
@@ -110,7 +110,7 @@ UWP XAML 아일랜드를 사용 하도록 프로젝트를 구성 했으므로 �
             Background="{StaticResource HorizontalBackground}">
     ```
 
-4. **ExpenseDetail** 파일에서 `</Grid>` `<!-- Chart -->` 주석 바로 앞에 닫는 태그를 찾습니다. 닫는 `</Grid>` 태그 바로 앞에 다음 XAML을 추가 합니다. 이 XAML은 **InkCanvas** 컨트롤 (이전에 네임 스페이스로 정의한 **toolkit** 키워드가 접두사로 추가 됨) 및 컨트롤의 헤더 역할을 하는 간단한 **TextBlock** 을 추가 합니다.
+4. **ExpenseDetail** 파일에서 `<!-- Chart -->` 주석 바로 앞에 있는 closing `</Grid>` 태그를 찾습니다. 닫는 `</Grid>` 태그 바로 앞에 다음 XAML을 추가 합니다. 이 XAML은 **InkCanvas** 컨트롤 (이전에 네임 스페이스로 정의한 **toolkit** 키워드가 접두사로 추가 됨) 및 컨트롤의 헤더 역할을 하는 간단한 **TextBlock** 을 추가 합니다.
 
     ```xml
     <TextBlock Text="Signature:" FontSize="16" FontWeight="Bold" Grid.Row="5" />
@@ -136,7 +136,7 @@ UWP XAML 아일랜드를 사용 하도록 프로젝트를 구성 했으므로 �
     using Microsoft.Toolkit.Win32.UI.Controls.Interop.WinRT;
     ```
 
-10. 생성자를 `ExpenseDetail()` 찾습니다.
+10. `ExpenseDetail()` 생성자를 찾습니다.
 
 11. `InitializeComponent()` 메서드 뒤에 다음 코드 줄을 추가 하 고 코드 파일을 저장 합니다.
 
@@ -154,4 +154,4 @@ UWP XAML 아일랜드를 사용 하도록 프로젝트를 구성 했으므로 �
 
 ## <a name="next-steps"></a>다음 단계
 
-자습서의이 시점에서는 Contoso 지출 앱에 UWP **InkCanvas** 컨트롤을 추가 했습니다. 이제 3 부에 사용할 [준비가 되었습니다. XAML 아일랜드](modernize-wpf-tutorial-3.md)를 사용 하 여 UWP calendarview 컨트롤을 추가 합니다.
+자습서의이 시점에서는 Contoso 지출 앱에 UWP **InkCanvas** 컨트롤을 추가 했습니다. 이제 [3 부: XAML 아일랜드를 사용 하 여 UWP CalendarView 컨트롤 추가](modernize-wpf-tutorial-3.md)를 수행할 준비가 되었습니다.

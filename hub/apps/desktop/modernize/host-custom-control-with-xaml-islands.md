@@ -1,19 +1,19 @@
 ---
 description: 이 문서에서는 XAML 아일랜드를 사용 하 여 WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하는 방법을 보여 줍니다.
 title: XAML 아일랜드를 사용 하 여 WPF 앱에서 사용자 지정 UWP 컨트롤 호스팅
-ms.date: 08/20/2019
+ms.date: 01/10/2010
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, xaml 제도, 사용자 지정 컨트롤, 사용자 컨트롤, 호스트 컨트롤
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: af8ef4d8fb8661e4a8f2d6b1fb98dd19cbd567c1
-ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
+ms.openlocfilehash: 4fb6e2d4fc13d90ec69f962e69b1ee8cb5c1361c
+ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302527"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520398"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML 아일랜드를 사용 하 여 WPF 앱에서 사용자 지정 UWP 컨트롤 호스팅
 
@@ -53,9 +53,9 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하려면 다음 구�
 
 5. **NuGet 패키지 관리자** 창에서 **시험판 포함** 이 선택 되어 있는지 확인 합니다.
 
-6. **찾아보기** 탭을 선택 하 고 6.0.0 [호스트](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.XamlHost) 패키지 (버전 v-preview7 이상)를 검색 한 다음 패키지를 설치 합니다. 이 패키지는 다른 관련 NuGet 패키지를 포함 하 여 UWP 컨트롤을 호스트 하기 위해 **Windowsxamlhost** 컨트롤을 사용 하는 데 필요한 모든 것을 제공 합니다.
+6. **찾아보기** 탭을 선택 하 고 6.0.0 [호스트](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.XamlHost) 패키지 (버전 v 이상)를 검색 한 다음 패키지를 설치 합니다. 이 패키지는 다른 관련 NuGet 패키지를 포함 하 여 UWP 컨트롤을 호스트 하기 위해 **Windowsxamlhost** 컨트롤을 사용 하는 데 필요한 모든 것을 제공 합니다.
     > [!NOTE]
-    > Windows Forms 앱은 6.0.0 [호스트](https://www.nuget.org/packages/Microsoft.Toolkit.Forms.UI.XamlHost) 패키지 (버전 v-preview7 이상)를 사용 해야 합니다.
+    > Windows Forms 앱은 6.0.0 [호스트](https://www.nuget.org/packages/Microsoft.Toolkit.Forms.UI.XamlHost) 패키지 (버전 v 이상)를 사용 해야 합니다.
 
 7. X86 또는 x64와 같은 특정 플랫폼을 대상으로 하도록 솔루션을 구성 합니다. 사용자 지정 UWP 컨트롤은 **모든 CPU**를 대상으로 하는 프로젝트에서 지원 되지 않습니다.
 
@@ -70,7 +70,7 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하려면 다음 구�
 
 1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고 **추가** -> **새 프로젝트**를 선택 합니다.
 2. 솔루션에 **빈 앱(Universal Windows)** 프로젝트 추가 대상 버전 및 최소 버전이 모두 **Windows 10 버전 1903** 이상으로 설정 되어 있는지 확인 합니다.
-3. UWP 앱 프로젝트에서 [Microsoft 6.0.0 application](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) NuGet 패키지 (버전 v-preview7 이상)를 설치 합니다.
+3. UWP 앱 프로젝트에서 6.0.0 [응용 프로그램](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) NuGet 패키지 (버전 v 이상)를 설치 합니다.
 4. **App.xaml 파일을** 열고이 파일의 내용을 다음 xaml로 바꿉니다. `MyUWPApp`를 UWP 앱 프로젝트의 네임 스페이스로 바꿉니다.
 
     ```xml
@@ -200,13 +200,11 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용
 
 일반적으로 UWP 컨트롤은 Windows 10 OS의 일부로 출시 되었으며 개발자가 Windows SDK를 통해 사용할 수 있게 되었습니다. [WinUI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/) 는 Windows SDK 릴리스에 연결 되지 않은 NuGet 패키지에서 Windows SDK의 업데이트 된 버전의 업데이트 된 버전을 배포 하는 대체 방법입니다. 이 라이브러리에는 Windows SDK 및 기본 UWP 플랫폼에 속하지 않는 새 컨트롤도 포함 되어 있습니다. 자세한 내용은 [WinUI 라이브러리 로드맵](https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md) 을 참조 하세요.
 
-이 섹션에서는 WPF 앱에서이 컨트롤을 호스팅할 수 있도록 WinUI 라이브러리의 UWP 컨트롤을 사용자 정의 컨트롤에 추가 하는 방법을 보여 줍니다. 
+이 섹션에서는 WPF 앱에서이 컨트롤을 호스팅할 수 있도록 WinUI 라이브러리의 UWP 컨트롤을 사용자 정의 컨트롤에 추가 하는 방법을 보여 줍니다.
 
-1. UWP 앱 프로젝트에서 최신 시험판 버전의 [Microsoft .Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지를 설치 합니다.
-    > [!NOTE]
-    > 최신 *시험판* 버전을 설치 했는지 확인 합니다. 현재 배포에 대 한 [Msix 패키지](https://docs.microsoft.com/windows/msix) 에서 앱을 패키징하는 경우에는이 패키지의 시험판 버전만 사용할 수 있습니다.
+1. UWP 앱 프로젝트에서 최신 버전의 [Microsoft .Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지를 설치 합니다.
 
-2. 이 프로젝트의 app.xaml 파일에서 다음 자식 요소를 `<xaml:Application>` 요소에 추가 합니다.
+2. 이 프로젝트의 app.xaml 파일에서 다음 자식 요소를 `<xaml:XamlApplication>` 요소에 추가 합니다.
 
     ```xml
     <Application.Resources>
@@ -229,7 +227,7 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용
     </xaml:XamlApplication>
     ```
 
-3. UWP 클래스 라이브러리 프로젝트에서 최신 시험판 버전의 [Microsoft Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지 (uwp 앱 프로젝트에 설치한 것과 동일한 버전)를 설치 합니다.
+3. UWP 클래스 라이브러리 프로젝트에서 최신 버전의 [Microsoft .Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지 (uwp 앱 프로젝트에 설치한 것과 동일한 버전)를 설치 합니다.
 
 4. 동일한 프로젝트에서 사용자 정의 컨트롤에 대 한 XAML 파일을 열고 `<UserControl>` 요소에 다음 네임 스페이스 선언을 추가 합니다.
 
@@ -289,20 +287,7 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용
 
     3. 프로젝트 파일을 저장하고 닫습니다.
 
-4. 올바른 기본 시작 화면 이미지를 참조 하도록 패키지 매니페스트를 편집 합니다. 이 해결 방법은 현재 사용자 지정 UWP 컨트롤을 호스트 하는 WPF 앱을 패키징하는 데 필요 합니다.
-
-    1. 패키징 프로젝트에서 **appxmanifest.xml** 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 클릭 합니다.
-    2. 파일에서 다음 요소를 찾습니다.
-
-        ```<uap:SplashScreen Image="Images\SplashScreen.png" />```
-
-    3. 이 요소를 다음으로 변경 합니다.
-
-        ```<uap:SplashScreen Image="Images\SplashScreen.scale-200.png" />```
-
-    4. **Appxmanifest.xml** 파일을 저장 하 고 닫습니다.
-
-5. WPF 프로젝트 파일을 편집 합니다. 이러한 변경 내용은 현재 사용자 지정 UWP 컨트롤을 호스트 하는 WPF 앱을 패키징하는 데 필요 합니다.
+4. WPF 프로젝트 파일을 편집 합니다. 이러한 변경 내용은 현재 사용자 지정 UWP 컨트롤을 호스트 하는 WPF 앱을 패키징하는 데 필요 합니다.
 
     1. 솔루션 탐색기에서 WPF 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 언로드**를 선택 합니다.
     2. WPF 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **편집**을 선택 합니다.
@@ -317,7 +302,7 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용
     4. 프로젝트 파일을 저장하고 닫습니다.
     5. WPF 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 다시 로드**를 선택 합니다.
 
-6. 패키징 프로젝트를 빌드하고 실행 합니다. WPF가 실행 되 고 UWP 사용자 지정 컨트롤이 예상 대로 표시 되는지 확인 합니다.
+5. 패키징 프로젝트를 빌드하고 실행 합니다. WPF가 실행 되 고 UWP 사용자 지정 컨트롤이 예상 대로 표시 되는지 확인 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

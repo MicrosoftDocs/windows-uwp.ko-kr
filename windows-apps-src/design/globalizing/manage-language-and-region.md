@@ -7,12 +7,12 @@ ms.date: 11/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 현지화, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 79edf30733f7bca443c5fd12103fbd5d93909732
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 1642f8ccc989ce224ff0b3250fa1b79c954167b1
+ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258063"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520418"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>사용자 프로필 언어 및 앱 매니페스트 언어 이해
 Windows 사용자는 **설정** > **시간 및 언어** > **지역 및 언어**를 사용하여 기본 설정 표시 언어의 정렬된 목록 또는 기본 설정 표시 언어 하나를 구성할 수 있습니다. 언어에는 지역별 변수가 포함될 수 있습니다. 예를 들어 스페인에서 사용하는 스페인어, 멕시코에서 사용하는 스페인어, 미국에서 사용하는 스페인어 및 기타 스페인어를 선택할 수 있습니다.
@@ -35,7 +35,7 @@ UWP 앱의 경우 언어는 [BCP-47 언어 태그](https://tools.ietf.org/html/b
 ## <a name="app-manifest-language-list"></a>앱 매니페스트 언어 목록
 앱 매니페스트 언어 목록은 앱에서 지원을 선언하거나 선언할 언어 목록입니다. 이 목록은 개발 주기 동안 앱이 진행됨에 따라 지역화 과정까지 확장될 수 있습니다.
 
-목록은 컴파일할 때 결정되지만 어떻게 나타날지 제어할 수 있는 두 가지 옵션이 있습니다. 한 가지 방법은 Visual Studio가 사용자의 프로젝트 파일에서 목록을 결정하는 것입니다. 그렇게 하려면 먼저 앱 패키지 매니페스트 소스 파일( **)의** 응용 프로그램**탭에 있는**기본 언어`Package.appxmanifest`를 설정합니다. 그런 다음 동일한 파일이 이 구성을 포함하는지 확인합니다(기본적으로 이렇게 포함됨).
+목록은 컴파일할 때 결정되지만 어떻게 나타날지 제어할 수 있는 두 가지 옵션이 있습니다. 한 가지 방법은 Visual Studio가 사용자의 프로젝트 파일에서 목록을 결정하는 것입니다. 그렇게 하려면 먼저 앱 패키지 매니페스트 소스 파일(`Package.appxmanifest`)의 **응용 프로그램** 탭에 있는 **기본 언어**를 설정합니다. 그런 다음 동일한 파일이 이 구성을 포함하는지 확인합니다(기본적으로 이렇게 포함됨).
 
 ```xml
   <Resources>
@@ -53,7 +53,7 @@ Visual Studio에서 작성된 앱 패키지 매니페스트 파일(`AppxManifest
   </Resources>
 ```
 
-나머지 옵션은 앱 패키지 매니페스트 소스 파일(`<Resource>`)의 "x-generate" `Package.appxmanifest` 요소 하나를 `<Resource>` 요소의 확장된 목록으로 교체하는 것입니다(기본 언어를 먼저 나열함에 주의할 것). 이 옵션에는 유지 관리할 사항이 더 많지만 사용자 지정 빌드 시스템을 사용할 경우 적합한 옵션일 수 있습니다.
+나머지 옵션은 앱 패키지 매니페스트 소스 파일(`Package.appxmanifest`)의 "x-generate" `<Resource>` 요소 하나를 `<Resource>` 요소의 확장된 목록으로 교체하는 것입니다(기본 언어를 먼저 나열함에 주의할 것). 이 옵션에는 유지 관리할 사항이 더 많지만 사용자 지정 빌드 시스템을 사용할 경우 적합한 옵션일 수 있습니다.
 
 시작하려면 앱 매니페스트 언어 목록에 한 가지 언어만 포함되어야 합니다. 아마도 en-US일 것입니다. 하지만 결국 매니페스트를 수동으로 구성하거나 번역된 리소스를 프로젝트에 추가함에 따라 해당 목록은 길어질 것입니다.
 
@@ -193,7 +193,7 @@ Visual Studio에서 작성된 앱 패키지 매니페스트 파일(`AppxManifest
 </table>
 
 >[!NOTE]
-> Microsoft에서 사용 하는 표준 국가/지역 코드 목록은 [공식 국가/지역 목록을](https://globalready.azurewebsites.net/marketreadiness/OfficialCountryregion)참조 하세요.
+> Microsoft에서 사용 하는 표준 국가/지역 코드 목록은 [공식 국가/지역 목록을](/windows/uwp/publish/supported-languages)참조 하세요.
 
 ## <a name="important-apis"></a>중요 API
 * [GlobalizationPreferences](/uwp/api/windows.system.userprofile.globalizationpreferences.Languages)
