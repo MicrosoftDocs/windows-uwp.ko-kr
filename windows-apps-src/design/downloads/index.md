@@ -7,19 +7,18 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f33e2f10686edf149feb11e317a10e535685ef19
-ms.sourcegitcommit: 6169660ea437915265165c4631d9702587e4793d
+ms.openlocfilehash: 4678565547616c0cee4a7961cb4a0c95fc03241b
+ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74902539"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520458"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>UWP 앱용 디자인 도구 키트 및 샘플
 
 ![디자인 기본 사항](../images/downloads-2x.png)
 
-Fluent 디자인/UWP 앱용 디자인 및 UI 관련 다운로드를 제공합니다. Visual Studio 같은 추가 도구는 <a href="https://developer.microsoft.com/windows/downloads">Microsoft 기본 다운로드 페이지</a>를 참조하세요. 
-
+Fluent 디자인/UWP 앱용 디자인 및 UI 관련 다운로드를 제공합니다. Visual Studio 같은 추가 도구는 <a href="https://developer.microsoft.com/windows/downloads">Microsoft 기본 다운로드 페이지</a>를 참조하세요.
 
 ## <a name="design-toolkits"></a>디자인 도구 키트
 
@@ -60,11 +59,6 @@ v1705, 2017년 5월<br>
 <a href="https://aka.ms/adobephotoshoptoolkit">다운로드</a>
     :::column-end:::
     :::column:::
-![영웅 이미지](images/framer.png)
-<b>Framer 도구 키트</b><br>
-(이 도구 키트는 더 이상 지원되지 않습니다.)<br/>
-v1806, 2018년 6월<br>
-<a href="https://github.com/Microsoft/windows-framer-toolkit">다운로드</a>
     :::column-end:::
 :::row-end:::
 
@@ -87,7 +81,7 @@ UWP 앱에 대한 컨트롤 및 기타 UI 요소.<br/>
     :::column-end:::
 :::row-end:::
 
-## <a name="fonts"></a>글꼴
+## <a name="fonts"></a>Fonts
 
 * <a href="https://aka.ms/SegoeFonts">Segoe UI 및 MDL2 아이콘 글꼴(Mac만 해당)</a>
 * <a href="https://aka.ms/hololensiconfont">Hololens 아이콘 글꼴(Windows만 해당)</a>
