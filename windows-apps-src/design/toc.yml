@@ -106,7 +106,7 @@
           href: controls-and-patterns/listview-and-gridview.md
         - name: 보기 대칭 이동
           href: controls-and-patterns/flipview.md
-        - name: 트리 보기
+        - name: 트리 뷰
           href: controls-and-patterns/tree-view.md
         - name: ItemsRepeater
           href: controls-and-patterns/items-repeater.md
@@ -174,7 +174,7 @@
           href: controls-and-patterns/menus.md
     - name: 탐색
       items:
-        - name: 마스터/세부
+        - name: 마스터 세부 정보
           href: controls-and-patterns/master-details.md
         - name: 탐색 보기
           href: controls-and-patterns/navigationview.md
@@ -182,7 +182,7 @@
           href: controls-and-patterns/pivot.md
         - name: 탭 보기
           href: controls-and-patterns/tab-view.md
-    - name: 피플
+    - name: 사용자
       items:
         - name: 연락처 카드
           href: controls-and-patterns/contact-card.md
@@ -226,7 +226,7 @@
           href: controls-and-patterns/text-block.md
         - name: 서식 있는 텍스트 블록
           href: controls-and-patterns/rich-text-block.md
-        - name: 입력란
+        - name: 텍스트 상자
           href: controls-and-patterns/text-box.md
         - name: 서식 있는 편집 상자
           href: controls-and-patterns/rich-edit-box.md
@@ -234,12 +234,14 @@
           href: controls-and-patterns/password-box.md
         - name: 숫자 상자
           href: controls-and-patterns/number-box.md
-        - name: Labels(레이블)
+        - name: 레이블
           href: controls-and-patterns/labels.md
         - name: 콘텐츠 링크
           href: controls-and-patterns/content-links.md
         - name: 필기 보기
           href: controls-and-patterns/text-handwriting-view.md
+    - name: 2 창 보기
+      href: controls-and-patterns/two-pane-view.md
 - name: 스타일
   items:
     - name: 개요
@@ -320,7 +322,7 @@
               href: shell/tiles-and-notifications/secondary-tiles-pinning.md
             - name: 작업 표시줄에 고정
               href: shell/tiles-and-notifications/secondary-tiles-pin-to-taskbar.md
-            - name: 데스크톱 응용 프로그램
+            - name: 데스크톱 애플리케이션
               href: shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md
         - name: 타일 콘텐츠
           href: shell/tiles-and-notifications/create-adaptive-tiles.md
@@ -427,10 +429,10 @@
       href: input/touch-interactions.md
     - name: 마우스
       href: input/mouse-interactions.md
-    - name: 키보드
+    - name: Keyboard
       href: input/keyboard-interactions.md
       items:
-        - name: 선택키
+        - name: 액세스 키
           href: input/access-keys.md
         - name: 바로 가기 키
           href: input/keyboard-accelerators.md
@@ -489,7 +491,7 @@
       href: input/multiple-input-design-guidelines.md
     - name: 입력 주입
       href: input/input-injection.md
-    - name: 입력 장치 식별
+    - name: 입력 디바이스 식별
       href: input/identify-input-devices.md
     - name: 사용자 지정 텍스트 입력
       href: input/custom-text-input.md
@@ -509,7 +511,7 @@
       href: input/guidelines-for-targeting.md
     - name: 시각적 피드백
       href: input/guidelines-for-visualfeedback.md
-- name: 장치
+- name: 디바이스
   items:
     - name: 개요
       href: devices/index.md
@@ -517,11 +519,11 @@
       href: devices/designing-for-tv.md
     - name: 혼합 현실
       href: devices/designing-for-MR.md
-- name: 유용성
+- name: 사용 편의성
   items:
     - name: 개요
       href: usability/index.md
-    - name: 접근성
+    - name: 내게 필요한 옵션
       href: accessibility/accessibility.md
       items:
         - name: 개요
