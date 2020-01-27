@@ -5,12 +5,12 @@ template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: e1a5b192ed57d3962b6ba4cbef69e3663bc1e2ec
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: b6533864748b4245b16ec7bcea9d2a831ff1c88a
+ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683996"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520448"
 ---
 # <a name="forms"></a>양식
 양식은 사용자가 데이터를 제출할 수 있고 이를 수집할 수 있는 컨트롤 그룹입니다. 일반적으로 양식은 설정 페이지, 설문 조사, 계정 생성 등에 사용됩니다. 
@@ -127,7 +127,7 @@ ms.locfileid: "75683996"
 ### <a name="lists"></a>목록
 컨트롤 | Windows Server Update Services와 함께 | 예제
 - | - | -
-[ComboBox](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists.md#drop-down-lists) | 컴팩트 상태로 시작하고 확장하여 선택 가능한 항목 목록 표시 | 시/도 또는 국가와 같은 긴 항목 목록에서 선택
+[ComboBox](combo-box.md) | 컴팩트 상태로 시작하고 확장하여 선택 가능한 항목 목록 표시 | 시/도 또는 국가와 같은 긴 항목 목록에서 선택
 [ListView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#list-views) | 항목을 분류하고 그룹 헤더 할당, 항목 끌어서 놓기, 콘텐츠 조정, 항목 순서 변경 | 옵션 순위 지정
 [GridView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#grid-views) | 이미지 기반 컬렉션 정렬 및 찾아보기 | 사진, 색, 디스플레이 테마 선택
 

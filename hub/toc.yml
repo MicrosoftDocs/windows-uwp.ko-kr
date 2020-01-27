@@ -68,6 +68,8 @@
       href: apps/fluent-design-system.md
     - name: 내게 필요한 옵션
       href: apps/accessibility.md
+    - name: 음성
+      href: apps/speech.md
     - name: 기능 및 기술
       href: apps/features-and-technologies.md
     - name: 최신 문서 업데이트

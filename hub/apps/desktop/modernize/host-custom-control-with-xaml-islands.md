@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 4fb6e2d4fc13d90ec69f962e69b1ee8cb5c1361c
-ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
+ms.openlocfilehash: 70ba858daa09f4412a771441e76f5c00dd8c6c32
+ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520398"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725986"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML 아일랜드를 사용 하 여 WPF 앱에서 사용자 지정 UWP 컨트롤 호스팅
 
@@ -258,36 +258,7 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용
 
 2. 패키징 프로젝트에서 **응용 프로그램** 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 선택 합니다. 프로젝트 목록에서 솔루션의 WPF 프로젝트를 선택 하 고 **확인**을 클릭 합니다.
 
-3. 패키징 프로젝트 파일을 편집 합니다. 이러한 변경은 현재 .NET Core 3을 대상으로 하 고 XAML 아일랜드를 호스트 하는 WPF 앱을 패키징하는 데 필요 합니다.
-
-    1. 솔루션 탐색기에서 패키징 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 파일 편집**을 선택 합니다.
-    2. 파일에서 `<Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />` 요소를 찾습니다. 이 요소를 다음 XML로 바꿉니다. 이러한 변경은 현재 .NET Core 3을 대상으로 하 고 UWP 컨트롤을 호스트 하는 WPF 앱을 패키징하는 데 필요 합니다.
-
-        ``` xml
-        <ItemGroup>
-            <SDKReference Include="Microsoft.VCLibs,Version=14.0">
-            <TargetedSDKConfiguration Condition="'$(Configuration)'!='Debug'">Retail</TargetedSDKConfiguration>
-            <TargetedSDKConfiguration Condition="'$(Configuration)'=='Debug'">Debug</TargetedSDKConfiguration>
-            <TargetedSDKArchitecture>$(PlatformShortName)</TargetedSDKArchitecture>
-            <Implicit>true</Implicit>
-            </SDKReference>
-        </ItemGroup>
-        <Import Project="$(WapProjPath)\Microsoft.DesktopBridge.targets" />
-        <Target Name="_StompSourceProjectForWapProject" BeforeTargets="_ConvertItems">
-            <ItemGroup>
-            <_TemporaryFilteredWapProjOutput Include="@(_FilteredNonWapProjProjectOutput)" />
-            <_FilteredNonWapProjProjectOutput Remove="@(_TemporaryFilteredWapProjOutput)" />
-            <_FilteredNonWapProjProjectOutput Include="@(_TemporaryFilteredWapProjOutput)">
-                <SourceProject></SourceProject>
-                <TargetPath Condition="'%(FileName)%(Extension)'=='resources.pri'">app_resources.pri</TargetPath>
-            </_FilteredNonWapProjProjectOutput>
-            </ItemGroup>
-        </Target>
-        ```
-
-    3. 프로젝트 파일을 저장하고 닫습니다.
-
-4. WPF 프로젝트 파일을 편집 합니다. 이러한 변경 내용은 현재 사용자 지정 UWP 컨트롤을 호스트 하는 WPF 앱을 패키징하는 데 필요 합니다.
+3. WPF 프로젝트 파일을 편집 합니다. 이러한 변경 내용은 현재 사용자 지정 UWP 컨트롤을 호스트 하는 WPF 앱을 패키징하는 데 필요 합니다.
 
     1. 솔루션 탐색기에서 WPF 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 언로드**를 선택 합니다.
     2. WPF 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **편집**을 선택 합니다.
@@ -299,10 +270,10 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용
         </PropertyGroup>
         ```
 
-    4. 프로젝트 파일을 저장하고 닫습니다.
+    4. 프로젝트 파일을 저장 하 고 닫습니다.
     5. WPF 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 다시 로드**를 선택 합니다.
 
-5. 패키징 프로젝트를 빌드하고 실행 합니다. WPF가 실행 되 고 UWP 사용자 지정 컨트롤이 예상 대로 표시 되는지 확인 합니다.
+4. 패키징 프로젝트를 빌드하고 실행 합니다. WPF가 실행 되 고 UWP 사용자 지정 컨트롤이 예상 대로 표시 되는지 확인 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

@@ -1,19 +1,19 @@
 ---
 description: 이 문서에서는 데스크톱 C++ Win32 앱에서 UWP XAML UI를 호스트 하는 방법을 설명 합니다.
 title: C++ Win32 앱에서 UWP XAML 호스팅 API 사용
-ms.date: 08/20/2019
+ms.date: 01/10/2010
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, win32, xaml 제도
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 9e4fdc8366e26bcd7e106bf070cb42ed2cd1a49f
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 5a0973bcce4de4fac8f923a303b0c3216600fb97
+ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683686"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520428"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-c-win32-app"></a>C++ Win32 앱에서 UWP XAML 호스팅 API 사용
 
@@ -55,7 +55,7 @@ XAML 아일랜드에는 Windows 10, 버전 1903 이상 및 Windows SDK의 해당
     1. Windows 10 버전 1903 SDK (버전 10.0.18362) 이상 릴리스를 설치 합니다.
     2. [Windows 응용 프로그램 패키징 프로젝트](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) 를 솔루션에 추가 하 고 C++/win32 프로젝트에 대 한 참조를 추가 하 여 msix 패키지에 앱을 패키지 합니다.
 
-* **Microsoft Toolkit**. i n k. MSIX 패키지에서 앱을 패키지 하지 않으려는 경우에는 6.0.0 (버전 v-preview7 이상 [)를 설치할](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) 수 있습니다. 이 패키지는 XAML 아일랜드가 앱에서 작동할 수 있도록 하는 몇 가지 빌드 및 런타임 자산을 제공 합니다. 이 패키지의 최신 미리 보기 버전을 볼 수 있도록 **시험판 포함** 옵션이 선택 되어 있는지 확인 합니다.
+* **Microsoft Toolkit**. i n k. MSIX 패키지에서 앱을 패키지 하지 않으려는 경우에는 6.0.0 (버전 v 이상 [)를 설치할](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) 수 있습니다. 이 패키지는 XAML 아일랜드가 앱에서 작동할 수 있도록 하는 몇 가지 빌드 및 런타임 자산을 제공 합니다.
 
 > [!NOTE]
 > 이러한 지침의 이전 버전에서는 프로젝트의 응용 프로그램 매니페스트에 `maxversiontested` 요소를 추가 했습니다. 위에 나열 된 옵션 중 하나를 사용 하는 동안에는이 요소를 매니페스트에 더 이상 추가할 필요가 없습니다.
@@ -125,7 +125,7 @@ Windows Community Toolkit의 [Windowsxamlhost](https://docs.microsoft.com/window
 4. [Microsoft Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) . i n k.
 
     1. **NuGet 패키지 관리자** 창에서 **시험판 포함** 이 선택 되어 있는지 확인 합니다.
-    2. **찾아보기** 탭을 선택 하 고, 6.0.0 [패키지를](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) 검색 하 고,이 패키지의 버전 v-preview7 이상을 설치 합니다.
+    2. **찾아보기** 탭을 선택 하 고, 6.0.0 [패키지를](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) 검색 하 고,이 패키지의 버전 v 이상을 설치 합니다.
 
 ### <a name="use-the-xaml-hosting-api-to-host-a-uwp-control"></a>XAML 호스팅 API를 사용 하 여 UWP 컨트롤 호스팅
 
@@ -423,7 +423,8 @@ UWP XAML 호스팅 API는 이러한 작업을 수행 하는 데 도움이 되는
 
 * C++ Win32 응용 프로그램에서 응용 프로그램이 WM_SIZE 메시지를 처리할 때 [setwindowpos](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-setwindowpos) 함수를 사용 하 여 호스팅된 XAML 아일랜드의 위치를 변경할 수 있습니다. 예제를 보려면 [ C++ Win32 샘플](https://github.com/marb2000/XamlIslands/tree/master/19H1_Insider_Samples/CppWin32App_With_Island)에서 [sampleapp.exe](https://github.com/marb2000/XamlIslands/blob/master/19H1_Insider_Samples/CppWin32App_With_Island/SampleCppApp/SampleApp.cpp#L191) 코드 파일을 참조 하세요.
 
-* 부모 UI 요소가 **Desktopwindowxamlsource**에서 **호스팅하는 데** 필요한 사각형 영역의 크기를 표시 해야 하는 경우에는 **windows.** x x. i x. i x. i a. [](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) 예를 들어 다음과 같은 가치를 제공해야 합니다.
+* 부모 UI 요소가 **Desktopwindowxamlsource**에서 **호스팅하는 데** 필요한 사각형 영역의 크기를 [표시 해야 하는 경우에는](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure)
+ **windows.** x x. i x. i x. i a. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
     * WPF 응용 프로그램에서는 **Desktopwindowxamlsource**를 호스트 하는 [system.windows.interop.hwndhost>](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) 의 [system.windows.frameworkelement.measureoverride](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.measureoverride) 메서드에서이 작업을 수행할 수 있습니다. 예를 들어 Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.Layout.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Layout.cs) 파일을 참조 하세요.
 
