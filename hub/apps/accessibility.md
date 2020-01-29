@@ -6,16 +6,16 @@ ms.date: 09/12/2019
 keywords: Windows 10의 접근성, 접근성, 접근성 지원 win32 앱 빌드, 접근성 지원 UWP 앱 빌드, 접근성 지원 WPF 앱 빌드, 접근성 지원 WinForms 앱 빌드
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
-ms.openlocfilehash: fdb1092139602edd00086e17ff4dc7a27cf361dd
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 2739546061febcfc96403ed5520fdcbd8bc2c462
+ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681894"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725936"
 ---
 # <a name="accessibility-in-windows-10"></a>Windows 10의 접근성
 
-![hero-accessibility-bar-smaller.png](images/hero-accessibility-bar-smaller.png)
+![접근성 히어로 이미지](images/hero-accessibility-bar-smaller.png)
 
 ## <a name="build-accessibility-into-your-applications-to-empower-people-of-all-abilities"></a>애플리케이션에 사용자에게 모든 기능을 제공할 수 있는 접근성 빌드
 
@@ -256,7 +256,6 @@ ms.locfileid: "75681894"
       [Windows UI 자동화 블로그](https://blogs.msdn.microsoft.com/winuiautomation/)
    :::column-end:::
 :::row-end:::
-
 :::row:::
    :::column span="3":::
       **커뮤니티 및 지원**

@@ -6,12 +6,12 @@ ms.date: 05/08/2019
 ms.localizationpriority: medium
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: 4fb49b5145350360be3b86c73110762cfa30e9db
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: ac779bf57e51b13051fa25293606daab05540fd1
+ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339346"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76726026"
 ---
 # <a name="features-and-technologies-for-windows-apps"></a>Windows 앱의 기능 및 기술
 
@@ -32,7 +32,7 @@ ms.locfileid: "71339346"
 
 ![Surface 펜](images/hero-small.png)  
 
-펜 장치와 더불어 Windows Ink 플랫폼을 사용하면 자연스럽게 디지털 필기 메모, 드로잉, 주석을 만들 수 있습니다. 플랫폼에서는 디지타이저 입력을 잉크 데이터로 캡처, 잉크 데이터 생성, 잉크 데이터 관리, 출력 장치에서 잉크 데이터를 스트로크로 렌더링 및 잉크를 필기 인식을 통해 텍스트로 변환 등을 지원합니다.
+펜 디바이스와 더불어 Windows Ink 플랫폼을 사용하면 자연스럽게 디지털 필기 메모, 드로잉, 주석을 만들 수 있습니다. 플랫폼에서는 디지타이저 입력을 잉크 데이터로 캡처, 잉크 데이터 생성, 잉크 데이터 관리, 출력 디바이스에서 잉크 데이터를 스트로크로 렌더링 및 잉크를 필기 인식을 통해 텍스트로 변환 등을 지원합니다.
 
 Windows 앱에서 Windows Ink를 사용하는 다양한 방법에 대한 자세한 내용은 [Windows Ink](/windows/uwp/design/input/pen-and-stylus-interactions)를 참조하세요.
 
@@ -44,7 +44,7 @@ Windows 앱에서 Windows Ink를 사용하는 다양한 방법에 대한 자세�
 
 Windows에서 다양한 방식으로 음성 인식과 텍스트 음성 변환(TTS 또는 음성 합성이라고도 함)을 앱의 사용자 환경에 직접 통합할 수 있습니다. 음성을 통해 사람들은 효과적이고 즐겁게 앱을 조작할 수 있으며, 음성으로 키보드, 마우스, 터치 및 제스처를 보완하거나 심지어 대체할 수 있습니다.
 
-Windows 앱에서 음성 상호 작용을 사용하는 다양한 방법에 대한 자세한 내용은 [음성 상호 작용](/windows/uwp/design/input/speech-interactions)을 참조하세요.
+Windows 앱에서 음성 상호 작용을 사용하는 다양한 방법에 대한 자세한 내용은 [Windows 10의 음성, 목소리 및 대화](speech.md)를 참조하세요.
 
 ### <a name="windows-ai"></a>Windows AI
 
@@ -62,7 +62,7 @@ Windows 앱에서 AI를 통합하는 다양한 방법에 대한 자세한 내용
 
 |  UWP  |  Win32(Windows API) |  WPF  |  Windows Forms  |
 |-------|----------------------|-------|-----------------|
-| [디자인](/windows/uwp/design/basics/)<br/><br/>[레이아웃](/windows/uwp/design/layout/)<br/><br/>[컨트롤](/windows/uwp/design/controls-and-patterns/)<br/><br/>[입력](/windows/uwp/design/input/)<br/><br/>[Tile](/windows/uwp/design/shell/tiles-and-notifications/creating-tiles)<br/><br/>[시각적 계층](/windows/uwp/composition/visual-layer)<br/><br/>[XAML 플랫폼](/windows/uwp/xaml-platform/)<br/><br/>[실행, 다시 시작 및 백그라운드 작업](/windows/uwp/launch-resume/)<br/><br/>[Windows 접근성](/windows/uwp/design/accessibility/accessibility)<br/><br/>  |  [데스크톱 사용자 인터페이스](/windows/desktop/windows-application-ui-development)<br/><br/>[데스크톱 환경 및 셸](/windows/desktop/user-interface)<br/><br/>[Windows 컨트롤](/windows/desktop/controls/window-controls)<br/><br/>[데스크톱 앱의 UWP 컨트롤(XAML Islands)](/windows/apps/desktop/modernize/xaml-islands)<br/><br/>[데스크톱 앱의 UWP 시각적 계층](/windows/apps/desktop/modernize/visual-layer-in-desktop-apps)<br/><br/>[Windows 및 메시지](/windows/desktop/winmsg/windowing)<br/><br/>[메뉴 및 다른 리소스](/windows/desktop/menurc/resources)<br/><br/>[높은 DPI](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows)<br/><br/>[접근성](/windows/desktop/accessibility)<br/><br/>  |  [WPF의 Windows](https://docs.microsoft.com/dotnet/framework/wpf/app-development/windows-in-wpf-applications)<br/><br/>[탐색 개요](https://docs.microsoft.com/dotnet/framework/wpf/app-development/navigation-overview)<br/><br/>[WPF의 XAML](https://docs.microsoft.com/dotnet/framework/wpf/advanced/xaml-in-wpf)<br/><br/>[컨트롤](https://docs.microsoft.com/dotnet/framework/wpf/controls/)<br/><br/>[시각적 계층 프로그래밍](https://docs.microsoft.com/dotnet/framework/wpf/graphics-multimedia/visual-layer-programming)<br/><br/>[입력](https://docs.microsoft.com/dotnet/framework/wpf/advanced/input-wpf)<br/><br/>[접근성](https://docs.microsoft.com/dotnet/framework/ui-automation/)<br/><br/>  | [Windows Form 만들기](https://docs.microsoft.com/dotnet/framework/winforms/creating-a-new-windows-form)<br/><br/>[컨트롤](https://docs.microsoft.com/dotnet/framework/winforms/controls/)<br/><br/>[대화 상자](https://docs.microsoft.com/dotnet/framework/winforms/dialog-boxes-in-windows-forms)<br/><br/>[사용자 입력](https://docs.microsoft.com/dotnet/framework/winforms/user-input-in-windows-forms)<br/><br/>[Windows Forms 접근성](https://docs.microsoft.com/dotnet/framework/winforms/advanced/windows-forms-accessibility)<br/><br/> |
+| [디자인](/windows/uwp/design/basics/)<br/><br/>[레이아웃](/windows/uwp/design/layout/)<br/><br/>[컨트롤](/windows/uwp/design/controls-and-patterns/)<br/><br/>[입력](/windows/uwp/design/input/)<br/><br/>[Tile](/windows/uwp/design/shell/tiles-and-notifications/creating-tiles)<br/><br/>[시각적 계층](/windows/uwp/composition/visual-layer)<br/><br/>[XAML 플랫폼](/windows/uwp/xaml-platform/)<br/><br/>[실행, 다시 시작 및 백그라운드 작업](/windows/uwp/launch-resume/)<br/><br/>[Windows 접근성](/windows/uwp/design/accessibility/accessibility)<br/><br/>[음성 조작](https://docs.microsoft.com/windows/uwp/design/input/speech-interactions)<br/><br/> |  [데스크톱 사용자 인터페이스](/windows/desktop/windows-application-ui-development)<br/><br/>[데스크톱 환경 및 셸](/windows/desktop/user-interface)<br/><br/>[Windows 컨트롤](/windows/desktop/controls/window-controls)<br/><br/>[데스크톱 앱의 UWP 컨트롤(XAML Islands)](/windows/apps/desktop/modernize/xaml-islands)<br/><br/>[데스크톱 앱의 UWP 시각적 계층](/windows/apps/desktop/modernize/visual-layer-in-desktop-apps)<br/><br/>[Windows 및 메시지](/windows/desktop/winmsg/windowing)<br/><br/>[메뉴 및 다른 리소스](/windows/desktop/menurc/resources)<br/><br/>[높은 DPI](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows)<br/><br/>[접근성](/windows/desktop/accessibility)<br/><br/>[Microsoft Speech Platform - SDK(소프트웨어 개발 키트) (버전 11)](https://www.microsoft.com/download/details.aspx?id=27226)<br/><br/>[Microsoft Speech SDK, 버전 5.1](https://www.microsoft.com/download/details.aspx?id=10121)<br/><br/>  |  [WPF의 Windows](https://docs.microsoft.com/dotnet/framework/wpf/app-development/windows-in-wpf-applications)<br/><br/>[탐색 개요](https://docs.microsoft.com/dotnet/framework/wpf/app-development/navigation-overview)<br/><br/>[WPF의 XAML](https://docs.microsoft.com/dotnet/framework/wpf/advanced/xaml-in-wpf)<br/><br/>[컨트롤](https://docs.microsoft.com/dotnet/framework/wpf/controls/)<br/><br/>[시각적 계층 프로그래밍](https://docs.microsoft.com/dotnet/framework/wpf/graphics-multimedia/visual-layer-programming)<br/><br/>[입력](https://docs.microsoft.com/dotnet/framework/wpf/advanced/input-wpf)<br/><br/>[접근성](https://docs.microsoft.com/dotnet/framework/ui-automation/)<br/><br/>[.NET Framework용 System.Speech 프로그래밍 가이드](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361625(v=office.14))<br/><br/>  | [Windows Form 만들기](https://docs.microsoft.com/dotnet/framework/winforms/creating-a-new-windows-form)<br/><br/>[컨트롤](https://docs.microsoft.com/dotnet/framework/winforms/controls/)<br/><br/>[대화 상자](https://docs.microsoft.com/dotnet/framework/winforms/dialog-boxes-in-windows-forms)<br/><br/>[사용자 입력](https://docs.microsoft.com/dotnet/framework/winforms/user-input-in-windows-forms)<br/><br/>[Windows Forms 접근성](https://docs.microsoft.com/dotnet/framework/winforms/advanced/windows-forms-accessibility)<br/><br/>[.NET Framework용 System.Speech 프로그래밍 가이드](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361625(v=office.14))<br/><br/> |
 
 ### <a name="audio-video-and-graphics"></a>오디오 비디오 및 그래픽
 
