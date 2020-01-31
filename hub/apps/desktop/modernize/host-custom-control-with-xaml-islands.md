@@ -1,19 +1,19 @@
 ---
 description: 이 문서에서는 XAML 아일랜드를 사용 하 여 WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하는 방법을 보여 줍니다.
 title: XAML 아일랜드를 사용 하 여 WPF 앱에서 사용자 지정 UWP 컨트롤 호스팅
-ms.date: 01/10/2010
+ms.date: 01/24/2020
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, xaml 제도, 사용자 지정 컨트롤, 사용자 컨트롤, 호스트 컨트롤
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 70ba858daa09f4412a771441e76f5c00dd8c6c32
-ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
+ms.openlocfilehash: 8f22761bf535f13ae0686a9b180ee810fba61028
+ms.sourcegitcommit: 1455e12a50f98823bfa3730c1d90337b1983b711
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725986"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76814003"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML 아일랜드를 사용 하 여 WPF 앱에서 사용자 지정 UWP 컨트롤 호스팅
 
@@ -21,17 +21,20 @@ ms.locfileid: "76725986"
 
 이 문서는 WPF 앱에서이 작업을 수행 하는 방법을 보여 주지만 Windows Forms 앱의 프로세스와 비슷합니다. WPF 및 Windows Forms apps에서 UWP 컨트롤을 호스트 하는 방법에 대 한 개요는 [이 문서](xaml-islands.md#wpf-and-windows-forms-applications)를 참조 하세요.
 
-## <a name="overview"></a>개요
+## <a name="required-components"></a>필수 구성 요소
 
-WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하려면 다음 구성 요소가 필요 합니다. 이 문서에서는 이러한 각 구성 요소를 만드는 방법에 대 한 지침을 제공 합니다.
+WPF (또는 Windows Forms) 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 솔루션에 다음 구성 요소가 필요 합니다. 이 문서에서는 이러한 각 구성 요소를 만드는 방법에 대 한 지침을 제공 합니다.
 
-* **WPF 앱에 대 한 프로젝트 및 소스 코드**입니다. [Windowsxamlhost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용 하 여 사용자 지정 UWP 컨트롤을 호스트 하는 것은 WPF 및 .net Core 3을 대상으로 하는 앱 Windows Forms 에서만 지원 됩니다. 이 시나리오는 .NET Framework를 대상으로 하는 앱에서 지원 되지 않습니다.
+* **앱에 대 한 프로젝트 및 소스 코드**입니다. [Windowsxamlhost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용 하 여 사용자 지정 UWP 컨트롤을 호스트 하는 것은 .net Core 3을 대상으로 하는 앱 에서만 지원 됩니다. 이 시나리오는 .NET Framework를 대상으로 하는 앱에서 지원 되지 않습니다.
 
-* **사용자 지정 UWP 컨트롤**입니다. 앱을 사용 하 여 컴파일할 수 있도록 호스트 하려는 사용자 지정 UWP 컨트롤에 대 한 소스 코드가 필요 합니다. 일반적으로 사용자 지정 컨트롤은 WPF (또는 Windows Forms) 프로젝트와 동일한 솔루션에서 참조 하는 UWP 클래스 라이브러리 프로젝트에서 정의 됩니다.
+* **사용자 지정 UWP 컨트롤**입니다. 앱을 사용 하 여 컴파일할 수 있도록 호스트 하려는 사용자 지정 UWP 컨트롤에 대 한 소스 코드가 필요 합니다. 일반적으로 사용자 지정 컨트롤은 WPF 또는 Windows Forms 프로젝트와 동일한 솔루션에서 참조 하는 UWP 클래스 라이브러리 프로젝트에서 정의 됩니다.
 
-* **XamlApplication 개체를 정의 하는 UWP 앱 프로젝트**입니다. WPF (또는 Windows Forms) 프로젝트에는 Windows 커뮤니티 도구 키트에서 제공 하는 `Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication` 클래스의 인스턴스에 대 한 액세스 권한이 있어야 합니다. 이 개체는 응용 프로그램의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 형식에 대 한 메타 데이터를 로드 하기 위한 루트 메타 데이터 공급자로 작동 합니다. 이 작업을 수행 하는 권장 방법은 WPF Windows Forms (유니버설 Windows) 프로젝트와 동일한 솔루션에 **빈 앱 (유니버설 Windows)** 프로젝트를 추가 하 고이 프로젝트에서 기본 `App` 클래스를 수정 하는 것입니다.
-  > [!NOTE]
-  > 솔루션은 `XamlApplication` 개체를 정의 하는 프로젝트를 하나만 포함할 수 있습니다. 앱의 모든 사용자 지정 UWP 컨트롤은 동일한 `XamlApplication` 개체를 공유 합니다. `XamlApplication` 개체를 정의 하는 프로젝트에는 XAML 아일랜드에서 UWP 컨트롤을 호스트 하는 데 사용 되는 다른 모든 UWP 라이브러리 및 프로젝트에 대 한 참조가 포함 되어야 합니다.
+* **Xamlapplication에서 파생 되는 루트 응용 프로그램 클래스를 정의 하는 UWP 앱 프로젝트**입니다. WPF 또는 Windows Forms 프로젝트에는 Windows 커뮤니티 도구 키트에서 제공 하는 [Microsoft Toolkit. Xamlhost](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스의 인스턴스에 대 한 액세스 권한이 있어야 합니다. 이 개체는 응용 프로그램의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 형식에 대 한 메타 데이터를 로드 하기 위한 루트 메타 데이터 공급자로 작동 합니다.
+
+    이렇게 하려면 **빈 앱 (유니버설 Windows)** 프로젝트를 WPF 또는 Windows Forms 프로젝트와 동일한 솔루션에 추가 하 고,이 프로젝트에서 기본 `App` 클래스를 수정 하 여 `XamlApplication`에서 파생 시킨 다음, 앱에 대 한 진입점 코드에서이 개체의 인스턴스를 만듭니다.
+
+    > [!NOTE]
+    > 솔루션은 `XamlApplication` 개체를 정의 하는 프로젝트를 하나만 포함할 수 있습니다. 앱의 모든 사용자 지정 UWP 컨트롤은 동일한 `XamlApplication` 개체를 공유 합니다. `XamlApplication` 개체를 정의 하는 프로젝트에는 XAML 아일랜드에서 UWP 컨트롤을 호스트 하는 데 사용 되는 다른 모든 UWP 라이브러리 및 프로젝트에 대 한 참조가 포함 되어야 합니다.
 
 ## <a name="create-a-wpf-project"></a>WPF 프로젝트 만들기
 
@@ -59,14 +62,14 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하려면 다음 구�
 
 7. X86 또는 x64와 같은 특정 플랫폼을 대상으로 하도록 솔루션을 구성 합니다. 사용자 지정 UWP 컨트롤은 **모든 CPU**를 대상으로 하는 프로젝트에서 지원 되지 않습니다.
 
-    1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고 **속성** -> **구성 속성** -> **Configuration Manager**를 선택 합니다. 
+    1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고 **속성** -> **구성 속성** -> **Configuration Manager**를 선택 합니다.
     2. **활성 솔루션 플랫폼**에서 **새로 만들기**를 선택 합니다. 
     3. **새 솔루션 플랫폼** 대화 상자에서 **x64** 또는 **x 86** 을 선택 하 고 **확인**을 누릅니다. 
     4. 열기 대화 상자를 닫습니다.
 
-## <a name="create-a-xamlapplication-object-in-a-uwp-app-project"></a>UWP 앱 프로젝트에서 XamlApplication 개체 만들기
+## <a name="define-a-xamlapplication-class-in-a-uwp-app-project"></a>UWP 앱 프로젝트에서 XamlApplication 클래스 정의
 
-다음으로, WPF 프로젝트와 동일한 솔루션에 UWP 앱 프로젝트를 추가 합니다. 이 프로젝트의 기본 `App` 클래스를 수정 하 여 Windows 커뮤니티 도구 키트에서 제공 하는 `Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication` 클래스에서 파생 됩니다. WPF 앱의 **Windowsxamlhost** 개체는 사용자 지정 UWP 컨트롤을 호스트 하는 데이 `XamlApplication` 개체가 필요 합니다.
+다음으로, WPF 프로젝트와 동일한 솔루션에 UWP 앱 프로젝트를 추가 합니다. 이 프로젝트에서 기본 `App` 클래스를 수정 하 여 Windows 커뮤니티 도구 키트에서 제공 하는 [Microsoft Toolkit. Xamlhost](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생 됩니다. 이 클래스의 용도에 대 한 자세한 내용은 [이 섹션](#required-components)을 참조 하세요.
 
 1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고 **추가** -> **새 프로젝트**를 선택 합니다.
 2. 솔루션에 **빈 앱(Universal Windows)** 프로젝트 추가 대상 버전 및 최소 버전이 모두 **Windows 10 버전 1903** 이상으로 설정 되어 있는지 확인 합니다.
@@ -101,6 +104,38 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하려면 다음 구�
 6. UWP 앱 프로젝트에서 **Mainpage .xaml** 파일을 삭제 합니다.
 7. UWP 앱 프로젝트를 정리 하 고 빌드합니다.
 8. WPF 프로젝트에서 **종속성** 노드를 마우스 오른쪽 단추로 클릭 하 고 UWP 앱 프로젝트에 대 한 참조를 추가 합니다.
+
+## <a name="instantiate-the-xamlapplication-object-in-the-entry-point-of-your-wpf-app"></a>WPF 앱의 진입점에서 XamlApplication 개체를 인스턴스화합니다.
+
+다음으로, WPF 앱의 진입점에 코드를 추가 하 여 UWP 프로젝트에서 방금 정의한 `App` 클래스의 인스턴스를 만듭니다 (이제는 `XamlApplication`에서 파생 되는 클래스). 이 개체의 용도에 대 한 자세한 내용은 [이 섹션](#required-components)을 참조 하세요.
+
+1. WPF 프로젝트에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **추가** -> **새 항목**을 선택한 다음 **클래스**를 선택 합니다. 클래스 이름을 **프로그램** 으로 만들고 **추가**를 클릭 합니다.
+
+2. 생성 된 `Program` 클래스를 다음 코드로 바꾸고 파일을 저장 합니다. `MyUWPApp`를 UWP 앱 프로젝트의 네임 스페이스로 바꾸고 `MyWPFApp`을 WPF 앱 프로젝트의 네임 스페이스로 바꿉니다.
+
+    ```csharp
+    public class Program
+    {
+        [System.STAThreadAttribute()]
+        public static void Main()
+        {
+            using (new MyUWPApp.App())
+            {
+                MyWPFApp.App app = new MyWPFApp.App();
+                app.InitializeComponent();
+                app.Run();
+            }
+        }
+    }
+    ```
+
+3. 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+
+4. 속성의 **응용 프로그램** 탭에서 **시작 개체** 드롭다운을 클릭 하 고 이전 단계에서 추가한 `Program` 클래스의 정규화 된 이름을 선택 합니다. 
+    > [!NOTE]
+    > 기본적으로 WPF 프로젝트는 수정 될 수 없는 생성 된 코드 파일에 `Main` 진입점 함수를 정의 합니다. 이 단계에서는 프로젝트에 대 한 진입점을 새 `Program` 클래스의 `Main` 메서드로 변경 하 여 앱의 시작 프로세스 초기에 가능한 한 빨리 실행 되는 코드를 추가할 수 있습니다. 
+
+5. 프로젝트 속성에 대 한 변경 내용을 저장 합니다.
 
 ## <a name="create-a-custom-uwp-control"></a>사용자 지정 UWP 컨트롤 만들기
 
@@ -277,5 +312,6 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용
 
 ## <a name="related-topics"></a>관련 항목
 
-* [데스크톱 응용 프로그램의 UWP 컨트롤](xaml-islands.md)
+* [데스크톱 앱에서 UWP XAML 컨트롤 호스트 (XAML 제도)](xaml-islands.md)
+* [XAML 아일랜드 코드 샘플](https://github.com/microsoft/Xaml-Islands-Samples)
 * [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost)

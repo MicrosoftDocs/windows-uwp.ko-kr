@@ -2,18 +2,18 @@
 description: 이 자습서에서는 UWP XAML 사용자 인터페이스를 추가 하 고, MSIX 개의 패키지를 만들고, 기타 최신 구성 요소를 WPF 앱에 통합 하는 방법을 보여 줍니다.
 title: XAML Islands를 사용하여 UWP InkCanvas 컨트롤 추가
 ms.topic: article
-ms.date: 01/10/2010
+ms.date: 01/24/2020
 ms.author: mcleans
 author: mcleanbyron
-keywords: windows 10, uwp, windows forms, wpf, xaml 제도
+keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 1ed4fa54b9987ef0ab5f3dd89aa9d11a00ae695c
-ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
+ms.openlocfilehash: 945cc2f1cf225c194e5820990bdbeda584069e4c
+ms.sourcegitcommit: 1455e12a50f98823bfa3730c1d90337b1983b711
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520438"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76814043"
 ---
 # <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>2 부: XAML 아일랜드를 사용 하 여 UWP InkCanvas 컨트롤 추가
 
@@ -22,7 +22,7 @@ ms.locfileid: "76520438"
 이 자습서의 가상 시나리오에서 Contoso 개발 팀은 Contoso 지출 앱에 디지털 서명 지원을 추가 하려고 합니다. UWP **InkCanvas** 컨트롤은 텍스트와 모양을 인식 하는 기능과 같은 디지털 잉크 및 AI 기반 기능을 지원 하기 때문에이 시나리오에 유용한 옵션입니다. 이렇게 하려면 Windows 커뮤니티 도구 키트에서 제공 되는 [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 래핑된 UWP 컨트롤을 사용 합니다. 이 컨트롤은 WPF 앱에서 사용할 UWP **InkCanvas** 컨트롤의 인터페이스 및 기능을 래핑합니다. 래핑된 UWP 컨트롤에 대 한 자세한 내용은 [데스크톱 앱에서 UWP xaml 컨트롤 호스트 (XAML 아일랜드)](xaml-islands.md)를 참조 하세요.
 
 > [!NOTE]
-> 이 자습서에서 WPF 앱은 Windows SDK에서 자사 UWP 컨트롤만 호스팅합니다. 사용자 지정 UWP 컨트롤을 비롯 한 다른 XAML 고립 시나리오를 지원 하려면 앱 프로젝트에 Windows 커뮤니티 도구 키트에서 제공 하는 `Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication` 클래스의 인스턴스에 대 한 액세스 권한이 있어야 합니다. 이 작업을 수행 하는 권장 방법은 WPF Windows Forms (유니버설 Windows) 프로젝트와 동일한 솔루션에 **빈 앱 (유니버설 Windows)** 프로젝트를 추가 하 고이 프로젝트에서 기본 `App` 클래스를 수정 하는 것입니다. Windows SDK에서 자사 UWP 컨트롤을 호스트 하는 기본적인 시나리오에서는이 단계가 필요 하지 않으므로이 자습서에서는이 단계를 생략 합니다. 자세한 내용은 [이 문서](host-standard-control-with-xaml-islands.md)를 참조 하세요.
+> 이 자습서에서 WPF 앱은 Windows SDK에서 자사 UWP 컨트롤만 호스팅합니다. 따라서이 자습서에서는 [여기](host-standard-control-with-xaml-islands.md#required-components)에 설명 된 대로 [Microsoft Toolkit. xamlhost](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스의 인스턴스를 정의 하는 단계를 생략 합니다.
 
 ## <a name="configure-the-project-to-use-xaml-islands"></a>XAML 아일랜드를 사용 하도록 프로젝트 구성
 
@@ -71,7 +71,7 @@ Contoso 지출 앱에 **InkCanvas** 컨트롤을 추가 하려면 먼저 UWP XAM
     </application>
     ```
 
-8. `app.manifest` 파일을 저장하고 닫습니다.
+8. `app.manifest` 파일을 저장 한 후 닫습니다.
 
 9. **솔루션 탐색기**에서 **ContosoExpenses** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
 
