@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: b2b60354acb2c3d97ced3dce0b3fb7f6d97ac35d
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 92a1567fe72d46e53bf218c033fc59e8c98a2981
+ms.sourcegitcommit: 09571e1c6a01fabed773330aa7ead459a47d94f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684771"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929268"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>JavaScript로 UWP 게임 만들기
 
@@ -165,7 +165,6 @@ F5 키를 눌러 앱을 다시 실행하면 구름이 표시된 것을 볼 수 �
 이번에는 구름을 움직여 보겠습니다. 구름을 포함하여 어떤 물체를 움직이는 방법은 1초에 여러 차례 반복해서 호출되는 [ticker](https://www.createjs.com/docs/easeljs/classes/Ticker.html) 함수입니다. 이 함수는 호출될 때마다 약간 다른 위치에 그래픽을 다시 그립니다.
 
 <p data-height="500" data-theme-id="23761" data-slug-hash="vxZVRK" data-default-tab="result" data-user="MicrosoftEdgeDocumentation" data-embed-version="2" data-pen-title="CreateJS - Animating clouds" data-preview="true" data-editable="true" class="codepen"><a href="https://codepen.io">CodePen</a>에서 Pen <a href="https://codepen.io/MicrosoftEdgeDocumentation/pen/vxZVRK/">CreateJS - Animating clouds</a> by Microsoft Edge Docs(<a href="https://codepen.io/MicrosoftEdgeDocumentation">@MicrosoftEdgeDocumentation</a>)를 참조하세요.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
   이 작업을 수행하는 코드는 EaselJS이며 CreateJS 라이브러리에서 제공하는 **main.js** 파일에 이미 있습니다. 다음과 같이 표시됩니다.
 
 ```
