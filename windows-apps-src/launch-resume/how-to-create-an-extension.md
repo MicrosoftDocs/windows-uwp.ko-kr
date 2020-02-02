@@ -1,37 +1,36 @@
 ---
 title: 앱 확장 만들기 및 호스팅
-description: 사용자가 Microsoft Store에서 설치할 수 있는 패키지를 통해 앱을 확장할 수 있는 UWP(유니버설 Windows 플랫폼) 추가 앱 정보를 작성하고 호스팅할 수 있습니다.
+description: 사용자가 Microsoft Store에서 설치할 수 있는 패키지를 통해 앱을 확장할 수 있도록 하는 앱 확장을 작성 하 고 호스팅합니다.
 keywords: 앱 확장, 앱 서비스, 백그라운드
-ms.date: 10/05/2017
+ms.date: 01/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1cb5395238ad6813556b7ae254ca4a86bc8f5b28
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: d315fb89f38e517e61194adf5b75a28b4675de9c
+ms.sourcegitcommit: 09571e1c6a01fabed773330aa7ead459a47d94f7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282387"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929281"
 ---
 # <a name="create-and-host-an-app-extension"></a>앱 확장 만들기 및 호스팅
 
-이 문서에서는 UWP 앱 확장을 만들고 이를 UWP 앱에서 호스팅하는 방법을 설명합니다.
+이 문서에서는 Windows 10 앱 확장을 만들고 앱에서 호스트 하는 방법을 보여 줍니다. 앱 확장은 UWP 앱 및 패키지 된 [데스크톱 앱](/windows/apps/desktop/modernize/#msix-packages)에서 지원 됩니다.
 
-이 문서에는 다음과 같은 코드 샘플이 있습니다.
-- [Math Extension 코드 샘플](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip)을 다운로드하고 압축을 풉니다.
+앱 확장을 만드는 방법을 보여 주기 위해이 문서에서는 [수학 확장 코드 샘플](https://github.com/MicrosoftDocs/windows-topic-specific-samples/tree/MathExtensionSample)의 패키지 매니페스트 XML 및 코드 조각을 사용 합니다. 이 샘플은 UWP 앱 이지만 샘플에서 설명 하는 기능은 패키지 된 데스크톱 앱에도 적용 됩니다. 다음 지침에 따라 샘플을 시작 하세요.
+
+- [수학 확장 코드 샘플](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/MathExtensionSample.zip)을 다운로드 하 고 압축을 풉니다.
 - Visual Studio 2019에서 MathExtensionSample를 엽니다. 빌드 유형을 x86(**빌드** > **구성 관리자**에서 두 프로젝트에 대해 **플랫폼**을 **x86**으로 변경)으로 설정합니다.
-- 솔루션을 배포 합니다. @No__t-1**솔루션 배포**를 **빌드합니다**.
+- 솔루션 배포합니다(**빌드** > **솔루션 배포**).
 
 ## <a name="introduction-to-app-extensions"></a>앱 확장 소개
 
-유니버설 Windows 플랫폼(UWP)에서 앱 확장은 플러그 인 및 추가 기능이 다른 플랫폼에서 수행하는 것과 유사한 기능을 수행합니다. 예를 들어 Microsoft Edge 확장은 UWP 앱 확장입니다. UWP 앱 확장은 Windows 10 1주년 버전(버전 1607, 빌드 10.0.14393)에 도입되었습니다.
+Windows 10에서 앱 확장은 다른 플랫폼에서 플러그 인, 추가 기능 및 추가 기능을 수행 하는 것과 비슷한 기능을 제공 합니다. 앱 확장은 Windows 10 기념일 버전 (버전 1607, 빌드 10.0.14393)에 도입 되었습니다.
 
-UWP 앱 확장은 콘텐츠와 배포 이벤트를 호스트 앱과 공유할 수 있도록 하는 확장 선언을 가진 UWP 앱입니다. 확장 앱은 여러 확장을 제공할 수 있습니다.
+앱 확장은 호스트 앱과 콘텐츠 및 배포 이벤트를 공유할 수 있도록 하는 확장 선언이 있는 UWP 앱 또는 패키지 된 데스크톱 앱입니다. 확장 앱은 여러 확장을 제공할 수 있습니다.
 
-앱 확장은 UWP 앱이기 때문에 별도의 앱 패키지를 만들지 않고도 모든 기능 앱, 호스트 확장 및 다른 앱의 확장 기능을 제공할 수 있습니다.
+앱 확장은 UWP 앱 또는 패키지 된 데스크톱 응용 프로그램 이기 때문에 완전히 작동 하는 앱이 될 수 있으며, 호스트 확장이 가능 하 고, 다른 앱에 대 한 확장을 제공할 수도 있습니다. 즉, 별도의 앱 패키지를 만들지 않아도 됩니다.
 
-앱 확장 호스트를 만들 때 앱에 대한 에코시스템을 개발하여 다른 개발자가 예상하지 못했던 방법이나 리소스로 앱을 향상시킬 수 있는 기회를 만들 수 있습니다. Microsoft Office 확장, Visual Studio 확장, 브라우저 확장 등을 고려 합니다. 이러한 앱은 제공 된 기능을 초과 하는 앱에 대해 더 다양 한 환경을 만듭니다. 확장은 앱에 가치와 지속성을 더할 수 있습니다.
-
-**개요**
+앱 확장 호스트를 만들 때 앱에 대한 에코시스템을 개발하여 다른 개발자가 예상하지 못했던 방법이나 리소스로 앱을 향상시킬 수 있는 기회를 만들 수 있습니다. Microsoft Office 확장, Visual Studio 확장, 브라우저 확장 등을 고려해 보세요. 이는 함께 제공되는 기능을 뛰어넘어 앱에 대한 더 풍부한 환경을 제공합니다. 확장은 앱에 가치와 지속성을 더할 수 있습니다.
 
 앱 확장 관계를 설정하려면 다음을 수행해야 합니다.
 
@@ -120,7 +119,7 @@ _MathExtension 프로젝트의 appxmanifest.xml:_
 
 `<uap3:AppExtension>` 특성의 의미는 다음과 같습니다.
 
-|특성|Description|필수|
+|특성|설명|필수|
 |---------|-----------|:------:|
 |**이름**|확장 계약 이름입니다. 호스트에서 선언된 **이름**과 일치하면 해당 호스트는 이 확장을 찾을 수 있습니다.| :heavy_check_mark: |
 |**ID**| 이 확장을 고유하게 식별합니다. 동일한 확장 계약 이름을 사용하는 여러 개의 확장이 있을 수 있으므로(여러 확장을 지원하는 페인트 앱을 상상할 수 있음) ID를 사용하여 구분할 수 있습니다. 앱 확장 호스트는 ID를 사용하여 확장 유형에 대한 정보를 추측할 수 있습니다. 예를 들어 데스크톱용으로 설계된 확장과 차별화 요소인 ID를 사용하여 모바일용으로 설계된 확장 중 하나를 사용할 수 있습니다. 아래에서 설명하는 **속성** 요소를 사용할 수도 있습니다.| :heavy_check_mark: |
@@ -211,7 +210,7 @@ _MathExtension 프로젝트의 appxmanifest.xml_
 
 호스트가 확장을 로드하면 다음과 같은 코드가 확장의 Package.appxmanifest에 정의된 속성에서 서비스의 이름을 추출합니다.
 
-_MathExtensionHost 프로젝트에서 ExtensionManager.cs의 `Update()`_
+_ExtensionManager.cs의 `Update()` MathExtensionHost 프로젝트_
 ```cs
 ...
 var properties = await ext.GetExtensionPropertiesAsync() as PropertySet;
@@ -233,13 +232,13 @@ if (_properties != null)
 
 앱 서비스의 이름이 `_serviceName`에 저장되면 호스트는 이를 사용하여 앱 서비스를 호출할 수 있습니다.
 
-앱 서비스를 호출하려면 앱 서비스가 포함된 패키지의 패밀리 이름도 필요합니다. 다행히 앱 확장 API는 `connection.PackageFamilyName = AppExtension.Package.Id.FamilyName;` 줄에서 얻을 수 있는이 정보를 제공 합니다.
+앱 서비스를 호출하려면 앱 서비스가 포함된 패키지의 패밀리 이름도 필요합니다. 다행히 앱 확장 API는 줄에서 얻을 수 있는이 정보를 제공 합니다. `connection.PackageFamilyName = AppExtension.Package.Id.FamilyName;`
 
 ### <a name="define-how-the-host-and-the-extension-will-communicate"></a>호스트와 해당 확장이 통신하는 방법을 정의합니다.
 
 앱 서비스에서는 [ValueSet](https://docs.microsoft.com/uwp/api/windows.foundation.collections.valueset)를 사용하여 정보를 교환합니다. 호스트 작성자는 유연한 확장과 통신하기 위한 프로토콜을 제시해야 합니다. 코드 샘플에서 이는 향후 1, 2 또는 그 이상의 인수를 취할 수 있는 확장을 의미합니다.
 
-이 예제에서 인수에 대 한 프로토콜은 ' Arg ' 라는 키 값 쌍을 포함 하는 **Valueset** 와 인수 번호 (예: `Arg1` 및 `Arg2`)입니다. 호스트는 **ValueSet**에 있는 모든 인수를 전달하며 확장은 필요한 인수를 사용합니다. 확장이 결과를 계산할 수 있는 경우 호스트는 확장에서 반환된 **ValueSet**가 계산 값을 포함하는 `Result`라는 키를 가질 것으로 예상합니다. 해당 키가 없으면 호스트는 확장이 계산을 완료할 수 없다고 가정합니다.
+이 예제에서 인수에 대 한 프로토콜은 ' Arg ' 라는 키 값 쌍을 포함 하는 **Valueset** 이며 인수 번호 (예: `Arg1` 및 `Arg2`)입니다. 호스트는 **ValueSet**에 있는 모든 인수를 전달하며 확장은 필요한 인수를 사용합니다. 확장이 결과를 계산할 수 있는 경우 호스트는 확장에서 반환된 **ValueSet**가 계산 값을 포함하는 `Result`라는 키를 가질 것으로 예상합니다. 해당 키가 없으면 호스트는 확장이 계산을 완료할 수 없다고 가정합니다.
 
 ### <a name="extension-app-service-code"></a>확장 앱 서비스 코드
 
@@ -407,7 +406,7 @@ _MathExtension 프로젝트의 appxmanifest.xml:_
 
 앱 확장은 오픈 에코시스템에 참여합니다. 앱이 앱 확장을 호스팅할 수 있는 경우, 확장에서 정보를 전달/수신하는 방법을 준수하는 한 누구든지 호스트에 대한 확장을 작성할 수 있습니다. 이는 게시자가 앱과 함께 사용할 수 있는 선택적 패키지를 만들 수 있는 대상을 결정하는 폐쇄형 에코시스템에 참여하는 선택적 패키지와 다릅니다.
 
-앱 확장은 독립적 패키지이며 독립 실행형 앱이 될 수 있습니다. 다른 앱에 대한 배포 종속성을 가질 수 없습니다. 선택적 패키지에는 기본 패키지가 필요하며 기본 패키지가 없으면 실행할 수 없습니다.
+앱 확장은 독립적 패키지이며 독립 실행형 앱이 될 수 있습니다. 다른 앱에 대한 배포 종속성을 가질 수 없습니다. 선택적 패키지에는 기본 패키지가 필요 하며, 패키지 없이는 실행할 수 없습니다.
 
 게임에 대한 확장 팩은 선택적 패키지의 좋은 후보가 될 수 있습니다. 이는 게임에 밀접하게 연결되어 있기 때문에 게임과 독립적으로 실행할 수 없으며 에코시스템의 개발자가 확장 팩을 만들지 못하게 해야 할 수 있습니다.
 
