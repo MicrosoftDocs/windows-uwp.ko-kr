@@ -1,19 +1,19 @@
 ---
 description: 이 가이드에서는 WPF 및 Windows Forms 애플리케이션에서 직접 Fluent 기반 UWP UI를 만드는 방법을 설명합니다.
 title: 데스크톱 앱의 UWP 컨트롤
-ms.date: 01/10/2010
+ms.date: 01/24/2020
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 95fbfc9aa988330fb21713651687690fa769b99f
-ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
+ms.openlocfilehash: 96705faff278c4cab31e0ab271bc31d08261401b
+ms.sourcegitcommit: 1455e12a50f98823bfa3730c1d90337b1983b711
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520408"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76814013"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>데스크톱 앱에서 UWP XAML 컨트롤 호스트(XAML Islands)
 
@@ -127,4 +127,5 @@ UWP XAML 호스팅 API는 C++ Win32 애플리케이션이 [Windows.UI.Xaml.UIEle
 XAML Island 사용에 대한 자세한 배경 정보 및 자습서는 다음 문서 및 리소스를 참조하세요.
 
 * [WPF 앱 현대화 자습서](modernize-wpf-tutorial.md): 이 자습서에서는 Windows 커뮤니티 도구 키트에서 래핑된 컨트롤과 호스트 컨트롤을 사용하여 UWP 컨트롤을 기존 WPF LOB(기간 업무) 애플리케이션에 추가하는 방법에 대한 단계별 지침을 제공합니다. 이 자습서에는 WPF 애플리케이션의 전체 코드 및 프로세스의 각 단계에 대한 자세한 지침이 포함되어 있습니다.
+* [XAML 아일랜드 코드 샘플](https://github.com/microsoft/Xaml-Islands-Samples): 이 리포지토리에는 XAML 아일랜드 사용 방법을 보여주는 Windows Forms, WPF 및 C++/Win32 샘플이 포함되어 있습니다.
 * [XAML Island v1 - 업데이트 및 로드맵](https://blogs.windows.com/windowsdeveloper/2019/06/13/xaml-islands-v1-updates-and-roadmap): 이 블로그 게시물에서는 XAML Island에 대한 일반적인 질문을 설명하고 자세한 개발 로드맵을 제공합니다.

@@ -7,16 +7,18 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 141a24ca1f828f98231ec35471f7b43229df57e6
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 24c7bd8828ec036135233f569ee7add5d39ffb32
+ms.sourcegitcommit: 136416e8e2eb0565bb6eb99e42482c1723ccb8c7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684364"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76890428"
 ---
 # <a name="tabview"></a>TabView
 
 TabView 컨트롤을 사용하여 탭 세트와 각 탭의 콘텐츠를 표시할 수 있습니다. TabView는 여러 페이지의 콘텐츠를 표시하는 데 유용하며 사용자에게 새 탭을 다시 정렬하고, 열고, 닫을 수 있는 기능을 제공합니다.
+
+> **중요 API**: [TabView 클래스](/uwp/api/microsoft.ui.xaml.controls.tabview), [TabViewItem 클래스](/uwp/api/microsoft.ui.xaml.controls.tabviewitem)
 
 ![TabView 예제](images/tabview/tab-introduction.png)
 
@@ -25,7 +27,7 @@ TabView 컨트롤을 사용하여 탭 세트와 각 탭의 콘텐츠를 표시�
 일반적으로 여러 탭으로 구성되는 UI는 기능과 모양이 다른 다음 두 가지 고유한 스타일 중 하나로 제공됩니다. **정적 탭**은 설정 창에서 자주 볼 수 있는 형태의 탭입니다. 이 탭은 일반적으로 미리 정의된 콘텐츠가 들어 있는 여러 페이지를 고정된 순서로 포함합니다.
 **문서 탭**은 Microsoft Edge 같은 브라우저에서 볼 수 있는 형태의 탭입니다. 사용자는 탭을 만들고, 제거하고, 다시 정렬하고, 창 간에 탭을 이동하고, 탭의 내용을 변경할 수 있습니다.
 
-TabView는 UWP 앱에 사용할 수 있는 문서 탭을 제공합니다. 다음과 같은 경우 TabView를 사용합니다.
+[TabView](/uwp/api/microsoft.ui.xaml.controls.tabview)는 UWP 앱에 사용할 수 있는 문서 탭을 제공합니다. 다음과 같은 경우 TabView를 사용합니다.
 
 - 사용자가 탭을 동적으로 열고, 닫고, 다시 정렬할 수 있습니다.
 - 사용자가 문서나 웹 페이지를 탭에서 직접 열 수 있습니다.
@@ -35,21 +37,21 @@ TabView가 앱에 적합하지 않은 경우 [Pivot](https://docs.microsoft.com/
 
 ## <a name="anatomy"></a>구조
 
-아래 이미지는 TabView 컨트롤을 보여줍니다. TabStrip에는 머리글과 바닥글이 있지만, 문서와 달리 TabStrip의 머리글 및 바닥글은 각각 스트립의 왼쪽 끝과 오른쪽 끝에 있습니다.
+아래 이미지는 [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview) 컨트롤을 보여줍니다. TabStrip에는 머리글과 바닥글이 있지만, 문서와 달리 TabStrip의 머리글 및 바닥글은 각각 스트립의 왼쪽 끝과 오른쪽 끝에 있습니다.
 
 ![TabView 컨트롤의 구조](images/tabview/tab-view-anatomy.png)
 
-다음 이미지는 TabViewItem 컨트롤을 보여줍니다. 콘텐츠가 TabView 컨트롤 내에 표시되지만, 콘텐츠는 사실 TabViewItem의 일부입니다.
+다음 이미지는 [TabViewItem](/uwp/api/microsoft.ui.xaml.controls.tabviewitem) 컨트롤을 보여줍니다. 콘텐츠가 TabView 컨트롤 내에 표시되지만, 콘텐츠는 사실 TabViewItem의 일부입니다.
 
 ![TabViewItem 컨트롤의 구조](images/tabview/tab-control-anatomy.png)
 
 ### <a name="create-a-tab-view"></a>탭 보기 만들기
 
-이 예제에서는 탭 열기 및 닫기를 지원하기 위해 이벤트 처리기와 함께 간단한 TabView를 만듭니다.
+이 예제에서는 탭 열기 및 닫기를 지원하기 위해 이벤트 처리기와 함께 간단한 [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview)를 만듭니다.
 
 ```xaml
 <TabView AddTabButtonClick="Tabs_AddTabButtonClick"
-            TabCloseRequested="Tabs_TabCloseRequested" />
+         TabCloseRequested="Tabs_TabCloseRequested" />
 ```
 
 ```csharp
@@ -77,7 +79,7 @@ private void Tabs_TabCloseRequested(TabView sender, TabViewTabCloseRequestedEven
 
 ## <a name="behavior"></a>동작
 
-TabView의 기능을 활용하거나 확장하는 여러 가지 방법이 있습니다.
+[TabView](/uwp/api/microsoft.ui.xaml.controls.tabview)의 기능을 활용하거나 확장하는 여러 가지 방법이 있습니다.
 
 ### <a name="bind-tabitemssource-to-a-tabviewitemcollection"></a>TabItemsSource를 TabViewItemCollection에 바인딩
 
@@ -89,7 +91,7 @@ TabView의 기능을 활용하거나 확장하는 여러 가지 방법이 있습
 
 탭이 창 제목 표시줄 아래의 고유한 행을 점유하는 대신, 두 탭을 같은 영역에 통합할 수 있습니다. 이렇게 하면 콘텐츠를 위한 세로 공간이 확보되고, 앱에 현대적인 느낌을 줄 수 있습니다.
 
-사용자가 제목 표시줄을 통해 창을 끌어 창의 위치를 변경할 수 있으므로, 제목 표시줄을 탭으로 꽉 채우면 안 됩니다. 따라서 제목 표시줄에 탭을 표시할 때 제목 표시줄의 일부를 끌기 가능 영역으로 예약해 두어야 합니다. 끌기 가능 영역을 지정하지 않으면 제목 표시줄 전체가 끌기 가능 영역으로 되며, 이렇게 되면 탭이 입력 이벤트를 받을 수 없습니다. TabView가 창의 제목 표시줄에 표시되는 경우 항상 TabStripFooter를 TabView에 포함하고 끌기 가능 영역으로 표시해야 합니다.
+사용자가 제목 표시줄을 통해 창을 끌어 창의 위치를 변경할 수 있으므로, 제목 표시줄을 탭으로 꽉 채우면 안 됩니다. 따라서 제목 표시줄에 탭을 표시할 때 제목 표시줄의 일부를 끌기 가능 영역으로 예약해 두어야 합니다. 끌기 가능 영역을 지정하지 않으면 제목 표시줄 전체가 끌기 가능 영역으로 되며, 이렇게 되면 탭이 입력 이벤트를 받을 수 없습니다. TabView가 창의 제목 표시줄에 표시되는 경우 항상 [TabStripFooter](/uwp/api/microsoft.ui.xaml.controls.tabview.tabstripfooter)를 [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview)에 포함하고 끌기 가능 영역으로 표시해야 합니다.
 
 자세한 내용은 [제목 표시줄 사용자 지정](https://docs.microsoft.com/windows/uwp/design/shell/title-bar)을 참조하세요.
 
@@ -98,7 +100,7 @@ TabView의 기능을 활용하거나 확장하는 여러 가지 방법이 있습
 ```xaml
 <Page>
     <TabView HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <TabViewItem Icon="Home" Header="Home" IsCloseable="False" />
+        <TabViewItem Icon="Home" Header="Home" IsClosable="False" />
         <TabViewItem Icon="Document" Header="Document 1" />
         <TabViewItem Icon="Document" Header="Document 2" />
         <TabViewItem Icon="Document" Header="Document 3" />
@@ -147,7 +149,7 @@ private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sende
 
 ### <a name="control-overflow-behavior"></a>오버플로 동작 제어
 
-탭 표시줄에 탭이 많아지면 TabView.TabWidthMode를 설정하여 탭 표시 방법을 제어할 수 있습니다.
+탭 표시줄에 탭이 많아지면 [TabView.TabWidthMode](/uwp/api/microsoft.ui.xaml.controls.tabview.tabwidthmode)를 설정하여 탭 표시 방법을 제어할 수 있습니다.
 
 | TabWidthMode 값 | 동작                                                                                                                                                    |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -160,15 +162,15 @@ private void CoreTitleBar_LayoutMetricsChanged(CoreApplicationViewTitleBar sende
 
 대부분의 사용자는 간단하게 웹 브라우저를 사용하여 문서 탭을 경험합니다. 사용자가 앱에서 문서 탭을 사용하는 방식을 살펴보면 사용자가 어떤 탭 동작을 예상하는지 알 수 있습니다.
 
-사용자가 어떤 방식으로 문서 탭 세트와 상호 작용하든, 항상 활성 탭이 하나 있습니다. 사용자가 선택한 탭을 닫거나 선택한 탭을 다른 창으로 분할하면 다른 탭이 활성 탭으로 변합니다. TabView는 다음 탭을 자동으로 선택하여 이 작업을 처리하려고 시도합니다. 선택하지 않은 탭이 포함된 TabView를 앱에서 허용해야 하는 합리적 이유가 있는 경우 TabView의 콘텐츠 영역이 비어 있게 됩니다.
+사용자가 어떤 방식으로 문서 탭 세트와 상호 작용하든, 항상 활성 탭이 하나 있습니다. 사용자가 선택한 탭을 닫거나 선택한 탭을 다른 창으로 분할하면 다른 탭이 활성 탭으로 변합니다. [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview)는 다음 탭을 자동으로 선택하여 이 작업을 처리하려고 시도합니다. 선택하지 않은 탭이 포함된 TabView를 앱에서 허용해야 하는 합리적 이유가 있는 경우 TabView의 콘텐츠 영역이 비어 있게 됩니다.
 
 ## <a name="keyboard-navigation"></a>키보드 탐색
 
-TabView는 기본적으로 여러 일반적인 키보드 탐색 시나리오를 지원합니다. 이 섹션에서는 기본 제공 기능에 대해 설명하고, 일부 앱에 유용할 수 있는 추가 기능에 대한 권장 사항을 제공합니다.
+[TabView](/uwp/api/microsoft.ui.xaml.controls.tabview)는 기본적으로 여러 일반적인 키보드 탐색 시나리오를 지원합니다. 이 섹션에서는 기본 제공 기능에 대해 설명하고, 일부 앱에 유용할 수 있는 추가 기능에 대한 권장 사항을 제공합니다.
 
 ### <a name="tab-and-cursor-key-behavior"></a>탭 및 커서 키 동작
 
-포커스가 TabStrip 영역으로 이동하면 선택한 TabViewItem에 포커스가 맞춰집니다. 그러면 사용자는 왼쪽 및 오른쪽 화살표 키를 사용하여 포커스(선택 영역 아님)를 TabStrip의 다른 탭으로 이동할 수 있습니다. 화살표 포커스는 탭 스트립 및 추가 탭(+) 단추(있는 경우) 안쪽에 트래핑됩니다. 포커스를 TabStrip 영역 밖으로 이동하려면 사용자는 Tab 키를 눌러 포커스를 다음 포커스 가능 요소로 이동할 수 있습니다.
+포커스가 _TabStrip_ 영역으로 이동하면 선택한 [TabViewItem](/uwp/api/microsoft.ui.xaml.controls.tabviewitem)에 포커스가 맞춰집니다. 그러면 사용자는 왼쪽 및 오른쪽 화살표 키를 사용하여 포커스(선택 영역 아님)를 TabStrip의 다른 탭으로 이동할 수 있습니다. 화살표 포커스는 탭 스트립 및 추가 탭(+) 단추(있는 경우) 안쪽에 트래핑됩니다. 포커스를 TabStrip 영역 밖으로 이동하려면 사용자는 Tab 키를 눌러 포커스를 다음 포커스 가능 요소로 이동할 수 있습니다.
 
 Tab 키로 포커스 이동
 
@@ -188,18 +190,18 @@ TabViewItem에 포커스가 있는 경우 스페이스바 또는 Enter 키를 �
 
 ### <a name="shortcuts-for-selecting-adjacent-tabs"></a>인접한 탭을 선택하는 바로 가기
 
-Ctrl+Tab 키를 누르면 다음 TabViewItem이 선택됩니다. Ctrl+Shift+Tab 키를 누르면 이전 TabViewItem이 선택됩니다. 이러한 목적을 위해 탭 목록은 "순환"되므로, 마지막 탭이 선택된 상태에서 다음 탭을 선택하면 첫 번째 탭이 선택됩니다.
+Ctrl+Tab을 누르면 다음 [TabViewItem](/uwp/api/microsoft.ui.xaml.controls.tabviewitem)이 선택됩니다. Ctrl+Shift+Tab 키를 누르면 이전 TabViewItem이 선택됩니다. 이러한 목적을 위해 탭 목록은 "순환"되므로, 마지막 탭이 선택된 상태에서 다음 탭을 선택하면 첫 번째 탭이 선택됩니다.
 
 ### <a name="closing-a-tab"></a>탭 닫기
 
-Ctrl + F4 키를 누르면 TabCloseRequested 이벤트가 발생합니다. 이벤트를 처리하고 필요한 경우 탭을 닫습니다.
+Ctrl + F4를 누르면 [TabCloseRequested](/uwp/api/microsoft.ui.xaml.controls.tabview.tabcloserequested) 이벤트가 발생합니다. 이벤트를 처리하고 필요한 경우 탭을 닫습니다.
 
 ### <a name="keyboard-guidance-for-app-developers"></a>앱 개발자를 위한 키보드 지침
 
 일부 애플리케이션에는 보다 고급 키보드 제어가 필요할 수 있습니다. 앱에 적합한 경우 다음 바로 가기를 구현해 보세요.
 
 > [!WARNING]
-> 기존 앱에 TabView를 추가하는 경우 권장 TabView 바로 가기의 키 조합에 매핑되는 바로 가기 키를 이미 만들었을 수도 있습니다. 이 경우에는 기존 바로 가기를 유지할 것인지 아니면 사용자에게 직관적인 탭 환경을 제공할 것인지 고민해야 합니다.
+> 기존 앱에 [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview)를 추가하는 경우 권장 TabView 바로 가기의 키 조합에 매핑되는 바로 가기 키를 이미 만들었을 수도 있습니다. 이 경우에는 기존 바로 가기를 유지할 것인지 아니면 사용자에게 직관적인 탭 환경을 제공할 것인지 고민해야 합니다.
 
 - Ctrl + T 키를 누르면 새 탭이 열립니다. 일반적으로 이 탭은 미리 정의된 문서로 채워지거나, 빈 상태로 만들어지고 콘텐츠를 선택할 수 있는 간단한 방법이 제공됩니다. 사용자가 새 탭의 콘텐츠를 선택해야 하는 경우 콘텐츠 선택 컨트롤에 입력 포커스를 제공하는 방법을 고려해 보세요.
 - Ctrl + W 키를 누르면 선택한 탭이 닫힙니다. 다시 말씀드리지만, TabView는 다음 탭을 자동으로 선택합니다.
@@ -210,7 +212,7 @@ Ctrl + F4 키를 누르면 TabCloseRequested 이벤트가 발생합니다. 이�
 
 ### <a name="implement-browser-style-keyboarding-behavior"></a>브라우저 스타일의 키보드 동작 구현
 
-이 예제에서는 위에서 설명한 여러 권장 사항을 TabView에서 구현합니다. 특히 이 예제에서는 Ctrl + T, Ctrl + W, Ctrl + 1-8 및 Ctrl + 9 키를 구현합니다.
+이 예제에서는 위에서 설명한 여러 권장 사항을 [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview)에서 구현합니다. 특히 이 예제에서는 Ctrl + T, Ctrl + W, Ctrl + 1-8 및 Ctrl + 9 키를 구현합니다.
 
 ```xaml
 <controls:TabView x:Name="TabRoot">

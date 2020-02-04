@@ -93,7 +93,7 @@ X 및 Y 좌표는 지정된 정보 수준에서 세계 지도 내의 개별 타�
 
 3.  그런 다음 이전에 [바둑판식 이미지 개요](#tileintro)에 설명된 나머지 단계를 수행합니다.
 
-다음 예에서는 북미 지역 지도에 가상 웹 서비스의 타일을 오버레이합니다. [  **UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring)의 값은 [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource)의 생성자에서 지정합니다. 이 예에서 타일은 선택적 [**Bounds**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.bounds) 속성에 지정된 지리적 경계 내에만 표시됩니다.
+다음 예에서는 북아메리카 지역 지도에 가상 웹 서비스의 타일을 오버레이합니다. [  **UriFormatString**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.httpmaptiledatasource.uriformatstring)의 값은 [**HttpMapTileDataSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.HttpMapTileDataSource)의 생성자에서 지정합니다. 이 예에서 타일은 선택적 [**Bounds**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.maptilesource.bounds) 속성에 지정된 지리적 경계 내에만 표시됩니다.
 
 ```csharp
 private void AddHttpMapTileSource()

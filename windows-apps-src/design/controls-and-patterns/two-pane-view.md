@@ -1,19 +1,19 @@
 ---
 Description: TwoPaneView는 서로 다른 2개의 콘텐츠 영역이 있는 앱의 디스플레이를 관리하는 데 도움이 되는 레이아웃 컨트롤입니다.
-title: 나란히 보기
+title: 2 창 보기
 template: detail.hbs
 ms.date: 01/22/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b3d12f2aad1d5dffbbad0790e5940699536daf0b
-ms.sourcegitcommit: e6a435716799c7bb192b3d5c4d3b8295ec3911d4
+ms.openlocfilehash: 67b97aec970cc655700729743f10c63c666ab0a6
+ms.sourcegitcommit: 09571e1c6a01fabed773330aa7ead459a47d94f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76549708"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929257"
 ---
-# <a name="two-pane-view"></a>나란히 보기
+# <a name="two-pane-view"></a>2 창 보기
 
 [TwoPaneView](/uwp/api/microsoft.ui.xaml.controls.twopaneview)는 마스터/세부 정보 보기처럼 서로 다른 2개의 콘텐츠 영역이 있는 앱의 디스플레이를 관리하는 데 도움이 되는 레이아웃 컨트롤입니다.
 
@@ -238,8 +238,8 @@ MinWideModeWidth보다 좁고 MinTallModeHeight보다 긴 단일 디스플레이
 나란히 보기가 와이드 모드인 경우 TallLayout 속성에 따라 표시되는 영역이 결정됩니다.
 
 - **SinglePane** - 단일 영역(PanePriority에 지정된 값). 영역이 TwoPaneView의 전체 크기로 표시됩니다(즉, 양방향으로 배율에 따라 조정됨).
-- **TopBottom** - Pane1은 위쪽/Pane2는 오른쪽. 두 영역이 가로로 배율에 따라 조정되고 Pane1의 높이는 자동으로 조정되며 Pane2의 높이는 배율에 따라 조정됩니다.
-- **BottomTop** - Pane1은 오른쪽/Pane2는 왼쪽. 두 영역이 가로로 배율에 따라 조정되고 Pane2의 높이는 자동으로 조정되며 Pane1의 높이는 배율에 따라 조정됩니다.
+- **TopBottom** - 위쪽의 Pane1/아래쪽의 Pane2. 두 영역이 가로로 배율에 따라 조정되고 Pane1의 높이는 자동으로 조정되며 Pane2의 높이는 배율에 따라 조정됩니다.
+- **BottomTop** - 아래쪽의 Pane1/위쪽의 Pane2. 두 영역이 가로로 배율에 따라 조정되고 Pane2의 높이는 자동으로 조정되며 Pane1의 높이는 배율에 따라 조정됩니다.
 
 기본값은 **TopBottom**입니다.
 
