@@ -52,7 +52,7 @@ ms.locfileid: "76726553"
 
       여기에서 제공 하는 도구, 정보 및 샘플 엔진과 응용 프로그램을 사용 하 여 Windows desktop 및 Windows Server 용 음성 지원 응용 프로그램을 개발 합니다.
 
-      [Microsoft Speech Platform-SDK (소프트웨어 개발 키트) (버전 11)](https://www.microsoft.com/download/details.aspx?id=27226)
+      [Microsoft Speech Platform - SDK(소프트웨어 개발 키트) (버전 11)](https://www.microsoft.com/download/details.aspx?id=27226)
       
       [Microsoft Speech SDK, 버전 5.1](https://www.microsoft.com/download/details.aspx?id=10121)
    :::column-end:::
@@ -65,7 +65,7 @@ ms.locfileid: "76726553"
 
       XAML UI 모델 및 .NET Framework를 사용하여 관리형 Windows 애플리케이션용으로 설정된 플랫폼에서 접근성 지원 앱과 도구를 개발합니다.
 
-      [.NET Framework에 대 한 시스템 음성 프로그래밍 가이드](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361625(v=office.14))
+      [.NET Framework용 System.Speech 프로그래밍 가이드](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361625(v=office.14))
    :::column-end:::
    :::column:::
       ![Azure 음성 서비스](images/platform-azure-speech.png)
@@ -155,7 +155,7 @@ ms.locfileid: "76726553"
    :::column-end:::
 :::row-end:::
 
-## <a name="other-resources"></a>다른 리소스
+## <a name="other-resources"></a>기타 리소스
 
 :::row:::
    :::column:::

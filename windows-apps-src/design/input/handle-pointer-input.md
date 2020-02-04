@@ -38,7 +38,7 @@ UWP(유니버설 Windows 플랫폼) 응용 프로그램에서 터치, 마우스,
 
 ## <a name="pointer-events"></a>포인터 이벤트
 
-포인터 이벤트는 입력 장치 유형 및 범위 또는 접촉의 감지 상태 등의 기본 정보와 위치, 압력, 접촉 기하 등의 확장 정보를 표시합니다. 또한 사용자가 누른 마우스 단추, 펜 지우개 팁을 사용 중인지 여부 등의 특정 장치 속성도 사용할 수 있습니다. 앱에서 입력 장치와 해당 접근 권한 값을 구분해야 할 경우에는 [입력 장치 식별](identify-input-devices.md)을 참조하세요.
+포인터 이벤트는 입력 장치 유형 및 범위 또는 접촉의 감지 상태 등의 기본 정보와 위치, 압력, 접촉 기하 등의 확장 정보를 표시합니다. 또한 사용자가 누른 마우스 단추, 펜 지우개 팁을 사용 중인지 여부 등의 특정 디바이스 속성도 사용할 수 있습니다. 앱에서 입력 장치와 해당 접근 권한 값을 구분해야 할 경우에는 [입력 장치 식별](identify-input-devices.md)을 참조하세요.
 
 UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습니다.
 
@@ -65,7 +65,7 @@ UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습�
 <li>100ms가 넘는 활성 접촉은 인식되지 않습니다.</li>
 <li>모니터/디스플레이가 변경됩니다(해상도, 설정, 다중 모니터 구성).</li>
 <li>데스크톱이 잠기거나 사용자가 로그오프했습니다.</li>
-<li>동시 접촉 수가 장치에서 지원하는 수를 초과했습니다.</li>
+<li>동시 접촉 수가 디바이스에서 지원하는 수를 초과했습니다.</li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -678,7 +678,7 @@ String QueryPointer(PointerPoint ptrPt)
 ## <a name="primary-pointer"></a>기본 포인터
 터치 디지타이저나 터치 패드와 같은 일부 입력 장치는 기존에 사용하던 하나의 마우스나 펜 포인터가 아닌 여러 개의 포인터를 지원합니다(대부분의 경우 Surface Hub는 두 개의 펜 입력 지원). 
 
-**[PointerPointerProperties](https://docs.microsoft.com/uwp/api/windows.ui.input.pointerpointproperties)** 클래스의 읽기 전용 **[IsPrimary](https://docs.microsoft.com/uwp/api/windows.ui.input.pointerpointproperties.IsPrimary)** 속성을 사용하면 단일 기본 포인터를 식별하고 차별화할 수 있습니다(기본 포인터는 항상 입력 시퀀스 중에 탐지되는 첫 번째 포인터임). 
+**[PointerPointerProperties](https://docs.microsoft.com/uwp/api/windows.ui.input.pointerpointproperties.IsPrimary)** 클래스의 읽기 전용 **[IsPrimary](https://docs.microsoft.com/uwp/api/windows.ui.input.pointerpointproperties)** 속성을 사용하면 단일 기본 포인터를 식별하고 차별화할 수 있습니다(기본 포인터는 항상 입력 시퀀스 중에 탐지되는 첫 번째 포인터임). 
 
 기본 포인터를 식별함으로써 이를 사용하여 마우스나 펜 입력을 에뮬레이트하거나, 조작을 사용자 지정하거나 일부 다른 특정 기능 또는 UI를 제공할 수 있습니다.
 
@@ -697,7 +697,7 @@ String QueryPointer(PointerPoint ptrPt)
 
 ### <a name="visual-feedback"></a>시각적 피드백
 
-XAML **[Ellipse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.ellipse)** 개체를 기반으로 **[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)** 을 정의합니다. 이 개체는 캔버스에서 각 개체의 위치를 강조 표시하며 **[Storyboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard)** 를 사용하여 기본 포인터에 해당하는 타원에 애니메이션 효과를 줍니다.
+XAML **[Ellipse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)** 개체를 기반으로 **[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.ellipse)** 을 정의합니다. 이 개체는 캔버스에서 각 개체의 위치를 강조 표시하며 **[Storyboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard)** 를 사용하여 기본 포인터에 해당하는 타원에 애니메이션 효과를 줍니다.
 
 **XAML은 다음과 같습니다.**
 
@@ -944,7 +944,7 @@ MainPage.xaml은 다음과 같습니다.
 
 마지막으로, MainPage.xaml.cs 관련 코드에 기본 포인터 이벤트 처리기를 정의합니다. 이전 예제에서 기본 사항을 설명했으므로 여기에서 코드를 재현하지는 않겠지만, 원하는 경우 [포인터 입력 샘플(애니메이션이 있는 UserControl)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)에서 작업 샘플을 다운로드할 수 있습니다.
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 **토픽 샘플**
 * [포인터 입력 샘플 (기본)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers.zip)
@@ -954,7 +954,7 @@ MainPage.xaml은 다음과 같습니다.
 * [기본 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
 * [짧은 대기 시간 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
 * [사용자 상호 작용 모드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
-* [焦点视觉对象示例](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+* [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 **보관 샘플**
 * [Input: XAML 사용자 입력 이벤트 샘플](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)

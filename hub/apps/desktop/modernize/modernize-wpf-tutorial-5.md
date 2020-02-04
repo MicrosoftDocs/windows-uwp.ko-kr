@@ -5,7 +5,7 @@ ms.topic: article
 ms.date: 01/23/2020
 ms.author: mcleans
 author: mcleanbyron
-keywords: windows 10, uwp, windows forms, wpf, xaml 제도
+keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
 ms.openlocfilehash: 27906d9d389c065ab1fdf7124151cd1915f850eb
