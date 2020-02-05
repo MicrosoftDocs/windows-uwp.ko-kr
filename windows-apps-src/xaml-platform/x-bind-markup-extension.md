@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 10f601b29ff441fe8cec9261d7751ba525c7f52b
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 8008c652dea89b42185c9fb1d9ac42e96f16a117
+ms.sourcegitcommit: 5af282fb230765a7225e138d99e9cb1b60bf7238
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258747"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77012051"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind} 태그 확장
 
@@ -50,8 +50,8 @@ XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에�
 |------|-------------|
 | _propertyPath_ | 바인딩의 속성 경로를 지정하는 문자열. 자세한 내용은 [속성 경로](#property-path) 섹션을 참조하세요. |
 | _bindingProperties_ |
-| _속성 이름_=_값_\[, _속성 이름_=_값_\]* | 이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
-| _속성_ | 바인딩 개체에 설정할 속성의 문자열 이름. 예: "Converter" |
+| _propName_=_value_\[, _propName_=_value_\]* | 이름/값 쌍 구문을 사용하여 지정된 하나 이상의 바인딩 속성. |
+| _propName_ | 바인딩 개체에 설정할 속성의 문자열 이름. 예: "Converter" |
 | _value_ | 속성을 설정할 값. 인수 구문은 설정할 속성에 따라 다릅니다. 다음은 값 자체가 태그 확장인 _propName_=_value_ 사용법의 예입니다. `Converter={StaticResource myConverterClass}`. 자세한 내용은 아래의 [{x:Bind}로 설정할 수 있는 속성](#properties-that-you-can-set-with-xbind)을 참조하세요. |
 
 ## <a name="examples"></a>예
@@ -94,7 +94,7 @@ C++/CX의 경우 **{x:Bind}** 는 페이지 또는 데이터 모델의 전용 �
 
 인덱서를 사용하려면 메서드에서 인덱싱할 속성 형식에 대해 **IList&lt;T&gt;** 또는 **IVector&lt;T&gt;** 를 구현해야 합니다. IReadOnlyList&lt;T&gt; 및 IVectorView&lt;T&gt;는 인덱서 구문을 지원 하지 않습니다.) 인덱싱된 속성의 형식이 **INotifyCollectionChanged** 또는 **IObservableVector** 를 지원 하 고 바인딩이 OneWay 또는 TwoWay 인 경우 해당 인터페이스에 대 한 변경 알림을 등록 하 고 수신 대기 합니다. 변경 내용 검색 논리는 인덱싱된 특정 값에 영향을 주지 않는 경우에도 모든 컬렉션 변경 내용에 따라 업데이트됩니다.습니다 하는 경우에 모든 컬렉션 변경 내용에 따라 합니다. 이는 수신 대기 논리가 컬렉션의 모든 인스턴스에서 공통적이기 때문입니다.
 
-데이터 원본이 사전 또는 맵인 경우 문자열 이름을 기준으로 속성 경로에서 컬렉션의 항목을 지정할 수 있습니다. 예 **&lt;TextBlock Text = "{x:Bind Players\[' John smith '\]"/&gt;** 는 "john smith" 라는 사전의 항목을 찾습니다. 이름은 따옴표로 묶어야 하며 작은따옴표 또는 큰따옴표를 사용할 수 있습니다. 문자열에서 따옴표를 이스케이프할 때는 캐럿(^)을 사용할 수 있습니다. 일반적으로 XAML 특성에 대해 사용하지 않는 따옴표를 사용하는 것이 가장 쉽습니다. Ireadonlydictionary<string&lt;T&gt; 및 IMapView&lt;T&gt;는 인덱서 구문을 지원 하지 않습니다.
+데이터 원본이 사전 또는 맵인 경우 문자열 이름을 기준으로 속성 경로에서 컬렉션의 항목을 지정할 수 있습니다. 예를 들어 **&lt;TextBlock Text = "{x:Bind Players\[' John Smith '\]}"/&gt;** 는 "john smith" 라는 사전의 항목을 찾습니다. 이름은 따옴표로 묶어야 하며 작은따옴표 또는 큰따옴표를 사용할 수 있습니다. 문자열에서 따옴표를 이스케이프할 때는 캐럿(^)을 사용할 수 있습니다. 일반적으로 XAML 특성에 대해 사용하지 않는 따옴표를 사용하는 것이 가장 쉽습니다. Ireadonlydictionary<string&lt;T&gt; 및 IMapView&lt;T&gt;는 인덱서 구문을 지원 하지 않습니다.
 
 문자열 인덱서를 사용하려면 모델에서 인덱싱할 속성 형식에 대해 **IDictionary&lt;string, T&gt;** 또는 **IMap&lt;string, T&gt;** 를 구현해야 합니다. 인덱싱된 속성 형식이 **IObservableMap**을 지원하는 경우 바인딩이 OneWay 또는 TwoWay이면 해당 인터페이스에 대한 변경 알림을 등록하고 수신합니다. 변경 내용 검색 논리는 인덱싱된 특정 값에 영향을 주지 않는 경우에도 모든 컬렉션 변경 내용에 따라 업데이트됩니다.습니다 하는 경우에 모든 컬렉션 변경 내용에 따라 합니다. 이는 수신 대기 논리가 컬렉션의 모든 인스턴스에서 공통적이기 때문입니다.
 
@@ -135,15 +135,15 @@ Windows 10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리
 
 | 속성 | 설명 |
 |----------|-------------|
-| **Path** | 위의 [속성 경로](#property-path) 섹션을 참조하세요. |
+| **경로** | 위의 [속성 경로](#property-path) 섹션을 참조하세요. |
 | **변환기** | 바인딩 엔진이 호출하는 변환기 개체를 지정합니다. 변환기는 XAML에서 설정할 수 있지만 리소스 사전의 해당 개체에 대한 [{StaticResource} 태그 확장](staticresource-markup-extension.md) 참조에서 할당한 개체 인스턴스를 참조하는 경우에만 설정할 수 있습니다. |
 | **ConverterLanguage** | 변환기가 사용할 문화권을 지정합니다. **ConverterLanguage**를 설정하는 경우 **Converter**도 설정해야 합니다. 문화권은 표준 기반 식별자로 설정됩니다. 자세한 내용은 [**ConverterLanguage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterlanguage)를 참조하세요. |
 | **ConverterParameter** | 변환기 논리에서 사용될 수 있는 변환기 매개 변수를 지정합니다. **ConverterParameter**를 설정하는 경우 **Converter**도 설정해야 합니다. 대부분의 변환기는 전달된 값에서 변환에 필요한 모든 정보를 가져오는 간단한 논리를 사용하므로 **ConverterParameter** 값이 필요하지 않습니다. **ConverterParameter** 매개 변수는 **ConverterParameter**에서 전달되는 내용을 수용하는 여러 논리가 있는 고급 변환기를 구현하기 위한 것입니다. 문자열이 아닌 값을 사용하는 변환기를 작성할 수도 있지만 일반적이지 않습니다. 자세한 내용은 [**ConverterParameter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterparameter)에서 설명을 참조하세요. |
 | **FallbackValue** | 원본 또는 경로를 확인할 수 없을 때 표시할 값을 지정합니다. |
 | **모드** | “OneTime”, “OneWay” 또는 “TwoWay” 문자열 중 하나로 바인딩 모드를 지정합니다. 기본값은 "OneTime"입니다. 이 값은 **{Binding}** 에 대한 기본값(대부분의 경우 "OneWay"임)과 다릅니다. |
 | **TargetNullValue** | 원본 값이 확인되지만 명시적으로 **null**이 아닌 경우 표시할 값을 지정합니다. |
-| **바인드백** | 양방향 바인딩의 반대 방향으로 사용할 함수를 지정합니다. |
-| **System.windows.data.binding.updatesourcetrigger** | TwoWay 바인딩에서 컨트롤에서 모델로 변경을 다시 적용하는 시기를 지정합니다. 텍스트 상자를 제외한 모든 속성의 기본값은 PropertyChanged입니다. TextBox. Text는 LostFocus입니다.|
+| **BindBack** | 양방향 바인딩의 반대 방향으로 사용할 함수를 지정합니다. |
+| **UpdateSourceTrigger** | TwoWay 바인딩에서 컨트롤에서 모델로 변경을 다시 적용하는 시기를 지정합니다. 텍스트 상자를 제외한 모든 속성의 기본값은 PropertyChanged입니다. TextBox. Text는 LostFocus입니다.|
 
 > [!NOTE]
 > **{Binding}** 에서 **{x:Bind}** 로 태그를 변환하는 경우 **모드** 속성에 대한 기본값의 차이에 주의하세요.
