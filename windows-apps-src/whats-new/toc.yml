@@ -3,27 +3,6 @@
   items:
     - name: Windows 10 빌드 18362의 API 추가
       href: ../whats-new/windows-10-build-18362-api-diff.md
-- name: 2019년 1월 Windows 문서의 새로운 내용
-  href: ../whats-new/windows-docs-january-2019.md
-  items:
-    - name: 2018년 9월 Windows 문서의 새로운 내용
-      href: ../whats-new/windows-docs-september-2018.md
-    - name: 2018년 8월 Windows 문서의 새로운 내용
-      href: ../whats-new/windows-docs-august-2018.md
-    - name: 2018년 7월 Windows 문서의 새로운 내용
-      href: ../whats-new/windows-docs-july-2018.md
-    - name: 2018년 5월 Windows 문서의 새로운 내용
-      href: ../whats-new/windows-docs-may-2018.md
-    - name: 2018년 2월 Windows 문서의 새로운 내용
-      href: ../whats-new/windows-docs-february-2018.md
-    - name: 2017년 12월 Windows 문서의 새로운 내용
-      href: ../whats-new/windows-docs-december-2017.md
-    - name: 2017년 9월 Windows 문서의 새로운 내용
-      href: ../whats-new/windows-docs-september-2017.md
-    - name: 2017년 8월 Windows 문서의 새로운 내용
-      href: ../whats-new/windows-docs-august-2017.md
-    - name: 2017년 7월 Windows 문서의 새로운 내용
-      href: ../whats-new/windows-docs-july-2017.md
 - name: 이전 버전의 Windows 10
   items:
     - name: 개발자용 Windows 10 빌드 17763의 새로운 기능
@@ -55,5 +34,27 @@
       href: ../whats-new/windows-10-build-10586.md
     - name: Windows 10 빌드 10240의 새로운 기능
       href: ../whats-new/windows-10-build-10240.md
+- name: 이전 문서 업데이트 요약
+  items:
+    - name: 2019년 1월 Windows 문서의 새로운 내용
+      href: ../whats-new/windows-docs-january-2019.md
+    - name: 2018년 9월 Windows 문서의 새로운 내용
+      href: ../whats-new/windows-docs-september-2018.md
+    - name: 2018년 8월 Windows 문서의 새로운 내용
+      href: ../whats-new/windows-docs-august-2018.md
+    - name: 2018년 7월 Windows 문서의 새로운 내용
+      href: ../whats-new/windows-docs-july-2018.md
+    - name: 2018년 5월 Windows 문서의 새로운 내용
+      href: ../whats-new/windows-docs-may-2018.md
+    - name: 2018년 2월 Windows 문서의 새로운 내용
+      href: ../whats-new/windows-docs-february-2018.md
+    - name: 2017년 12월 Windows 문서의 새로운 내용
+      href: ../whats-new/windows-docs-december-2017.md
+    - name: 2017년 9월 Windows 문서의 새로운 내용
+      href: ../whats-new/windows-docs-september-2017.md
+    - name: 2017년 8월 Windows 문서의 새로운 내용
+      href: ../whats-new/windows-docs-august-2017.md
+    - name: 2017년 7월 Windows 문서의 새로운 내용
+      href: ../whats-new/windows-docs-july-2017.md
 - name: 실험적 API
   href: ../whats-new/experimental-apis.md
