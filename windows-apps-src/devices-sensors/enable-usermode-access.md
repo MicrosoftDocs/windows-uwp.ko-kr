@@ -1,28 +1,28 @@
 ---
-title: GPIO, I2C 및 SPI에 대한 사용자 모드 액세스를 사용하도록 설정
-description: 이 자습서에서는 Windows 10에서 GPIO, I2C, SPI 및 UART에 대한 사용자 모드 액세스를 사용하도록 설정하는 방법에 대해 설명합니다.
+title: 사용자 모드에서 GPIO, I2C 및 SPI에 액세스 하도록 설정
+description: 이 자습서에서는 Windows 10에서 GPIO, I2C, SPI 및 UART에 대 한 사용자 모드 액세스를 사용 하도록 설정 하는 방법을 설명 합니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: Windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a1356003c86040cfa51872b802ba070a685789b
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 08c802154180f5577c43a3ad5f349f53e3d9b5d3
+ms.sourcegitcommit: 20ee991a1cf87ef03c158cd3f38030c7d0e483fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281845"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77037903"
 ---
-# <a name="enable-usermode-access-to-gpio-i2c-and-spi"></a>GPIO, I2C 및 SPI에 대한 사용자 모드 액세스를 사용하도록 설정
+# <a name="enable-user-mode-access-to-gpio-i2c-and-spi"></a>사용자 모드에서 GPIO, I2C 및 SPI에 액세스 하도록 설정
 
-Windows 10에는 사용자 모드에서 직접 GPIO, I2C, SPI 및 UART에 액세스하기 위한 새로운 API가 포함되어 있습니다. Raspberry Pi 2와 같은 개발 보드는 사용자 지정 회로로 기본 컴퓨팅 모듈을 확장하여 특정 응용 프로그램을 처리할 수 있도록 하는 이러한 연결 일부를 노출합니다. 이러한 낮은 수준의 버스는 일반적으로 GPIO 핀 및 버스 일부만 헤더에 노출된 상태로 다른 중요한 온보드 기능과 공유됩니다. 시스템의 안정성을 유지하기 위해서는 사용자 모드 응용 프로그램에 의해 수정해도 안전한 핀 및 버스를 지정해야 합니다.
+Windows 10에는 일반 용도의 GPIO (입력/출력), I2C (통합 회로), SPI (직렬 주변 장치 인터페이스) 및 UART (범용 비동기 수신기-전송기)의 사용자 모드에서 직접 액세스 하기 위한 새 Api가 포함 되어 있습니다. Raspberry Pi 2와 같은 개발 보드는 이러한 연결의 하위 집합을 노출 하 여 특정 응용 프로그램을 처리 하기 위해 사용자 지정 회로를 사용 하 여 기본 계산 모듈을 확장할 수 있도록 합니다. 이러한 낮은 수준의 버스는 일반적으로 GPIO 핀 및 버스 일부만 헤더에 노출된 상태로 다른 중요한 온보드 기능과 공유됩니다. 시스템 안정성을 유지 하려면 사용자 모드 응용 프로그램에서 수정 하기에 안전 하 게 사용할 핀과 버스를 지정 해야 합니다.
 
-이 문서에서는 ACPI에서 이 구성을 지정하는 방법을 설명하고 구성이 올바르게 지정되었는지 확인하기 위한 도구를 제공합니다.
+이 문서에서는 ACPI (고급 구성 및 전원 인터페이스)에서이 구성을 지정 하는 방법에 대해 설명 하 고, 구성이 올바르게 지정 되었는지 유효성을 검사 하는 도구를 제공 합니다.
 
 > [!IMPORTANT]
-> 이 문서의 대상 사용자는 UEFI 및 ACPI 개발자입니다. 이러한 개발자는 ACPI, ASL 제작 및 SpbCx/GpioClx에 대해 어느 정도 친숙한 것으로 간주됩니다.
+> 이 문서의 대상은 UEFI (UEFI(Unified Extensible Firmware Interface)) 및 ACPI 개발자를 위한 것입니다. ACPI, ASL (ACPI 원본 언어) 제작 및 SpbCx/Gpix/Gpix를 사용 하는 것이 가장 좋습니다.
 
-Windows의 낮은 수준 버스에 대한 사용자 모드 액세스는 기존 `GpioClx` 및 `SpbCx` 프레임워크를 통해 연결됩니다. Windows IoT Core 및 Windows Enterprise에서만 사용할 수 있는 *RhProxy*라는 새 드라이버는 `GpioClx` 및 `SpbCx` 리소스를 사용자 모드에 공개합니다. 이 API를 사용하도록 설정하려면 사용자 모드에 공개해야 하는 각 GPIO 및 SPB 리소스를 사용하여 ACPI 테이블에서 rhproxy에 대한 디바이스 노드를 선언해야 합니다. 이 문서에서는 ASL의 제작 및 확인 과정을 안내합니다.
+Windows에서 낮은 수준의 버스에 대 한 사용자 모드 액세스는 기존 `GpioClx` 및 `SpbCx` 프레임 워크를 통해 연결 됩니다. Windows IoT Core 및 Windows Enterprise에서 사용할 수 있는 *RhProxy*라는 새 드라이버가 사용자 모드로 `GpioClx` 및 `SpbCx` 리소스를 제공 합니다. Api를 사용 하도록 설정 하려면 사용자 모드에 노출 해야 하는 각 GPIO 및 SPB 리소스를 사용 하 여 ACPI 테이블에서 rhproxy에 대 한 장치 노드를 선언 해야 합니다. 이 문서에서는 ASL의 제작 및 확인 과정을 안내합니다.
 
 ## <a name="asl-by-example"></a>예제별 ASL
 
@@ -41,7 +41,7 @@ Device(RHPX)
 * _CID – Compatible Id. “MSFT8000”입니다.
 * _UID – Unique Id. 1로 설정되어 있습니다.
 
-다음으로 사용자 모드에 노출해야 하는 각 GPIO 및 SPB 리소스를 선언합니다. 리소스 인덱스는 속성을 리소스와 연결하는 데 사용되므로 리소스가 선언되는 순서는 중요합니다. 여러 I2C 또는 SPI 버스가 노출된 경우 첫 번째로 선언된 버스가 해당 유형의 '기본' 버스로 간주되고 `GetDefaultAsync()`Windows.Devices.I2c.I2cController[ 및 ](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2ccontroller)Windows.Devices.Spi.SpiController[의 ](https://docs.microsoft.com/uwp/api/windows.devices.spi.spicontroller) 메서드에 의해 반환되는 인스턴스가 됩니다.
+그런 다음 사용자 모드로 노출 되어야 하는 각 GPIO 및 SPB 리소스를 선언 합니다. 리소스 인덱스는 속성을 리소스와 연결하는 데 사용되므로 리소스가 선언되는 순서는 중요합니다. 여러 I2C 또는 SPI 버스가 노출된 경우 첫 번째로 선언된 버스가 해당 유형의 '기본' 버스로 간주되고 `GetDefaultAsync()`Windows.Devices.I2c.I2cController[ 및 ](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2ccontroller)Windows.Devices.Spi.SpiController[의 ](https://docs.microsoft.com/uwp/api/windows.devices.spi.spicontroller) 메서드에 의해 반환되는 인스턴스가 됩니다.
 
 ### <a name="spi"></a>SPI
 
@@ -208,7 +208,7 @@ I2CSerialBus() 설명자의 다음 필드는 고정되어 있습니다.
 
 ### <a name="gpio"></a>GPIO
 
-다음으로 사용자 모드에 노출되는 모든 GPIO 핀을 선언합니다. 노출될 핀을 결정할 때는 다음 지침을 따릅니다.
+그런 다음 사용자 모드로 노출 되는 모든 GPIO 핀을 선언 합니다. 노출될 핀을 결정할 때는 다음 지침을 따릅니다.
 
 * 노출된 헤더의 모든 핀을 선언합니다.
 * 단추 및 LED와 같은 유용한 온보드 기능에 연결되어 있는 핀을 선언합니다.
@@ -294,9 +294,9 @@ Package (2) { “GPIO-PinCount”, 54 },
 
 ### <a name="uart"></a>UART
 
-UART 드라이버가 `SerCx`또는 `SerCx2`를 사용하는 경우, rhproxy를 사용하여 사용자 모드에 드라이버를 노출할 수 있습니다. `GUID_DEVINTERFACE_COMPORT` 형식의 디바이스 인터페이스를 만드는 UART 드라이버에서는 rhproxy를 사용할 필요가 없습니다. 받은 편지함 `Serial.sys` 드라이버는 이러한 경우 중 하나입니다.
+UART 드라이버가 `SerCx` 또는 `SerCx2`를 사용 하는 경우 rhproxy를 사용 하 여 사용자 모드로 드라이버를 노출할 수 있습니다. `GUID_DEVINTERFACE_COMPORT` 형식의 디바이스 인터페이스를 만드는 UART 드라이버에서는 rhproxy를 사용할 필요가 없습니다. 받은 편지함 `Serial.sys` 드라이버는 이러한 경우 중 하나입니다.
 
-`SerCx` 스타일 UART를 사용자 모드에 노출하려면 다음과 같이 `UARTSerialBus` 리소스를 선언합니다.
+사용자 모드에 `SerCx`스타일 UART를 노출 하려면 다음과 같이 `UARTSerialBus` 리소스를 선언 합니다.
 
 ```cpp
 // Index 2
@@ -325,15 +325,15 @@ UARTSerialBus(           // Pin 17, 19 of JP1, for SIO_UART2
 Package(2) { "bus-UART-UART2", Package() { 2 }},
 ```
 
-이 이름 선언은 사용자가 사용자 모드에서 버스에 액세스하는 데 사용하는 식별자에 해당하는 이름 "UART2"를 컨트롤러에 할당합니다.
+이렇게 하면 사용자가 사용자 모드에서 bus에 액세스 하는 데 사용 하는 식별자 인 "UART2" 라는 이름이 컨트롤러에 할당 됩니다.
 
 ## <a name="runtime-pin-muxing"></a>런타임 핀 Muxing
 
-핀 muxing은 다양한 기능에 동일한 물리적 핀을 사용하는 기능입니다. I2C 컨트롤러, SPI 컨트롤러, GPIO 컨트롤러와 같은 여러 다른 온칩 주변 장치를 SOC의 동일한 물리적 핀으로 라우팅할 수 있습니다. mux 블록은 지정된 시간에 핀에서 활성 상태인 기능을 제어합니다. 일반적으로 펌웨어가 부팅 시 기능 할당을 설정하며, 이러한 할당은 부팅 세션 동안 정적 상태를 유지합니다. 런타임 핀 muxing은 런타임에 핀 기능 할당을 다시 구성할 수 있는 기능을 추가합니다. 사용자가 런타임에 핀의 기능을 선택할 수 있도록 하면 보드의 핀을 빠르게 재구성할 수 있으므로 개발 속도가 빨라지고, 하드웨어가 정적 구성을 사용할 때보다 더 광범위한 응용 프로그램을 지원할 수 있게 됩니다.
+핀 muxing은 다양한 기능에 동일한 물리적 핀을 사용하는 기능입니다. I2C 컨트롤러, SPI 컨트롤러, GPIO 컨트롤러와 같은 여러 다른 온칩 주변 장치를 SOC의 동일한 물리적 핀으로 라우팅할 수 있습니다. mux 블록은 지정된 시간에 핀에서 활성 상태인 기능을 제어합니다. 일반적으로 펌웨어가 부팅 시 기능 할당을 설정하며, 이러한 할당은 부팅 세션 동안 정적 상태를 유지합니다. 런타임 핀 muxing은 런타임에 핀 기능 할당을 다시 구성할 수 있는 기능을 추가합니다. 사용자가 런타임에 핀의 기능을 선택할 수 있도록 하면 보드의 핀을 빠르게 재구성할 수 있으므로 개발 속도가 빨라지고, 하드웨어가 정적 구성을 사용할 때보다 더 광범위한 애플리케이션을 지원할 수 있게 됩니다.
 
 사용자는 추가 코드를 작성하지 않고도 GPIO, I2C, SPI 및 UART에 대한 muxing 지원을 사용합니다. 사용자가 [OpenPin()](https://docs.microsoft.com/uwp/api/windows.devices.gpio.gpiocontroller.openpin) 또는 [FromIdAsync()](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2cdevice.fromidasync)를 사용하여 GPIO 또는 버스를 열면 기본 실제 핀이 요청된 기능으로 자동으로 muxing됩니다. 핀이 이미 다른 기능에 사요외는 경우 OpenPin() 또는 FromIdAsync() 호출이 실패합니다. 사용자가 [GpioPin](https://docs.microsoft.com/uwp/api/windows.devices.gpio.gpiopin), [I2cDevice](https://docs.microsoft.com/uwp/api/windows.devices.i2c.i2cdevice), [SpiDevice](https://docs.microsoft.com/uwp/api/windows.devices.spi.spidevice) 또는 [SerialDevice](https://docs.microsoft.com/uwp/api/windows.devices.serialcommunication.serialdevice) 개체를 삭제하여 디바이스를 닫으면 핀이 해제되면서 다른 기능을 위해 열릴 수 있게 됩니다.
 
-Windows의 [GpioClx](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/index), [SpbCx](https://docs.microsoft.com/windows-hardware/drivers/spb/spb-framework-extension) 및 [SerCx](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/index) 프레임워크에는 핀 muxing에 대한 지원이 기본적으로 포함되어 있습니다. 이러한 프레임워크는 함께 작동하면서 GPIO 핀 또는 버스가 액세스될 때 핀을 자동으로 올바른 기능으로 전환합니다. 핀에 대한 액세스는 여러 클라이언트 간 충돌을 방지하기 위해 중재됩니다. 이 기본 제공 지원 외에 핀 muxing을 위한 인터페이스와 프로토콜은 범용이며 추가 장치 및 시나리오를 지원하도록 확장될 수 있습니다.
+Windows의 [GpioClx](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/index), [SpbCx](https://docs.microsoft.com/windows-hardware/drivers/spb/spb-framework-extension) 및 [SerCx](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/index) 프레임워크에는 핀 muxing에 대한 지원이 기본적으로 포함되어 있습니다. 이러한 프레임워크는 함께 작동하면서 GPIO 핀 또는 버스가 액세스될 때 핀을 자동으로 올바른 기능으로 전환합니다. 핀에 대한 액세스는 여러 클라이언트 간 충돌을 방지하기 위해 중재됩니다. 이 기본 제공 지원 외에 핀 muxing을 위한 인터페이스와 프로토콜은 범용이며 추가 디바이스 및 시나리오를 지원하도록 확장될 수 있습니다.
 
 이 문서에서는 먼저 핀 muxing과 관련된 기본 인터페이스 및 프로토콜에 대해 설명한 다음 GpioClx와 SpbCx, SerCx 컨트롤러 드라이버에 핀 muxing에 대한 지원을 추가하는 방법에 대해 설명합니다.
 
@@ -655,14 +655,14 @@ rhproxy 테스트를 준비가 되면 다음과 같이 단계별 절차를 사�
 1. `ACPITABL.dat`를 사용 하 여 rhproxy 노드 컴파일 및 로드
 1. `rhproxy` 디바이스 노드가 존재하는지 확인
 1. `rhproxy`가 로드 및 시작 중인지 확인
-1. 예상되는 디바이스가 사용자 모드에 노출되는지 확인
+1. 필요한 장치가 사용자 모드로 노출 되는지 확인 합니다.
 1. 명령줄에서 각 디바이스와 상호 작용이 가능한지 확인
 1. UWP 앱에서 각 디바이스와 상호 작용이 가능한지 확인
 1. HLK 테스트 실행
 
 ### <a name="verify-controller-drivers"></a>컨트롤러 드라이버 확인
 
-rhproxy는 시스템의 다른 디바이스들을 사용자 모드에 노출하기 때문에 이러한 디바이스들이 이미 작동 중인 경우에만 작동합니다. 첫 번째 단계로 이러한 디바이스들, 즉 노출하고 싶은 I2C, SPI, GPIO 컨트롤러가 이미 작동 중인지 확인합니다.
+Rhproxy는 시스템에서 사용자 모드로 다른 장치를 노출 하므로 해당 장치가 이미 작동 하 고 있는 경우에만 작동 합니다. 첫 번째 단계로 이러한 디바이스들, 즉 노출하고 싶은 I2C, SPI, GPIO 컨트롤러가 이미 작동 중인지 확인합니다.
 
 명령 프롬프트에서 실행합니다.
 
@@ -740,9 +740,9 @@ rhproxy가 시작된 것으로 출력에 나타나면 rhproxy가 제대로 로�
 * 문제 51 - `CM_PROB_WAITING_ON_DEPENDENCY` - 종속 프로그램 중 하나가 로드에 실패하였기 때문에 시스템에서 rhproxy가 시작되지 않고 있습니다. 이는 곧 리소스가 유효하지 않은 ACPI 노드로 rhproxy 지점을 전달했거나 대상 디바이스가 시작되지 않고 있다는 뜻입니다. 먼저, 모든 디바이스들이 제대로 실행되고 있는지 다시 확인합니다(위의 '컨트롤러 드라이버 확인' 참조). 그런 다음 ASL을 다시 확인 하 고 모든 리소스 경로 (예: `\_SB.I2C1`)가 올바른지 확인 하 고 DSDT의 올바른 노드를 가리킵니다.
 * 문제 10 - `CM_PROB_FAILED_START` - 리소스 구문 분석 문제로 인해 rhproxy가 시작하지 못했을 가능성이 높습니다. ASL를 검토해서 DSD에서 리소스 인덱스를 다시 확인하고 GPIO 리소스의 핀 번호 순서가 증가하도록 지정되었는지 확인합니다.
 
-### <a name="verify-that-the-expected-devices-are-exposed-to-usermode"></a>예상되는 디바이스가 사용자 모드에 노출되는지 확인
+### <a name="verify-that-the-expected-devices-are-exposed-to-user-mode"></a>필요한 장치가 사용자 모드로 노출 되는지 확인 합니다.
 
-rhproxy가 실행 중이면 사용자 모드에서 액세스가 가능한 디바이스 인터페이스가 생성된 것입니다. 몇 가지 명령줄 도구를 사용하여 디바이스를 열거하고 이들이 존재하는지 확인하게 됩니다.
+이제 rhproxy가 실행 되 고 있으므로 사용자 모드로 액세스할 수 있는 장치 인터페이스를 만들어야 합니다. 몇 가지 명령줄 도구를 사용하여 디바이스를 열거하고 이들이 존재하는지 확인하게 됩니다.
 
 [https://github.com/ms-iot/samples](https://github.com/ms-iot/samples) 리포지토리를 복제 하 고 `GpioTestTool`, `I2cTestTool`, `SpiTestTool`및 `Mincomm` 샘플을 빌드합니다. 테스트 동안 디바이스로 도구를 복사하고 다음 명령을 사용하여 디바이스를 열거합니다.
 
@@ -800,7 +800,7 @@ MinComm "\\?\ACPI#FSCL0007#3#{86e0d1e0-8089-11d0-9ce4-08003e301f73}\000000000000
 
 다음 샘플을 사용하여 UWP에서 디바이스가 작동하는지 확인합니다.
 
-| 샘플 | Link |
+| 샘플 | 링크 |
 |------|------|
 | IoT-GPIO | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-GPIO |
 | IoT-I2C | https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/IoT-I2C |
@@ -823,7 +823,7 @@ MinComm "\\?\ACPI#FSCL0007#3#{86e0d1e0-8089-11d0-9ce4-08003e301f73}\000000000000
 
 HLK 관리자에서 rhproxy 디바이스 노드를 선택하면 적용 가능한 테스트가 자동으로 선택됩니다.
 
-HLK 관리자에서 "리소스 허브 프록시 장치"를 선택합니다.
+HLK 관리자에서 "리소스 허브 프록시 디바이스"를 선택합니다.
 
 ![HLK 관리자 스크린샷](images/usermode-hlk-1.png)
 
@@ -835,7 +835,7 @@ HLK 관리자에서 "리소스 허브 프록시 장치"를 선택합니다.
 
 ## <a name="resources"></a>리소스
 
-| Destination | Link |
+| Destination | 링크 |
 |-------------|------|
 | ACPI 5.0 사양 | http://acpi.info/spec.htm |
 | Asl.exe(Microsoft ASL 컴파일러) | https://msdn.microsoft.com/library/windows/hardware/dn551195.aspx |
@@ -854,7 +854,7 @@ HLK 관리자에서 "리소스 허브 프록시 장치"를 선택합니다.
 | MinComm(Serial) | https://github.com/ms-iot/samples/tree/develop/MinComm |
 | HLK(하드웨어 랩 키트) | https://msdn.microsoft.com/library/windows/hardware/dn930814.aspx |
 
-## <a name="apendix"></a>부록
+## <a name="appendix"></a>부록
 
 ### <a name="appendix-a---raspberry-pi-asl-listing"></a>부록 A - Raspberry Pi ASL 목록
 
