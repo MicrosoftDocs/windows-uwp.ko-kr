@@ -6,12 +6,12 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: ec780253deb170c5dde1828add366907c403f100
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: c7ffd500f3b616367ac26dffbbfc03d43b507dac
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681904"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089409"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Windows 데스크톱 브리지 앱 테스트
 
@@ -43,7 +43,7 @@ Windows 데스크톱 브리지 앱에 대 한 선택적 테스트는 정보 제�
 이러한 확장 기능에 대한 설명 및 이를 적절히 사용하는 방법은 [데스크톱-UWP 브리지: 앱 확장](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions)을 참조하세요. 
 
 ### <a name="3-debug-configuration-test"></a>3. 디버그 구성 테스트
-이 테스트는 appx가 디버그 빌드가 아닌지 확인합니다.
+이 테스트는. m 6 또는 .appx가 디버그 빌드가 아닌지 확인 합니다.
  
 **배경**  
 Microsoft Store에 대 한 인증을 받기 위해 응용 프로그램은 디버그에 대해 컴파일되지 않으며 실행 파일의 디버그 버전을 참조 하지 않아야 합니다. 또한 앱에서 이 테스트를 통과하려면 최적화된 상태로 코드를 빌드해야 합니다.
@@ -156,7 +156,7 @@ Microsoft Store에 대 한 인증을 받기 위해 응용 프로그램은 디버
 * **프레임 워크 종속성 규칙**  
 이 테스트에서는 앱이 UWP에 적절하게 종속되는 요구 사항을 선언합니다. 부적절한 종속성이 있으면 이 테스트가 실패합니다. 앱의 대상인 OS 버전과 프레임워크 종속성 간에 불일치가 있으면 테스트가 실패합니다. 또한 앱이 프레임워크 dll의 "미리 보기" 버전을 참조하는 경우에도 테스트가 실패합니다.
 * **IPC (프로세스 간 통신) 확인**  
-이 테스트에서는 데스크톱 브리지 앱이 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신하지 않는 요구 사항을 적용합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. `DesktopApplicationPath`와 동일한 이름으로 [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute)를 지정하는 앱은 이 테스트에 실패합니다.  
+이 테스트에서는 데스크톱 브리지 앱이 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신하지 않는 요구 사항을 적용합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. [와 동일한 이름으로ActivatableClassAttribute](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute)`DesktopApplicationPath`를 지정하는 앱은 이 테스트에 실패합니다.  
 
 **정정 작업**  
 앱의 매니페스트가 [앱 패키지 요구 사항](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)에 설명된 요구 사항에 맞는지 검토합니다.
@@ -199,7 +199,7 @@ Microsoft Store에 대 한 인증을 받기 위해 응용 프로그램은 디버
 앱 패키지가 앱 매니페스트에 지정된 아키텍처에서 지원되는 파일만 포함하고 있는지 확인하려면 다음 지침을 따르세요. 
 * 앱의 대상 프로세서 아키텍처가 중립 프로세서 종류인 경우 앱 패키지는 x86, x64 또는 ARM 바이너리나 이미지 형식 파일을 포함할 수 없습니다.
 * 앱의 대상 프로세서 아키텍처가 x86 프로세서 종류인 경우 앱 패키지는 x86 바이너리나 이미지 형식 파일만 포함해야 합니다. x64 또는 ARM 바이너리나 이미지 형식이 포함된 패키지는 테스트에 실패합니다.
-* 앱의 대상 프로세서 아키텍처가 x64 프로세서 종류인 경우 앱 패키지는 x64 바이너리나 이미지 형식 파일을 포함해야 합니다. 이 경우에는 패키지에 x86 파일도 포함할 수 있지만, 기본 앱 환경은 x64 바이너리를 이용해야 합니다. 패키지에 ARM 바이너리나 이미지 형식 파일이 포함되었거나 x86 바이너리나 이미지 형식 파일*만* 포함된 경우 테스트에 실패합니다.
+* 앱의 대상 프로세서 아키텍처가 x64 프로세서 종류인 경우 앱 패키지는 x64 바이너리나 이미지 형식 파일을 포함해야 합니다. 이 경우에는 패키지가 x86 파일도 포함할 수 있지만, 기본 앱 환경은 x64 바이너리를 이용해야 합니다. 패키지에 ARM 바이너리나 이미지 형식 파일이 포함되었거나 x86 바이너리나 이미지 형식 파일*만* 포함된 경우 테스트에 실패합니다.
 * 앱의 대상 프로세서 아키텍처가 ARM 프로세서 종류인 경우 앱 패키지는 ARM 바이너리나 이미지 형식 파일만 포함해야 합니다. x64 또는 x86 바이너리나 이미지 형식 파일이 포함된 패키지는 테스트에 실패합니다. 
 
 ### <a name="5-supported-api-test"></a>5. 지원되는 API 테스트
@@ -265,17 +265,17 @@ UWP 클래스의 모든 속성이 `get` 메서드를 지니는지 확인합니�
 
 **테스트 정보**  
 Windows 앱 인증 키트에서 금지된 파일 검사는 현재 다음 파일을 검사합니다.
-* *Bing.Maps.JavaScript\js\veapicore.js*  
+* *JavaScript\js\veapicore.js*  
 이 검사는 앱이 최신 공식 릴리스 대신 "Release Preview" 버전의 파일을 사용하는 경우 일반적으로 실패합니다. 
 
 **정정 작업**  
 이를 해결 하려면 최신 버전의 UWP 앱 용 [Bing MAPS SDK](https://www.bingmapsportal.com/) 를 사용 합니다.
 
 #### <a name="82-private-code-signing"></a>8.2 전용 코드 서명
-앱 패키지 내에 전용 코드 서명 이진이 있는지 테스트합니다. 
+앱 패키지 내에 프라이빗 코드 서명 이진이 있는지 테스트합니다. 
 
 **배경**  
-전용 코드 서명 파일은 손상될 경우 악의적인 용도로 사용될 수 있으므로 비공개로 보관해야 합니다. 
+프라이빗 코드 서명 파일은 손상될 경우 악의적인 용도로 사용될 수 있으므로 프라이빗으로 보관해야 합니다. 
 
 **테스트 정보**  
 앱 패키지 내에서 .pfx 또는 .snk 확장명을 사용하며 개인 서명 키가 포함되었음을 나타내는 파일을 검사합니다. 

@@ -1,24 +1,24 @@
 ---
 title: 변환된 데스크톱 앱과 게임에 MRT 사용
-description: .NET 또는 Win32 앱 또는 게임을 AppX 패키지로 패키지하면 리소스 관리 시스템을 활용하여 런타임 컨텍스트에 맞는 앱 리소스를 로드할 수 있습니다. 이 문서에서는 해당 기술에 대해 자세히 설명합니다.
+description: .NET 또는 Win32 앱 또는 게임을 msix 또는 .appx 패키지로 패키지 하면 리소스 관리 시스템을 활용 하 여 런타임 컨텍스트에 맞는 앱 리소스를 로드할 수 있습니다. 이 문서에서는 해당 기술에 대해 자세히 설명합니다.
 ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp, mrt, pri. 리소스, 게임, centennial, Desktop App Converter, mui, 위성 어셈블리
 ms.localizationpriority: medium
-ms.openlocfilehash: 0425e7bb00e4a5be848443aa278ebaad1706cb30
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: c753e9437c76c89ac6af8cedcb1f954d1ce56fe3
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683916"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089450"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>레거시 앱 또는 게임에서 Windows 10 리소스 관리 시스템 사용
 
-.NET 및 Win32 응용 프로그램 및 게임은 종종 다른 언어로 지역화되어 전체 대상 시장을 확장합니다. 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요. .NET 또는 Win32 앱 또는 게임을 MSIX 또는 AppX 패키지로 패키지화 하 여 리소스 관리 시스템을 활용 하 여 런타임 컨텍스트에 맞는 앱 리소스를 로드할 수 있습니다. 이 문서에서는 해당 기술에 대해 자세히 설명합니다.
+.NET 및 Win32 응용 프로그램 및 게임은 종종 다른 언어로 지역화되어 전체 대상 시장을 확장합니다. 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요. .NET 또는 Win32 앱 또는 게임을 msix 또는 .appx 패키지로 패키지 하면 리소스 관리 시스템을 활용 하 여 런타임 컨텍스트에 맞는 앱 리소스를 로드할 수 있습니다. 이 문서에서는 해당 기술에 대해 자세히 설명합니다.
 
 레거시 Win32 응용 프로그램을 지역화하는 방법은 여러 가지가 있지만 Windows 8에는 여러 프로그래밍 언어와 응용 프로그램 유형에서 사용할 수 있으며 간편한 지역화 이상의 기능을 제공하는 [새로운 리소스 관리 시스템](https://docs.microsoft.com/previous-versions/windows/apps/jj552947(v=win.10))이 도입되었습니다. 이 시스템은 이 항목에서 "MRT"라고 부르겠습니다. 이는 지금까지 "최신 리소스 기술"이라고 불렀지만 "최신"이라는 용어는 이제 사용되지 않습니다. 리소스 관리자는 MRM(최신 리소스 관리자) 또는 PRI(패키지 리소스 인덱스)라고도 알려져 있습니다.
 
-MSIX 기반 또는 AppX 기반 배포와 함께 (예: Microsoft Store에서) MRT.LOG는 응용 프로그램의 다운로드 및 설치 크기를 최소화 하는 지정 된 사용자/장치에 대해 가장 적합 한 리소스를 자동으로 제공할 수 있습니다. 이 크기 감소는 지역화된 콘텐츠가 포함된 응용 프로그램에 매우 큰 것으로, AAA 게임의 경우 *기가바이트*의 자릿수가 변경되는 수준입니다. MRT의 추가 장점에는 Windows 셸과 Microsoft Store의 지역화된 목록, 사용자의 원하는 언어가 사용할 수 있는 리소스가 일치하지 않을 때 자동 대체 논리 등이 포함됩니다.
+MSIX 기반 또는 .appx 기반 배포와 함께 (예: Microsoft Store에서) MRT.LOG는 응용 프로그램의 다운로드 및 설치 크기를 최소화 하는 지정 된 사용자/장치에 대해 가장 적합 한 리소스를 자동으로 배달할 수 있습니다. 이 크기 감소는 지역화된 콘텐츠가 포함된 응용 프로그램에 매우 큰 것으로, AAA 게임의 경우 *기가바이트*의 자릿수가 변경되는 수준입니다. MRT의 추가 장점에는 Windows 셸과 Microsoft Store의 지역화된 목록, 사용자의 원하는 언어가 사용할 수 있는 리소스가 일치하지 않을 때 자동 대체 논리 등이 포함됩니다.
 
 이 문서는 MRT의 간략한 아키텍처를 설명하고, 기존 Win32 응용 프로그램을 최소의 코드 변경으로 MRT로 이식할 수 있는 지침을 제공합니다. MRT로 이전하면, 개발자가 추가 장점(예: 배율 인수나 시스템 테마로 리소스를 분할하는 기능)을 사용할 수 있게 됩니다. MRT 기반 지역화는 데스크톱 브리지(일명 "Centennial")에 의해 처리되는 UWP 응용 프로그램 및 Win32 응용 프로그램 모두와 사용할 수 있습니다.
 
@@ -27,28 +27,28 @@ MSIX 기반 또는 AppX 기반 배포와 함께 (예: Microsoft Store에서) MRT
 <table>
 <tr>
 <th>작업</th>
-<th>장점</th>
+<th>이점</th>
 <th>예상 비용</th>
 </tr>
 <tr>
 <td>패키지 매니페스트 지역화</td>
 <td>Windows 셸과 Microsoft Store에 지역화된 콘텐츠를 표시하는 데 필요한 작업이 최소화됨</td>
-<td>소</td>
+<td>Small</td>
 </tr>
 <tr>
 <td>MRT를 사용하여 리소스를 식별하고 찾기</td>
 <td>다운로드 및 설치 크기 최소화를 위한 필수 조건, 자동 언어 대체</td>
-<td>미디어</td>
+<td>중간</td>
 </tr>
 <tr>
 <td>리소스 팩 빌드</td>
 <td>다운로드 및 설치 크기를 최소화하는 최종 단계</td>
-<td>소</td>
+<td>Small</td>
 </tr>
 <tr>
 <td>MRT 리소스 형식과 API로 마이그레이션</td>
 <td>훨씬 더 작은 파일 크기(기존 리소스 기술에 따름)</td>
-<td>대</td>
+<td>Large</td>
 </tr>
 </table>
 
@@ -58,7 +58,7 @@ MSIX 기반 또는 AppX 기반 배포와 함께 (예: Microsoft Store에서) MRT
 
 따라서 모든 리소스 관리 기술의 주 목적은 논리적 또는 기호 *리소스 이름*(예: `SAVE_BUTTON_LABEL`)을 가능한 *후보*(예: "Save", "Speichern" 또는 "저장")에서 런타임에 가장 적절한 실제 *값*(예: "Save")으로 번역하는 것입니다. MRT는 이러한 기능을 제공하며, 응용 프로그램이 사용자의 언어, 디스플레이 배율 인수, 사용자가 선택한 테마 및 기타 환경 요인과 같은 *한정자*로 불리는 다양한 특성을 사용하여 리소스 후보를 식별할 수 있도록 합니다. MRT는 응용 프로그램이 필요할 경우 사용자 지정 한정자도 지원합니다. 예를 들어, 사용자가 계정으로 로그인했는지 게스트 사용자인지 확인하는 내용을 응용 프로그램의 모든 부분에 추가하지 않고도 다른 그래픽 자산을 제공할 수 있습니다. MRT는 문자열 리소스와 파일 기반 리소스 모두 사용할 수 있습니다. 파일 기반 리소스는 외부 데이터(파일 자체)에 대한 참조로 구현됩니다.
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 여기 두 단추(`openButton` 및 `saveButton`)의 텍스트 레이블과 로고에 사용되는 PNG 파일(`logoImage`)이 있는 간단한 응용 프로그램의 예를 보겠습니다. 텍스트 레이블은 영어와 독일어로 지역화되어 있고, 로고는 일반 데스크톱 디스플레이(100% 배율 인수) 및 고해상도 휴대폰(300% 배율 인수)에 최적화되어 있습니다. 이 다이어그램은 모델의 개략적인 개념을 보여주는 것으로, 구현을 정확히 표현하지는 않습니다.
 
@@ -100,7 +100,7 @@ MSIX 기반 또는 AppX 기반 배포와 함께 (예: Microsoft Store에서) MRT
 
 ## <a name="phase-0-build-an-application-package"></a>0단계: 응용 프로그램 패키지 제작
 
-응용 프로그램의 리소스를 변경하기 전에, 현재 패키징과 설치 기술을 표준 UWP 패키징 및 배포 기술로 바꿔야 합니다. 이 작업을 수행 하는 방법은 세 가지가 있습니다.
+응용 프로그램의 리소스를 변경하기 전에, 현재 패키징과 설치 기술을 표준 UWP 패키징 및 배포 기술로 바꿔야 합니다. 이렇게 하는 데는 다음과 같은 세 가지 방법이 있습니다.
 
 * 복잡 한 설치 관리자를 사용 하는 대용량 데스크톱 응용 프로그램이 있거나 많은 OS 확장성 지점이 사용 되는 경우 데스크톱 앱 변환기 도구를 사용 하 여 기존 앱 설치 관리자 (예: MSI)에서 UWP 파일 레이아웃 및 매니페스트 정보를 생성할 수 있습니다.
 * 비교적 적은 수의 파일이 나 간단한 설치 관리자가 있고 확장성 후크가 없는 소규모 데스크톱 응용 프로그램을 사용 하는 경우 파일 레이아웃 및 매니페스트 정보를 수동으로 만들 수 있습니다.
@@ -207,7 +207,7 @@ Visual Studio에서 디자이너를 사용하려면:
 
 `.resw` 파일에 정의 된 값이 있는 후 다음 단계는 리소스 문자열을 참조 하도록 매니페스트를 업데이트 하는 것입니다. 마찬가지로 XML 파일을 직접 편집하거나 Visual Studio 매니페스트 디자이너를 사용할 수 있습니다.
 
-XML을 직접 편집할 경우, `AppxManifest.xml` 파일을 열고 <span style="background-color: lightgreen">강조 표시된 값</span>을 다음과 같이 변경합니다. 응용 프로그램에 대한 텍스트가 아니라 *정확한* 이 텍스트를 사용합니다. 이러한 정확한 리소스 이름을 사용할 필요는 없으며, 자체적으로 선택하면 됩니다. 하지만 선택한 이름은 `.resw` 파일의 이름과 정확히 일치해야 합니다. 이러한 이름은 `.resw` 파일에서 만든 `Names`와 일치해야 합니다. 접두사로 `ms-resource:` 스키마와 `Resources/` 네임스페이스가 붙습니다. 
+XML을 직접 편집할 경우, `AppxManifest.xml` 파일을 열고 <span style="background-color: lightgreen">강조 표시된 값</span>을 다음과 같이 변경합니다. 응용 프로그램에 대한 텍스트가 아니라 *정확한* 이 텍스트를 사용합니다. 이러한 정확한 리소스 이름을 사용할 필요는 없으며, 자체적으로 선택하면 됩니다. 하지만 선택한 이름은 &mdash; 파일의 이름과 정확히 일치해야 합니다. 이러한 이름은 `Names` 파일에서 만든 `.resw`와 일치해야 합니다. 접두사로 `ms-resource:` 스키마와 `Resources/` 네임스페이스가 붙습니다. 
 
 > [!NOTE]
 > 이 코드 조각에서 매니페스트의 많은 요소를 생략 했습니다. 아무것도 삭제 하지 마세요.
@@ -287,13 +287,13 @@ Visual Studio에서 빌드하는 경우 `Ctrl+Shift+B`를 눌러 프로젝트를
 
 6. 마지막으로, 텍스트 편집기에서 `..\resources.xml`을 열고 `<NamedResource>` 값(`ApplicationDescription`과 `PublisherDisplayName`과 같은)과 선택한 기본 언어에 대한 `<Candidate>` 값이 나열되어 있는지 확인합니다. 파일 시작 부분에 다른 내용이 있지만 여기서는 무시하면 됩니다.
 
-매핑 파일 `..\resources.map.txt`를 열어 프로젝트에 필요한 파일이 포함 되어 있는지 확인할 수 있습니다 (프로젝트 디렉터리의 일부가 아닌 PRI 파일 포함). 중요한 것은 매핑 파일의 콘텐츠가 PRI 파일에 포함되어 있기 때문에 매핑 파일에는 `resources.resw` 파일에 대한 참조가 포함되어 있지 *않다는* 것입니다. 그러나 이미지의 파일 이름과 같은 다른 리소스는 포함하고 있습니다.
+매핑 파일 `..\resources.map.txt`를 열어 프로젝트에 필요한 파일이 포함 되어 있는지 확인할 수 있습니다 (프로젝트 디렉터리의 일부가 아닌 PRI 파일 포함). 중요한 것은 매핑 파일의 콘텐츠가 PRI 파일에 포함되어 있기 때문에 매핑 파일에는 *파일에 대한 참조가 포함되어 있지*않다는`resources.resw` 것입니다. 그러나 이미지의 파일 이름과 같은 다른 리소스는 포함하고 있습니다.
 
 #### <a name="building-and-signing-the-package"></a>패키지 빌드 및 서명 
 
 이제 PRI 파일이 빌드되었으므로 패키지를 빌드하고 서명합니다.
 
-1. 앱 패키지를 만들려면 다음 명령을 실행 하 여 만들려는 MSIX/AppX 파일의 이름으로 `contoso_demo.appx`을 바꾸고 파일에 대해 다른 디렉터리를 선택 해야 합니다 .이 샘플은 부모 디렉터리를 사용 하는 것은 물론 어디에 나 프로젝트 **디렉터리가 될 수** 있습니다.
+1. 앱 패키지를 만들려면 다음 명령을 실행 하 여 만들려는. a s d/.appx 파일의 이름으로 `contoso_demo.appx`을 바꾸고 파일에 대해 다른 디렉터리를 선택 해야 합니다 .이 샘플은 부모 디렉터리를 사용 합니다 .이 샘플은 어디에 나 프로젝트 디렉터리가 될 수 **없습니다** .
 
     ```CMD
     makeappx pack /m AppXManifest.xml /f ..\resources.map.txt /p ..\contoso_demo.appx /o
@@ -310,14 +310,14 @@ Visual Studio에서 빌드하는 경우 `Ctrl+Shift+B`를 눌러 프로젝트를
     > [!IMPORTANT]
     > 서명 인증서를 수동으로 만드는 경우 원본 프로젝트 또는 패키지 원본과 다른 디렉터리에 파일을 저장 해야 합니다. 그렇지 않으면 개인 키를 포함 하 여 패키지의 일부로 포함 될 수 있습니다.
 
-3. 패키지에 서명하려면 다음 명령을 사용합니다. `AppxManifest.xml`의 `Identity` 요소에 지정된 `Publisher`는 인증서의 `Subject`와 일치해야 합니다. 이는 사용자에게 표시되는 지역화된 표시 이름인 `<PublisherDisplayName>` 요소가 **아닙니다**. 늘 그렇듯 `contoso_demo...` 파일 이름을 프로젝트에 적절한 이름으로 바꾸고(**매우 중요**) `.pfx` 파일이 현재 디렉터리에 있지 않도록 합니다. 그렇지 않으면 개인 서명 키를 포함하여 패키지의 일부로 생성됩니다.
+3. 패키지에 서명하려면 다음 명령을 사용합니다. `Publisher`의 `Identity` 요소에 지정된 `AppxManifest.xml`는 인증서의 `Subject`와 일치해야 합니다. 이는 사용자에게 표시되는 지역화된 표시 이름인 **요소가**아닙니다`<PublisherDisplayName>`. 늘 그렇듯 `contoso_demo...` 파일 이름을 프로젝트에 적절한 이름으로 바꾸고(**매우 중요**) `.pfx` 파일이 현재 디렉터리에 있지 않도록 합니다. 그렇지 않으면 개인 서명 키를 포함하여 패키지의 일부로 생성됩니다.
 
     ```CMD
     signtool sign /fd SHA256 /a /f ..\contoso_demo_key.pfx ..\contoso_demo.appx
     ```
 
     `signtool sign /?`를 입력하면 각 매개 변수가 무슨 용도인지 볼 수 있지만, 요약하면 다음과 같습니다.
-      * 파일 다이제스트 알고리즘을 설정 하는 `/fd` (SHA256의 기본값)
+      * 파일 다이제스트 알고리즘을 설정 하는 `/fd` (SHA256은 .appx의 기본값)
       * `/a`에서 자동으로 최상의 인증서를 선택 합니다.
       * `/f`는 서명 인증서를 포함 하는 입력 파일을 지정 합니다.
 
@@ -431,13 +431,13 @@ makepri createconfig /cf ..\contoso_demo.xml /dq en-US_de-DE_fr-FR /pv 10.0 /o
 새롭게 지역화된 변경 내용을 테스트하려면, Windows에 새로운 기본 UI 언어를 추가 합니다. 언어 팩을 다운로드하거나, 시스템을 다시 부팅 하거나, 전체 Windows UI를 다른 언어로 표시할 필요가 없습니다. 
 
 1. 앱 `Settings`(`Windows + I`)를 실행
-2. [https://resources.azure.com](`Time & language`) 으로 이동합니다.
-3. [https://resources.azure.com](`Region & language`) 으로 이동합니다.
-4. `Add a language`을 클릭합니다.
+2. `Time & language`로 이동
+3. `Region & language`로 이동
+4. `Add a language` 클릭
 5. 원하는 언어를 입력(또는 선택)(예: `Deutsch`또는 `German`)
  * 하위 언어가 있을 경우, 선택(예: `Deutsch / Deutschland`)
 6. 언어 목록에서 새 언어 선택
-7. `Set as default`을 클릭합니다.
+7. `Set as default` 클릭
 
 이제 시작 메뉴를 열고 응용 프로그램을 검색하면, 선택한 언어에 대한 지역화된 값(다른 앱도 지역화되어 표시됨)이 표시됩니다. 지역화된 이름이 바로 표시되지 않으면, 시작 메뉴의 캐시가 새로 고쳐질 때까지 몇 분만 기다립니다. 원래 언어로 돌아가려면 언어 목록에서 기본 언어로 돌리면 됩니다. 
 
@@ -494,7 +494,7 @@ Win32 데스크톱 앱을 지역화하는 많은 방법이 있기 때문에, 이
 
 이 문서에서는 지역화 된 리소스의 파일 이름 (예: `contoso_demo.exe.mui` 또는 `contoso_strings.dll` 또는 `contoso.strings.xml`)이 동일 하지만 BCP-47 이름 (`en-US`, `de-DE`등)이 있는 다른 폴더에 배치 되어 있다고 가정 합니다. 리소스 파일의 개수, 이름, 파일 형식, 관련된 API 등은 상관이 없습니다. 중요한 유일한 내용은 모든 *논리적* 리소스가 동일한 파일 이름(하지만 다른 *물리적* 디렉터리에 배치)을 가져야 한다는 것입니다. 
 
-반대되는 예로, 응용 프로그램이 `english_strings.dll` 및 `french_strings.dll` 파일이 포함된 하나의 `Resources` 디렉터리 파일이 포함된 플랫 파일 구조를 사용하는 경우, MRT에 잘 매핑되지는 않습니다. 더 나은 구조는 하위 디렉터리와 `en\strings.dll` 및 `fr\strings.dll` 파일이 있는 `Resources` 디렉터리입니다. `strings.lang-en.dll`과 `strings.lang-fr.dll`과 같은 포함 한정자를 가진 같은 기본 파일을 사용하는 것도 가능하지만, 언어 코드를 가진 디렉터리를 사용하는 것이 개념적으로 더 간단하므로 이에 집중합니다.
+반대되는 예로, 응용 프로그램이 `Resources` 및 `english_strings.dll` 파일이 포함된 하나의 `french_strings.dll` 디렉터리 파일이 포함된 플랫 파일 구조를 사용하는 경우, MRT에 잘 매핑되지는 않습니다. 더 나은 구조는 하위 디렉터리와 `Resources` 및 `en\strings.dll` 파일이 있는 `fr\strings.dll` 디렉터리입니다. `strings.lang-en.dll`과 `strings.lang-fr.dll`과 같은 포함 한정자를 가진 같은 기본 파일을 사용하는 것도 가능하지만, 언어 코드를 가진 디렉터리를 사용하는 것이 개념적으로 더 간단하므로 이에 집중합니다.
 
 >[!NOTE]
 > 이 파일 명명 규칙을 따르지 않는 경우에도 MRT.LOG 및 패키징을 사용할 수 있습니다. 더 많은 작업이 필요 합니다.
@@ -572,13 +572,13 @@ set absoluteFileName = bestCandidate.ValueAsString
 </blockquote>
 </pre>
 
-코드에서 `UICommands\en-US\ui.txt`와 같은 특정 언어 폴더가 디스크에 어떻게 존재하는지 관계없이 이를 요청하지 **않는**다는 점을 유의하십시오. 대신, 코드는 *논리적* 파일 이름인 `UICommands\ui.txt`를 요청하며 MRT를 사용하여 언어 디렉터리 중 하나에서 해당 디스크 내 파일을 찾습니다.
+코드에서 **와 같은 특정 언어 폴더가 디스크에 어떻게 존재하는지 관계없이 이를 요청하지** 않는`UICommands\en-US\ui.txt`다는 점을 유의하십시오. 대신, 코드는 *논리적* 파일 이름인 `UICommands\ui.txt`를 요청하며 MRT를 사용하여 언어 디렉터리 중 하나에서 해당 디스크 내 파일을 찾습니다.
 
 여기에서, 샘플 앱은 계속 `CreateFile`을 사용하여 `absoluteFileName`을 로드하고 전과 같이 `name=value` 쌍을 구문 분석합니다. 앱에서 변경이 필요한 논리는 없습니다. C# 또는 C++/CX에서 코드를 작성하는 경우, 실제 코드는 이보다 복잡할 수 있습니다(실제로 많은 매개 변수가 생략될 수 있음). 아래 **.NET 리소스 로드** 섹션을 참조하세요. C++/WRL 기반 응용 프로그램은 WinRT API를 호출하는 데 하위 수준 COM 기반 API를 사용하기 때문에 더 복잡할 수 있지만, 기본 단계는 동일합니다. 아래 **Win32 MUI 리소스 로드** 섹션을 참조하세요.
 
 #### <a name="loading-net-resources"></a>.NET 리소스 로드
 
-.NET에는 리소스를 찾고 로드하는 기본 제공 메커니즘("위성 어셈블리"라고 함)이 있기 때문에, 위 코드 샘플을 굳이 바꿀 필요가 없습니다. .NET에서는 해당 디렉터리에 리소스 DLL이 있으면 자동으로 이를 찾습니다. 앱이 리소스 팩을 사용 하 여 MSIX 또는 AppX로 패키지 되는 경우 디렉터리 구조는 리소스 디렉터리가 주 응용 프로그램 디렉터리의 하위 디렉터리가 되도록 하는 것이 아니라 약간 다릅니다. 은 (는) 해당 기본 설정에 나열 된 언어가 없습니다.) 
+.NET에는 리소스를 찾고 로드하는 기본 제공 메커니즘("위성 어셈블리"라고 함)이 있기 때문에, 위 코드 샘플을 굳이 바꿀 필요가 없습니다. .NET에서는 해당 디렉터리에 리소스 DLL이 있으면 자동으로 이를 찾습니다. 앱이 리소스 팩을 사용 하 여 MSIX 또는 .appx로 패키지 되는 경우 디렉터리 구조는 리소스 디렉터리가 주 응용 프로그램 디렉터리의 하위 디렉터리가 되도록 하는 것이 아니라 약간 다릅니다. 은 (는) 해당 기본 설정에 나열 된 언어가 없습니다.) 
 
 예를 들어. 모든 파일이 `MainApp` 폴더에 있는 다음과 같은 레이아웃의 .NET 응용 프로그램을 가정해 보겠습니다.
 
@@ -595,7 +595,7 @@ set absoluteFileName = bestCandidate.ValueAsString
 </pre>
 </blockquote>
 
-AppX로 변환한 후, 레이아웃은 다음과 유사하게 됩니다. `en-US`가 기본 언어라고 가정했으며, 사용자가 언어 목록에 독일어와 프랑스어를 선택했다고 가정했습니다.
+.Appx로 변환한 후 레이아웃은 다음과 같이 표시 됩니다. `en-US` 기본 언어이 고 사용자가 해당 언어 목록에 독일어와 프랑스어를 모두 포함 하 고 있다고 가정 합니다.
 
 <blockquote>
 <pre>
@@ -615,7 +615,7 @@ AppX로 변환한 후, 레이아웃은 다음과 유사하게 됩니다. `en-US`
 
 기본 실행 파일 설치 위치 아래의 하위 디렉터리에 지역화된 리소스가 없기 때문에 기본 제공 .NET 리소스 확인이 실패합니다. 다행히 .NET에는 실패한 어셈블리 로드 시도를 처리하는 잘 정의된 메커니즘인 `AssemblyResolve` 이벤트가 있습니다. MRT를 사용하는 .NET 앱은 이 이벤트를 등록해야 하며, .NET 리소스 하위 시스템에 대한 누락 어셈블리를 제공해야 합니다. 
 
-.NET에서 위성 어셈블리를 찾는 데 WinRT API를 사용하는 방법을 설명하는 간략한 예는 다음과 같습니다. 코드가 최소 구현을 보여주기 위해 의도적으로 축소되어 있지만, 찾을 어셈블리의 이름을 제공하기 위해 `ResolveEventArgs`를 전달한 위 의사 코드와 유사함을 알 수 있을 것입니다. 이 코드의 실행 가능한 버전(상세한 주석과 오류 처리 포함)은 [GitHub의 **.NET 어셈블리 확인자** 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DotNetSatelliteAssemblyDemo)의 `PriResourceRsolver.cs` 파일에서 찾을 수 있습니다.
+.NET에서 위성 어셈블리를 찾는 데 WinRT API를 사용하는 방법을 설명하는 간략한 예는 다음과 같습니다. 코드가 최소 구현을 보여주기 위해 의도적으로 축소되어 있지만, 찾을 어셈블리의 이름을 제공하기 위해 `ResolveEventArgs`를 전달한 위 의사 코드와 유사함을 알 수 있을 것입니다. 이 코드의 실행 가능한 버전(상세한 주석과 오류 처리 포함)은 `PriResourceRsolver.cs`GitHub의 [.NET 어셈블리 확인자 **샘플**의 ](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DotNetSatelliteAssemblyDemo) 파일에서 찾을 수 있습니다.
 
 ```csharp
 static class PriResourceResolver
@@ -630,7 +630,7 @@ static class PriResourceResolver
 
     var resource = ResourceManager.Current.MainResourceMap.GetSubtree("Files")[fileName];
 
-    // Note use of 'UnsafeLoadFrom' - this is required for apps installed with AppX, but
+    // Note use of 'UnsafeLoadFrom' - this is required for apps installed with .appx, but
     // in general is discouraged. The full sample provides a safer wrapper of this method
     return Assembly.UnsafeLoadFrom(resource.Resolve(resourceContext).ValueAsString);
   }
@@ -765,7 +765,7 @@ Visual Studio를 사용 하는 경우, 파일 `priconfig.packaging.xml` 및 `pri
 
 수동으로 리소스 패키지를 만들려면 별도의 `.pri`와 `.appx` 파일을 빌드하기 위한 약간 다른 명령을 실행해야 합니다. 위에서 큰 패키지를 만들기 위해 사용한 코드와 비슷하므로 설명은 최대한 간략하게 하겠습니다. 참고: 모든 명령은 현재 디렉터리가 `AppXManifest.xml` 파일을 포함한 디렉터리라고 가정하지만, 모든 파일은 부모 디렉터리에 위치합니다. 필요하면 다른 디렉터리를 사용해도 되지만, 프로젝트 디렉터리에 불필요한 파일을 넣어서는 안 됩니다. 언제나처럼 "Contoso" 파일 이름을 원하는 파일 이름으로 바꿉니다.
 
-1. 기본 한정자로 기본 언어(이 경우 `en-US`)를 사용할 **경우만** 다음 명령을 사용하여 구성 파일을 만듭니다.
+1. 기본 한정자로 기본 언어(이 경우 **)를 사용할** 경우만`en-US` 다음 명령을 사용하여 구성 파일을 만듭니다.
 
     ```CMD
     makepri createconfig /cf ..\contoso_demo.xml /dq en-US /pv 10.0 /o
@@ -783,7 +783,7 @@ Visual Studio를 사용 하는 경우, 파일 `priconfig.packaging.xml` 및 `pri
     makeappx pack /m .\AppXManifest.xml /f ..\resources.map.txt /p ..\bundle\contoso_demo.main.appx /o
     ```
 
-4. 주 패키지가 생성되면, 다음 명령을 추가 언어당 한 번씩 사용합니다. 즉 이전 단계에서 생성한 각 언어 맵 파일에 대해 이 명령을 반복합니다. 마찬가지로 출력은 별도 디렉터리(주 패키지와 같은)에 있어야 합니다. 언어는 `/f` 옵션과 `/p` 옵션에 **모두** 지정되며, 원하는 리소스 패키지를 나타내는 새로운 `/r` 인수가 사용되었음을 유의하십시오.
+4. 주 패키지가 생성되면, 다음 명령을 추가 언어당 한 번씩 사용합니다. 즉 이전 단계에서 생성한 각 언어 맵 파일에 대해 이 명령을 반복합니다. 마찬가지로 출력은 별도 디렉터리(주 패키지와 같은)에 있어야 합니다. 언어는 **옵션과** 옵션에 `/f`모두`/p` 지정되며, 원하는 리소스 패키지를 나타내는 새로운 `/r` 인수가 사용되었음을 유의하십시오.
 
     ```CMD
     makeappx pack /r /m .\AppXManifest.xml /f ..\resources.language-de.map.txt /p ..\bundle\contoso_demo.de.appx /o

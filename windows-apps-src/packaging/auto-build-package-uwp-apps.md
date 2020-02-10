@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: b7d38464a26af0df03c1aa381b16fbddf1de55cc
-ms.sourcegitcommit: e0644abf76a2535ea24758d1904ff00dfcd86a51
+ms.openlocfilehash: 70415c9f3d58625cfdc651ec67c8a9f37c23cffa
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72008047"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089499"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -89,18 +89,18 @@ steps:
 
 이 작업은 작업 폴더에 있는 모든 솔루션을 이진 파일로 컴파일하고 출력 앱 패키지 파일을 생성 합니다. 이 태스크에서는 MSBuild 인수를 사용 합니다. 이러한 인수 값을 지정해야 합니다. 다음 표를 가이드로 따르세요.
 
-|**MSBuild 인수**|**Value**|**설명**|
+|**MSBuild 인수**|**값**|**설명**|
 |--------------------|---------|---------------|
 | AppxPackageDir | $ (Build.ArtifactStagingDirectory)\AppxPackages | 생성된 아티팩트를 저장할 폴더를 정의합니다. |
 | AppxBundlePlatforms | $(Build.BuildPlatform) | 번들에 포함할 플랫폼을 정의할 수 있습니다. |
 | AppxBundle | 항상 | 지정 된 플랫폼에 대 한. m 6/.appx 파일을 사용 하 여. a s n x 번들/.appxbundle를 만듭니다. |
 | UapAppxPackageBuildMode | StoreUpload | 는 .appxupload 파일 및 테스트용 로드에 대 한 **_Test** 폴더를 생성 합니다. |
 | UapAppxPackageBuildMode | CI | 는. msixupload/.appxupload 파일만 생성 합니다. |
-| UapAppxPackageBuildMode | 함께 Loadonly | 테스트용 로드만 **_Test** 폴더를 생성 합니다. |
+| UapAppxPackageBuildMode | 함께 Loadonly | 테스트용 로드에 대해서만 **_Test** 폴더를 생성 합니다. |
 | AppxPackageSigningEnabled | true | 패키지 서명을 사용 하도록 설정 합니다. |
-| PackageCertificateThumbprint | 인증서 지문 | 이 값은 서명 인증서의 지문과 일치 **해야** 합니다. 그렇지 않으면 빈 문자열 이어야 합니다. |
+| PackageCertificateThumbprint | 인증서 손 도장(Thumbprint) | 이 값은 서명 인증서의 지문과 일치 **해야** 합니다. 그렇지 않으면 빈 문자열 이어야 합니다. |
 | PackageCertificateKeyFile | 경로 | 사용할 인증서의 경로입니다. 이는 보안 파일 메타 데이터에서 검색 됩니다. |
-| PackageCertificatePassword | 암호 | 인증서의 개인 키에 대 한 암호입니다. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) 에 암호를 저장 하 고 [변수 그룹](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups)에 암호를 연결 하는 것이 좋습니다. 이 인수에 변수를 전달할 수 있습니다. |
+| PackageCertificatePassword | Password | 인증서의 개인 키에 대 한 암호입니다. [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates) 에 암호를 저장 하 고 [변수 그룹](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups)에 암호를 연결 하는 것이 좋습니다. 이 인수에 변수를 전달할 수 있습니다. |
 
 ### <a name="configure-the-build"></a>빌드 구성
 
@@ -115,8 +115,8 @@ steps:
 
 ### <a name="configure-package-signing"></a>패키지 서명 구성
 
-MSIX (또는 APPX) 패키지에 서명 하려면 파이프라인에서 서명 인증서를 검색 해야 합니다. 이렇게 하려면 VSBuild 작업 전에 DownloadSecureFile 작업을 추가 합니다.
-그러면 ```signingCert```을 통해 서명 인증서에 대 한 액세스를 제공 합니다.
+MSIX (또는 .appx) 패키지에 서명 하려면 파이프라인에서 서명 인증서를 검색 해야 합니다. 이렇게 하려면 VSBuild 작업 전에 DownloadSecureFile 작업을 추가 합니다.
+이렇게 하면 ```signingCert```를 통해 서명 인증서에 액세스할 수 있습니다.
 
 ```yml
 - task: DownloadSecureFile@1
@@ -144,11 +144,11 @@ MSIX (또는 APPX) 패키지에 서명 하려면 파이프라인에서 서명 �
 ```
 
 > [!NOTE]
-> PackageCertificateThumbprint 인수는 의도적으로 빈 문자열로 설정 됩니다. 지문이 프로젝트에 설정 되어 있지만 서명 인증서와 일치 하지 않는 경우에는 다음 오류로 인해 빌드가 실패 합니다. `Certificate does not match supplied signing thumbprint`.
+> PackageCertificateThumbprint 인수는 의도적으로 빈 문자열로 설정 됩니다. 지문이 프로젝트에 설정 되어 있지만 서명 인증서와 일치 하지 않는 경우에는 `Certificate does not match supplied signing thumbprint`오류로 인해 빌드가 실패 합니다.
 
 ### <a name="review-parameters"></a>매개 변수 검토
 
-@No__t-0 구문으로 정의 된 매개 변수는 빌드 정의에 정의 된 변수 이며 다른 빌드 시스템에서 변경 됩니다.
+`$()` 구문으로 정의 된 매개 변수는 빌드 정의에 정의 된 변수 이며 다른 빌드 시스템에서 변경 됩니다.
 
 ![기본 변수](images/building-screen5.png)
 
@@ -174,9 +174,9 @@ MSIX (또는 APPX) 패키지에 서명 하려면 파이프라인에서 서명 �
 
 빌드 결과 페이지의 **아티팩트** 옵션에서 생성 된 아티팩트를 볼 수 있습니다.
 
-![artifacts](images/building-screen6.png)
+![아티팩트](images/building-screen6.png)
 
-@No__t-0 인수를 `StoreUpload`로 설정 했으므로 아티팩트 폴더에 스토어 (. msixupload/. .appxupload)에 제출할 패키지를 포함 합니다. 또한 일반 앱 패키지 (. msix/.appx) 또는 앱 번들 (. msixbundle/.appxbundle/)을 스토어에 제출할 수 있습니다. 이 문서의 목적을 위해 .appxupload 파일을 사용합니다.
+`UapAppxPackageBuildMode` 인수를 `StoreUpload`로 설정 했으므로 아티팩트 폴더에 스토어 (. msixupload/. .appxupload)에 제출할 패키지를 포함 합니다. 또한 일반 앱 패키지 (. msix/.appx) 또는 앱 번들 (. msixbundle/.appxbundle/)을 스토어에 제출할 수 있습니다. 이 문서의 목적을 위해 .appxupload 파일을 사용합니다.
 
 ## <a name="address-bundle-errors"></a>주소 번들 오류
 
@@ -186,7 +186,7 @@ MSIX (또는 APPX) 패키지에 서명 하려면 파이프라인에서 서명 �
 
 이 오류는 솔루션 수준에서 앱이 번들로 나타나도 되는지 분명하지 않기 때문에 표시됩니다. 이 문제를 해결 하려면 각 프로젝트 파일을 열고 첫 번째 `<PropertyGroup>` 요소의 끝에 다음 속성을 추가 합니다.
 
-|**프로젝트**|**Properties**|
+|**프로젝트가**|**속성**|
 |-------|----------|
 |앱|`<AppxBundle>Always</AppxBundle>`|
 |UnitTests|`<AppxBundle>Never</AppxBundle>`|

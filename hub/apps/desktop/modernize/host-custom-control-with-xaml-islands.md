@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 8f22761bf535f13ae0686a9b180ee810fba61028
-ms.sourcegitcommit: 1455e12a50f98823bfa3730c1d90337b1983b711
+ms.openlocfilehash: 35ddf17d121a06e453e9b51e023e859f0c1cd0ab
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76814003"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089349"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML 아일랜드를 사용 하 여 WPF 앱에서 사용자 지정 UWP 컨트롤 호스팅
 
@@ -34,7 +34,7 @@ WPF (또는 Windows Forms) 앱에서 사용자 지정 UWP 컨트롤을 호스팅
     이렇게 하려면 **빈 앱 (유니버설 Windows)** 프로젝트를 WPF 또는 Windows Forms 프로젝트와 동일한 솔루션에 추가 하 고,이 프로젝트에서 기본 `App` 클래스를 수정 하 여 `XamlApplication`에서 파생 시킨 다음, 앱에 대 한 진입점 코드에서이 개체의 인스턴스를 만듭니다.
 
     > [!NOTE]
-    > 솔루션은 `XamlApplication` 개체를 정의 하는 프로젝트를 하나만 포함할 수 있습니다. 앱의 모든 사용자 지정 UWP 컨트롤은 동일한 `XamlApplication` 개체를 공유 합니다. `XamlApplication` 개체를 정의 하는 프로젝트에는 XAML 아일랜드에서 UWP 컨트롤을 호스트 하는 데 사용 되는 다른 모든 UWP 라이브러리 및 프로젝트에 대 한 참조가 포함 되어야 합니다.
+    > 솔루션은 `XamlApplication` 개체를 정의 하는 프로젝트를 하나만 포함할 수 있습니다. 앱의 모든 사용자 지정 UWP 컨트롤은 동일한 `XamlApplication` 개체를 공유 합니다. `XamlApplication` 개체를 정의 하는 프로젝트에는 XAML 아일랜드에서 UWP 컨트롤에 호스트 하는 데 사용 되는 다른 모든 UWP 라이브러리 및 프로젝트에 대 한 참조가 포함 되어야 합니다.
 
 ## <a name="create-a-wpf-project"></a>WPF 프로젝트 만들기
 
@@ -285,7 +285,7 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용
 
 ## <a name="package-the-app"></a>앱 패키지
 
-필요에 따라 배포를 위해 [Msix 패키지](https://docs.microsoft.com/windows/msix) 에 WPF 앱을 패키지할 수 있습니다. MSIX은 Windows 용 최신 앱 패키징 기술 이며 MSI, APPX, App-v 및 ClickOnce 설치 기술의 조합을 기반으로 합니다.
+필요에 따라 배포를 위해 [Msix 패키지](https://docs.microsoft.com/windows/msix) 에 WPF 앱을 패키지할 수 있습니다. MSIX은 Windows 용 최신 앱 패키징 기술 이며 MSI, .appx, App-v 및 ClickOnce 설치 기술의 조합을 기반으로 합니다.
 
 다음 지침에서는 Visual Studio 2019의 [Windows 응용 프로그램 패키징 프로젝트](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) 를 사용 하 여 msix 패키지의 솔루션에 있는 모든 구성 요소를 패키지 하는 방법을 보여 줍니다. 이러한 단계는 MSIX 패키지에서 WPF 앱을 패키징하는 경우에만 필요 합니다. 이러한 단계에는 현재 사용자 지정 UWP 컨트롤을 호스트 하는 시나리오와 관련 된 몇 가지 해결 방법이 포함 되어 있습니다.
 

@@ -4,20 +4,20 @@ description: Unity UWP 프로젝트 버전 관리.
 ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
-ms.openlocfilehash: 064eaf42fe7d664be273cd7e2222fa5d90be1a11
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: b98fba394fb326d60451f07938504e99a92d764d
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57608868"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089489"
 ---
-# <a name="unity-version-control-your-uwp-project"></a>Unity: 버전 제어 UWP 프로젝트
+# <a name="unity-version-control-your-uwp-project"></a>Unity: UWP 프로젝트 버전 제어
 
 UWP(유니버설 Windows 플랫폼)를 사용하여 Xbox용 Unity 게임을 아직 빌드하지 않았나요?  먼저 [Xbox의 UWP에 Unity 게임 가져오기](development-lanes-unity.md)를 참조하세요.
 
 생성된 UWP 디렉터리 부분을 버전 제어에 추가하려는 몇 가지 다양한 이유가 있으며, 그중 하나가 종속성 추가입니다(예: Xbox Live SDK).  이 시나리오를 이 자습서의 예로 사용합니다. 이러한 예제가 프로젝트의 개별 요구를 해결하는 데 도움이 되기를 바랍니다.
 
-***고 지 사항: Git 버전 제어 솔루션으로 사용할 것 것입니다.  다른 사용자의 경우 개념 여전히 변환 해야 합니다.***
+***부인: 버전 제어 솔루션으로 Git를 사용할 예정입니다.  서로 다른 경우 개념은 여전히 변환 되어야 합니다.***
 
 다시 한 번 말하면 예제 게임, ***ScrapyardPhoenix***의 디렉터리는 현재 다음과 같습니다.
 
@@ -29,7 +29,7 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 Xbox용 Unity 게임을 아�
 
 이 디렉터리에서 한 폴더 즉, ***ScrapyardPhoenix***(여기에 게임의 이름 삽입) 폴더만 살펴봅니다.  다른 모든 폴더는 다음과 같이 버전 제어에서 무시할 수 있습니다.
 
-***.Gitignore 파일을 사용 하 여 알 수 없는?  참조 [gitignore](https://git-scm.com/docs/gitignore)합니다.***
+***.Gitignore 파일에 익숙하지 않나요?  [.Gitignore](https://git-scm.com/docs/gitignore)를 참조 하세요.***
 
     ##################################################################
     # The original .gitignore file can be found at
@@ -49,21 +49,21 @@ UWP(유니버설 Windows 플랫폼)를 사용하여 Xbox용 Unity 게임을 아�
 
 ![UWP 빌드 디렉터리](images/uwp-build-directory.png)  
 
-## <a name="folders"></a>폴더  
+## <a name="folders"></a>Folders  
 
-`Assets` | ***포함*** | Microsoft Store 이미지를 포함합니다.  
-`Data`   | ***무시*** | Unity에서 (장면, 셰이더, 스크립트, Prefabs 등) 프로젝트를 컴파일하는  
-`Dependencies` | ***포함*** | 이 폴더 (예를 들어 XboxLiveSDK.dll)에서 모든 UWP 종속성 유지를 위해 만든 것  
-`Properties` | ***포함*** | 개발자가 수정할 수 있는 고급 설정이 포함 되어 있습니다.  
-`Unprocessed` | ***무시*** | Unity를 포함 `.dll` 고 `.pdb` 파일  
+`Assets` | ***포함*** Microsoft Store 이미지 포함  
+`Data`   | ***무시*** | Unity에서 프로젝트를 컴파일하는 경우 (장면, 셰이더, 스크립트, Prefabs 등)  
+`Dependencies` | ***포함*** 이 폴더는 모든 UWP 종속성 (예: XboxLiveSDK)을 유지 하기 위해 만든 것입니다.  
+`Properties` | ***포함*** 개발자가 수정할 수 있는 고급 설정을 포함 합니다.  
+`Unprocessed` | ***무시*** | Unity `.dll` 및 `.pdb` 파일이 포함 되어 있습니다.  
 
-## <a name="files"></a>파일  
+## <a name="files"></a>Files  
 
-`App.cs` | ***포함*** | UWP 응용 프로그램에 대 한 진입점 이 수정 되어 다른 소스 파일을 사용 하 여 확장  
-`Package.appxmanifest` | ***포함*** | 프로그램의 AppX에 대 한 앱 패키지 매니페스트 소스 파일  
-`project.json` | ***포함*** | NuGet 패키지를 설명 하 `*.csproj` 에 따라 달라 집니다  
-`ScrapyardPhoenix.csproj` | ***포함*** | UWP 빌드 대상을;에 대해 설명합니다. 프로그램 uwp 추가 종속성을 추가 하는 경우 프로젝트를이 `*.csproj` 파일에는 해당 정보가 포함 됩니다  
-`ScrapyardPhoenix.csproj.user` | ***무시*** | 로컬 사용자 정보를 포함 하는이 파일
+`App.cs` | ***포함*** UWP 응용 프로그램에 대 한 진입점입니다. 다른 소스 파일을 사용 하 여 수정 하 고 확장할 수 있습니다.  
+`Package.appxmanifest` | ***포함*** 응용 프로그램 패키지 매니페스트 소스 파일 (msix 또는 .appx 패키지)  
+`project.json` | ***포함*** `*.csproj` 종속 된 NuGet 패키지에 대해 설명 합니다.  
+`ScrapyardPhoenix.csproj` | ***포함*** UWP 빌드 대상을 설명 합니다. UWP 프로젝트에 추가 종속성을 추가 하는 경우이 `*.csproj` 파일에는 해당 정보가 포함 됩니다.  
+`ScrapyardPhoenix.csproj.user` | ***무시*** | 이 파일에는 로컬 사용자 정보가 포함 되어 있습니다.
 
 ## <a name="resulting-gitignore"></a>결과 .gitignore
 
@@ -101,4 +101,4 @@ UWP 폴더 버전 관리의 일부 추가 예는 [이러한 예제](https://bitb
 
 ## <a name="see-also"></a>참고 항목
 - [기존 게임을 Xbox로 가져오기](development-lanes-landing.md)
-- [Xbox One에서 UWP](index.md)
+- [Xbox One의 UWP](index.md)

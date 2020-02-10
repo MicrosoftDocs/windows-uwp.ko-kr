@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ab5b2ec13e0de3d234fafc6c1a32e10d35aed4f
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 9de761a0b127d7218c7dc2bb4c6862626b7c60e4
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681944"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089429"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
 
@@ -22,7 +22,7 @@ ms.locfileid: "75681944"
 
 인증 테스트 동안 앱을 모니터하여 크래시가 발생하거나 작동이 중단되는 경우를 기록합니다.
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 앱이 응답하지 않거나 크래시가 발생하면 사용자 데이터가 손실되고 성능이 저하될 수 있습니다.
 
@@ -54,7 +54,7 @@ Windows 앱 인증 키트에서 [**IApplicationActivationManager::ActivateApplic
 
 Windows 앱이 OS의 이후 버전에서 실행할 수 있는지 확인합니다. 이 테스트는 기존에 데스크톱 앱 워크플로에만 적용되었지만 이제는 스토어 및 유니버설 Windows 플랫폼(UWP) 워크플로에 사용할 수 있습니다.
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 운영 체제 버전 정보에 Microsoft Store의 사용이 제한 되어 있습니다. 이 정보는 종종 앱에서 앱 OS 버전과 관련된 기능을 사용자에게 제공할 수 있도록 OS 버전을 확인하는 데 잘못 사용되었습니다.
 
@@ -62,7 +62,7 @@ Windows 앱이 OS의 이후 버전에서 실행할 수 있는지 확인합니다
 
 Windows 앱 인증 키트는 HighVersionLie를 사용하여 OS 버전 확인 방법을 검색합니다. 앱이 충돌 하는 경우 앱은 이 테스트에 실패합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>정정 작업
 
 앱은 버전 API 도우미 함수를 사용하여 이를 확인해야 합니다. 자세한 내용은 [운영 체제 버전](https://docs.microsoft.com/windows/desktop/SysInfo/operating-system-version)을 참조하세요.
 
@@ -70,7 +70,7 @@ Windows 앱 인증 키트는 HighVersionLie를 사용하여 OS 버전 확인 방
 
 선언된 백그라운드 작업에 대한 취소 처리기가 앱에 있는지 확인합니다. 작업이 취소될 때 호출되는 전용 함수가 있어야 합니다. 이 테스트는 배포된 앱에만 적용됩니다.
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 스토어 앱은 백그라운드에서 실행하는 프로세스를 등록할 수 있습니다. 예를 들어 메일 앱에서 서버로 때때로 ping할 수 있습니다. 그러나 이러한 리소스가 OS에 필요한 경우 백그라운드 작업을 취소하고 앱에서 이 취소를 적절하게 처리해야 합니다. 취소 처리기가 없는 앱의 경우 크래시가 발생하거나 사용자가 앱을 닫으려고 할 때 닫히지 않을 수 있습니다.
 
@@ -78,25 +78,25 @@ Windows 앱 인증 키트는 HighVersionLie를 사용하여 OS 버전 확인 방
 
 앱이 시작되고, 일시 중단되며 앱의 백그라운드가 아닌 부분이 종료됩니다. 그런 다음 이 앱과 연결된 백그라운드 작업이 취소됩니다. 앱의 상태가 확인되며, 앱이 계속 실행 중인 경우 이 테스트에 실패 합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>정정 작업
 
 앱에 취소 처리기를 추가합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](https://docs.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks)을 참조하세요.
 
 ## <a name="app-count"></a>앱 개수
 
-이 앱 패키지(APPX, 앱 번들)에 응용 프로그램이 하나 포함되어 있는지 확인합니다. 키트에서 독립 실행형 테스트가 되도록 이 검사가 변경되었습니다.
+그러면 앱 패키지 (. msix, .appx 또는 app 번들)에 응용 프로그램이 하나씩 포함 되어 있는지 확인 됩니다. 키트에서 독립 실행형 테스트가 되도록 이 검사가 변경되었습니다.
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 이 테스트는 스토어 정책에 따라 구현되었습니다.
 
 ### <a name="test-details"></a>테스트 정보
 
-Windows Phone 8.1 앱의 경우 테스트는 번들에 포함된 총 appx 패키지 수가 512개 미만(&lt; 512)이고, 번들에 기본 패키지가 하나만 있으며, 번들에 포함된 기본 패키지의 아키텍처가 ARM 또는 중립으로 표시되는지 확인합니다.
+Windows Phone 8.1 앱의 경우 테스트는 번들에 있는 .appx 패키지의 총 수가 512 &lt;를 확인 하 고 번들에는 주 패키지가 하나 뿐 이며 번들의 주 패키지 아키텍처가 ARM 또는 중립으로 표시 되어 있는지 확인 합니다.
 
 Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 설정되었는지 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>정정 작업
 
 테스트 정보에서 앱 패키지 및 번들이 위의 요구 사항을 충족하는지 확인합니다.
 
@@ -104,7 +104,7 @@ Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 
 
 앱 매니페스트의 내용을 테스트하여 내용이 올바른지 확인합니다.
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 앱의 매니페스트가 형식이 올발라야 합니다.
 
@@ -126,13 +126,13 @@ Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 
 
     이 테스트는 UWP 앱이 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신 하지 않도록 요구 하는 요구 사항을 적용 합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. "DesktopApplicationPath"와 동일한 이름으로 [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute)를 지정하는 앱은 이 테스트에 실패합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>정정 작업
 
 앱의 매니페스트가 [앱 패키지 요구 사항](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)에 설명된 요구 사항에 맞는지 검토합니다.
 
 ## <a name="windows-security-features-test"></a>Windows 보안 기능 테스트
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 기본 Windows 보안 보호 기능을 변경하면 고객이 더 큰 위험에 노출될 수 있습니다.
 
@@ -145,7 +145,7 @@ Binscope 이진 분석기 테스트는 앱의 이진 파일을 검사하여 앱�
 BinScope 이진 분석기 테스트는 다음과 같은 보안 관련 기능이 올바로 사용되는지 확인합니다.
 
 -   BinScope 이진 분석기 테스트
--   전용 코드 서명
+-   프라이빗 코드 서명
 
 ### <a name="binscope-binary-analyzer-tests"></a>BinScope 이진 분석기 테스트
 
@@ -282,17 +282,17 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 *페이지\-크기* 는 실행 파일에 대 한 기본 *섹션 맞춤* 입니다.
 
-### <a name="private-code-signing"></a>전용 코드 서명
+### <a name="private-code-signing"></a>프라이빗 코드 서명
 
-앱 패키지 내에 전용 코드 서명 이진이 있는지 테스트합니다.
+앱 패키지 내에 프라이빗 코드 서명 이진이 있는지 테스트합니다.
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
-전용 코드 서명 파일은 손상될 경우 악의적인 용도로 사용될 수 있으므로 비공개로 보관해야 합니다.
+프라이빗 코드 서명 파일은 손상될 경우 악의적인 용도로 사용될 수 있으므로 프라이빗으로 보관해야 합니다.
 
 ### <a name="test-details"></a>테스트 정보
 
-앱 패키지 내에서 .pfx 또는 .snk 확장명을 사용하며 개인 서명 키가 포함되었음을 나타내는 파일을 테스트합니다.
+앱 패키지 내에서 .pfx 또는 .snk 확장명을 사용하며 프라이빗 서명 키가 포함되었음을 나타내는 파일을 테스트합니다.
 
 ### <a name="corrective-actions"></a>수정 작업
 
@@ -302,7 +302,7 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 앱에서 비규격 API를 사용하는지 테스트합니다.
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 앱은 UWP 앱 용 Api (Windows 런타임 또는 지원 되는 Win32 Api)를 사용 하 여 Microsoft Store에 대 한 인증을 받아야 합니다. 이 테스트는 관리되는 이진 파일이 승인된 프로필 외부의 기능에 종속하는 경우도 식별합니다.
 
@@ -335,7 +335,7 @@ JavaScript 실행 시간을 가속화하기 위한 성능 최적화로서, .js �
 
 앱 배포를 검사하여 모든 .js 파일이 바이트코드로 변환되었는지 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>정정 작업
 
 이 테스트가 실패할 경우 문제를 해결할 때 다음을 고려하세요.
 
@@ -352,7 +352,7 @@ JavaScript 실행 시간을 가속화하기 위한 성능 최적화로서, .js �
 
 WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>정정 작업
 
 앱 JavaScript에서 WinJS.Binding.optimizeBindingReferences를 **true**로 설정합니다.
 
@@ -366,7 +366,7 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 
 앱 매니페스트에 정의된 리소스를 검사하여 리소스가 있고 유효한지 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>정정 작업
 
 다음 표의 지침을 따르세요.
 
@@ -495,7 +495,7 @@ UWP 앱은 완전 한 기능을 갖춘 것으로 예상 됩니다. 템플릿 또
 
 앱을 테스트하여 디버그 빌드가 아닌지 확인합니다.
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 Microsoft Store에 대 한 인증을 받기 위해 응용 프로그램은 디버그에 대해 컴파일되지 않으며 실행 파일의 디버그 버전을 참조 하지 않아야 합니다. 또한 앱에서 이 테스트를 통과하려면 최적화된 상태로 코드를 빌드해야 합니다.
 
@@ -513,7 +513,7 @@ Microsoft Store에 대 한 인증을 받기 위해 응용 프로그램은 디버
 
 ### <a name="utf-8-file-encoding"></a>UTF-8 파일 인코딩
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 바이트코드 캐싱의 장점을 이용하고 다른 런타임 오류 조건을 방지하려면 HTML, CSS 및 JavaScript 파일은 해당 BOM(바이트 순서 표시)을 사용하여 UTF-8 형식으로 인코딩해야 합니다.
 
@@ -521,7 +521,7 @@ Microsoft Store에 대 한 인증을 받기 위해 응용 프로그램은 디버
 
 앱 패키지의 내용을 테스트하여 올바른 파일 인코딩을 사용하는지 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>정정 작업
 
 영향을 받은 파일을 열고 Visual Studio의 **파일** 메뉴에서 **다른 이름으로 저장**을 선택합니다. **저장** 단추 옆에 있는 드롭다운 컨트롤을 선택하고 **Save with Encoding**을 선택합니다. **고급** 저장 옵션 대화 상자에서 유니코드(서명 있는 UTF-8) 옵션을 선택하고 **확인**을 클릭합니다.
 
@@ -531,7 +531,7 @@ Microsoft Store에 대 한 인증을 받기 위해 응용 프로그램은 디버
 
 Microsoft Direct3D 앱을 테스트하여 이전 그래픽 하드웨어가 있는 디바이스에서 작동이 중단되지 않는지 확인합니다.
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 Microsoft Store를 사용 하려면 Direct3D를 사용 하는 모든 응용 프로그램이 기능 수준 9\-1 그래픽 카드에서 제대로 렌더링 되거나 정상적으로 작동 하지 않아야 합니다.
 
@@ -541,7 +541,7 @@ Microsoft Store를 사용 하려면 Direct3D를 사용 하는 모든 응용 프�
 
 앱이 기능 수준 9\-1에서 정확 하 게 렌더링 되는 경우 테스트는 유효성을 검사 합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>정정 작업
 
 앱이 더 높은 기능 수준에서 실행 될 것으로 예측 하는 경우에도 Direct3D 기능 수준 9\-1에서 올바르게 렌더링 되는지 확인 합니다. 자세한 내용은 [각 Direct3D 기능 수준에 대한 개발](https://msdn.microsoft.com/library/windows/apps/hh994923.aspx)을 참조하세요.
 
@@ -549,7 +549,7 @@ Microsoft Store를 사용 하려면 Direct3D를 사용 하는 모든 응용 프�
 
 > **참고**  이 테스트는 Windows 8.1 이상에 대해 개발 된 UWP 앱에만 적용 됩니다.
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 앱이 Direct3D 디바이스에서 [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim)을 호출하지 않는 경우 앱은 이전 3D 작업에 할당된 메모리를 해제하지 않습니다. 이 경우 시스템 메모리 부족으로 인해 앱이 종료될 가능성이 커집니다.
 
@@ -557,15 +557,15 @@ Microsoft Store를 사용 하려면 Direct3D를 사용 하는 모든 응용 프�
 
 앱이 d3d 요구 사항을 준수하는지 검사하고 앱이 일시 중단 콜백에서 새 [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) API를 호출하는지 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>정정 작업
 
-앱이 일시 중단될 때마다 해당 [**IDXGIDevice3**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgidevice3) 인터페이스에서 [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) API를 호출해야 합니다.
+앱이 일시 중단될 때마다 해당 [**IDXGIDevice3**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) 인터페이스에서 [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgidevice3) API를 호출해야 합니다.
 
 ## <a name="app-capabilities-test"></a>앱 접근 권한 값 테스트
 
 ### <a name="special-use-capabilities"></a>특수 사용 접근 권한 값
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 특수 사용 접근 권한 값은 특정 시나리오를 위한 것입니다. 회사 계정만 이러한 접근 권한 값을 사용할 수 있습니다.
 
@@ -585,7 +585,7 @@ Microsoft Store를 사용 하려면 Direct3D를 사용 하는 모든 응용 프�
 
 ## <a name="windows-runtime-metadata-validation"></a>Windows 런타임 메타데이터 유효성 검사
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 앱에 포함된 구성 요소가 UWP 형식 시스템을 준수하는지 확인합니다.
 
@@ -608,7 +608,7 @@ Microsoft Store를 사용 하려면 Direct3D를 사용 하는 모든 응용 프�
 
 혼합된 이진 파일을 설치하는 앱은 사용자 프로세서 아키텍처에 따라 크래시가 발생하거나 올바르게 실행되지 않을 수 있습니다.
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 이 테스트는 앱 패키지의 바이너리에서 아키텍처 충돌을 확인합니다. 앱 패키지는 매니페스트에 지정된 프로세서 아키텍처에 사용할 수 없는 바이너리를 포함하면 안 됩니다. 지원되지 않는 바이너리를 포함하면 앱 크래시가 발생하거나 불필요하게 앱 패키지 크기가 늘어날 수 있습니다.
 
@@ -616,7 +616,7 @@ Microsoft Store를 사용 하려면 Direct3D를 사용 하는 모든 응용 프�
 
 앱 패키지 매니페스트 프로세서 아키텍처 선언과 상호 참조될 때 PE 헤더에서 각 파일의 "비트 수"가 적절한지 확인합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>정정 작업
 
 앱 패키지가 앱 매니페스트에 지정된 아키텍처에서 지원되는 파일만 포함하고 있는지 확인하려면 다음 지침을 따르세요.
 
@@ -624,7 +624,7 @@ Microsoft Store를 사용 하려면 Direct3D를 사용 하는 모든 응용 프�
 
 -   앱의 대상 프로세서 아키텍처가 x86 프로세서 종류인 경우 앱 패키지는 x86 바이너리나 이미지 형식 파일만 포함해야 합니다. x64 또는 ARM 바이너리나 이미지 형식이 포함된 패키지는 테스트에 실패합니다.
 
--   앱의 대상 프로세서 아키텍처가 x64 프로세서 종류인 경우 앱 패키지는 x64 바이너리나 이미지 형식 파일을 포함해야 합니다. 이 경우에는 패키지에 x86 파일도 포함할 수 있지만, 기본 앱 환경은 x64 바이너리를 이용해야 합니다.
+-   앱의 대상 프로세서 아키텍처가 x64 프로세서 종류인 경우 앱 패키지는 x64 바이너리나 이미지 형식 파일을 포함해야 합니다. 이 경우에는 패키지가 x86 파일도 포함할 수 있지만, 기본 앱 환경은 x64 바이너리를 이용해야 합니다.
 
     하지만 패키지에 ARM 바이너리나 이미지 형식 파일이 포함되었거나 x86 바이너리나 이미지 형식 파일만 포함된 경우 테스트에 실패합니다.
 
@@ -634,7 +634,7 @@ Microsoft Store를 사용 하려면 Direct3D를 사용 하는 모든 응용 프�
 
 응용 프로그램에서 최대\-경로 보다 긴 설치의 일부로 하위 디렉터리를 만들지 않았는지 확인 합니다.
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 OS 구성 요소 (Trident, WWAHost 등 포함)는 내부적으로 파일 시스템 경로에 대 한 최대\-경로로 제한 되며 긴 경로에 대해서는 제대로 작동 하지 않습니다.
 
@@ -642,7 +642,7 @@ OS 구성 요소 (Trident, WWAHost 등 포함)는 내부적으로 파일 시스�
 
 앱 설치 디렉터리 내의 경로가 최대\-경로를 초과 하지 않는지 확인 합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>정정 작업
 
 더 짧은 디렉터리 구조 및/또는 파일 이름을 사용합니다.
 
@@ -652,7 +652,7 @@ OS 구성 요소 (Trident, WWAHost 등 포함)는 내부적으로 파일 시스�
 
 WinJS 백그라운드 작업 테스트는 앱이 배터리를 소모하지 않도록 JavaScript 앱에 적절한 close 문이 있는지 확인합니다.
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
 JavaScript 백그라운드 작업이 포함된 앱은 백그라운드 작업의 마지막 문으로 Close()를 호출해야 합니다. 앱이 호출하지 않을 경우 시스템이 연결된 대기 상태로 돌아갈 수 없어 배터리가 고갈될 수 있습니다.
 
@@ -660,7 +660,7 @@ JavaScript 백그라운드 작업이 포함된 앱은 백그라운드 작업의 
 
 매니페스트에 지정된 백그라운드 작업 파일이 앱에 없을 경우 테스트를 통과합니다. 그렇지 않으면 테스트에서 앱 패키지에 지정된 JavaScript 백그라운드 작업 파일을 구문 분석하고 Close() 문을 찾습니다. Close() 문이 있으면 테스트를 통과하고, 그렇지 않으면 테스트에 실패합니다.
 
-### <a name="corrective-action"></a>수정 작업
+### <a name="corrective-action"></a>정정 작업
 
 Close()를 올바르게 호출하도록 백그라운드 JavaScript 코드를 업데이트합니다.
 

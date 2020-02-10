@@ -5,15 +5,15 @@ ms.topic: article
 ms.date: 06/27/2019
 ms.author: mcleans
 author: mcleanbyron
-keywords: windows 10, uwp, windows forms, wpf, xaml 제도
+keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: de84cbb2e1927d9426eefaaf7b0d70d604427da1
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 397c301564c0d4799c6b41db209da9659725103d
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683816"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089309"
 ---
 # <a name="tutorial-modernize-a-wpf-app"></a>자습서: WPF 앱 현대화 
 
@@ -51,7 +51,7 @@ Contoso는 직원 들이 비용 보고서를 보다 효율적으로 만들 수 �
 * 적응 카드와 Windows 10 알림을 앱에 통합 합니다.
 * MSIX으로 앱을 패키지 하 고 Azure DevOps에서 CI/CD 파이프라인을 설정 하 여 새 버전의 앱을 사용할 수 있는 즉시 테스터 및 사용자에 게 자동으로 제공할 수 있도록 합니다.
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 조건
 
 이 자습서를 수행 하려면 개발 컴퓨터에 다음과 같은 필수 구성 요소가 설치 되어 있어야 합니다.
 
@@ -74,7 +74,7 @@ Visual Studio 2019을 사용 하 여 다음 작업 및 선택적 기능을 설�
 3. Visual Studio 2019를 열고 **C:\WinAppsModernizationWorkshop\Lab\Exercise1\01-Start\ContosoExpenses\ContosoExpenses.sln** 파일을 두 번 클릭 하 여 솔루션을 엽니다.
 4. **시작** 단추 또는 CTRL + F5 키를 눌러 CONTOSO 지출 WPF 프로젝트를 빌드, 실행 및 디버그할 수 있는지 확인 합니다.
 
-## <a name="get-started"></a>시작하기
+## <a name="get-started"></a>시작
 
 Contoso 지출 샘플 앱에 대 한 소스 코드를 만든 후 Visual Studio에서 빌드할 수 있는지 확인할 수 있습니다. 자습서를 시작할 준비가 되었습니다.
 
@@ -98,7 +98,7 @@ Windows 10에서 Microsoft는 [유니버설 Windows 플랫폼 (UWP)](/windows/uw
 
 ### <a name="msix-packaging"></a>MSIX 패키징
 
-[Msix](/windows/msix/) (이전의 AppX)은 Windows 앱에 대 한 최신 패키징 모델입니다. MSIX은 UWP 앱 뿐만 아니라 Win32, WPF, Windows Forms, Java, 전자 등과 같은 기술을 사용 하 여 빌드하는 데스크톱 앱을 지원 합니다. MSIX 패키지에서 데스크톱 앱을 패키지 하는 경우 Microsoft Store에 앱을 게시할 수 있습니다. 데스크톱 앱은 패키지 id가 설치 된 경우에도 패키지 id를 가져올 수 있습니다. 그러면 데스크톱 앱에서 광범위 한 WinRT Api 집합을 사용할 수 있습니다.
+[Msix](/windows/msix/) 은 Windows 앱에 대 한 최신 패키징 모델입니다. MSIX은 UWP 앱 뿐만 아니라 Win32, WPF, Windows Forms, Java, 전자 등과 같은 기술을 사용 하 여 빌드하는 데스크톱 앱을 지원 합니다. MSIX 패키지에서 데스크톱 앱을 패키지 하는 경우 Microsoft Store에 앱을 게시할 수 있습니다. 데스크톱 앱은 패키지 id가 설치 된 경우에도 패키지 id를 가져올 수 있습니다. 그러면 데스크톱 앱에서 광범위 한 WinRT Api 집합을 사용할 수 있습니다.
 
 자세한 내용은 다음 문서를 참조하세요.
 
