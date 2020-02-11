@@ -6,12 +6,12 @@ ms.date: 01/16/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a95529f40ef5bb1cbf112c91c385e6621620a01
-ms.sourcegitcommit: 7a8aea567b26283c71420e0d305d78f675e1fba7
+ms.openlocfilehash: 7e17b155966c609537c40050edc4c11ee6935b0d
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76125688"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089469"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -88,7 +88,7 @@ Windows UI Library는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 
 
 ### <a name="msix-deployment"></a>MSIX 배포
 
-MSIX는 MSI, AppX, App-V 및 ClickOnce의 최고의 기능을 결합하여 모든 Windows 앱에 현대적이고 안정적인 패키징 환경을 제공하는 Windows 앱 패키지 형식입니다. MSIX 패키지 형식은 Win32, WPF 및 Windows Forms 앱에 최신 패키지 및 배포 기능을 사용할 수 있도록 하며, 기존 앱 패키지와 설치 파일의 기능도 유지합니다. 
+MSIX는 MSI, .appx, App-V 및 ClickOnce의 최고의 기능을 결합하여 모든 Windows 앱에 현대적이고 안정적인 패키징 환경을 제공하는 Windows 앱 패키지 형식입니다. MSIX 패키지 형식은 Win32, WPF 및 Windows Forms 앱에 최신 패키지 및 배포 기능을 사용할 수 있도록 하며, 기존 앱 패키지와 설치 파일의 기능도 유지합니다. 
 
 ![MSIX 아이콘](images/MSIX-App-Package.ico)
 
@@ -155,7 +155,7 @@ MSIX 패키지를 사용하여 조직의 사용자에게 앱을 배포할 수 �
 
 | 항목 | 설명 |
 |-------|-------------|
-| [MSIX 설명서](https://docs.microsoft.com/windows/msix/) | MSIX는 MSI, AppX, App-V 및 ClickOnce의 최고의 기능을 결합하여 현대적이고 안정적인 패키징 환경을 제공하는 Windows 앱 패키지 형식입니다. |
+| [MSIX 설명서](https://docs.microsoft.com/windows/msix/) | MSIX는 MSI, .appx, App-V 및 ClickOnce의 최고의 기능을 결합하여 현대적이고 안정적인 패키징 환경을 제공하는 Windows 앱 패키지 형식입니다. |
 | [엔터프라이즈에 LOB 앱 배포](https://docs.microsoft.com/windows/uwp/publish/distribute-lob-apps-to-enterprises) | 앱 설치 관리자 기반 배포, Microsoft Endpoint Configuration Manager 및 Microsoft Intune, 비즈니스용 Microsoft Store에 게시를 비롯하여 앱을 공개적으로 사용할 수 없도록 하고 LOB(기간 업무) 앱을 배포하기 위한 옵션에 대해 알아봅니다. |
 | [앱 사이드로드](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) | 앱을 테스트용으로 로드할 때 서명된 앱 패키지를 디바이스에 배포합니다. 이러한 앱의 서명, 호스팅 및 배포를 유지 관리합니다. Windows 10에서는 앱을 테스트용으로 로드하는 프로세스가 간소화되었습니다.             |
 | [Microsoft Store에 앱 게시](https://developer.microsoft.com/store/publish-apps) | 통합 Microsoft Store를 사용하면 모든 Windows 디바이스용 앱을 모두 게시하고 관리할 수 있습니다. 시장별 가격 책정, 배포 및 가시성 제어, 기타 옵션을 사용하여 앱의 가용성을 사용자 지정하세요. |

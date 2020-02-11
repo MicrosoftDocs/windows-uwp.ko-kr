@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 67ba9f5c9bc4a5e723eb2696d88804df5300eda0
-ms.sourcegitcommit: 4aef8c01ba9321401d5729a1ec6d46452ee76faf
+ms.openlocfilehash: d5014532be613e8284a1e2d6496f71b9f2b8e892
+ms.sourcegitcommit: 5002836b3c8d3e0f2970da1333ec8f42da861ae3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468991"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77071255"
 ---
 # <a name="dialog-controls"></a>대화 상자 컨트롤
 
@@ -282,11 +282,11 @@ private async void DisplayNoWifiDialog()
 > [!WARNING]
 > 한 번에 스레드당 하나의 ContentDialog만 열어 둘 수 있습니다. 두 ContentDialog를 열려는 하면 별도의 AppWindow에서 열려고 하더라도 예외가 throw됩니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 - [도구 설명](../tooltips.md)
 - [메뉴 및 상황에 맞는 메뉴](../menus.md)
 - [Flyout 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이동, 전달, 값 범주, 이동 의미 체계, 완벽한 전달, lvalue, rvalue, glvalue, prvalue, xvalue
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a11d7763c33df6733a8dbf78392d27417e7cf18d
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: 1312b84ded26859cd4b83ffbe3e8a75bfdef6950
+ms.sourcegitcommit: 20ee991a1cf87ef03c158cd3f38030c7d0e483fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270214"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77037883"
 ---
 # <a name="value-categories-and-references-to-them"></a>값 범주 및 해당 참조
 이 토픽에서는 C++에 존재하는 다양한 값 범주(및 값 참조)에 대해 설명합니다. 거의 모든 분들이 *lvalue* 및 *rvalue*에 대해 들어보셨겠지만, 이 토픽의 주제와 관련 지어 생각해 본 적은 없을 것입니다. 그리고 그 외에도 다른 값이 더 있습니다.
@@ -58,7 +58,7 @@ int main()
 lvalue를 이동할 수 없습니다. 하지만 이동할 수 있는 glvalue(ID가 있는 것들의 세트)라는 값이 *있습니다*. 값을 이동한 후에는 액세스하지 않도록 주의해야 한다는 점을 포함하여 충분한 이해가 있다면 사용할 수 있는 xvalue도 있습니다. 아래에서 값 범주의 전체 그림을 살펴볼 때 이 개념을 다시 한 번 검토하겠습니다.
 
 ## <a name="rvalue-references-and-reference-binding-rules"></a>Rvalue 참조 및 참조 바인딩 규칙
-이 섹션에서는 rvalue에 대한 참조의 구문을 소개합니다. 다른 토픽에서 값의 이동과 전달에 대해 자세히 알아보겠지만, rvalue 참조로 해결되는 문제입니다. rvalue 참조를 살펴보기 전에, 우리가 이전에 "참조"라고 부르던 `T&`&mdash;에 대해 정확하게 이해해야 합니다. 이것은 진정한 "lvalue(비 const) 참조"이며, 참조의 사용자가 쓸 수 있는 값을 의미합니다.
+이 섹션에서는 rvalue에 대한 참조의 구문을 소개합니다. 다른 토픽에서 값의 이동과 전달에 대해 자세히 알아보겠지만, rvalue 참조는 그러한 문제 해결의 필수적인 부분이라고만 말해두면 충분합니다. rvalue 참조를 살펴보기 전에, 우리가 이전에 "참조"라고 부르던 `T&`&mdash;에 대해 정확하게 이해해야 합니다. 이것은 진정한 "lvalue(비 const) 참조"이며, 참조의 사용자가 쓸 수 있는 값을 의미합니다.
 
 ```cppwinrt
 template<typename T> T& get_by_lvalue_ref() { ... } // Get by lvalue (non-const) reference.

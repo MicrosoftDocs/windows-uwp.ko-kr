@@ -6,19 +6,19 @@ ms.date: 07/22/2019
 ms.topic: article
 keywords: windows 10, uwp, 패키징
 ms.localizationpriority: medium
-ms.openlocfilehash: d067511e4ceb5aaf072aabf8f74ccf186a7787dc
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.openlocfilehash: bb772007cd5c4391634f9df6ba0b6d2037a7b5de
+ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682667"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77089479"
 ---
 # <a name="packaging-apps"></a>앱 패키징
 
-이 섹션에는 UWP(유니버설 Windows 플랫폼) 앱을 배포하고 설치할 수 있도록 MSIX 및 AppX 앱 패키지에 패키징하는 방법에 대한 문서 링크가 포함되어 있습니다. 일부 링크는 [MSIX 설명서](https://docs.microsoft.com/windows/msix/)의 관련 문서로 이동합니다.
+이 섹션에는 UWP(유니버설 Windows 플랫폼) 앱을 배포하고 설치할 수 있도록 MSIX 및 .appx 앱 패키지에 패키징하는 방법에 대한 문서 링크가 포함되어 있습니다. 일부 링크는 [MSIX 설명서](https://docs.microsoft.com/windows/msix/)의 관련 문서로 이동합니다.
 
 > [!NOTE]
-> Windows 10에서 UWP 앱의 원래 앱 패키징 형식을 AppX로 불렀습니다. Windows 10 버전 1809부터 이 패키징 형식의 이름이 MSIX로 바뀌었으며 .NET 및 C++/Win32 데스크톱 앱을 비롯한 모든 유형의 Windows 앱을 지원하도록 확장되었습니다. MSIX 지원도 Windows 이전 버전으로 확장 중입니다. 자세한 내용은 [MSIX 설명서](https://docs.microsoft.com/windows/msix/)를 참조하세요.
+> Windows 10에서 UWP 앱의 원래 앱 패키징 형식은 .appx였습니다. Windows 10 버전 1809부터 이 패키징 형식의 이름이 .msix로 바뀌었으며 .NET 및 C++/Win32 데스크톱 앱을 비롯한 모든 유형의 Windows 앱을 지원하도록 확장되었습니다. MSIX 지원도 Windows 이전 버전으로 확장 중입니다. 자세한 내용은 [MSIX 설명서](https://docs.microsoft.com/windows/msix/)를 참조하세요.
 
 | 항목 | 설명 |
 |-------|-------------|
