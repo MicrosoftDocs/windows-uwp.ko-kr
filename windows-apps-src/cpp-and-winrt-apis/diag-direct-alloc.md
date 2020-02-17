@@ -14,9 +14,9 @@ ms.locfileid: "68372794"
 ---
 # <a name="diagnosing-direct-allocations"></a>직접 할당 진단
 
-[C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)에서 설명한 대로 구현 형식의 개체를 만드는 경우 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 도우미 패밀리를 사용하여 이 작업을 수행해야 합니다. 이 항목에서는 구현 형식의 개체를 스택에 직접 할당하는 실수를 진단하는 데 도움이 되는 C++/WinRT 2.0 기능에 대해 자세히 설명합니다.
+[C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)에서 설명한 대로 구현 형식의 개체를 만드는 경우 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 도우미 제품군을 사용하여 이 작업을 수행해야 합니다. 이 항목에서는 구현 형식의 개체를 스택에 직접 할당하는 실수를 진단하는 데 도움이 되는 C++/WinRT 2.0 기능에 대해 자세히 설명합니다.
 
-이러한 실수는 디버깅하기가 어렵고 시간이 많이 걸리는 알 수 없는 크래시 또는 손상으로 변할 수 있습니다. 따라서 이는 중요한 특징이며, 배경 지식을 이해할 가치가 있습니다.
+이러한 실수는 디버깅하기가 어렵고 시간이 많이 걸리는 알 수 없는 크래시 또는 손상을 초래할 수 있습니다. 따라서 C++/WinRT 2.0 기능은 매우 중요하며, 이에 대한 배경 지식을 이해할 필요가 있습니다.
 
 ## <a name="setting-the-scene-with-mystringable"></a>**MyStringable**을 사용하여 장면 설정
 
@@ -46,7 +46,7 @@ void Print(IStringable const& stringable)
 > [!IMPORTANT]
 > *구현 형식*과 *프로젝션된 형식*의 구분을 이해해야 중요합니다. 필수 개념 및 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md) 및 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
-구현과 프로젝션 사이의 공간을 이해하기가 미묘할 수 있습니다. 그리고 실제로 구현이 프로젝션과 좀 더 비슷하게 느낄 수 있도록 하기 위해 구현은 구현하는 각 프로젝션된 형식에 대한 암시적 변환을 제공합니다. 그렇다고 해서 이렇게 간단히 수행할 수 있는 것은 아닙니다.
+구현과 프로젝션 간의 차이가 모호할 수도 있습니다. 그리고 실제로 구현이 프로젝션과 좀 더 비슷하게 느낄 수 있도록 하기 위해 구현은 구현하는 각 프로젝션된 형식에 대한 암시적 변환을 제공합니다. 그렇다고 해서 이렇게 간단히 수행할 수 있는 것은 아닙니다.
 
 ```cppwinrt
 struct MyStringable : implements<MyStringable, IStringable>
@@ -86,7 +86,7 @@ IStringable MakeStringable()
 }
 ```
 
-심지어 무해한 다음 명령문도 마찬가지입니다.
+언뜻 보기에도 무해한 이 명령문도 함께 확인해 볼까요.
 
 ```cppwinrt
 IStringable stringable{ MyStringable() }; // Also incorrect.
@@ -112,7 +112,7 @@ auto stringable{ std::make_shared<MyStringable>(); } // Also very inadvisable.
 auto stringable{ std::make_unique<MyStringable>() }; // Highly dubious.
 ```
 
-여기에는 의심의 여지가 다시 있습니다. 고유한 소유권이 **MyStringable**의 내장 참조 수에 대한 공유 수명과 반대입니다.
+다시 한 번 의문이 드는 시점입니다. 고유한 소유권이 **MyStringable**의 내장 참조 수에 대한 공유 수명과 반대입니다.
 
 ## <a name="the-solution-with-cwinrt-20"></a>C++/WinRT 2.0을 사용하는 솔루션
 
@@ -128,9 +128,9 @@ C++/WinRT 2.0을 사용하면 구현 형식을 직접 할당하려는 이러한 
 
 셋째, 구현에서 가상 함수를 `final`로 표시할 수 없습니다. 물론 C++/WinRT는 구현에 관한 모든 것이 가상화되는 경향이 있는 WRL과 같은 클래식 COM 및 구현과는 매우 다릅니다. C++/WinRT에서 가상 디스패치는 ABI(애플리케이션 이진 인터페이스)(항상 `final`)로 제한되며, 구현 메서드는 컴파일 시간 또는 정적 다형성을 사용합니다. 이렇게 하면 불필요한 런타임 다형성을 방지하고, C++/WinRT 구현에서 가상 함수를 사용할 이유도 거의 없습니다. 이는 매우 좋은 방법이고, 훨씬 더 예측 가능한 인라인으로 이어집니다.
 
-넷째, **winrt::make**는 파생 클래스를 삽입하므로 구현에는 프라이빗 소멸자가 있을 수 없습니다. 모든 것이 가상이고 일반적으로 원시 포인터를 직접 처리했으며 이에 따라 실수로 [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 대신 `delete`를 호출하는 것이 쉬웠으므로 프라이빗 소멸자는 클래식 COM 구현에서 인기가 높았습니다. C++/WinRT에서는 원시 포인터를 직접 처리하기가 어렵습니다. 그리고 C++/WinRT에서 잠재적으로 `delete`를 호출할 수 있는 원시 포인터를 가져오도록 *실제로* 노력해야 합니다. 값 의미 체계는 값과 참조를 처리한다는 것을 의미하며 포인터를 사용하는 경우는 거의 없습니다.
+넷째, **winrt::make**는 파생 클래스를 삽입하므로 구현에는 프라이빗 소멸자가 있을 수 없습니다. 모든 것이 가상이고 일반적으로 원시 포인터를 직접 처리했으며 이에 따라 실수로 [**Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 대신 `delete`를 호출하는 것이 쉬웠으므로 프라이빗 소멸자는 클래식 COM 구현에서 인기가 높았습니다. C++/WinRT에서는 원시 포인터를 직접 처리하기가 어렵습니다. 그리고 C++/WinRT에서 잠재적으로 `delete`를 호출할 수 있는 원시 포인터를 가져오도록 *상당히 많은 노력*을 기울여야 합니다. 값 의미 체계는 값과 참조를 처리한다는 것을 의미하며 포인터를 사용하는 경우는 거의 없습니다.
 
-따라서 C++/WinRT는 클래식 COM 코드를 작성하는 것이 무엇을 의미하는지에 대한 선입견에 도전합니다. 그리고 WinRT는 클래식 COM이 아니므로 완벽하게 합리적입니다. 클래식 COM은 Windows 런타임의 어셈블리 언어이며, 매일 작성하는 코드가 아니어야 합니다. 대신, C++/WinRT를 통해 최신 C++와 매우 비슷하고 클래식 COM보다 훨씬 덜 복잡한 코드를 작성할 수 있습니다.
+따라서 C++/WinRT는 클래식 COM 코드 작성 개념에 대한 기존의 선입견을 깨뜨립니다. 그리고 WinRT는 클래식 COM이 아니므로 완벽하게 합리적입니다. 클래식 COM은 Windows 런타임의 어셈블리 언어이며, 매일 작성하는 코드가 아니어야 합니다. 대신, C++/WinRT를 통해 최신 C++와 매우 비슷하고 클래식 COM보다 훨씬 덜 복잡한 코드를 작성할 수 있습니다.
 
 ## <a name="important-apis"></a>중요 API
 * [winrt::make 함수 템플릿](/uwp/cpp-ref-for-winrt/make)
