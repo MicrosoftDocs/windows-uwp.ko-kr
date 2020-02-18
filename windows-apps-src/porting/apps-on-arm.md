@@ -20,7 +20,7 @@ ms.locfileid: "76726006"
 ## <a name="apps-and-experiences-on-arm"></a>ARM 기반 앱 및 환경
 
 ### <a name="built-in-windows-10-experiences-apps-and-drivers"></a>기본 제공 Windows 10 환경, 앱 및 드라이버
-Edge, Cortana, 시작 메뉴 및 탐색기와 같은 기본 제공 Windows 10 환경은 모두 기본 제공 되 고 ARM64로 실행 됩니다. 여기에는 그래픽, 네트워킹, 하드 디스크 등의 모든 장치 드라이버도 포함 됩니다. 이렇게 하면 Qualcomm Snapdragon 프로세서의 전체 기본 속도로 실행 되는 장치에서 최적의 사용자 환경 및 배터리 수명을 얻을 수 있습니다.
+Microsoft Edge, Cortana, 시작 메뉴 및 탐색기와 같은 기본 제공 Windows 10 환경은 모두 기본 제공 되 고 ARM64로 실행 됩니다. 여기에는 그래픽, 네트워킹, 하드 디스크 등의 모든 장치 드라이버도 포함 됩니다. 이렇게 하면 Qualcomm Snapdragon 프로세서의 전체 기본 속도로 실행 되는 장치에서 최적의 사용자 환경 및 배터리 수명을 얻을 수 있습니다.
 
 ### <a name="universal-windows-platform-uwp-apps"></a>UWP(유니버설 Windows 플랫폼) 앱
 ARM의 Windows 10은 Microsoft Store에서 모든 x86, ARM32 및 ARM64 [UWP 앱](../get-started/universal-application-platform-guide.md) 을 실행 합니다. ARM32 및 ARM64 앱은 에뮬레이션 없이 기본적으로 실행 되지만 x86 앱은 에뮬레이션 하에서 실행 됩니다. UWP 개발자인 경우 이 디바이스에 대한 최적의 사용자 환경을 제공하므로 앱에 대한 ARM 패키지를 제출할 수 있는지 확인하십시오. 자세한 내용은 [앱 패키지 아키텍처](/windows/msix/package/device-architecture)를 참조하세요.
