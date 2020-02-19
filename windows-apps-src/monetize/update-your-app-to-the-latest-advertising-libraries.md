@@ -1,25 +1,28 @@
 ---
 description: 앱을 업데이트하여 지원되는 최신 Microsoft 광고 라이브러리를 사용하고 앱이 배너 광고를 계속 받도록 하는 방법을 알아봅니다.
 title: 배너 광고에 최신 광고 라이브러리 사용
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, AdMediatorControl, 마이그레이션
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
-ms.openlocfilehash: 74ac8499e673cacad897455c7065dd3386103406
-ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
+ms.openlocfilehash: a8ccc8e9c76fc0f16bcdfc619d8048307fdfbc57
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74735048"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463885"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>배너 광고용 최신 광고 라이브러리로 앱 업데이트
+
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
 
 2017년 4월 1일부터는 지원되지 않는 광고 SDK 릴리스를 사용하는 앱에 더 이상 배너 광고가 제공되지 않습니다. **AdControl**을 사용하여 유니버설 Windows 플랫폼(UWP) 앱에 배너 광고를 게시하는 경우 이 문서의 정보를 사용하여 지원되지 않는 광고 SDK를 사용하고 있지 않은지 확인하고, 지원되는 SDK로 앱을 마이그레이션하세요.
 
 ## <a name="overview"></a>개요
 
-배너 광고를 게시하는 UWP 앱은 [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)에 배포된 광고 라이브러리의**AdControl**을 사용해야 합니다. 이 SDK는 IAB(Interactive Advertising Bureau)의 [MRAID(Mobile Rich-media Ad Interface Definitions) 1.0 사양](https://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf)를 통해 HTML5 리치 미디어를 서비스하는 기능을 포함하여 최소한의 광고 기능을 지원합니다. 많은 광고주가 이러한 기능을 원하고 있으며, 이에 따라 Microsoft는 광고주들에게 앱 에코시스템을 더욱 매력적으로 어필하고 개발자에게 더 많은 수익을 안길 수 있도록 앱 개발자에게 이러한 SDK 릴리스 중 하나를 의무적으로 사용하도록 요구하고 있습니다.
+배너 광고를 게시하는 UWP 앱은 **Microsoft Advertising SDK**에 배포된 광고 라이브러리의[AdControl](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)을 사용해야 합니다. 이 SDK는 IAB(Interactive Advertising Bureau)의 [MRAID(Mobile Rich-media Ad Interface Definitions) 1.0 사양](https://www.iab.com/wp-content/uploads/2015/08/IAB_MRAID_VersionOne.pdf)를 통해 HTML5 리치 미디어를 서비스하는 기능을 포함하여 최소한의 광고 기능을 지원합니다. 많은 광고주가 이러한 기능을 원하고 있으며, 이에 따라 Microsoft는 광고주들에게 앱 에코시스템을 더욱 매력적으로 어필하고 개발자에게 더 많은 수익을 안길 수 있도록 앱 개발자에게 이러한 SDK 릴리스 중 하나를 의무적으로 사용하도록 요구하고 있습니다.
 
 이 SDK가 릴리스되기 전, 이전 버전의 광고 SDK 릴리스를 통해 **AdControl** 클래스를 여러 차례 제공했습니다. 이러한 기존 광고 SDK 릴리스는 위에서 설명한 최소 광고 기능을 지원하지 않기 때문에 더 이상 지원되지 않습니다. 2017년 4월 1일부터는 지원되지 않는 광고 SDK 릴리스를 사용하는 앱에 더 이상 배너 광고가 제공되지 않습니다. 여전히 지원되지 않는 광고 SDK 릴리스를 사용하는 앱은 다음과 같은 동작을 보입니다.
 
@@ -31,12 +34,12 @@ ms.locfileid: "74735048"
 
 * 두 개 이상의 앱에서 사용되는 광고 단위에도 더 이상 배너 광고가 제공되지 않습니다. 따라서 각 광고 단위를 한 앱에만 사용해야 합니다.
 
-**AdControl**을 사용하여 배너 광고를 표시하는 기존 앱(이미 Store에 있거나 아직 개발 중인 앱)이 있고 앱에서 어떤 광고 SDK가 사용되는지 잘 모르는 경우 이 문서의 지침을 따라 해당 앱을 지원되는 SDK로 업데이트해야 하는지 확인하세요. 문제가 발생하거나 지원이 필요할 경우 [고객 지원 센터에 문의](https://support.microsoft.com/getsupport/hostpage.aspx?locale=EN-US&supportregion=EN-US&ccfcode=US&ln=EN-US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=32136151)하세요.
+**AdControl**을 사용하여 배너 광고를 표시하는 기존 앱(이미 Store에 있거나 아직 개발 중인 앱)이 있고 앱에서 어떤 광고 SDK가 사용되는지 잘 모르는 경우 이 문서의 지침을 따라 해당 앱을 지원되는 SDK로 업데이트해야 하는지 확인하세요. 문제가 발생하거나 도움이 필요한 경우 [지원 서비스에 문의](https://support.microsoft.com/getsupport/hostpage.aspx?locale=EN-US&supportregion=EN-US&ccfcode=US&ln=EN-US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=32136151)하세요.
 
 > [!NOTE]
 > 앱이 이미 [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)(UWP 앱용)를 사용하는 경우 앱을 더 변경할 필요가 없습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 * **AdControl**을 사용하는 앱에 대한 전체 소스 코드 및 Visual Studio 프로젝트 파일입니다.
 * 앱에 대한 .appx 패키지입니다.

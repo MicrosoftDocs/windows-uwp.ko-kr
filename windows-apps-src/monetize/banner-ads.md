@@ -1,18 +1,21 @@
 ---
 description: UWP 앱에 배너 광고를 사용하는 방법을 알아봅니다.
 title: 배너 광고
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, 배너 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: cd3e57ebf5a7f7770adf2a8defcd92e66ad1e3a0
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d3e4715dee6c1e182ed195288cba7b96612b743b
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260334"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463525"
 ---
 # <a name="banner-ads"></a>배너 광고
+
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
 
 이 섹션의 설명은 Microsoft Advertising SDK의 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 클래스를 사용해 UWP 앱에 배너 광고를 추가하는 방법을 보여줍니다.
 
@@ -20,7 +23,7 @@ ms.locfileid: "74260334"
 
 ![addreferences](images/banner-ad.png)
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>단원 내용
 
 |  항목    | 설명 |               
 |----------|-------|

@@ -2,18 +2,21 @@
 Description: 파트너 센터에서 ad 캠페인을 만들어 앱을 홍보 하 고 앱의 사용자 기반을 높일 수 있습니다.
 title: 앱 광고 캠페인 만들기
 ms.assetid: 10D94929-92C4-4379-AA5F-6FEF879F2463
-ms.date: 10/31/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 캠페인, 홍보
 ms.localizationpriority: medium
-ms.openlocfilehash: ec5d23a502c5517193956da6c57efe1eb668e0f0
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: e804260a312c963c380f4d09b00cc276b385c2ff
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260017"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463725"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>앱 광고 캠페인 만들기
+
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
 
 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 ad 캠페인을 만들어 앱을 홍보 하 고 사용자 기반을 높일 수 있습니다. 기본적으로 파트너 센터의 앱에 대 한 설정을 기반으로 광고의 대상 사용자를 선택 하지만 필요에 따라 사용자 고유의 사용자를 정의할 수 있습니다. 광고 템플릿의 기본 설정을 사용하거나 고유한 광고 디자인을 업로드할 수도 있습니다. 광고 캠페인에 대한 자세한 내용은 [광고 캠페인에 대한 일반적인 질문](common-questions.md)을 참조하세요.
 
@@ -55,7 +58,7 @@ ms.locfileid: "74260017"
 9.  **대상** 페이지에는 캠페인을 권장할 대상 설정이 표시됩니다. 선택에 따라 이 정보를 조정할 수 있습니다.
     * **국가/지역**: 광고를 표시할 국가 또는 지역을 최대 5개 선택합니다. 지원되는 국가 또는 지역 목록은 [광고 캠페인에 대한 일반적인 질문](common-questions.md#where-will-my-ad-appear)을 참조하세요.
 
-    * **장치**: 이러한 광고를 표시할 장치 유형을 선택합니다. 앱에서 지원하는 장치 유형만 표시됩니다.
+    * **장치**: 이러한 광고를 표시할 장치 유형을 선택합니다. 앱에서 지원하는 디바이스 유형만 표시됩니다.
 
     * **Surface**: **유니버설**을 선택하면 광고가 앱과 MSN.com, Outlook.com, Skype 및 기타 Microsoft 프리미엄 제품에 표시됩니다. 앱 내에만 광고를 표시하고 싶은 경우에는 **앱**을 선택합니다.
 
@@ -74,7 +77,7 @@ ms.locfileid: "74260017"
         * **언어** 드롭다운 목록에서 광고에 사용할 언어를 선택합니다. Microsoft Store 배지에 대한 텍스트가 선택한 언어로 표시됩니다.
         * 광고에 추가 텍스트 줄을 더하려면 **사용자 지정 태그 줄** 필드에 텍스트를 입력합니다.
             > [!NOTE]
-            > 여기에 입력한 텍스트는 선택한 언어로 지역화되어야 합니다. 텍스트가 [Bing 광고 정책](https://advertise.bingads.microsoft.com/bing-ads-policies)을 준수하지 않는 경우 사용자 지정 태그 줄은 거부됩니다. 이 페이지에서 스타일 및 허용되지 않는 콘텐츠에 대한 지침을 참조하세요.
+            > 여기에 입력한 텍스트는 선택한 언어로 지역화되어야 합니다. 텍스트가 [Bing 광고 정책](https://advertise.bingads.microsoft.com/bing-ads-policies)(영문)을 준수하지 않는 경우 사용자 지정 태그 줄은 거부됩니다. 이 페이지에서 스타일 및 허용되지 않는 콘텐츠에 대한 지침을 참조하세요.
         * 광고를 세부적으로 사용자 지정하려면 **광고 디자인 사용자 지정/모든 광고 크기 보기**를 확장하고 다음 중 하나를 선택합니다.
             * **배경색**. 사용 가능한 옵션 중 하나를 선택합니다.
             * **이미지**. 사용 가능한 이미지(앱의 스토어 목록에서 가져온) 중 하나를 선택합니다.
@@ -94,7 +97,7 @@ ms.locfileid: "74260017"
     * 캠페인 목표로 **앱 참여 늘리기**를 선택한 경우 [딥 링크 URI](../launch-resume/handle-uri-activation.md)를 지정하여 선택한 고객층을 앱 내의 특정 페이지로 리디렉션할 수 있습니다.
     * 앱 설명 페이지 또는 앱 내부 페이지가 아닌 대상을 지정하면 캠페인이 자동으로 일시 중지됩니다.
 
-13.  마지막으로, **검토**를 클릭하여 광고 캠페인의 설정을 확인하고, 유료 광고 캠페인인 경우 예산 및 결제 정보도 확인합니다. **확인**을 클릭하면 광고는 보통 몇 시간 내에 장치에 나타나기 시작합니다.
+13.  마지막으로, **검토**를 클릭하여 광고 캠페인의 설정을 확인하고, 유료 광고 캠페인인 경우 예산 및 결제 정보도 확인합니다. **확인**을 클릭하면 광고는 보통 몇 시간 내에 디바이스에 나타나기 시작합니다.
 
 ## <a name="review-ad-campaign-performance"></a>광고 캠페인 성과 검토
 

@@ -2,18 +2,21 @@
 ms.assetid: 9ca1f880-2ced-46b4-8ea7-aba43d2ff863
 description: Microsoft Advertising SDK 최신 버전의 알려진 문제에 대해 알아보세요.
 title: 앱 광고의 알려진 문제점 및 문제 해결
-ms.date: 04/16/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 알려진 문제, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 6701ff346f41352a108922f82da82fbf52fd7402
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 34c07a46d31ddf6c8f5b56ffd19059b4d225a72c
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75685095"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463965"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>앱 광고의 알려진 문제점 및 문제 해결
+
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
 
 이 항목은 Microsoft Advertising SDK 최신 릴리스의 알려진 문제를 목록으로 제공합니다. 추가 문제 해결 지침은 다음 항목을 참조하세요.
 
@@ -32,7 +35,7 @@ ms.locfileid: "75685095"
 
 하드웨어 단추 대신 소프트웨어 **뒤로**, **시작**, 및 **검색** 단추가 있는 휴대폰(또는 에뮬레이터)에서 중간 광고에 대한 카운트다운 타이와 클릭 단추가 가려질 수 있습니다.
 
-## <a name="recently-created-ads-are-not-being-served-to-your-app"></a>최근에 생성된 광고가 앱에 제공되지 않음
+## <a name="recently-created-ads-are-not-being-served-to-your-app"></a>최근에 만든된 광고가 앱에 제공되지 않음
 
 최근(하루 이내)에 광고를 만든 경우 즉시 사용하지 못할 수도 있습니다. 광고의 편집 콘텐츠가 승인되면 광고 서버에서 해당 광고를 처리하고 광고가 제공됩니다. 그러면 광고를 인벤토리로 사용할 수 있게 됩니다.
 
@@ -89,7 +92,7 @@ JavaScript/HTML 앱은 예약된 z-순서의 MAX-10 범위에 요소를 배치�
 
 **AdControl**에 의해 부모 클래스에서 상속된 테두리 관련 속성을 설정하면 광고 배치가 잘못될 수 있습니다.
 
-## <a name="more-information"></a>자세한 정보
+## <a name="more-information"></a>자세한 내용
 
 Microsoft Advertising SDK와 관련된 최근의 알려진 문제를 알아보고 질문을 게시하려면 [포럼](https://go.microsoft.com/fwlink/?LinkID=401264)을 방문하세요.
 

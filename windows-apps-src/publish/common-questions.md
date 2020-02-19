@@ -2,18 +2,21 @@
 Description: 광고 캠페인에 대한 일반적인 질문
 title: 광고 캠페인에 대한 일반적인 질문
 ms.assetid: EAF7CC74-7DE4-4D11-B9A6-29C6EA6E734B
-ms.date: 10/31/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c44f93676fd0324ef82ad7b33832bb6653409cda
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: be6759ea808e230d3cf504caf03763123babd870
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75685160"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463735"
 ---
 # <a name="common-questions-about-ad-campaigns"></a>광고 캠페인에 대한 일반적인 질문
+
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
 
 ### <a name="how-much-does-it-cost-to-run-an-ad-for-my-app"></a>내 앱에 대한 광고를 실행하려면 비용이 얼마나 듭니까?
 
@@ -25,11 +28,11 @@ ms.locfileid: "75685160"
 
 ### <a name="can-i-run-ads-for-one-of-my-apps-in-my-other-apps"></a>내 다른 앱에서 내 앱 중 하나에 대한 광고를 실행할 수 있나요?
 
-그렇습니다. *하우스 광고*라는 이러한 광고를 무료로 실행할 수 있습니다! [이 문서](about-house-ads.md)에서 커뮤니티 광고에 대한 자세한 내용을 확인하세요.
+예. *하우스 광고*라는 이러한 광고를 무료로 실행할 수 있습니다! [이 문서](about-house-ads.md)에서 커뮤니티 광고에 대한 자세한 내용을 확인하세요.
 
 ### <a name="can-i-cross-promote-my-app-with-apps-from-other-developers-in-the-store"></a>스토어에서 다른 개발자의 앱과 함께 앱을 서로 홍보할 수 있나요?
 
-그렇습니다. *커뮤니티 광고*라는 이러한 광고를 무료로 실행할 수 있습니다! [커뮤니티 광고에 옵트인(opt in)](about-community-ads.md#opt-in-to-community-ads)하고 [무료 커뮤니티 광고 캠페인을 만들면](create-an-ad-campaign-for-your-app.md) 앱은 커뮤니티 광고에 옵트인(opt in)한 다른 개발자와 홍보용 광고 공간을 공유합니다. 자세한 내용은 [이 문서](about-community-ads.md)에서 확인하세요.
+예. *커뮤니티 광고*라는 이러한 광고를 무료로 실행할 수 있습니다! [커뮤니티 광고에 옵트인(opt in)](about-community-ads.md#opt-in-to-community-ads)하고 [무료 커뮤니티 광고 캠페인을 만들면](create-an-ad-campaign-for-your-app.md) 앱은 커뮤니티 광고에 옵트인(opt in)한 다른 개발자와 홍보용 광고 공간을 공유합니다. 자세한 내용은 [이 문서](about-community-ads.md)에서 확인하세요.
 
 ### <a name="how-can-i-customize-my-ad"></a>내 광고는 어떻게 사용자 지정할 수 있나요?
 
@@ -55,7 +58,7 @@ ms.locfileid: "75685160"
 
 마지막 청구 날짜 후 30일 기간 안에 $50보다 적은 요금이 계정에 축적되는 경우에는 다음 달 초에 해당 요금이 청구됩니다. 이는 계정에서 광고 캠페인 요금의 누적 잔액을 한 달 이상 유지하지 않도록 하는 데 도움이 됩니다.
 
-청구될 때까지 기다리고 싶지 않으면 **청구 요약** 페이지(**홍보** > **대금 청구 내역**)에서 **지금 청구**를 선택하여 즉시 결제할 수 있습니다. **미청구 금액** 아래에 나열된 금액이 결제 방법에 청구됩니다.
+청구될 때까지 기다리고 싶지 않으면 **청구 요약** 페이지(**홍보**대금 청구 내역 > )에서 **지금 청구**를 선택하여 즉시 결제할 수 있습니다. **미청구 금액** 아래에 나열된 금액이 결제 방법에 청구됩니다.
 
 ### <a name="how-do-i-delete-a-credit-card-or-edit-the-details-of-a-credit-card"></a>어떻게 신용 카드를 삭제하거나 신용 카드의 세부 정보를 편집하나요?
 

@@ -2,18 +2,21 @@
 ms.assetid: cb7380d0-bc14-4936-aa1c-206304b3dc70
 description: Microsoft Advertising 라이브러리의 AdControl 클래스에 의해 생성되는 오류를 처리하는 방법을 알아봅니다.
 title: 광고 오류 처리
-ms.date: 05/11/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 오류 처리, javascript, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: e7b98dc583b8f7d77aa582b4c69b87c726a83129
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 1804bc6b44069dccdd92d0a33fcfd48567363a33
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371808"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463845"
 ---
 # <a name="handle-ad-errors"></a>광고 오류 처리
+
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
 
 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol),  [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad), [NativeAdsManagerV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) 클래스에는 각각 광고 관련 오류가 발생할 경우 발생하는 **ErrorOccurred** 이벤트가 있습니다. 앱 코드가 이 이벤트를 처리하고, 오류의 원인을 파악하는 데 도움이 되는 이벤트 args 개체의 [ErrorCode](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errorcode) 및 [ErrorMessage](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs.errormessage) 속성을 검사할 수 있습니다.
 
@@ -27,7 +30,7 @@ XAML 앱에서 광고 관련 오류를 처리하려면
 
 2. 발신자에 대한 **Object** 및 [AdErrorEventArgs](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.aderroreventargs) 개체의 두 매개 변수를 취하도록 오류 이벤트 처리 대리자를 코딩합니다.
 
-다음은 **OnAdError**라는 대리자를 *myBannerAdControl*이라는 **AdControl** 개체의 **ErrorOccurred** 이벤트에 할당하는 예제입니다.
+다음은 **OnAdError**라는 대리자를 **myBannerAdControl**이라는 **AdControl** 개체의 *ErrorOccurred* 이벤트에 할당하는 예제입니다.
 
 > [!div class="tabbedCodeSnippets"]
 ``` csharp
@@ -45,7 +48,7 @@ private void OnAdError(object sender, AdErrorEventArgs e)
 }
 ```
 
-XAML 및 C#에서의 **AdControl** 오류 처리를 보여 주는 연습에 대해서는 [XAML/C#에서 오류 처리 연습](error-handling-in-xamlc-walkthrough.md)을 참조하세요.
+XAML 및 C#에서의 [AdControl](error-handling-in-xamlc-walkthrough.md) 오류 처리를 보여 주는 연습에 대해서는 **XAML/C#에서 오류 처리 연습**을 참조하세요.
 
 <span id="bkmk-javascript"/>
 
@@ -82,4 +85,4 @@ window.errorLogger = function (sender, evt) {
 });
 ```
 
-JavaScript에서의 **AdControl** 오류 처리를 보여 주는 연습에 대해서는 [JavaScript에서 오류 처리 연습](error-handling-in-javascript-walkthrough.md)을 참조하세요.
+JavaScript에서의 [AdControl](error-handling-in-javascript-walkthrough.md) 오류 처리를 보여 주는 연습에 대해서는 **JavaScript에서 오류 처리 연습**을 참조하세요.

@@ -1,18 +1,21 @@
 ---
 description: Windows 프리미엄 광고 게시자 프로그램은 파트너 광고 네트워크에서 고수익 프리미엄 광고의 대상으로 삼을 수 있는, 선별된 광고 지원 앱 컬렉션으로 구성됩니다. 이 프로그램을 구성하는 앱은 사용량, 참여율 및 경험 면에서 최고입니다.
 title: Windows 프리미엄 광고 게시자 프로그램
-ms.date: 09/08/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: 4db99097516fcead384af6fc9e4c588707b96d41
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: ba5708b953efff3b4a7c52286ae1a74c43d3d211
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684447"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463755"
 ---
 # <a name="windows-premium-ads-publishers-program"></a>Windows 프리미엄 광고 게시자 프로그램
+
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
 
 Windows 개발자가 광고를 통해 앱에서 수익을 창출하도록 지원하기 위해, [Windows 프리미엄 광고 게시자 프로그램](https://www.windowspremiumapps.com)을 시행합니다. 이 프로그램은 사용량, 참여도, 경험 면에서 최고인 광고 지원 앱과 게임을 선별해 구성한 컬렉션입니다. 이 앱과 게임은 가시성 인증을 받았으며, 전 세계적으로 참여도가 높은 식별 가능 사용자를 보유하고 있습니다.
 

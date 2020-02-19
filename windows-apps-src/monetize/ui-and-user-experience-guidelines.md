@@ -2,18 +2,21 @@
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
 description: 앱 내 광고에 대한 UI 및 사용자 환경 지침을 알아봅니다.
 title: 광고의 UI 및 사용자 환경 지침
-ms.date: 05/11/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 지침, 모범 사례
 ms.localizationpriority: medium
-ms.openlocfilehash: cf7f61f427ef0b1a0ff5b6f3b66d02d13d02e4ab
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 2ce51f1ec99b080de6483b1d703492050c7a434c
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320681"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463925"
 ---
 # <a name="ui-and-user-experience-guidelines-for-ads"></a>광고의 UI 및 사용자 환경 지침
+
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
 
 이 문서에서는 앱 내 배너 광고, 중간 광고와 기본 광고로 뛰어난 환경을 제공하기 위한 지침을 제시합니다. 앱의 모양과 느낌을 디자인하는 방법에 대한 일반적인 지침은 [디자인 및 UI](https://developer.microsoft.com/windows/apps/design)를 참조하세요.
 
@@ -33,7 +36,7 @@ ms.locfileid: "67320681"
 
 ## <a name="guidelines-for-banner-ads"></a>배너 광고에 대한 지침
 
-다음 섹션에서는 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol)을 사용하여 앱 내 [배너 광고](banner-ads.md)를 구현하는 방법에 대한 권장 사항과 Microsoft Store 정책의 [정책 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content)을 위반하는 구현의 예를 제시합니다.
+다음 섹션에서는 [AdControl](banner-ads.md)을 사용하여 앱 내 [배너 광고](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol)를 구현하는 방법에 대한 권장 사항과 Microsoft Store 정책의 [정책 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content)을 위반하는 구현의 예를 제시합니다.
 
 ### <a name="best-practices"></a>모범 사례
 
@@ -65,19 +68,19 @@ ms.locfileid: "67320681"
 
 이 섹션에서는 Microsoft Store 정책의 [정책 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content)을 위반하는 배너 광고 시나리오의 예를 제시합니다. 이러한 예는 정책을 더 잘 이해하는 데 도움을 드리기 위한 하나의 방법으로서 설명의 목적으로만 제공됩니다. 일부만 예로 든 것이며 여기에는 열거되지 않았지만 정책 10.10.1을 위반하는 다른 여러 가지 예가 있을 수 있습니다.
 
-* [AdControl.Suspend](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.suspend)를 먼저 호출하지 않고 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol)의 불투명도를 변경하거나 **AdControl** 위에 다른 컨트롤을 배치하는 등 사용자의 배너 광고 보기 기능을 방해하는 모든 행위.
+* [AdControl.Suspend](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol)를 먼저 호출하지 않고 **AdControl**의 불투명도를 변경하거나 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.suspend) 위에 다른 컨트롤을 배치하는 등 사용자의 배너 광고 보기 기능을 방해하는 모든 행위.
 
 * 사용자가 배너 광고를 클릭해야 앱에서 작업을 수행할 수 있거나 사용자가 앱 디자인 때문에 어쩔 수 없이 배너 광고를 클릭해야 하는 경우.
 
 * 사용자 개입 없이 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 개체를 바꾸거나 페이지를 강제로 새로 고치는 등 어떤 식으로든 배너 광고의 기본 제공되는 최소 새로 고침 타이머를 무시하는 경우.
 
-* 라이브 광고 단위 (즉, 파트너 센터에서 가져오는 ad 단위)를 사용 하 여 개발 및 테스트 하는 동안 또는 에뮬레이터에서.
+* 개발 및 테스트 중 또는 에뮬레이터에서 live ad 단위 (파트너 센터에서 가져오는 ad 단위)를 사용 합니다.
 
 * 앱 컨텍스트에서 실행되는 Microsoft 광고 라이브러리 이외의 다른 방식을 통해 광고 서비스를 호출하는 코드를 작성하거나 배포하는 경우.
 
 * Microsoft 광고 라이브러리로 생성된 문서화되지 않은 인터페이스 또는 자식 개체(예: **WebView** 또는 **MediaElement**)를 조작하는 경우.
 
-* 평소 보다 페이지에 자세한 광고를 허용 하기 위해 광고의 크기를 줄이기 위해 viewbox에 광고를 배치 합니다.
+* 광고를 viewbox 하 여 광고의 크기를 줄이면 일반적인 페이지에서 광고를 더 많이 허용 합니다.
 
 <span id="interstitialbestpractices10" />
 
@@ -157,7 +160,7 @@ ms.locfileid: "67320681"
 
 * 단순히 일련의 광고에 대한 백업 광고를 위해 중간 광고 요청. 중간 광고를 요청한 후 [InterstitialAd.AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready) 이벤트를 받은 경우 앱에 표시되는 다음 중간 광고는 [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) 메서드를 통해 표시할 준비가 된 광고여야 합니다.
 
-* 라이브 광고 단위 (즉, 파트너 센터에서 가져오는 ad 단위)를 사용 하 여 개발 및 테스트 하는 동안 또는 에뮬레이터에서.
+* 개발 및 테스트 중 또는 에뮬레이터에서 live ad 단위 (파트너 센터에서 가져오는 ad 단위)를 사용 합니다.
 
 * 앱 컨텍스트에서 실행되는 Microsoft 광고 라이브러리 이외의 다른 방식을 통해 광고 서비스를 호출하는 코드를 작성하거나 배포하는 경우.
 
@@ -169,7 +172,7 @@ ms.locfileid: "67320681"
 
 ### <a name="register-the-container-for-your-native-ad"></a>기본 광고 컨테이너 등록
 
-코드에서 [NativeAdV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadv2) 개체의 [RegisterAdContainer](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadv2.registeradcontainer) 메서드를 호출, 기본 광고의 컨테이너로 작동하는 UI 요소를 등록해야 합니다. 또한 광고를 클릭 가능한 대상으로 등록하는 특정 컨트롤을 호출할 수도 있습니다. 이는 광고 노출과 클릭을 올바르게 추적하는 데 필요합니다.
+코드에서 [NativeAdV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadv2.registeradcontainer) 개체의 [RegisterAdContainer](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadv2) 메서드를 호출, 기본 광고의 컨테이너로 작동하는 UI 요소를 등록해야 합니다. 또한 광고를 클릭 가능한 대상으로 등록하는 특정 컨트롤을 호출할 수도 있습니다. 이는 광고 노출과 클릭을 올바르게 추적하는 데 필요합니다.
 
 사용할 수 있는 **RegisterAdContainer** 메서드의 오버로드 2개는 다음과 같습니다.
 

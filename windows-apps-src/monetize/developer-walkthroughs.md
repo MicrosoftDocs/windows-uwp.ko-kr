@@ -2,22 +2,25 @@
 ms.assetid: 527660fb-8e32-41b4-89cb-d422ed48c69b
 description: Microsoft Advertising SDK를 사용하여 앱에 배너 광고, 중간 광고 및 기본 광고를 추가하는 방법을 알아보려면 이 섹션의 연습을 사용합니다.
 title: 앱에 광고 구현
-ms.date: 05/11/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10 uwp, 광고, 광고, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: 63fec919f089dcf90b251334740c7a965bb36b78
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 83ba6729230b77dc4a3ae97abffe24a3623c4c3d
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260305"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463775"
 ---
 # <a name="implement-ads-in-your-app"></a>앱에 광고 구현
 
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
+
 이 섹션의 문서에서는 Microsoft Advertising SDK를 사용하여 앱에 배너 광고, 중간 광고 및 기본 광고를 추가하는 방법을 보여줍니다. 전체 샘플 프로젝트는 [GitHub의 광고 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)을 참조하세요.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>단원 내용
 
 |  항목    | 설명 |               
 |----------|-------|

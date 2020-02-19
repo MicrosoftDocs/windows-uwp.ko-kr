@@ -2,22 +2,25 @@
 ms.assetid: 08b4ae43-69e8-4424-b3c0-a07c93d275c3
 description: 앱에서 AdControl 오류를 검색하는 방법을 알아봅니다.
 title: JavaScript에서 오류 처리 연습
-ms.date: 05/11/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 오류 처리, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b68979bfa6b1f661ca7765ebc2598b201f013e2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 01b9949a17d5653bf121018dc40058b99af21719
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260297"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463855"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>JavaScript에서 오류 처리 연습
 
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
+
 이 연습에서는 JavaScript 앱에서 광고 관련 오류를 검색하는 방법을 보여 줍니다. 이 연습은 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol)을 사용하여 배너를 표시하는 것을 안내하지만 일반적인 개념은 중간 광고 및 기본 광고에도 적용됩니다.
 
-이러한 예제에서는 **AdControl**이 포함된 JavaScript 앱이 있다고 가정합니다. 앱에 **AdControl**을 추가하는 방법을 보여 주는 단계별 지침은 [HTML 5 및 Javascript의 AdControl](adcontrol-in-html-5-and-javascript.md)을 참조하세요. JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트는 [GitHub의 광고 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)을 참조하세요.
+이러한 예제에서는 **AdControl**이 포함된 JavaScript 앱이 있다고 가정합니다. 앱에 **AdControl**을 추가하는 방법을 보여 주는 단계별 지침은 [HTML 5 및 Javascript의 AdControl](adcontrol-in-html-5-and-javascript.md)을 참조하세요. JavaScript/HTML 앱에 배너 광고를 추가하는 방법을 보여 주는 전체 샘플 프로젝트에 대해서는 [GitHub의 광고 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)을 참조하세요.
 
 1.  default.html 파일에서 **AdControl**의 **div**에서 **data-win-options**를 정의하는 경우 **onErrorOccurred**에 대한 값을 추가합니다. default.html 파일에서 다음 코드를 찾습니다.
     ``` HTML
@@ -42,7 +45,7 @@ ms.locfileid: "74260297"
     </div>
     ```
 
-3.  오류 이벤트를 트리거하는 **AdControl**을 만듭니다. 앱의 모든 **AdControl** 개체에 대해 응용 프로그램 ID가 하나만 있을 수 있습니다. 따라서 다른 응용 프로그램 ID로 추가 개체를 만들면 런타임에 오류가 트리거됩니다. 이렇게 하려면 default.html 페이지의 본문에서 추가한 이전 **div** 섹션 뒤에 다음 코드를 추가합니다.
+3.  오류 이벤트를 트리거하는 **AdControl**을 만듭니다. 앱의 모든 **AdControl** 개체에 대해 응용 프로그램 ID가 하나만 있을 수 있습니다. 따라서 다른 애플리케이션 ID로 추가 개체를 만들면 런타임에 오류가 트리거됩니다. 이렇게 하려면 default.html 페이지의 본문에서 추가한 이전 **div** 섹션 뒤에 다음 코드를 추가합니다.
     ``` HTML
     <!-- Because only one applicationId can be used, the following ad control will fire an error event. -->
     <div id="liveAd" style="position: absolute; top:500px; left:0px; width:480px; height:80px"

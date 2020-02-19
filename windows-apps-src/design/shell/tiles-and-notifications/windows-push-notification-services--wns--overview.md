@@ -7,31 +7,31 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 965d823f48cacf4af4999e45ffd02f421c8927e7
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 1f53dd0538e4564c50fb5cbcb6986f5cf9661cae
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259711"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463826"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요
  
 
-타사 개발자는 WNS(Windows 푸시 알림 서비스)를 사용하여 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. WNS는 에너지 효율적이며 신뢰할 수 있는 방법으로 사용자에게 새 업데이트를 전달하는 메커니즘을 제공합니다.
+WNS (Windows Push Notification Services)를 사용 하면 타사 개발자가 자신의 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. WNS는 에너지 효율적이며 신뢰할 수 있는 방법으로 사용자에게 새 업데이트를 전달하는 메커니즘을 제공합니다.
 
 ## <a name="how-it-works"></a>작동 방법
 
 
 다음 다이어그램은 푸시 알림 보내기를 위한 전체 데이터 흐름을 보여 줍니다. 이 작업은 다음 단계로 이루어져 있습니다.
 
-1.  앱이 유니버설 Windows 플랫폼에서 푸시 알림 채널을 요청합니다.
+1.  앱이 WNS에서 푸시 알림 채널을 요청 합니다.
 2.  Windows가 WNS에 알림 채널을 만들도록 요청합니다. 이 채널은 URI(Uniform Resource Identifier) 형태로 호출 디바이스에 반환됩니다.
-3.  알림 채널 URI는 Windows에서 앱으로 반환됩니다.
+3.  알림 채널 URI는 WNS에서 앱으로 반환 됩니다.
 4.  앱은 이 URI를 고유 클라우드 서비스로 보냅니다. 알림을 보낼 때 URI를 액세스할 수 있도록 고유 클라우드 서비스에 URI를 저장합니다. URI는 앱과 고유 서비스 간의 인터페이스입니다. 안전한 보안 웹 표준을 사용하여 이 인터페이스를 구현하는 것은 사용자의 책임입니다.
 5.  클라우드 서비스는 보낼 업데이트가 있는 경우 채널 URI를 사용하여 WNS에 알립니다. SSL(Secure Sockets Layer)을 통해 알림 페이로드를 포함한 HTTP POST 요청을 실행하는 방법으로 이 작업을 수행합니다. 이 단계에는 인증이 필요합니다.
 6.  WNS는 요청을 받아 적절한 디바이스로 알림을 라우트합니다.
 
-![푸시 알림에 대한 WNS 데이터 흐름 다이어그램](images/wns-diagram-01.png)
+![푸시 알림에 대한 WNS 데이터 흐름 다이어그램](images/wns-diagram-01.jpg)
 
 ## <a name="registering-your-app-and-receiving-the-credentials-for-your-cloud-service"></a>앱을 등록하고 클라우드 서비스용 자격 증명 받기
 
@@ -68,7 +68,7 @@ WNS 인증 체계는 [OAuth 2.0](https://tools.ietf.org/html/draft-ietf-oauth-v2
 1.  클라우드 서비스는 OAuth 2.0 프로토콜에 따라 HTTPS를 통해 WNS로 자격 증명을 보냅니다. 이렇게 하면 WNS에서 서비스가 인증됩니다.
 2.  인증에 성공하면 WNS는 액세스 토큰을 반환합니다. 만료 시까지 이 액세스 토큰은 모든 후속 알림 요청에 사용됩니다.
 
-![클라우드 서비스 인증에 대한 WNS 다이어그램](images/wns-diagram-02.png)
+![클라우드 서비스 인증에 대한 WNS 다이어그램](images/wns-diagram-02.jpg)
 
 WNS를 통한 인증에서는 클라우드 서비스가 SSL(Secure Sockets Layer)을 통해 HTTP 요청을 제출합니다. 매개 변수는 "application/x-www-for-urlencoded" 형식으로 제공됩니다. "클라이언트\_id" 필드에 패키지 SID를 제공 하 고 "클라이언트\_비밀" 필드에 비밀 키를 제공 합니다. 구문 정보는 [액세스 토큰 요청](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) 참조를 확인하세요.
 
@@ -133,11 +133,11 @@ WNS는 클라우드 서비스를 인증하고 인증에 성공하면 "200 OK" �
      ....
     ```
 
-2.  WNS는 응답을 통해 알림을 받았으며 가능한 다음 기회에 알림을 전달할 것임을 알려줍니다. 그러나 WNS는 디바이스 또는 응용 프로그램에서 알림을 받았는지에 대한 종단 간 확인은 제공하지 않습니다.
+2.  WNS는 응답을 통해 알림을 받았으며 가능한 다음 기회에 알림을 전달할 것임을 알려줍니다. 그러나 WNS는 디바이스 또는 애플리케이션에서 알림을 받았는지에 대한 엔드투엔드 확인은 제공하지 않습니다.
 
 이 다이어그램은 데이터 흐름을 보여 줍니다.
 
-![알림 보내기를 위한 WNS 다이어그램](images/wns-diagram-03.png)
+![알림 보내기를 위한 WNS 다이어그램](images/wns-diagram-03.jpg)
 
 ### <a name="important-notes"></a>중요 정보
 

@@ -1,34 +1,37 @@
 ---
 description: 광고 단위 가시성을 개선하는 방법에 대해 알아보세요.
 title: 광고 단위의 가시성 최적화
-ms.date: 05/07/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 지침, 모범 사례, 가시성
 ms.localizationpriority: medium
-ms.openlocfilehash: 87e21f4e98c58f79f397c369891212eccb196c18
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 6996b656c9bf161538e286dc4c2d63c1d2840bc8
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57662268"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463945"
 ---
 # <a name="optimize-the-viewability-of-your-ad-units"></a>광고 단위의 가시성 최적화
+
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
 
 [광고 성과 보고서](../publish/advertising-performance-report.md)에는 광고 단위에 대한 가시성 메트릭이 포함되어 있습니다. 광고 산업은 단지 전달된 광고 노출이 아니라 볼 수 있는 광고 노출에 가치를 두는 쪽으로 이동하고 있기 때문에 가시성은 중요한 메트릭입니다. 사용자가 광고를 볼 가능성이 높아지기 때문에 광고주는 볼 수 있는 광고 노출에 기대를 거는 경우가 많습니다.  
 
 IAB 가시성 지침과 맞추어, 배너 광고 노출은 다음 조건을 충족하는 경우 볼 수 있는 것으로 간주됩니다.
 
-* 픽셀 요구 사항: 알림에 픽셀의 50% 보다 크거나 앱의 표시 되는 공간에 있는 것입니다.
-* 시간 요구 사항: 픽셀 요구 사항을 충족 하는 시간 보다 크거나 같음 ad 렌더링 후 연속 초당 했습니다.
+* 픽셀 요구 사항: 광고에서 50% 이상의 픽셀은 앱의 볼 수 있는 공간에 있었습니다.
+* 시간 요구 사항: 픽셀 요구 사항을 충족하는 시간은 하나의 연속 초 게시물 광고 렌더링과 같거나 보다 컸습니다.
 
 비디오 광고 노출은 다음 조건을 충족하는 경우 볼 수 있는 것으로 간주됩니다.
 
-* 픽셀 요구 사항: 알림에 픽셀의 50% 보다 크거나 앱의 볼 수 있는 부분에 있는 것입니다.
-* 시간 요구 사항: 비디오 픽셀 요구 사항을 충족 하 고 post ad 렌더링 하는 두 연속 초 동안 재생.
+* 픽셀 요구 사항: 광고에서 50% 이상의 픽셀은 앱의 볼 수 있는 부분에 있었습니다.
+* 시간 요구 사항: 동영상은 픽셀 요구 사항을 충족하고 두 개의 지속적인 초 게시물 광고 렌더링에 대해 재생됩니다.
 
 가시성은 다음 공식에 따라 계산됩니다.
 
-**가시성 [로 보기 인상] = * 100 / [광고 노출을 총]**
+**Viewability = [본 노출] * 100/[총 ad 노출]**
 
 ## <a name="guidelines-to-improve-ad-unit-viewability"></a>광고 단위 가시성을 개선하기 위한 지침
 

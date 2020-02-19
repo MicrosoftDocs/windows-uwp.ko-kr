@@ -2,30 +2,33 @@
 ms.assetid: 141900dd-f1d3-4432-ac8b-b98eaa0b0da2
 description: XAML 앱에서 Microsoft Advertising 라이브러리를 사용할 때 발생하는 일반적인 개발 문제에 대한 해결 방법을 알아봅니다.
 title: XAML과 C# 문제 해결 가이드
-ms.date: 08/23/2017
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, 문제 해결, XAML, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 94af97e1e678c6ee92aaa731057c5f67185e25c5
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 9783036d00fc56b904e6d362f55ddaaf8375a872
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334661"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463745"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>XAML과 C# 문제 해결 가이드
+
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
 
 이 항목에서는 XAML 앱에서 Microsoft Advertising 라이브러리를 사용할 때 발생하는 일반적인 개발 문제에 대한 해결 방법을 알아봅니다.
 
 * [XAML](#xaml)
-  * [AdControl 표시 되지 않음](#xaml-notappearing)
-  * [블랙 박스를 깜빡이는 및 사라집니다.](#xaml-blackboxblinksdisappears)
-  * [광고 하지 새로 고치는 중](#xaml-adsnotrefreshing)
+  * [AdControl이 나타나지 않음](#xaml-notappearing)
+  * [검은색 상자가 깜박이 고 사라집니다.](#xaml-blackboxblinksdisappears)
+  * [광고 새로 고침 안 함](#xaml-adsnotrefreshing)
 
 * [C#](#csharp)
-  * [AdControl 표시 되지 않음](#csharp-adcontrolnotappearing)
-  * [블랙 박스를 깜빡이는 및 사라집니다.](#csharp-blackboxblinksdisappears)
-  * [광고 하지 새로 고치는 중](#csharp-adsnotrefreshing)
+  * [AdControl이 나타나지 않음](#csharp-adcontrolnotappearing)
+  * [검은색 상자가 깜박이 고 사라집니다.](#csharp-blackboxblinksdisappears)
+  * [광고 새로 고침 안 함](#csharp-adsnotrefreshing)
 
 <span id="xaml"/>
 
@@ -37,7 +40,7 @@ ms.locfileid: "58334661"
 
 1.  Package.appxmanifest에서**인터넷(클라이언트)** 기능이 선택되어 있는지 확인합니다.
 
-2.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id에는 응용 프로그램 ID 및 파트너 센터에서 얻은 ad 할당 단위 ID와 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+2.  애플리케이션 ID 및 광고 단위 ID를 확인합니다. 이러한 Id는 파트너 센터에서 가져온 응용 프로그램 ID 및 ad 단위 ID와 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
     > [!div class="tabbedCodeSnippets"]
     ``` xml
@@ -79,7 +82,7 @@ ms.locfileid: "58334661"
 
 7.  **AdControl**이 뷰포트에서 숨겨져 있지 않은지 확인합니다. 광고가 제대로 표시되려면 **AdControl**이 표시되어야 합니다.
 
-8.  **ApplicationId** 및 **AdUnitId**의 라이브 값은 에뮬레이터에서 테스트하지 말아야 합니다. **AdControl**이 예상대로 작동하는지 확인하려면 **ApplicationId** 및 **AdUnitId**에 대한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units)을 모두 사용합니다.
+8.  **ApplicationId** 및 **AdUnitId**의 라이브 값은 에뮬레이터에서 테스트하지 말아야 합니다. **AdControl**이 예상대로 작동하는지 확인하려면 [ApplicationId](set-up-ad-units-in-your-app.md#test-ad-units) 및 **AdUnitId**에 대한 **테스트 값**을 모두 사용합니다.
 
 <span id="xaml-blackboxblinksdisappears"/>
 
@@ -173,7 +176,7 @@ ms.locfileid: "58334661"
     > [!div class="tabbedCodeSnippets"]
     [!code-csharp[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet1)]
 
-3.  응용 프로그램 ID 및 광고 단위 ID를 확인합니다. 이러한 Id에는 응용 프로그램 ID 및 파트너 센터에서 얻은 ad 할당 단위 ID와 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
+3.  애플리케이션 ID 및 광고 단위 ID를 확인합니다. 이러한 Id는 파트너 센터에서 가져온 응용 프로그램 ID 및 ad 단위 ID와 일치 해야 합니다. 자세한 내용은 [앱에서 광고 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조하세요.
 
     > [!div class="tabbedCodeSnippets"]
     ``` cs
@@ -216,7 +219,7 @@ ms.locfileid: "58334661"
 
 8.  **AdControl**의 부모를 확인합니다. 부모는 활성화되고 표시되어야 합니다.
 
-9. **ApplicationId** 및 **AdUnitId**의 라이브 값은 에뮬레이터에서 테스트하지 말아야 합니다. **AdControl**이 예상대로 작동하는지 확인하려면 **ApplicationId** 및 **AdUnitId**에 대한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units)을 모두 사용합니다.
+9. **ApplicationId** 및 **AdUnitId**의 라이브 값은 에뮬레이터에서 테스트하지 말아야 합니다. **AdControl**이 예상대로 작동하는지 확인하려면 [ApplicationId](set-up-ad-units-in-your-app.md#test-ad-units) 및 **AdUnitId**에 대한 **테스트 값**을 모두 사용합니다.
 
 <span id="csharp-blackboxblinksdisappears"/>
 
@@ -246,7 +249,7 @@ ms.locfileid: "58334661"
 
 ### <a name="ads-not-refreshing"></a>광고가 새로 고쳐지지 않음
 
-1.  **AdControl**의 [IsAutoRefreshEnabled](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx) 속성이 false로 설정되어 있는지 확인하세요. 기본적으로 이 선택적 속성은 **true**로 설정되어 있습니다. **false**로 설정된 경우 **Refresh** 메서드를 사용하여 다른 광고를 검색해야 합니다.
+1.  [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.isautorefreshenabled.aspx)의 **IsAutoRefreshEnabled** 속성이 false로 설정되어 있는지 확인하세요. 기본적으로 이 선택적 속성은 **true**로 설정되어 있습니다. **false**로 설정된 경우 **Refresh** 메서드를 사용하여 다른 광고를 검색해야 합니다.
 
 2.  [Refresh](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.refresh.aspx) 메서드에 대한 호출을 확인합니다. 자동 새로 고침을 사용하는 경우(**IsAutoRefreshEnabled**가 **true**로 설정된 경우) **Refresh**를 사용하여 다른 광고를 검색할 수 없습니다. 수동 새로 고침을 사용하는 경우(**IsAutoRefreshEnabled**가 **false**로 설정된 경우) 디바이스의 현재 데이터 연결에 따라 최소 30-60초가 경과된 후에만 **Refresh**가 호출됩니다.
 

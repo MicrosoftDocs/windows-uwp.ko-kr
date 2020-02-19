@@ -2,18 +2,21 @@
 ms.assetid: cc24ba75-a185-4488-b70c-fd4078bc4206
 description: AdScheduler 클래스를 사용하여 비디오 콘텐츠에 광고를 표시하는 방법을 알아봅니다.
 title: 비디오 콘텐츠에 광고 표시
-ms.date: 03/22/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 비디오, 스케줄러, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 6178758cd67471d56b1d65e293104e987e81fb9b
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: ea3287af2164457f37b5f148289d4d9f9b833595
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681924"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463467"
 ---
 # <a name="show-ads-in-video-content"></a>비디오 콘텐츠에 광고 표시
+
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
 
 이 연습에서는 HTML과 함께 JavaScript를 사용하여 작성된 UWP(유니버설 Windows 플랫폼) 앱에서 **AdScheduler** 클래스를 사용하여 비디오 콘텐츠에 광고를 표시하는 방법을 보여 줍니다.
 
@@ -24,7 +27,7 @@ ms.locfileid: "75681924"
 
 비디오 콘텐츠의 광고는 프로그램이 10분 이내(짧은 양식)인지 또는 10분을 초과(긴 양식)하는지에 따라 다릅니다. 후자는 서비스에 설정하기가 더 복잡하지만 실제로는 클라이언트 쪽 코드를 작성하는 방법에서 차이가 없습니다. **AdScheduler**가 매니페스트 대신에 단일 광고가 있는 VAST 페이로드를 받는 경우 매니페스트에서 단일 프리롤 광고를 요구한 것처럼 처리됩니다(00:00 시점에 한 번 중단).
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 조건
 
 * Visual Studio 2015 이상 릴리스와 함께 [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)를 설치합니다.
 
@@ -51,7 +54,7 @@ ms.locfileid: "75681924"
 
 3. 프로젝트에 **Microsoft Advertising SDK for JavaScript** 라이브러리에 대한 참조를 추가합니다.
 
-    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 선택합니다.
+    1. **솔루션 탐색기** 창에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가.** 를 선택합니다.
     2. **참조 관리자**에서 **유니버설 Windows**를 확장하고 **확장**을 클릭한 후 **Microsoft Advertising SDK for JavaScript**(버전 10.0) 옆의 확인란을 선택합니다.
     3. **참조 관리자**에서 확인을 클릭합니다.
 

@@ -2,18 +2,21 @@
 ms.assetid: 63A9EDCF-A418-476C-8677-D8770B45D1D7
 description: Microsoft Advertising SDK는 광고로 앱 수익을 창출하는 다양한 방법을 제공합니다.
 title: Microsoft Advertising SDK를 사용하여 앱에 광고 표시
-ms.date: 06/20/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 배너, 광고 관리, 중간 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: 48aacf03d6e424b7b53052e2c292d4a8589a8d9f
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 5f318a68a97e98d3da24da16778988ee40c4e1dd
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684570"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463785"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK를 사용하여 앱에 광고 표시
+
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
 
 Microsoft Advertising SDK를 사용해 Windows 10용 유니버설 Windows 플랫폼(UWP) 앱에 광고를 삽입하여 수익 기회를 늘리세요. Ad 수익 화 플랫폼은 앱에 원활 하 게 통합 될 수 있고 널리 사용 되는 여러 ad 네트워크를 통한 중재를 지 원하는 다양 한 ad 형식을 제공 합니다. 이 플랫폼은 OpenRTB, VAST 2.x, MRAID 2 및 VPAID 3 표준을 준수하며 MOAT 및 IAS와 호환됩니다. 
 
@@ -43,7 +46,7 @@ Microsoft Advertising SDK를 사용해 Windows 10용 유니버설 Windows 플랫
     <a href="native-ads.md">네이티브 광고</a>
     </td>
 <td align="left"><img src="images/api-reference.png" alt="API ref icon" /></td>
-<td align="left"><b>기타 리소스</b><br/><br/>
+<td align="left"><b>기타 참고 자료</b><br/><br/>
     <a href="set-up-ad-units-in-your-app.md">앱에서 ad 단위 설정</a>
     <br/>
     <a href="best-practices-for-ads-in-apps.md">모범 사례</a>

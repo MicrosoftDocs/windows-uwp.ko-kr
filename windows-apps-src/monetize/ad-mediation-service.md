@@ -1,18 +1,21 @@
 ---
 description: Microsoft 광고 조정 서비스로 여러 광고 네트워크에서 광고를 표시해 광고 수익과 앱 홍보 기능을 극대화 할 수 있습니다.
 title: Microsoft 광고 조정 서비스
-ms.date: 06/05/2018
+ms.date: 02/18/2020
 ms.topic: article
 keywords: Windows 10 uwp, 광고, 광고, 광고 조정
 ms.localizationpriority: medium
-ms.openlocfilehash: 700a80aff4c991f4fa3bff681ba995b113025fec
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: ad2f60b6b87f81df44bc2f875a722a9e36fdd170
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259331"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463985"
 ---
 # <a name="microsoft-ad-mediation-service"></a>Microsoft 광고 조정 서비스
+
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
 
 [Microsoft Advertising SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)를 사용하여 [앱에서 광고를 표시](display-ads-in-your-app.md)할 때, 필요에 따라 Microsoft 광고 조정 서비스를 사용하여 광고 수익을 최대화할 수 있습니다. 이 문서에서는 광고 조정 서비스와 그 목표에 대해 설명합니다.
 
