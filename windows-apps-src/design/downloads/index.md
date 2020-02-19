@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4678565547616c0cee4a7961cb4a0c95fc03241b
-ms.sourcegitcommit: 85fd390b1e602707bd9342cb4b84b97ae0d8b831
+ms.openlocfilehash: 44e6f65b38faa7bd80c277d999f4e18b398bd11b
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520458"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463875"
 ---
 # <a name="design-toolkits-and-samples-for-uwp-apps"></a>UWP 앱용 디자인 도구 키트 및 샘플
 
@@ -28,7 +28,7 @@ Fluent 디자인/UWP 앱용 디자인 및 UI 관련 다운로드를 제공합니
     :::column:::
 ![영웅 이미지](images/figma.png)
 <b>Figma 도구 키트</b><br>
-v1905, 2019년 5월<br>
+WinUI 2.3, 2020년 2월<br>
 <a href="https://aka.ms/figmatoolkit">다운로드</a>
     :::column-end:::
     :::column:::
