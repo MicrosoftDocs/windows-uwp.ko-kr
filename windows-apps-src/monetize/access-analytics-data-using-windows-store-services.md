@@ -18,7 +18,7 @@ ms.locfileid: "74954067"
 
 *Microsoft Store ANALYTICS API* 를 사용 하 여 또는 조직의 Windows 파트너 센터 계정에 등록 된 앱에 대 한 분석 데이터를 프로그래밍 방식으로 검색할 수 있습니다. 이 API를 사용하면 앱 및 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함) 구입, 오류, 앱 평점 및 리뷰에 대한 데이터를 검색할 수 있습니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
 
-다음 단계에서는 종단 간 프로세스를 설명합니다.
+다음 단계에서는 엔드투엔드 프로세스를 설명합니다.
 
 1.  [필수 조건](#prerequisites)을 모두 완료했는지 확인합니다.
 2.  Microsoft Store 분석 API에서 메서드를 호출하기 전에 [Azure AD 액세스 토큰을 가져옵니다](#obtain-an-azure-ad-access-token). 토큰을 가져온 후 만료되기 전에 이 토큰을 Microsoft Store 분석 API에 대한 호출에 사용할 수 있는 시간은 60분입니다. 토큰이 만료된 후 새 토큰을 생성할 수 있습니다.
@@ -48,7 +48,7 @@ Azure AD 응용 프로그램을 파트너 센터 계정에 연결 하 고 필요
 
 <span id="obtain-an-azure-ad-access-token" />
 
-## <a name="step-2-obtain-an-azure-ad-access-token"></a>2단계: Azure AD 액세스 토큰 가져오기
+## <a name="step-2-obtain-an-azure-ad-access-token"></a>단계 2: Azure AD 액세스 토큰 가져오기
 
 Microsoft Store 분석 API에서 메서드를 호출하기 전에 먼저 API에 있는 각 메서드의 **Authorization** 헤더에 전달하는 Azure AD 액세스 토큰을 가져와야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 API에 대한 추가 호출에 계속 사용할 수 있도록 해당 토큰을 새로 고칠 수 있습니다.
 
@@ -89,7 +89,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 |---------------|--------------------|
 | 인수, 변환, 설치 및 사용 |  <ul><li>[앱 인수 가져오기](get-app-acquisitions.md) (레거시)</li><li>[앱 취득 깔때기 데이터 가져오기](get-acquisition-funnel-data.md) (레거시)</li><li>[채널을 통해 앱 변환 가져오기](get-app-conversions-by-channel.md)</li><li>[추가 기능 인수 가져오기](get-in-app-acquisitions.md)</li><li>[구독 추가 기능 가져오기](get-subscription-acquisitions.md)</li><li>[채널별 추가 기능 변환 가져오기](get-add-on-conversions-by-channel.md)</li><li>[앱 설치 가져오기](get-app-installs.md)</li><li>[매일 앱 사용 가져오기](get-app-usage-daily.md)</li><li>[월간 앱 사용 가져오기](get-app-usage-monthly.md)</li></ul> |
 | 앱 오류 | <ul><li>[오류 보고 데이터 가져오기](get-error-reporting-data.md)</li><li>[앱에서 오류에 대 한 세부 정보 가져오기](get-details-for-an-error-in-your-app.md)</li><li>[앱에서 오류에 대 한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-app.md)</li><li>[앱에서 오류에 대 한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-app.md)</li></ul> |
-| Betekintő adatok | <ul><li>[앱에 대 한 통찰력 데이터 가져오기](get-insights-data-for-your-app.md)</li></ul>  |
+| Insights | <ul><li>[앱에 대 한 통찰력 데이터 가져오기](get-insights-data-for-your-app.md)</li></ul>  |
 | 평점 및 리뷰 | <ul><li>[앱 등급 가져오기](get-app-ratings.md)</li><li>[앱 리뷰 가져오기](get-app-reviews.md)</li></ul> |
 | 앱 내 광고 및 광고 캠페인 | <ul><li>[Ad 성능 데이터 가져오기](get-ad-performance-data.md)</li><li>[Ad 캠페인 성능 데이터 가져오기](get-ad-campaign-performance-data.md)</li></ul> |
 
@@ -99,10 +99,10 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store 분석 API를 호출할 �
 
 | 시나리오       | 메서드      |
 |---------------|--------------------|
-| 설치 |  <ul><li>[데스크톱 응용 프로그램 설치 가져오기](get-desktop-app-installs.md)</li></ul> |
-| 블록 |  <ul><li>[데스크톱 응용 프로그램에 대 한 업그레이드 블록 가져오기](get-desktop-block-data.md)</li><li>[데스크톱 응용 프로그램에 대 한 업그레이드 블록 세부 정보 가져오기](get-desktop-block-data-details.md)</li></ul> |
+| 설치 항목 |  <ul><li>[데스크톱 응용 프로그램 설치 가져오기](get-desktop-app-installs.md)</li></ul> |
+| Blocks |  <ul><li>[데스크톱 응용 프로그램에 대 한 업그레이드 블록 가져오기](get-desktop-block-data.md)</li><li>[데스크톱 응용 프로그램에 대 한 업그레이드 블록 세부 정보 가져오기](get-desktop-block-data-details.md)</li></ul> |
 | 응용 프로그램 오류 |  <ul><li>[데스크톱 응용 프로그램에 대 한 오류 보고 데이터 가져오기](get-desktop-application-error-reporting-data.md)</li><li>[데스크톱 응용 프로그램에서 오류에 대 한 세부 정보 가져오기](get-details-for-an-error-in-your-desktop-application.md)</li><li>[데스크톱 응용 프로그램에서 오류에 대 한 스택 추적 가져오기](get-the-stack-trace-for-an-error-in-your-desktop-application.md)</li><li>[데스크톱 응용 프로그램에서 오류에 대 한 CAB 파일 다운로드](download-the-cab-file-for-an-error-in-your-desktop-application.md)</li></ul> |
-| Betekintő adatok | <ul><li>[데스크톱 응용 프로그램에 대 한 정보 얻기](get-insights-data-for-your-desktop-app.md)</li></ul>  |
+| Insights | <ul><li>[데스크톱 응용 프로그램에 대 한 정보 얻기](get-insights-data-for-your-desktop-app.md)</li></ul>  |
 
 ### <a name="methods-for-xbox-live-services"></a>Xbox Live 서비스의 메서드
 
