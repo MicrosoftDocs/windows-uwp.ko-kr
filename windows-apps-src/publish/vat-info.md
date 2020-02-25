@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0be47e5edeee0d00843d06297857f39977e085f4
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: d6b90b000564c1c6929154c3ac3b79c129e3fff6
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258960"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507147"
 ---
 # <a name="vat-info"></a>VAT 정보
 
@@ -21,7 +21,7 @@ ms.locfileid: "74258960"
 ## <a name="understanding-vat-numbers"></a>VAT 번호 이해
 
 
-VAT(부가가치세) 번호는 유럽 연합의 국가 또는 지역에 사용되는 식별자입니다. 자세한 내용은 유럽 연합의 공식 [VIES 사이트](https://go.microsoft.com/fwlink/p/?LinkId=181246)를 참조하세요.
+VAT(부가가치세) 번호는 유럽 연합의 국가 또는 지역에 사용되는 식별자입니다. 자세한 내용은 유럽 연합의 공식 [VIES 사이트](http://ec.europa.eu/taxation_customs/vies/vieshome.do)를 참조하세요.
 
 ## <a name="accepted-formats-for-vat-numbers"></a>허용되는 VAT 번호 형식
 
@@ -29,7 +29,7 @@ VAT(부가가치세) 번호는 유럽 연합의 국가 또는 지역에 사용�
 Microsoft는 세금 관련 조언을 제공하지 않으며 다음 표는 지침용으로만 제공됩니다. 이 지침을 통해 Microsoft에 VAT 번호를 제공할 수 없는 경우 현지 조세 기관에 최근 변경 내용이 있는지 확인해야 합니다.
 
 <table Responsive="true">
-<tr><th>국가/ 지역</th><th>VAT 정보</th></tr>
+<tr><th>국가 / 지역</th><th>VAT 정보</th></tr>
 <tr><td data-th="Country/region">오스트리아
 </td><td data-th="VAT info">
 <ul>
@@ -70,7 +70,7 @@ Microsoft는 세금 관련 조언을 제공하지 않으며 다음 표는 지침
 <li>예: 12345678, 123456789 또는 0123456789</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">체코</td><td data-th="VAT info">
+<tr><td data-th="Country/region">체코 공화국</td><td data-th="VAT info">
 <ul>
 <li>VAT 번호 형식: 8자리, 9자리 또는 10자리</li>
 <li>국가/지역 코드: CZ</li>
@@ -98,7 +98,7 @@ Microsoft는 세금 관련 조언을 제공하지 않으며 다음 표는 지침
 <li>예: 12345678</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">프랑스</td><td data-th="VAT info">
+<tr><td data-th="Country/region">France</td><td data-th="VAT info">
 <ul>
 <li>VAT 번호 형식: 11자리</li>
 <li>국가/지역 코드: FR</li>
@@ -106,7 +106,7 @@ Microsoft는 세금 관련 조언을 제공하지 않으며 다음 표는 지침
 <li>참고: I 또는 Q를 제외한 모든 알파벳 문자를 첫 문자나 두 번째 문자 중 하나 또는 둘 모두에 포함할 수 있으며 그 뒤에 숫자 9자리가 나옵니다.</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">독일</td><td data-th="VAT info">
+<tr><td data-th="Country/region">Germany</td><td data-th="VAT info">
 <ul>
 <li>VAT 번호 형식: 9자리</li>
 <li>국가/지역 코드: DE</li>

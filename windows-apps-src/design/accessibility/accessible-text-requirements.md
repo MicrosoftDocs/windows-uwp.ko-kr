@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b566b1960435a856b82a7be605ef5e1f7ba86e2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 7f794cc6f23cf3f4beaf5bc3c9558ceaf2ccc8a6
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257788"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521315"
 ---
 # <a name="accessible-text-requirements"></a>접근성 있는 텍스트 요구 사항  
 
@@ -126,7 +126,7 @@ HTML에서 내장 컨트롤을 사용하는 경우 UIA 구현이 이미 매핑�
 
 사용자는 글꼴이 매우 작은 경우에만 앱에서 텍스트를 읽는 데 어려움이 있으므로 응용 프로그램의 텍스트가 첫 번째 위치의 적당 한 크기 인지 확인 합니다.
 
-명확 하 게 완료 되 면 Windows에는 사용자가 활용할 수 있는 다양 한 내게 필요한 옵션 도구 및 설정이 포함 되며,이를 통해 사용자는 자신의 요구와 텍스트 읽기를 위한 기본 설정을 변경할 수 있습니다. 다음이 포함됩니다.
+명확 하 게 완료 되 면 Windows에는 사용자가 활용할 수 있는 다양 한 내게 필요한 옵션 도구 및 설정이 포함 되며,이를 통해 사용자는 자신의 요구와 텍스트 읽기를 위한 기본 설정을 변경할 수 있습니다. 이러한 개체는 다음과 같습니다.
 
 * UI의 선택한 영역을 확대 하는 돋보기 도구입니다. 앱에서 텍스트의 레이아웃을 사용 하 여 편집용으로 돋보기를 사용 하는 것이 어려울 수 있도록 해야 합니다.
 * **설정-> 시스템-> 디스플레이 > 크기 조정 및 레이아웃에 대**한 전역 크기 조정 및 해상도 설정 사용 가능한 크기 옵션은 표시 장치의 기능에 따라 달라질 수 있습니다.
@@ -186,6 +186,6 @@ private async void UISettings_TextScaleFactorChanged(Windows.UI.ViewManagement.U
 * [텍스트 크기 조정](https://docs.microsoft.com/windows/uwp/design/input/text-scaling)
 * [접근성](accessibility.md)
 * [기본 접근성 정보](basic-accessibility-information.md)
-* [XAML 텍스트 표시 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
-* [XAML 텍스트 편집 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
-* [XAML 접근성 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d) 
+* [XAML 텍스트 표시 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20text%20display%20sample%20(Windows%208))
+* [XAML 텍스트 편집 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20text%20editing%20sample%20(Windows%208))
+* [XAML 접근성 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample) 

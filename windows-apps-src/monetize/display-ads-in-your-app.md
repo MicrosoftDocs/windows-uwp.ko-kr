@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 배너, 광고 관리, 중간 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f318a68a97e98d3da24da16778988ee40c4e1dd
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: d693b8a4e07e66eded7d1580291c552e7ab9ca64
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463785"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507227"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK를 사용하여 앱에 광고 표시
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 Microsoft Advertising SDK를 사용해 Windows 10용 유니버설 Windows 플랫폼(UWP) 앱에 광고를 삽입하여 수익 기회를 늘리세요. Ad 수익 화 플랫폼은 앱에 원활 하 게 통합 될 수 있고 널리 사용 되는 여러 ad 네트워크를 통한 중재를 지 원하는 다양 한 ad 형식을 제공 합니다. 이 플랫폼은 OpenRTB, VAST 2.x, MRAID 2 및 VPAID 3 표준을 준수하며 MOAT 및 IAS와 호환됩니다. 
 
@@ -114,7 +114,7 @@ Microsoft Advertising SDK 사용에 대한 추가 도움말은 다음 리소스�
 |  작업    | 리소스 |               
 |----------|-------|
 | 버그 보고 또는 광고 지원 받기     | [지원 페이지](https://developer.microsoft.com/windows/support)를 방문하여 **인앱 광고**를 선택합니다.        |
-| 커뮤니티 지원 받기     | [포럼](https://go.microsoft.com/fwlink/?LinkID=401264)을 방문하세요.       |
+| 커뮤니티 지원 받기     | [포럼](https://social.msdn.microsoft.com/forums/windowsapps/en-US/home?category=windowsapps)을 방문하세요.       |
 | 배너 및 중간 광고를 앱에 추가하는 방법을 보여 주는 샘플 프로젝트를 다운로드합니다.     | [GitHub의 광고 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)을 참조하세요.       |
 | Windows 앱용 최신 수익 창출 기회에 대한 자세한 정보     | [앱으로 수익 창출](https://developer.microsoft.com/store/monetize)을 방문하세요.        |
 

@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10 uwp, 광고, 광고, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: 57ea70e25b81c44107a9a8dbc6a11e1215b94f17
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: 30fc18be85c13838c380bd607544f6c4327ca2d4
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463415"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507157"
 ---
 # <a name="best-practices-for-ads-in-apps"></a>앱 광고 모범 사례
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 이 섹션의 문서에서는 UWP 앱의 배너 광고, 중간 광고 및 기본 광고에 적용해야 하는 사용자 환경 지침과 오류 처리 지침을 제공합니다.
 

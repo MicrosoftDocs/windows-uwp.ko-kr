@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8da380cb49d584e56f584f3ad321d601d211faf0
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: 48d63dae76113c70273f6ff2cba46348b1e24a10
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463445"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507017"
 ---
 # <a name="about-community-ads"></a>커뮤니티 광고 정보
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 앱이 [배너 또는 배너 중간 광고를 표시](../monetize/display-ads-in-your-app.md)하는 경우 Microsoft Store의 앱을 사용 하는 다른 개발자와 앱을 동시에 승격 시킬 수 있습니다. 이 기능을 *커뮤니티 광고*라고 합니다.  
 

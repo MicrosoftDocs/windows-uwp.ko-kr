@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 캠페인, 홍보
 ms.localizationpriority: medium
-ms.openlocfilehash: e804260a312c963c380f4d09b00cc276b385c2ff
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: aa5c3c160d3bb69a2ba478606a3c3e04e935088d
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463725"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507067"
 ---
 # <a name="create-an-ad-campaign-for-your-app"></a>앱 광고 캠페인 만들기
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 [파트너 센터](https://partner.microsoft.com/dashboard) 에서 ad 캠페인을 만들어 앱을 홍보 하 고 사용자 기반을 높일 수 있습니다. 기본적으로 파트너 센터의 앱에 대 한 설정을 기반으로 광고의 대상 사용자를 선택 하지만 필요에 따라 사용자 고유의 사용자를 정의할 수 있습니다. 광고 템플릿의 기본 설정을 사용하거나 고유한 광고 디자인을 업로드할 수도 있습니다. 광고 캠페인에 대한 자세한 내용은 [광고 캠페인에 대한 일반적인 질문](common-questions.md)을 참조하세요.
 

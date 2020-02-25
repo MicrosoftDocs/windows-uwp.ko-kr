@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1fd0f00d74d62816ff347265936f6b066a0316b0
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 50b9f2a30f529e78773bc40671c9541ff2687b64
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257749"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521234"
 ---
 # <a name="keyboard-accessibility"></a>키보드 접근성  
 
@@ -94,7 +94,7 @@ XAML
 <span id="KEYBOARD_SHORTCUTS"/>
 
 ## <a name="keyboard-shortcuts"></a>바로 가기 키  
-앱의 키보드 탐색 및 활성화 구현뿐 아니라 앱 기능에 대한 바로 가기를 구현하는 것이 좋습니다. 탭 탐색은 기본 수준의 키보드 지원을 제공하지만 복잡한 양식을 사용할 경우 바로 가기 키에 대한 지원을 추가해야 합니다. 이를 통해 키보드와 포인팅 디바이스를 모두 사용하는 사람에게도 훨씬 사용하기 편리한 응용 프로그램이 될 수 있습니다.
+앱의 키보드 탐색 및 활성화 구현뿐 아니라 앱 기능에 대한 바로 가기를 구현하는 것이 좋습니다. 탭 탐색은 기본 수준의 키보드 지원을 제공하지만 복잡한 양식을 사용할 경우 바로 가기 키에 대한 지원을 추가해야 합니다. 이를 통해 키보드와 포인팅 디바이스를 모두 사용하는 사람에게도 훨씬 사용하기 편리한 애플리케이션이 될 수 있습니다.
 
 *바로 가기*는 사용자가 앱 기능에 효율적으로 액세스할 수 있도록 하여 생산성을 향상하는 키보드 조합입니다. 다음과 같은 두 종류의 바로 가기가 있습니다.
 
@@ -239,7 +239,7 @@ XAML
 <span id="KEYBOARD_ACCESSIBILITY_AND_WINDOWS_PHONE"/>
 
 ## <a name="keyboard-accessibility-and-windows-phone"></a>키보드 접근성 및 Windows Phone
-Windows Phone 장치에는 일반적으로 전용 하드웨어 키보드가 없습니다. 그러나 SIP(Soft Input Panel)가 여러 가지 키보드 접근성 시나리오를 지원할 수 있습니다. 화면 읽기 프로그램은 **텍스트** SIP에서 삭제 알림을 포함한 텍스트 입력을 읽을 수 있습니다. 화면 읽기 프로그램은 사용자가 키를 검색하고 있음을 감지하고 검색한 키 이름을 소리 내어 읽을 수 있으므로 사용자가 손가락의 위치를 검색할 수 있습니다. 또한 키보드 지향 접근성 개념 일부를 키보드를 전혀 사용하지 않는 관련 보조 기술 동작에 매핑할 수 있습니다. 예를 들어 SIP에 Tab 키가 포함되지 않은 경우에도 내레이터는 Tab 키를 누르는 것과 동일한 터치 제스처를 지원하므로 UI의 컨트롤을 통과하는 유용한 탭 순서가 있는 것도 중요한 접근성 원칙입니다. 복잡한 컨트롤 내 일부를 탐색하는 데 사용되는 화살표 키도 내레이터 터치 제스처를 통해 지원됩니다. 포커스가 텍스트 입력용이 아닌 컨트롤에 도달하면 내레이터는 해당 컨트롤의 동작을 호출하는 제스처를 지원합니다.
+Windows Phone 디바이스에는 일반적으로 전용 하드웨어 키보드가 없습니다. 그러나 SIP(Soft Input Panel)가 여러 가지 키보드 접근성 시나리오를 지원할 수 있습니다. 화면 읽기 프로그램은 **텍스트** SIP에서 삭제 알림을 포함한 텍스트 입력을 읽을 수 있습니다. 화면 읽기 프로그램은 사용자가 키를 검색하고 있음을 감지하고 검색한 키 이름을 소리 내어 읽을 수 있으므로 사용자가 손가락의 위치를 검색할 수 있습니다. 또한 키보드 지향 접근성 개념 일부를 키보드를 전혀 사용하지 않는 관련 보조 기술 동작에 매핑할 수 있습니다. 예를 들어 SIP에 Tab 키가 포함되지 않은 경우에도 내레이터는 Tab 키를 누르는 것과 동일한 터치 제스처를 지원하므로 UI의 컨트롤을 통과하는 유용한 탭 순서가 있는 것도 중요한 접근성 원칙입니다. 복잡한 컨트롤 내 일부를 탐색하는 데 사용되는 화살표 키도 내레이터 터치 제스처를 통해 지원됩니다. 포커스가 텍스트 입력용이 아닌 컨트롤에 도달하면 내레이터는 해당 컨트롤의 동작을 호출하는 제스처를 지원합니다.
 
 바로 가기 키는 일반적으로 Windows Phone 앱에 적합하지 않습니다. SIP에 Control 키나 Alt 키가 없기 때문입니다.
 
@@ -250,4 +250,4 @@ Windows Phone 장치에는 일반적으로 전용 하드웨어 키보드가 없�
 * [접근성](accessibility.md)
 * [키보드 상호 작용](https://docs.microsoft.com/windows/uwp/input-and-devices/keyboard-interactions)
 * [터치 키보드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/TouchKeyboard)
-* [XAML 접근성 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
+* [XAML 접근성 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)

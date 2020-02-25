@@ -5,17 +5,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 지침, 모범 사례, 가시성
 ms.localizationpriority: medium
-ms.openlocfilehash: 6996b656c9bf161538e286dc4c2d63c1d2840bc8
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: 06d870fbc631611bcfc453698cd9aa4fc844da5d
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463945"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506808"
 ---
 # <a name="optimize-the-viewability-of-your-ad-units"></a>광고 단위의 가시성 최적화
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 [광고 성과 보고서](../publish/advertising-performance-report.md)에는 광고 단위에 대한 가시성 메트릭이 포함되어 있습니다. 광고 산업은 단지 전달된 광고 노출이 아니라 볼 수 있는 광고 노출에 가치를 두는 쪽으로 이동하고 있기 때문에 가시성은 중요한 메트릭입니다. 사용자가 광고를 볼 가능성이 높아지기 때문에 광고주는 볼 수 있는 광고 노출에 기대를 거는 경우가 많습니다.  
 

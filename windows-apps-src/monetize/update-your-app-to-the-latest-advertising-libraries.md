@@ -6,17 +6,17 @@ ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, AdMediatorControl, 마이그레이션
 ms.assetid: f8d5b2ad-fcdb-4891-bd68-39eeabdf799c
 ms.localizationpriority: medium
-ms.openlocfilehash: a8ccc8e9c76fc0f16bcdfc619d8048307fdfbc57
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: 2fa57e02574850704b6c43853980dde32c388557
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463885"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507087"
 ---
 # <a name="update-your-app-to-the-latest-advertising-libraries-for-banner-ads"></a>배너 광고용 최신 광고 라이브러리로 앱 업데이트
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 2017년 4월 1일부터는 지원되지 않는 광고 SDK 릴리스를 사용하는 앱에 더 이상 배너 광고가 제공되지 않습니다. **AdControl**을 사용하여 유니버설 Windows 플랫폼(UWP) 앱에 배너 광고를 게시하는 경우 이 문서의 정보를 사용하여 지원되지 않는 광고 SDK를 사용하고 있지 않은지 확인하고, 지원되는 SDK로 앱을 마이그레이션하세요.
 

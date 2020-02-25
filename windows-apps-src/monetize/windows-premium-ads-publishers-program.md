@@ -5,17 +5,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고
 ms.localizationpriority: medium
-ms.openlocfilehash: ba5708b953efff3b4a7c52286ae1a74c43d3d211
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: 06421b92106baec5a846db5fc7adf8ef3b742bff
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463755"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507077"
 ---
 # <a name="windows-premium-ads-publishers-program"></a>Windows 프리미엄 광고 게시자 프로그램
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 Windows 개발자가 광고를 통해 앱에서 수익을 창출하도록 지원하기 위해, [Windows 프리미엄 광고 게시자 프로그램](https://www.windowspremiumapps.com)을 시행합니다. 이 프로그램은 사용량, 참여도, 경험 면에서 최고인 광고 지원 앱과 게임을 선별해 구성한 컬렉션입니다. 이 앱과 게임은 가시성 인증을 받았으며, 전 세계적으로 참여도가 높은 식별 가능 사용자를 보유하고 있습니다.
 

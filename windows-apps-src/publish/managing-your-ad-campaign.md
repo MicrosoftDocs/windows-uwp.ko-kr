@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d79e65b2937e7ec6db57e00b31b44b1796203a50
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: 7f7ee8f95ad1471c73d5ac9e7bb08796dadd6411
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463975"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507027"
 ---
 # <a name="manage-your-ad-campaign"></a>광고 캠페인 관리
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 [파트너 센터](https://partner.microsoft.com/dashboard)에서 앱에 대 한 광고 캠페인을 관리 하려면 왼쪽 탐색 메뉴에서 **관심** 영역을 확장 한 다음 **ad 캠페인**을 선택 합니다. 앱과 연결된 모든 광고 캠페인과 각 광고 캠페인의 노출 수, 클릭 수 및 설치 수가 표시됩니다. 노출 수, 클릭 수 및 설치 수에 대한 자세한 내용은 [광고 캠페인 보고서](promote-your-app-report.md)에서 이러한 용어에 대한 정의를 참조하세요.
 

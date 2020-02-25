@@ -7,12 +7,12 @@ ms.date: 09/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 617511d23bcabe342abe7477f617d81cd01182e6
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 634f85ec64597f14210cf83fd67189f2f54bad4d
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257779"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521254"
 ---
 # <a name="high-contrast-themes"></a>고대비 테마  
 
@@ -82,7 +82,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 ## <a name="high-contrast-colors"></a>고대비 색
 
-*설정 > 접근성 > 고대비* 페이지에는 기본값으로 4가지 고대비 테마가 있습니다. 
+*설정 &gt; 접근성 &gt; 고대비* 페이지에는 기본적으로 4개의 고대비 테마가 있습니다. 
 
 
 ![고대비 설정](images/high-contrast-settings.png)  
@@ -148,7 +148,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 </Application.Resources>
 ```
 
-나중에 해당 앱에서 배경을 설정할 수 있습니다.
+나중에 해당 앱에서 이제 배경을 설정할 수 있습니다.
 
 ```xaml
 <Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
@@ -235,7 +235,7 @@ Windows에서는 OS 및 앱에 대해 고대비 테마가 지원되며, 사용�
 
 ## <a name="related-topics"></a>관련 항목  
 * [접근성](accessibility.md)
-* [UI 대비 및 설정 샘플](https://code.msdn.microsoft.com/windowsapps/High-Contrast-UI-Settings-9a310961)
-* [XAML 접근성 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
-* [XAML 고대비 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-high-contrast-style-c0ce936f)
+* [UI 대비 및 설정 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20high%20contrast%20style%20sample%20(Windows%208))
+* [XAML 접근성 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)
+* [XAML 고대비 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20high%20contrast%20style%20sample%20(Windows%208))
 * [**AccessibilitySettings**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.AccessibilitySettings)

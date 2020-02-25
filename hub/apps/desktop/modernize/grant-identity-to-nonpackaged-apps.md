@@ -1,6 +1,6 @@
 ---
 Description: 패키지 되지 않은 데스크톱 앱에 id를 부여 하 여 해당 앱에서 최신 Windows 10 기능을 사용할 수 있도록 하는 방법을 알아봅니다.
-title: 패키지 되지 않은 데스크톱 앱에 id 부여
+title: 패키지되지 않은 데스크톱 앱에 ID 부여
 ms.date: 10/25/2019
 ms.topic: article
 keywords: windows 10, 데스크톱, 패키지, id, MSIX, Win32
@@ -8,14 +8,14 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f355bba3087f58ed20800052371804048bc0006c
-ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
+ms.openlocfilehash: 10ed6b8e1bd5efce4c9d4429d91849b1333505b6
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73145618"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521354"
 ---
-# <a name="grant-identity-to-non-packaged-desktop-apps"></a>패키지 되지 않은 데스크톱 앱에 id 부여
+# <a name="grant-identity-to-non-packaged-desktop-apps"></a>패키지되지 않은 데스크톱 앱에 ID 부여
 
 <!--
 > [!NOTE]
@@ -50,7 +50,7 @@ Windows 10 Insider Preview 빌드 10.0.19000.0 부터는 앱과 함께 *스파�
 
 스파스 패키지를 지원 하기 위해 패키지 매니페스트 스키마는 이제 [ **\<속성\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-properties) 요소 아래에서 선택적 **\<allowexternalcontent\>** 요소를 지원 합니다. 이렇게 하면 패키지 매니페스트가 디스크의 특정 위치에서 패키지 외부의 콘텐츠를 참조할 수 있습니다.
 
-예를 들어, C:\Program Files\MyDesktopApp\,에 앱 실행 파일 및 기타 콘텐츠를 설치 하는 기존 패키지 되지 않은 데스크톱 앱이 있는 경우 **\<AllowExternalContent** 를 포함 하는 스파스 패키지를 만들 수 있습니다\>매니페스트의 요소입니다. 앱에 대 한 설치 프로세스 또는 앱을 처음으로 실행 하는 동안 스파스 패키지를 설치 하 고 앱이 사용할 외부 위치로 C:\Program Files\MyDesktopApp\를 선언할 수 있습니다.
+예를 들어, C:\Program Files\MyDesktopApp\,에 앱 실행 파일 및 기타 콘텐츠를 설치 하는 기존 패키지 되지 않은 데스크톱 앱이 있는 경우 매니페스트에 **\<AllowExternalContent\>** 요소를 포함 하는 스파스 패키지를 만들 수 있습니다. 앱에 대 한 설치 프로세스 또는 앱을 처음으로 실행 하는 동안 스파스 패키지를 설치 하 고 앱이 사용할 외부 위치로 C:\Program Files\MyDesktopApp\를 선언할 수 있습니다.
 
 ## <a name="create-a-package-manifest-for-the-sparse-package"></a>스파스 패키지에 대 한 패키지 매니페스트 만들기
 
@@ -61,7 +61,7 @@ Windows 10 Insider Preview 빌드 10.0.19000.0 부터는 앱과 함께 *스파�
 * 데스크톱 응용 프로그램의 id 특성을 설명 하는 [ **\<id\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소입니다.
 * [ **\<속성\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-properties) 요소의 **\<allowexternalcontent\>** 요소입니다. 이 요소에는 `true`값이 할당 되어야 합니다 .이를 통해 패키지 매니페스트는 디스크의 특정 위치에서 패키지 외부의 콘텐츠를 참조할 수 있습니다. 이후 단계에서는 설치 관리자 또는 앱에서 실행 되는 코드에서 스파스 패키지를 등록할 때 외부 위치의 경로를 지정 합니다. 패키지 자체에 없는 매니페스트에서 참조 하는 모든 콘텐츠는 외부 위치에 설치 해야 합니다.
 * [ **\<TargetDeviceFamily\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) 요소의 **MinVersion** 특성을 `10.0.19000.0` 이상 버전으로 설정 해야 합니다.
-* [ **\<응용 프로그램\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) 요소의 **TrustLevel = mediumil** 및 **runtimebehavior = Win32App** 특성은 스파스 패키지와 연결 된 데스크톱 앱이 표준 패키지 되지 않은 데스크톱과 유사 하 게 실행 되도록 선언 합니다. 레지스트리 및 파일 시스템 가상화와 기타 런타임 변경 없이 앱을 사용 합니다.
+* [ **\<응용 프로그램\>** ](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-application) 요소의 **TrustLevel = mediumil** 및 **runtimebehavior = Win32App** 특성은 스파스 패키지와 연결 된 데스크톱 앱이 레지스트리 및 파일 시스템 가상화 및 기타 런타임 변경을 제외 하 고 표준 패키지 되지 않은 데스크톱 앱과 유사 하 게 실행 되도록 선언 합니다.
 
 다음 예제에서는 스파스 패키지 매니페스트 (Appxmanifest.xml)의 전체 내용을 보여 줍니다. 이 매니페스트에는 패키지 id가 필요한 `windows.sharetarget` 확장이 포함 되어 있습니다.
 
@@ -196,7 +196,7 @@ private static bool registerSparsePackage(string externalLocation, string sparse
 
 ## <a name="sample"></a>샘플
 
-스파스 패키지를 사용 하 여 데스크톱 앱에 패키지 id를 부여 하는 방법을 보여 주는 완전히 작동 하는 샘플 앱은 [https://aka.ms/sparsepkgsample](https://aka.ms/sparsepkgsample)를 참조 하세요. 샘플 빌드 및 실행에 대 한 자세한 내용은 [이 블로그 게시물](https://blogs.windows.com/windowsdeveloper/2019/10/29/identity-registration-and-activation-of-non-packaged-win32-apps/#HBMFEM843XORqOWx.97)에 제공 되어 있습니다.
+스파스 패키지를 사용 하 여 데스크톱 앱에 패키지 id를 부여 하는 방법을 보여 주는 완전히 작동 하는 샘플 앱은 [https://github.com/microsoft/AppModelSamples/tree/master/Samples/SparsePackages](https://github.com/microsoft/AppModelSamples/tree/master/Samples/SparsePackages)를 참조 하세요. 샘플 빌드 및 실행에 대 한 자세한 내용은 [이 블로그 게시물](https://blogs.windows.com/windowsdeveloper/2019/10/29/identity-registration-and-activation-of-non-packaged-win32-apps/#HBMFEM843XORqOWx.97)에 제공 되어 있습니다.
 
 이 샘플에는 다음이 포함 됩니다.
 

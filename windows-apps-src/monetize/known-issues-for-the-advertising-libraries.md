@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 알려진 문제, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: 34c07a46d31ddf6c8f5b56ffd19059b4d225a72c
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: f39d8512398c43ea65037de82434e3740bac7ff2
+ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463965"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77506737"
 ---
 # <a name="known-issues-and-troubleshooting-for-ads-in-apps"></a>앱 광고의 알려진 문제점 및 문제 해결
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://aka.ms/ad-monetization-shutdown)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 이 항목은 Microsoft Advertising SDK 최신 릴리스의 알려진 문제를 목록으로 제공합니다. 추가 문제 해결 지침은 다음 항목을 참조하세요.
 
@@ -51,7 +51,7 @@ ms.locfileid: "77463965"
 
 앱에서 테스트 광고를 볼 수 있으면 코드가 작동하는 것이며 광고를 표시할 수 있습니다. 문제가 발생하면 [제품 지원](https://developer.microsoft.com/windows/support)에 문의하세요. 해당 페이지에서 **문의처**를 선택 합니다.
 
-[포럼](https://go.microsoft.com/fwlink/?LinkID=401264)에서 질문을 게시할 수도 있습니다.
+[포럼](https://social.msdn.microsoft.com/forums/windowsapps/en-US/home?category=windowsapps)에서 질문을 게시할 수도 있습니다.
 
 ## <a name="test-ads-are-showing-in-your-app-instead-of-live-ads"></a>라이브 광고가 아닌 테스트 광고가 앱에 표시됨
 
@@ -94,7 +94,7 @@ JavaScript/HTML 앱은 예약된 z-순서의 MAX-10 범위에 요소를 배치�
 
 ## <a name="more-information"></a>자세한 내용
 
-Microsoft Advertising SDK와 관련된 최근의 알려진 문제를 알아보고 질문을 게시하려면 [포럼](https://go.microsoft.com/fwlink/?LinkID=401264)을 방문하세요.
+Microsoft Advertising SDK와 관련된 최근의 알려진 문제를 알아보고 질문을 게시하려면 [포럼](https://social.msdn.microsoft.com/forums/windowsapps/en-US/home?category=windowsapps)을 방문하세요.
 
  
 

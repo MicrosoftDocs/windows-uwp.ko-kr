@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 397c301564c0d4799c6b41db209da9659725103d
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.openlocfilehash: 21049c995d467209b22fe8ea5c40d303911f2c2c
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77089309"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521292"
 ---
 # <a name="tutorial-modernize-a-wpf-app"></a>자습서: WPF 앱 현대화 
 
@@ -69,7 +69,7 @@ Visual Studio 2019을 사용 하 여 다음 작업 및 선택적 기능을 설�
 
 자습서를 시작 하기 전에 Contoso 지출 앱에 대 한 소스 코드를 다운로드 하 고 Visual Studio에서 코드를 빌드할 수 있는지 확인 합니다.
 
-1. [Appconsult 워크숍 리포지토리의](https://github.com/Microsoft/AppConsult-WinAppsModernizationWorkshop) **릴리스** 탭에서 앱 소스 코드를 다운로드 합니다. 직접 링크를 [https://aka.ms/wamwc](https://aka.ms/wamwc)합니다.
+1. [Appconsult 워크숍 리포지토리의](https://github.com/Microsoft/AppConsult-WinAppsModernizationWorkshop) **릴리스** 탭에서 앱 소스 코드를 다운로드 합니다. 직접 링크를 [https://github.com/microsoft/AppConsult-WinAppsModernizationWorkshop/releases](https://github.com/microsoft/AppConsult-WinAppsModernizationWorkshop/releases)합니다.
 2. Zip 파일을 열고 **C:\\** 드라이브의 루트에 모든 콘텐츠를 추출 합니다. **C:\WinAppsModernizationWorkshop**라는 폴더를 만듭니다.
 3. Visual Studio 2019를 열고 **C:\WinAppsModernizationWorkshop\Lab\Exercise1\01-Start\ContosoExpenses\ContosoExpenses.sln** 파일을 두 번 클릭 하 여 솔루션을 엽니다.
 4. **시작** 단추 또는 CTRL + F5 키를 눌러 CONTOSO 지출 WPF 프로젝트를 빌드, 실행 및 디버그할 수 있는지 확인 합니다.

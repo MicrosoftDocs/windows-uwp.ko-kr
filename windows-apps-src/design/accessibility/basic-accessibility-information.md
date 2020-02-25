@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d39d2f094dd85c29b51a19e1affcf0d292183ede
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: fa9ba2b8c9b327a51218dfc5f100c147f2d566e8
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257771"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521264"
 ---
 # <a name="expose-basic-accessibility-information"></a>기본적인 접근성 정보 표시  
 
@@ -33,7 +33,7 @@ ms.locfileid: "74257771"
 |--------------|-------------|
 | 정적 텍스트 | [  **TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 및 [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) 요소의 경우 접근성 있는 이름이 표시되는(내부) 텍스트에 따라 자동으로 결정됩니다. 해당 요소의 모든 텍스트는 이름으로 사용됩니다. [내부 텍스트의 이름](#name_from_inner_text)을 참조하세요. |
 | 이미지 | XAML [**Image**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) 요소에는 **img** 및 유사한 요소의 HTML **alt** 특성과 완전히 유사한 특징이 없습니다. [  **AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name)을 사용하여 이름을 제공하거나 캡션 기술을 사용합니다. [이미지의 접근성 있는 이름](#images)을 참조하세요. |
-| 양식 요 소 | 양식 요소의 접근성 있는 이름은 해당 요소에 대해 표시되는 레이블과 동일해야 합니다. [레이블 및 LabeledBy](#labels)를 참조하세요. |
+| Form 요소 | 양식 요소의 접근성 있는 이름은 해당 요소에 대해 표시되는 레이블과 동일해야 합니다. [레이블 및 LabeledBy](#labels)를 참조하세요. |
 | 단추 및 링크 | 기본적으로 단추 또는 링크의 접근성 있는 이름은 표시되는 텍스트를 기반으로 하며, [내부 텍스트의 이름](#name_from_inner_text)에 설명된 것과 동일한 규칙을 사용합니다. 단추에 이미지만 포함된 경우 [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name)을 사용하여 단추의 의도된 동작 중 텍스트 전용 동작만 제공합니다. |
 
 패널과 같은 대부분의 컨테이너 요소는 해당 콘텐츠를 접근성 있는 이름으로 승격시키지 않습니다. 이 콘텐츠는 컨테이너가 아닌 이름 및 해당 역할을 보고해야 하는 항목 콘텐츠이기 때문입니다. 컨테이너 요소는 보조 기술 논리에서 해당 요소를 트래버스할 수 있도록 Microsoft UI 자동화 표현에 자식이 있는 요소로 보고할 수 있습니다. 그러나 보조 기술 사용자는 일반적으로 컨테이너에 대해 알 필요가 없으므로 대부분의 컨테이너에 이름이 지정하지 않습니다.
@@ -141,7 +141,7 @@ XAML
 <span id="ACCESSIBLE_NAMES_FROM_DYNAMIC_DATA"/>
 
 ## <a name="accessible-names-from-dynamic-data"></a>동적 데이터의 접근성 있는 이름  
-Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 원본에서 제공되는 값을 표시하는 데 사용할 수 있는 많은 컨트롤을 지원합니다. 데이터 항목으로 목록을 채우는 경우 초기 목록이 채워지면 데이터 바인딩 목록 항목의 접근성 있는 이름을 설정하는 기술을 사용해야 할 수 있습니다. 자세한 내용은 [XAML 접근성 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)의 "시나리오 4"를 참조하세요.
+Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 원본에서 제공되는 값을 표시하는 데 사용할 수 있는 많은 컨트롤을 지원합니다. 데이터 항목으로 목록을 채우는 경우 초기 목록이 채워지면 데이터 바인딩 목록 항목의 접근성 있는 이름을 설정하는 기술을 사용해야 할 수 있습니다. 자세한 내용은 [XAML 접근성 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)의 "시나리오 4"를 참조하세요.
 
 <span id="Accessible_names_and_localization"/>
 <span id="accessible_names_and_localization"/>
@@ -157,5 +157,5 @@ Windows는 *데이터 바인딩*이라는 기능을 통해 연결된 데이터 �
 ## <a name="related-topics"></a>관련 항목  
 * [접근성](accessibility.md)
 * [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name)
-* [XAML 접근성 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-accessibility-sample-d63e820d)
+* [XAML 접근성 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)
 * [접근성 테스트](accessibility-testing.md)
