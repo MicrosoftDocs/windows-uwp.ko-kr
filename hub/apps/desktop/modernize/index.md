@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: c2e7524605847009dae415d93794658dd08a79a3
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.openlocfilehash: 0c86290c9765eba5186e777f8de7b3b86967be9e
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77089399"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521344"
 ---
 # <a name="modernize-your-desktop-apps"></a>데스크톱 앱 현대화
 
@@ -20,7 +20,7 @@ Windows 10 및 UWP(유니버설 Windows 플랫폼)는 데스크톱 앱에서 최
 이 문서는 현재 데스크톱 앱에서 사용할 수 있는 Windows 10 및 UWP 기능을 설명합니다. 이 문서에 설명된 많은 기능을 사용하도록 기존 앱을 현대화하는 방법을 보여주는 자습서는 [WPF 앱 현대화](modernize-wpf-tutorial.md) 자습서를 참조하세요.
 
 > [!NOTE]
-> Windows 10으로 데스크톱 앱을 마이그레이션하기 위한 지원이 필요한가요? [Desktop App Assure](https://docs.microsoft.com/FastTrack/win-10-desktop-app-assure) 서비스는 앱을 Windows 10으로 이식하려는 개발자에게 직접적인 무료 지원을 제공합니다. 이 프로그램은 모든 ISV 및 적격 엔터프라이즈에서 사용할 수 있습니다. 자격 및 프로그램 자체에 대한 자세한 내용은 [https://aka.ms/DesktopAppAssure](https://aka.ms/DesktopAppAssure)를 참조하세요. 당장 시작하려면 [요청을 제출](https://aka.ms/DesktopAppAssureRequest)하세요.
+> Windows 10으로 데스크톱 앱을 마이그레이션하기 위한 지원이 필요한가요? [Desktop App Assure](https://docs.microsoft.com/FastTrack/win-10-desktop-app-assure) 서비스는 앱을 Windows 10으로 이식하려는 개발자에게 직접적인 무료 지원을 제공합니다. 이 프로그램은 모든 ISV 및 적격 엔터프라이즈에서 사용할 수 있습니다. 자격 및 프로그램 자체에 대한 자세한 내용은 [https://docs.microsoft.com/fasttrack/win-10-app-assure-assistance-offered](https://docs.microsoft.com/fasttrack/win-10-app-assure-assistance-offered)를 참조하세요. 당장 시작하려면 [요청을 제출](https://fasttrack.microsoft.com/dl/daa)하세요.
 
 ## <a name="msix-packages"></a>MSIX 패키지
 

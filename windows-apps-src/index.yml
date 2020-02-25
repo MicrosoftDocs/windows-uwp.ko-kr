@@ -11,12 +11,12 @@ metadata:
   ms.date: 09/24/2019
   ms.technology: uwp-conceptual-docs
   keywords: windows uwp, universal windows platform, Windows Runtime APIs, windows api, windows api ref, winrt api, windows api reference, uwp api, uwp api reference, develop uwp, design uwp, publish uwp
-  ms.openlocfilehash: 4d1ca7d03cdbc3dd8eccd2e22ae88c217672179c
-  ms.sourcegitcommit: 50b0b6d6571eb80aaab3cc36ab4e8d84ac4b7416
+  ms.openlocfilehash: 688f34e3e2316133713e71c99763d86255914aee
+  ms.sourcegitcommit: b3ff4e7ec42a4234774b47ac39940e5ff7817ccd
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/27/2019
-  ms.locfileid: "71329609"
+  ms.lasthandoff: 02/21/2020
+  ms.locfileid: "77544993"
 landingContent:
 - title: UWP를 처음 사용하는 경우
   linkLists:
@@ -35,7 +35,7 @@ landingContent:
     - text: Microsoft Learn에서 Windows 과정 찾아보기
       url: https://docs.microsoft.com/learn/browse/?products=windows&resource_type=module
     - text: UWP 앱이란 무엇인가요?
-      url: /get-started/universal-application-platform-guide.md
+      url: get-started/universal-application-platform-guide.md
 - title: 최신 기능
   linkLists:
   - linkListType: whats-new
