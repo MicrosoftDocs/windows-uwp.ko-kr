@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 35ddf17d121a06e453e9b51e023e859f0c1cd0ab
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.openlocfilehash: b6bd46bcdec639cee2bc867c2c4e71cccbb13cfb
+ms.sourcegitcommit: a2a3c887f6da47a6638ce5286199ea31ee7780e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77089349"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77606695"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML 아일랜드를 사용 하 여 WPF 앱에서 사용자 지정 UWP 컨트롤 호스팅
 
@@ -91,7 +91,7 @@ WPF (또는 Windows Forms) 앱에서 사용자 지정 UWP 컨트롤을 호스팅
     ```csharp
     namespace MyUWPApp
     {
-        sealed partial class App : Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication
+        public sealed partial class App : Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication
         {
             public App()
             {
@@ -305,7 +305,7 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용
         </PropertyGroup>
         ```
 
-    4. 프로젝트 파일을 저장 하 고 닫습니다.
+    4. 프로젝트 파일을 저장하고 닫습니다.
     5. WPF 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **프로젝트 다시 로드**를 선택 합니다.
 
 4. 패키징 프로젝트를 빌드하고 실행 합니다. WPF가 실행 되 고 UWP 사용자 지정 컨트롤이 예상 대로 표시 되는지 확인 합니다.
