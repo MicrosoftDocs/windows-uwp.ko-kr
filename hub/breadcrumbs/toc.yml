@@ -16,6 +16,9 @@
             - name: 데스크톱 앱 현대화
               tocHref: /windows/apps/desktop/modernize/
               topicHref: /windows/apps/desktop/modernize/
+            - name: .NET의 ETW 추적 처리
+              tocHref: /windows/apps/trace-processing/
+              topicHref: /windows/apps/trace-processing/overview
         - name: 개발 환경
           tocHref: /windows/dev-environment/
           topicHref: /windows/dev-environment/

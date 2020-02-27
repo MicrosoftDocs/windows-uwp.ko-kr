@@ -71,7 +71,27 @@
     - name: 음성
       href: apps/speech.md
     - name: 기능 및 기술
-      href: apps/features-and-technologies.md
+      items:
+        - name: 개요
+          href: apps/features-and-technologies.md
+        - name: .NET의 ETW 추적 처리
+          items:
+            - name: 개요
+              href: apps/trace-processing/overview.md
+            - name: 첫 번째 추적 처리
+              href: apps/trace-processing/quickstart.md
+            - name: 추적 데이터 액세스
+              href: apps/trace-processing/tutorial.md
+            - name: TraceProcessor 확장
+              href: apps/trace-processing/extensibility.md
+            - name: 기호 로드
+              href: apps/trace-processing/symbols.md
+            - name: 스트리밍 사용
+              href: apps/trace-processing/streaming.md
+            - name: 샘플
+              href: 'https://github.com/microsoft/eventtracing-processing-samples'
+            - name: 참조
+              href: apps/trace-processing/reference.md
     - name: 최신 문서 업데이트
       href: apps/whats-new/latest-doc-updates.md
 - name: Windows를 사용하여 빌드

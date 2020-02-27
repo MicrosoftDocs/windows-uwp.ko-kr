@@ -1,0 +1,54 @@
+### YamlMime:Landing
+title: .NET TraceProcessing 설명서
+summary: .NET TraceProcessing은 ETW(Windows용 이벤트 추적) 파일에서 데이터에 쉽게 액세스할 수 있는 NuGet 패키지입니다.
+metadata:
+  title: 설명서-.NET TraceProcessing
+  description: .NET TraceProcessing은 ETW(Windows용 이벤트 추적) 파일에서 데이터에 쉽게 액세스할 수 있는 NuGet 패키지입니다.
+  ms.prod: traceprocessor
+  ms.topic: landing-page
+  author: maiak
+  ms.author: maiak
+  ms.date: 02/20/2020
+  ms.openlocfilehash: e518ba18d21fce24f58b2dca6a28d3b48b40b06d
+  ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 02/26/2020
+  ms.locfileid: "77629124"
+landingContent:
+- title: .NET TraceProcessing 정보
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: .NET TraceProcessing이란?
+      url: overview.md
+- title: 시작
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: 첫 번째 추적 처리
+      url: quickstart.md
+- title: 개발
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 추적 데이터 액세스
+      url: tutorial.md
+    - text: TraceProcessor 확장
+      url: extensibility.md
+    - text: 기호 로드
+      url: symbols.md
+    - text: 스트리밍 사용
+      url: streaming.md
+- title: 샘플
+  linkLists:
+  - linkListType: sample
+    links:
+    - text: 샘플 찾기
+      url: https://github.com/microsoft/eventtracing-processing-samples
+- title: 참조
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: API 참조
+      url: reference.md
