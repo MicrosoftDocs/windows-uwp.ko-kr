@@ -1,28 +1,16 @@
 {
   "build": {
-    "content": [
+    "content":
+      [
       {
-        "files": [
-          "**/**.md",
-          "**/**.yml"
-        ],
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE"
-        ]
+          "files": ["**/**.md", "**/**.yml"],
+          "exclude": ["**/obj/**", "**/includes/**", "README.md", "LICENSE", "LICENSE-CODE"]
       }
     ],
     "resource": [
       {
-        "files": [
-          "**/images/**"
-        ],
-        "exclude": [
-          "**/obj/**"
-        ]
+          "files": ["**/images/**"],
+          "exclude": ["**/obj/**"]
       }
     ],
     "overwrite": [],
@@ -48,13 +36,17 @@
       ]
     },
     "fileMetadata": {
-      "ms.prod": {
+      "ms.prod":
+      {
+        "apps/trace-processing/**.md": "traceprocessor",
         "python/**.md": "dev-environment",
         "nodejs/**.md": "dev-environment",
         "dev-environment/**.md": "dev-environment"
       },
-      "ms.technology": {
+      "ms.technology":
+      {
         "apps/**.md": "apps",
+        "apps/trace-processing/**.md": "",
         "python/**.md": "windows-python",
         "nodejs/**.md": "windows-nodejs"
       }
