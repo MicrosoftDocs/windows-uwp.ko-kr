@@ -1,6 +1,6 @@
 ### YamlMime:Hub
-title: Windows 설명서
-summary: 소프트웨어 개발자, 하드웨어 엔지니어 및 IT 전문가를 위한 정보입니다.
+title: Windows 기술 설명서
+summary: 애플리케이션 개발자, 하드웨어 개발자 및 IT 전문가를 위한 정보
 brand: windows
 metadata:
   title: Windows 설명서 | Microsoft Docs
@@ -9,61 +9,27 @@ metadata:
   ms.author: tedhudek
   ms.topic: hub-page
   uhfHeaderId: MSDocsHeader-DocsL1
-  ms.openlocfilehash: 50a82a07d74e44746858e0800e2ff2007b5385e8
-  ms.sourcegitcommit: 860e8303da3e36624f603ce3273d68911c696e5d
+  ms.openlocfilehash: 588fb1ddf7581867d705d531c3459a6962f07d56
+  ms.sourcegitcommit: cfba95a96202c4250de845115d1b99361412a779
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72777263"
-highlightedContent:
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77903320"
+productDirectory:
   items:
-  - title: Visual Studio 및 Windows SDK 받기
-    itemType: download
-    url: https://developer.microsoft.com/windows/downloads
-  - title: WDK 다운로드
-    itemType: download
-    url: https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk
-  - title: 참가자 프로그램에 참여하세요.
-    itemType: overview
-    url: https://docs.microsoft.com/windows-insider
-  - title: 기술 향상
-    itemType: learn
-    url: https://docs.microsoft.com/learn/browse/?products=m365%2Cwindows
-additionalContent:
-  sections:
-  - items:
-    - title: 앱 개발
-      links:
-      - text: Windows 10 앱 작성 시작
-        url: https://docs.microsoft.com/windows/apps
-      - text: 앱에 Windows 10 기능 추가
-        url: https://docs.microsoft.com/windows/apps/desktop/modernize/
-      - text: 데스크톱 앱 빌드
-        url: https://docs.microsoft.com/windows/apps/desktop/
-      - text: Python, Node.js 및 Linux용 Windows 하위 시스템으로 개발
-        url: https://docs.microsoft.com/windows/dev-environment/
-      - text: 코드 샘플 찾기
-        url: https://developer.microsoft.com/windows/samples
-    - title: 하드웨어 개발
-      links:
-      - text: 디바이스 빌드에 대해 알아보기
-        url: https://docs.microsoft.com/windows-hardware/get-started/index
-      - text: 디바이스 드라이버 개발
-        url: https://docs.microsoft.com/windows-hardware/drivers
-      - text: Windows 이미지 만들기
-        url: https://docs.microsoft.com/windows-hardware/manufacture/
-      - text: 성능 및 호환성 테스트
-        url: https://docs.microsoft.com/windows-hardware/test
-      - text: 드라이버 샘플 찾기
-        url: https://docs.microsoft.com/samples/browse/?products=windows-wdk
-    - title: IT 관리자
-      links:
-      - text: Windows 10 구성 및 배포
-        url: https://docs.microsoft.com/windows/windows-10/
-      - text: Windows 10 릴리스 정보 찾기
-        url: https://docs.microsoft.com/windows/release-information/
-      - text: Windows Server 관리
-        url: https://docs.microsoft.com/windows-server/
-      - text: 비즈니스용 Microsoft Store 시작
-        url: https://docs.microsoft.com/microsoft-store/
-  footer: '[블로그](https://blogs.windows.com/) - [Twitter](https://twitter.com/windowsdocs) - [Stack Overflow](https://stackoverflow.com/questions/tagged/windows) - [개발자 커뮤니티](https://social.msdn.microsoft.com/Forums/windowsdesktop)'
+  - title: 애플리케이션 개발자
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
+    summary: Windows PC 및 기타 디바이스용 애플리케이션과 솔루션을 설계, 개발 및 배포합니다.
+    url: /windows/apps/
+  - title: 하드웨어 개발자
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
+    summary: Windows PC 및 기타 디바이스용 하드웨어와 디바이스 드라이버를 설계, 개발 및 배포합니다.
+    url: https://docs.microsoft.com/windows-hardware/drivers/
+  - title: IT 전문가용 Windows 10
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
+    summary: Windows 10을 실행하는 디바이스를 평가, 계획, 배포, 보호 및 관리합니다.
+    url: https://docs.microsoft.com/windows/windows-10/
+  - title: IT 전문가용 Windows Server
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
+    summary: Windows Server에서 연결된 애플리케이션, 네트워크 및 웹 서비스를 빌드하고 배포합니다.
+    url: https://docs.microsoft.com/windows-server/
