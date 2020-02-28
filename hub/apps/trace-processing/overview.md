@@ -5,14 +5,14 @@ author: maiak
 ms.author: maiak
 ms.date: 02/23/2020
 ms.topic: overview
-ms.openlocfilehash: 1283a6b183673cbfb0d3d27290fc24ae6b020302
-ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+ms.openlocfilehash: bc2ec3035e097a8cab15b556d1b1793385b8aeb9
+ms.sourcegitcommit: 7f1b64f62bc3a82ebcd3807c809363df46919195
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629075"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705758"
 ---
-# <a name="process-event-tracing-for-windows-etw-traces-in-net"></a>.NET의 ETW (Process ETW(Windows용 이벤트 추적)) 추적
+# <a name="process-etw-traces-in-net"></a>.NET의 프로세스 ETW 추적
 
 [ETW (ETW(Windows용 이벤트 추적))](https://docs.microsoft.com/windows/win32/etw/event-tracing-portal) 는 Windows 운영 체제에 기본 제공 되는 강력한 추적 컬렉션 시스템입니다. Windows는 컨텍스트 전환, 메모리 할당, 프로세스 만들기 및 종료와 같은 이벤트에 대 한 커널까지 시스템 동작에 대 한 데이터를 포함 하 여 ETW와 긴밀 하 게 통합 됩니다. ETW에서 사용할 수 있는 시스템 차원의 데이터를 사용 하면 전체 시스템의 여러 구성 요소 간의 상호 작용을 확인 해야 하는 종단 간 성능 분석과 기타 질문에 적합 합니다.
 
@@ -28,7 +28,7 @@ Microsoft 내에서는 ETW 추적을 사용 하 여 Windows의 새 빌드 성능
 
 다음 단계는 [첫 번째 추적을 처리](quickstart.md)하는 것입니다.
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="related-topics"></a>관련 항목
 
 * [추적 데이터 액세스](tutorial.md)
 * [TraceProcessor 확장](extensibility.md)
