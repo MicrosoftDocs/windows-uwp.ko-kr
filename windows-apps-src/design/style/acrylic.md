@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 55d8ed5fa1e3c4a7ffffaf47583eca3796f081cf
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: c6995ab6116d4e3bda8e21c397ab3b4985732763
+ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683986"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77639770"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 
@@ -235,7 +235,7 @@ XAML 컨트롤 갤러리 앱이 설치된 경우 <a href="xamlcontrolsgallery:/i
 다음 샘플은 코드에서 AcrylicBrush를 선언하는 방법을 보여줍니다. 앱에서 여러 OS 대상을 지원하는 경우 사용자의 머신에서 이 API를 사용할 수 있는지 확인해야 합니다.
 
 ```csharp
-if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.XamlCompositionBrushBase"))
+if (Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.AcrylicBrush"))
 {
     Windows.UI.Xaml.Media.AcrylicBrush myBrush = new Windows.UI.Xaml.Media.AcrylicBrush();
     myBrush.BackgroundSource = Windows.UI.Xaml.Media.AcrylicBackgroundSource.HostBackdrop;

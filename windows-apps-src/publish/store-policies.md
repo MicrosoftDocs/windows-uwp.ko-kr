@@ -1,18 +1,17 @@
 ---
 title: Microsoft Store 정책
 description: Microsoft Store 있는 제품은 인증 표준을 충족하고 고객에게 실로 유용하고 멋진 경험을 제공하며 Microsoft Store에 적합한 콘텐츠를 제공해야 합니다.
-layout: LandingPage
-ms.date: 03/05/2019
+ms.date: 10/01/2019
 ms.topic: article
 keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
-ms.openlocfilehash: 5086353adbc07e265f02e12f998ae655cd512d48
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: a68247637395c3f68bf1140479bc94cb8e0fcc33
+ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258974"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77607257"
 ---
 # <a name="microsoft-store-policies"></a>Microsoft Store 정책
 
@@ -376,7 +375,7 @@ Xbox Live 게임 제품은 다음과 같은 서비스 이용 요구 사항을 �
 
 **10.13.10**
 
-게임 시스템을 에뮬레이션하는 제품은 어떤 장치 패밀리에서도 허용되지 않습니다.
+게임 시스템을 에뮬레이션하는 제품은 어떤 디바이스 패밀리에서도 허용되지 않습니다.
 
 **10.13.11**
 
@@ -403,7 +402,7 @@ Microsoft Store에서 배포하기 위해 제공되는 콘텐츠 및 메타데�
 
 ### <a name="112-content-including-names-logos-original-and-third-party"></a>11.2 이름, 로고, 원본 및 제3자를 포함하는 콘텐츠
 
-제품의 모든 콘텐츠와 연결된 메타데이터는 응용 프로그램 공급자가 원래 만들거나, 제3자 권한 보유자로부터 적절한 사용 허가를 받거나, 권한 보유자가 허용한 대로 사용하거나, 법률에 허용된 대로 사용해야 합니다.
+제품의 모든 콘텐츠와 연결된 메타데이터는 애플리케이션 공급자가 원래 만들거나, 제3자 권한 보유자로부터 적절한 사용 허가를 받거나, 권한 보유자가 허용한 대로 사용하거나, 법률에 허용된 대로 사용해야 합니다.
 
 ### <a name="113-risk-of-harm"></a>11.3 유해성
 

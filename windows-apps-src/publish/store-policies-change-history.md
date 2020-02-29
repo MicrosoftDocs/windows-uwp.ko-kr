@@ -1,18 +1,17 @@
 ---
 title: Microsoft Store 정책에 대한 변경 내용
 description: Microsoft Store 정책에 대한 변경 내용
-layout: LandingPage
-ms.date: 03/05/2019
+ms.date: 10/01/2019
 ms.topic: article
 keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: D451D271-A6CA-4B46-AE99-C2269E8A078C
-ms.openlocfilehash: 879a400d22b3032bb4ee3f3f378a85f04ad73355
-ms.sourcegitcommit: 98343e851f25a11ae02fc739477f5316fe8fcb95
+ms.openlocfilehash: 3fbdc8e4831a39386396dc2c1dad25581f12fbf9
+ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71705562"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77607273"
 ---
 # <a name="change-history-for-microsoft-store-policies"></a>Microsoft Store 정책에 대한 변경 내용
 

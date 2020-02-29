@@ -1,18 +1,17 @@
 ---
 title: Microsoft Store 정책 및 준수 사항
 description: 이 섹션에는 Microsoft Store 앱 및 콘텐츠에 적용되는 Microsoft Store 정책 및 앱 품질 기준과 개발자가 따라야 하는 준수 사항이 포함되어 있습니다.
-layout: LandingPage
-ms.date: 10/26/2017
+ms.date: 02/25/2020
 ms.topic: article
 keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: 9DA14ADF-B4FB-4EC8-8D63-4B9152476BE0
-ms.openlocfilehash: 624b40fd5980fe66bbdf538845d81082e91c5aec
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: a58ccb4ae9af163b84cc1f5b05a7b4784ac3749c
+ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66826440"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77607268"
 ---
 # <a name="store-policies-and-code-of-conduct"></a>Microsoft Store 정책 및 준수 사항
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a91c080805bca5d536aad3755ca7edf052d1fe0e
-ms.sourcegitcommit: b8087f8b6cf8367f8adb7d6db4581d9aa47b4861
+ms.openlocfilehash: ffd5481fec0ebf6db24d9af95b8a11d05a043170
+ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67414056"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521224"
 ---
 # <a name="contributing-to-uwp-conceptual-documentation"></a>UWP 개념 문서에 참여
 
@@ -56,4 +56,4 @@ Microsoft 직원인 경우 [프라이빗 콘텐츠 리포지토리](https://gith
 
 직접 편집하는 대신 문서에 대한 피드백을 제공하려면 [공개 리포지토리에서 이슈를 만들 수 있습니다](https://github.com/MicrosoftDocs/windows-uwp/issues). **이슈** 탭을 선택하고 **새 이슈** 단추를 선택합니다. 토픽 제목과 페이지 URL을 꼭 포함해야 합니다. 이슈는 검토를 위해 UWP 문서 팀의 구성원에게 할당됩니다.
 
-* 내부 이슈의 경우 [WDG 콘텐츠 요청 도구](https://aka.ms/pubrequest)를 사용합니다.
+* 내부 이슈의 경우 [WDG 콘텐츠 요청 도구](http://sesuw2-iis02a/WSCPubRequest/WindowsContentRequestTool.aspx)를 사용합니다.

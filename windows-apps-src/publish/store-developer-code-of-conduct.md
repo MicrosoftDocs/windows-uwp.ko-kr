@@ -1,18 +1,17 @@
 ---
 title: 개발자 준수 사항
-description: Microsoft Store용 응용 프로그램 개발자는 앱 개발자 계약 및 Microsoft와 체결한 다른 모든 라이선스 또는 계약 조건을 준수해야 합니다.
-layout: LandingPage
-ms.date: 10/26/2017
+description: Microsoft Store용 애플리케이션 개발자는 앱 개발자 계약 및 Microsoft와 체결한 다른 모든 라이선스 또는 계약 조건을 준수해야 합니다.
+ms.date: 02/25/2020
 ms.topic: article
 keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: 2B84B877-794A-468F-A478-DA09E4694513
-ms.openlocfilehash: a9e96431594cf1a046741659011e546807294f7a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: d81333b38908a10f88d886d766353aae455b1f47
+ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66826450"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77607241"
 ---
 # <a name="developer-code-of-conduct"></a>개발자 준수 사항
 
