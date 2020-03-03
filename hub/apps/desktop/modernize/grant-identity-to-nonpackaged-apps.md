@@ -1,19 +1,19 @@
 ---
 Description: 패키지 되지 않은 데스크톱 앱에 id를 부여 하 여 해당 앱에서 최신 Windows 10 기능을 사용할 수 있도록 하는 방법을 알아봅니다.
 title: 패키지되지 않은 데스크톱 앱에 ID 부여
-ms.date: 10/25/2019
+ms.date: 02/28/2020
 ms.topic: article
 keywords: windows 10, 데스크톱, 패키지, id, MSIX, Win32
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 10ed6b8e1bd5efce4c9d4429d91849b1333505b6
-ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
+ms.openlocfilehash: ae05a00cac19fdd349aa48160b88cde6b84e26b0
+ms.sourcegitcommit: 620e4a51e2486ec2cb7190176b3d9bf3d7b5b6af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77521354"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78222029"
 ---
 # <a name="grant-identity-to-non-packaged-desktop-apps"></a>패키지되지 않은 데스크톱 앱에 ID 부여
 
@@ -137,7 +137,7 @@ SignTool.exe sign /fd SHA256 /a /f <path to certificate>\MyCertificate.pfx  /p <
 
 ### <a name="add-the-package-identity-metadata-to-your-desktop-application-manifest"></a>데스크톱 응용 프로그램 매니페스트에 패키지 id 메타 데이터 추가
 
-또한 데스크톱 앱과 함께 [side-by-side 응용 프로그램 매니페스트](https://docs.microsoft.com/windows/win32/sbscs/application-manifests) 를 포함 하 고 앱의 id 특성을 선언 하는 특성을 사용 하 여 **\<.msix\>** 요소를 포함 해야 합니다. 이러한 특성의 값은 실행 파일이 시작 될 때 OS에서 앱의 id를 확인 하는 데 사용 됩니다.
+또한 데스크톱 앱과 함께 [side-by-side 응용 프로그램 매니페스트](https://docs.microsoft.com/windows/win32/sbscs/application-manifests) 를 포함 하 고 앱의 id 특성을 선언 하는 특성을 사용 하 여 [&lt;.msix&gt;](https://docs.microsoft.com/windows/win32/sbscs/application-manifests#msix) 요소를 포함 해야 합니다. 이러한 특성의 값은 실행 파일이 시작 될 때 OS에서 앱의 id를 확인 하는 데 사용 됩니다.
 
 다음 예제에서는 **\<.msix\>** 요소가 포함 된 side-by-side 응용 프로그램 매니페스트를 보여 줍니다.
 
