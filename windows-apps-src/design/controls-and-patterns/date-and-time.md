@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e489aa8cbf8b63885f039847b291404393444e9
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 13901e044cbf6a14ac0ede6e9ed0f451859e49a1
+ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71339383"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77629154"
 ---
 # <a name="calendar-date-and-time-controls"></a>달력, 날짜 및 시간 컨트롤
 
@@ -87,7 +87,7 @@ ms.locfileid: "71339383"
 
 ### <a name="time-picker"></a>시간 선택기
 
-**TimePicker**는 약속 또는 출발 시간 등에 대한 단일 시간 값을 선택하는 데 사용합니다. 사용자가 설정하거나 코드에 설정하는 정적 디스플레이이지만 현재 시간을 표시하도록 업데이트되지는 않습니다. 
+**TimePicker**는 약속 또는 출발 시간 등에 대한 단일 시간 값을 선택하는 데 사용합니다. 사용자가 설정하거나 코드에 설정하는 정적 디스플레이이지만 현재 시간을 표시하도록 업데이트되지는 않습니다.
 
 진입점에 선택한 시간이 표시되고 사용자가 진입점을 선택하면 선택할 수 있게 선택기 화면이 가운데에서 세로로 확장됩니다. 이 시간 선택 컨트롤은 다른 UI에 겹쳐지며 다른 UI를 보이지 않도록 합니다.
 
@@ -110,10 +110,10 @@ XAML 날짜 컨트롤은 Windows에서 지원하는 각 일정 시스템을 지�
 
 시간 선택 컨트롤은 [Windows.Globalization.ClockIdentifiers](https://docs.microsoft.com/uwp/api/Windows.Globalization.ClockIdentifiers) 클래스에 지정된 각 시계 시스템을 지원합니다. [ClockIdentifier](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.timepicker.clockidentifier) 속성을 설정하여 12시간제 시계 또는 24시간제 시계를 사용할 수 있습니다. 속성의 형식이 문자열이지만 ClockIdentifiers 클래스의 정적 문자열 속성에 해당하는 값을 사용해야 합니다. 옵션은 다음과 같습니다. TwelveHour(문자열 "12HourClock") 및 TwentyFourHour(문자열 "24HourClock") "12HourClock"이 기본값입니다.
 
-
 ### <a name="datetime-and-calendar-values"></a>DateTime 및 Calendar 값
 
-XAML 날짜 및 시간 컨트롤에 사용된 날짜 개체는 프로그래밍 언어에 따라 서로 다른 구조를 가집니다. 
+XAML 날짜 및 시간 컨트롤에 사용된 날짜 개체는 프로그래밍 언어에 따라 서로 다른 구조를 가집니다.
+
 - C# 및 Visual Basic은 .NET의 일부인 [System.DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset) 구조를 사용합니다. 
 - C++/CX는 [Windows::Foundation::DateTime](https://docs.microsoft.com/windows/desktop/api/windows.foundation/ns-windows-foundation-datetime) 구조를 사용합니다. 
 
@@ -121,15 +121,19 @@ XAML 날짜 및 시간 컨트롤에 사용된 날짜 개체는 프로그래밍 �
 
 .NET은 또한 암시적으로 [DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset)으로 변환될 수 있는 [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime)이라는 형식을 지원합니다. 따라서 실제로 DateTimeOffset인 값을 설정하는 데 사용되는 .NET 코드에서 "DateTime" 형식이 사용되는 것을 볼 수 있습니다. DateTime과 DateTimeOffset 간의 차이점에 대한 자세한 내용은 [DateTimeOffset](https://docs.microsoft.com/dotnet/api/system.datetimeoffset) 클래스의 설명을 참조하세요.
 
-> **참고**&nbsp;&nbsp;Windows 런타임 XAML 파서에는 문자열을 DateTime/DateTimeOffset 개체인 날짜로 변환하는 변환 논리가 없기 때문에 날짜 개체를 사용하는 속성은 XAML 특성 문자열로 설정할 수 없습니다. 일반적으로 코드에서 이러한 값을 설정합니다. 가능한 다른 기술은 사용할 수 있는 날짜를 날짜 개체로 또는 데이터 컨텍스트에서 정의한 다음, 속성을 XAML 특성(날짜를 데이터로 액세스할 수 있는 [\{Binding\} 태그 확장](../../xaml-platform/binding-markup-extension.md) 식 참조)으로 설정하는 것입니다.
+> [!NOTE]
+> Windows 런타임 XAML 파서에는 문자열을 DateTime/DateTimeOffset 개체인 날짜로 변환하는 변환 논리가 없기 때문에 날짜 개체를 사용하는 속성은 XAML 특성 문자열로 설정할 수 없습니다. 일반적으로 코드에서 이러한 값을 설정합니다. 가능한 다른 기술은 사용할 수 있는 날짜를 날짜 개체로 또는 데이터 컨텍스트에서 정의한 다음, 속성을 XAML 특성(날짜를 데이터로 액세스할 수 있는 [\{Binding\} 태그 확장](../../xaml-platform/binding-markup-extension.md) 식 참조)으로 설정하는 것입니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
-* [XAML UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
+- [XAML UI 기본 사항 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
+- [Calendar 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Calendar)
+- [날짜 및 시간 형식 지정 샘플](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/DateTimeFormatting)
 
 ## <a name="related-topics"></a>관련 항목
 
-**개발자용(XAML)**
+### <a name="for-developers-xaml"></a>개발자용(XAML)
+
 - [CalendarView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView)
 - [CalendarDatePicker 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarDatePicker)
 - [DatePicker 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.DatePicker)

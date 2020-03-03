@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6290b142eee4aff7287b9542b645df89164d173b
-ms.sourcegitcommit: 34671182c26f5d0825c216a6cededc02b0059a9e
+ms.openlocfilehash: 137dbfe6471ee4d42e2a34e24512bdb658e985d0
+ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67286938"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77463765"
 ---
 # <a name="navigation-design-basics-for-uwp-apps"></a>UWP 앱의 탐색 디자인 기본 사항
 
@@ -27,17 +27,17 @@ ms.locfileid: "67286938"
 
 :::row:::
     :::column:::
-        ![navigation example 1](images/nav/nav-1.svg)
+        ![탐색 예제 1](images/nav/nav-1.svg)
 
 사용자에 여러 페이지를 순서대로 진행할 것을 요구할 수 있습니다.
     :::column-end:::
     :::column:::
-        ![navigation example 2](images/nav/nav-2.svg)
+        ![탐색 예제 2](images/nav/nav-2.svg)
 
 사용자가 어떤 페이지나 직접 점프할 수 있는 메뉴를 제공할 수 있습니다.
     :::column-end:::
     :::column:::
-        ![navigation example 3](images/nav/nav-3.svg)
+        ![탐색 예제 3](images/nav/nav-3.svg)
 
 모든 내용을 한 페이지에 넣고 필터링 메커니즘을 제공하여 콘텐츠를 볼 수 있도록 할 수 있습니다.
     :::column-end:::
@@ -67,16 +67,16 @@ ms.locfileid: "67286938"
 
 :::row:::
     :::column:::
-        ![do example](images/nav/do.svg)
+        ![권장 사항 예](images/nav/do.svg)
 
-        ![navview good](images/nav/navview-good.svg)
+        ![navview 양호](images/nav/navview-good.svg)
 
 친숙한 탐색 메뉴에 탐색 항목을 표시합니다.
     :::column-end:::
     :::column:::
-        ![don't example](images/nav/dont.svg)
+        ![금지 사항 예시](images/nav/dont.svg)
 
-        ![navview bad](images/nav/navview-bad.svg)
+        ![navview 불량](images/nav/navview-bad.svg)
 
 탐색 옵션이 많으면 사용자가 당황하게 됩니다.
     :::column-end:::
@@ -106,10 +106,10 @@ ms.locfileid: "67286938"
 
 :::row:::
     :::column:::
-        ![Pages arranged in a flat structure](images/nav/flat-lateral-structure.svg)
+        ![플랫 구조로 정렬된 페이지](images/nav/flat-lateral-structure.svg)
     :::column-end:::
     :::column span="2":::
-        ### Flat/lateral
+        ### <a name="flatlateral"></a>플랫/측면
 
 플랫/측면 구조에서 페이지는 나란히 표시됩니다. 순서에 관계 없이 페이지 간을 이동할 수 있습니다.
 
@@ -125,10 +125,10 @@ ms.locfileid: "67286938"
 
 :::row:::
     :::column:::
-        ![Pages arranged in a hierarchy](images/nav/hierarchical-structure.svg)
+        ![계층으로 정렬된 페이지](images/nav/hierarchical-structure.svg)
     :::column-end:::
     :::column span="2":::
-        ### Hierarchical
+        ### <a name="hierarchical"></a>계층형
 
 계층 구조에서 페이지는 트리와 유사한 구조로 구성됩니다. 각 자식 페이지에는 부모 페이지가 하나만 있지만 부모 페이지에는 자식 페이지가 여러 개 있을 수 있습니다. 자식 페이지로 가려면 부모 페이지를 통해 이동합니다.
 
@@ -145,10 +145,10 @@ ms.locfileid: "67286938"
 
 :::row:::
     :::column:::
-        ![an app with a hybrid structure](images/nav/combining-structures.svg)
+        ![하이브리드 구조를 사용하는 앱](images/nav/combining-structures.svg)
     :::column-end:::
     :::column span="2":::
-        ### Combining structures
+        ### <a name="combining-structures"></a>결합 구조
 
 굳이 하나의 구조를 선택할 필요는 없습니다. 잘 디자인된 많은 앱은 둘 다를 사용합니다. 앱은 최상위 수준 페이지를 어떤 순서로도 볼 수 있게 플랫 구조를 사용하고, 더 복잡한 관계에 있는 페이지에는 계층 구조를 사용합니다.
 
@@ -165,39 +165,51 @@ ms.locfileid: "67286938"
 
 :::row:::
     :::column:::
-        ![Frame image](images/nav/thumbnail-frame.svg)
+        ![프레임 이미지](images/nav/thumbnail-frame.svg)
     :::column-end:::
     :::column span="2":::
-        [**Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
+        [**프레임**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
 
 몇 가지 예외를 제외하고, 여러 페이지가 있는 모든 앱은 프레임을 사용합니다. 일반적으로 앱에는 프레임과 탐색 보기 컨트롤과 같은 기본 탐색 요소가 있는 기본 페이지를 포함합니다. 사용자가 페이지를 선택하면, 프레임을 로드하여 표시합니다.
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![tabs and pivot image](images/nav/thumbnail-tabs-pivot.svg)
+        ![탭 및 피벗 이미지](images/nav/thumbnail-tabs-pivot.svg)
     :::column-end:::
     :::column span="2":::
-        [**Top navigation and tabs**](../controls-and-patterns/navigationview.md)
+        [**위쪽 탐색**](../controls-and-patterns/navigationview.md)
 
-동일한 수준의 페이지에 대한 링크의 가로 목록을 표시합니다. [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤은 최상위 탐색 및 탭 패턴을 구현합니다.
+동일한 수준의 페이지에 대한 링크의 가로 목록을 표시합니다. [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤은 최상위 탐색 패턴을 구현합니다.
         
 다음과 같은 경우 최상위 탐색을 사용합니다.
 
 - 화면에 모든 탐색 옵션을 표시하려는 경우
 - 앱 콘텐츠에 대한 추가 공간을 원하는 경우
 - 아이콘은 탐색 범주를 명확하게 설명할 수 없습니다.
-        
-다음과 같은 경우 탭을 사용합니다.
-
-- 탐색 기록 및 페이지 상태를 유지하려는 경우
-- 사용자가 페이지 사이에서 자주 전환할 것으로 예상하는 경우
 
 :::row-end:::
 
 :::row:::
     :::column:::
-         ![tabs and pivot image](images/nav/thumbnail-tabs-pivot.svg)
+        ![탭 및 피벗 이미지](images/nav/thumbnail-tabs-pivot.svg)
+    :::column-end:::
+    :::column span="2":::
+        [**탭**](../controls-and-patterns/tab-view.md)
+
+가로 탭 세트 및 해당 콘텐츠를 표시합니다. [TabView](../controls-and-patterns/tab-view.md) 컨트롤은 여러 페이지(또는 문서)를 표시하는 데 유용하며 사용자에게 탭을 다시 정렬하고, 열고, 닫을 수 있는 기능을 제공합니다.
+    
+다음과 같은 경우 탭을 사용합니다.
+
+- 사용자가 탭을 동적으로 열고, 닫고, 다시 정렬할 수 있도록 하려고 합니다.
+- 한 번에 많은 수의 탭이 열려 있을 수 있습니다.
+- 사용자는 Microsoft Edge와 같은 웹 브라우저와 마찬가지로 탭을 사용하는 애플리케이션의 창 간에 탭을 쉽게 이동할 수 있습니다.
+
+:::row-end:::
+
+:::row:::
+    :::column:::
+         ![탭 및 피벗 이미지](images/nav/thumbnail-tabs-pivot.svg)
     :::column-end:::
         :::column span="2":::
     [**Pivot**](../controls-and-patterns/pivot.md)
@@ -213,10 +225,10 @@ ms.locfileid: "67286938"
 
 :::row:::
     :::column:::
-        ![navview image](images/nav/thumbnail-navview.svg)
+        ![navview 이미지](images/nav/thumbnail-navview.svg)
     :::column-end:::
     :::column span="2":::
-        [**Left navigation**](../controls-and-patterns/navigationview.md)
+        [**왼쪽 탐색**](../controls-and-patterns/navigationview.md)
 
 최상위 페이지에 세로 링크 목록을 표시합니다. 사용하는 경우:
         
@@ -228,10 +240,10 @@ ms.locfileid: "67286938"
         
 :::row:::
     :::column:::
-        ![Master details image](images/nav/thumbnail-master-detail.svg)
+        ![마스터 세부 정보 이미지](images/nav/thumbnail-master-detail.svg)
     :::column-end:::
     :::column span="2":::
-        [**Master/details**](../controls-and-patterns/master-details.md)
+        [**마스터/세부 정보**](../controls-and-patterns/master-details.md)
 
 항목의 목록(마스터 보기)을 표시합니다. 항목을 선택하면 세부 정보 섹션에 해당 항목 페이지가 표시됩니다. 사용하는 경우:
         
@@ -243,10 +255,10 @@ ms.locfileid: "67286938"
 
 :::row:::
     :::column:::
-        ![Hyperlinks and buttons image](images/nav/thumbnail-hyperlinks-buttons.svg)
+        ![하이퍼링크 및 단추 이미지](images/nav/thumbnail-hyperlinks-buttons.svg)
     :::column-end:::
     :::column span="2":::
-        [**Hyperlinks**](../controls-and-patterns/hyperlinks.md)
+        [**하이퍼링크**](../controls-and-patterns/hyperlinks.md)
 
 포함된 탐색 요소는 페이지의 콘텐츠에 표시될 수 있습니다. 페이지에서 일관되어야 하는 다른 탐색 요소와 달리, 콘텐츠 포함 탐색 요소는 페이지 간에 고유합니다.
 :::row-end:::

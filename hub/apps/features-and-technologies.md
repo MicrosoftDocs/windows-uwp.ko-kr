@@ -6,12 +6,12 @@ ms.date: 05/08/2019
 ms.localizationpriority: medium
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: ac779bf57e51b13051fa25293606daab05540fd1
-ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
+ms.openlocfilehash: 6bae7fdef4e9cdf05dfa6f56160f1021033123e6
+ms.sourcegitcommit: 7f1b64f62bc3a82ebcd3807c809363df46919195
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76726026"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705778"
 ---
 # <a name="features-and-technologies-for-windows-apps"></a>Windows 앱의 기능 및 기술
 
@@ -87,6 +87,12 @@ Windows 앱에서 AI를 통합하는 다양한 방법에 대한 자세한 내용
 |  UWP  |  Win32(Windows API) |  WPF  |  Windows Forms  |
 |-------|----------------------|-------|-----------------|
 | [디바이스 열거](/windows/uwp/devices-sensors/enumerate-devices)<br/><br/>[배터리 정보 가져오기](/windows/uwp/devices-sensors/get-battery-info)<br/><br/>[스레딩 및 비동기 프로그래밍](/windows/uwp/threading-async/)<br/><br/>[네트워킹 및 웹 서비스](/windows/uwp/networking/) | [시스템 서비스](/windows/desktop/system-services)<br/><br/>[메모리 관리](/windows/desktop/memory/memory-management)<br/><br/>[전원 관리](/windows/desktop/power/power-management-portal)<br/><br/>[프로세스 및 스레드](/windows/desktop/procthread/processes-and-threads)<br/><br/>[네트워킹 및 인터넷](/windows/desktop/networking)<br/><br/>[Windows 시스템 정보](/windows/desktop/sysinfo/windows-system-information) |  [스레딩 모델](https://docs.microsoft.com/dotnet/framework/wpf/advanced/threading-model)<br/><br/>[.NET Framework의 네트워크 프로그래밍](https://docs.microsoft.com/dotnet/framework/network-programming/)  |  [시스템 정보](https://docs.microsoft.com/dotnet/framework/winforms/advanced/system-information-and-windows-forms)<br/><br/>[전원 관리](https://docs.microsoft.com/dotnet/framework/winforms/advanced/power-management-in-windows-forms)<br/><br/>[.NET Framework의 네트워크 프로그래밍](https://docs.microsoft.com/dotnet/framework/network-programming/)<br/><br/>[Windows Forms의 네트워킹](https://docs.microsoft.com/dotnet/framework/winforms/advanced/networking-in-windows-forms-applications)  |
+
+### <a name="debugging-and-performance"></a>디버깅 및 성능
+
+|  UWP  |  Win32(Windows API) |  WPF 및 Windows Forms  |
+|-------|----------------------|-------|-----------------|
+| [디버깅, 테스트 및 성능](/windows/uwp/debug-test-perf)<br/><br/>[UWP 앱 배포 및 디버깅](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps)<br/><br/>[Windows 앱 인증 키트](/windows/uwp/debug-test-perf/windows-app-certification-kit)<br/><br/>[성능](/windows/uwp/debug-test-perf/performance-and-xaml-ui)| [디버깅 및 오류 처리](https://docs.microsoft.com/windows/win32/debugging-and-error-handling)<br/><br/>[Windows용 디버깅 도구](https://docs.microsoft.com/windows-hardware/drivers/debugger/)<br/><br/>[ETW(Windows용 이벤트 추적)](https://docs.microsoft.com/windows/win32/etw/event-tracing-portal)<br/><br/>[.NET TraceProcessing API](/windows/apps/trace-processing/)<br/><br/>[TraceLogging](https://docs.microsoft.com/windows/win32/tracelogging/trace-logging-portal)<br/><br/>[성능 카운터](https://docs.microsoft.com/windows/win32/perfctrs/performance-counters-portal) |  [디버깅, 추적 및 프로파일링](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/)<br/><br/>[애플리케이션 추적 및 계측](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/tracing-and-instrumenting-applications)<br/><br/>[관리 디버깅 도우미를 사용하여 오류 진단](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants)<br/><br/>[런타임 프로파일링](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/runtime-profiling)<br/><br/>[성능 카운터](https://docs.microsoft.com/dotnet/framework/debug-trace-profile/performance-counters)<br/><br/>[Windows Forms용 ClickOnce 배포](https://docs.microsoft.com/dotnet/framework/winforms/clickonce-deployment-for-windows-forms)  |
 
 ### <a name="packaging-and-deployment"></a>패키지 및 배포
 
