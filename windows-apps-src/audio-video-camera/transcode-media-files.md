@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 38aef2779908e173712bda0f35ca9e0651fb786b
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 58cc932ee8801835c44282de159900e3bb167e01
+ms.sourcegitcommit: c9bab19599c0eb2906725fd86d0696468bb919fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683876"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256166"
 ---
 # <a name="transcode-media-files"></a>미디어 파일 코드 변환
 
@@ -57,7 +57,7 @@ ms.locfileid: "75683876"
 [**CreateAvi**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createavi) |AVI |
 [**CreateHevc**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createhevc) |HEVC(고효율성 비디오 코딩) 비디오, H.265 비디오라고도 함 |
 [**CreateMp4**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createmp4) |MP4 비디오(H.264 비디오 및 AAC 오디오) |
-[**CreateWmv**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createwmv) |WMV(Windows Media 비디오) |
+[**CreateWmv**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createwmv) |WMV(Windows Media Video) |
 
 
 다음 코드는 MP4 동영상용 프로필을 만듭니다.
@@ -70,7 +70,7 @@ ms.locfileid: "75683876"
 
 ## <a name="transcode-the-file"></a>파일 코드 변환
 
-파일을 트랜스코딩하려면 새 [**MediaTranscoder**](https://docs.microsoft.com/uwp/api/Windows.Media.Transcoding.MediaTranscoder) 개체를 만들고 [**MediaTranscoder.PrepareFileTranscodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.transcoding.mediatranscoder.preparefiletranscodeasync) 메서드를 호출합니다. 원본 파일, 대상 파일 및 인코딩 프로필을 전달합니다. 그런 다음 비동기 코드 변환 작업에서 반환된 [**PrepareTranscodeResult**](https://docs.microsoft.com/uwp/api/Windows.Media.Transcoding.PrepareTranscodeResult) 개체의 [**TranscodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.transcoding.preparetranscoderesult.transcodeasync) 메서드를 호출합니다.
+파일을 트랜스코딩하려면 새 [**MediaTranscoder**](https://docs.microsoft.com/uwp/api/Windows.Media.Transcoding.MediaTranscoder) 개체를 만들고 [**MediaTranscoder.PrepareFileTranscodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.transcoding.mediatranscoder.preparefiletranscodeasync) 메서드를 호출합니다. 원본 파일, 대상 파일 및 인코딩 프로필을 전달합니다. 그런 다음 비동기 코드 변환 작업에서 반환된 [**PrepareTranscodeResult**](https://docs.microsoft.com/uwp/api/windows.media.transcoding.preparetranscoderesult.transcodeasync) 개체의 [**TranscodeAsync**](https://docs.microsoft.com/uwp/api/Windows.Media.Transcoding.PrepareTranscodeResult) 메서드를 호출합니다.
 
 [!code-cs[TranscodeTranscodeFile](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetTranscodeTranscodeFile)]
 
@@ -79,22 +79,5 @@ ms.locfileid: "75683876"
 비동기 [**TranscodeAsync**](https://docs.microsoft.com/uwp/api/windows.media.transcoding.preparetranscoderesult.transcodeasync)의 진행이 변경되면 응답하도록 이벤트를 등록할 수 있습니다. 이러한 이벤트는 UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 프레임워크의 일부이며 코드 변환 API와 관련이 없습니다.
 
 [!code-cs[TranscodeCallbacks](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetTranscodeCallbacks)]
-
-
-## <a name="encode-a-metadata-stream"></a>메타데이터 스트림 인코딩
-Windows 10 버전 1803부터 미디어 파일을 트랜스 코딩 하는 경우 시간 지정 된 메타 데이터를 포함할 수 있습니다. [**MediaEncodingProfile**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createmp4)과 같은 기본 제공 미디어 인코딩 프로필 생성 방법을 사용 하는 위의 비디오 트랜스 코딩 예제와는 달리, 인코딩할 메타 데이터 형식을 지원 하기 위해 메타 데이터 인코딩 프로필을 수동으로 만들어야 합니다.
-
-메타 데이터 incoding 프로필을 만드는 첫 번째 단계는 트랜스 코딩 될 메타 데이터의 인코딩을 설명 하는 [**TimedMetadataEncodingProperties**] 개체를 만드는 것입니다. 하위 형식 속성은 메타 데이터의 형식을 지정 하는 GUID입니다. 각 메타 데이터 형식에 대 한 인코딩 세부 정보는 독점적 이며 Windows에서 제공 하지 않습니다. 이 예제에서는 gprs (GoPro metadata)의 GUID를 사용 합니다. 그런 다음 [**Setformatuserdata**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.timedmetadataencodingproperties.setformatuserdata) 를 호출 하 여 메타 데이터 형식과 관련 된 스트림 형식을 설명 하는 데이터의 이진 blob을 설정 합니다. 그런 다음 **TimedMetadataStreamDescriptor**(https://docs.microsoft.com/uwp/api/windows.media.core.timedmetadatastreamdescriptor) 는 encoding 속성에서 만들어지고 트랙 레이블과 이름은 응용 프로그램이 endcoded 된 스트림을 읽어 메타 데이터 스트림을 식별 하 고 선택적으로 UI에 스트림 이름을 표시 하는 데 사용 됩니다. 
- 
-[!code-cs[GetStreamDescriptor](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetGetStreamDescriptor)]
-
-**TimedMetadataStreamDescriptor**를 만든 후에는 파일에서 인코딩할 비디오, 오디오 및 메타 데이터를 설명 하는 **MediaEncodingProfile** 를 만들 수 있습니다. 마지막 예제에서 만든 **TimedMetadataStreamDescriptor** 는이 예제 도우미 함수에 전달 되 고 [**SetTimedMetadataTracks**](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.mediaencodingprofile.settimedmetadatatracks)를 호출 하 여 **MediaEncodingProfile** 에 추가 됩니다.
-
-[!code-cs[GetMediaEncodingProfile](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetGetMediaEncodingProfile)]
- 
-
- 
-
-
 
 
