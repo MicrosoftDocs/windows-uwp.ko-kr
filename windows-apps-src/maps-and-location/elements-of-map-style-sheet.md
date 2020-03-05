@@ -2,19 +2,19 @@
 description: 지도 스타일 시트의 항목 및 속성
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: 지도 스타일 시트 참조
+title: 지도 스타일시트 참조
 ms.date: 03/19/2017
 ms.topic: article
 keywords: Windows 10, uwp, 지도, 지도 스타일 시트
 ms.localizationpriority: medium
-ms.openlocfilehash: 723426b4affec4251f26485ac7ecc1fca307c102
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: b59e8c3c6d9c4c299e441964be1afb4e02051e23
+ms.sourcegitcommit: 5264d7499ddbe21199a63d74a294206069f90f8b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867707"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78287450"
 ---
-# <a name="map-style-sheet-reference"></a>지도 스타일 시트 참조
+# <a name="map-style-sheet-reference"></a>지도 스타일시트 참조
 
 Microsoft 매핑 기술은 _지도 스타일 시트_ 를 사용 하 여 지도의 모양을 정의 합니다.  지도 스타일 시트는 JavaScript Object Notation (JSON)를 사용 하 여 정의 되며 [Mapstylesheet. ParseFromJson](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapstylesheet.parsefromjson#Windows_UI_Xaml_Controls_Maps_MapStyleSheet_ParseFromJson_System_String_) 메서드를 통해 Windows 스토어 응용 프로그램의 [없습니다](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) 을 비롯 한 다양 한 방법으로 사용할 수 있습니다.
 
@@ -62,7 +62,7 @@ Microsoft 매핑 기술은 _지도 스타일 시트_ 를 사용 하 여 지도�
 
 | 이름                               | 속성 그룹            | 1703 | 1709 | 1803 | 1809 | 1903 | 설명    |
 |------------------------------------|---------------------------|------|------|------|------|------|----------------|
-| version                            | [버전(Version)](#version)       |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 사용하고자 하는 스타일 시트 버전입니다. |
+| version                            | [버전](#version)       |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 사용하고자 하는 스타일 시트 버전입니다. |
 | 설정                           | [설정](#settings)     |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 전체 스타일 시트에 적용되는 설정입니다. |
 | mapElement                         | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 모든 지도 항목의 상위 항목입니다. |
 | > baseMapElement                   | [MapElement](#mapelement) |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 사용자가 아닌 모든 항목의 상위 항목입니다. |
@@ -191,7 +191,7 @@ Microsoft 매핑 기술은 _지도 스타일 시트_ 를 사용 하 여 지도�
 | >>>>> countryRegionCapital         | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 국가 또는 지역 대문자 나타내는 아이콘이 있습니다. |
 | > > > > majorPopulatedPlace           | [PointStyle](#pointstyle) |      |      |      |      |  ✔   | 주 채워진 위치의 크기를 나타내는 아이콘입니다. |
 | > > > > minorPopulatedPlace           | [PointStyle](#pointstyle) |      |      |      |      |  ✔   | 작은 채워진 위치의 크기를 나타내는 아이콘입니다. |
-| >>> roadShield                     | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 도로의 간단한 이름을 나타내는 기호. 예를 들면 다음과 같습니다. 5). 설정 항목의 **ImageFamily** 속성을 *색상표* 값으로 설정하는 경우 색상표 값만 사용 |
+| >>> roadShield                     | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 도로의 간단한 이름을 나타내는 기호. 예: I-5. 설정 항목의 **ImageFamily** 속성을 *색상표* 값으로 설정하는 경우 색상표 값만 사용 |
 | >>> roadExit                       | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 일반적으로 진입 통제 고속도로의 비상구를 나타내는 아이콘. |
 | >>> transit                        | [PointStyle](#pointstyle) |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 버스 정류장, 기차 정차역, 공항 등을 나타내는 아이콘. |
 | >> political                       | [BorderedMapElement](#borderedmapelement) |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 국가, 지역 및 주와 같은 정치적 지역. |
@@ -233,7 +233,7 @@ Microsoft 매핑 기술은 _지도 스타일 시트_ 를 사용 하 여 지도�
 
 <a id="properties" />
 
-## <a name="properties"></a>Properties
+## <a name="properties"></a>속성
 
 이 섹션은 각 항목에 사용할 수 있는 속성을 설명합니다.
 
@@ -241,53 +241,51 @@ Microsoft 매핑 기술은 _지도 스타일 시트_ 를 사용 하 여 지도�
 
 ### <a name="version-properties"></a>버전 속성
 
-| 속성                     | type    | 설명                                                                                                           |
+| 속성                     | 형식    | 설명                                                                                                           |
 |------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------|
-| version                      | 문자열  | 대상 스타일 시트 버전입니다. 적용을 위해 사용됩니다. "1.0"이 기본값이며 기능 업데이트에 대해 "1.*"입니다. |
+| version                      | String  | 대상 스타일 시트 버전입니다. 적용을 위해 사용됩니다. "1.0"이 기본값이며 기능 업데이트에 대해 "1.*"입니다. |
 
 <a id="settings" />
 
 ### <a name="settings-properties"></a>설정 속성
 
-| 속성                     | type    | 1703 | 1709 | 1803 | 1809 | 1903 | 설명 |
+| 속성                     | 형식    | 1703 | 1709 | 1803 | 1809 | 1903 | 설명 |
 |------------------------------|---------|------|------|------|------|------|-------------|
-| atmosphereVisible            | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 3D 컨트롤에 대기를 표시할지 여부를 나타내는 플래그. |
-| buildingTexturesVisible      | Bool    |      |      |  ✔   |  ✔   |  ✔   | 텍스처가 있는 기호 3D 건물에 텍스처를 표시할지 여부를 나타내는 플래그입니다. |
+| atmosphereVisible            | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 3D 컨트롤에 대기를 표시할지 여부를 나타내는 플래그. |
+| buildingTexturesVisible      | 부울    |      |      |  ✔   |  ✔   |  ✔   | 텍스처가 있는 기호 3D 건물에 텍스처를 표시할지 여부를 나타내는 플래그입니다. |
 | fogColor                     | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 3D 컨트롤에 나타나는 거리 안개의 ARGB색 값. |
 | glowColor                    | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 레이블 빛 및 아이콘 빛에 적용할 수 있는 ARGB색 값. |
-| imageFamily                  | 문자열  |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 이 스타일을 사용하도록 설정하는 이미지 세트의 이름입니다. 현실 세계의 기호에 따라 고정된 색상을 사용하는 기호의 경우 이 값을 *기본*으로 설정합니다. 색상표를 구성 가능한 색을 사용하는 기호의 경우 이 값을 *색상표*로 설정합니다. |
+| imageFamily                  | String  |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 이 스타일을 사용하도록 설정하는 이미지 세트의 이름입니다. 현실 세계의 기호에 따라 고정된 색상을 사용하는 기호의 경우 이 값을 *기본*으로 설정합니다. 색상표를 구성 가능한 색을 사용하는 기호의 경우 이 값을 *색상표*로 설정합니다. |
 | landColor                    | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 육지에 아무 것도 그리기 전의 육지의 ARGB 색 값. |
-| logosVisible                 | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | **조직** 속성을 가진 항목이 적절한 로고를 그리거나 일반 아이콘을 사용해야 하는지를 나타내는 플래그. |
-| officialColorVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 공식 색 속성(예: 중국의 교통 라인)을 가진 항목이 해당 색을 그려야 하는지 여부를 나타내는 플래그. 예를 들어 흑백 지도의 경우 이 값을 해제합니다. |
-| rasterRegionsVisible         | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 벡터 (일본 및 대한민국) 보다 더 나은 표현이 있는 래스터 영역을 그릴지 여부를 나타내는 플래그입니다. |
-| shadedReliefVisible          | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 지도에 점진 음영을 그릴지 여부를 나타내는 플래그. |
-| shadedReliefDarkColor        | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 음영기복의 어두운 면의 색상.  알파 채널은 최대 알파 값을 나타냅니다. |
-| shadedReliefLightColor       | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 음영기복의 밝은 면의 색상.  알파 채널은 최대 알파 값을 나타냅니다. |
+| logosVisible                 | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | **조직** 속성을 가진 항목이 적절한 로고를 그리거나 일반 아이콘을 사용해야 하는지를 나타내는 플래그. |
+| officialColorVisible         | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 공식 색 속성(예: 중국의 교통 라인)을 가진 항목이 해당 색을 그려야 하는지 여부를 나타내는 플래그. 예를 들어 흑백 지도의 경우 이 값을 해제합니다. |
+| rasterRegionsVisible         | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 벡터 (일본 및 대한민국) 보다 더 나은 표현이 있는 래스터 영역을 그릴지 여부를 나타내는 플래그입니다. |
+| shadedReliefVisible          | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 지도에 점진 음영을 그릴지 여부를 나타내는 플래그. |
 | shadowColor                  | 색   |      |      |      |  ✔   |  ✔   | 그림자를 사용 하는 아이콘 뒤의 그림자 색입니다. |
 | spaceColor                   | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 지도 주위의 영역에 대한 ARGB 색 값. |
-| useDefaultImageColors        | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 이미지 색의 색상표 항목을 조회 하는 대신 SVG의 원래 색을 사용할지 여부를 나타내는 플래그입니다. |
+| useDefaultImageColors        | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 이미지 색의 색상표 항목을 조회 하는 대신 SVG의 원래 색을 사용할지 여부를 나타내는 플래그입니다. |
 
 <a id="mapelement" />
 
 ### <a name="mapelement-properties"></a>MapElement 요소
 
-| 속성                     | type    | 1703 | 1709 | 1803 | 1809 | 1903 | 설명 |
+| 속성                     | 형식    | 1703 | 1709 | 1803 | 1809 | 1903 | 설명 |
 |------------------------------|---------|------|------|------|------|------|-------------|
 | backgroundScale              | 부동   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 아이콘의 배경 요소를 확장할 양.  예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
 | fillColor                    | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 나눠진 경우 다각형, 포인트 아이콘의 배경, 선의 중앙을 채우는 데 사용되는 색. |
-| fontFamily                   | 문자열  |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
+| fontFamily                   | String  |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
 | fontWeight                   | String  |      |      |      |      |  ✔   | 스트로크의 밝기 또는 heaviness을 기준으로 하는 서체의 밀도입니다. "**Light**", "**Normal**", "**SemiBold**" 및 "**Bold**"를 설정할 수 있습니다. |
 | iconColor                    | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 포인트 아이콘의 중앙에 표시되는 문자 모양의 색. |
 | iconScale                    | 부동   |      |  ✔   |  ✔   |  ✔   |  ✔   | 아이콘의 문자 모양을 확장할 양.  예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
 | labelColor                   | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
 | labelOutlineColor            | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
 | labelScale                   | 부동   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 기본 레이블 크기가 조정되는 양. 예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
-| labelVisible                 | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
-| overwriteColor               | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | **FillColor**의 알파 값은 **StrokeColor**와 혼합되는 것이 아니라 이를 덮어씁니다. |
-| scale                        | 부동   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 전체 포인트의 크기를 조정하는 정도. 예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
+| labelVisible                 | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
+| overwriteColor               | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | **FillColor**의 알파 값은 **StrokeColor**와 혼합되는 것이 아니라 이를 덮어씁니다. |
+| 소수 자릿수                        | 부동   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 전체 포인트의 크기를 조정하는 정도. 예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
 | strokeColor                  | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 다각형 주위의 윤곽선, 포인트 아이콘의 윤곽선, 선의 색에 사용할 색. |
 | strokeWidthScale             | 부동   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 선의 스트로크의 크기를 조정하는 정도. 예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
-| 표시                      | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
+| 표시                      | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
 
 <a id="borderedmap" />
 
@@ -295,11 +293,11 @@ Microsoft 매핑 기술은 _지도 스타일 시트_ 를 사용 하 여 지도�
 
 이 속성 그룹은 [MapElement](#mapelement) 속성 그룹에서 상속됩니다.
 
-| 속성                     | type    | 1703 | 1709 | 1803 | 1809 | 1903 | 설명 |
+| 속성                     | 형식    | 1703 | 1709 | 1803 | 1809 | 1903 | 설명 |
 |------------------------------|---------|------|------|------|------|------|-------------|
 | borderOutlineColor           | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 채워진 다각형의 두 번째 또는 채워진 테두리 선의 색. |
 | borderStrokeColor            | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 채워진 다각형의 테두리의 기본 선 색상. |
-| borderVisible                | Bool    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
+| borderVisible                | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   |  |
 | borderWidthScale             | 부동   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 테두리의 스트로크 크기를 조정 하는 크기입니다. 예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
 
 <a id="pointstyle" />
@@ -308,11 +306,11 @@ Microsoft 매핑 기술은 _지도 스타일 시트_ 를 사용 하 여 지도�
 
 이 속성 그룹은 [MapElement](#mapelement) 속성 그룹에서 상속됩니다.
 
-| 속성                     | type    | 1703 | 1709 | 1803 | 1809 | 1903 | 설명 |
+| 속성                     | 형식    | 1703 | 1709 | 1803 | 1809 | 1903 | 설명 |
 |------------------------------|---------|------|------|------|------|------|-------------|
-| shadowVisible                | Bool    |      |      |      |      |  ✔   | 아이콘 그림자를 표시할지 여부를 나타내는 플래그입니다. |
-| 모양-배경             | 문자열  |      |      |      |      |  ✔   | 아이콘의 배경으로 사용 하는 모양입니다 .이 셰이프는 여기에 있는 모양을 바꿉니다. |
-| 셰이프-아이콘                   | 문자열  |      |      |      |      |  ✔   | 아이콘의 전경 문자 모양으로 사용할 셰이프입니다 .이 셰이프는 여기에 있는 모양을 바꿉니다. |
+| shadowVisible                | 부울    |      |      |      |      |  ✔   | 아이콘 그림자를 표시할지 여부를 나타내는 플래그입니다. |
+| 모양-배경             | String  |      |      |      |      |  ✔   | 아이콘의 배경으로 사용 하는 모양입니다 .이 셰이프는 여기에 있는 모양을 바꿉니다. |
+| 셰이프-아이콘                   | String  |      |      |      |      |  ✔   | 아이콘의 전경 문자 모양으로 사용할 셰이프입니다 .이 셰이프는 여기에 있는 모양을 바꿉니다. |
 | stemAnchorRadiusScale        | 부동   |      |      |  ✔   |  ✔   |  ✔   | 아이콘 스템의 앵커 지점을 확장할 양.  예를 들어 기본값에 *1*, 대형의 두 배 값에 *2*를 사용합니다. |
 | stemColor                    | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 3D 모드에서 해당 아이콘의 하단에서 나오는 줄기의 색. |
 | stemHeightScale              | 부동   |      |      |  ✔   |  ✔   |  ✔   | 아이콘 스템의 길이를 확장할 양.  예를 들어 기본값에 *1*, 길이의 두 배 값에 *2*를 사용합니다. |
@@ -325,6 +323,6 @@ Microsoft 매핑 기술은 _지도 스타일 시트_ 를 사용 하 여 지도�
 
 이 속성 그룹은 [MapElement](#mapelement) 속성 그룹에서 상속됩니다.
 
-| 속성                     | type    | 1703 | 1709 | 1803 | 1809 | 1903 | 설명 |
+| 속성                     | 형식    | 1703 | 1709 | 1803 | 1809 | 1903 | 설명 |
 |------------------------------|---------|------|------|------|------|------|------------|
-| renderAsSurface              | Bool    |      |      |  ✔   |  ✔   |  ✔   | 3D 모델이 땅에 대한 깊이 페이드 인 없이 건물 같이 렌더링할 수 있음을 나타내는 플래그입니다. |
+| renderAsSurface              | 부울    |      |      |  ✔   |  ✔   |  ✔   | 3D 모델이 땅에 대한 깊이 페이드 인 없이 건물 같이 렌더링할 수 있음을 나타내는 플래그입니다. |

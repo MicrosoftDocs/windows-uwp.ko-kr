@@ -1,19 +1,22 @@
 ---
 Description: 앱이 Microsoft Advertising SDK를 사용 하 여 광고를 표시 하는 경우 파트너 센터의 앱 내 광고 페이지를 사용 하 여 광고 사용을 관리 합니다.
-title: 인앱 광고
+title: 앱 내 광고
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
 ms.date: 03/25/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e12641695dd72cddcfb6b51f6cd2f20fa66ddf41
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 96994566d19e03f1d85b751242331f04fef098ad
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258996"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78290347"
 ---
-# <a name="in-app-ads"></a>인앱 광고
+# <a name="in-app-ads"></a>앱 내 광고
+
+>[!WARNING]
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 [파트너 센터](https://partner.microsoft.com/dashboard) 의 **수익 창출** &gt; **앱 내 광고** 페이지를 사용 하 여 다음에 대 한 ad 단위를 만들고 관리할 수 있습니다.
 
@@ -151,7 +154,7 @@ UWP 광고 단위에 대해 [조정 설정](#mediation) 또는 광고 단위가 
 
 <span id="coppa" />
 
-## <a name="coppa-compliance"></a>COPPA 규정 준수
+## <a name="coppa-compliance"></a>COPPA 준수
 
 Ad 단위를 [만들거나](#create-ad-unit) [기존 ad 단위를 선택](#available-ad-units)하면 ad 단위의 선택 된 앱에 앱 인증 프로세스의 저장소 단계 [에서](../publish/the-app-certification-process.md#in-the-store) 에 도달한 제출이 하나 이상 있는 경우 **COPPA 준수** 섹션이 페이지 아래쪽에 표시 됩니다.
 
