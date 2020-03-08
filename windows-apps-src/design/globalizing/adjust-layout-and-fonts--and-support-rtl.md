@@ -9,17 +9,17 @@ ms.topic: article
 keywords: Windows 10, uwp, 지역화 가능, 지역화, rtl, ltr
 ms.localizationpriority: medium
 ms.openlocfilehash: e428dd068337ecd79992e8e27cd193bed112d9c2
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57645308"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852545"
 ---
 # <a name="adjust-layout-and-fonts-and-support-rtl"></a>레이아웃 및 글꼴 조정, RTL 지원
 RTL(오른쪽에서 왼쪽) 방향으로 읽는 것을 포함하여 여러 언어의 레이아웃과 글꼴을 지원하기 위해 앱을 설계합니다. 텍스트 흐름 방향은 스크립트가 작성되고 표시되는 방향이며 페이지의 UI 요소는 눈으로 스캔됩니다.
 
 ## <a name="layout-guidelines"></a>레이아웃 지침
-독일어 및 핀란드어와 같은 언어는 일반적으로 영어보다 글자 수가 더 많습니다. 아시아의 글꼴 높이는 일반적으로 더 깁니다. 아랍어 및 히브리어와 같은 언어의 경우 레이아웃 패널 및 텍스트 요소의 읽는 순서가 RTL(오른쪽에서 왼쪽)로 배치됩니다.
+독일어 및 핀란드어와 같은 언어는 일반적으로 영어보다 글자 수가 더 많습니다. 극동 지역의 글꼴 높이는 일반적으로 더 깁니다. 아랍어 및 히브리어와 같은 언어의 경우 레이아웃 패널 및 텍스트 요소의 읽는 순서가 RTL(오른쪽에서 왼쪽)로 배치됩니다.
 
 번역된 텍스트의 메트릭에서 이러한 변형 때문에 절대 위치, 고정된 폭, 또는 고정된 높이를 UI(사용자 인터페이스)에 고정하는 것이 좋습니다. 대신 Windows UI 요소에 내장된 동적 레이아웃 메커니즘을 활용합니다. 예를 들어 콘텐츠 컨트롤(예: 단추), 항목 컨트롤(예: 그리드 보기 및 목록 보기) 및 콘텐츠 패널(예: 표 및 스택 패널)은 자동으로 콘텐츠에 맞춰 자동으로 크기를 조정하고 재배치합니다. UI 요소의 크기가 콘텐츠에 맞게 적절히 조정되지 않는 가장자리에 문제가 있는 경우를 발견하기 위해 앱을 의사 지역화합니다.
 
@@ -45,7 +45,7 @@ RTL에 대해 미러링해야 하는 이미지(동일한 이미지가 대칭될 
 <Image ... FlowDirection="RightToLeft" />
 ```
 
-이미지를 올바르게 전환하기 위해 앱에 다른 이미지가 필요한 경우 한정자가 `LayoutDirection`인 리소스 관리 시스템을 사용할 수 있습니다([언어, 크기 및 다른 한정자의 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md#layoutdirection)의 LayoutDirection 섹션 참조). 앱 런타임 언어([사용자 프로필 언어 및 앱 매니페스트 언어 이해](manage-language-and-region.md) 참조)가 RTL 언어로 설정된 경우 시스템에서 `file.layoutdir-rtl.png`이라는 이미지를 선택합니다. 이 방법은 이미지의 일부만 대칭 이동되는 경우에 사용할 수 있습니다.
+이미지를 올바르게 전환하기 위해 앱에 다른 이미지가 필요한 경우 한정자가 `LayoutDirection`인 리소스 관리 시스템을 사용할 수 있습니다([언어, 크기 및 다른 한정자의 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md#layoutdirection)의 LayoutDirection 섹션 참조). 앱 런타임 언어(`file.layoutdir-rtl.png`사용자 프로필 언어 및 앱 매니페스트 언어 이해[ 참조)가 RTL 언어로 설정된 경우 시스템에서 ](manage-language-and-region.md)이라는 이미지를 선택합니다. 이 방법은 이미지의 일부만 대칭 이동되는 경우에 사용할 수 있습니다.
 
 ## <a name="handling-right-to-left-rtl-languages"></a>RTL(오른쪽에서 왼쪽) 언어 처리
 앱이 RTL(오른쪽에서 왼쪽) 언어에 대해 현지화된 경우 [**FrameworkElement.FlowDirection**](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection) 속성을 사용하고 대칭되는 안쪽 여백 및 여백을 설정하십시오. [  **Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid?branch=live) 배율 및 대칭 이동과 같은 레이아웃 패널은 설정한 **FlowDirection** 값을 자동으로 따릅니다.
@@ -120,10 +120,10 @@ else
 이는 모든 언어에 한 줄 코드를 사용하는 것이 아니라 번역되는 각 언어에 대해 이 속성 리소스를 올바르게 "번역하는" 번역가에 달려 있습니다. 따라서 이 기술을 사용할 경우 사람의 오류가 추가적으로 있을 수 있음을 주의하십시오.
 
 ## <a name="important-apis"></a>중요 API
-* [FrameworkElement.FlowDirection](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection)
+* [FrameworkElement. FlowDirection](/uwp/api/Windows.UI.Xaml.FrameworkElement.FlowDirection)
 * [LanguageFont](/uwp/api/Windows.Globalization.Fonts.LanguageFont?branch=live)
 
 ## <a name="related-topics"></a>관련 항목
 * [UI 및 앱 패키지 매니페스트의 문자열 지역화](../../app-resources/localize-strings-ui-manifest.md)
-* [언어, 배율 및 다른 한정자에 대 한 리소스를 조정 합니다.](../../app-resources/tailor-resources-lang-scale-contrast.md)
+* [언어, 크기 조정 및 기타 한정자에 맞게 리소스를 조정 합니다.](../../app-resources/tailor-resources-lang-scale-contrast.md)
 * [사용자 프로필 언어 및 앱 매니페스트 언어 이해](manage-language-and-region.md)

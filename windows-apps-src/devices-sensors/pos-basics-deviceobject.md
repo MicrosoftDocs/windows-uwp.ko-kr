@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.openlocfilehash: a2fa7e107d890a5be7c8d27af03289b839ec3c09
-ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73052003"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852460"
 ---
 # <a name="pointofservice-device-objects"></a>PointOfService 장치 개체
 
@@ -37,7 +37,7 @@ ms.locfileid: "73052003"
 장치 개체가 있으면 장치의 메서드, 속성 및 이벤트에 액세스할 수 있습니다.  
 
 ## <a name="device-object-lifecycle"></a>장치 개체 수명 주기
-Windows 8 이전에는 앱에 간단한 수명 주기가 있었습니다. Win32 및 .NET 앱은 실행되거나 실행되지 않으며 일반적으로 PointOfService 주변 장치는 전체 앱 수명 주기에 대해 클레임되었습니다. 사용자가 앱을 최소화하거나 벗어날 경우 계속 실행됩니다. 그래도 휴대용 장치와 전원 관리가 점점 중요해질 때까지는 문제가 되지 않았습니다.
+Windows 8 이전에는 앱에 간단한 수명 주기가 있었습니다. Win32 및 .NET 앱은 실행되거나 실행되지 않으며 일반적으로 PointOfService 주변 장치는 전체 앱 수명 주기에 대해 클레임되었습니다. 사용자가 앱을 최소화하거나 벗어날 경우 계속 실행됩니다. 그래도 휴대용 디바이스와 전원 관리가 점점 중요해질 때까지는 문제가 되지 않았습니다.
 
 Windows 8에서는 UWP 앱을 사용하는 새 응용 프로그램 모델이 도입되었습니다. 상위 수준에서 일시 중단 상태가 새로 추가되었습니다. 사용자가 앱을 최소화하거나 다른 앱으로 전환하면 즉시 UWP 앱이 일시 중단됩니다. 즉, 앱의 스레드가 중지되면 운영 체제가 리소스를 확보해야 하지 않는 이상 앱은 메모리에 남고 PointOfService 주변 장치를 나타내는 모든 장치 개체는 다른 응용 프로그램이 주변 장치에 액세스할 수 있도록 자동으로 닫힙니다. 사용자가 앱으로 전환하면 신속하게 실행 상태로 복원할 수 있으며 다시 시작할 때 계속 사용할 수 있는 경우 PointOfService 주변 장치 연결을 복원합니다.
 

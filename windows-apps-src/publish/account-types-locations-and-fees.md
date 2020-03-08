@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 개발자 계정, 개인, 회사, 비즈니스
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ac6c3e7c89c091d1080364b8fbbb35d484aee49
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260057"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853496"
 ---
 # <a name="account-types-locations-and-fees"></a>계정 유형, 위치 및 수수료
 
@@ -47,7 +47,7 @@ ms.locfileid: "74260057"
 
 다음 표에서 **등록 회비**는 개발자 계정을 등록하는 데 필요한 현재 가격입니다. 이 비용은 일회성 등록비이고 갱신 요금이 없습니다. 아래 가격은 변경될 수 있습니다.
 
-| 국가/ 지역                    | 개인 등록 요금 | 회사 등록 요금 |
+| 국가 / 지역                    | 개인 등록 요금 | 회사 등록 요금 |
 |-----------------------------------|---------------------|------------------|
 | 아프가니스탄                       | 19 USD              | 99 USD           |
 | 알바니아                           | 19 USD              | 99 USD           |
@@ -64,7 +64,7 @@ ms.locfileid: "74260057"
 | 바레인                           | 7 BHD               | 38 BHD           |  
 | 방글라데시                        | 1468 BDT            | 7600 BDT         |  
 | 바베이도스                          | 19 USD              | 99 USD           |  
-| 벨라루스                           | 19 USD              | 99 USD           |  
+| 벨로루시                           | 19 USD              | 99 USD           |  
 | 벨기에                           | 14 EUR              | 75 EUR           |  
 | 벨리즈                            | 19 USD              | 99 USD           |  
 | 베냉                             | 19 USD              | 99 USD           |  
@@ -77,7 +77,7 @@ ms.locfileid: "74260057"
 | 불가리아                          | 28 BGN              | 160 BGN          |  
 | 부르키나파소                      | 19 USD              | 99 USD           |  
 | 부룬디                           | 19 USD              | 99 USD           |  
-| 카보베르데                        | 19 USD              | 99 USD           |  
+| Cabo Verde                        | 19 USD              | 99 USD           |  
 | 캄보디아                          | 19 USD              | 99 USD           |  
 | 카메룬                          | 19 USD              | 99 USD           |  
 | 캐나다                            | 20 CAD              | 99 CAD           |  
@@ -87,13 +87,13 @@ ms.locfileid: "74260057"
 | 중국                             | 116 CNY             | 600 CNY          |  
 | 콜롬비아                          | 36543 COP           | 180000 COP       |  
 | 코모로                           | 19 USD              | 99 USD           |  
-| 콩고 공화국                             | 19 USD              | 99 USD           |  
+| 콩고                             | 19 USD              | 99 USD           |  
 | 콩고 민주 공화국                       | 19 USD              | 99 USD           |  
 | 코스타리카                        | 9578 CRC            | 49725 CRC        |  
 | 코트디부아르                     | 19 USD              | 99 USD           |  
 | 크로아티아                           | 107 HRK             | 500 HRK          |  
 | 키프로스                            | 14 EUR              | 75 EUR           |  
-| 체코                    | 365 CZK             | 1720 CZK         |  
+| 체코 공화국                    | 365 CZK             | 1720 CZK         |  
 | 덴마크                           | 106 DKK             | 530 DKK          |  
 | 지부티                          | 19 USD              | 99 USD           | 
 | 도미니카                          | 19 USD              | 99 USD           | 
@@ -102,17 +102,17 @@ ms.locfileid: "74260057"
 | 이집트                             | 133 EGP             | 600 EGP          |  
 | 엘살바도르                       | 19 USD              | 99 USD           |  
 | 적도 기니                 | 19 USD              | 99 USD           |  
-| 에리트리아                           | 19 USD              | 99 USD           |  
+| 에리트레아                           | 19 USD              | 99 USD           |  
 | 에스토니아                           | 14 EUR              | 75 EUR           |  
 | 에티오피아                          | 19 USD              | 99 USD           |  
 | 페로 제도                     | 19 USD              | 99 USD           |  
 | 피지                              | 19 USD              | 99 USD           |  
 | 핀란드                           | 14 EUR              | 75 EUR           |  
-| 프랑스                            | 14 EUR              | 75 EUR           |  
+| France                            | 14 EUR              | 75 EUR           |  
 | 가봉                             | 19 USD              | 99 USD           |  
 | 감비아                        | 19 USD              | 99 USD           |  
-| 그루지야                           | 19 USD              | 99 USD           |  
-| 독일                           | 14 EUR              | 75 EUR           |  
+| Georgia                           | 19 USD              | 99 USD           |  
+| Germany                           | 14 EUR              | 75 EUR           |  
 | 가나                             | 19 USD              | 99 USD           |  
 | 그리스                            | 14 EUR              | 75 EUR           |  
 | 그린란드                         | 19 USD              | 99 USD           |  
@@ -123,7 +123,7 @@ ms.locfileid: "74260057"
 | 가이아나                            | 19 USD              | 99 USD           |  
 | 아이티                             | 19 USD              | 99 USD           |  
 | 온두라스                          | 19 USD              | 99 USD           |  
-| 홍콩 특별 행정구                     | 147 HKD             | 760 HKD          |  
+| 홍콩 특별행정구                     | 147 HKD             | 760 HKD          |  
 | 헝가리                           | 4237 HUF            | 18800 HUF        |  
 | 아이슬란드                           | 2319 ISK            | 11929 ISK        |
 | 인도                             | 1201 INR            | 4500 INR         |  
@@ -133,12 +133,12 @@ ms.locfileid: "74260057"
 | 이스라엘                            | 67 ILS              | 350 ILS          |  
 | 이탈리아                             | 14 EUR              | 75 EUR           |  
 | 자메이카                           | 19 USD              | 99 USD           |  
-| 일본                             | 1847 JPY            | 9800 JPY         |  
+| Japan                             | 1847 JPY            | 9800 JPY         |  
 | 요르단                            | 13 JOD              | 70 JOD           |  
 | 카자흐스탄                        | 2897 KZT            | 15038 KZT        |  
 | 케냐                             | 1900 KES            | 9999 KES         |  
 | 키리바시                          | 19 USD              | 99 USD           |  
-| 대한민국                             | 21216 KRW           | 108000 KRW       |  
+| Korea                             | 21216 KRW           | 108000 KRW       |  
 | 쿠웨이트                            | 5 KWD               | 28 KWD           |  
 | 키르기스스탄                        | 19 USD              | 99 USD           |  
 | 라오스                              | 19 USD              | 99 USD           |  
@@ -151,7 +151,7 @@ ms.locfileid: "74260057"
 | 리투아니아                         | 14 EUR              | 75 EUR           |  
 | 룩셈부르크                        | 14 EUR              | 75 EUR           |  
 | 마카오 특별 행정구                         | 19 USD              | 99 USD           |  
-| 북마케도니아                 | 19 USD              | 99 USD           |  
+| 마케도니아(이전 유고슬라비아 마케도니아 공화국)                 | 19 USD              | 99 USD           |  
 | 마다가스카르                        | 19 USD              | 99 USD           |  
 | 말라위                            | 19 USD              | 99 USD           |  
 | 말레이시아                          | 62 MYR              | 300 MYR          |  
@@ -168,7 +168,7 @@ ms.locfileid: "74260057"
 | 몬테네그로                        | 14 EUR              | 75 EUR           |  
 | 모로코                           | 158 MAD             | 800 MAD          |  
 | 모잠비크                        | 19 USD              | 99 USD           |  
-| 미얀마어                           | 19 USD              | 99 USD           |  
+| 미얀마                           | 19 USD              | 99 USD           |  
 | 나미비아                           | 19 USD              | 99 USD           |  
 | 나우루                             | 19 USD              | 99 USD           |  
 | 네팔                             | 19 USD              | 99 USD           |  
@@ -191,7 +191,7 @@ ms.locfileid: "74260057"
 | 카타르                             | 69 QAR              | 360 QAR          |  
 | 루마니아                           | 14 EUR              | 75 EUR           |  
 | 러시아                            | 626 RUB             | 3000 RUB         |  
-| 르완다                            | 19 USD              | 99 USD           |  
+| Rwanda                            | 19 USD              | 99 USD           |  
 | 세인트 크리스토퍼 네비스             | 19 USD              | 99 USD           |  
 | 세인트 루시아                       | 19 USD              | 99 USD           |  
 | 세인트 빈센트 그레나딘  | 19 USD              | 99 USD           |  
@@ -229,7 +229,7 @@ ms.locfileid: "74260057"
 | 투발루                            | 19 USD              | 99 USD           |  
 | 우간다                            | 19 USD              | 99 USD           |  
 | 우크라이나                           | 156 UAH             | 800 UAH          |  
-| 아랍 에미리트 연합국              | 19 USD              | 99 USD           |  
+| 아랍에미리트              | 19 USD              | 99 USD           |  
 | 영국                    | 12 GBP              | 65 GBP           |  
 | 미국                     | 19 USD              | 99 USD           |  
 | 우루과이                           | 19 USD              | 99 USD           |  

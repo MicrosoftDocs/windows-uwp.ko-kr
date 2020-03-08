@@ -9,11 +9,11 @@ keywords: Python, Windows 10, Microsoft, Windows의 Python, WSL을 사용하는 
 ms.localizationpriority: medium
 ms.date: 07/19/2019
 ms.openlocfilehash: d883007168e0baf35f8a0ab0827505b683cfd291
-ms.sourcegitcommit: f5bb4e35d1373b982259e61547b3b1765da0e78c
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74881288"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853080"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>웹 개발을 위해 Windows에서 Python 사용 시작
 
@@ -56,7 +56,7 @@ VS Code를 사용하여 [IntelliSense](https://code.visualstudio.com/docs/editor
 
 1. [Windows용 VS Code를 다운로드하여 설치합니다](https://code.visualstudio.com). VS Code는 Linux에서도 사용할 수 있지만, Linux용 Windows 하위 시스템은 GUI 앱을 지원하지 않으므로 Windows에 설치해야 합니다. 걱정하지 마세요. 여전히 Remote - WSL 확장을 사용하여 Linux 명령줄 및 도구와 통합할 수 있습니다.
 
-2. [Remote - WSL 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)을 VS Code에 설치합니다. 이를 통해 WSL을 통합 개발 환경으로 사용하고, 호환성과 패치를 처리할 수 있습니다. [자세한 내용을 알아보십시오](https://code.visualstudio.com/docs/remote/remote-overview).
+2. [Remote - WSL 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)을 VS Code에 설치합니다. 이를 통해 WSL을 통합 개발 환경으로 사용하고, 호환성과 패치를 처리할 수 있습니다. [자세한 정보를 알아보세요](https://code.visualstudio.com/docs/remote/remote-overview).
 
 > [!IMPORTANT]
 > VS Code가 이미 설치되어 있는 경우 [Remote - WSL 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)을 설치하려면 [1.35 5월 릴리스](https://code.visualstudio.com/updates/v1_35) 이상이 있어야 합니다. 자동 완성, 디버깅, linting 등의 지원이 손실될 수 있으므로 VS Code에서 Remote - WSL 확장 없이 WSL을 사용하지 않는 것이 좋습니다. 재미있게도 이 WSL 확장은 $HOME/.vscode-server/extensions에 설치됩니다.
@@ -72,7 +72,7 @@ VS Code를 사용하여 [IntelliSense](https://code.visualstudio.com/docs/editor
 ![Ubuntu 터미널](../images/ubuntu-terminal.png)
 
 > [!TIP]
-> WSL(Linux용 Windows 하위 시스템)을 사용할 때 기억해야 할 중요한 사항은 **현재 두 개의 서로 다른 파일 시스템**, 즉 1) Windows 파일 시스템 및 2) Linux 파일 시스템(WSL, 여기서는 Ubuntu) 간에 작업하고 있다는 것입니다. 패키지를 설치하고 파일을 저장하는 위치에 주의해야 합니다. Windows 파일 시스템에는 한 버전의 도구 또는 패키지를 설치하고, Linux 파일 시스템에는 완전히 다른 버전을 설치할 수 있습니다. Windows 파일 시스템에서 도구를 업데이트해도 Linux 파일 시스템의 도구에는 영향을 주지 않으며, 그 반대의 경우도 마찬가지입니다. WSL은 컴퓨터의 고정 드라이브를 Linux 배포의 `/mnt/<drive>` 폴더 아래에 탑재합니다. 예를 들어 Windows C: 드라이브는 `/mnt/c/` 아래에 탑재됩니다. Ubuntu 터미널에서 Windows 파일에 액세스하고 해당 파일에서 Linux 애플리케이션 및 도구를 사용할 수 있으며, 그 반대의 경우도 마찬가지입니다. 대부분의 웹 도구가 원래 Linux용으로 작성되어 Linux 프로덕션 환경에 배포되는 경우 Python 웹 개발을 위해 Linux 파일 시스템에서 작업하는 것이 좋습니다. 또한 파일 이름과 관련하여 대/소문자를 구분하지 않는 Windows와 같이 파일 시스템 의미 체계를 혼합하지 않도록 방지합니다. 즉, WSL은 이제 Linux 및 Windows 파일 시스템 간의 이동을 지원하므로 어느 쪽에서든 파일을 호스팅할 수 있습니다. [자세한 내용을 알아보십시오](https://devblogs.microsoft.com/commandline/do-not-change-linux-files-using-windows-apps-and-tools/). 또한 [WSL2가 Windows에 곧 출시](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/)될 예정이며, 몇 가지 향상된 기능을 제공합니다. 이제 [Windows 참가자 빌드 18917에서 사용](https://docs.microsoft.com/windows/wsl/wsl2-install)해 볼 수 있습니다.
+> WSL(Linux용 Windows 하위 시스템)을 사용할 때 기억해야 할 중요한 사항은 **현재 두 개의 서로 다른 파일 시스템**, 즉 1) Windows 파일 시스템 및 2) Linux 파일 시스템(WSL, 여기서는 Ubuntu) 간에 작업하고 있다는 것입니다. 패키지를 설치하고 파일을 저장하는 위치에 주의해야 합니다. Windows 파일 시스템에는 한 버전의 도구 또는 패키지를 설치하고, Linux 파일 시스템에는 완전히 다른 버전을 설치할 수 있습니다. Windows 파일 시스템에서 도구를 업데이트해도 Linux 파일 시스템의 도구에는 영향을 주지 않으며, 그 반대의 경우도 마찬가지입니다. WSL은 컴퓨터의 고정 드라이브를 Linux 배포의 `/mnt/<drive>` 폴더 아래에 탑재합니다. 예를 들어 Windows C: 드라이브는 `/mnt/c/` 아래에 탑재됩니다. Ubuntu 터미널에서 Windows 파일에 액세스하고 해당 파일에서 Linux 애플리케이션 및 도구를 사용할 수 있으며, 그 반대의 경우도 마찬가지입니다. 대부분의 웹 도구가 원래 Linux용으로 작성되어 Linux 프로덕션 환경에 배포되는 경우 Python 웹 개발을 위해 Linux 파일 시스템에서 작업하는 것이 좋습니다. 또한 파일 이름과 관련하여 대/소문자를 구분하지 않는 Windows와 같이 파일 시스템 의미 체계를 혼합하지 않도록 방지합니다. 즉, WSL은 이제 Linux 및 Windows 파일 시스템 간의 이동을 지원하므로 어느 쪽에서든 파일을 호스팅할 수 있습니다. [자세한 정보를 알아보세요](https://devblogs.microsoft.com/commandline/do-not-change-linux-files-using-windows-apps-and-tools/). 또한 [WSL2가 Windows에 곧 출시](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/)될 예정이며, 몇 가지 향상된 기능을 제공합니다. 이제 [Windows 참가자 빌드 18917에서 사용](https://docs.microsoft.com/windows/wsl/wsl2-install)해 볼 수 있습니다.
 
 ## <a name="install-python-pip-and-venv"></a>Python, pip 및 venv 설치
 
@@ -99,7 +99,7 @@ Python 개발 프로젝트에는 가상 환경을 사용하는 것이 좋습니�
 
 ## <a name="open-a-wsl---remote-window"></a>Remote - WSL 창 열기
 
-VS Code는 이전에 설치된 Remote - WSL 확장을 사용하여 Linux 하위 시스템을 원격 서버로 처리합니다. 그러면 WSL을 통합 개발 환경으로 사용할 수 있습니다. [자세한 내용을 알아보십시오](https://code.visualstudio.com/docs/remote/wsl). 
+VS Code는 이전에 설치된 Remote - WSL 확장을 사용하여 Linux 하위 시스템을 원격 서버로 처리합니다. 그러면 WSL을 통합 개발 환경으로 사용할 수 있습니다. [자세한 정보를 알아보세요](https://code.visualstudio.com/docs/remote/wsl). 
 
 1. `code .`를 입력하여 Ubuntu 터미널에서 VS Code의 프로젝트 폴더를 엽니다("."는 현재 폴더를 열도록 VS Code에 지시함).
 
@@ -115,7 +115,7 @@ VS Code는 이전에 설치된 Remote - WSL 확장을 사용하여 Linux 하위 
 
 ## <a name="install-the-microsoft-python-extension"></a>Microsoft Python 확장 설치
 
-Remote - WSL용 VS Code 확장을 설치해야 합니다. VS Code에 이미 로컬로 설치된 확장은 자동으로 사용할 수 없습니다. [자세한 내용을 알아보십시오](https://code.visualstudio.com/docs/remote/wsl#_managing-extensions).
+Remote - WSL용 VS Code 확장을 설치해야 합니다. VS Code에 이미 로컬로 설치된 확장은 자동으로 사용할 수 없습니다. [자세한 정보를 알아보세요](https://code.visualstudio.com/docs/remote/wsl#_managing-extensions).
 
 1. **Ctrl+Shift+X**를 입력하거나 메뉴에서 **보기** > **확장**으로 이동하여 VS Code 확장 창을 엽니다.
 

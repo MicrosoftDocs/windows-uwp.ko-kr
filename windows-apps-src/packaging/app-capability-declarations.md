@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: 19H1
 ms.openlocfilehash: 3951a34501b24483fb47b97450ad172a93e168e0
-ms.sourcegitcommit: b0930dfeb45e696fe4fa14bdb547de13ba5ade89
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77146353"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852873"
 ---
 # <a name="app-capability-declarations"></a>앱 기능 선언
 

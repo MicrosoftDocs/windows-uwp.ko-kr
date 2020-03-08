@@ -1,5 +1,5 @@
 ---
-Description: 제품 선언 되도록 앱 Microsoft Store 적절 하 게 표시 되 고 고객의 올바른 집합을 제공 합니다.
+Description: 제품 선언을 사용 하면 앱이 Microsoft Store에서 적절 하 게 표시 되 고 올바른 고객 집합에 제공 되는지 확인할 수 있습니다.
 title: 제품 선언
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 ms.date: 10/31/2018
@@ -7,21 +7,21 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 47011a22353f26361a392690d857bde1fc180c03
-ms.sourcegitcommit: 978df7dfd3813de51609b6a44aedcd402083a5fd
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66826108"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853447"
 ---
 # <a name="product-declarations"></a>제품 선언
 
-합니다 **제품 선언** 섹션을 [속성](enter-app-properties.md) 페이지를 [제출 프로세스](app-submissions.md) 앱 적절 하 게 표시 되 고 올바른 집합을 제공 하도록 해야 고객을 도와의 앱 사용 방법을 이해 하 합니다.
+[제출 프로세스](app-submissions.md) 의 [속성](enter-app-properties.md) 페이지에 있는 **제품 선언** 섹션을 사용 하 여 앱이 적절 하 게 표시 되 고 올바른 고객 집합에 제공 되는지 확인 하 고, 앱을 사용 하는 방법을 이해 하는 데 도움을 받을 수 있습니다.
 
-다음 섹션에서는 선언 및 각 선언 앱에 적용 되는지 여부를 결정할 때 고려해 야 하는 내용 중 일부를 설명 합니다. Note는 이러한 선언 두 기본적으로 선택 됩니다 (아래 설명 된 대로.) 제품의 범주에 따라 추가 선언이 나타날 수도 있습니다. 선언의 모든 검토 하 고 제출을 정확히 반영 되도록 해야 합니다.
+다음 섹션에서는 각 선언이 앱에 적용 되는지 여부를 결정할 때 고려해 야 하는 몇 가지 선언과 선언에 대해 설명 합니다. 아래에서 설명 하는 것 처럼 이러한 선언 중 두 개가 기본적으로 선택 됩니다. 제품 범주에 따라 추가 선언이 표시 될 수도 있습니다. 모든 선언을 검토 하 고 제출을 정확 하 게 반영 해야 합니다.
 
-## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>이 앱을 구매할 수 있습니다 하지만 Microsoft Store 상거래 시스템을 사용 하지 않습니다.
+## <a name="this-app-allows-users-to-make-purchases-but-does-not-use-the-microsoft-store-commerce-system"></a>이 앱을 통해 사용자는 구매할 수 있지만 Microsoft Store 상거래 시스템은 사용 하지 않습니다.
 
-거의 모든 서브 미션이 상자를 선택 취소 되어 있음 두어야 구입 하는 기회를 제공 하는 앱부터 됩니다 또는 가져오거나 수 있는 사용 앱 내에서 사용 되는 항목 사용 해야 합니다 Microsoft Store 앱에서 바로 구매 API 만들기 및 추가 기능을 제출 합니다. 당 합니다 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement), 앱 만들고 2015 년 6 월 29 일 전에 전송 된 구매 기능으로 한 Microsoft의 상용 엔진을 사용 하지 않고 앱 내 구매 기능을 제공 합니다. 계속 될 수 있습니다 준수 하는 [Microsoft Store 정책](store-policies.md#108-financial-transactions)합니다. 이 경우 이 상자를 선택해야 합니다. 그렇지 않으면 선택되지 않은 상태로 그대로 둡니다.
+거의 모든 제출에 대해이 확인란을 선택 하지 않은 상태로 둡니다. 앱 내에서 또는 사용 하거나 사용할 수 있는 항목을 구입 하는 기회를 제공 하는 앱은 앱 내 구매 API를 Microsoft Store 사용 하 여 추가 기능을 만들고 제출 해야 하기 때문에이 확인란을 선택 하지 않은 상태로 두어야 합니다. [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에 따라 2015 년 6 월 29 일 이전에 생성 및 제출 된 앱은 Microsoft의 상거래 엔진을 사용 하지 않고도 앱 내 구매 기능을 계속 제공할 수 있습니다. 따라서 구매 기능이 [Microsoft Store 정책을](store-policies.md#108-financial-transactions)준수 하기만 하면 됩니다. 이 경우 이 상자를 선택해야 합니다. 그렇지 않으면 선택되지 않은 상태로 그대로 둡니다.
 
 ## <a name="this-app-has-been-tested-to-meet-accessibility-guidelines"></a>이 앱은 접근성 준수하도록 테스트되었습니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "66826108"
 
 -   액세스 가능한 이름 등 UI 요소에 관련된 모든 접근성 정보를 설정합니다.
 -   계정 탭 순서, 키보드 활성화, 화살표 키 탐색, 바로 가기를 고려하여 키보드 탐색과 작업을 구현합니다.
--   4.5:1 텍스트 대비 비율 등을 포함하여 접근성 있는 시각적 환경을 구현하고 색상에만 의존하여 사용자에게 정보를 전달하지 않습니다.
+-   4\.5:1 텍스트 대비 비율 등을 포함하여 접근성 있는 시각적 환경을 구현하고 색상에만 의존하여 사용자에게 정보를 전달하지 않습니다.
 -   Inspect 또는 AccChecker 등의 접근성 테스트 도구를 사용하여 앱을 확인하고 해당 도구에서 검색된 높은 우선 순위 오류를 모두 해결합니다.
 -   내레이터, 돋보기, 화상 키보드, 고대비, 높은 DPI 등의 기능과 도구를 사용하여 앱의 종단 간 주요 시나리오를 확인합니다.
 
@@ -40,13 +40,13 @@ ms.locfileid: "66826108"
 자세한 내용은 [접근성](../design/accessibility/accessibility.md), [접근성 테스트](../design/accessibility/accessibility-testing.md) 및 [스토어에서 접근성](../design/accessibility/accessibility-in-the-store.md)을 참조하세요.
 
 > [!IMPORTANT]
-> 특히 엔지니어링 있고 해당 목적을 위해 테스트 하지 않는 한 목록으로 액세스할 수 있도록 앱을 없습니다. 앱이 접근성 있음으로 선언되었지만 실제로 접근성을 지원하지 않을 경우 커뮤니티로부터 부정적인 피드백을 받을 수 있습니다.
+>이러한 목적을 위해 특별히 엔지니어링 하 고 테스트 한 경우를 제외 하 고는 액세스 가능으로 앱을 나열 하지  . 앱이 접근성 있음으로 선언되었지만 실제로 접근성을 지원하지 않을 경우 커뮤니티로부터 부정적인 피드백을 받을 수 있습니다.
 
-## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>고객은 이 앱을 설치하여 드라이브 또는 이동식 저장소를 대체할 수 있습니다.
+## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>고객은 이 앱을 설치하여 드라이브 또는 이동식 스토리지를 대체할 수 있습니다.
 
-이 확인란이 기본적으로 고객 외부 또는 이동식 저장소 미디어 SD 카드, 같은 또는 비 시스템 볼륨에 외부 드라이브와 같은 드라이브에 앱을 설치할 수 있도록 합니다.
+이 상자는 고객이 SD 카드와 같은 외부 또는 이동식 저장소 미디어 나 외부 드라이브와 같은 비시스템 볼륨 드라이브에 앱을 설치할 수 있도록 기본적으로 선택 되어 있습니다.
 
-앱 대체 드라이브 또는 이동식 저장소에 설치 되지 않도록 및만 해당 장치의 내부 하드 드라이브에 설치를 허용 하려는 경우에이 확인란의 선택을 취소 합니다. (앱 수 있도록 설치를 제한할 수 있는 옵션이 있다는 점에 주의 *만* 이동식 저장소 미디어에 설치할 수 있습니다.)
+앱을 대체 드라이브나 이동식 저장소에 설치 하지 않고 장치에서 내부 하드 드라이브에만 설치할 수 있도록 하려면이 확인란의 선택을 취소 합니다. (이동식 저장소 미디어에 *만* 앱을 설치할 수 있도록 설치를 제한 하는 옵션은 없습니다.)
 
 
 ## <a name="windows-can-include-this-apps-data-in-automatic-backups-to-onedrive"></a>Windows에서는 이 앱의 데이터를 OneDrive에 대한 자동 백업에 포함할 수 있습니다.

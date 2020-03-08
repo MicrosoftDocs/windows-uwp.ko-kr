@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: ac23c926e0d7b517fe18321980fc322d7be5b064
-ms.sourcegitcommit: ff086bae50e61a351b8c53867ed6579e43d8cf1f
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/21/2020
-ms.locfileid: "76294832"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853497"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>지급 계좌 및 세금 양식 설정
 
@@ -23,7 +23,7 @@ Microsoft Store의 앱 판매에서 돈을 받으려면 지급 계정을 설정 
 앱에서 바로 구매를 제공하거나 Microsoft Advertising을 사용하지 않고 무료 앱 목록만 올리려면 지급액 계좌를 설정하거나 세금 양식을 작성할 필요가 없습니다. 나중에이 점을 변경 하 고 앱 (또는 추가 기능)을 판매 하려는 경우에는 지급 계정을 설정 하 고 세금 양식을 작성할 수 있습니다. 지급 계좌와 세금 프로필이 완료될 때까지 유료 앱 또는 추가 기능을 제출할 수 없습니다.
 
 > [!NOTE]
-> [특정 시장](account-types-locations-and-fees.md#developer-account-and-app-submission-markets)에서는 개발자가 무료 앱만 제출할 수 있습니다. 계정이 이러한 시장 중 하나에 등록되어 있는 경우 지급 계좌를 설정하는 옵션이 제공되지 않습니다.
+> [특정 시장](account-types-locations-and-fees.md#developer-account-and-app-submission-markets)에서는 개발자가 무료 앱만 제출할 수 있습니다. 계정이 이러한 시장 중 하나에 등록되어 있는 경우 지급액 계좌를 설정하는 옵션이 제공되지 않습니다.
 
 [개발자 계정을 설정한](opening-a-developer-account.md)후에는 두 가지 작업을 수행 해야 Microsoft Store에서 앱 (또는 추가 기능)을 판매할 수 있습니다.
 
@@ -157,8 +157,8 @@ PayPal을 결제 방법으로 사용하는 것에 대한 일반적인 질문:
 
 - **지불액을 받기 위해 필요한 PayPal 설정은 무엇 인가요?** PayPal 계정이 eCheck 결제를 차단하지 않도록 해야 합니다. 이 설정은 PayPal의 Payment Receiving Preferences 페이지에서 관리됩니다. 자세한 내용은 [PayPal의 계정 설정 페이지](https://developer.paypal.com/webapps/developer/docs/classic/admin/setup-account/)를 참조하세요.
 - **내 국가/지역이 지원 되나요?** [지불 임계값, 방법 및](payment-thresholds-methods-and-timeframes.md) 기간을 확인 하 여 PayPal이 지원 되는 지불 방법에 대해 알아보세요.
-- **내 PayPal 계정을 파트너 센터 계정과 동일한 국가/지역에 등록 해야 하나요?** 아니요. PayPal 계정을 설정할 때, 기본 구간을 수락하면 됩니다. 일부 통화의 지급을 차단하지 않는 한 다른 국가/지역 과 통화 문제는 발생하지 않을 것입니다. 이 설정은 PayPal의 Payment Receiving Preferences 페이지에서 관리됩니다.
-- **PayPal 결제를 수동으로 수락 해야 하나요?** 아니요. PayPal 계정은 기본적으로 사용자가 지급을 수동으로 수락하도록 설정되어 있으며, 이것은 사용자가 30일 내에 지급을 수락하지 않는 경우 반송됨을 의미합니다. PayPal의 More Settings 페이지에서 “Ask Me”를 끄면 이 설정을 변경할 수 있습니다.
+- **내 PayPal 계정을 파트너 센터 계정과 동일한 국가/지역에 등록 해야 하나요?** No. PayPal 계정을 설정할 때, 기본 구간을 수락하면 됩니다. 일부 통화의 지급을 차단하지 않는 한 다른 국가/지역 과 통화 문제는 발생하지 않을 것입니다. 이 설정은 PayPal의 Payment Receiving Preferences 페이지에서 관리됩니다.
+- **PayPal 결제를 수동으로 수락 해야 하나요?** No. PayPal 계정은 기본적으로 사용자가 지급을 수동으로 수락하도록 설정되어 있으며, 이것은 사용자가 30일 내에 지급을 수락하지 않는 경우 반송됨을 의미합니다. PayPal의 More Settings 페이지에서 “Ask Me”를 끄면 이 설정을 변경할 수 있습니다.
 - **PayPal에서 지 원하는 통화는 무엇 인가요?** 현재 목록에 대해서는 [PayPal의 지원 페이지](https://developer.paypal.com/docs/classic/api/currency-codes/#paypal) 를 참조 하세요.
 
 ### <a name="specific-requirements-for-certain-countriesregions"></a>특정 국가/지역에 대한 구체적인 요구 사항

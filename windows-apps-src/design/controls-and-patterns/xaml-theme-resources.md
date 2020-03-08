@@ -12,11 +12,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9544988837d44f42d963b268a2ce3d37cce83952
-ms.sourcegitcommit: a28a32fff9d15ecf4a9d172cd0a04f4d993f9d76
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66364104"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853519"
 ---
 # <a name="xaml-theme-resources"></a>XAML 테마 리소스
 
@@ -65,7 +65,7 @@ XAML 프레임워크는 "밝게" 및 "어둡게" 테마에 맞게 조정된 값�
 
 다음 표에는 XAML 프레임워크에서 제공하는 “밝게” 및 “어둡게” 리소스에 대한 키, 간단한 이름, 색의 문자열 표현(\#aarrggbb 형식 사용)이 나와 있습니다. 이 키는 앱에서 리소스를 참조하는 데 사용됩니다. "간단한 밝게/어둡게 이름"은 뒷부분에서 설명되는 브러시 이름 지정 규칙의 일부로 사용됩니다.
 
-| 키                             | 간단한 밝게/어둡게 이름 | 밝게      | 어둡게       |
+| 키                             | 간단한 밝게/어둡게 이름 | Light      | Dark       |
 |---------------------------------|------------------------|------------|------------|
 | SystemAltHighColor              | AltHigh                | \#FFFFFFFF | \#FF000000 |
 | SystemAltLowColor               | AltLow                 | \#33FFFFFF | \#33000000 |
@@ -94,43 +94,43 @@ XAML 프레임워크는 "밝게" 및 "어둡게" 테마에 맞게 조정된 값�
 
 :::row:::
     :::column:::
-        #### Light theme
+        #### <a name="light-theme"></a>밝은 테마
     :::column-end:::
     :::column:::
-        #### Dark theme
-    :::column-end:::
-:::row-end:::
-
-#### <a name="base"></a>기본
-
-:::row:::
-    :::column:::
-        ![The base light theme](images/themes/light-base.png)
-    :::column-end:::
-    :::column:::
-        ![The base dark theme](images/themes/dark-base.png)
+        #### <a name="dark-theme"></a>어두운 테마
     :::column-end:::
 :::row-end:::
 
-#### <a name="alt"></a>대체
+#### <a name="base"></a>기준
 
 :::row:::
     :::column:::
-        ![The alt light theme](images/themes/light-alt.png)
+        ![기본 밝은 테마](images/themes/light-base.png)
     :::column-end:::
     :::column:::
-        ![The alt dark theme](images/themes/dark-alt.png)
+        ![기본 어두운 테마](images/themes/dark-base.png)
     :::column-end:::
 :::row-end:::
 
-#### <a name="list"></a>List
+#### <a name="alt"></a>Alt
 
 :::row:::
     :::column:::
-        ![The list light theme](images/themes/light-list.png)
+        ![대체 밝은 테마](images/themes/light-alt.png)
     :::column-end:::
     :::column:::
-        ![The list dark theme](images/themes/dark-list.png)
+        ![대체 어두운 테마](images/themes/dark-alt.png)
+    :::column-end:::
+:::row-end:::
+
+#### <a name="list"></a>목록
+
+:::row:::
+    :::column:::
+        ![목록 밝은 테마](images/themes/light-list.png)
+    :::column-end:::
+    :::column:::
+        ![목록 어두운 테마](images/themes/dark-list.png)
     :::column-end:::
 :::row-end:::
 
@@ -138,10 +138,10 @@ XAML 프레임워크는 "밝게" 및 "어둡게" 테마에 맞게 조정된 값�
 
 :::row:::
     :::column:::
-        ![The chrome light theme](images/themes/light-chrome.png)
+        ![크롬 밝은 테마](images/themes/light-chrome.png)
     :::column-end:::
     :::column:::
-        ![The chrome dark theme](images/themes/dark-chrome.png)
+        ![크롬 어두운 테마](images/themes/dark-chrome.png)
     :::column-end:::
 :::row-end:::
 
@@ -156,7 +156,7 @@ XAML 프레임워크에서 제공하는 리소스 집합 외에, Windows 시스�
 | SystemColorButtonFaceColor    | **단추 텍스트**(배경)   | 배경               | \#FFF0F0F0      |
 | SystemColorButtonTextColor    | **단추 텍스트**(전경)   | 전경               | \#FF000000      |
 | SystemColorGrayTextColor      | **사용할 수 없는 텍스트**              | 사용 안 함                 | \#FF6D6D6D      |
-| SystemColorHighlightColor     | **선택한 텍스트**(배경) | Highlight                | \#FF3399FF      |
+| SystemColorHighlightColor     | **선택한 텍스트**(배경) | 강조 표시                | \#FF3399FF      |
 | SystemColorHighlightTextColor | **선택한 텍스트**(전경) | HighlightAlt             | \#FFFFFFFF      |
 | SystemColorHotlightColor      | **하이퍼링크**                 | Hyperlink                | \#FF0066CC      |
 | SystemColorWindowColor        | **배경**                 | PageBackground           | \#FFFFFFFF      |
@@ -177,7 +177,7 @@ Windows는 다양한 고대비 테마를 제공하고 다음과 같이 사용자
 
 ### <a name="theme-dependent-brushes"></a>테마 종속 브러시
 
-위 섹션에 표시된 색 리소스는 시스템 테마 리소스 사전에서 [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) 리소스의 [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 속성을 설정하는 데 사용됩니다. 브러시 리소스를 사용하여 XAML 요소에 색을 적용합니다. 브러시 리소스에 대한 키는 다음 이름 지정 형식을 따릅니다. `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. 예를 들면 `SystemControlBackroundAltHighBrush`입니다.
+위 섹션에 표시된 색 리소스는 시스템 테마 리소스 사전에서 [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) 리소스의 [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 속성을 설정하는 데 사용됩니다. 브러시 리소스를 사용하여 XAML 요소에 색을 적용합니다. 브러시 리소스에 대한 키는 다음 이름 지정 형식을 따릅니다. `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. 정의합니다(예: `SystemControlBackroundAltHighBrush`).
 
 런타임에 이 브러시에 대한 색 값이 결정되는 방식을 알아보겠습니다. "밝게" 및 "어둡게" 리소스 사전에서 이 브러시는 다음과 같이 정의됩니다.
 
@@ -191,8 +191,8 @@ Windows는 다양한 고대비 테마를 제공하고 다음과 같이 사용자
 
 | 테마        | 간단한 색 이름 | 색 리소스             | 런타임 값                                              |
 |--------------|-------------------|----------------------------|------------------------------------------------------------|
-| 밝게        | AltHigh           | SystemAltHighColor         | \#FFFFFFFF                                                 |
-| 어둡게         | AltHigh           | SystemAltHighColor         | \#FF000000                                                 |
+| Light        | AltHigh           | SystemAltHighColor         | \#FFFFFFFF                                                 |
+| Dark         | AltHigh           | SystemAltHighColor         | \#FF000000                                                 |
 | 고대비 | 배경        | SystemColorButtonFaceColor | 단추 배경에 대한 설정에 지정된 색입니다. |
 
 `SystemControl[Simple HighContrast name][Simple light/dark name]Brush` 이름 지정 체계를 사용하여 고유한 XAML 요소에 적용할 브러시를 확인할 수 있습니다.

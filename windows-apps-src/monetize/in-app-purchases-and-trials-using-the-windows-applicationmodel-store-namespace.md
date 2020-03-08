@@ -1,19 +1,19 @@
 ---
 ms.assetid: 32572890-26E3-4FBB-985B-47D61FF7F387
 description: Windows 10 버전 1607 이전 릴리스를 대상으로 하는 UWP 앱에서, 앱에서 바로 구매 및 평가판을 사용하는 방법을 알아봅니다.
-title: Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판
+title: Windows.ApplicationModel.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판
 ms.date: 08/25/2017
 ms.topic: article
 keywords: uwp, 앱에서 바로 구매, IAP, 추가 기능, 평가판, Windows.ApplicationModel.Store
 ms.localizationpriority: medium
 ms.openlocfilehash: 03bd2740022864008e87b448682c1025c46d2f2d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260285"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852786"
 ---
-# <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱에서 바로 구매 및 평가판
+# <a name="in-app-purchases-and-trials-using-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스를 사용하여 앱에서 바로 구매 및 평가판
 
 앱으로 수익을 창출할 수 있도록 [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store) 네임스페이스의 멤버를 사용하여 UWP(유니버설 Windows 플랫폼) 앱에 앱에서 바로 구매 및 평가판 기능을 추가할 수 있습니다. 이러한 API를 통해 앱에 대한 라이선스 정보에 액세스할 수도 있습니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "74260285"
 
 **Windows.ApplicationModel.Store** 네임스페이스의 기본 진입점은 [CurrentApp](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp) 클래스입니다. 이 클래스는 현재 앱과 사용 가능한 추가 기능에 대한 정보 가져오기, 현재 앱 또는 추가 기능에 대한 라이선스 정보 가져오기, 현재 사용자를 위한 앱 또는 추가 기능 구매 및 기타 작업에 사용할 수 있는 고정 속성 메서드를 제공합니다.
 
-[CurrentApp](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp) 클래스는 Microsoft Store에서 해당 데이터를 가져오므로 개발자 계정이 있고 앱을 Microsoft Store에 게시해야 앱에서 이 클래스를 성공적으로 사용할 수 있습니다. Microsoft Store에 앱을 제출하기 전에 [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator)라는 이 클래스의 시뮬레이트된 버전을 사용하여 코드를 테스트할 수 있습니다. 앱을 테스트한 후 Microsoft Store에 제출하기 전에 **CurrentAppSimulator** 인스턴스를 **CurrentApp**으로 바꾸어야 합니다. 앱이 **CurrentAppSimulator**를 사용하는 경우 인증에 실패합니다.
+[CurrentApp](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp) 클래스는 Microsoft Store에서 해당 데이터를 가져오므로 개발자 계정이 있고 앱을 Microsoft Store에 게시해야 앱에서 이 클래스를 성공적으로 사용할 수 있습니다. 스토어에 앱을 제출하기 전에 [CurrentAppSimulator](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentappsimulator)라는 이 클래스의 시뮬레이트된 버전을 사용하여 코드를 테스트할 수 있습니다. 앱을 테스트한 후 Microsoft Store에 제출하기 전에 **CurrentAppSimulator** 인스턴스를 **CurrentApp**으로 바꾸어야 합니다. 앱이 **CurrentAppSimulator**를 사용하는 경우 인증에 실패합니다.
 
 **CurrentAppSimulator**를 사용하는 경우 앱 라이선싱 및 앱에서 바로 구매 제품의 초기 상태는 WindowsStoreProxy.xml이라는 개발 컴퓨터의 로컬 파일에서 설명됩니다. 이 파일에 대한 자세한 내용은 [CurrentAppSimulator와 함께 WindowsStoreProxy.xml 파일 사용](#proxy)을 참조하세요.
 
@@ -34,7 +34,7 @@ ms.locfileid: "74260285"
 
 | 항목       | 설명                 |
 |----------------------------|-----------------------------|
-| [평가판 버전의 기능 제외 또는 제한](exclude-or-limit-features-in-a-trial-version-of-your-app.md) | 평가 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 평가 기간 동안 일부 기능을 제외하거나 제한하여 고객이 앱 정식 버전으로 업그레이드하도록 유도할 수 있습니다. |
+| [평가판 버전의 기능 제외 또는 제한](exclude-or-limit-features-in-a-trial-version-of-your-app.md) | 체험 기간 동안 고객이 앱을 무료로 사용할 수 있게 하는 경우 체험 기간 동안 일부 기능을 제외하거나 제한하여 고객이 처음 사용자용 앱 버전으로 업그레이드하도록 유도할 수 있습니다. |
 | [앱에서 바로 제품 구매 사용](enable-in-app-product-purchases.md)      |  앱이 무료인지 여부와 상관없이, 앱 내에서 바로 콘텐츠, 기타 앱 또는 새 앱 기능(예: 게임의 다음 단계 잠금 해제)을 판매할 수 있습니다. 여기서는 앱에서 이러한 제품을 사용하도록 설정하는 방법을 보여 줍니다.  |
 | [앱에서 바로 소모성 제품 구매 사용](enable-consumable-in-app-product-purchases.md)      | 스토어 상거래 플랫폼을 통해 앱에서 바로 구매 소모성 제품(구매, 사용 및 필요에 따라 다시 구매할 수 있는 항목)을 제공하여 강력하고 안정적인 구매 환경을 고객에게 제공합니다. 이 기능은 구매한 후 특정 회복 아이템을 구매하는 데 사용할 수 있는 게임 내 통화(금, 동전 등) 등에 특히 유용합니다. |
 | [앱 내 제품의 대량 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)      |   앱에서 대규모 앱에서 바로 구매 제품 카탈로그를 제공하는 경우 이 항목에 설명된 프로세스를 선택적으로 수행하여 카탈로그를 관리할 수 있습니다.    |
@@ -373,7 +373,7 @@ Windows%UserProfile%\AppData\Local\Packages 파일은 기본적으로 다음 위
 |  요소  |  필수  |  수량  |  설명   |
 |-------------|------------|--------|--------|
 |  [다운로드](#app-child-of-listinginformation)  |    예   |  1   |    앱에 대한 데이터를 제공합니다.         |
-|  [제품](#product-child-of-listinginformation)  |    아니요  |  0개 이상   |      앱용 추가 기능을 설명합니다.     |     |
+|  [제품](#product-child-of-listinginformation)  |    아니요  |  0 이상   |      앱용 추가 기능을 설명합니다.     |     |
 
 <span id="app-child-of-listinginformation"/>
 
@@ -442,7 +442,7 @@ Windows%UserProfile%\AppData\Local\Packages 파일은 기본적으로 다음 위
 |  **CurrencySymbol**  |    예  |  1   |     이 국가/지역에서 사용되는 통화 기호입니다.        |
 |  **CurrencyCode**  |    아니요  |  0 또는 1      |      이 국가/지역에서 사용되는 통화 코드입니다.         |  
 |  **설명**  |    아니요  |   0 또는 1   |      이 국가/지역에 대한 추가 기능 설명입니다.       |
-|  **태그가**  |    아니요  |   0 또는 1   |      추가 기능에 대한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data)(태그라고도 함)입니다.       |
+|  **Tag**  |    아니요  |   0 또는 1   |      추가 기능에 대한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data)(태그라고도 함)입니다.       |
 |  **키워드**  |    아니요  |   0 또는 1   |      추가 기능에 대한 **키워드**가 포함된 [Keyword](../publish/enter-add-on-properties.md#keywords) 요소를 최대 10개까지 포함합니다.       |
 |  **ImageUri**  |    아니요  |   0 또는 1   |      추가 기능 목록의 [이미지 URI](../publish/create-add-on-store-listings.md#icon)입니다.           |  |
 
@@ -463,7 +463,7 @@ Windows%UserProfile%\AppData\Local\Packages 파일은 기본적으로 다음 위
 |  요소  |  필수  |  수량  | 설명   |
 |-------------|------------|--------|--------|
 |  [다운로드](#app-child-of-licenseinformation)  |    예   |  1   |    앱의 라이선스를 설명합니다.         |
-|  [제품](#product-child-of-licenseinformation)  |    아니요  |  0개 이상   |      앱에서 지속형 추가 기능의 라이선스 상태를 설명합니다.         |   |
+|  [제품](#product-child-of-licenseinformation)  |    아니요  |  0 이상   |      앱에서 지속형 추가 기능의 라이선스 상태를 설명합니다.         |   |
 
 다음 표에서는 **App** 및 **Product** 요소 아래의 값을 결합하여 몇 가지 일반적인 조건을 시뮬레이트하는 방법을 보여 줍니다.
 

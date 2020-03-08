@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 패드, 진동
 ms.localizationpriority: medium
 ms.openlocfilehash: e65b22039c381bd333516bd9f98c60bbddb9621c
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57646928"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853065"
 ---
 # <a name="gamepad-and-vibration"></a>게임 패드 및 진동
 
-이 페이지에서는 UWP(유니버설 Windows 플랫폼)용 [Windows.Gaming.Input.Gamepad][gamepad] 및 관련 API를 사용하여 Xbox One 게임 패드용 프로그래밍의 기본 사항을 설명합니다.
+이 페이지에서는 UWP(유니버설 Windows 플랫폼)용 [Windows.Gaming.Input.Gamepad][vibration] 및 관련 API를 사용하여 Xbox One 게임 패드용 프로그래밍의 기본 사항을 설명합니다.
 
 이 페이지에서는 다음에 대해 알아봅니다.
 
@@ -23,32 +23,32 @@ ms.locfileid: "57646928"
 * 게임 패드가 추가 또는 제거된 사실을 감지하는 방법
 * 하나 이상의 게임 패드에서 입력을 읽는 방법
 * 진동 및 임펄스 명령을 전송하는 방법
-* 게임 패드 UI 탐색 장치로 작동 하는 방법
+* gamepads가 UI 탐색 장치로 동작 하는 방식
 
 ## <a name="gamepad-overview"></a>게임 패드 개요
 
-Xbox 무선 컨트롤러 및 Xbox 무선 컨트롤러 S와 같은 게임 패드는 범용 게임 입력 장치입니다. 게임 패드는 Xbox One의 표준 입력 장치로, 키보드와 마우스를 선호하지 않는 Windows 게이머가 사용하는 경우가 많습니다. 게임 패드는 Windows 10 및 Xbox UWP 앱에서 [Windows.Gaming.Input][] 네임스페이스로 지원됩니다.
+Xbox 무선 컨트롤러 및 Xbox 무선 컨트롤러 S와 같은 게임 패드는 범용 게임 입력 디바이스입니다. 게임 패드는 Xbox One의 표준 입력 디바이스로, 키보드와 마우스를 선호하지 않는 Windows 게이머가 사용하는 경우가 많습니다. 게임 패드는 Windows 10 및 Xbox UWP 앱에서 [Windows. 게임 입력][] 네임스페이스로 지원됩니다.
 
-Xbox One 게임 패드 또는 사용 하 여는 방향 패드 (패드); 장착 된 **A**, **B**를 **X**, **Y**를 **보기**, 및 **메뉴** 단추; 왼쪽 및 오른쪽 스틱, 범퍼, 및 트리거 및 4 진동 모터 총 수입니다. 두 섬스틱(thumbstick)은 X 및 Y 축에서 이중 아날로그 판독값을 제공하며, 안쪽으로 눌리면 버튼 역할도 합니다. 각 트리거 얼마나 것은 가져온 다시 나타내는 아날로그 읽기를 제공 합니다.
+Xbox One gamepads에는 방향 패드 (또는 D-패드)가 장착 되어 있습니다. **A**, **B**, **X**, **Y**, **보기**및 **메뉴** 단추 왼쪽 및 오른쪽 thumbsticks, 범퍼 및 트리거 그리고 총 4 개의 진동 모터가 있습니다. 두 섬스틱(thumbstick)은 X 및 Y 축에서 이중 아날로그 판독값을 제공하며, 안쪽으로 눌리면 버튼 역할도 합니다. 각 트리거는 다시 가져오는 정도를 나타내는 아날로그 읽기를 제공 합니다.
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **Paddle** buttons on its underside. These can be used to provide redundant access to game commands that are difficult to use together (such as the right thumbstick together with any of the **A**, **B**, **X**, or **Y** buttons) or to provide dedicated access to additional commands. -->
 
 > [!NOTE]
-> `Windows.Gaming.Input.Gamepad` 또한 표준 Xbox One 게임 패드와 같은 컨트롤 레이아웃이 있는 Xbox 360 게임 패드를 지원 합니다.
+> `Windows.Gaming.Input.Gamepad`는 standard Xbox One gamepads와 동일한 컨트롤 레이아웃을 가진 Xbox 360 gamepads도 지원 합니다.
 
 ### <a name="vibration-and-impulse-triggers"></a>진동 및 임펄스 트리거
 
 Xbox One 게임 패드는 강력한 게임 패드 진동과 미세한 게임 패드 진동을 위한 두 개의 독립적 모터와 각 트리거에 선명한 진동을 제공하기 위한 전용 모터 두 개를 제공합니다(이 고유한 기능 때문에 Xbox One 게임 패드 트리거를 _임펄스 트리거_라고 함).
 
 > [!NOTE]
-> Xbox 360 게임 패드 장착 되지 않은 _임펄스 트리거_합니다.
+> Xbox 360 gamepads에는 _임펄스 트리거가_설치 되어 있지 않습니다.
 
 자세한 내용은 [진동 및 임펄스 트리거 개요](#vibration-and-impulse-triggers-overview)를 참조하세요.
 
 ### <a name="thumbstick-deadzones"></a>섬스틱(thumbstick) 데드존
 
-중앙 위치에 서 있는 섬스틱(thumbstick)은 매번 X 축과 Y 축에 동일한 중립 판독값을 이상적으로 생성합니다. 하지만 섬스틱(thumbstick)의 기계력과 민감도로 인해 중앙 위치의 실제 판독값은 이상적인 중립값의 근사치일 뿐이며 후속 판독값마다 달라질 수 있습니다. 이러한 이유로 항상 사용 해야 작은 _deadzone_&mdash;이상적인 가운데 위치 근처 무시 되는 값의 범위&mdash;보완 하기 위해 제조 차이점, 기계적 wear 또는 다른 gamepad 문제가 있습니다.
+중앙 위치에 서 있는 섬스틱(thumbstick)은 매번 X 축과 Y 축에 동일한 중립 판독값을 이상적으로 생성합니다. 하지만 섬스틱(thumbstick)의 기계력과 민감도로 인해 중앙 위치의 실제 판독값은 이상적인 중립값의 근사치일 뿐이며 후속 판독값마다 달라질 수 있습니다. 따라서 제조 차이, 기계적 마모 또는 기타 게임 패드 문제를 보완 하기 위해&mdash;무시 되는 이상적인 센터 위치 근처의 값 범위&mdash;항상 작은 _deadzone_ 을 사용 해야 합니다.
 
 큰 데드존은 의도한 입력과 의도치 않은 입력을 구분하기 위한 간단한 전략입니다.
 
@@ -56,27 +56,27 @@ Xbox One 게임 패드는 강력한 게임 패드 진동과 미세한 게임 패
 
 ### <a name="ui-navigation"></a>UI 탐색
 
-사용자 인터페이스 탐색을 위해 다양한 입력 장치를 지원해야 하는 부담을 덜고 게임과 장치 간 일관성을 추구하기 위해 대부분의 _물리적_ 입력 장치는 [UI 탐색 컨트롤러](ui-navigation-controller.md)라고 하는 별도의 _논리적_ 입력 장치 역할을 동시에 수행합니다. UI 탐색 컨트롤러는 입력 장치 전반적으로 UI 탐색 명령에 대한 공통 어휘를 제공합니다.
+사용자 인터페이스 탐색을 위해 다양한 입력 장치를 지원해야 하는 부담을 덜고 게임과 장치 간 일관성을 추구하기 위해 대부분의 _물리적_ 입력 장치는 _UI 탐색 컨트롤러_라고 하는 별도의 [논리적](ui-navigation-controller.md) 입력 장치 역할을 동시에 수행합니다. UI 탐색 컨트롤러는 입력 디바이스 전반적으로 UI 탐색 명령에 대한 공통 어휘를 제공합니다.
 
-게임 패드에서 매핑할 UI 탐색 컨트롤러는 [필수 집합](ui-navigation-controller.md#required-set) 탐색 명령에서 왼쪽된 엄지 스틱 방향 패드를 **뷰**를 **메뉴**, **를**, 및 **B** 단추입니다.
+UI 탐색 컨트롤러인 gamepads는 필요한 탐색 명령 [집합](ui-navigation-controller.md#required-set) 을 왼쪽 엄지 스틱, D-패드, **뷰**, **메뉴**, **a**및 **B** 단추에 매핑합니다.
 
 | 탐색 명령 | 게임 패드 입력                       |
 | ------------------:| ----------------------------------- |
-|                 위쪽 | 왼쪽 섬스틱(thumbstick) 위쪽/D 패드 위쪽       |
-|               아래쪽 | 왼쪽 섬스틱(thumbstick) 아래쪽/D 패드 아래쪽   |
+|                 위로 | 왼쪽 섬스틱(thumbstick) 위쪽/D 패드 위쪽       |
+|               아래로 | 왼쪽 섬스틱(thumbstick) 아래쪽/D 패드 아래쪽   |
 |               왼쪽 | 왼쪽 섬스틱(thumbstick) 왼쪽/D 패드 왼쪽   |
 |              오른쪽 | 왼쪽 섬스틱(thumbstick) 오른쪽/D 패드 오른쪽 |
 |               보기 | 보기 버튼                         |
 |               메뉴 | 메뉴 버튼                         |
-|             수락 | A 버튼                            |
-|             Cancel | B 버튼                            |
+|             Accept | A 버튼                            |
+|             취소 | B 버튼                            |
 
 또한 게임 패드는 탐색 명령의 모든 [선택 집합](ui-navigation-controller.md#optional-set)을 나머지 입력에 매핑합니다.
 
 | 탐색 명령 | 게임 패드 입력          |
 | ------------------:| ---------------------- |
-|            한 페이지 위로 | 왼쪽 트리거           |
-|          한 페이지 아래로 | 오른쪽 트리거          |
+|            Page Up | 왼쪽 트리거           |
+|          Page Down | 오른쪽 트리거          |
 |          한 페이지 왼쪽으로 | 왼쪽 범퍼            |
 |         한 페이지 오른쪽으로 | 오른쪽 범퍼           |
 |          위로 스크롤 | 오른쪽 섬스틱(thumbstick) 위쪽    |
@@ -94,9 +94,9 @@ Xbox One 게임 패드는 강력한 게임 패드 진동과 미세한 게임 패
 
 ### <a name="the-gamepads-list"></a>게임 패드 목록
 
-[Gamepad][] 클래스는 정적 속성 [Gamepads][]를 제공하는데, 이는 현재 연결된 게임 패드의 읽기 전용 목록입니다. 있을 경우에 연결 된 게임 패드의 일부에 관심이 있는, 것이 좋습니다를 통해 액세스 하는 대신 고유한 컬렉션을 유지 관리 하는 `Gamepads` 속성입니다.
+[Vibration][] 클래스는 정적 속성 [Gamepads][]를 제공하는데, 이는 현재 연결된 게임 패드의 읽기 전용 목록입니다. 연결 된 gamepads 중 일부에만 관심이 있을 수 있으므로 `Gamepads` 속성을 통해 액세스 하는 대신 자체 컬렉션을 유지 관리 하는 것이 좋습니다.
 
-다음 예제에서는 연결된 모든 게임 패드를 새 컬렉션에 복사합니다. 백그라운드에서 다른 스레드가이 컬렉션을 액세스할 수는 되므로 (에 [GamepadAdded][] 및 [GamepadRemoved][] 이벤트)를 읽는 코드 또는 업데이트에 대 한 잠금을 배치 해야 하는 컬렉션입니다.
+다음 예제에서는 연결된 모든 게임 패드를 새 컬렉션에 복사합니다. 배경의 다른 스레드가이 컬렉션에 액세스 하 게 되므로 ( [GamepadAdded][] 및 [GamepadRemoved][] 이벤트에서) 컬렉션을 읽거나 업데이트 하는 코드에 대 한 잠금을 만들어야 합니다.
 
 ```cpp
 auto myGamepads = ref new Vector<Gamepad^>();
@@ -142,7 +142,7 @@ private void GetGamepads()
 
 ### <a name="adding-and-removing-gamepads"></a>게임 패드 추가 및 제거
 
-gamepad 추가 되거나 제거 되는 [GamepadAdded][] 하 고 [GamepadRemoved][] 이벤트가 발생 합니다. 이러한 이벤트의 처리기를 등록하면 현재 연결된 게임 패드를 추적할 수 있습니다.
+게임 패드를 추가 하거나 제거 하면 [GamepadAdded][] 및 [GamepadRemoved][] 이벤트가 발생 합니다. 이러한 이벤트의 처리기를 등록하면 현재 연결된 게임 패드를 추적할 수 있습니다.
 
 다음 예제에서는 추가된 게임 패드의 추적을 시작합니다.
 
@@ -179,7 +179,7 @@ Gamepad.GamepadAdded += (object sender, Gamepad e) =>
 };
 ```
 
-다음 예제에서는 제거 된 gamepad 추적을 중지 합니다. 이들이; 제거 하는 경우 추적 되는 게임 패드를 어떻게 처리 해야 이 코드의 한 gamepad에서 입력 추적 및로 설정 합니다 예를 들어 `nullptr` 제거 되는 경우. 모든 프레임에 gamepad 활성 상태인 경우 및 어떤 gamepad 컨트롤러 연결 되 고 연결이 끊어진 경우 입력을 수집 하는 업데이트를 확인 해야 합니다.
+다음 예제에서는 제거 된 게임 패드 추적을 중지 합니다. 또한 제거 될 때 추적 하는 gamepads에 발생 하는 상황을 처리 해야 합니다. 예를 들어이 코드는 한 게임 패드의 입력만 추적 하 고, 제거 될 때 `nullptr`로 설정 하기만 하면 됩니다. 게임 프로그램이 활성 상태 이면 모든 프레임을 확인 하 고, 컨트롤러가 연결 되 고 연결이 끊어질 때 입력을 수집 하는 게임 패드를 업데이트 해야 합니다.
 
 ```cpp
 Gamepad::GamepadRemoved += ref new EventHandler<Gamepad^>(Platform::Object^, Gamepad^ args)
@@ -219,7 +219,7 @@ Gamepad.GamepadRemoved += (object sender, Gamepad e) =>
 };
 ```
 
-참조 [게임에 대 한 사례 입력](input-practices-for-games.md) 자세한 내용은 합니다.
+자세한 내용은 [게임의 입력 방법](input-practices-for-games.md) 을 참조 하세요.
 
 ### <a name="users-and-headsets"></a>사용자 및 헤드셋
 
@@ -231,9 +231,9 @@ Gamepad.GamepadRemoved += (object sender, Gamepad e) =>
 
 ### <a name="polling-the-gamepad"></a>게임 패드 폴링
 
-폴링은 정확한 시점에 탐색 장치의 스냅샷을 캡처합니다. 이러한 입력 수집 방법은 대부분의 게임에 적합합니다. 게임의 논리는 일반적으로 이벤트 기반 방식이 아닌 결정적 루프로 실행되기 때문입니다. 또한 시간을 두고 수집된 여러 단일 입력보다 한 번에 수집된 입력에서 게임 명령을 해석하는 것이 일반적으로 더 간단합니다.
+폴링은 정확한 시점에 탐색 디바이스의 스냅샷을 캡처합니다. 이러한 입력 수집 방법은 대부분의 게임에 적합합니다. 게임의 논리는 일반적으로 이벤트 기반 방식이 아닌 결정적 루프로 실행되기 때문입니다. 또한 시간을 두고 수집된 여러 단일 입력보다 한 번에 수집된 입력에서 게임 명령을 해석하는 것이 일반적으로 더 간단합니다.
 
-게임 패드는 [GetCurrentReading][]을 호출하여 폴링합니다. 이 함수는 게임 패드의 상태가 포함된 [GamepadReading][]을 반환합니다.
+게임 패드는 [GetCurrentReading][]을 호출하여 폴링합니다. 이 함수는 게임 패드의 상태가 포함된 [ 구조의 ][]을 반환합니다.
 
 다음 예제에서는 게임 패드의 현재 상태를 폴링합니다.
 
@@ -253,9 +253,9 @@ GamepadReading reading = gamepad.GetCurrentReading();
 
 ### <a name="reading-the-thumbsticks"></a>섬스틱(thumbstick) 읽기
 
-각 섬스틱(thumbstick)은 X 축과 Y 축에 -1.0과 +1.0 사이의 아날로그 판독값을 제공합니다. X 축에서 -1.0 값은 맨 왼쪽 섬스틱(thumbstick) 위치에 해당하고, +1.0 값은 맨 오른쪽 위치에 해당합니다. Y 축에서 -1.0 값은 맨 아래쪽 섬스틱(thumbstick) 위치에 해당하고, +1.0 값은 맨 위쪽 위치에 해당합니다. 두 축 값은 약 후속 판독값; 사이의 0.0 가운데 위치에는 메모리 스틱을 이지만 다를 정확한 값에 대 한 일반적인 경우에 이 섹션에서는 이러한 변화를 완화 하기 위한 전략 나중에 설명 됩니다.
+각 섬스틱(thumbstick)은 X 축과 Y 축에 -1.0과 +1.0 사이의 아날로그 판독값을 제공합니다. X 축에서 -1.0 값은 맨 왼쪽 섬스틱(thumbstick) 위치에 해당하고, +1.0 값은 맨 오른쪽 위치에 해당합니다. Y 축에서 -1.0 값은 맨 아래쪽 섬스틱(thumbstick) 위치에 해당하고, +1.0 값은 맨 위쪽 위치에 해당합니다. 두 축에서 값은 약 0.0이 가운데 위치에 있을 때 약 이지만, 이후 판독값에도 불구 하 고 정확한 값이 변경 되는 것은 일반적입니다. 이 변형 완화 전략에 대해서는이 섹션의 뒷부분에서 설명 합니다.
 
-왼쪽 섬스틱(thumbstick)의 X 축 값은 [GamepadReading][] 구조의 `LeftThumbstickX` 속성에서 읽어들이고, Y 축 값은 `LeftThumbstickY` 속성에서 읽어들입니다. 오른쪽 섬스틱(thumbstick)의 X 축 값은 `RightThumbstickX` 속성에서 읽어들이고, Y 축 값은 `RightThumbstickY` 속성에서 읽어들입니다.
+왼쪽 섬스틱(thumbstick)의 X 축 값은 `LeftThumbstickX`GamepadReading[ 구조의 ][] 속성에서 읽어들이고, Y 축 값은 `LeftThumbstickY` 속성에서 읽어들입니다. 오른쪽 섬스틱(thumbstick)의 X 축 값은 `RightThumbstickX` 속성에서 읽어들이고, Y 축 값은 `RightThumbstickY` 속성에서 읽어들입니다.
 
 ```cpp
 float leftStickX = reading.LeftThumbstickX;   // returns a value between -1.0 and +1.0
@@ -271,7 +271,7 @@ double rightStickX = reading.RightThumbstickX; // returns a value between -1.0 a
 double rightStickY = reading.RightThumbstickY; // returns a value between -1.0 and +1.0
 ```
 
-섬스틱(thumbstick) 값을 읽을 때 섬스틱이 중앙 위치에 서 있으면 중립 판독값 0.0이 안정적으로 생성되지 않지만 섬스틱이 이동하여 중앙 위치로 돌아갈 때마다 0.0에 가까운 다른 값이 생성된다는 사실을 알 수 있습니다. 이러한 변동을 완화하기 위해 무시되는 이상적 중앙 위치 근처의 값 범위인 _데드존_을 작게 구현할 수 있습니다. 데드존을 구현하는 한 가지 방법은 섬스틱(thumbstick)이 중앙에서 얼마나 이동했는지 확인하고 선택한 거리보다 더 가까운 판독값을 무시하는 것입니다. 거리를 대략적으로 계산할 수 있습니다&mdash;정확한 있으므로 아닙니다 엄지 스틱 판독값은 기본적으로 극좌표 형, 없습니다 평면 값&mdash;피타고라스 정리를 사용 하 여 합니다. 그러면 방사형 데드존이 생성됩니다.
+섬스틱(thumbstick) 값을 읽을 때 섬스틱이 중앙 위치에 서 있으면 중립 판독값 0.0이 안정적으로 생성되지 않지만 섬스틱이 이동하여 중앙 위치로 돌아갈 때마다 0.0에 가까운 다른 값이 생성된다는 사실을 알 수 있습니다. 이러한 변동을 완화하기 위해 무시되는 이상적 중앙 위치 근처의 값 범위인 _데드존_을 작게 구현할 수 있습니다. 데드존을 구현하는 한 가지 방법은 섬스틱(thumbstick)이 중앙에서 얼마나 이동했는지 확인하고 선택한 거리보다 더 가까운 판독값을 무시하는 것입니다. 엄지 스틱 판독값은 숫자가 피타고라스 정리를 사용 하 여&mdash;하는 것과 같은 값을 사용 하는 것이 아니라 본질적으로는 거리가 기 때문에 정확 하지 않은&mdash;거리를 계산할 수 있습니다. 그러면 방사형 데드존이 생성됩니다.
 
 다음 예제는 피타고라스의 원리를 사용하는 기본 방사형 데드존을 보여 줍니다.
 
@@ -317,7 +317,7 @@ if ((oppositeSquared + adjacentSquared) > deadzoneSquared)
 
 ### <a name="reading-the-triggers"></a>트리거 읽기
 
-트리거는 0.0(완전히 놓임) 및 1.0(완전히 눌림) 사이의 부동 소수점 값으로 표현됩니다. 왼쪽 트리거의 값은 [GamepadReading][] 구조의 `LeftTrigger` 속성에서 읽어들이고, 오른쪽 트리거의 값은 `RightTrigger` 속성에서 읽어들입니다.
+트리거는 0.0(완전히 놓임) 및 1.0(완전히 눌림) 사이의 부동 소수점 값으로 표현됩니다. 왼쪽 트리거의 값은 `LeftTrigger`GamepadReading[ 구조의 ][] 속성에서 읽어들이고, 오른쪽 트리거의 값은 `RightTrigger` 속성에서 읽어들입니다.
 
 ```cpp
 float leftTrigger  = reading.LeftTrigger;  // returns a value between 0.0 and 1.0
@@ -331,12 +331,12 @@ double rightTrigger = reading.RightTrigger; // returns a value between 0.0 and 1
 
 ### <a name="reading-the-buttons"></a>버튼 읽기
 
-각 gamepad 단추의&mdash;패드, 왼쪽 및 오른쪽 범퍼, 왼쪽 및 오른쪽 엄지 스틱 press, 네 방향을 **는**, **B**를 **X**, **Y**, **뷰**, 및 **메뉴**&mdash;눌러질 () 또는 해제 (위쪽)에 있는지를 나타내는 디지털 읽기를 제공 합니다. 효율성을 높이기 위해 단추 판독값 표현 되지 않는 개별 부울 값입니다. 대신 해당 하는 모든 압축 나타내는 단일 비트로 합니다 [GamepadButtons][] 열거형입니다.
+각 게임 패드 단추는 D 패드, 왼쪽 및 오른쪽 범퍼, 왼쪽 및 오른쪽 엄지 스틱 누름, A, **B**, X, Y, 보기 및 메뉴&mdash;의 네 가지 방향&mdash;, **a**, B, **X**, **Y**, **보기**및 **메뉴** 를 통해 눌린 (다운) 또는 릴리스 (up) 여부를 나타내는 디지털 읽기를 제공 합니다. 효율성을 위해 단추 판독값은 개별 부울 값으로 표시 되지 않습니다. 대신 [GamepadButtons][] 열거형에 의해 표현 되는 단일 비트 필드에 모두 압축 됩니다.
 
 <!-- > [!NOTE]
 > The Xbox Elite Wireless Controller is equipped with four additional **paddle** buttons on its underside. These buttons are also represented in the `GamepadButtons` enumeration and their values are read in the same way as the standard gamepad buttons. -->
 
-버튼 값은 [GamepadReading][] 구조의 `Buttons` 속성에서 읽어들입니다. 이러한 속성은 비트 필드이므로 해당 버튼 값을 격리하기 위해 비트 마스킹이 사용됩니다. 해당 비트가 설정된 경우에는 버튼이 눌리고(아래), 그렇지 않은 경우에는 놓입니다(위).
+버튼 값은 `Buttons`GamepadReading[ 구조의 ][] 속성에서 읽어들입니다. 이러한 속성은 비트 필드이므로 해당 버튼 값을 격리하기 위해 비트 마스킹이 사용됩니다. 해당 비트가 설정된 경우에는 버튼이 눌리고(아래), 그렇지 않은 경우에는 놓입니다(위).
 
 다음 예제에서는 A 버튼이 눌렸는지 확인합니다.
 
@@ -370,7 +370,7 @@ if (GamepadButtons.None == (reading.Buttons & GamepadButtons.A))
 }
 ```
 
-경우에 따라 수 확인 하려는 단추에서 전환 하는 경우에 릴리스를 누르거나 놓을 누름 단추 집합을 특정 방식으로 정렬 된 경우 또는 여러 단추는 누름 또는 해제 여부를&mdash;일부을 눌렀을 때 몇 가지 되지 않습니다. 이러한 각 상태를 검색하는 방법에 대한 자세한 내용은 [버튼 전환 검색](input-practices-for-games.md#detecting-button-transitions) 및 [복잡한 버튼 정렬 검색](input-practices-for-games.md#detecting-complex-button-arrangements)을 참조하세요.
+경우에 따라 단추를 눌렀다 눌렀다 놓았을 때 눌린 상태로 전환 하는 경우, 여러 단추를 눌렀는지 또는 눌렀다 놓았을 때 또는 단추 집합을 특정&mdash;방식으로 정렬 하는 경우 (일부 누름)를 결정 하는 것이 좋습니다. 이러한 각 상태를 검색하는 방법에 대한 자세한 내용은 [버튼 전환 검색](input-practices-for-games.md#detecting-button-transitions) 및 [복잡한 버튼 정렬 검색](input-practices-for-games.md#detecting-complex-button-arrangements)을 참조하세요.
 
 ## <a name="run-the-gamepad-input-sample"></a>게임 패드 입력 샘플 실행
 
@@ -380,13 +380,13 @@ if (GamepadButtons.None == (reading.Buttons & GamepadButtons.A))
 
 게임 패드 내 진동 모터는 사용자에게 촉각 피드백을 제공하는 데 사용됩니다. 게임에서는 더 높은 몰입감을 이끌어내거나, 상태 정보(예: 공격 받는 중)를 알리는 데 도움을 주거나, 중요한 개체에 근접 신호를 전송하는 등 창의적 용도에 이 기능을 사용합니다.
 
-Xbox One 게임 패드에는 총 4개의 독립적 진동 모터가 탑재되어 있습니다. 대형 모터 gamepad 본문;에 있는 두 가지 왼쪽된의 모터 오른쪽 모터 줄어들면서 보다 매끄럽고, 좀 더 미묘한 진동 제공 하지만 대략적인, 높은 amplitude 진동을 제공 합니다. 다른 두 모터는 소형 모터입니다. 하나는 각 트리거 안에 있는 모터로, 사용자의 트리거 손가락에 즉시 선명하게 파열되는 진동을 제공합니다. Xbox One 게임 패드의 이러한 고유한 기능 때문에 Xbox One 게임 패드 트리거를 _임펄스 트리거_라고 합니다. 이러한 모터를 함께 오케스트레이션하면 광범위한 촉감을 재현할 수 있습니다.
+Xbox One 게임 패드에는 총 4개의 독립적 진동 모터가 탑재되어 있습니다. 2 개는 게임 패드 본문에 위치한 매우 클 수 있는 모터입니다. 왼쪽 모터는 최고 진폭 진폭 효과를 제공 하는 반면, 오른쪽 모터는 gentler 더 미묘한 진동을 제공 합니다. 다른 두 모터는 소형 모터입니다. 하나는 각 트리거 안에 있는 모터로, 사용자의 트리거 손가락에 즉시 선명하게 파열되는 진동을 제공합니다. Xbox One 게임 패드의 이러한 고유한 기능 때문에 Xbox One 게임 패드 트리거를 _임펄스 트리거_라고 합니다. 이러한 모터를 함께 오케스트레이션하면 광범위한 촉감을 재현할 수 있습니다.
 
 ## <a name="using-vibration-and-impulse"></a>진동 및 임펄스 사용
 
-게임 패드 진동은 [Gamepad][] 클래스의 [Vibration][] 속성을 통해 제어됩니다. `Vibration` 인스턴스를 [GamepadVibration][] 요소 값의 부동 4 이루어집니다 구조; 나타냅니다 값 각각 하나는 모터의 강도 따라.
+게임 패드 진동은 [Gamepad][] 클래스의 [Vibration][] 속성을 통해 제어됩니다. `Vibration`는 네 개의 부동 소수점 값으로 구성 된 [ 구조의 ][] 구조체의 인스턴스입니다. 각 값은 모터 중 하나의 강도를 나타냅니다.
 
-하지만 멤버를 `Gamepad.Vibration` 속성을 직접 수정할 수 있습니다, 별도 초기화 하는 것이 좋습니다 `GamepadVibration` 복사 하 고 원하는 값으로 인스턴스를 `Gamepad.Vibration` 실제 화물 차 강도 변경 하려면 속성 한 번에 모두 있습니다.
+`Gamepad.Vibration` 속성의 멤버를 직접 수정할 수 있지만 별도의 `GamepadVibration` 인스턴스를 원하는 값으로 초기화 한 다음 `Gamepad.Vibration` 속성에 복사 하 여 실제 모터 강도를 한 번에 변경 하는 것이 좋습니다.
 
 다음 예제에서는 모터 강도를 모두 한 번에 변경하는 방법을 보여 줍니다.
 
@@ -418,7 +418,7 @@ gamepad.Vibration = vibration;
 
 ### <a name="using-the-vibration-motors"></a>진동 모터 사용
 
-왼쪽 및 오른쪽 진동 모터는 0.0(진동 없음) 및 1.0(가장 강한 진동) 사이의 부동 소수점 값을 사용합니다. 왼쪽 모터의 강도는 [GamepadVibration][] 구조의 `LeftMotor` 속성으로 설정되고, 오른쪽 모터의 강도는 `RightMotor` 속성으로 설정됩니다.
+왼쪽 및 오른쪽 진동 모터는 0.0(진동 없음) 및 1.0(가장 강한 진동) 사이의 부동 소수점 값을 사용합니다. 왼쪽 모터의 강도는 `LeftMotor`GamepadVibration[ 구조의 ][] 속성으로 설정되고, 오른쪽 모터의 강도는 `RightMotor` 속성으로 설정됩니다.
 
 다음 예제에서는 두 진동 모터의 강도를 설정하고 게임 패드 진동을 활성화합니다.
 
@@ -436,11 +436,11 @@ vibration.RightMotor = 0.25; // sets the intensity of the right motor to 25%
 mainGamepad.Vibration = vibration;
 ```
 
-이러한 두 모터는 동일하지 않으므로 이러한 속성을 동일한 값으로 설정하면 한 모터에 다른 모터와 동일한 진동이 재현되지 않습니다. 모든 값에 대 한 왼쪽된 모터 생성 하는 오른쪽 모터 보다 낮은 빈도로 강력한 진동&mdash;동일한 값에 대 한&mdash;보다 높은 빈도로 줄어들면서 보다 매끄럽고 진동을 생성 합니다. 최대값에서도 왼쪽 모터는 오른쪽 모터의 고주파를 생성할 수 없으며, 오른쪽 모터도 왼쪽 모터의 강력한 힘을 재현할 수 없습니다. 하지만 모터는 게임 패드 본체로 견고하게 연결되어 있기 때문에 플레이어는 모터가 다른 특성을 가지고 다른 강도로 진동할 수 있더라도 진동이 완전히 독립적이라고 느끼지 못합니다. 이러한 정렬은 모터가 동일한 경우보다 더 광범위하고, 더 풍부한 촉감을 재현할 수 있습니다.
+이러한 두 모터는 동일하지 않으므로 이러한 속성을 동일한 값으로 설정하면 한 모터에 다른 모터와 동일한 진동이 재현되지 않습니다. 모든 값의 경우 왼쪽 모터는 동일한 값에&mdash;하 고 더 높은 빈도로 gentler 진동&mdash;생성 하는 오른쪽 모터 보다 더 강력한 진동을 생성 합니다. 최대값에서도 왼쪽 모터는 오른쪽 모터의 고주파를 생성할 수 없으며, 오른쪽 모터도 왼쪽 모터의 강력한 힘을 재현할 수 없습니다. 하지만 모터는 게임 패드 본체로 견고하게 연결되어 있기 때문에 플레이어는 모터가 다른 특성을 가지고 다른 강도로 진동할 수 있더라도 진동이 완전히 독립적이라고 느끼지 못합니다. 이러한 정렬은 모터가 동일한 경우보다 더 광범위하고, 더 풍부한 촉감을 재현할 수 있습니다.
 
 ### <a name="using-the-impulse-triggers"></a>임펄스 트리거 사용
 
-각 임펄스 트리거 모터는 0.0(진동 없음) 및 1.0(가장 강한 진동) 사이의 부동 소수점 값을 사용합니다. 왼쪽 트리거 모터의 강도는 [GamepadVibration][] 구조의 `LeftTrigger` 속성으로 설정되고, 오른쪽 트리거의 강도는 `RightTrigger` 속성으로 설정됩니다.
+각 임펄스 트리거 모터는 0.0(진동 없음) 및 1.0(가장 강한 진동) 사이의 부동 소수점 값을 사용합니다. 왼쪽 트리거 모터의 강도는 `LeftTrigger`GamepadVibration[ 구조의 ][] 속성으로 설정되고, 오른쪽 트리거의 강도는 `RightTrigger` 속성으로 설정됩니다.
 
 다음 예제에서는 두 임펄스 트리거의 강도를 설정하고 활성화합니다.
 
@@ -467,18 +467,18 @@ mainGamepad.Vibration = vibration;
 ## <a name="see-also"></a>참고 항목
 
 * [Windows.Gaming.Input.UINavigationController][]
-* [Windows.Gaming.Input.IGameController][]
-* [게임에 대 한 입력된 사례](input-practices-for-games.md)
+* [IGameController.][]
+* [게임 입력 방법](input-practices-for-games.md)
 
-[Windows.Gaming.Input]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
+[Windows. 게임 입력]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.aspx
 [Windows.Gaming.Input.UINavigationController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.uinavigationcontroller.aspx
-[Windows.Gaming.Input.IGameController]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.aspx
-[Gamepad]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.aspx
-[Gamepads]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepads.aspx
+[IGameController.]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.igamecontroller.aspx
+[Vibration]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.aspx
+[gamepads]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepads.aspx
 [gamepadadded]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepadadded.aspx
 [gamepadremoved]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.gamepadremoved.aspx
 [getcurrentreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.getcurrentreading.aspx
-[Vibration]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.vibration.aspx
-[gamepadreading]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadreading.aspx
+[Gamepad]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepad.vibration.aspx
+[ 구조의 ]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadreading.aspx
 [gamepadbuttons]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadbuttons.aspx
-[gamepadvibration]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadvibration.aspx
+[ 구조의 ]: https://msdn.microsoft.com/library/windows/apps/windows.gaming.input.gamepadvibration.aspx

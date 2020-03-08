@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: 2aadcb8dc3d414db7951dc571855e01bddb03a99
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683646"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852546"
 ---
 # <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>배율, 테마, 고대비 등에 맞춘 이미지 및 자산 로드
 앱은 [디스플레이 배율 인수](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), 테마, 고대비 및 기타 런타임 컨텍스트에 맞게 조정된 이미지 리소스 파일(또는 기타 자산 파일)을 로드할 수 있습니다. 이러한 이미지는 명령적 코드 또는 XAML 태그에서 참조할 수 있으며 예를 들어 **이미지**의 **Source** 속성입니다. 앱 패키지 매니페스트 소스 파일(`Package.appxmanifest`의 파일)에 표시될 수도 있습니다. 예를 들면 Visual Studio 매니페스트 디자이너의 시각적 자산 탭에 앱 아이콘으로 또는 타일 또는 알림에 표시됩니다. 이미지의 파일 이름에 한정자를 사용하고 선택적으로 이를 [**ResourceContext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)를 사용하여 동적으로 로드하여 디스플레이 배율, 테마, 고대비, 언어 및 다른 컨텍스트에 대한 사용자의 런타임 설정과 가장 적합한 가장 적절한 이미지 파일이 로드되도록 할 수 있습니다.
@@ -40,7 +40,7 @@ ms.locfileid: "75683646"
 </pre>
 </blockquote>
 
-다음은 디스플레이 배율, 테마 및 고대비의 다른 설정에 대해 `/Assets/Images/logo.png`라는 이미지 리소스의 변형을 제공하는 방법의 예입니다. 이 예에서는 폴더 이름 지정을 사용합니다.
+다음은 디스플레이 배율, 테마 및 고대비의 다른 설정에 대해 &mdash;라는 이미지 리소스의 변형을 제공하는 방법의 예입니다. 이 예에서는 폴더 이름 지정을 사용합니다.
 
 <blockquote>
 <pre>
@@ -86,7 +86,7 @@ var storagefile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsy
 this.myXAMLWebViewElement.Source = new Uri("ms-appx-web:///Pages/default.html");
 ```
 
-이러한 예에 제공된 모든 시나리오는 [UriKind](https://docs.microsoft.com/dotnet/api/system.urikind)를 유추하는 [Uri 생성자](https://docs.microsoft.com/dotnet/api/system.uri.-ctor?view=netcore-2.0#System_Uri__ctor_System_String_) 오버로드를 사용합니다. 스키마 또는 기관을 포함하는 유효한 절대 URI를 지정하거나 위의 예에서와 같이 앱 패키지 기관 기본값을 기다립니다.
+이러한 예에 제공된 모든 시나리오는 [UriKind](https://docs.microsoft.com/dotnet/api/system.uri.-ctor?view=netcore-2.0#System_Uri__ctor_System_String_)를 유추하는 [Uri 생성자](https://docs.microsoft.com/dotnet/api/system.urikind) 오버로드를 사용합니다. 스키마 또는 기관을 포함하는 유효한 절대 URI를 지정하거나 위의 예에서와 같이 앱 패키지 기관 기본값을 기다립니다.
 
 이 예 URI에서 스키마("`ms-appx`" 또는 "`ms-appx-web`") 다음에 "`://`"로 시작하는 절대 경로가 나오는 것을 확인하세요. 절대 경로에서 처음 "`/`"는 패키지 루트에서 경로를 해석하도록 합니다.
 
@@ -158,7 +158,7 @@ bitmapImage.SetSourceAsync(imageFileStream);
 this.myXAMLImageElement.Source = bitmapImage;
 ```
 
-전역 수준에서 같은 효과를 적용하려면 기본 **ResourceContext**의 한정자 값을 재정의*할 수* 있습니다. 그러나 이 대신 [**ResourceContext.SetGlobalQualifierValue**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)를 호출하는 것이 좋습니다. **SetGlobalQualifierValue**를 호출하는 값을 한 번 설정하면 조회를 위해 해당 값을 사용할 때마다 기본 **ResourceContext**에 적용됩니다. 기본적으로 [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live) 클래스는 **ResourceContext** 기본값을 사용합니다.
+전역 수준에서 같은 효과를 적용하려면 기본 *ResourceContext*의 한정자 값을 재정의**할 수** 있습니다. 그러나 이 대신 [**ResourceContext.SetGlobalQualifierValue**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)를 호출하는 것이 좋습니다. **SetGlobalQualifierValue**를 호출하는 값을 한 번 설정하면 조회를 위해 해당 값을 사용할 때마다 기본 **ResourceContext**에 적용됩니다. 기본적으로 [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live) 클래스는 **ResourceContext** 기본값을 사용합니다.
 
 ```csharp
 Windows.ApplicationModel.Resources.Core.ResourceContext.SetGlobalQualifierValue("Contrast", "high");
@@ -167,9 +167,9 @@ this.myXAMLImageElement.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(n
 ```
 
 ## <a name="updating-images-in-response-to-qualifier-value-change-events"></a>한정자 값 변경 이벤트에 대한 응답으로 이미지 업데이트
-실행 중인 앱은 기본 리소스 컨텍스트의 한정자 값에 영향을 미치는 시스템 설정의 변경에 응답할 수 있습니다. 이러한 모든 시스템 설정은 [**ResourceContext.QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)에서 [**MapChanged**](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live) 이벤트를 호출합니다.
+실행 중인 앱은 기본 리소스 컨텍스트의 한정자 값에 영향을 미치는 시스템 설정의 변경에 응답할 수 있습니다. 이러한 모든 시스템 설정은 [**ResourceContext.QualifierValues**](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live)에서 [**MapChanged**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues) 이벤트를 호출합니다.
 
-이 이벤트에 대한 응답으로 기본적으로 [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)가 사용하는 **ResourceContext** 기본값의 도움으로 이미지를 다시 로드할 수 있습니다.
+이 이벤트에 대한 응답으로 기본적으로ResourceManager[**가 사용하는** ResourceContext](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live) 기본값의 도움으로 이미지를 다시 로드할 수 있습니다.
 
 ```csharp
 public MainPage()

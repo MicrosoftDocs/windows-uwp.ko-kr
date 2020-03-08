@@ -1,25 +1,25 @@
 ---
-title: 게임 입력 장치 사용 방법
-description: 입력 장치를 효과적으로 사용하기 위한 패턴 및 기술을 알아봅니다.
+title: 게임용 입력 시스템
+description: 입력 디바이스를 효과적으로 사용하기 위한 패턴 및 기술을 알아봅니다.
 ms.assetid: CBAD3345-3333-4924-B6D8-705279F52676
 ms.date: 11/20/2017
 ms.topic: article
 keywords: Windows 10, uwp, 게임, 입력
 ms.localizationpriority: medium
 ms.openlocfilehash: 8235b2c2029b2bb3b9351263a3c908879b4beba9
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684987"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853064"
 ---
-# <a name="input-practices-for-games"></a>게임 입력 장치 사용 방법
+# <a name="input-practices-for-games"></a>게임용 입력 시스템
 
-이 페이지는 UWP(유니버설 Windows 플랫폼) 게임에서 입력 장치를 효과적으로 사용하기 위한 패턴 및 기술을 설명합니다.
+이 페이지는 UWP(유니버설 Windows 플랫폼) 게임에서 입력 디바이스를 효과적으로 사용하기 위한 패턴 및 기술을 설명합니다.
 
 이 페이지에서는 다음에 대해 알아봅니다.
 
-* 플레이어 추적 및 플레이어가 현재 사용 중인 입력 장치와 탐색 장치의 추적 방법
+* 플레이어 추적 및 플레이어가 현재 사용 중인 입력 디바이스와 탐색 디바이스의 추적 방법
 * 단추 전환(누름에서 놓음 상태로, 놓음에서 누름 상태로의 전환)을 감지하는 방법
 * 단일 테스트로 복잡한 단추 배열을 감지하는 방법
 
@@ -164,9 +164,9 @@ void OnGamepadRemoved(Platform::Object^ sender, Gamepad^ args)
 }
 ```
 
-## <a name="tracking-users-and-their-devices"></a>사용자 및 사용자의 장치 추적
+## <a name="tracking-users-and-their-devices"></a>사용자 및 사용자의 디바이스 추적
 
-모든 입력 장치는 [사용자](https://docs.microsoft.com/uwp/api/windows.system.user)와 연결되어 있으므로 게임 플레이, 도전 과제, 설정 변경 및 기타 활동에 ID를 연결할 수 있습니다. 사용자는 마음대로 로그인 또는 로그아웃할 수 있으며, 이전 사용자가 로그아웃 한 후에도 시스템에 계속 연결되어 있는 입력 장치에 다른 사용자가 로그인하는 경우도 많습니다. 사용자가 로그인하거나 로그아웃하면 [IGameController.UserChanged](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller.UserChanged) 이벤트가 발생합니다. 이 이벤트의 이벤트 처리기를 등록하면 플레이어와 해당 플레이어가 사용 중인 장치를 추적할 수 있습니다.
+모든 입력 장치는 [사용자](https://docs.microsoft.com/uwp/api/windows.system.user)와 연결되어 있으므로 게임 플레이, 도전 과제, 설정 변경 및 기타 활동에 ID를 연결할 수 있습니다. 사용자는 마음대로 로그인 또는 로그아웃할 수 있으며, 이전 사용자가 로그아웃 한 후에도 시스템에 계속 연결되어 있는 입력 장치에 다른 사용자가 로그인하는 경우도 많습니다. 사용자가 로그인하거나 로그아웃하면 [IGameController.UserChanged](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller.UserChanged) 이벤트가 발생합니다. 이 이벤트의 이벤트 처리기를 등록하면 플레이어와 해당 플레이어가 사용 중인 디바이스를 추적할 수 있습니다.
 
 또한 사용자 ID를 통해 입력 장치가 해당 [UI 탐색 컨트롤러](ui-navigation-controller.md)와 연결됩니다.
 
@@ -177,7 +177,7 @@ https://github.com/Microsoft/Xbox-ATG-Samples/tree/master/Samples/System/UserGam
 
 ## <a name="detecting-button-transitions"></a>단추 전환 감지
 
-단추를 처음 누르거나 놓은 시점, 즉 단추를 놓은 상태에서 누르거나 누른 상태에서 놓은 단추 상태 전환의 정확한 시점을 알고 싶을 때가 있습니다. 이를 확인하려면 이전 장치가 읽은 내용을 기억해 두었다가 현재 장치가 읽은 내용과 비교하여 변경된 내용을 확인해야 합니다.
+단추를 처음 누르거나 놓은 시점, 즉 단추를 놓은 상태에서 누르거나 누른 상태에서 놓은 단추 상태 전환의 정확한 시점을 알고 싶을 때가 있습니다. 이를 확인하려면 이전 디바이스가 읽은 내용을 기억해 두었다가 현재 디바이스가 읽은 내용과 비교하여 변경된 내용을 확인해야 합니다.
 
 다음 예제는 이전 읽기 내용을 기억하기 위한 기본 접근 방식을 보여 줍니다. 여기에서는 게임 패드로 설명하지만 아케이드 스틱과 레이싱 휠, 기타 입력 장치 유형도 원리가 동일합니다.
 

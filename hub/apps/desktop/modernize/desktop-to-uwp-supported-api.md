@@ -10,11 +10,11 @@ author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
 ms.openlocfilehash: 60a735af077d2121868e2613cb0f33e194e4330c
-ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302537"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852980"
 ---
 # <a name="uwp-apis-available-to-desktop-apps"></a>데스크톱 앱에서 사용할 수 있는 UWP Api
 
@@ -30,10 +30,10 @@ ms.locfileid: "75302537"
 | Bluetooth | 일부 Api는 현재 지원 되지 않습니다. |
 | 채팅 및 전화 통화 | 데스크톱 앱은 UWP로 완전히 이식할 때까지 모바일에서 실행할 수 없습니다. |
 | 계약 활성화 | 계약에 따라 전체 UWP 앱만 활성화할 수 있습니다. |
-| Cryptography | 일부 Api는 현재 지원 되지 않습니다. |
+| 암호화 | 일부 Api는 현재 지원 되지 않습니다. |
 | 지리적 위치 | 일부 Api는 현재 지원 되지 않습니다. |
 | 파일 및 폴더 선택기 | Id가 인 앱은 전체 파일 시스템에 액세스할 수 있으며 UWP 선택이 필요 하지 않습니다. |
-| 미디어 | 일부 Api는 현재 지원 되지 않습니다. |
+| Media | 일부 Api는 현재 지원 되지 않습니다. |
 | 서비스 지점 | 일부 Api는 현재 지원 되지 않습니다. |
 | 스마트 카드 | 일부 Api는 현재 지원 되지 않습니다. |
 | PlayReady | 일부 Api는 현재 지원 되지 않습니다. |
@@ -383,4 +383,4 @@ UWP Api를 사용 하는 방법에 대 한 예제는 GitHub의 [데스크톱 브
 
 ## <a name="next-steps"></a>다음 단계
 
-질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 Microsoft에 문의할 수도 있습니다.
+질문이 있으세요? Stack Overflow에서 질문해 주세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 문의할 수도 있습니다.
