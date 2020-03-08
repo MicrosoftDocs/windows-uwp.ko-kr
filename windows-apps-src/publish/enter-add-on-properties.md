@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 추가 기능, 속성, 구독 기간, 제품 수명, 콘텐츠 유형, iap, 앱에서 바로 구매, 앱에서 바로 구매 제품
 ms.localizationpriority: medium
 ms.openlocfilehash: 59c7e5b2c9ceea534f530bc6880b32a808c91e70
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63787041"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852522"
 ---
 # <a name="enter-add-on-properties"></a>추가 기능 속성 입력
 
@@ -29,7 +29,7 @@ ms.locfileid: "63787041"
 
 ## <a name="product-lifetime"></a>제품 수명
 
-제품 유형으로 **지속형**을 선택한 경우 **제품 수명**이 여기에 표시됩니다. 지속형 추가 기능의 기본 **제품 수명**은 추가 기능이 만료되지 않음을 나타내는 **계속**입니다. 원하는 경우 변경할 수 있습니다 합니다 **제품 수명** 추가 기능 (1 ~ 365 일에서 옵션과) 설정된 된 기간 후에 만료 되도록 합니다.
+제품 유형으로 **지속형**을 선택한 경우 **제품 수명**이 여기에 표시됩니다. 지속형 추가 기능의 기본 **제품 수명**은 추가 기능이 만료되지 않음을 나타내는 **계속**입니다. 원하는 경우 추가 기능이 설정 된 기간 (1-365 일의 옵션 사용) 후에 만료 되도록 **제품 수명을** 변경할 수 있습니다.
 
 
 ## <a name="quantity"></a>수량
@@ -39,7 +39,7 @@ ms.locfileid: "63787041"
 
 ## <a name="subscription-period"></a>구독 기간
 
-제품 유형으로 **구독**을 선택한 경우 **구독 기간**이 여기에 표시됩니다. 구독에 대해 고객에게 얼마나 자주 요금을 청구할지 지정하는 옵션을 선택합니다. 기본 옵션은 **월간**를 선택할 수도 있습니다 하지만 **3 개월**를 **6 개월**를 **매년**, 또는 **24 개월**.
+제품 유형으로 **구독**을 선택한 경우 **구독 기간**이 여기에 표시됩니다. 구독에 대해 고객에게 얼마나 자주 요금을 청구할지 지정하는 옵션을 선택합니다. 기본 옵션은 **매월**이지만 **3 개월**, **6 개월**, **매년**또는 **24 개월**을 선택할 수도 있습니다.
 
 > [!IMPORTANT]
 > 추가 기능을 게시한 후에는 선택한 **구독 기간**을 변경할 수 없습니다.
@@ -53,7 +53,7 @@ ms.locfileid: "63787041"
 > 추가 기능을 게시한 후에는 선택한 **무료 평가판**을 변경할 수 없습니다.
 
 
-## <a name="content-type"></a>콘텐츠 형식
+## <a name="content-type"></a>콘텐츠 유형
 
 추가 기능의 제품 유형과 관계없이 제공할 콘텐츠 유형도 표시해야 합니다. 대부분의 추가 기능에 대한 콘텐츠 형식은 **전자 소프트웨어 다운로드**여야 합니다. 목록의 다른 옵션이 추가 기능을 더 잘 설명하는 경우(예를 들어 음악 다운로드 또는 전자책을 제공하는 경우) 해당 옵션을 대신 선택합니다.
 
@@ -65,7 +65,7 @@ ms.locfileid: "63787041"
 -   전자 신문 단행본
 -   음악 다운로드
 -   음악 스트리밍
--   온라인 데이터 저장소/서비스
+-   온라인 데이터 스토리지/서비스
 -   SaaS(Software as a Service)
 -   동영상 다운로드
 -   동영상 스트리밍
@@ -81,10 +81,10 @@ ms.locfileid: "63787041"
 
 제출하는 각 추가 기능에 대해 각각 30자 이내의 키워드를 10개까지 제공할 수 있습니다. 그러면 앱에서 이러한 단어와 일치하는 추가 기능을 쿼리할 수 있습니다. 이 기능을 사용하면 앱 코드에서 제품 ID를 직접 지정하지 않고도 추가 기능을 로드할 수 있는 앱 화면을 만들 수 있습니다. 그러면 앱에서 코드를 변경하거나 앱을 다시 제출하지 않고도 언제든지 추가 기능의 키워드를 변경할 수 있습니다.
 
-이 필드를 쿼리하려면 [Windows.Services.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.Services.Store)의 [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords) 속성을 사용합니다. (또는 [Windows.ApplicationModel.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store)를 사용하는 경우 [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords) 속성을 사용합니다.)
+이 필드를 쿼리하려면 [Windows.Services.Store 네임스페이스](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.Keywords)의 [StoreProduct.Keywords](https://docs.microsoft.com/uwp/api/Windows.Services.Store) 속성을 사용합니다. (또는 [Windows.ApplicationModel.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store)를 사용하는 경우 [ProductListing.Keywords](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.Keywords) 속성을 사용합니다.)
 
 > [!NOTE]
-> 키워드는 Windows 8 및 Windows 8.1 대상으로 하는 패키지에서 사용할 수 없습니다.
+> Windows 8 및 Windows 8.1를 대상으로 하는 패키지에는 키워드를 사용할 수 없습니다.
 
 <span id="custom-developer-data" />
 
@@ -94,10 +94,10 @@ ms.locfileid: "63787041"
 
 예를 들어 게임을 보유하고 있고 고객이 추가 레벨에 액세스할 수 있도록 추가 기능을 판매하고 있다고 가정해 보겠습니다. 앱은 **사용자 정의 개발자 데이터** 필드를 사용하여 고객이 이러한 추가 기능을 소유하고 있을 때 쿼리를 통해 어떤 레벨을 사용할 수 있는지 확인할 수 있습니다. 앱에서 코드를 변경하거나 앱을 다시 제출하지 않고도 추가 기능의 **사용자 지정 개발자 데이터** 필드에서 정보를 업데이트한 후 업데이트된 제출을 추가 기능에 게시하여 언제든지 값을 조정할 수 있습니다(이 경우 레벨이 포함).
 
-이 필드를 쿼리하려면 [Windows.Services.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.Services.Store)의 [StoreSku.CustomDeveloperData](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.customdeveloperdata#Windows_Services_Store_StoreSku_CustomDeveloperData) 속성을 사용합니다. (또는 [Windows.ApplicationModel.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store)를 사용하는 경우 [ProductListing.Tag](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.tag#Windows_ApplicationModel_Store_ProductListing_Tag) 속성을 사용합니다.)
+이 필드를 쿼리하려면 [Windows.Services.Store 네임스페이스](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.customdeveloperdata#Windows_Services_Store_StoreSku_CustomDeveloperData)의 [StoreSku.CustomDeveloperData](https://docs.microsoft.com/uwp/api/Windows.Services.Store) 속성을 사용합니다. (또는 [Windows.ApplicationModel.Store 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store)를 사용하는 경우 [ProductListing.Tag](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.tag#Windows_ApplicationModel_Store_ProductListing_Tag) 속성을 사용합니다.)
 
 > [!NOTE]
-> 합니다 **사용자 지정 개발자 데이터** 필드는 Windows 8 및 Windows 8.1 대상으로 하는 패키지에서 사용 하 여 사용할 수 없습니다.
+> **사용자 지정 개발자 데이터** 필드는 Windows 8 및 Windows 8.1를 대상으로 하는 패키지에서 사용할 수 없습니다.
 
  
 

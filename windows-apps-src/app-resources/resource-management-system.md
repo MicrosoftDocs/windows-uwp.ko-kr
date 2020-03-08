@@ -1,17 +1,17 @@
 ---
-Description: 빌드 시 리소스 관리 시스템은 앱과 함께 패키지되는 모든 여러 변형의 리소스의 인덱스를 만듭니다. 실행 시 시스템은 적용 중인 사용자와 시스템 설정을 감지하고 이러한 설정에 대한 최적의 일치인 리소스를 로드합니다.
+Description: 빌드 시 리소스 관리 시스템은 앱과 함께 패키지되는 다양한 모든 리소스 변형에 대한 인덱스를 만듭니다. 런타임 시 시스템에서 적용되는 사용자 및 머신 설정을 검색하고 이러한 설정에 가장 적합한 리소스를 로드합니다.
 title: 리소스 관리 시스템
 template: detail.hbs
 ms.date: 10/20/2017
 ms.topic: article
-keywords: Windows 10, uwp, 리소스, 이미지, 자산, MRT, 한정자
+keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
 ms.openlocfilehash: bedbad9e4de22ee098863d013a1e4ad16d86543e
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57598628"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853127"
 ---
 # <a name="resource-management-system"></a>리소스 관리 시스템
 리소스 관리 시스템에는 빌드 시 및 런타임 시 기능이 모두 있습니다. 빌드 시 시스템은 앱과 함께 패키지되는 모든 여러 변형의 리소스의 인덱스를 만듭니다. 이 인덱스는 패키지 리소스 색인, 즉 PRI이며 앱 패키지에 포함되어 있습니다. 실행 시 시스템은 적용 중인 사용자와 시스템 설정을 감지하고 PRI의 정보를 확인하고 자동으로 이러한 설정에 대한 최적의 일치인 리소스를 로드합니다.
@@ -24,7 +24,7 @@ ms.locfileid: "57598628"
 - 각 패키지 루트의 resources.pri 파일은 [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live)가 인스턴스화될 때 자동으로 로드됩니다.
 - [MakePRI.exe](compile-resources-manually-with-makepri.md) 도구로 PRI 파일을 만들고 덤프할 수 있습니다.
 - 일반적인 앱 개발에서는 이미 Visual Studio 컴파일 워크플로에 통합되어 있으므로 MakePRI.exe가 필요 없습니다. 그리고 Visual Studio는 전용 UI에서 PRI 파일 편집을 지원합니다. 그러나 로컬라이저 및 그들이 사용하는 도구가 MakePRI.exe에 의존할 수도 있습니다.
-- 각 PRI 파일에는 리소스 맵이라고 하는 명명된 리소스 컬렉션이 포함되어 있습니다. 패키지에서 PRI 파일을 로드할 때 리소스 맵 이름이 패키지 ID 이름과 일치하는지 확인합니다.
+- 각 PRI 파일에는 리소스 맵이라고 하는 이름이 지정된 리소스 컬렉션이 들어 있습니다. 패키지에서 PRI 파일을 로드할 때 리소스 맵 이름이 패키지 ID 이름과 일치하는지 확인합니다.
 - PRI 파일에는 데이터가 포함되므로 PE(이식 가능한 실행 파일) 형식을 사용하지 않습니다. Windows용 리소스 형식으로 데이터 전용으로 설계됩니다. Win32 앱 모델에서 DLL에 포함된 리소스를 대체합니다.
 - PRI 파일의 크기 제한은 64킬로바이트입니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "57598628"
 
 [  **ResourceCandidate**](/uwp/api/windows.applicationmodel.resources.core.resourcecandidate?branch=live) 개체는 영어의 경우 "Hello World" 문자열, 또는 **scale-100** 해상도에 해당하는 정규화된 이미지 리소스로서의 "logo.scale-100.jpg"와 같은 구체적인 단일 리소스 값 및 한정자를 나타냅니다.
 
-앱에서 사용할 수 있는 리소스는 [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) 개체로 액세스할 수 있는 계층 구조 컬렉션에 저장됩니다. **ResourceManager** 클래스는 앱에 대한 다양한 패키지에 해당하는 앱에서 사용되는 다양한 최상위 **ResourceMap** 인스턴스에 대한 액세스를 제공합니다. [  **MainResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager.MainResourceMap) 값은 현재 앱 패키지에 대한 리소스 맵에 해당하며 참조된 모든 프레임워크 패키지를 제외합니다. 각 **ResourceMap**은 패키지의 매니페스트에 지정된 패키지 이름에 대해 지정됩니다. **ResourceMap** 내에는 **NamedResource** 개체를 포함하는 하위 트리가 있습니다([**ResourceMap.GetSubtree**](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live) 참조). 하위 트리는 일반적으로 리소스를 포함하는 리소스 파일에 해당합니다. 자세한 내용은 [UI 및 앱 패키지 매니페스트의 문자열 지역화](localize-strings-ui-manifest.md) 및 [배율, 테마, 고대비 등에 맞춘 이미지 및 자산 로드](images-tailored-for-scale-theme-contrast.md)를 참조하세요.
+앱에서 사용할 수 있는 리소스는 [**ResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemap?branch=live) 개체로 액세스할 수 있는 계층 구조 컬렉션에 저장됩니다. **ResourceManager** 클래스는 앱에 대한 다양한 패키지에 해당하는 앱에서 사용되는 다양한 최상위 **ResourceMap** 인스턴스에 대한 액세스를 제공합니다. [  **MainResourceMap**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager.MainResourceMap) 값은 현재 앱 패키지에 대한 리소스 맵에 해당하며 참조된 모든 프레임워크 패키지를 제외합니다. 각 **ResourceMap**은 패키지의 매니페스트에 지정된 패키지 이름에 대해 지정됩니다. **ResourceMap** 내에는 [NamedResource **개체를 포함하는 하위 트리가 있습니다(** ](/uwp/api/windows.applicationmodel.resources.core.resourcemap.getsubtree?branch=live)ResourceMap.GetSubtree 참조). 하위 트리는 일반적으로 리소스를 포함하는 리소스 파일에 해당합니다. 자세한 내용은 [UI 및 앱 패키지 매니페스트의 문자열 지역화](localize-strings-ui-manifest.md) 및 [배율, 테마, 고대비 등에 맞춘 이미지 및 자산 로드](images-tailored-for-scale-theme-contrast.md)를 참조하세요.
 
 예를 들면 다음과 같습니다.
 

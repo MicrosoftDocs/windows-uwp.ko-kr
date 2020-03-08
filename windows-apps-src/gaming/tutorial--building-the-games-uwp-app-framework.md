@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 게임, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: af5d73e0a786e33aff6274cd63ee5ae6ac77c133
-ms.sourcegitcommit: 49a34e957433966ac8d4822b5822f21087aa61c3
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74153699"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853008"
 ---
 #  <a name="define-the-uwp-app-framework"></a>UWP 앱 프레임워크 정의
 
@@ -190,8 +190,8 @@ void App::Load(
 * Simple3Dgame 개체를 생성 및 초기화합니다. 자세한 내용은 [주 게임 개체 정의](tutorial--defining-the-main-game-loop.md)를 참조하세요.    
 * 게임 UI 컨트롤 개체를 생성하고 게임 정보 오버레이를 표시하여 리소스 파일이 로드됨에 따라 진행률 표시줄을 보여줍니다. 자세한 내용은 [사용자 인터페이스 추가](tutorial--adding-a-user-interface.md)를 참조하세요.
 * 컨트롤러 (터치, 마우스 또는 Xbox 무선 컨트롤러)에서 입력을 읽을 수 있도록 컨트롤러를 만듭니다. 자세한 내용은 [컨트롤 추가](tutorial--adding-controls.md)를 참조하세요.
-* 컨트롤러를 초기화한 후에는 화면의 왼쪽 아래와 오른쪽 아래에 각각 이동 및 카메라 터치 컨트롤을 위해 2개의 사각형 영역을 정의합니다. 플레이어는 **SetMoveRect** 호출로 정의된 왼쪽 아래 사각형을 카메라를 전후좌우로 이동하기 위한 가상 컨트롤 패드로 사용합니다. **SetFireRect** 메서드에서 정의된 오른쪽 아래 사각형은 탄약을 발사하는 가상 단추로 사용됩니다.
-* __create_task__ 및 __create_task::then__을 사용하여 리소스 로드를 2개의 개별 단계로 분리합니다. Direct3D 11 디바이스에 대한 액세스는 스레드로 제한이 되기 때문에 개체 생성을 위한 Direct3D 11 디바이스 액세스가 자유 스레드 방식으로 수행되는 동안 디바이스 컨텍스트가 생성됩니다. 따라서 원래 스레드에서 실행되는 완성 작업(*FinalizeCreateGameDeviceResources*)과는 별도의 스레드에서 **CreateGameDeviceResourcesAsync** 작업을 실행할 수 있습니다. **LoadLevelAsync** 및 **FinalizeLoadLevel**을 사용하는 로드 수준 리소스에서는 비슷한 패턴을 사용합니다.
+* 컨트롤러를 초기화한 후에는 화면의 왼쪽 아래와 오른쪽 아래에 각각 이동 및 카메라 터치 컨트롤을 위해 2개의 사각형 영역을 정의합니다. 플레이어는 **SetMoveRect** 호출로 정의된 왼쪽 아래 사각형을 카메라를 전후좌우로 이동하기 위한 가상 컨트롤 패드로 사용합니다. **SetFireRect** 메서드로 정의된 오른쪽 아래 사각형은 탄약을 발사하는 가상 단추로 사용됩니다.
+* __create_task__ 및 __create_task::then__을 사용하여 리소스 로드를 2개의 개별 단계로 분리합니다. Direct3D 11 디바이스에 대한 액세스는 스레드로 제한이 되기 때문에 개체 생성을 위한 Direct3D 11 디바이스 액세스가 자유 스레드 방식으로 수행되는 동안 디바이스 컨텍스트가 생성됩니다. 따라서 원래 스레드에서 실행되는 완성 작업(**FinalizeCreateGameDeviceResources**)과는 별도의 스레드에서 *CreateGameDeviceResourcesAsync* 작업을 실행할 수 있습니다. **LoadLevelAsync** 및 **FinalizeLoadLevel**을 사용하는 로드 수준 리소스에는 비슷한 패턴을 사용합니다.
 
 ```cpp
 GameMain::GameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) :
@@ -308,7 +308,7 @@ GameMain::GameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) 
     * __Deactivated__: 게임 창이 비활성화(포커스를 잃음)되거나 사이드 창이 됩니다. 이 경우 게임이 이벤트 처리를 일시 중단하고 창이 포커스를 얻거나 비사이드될 때까지 기다립니다.
     * __TooSmall__: 게임이 고유한 상태를 업데이트하고 표시할 그래픽을 렌더링합니다.
 
-게임에 포커스가 있으면 메시지가 도착할 때 메시지 큐의 모든 이벤트를 처리해야 하므로 **ProcessAllIfPresent** 옵션을 사용하여 [**CoreWindowDispatch.ProcessEvents**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents)를 호출해야 합니다. 다른 옵션을 사용하면 메시지 이벤트 처리가 지연되어 게임이 응답하지 않는 것처럼 보이거나 터치 동작이 느리고 "고정"되지 않는 것처럼 느끼게 됩니다.
+게임에 포커스가 있으면 메시지가 도착할 때 메시지 큐의 모든 이벤트를 처리해야 하므로 [ProcessAllIfPresent**옵션을 사용하여**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents)CoreWindowDispatch.ProcessEvents를 호출해야 합니다. 다른 옵션을 사용하면 메시지 이벤트 처리가 지연되어 게임이 응답하지 않는 것처럼 보이거나 터치 동작이 느리고 "고정"되지 않는 것처럼 느끼게 됩니다.
 
 게임이 표시되지 않거나, 일시 중단되거나, 사이드 상태가 된 경우에는 도착하지 않는 메시지를 계속 디스패치하느라 리소스가 소비되는 일이 없어야 합니다. 이 경우에는 게임에서 **ProcessOneAndAllPending**을 사용하여 이벤트를 받을 때까지 차단하고, 해당 이벤트와 첫 번째 이벤트 처리 중 프로세스 큐에 도착하는 다른 이벤트를 처리합니다. [**그런 다음**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.processevents) 큐가 처리 된 후에 즉시 반환 됩니다.
 
@@ -382,7 +382,7 @@ void GameMain::Run()
 
 ## <a name="uninitialize-method-of-the-view-provider"></a>뷰 공급자의 Uninitialize 메서드
 
-사용자가 결국 게임 세션을 종료하면 정리가 필요합니다. 이 때 **Uninitialize**가 필요하게 됩니다.
+사용자가 결국 게임 세션을 종료하면 정리가 필요합니다. 여기서 **Uninitialize**가 필요하게 됩니다.
 
 Windows 10에서 앱 창을 닫으면 앱 프로세스가 종료 되지 않고 대신 메모리에 앱 singleton의 상태를 기록 합니다. 시스템에서 이 메모리를 확보해야 할 때 리소스를 특별 정리하는 등 특별한 조치가 필요한 경우에는 이 메서드에 해당 정리를 위한 코드를 포함시킵니다.
 

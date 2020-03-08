@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, azure ad 응용 프로그램, aad, 사용자, 그룹, 다중 사용자, 다중 사용자
 ms.localizationpriority: medium
 ms.openlocfilehash: 41467f51e02f3cc700e3759f33d6fd6eea3ac7a6
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260075"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852558"
 ---
 # <a name="add-users-groups-and-azure-ad-applications-to-your-partner-center-account"></a>파트너 센터 계정에 사용자, 그룹 및 Azure AD 응용 프로그램 추가
 
@@ -67,7 +67,7 @@ ms.locfileid: "74260075"
 
 1.  **계정 설정**에서 **사용자** 페이지에서 **사용자 추가**를 선택 하 고 **새 사용자 만들기**를 선택 합니다.
 2.  새 사용자의 이름, 성 및 사용자 이름을 입력합니다.
-3.  조직 디렉터리에서 새 사용자에게 [전역 관리자 계정](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)을 부여하려면 **Azure AD에서 이 사용자를 전역 관리자로 지정하여 모든 디렉터리 리소스에 대한 모든 권한을 부여** 상자를 선택합니다. 이렇게 하면 해당 사용자에게 회사 Azure AD의 모든 관리 기능에 대한 모든 권한이 부여됩니다. 조직의 디렉터리에서 사용자를 추가 하 고 관리할 수 있습니다. 단, 계정에 적절 한 [역할/권한을](set-custom-permissions-for-account-users.md)부여 하지 않는 한 파트너 센터에서는 그렇지 않습니다. 이 상자를 선택하면 사용자에게 **암호 복구 메일**을 보내야 합니다.
+3.  조직 디렉터리에서 새 사용자에게 [전역 관리자 계정](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)을 부여하려면 **Azure AD에서 이 사용자를 전역 관리자로 지정하여 모든 디렉터리 리소스에 대한 모든 권한을 부여** 상자를 선택합니다. 이렇게 하면 해당 사용자에게 회사 Azure AD의 모든 관리 기능에 대한 모든 권한이 부여됩니다. 조직의 디렉터리에서 사용자를 추가 하 고 관리할 수 있습니다. 단, 계정에 적절 한 [역할/권한을](set-custom-permissions-for-account-users.md)부여 하지 않는 한 파트너 센터에서는 그렇지 않습니다. 이 상자를 선택하면 사용자의 **암호 복구 메일**을 제공해야 합니다.
 4.  **Azure AD에서 이 사용자를 전역 관리자로 지정** 확인란을 선택한 경우 사용자가 암호를 복구해야 하는 경우 사용할 수 있는 메일 주소를 입력합니다.
 5.  **그룹 구성원** 섹션에서 새 사용자가 속하게 될 그룹을 선택합니다.
 6.  **역할** 섹션에서 해당 사용자에 대한 [역할 또는 사용자 지정 권한](set-custom-permissions-for-account-users.md) 을 지정합니다.
@@ -145,11 +145,11 @@ ms.locfileid: "74260075"
 조직의 Azure AD에 속한 응용 프로그램 또는 서비스에서 파트너 센터 계정에 액세스할 수 있도록 허용할 수 있습니다. 이러한 Azure AD 응용 프로그램 사용자 계정은 [Microsoft Store 서비스](../monetize/using-windows-store-services.md)에서 제공되는 REST API를 호출하는 데 사용할 수 있습니다.
 
 
-### <a name="add-azure-ad-applications-from-your-organizations-directory"></a>조직 디렉터리의 Azure AD 응용 프로그램 추가
+### <a name="add-azure-ad-applications-from-your-organizations-directory"></a>조직 디렉터리의 Azure AD 애플리케이션 추가
 
 1.  1.  파트너 센터의 오른쪽 위 모서리 근처에 있는 기어 아이콘을 선택한 다음 **개발자 설정**을 선택 합니다. **설정** 메뉴에서 **사용자**를 선택 합니다.
 2. **사용자** 페이지에서 **Azure AD 응용 프로그램 추가**를 선택합니다.
-3.  표시되는 목록에서 하나 이상의 Azure AD 응용 프로그램을 선택합니다. 검색 상자를 사용하여 특정 Azure AD 응용 프로그램을 검색할 수 있습니다.
+3.  표시되는 목록에서 하나 이상의 Azure AD 애플리케이션을 선택합니다. 검색 상자를 사용하여 특정 Azure AD 애플리케이션을 검색할 수 있습니다.
     > [!TIP]
     > 파트너 센터 계정에 추가할 Azure AD 응용 프로그램을 둘 이상 선택 하는 경우 동일한 역할이 나 사용자 지정 권한 집합을 할당 해야 합니다. 역할/권한이 서로 다른 Azure AD 응용 프로그램을 여러 개 추가하려면 각 역할 또는 사용자 지정 권한 집합에 대해 다음 단계를 반복합니다.
 
@@ -163,12 +163,12 @@ ms.locfileid: "74260075"
 파트너 센터에 새 Azure AD 응용 프로그램 계정에 대 한 액세스 권한을 부여 하려는 경우 **사용자** 섹션에서 만들 수 있습니다. 이렇게 하면 파트너 센터 계정 뿐만 아니라 조직의 디렉터리에 새 계정이 만들어집니다.
 
 > [!TIP]
-> 파트너 센터 인증을 위해 주로이 Azure AD 응용 프로그램을 사용 하 고 사용자가 직접 액세스 하지 않아도 되는 경우 **회신 URL** 및 **앱 ID URI**에 대 한 유효한 주소를 입력할 수 있습니다. 이러한 값은 다른 Azure에서 사용 되지 않습니다. 디렉터리의 AD 응용 프로그램입니다.
+> 주로 파트너 센터 인증에 대해이 Azure AD 응용 프로그램을 사용 하 고 사용자가 직접 액세스 하지 않아도 되는 경우 **회신 URL** 및 **앱 ID URI**에 대 한 유효한 주소를 입력할 수 있습니다. 이러한 값은 디렉터리의 다른 Azure ad 응용 프로그램에서 사용 되지 않습니다.
 
 1.  **사용자** 페이지 ( **계정 설정**아래)에서 **Azure AD 응용 프로그램 추가**를 선택 합니다.
 2.  다음 페이지에서 **새 AZURE AD 응용 프로그램**을 선택 합니다.
-3.  새 Azure AD 응용 프로그램에 대한 **회신 URL**을 입력합니다. 이 URL를 통해 사용자가 Azure AD 응용 프로그램에 로그인하고 이를 사용할 수 있습니다(앱 URL 또는 로그온 URL이라고도 함). **회신 URL**은 256자 이내여야 하고 디렉터리 내에서 고유해야 합니다.
-4.  새 Azure AD 응용 프로그램에 대한 **앱 ID URI**를 입력합니다. 이 URI는 Azure AD에 Single Sign-On 요청을 보낼 때 제공되는 Azure AD 응용 프로그램의 논리적 식별자입니다. 디렉터리에서 각 Azure AD 응용 프로그램에 대한 **앱 ID URI**는 고유해야 하고 256자 이내여야 합니다. **앱 ID URI**에 대한 자세한 내용은 [응용 프로그램과 Azure Active Directory 통합](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#changing-the-application-registration-to-support-multi-tenant)을 참조하세요.
+3.  새 Azure AD 응용 프로그램에 대한 **회신 URL**을 입력합니다. 이 URL를 통해 사용자가 Azure AD 애플리케이션에 로그인하고 이를 사용할 수 있습니다(앱 URL 또는 로그온 URL이라고도 함). **회신 URL**은 256자 이내여야 하고 디렉터리 내에서 고유해야 합니다.
+4.  새 Azure AD 응용 프로그램에 대한 **앱 ID URI**를 입력합니다. 이 URI는 Azure AD에 Single Sign-On 요청을 보낼 때 제공되는 Azure AD 애플리케이션의 논리적 식별자입니다. 디렉터리에서 각 Azure AD 응용 프로그램에 대한 **앱 ID URI**는 고유해야 하고 256자 이내여야 합니다. **앱 ID URI**에 대한 자세한 내용은 [응용 프로그램과 Azure Active Directory 통합](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications#changing-the-application-registration-to-support-multi-tenant)을 참조하세요.
 5.  **역할** 섹션에서 Azure AD 응용 프로그램에 대한 [역할 또는 사용자 지정 권한](set-custom-permissions-for-account-users.md)을 지정합니다.
 6.  **저장**을 클릭합니다.
 
@@ -179,9 +179,9 @@ Azure AD 응용 프로그램을 추가하거나 만든 후 **사용자** 섹션�
 
 <span id="manage-keys" />
 
-### <a name="manage-keys-for-an-azure-ad-application"></a>Azure AD 응용 프로그램에 대한 키 관리
+### <a name="manage-keys-for-an-azure-ad-application"></a>Azure AD 애플리케이션에 대한 키 관리
 
-Azure AD 응용 프로그램이 Microsoft Azure AD에서 데이터를 읽고 쓸 경우 키가 필요합니다. 파트너 센터에서 해당 정보를 편집 하 여 Azure AD 응용 프로그램에 대 한 키를 만들 수 있습니다. 더 이상 필요하지 않은 키를 제거할 수도 있습니다.
+Azure AD 애플리케이션이 Microsoft Azure AD에서 데이터를 읽고 쓸 경우 키가 필요합니다. 파트너 센터에서 해당 정보를 편집 하 여 Azure AD 응용 프로그램에 대 한 키를 만들 수 있습니다. 더 이상 필요하지 않은 키를 제거할 수도 있습니다.
 
 1.  **사용자** 페이지 ( **계정 설정**아래)에서 Azure AD 응용 프로그램의 이름을 선택 합니다.
     > [!TIP]

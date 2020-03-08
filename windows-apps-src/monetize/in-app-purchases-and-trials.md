@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 앱 내 구매, IAP, 추가 기능, 평가판, 소모성, 지속형, 구독
 ms.localizationpriority: medium
 ms.openlocfilehash: 5396a8a6f02271647eb16d469853241b5717bd6e
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340287"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852419"
 ---
 # <a name="in-app-purchases-and-trials"></a>앱에서 바로 구매 및 평가판
 
@@ -50,7 +50,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 | 추가 기능 유형 |  설명  |
 |---------|-------------------|
-| 지속형  |  [파트너 센터에서 지정](../publish/enter-iap-properties.md)하는 수명 동안 지속 되는 추가 기능입니다. <p/><p/>기본적으로 지속형 추가 기능은 만료되지 않으므로 한 번만 구매할 수 있습니다. 추가 기능에 대해 특정 지속 기간을 지정하면 만료 후에 사용자가 추가 기능을 다시 구매할 수 있습니다. |
+| 지속성  |  [파트너 센터에서 지정](../publish/enter-iap-properties.md)하는 수명 동안 지속 되는 추가 기능입니다. <p/><p/>기본적으로 지속형 추가 기능은 만료되지 않으므로 한 번만 구매할 수 있습니다. 추가 기능에 대해 특정 지속 기간을 지정하면 만료 후에 사용자가 추가 기능을 다시 구매할 수 있습니다. |
 | 개발자 관리 소모성  |  구매하고, 사용하고, 모두 소비한 후 다시 구매할 수 있는 추가 기능입니다. 귀하는 추가 기능이 나타내는 항목의 사용자 잔액을 추적할 책임이 있습니다.<p/><p/>사용자가 추가 기능과 관련된 모든 항목을 소비할 때 귀하는 사용자 잔액을 유지하고 사용자가 항목을 모두 소비한 후 추가 기능 구매를 처리된 것으로 Microsoft Store에 보고할 책임이 있습니다. 사용자는 앱에서 이전 추가 기능 구매를 처리된 것으로 보고할 때까지 추가 기능을 다시 구매할 수 없습니다. <p/><p/>예를 들어 게임에서 추가 기능이 100개 동전을 나타내고 사용자가 10개 동전을 사용한 경우 앱 또는 서비스에서 사용자의 남은 새 잔액인 90개 동전을 유지 관리해야 합니다. 사용자가 100개 동전을 모두 사용한 후 앱에서 추가 기능을 처리된 것으로 보고해야 하며, 그러면 사용자가 100개 동전 추가 기능을 다시 구매할 수 있습니다.    |
 | 스토어 관리 소모성  |  언제든지 구매하고 사용한 후 다시 구매할 수 있는 추가 기능입니다. Microsoft Store는 추가 기능이 나타내는 항목의 사용자 잔액을 추적합니다.<p/><p/>사용자가 추가 기능과 관련된 모든 항목을 사용할 때 해당 항목을 처리된 것으로 Microsoft Store에 보고해야 하며, Microsoft Store에서 사용자 잔액을 업데이트합니다. 사용자는 원하는 만큼 추가 기능을 구입할 수 있습니다(항목을 먼저 소비할 필요는 없음). 앱은 언제든지 사용자의 현재 잔액을 쿼리할 수 있습니다. <p/><p/> 예를 들어 게임에서 추가 기능이 초기 수량인 100개 동전을 나타내고 사용자가 50개 동전을 사용한 경우 앱은 추가 기능의 50개 단위가 처리되었다고 Microsoft Store에 보고하고 Microsoft Store에서 남은 잔액을 업데이트합니다. 그러면 사용자는 기능을 다시 구입하여 동전을 100개 획득하고, 동전을 총 150개 갖게 됩니다. <p/><p/>**참고**&nbsp;&nbsp;Microsoft Store에서 관리하는 소모품을 사용하려면 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 지정하고 **Windows.ApplicationModel.Store** 네임스페이스 대신 **Windows.Services.Store** 네임스페이스를 사용해야 합니다.  |
 | 구독 | 고객이 계속 추가 기능을 이용하기 위해 반복적으로 계속 요금을 내는 지속적인 추가 기능. 고객은 추가 요금이 부과되지 않도록 언제든 구독을 취소할 수 있습니다. <p/><p/>**참고**&nbsp;&nbsp;구독 추가 기능을 사용하려면 앱이 Visual Studio에서 **Windows 10 Anniversary Edition(10.0, 빌드 14393)** 이상 릴리스를 대상으로 지정하고 **Windows.ApplicationModel.Store** 네임스페이스 대신 **Windows.Services.Store** 네임스페이스를 사용해야 합니다.  |
@@ -154,7 +154,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 <span id="testing" />
 
-### <a name="test-your-in-app-purchase-or-trial-implementation"></a>앱 내 구매 또는 평가판 구현 테스트
+### <a name="test-your-in-app-purchase-or-trial-implementation"></a>앱에서 바로 구매 또는 평가판 구현 테스트
 
 앱에서 앱 내 구매 또는 평가판 기능을 구현하기 위해 **Windows.Services.Store** 네임스페이스의 API를 사용하고 있다면, 테스트 라이선스를 사용하기 위해 앱을 Store에 제출하고, 앱을 개발자 장치에 다운로드해야 합니다. 다음 프로세스로 코드를 테스트합니다.
 
@@ -169,7 +169,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 3. 프로젝트가 열리면 Visual Studio에서 **프로젝트 메뉴**를 클릭하고 **스토어**를 가리킨 다음 **스토어에 앱 연결**을 클릭합니다. 마법사의 지침을 완료 하 여 테스트에 사용 하려는 파트너 센터 계정의 앱과 앱 프로젝트를 연결 합니다.
     > [!NOTE]
     > 스토어에서 프로젝트를 앱에 연결하지 않으면 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 메서드가 해당 반환 값의 **ExtendedError** 속성을 오류 코드 값 0x803F6107로 설정합니다. 이 값은 스토어에 앱에 대한 정보가 없음을 나타냅니다.
-4. 아직 수행하지 않은 경우 이전 단계에서 지정한 앱을 스토어에서 설치하고 앱을 한 번 실행한 다음 이 앱을 닫습니다. 이렇게 하면 앱에 대한 유효한 라이선스가 개발 장치에 설치됩니다.
+4. 아직 수행하지 않은 경우 이전 단계에서 지정한 앱을 스토어에서 설치하고 앱을 한 번 실행한 다음 이 앱을 닫습니다. 이렇게 하면 앱에 대한 유효한 라이선스가 개발 디바이스에 설치됩니다.
 
 5. Visual Studio에서 프로젝트 실행 또는 디버깅을 시작합니다. 코드를 통해 로컬 프로젝트와 연결된 스토어 앱에서 앱 및 추가 기능 데이터를 검색해야 합니다. 앱을 다시 설치하라는 메시지가 표시되면 지침을 따른 다음 프로젝트를 실행하거나 디버그합니다.
     > [!NOTE]
@@ -212,7 +212,7 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
         }
         ```
 
-    * 응용 프로그램이 C++로 작성되었을 경우 코드에 shobjidl.h 헤더 파일에 대한 참조를 추가하면 됩니다. 이 헤더 파일에는 **IInitializeWithWindow** 인터페이스의 선언이 포함되어 있습니다.
+    * 애플리케이션이 C++로 작성되었을 경우 코드에 shobjidl.h 헤더 파일에 대한 참조를 추가하면 됩니다. 이 헤더 파일에는 **IInitializeWithWindow** 인터페이스의 선언이 포함되어 있습니다.
 
 2. [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 개체를 가져오려면 이 문서의 앞부분에서 설명한 대로 [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getdefault) 메서드(또는 [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getforuser) - [다중 사용자 앱](../xbox-apps/multi-user-applications.md)일 경우)를 사용하고 이 개체를 [IInitializeWithWindow](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow) 개체로 캐스팅합니다. 그런 다음 [IInitializeWithWindow.Initialize](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinitializewithwindow-initialize) 메서드를 호출하고 **StoreContext** 메서드에서 표시한 모달 대화 상자의 소유자가 되도록 창의 핸들을 전달합니다. 다음 C# 예제에서는 앱 주 창의 핸들을 메서드에 전달하는 방법을 보여 줍니다.
     ```csharp
@@ -229,9 +229,9 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 | 개체 |  설명  |
 |---------|-------------------|
-| Product  |  *제품*은 앱이나 추가 기능을 포함, 스토어에서 사용할 수 있는 모든 유형의 제품을 나타냅니다. <p/><p/> 스토어의 각 제품에는 해당되는 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) 개체가 있습니다. 이 클래스는 제품의 스토어 ID, 스토어 목록에 사용할 이미지 및 비디오, 가격 정보 등의 데이터에 액세스하는 데 사용할 수 있는 속성을 제공합니다. 또한 제품을 구매하는 데 사용할 수 있는 메서드를 제공합니다. |
+| 제품  |  *제품*은 앱이나 추가 기능을 포함, 스토어에서 사용할 수 있는 모든 유형의 제품을 나타냅니다. <p/><p/> 스토어의 각 제품에는 해당되는 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) 개체가 있습니다. 이 클래스는 제품의 스토어 ID, 스토어 목록에 사용할 이미지 및 비디오, 가격 정보 등의 데이터에 액세스하는 데 사용할 수 있는 속성을 제공합니다. 또한 제품을 구매하는 데 사용할 수 있는 메서드를 제공합니다. |
 | SKU |  *SKU*는 자체 설명, 가격 및 기타 고유한 제품 정보가 있는 특정 버전의 제품입니다. 앱이나 추가 기능마다 기본 SKU가 있습니다. 대부분의 개발자가 앱용 SKU를 여러 개 사용할 때는 전체 버전의 앱과 평가판을 게시하는 경우뿐입니다(스토어 카탈로그에서 이러한 각 버전은 동일한 앱의 다른 SKU임). <p/><p/> 일부 판매자는 해당 SKU를 정의할 수 있습니다. 예를 들어 대규모 게임 판매자가 빨간색 피를 허용하지 않는 지역/국가에서 녹색 피를 표시하는 SKU와 다른 모든 지역/국가에서 빨간색 피를 표시하는 SKU로 게임을 출시할 수 있습니다. 또는 디지털 비디오 콘텐츠의 판매자가 HD 버전용 SKU와 표준 화질 버전용 SKU의 두 SKU를 게시할 수 있습니다. <p/><p/> 스토어의 각 SKU에는 해당되는 [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku) 개체가 있습니다. 각 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct)에는 제품 SKU에 엑세스하기 위해 사용할 수 있는 [Skus](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.skus) 속성이 있습니다. |
-| 가용성  |  *가용성*은 특정 버전의 SKU와 고유 가격 정보입니다. SKU마다 기본 가용성이 있습니다. 일부 판매자는 고유한 가용성을 정의하여 주어진 SKU에 대해 다른 가격 옵션을 도입할 수 있습니다. <p/><p/> 스토어의 각 가용성에는 해당되는 [StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability) 개체가 있습니다. 모든 [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku)에는 SKU 가용성 액세스에 사용할 수 있는 [가용성](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.availabilities) 속성이 있습니다. 대부분의 개발자의 경우 SKU마다 하나의 기본 가용성이 있습니다.  |
+| 사용 가능한 시기  |  *가용성*은 특정 버전의 SKU와 고유 가격 정보입니다. SKU마다 기본 가용성이 있습니다. 일부 판매자는 고유한 가용성을 정의하여 주어진 SKU에 대해 다른 가격 옵션을 도입할 수 있습니다. <p/><p/> 스토어의 각 가용성에는 해당되는 [StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability) 개체가 있습니다. 모든 [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku)에는 SKU 가용성 액세스에 사용할 수 있는 [가용성](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.availabilities) 속성이 있습니다. 대부분의 개발자의 경우 SKU마다 하나의 기본 가용성이 있습니다.  |
 
 <span id="store_ids" />
 
@@ -250,7 +250,7 @@ SKU와 가용성이 있는 제품의 경우, SKU와 가용성에 형식이 다�
 | 개체 |  스토어 ID 형식  |
 |---------|-------------------|
 | SKU |  SKU 스토어 ID는 ```<product Store ID>/xxxx```라는 형식을 사용합니다. 여기서 ```xxxx```는 제품의 SKU를 식별하는 4자리 영숫자 문자열입니다. 예를 들면 ```9NBLGGH4R315/000N```입니다. 이 ID는 [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.storeid) 개체의 [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storesku) 속성에서 반환하며 *SKU 스토어 ID*라고도 합니다. |
-| 가용성  |  가용성 스토어 ID는 ```<product Store ID>/xxxx/yyyyyyyyyyyy``` 형식을 사용합니다. 여기서 ```xxxx```는 제품의 SKU를 식별하는 4자리 영숫자 문자열이고, ```yyyyyyyyyyyy```는 SKU의 가용성을 식별하는 12자리 영숫자 문자열입니다. 예를 들면 ```9NBLGGH4R315/000N/4KW6QZD2VN6X```입니다. 이 ID는 [StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability.storeid) 개체의 [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability) 속성에서 반환하며 *스토어 ID*라고도 합니다.  |
+| 사용 가능한 시기  |  가용성 스토어 ID는 ```<product Store ID>/xxxx/yyyyyyyyyyyy``` 형식을 사용합니다. 여기서 ```xxxx```는 제품의 SKU를 식별하는 4자리 영숫자 문자열이고, ```yyyyyyyyyyyy```는 SKU의 가용성을 식별하는 12자리 영숫자 문자열입니다. 예를 들면 ```9NBLGGH4R315/000N/4KW6QZD2VN6X```입니다. 이 ID는 [StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability.storeid) 개체의 [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability) 속성에서 반환하며  *스토어 ID*라고도 합니다.  |
 
 <span id="product-ids" />
 
@@ -270,7 +270,7 @@ SKU와 가용성이 있는 제품의 경우, SKU와 가용성에 형식이 다�
 
 ### <a name="apps-that-use-the-windowsapplicationmodelstore-namespace"></a>Windows.ApplicationModel.Store 네임스페이스를 사용하는 앱
 
-앱에서 **Windows. ApplicationModel. Store** 네임 스페이스를 사용 하는 경우 대부분의 작업에 대해 파트너 센터에서 추가 기능에 할당 한 제품 ID를 사용 해야 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+앱에서 **Windows. ApplicationModel. Store** 네임 스페이스를 사용 하는 경우 대부분의 작업에 대해 파트너 센터에서 추가 기능에 할당 한 제품 ID를 사용 해야 합니다. 예를 들면 다음과 같습니다.
 
 * 추가 기능을 나타내는 [ProductListing](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting)이나 추가 기능 라이선스를 나타내는 [ProductLicense](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlicense)를 식별하기 위해 제품 ID를 사용합니다. 제품 ID는 [ProductListing.ProductId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlisting.ProductId) 및 [ProductLicense.ProductId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.productlicense.ProductId) 속성으로 표시됩니다.
 
