@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
 ms.openlocfilehash: 6fb9b98ec362b59ad2593bbce24654f1dcfc7638
-ms.sourcegitcommit: 27cb7c4539bb6417d32883824ccea160bb948c15
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830781"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853288"
 ---
 # <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 
