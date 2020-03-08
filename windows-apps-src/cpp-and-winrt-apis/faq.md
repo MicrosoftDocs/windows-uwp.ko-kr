@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
 ms.openlocfilehash: b0ec2c5a05e7c4e9309311fa22ad863d06597a53
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74254992"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853409"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT에 대해 자주 묻는 질문
 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통해 Windows 런타임 API를 작성하거나 사용하는 방법과 관련된 질문과 대답입니다.
@@ -71,10 +71,10 @@ Windows 런타임 클래스(런타임 클래스)를 ‘사용’하기만 하는
 
 균일한 생성이 필요하지 *않은* 로컬로 구현한 런타임 클래스를 인스턴스화하는 방법은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md)을 참조하세요.
 
-## <a name="should-i-implement-windowsfoundationiclosableuwpapiwindowsfoundationiclosable-and-if-so-how"></a>[**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable)을 구현해야 하나요? 구현해야 한다면 어떻게 구현하나요?
+## <a name="should-i-implement-windowsfoundationiclosable-and-if-so-how"></a>[**Windows::Foundation::IClosable**](/uwp/api/windows.foundation.iclosable)을 구현해야 하나요? 구현해야 한다면 어떻게 구현하나요?
 소멸자에서 리소스를 해제하는 런타임 클래스가 있고, 이 런타임 클래스가 구현하는 컴파일 단위 외부에서 사용하도록 설계된 경우(여기에서 런타임 클래스는 Windows 런타임 클라이언트 앱에서 일반 용도로 사용하는 Windows 런타임 구성 요소임), 결정적 종료가 없는 언어에서 런타임 클래스를 사용할 수 있도록 지원하기 위해 **IClosable**도 구현하는 것이 좋습니다. 소멸자, [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close) 또는 둘 다 호출하든 관계없이 리소스가 해제되는지 확인합니다. **IClosable::Close**는 원하는 횟수만큼 임의로 호출할 수 있습니다.
 
-## <a name="do-i-need-to-call-iclosablecloseuwpapiwindowsfoundationiclosableclose-on-runtime-classes-that-i-consume"></a>사용하는 런타임 클래스에서 [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close)를 호출해야 하나요?
+## <a name="do-i-need-to-call-iclosableclose-on-runtime-classes-that-i-consume"></a>사용하는 런타임 클래스에서 [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close)를 호출해야 하나요?
 **IClosable**은 결정적 종료가 없는 언어를 지원하기 위한 것입니다. 따라서 C++/WinRT에서는 **IClosable::Close**를 호출하지 않아도 됩니다. 단, 매우 드물지만 종료 경합 또는 반 교착 상태와 관련된 경우는 예외입니다. 예를 들어 **Windows.UI.Composition** 형식을 사용한다면, C++/WinRT 래퍼의 소멸을 통해 개체를 삭제하는 대신 설정된 시퀀스에서 개체를 삭제하려는 경우가 발생할 수 있습니다.
 
 ## <a name="can-i-use-llvmclang-to-compile-with-cwinrt"></a>C++/WinRT로 컴파일하기 위해 LLVM/Clang을 사용할 수 있나요?
