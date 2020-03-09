@@ -8,11 +8,11 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 8568a4613b5bb62b98edc7edd302a42153e5e33b
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72281795"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853216"
 ---
 # <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개
 
@@ -138,13 +138,13 @@ UWP 앱은 스마트 상호 작용을 사용합니다. 클릭이 마우스, 스�
     :::column-end:::
 :::row-end:::
 
-## <a name="devices"></a>장치
+## <a name="devices"></a>디바이스
 
 ![디바이스](../layout/images/size-classes.svg)
 
 마찬가지로, UWP는 자동으로 앱을 다른 디바이스로 확장하지만 [특정 디바이스에 대한 UWP 앱을 최적화](../devices/index.md)할 수도 있습니다.
 
-## <a name="usability"></a>유용성
+## <a name="usability"></a>사용 편의성
 
 <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REYaAb?ver=727c">
 
@@ -170,12 +170,12 @@ UWP 앱은 스마트 상호 작용을 사용합니다. 클릭이 마우스, 스�
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Designing-Universal-Windows-Platform-apps/player]
 
-## <a name="next-fluent-design-system"></a>다음: Fluent 디자인 시스템
+## <a name="next-fluent-design-system"></a>다음: Fluent Design System
 
 흐름 디자인(Microsoft의 디자인 시스템)의 기반이 되는 원칙에 대해 학습하고, UWP 앱에 포함시킬 수 있는 더 많은 기능에 대해 알아보고 싶다면 계속해서 [Fluent 디자인 시스템](/windows/apps/fluent-design-system)에 대해 알아보세요.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
-- [UWP 앱이란 무엇인가요?](../../get-started/universal-application-platform-guide.md)
+- [UWP 앱이란?](../../get-started/universal-application-platform-guide.md)
 - [흐름 디자인 시스템](/windows/apps/fluent-design-system)
 - [XAML 플랫폼 개요](../../xaml-platform/index.md)
