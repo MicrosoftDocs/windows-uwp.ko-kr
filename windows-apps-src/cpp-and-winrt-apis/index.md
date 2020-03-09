@@ -6,11 +6,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, CPP, WinRT, 프로젝션
 ms.localizationpriority: medium
 ms.openlocfilehash: 61a54edc236f94bec44420471a176a2014fcdb0d
-ms.sourcegitcommit: 50b0b6d6571eb80aaab3cc36ab4e8d84ac4b7416
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71329571"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852495"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
