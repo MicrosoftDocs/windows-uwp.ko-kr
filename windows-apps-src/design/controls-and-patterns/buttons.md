@@ -14,11 +14,11 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: a3cd8a0c988df08047b10911a4d4f55e3ba1cb6e
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684109"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78852910"
 ---
 # <a name="buttons"></a>단추
 
