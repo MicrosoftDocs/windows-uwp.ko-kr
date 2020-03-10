@@ -7,11 +7,11 @@ keywords: Windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 사용�
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 6acbd62a8fa75eefb39598dd5bbb6ec1270388c4
-ms.sourcegitcommit: cc9f5a16386be78c12821a975e43497a0693abba
+ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578168"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78853406"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrt"></a>C++/WinRT를 사용한 XAML 사용자 지정(템플릿 기반) 컨트롤
 
