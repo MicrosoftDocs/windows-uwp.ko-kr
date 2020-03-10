@@ -5,12 +5,12 @@ ms.date: 07/12/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, Windows UI 라이브러리, WinUI
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d0066abb2a6eb15f1d31aaf930ed2c0f0faf81a
-ms.sourcegitcommit: 4e74c920f1fef507c5cdf874975003702d37bcbb
+ms.openlocfilehash: aadf177bc4a44f67550dba1f6f706525b8460857
+ms.sourcegitcommit: c9bab19599c0eb2906725fd86d0696468bb919fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68372713"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256176"
 ---
 # <a name="a-simple-cwinrt-windows-ui-library-example"></a>간단한 C++/WinRT Windows UI 라이브러리 예제
 
@@ -21,11 +21,13 @@ ms.locfileid: "68372713"
 
 ## <a name="create-a-blank-app-hellowinuicppwinrt"></a>비어 있는 앱(HelloWinUICppWinRT) 만들기
 
-Visual Studio에서 **비어 있는 앱(C++/WinRT)** 프로젝트 템플릿을 사용하여 새 프로젝트를 만들고, 이름을 *HelloWinUICppWinRT*로 지정합니다.
+Visual Studio에서 **비어 있는 앱(C++/WinRT)** 프로젝트 템플릿을 사용하여 새 프로젝트를 만듭니다. **(유니버설 Windows)** 템플릿이 아닌 **(C++/WinRT)** 템플릿을 사용하고 있는지 확인합니다.
+
+새 프로젝트의 이름을 *HelloWinUICppWinRT*로 설정하고 폴더 구조가 연습과 일치하도록 **솔루션 및 프로젝트를 같은 디렉터리에 배치**를 선택 취소합니다.
 
 ## <a name="install-the-microsoftuixaml-nuget-package"></a>Microsoft.UI.Xaml NuGet 패키지 설치
 
-**프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기**를 차례로 클릭하고, 검색 상자에서 **Microsoft.UI.Xaml**을 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치**를 클릭하여 패키지를 프로젝트에 설치합니다(사용권 계약 프롬프트도 표시됨). **Microsoft.UI.Xaml.Core.Direct**가 아니라 **Microsoft.UI.Xaml** 패키지만 설치하도록 주의하세요.
+**프로젝트** \> **NuGet 패키지 관리...** 를 클릭합니다. \> **찾아보기**를 차례로 클릭하고, 검색 상자에서 **Microsoft.UI.Xaml**을 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치**를 클릭하여 패키지를 프로젝트에 설치합니다(사용권 계약 프롬프트도 표시됨). **Microsoft.UI.Xaml.Core.Direct**가 아니라 **Microsoft.UI.Xaml** 패키지만 설치하도록 주의하세요.
 
 ## <a name="declare-winui-application-resources"></a>WinUI 애플리케이션 리소스 선언
 
@@ -39,7 +41,7 @@ Visual Studio에서 **비어 있는 앱(C++/WinRT)** 프로젝트 템플릿을 �
 
 ## <a name="add-a-winui-control-to-mainpage"></a>MainPage에 WinUI 컨트롤 추가
 
-다음으로 `MainPage.xaml`을 엽니다. 기존의 여는 **Application** 태그에는 몇 가지 xml 네임스페이스 선언이 있습니다. `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"` xml 네임스페이스 선언을 추가합니다. 그런 다음, 기존의 열고 닫는 **Page** 태그 사이에서 기존 **StackPanel** 요소를 덮어쓰면서 다음 태그를 붙여넣습니다.
+다음으로 `MainPage.xaml`을 엽니다. 기존의 여는 **Page** 태그에는 몇 가지 xml 네임스페이스 선언이 있습니다. `xmlns:muxc="using:Microsoft.UI.Xaml.Controls"` xml 네임스페이스 선언을 추가합니다. 그런 다음, 기존의 열고 닫는 **Page** 태그 사이에서 기존 **StackPanel** 요소를 덮어쓰면서 다음 태그를 붙여넣습니다.
 
 ```xaml
 <muxc:NavigationView PaneTitle="Welcome">
@@ -47,11 +49,11 @@ Visual Studio에서 **비어 있는 앱(C++/WinRT)** 프로젝트 템플릿을 �
 </muxc:NavigationView>
 ```
 
-## <a name="edit-mainpageh-and-cpp-as-necessary"></a>필요에 따라 MainPage.h 및 .cpp를 편집합니다.
+## <a name="edit-mainpagecpp-and-h-as-necessary"></a>필요에 따라 MainPage.cpp 및 .h를 편집합니다.
 
-NuGet 패키지(예: 이전에 추가한 **Microsoft.UI.Xaml** 패키지)를 C++/WinRT 프로젝트에 추가하면 도구에서 일단의 프로젝션 헤더를 프로젝트의 `\Generated Files\winrt` 폴더에 생성합니다. 이러한 헤더 파일을 프로젝트에 가져와서 이러한 새 형식의 참조가 해결되도록 하려면 해당 헤더 파일이 포함되어야 합니다.
+*myButton*이 더 이상 XAML 태그에 없으므로 `MainPage.cpp`에서 **MainPage::ClickHandler** 구현 내의 코드를 삭제합니다.
 
-따라서 `MainPage.h`에서 include를 아래 목록과 같이 편집합니다. 둘 이상의 XAML 페이지에서 WinUI를 사용하는 경우 미리 컴파일된 헤더 파일(일반적으로 `pch.h`)로 이동하여 대신 포함시킬 수 있습니다.
+`MainPage.h`에서 include를 아래 목록과 같이 편집합니다. 둘 이상의 XAML 페이지에서 WinUI를 사용하는 경우 미리 컴파일된 헤더 파일(일반적으로 `pch.h`)로 이동하여 대신 포함시킬 수 있습니다.
 
 ```cppwinrt
 #include "MainPage.g.h"
@@ -59,9 +61,11 @@ NuGet 패키지(예: 이전에 추가한 **Microsoft.UI.Xaml** 패키지)를 C++
 #include "winrt/Microsoft.UI.Xaml.XamlTypeInfo.h"
 ```
 
-마지막으로, *myButton*이 더 이상 XAML 태그에 없으므로 `MainPage.cpp`에서 **MainPage::ClickHandler** 구현 내의 코드를 삭제합니다.
+이제 프로젝트를 빌드합니다.
 
-이제 프로젝트를 빌드하고 실행할 수 있습니다.
+NuGet 패키지(예: 이전에 추가한 **Microsoft.UI.Xaml** 패키지)를 C++/WinRT 프로젝트에 추가하고 프로젝트를 빌드하면 도구에서 일단의 프로젝션 헤더 파일을 프로젝트의 `\Generated Files\winrt` 폴더에 생성합니다. 연습을 수행하고 나면 이제 `\HelloWinUICppWinRT\HelloWinUICppWinRT\Generated Files\winrt` 폴더가 생깁니다. 위의 `MainPage.h` 변경 내용으로 인해 프로젝션 헤더 파일이 프로젝트에 포함됩니다. 그리고 이는 NuGet 패키지의 형식에 대한 참조가 확인되도록 하는 데 필요합니다.
+
+이제 프로젝트를 실행할 수 있습니다.
 
 ![간단한 C++/WinRT Windows UI 라이브러리의 스크린샷](images/winui.png)
 
