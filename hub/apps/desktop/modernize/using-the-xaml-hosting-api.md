@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 84a41b4dd77a451a79e607e5ad5cb7df548419a9
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.openlocfilehash: 9f6ba075a8dba048c9a11cc415734d040d953079
+ms.sourcegitcommit: 756217c559155e172087dee4d762d328c6529db6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77089419"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78935369"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-c-win32-app"></a>C++ Win32 앱에서 UWP XAML 호스팅 API 사용
 
@@ -34,7 +34,7 @@ UWP XAML 호스팅 API는 데스크톱 앱에서 UWP 컨트롤을 호스팅하�
 
 Win32 앱만 C++ UWP XAML 호스팅 API를 사용 하는 것이 좋지만이 문서에서는 주로 win32 앱에 대 C++ 한 지침과 예제를 제공 합니다. 그러나 선택 하는 경우 WPF에서 UWP XAML 호스팅 API를 사용 하 고 앱을 Windows Forms 수 있습니다. 이 문서에서는 Windows 커뮤니티 도구 키트에서 WPF 및 Windows Forms에 대 한 [호스트 컨트롤](xaml-islands.md#host-controls) 의 관련 소스 코드를 안내 하 여 UWP XAML 호스팅 API가 해당 컨트롤에서 어떻게 사용 되는지 확인할 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 조건
 
 XAML 아일랜드에는 Windows 10, 버전 1903 이상 및 Windows SDK의 해당 빌드가 필요 합니다. C++ Win32 앱에서 XAML 아일랜드를 사용 하려면 [이 섹션](#configure-the-project)에 설명 된 대로 프로젝트를 설정 해야 합니다.
 
@@ -60,6 +60,9 @@ UWP XAML 호스팅 API는 이러한 기본 Windows 런타임 형식 및 COM 인�
 * 마지막으로, 최상위 수준에는 데스크톱 앱에서 호스트 하려는 UWP 컨트롤이 있습니다. 이는 Windows SDK에서 제공 하는 모든 UWP 컨트롤과 사용자 지정 사용자 정의 컨트롤을 포함 하 여 [Windows. .xaml. UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement)에서 파생 되는 모든 uwp 개체 일 수 있습니다.
 
 ![DesktopWindowXamlSource 아키텍처](images/xaml-islands/xaml-hosting-api-rev2.png)
+
+> [!NOTE]
+> 데스크톱 앱에서 XAML 아일랜드를 호스트 하는 경우 여러 XAML 콘텐츠 트리가 동시에 같은 스레드에서 실행 될 수 있습니다. XAML 아일랜드에서 XAML 콘텐츠 트리의 루트 요소에 액세스 하 고 해당 요소를 호스팅하는 컨텍스트에 대 한 관련 정보를 가져오려면 [Xamlroot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot) 클래스를 사용 합니다. [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow), [Applicationview](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview)및 [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) api는 XAML 아일랜드에 대 한 올바른 정보를 제공 하지 않습니다. 자세한 내용은 [이 섹션](xaml-islands.md#window-host-context-for-xaml-islands)을 참조하세요.
 
 ## <a name="related-samples"></a>관련 샘플
 
@@ -100,7 +103,7 @@ Windows Community Toolkit의 [Windowsxamlhost](https://docs.microsoft.com/window
     2. **찾아보기** 탭을 선택 하 고 [CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) 패키지를 검색 한 후이 패키지의 최신 버전을 설치 합니다.
 
     > [!NOTE]
-    > 새 프로젝트의 경우 [ C++/winrt Visual Studio Extension (VSIX)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) 을 설치 하 고 해당 확장에 포함 된 C++/winrt 프로젝트 템플릿 중 하나를 사용할 수 있습니다. 자세한 내용은 [이 문서](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)를 참조 하세요.
+    > 새 프로젝트의 경우 [ C++/winrt Visual Studio Extension (VSIX)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) 을 설치 하 고 해당 확장에 포함 된 C++/winrt 프로젝트 템플릿 중 하나를 사용할 수 있습니다. 자세한 내용은 [이 문서](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)를 참조하세요.
 
 4. [Microsoft Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) . i n k.
 
@@ -150,7 +153,7 @@ XAML 호스팅 API를 사용 하 여 UWP 컨트롤을 호스트 하는 기본 �
 
     3. **Desktopwindowxamlsource**에 포함 된 내부 자식 창의 초기 크기를 설정 합니다. 기본적으로이 내부 자식 창에는 너비와 높이가 0으로 설정 되어 있습니다. 창 크기를 설정 하지 않으면 **Desktopwindowxamlsource** 에 추가 하는 모든 UWP 컨트롤이 표시 되지 않습니다. **Desktopwindowxamlsource**의 내부 자식 창에 액세스 하려면 **IDesktopWindowXamlSourceNative** 또는 **IDesktopWindowXamlSourceNative2** 인터페이스의 **WindowHandle** 속성을 사용 합니다.
 
-3. 마지막으로, 호스트할 **Windows.UI.Xaml.UIElement**을 **DesktopWindowXamlSource** 개체의 [콘텐츠](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.content) 속성에 할당합니다.
+3. 마지막으로, 호스트할 **Windows.UI.Xaml.UIElement**을 [DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.content) 개체의 **콘텐츠** 속성에 할당합니다.
 
 다음 단계 및 코드 예제에서는 위의 프로세스를 구현 하는 방법을 보여 줍니다.
 
@@ -341,7 +344,7 @@ XAML 호스팅 API를 사용 하 여 UWP 컨트롤을 호스트 하는 기본 �
 * **C++(Win32**
   * [HelloWindowsDesktop](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Standalone_Samples/CppWinRT_Basic_Win32App/Win32DesktopApp/HelloWindowsDesktop.cpp) 파일을 참조 하세요.
   * [Xamlbridge .cpp](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Samples/Win32/SampleCppApp/XamlBridge.cpp) 파일을 참조 하세요.
-* **WPF** Windows 커뮤니티 도구 키트에서 [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.cs) 및 [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHost.cs) 파일을 참조 하세요.  
+* **WPF:** Windows 커뮤니티 도구 키트에서 [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.cs) 및 [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHost.cs) 파일을 참조 하세요.  
 
 * **Windows Forms:** Windows 커뮤니티 도구 키트에서 [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.cs) 및 [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHost.cs) 파일을 참조 하세요.
 
@@ -392,9 +395,9 @@ Win32 응용 프로그램에 대 한 전체 예제는 [XAML 아일랜드 C++ Win
 
 각 XAML 아일랜드에 대 한 키보드 입력을 올바르게 처리 하려면 특정 메시지가 올바르게 처리 될 수 있도록 응용 프로그램에서 모든 Windows 메시지를 UWP XAML 프레임 워크로 전달 해야 합니다. 이렇게 하려면 메시지 루프에 액세스할 수 있는 응용 프로그램의 일부에서 각 XAML 아일랜드의 **Desktopwindowxamlsource** 개체를 **IDesktopWindowXamlSourceNative2** COM 인터페이스로 캐스팅 합니다. 그런 다음이 인터페이스의 **PreTranslateMessage** 메서드를 호출 하 고 현재 메시지를 전달 합니다.
 
-  * **C++ Win32:** : 앱은 기본 메시지 루프에서 직접 **PreTranslateMessage** 를 호출할 수 있습니다. 예제를 보려면 [Xamlbridge .cpp](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Samples/Win32/SampleCppApp/XamlBridge.cpp#L16) 파일을 참조 하세요.
+  * Win32:: 앱이 주 메시지 루프에서 직접 **PreTranslateMessage** 를 호출할 수 있습니다. **C++** 예제를 보려면 [Xamlbridge .cpp](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Samples/Win32/SampleCppApp/XamlBridge.cpp#L16) 파일을 참조 하세요.
 
-  * **WPF** 앱은 [Componentdispatcher. ThreadFilterMessage](https://docs.microsoft.com/dotnet/api/system.windows.interop.componentdispatcher.threadfiltermessage) 이벤트에 대 한 이벤트 처리기에서 **PreTranslateMessage** 를 호출할 수 있습니다. 예를 들어 Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.Focus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Focus.cs#L177) 파일을 참조 하세요.
+  * **WPF:** 앱은 [Componentdispatcher. ThreadFilterMessage](https://docs.microsoft.com/dotnet/api/system.windows.interop.componentdispatcher.threadfiltermessage) 이벤트에 대 한 이벤트 처리기에서 **PreTranslateMessage** 를 호출할 수 있습니다. 예를 들어 Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.Focus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Focus.cs#L177) 파일을 참조 하세요.
 
   * **Windows Forms:** 앱은 **PreTranslateMessage** 를 호출할 수 있습니다 [. preprocessmessage](https://docs.microsoft.com/dotnet/api/system.windows.forms.control.preprocessmessage) 메서드. 예를 들어 Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.KeyboardFocus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.KeyboardFocus.cs#L100) 파일을 참조 하세요.
 
@@ -410,9 +413,9 @@ UWP XAML 호스팅 API는 이러한 작업을 수행 하는 데 도움이 되는
 
 작업 중인 샘플 응용 프로그램의 컨텍스트에서이 작업을 수행 하는 방법을 보여 주는 예제는 다음 코드 파일을 참조 하세요.
 
-  * **C++/Win32**: [Xamlbridge .cpp](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Samples/Win32/SampleCppApp/XamlBridge.cpp) 파일을 참조 하세요.
+  * /Win32: [xamlbridge .cpp](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Samples/Win32/SampleCppApp/XamlBridge.cpp) 파일을 참조 하세요.  **C++**
 
-  * **WPF** Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.Focus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Focus.cs) 파일을 참조 하세요.  
+  * **WPF:** Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.Focus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Focus.cs) 파일을 참조 하세요.  
 
   * **Windows Forms:** Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.KeyboardFocus.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.KeyboardFocus.cs) 파일을 참조 하세요.
 
@@ -422,13 +425,13 @@ UWP XAML 호스팅 API는 이러한 작업을 수행 하는 데 도움이 되는
 
 * C++ Win32 응용 프로그램에서 응용 프로그램이 WM_SIZE 메시지를 처리할 때 [setwindowpos](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-setwindowpos) 함수를 사용 하 여 호스팅된 XAML 아일랜드의 위치를 변경할 수 있습니다. 예제를 보려면 [sampleapp.exe](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Samples/Win32/SampleCppApp/SampleApp.cpp#L170) 코드 파일을 참조 하세요.
 
-* 부모 UI 요소가 **Desktopwindowxamlsource**에서 **호스팅하는 데** 필요한 사각형 영역의 크기를 표시 해야 하는 경우에는 **windows.** [x x. i x. i x. i a. ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) 예를 들어 다음과 같은 가치를 제공해야 합니다.
+* 부모 UI 요소가 **Desktopwindowxamlsource**에서 **호스팅하는 데** 필요한 사각형 영역의 크기를 표시 해야 하는 경우에는 **windows.** x x. i x. i x. i a. [Measure](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.measure) 예를 들면 다음과 같습니다.
 
     * WPF 응용 프로그램에서는 **Desktopwindowxamlsource**를 호스트 하는 [system.windows.interop.hwndhost>](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) 의 [system.windows.frameworkelement.measureoverride](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.measureoverride) 메서드에서이 작업을 수행할 수 있습니다. 예를 들어 Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.Layout.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Layout.cs) 파일을 참조 하세요.
 
     * Windows Forms 응용 프로그램에서는 **Desktopwindowxamlsource**를 호스트 하는 [컨트롤](https://docs.microsoft.com/dotnet/api/system.windows.forms.control) 의 [GetPreferredSize](https://docs.microsoft.com/dotnet/api/system.windows.forms.control.getpreferredsize) 메서드에서이 작업을 수행할 수 있습니다. 예를 들어 Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.Layout.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.Layout.cs) 파일을 참조 하세요.
 
-* 부모 UI 요소의 크기가 변경 되 면 **Desktopwindowxamlsource**에서 호스트 하는 루트 **Windows. .xaml. UIElement** 의 [정렬](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) 메서드를 호출 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+* 부모 UI 요소의 크기가 변경 되 면 **Desktopwindowxamlsource**에서 호스트 하는 루트 **Windows. .xaml. UIElement** 의 [정렬](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) 메서드를 호출 합니다. 예를 들면 다음과 같습니다.
 
     * WPF 응용 프로그램에서는 **Desktopwindowxamlsource**를 호스팅하는 [System.windows.interop.hwndhost>](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) 개체의 [system.windows.frameworkelement.arrangeoverride](https://docs.microsoft.com/dotnet/api/system.windows.frameworkelement.arrangeoverride) 메서드에서이 작업을 수행할 수 있습니다. 예를 들어 Windows 커뮤니티 도구 키트의 [WindowsXamlHost.Layout.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.Layout.cs) 파일을 참조 하세요.
 
@@ -467,27 +470,27 @@ UWP XAML 프레임 워크는 호스트 된 UWP 컨트롤에 대 한 DPI 변경�
 
 ### <a name="error-using-uwp-xaml-hosting-api-in-a-uwp-app"></a>UWP 앱에서 UWP XAML 호스팅 API를 사용 하는 동안 오류 발생
 
-| 문제점 | 해결 방법 |
+| 문제 | 해결 방법 |
 |-------|------------|
-| 앱에서 다음 메시지와 함께 **COMException** 를 수신 합니다. "DesktopWindowXamlSource를 활성화할 수 없습니다. 이 형식은 UWP 앱에서 사용할 수 없습니다. " 또는 "WindowsXamlManager를 활성화할 수 없습니다. 이 형식은 UWP 앱에서 사용할 수 없습니다. " | 이 오류는 uwp 앱에서 UWP XAML 호스팅 API (특히 [Desktopwindowxamlsource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) 또는 [windowsxamlmanager](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) 유형을 인스턴스화하려고 시도)를 사용 하 고 있음을 나타냅니다. UWP XAML 호스팅 API는 WPF, Windows Forms 및 C++ Win32 응용 프로그램과 같은 비 UWP 데스크톱 앱 에서만 사용할 수 있습니다. |
+| 앱이 "DesktopWindowXamlSource를 활성화할 수 없습니다." 라는 메시지와 함께 **COMException** 를 수신 합니다. 이 형식은 UWP 앱에서 사용할 수 없습니다. " 또는 "WindowsXamlManager를 활성화할 수 없습니다. 이 형식은 UWP 앱에서 사용할 수 없습니다. " | 이 오류는 uwp 앱에서 UWP XAML 호스팅 API (특히 [Desktopwindowxamlsource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) 또는 [windowsxamlmanager](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) 유형을 인스턴스화하려고 시도)를 사용 하 고 있음을 나타냅니다. UWP XAML 호스팅 API는 WPF, Windows Forms 및 C++ Win32 응용 프로그램과 같은 비 UWP 데스크톱 앱 에서만 사용할 수 있습니다. |
 
 ### <a name="error-trying-to-use-the-windowsxamlmanager-or-desktopwindowxamlsource-types"></a>WindowsXamlManager 또는 DesktopWindowXamlSource 유형을 사용 하는 동안 오류 발생
 
-| 문제점 | 해결 방법 |
+| 문제 | 해결 방법 |
 |-------|------------|
-| 앱에서 다음 메시지와 함께 예외를 수신 합니다. "WindowsXamlManager 및 DesktopWindowXamlSource는 Windows 버전 10.0.18226.0 이상 버전을 대상으로 하는 앱에 대해 지원 됩니다. 응용 프로그램 매니페스트 또는 패키지 매니페스트를 확인 하 고 MaxTestedVersion 속성이 업데이트 되었는지 확인 하십시오. " | 이 오류는 응용 프로그램이 UWP XAML 호스팅 API에서 **Windowsxamlmanager** 또는 **Desktopwindowxamlsource** 형식을 사용 하려고 했지만, OS에서 Windows 10 버전 1903 이상을 대상으로 하는 앱을 빌드 했는지 여부를 확인할 수 없음을 나타냅니다. UWP XAML 호스팅 API는 이전 버전의 Windows 10에서 미리 보기로 처음 도입 되었지만 Windows 10 버전 1903부터만 지원 됩니다.</p></p>이 문제를 해결 하려면 앱에 대 한 MSIX 패키지를 만들고 패키지에서 실행 하거나 프로젝트에 [Microsoft Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) . n a m a. n a m a 패키지를 설치 합니다. 자세한 내용은 [이 섹션](#configure-the-project)을 참조하세요. |
+| 앱이 다음 메시지와 함께 예외를 수신 합니다. "WindowsXamlManager 및 DesktopWindowXamlSource는 Windows 버전 10.0.18226.0 이상을 대상으로 하는 앱에 대해 지원 됩니다. 응용 프로그램 매니페스트 또는 패키지 매니페스트를 확인 하 고 MaxTestedVersion 속성이 업데이트 되었는지 확인 하십시오. " | 이 오류는 응용 프로그램이 UWP XAML 호스팅 API에서 **Windowsxamlmanager** 또는 **Desktopwindowxamlsource** 형식을 사용 하려고 했지만, OS에서 Windows 10 버전 1903 이상을 대상으로 하는 앱을 빌드 했는지 여부를 확인할 수 없음을 나타냅니다. UWP XAML 호스팅 API는 이전 버전의 Windows 10에서 미리 보기로 처음 도입 되었지만 Windows 10 버전 1903부터만 지원 됩니다.</p></p>이 문제를 해결 하려면 앱에 대 한 MSIX 패키지를 만들고 패키지에서 실행 하거나 프로젝트에 [Microsoft Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) . n a m a. n a m a 패키지를 설치 합니다. 자세한 내용은 [이 섹션](#configure-the-project)을 참조하세요. |
 
 ### <a name="error-attaching-to-a-window-on-a-different-thread"></a>다른 스레드의 창에 연결 하는 동안 오류가 발생 했습니다.
 
-| 문제점 | 해결 방법 |
+| 문제 | 해결 방법 |
 |-------|------------|
-| 앱에서 다음 메시지와 함께 **COMException** 를 수신 합니다. 지정 된 HWND가 다른 스레드에 생성 되었으므로 "AttachToWindow 메서드가 실패 했습니다." | 이 오류는 응용 프로그램에서 **IDesktopWindowXamlSourceNative:: AttachToWindow** 메서드를 호출 하 고 다른 스레드에서 만든 창의 HWND를 전달 했음을 나타냅니다. 이 메서드는 메서드를 호출 하는 코드와 동일한 스레드에 생성 된 창의 HWND를 전달 해야 합니다. |
+| 앱에서 다음 메시지와 함께 **COMException** 를 수신 합니다. "지정 된 HWND가 다른 스레드에 생성 되었으므로 AttachToWindow 메서드가 실패 했습니다." | 이 오류는 응용 프로그램에서 **IDesktopWindowXamlSourceNative:: AttachToWindow** 메서드를 호출 하 고 다른 스레드에서 만든 창의 HWND를 전달 했음을 나타냅니다. 이 메서드는 메서드를 호출 하는 코드와 동일한 스레드에 생성 된 창의 HWND를 전달 해야 합니다. |
 
 ### <a name="error-attaching-to-a-window-on-a-different-top-level-window"></a>다른 최상위 창의 창에 연결 하는 동안 오류가 발생 했습니다.
 
-| 문제점 | 해결 방법 |
+| 문제 | 해결 방법 |
 |-------|------------|
-| 앱에서 다음 메시지와 함께 **COMException** 를 수신 합니다. 지정 된 HWND가 이전에 동일한 스레드에서 AttachToWindow에 전달 된 HWND와 다른 최상위 창에서 계층이 이어집니다 AttachToWindow 메서드가 실패 했습니다. " | 이 오류는 응용 프로그램에서 **IDesktopWindowXamlSourceNative:: AttachToWindow** 메서드를 호출 하 고, 동일한 스레드에서이 메서드에 대 한 이전 호출에서 지정한 창과 다른 최상위 창에서 계층이 이어집니다 하는 창의 HWND를 전달 했음을 나타냅니다.</p></p>응용 프로그램이 특정 스레드에 대해 **AttachToWindow** 를 호출 하면 동일한 스레드에 있는 다른 모든 [Desktopwindowxamlsource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) 개체는 **AttachToWindow**에 대 한 첫 번째 호출에서 전달 된 것과 동일한 최상위 창의 하위 항목인 windows에만 연결할 수 있습니다. 모든 **desktopwindowxamlsource** 개체가 특정 스레드에 대해 닫히면 다음 **desktopwindowxamlsource** 를 사용 하 여 모든 창에 다시 연결할 수 있습니다.</p></p>이 문제를 해결 하려면이 스레드의 다른 최상위 창에 바인딩된 모든 **desktopwindowxamlsource** 개체를 닫거나이 **desktopwindowxamlsource**에 대 한 새 스레드를 만듭니다. |
+| 앱에서 다음 메시지와 함께 **COMException** 를 수신 합니다. 지정 된 hwnd가 이전에 동일한 스레드의 AttachToWindow에 전달 된 hwnd와 다른 최상위 창에서 계층이 이어집니다 때문에 "AttachToWindow 메서드가 실패 했습니다." | 이 오류는 응용 프로그램에서 **IDesktopWindowXamlSourceNative:: AttachToWindow** 메서드를 호출 하 고, 동일한 스레드에서이 메서드에 대 한 이전 호출에서 지정한 창과 다른 최상위 창에서 계층이 이어집니다 하는 창의 HWND를 전달 했음을 나타냅니다.</p></p>응용 프로그램이 특정 스레드에 대해 **AttachToWindow** 를 호출 하면 동일한 스레드에 있는 다른 모든 [Desktopwindowxamlsource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) 개체는 **AttachToWindow**에 대 한 첫 번째 호출에서 전달 된 것과 동일한 최상위 창의 하위 항목인 windows에만 연결할 수 있습니다. 모든 **desktopwindowxamlsource** 개체가 특정 스레드에 대해 닫히면 다음 **desktopwindowxamlsource** 를 사용 하 여 모든 창에 다시 연결할 수 있습니다.</p></p>이 문제를 해결 하려면이 스레드의 다른 최상위 창에 바인딩된 모든 **desktopwindowxamlsource** 개체를 닫거나이 **desktopwindowxamlsource**에 대 한 새 스레드를 만듭니다. |
 
 ## <a name="related-topics"></a>관련 항목
 

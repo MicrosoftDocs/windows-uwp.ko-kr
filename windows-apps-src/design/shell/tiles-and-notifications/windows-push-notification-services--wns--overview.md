@@ -3,24 +3,22 @@ Description: 타사 개발자는 WNS(Windows 푸시 알림 서비스)를 사용�
 title: WNS(Windows 푸시 알림 서비스) 개요
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 03/06/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f53dd0538e4564c50fb5cbcb6986f5cf9661cae
-ms.sourcegitcommit: 6af7ce0e3c27f8e52922118deea1b7aad0ae026e
+ms.openlocfilehash: bd6c3ec487871d18a7142489802b801120f5e7ed
+ms.sourcegitcommit: 0142b5a47511afa76d74015e3fd8635b6042a542
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77463826"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79038156"
 ---
-# <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요
- 
+# <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요 
 
 WNS (Windows Push Notification Services)를 사용 하면 타사 개발자가 자신의 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. WNS는 에너지 효율적이며 신뢰할 수 있는 방법으로 사용자에게 새 업데이트를 전달하는 메커니즘을 제공합니다.
 
 ## <a name="how-it-works"></a>작동 방법
-
 
 다음 다이어그램은 푸시 알림 보내기를 위한 전체 데이터 흐름을 보여 줍니다. 이 작업은 다음 단계로 이루어져 있습니다.
 
@@ -35,15 +33,52 @@ WNS (Windows Push Notification Services)를 사용 하면 타사 개발자가 �
 
 ## <a name="registering-your-app-and-receiving-the-credentials-for-your-cloud-service"></a>앱을 등록하고 클라우드 서비스용 자격 증명 받기
 
-
-WNS를 사용하여 알림을 보내려면 먼저 스토어 대시보드에 앱을 등록해야 합니다. 이렇게 하면 클라우드 서비스가 WNS로 인증하는 데 사용할 자격 증명을 앱에 제공합니다. 이러한 자격 증명은 패키지 SID(보안 식별자)와 비밀 키로 구성됩니다. 이 등록을 수행 하려면 [파트너 센터](https://partner.microsoft.com/dashboard)에 로그인 합니다. 앱을 만든 후에는 **앱 관리 - WNS/MPNS** 페이지의 지침에 따라 자격 증명을 검색할 수 있습니다. Live Services 솔루션을 사용하려면 이 페이지의 **라이브 서비스 사이트** 링크를 따라 이동합니다.
+WNS를 사용하여 알림을 보내려면 먼저 스토어 대시보드에 앱을 등록해야 합니다. 
 
 각 앱에는 해당 클라우드 서비스에 사용할 고유 자격 증명 집합이 있습니다. 이 자격 증명은 다른 앱에 알림을 보내는 데 사용할 수 없습니다.
 
-앱 등록 방법에 대한 자세한 내용은 [WNS(Windows 알림 서비스)를 사용하여 인증하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))을 참조하세요.
+### <a name="step-1-register-your-app-with-the-dashboard"></a>1 단계: 대시보드에 앱 등록
+
+WNS를 통해 알림을 보내려면 앱을 파트너 센터 대시보드에 등록 해야 합니다. 이렇게 하면 클라우드 서비스가 WNS로 인증하는 데 사용할 자격 증명을 앱에 제공합니다. 이러한 자격 증명은 패키지 SID(보안 식별자)와 비밀 키로 구성됩니다. 이 등록을 수행 하려면 [파트너 센터](https://partner.microsoft.com/dashboard)에 로그인 합니다. 앱을 만든 후 자격 증명을 검색 하는 방법에 대 한 [제품 관리-WNS/MPNS](https://apps.dev.microsoft.com/) for instrunctions을 참조 하세요 (live services 솔루션을 사용 하려는 경우이 페이지의 **live services 사이트** 링크를 따름).
+
+등록하려면 다음을 수행합니다.
+1.  파트너 센터의 Windows 스토어 앱 페이지로 이동 하 고 개인 Microsoft 계정 (예: johndoe@outlook.com, janedoe@xboxlive.com)로 로그인 합니다.
+2.  로그인 했으면 대시보드 링크를 클릭 합니다.
+3.  대시보드에서 새 앱 만들기를 선택 합니다.
+
+![wns 앱 등록](../images/wns-create-new-app.png)
+
+4.  앱 이름을 예약 하 여 앱을 만듭니다. 앱에 고유한 이름을 제공 합니다. 이름을 입력 하 고 제품 이름 예약 단추를 클릭 합니다. 이름을 사용할 수 있는 경우 앱 용으로 예약 되어 있습니다. 앱 이름을 성공적으로 예약한 후에는 다른 세부 정보를 수정할 수 있게 됩니다.
+
+![wns 예약 제품 이름](../images/wns-reserve-poduct-name.png)
+ 
+### <a name="step-2-obtain-the-identity-values-and-credentials-for-your-app"></a>2 단계: 앱에 대 한 id 값 및 자격 증명 가져오기
+
+앱의 이름을 예약 하면 Windows 스토어에서 연결 된 자격 증명을 만들었습니다. 또한 응용 프로그램의 매니페스트 파일 (appxmanifest.xml)에 있어야 하는 연결 된 id 값 (이름 및 게시자)을 할당 했습니다. Windows 스토어에 앱을 이미 업로드 한 경우 이러한 값이 매니페스트에 자동으로 추가 됩니다. 앱을 업로드 하지 않은 경우에는 매니페스트에 id 값을 수동으로 추가 해야 합니다.
+
+1.  제품 관리 드롭다운 화살표를 선택 합니다.
+
+![wns 제품 관리](../images/wns-product-management.png)
+
+2.  제품 관리 드롭다운에서 WNS/MPNS 링크를 선택 합니다.
+
+![wns 제품 관리 continuted](../images/wns-product-management2.png)
+ 
+3.  WNS/MPNS 페이지에서 Windows 푸시 Notification Services (WNS) 및 Microsoft Azure Mobile Services 섹션 아래에 있는 라이브 서비스 사이트 링크를 클릭 합니다.
+
+![wns 라이브 서비스](../images/wns-live-services-page.png)
+ 
+4.  응용 프로그램 등록 포털 (이전에는 Live Services 페이지) 페이지에서 앱의 매니페스트에 포함할 identity 요소를 제공 합니다. 여기에는 앱 암호, 패키지 보안 식별자 및 응용 프로그램 Id가 포함 됩니다. 텍스트 편집기에서 매니페스트를 열고 페이지가 지시 하는 대로 해당 요소를 추가 합니다.   
+
+> [!NOTE]
+> AAD 계정으로 로그인 하는 경우 앱을 등록 한 Microsoft 계정 소유자에 게 문의 하 여 연결 된 앱 암호를 가져와야 합니다. 이 연락처를 찾는 데 도움이 필요 하면 화면의 오른쪽 위에 있는 기어를 클릭 한 다음 개발자 설정을 클릭 하면 해당 Microsoft 계정으로 앱을 만든 메일 주소가 표시 됩니다.
+ 
+5.  클라우드 서버에 SID 및 클라이언트 암호를 업로드 합니다.
+
+> [!Important]
+> 클라우드 서비스에서 SID 및 클라이언트 암호를 안전 하 게 저장 하 고 액세스 해야 합니다. 이 정보를 공개 하거나 도용 하면 공격자가 권한 또는 정보 없이 사용자에 게 알림을 보낼 수 있습니다.
 
 ## <a name="requesting-a-notification-channel"></a>알림 채널 요청
-
 
 푸시 알림을 받을 수 있는 앱이 실행되면 먼저 [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager#Windows_Networking_PushNotifications_PushNotificationChannelManager_CreatePushNotificationChannelForApplicationAsync_System_String_)를 통해 알림 채널을 요청해야 합니다. 전체 설명 및 코드 예는 [알림 채널을 요청, 생성 및 저장하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))을 참조하세요. 이 API는 호출 응용 프로그램 및 해당 타일과 고유하게 연결되어 모든 알림 형식이 이를 통해 전송될 수 있는 채널 URI를 반환합니다.
 
@@ -58,7 +93,6 @@ WNS를 사용하여 알림을 보내려면 먼저 스토어 대시보드에 앱�
 
 ## <a name="authenticating-your-cloud-service"></a>클라우드 서비스 인증
 
-
 알림을 보내려면 WNS를 통해 클라우드 서비스를 인증해야 합니다. 이 프로세스의 첫 번째 단계는 Microsoft Store 대시보드를 사용하여 앱을 등록하는 것입니다. 등록 프로세스 중 패키지 SID(보안 식별자) 및 비밀 키를 앱에 제공합니다. 이 정보는 클라우드 서비스가 WNS로 인증하는 데 사용됩니다.
 
 WNS 인증 체계는 [OAuth 2.0](https://tools.ietf.org/html/draft-ietf-oauth-v2-23) 프로토콜의 클라이언트 자격 증명 프로필을 사용하여 구현됩니다. 클라우드 서비스는 WNS를 통해 자격 증명(패키지 SID 및 비밀 키)을 제공하여 인증합니다. 그러면 액세스 토큰을 받습니다. 이러한 액세스 토큰을 통해 클라우드 서비스는 알림을 보낼 수 있습니다. WNS로 보내는 모든 알림 요청에는 이 토큰이 필요합니다.
@@ -70,11 +104,10 @@ WNS 인증 체계는 [OAuth 2.0](https://tools.ietf.org/html/draft-ietf-oauth-v2
 
 ![클라우드 서비스 인증에 대한 WNS 다이어그램](images/wns-diagram-02.jpg)
 
-WNS를 통한 인증에서는 클라우드 서비스가 SSL(Secure Sockets Layer)을 통해 HTTP 요청을 제출합니다. 매개 변수는 "application/x-www-for-urlencoded" 형식으로 제공됩니다. "클라이언트\_id" 필드에 패키지 SID를 제공 하 고 "클라이언트\_비밀" 필드에 비밀 키를 제공 합니다. 구문 정보는 [액세스 토큰 요청](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) 참조를 확인하세요.
+WNS를 통한 인증에서는 클라우드 서비스가 SSL(Secure Sockets Layer)을 통해 HTTP 요청을 제출합니다. 매개 변수는 "application/x-www-for-urlencoded" 형식으로 제공됩니다. 다음 예제와 같이 "클라이언트\_id" 필드에 패키지 SID를 제공 하 고 "클라이언트\_비밀" 필드에 비밀 키를 제공 합니다. 구문 정보는 [액세스 토큰 요청](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10)) 참조를 확인하세요.
 
-이는 사용자의 코드에서 성공적으로 사용할 수 있는 잘라내기 및 붙여넣기 코드가 아닌 예제 일 뿐입니다 **.  **
-
- 
+> [!NOTE]
+> 이는 사용자의 코드에서 성공적으로 사용할 수 있는 잘라내기 및 붙여넣기 코드가 아닌 예제 일 뿐입니다. 
 
 ``` http
  POST /accesstoken.srf HTTP/1.1
@@ -169,7 +202,8 @@ WNS는 클라우드 서비스를 인증하고 인증에 성공하면 "200 OK" �
 
 앱에서 푸시 알림을 상당한 많이 받는 경우 사용자에게 배터리 절약 모드가 켜져 있는 동안 알림을 받을 수 없음을 알려 **배터리 절약 모드 설정**을 쉽게 조정할 수 있게 합니다. Windows 10의 배터리 보호기 설정 URI 체계를 사용 하 여 `ms-settings:batterysaver-settings`설정 앱에 대 한 편리한 링크를 제공할 수 있습니다.
 
-**팁**   배터리 절약 설정을 사용자에 게 알릴 때 나중에 메시지를 표시 하지 않도록 하는 방법을 제공 하는 것이 좋습니다. 예를 들어, 다음 예제의 `dontAskMeAgainBox` 확인란에는 사용자가 [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings)에 지정한 기본 설정을 유지합니다.
+> [!TIP]
+> 사용자에 게 배터리 절약 시간 설정을 알리는 경우 나중에 메시지를 표시 하지 않도록 하는 방법을 제공 하는 것이 좋습니다. 예를 들어, 다음 예제의 `dontAskMeAgainBox` 확인란에는 사용자가 [**LocalSettings**](https://docs.microsoft.com/uwp/api/Windows.Storage.ApplicationData.LocalSettings)에 지정한 기본 설정을 유지합니다.
 
  
 

@@ -5,12 +5,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 확장하기, 구성 요소화, 앱 서비스, 패키지, 확장
 ms.localizationpriority: medium
-ms.openlocfilehash: d9a98ef8e0ec53668277face05d83c08f6421cb7
-ms.sourcegitcommit: c7e10793cbef55ace959ac8fc6ddd08e683602bd
+ms.openlocfilehash: a2d12fbf1c45c05c2e9917c77c0d15f15bccaf72
+ms.sourcegitcommit: 756217c559155e172087dee4d762d328c6529db6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73329515"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78935342"
 ---
 # <a name="extend-your-app-with-services-extensions-and-packages"></a>서비스, 확장 및 패키지로 앱 확장
 
@@ -78,7 +78,7 @@ Microsoft Store에서 앱을 취득하고 실행하기 시작하는 데 걸리�
 선택적 패키지는 앱 패키지의 원래 기능을 보충하거나 확장하는 데 사용됩니다. 앱을 먼저 게시하고 나중에 선택적 패키지를 게시하거나 앱과 선택적 패키지를 동시에 둘 다 게시할 수 있습니다. 선택적 패키지를 통해 앱을 확장하여 콘텐츠를 별도의 앱 패키지로 배포하고 수익화할 수 있는 이점이 있습니다. 선택적 패키지는 앱 확장과 달리 메인 앱의 ID로 실행되므로 대개 원래 앱 개발자가 개발합니다. 선택적 패키지를 어떻게 정의하느냐에 따라 선택적 패키지에서 메인 앱으로 코드나 자산 또는 코드와 자산을 로드할 수 있습니다. 개별적으로 수익 화할, 사용이 허가 되 고 배포 될 수 있는 콘텐츠를 사용 하 여 앱을 개선 해야 하는 경우 선택적 패키지가 적합 한 선택이 될 수 있습니다. 구현 세부 사항은 [Optional packages and related set authoring(선택적 패키지 및 관련 집합 제작)](/windows/msix/package/optional-packages)을 참조하세요.
 
 **플랫 번들**
-[플랫 번들 앱 패키지](/windows/msix/package/flat-bundles.md)는 일반 앱 번들과 비슷하지만 폴더 내에 모든 앱 패키지를 포함하는 대신 해당 앱 패키지에 대한 *참조*만 포함합니다. 파일 자체 대신 앱 패키지에 대한 참조를 포함하여 플랫 번들은 앱을 패키지하고 다운로드하는 데 걸리는 시간을 줄입니다.
+[플랫 번들 앱 패키지](/windows/msix/package/flat-bundles)는 일반 앱 번들과 비슷하지만 폴더 내에 모든 앱 패키지를 포함하는 대신 해당 앱 패키지에 대한 *참조*만 포함합니다. 파일 자체 대신 앱 패키지에 대한 참조를 포함하여 플랫 번들은 앱을 패키지하고 다운로드하는 데 걸리는 시간을 줄입니다.
 
 **앱 확장**
 
@@ -92,13 +92,13 @@ Microsoft Store에서 앱을 취득하고 실행하기 시작하는 데 걸리�
 
 Windows 앱 서비스는 UWP 앱이 다른 유니버설 Windows 앱에 서비스를 제공할 수 있도록 하 여 앱 간 통신을 가능 하 게 합니다. Windows 10, 버전 1607부터 앱 서비스를 통해 앱이 동일한 장치에서 호출할 수 있는 UI 없는 서비스를 원격 장치에 만들 수 있습니다. 자세한 내용은 [앱 서비스 만들기 및 사용](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)을 참조하세요.
 
-앱 서비스는 다른 UWP 앱에 서비스를 제공하는 UWP 앱입니다. 장치에서 웹 서비스와 유사 합니다. 앱 서비스는 호스트 앱에서 배경 작업으로 실행되고 다른 앱에 서비스를 제공할 수 있습니다. 예를 들어, 앱 서비스는 다른 앱에서 사용할 수 있는 바코드 스캐너 서비스를 제공할 수 있습니다. 또는 앱의 Enterprise Suite에 해당 제품군의 다른 앱에서 사용할 수 있는 일반 맞춤법 검사 앱 서비스가 있습니다.
+앱 서비스는 다른 UWP 앱에 서비스를 제공하는 UWP 앱입니다. 장치에서 웹 서비스와 유사 합니다. 앱 서비스는 호스트 앱에서 배경 작업으로 실행되며 다른 앱에 서비스를 제공할 수 있습니다. 예를 들어, 앱 서비스는 다른 앱에서 사용할 수 있는 바코드 스캐너 서비스를 제공할 수 있습니다. 또는 앱의 Enterprise Suite에 해당 제품군의 다른 앱에서 사용할 수 있는 일반 맞춤법 검사 앱 서비스가 있습니다.
 
 **UWP 앱 스트리밍 설치**
 
 스트리밍 설치는 앱이 사용자에게 배달되는 방식을 최적화하는 방법입니다. 전체 앱이 다운로드되기를 기다렸다가 사용하는 대신 필요한 부분이 다운로드되면 바로 앱을 실행할 수 있습니다. 기본 활성화 및 실행에 필요한 섹션과 앱의 나머지 부분을 위한 추가 콘텐츠로 앱을 나누는 것은 개발자에게 달려 있습니다. 자세한 내용과 구현 사항은 [UWP App Streaming Install(UWP 앱 스트리밍 설치)](/windows/msix/package/streaming-install)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목
 
 [앱 서비스 만들기 및 사용](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)  
 [자산 패키지 소개](/windows/msix/package/asset-packages)  
