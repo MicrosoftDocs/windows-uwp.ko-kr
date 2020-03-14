@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 추가 기능, iap, 가격
 ms.localizationpriority: medium
-ms.openlocfilehash: c6384b5890466ff13c72a1b90eb9b27194d51fff
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
-ms.translationtype: HT
+ms.openlocfilehash: 803164c395602313bcb84331e30376efd6832731
+ms.sourcegitcommit: 912146681b1befc43e6db6e06d1e3317e5987592
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210999"
+ms.locfileid: "79295726"
 ---
 # <a name="set-add-on-pricing-and-availability"></a>추가 기능 가격 책정 및 가용성 설정
 
@@ -37,7 +37,7 @@ ms.locfileid: "79210999"
 -   **취득 중지: 직접 링크가 있는 고객은 제품의 Store 목록을 확인할 수 있지만, 이전에 제품을 소유했거나 홍보 코드를 가지고 있거나 Windows 10 장치를 사용 중인 경우에는 다운로드만 가능합니다. 이 추가 기능은 상위 제품의 목록에 표시되지 않습니다.** : 이 옵션을 선택하면 앱 목록에 추가 기능이 표시되지 않고 신규 고객이 추가 기능을 구입할 수 없습니다. 그러나 **이 옵션은 Windows 8.1 또는 이전 버전의 고객에 대해서는 지원 되지 않습니다**. 이전에 게시 된 앱을 Windows 8.1 또는 이전 버전에서 사용할 수 있는 경우 해당 고객에 게 추가 기능을 계속 구매할 수 있습니다. Windows 8.1 또는 이전 버전에서 고객에 게 추가 기능을 제공 하는 것을 중지 하려면 추가 기능을 제공 하는 코드를 제거 하 고 앱에 대 한 새 제출을 게시 하도록 앱을 업데이트 해야 합니다. 앱이 Windows 8.1 또는 이전 버전을 대상으로 하지 않는 경우에도이 방법이 권장 됩니다. 사용자가 사용할 수 없도록 설정 된 추가 기능을 제공 하지 않으면 고객에 게 더 나은 환경을 제공 합니다.
     
  > [!NOTE] 
- > **취득 중지** 옵션을 선택하거나 앱 코드에서 추가 기능을 제거하는 앱 업데이트를 제출해도 운영 체제와 관계없이 이미 추가 기능을 구매한 고객에게는 영향을 주지 않습니다.
+ > 응용 프로그램에서 추가 기능을 제거 하는 **취득 중지** 옵션 및/또는 앱 업데이트 제출을 선택 하면 고객이 이미 구매한 경우 추가 기능을 사용 하는 것을 방지할 수 없습니다. 기존 구독은 갱신 되지 않으므로 현재 기간이 끝난 후에 취소 됩니다.
 
 
 ## <a name="schedule"></a>일정
