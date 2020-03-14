@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 앱 내 구매, IAP, 추가 기능, 평가판, 소모성, 지속형, 구독
 ms.localizationpriority: medium
 ms.openlocfilehash: 5396a8a6f02271647eb16d469853241b5717bd6e
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78852419"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209779"
 ---
 # <a name="in-app-purchases-and-trials"></a>앱에서 바로 구매 및 평가판
 
@@ -229,9 +229,9 @@ UWP 앱은 다음 유형의 추가 기능을 제공할 수 있습니다.
 
 | 개체 |  설명  |
 |---------|-------------------|
-| 제품  |  *제품*은 앱이나 추가 기능을 포함, 스토어에서 사용할 수 있는 모든 유형의 제품을 나타냅니다. <p/><p/> 스토어의 각 제품에는 해당되는 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) 개체가 있습니다. 이 클래스는 제품의 스토어 ID, 스토어 목록에 사용할 이미지 및 비디오, 가격 정보 등의 데이터에 액세스하는 데 사용할 수 있는 속성을 제공합니다. 또한 제품을 구매하는 데 사용할 수 있는 메서드를 제공합니다. |
+| Product  |  *제품*은 앱이나 추가 기능을 포함, 스토어에서 사용할 수 있는 모든 유형의 제품을 나타냅니다. <p/><p/> 스토어의 각 제품에는 해당되는 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct) 개체가 있습니다. 이 클래스는 제품의 스토어 ID, 스토어 목록에 사용할 이미지 및 비디오, 가격 정보 등의 데이터에 액세스하는 데 사용할 수 있는 속성을 제공합니다. 또한 제품을 구매하는 데 사용할 수 있는 메서드를 제공합니다. |
 | SKU |  *SKU*는 자체 설명, 가격 및 기타 고유한 제품 정보가 있는 특정 버전의 제품입니다. 앱이나 추가 기능마다 기본 SKU가 있습니다. 대부분의 개발자가 앱용 SKU를 여러 개 사용할 때는 전체 버전의 앱과 평가판을 게시하는 경우뿐입니다(스토어 카탈로그에서 이러한 각 버전은 동일한 앱의 다른 SKU임). <p/><p/> 일부 판매자는 해당 SKU를 정의할 수 있습니다. 예를 들어 대규모 게임 판매자가 빨간색 피를 허용하지 않는 지역/국가에서 녹색 피를 표시하는 SKU와 다른 모든 지역/국가에서 빨간색 피를 표시하는 SKU로 게임을 출시할 수 있습니다. 또는 디지털 비디오 콘텐츠의 판매자가 HD 버전용 SKU와 표준 화질 버전용 SKU의 두 SKU를 게시할 수 있습니다. <p/><p/> 스토어의 각 SKU에는 해당되는 [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku) 개체가 있습니다. 각 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct)에는 제품 SKU에 엑세스하기 위해 사용할 수 있는 [Skus](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct.skus) 속성이 있습니다. |
-| 사용 가능한 시기  |  *가용성*은 특정 버전의 SKU와 고유 가격 정보입니다. SKU마다 기본 가용성이 있습니다. 일부 판매자는 고유한 가용성을 정의하여 주어진 SKU에 대해 다른 가격 옵션을 도입할 수 있습니다. <p/><p/> 스토어의 각 가용성에는 해당되는 [StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability) 개체가 있습니다. 모든 [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku)에는 SKU 가용성 액세스에 사용할 수 있는 [가용성](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.availabilities) 속성이 있습니다. 대부분의 개발자의 경우 SKU마다 하나의 기본 가용성이 있습니다.  |
+| 가용성  |  *가용성*은 특정 버전의 SKU와 고유 가격 정보입니다. SKU마다 기본 가용성이 있습니다. 일부 판매자는 고유한 가용성을 정의하여 주어진 SKU에 대해 다른 가격 옵션을 도입할 수 있습니다. <p/><p/> 스토어의 각 가용성에는 해당되는 [StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability) 개체가 있습니다. 모든 [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku)에는 SKU 가용성 액세스에 사용할 수 있는 [가용성](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.availabilities) 속성이 있습니다. 대부분의 개발자의 경우 SKU마다 하나의 기본 가용성이 있습니다.  |
 
 <span id="store_ids" />
 
@@ -250,7 +250,7 @@ SKU와 가용성이 있는 제품의 경우, SKU와 가용성에 형식이 다�
 | 개체 |  스토어 ID 형식  |
 |---------|-------------------|
 | SKU |  SKU 스토어 ID는 ```<product Store ID>/xxxx```라는 형식을 사용합니다. 여기서 ```xxxx```는 제품의 SKU를 식별하는 4자리 영숫자 문자열입니다. 예를 들면 ```9NBLGGH4R315/000N```입니다. 이 ID는 [StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku.storeid) 개체의 [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storesku) 속성에서 반환하며 *SKU 스토어 ID*라고도 합니다. |
-| 사용 가능한 시기  |  가용성 스토어 ID는 ```<product Store ID>/xxxx/yyyyyyyyyyyy``` 형식을 사용합니다. 여기서 ```xxxx```는 제품의 SKU를 식별하는 4자리 영숫자 문자열이고, ```yyyyyyyyyyyy```는 SKU의 가용성을 식별하는 12자리 영숫자 문자열입니다. 예를 들면 ```9NBLGGH4R315/000N/4KW6QZD2VN6X```입니다. 이 ID는 [StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability.storeid) 개체의 [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability) 속성에서 반환하며  *스토어 ID*라고도 합니다.  |
+| 가용성  |  가용성 스토어 ID는 ```<product Store ID>/xxxx/yyyyyyyyyyyy``` 형식을 사용합니다. 여기서 ```xxxx```는 제품의 SKU를 식별하는 4자리 영숫자 문자열이고, ```yyyyyyyyyyyy```는 SKU의 가용성을 식별하는 12자리 영숫자 문자열입니다. 예를 들면 ```9NBLGGH4R315/000N/4KW6QZD2VN6X```입니다. 이 ID는 [StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability.storeid) 개체의 [StoreId](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability) 속성에서 반환하며  *스토어 ID*라고도 합니다.  |
 
 <span id="product-ids" />
 

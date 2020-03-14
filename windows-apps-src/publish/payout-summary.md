@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 지급액 요약, 내역서, 결제, 수익, 지급액, 결제, 수익
 ms.localizationpriority: medium
 ms.openlocfilehash: f4d8727a48cd68b304d515fe34082b4c4f632b4b
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853460"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210529"
 ---
 # <a name="payout-reports"></a>지급 보고서
 
@@ -64,13 +64,13 @@ Azure Marketplace에서 제품을 판매할 경우 **지급 요약**에 성공�
 
 ## <a name="payment-status"></a>지급 상태
 
-| 상태 획득           | 이유                                                                                                                                      | 파트너 작업이 필요 한가요?                                   |
+| 상태 획득           | Reason                                                                                                                                      | 파트너 작업이 필요 한가요?                                   |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
 | 일별              | 이러한 획득은 지불에 적합 합니다. 이 상태는 동기 프로그램의 프로그램 가이드에 정의 된 대로 냉각 기간 동안 유지 됩니다. | 아니요                                                         |
 | 그                 | 지불을 처리 하기 전에 지불 주문에서 내부 검토를 생성 했습니다.                                                               | 아니요                                                         |
 | 보류 중인 세금 청구서      | 세금 송장이 불완전 하거나 잘못 되었습니다.                                                                                                  | 지불 하려면 세금 청구서를 업데이트 해야 합니다. |
 | 검토 중 거부 됨   | 검토 하는 동안 결제를 거부 했습니다.                                                                                                     | 자세한 내용은 [Microsoft 지원](https://developer.microsoft.com/windows/support) 에 문의 하세요.                      |
-| Failed                   | Microsoft 시스템 오류로 인해 지불 하지 못했습니다.                                                                                         | 자세한 내용은 [Microsoft 지원](https://developer.microsoft.com/windows/support) 에 문의 하세요.                      |
+| 실패                   | Microsoft 시스템 오류로 인해 지불 하지 못했습니다.                                                                                         | 자세한 내용은 [Microsoft 지원](https://developer.microsoft.com/windows/support) 에 문의 하세요.                      |
 | 진행 중              | 지불이 진행 중입니다.                                                                                                                 | 아니요                                                         |
 | 잘못 된 결제        | 지불 recouping 진행 중입니다.                                                                                                       | 아니요                                                         |
 | 전송됨                     | 요금을 은행으로 보냈습니다.                                                                                                     | 아니요                                                         |

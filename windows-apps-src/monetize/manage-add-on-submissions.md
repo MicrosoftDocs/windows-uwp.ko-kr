@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출, 앱에서 바로 구매 제품, IAP
 ms.localizationpriority: medium
 ms.openlocfilehash: c8204382a4e341083ce825a9424181cdd75771e1
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260234"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209649"
 ---
 # <a name="manage-add-on-submissions"></a>추가 기능 제출 관리
 
@@ -51,7 +51,7 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
 <td align="left"><a href="get-status-for-an-add-on-submission.md">기존 추가 기능 제출의 상태 가져오기</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">올리기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions</td>
 <td align="left"><a href="create-an-add-on-submission.md">새 추가 기능 제출 만들기</a></td>
 </tr>
@@ -61,7 +61,7 @@ Microsoft Store 제출 API에서 제공하는 여러 메서드를 사용하여 �
 <td align="left"><a href="update-an-add-on-submission.md">기존 추가 기능 제출 업데이트</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">올리기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}/commit</td>
 <td align="left"><a href="commit-an-add-on-submission.md">신규 또는 업데이트 된 추가 기능 제출을 커밋합니다.</a></td>
 </tr>
@@ -232,15 +232,15 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 |------------|--------|----------------------|
 | id            | string  | 제출의 ID입니다. 이 ID는 [추가 기능 제출 만들기](create-an-add-on-submission.md), [모든 추가 기능 가져오기](get-all-add-ons.md) 및 [추가 기능 가져오기](get-an-add-on.md) 요청에 대한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 만든 제출의 경우이 ID는 파트너 센터의 제출 페이지에 대 한 URL 에서도 사용할 수 있습니다.  |
 | contentType           | string  |  추가 기능에 제공된 [콘텐츠의 유형](../publish/enter-add-on-properties.md#content-type)입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NotSet</li><li>BookDownload</li><li>EMagazine</li><li>ENewspaper</li><li>MusicDownload</li><li>MusicStream</li><li>OnlineDataStorage</li><li>VideoDownload</li><li>VideoStream</li><li>Asp</li><li>OnlineDownload</li></ul> |  
-| 키워드           | 배열  | 추가 기능에 대한 [키워드](../publish/enter-add-on-properties.md#keywords)를 최대 10개까지 포함하는 문자열의 배열입니다. 앱에서 이러한 키워드를 사용하여 추가 기능을 쿼리할 수 있습니다.   |
+| 키워드           | array  | 추가 기능에 대한 [키워드](../publish/enter-add-on-properties.md#keywords)를 최대 10개까지 포함하는 문자열의 배열입니다. 앱에서 이러한 키워드를 사용하여 추가 기능을 쿼리할 수 있습니다.   |
 | lifetime           | string  |  추가 기능의 수명입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Forever</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
-| listings           | object  |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 추가 기능에 대한 목록 정보를 포함하는 [목록 리소스](#listing-object)입니다.  |
+| 목록           | object  |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 추가 기능에 대한 목록 정보를 포함하는 [목록 리소스](#listing-object)입니다.  |
 | pricing           | object  | 추가 기능에 대한 가격 정보를 포함하는 [가격 리소스](#pricing-object)입니다.   |
 | targetPublishMode           | string  | 제출의 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>수동</li><li>SpecificDate</li></ul> |
 | targetPublishDate           | string  | *targetPublishMode*가 SpecificDate로 설정된 경우 제출의 게시 날짜(ISO 8601 형식)입니다.  |
-| 태그           | string  |  추가 기능에 대한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data)(이 정보를 이전에는 *태그*라고 지칭함)입니다.   |
-| visibility  | string  |  추가 기능의 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Hidden</li><li>Public</li><li>개인 정보 보호</li><li>NotSet</li></ul>  |
-| 상태  | string  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>Publishing</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>릴리스</li><li>ReleaseFailed</li></ul>   |
+| tag           | string  |  추가 기능에 대한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data)(이 정보를 이전에는 *태그*라고 지칭함)입니다.   |
+| 표시 유형  | string  |  추가 기능의 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>Hidden</li><li>Public</li><li>프라이빗</li><li>NotSet</li></ul>  |
+| 상태  | string  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>Canceled</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>게시</li><li>Published</li><li>PublishFailed</li><li>PreProcessing</li><li>PreProcessingFailed</li><li>Certification</li><li>CertificationFailed</li><li>릴리스</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | object  |  오류에 대한 정보를 비롯하여 제출 상태에 대한 추가 세부 정보가 포함된 [상태 세부 정보 리소스](#status-details-object)입니다. |
 | fileUploadUrl           | string  | 제출에 대한 패키지를 업로드하기 위한 SAS(공유 액세스 서명) URI입니다. 제출에 대한 새 패키지를 추가하는 경우 패키지가 포함된 ZIP 보관 파일을 이 URI에 업로드합니다. 자세한 내용은 [추가 기능 제출 만들기](#create-an-add-on-submission)를 참조하세요.  |
 | FriendlyName  | string  |  파트너 센터에 표시 된 것 처럼 전송의 이름입니다. 이 값은 제출을 만들 때 생성됩니다.  |
@@ -253,8 +253,8 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값           | 형식    | 설명       |
 |-----------------|---------|------|
-|  설명               |    string     |   추가 기능 목록에 대한 설명입니다.   |     
-|  icon               |   object      |추가 기능 목록의 아이콘에 대한 데이터를 포함하는 [아이콘 리소스](#icon-object)입니다.    |
+|  description               |    string     |   추가 기능 목록에 대한 설명입니다.   |     
+|  아이콘               |   object      |추가 기능 목록의 아이콘에 대한 데이터를 포함하는 [아이콘 리소스](#icon-object)입니다.    |
 |  title               |     string    |   추가 기능 목록의 제목입니다.   |  
 
 <span id="icon-object" />
@@ -277,7 +277,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | 값           | 형식    | 설명    |
 |-----------------|---------|------|
 |  marketSpecificPricings               |    object     |  키와 값 쌍의 사전입니다. 여기서 각 키는 두 자로 된 ISO 3166-1 alpha-2 국가 코드이며 각 값은 [기준 가격](#price-tiers)입니다. 이러한 항목은 [특정 지역/국가에서 추가 기능에 대한 사용자 지정 가격](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability)을 나타냅니다. 이 사전의 항목은 지정된 지역/국가의 *priceId* 값으로 지정된 기본 가격을 재정의합니다.     |     
-|  sales               |   배열      |  **사용되지 않음**. 추가 기능에 대한 판매 정보를 포함하는 [판매 리소스](#sale-object) 배열입니다.     |     
+|  sales               |   array      |  **사용되지 않음**. 추가 기능에 대한 판매 정보를 포함하는 [판매 리소스](#sale-object) 배열입니다.     |     
 |  priceId               |   string      |  추가 기능에 대한 [기본 가격](#price-tiers)을 지정하는 [기준 가격](https://docs.microsoft.com/windows/uwp/publish/set-iap-pricing-and-availability)입니다.    |    
 |  isAdvancedPricingModel               |   boolean      |  **true**인 경우, 개발자 계정은 .99 USD에서 1999.99 USD까지의 확장된 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. **false**인 경우, 개발자 계정은 .99 USD에서 999.99 USD까지의 원래 기준 가격 집합에 액세스할 수 있는 권한이 있습니다. 여러 계층에 대한 자세한 내용은 [기준 가격](#price-tiers)을 참조하세요.<br/><br/>**참고**&nbsp;&nbsp;이 필드는 읽기 전용입니다.   |
 
@@ -312,7 +312,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | 값           | 형식    | 설명       |
 |-----------------|---------|------|
 |  errors               |    object     |   제출에 대한 오류 세부 정보가 포함된 [상태 세부 정보 리소스](#status-detail-object)의 배열입니다.   |     
-|  warnings               |   object      | 제출에 대한 경고 세부 정보가 포함된 [상태 세부 정보 리소스](#status-detail-object)의 배열입니다.     |
+|  경고               |   object      | 제출에 대한 경고 세부 정보가 포함된 [상태 세부 정보 리소스](#status-detail-object)의 배열입니다.     |
 |  certificationReports               |     object    |   제출에 대한 인증 보고서 데이터에 대한 액세스를 제공하는 [인증 보고서 리소스](#certification-report-object)의 배열입니다. 인증에 실패할 경우 이러한 보고서에서 자세한 내용을 확인할 수 있습니다.    |  
 
 <span id="status-detail-object" />
@@ -324,7 +324,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 | 값           | 형식    | 설명    |
 |-----------------|---------|------|
 |  code               |    string     |   오류 또는 경고의 유형을 설명하는 [제출 상태 코드](#submission-status-code)입니다.   |     
-|  details 정보               |     string    |  문제에 대한 자세한 정보가 있는 메시지입니다.     |
+|  자세히               |     string    |  문제에 대한 자세한 정보가 있는 메시지입니다.     |
 
 <span id="certification-report-object" />
 
@@ -349,7 +349,7 @@ Microsoft Store 제출 API를 직접 호출하는 대신 이 API 위에 명령�
 
 | 값           | 설명       |
 |-----------------|------|
-|  기본               |   기준 가격이 설정되지 않았습니다. 추가 기능에 대한 기본 가격을 사용합니다.      |     
+|  Base               |   기준 가격이 설정되지 않았습니다. 추가 기능에 대한 기본 가격을 사용합니다.      |     
 |  NotAvailable              |   지정된 영역에 추가 기능을 사용할 수 없습니다.    |     
 |  무료              |   추가 기능은 무료입니다.    |    
 |  계층*xxxx*               |   추가 기능에 대한 기준 가격을 **계층<em>xxxx</em>** 형식으로 지정하는 문자열입니다. 현재 다음 범위의 기준 가격이 지원됩니다.<br/><br/><ul><li>*가격 리소스*의 [isAdvancedPricingModel](#pricing-object) 값이 **true**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier1012** - **Tier1424**입니다.</li><li>*가격 리소스*의 [isAdvancedPricingModel](#pricing-object) 값이 **false**인 경우, 사용자 계정에 대해 사용 가능한 기준 가격 값은 **Tier2** - **Tier96**입니다.</li></ul>각 계층과 관련 된 시장 관련 가격을 비롯 하 여 개발자 계정에 사용할 수 있는 가격 책정 계층의 전체 표를 보려면 파트너 센터에서 앱 서브 미션에 대 한 **가격 책정 및 가용성** 페이지로 이동 하 고 **시장 및 사용자 지정 가격** 섹션에서 **테이블 보기** 링크를 클릭 합니다 (일부 개발자 계정의 경우이 링크는 **가격 책정** 섹션에 있음).     |

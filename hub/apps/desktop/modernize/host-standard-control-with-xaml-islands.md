@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: d6e8704d61589731f09de7c16b0eae987d593968
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.openlocfilehash: 4bc474c3414969f27468a8daf262df0ae6e3b57e
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853020"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209789"
 ---
 # <a name="host-a-standard-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML 아일랜드를 사용 하 여 WPF 앱에서 표준 UWP 컨트롤 호스팅
 
@@ -31,12 +31,10 @@ WPF (또는 Windows Forms) 앱에서 UWP 컨트롤을 호스팅하려면 솔루�
 
 * **앱에 대 한 프로젝트 및 소스 코드**입니다. [Windowsxamlhost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용 하 여 표준 자사 UWP 컨트롤을 호스트 하는 것은 .NET FRAMEWORK 또는 .net Core 3을 대상으로 하는 앱에서 지원 됩니다.
 
-* **Xamlapplication에서 파생 되는 루트 응용 프로그램 클래스를 정의 하는 UWP 앱 프로젝트**입니다. WPF 또는 Windows Forms 프로젝트에는 Windows 커뮤니티 도구 키트에서 제공 하는 [Microsoft Toolkit. Xamlhost](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스의 인스턴스에 대 한 액세스 권한이 있어야 합니다. 이 개체는 응용 프로그램의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 형식에 대 한 메타 데이터를 로드 하기 위한 루트 메타 데이터 공급자로 작동 합니다.
-
-    이렇게 하려면 **빈 앱 (유니버설 Windows)** 프로젝트를 WPF 또는 Windows Forms 프로젝트와 동일한 솔루션에 추가 하 고,이 프로젝트에서 기본 `App` 클래스를 수정 하 여 `XamlApplication`에서 파생 시킨 다음, 앱에 대 한 진입점 코드에서이 개체의 인스턴스를 만듭니다.
+* **Xamlapplication에서 파생 되는 루트 응용 프로그램 클래스를 정의 하는 UWP 앱 프로젝트**입니다. WPF 또는 Windows Forms 프로젝트에는 Windows 커뮤니티 도구 키트에서 제공 하는 [Microsoft Toolkit. Xamlhost](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스의 인스턴스에 대 한 액세스 권한이 있어야 합니다. 이 작업을 수행 하는 권장 방법은 WPF 또는 Windows Forms 앱에 대 한 솔루션의 일부인 별도의 UWP 앱 프로젝트에서이 개체를 정의 하는 것입니다. 이 개체는 응용 프로그램의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 형식에 대 한 메타 데이터를 로드 하기 위한 루트 메타 데이터 공급자로 작동 합니다.
 
     > [!NOTE]
-    > 이 구성 요소는 자사 UWP 컨트롤을 호스트 하는 것과 같은 trivial XAML 고립 시나리오에 필요 하지 않지만 사용자 지정 UWP 컨트롤 호스팅을 포함 하 여 모든 범위의 XAML 아일랜드 시나리오를 지원 하려면 앱에이 `XamlApplication` 개체가 필요 합니다. 따라서 XAML 아일랜드를 사용 하는 모든 솔루션에 `XamlApplication` 개체를 항상 정의 하는 것이 좋습니다.
+    > `XamlApplication` 개체가 자사 UWP 컨트롤을 호스트 하는 데 필요 하지는 않지만 사용자 지정 UWP 컨트롤 호스팅을 포함 하 여 모든 범위의 XAML 아일랜드 시나리오를 지원 하려면 앱에이 개체가 필요 합니다. 따라서 XAML 아일랜드를 사용 하는 모든 솔루션에 `XamlApplication` 개체를 항상 정의 하는 것이 좋습니다.
 
     > [!NOTE]
     > 솔루션은 `XamlApplication` 개체를 정의 하는 프로젝트를 하나만 포함할 수 있습니다. 앱의 모든 사용자 지정 UWP 컨트롤은 동일한 `XamlApplication` 개체를 공유 합니다. `XamlApplication` 개체를 정의 하는 프로젝트에는 XAML 아일랜드에서 UWP 컨트롤을 호스트 하는 데 사용 되는 다른 모든 UWP 라이브러리 및 프로젝트에 대 한 참조가 포함 되어야 합니다.
@@ -69,7 +67,10 @@ WPF (또는 Windows Forms) 앱에서 UWP 컨트롤을 호스팅하려면 솔루�
 
 ## <a name="define-a-xamlapplication-class-in-a-uwp-app-project"></a>UWP 앱 프로젝트에서 XamlApplication 클래스 정의
 
-다음으로, WPF 프로젝트와 동일한 솔루션에 UWP 앱 프로젝트를 추가 합니다. 이 프로젝트에서 기본 `App` 클래스를 수정 하 여 Windows 커뮤니티 도구 키트에서 제공 하는 [Microsoft Toolkit. Xamlhost](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생 됩니다. 이 클래스의 용도에 대 한 자세한 내용은 [이 섹션](#required-components)을 참조 하세요.
+그런 다음, UWP 앱 프로젝트를 솔루션에 추가 하 고이 프로젝트의 기본 `App` 클래스를 수정 하 여 Windows 커뮤니티 도구 키트에서 제공 하는 [Microsoft toolkit. Xamlhost](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생 시킵니다.
+
+> [!NOTE]
+> 이 단계는 자사 UWP 컨트롤을 호스트 하는 데 필요 하지 않지만 사용자 지정 UWP 컨트롤 호스팅을 포함 하 여 모든 범위의 XAML 아일랜드 시나리오를 지원 하기 위해 앱에 `XamlApplication` 개체가 필요 합니다. 따라서 XAML 아일랜드를 사용 하는 모든 솔루션에 `XamlApplication` 개체를 항상 정의 하는 것이 좋습니다.
 
 1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고 **추가** -> **새 프로젝트**를 선택 합니다.
 2. 솔루션에 **빈 앱(Universal Windows)** 프로젝트 추가 대상 버전 및 최소 버전이 모두 **Windows 10 버전 1903** 이상으로 설정 되어 있는지 확인 합니다.
@@ -107,7 +108,7 @@ WPF (또는 Windows Forms) 앱에서 UWP 컨트롤을 호스팅하려면 솔루�
 
 ## <a name="instantiate-the-xamlapplication-object-in-the-entry-point-of-your-wpf-app"></a>WPF 앱의 진입점에서 XamlApplication 개체를 인스턴스화합니다.
 
-다음으로, WPF 앱의 진입점에 코드를 추가 하 여 UWP 프로젝트에서 방금 정의한 `App` 클래스의 인스턴스를 만듭니다 (이제는 `XamlApplication`에서 파생 되는 클래스). 이 개체의 용도에 대 한 자세한 내용은 [이 섹션](#required-components)을 참조 하세요.
+다음으로, WPF 앱의 진입점에 코드를 추가 하 여 UWP 프로젝트에서 방금 정의한 `App` 클래스의 인스턴스를 만듭니다 (이제는 `XamlApplication`에서 파생 되는 클래스).
 
 1. WPF 프로젝트에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **추가** -> **새 항목**을 선택한 다음 **클래스**를 선택 합니다. 클래스 이름을 **프로그램** 으로 만들고 **추가**를 클릭 합니다.
 

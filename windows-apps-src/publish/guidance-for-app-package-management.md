@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f5caa2610e19234cfd83119d570f858c540b401
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75685130"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210199"
 ---
 # <a name="guidance-for-app-package-management"></a>앱 패키지 관리 지침
 
@@ -33,7 +33,7 @@ ms.locfileid: "75685130"
 > 2018 년 10 월 31 일까 지 새로 만든 제품은 Windows 8.x/Windows Phone 8.x이 하 버전을 대상으로 하는 패키지를 포함할 수 없습니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store)을 참조 하세요.
 
 
-## <a name="removing-an-app-from-the-store"></a>Store에서 앱 제거
+## <a name="removing-an-app-from-the-store"></a>스토어에서 앱 제거
 
 고객에 대한 앱 제공을 중지, 즉 "게시를 취소"해야 할 때가 있습니다. 이렇게 하려면 **앱 개요** 페이지에서 **앱을 사용할 수 없도록 설정**을 클릭합니다. 앱을 사용할 수 없도록 설정하면 몇 시간 내에 해당 앱이 Store에 더 이상 표시되지 않고 새 고객이 가져올 수 없게 됩니다([프로모션 코드](generate-promotional-codes.md)를 보유한 Windows 10 장치 사용 고객은 예외).
 

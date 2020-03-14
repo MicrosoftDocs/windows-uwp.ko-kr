@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 패드, 진동
 ms.localizationpriority: medium
 ms.openlocfilehash: e65b22039c381bd333516bd9f98c60bbddb9621c
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853065"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210599"
 ---
 # <a name="gamepad-and-vibration"></a>게임 패드 및 진동
 

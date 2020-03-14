@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, UWP, 게임, DirectX
 ms.localizationpriority: medium
 ms.openlocfilehash: af5d73e0a786e33aff6274cd63ee5ae6ac77c133
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853008"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210869"
 ---
 #  <a name="define-the-uwp-app-framework"></a>UWP 앱 프레임워크 정의
 

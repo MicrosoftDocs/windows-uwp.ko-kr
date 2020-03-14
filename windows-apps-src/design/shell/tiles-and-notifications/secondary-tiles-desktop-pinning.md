@@ -8,11 +8,11 @@ ms.topic: article
 keywords: windows 10, 데스크톱 브리지, 보조 타일, 고정, 고정하기, 빠른 시작, 코드 샘플, 예, 보조타일, 데스크톱 응용 프로그램, win32, winforms, wpf
 ms.localizationpriority: medium
 ms.openlocfilehash: cd6debb076aac4286c8cb9a33730ade4942b5030
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340406"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209919"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>데스크톱 응용 프로그램에서 보조 타일 고정
 
@@ -22,7 +22,7 @@ Win32, Windows Forms, WPF 등의 Windows 데스크톱 응용 프로그램은 [�
 ![보조 타일의 스크린샷](images/secondarytiles.png)
 
 > [!IMPORTANT]
-> **낙하 작성자 업데이트 필요**: 데스크톱 브리지 앱에서 보조 타일을 고정 하려면 SDK 16299를 대상으로 하 고 빌드 16299 이상을 실행 해야 합니다.
+> **Fall Creators Update 필요**: SDK 16299를 대상으로 삼고 빌드 16299 이상을 실행하여 데스크톱 브리지 앱에서 보조 타일을 고정해야 합니다.
 
 WPF 또는 WinForms 응용 프로그램에서 보조 타일을 추가하는 방법은 순수 UWP 앱과 매우 유사합니다. 유일한 차이점은 기본 창 핸들(HWND)을 지정해야 한다는 점입니다. 이러한 이유로 타일을 고정할 때 Windows는 타일을 고정할 것인지 사용자에게 확인을 요청하는 모달 대화 상자를 표시합니다. 데스크톱 응용 프로그램이 소유자 창을 통해 SecondaryTile 개체를 구성하지 않으면 Windows는 어디에 대화 상자를 그려야 할지 알 수 없고 따라서 작업이 실패합니다.
 
@@ -90,7 +90,7 @@ bool isPinned = await tile.RequestCreateAsync();
 ## <a name="send-tile-notifications"></a>타일 알림 보내기
 
 > [!IMPORTANT]
-> **4 월 2018 버전 17134.81 이상이 필요 합니다**. 데스크톱 브리지 앱에서 보조 타일에 타일 또는 배지 알림을 보내려면 빌드 17134.81 이상을 실행 해야 합니다. 이 .81 서비스 업데이트 전에 타일 또는 배지 알림을 데스크톱 브리지 앱의 보조 타일로 보낼 때 0x80070490 *요소를 찾을 수 없음* 예외가 발생했습니다.
+> **2018년 4월 버전 17134.81 이상 필요**: 타일 또는 배지 알림을 데스크톱 브리지 앱의 보조 타일로 보내려면 빌드 17134.81 이상을 실행해야 합니다. 이 .81 서비스 업데이트 전에 타일 또는 배지 알림을 데스크톱 브리지 앱의 보조 타일로 보낼 때 0x80070490 *요소를 찾을 수 없음* 예외가 발생했습니다.
 
 타일 또는 배지 알림 보내기는 UWP 앱과 동일합니다. 시작하려면 [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)를 참조하세요.
 

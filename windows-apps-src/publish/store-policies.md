@@ -7,18 +7,18 @@ keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
 ms.openlocfilehash: a68247637395c3f68bf1140479bc94cb8e0fcc33
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
-ms.translationtype: MT
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853448"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209358"
 ---
 # <a name="microsoft-store-policies"></a>Microsoft Store 정책
 
 
 **문서 버전: 7.12**
 
-**문서 날짜: 2019 년 10 월 1 일**
+**문서 날짜: 2019년 10월 1일**
 
 > [!NOTE]
 > 본 계약의 최근 변경된 내용은 [변경 기록](store-policies-change-history.md) 섹션에 요약되어 있습니다.

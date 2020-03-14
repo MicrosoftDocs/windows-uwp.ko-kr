@@ -11,11 +11,11 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: d919a86a44110d5b3b444fdf47d41f31637ccb6b
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684507"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210009"
 ---
 # <a name="programmatic-focus-navigation"></a>프로그래밍 방식 포커스 탐색
 
@@ -26,7 +26,7 @@ UWP 응용 프로그램에서 포커스를 프로그래밍 방식으로 이동�
 [TryMoveFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_TryMoveFocus_Windows_UI_Xaml_Input_FocusNavigationDirection_)는 지정된 방향으로 현재 포커스가 있는 요소에서 다음 포커스 가능한 요소로 포커스를 변경하려고 하는 반면, [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_)는 지정된 탐색 방향을 토대로 포커스를 받을 요소를 [DependencyObject](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject)) 형식으로 검색합니다(방향 탐색에만 해당됨, 탭 탐색 에뮬레이션에는 사용할 수 없음).
 
 > [!NOTE]
-> FindNextFocusableElement는 UIElement를 검색하며, 다음 포커스 가능 요소가 UIElement가 아닌 경우(하이퍼링크 개체 등) null을 반환하므로 [FindNextFocusableElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextFocusableElement_Windows_UI_Xaml_Input_FocusNavigationDirection_)보다는 [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_) 메서드를 사용하는 것이 좋습니다. 
+> FindNextFocusableElement는 UIElement를 검색하며, 다음 포커스 가능 요소가 UIElement가 아닌 경우(하이퍼링크 개체 등) null을 반환하므로 [FindNextFocusableElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextElement_Windows_UI_Xaml_Input_FocusNavigationDirection_)보다는 [FindNextElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.focusmanager#Windows_UI_Xaml_Input_FocusManager_FindNextFocusableElement_Windows_UI_Xaml_Input_FocusNavigationDirection_) 메서드를 사용하는 것이 좋습니다. 
 
 ## <a name="find-a-focus-candidate-within-a-scope"></a>범위 내 포커스 후보 찾기
 
@@ -250,7 +250,7 @@ private void OnGettingFocus(UIElement sender, GettingFocusEventArgs args)
 }
 ```
 
-다음은 [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar)에 대해 [LosingFocus](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus) 이벤트를 처리하고 메뉴가 닫힐 때 포커스를 설정하는 방법을 보여줍니다.
+다음은 [CommandBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement#Windows_UI_Xaml_UIElement_LosingFocus)에 대해 [LosingFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar) 이벤트를 처리하고 메뉴가 닫힐 때 포커스를 설정하는 방법을 보여줍니다.
 
 ```XAML
 <CommandBar x:Name="MyCommandBar" LosingFocus="OnLosingFocus">

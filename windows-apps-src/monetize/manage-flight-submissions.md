@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 플라이트 제출
 ms.localizationpriority: medium
 ms.openlocfilehash: 4e96f6d2495583fcee4d16e54a5c8a5e208fec27
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78852523"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210779"
 ---
 # <a name="manage-package-flight-submissions"></a>패키지 플라이트 제출 관리
 
@@ -41,17 +41,17 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 포함하여 앱의 
 </thead>
 <tbody>
 <tr>
-<td align="left">GET</td>
+<td align="left">가져오기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
 <td align="left"><a href="get-a-flight-submission.md">기존 패키지 비행 제출 가져오기</a></td>
 </tr>
 <tr>
-<td align="left">GET</td>
+<td align="left">가져오기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/status</td>
 <td align="left"><a href="get-status-for-a-flight-submission.md">기존 패키지 비행 전송의 상태를 가져옵니다.</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">올리기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions</td>
 <td align="left"><a href="create-a-flight-submission.md">새 패키지 비행 전송 만들기</a></td>
 </tr>
@@ -61,7 +61,7 @@ Microsoft Store 제출 API는 점진적 패키지 출시를 포함하여 앱의 
 <td align="left"><a href="update-a-flight-submission.md">기존 패키지 비행 제출 업데이트</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">올리기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/commit</td>
 <td align="left"><a href="commit-a-flight-submission.md">신규 또는 업데이트 된 패키지 비행 전송 커밋</a></td>
 </tr>
@@ -180,22 +180,22 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 </thead>
 <tbody>
 <tr>
-<td align="left">GET</td>
+<td align="left">가져오기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/packagerollout</td>
 <td align="left"><a href="get-package-rollout-info-for-a-flight-submission.md">패키지 비행 전송에 대 한 점진적 출시 정보 가져오기</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">올리기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/updatepackagerolloutpercentage</td>
 <td align="left"><a href="update-the-package-rollout-percentage-for-a-flight-submission.md">패키지 비행 전송에 대 한 점진적 출시 비율 업데이트</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">올리기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/haltpackagerollout</td>
 <td align="left"><a href="halt-the-package-rollout-for-a-flight-submission.md">패키지 비행 전송에 대 한 점진적 출시를 중지 합니다.</a></td>
 </tr>
 <tr>
-<td align="left">POST</td>
+<td align="left">올리기</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}/finalizepackagerollout</td>
 <td align="left"><a href="finalize-the-package-rollout-for-a-flight-submission.md">패키지 비행 전송에 대 한 점진적 출시 마무리</a></td>
 </tr>
@@ -335,7 +335,7 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 
 | 값           | 형식    | 설명              |
 |-----------------|---------|------|
-| fileName   |   string      |  패키지 이름입니다.    |  
+| fileName   |   string      |  패키지의 이름입니다.    |  
 | fileStatus    | string    |  패키지의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>PendingUpload</li><li>Uploaded</li><li>PendingDelete</li></ul>    |  
 | id    |  string   |  패키지를 고유하게 식별하는 ID입니다. 이 값은 파트너 센터에서 사용 됩니다.   |     
 | version    |  string   |  앱 패키지의 버전입니다. 자세한 내용은 [패키지 버전 번호](https://docs.microsoft.com/windows/uwp/publish/package-version-numbering)를 참조하세요.   |   
@@ -393,7 +393,7 @@ Microsoft Store 제출 API에서 여러 메서드를 사용하여 이 프로세�
 
 <span/>
 
-## <a name="enums"></a>열거
+## <a name="enums"></a>열거형
 
 이러한 메서드는 다음 열거형을 사용합니다.
 

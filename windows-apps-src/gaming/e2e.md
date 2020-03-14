@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
 ms.openlocfilehash: a348393a02bab946a128babefc07dc48faea6cd1
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853180"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210619"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows 10 게임 개발 가이드
 
@@ -253,7 +253,7 @@ Windows 10 게임 기능을 이해하고 게임 개발을 빠르게 시작하�
         <td><a href="https://social.msdn.microsoft.com/Forums/home?forum=wpdevelop">유니버설 Windows 플랫폼 앱 개발</a></td>
     </tr>
     <tr>
-        <td>데스크톱 애플리케이션 개발자 포럼</td>
+        <td>데스크톱 응용 프로그램 개발자 포럼</td>
         <td><a href="https://social.msdn.microsoft.com/Forums/home?category=windowsdesktopdev">Windows 데스크톱 응용 프로그램 포럼</a></td>
     </tr>
     <tr>
@@ -544,7 +544,7 @@ C#("C 샤프"라고 발음)는 혁신적인 최신 언어로, 단순하고 강�
 
 #### <a name="javascript"></a>JavaScript
 
-JavaScript는 최신 웹 및 리치 클라이언트 애플리케이션에서 널리 사용되는 동적 스크립트 언어입니다.
+JavaScript는 최신 웹 및 리치 클라이언트 응용 프로그램에서 널리 사용되는 동적 스크립트 언어입니다.
 
 Windows JavaScript 앱은 개체 지향 JavaScript 클래스의 메서드 및 속성으로 쉽고 직관적인 방식으로 유니버설 Windows 플랫폼의 강력한 기능에 액세스할 수 있습니다. 기존에 웹 개발 환경을 사용하고 있거나 JavaScript에 이미 익숙하거나 HTML5, CSS, WinJS 또는 JavaScript 라이브러리를 사용하려는 경우 JavaScript가 게임에 가장 적합한 선택입니다. DirectX 또는 XAML을 사용하려는 경우에는 JavaScript 대신에 C# 또는 C++/CX를 선택하세요.
 
@@ -626,7 +626,7 @@ Direct3D 11.3은 익숙한 Direct3D 프로그래밍 모델을 사용하며 GPU �
         <td><a href="https://developer.microsoft.com/windows/bridges/ios">IOS 앱을 Windows로 가져오기</a></td>
     </tr>
     <tr>
-        <td>데스크톱 애플리케이션용 Windows 브리지(.NET 및 Win32)</td>
+        <td>데스크톱 응용 프로그램용 Windows 브리지(.NET 및 Win32)</td>
         <td><a href="https://developer.microsoft.com/windows/bridges/desktop">데스크톱 응용 프로그램을 UWP 앱으로 변환</a></td>
     </tr>
 </table>
@@ -1081,7 +1081,7 @@ UX 디자인과는 별도로 게임 플레이 디자인(예: 레벨 디자인, �
         <td><a href="https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv">Xbox 및 TV용 디자인</a></td>
     </tr>
     <tr>
-        <td>여러 디바이스 폼 팩터를 대상으로 지정(동영상)</td>
+        <td>여러 장치 폼 팩터를 대상으로 지정(동영상)</td>
         <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2015/Designing-Games-for-a-Windows-Core-World">Windows Core 환경의 게임 디자인</a></td>
     </tr>   
 </table>
@@ -1388,7 +1388,7 @@ DirectX 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh 기
 
 성능을 최적화하려면 Windows 10의 게임 모드를 활용하여 게이머의 현재 하드웨어 성능을 최대로 이용하는 방식으로 가능한 최상의 게이밍 환경을 제공하세요.
 
-Windows Performance Toolkit(WPT)은 Windows 운영 체제 및 애플리케이션의 세부 성능 프로필을 생성하는 성능 모니터링 도구 집합으로 구성되어 있습니다. WPT는 메모리 사용량을 모니터링하고 게임 성능을 향상시키는 데 특히 유용합니다. Windows Performance Toolkit은 Windows 10 SDK 및 Windows ADK에 포함되어 있습니다. 이 툴킷은 Windows Performance Recorder(WPR)와 Windows Performance Analyzer(WPA)의 두 가지 독립적인 도구로 구성됩니다. [Windows Sysinternals](https://technet.microsoft.com/sysinternals/default)에 포함된 ProcDump는 게임 충돌이 발생하는 동안 CPU 스파이크를 모니터링하고 덤프 파일을 생성하는 명령줄 유틸리티입니다. 
+Windows Performance Toolkit(WPT)은 Windows 운영 체제 및 응용 프로그램의 세부 성능 프로필을 생성하는 성능 모니터링 도구 집합으로 구성되어 있습니다. WPT는 메모리 사용량을 모니터링하고 게임 성능을 향상시키는 데 특히 유용합니다. Windows Performance Toolkit은 Windows 10 SDK 및 Windows ADK에 포함되어 있습니다. 이 툴킷은 Windows Performance Recorder(WPR)와 Windows Performance Analyzer(WPA)의 두 가지 독립적인 도구로 구성됩니다. [Windows Sysinternals](https://technet.microsoft.com/sysinternals/default)에 포함된 ProcDump는 게임 충돌이 발생하는 동안 CPU 스파이크를 모니터링하고 덤프 파일을 생성하는 명령줄 유틸리티입니다. 
 
 <table>
     <colgroup>
@@ -1665,7 +1665,7 @@ HDR의 전체 컬러 기능을 사용하는 게임 콘텐츠를 빌드합니다.
 
 ### <a name="visual-studio-application-insights"></a>Visual Studio Application Insights
 
-Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원격 분석 및 사용량 현황 분석을 제공합니다. Application Insights는 게임이 릴리스된 후 문제를 검색 및 해결하고, 지속적으로 사용을 모니터링 및 개선하며, 플레이어가 어떻게 계속해서 게임과 상호 작용하는지를 이해하도록 도와줍니다. Application Insights는 [Azure 포털](https://portal.azure.com/)에 원격 분석을 전송하는 SDK를 앱에 추가하여 작동합니다.
+Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원격 분석 및 사용 현황 분석을 제공합니다. Application Insights는 게임이 릴리스된 후 문제를 검색 및 해결하고, 지속적으로 사용을 모니터링 및 개선하며, 플레이어가 어떻게 계속해서 게임과 상호 작용하는지를 이해하도록 도와줍니다. Application Insights는 [Azure 포털](https://portal.azure.com/)에 원격 분석을 전송하는 SDK를 앱에 추가하여 작동합니다.
 
 <table>
     <colgroup>
@@ -1673,7 +1673,7 @@ Visual Studio Application Insights에서 게시된 게임에 대한 성능, 원�
     <col width="50%" />
     </colgroup>
     <tr>
-        <td>응용 프로그램 성능 및 사용량 현황 분석</td>
+        <td>응용 프로그램 성능 및 사용 현황 분석</td>
         <td><a href="https://azure.microsoft.com/documentation/articles/app-insights-get-started/">Visual Studio Application Insights</a></td>
     </tr>
     <tr>
@@ -1845,7 +1845,7 @@ Xbox Live는 전 세계의 수 백만 게이머들을 연결하는 최상의 게
         <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2015/Xbox-Live-Multiplayer-Introducing-services-for-cross-platform-matchmaking-and-gameplay">Xbox Live 여럿이: 플랫폼 간 matchmaking 및 게임을 위한 서비스 소개</a></td>
     </tr>
     <tr>
-        <td>Fable Legends의 디바이스 간 게임 플레이(동영상)</td>
+        <td>Fable Legends의 장치 간 게임 플레이(동영상)</td>
         <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2015/Fable-Legends-Cross-device-Gameplay-with-Xbox-Live">Fable 범례: Xbox Live를 사용 하 여 장치 간 게임</a></td>
     </tr>
     <tr>
@@ -1871,7 +1871,7 @@ Xbox Live는 전 세계의 수 백만 게이머들을 연결하는 최상의 게
         <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2015/New-Opportunities-for-Independent-Developers">독립적인 개발자를 위한 새로운 기회</a></td>
     </tr>
     <tr>
-        <td>멀티 코어 모바일 디바이스에 대한 고려 사항(동영상)</td>
+        <td>멀티 코어 모바일 장치에 대한 고려 사항(동영상)</td>
         <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2015/Sustained-gaming-performance-in-multi-core-mobile-devices">다중 코어 모바일 장치의 지속적인 게임 성능</a></td>
     </tr>
     <tr>

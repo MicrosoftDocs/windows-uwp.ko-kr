@@ -7,11 +7,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 개발자 계정, 개인, 회사, 비즈니스
 ms.localizationpriority: medium
 ms.openlocfilehash: 1ac6c3e7c89c091d1080364b8fbbb35d484aee49
-ms.sourcegitcommit: 0426013dc04ada3894dd41ea51ed646f9bb17f6d
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78853496"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210909"
 ---
 # <a name="account-types-locations-and-fees"></a>계정 유형, 위치 및 수수료
 
@@ -151,7 +151,7 @@ ms.locfileid: "78853496"
 | 리투아니아                         | 14 EUR              | 75 EUR           |  
 | 룩셈부르크                        | 14 EUR              | 75 EUR           |  
 | 마카오 특별 행정구                         | 19 USD              | 99 USD           |  
-| 마케도니아(이전 유고슬라비아 마케도니아 공화국)                 | 19 USD              | 99 USD           |  
+| 마케도니아 (FYROM)                 | 19 USD              | 99 USD           |  
 | 마다가스카르                        | 19 USD              | 99 USD           |  
 | 말라위                            | 19 USD              | 99 USD           |  
 | 말레이시아                          | 62 MYR              | 300 MYR          |  
@@ -229,7 +229,7 @@ ms.locfileid: "78853496"
 | 투발루                            | 19 USD              | 99 USD           |  
 | 우간다                            | 19 USD              | 99 USD           |  
 | 우크라이나                           | 156 UAH             | 800 UAH          |  
-| 아랍에미리트              | 19 USD              | 99 USD           |  
+| 아랍 에미리트 연합국              | 19 USD              | 99 USD           |  
 | 영국                    | 12 GBP              | 65 GBP           |  
 | 미국                     | 19 USD              | 99 USD           |  
 | 우루과이                           | 19 USD              | 99 USD           |  

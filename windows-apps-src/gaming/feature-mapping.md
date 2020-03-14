@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx 9, directx 11, 포팅
 ms.localizationpriority: medium
 ms.openlocfilehash: c5c86ad836c94d990f5728ce9f7cfe49c754ce19
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259522"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210609"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>DirectX 11 API에 DirectX 9 기능 매핑
 
@@ -32,7 +32,7 @@ Direct3D 9 게임에서 사용하는 기능이 Direct3D 11 및 UWP(유니버설 
 [Direct3D](https://docs.microsoft.com/windows/desktop/direct3d)는 여전히 DirectX 그래픽의 기반이지만 API는 DirectX 9 이후로 변경되었습니다.
 
 -   Microsoft DXGI(DirectX Graphics Infrastructure)는 그래픽 어댑터를 설정하는 데 사용됩니다. [DXGI](https://docs.microsoft.com/windows/desktop/direct3ddxgi/dx-graphics-dxgi)를 사용하여 버퍼 형식을 선택하고, 스왑 체인을 만들고, 프레임을 표시하고, 공유 리소스를 만들 수 있습니다. [DXGI 개요](https://docs.microsoft.com/windows/desktop/direct3ddxgi/d3d10-graphics-programming-guide-dxgi)를 참조하세요.
--   Direct3D 디바이스 컨텍스트는 파이프라인 상태를 설정하고 렌더링 명령을 생성하는 데 사용됩니다. 대부분의 샘플에서는 즉각적인 컨텍스트를 사용하여 장치에 직접 렌더링합니다. 또한 Direct3D 11은 다중 스레딩 렌더링을 지원하며, 이 경우 지연된 컨텍스트가 사용됩니다. [Direct3D 11에서의 장치 소개](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-intro)를 참조하세요.
+-   Direct3D 디바이스 컨텍스트는 파이프라인 상태를 설정하고 렌더링 명령을 생성하는 데 사용됩니다. 대부분의 샘플에서는 즉각적인 컨텍스트를 사용하여 디바이스에 직접 렌더링합니다. 또한 Direct3D 11은 다중 스레딩 렌더링을 지원하며, 이 경우 지연된 컨텍스트가 사용됩니다. [Direct3D 11에서의 장치 소개](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-intro)를 참조하세요.
 -   일부 기능은 사용되지 않는데, 특히 고정 함수 파이프라인은 사용되지 않습니다. [사용되지 않는 기능](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-programming-guide-api-features-deprecated)을 참조하세요.
 
 Direct3D 11의 전체 기능 목록은 [Direct3D 11 기능](https://docs.microsoft.com/windows/desktop/direct3d11/direct3d-11-features) 및 [Direct3D 11 기능](https://docs.microsoft.com/windows/desktop/direct3d11/direct3d-11-1-features)을 참조하세요.
@@ -211,7 +211,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-reset">IDirect3DDevice9:: Reset</a></p></td>
-<td align="left"><p>LOST 장치 및 POOL_MANAGED는 더 이상 존재하지 않습니다. <a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::Present1</a>은 <a href="https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-error">DXGI_ERROR_DEVICE_REMOVED</a> 반환 값에서 실패할 수 있습니다.</p></td>
+<td align="left"><p>LOST 디바이스 및 POOL_MANAGED는 더 이상 존재하지 않습니다. <a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::Present1</a>은 <a href="https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-error">DXGI_ERROR_DEVICE_REMOVED</a> 반환 값에서 실패할 수 있습니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawrectpatch">IDirect3DDevice9:DrawRectPatch</a></p>
@@ -261,7 +261,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R8G8B8</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8R8G8B8</p></td>
@@ -279,7 +279,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X1R5G5B5</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A1R5G5B5</p></td>
@@ -291,7 +291,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_R3G3B2</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A8</p></td>
@@ -299,11 +299,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8R3G3B2</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X4R4G4B4</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A2B10G10R10</p></td>
@@ -316,7 +316,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_X8B8G8R8</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_G16R16</p></td>
@@ -324,7 +324,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A2R10G10B10</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A16B16G16R16</p></td>
@@ -332,11 +332,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8P8</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_P8</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L8</p></td>
@@ -360,7 +360,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A4L4</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_V8U8</p></td>
@@ -368,11 +368,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L6V5U5</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X8L8V8U8</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_Q8W8V8U8</p></td>
@@ -384,15 +384,15 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_W11V11U10</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A2W10V10U10</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_UYVY</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R8G8_B8G8</p></td>
@@ -406,7 +406,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_YUY2</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_G8R8_G8B8</p></td>
@@ -426,7 +426,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_DXT2</p></td>
 <td align="left"><p>DXGI_FORMAT_BC1_UNORM 및 DXGI_FORMAT_BC1_UNORM_SRGB</p>
 <div class="alert">
-<strong>참고</strong>   DXT1 및 DXT2은 a p i/하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
+<strong>참고</strong>   DXT1 및 DXT2은 a p i/하드웨어 관점에서 동일 합니다. 유일한 차이점은 애플리케이션에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
 </div>
 <div>
  
@@ -440,7 +440,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_DXT4</p></td>
 <td align="left"><p>DXGI_FORMAT_BC2_UNORM 및 DXGI_FORMAT_BC2_UNORM_SRGB</p>
 <div class="alert">
-<strong>참고</strong>   DXT3 및 DXT4은 a p i/하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
+<strong>참고</strong>   DXT3 및 DXT4은 a p i/하드웨어 관점에서 동일 합니다. 유일한 차이점은 애플리케이션에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
 </div>
 <div>
  
@@ -456,23 +456,23 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D32</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D15S1</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D24S8</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D24X8</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D24X4S4</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D16</p></td>
@@ -484,11 +484,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D24FS8</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_S1D15</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_S8D24</p></td>
@@ -496,11 +496,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_X8D24</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X4S4D24</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L16</p></td>
@@ -526,7 +526,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_MULTI2_ARGB8</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R16F</p></td>
@@ -554,7 +554,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_CxV8U8</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPE_FLOAT1</p></td>
@@ -574,7 +574,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPED3DCOLOR</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_UBYTE4</p></td>
@@ -628,11 +628,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_UDEC3</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPE_DEC3N</p></td>
-<td align="left"><p>사용 불가능</p></td>
+<td align="left"><p>제공되지 않음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_FLOAT16_2</p></td>

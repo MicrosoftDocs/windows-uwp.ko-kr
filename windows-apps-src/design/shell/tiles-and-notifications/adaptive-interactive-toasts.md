@@ -9,11 +9,11 @@ ms.topic: article
 keywords: Windows 10, uwp, 알림 메시지, 대화형 알림, 적응형 알림, 알림 콘텐츠, 알림 페이로드
 ms.localizationpriority: medium
 ms.openlocfilehash: 5b424da3b9413c7528cb6f6a6a888e9fe2cc7cb7
-ms.sourcegitcommit: a4a595c485a1e4549b02b0e20ca9f56b093c5814
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74125242"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209859"
 ---
 # <a name="toast-content"></a>알림 콘텐츠
 
@@ -25,7 +25,7 @@ ms.locfileid: "74125242"
 > Windows 8.1 및 Windows Phone 8.1에서 레거시 템플릿을 보려면 [레거시 알림 템플릿 카탈로그](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10))를 참조 하세요.
 
 
-## <a name="getting-started"></a>시작하기
+## <a name="getting-started"></a>시작
 
 **알림 라이브러리를 설치 합니다.** XML 대신 C#을 사용하여 알림을 생성하려면 [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)("notifications uwp" 검색)라는 NuGet 패키지를 설치합니다. 이 문서에서 제공하는 C# 샘플은 NuGet 패키지 버전 1.0.0을 사용합니다.
 
@@ -88,7 +88,7 @@ ToastContent content = new ToastContent()
 ![알림 메시지 구조](images/adaptivetoasts-structure.jpg)
 
 
-## <a name="visual"></a>시각 효과
+## <a name="visual"></a>Visual
 
 각 알림은 텍스트, 이미지 등을 포함할 수 있는 일반 알림 바인딩을 제공해야 하는 시각적 개체를 지정해야 합니다. 이러한 요소는 데스크톱, 전화, 태블릿 및 Xbox를 포함한 다양한 Windows 장치에서 렌더링됩니다.
 

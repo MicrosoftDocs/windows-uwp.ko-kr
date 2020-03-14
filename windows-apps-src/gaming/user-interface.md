@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 템플릿
 ms.localizationpriority: medium
 ms.openlocfilehash: 668a41a69c2b7dab338d251d95e23e801fa85cf6
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321138"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210519"
 ---
 # <a name="directx-game-project-templates"></a>DirectX 게임 프로젝트 템플릿
 
@@ -19,12 +19,12 @@ ms.locfileid: "67321138"
 
 DirectX 및 UWP(유니버설 Windows 플랫폼) 템플릿을 사용하여 게임의 시작 지점으로 프로젝트를 신속하게 만들 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 조건
 
 
 프로젝트를 만들려면 다음을 수행해야 합니다.
 
--   [Microsoft Visual Studio 2015 다운로드](https://visualstudio.microsoft.com/vs/)합니다. Visual Studio 2015에는 그래픽 디버깅 도구와 같은 프로그래밍에 대 한 도구가 있습니다. DirectX 그래픽 및 게임 기능과 도구에 대한 개요를 보려면 [DirectX 게임 개발을 위한 Visual Studio 도구](set-up-visual-studio-for-game-development.md)를 참조하세요.
+-   [Microsoft Visual Studio 2015를 다운로드](https://visualstudio.microsoft.com/vs/)합니다. Visual Studio 2015에는 디버깅 도구와 같은 그래픽 프로그래밍을 위한 도구가 있습니다. DirectX 그래픽 및 게임 기능과 도구에 대한 개요를 보려면 [DirectX 게임 개발을 위한 Visual Studio 도구](set-up-visual-studio-for-game-development.md)를 참조하세요.
 
 ## <a name="choosing-a-template"></a>템플릿 선택
 
@@ -46,9 +46,9 @@ DirectX 유니버설 Windows 템플릿은 다음 파일을 포함합니다.
 -   Package.appxmanifest - 앱 배포 패키지 속성
 -   \*.pfx-응용 프로그램에 대 한 인증서입니다.
 -   외부 종속성 - 프로젝트에서 사용하는 외부 파일에 대한 링크
--   \*Main.h 및 \*Main.cpp-방법, 응용 프로그램 자산을 관리 하 고, 응용 프로그램 상태를 업데이트 하 고, 프레임을 렌더링 합니다.
--   App.h 및 App.cpp - 응용 프로그램의 기본 진입점 앱을 Windows 셸과 연결하고 응용 프로그램 수명 주기 이벤트를 처리합니다. 이러한 파일은 DirectX 11 앱(유니버설 Windows) 및 DirectX 12 앱(유니버설 Windows) 템플릿에만 표시됩니다.
--   App.xaml, App.xaml.cpp 및 App.xaml.h - 응용 프로그램의 기본 진입점. 앱을 Windows 셸과 연결하고 응용 프로그램 수명 주기 이벤트를 처리합니다. 이러한 파일은 DirectX 11 및 XAML 앱(유니버설 Windows) 템플릿에만 표시됩니다.
+-   응용 프로그램 자산을 관리 하 고, 응용 프로그램 상태를 업데이트 하 고, 프레임을 렌더링 하기 위한 기본 .h 및 \*를 \*합니다.
+-   App.h 및 App.cpp - 애플리케이션의 기본 진입점 앱을 Windows 셸과 연결하고 애플리케이션 수명 주기 이벤트를 처리합니다. 이러한 파일은 DirectX 11 앱(유니버설 Windows) 및 DirectX 12 앱(유니버설 Windows) 템플릿에만 표시됩니다.
+-   App.xaml, App.xaml.cpp 및 App.xaml.h - 애플리케이션의 기본 진입점. 앱을 Windows 셸과 연결하고 애플리케이션 수명 주기 이벤트를 처리합니다. 이러한 파일은 DirectX 11 및 XAML 앱(유니버설 Windows) 템플릿에만 표시됩니다.
 -   DirectXPage.xaml, DirectXPage.xaml.cpp 및 DirectXPage.xaml.h - DirectX SwapChainPanel을 호스팅하는 페이지. 이러한 파일은 DirectX 11 및 XAML 앱(유니버설 Windows) 템플릿에만 표시됩니다.
 -   콘텐츠
     -   Sample3DSceneRenderer.h 및 Sample3DSceneRenderer.cpp - 기본 렌더링 파이프라인을 인스턴스화하는 샘플 렌더러
@@ -56,12 +56,12 @@ DirectX 유니버설 Windows 템플릿은 다음 파일을 포함합니다.
     -   SamplePixelShader.hlsl - 간단한 예제 픽셀 셰이더
     -   SampleVertexShader.hlsl - 간단한 예제 꼭짓점 셰이더
     -   ShaderStructures.h - 예제 꼭짓점 셰이더로 날짜를 보내는 데 사용되는 구조
--   일반
+-   공용
     -   StepTimer.h - 애니메이션 및 시뮬레이션 타이밍에 대한 도우미 클래스
     -   DirectXHelper.h - 기타 도우미 함수
     -   DeviceResources.h 및 Device Resources.cpp - DeviceResources를 소유한 응용 프로그램에 장치 손실 또는 생성에 대한 알림을 받을 수 있는 인터페이스를 제공합니다.
     -   d3dx12.h - D3DX12 유틸리티 라이브러리를 포함합니다. 이 파일은 DirectX 12 앱(유니버설 Windows)에만 표시됩니다.
--   자산 - 응용 프로그램에서 사용되는 로고 및 시작 화면 이미지
+-   자산 - 애플리케이션에서 사용되는 로고 및 시작 화면 이미지
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -70,10 +70,10 @@ DirectX 유니버설 Windows 템플릿은 다음 파일을 포함합니다.
 
 기존 게임을 포팅하려면 다음 항목을 참조하세요.
 
--   [포트 OpenGL ES 2.0에서에서 direct3d 11.1](port-from-opengl-es-2-0-to-directx-11-1.md)
--   [유니버설 Windows 플랫폼으로 DirectX 9에서 포트](porting-your-directx-9-game-to-windows-store.md)
+-   [OpenGL ES 2.0에서 Direct3D 11.1로의 포트](port-from-opengl-es-2-0-to-directx-11-1.md)
+-   [DirectX 9에서 유니버설 Windows 플랫폼 포트로](porting-your-directx-9-game-to-windows-store.md)
 
 DirectX 게임을 새로 만드는 경우 다음 항목을 참조하세요.
 
 -   [DirectX로 간단한 UWP 게임 만들기](tutorial--create-your-first-uwp-directx-game.md)
--   [유니버설 Windows 플랫폼 게임 Marble Maze 개발 C++ 와 DirectX](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+-   [및 DirectX에서 C++ 대리석, 유니버설 Windows 플랫폼 게임 개발](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
