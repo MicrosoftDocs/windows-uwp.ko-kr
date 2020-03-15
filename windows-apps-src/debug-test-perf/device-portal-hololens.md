@@ -1,19 +1,19 @@
 ---
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
-title: HoloLens용 장치 포털
+title: HoloLens용 디바이스 포털
 description: HoloLens용 Windows Device Portal을 사용하여 HoloLens 디바이스를 원격으로 구성 및 관리하는 방법에 대해 알아봅니다.
 ms.date: 01/03/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a9cdf03aa574ea0762d73514a209367f27822ba
-ms.sourcegitcommit: 33fcf67cf96ce8574df2e50cafc4ca7c18234c4b
+ms.openlocfilehash: 059ce14f85ebe7d955ba2da8897ab47109f74a72
+ms.sourcegitcommit: 1d6d05d28358e087d9ee8829d76c5fbbac0225cb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76530785"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401972"
 ---
-# <a name="device-portal-for-hololens"></a>HoloLens용 장치 포털
+# <a name="device-portal-for-hololens"></a>HoloLens용 디바이스 포털
 
 
 ## <a name="set-up-device-portal-on-hololens"></a>HoloLens에 디바이스 포털 설정
@@ -22,7 +22,7 @@ ms.locfileid: "76530785"
 
 1. HoloLens의 전원을 켜고 디바이스에 배치합니다.
 2. HoloLens의 [시작 제스처](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture) 또는 [블 룸](https://developer.microsoft.com/mixed-reality#Bloom) 제스처 (첫 번째 Gen)를 수행 하 여 주 메뉴를 시작 합니다.
-3. **설정** 타일을 응시 하 고 hololens (첫 번째 Gen)에서 [공기 탭](https://developer.microsoft.com/mixed-reality#Press_and_release) 제스처를 수행 하거나, [이를 터치 하거나 손으로 사용 하](https://docs.microsoft.com/hololens/hololens2-basic-usage)여 hololens 2에서 선택 합니다. 설정 앱은 선택한 후에 시작 됩니다.
+3. **설정** 타일을 응시 하 고 hololens에서 [탭](https://developer.microsoft.com/mixed-reality#Press_and_release) 제스처를 수행 하거나 (첫 번째 Gen) Hololens를 [터치 하거나 손으로 사용 하](https://docs.microsoft.com/hololens/hololens2-basic-usage)여 hololens 2에서 선택 합니다. 설정 앱은 선택한 후에 시작 됩니다.
 4. **업데이트** 메뉴 항목을 선택합니다.
 5. **개발자용** 메뉴 항목을 선택합니다.
 6. **개발자 모드**를 사용하도록 설정합니다.
@@ -84,7 +84,7 @@ HoloLens에서 디바이스 포털에 처음 연결하면 사용자 이름 및 �
 
 ## <a name="device-portal-pages"></a>디바이스 포털 페이지 
 
-### <a name="home"></a>Home 
+### <a name="home"></a>홈 
 
 홈페이지에서 디바이스 포털 세션을 시작합니다. 홈페이지의 왼쪽 탐색 모음에서 다른 페이지에 액세스합니다.
 
@@ -101,7 +101,7 @@ HoloLens에서 디바이스 포털에 처음 연결하면 사용자 이름 및 �
 - **디바이스** 상태: 디바이스의 상태를 모니터링하고 중요한 오류를 보고합니다.
 - **Windows 정보**: HoloLens 이름과 현재 설치된 Windows 버전을 보여 줍니다.
 - **기본 설정** 섹션에는 다음 설정이 포함되어 있습니다.
-    - **IPD**: 앞을 똑바로 바라볼 때 사용자의 동공 중심 사이의 거리인 IPD(동공 간 거리)를 밀리미터 단위로 설정합니다. 설정은 즉시 적용됩니다. 기본값은 디바이스를 설정할 때 자동으로 계산되었습니다.
+    - **IPD**: 앞을 똑바로 바라볼 때 사용자의 동공 중심 사이의 거리인 IPD(동공 간 거리)를 밀리미터 단위로 설정합니다. 설정은 즉시 적용됩니다. 기본값은 디바이스를 설정할 때 자동으로 계산되었습니다. **HoloLens (첫 번째 Gen)에 대해서만 유효 하 고 Hololens 2는 눈동자 위치를 계산 합니다.** 
     - **디바이스 이름**: HoloLens에 이름을 할당합니다. 이 값을 변경 후에는 디바이스를 다시 부팅해야 적용됩니다. 저장을 클릭한 후 디바이스를 즉시 다시 부팅할 것인지 또는 나중에 다시 부팅할 것인지를 묻는 대화 상자가 나타납니다.
     - **절전 설정**: 디바이스가 전원에 연결된 경우 및 배터리에 연결된 경우에 대해 각각 절전 모드로 전환되기 전에 대기할 시간을 설정합니다.
 
