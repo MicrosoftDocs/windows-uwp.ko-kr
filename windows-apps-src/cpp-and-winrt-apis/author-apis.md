@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
 ms.openlocfilehash: 84c0e9315950541e51bf49f5c0eec370f3188c4d
-ms.sourcegitcommit: 58f6643510a27d6b9cd673da850c191ee23b813e
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74701486"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209278"
 ---
 # <a name="author-apis-with-cwinrt"></a>C++/WinRT를 사용하여 API 작성
 
@@ -114,7 +114,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 ...
 ```
 
-**App** 형식*이* **IFrameworkViewSource**이므로 하나만 **Run**으로 전달할 수 있습니다.
+**App** 형식이 **IFrameworkViewSource**이므로 하나만 **Run**으로 전달할 수 있습니다. 
 
 ```cppwinrt
 using namespace Windows::ApplicationModel::Core;
@@ -459,7 +459,7 @@ MySpecializedToggleButtonAutomationPeer::MySpecializedToggleButtonAutomationPeer
 ...
 ```
 
-기본 클래스 생성자는 **ToggleButton**이 필요합니다. 그리고 **MySpecializedToggleButton** *은* **ToggleButton**입니다.
+기본 클래스 생성자는 **ToggleButton**이 필요합니다. 그리고 **MySpecializedToggleButton**은 **ToggleButton**입니다. 
 
 위에서 설명한 대로(생성자 매개 변수를 기본 클래스에게 전달) 편집할 때까지 컴파일러는 생성자를 플래그 처리하고 **MySpecializedToggleButtonAutomationPeer_base&lt;MySpecializedToggleButtonAutomationPeer&gt;** 라는 이름의 형식에 사용할 수 있는 기본 생성자가 없다고 알립니다. 하지만 실제로는 이 클래스가 구현 형식의 기본 클래스입니다.
 
@@ -567,7 +567,7 @@ c.Method();
 MyClass::StaticMethod();
 ```
 
-`-opt[imize]`를 사용하지 않으면 첫 번째 및 마지막 명령문에서 팩터리 개체를 통해 호출해야 합니다. `-opt[imize]`를 *사용하면* 둘 모두에서 이 작업을 수행하지 않습니다. 그리고 이러한 호출은 구현에 대해 직접 컴파일되며, 심지어 인라인될 수도 있습니다. 이는 `-opt[imize]`, 즉 *직접 구현* 액세스에 대해 언급할 때 자주 사용되는 다른 용어와 관련이 있습니다.
+`-opt[imize]`를 사용하지 않으면 첫 번째 및 마지막 명령문에서 팩터리 개체를 통해 호출해야 합니다. `-opt[imize]`를 사용하면 둘 다 수행하지 않습니다.  그리고 이러한 호출은 구현에 대해 직접 컴파일되며, 심지어 인라인될 수도 있습니다. 이는 `-opt[imize]`, 즉 *직접 구현* 액세스에 대해 언급할 때 자주 사용되는 다른 용어와 관련이 있습니다.
 
 언어 프로젝션이 편리하지만, 구현에 직접 액세스할 수 있는 경우 이를 활용하여 가장 효율적인 코드를 만들 수 있습니다. C++/WinRT를 사용하면 프로젝션의 안전성과 생산성을 그대로 유지하도록 강요하지 않고 이 작업을 수행할 수 있습니다.
 
@@ -589,7 +589,7 @@ namespace winrt::MyProject
 }
 ```
 
-위의 모든 작업을 반드시 수행할 필요는 없습니다. 이는 두 호출에서 모두 **call_factory**라는 함수에 대한 호출이 필요하다는 것을 보여 주기 위한 것입니다. 이러한 호출은 팩터리 캐시를 포함하고, 구현에 직접 액세스하는 것이 아닙니다. `-opt[imize]`를 *사용하면* 이러한 동일한 함수가 전혀 정의되지 않습니다. 대신, 이러한 함수는 프로젝션에서 선언하고, 해당 정의는 구성 요소에 남아 있습니다.
+위의 모든 작업을 반드시 수행할 필요는 없습니다. 이는 두 호출에서 모두 **call_factory**라는 함수에 대한 호출이 필요하다는 것을 보여 주기 위한 것입니다. 이러한 호출은 팩터리 캐시를 포함하고, 구현에 직접 액세스하는 것이 아닙니다. `-opt[imize]`를 사용하면 이러한 동일한 함수가 전혀 정의되지 않습니다.  대신, 이러한 함수는 프로젝션에서 선언하고, 해당 정의는 구성 요소에 남아 있습니다.
 
 그러면 구성 요소에서 구현에 직접 호출하는 정의를 제공할 수 있습니다. 이제 주요 변경 내용에 도달했습니다. 이러한 정의는 `-component` 및 `-opt[imize]`를 모두 사용할 때 생성되며 `Type.g.cpp`라는 파일에 나타납니다. 여기서 *Type*은 구현되는 런타임 클래스의 이름입니다. 따라서 기존 프로젝트에서 `-opt[imize]`를 사용하도록 처음 설정하는 경우에는 다양한 링커 오류가 발생할 수 있습니다. 작업을 수행할 수 있도록 생성된 파일을 구현에 포함시켜야 합니다.
 

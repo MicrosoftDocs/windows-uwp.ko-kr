@@ -5,22 +5,23 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: 06fadae3e33da3289726f45e7222617d51843015
-ms.sourcegitcommit: 6fbf645466278c1f014c71f476408fd26c620e01
+ms.openlocfilehash: 949f8c407e0a49c87cbb45c01117a7e2e1525010
+ms.sourcegitcommit: 5f22e596443ff4645ebf68626d8a4d275d8a865f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72816683"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79083181"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT를 통한 동시성 및 비동기 작업
 
-이 항목에서는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통해 Windows 런타임 비동기 개체를 만들고 사용하는 방법을 보여 줍니다.
+> [!IMPORTANT]
+> 이 항목에서는 *코루틴* 및 `co_await`의 개념을 소개하며, UI 및 비 UI 애플리케이션 모두에서 사용하는 것이 좋습니다.  간단히 하기 위해 이 소개 항목의 코드 예제에서는 대부분 **Windows 콘솔 애플리케이션(C++/WinRT)** 프로젝트를 보여 줍니다. 이 항목의 뒷부분에 나오는 코드 예제에서는 코루틴을 사용하지만, 편의상 콘솔 애플리케이션 예제에서 종료 직전에 차단 **get** 함수 호출도 사용하므로 출력 인쇄를 마치기 전에 애플리케이션이 종료되지 않습니다. UI 스레드에서는 이 작업(차단 **get** 함수 호출)을 수행하지 않습니다. 대신 `co_await` 문을 사용합니다. UI 애플리케이션에서 사용하는 기술은 [고급 동시성 및 비동기](concurrency-2.md) 항목에서 설명하고 있습니다.
 
-이 항목을 참조한 후에 [고급 동시성 및 비동기](concurrency-2.md)도 참조하세요.
+이 소개 항목에서는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통해 Windows 런타임 비동기 개체를 만들고 사용할 수 있는 몇 가지 방법을 보여 줍니다. 이 항목을 읽은 후, 특히 UI 애플리케이션에서 사용하는 기술에 대해서는 [고급 동시성 및 비동기](concurrency-2.md)도 참조하세요.
 
 ## <a name="asynchronous-operations-and-windows-runtime-async-functions"></a>비동기 작업 및 Windows 런타임 “비동기” 함수
 
-완료하는 데 50밀리초 이상 걸릴 가능성이 높은 Windows 런타임 API는 비동기 함수(이름이 “Async”로 끝나는 함수)로 구현됩니다. 비동기 함수 구현은 다른 스레드에서 작업을 시작하고 비동기 작업을 나타내는 개체와 함께 즉시 반환됩니다. 비동기 작업이 완료되면, 반환된 개체에 작업의 결과 값이 포함됩니다. **Windows::Foundation** Windows 런타임 네임스페이스에는 네 가지 유형의 비동기 작업 개체가 포함됩니다.
+완료하는 데 50밀리초 이상 걸릴 가능성이 높은 Windows 런타임 API는 비동기 함수(이름이 “Async”로 끝나는 함수)로 구현됩니다. 비동기 함수의 구현은 다른 스레드에서 작업을 시작하고, 비동기 작업을 나타내는 개체와 함께 즉시 반환합니다. 비동기 작업이 완료되면, 반환된 개체에 작업의 결과 값이 포함됩니다. **Windows::Foundation** Windows 런타임 네임스페이스에는 네 가지 유형의 비동기 작업 개체가 포함됩니다.
 
 - [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction),
 - [**IAsyncActionWithProgress&lt;TProgress&gt;** ](/uwp/api/windows.foundation.iasyncactionwithprogress_tprogress_),
@@ -29,7 +30,9 @@ ms.locfileid: "72816683"
 
 각 비동기 작업 유형은 **winrt::Windows::Foundation** C++/WinRT 네임스페이스의 해당 유형에 프로젝션됩니다. C++/WinRT에는 내부 await 어댑터 구조체도 포함되어 있습니다. 직접 사용하지는 않지만, 해당 구조체 덕분에 `co_await` 문을 작성하여 이러한 비동기 작업 유형 중 하나를 반환하는 함수의 결과를 협조적으로 기다릴 수 있습니다. 또한 이러한 유형을 반환하는 고유한 코루틴을 작성할 수 있습니다.
 
-비동기 Windows 함수의 예로 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_) 형식의 비동기 작업 개체를 반환하는 [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)가 있습니다. C++/WinRT를 사용하여 이러한 API를 호출하는 몇 가지 방법을 차단 방법과 비차단 방법 순으로 살펴보겠습니다.
+비동기 Windows 함수의 예로 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_) 형식의 비동기 작업 개체를 반환하는 [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)가 있습니다.
+
+C++/WinRT를 사용하여 이러한 API를 호출하는 몇 가지 방법을 차단 방법과 비차단 방법 순으로 살펴보겠습니다. 기본적인 아이디어를 설명하기 위해 다음 몇 가지 코드 예제에서는 **Windows 콘솔 애플리케이션(C++/WinRT)** 프로젝트를 사용합니다. UI 애플리케이션에 더 적합한 기술은 [고급 동시성 및 비동기](concurrency-2.md)에서 설명하고 있습니다.
 
 ## <a name="block-the-calling-thread"></a>호출 스레드 차단
 
@@ -111,6 +114,8 @@ int main()
 코루틴을 다른 코루틴에 집계할 수 있습니다. 또는 **get**을 호출하여 차단하고 완료될 때까지 기다린 다음, 결과가 있을 경우 가져올 수 있습니다. 또는 Windows 런타임을 지원하는 다른 프로그래밍 언어에 전달할 수 있습니다.
 
 대리자를 사용하여 비동기 작업의 완료 및/또는 진행률 이벤트를 처리할 수도 있습니다. 자세한 내용과 코드 예제는 [비동기 작업을 위한 대리자 형식](handle-events.md#delegate-types-for-asynchronous-actions-and-operations)을 참조하세요.
+
+위의 코드 예제에서 볼 수 있듯이 **main**을 종료하기 직전에 차단 **get** 함수 호출을 계속 사용합니다. 그러나 이는 출력 인쇄를 마치기 전에 애플리케이션이 종료되지 않도록 하기 위한 것입니다.
 
 ## <a name="asynchronously-return-a-windows-runtime-type"></a>Windows 런타임 형식을 비동기식으로 반환
 

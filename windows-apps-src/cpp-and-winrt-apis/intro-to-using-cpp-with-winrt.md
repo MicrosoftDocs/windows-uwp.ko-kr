@@ -6,11 +6,11 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
 ms.openlocfilehash: fd267f96ca6931252ab3130d363447ae79820108
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74255107"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79209138"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -44,7 +44,7 @@ Visual Studio 및 Windows SDK의 최신 버전을 사용하여 개발하는 것�
 
 C++/WinRT에 대한 Visual Studio 프로젝트 템플릿은 아래 섹션에서 설명합니다. 최신 버전의 VSIX 확장이 설치된 C++/WinRT 프로젝트를 새로 만들면 이 프로젝트에서 자동으로 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/)를 설치합니다. **Microsoft.Windows.CppWinRT** NuGet 패키지는 C++/WinRT 빌드 지원(MSBuild 속성 및 대상)을 제공하므로, VSIX 확장은 설치되지 않고 NuGet 패키지만 설치된 개발 머신과 빌드 에이전트 사이에 프로젝트를 이식할 수 있습니다.
 
-또는 **Microsoft.Windows.CppWinRT** NuGet 패키지를 수동으로 설치하여 기존 프로젝트를 변환할 수 있습니다. VSIX 확장의 최신 버전을 설치하거나 이 버전으로 업데이트한 후 Visual Studio에서 기존 프로젝트를 열고 **프로젝트** \> **NuGet 패키지 관리...** 를 클릭합니다. \> **찾아보기**를 클릭합니다. 검색 상자에 **Microsoft.Windows.CppWinRT**를 입력하거나 붙여넣고 검색 결과에서 항목을 선택한 다음, **설치**를 클릭하여 해당 프로젝트용 패키지를 설치합니다. 패키지 추가를 마쳤으면 이제 `cppwinrt.exe` 도구 호출을 포함해 프로젝트에 대한 C++/WinRT MSBuild 지원을 가져옵니다.
+또는 **Microsoft.Windows.CppWinRT** NuGet 패키지를 수동으로 설치하여 기존 프로젝트를 변환할 수 있습니다. 최신 버전의 VSIX 확장을 설치하거나 이 버전으로 업데이트한 후 Visual Studio에서 기존 프로젝트를 열고, **프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기**를 차례로 클릭하고, 검색 상자에서 **Microsoft.Windows.CppWinRT**를 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치**를 클릭하여 해당 프로젝트에 대한 패키지를 설치합니다. 패키지 추가를 마쳤으면 이제 `cppwinrt.exe` 도구 호출을 포함해 프로젝트에 대한 C++/WinRT MSBuild 지원을 가져옵니다.
 
 > [!IMPORTANT]
 > 1\.0.190128.4보다 이전 버전의 VSIX 확장을 사용하여 생성되거나 이 버전에서 작동하도록 업그레이드된 프로젝트가 있는 경우에는 [이전 버전의 VSIX 확장](#earlier-versions-of-the-vsix-extension)을 참조하세요. 이 섹션에는 최신 버전의 VSIX 확장을 사용하도록 업그레이드하기 위해 알고 있어야 하는 프로젝트 구성에 대한 중요한 정보가 포함됩니다.
@@ -110,7 +110,7 @@ IDL 파일에서 구성 요소의 런타임 클래스와 기본 인터페이스,
 ...
 ```
 
-**Microsoft.Windows.CppWinRT** NuGet 패키지를 수동으로 설치하여 프로젝트를 업그레이드할 수 있습니다. 최신 버전 VSIX 확장을 설치하거나 이 버전으로 업그레이드한 후 Visual Studio에서 프로젝트를 열고, **프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기**를 클릭하고, 검색 상자에 **Microsoft.Windows.CppWinRT**를 입력하거나 붙여넣고, 검색 결과에서 항목을 선택한 다음, **설치**를 클릭하여 해당 프로젝트용 패키지를 설치합니다.
+**Microsoft.Windows.CppWinRT** NuGet 패키지를 수동으로 설치하여 프로젝트를 업그레이드할 수 있습니다. 최신 버전의 VSIX 확장을 설치하거나 이 버전으로 업그레이드한 후 Visual Studio에서 프로젝트를 열고, **프로젝트**\>**NuGet 패키지 관리...** \> **찾아보기**를 차례로 클릭하고, 검색 상자에서 **Microsoft.Windows.CppWinRT**를 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치**를 클릭하여 프로젝트에 대한 패키지를 설치합니다.
 
 ### <a name="created-with-or-upgraded-to-between-101810022-and-101901283"></a>1\.0.181002.2-1.0.190128.3 버전으로 생성되거나 해당 버전으로 업그레이드됨
 프로젝트가 1.0.181002.2-1.0.190128.3(포함) VSIX 확장 버전을 사용하여 생성된 경우 **Microsoft.Windows.CppWinRT** NuGet 패키지는 프로젝트 템플릿을 통해 자동으로 프로젝트에 설치되었습니다. 이 범위에 있는 VSIX 확장 버전을 사용하도록 이전 프로젝트를 업그레이드했을 수도 있습니다. 이 경우 이 범위의 VSIX 확장 버전에 빌드 지원이 계속 포함되므로 업그레이드된 프로젝트에는 **Microsoft.Windows.CppWinRT** NuGet 패키지가 설치되거나 설치되지 않았을 수 있습니다.

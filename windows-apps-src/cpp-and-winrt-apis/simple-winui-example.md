@@ -5,12 +5,12 @@ ms.date: 07/12/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, Windows UI 라이브러리, WinUI
 ms.localizationpriority: medium
-ms.openlocfilehash: aadf177bc4a44f67550dba1f6f706525b8460857
-ms.sourcegitcommit: c9bab19599c0eb2906725fd86d0696468bb919fa
+ms.openlocfilehash: 0dce8e7ea08b18921f228b3da2e679a9edb02228
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78256176"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79200981"
 ---
 # <a name="a-simple-cwinrt-windows-ui-library-example"></a>간단한 C++/WinRT Windows UI 라이브러리 예제
 
@@ -53,7 +53,7 @@ Visual Studio에서 **비어 있는 앱(C++/WinRT)** 프로젝트 템플릿을 �
 
 *myButton*이 더 이상 XAML 태그에 없으므로 `MainPage.cpp`에서 **MainPage::ClickHandler** 구현 내의 코드를 삭제합니다.
 
-`MainPage.h`에서 include를 아래 목록과 같이 편집합니다. 둘 이상의 XAML 페이지에서 WinUI를 사용하는 경우 미리 컴파일된 헤더 파일(일반적으로 `pch.h`)로 이동하여 대신 포함시킬 수 있습니다.
+`MainPage.h`에서 include를 아래 목록과 같이 편집합니다.
 
 ```cppwinrt
 #include "MainPage.g.h"
@@ -63,7 +63,10 @@ Visual Studio에서 **비어 있는 앱(C++/WinRT)** 프로젝트 템플릿을 �
 
 이제 프로젝트를 빌드합니다.
 
-NuGet 패키지(예: 이전에 추가한 **Microsoft.UI.Xaml** 패키지)를 C++/WinRT 프로젝트에 추가하고 프로젝트를 빌드하면 도구에서 일단의 프로젝션 헤더 파일을 프로젝트의 `\Generated Files\winrt` 폴더에 생성합니다. 연습을 수행하고 나면 이제 `\HelloWinUICppWinRT\HelloWinUICppWinRT\Generated Files\winrt` 폴더가 생깁니다. 위의 `MainPage.h` 변경 내용으로 인해 프로젝션 헤더 파일이 프로젝트에 포함됩니다. 그리고 이는 NuGet 패키지의 형식에 대한 참조가 확인되도록 하는 데 필요합니다.
+NuGet 패키지(예: 이전에 추가한 **Microsoft.UI.Xaml** 패키지)를 C++/WinRT 프로젝트에 추가하고 프로젝트를 빌드하면 도구에서 일단의 프로젝션 헤더 파일을 프로젝트의 `\Generated Files\winrt` 폴더에 생성합니다. 연습을 수행하고 나면 이제 `\HelloWinUICppWinRT\HelloWinUICppWinRT\Generated Files\winrt` 폴더가 생깁니다. 위의 `MainPage.h`를 편집하면 WinUI에 대한 해당 프로젝션 헤더 파일이 **MainPage**에 표시됩니다. 그리고 **MainPage**의 **Microsoft::UI::Xaml::Controls::NavigationView** 형식에 대한 참조에서 이를 확인해야 합니다.
+
+> [!IMPORTANT]
+> 실제 애플리케이션에서는 WinUI 프로젝션 헤더 파일을 프로젝트의 *모든* XAML 페이지에 표시하려고 합니다. **MainPage**에만 표시하는 것이 아닙니다. 이 경우 두 WinUI 프로젝션 헤더 파일의 include를 미리 컴파일된 헤더 파일(일반적으로 `pch.h`)로 이동합니다. 그런 다음, 프로젝트의 모든 위치에서 NuGet 패키지의 형식에 대한 참조를 확인합니다. 이 연습에서 빌드되는 애플리케이션과 같이 최소한의 단일 페이지 애플리케이션에서는 `pch.h`를 사용할 필요가 없으며 헤더를 `MainPage.h`에 포함하는 것이 적절합니다.
 
 이제 프로젝트를 실행할 수 있습니다.
 

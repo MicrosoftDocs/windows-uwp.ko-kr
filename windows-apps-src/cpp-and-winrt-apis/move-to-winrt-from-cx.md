@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: d540474140e4734320b06d852933b30fa20b61be
-ms.sourcegitcommit: 2c6aac8a0cc02580df0987f0b7dba5924e3472d6
+ms.openlocfilehash: 6a0307833e996a5faba558631062c94efca3b75d
+ms.sourcegitcommit: 756217c559155e172087dee4d762d328c6529db6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74958973"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78935361"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>C++/CX에서 C++/WinRT로 이동
 
@@ -21,14 +21,14 @@ ms.locfileid: "74958973"
 C++/CX 코드를 C++/WinRT로 점진적으로 이식할 수 있습니다. C++/CX 및 C++/WinRT 코드는 같은 프로젝트에 공존할 수 있으며, XAML 컴파일러 지원 및 Windows 런타임 구성 요소의 예외가 있습니다. 이 두 가지 예외를 위해 C++/CX 또는 C++/WinRT를 동일한 프로젝트 내에서 대상으로 지정해야 합니다.
 
 > [!IMPORTANT]
-> 프로젝트가 XAML 애플리케이션을 빌드하는 경우 권장하는 한 가지 워크플로는 먼저 C++/WinRT 프로젝트 템플릿 중 하나를 사용하여 Visual Studio에서 새 프로젝트를 만드는 것입니다([Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 그런 다음, C++/CX 프로젝트에서 원본 코드 및 태그 복사를 시작합니다. **프로젝트** \> **새 항목 추가...** \> **Visual C++**  >  **비어 있는 페이지(C++/WinRT)** 를 사용하여 새 XAML 페이지를 추가할 수 있습니다.
+> 프로젝트가 XAML 애플리케이션을 빌드하는 경우 권장하는 한 가지 워크플로는 먼저 C++/WinRT 프로젝트 템플릿 중 하나를 사용하여 Visual Studio에서 새 프로젝트를 만드는 것입니다([Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 그런 다음, C++/CX 프로젝트에서 원본 코드 및 태그 복사를 시작합니다. **프로젝트** \> **새 항목 추가...** \> **Visual C++**  > **빈 페이지(C++/WinRT)** 를 사용하여 새 XAML 페이지를 추가할 수 있습니다.
 >
 > 또는 Windows 런타임 구성 요소를 사용하여 이식할 때 XAML C++/CX 프로젝트에서 코드를 팩터링할 수 있습니다. 최대한 많은 C++/CX 코드를 구성 요소로 이동한 다음, XAML 프로젝트를 C++/WinRT로 변경합니다. 또는 XAML 프로젝트를 C++/CX로 남겨 두고, 새 C++/WinRT 구성 요소를 만들고, XAML 프로젝트에서 구성 요소로 C++/CX 코드 이식을 시작합니다. 또한 동일한 솔루션 내에 C++/WinRT 구성 요소 프로젝트와 함께 C++/CX 구성 요소 프로젝트를 포함하고, 애플리케이션 프로젝트에서 두 프로젝트를 모두 참조하고, 점진적으로 서로 이식할 수 있습니다. 동일한 프로젝트에서 두 언어 프로젝션을 사용하는 방법에 대한 자세한 내용은 [C++/WinRT 및 C++/CX 사이의 Interop](interop-winrt-cx.md)를 참조하세요.
 
 > [!NOTE]
 > [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 및 Windows SDK는 둘 다 루트 네임스페이스인 **Windows**에서 형식을 선언합니다. C++/WinRT에 프로젝션된 Windows 형식은 Windows 형식과 동일한 정규화된 이름을 사용하지만 C++ **winrt** 네임스페이스에 배치됩니다. 이렇게 네임스페이스를 구별하여 원하는 대로 C++/CX에서 C++/WinRT로 이식할 수 있습니다.
 
-위에 언급된 예외 사항을 고려하면서 C++/CX 프로젝트를 C++/WinRT로 이식하는 첫 번째 단계는 C++/WinRT 지원을 수동으로 추가하는 것입니다([Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 이 작업을 수행하려면 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/)를 프로젝트에 설치합니다. Visual Studio에서 프로젝트를 열고 **프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기**를 클릭합니다. 검색 상자에 **Microsoft.Windows.CppWinRT**를 입력하거나 붙여넣고 검색 결과에서 항목을 선택한 다음, **설치**를 클릭하여 해당 프로젝트용 패키지를 설치합니다. 해당 변경의 효과 중 하나는 프로젝트에서 C++/CX에 대한 지원이 꺼진다는 것입니다. 빌드 메시지가 C++/CX에서 모든 종속성을 찾고 이식하는 데 도움이 되도록 지원을 끈 채로 두는 것이 좋습니다. 또는 지원을 다시 켜고(프로젝트 속성에서 **C/C++** \> **일반** \> **Windows 런타임 확장 사용** \> **예(/ZW)** ) 점진적으로 이식할 수 있습니다.
+위에 언급된 예외 사항을 고려하면서 C++/CX 프로젝트를 C++/WinRT로 이식하는 첫 번째 단계는 C++/WinRT 지원을 수동으로 추가하는 것입니다([Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 이 작업을 수행하려면 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/)를 프로젝트에 설치합니다. Visual Studio에서 프로젝트를 열고, **프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기**를 차례로 클릭하고, 검색 상자에서 **Microsoft.Windows.CppWinRT**를 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치**를 클릭하여 해당 프로젝트에 대한 패키지를 설치합니다. 해당 변경의 효과 중 하나는 프로젝트에서 C++/CX에 대한 지원이 꺼진다는 것입니다. 빌드 메시지를 통해 C++/CX의 모든 종속성을 찾고 이식할 수 있도록 지원을 해제한 채로 두는 것이 좋습니다. 또는 지원을 다시 설정하고(프로젝트 속성의 **C/C++** \> **일반** \> **Windows 런타임 확장 사용** \> **예(/ZW)** 에서), 점진적으로 이식할 수 있습니다.
 
 또는 Visual Studio의 C++/WinRT 프로젝트 속성 페이지를 사용하여 다음 속성을 `.vcxproj` 파일에 수동으로 추가합니다. 비슷한 사용자 지정 옵션(`cppwinrt.exe` 도구의 동작을 미세 조정) 목록은 Microsoft.Windows.CppWinRT NuGet 패키지 [추가 정보](https://github.com/microsoft/xlang/tree/master/src/package/cppwinrt/nuget/readme.md#customizing)를 참조하세요.
 
@@ -40,7 +40,7 @@ C++/CX 코드를 C++/WinRT로 점진적으로 이식할 수 있습니다. C++/CX
 </syntaxhighlight>
 ```
 
-다음으로, **일반** \> **대상 플랫폼 버전**의 프로젝트 속성이 10.0.17134.0(Windows 10 버전 1803) 이상으로 설정되었는지 확인합니다.
+다음으로, 프로젝트 속성의 **일반** \> **대상 플랫폼 버전**이 10.0.17134.0(Windows 10 버전 1803) 이상으로 설정되어 있는지 확인합니다.
 
 미리 컴파일된 헤더 파일에(일반적으로 `pch.h`) `winrt/base.h`를 포함합니다.
 
@@ -309,7 +309,18 @@ C++ 컬렉션 형식은 기본 생성자를 사용하므로 의도하지 않은 
 | 빈 참조의 배열 | `TextBox^ boxes[2];` | `// Creates 2 TextBox objects!`<br/>`TextBox boxes[2];` | `TextBox boxes[2] = { nullptr, nullptr };` |
 | 페어링 | `std::pair<TextBox^, String^> p;` | `// Creates a TextBox!`<br/>`std::pair<TextBox, String> p;` | `std::pair<TextBox, String> p{ nullptr, nullptr };` |
 
-빈 참조의 배열을 만드는 것은 간단하지 않습니다. 배열의 각 요소에 대해 `nullptr`을 반복해야 합니다. 너무 작으면 여분의 항목이 기본적으로 생성됩니다.
+### <a name="more-about-collections-of-empty-references"></a>빈 참조 컬렉션에 대한 자세한 정보
+
+C++/CX에서 **Platform::Array\^** ([**Platform::Array\^** 이식](#port-platformarray) 참조)를 사용할 때마다 이를 배열로 남겨 두는 대신 C++/WinRT에서 **std::vector**(실제로 모든 연속 컨테이너)로 이식하도록 선택할 수 있습니다. **std::vector**를 선택하면 이점이 있습니다.
+
+예를 들어 빈 참조의 고정 크기 벡터를 만드는 축약형(위의 표 참조)이 있지만, 빈 참조의 *배열*을 만드는 축약형은 없습니다. 배열의 각 요소에 대해 `nullptr`을 반복해야 합니다. 너무 작으면 여분의 항목이 기본적으로 생성됩니다.
+
+벡터의 경우 초기화할 때 빈 참조로 채우거나(위의 표에서와 같이), 초기화 후에 이와 같은 코드를 사용하여 빈 참조로 채울 수 있습니다.
+
+```cppwinrt
+std::vector<TextBox> boxes(10); // 10 default-constructed TextBoxes.
+boxes.resize(10, nullptr); // 10 empty references.
+```
 
 ### <a name="more-about-the-stdmap-example"></a>**std::map** 예제에 대한 자세한 정보
 
@@ -531,7 +542,9 @@ winrt::agile_ref<Windows::UI::Core::CoreWindow> m_window;
 
 ### <a name="port-platformarray"></a>**Platform::Array\^** 이식
 
-옵션에는 이니셜라이저 목록, **std::array** 또는 **std::vector** 사용이 포함됩니다. 자세한 내용과 코드 예제는 [표준 이니셜라이저 목록](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-initializer-lists) 및 [표준 배열 및 벡터](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-arrays-and-vectors)를 참조하세요.
+C++/CX에서 배열을 사용해야 하는 경우 C++/WinRT를 사용하면 연속 컨테이너를 사용할 수 있습니다. **std:vector**를 선택하는 것이 적합한 이유에 대해서는 [기본 생성자가 컬렉션에 미치는 영향](#how-the-default-constructor-affects-collections)을 참조하세요.
+
+따라서 C++/CX에서 **Platform::Array\^** 를 사용할 때마다 이식 옵션에는 이니셜라이저 목록, **std::array** 또는 **std::vector**를 사용하는 것이 포함됩니다. 자세한 내용과 코드 예제는 [표준 이니셜라이저 목록](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-initializer-lists) 및 [표준 배열 및 벡터](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-arrays-and-vectors)를 참조하세요.
 
 ### <a name="port-platformexception-to-winrthresult_error"></a>**Platform::Exception\^** 을 **winrt::hresult_error**로 이식
 
@@ -553,7 +566,7 @@ catch (winrt::hresult_error const& ex)
 
 C++/WinRT는 이 예외 클래스를 제공합니다.
 
-| 예외 유형 | 기본 클래스 | HRESULT |
+| 예외 종류 | 기본 클래스 | HRESULT |
 | ---- | ---- | ---- |
 | [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) | | [**hresult_error::to_abi**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresult_errorto_abi-function) 호출 |
 | [**winrt::hresult_access_denied**](/uwp/cpp-ref-for-winrt/error-handling/hresult-access-denied) | **winrt::hresult_error** | E_ACCESSDENIED |
@@ -646,7 +659,7 @@ auto s{ std::to_wstring(i) }; // s is a std::wstring with value L"2".
 
 또한 C++/WinRT는 제한된 수의 형식에 대해 [**winrt::to_hstring**](/uwp/cpp-ref-for-winrt/to-hstring)도 지원합니다. 문자열화하려는 추가 형식에 대한 오버로드를 추가해야 합니다.
 
-| 외국어 | 정수 문자열화 | 열거형 문자열화 |
+| Language | 정수 문자열화 | 열거형 문자열화 |
 | - | - | - |
 | C++/CX | `String^ result = "hello, " + intValue.ToString();` | `String^ result = "status: " + status.ToString();` |
 | C++/WinRT | `hstring result = L"hello, " + to_hstring(intValue);` | `// must define overload (see below)`<br>`hstring result = L"status: " + to_hstring(status);` |

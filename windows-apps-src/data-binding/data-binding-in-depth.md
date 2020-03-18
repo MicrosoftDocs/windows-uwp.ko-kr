@@ -10,11 +10,11 @@ dev_langs:
 - csharp
 - cppwinrt
 ms.openlocfilehash: 0b54b04f2f36c2661de8baf58d0da1aec75ae590
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683471"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210149"
 ---
 # <a name="data-binding-in-depth"></a>데이터 바인딩 심층 분석
 
@@ -32,7 +32,7 @@ ms.locfileid: "75683471"
 
 데이터 바인딩은 앱의 UI에서 데이터를 표시하고 선택적으로 해당 데이터와 동기화된 상태를 유지하는 하나의 방법입니다. 데이터 바인딩은 데이터 문제를 UI 문제와 분리하여 개념 모델을 간소화하고 앱의 가독성, 테스트 용이성 및 유지 관리성을 향상시킬 수 있도록 해줍니다.
 
-이러한 데이터 바인딩을 사용하여 UI가 처음 표시될 때 데이터 원본 값의 변경에 반응하지 않고 해당 값을 표시하기만 하도록 할 수 있습니다. 이는 *한*번 호출 되는 바인딩의 모드 이며 런타임 중에 변경 되지 않는 값에 적합 합니다. 또는 값을 "관찰" 하 고 변경 될 때 UI를 업데이트 하도록 선택할 수 있습니다. 이 *모드를 단방향 이라고 하며*읽기 전용 데이터에 적합 합니다. 마지막으로 사용자가 UI에서 값을 변경한 경우 해당 값이 데이터 원본에 자동으로 다시 적용되도록 관찰하고 업데이트할 수 있습니다. 이 모드를 *양방향*이라고 하며 읽기/쓰기 데이터에 적합 합니다. 예를 들면 다음과 같습니다.
+이러한 데이터 바인딩을 사용하여 UI가 처음 표시될 때 데이터 원본 값의 변경에 반응하지 않고 해당 값을 표시하기만 하도록 할 수 있습니다. 이는 *한*번 호출 되는 바인딩의 모드 이며 런타임 중에 변경 되지 않는 값에 적합 합니다. 또는 값을 "관찰" 하 고 변경 될 때 UI를 업데이트 하도록 선택할 수 있습니다. 이 *모드를 단방향 이라고 하며*읽기 전용 데이터에 적합 합니다. 마지막으로 사용자가 UI에서 값을 변경한 경우 해당 값이 데이터 원본에 자동으로 다시 적용되도록 관찰하고 업데이트할 수 있습니다. 이 모드를 *양방향*이라고 하며 읽기/쓰기 데이터에 적합 합니다. 다음은 몇 가지 예제입니다.
 
 -   일회성 모드를 사용 하 여 [**이미지**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) 를 현재 사용자의 사진에 바인딩할 수 있습니다.
 -   단방향 모드를 사용 하 여 신문 섹션으로 그룹화 된 실시간 뉴스 문서 모음에 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 를 바인딩할 수 있습니다.
@@ -54,7 +54,7 @@ ms.locfileid: "75683471"
 ## <a name="every-binding-involves-these-pieces"></a>모든 바인딩에 포함된 요소
 
 -   *바인딩 소스*. 바인딩할 데이터의 소스이며, 해당 값을 UI에 표시할 멤버가 있는 모든 클래스의 인스턴스일 수 있습니다.
--   *바인딩 대상*. 데이터를 표시하는 UI에서 [**FrameworkElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement)의 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty)입니다.
+-   *바인딩 대상*. 데이터를 표시하는 UI에서 [**FrameworkElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty)의 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement)입니다.
 -   *바인딩 개체*. 소스에서 대상으로, 그리고 선택적으로 대상에서 다시 소스로 데이터 값을 전송하는 요소입니다. 바인딩 개체는 XAML 로드 시 [{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) 또는 [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) 태그 확장에서 만들어집니다.
 
 다음 섹션에서는 바인딩 소스, 바인딩 대상 및 바인딩 개체에 대해 자세히 알아봅니다. 또한 단추의 콘텐츠를 **HostViewModel**이라는 클래스에 속한 **NextButtonText**라는 문자열 속성에 바인딩하는 예제를 이러한 섹션과 함께 링크합니다.
@@ -224,9 +224,9 @@ public class HostViewModel : BindableBase
 ```
 
 > [!NOTE]
-> /Winrt의 C++경우 기본 클래스에서 파생 되는 응용 프로그램에서 선언 하는 모든 런타임 *클래스를 구성 가능한 클래스 라고* 합니다. 또한 구성 가능 클래스에 관련된 제약 조건이 있습니다. 애플리케이션이 Visual Studio 및 Microsoft Store에서 제출의 유효성 검사에 사용되는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 통과하여 Microsoft Store로 성공적으로 수집되려면 구성 가능 클래스는 기본적으로 Windows 기본 클래스에서 파생되어야 합니다. 즉, 상속 계층 구조의 루트에 있는 클래스는 Windows.* 네임스페이스에서 시작되는 형식이어야 합니다. 기본 클래스에서 런타임 클래스를 파생시켜야 하는 경우(예를 들어 파생시킬 모든 보기 모델에 대한 **BindableBase** 클래스를 구현하려면) [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)에서 파생시킬 수 있습니다.
+> /Winrt의 C++경우 기본 클래스에서 파생 되는 응용 프로그램에서 선언 하는 모든 런타임 *클래스를 구성 가능한 클래스 라고* 합니다. 또한 구성 가능 클래스에 관련된 제약 조건이 있습니다. 애플리케이션이 Visual Studio 및 Microsoft Store에서 제출의 유효성 검사에 사용되는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 통과하여 Microsoft Store로 성공적으로 수집되려면 구성 가능 클래스는 기본적으로 Windows 기본 클래스에서 파생되어야 합니다. 즉, 상속 계층 구조의 루트에 있는 클래스는 Windows.* 네임스페이스에서 시작되는 형식이어야 합니다. 기본 클래스에서 런타임 클래스를 파생시켜야 하는 경우(예를 들어 파생시킬 모든 보기 모델에 대한 &mdash;BindableBase**클래스를 구현하려면)** &mdash;Windows.UI.Xaml.DependencyObject[**에서 파생시킬 수 있습니다.
 
-[  **String.Empty**](https://docs.microsoft.com/dotnet/api/system.string.empty) 또는 **null** 인수를 사용하여 **PropertyChanged** 이벤트를 발생시킨 경우 이는 개체에 대한 모든 비인덱서 속성을 다시 읽어야 함을 나타냅니다. 이벤트를 발생 시켜 개체의 인덱서 속성이 특정 인덱서 (여기서 *인덱서가* 인덱스 값)에 대해 "항목\[*인덱서*\]"의 인수를 사용 하 여 변경 되었거나 모든 인덱서에 대해 "item\[\]"의 값을 사용 하 여 변경 되었음을 나타낼 수 있습니다.
+**** String.Empty[**또는**null](https://docs.microsoft.com/dotnet/api/system.string.empty) 인수를 사용하여 **PropertyChanged** 이벤트를 발생시킨 경우 이는 개체에 대한 모든 비인덱서 속성을 다시 읽어야 함을 나타냅니다. 이벤트를 발생 시켜 개체의 인덱서 속성이 특정 인덱서 (여기서 *인덱서가* 인덱스 값)에 대해 "항목\[*인덱서*\]"의 인수를 사용 하 여 변경 되었거나 모든 인덱서에 대해 "item\[\]"의 값을 사용 하 여 변경 되었음을 나타낼 수 있습니다.
 
 바인딩 소스를 해당 속성에 데이터가 포함된 단일 개체 또는 개체 컬렉션으로 처리할 수 있습니다. C# 및 Visual Basic 코드에서는 런타임에 변경 되지 않는 컬렉션을 표시 하기 위해 [ **(의) 목록을**](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1) 구현 하는 개체에 대 한 일회성 바인딩을 수행할 수 있습니다. 관찰 가능한 컬렉션(컬렉션에서 항목이 추가 및 제거된 경우 관찰)의 경우에는 대신 [**ObservableCollection(Of T)** ](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1)에 단방향으로 바인딩합니다. /Cx C++코드에서 관찰 가능 하 고 관찰 가능 하지 않은 컬렉션 모두에 대해 [**Vector&lt;t&gt;** ](https://docs.microsoft.com/cpp/cppcx/platform-collections-vector-class) 에 바인딩할 수 C++있으며/winrt에는 자체 형식이 있습니다. 사용자 컬렉션 클래스에 바인딩하려면 다음 표의 지침을 따르세요.
 
@@ -420,11 +420,11 @@ void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
 }
 ```
 
-**Path**에 대해 지정한 값에 유의하세요. 이 값은 페이지의 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) 컨텍스트(이 예제에서는 **HostViewModel**의 인스턴스로 설정됨)에서 해석됩니다. 경로는 **HostViewModel.NextButtonText** 속성을 참조합니다. 여기에서는 [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension)의 기본값 단방향이 적용되므로 **Mode**를 생략할 수 있습니다.
+**Path**에 대해 지정한 값에 유의하세요. 이 값은 페이지의 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) 컨텍스트(이 예제에서는 **HostViewModel**의 인스턴스로 설정됨)에서 해석됩니다. 경로는 **HostViewModel.NextButtonText** 속성을 참조합니다. 여기에서는 **{Binding}** 의 기본값 단방향이 적용되므로 [Mode](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension)를 생략할 수 있습니다.
 
 UI 요소에 대한 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext)의 기본값은 해당 부모에서 상속된 값입니다. 물론 기본적으로 자식에서 상속되는 **DataContext**를 명시적으로 설정하여 기본값을 재정의할 수 있습니다. 요소에서 **DataContext**를 명시적으로 설정하는 것은 여러 바인딩에서 동일한 소스를 사용하려는 경우에 유용합니다.
 
-바인딩 개체에는 기본적으로 바인딩이 선언된 UI 요소의 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext)로 설정되는 **Source** 속성이 있습니다. 바인딩에서 **Source**, **RelativeSource** 또는 **ElementName**을 명시적으로 설정하여 이 기본값을 재정의할 수 있습니다(자세한 내용은 [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) 참조).
+바인딩 개체에는 기본적으로 바인딩이 선언된 UI 요소의DataContext[**로 설정되는** Source](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) 속성이 있습니다. 바인딩에서 **Source**, **RelativeSource** 또는 **ElementName**을 명시적으로 설정하여 이 기본값을 재정의할 수 있습니다(자세한 내용은 [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) 참조).
 
 [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)내에서 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) 는 템플릿 기반 데이터 개체에 자동으로 설정 됩니다. 아래 제공된 예제는 **Title** 및 **Description**이라는 문자열 속성이 있는 모든 형식의 컬렉션에 바인딩된 항목 컨트롤의 **ItemTemplate**으로 사용할 수 있습니다.
 
@@ -507,7 +507,7 @@ public class DateToStringConverter : IValueConverter
   Text="{Binding Month, Converter={StaticResource Converter1}}"/>
 ```
 
-바인딩에 대해 [**Converter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converter) 매개 변수가 정의되어 있는 경우 바인딩 엔진은 [**Convert**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter.convert) 및 [**ConvertBack**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter.convertback) 메서드를 호출합니다. 소스에서 데이터가 전달되면 바인딩 엔진은 **Convert**를 호출하고 반환되는 데이터를 대상에 전달합니다. 대상에서 데이터가 전달되면(양방향 바인딩의 경우) 바인딩 엔진은 **ConvertBack**을 호출하고 반환되는 데이터를 소스에 전달합니다.
+바인딩에 대해 [**Converter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter.convert) 매개 변수가 정의되어 있는 경우 바인딩 엔진은 [**Convert**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.ivalueconverter.convertback) 및 [**ConvertBack**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converter) 메서드를 호출합니다. 소스에서 데이터가 전달되면 바인딩 엔진은 **Convert**를 호출하고 반환되는 데이터를 대상에 전달합니다. 대상에서 데이터가 전달되면(양방향 바인딩의 경우) 바인딩 엔진은 **ConvertBack**을 호출하고 반환되는 데이터를 소스에 전달합니다.
 
 변환기는 다음과 같은 선택적 매개 변수를 사용합니다. [**ConverterLanguage**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterlanguage) 매개 변수는 변환에 사용할 언어를 지정하는 데 사용되고, [**ConverterParameter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.converterparameter) 매개 변수는 변환 논리에 대한 매개 변수를 전달하는 데 사용됩니다. 변환기 매개 변수에 대한 사용 예제는 [**IValueConverter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.IValueConverter)를 참조하세요.
 
@@ -616,11 +616,11 @@ Click="{x:Bind RootFrame.GoForward}"/>
 
 오버로드된 메서드는 이 기술을 사용하여 이벤트를 처리하는 데 사용할 수 없습니다. 또한 이벤트를 처리하는 메서드에 매개 변수가 있는 경우 각각 모든 이벤트 매개 변수의 형식에서 할당 가능해야 합니다. 이 경우 [**Frame.GoForward**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.goforward)는 오버로드되지 않고 매개 변수가 없습니다(그러나 두 개의 **object** 매개 변수를 사용한 경우에도 유효함). 그러나 [**Frame. GoBack**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.goback) 은 오버 로드 되지만이 방법으로는 사용할 수 없습니다.
 
-이벤트 바인딩 기술은 명령(명령은 [**ICommand**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) 인터페이스를 구현하는 개체를 반환하는 속성)을 구현하고 사용하는 것과 유사합니다. [{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)와 [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) 둘 다 명령과 함께 작동합니다. 명령 패턴을 여러 번 구현할 필요가 없도록 [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper) 샘플("Common" 폴더)에 있는 **DelegateCommand** 도우미 클래스를 사용할 수 있습니다.
+이벤트 바인딩 기술은 명령(명령은 [**ICommand**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand) 인터페이스를 구현하는 개체를 반환하는 속성)을 구현하고 사용하는 것과 유사합니다. [{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)와 [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) 둘 다 명령과 함께 작동합니다. 명령 패턴을 여러 번 구현할 필요가 없도록 **QuizGame** 샘플("Common" 폴더)에 있는 [DelegateCommand](https://github.com/microsoft/Windows-appsample-networkhelper) 도우미 클래스를 사용할 수 있습니다.
 
 ## <a name="binding-to-a-collection-of-folders-or-files"></a>폴더 또는 파일 컬렉션에 바인딩
 
-[  **Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage) 네임스페이스의 API를 사용하여 폴더 및 파일 데이터를 검색할 수 있습니다. 그러나 다양한 **GetFilesAsync**, **GetFoldersAsync** 및 **GetItemsAsync** 메서드는 목록 컨트롤에 바인딩하기에 적합한 값을 반환하지 않습니다. 대신 [**FileInformationFactory**](https://docs.microsoft.com/uwp/api/Windows.Storage.BulkAccess.FileInformationFactory) 클래스의 [**GetVirtualizedFilesVector**](https://docs.microsoft.com/uwp/api/windows.storage.bulkaccess.fileinformationfactory.getvirtualizedfilesvector), [**GetVirtualizedFoldersVector**](https://docs.microsoft.com/uwp/api/windows.storage.bulkaccess.fileinformationfactory.getvirtualizedfoldersvector) 및 [**GetVirtualizedItemsVector**](https://docs.microsoft.com/uwp/api/windows.storage.bulkaccess.fileinformationfactory.getvirtualizeditemsvector) 메서드의 반환 값에 바인딩해야 합니다. [StorageDataSource 및 GetVirtualizedFilesVector 샘플](https://code.msdn.microsoft.com/windowsapps/Data-source-adapter-sample-3d32e535)의 다음 코드 예제는 일반적인 사용 패턴을 보여 줍니다. 앱 패키지 매니페스트에서 **picturesLibrary** 기능을 선언하고 그림 라이브러리 폴더에 그림이 있는지 확인해야 합니다.
+[  **Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage) 네임스페이스의 API를 사용하여 폴더 및 파일 데이터를 검색할 수 있습니다. 그러나 다양한 **GetFilesAsync**, **GetFoldersAsync** 및 **GetItemsAsync** 메서드는 목록 컨트롤에 바인딩하기에 적합한 값을 반환하지 않습니다. 대신 [**FileInformationFactory**](https://docs.microsoft.com/uwp/api/windows.storage.bulkaccess.fileinformationfactory.getvirtualizedfilesvector) 클래스의 [**GetVirtualizedFilesVector**](https://docs.microsoft.com/uwp/api/windows.storage.bulkaccess.fileinformationfactory.getvirtualizedfoldersvector), [**GetVirtualizedFoldersVector**](https://docs.microsoft.com/uwp/api/windows.storage.bulkaccess.fileinformationfactory.getvirtualizeditemsvector) 및 [**GetVirtualizedItemsVector**](https://docs.microsoft.com/uwp/api/Windows.Storage.BulkAccess.FileInformationFactory) 메서드의 반환 값에 바인딩해야 합니다. [StorageDataSource 및 GetVirtualizedFilesVector 샘플](https://code.msdn.microsoft.com/windowsapps/Data-source-adapter-sample-3d32e535)의 다음 코드 예제는 일반적인 사용 패턴을 보여 줍니다. 앱 패키지 매니페스트에서 **picturesLibrary** 기능을 선언하고 그림 라이브러리 폴더에 그림이 있는지 확인해야 합니다.
 
 ```csharp
 protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -649,7 +649,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 이 기술을 사용한 양방향 바인딩은 음악과 같이 인덱싱된 위치에서만 작동합니다. [  **FolderInformation.GetIndexedStateAsync**](https://docs.microsoft.com/uwp/api/windows.storage.bulkaccess.folderinformation.getindexedstateasync) 메서드를 호출하여 위치가 인덱싱되었는지 여부를 확인할 수 있습니다.
 
-가상화된 벡터는 해당 값을 채우기 전에 일부 항목에 대해 **null**을 반환할 수도 있습니다. 예를 들어 가상화된 벡터에 바인딩된 목록 컨트롤의 [**SelectedItem**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selecteditem) 값을 사용하기 전에 **null**을 확인하거나 [**SelectedIndex**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedindex)를 대신 사용해야 합니다.
+가상화된 벡터는 해당 값을 채우기 전에 일부 항목에 대해 **null**을 반환할 수도 있습니다. 예를 들어 가상화된 벡터에 바인딩된 목록 컨트롤의SelectedItem[**값을 사용하기 전에**null](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selecteditem)을 확인하거나 [**SelectedIndex**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedindex)를 대신 사용해야 합니다.
 
 ## <a name="binding-to-data-grouped-by-a-key"></a>키별로 그룹화된 데이터에 바인딩
 
@@ -663,7 +663,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 - 작성자 이름인 키입니다.
 - 해당 **기관 이름** 속성이 그룹의 키와 일치 하는 **booksku**의 컬렉션입니다.
 
-일반적으로 컬렉션을 표시하려면 항목 컨트롤의 [**ItemsSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource)(예: [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 또는 [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView))를 컬렉션을 반환하는 속성에 직접 바인딩합니다. 항목의 단순 컬렉션이 없는 경우에는 특별히 수행해야 하는 작업이 없습니다. 그러나 그룹화된 데이터에 바인딩하는 경우처럼 그룹 개체의 컬렉션인 경우 항목 컨트롤과 바인딩 소스 사이에 있는 [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)라는 중간 개체의 서비스가 필요합니다. **CollectionViewSource**를 그룹화된 데이터를 반환하는 속성에 바인딩하고, 항목 컨트롤을 **CollectionViewSource**에 바인딩합니다. **CollectionViewSource**의 추가적인 부가 가치는 현재 항목을 추적하므로 둘 이상의 항목 컨트롤을 모두 동일한 **CollectionViewSource**에 바인딩하여 동기화된 상태로 유지할 수 있다는 점입니다. 또한 [**CollectionViewSource.View**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.collectionviewsource.view) 속성에서 반환되는 개체의 [**ICollectionView.CurrentItem**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.icollectionview.currentitem) 속성을 통해 현재 항목에 프로그래밍 방식으로 액세스할 수 있습니다.
+일반적으로 컬렉션을 표시하려면 항목 컨트롤의 [**ItemsSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource)(예: [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 또는 [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView))를 컬렉션을 반환하는 속성에 직접 바인딩합니다. 항목의 단순 컬렉션이 없는 경우에는 특별히 수행해야 하는 작업이 없습니다. 그러나 그룹화된 데이터에 바인딩하는 경우처럼 그룹 개체의 컬렉션인 경우 항목 컨트롤과 바인딩 소스 사이에 있는 [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)라는 중간 개체의 서비스가 필요합니다. **CollectionViewSource**를 그룹화된 데이터를 반환하는 속성에 바인딩하고, 항목 컨트롤을 **CollectionViewSource**에 바인딩합니다. **CollectionViewSource**의 추가적인 부가 가치는 현재 항목을 추적하므로 둘 이상의 항목 컨트롤을 모두 동일한 **CollectionViewSource**에 바인딩하여 동기화된 상태로 유지할 수 있다는 점입니다. 또한 [**CollectionViewSource.View**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.icollectionview.currentitem) 속성에서 반환되는 개체의 [**ICollectionView.CurrentItem**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.collectionviewsource.view) 속성을 통해 현재 항목에 프로그래밍 방식으로 액세스할 수 있습니다.
 
 [  **CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)의 그룹화 기능을 활성화하려면 [**IsSourceGrouped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.collectionviewsource.issourcegrouped)를 **true**로 설정합니다. [  **ItemsPath**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.collectionviewsource.itemspath) 속성을 설정해야 하는지 여부는 정확히 그룹 개체를 작성하는 방법에 따라 결정됩니다. 그룹 개체를 작성하는 방법에는 "is-a-group" 패턴과 "has-a-group" 패턴의 두 가지 방법이 있습니다. "is-a-group" 패턴에서는 그룹 개체가 컬렉션 형식(예: **List&lt;T&gt;** )에서 파생되므로 실제로 그룹 개체는 항목 그룹 자체입니다. 이 패턴을 사용하면 **ItemsPath**를 설정하지 않아도 됩니다. "has-a-group" 패턴에서는 그룹 개체가 하나 이상의 컬렉션 형식(예: **List&lt;T&gt;** ) 속성을 가지므로 그룹에 속성 형식의 항목 그룹 "하나가 있습니다"(또는 여러 속성 형식의 여러 항목 그룹). 이 패턴을 사용하면 **ItemsPath**를 항목 그룹을 포함하는 속성 이름으로 설정해야 합니다.
 
@@ -805,7 +805,7 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | 경로가 기본 속성 | `{x:Bind a.b.c}` | `{Binding a.b.c}` | | 
 | 속성 경로 | `{x:Bind Path=a.b.c}` | `{Binding Path=a.b.c}` | x:Bind에서는 경로의 루트가 기본적으로 DataContext가 아니라 Page에서 지정됩니다. | 
 | 인덱서 | `{x:Bind Groups[2].Title}` | `{Binding Groups[2].Title}` | 컬렉션의 지정된 항목에 바인딩됩니다. 정수 기반 인덱스만 지원됩니다. | 
-| 연결된 속성 | `{x:Bind Button22.(Grid.Row)}` | `{Binding Button22.(Grid.Row)}` | 연결된 속성은 괄호 안에 지정됩니다. XAML 네임스페이스에서 속성이 선언되지 않은 경우 문서 헤드의 코드 네임스페이스에 매핑되어야 하는 xml 네임스페이스를 접두사로 사용합니다. | 
+| 연결 된 속성 | `{x:Bind Button22.(Grid.Row)}` | `{Binding Button22.(Grid.Row)}` | 연결된 속성은 괄호 안에 지정됩니다. XAML 네임스페이스에서 속성이 선언되지 않은 경우 문서 헤드의 코드 네임스페이스에 매핑되어야 하는 xml 네임스페이스를 접두사로 사용합니다. | 
 | 캐스팅 | `{x:Bind groups[0].(data:SampleDataGroup.Title)}` | 필요하지 않습니다. | 캐스트는 괄호 안에 지정됩니다. XAML 네임스페이스에서 속성이 선언되지 않은 경우 문서 헤드의 코드 네임스페이스에 매핑되어야 하는 xml 네임스페이스를 접두사로 사용합니다. | 
 | 변환기 | `{x:Bind IsShown, Converter={StaticResource BoolToVisibility}}` | `{Binding IsShown, Converter={StaticResource BoolToVisibility}}` | 변환기는 Page/ResourceDictionary 또는 App.xaml에서 선언해야 합니다. | 
 | ConverterParameter, ConverterLanguage | `{x:Bind IsShown, Converter={StaticResource BoolToVisibility}, ConverterParameter=One, ConverterLanguage=fr-fr}` | `{Binding IsShown, Converter={StaticResource BoolToVisibility}, ConverterParameter=One, ConverterLanguage=fr-fr}` | 변환기는 Page/ResourceDictionary 또는 App.xaml에서 선언해야 합니다. | 
@@ -814,7 +814,7 @@ MyTextBox.SetBinding(TextBox.ForegroundProperty, binding)
 | ElementName | `{x:Bind slider1.Value}` | `{Binding Value, ElementName=slider1}` | {x:Bind}를 사용하면 필드에 바인딩됩니다. 경로의 루트가 기본적으로 Page에서 지정되므로 해당 필드를 통해 모든 명명된 요소에 액세스할 수 있습니다. | 
 | RelativeSource: Self | `<Rectangle x:Name="rect1" Width="200" Height="{x:Bind rect1.Width}" ... />` | `<Rectangle Width="200" Height="{Binding Width, RelativeSource={RelativeSource Self}}" ... />` | {x:Bind}를 사용하는 경우 요소의 이름을 지정하고 경로에서 해당 이름을 사용합니다. | 
 | RelativeSource: TemplatedParent | 필요하지 않음 | `{Binding <path>, RelativeSource={RelativeSource TemplatedParent}}` | ControlTemplate에 대 한 {x:Bind} TargetType은 템플릿 부모에 대 한 바인딩을 나타냅니다. For {Binding}의 경우 대부분의 용도로 컨트롤 템플릿에서 일반 템플릿 바인딩을 사용할 수 있습니다. 하지만 변환기 또는 양방향 바인딩을 사용해야 하는 경우 TemplatedParent를 사용합니다.&lt; | 
-| 소스 | 필요하지 않음 | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | {X:Bind}의 경우 명명 된 요소를 직접 사용할 수 있으며 속성 또는 정적 경로를 사용할 수 있습니다. | 
+| 원본 | 필요하지 않음 | `<ListView ItemsSource="{Binding Orders, Source={StaticResource MyData}}"/>` | {X:Bind}의 경우 명명 된 요소를 직접 사용할 수 있으며 속성 또는 정적 경로를 사용할 수 있습니다. | 
 | 모드 | `{x:Bind Name, Mode=OneWay}` | `{Binding Name, Mode=TwoWay}` | 모드는 OneTime, OneWay 또는 TwoWay일 수 있습니다. {x:Bind} defaults to OneTime; {Binding} defaults to OneWay. | 
 | UpdateSourceTrigger | `{x:Bind Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}` | `{Binding UpdateSourceTrigger=PropertyChanged}` | UpdateSourceTrigger가 Default, LostFocus, 또는 PropertyChanged가 될 수 있습니다. {x:Bind}는 UpdateSourceTrigger=Explicit를 지원하지 않습니다. {x:Bind}에서는 LostFocus 동작을 사용하는 TextBox.Text를 제외한 모든 경우에 PropertyChanged 동작을 사용합니다. | 
 

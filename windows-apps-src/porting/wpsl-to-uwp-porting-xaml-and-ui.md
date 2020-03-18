@@ -7,11 +7,11 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 29357746b6fca2c6aae52e9516a5b7dc2fca8ef2
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684627"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79210639"
 ---
 #  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>Windows Phone Silverlight XAML 및 UI를 UWP로 포팅
 
@@ -23,21 +23,21 @@ ms.locfileid: "75684627"
 
 ## <a name="a-first-look-at-the-xaml-markup"></a>XAML 태그 살펴보기
 
-이전 항목에서는 XAML 및 코드 숨겨진 파일을 새 Windows 10 Visual Studio 프로젝트에 복사 하는 방법을 살펴보았습니다. Visual Studio XAML 디자이너에서 가장 두드러지는 문제 중 하나로 XAML 파일의 루트에 있는 `PhoneApplicationPage` 요소가 UWP(유니버설 Windows 플랫폼) 프로젝트에 적합하지 않습니다. 이전 항목에서는 Windows 10 프로젝트를 만들 때 Visual Studio에서 생성 한 XAML 파일의 복사본을 저장 했습니다. MainPage.xaml의 해당 버전을 열면 [**Windows.UI.Xaml.Controls**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls) 네임스페이스에 있는 [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) 형식이 루트에 표시됩니다. 따라서 모든 `<phone:PhoneApplicationPage>` 요소를 `<Page>`로 변경하고(속성 요소 구문을 기억해야 함) `xmlns:phone` 선언을 삭제할 수 있습니다.
+이전 항목에서는 XAML 및 코드 숨겨진 파일을 새 Windows 10 Visual Studio 프로젝트에 복사 하는 방법을 살펴보았습니다. Visual Studio XAML 디자이너에서 가장 두드러지는 문제 중 하나로 XAML 파일의 루트에 있는 `PhoneApplicationPage` 요소가 UWP(유니버설 Windows 플랫폼) 프로젝트에 적합하지 않습니다. 이전 항목에서는 Windows 10 프로젝트를 만들 때 Visual Studio에서 생성 한 XAML 파일의 복사본을 저장 했습니다. MainPage.xaml의 해당 버전을 열면 [**Windows.UI.Xaml.Controls**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) 네임스페이스에 있는 [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls) 형식이 루트에 표시됩니다. 따라서 모든 `<phone:PhoneApplicationPage>` 요소를 `<Page>`로 변경하고(속성 요소 구문을 기억해야 함) `xmlns:phone` 선언을 삭제할 수 있습니다.
 
 Windows Phone Silverlight 형식에 해당 하는 UWP 형식을 검색 하는 일반적인 방법은 [네임 스페이스 및 클래스 매핑을](wpsl-to-uwp-namespace-and-class-mappings.md)참조할 수 있습니다.
 
 ## <a name="xaml-namespace-prefix-declarations"></a>XAML 네임스페이스 접두사 선언
 
 
-보기에서 사용자 지정 형식의 인스턴스(예: 보기 모델 인스턴스 또는 값 변환기)를 사용하는 경우 XAML 태그에 XAML 네임스페이스 접두사 선언이 있습니다. 이러한 구문은 Windows Phone Silverlight와 UWP 사이에서 다릅니다. 예를 들면 다음과 같습니다.
+보기에서 사용자 지정 형식의 인스턴스(예: 보기 모델 인스턴스 또는 값 변환기)를 사용하는 경우 XAML 태그에 XAML 네임스페이스 접두사 선언이 있습니다. 이러한 구문은 Windows Phone Silverlight와 UWP 사이에서 다릅니다. 다음은 몇 가지 예입니다.
 
 ```xml
     xmlns:ContosoTradingCore="clr-namespace:ContosoTradingCore;assembly=ContosoTradingCore"
     xmlns:ContosoTradingLocal="clr-namespace:ContosoTradingLocal"
 ```
 
-"clr-namespace"를 "using"으로 변경하고 어셈블리 토큰과 세미콜론을 삭제합니다(어셈블리가 유추됨). 결과는 다음과 같습니다.
+"clr-namespace"를 "using"으로 변경하고 어셈블리 토큰과 세미콜론을 삭제합니다(어셈블리가 유추됨). 결과 다음과 같습니다.
 
 ```xml
     xmlns:ContosoTradingCore="using:ContosoTradingCore"
@@ -84,7 +84,7 @@ Windows 10 앱은 각자의 화면 크기와 해상도를 포함 하 여 다양 
 
 ## <a name="alarms-and-reminders"></a>알람 및 미리 알림
 
-[  **BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 클래스를 사용하여 백그라운드 작업을 만들어 등록하고 해당 시간에 알림을 표시하려면 **Alarm** 또는 **Reminder** 클래스를 사용하는 코드를 포팅해야 합니다. [후순위 처리](wpsl-to-uwp-business-and-data.md) 및 [알림](#toasts)을 참조하세요.
+**** BackgroundTaskBuilder 클래스를 사용하여 백그라운드 작업을 만들어 등록하고 해당 시간에 알림을 표시하려면 [Alarm**또는**Reminder](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 클래스를 사용하는 코드를 포팅해야 합니다. [후순위 처리](wpsl-to-uwp-business-and-data.md) 및 [알림](#toasts)을 참조하세요.
 
 ## <a name="animation"></a>애니메이션
 
@@ -94,7 +94,7 @@ UWP 앱에서 키 프레임 애니메이션 또는 시작/종료 애니메이션
 
 ## <a name="back-button-handling"></a>뒤로 단추 처리
 
-Windows 10 앱에서는 한 가지 방법을 사용 하 여 뒤로 단추를 처리할 수 있습니다. 그러면 모든 장치에서 작동 합니다. 모바일 장치에서는 단추가 장치의 용량성 단추로 또는 셸의 단추로 제공됩니다. 데스크톱 장치에서는 앱 내에서 뒤로 탐색이 가능할 때마다 앱의 크롬에 단추를 추가합니다. 그러면 해당 단추는 태블릿 모드의 작업 표시줄에 또는 창으로 표시된 앱의 제목 표시줄에 표시됩니다. 뒤로 단추 이벤트는 모든 디바이스 패밀리에서 범용 개념이며, 하드웨어 또는 소프트웨어에서 구현된 단추는 동일한 [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.backrequested) 이벤트를 발생시킵니다.
+Windows 10 앱에서는 한 가지 방법을 사용 하 여 뒤로 단추를 처리할 수 있습니다. 그러면 모든 장치에서 작동 합니다. 모바일 디바이스에서는 단추가 디바이스의 용량성 단추로 또는 셸의 단추로 제공됩니다. 데스크톱 디바이스에서는 앱 내에서 뒤로 탐색이 가능할 때마다 앱의 크롬에 단추를 추가합니다. 그러면 해당 단추는 태블릿 모드의 작업 표시줄에 또는 창으로 표시된 앱의 제목 표시줄에 표시됩니다. 뒤로 단추 이벤트는 모든 디바이스 패밀리에서 범용 개념이며, 하드웨어 또는 소프트웨어에서 구현된 단추는 동일한 [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.backrequested) 이벤트를 발생시킵니다.
 
 아래 예제는 모든 디바이스 패밀리에서 작동하며, 동일한 처리가 모든 페이지에 적용되고 확인 탐색(예: 저장되지 않은 변경에 대한 경고)이 필요 없는 경우에 적합합니다.
 
@@ -187,7 +187,7 @@ UWP 앱에서 ms-appx[URI 체계](https://docs.microsoft.com/previous-versions/w
 
 Windows Phone Silverlight 앱은 **Microsoft 휴대폰. controls** **네임 스페이스 및 system.xml 네임 스페이스** 에 정의 된 컨트롤을 사용 합니다. XAML UWP 앱은 [**Windows.UI.Xaml.Controls**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls) 네임스페이스에 정의된 컨트롤을 사용합니다. UWP의 XAML 컨트롤 아키텍처와 디자인은 Silverlight 컨트롤 Windows Phone 거의 동일 합니다. 하지만 사용 가능한 컨트롤 집합을 개선하고 Windows 앱과 통합하기 위해 일부를 변경했습니다. 다음은 구체적인 예입니다.
 
-| 컨트롤 이름 | Change(영문) |
+| 컨트롤 이름 | 변경 |
 |--------------|--------|
 | ApplicationBar | [Page.TopAppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.topappbar) 속성입니다. |
 | ApplicationBarIconButton | 해당하는 UWP 속성은 [Glyph](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon.glyph) 속성입니다. PrimaryCommands는 CommandBar의 콘텐츠 속성입니다. XAML 파서는 요소의 내부 xml을 해당 콘텐츠 속성의 값으로 해석합니다. |
@@ -219,9 +219,9 @@ Windows Phone Silverlight 앱은 **CultureInfo** 클래스를 사용 하 여 앱
 
 UWP 미디어 및 그래픽을 참조할 때 그래픽 복잡성, 혼란 등과 같은 불필요한 항목을 대폭 줄이는 것이 Windows 디자인 원칙입니다. Windows 디자인은 일반적으로 시각 효과, 서체, 동작 등이 선명하고 명확합니다. 앱에서 동일한 원칙을 따를 경우 기본 제공 앱처럼 보입니다.
 
-Windows Phone Silverlight에는 다른 [**브러시**](/uwp/api/Windows.UI.Xaml.Media.Brush) 형식이 있지만 UWP에 없는 **RadialGradientBrush** 형식이 있습니다. 경우에 따라 비트맵으로 비슷한 효과를 얻을 수 있습니다. [Microsoft DirectX](https://docs.microsoft.com/windows/desktop/directx) 및 XAML C++ UWP에서 Direct2D를 사용하여 [방사형 그라데이션 브러시](https://docs.microsoft.com/windows/desktop/Direct2D/how-to-create-a-radial-gradient-brush)를 만들 수 있습니다.
+Windows Phone Silverlight에는 다른 [**브러시**](/uwp/api/Windows.UI.Xaml.Media.Brush) 형식이 있지만 UWP에 없는 **RadialGradientBrush** 형식이 있습니다. 경우에 따라 비트맵으로 비슷한 효과를 얻을 수 있습니다. [Microsoft DirectX](https://docs.microsoft.com/windows/desktop/Direct2D/how-to-create-a-radial-gradient-brush) 및 XAML C++ UWP에서 Direct2D를 사용하여 [방사형 그라데이션 브러시](https://docs.microsoft.com/windows/desktop/directx)를 만들 수 있습니다.
 
-Windows Phone Silverlight에 **OpacityMask** 속성이 있지만이 속성은 UWP [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 형식의 멤버가 아닙니다 (). 경우에 따라 비트맵으로 비슷한 효과를 얻을 수 있습니다. [Microsoft DirectX](https://docs.microsoft.com/windows/desktop/directx) 및 XAML C++ UWP 앱에서 Direct2D를 사용하여 [방사형 불투명 마스크](https://docs.microsoft.com/windows/desktop/Direct2D/opacity-masks-overview)를 만들 수 있습니다. 하지만 **OpacityMask**의 일반 사용 사례는 밝은 테마와 어두운 테마 모두에 맞게 조정되는 단일 비트맵을 사용하는 것입니다. 벡터 그래픽의 경우 테마 인식 시스템 브러시(예: 아래 그림의 원형 차트)를 사용할 수 있습니다. 하지만 테마 인식 비트맵(예: 아래 그림의 확인 표시)을 만들려면 다른 방식으로 접근해야 합니다.
+Windows Phone Silverlight에 **OpacityMask** 속성이 있지만이 속성은 UWP [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 형식의 멤버가 아닙니다 (). 경우에 따라 비트맵으로 비슷한 효과를 얻을 수 있습니다. [Microsoft DirectX](https://docs.microsoft.com/windows/desktop/Direct2D/opacity-masks-overview) 및 XAML C++ UWP 앱에서 Direct2D를 사용하여 [방사형 불투명 마스크](https://docs.microsoft.com/windows/desktop/directx)를 만들 수 있습니다. 하지만 **OpacityMask**의 일반 사용 사례는 밝은 테마와 어두운 테마 모두에 맞게 조정되는 단일 비트맵을 사용하는 것입니다. 벡터 그래픽의 경우 테마 인식 시스템 브러시(예: 아래 그림의 원형 차트)를 사용할 수 있습니다. 하지만 테마 인식 비트맵(예: 아래 그림의 확인 표시)을 만들려면 다른 방식으로 접근해야 합니다.
 
 ![테마 인식 비트맵](images/wpsl-to-uwp-case-studies/wpsl-to-uwp-theme-aware-bitmap.png)
 
@@ -257,7 +257,7 @@ Windows Phone Silverlight에서 **UIElement** 속성은 **기** 하 도형을 �
     </UIElement.Clip>
 ```
 
-[Microsoft DirectX](https://docs.microsoft.com/windows/desktop/directx) 및 XAML C++ UWP 앱에서 Direct2D를 통해 [임의 기하 도형을 계층의 마스크로 사용](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-layers-overview)할 수 있습니다.
+[Microsoft DirectX](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-layers-overview) 및 XAML C++ UWP 앱에서 Direct2D를 통해 [임의 기하 도형을 계층의 마스크로 사용](https://docs.microsoft.com/windows/desktop/directx)할 수 있습니다.
 
 ## <a name="navigation"></a>탐색
 
@@ -297,7 +297,7 @@ URI 매핑 및 조각 탐색은 URI 탐색 기술이므로 URI를 기반으로 �
 
 ## <a name="resource-key-reference"></a>리소스 키 참조
 
-디자인 언어가 Windows 10에서 진화 하 고 결과적으로 특정 시스템 스타일이 변경 되었으며 많은 시스템 리소스 키가 제거 되거나 이름이 바뀌었습니다. Visual Studio의 XAML 태그 편집기는 확인할 수 없는 리소스 키에 대한 참조를 강조 표시합니다. 예를 들어 XAML 태그 편집기에서는 스타일 키 `PhoneTextNormalStyle`에 대한 참조에 빨간색 구부러진 곡선으로 밑줄을 표시합니다. 문제가 수정되지 않은 경우 해당 키를 에뮬레이터 또는 장치에 배포하려고 하면 앱이 즉시 종료됩니다. 따라서 XAML 태그가 정확한지 유의해야 합니다. Visual Studio는 이러한 문제를 식별하는 데 유용한 도구입니다.
+디자인 언어가 Windows 10에서 진화 하 고 결과적으로 특정 시스템 스타일이 변경 되었으며 많은 시스템 리소스 키가 제거 되거나 이름이 바뀌었습니다. Visual Studio의 XAML 태그 편집기는 확인할 수 없는 리소스 키에 대한 참조를 강조 표시합니다. 예를 들어 XAML 태그 편집기에서는 스타일 키 `PhoneTextNormalStyle`에 대한 참조에 빨간색 구부러진 곡선으로 밑줄을 표시합니다. 문제가 수정되지 않은 경우 해당 키를 에뮬레이터 또는 디바이스에 배포하려고 하면 앱이 즉시 종료됩니다. 따라서 XAML 태그가 정확한지 유의해야 합니다. Visual Studio는 이러한 문제를 식별하는 데 유용한 도구입니다.
 
 또한 아래 [텍스트](#text)를 참조하세요.
 
@@ -305,7 +305,7 @@ URI 매핑 및 조각 탐색은 URI 탐색 기술이므로 URI를 기반으로 �
 
 XAML 태그에 `shell:SystemTray.IsVisible`로 설정되는 시스템 트레이를 상태 표시줄이라고 합니다. 시스템 트레이는 기본적으로 표시됩니다. [  **Windows.UI.ViewManagement.StatusBar.ShowAsync**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.statusbar.showasync) 및 [**HideAsync**](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.statusbar.hideasync) 메서드를 호출하여 명령적 코드에서 표시 여부를 제어할 수 있습니다.
 
-## <a name="text"></a>텍스트
+## <a name="text"></a>Text
 
 텍스트(또는 입력 체계)는 UWP 앱의 중요한 측면이며, 포팅하는 동안 보기가 새 디자인 언어와 조화를 이루도록 보기의 시각적 디자인을 다시 검토할 수 있습니다. 다음 그림을 사용하여 사용 가능한 UWP  **TextBlock** 시스템 스타일을 찾을 수 있습니다. 사용한 Windows Phone Silverlight 스타일에 해당 하는 항목을 찾습니다. 또는 고유한 범용 스타일을 만들고 Windows Phone Silverlight 시스템 스타일에서 해당 속성을 복사할 수 있습니다.
 
@@ -364,11 +364,11 @@ UWP 해당 버전:
 
 Windows Phone Silverlight 앱 및 Windows 10 앱은 UI 요소의 크기와 레이아웃을 실제 물리적 크기 및 해상도에서 벗어나 추상화 하는 방식에 차이가 있습니다. Windows Phone Silverlight 앱은 보기 픽셀을 사용 하 여이 작업을 수행 합니다. Windows 10에서 보기 픽셀의 개념은 효과적인 픽셀의 개념으로 구체화 되었습니다. 다음은 해당 용어에 대한 설명, 해당 용어의 의미, 이 개념이 제공하는 추가적인 가치입니다.
 
-“해상도”라는 용어는 일반적으로 생각하는 픽셀 수가 아닌 픽셀 밀도 기준을 의미합니다. “유효 해상도”는 장치의 가시거리와 물리적 픽셀 크기의 차이를 고려하여 이미지 또는 문자 모양을 구성하는 물리적 픽셀 수를 눈으로 확인할 수 있는 방법입니다(픽셀 밀도는 물리적 픽셀 크기의 역). 유효 해상도는 사용자 중심이므로 환경을 구축하는 데 유용한 메트릭입니다. 모든 요소를 이해하고 UI 요소의 크기를 제어하여 유용한 사용자 환경을 구축할 수 있습니다.
+“해상도”라는 용어는 일반적으로 생각하는 픽셀 수가 아닌 픽셀 밀도 기준을 의미합니다. “유효 해상도”는 디바이스의 가시거리와 물리적 픽셀 크기의 차이를 고려하여 이미지 또는 문자 모양을 구성하는 물리적 픽셀 수를 눈으로 확인할 수 있는 방법입니다(픽셀 밀도는 물리적 픽셀 크기의 역). 유효 해상도는 사용자 중심이므로 환경을 구축하는 데 유용한 메트릭입니다. 모든 요소를 이해하고 UI 요소의 크기를 제어하여 유용한 사용자 환경을 구축할 수 있습니다.
 
 Windows Phone Silverlight 앱에는 화면에 표시 되는 실제 픽셀 수와 픽셀 밀도 또는 실제 크기에 관계 없이 모든 전화 화면이 정확 하 게 480 보기 픽셀 너비입니다. 즉, `Width="48"` 있는 **이미지** 요소는 Windows Phone Silverlight 앱을 실행할 수 있는 모든 휴대폰 화면 너비의 1/10이 됩니다.
 
-Windows 10 앱의 경우 모든 장치가 고정 된 유효 픽셀 수의 일부는 *아닙니다* . UWP 앱을 실행할 수 있는 다양한 장치를 고려할 때 이는 당연합니다. 장치마다 유효 픽셀 수가 다릅니다. 가장 작은 장치의 경우 320epx에서부터 중간 크기 모니터의 경우 최대 1024epx 이상의 상당한 너비에 이르기까지 다양합니다. 기존과 마찬가지로 자동 크기 조정 요소 및 동적 레이아웃 패널을 계속 사용할 수 있습니다. XAML 태그에서 고정 크기로 UI 요소의 속성을 설정할 수 있는 경우가 몇 가지 있습니다. 배율 인수는 앱이 실행되는 장치와 사용자가 지정한 디스플레이 설정에 따라 앱에 자동으로 적용됩니다. 또한 배율 인수는 고정 크기의 모든 UI 요소를 유지하여 다양한 화면 크기에서 사용자에게 거의 일정한 크기의 터치(및 읽기) 대상을 제공하는 역할을 합니다. 또한 동적 레이아웃과 함께 사용되면서 장치에 따라 UI의 크기를 광학적으로 조정하는 것이 아니라 사용 가능한 공간에 적절한 콘텐츠 양을 맞추기 위해 필요한 작업을 수행합니다.
+Windows 10 앱의 경우 모든 장치가 고정 된 유효 픽셀 수의 일부는 *아닙니다* . UWP 앱을 실행할 수 있는 다양한 디바이스를 고려할 때 이는 당연합니다. 디바이스마다 유효 픽셀 수가 다릅니다. 가장 작은 디바이스의 경우 320epx에서부터 중간 크기 모니터의 경우 최대 1024epx 이상의 상당한 너비에 이르기까지 다양합니다. 기존과 마찬가지로 자동 크기 조정 요소 및 동적 레이아웃 패널을 계속 사용할 수 있습니다. XAML 태그에서 고정 크기로 UI 요소의 속성을 설정할 수 있는 경우가 몇 가지 있습니다. 배율 인수는 앱이 실행되는 디바이스와 사용자가 지정한 디스플레이 설정에 따라 앱에 자동으로 적용됩니다. 또한 배율 인수는 고정 크기의 모든 UI 요소를 유지하여 다양한 화면 크기에서 사용자에게 거의 일정한 크기의 터치(및 읽기) 대상을 제공하는 역할을 합니다. 또한 동적 레이아웃과 함께 사용되면서 디바이스에 따라 UI의 크기를 광학적으로 조정하는 것이 아니라 사용 가능한 공간에 적절한 콘텐츠 양을 맞추기 위해 필요한 작업을 수행합니다.
 
 480는 일반적으로 휴대폰 크기의 화면에 대 한 보기 픽셀의 고정 너비 이며, 해당 값은 일반적으로 유효 픽셀에서 더 작으므로 Windows Phone Silverlight 앱 태그의 모든 차원을 0.8의 요소에 곱합니다.
 
@@ -378,7 +378,7 @@ Windows 10 앱의 경우 모든 장치가 고정 된 유효 픽셀 수의 일부
 
 복잡한 아트워크가 있으면 훨씬 더 큰 크기로 자산을 제공할 수 있습니다. 벡터 아트를 시작하면 모든 배율에서 고품질의 자산을 생성하기가 비교적 쉽습니다.
 
-모든 크기 조정 요인을 지원 하지 않는 것이 좋지만 Windows 10 앱에 대 한 크기 조정 요소의 전체 목록은 100%, 125%, 150%, 200%, 250%, 300% 및 400%입니다. 여러 배율의 자산을 제공하면 스토어에서 각 장치에 맞는 올바른 크기의 자산을 선택하고 해당 자산만 다운로드됩니다. 스토어에서 장치의 DPI에 따라 다운로드할 자산을 선택합니다.
+모든 크기 조정 요인을 지원 하지 않는 것이 좋지만 Windows 10 앱에 대 한 크기 조정 요소의 전체 목록은 100%, 125%, 150%, 200%, 250%, 300% 및 400%입니다. 여러 배율의 자산을 제공하면 스토어에서 각 디바이스에 맞는 올바른 크기의 자산을 선택하고 해당 자산만 다운로드됩니다. 스토어에서 디바이스의 DPI에 따라 다운로드할 자산을 선택합니다.
 
 자세한 내용은 [UWP 앱용 반응형 디자인 101](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design)을 참조하세요.
 

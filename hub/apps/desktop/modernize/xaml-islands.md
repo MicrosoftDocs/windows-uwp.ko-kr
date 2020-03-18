@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 96705faff278c4cab31e0ab271bc31d08261401b
-ms.sourcegitcommit: 1455e12a50f98823bfa3730c1d90337b1983b711
+ms.openlocfilehash: 061ad7a3f63fc92dd2f865f8870c7de5edf862af
+ms.sourcegitcommit: 756217c559155e172087dee4d762d328c6529db6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76814013"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78935352"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>데스크톱 앱에서 UWP XAML 컨트롤 호스트(XAML Islands)
 
@@ -53,7 +53,7 @@ WPF 및 Windows Forms 애플리케이션은 특정 UWP 컨트롤의 인터페이
 
 ### <a name="host-controls"></a>호스트 컨트롤
 
-사용 가능한 래핑된 컨트롤이 적용되지 않는 시나리오의 경우 WPF 및 Windows Forms 애플리케이션이 Windows 커뮤니티 도구 키트에 제공되는 [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용할 수도 있습니다.
+사용 가능한 래핑된 컨트롤에서 다루지 않는 사용자 지정 컨트롤 및 기타 시나리오의 경우 WPF 및 Windows Forms 애플리케이션은 Windows 커뮤니티 도구 키트에서 제공되는 [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용할 수도 있습니다.
 
 | 컨트롤 | 지원되는 최소 OS | 설명 |
 |-----------------|-------------------------------|-------------|
@@ -81,16 +81,6 @@ XAML Island .NET 컨트롤을 사용하려면 Windows 10, 버전 1903 이상 버
 
 * 사용자 지정 UWP 컨트롤을 호스트하는 경우 WPF 또는 Windows Forms 프로젝트가 .NET Core 3를 대상으로 해야 합니다. 사용자 지정 UWP 컨트롤 호스트는 .NET Framework를 대상으로 하는 앱에서 지원되지 않습니다. 또한 사용자 지정 컨트롤을 참조하려면 몇 가지 추가 단계를 수행해야 합니다. 자세한 내용은 [XAML Island를 사용하여 WPF 앱에서 사용자 지정 UWP 컨트롤 호스트](host-custom-control-with-xaml-islands.md)를 참조하세요.
 
-* 이러한 지침의 이전 버전에서는 WPF 또는 Windows Forms 프로젝트의 애플리케이션 매니페스트에 `maxversiontested` 요소를 추가했습니다. 위에 나열된 최신 버전의 NuGet 패키지를 사용하는 동안에는 이 요소를 매니페스트에 더 이상 추가할 필요가 없습니다.
-
-### <a name="architecture-of-xaml-island-net-controls"></a>XAML Island .NET 컨트롤의 아키텍처
-
-UWP XAML 호스팅 API를 기반으로 다양한 유형의 XAML Island 컨트롤의 아키텍처를 구성하는 방법을 간략히 살펴보겠습니다.
-
-![호스트 컨트롤 아키텍처](images/xaml-islands/host-controls.png)
-
-이 다이어그램 맨 아래에 표시되는 API는 Windows SDK와 함께 제공됩니다. 래핑된 컨트롤과 호스트 컨트롤은 Windows 커뮤니티 도구 키트의 NuGet 패키지를 통해 사용할 수 있습니다.
-
 ### <a name="web-view-controls"></a>웹 보기 컨트롤
 
 Windows 커뮤니티 도구 키트는 WPF 및 Windows Forms 애플리케이션에서 웹 콘텐츠를 호스트하는 데 필요한 다음과 같은 .NET 컨트롤도 제공합니다. 이러한 컨트롤은 XAML Island 컨트롤과 유사한 데스크톱 앱 현대화 시나리오에서 종종 사용되며, XAML Island 컨트롤과 동일한 [Microsoft.Toolkit.Win32 리포지토리](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32)에서 유지 관리됩니다.
@@ -113,6 +103,33 @@ UWP XAML 호스팅 API는 C++ Win32 애플리케이션이 [Windows.UI.Xaml.UIEle
 
 > [!NOTE]
 > Windows 커뮤니티 도구 키트의 래핑된 컨트롤 및 호스트 컨트롤은 내부적으로 UWP XAML 호스팅 API를 사용하고, 사용자가 UWP XAML 호스팅 API를 직접 사용한 경우 키보드 탐색 및 레이아웃 변경을 포함하여 직접 처리해야 하는 모든 동작을 구현합니다. WPF 및 Windows Forms 애플리케이션의 경우 API 사용에 대한 많은 구현 세부 정보를 추상화하므로 UWP XAML 호스팅 API를 직접 사용하는 대신 이러한 컨트롤을 사용하는 것이 좋습니다.
+
+## <a name="architecture-of-xaml-islands"></a>XAML 아일랜드의 아키텍처
+
+UWP XAML 호스팅 API를 기반으로 다양한 유형의 XAML Island 컨트롤의 아키텍처를 구성하는 방법을 간략히 살펴보겠습니다.
+
+![호스트 컨트롤 아키텍처](images/xaml-islands/host-controls.png)
+
+이 다이어그램 맨 아래에 표시되는 API는 Windows SDK와 함께 제공됩니다. 래핑된 컨트롤과 호스트 컨트롤은 Windows 커뮤니티 도구 키트의 NuGet 패키지를 통해 사용할 수 있습니다.
+
+## <a name="window-host-context-for-xaml-islands"></a>XAML 아일랜드에 대한 창 호스트 컨텍스트
+
+데스크톱 앱에서 XAML 아일랜드를 호스팅하는 경우 동일한 스레드에서 여러 개의 XAML 콘텐츠 트리를 동시에 실행할 수 있습니다. XAML 아일랜드에서 XAML 콘텐츠 트리의 루트 요소에 액세스하고 해당 요소가 호스팅되는 컨텍스트에 대한 관련 정보를 가져오려면 [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot) 클래스를 사용합니다. [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow), [ApplicationView](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview) 및 [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) 클래스는 XAML 아일랜드에 대한 올바른 정보를 제공하지 않습니다. [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow) 및 [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) 개체는 스레드에 있으며 앱에서 액세스 할 수 있지만, 의미 있는 범위 또는 표시 유형을 반환하지 않습니다(항상 표시되지 않으며, 1x1 크기임). 자세한 내용은 [창 작업 호스트](/windows/uwp/design/layout/show-multiple-views#windowing-hosts)를 참조하세요.
+
+예를 들어 XAML 아일랜드에서 호스팅되는 UWP 컨트롤이 포함된 창의 경계 사각형을 가져오려면 컨트롤의 [XamlRoot.Size](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot.size) 속성을 사용합니다. XAML 아일랜드에서 호스팅할 수 있는 모든 UWP 컨트롤은 [Windows.UI.Xaml.UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement)에서 파생되므로 컨트롤의 [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.xamlroot) 속성을 사용하여 **XamlRoot** 개체에 액세스할 수 있습니다.
+
+```csharp
+Size windowSize = myUWPControl.XamlRoot.Size;
+```
+
+[CoreWindows.Bounds](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.bounds) 속성을 사용하여 경계 사각형을 가져오지 않습니다.
+
+```csharp
+// This will return incorrect information for a UWP control that is hosted in a XAML Island.
+Rect windowSize = CoreWindow.GetForCurrentThread().Bounds;
+```
+
+XAML 아일랜드의 컨텍스트에서 사용하지 않아야 하는 일반적인 창 작업 관련 API 및 추천되는 [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot) 대체 항목에 대한 표는 [이 섹션](/windows/uwp/design/layout/show-multiple-views#make-code-portable-across-windowing-hosts)의 표를 참조하세요.
 
 ## <a name="feature-roadmap"></a>기능 로드맵
 
