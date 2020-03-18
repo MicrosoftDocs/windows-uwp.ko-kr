@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c8fda22a565972e4157777c1db537a8f8d9ba20
-ms.sourcegitcommit: 20af365ce85d3d7d3a8d07c4cba5d0f1fbafd85d
+ms.openlocfilehash: d148df8de9086aaaec004525c3ee4865e4320c4e
+ms.sourcegitcommit: eb24481869d19704dd7bcf34e5d9f6a9be912670
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034004"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79453363"
 ---
 # <a name="xbind-markup-extension"></a>{x:Bind} 태그 확장
 
@@ -30,7 +30,7 @@ XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에�
 
 -   [{x:Bind} 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlBind)
 -   [QuizGame](https://github.com/microsoft/Windows-appsample-networkhelper)
--   [XAML UI 기본 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
+-   [XAML 컨트롤 갤러리](https://github.com/Microsoft/Xaml-Controls-Gallery)
 
 ## <a name="xaml-attribute-usage"></a>XAML 특성 사용
 
@@ -85,8 +85,7 @@ XAML 컴파일 시간에 **{x:Bind}** 는 데이터 원본에 대한 속성에�
 
 C++/CX의 경우 **{x:Bind}** 는 페이지 또는 데이터 모델의 프라이빗 필드 및 속성에 바인딩할 수 없습니다. 바인딩하려면 공용 속성이 있어야 합니다. 관련 메타데이터를 가져올 수 있도록 바인딩 노출 영역을 CX 클래스/인터페이스로 노출해야 합니다. **\[바인딩 가능한\]** 특성은 필요 하지 않습니다.
 
-**x:Bind**를 사용하면 **ElementName=xxx**를 바인딩 식의 일부로 사용할 필요가 없습니다. 대신, 명명 된 요소가 루트 바인딩 소스를 나타내는 페이지 또는 사용자 정의 컨트롤 내의 필드가 되기 때문에 요소의 이름을 바인딩에 대 한 경로의 첫 번째 부분으로 사용할 수 있습니다. 
-
+**x:Bind**를 사용하면 **ElementName=xxx**를 바인딩 식의 일부로 사용할 필요가 없습니다. 대신, 명명 된 요소가 루트 바인딩 소스를 나타내는 페이지 또는 사용자 정의 컨트롤 내의 필드가 되기 때문에 요소의 이름을 바인딩에 대 한 경로의 첫 번째 부분으로 사용할 수 있습니다.
 
 ### <a name="collections"></a>컬렉션
 
@@ -104,10 +103,80 @@ C++/CX의 경우 **{x:Bind}** 는 페이지 또는 데이터 모델의 프라이
 
 ### <a name="casting"></a>캐스팅
 
-컴파일된 바인딩이 강력한 형식이며 경로의 각 단계에 대한 형식을 확인합니다. 반환된 형식에 멤버가 없으면 컴파일 타임에 실패합니다. 개체의 실제 형식을 바인딩하도록 명령하는 캐스트를 지정할 수 있습니다. 다음 사례에서 **obj**는 형식 개체의 속성이지만 입력란을 포함하므로 **Text="{x:Bind ((TextBox)obj).Text}"** 또는 **Text="{x:Bind obj.(TextBox.Text)}"** 를 사용할 수 있습니다.
-**Text = "{x:bind (data: SampleDataGroup) groups3\[0\])의 groups3 필드입니다. Title} "** 는 개체의 사전 이므로 **데이터를 SampleDataGroup**로 캐스팅 해야 합니다. xml **data:** 네임스페이스 접두사는 기본 XAML 네임스페이스의 일부가 아닌 코드 네임스페이스에 개체 형식을 매핑하는 데 사용됩니다.
+컴파일된 바인딩이 강력한 형식이며 경로의 각 단계에 대한 형식을 확인합니다. 반환된 형식에 멤버가 없으면 컴파일 타임에 실패합니다. 개체의 실제 형식을 바인딩하도록 명령하는 캐스트를 지정할 수 있습니다.
+
+다음 사례에서 **obj**는 형식 개체의 속성이지만 입력란을 포함하므로 **Text="{x:Bind ((TextBox)obj).Text}"** 또는 **Text="{x:Bind obj.(TextBox.Text)}"** 를 사용할 수 있습니다.
+
+**groups3** **Text = "{x:bind (data: SampleDataGroup) groups3\[0\])의 groups3 필드입니다. Title} "** 는 개체의 사전 이므로 **데이터를 SampleDataGroup**로 캐스팅 해야 합니다. xml **data:** 네임스페이스 접두사는 기본 XAML 네임스페이스의 일부가 아닌 코드 네임스페이스에 개체 형식을 매핑하는 데 사용됩니다.
 
 _참고: C#스타일 캐스트 구문은 연결 된 속성 구문 보다 더 유연 하며 앞으로 나오는 권장 구문입니다._
+
+#### <a name="pathless-casting"></a>유효한 캐스팅
+
+네이티브 바인딩 파서는 `this`를 함수 매개 변수로 나타내는 키워드를 제공 하지 않지만 함수 매개 변수로 사용 될 수 있는 유효한 캐스팅 (예: `{x:Bind (x:String)}`)을 지원 합니다. 따라서 `{x:Bind MethodName((namespace:TypeOfThis))}`는 개념적으로 `{x:Bind MethodName(this)}`와 동일한 항목을 수행 하는 유효한 방법입니다.
+
+예:
+
+`Text="{x:Bind local:MainPage.GenerateSongTitle((local:SongItem))}"`
+
+```xaml
+<Page
+    x:Class="AppSample.MainPage"
+    ...
+    xmlns:local="using:AppSample">
+
+    <Grid>
+        <ListView ItemsSource="{x:Bind Songs}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:SongItem">
+                    <TextBlock
+                        Margin="12"
+                        FontSize="40"
+                        Text="{x:Bind local:MainPage.GenerateSongTitle((local:SongItem))}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
+```
+
+```csharp
+namespace AppSample
+{
+    public class SongItem
+    {
+        public string TrackName { get; private set; }
+        public string ArtistName { get; private set; }
+
+        public SongItem(string trackName, string artistName)
+        {
+            ArtistName = artistName;
+            TrackName = trackName;
+        }
+    }
+
+    public sealed partial class MainPage : Page
+    {
+        public List<SongItem> Songs { get; }
+        public MainPage()
+        {
+            Songs = new List<SongItem>()
+            {
+                new SongItem("Track 1", "Artist 1"),
+                new SongItem("Track 2", "Artist 2"),
+                new SongItem("Track 3", "Artist 3")
+            };
+
+            this.InitializeComponent();
+        }
+
+        public static string GenerateSongTitle(SongItem song)
+        {
+            return $"{song.TrackName} - {song.ArtistName}";
+        }
+    }
+}
+```
 
 ## <a name="functions-in-binding-paths"></a>바인딩 경로의 함수
 
