@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, COM, 구성 요소, 클래스, 인터페이스
 ms.localizationpriority: medium
-ms.openlocfilehash: 88012d96b7c769094cb80d0f34b77060291a3eef
-ms.sourcegitcommit: 80ea5e05f8c15700f6c6fa3d1ed37e479568762b
+ms.openlocfilehash: 4a9bdfcee8811e52587eb4fcd59913a731b799a2
+ms.sourcegitcommit: cab95379459ad378163aa4469c9dc6c509cc8c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75928815"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79511006"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>C++/WinRT를 통한 COM 구성 요소 사용
 
@@ -18,7 +18,7 @@ ms.locfileid: "75928815"
 
 이 항목의 끝에는 최소 Direct2D 애플리케이션의 전체 소스 코드 목록이 나와 있습니다. 해당 코드에서 발췌한 내용을 사용하여 C++/WinRT 라이브러리의 다양한 기능을 통해 C++/WinRT에서 COM 구성 요소를 사용하는 방법을 설명하겠습니다.
 
-## <a name="com-smart-pointers-winrtcom_ptruwpcpp-ref-for-winrtcom-ptr"></a>COM 스마트 포인터([**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr))
+## <a name="com-smart-pointers-winrtcom_ptr"></a>COM 스마트 포인터([**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr))
 
 COM을 사용하여 프로그래밍하는 경우 개체가 아닌 인터페이스로 직접 작업합니다(COM의 발전된 형태인 Windows 런타임 API의 경우에도 백그라운드에서 동일한 방식으로 작동함). 예를 들어 COM 클래스에서 함수를 호출하려면 클래스를 활성화하고 인터페이스를 다시 가져온 다음, 해당 인터페이스에서 함수를 호출합니다. 개체의 상태에 액세스하려면 데이터 멤버에 직접 액세스하지 않고, 대신 인터페이스에서 접근자 및 변경자 함수를 호출합니다.
 
@@ -127,7 +127,7 @@ winrt::check_hresult(D2D1CreateFactory(
 
 ## <a name="com-functions-that-take-an-iunknown-interface-pointer"></a>**IUnknown** 인터페이스 포인터를 사용하는 COM 함수
 
-[**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#get_unknown-function) 프리 함수를 호출하여 **IUnknown** 인터페이스 포인터를 사용하는 함수에 **com_ptr**을 전달할 수 있습니다.
+[**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) 프리 함수를 호출하여 **IUnknown** 인터페이스 포인터를 사용하는 함수에 **com_ptr**을 전달할 수 있습니다.
 
 ```cppwinrt
 winrt::check_hresult(factory->CreateSwapChainForCoreWindow(
