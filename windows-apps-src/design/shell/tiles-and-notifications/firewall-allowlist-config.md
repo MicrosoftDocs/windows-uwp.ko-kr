@@ -4,21 +4,20 @@ Description: 많은 기업에서 방화벽을 사용 하 여 원치 않는 트�
 title: 방화벽에 WNS 트래픽 추가 Allowlist
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
-ms.author: mijacobs
 ms.date: 05/20/2019
 ms.topic: article
 keywords: windows 10, uwp, WNS, windows 알림 서비스, 알림, windows, 방화벽, 문제 해결, IP, 트래픽, 엔터프라이즈, 네트워크, IPv4, VIP, FQDN, 공용 IP 주소
 ms.localizationpriority: medium
-ms.openlocfilehash: fa0153a395144382aee3f764f0f7d9316afa9c5e
-ms.sourcegitcommit: ff086bae50e61a351b8c53867ed6579e43d8cf1f
+ms.openlocfilehash: 34e66249c5b44cbfecd81b9238eda2b1e5412b9a
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76265024"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080660"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>WNS 트래픽을 지원 하기 위한 엔터프라이즈 방화벽 및 프록시 구성
 
-## <a name="background"></a>백그라운드
+## <a name="background"></a>배경
 많은 기업에서 방화벽을 사용 하 여 원치 않는 네트워크 트래픽 및 포트를 차단 합니다. 불행 하 게도 Windows Notification Service 통신과 같은 중요 한 작업을 차단할 수 있습니다. 즉, WNS를 통해 전송 되는 모든 알림은 특정 네트워크 구성에서 삭제 됩니다. 이를 방지 하기 위해 네트워크 관리자는 승인 목록에 승인 된 WNS Fqdn 또는 Vip 목록을 추가 하 여 WNS 트래픽이 방화벽을 통과 하도록 할 수 있습니다. 다음은 다양 한 프록시 형식에 대 한 지원 뿐만 아니라 추가 방법에 대 한 자세한 내용입니다.
 
 ## <a name="proxy-support"></a>프록시 지원
@@ -26,7 +25,7 @@ ms.locfileid: "76265024"
 > [!Note]
 > Windows 클라이언트는 모든 프록시를 지원 **하지 않습니다** . WNS에 대 한 연결은 직접 연결 이어야 합니다.
 
-**서비스 예정!** 다른 네트워크 구성, 프록시 및 방화벽을 적극적으로 조사 하 고 있습니다. 이 페이지는 일반적인 엔터프라이즈 시나리오 및 WNS 지원에 대 한 자세한 내용으로 업데이트할 예정입니다.
+**개봉박두!** 다른 네트워크 구성, 프록시 및 방화벽을 적극적으로 조사 하 고 있습니다. 이 페이지는 일반적인 엔터프라이즈 시나리오 및 WNS 지원에 대 한 자세한 내용으로 업데이트할 예정입니다.
 
 
 ## <a name="what-information-should-be-added-to-the-allowlist"></a>Allowlist에 추가 해야 하는 정보

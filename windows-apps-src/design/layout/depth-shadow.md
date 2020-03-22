@@ -3,19 +3,18 @@ author: knicholasa
 description: Z 수준, 상대 깊이 및 그림자는 응용 프로그램에 깊이를 통합 하 여 사용자가 자연스럽 게 효율적으로 집중할 수 있도록 하는 두 가지 방법입니다.
 title: UWP 앱에 대 한 Z 깊이 및 그림자
 template: detail.hbs
-ms.author: nichola
 ms.date: 04/19/2019
 ms.topic: article
 ms.custom: 19H1
 keywords: windows 10, uwp
 pm-contact: chigy
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e9197be38d1edfdad41a434132f318cdf3f45ea
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 216974ba564a192f94473469f3a7a49191ef2192
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282420"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081394"
 ---
 # <a name="z-depth-and-shadow"></a>Z-깊이 및 그림자
 
@@ -39,7 +38,7 @@ UWP 앱에서는 미적가 아닌 목적이에서 그림자를 사용 해야 합
 
 ## <a name="themeshadow"></a>ThemeShadow
 
-ThemeShadow 형식은 x, y, z 좌표를 기준으로 적절 하 게 그림자를 그리기 위해 모든 XAML 요소에 적용 될 수 있습니다. 또한 ThemeShadow는 다른 환경 사양에 대해 자동으로 조정 합니다.
+[ThemeShadow](/uwp/api/windows.ui.xaml.media.themeshadow) 형식은 x, y, z 좌표를 기준으로 적절 하 게 그림자를 그리기 위해 모든 XAML 요소에 적용 될 수 있습니다. 또한 ThemeShadow는 다른 환경 사양에 대해 자동으로 조정 합니다.
 
 - 조명, 사용자 테마, 앱 환경 및 셸에서 변화에 맞게 조정 됩니다.
 - Z 수준에 따라 자동으로 요소에 그림자를 적용 합니다. 
@@ -99,7 +98,7 @@ PopupRectangle.Translation += new Vector3(0, 0, 32);
 
 [플라이](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.flyout)아웃, [datepickerflyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.datepickerflyout)아웃, [Menuflyout 아웃](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.menuflyout) 또는 [timepickerflyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.timepickerflyout) 아웃 기반 컨트롤은 자동으로 ThemeShadow를 사용 하 여 그림자를 캐스팅 합니다.
 
-컨트롤 콘텐츠에서 기본 그림자가 올바르지 않은 경우 [IsDefaultShadowEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flyoutpresenter.isdefaultshadowenabled) 속성을 연결 된 FlyoutPresenter에서 `false`로 설정 하 여 사용 하지 않도록 설정할 수 있습니다.
+컨트롤 콘텐츠에서 기본 그림자가 올바르지 않은 경우 [IsDefaultShadowEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flyoutpresenter.isdefaultshadowenabled) 속성을 연결 된 FlyoutPresenter에서 `false`로 설정 하 여 해제할 수 있습니다.
 
 ```xaml
 <Flyout>
@@ -160,7 +159,7 @@ DropShadow는 환경에 자동으로 반응 하지 않으며 광원을 사용 �
 ## <a name="which-shadow-should-i-use"></a>어떤 그림자를 사용 해야 하나요?
 
 | 속성 | ThemeShadow | DropShadow |
-| - | - | - | - |
+| - | - | - |
 | **최소 SDK** | Windows 10 버전 1903 | 14393 |
 | **적응성** | 예 | 아니요 |
 | **스키마별** | 아니요 | 예 |
