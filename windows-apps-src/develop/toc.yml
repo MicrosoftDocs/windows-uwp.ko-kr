@@ -15,14 +15,14 @@
           items:
             - name: WIP 개발자 가이드
               href: ../enterprise/wip-dev-guide.md
-        - name: 엔터프라이즈 공유 저장소
+        - name: 엔터프라이즈 공유 스토리지
           href: ../enterprise/enterprise-shared-storage.md
         - name: '자습서: 고객 데이터베이스 애플리케이션 만들기'
           href: ../enterprise/customer-database-tutorial.md
           items:
             - name: 고객 데이터베이스 자습서 앱 구조
               href: ../enterprise/customer-database-app-structure.md
-    - name: 점진적 웹앱
+    - name: 프로그레시브 웹앱
       href: /microsoft-edge/progressive-web-apps
 - name: 오디오 비디오 및 카메라
   href: ../audio-video-camera/index.md
@@ -432,7 +432,7 @@
               href: ../monetize/set-up-ad-units-in-your-app.md
             - name: Microsoft 광고 조정 서비스
               href: ../monetize/ad-mediation-service.md
-            - name: 모범 사례
+            - name: 최선의 구현 방법
               href: ../monetize/best-practices-for-ads-in-apps.md
               items:
                 - name: UI 및 사용자 환경 지침
@@ -1024,7 +1024,7 @@
               href: ../contacts-and-calendar/my-people-notifications.md
         - name: 연락처 선택
           href: ../contacts-and-calendar/selecting-contacts.md
-        - name: 메일 보내기
+        - name: 전자 메일 보내기
           href: ../contacts-and-calendar/sending-email.md
         - name: SMS 메시지 보내기
           href: ../contacts-and-calendar/sending-an-sms-message.md
@@ -1354,12 +1354,14 @@
               href: ../launch-resume/extend-your-app-with-services-extensions-packages.md
             - name: 앱 확장 만들기 및 호스팅
               href: ../launch-resume/how-to-create-an-extension.md
+            - name: 호스트되는 앱 만들기
+              href: ../launch-resume/hosted-apps.md
         - name: 백그라운드 작업을 사용하여 앱 지원
           href: ../launch-resume/support-your-app-with-background-tasks.md
           items:
             - name: 백그라운드 작업 지침
               href: ../launch-resume/guidelines-for-background-tasks.md
-            - name: 백그라운드 작업에서 센서 및 장치에 액세스
+            - name: 백그라운드 작업에서 센서 및 디바이스에 액세스
               href: ../launch-resume/access-sensors-and-devices-from-a-background-task.md
             - name: In-process 백그라운드 작업 만들기 및 등록
               href: ../launch-resume/create-and-register-an-inproc-background-task.md
@@ -1369,7 +1371,7 @@
               href: ../launch-resume/convert-out-of-process-background-task.md
             - name: 백그라운드 작업 디버그
               href: ../launch-resume/debug-a-background-task.md
-            - name: 응용 프로그램 매니페스트에서 백그라운드 작업 선언
+            - name: 애플리케이션 매니페스트에서 백그라운드 작업 선언
               href: ../launch-resume/declare-background-tasks-in-the-application-manifest.md
             - name: 백그라운드 작업 등록 그룹화
               href: ../launch-resume/group-background-tasks.md
@@ -1398,9 +1400,9 @@
         - name: 연결된 앱 및 디바이스(프로젝트 로마)
           href: ../launch-resume/connected-apps-and-devices.md
           items:
-            - name: 원격 장치 검색
+            - name: 원격 디바이스 검색
               href: ../launch-resume/discover-remote-devices.md
-            - name: 원격 장치에서 앱 시작
+            - name: 원격 디바이스에서 앱 시작
               href: ../launch-resume/launch-a-remote-app.md
             - name: 원격 앱 서비스와 통신
               href: ../launch-resume/communicate-with-a-remote-app-service.md

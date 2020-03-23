@@ -11,21 +11,18 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 43d63b1831766ecdf65fe1c1d7fd15457f728f83
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.openlocfilehash: 37ab62a6e6c2e294e8d6b5222eab4a1a9ae25a2e
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68867442"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081013"
 ---
 # <a name="dialogs-and-flyouts"></a>대화 상자 및 플라이아웃
 
-
-
 대화 상자 및 플라이아웃은 사용자로부터 알림, 승인 또는 추가 정보를 요청하는 문제가 발생할 경우 나타나는 임시 UI 요소입니다.
 
-> **중요 API**: [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog), [Flyout 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
-
+> **플랫폼 API:** [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog), [Flyout 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
 :::row:::
     :::column:::
@@ -103,7 +100,7 @@ ms.locfileid: "68867442"
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="../images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="../images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML Controls Gallery</strong> 앱이 설치되어 있는 경우 여기를 클릭하여 앱을 열고 <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> 또는 <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a>이 작동되는지 확인합니다.</p>
     <ul>
