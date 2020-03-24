@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문자열
 ms.localizationpriority: medium
-ms.openlocfilehash: 004aa3e267bab86527ac3d5c3fe0383ccd4ad904
-ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
+ms.openlocfilehash: 1771c3754e8e9580514f646ae8589b1982911fc7
+ms.sourcegitcommit: eb24481869d19704dd7bcf34e5d9f6a9be912670
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67844309"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448568"
 ---
 # <a name="string-handling-in-cwinrt"></a>C++/WinRT의 문자열 처리
 
@@ -159,17 +159,19 @@ Windows 런타임은 **wchar_t** 문자와 관련하여 구현되지만 Windows 
 결론적으로 Windows 런타임 문자열 관리를 위한 고유 정보는 대부분 무시하고 알고 있는 정보만으로도 효율적으로 작업할 수 있습니다. 문자열이 Windows 런타임에서 얼마나 많이 사용되는지 생각해보면 이는 매우 중요합니다.
 
 ## <a name="formatting-strings"></a>문자열 형식 지정
-문자열 형식을 지정하는 한 가지 옵션은 **std::wstringstream**입니다. 다음은 간단한 디버그 추적 메시지의 형식을 지정하여 표시하는 예제입니다.
+문자열 형식을 지정하는 한 가지 옵션은 **std::wostringstream**입니다. 다음은 간단한 디버그 추적 메시지의 형식을 지정하여 표시하는 예제입니다.
 
 ```cppwinrt
 #include <sstream>
+#include <winrt/Windows.UI.Input.h>
+#include <winrt/Windows.UI.Xaml.Input.h>
 ...
-void OnPointerPressed(IInspectable const&, PointerEventArgs const& args)
+void MainPage::OnPointerPressed(winrt::Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e)
 {
-    float2 const point = args.CurrentPoint().Position();
-    std::wstringstream wstringstream;
-    wstringstream << L"Pointer pressed at (" << point.x << L"," << point.y << L")" << std::endl;
-    ::OutputDebugString(wstringstream.str().c_str());
+    winrt::Windows::Foundation::Point const point{ e.GetCurrentPoint(nullptr).Position() };
+    std::wostringstream wostringstream;
+    wostringstream << L"Pointer pressed at (" << point.X << L"," << point.Y << L")" << std::endl;
+    ::OutputDebugString(wostringstream.str().c_str());
 }
 ```
 

@@ -11,12 +11,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e30e9b2bed5cb4c0b7876ff1c597bb7d1243008a
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: fb0101597a38553f56579913a9c40502fcdbf051
+ms.sourcegitcommit: 1d6d05d28358e087d9ee8829d76c5fbbac0225cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684158"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79434230"
 ---
 # <a name="icons-for-uwp-apps"></a>UWP 앱용 아이콘
 
@@ -211,4 +211,4 @@ SVG 파일과 같이 기하 도형은 벡터 기반 리소스이므로 항상 �
 
 ## <a name="related-articles"></a>관련된 문서
 
-* [타일 및 아이콘 자산에 대한 지침](../shell/tiles-and-notifications/app-assets.md)
+* [앱 아이콘 및 로고](app-icons-and-logos.md)

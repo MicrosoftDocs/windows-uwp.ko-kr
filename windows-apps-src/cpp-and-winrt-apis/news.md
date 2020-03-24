@@ -1,21 +1,80 @@
 ---
 description: C++/WinRT에서 새롭거나 변경된 기능입니다.
 title: C++/WinRT의 새로운 기능
-ms.date: 04/23/2019
+ms.date: 03/16/2020
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 새로운 기능
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d5a2c3d10f2cbfcc608d212a9465ca738e1ca15e
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 734544a1294c6a97e70afcbf7ce6b5efc13cf841
+ms.sourcegitcommit: eb24481869d19704dd7bcf34e5d9f6a9be912670
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209108"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448589"
 ---
 # <a name="whats-new-in-cwinrt"></a>C++/WinRT의 새로운 기능
 
 이후 버전의 C++/WinRT가 출시됨에 따라 이 항목에서 새롭거나 변경된 기능에 대해 설명합니다.
+
+## <a name="rollup-of-recent-improvementsadditions-as-of-march-2020"></a>최근 개선 사항/추가 사항 롤업(2020년 3월 기준)
+
+### <a name="up-to-23-shorter-build-times"></a>빌드 시간 최대 23% 단축
+
+C++/WinRT 및 C++ 컴파일러 팀이 협력하여 빌드 시간을 단축하기 위해 최선을 다했습니다. C++ 컴파일러가 컴파일 시 오버헤드를 제거하는 데 도움이 되도록 C++/WinRT의 내부 요소를 재구성하는 방법과 C++/WinRT 라이브러리를 처리하도록 C++ 컴파일러 자체를 개선하는 방법을 알아내기 위해 컴파일러 분석 자료를 꼼꼼히 검토했습니다. C++/WinRT는 컴파일러에 최적화되었고, 컴파일러는 C++/WinRT에 최적화되었습니다.
+
+모든 단일 C++/WinRT 프로젝션 네임스페이스 헤더를 포함하는 미리 컴파일된 헤더(PCH)를 빌드하는 최악의 시나리오를 예로 들어 보겠습니다.
+
+| Version | PCH 크기(바이트) | 시간(초) |
+| - | - | - |
+| 7월 C++/WinRT(Visual C++ 16.3 사용) | 3,004,104,632 | 31 |
+| C++/WinRT 버전 2.0.200316.3(Visual C++ 16.5 사용) | 2,393,515,336 | 24 |
+
+크기 20% 감소 및 빌드 시간 23% 단축.
+
+### <a name="improved-msbuild-support"></a>향상된 MSBuild 지원
+
+다양한 시나리오에 대한 [MSBuild](/visualstudio/msbuild/msbuild?view=vs-2019) 지원을 개선하기 위해 많은 노력을 기울였습니다.
+
+### <a name="even-faster-factory-caching"></a>훨씬 더 빠른 팩터리 캐싱
+
+더 나은 인라인 실행 부하 과다 경로를 통해 실행 속도를 높이기 위해 팩터리 캐시의 인라인 처리를 개선했습니다.
+
+아래 [최적화된 EH 코드 생성](#optimized-exception-handling-eh-code-generation)에 설명된 것처럼, 이러한 개선 사항은 코드 크기에 영향을 주지 않습니다. 애플리케이션이 C++ 예외 처리를 많이 사용한다면 `/d2FH4` 옵션을 사용하여 이진을 축소할 수 있습니다. Visual Studio 2019 16.3 이상을 사용하여 생성된 새 프로젝트에는 이 옵션이 기본적으로 설정되어 있습니다.
+
+### <a name="more-efficient-boxing"></a>보다 효율적인 boxing
+
+이제 XAML 애플리케이션에서 [**winrt::box_value**](/uwp/cpp-ref-for-winrt/box-value)를 더 효율적으로 사용할 수 있습니다([boxing 및 unboxing](/windows/uwp/cpp-and-winrt-apis/boxing) 참조). boxing을 많이 수행하는 애플리케이션은 코드 크기도 줄어듭니다.
+
+### <a name="support-for-implementing-com-interfaces-that-implement-iinspectable"></a>IInspectable을 구현하는 COM 인터페이스 구현 지원
+
+[**IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable)을 구현하는 Windows 런타임 이외 COM 인터페이스를 구현해야 하는 경우 이제 C++/WinRT로 구현할 수 있습니다. [IInspectable을 구현하는 COM 인터페이스](https://github.com/microsoft/xlang/pull/603)를 참조하세요.
+
+### <a name="module-locking-improvements"></a>모듈 잠금 기능 향상
+
+이제 모듈 잠금에 대한 제어를 통해 사용자 지정 호스팅 시나리오와 모듈 수준 잠금 제거를 모두 수행할 수 있습니다. [모듈 잠금 기능 향상](https://github.com/microsoft/xlang/pull/583)을 참조하세요.
+
+### <a name="support-for-non-windows-runtime-error-information"></a>Windows 런타임 이외 오류 정보에 대한 지원
+
+일부 API(일부 Windows 런타임 API)는 Windows 런타임 오류 발생 API를 사용하지 않고 오류를 보고합니다. 이와 같은 경우 C++/WinRT는 이제 COM 오류 정보를 사용하는 방식으로 돌아갑니다. [WinRT 이외 오류 정보에 대한 C++/WinRT 지원](https://github.com/microsoft/xlang/pull/582)을 참조하세요.
+
+### <a name="enable-c-module-support"></a>C++ 모듈 지원 사용 
+
+C++모듈 지원을 다시 사용할 수 있지만 실험적 형태로만 지원됩니다. 이 기능은 아직 C++ 컴파일러에서 완성되지 않았습니다.
+
+### <a name="more-efficient-coroutine-resumption"></a>더 효율적인 코루틴 재개
+
+C++/WinRT 코루틴은 이미 잘 작동하지만 이를 개선하는 방법을 계속 찾고 있습니다. [코루틴 재개 확장성 개선](https://github.com/microsoft/xlang/pull/546)을 참조하세요.
+
+### <a name="new-when_all-and-when_any-async-helpers"></a>새로운 **when_all** 및 **when_any** 비동기 도우미
+
+**when_all** 도우미 함수는 제공된 대기 가능 요소가 모두 완료되어야 완료되는 [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) 개체를 만듭니다. **when_any** 도우미 함수는 제공된 대기 가능 요소가 하나라도 완료되어야 완료되는 **IAsyncAction** 개체를 만듭니다. 
+
+[when_any 비동기 도우미 추가](https://github.com/microsoft/xlang/pull/520) 및 [when_all 비동기 도우미 추가](https://github.com/microsoft/xlang/pull/516)를 참조하세요.
+
+### <a name="other-optimizations-and-additions"></a>그 외 최적화 기능 및 추가 기능
+
+또한 디버깅을 간소화하고 내부 요소 및 기본 구현을 최적화하는 다양한 향상 기능을 포함하여 많은 버그 수정과 사소한 최적화 및 추가 기능이 도입되었습니다. 전체 목록을 보려면 이 링크([https://github.com/microsoft/xlang/pulls?q=is%3Apr+is%3Aclosed](https://github.com/microsoft/xlang/pulls?q=is%3Apr+is%3Aclosed))를 따라가세요.
 
 ## <a name="news-and-changes-in-cwinrt-20"></a>C++/WinRT 2.0의 새로운 기능 및 변경 내용
 
@@ -329,7 +388,7 @@ C++/WinRT는 컴파일하기 위해 더 이상 Windows SDK의 헤더 파일을 �
 
 이 두 가지 방법 중 하나를 사용한 후 컴파일러 또는 링커 오류가 발생하면 다시 빌드하기 전에 솔루션을 정리할 수 있습니다(**빌드** > **솔루션 정리** 및/또는 수동으로 모든 임시 폴더와 파일 삭제).
 
-C++ 컴파일러에서 “오류 C2039: ‘IUnknown’: '\`전역 네임스페이스''의 멤버가 아닙니다.”가 생성되면 C++/WinRT 헤더를 포함하기 전에 `#include <unknwn.h>`를 `pch.h` 파일의 맨 위에 추가합니다.
+C++ 컴파일러에서 “*오류 C2039: ‘IUnknown’: '\`전역 네임스페이스*''의 멤버가 아닙니다.”가 생성되면 C++/WinRT 헤더를 포함하기 전에 `#include <unknwn.h>`를 `pch.h` 파일의 맨 위에 추가합니다.
 
 또한 그 뒤에 `#include <hstring.h>`을 추가해야 할 수 있습니다.
 

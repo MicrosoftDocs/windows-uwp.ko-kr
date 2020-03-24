@@ -151,7 +151,7 @@ ms.locfileid: "79210909"
 | 리투아니아                         | 14 EUR              | 75 EUR           |  
 | 룩셈부르크                        | 14 EUR              | 75 EUR           |  
 | 마카오 특별 행정구                         | 19 USD              | 99 USD           |  
-| 마케도니아 (FYROM)                 | 19 USD              | 99 USD           |  
+| 북마케도니아 공화국                 | 19 USD              | 99 USD           |  
 | 마다가스카르                        | 19 USD              | 99 USD           |  
 | 말라위                            | 19 USD              | 99 USD           |  
 | 말레이시아                          | 62 MYR              | 300 MYR          |  

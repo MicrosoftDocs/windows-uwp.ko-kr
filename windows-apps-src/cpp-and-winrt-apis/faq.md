@@ -5,15 +5,18 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: b0ec2c5a05e7c4e9309311fa22ad863d06597a53
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 167286226adb6d26a6cdd4ee4a26bdcc58e4b5ed
+ms.sourcegitcommit: eb24481869d19704dd7bcf34e5d9f6a9be912670
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209178"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448570"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT에 대해 자주 묻는 질문
 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통해 Windows 런타임 API를 작성하거나 사용하는 방법과 관련된 질문과 대답입니다.
+
+> [!IMPORTANT]
+> C++/WinRT에 대한 릴리스 정보는 [C++/WinRT 2.0의 새로운 기능 및 변경 내용](news.md#news-and-changes-in-cwinrt-20)을 참조하세요.
 
 > [!NOTE]
 > 표시된 오류 메시지에 대한 질문이 있는 경우 [C++/WinRT 문제 해결](troubleshooting.md) 항목도 참조하세요.

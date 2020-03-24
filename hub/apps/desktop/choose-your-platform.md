@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, 데스크톱 개발
-ms.openlocfilehash: d0d87f8e4b6524471ff5e2ada9012a22641b06d7
-ms.sourcegitcommit: ddf0137929945eddf01041a81aa4d26038e70f46
+ms.openlocfilehash: bf8a5970d1999427023592f919ef0b92737fa934
+ms.sourcegitcommit: cab95379459ad378163aa4469c9dc6c509cc8c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74392088"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510986"
 ---
 # <a name="choose-your-app-platform"></a>앱 플랫폼 선택
 
@@ -26,9 +26,13 @@ Windows PC에 대한 새 데스크톱 애플리케이션을 만들려는 경우 
 
 이러한 모든 애플리케이션 플랫폼을 사용하여 클래식 Windows 데스크톱에서 실행되고 해당 환경의 특정 기능을 최대한 활용하는 Word, Excel, Photoshop과 같은 데스크톱 앱을 만들 수 있습니다. 그러나 이러한 플랫폼 중 일부는 몇 가지 특성을 공유하며 특정 유형의 애플리케이션에 더 적합합니다.
 
-* **UWP, WPF 및 Windows Forms**. 이러한 플랫폼은 특히 개발자 생산성, 정교하고 사용자 지정이 가능한 UI 및 애플리케이션 보안 분야에서 많은 이점을 누릴 수 있는 관리형 런타임 환경(UWP용 Windows 런타임 및 Windows Forms 및 WPF용 .NET)을 제공합니다. 이러한 프레임워크는 UI를 신속하게 만들기 위한 비주얼 디자이너 및 UI 태그를 지원하므로 LOB(기간 업무) 애플리케이션에 특히 적합합니다.
+* **UWP**. 이 플랫폼은 Windows 10을 실행하는 모든 디바이스에 대한 CTS(공용 형식 시스템), API 및 애플리케이션 모델을 제공합니다. UWP 애플리케이션은 네이티브이거나 관리형일 수 있습니다. 
 
-* **Win32 API**. Win32 API(Windows API라고도 함)는 Windows 및 하드웨어에 직접 액세스해야 하는 네이티브 C/C++ Windows 애플리케이션을 위한 원본 플랫폼입니다. .NET 및 WinRT와 같은 관리형 런타임 환경에 의존하지 않고 최고 수준의 개발 환경을 제공합니다. 따라서 Win32 API는 가장 높은 수준의 성능과 시스템 하드웨어에 대한 직접 액세스가 필요한 애플리케이션에 적합한 플랫폼입니다.
+* **WPF 및 Windows Forms**. 이러한 플랫폼은 .NET에서 실행되는 관리형 애플리케이션에 대한 CTS(공용 형식 시스템), API 및 애플리케이션 모델을 제공합니다.
+
+* **Win32 API**. Win32 API(Windows API라고도 함)는 Windows 및 하드웨어에 직접 액세스해야 하는 네이티브 C/C++ Windows 애플리케이션을 위한 원본 플랫폼입니다. 따라서 Win32 API는 가장 높은 수준의 성능과 시스템 하드웨어에 대한 직접 액세스가 필요한 애플리케이션에 적합한 플랫폼입니다.
+
+UWP 및 .NET은 Visual Studio와 긴밀하게 통합되었습니다. 이는 특히 개발자 생산성, 정교하고 사용자 지정 가능한 UI, 애플리케이션 보안 분야에서 다양한 이점을 제공합니다. 이러한 프레임워크는 UI를 신속하게 만들기 위한 비주얼 디자이너 및 UI 태그를 지원하므로 LOB(기간 업무) 애플리케이션에 특히 적합합니다.
 
 이 문서에서는 이러한 플랫폼에 대해 자세히 설명하고 애플리케이션에 가장 적합한 플랫폼을 결정하는 데 도움을 줍니다. 
 
@@ -104,7 +108,7 @@ C++와 함께 Win32 API를 사용하면 WinRT 및 .NET과 같은 관리형 런�
 | **언어**      |   C\#, C++/WinRT, C++/CX, VB, JavaScript   |  C\#, C++/CLI(Managed Extensions for C++), F\#, VB |  C\#, C++/CLI(Managed Extensions for C++), F\#, VB   |
 | **UI 런타임** |    네이티브(C++/WinRT 및 C++/CX) 및 관리형(.NET 네이티브)  |  관리형(.NET Framework 및 .NET Core 3) |   관리형(.NET Framework 및 .NET Core 3)   |
 | **오픈 소스** | [예(Windows UI 라이브러리만 해당)](https://github.com/Microsoft/microsoft-ui-xaml)  |  [예(.NET Core만 해당)](https://github.com/dotnet/wpf) | [예(.NET Core만 해당)](https://github.com/dotnet/winforms)  |
-| **XAML 지원** |   예   |  예  |   아니오   |
+| **XAML 지원** |   예   |  예  |   아니요   |
 | **강점**  |  <ul><li>UI용 XAML 태그</li><li>다양하고 사용자 지정이 가능한 UX</li><li>기존 코드 기반이 .NET Standard 준수 상태임</li><li>높은 DPI 지원</li><li>Windows 디바이스(터치, 펜, 게임 패드, 마우스 및 키보드 포함)의 여러 입력 유형 지원</li><li>Xbox, HoloLens, IoT 또는 Surface Hub 지원</li><li>선택적 조밀(컴팩트) UI</li><li>네이티브 C++ 지원</li><li>최적화된 배터리 사용 시간</li><li>최신 접근성 지원(화면 읽기 등)</li><li>서식 있는 텍스트 데이터 기능(기본 제공되는 맞춤법 검사 등)</li><li>수동 입력 지원</li><li>애플리케이션 컨테이너를 통한 보안 실행(예: 신뢰할 수 없는 콘텐츠에 샌드박스 적용)</li></ul>  |  <ul><li>UI용 XAML 태그</li><li>다양하고 사용자 지정이 가능한 UX</li><li>Microsoft 및 파트너의 대규모 제어 컬렉션</li><li>조밀 UI</li><li>Windows 7에 대한 지원</li><li>입력 유효성 검사를 위한 플랫폼 지원</li></ul> | <ul><li>신속한 애플리케이션 개발</li><li>UI 빌드를 위한 WYSIWYG 편집기</li><li>Microsoft 및 파트너의 대규모 제어 컬렉션</li><li>조밀 UI</li><li>Windows 7에 대한 지원</li><li>키보드 및 마우스 입력</li></ul>          |
 | **제한적 지원이 포함된 시나리오** |  <ul><li>다중 창 지원<sup>1</sup></li><li>입력 유효성 검사를 위한 플랫폼 지원<sup>1</sup></li><li>Windows 7은 지원되지 않음</li><li>일부 UWP API에는 Windows 10의 특정한 최소 버전이 필요함</li><li>전체 플랫폼 지원 및 셸 통합(예: UWP는 현재 시스템 트레이 통합 또는 모든 디바이스에 대한 전체 액세스를 지원하지 않음)</li><li>디스크의 모든 파일에 직접 액세스</li><li>ADO.NET</li><li>.NET Standard 이외 또는 Windows 앱 인증 키트 호환 API 이외 항목을 사용하는 기존 코드 기반 클래스 라이브러리</li><li>로컬 네트워크 루프백 지원(즉, 앱이 대상 디바이스에 루프백 예외를 생성하지 않고 로컬 호스트와 통신해야 하는 경우)</li><li>집약적인 파일 I/O</li></ul>     |  <ul><li>높은 DPI 지원<sup>2</sup></li><li>터치 입력<sup>2</sup></li></ul>  |  <ul><li>높은 DPI 지원<sup>2</sup></li><li>터치 입력<sup>2</sup></li><li>사용자 지정 가능 UI</li><li>다양한 그래픽 및 사용자 환경(터치 및 애니메이션 등)</li><li>보기 및 데이터 모델의 다양한 추상화</li></ul>    |   |
 

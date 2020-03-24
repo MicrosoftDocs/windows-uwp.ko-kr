@@ -5,17 +5,17 @@ ms.date: 05/30/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 포팅, 마이그레이션, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b313e80b744279f8dc955e8c07d31aba2860c3f
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 663e0dddb9823e35e2d31ba9667bd3d16bd1d5de
+ms.sourcegitcommit: cab95379459ad378163aa4469c9dc6c509cc8c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393424"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510996"
 ---
 # <a name="move-to-cwinrt-from-wrl"></a>WRL에서 C++/WinRT로 이동
 [Windows 런타임 C++ 템플릿 라이브러리(WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 코드를 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 상응하는 코드로 포팅하는 방법을 보여줍니다.
 
-C++/WinRT로 포팅하는 첫 번째 단계는 수동으로 C++/WinRT 지원을 프로젝트에 추가하는 것입니다([C++/WinRT에 대한 Visual Studio 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 이 작업을 수행하려면 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/)를 프로젝트에 설치합니다. Visual Studio에서 프로젝트를 열고 **프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기**를 클릭합니다. 검색 상자에 **Microsoft.Windows.CppWinRT**를 입력하거나 붙여넣고 검색 결과에서 항목을 선택한 다음, **설치**를 클릭하여 해당 프로젝트용 패키지를 설치합니다. 해당 변경의 효과 중 하나는 프로젝트에서 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)에 대한 지원이 꺼진다는 것입니다. 프로젝트에서 C++/CX를 사용 중인 경우 지원을 끈 채로 유지하고 C++/CX 코드를 C++/WinRT에도 업데이트할 수 있습니다([C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md) 참조). 또는 지원을 다시 켜고(프로젝트 속성에서 **C/C++** \> **일반** \> **Windows 런타임 확장 사용** \> **예(/ZW)** ) 먼저 WRL 코드 포트에 집중할 수 있습니다. C++/CX 및 C++/WinRT 코드는 같은 프로젝트에 공존할 수 있으며, XAML 컴파일러 지원 및 Windows 런타임 구성 요소의 예외가 있습니다([C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md) 참조).
+C++/WinRT로 포팅하는 첫 번째 단계는 수동으로 C++/WinRT 지원을 프로젝트에 추가하는 것입니다([C++/WinRT에 대한 Visual Studio 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 이 작업을 수행하려면 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/)를 프로젝트에 설치합니다. Visual Studio에서 프로젝트를 열고, **프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기**를 차례로 클릭하고, 검색 상자에서 **Microsoft.Windows.CppWinRT**를 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치**를 클릭하여 해당 프로젝트에 대한 패키지를 설치합니다. 해당 변경의 효과 중 하나는 프로젝트에서 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)에 대한 지원이 꺼진다는 것입니다. 프로젝트에서 C++/CX를 사용 중인 경우 지원을 끈 채로 유지하고 C++/CX 코드를 C++/WinRT에도 업데이트할 수 있습니다([C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md) 참조). 또는 지원을 다시 켜고(프로젝트 속성에서 **C/C++** \> **일반** \> **Windows 런타임 확장 사용** \> **예(/ZW)** ) 먼저 WRL 코드 포팅에 집중할 수 있습니다. C++/CX 및 C++/WinRT 코드는 같은 프로젝트에 공존할 수 있으며, XAML 컴파일러 지원 및 Windows 런타임 구성 요소의 예외가 있습니다([C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md) 참조).
 
 프로젝트 속성 **일반** \> **대상 플랫폼 버전**을 10.0.17134.0(Windows 10 버전 1803) 이상으로 설정합니다.
 
@@ -27,7 +27,7 @@ C++/WinRT로 포팅하는 첫 번째 단계는 수동으로 C++/WinRT 지원을 
 
 C++/WinRT 프로젝션된 Windows API 헤더를 포함하는 경우(예: `winrt/Windows.Foundation.h`) 자동으로 포함되기 때문에 명시적으로 이와 같은 `winrt/base.h`를 포함할 필요가 없습니다.
 
-## <a name="porting-wrl-com-smart-pointers-microsoftwrlcomptrcppwindowscomptr-class"></a>WRL COM 스마트 포인터 포팅([Microsoft: WRL::ComPtr](/cpp/windows/comptr-class))
+## <a name="porting-wrl-com-smart-pointers-microsoftwrlcomptr"></a>WRL COM 스마트 포인터 포팅([Microsoft: WRL::ComPtr](/cpp/windows/comptr-class))
 **Microsoft::WRL::ComPtr\<T\>** 를 사용하는 코드를 포팅하여 [**winrt::com_ptr\<T\>** ](/uwp/cpp-ref-for-winrt/com-ptr)를 사용합니다. 다음은 코드 이전과 이후의 예제입니다. *이후* 버전에서 [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrput-function) 멤버 함수는 기본 원시 포인터를 설정할 수 있도록 검색합니다.
 
 ```cpp
@@ -87,7 +87,7 @@ m_d3dDevice->CreateDepthStencilView(m_depthStencil.Get(), &dsvDesc, m_dsvHeap->G
 m_d3dDevice->CreateDepthStencilView(m_depthStencil.get(), &dsvDesc, m_dsvHeap->GetCPUDescriptorHandleForHeapStart());
 ```
 
-**IUnknown** 포인터가 필요한 함수에 기본 원시 포인터를 전달하려면 다음 예제처럼 [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#get_unknown-function) 프리 함수를 사용합니다.
+**IUnknown** 포인터가 필요한 함수에 기본 원시 포인터를 전달하려면 다음 예제처럼 [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) 프리 함수를 사용합니다.
 
 ```cpp
 ComPtr<IDXGISwapChain1> swapChain;
