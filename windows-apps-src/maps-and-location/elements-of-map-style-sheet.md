@@ -7,12 +7,12 @@ ms.date: 03/19/2017
 ms.topic: article
 keywords: Windows 10, uwp, 지도, 지도 스타일 시트
 ms.localizationpriority: medium
-ms.openlocfilehash: b59e8c3c6d9c4c299e441964be1afb4e02051e23
-ms.sourcegitcommit: 5264d7499ddbe21199a63d74a294206069f90f8b
+ms.openlocfilehash: b2e6e57721a5667a9ca38b21eee2a618353cd30b
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78287450"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218563"
 ---
 # <a name="map-style-sheet-reference"></a>지도 스타일시트 참조
 
@@ -263,6 +263,7 @@ Microsoft 매핑 기술은 _지도 스타일 시트_ 를 사용 하 여 지도�
 | shadedReliefVisible          | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 지도에 점진 음영을 그릴지 여부를 나타내는 플래그. |
 | shadowColor                  | 색   |      |      |      |  ✔   |  ✔   | 그림자를 사용 하는 아이콘 뒤의 그림자 색입니다. |
 | spaceColor                   | 색   |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 지도 주위의 영역에 대한 ARGB 색 값. |
+| terrainFlat                  | 부울    |      |      |      |      |      | 지도에서 지형을 플랫 (비활성화) 해야 하는지 여부를 나타내는 플래그입니다. |
 | useDefaultImageColors        | 부울    |  ✔   |  ✔   |  ✔   |  ✔   |  ✔   | 이미지 색의 색상표 항목을 조회 하는 대신 SVG의 원래 색을 사용할지 여부를 나타내는 플래그입니다. |
 
 <a id="mapelement" />

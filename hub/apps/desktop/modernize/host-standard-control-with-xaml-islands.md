@@ -8,16 +8,16 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 4bc474c3414969f27468a8daf262df0ae6e3b57e
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 3f2a0a6ee6b22fa7d08e7fc746c4ec2ad4ebffa7
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209789"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218593"
 ---
 # <a name="host-a-standard-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML 아일랜드를 사용 하 여 WPF 앱에서 표준 UWP 컨트롤 호스팅
 
-이 문서에서는 [XAML 아일랜드](xaml-islands.md)를 사용 하 여 WPF 앱에서 표준 uwp 컨트롤 (즉, Windows SDK 또는 WinUI 라이브러리에서 제공 하는 자사 uwp 컨트롤)을 호스트 하는 두 가지 방법을 보여 줍니다.
+이 문서에서는 [XAML 아일랜드](xaml-islands.md)를 사용 하 여 WPF 앱에서 표준 uwp 컨트롤 (즉, Windows SDK에서 제공 하는 자사 uwp 컨트롤)을 호스트 하는 두 가지 방법을 보여 줍니다.
 
 * Windows 커뮤니티 도구 키트에서 [래핑된 컨트롤](xaml-islands.md#wrapped-controls) 을 사용 하 여 UWP [InkCanvas](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 및 [inktoolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) 컨트롤을 호스트 하는 방법을 보여 줍니다. 이러한 컨트롤은 몇 가지 유용한 UWP 컨트롤 집합의 인터페이스 및 기능을 래핑합니다. WPF 또는 Windows Forms 프로젝트의 디자인 화면에 직접 추가 하 고 디자이너의 다른 WPF 또는 Windows Forms 컨트롤과 같은 방식으로 사용할 수 있습니다.
 
@@ -291,6 +291,9 @@ UWP XAML 아일랜드를 사용 하도록 프로젝트를 구성 했으므로 �
 필요에 따라 배포를 위해 [Msix 패키지](https://docs.microsoft.com/windows/msix) 에 WPF 앱을 패키지할 수 있습니다. MSIX은 Windows 용 최신 앱 패키징 기술 이며 MSI, .appx, App-v 및 ClickOnce 설치 기술의 조합을 기반으로 합니다.
 
 다음 지침에서는 Visual Studio 2019의 [Windows 응용 프로그램 패키징 프로젝트](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) 를 사용 하 여 msix 패키지의 솔루션에 있는 모든 구성 요소를 패키지 하는 방법을 보여 줍니다. 이러한 단계는 MSIX 패키지에서 WPF 앱을 패키징하는 경우에만 필요 합니다.
+
+> [!NOTE]
+> 배포를 위해 [Msix 패키지](https://docs.microsoft.com/windows/msix) 에 응용 프로그램을 패키지 하지 않도록 선택 하는 경우 앱을 실행 하는 컴퓨터에 [는 C++ Visual Runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) 이 설치 되어 있어야 합니다.
 
 1. 새 [Windows 응용 프로그램 패키징 프로젝트](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) 를 솔루션에 추가 합니다. 프로젝트를 만들 때 **Windows 10, 버전 1903 (10.0;)을 선택 합니다. 빌드 18362)** 는 **대상 버전** 및 **최소 버전**모두에 해당 합니다.
 

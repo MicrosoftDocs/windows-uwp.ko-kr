@@ -6,17 +6,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08dbe9ed7aaa732172d488712aa47d6d3631508a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 2be088edd732a22acb11be5fc209ff25c84bae17
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317700"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218353"
 ---
 # <a name="share-data"></a>데이터 공유
 
 
 이 문서에서는 UWP(Universal Windows Platform) 앱에서 공유 계약을 지원하는 방법을 설명합니다. 공유 계약은 텍스트, 링크, 사진과 같은 데이터를 앱 간에 신속하게 공유할 수 있는 편리한 방법입니다. 예를 들어 사용자가 소셜 네트워킹 앱을 사용하여 친구와 웹 페이지를 공유하거나 링크를 나중에 참조하기 위해 노트 기록 앱에 저장할 수 있습니다.
+
+> [!NOTE]
+> 이 문서의 코드 예제는 UWP 앱 용으로 작성 되었습니다. WPF, Windows Forms 및 C++/win32 앱은 [IDataTransferManagerInterop](https://docs.microsoft.com/windows/win32/api/shobjidl_core/nn-shobjidl_core-idatatransfermanagerinterop) 인터페이스를 사용 하 여 특정 창에 대 한 [DataTransferManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager) 개체를 가져와야 합니다. 자세한 내용은 [ShareSource](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/ShareSource) 샘플을 참조 하세요.
 
 ## <a name="set-up-an-event-handler"></a>이벤트 처리기 설정
 
@@ -33,11 +36,11 @@ ms.locfileid: "67317700"
 다음과 같은 다양한 형식의 데이터를 공유할 수 있습니다.
 
 -   일반 텍스트
--   URI(Uniform Resource Identifier)
+-   Uniform Resource Identifier(URI)
 -   HTML
 -   서식 있는 텍스트
 -   비트맵
--   파일
+-   Files
 -   사용자 지정 개발자 정의 데이터
 
 [  **DataPackage**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage) 개체에는 하나 이상의 이러한 형식이 임의 조합으로 포함될 수 있습니다. 다음 예제는 텍스트 공유를 보여 줍니다.
@@ -93,14 +96,14 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 }
 ```
 
-## <a name="see-also"></a>참조 
+## <a name="see-also"></a>참고 항목 
 
 * [앱 간 통신](index.md)
 * [데이터 받기](receive-data.md)
 * [DataPackage](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackage)
 * [DataPackagePropertySet](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datapackagepropertyset)
 * [DataRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datarequest)
-* [DataRequested](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.datarequested)
+* [DataRequested 됨](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.datarequested)
 * [FailWithDisplayText](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datarequest.failwithdisplaytext)
 * [ShowShareUi](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.showshareui)
  

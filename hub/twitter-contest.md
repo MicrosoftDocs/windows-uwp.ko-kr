@@ -6,12 +6,12 @@ ms.author: mattwoj
 manager: jken
 ms.topic: article
 ms.date: 03/19/2020
-ms.openlocfilehash: ae86947b461e3fb748b67043827ffeebfc5cb0d2
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 2a7a5983dcc7e330a30cf53b93c73f36f811d17d
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80108106"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218473"
 ---
 # <a name="contribute-to-windows-docs-and-be-entered-to-win-some-swag"></a>Windows 문서에 참여 하 고 몇 가지 swag의 승리를 위해 입력 합니다.
 
@@ -27,7 +27,7 @@ Windows 설명서를 사용 하는 경우 참가자 커뮤니티의 일부인 �
     - **Windows 하드웨어 개발자** - [도구 및 드라이버](https://docs.microsoft.com/windows-hardware/drivers/)
 3. 페이지 맨 위에 있는 **편집** 단추를 선택 하 여 문서 페이지를 수정 합니다. 그러면 GitHub의 markdown 원본 파일로 이동 합니다.
 4. 변경이 완료 되 면 Pull 요청 (PR)을 파일 합니다.
-5. [@WindowsDocs](https://twitter.com/WindowsDocs) twitter 계정을 방문 하 여 PR에 대 한 링크와 함께 콘테스트 게시물에 회신 합니다.
+5. PR 링크를 사용 하 여 [@WindowsDocs 콘테스트 게시물](https://twitter.com/WindowsDocs/status/1242088720209268736) 에 회신 합니다.
 
 기여자 커뮤니티에 감사 합니다!
 

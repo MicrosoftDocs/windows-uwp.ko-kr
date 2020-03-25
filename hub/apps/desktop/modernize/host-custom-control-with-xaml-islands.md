@@ -8,16 +8,16 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: d881fc42e453e2ace0a44543c3e204aa154958b7
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: b1ac53e0a6b6e01cd2129e2b1893f91fae2ef0fe
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209799"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218603"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML 아일랜드를 사용 하 여 WPF 앱에서 사용자 지정 UWP 컨트롤 호스팅
 
-이 문서에서는 Windows Community Toolkit의 [Windowsxamlhost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용 하 여 .net Core 3을 대상으로 하는 WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하는 방법을 보여 줍니다. 사용자 지정 컨트롤은 Windows SDK에서 여러 개의 자사 UWP 컨트롤을 포함 하 고 UWP 컨트롤 중 하나의 속성을 WPF 앱의 문자열에 바인딩합니다. 또한이 문서에서는 [WinUI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)에서 자사 UWP 컨트롤을 호스트 하는 방법도 보여 줍니다.
+이 문서에서는 Windows Community Toolkit의 [Windowsxamlhost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용 하 여 .net Core 3을 대상으로 하는 WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트 하는 방법을 보여 줍니다. 사용자 지정 컨트롤은 Windows SDK에서 여러 개의 자사 UWP 컨트롤을 포함 하 고 UWP 컨트롤 중 하나의 속성을 WPF 앱의 문자열에 바인딩합니다. 또한이 문서에서는 [WinUI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)에서 UWP 컨트롤을 호스트 하는 방법도 보여 줍니다.
 
 이 문서는 WPF 앱에서이 작업을 수행 하는 방법을 보여 주지만 Windows Forms 앱의 프로세스와 비슷합니다. WPF 및 Windows Forms apps에서 UWP 컨트롤을 호스트 하는 방법에 대 한 개요는 [이 문서](xaml-islands.md#wpf-and-windows-forms-applications)를 참조 하세요.
 
@@ -231,7 +231,7 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용
 
 ## <a name="add-a-control-from-the-winui-library-to-the-custom-control"></a>WinUI 라이브러리의 컨트롤을 사용자 지정 컨트롤에 추가 합니다.
 
-일반적으로 UWP 컨트롤은 Windows 10 OS의 일부로 출시 되었으며 개발자가 Windows SDK를 통해 사용할 수 있게 되었습니다. [WinUI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/) 는 Windows SDK 릴리스에 연결 되지 않은 NuGet 패키지에서 Windows SDK의 업데이트 된 버전의 업데이트 된 버전을 배포 하는 대체 방법입니다. 이 라이브러리에는 Windows SDK 및 기본 UWP 플랫폼에 속하지 않는 새 컨트롤도 포함 되어 있습니다. 자세한 내용은 [WinUI 라이브러리 로드맵](https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md) 을 참조 하세요.
+일반적으로 UWP 컨트롤은 Windows 10 OS의 일부로 출시 되었으며 개발자가 Windows SDK를 통해 사용할 수 있게 되었습니다. [WinUI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/) 는 Windows SDK의 업데이트 된 버전의 UWP 컨트롤을 Windows SDK 릴리스에 연결 되지 않은 NuGet 패키지에 배포 하는 다른 방법입니다. 이 라이브러리에는 Windows SDK 및 기본 UWP 플랫폼에 속하지 않는 새 컨트롤도 포함 되어 있습니다. 자세한 내용은 [WinUI 라이브러리 로드맵](https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md) 을 참조 하세요.
 
 이 섹션에서는 WPF 앱에서이 컨트롤을 호스팅할 수 있도록 WinUI 라이브러리의 UWP 컨트롤을 사용자 정의 컨트롤에 추가 하는 방법을 보여 줍니다.
 
@@ -286,6 +286,9 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스팅하려면 앱을 사용
 필요에 따라 배포를 위해 [Msix 패키지](https://docs.microsoft.com/windows/msix) 에 WPF 앱을 패키지할 수 있습니다. MSIX은 Windows 용 최신 앱 패키징 기술 이며 MSI, .appx, App-v 및 ClickOnce 설치 기술의 조합을 기반으로 합니다.
 
 다음 지침에서는 Visual Studio 2019의 [Windows 응용 프로그램 패키징 프로젝트](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) 를 사용 하 여 msix 패키지의 솔루션에 있는 모든 구성 요소를 패키지 하는 방법을 보여 줍니다. 이러한 단계는 MSIX 패키지에서 WPF 앱을 패키징하는 경우에만 필요 합니다. 이러한 단계에는 현재 사용자 지정 UWP 컨트롤을 호스트 하는 시나리오와 관련 된 몇 가지 해결 방법이 포함 되어 있습니다.
+
+> [!NOTE]
+> 배포를 위해 [Msix 패키지](https://docs.microsoft.com/windows/msix) 에 응용 프로그램을 패키지 하지 않도록 선택 하는 경우 앱을 실행 하는 컴퓨터에 [는 C++ Visual Runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) 이 설치 되어 있어야 합니다.
 
 1. 새 [Windows 응용 프로그램 패키징 프로젝트](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net) 를 솔루션에 추가 합니다. 프로젝트를 만들 때 **Windows 10, 버전 1903 (10.0;)을 선택 합니다. 빌드 18362)** 는 **대상 버전** 및 **최소 버전**모두에 해당 합니다.
 

@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Mac에서 Windows로 전환, 바로 가기 키 매핑, Unix에서 windows로 전환, windows에서 windows로 전환, Macintosh 사용자에 대해 Windows를 사용 하는 방법, macintosh 사용자에 게 Windows를 사용 하는 방법, windows에서 Windows로 전환 하는 방법, 도움을 주는 Mac OS X 도움말 Mac에서 PC로 이동
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: a4e71143730184db094df2a7e8f1416cbaf244c4
-ms.sourcegitcommit: f5bb4e35d1373b982259e61547b3b1765da0e78c
+ms.openlocfilehash: 8c23fa3e6791a3cd78d259b40e68606a30fd9395
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74881276"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218443"
 ---
 # <a name="guide-for-changing-your-dev-environment-from-mac-to-windows"></a>개발 환경을 Mac에서 Windows로 변경 하기 위한 가이드
 
@@ -24,20 +24,22 @@ ms.locfileid: "74881276"
 
 ## <a name="keyboard-shortcuts"></a>바로 가기 키
 
-| **연산** | **Mac** | **Windows** |
+| **연산의** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
 | 복사 | 명령 + C | Ctrl+C |
 | 잘라내기 | 명령 + X | Ctrl+X |
 | 붙여넣기 | 명령 + V | Ctrl+V |
 | 실행 취소 | 명령 + Z | Ctrl+Z |
 | 저장 | 명령 + S | Ctrl+S |
-| 먼저 | 명령 + O | Ctrl+O |
+| 열기 | 명령 + O | Ctrl+O |
 | 컴퓨터 잠금 | 명령 + 컨트롤 + Q | WindowsKey + L |
 | 바탕 화면 표시 | 명령 + F3 | WindowsKey + D |
+| 파일 브라우저 열기 | 명령 + N | WindowsKey + E |
 | 창 최소화 | 명령 + M | WindowsKey + M |
 | 검색 | 명령 + 공백 | WindowsKey |
 | 활성 창 닫기 | 명령 + W | 컨트롤 + W |
 | 현재 작업 전환 | 명령 + 탭 | Alt+Tab |
+| 전체 화면으로 창 최대화 | 컨트롤 + 명령 + F | WindowsKey + Up |
 | 화면 저장 (스크린샷) | 명령 + Shift + 3 | WindowsKey + Shift + S |
 | 창 저장 | 명령 + Shift + 4 | WindowsKey + Shift + S |
 | 항목 정보 보기 또는 속성 | 명령 + I | Alt+Enter |
@@ -49,17 +51,17 @@ ms.locfileid: "74881276"
 
 참고: 이러한 바로 가기 중 일부에는 Surface 장치의 트랙 패드 및 기타 타사 랩톱과 같은 "Precision 트랙 패드"가 필요 합니다.
 
- **연산** | **Mac** | **Windows** |
+ **연산의** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
 | Scroll | 두 손가락 세로 살짝 밀기 | 두 손가락 세로 살짝 밀기 |
-| Zoom | 손가락으로 두 손가락으로 | 손가락으로 두 손가락으로 |
+| 확대/축소 | 손가락으로 두 손가락으로 | 손가락으로 두 손가락으로 |
 | 뒤로 살짝 밀어 보기 간 이동 | 두 손가락 사이드 살짝 밀기 | 두 손가락 사이드 살짝 밀기 |
 | 가상 작업 영역 전환 | 네 손가락 옆으로 살짝 밀기 | 네 손가락 옆으로 살짝 밀기 |
 | 현재 열려 있는 앱 표시 | 네 손가락 위로 살짝 밀기 | 세 손가락 위로 살짝 밀기 |
-| 앱 간 전환 | 해당 없음 | 세 손가락 옆으로 살짝 밀기 |
+| 앱 간 전환 | N/A | 세 손가락 옆으로 살짝 밀기 |
 | 바탕 화면으로 이동 | 네 손가락에 흩어져 있습니다. | 세 손가락 아래로 살짝 밀기 |
 | Cortana/Action center 열기 | 오른쪽의 두 손가락 슬라이드 | 세 손가락 탭 |
-| 추가 정보 열기 | 세 손가락 탭 | 해당 없음 |
+| 추가 정보 열기 | 세 손가락 탭 | N/A |
 |실행 패드/앱 시작 표시 | 네 손가락으로 손가락 | 네 손가락으로 탭 |
 
 참고: 트랙 패드 옵션은 두 플랫폼에서 구성할 수 있습니다.
@@ -78,17 +80,21 @@ Windows 명령줄은 DOS 명령을 수락 하 고 Windows에서 가장 일반적
 
 PowerShell은 [Mac 에서도 사용할 수](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)있습니다.
 
-3. Linux용 Windows 하위 시스템(WSL)
+3. WSL(Linux용 Windows 하위 시스템)
 
-WSL을 사용 하면 Windows 내에서 Linux 셸을 실행할 수 있습니다. 즉, 선택 및 특정 Linux 배포판 설치에 따라 *bash** 또는 기타 셸을 실행할 수 있습니다. WSL을 사용 하면 Mac 사용자에 게 가장 익숙한 환경의 종류를 제공할 수 있습니다. 예를 들어 Windows 명령줄에서와 같이 **dir** 이 아닌 현재 디렉터리에 파일을 나열 하는 경우는 **ls** 입니다. Instaling 및 WSL 사용에 대 한 자세한 내용은 windows [10 용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/windows/wsl/install-win10)를 참조 하세요.
+WSL을 사용 하면 Windows 내에서 Linux 셸을 실행할 수 있습니다. 즉, 선택 및 특정 Linux 배포판 설치에 따라 *bash** 또는 기타 셸을 실행할 수 있습니다. WSL을 사용 하면 Mac 사용자에 게 가장 익숙한 환경의 종류를 제공할 수 있습니다. 예를 들어 Windows 명령줄에서와 같이 **dir** 이 아닌 현재 디렉터리에 파일을 나열 하는 경우는 **ls** 입니다. WSL 설치 및 사용에 대 한 자세한 내용은 [windows 10 용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/windows/wsl/install-win10)를 참조 하세요.
+
+4. Windows 터미널 (미리 보기)
+
+Windows Terminal는 기존 Windows 명령줄, PowerShell 및 Linux 용 Windows 하위 시스템을 비롯 한 다양 한 소스에서 명령줄 도구와 셸을 결합 하는 응용 프로그램입니다. 현재 미리 보기 상태에 있는 동안에는 여러 탭, 분할 창, 사용자 지정 테마 및 스타일, 전체 유니코드 지원 등 여러 가지 유용한 기능을 alreaedy 있습니다. Windows 터미널은 [windows 10의 Microsoft Store](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701?activetab=pivot:overviewtab)에서 설치할 수 있습니다.
 
 ## <a name="apps-and-utilities"></a>앱 및 유틸리티
 
- **앱** | **Mac** | **Windows** |
+ **다운로드** | **Mac** | **Windows** |
 |---------------|--------------------|---------------------|
 | 설정 및 기본 설정 | 시스템 기본 설정 | 설정 |
-| 작업 관리자 | 작업 모니터 | 작업 관리자 |
+| 작업 관리자 | 활동 모니터 | 작업 관리자 |
 | 디스크 서식 지정 | 디스크 유틸리티 | 디스크 관리 |
-| 텍스트 편집 | TextEdit | Windows 메모장 |
+| 텍스트 편집 | TextEdit | 메모장 |
 | 이벤트 보기 | 콘솔 | 이벤트 뷰어 |
 | 파일/앱 찾기 | 명령 + 공백 | Windows 키 |
