@@ -6,12 +6,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: 시작, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f78bdfec6c6e06ffc542bc7741b875e952bc169
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 9183d9e2134d376400d2d6b85901477ff7b27413
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684897"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218583"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Windows 10 앱 시작
 
@@ -30,7 +30,7 @@ ms.locfileid: "75684897"
                         <h3>Windows 10 앱에 대해 알아보기</h3>
                         <p>Windows 10 및 유니버설 Windows 플랫폼에서는 모든 유형의 Windows 디바이스에서 작동하고 제대로 표시되는 앱을 빌드하거나, 최신 기능을 사용하여 기존 앱을 업데이트할 수 있습니다.</p>
                         <ul>
-                          <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">UWP 앱이란?</a></li>
+                          <li><a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">Windows 앱이란?</a></li>
                         </ul>
                     </div>
                 </div>
@@ -113,7 +113,7 @@ ms.locfileid: "75684897"
                     <h3>샘플</h3>
                     <p>Windows 10 플랫폼을 직접 경험해보고 API가 실제로 어떻게 작동하는지 확인하세요.</p>
                     <br>
-                    <p><a href="//docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples">UWP 앱 샘플 사용</a></p>
+                    <p><a href="//docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples">Windows 앱 샘플 사용</a></p>
                     <p><a href="//github.com/Microsoft/Windows-appsample-customers-orders-database">고객 주문 데이터베이스</a></p>
                     <p><a href="//github.com/Microsoft/Windows-appsample-remote-system-sessions">퀴즈 게임(프로젝트 로마)</a></p>
                     <p><a href="//developer.microsoft.com/windows/samples">Windows 코드 샘플 포털</a></p>

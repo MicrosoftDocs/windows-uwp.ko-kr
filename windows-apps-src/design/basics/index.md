@@ -1,28 +1,28 @@
 ---
-description: 다양한 장치 및 화면 크기에서 멋지게 보이고 탐색하기 쉬운 UWP 앱을 디자인하고 코딩하는 방법을 알아봅니다.
+description: 다양한 디바이스 및 화면 크기에서 멋지게 보이고 탐색하기 쉬운 Windows 앱을 디자인하고 코딩하는 방법을 알아봅니다.
 title: 디자인 기본 사항
-keywords: UWP 앱 레이아웃, 유니버설 windows 플랫폼, 앱 디자인, 인터페이스
-ms.date: 03/07/2018
+keywords: uwp 앱 레이아웃, 유니버설 windows 플랫폼, 앱 디자인, 인터페이스, windows 앱 레이아웃
+ms.date: 03/23/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 78462d5d29ebcc31792aa46da7657c57fb960e13
-ms.sourcegitcommit: f0f933d5cf0be734373a7b03e338e65000cc3d80
+ms.openlocfilehash: fdedd400928a32ae44a1e88b8e0159d7b36473f2
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65984107"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218513"
 ---
-# <a name="design-basics-for-uwp-apps"></a>UWP 앱에 대한 디자인 기본 사항
+# <a name="design-basics-for-windows-apps"></a>Windows 앱용 디자인 기본 사항
 
 ![디자인 기본 사항 아이콘](../images/basics-2x.png)
 
-UWP(유니버설 Windows 플랫폼) 디자인 지침은 세련되고 아름다운 앱을 디자인하고 빌드하는 데 도움이 되는 리소스입니다. 규범적인 규칙 목록이 아닙니다. 진화하는 Fluent 디자인 시스템과 앱 빌드 커뮤니티의 요구 사항에 맞게 적응할 수 있도록 설계된 살아있는 문서입니다. 
+Windows 디자인 지침은 세련되고 아름다운 앱을 디자인하고 빌드하는 데 도움이 되는 리소스입니다. 규범적인 규칙 목록이 아닙니다. 진화하는 Fluent 디자인 시스템과 앱 빌드 커뮤니티의 요구 사항에 맞게 적응할 수 있도록 설계된 살아있는 문서입니다. 
 
 ## <a name="overview"></a>개요
 
-[**UWP 앱 디자인 소개**](design-and-ui-intro.md)
+[**Windows 앱 디자인 소개**](design-and-ui-intro.md)
 
-모든 유형의 Windows 기반 디바이스에서 멋지게 크기 조정되는 앱을 만드는 모범 사례와 결합된 UWP 기능을 소개합니다.
+모든 유형의 Windows 기반 디바이스에서 멋지게 크기 조정되는 앱을 만드는 모범 사례와 결합된 Windows 앱 기능을 소개합니다.
 
 [**Fluent 디자인 시스템**](/windows/apps/fluent-design-system)
 
@@ -32,7 +32,7 @@ Fluent 디자인 시스템은 아름답고 공감할 수 있는 적응형 사용
 
 [**탐색 기본 사항**](navigation-basics.md)
 
-UWP 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델을 기반으로 합니다. 이 문서에서는 이러한 구성 요소를 소개하고 적합한 탐색 환경을 만드는 데 함께 사용하는 방법을 보여 줍니다.
+Windows 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델을 기반으로 합니다. 이 문서에서는 이러한 구성 요소를 소개하고 적합한 탐색 환경을 만드는 데 함께 사용하는 방법을 보여 줍니다.
 
 [**명령 기본 사항**](commanding-basics.md)
 
@@ -57,4 +57,4 @@ XAML을 사용하여 기본 사용자 인터페이스를 만듭니다.
 
 [**3. 사용자 지정 스타일 만들기**](xaml-basics-style.md)
 
-사용자 지정 스타일을 만들어 UWP 컨트롤에 사용자 고유의 모양과 느낌을 제공합니다.
+사용자 지정 스타일을 만들어 Windows 컨트롤에 사용자 고유의 모양과 느낌을 제공합니다.

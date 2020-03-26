@@ -1,29 +1,29 @@
 ---
-description: UWP 앱에 컨트롤 &amp; 패턴을 추가하는 방법에 대한 디자인 지침과 코딩 지침을 가져옵니다. 앱에서 사용할 45가지 이상의 강력한 컨트롤을 찾습니다.
-title: UWP 컨트롤 및 패턴 - Windows 앱 개발
-keywords: UWP 컨트롤, 사용자 인터페이스, 앱 컨트롤
+description: Windows 앱에 컨트롤 &amp; 패턴을 추가하는 방법에 대한 디자인 지침과 코딩 지침을 확인하세요. 앱에서 사용할 45가지 이상의 강력한 컨트롤을 찾습니다.
+title: Windows 컨트롤 및 패턴 - Windows 앱 개발
+keywords: uwp 컨트롤, 사용자 인터페이스, 앱 컨트롤, windows 컨트롤
 label: Controls & patterns
 template: detail.hbs
-ms.date: 11/16/2017
+ms.date: 03/23/2020
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: ea9f58c8f861be7774285c5611ad222d9587e2a1
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 63907b3bfe3fc6dece900f1a7c09ac535e859471
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081708"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218453"
 ---
-# <a name="controls-for-uwp-apps"></a>UWP 앱용 컨트롤
+# <a name="controls-for-windows-apps"></a>Windows 앱용 컨트롤
 
 ![컨트롤](../images/controls-2x.png)
 
-UWP 앱 개발에서 <i>컨트롤</i>은 콘텐츠를 표시하거나 조작을 가능하게 하는 UI 요소입니다. 컨트롤은 사용자 인터페이스의 구성 요소입니다. <i>패턴</i>은 새로운 것을 만들기 위해 여러 컨트롤을 조합하는 방법입니다.
+Windows 앱 개발에서 <i>컨트롤</i>은 콘텐츠를 표시하거나 조작을 가능하게 하는 UI 요소입니다. 컨트롤은 사용자 인터페이스의 구성 요소입니다. <i>패턴</i>은 새로운 것을 만들기 위해 여러 컨트롤을 조합하는 방법입니다.
 
 간단한 단추에서 그리드 보기처럼 강력한 데이터 컨트롤까지 45개 이상의 사용할 수 있는 컨트롤을 제공합니다.  이러한 컨트롤은 Fluent 디자인 시스템의 일부이며, 모든 디바이스와 화면 크기에서 멋지게 보이는 대담하고 확장 가능한 UI를 만드는 데 도움이 됩니다.
 
-이 섹션의 문서에서는 UWP 앱에 컨트롤 및 패턴을 추가하는 방법에 대한 디자인 지침과 코딩 지침을 제공합니다.
+이 섹션의 문서에서는 Windows 앱에 컨트롤 및 패턴을 추가하는 방법에 대한 디자인 지침과 코딩 지침을 제공합니다.
 
 ## <a name="intro"></a>소개
 
@@ -140,4 +140,4 @@ Microsoft Store에서 _XAML Controls Gallery_ 앱을 가져와서 이러한 컨�
 
 ## <a name="additional-controls"></a>추가 컨트롤
 
-UWP 개발용 추가 컨트롤은<a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/uwp-ui-controls">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> 및 <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>와 같은 회사에서 사용할 수 있습니다. 이러한 컨트롤은 사용자 지정 컨트롤 및 서비스를 사용하여 표준 시스템 컨트롤을 보강함으로써 엔터프라이즈 및 .NET 개발자용 추가 지원을 제공합니다.
+Windows 개발용 추가 컨트롤은<a href="https://www.telerik.com/">Telerik</a>, <a href="https://www.syncfusion.com/uwp-ui-controls">SyncFusion</a>, <a href="https://www.devexpress.com/Products/NET/Controls/Win10Apps/">DevExpress</a>, <a href="https://www.infragistics.com/products/universal-windows-platform">Infragistics</a>, <a href="https://www.componentone.com/Studio/Platform/UWP">ComponentOne</a> 및 <a href="https://www.actiprosoftware.com/products/controls/universal">ActiPro</a>와 같은 회사에서 사용할 수 있습니다. 이러한 컨트롤은 사용자 지정 컨트롤 및 서비스를 사용하여 표준 시스템 컨트롤을 보강함으로써 엔터프라이즈 및 .NET 개발자용 추가 지원을 제공합니다.
