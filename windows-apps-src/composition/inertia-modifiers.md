@@ -5,18 +5,18 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 196c6d98b0944bbc22c3d0f652853ecab28bd3c6
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 46f20a4f63decfad063332d2e8e494c15563e398
+ms.sourcegitcommit: f2832e1e04cbf472f7fd51c08144489c510ff470
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061914"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80270398"
 ---
 # <a name="create-snap-points-with-inertia-modifiers"></a>관성 한정자로 끌기 지점 만들기
 
 이 문서에서는 InteractionTracker의 InertiaModifier 기능을 사용하여 지정된 지점으로 끄는 동작 경험을 만드는 방법에 대해 자세히 살펴 봅니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 여기에서는 여러분이 이 문서에서 다룬 개념에 익숙하다고 가정합니다.
 
@@ -54,7 +54,7 @@ InteractionTracker를 사용하여 사용자 지정 조작 경험을 빌드하�
 > [!NOTE]
 > InertiaModifier의 조건 측면은 InteractionTracker가 관성 상태에 진입할 때 한 번만 평가됩니다. 그러나 InertiaMotion에 한해, 조건이 참인 한정자에 대해 매 프레임마다 동작 식이 평가됩니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이제 InertiaModifier를 사용하여 이미지의 스크롤 캔버스를 다시 만들 수 있는 끌기 지점 환경을 만드는 방법을 살펴보겠습니다. 이 예에서 각 조작은 단일 이미지를 통해 이동할 가능성이 있습니다. 이를 흔히 단일 필수 끌기 지점이라고 합니다.
 
@@ -93,12 +93,12 @@ var snapDownModifier = InteractionTrackerInertiaRestingValue.Create(_compositor)
 ```csharp
 // Is NaturalRestingPosition less than the halfway point between Snap Points?
 snapUpModifier.Condition = _compositor.CreateExpressionAnimation(
-"this.Target.NaturalRestingPosition.y < (this.StartingValue – " + 
+"this.Target.NaturalRestingPosition.y < (this.StartingValue - " + 
 "mod(this.StartingValue, prop.snapDistance) + prop.snapDistance / 2)");
 snapUpModifier.Condition.SetReferenceParameter("prop", _propSet);
 // Is NaturalRestingPosition greater than the halfway point between Snap Points?
 snapDownModifier.Condition = _compositor.CreateExpressionAnimation(
-"this.Target.NaturalRestingPosition.y >= (this.StartingValue – " + 
+"this.Target.NaturalRestingPosition.y >= (this.StartingValue - " + 
 "mod(this.StartingValue, prop.snapDistance) + prop.snapDistance / 2)");
 snapDownModifier.Condition.SetReferenceParameter("prop", _propSet);
 ```
@@ -113,10 +113,10 @@ snapDownModifier.Condition.SetReferenceParameter("prop", _propSet);
 snapUpModifier.RestingValue = _compositor.CreateExpressionAnimation(
 "this.StartingValue - mod(this.StartingValue, prop.snapDistance)");
 snapUpModifier.RestingValue.SetReferenceParameter("prop", _propSet);
-snapForwardModifier.RestingValue = _compositor.CreateExpressionAnimation(
+snapDownModifier.RestingValue = _compositor.CreateExpressionAnimation(
 "this.StartingValue + prop.snapDistance - mod(this.StartingValue, " + 
 "prop.snapDistance)");
-snapForwardModifier.RestingValue.SetReferenceParameter("prop", _propSet);
+snapDownModifier.RestingValue.SetReferenceParameter("prop", _propSet);
 ```
 
 마지막으로 InteractionTracker에 InertiaModifier를 추가합니다. 이제 InteractionTracker가 InertiaState를 입력하면 InertiaModifier의 상태를 확인하여 위치를 수정해야 하는지 확인합니다.
