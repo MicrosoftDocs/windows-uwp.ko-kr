@@ -793,6 +793,8 @@
           href: ../cpp-and-winrt-apis/interop-winrt-cx.md
         - name: WRL에서 C++/WinRT로 이동
           href: ../cpp-and-winrt-apis/move-to-winrt-from-wrl.md
+        - name: 'C#에서 샘플 앱 포팅'
+          href: ../cpp-and-winrt-apis/clipboard-to-winrt-from-csharp.md
         - name: 'C#에서 C++/WinRT로 이동'
           href: ../cpp-and-winrt-apis/move-to-winrt-from-csharp.md
         - name: ABI와 상호 운용
