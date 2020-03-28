@@ -10,23 +10,23 @@ metadata:
   ms.author: misatran
   ms.date: 05/08/2018
   ms.localizationpriority: medium
-  ms.openlocfilehash: 27a950a8c9de6e4be8a5905bd274dddeeb982aa7
-  ms.sourcegitcommit: b2a671bf10894a9fbce5d2a1fab7fe6228188394
+  ms.openlocfilehash: 953b284568f17cedcd89c3459706ac4c88200111
+  ms.sourcegitcommit: ce902b1dfda28d1391fa43ff6dcbbd0332cc5244
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 03/13/2020
-  ms.locfileid: "79310976"
+  ms.lasthandoff: 03/28/2020
+  ms.locfileid: "80380368"
 landingContent:
 - title: ARM 기반 Windows 10 정보
   linkLists:
   - linkListType: overview
     links:
     - text: ARM 기반 Windows 10
-      url: /windows/uwp/porting/apps-on-arm.md
+      url: /windows/uwp/porting/apps-on-arm
   - linkListType: learn
     links:
     - text: x86 에뮬레이션 작동 방식 알아보기
-      url: /windows/uwp/porting/apps-on-arm-x86-emulation.md
+      url: /windows/uwp/porting/apps-on-arm-x86-emulation
   - linkListType: video
     links:
     - text: ARM64 Win32 C++ 앱 빌드
@@ -42,13 +42,13 @@ landingContent:
     - text: SDK를 사용하여 ARM64 앱 빌드
       url: https://blogs.windows.com/buildingapps/?p=52087
     - text: ARM의 UWP 앱
-      url: /windows/uwp/porting/apps-on-arm-troubleshooting-arm32.md
+      url: /windows/uwp/porting/apps-on-arm-troubleshooting-arm32
     - text: ARM에서 디버그
-      url: /windows-hardware/drivers/debugger/debugging-arm64.md
+      url: /windows-hardware/drivers/debugger/debugging-arm64
     - text: WDK를 사용하여 ARM64 드라이버 빌드
-      url: /windows-hardware/drivers/develop/building-arm64-drivers.md
+      url: /windows-hardware/drivers/develop/building-arm64-drivers
     - text: ARM 기반 x86 앱 개발
-      url: /windows/uwp/porting/apps-on-arm-troubleshooting-x86.md
+      url: /windows/uwp/porting/apps-on-arm-troubleshooting-x86
 - title: 피드백이 있나요?
   linkLists:
   - linkListType: reference
