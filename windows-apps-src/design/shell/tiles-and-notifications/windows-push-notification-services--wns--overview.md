@@ -7,12 +7,12 @@ ms.date: 03/06/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bd6c3ec487871d18a7142489802b801120f5e7ed
-ms.sourcegitcommit: 0142b5a47511afa76d74015e3fd8635b6042a542
+ms.openlocfilehash: e4a0a2d532341e76d6ff74dda9b6b6a8638c77fd
+ms.sourcegitcommit: b398966fc052b232e03f2e32512a48d3a4444b8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "79038156"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80367674"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요 
 
@@ -42,13 +42,13 @@ WNS를 사용하여 알림을 보내려면 먼저 스토어 대시보드에 앱�
 WNS를 통해 알림을 보내려면 앱을 파트너 센터 대시보드에 등록 해야 합니다. 이렇게 하면 클라우드 서비스가 WNS로 인증하는 데 사용할 자격 증명을 앱에 제공합니다. 이러한 자격 증명은 패키지 SID(보안 식별자)와 비밀 키로 구성됩니다. 이 등록을 수행 하려면 [파트너 센터](https://partner.microsoft.com/dashboard)에 로그인 합니다. 앱을 만든 후 자격 증명을 검색 하는 방법에 대 한 [제품 관리-WNS/MPNS](https://apps.dev.microsoft.com/) for instrunctions을 참조 하세요 (live services 솔루션을 사용 하려는 경우이 페이지의 **live services 사이트** 링크를 따름).
 
 등록하려면 다음을 수행합니다.
-1.  파트너 센터의 Windows 스토어 앱 페이지로 이동 하 고 개인 Microsoft 계정 (예: johndoe@outlook.com, janedoe@xboxlive.com)로 로그인 합니다.
-2.  로그인 했으면 대시보드 링크를 클릭 합니다.
-3.  대시보드에서 새 앱 만들기를 선택 합니다.
+1.    파트너 센터의 Windows 스토어 앱 페이지로 이동 하 고 개인 Microsoft 계정 (예: johndoe@outlook.com, janedoe@xboxlive.com)로 로그인 합니다.
+2.    로그인 했으면 대시보드 링크를 클릭 합니다.
+3.    대시보드에서 새 앱 만들기를 선택 합니다.
 
 ![wns 앱 등록](../images/wns-create-new-app.png)
 
-4.  앱 이름을 예약 하 여 앱을 만듭니다. 앱에 고유한 이름을 제공 합니다. 이름을 입력 하 고 제품 이름 예약 단추를 클릭 합니다. 이름을 사용할 수 있는 경우 앱 용으로 예약 되어 있습니다. 앱 이름을 성공적으로 예약한 후에는 다른 세부 정보를 수정할 수 있게 됩니다.
+4.    앱 이름을 예약 하 여 앱을 만듭니다. 앱에 고유한 이름을 제공 합니다. 이름을 입력 하 고 제품 이름 예약 단추를 클릭 합니다. 이름을 사용할 수 있는 경우 앱 용으로 예약 되어 있습니다. 앱 이름을 성공적으로 예약한 후에는 다른 세부 정보를 수정할 수 있게 됩니다.
 
 ![wns 예약 제품 이름](../images/wns-reserve-poduct-name.png)
  
@@ -56,24 +56,24 @@ WNS를 통해 알림을 보내려면 앱을 파트너 센터 대시보드에 등
 
 앱의 이름을 예약 하면 Windows 스토어에서 연결 된 자격 증명을 만들었습니다. 또한 응용 프로그램의 매니페스트 파일 (appxmanifest.xml)에 있어야 하는 연결 된 id 값 (이름 및 게시자)을 할당 했습니다. Windows 스토어에 앱을 이미 업로드 한 경우 이러한 값이 매니페스트에 자동으로 추가 됩니다. 앱을 업로드 하지 않은 경우에는 매니페스트에 id 값을 수동으로 추가 해야 합니다.
 
-1.  제품 관리 드롭다운 화살표를 선택 합니다.
+1.    제품 관리 드롭다운 화살표를 선택 합니다.
 
 ![wns 제품 관리](../images/wns-product-management.png)
 
-2.  제품 관리 드롭다운에서 WNS/MPNS 링크를 선택 합니다.
+2.    제품 관리 드롭다운에서 WNS/MPNS 링크를 선택 합니다.
 
 ![wns 제품 관리 continuted](../images/wns-product-management2.png)
  
-3.  WNS/MPNS 페이지에서 Windows 푸시 Notification Services (WNS) 및 Microsoft Azure Mobile Services 섹션 아래에 있는 라이브 서비스 사이트 링크를 클릭 합니다.
+3.    WNS/MPNS 페이지에서 Windows 푸시 Notification Services (WNS) 및 Microsoft Azure Mobile Services 섹션 아래에 있는 라이브 서비스 사이트 링크를 클릭 합니다.
 
 ![wns 라이브 서비스](../images/wns-live-services-page.png)
  
-4.  응용 프로그램 등록 포털 (이전에는 Live Services 페이지) 페이지에서 앱의 매니페스트에 포함할 identity 요소를 제공 합니다. 여기에는 앱 암호, 패키지 보안 식별자 및 응용 프로그램 Id가 포함 됩니다. 텍스트 편집기에서 매니페스트를 열고 페이지가 지시 하는 대로 해당 요소를 추가 합니다.   
+4.    응용 프로그램 등록 포털 (이전에는 Live Services 페이지) 페이지에서 앱의 매니페스트에 포함할 identity 요소를 제공 합니다. 여기에는 앱 암호, 패키지 보안 식별자 및 응용 프로그램 Id가 포함 됩니다. 텍스트 편집기에서 매니페스트를 열고 페이지가 지시 하는 대로 해당 요소를 추가 합니다.    
 
 > [!NOTE]
 > AAD 계정으로 로그인 하는 경우 앱을 등록 한 Microsoft 계정 소유자에 게 문의 하 여 연결 된 앱 암호를 가져와야 합니다. 이 연락처를 찾는 데 도움이 필요 하면 화면의 오른쪽 위에 있는 기어를 클릭 한 다음 개발자 설정을 클릭 하면 해당 Microsoft 계정으로 앱을 만든 메일 주소가 표시 됩니다.
  
-5.  클라우드 서버에 SID 및 클라이언트 암호를 업로드 합니다.
+5.    클라우드 서버에 SID 및 클라이언트 암호를 업로드 합니다.
 
 > [!Important]
 > 클라우드 서비스에서 SID 및 클라이언트 암호를 안전 하 게 저장 하 고 액세스 해야 합니다. 이 정보를 공개 하거나 도용 하면 공격자가 권한 또는 정보 없이 사용자에 게 알림을 보낼 수 있습니다.
@@ -180,6 +180,7 @@ WNS는 클라우드 서비스를 인증하고 인증에 성공하면 "200 OK" �
 -   클라우드 서비스는 하나의 액세스 토큰을 사용하여 해당 토큰이 만들어진 대상인 하나의 앱으로만 알림을 보낼 수 있습니다. 하나의 액세스 토큰을 사용하여 여러 앱으로 알림을 보낼 수는 없습니다. 따라서 클라우드 서비스가 여러 앱을 지원하는 경우 각 채널 URI에 알림을 푸시할 때 해당 앱의 올바른 액세스 토큰을 제공해야 합니다.
 -   디바이스가 오프라인이면 기본적으로 WNS는 각 채널 URI마다 최대 5개의 타일 알림(큐를 사용하는 경우, 사용하지 않는 경우에는 1개의 타일 알림)과 하나의 배지 알림을 저장하며 원시 알림은 저장하지 않습니다. 이 기본 캐싱 동작은 [X-WNS-Cache-Policy 헤더](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))를 통해 변경할 수 있습니다. 디바이스가 오프라인일 때는 알림 메시지가 저장되지 않습니다.
 -   알림 콘텐츠가 해당 사용자에 맞게 개인 설정되어 있는 시나리오에서는 클라우드 서비스가 업데이트를 받는 즉시 보내도록 WNS에서 권장합니다. 이러한 시나리오의 예로는 소셜 미디어 피드 업데이트, 인스턴트 커뮤니케이션 초대, 새 메시지 알림 또는 경고가 있습니다. 또는 날씨, 주식, 뉴스 업데이트 같이 동일한 일반 업데이트가 대규모 사용자 하위 집합에 자주 전달되는 시나리오가 있을 수 있습니다. WNS 지침에는 이러한 업데이트의 빈도가 최대 30분마다 하나인 것으로 지정되어 있습니다. 최종 사용자 또는 WNS는 루틴 업데이트가 더 자주 사용되도록 정할 수 있습니다.
+-   Windows 알림 플랫폼은 소켓을 연결 하 고 정상 상태로 유지 하기 위해 WNS와 주기적인 데이터 연결을 유지 관리 합니다. 알림 채널을 요청 하거나 사용 하는 응용 프로그램이 없으면 소켓이 생성 되지 않습니다.
 
 ## <a name="expiration-of-tile-and-badge-notifications"></a>타일 및 배지 알림의 만료
 
