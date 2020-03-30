@@ -1,20 +1,20 @@
 ---
-description: C++/CX 코드를 C++/WinRT의 해당 코드로 이동하는 방법을 보여 줍니다.
+description: 이 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트의 소스 코드를 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 해당하는 소스 코드로 포팅하는 데 관련된 기술 세부 정보에 대해 설명합니다.
 title: C++/CX에서 C++/WinRT로 이동
 ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a0307833e996a5faba558631062c94efca3b75d
-ms.sourcegitcommit: 756217c559155e172087dee4d762d328c6529db6
+ms.openlocfilehash: a554a46d73053c2b6a01a0b10dbc78c87b743052
+ms.sourcegitcommit: f288bcc108f9850671662c7b76c55c8313e88b42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2020
-ms.locfileid: "78935361"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80290035"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>C++/CX에서 C++/WinRT로 이동
 
-이 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트의 코드를 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 코드로 이식하는 방법을 보여 줍니다.
+이 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트의 소스 코드를 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 해당하는 소스 코드로 포팅하는 데 관련된 기술 세부 정보에 대해 설명합니다.
 
 ## <a name="porting-strategies"></a>이식 전략
 

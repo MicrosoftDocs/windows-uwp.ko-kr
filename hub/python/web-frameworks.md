@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Python, Windows 10, Microsoft, Windows의 Python, WSL을 사용하는 Python 웹, Linux용 Windows 하위 시스템을 사용하는 Python 웹앱, Windows에서 Python 웹 개발, Windows의 Flask 앱, Windows의 Django 앱, Python 웹, Windows에서 Flask 웹 개발, Windows에서 Django 웹 개발, Python을 사용한 Windows 웹 개발, VS Code Python 웹 개발, Remote - WSL 확장, Ubuntu, WSL, venv, pip, Microsoft Python 확장, Windows에서 Python 실행, Windows에서 Python 사용, Windows에서 Python으로 빌드
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: d883007168e0baf35f8a0ab0827505b683cfd291
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 8cbc8343764e4de57bd418ecdb36bd606b037c68
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79208978"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218483"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>웹 개발을 위해 Windows에서 Python 사용 시작
 
@@ -325,7 +325,7 @@ Python은 해석된 언어이며 다양한 유형의 인터프리터(Python2, An
 
 16. 모든 수정된 파일을 저장합니다.
 
-17. VS Code 터미널에서 `python manage.py runserver`를 사용하여 개발 서버를 실행하고, 브라우저를 `http://127.0.0.1:8000/`으로 열어 "Hello, Django"를 렌더링하는 페이지를 확인합니다.
+17. VS Code 터미널에서 `python3 manage.py runserver`를 사용하여 개발 서버를 실행하고, 브라우저를 `http://127.0.0.1:8000/`으로 열어 "Hello, Django"를 렌더링하는 페이지를 확인합니다.
 
 축하합니다. VS Code 및 Linux용 Windows 하위 시스템을 사용하여 Django 웹 애플리케이션을 만들었습니다! VS Code 및 Django를 사용하는 방법에 대한 자세한 자습서는 [Visual Studio Code의 Django 자습서](https://code.visualstudio.com/docs/python/tutorial-django)를 참조하세요.
 

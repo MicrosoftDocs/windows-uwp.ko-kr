@@ -1,20 +1,20 @@
 ---
-description: C# 코드를 C++/WinRT의 해당 코드로 포팅하는 방법을 보여 줍니다.
+description: 이 항목에서는 [C#](/visualstudio/get-started/csharp) 프로젝트의 소스 코드를 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 해당하는 소스 코드로 포팅하는 데 관련된 기술 세부 정보에 대해 설명합니다.
 title: C#에서 C++/WinRT로 이동
 ms.date: 07/15/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, 프로젝션, 이식, 마이그레이션, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 17900829388bfe0b3cc325e27d0807b139ccaa27
-ms.sourcegitcommit: 2c6aac8a0cc02580df0987f0b7dba5924e3472d6
+ms.openlocfilehash: f7cd35dbf211b14dfb886fc9ba4305cd7ce56e5e
+ms.sourcegitcommit: f288bcc108f9850671662c7b76c55c8313e88b42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74958963"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80290050"
 ---
 # <a name="move-to-cwinrt-from-c"></a>C#에서 C++/WinRT로 이동
 
-이 항목에서는 [C#](/visualstudio/get-started/csharp) 프로젝트의 코드를 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 해당 코드로 이식하는 방법을 보여 줍니다.
+이 항목에서는 [C#](/visualstudio/get-started/csharp) 프로젝트의 소스 코드를 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 해당하는 소스 코드로 포팅하는 데 관련된 기술 세부 정보에 대해 설명합니다.
 
 ## <a name="register-an-event-handler"></a>이벤트 처리기 등록
 
@@ -193,7 +193,7 @@ auto s{ std::to_wstring(i) }; // s is a std::wstring with value L"2".
 
 또한 C++/WinRT는 제한된 수의 형식에 대해 [**winrt::to_hstring**](/uwp/cpp-ref-for-winrt/to-hstring)도 지원합니다. 문자열화하려는 추가 형식에 대한 오버로드를 추가해야 합니다.
 
-| 외국어 | 정수 문자열화 | 열거형 문자열화 |
+| Language | 정수 문자열화 | 열거형 문자열화 |
 | - | - | - |
 | C# | `string result = "hello, " + intValue.ToString();`<br>`string result = $"hello, {intValue}";` | `string result = "status: " + status.ToString();`<br>`string result = $"status: {status}";` |
 | C++/WinRT | `hstring result = L"hello, " + to_hstring(intValue);` | `// must define overload (see below)`<br>`hstring result = L"status: " + to_hstring(status);` |
@@ -279,7 +279,7 @@ C#은 Windows 런타임 문자열을 참조 형식으로 나타내는 반면, C+
 | 선언 | `object o;`<br>`string s;` | `IInspectable o;`<br>`hstring s;` |
 | 문자열 형식 범주 | 참조 형식 | 값 유형 |
 | null **HSTRING**에서 프로젝션하는 형식 | `""` | `hstring{}` |
-| null 및 `""`가 동일한가요? | 아니오 | 예 |
+| null 및 `""`가 동일한가요? | 아니요 | 예 |
 | null의 유효성 | `s = null;`<br>`s.Length`에서 NullReferenceException 발생 | `s = hstring{};`<br>`s.size() == 0`(유효) |
 | 개체에 null 문자열을 할당하는 경우 | `o = (string)null;`<br>`o == null` | `o = box_value(hstring{});`<br>`o != nullptr` |
 | 개체에 `""`을(를) 할당하는 경우 | `o = "";`<br>`o != null` | `o = box_value(hstring{L""});`<br>`o != nullptr` |

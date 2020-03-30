@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e93a1806d1d2add4b3b1c3ee02417a43d574d3c
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 49058568acccfa32c9c354a7e2570a5734c0c577
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209038"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081689"
 ---
 # <a name="media-player"></a>미디어 플레이어
 
@@ -39,7 +39,7 @@ ms.locfileid: "79209038"
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 앱을 열고 실제로 작동하는 <a href="xamlcontrolsgallery:/item/MediaPlayerElement">MediaPlayerElement</a> 또는 <a href="xamlcontrolsgallery:/item/MediaPlayer">MediaPlayer</a>를 확인합니다.</p>
     <ul>

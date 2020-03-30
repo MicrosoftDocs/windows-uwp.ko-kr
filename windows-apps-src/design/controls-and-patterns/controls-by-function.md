@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 57639fc370ed7e10a427af4808e2a8a6de91b554
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 8f1717a59399fb95f7b71a38ee8d2d46de4ca765
+ms.sourcegitcommit: e11e0f65930665579d1f296861234893e82bf8fb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257701"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80301403"
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 
@@ -41,7 +41,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 ## <a name="appbars-and-commands"></a>앱 바 및 명령
 
 ### <a name="app-bar"></a>앱 바
-응용 프로그램 관련 명령을 표시하는 도구 모음입니다. 명령 모음을 참조하세요.
+애플리케이션 관련 명령을 표시하는 도구 모음입니다. 명령 모음을 참조하세요.
 
 참고자료: [AppBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBar) 
 
@@ -90,7 +90,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 ## <a name="buttons"></a>단추
 
-### <a name="button"></a>Button
+### <a name="button"></a>단추
 사용자 입력에 응답하고 **Click** 이벤트를 발생시키는 컨트롤입니다.
 
 ![표준 단추](images/controls/button.png)
@@ -721,13 +721,13 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 샘플 코드: [XAML 텍스트 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
 
-### <a name="text-box"></a>입력란
+### <a name="text-box"></a>텍스트 상자
 한 줄 또는 여러 줄 일반 텍스트 필드입니다.
 
-![텍스트 상자 컨트롤](images/controls/text-box.png) 
+![텍스트 상자 컨트롤](images/controls/text-box.png)
 
 ```xaml
-<TextBox x:Name="textBox1" Text="I am a TextBox" 
+<TextBox x:Name="textBox1" Text="I am a Text Box."
          TextChanged="TextBox_TextChanged"/>
 ```
 
@@ -779,9 +779,9 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 ```xaml
 <ListBox x:Name="listBox1" Width="100"
          SelectionChanged="ListBox_SelectionChanged">
-    <x:String>Item 1</x:String>
-    <x:String>Item 2</x:String>
-    <x:String>Item 3</x:String>
+    <x:String>List item 1</x:String>
+    <x:String>List item 2</x:String>
+    <x:String>List item 3</x:String>
 </ListBox>
 ```
 

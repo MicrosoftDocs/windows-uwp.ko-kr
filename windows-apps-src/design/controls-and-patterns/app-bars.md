@@ -13,18 +13,18 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f5fd3408657047c3d1d102c65f6264954983134
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: c32b60b3d9e717a916b5424f3b8bd78102439f30
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257741"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081966"
 ---
 # <a name="command-bar"></a>명령 모음
 
 명령 모음을 통해 앱에서 가장 많이 수행하는 작업에 쉽게 액세스할 수 있습니다. 명령 모음은 앱 수준의 명령이나 페이지 고유의 명령에 액세스할 수 있도록 해주며, 어떠한 탐색 패턴에서도 사용이 가능합니다.
 
-> **중요 API**: [CommandBar 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar), [AppBarButton 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [AppBarSeparator 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarseparator)
+> **플랫폼 API:** [CommandBar 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar), [AppBarButton 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [AppBarSeparator 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarseparator)
 
 ![아이콘이 있는 명령 모음의 예](images/controls_appbar_icons.png)
 
@@ -40,7 +40,7 @@ CommandBar 컨트롤은 유연하고 가벼운 범용 컨트롤로서 [AppBarBut
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우는 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/CommandBar">앱을 열고 작동 중인 CommandBar를 확인</a>합니다.</p>
     <ul>
@@ -275,12 +275,12 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 
 >**터치 디바이스**: 터치 키보드 또는 SIP(Soft Input Panel)가 나타날 때 명령 모음이 사용자에게 계속 표시되어야 하는 경우 명령 모음을 페이지의 [BottomAppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.bottomappbar) 속성에 할당할 수 있으며 SIP가 있는 경우 명령 모음은 계속 표시되도록 이동하게 됩니다. 그러지 않으면 명령 모음을 인라인으로 앱 콘텐츠 기준으로 배치해야 합니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 - [XAML 명령 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCommanding)
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 * [UWP 앱의 명령 디자인 기본 사항](../basics/commanding-basics.md)
 * [CommandBar 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)

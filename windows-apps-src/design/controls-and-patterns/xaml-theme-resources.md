@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9544988837d44f42d963b268a2ce3d37cce83952
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: f2097a35d87594251ed2c0a04be06ccdb705902f
+ms.sourcegitcommit: 378693fe9b655fe14814d683e8d8cb2dd1380fd7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209048"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249857"
 ---
 # <a name="xaml-theme-resources"></a>XAML 테마 리소스
 
@@ -177,7 +177,7 @@ Windows는 다양한 고대비 테마를 제공하고 다음과 같이 사용자
 
 ### <a name="theme-dependent-brushes"></a>테마 종속 브러시
 
-위 섹션에 표시된 색 리소스는 시스템 테마 리소스 사전에서 [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) 리소스의 [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 속성을 설정하는 데 사용됩니다. 브러시 리소스를 사용하여 XAML 요소에 색을 적용합니다. 브러시 리소스에 대한 키는 다음 이름 지정 형식을 따릅니다. `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. 정의합니다(예: `SystemControlBackroundAltHighBrush`).
+위 섹션에 표시된 색 리소스는 시스템 테마 리소스 사전에서 [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush) 리소스의 [Color](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 속성을 설정하는 데 사용됩니다. 브러시 리소스를 사용하여 XAML 요소에 색을 적용합니다. 브러시 리소스에 대한 키는 다음 이름 지정 형식을 따릅니다. `SystemControl[Simple HighContrast name][Simple light/dark name]Brush`. 정의합니다(예: `SystemControlBackgroundAltHighBrush`).
 
 런타임에 이 브러시에 대한 색 값이 결정되는 방식을 알아보겠습니다. "밝게" 및 "어둡게" 리소스 사전에서 이 브러시는 다음과 같이 정의됩니다.
 

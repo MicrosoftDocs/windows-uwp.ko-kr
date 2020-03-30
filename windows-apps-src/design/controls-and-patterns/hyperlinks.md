@@ -12,20 +12,18 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b17220a039612e0b13cd9842800c37c39bf194dd
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: fa4ff0cbc2bd361b241f660f9c6b28f03bc7c24c
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66362755"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080889"
 ---
 # <a name="hyperlinks"></a>하이퍼링크
 
- 
-
 하이퍼링크는 사용자를 앱의 다른 부분이나 다른 앱으로 이동하거나, 별도의 브라우저 앱을 사용하여 특정 URI(Uniform Resource Identifier)를 실행합니다. XAML 앱에 하이퍼링크를 추가할 수 있는 두 가지 방법(**Hyperlink** 텍스트 요소 및 **HyperlinkButton** 컨트롤)이 있습니다.
 
-> **중요 API**: [Hyperlink 텍스트 요소](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [HyperlinkButton 컨트롤](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
+> **플랫폼 API**: [Hyperlink 텍스트 요소](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [HyperlinkButton 컨트롤](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
 
 ![하이퍼링크 단추](images/controls/hyperlink-button.png)
 
@@ -45,7 +43,7 @@ ms.locfileid: "66362755"
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/HyperlinkButton">앱을 열고 작동 중인 HyperlinkButton을 확인</a>합니다.</p>
     <ul>
@@ -173,11 +171,11 @@ Hyperlink는 [Control](https://docs.microsoft.com/uwp/api/windows.ui.xaml.contro
 -   사용자 구별할 수 있고 각각을 쉽게 선택할 수 있게 하이퍼링크 사이에 충분한 공간을 둡니다.
 -   사용자가 이동될 위치를 나타내는 도구 설명을 하이퍼링크에 추가합니다. 사용자가 외부 사이트로 이동되면 도구 설명 내에 최상위 도메인 이름을 포함하고 텍스트에 보조 글꼴 색을 지정합니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [텍스트 컨트롤](text-controls.md)
 - [도구 설명에 대한 지침](tooltips.md)

@@ -6,12 +6,12 @@ keywords: 개발자 라이선스 Visual Studio 시작, 개발자 라이선스 �
 ms.date: 04/09/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a2d1719379302dd8e996c37e05d7ddaf35a0cf18
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 4b360f75ccf08d9cc00eeba2948215b7240627a8
+ms.sourcegitcommit: 3c3730e968fba89b21459390735614cd4c9d9c67
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258415"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320420"
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 
@@ -49,13 +49,13 @@ ms.locfileid: "74258415"
 > [!NOTE]
 > Windows 참가자 빌드 18956부터 테스트용 로드 옵션이 제거되었으며, 개발자 모드는 이제 토글 방식으로 전환됩니다. 다음 섹션에서 테스트용 로드에 대한 자세한 내용을 참조하세요.
 
- 장치를 개발 또는 단순히 테스트용 로드에 사용할 수 있습니다.
+ 디바이스를 개발 또는 단순히 테스트용 로드에 사용할 수 있습니다.
 
 -   *Microsoft Store 앱*이 기본 설정입니다. 사용하는 앱이 개발용 앱이 아니거나 회사에서 지급한 특수한 내부 앱을 사용하는 경우 이 설정을 계속 활성 상태로 유지하세요.
 -   *테스트용 로드*는 Microsoft Store에서 인증되지 않은 앱을 설치한 후 실행 또는 테스트하는 것입니다. 예를 들어 회사에서만 사용하는 내부용 앱입니다.
 -   *개발자 모드*를 사용하면 앱을 테스트용으로 로드할 수 있을 뿐만 아니라 Visual Studio에서 디버그 모드로 앱을 실행할 수 있습니다.
 
-기본적으로 Microsoft Store의 UWP(유니버설 Windows 플랫폼) 앱만 설치할 수 있습니다. 개발자 기능을 사용하도록 이러한 설정을 변경하면 장치의 보안 수준을 변경할 수 있습니다. 확인되지 않은 원본에서 앱을 설치하지 않아야 합니다.
+기본적으로 Microsoft Store의 UWP(유니버설 Windows 플랫폼) 앱만 설치할 수 있습니다. 개발자 기능을 사용하도록 이러한 설정을 변경하면 디바이스의 보안 수준을 변경할 수 있습니다. 확인되지 않은 원본에서 앱을 설치하지 않아야 합니다.
 
 ### <a name="sideload-apps"></a>앱 테스트용 로드
 
@@ -137,7 +137,7 @@ Windows에서 사용되는 기존 SSH 서버는 아직 프로토콜과 호환되
 ## <a name="notes"></a>참고
 Windows 10 Mobile의 초기 버전에서 크래시 덤프 옵션은 개발자 설정 메뉴에 있었습니다.  이 옵션이 [디바이스 포털](../debug-test-perf/device-portal.md)로 이동되었으므로 USB를 통하기 보다는 원격으로 사용할 수 있습니다.  
 
-Windows 10 PC에서 Windows 10 디바이스로 앱을 배포할 수 있도록 해주는 몇 가지 도구가 있습니다. 두 장치는 유선 또는 무선으로 연결하여 동일한 네트워크 서브넷에 연결되거나 USB로 연결되어야 합니다. 나열된 두 방법 모두 앱 패키지(.appx/.appxbundle)만 설치하고 인증서는 설치하지 않습니다.
+Windows 10 PC에서 Windows 10 디바이스로 앱을 배포할 수 있도록 해주는 몇 가지 도구가 있습니다. 두 디바이스는 유선 또는 무선으로 연결하여 동일한 네트워크 서브넷에 연결되거나 USB로 연결되어야 합니다. 나열된 두 방법 모두 앱 패키지(.appx/.appxbundle)만 설치하고 인증서는 설치하지 않습니다.
 
 -   Windows 10 응용 프로그램 배포(WinAppDeployCmd) 도구를 사용합니다. 자세한 내용은 [the WinAppDeployCmd 도구](https://docs.microsoft.com/previous-versions/windows/apps/mt203806(v=vs.140))를 참조하세요.
 -   [디바이스 포털](../debug-test-perf/device-portal.md)을 사용하면 브라우저에서 Windows 10, 버전 1511 이상을 실행하는 모바일 디바이스로 배포할 수 있습니다. Device Portal의 **[앱](../debug-test-perf/device-portal.md#apps-manager)** 페이지를 사용하여 앱 패키지(.appx)를 업로드하고 디바이스에 설치할 수 있습니다.
@@ -183,7 +183,7 @@ Windows 10 PC에서 Windows 10 디바이스로 앱을 배포할 수 있도록 �
 
 대부분의 개발자의 경우 디바이스를 디버깅에 사용할 수 있도록 설정 앱을 사용하려고 합니다. 자동화된 테스트와 같은 특정 시나리오에서 다른 방법으로 개발용 Windows 10 데스크톱 디바이스를 사용할 수 있습니다.  이러한 단계들은 SSH 서버를 사용하도록 설정하거나 원격 배포 및 디버깅을 위한 대상으로 허용하지 않는다는 점에 유의하세요.
 
-Windows 10 Home을 설치한 경우가 아니라면 gpedit.msc를 사용하여 디바이스를 사용하도록 그룹 정책을 설정할 수 있습니다. Windows 10 Home을 설치한 경우 regedit 또는 PowerShell 명령을 사용하여 장치를 사용하도록 레지스트리 키를 직접 설정해야 합니다.
+Windows 10 Home을 설치한 경우가 아니라면 gpedit.msc를 사용하여 디바이스를 사용하도록 그룹 정책을 설정할 수 있습니다. Windows 10 Home을 설치한 경우 regedit 또는 PowerShell 명령을 사용하여 디바이스를 사용하도록 레지스트리 키를 직접 설정해야 합니다.
 
 **gpedit를 사용하여 디바이스를 사용하도록 설정**
 
@@ -193,7 +193,7 @@ Windows 10 Home을 설치한 경우가 아니라면 gpedit.msc를 사용하여 �
 
     -   **Allow all trusted apps to install**(모든 신뢰할 수 있는 앱을 설치할 수 있음)
 
-    - 또는 -
+    또는
 
     개발자 모드를 사용하도록 설정하려면 아래 두 항목을 모두 사용하도록 정책을 편집합니다.
 
@@ -207,30 +207,34 @@ Windows 10 Home을 설치한 경우가 아니라면 gpedit.msc를 사용하여 �
 1.  **regedit**를 실행합니다.
 2.  테스트용 로드를 사용하도록 설정하려면 이 DWORD 값을 1로 설정합니다.
 
-    -   `HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowAllTrustedApps`
+    -   `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock\AllowAllTrustedApps`
 
-    - 또는 -
+    또는
 
     개발자 모드를 사용하도록 설정하려면 이 DWORD 값을 1로 설정합니다.
 
-    -   `HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock\\AllowDevelopmentWithoutDevLicense`
+    -   `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock\AllowDevelopmentWithoutDevLicense`
 
 **PowerShell을 사용하여 디바이스를 사용하도록 설정**
 
 1.  관리자 권한으로 PowerShell을 실행합니다.
 2.  테스트용 로드를 사용하도록 설정하려면 다음 명령을 실행합니다.
 
-    -   `PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowAllTrustedApps" /d "1"`
+    ```powershell
+    PS C:\WINDOWS\system32> reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v "AllowAllTrustedApps" /d "1"
+    ```
 
-    - 또는 -
+    또는
 
     개발자 모드를 사용하도록 설정하려면 다음 명령을 실행합니다.
 
-    -   `PS C:\\WINDOWS\\system32&gt; reg add "HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\AppModelUnlock" /t REG\_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"`
+    ```powershell
+    PS C:\WINDOWS\system32> reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"
+    ```
 
 ## <a name="upgrade-your-device-from-windows-81-to-windows-10"></a>Windows 8.1에서 Windows 10으로 디바이스 업그레이드
 
-Windows 8.1 장치에서 앱을 만들거나 테스트용으로 로드할 때는 개발자 라이선스를 설치해야 합니다. Windows 8.1에서 Windows 10으로 장치를 업그레이드하는 경우에도 이 정보가 유지됩니다. 업그레이드된 Windows 10 장치에서 이 정보를 제거하려면 다음 명령을 실행합니다. Windows 8.1에서 Windows 10 버전 1511 이상으로 직접 업그레이드하는 경우에는 이 단계가 필요하지 않습니다.
+Windows 8.1 디바이스에서 앱을 만들거나 테스트용으로 로드할 때는 개발자 라이선스를 설치해야 합니다. Windows 8.1에서 Windows 10으로 디바이스를 업그레이드하는 경우에도 이 정보가 유지됩니다. 업그레이드된 Windows 10 디바이스에서 이 정보를 제거하려면 다음 명령을 실행합니다. Windows 8.1에서 Windows 10 버전 1511 이상으로 직접 업그레이드하는 경우에는 이 단계가 필요하지 않습니다.
 
 **개발자 라이선스를 등록 취소하려면**
 
@@ -247,5 +251,5 @@ Windows 8.1 장치에서 앱을 만들거나 테스트용으로 로드할 때는
 * [UWP 앱 게시](https://docs.microsoft.com/windows/uwp/publish/)
 * [UWP 앱 개발에 대한 방법 문서](https://docs.microsoft.com/windows/uwp/develop/)
 * [UWP 개발자를 위한 코드 샘플](https://developer.microsoft.com/windows/samples)
-* [UWP 앱이란 무엇인가요?](universal-application-platform-guide.md)
+* [UWP 앱이란?](universal-application-platform-guide.md)
 * [Windows 계정 등록](sign-up.md)
