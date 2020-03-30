@@ -160,6 +160,8 @@
           href: ../app-to-app/receive-data.md
         - name: 복사 및 붙여넣기
           href: ../app-to-app/copy-and-paste.md
+    - name: 프로세스 간 통신(IPC)
+      href: ../communication/interprocess-communication.md
     - name: 네트워킹 및 웹 서비스
       href: ../networking/index.md
       items:
