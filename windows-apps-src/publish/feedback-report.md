@@ -6,14 +6,17 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 47eb494ac1b61caac0549f89254ae5d60a7ddf4c
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 50ffec5beafd88ddc852e4d9b2fb995fb12bd939
+ms.sourcegitcommit: 56d777134bc85f049e281e34660de612ac938a01
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259012"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80417432"
 ---
 # <a name="feedback-report"></a>피드백 보고서
+
+> [!WARNING]
+> 5 월 15 일에 피드백 보고서 사용 중단 2020 4 월 2020 15 일 이후에는이 보고서가 더 이상 지원 되지 않습니다. 이 보고서의 데이터는이 날짜 이후에는 새로 고쳐지지 않으며 나중에 추가 알림이 표시 되지 않고 보고서가 제거 됩니다. 피드백 허브에서 고객 으로부터 직접 받은 피드백을 계속 볼 수 있습니다.
 
 파트너 센터의 **사용자 의견 보고서** 를 사용 하면 Windows 10 고객이 피드백 허브를 통해 제출한 문제, 제안 및 투표를 확인할 수 있습니다. 파트너 센터에서이 데이터를 보거나 오프 라인으로 볼 데이터를 내보낼 수 있습니다.
 
@@ -22,7 +25,7 @@ ms.locfileid: "74259012"
 
 고객에게 앱에 대한 피드백을 제공하도록 권유하는 것은 고객이 가장 중요한 문제와 기능을 알게 하는 좋은 방법입니다. 고객이 직접 피드백을 보낼 수 있다는 사실을 알게 되면 스토어에서 해당 피드백을 부정적인 리뷰로 남길 가능성은 적습니다.
 
-[Microsoft Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK)의 피드백 API를 사용하여 고객이 [직접 앱에서 피드백 허브를 시작](../monetize/launch-feedback-hub-from-your-app.md)하도록 할 수 있습니다. 피드백 허브를 지원하는 Windows 10 장치에 앱을 다운로드한 모든 고객은 피드백 허브 앱을 사용하여 해당 피드백을 남길 수 있습니다. 따라서 앱 내에서 사용자 의견을 특별히 요청 하지 않은 경우에도이 보고서에 고객 피드백이 표시 될 수 있습니다.
+[Microsoft Store Services SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftStoreServicesSDK)의 피드백 API를 사용하여 고객이 [직접 앱에서 피드백 허브를 시작](../monetize/launch-feedback-hub-from-your-app.md)하도록 할 수 있습니다. 피드백 허브를 지원하는 Windows 10 디바이스에 앱을 다운로드한 모든 고객은 피드백 허브 앱을 사용하여 해당 피드백을 남길 수 있습니다. 따라서 앱 내에서 사용자 의견을 특별히 요청 하지 않은 경우에도이 보고서에 고객 피드백이 표시 될 수 있습니다.
 
 사용자 **의견 보고서는** 사용자가 피드백을 받을 때 각 고객이 장치에 설치한 특정 패키지를 표시 하므로 [패키지 플 라이팅](package-flights.md)사용 하는 경우에도 도움이 될 수 있습니다.
 
@@ -37,13 +40,13 @@ ms.locfileid: "74259012"
 **필터**를 확장하여 다음과 같은 옵션으로 이 페이지의 모든 데이터를 필터링할 수 있습니다.
 
 - **피드백 유형**: 기본 설정은 **모두**입니다. 해당 유형의 피드백만 표시하려면 **문제** 또는 **제안**을 선택할 수 있습니다.
-- **장치 유형**: 기본 설정은 **모든 장치**입니다. 이 페이지에 특정 유형의 장치를 사용하는 고객이 남긴 피드백만 표시하려면 특정 장치 유형을 선택합니다.
+- **디바이스 유형**: 기본 설정은 **모든 디바이스**입니다. 이 페이지에 특정 유형의 장치를 사용하는 고객이 남긴 피드백만 표시하려면 특정 장치 유형을 선택합니다.
 - **패키지 버전**: 기본 설정은 **모든 패키지**입니다. 피드백을 남길 때 특정 패키지를 사용하는 고객이 남긴 피드백만 표시하려면 패키지 중 하나를 선택할 수 있습니다.
 - **지역/국가**: 기본 설정은 **모든 시장**입니다. 해당 지역/국가 고객의 피드백만 표시하려면 특정 지역/국가를 선택할 수 있습니다.
 - **그룹**: 기본 설정은 **모두**입니다. [Windows 참가자](https://insider.windows.com)가 제출한 피드백만 보도록 선택할 수 있습니다.
 
 > [!TIP]
-> 페이지에 피드백이 표시되지 않으면 필터로 모든 피드백을 제외하지 않았는지 확인해야 합니다. 예를 들어 앱이 지원하지 않는 **장치 유형**을 기준으로 필터링하면 피드백이 표시되지 않습니다.
+> 페이지에 피드백이 표시되지 않으면 필터로 모든 피드백을 제외하지 않았는지 확인해야 합니다. 예를 들어 앱이 지원하지 않는 **디바이스 유형**을 기준으로 필터링하면 피드백이 표시되지 않습니다.
 
 
 ## <a name="viewing-feedback-details"></a>피드백 세부 정보 보기
