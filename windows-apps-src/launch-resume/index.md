@@ -6,12 +6,12 @@ ms.date: 10/04/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업, 앱 서비스, 연결된 디바이스, 원격 시스템
 ms.localizationpriority: medium
-ms.openlocfilehash: 79f3f1d28294527d6987540a159baa31d663db4c
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 9280a240f35c2fdf5290c94d837e2fafc008dbfd
+ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371719"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80483014"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>실행, 다시 시작 및 백그라운드 작업
 
@@ -22,7 +22,7 @@ ms.locfileid: "66371719"
 - URI를 사용하거나 파일 활성화를 통해 앱을 실행하는 방법
 - UWP(유니버설 Windows) 앱이 다른 앱과 데이터 및 기능을 공유할 수 있도록 하는 앱 서비스를 사용하는 방법
 - UWP 앱 자체가 포그라운드에 없는 동안 작동할 수 있도록 하는 백그라운드 작업을 사용하는 방법
-- 장치 간에 일관된 사용자 환경을 만들 수 있도록 연결된 장치를 검색하고, 다른 장치에서 앱을 실행하고, 원격 장치의 앱 서비스와 통신하는 방법
+- 디바이스 간에 일관된 사용자 환경을 만들 수 있도록 연결된 디바이스를 검색하고, 다른 디바이스에서 앱을 실행하고, 원격 디바이스의 앱 서비스와 통신하는 방법
 - 앱 확장 및 구성 요소화를 위한 올바른 기술을 선택하는 방법
 - 앱의 시작 화면을 추가 및 구성하는 방법
 - 사용자가 Microsoft Store에서 설치할 수 있는 패키지를 통해 앱 확장을 작성하는 방법
@@ -36,7 +36,7 @@ ms.locfileid: "66371719"
 | [앱 수명 주기](app-lifecycle.md)               | UWP 앱의 수명 주기 및 Windows에서 앱을 실행, 일시 중단 및 다시 시작할 때 발생하는 상황을 알아봅니다. |
 | [앱 사전 실행 처리](handle-app-prelaunch.md) | 앱 사전 실행 처리 방법에 대해 알아봅니다.                                                                              |
 | [앱 활성화 처리](activate-an-app.md)     | 앱 활성화 처리 방법에 대해 알아봅니다.                                                                             |
-| [앱 일시 중단 처리](suspend-an-app.md)         | 시스템에서 앱을 일시 중단할 때 중요한 응용 프로그램 데이터를 저장하는 방법을 배웁니다.                                 |
+| [앱 일시 중단 처리](suspend-an-app.md)         | 시스템에서 앱을 일시 중단할 때 중요한 애플리케이션 데이터를 저장하는 방법을 배웁니다.                                 |
 | [앱 다시 시작 처리](resume-an-app.md)           | 시스템에서 앱을 다시 시작할 때 표시 콘텐츠를 새로 고치는 방법을 알아봅니다.                                        |
 | [앱이 백그라운드로 이동할 때 메모리 회수](reduce-memory-usage.md) | 앱이 종료되지 않도록 백그라운드 상태에 있을 때 앱에서 사용하는 메모리 양을 줄이는 방법을 알아봅니다.|
 | [확장 실행을 사용하여 앱 일시 중단 연기](run-minimized-with-extended-execution.md) | 확장 실행을 사용하여 앱이 최소화된 상태에서 계속 실행되도록 하는 방법을 살펴봅니다. |
@@ -74,7 +74,7 @@ ms.locfileid: "66371719"
 | 항목 | 설명 |
 |-------|-------------|
 | [디바이스 간에도 사용자 활동 계속 수행](useractivities.md) | 사용자가 종료한 지점에서 앱을 실행하여 디바이스 간에 앱을 다시 사용할 수 있습니다. |
-| [자동 실행을 사용한 자동 시작](auto-launching-with-autoplay.md) | 자동 실행을 사용하면 사용자가 장치를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라, 미디어 플레이어 등의 비볼륨 장치나 USB 썸 드라이브(thumb drive), SD 카드, DVD 등의 볼륨 장치가 포함됩니다. |
+| [자동 실행을 사용한 자동 시작](auto-launching-with-autoplay.md) | 자동 실행을 사용하면 사용자가 디바이스를 PC에 연결할 때 앱을 옵션으로 제공할 수 있습니다. 여기에는 카메라, 미디어 플레이어 등의 비볼륨 디바이스나 USB 썸 드라이브(thumb drive), SD 카드, DVD 등의 볼륨 디바이스가 포함됩니다. |
 | [예약된 파일 및 URI 체계 이름](reserved-uri-scheme-names.md) | 이 항목에서는 앱에 사용할 수 없는 예약된 파일 및 URI 체계 이름을 보여 줍니다. |
 
 ## <a name="app-services-and-extensions"></a>앱 서비스 및 확장
@@ -98,11 +98,12 @@ ms.locfileid: "66371719"
 | [백그라운드 작업에서 센서 및 디바이스에 액세스](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 기기에 액세스할 수 있습니다. |
 | [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)       | 포그라운드 앱과 같은 프로세스에서 실행되는 백그라운드 작업을 만들고 등록합니다. |
 | [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)           | 앱과 별도의 프로세스로 실행하는 백그라운드 작업을 만들고 등록한 다음, 앱이 포그라운드에 없는 경우 실행되도록 등록합니다. |
+| [winmain 앱에 대한 COM 백그라운드 작업 만들기 및 등록](create-and-register-a-winmain-background-task.md) | 패키지된 winmain 앱이 실행되고 있지 않을 때 기본 프로세스에서 또는 프로세스 외부에서 실행할 수 있는 COM 백그라운드 작업을 만듭니다. |
 | [Out-of-process 백그라운드 작업을 In-process 백그라운드 작업으로 포팅](convert-out-of-process-background-task.md) | Out-of-process 백그라운드 작업을 포그라운드 앱과 동일한 프로세스에서 실행되는 In-process 백그라운드 작업으로 포팅하는 방법을 알아봅니다.|
 | [백그라운드 작업 디버그](debug-a-background-task.md)                                                       | Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 추적을 비롯한 백그라운드 작업을 디버그하는 방법을 알아봅니다. |
 | [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md) | 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다. |
 | [백그라운드 작업 등록 그룹화](group-background-tasks.md)                                             | 그룹으로 백그라운드 작업 등록 격리 |
-| [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)                                 | 영구적 저장소를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다. |
+| [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)                                 | 영구적 스토리지를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다. |
 | [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)       | 앱에서 백그라운드 작업 진행률 및 완료를 인식하는 방법에 대해 알아봅니다. |
 | [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) |백그라운드에서 사용하는 에너지를 줄이고 백그라운드 작업에 대한 사용자 설정을 조작하는 방법을 알아봅니다. |
 | [백그라운드 작업 등록](register-a-background-task.md)                                                 | 대부분의 백그라운드 작업을 안전하게 등록하기 위해 다시 사용할 수 있는 함수를 만드는 방법을 알아봅니다. |
@@ -121,9 +122,9 @@ ms.locfileid: "66371719"
 
 | 항목 | 설명 |
 |-------|-------------|
-| [원격 디바이스 검색](discover-remote-devices.md)  | 연결할 수 있는 장치를 검색하는 방법을 알아봅니다. |
-| [원격 디바이스에서 앱 시작](launch-a-remote-app.md) | 원격 장치에서 앱을 시작하는 방법을 알아봅니다.  |
-| [원격 앱 서비스와 통신](communicate-with-a-remote-app-service.md) | 원격 장치에서 앱을 조작하는 방법을 알아봅니다. |
+| [원격 디바이스 검색](discover-remote-devices.md)  | 연결할 수 있는 디바이스를 검색하는 방법을 알아봅니다. |
+| [원격 디바이스에서 앱 시작](launch-a-remote-app.md) | 원격 디바이스에서 앱을 시작하는 방법을 알아봅니다.  |
+| [원격 앱 서비스와 통신](communicate-with-a-remote-app-service.md) | 원격 디바이스에서 앱을 조작하는 방법을 알아봅니다. |
 | [원격 세션을 통해 디바이스 연결](remote-sessions.md) | 원격 세션에서 여러 디바이스를 연결하여 공유 환경을 만듭니다. |
 
 ## <a name="splash-screens"></a>시작 화면
