@@ -2,16 +2,16 @@
 ms.assetid: 284EBA1F-BFB4-4CDA-9F05-4927CDACDAA7
 title: 개발자 계정 열기
 description: 파트너 센터에서 Microsoft Store 및 기타 Microsoft 프로그램에 대 한 Windows 개발자 계정을 등록 하는 방법에 대 한 개요는 다음과 같습니다.
-ms.date: 10/31/2018
+ms.date: 3/30/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d00fcee11b8cf813144a6f8ea021dc40829056d2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 0ab3dcc5f774de6bd7ce422ecdcec61b26cc9a4b
+ms.sourcegitcommit: 9aef3bc26a56b8d266b3089d509f79b119234b6f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259958"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80538197"
 ---
 # <a name="opening-a-developer-account"></a>개발자 계정 열기
 
@@ -25,6 +25,9 @@ ms.locfileid: "74259958"
 > [!NOTE]
 > 개발자 계정에 등록할 때 표시 되는 화면 및 필드는 다음 단계에 설명 된 것과 약간 다를 수 있습니다. 그러나 기본 정보 및 프로세스는 이러한 단계에서 설명 하는 내용과 일치 합니다.
 
+> [!NOTE]
+> 일부 로캘의 사용자가 등록 완료를 완료할 수 없는 알려진 문제가 있습니다. Partner.microsoft.com에서 등록 프로세스를 시작 하면 브라우저의 로캘 태그를 **en-us** 로 수동으로 변경 하는 것을 확인할 수 있습니다.
+
 1.  [등록 페이지로](https://developer.microsoft.com/store/register) 이동 하 **고 등록을 선택 합니다**.
 2.  Microsoft 계정으로 로그인하지 않았다면 로그인을 하거나, 새 Microsoft 계정을 생성하세요. 여기에서 사용 하는 Microsoft 계정 개발자 계정에 로그인 하는 데 사용 됩니다.
 3.  거주 하는 [국가/지역 또는 비즈니스가 위치한 국가/지역을](account-types-locations-and-fees.md#developer-account-and-app-submission-markets) 선택 합니다. 이는 나중에 변경할 수 없습니다.
@@ -32,7 +35,7 @@ ms.locfileid: "74259958"
 5.  사용 하려는 **게시자 표시 이름** (50 자이 하)을 입력 합니다. 고객이 이 이름을 검색할 때 보고 이 이름으로 앱을 알게 되므로 신중하게 이름을 선택합니다. 회사 계정의 경우, 조직의 등록된 회사 이름이 거래 이름을 사용해야 합니다. 다른 사용자가 이미 선택한 이름을 입력 하거나 다른 사용자에 게 해당 이름을 사용할 권한이 있는 경우에는 해당 이름을 사용할 수 없습니다.
 
     > [!NOTE]
-    > 여기에 입력하는 이름을 사용할 권한이 있는지 확인하세요. 선택한 이름의 상표권 또는 저작권이 다른 사람에게 있는 경우 계정이 폐쇄될 수 있습니다. 자세한 내용은 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 을 참조 하세요. 여러분이 상표 또는 기타 법적 권한을 보유하고 있는 판매자 표시 이름을 다른 사람이 사용하는 경우 [Microsoft에 문의](https://www.microsoft.com/info/cpyrtInfrg.html)하세요.    
+    > 여기에 입력하는 이름을 사용할 권한이 있는지 확인하세요. 선택한 이름의 상표권 또는 저작권이 다른 사람에게 있는 경우 계정이 폐쇄될 수 있습니다. 자세한 내용은 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 을 참조 하세요. 다른 사람이 사용자가 상표 또는 다른 법적 권한을 보유하는 판매자 표시 이름을 사용하는 경우 [Microsoft에 문의](https://www.microsoft.com/info/cpyrtInfrg.html)하세요.    
 
 6.  개발자 계정에 사용할 연락처 정보를 입력합니다.
 
@@ -63,7 +66,7 @@ ms.locfileid: "74259958"
 -   이 Microsoft 계정에 대 한 액세스를 가장 적은 수의 사용자로 제한 합니다.
 -   개발자 계정에 액세스 해야 하는 모든 사용자를 포함 하는 회사 전자 메일 메일 그룹을 설정 합니다. [Microsoft 계정 연결 된 보안 정보](https://account.microsoft.com/security)에이 전자 메일 주소를 추가 합니다. 이 접근 방식을 사용 하면 목록에 있는 모든 직원이이 별칭으로 전송 되는 보안 코드를 받을 수 있습니다. 메일 그룹을 설정 하는 것이 불가능 한 경우 개인의 전자 메일 주소를 보안 정보에 추가할 수 있습니다. 그러나 해당 전자 메일 주소의 소유자는 메시지가 표시 될 때 (예: 새 보안 정보가 계정에 추가 되거나 새 장치에서 계정에 액세스 하는 경우) 보안 코드에 액세스 하 고 공유할 수 있는 유일한 사람이 됩니다.
 -   Microsoft 계정의 보안 정보에 회사 전화 번호를 추가 합니다. 확장이 필요 하지 않으며 주요 팀 멤버에 액세스할 수 있는 숫자를 사용 하십시오.
--   개발자가 [신뢰할 수 있는 장치](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) 를 사용 하 여 회사의 개발자 계정에 로그인 하도록 권장 합니다. 모든 주요 팀 구성원은 신뢰할 수 있는 장치에 대한 액세스 권한이 있어야 합니다. 이렇게 하면 팀 멤버가 계정에 액세스할 때 보안 코드가 전송 될 필요성이 줄어듭니다. 주별 계정 마다 생성할 수 있는 코드의 수에는 제한이 있습니다.
+-   개발자가 [신뢰할 수 있는 장치](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device) 를 사용 하 여 회사의 개발자 계정에 로그인 하도록 권장 합니다. 모든 주요 팀 구성원은 신뢰할 수 있는 디바이스에 대한 액세스 권한이 있어야 합니다. 이렇게 하면 팀 멤버가 계정에 액세스할 때 보안 코드가 전송 될 필요성이 줄어듭니다. 주별 계정 마다 생성할 수 있는 코드의 수에는 제한이 있습니다.
 -   신뢰할 수 없는 PC에서의 계정 액세스를 허용해야 하는 경우 그러한 액세스 권한을 최대 5명의 개발자로 제한합니다. 이러한 개발자는 동일한 지역 및 네트워크 위치를 공유하는 컴퓨터에서 계정에 액세스하는 것이 가장 좋습니다.
 -   https://account.microsoft.com/security에서 회사의 보안 정보를 자주 검토 하 여 모두 최신 인지 확인 합니다.
 
