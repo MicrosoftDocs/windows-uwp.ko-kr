@@ -3,134 +3,79 @@ description: 펜, Surface Dial 및 기타 입력 유형에 맞게 앱을 최적�
 title: 입력 및 조작
 keywords: 앱 입력, UWP 애플리케이션 사용자 지정
 label: Input and interactions
-layout: LandingPage
 template: detail.hbs
 ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
-ms.openlocfilehash: 12ca16eea1bb3b5ced72add427333e7e5988f876
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: c2d7db47a0731323cbbb45c471428a2496f8d479
+ms.sourcegitcommit: 08cb5a4ca2e02179ad6b768c841fe3d5216bcae3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065297"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80614938"
 ---
-![입력 아이콘](../images/inputs-2x.png)
 # <a name="input-and-interactions"></a>입력 및 조작
+
+![입력 아이콘](../images/inputs-2x.png)
 
 <!-- <div>
   <img src="images/keyboard/keyboard-hero.jpg" alt="" />
   <img src="images/input-interactions/icons-inputdevices03.png" />
 </div> -->
 
-UWP 앱은 다양한 입력을 자동으로 처리하고 다양한 디바이스에서 실행됩니다. 예를 들어 터치 입력을 사용하도록 설정하기 위한 작업을 수행해야 할 추가 작업이 없습니다. 그러나 특정 유형의 입력 또는 장치에 대해 앱을 최적화해야 하는 경우는 있습니다. 예를 들어 그리기 앱을 만드는 경우 펜 입력을 처리하는 방식을 사용자 지정할 수 있습니다.
+UWP 앱은 다양한 입력을 자동으로 처리하고 다양한 디바이스에서 실행됩니다. 예를 들어 터치 입력을 사용하도록 설정하기 위한 작업을 수행해야 할 추가 작업이 없습니다. 그러나 특정 유형의 입력 또는 디바이스에 대해 앱을 최적화해야 하는 경우는 있습니다. 예를 들어 그리기 앱을 만드는 경우 펜 입력을 처리하는 방식을 사용자 지정할 수 있습니다.
 
 이 섹션의 디자인 및 코딩 지침은 특정 유형의 입력에 대해 UWP 앱을 사용자 지정하는 데 도움이 됩니다.
 
-<ul class="panelContent cardsH" style="margin-left: 1px">
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <!-- <div class="cardImageOuter">
-                        <div class="cardImage" style="background-color: #f2f2f2" >
-                        <a href="input-primer.md">
-                            <img src="images/input-interactions/icons-inputdevices03.png" alt=" " style="display: block; width: 100%; height: auto;" />
-                            </a>
-                        </div>
-                    </div>  -->
-                    <div class="cardText">
-                        <h3><a href="input-primer.md">입력 지침서</a></h3>
-                        <p>각 입력 장치의 유형 및 동작, 기능 및 특정 폼 팩터와 연결될 경우의 제한 사항을 알아보세요.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <!-- <div class="cardImageOuter">
-                        <div class="cardImage" style="background-color: #f2f2f2">
-                        <a href="identify-input-devices.md">
-                            <img src="images/landing-page/fluentdesign-app-sm.png" alt=" " style="display: block; width: 100%; height: auto;"/>
-                            </a>
-                        </div>
-                    </div> -->
-                    <div class="cardText">
-                        <h3><a href="gaze-interactions.md">새로운 기능! 응시 입력</a></h3>
-                        <p>눈과 머리의 위치와 움직임에 따라 사용자의 응시를 추적합니다.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-</ul>
+:::row:::
+    :::column:::
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="input-primer.md">입력 지침서</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">각 입력 디바이스의 유형 및 동작, 기능 및 특정 폼 팩터와 연결될 경우의 제한 사항을 알아보세요.</p>
+    :::column-end:::
+    :::column:::
+        <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="gaze-interactions.md">응시 입력</a></h3>
+        <p style="margin-top: 0px; margin-bottom: 50px">눈과 머리의 위치와 움직임에 따라 사용자의 응시를 추적합니다.</p>
+    :::column-end:::
+:::row-end:::
 
 <!-- 
 ## Input primer
 
 See our <b>[Input primer](index.md)</b> to familiarize yourself with each input device type and its behaviors, capabilities, and limitations when paired with certain form factors. -->
 
+:::row:::
+    :::column:::
+        <h2 style="margin-top: 10px; margin-bottom: 0px">입력</h2>
+        <a href="/windows/uwp/design/input/identify-input-devices">입력 디바이스 식별</a><br/>
+        <a href="/windows/uwp/design/input/handle-pointer-input">포인터</a><br/>
+        <a href="/windows/uwp/design/input/pen-and-stylus-interactions">펜 및 Windows Ink</a><br/>
+        <a href="/windows/uwp/design/input/touch-interactions">터치</a><br/>
+        <a href="/windows/uwp/design/input/mouse-interactions">마우스</a><br/>
+        <a href="/windows/uwp/design/input/keyboard-interactions">키보드</a><br/>
+        <a href="/windows/uwp/design/input/gamepad-and-remote-interactions">게임 패드 및 리모컨</a><br/>
+        <a href="/windows/uwp/design/input/touchpad-interactions">터치패드</a><br/>
+        <a href="/windows/uwp/design/input/windows-wheel-interactions">Surface Dial</a><br/>
+        <a href="/windows/uwp/design/input/multiple-input-design-guidelines">여러 입력</a><br/>
+        <a href="/windows/uwp/design/input/input-injection">입력 주입</a><br/>
+        <a href="/windows/uwp/design/input/custom-text-input">사용자 지정 텍스트 입력</a><br/>
+    :::column-end:::
+    :::column:::
+        <h2 style="margin-top: 10px; margin-bottom: 0px">상호 작용</h2>
+        <a href="/windows/uwp/design/input/drag-and-drop">끌어서 놓기</a><br/>
+        <a href="/windows/uwp/design/input/guidelines-for-panning">이동(좌우)</a><br/>
+        <a href="/windows/uwp/design/input/guidelines-for-rotation">회전</a><br/>
+        <a href="/windows/uwp/design/input/guidelines-for-textselection">텍스트 및 이미지 선택</a><br/>
+        <a href="/windows/uwp/design/input/guidelines-for-targeting">대상 지정</a><br/>
+        <a href="/windows/uwp/design/input/guidelines-for-visualfeedback">시각적 피드백</a><br/>
+    :::column-end:::
+    :::column:::
+        <h2 style="margin-top: 10px; margin-bottom: 0px">음성 및 AI</h2>
+        <a href="/windows/uwp/design/input/speech-interactions">음성</a><br/>
+        <a href="/windows/uwp/design/input/cortana-interactions">Cortana</a><br/>
+    :::column-end:::
+:::row-end:::
 
-<ul class="panelContent cardsL" style="margin-left: 1px">
-    <li>              
-        <div style="display:block" class="cardSize">
-            <div style="display:block" class="cardPadding">
-                <div style="display:block" class="card">
-                    <div style="display:block" class="cardText">
-                        <h3>입력</h3>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/identify-input-devices">입력 디바이스 식별</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/handle-pointer-input">포인터</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/pen-and-stylus-interactions">펜 및 Windows Ink</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/touch-interactions">터치</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/mouse-interactions">마우스</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/keyboard-interactions">키보드</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/gamepad-and-remote-interactions">게임 패드 및 리모컨</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/touchpad-interactions">터치패드</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/windows-wheel-interactions">Surface Dial</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/multiple-input-design-guidelines">여러 입력</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/input-injection">입력 주입</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/custom-text-input">사용자 지정 텍스트 입력</a></p>                        
-                    </div>
-                </div>
-            </div>
-        </div>        
-    </li>  
-    <li>              
-        <div style="display:block" class="cardSize">
-            <div style="display:block" class="cardPadding">
-                <div style="display:block" class="card">
-                    <div style="display:block" class="cardText">
-                        <h3>상호 작용</h3>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/drag-and-drop">끌어서 놓기</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/guidelines-for-panning">이동(좌우)</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/guidelines-for-rotation">회전</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/guidelines-for-textselection">텍스트 및 이미지 선택</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/guidelines-for-targeting">대상 지정</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/guidelines-for-visualfeedback">시각적 피드백</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>        
-    </li>
-    <li>              
-        <div style="display:block" class="cardSize">
-            <div style="display:block" class="cardPadding">
-                <div style="display:block" class="card">
-                    <div style="display:block" class="cardText">
-                        <h3>음성 및 AI</h3>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/speech-interactions">음성</a></p>
-                        <p style="display: block;"><a  href="/windows/uwp/design/input/cortana-interactions">Cortana</a></p>  
-                    </div>
-                </div>
-            </div>
-        </div>        
-    </li>            
-       
-</ul>
 
 <!-- <div class="side-by-side">
 <div class="side-by-side-content">

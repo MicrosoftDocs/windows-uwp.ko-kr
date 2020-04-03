@@ -74,6 +74,10 @@
               href: apps/desktop/modernize/modernize-wpf-tutorial-5.md
         - name: 패키지되지 않은 데스크톱 앱에 ID 부여
           href: apps/desktop/modernize/grant-identity-to-nonpackaged-apps.md
+    - name: Windows 10X용 개발
+      items:
+        - name: Windows 10X Dev FAQ
+          href: apps/10x/faq.md
     - name: Fluent Design System
       href: apps/fluent-design-system.md
     - name: 내게 필요한 옵션
