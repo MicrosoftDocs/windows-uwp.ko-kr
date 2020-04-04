@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 167286226adb6d26a6cdd4ee4a26bdcc58e4b5ed
-ms.sourcegitcommit: eb24481869d19704dd7bcf34e5d9f6a9be912670
+ms.openlocfilehash: 592458c6e6157e8cef0d1312ebf6e5c9f15b7919
+ms.sourcegitcommit: 7dcf74b11aa0cb2f3ff4ab10caf26ba769f96dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79448570"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662386"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT에 대해 자주 묻는 질문
 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통해 Windows 런타임 API를 작성하거나 사용하는 방법과 관련된 질문과 대답입니다.
@@ -35,7 +35,7 @@ Visual Studio 2017(버전 15.8.0 이상)을 사용 중이고 Windows SDK 버전 
 
 ## <a name="how-do-i-customize-the-build-support-in-the-nuget-package"></a>NuGet 패키지에서 빌드 지원을 사용자 지정하려면 어떻게 할까요??
 
-C++/WinRT 빌드 지원(속성/대상)은 Microsoft.Windows.CppWinRT NuGet 패키지 [readme](https://github.com/microsoft/xlang/tree/master/src/package/cppwinrt/nuget/readme.md#customizing)에 문서화되어 있습니다.
+C++/WinRT 빌드 지원(속성/대상)은 Microsoft.Windows.CppWinRT NuGet 패키지 [readme](https://github.com/microsoft/cppwinrt/blob/master/nuget/readme.md#customizing)에 문서화되어 있습니다.
 
 ## <a name="what-are-the-requirements-for-the-cwinrt-visual-studio-extension-vsix"></a>C++/WinRT VSIX(Visual Studio Extension)의 요구 사항은 무엇인가요?
 VSIX 확장 버전 1.0.190128.4 이상의 경우 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요. 다른 버전의 경우 [이전 버전의 VSIX 확장](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension)을 참조하세요.
