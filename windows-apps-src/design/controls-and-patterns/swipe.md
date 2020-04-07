@@ -11,18 +11,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a9ff0acd46ef7efa92239b0a3ef07b507850a66
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 315edbddccc51b7e742bf9beffad8497a104ce03
+ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081517"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80614092"
 ---
 # <a name="swipe"></a>살짝 밀기
 
 살짝 밀기 명령은 사용자가 앱 내에서 상태를 변경하지 않고도 공통 메뉴 작업에 터치로 쉽게 액세스할 수 있는 상황에 맞는 메뉴의 가속기입니다.
 
-> **중요 API**: [SwipeControl](/uwp/api/windows.ui.xaml.controls.swipecontrol), [SwipeItem](/uwp/api/windows.ui.xaml.controls.swipeitem), [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView)
+> **Windows UI 라이브러리 API**: [SwipeControl](/uwp/api/microsoft.ui.xaml.controls.swipecontrol), [SwipeItem](/uwp/api/microsoft.ui.xaml.controls.swipeitem)
+>
+> **플랫폼 API**: [SwipeControl](/uwp/api/windows.ui.xaml.controls.swipecontrol), [SwipeItem](/uwp/api/windows.ui.xaml.controls.swipeitem), [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView)
 
 ![실행 및 표시등 테마](images/LightThemeSwipe.png)
 
@@ -233,11 +235,11 @@ UWP 살짝 밀기 명령에는 두 가지 모드 즉, [표시](/uwp/api/windows.
 - 가로 살짝 밀기는 가로로 긴 항목에, 세로 살짝 밀기는 세로로 긴 항목에 사용하세요.
 - 짧고 간결한 텍스트 레이블을 사용하세요.
 
-## <a name="get-the-sample-code"></a>샘플 코드 가져오기
+## <a name="get-the-sample-code"></a>샘플 코드 다운로드
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [목록 보기 및 그리드 보기](listview-and-gridview.md)
 - [항목 컨테이너 및 템플릿](item-containers-templates.md)

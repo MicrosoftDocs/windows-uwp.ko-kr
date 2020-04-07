@@ -6,12 +6,12 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d6bafc9a21e3950974615078af24989aab7da9e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 1cf9d4866ddb72da0a284bcdcff07e3420f2880e
+ms.sourcegitcommit: 4657ac3be576b1d6dcd938d73a2f6a7e060ab17b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259186"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80404913"
 ---
 # <a name="networking-basics"></a>네트워킹 기본 사항
 네트워크 지원 앱에 대해 수행해야 하는 사항입니다.
@@ -32,7 +32,7 @@ ms.locfileid: "74259186"
 | 기능 | 설명 |
 |------------|-------------|
 | **enterpriseAuthentication** | 앱이 도메인 자격 증명이 필요한 네트워크 리소스에 연결할 수 있게 합니다. 예를 들어, 프라이빗 인트라넷의 Sharepoint 서버에서 데이터를 검색하는 앱이 있습니다. 이 접근 권한 값을 사용할 경우 자격 증명이 필요한 네트워크의 네트워크 리소스에 액세스하는 데 사용자의 자격 증명을 사용할 수 있습니다. 이 접근 권한 값이 있는 앱은 네트워크에서 사용자로 가장할 수 있습니다. 앱이 인증 프록시를 통해 인터넷에 액세스하도록 허용하기 위해 이 접근 권한 값이 필요하지는 않습니다.<br/><br/>자세한 내용은 [제한된 접근 권한 값](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities)의 *Enterprise* 접근 권한 값 시나리오 설명서를 참조하세요. |
-| **proximity** | 컴퓨터와 가까운 거리에 있는 디바이스와의 근거리 근접 통신에 필요합니다. 근거리 근접을 사용하여 가까운 장치의 응용 프로그램과 연결하거나 데이터를 보낼 수 있습니다. <br/><br/> 이 접근 권한 값을 사용할 경우, 사용자가 초대를 보내거나 수락하는 데 동의한다면 앱에서 네트워크에 액세스하여 가까운 거리의 디바이스에 연결할 수 있습니다. |
+| **proximity** | 컴퓨터와 가까운 거리에 있는 디바이스와의 근거리 근접 통신에 필요합니다. 근거리 근접을 사용하여 가까운 디바이스의 응용 프로그램과 연결하거나 데이터를 보낼 수 있습니다. <br/><br/> 이 접근 권한 값을 사용할 경우, 사용자가 초대를 보내거나 수락하는 데 동의한다면 앱에서 네트워크에 액세스하여 가까운 거리의 디바이스에 연결할 수 있습니다. |
 | **sharedUserCertificates** | 이 접근 권한 값은 앱이 소프트웨어 및 하드웨어 인증서(예: 스마트 카드 인증서)에 액세스할 수 있게 합니다. 런타임에 이 접근 권한 값을 호출하면 사용자는 카드를 삽입하거나 인증서를 선택하는 것과 같은 조치를 수행해야 합니다. <br/><br/> 이 접근 권한 값을 사용할 경우 앱에서 식별하는 데 소프트웨어 및 하드웨어 인증서 또는 스마트 카드를 사용합니다. 회사, 은행 또는 정부 기관에서 식별의 용도로 이 접근 권한 값을 사용할 수 있습니다. |
 
 ## <a name="communicating-when-your-app-is-not-in-the-foreground"></a>앱이 포그라운드에 없는 경우의 통신
@@ -40,7 +40,7 @@ ms.locfileid: "74259186"
 
 앱에서 [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket), [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) 또는 [**StreamSocketListener**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketListener)를 사용하는 경우 시스템에서 제공된 소켓 브로커로 열린 소켓의 소유권을 전송하고 포그라운드에서 벗어나거나 종료할 수도 있습니다. 전송된 소켓에 대한 연결이 설정되거나, 해당 소켓에 트래픽이 도착하면 앱 또는 지정된 백그라운드 작업이 활성화됩니다. 앱이 실행되지 않는 경우 앱이 시작됩니다. 그런 다음 소켓 브로커가 [**SocketActivityTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SocketActivityTrigger)를 사용하여 새 트래픽이 도착했음을 앱에 알립니다. 앱은 소켓 브로커에서 소켓을 회수하고 해당 소켓에서 트래픽을 처리합니다. 따라서 앱은 네트워크 트래픽을 적극적으로 처리하지 않을 때 보다 적은 시스템 리소스를 사용합니다.
 
-소켓 브로커는 동일한 기능을 제공하지만 제한 사항 및 메모리 공간이 더 적기 때문에 해당되는 경우 컨트롤 채널 트리거를 대체하기 위한 용도로 사용됩니다. 소켓 브로커는 화면 앱을 잠그지 않는 앱에서 사용될 수 있으며, 다른 장치와 동일한 방식으로 휴대폰에서 사용됩니다. 트래픽이 도착했을 때 소켓 브로커에서 활성화하기 위해 앱을 실행할 필요가 없습니다. 소켓 브로커는 컨트롤 채널 트리거에서 지원하지 않는 TCP 소켓의 수신 대기도 지원합니다.
+소켓 브로커는 동일한 기능을 제공하지만 제한 사항 및 메모리 공간이 더 적기 때문에 해당되는 경우 컨트롤 채널 트리거를 대체하기 위한 용도로 사용됩니다. 소켓 브로커는 화면 앱을 잠그지 않는 앱에서 사용될 수 있으며, 다른 디바이스와 동일한 방식으로 휴대폰에서 사용됩니다. 트래픽이 도착했을 때 소켓 브로커에서 활성화하기 위해 앱을 실행할 필요가 없습니다. 소켓 브로커는 컨트롤 채널 트리거에서 지원하지 않는 TCP 소켓의 수신 대기도 지원합니다.
 
 ### <a name="choosing-a-network-trigger"></a>네트워크 트리거 선택
 특정한 종류의 트리거가 적합한 몇 가지 시나리오가 있습니다. 앱에서 사용할 트리거 종류를 선택할 때 다음 사항을 고려합니다.
@@ -63,7 +63,7 @@ SSL/TLS를 통해 [**StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.
 -   [**ConnectAsync**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.connectasync) - 네트워크 서비스에 대한 초기 연결을 설정하고 모든 통신에 SSL/TLS를 사용하도록 즉시 협상합니다.
 -   [**UpgradeToSslAsync**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.upgradetosslasync) - 처음에 암호화 없이 네트워크 서비스에 연결합니다. 앱은 데이터를 보내거나 받을 수 있습니다. 그런 다음 이후의 모든 통신에 SSL/TLS를 사용하도록 연결을 업그레이드합니다.
 
-SocketProtectionLevel은 앱이 연결을 설정하거나 업그레이드하려고 하는 소켓 보호 수준을 지정합니다. 그러나 설정된 연결의 최종 보호 수준은 연결의 두 끝점 간의 협상 프로세스에서 결정됩니다. 결과적으로, 다른 엔드포인트에서 더 낮은 수준을 요청하는 경우에는 지정한 것보다 낮은 보호 수준을 얻게 될 수 있습니다. 
+SocketProtectionLevel은 앱이 연결을 설정하거나 업그레이드하려고 하는 소켓 보호 수준을 지정합니다. 그러나 설정된 연결의 최종 보호 수준은 연결의 두 엔드포인트 간의 협상 프로세스에서 결정됩니다. 결과적으로, 다른 엔드포인트에서 더 낮은 수준을 요청하는 경우에는 지정한 것보다 낮은 보호 수준을 얻게 될 수 있습니다. 
 
  비동기 작업이 완료된 후, [**StreamSocketinformation.ProtectionLevel**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocketinformation.protectionlevel) 속성을 통해 [**ConnectAsync**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.connectasync) 또는 [**UpgradeToSslAsync**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.upgradetosslasync) 호출에 사용된 요청 받은 보호 수준을 검색할 수 있습니다. 그러나 연결에 사용 중인 실제 보호 수준을 나타내는 것은 아닙니다.
 
@@ -464,7 +464,7 @@ using Windows::Storage::Streams;
 네트워크를 통해 연결할 때 인증 자격 증명을 제공하는 방법입니다.
 
 ### <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>StreamSocket 클래스를 사용하여 클라이언트 인증서 제공
-[  **Windows.Networking.StreamSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket) 클래스는 SSL/TLS를 사용하여 앱에서 통신하는 서버를 인증하도록 지원합니다. 앱에서 자체적으로 TLS 클라이언트 인증서를 사용하여 서버에 인증해야 하는 경우도 있습니다. Windows 10에서는 [**StreamSocket.Control**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketControl) 개체에서 클라이언트 인증서를 제공할 수 있습니다(TLS 핸드셰이크를 시작하기 전에 설정해야 함). 서버에서 클라이언트 인증서를 요청한 경우 Windows에서 제공된 인증서로 응답합니다.
+[**Windows.Networking.Sockets.StreamSocket**](/uwp/api/windows.networking.sockets.streamsocket) 클래스는 SSL/TLS를 사용하여 앱에서 통신하는 서버를 인증하도록 지원합니다. 앱에서 자체적으로 TLS 클라이언트 인증서를 사용하여 서버에 인증해야 하는 경우도 있습니다. Windows 10에서는 [**StreamSocket.Control**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketControl) 개체에서 클라이언트 인증서를 제공할 수 있습니다(TLS 핸드셰이크를 시작하기 전에 설정해야 함). 서버에서 클라이언트 인증서를 요청한 경우 Windows에서 제공된 인증서로 응답합니다.
 
 다음은 이를 구현하는 방법을 보여 주는 코드 조각입니다.
 

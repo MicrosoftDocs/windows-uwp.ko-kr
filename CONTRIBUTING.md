@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ffd5481fec0ebf6db24d9af95b8a11d05a043170
-ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
+ms.openlocfilehash: 5340c8375be9cf33a8f56fdba7bd36e9743767ab
+ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77521224"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80482311"
 ---
 # <a name="contributing-to-uwp-conceptual-documentation"></a>UWP 개념 문서에 참여
 
@@ -22,7 +22,7 @@ Microsoft 직원이 **아닌** 경우 [공개 콘텐츠 리포지토리](https:/
 
 이미 공개 콘텐츠 리포지토리에 있는 경우 먼저 변경하려는 파일로 이동합니다. 여기에서 표시된 콘텐츠 위에 있는 연필 아이콘을 선택하여 편집을 시작합니다.
 
-또는 docs.microsoft.com에서 페이지를 보는 경우 페이지의 오른쪽 위에서 **편집** 단추를 선택할 수 있습니다. 이렇게 하면 리포지토리의 연결된 원본 파일로 리디렉션됩니다.
+또는 [docs.microsoft.com](https://docs.microsoft.com)에서 페이지를 보는 경우 페이지의 오른쪽 위에서 **편집** 단추를 선택할 수 있습니다. 이렇게 하면 리포지토리의 연결된 원본 파일로 리디렉션됩니다.
 
 편집을 시작하면 GitHub는 변경할 수 있는 개인 GitHub 계정에 공식 리포지토리를 자동으로 포크합니다. 완료되면 끌어오기 요청을 다시 **docs** 분기로 제출합니다.
 

@@ -6,12 +6,12 @@ ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 13e6f4ac59a99463cd891e936f51449baf4ea7c2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 4c388b9b81744c0d27d96c1f97b4e405af63eaef
+ms.sourcegitcommit: fc5db2e26db65be025e9f62044b4d29bb1744f8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259533"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80524080"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>C++/CX로 "Hello world" 앱 만들기
 
@@ -51,7 +51,7 @@ C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이
 
 -   XAML을 사용하여 전체 UI를 정의합니다. UI와 핵심 프로그램 논리 간의 구분은 MFC 또는 Win32 앱에서보다 Windows 유니버설 앱에서 훨씬 명확하게 나타납니다. 코드 파일에서 동작을 구현하기 위해 작업할 수도 있고 XAML 파일에서 UI의 모양을 구현하기 위해 작업할 수도 있습니다.
 
--   일부 기능에 Windows 장치 Win32를 여전히 사용할 수 있지만 주로 탐색이 용이하고 개체 지향적인 새 API인 Windows 런타임에 대해 프로그래밍을 수행합니다.
+-   일부 기능에 Windows 디바이스 Win32를 여전히 사용할 수 있지만 주로 탐색이 용이하고 개체 지향적인 새 API인 Windows 런타임에 대해 프로그래밍을 수행합니다.
 
 -   C++/CX를 사용하여 Windows 런타임 개체를 사용하고 만들 수 있습니다. C++/CX에서는 C++ 예외 처리, 대리자, 이벤트 및 동적으로 만들어진 개체에 대한 자동 참조 계산을 지원합니다. C++/CX를 사용할 경우 기본 COM 및 Windows 아키텍처의 세부 사항이 앱 코드에서 숨겨져 있습니다. 자세한 내용은 [C++/CX 언어 참조](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx)를 참조하세요.
 
@@ -348,7 +348,7 @@ MainPage::MainPage()
 
 ### <a name="step-4-adapt-the-ui-to-different-window-sizes"></a>4단계: UI를 다양한 창 크기로 조정
 
-이제 모바일 장치에서 멋지게 표시되도록 다양한 화면 크기에 맞게 UI를 적용할 수 있습니다. 이 작업을 수행하려면 [**VisualStateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager)을(를) 추가하고 다양한 시각적 상태에 적용되는 속성을 설정합니다.
+이제 모바일 디바이스에서 멋지게 표시되도록 다양한 화면 크기에 맞게 UI를 적용할 수 있습니다. 이 작업을 수행하려면 [**VisualStateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager)을(를) 추가하고 다양한 시각적 상태에 적용되는 속성을 설정합니다.
 
 **UI 레이아웃을 조정하려면**
 
@@ -376,8 +376,8 @@ MainPage::MainPage()
     </VisualStateManager.VisualStateGroups>
     ```
 
-2.  로컬 컴퓨터에서 앱을 디버그합니다. 641 DIP(장치 독립적인 픽셀)보다 좁은 경우가 아니라면 UI가 이전과 동일한 모양으로 표시됩니다.
-3.  모바일 장치 에뮬레이터에서 앱을 디버그합니다. UI가 `narrowState`에 정의된 속성을 사용하며, 작은 화면에 올바르게 나타납니다.
+2.  로컬 컴퓨터에서 앱을 디버그합니다. 641 DIP(디바이스 독립적인 픽셀)보다 좁은 경우가 아니라면 UI가 이전과 동일한 모양으로 표시됩니다.
+3.  모바일 디바이스 에뮬레이터에서 앱을 디버그합니다. UI가 `narrowState`에 정의된 속성을 사용하며, 작은 화면에 올바르게 나타납니다.
 
 ![스타일이 지정된 텍스트가 포함된 모바일 앱 화면](images/hw10-screen2-mob.png)
 
