@@ -6,12 +6,12 @@ ms.date: 1/17/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ac23c926e0d7b517fe18321980fc322d7be5b064
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: ca046122a841c727b6f9ef46a868b2c9ba0be2e9
+ms.sourcegitcommit: 74627903a18b14c1af68269b0a8c85840caa1898
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210449"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80759430"
 ---
 # <a name="set-up-your-payout-account-and-tax-forms"></a>지급 계좌 및 세금 양식 설정
 
