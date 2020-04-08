@@ -1,5 +1,5 @@
 ---
-description: XBind 태그 확장에는 함수를를 태그에 사용할 수 있습니다.
+description: XBind 태그 확장을 사용하면 함수를 태그에 사용할 수 있습니다.
 title: X:bind 함수
 ms.date: 02/06/2019
 ms.topic: article
@@ -7,7 +7,7 @@ keywords: windows 10, uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: 879be9591bae36a1dbcd485387fbb4ac7f502fea
 ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "66360078"
@@ -15,9 +15,9 @@ ms.locfileid: "66360078"
 # <a name="functions-in-xbind"></a>X:bind 함수
 
 > [!NOTE]
-> 데이터 바인딩을 사용 하 여 앱에서 사용 하는 방법에 대 한 일반 정보에 대 한 **{X:bind}** (및 사이의 모든 비교 **{X:bind}** 하 고 **{Binding}** )를 참조 [데이터 깊이에서 바인딩](data-binding-in-depth.md)합니다.
+> 앱에서 **{x:Bind}** 와 함께 데이터 바인딩을 사용하는 방법 및 **{x:Bind}** 와 **{Binding}** 간 비교에 대한 일반 정보는 [데이터 바인딩 심층 분석](data-binding-in-depth.md)을 참조하세요.
 
-Windows 10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 이 수 있습니다.
+Windows 10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 그러면 다음과 같은 이점이 있습니다.
 
 - 간단한 값 변환 방법
 - 둘 이상의 매개 변수를 사용하는 바인딩 방식
@@ -63,7 +63,7 @@ class ColorEntry
 
 함수 경로는 다른 속성 경로처럼 지정되며 점(.), 인덱서 또는 함수를 찾을 캐스트를 포함할 수 있습니다.
 
-정적 함수는 XMLNamespace:ClassName.MethodName 구문을 사용하여 지정할 수 있습니다. 예를 들어, 사용 하 여는 코드 숨김에 정적 함수에 대 한 바인딩에 구문 아래.
+정적 함수는 XMLNamespace:ClassName.MethodName 구문을 사용하여 지정할 수 있습니다. 예를 들어, 다음 구문을 사용하여 코드 숨김에서 정적 함수에 바인딩합니다.
 
 ```xaml
 <Page 
@@ -87,7 +87,7 @@ namespace MyNamespace
 }
 ```
 
-예를 들어 날짜 서식 지정, 텍스트 서식 지정, 텍스트 연결 등과 같은 간단한 시나리오를 위해 태그에 직접 시스템 함수를 사용할 수 있습니다.
+태그에서 직접 시스템 함수를 사용하여 날짜 형식 지정, 텍스트 서식 지정, 텍스트 연결과 같은 간단한 시나리오를 수행할 수도 있습니다. 예를 들면 다음과 같습니다.
 
 ```xaml
 <Page 
@@ -108,7 +108,7 @@ namespace MyNamespace
 - 인수 형식은 전달 중인 데이터와 일치해야 합니다. 변환을 축소하지 않습니다.
 - 함수의 반환 형식은 바인딩을 사용 중인 속성의 형식과 일치해야 합니다.
 
-바인딩 엔진 속성 변경 알림 함수 이름으로 실행 및 필요에 따라 바인딩을 재평가 반응 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+바인딩 엔진은 함수 이름을 사용하여 실행된 속성 변경 알림에 반응하고 필요에 따라 바인딩을 다시 평가합니다. 예:
 
 ```xaml
 <DataTemplate x:DataType="local:Person">
@@ -164,7 +164,7 @@ public class Person:INotifyPropertyChanged
 ```
 
 > [!TIP]
-> Wpf에서 MultiBinding 및 변환기를 통해 지원 된 것으로 동일한 시나리오를 달성 하기 X:bind에 함수를 사용할 수 있습니다.
+> x:Bind에서 함수를 사용하여 WPF에서 변환기 및 MultiBinding을 통해 지원되는 것과 동일한 시나리오를 구현할 수 있습니다.
 
 ## <a name="function-arguments"></a>함수 인수
 
@@ -178,7 +178,7 @@ public class Person:INotifyPropertyChanged
 
 ### <a name="two-way-function-bindings"></a>양방향 함수 바인딩
 
-양방향 바인딩 시나리오에서는 두 번째 함수를 바인딩의 반대 방향으로 지정해야 합니다. 이렇게 사용 하는 **하지** 속성 바인딩. 에 아래 예제에서는 함수 모델로 다시 푸시 해야 하는 값인 인수 하나를 수행 해야 합니다.
+양방향 바인딩 시나리오에서는 두 번째 함수를 바인딩의 반대 방향으로 지정해야 합니다. **BindBack** 바인딩 속성을 사용하여 이 작업을 수행합니다. 아래 예제에서 이 함수는 모델로 다시 푸시해야 하는 값을 인수로 사용합니다.
 
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />

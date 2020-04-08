@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 52de0933bf51adaae6b0923868e12eb92ced4a1a
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: 320586fb8fe7f71eaea2d4b12c0dd731a1f721db
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "63793775"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080965"
 ---
 # <a name="flyouts"></a>플라이아웃
 
@@ -24,20 +24,26 @@ ms.locfileid: "63793775"
 
 ![플라이아웃 내에 중첩된 상황에 맞는 메뉴](../images/flyout-nested.png)
 
-> **중요 API**: [Flyout 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Flyout)
+**Windows UI 라이브러리 가져오기**
+
+|  |  |
+| - | - |
+| ![WinUI 로고](../images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤에 대한 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 UWP 앱에 대한 새로운 컨트롤 및 UI 기능을 포함하는 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+> **플랫폼 API:** [Flyout 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 * [도구 설명](../tooltips.md) 또는 [상황에 맞는 메뉴](../menus.md) 대신에 플라이아웃을 사용하지 마세요. 도구 설명을 사용하여 지정된 시간 후에 숨겨지는 간단한 설명을 표시합니다. 복사 및 붙여넣기 등 UI 요소에 관련된 상황별 작업을 위한 상황에 맞는 메뉴를 사용합니다.
 
-플라이아웃을 사용해야 할 경우와 대화 상자(비슷한 컨트롤)를 사용해야 할 경우에 대한 권장 사항을 보려면 [대화 상자 및 플라이아웃](index.md)을 참조하세요. 
+플라이아웃을 사용해야 할 경우와 대화 상자(비슷한 컨트롤)를 사용해야 할 경우에 대한 권장 사항을 보려면 [대화 상자 및 플라이아웃](index.md)을 참조하세요.
 
 ## <a name="examples"></a>예
 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="../images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="../images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML Controls Gallery</strong> 앱이 설치되어 있는 경우 여기를 클릭하여 앱을 열고 <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> 또는 <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a>이 작동되는지 확인합니다.</p>
     <ul>
@@ -74,7 +80,7 @@ ms.locfileid: "63793775"
   <FlyoutBase.AttachedFlyout>
     <Flyout>
       <TextBlock Text="This is some text in a flyout."  />
-    </Flyout>        
+    </Flyout>
   </FlyoutBase.AttachedFlyout>
 </Image>
 ````
@@ -121,7 +127,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 ````csharp
 private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 {
-    FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);  
+    FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
 }
 ````
 
@@ -157,10 +163,10 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 
 ## <a name="light-dismiss-behavior"></a>빠른 해제 동작
 다음을 포함한 빠른 해제 동작으로 플라이아웃을 닫을 수 있습니다.
--   플라이아웃 밖 탭
--   Esc 키보드 키 누르기
--   하드웨어 또는 소프트웨어 시스템의 뒤로 단추 누르기
--   게임 패드 B 단추 누르기
+-    플라이아웃 밖 탭
+-    Esc 키보드 키 누르기
+-    하드웨어 또는 소프트웨어 시스템의 뒤로 단추 누르기
+-    게임 패드 B 단추 누르기
 
 탭으로 해제 시 이 제스처는 대개 포함되고 UI 아래에 전달되지 않습니다. 예를 들어, 열려 있는 플라이아웃 뒤에 단추가 표시된 경우 사용자의 첫 번째 탭으로 플라이아웃이 해제되지만 이 단추가 활성화되지는 않습니다. 단추를 누르려면 두 번째 탭이 필요합니다.
 
@@ -177,7 +183,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
                 OverlayInputPassThroughElement="{x:Bind FavoritesBar}">
             <StackPanel>
                 <HyperlinkButton Content="Washington Trails Association"/>
-                <HyperlinkButton Content="Washington Cascades - Go Northwest! A Travel Guide"/>  
+                <HyperlinkButton Content="Washington Cascades - Go Northwest! A Travel Guide"/>
             </StackPanel>
         </Flyout>
     </Page.Resources>
@@ -188,7 +194,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel x:Name="FavoritesBar" Orientation="Horizontal">
-            <HyperlinkButton x:Name="PageLinkBtn">Bing</HyperlinkButton>  
+            <HyperlinkButton x:Name="PageLinkBtn">Bing</HyperlinkButton>
             <Button x:Name="Folder1" Content="Travel" Flyout="{StaticResource TravelFlyout}"/>
             <Button x:Name="Folder2" Content="Entertainment" Click="Folder2_Click"/>
         </StackPanel>
@@ -208,11 +214,11 @@ private void Folder2_Click(object sender, RoutedEventArgs e)
 {
 ````
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식의 모든 XAML 컨트롤을 보여줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 - [도구 설명](../tooltips.md)
 - [메뉴 및 상황에 맞는 메뉴](../menus.md)
 - [Flyout 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)

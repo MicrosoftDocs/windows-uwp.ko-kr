@@ -8,14 +8,14 @@ ms.assetid: 8ac6d127-3475-4512-896d-80d1e1d66ccd
 ms.localizationpriority: medium
 ms.openlocfilehash: 6912d7faa3a86dade13b60eac5654aef8a52173d
 ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/03/2019
 ms.locfileid: "74735018"
 ---
 # <a name="testing-and-debugging-tools-for-process-lifetime-management-plm"></a>PLM(프로세스 수명 관리) 테스트 및 디버깅 도구
 
-UWP 앱과 기존 데스크톱 응용 프로그램 간의 주요 차이점 중 하나는 PLM(Process Lifecycle Management)이 적용되는 앱 컨테이너에 UWP 타이틀이 있다는 것입니다. 런타임 브로커 서비스가 모든 플랫폼에서 UWP 앱을 일시 중단, 다시 시작 또는 종료할 수 있으며, 처리하는 코드를 테스트 또는 디버그할 때 강제로 이러한 전환을 수행하는 데 사용할 전용 도구가 있습니다.
+UWP 앱과 기존 데스크톱 애플리케이션 간의 주요 차이점 중 하나는 PLM(Process Lifecycle Management)이 적용되는 앱 컨테이너에 UWP 타이틀이 있다는 것입니다. 런타임 브로커 서비스가 모든 플랫폼에서 UWP 앱을 일시 중단, 다시 시작 또는 종료할 수 있으며, 처리하는 코드를 테스트 또는 디버그할 때 강제로 이러한 전환을 수행하는 데 사용할 전용 도구가 있습니다.
 
 ## <a name="features-in-visual-studio-2015"></a>Visual Studio 2015의 기능
 
@@ -25,7 +25,7 @@ Visual Studio 2015의 기본 제공 디버거는 UWP 전용 기능을 사용하�
 
 ## <a name="the-plmdebug-tool"></a>PLMDebug 도구
 
-PLMDebug.exe는 응용 프로그램 패키지의 PLM 상태를 제어할 수 있도록 하며 Windows SDK의 일부로 제공되는 명령줄 도구입니다. 이 도구는 설치된 후 기본적으로 *C:\Program Files (x86)\Windows Kits\10\Debuggers\x64*에 있습니다.
+PLMDebug.exe는 애플리케이션 패키지의 PLM 상태를 제어할 수 있도록 하며 Windows SDK의 일부로 제공되는 명령줄 도구입니다. 이 도구는 설치된 후 기본적으로 *C:\Program Files (x86)\Windows Kits\10\Debuggers\x64*에 있습니다.
 
 또한 PLMDebug를 사용하면 설치된 앱 패키지에 대해 PLM을 사용하지 않도록 설정할 수 있습니다. 이 작업은 일부 디버거에 필요합니다. PLM을 사용하지 않도록 설정하면 디버그하기 전에 런타임 브로커 서비스가 앱을 종료하지 못하도록 차단됩니다. PLM을 사용하지 않도록 설정하려면 **/enableDebug** 스위치, UWP 앱의 *전체 패키지 이름*을 차례로 사용합니다(패키지의 짧은 이름, 패키지 패밀리 이름 또는 AUMID는 작동하지 않음).
 

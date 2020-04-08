@@ -11,21 +11,28 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b791768d4ccd78b46fef2d4e494ce06ef9f6ca6a
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: f287f738c39e21ea76ff2595cc34ac715a1b52ca
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73062212"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081180"
 ---
 # <a name="color-picker"></a>색 선택기
 
 색 선택은 색을 찾아보고 선택하는 데 사용됩니다. 색 선택을 사용하면 사용자가 기본적으로 색 스펙트럼에서 색을 탐색하거나 RGB(Red-Green-Blue), HSV(색상 채도 값) 또는 16진수 텍스트 상자에서 색을 지정할 수 있습니다.
 
-> **중요 API**: [ColorPicker 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker), [Color 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color), [ColorChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged)
-
 ![기본 색 선택](images/color-picker-default.png)
 
+**Windows UI 라이브러리 가져오기**
+
+|  |  |
+| - | - |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **ColorPicker** 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+> **Windows UI 라이브러리 API:** [ColorPicker 클래스](/uwp/api/microsoft.ui.xaml.controls.colorpicker), [Color 속성](/uwp/api/microsoft.ui.xaml.controls.colorpicker.Color), [ColorChanged 이벤트](/uwp/api/microsoft.ui.xaml.controls.colorpicker.ColorChanged)
+>
+> **플랫폼 API:** [ColorPicker 클래스](/uwp/api/windows.ui.xaml.controls.colorpicker), [Color 속성](/uwp/api/windows.ui.xaml.controls.colorpicker.Color), [ColorChanged 이벤트](/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -38,7 +45,7 @@ ms.locfileid: "73062212"
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/ColorPicker">앱을 열고 실제로 작동하는 ColorPicker를 확인</a>합니다.</p>
     <ul>
@@ -207,11 +214,11 @@ private void cancelColor_Click(object sender, RoutedEventArgs e)
   - 선택 적용 또는 취소를 위한 커밋 및 취소 단추를 제공합니다. 뒤로 단추를 누르거나 플라이아웃 바깥쪽을 탭하면 선택이 해제되고 사용자의 선택 내용이 저장되지 않습니다.
   - 또는 플라이아웃 바깥쪽을 탭하거나 뒤로 단추를 눌러 플라이아웃을 해제할 때 선택을 커밋합니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [UWP 앱에서 펜 및 스타일러스 조작](../input/pen-and-stylus-interactions.md)
 - [수동 입력](inking-controls.md)

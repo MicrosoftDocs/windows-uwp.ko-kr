@@ -4,12 +4,12 @@ description: 둥근 모퉁이 원칙, 디자인 방법 및 사용자 지정 옵�
 ms.date: 10/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 모퉁이 반경, 둥근 모양
-ms.openlocfilehash: 84cd27bf8c65ed65a6ee2b0f044e0ffb3ef86bf0
-ms.sourcegitcommit: 49af415e4eefea125c023b7071adaa5dc482e223
+ms.openlocfilehash: a83473b5ad836633bc195aa2b5afe87fa092e0ee
+ms.sourcegitcommit: 3c3730e968fba89b21459390735614cd4c9d9c67
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74799927"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320426"
 ---
 # <a name="corner-radius"></a>모퉁이 반경
 
@@ -40,7 +40,7 @@ WinUI 2.2 이상을 위한 NuGet 패키지를 설치하는 경우 WinUI 컨트�
 **컨트롤**
 
 - AutoSuggestBox
-- Button
+- 단추
   - ContentDialog 단추
 - CalendarDatePicker
 - CheckBox
@@ -180,9 +180,21 @@ WinUI 2.2 이상을 위한 NuGet 패키지를 설치하는 경우 WinUI 컨트�
 
 컨트롤의 선택 번호에 대해서만 원형을 변경하려는 경우 컨트롤의 [CornerRadius](/uwp/api/windows.ui.xaml.controls.control.cornerradius) 속성을 직접 수정할 수 있습니다.
 
-|기본값 | 수정된 속성 |
+|Default | 수정된 속성 |
 |:-- |:-- |
 |![DefaultCheckBox](images/rounded-corner/default-checkbox.png)| ![CustomCheckBox](images/rounded-corner/custom-checkbox.png)|
 |`<CheckBox Content="Checkbox"/>` | `<CheckBox Content="Checkbox" CornerRadius="5"/> ` |
 
 모든 컨트롤의 모퉁이가 수정된 `CornerRadius` 속성에 응답하는 것은 아닙니다. 모퉁이를 둥글게 만들려는 컨트롤이 실제로 예상한 대로 `CornerRadius` 속성에 응답하도록 하려면 먼저 `ControlCornerRadius` 또는 `OverlayCornerRadius` 글로벌 리소스가 해당 컨트롤에 영향을 미치는지 확인합니다. 영향을 미치지 않는 경우 둥글게 만들려는 컨트롤에 모퉁이가 있는지 확인합니다. 대부분의 컨트롤은 실제 에지를 렌더링하지 않으므로 `CornerRadius` 속성을 제대로 사용할 수 없습니다.
+
+### <a name="basing-custom-styles-on-winui"></a>WinUI 기반 사용자 지정 스타일
+
+스타일에 올바른 `BasedOn` 특성을 지정하여 WinUI 둥근 모서리 스타일을 기준으로 사용자 지정 스타일을 만들 수 있습니다. 예를 들어, WinUI 단추 스타일을 기준으로 사용자 지정 단추 스타일을 만들려면 다음을 수행합니다.
+
+```xaml
+<Style x:Key="MyCustomButtonStyle" BasedOn="{StaticResource DefaultButtonStyle}">
+   ...
+</Style>
+```
+
+일반적으로 WinUI 컨트롤 스타일은 일관된 명명 규칙 "DefaultXYZStyle"을 따릅니다. 여기서 "XYZ"는 컨트롤의 이름입니다. 전체 내용을 참조하려면 WinUI 리포지토리에서 XAML 파일을 찾아볼 수 있습니다.

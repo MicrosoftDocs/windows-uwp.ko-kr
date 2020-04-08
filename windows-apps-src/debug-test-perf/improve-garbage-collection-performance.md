@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f9e7cc16b65f4ee2727fae5a711da9372ee91c01
 ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/11/2019
 ms.locfileid: "72282193"
@@ -18,7 +18,7 @@ ms.locfileid: "72282193"
 
 C# 및 Visual Basic으로 작성한 UWP(유니버설 Windows 플랫폼) 앱은 .NET 가비지 수집기의 자동 메모리 관리를 사용합니다. 이 섹션에는 UWP 앱에서 .NET 가비지 수집기에 대한 동작 및 성능 모범 사례가 요약되어 있습니다. .NET 가비지 수집기가 작동하는 방식과 가비지 수집기 성능 디버깅 및 분석용 도구에 대한 자세한 내용은 [가비지 수집](https://docs.microsoft.com/dotnet/standard/garbage-collection/index)을 참조하세요.
 
-**참고**  가비지 수집기의 기본 동작에 개입 해야 하는 것은 앱의 일반적인 메모리 문제를 의미 합니다. 자세한 내용은 [Visual Studio 2015에서 디버그하는 동안의 메모리 사용량 도구](https://devblogs.microsoft.com/devops/memory-usage-tool-while-debugging-in-visual-studio-2015/)를 참조하세요. 이 항목은 C# 및 Visual Basic에만 적용됩니다.
+**참고**  가비지 수집기의 기본 동작에 개입이 필요한 경우 이는 앱의 일반적인 메모리 문제를 나타냅니다. 자세한 내용은 [Visual Studio 2015에서 디버그하는 동안의 메모리 사용량 도구](https://devblogs.microsoft.com/devops/memory-usage-tool-while-debugging-in-visual-studio-2015/)를 참조하세요. 이 항목은 C# 및 Visual Basic에만 적용됩니다.
 
  
 
@@ -42,7 +42,7 @@ C# 및 Visual Basic으로 작성한 UWP(유니버설 Windows 플랫폼) 앱은 .
 
 [  **GC.Collect(n)** ](https://docs.microsoft.com/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_)을 호출하여 세대에 대한 가비지 수집을 유도할 수 있습니다. 여기서 n은 수집할 세대입니다(0, 1 또는 2).
 
-**참고**  가비지 수집기는 많은 추론을 사용 하 여 컬렉션을 수행 하는 데 가장 적합 한 시간을 결정 하 고 컬렉션을 강제 적용 하는 것은 CPU를 불필요 하 게 사용 하는 것 이기 때문에 응용 프로그램에서 가비지 수집을 수행 하지 않는 것이 좋습니다. 그러나 더 이상 사용되지 않는 상당한 개체가 앱에 있다는 것을 알고 있고 이 메모리를 시스템으로 반환하려는 경우에는 가비지 수집을 강제 실행하는 것이 적절할 수 있습니다. 예를 들어 게임에서 로드 순서가 끝날 때 수집을 유도하여 게임 실행이 시작되기 전에 메모리를 해제할 수 있습니다.
+**참고**  가비지 수집기는 많은 경험적 접근을 사용하여 수집을 수행할 가장 좋은 시간을 결정하고 강제 수집에는 대부분의 경우 불필요하게 CPU가 사용되므로 앱에서 가비지 수집을 강제 실행하지 않는 것이 좋습니다. 그러나 더 이상 사용되지 않는 상당한 개체가 앱에 있다는 것을 알고 있고 이 메모리를 시스템으로 반환하려는 경우에는 가비지 수집을 강제 실행하는 것이 적절할 수 있습니다. 예를 들어 게임에서 로드 순서가 끝날 때 수집을 유도하여 게임 실행이 시작되기 전에 메모리를 해제할 수 있습니다.
  
 실수로 너무 많은 가비지 수집을 유도하지 않으려면 [**GCCollectionMode**](https://docs.microsoft.com/dotnet/api/system.gccollectionmode)를 **Optimized**로 설정합니다. 이렇게 하면 수집이 정당화하기에 충분히 생산적인 것으로 판단되는 경우에만 가비지 수집기가 수집을 시작합니다.
 
@@ -52,7 +52,7 @@ C# 및 Visual Basic으로 작성한 UWP(유니버설 Windows 플랫폼) 앱은 .
 
 가비지 수집기는 가끔 작업을 수행하기 위해 앱을 일시 중지하지만 수집을 수행하는 내내 앱을 일시 중지할 필요는 없습니다. 일시 중지 시간은 대개 앱에서 사용자가 인식하지 못할 정도이며 특히 세대 0 및 세대 1 수집의 경우 그렇습니다. .NET 가비지 수집기의 [백그라운드 가비지 수집](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals) 기능을 통해 앱을 실행하는 동안 동시에 세대 2 수집을 수행할 수 있고 잠깐 동안만 앱을 일시 중지합니다. 그러나 항상 세대 2 수집을 백그라운드 수집으로 수행할 수 있는 것은 아닙니다. 100MB를 초과하는 상당히 큰 힙이 있는 경우 사용자가 일시 중지를 인식할 수 있습니다.
 
-가비지 수집을 자주 실행하면 CPU 및 전원 사용이 증가하거나 로드 시간이 길어지거나 응용 프로그램의 프레임 속도가 느려질 수 있습니다. 다음은 관리되는 UWP 앱에서 가비지 수집 시간 및 수집 관련 일시 중지를 줄이는 데 사용할 수 있는 기술입니다.
+가비지 수집을 자주 실행하면 CPU 및 전원 사용이 증가하거나 로드 시간이 길어지거나 애플리케이션의 프레임 속도가 느려질 수 있습니다. 다음은 관리되는 UWP 앱에서 가비지 수집 시간 및 수집 관련 일시 중지를 줄이는 데 사용할 수 있는 기술입니다.
 
 ### <a name="reduce-memory-allocations"></a>메모리 할당 감소
 
@@ -74,7 +74,7 @@ C# 및 Visual Basic으로 작성한 UWP(유니버설 Windows 플랫폼) 앱은 .
 
 ### <a name="avoid-reference-rich-objects"></a>참조가 많은 개체 방지
 
-가비지 수집기는 앱의 루트부터 개체 간 참조에 따라 유지할 개체를 결정합니다. 자세한 내용은 [가비지 수집 중에 수행되는 작업](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals)을 참조하세요. 개체에 여러 참조가 포함된 경우에는 가비지 수집기가 수행할 작업이 더 많습니다. 일반적인 방법 (특히, 많은 개체)은 참조를 포함 하지 않는 참조 서식 개체를 개체로 변환 하는 것입니다. 예를 들어 참조를 저장 하는 대신 인덱스를 저장 합니다. 물론 이 방법은 논리적으로 가능한 경우에만 작동합니다.
+가비지 수집기는 앱의 루트부터 개체 간 참조에 따라 유지할 개체를 결정합니다. 자세한 내용은 [가비지 수집 중에 수행되는 작업](https://docs.microsoft.com/dotnet/standard/garbage-collection/fundamentals)을 참조하세요. 개체에 여러 참조가 포함된 경우에는 가비지 수집기가 수행할 작업이 더 많습니다. 특히 큰 개체인 경우 일반적인 방법은 참조가 많은 개체를 참조가 없는 개체로 변환하는 것입니다. 즉, 참조를 저장하지 않고 인덱스를 저장합니다. 물론 이 방법은 논리적으로 가능한 경우에만 작동합니다.
 
 개체 참조를 인덱스로 바꾸는 작업은 앱에 지장을 주고 복잡한 변경일 수 있으므로 상당한 참조가 포함된 큰 개체의 경우에 가장 효과적입니다. 참조가 많은 개체에 관련된 앱에서 상당한 가비지 수집 횟수가 발견된 경우에만 이 작업을 수행하세요.
 

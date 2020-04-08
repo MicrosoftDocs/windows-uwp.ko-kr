@@ -7,7 +7,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5d02c75775dfd63281dbf46c7f9fc58f48ac1e20
 ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "66359971"
@@ -44,7 +44,7 @@ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 
 조건부 XAML은 다음 조건부 메서드를 지원합니다.
 
-메서드 | 역
+방법 | Inverse
 ------ | -------
 IsApiContractPresent(ContractName, VersionNumber) | IsApiContractNotPresent(ContractName, VersionNumber)
 IsTypePresent(ControlType) | IsTypeNotPresent(ControlType)
@@ -55,13 +55,13 @@ IsPropertyPresent(ControlType, PropertyName) | IsPropertyNotPresent(ControlType,
 > [!NOTE]
 > IsApiContractPresent 및 IsApiContractNotPresent를 사용하는 것이 좋습니다. 다른 조건은 Visual Studio 디자인 환경에서 완전하게 지원되지 않습니다.
 
-## <a name="create-a-namespace-and-set-a-property"></a>네임스페이스를 만들고 속성을 설정
+## <a name="create-a-namespace-and-set-a-property"></a>네임스페이스 만들기 및 속성 설정
 
 이 예에서는 앱이 Fall Creators Update 이상에서 실행될 경우 텍스트 블록의 콘텐츠로 "Hello, Conditional XAML"을 표시하며, 기본값은 이전 버전에 실행이 되는 경우에는 콘텐츠를 표시하지 않도록 지정되어 있습니다.
 
 먼저 'contract5Present'라는 접두사를 가진 사용자 지정 네임스페이스를 정의하고, 기본 XAML 네임스페이스(https://schemas.microsoft.com/winfx/2006/xaml/presentation) 를 [TextBlock.Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.Text) 속성이 포함된 스키마로 사용합니다. 이 조건부 네임스페이스를 만들려면 스키마 뒤에 '?' 구분 기호를 추가합니다.
 
-그런 다음 Fall Creators Update 이상을 실행하는 장치에서 **true**를 반환하는 조건부를 정의합니다. ApiInformation 메서드 **IsApiContractPresent**를 사용하여 5번째 버전의 UniversalApiContract를 확인할 수 있습니다. UniversalApiContract 버전 5는 Fall Creators Update(SDK 16299)와 함께 출시되었습니다.
+그런 다음, Fall Creators Update 이상을 실행하는 디바이스에서 **true**를 반환하는 조건부를 정의합니다. ApiInformation 메서드 **IsApiContractPresent**를 사용하여 5번째 버전의 UniversalApiContract를 확인할 수 있습니다. UniversalApiContract 버전 5는 Fall Creators Update(SDK 16299)와 함께 출시되었습니다.
 
 ```xaml
 xmlns:contract5Present="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract,5)"
@@ -114,7 +114,7 @@ IsApiContractPresent 메서드는 *contractName* 매개 변수에 대한 문자�
 
 앱이 Windows 10의 다른 버전에서 실행될 때 다른 텍스트가 표시되도록 설정하려면, 다른 조건이 필요합니다. 조건부 XAML은 다음과 같이 if/else 조건을 만들 수 있는 지원되는 각 ApiInformation 메서드의 반대 메서드를 제공합니다.
 
-현재 장치가 지정된 계약 및 버전 번호를 포함할 경우 IsApiContractPresent 메서드는 **true**를 반환합니다. 예를 들어, 앱이 크리에이터스 업데이트에서 실행된다고 가정하면, 유니버설 API 계약의 4번째 버전을 가집니다.
+현재 디바이스가 지정된 계약 및 버전 번호를 포함할 경우 IsApiContractPresent 메서드는 **true**를 반환합니다. 예를 들어, 앱이 크리에이터스 업데이트에서 실행된다고 가정하면, 유니버설 API 계약의 4번째 버전을 가집니다.
 
 IsApiContractPresent에 대한 다양한 호출의 결과는 다음과 같습니다.
 
@@ -183,15 +183,15 @@ xmlns:contract5Present="http://schemas.microsoft.com/winfx/2006/xaml/presentatio
 </Rectangle>
 ```
 
-조건부 네임스페이스에 의존하는 다른 속성에 속성을 바인딩할 경우, 두 속성에 같은 조건을 사용해야 합니다. 여기에서 `colorPicker.Color`는 'contract5Present' 조건부 네임스페이스에 의존하므로, 'contract5Present' 접두사를 SolidColorBrush.Color 속성에도 붙여야 합니다. (또는 색 속성 대신 SolidColorBrush를 'contract5Present' 접두사를 배치할 수 있습니다.) 그렇지 않으면 컴파일 타임 오류를 얻게 됩니다.
+조건부 네임스페이스에 의존하는 다른 속성에 속성을 바인딩할 경우, 두 속성에 같은 조건을 사용해야 합니다. 여기에서 `colorPicker.Color`는 'contract5Present' 조건부 네임스페이스에 의존하므로, 'contract5Present' 접두사를 SolidColorBrush.Color 속성에도 붙여야 합니다. (또는 Color 속성 대신 SolidColorBrush에 'contract5Present' 접두사를 붙어야 합니다.) 그렇지 않으면 컴파일 시간 오류가 발생합니다.
 
 ```xaml
 <SolidColorBrush contract5Present:Color="{x:Bind colorPicker.Color, Mode=OneWay}"/>
 ```
 
-다음은 이러한 시나리오를 보여주는 완전한 XAML입니다. 이 예에는 사각형과 이의 색상을 설정할 수 있는 UI가 포함되어 있습니다.
+다음은 이러한 시나리오를 보여 주는 완전한 XAML입니다. 이 예에는 사각형과 이의 색상을 설정할 수 있는 UI가 포함되어 있습니다.
 
-앱이 Fall Creators Update에서 실행될 경우, ColorPicker를 사용하여 사용자가 색상을 설정하도록 할 수 있습니다. Fall Creators Update 이전 버전에서는 ColorPicker를 사용할 수 없으므로, 앱이 이전 버전에서 실행될 때는 콤바 상자를 사용하여 사용자에게 간단한 색상 선택권을 제공할 수 있습니다.
+앱이 Fall Creators Update에서 실행될 경우, ColorPicker를 사용하여 사용자가 색상을 설정하도록 할 수 있습니다. Fall Creators Update 이전 버전에서는 ColorPicker를 사용할 수 없으므로, 앱이 이전 버전에서 실행될 때는 콤보 상자를 사용하여 사용자에게 간단한 색상 선택권을 제공할 수 있습니다.
 
 ```xaml
 <Page
@@ -242,8 +242,8 @@ xmlns:contract5Present="http://schemas.microsoft.com/winfx/2006/xaml/presentatio
 </Page>
 ```
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [UWP 앱 가이드](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
-- [API 계약을 사용 하 여 기능을 동적으로 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
+- [API 계약을 사용하여 동적으로 기능 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
 - [API 계약](https://channel9.msdn.com/Events/Build/2015/3-733)(빌드 2015 비디오)

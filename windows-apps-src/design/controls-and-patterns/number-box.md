@@ -7,21 +7,28 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: bcabe0867e21b20f97405d514b16bef2165821fb
-ms.sourcegitcommit: be25b7628b1ff22175a682e670539947db2fa85a
+ms.openlocfilehash: 5307448b6209228cd8c4550a739c6db15091ba54
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74852865"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081665"
 ---
 # <a name="number-box"></a>숫자 상자
 
 숫자를 표시하고 편집하는 데 사용할 수 있는 컨트롤을 나타냅니다. 이는 곱하기, 나누기, 더하기 및 빼기와 같은 기본 수식의 유효성 검사, 증가 단계별 실행 및 컴퓨팅 인라인 계산을 지원합니다.
 
+![일반적인 상황에 맞는 메뉴 예제](images/contextmenu_rs2_icons.png)
 
-**중요 API:** [NumberBox 클래스](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.NumberBox)
+**Windows UI 라이브러리 가져오기**
 
-## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요? 
+|  |  |
+| - | - |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **NumberBox** 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+**Windows UI 라이브러리 API:** [NumberBox 클래스](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.NumberBox)
+
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 숫자 상자 컨트롤을 사용하여 수학 입력을 캡처하고 표시할 수 있습니다. 숫자 이외의 값을 허용하는 편집 가능한 입력란이 필요한 경우 [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 컨트롤을 사용합니다. 암호나 다른 중요한 입력을 허용하는 편집 가능한 텍스트 상자가 필요한 경우 [PasswordBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox)를 참조하세요. 검색어를 입력하는 입력란이 필요한 경우 [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)를 참조하세요. 서식 있는 텍스트를 입력하거나 편집해야 하는 경우 [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox)를 참조하세요.
 
@@ -30,7 +37,7 @@ ms.locfileid: "74852865"
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치되어 있는 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/TextBox">앱을 열고 작동 중인 NumberBox를 확인</a>합니다.</p>
     <ul>

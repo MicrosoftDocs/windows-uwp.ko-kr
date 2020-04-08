@@ -12,22 +12,22 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f623c18db5af8e503965c0c4518e35e263791a51
-ms.sourcegitcommit: 61194375c0889b73ee2b978c444c4b90a576b3e4
+ms.openlocfilehash: ad18426a36503c9a540343565c20297502810b76
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039151"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081654"
 ---
 # <a name="radio-buttons"></a>라디오 단추
-
-> **중요 API**: [RadioButton 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton), [Checked 이벤트](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked), [IsChecked 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
 
 라디오 단추는 사용자가 세트의 옵션 중 하나를 선택할 수 있게 해줍니다. 각 옵션은 하나의 라디오 단추로 표시되고, 사용자는 라디오 단추 그룹에서 한 가지 라디오 단추만 선택할 수 있습니다.
 
 이름에 대해 궁금할 수 있는데, 라디오의 채널에 미리 설정된 단추의 이름을 따서 라디오 단추의 이름이 지정됩니다.
 
 ![라디오 단추](images/controls/radio-button.png)
+
+> **플랫폼 API**: [RadioButton 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton), [Checked 이벤트](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked), [IsChecked 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -62,7 +62,7 @@ ms.locfileid: "71039151"
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/RadioButton">앱을 열고 실제로 작동하는 RadioButton을 확인</a>합니다.</p>
     <ul>
@@ -187,7 +187,7 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 
 ![라디오 단추에 대한 간격 지침](images/radiobutton-redlines.png)
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 

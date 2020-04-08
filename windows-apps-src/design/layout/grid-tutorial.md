@@ -1,6 +1,6 @@
 ---
-Description: 이 자습서에서는 기본 응용 프로그램 사용자 인터페이스를 만드는 방법을 안내 합니다. 가장 일반적인 XAML 요소인 Grid 및 StackPanel을 사용하는 방법을 설명하고 보여 줍니다.
-title: Grid 및 StackPanel을 사용 하 여 간단한 앱을 만듭니다.
+Description: 이 자습서에서는 기본 애플리케이션 사용자 인터페이스를 만드는 방법을 안내합니다. 가장 일반적인 XAML 요소인 Grid 및 StackPanel을 사용하는 방법을 설명하고 보여 줍니다.
+title: Grid 및 StackPanel을 사용하여 간단한 앱을 만듭니다.
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
@@ -9,7 +9,7 @@ ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
 ms.openlocfilehash: f7c5eb595f3347eb4670e4f7c0a50aa930341d3e
 ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/03/2019
 ms.locfileid: "74735038"
@@ -21,10 +21,10 @@ XAML을 사용하여 **Grid** 및 **StackPanel** 요소로 간단한 날씨 앱�
 > **중요 API**: [Grid 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid), [StackPanel 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel)
 
 ## <a name="prerequisites"></a>필수 구성 요소
-- Windows 10 및 Microsoft Visual Studio 2015 이상. (최신 Visual Studio가 현재 개발 및 보안 업데이트에 대해 권장 됨) [Visual Studio를 사용 하 여 설정 하는 방법을 알아보려면 여기를 클릭](../../get-started/get-set-up.md)하세요.
-- XAML 및 C#을 사용하여 기본 "Hello World" 앱을 만드는 방법에 대한 지식. 아직 살피지 않았다면 [여기를 클릭하여 "Hellow World" 앱을 만드는 방법을 알아보세요](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
+- Windows 10 및 Microsoft Visual Studio 2015 이상. (현재 개발 및 보안 업데이트에 대해 최신 Visual Studio가 권장됨) [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](../../get-started/get-set-up.md).
+- XAML 및 C#을 사용하여 기본 "Hello World" 앱을 만드는 방법에 대한 지식. 아직 살펴보지 않았다면 [여기를 클릭하여 "Hellow World" 앱을 만드는 방법을 알아보세요](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
-## <a name="step-1-create-a-blank-app"></a>1단계: 빈 앱 만들기
+## <a name="step-1-create-a-blank-app"></a>1단계: 비어 있는 앱 만들기
 1. Visual Studio 메뉴에서 **파일** > **새 프로젝트**를 선택합니다.
 2. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual C#**  > **Windows** > **유니버설** 또는 **Visual C++**  > **Windows** > **유니버설**을 선택합니다.
 3. 가운데 창에서 **빈 앱**을 선택합니다.
@@ -49,7 +49,7 @@ XAML에서 **Grid**는 일련의 행과 열로 이루어집니다. **Grid** 내�
 </Grid>
 ```
 
-새 **Grid**는 앱 인터페이스의 레이아웃을 정의하는 두 개의 행과 열 집합을 만듭니다. 첫 번째 열은 **너비가** "3\*"이 고 두 번째 열은 "5\*" 이며 두 열 사이의 가로 간격을 3:5 비율로 나눕니다. 동일한 방식으로 두 행의 **높이가** "2\*" 및 "\*" 이기 때문에 **표** 는 첫 번째 행에 대해 두 번째 행의 공간을 두 배로 할당 합니다 ("\*"는 "1\*"와 동일). 이러한 비율은 창 크기를 조정하거나 디바이스를 변경하는 경우에도 유지됩니다.
+새 **Grid**는 앱 인터페이스의 레이아웃을 정의하는 두 개의 행과 열 집합을 만듭니다. 첫 번째 열은 **Width**가 "3\*"이고, 두 번째 열은 "5\*"이므로 두 열 사이의 가로 공간이 3:5 비율로 분할됩니다. 마찬가지로, 두 행의 **Height**는 각각 "2\*" 및 "\*"이므로 **Grid**에서 두 번째 행보다 세 배의 공간이 첫 번째 행에 할당됩니다("\*"는 "1\*"과 같음). 이러한 비율은 창 크기를 조정하거나 디바이스를 변경하는 경우에도 유지됩니다.
 
 행과 열의 크기를 조정하는 다른 방법을 알아보려면 [XAML을 사용하여 레이아웃 정의](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)를 참조하세요.
 
@@ -103,7 +103,7 @@ XAML에서 **Grid**는 일련의 행과 열로 이루어집니다. **Grid** 내�
 
 ![부분적으로 흐림](images/partially-cloudy.PNG)
 
-**솔루션 탐색기**에서 **Assets** 폴더를 마우스 오른쪽 단추로 클릭하고 **추가** -> **기존 항목...** 을 선택합니다. 팝업되는 브라우저에서 partially-cloudy.png를 찾아서 선택한 다음 **추가**를 클릭합니다.
+**솔루션 탐색기**에서 **자산** 폴더를 마우스 오른쪽 단추로 클릭하고 **추가** -> **기존 항목...** 을 선택합니다. 표시되는 브라우저에서 partially-cloudy.png를 찾아 선택하고 **추가**를 클릭합니다.
 
 **MainPage.xaml**에서 4단계의 StackPanel 아래에 다음 **Image** 요소를 추가합니다.
 
@@ -113,13 +113,13 @@ XAML에서 **Grid**는 일련의 행과 열로 이루어집니다. **Grid** 내�
 
 첫 번째 행과 열에 Image를 배치하려고 하므로 해당 **Grid.Row** 또는 **Grid.Column** 특성을 설정할 필요는 없으며 기본값 "0"으로 두면 됩니다.
 
-정말 간단하죠! 간단한 날씨 응용 프로그램의 레이아웃을 만들었습니다. **F5** 키를 눌러 응용 프로그램을 실행하는 경우 다음과 같이 표시됩니다.
+정말 간단하죠! 간단한 날씨 애플리케이션의 레이아웃을 만들었습니다. **F5** 키를 눌러 응용 프로그램을 실행하는 경우 다음과 같이 표시됩니다.
 
 ![날씨 창 샘플](images/grid-weather-3.PNG)
 
 원하는 경우 위의 레이아웃을 실험해보고, 날씨 데이터를 표시할 수 있는 다양한 방법을 살펴보세요.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 UWP 앱 레이아웃 디자인 소개를 보려면 [UWP 앱 디자인 소개](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro)를 참조하세요.
 
 다양한 화면 크기에 맞게 조정되는 반응형 레이아웃을 만드는 방법에 대한 자세한 내용은 [XAML을 사용하여 페이지 레이아웃 정의](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)를 참조하세요.

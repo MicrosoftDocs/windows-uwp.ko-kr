@@ -7,26 +7,30 @@ ms.date: 02/01/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 38f289b21980e2a77fd8669c39750e9b989aa742
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 3b7eb2aa8f753c3e8b956ed722d1f807362bc204
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684389"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081718"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
 유연한 레이아웃 시스템, 사용자 지정 보기 및 가상화를 사용하는 사용자 지정 컬렉션 환경을 만들려면 [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)를 사용합니다.
 
-[ListView](/uwp/api/windows.ui.xaml.controls.listview)와는 달리, [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)는 포괄적인 최종 사용자 환경을 제공하지 않습니다. 기본 UI가 없으며 포커스, 선택 또는 사용자 상호 작용과 관련된 정책을 제공하지 않습니다. 그보다는 고유한 컬렉션 기반 환경 및 사용자 지정 컨트롤을 만드는 데 사용할 수 있는 문서 블록에 해당합니다. 기본 정책은 없지만, 정책을 연결하여 필요한 환경을 구축할 수 있습니다. 예를 들어 사용할 레이아웃, 키보드 정책, 선택 정책 등을 정의할 수 있습니다.
+[ListView](/uwp/api/windows.ui.xaml.controls.listview)와는 달리, [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)는 포괄적인 최종 사용자 환경을 제공하지 않습니다. 기본 UI가 없으며 포커스, 선택 또는 사용자 상호 작용과 관련된 정책을 제공하지 않습니다. 대신 이는 고유한 컬렉션 기반 환경 및 사용자 지정 컨트롤을 만드는 데 사용할 수 있는 문서 블록입니다. 기본 정책은 없지만, 정책을 연결하여 필요한 환경을 구축할 수 있습니다. 예를 들어 사용할 레이아웃, 키보드 정책, 선택 정책 등을 정의할 수 있습니다.
 
 개념적으로 [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)는 ListView 같은 완전한 컨트롤이라기 보다는 데이터 중심 패널에 가깝습니다. 개발자는 표시할 데이터 항목 컬렉션, 각 데이터 항목의 UI 요소를 생성하는 항목 템플릿 그리고 요소의 크기와 위치를 결정하는 레이아웃을 지정합니다. 그러면 ItemsRepeater가 데이터 원본에 따라 자식 요소를 생성하고, 항목 템플릿과 레이아웃에 지정된 대로 자식 요소를 표시합니다. ItemsRepeater는 개발자가 데이터 템플릿 선택기에서 지정하는 기준에 따라 데이터 항목을 표시할 콘텐츠를 로드할 수 있으므로 표시되는 항목이 같은 형식일 필요는 없습니다
 
-| **Windows UI 라이브러리 가져오기** |
-| - |
-| 이 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+**Windows UI 라이브러리 가져오기**
 
-> **중요 API**: [ItemsRepeater 클래스](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater), [ScrollViewer 클래스](/uwp/api/windows.ui.xaml.controls.scrollviewer)
+|  |  |
+| - | - |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **ItemsRepeater** 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+> **Windows UI 라이브러리 API:** [ItemsRepeater 클래스](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)
+>
+> **플랫폼 API:** [ScrollViewer 클래스](/uwp/api/windows.ui.xaml.controls.scrollviewer)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -46,7 +50,7 @@ ItemsRepeater는 기본 항목 컬렉션을 제공하지 않습니다. 별도의
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 앱을 열고 실제로 작동하는 <a href="xamlcontrolsgallery:/item/ItemsRepeater">ItemsRepeater</a>를 확인합니다.</p>
     <ul>
@@ -203,7 +207,7 @@ XAML에서 **ItemsSource** 속성을 컬렉션에 바인딩할 수도 있습니�
 
     **INotifyCollectionChanged** 인터페이스와 마찬가지로, 컨트롤이 데이터 원본의 변경 내용을 관찰하고 그에 따라 대응할 수 있게 해줍니다.
 
-    **경고**: Windows.Foundation.IObservableVector\<T>는 '이동' 작업을 지원하지 않습니다. 이로 인해 항목의 UI가 시각적 상태를 잃게 될 수 있습니다.  예를 들어 현재 선택되고/되었거나 ‘Remove’ 뒤에 ‘Add’를 사용하여 이동이 수행되는 곳에 포커스가 있는 항목은 포커스를 잃게 되고 더 이상 선택되지 않습니다.
+    **경고**: Windows.Foundation.IObservableVector\<T>는 '이동' 작업을 지원하지 않습니다. 이로 인해 항목의 UI가 시각적 상태를 잃게 될 수 있습니다.  예를 들어 현재 선택되고/되었거나 'Remove' 뒤에 'Add'를 사용하여 이동이 수행되는 곳에 포커스가 있는 항목은 포커스를 잃게 되고 더 이상 선택되지 않습니다.
 
     Platform.Collections.Vector\<T>는 IObservableVector\<T>를 사용하며 동일한 제한이 적용됩니다. '이동' 작업을 반드시 지원해야 하는 경우 **INotifyCollectionChanged** 인터페이스를 사용합니다.  .NET ObservableCollection\<T> 클래스는 **INotifyCollectionChanged**를 사용합니다.
 

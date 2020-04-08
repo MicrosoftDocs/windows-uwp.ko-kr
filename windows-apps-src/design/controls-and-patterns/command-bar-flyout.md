@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f4d2443370d285322e94c4ca21e7d616f96794b7
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 6b85177e5d3d0f4a2a37010ba9122861216a4b6b
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257728"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081957"
 ---
 # <a name="command-bar-flyout"></a>명령 모음 플라이아웃
 
@@ -25,17 +25,24 @@ ms.locfileid: "74257728"
 
 ![확장된 텍스트 명령 모음 플라이아웃](images/command-bar-flyout-header.png)
 
-> CommandBarFlyout에는 Windows 10, 버전 1809([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)가 필요합니다.
-
-> - **플랫폼 API**: [CommandBarFlyout 클래스](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [AppBarButton 클래스](/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton 클래스](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [AppBarSeparator 클래스](/uwp/api/windows.ui.xaml.controls.appbarseparator)
->- **Windows UI 라이브러리 API**: [CommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
-
 [CommandBar](app-bars.md)처럼 CommandBarFlyout에는 명령을 추가하는 데 사용할 수 있는 **PrimaryCommands** 및 **SecondaryCommands** 속성이 있습니다. 두 컬렉션 중 하나에 또는 둘 모두에 명령을 배치할 수 있습니다. 기본 및 보조 명령이 표시되는 시기와 방법은 디스플레이 모드에 따라 달라집니다.
 
 명령 모음 플라이아웃은 *축소* 및 *확장*의 두 가지 표시 모드를 제공합니다.
 
-- 축소 모드에서는 기본 명령만 표시됩니다. 명령 모음 플라이아웃에 기본 명령과 보조 명령이 모두 있는 경우 줄임표(\[•••\])로 표시되는 "자세히 보기" 단추가 표시됩니다. 사용자는 이 단추를 통해 확장 모드로 전환하여 보조 명령에 액세스할 수 있습니다.
+- 축소 모드에서는 기본 명령만 표시됩니다. 명령 모음 플라이아웃에 기본 명령과 보조 명령이 모두 있는 경우 줄임표(\[***\])로 표시되는 "자세히 보기" 단추가 표시됩니다. 사용자는 이 단추를 통해 확장 모드로 전환하여 보조 명령에 액세스할 수 있습니다.
 - 확장 모드에서는 기본 명령과 보조 명령이 모두 표시됩니다. (컨트롤에 보조 항목만 있는 경우 보조 항목이 MenuFlyout 컨트롤과 비슷한 방식으로 표시됩니다.)
+
+**Windows UI 라이브러리 가져오기**
+
+|  |  |
+| - | - |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **CommandBarFlyout** 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+>**Windows UI 라이브러리 API**: [CommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
+>
+>**플랫폼 API**: [CommandBarFlyout 클래스](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [AppBarButton 클래스](/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton 클래스](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [AppBarSeparator 클래스](/uwp/api/windows.ui.xaml.controls.appbarseparator)
+>
+> CommandBarFlyout에는 Windows 10, 버전 1809([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)가 필요합니다.
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -56,7 +63,7 @@ TextCommandBarFlyout은 TextBox, TextBlock, RichEditBox, RichTextBlock 및 Passw
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/CommandBarFlyout">앱을 열고 작동 중인 CommandBarFlyout을 확인</a>합니다.</p>
     <ul>
@@ -386,9 +393,9 @@ DropDownButton이 있는 CommandBarFlyout을 사용하여 표준 메뉴를 만�
 
 | 명령 | Shown... |
 | ------- | -------- |
-| Bold | 텍스트 컨트롤이 읽기 전용이 아닌 경우(RichEditBox만 해당) |
-| Italic | 텍스트 컨트롤이 읽기 전용이 아닌 경우(RichEditBox만 해당) |
-| Underline | 텍스트 컨트롤이 읽기 전용이 아닌 경우(RichEditBox만 해당) |
+| 굵게 | 텍스트 컨트롤이 읽기 전용이 아닌 경우(RichEditBox만 해당) |
+| 기울임꼴 | 텍스트 컨트롤이 읽기 전용이 아닌 경우(RichEditBox만 해당) |
+| 밑줄 | 텍스트 컨트롤이 읽기 전용이 아닌 경우(RichEditBox만 해당) |
 | Proofing | IsSpellCheckEnabled가 **true**이고 철자가 잘못된 텍스트를 선택한 경우 |
 | 잘라내기 | 텍스트 컨트롤이 읽기 전용이 아니고 텍스트를 선택한 경우 |
 | 복사 | 텍스트를 선택한 경우 |
@@ -403,12 +410,12 @@ TextCommandBarFlyout은 사용자 지정할 수 없으며, 각 텍스트 컨트�
 - 선택한 텍스트에 표시되는 기본 TextCommandBarFlyout을 바꾸려면 사용자 지정 CommandBarFlyout(또는 다른 플라이아웃 형식)을 만들어서 **SelectionFlyout** 속성에 할당하면 됩니다. SelectionFlyout을 **null**로 설정하면 선택 시 어떤 명령도 표시되지 않습니다.
 - 상황에 맞는 메뉴로 표시되는 기본 TextCommandBarFlyout을 바꾸려면 텍스트 컨트롤의 **ContextFlyout** 속성에 사용자 지정 CommandBarFlyout(또는 다른 플라이아웃 형식)을 할당합니다. ContextFlyout을 **null**로 설정하면 TextCommandBarFlyout 대신 이전 버전의 텍스트 컨트롤에 표시된 메뉴 플라이아웃이 표시됩니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 - [XAML 명령 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCommanding)
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [UWP 앱의 명령 디자인 기본 사항](../basics/commanding-basics.md)
 - [CommandBar 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)

@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, COM, 구성 요소, 클래스, 인터페이스
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a9bdfcee8811e52587eb4fcd59913a731b799a2
-ms.sourcegitcommit: cab95379459ad378163aa4469c9dc6c509cc8c43
+ms.openlocfilehash: 6a286056fc0c44d01482e23e52df0fa80eca0515
+ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79511006"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80218523"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>C++/WinRT를 통한 COM 구성 요소 사용
 
@@ -127,14 +127,7 @@ winrt::check_hresult(D2D1CreateFactory(
 
 ## <a name="com-functions-that-take-an-iunknown-interface-pointer"></a>**IUnknown** 인터페이스 포인터를 사용하는 COM 함수
 
-[**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) 프리 함수를 호출하여 **IUnknown** 인터페이스 포인터를 사용하는 함수에 **com_ptr**을 전달할 수 있습니다.
-
-```cppwinrt
-winrt::check_hresult(factory->CreateSwapChainForCoreWindow(
-    ...
-    winrt::get_unknown(CoreWindow::GetForCurrentThread()),
-    ...));
-```
+[**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) 프리 함수를 호출하여 **IUnknown** 인터페이스 포인터를 사용하는 함수에 **com_ptr**을 전달할 수 있습니다. 코드 예제는 해당 항목을 참조하세요.
 
 ## <a name="passing-and-returning-com-smart-pointers"></a>COM 스마트 포인터 전달 및 반환
 
@@ -171,7 +164,7 @@ void ExampleFunction(winrt::com_ptr<ID3D11Device> const& device)
 
 이 소스 코드 예제를 빌드 및 실행하려는 경우, 먼저 Visual Studio에서 새 **코어 앱(C++/WinRT)** 을 만듭니다. `Direct2D`는 프로젝트에 적합한 이름이지만, 원하는 이름을 임의로 지정할 수 있습니다.
 
-`pch.h`를 열고 `windows.h`를 포함하는 즉시 `#include <unknwn.h>`를 추가합니다.
+`pch.h`를 열고 `windows.h`를 포함하는 즉시 `#include <unknwn.h>`를 추가합니다. [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown)을 사용하고 있기 때문입니다. 해당 헤더가 다른 헤더에 포함된 경우에도 **winrt::get_unknown**을 사용할 때마다 명시적으로 `#include <unknwn.h>`를 수행하는 것이 좋습니다.
 
 `App.cpp`를 열고 전체 내용을 삭제한 다음, 아래 목록을 붙여넣습니다.
 

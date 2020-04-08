@@ -1,16 +1,15 @@
 ---
 title: UWP(유니버설 Windows 플랫폼) 앱의 명령
 description: 현재 사용하는 디바이스 및 입력 형식에 관계없이, XamlUICommand 및 StandardUICommand 클래스를 ICommand 인터페이스와 함께 사용하여 다양한 컨트롤 형식에서 명령을 공유하고 관리할 수 있습니다.
-author: Karl-Bridge-Microsoft
 ms.service: ''
 ms.topic: overview
 ms.date: 09/13/2019
-ms.openlocfilehash: cd34c9444c68b8e959f449124fe4ae294ec14fc4
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 57e4a135e97c0a8f5d09834f2eb8c729c6422af0
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257717"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081750"
 ---
 # <a name="commanding-in-universal-windows-platform-uwp-apps-using-standarduicommand-xamluicommand-and-icommand"></a>StandardUICommand, XamlUICommand 및 ICommand를 사용하는 UWP(유니버설 Windows 플랫폼) 앱의 명령
 
@@ -89,7 +88,7 @@ UWP 애플리케이션에서 명령 환경을 공유하고 관리할 수 있는 
 
 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand)는 `Save` 또는 `Delete`처럼 일반적인 명령을 빠르고 일관적으로 정의할 수 있는 방법을 제공합니다. 개발자는 execute 및 canExecute 함수만 제공하면 됩니다.
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 ![StandardUICommand 샘플](images/commanding/StandardUICommandSampleOptimized.gif)
 
@@ -242,7 +241,7 @@ public class ListItemData
 }
 ```
 
-2. MainPage [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)의 [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate)에 대한 `ListItemData` 개체 컬렉션을 정의합니다. 그런 다음, 처음 5개 항목의 컬렉션으로 채웁니다(텍스트 및 연결된 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) Delete를 사용하여).
+2. MainPage 클래스에서 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)의 [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate)에 대한 `ListItemData` 개체 컬렉션을 정의합니다. 그런 다음, 처음 5개 항목의 컬렉션으로 채웁니다(텍스트 및 연결된 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) Delete를 사용하여).
 
 ```csharp
 /// <summary>
@@ -372,7 +371,7 @@ private void ListViewSwipeContainer_PointerExited(
 
 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand)를 사용하면 개별 속성을 설정하지 않고 아이콘, 레이블, 설명, 바로 가기 키(액세스 키 및 키보드 가속기 둘 다) 같은 컨트롤 바인딩을 통해 UI를 지정할 수 있습니다.
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 ![XamlUICommand 샘플](images/commanding/XamlUICommandSampleOptimized.gif)
 
@@ -541,7 +540,7 @@ public class ListItemData
 }
 ```
 
-2. MainPage [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)의 [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate)에 대한 `ListItemData` 개체 컬렉션을 정의합니다. 그런 다음, 처음 5개 항목의 컬렉션으로 채웁니다(텍스트 및 연결된 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand)를 사용하여).
+2. MainPage 클래스에서 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)의 [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate)에 대한 `ListItemData` 개체 컬렉션을 정의합니다. 그런 다음, 처음 5개 항목의 컬렉션으로 채웁니다(텍스트 및 연결된 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand)를 사용하여).
 
 ```csharp
 ObservableCollection<ListItemData> collection = new ObservableCollection<ListItemData>();
@@ -622,7 +621,7 @@ private void ListViewSwipeContainer_PointerExited(object sender, PointerRoutedEv
 > [!NOTE]
 > 경우에 따라 메서드를 Click 이벤트에 바인딩하고 속성을 IsEnabled 속성에 바인딩하는 것이 효과적일 수 있습니다.
 
-#### <a name="example"></a>예
+#### <a name="example"></a>예제
 
 ![명령 인터페이스 예제](images/commanding/icommand.gif)
 

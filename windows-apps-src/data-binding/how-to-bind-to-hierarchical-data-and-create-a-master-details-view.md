@@ -1,6 +1,6 @@
 ---
 ms.assetid: 0C69521B-47E0-421F-857B-851B0E9605F2
-title: 계층적 데이터를 바인딩하고 마스터/세부 정보 보기 만들기
+title: 계층적 데이터에 바인딩하고 마스터/자세히 보기 만들기
 description: 체인으로 함께 바인딩된 CollectionViewSource 인스턴스에 항목 컨트롤을 바인딩하여 계층적 데이터에 대한 여러 수준 마스터/세부 정보(목록-세부 정보라고도 함) 보기를 만들 수 있습니다.
 ms.date: 02/08/2017
 ms.topic: article
@@ -8,16 +8,16 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 14b6ab96ac5423d1811618c6a3c91ccf56645664
 ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74255120"
 ---
-# <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>계층적 데이터를 바인딩하고 마스터/세부 정보 보기 만들기
+# <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>계층적 데이터에 바인딩하고 마스터/자세히 보기 만들기
 
 
 
-> **참고**  [마스터/세부 정보 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail)도 참조 하세요.
+> **참고**  [마스터/세부 정보 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlMasterDetail)도 참조하세요.
 
 체인으로 함께 바인딩된 [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) 인스턴스에 항목 컨트롤을 바인딩하여 계층적 데이터에 대한 여러 수준 마스터/세부 정보(목록-세부 정보라고도 함) 보기를 만들 수 있습니다. 이 항목에서는 가능한 경우 [{x:Bind} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)을 사용하며, 필요한 경우 보다 유연한(그러나 성능이 낮은) [{Binding} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension)을 사용합니다.
 
@@ -27,11 +27,11 @@ UWP(유니버설 Windows 플랫폼) 앱의 한 가지 일반적인 구조는 사
 
 ![스포츠 계층 구조의 마스터/세부 정보 보기](images/xaml-masterdetails.png)
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 항목에서는 사용자가 기본 UWP 앱을 만드는 방법을 알고 있다고 가정합니다. 첫 UWP 앱을 만드는 방법은 [C# 또는 Visual Basic을 사용하여 첫 UWP 앱 만들기](https://docs.microsoft.com/previous-versions/windows/apps/hh974581(v=win.10))를 참조하세요.
 
-## <a name="create-the-project"></a>프로젝트를 만듭니다.
+## <a name="create-the-project"></a>프로젝트 만들기
 
 **비어 있는 응용 프로그램(Windows 유니버설)** 프로젝트를 만듭니다. 이름을 "MasterDetailsBinding"으로 지정합니다.
 
@@ -220,7 +220,7 @@ namespace MasterDetailsBinding
 </Page>
 ```
 
-[  **CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)에 직접 바인딩하면 컬렉션 자체에서 경로를 찾을 수 없는 바인딩에서 현재 항목에 바인딩할 수 있습니다. **CurrentItem** 속성을 바인딩 경로로 지정할 필요는 없습니다(모호한 경우에는 지정할 수 있음). 예를 들어 팀 보기를 나타내는 [**ContentControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl)의 [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 속성은 `Teams`**CollectionViewSource**에 바인딩되어 있습니다. 그러나 필요한 경우 [CollectionViewSource**가 팀 목록에서 현재 선택한 팀을 자동으로 제공하므로** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)DataTemplate`Team`**의 컨트롤은**  클래스의 속성에 바인딩됩니다.
+[  **CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)에 직접 바인딩하면 컬렉션 자체에서 경로를 찾을 수 없는 바인딩에서 현재 항목에 바인딩할 수 있습니다. **CurrentItem** 속성을 바인딩 경로로 지정할 필요는 없습니다(모호한 경우에는 지정할 수 있음). 예를 들어 팀 보기를 나타내는 [**ContentControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl)의 [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 속성은 `Teams`**CollectionViewSource**에 바인딩되어 있습니다. 그러나 필요한 경우 **CollectionViewSource**가 팀 목록에서 현재 선택한 팀을 자동으로 제공하므로 [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)의 컨트롤은 `Team` 클래스의 속성에 바인딩됩니다.
 
  
 

@@ -4,11 +4,11 @@ title: 모바일용 디바이스 포털
 description: Windows Device Portal에서 모바일 디바이스를 원격으로 구성 및 관리하는 방법에 대해 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, 장치 포털
+keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: fb9cd2861fe826d9e8d112f2729d2922c68194ce
 ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/11/2019
 ms.locfileid: "72281895"
@@ -25,15 +25,15 @@ Windows 10 버전 1511부터 추가적인 개발자 기능을 모바일 디바�
 
 ### <a name="turn-on-device-discovery-and-pairing"></a>디바이스 검색 및 페어링 켜기
 
-디바이스 포털에 연결하려면 휴대폰 설정에서 디바이스 검색 및 디바이스 포털을 사용하도록 설정해야 합니다. 이렇게 하면 휴대폰을 PC 또는 다른 Windows 10 디바이스와 페어링할 수 있습니다. 두 장치는 유선 또는 무선으로 연결하여 동일한 네트워크 서브넷에 연결되거나 USB로 연결되어야 합니다.
+Device Portal에 연결하려면 휴대폰 설정에서 디바이스 검색 및 Device Portal을 사용하도록 설정해야 합니다. 이렇게 하면 휴대폰을 PC 또는 다른 Windows 10 디바이스와 페어링할 수 있습니다. 두 디바이스는 유선 또는 무선으로 연결하여 동일한 네트워크 서브넷에 연결되거나 USB로 연결되어야 합니다.
 
 처음으로 디바이스 포털에 연결할 때 대/소문자가 구분된 6개의 문자로 된 보안 코드를 입력해야 합니다. 이렇게 하면 휴대폰에 액세스할 수 있으며 공격자로부터 보안을 유지할 수 있습니다. 휴대폰의 페어링 단추를 눌러 코드를 생성하고 표시한 다음 브라우저의 텍스트 상자에 6개의 문자를 입력합니다.
 
 ![개발자 모드 디바이스 검색 설정](images/device-portal/mob-dev-mode-pairing.png)
 
-3 가지 방법 중에서 선택 하 여 장치 포털에 연결할 수 있습니다. USB, 로컬 호스트 및 로컬 네트워크 (VPN 및 테더 링 포함)를 통해
+3가지 방법인 USB, 로컬 호스트 및 로컬 네트워크(VPN 및 테더링 포함) 중에서 선택하여 Device Portal에 연결할 수 있습니다.
 
-**장치 포털에 연결 하려면**
+**Device Portal에 연결하려면**
 
 1. 브라우저에 사용할 연결 형식으로 여기에 표시된 주소를 입력합니다.
 
@@ -49,7 +49,7 @@ Windows 10 버전 1511부터 추가적인 개발자 기능을 모바일 디바�
 
     로컬 네트워크를 통해 연결하려면 이 주소를 사용합니다.
 
-    휴대폰의 IP 주소는 휴대폰의 디바이스 포털 설정에 표시됩니다. 인증 및 보안 통신을 위해 HTTPS가 필요합니다. 네트워크 또는 IP 주소를 자주 변경 하거나 공유 해야 하는 장치에 유용 하 게 사용 되는 호스트 이름 (예: 설정 > 시스템 >에 대 한 호스트 이름)을 사용 하 여 로컬 네트워크의 장치 포털에 액세스할 수도 있습니다 (예: http://Phone360) ). 
+    휴대폰의 IP 주소는 휴대폰의 디바이스 포털 설정에 표시됩니다. 인증 및 보안 통신을 위해 HTTPS가 필요합니다. 호스트 이름(설정 > 시스템 > 정보에서 편집 가능)은 로컬 네트워크(예: http://Phone360) )에서 Device Portal 액세스에 사용될 수도 있습니다. 이는 네트워크 또는 IP 주소를 자주 변경 또는 공유해야 할 수 있는 디바이스에 대해 유용합니다. 
 
 2. 휴대폰에서 페어링 단추를 눌러 필요한 보안 코드를 생성하고 표시합니다.
 
@@ -78,10 +78,10 @@ Windows Mobile Device Portal에는 임의 프로세스를 종료하는 기능이
 - 성능 차트
 - ETW(Windows용 이벤트 추적)
 - 성능 추적(WPR) 
-- 장치
+- 디바이스
 - 네트워킹
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-* [Windows 장치 포털 개요](device-portal.md)
-* [장치 포털 코어 API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [Windows Device Portal 개요](device-portal.md)
+* [Device Portal 핵심 API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

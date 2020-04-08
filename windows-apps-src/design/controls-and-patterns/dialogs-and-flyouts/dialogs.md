@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d5014532be613e8284a1e2d6496f71b9f2b8e892
-ms.sourcegitcommit: 5002836b3c8d3e0f2970da1333ec8f42da861ae3
+ms.openlocfilehash: 00c51fed9f2d327afe6f493891b2744243501ea1
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77071255"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080960"
 ---
 # <a name="dialog-controls"></a>대화 상자 컨트롤
 
@@ -25,21 +25,26 @@ ms.locfileid: "77071255"
 
 ![대화 상자 예제](../images/dialogs/dialog_RS2_delete_file.png)
 
+**Windows UI 라이브러리 가져오기**
 
-> **중요 API**: [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)
+|  |  |
+| - | - |
+| ![WinUI 로고](../images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤에 대한 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 UWP 앱에 대한 새로운 컨트롤 및 UI 기능을 포함하는 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+> **플랫폼 API:** [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 대화 상자를 사용하여 사용자에게 중요한 정보를 알리거나 확인 또는 추가 정보를 요청한 후에 작업을 완료할 수 있습니다.
 
-대화 상자를 사용해야 할 경우와 플라이아웃(비슷한 컨트롤)를 사용해야 할 경우에 대한 권장 사항을 보려면 [대화 상자 및 플라이아웃](index.md)을 참조하세요. 
+대화 상자를 사용해야 할 경우와 플라이아웃(비슷한 컨트롤)를 사용해야 할 경우에 대한 권장 사항을 보려면 [대화 상자 및 플라이아웃](index.md)을 참조하세요.
 
 ## <a name="examples"></a>예
 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="../images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="../images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML Controls Gallery</strong> 앱이 설치되어 있는 경우 여기를 클릭하여 앱을 열고 <a href="xamlcontrolsgallery:/item/ContentDialog">ContentDialog</a> 또는 <a href="xamlcontrolsgallery:/item/Flyout">Flyout</a>이 작동되는지 확인합니다.</p>
     <ul>
@@ -66,7 +71,7 @@ ms.locfileid: "77071255"
     - 작업 단추의 텍스트가 간결한지 확인합니다. 짧은 문자열을 사용하면 사용자가 빠르고 자신 있게 선택할 수 있습니다.
     - 안전한 비파괴 작업 외에도 필요에 따라 기본 지시 사항과 관련된 1-2개의 단추를 사용자에게 제공할 수 있습니다. 이러한 "수행" 작업 단추는 대화 상자의 기본 요소를 확인합니다. PrimaryButton 및 SecondaryButton API를 사용하여 이러한 "수행" 작업을 추가합니다.
     - "수행" 작업 단추는 맨 왼쪽 단추로 나타나야 합니다. 안전한 비파괴 작업은 맨 오른쪽 단추로 나타나야 합니다.
-    - 필요에 따라 대화 상자의 기본 단추로 세 가지 단추 중 하나를 식별하도록 선택할 수 있습니다. DefaultButton API를 사용하여 단추 중 하나를 식별합니다.  
+    - 필요에 따라 대화 상자의 기본 단추로 세 가지 단추 중 하나를 식별하도록 선택할 수 있습니다. DefaultButton API를 사용하여 단추 중 하나를 식별합니다.
 -   유효성 검사 오류(예: 암호 필드의 오류)와 같이 페이지의 특정 위치에 해당하는 오류의 경우에는 대화 상자를 사용하지 마세요. 대신 앱의 캔버스 자체를 사용하여 인라인 오류를 표시합니다.
 - [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)를 사용하여 대화 상자 환경을 구축합니다. 사용되지 않는 MessageDialog API를 사용하지 않습니다.
 
@@ -236,8 +241,8 @@ private async void DisplaySubscribeDialog()
 ```
 
 ## <a name="confirmation-dialogs-okcancel"></a>확인 대화 상자(확인/취소)
-확인 대화 상자에서는 사용자가 작업을 수행할지 확인할 수 있습니다. 작업을 확정하거나 취소하도록 선택할 수 있습니다.  
-일반적인 확인 대화 상자에는 확정(“확인") 단추와 취소 단추 두 개가 있습니다.  
+확인 대화 상자에서는 사용자가 작업을 수행할지 확인할 수 있습니다. 작업을 확정하거나 취소하도록 선택할 수 있습니다.
+일반적인 확인 대화 상자에는 확정(“확인") 단추와 취소 단추 두 개가 있습니다.
 
 <ul>
     <li>

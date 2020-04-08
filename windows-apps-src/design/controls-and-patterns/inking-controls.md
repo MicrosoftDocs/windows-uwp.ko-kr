@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: b665145eac8599bae69aaf4b1951d267bf79f7a7
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 892e8e9bdeed562a83e566266a7391e9c24b2ad3
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73062107"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081733"
 ---
 # <a name="inking-controls"></a>잉크 입력 컨트롤
 
@@ -54,7 +54,7 @@ InkToolbar와 InkCanvas를 연결하여 잉크 기능을 활성화하고 스트�
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/InkCanvas">앱을 열고 InkCanvas의 기능을 확인</a>합니다.</p>
     <ul>
@@ -130,7 +130,7 @@ InkToolbar는 다음 두 가지 그룹의 단추 유형으로 이루어져 있�
 > [!NOTE]
 > 기능은 함께 사용할 수 있으며 다른 활성 도구와 동시에 사용할 수 있습니다.
 
-응용 프로그램 및 필요한 수동 입력 기능에 따라 사용자 지정 잉크 기능에 바인딩된 다음 단추를 InkToolbar에 추가할 수 있습니다.
+애플리케이션 및 필요한 수동 입력 기능에 따라 사용자 지정 잉크 기능에 바인딩된 다음 단추를 InkToolbar에 추가할 수 있습니다.
 
 - 사용자 지정 펜 – 호스트 앱에서 잉크 색상표와 펜 팁 속성(예: 모양, 회전, 크기)이 정의된 펜입니다.
 - 사용자 지정 도구 - 호스트 앱에서 정의된 펜 이외의 도구입니다.
@@ -157,18 +157,18 @@ InkToolbar는 최상위 항목일 수 있지만 일반적으로 "수동 입력" 
 - InkCanvas 및 일반적인 수동 입력은 활성 펜을 통해 가장 잘 작동합니다. 그러나 앱에 필요한 경우 마우스 및 터치식(수동 펜 포함) 입력을 사용한 수동 입력을 지원하는 것이 좋습니다.
 - InkToolbar 컨트롤을 InkCanvas와 함께 사용하면 기본적인 수동 입력 기능과 설정을 제공할 수 있습니다. InkCanvas와 InkToolbar 모두 프로그래밍 방식으로 사용자 지정할 수 있습니다.
 - InkToolbar 및 일반적인 수동 입력은 활성 펜을 통해 가장 잘 작동합니다. 그러나 앱에 필요한 경우 마우스와 터치를 사용한 수동 입력을 지원할 수 있습니다.
-- 터치식 입력을 사용한 수동 입력을 지원하는 경우 “터치 쓰기” 도구 설명과 함께 Segoe MLD2 자산 글꼴의 ED5F 아이콘을 토글 단추에 사용하는 것이 좋습니다.
-- 스트로크 선택을 입력할 때 “선택 도구” 도구 설명과 함께 Segoe MLD2 자산 글꼴의 EF20 아이콘을 도구 단추에 사용하는 것이 좋습니다.
+- 터치식 입력을 사용한 수동 입력을 지원하는 경우 "터치 쓰기" 도구 설명과 함께 Segoe MLD2 자산 글꼴의 ED5F 아이콘을 토글 단추에 사용하는 것이 좋습니다.
+- 스트로크 선택을 입력할 때 "선택 도구" 도구 설명과 함께 Segoe MLD2 자산 글꼴의 EF20 아이콘을 도구 단추에 사용하는 것이 좋습니다.
 - 둘 이상의 InkCanvas를 사용하는 경우 단일 InkToolbar를 사용하여 여러 캔버스의 수동 입력을 제어하는 것이 좋습니다.
 - 최상의 성능을 얻으려면 기본 및 사용자 지정 도구 둘 다를 위한 사용자 지정 플라이아웃 하나를 만드는 대신 기본 플라이아웃을 변경하는 것이 좋습니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [SimpleInk 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleInk) - InkCanvas 및 InkToolbar 컨트롤의 사용자 지정 및 확장성 기능과 관련된 8가지 시나리오를 보여 줍니다. 각 시나리오는 일반적인 수동 입력 상황 및 컨트롤 구현에 대한 기본 지침을 제공합니다.
 - [ComplexInk 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk) - 보다 높은 수준의 수동 입력 시나리오를 보여 줍니다.
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [UWP 앱의 펜 조작 및 Windows Ink](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions)
 - [Windows Ink 스트로크를 텍스트 및 셰이프로 인식](https://docs.microsoft.com/windows/uwp/design/input/convert-ink-to-text)

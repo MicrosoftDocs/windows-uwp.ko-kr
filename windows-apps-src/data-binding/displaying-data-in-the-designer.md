@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5f08c2cc39bb4cdf9a49351f70143a0f86df1fb7
 ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74254720"
@@ -18,7 +18,7 @@ ms.locfileid: "74254720"
 
 
 
-예제 데이터가 필요한 정도 및 도움이 되는 정도는 바인딩에서 [{Binding} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) 또는 [{x:bind} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)을 사용 하는지 여부에 따라 달라 집니다 **.  ** 이 항목에서 설명하는 기술은 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) 사용을 기준으로 하므로 **{Binding}** 에만 적합합니다. 그러나 **{x:Bind}** 를 사용하는 경우에는 바인딩에서 적어도 항목 컨트롤에 대한 값을 비롯해 자리 표시자 값을 디자인 화면에 표시하므로 샘플 데이터가 똑같이 필요하지는 않습니다.
+**참고**  샘플 데이터가 얼마나 필요한지 그리고 얼마나 도움이 될지는 바인딩에서 [{Binding} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension)을 사용하는지 [{x:Bind} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)을 사용하는지에 달려 있습니다. 이 항목에서 설명하는 기술은 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) 사용을 기준으로 하므로 **{Binding}** 에만 적합합니다. 그러나 **{x:Bind}** 를 사용하는 경우에는 바인딩에서 적어도 항목 컨트롤에 대한 값을 비롯해 자리 표시자 값을 디자인 화면에 표시하므로 샘플 데이터가 똑같이 필요하지는 않습니다.
 
 앱에서 Microsoft Visual Studio 또는 Blend for Visual Studio의 디자인 화면에 라이브 데이터를 표시하는 것은 불가능할 수도 있고 아마도 개인 정보 또는 성능상의 이유로 바람직하지 않을 수도 있습니다. 컨트롤에 데이터를 채워 앱의 레이아웃, 템플릿 및 기타 시각적 속성을 작업할 수 있도록 하기 위해 다양한 방법으로 디자인 타임 샘플 데이터를 사용할 수 있습니다. 스케치(또는 프로토타입) 앱을 빌드하는 경우에도 샘플 데이터를 사용하면 정말 유용하고 시간을 절약할 수 있습니다. 스케치 또는 프로토타입에서 런타임에 샘플 데이터를 사용하면 실제 라이브 데이터에 연결하지 않더라도 아이디어를 설명할 수 있습니다.
 
@@ -44,7 +44,7 @@ public MainPage()
 
 ![스파스 디자인 UI](images/displaying-data-in-the-designer-01.png)
 
-시도해 볼 첫 번째 해결 방법은 해당 **DataContext** 할당을 주석으로 처리하고 대신 페이지 태그에 **DataContext**를 설정하는 것입니다. 이렇게 하면 라이브 데이터가 런타임뿐 아니라 디자인 타임에도 표시됩니다. 이렇게 하려면 먼저 XAML 페이지를 엽니다. 그런 다음 **문서 개요** 창에서 디자인 가능한 루트 요소 (일반적으로 레이블 **\[페이지\]** )를 클릭 하 여 선택 합니다. **속성** 창에서 **DataContext** 속성(일반 범주 내에 있음)을 클릭한 다음 **새로 만들기** 클릭합니다. **개체 선택** 대화 상자에서 뷰 모델 유형을 클릭한 다음 **확인**을 클릭합니다.
+시도해 볼 첫 번째 해결 방법은 해당 **DataContext** 할당을 주석으로 처리하고 대신 페이지 태그에 **DataContext**를 설정하는 것입니다. 이렇게 하면 라이브 데이터가 런타임뿐 아니라 디자인 타임에도 표시됩니다. 이렇게 하려면 먼저 XAML 페이지를 엽니다. 그런 다음, **문서 개요** 창에서 디자인 가능한 루트 요소(일반적으로 **\[Page\]** 레이블 사용)를 클릭하여 선택합니다. **속성** 창에서 **DataContext** 속성(일반 범주 내에 있음)을 클릭한 다음 **새로 만들기** 클릭합니다. **개체 선택** 대화 상자에서 뷰 모델 유형을 클릭한 다음 **확인**을 클릭합니다.
 
 ![DataContext 설정을 위한 UI](images/displaying-data-in-the-designer-02.png)
 
@@ -99,7 +99,7 @@ else
 
 **d:DataContext** 특성 및 다른 모든 디자인 타임 특성은 [디자인 타임 특성](https://msdn.microsoft.com/library/ff602277(v=VS.95).aspx) 항목에 설명되어 있으며, UWP(유니버설 Windows 플랫폼) 앱에 여전히 사용할 수 있습니다.
 
-[**Collectionviewsource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource) 에 **DataContext** 속성이 있지만 **소스** 속성이 있습니다. 따라서 **CollectionViewSource**에 디자인 타임 전용 샘플 데이터를 설정하는 데 사용할 수 있는 **d:Source** 속성이 있습니다.
+[**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)에는 **DataContext** 속성이 없지만 **Source** 속성이 있습니다. 따라서 **CollectionViewSource**에 디자인 타임 전용 샘플 데이터를 설정하는 데 사용할 수 있는 **d:Source** 속성이 있습니다.
 
 ``` xaml
     <Page.Resources>
@@ -132,14 +132,14 @@ XAML 대신 JSON 샘플 데이터 파일을 사용하는 경우에는 **Type** �
     d:Source="{d:DesignData /SampleData/RecordingsSampleData.json, Type=local:Recordings}"
 ```
 
-지금까지는 **d:DesignData**를 사용하여 XAML 또는 JSON 파일에서 디자인 타임 샘플 데이터를 로드했습니다. 다른 방법으로 **d:DesignInstance** 태그 확장이 있는데, 이 경우에는 디자인 타임 원본이 **Type** 속성에서 지정하는 클래스를 기반으로 합니다. 예제는 다음과 같습니다.
+지금까지는 **d:DesignData**를 사용하여 XAML 또는 JSON 파일에서 디자인 타임 샘플 데이터를 로드했습니다. 다른 방법으로 **d:DesignInstance** 태그 확장이 있는데, 이 경우에는 디자인 타임 원본이 **Type** 속성에서 지정하는 클래스를 기반으로 합니다. 예를 들면 다음과 같습니다.
 
 ``` xaml
     <CollectionViewSource x:Name="RecordingsCollection" Source="{Binding Recordings}"
         d:Source="{d:DesignInstance Type=local:Recordings, IsDesignTimeCreatable=True}"/>
 ```
 
-**IsDesignTimeCreatable** 속성은 디자인 도구에서 실제로 클래스의 인스턴스를 만들어야 함을 의미합니다. 즉, 이 클래스는 공용 기본 생성자가 있고 자체적으로 실제 또는 샘플 데이터로 채워집니다. **IsDesignTimeCreatable**을 설정하지 않거나 **False**로 설정하면 샘플 데이터가 디자인 화면에 표시되지 않습니다. 이 경우 모든 디자인 도구는 클래스의 바인딩 가능한 속성에 대 한 클래스를 구문 분석 하 여 **데이터** 패널 및 **데이터 바인딩 만들기** 대화 상자에 표시 하는 것입니다.
+**IsDesignTimeCreatable** 속성은 디자인 도구에서 실제로 클래스의 인스턴스를 만들어야 함을 의미합니다. 즉, 이 클래스는 공용 기본 생성자가 있고 자체적으로 실제 또는 샘플 데이터로 채워집니다. **IsDesignTimeCreatable**을 설정하지 않거나 **False**로 설정하면 샘플 데이터가 디자인 화면에 표시되지 않습니다. 이 경우 디자인 도구는 클래스를 구문 분석하여 바인딩 가능한 속성을 찾고 이러한 속성을 **데이터** 패널과 **데이터 바인딩 만들기** 대화 상자에 표시하기만 합니다.
 
 <a name="sample-data-for-prototyping"></a>프로토타입 생성용 샘플 데이터
 --------------------------------------------------------
@@ -148,6 +148,6 @@ XAML 대신 JSON 샘플 데이터 파일을 사용하는 경우에는 **Type** �
 
 클래스를 지정하는 대신 **데이터** 패널에서 바로 샘플 데이터 원본의 스키마를 실제로 디자인할 수 있습니다. 또한 **데이터** 패널에서 샘플 데이터 값을 편집할 수도 있습니다. 원하는 경우 할 수는 있지만 파일을 열고 편집할 필요가 없습니다.
 
-**새 샘플 데이터** 기능은 [d:DataContext**가 아니라** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext)DataContext를 사용하므로 스케치 또는 프로토타입을 디자인할 때뿐 아니라 실행할 때도 샘플 데이터를 사용할 수 있습니다. 그리고 **데이터** 패널을 사용하면 디자인 및 바인딩 작업이 실제로 단축됩니다. 예를 들어 컬렉션 속성을 **데이터** 패널에서 디자인 화면으로 끌어다 놓기만 하면 데이터 바인딩된 항목 컨트롤과 필요한 템플릿이 생성되므로, 곧바로 빌드하고 실행할 수 있습니다.
+**새 샘플 데이터** 기능은 **d:DataContext**가 아니라 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext)를 사용하므로 스케치 또는 프로토타입을 디자인할 때뿐 아니라 실행할 때도 샘플 데이터를 사용할 수 있습니다. 그리고 **데이터** 패널을 사용하면 디자인 및 바인딩 작업이 실제로 단축됩니다. 예를 들어 컬렉션 속성을 **데이터** 패널에서 디자인 화면으로 끌어다 놓기만 하면 데이터 바인딩된 항목 컨트롤과 필요한 템플릿이 생성되므로, 곧바로 빌드하고 실행할 수 있습니다.
 
 ![프로토타입 생성용 샘플 데이터](images/displaying-data-in-the-designer-04.png)

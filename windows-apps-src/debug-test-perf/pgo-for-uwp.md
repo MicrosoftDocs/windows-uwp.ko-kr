@@ -1,23 +1,23 @@
 ---
 title: UWP(유니버설 Windows 플랫폼) 앱에서 PGO(프로필 기반 최적화) 실행
-description: 유니버설 Windows 플랫폼 (UWP) 앱에 PGO (프로필 기반 최적화)를 적용 하는 단계별 가이드입니다.
+description: UWP(유니버설 Windows 플랫폼) 앱에 PGO(프로필 기반 최적화)를 적용하는 단계별 가이드입니다.
 ms.date: 02/08/2017
 ms.localizationpriority: medium
 ms.topic: article
 ms.openlocfilehash: c784812d2e070aba0857cb84e5729b1426717b8d
 ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73062373"
 ---
 # <a name="running-profile-guided-optimization-on-universal-windows-platform-apps"></a>유니버설 Windows 플랫폼 앱에서 프로필 기반 최적화 실행 
  
-이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에 PGO(프로필 기반 최적화)를 적용하는 단계별 가이드를 제공합니다. 클래식 win32 응용 프로그램에서 사용할 수 있는 모든 단계를 UWP 앱에서 사용할 수 있는 것은 아니므로 최적화 및 UWP 개발자의 접근성 향상을 위해 PGO를 통합하는 데 필요한 프로세스를 설명하는 것이 목표입니다.
+이 항목에서는 UWP(유니버설 Windows 플랫폼) 앱에 PGO(프로필 기반 최적화)를 적용하는 단계별 가이드를 제공합니다. 클래식 win32 애플리케이션에서 사용할 수 있는 모든 단계를 UWP 앱에서 사용할 수 있는 것은 아니므로 최적화 및 UWP 개발자의 접근성 향상을 위해 PGO를 통합하는 데 필요한 프로세스를 설명하는 것이 목표입니다.
 
 다음은 Visual Studio 2015 업데이트 3을 사용하여 기본 DirectX 11 앱(UWP) 템플릿에 PGO를 적용하는 기본 연습입니다.
  
-이 가이드의 스크린샷에는 새 프로젝트 ![새 프로젝트 대화 상자가 있습니다](images/pgo-001.png)
+이 가이드의 스크린샷은 다음 새 프로젝트를 기반으로 합니다. ![새 프로젝트 대화 상자](images/pgo-001.png)
 
 DirectX 11 앱 템플릿에 PGO를 적용하려면
 
@@ -55,7 +55,7 @@ DirectX 11 앱 템플릿에 PGO를 적용하려면
 
  ![새 프로젝트 대화 상자](images/pgo-007.png)
  
-7. 실행이 계측 중이고 PGO 데이터가 생성 중인 빌드입니다. 이 시점에서 가장 자주 사용하는 몇 가지 최적화 시나리오를 통해 응용 프로그램을 실행해야 합니다. 프로그램이 원하는 시나리오를 통해 실행되면 적절한 버전의 `pgort140.dll`이 있는 폴더에서 pgosweep.exe 도구를 찾습니다. 또는 Visual Studio(x86/x64) 네이티브 도구 명령 프롬프트에는 이미 적절한 버전이 해당 경로에 있습니다. PGO 데이터를 수집하려면 응용 프로그램 실행 중 다음 명령을 실행하여 프로파일링 데이터가 포함되는 .pgc 파일을 생성합니다.
+7. 실행이 계측 중이고 PGO 데이터가 생성 중인 빌드입니다. 이 시점에서 가장 자주 사용하는 몇 가지 최적화 시나리오를 통해 애플리케이션을 실행해야 합니다. 프로그램이 원하는 시나리오를 통해 실행되면 적절한 버전의 `pgort140.dll`이 있는 폴더에서 pgosweep.exe 도구를 찾습니다. 또는 Visual Studio(x86/x64) 네이티브 도구 명령 프롬프트에는 이미 적절한 버전이 해당 경로에 있습니다. PGO 데이터를 수집하려면 애플리케이션 실행 중 다음 명령을 실행하여 프로파일링 데이터가 포함되는 .pgc 파일을 생성합니다.
  
   `pgosweep.exe <executable name> <output file>` 
  

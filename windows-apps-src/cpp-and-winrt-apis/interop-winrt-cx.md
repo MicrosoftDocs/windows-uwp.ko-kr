@@ -1,16 +1,16 @@
 ---
-description: 이 항목에서는 C++/CX 개체와 C++/WinRT 개체 간에 변환하는 데 사용할 수 있는 두 가지 도우미 함수를 보여 줍니다.
+description: 이 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 개체와 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 개체 간에 변환하는 데 사용할 수 있는 두 가지 도우미 함수를 보여 줍니다.
 title: C++/WinRT와 C++/CX 간의 Interop
 ms.date: 10/09/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, Interop, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: d9b0c676276fa0974144f03b12c3037a42069641
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.openlocfilehash: 0e54937391d3317f1b37415036aabc88a6cfaa41
+ms.sourcegitcommit: f288bcc108f9850671662c7b76c55c8313e88b42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270058"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80290025"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>C++/WinRT와 C++/CX 간의 Interop
 
@@ -18,7 +18,7 @@ ms.locfileid: "68270058"
 
 이 항목에서는 동일한 프로젝트 내에서 C++/CX 개체와 C++/WinRT 개체 간에 변환하는 데 사용할 수 있는 두 가지 도우미 함수를 보여 줍니다. 두 언어 프로젝션을 사용하는 코드 사이의 interop에 도우미 함수를 사용하거나 코드를 C++/CX에서 C++/WinRT로 이식할 때 함수를 사용할 수 있습니다.
 
-## <a name="fromcx-and-tocx-functions"></a>from_cx 함수와 to_cx 함수
+## <a name="from_cx-and-to_cx-functions"></a>from_cx 함수와 to_cx 함수
 아래 도우미 함수는 C++/CX 개체를 상응하는 C++/WinRT 개체로 변환합니다. 이 함수는 C++/CX 개체를 기본 [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) 인터페이스 포인터로 캐스팅합니다. 그런 다음, 해당 포인터에 대한 [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))를 호출하여 C++/WinRT 개체의 기본 인터페이스에 대해 쿼리를 실행합니다. **QueryInterface**는 C++/CX safe_cast 확장에 상응하는 Windows 런타임 ABI(Application Binary Interface)입니다. 그러면 [**winrt::put_abi**](/uwp/cpp-ref-for-winrt/put-abi) 함수가 C++/WinRT 개체의 기본 **IUnknown** 인터페이스 포인터 주소를 다른 값으로 설정할 수 있도록 가져옵니다.
 
 ```cppwinrt
@@ -51,8 +51,8 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 
 또한 이 예제 프로젝트에서는 C++/WinRT 프로젝션 및 C++/CX 프로젝션 간의 잠재적인 네임스페이스 충돌을 다루기 위해 코드의 다른 격리 영역에 대한 네임스페이스 별칭을 사용하는 방법을 보여 줍니다.
 
-- a **Visual C++** \> **Windows Universal** > **Core App(C++/WinRT)** 프로젝트를 만듭니다.
-- 프로젝트 속성에서 **C/C++** \> **일반** \> **Windows 런타임 확장 사용** \> **예(/ZW)** 를 선택합니다. 이렇게 하면 C++/CX에 대한 프로젝트 지원이 켜집니다.
+- a **Visual C++** \>**Windows Universal** > **Core App(C++/WinRT)** 프로젝트를 만듭니다.
+- 프로젝트 속성에서 **C/C++** \>**일반** \>**Windows 런타임 확장 사용** \>**예(/ZW)** 를 선택합니다. 이렇게 하면 C++/CX에 대한 프로젝트 지원이 켜집니다.
 - `App.cpp`의 콘텐츠를 아래 코드 목록으로 바꿉니다.
 
 `WINRT_ASSERT`는 매크로 정의이며 [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)로 확장됩니다.

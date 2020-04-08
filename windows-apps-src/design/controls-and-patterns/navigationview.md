@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c0d12b3b043546cd908fb474fa8ca9656d8dc56e
-ms.sourcegitcommit: bac5574a1f47a5b38c984a5482272c9e49a9c91e
+ms.openlocfilehash: 17eb1a2f24e9fd893fee1a0aff349989577375c7
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71100846"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081700"
 ---
 # <a name="navigation-view"></a>탐색 보기
 
@@ -24,6 +24,12 @@ NavigationView 컨트롤은 앱에 대한 최상위 탐색을 제공합니다. �
 
 ![위쪽 탐색](images/nav-view-header.png)<br/>
 탐색 보기는 위쪽 및 왼쪽 탐색 창 또는 메뉴를 둘 다 지원함 
+
+**Windows UI 라이브러리 가져오기**
+
+|  |  |
+| - | - |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **NavigationView** 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
 
 > **플랫폼 API**: [Windows.UI.Xaml.Controls.NavigationView 클래스](/uwp/api/windows.ui.xaml.controls.navigationview)
 >
@@ -46,7 +52,7 @@ NavigationView는 다음 작업에 적합한 적응형 탐색 컨트롤입니다
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/XAML-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
+<td><img src="images/XAML-controls-gallery-app-icon-sm.png" alt="XAML controls gallery" width="168"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/NavigationView">앱을 열고 작동 중인 NavigationView를 확인</a>합니다.</p>
     <ul>
@@ -65,7 +71,7 @@ PaneDisplayMode 속성을 사용하여 NavigationView에 대한 다른 탐색 �
 
 :::row:::
     :::column:::
-    ### <a name="top"></a>상위
+    ### <a name="top"></a>맨 위로
     창이 콘텐츠 위에 배치됩니다.</br>
     `PaneDisplayMode="Top"`
     :::column-end:::
@@ -250,7 +256,7 @@ NavigationView가 **최소** 모드이고 여백이 24px일 경우 콘텐츠 영
 
 기본적으로 사용 가능한 화면 공간을 기준으로 탐색 보기가 자동으로 디스플레이 모드를 변경합니다. [CompactModeThresholdWidth](/uwp/api/windows.ui.xaml.controls.navigationview.compactmodethresholdwidth) 및 [ExpandedModeThresholdWidth](/uwp/api/windows.ui.xaml.controls.navigationview.expandedmodethresholdwidth) 속성은 디스플레이 모드가 변경되는 중단점을 지정합니다. 이 값을 수정하여 적응형 디스플레이 모드 동작을 사용자 지정할 수 있습니다.
 
-### <a name="default"></a>기본값
+### <a name="default"></a>Default
 
 PaneDisplayMode가 기본값인 **자동**으로 설정되면 적응형 동작은 다음을 표시합니다.
 
@@ -379,12 +385,12 @@ NavigationView에는 기본 제공 뒤로 단추가 있지만, 앞으로 탐색�
 
 :::row:::
     :::column:::
-        ![Navigation view back button in the left navigation pane](images/leftnav-back.png)<br/>
-        _The back button in the left navigation pane_
+        ![왼쪽 탐색 창의 탐색 보기 뒤로 단추](images/leftnav-back.png)<br/>
+        _왼쪽 탐색 창의 뒤로 단추_
     :::column-end:::
     :::column:::
-        ![Navigation view back button in the top navigation pane](images/topnav-back.png)<br/>
-        _The back button in the top navigation pane_
+        ![위쪽 탐색 창의 탐색 보기 뒤로 단추](images/topnav-back.png)<br/>
+        _위쪽 탐색 창의 뒤로 단추_
     :::column-end:::
 :::row-end:::
 
@@ -660,7 +666,7 @@ void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const & /* 
 | ------------ | -------------- |
 | 왼쪽 | NavigationViewExpandedPaneBackground |
 | LeftCompact<br/>LeftMinimal | NavigationViewDefaultPaneBackground |
-| 상위 | NavigationViewTopPaneBackground |
+| 맨 위로 | NavigationViewTopPaneBackground |
 
 이 예제는 App.xaml에서 테마 리소스를 재정의하는 방법을 보여 줍니다. 테마 리소스를 재정의하는 경우에는 항상 최소한 “Default” 및 “HighContrast” 리소스 사전을 제공하며 필요에 따라 “Light” 또는 “Dark” 리소스 사전을 제공해야 합니다. 자세한 내용은 [ResourceDictionary.ThemeDictionaries](/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries)를 참조하세요.
 

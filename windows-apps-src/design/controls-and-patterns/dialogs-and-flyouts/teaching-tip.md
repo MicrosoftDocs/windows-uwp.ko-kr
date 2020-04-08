@@ -10,24 +10,30 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fb08278391118215063c293b71ffde1ed4443b8
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 6276ef9bcb6b01fd557057d3d36939350314015b
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684118"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081048"
 ---
 # <a name="teaching-tip"></a>교육 팁
 
 교육 팁은 상황별 정보를 제공하는 풍부한 콘텐츠의 반영구적 플라이아웃입니다. 작업 환경을 개선할 수 있는 중요한 새 기능을 사용자에게 알리고 교육하는 데 주로 사용됩니다.
 
-**중요 API:** [TeachingTip 클래스](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.teachingtip?view=winui-2.2)
-
 교육 팁은 빠르게 해제되거나 닫기 위해 명시적 작업이 필요할 수 있습니다. 교육 팁은 꼬리를 사용하여 특정 UI 요소를 대상으로 지정할 수 있으며, 꼬리 또는 대상 없이 사용할 수도 있습니다.
 
-## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요? 
+**Windows UI 라이브러리 가져오기**
 
-**TeachingTip** 컨트롤을 사용하여 새롭거나 중요한 업데이트 및 기능에 사용자의 관심을 집중시키거나, 작업 환경을 향상시킬 수 있는 비필수 옵션을 사용자에게 미리 알리거나, 작업 완료 방법을 사용자에게 알려줍니다. 
+|  |  |
+| - | - |
+| ![WinUI 로고](../images/winui-logo-64x64.png) | **TeachingTip** 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+> **Windows UI 라이브러리 API:** [TeachingTip 클래스](/uwp/api/microsoft.ui.xaml.controls.teachingtip)
+
+## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
+
+**TeachingTip** 컨트롤을 사용하여 새롭거나 중요한 업데이트 및 기능에 사용자의 관심을 집중시키거나, 작업 환경을 향상시킬 수 있는 비필수 옵션을 사용자에게 미리 알리거나, 작업 완료 방법을 사용자에게 알려줍니다.
 
 교육 팁은 일시적이므로 사용자에게 오류 또는 중요한 상태 변경을 알릴 때 권장되는 컨트롤은 아닙니다.
 
@@ -37,7 +43,7 @@ ms.locfileid: "75684118"
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="../images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="../images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/TeachingTip">앱을 열고 작동 중인 TeachingTip을 확인</a>합니다.</p>
     <ul>
@@ -50,7 +56,7 @@ ms.locfileid: "75684118"
 
 교육 팁은 다음과 같은 주목할 만한 구성을 비롯한 몇 가지 구성으로 표시할 수 있습니다.
 
-교육 팁은 꼬리로 특정 UI 요소를 대상으로 지정하여 나타내는 정보의 컨텍스트 명확성을 높일 수 있습니다. 
+교육 팁은 꼬리로 특정 UI 요소를 대상으로 지정하여 나타내는 정보의 컨텍스트 명확성을 높일 수 있습니다.
 
 ![저장 단추를 대상으로 지정하는 교육 팁이 있는 샘플 앱 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다. 교육 팁의 오른쪽 위 모서리에서 닫기 단추가 있습니다.](../images/teaching-tip-targeted.png)
 
@@ -58,14 +64,15 @@ ms.locfileid: "75684118"
 
 ![오른쪽 아래 모서리에 교육 팁이 표시되는 샘플 앱입니다. 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다. 교육 팁의 오른쪽 위 모서리에서 닫기 단추가 있습니다.](../images/teaching-tip-non-targeted.png)
 
-교육 팁은 사용자가 위쪽 모서리에 있는 "X" 단추 또는 아래쪽의 "닫기" 단추를 통해 해제해야 할 수 있습니다. 교육 팁은 해제 단추가 없는 경우에 빠른 해제를 설정할 수 있으며, 사용자가 스크롤하거나 애플리케이션의 다른 요소와 상호 작용할 때 해제됩니다. 이 동작으로 인해 팀을 스크롤 가능 영역에 배치해야 하는 경우 빠른 해제 팁이 가장 적합한 해결 방법입니다. 
+교육 팁은 사용자가 위쪽 모서리에 있는 "X" 단추 또는 아래쪽의 "닫기" 단추를 통해 해제해야 할 수 있습니다. 교육 팁은 해제 단추가 없는 경우에 빠른 해제를 설정할 수 있으며, 사용자가 스크롤하거나 애플리케이션의 다른 요소와 상호 작용할 때 해제됩니다. 이 동작으로 인해 팀을 스크롤 가능 영역에 배치해야 하는 경우 빠른 해제 팁이 가장 적합한 해결 방법입니다.
 
 ![오른쪽 아래 모서리에 빠른 해제 교육 팁이 표시되는 샘플 앱 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다.](../images/teaching-tip-light-dismiss.png)
 
 
 ### <a name="create-a-teaching-tip"></a>교육 팁 만들기
 
-다음은 제목 및 부제가 있는 TeachingTip의 기본 모양을 보여 주는 대상 있는 교육 팁 컨트롤의 XAML입니다. 교육 팁은 요소 트리 또는 코드 숨김 어디에서든지 나타날 수 있습니다. 아래의 예제에서는 ResourceDictionary에 있습니다.
+다음은 제목 및 부제가 있는 TeachingTip의 기본 모양을 보여 주는 대상 있는 교육 팁 컨트롤의 XAML입니다.
+교육 팁은 요소 트리 또는 코드 숨김 어디에서든지 나타날 수 있습니다. 아래의 예제에서는 ResourceDictionary에 있습니다.
 
 XAML
 ```XAML
@@ -118,7 +125,7 @@ XAML
 
 ### <a name="preferred-placement"></a>기본 설정 배치
 
-교육 팁은 TeachingTipPlacementMode 속성을 사용하여 플라이아웃의 [FlyoutPlacementMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode) 배치 동작을 복제합니다. 기본 배치 모드는 대상 있는 교육 팁을 대상 위에 배치하고, 대상 없는 교육 팁을 xaml 루트의 아래쪽에 배치하려고 합니다. 플라이아웃을 사용할 때와 마찬가지로, 기본 설정 배치 모드에서 교육 팁을 표시할 공간이 없으면 다른 배치 모드가 자동으로 선택됩니다. 
+교육 팁은 TeachingTipPlacementMode 속성을 사용하여 플라이아웃의 [FlyoutPlacementMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode) 배치 동작을 복제합니다. 기본 배치 모드는 대상 있는 교육 팁을 대상 위에 배치하고, 대상 없는 교육 팁을 xaml 루트의 아래쪽에 배치하려고 합니다. 플라이아웃을 사용할 때와 마찬가지로, 기본 설정 배치 모드에서 교육 팁을 표시할 공간이 없으면 다른 배치 모드가 자동으로 선택됩니다.
 
 게임 패드 입력을 예측하는 애플리케이션의 경우 [게임 패드 및 리모컨 조작]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction)을 참조하세요. 앱 UI의 가능한 모든 구성을 사용하여 각 교육 팁의 게임 패드 액세스 가능성을 테스트하는 것이 좋습니다.
 
@@ -162,7 +169,7 @@ XAML
 아래 다이어그램에서는 대상 없는 교육 팁에 대해 설정할 수 있는 13개 PreferredPlacement 모드 전체의 결과를 보여 줍니다.
 ![각각이 다른 대상 비지정 배치 모드를 보여 주는 9개 교육 팁을 포함하는 그림 각 교육 팁이 나타내는 모드가 레이블로 지정됩니다. 배치 모드의 첫 번째 단어는 교육 팁이 중앙에 표시되는 xaml 루트의 측면을 나타냅니다. 배치 모드에 두 번째 단어가 있으면 교육 팁은 xaml 루트의 지정된 모서리 쪽으로 배치됩니다. 예를 들어, 배치 모드 "TopRight"는 교육 팁을 xaml 루트의 오른쪽 위 모서리에 표시합니다. 대상 없는 배치 모드의 경우 두 단어의 순서가 배치에 영향을 주지 않습니다. TopRight는 RightTop과 같습니다. 배치 모드 "Center"에서는 독특하게 교육 팁이 xaml 루트의 세로 및 가로 가운데에 표시됩니다.](../images/teaching-tip-non-targeted-preferred-placement-modes.png)
 
-### <a name="add-a-placement-margin"></a>배치 여백 추가  
+### <a name="add-a-placement-margin"></a>배치 여백 추가
 
 PlacementMargin 속성을 사용하여 대상 있는 교육 팁이 해당 대상에서 얼마나 멀리 떨어져 있는지와 대상 없는 교육 팁이 xaml 루트의 가장자리에서 얼마나 멀리 떨어져 있는지를 제어할 수 있습니다. [Margin](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.margin)과 같이, PlacementMargin에는 4가지 값인 left, right, top, bottom이 있으며 해당하는 값만 사용됩니다. 예를 들어, PlacementMargin.Left는 팁이 대상의 왼쪽 또는 xaml 루트의 왼쪽 가장자리에 있을 때 적용됩니다.
 
@@ -185,7 +192,7 @@ XAML
 
 ### <a name="add-content"></a>콘텐츠 추가
 
-콘텐츠 속성을 사용하여 교육 팁에 콘텐츠를 추가할 수 있습니다. 교육 팁의 크기가 허용하는 것보다 표시할 콘텐츠가 더 많으면 사용자가 콘텐츠 영역을 스크롤할 수 있게 스크롤 막대가 자동으로 사용하도록 설정됩니다. 
+콘텐츠 속성을 사용하여 교육 팁에 콘텐츠를 추가할 수 있습니다. 교육 팁의 크기가 허용하는 것보다 표시할 콘텐츠가 더 많으면 사용자가 콘텐츠 영역을 스크롤할 수 있게 스크롤 막대가 자동으로 사용하도록 설정됩니다.
 
 XAML
 ```XAML
@@ -217,7 +224,7 @@ ActionButtonContent 속성(및 필요에 따라 ActionButtonCommand 및 ActionBu
 XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
-    <Button.Resources> 
+    <Button.Resources>
         <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
@@ -243,7 +250,7 @@ HeroContent 속성을 설정하여 교육 팁을 가장자리에서 가장자리
 XAML
 ```XAML
 <Button x:Name="SaveButton" Content="Save">
-    <Button.Resources> 
+    <Button.Resources>
         <muxc:TeachingTip x:Name="AutoSaveTip"
             Target="{x:Bind SaveButton}"
             Title="Saving automatically"
@@ -260,7 +267,7 @@ XAML
 
 ### <a name="add-an-icon"></a>아이콘 추가
 
-IconSource 속성을 사용하여 제목 및 부제 옆에 아이콘을 추가할 수 있습니다. 권장되는 아이콘 크기에는 16px, 24px 및 32px이 포함됩니다. 
+IconSource 속성을 사용하여 제목 및 부제 옆에 아이콘을 추가할 수 있습니다. 권장되는 아이콘 크기에는 16px, 24px 및 32px이 포함됩니다.
 
 XAML
 ```XAML
@@ -282,9 +289,9 @@ XAML
 
 ### <a name="enable-light-dismiss"></a>빠른 해제 사용
 
-빠른 해제 기능은 기본적으로 사용하지 않도록 설정되어 있지만 사용자가 스크롤하거나 애플리케이션의 다른 요소와 상호 작용할 때 교육 팁이 해제되도록 이 기능을 사용하도록 설정할 수 있습니다. 이 동작으로 인해 팀을 스크롤 가능 영역에 배치해야 하는 경우 빠른 해제 팁이 가장 적합한 해결 방법입니다. 
+빠른 해제 기능은 기본적으로 사용하지 않도록 설정되어 있지만 사용자가 스크롤하거나 애플리케이션의 다른 요소와 상호 작용할 때 교육 팁이 해제되도록 이 기능을 사용하도록 설정할 수 있습니다. 이 동작으로 인해 팀을 스크롤 가능 영역에 배치해야 하는 경우 빠른 해제 팁이 가장 적합한 해결 방법입니다.
 
-빠른 해제 동작을 사용자에게 알리기 위해 빠른 해제 기능이 설정된 교육 팁에서 닫기 단추가 자동으로 제거됩니다. 
+빠른 해제 동작을 사용자에게 알리기 위해 빠른 해제 기능이 설정된 교육 팁에서 닫기 단추가 자동으로 제거됩니다.
 
 XAML
 ```XAML
@@ -322,7 +329,7 @@ XAML
 
 ### <a name="canceling-and-deferring-close"></a>닫기 취소 및 지연
 
-Closing 이벤트를 사용하여 교육 팁의 닫기를 취소 및/또는 지연할 수 있습니다. 이 이벤트를 사용하여 교육 팁을 열어 두거나 작업 또는 사용자 지정 애니메이션이 수행될 수 있는 시간을 허용할 수 있습니다. 그러나 교육 팁 닫기를 취소하면 IsOpen이 true로 복귀되지만, 지연 동안에는 false 상태를 유지합니다. 프로그래밍 방식 닫기도 취소할 수 있습니다. 
+Closing 이벤트를 사용하여 교육 팁의 닫기를 취소 및/또는 지연할 수 있습니다. 이 이벤트를 사용하여 교육 팁을 열어 두거나 작업 또는 사용자 지정 애니메이션이 수행될 수 있는 시간을 허용할 수 있습니다. 그러나 교육 팁 닫기를 취소하면 IsOpen이 true로 복귀되지만, 지연 동안에는 false 상태를 유지합니다. 프로그래밍 방식 닫기도 취소할 수 있습니다.
 
 **참고: 배치 옵션에 따르면 교육 팁을 완전히 표시하지 못할 경우 교육 팁은 액세스 가능한 닫기 단추가 없는 상태로 표시되지 않고, 이벤트 수명 주기를 반복하여 닫기를 강제로 수행합니다. 앱에서 Closing 이벤트를 취소하는 경우 교육 팁은 액세스 가능한 닫기 단추 없이 열린 상태를 유지할 수 있습니다.**
 
@@ -357,16 +364,16 @@ public void OnTipClosing(object sender, TeachingTipClosingEventArgs args)
 
 ## <a name="remarks"></a>설명
 
-### <a name="related-articles"></a>관련된 문서 
+### <a name="related-articles"></a>관련된 문서
 
 * [대화 상자 및 플라이아웃](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/index)
 
 ### <a name="recommendations"></a>권장 사항
-* 팁은 영구적이지 않으며 애플리케이션 환경에 중요한 정보 또는 옵션을 포함하지 않아야 합니다. 
-* 교육 팁을 너무 자주 표시하지 않도록 합니다. 교육 팁의 긴 세션 전체에서 또는 여러 세션 간에 시차를 적용하면 각 팁이 따로 집중될 수 있습니다.    
+* 팁은 영구적이지 않으며 애플리케이션 환경에 중요한 정보 또는 옵션을 포함하지 않아야 합니다.
+* 교육 팁을 너무 자주 표시하지 않도록 합니다. 교육 팁의 긴 세션 전체에서 또는 여러 세션 간에 시차를 적용하면 각 팁이 따로 집중될 수 있습니다.
 * 팁을 간결하게 유지하고 주제를 명확히 드러냅니다. 연구에 따르면 사용자는 팁과 상호 작용할지 결정하기 전에 평균적으로 3 ~ 5개 단어만 읽으며 2-3개 단어만 이해한다고 합니다.
 * 교육 팁의 게임 패드 액세스 가능성은 보장되지 않습니다. 게임 패드 입력을 예측하는 애플리케이션의 경우 [게임 패드 및 리모컨 조작]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction)을 참조하세요. 앱 UI의 가능한 모든 구성을 사용하여 각 교육 팁의 게임 패드 액세스 가능성을 테스트하는 것이 좋습니다.
-* 교육 팁이 xaml 루트를 이스케이프하도록 설정하는 경우 IsLightDismissEnabled 속성도 사용하도록 설정하고 PreferredPlacement 모드를 xaml 루트의 중심에 가장 가깝게 설정하는 것이 좋습니다. 
+* 교육 팁이 xaml 루트를 이스케이프하도록 설정하는 경우 IsLightDismissEnabled 속성도 사용하도록 설정하고 PreferredPlacement 모드를 xaml 루트의 중심에 가장 가깝게 설정하는 것이 좋습니다.
 
 ### <a name="reconfiguring-an-open-teaching-tip"></a>열린 교육 팁 다시 구성
 
