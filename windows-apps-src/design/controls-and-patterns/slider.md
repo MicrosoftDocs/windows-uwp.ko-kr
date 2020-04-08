@@ -12,23 +12,26 @@ design-contact: ksulliv
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 841903f9bc998af5ead2a3486c500487cb070855
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: cf4e9885fdb17780c176e2740101a0cd530328ec
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364298"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081548"
 ---
 # <a name="sliders"></a>슬라이더
 
- 
-
 슬라이더는 사용자가 트랙을 따라 Thumb 컨트롤을 이동하여 값 범위에서 값을 선택할 수 있도록 하는 컨트롤입니다.
-
-> **중요 API**: [Slider 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider), [Value 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value), [ValueChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged)
 
 ![슬라이더 컨트롤](images/controls/slider.png)
 
+**Windows UI 라이브러리 가져오기**
+
+|  |  |
+| - | - |
+| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 UWP 앱의 새로운 컨트롤 및 UI 기능을 포함하는 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+> **플랫폼 API**: [Slider 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider), [Value 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.value), [ValueChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.rangebase.valuechanged)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -40,27 +43,27 @@ ms.locfileid: "66364298"
 
 다음은 슬라이더를 사용할지 여부를 결정할 때 고려해야 하는 추가 요소입니다.
 
--   **설정이 상대 수량처럼 보이나요?** 그렇지 않다면 [라디오 단추](radio-button.md) 또는 [목록 상자](lists.md)를 사용합니다.
--   **설정이 정확하고 알려진 숫자 값인가요?** 그렇다면 숫자 [입력란](text-box.md)을 사용합니다.
--   **설정을 변경하면 어떤 효과가 있는지에 대해 즉각적인 피드백을 받게 되면 사용자에게 도움이 되나요?** 그렇다면 슬라이더를 사용합니다. 예를 들어 사용자는 색상, 채도 및 광도 값의 변경 효과를 즉시 확인함으로써 색상을 더 쉽게 선택할 수 있습니다.
--   **설정에서 4개 이상의 값으로 이루어진 범위를 사용하나요?** 그렇지 않다면 [라디오 단추](radio-button.md)를 사용합니다.
--   **사용자가 값을 변경할 수 있나요?** 슬라이더는 사용자 조작을 위한 것입니다. 사용자가 값을 변경할 수 없으면 대신 읽기 전용 텍스트를 사용합니다.
+- **설정이 상대 수량처럼 보이나요?** 그렇지 않다면 [라디오 단추](radio-button.md) 또는 [목록 상자](lists.md)를 사용합니다.
+- **설정이 정확하고 알려진 숫자 값인가요?** 그렇다면 숫자 [입력란](text-box.md)을 사용합니다.
+- **설정을 변경하면 어떤 효과가 있는지에 대해 즉각적인 피드백을 받게 되면 사용자에게 도움이 되나요?** 그렇다면 슬라이더를 사용합니다. 예를 들어 사용자는 색상, 채도 및 광도 값의 변경 효과를 즉시 확인함으로써 색상을 더 쉽게 선택할 수 있습니다.
+- **설정에서 4개 이상의 값으로 이루어진 범위를 사용하나요?** 그렇지 않다면 [라디오 단추](radio-button.md)를 사용합니다.
+- **사용자가 값을 변경할 수 있나요?** 슬라이더는 사용자 조작을 위한 것입니다. 사용자가 값을 변경할 수 없으면 대신 읽기 전용 텍스트를 사용합니다.
 
 슬라이더와 숫자 입력란 중 결정하려 할 때, 다음과 같은 경우에는 숫자 입력란을 사용합니다.
 
--   화면 공간이 비좁은 경우
--   사용자가 키보드로 입력하는 것을 좋아하는 경우
+- 화면 공간이 비좁은 경우
+- 사용자가 키보드로 입력하는 것을 좋아하는 경우
 
 다음 경우에는 슬라이더를 사용합니다.
 
--   즉각적인 피드백이 사용자에게 도움이 되는 경우
+- 즉각적인 피드백이 사용자에게 도움이 되는 경우
 
 ## <a name="examples"></a>예
 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Slider">앱을 열고 슬라이더의 기능을 확인</a>합니다.</p>
     <ul>
@@ -115,7 +118,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 
 ## <a name="recommendations"></a>권장 사항
 
--   컨트롤은 사용자가 원하는 값을 쉽게 설정할 수 있는 크기로 만듭니다. 불연속 값이 포함된 설정의 경우 마우스를 사용하여 어떤 값이든 쉽게 선택할 수 있도록 만듭니다. 슬라이더의 끝점이 항상 뷰의 범위 내에 있는지 확인합니다.
+-   컨트롤은 사용자가 원하는 값을 쉽게 설정할 수 있는 크기로 만듭니다. 불연속 값이 포함된 설정의 경우 마우스를 사용하여 어떤 값이든 쉽게 선택할 수 있도록 만듭니다. 슬라이더의 엔드포인트이 항상 뷰의 범위 내에 있는지 확인합니다.
 -   사용자가 실제로 선택을 하는 동안이나 후에 즉각적인 피드백을 제공합니다. 예를 들어 Windows 볼륨 컨트롤은 사용자가 선택한 오디오 볼륨을 들려줍니다.
 -   레이블을 사용하여 값의 범위를 표시합니다. 예외: 슬라이더가 세로 방향이고 맨 위 레이블이 최댓값, 높음, 많음 등을 나타낼 경우 의미가 분명하므로 다른 레이블을 생략할 수 있습니다.
 -   슬라이더를 사용하지 않을 경우 모든 관련 레이블 또는 시각적 피드백도 해제합니다.
@@ -152,7 +155,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 -   사용자가 컨트롤과 상호 작용하지 않고도 선택한 설정 값을 정확히 알아야 하는 경우에는 눈금과 값 레이블을 표시합니다. 그렇지 않은 경우에는 값 도구 설명을 사용하여 정확한 값을 알 수 있습니다.
 -   단계 지점이 분명하지 않은 경우 항상 눈금 표시를 표시합니다. 예를 들어 슬라이더의 너비가 200픽셀이고 슬라이더에 200개의 끌기 지점이 있는 경우에는 사용자가 끌기 동작을 눈치채지 못하므로 눈금 표시를 숨길 수 있습니다. 그러나 끌기 지점이 10개만 있는 경우에는 눈금을 표시합니다.
 
-### <a name="labels"></a>Labels(레이블)
+### <a name="labels"></a>레이블
 
 -   **슬라이더 레이블**
 
@@ -176,7 +179,7 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 
     -   값 레이블이 필요하면 슬라이더의 아래쪽에 표시합니다.
     -   텍스트는 컨트롤을 기준으로 중앙에 오도록 하고 픽셀 등의 단위를 포함시킵니다.
-    -   슬라이더의 위치 조정 컨트롤이 삭제 중에 포함되므로 레이블 또는 다른 시각 효과를 사용하여 현재 값을 다른 방법으로 표시하는 것이 좋습니다. 텍스트 크기를 설정하는 슬라이더는 슬라이더 옆에 있는 올바른 크기의 샘플 텍스트를 렌더링할 수 있습니다.
+    -   슬라이더의 위치 조정 컨트롤이 삭제 중에 포함되므로 레이블 또는 다른 시각적 개체를 사용하여 현재 값을 다른 방식으로 표시하는 것이 좋습니다. 텍스트 크기를 설정하는 슬라이더는 슬라이더 옆에 있는 올바른 크기의 샘플 텍스트를 렌더링할 수 있습니다.
 
 ### <a name="appearance-and-interaction"></a>모양 및 조작
 
@@ -184,11 +187,11 @@ private void Slider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e
 
 슬라이더에는 큰 터치 대상이 있습니다. 터치 접근성을 유지하려면 슬라이더를 디스플레이의 가장자리에서 충분히 멀리 배치해야 합니다.
 
-사용자 지정 슬라이더를 디자인할 경우 사용자에게 모든 필요한 정보를 최대한 복잡하지 않게 제공하는 것이 좋습니다. 사용자가 설정을 이해하기 위해 단위를 알아야 하는 경우 값 레이블을 사용하고, 해당 값을 그래픽으로 나타낼 수 있는 창의적인 방법을 찾습니다. 예를 들어 볼륨을 제어하는 슬라이더는 최소값 쪽에 음파가 없는 스피커 그래픽을 표시하고, 최대값 쪽에 음파가 있는 스피커 그래픽을 표시할 수 있습니다.
+사용자 지정 슬라이더를 디자인하는 경우, 사용자에게 필요한 모든 정보를 최대한 복잡하지 않게 제공하는 것이 좋습니다. 사용자가 설정을 이해하기 위해 단위를 알아야 하는 경우 값 레이블을 사용하고, 해당 값을 그래픽으로 나타낼 수 있는 창의적인 방법을 찾습니다. 예를 들어 볼륨을 제어하는 슬라이더는 최소값 쪽에 음파가 없는 스피커 그래픽을 표시하고, 최대값 쪽에 음파가 있는 스피커 그래픽을 표시할 수 있습니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
 ## <a name="related-topics"></a>관련 항목
 - [토글 스위치](toggles.md)

@@ -7,20 +7,26 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 24c7bd8828ec036135233f569ee7add5d39ffb32
-ms.sourcegitcommit: 136416e8e2eb0565bb6eb99e42482c1723ccb8c7
+ms.openlocfilehash: ce9e3775f4b0f78d17f0ffdf3d6381f2e8a233d9
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76890428"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081528"
 ---
 # <a name="tabview"></a>TabView
 
 TabView 컨트롤을 사용하여 탭 세트와 각 탭의 콘텐츠를 표시할 수 있습니다. TabView는 여러 페이지의 콘텐츠를 표시하는 데 유용하며 사용자에게 새 탭을 다시 정렬하고, 열고, 닫을 수 있는 기능을 제공합니다.
 
-> **중요 API**: [TabView 클래스](/uwp/api/microsoft.ui.xaml.controls.tabview), [TabViewItem 클래스](/uwp/api/microsoft.ui.xaml.controls.tabviewitem)
-
 ![TabView 예제](images/tabview/tab-introduction.png)
+
+**Windows UI 라이브러리 가져오기**
+
+|  |  |
+| - | - |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **TabView** 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+> **Windows UI 라이브러리 API**: [TabView 클래스](/uwp/api/microsoft.ui.xaml.controls.tabview), [TabViewItem 클래스](/uwp/api/microsoft.ui.xaml.controls.tabviewitem)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 

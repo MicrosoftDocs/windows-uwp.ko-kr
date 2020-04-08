@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1dabfee25df08d933fc892c3ed6e46f3cc6f4513
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.openlocfilehash: e1e4874051554a8b725c7921a60a2c2429b18bc1
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "66364028"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081460"
 ---
 # <a name="tooltips"></a>도구 설명
 
@@ -25,7 +25,13 @@ ms.locfileid: "66364028"
 
 ![도구 설명](images/controls/tool-tip.png)
 
-> **중요 API**: [ToolTip 클래스](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [ToolTipService 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
+**Windows UI 라이브러리 가져오기**
+
+|  |  |
+| - | - |
+| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 UWP 앱의 새로운 컨트롤 및 UI 기능을 포함하는 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+> **플랫폼 API**: [ToolTip 클래스](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [ToolTipService 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltipservice)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -54,12 +60,12 @@ ms.locfileid: "66364028"
 - **도구 설명이 사용자를 짜증나게 하거나 주의를 분산시키나요?**
     그렇다면 다른 해결 방법을 생각해 보세요. 아무것도 하지 않는 방법도 있습니다. 주의가 산만해질 수 있는 곳에 도구 설명을 사용하고 있다면 사용자가 끌 수 있도록 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/ToolTip">앱을 열고 작동 중인 ToolTip을 확인</a>합니다.</p>
     <ul>
@@ -147,10 +153,10 @@ ToolTip이 참조하는 콘텐츠를 가리는 경우 새 **PlacementRect** 속�
 - 대화형 컨트롤을 도구 설명 안에 넣지 마세요.
 - 대화형으로 보이는 이미지를 도구 설명에 넣지 마세요.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [ToolTip 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTip)

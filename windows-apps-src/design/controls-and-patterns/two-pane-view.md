@@ -6,12 +6,12 @@ ms.date: 01/22/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a070a72324408746f67b8814554160a76ee0ce4
-ms.sourcegitcommit: e4b48989c91cd77ba73c90d9eb9cd67b88d52f21
+ms.openlocfilehash: 19b473ea964ee9c6cb82098e142f066258bcf30b
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79191688"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081439"
 ---
 # <a name="two-pane-view"></a>2 창 보기
 
@@ -25,13 +25,15 @@ TwoPaneView 컨트롤은 모든 Windows 디바이스에서 작동하는 동안 �
 > [!NOTE]
 > _이중 화면 디바이스_는 고유한 기능을 제공하는 특수한 종류의 디바이스입니다. 여러 모니터가 있는 데스크톱 디바이스와는 다릅니다. 이중 화면 디바이스에 대한 자세한 내용은 [이중 화면 디바이스 소개](/dual-screen/introduction)를 참조하세요. (여러 모니터에 맞게 앱을 최적화하는 방법에 대한 자세한 내용은 [여러 보기 표시](/windows/uwp/design/layout/show-multiple-views)를 참조하세요.)
 
-| Windows UI Library 가져오기 |
-| - |
-| 이 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](/uwp/toolkits/winui/)를 참조하세요. |
+**Windows UI 라이브러리 가져오기**
 
-| 플랫폼 API | Windows UI 라이브러리 API |
+|  |  |
 | - | - |
-| [TwoPaneView 클래스](/uwp/api/windows.ui.xaml.controls.twopaneview) | [TwoPaneView 클래스](/uwp/api/microsoft.ui.xaml.controls.twopaneview) |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **TwoPaneView** 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+> **Windows UI 라이브러리 API:** [TwoPaneView 클래스](/uwp/api/microsoft.ui.xaml.controls.twopaneview)
+>
+> **플랫폼 API:** [TwoPaneView 클래스](/uwp/api/windows.ui.xaml.controls.twopaneview)
 
 이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 다음을 [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page) 요소에 추가했습니다.
 

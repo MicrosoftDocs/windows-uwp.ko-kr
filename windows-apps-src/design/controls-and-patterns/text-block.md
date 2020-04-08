@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 18c402b321c073b8b3450b14ca124e82b0fb9b1c
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 4f609f7ec989cf334d6b21a32ee8bde0e43203f0
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340215"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081496"
 ---
 # <a name="text-block"></a>텍스트 블록
 
@@ -24,13 +24,13 @@ ms.locfileid: "71340215"
 
  텍스트 블록은 앱에서 읽기 전용 텍스트를 표시하기 위한 주 컨트롤입니다. 이 컨트롤을 사용하여 한 줄 또는 여러 줄 텍스트, 인라인 하이퍼링크 및 굵게, 기울임꼴 또는 밑줄 서식이 적용된 텍스트를 표시할 수 있습니다.
  
- > **중요 API**: [TextBlock 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [Text 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text), [Inlines 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.inlines)
+ > **플랫폼 API**: [TextBlock 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [Text 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text), [Inlines 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.inlines)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
 텍스트 블록은 일반적으로 서식 있는 텍스트 블록보다 사용하기 쉬우며 더 나은 텍스트 렌더링 성능을 제공하므로 대부분의 앱 UI 텍스트에서 기본으로 설정됩니다. [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text) 속성의 값을 가져와 앱에서 텍스트 블록의 텍스트에 쉽게 액세스하고 사용할 수 있습니다. 또한 텍스트가 렌더링되는 방식을 사용자 지정할 수 있도록 동일한 서식 옵션을 여러 개 제공합니다.
 
-텍스트에 줄 바꿈을 넣을 수는 있지만, 텍스트 블록은 단일 단락을 표시하도록 디자인되었으며 텍스트 들여쓰기를 지원하지 않습니다. 여러 단락, 다중 열 텍스트 또는 기타 복잡한 텍스트 레잉아웃, 이미지와 같은 인라인 UI 요소에 대한 지원이 필요한 경우 **RichTextBlock**을 사용하세요.
+텍스트에 줄 바꿈을 넣을 수는 있지만, 텍스트 블록은 단일 단락을 표시하도록 설계되었으며 텍스트 들여쓰기를 지원하지 않습니다. 여러 단락, 다중 열 텍스트 또는 기타 복잡한 텍스트 레잉아웃, 이미지와 같은 인라인 UI 요소에 대한 지원이 필요한 경우 **RichTextBlock**을 사용하세요.
 
 올바른 텍스트 컨트롤을 선택하는 방법에 대한 자세한 내용은 [텍스트 컨트롤](text-controls.md) 문서를 참조하세요.
 
@@ -39,7 +39,7 @@ ms.locfileid: "71340215"
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/TextBlock">앱을 열고 TextBlock의 기능을 확인</a>합니다.</p>
     <ul>
@@ -88,7 +88,7 @@ Bold, Italic, Run, Span 및 LineBreak와 같이 Inline 클래스에서 파생된
 가능한 경우 언제나 XAML에서는 레이아웃 텍스트에 대한 더 효율적인 코드 경로를 사용합니다. 이 빠른 경로는 텍스트를 측정하고 정렬하는 드는 전체 메모리 사용량을 줄이고 CPU 시간을 크게 단축합니다. 이 빠른 경로는 TextBlock에만 적용되므로 가능한 경우에는 RichTextBlock 대신 이 경로를 사용해야 합니다.
 
 특정 조건에서는 텍스트 렌더링을 위해 TextBlock이 기능이 풍부하고 CPU를 많이 사용하는 코드 경로를 사용해야 합니다. 텍스트 렌더링을 빠른 경로에서 유지하려면 여기에 나열된 속성을 설정할 때 다음 지침에 따야 합니다.
-- [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text): 가장 중요한 조건은 이전 예제와 같이 XAML 또는 코드에서 명시적으로 Text 속성을 설정하여 텍스트를 설정하는 경우에만 빠른 경로가 사용된다는 것입니다. 여러 형식의 잠재적 복잡성으로 인해, TextBlock의 Inlines 컬렉션(예: `<TextBlock>Inline text</TextBlock>`)을 통해 텍스트를 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.
+- [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text): 가장 중요한 조건은 이전 예제와 같이 XAML 또는 코드에서 명시적으로 Text 속성을 설정하여 텍스트를 설정하는 경우에만 빠른 경로가 사용된다는 것입니다. TextBlock의 Inlines 컬렉션(예: `<TextBlock>Inline text</TextBlock>`)을 통해 텍스트를 설정하는 경우, 여러 형식의 잠재적 복잡성 때문에 빠른 경로를 사용할 수 없게 됩니다.
 - [CharacterSpacing](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.characterspacing): 기본값 0만 빠른 경로입니다.
 - [TextTrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming): **None**, **CharacterEllipsis**, **WordEllipsis** 값만 빠른 경로입니다. **Clip** 값은 빠른 경로를 사용하지 않도록 설정합니다.
 
@@ -188,11 +188,11 @@ Windows.UI.Xaml.Documents.Typography.SetStylisticSet4(textBlock1, true);
 <TextBlock>12 x <Run Typography.Fraction="Slashed">1/3</Run> = 4.</TextBlock>
 ```
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [텍스트 컨트롤](text-controls.md)
 - [맞춤법 검사에 대한 지침](text-controls.md)

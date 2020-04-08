@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8db56882833b9d3bd8a6d2932d04e07a72b205e2
 ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "66365245"
@@ -89,7 +89,7 @@ ms.locfileid: "66365245"
 
 [  **CenterOfRotationX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.centerofrotationx), [**CenterOfRotationY**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.centerofrotationy) 및 [**CenterOfRotationZ**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.centerofrotationz) 속성을 사용하여 회전 중심을 이동할 수 있습니다. 기본적으로 회전축은 개체의 중심을 일직선으로 통과하여 개체가 그 중심을 기준으로 회전하도록 합니다. 그러나 회전 중심을 개체의 바깥쪽 가장자리로 이동하면 이 가장자리를 기준으로 개체가 회전합니다. **CenterOfRotationX** 및 **CenterOfRotationY**의 기본값은 0.5이고 **CenterOfRotationZ**의 기본값은 0입니다. **CenterOfRotationX** 및 **CenterOfRotationY**의 경우 0과 1 사이의 값이 개체 내의 특정 위치에 피벗 점을 설정합니다. 값 0은 개체의 한쪽 가장자리를 나타내면 1은 다른 쪽 가장자리를 나타냅니다. 이 범위를 벗어나는 값도 사용할 수 있으며, 그럴 경우 해당 값에 따라 회전 중심이 이동합니다. 회전 중심의 z-축이 개체면을 통과하기 때문에 회전 중심을 음수 값을 사용하여 개체 뒤로 이동하거나 양수 값을 사용하여 개체 앞으로 이동할 수 있습니다.
 
-[**CenterOfRotationX** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.centerofrotationx) 이동 하는 동안 개체 병렬 x 축에 따라 회전 중심 [ **CenterOfRotationY** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.centerofrotationy) 센터나 회전의 y 축 따라 이동 합니다. 개체입니다. 다음 그림에서는 **CenterOfRotationY**의 다양한 값을 사용하는 방법을 보여 줍니다.
+[**CenterOfRotationX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.centerofrotationx)는 개체와 평행인 x-축을 따라 회전 중심을 이동하고, [**CenterOfRotationY**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.centerofrotationy)는 개체의 y-축을 따라 회전 중심을 이동합니다. 다음 그림에서는 **CenterOfRotationY**의 다양한 값을 사용하는 방법을 보여 줍니다.
 
 ```xml
 <Image Source="kid.png">
@@ -99,7 +99,7 @@ ms.locfileid: "66365245"
 </Image>
 ```
 
-**CenterOfRotationY = "0.5" (기본값)**
+**CenterOfRotationY = “0.5”(기본값)**
 
 ![CenterOfRotationY가 0.5와 같음](images/3drotatexminus35.png)
 ```xml
@@ -110,7 +110,7 @@ ms.locfileid: "66365245"
 </Image>
 ```
 
-**CenterOfRotationY = "0.1"**
+**CenterOfRotationY = “0.1”**
 
 ![CenterOfRotationY가 0.1과 같음](images/3dcenterofrotationy0point1.png)
 
@@ -124,7 +124,7 @@ ms.locfileid: "66365245"
 </Image>
 ```
 
-**CenterOfRotationX = "0.5" (기본값)**
+**CenterOfRotationX = “0.5”(기본값)**
 
 ![CenterOfRotationX가 0.5와 같음](images/3drotateyminus35.png)
 ```xml
@@ -135,7 +135,7 @@ ms.locfileid: "66365245"
 </Image>
 ```
 
-**CenterOfRotationX "0.9" (오른쪽 가장자리) =**
+**CenterOfRotationX = “0.9”(오른쪽 가장자리)**
 
 ![CenterOfRotationX가 0.9와 같음](images/3dcenterofrotationx0point9.png)
 
@@ -145,12 +145,12 @@ ms.locfileid: "66365245"
 
 지금까지 개체를 공간에서 회전하는 방법에 대해 배웠습니다. 다음 속성을 사용하면 이러한 회전된 개체의 위치를 서로를 기준으로 지정할 수 있습니다.
 
--   [**LocalOffsetX** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.localoffsetx) 회전된 되는 개체의 평면 x 축 따라 개체를 이동 합니다.
--   [**LocalOffsetY** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.localoffsety) 회전된 되는 개체의 평면과의 y 축 따라 개체를 이동 합니다.
--   [**LocalOffsetZ** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.localoffsetz) 평면 회전된 되는 개체의 z 축 따라 개체를 이동 합니다.
--   [**GlobalOffsetX** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.globaloffsetx) 화면에 맞춰진 x 축 따라 개체를 이동 합니다.
--   [**GlobalOffsetY** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.globaloffsety) 화면에 맞춰진 y 축 따라 개체를 이동 합니다.
--   [**GlobalOffsetZ** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.globaloffsetz) 화면에 맞춰진 z 축 따라 개체를 이동 합니다.
+-   [**LocalOffsetX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.localoffsetx)는 회전된 개체면의 x-축을 따라 개체를 이동합니다.
+-   [**LocalOffsetY**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.localoffsety)는 회전된 개체면의 y-축을 따라 개체를 이동합니다.
+-   [**LocalOffsetZ**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.localoffsetz)는 회전된 개체면의 z-축을 따라 개체를 이동합니다.
+-   [**GlobalOffsetX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.globaloffsetx)는 화면에 정렬된 x-축을 따라 개체를 이동합니다.
+-   [**GlobalOffsetY**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.globaloffsety)는 화면에 정렬된 y-축을 따라 개체를 이동합니다.
+-   [**GlobalOffsetZ**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.globaloffsetz)는 화면에 정렬된 z-축을 따라 개체를 이동합니다.
 
 **로컬 오프셋**
 
@@ -158,9 +158,9 @@ ms.locfileid: "66365245"
 
 위의 샘플에서는 개체가 자체 x-축을 따라 이동합니다. 애니메이션이 시작될 때 [**RotationY**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.rotationy) 값이 0에 가까우면, 즉 화면과 평행하면 개체가 화면을 따라 x 방향으로 이동합니다. 그러나 개체가 사용자 쪽으로 회전하면 개체가 개체면의 x-축을 따라 사용자 쪽으로 이동합니다. 반면에 **RotationY** 속성에 -65도까지 애니메이션 효과를 준 경우 개체가 곡선을 그리면서 멀어집니다.
 
-[**LocalOffsetY** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.localoffsety) 유사 하 게 작동 [ **LocalOffsetX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.localoffsetx)변경 세로 축을 따라 이동 한다는 점을 제외 하면, [ **RotationX** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.rotationx) 방향이 **LocalOffsetY** 개체를 이동 합니다. 다음 샘플에서는 **LocalOffsetY**에 0도에서 400도까지 애니메이션 효과를 주고 **RotationX**에 0도에서 65도까지 애니메이션 효과를 줍니다.
+[**LocalOffsetY**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.localoffsety)는 세로 축을 따라 이동한다는 점을 제외하고 [**LocalOffsetX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.localoffsetx)와 유사하게 작동합니다. 따라서 [**RotationX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.rotationx)를 변경하면 **LocalOffsetY**가 개체를 이동하는 방향도 달라집니다. 다음 샘플에서는 **LocalOffsetY**에 0도에서 400도까지 애니메이션 효과를 주고 **RotationX**에 0도에서 65도까지 애니메이션 효과를 줍니다.
 
-[**LocalOffsetZ** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.localoffsetz) 앞쪽 아웃 개체 뒤에서 센터를 통해 직접 벡터를 그린 처럼 평면 개체의 수직 개체를 변환 합니다. **LocalOffsetZ**의 작동 방식을 보여 주기 위해 다음 샘플에서는 **LocalOffsetZ**에 0도에서 400도까지 애니메이션 효과를 주고 [**RotationX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.rotationx)에 0도에서 65도까지 애니메이션 효과를 줍니다.
+[**LocalOffsetZ**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.localoffsetz)는 벡터가 개체의 뒤쪽에서 개체의 중심을 일직선으로 통과한 것처럼 개체면에 수직이 되게 개체를 변환합니다. **LocalOffsetZ**의 작동 방식을 보여 주기 위해 다음 샘플에서는 **LocalOffsetZ**에 0도에서 400도까지 애니메이션 효과를 주고 [**RotationX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.rotationx)에 0도에서 65도까지 애니메이션 효과를 줍니다.
 
 애니메이션이 시작될 때 [**RotationX**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.planeprojection.rotationx) 값이 0에 가까우면, 즉 화면과 평행하면 개체가 사용자 쪽으로 똑바로 이동합니다. 그러나 개체가 아래쪽을 향하면 개체가 아래쪽으로 이동합니다.
 

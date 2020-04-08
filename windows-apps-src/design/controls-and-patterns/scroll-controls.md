@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a3a2adee262a521bde77d657aa4f5283b68ddcf
-ms.sourcegitcommit: e0ae346eadda864dcad1453cd1644668549e66e1
+ms.openlocfilehash: a2123c8baa93356a0bb5adcfb2a32ac71af173cc
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68603434"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081578"
 ---
 # <a name="scroll-viewer-controls"></a>스크롤 뷰어 컨트롤
 
@@ -56,7 +56,7 @@ See complete redlines in [UNI]http://uni/DesignDepot.FrontEnd/#/ProductNav/3378/
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/ScrollViewer">앱을 열고 ScrollViewer의 기능을 확인</a>합니다.</p>
     <ul>
@@ -145,7 +145,7 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 - 스크롤 뷰어를 사용하여 개체를 하나만 포함합니다. 하나의 개체는 레이아웃 패널이 될 수 있고, 여기에는 고유한 개체가 제한 없이 포함됩니다.
 - 피벗의 스크롤 논리와 충돌하는 것을 방지하려면 스크롤 뷰어 내부에 [Pivot](pivot.md) 컨트롤을 배치하지 않습니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 

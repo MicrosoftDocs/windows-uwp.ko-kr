@@ -8,20 +8,20 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 37c7f9edbaee008b6e16ef2ca202ff5cbcf39ca2
 ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/21/2019
 ms.locfileid: "67317504"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Visual Studio를 사용하여 Surface Hub 앱 테스트
-Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을 포함하여 UWP(유니버설 Windows 플랫폼) 앱을 디자인, 개발, 디버그 및 테스트할 수 있는 환경을 제공합니다. 시뮬레이터 Surface Hub와 같은 사용자 인터페이스를 사용 하지 않지만 앱의 모양과 Surface Hub의 화면 크기 및 해상도 사용 하 여 동작을 테스트 하는 데 유용 합니다.
+Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을 포함하여 UWP(유니버설 Windows 플랫폼) 앱을 디자인, 개발, 디버그 및 테스트할 수 있는 환경을 제공합니다. 시뮬레이터는 Surface Hub와 동일한 사용자 인터페이스를 사용하지 않지만 Surface Hub의 화면 크기와 해상도로 앱의 모양과 동작을 테스트하는 데 유용합니다.
 
-시뮬레이터 도구에 대 한 자세한 내용은 일반적으로 참조 [시뮬레이터에서 UWP 앱 실행](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator)합니다.
+시뮬레이터 도구의 일반적인 사항에 대한 자세한 내용은 [시뮬레이터에서 UWP 앱 실행 ](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator)을 참조하세요.
 
 ## <a name="add-surface-hub-resolutions-to-the-simulator"></a>시뮬레이터에 Surface Hub 해상도 추가
 시뮬레이터에 Surface Hub 해상도를 추가하려면
 
-1. 55"에 대 한 구성을 만들기 라는 파일에 다음 XML 코드를 저장 하 여 Surface Hub *HardwareConfigurations SurfaceHub55.xml*합니다.  
+1. *HardwareConfigurations SurfaceHub55.xml* 파일에 다음 XML 코드를 저장하여 55” Surface Hub에 대한 구성을 만듭니다.  
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -40,7 +40,7 @@ Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을
     </ArrayOfHardwareConfiguration>
     ```
 
-2. 84"에 대 한 구성을 만들기 라는 파일에 다음 XML 코드를 저장 하 여 Surface Hub *HardwareConfigurations SurfaceHub84.xml*합니다.
+2. *HardwareConfigurations SurfaceHub84.xml* 파일에 다음 XML 코드를 저장하여 84” Surface Hub에 대한 구성을 만듭니다.
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -59,41 +59,41 @@ Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을
     </ArrayOfHardwareConfiguration>
     ```
 
-3. 두 XML 파일을 복사 *C:\Program Files (x86) \Common Files\Microsoft Shared\Windows 시뮬레이터\\&lt;버전 번호&gt;\HardwareConfigurations*합니다.
+3. 두 개의 XML 파일을 *C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Simulator\\&lt;version number&gt;\HardwareConfigurations*에 복사합니다.
 
    > [!NOTE]
-   > 이 폴더에 저장 하려면 관리 권한이 필요 합니다.
+   > 이 폴더에 파일을 저장하려면 관리자 권한이 필요합니다.
 
 4. Visual Studio 시뮬레이터에서 앱을 실행합니다. 팔레트에서 **해상도 변경** 단추를 클릭하고 목록에서 Surface Hub 구성을 선택합니다.
 
     ![Visual Studio 시뮬레이터 해상도](images/vs-simulator-resolutions.png)
 
    > [!TIP]
-   > [태블릿 모드 켜기](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet) Surface Hub의 경험을 효율적으로 시뮬레이션할 하 합니다.
+   > Surface Hub의 환경을 더 효과적으로 시뮬레이트하려면 [태블릿 모드를 켭니다](https://support.microsoft.com/help/17210/windows-10-use-your-pc-like-a-tablet).
 
-## <a name="deploy-apps-to-a-surface-hub-device-from-visual-studio"></a>Visual Studio에서 Surface Hub 장치에 앱 배포
-Surface Hub에 앱을 수동으로 배포 하는 것은 간단 합니다.
+## <a name="deploy-apps-to-a-surface-hub-device-from-visual-studio"></a>Visual Studio에서 Surface Hub 디바이스에 앱 배포
+Surface Hub에 앱을 수동으로 배포하는 작업은 간단한 프로세스입니다.
 
 ### <a name="enable-developer-mode"></a>개발자 모드 사용
-기본적으로 Surface Hub Microsoft Store 앱만 설치합니다. 다른 출처에서 서명한 앱을 설치하려면 개발자 모드를 사용하도록 설정해야 합니다.
+기본적으로 Surface Hub는 Microsoft Store 앱만 설치합니다. 다른 출처에서 서명한 앱을 설치하려면 개발자 모드를 사용하도록 설정해야 합니다.
 
 > [!NOTE]
-> 개발자 모드를 설정한 후 다시 사용 하지 않으려는 경우에 Surface Hub를 다시 설정 해야 합니다. 디바이스를 초기화하면 모든 로컬 사용자 파일과 구성이 제거되고 Windows가 다시 설치됩니다.
+> 개발자 모드를 사용하도록 설정한 후 다시 사용하지 않도록 설정하려면 Surface Hub를 초기화해야 합니다. 디바이스를 초기화하면 모든 로컬 사용자 파일과 구성이 제거되고 Windows가 다시 설치됩니다.
 
 1. Surface Hub의 **시작** 메뉴에서 설정 앱을 엽니다.
 
    > [!NOTE]
-   > Surface Hub에서 설정 앱에 액세스 하려면 관리 권한이 필요 합니다.
+   > Surface Hub의 설정 앱에 액세스하려면 관리자 권한이 필요합니다.
 
-2. 이동할 **업데이트 및 보안 \> 개발자를 위한**합니다.
+2. **업데이트 및 보안 \> 개발자용**으로 이동합니다.
 
 3. **개발자 모드**를 선택하고 경고 프롬프트를 수락합니다.
 
 ### <a name="deploy-your-app-from-visual-studio"></a>Visual Studio에서 앱 배포
-배포 프로세스에 대 한 자세한 내용은 일반적으로 참조 [배포 및 UWP 앱을 디버깅](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps)합니다.
+배포 프로세스의 일반적인 사항에 대한 자세한 내용은 [UWP 앱 배포 및 디버깅](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps)을 참조하세요.
 
    > [!NOTE]
-   > 하지만이 기능은 최신 최신 버전의 Visual Studio를 사용 하는 것이 좋습니다 Visual Studio 2015 업데이트 1 이상 필요 합니다. 최신 Visual Studio 인스턴스는 모든 최신 개발 하 고 보안 업데이트 gibe 됩니다.
+   > 이 기능은 Visual Studio 2015 업데이트 1 이상에서 지원되지만, 최신 버전의 Visual Studio를 사용하는 것이 좋습니다. 최신 버전의 Visual Studio 인스턴스는 최신 개발 및 보안 업데이트를 모두 제공합니다.
 
 1. **디버깅 시작** 단추 옆에 있는 디버그 대상 드롭다운으로 이동하여 **원격 컴퓨터**를 선택합니다.
 
@@ -104,9 +104,9 @@ Surface Hub에 앱을 수동으로 배포 하는 것은 간단 합니다.
 2. Surface Hub의 IP 주소를 입력합니다. **유니버설** 인증 모드가 선택되었는지 확인합니다.
 
    > [!TIP] 
-   > 개발자 모드를 설정한 후 시작 화면에서 Surface Hub의 IP 주소를 찾을 수 있습니다.
+   > 개발자 모드를 사용하도록 설정한 후 시작 화면에서 Surface Hub의 IP 주소를 확인할 수 있습니다.
 
-3. 선택 **디버깅 시작 (F5)** 배포 및 Surface Hub에서 앱을 디버그 하거나 Ctrl + F5 키를 눌러 앱을 배포 하기만 하면 됩니다.
+3. **디버깅 시작(F5)** 을 선택하여 Surface Hub에 앱을 배포하고 디버그하거나 Ctrl+F5를 눌러 앱 배포만 수행합니다.
 
    > [!TIP]
-   > Surface Hub는 시작 화면에 표시 하는 경우 모든 단추를 선택 하 여 해제 합니다.
+   > Surface Hub가 시작 화면을 표시하는 경우 아무 단추나 선택하여 해제합니다.

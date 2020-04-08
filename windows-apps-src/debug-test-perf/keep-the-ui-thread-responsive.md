@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b9a129e8b780e85df2c38c50ab712641d3849a34
 ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71339856"
@@ -22,7 +22,7 @@ ms.locfileid: "71339856"
 
 UI 유형 만들기 및 해당 멤버 액세스를 포함하여 UI 스레드에 대한 거의 모든 변경 작업에는 UI 스레드를 사용해야 합니다. 백그라운드 스레드에서 UI를 업데이트할 수는 없지만 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)를 사용하여 코드가 해당 위치에서 실행되도록 메시지를 게시할 수 있습니다.
 
-> **단,** 한 가지 예외는 입력 처리 방법 또는 기본 레이아웃에 영향을 주지 않는 UI 변경을 적용할 수 있는 별도의 렌더링 스레드가 있다는 것입니다.   예를 들어 레이아웃에 영향을 주지 않는 많은 애니메이션 및 전환은 이 렌더링 스레드에서 실행할 수 있습니다.
+> **참고**  단, 입력이 처리되는 방식이나 기본 레이아웃에 영향을 주지 않을 UI 변경을 적용할 수 있는 별도의 렌더링 스레드가 있습니다. 예를 들어 레이아웃에 영향을 주지 않는 많은 애니메이션 및 전환은 이 렌더링 스레드에서 실행할 수 있습니다.
 
 ## <a name="delay-element-instantiation"></a>요소 인스턴스화 지연
 
@@ -31,7 +31,7 @@ UI 유형 만들기 및 해당 멤버 액세스를 포함하여 UI 스레드에 
 -   [x:Load attribute](../xaml-platform/x-load-attribute.md) 또는 [x:DeferLoadStrategy](https://docs.microsoft.com/windows/uwp/xaml-platform/x-deferloadstrategy-attribute)를 사용하여 요소를 지연-인스턴스화합니다.
 -   요청 시 프로그래밍 방식으로 트리에 요소를 삽입합니다.
 
-[**CoreDispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runidleasync) 는 UI 스레드가 사용 중이 아닌 경우 처리 하기 위해 작동 합니다.
+[**CoreDispatcher.RunIdleAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runidleasync)는 사용량이 적을 때 UI 스레드에서 처리하도록 작업을 큐에 대기시킵니다.
 
 ## <a name="use-asynchronous-apis"></a>비동기 API 사용
 
@@ -41,7 +41,7 @@ UI 유형 만들기 및 해당 멤버 액세스를 포함하여 UI 스레드에 
 
 신속하게 반환하도록 이벤트 처리기를 작성합니다. 적지 않은 작업을 수행해야 하는 경우 백그라운드 스레드에서 작업을 예약하고 반환합니다.
 
-C#의 **await** 연산자, Visual Basic의 **Await** 연산자 또는 C++의 대리자를 사용하여 작업을 비동기 방식으로 예약할 수 있습니다. 그러나 이렇게 해도 예약한 작업이 백그라운드 스레드에서 실행된다고 보장할 수 없습니다. UWP(유니버설 Windows 플랫폼) API 일정은 대부분 백그라운드에서 작동하지만 **await**만 사용하거나 대리자를 사용하여 앱 코드를 호출하면 해당 대리자가 메서드가 UI 스레드에서 실행됩니다. 백그라운드 스레드에서 앱 코드를 실행하려면 명시적으로 지정해야 합니다. C# 및 Visual Basic 작업에 [**Task.Run**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.run) 코드를 전달하여 이 작업을 수행할 수 있습니다.
+C#의 **await** 연산자, Visual Basic의 **Await** 연산자 또는 C++의 대리자를 사용하여 작업을 비동기 방식으로 예약할 수 있습니다. 그러나 이렇게 해도 예약한 작업이 백그라운드 스레드에서 실행된다고 보장할 수 없습니다. UWP(유니버설 Windows 플랫폼) API 일정은 대부분 백그라운드에서 작동하지만 **await**만 사용하거나 대리자를 사용하여 앱 코드를 호출하면 해당 대리자가 메서드가 UI 스레드에서 실행됩니다. 백그라운드 스레드에서 앱 코드를 실행하려면 명시적으로 지정해야 합니다. C# 및 Visual Basic에서는 코드를 [**Task.Run**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.run)으로 전달하여 이 작업을 수행할 수 있습니다.
 
 UI 요소는 UI 스레드에서만 액세스할 수도 있습니다. 백그라운드 작업을 시작하기 전에 UI 스레드를 사용하여 UI 요소에 액세스하거나 백그라운드 스레드에서 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 또는 [**CoreDispatcher.RunIdleAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runidleasync)를 사용합니다.
 
@@ -101,7 +101,7 @@ public class AsyncExample
 
 이 예제에서는 UI 스레드의 응답을 유지하기 위해 `NextMove_Click` 처리기가 **await**에서 반환합니다. 그러나 백그라운드 스레드에서 실행되는 `ComputeNextMove`가 완료된 후에는 해당 처리기에서 실행이 다시 선택됩니다. 처리기의 나머지 코드는 결과와 함께 UI를 업데이트합니다.
 
-> 비슷한 시나리오에 사용할 수 있는 UWP 용 [**ThreadPool**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPool) 및 [**Windows.system.threading.threadpooltimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer) API도 있습니다 **.  ** 자세한 내용은 [스레딩 및 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/index)을 참조하세요.
+> **참고**  UWP용 [**ThreadPool**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPool) 및 [**ThreadPoolTimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer) API도 비슷한 시나리오에 사용할 수 있습니다. 자세한 내용은 [스레딩 및 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/index)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 

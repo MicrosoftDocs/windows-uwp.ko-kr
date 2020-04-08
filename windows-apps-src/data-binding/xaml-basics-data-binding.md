@@ -1,31 +1,31 @@
 ---
 title: 데이터 바인딩 만들기
-description: 이 문서에서는 XAML에서 데이터 바인딩의 기본 사항에 대해 다룹니다.
+description: 이 문서에서는 XAML의 데이터 바인딩 기본 사항에 대해 설명합니다.
 keywords: XAML, UWP, 시작
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 707c2ed110498f4ef18fea31ace87d1fd2434112
 ms.sourcegitcommit: 51d884c3646ba3595c016e95bbfedb7ecd668a88
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/11/2019
 ms.locfileid: "67820338"
 ---
 # <a name="create-data-bindings"></a>데이터 바인딩 만들기
 
-자리 표시자 이미지, "lorem ipsum" 상용 텍스트 및 아직 아무 작업도 수행하지 않은 컨트롤으로 가득한 멋진 UI를 디자인하고 구현했다고 가정합니다. 그런 다음 실제 데이터에 연결하여 디자인 프로토타입에서 실제 앱으로 변환하려고 합니다. 
+자리 표시자 이미지, “lorem ipsum” 상용구 및 아직 아무 작업도 수행하지 않는 컨트롤로 가득한 멋진 UI를 디자인하고 구현했다고 가정합니다. 그런 다음, 실제 데이터에 연결하여 디자인 프로토타입에서 실제 앱으로 변환하려고 합니다. 
 
-이 자습서에서는 상용구를 데이터 바인딩으로 바꾸고 UI와 데이터 사이에 직접 연결을 만드는 방법을 알아봅니다. 또한 형식 또는 표시에 대 한 데이터를 변환 하 고, UI 및 데이터 동기화를 유지 하는 방법을 알아봅니다. 이 자습서를 완료 하면에 단순 성과 XAML의 조직을 향상 시킬 수 있습니다 하 고 C# 코드를 쉽게 유지 관리 하 고 확장 합니다.
+이 자습서에서는 상용구를 데이터 바인딩으로 바꾸고 UI와 데이터 간에 직접 연결을 만드는 방법을 알아봅니다. 또한 화면 표시를 위해 데이터에 서식을 지정하거나 변환하고 UI와 데이터를 동기화 상태로 유지하는 방법을 알아봅니다. 이 자습서를 완료하면 XAML 및 C# 코드의 단순성과 구성을 개선하여 쉽게 유지 관리하고 확장할 수 있게 됩니다.
 
-PhotoLab 샘플의 간소화된 버전부터 시작합니다. 이 시작 버전에는 전체 데이터 계층 및 기본 XAML 페이지 레이아웃이 포함되어 있으며, 코드를 더 쉽게 탐색할 수 있게 해 주는 여러 보조 기능은 생략하고 있습니다. 이 자습서에서는 전체적인 앱을 빌드하지 않으므로 최종 버전을 확인하여 사용자 지정 애니메이션 및 휴대폰 지원과 같은 기능을 살펴보세요. [Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab) 리포에서 루트 폴더 최종 버전을 찾을 수 있습니다. 
+PhotoLab 샘플의 간소화된 버전부터 시작합니다. 시작 버전에는 전체 데이터 계층 및 기본 XAML 페이지 레이아웃이 포함되어 있으며, 코드를 탐색하기 쉽도록 많은 기능이 생략되었습니다. 이 자습서에서는 전체 앱을 빌드하지 않으므로, 사용자 지정 애니메이션 및 휴대폰 지원과 같은 기능을 살펴보려면 최종 버전을 확인하세요. 최종 버전은 [Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab) 리포지토리의 루트 폴더에서 확인할 수 있습니다. 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
-* [Windows 10 SDK의 최신 버전과 visual Studio 2019](https://developer.microsoft.com/windows/downloads)합니다.
+* [Visual Studio 2019 및 Windows 10 SDK 최신 버전](https://developer.microsoft.com/windows/downloads).
 
 ## <a name="part-0-get-the-code"></a>0부: 코드 다운로드
-이 실습은 [xaml-basics-starting-points/data-binding](https://github.com/Microsoft/Windows-appsample-photo-lab/tree/master/xaml-basics-starting-points/data-binding) 폴더의 PhotoLab 샘플 리포지토리에서 시작됩니다. 복제 또는 리포지토리를 다운로드 한 후에 Visual Studio 2019로 PhotoLab.sln를 열어 프로젝트를 편집할 수 있습니다.
+이 랩은 [xaml-basics-starting-points/data-binding](https://github.com/Microsoft/Windows-appsample-photo-lab/tree/master/xaml-basics-starting-points/data-binding) 폴더의 PhotoLab 샘플 리포지토리에서 시작합니다. 리포지토리를 복제하거나 다운로드한 후 Visual Studio 2019에서 PhotoLab.sln을 열어 프로젝트를 편집할 수 있습니다.
 
 PhotoLab 앱에는 두 개의 기본 페이지가 있습니다.
 
@@ -35,30 +35,30 @@ PhotoLab 앱에는 두 개의 기본 페이지가 있습니다.
 **DetailPage.xaml:** 하나의 사진을 선택한 후에 표시합니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
 ![DetailPage](../design/basics/images/xaml-basics/detailpage.png)
 
-## <a name="part-1-replace-the-placeholders"></a>1단계: 자리 표시자를 대체 합니다.
+## <a name="part-1-replace-the-placeholders"></a>1부: 자리 표시자 바꾸기
 
-여기에서는 데이터 템플릿 XAML에서 일회성 바인딩을 만들어 자리 표시자 콘텐츠 대신 실제 이미지와 이미지 메타데이터를 표시합니다. 
+여기서는 데이터 템플릿 XAML에서 일회성 바인딩을 만들어 자리 표시자 콘텐츠 대신 실제 이미지와 이미지 메타데이터를 표시합니다. 
 
-일회성 바인딩은 읽기 전용의 변경되지 않은 데이터를 위한 것이며, 성능이 뛰어나고 쉽게 만들 수 있어 **GridView** 및 **ListView** 컨트롤에 대규모 데이터 집합을 표시할 수 있게 해 줍니다. 
+일회성 바인딩은 읽기 전용의 변경되지 않은 데이터를 위한 것이며, 성능이 뛰어나고 쉽게 만들 수 있어 **GridView** 및 **ListView** 컨트롤에 대규모 데이터 세트를 표시할 수 있게 해줍니다. 
 
-**일회성 바인딩을 사용 하 여 자리 표시자를 바꿉니다**
+**일회성 바인딩으로 자리 표시자 바꾸기**
 
 1. xaml-basics-starting-points\data-binding 폴더를 열고 PhotoLab.sln 파일을 시작합니다. 
 
-2. 솔루션 플랫폼이 ARM이 아닌 x86 또는 x64로 설정되었는지 확인한 다음 앱을 실행합니다. 이는 바인딩이 추가되기 전에 UI 자리 표시자를 가진 앱의 상태를 보여 줍니다. 
+2. 솔루션 플랫폼이 ARM이 아닌 x86 또는 x64로 설정되었는지 확인하고 앱을 실행합니다. 바인딩을 추가하기 전에 UI 자리 표시자가 있는 앱의 상태가 표시됩니다. 
 
     ![자리 표시자 이미지 및 텍스트가 있는 앱 실행](../design/basics/images/xaml-basics/gallery-with-placeholder-templates.png)
 
-3. MainPage.xaml을 열고 **ImageGridView_DefaultItemTemplate**이라는 이름의 **DataTemplate**을 검색합니다. 데이터 바인딩을 사용하려면 이 템플릿을 업데이트합니다. 
+3. MainPage.xaml을 열고 이름이 **ImageGridView_DefaultItemTemplate**인 **DataTemplate**을 검색합니다. 데이터 바인딩을 사용하도록 이 템플릿을 업데이트합니다. 
 
     **이전:**
     ```xaml
     <DataTemplate x:Key="ImageGridView_DefaultItemTemplate">
     ```
 
-    **x:Key** 값은 데이터 객체를 표시하기 위해 **ImageGridView**에서 이 템플릿을 선택하는 데 사용됩니다. 
+    **x:Key** 값은 데이터 개체를 표시하기 위해 **ImageGridView**에서 이 템플릿을 선택하는 데 사용됩니다. 
 
-4. **x:DataType** 값을 템플릿으로 추가합니다. 
+4. **x:DataType** 값을 템플릿에 추가합니다. 
 
     **이후:**
     ```xaml
@@ -66,11 +66,11 @@ PhotoLab 앱에는 두 개의 기본 페이지가 있습니다.
                   x:DataType="local:ImageFileInfo">
     ```
 
-    **x:DataType**은 이것이 어떤 유형의 템플릿인지 나타냅니다. 이 경우에는 **ImageFileInfo** 클래스에 대한 템플릿입니다(여기서 "local:"은 파일 상단 근처의 xmlns 선언에 정의된 대로 로컬 네임스페이스를 나타냄).
+    **x:DataType**은 이 템플릿이 사용되는 형식을 나타냅니다. 이 경우에는 **ImageFileInfo** 클래스의 템플릿입니다(여기서 “local:”은 파일 위쪽의 xmlns 선언에 정의된 대로 로컬 네임스페이스를 나타냄).
     
-    **x:DataType**은 옆에 나온 설명과 같이 데이터 템플릿에서 **x:Bind** 식을 사용할 때 필요합니다. 
+    **x:DataType**은 다음에 설명된 대로, 데이터 템플릿에서 **x:Bind** 식을 사용할 때 필요합니다. 
 
-5. **DataTemplate**에서 **ItemImage**라는 이름의 **Image** 요소를 찾고 표시된 대로 **Source** 값을 바꿉니다. 
+5. **DataTemplate**에서 이름이 **ItemImage**인 **Image** 요소를 찾은 다음, 표시된 대로 **Source** 값을 바꿉니다. 
 
     **이전:**
     ```xaml
@@ -88,12 +88,12 @@ PhotoLab 앱에는 두 개의 기본 페이지가 있습니다.
     
     **x:Name**은 XAML 요소를 식별하므로 XAML의 다른 위치와 코드 숨김에서 참조할 수 있습니다. 
 
-    **x:Bind** 식은 **data-object** 속성에서 값을 가져와서 UI 속성에 값을 제공합니다. 템플릿에서, 표시된 속성은 **x:DataType**이 설정된 모든 속성입니다. 따라서 이 경우 데이터 소스는 **ImageFileInfo.ImageSource** 속성입니다. 
+    **x:Bind** 식은 **data-object** 속성에서 값을 가져와 UI 속성에 값을 제공합니다. 템플릿에 표시된 속성은 **x:DataType**에 설정된 항목의 속성입니다. 따라서 이 경우 데이터 원본은 **ImageFileInfo.ImageSource** 속성입니다. 
     
     > [!NOTE] 
-    > **x:Bind** 값은 편집기에서 데이터 형식을 알 수 있게 하므로 **x:Bind** 식에서 속성 이름을 입력하는 대신 IntelliSense를 사용할 수 있습니다. 방금 붙여넣은 코드에서 시도해 봅니다. **x:Bind** 바로 뒤에 커서를 놓고 스페이스 바를 눌러 바인딩할 수 있는 속성 목록을 확인합니다.
+    > **x:Bind** 값을 통해 편집기에서 데이터 형식도 알 수 있으므로, **x:Bind** 식에 속성 이름을 입력하는 대신 IntelliSense를 사용할 수 있습니다. 방금 붙여넣은 코드에서 시도해 봅니다. **x:Bind** 바로 뒤에 커서를 놓고 스페이스바를 눌러 바인딩할 수 있는 속성 목록을 확인합니다.
 
-6. 다른 UI 컨트롤의 값도 같은 방식으로 바꿉니다. (복사/붙여넣기 대신 IntelliSense를 사용해 보세요!)
+6. 다른 UI 컨트롤의 값도 같은 방식으로 바꿉니다. (복사/붙여넣기 대신 IntelliSense를 사용해 보세요.)
 
     **이전:**
     ```xaml
@@ -115,26 +115,26 @@ PhotoLab 앱에는 두 개의 기본 페이지가 있습니다.
     <telerikInput:RadRating Value="{x:Bind ImageRating}" ... />
     ```
 
-앱을 실행하여 지금까지의 모습을 확인합니다. 더 이상 자리 표시자가 없습니다! 제대로 시작한 것입니다. 
+앱을 실행하여 지금까지의 모습을 확인합니다. 더 이상 자리 표시자가 없습니다. 제대로 시작한 것입니다. 
 
 ![자리 표시자 대신 실제 이미지와 텍스트가 있는 앱 실행](../design/basics/images/xaml-basics/gallery-with-populated-templates.png)
 
 > [!Note]
 > 추가로 실험하고 싶다면 데이터 템플릿에 새 TextBlock을 추가하고 x:Bind IntelliSense 방법을 사용하여 표시할 속성을 찾습니다. 
 
-## <a name="part-2-use-binding-to-connect-the-gallery-ui-to-the-images"></a>2부: 바인딩을 사용 하 여 이미지 갤러리 UI에 연결
+## <a name="part-2-use-binding-to-connect-the-gallery-ui-to-the-images"></a>2부: 바인딩을 사용하여 갤러리 UI를 이미지에 연결
 
-여기에서는 XAML 페이지에 일회성 바인딩을 생성해서 갤러리 보기를 이미지 컬렉션에 연결하고, 코드 숨김에서 이 작업을 수행하는 기존 절차 코드를 대체합니다. 또한 **삭제** 단추를 생성해서 이미지를 컬렉션에서 제거할 때 갤러리 보기가 어떻게 변경되는지 확인할 수 있습니다. 동시에 이벤트 처리기에 이벤트를 바인딩하여 기존 이벤트 처리기에서 제공하는 것보다 더 유연하게 바인딩하는 방법을 알아봅니다. 
+여기서는 XAML 페이지에 일회성 바인딩을 생성해서 갤러리 보기를 이미지 컬렉션에 연결하여 코드 숨김에서 이 작업을 수행하는 기존 절차 코드를 대체합니다. 또한 **삭제** 단추를 생성하여 컬렉션에서 이미지를 제거할 때 갤러리 보기가 어떻게 변경되는지 확인합니다. 이와 동시에, 이벤트 처리기에 이벤트를 바인딩하여 기존 이벤트 처리기에서 제공하는 것보다 더 유연하게 바인딩하는 방법을 알아봅니다. 
 
-지금까지 다룬 모든 바인딩은 데이터 템플릿 내부에 있으며 **x:DataType** 값으로 표시된 클래스의 속성을 참조합니다. 페이지의 나머지 XAML은 어떻습니까? 
+지금까지 다룬 모든 바인딩은 데이터 템플릿 내부에 있으며 **x:DataType** 값으로 표시된 클래스의 속성을 참조합니다. 페이지의 나머지 XAML은 어떨까요? 
 
-데이터 템플릿 외부의 **x:Bind** 식은 항상 페이지 자체에 바인딩됩니다. 즉, 사용자 지정 속성 및 해당 페이지의 다른 UI 컨트롤 속성을 포함하여 코드 숨김 또는 XAML에 선언한 내용을 참조할 수 있습니다.(**x:Name** 값을 가진 경우). 
+데이터 템플릿 외부의 **x:Bind** 식은 항상 페이지 자체에 바인딩됩니다. 즉, 사용자 지정 속성과 해당 페이지의 다른 UI 컨트롤 속성을 포함하여 코드 숨김에 넣거나 XAML에서 선언한 내용을 참조할 수 있습니다.(**x:Name** 값이 있는 경우). 
 
-PhotoLab 샘플에서 이와 같은 바인딩을 사용하면 코드 숨김 대신 이미지의 컬렉션에 직접 기본 **GridView** 컨트롤을 연결할 수 있습니다. 나중에 다른 예를 확인할 수 있습니다. 
+PhotoLab 샘플에서 이러한 바인딩을 사용하면 코드 숨김 대신 이미지의 컬렉션에 직접 기본 **GridView** 컨트롤을 연결할 수 있습니다. 나중에 다른 예제를 살펴보겠습니다. 
 
-**이미지 컬렉션에 기본 GridView 컨트롤 바인딩**
+**기본 GridView 컨트롤을 이미지 컬렉션에 바인딩**
 
-1. MainPage.xaml.cs에서 **OnNavigatedTo** 메서드를 찾고 **ItemsSource**를 설정하는 코드를 제거합니다.
+1. MainPage.xaml.cs에서 **OnNavigatedTo** 메서드를 찾은 다음, **ItemsSource**를 설정하는 코드를 제거합니다.
 
     **이전:**
     ```c#
@@ -147,7 +147,7 @@ PhotoLab 샘플에서 이와 같은 바인딩을 사용하면 코드 숨김 대�
     // ImageGridView.ItemsSource = Images;
     ```
 
-2. MainPage.xaml에서 **ImageGridView**라는 이름의 **GridView**를 찾고 **ItemsSource** 특성을 추가합니다. 값을 얻으려면 코드 숨김에 구현된 **Images** 속성을 참조하는 **x:Bind** 식을 사용합니다. 
+2. MainPage.xaml에서 이름이 **ImageGridView**인 **GridView**를 찾은 다음, **ItemsSource** 특성을 추가합니다. 코드 숨김에 구현된 **Images** 속성을 참조하는 **x:Bind** 식을 값으로 사용합니다. 
 
     **이전:**
     ```xaml
@@ -160,9 +160,9 @@ PhotoLab 샘플에서 이와 같은 바인딩을 사용하면 코드 숨김 대�
               ItemsSource="{x:Bind Images}" 
     ```
 
-    **이미지** 형식의 속성은 **ObservableCollection\<ImageFileInfo\>** 이므로 개별 항목에 표시 합니다 **GridView** 는 형식의 **ImageFileInfo**합니다. 이는 파트 1에 설명된 **x:DataType** 값과 일치합니다. 
+    **Images** 속성이 **ObservableCollection\<ImageFileInfo\>** 형식이므로, **GridView**에 표시된 개별 항목은 **ImageFileInfo** 형식입니다. 이 형식은 1부에서 설명한 **x:DataType** 값과 일치합니다. 
 
-지금까지 살펴본 모든 바인딩은 일회성, 읽기 전용 바인딩입니다. 이 바인딩은 일반 **x:Bind** 식의 기본 동작입니다. 데이터는 초기화 시점에만 로드되므로 고성능 바인딩을 만들 수 있고, 대규모 데이터 집합의 여러 복잡한 보기를 완벽하게 지원할 수 있습니다. 
+지금까지 살펴본 모든 바인딩은 일회성, 읽기 전용 바인딩입니다. 이 바인딩은 일반 **x:Bind** 식의 기본 동작입니다. 데이터는 초기화 시점에만 로드되므로 고성능 바인딩을 만들 수 있고, 대규모 데이터 세트의 여러 복잡한 뷰를 완벽하게 지원할 수 있습니다. 
 
 방금 추가한 **ItemsSource** 바인딩도 변경되지 않는 속성 값에 대한 일회성, 읽기 전용 바인딩이지만 중요한 차이점이 있습니다. **Images** 속성의 변경되지 않는 값은 여기에 표시된 대로 한 번 초기화된 컬렉션의 특정 단일 인스턴스입니다.
 
@@ -171,13 +171,13 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     = new ObservableCollection<ImageFileInfo>();
 ```
 
-**이미지** 속성 값이 변경 되지 않는 형식의 속성은 있지만 **ObservableCollection\<T\>** 의 *내용을* 의 컬렉션을 변경 하면 바인딩을 자동으로 변경 되며 UI를 업데이트 합니다. 
+**Images** 속성 값은 절대로 변경되지 않지만 속성이 **ObservableCollection\<T\>** 형식이기 때문에 컬렉션의 ‘콘텐츠’는 변경될 수 있으며, 바인딩이 자동으로 변경 내용을 확인하고 UI를 업데이트합니다.  
 
-이를 테스트하기 위해 현재 선택된 이미지를 삭제하는 단추를 임시로 추가할 것입니다. 이미지를 선택하면 세부 정보 페이지로 이동하게 되므로 최종 버전에는 이 단추가 없습니다. 그러나 동작 **ObservableCollection\<T\>**  최종 PhotoLab 샘플에서 여전히 중요 이므로 XAML page 생성자에서 초기화 됩니다 (통해는  **InitializeComponent** 메서드 호출), 하지만 **이미지** 컬렉션이 채워집니다 나중에 **OnNavigatedTo** 메서드. 
+이 동작을 테스트하기 위해 현재 선택한 이미지를 삭제하는 단추를 임시로 추가하겠습니다. 이미지를 선택하면 세부 정보 페이지로 이동하게 되므로 최종 버전에는 이 단추가 없습니다. 하지만 XAML은 **InitializeComponent** 메서드 호출을 통해 페이지 생성자에서 초기화되지만 **Images** 컬렉션은 나중에 **OnNavigatedTo** 메서드에서 채워지므로, 최종 PhotoLab 샘플에서 **ObservableCollection\<T\>** 의 동작이 여전히 중요합니다. 
 
-**삭제 단추를 추가 합니다.**
+**삭제 단추 추가**
 
-1. MainPage.xaml에서 **MainCommandBar**라는 이름의 **CommandBar**를 찾고 확대/축소 단추 전에 새 단추를 추가합니다. (확대/축소 컨트롤은 아직 작동하지 않습니다. 이 컨트롤은 자습서의 다음 부분에서 살펴봅니다.)
+1. MainPage.xaml에서 이름이 **MainCommandBar**인 **CommandBar**를 찾은 다음, 확대/축소 단추 앞에 새 단추를 추가합니다. (확대/축소 컨트롤은 아직 작동하지 않습니다. 이 컨트롤은 자습서의 다음 부분에서 연결하겠습니다.)
 
     ```xaml
     <AppBarButton Icon="Delete"
@@ -185,7 +185,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
                   Click="{x:Bind DeleteSelectedImage}" />
     ```
 
-    이미 XAML에 익숙한 경우 이 **Click** 값이 생소하게 보일 수도 있습니다. 이전 버전의 XAML에서는 일반적으로 이벤트 발신자의 매개 변수 및 이벤트 관련 인수 개체를 포함하여, 이를 특정 이벤트 처리기 서명이 있는 메서드로 설정해야 했습니다. 이벤트 인수가 필요할 때 이 기술을 사용할 수 있지만 x:Bind를 사용하면 다른 메서드에도 연결할 수 있습니다. 예를 들어 이벤트 데이터가 필요하지 않은 경우 여기에서와 같이 매개 변수가 없는 메서드에 연결할 수 있습니다.
+    XAML을 잘 알고 있는 경우, 이 **Click** 값이 이상하게 보일 수도 있습니다. 이전 버전의 XAML에서는 일반적으로 이벤트 발신자의 매개 변수 및 이벤트 관련 인수 개체를 포함하는 특정 이벤트 처리기 서명이 있는 메서드로 이 값을 설정해야 했습니다. 이벤트 인수가 필요한 경우 이 기술을 사용할 수 있지만 x:Bind를 사용하면 다른 메서드에도 연결할 수 있습니다. 예를 들어 이벤트 데이터가 필요하지 않은 경우, 예제와 같이 매개 변수가 없는 메서드에 연결할 수 있습니다.
 
     <!-- TODO add doc links about event binding - and doc links in general? -->
 
@@ -198,18 +198,18 @@ private ObservableCollection<ImageFileInfo> Images { get; }
 
     이 메서드는 **Images** 컬렉션에서 선택한 이미지를 간단히 삭제합니다. 
 
-이제 앱을 실행하고 단추를 사용하여 몇 개의 이미지를 삭제합니다. 데이터 바인딩을 UI가 자동으로 업데이트를 볼 수 있듯이 하며 **ObservableCollection\<T\>**  형식입니다. 
+이제 앱을 실행하고 단추를 사용하여 몇 개의 이미지를 삭제합니다. 보시다시피, UI가 데이터 바인딩과 **ObservableCollection\<T\>** 형식 때문에 자동으로 업데이트됩니다. 
 
 > [!Note]
-> 문제가 있는 경우, 선택한 이미지를 목록에서 위 또는 아래로 이동하는 두 개의 단추를 추가한 다음 Click 이벤트를 DeleteSelectedImage와 비슷한 두 가지 새로운 메서드에 x:Bind 처리합니다.
+> 연습을 위해, 선택한 이미지를 목록에서 위 또는 아래로 이동하는 두 개의 단추를 추가하고 Click 이벤트를 DeleteSelectedImage와 비슷한 두 개의 새 메서드에 x:Bind 처리해 봅니다.
  
-## <a name="part-3-set-up-the-zoom-slider"></a>3부: 확대/축소 슬라이더를 설정 
+## <a name="part-3-set-up-the-zoom-slider"></a>3부: 확대/축소 슬라이더 설정 
 
-이 파트에서는 데이터 템플릿의 컨트롤에서 템플릿 외부의 확대/축소 슬라이더에 대한 단방향 바인딩을 만듭니다. 또한 **TextBlock.Text** 및 **Image.Source**와 같은 가장 명확한 속성뿐만 아니라 많은 컨트롤 속성을 통해 데이터 바인딩을 사용할 수 있다는 점을 알아봅니다. 
+이 부분에서는 데이터 템플릿의 컨트롤에서 템플릿 외부에 있는 확대/축소 슬라이더로의 단방향 바인딩을 만듭니다. **TextBlock.Text** 및 **Image.Source**와 같은 가장 명확한 속성뿐만 아니라 많은 컨트롤 속성과 함께 데이터 바인딩을 사용할 수 있다는 것도 확인할 수 있습니다. 
 
 **이미지 데이터 템플릿을 확대/축소 슬라이더에 바인딩**
 
-* **ImageGridView_DefaultItemTemplate**라는 이름의 **DataTemplate**을 찾고 템플릿 상단에서 **Grid** 컨트롤의 **Height** 및 **Width** 값을 바꿉니다.
+* 이름이 **ImageGridView_DefaultItemTemplate**인 **DataTemplate**을 찾은 다음, 템플릿 맨 위에 있는 **Grid** 컨트롤의 **Height** 및 **Width** 값을 바꿉니다.
 
     **이전**
     ```xaml
@@ -231,33 +231,33 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     
     <!-- TODO talk about dependency properties --> 
     
-    이것이 **x:Bind** 식이 아닌 **Binding** 식이라는 점을 인식하셨습니까? 이는 데이터 바인딩에 대한 기존 방식이며, 주로 사용되지 않습니다. **x:Bind**는 **Binding**이 수행하는 작업의 거의 대부분과 그 이상의 작업을 수행합니다. 하지만 데이터 템플릿에서 **x:Bind**를 사용하면 **x:DataType** 값에 선언된 유형에 바인딩됩니다. 그렇다면 템플릿의 항목을 페이지 XAML 또는 코드 숨김에 어떻게 바인딩할 수 있을까요? 기존의 **Binding** 식을 사용해야 합니다. 
+    **x:Bind** 식이 아니라 **Binding** 식인 것을 눈치채셨나요? 이전에 데이터 바인딩을 수행했던 방식으로, 이제는 거의 사용되지 않습니다. **x:Bind**는 **Binding**의 거의 모든 작업과 그 이상을 수행합니다. 하지만 데이터 템플릿에서 **x:Bind**를 사용하면 **x:DataType** 값에 선언된 유형에 바인딩됩니다. 그렇다면 템플릿의 항목을 페이지 XAML 또는 코드 숨김에 어떻게 바인딩할 수 있을까요? 기존의 **Binding** 식을 사용해야 합니다. 
     
-    **Binding** 식은 **x:DataType** 값을 인식하지 않지만 이러한 **Binding** 식에는 거의 동일한 방식으로 작동하는 **ElementName** 값이 있습니다. 이는 바인딩 엔진에게 **Binding Value**가 페이지상 지정된 요소의 **Value** 속성에 바인딩된다는 점을 알려 줍니다(즉, 해당 **x:Name** 값을 가진 요소). 코드 숨김에 있는 속성에 바인딩하려는 경우, ```{Binding MyCodeBehindProperty, ElementName=page}```와 같은 모습으로 보입니다. 여기에서 **page**는 XAML의 **Page** 요소에 설정된 **x:Name**을 참조합니다. 
+    **Binding** 식은 **x:DataType** 값을 인식하지 않지만, **Binding** 식에는 거의 동일한 방식으로 작동하는 **ElementName** 값이 있습니다. 이 값은 **Binding Value**가 페이지에서 지정된 요소(즉, 해당 **x:Name** 값을 가진 요소)의 **Value** 속성에 바인딩됨을 바인딩 엔진에 알려줍니다. 코드 숨김에 있는 속성에 바인딩하려는 경우 ```{Binding MyCodeBehindProperty, ElementName=page}```와 같이 표시됩니다. 여기서 **page**는 XAML의 **Page** 요소에 설정된 **x:Name** 값을 참조합니다. 
     
     > [!NOTE]
-    > 기본적으로 **Binding** 식은 *단방향*이며, 이는 바인딩된 속성 값이 변경되면 UI를 자동으로 업데이트한다는 의미입니다. 
+    > 기본적으로 **Binding** 식은 ‘단방향’이므로, 바인딩된 속성 값이 변경되면 UI가 자동으로 업데이트됩니다.  
     > 
-    > 반면 **x:Bind**의 기본값은 *일회성*이며, 이는 바인딩된 속성에 대한 변경 사항은 무시된다는 의미입니다. 가장 높은 성능 옵션이고 대부분의 바인딩은 정적인 읽기 전용 데이터이기 때문에 이것이 기본값입니다. 
+    > 반면에 **x:Bind**의 기본값은 ‘일회성’으로, 바인딩된 속성의 변경 내용이 무시됩니다.  가장 높은 성능 옵션이고, 대부분 정적인 읽기 전용 데이터에 바인딩되기 때문에 이 옵션이 기본값입니다. 
     >
-    > 여기에서는 값을 변경할 수 있는 속성이 있는 **x:Bind**를 사용하는 경우 ```Mode=OneWay``` 또는 ```Mode=TwoWay```를 추가해야 한다는 점을 알 수 있습니다. 이에 대한 예는 다음 단원에서 확인할 수 있습니다.
+    > 단, 값이 변경될 수 있는 속성과 함께 **x:Bind**를 사용하는 경우 ```Mode=OneWay``` 또는 ```Mode=TwoWay```를 추가해야 합니다. 관련 예제는 다음 섹션에서 확인할 수 있습니다.
 
 앱을 실행하고 슬라이더를 사용하여 이미지 템플릿 크기를 변경합니다. 보시다시피, 많은 코드가 필요 없이 매우 강력한 효과가 있습니다. 
 
 ![확대/축소 슬라이더가 있는 앱 실행](../design/basics/images/xaml-basics/gallery-with-zoom-control.png)
 
 > [!NOTE]
-> 문제가 있는 경우, 다른 UI 속성을 확대/축소 슬라이더 **Value** 속성 또는 확대/축소 슬라이더 뒤에 추가한 다른 슬라이더에 바인딩해 봅니다. 예를 들어 **TitleTextBlock**의 **FontSize** 속성을 **24**의 기본값으로 새 슬라이더에 바인딩할 수 있습니다. 적절한 최소값 및 최대값을 설정해야 합니다.
+> 연습을 위해, 다른 UI 속성을 확대/축소 슬라이더 **Value** 속성 또는 확대/축소 슬라이더 뒤에 추가한 다른 슬라이더에 바인딩해 봅니다. 예를 들어 **TitleTextBlock**의 **FontSize** 속성을 기본값 **24**로 새 슬라이더에 바인딩할 수 있습니다. 적절한 최솟값과 최댓값을 설정해야 합니다.
 
-## <a name="part-4-improve-the-zoom-experience"></a>4부: 확대/축소 환경을 개선합니다 
+## <a name="part-4-improve-the-zoom-experience"></a>4부: 확대/축소 환경 개선 
 
-이 파트에서는 **ItemSize** 속성을 코드 숨김에 추가하고 이미지 템플릿에서 새 속성으로 단방향 바인딩을 만듭니다. **ItemSize** 값은 확대/축소 슬라이더 및 **화면에 맞추기** 토글 및 창 크기와 같은 기타 요소에 의해 업데이트되어 더욱 향상된 환경을 제공합니다. 
+이 부분에서는 **ItemSize** 속성을 코드 숨김에 추가하고 이미지 템플릿에서 새 속성으로의 단방향 바인딩을 만듭니다. **ItemSize** 값은 확대/축소 슬라이더와 **화면에 맞추기** 토글, 창 크기 등의 기타 요소를 통해 업데이트되어 더욱 향상된 환경을 제공합니다. 
 
-기본 제공 컨트롤 속성과 달리 사용자 지정 속성은 단방향 및 양방향 바인딩이 있더라도 UI를 자동으로 업데이트하지 않습니다. 이는 **일회성** 바인딩으로 잘 작동하지만, 실제로 UI에 속성 변경 사항을 표시하려면 몇 가지 작업을 수행해야 합니다. 
+기본 제공 컨트롤 속성과 달리 사용자 지정 속성은 단방향 및 양방향 바인딩이 있더라도 UI를 자동으로 업데이트하지 않습니다. **일회성** 바인딩에서는 제대로 작동하지만, 실제로 UI에 속성 변경 내용을 표시하려면 몇 가지 작업을 수행해야 합니다. 
 
-**UI 업데이트 되도록 ItemSize 속성을 만들려면**
+**UI를 업데이트하도록 ItemSize 속성 만들기**
 
-1. MainPage.xaml.cs에서 **MainPage**의 서명을 변경하여 **INotifyPropertyChanged** 인터페이스를 구현합니다.
+1. MainPage.xaml.cs에서 **MainPage** 클래스의 서명을 변경하여 **INotifyPropertyChanged** 인터페이스를 구현하게 합니다.
 
     **이전:**
     ```c#
@@ -269,7 +269,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     public sealed partial class MainPage : Page, INotifyPropertyChanged
     ```
 
-    이는 UI를 업데이트하기 위해 바인딩이 수신할 수 있는 PropertyChanged 이벤트(다음에 추가됨)가 MainPage에 있다는 것을 바인딩 시스템에 알려줍니다. 
+    이 코드는 UI를 업데이트하기 위해 바인딩이 수신 대기할 수 있는 PropertyChanged 이벤트(다음에 추가됨)가 MainPage에 있음을 바인딩 시스템에 알려줍니다. 
 
 2. **PropertyChanged** 이벤트를 **MainPage** 클래스에 추가합니다.
 
@@ -277,9 +277,9 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     public event PropertyChangedEventHandler PropertyChanged;
     ```
 
-    이 이벤트는 **INotifyPropertyChanged** 인터페이스에 필요한 완전한 구현을 제공합니다. 하지만 효과가 있으려면 사용자 지정 속성에서 이벤트를 명시적으로 발생시켜야 합니다. 
+    이 이벤트는 **INotifyPropertyChanged** 인터페이스에 필요한 완전한 구현을 제공합니다. 하지만 구현이 적용되려면 사용자 지정 속성에서 이벤트를 명시적으로 발생시켜야 합니다. 
 
-3. **ItemSize** 속성을 추가하고 **PropertyChanged** 이벤트를 setter에서 발생시킵니다.
+3. **ItemSize** 속성을 추가하고 해당 setter에서 **PropertyChanged** 이벤트를 발생시킵니다.
 
     ```c#
     public double ItemSize
@@ -297,11 +297,11 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     private double _itemSize;
     ```
 
-    **ItemSize** 속성은 비공개 **_itemSize** 필드 값을 공개합니다. 이와 같이 지원 필드를 사용하면 잠재적으로 불필요한 **PropertyChanged** 이벤트가 발생하기 전에 새 값이 이전 값과 같은지 여부를 속성에서 확인할 수 있습니다.
+    **ItemSize** 속성은 private **_itemSize** 필드 값을 공개합니다. 이러한 지원 필드를 사용하면 잠재적으로 불필요한 **PropertyChanged** 이벤트가 발생하기 전에 새 값이 이전 값과 같은지 여부를 속성에서 확인할 수 있습니다.
 
-    이벤트 자체는 **Invoke** 메서드에 의해 발생합니다. 물음표는 **PropertyChanged** 이벤트가 null인지 여부를 확인합니다. 즉, 이벤트 처리기가 추가되었는지 여부를 확인합니다. 모든 단방향 또는 양방향 바인딩은 장면 뒤에서 이벤트 처리기를 추가하지만 아무도 수신하지 않는 경우 더 이상 여기에서 발생하지 않습니다. 하지만 **PropertyChanged**가 null이 아니면 **Invoke**는 이벤트 소스(**this** 키워드로 표시되는 페이지 자체) 및 속성 이름을 나타내는 **event-args** 개체에 대한 참조와 함께 호출됩니다. 이 정보를 사용하면 **ItemSize** 속성에 대한 단방향 또는 양방향 바인딩에 변경 내용이 전달되어 바인딩된 UI를 업데이트 할 수 있습니다. 
+    이벤트 자체는 **Invoke** 메서드에서 발생합니다. 물음표는 **PropertyChanged** 이벤트가 null인지 여부, 즉 이벤트 처리기가 추가되었는지 여부를 확인합니다. 모든 단방향 또는 양방향 바인딩은 백그라운드에서 이벤트 처리기를 추가하지만, 아무도 수신 대기하고 있지 않으면 이벤트 처리기에서 추가로 수행되는 작업은 없습니다. 하지만 **PropertyChanged**가 null이 아니면 **Invoke**는 이벤트 원본(**this** 키워드가 나타내는 페이지 자체) 및 속성 이름을 나타내는 **event-args** 개체를 참조하여 호출됩니다. 이 정보를 사용하여 **ItemSize** 속성에 대한 단방향 또는 양방향 바인딩에 변경 내용을 알려 바인딩된 UI를 업데이트할 수 있게 합니다. 
 
-4. MainPage.xaml에서 **ImageGridView_DefaultItemTemplate**라는 이름의 **DataTemplate**을 찾고 템플릿 상단에서 **Grid** 컨트롤의 **Height** 및 **Width** 값을 바꿉니다. (이 자습서의 이전 파트에서 컨트롤 간 바인딩을 수행한 경우 **Value**를 **ItemSize**로, **ZoomSlider**를 **page**로만 변경할 수 있습니다. Height 및 Width 모두에 대해 이 작업을 수행해야 합니다!)
+4. MainPage.xaml에서 이름이 **ImageGridView_DefaultItemTemplate**인 **DataTemplate**을 찾은 다음, 템플릿 맨 위에 있는 **Grid** 컨트롤의 **Height** 및 **Width** 값을 바꿉니다. 이 자습서의 이전 부분에서 컨트롤 간 바인딩을 수행한 경우에는 **Value**를 **ItemSize**로 바꾸고, **ZoomSlider**를 **page**로 바꾸는 변경만 가능합니다. Height와 Width에 대해 모두, 이 작업을 수행해야 합니다.
 
     **이전**
     ```xaml
@@ -321,11 +321,11 @@ private ObservableCollection<ImageFileInfo> Images { get; }
               Margin="{StaticResource LargeItemMargin}">
     ```
 
-이제 UI가 **ItemSize** 변경 사항에 응답할 수 있게 되었으므로 실제로 변경해야 합니다. 앞서 언급했듯이 **ItemSize** 값은 다양한 UI 컨트롤의 현재 상태에서 계산되지만 이러한 컨트롤이 상태를 변경할 때마다 계산을 수행해야 합니다. 이렇게 하려면 특정 UI 변경 사항이 **ItemSize**를 업데이트하는 도우미 메서드를 호출하도록 이벤트 바인딩을 사용합니다. 
+이제 UI가 **ItemSize** 변경 내용에 응답할 수 있으므로 실제로 변경해야 합니다. 앞서 언급했듯이 **ItemSize** 값은 다양한 UI 컨트롤의 현재 상태에서 계산되지만, 해당 컨트롤이 상태를 변경할 때마다 계산을 수행해야 합니다. 이 작업을 위해 이벤트 바인딩을 사용하여 특정 UI 변경 시 **ItemSize**를 업데이트하는 도우미 메서드가 호출되도록 합니다. 
 
 **ItemSize 속성 값 업데이트**
 
-1. **DetermineItemSize** 메서드를 MainPage.xaml.cs에 추가합니다.
+1. MainPage.xaml.cs에 **DetermineItemSize** 메서드를 추가합니다.
 
     ```c#
     private void DetermineItemSize()
@@ -368,7 +368,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     }
     ```
 
-2. MainPage.xaml에서 파일의 맨 위로 이동하여 **SizeChanged** 이벤트 바인딩을 **Page** 요소에 추가합니다.
+2. MainPage.xaml에서 파일 맨 위로 이동한 다음, **Page** 요소에 **SizeChanged** 이벤트 바인딩을 추가합니다.
 
     **이전:**
     ```xaml
@@ -381,7 +381,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
           SizeChanged="{x:Bind DetermineItemSize}"
     ```
 
-3. **ZoomSlider**라는 **Slider**를 찾고 **ValueChanged** 이벤트 바인딩을 추가합니다.
+3. **ZoomSlider**라는 **Slider**를 찾은 후에 **ValueChanged** 이벤트 바인딩을 추가합니다.
 
     **이전:**
     ```xaml
@@ -394,7 +394,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
             ValueChanged="{x:Bind DetermineItemSize}"
     ```
 
-4. **FitScreenToggle**이라는 **ToggleSwitch**를 찾고 **Toggled** 이벤트 바인딩을 추가합니다.
+4. **FitScreenToggle**이라는 **ToggleSwitch**를 찾은 후에 **Toggled** 이벤트 바인딩을 추가합니다.
 
     **이전:**
     ```xaml
@@ -407,28 +407,28 @@ private ObservableCollection<ImageFileInfo> Images { get; }
                   Toggled="{x:Bind DetermineItemSize}"
     ```
 
-앱을 실행하고 확대/축소 슬라이더와 **Fit to screen** 토글을 사용하여 이미지 템플릿 크기를 변경합니다. 보시다시피, 최신 변경 사항을 사용하면 코드를 잘 관리하면서 더 정교한 확대/축소 크기를 활성화할 수 있습니다. 
+앱을 실행하고 확대/축소 슬라이더와 **화면에 맞추기** 토글을 사용하여 이미지 템플릿 크기를 변경합니다. 보시다시피, 최신 변경 내용을 사용하면 코드를 잘 관리하면서 보다 정교하게 확대/축소 크기를 조정할 수 있습니다. 
 
-![화면에 맞게 활성화된 앱 실행](../design/basics/images/xaml-basics/gallery-with-fit-to-screen.png)
+![화면에 맞추기를 사용하도록 설정하여 앱 실행](../design/basics/images/xaml-basics/gallery-with-fit-to-screen.png)
 
 > [!NOTE]
-> 문제가 발생하면 **ZoomSlider** 뒤에 **TextBlock**을 추가하고 **Text** 속성은 **ItemSize** 속성에 바인딩합니다. 데이터 템플릿에 없으므로 이전 **ItemSize** 바인딩 같은 **Binding** 대신 **x:Bind**를 사용할 수 있습니다.  
+> 연습을 위해, **ZoomSlider** 뒤에 **TextBlock**을 추가하고 **Text** 속성을 **ItemSize** 속성에 바인딩해 봅니다. 데이터 템플릿에 없으므로 이전 **ItemSize** 바인딩과 같이 **Binding** 대신 **x:Bind**를 사용할 수 있습니다.  
 }
 
-## <a name="part-5-enable-user-edits"></a>5부: 사용자 편집을 사용 하도록 설정
+## <a name="part-5-enable-user-edits"></a>5부: 사용자 편집 사용
 
-여기에서는 사용자가 이미지 제목, 평점 및 다양한 시각 효과를 비롯한 값을 업데이트할 수 있도록 양방향 바인딩을 만듭니다. 
+여기서는 사용자가 이미지 제목, 평점 및 다양한 시각 효과를 비롯한 값을 업데이트할 수 있도록 양방향 바인딩을 만듭니다. 
 
-이를 위해 단일 이미지 뷰어, 확대/축소 컨트롤 및 UI 편집 기능을 제공하는 기존 **DetailPage**를 업데이트합니다.  
+이 작업을 위해 단일 이미지 뷰어, 확대/축소 컨트롤 및 UI 편집 기능을 제공하는 기존 **DetailPage**를 업데이트하겠습니다.  
 
-하지만 먼저 갤러리에서 이미지를 클릭할 때 앱이 연결되도록 **DetailPage**를 연결해야 합니다.
+하지만 먼저 **DetailPage**를 연결하여 사용자가 갤러리 보기에서 이미지를 클릭할 때 앱이 연결되도록 해야 합니다.
 
 **DetailPage 연결**
 
-1. MainPage.xaml에서 **ImageGridView**라는 이름의 **GridView**를 찾고 **ItemClick** 값을 추가합니다. 
+1. MainPage.xaml에서 이름이 **ImageGridView**인 **GridView**를 찾은 다음, **ItemClick** 값을 추가합니다. 
 
     > [!TIP] 
-    > 복사/붙여넣기 하는 대신 아래 변경에서 입력할 된 IntelliSense 팝업을 볼 수 있습니다 "\<새 이벤트 처리기\>"입니다. Tab 키를 누르면 기본 메서드 처리기 이름으로 값이 채워지고 다음 단계에 표시된 메서드가 자동으로 추가됩니다. 그런 다음 F12 키를 눌러 코드 숨김의 메서드로 이동합니다. 
+    > 복사/붙여넣기 대신 아래의 변경 내용을 입력하면 “\<New Event Handler\>”라는 IntelliSense 팝업이 표시됩니다. Tab 키를 누르면 기본 메서드 처리기 이름으로 값이 채워지고 다음 단계에 표시된 메서드가 자동으로 제거됩니다. 그런 다음, F12 키를 눌러 코드 숨김의 메서드로 이동할 수 있습니다. 
 
     **이전:**
     ```xaml
@@ -442,7 +442,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     ```
 
     > [!NOTE] 
-    > 현재 x:Bind 식 대신 여기에 일반적인 이벤트 처리기를 사용하고 있습니다. 다음과 같이 이벤트 데이터를 확인해야 하기 때문입니다. 
+    > 여기서는 x:Bind 식 대신 기존의 이벤트 처리기를 사용하고 있습니다. 다음과 같이 이벤트 데이터를 확인해야 하기 때문입니다. 
 
 2. MainPage.xaml.cs에서 이벤트 처리기를 추가합니다(또는 마지막 단계에서 팁을 사용한 경우 입력).
 
@@ -453,19 +453,19 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     }
     ```
 
-    이 메서드는 간단히 클릭된 항목을 전달하는 세부 정보 페이지로 이동합니다. 이 항목은 페이지 초기화를 위해 **DetailPage.OnNavigatedTo**에서 사용하는 **ImageFileInfo** 개체입니다. 이 자습서에서 이 메서드를 구현할 필요는 없지만, 이러한 기능을 살펴볼 수는 있습니다. 
+    이 메서드는 단순히 클릭된 항목을 전달하여 세부 정보 페이지로 이동합니다. 이 항목은 페이지 초기화를 위해 **DetailPage.OnNavigatedTo**에서 사용하는 **ImageFileInfo** 개체입니다. 이 자습서에서 해당 메서드를 구현할 필요는 없지만, 메서드가 수행하는 작업을 살펴볼 수 있습니다. 
     
-3. (선택 사항) 현재 선택한 이미지로 작업하는 이전 플레이 지점에서 추가한 컨트롤을 삭제하거나 주석 처리합니다. 그대로 유지해도 영향은 주지 않지만, 세부 정보 페이지로 이동하지 않고 이미지를 선택하는 것이 이제 훨씬 더 어려워졌습니다. 
+3. (선택 사항) 현재 선택한 이미지로 작업하는, 이전 재생 지점에 추가한 컨트롤을 삭제하거나 주석으로 처리합니다. 그대로 유지해도 문제가 되지는 않지만, 세부 정보 페이지로 이동하지 않고 이미지를 선택하는 것이 이제 훨씬 더 어려워졌습니다. 
 
-이제 두 페이지를 연결했으므로 앱을 실행하고 살펴보겠습니다. 편집 창에서 값을 변경하려고 하면 응답하지 않는 컨트롤을 제외하고 모든 기능이 제대로 작동합니다. 
+이제 두 페이지를 연결했으므로 앱을 실행하고 살펴보겠습니다. 값을 변경하려고 할 때 응답하지 않는 편집 창의 컨트롤을 제외하고 모든 기능이 제대로 작동합니다. 
 
-보시다시피 제목 텍스트 상자에 제목이 표시되고 변경 내용을 입력할 수 있습니다. 변경 내용을 적용하려면 다른 컨트롤로 포커스를 변경해야 하지만 화면의 왼쪽 위 모서리에 있는 제목은 아직 업데이트되지 않습니다. 
+보시다시피, 제목 텍스트 상자에 제목이 표시되고 변경 내용을 입력할 수 있습니다. 변경 내용을 커밋하려면 다른 컨트롤로 포커스를 변경해야 하지만, 화면 왼쪽 위에 있는 제목이 아직 업데이트되지 않았습니다. 
 
-모든 컨트롤은 이미 파트 1에서 설명한 일반 **x:Bind** 식을 사용하여 바인딩됩니다. 다시 생각해 보면, 이것은 모두 일회성 바인딩이므로 값의 변경 사항이 등록되지 않은 이유가 됩니다. 이 문제를 해결하려면 양방향 바인딩으로 전환해야 합니다. 
+모든 컨트롤은 1부에서 설명한 일반 **x:Bind** 식을 사용하여 이미 바인딩되었습니다. 기억을 떠올려보면, 모두 일회성 바인딩이기 때문에 값의 변경 내용이 등록되지 않은 것입니다. 양방향 바인딩으로 전환하기만 하면 문제가 해결됩니다. 
 
-**편집 컨트롤을 대화형 확인**
+**대화형 편집 컨트롤 만들기**
 
-1. DetailPage.xaml에서 **TitleTextBlock**이라는 **TextBlock** 및 **RadRating** 컨트롤을 찾고, **Mode=TwoWay**를 포함하도록 **x:Bind** 식을 업데이트합니다.
+1. DetailPage.xaml에서 **TitleTextBlock**이라는 **TextBlock**과 그 뒤에 있는 **RadRating** 컨트롤을 찾아, **Mode=TwoWay**를 포함하도록 **x:Bind** 식을 업데이트합니다.
 
     **이전:**
     ```xaml
@@ -485,7 +485,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
                             ... >
     ```
 
-2. 평점 컨트롤 이후에 제공되는 모든 효과 슬라이더에 대해 동일한 작업을 수행합니다.
+2. 평가 컨트롤 뒤에 있는 모든 효과 슬라이더에 동일한 작업을 수행합니다.
 
     ```xaml
     <Slider Header="Exposure"    ... Value="{x:Bind item.Exposure, Mode=TwoWay}" ...
@@ -496,23 +496,23 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     <Slider Header="Blur"        ... Value="{x:Bind item.Blur, Mode=TwoWay}" ... 
     ```
 
-양방향 모드는 예상대로 양쪽에 변경 사항이 있을 때마다 데이터가 양방향으로 이동한다는 것을 의미합니다. 
+양방향 모드는 예상대로 한쪽에 변경 내용이 있을 때마다 데이터가 양방향으로 이동한다는 것을 의미합니다. 
 
-앞에서 설명한 단방향 바인딩과 마찬가지로 바인딩된 속성이 변경될 때마다 **ImageFileInfo** 클래스의 **INotifyPropertyChanged** 구현 덕분에 이러한 양방향 바인딩이 UI를 업데이트합니다. 하지만 양방향 바인딩을 사용하면 사용자가 컨트롤과 상호 작용할 때마다 값이 UI에서 바인딩된 속성으로 이동합니다. XAML 측면에서는 더 이상 필요한 것이 없습니다. 
+앞에서 설명한 단방향 바인딩과 마찬가지로, 바인딩된 속성이 변경될 때마다 **ImageFileInfo** 클래스의 **INotifyPropertyChanged** 구현 때문에 이제 양방향 바인딩이 UI를 업데이트합니다. 하지만 양방향 바인딩을 사용하면 사용자가 컨트롤을 조작할 때마다 값이 UI에서 바인딩된 속성으로 이동합니다. XAML 쪽에서는 더 이상 필요한 작업이 없습니다. 
 
-앱을 실행하고 편집 컨트롤을 사용해 봅니다. 보시다시피, 변경 사항이 있을 때 이제 이미지 값에 영향을 미치며 기본 페이지로 돌아가면 변경 사항이 유지됩니다. 
+앱을 실행하고 편집 컨트롤을 사용해 봅니다. 보시다시피, 변경 내용이 있으면 이제 이미지 값에 적용되고, 기본 페이지로 돌아가도 변경 내용이 유지됩니다. 
 
-## <a name="part-6-format-values-through-function-binding"></a>6 부: 함수 바인딩을 통해 값의 서식 지정
+## <a name="part-6-format-values-through-function-binding"></a>6부: 함수 바인딩을 통해 값 서식 지정
 
-마지막으로 하나의 문제가 남아 있습니다. 효과 슬라이더를 움직이면 옆에 있는 레이블은 변경되지 않습니다. 
+마지막으로 한 가지 문제가 남았습니다. 효과 슬라이더를 이동할 때 옆에 있는 레이블이 여전히 변경되지 않습니다. 
 
-![기본 레이블 값이 있는 효과 슬라이더](../design/basics/images/xaml-basics/effect-sliders-before-label-fix.png)
+![기본 레이블 값이 포함된 효과 슬라이더](../design/basics/images/xaml-basics/effect-sliders-before-label-fix.png)
 
-이 자습서의 마지막 파트는 표시할 슬라이더 값의 형식을 지정하는 바인딩을 추가하는 것입니다.
+이 자습서의 최종 부분은 표시할 슬라이더 값의 서식을 지정하는 바인딩을 추가하는 것입니다.
 
-**효과 슬라이더 레이블의 바인딩하고 표시 값 형식**
+**효과 슬라이더 레이블 바인딩 및 표시할 값의 서식 지정**
 
-1. 찾을 합니다 **TextBlock** 후를 **노출** 슬라이더 및 바꾸기는 **텍스트** 여기에 표시 된 바인딩 식 사용 하 여 값입니다.
+1. **노출** 슬라이더 뒤에 있는 **TextBlock**를 찾은 다음, **텍스트** 값을 여기에 표시된 바인딩 식으로 바꿉니다.
 
     **이전:**
     ```xaml
@@ -526,9 +526,9 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     <TextBlock ... Text="{x:Bind item.Exposure.ToString('N', culture), Mode=OneWay}" />
     ```
 
-    이는 메서드의 반환 값에 바인딩하고 있기 때문에 함수 바인딩이라고 합니다. 데이터 템플릿에 있는 경우 이 메서드는 페이지의 코드 숨김 또는 **x:DataType** 유형을 통해 액세스할 수 있어야 합니다. 이 경우 메서드는 익숙한 .NET **ToString** 메서드이며 페이지의 항목 속성을 통해 액세스한 다음 해당 항목의 **Exposure** 속성을 통해 액세스합니다. (연결 체인에 깊이 중첩된 메서드와 속성에 바인딩할 수 있는 방법을 보여 줍니다.)
+    이 바인딩은 메서드의 반환 값에 바인딩하기 때문에 함수 바인딩이라고 합니다. 데이터 템플릿을 사용 중인 경우 페이지의 코드 숨김 또는 **x:DataType** 형식을 통해 메서드에 액세스할 수 있어야 합니다. 이 코드에서 메서드는 익숙한 .NET **ToString** 메서드로, 페이지의 항목 속성을 통해 액세스한 다음 해당 항목의 **Exposure** 속성을 통해 액세스합니다. 연결 체인에 깊이 중첩된 메서드와 속성에 바인딩할 수 있는 방법을 보여 줍니다.
 
-    함수 바인딩은 다른 바인딩 소스를 메서드 인수로 전달할 수 있으므로 표시 값을 형식화하는 이상적인 방법이며, 바인딩 식은 단방향 모드에서 예상대로 해당 값의 변경 사항을 수신합니다. 이 예에서 **culture** 인수는 코드 숨김으로 구현된 변경되지 않은 필드에 대한 참조이지만 **PropertyChanged** 이벤트를 발생시키는 속성일 수도 있습니다. 이 경우 속성 값을 변경하면 **x:Bind** 식에서 새 값으로 **ToString**을 호출한 다음 그 결과로 UI를 업데이트할 수 있습니다. 
+    함수 바인딩은 다른 바인딩 소스를 메서드 인수로 전달할 수 있으므로 표시 값에 서식을 지정하는 데 적합한 방법이며, 바인딩 식은 단방향 모드에서 예상대로 해당 값의 변경 내용을 수신 대기합니다. 이 예제에서 **culture** 인수는 코드 숨김으로 구현된, 변경되지 않는 필드에 대한 참조이지만 **PropertyChanged** 이벤트를 발생시키는 속성이었을 수도 있습니다. 이 경우 속성 값을 변경하면 **x:Bind** 식은 새 값으로 **ToString**을 호출한 다음, 그 결과로 UI를 업데이트합니다. 
 
 2. 다른 효과 슬라이더에 레이블을 지정하는 **TextBlocks**에 대해 동일한 작업을 수행합니다.
 
@@ -549,23 +549,23 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     <TextBlock ... Text="{x:Bind item.Blur.ToString('N', culture), Mode=OneWay}" />
     ```
 
-이제 앱을 실행하면 슬라이더 레이블을 포함하여 모든 것이 작동합니다. 
+이제 앱을 실행하면 슬라이더 레이블을 비롯한 모든 기능이 제대로 작동합니다. 
 
 ![작업 레이블이 있는 효과 슬라이더](../design/basics/images/xaml-basics/effect-sliders-after-label-fix.png)
 
 > [!NOTE]
-> 마지막 플레이 지점에서 **TextBlock**을 통해 함수 바인딩을 사용하여, **ItemSize** 값을 전달할 때 "000 x 000" 형식의 문자열을 반환하는 새 메서드에 바인딩합니다.
+> 마지막 재생 지점의 **TextBlock**과 함께 함수 바인딩을 사용하고, **ItemSize** 값을 전달할 때 “000 x 000” 형식의 문자열을 반환하는 새 메서드에 바인딩합니다.
 
 
 ## <a name="conclusion"></a>결론
 
-이 자습서는 데이터 바인딩에 대해 설명하고 사용 가능한 기능 중 일부를 보여 줍니다. 결론을 내리기 전에 한 가지 사항에 주의해야 합니다. 즉, 모든 것이 바인딩 가능한 것은 아니며 때로는 연결하려는 값이 바인딩하려는 속성과 호환되지 않습니다. 바인딩에는 많은 유연성이 있지만 모든 상황에서 작동하지는 않습니다.
+이 자습서는 데이터 바인딩에 대해 설명하고 사용 가능한 몇 가지 기능을 보여 주었습니다. 결론을 내리기 전에 한 가지 사항에 주의해야 합니다. 즉, 모든 항목이 바인딩 가능한 것은 아니며 때로는 연결하려는 값이 바인딩할 속성과 호환되지 않습니다. 바인딩에는 많은 유연성이 있지만 모든 상황에서 작동하지는 않습니다.
 
-바인딩으로 처리되지 않은 문제의 한 예로, 컨트롤에 세부 정보 페이지 확대/축소 기능과 마찬가지로 바인딩할 적절한 속성이 없는 경우가 있습니다. 이 확대/축소 슬라이더는 이미지를 표시하는 **ScrollViewer**와 상호 작용해야 하지만 **ScrollViewer**는 **ChangeView** 메서드를 통해서만 업데이트할 수 있습니다. 유지 하는 일반적인 이벤트 처리기 사용이 경우에 **ScrollViewer** 및 확대/축소 슬라이더에서 동기화; 참조는 **DetailPage** **ZoomSlider_ValueChanged** 및 **MainImageScroll_ViewChanged** 메서드 세부 정보에 대 한 합니다.
+바인딩을 통해 해결할 수 없는 문제의 한 예로, 세부 정보 페이지 확대/축소 기능과 마찬가지로 컨트롤에 바인딩할 적절한 속성이 없는 경우가 있습니다. 이 확대/축소 슬라이더는 이미지를 표시하는 **ScrollViewer**와 상호 작용해야 하지만, **ScrollViewer**는 **ChangeView** 메서드를 통해서만 업데이트할 수 있습니다. 여기서는 기존 이벤트 처리기를 사용하여 **ScrollViewer** 및 확대/축소 슬라이더를 동기화 상태로 유지합니다. 자세한 내용은 **DetailPage** **ZoomSlider_ValueChanged** 및 **MainImageScroll_ViewChanged** 메서드를 참조하세요.
 
-그럼에도 불구하고 바인딩은 코드를 단순화하고 UI 논리를 데이터 논리와 분리하여 유지하는 강력하고 유연한 방법입니다. 이렇게 하면 다른 측면에 버그를 도입할 위험을 줄이면서 이렇게 분리된 양 측면을 조정하는 것이 훨씬 쉬워집니다. 
+그럼에도 불구하고, 바인딩은 코드를 단순화하고 UI 논리를 데이터 논리와 별도로 유지하는 강력하고 유연한 방법입니다. 따라서 다른 쪽에 버그가 생길 위험을 줄이면서 이렇게 분리된 한쪽을 훨씬 간단하게 조정할 수 있습니다. 
 
-UI 및 데이터 분리의 한 예는 **ImageFileInfo.ImageTitle** 속성입니다. 이 속성(및 **ImageRating** 속성)은 값이 필드 대신 파일 메타데이터(**ImageProperties** 형식을 통해 노출됨)에 저장되기 때문에 파트 4에서 만든 **ItemSize** 속성과 약간 다릅니다. 또한 **ImageTitle**은 파일 메타데이터에 제목이 없는 경우 **ImageName** 값(파일 이름으로 설정)을 반환합니다. 
+UI 및 데이터 분리의 한 예로 **ImageFileInfo.ImageTitle** 속성이 있습니다. 이 속성(및 **ImageRating** 속성)은 값이 필드 대신 **ImageProperties** 형식을 통해 공개된 파일 메타데이터에 저장되기 때문에 4부에서 만든 **ItemSize** 속성과는 약간 다릅니다. 또한 **ImageTitle**은 파일 메타데이터에 제목이 없는 경우 **ImageName** 값(파일 이름으로 설정)을 반환합니다. 
 
 ```c#
 public string ImageTitle
@@ -583,17 +583,17 @@ public string ImageTitle
 }
 ```
 
-보시다시피 setter는 **ImageProperties.Title** 속성을 업데이트한 다음 **SavePropertiesAsync**를 호출하여 새 값을 파일에 씁니다. (이는 비동기식 방법이지만 속성에 **await** 키워드를 사용할 수 없습니다. 속성 getter 및 setter가 즉시 완성되어야 하기 때문에 필요하지 않을 것입니다. 따라서 그 대신 메서드를 호출하고 이를 반환하는 **Task** 개체를 무시할 수 있습니다.) 
+보시다시피, setter는 **ImageProperties.Title** 속성을 업데이트하고 **SavePropertiesAsync**를 호출하여 새 값을 파일에 씁니다. 비동기 메서드이지만 속성에 **await** 키워드를 사용할 수 없습니다. 속성 getter 및 setter가 즉시 완료되어야 하기 때문에 필요하지 않습니다. 대신, 메서드를 호출하고 반환되는 **Task** 개체를 무시합니다. 
 
 <!-- TODO more screenshots? -->
 
 ## <a name="going-further"></a>더 나아가기
 
-이제 이 실습을 완료했으므로 독자적으로 문제를 해결할 수 있는 충분한 바인딩 지식을 얻게 되었습니다.
+이제 이 랩을 완료했으므로 독자적으로 문제를 해결할 수 있는 충분한 바인딩 지식을 얻게 되었습니다.
 
-이전의 세부 정보 페이지에서 확대/축소 수준을 변경하면 뒤로 이동하며, 다시 같은 이미지를 선택하면 자동으로 다시 설정됩니다. 각 이미지의 확대/축소 수준을 개별적으로 보존하고 복원하는 방법을 알 수 있나요? 행운을 빕니다!
+보시다시피, 세부 정보 페이지에서 확대/축소 수준을 변경할 경우 뒤로 이동하여 같은 이미지를 다시 선택하면 자동으로 다시 설정됩니다. 각 이미지의 확대/축소 수준을 개별적으로 보존하고 복원하는 방법을 파악하셨나요? 행운을 빕니다!
     
-이 자습서에서 필요한 모든 정보를 얻을 수 있어야 하지만, 더 많은 지침이 필요하다면 한 번의 클릭으로 데이터 바인딩 문서를 확인할 수 있습니다. 여기에서 시작하세요.
+이 자습서에서 필요한 모든 정보를 얻을 수 있겠지만, 더 많은 지침이 필요하다면 한 번 클릭으로 데이터 바인딩 문서를 확인할 수 있습니다. 여기서 시작하세요.
 
-+ [{X:bind} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)
++ [{x:Bind} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)
 + [데이터 바인딩 심층 분석](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)

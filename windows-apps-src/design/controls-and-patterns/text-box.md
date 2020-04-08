@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 07da54dddfffe082aa5633ac8eac3f342aaa6a5c
-ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
+ms.openlocfilehash: 0167d1f0ed69f8354fa6ee7cd77387aee9aee842
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302717"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081509"
 ---
 # <a name="text-box"></a>텍스트 상자
 
@@ -24,7 +24,13 @@ TextBox 컨트롤을 사용하면 사용자가 앱에 텍스트를 입력할 수
 
 TextBox에는 텍스트 입력을 간소화할 수 있는 다양한 기능이 있습니다. 텍스트 복사 및 붙여넣기를 지원하는 친숙한 기본 제공 상황에 맞는 메뉴와 함께 제공됩니다. "모두 지우기" 단추를 통해 사용자는 입력된 모든 텍스트를 빠르게 삭제할 수 있습니다. 또한 맞춤법 검사 기능이 기본 제공되며 기본적으로 사용됩니다.
 
-> **중요 API**: [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), [Text 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text)
+**Windows UI 라이브러리 가져오기**
+
+|  |  |
+| - | - |
+| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 UWP 앱의 새로운 컨트롤 및 UI 기능을 포함하는 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+> **플랫폼 API**: [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), [Text 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -45,7 +51,7 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/TextBox">앱을 열고 TextBox의 기능을 확인</a>합니다.</p>
     <ul>
@@ -81,7 +87,7 @@ rootGrid.Children.Add(textBox);
 
 ### <a name="use-a-text-box-for-data-input-in-a-form"></a>양식의 데이터 입력에 입력란 사용
 
-입력란을 사용하여 양식의 데이터 입력을 수락하고 [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text) 속성을 사용하여 입력란에서 전체 텍스트 문자열을 가져오는 것이 일반적입니다. 일반적으로 제출 단추 클릭과 같은 이벤트를 사용하여 Text 속성에 액세스하지만, 텍스트가 변경될 때 특정 작업을 수행해야 하는 경우 [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) 또는 [TextChanging](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanging) 이벤트를 처리할 수 있습니다.
+텍스트 상자를 사용하여 양식의 데이터 입력을 수락하고, [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text) 속성을 사용하여 텍스트 상자에서 전체 텍스트 문자열을 가져오는 것이 일반적입니다. 일반적으로 제출 단추 클릭과 같은 이벤트를 사용하여 Text 속성에 액세스하지만, 텍스트가 변경될 때 특정 작업을 수행해야 하는 경우 [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) 또는 [TextChanging](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanging) 이벤트를 처리할 수 있습니다.
 
 이 예제에서는 텍스트 상자의 현재 콘텐츠를 가져오고 설정하는 방법을 보여 줍니다.
 
@@ -143,7 +149,7 @@ IsEnabled
 
 > **참고**&nbsp;&nbsp;TextBox와 RichEditBox는 해당 TextWrapping 속성에 대해 **WrapWholeWords** 값을 지원하지 않습니다. TextBox.TextWrapping 또는 RichEditBox.TextWrapping 값으로 WrapWholeWords를 사용하려고 하면 잘못된 인수 예외가 throw됩니다.
 
-여러 줄 입력란은 해당 [Height](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height) 또는 [MaxHeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.maxheight) 속성이나 부모 컨테이너에 의해 제한되지 않을 경우 텍스트를 입력함에 따라 계속 세로로 증가합니다. 여러 줄 입력란이 표시 영역 이상 증가하지 않는지 테스트하고, 증가할 경우 증가를 제한해야 합니다. 항상 여러 줄 입력란에 대해 적절한 높이를 지정하여 사용자가 입력함에 따라 높이가 증가하지 않도록 하는 것이 좋습니다.
+여러 줄 텍스트 상자는 해당 [Height](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height) 또는 [MaxHeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.maxheight) 속성이나 부모 컨테이너에서 제한되지 않을 경우 텍스트를 입력함에 따라 계속 세로로 증가합니다. 여러 줄 텍스트 상자가 표시 영역 이상 증가하지 않는지 테스트하고, 해당하는 경우 증가를 제한해야 합니다. 항상 여러 줄 입력란에 대해 적절한 높이를 지정하여 사용자가 입력함에 따라 높이가 증가하지 않도록 하는 것이 좋습니다.
 
 스크롤 휠 또는 터치를 사용한 스크롤은 필요에 따라 자동으로 사용됩니다. 그러나 세로 스크롤 막대는 기본적으로 표시되지 않습니다. 다음과 같이 포함된 ScrollViewer에서 [ScrollViewer.VerticalScrollBarVisibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility)를 **Auto**로 설정하면 세로 스크롤 막대를 표시할 수 있습니다.
 

@@ -1,84 +1,84 @@
 ---
-Description: AppWindow 클래스를 사용 하 여 별도의 창에서 앱의 서로 다른 부분을 볼 수 있습니다.
-title: AppWindow 클래스를 사용 하 여 앱에 대 한 보조 창 표시
+Description: AppWindow 클래스를 사용하여 앱의 다른 부분을 별도의 창에 표시할 수 있습니다.
+title: AppWindow 클래스를 사용하여 앱의 보조 창 표시
 ms.date: 07/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9b89d9100157cf40266bb983e258aa187f65dc93
 ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/09/2019
 ms.locfileid: "68867459"
 ---
-# <a name="show-multiple-views-with-appwindow"></a>AppWindow를 사용 하 여 여러 뷰 표시
+# <a name="show-multiple-views-with-appwindow"></a>AppWindow를 사용하여 여러 뷰 표시
 
-[Appwindow](/uwp/api/windows.ui.windowmanagement.appwindow) 및 관련 된 api를 사용 하면 각 창에서 동일한 UI 스레드를 계속 사용 하면서 보조 창에 앱 콘텐츠를 표시할 수 있으므로 다중 창 앱을 간편 하 게 만들 수 있습니다.
+[AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 및 관련 API는 각 창에서 동일한 UI 스레드를 계속 사용하면서 앱 콘텐츠를 보조 창에 표시할 수 있게 하여 다중 창 앱을 만드는 작업을 간소화합니다.
 
 > [!NOTE]
-> AppWindow는 현재 미리 보기로 제공 됩니다. 즉, AppWindow를 사용 하는 앱을 저장소에 제출할 수 있지만, 일부 플랫폼 및 프레임 워크 구성 요소는 AppWindow에서 작동 하지 않는 것으로 알려져 있습니다 ( [제한 사항](/uwp/api/windows.ui.windowmanagement.appwindow#limitations)참조).
+> AppWindow는 현재 미리 보기로 제공됩니다. 따라서 AppWindow를 사용하는 앱을 Microsoft Store에 제출할 수 있지만, 일부 플랫폼 및 프레임워크 구성 요소는 AppWindow에서 작동하지 않는 것으로 알려져 있습니다([제한 사항](/uwp/api/windows.ui.windowmanagement.appwindow#limitations) 참조).
 
-여기서는 샘플 앱 `HelloAppWindow`이 있는 여러 창에 대 한 몇 가지 시나리오를 보여 줍니다. 샘플 앱은 다음과 같은 기능을 보여 줍니다.
+여기서는 `HelloAppWindow`라는 샘플 앱을 사용하여 여러 창의 몇 가지 시나리오를 보여 줍니다. 샘플 앱은 다음과 같은 기능을 보여 줍니다.
 
-- 주 페이지에서 컨트롤의 도킹을 해제 하 고 새 창에서 엽니다.
+- 주 페이지에서 컨트롤의 도킹을 해제하고 새 창에서 엽니다.
 - 새 창에서 페이지의 새 인스턴스를 엽니다.
-- 앱에서 프로그래밍 방식으로 새 창의 크기를 조정 하 고 위치를 조정 합니다.
-- 콘텐츠 대화 상자를 앱의 적절 한 창에 연결 합니다.
+- 앱에서 프로그래밍 방식으로 새 창의 크기와 위치를 지정합니다.
+- 콘텐츠 대화 상자를 앱의 적절한 창에 연결합니다.
 
 ![단일 창이 있는 샘플 앱](images/hello-app-window-single.png)
   
 > _단일 창이 있는 샘플 앱_
 
-![도킹 되지 않은 색 선택 및 보조 윈도를 사용 하는 샘플 앱](images/hello-app-window-multi.png)
+![도킹되지 않은 색 선택 및 보조 창을 사용하는 샘플 앱](images/hello-app-window-multi.png)
 
-> _도킹 되지 않은 색 선택 및 보조 윈도를 사용 하는 샘플 앱_
+> _도킹되지 않은 색 선택 및 보조 창을 사용하는 샘플 앱_
 
-> **중요 API**: [Windows. UI. WindowManagement 네임 스페이스](/uwp/api/windows.ui.windowmanagement), [appwindow 클래스](/uwp/api/windows.ui.windowmanagement.appwindow)
+> **중요 API**: [Windows.UI.WindowManagement 네임스페이스](/uwp/api/windows.ui.windowmanagement), [AppWindow 클래스](/uwp/api/windows.ui.windowmanagement.appwindow)
 
 ## <a name="api-overview"></a>API 개요
 
-[Windowmanagement](/uwp/api/windows.ui.windowmanagement) 네임 스페이스의 [appwindow](/uwp/api/windows.ui.windowmanagement.appwindow) 클래스 및 기타 api는 Windows 10 버전 1903 (SDK 18362)부터 사용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 [ApplicationView를 사용 하 여 보조 창을 만들어야](application-view.md)합니다. WindowManagement Api는 아직 개발 중 이며 API 참조 문서에 설명 된 것과 같은 [제한](/uwp/api/windows.ui.windowmanagement.appwindow#limitations) 사항이 있습니다.
+[AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 클래스와 [WindowManagement](/uwp/api/windows.ui.windowmanagement) 네임스페이스의 기타 API는 Windows 10 버전 1903(SDK 18362)부터 사용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우에는 [ApplicationView를 사용하여 보조 창을 만들어야](application-view.md) 합니다. WindowManagement API는 아직 개발 중이며, API 참조 문서에 설명된 대로 [제한 사항](/uwp/api/windows.ui.windowmanagement.appwindow#limitations)이 있습니다.
 
-다음은 AppWindow에서 콘텐츠를 표시 하는 데 사용 하는 몇 가지 중요 한 Api입니다.
+다음은 AppWindow에서 콘텐츠를 표시하는 데 사용하는 몇 가지 중요한 API입니다.
 
 ### <a name="appwindow"></a>AppWindow
 
-[Appwindow](/uwp/api/windows.ui.windowmanagement.appwindow) 클래스를 사용 하 여 Windows 런타임 앱의 일부를 보조 창에 표시할 수 있습니다. 이는 응용 프로그램 [보기](/uwp/api/windows.ui.viewmanagement.applicationview)와 비슷하지만 동작 및 수명에서 동일 하지는 않습니다. AppWindow의 주요 기능은 각 인스턴스가 생성 된 것과 동일한 UI 처리 스레드 (이벤트 디스패처 포함)를 공유 하 여 다중 창 앱을 간소화 하는 것입니다.
+[AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 클래스를 사용하여 Windows 런타임 앱의 일부를 보조 창에 표시할 수 있습니다. [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview)와 비슷하지만 동작과 수명이 동일하지는 않습니다. AppWindow의 주요 기능은 각 인스턴스가 생성 시 사용된 것과 동일한 UI 처리 스레드(이벤트 디스패처 포함)를 공유하여 다중 창 앱을 간소화하는 것입니다.
 
-AppWindow에만 XAML 콘텐츠를 연결할 수 있으며, 네이티브 DirectX 또는 Holographic 콘텐츠를 지원 하지 않습니다. 그러나 DirectX 콘텐츠를 호스팅하는 XAML [SwapChainPanel](/uwp/api/windows.ui.xaml.controls.swapchainpanel) 를 표시할 수 있습니다.
+AppWindow에만 XAML 콘텐츠를 연결할 수 있으며, 네이티브 DirectX 또는 Holographic 콘텐츠는 지원되지 않습니다. 그러나 DirectX 콘텐츠를 호스트하는 XAML [SwapChainPanel](/uwp/api/windows.ui.xaml.controls.swapchainpanel)을 표시할 수 있습니다.
 
 ### <a name="windowingenvironment"></a>WindowingEnvironment
 
-[Windowingenvironment](/uwp/api/windows.ui.windowmanagement.windowingenvironment) API를 사용 하면 앱이 제공 되는 환경을 파악 하 여 필요에 따라 앱을 조정할 수 있습니다. 환경에서 지 원하는 창의 종류를 설명 합니다. 예를 `Overlapped` 들어 앱이 PC에서 실행 되는 경우 또는 `Tiled` 앱이 Xbox에서 실행 되는 경우입니다. 또한 앱이 논리적으로 표시 될 수 있는 영역을 설명 하는 DisplayRegion 개체 집합을 제공 합니다.
+[WindowingEnvironment](/uwp/api/windows.ui.windowmanagement.windowingenvironment) API를 사용하면 앱이 제공되는 환경을 파악하여 필요에 따라 앱을 조정할 수 있습니다. 환경에서 지원하는 창의 종류를 설명합니다. 예를 들어 앱이 PC에서 실행되는 경우 `Overlapped`이고, 앱이 Xbox에서 실행되는 경우 `Tiled`입니다. 또한 앱이 논리적으로 표시될 수 있는 영역을 설명하는 DisplayRegion 개체 세트를 제공합니다.
 
 ### <a name="displayregion"></a>DisplayRegion
 
-[Displayregion](/uwp/api/windows.ui.windowmanagement.displayregion) API는 보기를 논리 표시의 사용자에 게 표시할 수 있는 영역을 설명 합니다. 예를 들어 데스크톱 PC에서이는 작업 표시줄의 전체 표시를 뺀 값입니다. 지원 모니터의 물리적 표시 영역에 대 한 1:1 매핑이 반드시 필요 하지는 않습니다. 동일한 모니터 내에 표시 영역이 여러 개 있을 수 있으며, 이러한 모니터가 모든 측면에서 동일 하면 여러 모니터에 걸쳐 있는 DisplayRegion을 구성할 수 있습니다.
+[DisplayRegion](/uwp/api/windows.ui.windowmanagement.displayregion) API는 논리적 표시를 위해 뷰를 사용자에게 표시할 수 있는 영역을 설명합니다. 예를 들어 데스크톱 PC에서는 전체 화면 표시에서 작업 표시줄의 영역을 제외한 영역입니다. 지원 모니터의 물리적 표시 영역과 1:1 매핑이 반드시 필요하지는 않습니다. 동일한 모니터 내에 표시 영역이 여러 개 있을 수 있거나, 해당 모니터가 모든 측면에서 동일한 경우 여러 모니터에 걸쳐 있는 DisplayRegion을 구성할 수 있습니다.
 
 ### <a name="appwindowpresenter"></a>AppWindowPresenter
 
-[Appwindowpresenter](/uwp/api/windows.ui.windowmanagement.appwindowpresenter) API를 사용 하면 windows를 또는 `FullScreen` `CompactOverlay`와 같은 미리 정의 된 구성으로 쉽게 전환할 수 있습니다. 이러한 구성은 구성을 지 원하는 모든 장치에서 사용자에 게 일관 된 환경을 제공 합니다.
+[AppWindowPresenter](/uwp/api/windows.ui.windowmanagement.appwindowpresenter) API를 사용하면 `FullScreen` 또는 `CompactOverlay`와 같은 미리 정의된 구성으로 창을 쉽게 전환할 수 있습니다. 이러한 구성은 해당 구성을 지원하는 모든 디바이스에서 사용자에게 일관된 환경을 제공합니다.
 
 ### <a name="uicontext"></a>UIContext
 
-[Uicontext](/uwp/api/windows.ui.uicontext) 는 앱 창이 나 보기의 고유 식별자입니다. 자동으로 만들어지므로 [UIElement. uicontext](/uwp/api/windows.ui.xaml.uielement.uicontext) 속성을 사용 하 여 uicontext를 검색할 수 있습니다. XAML 트리의 모든 UIElement에는 동일한 UIContext가 있습니다.
+[UIContext](/uwp/api/windows.ui.uicontext)는 앱 창이나 뷰의 고유 식별자입니다. 자동으로 만들어지므로 [UIElement.UIContext](/uwp/api/windows.ui.xaml.uielement.uicontext) 속성을 사용하여 UIContext를 검색할 수 있습니다. XAML 트리의 모든 UIElement에는 동일한 UIContext가 있습니다.
 
- [창과](/uwp/api/Windows.UI.Xaml.Window.Current) 패턴은 `GetForCurrentView` 작업에 사용할 단일 XAML 트리를 사용 하 여 단일 applicationview/CoreWindow를 사용 하는 것 이므로 uicontext는 중요 합니다. 이는 AppWindow를 사용 하는 경우에 해당 되지 않으므로 UIContext를 사용 하 여 특정 창을 대신 식별할 수 있습니다.
+ `GetForCurrentView` 패턴 및 [Window.Current](/uwp/api/Windows.UI.Xaml.Window.Current)와 같은 API는 작업할 스레드별로 단일 XAML 트리가 있는 단일 ApplicationView/CoreWindow를 사용해야 하므로 UIContext가 중요합니다. AppWindow를 사용하는 경우에는 해당하지 않으므로 UIContext를 사용하여 특정 창을 대신 식별할 수 있습니다.
 
 ### <a name="xamlroot"></a>XamlRoot
 
-[Xamlroot](/uwp/api/windows.ui.xaml.xamlroot) 클래스는 XAML 요소 트리를 보유 하 고, 창 호스트 개체 (예: [Appwindow](/uwp/api/windows.ui.windowmanagement.appwindow) 또는 [applicationview](/uwp/api/windows.ui.viewmanagement.applicationview))에 연결 하 고, 크기 및 표시 유형과 같은 정보를 제공 합니다. XamlRoot 개체를 직접 만들지 않습니다. 대신 AppWindow에 XAML 요소를 연결할 때 하나를 만듭니다. 그런 다음 [UIElement. xamlroot](/uwp/api/windows.ui.xaml.uielement.xamlroot) 속성을 사용 하 여 xamlroot를 검색할 수 있습니다.
+[XamlRoot](/uwp/api/windows.ui.xaml.xamlroot) 클래스는 XAML 요소 트리를 보유하고, 창 호스트 개체(예: [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 또는 [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview))에 트리를 연결하며, 크기 및 표시 유형과 같은 정보를 제공합니다. XamlRoot 개체는 직접 만들지 않습니다. 대신, XAML 요소를 AppWindow에 연결할 때 개체가 생성됩니다. [UIElement.XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) 속성을 사용하여 XamlRoot를 검색할 수 있습니다.
 
-UIContext 및 XamlRoot에 대 한 자세한 내용은 창 고 지 [호스트에서 코드를 이식 가능 하 게 만들기](show-multiple-views.md#make-code-portable-across-windowing-hosts)를 참조 하세요.
+UIContext 및 XamlRoot에 대한 자세한 내용은 [창 작업 호스트 간에 코드를 이식 가능하도록 설정](show-multiple-views.md#make-code-portable-across-windowing-hosts)을 참조하세요.
 
 ## <a name="show-a-new-window"></a>새 창 표시
 
-새 AppWindow에 콘텐츠를 표시 하는 단계를 살펴보겠습니다.
+새 AppWindow에 콘텐츠를 표시하는 단계를 살펴보겠습니다.
 
-**새 창을 표시 하려면**
+**새 창을 표시하려면 다음을 수행합니다.**
 
-1. 정적 [Appwindow](/uwp/api/windows.ui.windowmanagement.appwindow.trycreateasync) 메서드를 호출 하 여 새 [appwindow](/uwp/api/windows.ui.windowmanagement.appwindow)를 만듭니다.
+1. 정적 [AppWindow.TryCreateAsync](/uwp/api/windows.ui.windowmanagement.appwindow.trycreateasync) 메서드를 호출하여 새 [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow)를 만듭니다.
 
     ```csharp
     AppWindow appWindow = await AppWindow.TryCreateAsync();
@@ -86,34 +86,34 @@ UIContext 및 XamlRoot에 대 한 자세한 내용은 창 고 지 [호스트에�
 
 1. 창 콘텐츠를 만듭니다.
 
-    일반적으로 XAML [프레임](/uwp/api/Windows.UI.Xaml.Controls.Frame)을 만든 다음, 프레임을 앱 콘텐츠를 정의한 xaml [페이지로](/uwp/api/Windows.UI.Xaml.Controls.Page) 이동 합니다. 프레임 및 페이지에 대 한 자세한 내용은 [두 페이지 간 피어 투 피어 탐색](../basics/navigate-between-two-pages.md)을 참조 하세요.
+    일반적으로 XAML [Frame](/uwp/api/Windows.UI.Xaml.Controls.Frame)을 만든 다음, 앱 콘텐츠를 정의한 XAML [Page](/uwp/api/Windows.UI.Xaml.Controls.Page)로 Frame을 이동합니다. 프레임과 페이지에 대한 자세한 내용은 [두 페이지 간의 피어 투 피어 탐색](../basics/navigate-between-two-pages.md)을 참조하세요.
 
     ```csharp
     Frame appWindowContentFrame = new Frame();
     appWindowContentFrame.Navigate(typeof(AppWindowMainPage));
     ```
 
-    그러나 모든 XAML 콘텐츠는 프레임과 페이지 뿐만 아니라 AppWindow에서 표시할 수 있습니다. 예를 들어 [Colorpicker](/uwp/api/windows.ui.xaml.controls.colorpicker)와 같은 단일 컨트롤을 표시 하거나 DirectX 콘텐츠를 호스트 하는 [SwapChainPanel](/uwp/api/windows.ui.xaml.controls.swapchainpanel) 을 표시할 수 있습니다.
+    그러나 프레임과 페이지뿐만 아니라 모든 XAML 콘텐츠를 AppWindow에 표시할 수 있습니다. 예를 들어 [ColorPicker](/uwp/api/windows.ui.xaml.controls.colorpicker)와 같은 단일 컨트롤을 표시하거나, DirectX 콘텐츠를 호스트하는 [SwapChainPanel](/uwp/api/windows.ui.xaml.controls.swapchainpanel)을 표시할 수 있습니다.
 
-1. [ElementCompositionPreview](/api/windows.ui.xaml.hosting.elementcompositionpreview.setappwindowcontent) 을 호출 하 여 XAML 콘텐츠를 appwindow에 연결 합니다.
+1. [ElementCompositionPreview.SetAppWindowContent](/api/windows.ui.xaml.hosting.elementcompositionpreview.setappwindowcontent) 메서드를 호출하여 XAML 콘텐츠를 AppWindow에 연결합니다.
 
     ```csharp
     ElementCompositionPreview.SetAppWindowContent(appWindow, appWindowContentFrame);
     ```
 
-    이 메서드에 대 한 호출은 [xamlroot](/uwp/api/windows.ui.xaml.xamlroot) 개체를 만들고 지정 된 UIElement의 [xamlroot](/uwp/api/windows.ui.xaml.uielement.xamlroot) 속성으로 설정 합니다.
+    이 메서드를 호출하면 [XamlRoot](/uwp/api/windows.ui.xaml.xamlroot) 개체가 생성되고 지정한 UIElement의 [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) 속성으로 설정됩니다.
 
-    AppWindow 인스턴스당 한 번만이 메서드를 호출할 수 있습니다. 콘텐츠를 설정한 후에는이 AppWindow 인스턴스의 SetAppWindowContent에 대 한 추가 호출이 실패 합니다. 또한 null UIElement 개체를 전달 하 여 AppWindow 콘텐츠의 연결을 해제 하려고 하면 호출이 실패 합니다.
+    이 메서드는 AppWindow 인스턴스당 한 번만 호출할 수 있습니다. 콘텐츠를 설정한 후 해당 AppWindow 인스턴스에 대해 SetAppWindowContent를 추가로 호출하면 실패합니다. 또한 null UIElement 개체를 전달하여 AppWindow 콘텐츠의 연결을 해제하려고 하면 호출이 실패합니다.
 
-1. [Appwindow. TryShowAsync](/uwp/api/windows.ui.windowmanagement.appwindow.tryshowasync) 메서드를 호출 하 여 새 창을 표시 합니다.
+1. [AppWindow.TryShowAsync](/uwp/api/windows.ui.windowmanagement.appwindow.tryshowasync) 메서드를 호출하여 새 창을 표시합니다.
 
     ```csharp
     await appWindow.TryShowAsync();
     ```
 
-## <a name="release-resources-when-a-window-is-closed"></a>창이 닫힐 때 리소스를 해제 합니다.
+## <a name="release-resources-when-a-window-is-closed"></a>창이 닫힐 때 리소스를 해제합니다.
 
-항상 [appwindow. Closed](/uwp/api/windows.ui.windowmanagement.appwindow.closed) 이벤트를 처리 하 여 XAML 리소스 (appwindow 콘텐츠)와 appwindow에 대 한 참조를 해제 해야 합니다.
+항상 [AppWindow.Closed](/uwp/api/windows.ui.windowmanagement.appwindow.closed) 이벤트를 처리하여 XAML 리소스(AppWindow 콘텐츠)와 AppWindow 참조를 해제해야 합니다.
 
 ```csharp
 appWindow.Closed += delegate
@@ -123,13 +123,13 @@ appWindow.Closed += delegate
 };
 ```
 
-## <a name="track-instances-of-appwindow"></a>AppWindow의 인스턴스 추적
+## <a name="track-instances-of-appwindow"></a>AppWindow 인스턴스 추적
 
-앱에서 여러 창을 사용 하는 방법에 따라 사용자가 만드는 AppWindow의 인스턴스를 추적 하거나 추적 하지 않아도 됩니다. 이 `HelloAppWindow`예에서는 일반적으로 [appwindow](/uwp/api/windows.ui.windowmanagement.appwindow)를 사용할 수 있는 몇 가지 다른 방법을 보여 줍니다. 여기서는 이러한 창을 추적 해야 하는 이유와이를 수행 하는 방법을 살펴보겠습니다.
+앱에서 여러 창을 사용하는 방법에 따라 사용자가 만든 AppWindow 인스턴스를 추적해야 하는지 여부가 달라질 수 있습니다. `HelloAppWindow` 예제에서는 일반적으로 [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow)를 사용할 수 있는 몇 가지 다른 방법을 보여 줍니다. 여기서는 창을 추적해야 하는 이유와 추적하는 방법을 살펴보겠습니다.
 
 ### <a name="simple-tracking"></a>간단한 추적
 
-색 선택 창은 단일 XAML 컨트롤을 호스팅하고, 색 선택기와 상호 작용 하는 코드는 모두 `MainPage.xaml.cs` 파일에 상주 합니다. 색 선택 창은 단일 인스턴스만 허용 하며 기본적으로의 `MainWindow`확장입니다. 하나의 인스턴스만 생성 되도록 하려면 페이지 수준 변수를 사용 하 여 색 선택 창을 추적 합니다. 새 색 선택 창을 만들기 전에 인스턴스가 있는지 여부를 확인 하 고, 인스턴스가 있는지 확인 하 고, 새 창을 만드는 단계를 건너뛰고 기존 창에서 [Tryshowasync](/uwp/api/windows.ui.windowmanagement.appwindow.tryshowasync) 를 호출 하면 됩니다.
+색 선택 창은 단일 XAML 컨트롤을 호스트하며, 색 선택과 상호 작용하는 코드는 모두 `MainPage.xaml.cs` 파일에 있습니다. 색 선택 창은 단일 인스턴스만 허용하며, 기본적으로 `MainWindow` 확장입니다. 하나의 인스턴스만 생성되도록 하기 위해 페이지 수준 변수를 사용하여 색 선택 창을 추적합니다. 색 선택 창을 새로 만들기 전에 인스턴스가 있는지 여부를 확인한 다음, 인스턴스가 있을 경우 새 창을 만드는 단계를 건너뛰고 기존 창에 대해 [TryShowAsync](/uwp/api/windows.ui.windowmanagement.appwindow.tryshowasync)를 호출합니다.
 
 ```csharp
 AppWindow colorPickerAppWindow;
@@ -151,17 +151,17 @@ private async void DetachColorPickerButton_Click(object sender, RoutedEventArgs 
 }
 ```
 
-### <a name="track-an-appwindow-instance-in-its-hosted-content"></a>호스팅된 콘텐츠에서 AppWindow 인스턴스 추적
+### <a name="track-an-appwindow-instance-in-its-hosted-content"></a>호스트된 콘텐츠에서 AppWindow 인스턴스 추적
 
-창은 전체 XAML 페이지를 호스팅하고 페이지와 상호 작용 하는 코드는에 `AppWindowPage.xaml.cs`있습니다. `AppWindowPage` 각각 독립적으로 작동 하는 여러 인스턴스를 허용 합니다.
+`AppWindowPage` 창은 전체 XAML 페이지를 호스트하며, 페이지와 상호 작용하는 코드는 `AppWindowPage.xaml.cs`에 있습니다. 각각 독립적으로 작동하는 여러 인스턴스를 허용합니다.
 
-페이지의 기능을 사용 하 여 창을 조작 하 고, 또는 `FullScreen` `CompactOverlay`로 설정 하 고, [appwindow](/uwp/api/windows.ui.windowmanagement.appwindow.changed) 를 수신 대기 하 고, 창에 대 한 정보를 표시 하는 이벤트를 변경할 수 있습니다. 이러한 api를 호출 하려면를 `AppWindowPage` 호스트 하는 appwindow 인스턴스에 대 한 참조가 필요 합니다.
+페이지 기능은 창을 조작하여 `FullScreen` 또는 `CompactOverlay`로 설정할 수 있게 해주며, [AppWindow.Changed](/uwp/api/windows.ui.windowmanagement.appwindow.changed) 이벤트를 수신 대기하여 창 정보도 표시합니다. 해당 API를 호출하려면 `AppWindowPage`에 API를 호스트하는 AppWindow 인스턴스에 대한 참조가 필요합니다.
 
-필요한 경우에서 `AppWindowPage` 속성을 만들고 해당 속성을 만들 때 [appwindow](/uwp/api/windows.ui.windowmanagement.appwindow) 인스턴스를 할당할 수 있습니다.
+참조만 필요한 경우 `AppWindowPage`에서 속성을 만들 때 [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 인스턴스를 속성에 할당할 수 있습니다.
 
 **AppWindowPage.xaml.cs**
 
-에서 `AppWindowPage`appwindow 참조를 저장할 속성을 만듭니다.
+`AppWindowPage`에서 AppWindow 참조를 포함할 속성을 만듭니다.
 
 ```csharp
 public sealed partial class AppWindowPage : Page
@@ -174,7 +174,7 @@ public sealed partial class AppWindowPage : Page
 
 **MainPage.xaml.cs**
 
-에서 `MainPage`페이지 인스턴스에 대 한 참조를 가져오고 새로 만든 appwindow를의 `AppWindowPage`속성에 할당 합니다.
+`MainPage`에서 페이지 인스턴스에 대한 참조를 가져오고 새로 만든 AppWindow를 `AppWindowPage`의 속성에 할당합니다.
 
 ```csharp
 private async void ShowNewWindowButton_Click(object sender, RoutedEventArgs e)
@@ -195,15 +195,15 @@ private async void ShowNewWindowButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-### <a name="tracking-app-windows-using-uicontext"></a>UIContext를 사용 하 여 앱 창 추적
+### <a name="tracking-app-windows-using-uicontext"></a>UIContext를 사용하여 앱 창 추적
 
-응용 프로그램의 다른 부분에서 [Appwindow](/uwp/api/windows.ui.windowmanagement.appwindow) 인스턴스에 액세스할 수도 있습니다. 예를 들어 `MainPage` 에는 appwindow의 추적 된 인스턴스를 모두 닫는 ' 모두 닫기 ' 단추가 있을 수 있습니다.
+앱의 다른 부분에서 [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 인스턴스에 액세스하려 할 수도 있습니다. 예를 들어 `MainPage`에 추적된 AppWindow 인스턴스를 모두 닫는 ‘모두 닫기’ 단추가 있을 수 있습니다.
 
-이 경우 [Uicontext](/uwp/api/windows.ui.uicontext) 고유 식별자를 사용 하 여 [사전](/dotnet/api/system.collections.generic.dictionary-2?view=dotnet-uwp-10.0)에 있는 창 인스턴스를 추적 해야 합니다.
+이 경우 [UIContext](/uwp/api/windows.ui.uicontext) 고유 식별자를 사용하여 [Dictionary](/dotnet/api/system.collections.generic.dictionary-2?view=dotnet-uwp-10.0)에서 창 인스턴스를 추적해야 합니다.
 
 **MainPage.xaml.cs**
 
-에서 `MainPage`사전을 정적 속성으로 만듭니다. 그런 다음 페이지를 만들 때 사전에 추가 하 고 페이지가 닫히면 제거 합니다. [ElementCompositionPreview](/api/windows.ui.xaml.hosting.elementcompositionpreview.setappwindowcontent)를 호출한 후에 콘텐츠 [프레임](/uwp/api/Windows.UI.Xaml.Controls.Frame) (`appWindowContentFrame.UIContext`)에서 uicontext를 가져올 수 있습니다.
+`MainPage`에서 정적 속성으로 사전을 만듭니다. 그런 다음, 페이지를 만들 때 Dictionary에 추가하고 페이지가 닫히면 제거합니다. [ElementCompositionPreview.SetAppWindowContent](/api/windows.ui.xaml.hosting.elementcompositionpreview.setappwindowcontent)를 호출한 후에 [Frame](/uwp/api/Windows.UI.Xaml.Controls.Frame)(`appWindowContentFrame.UIContext`)에서 UIContext를 가져올 수 있습니다.
 
 ```csharp
 public sealed partial class MainPage : Page
@@ -256,7 +256,7 @@ public sealed partial class MainPage : Page
 
 **AppWindowPage.xaml.cs**
 
-`AppWindowPage` 코드에서 [appwindow](/uwp/api/windows.ui.windowmanagement.appwindow) 인스턴스를 사용 하려면 페이지의 [uicontext](/uwp/api/windows.ui.uicontext) 를 사용 하 여의 `MainPage`정적 사전에서 해당 인스턴스를 검색 합니다. UIContext가 null이 되지 않도록 생성자 대신 페이지의 [로드](/uwp/api/windows.ui.xaml.frameworkelement.loaded) 된 이벤트 처리기에서이 작업을 수행 해야 합니다. 페이지에서 UIContext를 가져올 수 있습니다 `this.UIContext`.
+`AppWindowPage` 코드에서 [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 인스턴스를 사용하려면 페이지의 [UIContext](/uwp/api/windows.ui.uicontext)를 사용하여 `MainPage`의 static Dictionary에서 검색합니다. UIContext가 null이 되지 않도록 생성자 대신 페이지의 [Loaded](/uwp/api/windows.ui.xaml.frameworkelement.loaded) 이벤트 처리기에서 이 작업을 수행해야 합니다. `this.UIContext`와 같이 페이지에서 UIContext를 가져올 수 있습니다.
 
 ```csharp
 public sealed partial class AppWindowPage : Page
@@ -284,29 +284,29 @@ public sealed partial class AppWindowPage : Page
 ```
 
 > [!NOTE]
-> 이 예제에서는에서 `AppWindowPage`창을 추적 하는 두 가지 방법을 모두 보여 주지만 일반적으로 둘 중 하나만 사용 합니다. `HelloAppWindow`
+> `HelloAppWindow` 예제는 `AppWindowPage`에서 창을 추적하는 두 가지 방법을 모두 보여 주지만, 일반적으로 두 가지 방법 중 하나만 사용합니다.
 
 ## <a name="request-window-size-and-placement"></a>요청 창 크기 및 배치
 
-[Appwindow](/uwp/api/windows.ui.windowmanagement.appwindow) 클래스에는 창의 크기와 배치를 제어 하는 데 사용할 수 있는 여러 메서드가 있습니다. 메서드 이름에서 암시 하는 것 처럼 시스템은 환경 요인에 따라 요청 된 변경을 허용할 수도 있고 그렇지 않을 수도 있습니다.
+[AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 클래스에는 창의 크기와 배치를 제어하는 데 사용할 수 있는 여러 메서드가 있습니다. 메서드 이름에서 알 수 있듯이, 환경 요인에 따라 요청된 변경 내용의 적용 여부가 달라질 수 있습니다.
 
-[Requestsize](/uwp/api/windows.ui.windowmanagement.appwindow.requestsize) 를 호출 하 여 다음과 같이 원하는 창 크기를 지정 합니다.
+[RequestSize](/uwp/api/windows.ui.windowmanagement.appwindow.requestsize)를 호출하여 다음과 같이 원하는 창 크기를 지정합니다.
 
 ```csharp
 colorPickerAppWindow.RequestSize(new Size(300, 428));
 ```
 
-창 배치를 관리 하는 방법에는 _Requestmove *_ 라는 이름이 지정 됩니다. [RequestMoveAdjacentToCurrentView](/uwp/api/windows.ui.windowmanagement.appwindow.requestmoveadjacenttocurrentview), [RequestMoveAdjacentToWindow](/uwp/api/windows.ui.windowmanagement.appwindow.requestmoveadjacenttowindow), [RequestMoveRelativeToDisplayRegion](/uwp/api/windows.ui.windowmanagement.appwindow.requestmoverelativetodisplayregion), [RequestMoveToDisplayRegion](/uwp/api/windows.ui.windowmanagement.appwindow.requestmovetodisplayregion).
+창 배치를 관리하는 메서드를 _RequestMove*_ 라고 하며 [RequestMoveAdjacentToCurrentView](/uwp/api/windows.ui.windowmanagement.appwindow.requestmoveadjacenttocurrentview), [RequestMoveAdjacentToWindow](/uwp/api/windows.ui.windowmanagement.appwindow.requestmoveadjacenttowindow), [RequestMoveRelativeToDisplayRegion](/uwp/api/windows.ui.windowmanagement.appwindow.requestmoverelativetodisplayregion), [RequestMoveToDisplayRegion](/uwp/api/windows.ui.windowmanagement.appwindow.requestmovetodisplayregion) 등이 있습니다.
 
-이 예제에서이 코드는 창이 생성 된 주 뷰 옆으로 창을 이동 합니다.
+이 예제에서 다음 코드는 창 생성 시 사용된 주 뷰 옆으로 창을 이동합니다.
 
 ```csharp
 colorPickerAppWindow.RequestMoveAdjacentToCurrentView();
 ```
 
-창의 현재 크기 및 배치에 대 한 정보를 가져오려면 [Getplacement](/uwp/api/windows.ui.windowmanagement.appwindow.getplacement)를 호출 합니다. 그러면 창의 현재 [Displayregion](/uwp/api/windows.ui.windowmanagement.appwindowplacement.displayregion), [오프셋](/uwp/api/windows.ui.windowmanagement.appwindowplacement.offset)및 [크기](/uwp/api/windows.ui.windowmanagement.appwindowplacement.size) 를 제공 하는 [appwindowplacement](/uwp/api/windows.ui.windowmanagement.appwindowplacement) 개체가 반환 됩니다.
+창의 현재 크기와 배치에 대한 정보를 가져오려면 [GetPlacement](/uwp/api/windows.ui.windowmanagement.appwindow.getplacement)를 호출합니다. 창의 현재 [DisplayRegion](/uwp/api/windows.ui.windowmanagement.appwindowplacement.displayregion), [Offset](/uwp/api/windows.ui.windowmanagement.appwindowplacement.offset) 및 [Size](/uwp/api/windows.ui.windowmanagement.appwindowplacement.size)를 제공하는 [AppWindowPlacement](/uwp/api/windows.ui.windowmanagement.appwindowplacement) 개체가 반환됩니다.
 
-예를 들어이 코드를 호출 하 여 창을 디스플레이의 오른쪽 위 모퉁이로 이동할 수 있습니다. 이 코드는 창이 표시 된 후에 호출 해야 합니다. 그렇지 않으면 GetPlacement 호출에서 반환 되는 창 크기가 0, 0이 되며 오프셋이 올바르지 않습니다.
+예를 들어 다음 코드를 호출하여 창을 화면 표시의 오른쪽 위로 이동할 수 있습니다. 이 코드는 창이 표시된 후에 호출해야 합니다. 그러지 않으면 GetPlacement 호출에서 반환되는 창 크기가 0,0이 되며 오프셋이 올바르지 않습니다.
 
 ```csharp
 DisplayRegion displayRegion = window.GetPlacement().DisplayRegion;
@@ -318,15 +318,15 @@ window.RequestMoveRelativeToDisplayRegion(displayRegion, new Point(horizontalOff
 
 ## <a name="request-a-presentation-configuration"></a>프레젠테이션 구성 요청
 
-[Appwindowpresenter](/uwp/api/windows.ui.windowmanagement.appwindowpresenter) 클래스를 사용 하면 표시 되는 장치에 적합 한 미리 정의 된 구성을 사용 하 여 [appwindow](/uwp/api/windows.ui.windowmanagement.appwindow) 를 표시할 수 있습니다. [AppWindowPresentationConfiguration](/uwp/api/windows.ui.windowmanagement.appwindowpresentationconfiguration) 값을 사용 하 여 또는 `FullScreen` `CompactOverlay` 모드에서 창을 저장할 수 있습니다.
+[AppWindowPresenter](/uwp/api/windows.ui.windowmanagement.appwindowpresenter) 클래스를 사용하면 창이 표시되는 디바이스에 적합한 미리 정의된 구성을 사용하여 [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow)를 표시할 수 있습니다. [AppWindowPresentationConfiguration](/uwp/api/windows.ui.windowmanagement.appwindowpresentationconfiguration) 값을 사용하여 창을 `FullScreen` 또는 `CompactOverlay` 모드로 설정할 수 있습니다.
 
-이 예제에서는 다음을 수행 하는 방법을 보여 줍니다.
+이 예제에서는 다음을 수행하는 방법을 보여 줍니다.
 
-- 사용 가능한 창 프레젠테이션이 변경 될 경우 알리도록 [Appwindow. Changed](/uwp/api/windows.ui.windowmanagement.appwindow.changed) 이벤트를 사용 합니다.
-- [Appwindow. presenter](/uwp/api/windows.ui.windowmanagement.appwindow.presenter) 속성을 사용 하 여 현재 [appwindowpresenter](/uwp/api/windows.ui.windowmanagement.appwindowpresenter)를 가져옵니다.
-- [IsPresentationSupported](/uwp/api/windows.ui.windowmanagement.appwindowpresenter.ispresentationsupported) 를 호출 하 여 특정 [AppWindowPresentationKind](/uwp/api/windows.ui.windowmanagement.appwindowpresentationkind) 지원 되는지 확인 합니다.
-- [GetConfiguration](/uwp/api/windows.ui.windowmanagement.appwindowpresenter.getconfiguration) 을 호출 하 여 현재 사용 중인 구성 종류를 확인 합니다.
-- [Requestpresentation](/uwp/api/windows.ui.windowmanagement.appwindowpresenter.requestpresentation) 를 호출 하 여 현재 구성을 변경 합니다.
+- [AppWindow.Changed](/uwp/api/windows.ui.windowmanagement.appwindow.changed) 이벤트를 사용하여 사용 가능한 창 프레젠테이션이 변경될 경우 알림이 표시되도록 합니다.
+- [AppWindow.Presenter](/uwp/api/windows.ui.windowmanagement.appwindow.presenter) 속성을 사용하여 현재 [AppWindowPresenter](/uwp/api/windows.ui.windowmanagement.appwindowpresenter)를 가져옵니다.
+- [IsPresentationSupported](/uwp/api/windows.ui.windowmanagement.appwindowpresenter.ispresentationsupported)를 호출하여 특정 [AppWindowPresentationKind](/uwp/api/windows.ui.windowmanagement.appwindowpresentationkind)가 지원되는지 확인합니다.
+- [GetConfiguration](/uwp/api/windows.ui.windowmanagement.appwindowpresenter.getconfiguration)을 호출하여 현재 사용 중인 구성 종류를 확인합니다.
+- [RequestPresentation](/uwp/api/windows.ui.windowmanagement.appwindowpresenter.requestpresentation)을 호출하여 현재 구성을 변경합니다.
 
 ```csharp
 private void Window_Changed(AppWindow sender, AppWindowChangedEventArgs args)
@@ -401,13 +401,13 @@ private void FullScreenButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="reuse-xaml-elements"></a>XAML 요소 다시 사용
+## <a name="reuse-xaml-elements"></a>XAML 요소 재사용
 
-[Appwindow](/uwp/api/windows.ui.windowmanagement.appwindow) 를 사용 하면 동일한 UI 스레드가 있는 여러 XAML 트리를 사용할 수 있습니다. 그러나 xaml 요소는 XAML 트리에 한 번만 추가할 수 있습니다. UI의 일부를 한 창에서 다른 창으로 이동 하려면 XAML 트리에서 배치를 관리 해야 합니다.
+[AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow)를 통해 동일한 UI 스레드가 있는 여러 XAML 트리를 사용할 수 있습니다. 그러나 XAML 요소는 XAML 트리에 한 번만 추가할 수 있습니다. UI의 일부를 한 창에서 다른 창으로 이동하려면 XAML 트리에서 UI의 배치를 관리해야 합니다.
 
-이 예제에서는 기본 창과 보조 창 간에 이동 하는 동안 [Colorpicker](/uwp/api/windows.ui.xaml.controls.colorpicker) 컨트롤을 다시 사용 하는 방법을 보여 줍니다.
+이 예제에서는 주 창과 보조 창 간에 이동하는 동안 [ColorPicker](/uwp/api/windows.ui.xaml.controls.colorpicker) 컨트롤을 재사용하는 방법을 보여 줍니다.
 
-색 선택은 xaml에 선언 `MainPage`되어 `MainPage` xaml 트리에 배치 됩니다.
+색 선택은 `MainPage` XAML에서 선언되며, `MainPage` XAML 트리에 배치됩니다.
 
 ```xaml
 <StackPanel x:Name="colorPickerContainer" Grid.Column="1" Background="WhiteSmoke">
@@ -420,14 +420,14 @@ private void FullScreenButton_Click(object sender, RoutedEventArgs e)
 </StackPanel>
 ```
 
-색 선택이 새 appwindow에 배치 되도록 분리 된 경우 먼저 부모 컨테이너에서 제거 하 여 `MainPage` XAML 트리에서 제거 해야 합니다. 필수는 아니지만이 예제에서는 부모 컨테이너도 숨깁니다.
+색 선택이 새 AppWindow에 배치되도록 분리한 경우, 먼저 부모 컨테이너에서 제거하여 `MainPage` XAML 트리에서 제거해야 합니다. 필수는 아니지만, 이 예제에서는 부모 컨테이너도 숨깁니다.
 
 ```csharp
 colorPickerContainer.Children.Remove(colorPicker);
 colorPickerContainer.Visibility = Visibility.Collapsed;
 ```
 
-그런 다음 새 XAML 트리에 추가할 수 있습니다. 여기서는 먼저 ColorPicker의 부모 컨테이너가 될 [그리드](/uwp/api/windows.ui.xaml.controls.grid) 를 만들고 Colorpicker를 표의 자식으로 추가 합니다. 이를 통해 나중에이 XAML 트리에서 ColorPicker를 쉽게 제거할 수 있습니다. 그런 다음 새 창에서 표를 XAML 트리의 루트로 설정 합니다.
+그런 다음 새 XAML 트리에 추가할 수 있습니다. 여기서는 먼저 ColorPicker의 부모 컨테이너로 사용할 [Grid](/uwp/api/windows.ui.xaml.controls.grid)를 만들고 Grid의 자식으로 ColorPicker를 추가합니다. 그러면 나중에 이 XAML 트리에서 ColorPicker를 쉽게 제거할 수 있습니다. 새 창에서 XAML 트리의 루트로 Grid를 설정합니다.
 
 ```csharp
 Grid appWindowRootGrid = new Grid();
@@ -440,7 +440,7 @@ colorPickerAppWindow = await AppWindow.TryCreateAsync();
 ElementCompositionPreview.SetAppWindowContent(colorPickerAppWindow, appWindowRootGrid);
 ```
 
-[Appwindow](/uwp/api/windows.ui.windowmanagement.appwindow) 가 닫히면 프로세스를 반대로 합니다. 먼저 [표에서](/uwp/api/windows.ui.xaml.controls.grid) [colorpicker](/uwp/api/windows.ui.xaml.controls.colorpicker) 를 제거한 다음에서 `MainPage` [StackPanel](/uwp/api/windows.ui.xaml.controls.stackpanel) 의 자식으로 추가 합니다.
+[AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow)를 닫을 때는 프로세스를 반대로 합니다. 먼저 [Grid](/uwp/api/windows.ui.xaml.controls.grid)에서 [ColorPicker](/uwp/api/windows.ui.xaml.controls.colorpicker)를 제거하고 `MainPage`에서 [StackPanel](/uwp/api/windows.ui.xaml.controls.stackpanel)의 자식으로 추가합니다.
 
 ```csharp
 // When the window is closed, be sure to release XAML resources
@@ -497,9 +497,9 @@ private async void DetachColorPickerButton_Click(object sender, RoutedEventArgs 
 
 ## <a name="show-a-dialog-box"></a>대화 상자 표시
 
-기본적으로 콘텐츠 대화 상자는 루트 [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview)를 기준으로 모달 형식으로 표시됩니다. [Appwindow](/uwp/api/windows.ui.windowmanagement.appwindow)내에서 [contentdialog](/uwp/api/windows.ui.xaml.controls.contentdialog) 를 사용 하는 경우 대화 상자의 xamlroot를 XAML 호스트의 루트로 수동으로 설정 해야 합니다.
+기본적으로 콘텐츠 대화 상자는 루트 [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview)를 기준으로 모달 형식으로 표시됩니다. [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 내에서 [ContentDialog](/uwp/api/windows.ui.xaml.controls.contentdialog)를 사용하는 경우, 수동으로 대화 상자의 XamlRoot를 XAML 호스트의 루트로 설정해야 합니다.
 
-이렇게 하려면 ContentDialog의 [xamlroot](/uwp/api/windows.ui.xaml.uielement.xamlroot) 속성을 appwindow에 이미 있는 요소와 동일한 [xamlroot](/uwp/api/windows.ui.xaml.xamlroot) 로 설정 합니다. 여기서는이 코드가 단추의 [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 처리기 내에 있으므로 _발신자_ (클릭 한 단추)를 사용 하 여 xamlroot를 가져올 수 있습니다.
+ContentDialog의 [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) 속성을 AppWindow에 이미 있는 요소와 동일한 [XamlRoot](/uwp/api/windows.ui.xaml.xamlroot)로 설정하면 됩니다. 여기서 다음 코드는 단추의 [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 처리기 내부에 있으므로, _sender_(클릭한 단추)를 사용하여 XamlRoot를 가져올 수 있습니다.
 
 ```csharp
 if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))
@@ -508,9 +508,9 @@ if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract
 }
 ```
 
-주 창 (ApplicationView) 외에 하나 이상의 AppWindows가 열려 있는 경우에는 모달 대화 상자에서 루트가 있는 창만 차단 하기 때문에 각 창에서 대화 상자를 열려고 시도할 수 있습니다. 그러나 한 번에 하나의 [Contentdialog](/uwp/api/windows.ui.xaml.controls.contentdialog) 만 열 수 있습니다. 두 ContentDialog를 열려는 하면 별도의 AppWindow에서 열려고 하더라도 예외가 throw됩니다.
+주 창(ApplicationView) 외에 AppWindows가 하나 이상 열려 있는 경우, 모달 대화 상자는 기반으로 사용된 창만 차단하기 때문에 각 창에서 대화 상자를 열려고 시도할 수 있습니다. 하지만 스레드당 하나의 [ContentDialog](/uwp/api/windows.ui.xaml.controls.contentdialog)만 열어 둘 수 있습니다. 두 ContentDialog를 열려는 하면 별도의 AppWindow에서 열려고 하더라도 예외가 throw됩니다.
 
-이를 관리 하려면 다른 대화 상자가 이미 열려 있는 경우 예외를 catch `try/catch` 하기 위해 블록에서 대화 상자를 최소한으로 열어야 합니다.
+이 동작을 관리하려면, 다른 대화 상자가 이미 열려 있는 경우 예외를 catch하기 위해 최소한 `try/catch` 블록에서 대화 상자를 열어야 합니다.
 
 ```csharp
 try
@@ -523,7 +523,7 @@ catch (Exception)
 }
 ```
 
-대화 상자를 관리 하는 또 다른 방법은 현재 열려 있는 대화 상자를 추적 하 고 새 대화 상자를 열기 전에 닫는 것입니다. 여기서는이 용도로 호출 `MainPage` `CurrentDialog` 된에서 정적 속성을 만듭니다.
+대화 상자를 관리하는 또 다른 방법은 현재 열려 있는 대화 상자를 추적하고 새 대화 상자를 열기 전에 닫는 것입니다. 여기서는, 이 목적으로 `MainPage`에 `CurrentDialog`라는 정적 속성을 만듭니다.
 
 ```csharp
 public sealed partial class MainPage : Page
@@ -535,7 +535,7 @@ public sealed partial class MainPage : Page
 }
 ```
 
-그런 다음 현재 열려 있는 대화 상자가 있는지 여부를 확인 하 고, 있는 경우 [Hide](/uwp/api/windows.ui.xaml.controls.contentdialog.hide) 메서드를 호출 하 여 닫습니다. 마지막으로에 `CurrentDialog`새 대화 상자를 할당 하 고 표시를 시도 합니다.
+현재 열려 있는 대화 상자가 있는지 확인하고, 있을 경우 [Hide](/uwp/api/windows.ui.xaml.controls.contentdialog.hide) 메서드를 호출하여 닫습니다. 마지막으로, `CurrentDialog`에 새 대화 상자를 할당하고 표시합니다.
 
 ```csharp
 private async void DialogButton_Click(object sender, RoutedEventArgs e)
@@ -572,7 +572,7 @@ private async void DialogButton_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-대화 상자를 프로그래밍 방식으로 닫지 않는 것이 바람직하지 않은 경우로 `CurrentDialog`할당 하지 마십시오. 여기서는 `MainPage` 사용을 클릭할 `Ok`때만 해제 해야 하는 중요 한 대화 상자를 보여 줍니다. 로 `CurrentDialog`할당 되지 않았기 때문에 프로그래밍 방식으로 닫도록 시도 하지 않습니다.
+프로그래밍 방식으로 대화 상자를 닫지 않으려는 경우 `CurrentDialog`로 할당하지 마세요. 여기서 `MainPage`는 사용자가 `Ok`를 클릭한 경우에만 해제되어야 하는 중요한 대화 상자를 표시합니다. `CurrentDialog`로 할당되지 않았기 때문에 프로그래밍 방식으로 닫지 않습니다.
 
 ```csharp
 public sealed partial class MainPage : Page
@@ -805,7 +805,7 @@ namespace HelloAppWindow
 
 ```
 
-### <a name="appwindowpagexaml"></a>AppWindowPage .xaml
+### <a name="appwindowpagexaml"></a>AppWindowPage.xaml
 
 ```xaml
 <Page
@@ -1007,4 +1007,4 @@ namespace HelloAppWindow
 ## <a name="related-topics"></a>관련 항목
 
 - [여러 뷰 표시](show-multiple-views.md)
-- [ApplicationView를 사용 하 여 여러 뷰 표시](application-view.md)
+- [ApplicationView를 사용하여 여러 뷰 표시](application-view.md)
