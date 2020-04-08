@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: b1ac53e0a6b6e01cd2129e2b1893f91fae2ef0fe
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.openlocfilehash: fa8dd744120d5751dcf8c10a090ccc31094000d2
+ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80218603"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80482497"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML Islands를 사용하여 WPF 앱에서 사용자 지정 UWP 컨트롤 호스트
 
@@ -29,7 +29,7 @@ WPF(또는 Windows Forms) 앱에서 사용자 지정 UWP 컨트롤을 호스트�
 
 * **사용자 지정 UWP 컨트롤**. 앱을 사용하여 컴파일할 수 있도록 호스트하려는 사용자 지정 UWP 컨트롤에 대한 소스 코드가 있어야 합니다. 일반적으로 사용자 지정 컨트롤은 WPF 또는 Windows Forms 프로젝트와 동일한 솔루션에서 참조하는 UWP 클래스 라이브러리 프로젝트에서 정의됩니다.
 
-* **XamlApplication에서 파생되는 루트 Application 클래스를 정의하는 UWP 앱 프로젝트**. WPF 또는 Windows Forms 프로젝트에서는 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스의 인스턴스에 액세스할 수 있어야 합니다. 이 작업을 수행하는 권장 방법은 WPF 또는 Windows Forms 앱에 대한 솔루션의 일부인 별도의 UWP 앱 프로젝트에서 이 개체를 정의하는 것입니다. 이 개체는 애플리케이션의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 형식에 대한 메타데이터를 로드하기 위한 루트 메타데이터 공급자 역할을 합니다.
+* **XamlApplication에서 파생되는 루트 Application 클래스를 정의하는 UWP 앱 프로젝트**. WPF 또는 Windows Forms 프로젝트는 사용자 지정 UWP XAML 컨트롤을 검색하고 로드할 수 있도록 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스의 인스턴스에 액세스할 수 있어야 합니다. 이 작업을 수행하는 권장 방법은 WPF 또는 Windows Forms 앱에 대한 솔루션의 일부인 별도의 UWP 앱 프로젝트에서 이 개체를 정의하는 것입니다. 
 
     > [!NOTE]
     > 솔루션은 `XamlApplication` 개체를 정의하는 프로젝트를 하나만 포함할 수 있습니다. 앱의 모든 사용자 지정 UWP 컨트롤은 동일한 `XamlApplication` 개체를 공유합니다. `XamlApplication` 개체를 정의하는 프로젝트에는 XAML Islands에 UWP 컨트롤을 호스트하는 데 사용되는 다른 모든 UWP 라이브러리 및 프로젝트에 대한 참조가 포함되어야 합니다.
@@ -67,7 +67,7 @@ WPF(또는 Windows Forms) 앱에서 사용자 지정 UWP 컨트롤을 호스트�
 
 ## <a name="define-a-xamlapplication-class-in-a-uwp-app-project"></a>UWP 앱 프로젝트에서 XamlApplication 클래스 정의
 
-그런 다음, UWP 앱 프로젝트를 솔루션에 추가하고 이 프로젝트의 기본 `App` 클래스를 수정하여 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생하도록 합니다. 앱은 애플리케이션의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 형식에 대한 메타데이터를 로드하기 위한 루트 메타데이터 공급자로 이 클래스를 사용합니다.
+그런 다음, UWP 앱 프로젝트를 솔루션에 추가하고 이 프로젝트의 기본 `App` 클래스를 수정하여 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생하도록 합니다. 이 클래스는 [IXamlMetadaraProvider](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider) 인터페이스를 지원합니다. 이 인터페이스를 통해 앱은 런타임 시 애플리케이션의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 컨트롤에 대한 메타데이터를 검색하고 로드할 수 있습니다. 이 클래스는 또한 현재 스레드에 대한 UWP XAML 프레임워크를 초기화합니다. 
 
 1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 프로젝트**를 선택합니다.
 2. 솔루션에 **빈 앱(유니버설 Windows)** 프로젝트를 추가합니다. 대상 버전 및 최소 버전이 둘 다 **Windows 10, 버전 1903** 이상으로 설정되어 있는지 확인합니다.
@@ -105,7 +105,7 @@ WPF(또는 Windows Forms) 앱에서 사용자 지정 UWP 컨트롤을 호스트�
 
 ## <a name="instantiate-the-xamlapplication-object-in-the-entry-point-of-your-wpf-app"></a>WPF 앱의 진입점에서 XamlApplication 개체 인스턴스화
 
-다음으로, WPF 앱의 진입점에 코드를 추가하여 UWP 프로젝트에서 방금 정의한 `App` 클래스(현재 `XamlApplication`에서 파생되는 클래스)의 인스턴스를 만듭니다. 이 개체는 애플리케이션의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 형식에 대한 메타데이터를 로드하기 위한 루트 메타데이터 공급자 역할을 합니다.
+다음으로, WPF 앱의 진입점에 코드를 추가하여 UWP 프로젝트에서 방금 정의한 `App` 클래스(현재 `XamlApplication`에서 파생되는 클래스)의 인스턴스를 만듭니다.
 
 1. WPF 프로젝트에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 항목**을 선택하고 **클래스**를 선택합니다. 클래스 이름을 **Program**으로 지정하고 **추가**를 클릭합니다.
 

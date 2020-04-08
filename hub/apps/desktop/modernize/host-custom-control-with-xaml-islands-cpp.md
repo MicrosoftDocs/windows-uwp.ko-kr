@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 2f34c9c56cf9db5dfcfd702b97f2d34273b86e6a
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.openlocfilehash: 23d7fbf129e9cf53a9510200aa4e3836dffa602f
+ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80226317"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80482643"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>C++ Win32 앱에서 사용자 지정 UWP 컨트롤 호스트
 
@@ -45,20 +45,20 @@ ms.locfileid: "80226317"
 4. **NuGet 패키지 관리** 창에서 다음과 같이 추가 NuGet 패키지를 설치합니다.
 
     * [Microsoft.Toolkit.Win32.UI.SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK)(버전 v6.0.0 이상). 이 패키지는 XAML Islands가 앱에서 작동할 수 있도록 하는 몇 가지 빌드 및 런타임 자산을 제공합니다.
-    * [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication)(버전 v6.0.0 이상).
+    * [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication)(버전 v6.0.0 이상). 이 패키지는 이 연습 뒷부분에서 사용할 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스를 정의합니다.
     * [Microsoft.VCRTForwarders.140](https://www.nuget.org/packages/Microsoft.VCRTForwarders.140).
 
 5. 솔루션을 빌드하고 성공적으로 빌드되는지 확인합니다.
 
 ## <a name="create-a-uwp-app-project"></a>UWP 앱 프로젝트 만들기
 
-그런 다음, 솔루션에 **UWP(C++/WinRT)** 앱 프로젝트를 추가하고 이 프로젝트의 구성을 변경합니다. 이 연습 뒷부분에서는 이 프로젝트에 코드를 추가하여 사용자 지정 UWP XAML 컨트롤을 구현하고 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스의 인스턴스를 정의합니다. 앱은 사용자 지정 UWP XAML 형식에 대한 메타데이터를 로드하기 위한 루트 메타데이터 공급자로 이 클래스를 사용합니다.
+그런 다음, 솔루션에 **UWP(C++/WinRT)** 앱 프로젝트를 추가하고 이 프로젝트의 구성을 변경합니다. 이 연습 뒷부분에서는 이 프로젝트에 코드를 추가하여 사용자 지정 UWP XAML 컨트롤을 구현하고 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스의 인스턴스를 정의합니다. 
 
 1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 프로젝트**를 선택합니다.
 
 2. 솔루션에 **비어 있는 앱(C++/WinRT)** 프로젝트를 추가합니다. 프로젝트의 이름을 **MyUWPApp**으로 지정하고 대상 버전 및 최소 버전이 둘 다 **Windows 10, 버전 1903** 이상으로 설정되어 있는지 확인합니다.
 
-3. **MyUWPApp** 프로젝트에서 [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) NuGet 패키지를 설치합니다.
+3. **MyUWPApp** 프로젝트에서 [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) NuGet 패키지를 설치합니다. 이 패키지는 이 연습 뒷부분에서 사용할 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스를 정의합니다.
 
     1. **MyUWPApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
     2. **찾아보기** 탭을 선택하고 [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) 패키지를 검색한 후 이 패키지의 v6.0.0 이상 버전을 설치합니다.
@@ -150,7 +150,7 @@ ms.locfileid: "80226317"
 이제 **MyUWPApp** 프로젝트에 코드를 추가하여 다음과 같은 작업을 수행할 준비가 되었습니다.
 
 * 사용자 지정 UWP XAML 컨트롤을 구현합니다. 이 연습 뒷부분에서는 **MyDesktopWin32App** 프로젝트에서 이 컨트롤을 호스트하는 코드를 추가합니다.
-* Windows 커뮤니티 도구 키트의 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생되는 형식을 정의합니다. 이 클래스는 사용자 지정 UWP XAML 형식에 대한 메타데이터를 로드하기 위한 루트 메타데이터 공급자 역할을 합니다.
+* Windows 커뮤니티 도구 키트의 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생되는 형식을 정의합니다.
 
 ### <a name="define-a-custom-uwp-xaml-control"></a>사용자 지정 UWP XAML 컨트롤 정의
 
@@ -181,7 +181,7 @@ ms.locfileid: "80226317"
 
 ### <a name="define-a-xamlapplication-class"></a>XamlApplication 클래스 정의
 
-그런 다음, **MyUWPApp** 프로젝트의 기본 **App** 클래스를 수정하여 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생하도록 합니다. 이 연습의 뒷부분에서는 이 클래스의 인스턴스를 사용자 지정 UWP XAML 형식의 메타데이터를 로드하기 위한 루트 메타데이터 공급자로 만들도록 데스크톱 프로젝트를 업데이트합니다.
+그런 다음, **MyUWPApp** 프로젝트의 기본 **App** 클래스를 수정하여 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생하도록 합니다. 이 클래스는 [IXamlMetadaraProvider](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider) 인터페이스를 지원합니다. 이 인터페이스를 통해 앱은 런타임 시 애플리케이션의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 컨트롤에 대한 메타데이터를 검색하고 로드할 수 있습니다. 이 클래스는 또한 현재 스레드에 대한 UWP XAML 프레임워크를 초기화합니다. 이 연습 뒷부분에서는 이 클래스의 인스턴스를 만들기 위해 데스크톱 프로젝트를 업데이트합니다.
 
   > [!NOTE]
   > XAML Islands를 사용하는 각 솔루션에는 `XamlApplication` 개체를 정의하는 프로젝트가 하나만 포함될 수 있습니다. 앱의 모든 사용자 지정 UWP XAML 컨트롤은 동일한 `XamlApplication` 개체를 공유합니다. 
