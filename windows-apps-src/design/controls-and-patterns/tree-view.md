@@ -1,6 +1,6 @@
 ---
 description: ItemsSource를 계층적 데이터 원본에 바인딩하여 확장 가능한 트리 보기를 만들 수도 있고, TreeViewNode 개체를 직접 만들어서 관리할 수도 있습니다.
-title: 트리 보기
+title: 트리 뷰
 label: Tree view
 template: detail.hbs
 ms.date: 07/24/2019
@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 8e18455a39441d46e13e5a9a72291c9cd379c310
-ms.sourcegitcommit: 9effd88952bd26611f7b0a0e7baa68aba7d0ee8d
+ms.openlocfilehash: 9c451eba40b5c36843a32efbc80de40866f2f0dc
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68616524"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081445"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -34,13 +34,15 @@ XAML [TreeView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tree
 - **TreeViewItem**의 임의 형식 콘텐츠
 - 트리 보기 간에 끌어서 놓기
 
-| **Windows UI 라이브러리 가져오기** |
-| - |
-| 이 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+**Windows UI 라이브러리 가져오기**
 
-| **플랫폼 API** | **Windows UI 라이브러리 API** |
+|  |  |
 | - | - |
-| [TreeView 클래스](/uwp/api/windows.ui.xaml.controls.treeview), [TreeViewNode 클래스](/uwp/api/windows.ui.xaml.controls.treeviewnode), [TreeView.ItemsSource 속성](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) | [TreeView 클래스](/uwp/api/microsoft.ui.xaml.controls.treeview), [TreeViewNode 클래스](/uwp/api/microsoft.ui.xaml.controls.treeviewnode), [TreeView.ItemsSource 속성](/uwp/api/microsoft.ui.xaml.controls.treeview.itemssource) |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **TreeView** 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+> **Windows UI 라이브러리 API:** [TreeView 클래스](/uwp/api/microsoft.ui.xaml.controls.treeview), [TreeViewNode 클래스](/uwp/api/microsoft.ui.xaml.controls.treeviewnode), [TreeView.ItemsSource 속성](/uwp/api/microsoft.ui.xaml.controls.treeview.itemssource)
+>
+> **플랫폼 API:** [TreeView 클래스](/uwp/api/windows.ui.xaml.controls.treeview), [TreeViewNode 클래스](/uwp/api/windows.ui.xaml.controls.treeviewnode), [TreeView.ItemsSource 속성](/uwp/api/windows.ui.xaml.controls.treeview.itemssource)
 
 이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 다음을 [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page) 요소에 추가했습니다.
 
@@ -69,7 +71,7 @@ Imports muxc = Microsoft.UI.Xaml.Controls
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/TreeView">앱을 열고 실제로 작동하는 TreeView를 확인</a>합니다.</p>
     <ul>
@@ -94,7 +96,7 @@ Imports muxc = Microsoft.UI.Xaml.Controls
 
 [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource)를 계층적 데이터 원본에 바인딩하여 트리 보기를 만들 수도 있고, **TreeViewNode** 개체를 직접 만들어서 관리할 수도 있습니다.
 
-트리 보기를 만들려면 [TreeView](/uwp/api/windows.ui.xaml.controls.treeview) 컨트롤과 [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode) 개체의 계층을 사용합니다. 하나 이상의 루트 노드를 **TreeView** 컨트롤의 [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) 컬렉션에 추가하여 노드 계층을 만듭니다. 이제 각 **TreeViewNode**에서 [Children](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeviewnode.children) 컬렉션에 더 많은 노드를 추가할 수 있습니다. 트리 보기 노드를 필요한 깊이만큼 중첩할 수 있습니다.
+트리 보기를 만들려면 [TreeView](/uwp/api/windows.ui.xaml.controls.treeview) 컨트롤과 [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode) 개체의 계층을 사용합니다. 하나 이상의 루트 노드를 **TreeView** 컨트롤의 [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) 컬렉션에 추가하여 노드 계층 구조를 만듭니다. 이제 각 **TreeViewNode**에서 [Children](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeviewnode.children) 컬렉션에 더 많은 노드를 추가할 수 있습니다. 트리 보기 노드를 필요한 깊이만큼 중첩할 수 있습니다.
 
 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)의 **ItemsSource**로 했던 것처럼, 계층적 데이터 원본을 [ItemsSource](/uwp/api/windows.ui.xaml.controls.treeview.itemssource) 속성에 바인딩하여 트리 보기 콘텐츠를 제공할 수 있습니다. 마찬가지로, [ItemTemplate](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate)(및 선택적 [ItemTemplateSelector](/uwp/api/windows.ui.xaml.controls.treeview.itemtemplate))을 사용하여 항목을 렌더링하는 [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate)을 제공합니다.
 
@@ -1351,7 +1353,7 @@ namespace TreeViewTest
 }
 ```
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [TreeView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview)
 - [ListView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)

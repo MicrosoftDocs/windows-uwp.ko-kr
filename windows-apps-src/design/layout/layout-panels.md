@@ -7,7 +7,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 9322ba847aeb7eb64c2654e1105582478a0d3b47
 ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/13/2020
 ms.locfileid: "79210209"
@@ -25,11 +25,11 @@ ms.locfileid: "79210209"
 ## <a name="examples"></a>예
 
 <table>
-<th align="left">XAML 컨트롤 갤러리<th>
+<th align="left">XAML Controls Gallery<th>
 <tr>
 <td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
 <td>
-    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치 된 경우 <a href="xamlcontrolsgallery:/item/RelativePanel">RelativePanel</a>, <a href="xamlcontrolsgallery:/item/StackPanel">StackPanel</a>, <a href="xamlcontrolsgallery:/item/Grid">Grid</a>, <a href="xamlcontrolsgallery:/item/VariableSizedWrapGrid">VariableSizedWrapGrid</a>및 <a href="xamlcontrolsgallery:/item/Canvas">Canvas</a> in 작업을 참조 하세요.</p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 <a href="xamlcontrolsgallery:/item/RelativePanel">RelativePanel</a>, <a href="xamlcontrolsgallery:/item/StackPanel">StackPanel</a>, <a href="xamlcontrolsgallery:/item/Grid">Grid</a>, <a href="xamlcontrolsgallery:/item/VariableSizedWrapGrid">VariableSizedWrapGrid</a> 및 <a href="xamlcontrolsgallery:/item/Canvas">Canvas</a>가 실제로 어떻게 작동하는지 살펴보세요.</p>
     <ul>
     <li><a href="https://www.microsoft.com/store/productId/9MSVH128X2ZT">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
@@ -40,7 +40,7 @@ ms.locfileid: "79210209"
 
 ## <a name="panel-properties"></a>패널 속성
 
-각 패널에 대해 얘기하기 전에 모든 패널이 공통적으로 가지고 있는 속성에 대해서 살펴보겠습니다. 
+각 패널에 대해 얘기하기 전에, 모든 패널이 공통적으로 가지고 있는 속성을 살펴보겠습니다. 
 
 ### <a name="panel-attached-properties"></a>패널 연결된 속성
 
@@ -74,15 +74,15 @@ RelativePanel, StackPanel 및 Grid 패널은 추가 Border 요소에서 래핑 �
 
 ## <a name="relativepanel"></a>RelativePanel
 
-[**RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) 를 사용 하면 다른 요소와 관련 하 여 패널을 기준으로 이동 하는 위치를 지정 하 여 UI 요소를 레이아웃 할 수 있습니다. 기본적으로 요소는 패널의 왼쪽 위 모서리에 위치가 지정됩니다. [  **VisualStateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager) 및 [**AdaptiveTrigger**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.AdaptiveTrigger)와 함께 RelativePanel을 사용하면 다양한 창 크기에 맞게 UI를 다시 정렬할 수 있습니다.
+[**RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel)을 통해 다른 요소 및 패널을 기준으로 위치를 지정하여 UI 요소를 배치할 수 있습니다. 기본적으로 요소는 패널의 왼쪽 위 모서리에 위치가 지정됩니다. [**VisualStateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager) 및 [**AdaptiveTrigger**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.AdaptiveTrigger)와 함께 RelativePanel을 사용하면 다양한 창 크기에 맞게 UI를 다시 정렬할 수 있습니다.
 
-다음 표는 요소를 패널 또는 다른 요소를 기준으로 정렬할 수 있는 연결된 속성을 보여 줍니다.
+다음 표는 요소를 패널 또는 다른 요소를 기준으로 정렬할 수 있는 연결된 속성을 보여줍니다.
 
 패널 맞춤 | 형제 맞춤 | 형제 위치
 ----------------|-------------------|-----------------
-[**AlignTopWithPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.aligntopwithpanelproperty) | [**AlignTopWith**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.aligntopwithproperty) | [**위쪽과**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel)  
-[**AlignBottomWithPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.alignbottomwithpanelproperty) | [**AlignBottomWith**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.alignbottomwithproperty) | [**표에서**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.belowproperty)  
-[**AlignLeftWithPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel) | [**AlignLeftWith**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.getalignleftwith) | [**의 왼쪽**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.leftofproperty)  
+[**AlignTopWithPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.aligntopwithpanelproperty) | [**AlignTopWith**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.aligntopwithproperty) | [**Above**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel)  
+[**AlignBottomWithPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.alignbottomwithpanelproperty) | [**AlignBottomWith**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.alignbottomwithproperty) | [**Below**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.belowproperty)  
+[**AlignLeftWithPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel) | [**AlignLeftWith**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.getalignleftwith) | [**LeftOf**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.leftofproperty)  
 [**AlignRightWithPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.alignrightwithpanelproperty) | [**AlignRightWith**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.alignrightwithproperty) | [**RightOf**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.setrightof)  
 [**AlignHorizontalCenterWithPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.alignhorizontalcenterwithpanelproperty) | [**AlignHorizontalCenterWith**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.alignhorizontalcenterwithproperty) | &nbsp;   
 [**AlignVerticalCenterWithPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.alignverticalcenterwithpanelproperty) | [**AlignVerticalCenterWith**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel.alignverticalcenterwithproperty) | &nbsp;   
@@ -121,7 +121,7 @@ RelativePanel, StackPanel 및 Grid 패널은 추가 Border 요소에서 래핑 �
 
 ## <a name="stackpanel"></a>StackPanel
 
-[**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) 은 가로 또는 세로 방향으로 한 줄로 자식 요소를 정렬 합니다. StackPanel은 일반적으로 페이지에서 작은 하위 섹션 UI를 정렬하는 데 사용됩니다.
+[**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel)은 가로 또는 세로 방향으로 지정된 단일 행에 자식 요소를 배열하는 레이아웃 패널입니다. StackPanel은 일반적으로 페이지에서 작은 하위 섹션 UI를 정렬하는 데 사용됩니다.
 
 [  **Orientation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel.orientation) 속성을 사용하여 자식 요소의 방향을 지정할 수 있습니다. 기본 방향은 [**Vertical**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Orientation)입니다.
 
@@ -143,9 +143,9 @@ RelativePanel, StackPanel 및 Grid 패널은 추가 Border 요소에서 래핑 �
 
 StackPanel에서 자식 요소의 크기가 명시적으로 설정되지 않은 경우 늘려서 사용 가능한 너비(또는 Orientation이 **Horizontal**인 경우에는 높이)를 채웁니다. 이 예제에서는 직사각형의 너비는 설정되지 않습니다. 직사각형은 StackPanel의 전체 너비에 맞게 확장됩니다.
 
-## <a name="grid"></a>모눈
+## <a name="grid"></a>그리드
 
-[  **Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) 패널은 유동 레이아웃을 지원하여 컨트롤을 다중 행/열 레이아웃으로 배열할 수 있습니다. [  **RowDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.rowdefinitions) 및 [**ColumnDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.columndefinitions) 속성을 사용하여 Grid의의 행과 열을 지정합니다.
+[**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) 패널은 유동 레이아웃을 지원하여 컨트롤을 다중 행/열 레이아웃으로 배열할 수 있습니다. [**RowDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.rowdefinitions) 및 [**ColumnDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.columndefinitions) 속성을 사용하여 Grid의 행과 열을 지정합니다.
 
 Grid의 특정 셀에 개체의 위치를 지정하려면 [**Grid.Column**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.column) 및 [**Grid.Row**](https://docs.microsoft.com/dotnet/api/system.windows.controls.grid.row) 연결된 속성을 사용하세요.
 
@@ -173,7 +173,7 @@ Grid의 특정 셀에 개체의 위치를 지정하려면 [**Grid.Column**](http
 
 결과는 다음과 같습니다.
 
-![모눈](images/layout-panel-grid.png)
+![그리드](images/layout-panel-grid.png)
 
 이 예제에서 크기 조정은 다음과 같이 작동합니다. 
 - 두 번째 행의 명시적인 높이는 44 유효 픽셀입니다. 기본적으로 첫 번째 행의 높이가 남아 있는 모든 공간을 채웁니다.
@@ -182,7 +182,7 @@ Grid의 특정 셀에 개체의 위치를 지정하려면 [**Grid.Column**](http
 
 **Auto** 또는 배율 크기 조정을 사용하면 열이나 행 안에서 공간을 분배할 수 있습니다. UI 요소가 해당 콘텐츠 또는 부모 컨테이너에 맞게 크기를 조정하려면 자동 크기 조정을 사용합니다. 그리드의 행과 열에서 자동 크기 조정을 사용할 수도 있습니다. 자동 크기 조정을 사용하려면 UI 요소의 Height 및/또는 Width를 **Auto**로 설정합니다.
 
-가중 비율에 따라 그리드의 행과 열 사이에서 사용 가능한 공간을 분배하려면 *배율 크기 조정*이라고도 하는 가변 크기 조정을 사용합니다. XAML에서 별모양 값은 \* (또는가 중 별 크기 조정의 경우 *n*\*)으로 표현 됩니다. 예를 들어 열 하나를 2 열 레이아웃의 두 번째 열 보다 5 배 더 크게 지정 하려면 [**Columndefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) 요소의 [**Width**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.columndefinition.width) 속성에 "5\*" 및 "\*"를 사용 합니다.
+가중 비율에 따라 그리드의 행과 열 사이에서 사용 가능한 공간을 분배하려면 *배율 크기 조정*이라고도 하는 가변 크기 조정을 사용합니다. XAML에서는 배율 값이 \*(또는 가중 배율 크기 조정의 경우 *n*\*)로 표현됩니다. 예를 들어 2열 레이아웃에서 첫 번째 열을 두 번째 열보다 5배 너비로 지정하려면 [**ColumnDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) 요소에서 [**Width**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.columndefinition.width) 속성에 대해 "5\*" 및 "\*"를 사용합니다.
 
 이 예제에서는 4개의 열을 가진 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)에서 고정, 자동, 가변 크기 조정을 조합합니다.
 
@@ -213,7 +213,7 @@ Visual Studio XAML 디자이너에서 결과는 다음과 같습니다.
 
 ## <a name="variablesizedwrapgrid"></a>VariableSizedWrapGrid
 
-[**VariableSizedWrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.VariableSizedWrapGrid) 는 [**maximumrowsorcolumns**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns) 값에 도달 하면 행 또는 열이 자동으로 새 행 또는 열로 줄 바꿈되는 그리드 스타일 레이아웃 패널입니다. 
+[**VariableSizedWrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.VariableSizedWrapGrid)는 [**MaximumRowsOrColumns**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.variablesizedwrapgrid.maximumrowsorcolumns) 값에 도달할 경우 행 또는 열이 새 행이나 열로 자동 래핑되는 그리드 스타일 레이아웃 패널입니다. 
 
 [  **Orientation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.variablesizedwrapgrid.orientation) 속성은 그리드에서 줄 바꿈 전에 행 또는 열에 해당 항목을 추가할지 여부를 지정합니다. 기본 방향은 **Vertical**이며 이는 하나의 열이 가득 찰 때까지 위에서 아래로 항목을 추가한 다음 새 열로 래핑된다는 의미입니다. 값이 **Horizontal**인 경우 그리드는 왼쪽에서 오른쪽으로 항목을 추가한 다음 새 행으로 래핑됩니다.
 
@@ -243,9 +243,9 @@ Visual Studio XAML 디자이너에서 결과는 다음과 같습니다.
 
 이 예제에서 각 열의 최대 행 수는 3입니다. 첫 번째 열은 파란색 사각형이 2행에 걸쳐 있기 때문에 2개 항목만(빨간색 및 파란색 사각형) 포함합니다. 그러면 녹색 사각형은 다음 열의 맨 위로 래핑됩니다.
 
-## <a name="canvas"></a>Canvas
+## <a name="canvas"></a>캔버스
 
-[  **Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) 패널에서는 고정된 좌표 점을 사용하여 자식 요소를 배치하기 때문에 유동 레이아웃을 지원하지 않습니다. 각 요소의 [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) 및 [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top) 연결된 속성을 설정하여 개별 자식 요소의 점을 지정합니다. 부모 Canvas는 레이아웃의 [Arrange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) 단계 중에 자식에서 이러한 연결된 속성 값을 읽습니다.
+[**Canvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Canvas) 패널에서는 고정된 좌표 점을 사용하여 자식 요소를 배치하기 때문에 유동 레이아웃을 지원하지 않습니다. 각 요소의 [**Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) 및 [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top) 연결된 속성을 설정하여 개별 자식 요소의 점을 지정합니다. 부모 Canvas는 레이아웃의 [Arrange](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.arrange) 단계 중에 자식에서 이러한 연결된 속성 값을 읽습니다.
 
 Canvas의 개체는 겹칠 수 있으므로 한 개체를 다른 개체 위에 그릴 수 있습니다. 기본적으로 Canvas는 선언된 순서로 자식 개체를 렌더링하므로 마지막 자식이 맨 위에 렌더링됩니다(각 요소는 Z-인덱스의 기본값 0을 가짐). 이는 다른 기본 제공 패널과 같습니다. 그러나 Canvas는 각 자식 요소에 설정할 수 있는 [**Canvas.ZIndex**](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc190397(v=vs.95)) 연결된 속성도 지원합니다. 코드에서 이 속성을 설정하면 런타임 중 요소의 그리기 순서를 변경할 수 있습니다. 가장 큰 Canvas.ZIndex 값을 가진 요소가 마지막에 그려지므로 동일한 공간을 공유하거나 어떤 방식으로든 겹치는 다른 요소 위에 그려집니다. 알파 값(투명도)이 적용되므로 요소가 겹치는 경우에도 위쪽 요소의 알파 값이 최대값이 아니면 겹치는 영역에 표시되는 콘텐츠가 혼합될 수 있습니다.
 
@@ -264,7 +264,7 @@ Canvas는 자식의 크기를 조정하지 않습니다. 각 요소는 해당 �
 
 결과는 다음과 같습니다.
 
-![Canvas](images/layout-panel-canvas.png)
+![캔버스](images/layout-panel-canvas.png)
 
 원하는 대로 Canvas 패널을 사용하세요. UI의 요소 위치를 정확하게 제어하는 것이 편리한 시나리오도 있지만 고정 위치가 지정된 레이아웃 패널에서 UI의 해당 영역은 전체 앱 창 크기 변경에 맞게 제대로 적응되지 않습니다. 앱 창 크기 조정은 디바이스 방향 변경, 분할된 앱 창, 모니터 변경 및 기타 여러 사용자 시나리오에서 발생할 수 있습니다.
 
@@ -272,6 +272,6 @@ Canvas는 자식의 크기를 조정하지 않습니다. 각 요소는 해당 �
 
 [  **ItemsControl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel)에서 항목을 표시하기 위한 [**ItemsPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl)로만 사용할 수 있는 몇 가지 특별한 용도의 패널이 있습니다. [  **ItemsStackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsStackPanel), [**ItemsWrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsWrapGrid), [**VirtualizingStackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.VirtualizingStackPanel) 및 [**WrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WrapGrid)가 이러한 패널입니다. 일반 UI 레이아웃에는 이러한 패널을 사용할 수 없습니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.

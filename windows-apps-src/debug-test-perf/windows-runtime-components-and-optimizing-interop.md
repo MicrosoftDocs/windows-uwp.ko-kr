@@ -1,6 +1,6 @@
 ---
 ms.assetid: 9899F6A0-7EDD-4988-A76E-79D7C0C58126
-title: UWP 구성 요소에 대 한 interop 최적화
+title: UWP 구성 요소에 대한 interop 최적화
 description: Interop 성능 문제를 방지하면서 네이티브 형식과 관리되는 형식 간의 Interop 및 UWP(유니버설 Windows 플랫폼) 구성 요소를 사용하는 UWP 앱을 만듭니다.
 ms.date: 02/08/2017
 ms.topic: article
@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 7cc68520bbf83ec637c0814c333dfada2f974d1e
 ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 12/03/2019
 ms.locfileid: "74735008"
@@ -30,7 +30,7 @@ UWP에는 UWP 앱을 만들 수 있는 모든 언어에서 액세스 가능한 �
 
 C# 또는 Visual Basic으로 UWP 앱을 개발할 때 자주 사용하는 두 가지 API 집합은 UWP API와 UWP 앱용 .NET API입니다. 일반적으로 UWP에 정의되는 형식은 "Windows"로 시작하는 네임스페이스에 있고 .NET 형식은 "System"으로 시작하는 네임스페이스에 있습니다. 그러나 예외가 있습니다. UWP 앱용 .NET의 형식을 사용할 때는 상호 운용성이 필요하지 않습니다. UWP를 사용하는 영역에서 성능이 저조할 경우 UWP 앱용 .NET API를 사용하여 성능을 높일 수도 있습니다.
 
-**참고**   Windows 10과 함께 제공 되는 대부분의 UWP 구성 요소는 C++ 에서 구현 되므로 또는 Visual Basic에서 C# 사용 하는 경우 상호 운용성 경계를 벗어날 수 있습니다. 언제나 그렇듯 코드 변경에 투자하기 전에 UWP 구성 요소의 사용이 앱의 성능에 영향을 주는지 확인하기 위해 앱을 측정해 봐야 합니다.
+**참고**   Windows 10과 함께 제공되는 UWP 구성 요소는 대부분 C++로 구현되므로 C# 또는 Visual Basic에서 사용할 때 상호 운용성의 경계를 넘습니다. 언제나 그렇듯 코드 변경에 투자하기 전에 UWP 구성 요소의 사용이 앱의 성능에 영향을 주는지 확인하기 위해 앱을 측정해 봐야 합니다.
 
 이 항목에서 "UWP 구성 요소"는 C#이나 Visual Basic이 아닌 언어로 만든 구성 요소를 의미합니다.
 
@@ -42,7 +42,7 @@ UWP 구성 요소의 속성에 액세스하거나 메서드를 호출할 때마�
 
 성능을 개선할 필요가 있는 경우 코드에서 UWP 구성 요소를 최대한 효율적으로 사용하는지 확인할 수 있습니다. 이 섹션에서는 UWP 구성 요소를 사용할 때 성능을 개선할 수 있는 몇 가지 방법을 소개합니다.
 
-성능에 미치는 영향을 확인할 수 있으려면 짧은 시간에 무수히 많은 호출을 수행해야 합니다. 비즈니스 논리 및 다른 관리 코드에서 UWP 구성 요소에 대한 호출을 캡슐화하는 잘 설계된 응용 프로그램이라면 상호 운용성으로 인한 부담이 크지 않을 것입니다. 그러나 UWP 구성 요소 사용이 앱의 성능에 영향을 주고 있음이 테스트를 통해 확인된 경우 이 섹션의 팁을 참조하여 성능을 개선할 수 있습니다.
+성능에 미치는 영향을 확인할 수 있으려면 짧은 시간에 무수히 많은 호출을 수행해야 합니다. 비즈니스 논리 및 다른 관리 코드에서 UWP 구성 요소에 대한 호출을 캡슐화하는 잘 설계된 애플리케이션이라면 상호 운용성으로 인한 부담이 크지 않을 것입니다. 그러나 UWP 구성 요소 사용이 앱의 성능에 영향을 주고 있음이 테스트를 통해 확인된 경우 이 섹션의 팁을 참조하여 성능을 개선할 수 있습니다.
 
 ### <a name="consider-using-net-for-uwp-apps"></a>UWP 앱용 .NET 사용 고려
 

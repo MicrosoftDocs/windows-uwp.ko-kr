@@ -1,6 +1,6 @@
 ---
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
-title: 장치 포털 핵심 API 참조
+title: 디바이스 포털 핵심 API 참조
 description: 데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 Windows Device Portal 핵심 REST API에 대해 알아봅니다.
 ms.custom: 19H1
 ms.date: 04/19/2019
@@ -9,14 +9,14 @@ keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 9e091cc7ad62f69b9e76541101555493609b8a06
 ms.sourcegitcommit: 8d945e0406818e614eacdc962493e570cc7615ed
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/15/2020
 ms.locfileid: "75955314"
 ---
-# <a name="device-portal-core-api-reference"></a>장치 포털 핵심 API 참조
+# <a name="device-portal-core-api-reference"></a>디바이스 포털 핵심 API 참조
 
-모든 장치 포털의 기능은 개발자가 직접 액세스 리소스를 호출하고 장치를 프로그래밍 방식으로 컨트롤 할 수 있는 REST API를 기반으로 구축되어 있습니다.
+모든 장치 포털의 기능은 개발자가 직접 액세스 리소스를 호출하고 디바이스를 프로그래밍 방식으로 컨트롤할 수 있는 REST API를 기반으로 구축되어 있습니다.
 
 ## <a name="app-deployment"></a>앱 배포
 
@@ -26,7 +26,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 앱을 설치할 수 있습니다.
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/app/packagemanager/package |
 
@@ -59,7 +59,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -73,9 +73,9 @@ ms.locfileid: "75955314"
 
 **요청**
 
-다음 요청 형식을 사용해 [관련 세트](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/)를 설치할 수 있습니다.
+다음 요청 형식을 사용하여 [관련 세트](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/)를 설치할 수 있습니다.
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :------ |
 | POST | /api/app/packagemanager/package |
 
@@ -108,7 +108,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -124,7 +124,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 느슨한 폴더에 앱을 등록할 수 있습니다.
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/app/packagemanager/networkapp |
 
@@ -161,7 +161,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * Xbox
@@ -174,9 +174,9 @@ ms.locfileid: "75955314"
 
 **요청**
 
-다음 요청 형식을 사용해 느슨한 폴더에 [관련 세트](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/)를 등록할 수 있습니다.
+다음 요청 형식을 사용하여 느슨한 폴더에 [관련 세트](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/)를 등록할 수 있습니다.
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/app/packagemanager/networkapp |
 
@@ -222,7 +222,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * Xbox
@@ -237,7 +237,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 현재 진행 중인 앱 설치의 상태를 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/app/packagemanager/state |
 
@@ -265,7 +265,7 @@ ms.locfileid: "75955314"
 | 204 | 설치가 진행 중임 |
 | 404 | 설치 작업을 찾을 수 없음 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -281,7 +281,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 앱을 제거할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | DELETE | /api/app/packagemanager/package |
 
@@ -311,7 +311,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -327,7 +327,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 시스템에 설치된 앱 목록을 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/app/packagemanager/packages |
 
@@ -381,7 +381,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -395,13 +395,13 @@ ms.locfileid: "75955314"
 
 <hr>
 
-### <a name="get-the-bluetooth-radios-on-the-machine"></a>컴퓨터에 Bluetooth 송수신 장치 가져오기
+### <a name="get-the-bluetooth-radios-on-the-machine"></a>머신의 Bluetooth 송수신 장치 가져오기
 
 **요청**
 
-다음 요청 형식을 사용하여 컴퓨터에 설치된 Bluetooth 송수신 장치 목록을 가져올 수 있습니다. 동일한 JSON 데이터를 사용 하 여이를 WebSocket 연결로도 업그레이드할 수 있습니다.
+다음 요청 형식을 사용하여 머신에 설치된 Bluetooth 송수신 장치 목록을 가져올 수 있습니다. 동일한 JSON 데이터를 사용하여 WebSocket 연결로 업그레이드할 수도 있습니다.
  
-| 메서드        | 요청 URI |
+| 방법        | 요청 URI |
 | :------          | :------ |
 | GET           | /api/bt/getradios |
 | GET/WebSocket | /api/bt/getradios |
@@ -445,7 +445,7 @@ ms.locfileid: "75955314"
 | 4XX              | 오류 코드 |
 | 5XX              | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * HoloLens
@@ -457,9 +457,9 @@ ms.locfileid: "75955314"
 
 **요청**
 
-특정 Bluetooth 송수신 장치 켜기 또는 끄기.
+특정 Bluetooth 송수신 장치를 On 또는 Off로 설정합니다.
  
-| 메서드 | 요청 URI |
+| 방법 | 요청 URI |
 | :------   | :------ |
 | POST   | /api/bt/setradio |
 
@@ -469,8 +469,8 @@ ms.locfileid: "75955314"
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| ID            | (**필수**) Bluetooth 송수신 장치에 대한 장치 ID이며 Base 64로 인코딩되어야 합니다. |
-| State         | (**필수**) `"On"` 또는 `"Off"`수 있습니다. |
+| ID            | (**필수**) Bluetooth 송수신 장치의 디바이스 ID이며 Base 64로 인코딩되어야 합니다. |
+| State         | (**필수**) `"On"` 또는 `"Off"`입니다. |
 
 **요청 헤더**
 
@@ -492,20 +492,20 @@ ms.locfileid: "75955314"
 | 4XX              | 오류 코드 |
 | 5XX              | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 ---
-### <a name="get-a-list-of-paired-bluetooth-devices"></a>쌍을 이루는 Bluetooth 장치 목록 가져오기
+### <a name="get-a-list-of-paired-bluetooth-devices"></a>페어링된 Bluetooth 디바이스 목록 가져오기
 
 **요청**
 
-다음 요청 형식을 사용 하 여 현재 페어링된 Bluetooth 장치 목록을 가져올 수 있습니다. 이는 동일한 JSON 데이터를 사용 하는 WebSocket 연결로 업그레이드할 수 있습니다. WebSocket 연결의 수명 동안 장치 목록이 변경 될 수 있습니다. 업데이트가 있을 때마다 전체 장치 목록이 WebSocket 연결을 통해 전송 됩니다.
+다음 요청 형식을 사용하여 현재 페어링된 Bluetooth 디바이스 목록을 가져올 수 있습니다. 동일한 JSON 데이터를 사용하여 WebSocket 연결로 업그레이드할 수 있습니다. WebSocket 연결의 수명 주기 동안 디바이스 목록이 변경될 수 있습니다. 업데이트가 있을 때마다 전체 디바이스 목록이 WebSocket 연결을 통해 전송됩니다.
 
-| 메서드        | 요청 URI       |
+| 방법        | 요청 URI       |
 | :---          | :---              |
 | GET           | /api/bt/getpaired |
 | GET/WebSocket | /api/bt/getpaired |
@@ -524,7 +524,7 @@ ms.locfileid: "75955314"
 
 **응답**
 
-응답에는 현재 페어링된 Bluetooth 장치의 JSON 배열이 포함 되어 있습니다.
+응답에는 현재 페어링된 Bluetooth 디바이스의 JSON 배열이 포함되어 있습니다.
 ```json
 {"PairedDevices": [
     {
@@ -534,16 +534,16 @@ ms.locfileid: "75955314"
     },...
 ]}
 ```
-이 시스템에서 오디오에 장치를 사용할 수 있으면 오디오 *Connectionstatus* 필드가 표시 됩니다. (정책 및 선택적 구성 요소는이에 영향을 줄 수 있습니다.) *오디오 Connectionstatus* 는 "연결 됨" 또는 "연결 끊김"입니다.
+이 시스템의 오디오에 디바이스를 사용할 수 있는 경우 *AudioConnectionStatus* 필드가 표시됩니다. (정책 및 선택적 구성 요소에 따라 달라질 수 있습니다.) *AudioConnectionStatus*는 "Connected" 또는 "Disconnected"입니다.
 
 ---
-### <a name="get-a-list-of-available-bluetooth-devices"></a>사용 가능한 Bluetooth 장치 목록 가져오기
+### <a name="get-a-list-of-available-bluetooth-devices"></a>사용 가능한 Bluetooth 디바이스 목록 가져오기
 
 **요청**
 
-다음 요청 형식을 사용 하 여 페어링에 사용할 수 있는 Bluetooth 장치 목록을 가져올 수 있습니다. 이는 동일한 JSON 데이터를 사용 하는 WebSocket 연결로 업그레이드할 수 있습니다. WebSocket 연결의 수명 동안 장치 목록이 변경 될 수 있습니다. 업데이트가 있을 때마다 전체 장치 목록이 WebSocket 연결을 통해 전송 됩니다.
+다음 요청 형식을 사용하여 페어링에 사용 가능한 Bluetooth 디바이스 목록을 가져올 수 있습니다. 동일한 JSON 데이터를 사용하여 WebSocket 연결로 업그레이드할 수 있습니다. WebSocket 연결의 수명 주기 동안 디바이스 목록이 변경될 수 있습니다. 업데이트가 있을 때마다 전체 디바이스 목록이 WebSocket 연결을 통해 전송됩니다.
 
-| 메서드        | 요청 URI          |
+| 방법        | 요청 URI          |
 | :---          | :---                 |
 | GET           | /api/bt/getavailable |
 | GET/WebSocket | /api/bt/getavailable |
@@ -562,7 +562,7 @@ ms.locfileid: "75955314"
 
 **응답**
 
-응답에는 현재 페어링에 사용할 수 있는 Bluetooth 장치의 JSON 배열이 포함 되어 있습니다.
+응답에는 현재 페어링에 사용 가능한 Bluetooth 디바이스의 JSON 배열이 포함되어 있습니다.
 ```json
 {"AvailableDevices": [
     {
@@ -573,21 +573,21 @@ ms.locfileid: "75955314"
 ```
 
 ---
-### <a name="connect-a-bluetooth-device"></a>Bluetooth 장치 연결
+### <a name="connect-a-bluetooth-device"></a>Bluetooth 디바이스 연결
 
 **요청**
 
-장치가이 시스템에서 오디오에 사용 될 수 있는 경우 장치에 연결 됩니다. (정책 및 선택적 구성 요소는이에 영향을 줄 수 있습니다.)
+디바이스를 이 시스템의 오디오에 사용할 수 있으면 디바이스에 연결합니다. (정책 및 선택적 구성 요소에 따라 달라질 수 있습니다.)
 
-| 메서드       | 요청 URI           |
+| 방법       | 요청 URI           |
 | :---         | :---                  |
-| POST         | //> |
+| POST         | /api/bt/connectdevice |
 
 **URI 매개 변수**
 
 | URI 매개 변수 | 설명 |
 | :---          | :--- |
-| ID            | (**필수**) Bluetooth 장치에 대 한 연결 끝점 ID는 b a s e 64로 인코딩해야 합니다. |
+| ID            | (**필수**) Bluetooth 디바이스의 연결 엔드포인트 ID이며 Base64로 인코딩해야 합니다. |
 
 **요청 헤더**
 
@@ -609,7 +609,7 @@ ms.locfileid: "75955314"
 | 4XX              | 오류 코드 |
 | 5XX              | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * HoloLens
@@ -617,13 +617,13 @@ ms.locfileid: "75955314"
 
 
 ---
-### <a name="disconnect-a-bluetooth-device"></a>Bluetooth 장치 연결 끊기
+### <a name="disconnect-a-bluetooth-device"></a>Bluetooth 디바이스 연결 해제
 
 **요청**
 
-장치가이 시스템에서 오디오에 사용 될 수 있는 경우 장치 연결을 끊습니다. (정책 및 선택적 구성 요소는이에 영향을 줄 수 있습니다.)
+디바이스를 이 시스템의 오디오에 사용할 수 있으면 디바이스를 연결 해제합니다. (정책 및 선택적 구성 요소에 따라 달라질 수 있습니다.)
 
-| 메서드       | 요청 URI              |
+| 방법       | 요청 URI              |
 | :---         | :---                     |
 | POST         | /api/bt/disconnectdevice |
 
@@ -631,7 +631,7 @@ ms.locfileid: "75955314"
 
 | URI 매개 변수 | 설명 |
 | :---          | :--- |
-| ID            | (**필수**) Bluetooth 장치에 대 한 연결 끝점 ID는 b a s e 64로 인코딩해야 합니다. |
+| ID            | (**필수**) Bluetooth 디바이스의 연결 엔드포인트 ID이며 Base64로 인코딩해야 합니다. |
 
 **요청 헤더**
 
@@ -653,14 +653,14 @@ ms.locfileid: "75955314"
 | 4XX              | 오류 코드 |
 | 5XX              | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * HoloLens
 * IoT
 
 ---
-## <a name="device-manager"></a>장치 관리자
+## <a name="device-manager"></a>디바이스 관리자
 <hr>
 
 ### <a name="get-the-installed-devices-on-the-machine"></a>컴퓨터에 설치된 디바이스 가져오기
@@ -669,7 +669,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 컴퓨터에 설치된 디바이스 목록을 가져올 수 있습니다.
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/devicemanager/devices |
 
@@ -712,7 +712,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -720,13 +720,13 @@ ms.locfileid: "75955314"
 
 <hr>
 
-### <a name="get-data-on-connected-usb-deviceshubs"></a>연결된 USB 장치/허브에서 데이터 가져오기
+### <a name="get-data-on-connected-usb-deviceshubs"></a>연결된 USB 디바이스/허브의 데이터 가져오기
 
 **요청**
 
-다음 요청 형식을 사용해 연결된 USB 장치 및 허브에 대한 USB 설명자 목록을 가져올 수 있습니다.
+다음 요청 형식을 사용하여 연결된 USB 디바이스 및 허브에 대한 USB 설명자 목록을 가져올 수 있습니다.
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /ext/devices/usbdevices |
 
@@ -745,7 +745,7 @@ ms.locfileid: "75955314"
 
 **응답**
 
-응답은 USB 장치의 DeviceID, USB 설명자, 허브 포트 정보가 포함된 JSON입니다.
+응답은 USB 디바이스의 DeviceID, USB 설명자, 허브 포트 정보가 포함된 JSON입니다.
 ```json
 {
     "DeviceList": [
@@ -798,7 +798,7 @@ ms.locfileid: "75955314"
 |  200 | 확인 | 
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * IoT
@@ -815,7 +815,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 테스트용으로 로드된 모든 앱에 대한 사용 가능한 모든 크래시 덤프 목록을 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/debug/dump/usermode/dumps |
 
@@ -834,7 +834,7 @@ ms.locfileid: "75955314"
 
 **응답**
 
-응답에는 테스트용으로 로드된 각 응용 프로그램의 크래시 덤프 목록이 포함됩니다.
+응답에는 테스트용으로 로드된 각 애플리케이션의 크래시 덤프 목록이 포함됩니다.
 
 **상태 코드**
 
@@ -846,7 +846,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
@@ -861,7 +861,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 테스트용으로 로드된 앱의 크래시 덤프 컬렉션 설정을 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/debug/dump/usermode/crashcontrol |
 
@@ -899,7 +899,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
@@ -914,7 +914,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 테스트용으로 로드된 앱의 크래시 덤프를 삭제할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | DELETE | /api/debug/dump/usermode/crashdump |
 
@@ -948,7 +948,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
@@ -963,7 +963,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 테스트용으로 로드된 앱의 크래시 덤프를 사용하지 않도록 설정할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | DELETE | /api/debug/dump/usermode/crashcontrol |
 
@@ -996,7 +996,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
@@ -1011,7 +1011,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 테스트용으로 로드된 앱의 크래시 덤프를 다운로드할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/debug/dump/usermode/crashdump |
 
@@ -1047,7 +1047,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
@@ -1062,7 +1062,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 테스트용으로 로드된 앱의 크래시 덤프를 사용하도록 설정할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/debug/dump/usermode/crashcontrol |
 
@@ -1093,7 +1093,7 @@ ms.locfileid: "75955314"
 | :------     | :----- |
 |  200 | 확인 | 
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile(Windows 참가자 프로그램)
 * Windows 데스크톱
@@ -1108,7 +1108,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 오류 검사 미니덤프 파일 목록을 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/debug/dump/kernel/dumplist |
 
@@ -1145,7 +1145,7 @@ ms.locfileid: "75955314"
 | :------     | :----- |
 |  200 | 확인 | 
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * IoT
@@ -1158,7 +1158,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 오류 검사 덤프 파일을 다운로드할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/debug/dump/kernel/dump |
 
@@ -1194,7 +1194,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * IoT
@@ -1207,7 +1207,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 오류 검사 크래시 제어 설정을 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/debug/dump/kernel/crashcontrol |
 
@@ -1236,7 +1236,7 @@ ms.locfileid: "75955314"
 }
 ```
 
-**덤프 형식**
+**덤프 유형**
 
 0: 사용 안 함
 
@@ -1256,7 +1256,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * IoT
@@ -1269,7 +1269,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 라이브 커널 덤프를 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/debug/dump/livekernel |
 
@@ -1300,7 +1300,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * IoT
@@ -1313,7 +1313,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 라이브 사용자 프로세스 덤프를 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/debug/dump/usermode/live |
 
@@ -1348,7 +1348,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * IoT
@@ -1361,7 +1361,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 오류 검사 데이터를 수집하기 위한 설정을 지정할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/debug/dump/kernel/crashcontrol |
 
@@ -1397,7 +1397,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * IoT
@@ -1414,7 +1414,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 실시간 ETW 세션을 만들 수 있습니다. 이 세션은 Websocket을 통해 관리됩니다.  ETW 이벤트는 서버에서 일괄 처리되며 1초에 한 번씩 클라이언트로 전송됩니다. 
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET/WebSocket | /api/etw/session/realtime |
 
@@ -1445,7 +1445,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1480,7 +1480,7 @@ ms.locfileid: "75955314"
 
 페이로드 개체는 원래 ETW 이벤트에서 제공되는 추가 키-값 쌍(문자열:문자열)입니다.
 
-예:
+예제:
 ```json
 {
     "ID" : 42, 
@@ -1509,7 +1509,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 등록된 공급자를 열거할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/etw/providers |
 
@@ -1546,7 +1546,7 @@ ms.locfileid: "75955314"
 | :------     | :----- |
 |  200 | 확인 | 
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1561,7 +1561,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 등록된 공급자를 열거할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/etw/customproviders |
 
@@ -1595,7 +1595,7 @@ ms.locfileid: "75955314"
 
 - 표준 상태 코드입니다.
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1604,7 +1604,7 @@ ms.locfileid: "75955314"
 
 <hr>
 
-## <a name="location"></a>Location
+## <a name="location"></a>위치
 
 <hr>
 
@@ -1614,7 +1614,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 디바이스의 위치 스택 재정의 상태를 가져올 수 있습니다. 이 호출이 성공하려면 개발자 모드가 켜져 있어야 합니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /ext/location/override |
 
@@ -1649,7 +1649,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1663,7 +1663,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 디바이스의 위치 스택 재정의 상태를 설정할 수 있습니다. 활성화되면 위치 스택이 위치 삽입을 허용합니다. 이 호출이 성공하려면 개발자 모드가 켜져 있어야 합니다.
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | PUT | /ext/location/override |
 
@@ -1700,7 +1700,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1714,7 +1714,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 디바이스의 삽입(스푸핑) 위치를 가져올 수 있습니다. 삽입 위치를 설정해야 하며, 그렇지 않으면 오류가 발생합니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /ext/location/position |
 
@@ -1752,7 +1752,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1766,7 +1766,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 디바이스의 삽입(스푸핑) 위치를 설정할 수 있습니다. 위치 재정의 모드는 먼저 디바이스에서 활성화되어야 하며, 설정 위치는 유효한 위치여야 합니다. 그렇지 않으면 오류가 발생합니다.
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | PUT | /ext/location/override |
 
@@ -1809,7 +1809,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1829,7 +1829,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 컴퓨터의 이름을 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/os/machinename |
 
@@ -1864,7 +1864,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1880,7 +1880,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 컴퓨터의 OS 정보를 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/os/info |
 
@@ -1921,7 +1921,7 @@ ms.locfileid: "75955314"
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1937,7 +1937,7 @@ ms.locfileid: "75955314"
 
 다음 요청 형식을 사용하여 디바이스 패밀리(Xbox, 휴대폰, 데스크톱 등)를 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/os/devicefamily |
 
@@ -1976,7 +1976,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -1992,7 +1992,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 컴퓨터의 이름을 설정할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/os/machinename |
 
@@ -2023,7 +2023,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | :------     | :----- |
 | 200 | 확인 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2037,13 +2037,13 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 <hr>
 
-### <a name="get-the-active-user"></a>활성 사용자 받기
+### <a name="get-the-active-user"></a>활성 사용자 가져오기
 
 **요청**
 
 다음 요청 형식을 사용하여 디바이스의 현재 사용자 이름을 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/users/activeuser |
 
@@ -2091,7 +2091,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * HoloLens
@@ -2109,7 +2109,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 현재 실행 중인 프로세스 목록을 가져올 수 있습니다.  또한 1초에 한 번씩 클라이언트로 푸시 중인 동일한 JSON 데이터를 사용하여 WebSocket 연결로 업그레이드할 수 있습니다. 
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/resourcemanager/processes |
 | GET/WebSocket | /api/resourcemanager/processes |
@@ -2156,7 +2156,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2171,7 +2171,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 시스템 성능 통계를 가져올 수 있습니다. 읽기/쓰기 주기 및 사용된 메모리 사용량과 같은 정보가 포함됩니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/resourcemanager/systemperf |
 | GET/WebSocket | /api/resourcemanager/systemperf |
@@ -2235,7 +2235,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2245,7 +2245,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 <hr>
 
-## <a name="power"></a>전원
+## <a name="power"></a>고급
 
 <hr>
 
@@ -2255,7 +2255,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 배터리의 현재 상태를 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/power/battery |
 
@@ -2298,7 +2298,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2313,7 +2313,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 현재 전원 구성표를 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/power/activecfg |
 
@@ -2347,7 +2347,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * IoT
@@ -2360,7 +2360,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 전원 구성표에 대한 하위 값을 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/power/cfg/ *<power scheme path>* |
 
@@ -2377,7 +2377,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 **요청 본문**
 
-사용할 수 있는 전원 상태의 전체 목록은 응용 프로그램을 기반으로 작성되며 낮거나 위험한 배터리 수준과 같은 다양한 전원 상태의 플래그를 지정하기 위한 설정입니다. 
+사용할 수 있는 전원 상태의 전체 목록은 애플리케이션을 기반으로 작성되며 낮거나 위험한 배터리 수준과 같은 다양한 전원 상태의 플래그를 지정하기 위한 설정입니다. 
 
 **응답**
 
@@ -2391,7 +2391,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * IoT
@@ -2404,7 +2404,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 시스템의 전원 상태를 확인할 수 있습니다. 시스템이 절전 상태인지 확인할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/power/state |
 
@@ -2438,7 +2438,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * HoloLens
@@ -2452,7 +2452,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 현재 전원 구성표를 설정할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/power/activecfg |
 
@@ -2485,7 +2485,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * IoT
@@ -2498,7 +2498,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 전원 구성표에 대한 하위 값을 설정할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/power/cfg/ *<power scheme path>* |
 
@@ -2530,7 +2530,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | :------     | :----- |
 | 200 | 확인 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * IoT
@@ -2541,7 +2541,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 **요청**
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/power/sleepstudy/report |
 
@@ -2574,7 +2574,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * IoT
@@ -2587,7 +2587,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 사용 가능한 절전 연구 보고서를 열거할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/power/sleepstudy/reports |
 
@@ -2626,7 +2626,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * IoT
@@ -2639,7 +2639,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 절전 연구 변환을 가져올 수 있습니다. 이 변환은 절전 연구 보고서를 사람이 읽을 수 있는 XML 형식으로 변환하는 XSLT입니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/power/sleepstudy/transform |
 
@@ -2670,14 +2670,14 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * IoT
 
 <hr>
 
-## <a name="remote-control"></a>리모컨
+## <a name="remote-control"></a>원격 제어
 
 <hr>
 
@@ -2687,7 +2687,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 대상 컴퓨터를 다시 시작할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/control/restart |
 
@@ -2714,7 +2714,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | :------     | :----- |
 | 200 | 확인 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2730,7 +2730,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 대상 컴퓨터를 종료할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/control/shutdown |
 
@@ -2759,7 +2759,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2779,7 +2779,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 최신 앱을 시작할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/taskmanager/app |
 
@@ -2813,7 +2813,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2829,7 +2829,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 최신 앱을 중지할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | DELETE | /api/taskmanager/app |
 
@@ -2863,7 +2863,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -2873,13 +2873,13 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 <hr>
 
-### <a name="kill-process-by-pid"></a>PID를 사용하여 프로세스를 중단
+### <a name="kill-process-by-pid"></a>PID를 사용하여 프로세스 중단
 
 **요청**
 
 다음 요청 형식을 사용하여 프로세스를 중단할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | DELETE | /api/taskmanager/process |
 
@@ -2890,7 +2890,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| pid   | (**필수**) 중단할 프로세스에 대한 고유 프로세스 id입니다. |
+| pid   | (**필수**) 중단할 프로세스의 고유한 프로세스 ID입니다. |
 
 **요청 헤더**
 
@@ -2912,7 +2912,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * HoloLens
@@ -2930,7 +2930,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 현재 IP 구성을 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/networking/ipconfig |
 
@@ -3001,7 +3001,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3011,13 +3011,13 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 <hr>
 
-### <a name="set-a-static-ip-address-ipv4-configuration"></a>고정 IP 주소 설정 (IPV4 구성)
+### <a name="set-a-static-ip-address-ipv4-configuration"></a>고정 IP 주소 설정(IPV4 구성)
 
 **요청**
 
-고정 IP 및 DNS를 사용 하 여 IPV4 구성을 설정 합니다. 고정 IP가 지정 되지 않은 경우 DHCP를 사용 하도록 설정 합니다. 고정 IP가 지정 된 경우 DNS도 지정 해야 합니다.
+고정 IP 및 DNS를 사용하여 IPV4 구성을 설정합니다. 고정 IP를 지정하지 않으면 DHCP가 사용됩니다. 고정 IP를 지정하면 DNS도 지정해야 합니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | PUT | /api/networking/ipv4config |
 
@@ -3028,12 +3028,12 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | :---          | :--- |
 | AdapterName | (**필수**) 네트워크 인터페이스 GUID입니다. |
 | IP 주소 | 설정할 고정 IP 주소입니다. |
-| SubnetMask | ( *IPAddress* 가 null이 아닌 경우**필수** ) 정적 서브넷 마스크입니다. |
-| DefaultGateway | ( *IPAddress* 가 null이 아닌 경우**필수** ) 정적 기본 게이트웨이입니다. |
-| PrimaryDNS | ( *IPAddress* 가 null이 아닌 경우**필수** ) 설정할 정적 기본 DNS입니다. |
-| SecondayDNS | ( *Primarydns* 가 null이 아닌 경우**필수** ) 설정할 정적 보조 DNS입니다. |
+| SubnetMask | (*IPAddress*가 null이 아닌 경우 **필수**) 정적 서브넷 마스크입니다. |
+| DefaultGateway | (*IPAddress*가 null이 아닌 경우 **필수**) 정적 기본 게이트웨이입니다. |
+| PrimaryDNS | (*IPAddress*가 null이 아닌 경우 **필수**) 설정할 기본 DNS입니다. |
+| SecondayDNS | (*PrimaryDNS*가 null이 아닌 경우 **필수**) 설정할 정적 보조 DNS입니다. |
 
-명확 하 게 하기 위해 인터페이스를 DHCP로 설정 하려면 네트워크의 `AdapterName`만 serialize 합니다.
+명확하게 하기 위해 인터페이스를 DHCP로 설정하려면 다음과 같이 네트워크의 `AdapterName`만 직렬화합니다.
 
 ```json
 {
@@ -3061,7 +3061,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3077,7 +3077,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 사용 가능한 무선 네트워크 인터페이스를 열거할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/wifi/interfaces |
 
@@ -3124,7 +3124,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3140,7 +3140,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 지정된 인터페이스에 무선 네트워크의 목록을 열거할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/wifi/networks |
 
@@ -3151,7 +3151,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| interface   | (**필수**) 무선 네트워크 검색에 사용할 네트워크 인터페이스의 GUID입니다(괄호 없음). |
+| 인터페이스   | (**필수**) 무선 네트워크 검색에 사용할 네트워크 인터페이스의 GUID입니다(괄호 없음). |
 
 **요청 헤더**
 
@@ -3195,7 +3195,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3211,7 +3211,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 Wi-Fi 네트워크에 연결 및 연결 해제할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/wifi/network |
 
@@ -3222,9 +3222,9 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| interface   | (**필수**) 네트워크 연결에 사용할 네트워크 인터페이스에 대한 GUID입니다. |
+| 인터페이스   | (**필수**) 네트워크 연결에 사용할 네트워크 인터페이스에 대한 GUID입니다. |
 | op   | (**필수**) 수행할 작업을 나타냅니다. 가능한 값은 connect 또는 disconnect입니다.|
-| ssid   | ( ***op* == connect인 경우 필수**) 연결할 SSID입니다. |
+| ssid   | ( ***op* == connect**인 경우 필수) 연결할 SSID입니다. |
 | 키   | ( ***op* == connect이고 네트워크에 인증이 필요한 경우 필수**) 공유 키입니다. |
 | createprofile | (**필수**) 디바이스에서 네트워크에 대한 프로필을 만듭니다.  이렇게 하면 다음부터 디바이스에서 네트워크에 자동 연결합니다. **예** 또는 **아니요**일 수 있습니다. |
 
@@ -3246,7 +3246,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | :------     | :----- |
 | 200 | 확인 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3262,7 +3262,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 특정 인터페이스의 네트워크와 연결된 프로필을 삭제할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | DELETE | /api/wifi/profile |
 
@@ -3273,7 +3273,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| interface   | (**필수**) 삭제할 프로필과 연결된 네트워크 인터페이스의 GUID입니다. |
+| 인터페이스   | (**필수**) 삭제할 프로필과 연결된 네트워크 인터페이스의 GUID입니다. |
 | profile   | (**필수**) 삭제할 프로필의 이름입니다. |
 
 **요청 헤더**
@@ -3294,7 +3294,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | :------     | :----- |
 | 200 | 확인 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3314,7 +3314,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 WER 관련 파일을 다운로드할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/wer/report/file |
 
@@ -3325,8 +3325,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| user   | (**필수**) 보고서와 연결된 사용자 이름입니다. |
-| 유형   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
+| 사용자   | (**필수**) 보고서와 연결된 사용자 이름입니다. |
+| 형식   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
 | 이름   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. |
 | file   | (**필수**) 보고서에서 다운로드할 파일의 이름입니다. Base64 인코드되어야 합니다. |
 
@@ -3352,7 +3352,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * HoloLens
@@ -3366,7 +3366,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 WER 보고서에 파일을 열거할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/wer/report/files |
 
@@ -3377,8 +3377,8 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
-| user   | (**필수**) 보고서와 연결된 사용자입니다. |
-| 유형   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
+| 사용자   | (**필수**) 보고서와 연결된 사용자입니다. |
+| 형식   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
 | 이름   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. |
 
 **요청 헤더**
@@ -3408,7 +3408,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * HoloLens
@@ -3422,7 +3422,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 다음 요청 형식을 사용하여 WER 보고서를 가져올 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/wer/reports |
 
@@ -3467,7 +3467,7 @@ WER 보고서 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows 데스크톱
 * HoloLens
@@ -3485,7 +3485,7 @@ WER 보고서 형식은 다음과 같습니다.
 
 다음 요청 형식을 사용하여 WPR 프로필을 업로드하고 해당 프로필을 사용하여 추적을 시작할 수 있습니다.  추적은 한 번에 하나만 실행할 수 있습니다. 프로필은 디바이스에서 유지되지 않습니다. 
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/wpr/customtrace |
 
@@ -3523,7 +3523,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3538,7 +3538,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 
 다음 요청 형식을 사용하여 부팅 WPR 추적 세션을 시작할 수 있습니다. 성능 추적 세션이라고도 합니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/wpr/boottrace |
 
@@ -3580,7 +3580,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3595,7 +3595,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 
 다음 요청 형식을 사용하여 부팅 WPR 추적 세션을 중지할 수 있습니다. 성능 추적 세션이라고도 합니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/wpr/boottrace |
 
@@ -3614,7 +3614,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 
 **응답**
 
--  없음.  **참고:** 장기 실행 작업입니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.
+-  없음  **참고:** 장기 실행 작업입니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.
 
 **상태 코드**
 
@@ -3626,7 +3626,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3641,7 +3641,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 
 다음 요청 형식을 사용하여 WPR 추적 세션을 시작할 수 있습니다. 성능 추적 세션이라고도 합니다.  추적은 한 번에 하나만 실행할 수 있습니다. 
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/wpr/trace |
 
@@ -3683,7 +3683,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3698,7 +3698,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 
 다음 요청 형식을 사용하여 WPR 추적 세션을 중지할 수 있습니다. 성능 추적 세션이라고도 합니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/wpr/trace |
 
@@ -3717,7 +3717,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 
 **응답**
 
-- 없음.  **참고:** 장기 실행 작업입니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.  
+- 없음  **참고:** 장기 실행 작업입니다.  ETL에서 디스크에 쓰기가 완료되면 반환됩니다.  
 
 **상태 코드**
 
@@ -3729,7 +3729,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3744,7 +3744,7 @@ WPR 세션 상태 형식은 다음과 같습니다.
 
 다음 요청 형식을 사용하여 현재 WPR 세션의 상태를 검색할 수 있습니다.
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/wpr/status |
 
@@ -3782,7 +3782,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3797,7 +3797,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 
 다음 요청 형식을 사용하여 디바이스의 ETL 추적 목록을 가져올 수 있습니다. 
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/wpr/tracefiles |
 
@@ -3840,7 +3840,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3855,7 +3855,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 
 다음 요청 형식을 사용하여 추적 파일(부팅 추적 또는 사용자 모드 추적)을 다운로드할 수 있습니다. 
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/wpr/tracefile |
 
@@ -3890,7 +3890,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3905,7 +3905,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 
 다음 요청 형식을 사용하여 추적 파일(부팅 추적 또는 사용자 모드 추적)을 삭제할 수 있습니다. 
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | DELETE | /api/wpr/tracefile |
 
@@ -3940,7 +3940,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -3959,7 +3959,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 
 디바이스에 대해 현재 적용된 태그를 봅니다.  이러한 태그는 T 키의 DNS-SD TXT 레코드를 통해 알려집니다.  
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/dns-sd/tags |
 
@@ -3997,7 +3997,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 | 5XX | 서버 오류 |
 
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -4013,7 +4013,7 @@ WPR 추적 세션 상태의 형식은 다음과 같습니다.
 
 DNS-SD에 의해 현재 알려진 모든 태그를 삭제합니다.   
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | DELETE | /api/dns-sd/tags |
 
@@ -4043,7 +4043,7 @@ DNS-SD에 의해 현재 알려진 모든 태그를 삭제합니다.
 | 5XX | 서버 오류 |
 
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -4059,7 +4059,7 @@ DNS-SD에 의해 현재 알려진 모든 태그를 삭제합니다.
 
 DNS-SD에 의해 현재 알려진 태그를 삭제합니다.   
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | DELETE | /api/dns-sd/tag |
 
@@ -4090,7 +4090,7 @@ DNS-SD에 의해 현재 알려진 태그를 삭제합니다.
 | 200 | 확인 |
 
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -4106,7 +4106,7 @@ DNS-SD에 의해 현재 알려진 태그를 삭제합니다.
 
 DNS-SD 알림에 태그를 추가합니다.   
  
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/dns-sd/tag |
 
@@ -4138,7 +4138,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 401 | 태그 공간 오버플로.  제안된 태그가 생성되는 DNS-SD 서비스 레코드에 너무 긴 경우의 결과입니다. |
 
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -4156,7 +4156,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 액세스 가능한 최상위 폴더의 목록을 가져옵니다.
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/filesystem/apps/knownfolders |
 
@@ -4191,7 +4191,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 5XX | 오류 코드 |
 
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -4207,7 +4207,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 폴더의 파일 목록을 가져옵니다.
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/filesystem/apps/files |
 
@@ -4218,7 +4218,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | :------     | :----- |
 | knownfolderid | (**필수**) 원하는 파일 목록이 있는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. |
 | packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
-| path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
+| 경로 | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
 
 **요청 헤더**
 
@@ -4252,7 +4252,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -4268,7 +4268,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 알려진 폴더 또는 appLocalData에서 파일을 가져옵니다.
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | GET | /api/filesystem/apps/file |
 
@@ -4279,7 +4279,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | knownfolderid | (**필수**) 파일을 다운로드하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. |
 | 파일 이름 | (**필수**) 다운로드할 파일의 이름입니다. |
 | packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 패키지 전체 이름입니다. |
-| path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
+| 경로 | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
 
 **요청 헤더**
 
@@ -4301,7 +4301,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 404 | 파일을 찾을 수 없습니다. |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -4317,7 +4317,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 폴더 내 파일의 이름을 변경합니다.
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/filesystem/apps/rename |
 
@@ -4330,7 +4330,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 파일 이름 | (**필수**) 이름을 변경할 원래 파일의 이름입니다. |
 | newfilename | (**필수**) 파일의 새 이름입니다.|
 | packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
-| path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
+| 경로 | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
 
 **요청 헤더**
 
@@ -4354,7 +4354,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 404 | 파일을 찾을 수 없습니다. |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -4370,7 +4370,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 폴더의 파일을 삭제합니다.
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | DELETE | /api/filesystem/apps/file |
 
@@ -4381,7 +4381,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | knownfolderid | (**필수**) 파일을 삭제하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. |
 | 파일 이름 | (**필수**) 삭제할 파일의 이름입니다. |
 | packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
-| path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
+| 경로 | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
 
 **요청 헤더**
 
@@ -4405,7 +4405,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 404 | 파일을 찾을 수 없습니다. |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱
@@ -4421,7 +4421,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 폴더에 파일을 업로드합니다.  이름이 같은 기존 파일을 덮어쓰지만 새 폴더를 만들지 않습니다. 
 
-| 메서드      | 요청 URI |
+| 방법      | 요청 URI |
 | :------     | :----- |
 | POST | /api/filesystem/apps/file |
 
@@ -4431,7 +4431,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | :------     | :----- |
 | knownfolderid | (**필수**) 파일을 업로드하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. |
 | packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
-| path | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
+| 경로 | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
 
 **요청 헤더**
 
@@ -4453,7 +4453,7 @@ DNS-SD 알림에 태그를 추가합니다.
 | 4XX | 오류 코드 |
 | 5XX | 오류 코드 |
 
-**사용 가능한 장치 패밀리**
+**사용 가능한 디바이스 패밀리**
 
 * Windows Mobile
 * Windows 데스크톱

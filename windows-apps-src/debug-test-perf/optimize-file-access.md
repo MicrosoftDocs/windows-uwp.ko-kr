@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 3114bc7a86f7f7f4d22c69c814735c146352efbd
 ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/06/2020
 ms.locfileid: "75681954"
@@ -133,7 +133,7 @@ Windows.Storage 개체(예: `Windows.Storage.ApplicationData.Current.LocalFolder
 
 ### <a name="buffering-between-uwp-and-net-streams"></a>UWP와 .NET 스트림 간의 버퍼링
 
-UWP 스트림(예: [**Windows.Storage.Streams.IInputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IInputStream) 또는 [**IOutputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IOutputStream))을 .NET 스트림([**System.IO.Stream**](https://docs.microsoft.com/dotnet/api/system.io.stream))으로 변환할 수 있는 여러 시나리오가 있습니다. 예를 들어 이 시나리오는 UWP 앱을 작성하고 UWP 파일 시스템의 스트림에서 작동되는 기존 .NET 코드를 사용하려는 경우에 유용합니다. 이를 활성화 하기 위해 UWP 앱 용 .NET Api는 .NET 및 UWP 스트림 형식 간에 변환할 수 있도록 하는 확장 메서드를 제공 합니다. 자세한 내용은 [**WindowsRuntimeStreamExtensions**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions)를 참조하세요.
+UWP 스트림(예: [**Windows.Storage.Streams.IInputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IInputStream) 또는 [**IOutputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IOutputStream))을 .NET 스트림([**System.IO.Stream**](https://docs.microsoft.com/dotnet/api/system.io.stream))으로 변환할 수 있는 여러 시나리오가 있습니다. 예를 들어 이 시나리오는 UWP 앱을 작성하고 UWP 파일 시스템의 스트림에서 작동되는 기존 .NET 코드를 사용하려는 경우에 유용합니다. 이를 지원하려면 UWP 앱용 .NET API에서 .NET 및 UWP 스트림 유형 간에 변환할 수 있는 확장 메서드를 제공해야 합니다. 자세한 내용은 [**WindowsRuntimeStreamExtensions**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions)를 참조하세요.
 
 UWP 스트림을 .NET 스트림으로 변환하면 결과적으로 기본 UWP 스트림에 대한 어댑터가 만들어집니다. 경우에 따라 UWP 스트림의 메서드 호출과 관련된 런타임 부담이 있을 수 있습니다. 이는 특히 여러 작은 읽기나 쓰기 작업을 빈번히 수행하는 시나리오에서 앱 속도에 영향을 줄 수 있습니다.
 
@@ -196,7 +196,7 @@ UWP 스트림을 .NET 스트림으로 변환하면 결과적으로 기본 UWP �
 
 큰 데이터 집합을 읽거나 쓸 경우에는 [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), [**AsStreamForWrite**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforwrite?view=dotnet-uwp-10.0) 및 [**AsStream**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstream?view=dotnet-uwp-10.0) 확장 메서드에 큰 버퍼 크기를 제공하여 읽기 또는 쓰기 처리량을 늘릴 수 있습니다. 이렇게 하면 스트림 어댑터에 더 큰 내부 버퍼 크기가 제공됩니다. 예를 들어 큰 파일의 스트림을 XML 파서에 전달할 경우 파서는 스트림에서 여러 작은 읽기를 순서대로 수행할 수 있습니다. 버퍼가 크면 기본 UWP 스트림의 호출 수가 줄고 성능이 향상될 수 있습니다.
 
-> **참고**   약 80 KB 보다 큰 버퍼 크기를 설정할 때 주의 해야 합니다 .이로 인해 가비지 수집기 힙에서 조각화가 발생할 수 있습니다 ( [가비지 수집 성능 향상](improve-garbage-collection-performance.md)참조). 다음 코드 예제에서는 버퍼가 81,920바이트인 관리 스트림 어댑터를 만듭니다.
+> **참고**   버퍼 크기를 약 80KB보다 크게 설정할 때는 주의해야 합니다. 이 경우 가비지 수집기 힙에서 조각화가 발생할 수 있습니다([가비지 수집 성능 향상](improve-garbage-collection-performance.md) 참조). 다음 코드 예제에서는 버퍼가 81,920바이트인 관리 스트림 어댑터를 만듭니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```csharp
