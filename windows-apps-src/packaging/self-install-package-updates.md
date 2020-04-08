@@ -1,34 +1,34 @@
 ---
 ms.assetid: 414ACC73-2A72-465C-BD15-1B51CB2334F2
 title: Microsoft Store에서 패키지 업데이트 다운로드 및 설치
-description: 파트너 센터에서 패키지를 필수로 표시 하 고 패키지 업데이트를 다운로드 하 고 설치 하기 위해 앱에서 코드를 작성 하는 방법에 대해 알아봅니다.
+description: 파트너 센터에 패키지를 필수로 표시하고 패키지 업데이트를 다운로드 및 설치하도록 앱에서 코드를 작성하는 방법을 알아봅니다.
 ms.date: 04/04/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cb1ac05bdc5dcaaf31074f1b89e5bbb35e4f850d
 ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/31/2019
 ms.locfileid: "68682723"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Microsoft Store에서 패키지 업데이트 다운로드 및 설치
 
-Windows 10 버전 1607부터 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 클래스의 메서드를 사용하여 Microsoft Store의 현재 앱에 대한 패키지 업데이트를 프로그래밍 방식으로 확인하고 업데이트된 패키지를 다운로드 및 설치할 수 있습니다. 또한 필수 업데이트를 설치할 때까지 파트너 센터에서 필수로 표시 한 패키지를 쿼리하고 앱에서 기능을 사용 하지 않도록 설정할 수 있습니다.
+Windows 10 버전 1607부터 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스에 있는 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 클래스의 메서드를 사용하여 Microsoft Store에서 현재 앱의 패키지 업데이트를 프로그래밍 방식으로 확인하고 업데이트된 패키지를 다운로드 및 설치할 수 있습니다. 파트너 센터에 필수로 표시한 패키지를 쿼리하고, 필수 업데이트가 설치될 때까지 앱의 기능을 사용하지 않도록 설정할 수도 있습니다.
 
-Windows 10 버전 1803에 도입된 추가 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 메서드를 사용하면 자동으로(사용자에게 알림 UI를 표시하지 않고) 패키지 업데이트를 다운로드 및 설치하고, [선택적 패키지](/windows/msix/package/optional-packages)를 제거하고, 앱의 다운로드 및 설치 큐의 패키지에 대한 정보를 확인할 수 있습니다.
+Windows 10, 버전 1803에서 도입된 추가 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 메서드를 사용하면 사용자에게 알림 UI를 표시하지 않고 자동으로 패키지 업데이트를 다운로드 및 설치하고, [선택적 패키지](/windows/msix/package/optional-packages)를 제거하고, 앱의 다운로드 및 설치 큐에 있는 패키지 정보를 가져올 수 있습니다.
 
-이러한 기능을 사용하면 Microsoft Store에서 최신 버전의 앱, 선택적 패키지 및 관련 서비스를 사용하여 자동으로 사용자 기반을 최신 상태로 유지할 수 있습니다.
+해당 기능은 Microsoft Store에 있는 최신 버전의 앱, 선택적 패키지 및 관련 서비스로 사용자 기반을 최신 상태로 자동 유지하는 데 도움이 됩니다.
 
-## <a name="download-and-install-package-updates-with-the-users-permission"></a>사용자의 권한을 사용한 다운로드 및 설치 패키지 업데이트
+## <a name="download-and-install-package-updates-with-the-users-permission"></a>사용자의 권한으로 패키지 업데이트 다운로드 및 설치
 
-이 코드 예는 [GetAppAndOptionalStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync) 메서드를 사용하여 Microsoft Store에서 이용할 수 있는 모든 패키지 업데이트를 검색한 다음 [RequestDownloadAndInstallStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestdownloadandinstallstorepackageupdatesasync) 메서드를 호출하여 업데이트를 다운로드 및 설치하는 방법을 보여줍니다. 이 메서드를 사용하여 업데이트를 다운로드 및 설치할 때 OS는 업데이트를 다운로드하기 전에 사용자의 권한을 요청하는 대화 상자를 표시합니다.
+다음 코드 예제는 [GetAppAndOptionalStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync) 메서드를 사용하여 Microsoft Store에서 이용할 수 있는 모든 패키지 업데이트를 검색한 다음, [RequestDownloadAndInstallStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestdownloadandinstallstorepackageupdatesasync) 메서드를 호출하여 업데이트를 다운로드 및 설치하는 방법을 보여 줍니다. 이 메서드를 사용하여 업데이트를 다운로드 및 설치하는 경우 OS에서 업데이트를 다운로드하기 전에 사용자의 권한을 요청하는 대화 상자가 표시됩니다.
 
 > [!NOTE]
-> 이러한 메서드는 앱에 대한 필수 및 [선택적 패키지](/windows/msix/package/optional-packages)를 지원합니다. 선택적 패키지는 다운로드할 수 있는 콘텐츠(DLC) 추가 기능에서 크기 제한을 위해 대용량 앱을 분할하거나, 핵심 앱과의 분리를 위해 추가 콘텐츠를 전달하는 경우에 유용합니다. Microsoft Store에 DLC 추가 기능을 포함한 선택적 패키지를 사용하는 앱을 제출할 권한을 얻으려면 [Windows 개발자 지원](https://developer.microsoft.com/windows/support)을 참조하세요.
+> 해당 메서드는 앱의 필수 및 [선택적 패키지](/windows/msix/package/optional-packages)를 지원합니다. 선택적 패키지는 DLC(다운로드 가능한 콘텐츠) 추가 기능을 위해 크기 제약 조건에 맞게 대용량 앱을 분할하거나, 핵심 앱과 별도로 추가 콘텐츠를 전달하는 데 유용합니다. 선택적 패키지(DLC 추가 기능 포함)를 사용하는 앱을 Microsoft Store에 제출할 수 있는 권한을 얻으려면 [Windows 개발자 지원](https://developer.microsoft.com/windows/support)을 참조하세요.
 
-이 코드 예는 다음을 가정합니다.
+이 코드 예제에서는 다음을 가정합니다.
 
 * 코드가 [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page) 컨텍스트에서 실행됩니다.
 * **Page**에 다운로드 작업의 상태를 제공하는 ```downloadProgressBar```라는 이름의 [ProgressBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar)가 있습니다.
@@ -87,22 +87,22 @@ public async Task DownloadAndInstallAllUpdatesAsync()
 
 ### <a name="display-download-and-install-progress-info"></a>다운로드 및 설치 진행률 정보 표시
 
-[RequestDownloadStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestdownloadstorepackageupdatesasync) 또는 [RequestDownloadAndInstallStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestdownloadandinstallstorepackageupdatesasync) 메서드를 호출할 때, 이 요청의 각 패키지에 대해 다운로드(또는 다운로드 및 설치)의 각 단계마다 한 번씩 호출되는 [Progress](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncoperationwithprogress-2.progress) 처리기를 할당할 수 있습니다. 처리기는 [StorePackageUpdateStatus](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdatestatus) 개체를 받으며, 이 개체는 진행률 알림을 보내는 업데이트 패키지에 대한 정보를 제공합니다. 이전 예는 **StorePackageUpdateStatus** 개체의 **PackageDownloadProgress** 필드를 사용하여 다운로드와 설치 프로세스의 진행률을 표시합니다.
+[RequestDownloadStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestdownloadstorepackageupdatesasync) 또는 [RequestDownloadAndInstallStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestdownloadandinstallstorepackageupdatesasync) 메서드를 호출할 때, 이 요청의 각 패키지에 대해 다운로드(또는 다운로드 및 설치) 프로세스의 각 단계에서 한 번씩 호출되는 [Progress](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncoperationwithprogress-2.progress) 처리기를 할당할 수 있습니다. 처리기는 진행률 알림을 발생시킨 업데이트 패키지 정보를 제공하는 [StorePackageUpdateStatus](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdatestatus) 개체를 받습니다. 이전 예제에서는 **StorePackageUpdateStatus** 개체의 **PackageDownloadProgress** 필드를 사용하여 다운로드 및 설치 프로세스의 진행률을 표시합니다.
 
-패키지 다운로드와 설치를 하나의 작업으로 수행하기 위해 **RequestDownloadAndInstallStorePackageUpdatesAsync**를 호출할 경우, **PackageDownloadProgress** 필드는 패키지 다운로드 프로세스 동안 0.0에서 0.8까지 증가하고 설치하는 동안 0.8에서 1.0까지 증가함을 유의하십시오. 따라서 사용자 지정 진행률 UI에 표시되는 비율을 **PackageDownloadProgress** 필드의 값에 직접 매핑할 경우, 패키지 다운로드가 완료되면 UI가 80%까지 표시되고 OS가 설치 대화 상자를 표시합니다. 패키지가 다운로드되어 설치할 준비가 되었을 때 100%로 사용자 지정 진행률 UI가 표시되도록 하려면, **PackageDownloadProgress** 필드가 0.8에 도달했을 때 진행률 UI에 100%를 할당하도록 코드를 수정해야 합니다.
+패키지 다운로드와 설치를 하나의 작업으로 수행하기 위해 **RequestDownloadAndInstallStorePackageUpdatesAsync**를 호출할 경우, **PackageDownloadProgress** 필드는 패키지 다운로드 중에 0.0에서 0.8까지 증가하고, 설치 중에 0.8에서 1.0까지 증가합니다. 따라서 사용자 지정 진행 UI에 표시되는 백분율을 **PackageDownloadProgress** 필드 값에 직접 매핑할 경우, 패키지 다운로드가 완료되고 OS에서 설치 대화 상자가 표시될 때 80%가 UI에 표시됩니다. 패키지가 다운로드되어 설치할 준비가 되었을 때 사용자 지정 진행 UI에 100%를 표시하려면 **PackageDownloadProgress** 필드가 0.8에 도달했을 때 진행 UI에 100%를 할당하도록 코드를 수정해야 합니다.
 
 ## <a name="download-and-install-package-updates-silently"></a>자동으로 패키지 업데이트 다운로드 및 설치
 
-Windows 10 버전 1803부터 [TrySilentDownloadStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.trysilentdownloadstorepackageupdatesasync) 및 [TrySilentDownloadAndInstallStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.trysilentdownloadandinstallstorepackageupdatesasync) 메서드를 사용하여 사용자에 게 알림 UI를 표시하지 않고 패키지 업데이트를 자동으로 다운로드 및 설치할 수 있습니다. 사용자가 Microsoft Store에서 **자동으로 앱 업데이트** 설정을 활성화하고 사용자가 데이터 통신 연결 네트워크에 있지 않는 경우에만 이 작업은 성공합니다. 이러한 메서드를 호출하기 전에 먼저 [CanSilentlyDownloadStorePackageUpdates](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.cansilentlydownloadstorepackageupdates) 속성을 확인하여 해당 조건이 현재 충족되는지 확인할 수 있습니다.
+Windows 10, 버전 1803부터 [TrySilentDownloadStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.trysilentdownloadstorepackageupdatesasync) 및 [TrySilentDownloadAndInstallStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.trysilentdownloadandinstallstorepackageupdatesasync) 메서드를 사용하여 사용자에게 알림 UI를 표시하지 않고 패키지 업데이트를 자동으로 다운로드 및 설치할 수 있습니다. 이 작업은 사용자가 Microsoft Store에서 **자동으로 앱 업데이트** 설정을 사용하도록 설정했으며 데이터 통신 연결 네트워크를 사용하고 있지 않은 경우에만 성공합니다. 메서드를 호출하기 전에 먼저 [CanSilentlyDownloadStorePackageUpdates](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.cansilentlydownloadstorepackageupdates) 속성을 확인하여 해당 조건이 현재 충족되었는지 확인할 수 있습니다.
 
-이 코드 예는 [GetAppAndOptionalStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync) 메서드를 사용하여 이용할 수 있는 모든 패키지 업데이트를 검색한 다음 [TrySilentDownloadStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.trysilentdownloadstorepackageupdatesasync) 및 [TrySilentDownloadAndInstallStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.trysilentdownloadandinstallstorepackageupdatesasync) 메서드를 호출하여 업데이트를 다운로드 및 설치하는 방법을 보여줍니다.
+다음 코드 예제는 [GetAppAndOptionalStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getappandoptionalstorepackageupdatesasync) 메서드를 사용하여 이용할 수 있는 모든 패키지 업데이트를 검색한 다음, [TrySilentDownloadStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.trysilentdownloadstorepackageupdatesasync) 및 [TrySilentDownloadAndInstallStorePackageUpdatesAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.trysilentdownloadandinstallstorepackageupdatesasync) 메서드를 호출하여 업데이트를 자동으로 다운로드 및 설치하는 방법을 보여 줍니다.
 
-이 코드 예는 다음을 가정합니다.
+이 코드 예제에서는 다음을 가정합니다.
 * 코드 파일에는 **Windows.Services.Store** 및 **System.Threading.Tasks** 네임스페이스에 대한 **using** 문이 있습니다.
 * 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://docs.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault) 메서드 대신 [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) 메서드를 사용하여 **StoreContext** 개체를 가져옵니다.
 
 > [!NOTE]
-> 이 예에서 코드에 의해 호출된 **IsNowAGoodTimeToRestartApp**, **RetryDownloadAndInstallLater**, 및 **RetryInstallLater** 메서드는 원하는 앱 디자인의 필요에 따라 구현을 돕기 위한 자리 표시자 메서드입니다.
+> 이 예제 코드에서 호출된 **IsNowAGoodTimeToRestartApp**, **RetryDownloadAndInstallLater** 및 **RetryInstallLater** 메서드는 앱 디자인에 따라 필요한 경우 구현하려는 자리 표시자 메서드입니다.
 
 ```csharp
 private StoreContext context = null;
@@ -193,25 +193,25 @@ private async Task InstallUpdate(IReadOnlyList<StorePackageUpdate> storePackageU
 
 ## <a name="mandatory-package-updates"></a>필수 패키지 업데이트
 
-Windows 10 버전 1607 이상을 대상으로 하는 앱에 대 한 파트너 센터에서 패키지 제출을 만들 때 [패키지를 필수로 표시](../publish/upload-app-packages.md#mandatory-update) 하 고 필수로 설정 된 날짜와 시간을 표시할 수 있습니다. 이 속성이 설정되고 앱에서 패키지 업데이트를 사용할 수 있다고 판단한 경우 앱에서는 업데이트 패키지가 필수인지 확인하고 업데이트가 설치될 때까지 동작을 변경합니다(예를 들어 앱에서 기능을 비활성화할 수 있음).
+파트너 센터에서 Windows 10 버전 1607 이상을 대상으로 하는 앱에 대한 패키지 제출을 만드는 경우, [해당 패키지를 필수로 표시](../publish/upload-app-packages.md#mandatory-update)하고 필수가 되는 날짜/시간을 지정할 수 있습니다. 이 속성이 설정되었으며 앱에서 패키지 업데이트를 사용할 수 있는 것을 확인한 경우, 앱은 업데이트 패키지가 필수인지 여부를 확인하고 업데이트가 설치될 때까지 동작을 변경합니다(예: 앱에서 기능을 사용하지 않도록 설정할 수 있음).
 
 > [!NOTE]
-> Microsoft는 패키지 업데이트를 위한 필수 상태를 적용하지 않으며, OS는 필수 앱 업데이트를 설치해야 할 사용자를 나타내기 위한 UI를 제공하지 않습니다. 개발자가 필수 설정을 사용하여 자체 코드에서 필수 앱 업데이트를 적용합니다.  
+> Microsoft는 패키지 업데이트의 필수 상태를 적용하지 않으며, 필수 앱 업데이트를 설치해야 함을 사용자에게 알리는 UI를 OS에서 제공하지 않습니다. 개발자가 필수 설정을 사용하여 자체 코드에서 필수 앱 업데이트를 적용합니다.  
 
 패키지 제출을 필수로 표시하려면
 
-1. [파트너 센터](https://partner.microsoft.com/dashboard) 에 로그인 하 고 앱에 대 한 개요 페이지로 이동 합니다.
+1. [파트너 센터](https://partner.microsoft.com/dashboard)에 로그인한 다음, 앱 개요 페이지로 이동합니다.
 2. 필수로 만들 패키지 업데이트가 포함된 제출의 이름을 클릭합니다.
 3. 제출의 **패키지** 페이지로 이동합니다. 이 페이지 하단에서 **이 업데이트를 필수로 설정하세요.** 를 선택한 다음 패키지 업데이트가 필수가 되는 날짜와 시간을 선택합니다. 이 옵션은 제출의 모든 UWP 패키지에 적용됩니다.
 
 자세한 내용은 [앱 패키지 업로드](../publish/upload-app-packages.md)를 참조하세요.
 
 > [!NOTE]
-> [패키지 플라이트](../publish/package-flights.md)를 만드는 경우, 플라이트에 대한 **패키지** 페이지에서 유사한 UI를 사용하여 패키지를 필수로 표시할 수 있습니다. 이 경우 필수 패키지 업데이트는 해당 플라이트 그룹에 속한 고객에게만 적용됩니다.
+> [패키지 플라이트](../publish/package-flights.md)를 만드는 경우, 플라이트 **패키지** 페이지에서 유사한 UI를 사용하여 패키지를 필수로 표시할 수 있습니다. 이 경우 필수 패키지 업데이트는 해당 플라이트 그룹에 속한 고객에게만 적용됩니다.
 
-### <a name="code-example-for-mandatory-packages"></a>필수 패키지에 대한 코드 예
+### <a name="code-example-for-mandatory-packages"></a>필수 패키지의 코드 예제
 
-다음 코드 예제에서는 모든 필수 패키지 업데이트를 확인하는 방법을 보여 줍니다. 일반적으로 필수 패키지 업데이트가 성공적으로 다운로드 또는 설치되지 않은 경우 사용자를 위해 앱 환경을 정상적으로 다운그레이드해야 합니다.
+다음 코드 예제는 업데이트 패키지가 필수인지 여부를 확인하는 방법을 보여 줍니다. 일반적으로 필수 패키지 업데이트가 성공적으로 다운로드 또는 설치되지 않은 경우 사용자를 위해 앱 환경을 정상적으로 다운그레이드해야 합니다.
 
 ```csharp
 private StoreContext context = null;
@@ -326,9 +326,9 @@ private void HandleMandatoryPackageError()
 
 ## <a name="uninstall-optional-packages"></a>선택적 패키지 제거
 
-Windows 10 버전 1803부터 [RequestUninstallStorePackageAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackageasync) 또는 [RequestUninstallStorePackageByStoreIdAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackagebystoreidasync) 메서드를 사용하여 현재 앱에 대해 DLC 패키지 포함 [선택적 패키지](/windows/msix/package/optional-packages)를 제거할 수 있습니다. 예를 들어 선택적 패키지를 통해 설치된 콘텐츠가 있는 앱을 사용하는 경우 디스크 공간을 확보하기 위해 사용자가 선택적 패키지를 제거할 수 있도록 UI를 제공하고자 할 수 있습니다.
+Windows 10, 버전 1803부터 [RequestUninstallStorePackageAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackageasync) 또는 [RequestUninstallStorePackageByStoreIdAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackagebystoreidasync) 메서드를 사용하여 현재 앱의 [선택적 패키지](/windows/msix/package/optional-packages)(DLC 패키지 포함)를 제거할 수 있습니다. 예를 들어 선택적 패키지를 통해 설치되는 콘텐츠를 포함하는 앱이 있는 경우, 사용자가 디스크 공간을 확보하기 위해 선택적 패키지를 제거할 수 있는 UI를 제공하는 것이 좋습니다.
 
-다음 코드 예제에서는 [RequestUninstallStorePackageAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackageasync)를 호출하는 방법을 보여 줍니다. 이 예제에서는 다음을 가정합니다.
+다음 코드 예제는 [RequestUninstallStorePackageAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackageasync)를 호출하는 방법을 보여 줍니다. 이 예제에서는 다음을 가정합니다.
 * 코드 파일에는 **Windows.Services.Store** 및 **System.Threading.Tasks** 네임스페이스에 대한 **using** 문이 있습니다.
 * 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://docs.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault) 메서드 대신 [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) 메서드를 사용하여 **StoreContext** 개체를 가져옵니다.
 
@@ -367,16 +367,16 @@ public async Task UninstallPackage(Windows.ApplicationModel.Package package)
 }
 ```
 
-## <a name="get-download-queue-info"></a>다운로드 큐 정보 확인
+## <a name="get-download-queue-info"></a>다운로드 큐 정보 가져오기
 
-Windows 10 버전 1803부터 [GetAssociatedStoreQueueItemsAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getassociatedstorequeueitemsasync) 및 [GetStoreQueueItemsAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getstorequeueitemsasync) 메서드를 사용하여 Microsoft Store의 현재 다운로드 및 설치 큐에 있는 패키지에 대한 정보를 얻을 수 있습니다. 이러한 메서드는 앱 또는 게임이 다운로드하고 설치하는 데 몇 시간에서 며칠이 걸릴 수 있는 대용량 선택적 패키지(DLC 포함)를 지원하고, 다운로드 및 설치 프로세스가 완료되기 전에 고객이 앱 또는 게임을 종료하는 경우를 원만하게 처리하고자 하는 경우 유용합니다. 고객이 앱 또는 게임을 다시 시작하면 코드는 이러한 메서드를 사용하여 아직 다운로드 및 설치 큐에 있는 패키지의 상태에 대한 정보를 얻고, 고객에게 각 패키지의 상태를 표시할 수 있습니다.
+Windows 10, 버전 1803부터 [GetAssociatedStoreQueueItemsAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getassociatedstorequeueitemsasync) 및 [GetStoreQueueItemsAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getstorequeueitemsasync) 메서드를 사용하여 Microsoft Store의 현재 다운로드 및 설치 큐에 있는 패키지 정보를 가져올 수 있습니다. 해당 메서드는 앱이나 게임이 다운로드 및 설치하는 데 몇 시간에서 며칠이 걸릴 수 있는 대용량 선택적 패키지(DLC 포함)를 지원하고, 다운로드 및 설치 프로세스가 완료되기 전에 고객이 앱이나 게임을 종료하는 경우를 정상적으로 처리하려는 경우에 유용합니다. 고객이 앱이나 게임을 다시 시작할 때 고객에게 각 패키지 상태를 표시할 수 있도록 코드에서 이 메서드를 사용하여 아직 다운로드 및 설치 큐에 있는 패키지의 상태 정보를 가져올 수 있습니다.
 
-다음 코드 예는 [GetAssociatedStoreQueueItemsAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getassociatedstorequeueitemsasync)를 호출하여 현재 앱에 대한 진행 중인 패키지 업데이트의 목록을 가져오고 각 패키지에 대한 상태 정보를 검색하는 방법을 보여줍니다. 이 예제에서는 다음을 가정합니다.
+다음 코드 예제는 [GetAssociatedStoreQueueItemsAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getassociatedstorequeueitemsasync)를 호출하여 현재 앱에 대해 진행 중인 패키지 업데이트 목록을 가져오고 각 패키지의 상태 정보를 검색하는 방법을 보여 줍니다. 이 예제에서는 다음을 가정합니다.
 * 코드 파일에는 **Windows.Services.Store** 및 **System.Threading.Tasks** 네임스페이스에 대한 **using** 문이 있습니다.
 * 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://docs.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault) 메서드 대신 [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) 메서드를 사용하여 **StoreContext** 개체를 가져옵니다.
 
 > [!NOTE]
-> 이 예에서 코드에 의해 호출된 **MarkUpdateInProgressInUI**, **RemoveItemFromUI**, **MarkInstallCompleteInUI**, **MarkInstallErrorInUI**, 및 **MarkInstallPausedInUI** 메서드는 앱 디자인의 필요에 따라 구현을 지원하기 위한 자리 표시자 메서드입니다.
+> 이 예제 코드에서 호출된 **MarkUpdateInProgressInUI**, **RemoveItemFromUI**, **MarkInstallCompleteInUI**, **MarkInstallErrorInUI** 및 **MarkInstallPausedInUI** 메서드는 앱 디자인에 따라 필요한 경우 구현하려는 자리 표시자 메서드입니다.
 
 ```csharp
 private StoreContext context = null;

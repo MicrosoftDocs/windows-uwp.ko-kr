@@ -13,12 +13,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 31371c2b2a4826939de428fb6d7c082b78d05843
-ms.sourcegitcommit: 6951827b7d0948618e1fbb082c28794c7f23f83c
+ms.openlocfilehash: b008b12c5f92d56c127c5ec8026d305d3d57a869
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923148"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081679"
 ---
 # <a name="menus-and-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 
@@ -26,13 +26,15 @@ ms.locfileid: "70923148"
 
 ![일반적인 상황에 맞는 메뉴 예제](images/contextmenu_rs2_icons.png)
 
-| **Windows UI Library 가져오기** |
-| - |
-| 이 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+**Windows UI 라이브러리 가져오기**
 
-| **플랫폼 API** | **Windows UI Library API** |
+|  |  |
 | - | - |
-| [MenuFlyout 클래스](/uwp/api/windows.ui.xaml.controls.menuflyout), [MenuBar 클래스](/uwp/api/windows.ui.xaml.controls.menubar), [ContextFlyout 속성](/uwp/api/windows.ui.xaml.uielement.contextflyout), [FlyoutBase.AttachedFlyout 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase#xaml-attached-properties) | [MenuBar 클래스](/uwp/api/microsoft.ui.xaml.controls.menubar) |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **MenuBar** 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+> **Windows UI 라이브러리 API:** [MenuBar 클래스](/uwp/api/microsoft.ui.xaml.controls.menubar)
+>
+> **플랫폼 API:** [MenuFlyout 클래스](/uwp/api/windows.ui.xaml.controls.menuflyout), [MenuBar 클래스](/uwp/api/windows.ui.xaml.controls.menubar), [ContextFlyout 속성](/uwp/api/windows.ui.xaml.uielement.contextflyout), [FlyoutBase.AttachedFlyout 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase#xaml-attached-properties)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -57,7 +59,7 @@ CommandBar와 MenuBar를 함께 사용할 수도 있습니다. MenuBar를 사용
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/MenuFlyout">앱을 열고 MenuFlyout의 기능을 확인</a>합니다.</p>
     <ul>
@@ -266,12 +268,12 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 </muxc:MenuBar>
 ```
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
 - [XAML 상황에 맞는 메뉴 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlContextMenu)
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [MenuFlyout 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menuflyout)
 - [MenuBar 클래스](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.menubar)

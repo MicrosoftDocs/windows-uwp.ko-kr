@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ae05a00cac19fdd349aa48160b88cde6b84e26b0
-ms.sourcegitcommit: 620e4a51e2486ec2cb7190176b3d9bf3d7b5b6af
+ms.openlocfilehash: 6b77cc7b2f39a987df4c832f7a8daeb7e2722def
+ms.sourcegitcommit: f2f61a43f5bc24b829e8db679ffaca3e663c00e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78222029"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588712"
 ---
 # <a name="grant-identity-to-non-packaged-desktop-apps"></a>패키지되지 않은 데스크톱 앱에 ID 부여
 
@@ -124,7 +124,7 @@ Windows 10 Insider Preview 빌드 10.0.19000.0부터는 *스파스 패키지*를
 다음 예제는 명령줄에서 스파스 패키지를 만드는 방법을 보여줍니다.  
 
 ```Console
-MakeAppx.exe  pack  /d  <path to directory that contains manifest>  /p  <output path>\MyPackage.msix  /nv
+MakeAppx.exe pack /d <path to directory that contains manifest> /p <output path>\MyPackage.msix /nv
 ```
 
 스파스 패키지를 대상 컴퓨터에 성공적으로 설치하려면 대상 컴퓨터에서 신뢰할 수 있는 인증서로 스파스 패키지를 서명해야 합니다. Windows SDK에서 제공하는 [SignTool](https://docs.microsoft.com/windows/msix/package/sign-app-package-using-signtool)을 사용하여 개발용으로 자체 서명된 새 인증서를 만들어 스파스 패키지에 서명할 수 있습니다.
@@ -132,7 +132,7 @@ MakeAppx.exe  pack  /d  <path to directory that contains manifest>  /p  <output 
 다음 예제는 명령줄에서 스파스 패키지에 서명하는 방법을 보여줍니다.
 
 ```Console
-SignTool.exe sign /fd SHA256 /a /f <path to certificate>\MyCertificate.pfx  /p <certificate password>  <path to sparse package>\MyPackage.msix
+SignTool.exe sign /fd SHA256 /a /f <path to certificate>\MyCertificate.pfx /p <certificate password> <path to sparse package>\MyPackage.msix
 ```
 
 ### <a name="add-the-package-identity-metadata-to-your-desktop-application-manifest"></a>데스크톱 애플리케이션 매니페스트에 패키지 ID 메타데이터 추가

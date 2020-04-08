@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 9c451eba40b5c36843a32efbc80de40866f2f0dc
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: ab5b509aa69dc54d18ef3643d7ccd46bc2984676
+ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081445"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80614097"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -44,21 +44,10 @@ XAML [TreeView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tree
 >
 > **플랫폼 API:** [TreeView 클래스](/uwp/api/windows.ui.xaml.controls.treeview), [TreeViewNode 클래스](/uwp/api/windows.ui.xaml.controls.treeviewnode), [TreeView.ItemsSource 속성](/uwp/api/windows.ui.xaml.controls.treeview.itemssource)
 
-이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 다음을 [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page) 요소에 추가했습니다.
-
-```xaml
-xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
-```
-
-코드 숨김에서는 C#의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 다음 **using** 문을 파일 맨 위에 추가했습니다.
-
-```csharp
-using muxc = Microsoft.UI.Xaml.Controls;
-```
-
-```vb
-Imports muxc = Microsoft.UI.Xaml.Controls
-```
+> [!TIP]
+> 이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이를 [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page) 요소(`xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`)에 추가했습니다.
+>
+>코드 숨김에서는 C#의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이 **using** 문(`using muxc = Microsoft.UI.Xaml.Controls;`)을 파일 맨 위에 추가했습니다.
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
