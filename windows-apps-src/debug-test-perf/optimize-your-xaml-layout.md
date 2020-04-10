@@ -1,14 +1,14 @@
 ---
 ms.assetid: 79CF3927-25DE-43DD-B41A-87E6768D5C35
 title: XAML 레이아웃 최적화
-description: 레이아웃에서 비용이 많이 드는 부분은 XAML 앱을 수 있습니다 &\#8212; 모두에서 CPU 사용량 및 메모리 오버 헤드가 발생 합니다. 다음은 XAML 앱의 레이아웃 성능 향상을 위해 수행할 수 있는 몇 가지 간단한 절차입니다.
+description: 레이아웃은 CPU 사용과 메모리 오버헤드 둘 다에서 비용이 많이 들 수 있는 XAML 앱 요소입니다. 다음은 XAML 앱의 레이아웃 성능 향상을 위해 수행할 수 있는 몇 가지 간단한 절차입니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 92dca27a4cfb02f5d1bcb722683eca89ec16a6d6
 ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/29/2019
 ms.locfileid: "66362218"
@@ -16,7 +16,7 @@ ms.locfileid: "66362218"
 # <a name="optimize-your-xaml-layout"></a>XAML 레이아웃 최적화
 
 
-**중요 한 Api**
+**중요 API**
 
 -   [**Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel)
 
@@ -42,7 +42,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
 
 이 예제에서는 동일한 UI를 구현하는 3가지 방법을 보여 줍니다. 각 구현 선택 항목이 화면에서 거의 동일한 픽셀로 표시되지만, 구현 세부 정보에서 보면 크게 다릅니다.
 
-옵션 1: 중첩 [ **StackPanel** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) 요소
+옵션 1: 중첩된 [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) 요소
 
 가장 간단한 모델이지만, 5개의 패널 요소를 사용하므로 상당한 오버헤드가 발생합니다.
 
@@ -70,7 +70,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
 </StackPanel>
 ```
 
-옵션 2: 단일 [ **표**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)
+옵션 2: 단일 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)
 
 [  **Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)는 약간 복잡하지만, 단일 패널 요소만 사용합니다.
 
@@ -103,7 +103,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
 </Grid>
 ```
 
-옵션 3: 단일 [ **RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel):
+옵션 3: 단일 [**RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel):
 
 이 단일 패널은 중첩된 패널을 사용하는 것보다 약간 더 복잡하기도 하지만, [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)보다는 이해하고 유지 관리하기가 더 쉬울 수 있습니다.
 
@@ -134,7 +134,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
 
 레이아웃에서 요소가 서로 겹칠 수 있어야 하는 것이 일반적인 UI 요구 사항입니다. 요소를 겹쳐서 배치하는 데 일반적으로 안쪽 여백, 여백, 맞춤 및 변형이 사용됩니다. XAML [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) 컨트롤은 겹치는 요소에 대한 레이아웃 성능을 향상하는 데 최적화되어 있습니다.
 
-**중요**  향상을 확인 하려면 단일 셀을 사용 하 여 [ **그리드**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)합니다. [  **RowDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.rowdefinitions) 또는 [**ColumnDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.columndefinitions)를 정의하지 마세요.
+**중요**  기능 향상 효과를 보려면 단일 셀 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)를 사용하세요. [  **RowDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.rowdefinitions) 또는 [**ColumnDefinitions**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid.columndefinitions)를 정의하지 마세요.
 
 ### <a name="examples"></a>예
 
@@ -160,7 +160,7 @@ UI 요소의 트리 계층 구조를 간소화하면 레이아웃 성능을 가�
 
 ## <a name="use-a-panels-built-in-border-properties"></a>패널의 기본 제공 테두리 속성 사용
 
-[**표 형태**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)를 [ **StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel)를 [ **RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel), 및 [  **ContentPresenter** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentPresenter) 컨트롤에 기본 테두리 속성을 추가 하지 않고 해당 주위에 테두리를 그릴 수 있도록 [ **테두리** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) 요소 에 XAML입니다. 기본 제공 테두리를 지 원하는 새 속성 다음과 같습니다. **BorderBrush**, **BorderThickness**합니다 **CornerRadius**, 및 **패딩**합니다. 이러한 각 속성은 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty)이므로 바인딩 및 애니메이션과 함께 사용할 수 있습니다. 또한 별도의 **Border** 요소를 완벽히 대체할 수 있도록 설계되었습니다.
+[**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid), [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel), [**RelativePanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) 및 [**ContentPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentPresenter) 컨트롤은 기본 제공 테두리 속성이 있으므로 이러한 속성을 사용하면 XAML에 [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) 요소를 추가하지 않고 주위에 테두리를 그릴 수 있습니다. 기본 제공 테두리를 지원하는 새 속성은 **BorderBrush**, **BorderThickness**, **CornerRadius** 및 **Padding**입니다. 이러한 각 속성은 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty)이므로 바인딩 및 애니메이션과 함께 사용할 수 있습니다. 또한 별도의 **Border** 요소를 완벽히 대체할 수 있도록 설계되었습니다.
 
 UI에서 [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border) 요소가 이러한 패널 주위에 있는 경우 기본 제공 테두리를 대신 사용합니다. 그러면 앱의 레이아웃 구조에 추가 요소가 저장됩니다. 앞에서 언급했듯이 이를 통해 성능을 크게 개선하고 오버헤드를 줄일 수 있습니다(반복된 UI의 경우 특히).
 
@@ -175,11 +175,11 @@ UI에서 [**Border**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Control
 
 ## <a name="use-sizechanged-events-to-respond-to-layout-changes"></a>**SizeChanged** 이벤트를 사용하여 레이아웃 변경에 응답
 
-합니다 [ **FrameworkElement** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement) 클래스 레이아웃 변경에 응답 하는 것에 대 한 두 개의 비슷한 이벤트를 노출 합니다. [**LayoutUpdated** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.layoutupdated) 하 고 [ **SizeChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged)합니다. 이러한 이벤트 중 하나를 사용하면 레이아웃 수행 중 요소 크기가 조정될 때 알림을 받을 수 있습니다. 두 이벤트의 의미 체계가 다르므로 둘 중 하나를 선택하는 데 중요한 성능 고려 사항이 있습니다.
+[**FrameworkElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement) 클래스는 레이아웃 변경에 응답하는 두 가지 유사한 이벤트, 즉 [**LayoutUpdated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.layoutupdated) 및 [**SizeChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged)를 공개합니다. 이러한 이벤트 중 하나를 사용하면 레이아웃 수행 중 요소 크기가 조정될 때 알림을 받을 수 있습니다. 두 이벤트의 의미 체계가 다르므로 둘 중 하나를 선택하는 데 중요한 성능 고려 사항이 있습니다.
 
 최상의 성능을 위해서는 [**SizeChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.sizechanged)를 선택하는 것이 거의 항상 좋습니다. **SizeChanged**는 직관적인 시맨틱입니다. [  **FrameworkElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement)의 크기가 업데이트된 경우 레이아웃 중 발생합니다.
 
-[**LayoutUpdated** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.layoutupdated) 레이아웃 중에 발생 전역 의미 체계 되었지만-모든 요소에 업데이트 될 때마다 모든 요소에 대해 발생 합니다. 이벤트 처리기에서 로컬 처리만 수행되는 것이 일반적이며, 이 경우 코드가 필요한 것보다 더 자주 실행됩니다. 흔하지는 않지만 요소가 크기 변경 없이 재배치되는 때를 알아야 하는 경우에만 **LayoutUpdated**를 사용합니다.
+[**LayoutUpdated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.layoutupdated)도 레이아웃 중에 발생하지만 전역 의미 체계가 있습니다. 즉, 이 이벤트는 요소가 업데이트될 때마다 모든 요소에서 발생합니다. 이벤트 처리기에서 로컬 처리만 수행되는 것이 일반적이며, 이 경우 코드가 필요한 것보다 더 자주 실행됩니다. 흔하지는 않지만 요소가 크기 변경 없이 재배치되는 때를 알아야 하는 경우에만 **LayoutUpdated**를 사용합니다.
 
 ## <a name="choosing-between-panels"></a>패널 중 선택
 

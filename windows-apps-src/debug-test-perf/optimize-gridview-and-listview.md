@@ -8,7 +8,7 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 73da4a2a590c5f1d860bb480c6d81b01e5e93819
 ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/13/2020
 ms.locfileid: "79210079"
@@ -16,7 +16,7 @@ ms.locfileid: "79210079"
 # <a name="listview-and-gridview-ui-optimization"></a>ListView 및 GridView UI 최적화
 
 
-**참고**   자세한 내용은 [사용자가 GridView 및 ListView에서 많은 양의 데이터와 상호 작용할 때 build/session을 사용 하면 성능이 크게 향상](https://channel9.msdn.com/events/build/2013/3-158)됩니다.
+**참고**   자세한 내용은 //build/ 세션 [사용자가 GridView 및 ListView에서 많은 데이터를 조작할 때의 획기적인 성능 향상](https://channel9.msdn.com/events/build/2013/3-158)을 참조하세요.
 
 UI 가상화, 요소 감소, 항목에 대한 점진적 업데이트를 통해 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 및 [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)의 성능과 시작 시간을 개선합니다. 데이터 가상화 기술은 [ListView 및 GridView 데이터 가상화](listview-and-gridview-data-optimization.md)를 참조하세요.
 
@@ -30,9 +30,9 @@ UI 가상화, 요소 감소, 항목에 대한 점진적 업데이트를 통해 [
 
 ## <a name="ui-virtualization"></a>UI 가상화
 
-UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다. 이는 항목을 나타내는 UI 요소가 필요에 따라 만들어짐을 의미합니다. 1000개 항목의 컬렉션에 바인딩된 항목 컨트롤의 경우 동시에 모든 항목에 대한 UI를 만드는 것은 리소스 낭비입니다. 왜냐하면 이들을 동시에 모두 표시할 수 없기 때문입니다. [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 및 [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) (및 기타 표준 [**ITEMSCONTROL**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl)파생 컨트롤)는 UI 가상화를 수행 합니다. 항목이 보기에 가까이(몇 페이지 밖) 스크롤되면 프레임워크가 항목에 대한 UI를 생성하고 이를 캐시합니다. 항목이 다시 표시될 것 같지 않은 경우 프레임워크는 메모리를 회수합니다.
+UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다. 이는 항목을 나타내는 UI 요소가 필요에 따라 만들어짐을 의미합니다. 1000개 항목의 컬렉션에 바인딩된 항목 컨트롤의 경우 동시에 모든 항목에 대한 UI를 만드는 것은 리소스 낭비입니다. 왜냐하면 이들을 동시에 모두 표시할 수 없기 때문입니다. [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 및 [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)(및 기타 표준 [**ItemsControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) 파생 컨트롤)는 UI 가상화를 수행합니다. 항목이 보기에 가까이(몇 페이지 밖) 스크롤되면 프레임워크가 항목에 대한 UI를 생성하고 이를 캐시합니다. 항목이 다시 표시될 것 같지 않은 경우 프레임워크는 메모리를 회수합니다.
 
-사용자 지정 항목 패널 템플릿([**ItemsPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) 참조)을 제공하는 경우 [**ItemsWrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsWrapGrid) 또는 [**ItemsStackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsStackPanel)과 같은 가상화 패널을 사용해야 합니다. [  **VariableSizedWrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.VariableSizedWrapGrid), [**WrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WrapGrid) 또는 [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel)을 사용하는 경우에는 가상화할 수 없습니다. 또한 [**ItemsWrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 또는 [**ItemsStackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsWrapGrid)을 사용할 경우에만 [**ChoosingGroupHeaderContainer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsStackPanel), [**ChoosingItemContainer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer) 및 [**ContainerContentChanging**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.choosingitemcontainer)과 같은 [**ListView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging) 이벤트가 발생됩니다.
+사용자 지정 항목 패널 템플릿([**ItemsPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) 참조)을 제공하는 경우 [**ItemsWrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsWrapGrid) 또는 [**ItemsStackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsStackPanel)과 같은 가상화 패널을 사용해야 합니다. [  **VariableSizedWrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.VariableSizedWrapGrid), [**WrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WrapGrid) 또는 [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel)을 사용하는 경우에는 가상화할 수 없습니다. 또한 다음 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 이벤트는 [**ItemsWrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsWrapGrid) 또는 [**ItemsStackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsStackPanel)을 사용하는 경우에만 발생합니다. [**ChoosingGroupHeaderContainer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer), [**ChoosingItemContainer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) 및 [**ContainerContentChanging**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging).
 
 프레임워크가 표시될 수 있는 요소를 만들어야 하므로 뷰포트 개념이 UI 가상화에 중요합니다. 일반적으로 [**ItemsControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl)의 뷰포트는 논리적 컨트롤 크기입니다. 예를 들어 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)의 뷰포트는 **ListView** 요소의 너비 및 높이입니다. 일부 패널에서는 자동 크기 조정 행 또는 열을 사용하여 자식 요소(예: [**ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) 및 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid))에 무제한 공간을 허용합니다. 가상화된 **ItemsControl**이 이와 같은 패널에 배치된 경우 모든 항목을 표시할 수 있는 공간을 차지하므로 가상화에 실패합니다. 이 경우 **ItemsControl**에서 너비와 높이를 설정하여 가상화를 복원합니다.
 
@@ -81,9 +81,9 @@ UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다.
 
 임시 자리 표시자 시각 요소 기능은 기본적으로 켜져 있으며 [**ShowsScrollingPlaceholders**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) 속성을 통해 제어됩니다. 빠른 이동/스크롤 중에 이 기능은 원활함을 유지하면서 완전히 표시할 항목이 아직 더 있음을 알려 주는 시각적 힌트를 사용자에게 제공합니다. 아래 기법 중 하나를 사용하는 경우 시스템이 자리 표시자를 렌더링하지 않게 하려면 **ShowsScrollingPlaceholders**를 false로 설정할 수 있습니다.
 
-**X:Phase를 사용 하 여 프로그레시브 데이터 템플릿 업데이트**
+**x:Phase를 사용한 점진적 데이터 템플릿 업데이트**
 
-[{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-phase-attribute) 바인딩과 함께 [x:Phase 특성](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)을 사용하여 점진적 데이터 템플릿 업데이트를 구현하는 방법은 다음과 같습니다.
+[{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension) 바인딩과 함께 [x:Phase 특성](https://docs.microsoft.com/windows/uwp/xaml-platform/x-phase-attribute)을 사용하여 점진적 데이터 템플릿 업데이트를 구현하는 방법은 다음과 같습니다.
 
 1.  다음은 바인딩 원본의 모양입니다(바인딩할 데이터 원본임).
 
@@ -145,7 +145,7 @@ UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다.
 
 3.  이제 앱을 시작하고 그리드 보기를 통해 신속하게 이동/스크롤하면 각각의 새 항목이 화면에 표시될 때 먼저 어두운 회색의 직사각형([**ShowsScrollingPlaceholders**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.showsscrollingplaceholders) 속성이 기본적으로 **true**로 설정되었기 때문)으로 렌더링된 다음 제목, 자막 및 설명이 차례로 표시됩니다.
 
-**ContainerContentChanging를 사용 하 여 프로그레시브 데이터 템플릿 업데이트**
+**ContainerContentChanging을 사용한 점진적 데이터 템플릿 업데이트**
 
 [  **ContainerContentChanging**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging) 이벤트에 대한 일반적인 전략은 **Opacity**을 사용하여 즉시 표시하지 않아도 되는 요소를 숨기는 것입니다. 요소가 재활용될 때는 이전 값을 유지하므로 새 데이터 항목에서 이러한 값을 업데이트할 때까지 이러한 요소를 숨길 수 있습니다. 이벤트 인수에서 **Phase** 속성을 사용하여 업데이트 및 표시할 이벤트를 결정합니다. 추가 단계가 필요한 경우 콜백을 등록합니다.
 
@@ -248,9 +248,9 @@ UI 가상화는 성능을 개선할 수 있는 가장 중요한 기능입니다.
 
 일부 애플리케이션에서는 컬렉션 내의 다른 항목 유형에 대해 다른 UI가 있어야 합니다. 이로 인해 가상화 패널에서 항목을 표시하는 데 사용되는 시각적 요소를 재사용/재활용하는 것이 불가능한 상황이 생길 수 있습니다. 이동 중 항목에 대한 시각적 요소를 다시 만들면 가상화에서 제공하는 성능 향상의 많은 이점이 취소됩니다. 그러나 조금만 계획하면 가상화 패널에서 요소를 재사용할 수 있습니다. 개발자는 시나리오에 따라 두 가지 옵션, 즉 [**ChoosingItemContainer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.choosingitemcontainer)이벤트 또는 항목 템플릿 선택기의 옵션이 있습니다. **ChoosingItemContainer**응 성능이 더 우수한 접근 방식입니다.
 
-**ChoosingItemContainer 이벤트입니다.**
+**ChoosingItemContainer 이벤트**
 
-[**ChoosingItemContainer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.choosingitemcontainer) 는 시작 또는 재활용 중에 새 항목이 필요할 때마다 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)/[**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) 에 항목 (**ListViewItem**/**GridViewItem**)을 제공할 수 있도록 하는 이벤트입니다. 컨테이너가 표시하는 데이터 항목 형식에 따라 컨테이너를 만들 수 있습니다(아래 예제에 표시됨). **ChoosingItemContainer**는 다른 항목에 대해 다른 데이터 템플릿을 사용하는 성능이 우수한 방법입니다. 컨테이너 캐싱은 **ChoosingItemContainer**를 사용하여 얻을 수 있는 기능입니다. 예를 들어 5개의 다른 템플릿이 있고 한 템플릿이 다른 템플릿보다 더 자주 발생하는 경우 ChoosingItemContainer를 통해 필요한 비율로 항목을 만들 수 있을 뿐만 아니라 재활용을 위해 적절한 요소 수를 캐시하여 사용할 수 있도록 유지할 수 있습니다. [**ChoosingGroupHeaderContainer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer) 는 그룹 헤더에 대해 동일한 기능을 제공 합니다.
+[**ChoosingItemContainer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.choosingitemcontainer)는 시작 또는 재활용 중에 새 항목이 필요할 때마다 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)/[**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)에 항목(**ListViewItem**/**GridViewItem**)을 제공할 수 있는 이벤트입니다. 컨테이너가 표시하는 데이터 항목 형식에 따라 컨테이너를 만들 수 있습니다(아래 예제에 표시됨). **ChoosingItemContainer**는 다른 항목에 대해 다른 데이터 템플릿을 사용하는 성능이 우수한 방법입니다. 컨테이너 캐싱은 **ChoosingItemContainer**를 사용하여 얻을 수 있는 기능입니다. 예를 들어 5개의 다른 템플릿이 있고 한 템플릿이 다른 템플릿보다 더 자주 발생하는 경우 ChoosingItemContainer를 통해 필요한 비율로 항목을 만들 수 있을 뿐만 아니라 재활용을 위해 적절한 요소 수를 캐시하여 사용할 수 있도록 유지할 수 있습니다. [**ChoosingGroupHeaderContainer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.choosinggroupheadercontainer)는 그룹 헤더에 대해 동일한 기능을 제공합니다.
 
 ```csharp
 // Example shows how to use ChoosingItemContainer to return the correct

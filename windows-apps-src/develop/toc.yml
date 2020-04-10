@@ -181,6 +181,8 @@
           href: ../networking/web-feeds.md
         - name: 백그라운드 전송
           href: ../networking/background-transfers.md
+    - name: 명명된 개체 공유
+      href: ../communication/sharing-named-objects.md
 - name: 데이터 및 파일
   items:
     - name: 앱 리소스

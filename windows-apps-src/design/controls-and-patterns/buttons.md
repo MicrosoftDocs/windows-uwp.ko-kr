@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a3cd8a0c988df08047b10911a4d4f55e3ba1cb6e
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: e098283bae6f58b927892c680a4981d83f9e31e8
+ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209308"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80081383"
 ---
 # <a name="buttons"></a>단추
 
@@ -33,18 +33,20 @@ ms.locfileid: "79209308"
 [Button](/uwp/api/windows.ui.xaml.controls.button) | 즉시 작업을 시작하는 단추입니다. [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 또는 [Command](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command) 바인딩에 사용할 수 있습니다.
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | 누르고 있는 동안 계속해서 [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트를 발생시키는 단추입니다.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | 하이퍼링크처럼 스타일이 지정되는 단추로, 탐색에 사용됩니다. 하이퍼링크에 대한 자세한 내용은 [하이퍼링크](hyperlinks.md)를 참조하세요.
-[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | 연결된 플라이아웃을 여는 펼침 단추가 있는 단추입니다.
-[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | 두 면이 있는 단추입니다. 한 쪽은 작업을 시작하고, 다른 쪽은 메뉴를 엽니다.
-[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | 두 면이 있는 토글 단추입니다. 한쪽은 켜기/끄기를 전환하고, 다른 쪽은 메뉴를 엽니다.
+[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | ![WinUI 로고](images/winui-logo-16x16.png) 연결된 플라이아웃을 여는 펼침 단추가 있는 단추입니다.
+[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | ![WinUI 로고](images/winui-logo-16x16.png) 두 면이 있는 단추입니다. 한 쪽은 작업을 시작하고, 다른 쪽은 메뉴를 엽니다.
+[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | ![WinUI 로고](images/winui-logo-16x16.png) 두 면이 있는 토글 단추입니다. 한쪽은 켜기/끄기를 전환하고, 다른 쪽은 메뉴를 엽니다.
 [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton) | 설정하거나 해제할 수 있는 단추입니다.
 
-| **Windows UI 라이브러리 가져오기** |
-| - |
-| **DropDownButton**, **SplitButton** 및 **ToggleSplitButton**은 UWP 앱용 새 컨트롤과 UI 기능을 포함하고 있는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+**Windows UI 라이브러리 가져오기**
 
-| **플랫폼 API** | **Windows UI 라이브러리 API** |
+|  |  |
 | - | - |
-| [Click 이벤트](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click)<br/> [Command 속성](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command) | [DropDownButton 클래스](/uwp/api/microsoft.ui.xaml.controls.dropdownbutton)<br/> [SplitButton 클래스](/uwp/api/microsoft.ui.xaml.controls.splitbutton)<br/> [ToggleSplitButton 클래스](/uwp/api/microsoft.ui.xaml.controls.togglesplitbutton) |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **DropDownButton**, **SplitButton** 및 **ToggleSplitButton**은 UWP 앱용 새 컨트롤과 UI 기능을 포함하고 있는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+
+> **Windows UI 라이브러리 API:** [DropDownButton 클래스](/uwp/api/microsoft.ui.xaml.controls.dropdownbutton), [SplitButton 클래스](/uwp/api/microsoft.ui.xaml.controls.splitbutton), [ToggleSplitButton 클래스](/uwp/api/microsoft.ui.xaml.controls.togglesplitbutton)
+>
+> **플랫폼 API:** [Click 이벤트](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click), [Command 속성](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -68,7 +70,7 @@ ms.locfileid: "79209308"
 <table>
 <th align="left">XAML Controls Gallery<th>
 <tr>
-<td><img src="images/xaml-controls-gallery-sm.png" alt="XAML controls gallery"></img></td>
+<td><img src="images/xaml-controls-gallery-app-icon-sm.png" alt="XAML controls gallery"></img></td>
 <td>
     <p><strong style="font-weight: semi-bold">XAML Controls Gallery</strong>가 설치된 경우 여기를 클릭하여 <a href="xamlcontrolsgallery:/item/Button">앱을 열고 작동 중인 단추를 확인</a>합니다.</p>
     <ul>
