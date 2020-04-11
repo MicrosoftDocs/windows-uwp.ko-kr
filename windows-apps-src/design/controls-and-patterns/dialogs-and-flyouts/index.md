@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 37ab62a6e6c2e294e8d6b5222eab4a1a9ae25a2e
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: c61d1478c38df315a3fe3c20151de8c2bfbca4e2
+ms.sourcegitcommit: 23c5d8dfaeb6edbca780637ffd26fe892db27519
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081013"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123583"
 ---
 # <a name="dialogs-and-flyouts"></a>대화 상자 및 플라이아웃
 
@@ -24,15 +24,12 @@ ms.locfileid: "80081013"
 
 > **플랫폼 API:** [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog), [Flyout 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
-:::row:::
-    :::column:::
 **대화 상자**
 
 ![대화 상자 예제](../images/dialogs/dialog_RS2_delete_file.png)
 
 대화 상자는 상황에 맞는 앱 정보를 제공하는 모달 UI 오버레이입니다. 대화 상자는 명시적으로 닫을 때까지 앱 창의 조작을 차단합니다. 종종 사용자의 작업을 요청하기도 합니다.
-    :::column-end:::
-    :::column::: 
+
 **플라이아웃**
 
 ![플라이아웃의 예제](../images/flyout-example2.png)
@@ -40,9 +37,6 @@ ms.locfileid: "80081013"
 플라이아웃은 사용자가 수행하는 작업과 관련된 UI를 표시하는 경량의 상황에 맞는 팝업입니다. 이 기능은 배치 및 크기 조정 논리를 포함하며, 보조 컨트롤을 표시하거나 항목에 대한 세부 정보를 표시하는 데 사용할 수 있습니다.
 
 대화 상자와 달리 플라이아웃은 플라이아웃 바깥쪽 아무 곳이나 탭 또는 클릭하거나, Esc 키 또는 뒤로 단추를 누르거나, 앱 창 크기를 조정하거나, 디바이스의 방향을 변경하여 신속하게 해제할 수 있습니다.
-    :::column-end:::
-:::row-end:::
-
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -52,8 +46,6 @@ ms.locfileid: "80081013"
 
 대화 상자는 상호 작용을 차단하고 플라이아웃은 그러지 않으므로 질문에 대답하거나 소량의 특정 정보에 중점을 두는 상황에서는 대화 상자를 예약해야 합니다. 반면 무언가에 주의를 집중시키지만 사용자가 무시해도 되는 경우 플라이아웃을 사용할 수 있습니다.
 
-:::row:::
-    :::column:::
    <p><b>대화 상자의 용도</b> <br/>
 <ul>
 <li>사용자가 계속하기 전에 읽고 <b>반드시</b> 승인해야 하는 중요한 정보 표시 예를 들면 다음과 같습니다.
@@ -69,17 +61,14 @@ ms.locfileid: "80081013"
 <li>앱에서 사용자 대신 선택할 수 없는 경우와 같이 앱에서 사용자에게 차단 질문을 해야 하는 경우의 질문 차단 질문은 무시하거나 연기할 수 없으며 사용자에게 잘 정의된 선택 항목을 제공해야 합니다.</li>
 </ul>
 </p>
-    :::column-end:::
-    :::column:::
+
+
    <p><b>플라이아웃의 용도</b> <br/>
 <ul>
 <li>작업을 완료할 수 있기 전에 필요한 추가 정보 수집</li>
 <li>특정 시간에만 관련된 정보 표시 예를 들어 사진 갤러리 앱에서 이미지 미리 보기를 클릭할 때 플라이아웃을 사용하여 큰 버전의 이미지를 표시할 수 있습니다.</li>
 <li>페이지에 항목에 대한 세부 정보 또는 긴 설명과 같은 추가 정보 표시</li>
 </ul></p>
-    :::column-end:::
-:::row-end:::
-
 
 ## <a name="ways-to-avoid-using-dialogs-and-flyouts"></a>대화 상자 및 플라이아웃을 사용하지 않도록 방지하는 방법
 
