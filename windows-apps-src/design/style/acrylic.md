@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c6995ab6116d4e3bda8e21c397ab3b4985732763
-ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+ms.openlocfilehash: 9739933f9fd23c6f169c24c4f789e53ba894708d
+ms.sourcegitcommit: 252dbf4483d58dd7093a79726a29923109eebee5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77639770"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80696626"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 
@@ -76,15 +76,6 @@ XAML 컨트롤 갤러리 앱이 설치된 경우 <a href="xamlcontrolsgallery:/i
 탐색 화면에서 인앱 아크릴을 사용하려는 경우 앱 흐름을 개선할 수 있도록 콘텐츠를 아크릴 창 아래로 확장하는 방안을 고려해 보세요. NavigationView를 사용하면 자동으로 확장됩니다. 그러나 스트라이프 효과를 방지하려면 여러 아크릴의 가장자리가 맞닿게 배치하지 마세요. 이렇게 배치하면 흐릿한 두 표면 사이에 원치 않는 이음새가 생길 수 있습니다. 아크릴은 디자인의 시각적 조화를 위한 도구지만, 잘못 사용할 경우 시각적 혼란을 일으킬 수 있습니다.
 
 다음 사용 패턴을 고려하여 앱에 아크릴을 통합하는 가장 좋은 방법을 결정하세요.
-
-### <a name="horizontal-navigation-or-commanding"></a>가로 탐색 또는 명령
-
-앱에서 NavigationView를 활용할 수 없고 아크릴을 직접 추가하려는 경우 색조 불투명도 60%의 비교적 반투명한 아크릴을 사용하는 것이 좋습니다.
- - 창이 다른 앱 콘텐츠 위에 오버레이로 열리는 경우 [60% 인앱 아크릴](#acrylic-theme-resources)이어야 합니다.
-
-![인앱 가로 명령을 사용하여 앱 매핑](images/Maps_In_App_Acrylic_1.png)
-
-또한 콘텐츠를 위에 있는 아크릴의 아래까지 확장하거나 스크롤하면 앱의 몰입도가 향상되고 끊김 없는 경험을 제공할 수 있습니다.
 
 ### <a name="vertical-panes"></a>세로 창
 
@@ -202,7 +193,7 @@ XAML 컨트롤 갤러리 앱이 설치된 경우 <a href="xamlcontrolsgallery:/i
 
 아크릴 브러시를 추가하려면 어두운 테마, 밝은 테마, 고대비 테마에 대한 세 가지 리소스를 정의해야 합니다. 고대비에서는 x:Key가 어두운/밝은 AcrylicBrush와 동일한 SolidColorBrush를 사용하는 것이 좋습니다.
 
-> [!Note] 
+> [!Note]
 > TintLuminosityOpacity 값을 지정하지 않으면 시스템에서 TintColor 및 TintOpacity에 따라 이 값을 자동으로 조정합니다.
 
 ```xaml
