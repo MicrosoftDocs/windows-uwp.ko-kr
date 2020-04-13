@@ -6,16 +6,21 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d2c8e05d2b01b110085ed82c19cecd251c9c6971
-ms.sourcegitcommit: c95915f8a13736705eab74951a12b2cf528ea612
+ms.openlocfilehash: bbcb53a6c88feb989b504f3b94b27d0e969cfdc1
+ms.sourcegitcommit: 26f3b5d24aa1834a527a15967d723a8749f32dc9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70876248"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80812772"
 ---
 # <a name="integrate-with-the-system-media-transport-controls"></a>시스템 미디어 전송 컨트롤과 통합
 
 이 문서에서는 SMTC(시스템 미디어 전송 컨트롤)를 조작하는 방법을 보여 줍니다. SMTC는 모든 Windows 10 디바이스에 공통적으로 적용되고 사용자가 재생을 위해 [**MediaPlayer**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer)를 사용하는 실행 중인 모든 앱의 미디어 재생을 제어할 수 있는 일관된 방법을 제공하는 컨트롤 집합입니다.
+
+미디어 응용 프로그램 개발자는 시스템 미디어 전송 컨트롤을 사용 하 여 기본 제공 시스템 UI와 통합 하 여 음악가, 앨범 제목, 장 제목 등의 미디어 메타 데이터를 표시할 수 있습니다. 시스템 전송 제어를 사용 하면 사용자가 재생을 일시 중지 하 고 재생 목록에서 앞뒤로 건너뛰는 등 기본 제공 시스템 UI를 사용 하 여 미디어 앱의 재생을 제어할 수도 있습니다.
+
+<img alt="System Media Transtport Controls" src="images/smtc.png" />
+
 
 SMTC와 통합을 보여 주는 전체 샘플을 보려면 [github의 시스템 미디어 전송 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/SystemMediaTransportControls)을 참조하세요.
                     
@@ -41,7 +46,7 @@ SMTC에서 비디오 또는 노래 제목과 같은 미디어 항목에 표시�
 
 
 ## <a name="use-commandmanager-to-modify-or-override-the-default-smtc-commands"></a>CommandManager를 사용하여 기본 SMTC 명령 수정 또는 재정의
-앱에서 [**MediaPlaybackCommandManager**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManager) 클래스를 사용하여 SMTC 컨트롤의 동작을 수정하거나 완전히 재정의할 수 있습니다. [  **CommandManager**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.commandmanager) 속성에 액세스하여 각 **MediaPlayer** 클래스 인스턴스에 대한 명령 관리자 인스턴스를 가져올 수 있습니다.
+앱에서 [**MediaPlaybackCommandManager**](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManager) 클래스를 사용하여 SMTC 컨트롤의 동작을 수정하거나 완전히 재정의할 수 있습니다. [**CommandManager**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayer.commandmanager) 속성에 액세스하여 각 **MediaPlayer** 클래스 인스턴스에 대한 명령 관리자 인스턴스를 가져올 수 있습니다.
 
 기본적으로 **MediaPlaybackList**의 다음 항목으로 건너뛰는 *Next* 명령 등의 모든 명령에 대해 명령 관리자는 [**NextReceived**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanager.nextreceived) 등의 수신된 이벤트와 [**NextBehavior**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanager.nextbehavior) 등의 명령 동작을 관리하는 개체를 표시합니다. 
 
@@ -74,7 +79,7 @@ SMTC 명령의 동작을 완전히 재정의하려는 경우도 있습니다. �
 마지막으로, 지연 개체에서 [**Complete**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete)를 호출하여 명령 처리가 완료되었음을 시스템에 알립니다.
 
 [!code-cs[PreviousReceived](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetPreviousReceived)]
-                
+                 
 ## <a name="manual-control-of-the-smtc"></a>SMTC 수동 제어
 이 문서의 앞부분에서 설명했듯이, SMTC는 앱에서 만드는 모든 **MediaPlayer** 인스턴스에 대한 정보를 자동으로 검색하고 표시합니다. 여러 개의 **MediaPlayer** 인스턴스를 사용하지만 SMTC에서 앱에 대한 단일 항목을 제공하려는 경우 자동 통합을 사용하는 대신 SMTC의 동작을 수동으로 제어해야 합니다. 또한 [**MediaTimelineController**](https://docs.microsoft.com/uwp/api/Windows.Media.MediaTimelineController)를 사용하여 하나 이상의 미디어 플레이어를 제어하는 경우 수동 SMTC 통합을 사용해야 합니다. 또한 앱에서 **MediaPlayer** 이외의 API(예: [**AudioGraph**](https://docs.microsoft.com/uwp/api/Windows.Media.Audio.AudioGraph) 클래스)를 사용하여 미디어를 재생하는 경우 사용자가 SMTC를 사용하여 앱을 제어하려면 수동 SMTC 통합을 구현해야 합니다. SMTC를 수동으로 제어하는 방법에 대한 자세한 내용은 [시스템 미디어 전송 컨트롤의 수동 제어](system-media-transport-controls.md)를 참조하세요.
 
