@@ -1,6 +1,6 @@
 ---
 Description: 호스트 앱의 실행 파일, 진입점 및 런타임 특성을 상속 하는 호스트 된 앱을 빌드하는 방법에 대해 알아봅니다.
-title: 호스트 된 앱 만들기
+title: 호스트되는 앱 만들기
 ms.date: 01/28/2020
 ms.topic: article
 keywords: windows 10, 데스크톱, 패키지, id, MSIX, Win32
@@ -8,18 +8,18 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 870042f3a7737e5caf646d4d14ffd49af39a079f
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: a3017073b15ea18214e9c78263fb212bb192132b
+ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80108146"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81266931"
 ---
-# <a name="create-hosted-apps"></a>호스트 된 앱 만들기
+# <a name="create-hosted-apps"></a>호스트되는 앱 만들기
 
 Windows 10 버전 2004부터 *호스트 된 앱*을 만들 수 있습니다. 호스팅된 앱은 부모 *호스트* 앱과 동일한 실행 파일 및 정의를 공유 하지만 시스템에서 별도의 앱 처럼 보이고 동작 합니다.
 
-호스팅된 앱은 구성 요소 (예: 실행 파일 또는 스크립트 파일)가 Windows 10 앱 처럼 동작 하 게 하려는 경우에 유용 하지만, 구성 요소에는 실행을 위해 호스트 프로세스가 필요 합니다. 예를 들어 PowerShell 또는 Python 스크립트를 실행 하기 위해 호스트를 설치 해야 하는 호스트 된 앱으로 배달할 수 있습니다. 호스팅된 앱에는 백그라운드 작업, 알림, 타일 및 공유 대상과 같은 Windows 10 기능과의 고유한 시작 타일, id 및 심층 통합이 있을 수 있습니다.
+호스팅된 앱은 독립 실행형 Windows 10 앱 처럼 동작 하는 구성 요소 (예: 실행 파일 또는 스크립트 파일)를 원하는 경우에 유용 하지만, 구성 요소에는 실행을 위해 호스트 프로세스가 필요 합니다. 예를 들어 PowerShell 또는 Python 스크립트를 실행 하기 위해 호스트를 설치 해야 하는 호스트 된 앱으로 배달할 수 있습니다. 호스팅된 앱에는 백그라운드 작업, 알림, 타일 및 공유 대상과 같은 Windows 10 기능과의 고유한 시작 타일, id 및 심층 통합이 있을 수 있습니다.
 
 호스팅된 앱 기능은 호스트 된 앱이 호스트 앱 패키지에서 실행 파일 및 정의를 사용할 수 있도록 하는 패키지 매니페스트의 여러 요소 및 특성에서 지원 됩니다. 사용자가 호스트 된 앱을 실행 하면 OS에서 호스트 된 앱의 id로 호스트 실행 파일을 자동으로 시작 합니다. 호스트는 시각적 자산, 콘텐츠 또는 호출 Api를 호스트 된 앱으로 로드할 수 있습니다. 호스트 된 앱은 호스트와 호스트 된 앱 간에 선언 된 기능의 교집합을 가져옵니다. 즉, 호스트 된 앱이 호스트에서 제공 하는 것 보다 많은 기능을 요청할 수 없습니다.
 
