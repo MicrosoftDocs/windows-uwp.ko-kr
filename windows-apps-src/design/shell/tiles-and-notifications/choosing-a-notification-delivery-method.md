@@ -1,5 +1,5 @@
 ---
-Description: 이 문서에서는 4 개의 알림 옵션을 설명 &\#8212; 로컬 예약을 주기적으로 및 푸시 &\#8212; 타일 및 배지 업데이트를 제공 하 고 알림 콘텐츠를 알림 메시지입니다.
+Description: 이 문서에서는 타일 및 배지 업데이트 및 toast 알림 콘텐츠를 제공 하는 &\#8212; 로컬, 예약 됨, 정기 및 푸시 &\#8212의 네 가지 알림 옵션에 대해 설명 합니다.
 title: 알림 전달 방법 선택
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b1ea41a509b1673b7c4f5812d34db93dd6b0c93e
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 80a06f5199c49f5fcd7a08dc9c9baef18ee19db9
+ms.sourcegitcommit: 017f2f1492f3220da0fae8b4c99de7206a185dff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66365941"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81385848"
 ---
 # <a name="choose-a-notification-delivery-method"></a>알림 전달 방법 선택
 
@@ -28,7 +28,7 @@ ms.locfileid: "66365941"
 앱에서 알림을 전달하는 데 사용할 수 있는 네 가지 메커니즘이 있습니다.
 
 -   **로컬**
--   **예약**
+-   **예약 된**
 -   **정기적인**
 -   **푸시**
 
@@ -79,7 +79,7 @@ ms.locfileid: "66365941"
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left">푸시</td>
+<td align="left">밀어넣기</td>
 <td align="left">타일, 배지, 알림, 푸시</td>
 <td align="left">클라우드 서버에서 보내는 알림이며 앱을 실행하고 있지 않은 동안에도 전송됩니다.</td>
 <td align="left"><ul>
@@ -103,8 +103,8 @@ ms.locfileid: "66365941"
 
 API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 있습니다. 웹 이미지가 다운로드할 수 없거나, 손상되거나, 이미지 사양을 충족하지 않는 경우 타일 및 알림이 다르게 응답합니다.
 
--   타일의 경우: 업데이트가 표시 되지 않습니다.
--   알림: 알림이 표시 되지만 이미지 삭제
+-   타일: 업데이트가 표시되지 않음
+-   알림: 알림이 표시되지만 이미지는 삭제됨
 
 기본적으로 로컬 알림 메시지는 3일 내에 만료되고 로컬 타일 알림은 만료되지 않습니다. 이 기본값을 알림에 적합한 명시적 만료 시간으로 재정의하는 것이 좋습니다(알림의 최대값은 3일). 
 
@@ -112,7 +112,7 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 
 -   [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)
 -   [로컬 알림 메시지 보내기](send-local-toast.md)
--   [유니버설 Windows 플랫폼 (UWP) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+-   [UWP (유니버설 Windows 플랫폼) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 ## <a name="scheduled-notifications"></a>예약된 알림
 
@@ -125,7 +125,8 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 
 자세한 내용은 아래 항목을 참조하세요.
 
--   [유니버설 Windows 플랫폼 (UWP) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+-   [알림 메시지 예약](scheduled-toast.md)
+-   [UWP (유니버설 Windows 플랫폼) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 ## <a name="periodic-notifications"></a>정기 알림
 
@@ -139,7 +140,7 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 자세한 내용은 아래 항목을 참조하세요.
 
 -   [정기 알림 개요](periodic-notification-overview.md)
--   [유니버설 Windows 플랫폼 (UWP) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+-   [UWP (유니버설 Windows 플랫폼) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 ## <a name="push-notifications"></a>푸시 알림
 
@@ -150,11 +151,11 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 
 기본적으로 푸시 알림은 디바이스에 수신된 시간부터 3일 내에 만료됩니다. 필요한 경우 이 기본값을 명시적 만료 시간으로 재정의할 수 있습니다(알림의 최대값은 3일).
 
-참조 항목:
+자세한 내용은 다음을 참조하세요.
 
 -   [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
 -   [푸시 알림에 대 한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
--   [유니버설 Windows 플랫폼 (UWP) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+-   [UWP (유니버설 Windows 플랫폼) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 
 ## <a name="related-topics"></a>관련 항목
@@ -166,7 +167,7 @@ API 호출이 로컬이더라도 알림에서는 웹 이미지를 참조할 수 
 * [알림 메시지에 대 한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-badges-notifications)
 * [정기 알림 개요](periodic-notification-overview.md)
 * [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
-* [유니버설 Windows 플랫폼 (UWP) 알림을 GitHub의 샘플 코드](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
+* [GitHub에 대 한 유니버설 Windows 플랫폼 (UWP) 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
  
 
  
