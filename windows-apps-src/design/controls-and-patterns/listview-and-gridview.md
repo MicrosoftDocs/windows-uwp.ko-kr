@@ -12,21 +12,21 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e95a9a1f6a0d34e377f48c5b19497eb638fb186e
-ms.sourcegitcommit: 27cb7c4539bb6417d32883824ccea160bb948c15
+ms.openlocfilehash: c130505ec79ca83698fd79df26464969afe79c36
+ms.sourcegitcommit: 1b06c27e7fa4726fd950cbeaf05206c0a070e3c7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74830825"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80893473"
 ---
 # <a name="list-view-and-grid-view"></a>목록 보기 및 그리드 보기
 
-대부분의 응용 프로그램은 이미지 갤러리, 메일 메시지 집합 등과 같은 데이터 집합을 조작하고 표시합니다. XAML UI 프레임워크는 앱에 데이터를 쉽게 표시하고 조작할 수 있도록 하는 ListView 및 GridView 컨트롤을 제공합니다.  
+대부분의 애플리케이션은 이미지 갤러리, 메일 메시지 집합 등과 같은 데이터 집합을 조작하고 표시합니다. XAML UI 프레임워크는 앱에 데이터를 쉽게 표시하고 조작할 수 있도록 하는 ListView 및 GridView 컨트롤을 제공합니다.  
 
 > **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [GridView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview), [ItemsSource 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [Items 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items)
 
 > [!NOTE]
-> ListView 및 GridView 모두 [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록 보기에 대해 논의할 때 다른 언급이 없는 한, 해당 정보가 ListView 및 GridView 컨트롤 둘 다에 적용됩니다. ListView 또는 ListViewItem과 같은 클래스를 참조할 수 있지만 그리드와 관련된 동일한 항목에 대해 *List* 접두사 *Grid*로 바꿀 수 있습니다(GridView 또는 GridViewItem). 
+> ListView 및 GridView 모두 [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록 보기에 대해 논의할 때 다른 언급이 없는 한, 해당 정보가 ListView 및 GridView 컨트롤 둘 다에 적용됩니다. ListView 또는 ListViewItem과 같은 클래스를 참조할 수 있지만 그리드와 관련된 동일한 항목에 대해 *List* 접두사는 *Grid*로 바꿀 수 있습니다(GridView 또는 GridViewItem). 
 
 ListView 및 GridView는 컬렉션 작업에서 많은 이점을 누릴 수 있습니다. 둘 다 구현하기 쉽고 기본 UI, 상호 작용 및 스크롤 기능을 제공하며 여전히 쉽게 사용자 지정할 수 있습니다. ListView 및 GridView는 기존 동적 데이터 원본 또는 XAML 자체에 제공되는 하드 코드된 데이터/코드 숨김으로 바인딩할 수 있습니다. 
 
@@ -36,7 +36,7 @@ ListView 및 GridView는 컬렉션 작업에서 많은 이점을 누릴 수 있�
 ## <a name="differences-between-listview-and-gridview"></a>ListView와 GridView의 차이점
 
 ### <a name="listview"></a>ListView
-ListView는 데이터를 세로로 쌓으면서 단일 막대에 표시합니다. ListView는 텍스트를 초점으로 포함하고 있는 항목과 위에서 아래로 읽어야 하는(즉, 사전순으로 정렬되는) 컬렉션에 더 적합합니다. ListView의 일반적인 사용 사례로 메시지 목록과 검색 결과를 들 수 있습니다.
+ListView는 데이터를 세로로 쌓으면서 단일 막대에 표시합니다. ListView는 텍스트를 초점으로 포함하고 있는 항목과 위에서 아래로 읽어야 하는(즉, 사전순으로 정렬되는) 컬렉션에 더 적합합니다. ListView의 일반적인 사용 사례로 메시지 목록과 검색 결과를 들 수 있습니다. 여러 열이나 테이블과 비슷한 형식으로 표시해야 하는 컬렉션은 ListView를 사용하지 _않고_ [DataGrid](https://docs.microsoft.com/windows/communitytoolkit/controls/datagrid)를 대신 사용하는 것이 좋습니다.
 
 ![그룹화된 데이터를 사용한 목록 보기](images/listview-grouped-example-resized-final.png)
 
@@ -382,7 +382,7 @@ ListView 또는 GridView에 항목을 추가하면 컨트롤이 항목 컨테이
 단일 선택 | SelectionMode = **Single**, IsItemClickEnabled = **False** | [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) | [SelectedItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selecteditem), [SelectedIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectedindex)  
 다중 선택 | SelectionMode = **Multiple**, IsItemClickEnabled = **False** | [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) | [SelectedItems](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selecteditems)  
 확장 선택 | SelectionMode = **Extended**, IsItemClickEnabled = **False** | [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) | [SelectedItems](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selecteditems)  
-그룹에 타일을 추가하려면 | SelectionMode = **None**, IsItemClickEnabled = **True** | [ItemClick](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.itemclick) | 해당 없음 
+리본 메뉴에서 | SelectionMode = **None**, IsItemClickEnabled = **True** | [ItemClick](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.itemclick) | 해당 없음 
 
 > **참고**&nbsp;&nbsp;Windows 10부터 SelectionMode도 Single, Multiple 또는 Extended로 설정된 상태에서 IsItemClickEnabled를 통해 ItemClick 이벤트를 발생시킬 수 있습니다. 이렇게 하면 먼저 ItemClick 이벤트가 발생한 다음 SelectionChanged 이벤트가 발생합니다. ItemClick 이벤트 처리기에서 다른 페이지로 이동하는 경우와 같은 상황에서는 SelectionChanged 이벤트가 발생하지 않고 항목이 선택되지 않습니다.
 
@@ -427,7 +427,7 @@ SelectionMode가 **Single**이면 [SelectedItem](https://docs.microsoft.com/uwp/
 보조 키 | 조작
 -------------|------------
 없음 | <li>사용자는 스페이스바, 마우스 클릭 또는 터치 탭으로 여러 항목을 선택하여 포커스가 있는 항목에 대한 선택을 전환할 수 있습니다.</li><li>화살표 키를 사용하여 선택과는 별도로 포커스를 이동할 수 있습니다.</li>
-Shift | <li>선택 영역의 첫 번째 항목을 클릭하거나 탭한 다음 선택 영역의 마지막 항목을 클릭하거나 탭하여 인접한 여러 항목을 선택할 수 있습니다.</li><li>Shift 키를 누른 채로 화살표 키를 사용하여 선택한 항목부터 연속되는 선택 영역을 지정할 수 있습니다.</li>
+Shift 키 | <li>선택 영역의 첫 번째 항목을 클릭하거나 탭한 다음 선택 영역의 마지막 항목을 클릭하거나 탭하여 인접한 여러 항목을 선택할 수 있습니다.</li><li>Shift 키를 누른 채로 화살표 키를 사용하여 선택한 항목부터 연속되는 선택 영역을 지정할 수 있습니다.</li>
 
 ### <a name="extended-selection"></a>확장 선택
 
@@ -437,7 +437,7 @@ Shift | <li>선택 영역의 첫 번째 항목을 클릭하거나 탭한 다음 
 -------------|------------
 없음 | <li>동작은 **Single**을 선택할 때와 같습니다.</li>
 Ctrl | <li>사용자는 스페이스바, 마우스 클릭 또는 터치 탭으로 여러 항목을 선택하여 포커스가 있는 항목에 대한 선택을 전환할 수 있습니다.</li><li>화살표 키를 사용하여 선택과는 별도로 포커스를 이동할 수 있습니다.</li>
-Shift | <li>선택 영역의 첫 번째 항목을 클릭하거나 탭한 다음 선택 영역의 마지막 항목을 클릭하거나 탭하여 인접한 여러 항목을 선택할 수 있습니다.</li><li>Shift 키를 누른 채로 화살표 키를 사용하여 선택한 항목부터 연속되는 선택 영역을 지정할 수 있습니다.</li>
+Shift 키 | <li>선택 영역의 첫 번째 항목을 클릭하거나 탭한 다음 선택 영역의 마지막 항목을 클릭하거나 탭하여 인접한 여러 항목을 선택할 수 있습니다.</li><li>Shift 키를 누른 채로 화살표 키를 사용하여 선택한 항목부터 연속되는 선택 영역을 지정할 수 있습니다.</li>
 
 SelectionMode가 **Multiple** 또는 **Extended**이면 [SelectedItems](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selecteditems) 속성에서 선택한 데이터 항목을 가져올 수 있습니다. 
 
@@ -606,13 +606,13 @@ private void DeselectAllButton_Click(object sender, RoutedEventArgs e)
 
 ListView 및 GridView 컨트롤은 컨트롤 내 항목의 끌어서 놓기를 지원하고 서로 다른 ListView 및 GridView 컨트롤 간의 끌어서 놓기를 지원합니다. 끌어서 놓기 패턴을 구현하는 방법은 [끌어서 놓기](../input/drag-and-drop.md)를 참조하세요.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML ListView 및 GridView 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView) - ListView 및 GridView 컨트롤을 보여 줍니다.
 - [XAML 끌어서 놓기 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlDragAndDrop) - ListView 컨트롤을 통한 끌어서 놓기를 보여 줍니다.
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [목록](lists.md)
 - [항목 컨테이너 및 템플릿](item-containers-templates.md)

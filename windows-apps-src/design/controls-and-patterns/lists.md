@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e198e65052e9ef79ee38863260bce1c1f798ba38
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 75bc81f4295fb76f5a7cc61b3cadd1496f57dc4c
+ms.sourcegitcommit: 1b06c27e7fa4726fd950cbeaf05206c0a070e3c7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081743"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80893483"
 ---
 # <a name="collections-and-lists"></a>컬렉션 및 목록
 
@@ -38,6 +38,8 @@ ms.locfileid: "80081743"
 이러한 각 컨트롤(ItemsRepeater 제외)은 기본 제공 스타일 지정 및 상호 작용을 제공합니다. 그러나 컬렉션 보기의 시각적 모양과 내부의 항목을 추가로 사용자 지정하려면 [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)을 사용합니다. 데이터 템플릿에 대한 자세한 내용과 컬렉션 보기의 모양을 사용자 지정하는 방법은 [항목 컨테이너 및 템플릿](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/item-containers-templates) 페이지에서 찾을 수 있습니다.
 
 이러한 각 컨트롤(ItemsRepeater 제외)에는 하나 또는 여러 항목을 선택할 수 있는 기본 제공 동작도 있습니다. 자세히 알아보려면 [선택 모드 개요](selection-modes.md)를 참조하세요.
+
+이 문서에서 다루지 않는 시나리오 중 하나는 테이블 또는 여러 열에 컬렉션을 표시하는 것입니다. 컬렉션을 이 형식으로 표시하려는 경우 [Windows 커뮤니티 도구 키트](https://docs.microsoft.com/windows/communitytoolkit/)의 [DataGrid 컨트롤](https://docs.microsoft.com/windows/communitytoolkit/controls/datagrid)을 사용하는 것이 좋습니다. 
 
 > **Windows 10 Fall Creators Update - 동작 변경 사항** 이제 기본적으로 선택을 수행하는 대신 터치, 터치패드, 패시브 펜 등의 활성 펜이 UWP 앱의 목록을 스크롤/이동합니다.
 > 앱이 이전 동작을 사용하는 경우 펜 스크롤을 재정의하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 [Scroll Viewer 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer)에 대한 API 참조 항목을 참조하세요.

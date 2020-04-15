@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ad18426a36503c9a540343565c20297502810b76
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 1e7fb764f3d21c260080d8846df3c66c65dccdb5
+ms.sourcegitcommit: 23c5d8dfaeb6edbca780637ffd26fe892db27519
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081654"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123620"
 ---
 # <a name="radio-buttons"></a>라디오 단추
 
@@ -73,9 +73,9 @@ ms.locfileid: "80081654"
 </tr>
 </table>
 
-Microsoft Edge 브라우저 설정의 라디오 단추입니다.
+브라우저 설정의 라디오 단추입니다.
 
-![Microsoft Edge 브라우저 설정의 라디오 단추](images/control-examples/radio-buttons-edge.png)
+![브라우저 설정의 라디오 단추](images/control-examples/radio-buttons-edge.png)
 
 ## <a name="create-a-radio-button"></a>라디오 단추 만들기
 

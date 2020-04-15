@@ -362,6 +362,8 @@
                       href: shell/tiles-and-notifications/send-local-toast-desktop.md
                     - name: C++ WRL 앱
                       href: shell/tiles-and-notifications/send-local-toast-desktop-cpp-wrl.md
+            - name: 알림 일정
+              href: shell/tiles-and-notifications/scheduled-toast.md
             - name: 사용자 지정 오디오
               href: shell/tiles-and-notifications/custom-audio-on-toasts.md
             - name: 진행률 표시줄

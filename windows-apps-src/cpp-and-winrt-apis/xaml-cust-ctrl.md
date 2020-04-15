@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 사용자 지정, 템플릿 기반, 컨트롤
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6acbd62a8fa75eefb39598dd5bbb6ec1270388c4
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: a6cde5a62367dccd83ca8dc6a46c203587850422
+ms.sourcegitcommit: cfbcf0381ec11f6daef3fa82b36ecbff3f3b8450
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209098"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80760525"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrt"></a>C++/WinRT를 사용한 XAML 사용자 지정(템플릿 기반) 컨트롤
 
@@ -21,7 +21,9 @@ ms.locfileid: "79209098"
 UWP(유니버설 Windows 플랫폼)의 가장 강력한 기능 중 하나는 XAML [**컨트롤**](/uwp/api/windows.ui.xaml.controls.control) 형식을 기반으로 사용자 지정 컨트롤을 만들기 위해 UI(사용자 인터페이스) 스택이 제공하는 유연성입니다. XAML UI 프레임워크는 [사용자 지정 종속성 속성](/windows/uwp/xaml-platform/custom-dependency-properties) 및 [연결 속성](/windows/uwp/xaml-platform/custom-attached-properties)과 같은 기능뿐 아니라, 기능이 풍부하고 사용자 지정 가능한 컨트롤을 쉽게 작성할 수 있는 [컨트롤 템플릿](/windows/uwp/design/controls-and-patterns/control-templates)을 제공합니다. 이 항목에서는 C++/WinRT를 사용하여 사용자 지정(템플릿 기반) 컨트롤을 만드는 단계를 안내합니다.
 
 ## <a name="create-a-blank-app-bglabelcontrolapp"></a>비어 있는 앱(BgLabelControlApp) 만들기
-먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **비어 있는 앱(C++/WinRT)** 프로젝트를 만들어서 이름을 *BgLabelControlApp*으로 지정합니다. 이 항목의 뒤쪽 섹션에서는 프로젝트(다음까지 빌드하지 않음)를 빌드하게 됩니다.
+먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **빈 앱(C++/WinRT)** 프로젝트를 만들고 해당 이름을 *BgLabelControlApp*으로 설정하고 폴더 구조가 연습과 일치하도록 **솔루션 및 프로젝트를 같은 디렉터리에 배치**를 선택 취소합니다.
+
+이 항목의 뒤쪽 섹션에서는 프로젝트(단, 다음까지 빌드하지 않음)를 빌드하게 됩니다.
 
 > [!NOTE]
 > &mdash;프로젝트 템플릿 및 빌드 지원을 함께 제공하는 C++/WinRT Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법을 포함&mdash;하는 C++/WinRT용 Visual Studio 개발 설정에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
@@ -52,62 +54,79 @@ namespace BgLabelControlApp
 
 스텁 파일인 `BgLabelControl.h`와 `BgLabelControl.cpp`를 `\BgLabelControlApp\BgLabelControlApp\Generated Files\sources\`에서 프로젝트 폴더인 `\BgLabelControlApp\BgLabelControlApp\`로 복사합니다. **솔루션 탐색기**에서 **모든 파일 표시**가 설정되어 있는지 확인합니다. 복사한 스텁 파일을 마우스 오른쪽 단추로 클릭하고 **프로젝트에 포함**을 클릭합니다.
 
+`BgLabelControl.h` 및 `BgLabelControl.cpp`의 맨 위에 `static_assert`가 표시됩니다. 이는 프로젝트를 빌드하기 전에 제거해야 합니다.
+
 ## <a name="implement-the-bglabelcontrol-custom-control-class"></a>**BgLabelControl** 사용자 지정 컨트롤 클래스를 구현합니다.
 이제 `\BgLabelControlApp\BgLabelControlApp\BgLabelControl.h`와 `BgLabelControl.cpp`를 열고 런타임 클래스를 구현합니다. `BgLabelControl.h`에서는 생성자를 변경하여 기본 스타일 키를 설정하고, **Label** 및 **LabelProperty**를 구현하고, **OnLabelChanged**라는 정적 이벤트 처리기를 추가하여 변경된 종속성 속성 값을 처리하고, **LabelProperty**의 지원 필드를 저장할 프라이빗 멤버를 추가합니다.
 
-해당 항목을 추가한 후 `BgLabelControl.h`는 다음과 같이 표시됩니다.
+해당 항목을 추가한 후 `BgLabelControl.h`는 다음과 같이 표시됩니다. 이 코드 목록을 복사하고 붙여넣어 `BgLabelControl.h`의 내용을 바꿀 수 있습니다.
 
 ```cppwinrt
 // BgLabelControl.h
-...
-struct BgLabelControl : BgLabelControlT<BgLabelControl>
+#pragma once
+#include "BgLabelControl.g.h"
+
+namespace winrt::BgLabelControlApp::implementation
 {
-    BgLabelControl() { DefaultStyleKey(winrt::box_value(L"BgLabelControlApp.BgLabelControl")); }
-
-    winrt::hstring Label()
+    struct BgLabelControl : BgLabelControlT<BgLabelControl>
     {
-        return winrt::unbox_value<winrt::hstring>(GetValue(m_labelProperty));
-    }
+        BgLabelControl() { DefaultStyleKey(winrt::box_value(L"BgLabelControlApp.BgLabelControl")); }
 
-    void Label(winrt::hstring const& value)
+        winrt::hstring Label()
+        {
+            return winrt::unbox_value<winrt::hstring>(GetValue(m_labelProperty));
+        }
+
+        void Label(winrt::hstring const& value)
+        {
+            SetValue(m_labelProperty, winrt::box_value(value));
+        }
+
+        static Windows::UI::Xaml::DependencyProperty LabelProperty() { return m_labelProperty; }
+
+        static void OnLabelChanged(Windows::UI::Xaml::DependencyObject const&, Windows::UI::Xaml::DependencyPropertyChangedEventArgs const&);
+
+    private:
+        static Windows::UI::Xaml::DependencyProperty m_labelProperty;
+    };
+}
+namespace winrt::BgLabelControlApp::factory_implementation
+{
+    struct BgLabelControl : BgLabelControlT<BgLabelControl, implementation::BgLabelControl>
     {
-        SetValue(m_labelProperty, winrt::box_value(value));
-    }
-
-    static Windows::UI::Xaml::DependencyProperty LabelProperty() { return m_labelProperty; }
-
-    static void OnLabelChanged(Windows::UI::Xaml::DependencyObject const&, Windows::UI::Xaml::DependencyPropertyChangedEventArgs const&);
-
-private:
-    static Windows::UI::Xaml::DependencyProperty m_labelProperty;
-};
-...
+    };
+}
 ```
 
-`BgLabelControl.cpp`에서 이와 같은 정적 멤버를 정의합니다.
+`BgLabelControl.cpp`에서 이와 같은 정적 멤버를 정의합니다. 이 코드 목록을 복사하고 붙여넣어 `BgLabelControl.cpp`의 내용을 바꿀 수 있습니다.
 
 ```cppwinrt
 // BgLabelControl.cpp
-...
-Windows::UI::Xaml::DependencyProperty BgLabelControl::m_labelProperty =
-    Windows::UI::Xaml::DependencyProperty::Register(
-        L"Label",
-        winrt::xaml_typename<winrt::hstring>(),
-        winrt::xaml_typename<BgLabelControlApp::BgLabelControl>(),
-        Windows::UI::Xaml::PropertyMetadata{ winrt::box_value(L"default label"), Windows::UI::Xaml::PropertyChangedCallback{ &BgLabelControl::OnLabelChanged } }
-);
+#include "pch.h"
+#include "BgLabelControl.h"
+#include "BgLabelControl.g.cpp"
 
-void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& /* e */)
+namespace winrt::BgLabelControlApp::implementation
 {
-    if (BgLabelControlApp::BgLabelControl theControl{ d.try_as<BgLabelControlApp::BgLabelControl>() })
-    {
-        // Call members of the projected type via theControl.
+    Windows::UI::Xaml::DependencyProperty BgLabelControl::m_labelProperty =
+        Windows::UI::Xaml::DependencyProperty::Register(
+            L"Label",
+            winrt::xaml_typename<winrt::hstring>(),
+            winrt::xaml_typename<BgLabelControlApp::BgLabelControl>(),
+            Windows::UI::Xaml::PropertyMetadata{ winrt::box_value(L"default label"), Windows::UI::Xaml::PropertyChangedCallback{ &BgLabelControl::OnLabelChanged } }
+    );
 
-        BgLabelControlApp::implementation::BgLabelControl* ptr{ winrt::get_self<BgLabelControlApp::implementation::BgLabelControl>(theControl) };
-        // Call members of the implementation type via ptr.
+    void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& /* e */)
+    {
+        if (BgLabelControlApp::BgLabelControl theControl{ d.try_as<BgLabelControlApp::BgLabelControl>() })
+        {
+            // Call members of the projected type via theControl.
+
+            BgLabelControlApp::implementation::BgLabelControl* ptr{ winrt::get_self<BgLabelControlApp::implementation::BgLabelControl>(theControl) };
+            // Call members of the implementation type via ptr.
+        }
     }
 }
-...
 ```
 
 이 연습에서는 **OnLabelChanged**를 사용하지 않습니다. 하지만 속성 변경 콜백에 종속성 속성을 등록하는 방법을 확인할 수 있도록 제공됩니다. **OnLabelChanged** 구현은 기본 프로젝션된 형식에서 파생된 프로젝션된 형식을 가져오는 방법도 보여 줍니다(기본 프로젝션된 형식은 이 클래스의 **DependencyObject**임). 또한 프로젝션된 형식을 구현하는 형식에 대한 포인터를 가져오는 방법을 보여 줍니다. 이 두 번째 작업은 기본적으로 프로젝션된 형식을 구현하는 프로젝트(런타임 클래스를 구현하는 프로젝트)에서만 가능합니다.
@@ -119,7 +138,7 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d
 
 해당 생성자에서 **BgLabelControl**은 스스로 기본 스타일 키를 설정합니다. 그러나 기본 스타일이란 ‘무엇인가요’?  사용자 지정(템플릿 기반) 컨트롤의 경우 컨트롤의 소비자가 스타일 및/또는 템플릿을 설정하지 않는 경우 자체적으로 렌더링하는 데 사용할 수 있는 기본 컨트롤 템플릿을 포함하는 기본 스타일이 있어야 합니다. 이 섹션에서는 기본 스타일을 포함하는 프로젝트에 태그 파일을 추가합니다.
 
-프로젝트 노드 아래에서 새 폴더(필터가 아니라 폴더)를 만들고 이름을 "Themes"로 지정합니다. `Themes` 아래에서 형식 **Visual C++**  > **XAML** > **XAML 보기**의 새 항목을 추가하고 이름을 “Generic.xaml”로 지정합니다. XAML 프레임워크가 사용자 지정 컨트롤의 기본 스타일을 찾으려면 폴더 및 파일 이름이 이와 같아야 합니다. `Generic.xaml`의 기본 콘텐츠를 삭제하고 아래 태그에 붙여넣습니다.
+**모든 파일 표시**가 아직 설정되어 있는지 확인합니다(**솔루션 탐색기**에서). 프로젝트 노드 아래에서 새 폴더(필터가 아니라 폴더)를 만들고 이름을 "Themes"로 지정합니다. `Themes` 아래에서 형식 **Visual C++**  > **XAML** > **XAML 보기**의 새 항목을 추가하고 이름을 “Generic.xaml”로 지정합니다. XAML 프레임워크가 사용자 지정 컨트롤의 기본 스타일을 찾으려면 폴더 및 파일 이름이 이와 같아야 합니다. `Generic.xaml`의 기본 콘텐츠를 삭제하고 아래 태그에 붙여넣습니다.
 
 ```xaml
 <!-- \Themes\Generic.xaml -->

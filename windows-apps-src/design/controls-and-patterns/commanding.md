@@ -4,12 +4,12 @@ description: 현재 사용하는 디바이스 및 입력 형식에 관계없이,
 ms.service: ''
 ms.topic: overview
 ms.date: 09/13/2019
-ms.openlocfilehash: 57e4a135e97c0a8f5d09834f2eb8c729c6422af0
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 2ad2a84a78006eafcdfa47d1faef533bea2224ff
+ms.sourcegitcommit: 23c5d8dfaeb6edbca780637ffd26fe892db27519
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081750"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123596"
 ---
 # <a name="commanding-in-universal-windows-platform-uwp-apps-using-standarduicommand-xamluicommand-and-icommand"></a>StandardUICommand, XamlUICommand 및 ICommand를 사용하는 UWP(유니버설 Windows 플랫폼) 앱의 명령
 
@@ -37,7 +37,7 @@ ms.locfileid: "80081750"
 
 다음 이미지에서는 동일한 명령 중 일부를 공유하는 두 개의 명령 인터페이스([CommandBar](app-bars.md) 및 움직이는 상황별 [CommandBarFlyout](command-bar-flyout.md))를 보여 줍니다.
 
-![Microsoft 사진의 명령 모음](images/control-examples/command-bar-photos.png)<br>*Microsoft 사진의 명령 모음*
+![확장된 명령 모음](images/control-examples/command-bar-photos.png)<br>*명령 모음*
 
 ![Microsoft 사진 갤러리의 상황에 맞는 메뉴](images/ContextMenu_example.png)<br>*Microsoft 사진 갤러리의 상황에 맞는 메뉴*
 

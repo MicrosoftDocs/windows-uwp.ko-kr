@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 592458c6e6157e8cef0d1312ebf6e5c9f15b7919
-ms.sourcegitcommit: 7dcf74b11aa0cb2f3ff4ab10caf26ba769f96dfb
+ms.openlocfilehash: d942fd58619c12192fd8429c0e8aeb5aa070fd4d
+ms.sourcegitcommit: 2a80888843bb53cc1f926dcdfc992cf065539a67
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662386"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81005453"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT에 대해 자주 묻는 질문
 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통해 Windows 런타임 API를 작성하거나 사용하는 방법과 관련된 질문과 대답입니다.
@@ -78,7 +78,10 @@ Windows 런타임 클래스(런타임 클래스)를 ‘사용’하기만 하는
 소멸자에서 리소스를 해제하는 런타임 클래스가 있고, 이 런타임 클래스가 구현하는 컴파일 단위 외부에서 사용하도록 설계된 경우(여기에서 런타임 클래스는 Windows 런타임 클라이언트 앱에서 일반 용도로 사용하는 Windows 런타임 구성 요소임), 결정적 종료가 없는 언어에서 런타임 클래스를 사용할 수 있도록 지원하기 위해 **IClosable**도 구현하는 것이 좋습니다. 소멸자, [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close) 또는 둘 다 호출하든 관계없이 리소스가 해제되는지 확인합니다. **IClosable::Close**는 원하는 횟수만큼 임의로 호출할 수 있습니다.
 
 ## <a name="do-i-need-to-call-iclosableclose-on-runtime-classes-that-i-consume"></a>사용하는 런타임 클래스에서 [**IClosable::Close**](/uwp/api/windows.foundation.iclosable.close)를 호출해야 하나요?
-**IClosable**은 결정적 종료가 없는 언어를 지원하기 위한 것입니다. 따라서 C++/WinRT에서는 **IClosable::Close**를 호출하지 않아도 됩니다. 단, 매우 드물지만 종료 경합 또는 반 교착 상태와 관련된 경우는 예외입니다. 예를 들어 **Windows.UI.Composition** 형식을 사용한다면, C++/WinRT 래퍼의 소멸을 통해 개체를 삭제하는 대신 설정된 시퀀스에서 개체를 삭제하려는 경우가 발생할 수 있습니다.
+**IClosable**은 결정적 종료가 없는 언어를 지원하기 위한 것입니다. 따라서 일반적으로 C++/WinRT에서 **IClosable::Close**를 호출할 필요가 없습니다. 그러나 이는 일반 규칙에 대한 예외로 간주하세요.
+- 단, 매우 드물지만 종료 경합 또는 반 교착 상태와 관련된 경우는 **IClosable::Close**를 호출해야 합니다. 예를 들어 **Windows.UI.Composition** 형식을 사용한다면, C++/WinRT 래퍼의 소멸을 통해 개체를 삭제하는 대신 설정된 시퀀스에서 개체를 삭제하려는 경우가 발생할 수 있습니다.
+- 마지막으로 남은 개체 참조를 보관 가능한 다른 API로 전달해서 개체 참조가 남아 있지 않을 수도 있다면 **IClosable::Close**를 호출하는 것이 좋습니다.
+- 확실하지 않은 경우 래퍼가 소멸되면서 호출할 때까지 기다리지 않고 **IClosable::Close**를 수동으로 호출하는 것이 안전합니다.
 
 ## <a name="can-i-use-llvmclang-to-compile-with-cwinrt"></a>C++/WinRT로 컴파일하기 위해 LLVM/Clang을 사용할 수 있나요?
 LLVM 및 Clang 도구 체인은 C++/WinRT에서 지원되지 않지만 C++/WinRT의 표준 적합성의 유효성을 검사하기 위해 내부적으로 사용됩니다. 예를 들어 Microsoft가 내부적으로 수행하는 작업을 에뮬레이트하려는 경우 아래에 설명된 대로 실험해 볼 수 있습니다.

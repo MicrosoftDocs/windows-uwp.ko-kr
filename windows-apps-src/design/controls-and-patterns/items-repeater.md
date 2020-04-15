@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b7eb2aa8f753c3e8b956ed722d1f807362bc204
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 5782c6e9ba42fed07c2b1382f2d17b1d311d0a13
+ms.sourcegitcommit: 1b06c27e7fa4726fd950cbeaf05206c0a070e3c7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081718"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80893463"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
@@ -740,22 +740,22 @@ public class MyPage : Page
 {
     // ...
 
-    protected override void OnNavigatedTo(NavigationEventArgs e)
+     protected override void OnNavigatedTo(NavigationEventArgs e)
     {
         base.OnNavigatedTo(e);
 
-            // retrieve saved offset + index(es) of the tracked element and then bring it into view.
-            // ... 
+        // retrieve saved offset + index(es) of the tracked element and then bring it into view.
+        // ... 
+        
+        var element = repeater.GetOrCreateElement(index);
 
-            var element = repeater.GetOrCreateElement(index);
+        // ensure the item is given a valid position
+        element.UpdateLayout();
 
-            // ensure the item is given a valid position
-            element.UpdateLayout();
-
-            element.StartBringIntoView(new BringIntoViewOptions()
-            {
-                VerticalOffset = relativeVerticalOffset
-            });
+        element.StartBringIntoView(new BringIntoViewOptions()
+        {
+            VerticalOffset = relativeVerticalOffset
+        });
     }
 
     protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
@@ -765,8 +765,8 @@ public class MyPage : Page
         // retrieve and save the relative offset and index(es) of the scrollviewer's current anchor element ...
         var anchor = this.scrollviewer.CurrentAnchor;
         var index = this.repeater.GetElementIndex(anchor);
-        var anchorBounds = anchor.TransformToVisual(this.scrollviewer).TransformBounds(new Rect(0, 0, anchor.ActualWidth, anchor.ActualHeight));
-        relativeVerticalOffset = this.sv.VerticalOffset – anchorBounds.Top;
+        var anchorBounds = anchor.TransformToVisual(this.scrollviewer).TransformBounds(new Rect(0, 0, anchor.ActualSize.X, anchor.ActualSize.Y));
+        relativeVerticalOffset = this.scrollviewer.VerticalOffset - anchorBounds.Top;
     }
 }
 

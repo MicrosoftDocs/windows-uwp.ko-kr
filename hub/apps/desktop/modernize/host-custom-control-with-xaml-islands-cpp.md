@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 23d7fbf129e9cf53a9510200aa4e3836dffa602f
-ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
+ms.openlocfilehash: 93badc28c9c4fa1684836fc4a883e54661e8d4dc
+ms.sourcegitcommit: 7112e4ec3f19d46a1fc4d81d1c29fd9c01522610
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80482643"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80986963"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>C++ Win32 앱에서 사용자 지정 UWP 컨트롤 호스트
 
@@ -377,9 +377,11 @@ ms.locfileid: "80482643"
 4. **솔루션 탐색기**에서 **MyDesktopWin32App(언로드됨)** 을 마우스 오른쪽 단추로 클릭하고 **프로젝트 다시 로드**를 선택합니다.
 
 5. **MyDesktopWin32App**을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 다음, 왼쪽 창에서 **C/C++** 노드를 클릭합니다. **추가 포함 디렉터리** 매크로가 이전 단계에서 수행한 프로젝트 파일 변경 내용에서 정의되었는지 확인합니다.
+
     ![C/C++ 프로젝트 설정](images/xaml-islands/xaml-island-cpp-7.png)
 
 6. **속성 페이지** 대화 상자에서 **매니페스트 도구** -> **입력 및 출력**을 확장합니다. **DPI 인식** 속성을 **모니터 단위 높은 DPI 인식**으로 설정합니다. 이 속성을 설정하지 않으면 특정 높은 DPI 시나리오에서 매니페스트 구성 오류가 발생할 수 있습니다.
+
     ![C/C++ 프로젝트 설정](images/xaml-islands/xaml-island-cpp-8.png)
 
 ## <a name="host-the-custom-uwp-xaml-control-in-the-desktop-project"></a>데스크톱 프로젝트에서 사용자 지정 UWP XAML 컨트롤 호스트
