@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
-ms.openlocfilehash: 664f6799d3bb6f848243820ec46e655262e8c1a7
-ms.sourcegitcommit: 912146681b1befc43e6db6e06d1e3317e5987592
+ms.openlocfilehash: fa97c99f14eee1cb76148c717b1e126a3f406fd1
+ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79295716"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81266921"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>C++/WinRT의 대리자를 사용한 이벤트 처리
 
@@ -218,7 +218,7 @@ Button::Click_revoker Click(winrt::auto_revoke_t,
 
 ## <a name="delegate-types-for-asynchronous-actions-and-operations"></a>비동기 작업을 위한 대리자 형식
 
-위의 예제에서는 **RoutedEventHandler** 대리자 형식을 사용하지만 그 밖에도 다른 대리자 형식이 많습니다. 예를 들어 진행률 유무에 상관없이 비동기 작업은 완료되었거나 진행 중이면서 해당 형식의 대리자가 필요한 이벤트가 있습니다. 진행률이 포함된 비동기 작업에서 진행 중인 이벤트([**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)를 구현하는 모든 것)는 [**AsyncOperationProgressHandler**](/uwp/api/windows.foundation.asyncoperationprogresshandler) 형식의 대리자가 필요합니다. 다음은 람다 함수를 사용해 해당 형식의 대리자를 작성하는 코드 예제입니다. 이 예제에는 [**AsyncOperationWithProgressCompletedHandler**](/uwp/api/windows.foundation.asyncoperationwithprogresscompletedhandler) 대리자를 작성하는 방법도 나와있습니다.
+위의 예제에서는 **RoutedEventHandler** 대리자 형식을 사용하지만 그 밖에도 다른 대리자 형식이 많습니다. 예를 들어 진행률 유무에 상관없이 비동기 작업은 완료되었거나 진행 중이면서 해당 형식의 대리자가 필요한 이벤트가 있습니다. 진행률이 포함된 비동기 작업에서 진행 중인 이벤트([**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)를 구현하는 모든 것)는 [**AsyncOperationProgressHandler**](/uwp/api/windows.foundation.asyncoperationprogresshandler) 형식의 대리자가 필요합니다. 다음은 람다 함수를 사용해 해당 형식의 대리자를 작성하는 코드 예제입니다. 이 예제에는 [**AsyncOperationWithProgressCompletedHandler**](/uwp/api/windows.foundation.asyncoperationwithprogresscompletedhandler) 대리자를 작성하는 방법도 나와있습니다.
 
 ```cppwinrt
 #include <winrt/Windows.Foundation.h>

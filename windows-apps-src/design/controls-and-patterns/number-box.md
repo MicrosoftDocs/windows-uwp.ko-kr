@@ -7,18 +7,16 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 0eada4c65933151eb6d40b7e3cfdbf31369d6d35
-ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
+ms.openlocfilehash: d0e4a290da0d67560715f80bf20fc6ae4d44a8f6
+ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80614125"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81266961"
 ---
 # <a name="number-box"></a>숫자 상자
 
 숫자를 표시하고 편집하는 데 사용할 수 있는 컨트롤을 나타냅니다. 이는 곱하기, 나누기, 더하기 및 빼기와 같은 기본 수식의 유효성 검사, 증가 단계별 실행 및 컴퓨팅 인라인 계산을 지원합니다.
-
-![일반적인 상황에 맞는 메뉴 예제](images/contextmenu_rs2_icons.png)
 
 **Windows UI 라이브러리 가져오기**
 
