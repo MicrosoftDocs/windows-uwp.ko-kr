@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 개발자 계정, 개인, 회사, 비즈니스
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ac6c3e7c89c091d1080364b8fbbb35d484aee49
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: a7ab3d40b48caecc82fafef4df964b7a1dbf8071
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210909"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545093"
 ---
 # <a name="account-types-locations-and-fees"></a>계정 유형, 위치 및 수수료
 
@@ -93,7 +93,7 @@ ms.locfileid: "79210909"
 | 코트디부아르                     | 19 USD              | 99 USD           |  
 | 크로아티아                           | 107 HRK             | 500 HRK          |  
 | 키프로스                            | 14 EUR              | 75 EUR           |  
-| 체코 공화국                    | 365 CZK             | 1720 CZK         |  
+| Czechia                           | 365 CZK             | 1720 CZK         |  
 | 덴마크                           | 106 DKK             | 530 DKK          |  
 | 지부티                          | 19 USD              | 99 USD           | 
 | 도미니카                          | 19 USD              | 99 USD           | 
@@ -151,7 +151,7 @@ ms.locfileid: "79210909"
 | 리투아니아                         | 14 EUR              | 75 EUR           |  
 | 룩셈부르크                        | 14 EUR              | 75 EUR           |  
 | 마카오 특별 행정구                         | 19 USD              | 99 USD           |  
-| 북마케도니아 공화국                 | 19 USD              | 99 USD           |  
+| 마케도니아 (FYROM)                 | 19 USD              | 99 USD           |  
 | 마다가스카르                        | 19 USD              | 99 USD           |  
 | 말라위                            | 19 USD              | 99 USD           |  
 | 말레이시아                          | 62 MYR              | 300 MYR          |  
@@ -168,7 +168,7 @@ ms.locfileid: "79210909"
 | 몬테네그로                        | 14 EUR              | 75 EUR           |  
 | 모로코                           | 158 MAD             | 800 MAD          |  
 | 모잠비크                        | 19 USD              | 99 USD           |  
-| 미얀마                           | 19 USD              | 99 USD           |  
+| 미얀마어                           | 19 USD              | 99 USD           |  
 | 나미비아                           | 19 USD              | 99 USD           |  
 | 나우루                             | 19 USD              | 99 USD           |  
 | 네팔                             | 19 USD              | 99 USD           |  

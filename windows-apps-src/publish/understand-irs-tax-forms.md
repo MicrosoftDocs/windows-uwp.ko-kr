@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, uwp, 조세, irs, 미국 국세청, 세금, 소득세, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: 55143f109398aae1988b7ac0d060cda138e7e48e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: e01e1615cb05ab7b0f3d3fa12861e46b231642a8
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258967"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545073"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Microsoft에서 발급하는 IRS 세금 양식 이해
 
@@ -33,18 +33,18 @@ ms.locfileid: "74258967"
 
 **미국 시민:**
 <table>
-<tr><th>비즈니스 그룹</th><th>법적 엔터티</th><th>주소</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft Corporation</td><td>One Microsoft Way<br>Redmond WA 98052 USA</td></tr>
+<tr><th>비즈니스 그룹</th><th>법적 엔터티</th><th>Address</th></tr>
+<tr><td>Windows, Office, Azure</td><td>Microsoft Corporation</td><td>1 Microsoft Way<br>Redmond WA 98052 USA</td></tr>
 <tr><td>광고</td><td>Microsoft Online Inc.</td><td>6100 Neil<br>Reno, NV 89511 USA</td></tr>
 <table> 
 
 **미국 이외의 시민:**
 <table>
-<tr><th>비즈니스 그룹</th><th>법적 엔터티</th><th>주소</th></tr>
+<tr><th>비즈니스 그룹</th><th>법적 엔터티</th><th>Address</th></tr>
 <tr><td>Windows, Office, Azure</td><td>Microsoft 아일랜드 운영이 제한 됨 (microsoft Corporation의 정규화 된 중개자 역할을 하는 microsoft 아일랜드를 통해 Microsoft Corporation에서 지불)</td><td>한 Microsoft 장소<br>남부&nbsp;군&nbsp;비즈니스&nbsp;공원<br>Leopardstown, 더블린 18 아일랜드</td></tr>
 <tr><td>보내기</td><td>Microsoft 아일랜드 작업 제한 (microsoft online Inc.의 경우 결제는 microsoft online i n c. 용 지급 agent 역할을 통해 microsoft online inc.)</td><td>한 Microsoft 장소<br>남부&nbsp;군&nbsp;비즈니스&nbsp;공원<br>Leopardstown, 더블린 18 아일랜드</td></tr>
 <tr><td>광고</td><td>Microsoft Online Inc.</td><td>6100 Neil<br>Reno, NV 89511 USA</td></tr>
-<tr><td colspan="3">* 다음 국가의 시민 들은 Microsoft 아일랜드 작업 (오스트리아, 벨기에, 불가리아, 크로아티아, 키프로스, 체코어 공화국, 덴마크, 에스토니아, 핀란드, 프랑스, 독일, 그리스, 헝가리, 아일랜드, 남자의 섬, 이탈리아, 라트비아, 리히텐슈타인, 리투아니아, 룩셈부르크, 몰타, 모나코, 네덜란드, 노르웨이, 폴란드, 포르투갈, 루마니아, 슬로바키아, 슬로베니아, 남아프리카 공화국, 스페인, 스웨덴, 스위스, 영국</td></tr>
+<tr><td colspan="3">* 다음 국가의 시민은 Microsoft 아일랜드 작업을 제한 하 여 광고 수익을 지불 합니다. 오스트리아, 벨기에, 불가리아, 크로아티아, 키프로스, Czechia, 덴마크, 에스토니아, 핀란드, 프랑스, 독일, 그리스, 헝가리, 아일랜드, 남자 섬, 이탈리아, 라트비아, 리히텐슈타인, 리투아니아, 룩셈부르크, 몰타, 모나코, 네덜란드, 노르웨이, 폴란드, 포르투갈, 루마니아, 슬로바키아, 슬로베니아, 남아프리카</td></tr>
 </table>
 
 ## <a name="for-developers-located-in-the-united-states"></a>미국에 거주하는 개발자
@@ -67,7 +67,7 @@ ms.locfileid: "74258967"
     <td valign="top"><b>1099-MISC</b>:<br>지급인: Microsoft Corporation<br>EIN: * * * * * 4442<br><br><b>중요</b>: Microsoft에서 받은 지불 금액에 관계 없이 특정 비즈니스 엔터티에 1099-기타 양식이 수신 되지 않습니다.  자세한 정보는 세무 전문가에게 문의하세요.</td>
   </tr>
   <tr>
-    <td valign="top">해당 항목이 없습니다.</td>
+    <td valign="top">해당 사항이 없는 경우</td>
     <td valign="top">없음</td>
   </tr>
   <tr>

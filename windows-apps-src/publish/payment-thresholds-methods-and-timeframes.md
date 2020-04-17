@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: d82276d8-f094-4d60-90f6-f836ce90e823
 ms.localizationpriority: medium
-ms.openlocfilehash: 45a491364a4b1f406169cba76b7e7ea1ded00886
-ms.sourcegitcommit: 1d6d05d28358e087d9ee8829d76c5fbbac0225cb
+ms.openlocfilehash: e9a6ce5dac2e6a8480b3c6e95472b437ad6f947c
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79434220"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545013"
 ---
 # <a name="payment-thresholds-methods-and-timeframes"></a>지급 임계값, 방법 및 기간
 
@@ -79,7 +79,7 @@ ms.locfileid: "79434220"
 | 코트디부아르                    | 예               | 예                                      | 예    | 아니요              |
 | 크로아티아                          | 예               | 예                                      | 예    | 아니요              |
 | 키프로스                           | 예               | 예                                      | 예    | 예             |
-| 체코 공화국                   | 예               | 예                                      | 예    | 예             |
+| Czechia                          | 예               | 예                                      | 예    | 예             |
 | 덴마크                          | 예               | 예                                      | 예    | 예             |
 | 도미니카                         | 예               | 예                                      | 아니요     | 예             |
 | 도미니카 공화국               | 예               | 예                                      | 예    | 예             |

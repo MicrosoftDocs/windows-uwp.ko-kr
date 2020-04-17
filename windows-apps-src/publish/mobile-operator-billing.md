@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: Windows 10, uwp, 통신사, 모바일 청구, 통신사 청구
 ms.localizationpriority: medium
-ms.openlocfilehash: af682d2a17e10bf1c3b3cdcb3485315a6972eb9f
-ms.sourcegitcommit: e38946d8228293fca7d6c2b4d66e8e8f0d349e92
+ms.openlocfilehash: 77e157698203b5f55c3fd2ce9dd59e8c94051f5b
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76258354"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545033"
 ---
 # <a name="mobile-operator-billing"></a>통신사 청구
 
@@ -25,17 +25,17 @@ Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법�
 
 통신사 청구는 현재 다음 통신사에서 지원하고 있습니다.
 
-| 국가/ 지역       | 통신사                                        |
+| 국가 / 지역       | 통신사                                        |
 |----------------------|---------------------------------------------------------|
 | 오스트레일리아            | Optus                                                   |
 | 오스트리아              | Hutchison 3G Austria, A1 Telekom, T-Mobile / tele.ring  |
 | 벨기에              | Base, Proximus                                          |
 | 캐나다               | Telus                                                   |
-| 체코 공화국       | T-Mobile                                                |
+| Czechia              | T-Mobile                                                |
 | 덴마크              | 3, TDC / YouSee, Telenor, Telia                         |
 | 핀란드              | DNA, Elisa                                              |
-| 프랑스               | Orange                                                  |
-| 독일              | O2, Telekom Deutschland, Vodafone                       |
+| France               | Orange                                                  |
+| Germany              | O2, Telekom Deutschland, Vodafone                       |
 | 헝가리              | Telenor                                                 |
 | 이탈리아                | Wind, Tre                                               |
 | 말레이시아             | Digi                                                    |
@@ -50,7 +50,7 @@ Microsoft는 정기적으로 통신사와 협력하여 이 대금 결제 방법�
 | 스위스          | Swisscom, Sunrise                                       |
 | 대만               | FarEasTone                                              |
 | 터키               | Turkcell                                                |
-| 아랍에미리트 | Etisalat                                                |
+| 아랍 에미리트 연합국 | Etisalat                                                |
 | 미국        | Sprint, Verizon                                         |
 | 영국       | O2, 3 UK, EE                                            |
 

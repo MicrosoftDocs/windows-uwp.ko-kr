@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 시장, 국가, 지역
 ms.localizationpriority: medium
-ms.openlocfilehash: 3621e9c6af0daa84a9762989a14c79f35471b73c
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 0b1a51a98746594a8563de2f309bec9cb5dda0b3
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210969"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545053"
 ---
 # <a name="define-market-selection"></a>시장 선택 정의
 
@@ -139,7 +139,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
     <td>크로아티아</td>
     <td>퀴라소</td>
     <td>키프로스</td>
-    <td>체코 공화국*</td>
+    <td>Czechia *</td>
   </tr>
   <tr>
     <td>덴마크*</td>
@@ -244,7 +244,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
     <td>마카오 특별 행정구</td>
   </tr>
   <tr>
-    <td>북마케도니아 공화국</td>
+    <td>마케도니아, FYRO</td>
     <td>마다가스카르</td>
     <td>말라위</td>
     <td>말레이시아</td>
@@ -275,7 +275,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
   </tr>
   <tr>
     <td>모잠비크</td>
-    <td>미얀마</td>
+    <td>미얀마어</td>
     <td>나미비아</td>
     <td>나우루</td>
   </tr>
@@ -439,7 +439,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
 | 칠레                | 기프트 카드       | 2.24%                         | 2016년 3월     |
 | 중국                | 기프트 카드       | 2.24%                         | 2016년 3월     |
 | 콜롬비아             | 기프트 카드       | 2.24%                         | 2016년 3월     |
-| 체코 공화국       | 기프트 카드       | 2.24%                         | 2016년 3월     |
+| Czechia              | 기프트 카드       | 2.24%                         | 2016년 3월     |
 | 덴마크              | 기프트 카드       | 2.24%                         | 2016년 3월     |
 | 핀란드              | 기프트 카드       | 2.24%                         | 2016년 3월     |
 | France               | 기프트 카드       | 2.24%                         | 2016년 3월     |
@@ -476,7 +476,7 @@ Microsoft Store는 전 세계 200여 이상의 국가와 지역에 있는 고객
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Windows 8.x용 "나머지 국가" 지역/국가
 
-이전에 게시 된 앱이 Windows 8. x를 대상으로 하는 패키지를 포함 하는 경우 여러 시장의 고객이 개별 시장으로 표시 되는 경우에도 Windows 8.x에서 스토어를 사용 하는 고객을 위한 단일 "전 세계" 시장으로 처리 되는 것을 알고 있어야 합니다. 파트너 센터에 있습니다.
+이전에 게시 된 앱이 Windows 8. x를 대상으로 하는 패키지를 포함 하는 경우 파트너 센터의 개별 시장으로 표시 되더라도 여러 시장에서 Windows 8.x의 스토어를 사용 하는 고객을 위한 단일 "전 세계" 시장으로 처리 되는 것을 알아야 합니다.
 
 앱을 제출할 때 기본 시장을 선택 하는 경우이에 대해 걱정할 필요가 없으며 앱은 가능한 모든 시장에서 사용할 수 있습니다. 그러나 특정 시장을 제외 하려는 경우 이러한 "전 세계" 시장 중 하나를 제외 하 고 Windows 8 또는 Windows 8.1의 고객을 위한 "전 세계" *시장에서 앱* 을 사용할 수 없다는 것을 염두에 두어야 합니다.
 
@@ -613,7 +613,7 @@ Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습
     <td>라이베리아</td>
     <td>리히텐슈타인</td>
     <td>마카오 특별 행정구</td>
-    <td>북마케도니아 공화국</td>
+    <td>마케도니아, FYRO</td>
   </tr>
   <tr>
     <td>마다가스카르</td>
@@ -641,7 +641,7 @@ Windows 8.x용 "나머지 국가"에 포함된 지역/국가는 다음과 같습
   </tr>
   <tr>
     <td>모잠비크</td>
-    <td>미얀마</td>
+    <td>미얀마어</td>
     <td>나미비아</td>
     <td>나우루</td>
   </tr>

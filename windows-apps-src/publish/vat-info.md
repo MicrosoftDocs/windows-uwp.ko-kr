@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d6b90b000564c1c6929154c3ac3b79c129e3fff6
-ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
+ms.openlocfilehash: 1c8521ef2988e2108dbbd619812bfde26cecc81b
+ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507147"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81545083"
 ---
 # <a name="vat-info"></a>VAT 정보
 
@@ -70,7 +70,7 @@ Microsoft는 세금 관련 조언을 제공하지 않으며 다음 표는 지침
 <li>예: 12345678, 123456789 또는 0123456789</li>
 </ul>
 </td></tr>
-<tr><td data-th="Country/region">체코 공화국</td><td data-th="VAT info">
+<tr><td data-th="Country/region">Czechia</td><td data-th="VAT info">
 <ul>
 <li>VAT 번호 형식: 8자리, 9자리 또는 10자리</li>
 <li>국가/지역 코드: CZ</li>
