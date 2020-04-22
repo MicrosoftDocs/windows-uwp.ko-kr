@@ -8,25 +8,20 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6b77cc7b2f39a987df4c832f7a8daeb7e2722def
-ms.sourcegitcommit: f2f61a43f5bc24b829e8db679ffaca3e663c00e9
+ms.openlocfilehash: d997c6109256974f17bc0f86a518e34ef55960a7
+ms.sourcegitcommit: ecd7bce5bbe15e72588937991085dad6830cec71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588712"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81224276"
 ---
 # <a name="grant-identity-to-non-packaged-desktop-apps"></a>패키지되지 않은 데스크톱 앱에 ID 부여
 
-<!--
-> [!NOTE]
-> The features described in this article require Windows 10 Insider Preview Build 10.0.19000.0 or a later release.
--->
-
 많은 Windows 10 확장 기능은 백그라운드 작업, 알림, 라이브 타일 및 공유 대상을 포함한 비 UWP 데스크톱 앱의 [패키지 ID](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity)가 필요합니다. 이러한 시나리오에서 OS는 해당 API의 호출자를 식별하기 위해 ID가 필요합니다.
 
-Windows 10 Insider Preview 빌드 10.0.19000.0 이전 OS 릴리스에서는 데스크톱 앱에 ID를 부여하는 유일한 방법은 [서명된 MSIX 패키지에 앱을 패키징](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root)하는 것입니다. 이러한 앱의 ID는 패키지 매니페스트에 지정되고 ID 등록은 매니페스트의 정보에 따라 MSIX 배포 파이프라인에서 처리됩니다. 패키지 매니페스트에서 참조되는 모든 콘텐츠는 MSIX 패키지 안에 있습니다.
+Windows 10 버전 2004 이전 OS 릴리스에서 데스크톱 앱에 ID를 부여하는 유일한 방법은 [서명된 MSIX 패키지에 앱을 패키징](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root)하는 것입니다. 이러한 앱의 ID는 패키지 매니페스트에 지정되고 ID 등록은 매니페스트의 정보에 따라 MSIX 배포 파이프라인에서 처리됩니다. 패키지 매니페스트에서 참조되는 모든 콘텐츠는 MSIX 패키지 안에 있습니다.
 
-Windows 10 Insider Preview 빌드 10.0.19000.0부터는 *스파스 패키지*를 앱과 함께 빌드하고 등록하여 MSIX 패키지에 패키징되지 않은 데스크톱 앱에 패키지 ID를 부여할 수 있습니다. 이러한 지원이 제공되므로 아직 배포를 위한 MSIX 패키지를 도입할 수 없는 데스크톱 앱에서도 패키지 ID가 필요한 Windows 10 확장 기능을 사용할 수 있습니다. 자세한 배경 정보는 [이 블로그 게시물](https://blogs.windows.com/windowsdeveloper/2019/10/29/identity-registration-and-activation-of-non-packaged-win32-apps/#HBMFEM843XORqOWx.97)을 참조하세요.
+Windows 10 버전 2004부터는 *스파스 패키지*를 앱과 함께 빌드하고 등록하여 MSIX 패키지에 패키징되지 않은 데스크톱 앱에 패키지 ID를 부여할 수 있습니다. 이러한 지원이 제공되므로 아직 배포를 위한 MSIX 패키지를 도입할 수 없는 데스크톱 앱에서도 패키지 ID가 필요한 Windows 10 확장 기능을 사용할 수 있습니다. 자세한 배경 정보는 [이 블로그 게시물](https://blogs.windows.com/windowsdeveloper/2019/10/29/identity-registration-and-activation-of-non-packaged-win32-apps/#HBMFEM843XORqOWx.97)을 참조하세요.
 
 데스크톱 앱에 패키지 ID를 부여하는 스파스 패키지를 빌드하고 등록하려면 다음 단계를 수행합니다.
 
@@ -162,9 +157,9 @@ SignTool.exe sign /fd SHA256 /a /f <path to certificate>\MyCertificate.pfx /p <c
 
 ## <a name="register-your-sparse-package-at-run-time"></a>런타임에 스파스 패키지 등록
 
-데스크톱 앱에 패키지 ID를 부여하려면 앱에서 [PackageManager](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager) 클래스를 사용하여 스파스 패키지를 등록해야 합니다. 앱에 코드를 추가하여 앱이 처음으로 실행될 때 스파스 패키지를 등록할 수도 있고, 데스크톱 앱을 설치할 때 패키지를 등록하는 코드를 실행할 수도 있습니다. 예를 들어 MSI를 사용하여 데스크톱 앱을 설치하는 경우 사용자 지정 작업에서 이 코드를 실행할 수 있습니다.
+데스크톱 앱에 패키지 ID를 부여하려면 앱에서 [PackageManager](https://docs.microsoft.com/uwp/api/windows.management.deployment.packagemanager) 클래스의 **AddPackageByUriAsync** 메서드를 사용하여 스파스 패키지를 등록해야 합니다. 이 메서드는 Windows 10 버전 2004부터 사용할 수 있습니다. 앱에 코드를 추가하여 앱이 처음으로 실행될 때 스파스 패키지를 등록할 수도 있고, 데스크톱 앱을 설치할 때 패키지를 등록하는 코드를 실행할 수도 있습니다. 예를 들어 MSI를 사용하여 데스크톱 앱을 설치하는 경우 사용자 지정 작업에서 이 코드를 실행할 수 있습니다.
 
-다음 예제에서는 스파스 패키지를 등록하는 방법을 보여줍니다. 이 코드는 패키지 매니페스트가 패키지 외부의 콘텐츠를 참조할 수 있는 외부 위치의 경로를 포함하는 **AddPackageOptions** 개체를 만듭니다. 그러면 코드에서 이 개체를 **PackageManager.AddPackageByUriAsync** 메서드에 전달하여 스파스 패키지를 등록합니다. 이 메서드는 서명된 스파스 패키지의 위치를 URI로 받습니다. 전체 예제는 관련 [샘플](#sample)의 `StartUp.cs` 코드 파일을 참조하세요.
+다음 예제에서는 스파스 패키지를 등록하는 방법을 보여줍니다. 이 코드는 패키지 매니페스트가 패키지 외부의 콘텐츠를 참조할 수 있는 외부 위치의 경로를 포함하는 **AddPackageOptions** 개체를 만듭니다. 그러면 코드에서 이 개체를 **AddPackageByUriAsync** 메서드에 전달하여 스파스 패키지를 등록합니다. 이 메서드는 서명된 스파스 패키지의 위치를 URI로 받습니다. 전체 예제는 관련 [샘플](#sample)의 `StartUp.cs` 코드 파일을 참조하세요.
 
 ```csharp
 private static bool registerSparsePackage(string externalLocation, string sparsePkgPath)

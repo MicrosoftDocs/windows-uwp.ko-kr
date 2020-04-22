@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 0f596047cfdd01fcfca568ea1c63b1e2cc14c272
-ms.sourcegitcommit: 1670eec29b4360ec37cde2910b76078429273cb0
+ms.openlocfilehash: dbae7ada227b4f3019a2e17c91e6b06b7f2f276f
+ms.sourcegitcommit: 0acdafcf75fcd19e5c3181eb16defcfee3918cb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80329503"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81441868"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>데스크톱 앱에서 UWP XAML 컨트롤 호스트(XAML Islands)
 
@@ -109,7 +109,7 @@ XAML Island .NET 컨트롤은 C++ Win32 애플리케이션에서 지원되지 �
 UWP XAML 호스팅 API는 C++ Win32 애플리케이션이 [Windows.UI.Xaml.UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement)에서 파생되는 모든 UWP 컨트롤을 호스트하는 데 사용할 수 있는 몇 가지 Windows 런타임 클래스 및 COM 인터페이스로 구성됩니다. 연결된 창 핸들(HWND)이 있는 애플리케이션의 모든 UI 요소에서 UWP 컨트롤을 호스트할 수 있습니다. 이 API에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 * [C++ Win32 앱에서 UWP XAML 호스팅 API 사용](using-the-xaml-hosting-api.md)
-* [C++ Win32 앱에서 표준 UWP 컨트롤 호스팅](host-standard-control-with-xaml-islands-cpp.md)
+* [C++ Win32 앱에서 표준 UWP 컨트롤 호스트](host-standard-control-with-xaml-islands-cpp.md)
 * [C++ Win32 앱에서 사용자 지정 UWP 컨트롤 호스팅](host-custom-control-with-xaml-islands-cpp.md)
 
 > [!NOTE]
@@ -149,9 +149,11 @@ UWP XAML 호스팅 API를 기반으로 다양한 유형의 XAML Island 컨트롤
 
 :no_entry_sign: `@Places` 및 `@People` 콘텐츠 링크를 사용하는 텍스트 컨트롤. 이 기능에 대한 자세한 내용은 [이 문서](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/content-links)를 참조하세요.
 
+:no_entry_sign: XAML 아일랜드는 [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox) 또는 [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox) 같은 텍스트 입력을 받는 컨트롤이 포함된 [ContentDialog](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentDialog) 호스팅을 지원하지 않습니다. 이렇게 하면 입력 컨트롤이 키 누름에 제대로 응답하지 않습니다. XAML 아일랜드를 사용하여 비슷한 기능을 구현하려면 입력 컨트롤이 포함된 [Popup](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Popup)을 호스트하는 것이 좋습니다.
+
 ### <a name="window-host-context-for-xaml-islands"></a>XAML 아일랜드에 대한 창 호스트 컨텍스트
 
-데스크톱 앱에서 XAML 아일랜드를 호스팅하는 경우 동일한 스레드에서 여러 개의 XAML 콘텐츠 트리를 동시에 실행할 수 있습니다. XAML 아일랜드에서 XAML 콘텐츠 트리의 루트 요소에 액세스하고 해당 요소가 호스팅되는 컨텍스트에 대한 관련 정보를 가져오려면 [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot) 클래스를 사용합니다. [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow), [ApplicationView](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview) 및 [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) 클래스는 XAML 아일랜드에 대한 올바른 정보를 제공하지 않습니다. [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow) 및 [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) 개체는 스레드에 있으며 앱에서 액세스 할 수 있지만, 의미 있는 범위 또는 표시 유형을 반환하지 않습니다(항상 표시되지 않으며, 1x1 크기임). 자세한 내용은 [창 작업 호스트](/windows/uwp/design/layout/show-multiple-views#windowing-hosts)를 참조하세요.
+데스크톱 앱에서 XAML 아일랜드를 호스팅하는 경우 동일한 스레드에서 여러 개의 XAML 콘텐츠 트리를 동시에 실행할 수 있습니다. XAML 아일랜드에서 XAML 콘텐츠 트리의 루트 요소에 액세스하고 해당 요소가 호스팅되는 컨텍스트에 대한 관련 정보를 가져오려면 [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot) 클래스를 사용합니다. [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow), [ApplicationView](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview) 및 [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) 클래스는 XAML 아일랜드에 대한 올바른 정보를 제공하지 않습니다. [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow) 및 [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) 개체는 스레드에 있으며 앱에서 액세스할 수 있지만, 의미 있는 범위 또는 표시 유형을 반환하지 않습니다(항상 표시되지 않으며, 1x1 크기임). 자세한 내용은 [창 작업 호스트](/windows/uwp/design/layout/show-multiple-views#windowing-hosts)를 참조하세요.
 
 예를 들어 XAML 아일랜드에서 호스팅되는 UWP 컨트롤이 포함된 창의 경계 사각형을 가져오려면 컨트롤의 [XamlRoot.Size](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot.size) 속성을 사용합니다. XAML 아일랜드에서 호스팅할 수 있는 모든 UWP 컨트롤은 [Windows.UI.Xaml.UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement)에서 파생되므로 컨트롤의 [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.xamlroot) 속성을 사용하여 **XamlRoot** 개체에 액세스할 수 있습니다.
 

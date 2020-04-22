@@ -1,16 +1,16 @@
 ---
 title: C#에서 클립보드 샘플을 C++/WinRT로 포팅(사례 연구)
 description: 이 항목에서는 [UWP(유니버설 Windows 플랫폼) 앱 샘플](https://github.com/microsoft/Windows-universal-samples) 중 하나를 [C#](/visualstudio/get-started/csharp)에서 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)로 포팅하는 사례 연구를 제공합니다.
-ms.date: 03/20/2020
+ms.date: 04/13/2020
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C#, 샘플, 클립보드, 사례, 연구
 ms.localizationpriority: medium
-ms.openlocfilehash: 570f3538bf15616a45a17cdbce9a56066c8036bc
-ms.sourcegitcommit: 23c5d8dfaeb6edbca780637ffd26fe892db27519
+ms.openlocfilehash: ecfbe1831014bce0cb7259c935ab0ae7a8af3de8
+ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81123643"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81266941"
 ---
 # <a name="porting-the-clipboard-sample-tocwinrtfromcmdasha-case-study"></a>C#에서 클립보드 샘플을 C++/WinRT로 이식(사례 연구)
 
@@ -23,16 +23,16 @@ ms.locfileid: "81123643"
 [클립보드 샘플](https://docs.microsoft.com/samples/microsoft/windows-universal-samples/clipboard/) 웹 페이지를 방문한 후 **ZIP 다운로드**를 클릭합니다. 다운로드한 파일의 압축을 풀고 폴더 구조를 확인합니다.
 
 - 샘플 소스 코드의 C# 버전은 `cs`라는 폴더에 포함되어 있습니다. C# 버전에서 사용되는 다른 파일은 `shared` 및 `SharedContent` 폴더에서 찾을 수 있습니다.
-- GitHub에 있는 샘플 리포지토리의 [cppwinrt](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/Clipboard/cppwinrt) 폴더에서 샘플 소스 코드의 C++/WinRT 버전을 찾을 수 있습니다.
+- GitHub에 있는 [샘플 리포지토리](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/Clipboard)의 [cppwinrt 폴더](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/Clipboard/cppwinrt)에서 샘플 소스 코드의 C++/WinRT 버전을 찾을 수 있습니다.
 
-이 항목의 연습에서는 C# 소스 코드에서 이식하여 C++/WinRT 버전을 다시 만드는 방법을 보여 줍니다. 이를 통해 고유한 C# 프로젝트를 C++/WinRT로 이식하는 방법을 확인할 수 있습니다.
+이 항목의 연습에서는 C# 소스 코드에서 이식하여 Clipboard 샘플의 C++/WinRT 버전을 다시 만드는 방법을 보여 줍니다. 이를 통해 고유한 C# 프로젝트를 C++/WinRT로 이식하는 방법을 확인할 수 있습니다.
 
-샘플에서 수행되는 작업을 이해하려면 C# 솔루션(`\Clipboard_sample\cs\Clipboard.sln`)을 열고 구성을 적절히 변경한 후(예: *x64*) 빌드하고 실행합니다. 샘플의 UI(사용자 인터페이스)에서는 다양한 기능을 단계별로 안내합니다.
+샘플에서 수행되는 작업을 이해하려면 C# 솔루션(`\Clipboard_sample\cs\Clipboard.sln`)을 열고 구성을 적절히 변경한 후(예: *x64*) 빌드하고 실행합니다. 샘플의 자체 UI(사용자 인터페이스)에서는 다양한 기능을 단계별로 안내합니다.
 
-## <a name="createablankappcwinrt-named-clipboard"></a>Clipboard라는 비어 있는 앱(C++/WinRT) 만들기
+## <a name="create-a-blank-app-cwinrt-named-clipboard"></a>Clipboard라는 비어 있는 앱(C++/WinRT) 만들기
 
 > [!NOTE]
-> 프로젝트 템플릿 및 빌드 지원을 함께 제공하는 C++/WinRT Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법에 대한 자세한 내용은  [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
+> 프로젝트 템플릿 및 빌드 지원을 함께 제공하는 C++/WinRT Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
 
 Microsoft Visual Studio에서 새 C++/WinRT 프로젝트를 만들어 이식 프로세스를 시작합니다. **비어 있는 앱(C++/WinRT)** 프로젝트 템플릿을 사용하여 새 프로젝트를 만듭니다. 해당 이름을 *Clipboard*로 설정하고 폴더 구조가 연습과 일치하도록 **솔루션 및 프로젝트를 같은 디렉터리에 배치**를 선택 취소합니다.
 
@@ -58,11 +58,11 @@ C# 프로젝트는 공유 폴더의 자산 파일을 참조합니다. C++/WinRT 
 
 `\Clipboard_sample\SharedContent\media` 폴더로 이동합니다. C# 프로젝트에 포함된 7개의 파일(`windows-sdk.png`~`microsoft-sdk.png`)을 선택하고 복사한 다음, 새 프로젝트의 `\Clipboard\Clipboard\Assets` 폴더에 붙여 넣습니다.
 
-`Assets` 폴더를 마우스 오른쪽 단추로 클릭하고(C++/WinRT 프로젝트의 솔루션 탐색기에서) > **추가** > **기존 항목...* 을 선택하고 `\Clipboard\Clipboard\Assets`로 이동합니다. 파일 선택에서 7개의 파일을 선택하고 **추가**를 클릭합니다.
+`Assets` 폴더를 마우스 오른쪽 단추로 클릭하고(C++/WinRT 프로젝트의 솔루션 탐색기에서) > **추가** > **기존 항목...** 을 선택하고 `\Clipboard\Clipboard\Assets`로 이동합니다. 파일 선택에서 7개의 파일을 선택하고 **추가**를 클릭합니다.
 
 `Package.appxmanifest`는 이제 프로젝트의 자산 파일과 다시 동기화됩니다.
 
-## <a name="mainpage-including-the-sample-configuration-functionality"></a>샘플 구성 기능을 포함하는 **MainPage**
+## <a name="mainpage-including-the-functionality-that-configures-the-sample"></a>샘플 구성 기능을 포함하는 **MainPage**
 
 모든 [UWP(유니버설 Windows 플랫폼) 앱 샘플](https://github.com/microsoft/Windows-universal-samples)과 같이 Clipboard 샘플은 사용자가 한 번에 하나씩 단계별로 실행할 수 있는 시나리오 컬렉션으로 구성되어 있습니다. 지정된 샘플의 시나리오 컬렉션은 샘플의 소스 코드에서 구성됩니다. 컬렉션의 각 시나리오는 시나리오를 구현하는 프로젝트의 클래스 형식 뿐만 아니라 제목을 저장하는 데이터 항목입니다.
 
@@ -76,12 +76,12 @@ C# 버전의 샘플에서 `SampleConfiguration.cs` 소스 코드 파일을 확�
 
 C++/WinRT 버전에서는 비슷한 방식으로 **MainPage** 형식을 소스 코드 파일에서 고려합니다. `MainPage.xaml.cs`의 논리를 사용하고 대부분의 경우에서 `MainPage.h` 및 `MainPage.cpp`로 변환합니다. 또한 `SampleConfiguration.cs`의 논리에서는 `SampleConfiguration.h` 및 `SampleConfiguration.cpp`로 변환합니다.
 
-C# UWP(유니버설 Windows 플랫폼) 애플리케이션은 Windows 런타임 형식입니다. 그러나 C++/WinRT 애플리케이션에서 형식을 작성하는 경우 해당 형식이 Windows 런타임 형식인지, 아니면 일반 클래스/구조체/열거형인지 선택할 수 있습니다.
+C# UWP(유니버설 Windows 플랫폼) 애플리케이션은 Windows 런타임 형식입니다. 그러나 C++/WinRT 애플리케이션에서 형식을 작성하는 경우 해당 형식이 Windows 런타임 형식인지, 아니면 일반 C++ 클래스/구조체/열거형인지 선택할 수 있습니다.
 
 C++/WinRT 프로젝트에서 **MainPage**는 이미 Windows 런타임 형식이므로 해당 측면을 변경할 필요가 없습니다. 특히 *런타임 클래스*입니다.
 
-- 런타임 클래스를 작성할지 여부에 대한 자세한 내용은 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis) 항목을 참조하세요.
-- *구현 형식* 및 *프로젝션된 형식* 개념은 C++/WinRT에서 중요합니다. 위에서 언급한 항목과 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/consume-apis)에서 자세히 알아볼 수 있습니다.
+- 특정 형식의 런타임 클래스를 작성해야 하는지 여부에 대한 자세한 내용은 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis) 항목을 참조하세요.
+- *구현 형식* 및 *프로젝션된 형식* 개념은 C++/WinRT로 작업할 때 중요합니다. 위에서 언급한 항목과 [C++/WinRT를 통한 API 사용](/windows/uwp/cpp-and-winrt-apis/consume-apis)에서 자세히 알아볼 수 있습니다.
 - 런타임 클래스와 `.idl` 파일 간 연결에 대한 내용은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](/windows/uwp/cpp-and-winrt-apis/binding-property) 항목을 읽고 작업을 진행합니다. 해당 항목에서는 새로운 런타임 클래스 작성 프로세스를 진행하며, 첫 번째 단계는 새 **Midl 파일(.idl)** 항목을 프로젝트에 추가하는 것입니다.
 
 **MainPage**의 경우 C++/WinRT 프로젝트에 필요한 `MainPage.idl` 파일이 이미 있습니다. 그러나 이 연습에서는 *새* `.idl` 파일을 프로젝트에 추가합니다.
@@ -106,6 +106,8 @@ C++/WinRT 프로젝트에서 **MainPage**는 이미 Windows 런타임 형식이�
 - **Scenarios** 속성은 **Scenario** 형식(앞에서 언급한 형식)의 개체 컬렉션입니다. 다음 하위 섹션에서 **Scenario**에 대해 설명하겠습니다. 그때까지 **Scenario** 속성을 그대로 둡니다.
 - **BuildClipboardFormatsOutputString**, **DisplayToast** 및 **EnableClipboardContentChangedNotifications** 메서드는 기본 페이지의 경우보다 샘플의 일반적인 상태에서 더 많은 작업을 수행하는 유틸리티 함수입니다. 따라서 이식 동안 이러한 세 가지 메서드를 **SampleState**라는 새 유틸리티 형식으로 리팩터링합니다(Windows 런타임 형식일 필요는 없음). 이러한 이유로 이러한 세 가지 메서드는 IDL로 이동하지 않습니다.
 - **NotifyUser** 메서드는 정적 *Current* 필드에서 반환되는 **MainPage** 인스턴스의 개별 시나리오 XAML 페이지에서 호출됩니다. 이미 언급한 것처럼 **Current**는 프로젝션된 형식의 인스턴스이므로 IDL에서 **NotifyUser**를 선언해야 합니다. **NotifyUser**는 **NotifyType** 형식의 매개 변수를 사용합니다. 다음 하위 섹션에서 이에 대해 설명합니다.
+
+`{x:Bind}` 또는 `{Binding}` 사용 여부에 관계없이 데이터 바인딩을 수행할 모든 멤버를 IDL에 선언해야 합니다. 자세한 내용은 [데이터 바인딩](/windows/uwp/data-binding/)을 참조하세요.
 
 진행 중인 작업이 있습니다. `MainPage.idl` 파일에 추가할 멤버 목록과 추가하지 않을 멤버 목록을 개발하고 있습니다. 그러나 **Scenarios** 속성 및 **NotifyType** 형식에 대해 계속 논의해야 합니다. 그러면 다음을 수행하겠습니다.
 
@@ -191,7 +193,7 @@ Visual Studio에서 C++/WinRT 프로젝트에 대해 프로젝트 속성 **공�
 
 실제로 유지하려는 현재 **MainPage** 버전의 유일한 멤버는 생성자입니다.
 
-스텁 파일에서 새 멤버를 복사하고, 원치 않는 멤버를 삭제하고, 네임스페이스를 업데이트하면 프로젝트의 `MainPage.h` 및 `MainPage.cpp` 파일이 다음과 같이 표시됩니다. **factory_implementation** 형식에 대한 유일한 변경 내용은 해당 네임스페이스를 업데이트하는 것입니다.
+스텁 파일에서 새 멤버를 복사하고, 원치 않는 멤버를 삭제하고, 네임스페이스를 업데이트하면 프로젝트의 `MainPage.h` 및 `MainPage.cpp` 파일이 다음 코드 목록과 같이 표시됩니다. 두 가지 **MainPage** 형식이 있습니다. **implementation** 네임스페이스 형식과 **factory_implementation** 네임스페이스 형식입니다. **factory_implementation** 형식에 대한 유일한 변경 내용은 해당 네임스페이스에 **SDKTemplate**를 추가하는 것입니다.
 
 ```cppwinrt
 // MainPage.h
@@ -255,7 +257,7 @@ namespace winrt::SDKTemplate::implementation
 
 ### <a name="update-all-remaining-namespace-declarationsreferences-and-build"></a>나머지 모든 네임스페이스 선언/참조 업데이트 및 빌드
 
-C++/WinRT 프로젝트를 빌드하기 전에 **Clipboard** 네임스페이스에 대한 참조 선언을 찾아 **SDKTemplate**로 변경합니다.
+C++/WinRT 프로젝트를 빌드하기 전에 **Clipboard** 네임스페이스에 대한 선언 및 참조를 찾아 **SDKTemplate**로 변경합니다.
 
 - `MainPage.xaml` 및 `App.xaml` 네임스페이스는 `x:Class` 및 `xmlns:local` 특성 값에 표시됩니다.
 - `App.idl`을 차례로 클릭합니다.
@@ -684,7 +686,7 @@ C# **System.Text.StringBuilder** 형식의 사용을 이식하려면 표준 C++ 
 
 C# 코드는 `new` 키워드를 사용하여 **StringBuilder**를 생성합니다. C#에서 개체는 기본적으로 `new`를 사용하여 힙에 선언된 참조 형식입니다. 최신 표준 C++에서 개체는 기본적으로 `new`를 사용하지 않고 스택에 선언된 값 형식입니다. 따라서 `StringBuilder output = new StringBuilder();`를 간단히 `std::wostringstream output;`으로 C++/WinRT로 이식합니다.
 
-C# `var` 키워드는 형식을 유추하도록 컴파일러에 요청합니다. C++/WinRT에서 `var`을 `auto`로 이식할 수 있습니다. 그러나 C++/WinRT에서는 복사본을 방지하기 위해 *참조*를 유추된 형식 또는 추론된 형식으로 설정하고 `auto&`를 사용하여 이를 표현하는 경우가 있습니다. 또한 *lvalue* 또는 *rvalue*를 사용하여 초기화되었는지 여부에 관계없이 올바르게 바인딩되는 특별한 유형의 참조를 원하는 경우도 있습니다. 그리고 이는 `auto&&`를 사용하여 표현합니다. 아래의 이식된 코드에서 `for` 루프에 사용된 형태입니다. *lvalue* 및 *rvalue*에 대한 소개는 [값 범주 및 해당 참조](/windows/uwp/cpp-and-winrt-apis/cpp-value-categories)에서 확인하세요.
+C# `var` 키워드는 형식을 유추하도록 컴파일러에 요청합니다. C++/WinRT에서 `var`을 `auto`로 이식할 수 있습니다. 그러나 C++/WinRT에서는 복사본을 방지하기 위해 *참조*를 유추된 형식 또는 추론된 형식으로 설정하고 `auto&`를 사용하여 추론된 형식에 대한 lvalue 참조를 표현하는 경우가 있습니다. 또한 *lvalue* 또는 *rvalue*를 사용하여 초기화되었는지 여부에 관계없이 올바르게 바인딩되는 특별한 유형의 참조를 원하는 경우도 있습니다. 그리고 이는 `auto&&`를 사용하여 표현합니다. 아래의 이식된 코드에서 `for` 루프에 사용된 형태입니다. *lvalue* 및 *rvalue*에 대한 소개는 [값 범주 및 해당 참조](/windows/uwp/cpp-and-winrt-apis/cpp-value-categories)에서 확인하세요.
 
 아래 목록과 일치하도록 `pch.h`, `SampleConfiguration.h` 및 `SampleConfiguration.cpp`를 편집합니다.
 
@@ -790,6 +792,8 @@ private void OnWindowActivated(object sender, WindowActivatedEventArgs e) { ... 
 C++/WinRT에서는 **SampleState**의 퍼블릭 정적 메서드로 만듭니다.
 
 C#에서는 `+=` 및 `-=` 연산자 구문을 사용하여 이벤트 처리 대리자를 등록 및 해지할 수 있습니다. C++/WinRT에는 [C++/WinRT의 대리자를 사용한 이벤트 처리](/windows/uwp/cpp-and-winrt-apis/handle-events)에 설명된 대로 대리자를 등록/해지할 수 있는 몇 가지 구문 옵션이 제공됩니다. 그러나 일반적으로는 이벤트에 대해 명명된 함수 쌍을 호출하여 등록 및 해지합니다. 등록하려면 대리자를 등록 함수에 전달하고 반환 결과에서 해지 토큰을 검색합니다([**winrt::event_token**](/uwp/cpp-ref-for-winrt/event-token)). 해지하려면 해당 토큰을 해지 함수에 전달합니다. 이 경우 처리기는 정적이며(다음 코드 목록에서 볼 수 있음) 함수 호출 구문은 간단합니다.
+
+C# 내부에서는 실질적으로 유사한 토큰이 *사용됩니다*. 하지만 이 언어는 해당 세부 정보를 암시적으로 만듭니다. C++/WinRT는 이를 명시적으로 만듭니다.
 
 C# 이벤트 처리기 시그니처에 **object** 형식이 표시됩니다. C# 언어에서 **object**는 .NET [**System.Object**](/dotnet/api/system.object) 형식에 대한 [별칭](/dotnet/csharp/language-reference/builtin-types/reference-types)입니다. C++/WinRT의 동급 항목은 [**winrt::Windows::Foundation::IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable)입니다. 따라서 C++/WinRT 이벤트 처리기에서는 **IInspectable**을 볼 수 있습니다.
 
@@ -939,12 +943,14 @@ C#에서 **isApplicationWindowActive**는 **MainPage** 클래스에 속하는 �
 
 #### <a name="button_click"></a>**Button_Click**
 
-**Button_Click**은 C# **MainPage** 클래스의 프라이빗(이벤트 처리) 메서드이며 `MainPage.xaml.cs`에 정의되어 있습니다. 여기서는 참조하는 XAML **SplitView**와 함께 제공됩니다.
+**Button_Click**은 C# **MainPage** 클래스의 프라이빗(이벤트 처리) 메서드이며 `MainPage.xaml.cs`에 정의되어 있습니다. 여기에는 이를 참조하는 XAML **SplitView**와 이를 등록하는 **ToggleButton**이 있습니다.
 
 ```xaml
 <!-- MainPage.xaml -->
 ...
 <SplitView x:Name="Splitter" ... />
+...
+<ToggleButton Click="Button_Click" .../>
 ...
 ```
 
@@ -955,7 +961,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-또한 C++/WinRT로 이식되는 동급 항목이 나옵니다. C++/WinRT 버전에서 이벤트 처리기는 `public`입니다. 여기서 볼 수 있듯이 `private:` 선언 전에  선언합니다.
+또한 C++/WinRT로 이식되는 동급 항목이 있습니다. C++/WinRT 버전에서 이벤트 처리기는 `public`입니다. 여기서 볼 수 있듯이 `private:` 선언 전에  선언합니다. 왜냐하면 이와 같이 XAML 태그에 등록된 이벤트 처리기가 C++/WinRT에서 `public`이어야 XAML 태그가 액세스할 수 있기 때문입니다. 앞서 **MainPage::EnableClipboardContentChangedNotifications**에서 한 것처럼 명령형 코드에 이벤트 처리기를 등록하는 경우에는 이벤트 처리기가 `public`일 필요가 없습니다.
 
 ```xaml
 <!-- MainPage.xaml -->
@@ -1037,7 +1043,7 @@ async void Footer_Click(object sender, RoutedEventArgs e)
 
 해당 C++/WinRT 메서드도 [**Launcher.LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync)를 호출하기 때문에 비동기입니다. 그러나 `co_await`를 수행할 필요가 없고 비동기 개체를 반환할 필요도 없습니다. `co_await`에 대한 자세한 내용과 비동기 개체에 대해서는 [C++/WinRT를 통한 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)을 참조하세요.
 
-이제 메서드가 수행하는 작업을 알아보겠습니다. 이것은 **HyperlinkButton**의 **Click** 이벤트에 대한 이벤트 처리기이므로 *sender*라는 개체는 실제로 **HyperlinkButton**입니다. 이 캐스트는 안전합니다(또는 이 캐스트를 `sender as HyperlinkButton`으로 표현할 수도 있음). 다음으로 **Tag** 속성의 값을 검색합니다. C# 프로젝트의 XAML 태그를 살펴보면 웹 URL을 나타내는 문자열로 설정된 것을 볼 수 있습니다. **FrameworkElement.Tag** 속성(**HyperlinkButton**은 **FrameworkElement**임) **object** 형식이지만 C#에서는 [**Object.ToString**](/dotnet/api/system.object.tostring)으로 stringify를 수행할 수 있습니다. 결과 문자열에서 **Uri** 개체를 생성합니다. 마지막으로 셸을 통해 브라우저를 시작하고 URL로 이동합니다.
+이제 메서드가 수행하는 작업을 알아보겠습니다. 이것은 **HyperlinkButton**의 **Click** 이벤트에 대한 이벤트 처리기이므로 *sender*라는 개체는 실제로 **HyperlinkButton**입니다. 이러한 형식 변환은 안전합니다(또는 이 변환을 `sender as HyperlinkButton`으로 표현할 수도 있음). 다음으로 **Tag** 속성의 값을 검색합니다. C# 프로젝트의 XAML 태그를 살펴보면 웹 URL을 나타내는 문자열로 설정된 것을 볼 수 있습니다. **FrameworkElement.Tag** 속성(**HyperlinkButton**은 **FrameworkElement**임) **object** 형식이지만 C#에서는 [**Object.ToString**](/dotnet/api/system.object.tostring)으로 stringify를 수행할 수 있습니다. 결과 문자열에서 **Uri** 개체를 생성합니다. 마지막으로 셸을 통해 브라우저를 시작하고 URL로 이동합니다.
 
 다음은 C++/WinRT로 이식된 메서드(명확히 나타내기 위해 확장됨)와 세부 정보에 대한 설명입니다.
 
@@ -1067,7 +1073,7 @@ void MainPage::Footer_Click(Windows::Foundation::IInspectable const& sender, Win
 }
 ```
 
-항상 그런 것처럼 이벤트 처리기를 `public`으로 지정합니다. *sender* 개체에서 [**as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) 함수를 사용하여 **HyperlinkButton**으로 캐스트합니다. C++/WinRT에서 **Tag** 속성은 [**IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)([**Object**](/dotnet/api/system.object)에 해당)입니다. 그러나 **IInspectable**에는 **Tostring**이 없습니다. 대신 **IInspectable**을 스칼라 값(이 경우 문자열)으로 unboxing해야 합니다. boxing 및 unboxing에 대한 자세한 내용은 [스칼라 값을 IInspectable로 boxing 및 unboxing](/windows/uwp/cpp-and-winrt-apis/boxing)을 참조하세요.
+항상 그런 것처럼 이벤트 처리기를 `public`으로 지정합니다. *sender* 개체에서 [**as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) 함수를 사용하여 **HyperlinkButton**으로 변환합니다. C++/WinRT에서 **Tag** 속성은 [**IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)([**Object**](/dotnet/api/system.object)에 해당)입니다. 그러나 **IInspectable**에는 **Tostring**이 없습니다. 대신 **IInspectable**을 스칼라 값(이 경우 문자열)으로 unboxing해야 합니다. boxing 및 unboxing에 대한 자세한 내용은 [스칼라 값을 IInspectable로 boxing 및 unboxing](/windows/uwp/cpp-and-winrt-apis/boxing)을 참조하세요.
 
 마지막 두 줄은 앞에서 살펴본 이식 패턴을 반복하여 C# 버전을 에코합니다.
 
@@ -1165,6 +1171,8 @@ Visual Studio의 솔루션 탐색기에서 모든 원래 IDL 파일(`CopyFiles.i
 
 마지막으로, 각 5개 XAML 페이지 형식의 `.h` 및 `.cpp` 파일에서 `MyProperty` 제거를 완료하기 위해 `int32_t MyProperty()` 접근자 및 `void MyProperty(int32_t)` 변경자 함수의 선언 및 정의를 삭제합니다.
 
+그런데 XAML 파일의 이름이 해당 클래스의 이름과 일치하는 것이 항상 가장 좋습니다. 예를 들어 XAML 태그 파일에 `x:Class="MyNamespace.MyPage"`가 있는 경우 해당 파일의 이름을 `MyPage.xaml`로 지정해야 합니다. 이는 기술적 요구 사항은 아니지만 동일한 아티팩트에 여러 이름을 번갈아 사용하면 프로젝트를 더 쉽게 이해하고 유지 관리할 수 있으며, 프로젝트 작업도 더 수월해집니다.
+
 ## <a name="copyfiles"></a>**CopyFiles**
 
 C# 프로젝트에서 **CopyFiles** XAML 페이지 형식은 `CopyFiles.xaml` 및 `CopyFiles.xaml.cs` 소스 코드 파일에 구현됩니다. **CopyFiles**의 각 구성원을 차례로 살펴보겠습니다.
@@ -1244,7 +1252,7 @@ auto storageItems{ co_await filePicker.PickMultipleFilesAsync() };
 dataPackage.SetStorageItems(storageItems);
 ```
 
-C#은 *storageItems*로 표현된 **IReadOnlyList<StorageFile>** 를 [**DataPackage.SetStorageItems**](/uwp/api/windows.applicationmodel.datatransfer.datapackage.setstorageitems)에 필요한 **IEnumerable<IStorageItem>** 로 암시적으로 변환할 수 있습니다. 그러나 C++/WinRT에서는 **IVectorView<StorageFile>** 에서 **IIterable<IStorageItem>** 로 명시적으로 캐스팅해야 합니다. 그리고 [**as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) 함수의 또 다른 예가 나와 있습니다.
+C#은 *storageItems*로 표현된 **IReadOnlyList<StorageFile>** 를 [**DataPackage.SetStorageItems**](/uwp/api/windows.applicationmodel.datatransfer.datapackage.setstorageitems)에 필요한 **IEnumerable<IStorageItem>** 로 암시적으로 변환할 수 있습니다. 그러나 C++/WinRT에서는 **IVectorView<StorageFile>** 에서 **IIterable<IStorageItem>** 로 명시적으로 변환해야 합니다. 그리고 [**as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) 함수의 또 다른 예가 나와 있습니다.
 
 ```cppwinrt
 dataPackage.SetStorageItems(storageItems.as<IVectorView<IStorageItem>>());
@@ -1277,7 +1285,7 @@ if (file != null)
 ...
 ```
 
-C# `as` 키워드를 C++/WinRT로 이식하기 위해 지금까지 [**as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) 함수가 두어 번 사용된 것을 보았습니다. 캐스팅이 실패하면 이 함수가 예외를 throw합니다. 하지만 캐스트가 실패할 경우 코드에서 해당 상황을 처리할 수 있도록 `nullptr`이 반환되도록 하려면 [**try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function) 함수를 대신 사용합니다.
+C# `as` 키워드를 C++/WinRT로 이식하기 위해 지금까지 [**as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function) 함수가 두어 번 사용된 것을 보았습니다. 유형 변환이 실패하면 이 함수가 예외를 throw합니다. 하지만 변환이 실패할 경우 코드에서 해당 상황을 처리할 수 있도록 `nullptr`이 반환되도록 하려면 [**try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function) 함수를 대신 사용합니다.
 
 ```cppwinrt
 auto file{ storageItem.try_as<StorageFile>() };
@@ -1324,7 +1332,7 @@ C++/WinRT 개체는 주로 명확한 종료가 없는 언어의 이점을 얻기
 
 C# 버전의 **CopyImage.OnDeferredImageRequestedHandler**에는 `catch` 절이 아닌 `finally` 절이 있습니다. C++/WinRT 버전에서 조금 더 나아가 지연된 렌더링이 성공했는지 여부를 보고할 수 있도록 `catch` 절을 구현했습니다.
 
-이 XAML 페이지의 나머지 부분을 이식할 경우 새로운 논의 거리가 생기지 않습니다. **CopyFiles**와 마찬가지로, 이식의 마지막 단계는 `CopyImage.xaml`의 전체 내용을 선택하고 C++/WinRT 프로젝트의 동일한 파일에 붙여넣는 것입니다.
+이 XAML 페이지의 나머지 부분을 이식할 경우 새로운 논의 거리가 생기지 않습니다. 더미 **ClickHandler** 함수를 삭제하는 것을 잊지 마세요. 그리고 **CopyFiles**와 마찬가지로, 이식의 마지막 단계는 `CopyImage.xaml`의 전체 내용을 선택하고 C++/WinRT 프로젝트의 동일한 파일에 붙여넣는 것입니다.
 
 ## <a name="copytext"></a>**CopyText**
 
@@ -1338,9 +1346,11 @@ C# 버전의 **CopyImage.OnDeferredImageRequestedHandler**에는 `catch` 절이 
 
 그리고 둘째로, **CheckHistoryAndRoaming**이라는 실행 후 망각 코루틴에 마침내 도달할 경우 처음으로 할 일은 이 코루틴이 최종적으로 완료될 때까지 **HistoryAndRoaming** 페이지가 최소한 활성화되어 있도록 `this`에 대한 강한 참조를 가져오는 것입니다. 앞서 설명한 두 가지 사항에 대한 자세한 내용은 [C++/WinRT의 강한 참조 및 약한 참조](/windows/uwp/cpp-and-winrt-apis/weak-references)에서 확인하세요.
 
-**CheckHistoryAndRoaming**을 이식하는 동안 또 다른 흥미로운 부분을 찾았습니다. 여기에는 UI를 업데이트하는 코드가 포함되어 있으므로 기본 UI 스레드에서 이 작업을 수행해야 합니다. 일반적으로 비동기 메서드는 임의의 스레드에서 실행되거나 다시 시작될 수 있습니다. C#에서 해결책은 [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync)를 호출하고 람다 함수 내에서 UI를 업데이트하는 것입니다. C++/WinRT에서는 [**winrt::resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) 함수와 `this` 포인터의 [**디스패처**](/uwp/api/windows.ui.xaml.dependencyobject.dispatcher)를 함께 사용하여 코루틴을 일시 중단하고 기본 UI 스레드에서 즉시 다시 시작할 수 있습니다.
+**CheckHistoryAndRoaming**을 이식하는 동안 또 다른 흥미로운 부분을 찾았습니다. 여기에는 UI를 업데이트하는 코드가 포함되어 있으므로 기본 UI 스레드에서 이 작업을 수행해야 합니다. 처음에 이벤트 처리기로 호출되는 스레드는 주 UI 스레드입니다. 그러나 일반적으로 비동기 메서드는 임의의 스레드에서 실행되거나 다시 시작될 수 있습니다. C#에서 해결책은 [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync)를 호출하고 람다 함수 내에서 UI를 업데이트하는 것입니다. C++/WinRT에서는 [**winrt::resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground) 함수와 `this` 포인터의 [**디스패처**](/uwp/api/windows.ui.xaml.dependencyobject.dispatcher)를 함께 사용하여 코루틴을 일시 중단하고 기본 UI 스레드에서 즉시 다시 시작할 수 있습니다.
 
 관련 식은 `co_await winrt::resume_foreground(Dispatcher());`입니다. 또는 덜 명확하지만 `co_await Dispatcher();`로 단순하게 표현할 수 있습니다. 축약된 버전은 C++/WinRT에서 제공하는 변환 연산자로 구현할 수 있습니다.
+
+이 XAML 페이지의 나머지 부분을 이식할 경우 새로운 논의 거리가 생기지 않습니다. 더미 **ClickHandler** 함수를 삭제하고 XAML 태그에 복사하는 것을 잊지 마세요.
 
 ## <a name="otherscenarios"></a>**OtherScenarios**
 
