@@ -7,10 +7,10 @@ keywords: 시작, uwp, windows 10, 학습 트랙, 설정, 설정 저장, 설정 
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 490dd8f0f3841fae089626ec9c283d54cc0d8cd9
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66370492"
 ---
 # <a name="save-and-load-settings-in-a-uwp-app"></a>UWP 앱의 설정 저장 및 로드
@@ -51,9 +51,9 @@ composite["FontSize"] = 11;
 roamingSettings.Values["RoamingFontInfo"] = composite;
  ```
 
-먼저 `Windows.Storage.ApplicationData.Current.LocalSettings`로 로컬 설정 데이터 저장소에 대한 **ApplicationDataContainer**를 가져와 로컬 디바이스에 설정을 저장합니다. 이 인스턴스에 할당한 키/값 사전 쌍은 로컬 디바이스 설정 데이터 저장소에 저장됩니다.
+먼저 **로 로컬 설정 데이터 저장소에 대한** ApplicationDataContainer`Windows.Storage.ApplicationData.Current.LocalSettings`를 가져와 로컬 디바이스에 설정을 저장합니다. 이 인스턴스에 할당한 키/값 사전 쌍은 로컬 디바이스 설정 데이터 저장소에 저장됩니다.
 
-비슷한 패턴을 사용하여 로밍 설정을 저장합니다. 먼저 `Windows.Storage.ApplicationData.Current.RoamingSettings`로 로밍 설정 데이터 저장소에 대한 **ApplicationDataContainer**를 가져옵니다. 그런 다음 이 인스턴스에 키/값 쌍을 할당합니다.  이러한 키/값 쌍은 자동으로 디바이스 간에 로밍됩니다.
+비슷한 패턴을 사용하여 로밍 설정을 저장합니다. 먼저 **로 로밍 설정 데이터 저장소에 대한** ApplicationDataContainer`Windows.Storage.ApplicationData.Current.RoamingSettings`를 가져옵니다. 그런 다음 이 인스턴스에 키/값 쌍을 할당합니다.  이러한 키/값 쌍은 자동으로 디바이스 간에 로밍됩니다.
 
 위의 코드 조각에서 **ApplicationDataCompositeValue**는 여러 키/값 쌍을 저장합니다. 복합 값은 서로 비동기화되어서는 안 되는 여러 설정을 사용하는 경우 유용합니다. **ApplicationDataCompositeValue**를 저장하면 값이 저장되고 하나의 단위로 또는 원자 단위로 자동으로 로드됩니다. 이를 통해 설정이 개별적이지 않고 한 단위로 로밍되기 때문에 관련된 설정이 비동기화되지 않습니다.
 
@@ -74,9 +74,9 @@ if (composite != null)
 }
 ```
 
-`Windows.Storage.ApplicationData.Current.LocalSettings`로 로컬 설정 데이터 저장소에 대한 **ApplicationDataContainer** 인스턴스를 가져와 로컬 디바이스에서 설정을 로드합니다. 이를 사용하여 키/값 쌍을 검색합니다.
+**로 로컬 설정 데이터 저장소에 대한** ApplicationDataContainer`Windows.Storage.ApplicationData.Current.LocalSettings` 인스턴스를 가져와 로컬 디바이스에서 설정을 로드합니다. 이를 사용하여 키/값 쌍을 검색합니다.
 
-비슷한 패턴을 따라 로밍 설정을 로드합니다. 먼저 `Windows.Storage.ApplicationData.Current.RoamingSettings`로 로밍 설정 데이터 저장소에서 **ApplicationDataContainer** 인스턴스를 가져옵니다. 해당 인스턴스에서 키/값 쌍에 액세스합니다. 데이터가 아직 설정에 액세스하는 디바이스에 로밍되지 않은 경우 null **ApplicationDataContainer**를 얻습니다. 그러한 이유 때문에 위 코드 예제에서 `if (composite != null)` 확인이 있습니다.
+비슷한 패턴을 따라 로밍 설정을 로드합니다. 먼저 **로 로밍 설정 데이터 저장소에서** ApplicationDataContainer`Windows.Storage.ApplicationData.Current.RoamingSettings` 인스턴스를 가져옵니다. 해당 인스턴스에서 키/값 쌍에 액세스합니다. 데이터가 아직 설정에 액세스하는 디바이스에 로밍되지 않은 경우 null **ApplicationDataContainer**를 얻습니다. 그러한 이유 때문에 위 코드 예제에서 `if (composite != null)` 확인이 있습니다.
 
 ## <a name="useful-apis-and-docs"></a>유용한 API 및 문서
 
@@ -96,7 +96,7 @@ if (composite != null)
 | 항목 | 설명 |
 |-------|----------------|
 | [앱 설정에 대한 지침](https://docs.microsoft.com/windows/uwp/design/app-settings/guidelines-for-app-settings) | 앱 설정을 만들고 표시하기 위한 모범 사례를 설명합니다. |
-| [설정 및 기타 앱 데이터 저장 및 검색](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#create-and-read-a-local-file) | 로밍 설정을 포함하여 설정을 저장하고 검색하는 단계를 안내합니다. |
+| [설정과 기타 앱 데이터의 저장 및 검색](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data#create-and-read-a-local-file) | 로밍 설정을 포함하여 설정을 저장하고 검색하는 단계를 안내합니다. |
 
 ## <a name="useful-code-samples"></a>유용한 코드 샘플
 

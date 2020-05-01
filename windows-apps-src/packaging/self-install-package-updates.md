@@ -7,15 +7,15 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: cb1ac05bdc5dcaaf31074f1b89e5bbb35e4f850d
-ms.sourcegitcommit: 350d6e6ba36800df582f9715c8d21574a952aef1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68682723"
 ---
 # <a name="download-and-install-package-updates-from-the-store"></a>Microsoft Store에서 패키지 업데이트 다운로드 및 설치
 
-Windows 10 버전 1607부터 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스에 있는 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 클래스의 메서드를 사용하여 Microsoft Store에서 현재 앱의 패키지 업데이트를 프로그래밍 방식으로 확인하고 업데이트된 패키지를 다운로드 및 설치할 수 있습니다. 파트너 센터에 필수로 표시한 패키지를 쿼리하고, 필수 업데이트가 설치될 때까지 앱의 기능을 사용하지 않도록 설정할 수도 있습니다.
+Windows 10 버전 1607부터 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 네임스페이스에 있는 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store) 클래스의 메서드를 사용하여 Microsoft Store에서 현재 앱의 패키지 업데이트를 프로그래밍 방식으로 확인하고 업데이트된 패키지를 다운로드 및 설치할 수 있습니다. 파트너 센터에 필수로 표시한 패키지를 쿼리하고, 필수 업데이트가 설치될 때까지 앱의 기능을 사용하지 않도록 설정할 수도 있습니다.
 
 Windows 10, 버전 1803에서 도입된 추가 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 메서드를 사용하면 사용자에게 알림 UI를 표시하지 않고 자동으로 패키지 업데이트를 다운로드 및 설치하고, [선택적 패키지](/windows/msix/package/optional-packages)를 제거하고, 앱의 다운로드 및 설치 큐에 있는 패키지 정보를 가져올 수 있습니다.
 
@@ -31,9 +31,9 @@ Windows 10, 버전 1803에서 도입된 추가 [StoreContext](https://docs.micro
 이 코드 예제에서는 다음을 가정합니다.
 
 * 코드가 [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page) 컨텍스트에서 실행됩니다.
-* **Page**에 다운로드 작업의 상태를 제공하는 ```downloadProgressBar```라는 이름의 [ProgressBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar)가 있습니다.
+* **Page**에 다운로드 작업의 상태를 제공하는 [라는 이름의 ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar)ProgressBar```downloadProgressBar```가 있습니다.
 * 코드 파일에는 **Windows.Services.Store**, **Windows.Threading.Tasks** 및 **Windows.UI.Popups** 네임스페이스에 대한 **using** 문이 있습니다.
-* 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://docs.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault) 메서드 대신 [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) 메서드를 사용하여 **StoreContext** 개체를 가져옵니다.
+* 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://docs.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) 메서드 대신 **GetForUser** 메서드를 사용하여 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault) 개체를 가져옵니다.
 
 ```csharp
 private StoreContext context = null;
@@ -99,7 +99,7 @@ Windows 10, 버전 1803부터 [TrySilentDownloadStorePackageUpdatesAsync](https:
 
 이 코드 예제에서는 다음을 가정합니다.
 * 코드 파일에는 **Windows.Services.Store** 및 **System.Threading.Tasks** 네임스페이스에 대한 **using** 문이 있습니다.
-* 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://docs.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault) 메서드 대신 [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) 메서드를 사용하여 **StoreContext** 개체를 가져옵니다.
+* 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://docs.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) 메서드 대신 **GetForUser** 메서드를 사용하여 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault) 개체를 가져옵니다.
 
 > [!NOTE]
 > 이 예제 코드에서 호출된 **IsNowAGoodTimeToRestartApp**, **RetryDownloadAndInstallLater** 및 **RetryInstallLater** 메서드는 앱 디자인에 따라 필요한 경우 구현하려는 자리 표시자 메서드입니다.
@@ -330,7 +330,7 @@ Windows 10, 버전 1803부터 [RequestUninstallStorePackageAsync](https://docs.m
 
 다음 코드 예제는 [RequestUninstallStorePackageAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.requestuninstallstorepackageasync)를 호출하는 방법을 보여 줍니다. 이 예제에서는 다음을 가정합니다.
 * 코드 파일에는 **Windows.Services.Store** 및 **System.Threading.Tasks** 네임스페이스에 대한 **using** 문이 있습니다.
-* 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://docs.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault) 메서드 대신 [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) 메서드를 사용하여 **StoreContext** 개체를 가져옵니다.
+* 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://docs.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) 메서드 대신 **GetForUser** 메서드를 사용하여 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault) 개체를 가져옵니다.
 
 ```csharp
 public async Task UninstallPackage(Windows.ApplicationModel.Package package)
@@ -373,7 +373,7 @@ Windows 10, 버전 1803부터 [GetAssociatedStoreQueueItemsAsync](https://docs.m
 
 다음 코드 예제는 [GetAssociatedStoreQueueItemsAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.getassociatedstorequeueitemsasync)를 호출하여 현재 앱에 대해 진행 중인 패키지 업데이트 목록을 가져오고 각 패키지의 상태 정보를 검색하는 방법을 보여 줍니다. 이 예제에서는 다음을 가정합니다.
 * 코드 파일에는 **Windows.Services.Store** 및 **System.Threading.Tasks** 네임스페이스에 대한 **using** 문이 있습니다.
-* 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://docs.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault) 메서드 대신 [GetForUser](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) 메서드를 사용하여 **StoreContext** 개체를 가져옵니다.
+* 앱은 해당 앱을 실행한 사용자의 컨텍스트에서만 실행되는 단일 사용자 앱입니다. [다중 사용자 앱](https://docs.microsoft.com/windows/uwp/xbox-apps/multi-user-applications)의 경우 [GetDefault](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.User) 메서드 대신 **GetForUser** 메서드를 사용하여 [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext.GetDefault) 개체를 가져옵니다.
 
 > [!NOTE]
 > 이 예제 코드에서 호출된 **MarkUpdateInProgressInUI**, **RemoveItemFromUI**, **MarkInstallCompleteInUI**, **MarkInstallErrorInUI** 및 **MarkInstallPausedInUI** 메서드는 앱 디자인에 따라 필요한 경우 구현하려는 자리 표시자 메서드입니다.

@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 8db56882833b9d3bd8a6d2932d04e07a72b205e2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66365245"
 ---
 # <a name="3-d-perspective-effects-for-xaml-ui"></a>XAML UI에 대한 3D 원근감 효과
@@ -47,7 +47,7 @@ ms.locfileid: "66365245"
 
 ## <a name="planeprojection-class"></a>PlaneProjection 클래스
 
-[  **PlaneProjection**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PlaneProjection)을 사용하여 UIElement의 [**Projection**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.projection) 속성을 설정하면 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)에 3D 효과를 적용할 수 있습니다. **PlaneProjection**은 변형이 공간에 렌더링되는 방법을 정의합니다. 다음 예에서는 간단한 사례를 보여 줍니다.
+[  **PlaneProjection**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)을 사용하여 UIElement의 [**Projection**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.projection) 속성을 설정하면 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PlaneProjection)에 3D 효과를 적용할 수 있습니다. **PlaneProjection**은 변형이 공간에 렌더링되는 방법을 정의합니다. 다음 예에서는 간단한 사례를 보여 줍니다.
 
 ```xml
 <Image Source="kid.png">

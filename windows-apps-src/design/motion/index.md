@@ -13,10 +13,10 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 31cf2134fb8f77809b75a5abf3e6980443452059
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68867400"
 ---
 # <a name="motion-for-uwp-apps"></a>UWP 앱의 동작
@@ -74,21 +74,21 @@ Fluent 움직임은 앱에서 목적에 맞게 작동합니다. 사용자의 동
 
 :::row:::
     :::column:::
-### <a name="timing-and-easingtiming-and-easingmd"></a>[타이밍 및 감속](timing-and-easing.md)
+### <a name="timing-and-easing"></a>[타이밍 및 감속](timing-and-easing.md)
 타이밍 및 감속은 UI 내에서 개체가 출입하거나 이동하는 움직임이 자연스럽게 느껴지도록 만드는 중요한 요소입니다.
     :::column-end:::
     :::column:::
-### <a name="directionality-and-gravitydirectionality-and-gravitymd"></a>[방향 및 무게](directionality-and-gravity.md)
+### <a name="directionality-and-gravity"></a>[방향 및 무게](directionality-and-gravity.md)
 방향 신호는 환경 전반에서 사용자에게 구체적인 멘탈 모델을 제공하는 데 도움이 됩니다. 방향 이동에는 이동의 자연스러운 느낌을 강화하는 중력 같은 힘이 강제로 적용됩니다.
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-### <a name="page-transitionspage-transitionsmd"></a>[페이지 전환](page-transitions.md)
+### <a name="page-transitions"></a>[페이지 전환](page-transitions.md)
 페이지 전환은 앱 페이지 사이에서 사용자를 탐색하면서 페이지 사이의 관계에 대한 피드백을 제공합니다. 사용자가 탐색 계층 구조상의 위치를 이해하는 데 도움이 됩니다.
     :::column-end:::
     :::column:::
-### <a name="connected-animationconnected-animationmd"></a>[연결된 애니메이션](connected-animation.md)
+### <a name="connected-animation"></a>[연결된 애니메이션](connected-animation.md)
 연결된 애니메이션을 사용하면 두 가지 보기 간에 전환되는 동작에 애니메이션 효과를 적용하여 역동적이고 매력적인 탐색 환경을 만들 수 있습니다.
     :::column-end:::
 :::row-end:::

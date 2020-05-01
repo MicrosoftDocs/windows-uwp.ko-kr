@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, xBind
 ms.localizationpriority: medium
 ms.openlocfilehash: 879be9591bae36a1dbcd485387fbb4ac7f502fea
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66360078"
 ---
 # <a name="functions-in-xbind"></a>X:bind 함수
@@ -108,7 +108,7 @@ namespace MyNamespace
 - 인수 형식은 전달 중인 데이터와 일치해야 합니다. 변환을 축소하지 않습니다.
 - 함수의 반환 형식은 바인딩을 사용 중인 속성의 형식과 일치해야 합니다.
 
-바인딩 엔진은 함수 이름을 사용하여 실행된 속성 변경 알림에 반응하고 필요에 따라 바인딩을 다시 평가합니다. 예:
+바인딩 엔진은 함수 이름을 사용하여 실행된 속성 변경 알림에 반응하고 필요에 따라 바인딩을 다시 평가합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
 
 ```xaml
 <DataTemplate x:DataType="local:Person">

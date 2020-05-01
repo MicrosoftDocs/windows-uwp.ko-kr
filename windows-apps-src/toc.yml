@@ -1,4 +1,3 @@
-items:
 - name: 새로운 기능
   href: whats-new/toc.yml
 - name: 시작
@@ -13,9 +12,3 @@ items:
   href: publish/toc.yml
 - name: API 참조
   href: /uwp/
-ms.openlocfilehash: 694733290f7b44ed6b7c88eaf6bcb9a5e0e71309
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583244"

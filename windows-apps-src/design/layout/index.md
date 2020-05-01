@@ -1,5 +1,5 @@
 ---
-description: 다양한 장치 및 화면 크기에서 멋지게 보이고 탐색하기 쉬운 UWP 앱을 디자인하고 코딩하는 방법을 알아봅니다.
+description: 다양한 디바이스 및 화면 크기에서 멋지게 보이고 탐색하기 쉬운 UWP 앱을 디자인하고 코딩하는 방법을 알아봅니다.
 title: UWP 앱 레이아웃 개요
 keywords: UWP 앱 레이아웃, 유니버설 windows 플랫폼, 앱 디자인, 인터페이스
 ms.date: 03/07/2018
@@ -7,10 +7,10 @@ ms.topic: article
 ms.assetid: 1aa12606-8a99-4db3-8311-90e02fde9cf1
 ms.localizationpriority: medium
 ms.openlocfilehash: 7ab0344acc40103620da5164faa397c081a4a079
-ms.sourcegitcommit: 789bfe3756c5c47f7324b96f482af636d12c0ed3
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68867331"
 ---
 # <a name="layout"></a>레이아웃
@@ -21,51 +21,51 @@ ms.locfileid: "68867331"
 
 :::row:::
     :::column:::
-### <a name="page-layoutpage-layoutmd"></a>[페이지 레이아웃](page-layout.md)
+### <a name="page-layout"></a>[페이지 레이아웃](page-layout.md)
 기본 페이지 레이아웃 구조를 안내합니다.
     :::column-end:::
     :::column:::
-### <a name="screen-sizes-and-breakpointsscreen-sizes-and-breakpoints-for-responsive-designmd"></a>[화면 크기 및 중단점](screen-sizes-and-breakpoints-for-responsive-design.md)
+### <a name="screen-sizes-and-breakpoints"></a>[화면 크기 및 중단점](screen-sizes-and-breakpoints-for-responsive-design.md)
 Windows 10 에코시스템 전체의 화면 크기와 중단점에 맞게 설계하는 방법에 대해 알아봅니다.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-### <a name="responsive-design-techniquesresponsive-designmd"></a>[반응형 디자인 기술](responsive-design.md)
+### <a name="responsive-design-techniques"></a>[반응형 디자인 기술](responsive-design.md)
 중단점에 맞게 앱의 레이아웃을 최적화하는 반응형 디자인 기술에 대해 알아봅니다.
     :::column-end:::
     :::column:::
-### <a name="layouts-with-xamllayouts-with-xamlmd"></a>[XAML을 사용한 레이아웃](layouts-with-xaml.md)
+### <a name="layouts-with-xaml"></a>[XAML을 사용한 레이아웃](layouts-with-xaml.md)
 적응형 또는 맞춤형 레이아웃을 사용하여 XAML에서 반응형 UI를 구현합니다.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-### <a name="multiple-viewsshow-multiple-viewsmd"></a>[여러 보기](show-multiple-views.md)
+### <a name="multiple-views"></a>[여러 보기](show-multiple-views.md)
 앱의 각 부분을 별도의 창으로 표시합니다.
     :::column-end:::
     :::column:::
-### <a name="alignment-margin-paddingalignment-margin-paddingmd"></a>[맞춤, 여백, 안쪽 여백](alignment-margin-padding.md)
+### <a name="alignment-margin-padding"></a>[맞춤, 여백, 안쪽 여백](alignment-margin-padding.md)
 레이아웃 동작에 영향을 주는 맞춤, 여백 및 안쪽 여백을 사용합니다.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-### <a name="layout-panelslayout-panelsmd"></a>[레이아웃 패널](layout-panels.md)
+### <a name="layout-panels"></a>[레이아웃 패널](layout-panels.md)
 레이아웃 패널의 각 유형과 패널을 사용하여 UI 요소를 정렬하는 방법에 대해 알아봅니다.
     :::column-end:::
     :::column:::
-### <a name="transformstransformsmd"></a>[변형](transforms.md)
+### <a name="transforms"></a>[변형](transforms.md)
 변환을 사용하여 요소의 회전, 기울이기 및 크기 조정이 가능합니다.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-### <a name="attached-layoutsattached-layoutsmd"></a>[연결된 레이아웃](attached-layouts.md)
+### <a name="attached-layouts"></a>[연결된 레이아웃](attached-layouts.md)
 XAML의 고급 레이아웃 개념 및 사용자 지정 가상화 레이아웃을 만드는 방법을 알아봅니다.
     :::column-end:::
     :::column:::

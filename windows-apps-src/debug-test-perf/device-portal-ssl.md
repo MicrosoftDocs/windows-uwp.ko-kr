@@ -8,10 +8,10 @@ keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
 ms.custom: 19H1
 ms.openlocfilehash: ce4e45bc23f4efb636618bb4891b9d6e9d207490
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "63774148"
 ---
 # <a name="provision-device-portal-with-a-custom-ssl-certificate"></a>사용자 지정 SSL 인증서로 디바이스 포털 프로비전

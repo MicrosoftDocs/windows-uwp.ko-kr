@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: 3aeb068908adf6d6c40a50cee3aececba1861ee8
-ms.sourcegitcommit: fca0132794ec187e90b2ebdad862f22d9f6c0db8
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "63801386"
 ---
 # <a name="device-portal-api-reference-for-hololens"></a>HoloLens용 디바이스 포털 API 참조
@@ -25,7 +25,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 디바이스 포털에 대한 HTTPS 요구 사항을 가져올 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/os/webmanagement/settings/https |
 
@@ -56,7 +56,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 저장된 IPD 값을 가져올 수 있습니다. 값은 밀리미터 단위로 반환됩니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/os/settings/ipd |
 
@@ -87,7 +87,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 시스템에 등록되지 않은 HoloLens 특정 ETW 공급자의 목록을 가져올 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/os/etw/customproviders |
 
@@ -119,7 +119,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 현재 실행 중인 모든 서비스의 상태를 가져올 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/os/services |
 
@@ -151,7 +151,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 디바이스 포털에 대한 HTTPS 요구 사항을 설정할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | POST | /api/holographic/management/settings/https |
 
@@ -187,7 +187,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 저장된 IPD를 설정할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | POST | /api/holographic/os/settings/ipd |
 
@@ -225,7 +225,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 Websocket 업그레이드를 수락하고 30fps로 업데이트를 보내는 mirage 클라이언트를 실행할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET/WebSocket | /api/holographic/perception/client |
 
@@ -263,7 +263,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 디바이스의 열 단계를 가져올 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/ |
 
@@ -283,9 +283,9 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 표에 가능한 값이 표시됩니다.
 
-| Value | 설명 |
+| 값 | 설명 |
 | --- | --- |
-| 1 | 보통 |
+| 1 | 중 |
 | 2 | 보통 |
 | 3 | 위험 |
 
@@ -300,7 +300,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 컨트롤 스트림을 만들거나 만든 스트림에 데이터를 게시할 수 있습니다. 게시된 데이터는 **application/octet-stream** 형식이어야 합니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | POST | /api/holographic/simulation/control/stream |
 
@@ -336,7 +336,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 컨트롤 스트림을 삭제할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | DELETE | /api/holographic/simulation/control/stream |
 
@@ -367,7 +367,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 컨트롤 스트림에 대한 웹 소켓 연결을 열 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET/WebSocket | /api/holographic/simulation/control/stream |
 
@@ -398,7 +398,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 시뮬레이션 모드를 가져올 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/simulation/control/mode |
 
@@ -429,7 +429,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 시뮬레이션 모드를 설정할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | POST | /api/holographic/simluation/control/mode |
 
@@ -466,7 +466,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 기록을 삭제할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | DELETE | /api/holographic/simulation/playback/file |
 
@@ -501,7 +501,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 사용 가능한 모든 기록을 가져올 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/simulation/playback/files |
 
@@ -532,7 +532,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 로드된 기록의 데이터 유형을 가져올 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/simulation/playback/session/types |
 
@@ -567,7 +567,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 로드된 모든 기록을 가져올 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/simulation/playback/session/files |
 
@@ -598,7 +598,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 기록의 현재 재생 상태를 가져올 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/simulation/playback/session |
 
@@ -633,7 +633,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 기록을 로드할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | POST | /api/holographic/simulation/playback/session/file |
 
@@ -668,7 +668,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 기록을 일시 중지할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | POST | /api/holographic/simulation/playback/session/pause |
 
@@ -703,7 +703,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 기록을 재생할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | POST | /api/holographic/simulation/playback/session/play |
 
@@ -738,7 +738,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 기록을 중지할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | POST | /api/holographic/simulation/playback/session/stop |
 
@@ -773,7 +773,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 기록을 언로드할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | DELETE | /api/holographic/simulation/playback/session/file |
 
@@ -808,7 +808,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 기록을 업로드할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | POST | /api/holographic/simulation/playback/file |
 
@@ -841,7 +841,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 현재 기록 상태를 가져올 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/simulation/recording/status |
 
@@ -872,7 +872,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 기록을 시작할 수 있습니다. 한 번에 하나의 활성 기록만 있을 수 있습니다. 
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | POST | /api/holographic/simulation/recording/start |
 
@@ -887,7 +887,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 | hands   | (**아래 참조**) 시스템이 핸즈 데이터를 기록하도록 이 값을 1로 설정합니다. |
 | spatialMapping   | (**아래 참조**) 시스템이 공간 매핑 데이터를 기록하도록 이 값을 1로 설정합니다. |
 | environment   | (**아래 참조**) 시스템이 환경 데이터를 기록하도록 이 값을 1로 설정합니다. |
-| 이름   | (**필수**) 기록의 이름입니다. |
+| name   | (**필수**) 기록의 이름입니다. |
 | singleSpatialMappingFrame   | (**선택**) 단일 공간 매핑 프레임만 기록되도록 이 값을 1로 설정합니다. |
 
 이러한 매개 변수는 *head*, *hands*, *spatialMapping*, *environment* 매개 변수 중 하나만 1로 설정해야 합니다.
@@ -914,7 +914,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 현재 기록을 중지할 수 있습니다. 기록이 파일로 반환됩니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | POST | /api/holographic/simulation/recording/stop |
 
@@ -947,7 +947,7 @@ Windows Device Portal의 모든 작업은 데이터에 액세스하고 디바이
 
 다음 요청 형식을 사용하여 MRC 기록을 삭제할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 DELETE | /api/holographic/mrc/file |
 
@@ -982,7 +982,7 @@ DELETE | /api/holographic/mrc/file |
 
 다음 요청 형식을 사용하여 디바이스에서 MRC 파일을 다운로드할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/mrc/file |
 
@@ -1018,7 +1018,7 @@ DELETE | /api/holographic/mrc/file |
 
 다음 요청 형식을 사용하여 MRC 설정을 가져올 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/mrc/settings |
 
@@ -1049,7 +1049,7 @@ DELETE | /api/holographic/mrc/file |
 
 다음 요청 형식을 사용하여 MRC 기록 상태를 가져올 수 있습니다. 가능한 값은 **running** 및 **stopped**입니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/mrc/status |
 
@@ -1080,7 +1080,7 @@ DELETE | /api/holographic/mrc/file |
 
 다음 요청 형식을 사용하여 디바이스에 저장된 MRC 파일을 가져올 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/mrc/files |
 
@@ -1111,7 +1111,7 @@ DELETE | /api/holographic/mrc/file |
 
 다음 요청 형식을 사용하여 MRC 설정을 지정할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | POST | /api/holographic/mrc/settings |
 
@@ -1142,7 +1142,7 @@ DELETE | /api/holographic/mrc/file |
 
 다음 요청 형식을 사용하여 MRC 기록을 시작할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | POST | /api/holographic/mrc/video/control/start |
 
@@ -1173,7 +1173,7 @@ DELETE | /api/holographic/mrc/file |
 
 다음 요청 형식을 사용하여 현재 MRC 기록을 중지할 수 있습니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | POST | /api/holographic/mrc/video/control/stop |
 
@@ -1204,7 +1204,7 @@ DELETE | /api/holographic/mrc/file |
 
 다음 요청 형식을 사용하여 MRC 사진을 찍을 수 있습니다. 사진은 JPEG 형식으로 반환됩니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/mrc/photo |
 
@@ -1237,7 +1237,7 @@ DELETE | /api/holographic/mrc/file |
 
 다음 요청 형식을 사용하여 조각난 mp4의 청크 분할 다운로드를 시작할 수 있습니다. 이 API는 기본 품질을 사용합니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/stream/live.mp4 |
 
@@ -1275,7 +1275,7 @@ DELETE | /api/holographic/mrc/file |
 
 다음 요청 형식을 사용하여 조각난 mp4의 청크 분할 다운로드를 시작할 수 있습니다. 이 API는 고품질을 사용합니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/stream/live_high.mp4 |
 
@@ -1313,7 +1313,7 @@ DELETE | /api/holographic/mrc/file |
 
 다음 요청 형식을 사용하여 조각난 mp4의 청크 분할 다운로드를 시작할 수 있습니다. 이 API는 저품질을 사용합니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/stream/live_low.mp4 |
 
@@ -1351,7 +1351,7 @@ DELETE | /api/holographic/mrc/file |
 
 다음 요청 형식을 사용하여 조각난 mp4의 청크 분할 다운로드를 시작할 수 있습니다. 이 API는 중간 품질을 사용합니다.
  
-| 방법      | 요청 URI |
+| 메서드      | 요청 URI |
 | :------     | :----- |
 | GET | /api/holographic/stream/live_med.mp4 |
 

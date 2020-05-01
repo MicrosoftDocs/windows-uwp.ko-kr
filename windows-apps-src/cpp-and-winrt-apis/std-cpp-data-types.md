@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 데이터, 형식
 ms.localizationpriority: medium
 ms.openlocfilehash: 8cb62f8386798fcb78a11be35ba951616c47039c
-ms.sourcegitcommit: d37a543cfd7b449116320ccfee46a95ece4c1887
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68270065"
 ---
 # <a name="standard-c-data-types-and-cwinrt"></a>표준 C++ 데이터 형식 및 C++/WinRT
@@ -125,13 +125,13 @@ array_view<byte const> fromRange{ theArray.data(), theArray.data() + 2 }; // jus
 dataWriter.WriteBytes(fromRange); // the winrt::array_view is passed to WriteBytes.
 ```
 
-## <a name="winrtarrayview-functions-and-operators"></a>winrt::array_view 함수와 연산자
+## <a name="winrtarray_view-functions-and-operators"></a>winrt::array_view 함수와 연산자
 **winrt::array_view**일 때는 다양한 생성자, 연산자, 함수 및 반복기가 구현됩니다. **winrt::array_view**는 범위이기 때문에 범위 기반 `for`와 함께, 혹은 **std::for_each**와 함께 사용할 수 있습니다.
 
 더 많은 예제와 정보를 보려면 [**winrt::array_view**](/uwp/cpp-ref-for-winrt/array-view) API 참조 항목을 참조하세요.
 
 ## <a name="ivectorlttgt-and-standard-iteration-constructs"></a>**IVector&lt;T&gt;** 및 표준 반복 구문
-[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items)는 **winrt::Windows::Foundation::Collections::IVector&lt;T&gt;** 로 C++/WinRT에 프로젝션된 [**IVector&lt;T&gt;** ](/uwp/api/windows.foundation.collections.ivector_t_) 형식의 컬렉션을 반환하는 Windows 런타임 API의 예입니다. 범위 기반 `for`와 같은 표준 반복 구문에서 이 형식을 사용할 수 있습니다.
+[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items)는 [winrt::Windows::Foundation::Collections::IVector**T&lt;&gt;로 C++/WinRT에 프로젝션된** ](/uwp/api/windows.foundation.collections.ivector_t_)IVector**T&lt;&gt;** 형식의 컬렉션을 반환하는 Windows 런타임 API의 예입니다. 범위 기반 `for`와 같은 표준 반복 구문에서 이 형식을 사용할 수 있습니다.
 
 ```cppwinrt
 // main.cpp

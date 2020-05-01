@@ -1,651 +1,646 @@
-items:
 - name: 시작
   href: ../gaming/getting-started.md
-- name: Windows 10 게임 개발 가이드
+- name: "Windows\_10 게임 개발 가이드"
   href: ../gaming/e2e.md
 - name: 게임 프로그래밍
   href: ../gaming/index.md
   items:
-  - name: 계획
-    href: ../gaming/planning.md
-    items:
-    - name: 게임 기술
-      href: ../gaming/game-development-platform-guide.md
-    - name: 게임의 접근성
-      href: ../gaming/accessibility-for-games.md
-    - name: 게임의 클라우드
-      href: ../gaming/cloud-for-games.md
-    - name: 게임의 수익 창출
-      href: ../gaming/monetization-for-games.md
-    - name: 개념 승인
-      href: ../gaming/concept-approval.md
-    - name: 게임 패키지 작성
-      href: ../gaming/package-your-windows-store-directx-game.md
-  - name: UWP 프로그래밍
-    href: ../gaming/uwp-programming.md
-    items:
-    - name: 게임의 오디오
-      href: ../gaming/working-with-audio-in-your-directx-game.md
-    - name: 게임 브로드캐스트 및 캡처
-      href: ../gaming/game-broadcast-and-capture.md
+    - name: 계획
+      href: ../gaming/planning.md
       items:
-      - name: 게임 브로드캐스팅 관리
-        href: ../gaming/manage-game-broadcasting.md
-      - name: 게임 오디오, 비디오, 스크린샷 및 메타데이터 캡처
-        href: ../gaming/capture-game-audio-video-screenshots-and-metadata.md
-    - name: 게임용 입력 시스템
-      href: ../gaming/input-for-games.md
+        - name: 게임 기술
+          href: ../gaming/game-development-platform-guide.md
+        - name: 게임의 접근성
+          href: ../gaming/accessibility-for-games.md
+        - name: 게임의 클라우드
+          href: ../gaming/cloud-for-games.md
+        - name: 게임의 수익 창출
+          href: ../gaming/monetization-for-games.md
+        - name: 개념 승인
+          href: ../gaming/concept-approval.md
+        - name: 게임 패키지 작성
+          href: ../gaming/package-your-windows-store-directx-game.md
+    - name: UWP 프로그래밍
+      href: ../gaming/uwp-programming.md
       items:
-      - name: 게임패드 및 진동
-        href: ../gaming/gamepad-and-vibration.md
-      - name: 아케이드 스틱
-        href: ../gaming/arcade-stick.md
-      - name: 레이싱 휠 및 힘 피드백
-        href: ../gaming/racing-wheel-and-force-feedback.md
-      - name: 플라이트 스틱
-        href: ../gaming/flight-stick.md
-      - name: 원시 게임 컨트롤러
-        href: ../gaming/raw-game-controller.md
-      - name: 헤드셋
-        href: ../gaming/headset.md
-      - name: UI 탐색 컨트롤러
-        href: ../gaming/ui-navigation-controller.md
-      - name: 게임용 입력 시스템
-        href: ../gaming/input-practices-for-games.md
-      - name: 게임 컨트롤러의 레지스트리 데이터
-        href: ../gaming/registry-data-for-game-controllers.md
-    - name: Unity 및 UWP에서 누락된 .NET API
-      href: ../gaming/missing-dot-net-apis-in-unity-and-uwp.md
-    - name: 게임의 네트워킹
-      href: ../gaming/work-with-networking-in-your-directx-game.md
-  - name: 게임 개발 동영상
-    href: ../gaming/game-development-videos.md
+        - name: 게임의 오디오
+          href: ../gaming/working-with-audio-in-your-directx-game.md
+        - name: 게임 브로드캐스트 및 캡처
+          href: ../gaming/game-broadcast-and-capture.md
+          items:
+            - name: 게임 브로드캐스팅 관리
+              href: ../gaming/manage-game-broadcasting.md
+            - name: '게임 오디오, 비디오, 스크린샷 및 메타데이터 캡처'
+              href: ../gaming/capture-game-audio-video-screenshots-and-metadata.md
+        - name: 게임용 입력 시스템
+          href: ../gaming/input-for-games.md
+          items:
+            - name: 게임패드 및 진동
+              href: ../gaming/gamepad-and-vibration.md
+            - name: 아케이드 스틱
+              href: ../gaming/arcade-stick.md
+            - name: 레이싱 휠 및 힘 피드백
+              href: ../gaming/racing-wheel-and-force-feedback.md
+            - name: 플라이트 스틱
+              href: ../gaming/flight-stick.md
+            - name: 원시 게임 컨트롤러
+              href: ../gaming/raw-game-controller.md
+            - name: 헤드셋
+              href: ../gaming/headset.md
+            - name: UI 탐색 컨트롤러
+              href: ../gaming/ui-navigation-controller.md
+            - name: 게임용 입력 시스템
+              href: ../gaming/input-practices-for-games.md
+            - name: 게임 컨트롤러의 레지스트리 데이터
+              href: ../gaming/registry-data-for-game-controllers.md
+        - name: Unity 및 UWP에서 누락된 .NET API
+          href: ../gaming/missing-dot-net-apis-in-unity-and-uwp.md
+        - name: 게임의 네트워킹
+          href: ../gaming/work-with-networking-in-your-directx-game.md
+    - name: 게임 개발 동영상
+      href: ../gaming/game-development-videos.md
 - name: DirectX 프로그래밍
   href: ../gaming/directx-programming.md
   items:
-  - name: 시작
-    href: ../gaming/directx-getting-started.md
-    items:
-    - name: 앱 개체
-      href: ../gaming/about-the-uwp-user-interface-and-directx.md
-    - name: 프로젝트 템플릿 및 도구
-      href: ../gaming/prepare-your-dev-environment-for-windows-store-directx-game-development.md
+    - name: 시작
+      href: ../gaming/directx-getting-started.md
       items:
-      - name: 게임 프로젝트 템플릿
-        href: ../gaming/user-interface.md
-      - name: Visual Studio Tools
-        href: ../gaming/set-up-visual-studio-for-game-development.md
-      - name: 그래픽 진단 도구
-        href: ../gaming/use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md
-    - name: 앱 시작 및 다시 시작
-      href: ../gaming/launching-and-resuming-apps-directx-and-cpp.md
-      items:
-      - name: 앱 활성화
-        href: ../gaming/how-to-activate-an-app-directx-and-cpp.md
-      - name: 앱 일시 중단
-        href: ../gaming/how-to-suspend-an-app-directx-and-cpp.md
-      - name: 앱 다시 시작
-        href: ../gaming/how-to-resume-an-app-directx-and-cpp.md
-  - name: 샘플
-    href: ../gaming/directx-samples.md
-    items:
-    - name: 간단한 UWP 게임
-      href: ../gaming/tutorial--create-your-first-uwp-directx-game.md
-      items:
-      - name: 프로젝트 설정
-        href: ../gaming/tutorial--setting-up-the-games-infrastructure.md
-      - name: UWP 프레임워크
-        href: ../gaming/tutorial--building-the-games-uwp-app-framework.md
-      - name: 게임 흐름 관리
-        href: ../gaming/tutorial-game-flow-management.md
-      - name: 주 게임 개체
-        href: ../gaming/tutorial--defining-the-main-game-loop.md
-      - name: 렌더링 프레임워크 I
-        href: ../gaming/tutorial--assembling-the-rendering-pipeline.md
-      - name: 렌더링 프레임워크 II
-        href: ../gaming/tutorial-game-rendering.md
-      - name: UI 추가
-        href: ../gaming/tutorial--adding-a-user-interface.md
-      - name: 컨트롤 추가
-        href: ../gaming/tutorial--adding-controls.md
-      - name: 소리 추가
-        href: ../gaming/tutorial--adding-sound.md
-      - name: 게임 확장
-        href: ../gaming/tutorial-resources.md
-    - name: Marble Maze
-      href: ../gaming/developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md
-      items:
-      - name: 기본 사항
-        href: ../gaming/marble-maze-sample-fundamentals.md
-      - name: 앱 구조
-        href: ../gaming/marble-maze-application-structure.md
-      - name: 시각적 콘텐츠 추가
-        href: ../gaming/adding-visual-content-to-the-marble-maze-sample.md
-      - name: 입력 및 대화형 작업 추가
-        href: ../gaming/adding-input-and-interactivity-to-the-marble-maze-sample.md
-      - name: 오디오 추가
-        href: ../gaming/adding-audio-to-the-marble-maze-sample.md
-  - name: Direct3D 그래픽 개념
-    href: ../graphics-concepts/index.md
-    items:
-    - name: 좌표계 및 기하 도형
-      href: ../graphics-concepts/coordinate-systems-and-geometry.md
-      items:
-      - name: 좌표계
-        href: ../graphics-concepts/coordinate-systems.md
-      - name: 기본 요소
-        href: ../graphics-concepts/primitives.md
-        items:
-        - name: 점 목록
-          href: ../graphics-concepts/point-lists.md
-        - name: 선 목록
-          href: ../graphics-concepts/line-lists.md
-        - name: 선 스트립
-          href: ../graphics-concepts/line-strips.md
-        - name: 삼각형 목록
-          href: ../graphics-concepts/triangle-lists.md
-        - name: 삼각형 스트립
-          href: ../graphics-concepts/triangle-strips.md
-      - name: 면 및 꼭짓점 법선 벡터
-        href: ../graphics-concepts/face-and-vertex-normal-vectors.md
-      - name: 사각형
-        href: ../graphics-concepts/rectangles.md
-      - name: 삼각형 보간
-        href: ../graphics-concepts/triangle-interpolation.md
-      - name: 벡터, 꼭짓점 및 사원수
-        href: ../graphics-concepts/vectors--vertices--and-quaternions.md
-      - name: 변형
-        href: ../graphics-concepts/transforms.md
-        items:
-        - name: 변형 개요
-          href: ../graphics-concepts/transform-overview.md
-        - name: 월드 변형
-          href: ../graphics-concepts/world-transform.md
-        - name: 뷰 변형
-          href: ../graphics-concepts/view-transform.md
-        - name: 프로젝션 변형
-          href: ../graphics-concepts/projection-transform.md
-      - name: 뷰포트 및 클리핑
-        href: ../graphics-concepts/viewports-and-clipping.md
-    - name: 꼭짓점 및 인덱스 버퍼
-      href: ../graphics-concepts/vertex-and-index-buffers.md
-      items:
-      - name: 버퍼 소개
-        href: ../graphics-concepts/introduction-to-buffers.md
-      - name: 인덱스 버퍼
-        href: ../graphics-concepts/index-buffers.md
-    - name: 장치
-      href: ../graphics-concepts/devices.md
-      items:
-      - name: 디바이스 유형
-        href: ../graphics-concepts/device-types.md
-      - name: 창 모드 및 전체 화면 모드
-        href: ../graphics-concepts/windowed-vs--full-screen-mode.md
-      - name: 분실한 디바이스
-        href: ../graphics-concepts/lost-devices.md
-      - name: 스왑 체인
-        href: ../graphics-concepts/swap-chains.md
-      - name: 래스터화 규칙 소개
-        href: ../graphics-concepts/introduction-to-rasterization-rules.md
-    - name: 조명
-      href: ../graphics-concepts/lights-and-materials.md
-      items:
-      - name: 조명 개요
-        href: ../graphics-concepts/lighting-overview.md
-      - name: 조명 유형
-        href: ../graphics-concepts/light-types.md
-      - name: 조명 속성
-        href: ../graphics-concepts/light-properties.md
-      - name: 조명의 수학
-        href: ../graphics-concepts/mathematics-of-lighting.md
-        items:
-        - name: 주변 조명
-          href: ../graphics-concepts/ambient-lighting.md
-        - name: 확산 조명
-          href: ../graphics-concepts/diffuse-lighting.md
-        - name: 반사 조명
-          href: ../graphics-concepts/specular-lighting.md
-        - name: 발광 조명
-          href: ../graphics-concepts/emissive-lighting.md
-        - name: 카메라 공간 변형
-          href: ../graphics-concepts/camera-space-transformations.md
-        - name: 감쇠 및 스포트라이트 계수
-          href: ../graphics-concepts/attenuation-and-spotlight-factor.md
-    - name: 깊이 및 스텐실 버퍼
-      href: ../graphics-concepts/depth-and-stencil-buffers.md
-      items:
-      - name: 깊이 버퍼
-        href: ../graphics-concepts/depth-buffers.md
-      - name: 스텐실 버퍼
-        href: ../graphics-concepts/stencil-buffers.md
-    - name: 텍스처
-      href: ../graphics-concepts/textures.md
-      items:
-      - name: 텍스처 소개
-        href: ../graphics-concepts/introduction-to-textures.md
-      - name: 기본 텍스처 지정 개념
-        href: ../graphics-concepts/basic-texturing-concepts.md
-      - name: 텍스처 주소 지정 모드
-        href: ../graphics-concepts/texture-addressing-modes.md
-      - name: 텍스처 필터링
-        href: ../graphics-concepts/texture-filtering.md
-        items:
-        - name: 가장 가까운 점 샘플링
-          href: ../graphics-concepts/nearest-point-sampling.md
-        - name: 쌍선형 텍스처 필터링
-          href: ../graphics-concepts/bilinear-texture-filtering.md
-        - name: 이방성 텍스처 필터링
-          href: ../graphics-concepts/anisotropic-texture-filtering.md
-        - name: Mipmap을 사용하는 텍스처 필터링
-          href: ../graphics-concepts/texture-filtering-with-mipmaps.md
-      - name: 텍스처 리소스
-        href: ../graphics-concepts/texture-resources.md
-      - name: 텍스처 래핑
-        href: ../graphics-concepts/texture-wrapping.md
-      - name: 텍스처 혼합
-        href: ../graphics-concepts/texture-blending.md
-        items:
-        - name: 혼합 단계
-          href: ../graphics-concepts/blending-stages.md
-        - name: 멀티패스 텍스처 혼합
-          href: ../graphics-concepts/multipass-texture-blending.md
-      - name: 텍스처와 조명 매핑
-        href: ../graphics-concepts/light-mapping-with-textures.md
-        items:
-        - name: 단색 조명 맵
-          href: ../graphics-concepts/monochrome-light-maps.md
-        - name: 컬러 조명 맵
-          href: ../graphics-concepts/color-light-maps.md
-        - name: 반사 조명 맵
-          href: ../graphics-concepts/specular-light-maps.md
-        - name: 확산 조명 맵
-          href: ../graphics-concepts/diffuse-light-maps.md
-      - name: 압축된 텍스처 리소스
-        href: ../graphics-concepts/compressed-texture-resources.md
-        items:
-        - name: 불투명 및 1비트 알파 텍스처
-          href: ../graphics-concepts/opaque-and-1-bit-alpha-textures.md
-        - name: 알파 채널을 사용하는 텍스처
-          href: ../graphics-concepts/textures-with-alpha-channels.md
-        - name: 블록 압축
-          href: ../graphics-concepts/block-compression.md
-        - name: 압축된 텍스처 형식
-          href: ../graphics-concepts/compressed-texture-formats.md
-    - name: 그래픽 파이프라인
-      href: ../graphics-concepts/graphics-pipeline.md
-      items:
-      - name: IA(입력 어셈블러) 단계
-        href: ../graphics-concepts/input-assembler-stage--ia-.md
-        items:
-        - name: 기본 토폴로지
-          href: ../graphics-concepts/primitive-topologies.md
-        - name: 시스템에서 생성된 값 사용
-          href: ../graphics-concepts/using-system-generated-values.md
-      - name: VS(꼭짓점 셰이더) 단계
-        href: ../graphics-concepts/vertex-shader-stage--vs-.md
-      - name: HS(헐 셰이더) 단계
-        href: ../graphics-concepts/hull-shader-stage--hs-.md
-      - name: TS(분할기) 단계
-        href: ../graphics-concepts/tessellator-stage--ts-.md
-      - name: DS(도메인 셰이더) 단계
-        href: ../graphics-concepts/domain-shader-stage--ds-.md
-      - name: GS(기하 도형 셰이더) 단계
-        href: ../graphics-concepts/geometry-shader-stage--gs-.md
-      - name: SO(스트림 출력) 단계
-        href: ../graphics-concepts/stream-output-stage--so-.md
-      - name: RS(래스터라이저) 단계
-        href: ../graphics-concepts/rasterizer-stage--rs-.md
-      - name: PS(픽셀 셰이더) 단계
-        href: ../graphics-concepts/pixel-shader-stage--ps-.md
-      - name: OM(출력 병합기) 단계
-        href: ../graphics-concepts/output-merger-stage--om-.md
-        items:
-        - name: 깊이 스텐실 기능 구성
-          href: ../graphics-concepts/configuring-depth-stencil-functionality.md
-      - name: 상태 개체
-        href: ../graphics-concepts/state-objects.md
-    - name: 보기
-      href: ../graphics-concepts/views.md
-      items:
-      - name: CBV(상수 버퍼 보기)
-        href: ../graphics-concepts/constant-buffer-view--cbv-.md
-      - name: VBV(꼭짓점 버퍼 보기) 및 IBV(인덱스 버퍼 보기)
-        href: ../graphics-concepts/vertex-buffer-view--vbv-.md
-      - name: SRV(셰이더 리소스 보기) 및 UAV(정렬되지 않은 액세스 보기)
-        href: ../graphics-concepts/shader-resource-view--srv-.md
-      - name: 샘플러
-        href: ../graphics-concepts/sampler.md
-      - name: RTV(렌더링 대상 보기)
-        href: ../graphics-concepts/render-target-view--rtv-.md
-      - name: DSV(깊이 스텐실 보기)
-        href: ../graphics-concepts/depth-stencil-view--dsv-.md
-      - name: SOV(스트림 출력 보기)
-        href: ../graphics-concepts/stream-output-view--sov-.md
-      - name: ROV(정렬된 래스터라이저 보기)
-        href: ../graphics-concepts/rasterizer-ordered-view--rov-.md
-    - name: 계산 파이프라인
-      href: ../graphics-concepts/compute-pipeline.md
-      items:
-      - name: CS(계산 셰이더) 단계
-        href: ../graphics-concepts/compute-shader-stage--cs-.md
-    - name: 리소스
-      href: ../graphics-concepts/resources.md
-      items:
-      - name: 리소스 종류
-        href: ../graphics-concepts/resource-types.md
-      - name: 리소스 선택
-        href: ../graphics-concepts/choosing-a-resource.md
-      - name: 리소스 데이터 복사 및 액세스
-        href: ../graphics-concepts/copying-and-accessing-resource-data.md
-      - name: 텍스처 보기
-        href: ../graphics-concepts/texture-views.md
-    - name: 스트리밍 리소스
-      href: ../graphics-concepts/streaming-resources.md
-      items:
-      - name: 스트리밍 리소스 필요
-        href: ../graphics-concepts/the-need-for-streaming-resources.md
-      - name: 스트리밍 리소스 만들기
-        href: ../graphics-concepts/creating-streaming-resources.md
-        items:
-        - name: 타일 풀에 대한 매핑
-          href: ../graphics-concepts/mappings-are-into-a-tile-pool.md
+        - name: 앱 개체
+          href: ../gaming/about-the-uwp-user-interface-and-directx.md
+        - name: 프로젝트 템플릿 및 도구
+          href: ../gaming/prepare-your-dev-environment-for-windows-store-directx-game-development.md
           items:
-          - name: 타일 풀 만들기
-            href: ../graphics-concepts/tile-pool-creation.md
-          - name: 타일 풀 크기 조정
-            href: ../graphics-concepts/tile-pool-resizing.md
-          - name: 위험 추적 및 타일 풀 리소스
-            href: ../graphics-concepts/hazard-tracking-versus-tile-pool-resources.md
-        - name: 스트리밍 리소스 생성 매개 변수
-          href: ../graphics-concepts/streaming-resource-creation-parameters.md
+            - name: 게임 프로젝트 템플릿
+              href: ../gaming/user-interface.md
+            - name: Visual Studio Tools
+              href: ../gaming/set-up-visual-studio-for-game-development.md
+            - name: 그래픽 진단 도구
+              href: ../gaming/use-the-directx-runtime-and-visual-studio-graphics-diagnostic-features.md
+        - name: 앱 시작 및 다시 시작
+          href: ../gaming/launching-and-resuming-apps-directx-and-cpp.md
           items:
-          - name: 스트리밍 리소스에 사용할 수 있는 주소 공간
-            href: ../graphics-concepts/address-space-available-for-streaming-resources.md
-        - name: 타일 풀 생성 매개 변수
-          href: ../graphics-concepts/tile-pool-creation-parameters.md
-        - name: 스트리밍 리소스 프로세스 간 및 디바이스 공유
-          href: ../graphics-concepts/streaming-resource-cross-process-and-device-sharing.md
+            - name: 앱 활성화
+              href: ../gaming/how-to-activate-an-app-directx-and-cpp.md
+            - name: 앱 일시 중단
+              href: ../gaming/how-to-suspend-an-app-directx-and-cpp.md
+            - name: 앱 다시 시작
+              href: ../gaming/how-to-resume-an-app-directx-and-cpp.md
+    - name: 샘플
+      href: ../gaming/directx-samples.md
+      items:
+        - name: 간단한 UWP 게임
+          href: ../gaming/tutorial--create-your-first-uwp-directx-game.md
           items:
-          - name: 스트리밍 리소스에서 지원되지 않는 스텐실 형식
-            href: ../graphics-concepts/stencil-formats-not-supported-with-streaming-resources.md
-        - name: 스트리밍 리소스에서 사용할 수 있는 작업
-          href: ../graphics-concepts/operations-available-on-streaming-resources.md
-        - name: 타일 풀에서 사용할 수 있는 작업
-          href: ../graphics-concepts/operations-available-on-tile-pools.md
-        - name: 스트리밍 리소스 영역의 타일링 방법
-          href: ../graphics-concepts/how-a-streaming-resource-s-area-is-tiled.md
+            - name: 프로젝트 설정
+              href: ../gaming/tutorial--setting-up-the-games-infrastructure.md
+            - name: UWP 프레임워크
+              href: ../gaming/tutorial--building-the-games-uwp-app-framework.md
+            - name: 게임 흐름 관리
+              href: ../gaming/tutorial-game-flow-management.md
+            - name: 주 게임 개체
+              href: ../gaming/tutorial--defining-the-main-game-loop.md
+            - name: 렌더링 프레임워크 I
+              href: ../gaming/tutorial--assembling-the-rendering-pipeline.md
+            - name: 렌더링 프레임워크 II
+              href: ../gaming/tutorial-game-rendering.md
+            - name: UI 추가
+              href: ../gaming/tutorial--adding-a-user-interface.md
+            - name: 컨트롤 추가
+              href: ../gaming/tutorial--adding-controls.md
+            - name: 소리 추가
+              href: ../gaming/tutorial--adding-sound.md
+            - name: 게임 확장
+              href: ../gaming/tutorial-resources.md
+        - name: Marble Maze
+          href: ../gaming/developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md
           items:
-          - name: Texture2D 및 Texture2DArray 하위 리소스 타일링
-            href: ../graphics-concepts/texture2d-and-texture2darray-subresource-tiling.md
-          - name: Texture3D 하위 리소스 타일링
-            href: ../graphics-concepts/texture3d-subresource-tiling.md
-          - name: 버퍼 타일링
-            href: ../graphics-concepts/buffer-tiling.md
-          - name: Mipmap 압축
-            href: ../graphics-concepts/mipmap-packing.md
-      - name: 스트리밍 리소스에 대한 파이프라인 액세스
-        href: ../graphics-concepts/pipeline-access-to-streaming-resources.md
-        items:
-        - name: 비매핑된 타일을 사용하는 SRV 동작
-          href: ../graphics-concepts/srv-behavior-with-non-mapped-tiles.md
-        - name: 비매핑된 타일을 사용하는 UAV 동작
-          href: ../graphics-concepts/uav-behavior-with-non-mapped-tiles.md
-        - name: 비매핑된 타일을 사용하는 래스터라이저 동작
-          href: ../graphics-concepts/rasterizer-behavior-with-non-mapped-tiles.md
-        - name: 중복 매핑을 사용하는 타일 액세스 제한
-          href: ../graphics-concepts/tile-access-limitations-with-duplicate-mappings.md
-        - name: 스트리밍 리소스 텍스처 샘플링 기능
-          href: ../graphics-concepts/streaming-resources-texture-sampling-features.md
-        - name: HLSL 스트리밍 리소스 노출
-          href: ../graphics-concepts/hlsl-streaming-resources-exposure.md
-      - name: 스트리밍 리소스 기능 계층
-        href: ../graphics-concepts/streaming-resources-features-tiers.md
-        items:
-        - name: 계층 1
-          href: ../graphics-concepts/tier-1.md
-        - name: 계층 2
-          href: ../graphics-concepts/tier-2.md
-        - name: 계층 3
-          href: ../graphics-concepts/tier-3.md
-    - name: 부록
-      href: ../graphics-concepts/appendix.md
+            - name: 기본 사항
+              href: ../gaming/marble-maze-sample-fundamentals.md
+            - name: 앱 구조
+              href: ../gaming/marble-maze-application-structure.md
+            - name: 시각적 콘텐츠 추가
+              href: ../gaming/adding-visual-content-to-the-marble-maze-sample.md
+            - name: 입력 및 대화형 작업 추가
+              href: ../gaming/adding-input-and-interactivity-to-the-marble-maze-sample.md
+            - name: 오디오 추가
+              href: ../gaming/adding-audio-to-the-marble-maze-sample.md
+    - name: Direct3D 그래픽 개념
+      href: ../graphics-concepts/index.md
       items:
-      - name: 부동 소수점 규칙
-        href: ../graphics-concepts/floating-point-rules.md
-      - name: 데이터 형식 변환
-        href: ../graphics-concepts/data-type-conversion.md
-      - name: 래스터화 규칙
-        href: ../graphics-concepts/rasterization-rules.md
-      - name: 텍스처 블록 압축
-        href: ../graphics-concepts/texture-block-compression.md
-        items:
-        - name: BC6H 형식
-          href: ../graphics-concepts/bc6h-format.md
-        - name: BC7 형식
-          href: ../graphics-concepts/bc7-format.md
-  - name: 기본 사항
-    href: ../gaming/directx-fundamentals.md
-    items:
-    - name: 2D 그래픽
-      href: ../gaming/working-with-2d-graphics-in-your-directx-game.md
-    - name: 기본 3D 그래픽
-      href: ../gaming/an-introduction-to-3d-graphics-with-directx.md
+        - name: 좌표계 및 기하 도형
+          href: ../graphics-concepts/coordinate-systems-and-geometry.md
+          items:
+            - name: 좌표계
+              href: ../graphics-concepts/coordinate-systems.md
+            - name: 기본 요소
+              href: ../graphics-concepts/primitives.md
+              items:
+                - name: 점 목록
+                  href: ../graphics-concepts/point-lists.md
+                - name: 선 목록
+                  href: ../graphics-concepts/line-lists.md
+                - name: 선 스트립
+                  href: ../graphics-concepts/line-strips.md
+                - name: 삼각형 목록
+                  href: ../graphics-concepts/triangle-lists.md
+                - name: 삼각형 스트립
+                  href: ../graphics-concepts/triangle-strips.md
+            - name: 면 및 꼭짓점 법선 벡터
+              href: ../graphics-concepts/face-and-vertex-normal-vectors.md
+            - name: 사각형
+              href: ../graphics-concepts/rectangles.md
+            - name: 삼각형 보간
+              href: ../graphics-concepts/triangle-interpolation.md
+            - name: '벡터, 꼭짓점 및 사원수'
+              href: ../graphics-concepts/vectors--vertices--and-quaternions.md
+            - name: 변형
+              href: ../graphics-concepts/transforms.md
+              items:
+                - name: 변형 개요
+                  href: ../graphics-concepts/transform-overview.md
+                - name: 월드 변형
+                  href: ../graphics-concepts/world-transform.md
+                - name: 뷰 변형
+                  href: ../graphics-concepts/view-transform.md
+                - name: 프로젝션 변형
+                  href: ../graphics-concepts/projection-transform.md
+            - name: 뷰포트 및 클리핑
+              href: ../graphics-concepts/viewports-and-clipping.md
+        - name: 꼭짓점 및 인덱스 버퍼
+          href: ../graphics-concepts/vertex-and-index-buffers.md
+          items:
+            - name: 버퍼 소개
+              href: ../graphics-concepts/introduction-to-buffers.md
+            - name: 인덱스 버퍼
+              href: ../graphics-concepts/index-buffers.md
+        - name: 장치
+          href: ../graphics-concepts/devices.md
+          items:
+            - name: 디바이스 유형
+              href: ../graphics-concepts/device-types.md
+            - name: 창 모드 및 전체 화면 모드
+              href: ../graphics-concepts/windowed-vs--full-screen-mode.md
+            - name: 분실한 디바이스
+              href: ../graphics-concepts/lost-devices.md
+            - name: 스왑 체인
+              href: ../graphics-concepts/swap-chains.md
+            - name: 래스터화 규칙 소개
+              href: ../graphics-concepts/introduction-to-rasterization-rules.md
+        - name: 조명
+          href: ../graphics-concepts/lights-and-materials.md
+          items:
+            - name: 조명 개요
+              href: ../graphics-concepts/lighting-overview.md
+            - name: 조명 유형
+              href: ../graphics-concepts/light-types.md
+            - name: 조명 속성
+              href: ../graphics-concepts/light-properties.md
+            - name: 조명의 수학
+              href: ../graphics-concepts/mathematics-of-lighting.md
+              items:
+                - name: 주변 조명
+                  href: ../graphics-concepts/ambient-lighting.md
+                - name: 확산 조명
+                  href: ../graphics-concepts/diffuse-lighting.md
+                - name: 반사 조명
+                  href: ../graphics-concepts/specular-lighting.md
+                - name: 발광 조명
+                  href: ../graphics-concepts/emissive-lighting.md
+                - name: 카메라 공간 변형
+                  href: ../graphics-concepts/camera-space-transformations.md
+                - name: 감쇠 및 스포트라이트 계수
+                  href: ../graphics-concepts/attenuation-and-spotlight-factor.md
+        - name: 깊이 및 스텐실 버퍼
+          href: ../graphics-concepts/depth-and-stencil-buffers.md
+          items:
+            - name: 깊이 버퍼
+              href: ../graphics-concepts/depth-buffers.md
+            - name: 스텐실 버퍼
+              href: ../graphics-concepts/stencil-buffers.md
+        - name: 텍스처
+          href: ../graphics-concepts/textures.md
+          items:
+            - name: 텍스처 소개
+              href: ../graphics-concepts/introduction-to-textures.md
+            - name: 기본 텍스처 지정 개념
+              href: ../graphics-concepts/basic-texturing-concepts.md
+            - name: 텍스처 주소 지정 모드
+              href: ../graphics-concepts/texture-addressing-modes.md
+            - name: 텍스처 필터링
+              href: ../graphics-concepts/texture-filtering.md
+              items:
+                - name: 가장 가까운 점 샘플링
+                  href: ../graphics-concepts/nearest-point-sampling.md
+                - name: 쌍선형 텍스처 필터링
+                  href: ../graphics-concepts/bilinear-texture-filtering.md
+                - name: 이방성 텍스처 필터링
+                  href: ../graphics-concepts/anisotropic-texture-filtering.md
+                - name: Mipmap을 사용하는 텍스처 필터링
+                  href: ../graphics-concepts/texture-filtering-with-mipmaps.md
+            - name: 텍스처 리소스
+              href: ../graphics-concepts/texture-resources.md
+            - name: 텍스처 래핑
+              href: ../graphics-concepts/texture-wrapping.md
+            - name: 텍스처 혼합
+              href: ../graphics-concepts/texture-blending.md
+              items:
+                - name: 혼합 단계
+                  href: ../graphics-concepts/blending-stages.md
+                - name: 멀티패스 텍스처 혼합
+                  href: ../graphics-concepts/multipass-texture-blending.md
+            - name: 텍스처와 조명 매핑
+              href: ../graphics-concepts/light-mapping-with-textures.md
+              items:
+                - name: 단색 조명 맵
+                  href: ../graphics-concepts/monochrome-light-maps.md
+                - name: 컬러 조명 맵
+                  href: ../graphics-concepts/color-light-maps.md
+                - name: 반사 조명 맵
+                  href: ../graphics-concepts/specular-light-maps.md
+                - name: 확산 조명 맵
+                  href: ../graphics-concepts/diffuse-light-maps.md
+            - name: 압축된 텍스처 리소스
+              href: ../graphics-concepts/compressed-texture-resources.md
+              items:
+                - name: 불투명 및 1비트 알파 텍스처
+                  href: ../graphics-concepts/opaque-and-1-bit-alpha-textures.md
+                - name: 알파 채널을 사용하는 텍스처
+                  href: ../graphics-concepts/textures-with-alpha-channels.md
+                - name: 블록 압축
+                  href: ../graphics-concepts/block-compression.md
+                - name: 압축된 텍스처 형식
+                  href: ../graphics-concepts/compressed-texture-formats.md
+        - name: 그래픽 파이프라인
+          href: ../graphics-concepts/graphics-pipeline.md
+          items:
+            - name: IA(입력 어셈블러) 단계
+              href: ../graphics-concepts/input-assembler-stage--ia-.md
+              items:
+                - name: 기본 토폴로지
+                  href: ../graphics-concepts/primitive-topologies.md
+                - name: 시스템에서 생성된 값 사용
+                  href: ../graphics-concepts/using-system-generated-values.md
+            - name: VS(꼭짓점 셰이더) 단계
+              href: ../graphics-concepts/vertex-shader-stage--vs-.md
+            - name: HS(헐 셰이더) 단계
+              href: ../graphics-concepts/hull-shader-stage--hs-.md
+            - name: TS(분할기) 단계
+              href: ../graphics-concepts/tessellator-stage--ts-.md
+            - name: DS(도메인 셰이더) 단계
+              href: ../graphics-concepts/domain-shader-stage--ds-.md
+            - name: GS(기하 도형 셰이더) 단계
+              href: ../graphics-concepts/geometry-shader-stage--gs-.md
+            - name: SO(스트림 출력) 단계
+              href: ../graphics-concepts/stream-output-stage--so-.md
+            - name: RS(래스터라이저) 단계
+              href: ../graphics-concepts/rasterizer-stage--rs-.md
+            - name: PS(픽셀 셰이더) 단계
+              href: ../graphics-concepts/pixel-shader-stage--ps-.md
+            - name: OM(출력 병합기) 단계
+              href: ../graphics-concepts/output-merger-stage--om-.md
+              items:
+                - name: 깊이 스텐실 기능 구성
+                  href: ../graphics-concepts/configuring-depth-stencil-functionality.md
+            - name: 상태 개체
+              href: ../graphics-concepts/state-objects.md
+        - name: 보기
+          href: ../graphics-concepts/views.md
+          items:
+            - name: CBV(상수 버퍼 보기)
+              href: ../graphics-concepts/constant-buffer-view--cbv-.md
+            - name: VBV(꼭짓점 버퍼 보기) 및 IBV(인덱스 버퍼 보기)
+              href: ../graphics-concepts/vertex-buffer-view--vbv-.md
+            - name: SRV(셰이더 리소스 보기) 및 UAV(정렬되지 않은 액세스 보기)
+              href: ../graphics-concepts/shader-resource-view--srv-.md
+            - name: 샘플러
+              href: ../graphics-concepts/sampler.md
+            - name: RTV(렌더링 대상 보기)
+              href: ../graphics-concepts/render-target-view--rtv-.md
+            - name: DSV(깊이 스텐실 보기)
+              href: ../graphics-concepts/depth-stencil-view--dsv-.md
+            - name: SOV(스트림 출력 보기)
+              href: ../graphics-concepts/stream-output-view--sov-.md
+            - name: ROV(정렬된 래스터라이저 보기)
+              href: ../graphics-concepts/rasterizer-ordered-view--rov-.md
+        - name: 계산 파이프라인
+          href: ../graphics-concepts/compute-pipeline.md
+          items:
+            - name: CS(계산 셰이더) 단계
+              href: ../graphics-concepts/compute-shader-stage--cs-.md
+        - name: 리소스
+          href: ../graphics-concepts/resources.md
+          items:
+            - name: 리소스 종류
+              href: ../graphics-concepts/resource-types.md
+            - name: 리소스 선택
+              href: ../graphics-concepts/choosing-a-resource.md
+            - name: 리소스 데이터 복사 및 액세스
+              href: ../graphics-concepts/copying-and-accessing-resource-data.md
+            - name: 텍스처 보기
+              href: ../graphics-concepts/texture-views.md
+        - name: 스트리밍 리소스
+          href: ../graphics-concepts/streaming-resources.md
+          items:
+            - name: 스트리밍 리소스 필요
+              href: ../graphics-concepts/the-need-for-streaming-resources.md
+            - name: 스트리밍 리소스 만들기
+              href: ../graphics-concepts/creating-streaming-resources.md
+              items:
+                - name: 타일 풀에 대한 매핑
+                  href: ../graphics-concepts/mappings-are-into-a-tile-pool.md
+                  items:
+                    - name: 타일 풀 만들기
+                      href: ../graphics-concepts/tile-pool-creation.md
+                    - name: 타일 풀 크기 조정
+                      href: ../graphics-concepts/tile-pool-resizing.md
+                    - name: 위험 추적 및 타일 풀 리소스
+                      href: ../graphics-concepts/hazard-tracking-versus-tile-pool-resources.md
+                - name: 스트리밍 리소스 생성 매개 변수
+                  href: ../graphics-concepts/streaming-resource-creation-parameters.md
+                  items:
+                    - name: 스트리밍 리소스에 사용할 수 있는 주소 공간
+                      href: ../graphics-concepts/address-space-available-for-streaming-resources.md
+                - name: 타일 풀 생성 매개 변수
+                  href: ../graphics-concepts/tile-pool-creation-parameters.md
+                - name: 스트리밍 리소스 프로세스 간 및 디바이스 공유
+                  href: ../graphics-concepts/streaming-resource-cross-process-and-device-sharing.md
+                  items:
+                    - name: 스트리밍 리소스에서 지원되지 않는 스텐실 형식
+                      href: ../graphics-concepts/stencil-formats-not-supported-with-streaming-resources.md
+                - name: 스트리밍 리소스에서 사용할 수 있는 작업
+                  href: ../graphics-concepts/operations-available-on-streaming-resources.md
+                - name: 타일 풀에서 사용할 수 있는 작업
+                  href: ../graphics-concepts/operations-available-on-tile-pools.md
+                - name: 스트리밍 리소스 영역의 타일링 방법
+                  href: ../graphics-concepts/how-a-streaming-resource-s-area-is-tiled.md
+                  items:
+                    - name: Texture2D 및 Texture2DArray 하위 리소스 타일링
+                      href: ../graphics-concepts/texture2d-and-texture2darray-subresource-tiling.md
+                    - name: Texture3D 하위 리소스 타일링
+                      href: ../graphics-concepts/texture3d-subresource-tiling.md
+                    - name: 버퍼 타일링
+                      href: ../graphics-concepts/buffer-tiling.md
+                    - name: Mipmap 압축
+                      href: ../graphics-concepts/mipmap-packing.md
+            - name: 스트리밍 리소스에 대한 파이프라인 액세스
+              href: ../graphics-concepts/pipeline-access-to-streaming-resources.md
+              items:
+                - name: 비매핑된 타일을 사용하는 SRV 동작
+                  href: ../graphics-concepts/srv-behavior-with-non-mapped-tiles.md
+                - name: 비매핑된 타일을 사용하는 UAV 동작
+                  href: ../graphics-concepts/uav-behavior-with-non-mapped-tiles.md
+                - name: 비매핑된 타일을 사용하는 래스터라이저 동작
+                  href: ../graphics-concepts/rasterizer-behavior-with-non-mapped-tiles.md
+                - name: 중복 매핑을 사용하는 타일 액세스 제한
+                  href: ../graphics-concepts/tile-access-limitations-with-duplicate-mappings.md
+                - name: 스트리밍 리소스 텍스처 샘플링 기능
+                  href: ../graphics-concepts/streaming-resources-texture-sampling-features.md
+                - name: HLSL 스트리밍 리소스 노출
+                  href: ../graphics-concepts/hlsl-streaming-resources-exposure.md
+            - name: 스트리밍 리소스 기능 계층
+              href: ../graphics-concepts/streaming-resources-features-tiers.md
+              items:
+                - name: 계층 1
+                  href: ../graphics-concepts/tier-1.md
+                - name: 계층 2
+                  href: ../graphics-concepts/tier-2.md
+                - name: 계층 3
+                  href: ../graphics-concepts/tier-3.md
+        - name: 부록
+          href: ../graphics-concepts/appendix.md
+          items:
+            - name: 부동 소수점 규칙
+              href: ../graphics-concepts/floating-point-rules.md
+            - name: 데이터 형식 변환
+              href: ../graphics-concepts/data-type-conversion.md
+            - name: 래스터화 규칙
+              href: ../graphics-concepts/rasterization-rules.md
+            - name: 텍스처 블록 압축
+              href: ../graphics-concepts/texture-block-compression.md
+              items:
+                - name: BC6H 형식
+                  href: ../graphics-concepts/bc6h-format.md
+                - name: BC7 형식
+                  href: ../graphics-concepts/bc7-format.md
+    - name: 기본 사항
+      href: ../gaming/directx-fundamentals.md
       items:
-      - name: 리소스 설정
-        href: ../gaming/setting-up-directx-resources.md
-      - name: 원형 그리기
-        href: ../gaming/creating-shaders-and-drawing-primitives.md
-      - name: 깊이 및 효과 사용
-        href: ../gaming/using-depth-and-effects-on-primitives.md
-      - name: 텍스처 적용
-        href: ../gaming/applying-textures-to-primitives.md
-      - name: 기본 메시 만들기
-        href: ../gaming/create-a-basic-mesh.md
-    - name: 리소스 로드
-      href: ../gaming/load-a-game-asset.md
+        - name: 2D 그래픽
+          href: ../gaming/working-with-2d-graphics-in-your-directx-game.md
+        - name: 기본 3D 그래픽
+          href: ../gaming/an-introduction-to-3d-graphics-with-directx.md
+          items:
+            - name: 리소스 설정
+              href: ../gaming/setting-up-directx-resources.md
+            - name: 원형 그리기
+              href: ../gaming/creating-shaders-and-drawing-primitives.md
+            - name: 깊이 및 효과 사용
+              href: ../gaming/using-depth-and-effects-on-primitives.md
+            - name: 텍스처 적용
+              href: ../gaming/applying-textures-to-primitives.md
+            - name: 기본 메시 만들기
+              href: ../gaming/create-a-basic-mesh.md
+        - name: 리소스 로드
+          href: ../gaming/load-a-game-asset.md
+          items:
+            - name: BasicLoader
+              href: ../gaming/complete-code-for-basicloader.md
+            - name: BasicReaderWriter
+              href: ../gaming/complete-code-for-basicreaderwriter.md
+            - name: DDSTextureLoader
+              href: ../gaming/complete-code-for-ddstextureloader.md
+    - name: 기능 추가
+      href: ../gaming/directx-add-features.md
       items:
-      - name: BasicLoader
-        href: ../gaming/complete-code-for-basicloader.md
-      - name: BasicReaderWriter
-        href: ../gaming/complete-code-for-basicreaderwriter.md
-      - name: DDSTextureLoader
-        href: ../gaming/complete-code-for-ddstextureloader.md
-  - name: 기능 추가
-    href: ../gaming/directx-add-features.md
-    items:
-    - name: DirectX 및 XAML interop
-      href: ../gaming/directx-and-xaml-interop.md
-    - name: 게임 입력
-      href: ../gaming/directx-game-input.md
+        - name: DirectX 및 XAML interop
+          href: ../gaming/directx-and-xaml-interop.md
+        - name: 게임 입력
+          href: ../gaming/directx-game-input.md
+          items:
+            - name: 이동-보기 컨트롤
+              href: ../gaming/tutorial--adding-move-look-controls-to-your-directx-game.md
+            - name: 상대 마우스 이동
+              href: ../gaming/relative-mouse-movement.md
+            - name: 터치 컨트롤
+              href: ../gaming/tutorial--adding-touch-controls-to-your-directx-game.md
+        - name: 화면 회전 지원
+          href: ../gaming/supporting-screen-rotation-directx-and-cpp.md
+    - name: 최적화 및 고급 항목
+      href: ../gaming/directx-optimization-and-advanced-topics.md
       items:
-      - name: 이동-보기 컨트롤
-        href: ../gaming/tutorial--adding-move-look-controls-to-your-directx-game.md
-      - name: 상대 마우스 이동
-        href: ../gaming/relative-mouse-movement.md
-      - name: 터치 컨트롤
-        href: ../gaming/tutorial--adding-touch-controls-to-your-directx-game.md
-    - name: 화면 회전 지원
-      href: ../gaming/supporting-screen-rotation-directx-and-cpp.md
-  - name: 최적화 및 고급 항목
-    href: ../gaming/directx-optimization-and-advanced-topics.md
-    items:
-    - name: 비동기 프로그래밍
-      href: ../gaming/asynchronous-programming-directx-and-cpp.md
-    - name: 디바이스 제거 시나리오
-      href: ../gaming/handling-device-lost-scenarios.md
-    - name: 다중 샘플링
-      href: ../gaming/multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md
-    - name: 입력 및 렌더링 루프 최적화
-      href: ../gaming/optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md
-    - name: 스왑 체인으로 대기 시간 단축
-      href: ../gaming/reduce-latency-with-dxgi-1-3-swap-chains.md
-    - name: 스왑 체인 확장 및 오버레이
-      href: ../gaming/multisampling--scaling--and-overlay-swap-chains.md
-  - name: DirectX 9을 UWP로 포팅
-    href: ../gaming/porting-your-directx-9-game-to-windows-store.md
-    items:
-    - name: DirectX 9에서 DirectX 11.1로
-      href: ../gaming/porting-considerations.md
+        - name: 비동기 프로그래밍
+          href: ../gaming/asynchronous-programming-directx-and-cpp.md
+        - name: 디바이스 제거 시나리오
+          href: ../gaming/handling-device-lost-scenarios.md
+        - name: 다중 샘플링
+          href: ../gaming/multisampling--multi-sample-anti-aliasing--in-windows-store-apps.md
+        - name: 입력 및 렌더링 루프 최적화
+          href: ../gaming/optimize-performance-for-windows-store-direct3d-11-apps-with-coredispatcher.md
+        - name: 스왑 체인으로 대기 시간 단축
+          href: ../gaming/reduce-latency-with-dxgi-1-3-swap-chains.md
+        - name: 스왑 체인 확장 및 오버레이
+          href: ../gaming/multisampling--scaling--and-overlay-swap-chains.md
+    - name: DirectX 9을 UWP로 포팅
+      href: ../gaming/porting-your-directx-9-game-to-windows-store.md
       items:
-      - name: 포트 계획
-        href: ../gaming/plan-your-directx-port.md
-      - name: 주요 차이점
-        href: ../gaming/understand-direct3d-11-1-concepts.md
-      - name: 기능 매핑
-        href: ../gaming/feature-mapping.md
-    - name: 간단한 연습
-      href: ../gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md
+        - name: DirectX 9에서 DirectX 11.1로
+          href: ../gaming/porting-considerations.md
+          items:
+            - name: 포트 계획
+              href: ../gaming/plan-your-directx-port.md
+            - name: 주요 차이점
+              href: ../gaming/understand-direct3d-11-1-concepts.md
+            - name: 기능 매핑
+              href: ../gaming/feature-mapping.md
+        - name: 간단한 연습
+          href: ../gaming/walkthrough--simple-port-from-direct3d-9-to-11-1.md
+          items:
+            - name: Direct3D 11 초기화
+              href: ../gaming/simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md
+            - name: 렌더링 프레임워크 변환
+              href: ../gaming/simple-port-from-direct3d-9-to-11-1-part-2--rendering.md
+            - name: 게임 루프 포팅
+              href: ../gaming/simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md
+        - name: 섀도 볼륨 구현
+          href: ../gaming/implementing-depth-buffers-for-shadow-mapping.md
+          items:
+            - name: 깊이 버퍼 만들기
+              href: ../gaming/create-depth-buffer-resource--view--and-sampler-state.md
+            - name: 그림자 맵을 깊이 버퍼로 렌더링
+              href: ../gaming/render-the-shadow-map-to-the-depth-buffer.md
+            - name: 깊이 테스트로 장면 렌더링
+              href: ../gaming/render-the-scene-with-depth-testing.md
+            - name: 다양한 하드웨어 지원
+              href: ../gaming/target-a-range-of-hardware.md
+        - name: FAQ
+          href: ../gaming/directx-porting-faq.md
+    - name: OpenGL을 Direct3D로 포팅
+      href: ../gaming/port-from-opengl-es-2-0-to-directx-11-1.md
       items:
-      - name: Direct3D 11 초기화
-        href: ../gaming/simple-port-from-direct3d-9-to-11-1-part-1--initializing-direct3d.md
-      - name: 렌더링 프레임워크 변환
-        href: ../gaming/simple-port-from-direct3d-9-to-11-1-part-2--rendering.md
-      - name: 게임 루프 포팅
-        href: ../gaming/simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md
-    - name: 섀도 볼륨 구현
-      href: ../gaming/implementing-depth-buffers-for-shadow-mapping.md
-      items:
-      - name: 깊이 버퍼 만들기
-        href: ../gaming/create-depth-buffer-resource--view--and-sampler-state.md
-      - name: 그림자 맵을 깊이 버퍼로 렌더링
-        href: ../gaming/render-the-shadow-map-to-the-depth-buffer.md
-      - name: 깊이 테스트로 장면 렌더링
-        href: ../gaming/render-the-scene-with-depth-testing.md
-      - name: 다양한 하드웨어 지원
-        href: ../gaming/target-a-range-of-hardware.md
-    - name: FAQ
-      href: ../gaming/directx-porting-faq.md
-  - name: OpenGL을 Direct3D로 포팅
-    href: ../gaming/port-from-opengl-es-2-0-to-directx-11-1.md
-    items:
-    - name: Direct3D에 OpenGL 매핑
-      href: ../gaming/map-concepts-and-infrastructure.md
-      items:
-      - name: 포트 계획
-        href: ../gaming/compare-opengl-es-2-0-api-design-to-directx.md
-      - name: EGL 및 DXGI
-        href: ../gaming/moving-from-egl-to-dxgi.md
-      - name: 버퍼, 유니폼, 꼭짓점
-        href: ../gaming/porting-uniforms-and-attributes.md
-      - name: 셰이더 파이프라인
-        href: ../gaming/change-your-shader-loading-code.md
-    - name: OpenGL 렌더러를 Direct3D에 포팅
-      href: ../gaming/port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md
-      items:
-      - name: 셰이더 개체
-        href: ../gaming/port-the-shader-config.md
-      - name: 꼭짓점 버퍼 및 데이터
-        href: ../gaming/port-the-vertex-buffers-and-data-config.md
-      - name: GLSL
-        href: ../gaming/port-the-glsl.md
-      - name: 화면에 그리기
-        href: ../gaming/draw-to-the-screen.md
-    - name: OpenGL-Direct3D 참조
-      href: ../gaming/opengl-es-2-0-to-directx-11-1-reference.md
-      items:
-      - name: GLSL-HLSL
-        href: ../gaming/glsl-to-hlsl-reference.md
+        - name: Direct3D에 OpenGL 매핑
+          href: ../gaming/map-concepts-and-infrastructure.md
+          items:
+            - name: 포트 계획
+              href: ../gaming/compare-opengl-es-2-0-api-design-to-directx.md
+            - name: EGL 및 DXGI
+              href: ../gaming/moving-from-egl-to-dxgi.md
+            - name: '버퍼, 유니폼, 꼭짓점'
+              href: ../gaming/porting-uniforms-and-attributes.md
+            - name: 셰이더 파이프라인
+              href: ../gaming/change-your-shader-loading-code.md
+        - name: OpenGL 렌더러를 Direct3D에 포팅
+          href: ../gaming/port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md
+          items:
+            - name: 셰이더 개체
+              href: ../gaming/port-the-shader-config.md
+            - name: 꼭짓점 버퍼 및 데이터
+              href: ../gaming/port-the-vertex-buffers-and-data-config.md
+            - name: GLSL
+              href: ../gaming/port-the-glsl.md
+            - name: 화면에 그리기
+              href: ../gaming/draw-to-the-screen.md
+        - name: OpenGL-Direct3D 참조
+          href: ../gaming/opengl-es-2-0-to-directx-11-1-reference.md
+          items:
+            - name: GLSL-HLSL
+              href: ../gaming/glsl-to-hlsl-reference.md
 - name: Xbox One의 UWP
   href: ../xbox-apps/index.md
   items:
-  - name: 시작
-    href: ../xbox-apps/getting-started.md
-  - name: 새로운 기능
-    href: ../xbox-apps/whats-new.md
-  - name: Xbox One 개발자 모드 활성화
-    href: ../xbox-apps/devkit-activation.md
-  - name: Xbox One에서 개발자 모드 사용 안 함
-    href: ../xbox-apps/devkit-deactivation.md
-  - name: 개발 환경 설정
-    href: ../xbox-apps/development-environment-setup.md
-  - name: 샘플
-    href: ../xbox-apps/samples.md
-  - name: 알려진 문제
-    href: ../xbox-apps/known-issues.md
-  - name: FAQ
-    href: ../xbox-apps/frequently-asked-questions.md
-  - name: 도구
-    href: ../xbox-apps/introduction-to-xbox-tools.md
-    items:
-    - name: 개발자 홈
-      href: ../xbox-apps/dev-home.md
+    - name: 시작
+      href: ../xbox-apps/getting-started.md
+    - name: 새로운 기능
+      href: ../xbox-apps/whats-new.md
+    - name: Xbox One 개발자 모드 활성화
+      href: ../xbox-apps/devkit-activation.md
+    - name: Xbox One에서 개발자 모드 사용 안 함
+      href: ../xbox-apps/devkit-deactivation.md
+    - name: 개발 환경 설정
+      href: ../xbox-apps/development-environment-setup.md
+    - name: 샘플
+      href: ../xbox-apps/samples.md
+    - name: 알려진 문제
+      href: ../xbox-apps/known-issues.md
+    - name: FAQ
+      href: ../xbox-apps/frequently-asked-questions.md
+    - name: 도구
+      href: ../xbox-apps/introduction-to-xbox-tools.md
       items:
-      - name: 홈페이지
-        href: ../xbox-apps/devhome-home.md
-      - name: Xbox Live 페이지
-        href: ../xbox-apps/devhome-live.md
-      - name: 설정 페이지
-        href: ../xbox-apps/devhome-settings.md
-      - name: 미디어 캡처 페이지
-        href: ../xbox-apps/devhome-capture.md
-      - name: 네트워킹 페이지
-        href: ../xbox-apps/devhome-networking.md
-      - name: 성능 페이지
-        href: ../xbox-apps/devhome-performance.md
-    - name: Xbox 개발자 모드 도우미
-      href: ../xbox-apps/xbox-dev-mode-companion.md
-    - name: Fiddler
-      href: ../xbox-apps/uwp-fiddler.md
-  - name: Xbox 모범 사례
-    href: ../xbox-apps/tailoring-for-xbox.md
-    items:
-    - name: 마우스 모드를 사용하지 않도록 설정하는 방법
-      href: ../xbox-apps/how-to-disable-mouse-mode.md
-    - name: 크기 조정을 끄는 방법
-      href: ../xbox-apps/disable-scaling.md
-    - name: 오버스캔을 끄는 방법
-      href: ../xbox-apps/turn-off-overscan.md
-  - name: 시스템 리소스 할당
-    href: ../xbox-apps/system-resource-allocation.md
-  - name: 다중 사용자 응용 프로그램 소개
-    href: ../xbox-apps/multi-user-applications.md
-  - name: 기존 게임을 Xbox로 가져오기
-    href: ../xbox-apps/development-lanes-landing.md
-    items:
-    - name: 사용자 지정 C++
-      href: ../xbox-apps/development-lanes-custom-cpp.md
-    - name: Unity
-      href: ../xbox-apps/development-lanes-unity.md
-    - name: HTML / JS
-      href: ../xbox-apps/development-lanes-html.md
-  - name: Xbox 디바이스 포털 REST API
-    href: ../xbox-apps/reference.md
-    items:
-    - name: /api/app/packagemanager/register
-      href: ../xbox-apps/wdp-loose-folder-register-api.md
-    - name: /api/app/packagemanager/upload
-      href: ../xbox-apps/wdp-folder-upload.md
-    - name: /ext/app/deployinfo
-      href: ../xbox-apps/uwp-deployinfo-api.md
-    - name: /ext/app/sshpins
-      href: ../xbox-apps/uwp-sshpins-api.md
-    - name: /ext/fiddler
-      href: ../xbox-apps/wdp-fiddler-api.md
-    - name: /ext/httpmonitor/sessions
-      href: ../xbox-apps/wdp-httpMonitor-api.md
-    - name: /ext/networkcredential
-      href: ../xbox-apps/uwp-networkcredentials-api.md
-    - name: /ext/remoteinput
-      href: ../xbox-apps/uwp-remoteinput-api.md
-    - name: /ext/remoteinput/controllers
-      href: ../xbox-apps/uwp-remoteinput-controllers-api.md
-    - name: /ext/screenshot
-      href: ../xbox-apps/wdp-media-capture-api.md
-    - name: /ext/settings
-      href: ../xbox-apps/wdp-xboxsettings-api.md
-    - name: /ext/smb/developerfolder
-      href: ../xbox-apps/wdp-smb-api.md
-    - name: /ext/user
-      href: ../xbox-apps/wdp-user-management.md
-    - name: /ext/xbox/info
-      href: ../xbox-apps/wdp-xboxinfo-api.md
-    - name: /ext/xboxlive/sandbox
-      href: ../xbox-apps/wdp-sandbox-api.md
+        - name: 개발자 홈
+          href: ../xbox-apps/dev-home.md
+          items:
+            - name: 홈페이지
+              href: ../xbox-apps/devhome-home.md
+            - name: Xbox Live 페이지
+              href: ../xbox-apps/devhome-live.md
+            - name: 설정 페이지
+              href: ../xbox-apps/devhome-settings.md
+            - name: 미디어 캡처 페이지
+              href: ../xbox-apps/devhome-capture.md
+            - name: 네트워킹 페이지
+              href: ../xbox-apps/devhome-networking.md
+            - name: 성능 페이지
+              href: ../xbox-apps/devhome-performance.md
+        - name: Xbox 개발자 모드 도우미
+          href: ../xbox-apps/xbox-dev-mode-companion.md
+        - name: Fiddler
+          href: ../xbox-apps/uwp-fiddler.md
+        - name: Xbox용 디바이스 포털
+          href: ../xbox-apps/device-portal-xbox.md
+    - name: Xbox 모범 사례
+      href: ../xbox-apps/tailoring-for-xbox.md
+      items:
+        - name: 마우스 모드를 사용하지 않도록 설정하는 방법
+          href: ../xbox-apps/how-to-disable-mouse-mode.md
+        - name: 크기 조정을 끄는 방법
+          href: ../xbox-apps/disable-scaling.md
+        - name: 오버스캔을 끄는 방법
+          href: ../xbox-apps/turn-off-overscan.md
+    - name: 시스템 리소스 할당
+      href: ../xbox-apps/system-resource-allocation.md
+    - name: 다중 사용자 애플리케이션 소개
+      href: ../xbox-apps/multi-user-applications.md
+    - name: 기존 게임을 Xbox로 가져오기
+      href: ../xbox-apps/development-lanes-landing.md
+      items:
+        - name: 사용자 지정 C++
+          href: ../xbox-apps/development-lanes-custom-cpp.md
+        - name: Unity
+          href: ../xbox-apps/development-lanes-unity.md
+        - name: HTML / JS
+          href: ../xbox-apps/development-lanes-html.md
+    - name: Xbox 디바이스 포털 REST API
+      href: ../xbox-apps/reference.md
+      items:
+        - name: /api/app/packagemanager/register
+          href: ../xbox-apps/wdp-loose-folder-register-api.md
+        - name: /api/app/packagemanager/upload
+          href: ../xbox-apps/wdp-folder-upload.md
+        - name: /ext/app/deployinfo
+          href: ../xbox-apps/uwp-deployinfo-api.md
+        - name: /ext/app/sshpins
+          href: ../xbox-apps/uwp-sshpins-api.md
+        - name: /ext/fiddler
+          href: ../xbox-apps/wdp-fiddler-api.md
+        - name: /ext/httpmonitor/sessions
+          href: ../xbox-apps/wdp-httpMonitor-api.md
+        - name: /ext/networkcredential
+          href: ../xbox-apps/uwp-networkcredentials-api.md
+        - name: /ext/remoteinput
+          href: ../xbox-apps/uwp-remoteinput-api.md
+        - name: /ext/remoteinput/controllers
+          href: ../xbox-apps/uwp-remoteinput-controllers-api.md
+        - name: /ext/screenshot
+          href: ../xbox-apps/wdp-media-capture-api.md
+        - name: /ext/settings
+          href: ../xbox-apps/wdp-xboxsettings-api.md
+        - name: /ext/smb/developerfolder
+          href: ../xbox-apps/wdp-smb-api.md
+        - name: /ext/user
+          href: ../xbox-apps/wdp-user-management.md
+        - name: /ext/xbox/info
+          href: ../xbox-apps/wdp-xboxinfo-api.md
+        - name: /ext/xboxlive/sandbox
+          href: ../xbox-apps/wdp-sandbox-api.md
 - name: Xbox Live
-  href: https://docs.microsoft.com/gaming/xbox-live/index
-ms.openlocfilehash: 59a7df7e7045dd68d70ca8f6b03a218fa00058a0
-ms.sourcegitcommit: e63fbd7a63a7e8c03c52f4219f34513f4b2bb411
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58162718"
+  href: 'https://docs.microsoft.com/gaming/xbox-live/index'
