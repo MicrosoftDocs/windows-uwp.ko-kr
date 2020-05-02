@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8f1717a59399fb95f7b71a38ee8d2d46de4ca765
-ms.sourcegitcommit: e11e0f65930665579d1f296861234893e82bf8fb
+ms.openlocfilehash: 32038d6e25ec450dae59d0c1d7e9c8703fdc8018
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80301403"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82148835"
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 
@@ -222,7 +222,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 ### <a name="date-picker"></a>날짜 선택기
 사용자가 날짜를 선택할 수 있는 컨트롤입니다.
 
-![날짜 선택 컨트롤](images/controls/date-picker.png)
+![날짜 선택 컨트롤](images/controls_datepicker_expand.png)
 
 ```xaml
 <DatePicker Header="Arrival Date"/>
@@ -235,7 +235,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 ### <a name="time-picker"></a>시간 선택기
 사용자가 시간 값을 설정할 수 있는 컨트롤입니다.
 
-![TimePicker 컨트롤](images/controls/time-picker.png) 
+![TimePicker 컨트롤](images/controls_timepicker_expand.png)
 
 ```xaml
 <TimePicker Header="Arrival Time"/>

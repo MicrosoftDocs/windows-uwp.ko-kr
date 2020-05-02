@@ -11,10 +11,10 @@ dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
 ms.openlocfilehash: 06734c854f0097db5fa96e35d4123dde8bda8a95
-ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80614146"
 ---
 # <a name="teaching-tip"></a>교육 팁
@@ -70,7 +70,7 @@ ms.locfileid: "80614146"
 
 교육 팁은 사용자가 위쪽 모서리에 있는 "X" 단추 또는 아래쪽의 "닫기" 단추를 통해 해제해야 할 수 있습니다. 교육 팁은 해제 단추가 없는 경우에 빠른 해제를 설정할 수 있으며, 사용자가 스크롤하거나 애플리케이션의 다른 요소와 상호 작용할 때 해제됩니다. 이 동작으로 인해 팀을 스크롤 가능 영역에 배치해야 하는 경우 빠른 해제 팁이 가장 적합한 해결 방법입니다.
 
-![오른쪽 아래 모서리에 빠른 해제 교육 팁이 표시되는 샘플 앱입니다. 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다.](../images/teaching-tip-light-dismiss.png)
+![오른쪽 아래 모서리에 빠른 해제 교육 팁이 표시되는 샘플 앱 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다.](../images/teaching-tip-light-dismiss.png)
 
 ### <a name="create-a-teaching-tip"></a>교육 팁 만들기
 
@@ -121,7 +121,7 @@ public MainPage()
 
 이 예제에서 TeachingTip은 ResourceDictionary 또는 코드 숨김이 아닌 요소 트리에 있습니다. 이러한 사실은 동작에는 영향을 주지 않습니다. TeachingTip은 열려 있을 때만 표시되며, 레이아웃 공간을 차지하지 않습니다.
 
-![오른쪽 아래 모서리에 교육 팁이 표시되는 샘플 앱입니다. 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다. 교육 팁의 오른쪽 위 모서리에서 닫기 단추가 있습니다.](../images/teaching-tip-non-targeted.png)
+![오른쪽 아래 모서리에 교육 팁이 표시되는 샘플 앱 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다. 교육 팁의 오른쪽 위 모서리에서 닫기 단추가 있습니다.](../images/teaching-tip-non-targeted.png)
 
 ### <a name="preferred-placement"></a>기본 설정 배치
 
@@ -183,7 +183,7 @@ PlacementMargin 속성을 사용하여 대상 있는 교육 팁이 해당 대상
 </muxc:TeachingTip>
 ```
 
-![교육 팁이 위쪽으로 배치되지만 오른쪽 아래 모서리에서 완전히 반대되게 배치되지는 않은 샘플 앱입니다. 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다. 교육 팁의 오른쪽 위 모서리에서 닫기 단추가 있습니다.](../images/teaching-tip-placement-margin.png)
+![교육 팁이 위쪽으로 배치되지만 오른쪽 아래 모서리에서 완전히 반대되게 배치되지는 않은 샘플 앱 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다. 교육 팁의 오른쪽 위 모서리에서 닫기 단추가 있습니다.](../images/teaching-tip-placement-margin.png)
 
 
 ### <a name="add-content"></a>콘텐츠 추가
@@ -295,7 +295,7 @@ IconSource 속성을 사용하여 제목 및 부제 옆에 아이콘을 추가�
 </muxc:TeachingTip>
 ```
 
-![오른쪽 아래 모서리에 빠른 해제 교육 팁이 표시되는 샘플 앱입니다. 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다.](../images/teaching-tip-light-dismiss.png)
+![오른쪽 아래 모서리에 빠른 해제 교육 팁이 표시되는 샘플 앱 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다.](../images/teaching-tip-light-dismiss.png)
 
 ### <a name="escaping-the-xaml-root-bounds"></a>XAML 루트 범위 이스케이프
 

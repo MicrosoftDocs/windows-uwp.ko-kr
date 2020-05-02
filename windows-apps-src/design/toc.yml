@@ -353,11 +353,13 @@
             - name: 알림 콘텐츠 스키마
               href: shell/tiles-and-notifications/toast-schema.md
             - name: 로컬 알림 메시지 보내기
-              href: shell/tiles-and-notifications/send-local-toast.md
               items:
+                - name: UWP 앱
+                  href: shell/tiles-and-notifications/send-local-toast.md
                 - name: 데스크톱 앱
-                  href: shell/tiles-and-notifications/toast-desktop-apps.md
                   items:
+                    - name: 개요
+                      href: shell/tiles-and-notifications/toast-desktop-apps.md
                     - name: 'C# 앱'
                       href: shell/tiles-and-notifications/send-local-toast-desktop.md
                     - name: C++ WRL 앱

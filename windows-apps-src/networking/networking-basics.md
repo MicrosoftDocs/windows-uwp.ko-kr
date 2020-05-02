@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 1cf9d4866ddb72da0a284bcdcff07e3420f2880e
-ms.sourcegitcommit: 4657ac3be576b1d6dcd938d73a2f6a7e060ab17b
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80404913"
 ---
 # <a name="networking-basics"></a>네트워킹 기본 사항
@@ -460,7 +460,7 @@ using Windows::Storage::Streams;
 
 클라이언트의 초기 요청에 이 값이 포함되어 있지 않거나 서버에서 예상하는 값과 일치하지 않는 값을 제공하면 WebSocket 핸드셰이크 오류 시 예상한 값이 서버에서 클라이언트로 전송됩니다.
 
-## <a name="authentication"></a>Authentication
+## <a name="authentication"></a>인증
 네트워크를 통해 연결할 때 인증 자격 증명을 제공하는 방법입니다.
 
 ### <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>StreamSocket 클래스를 사용하여 클라이언트 인증서 제공

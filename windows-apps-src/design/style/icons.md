@@ -12,10 +12,10 @@ doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: fb0101597a38553f56579913a9c40502fcdbf051
-ms.sourcegitcommit: 1d6d05d28358e087d9ee8829d76c5fbbac0225cb
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79434230"
 ---
 # <a name="icons-for-uwp-apps"></a>UWP 앱용 아이콘

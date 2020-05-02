@@ -7,10 +7,10 @@ keywords: Windows 10의 접근성, 접근성, 접근성 지원 win32 앱 빌드,
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
 ms.openlocfilehash: 2739546061febcfc96403ed5520fdcbd8bc2c462
-ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "76725936"
 ---
 # <a name="accessibility-in-windows-10"></a>Windows 10의 접근성

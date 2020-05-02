@@ -9,10 +9,10 @@ keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
 ms.openlocfilehash: 21049c995d467209b22fe8ea5c40d303911f2c2c
-ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "77521292"
 ---
 # <a name="tutorial-modernize-a-wpf-app"></a>자습서: WPF 앱 현대화 

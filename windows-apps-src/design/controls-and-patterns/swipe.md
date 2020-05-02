@@ -12,10 +12,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 315edbddccc51b7e742bf9beffad8497a104ce03
-ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80614092"
 ---
 # <a name="swipe"></a>살짝 밀기
@@ -235,11 +235,11 @@ UWP 살짝 밀기 명령에는 두 가지 모드 즉, [표시](/uwp/api/windows.
 - 가로 살짝 밀기는 가로로 긴 항목에, 세로 살짝 밀기는 세로로 긴 항목에 사용하세요.
 - 짧고 간결한 텍스트 레이블을 사용하세요.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 - [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [목록 보기 및 그리드 보기](listview-and-gridview.md)
 - [항목 컨테이너 및 템플릿](item-containers-templates.md)

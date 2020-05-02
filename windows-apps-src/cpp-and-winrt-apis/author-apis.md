@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현체, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: 84c0e9315950541e51bf49f5c0eec370f3188c4d
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: fcdeaec3728306de420baa4a2aea06ef1952641e
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209278"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255267"
 ---
 # <a name="author-apis-with-cwinrt"></a>C++/WinRT를 사용하여 API 작성
 
@@ -239,7 +239,7 @@ IDL을 사용하여 런타임 클래스 및 해당 멤버를 선언하는 워크
 예를 들면 다음과 같습니다.
 
 - 매개 변수 형식을 완화할 수 있습니다. 예를 들어 IDL에서 메서드가 **SomeClass**를 가져오는 경우 구현에서 이를 **IInspectable**로 변경하도록 선택할 수 있습니다. 이는 모든 **SomeClass**를 **IInspectable**로 전달할 수 있기 때문에 가능합니다(물론 반대로는 작동하지 않습니다).
-- 참조 대신 값으로 복사 가능한 매개 변수를 허용할 수 있습니다. 예를 들어 `SomeClass`를 `SomeClass const&`로 변경할 수 있습니다. 코루틴에 대한 참조를 캡처하지 못하도록 해야 할 때 필요합니다([매개 변수 전달](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing) 참조).
+- 참조 대신 값으로 복사 가능한 매개 변수를 허용할 수 있습니다. 예를 들어 `SomeClass const&`를 `SomeClass`로 변경할 수 있습니다. 코루틴에 대한 참조를 캡처하지 못하도록 해야 할 때 필요합니다([매개 변수 전달](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing) 참조).
 - 반환 값을 완화할 수 있습니다. 예를 들어 **void**를 [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget)으로 변경할 수 있습니다.
 
 마지막 둘은 비동기 이벤트 처리기를 작성할 때 매우 유용합니다.

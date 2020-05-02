@@ -5,10 +5,10 @@ ms.date: 10/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 모퉁이 반경, 둥근 모양
 ms.openlocfilehash: 134a49ac57678eea0da718e93a14e3d0cf8896d5
-ms.sourcegitcommit: 7112e4ec3f19d46a1fc4d81d1c29fd9c01522610
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "81001480"
 ---
 # <a name="corner-radius"></a>모퉁이 반경

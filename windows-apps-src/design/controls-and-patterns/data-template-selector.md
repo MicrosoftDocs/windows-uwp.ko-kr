@@ -8,10 +8,10 @@ ms.topic: article
 keywords: windows 10, uwp
 pm-contact: anawish
 ms.openlocfilehash: d388e1f4b3f1b1be4e265185934a02b6ccd20064
-ms.sourcegitcommit: 87c20c6a40ed54e086adbe80caa509d851f54f57
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "76123855"
 ---
 # <a name="data-template-selection-styling-items-based-on-their-properties"></a>데이터 템플릿 선택: 속성을 기준으로 항목 스타일 지정

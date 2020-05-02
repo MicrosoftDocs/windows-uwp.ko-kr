@@ -6,10 +6,10 @@ ms.date: 03/23/2020
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: fdedd400928a32ae44a1e88b8e0159d7b36473f2
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80218513"
 ---
 # <a name="design-basics-for-windows-apps"></a>Windows 앱용 디자인 기본 사항

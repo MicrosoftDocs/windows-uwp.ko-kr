@@ -1,10 +1,10 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Windows
+  tocHref: /windows/
+  topicHref: /windows/
   items:
-    - name: Windows
-      tocHref: /windows/
-      topicHref: /windows/
+    - name: 앱
+      tocHref: /windows/apps/
+      topicHref: /windows/apps/
       items:
         - name: UWP
           tocHref: /windows/uwp/
@@ -41,14 +41,14 @@
                 - name: 입력 및 조작
                   tocHref: /windows/uwp/design/input/
                   topicHref: /windows/uwp/design/input/index
-                - name: 장치
+                - name: 디바이스
                   tocHref: /windows/uwp/design/devices/
                   topicHref: /windows/uwp/design/devices/index
-                - name: 유용성
+                - name: 사용 편의성
                   tocHref: /windows/uwp/design/usability/
                   topicHref: /windows/uwp/design/usability/index
                   items:
-                    - name: 접근성
+                    - name: 내게 필요한 옵션
                       tocHref: /windows/uwp/design/accessibility/
                       topicHref: /windows/uwp/design/accessibility/accessibility
                     - name: 앱 설정 및 데이터
@@ -94,7 +94,7 @@
                 - name: '디바이스, 센서 및 전원'
                   tocHref: /windows/uwp/devices-sensors/
                   topicHref: /windows/uwp/devices-sensors/index
-                - name: 엔터프라이즈
+                - name: Enterprise
                   tocHref: /windows/uwp/enterprise/
                   topicHref: /windows/uwp/enterprise/index
                 - name: '파일, 폴더 및 라이브러리'
