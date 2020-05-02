@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 4c75bd62fb5548cc03247772427fb5aabac4fb5a
-ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74735078"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>음악, 사진 및 비디오 라이브러리의 파일 및 폴더
@@ -111,7 +111,7 @@ void HandleDefinitionChanged(Windows.Storage.StorageLibrary sender, object args)
 ## <a name="media-library-folders"></a>미디어 라이브러리 폴더
 
 
-장치에는 사용자 및 앱이 미디어 파일을 저장하도록 사전 정의된 5개의 위치가 있습니다. 기본 제공 앱은 사용자가 만들었거나 다운로드한 미디어를 모두 이러한 위치에 저장합니다.
+디바이스에는 사용자 및 앱이 미디어 파일을 저장하도록 사전 정의된 5개의 위치가 있습니다. 기본 제공 앱은 사용자가 만들었거나 다운로드한 미디어를 모두 이러한 위치에 저장합니다.
 
 위치는 다음과 같습니다.
 
@@ -154,13 +154,13 @@ private async void getSongs()
 }
 ```
 
-### <a name="query-results-include-both-internal-and-removable-storage"></a>내부 저장소 및 이동식 저장소를 포함하는 쿼리 결과
+### <a name="query-results-include-both-internal-and-removable-storage"></a>내부 스토리지 및 이동식 스토리지를 포함하는 쿼리 결과
 
-사용자는 기본적으로 옵션 SD 카드에 파일을 저장하도록 선택할 수 있습니다. 하지만 앱에서 SD 카드에 파일이 저장되는 것을 허용하지 않도록 선택할 수 있습니다. 결과적으로, 미디어 라이브러리를 장치 내부 저장소와 SD 카드로 분할할 수 있습니다.
+사용자는 기본적으로 옵션 SD 카드에 파일을 저장하도록 선택할 수 있습니다. 하지만 앱에서 SD 카드에 파일이 저장되는 것을 허용하지 않도록 선택할 수 있습니다. 결과적으로, 미디어 라이브러리를 장치 내부 스토리지와 SD 카드로 분할할 수 있습니다.
 
 이 옵션을 처리하기 위해 추가 코드를 작성할 필요가 없습니다. 알려진 폴더를 쿼리하는 [**Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage) 네임스페이스의 메서드가 두 위치 모두의 쿼리 결과를 투명하게 결합합니다. 이와 같이 결합된 결과를 얻기 위해 앱 매니페스트 파일에 **removableStorage** 접근 권한 값을 지정할 필요가 없습니다.
 
-디바이스 저장소의 상태가 다음 이미지에 나온 것과 같다고 가정합니다.
+디바이스 스토리지의 상태가 다음 이미지에 나온 것과 같다고 가정합니다.
 
 ![휴대폰 및 SD 카드의 이미지](images/phone-media-locations.png)
 
@@ -169,7 +169,7 @@ private async void getSongs()
 
 ## <a name="working-with-photos"></a>사진 작업
 
-카메라가 모든 사진의 저해상도 이미지와 고해상도 이미지를 모두 저장하는 장치의 경우 심층 쿼리는 저해상도 이미지만 반환합니다.
+카메라가 모든 사진의 저해상도 이미지와 고해상도 이미지를 모두 저장하는 디바이스의 경우 심층 쿼리는 저해상도 이미지만 반환합니다.
 
 카메라 롤과 저장된 사진 폴더는 심층 쿼리를 지원하지 않습니다.
 

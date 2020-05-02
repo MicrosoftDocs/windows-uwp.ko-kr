@@ -7,10 +7,10 @@ keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
 ms.openlocfilehash: b4ce91e32b14bdf81b40b24e810e0bd86bcaa99b
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "67321085"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>three.js를 사용하여 3D JavaScript 게임 만들기
@@ -638,7 +638,7 @@ function animatePlayer(delta) {
 
 ---
 
-축하합니다. 주변을 이동하고 둘러볼 수 있는 플레이어 제어 카메라를 만들었습니다. 여전히 벽을 바로 통과하기는 하지만 나중에 해결해도 됩니다. 다음으로 공룡을 추가하겠습니다.
+축하합니다! 주변을 이동하고 둘러볼 수 있는 플레이어 제어 카메라를 만들었습니다. 여전히 벽을 바로 통과하기는 하지만 나중에 해결해도 됩니다. 다음으로 공룡을 추가하겠습니다.
 
 <iframe height='300' scrolling='no' title='Move around' src='//codepen.io/MicrosoftEdgeDocumentation/embed/qrbKZg/?height=300&theme-id=23761&default-tab=result&embed-version=2&editable=true' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'><a href='https://codepen.io'>CodePen</a>에서 Microsoft Edge 문서(<a href='https://codepen.io/MicrosoftEdgeDocumentation'>@MicrosoftEdgeDocumentation</a>)의 Pen <a href='https://codepen.io/MicrosoftEdgeDocumentation/pen/qrbKZg/'>Move around</a>를 참조하세요.
 </iframe>

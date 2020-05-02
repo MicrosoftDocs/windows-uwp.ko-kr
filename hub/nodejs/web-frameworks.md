@@ -9,10 +9,10 @@ keywords: NodeJS, Node.js, windows 10, microsoft, nodejs 학습, windows의 노�
 ms.localizationpriority: medium
 ms.date: 09/19/2019
 ms.openlocfilehash: a8ce1d08136a74504e1b3bad26feadd61b72068f
-ms.sourcegitcommit: 60d2d15dd0d365f82e4e90e4bc34b40cf5b4a247
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72517792"
 ---
 # <a name="get-started-with-nodejs-web-frameworks-on-windows"></a>Windows에서 Node.js 웹 프레임워크 시작

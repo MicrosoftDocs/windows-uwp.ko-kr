@@ -8,10 +8,10 @@ ms.author: jimwalk
 author: jwmsft
 ms.localizationpriority: medium
 ms.openlocfilehash: 9da9dee48beef6e3c1cd38ffbe9761ed89fd940d
-ms.sourcegitcommit: 93d0b2996b4742b33cd6d641e036f42672cf5238
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "69999636"
 ---
 # <a name="using-the-visual-layer-with-windows-forms"></a>Windows Forms에서 시각적 계층 사용

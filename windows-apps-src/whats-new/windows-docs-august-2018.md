@@ -6,17 +6,17 @@ ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 723cae783ba16fe5be9bb2076f96d4a5f823d733
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258834"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>2018년 8월 Windows 개발자 문서의 새로운 내용
 
 Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 계속 업데이트되고 있습니다. 8월에 제공된 기능 개요, 개발자 지침 및 비디오는 다음과 같습니다.
 
-Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 살펴볼 수 있습니다.
 
 ## <a name="features"></a>기능
 
@@ -54,7 +54,7 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 
 [프로젝트 로마 문서](https://docs.microsoft.com/windows/project-rome/) 사이트가 기능 우선 방식으로 재구성되었습니다. 따라서 개발자가 원하는 것을 더 쉽게 찾을 수 있고 여러 플랫폼에서 원하는 기능을 구현할 수 있습니다.
 
-## <a name="videos"></a>비디오
+## <a name="videos"></a>동영상
 
 ### <a name="xbox-live-unity-plugin"></a>Xbox Live Unity 플러그 인
 

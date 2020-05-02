@@ -9,10 +9,10 @@ keywords: python, windows 10, postgresql, mongodb, postgres, mongo, microsoft, w
 ms.localizationpriority: medium
 ms.date: 07/19/2019
 ms.openlocfilehash: 9b1bdea86739f3d58b39cf7f0e6b8090474886f3
-ms.sourcegitcommit: 60d2d15dd0d365f82e4e90e4bc34b40cf5b4a247
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72517783"
 ---
 # <a name="get-started-using-postgresql-or-mongodb-with-python-on-windows"></a>Windows에서 Python으로 PostgreSQL 또는 MongoDB 사용 시작

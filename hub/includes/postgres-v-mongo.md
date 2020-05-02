@@ -4,10 +4,10 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 10/04/2019
 ms.openlocfilehash: 0e144789531e43e3561e7b82830c2b78249c294b
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72314877"
 ---
 데이터베이스 시스템에서 두 가지 [많이 사용되는](https://insights.stackoverflow.com/survey/2019#technology-_-databases) 것은 [MongoDB](https://www.mongodb.com/what-is-mongodb)와 [PostgreSQL](https://www.postgresql.org/about/)입니다. 

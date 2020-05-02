@@ -9,10 +9,10 @@ keywords: python, microsoft, windows 10, 자습서, 온라인 과정, 블로그,
 ms.localizationpriority: medium
 ms.date: 07/19/2019
 ms.openlocfilehash: 24bda3a9eb76dac2e584540161e551ce6bb7ff4e
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75683666"
 ---
 # <a name="resources-for-developing-with-python-on-windows"></a>Windows에서 Python으로 개발하기 위한 리소스

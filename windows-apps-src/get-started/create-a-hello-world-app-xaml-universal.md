@@ -7,10 +7,10 @@ ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, Hello world
 ms.localizationpriority: medium
 ms.openlocfilehash: 93c78845a218620a8a46fc4439733734099b9853
-ms.sourcegitcommit: 13ce25364201223e21e2e5e89f99bc7aa4d93f56
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "73847610"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>Hello, world 앱 만들기(XAML)
@@ -34,7 +34,7 @@ ms.locfileid: "73847610"
 > [!NOTE]
 > 이 자습서에서는 Visual Studio Community 2017을 사용합니다. 다른 버전의 Visual Studio를 사용하는 경우 약간 다르게 보일 수 있습니다.
 
-## <a name="video-summary"></a>비디오 요약
+## <a name="video-summary"></a>동영상 요약
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Writing-Your-First-Windows-10-App/player]
 
@@ -141,13 +141,13 @@ ms.locfileid: "73847610"
 ## <a name="step-3-start-the-app"></a>3단계: 앱 시작
 
 
-이제 매우 간단한 앱을 만들었습니다. 앱을 빌드, 배포 및 시작하고 앱의 모양을 확인할 시간입니다. 로컬 컴퓨터, 시뮬레이터, 에뮬레이터 또는 원격 장치에서 앱을 디버그할 수 있습니다. 다음은 Visual Studio의 대상 장치 메뉴입니다.
+이제 매우 간단한 앱을 만들었습니다. 앱을 빌드, 배포 및 시작하고 앱의 모양을 확인할 시간입니다. 로컬 컴퓨터, 시뮬레이터, 에뮬레이터 또는 원격 디바이스에서 앱을 디버그할 수 있습니다. 다음은 Visual Studio의 대상 디바이스 메뉴입니다.
 
-![앱 디버깅을 위한 장치 대상의 드롭다운 목록](images/uap-debug.png)
+![앱 디버깅을 위한 디바이스 대상의 드롭다운 목록](images/uap-debug.png)
 
-### <a name="start-the-app-on-a-desktop-device"></a>데스크톱 장치에서 앱 시작
+### <a name="start-the-app-on-a-desktop-device"></a>데스크톱 디바이스에서 앱 시작
 
-기본적으로 앱은 로컬 컴퓨터에서 실행합니다. 대상 장치 메뉴는 데스크톱 장치 제품군의 장치에서 앱을 디버깅하기 위한 여러 옵션을 제공합니다.
+기본적으로 앱은 로컬 컴퓨터에서 실행합니다. 대상 디바이스 메뉴는 데스크톱 디바이스 제품군의 디바이스에서 앱을 디버깅하기 위한 여러 옵션을 제공합니다.
 
 -   **시뮬레이터**
 -   **로컬 머신**

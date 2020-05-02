@@ -11,10 +11,10 @@ design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
 ms.openlocfilehash: b72d7fced63a4c3ef4b1b233afcbb9f9874d9a3f
-ms.sourcegitcommit: 81e29e66f0cb1e13c3daa3a239e4dcc4dd674a66
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68796721"
 ---
 # <a name="content-links-in-text-controls"></a>텍스트 컨트롤의 콘텐츠 링크
@@ -154,7 +154,7 @@ Uri 속성은 하이퍼링크의 NavigateUri 속성과 상당 부분 비슷하�
 - LinkContentKind가 "장소"가 아니면 지정된 위치로 **지도** 앱이 열립니다. 예를 들어 ContentLinkChanged 이벤트 처리기에서 LinkContentKind를 수정한 경우에 이런 일이 발생할 수 있습니다.
 - 지도 앱에서 Uri가 열리지 않으면 기본 브라우저에서 지도가 열립니다. 사용자의 _웹 사이트용 앱_ 설정에서 **지도** 앱으로 Uri를 여는 것을 허용하지 않을 때 주로 이런 일이 발생합니다.
 
-##### <a name="people"></a>피플
+##### <a name="people"></a>사용자
 
 피플 선택기는 **ms-people** 프로토콜을 사용하는 Uri를 통해 ContentLinkInfo를 생성합니다.
 

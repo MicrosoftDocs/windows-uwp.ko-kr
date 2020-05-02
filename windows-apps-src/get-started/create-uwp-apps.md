@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, 시작
 ms.localizationpriority: medium
 ms.openlocfilehash: 85795ceccdde1ab49c0b6af65bf0299514879e6c
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75685218"
 ---
 # <a name="start-coding"></a>코딩 시작

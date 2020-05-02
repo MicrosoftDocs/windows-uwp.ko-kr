@@ -8,10 +8,10 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.openlocfilehash: a38f5fa7f3ef99f5970ec5d476fb65761aa39db4
-ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75302587"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>최신 UWP 구성 요소로 데스크톱 앱 확장

@@ -13,10 +13,10 @@ dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: 1d520f811c9929721bfcb9d1c83fbff6a4891091
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "63801188"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>컬렉션 및 목록에 대한 상황에 맞는 명령
@@ -237,7 +237,7 @@ PodcastObject를 몇 개 생성한 후 ListView에 PodcastObject를 바인딩하
 | 입력    | 상황에 맞는 작업                          |
 | -------- | --------------------------------------- |
 | 마우스    | 마우스 오른쪽 단추로 클릭                             |
-| 키보드 | Shift+F10, 메뉴 단추                  |
+| Keyboard | Shift+F10, 메뉴 단추                  |
 | 터치    | 항목 길게 누르기                      |
 | 펜      | 펜 단추 누르기, 항목 길게 누르기 |
 | 게임 패드  | 메뉴 버튼                             |

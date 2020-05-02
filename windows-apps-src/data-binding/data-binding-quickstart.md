@@ -11,10 +11,10 @@ dev_langs:
 - cppwinrt
 - cppcx
 ms.openlocfilehash: 0a967c923d9f8616a3a05af5bb0ebb612251d3b8
-ms.sourcegitcommit: 035b03f1247eae4e9359ee7db66429d4e1c1d09b
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "71674539"
 ---
 # <a name="data-binding-overview"></a>데이터 바인딩 개요
@@ -499,7 +499,7 @@ XAML 구문에 대한 자세한 내용은 참조 [XAML을 사용하여 UI 만들
 > [!NOTE]
 > 지금까지 이 항목에서는 [{x:Bind} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)만 사용했지만 아래에서 살펴볼 두 기술에는 모두 보다 유연한(그러나 성능이 낮은) [{Binding} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension)이 필요합니다.
 
-C++/WinRT 또는 Visual C++ 구성 요소 확장(C++/CX)을 사용하는 경우, [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) 태그 확장을 사용하려면 바인딩할 런타임 클래스에 [**BindableAttribute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.BindableAttribute) 특성을 추가해야 합니다. [{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)를 사용하는 경우에는 해당 특성이 필요하지 않습니다.
+C++/WinRT 또는 Visual C++ 구성 요소 확장(C++/CX)을 사용하는 경우, [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) 태그 확장을 사용하려면 바인딩할 런타임 클래스에 [**BindableAttribute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.BindableAttribute) 특성을 추가해야 합니다. [{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)를 사용하려는 경우에는 해당 특성이 필요하지 않습니다.
 
 > [!IMPORTANT]
 > [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 사용하는 경우, Windows SDK 버전 10.0.17763.0(Windows 10, 버전 1809) 이상을 설치했다면 [**BindableAttribute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.BindableAttribute) 특성을 사용할 수 있습니다. 해당 특성이 없을 경우 [{Binding}](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension) 태그 확장을 사용하려면 [ICustomPropertyProvider](/uwp/api/windows.ui.xaml.data.icustompropertyprovider) 및 [ICustomProperty](/uwp/api/windows.ui.xaml.data.icustomproperty) 인터페이스를 구현해야 합니다.

@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 6ac962476ace10e08ef92ed4fff9fb9bf48f0006
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72282266"
 ---
 # <a name="rssatom-feeds"></a>RSS/Atom 피드
@@ -40,7 +40,7 @@ UWP(유니버설 Windows 플랫폼)는 0.91에서 RSS 2.0까지의 RSS 형식 �
 
 개발자는 UWP의 네트워크 격리 기능을 사용하여 UWP 앱의 네트워크 액세스를 제어하고 제한할 수 있습니다. 일부 앱은 네트워크에 대한 액세스 권한이 필요하지 않을 수 있습니다. 그러나 네트워크에 대한 액세스 권한이 필요한 앱의 경우 UWP에서 적절한 접근 권한 값을 선택하여 사용할 수 있는 다양한 수준의 네트워크 액세스 권한을 제공합니다.
 
-개발자는 네트워크 격리를 통해 각 앱에 대해 필요한 네트워크 액세스 범위를 정의할 수 있습니다. 적절한 범위가 정의되지 않은 앱은 지정된 유형의 네트워크와 특정 유형의 네트워크 요청(클라이언트가 시작한 아웃바운드 요청 또는 원치 않는 인바운드 요청과 클라이언트가 시작한 아웃바운드 요청 모두)에 액세스할 수 없습니다. 네트워크 격리를 설정하고 적용할 수 있게 되면 앱이 손상되었을 경우 명시적으로 액세스가 허용된 네트워크에만 액세스하도록 할 수 있습니다. 이 경우 다른 응용 프로그램 및 Windows에 영향을 미치는 범위가 현저히 줄어듭니다.
+개발자는 네트워크 격리를 통해 각 앱에 대해 필요한 네트워크 액세스 범위를 정의할 수 있습니다. 적절한 범위가 정의되지 않은 앱은 지정된 유형의 네트워크와 특정 유형의 네트워크 요청(클라이언트가 시작한 아웃바운드 요청 또는 원치 않는 인바운드 요청과 클라이언트가 시작한 아웃바운드 요청 모두)에 액세스할 수 없습니다. 네트워크 격리를 설정하고 적용할 수 있게 되면 앱이 손상되었을 경우 명시적으로 액세스가 허용된 네트워크에만 액세스하도록 할 수 있습니다. 이 경우 다른 애플리케이션 및 Windows에 영향을 미치는 범위가 현저히 줄어듭니다.
 
 네트워크 격리는 네트워크에 액세스하려고 하는 [**Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication) 및 [**Windows.Web.AtomPub**](https://docs.microsoft.com/uwp/api/Windows.Web.AtomPub) 네임스페이스의 모든 클래스 요소에 영향을 미칩니다. Windows에서는 적극적으로 네트워크 격리가 적용됩니다. 적절한 네트워크 접근 권한 값을 사용하지 않은 경우 결과적으로 네트워크에 액세스하게 되는 **Windows.Web.Syndication** 또는 **Windows.Web.AtomPub** 네임스페이스의 클래스 요소 호출이 네트워크 격리로 인해 실패할 수 있습니다.
 

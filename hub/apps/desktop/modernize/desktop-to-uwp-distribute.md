@@ -9,10 +9,10 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.openlocfilehash: 14ad6707b7203dddd9aa7be186e76da677bbd675
-ms.sourcegitcommit: cc108c791842789464c38a10e5d596c9bd878871
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75302707"
 ---
 # <a name="distribute-your-packaged-desktop-app"></a>패키지 데스크톱 앱 배포

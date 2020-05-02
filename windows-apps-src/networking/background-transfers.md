@@ -7,14 +7,14 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: d8a4c354eff34edb0c97e9d95828d4287f9c4b99
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72282493"
 ---
 # <a name="background-transfers"></a>백그라운드 전송
-백그라운드 전송 API를 사용하여 네트워크를 통해 파일을 안정적으로 복사합니다. 백그라운드 전송 API는 앱이 일시 중단된 동안 백그라운드 실행되고 앱 종료 이후에도 유지되는 고급 업로드 및 다운로드 기능을 제공합니다. 이 API는 네트워크 상태를 모니터링하여 연결이 끊어진 경우 자동으로 전송을 일시 중단 및 다시 시작하며, 전송이 데이터 및 배터리를 인식합니다. 즉, 현재 연결 및 장치 배터리 상태에 따라 다운로드 작업이 조정됩니다. 이 API는 HTTP(S)를 사용한 대용량 파일 업로드 및 다운로드에 적합합니다. FTP도 지원되지만 다운로드에만 지원됩니다.
+백그라운드 전송 API를 사용하여 네트워크를 통해 파일을 안정적으로 복사합니다. 백그라운드 전송 API는 앱이 일시 중단된 동안 백그라운드 실행되고 앱 종료 이후에도 유지되는 고급 업로드 및 다운로드 기능을 제공합니다. 이 API는 네트워크 상태를 모니터링하여 연결이 끊어진 경우 자동으로 전송을 일시 중단 및 다시 시작하며, 전송이 데이터 및 배터리를 인식합니다. 즉, 현재 연결 및 디바이스 배터리 상태에 따라 다운로드 작업이 조정됩니다. 이 API는 HTTP(S)를 사용한 대용량 파일 업로드 및 다운로드에 적합합니다. FTP도 지원되지만 다운로드에만 지원됩니다.
 
 백그라운드 전송은 호출 앱과 별도로 실행되며, 주로 동영상, 음악, 큰 이미지와 같은 리소스에 대한 장기 전송 작업에 사용하도록 설계되었습니다. 이러한 시나리오에서는 앱이 일시 중단된 경우에도 다운로드가 계속 진행되기 때문에 백그라운드 전송을 사용해야 합니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "72282493"
 ### <a name="how-does-this-feature-adapt-to-network-status-changes-or-unexpected-shutdowns"></a>이 기능은 네트워크 상태 변경 또는 예기치 못한 종료 시 어떻게 대응하나요?
 백그라운드 전송 기능은 네트워크 상태 변경 발생 시 각 전송 작업에 대해 일관된 환경을 유지 관리하여, [연결](https://docs.microsoft.com/previous-versions/windows/apps/hh452990(v=win.10)) 기능이 제공하는 연결 및 통신사 요금제 상태 정보를 지능적으로 활용합니다. 네트워크 시나리오별 동작을 정의하기 위해 앱은 [**BackgroundTransferCostPolicy**](https://docs.microsoft.com/uwp/api/Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy)에 정의된 값을 사용하여 각 작업에 대한 비용 정책을 설정합니다.
 
-예를 들어 작업에 대해 정의되는 비용 정책에서는 장치가 데이터 통신 연결 네트워크를 사용 중인 경우 작업을 자동으로 일시 중지하도록 나타낼 수 있습니다. 그런 다음 "무제한" 네트워크에 연결되면 전송이 자동으로 다시 시작됩니다. 비용을 기준으로 네트워크를 정의하는 방법에 대한 자세한 내용은 [**NetworkCostType**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity.NetworkCostType)을 참조하세요.
+예를 들어 작업에 대해 정의되는 비용 정책에서는 디바이스가 데이터 통신 연결 네트워크를 사용 중인 경우 작업을 자동으로 일시 중지하도록 나타낼 수 있습니다. 그런 다음 "무제한" 네트워크에 연결되면 전송이 자동으로 다시 시작됩니다. 비용을 기준으로 네트워크를 정의하는 방법에 대한 자세한 내용은 [**NetworkCostType**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity.NetworkCostType)을 참조하세요.
 
 백그라운드 전송 기능은 네트워크 상태 변경을 처리하는 자체 메커니즘을 가지고 있지만, 네트워크에 연결된 앱에 대한 다른 일반적인 연결 고려 사항도 있습니다. 자세한 내용은 [사용 가능한 네트워크 연결 정보 활용](https://docs.microsoft.com/previous-versions/windows/apps/hh452983(v=win.10))을 읽어보세요.
 
@@ -44,7 +44,7 @@ ms.locfileid: "72282493"
 
 다음 표에서는 현재 휴대폰 상태에서 각 [**BackgroundTransferCostPolicy**](https://docs.microsoft.com/uwp/api/Windows.Networking.BackgroundTransfer.BackgroundTransferCostPolicy) 값에 대해 휴대폰에서 백그라운드 전송이 허용되는 경우를 보여 줍니다. [  **ConnectionCost**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity.ConnectionCost) 클래스를 사용하여 현재 휴대폰 상태를 확인할 수 있습니다.
 
-| 장치 상태                                                                                                                      | UnrestrictedOnly | 기본값 | 항상 |
+| 장치 상태                                                                                                                      | UnrestrictedOnly | Default | 항상 |
 |-----------------------------------------------------------------------------------------------------------------------------------|------------------|---------|--------|
 | WiFi에 연결됨                                                                                                                 | 허용            | 허용   | 허용  |
 | 데이터 통신 연결, 로밍 안 함, 데이터 제한 적용, 제한 아래로 유지됨                                                   | 거부             | 허용   | 허용  |
@@ -150,7 +150,7 @@ function uploadFiles() {
 ```
 
 ### <a name="restarting-interrupted-upload-operations"></a>중단된 업로드 작업 다시 시작
-[  **UploadOperation**](https://docs.microsoft.com/uwp/api/Windows.Networking.BackgroundTransfer.UploadOperation)의 완료 또는 취소 시, 연결된 시스템 리소스가 해제됩니다. 그러나 완료 또는 취소가 발생하기 전에 앱이 종료되는 경우 활성 작업은 중단되지만 연결된 리소스는 그대로 유지됩니다. 작업이 열거되지 않아서 다음 앱 세션에 다시 사용되지 않을 경우 작업이 완료되지 않고 장치 리소스를 계속해서 차지하게 됩니다.
+[  **UploadOperation**](https://docs.microsoft.com/uwp/api/Windows.Networking.BackgroundTransfer.UploadOperation)의 완료 또는 취소 시, 연결된 시스템 리소스가 해제됩니다. 그러나 완료 또는 취소가 발생하기 전에 앱이 종료되는 경우 활성 작업은 중단되지만 연결된 리소스는 그대로 유지됩니다. 작업이 열거되지 않아서 다음 앱 세션에 다시 사용되지 않을 경우 작업이 완료되지 않고 디바이스 리소스를 계속해서 차지하게 됩니다.
 
 1.  지속형 작업을 열거하는 함수를 정의하기 전에 다음과 같이 반환될 [**UploadOperation**](https://docs.microsoft.com/uwp/api/Windows.Networking.BackgroundTransfer.UploadOperation) 개체를 포함할 배열을 만들어야 합니다.
 

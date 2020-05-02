@@ -8,10 +8,10 @@ ms.author: jimwalk
 author: jwmsft
 ms.localizationpriority: medium
 ms.openlocfilehash: a2f30ba67acc12d622acd09f9fae872ee2058a2f
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66215151"
 ---
 # <a name="using-the-visual-layer-with-wpf"></a>WPF에서 시각적 계층 사용
@@ -29,7 +29,7 @@ UWP XAML 호스팅 API에는 다음과 같은 필수 구성 요소가 있습니�
   - [Windows 10 앱 시작](/windows/uwp/get-started/)
   - [Windows 10용 데스크톱 애플리케이션 개선](/windows/uwp/porting/desktop-to-uwp-enhance)
 - .NET Framework 4.7.2 이상
-- Windows 10 버전 1803 이상
+- Windows 10, 버전 1803 이상
 - Windows 10 SDK 17134 이상
 
 ## <a name="how-to-use-composition-apis-in-wpf"></a>WPF에서 컴퍼지션 API를 사용하는 방법
@@ -57,13 +57,13 @@ _HelloComposition_이라는 새 WPF 애플리케이션 프로젝트를 Visual C#
 
 WPF 앱에서 WinRT(Windows 런타임) API를 사용하려면 Windows 런타임에 액세스하도록 Visual Studio 프로젝트를 구성해야 합니다. 또한 벡터는 컴퍼지션 API에서 광범위하게 사용되므로 벡터를 사용하는 데 필요한 참조를 추가해야 합니다.
 
-NuGet 패키지는 이러한 두 가지 요구를 해결하는 데 사용할 수 있습니다. 이러한 패키지의 최신 버전을 설치하여 필요한 참조를 프로젝트에 추가합니다.  
+NuGet 패키지를 사용하면 두 가지 요구 사항을 모두 충족할 수 있습니다. 해당 패키지의 최신 버전을 설치하여 필요한 참조를 프로젝트에 추가합니다.  
 
 - [Microsoft.Windows.SDK.Contracts](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts)(기본 패키지 관리 형식을 PackageReference로 설정해야 함)
 - [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors/)
 
 > [!NOTE]
-> NuGet 패키지를 사용하여 프로젝트를 구성하는 것이 좋지만 필요한 참조를 수동으로 추가할 수 있습니다. 자세한 내용은 [Windows 10용 데스크톱 애플리케이션 개선](/windows/uwp/porting/desktop-to-uwp-enhance)을 참조하세요. 다음 표에서는 참조를 추가하는 데 필요한 파일을 보여 줍니다.
+> NuGet 패키지를 사용하여 프로젝트를 구성하는 것이 좋지만 필요한 참조를 수동으로 추가할 수도 있습니다. 자세한 내용은 [Windows 10용 데스크톱 애플리케이션 개선](/windows/uwp/porting/desktop-to-uwp-enhance)을 참조하세요. 다음 표에서는 참조를 추가하는 데 필요한 파일을 보여 줍니다.
 
 |파일|위치|
 |--|--|

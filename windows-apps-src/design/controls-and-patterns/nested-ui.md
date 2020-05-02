@@ -12,10 +12,10 @@ design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: aa672c99dc83e7955c4d4f91b5bc34620c48ed01
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66364547"
 ---
 # <a name="nested-ui-in-list-items"></a>목록 항목의 중첩된 UI
@@ -186,7 +186,7 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 - 중첩된 UI 항목 중 하나에서 Tab 키를 누르면 탭 순서에 따라 중첩된 UI 항목 사이를 이동합니다.  중첩된 UI 항목 사이를 모두 이동한 후에는 탭 순서상 ListView 다음인 컨트롤로 포커스가 이동합니다.
 - Shift+Tab을 누르면 탭 동작이 반대 방향으로 수행됩니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서는 [목록 항목이 작업을 수행하는 중첩된 UI](#nested-ui-where-list-items-perform-an-action)를 구현하는 방법을 보여 줍니다.
 

@@ -9,10 +9,10 @@ keywords: ''
 ms.localizationpriority: medium
 ms.date: 09/19/2019
 ms.openlocfilehash: 9467224814b1e26f18031662f5e8d994a8fae1ac
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75683676"
 ---
 # <a name="get-started-using-docker-containers-with-nodejs"></a>Node.js에서 Docker 컨테이너 사용 시작

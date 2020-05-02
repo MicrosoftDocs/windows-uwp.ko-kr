@@ -4,10 +4,10 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 10/04/2019
 ms.openlocfilehash: aa1da2a65f95d92e895533ed37426b5e454c255b
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72314897"
 ---
 PostgreSQL을 설치하려면 다음을 수행합니다.

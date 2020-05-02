@@ -9,10 +9,10 @@ keywords: python, windows 10, microsoft, pip, py.exe, 파일 경로, PYTHONPATH,
 ms.localizationpriority: medium
 ms.date: 07/19/2019
 ms.openlocfilehash: 6dbf86e0f9435e44140159ebb2bcbc3d67928999
-ms.sourcegitcommit: c8634b15b10bd196e7e2f876ae26e1205e160c91
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74663560"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Windows에서 Python 사용에 대한 질문과 대답입니다.
@@ -31,7 +31,7 @@ ms.locfileid: "74663560"
 
 여러 유형의 Python 프로젝트를 작업하게 되므로, 머신에 여러 버전의 Python이 설치될 수 있습니다. 모든 버전이 `python` 명령을 사용하기 때문에, 현재 어떤 Python 버전을 사용 중인지 명확하게 알 수 없는 경우가 있습니다. 일반적으로 `python3` 명령(또는 특정 버전을 선택하려면 `python3.7`)을 사용하는 것이 좋습니다.
 
-[py.exe 시작 관리자](https://docs.python.org/3/using/windows.html#launcher)는 설치된 가장 최신 버전의 Python을 자동으로 선택합니다. `py -3.7` 명령을 사용하여 특정 버전을 선택하거나, `py --list` 명령을 사용하여 어떤 버전을 사용할 수 있는지 확인할 수도 있습니다. **그러나** [python.org](https://www.python.org/downloads/windows/)에서 설치된 Python 버전을 사용하는 경우에만 py.exe 시작 관리자가 작동합니다. Microsoft Store에서 Python을 설치하는 경우 `py` 명령이 **포함되지 않습니다**. Linux, macOS, WSL 및 Microsoft Store 버전의 Python에서는 `python3`(또는 `python3.7`) 명령을 사용해야 합니다.
+[py.exe 시작 관리자](https://docs.python.org/3/using/windows.html#launcher)는 설치된 가장 최신 버전의 Python을 자동으로 선택합니다. `py -3.7` 명령을 사용하여 특정 버전을 선택하거나, `py --list` 명령을 사용하여 어떤 버전을 사용할 수 있는지 확인할 수도 있습니다. **그러나**[python.org](https://www.python.org/downloads/windows/)에서 설치된 Python 버전을 사용하는 경우에만 py.exe 시작 관리자가 작동합니다. Microsoft Store에서 Python을 설치하는 경우 `py` 명령이 **포함되지 않습니다**. Linux, macOS, WSL 및 Microsoft Store 버전의 Python에서는 `python3`(또는 `python3.7`) 명령을 사용해야 합니다.
 
 ## <a name="why-does-running-pythonexe-open-the-microsoft-store"></a>python.exe를 실행하면 Microsoft Store가 열리는 이유는 무엇인가요?
 

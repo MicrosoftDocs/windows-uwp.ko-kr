@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, agile, 개체, agility, IAgileObject
 ms.localizationpriority: medium
 ms.openlocfilehash: 82dff619e6fa3934f69b93090bee90de6359ca07
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66360328"
 ---
 # <a name="agile-objects-in-cwinrt"></a>C++/WinRT의 Agile 개체
@@ -87,7 +87,7 @@ variadic 매개 변수 팩에서 마커 구조체가 표시되는 경우는 중�
 
 사용자가 Agility를 옵트아웃하든, 혹은 하지 않든 **IMarshal**을 직접 구현할 수 있습니다. 예를 들어, **winrt::non_agile** 마커를 사용하여 기본 Agility 구현을 방지하거나, 혹은&mdash;아마도 값에 따른 마샬링(marshal-by-value) 의미 체계를 지원할 목적으로 직접 **IMarshal**을 구현할 수도 있습니다.
 
-## <a name="agile-references-winrtagileref"></a>Agile 참조(winrt::agile_ref)
+## <a name="agile-references-winrtagile_ref"></a>Agile 참조(winrt::agile_ref)
 
 Agile이 아닌 개체를 사용하지만 일부 Agile 가능성이 있는 컨텍스트일 때 개체를 전달해야 한다면 한 가지 옵션으로 [**winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref) 구조체 템플릿을 사용하여 Agile 참조를 non-Agile 형식 인스턴스로, 혹은 non-Agile 개체의 인터페이스로 가져오는 방법이 있습니다.
 

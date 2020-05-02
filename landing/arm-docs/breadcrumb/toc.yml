@@ -1,18 +1,11 @@
-items:
 - name: Docs
   tocHref: /
   topicHref: /
   items:
-  - name: Windows
-    tocHref: /windows/
-    topicHref: /windows/
-    items:
-    - name: ARM
-      tocHref: /windows/arm/
-      topicHref: /windows/arm/index
-ms.openlocfilehash: cdbdbed93a13bb2e31b9276dfb0ef046e8858162
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57583276"
+    - name: Windows
+      tocHref: /windows/
+      topicHref: /windows/
+      items:
+        - name: ARM
+          tocHref: /windows/arm/
+          topicHref: /windows/arm/index

@@ -8,10 +8,10 @@ ms.author: jimwalk
 author: jwmsft
 ms.localizationpriority: medium
 ms.openlocfilehash: 249291c59a31036fa967ac338209404557b57503
-ms.sourcegitcommit: d1c3e13de3da3f7dce878b3735ee53765d0df240
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66215171"
 ---
 # <a name="using-the-visual-layer-in-desktop-apps"></a>데스크톱 앱에서 시각적 계층 사용

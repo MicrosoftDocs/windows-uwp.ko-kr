@@ -6,10 +6,10 @@ ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, 프로젝션, 지연된 소멸, 안전한 쿼리
 ms.localizationpriority: medium
 ms.openlocfilehash: 76068ffc655c20aa13b50cce9ac49af9afd50805
-ms.sourcegitcommit: 50b0b6d6571eb80aaab3cc36ab4e8d84ac4b7416
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "71329562"
 ---
 # <a name="extension-points-for-your-implementation-types"></a>구현 형식에 대한 확장 지점

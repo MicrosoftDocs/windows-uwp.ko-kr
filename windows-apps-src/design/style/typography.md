@@ -7,10 +7,10 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: cb2aef514c8787b5afe11ea5a2818012bfdf2f41
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72282407"
 ---
 # <a name="typography"></a>입력 체계
@@ -19,7 +19,7 @@ ms.locfileid: "72282407"
 
 언어의 시각적 표현인 입력 체계의 주요 목적은 정보 전달입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 이 문서에서는 사용자가 콘텐츠를 쉽고 효율적으로 이해할 수 있도록 UWP 앱에서 입력 체계 스타일을 지정하는 방법에 대해 설명합니다.
 
-## <a name="font"></a>Font
+## <a name="font"></a>글꼴
 
 앱의 UI 전체에서 한 가지 글꼴만 사용해야 하며 UWP 앱의 기본 글꼴인 **Segoe UI**를 계속 사용하는 것이 좋습니다. 크기와 픽셀 밀도에 따라 최적의 가독성을 유지하도록 설계되었으며, 시스템의 콘텐츠를 보완하는 깔끔하고 가볍고 개방적인 디자인을 제공합니다.
 
@@ -53,7 +53,7 @@ UWP 앱의 글꼴 크기는 모든 디바이스에서 자동으로 조정됩니�
     :::column-end:::
 :::row-end:::
 
-## <a name="hierarchy"></a>계층
+## <a name="hierarchy"></a>계층 구조
 
 :::row:::
     :::column:::
@@ -104,7 +104,7 @@ UWP 유형 램프는 페이지의 유형 스타일 간에 중요한 관계를 �
     :::column-end:::
 :::row-end:::
 
-## <a name="alignment"></a>맞춤
+## <a name="alignment"></a>부합되는 내용
 
 [TextAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignment) 기본값은 왼쪽이고, 대부분의 경우 이 왼쪽 맞춤 방법은 일관된 콘텐츠 고정과 균일한 레이아웃을 제공합니다. RTL 언어에 대한 내용은 [세계화를 지원하도록 레이아웃 및 글꼴 조정](../globalizing/adjust-layout-and-fonts--and-support-rtl.md)을 참조하세요.
 
@@ -218,7 +218,7 @@ Segoe UI는 영어, 유럽 언어, 그리스어, 히브리어, 아르메니아�
 </tbody>
 </table>
 
-## <a name="fonts"></a>글꼴
+## <a name="fonts"></a>Fonts
 
 ### <a name="sans-serif-fonts"></a>Sans-serif 글꼴
 
@@ -335,7 +335,7 @@ Serif 글꼴은 대량 텍스트를 표시하는 데 적합합니다.
 </tbody>
 </table>
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 * [텍스트 컨트롤](../controls-and-patterns/text-controls.md)
 * [XAML 테마 리소스](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)

@@ -9,10 +9,10 @@ keywords: NodeJS, Node.js, windows 10, microsoft, nodejs 학습, windows의 노�
 ms.localizationpriority: medium
 ms.date: 09/19/2019
 ms.openlocfilehash: c987f5bea387c630a1b9ef23c928d7a1bb8fadfc
-ms.sourcegitcommit: cf4bf0ab4ea9019c1edc2bb96387ce6cedbe91dd
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75835377"
 ---
 # <a name="set-up-your-nodejs-development-environment-with-wsl-2"></a>WSL 2를 사용하여 Node.js 개발 환경 설치
@@ -187,5 +187,5 @@ Node.js 개발 환경 설정이 완료되었습니다. Node.js 환경 사용을 
 
 - [초보자용 Node.js 시작](./beginners.md)
 - [Windows에서 Node.js 웹 프레임워크 시작](./web-frameworks.md)
-- [Node.js 앱을 데이터베이스에 연결 시작](./databases.md)
+- [Node.js 앱을 데이터베이스에 연결](./databases.md)
 - [Node.js에서 Docker 컨테이너 사용 시작](./containers.md)

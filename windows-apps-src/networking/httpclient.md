@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 57927ff77f060a1ea1bd7720d8831f31c5355264
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74259203"
 ---
 # <a name="httpclient"></a>HttpClient
@@ -158,7 +158,7 @@ int main()
 
 ## <a name="post-binary-data-over-http"></a>HTTP를 통해 이진 데이터 게시
 
-아래의 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis) 코드 예제에서는 양식 데이터 및 POST 요청을 사용하여 웹 서버에 적은 양의 이진 데이터 파일을 업로드하는 방법을 보여 줍니다. 이 코드는 [**HttpBufferContent**](/uwp/api/windows.web.http.httpbuffercontent) 클래스를 사용하여 이진 데이터를 나타내고 [**HttpMultipartFormDataContent** ](/uwp/api/windows.web.http.httpmultipartformdatacontent) 클래스를 사용하여 다중 파트 양식 데이터를 나타냅니다.
+아래의 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis) 코드 예제에서는 양식 데이터 및 POST 요청을 사용하여 웹 서버에 적은 양의 이진 데이터 파일을 업로드하는 방법을 보여 줍니다. 이 코드는 [**HttpBufferContent**](/uwp/api/windows.web.http.httpbuffercontent) 클래스를 사용하여 이진 데이터를 나타내고 [**HttpMultipartFormDataContent**](/uwp/api/windows.web.http.httpmultipartformdatacontent) 클래스를 사용하여 다중 파트 양식 데이터를 나타냅니다.
 
 > [!NOTE]
 > **get** 호출(아래 코드 예제에 표시)은 UI 스레드에는 적절하지 없습니다. 이 경우에 사용할 수 있는 올바른 방법에 대해서는 [C++/WinRT로 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)을 참조하세요.

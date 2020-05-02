@@ -8,10 +8,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 15984e00b036bf44d6e4a7f60cb6435ea1add291
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "63808706"
 ---
 # <a name="thumbnail-images"></a>미리 보기 이미지
@@ -64,7 +64,7 @@ ms.locfileid: "63808706"
 <th> 검색된 미리 보기 이미지의 기능 </th>
 </tr>
 <tr>
-<td> 사진<br /> 비디오 </td>
+<td> 사진<br /> 동영상 </td>
 <td> PicturesView <br />VideosView </td>
 <td> <b>크기:</b> 중간, 가급적 190 이상(이미지 크기가 190x130인 경우) <br />
 <b>가로 세로 비율</b>: 약 .7의 균일한 와이드 가로 세로 비율(190인 경우 190x130) <br />
@@ -72,7 +72,7 @@ ms.locfileid: "63808706"
 균일한 가로 세로 비율로 인해 격자에서 이미지를 정렬하는 데 적합합니다.  </td>
 </tr>
 <tr>
-<td> 문서<br />음악 </td>
+<td> Documents<br />음악 </td>
 <td> DocumentsView <br />MusicView <br /> ListView</td>
 <td> <b>크기:</b> 작은, 가급적 40 x 40 픽셀 이상 <br />
 <b>가로 세로 비율</b>:  균일한 사각형 가로 세로 비율  <br />
@@ -100,7 +100,7 @@ ms.locfileid: "63808706"
 <th>다음을 사용하여 검색하는 경우: <ul><li>SingleItem</ul></th>
 <tr>
 <tr>
-<td>사진</td>
+<td>그림</td>
 <td>미리 보기 이미지가 파일의 원래 가로 세로 비율을 사용합니다. <br />
 <img src="images/thumbnail-pic-picvidmode.png" alt="Picture thumbnail in picture or video mode"/></td>
 <td>미리 보기가 사각형 가로 세로 비율로 잘립니다. <br />
