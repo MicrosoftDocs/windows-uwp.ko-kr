@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 2de9d5ae04c526c7c35fda4a7aef713814b4fbc2
-ms.sourcegitcommit: 366c96d16e9a330bd4fbd9e1e19983f890f72642
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "77258330"
 ---
 # <a name="app-to-app-communication"></a>앱 간 통신

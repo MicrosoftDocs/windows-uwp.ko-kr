@@ -7,10 +7,10 @@ ms.localizationpriority: medium
 ms.author: quradic
 author: QuinnRadich
 ms.openlocfilehash: a1aecb8df18a5826128b7b00cbc7f2ca7b6889f1
-ms.sourcegitcommit: fc5db2e26db65be025e9f62044b4d29bb1744f8d
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80524074"
 ---
 # <a name="latest-updates-to-the-windows-developer-docs"></a>Windows 개발자 문서의 최신 업데이트

@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
 ms.openlocfilehash: 9de761a0b127d7218c7dc2bb4c6862626b7c60e4
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "77089429"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
@@ -45,7 +45,7 @@ Windows 앱 인증 키트에서 [**IApplicationActivationManager::ActivateApplic
 앱이 시작되지 않는 경우 테스트 플랫폼이 [**ActivateApplication**](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication)의 필수 조건을 충족하면 활성화 이벤트 로그를 검토하여 문제를 해결할 수 있습니다. 이벤트 로그에서 이러한 항목을 찾으려면
 
 1.  eventvwr.exe를 열고 Application and Services Log\\Microsoft\\Windows\\Immersive-Shell 폴더로 이동합니다.
-2.  보기를 필터링하여 이벤트 ID: 5900-6000을 표시합니다.
+2.  보기를 필터링하여 이벤트 ID 5900-6000을 표시합니다.
 3.  로그 항목에서 앱이 시작되지 않은 이유를 설명하는 정보를 검토합니다.
 
 문제가 있는 파일을 식별하고 문제를 해결합니다. 앱을 다시 빌드하고 다시 테스트하세요. 앱을 디버그하는 데 사용할 수 있는 덤프 파일이 Windows 앱 인증 키트 로그 폴더에 생성되었는지 확인할 수도 있습니다.
@@ -222,7 +222,7 @@ ASLR(Address Space Layout Randomization)은 실행 가능 이미지를 예측할
 
 ### <a name="span-idbinscope-5spanreadwrite-shared-pe-section"></a><span id="binscope-5">읽기/쓰기 공유 PE 섹션</span>
 
-**Windows 앱 인증 키트 오류 메시지:** SharedSectionsCheck 테스트 실패
+**Windows 앱 인증 키트 오류 메시지:** SharedSectionsCheck 테스트 실패.
 
 공유로 표시된 쓰기 가능한 섹션이 있는 이진 파일은 보안 위협이 됩니다. 필요한 경우가 아니면 쓰기 가능한 공유 섹션을 사용하여 앱을 빌드하지 마세요. [  **CreateFileMapping**](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-createfilemappinga) 또는 [**MapViewOfFile**](https://docs.microsoft.com/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffile)을 사용하여 보안이 제대로 설정된 공유 메모리 개체를 만드세요.
 
@@ -236,7 +236,7 @@ ASLR(Address Space Layout Randomization)은 실행 가능 이미지를 예측할
 
 ### <a name="appcontainercheck"></a>AppContainerCheck
 
-**Windows 앱 인증 키트 오류 메시지:** AppContainerCheck 테스트 실패
+**Windows 앱 인증 키트 오류 메시지:** AppContainerCheck 테스트 실패.
 
 AppContainerCheck는 실행 가능 이진 파일의 PE(이식 가능 파일) 헤더에 **appcontainer** 비트가 설정되어 있는지 확인합니다. 앱이 올바로 실행되려면 모든 .exe 파일과 모든 관리되지 않는 DLL에 **appcontainer** 비트가 올바로 설정되어 있어야 합니다.
 
@@ -252,7 +252,7 @@ AppContainerCheck는 실행 가능 이진 파일의 PE(이식 가능 파일) 헤
 
 ### <a name="span-idbinscope-7spanexecutableimportscheck"></a><span id="binscope-7"></span>ExecutableImportsCheck
 
-**Windows 앱 인증 키트 오류 메시지:** ExecutableImportsCheck 테스트 실패
+**Windows 앱 인증 키트 오류 메시지:** ExecutableImportsCheck 테스트 실패.
 
 PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 섹션에 배치된 경우 이 테스트에 실패합니다. 이 오류는 Visual C++ 링커의 */merge* 플래그를 */merge:.rdata=.text*로 설정하여 PE 이미지에 대해 .rdata 병합을 사용하도록 설정한 경우에 발생할 수 있습니다.
 
@@ -266,7 +266,7 @@ PE(이식 가능 파일) 이미지의 가져오기 테이블이 실행 코드 �
 
 ### <a name="span-idbinscope-8spanwxcheck"></a><span id="binscope-8"></span>WXCheck
 
-**Windows 앱 인증 키트 오류 메시지:** WXCheck 테스트 실패
+**Windows 앱 인증 키트 오류 메시지:** WXCheck 테스트 실패.
 
 이러한 검사를 통해 쓰기 가능 및 실행 가능으로 매핑된 페이지가 이진에 없는지 확인할 수 있습니다. 쓰기 가능 및 실행 가능 섹션이 이진에 있거나 이진 *SectionAlignment*가 *PAGE\-SIZE*보다 작은 경우 이러한 오류가 발생할 수 있습니다.
 
@@ -559,7 +559,7 @@ Microsoft Store를 사용하려면 Direct3D를 사용하는 모든 애플리케�
 
 ### <a name="corrective-action"></a>수정 작업
 
-앱이 일시 중단될 때마다 해당 [**IDXGIDevice3**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgidevice3) 인터페이스에서 [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) API를 호출해야 합니다.
+앱이 일시 중단될 때마다 해당 [**IDXGIDevice3**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) 인터페이스에서 [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgidevice3) API를 호출해야 합니다.
 
 ## <a name="app-capabilities-test"></a>앱 접근 권한 값 테스트
 
@@ -597,7 +597,7 @@ Microsoft Store를 사용하려면 Direct3D를 사용하는 모든 애플리케�
 
 -   **ExclusiveTo 특성 테스트:** UWP 클래스가 다른 클래스에 ExclusiveTo로 표시된 인터페이스를 구현하지 않는지 확인합니다.
 -   **형식 위치 테스트:** 모든 UWP 형식에 대한 메타데이터가 앱 패키지에서 네임스페이스와 일치하는 가장 긴 이름을 가진 winmd 파일에 있는지 확인합니다.
--   **형식 이름 대/소문자 구분 테스트:** 모든 UWP 형식에 앱 패키지 내 고유한 대/소문자가 구분된 이름이 있는지 확인합니다. 또한 UWP 이름이 앱 패키지 내에서 네임스페이스 이름으로도 사용되지 않았는지 확인합니다.
+-   **형식 이름 대/소문자 구분 테스트:** 앱 패키지 내에서 모든 UWP 형식의 이름이 대/소문자를 구분하지 않는 고유한 이름인지 확인합니다. 또한 UWP 이름이 앱 패키지 내에서 네임스페이스 이름으로도 사용되지 않았는지 확인합니다.
 -   **형식 이름 수정 테스트:** 글로벌 네임스페이스 또는 Windows 최상위 네임스페이스에 UWP 형식이 없는지 확인합니다.
 -   **일반 메타데이터 수정 테스트:** 사용 중인 형식을 생성하는 컴파일러가 최신 UWP 사양으로 업데이트되었는지 확인합니다.
 -   **속성 테스트:** UWP 클래스의 모든 속성에 get 메서드가 있는지 확인합니다(set 메서드는 옵션임). UWP 형식의 모든 속성에 대해 get 메서드 반환 값 유형이 set 메서드 입력 매개 변수 유형과 일치하는지 확인합니다.

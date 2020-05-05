@@ -7,10 +7,10 @@ keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
 ms.openlocfilehash: 70415c9f3d58625cfdc651ec67c8a9f37c23cffa
-ms.sourcegitcommit: 3e7a4f7605dfb4e87bac2d10b6d64f8b35229546
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "77089499"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
@@ -62,7 +62,7 @@ steps:
 
 ```
 
-기본 템플릿은 .csproj 파일에 지정된 인증서를 사용하여 패키지에 서명하려고 시도합니다. 빌드 중에 패키지에 서명하려면 프라이빗 키에 대한 액세스 권한이 있어야 합니다. 서명하지 않으려면 YAML 파일의 `msbuildArgs` 섹션에 `/p:AppxPackageSigningEnabled=false` 매개 변수를 추가하여 서명을 사용하지 않도록 설정할 수 있습니다.
+기본 템플릿은 .csproj 파일에 지정된 인증서를 사용하여 패키지에 서명하려고 시도합니다. 빌드 중에 패키지에 서명하려면 프라이빗 키에 대한 액세스 권한이 있어야 합니다. 서명하지 않으려면 YAML 파일의 `/p:AppxPackageSigningEnabled=false` 섹션에 `msbuildArgs` 매개 변수를 추가하여 서명을 사용하지 않도록 설정할 수 있습니다.
 
 ## <a name="add-your-project-certificate-to-the-secure-files-library"></a>보안 파일 라이브러리에 프로젝트 인증서 추가
 

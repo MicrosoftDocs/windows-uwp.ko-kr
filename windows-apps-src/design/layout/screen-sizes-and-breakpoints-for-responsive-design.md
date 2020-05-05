@@ -7,10 +7,10 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 37d0ca71adf43891628a02d60d6873e7934d749b
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "79210179"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>화면 크기 및 중단점
@@ -34,7 +34,7 @@ UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 디바�
 <th align="left">크기 클래스</th>
 <th align="left">중단점</th>
 <th align="left">일반적인 화면 크기(대각선)</th>
-<th align="left">디바이스</th>
+<th align="left">장치</th>
 <th align="left">창 크기</th>
 </tr>
 </thead>
@@ -47,7 +47,7 @@ UWP 앱은 휴대폰, 태블릿, 데스크톱, TV 등 Windows 10 기반 디바�
 <td style="vertical-align:top;">320x569, 360x640, 480x854</td>
 </tr>
 <tr class="odd">
-<td style="vertical-align:top;">보통</td>
+<td style="vertical-align:top;">미디어</td>
 <td style="vertical-align:top;">641px - 1007px</td>
 <td style="vertical-align:top;">7&quot;~12&quot;</td>
 <td style="vertical-align:top;">패블릿, 태블릿</td>
@@ -84,7 +84,7 @@ UWP 앱은 모든 Windows 10 디바이스에서 앱을 쉽게 알아볼 수 있�
 - [탐색 창](../controls-and-patterns/navigationview.md)을 오버레이 모드로 전환하여 화면 공간 절약
 - [마스터 세부 정보 패턴](../controls-and-patterns/master-details.md)을 사용하는 경우 누적된 프레젠테이션 모드를 사용하여 화면 공간을 절약할 수 있습니다.
 
-### <a name="medium"></a>보통
+### <a name="medium"></a>미디어
 - 왼쪽 및 오른쪽 창 여백을 24픽셀로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.
 - [앱 바](../controls-and-patterns/app-bars.md) 등의 명령 요소를 앱 창의 맨 위에 배치합니다.
 - 열/영역은 최대 2개까지 사용합니다.

@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp, sd 카드, 스토리지
 ms.localizationpriority: medium
 ms.openlocfilehash: a6f94f0f417225ae154fc65c6beb5a6e2c1812fb
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72282386"
 ---
 # <a name="access-the-sd-card"></a>SD 카드에 액세스
@@ -42,8 +42,8 @@ ms.locfileid: "72282386"
 
 앱이 SD 카드의 전역 위치에 파일을 저장하면 해당 파일은 암호화되지 않으므로 일반적으로 다른 앱에서 파일에 액세스할 수 있습니다.
 
-- SD 카드가 장치에 있는 동안에는 동일한 파일 형식을 처리하도록 등록되어 있는 다른 앱에서 해당 파일에 액세스할 수 있습니다.
-- SD 카드를 장치에서 빼고 PC에서 열면 파일을 파일 탐색기에서 볼 수 있으며 다른 앱에서 액세스할 수 있습니다.
+- SD 카드가 디바이스에 있는 동안에는 동일한 파일 형식을 처리하도록 등록되어 있는 다른 앱에서 해당 파일에 액세스할 수 있습니다.
+- SD 카드를 디바이스에서 빼고 PC에서 열면 파일을 파일 탐색기에서 볼 수 있으며 다른 앱에서 액세스할 수 있습니다.
 
 SD 카드에 설치된 앱이 [**LocalFolder**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder)에 파일을 저장하면 해당 파일은 암호화되고 다른 앱에서 파일에 액세스할 수 없습니다.
 

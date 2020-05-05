@@ -7,10 +7,10 @@ ms.topic: article
 keywords: Windows 10, UWP, 데이터, 데이터베이스, 관계형, 테이블, SQLite
 ms.localizationpriority: medium
 ms.openlocfilehash: 80cf97a7336fe912baf5cda151560dacfa12c2e2
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "71339718"
 ---
 # <a name="data-access"></a>데이터 액세스

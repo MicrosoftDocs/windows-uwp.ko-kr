@@ -6,10 +6,10 @@ ms.date: 01/17/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 7947fb6e71a9f2ddbedcd8e3ee8bab7b720dc444
-ms.sourcegitcommit: 6169660ea437915265165c4631d9702587e4793d
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74902467"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-january-2019"></a>2019년 1월 Windows 개발자 문서의 새로운 내용

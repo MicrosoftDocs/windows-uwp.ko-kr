@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: beb6dde4036019e004d94e5f60e8f3583c78d775
-ms.sourcegitcommit: de34aabd90a92a083dfa17d4f8a98578597763f4
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72980022"
 ---
 # <a name="optimize-your-xaml-markup"></a>XAML 태그 최적화
@@ -28,7 +28,7 @@ XAML 플랫폼은 많은 요소를 표시할 수 있지만 원하는 시각 효�
 
 UI 컨트롤의 레이아웃을 만들기 위해 하는 선택은 앱이 시작될 때 생성되는 UI 요소의 수에 영향을 미칩니다. 레이아웃 최적화에 대한 자세한 내용은 [XAML 레이아웃 최적화](optimize-your-xaml-layout.md)를 참조하세요.
 
-각 요소는 각 데이터 항목에 대해 다시 생성되기 때문에 요소 수는 데이터 템플릿에 매우 중요합니다. 목록 또는 그리드에서 요소 수를 줄이는 데 대한 자세한 내용은 [ListView 및 GridView UI 최적화](optimize-gridview-and-listview.md) 문서의 *항목당 요소 감소*를 참조하세요.
+각 요소는 각 데이터 항목에 대해 다시 생성되기 때문에 요소 수는 데이터 템플릿에 매우 중요합니다. 목록 또는 그리드에서 요소 수를 줄이는 데 대한 자세한 내용은 *ListView 및 GridView UI 최적화* 문서의 [항목당 요소 감소](optimize-gridview-and-listview.md)를 참조하세요.
 
 앱이 시작 시 로드해야 하는 요소의 수를 줄이는 몇 가지 다른 방법이 있습니다.
 
@@ -36,7 +36,7 @@ UI 컨트롤의 레이아웃을 만들기 위해 하는 선택은 앱이 시작�
 
 XAML 태그에 지금 바로 표시되지 않는 요소가 포함되어 있다면, 표시할 때까지 이러한 요소의 로드를 연기할 수 있습니다. 예를 들어, 탭 형식 UI에서 보조 탭과 같은 표시되지 않는 콘텐츠를 연기할 수 있습니다. 또는 기본적으로 그리드 보기로 항목을 표시하고, 사용자가 목록으로 볼 수 있는 옵션을 제공할 수 있습니다. 필요할 때까지 목록의 로드를 연기할 수 있습니다.
 
-요소의 표시를 제어하는 데 [Visibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.Visibility) 대신 [x:Load 특성](../xaml-platform/x-load-attribute.md)을 사용합니다. 요소의 가시성이 **Collapsed**일 경우, 렌더링 전달 동안 건너뛸 수 있지만 여전히 메모리의 개체 인스턴스 비용을 지불해야 합니다. 대신 x:Load를 사용하면 프레임워크가 필요할 때까지 개체를 생성하지 않으므로 메모리 비용이 더욱 저렴합니다. 단점은 UI가 로드되지 않을 때 작은 메모리 오버헤드(약 600바이트)를 지불하는 것입니다.
+요소의 표시를 제어하는 데 [Visibility](../xaml-platform/x-load-attribute.md) 대신 [x:Load 특성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.Visibility)을 사용합니다. 요소의 가시성이 **Collapsed**일 경우, 렌더링 전달 동안 건너뛸 수 있지만 여전히 메모리의 개체 인스턴스 비용을 지불해야 합니다. 대신 x:Load를 사용하면 프레임워크가 필요할 때까지 개체를 생성하지 않으므로 메모리 비용이 더욱 저렴합니다. 단점은 UI가 로드되지 않을 때 작은 메모리 오버헤드(약 600바이트)를 지불하는 것입니다.
 
 > [!NOTE]
 > [x:Load](../xaml-platform/x-load-attribute.md) 또는 [x:DeferLoadStrategy](../xaml-platform/x-deferloadstrategy-attribute.md) 특성을 사용하여 요소 로드를 지연시킬 수 있습니다. x:Load 특성은 Windows 10 크리에이터스 업데이트(버전 1703, SDK 빌드 15063)부터 사용할 수 있습니다. Visual Studio 프로젝트가 대상으로 하는 최소 버전이 *Windows 10 크리에이터스 업데이트(10.0, Build 15063)* 는 되어야 x:Load를 사용할 수 있습니다. 이전 버전을 대상으로 하는 경우 x:DeferLoadStrategy를 사용합니다.
@@ -289,7 +289,7 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 
 ### <a name="composite-elements"></a>복합 요소
 
-여러 요소를 계층화하는 대신 복합 요소를 사용하여 효과를 만듭니다. 이 예제에서는 위쪽 절반은 검은색([Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)의 배경에서)이고 아래쪽 절반은 회색(**Grid**의 검은색 배경 위에 알파 혼합된 반투명 흰색의 [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)에서)인 두 가지 색조의 모양이 만들어집니다. 여기에서는 결과를 달성하는 데 필요한 픽셀의 150%가 채워집니다.
+여러 요소를 계층화하는 대신 복합 요소를 사용하여 효과를 만듭니다. 이 예제에서는 위쪽 절반은 검은색([Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)의 배경에서)이고 아래쪽 절반은 회색([Grid](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 검은색 배경 위에 알파 혼합된 반투명 흰색의 **Rectangle**에서)인 두 가지 색조의 모양이 만들어집니다. 여기에서는 결과를 달성하는 데 필요한 픽셀의 150%가 채워집니다.
 
 **비효율적인 경우.**
 
@@ -385,7 +385,7 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 
 ### <a name="cache-static-content"></a>정적 콘텐츠 캐시
 
-과도한 그리기의 또 다른 원인은 하나의 모양이 겹쳐진 여러 요소에서 만들어지는 경우입니다. 복합 모양이 포함된 [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)에서 [CacheMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.CacheMode)를 **BitmapCache**로 설정한 경우 플랫폼은 요소를 비트맵으로 렌더링한 다음 각 프레임에서 과도한 그리기 대신 해당 비트맵을 사용합니다.
+과도한 그리기의 또 다른 원인은 하나의 모양이 겹쳐진 여러 요소에서 만들어지는 경우입니다. 복합 모양이 포함된 [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.CacheMode)에서 **CacheMode**를 [BitmapCache](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)로 설정한 경우 플랫폼은 요소를 비트맵으로 렌더링한 다음 각 프레임에서 과도한 그리기 대신 해당 비트맵을 사용합니다.
 
 **비효율적인 경우.**
 
@@ -423,7 +423,7 @@ XAML 기본 제공 컨트롤 및 프레임워크에서 제공되는 사전은 �
 
 XBF2가 있는지를 확인하려면 바이너리 편집기에서 앱을 엽니다. XBF2가 있는 경우 12번째와 13번째 바이트가 00 02입니다.
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [앱 시작 성능 모범 사례](best-practices-for-your-app-s-startup-performance.md)
 - [XAML 레이아웃 최적화](optimize-your-xaml-layout.md)

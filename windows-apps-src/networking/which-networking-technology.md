@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c4b1a0dab6bf1eb3301ba9fb97abd95fd896c53e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74259170"
 ---
 # <a name="which-networking-technology"></a>네트워킹 기술 선택
@@ -26,7 +26,7 @@ UWP(유니버설 Windows 플랫폼) 개발자는 두 가지 소켓 구현 [**Win
 
 ### <a name="when-to-use-sockets"></a>소켓을 사용하는 경우
 
--   두 소켓 구현 모두 선택한 프로토콜(TCP 또는 UDP)을 사용하여 다른 장치와 통신하도록 지원합니다.
+-   두 소켓 구현 모두 선택한 프로토콜(TCP 또는 UDP)을 사용하여 다른 디바이스와 통신하도록 지원합니다.
 
 -   사용할 수 있는 기존 코드 및 환경에 따라 요구 사항에 가장 적합한 소켓을 선택합니다.
 
@@ -37,15 +37,15 @@ UWP(유니버설 Windows 플랫폼) 개발자는 두 가지 소켓 구현 [**Win
 
 ## <a name="websockets"></a>WebSocket
 
-[WebSocket](websockets.md) 프로토콜은 웹을 통해 클라이언트와 서버 간의 신속하고 보안이 유지된 양방향 통신을 위한 메커니즘을 정의합니다. 데이터가 전이중 단일 소켓 연결을 통해 즉시 전송되므로 두 끝점에서 실시간으로 메시지를 보내고 받을 수 있습니다. WebSocket은 즉각적인 소셜 네트워크 알림WebSocket은 즉각적인 소셜 네트워크 알림 및 최신 정보(예: 게임 통계)의 표시에 보안 및 고속 데이터 전송이 필요한 실시간 게임에 적합합니다. UWP 개발자는 [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) 및 [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 클래스를 사용하여 Websocket 프로토콜을 지원하는 서버와 연결할 수 있습니다.
+[WebSocket](websockets.md) 프로토콜은 웹을 통해 클라이언트와 서버 간의 신속하고 보안이 유지된 양방향 통신을 위한 메커니즘을 정의합니다. 데이터가 전이중 단일 소켓 연결을 통해 즉시 전송되므로 두 엔드포인트에서 실시간으로 메시지를 보내고 받을 수 있습니다. WebSocket은 즉각적인 소셜 네트워크 알림WebSocket은 즉각적인 소셜 네트워크 알림 및 최신 정보(예: 게임 통계)의 표시에 보안 및 고속 데이터 전송이 필요한 실시간 게임에 적합합니다. UWP 개발자는 [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) 및 [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 클래스를 사용하여 Websocket 프로토콜을 지원하는 서버와 연결할 수 있습니다.
 
 ### <a name="when-to-use-websockets"></a>WebSocket을 사용하는 경우
 
--   장치와 서버 간에 지속적으로 데이터를 보내고 받으려는 경우
+-   디바이스와 서버 간에 지속적으로 데이터를 보내고 받으려는 경우
 
 ### <a name="when-not-to-use-websockets"></a>WebSocket을 사용하지 않는 경우
 
--   데이터를 간헐적으로 보내거나 받는 경우 WebSocket 연결을 설정하고 유지 관리하는 것보다 장치에서 서버로 개별 HTTP 요청을 보내는 것이 더 간단합니다.
+-   데이터를 간헐적으로 보내거나 받는 경우 WebSocket 연결을 설정하고 유지 관리하는 것보다 디바이스에서 서버로 개별 HTTP 요청을 보내는 것이 더 간단합니다.
 -   WebSocket은 용량이 매우 많은 상황에 적합하지 않을 수 있습니다. 디자인에서 사용하기 전에 데이터 흐름을 모델링하고 WebSocket을 통한 트래픽을 시뮬레이트하는 것이 좋습니다.
 
 ## <a name="httpclient"></a>HttpClient
@@ -63,11 +63,11 @@ HTTP(S)를 사용하여 웹 서비스 또는 웹 서버와 통신하는 경우 [
 
 -   대용량 파일 또는 많은 수의 파일을 전송하는 경우 대신 백그라운드 전송을 사용하는 것이 좋습니다.
 -   연결 형식에 따라 업로드/다운로드를 제한하거나 진행률을 저장하고 중단 후 업로드/다운로드를 다시 시작하려면 백그라운드 전송을 사용해야 합니다.
--   두 장치 간에 통신할 때 하나의 장치가 HTTP(S) 서버 역할을 하도록 디자인되지 않은 경우 소켓을 사용해야 합니다. 사용자 고유의 HTTP 서버를 구현하고 [HttpClient](httpclient.md)를 사용하여 통신하지 마세요.
+-   두 디바이스 간에 통신할 때 하나의 디바이스가 HTTP(S) 서버 역할을 하도록 디자인되지 않은 경우 소켓을 사용해야 합니다. 사용자 고유의 HTTP 서버를 구현하고 [HttpClient](httpclient.md)를 사용하여 통신하지 마세요.
 
 ## <a name="background-transfers"></a>백그라운드 전송
 
-네트워크를 통해 안정적으로 파일을 전송하려는 경우 [백그라운드 전송 API](background-transfers.md)를 사용합니다. 백그라운드 전송 API는 앱이 일시 중단된 동안 백그라운드 실행되고 앱 종료 이후에도 유지되는 고급 업로드 및 다운로드 기능을 제공합니다. 이 API는 네트워크 상태를 모니터링하여 연결이 끊어진 경우 자동으로 전송을 일시 중단 및 다시 시작하며, 전송이 데이터 및 배터리를 인식합니다. 즉, 현재 연결 및 장치 배터리 상태에 따라 다운로드 작업이 조정됩니다. 앱이 모바일 또는 배터리 전원을 장치에서 실행되는 경우 이러한 접근 권한 값이 필요합니다. 이 API는 HTTP(S)를 사용한 대용량 파일 업로드 및 다운로드에 적합합니다. FTP도 지원되지만 다운로드에만 지원됩니다.
+네트워크를 통해 안정적으로 파일을 전송하려는 경우 [백그라운드 전송 API](background-transfers.md)를 사용합니다. 백그라운드 전송 API는 앱이 일시 중단된 동안 백그라운드 실행되고 앱 종료 이후에도 유지되는 고급 업로드 및 다운로드 기능을 제공합니다. 이 API는 네트워크 상태를 모니터링하여 연결이 끊어진 경우 자동으로 전송을 일시 중단 및 다시 시작하며, 전송이 데이터 및 배터리를 인식합니다. 즉, 현재 연결 및 디바이스 배터리 상태에 따라 다운로드 작업이 조정됩니다. 앱이 모바일 또는 배터리 전원을 디바이스에서 실행되는 경우 이러한 접근 권한 값이 필요합니다. 이 API는 HTTP(S)를 사용한 대용량 파일 업로드 및 다운로드에 적합합니다. FTP도 지원되지만 다운로드에만 지원됩니다.
 
 Windows 10의 새로운 백그라운드 전송 기능은 로컬 카탈로그를 업데이트하거나, 다른 앱을 활성화하거나, 다운로드가 완료된 경우 사용자에게 알릴 수 있도록 파일 전송이 완료되면 사후 처리를 트리거하는 기능입니다.
 
@@ -127,11 +127,11 @@ Windows 10의 새로운 백그라운드 전송 기능은 로컬 카탈로그를 
 
 ### <a name="mobile-operators"></a>통신사
 
-Windows 10에서는 이전에 디바이스 제조업체 및 통신사에만 노출된 일부 API를 광범위한 개발자 그룹에 노출합니다. 이러한 API는 현재 노출되어 있지만 앱을 게시하기 전에 Microsoft의 승인을 받아야 하는 특정 앱 접근 권한 값으로 제어됩니다. 이러한 API의 실제 사용은 주로 장치 제조업체 및 통신사로 제한됩니다.
+Windows 10에서는 이전에 디바이스 제조업체 및 통신사에만 노출된 일부 API를 광범위한 개발자 그룹에 노출합니다. 이러한 API는 현재 노출되어 있지만 앱을 게시하기 전에 Microsoft의 승인을 받아야 하는 특정 앱 접근 권한 값으로 제어됩니다. 이러한 API의 실제 사용은 주로 디바이스 제조업체 및 통신사로 제한됩니다.
 
 ### <a name="network-operations"></a>네트워크 운영
 
-[  **Windows.Networking.NetworkOperators**](https://docs.microsoft.com/uwp/api/Windows.Networking.NetworkOperators) API는 휴대폰의 구성 및 프로비저닝을 주로 처리합니다. 따라서 이를 제어하는 접근 권한 값의 사용 권한은 장치 제조업체 및 통신사로 제한됩니다.
+[  **Windows.Networking.NetworkOperators**](https://docs.microsoft.com/uwp/api/Windows.Networking.NetworkOperators) API는 휴대폰의 구성 및 프로비저닝을 주로 처리합니다. 따라서 이를 제어하는 접근 권한 값의 사용 권한은 디바이스 제조업체 및 통신사로 제한됩니다.
 
 ### <a name="sms"></a>SMS
 

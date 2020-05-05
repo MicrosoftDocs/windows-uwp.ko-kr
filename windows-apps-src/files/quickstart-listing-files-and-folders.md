@@ -12,10 +12,10 @@ dev_langs:
 - cpp
 - vb
 ms.openlocfilehash: 33b03ae1538001a2a9e77d3d72afd7bb67e9f3dc
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258577"
 ---
 # <a name="enumerate-and-query-files-and-folders"></a>파일 및 폴더 열거 및 쿼리
@@ -282,7 +282,7 @@ Next item
 
 다음 예제에서는 월별로 그룹화된 [**KnownFolders.PicturesLibrary**](/uwp/api/windows.storage.knownfolders.pictureslibrary)에서 모든 파일을 쿼리하고, 이번에는 하위 폴더를 재귀적으로 사용합니다. 먼저 [**StorageFolder.CreateFolderQuery**](/uwp/api/windows.storage.storagefolder.createfolderquery)를 호출하고 [**CommonFolderQuery.GroupByMonth**](/uwp/api/windows.storage.search.commonfolderquery) 값을 메서드로 전달합니다. 그러면 [**StorageFolderQueryResult**](/uwp/api/windows.storage.search.storagefolderqueryresult) 개체가 제공됩니다.
 
-그런 다음 가상 폴더를 나타내는 [**StorageFolder**](/uwp/api/windows.storage.storagefolder) 개체를 반환하는 [**StorageFolderQueryResult.GetFoldersAsync**](/uwp/api/windows.storage.search.storagefolderqueryresult.getfoldersasync)를 호출합니다. 이 예제에서는 월별로 그룹화하므로 가상 폴더는 각각 같은 달의 파일 그룹을 나타냅니다.
+그런 다음 가상 폴더를 나타내는 [**StorageFolder**](/uwp/api/windows.storage.search.storagefolderqueryresult.getfoldersasync) 개체를 반환하는 [**StorageFolderQueryResult.GetFoldersAsync**](/uwp/api/windows.storage.storagefolder)를 호출합니다. 이 예제에서는 월별로 그룹화하므로 가상 폴더는 각각 같은 달의 파일 그룹을 나타냅니다.
 
 ```csharp
 StorageFolder picturesFolder = KnownFolders.PicturesLibrary;

@@ -4,10 +4,10 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 10/04/2019
 ms.openlocfilehash: 2f7a57f1652ecab81a70c39faa1b70c42ed6a3de
-ms.sourcegitcommit: 13faf9dab9946295986f8edd79b5fae0db4ed0f6
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72314907"
 ---
 `sudo service mongodb start` 또는 `sudo service postgres start` 및 `sudo -u postgrest psql`을 입력하는 것은 지루할 수 있습니다.  그러나 WSL의 `.profile` 파일에 별칭을 설정하면 이러한 명령으로 더 빠르게 사용하고 더 쉽게 기억할 수 있습니다. 

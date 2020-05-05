@@ -12,10 +12,10 @@ dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
 ms.openlocfilehash: d7b781e6074468fbe73446e4057e36ff31266d05
-ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72165100"
 ---
 # <a name="selection-mode-overview"></a>선택 모드 개요
@@ -25,9 +25,9 @@ ms.locfileid: "72165100"
 ## <a name="different-selection-modes"></a>다양한 선택 모드
 다음과 같은 세 가지 선택 모드가 있습니다.
 
-- 단일: 사용자가 한 번에 하나의 항목만 선택할 수 있습니다.
-- 다중: 사용자가 보조 키를 사용하지 않고 여러 항목을 선택할 수 있습니다.
-- 확장: 사용자가 보조 키를 사용하여 여러 항목을 선택할 수 있습니다. 예를 들어 Shift 키를 누른 상태로 선택할 수 있습니다.
+- 단일 - 사용자가 한 번에 하나의 항목만 선택할 수 있습니다.
+- 다중 - 사용자가 보조 키를 사용하지 않고 여러 항목을 선택할 수 있습니다.
+- 확장 - 사용자가 보조 키를 사용하여 여러 항목을 선택할 수 있습니다. 예를 들어 Shift 키를 누른 상태로 선택할 수 있습니다.
 
 ## <a name="selection-mode-examples"></a>선택 모드 예제
 ### <a name="here-is-a-listview-with-single-selection-mode-enabled"></a>단일 선택 모드를 사용하도록 설정된 ListView는 다음과 같습니다.

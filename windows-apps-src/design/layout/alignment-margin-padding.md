@@ -7,10 +7,10 @@ keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
 ms.openlocfilehash: 0d7f702d145740703b9fbc4ca2e7fd8eba8957cc
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75684459"
 ---
 # <a name="alignment-margin-padding"></a>맞춤, 여백, 안쪽 여백
@@ -30,7 +30,7 @@ UWP 앱에서는 대부분 UI(사용자 인터페이스) 요소가 [**FrameworkE
 
 - [**FontSize**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.fontsize) 및 기타 텍스트 속성은 텍스트 요소의 레이아웃 크기를 제어합니다. 텍스트 요소가 차원을 명시적으로 선언하지 않은 경우에는 ActualWidth와 ActualHeight를 계산합니다. 
 
-## <a name="alignment"></a>부합되는 내용
+## <a name="alignment"></a>맞춤
 맞춤은 UI가 균형 있게 정돈되어 단정하게 보이도록 할 뿐만 아니라 시각적 계층 및 관계를 구성하는 데도 사용됩니다.
 
 ![맞춤을 보여주는 다이어그램](images/alignment.svg)
@@ -71,11 +71,11 @@ UWP 앱에서는 대부분 UI(사용자 인터페이스) 요소가 [**FrameworkE
 -   [**Control.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.padding): 모든 [**Control**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls) 파생 클래스를 상속합니다. 모든 컨트롤에 콘텐츠가 있는 것은 아니므로 이러한 컨트롤은 속성을 설정해도 아무 효과가 없습니다. 컨트롤에 테두리가 있는 경우 해당 테두리 안에 안쪽 여백이 적용됩니다.
 -   [**Border.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.padding): [**BorderThickness**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.borderthickness)/[**BorderBrush**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.borderbrush) 및 [**Child**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border.child) 요소로 만들어진 직사각형 선 사이의 공간을 정의합니다.
 -   [**ItemsPresenter.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemspresenter.padding): 항목 컨트롤의 항목 모양에 영향을 주며 각 항목 주위에 지정한 안쪽 여백을 배치합니다.
--   [**TextBlock.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.padding) 및 [**RichTextBlock.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblock.padding): 텍스트 요소의 텍스트 주위에 경계 상자를 확장합니다. 이러한 텍스트 요소는 **배경**이 없기 때문에 육안으로 확인하기 어려울 수 있습니다. 이때는 [**Block**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.block) 컨테이너에서 [**여백**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.block.margin) 설정을 사용하세요.
+-   [**TextBlock.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.padding) 및 [**RichTextBlock.Padding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblock.padding): 텍스트 요소의 텍스트 주위에 경계 상자를 확장합니다. 이러한 텍스트 요소는 **배경**이 없기 때문에 육안으로 확인하기 어려울 수 있습니다. 이때는 [**Block**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.block.margin) 컨테이너에서 [**여백**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.block) 설정을 사용하세요.
 
 둘 중 어떤 경우든, 요소 역시 여백 속성을 갖습니다. 여백과 안쪽 여백을 모두 적용하는 경우 외부 컨테이너와 내부 콘텐츠 사이의 거리는 여백과 안쪽 여백의 합계라는 점에서 가산됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 실제 컨트롤에서 Margin 및 Padding의 효과를 살펴보겠습니다. 다음은 기본 Margin과 Padding 값이 0인 Grid 내에 있는 TextBox입니다.
 
 ![여백 및 안쪽 여백이 0인 TextBox](images/xaml-layout-textbox-no-margins-padding.svg)

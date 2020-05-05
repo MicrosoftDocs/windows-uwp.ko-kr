@@ -7,10 +7,10 @@ keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: 2B84B877-794A-468F-A478-DA09E4694513
 ms.openlocfilehash: d81333b38908a10f88d886d766353aae455b1f47
-ms.sourcegitcommit: 5309019fa2a7c02e4e3f0c4076b75fc63546b6f0
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "77607241"
 ---
 # <a name="developer-code-of-conduct"></a>개발자 준수 사항
@@ -23,7 +23,7 @@ Microsoft Store용 응용 프로그램 개발자는 [앱 개발자 계약](https
 판매자 이름은 고유해야 합니다. 계정의 출처가 특정 회사, 정부 기관 또는 기타 조직임을 표현하도록 허가받지 않은 경우 이를 표현해서는 안 됩니다. 여기에는 잘못되어 있거나 잘 알려진 기관의 이름과 유사한 판매자 이름을 사용하는 행위를 포함하되 이에 제한되지 않습니다.
 
 
-## <a name="2-store-account-in-good-standing"></a>2. 양호한 상태의 Store 계정
+## <a name="2-store-account-in-good-standing"></a>2. 양호한 상태의 Microsoft Store 계정
 
 Microsoft Store 개발자 계정을 양호한 상태로 유지해야 합니다. 여기에는 Microsoft에 정확한 최신 정보 제공, Microsoft 정책 또는 앱 개발자 계약 준수, Microsoft Store에서 활성 상태 유지를 포함하되 이에 제한되지 않습니다.
 

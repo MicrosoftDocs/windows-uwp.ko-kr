@@ -9,19 +9,19 @@ author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
 ms.openlocfilehash: ed6aa406cd1372819c25bd43b59cd416130b09e0
-ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80482515"
 ---
 # <a name="host-a-standard-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML Islands를 사용하여 WPF 앱에서 표준 UWP 컨트롤 호스트
 
 이 문서에서는 [XAML Islands](xaml-islands.md)를 사용하여 WPF 앱에서 표준 UWP 컨트롤(즉, Windows SDK에서 제공하는 자사 UWP 컨트롤)을 호스트하는 두 가지 방법을 보여 줍니다.
 
-* Windows 커뮤니티 도구 키트의 [래핑된 컨트롤](xaml-islands.md#wrapped-controls)을 사용하여 UWP [InkCanvas](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 및 [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) 컨트롤을 호스트하는 방법을 보여 줍니다. 이러한 컨트롤은 몇 가지 유용한 UWP 컨트롤 세트의 인터페이스 및 기능을 래핑합니다. WPF 또는 Windows Forms 프로젝트의 디자인 화면에 이러한 컨트롤을 바로 추가하고 디자이너에서 다른 WPF 또는 Windows Forms 컨트롤처럼 사용할 수 있습니다.
+* Windows 커뮤니티 도구 키트의 [래핑된 컨트롤](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)을 사용하여 UWP [InkCanvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) 및 [InkToolbar](xaml-islands.md#wrapped-controls) 컨트롤을 호스트하는 방법을 보여 줍니다. 이러한 컨트롤은 몇 가지 유용한 UWP 컨트롤 세트의 인터페이스 및 기능을 래핑합니다. WPF 또는 Windows Forms 프로젝트의 디자인 화면에 이러한 컨트롤을 바로 추가하고 디자이너에서 다른 WPF 또는 Windows Forms 컨트롤처럼 사용할 수 있습니다.
 
-* 또한 Windows 커뮤니티 도구 키트의 [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 UWP [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView) 컨트롤을 호스트하는 방법을 보여 줍니다. 소수의 UWP 컨트롤 세트만 래핑된 컨트롤로 사용할 수 있기 때문에 [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost)를 사용하여 다른 표준 UWP 컨트롤을 호스트할 수 있습니다.
+* 또한 Windows 커뮤니티 도구 키트의 [WindowsXamlHost](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView) 컨트롤을 사용하여 UWP [CalendarView](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 호스트하는 방법을 보여 줍니다. 소수의 UWP 컨트롤 세트만 래핑된 컨트롤로 사용할 수 있기 때문에 [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost)를 사용하여 다른 표준 UWP 컨트롤을 호스트할 수 있습니다.
 
 이 문서는 WPF 앱에서 UWP 컨트롤을 호스트하는 방법을 보여 주지만 Windows Forms 앱의 프로세스와 비슷합니다.
 
@@ -45,10 +45,10 @@ WPF(또는 Windows Forms) 앱에서 UWP 컨트롤을 호스트하려면 솔루�
 
 1. Visual Studio 2019에서 새 **WPF 앱(.NET Framework)** 또는 **WPF 앱(.NET Core)** 프로젝트를 만듭니다. **WPF 앱(.NET Core)** 프로젝트를 만들려면 먼저 최신 버전의 [.NET Core 3 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)를 설치해야 합니다.
 
-2. [패키지 참조](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files)를 사용하도록 설정했는지 확인합니다.
+2. [패키지 참조](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files)를 사용하도록 설정합니다.
 
     1. Visual Studio에서 **도구 -> NuGet 패키지 관리자 -> 패키지 관리자 설정**을 클릭합니다.
-    2. **기본 패키지 관리 형식**에 대해 **PackageReference**를 선택했는지 확인합니다.
+    2. **기본 패키지 관리 형식**으로 **PackageReference**를 선택합니다.
 
 3. **솔루션 탐색기**에서 WPF 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
 
@@ -134,7 +134,7 @@ WPF(또는 Windows Forms) 앱에서 UWP 컨트롤을 호스트하려면 솔루�
 
 4. 속성의 **애플리케이션** 탭에서 **시작 개체** 드롭다운을 클릭하고 이전 단계에서 추가한 `Program` 클래스의 정규화된 이름을 선택합니다. 
     > [!NOTE]
-    > 기본적으로 WPF 프로젝트는 수정하지 않으려는 생성된 코드 파일에서 `Main` 진입점 함수를 정의합니다. 이 단계에서는 프로젝트에 대한 진입점을 새 `Program` 클래스의 `Main` 메서드로 변경하여 앱의 시작 프로세스 초기에 가능한 한 빨리 실행되는 코드를 추가할 수 있습니다. 
+    > 기본적으로 WPF 프로젝트는 수정하지 않으려는 생성된 코드 파일에서 `Main` 진입점 함수를 정의합니다. 이 단계에서는 프로젝트에 대한 진입점을 새 `Main` 클래스의 `Program` 메서드로 변경하여 앱의 시작 프로세스 초기에 가능한 한 빨리 실행되는 코드를 추가할 수 있습니다. 
 
 5. 프로젝트 속성에 대한 변경 내용을 저장합니다.
 
@@ -260,7 +260,7 @@ UWP XAML Islands를 사용하도록 프로젝트를 구성했으므로, 이제 [
     using Microsoft.Toolkit.Wpf.UI.XamlHost;
     ```
 
-10. `MainWindow` 클래스에 다음 `ChildChanged` 이벤트 처리기 메서드를 추가하고 코드 파일을 저장합니다. 호스트 컨트롤이 렌더링되면 이 이벤트 처리기가 실행되고 달력 컨트롤의 `SelectedDatesChanged` 이벤트에 대한 간단한 이벤트 처리기를 만듭니다.
+10. `ChildChanged` 클래스에 다음 `MainWindow` 이벤트 처리기 메서드를 추가하고 코드 파일을 저장합니다. 호스트 컨트롤이 렌더링되면 이 이벤트 처리기가 실행되고 달력 컨트롤의 `SelectedDatesChanged` 이벤트에 대한 간단한 이벤트 처리기를 만듭니다.
 
     ```csharp
     private void MyCalendar_ChildChanged(object sender, EventArgs e)

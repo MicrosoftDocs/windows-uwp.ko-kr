@@ -6,10 +6,10 @@ ms.topic: article
 keywords: 시작, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
 ms.openlocfilehash: 39f45b7604e71c4b57439f8c3e89548614758484
-ms.sourcegitcommit: 08cb5a4ca2e02179ad6b768c841fe3d5216bcae3
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80614980"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Windows 10 앱 시작
@@ -84,7 +84,7 @@ ms.locfileid: "80614980"
         <a href="https://github.com/Microsoft/WindowsTemplateStudio/">Windows Template Studio</a><br/>
         <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Windows 커뮤니티 도구 키트</a><br/>
         <a href="//developer.microsoft.com/windows/downloads/virtual-machines">가상 머신</a><br/>
-        <a href="//docs.microsoft.com/windows/wsl/about">Windows의 Ubuntu 기반 Bash</a><br/>
+        <a href="//docs.microsoft.com/windows/wsl/about">Bash on Ubuntu on Windows</a>(Windows의 Ubuntu 기반 Bash)<br/>
     :::column-end:::
     :::column:::
         <h3 style="margin-top: 10px; margin-bottom: 0px">개발이 처음인가요?</h3>

@@ -9,10 +9,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: c08dad36929c7889f1896404df862230040e3499
-ms.sourcegitcommit: 9625f8fb86ff6473ac2851e600bc02e996993660
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72163711"
 ---
 # <a name="guidelines-for-app-settings"></a>앱 설정에 대한 지침
@@ -125,7 +125,7 @@ Detailed redlines showing preferred text strings for the "Choose a mode" section
 - 앱 설정에 다음 컨트롤을 사용합니다.
 
     - [토글 스위치](../controls-and-patterns/toggles.md): 사용자가 값을 설정하거나 해제할 수 있습니다.
-    - [라디오 단추](../controls-and-patterns/radio-button.md): 사용자가 함께 사용할 수 없는 최대 5개의 관련 옵션으로 이루어진 세트에서 한 항목을 선택할 수 있습니다.
+    - [라디오 단추](../controls-and-patterns/radio-button.md): 사용자가 최대 5개의 상호 배타적인 관련 옵션으로 이루어진 집합에서 한 항목을 선택할 수 있습니다.
     - [텍스트 입력 상자](../controls-and-patterns/text-block.md): 사용자가 텍스트를 입력할 수 있습니다. 메일이나 암호와 같이, 사용자로부터 얻는 텍스트 형식에 해당하는 텍스트 입력 상자 형식을 사용합니다.
     - [하이퍼링크](../controls-and-patterns/hyperlinks.md): 사용자를 앱 내의 다른 페이지나 외부 웹 사이트로 이동합니다. 사용자가 하이퍼링크를 클릭하면 설정 플라이아웃이 해제됩니다.
     - [단추](../controls-and-patterns/buttons.md): 사용자가 현재 설정 플라이아웃을 해제하지 않고 즉각적인 작업을 시작할 수 있습니다.
