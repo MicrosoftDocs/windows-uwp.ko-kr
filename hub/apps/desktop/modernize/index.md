@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c86290c9765eba5186e777f8de7b3b86967be9e
-ms.sourcegitcommit: 0a319e2e69ef88b55d472b009b3061a7b82e3ab1
+ms.openlocfilehash: b966d00455bce390457e148c60b57296375ac2fa
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77521344"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730248"
 ---
 # <a name="modernize-your-desktop-apps"></a>데스크톱 앱 현대화
 
@@ -36,11 +36,11 @@ MSIX 패키지에 데스크톱 Windows 앱을 패키지하면 강력한 설치 �
 
 자세한 내용은 [.NET Core 3.0의 새로운 기능](https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0)을 참조하세요.
 
-## <a name="uwp-apis"></a>UWP API
+## <a name="windows-runtime-apis"></a>Windows 런타임 API
 
-WPF, Windows Forms 또는 C++ Win32 데스크톱 앱에서 직접 여러 UWP API를 호출하여 Windows 10 사용자에게 유용한 최신 환경을 통합할 수 있습니다. 예를 들어, UWP API를 호출하여 데스크톱 앱에 알림 메시지를 추가할 수 있습니다.
+WPF, Windows Forms 또는 C++ Win32 데스크톱 앱에서 직접 여러 Windows 런타임 API를 호출하여 Windows 10 사용자에게 유용한 최신 환경을 통합할 수 있습니다. 예를 들어, Windows 런타임 API를 호출하여 데스크톱 앱에 알림 메시지를 추가할 수 있습니다.
 
-자세한 내용은 [데스크톱 앱에서 UWP API 사용](desktop-to-uwp-enhance.md)을 참조하세요.
+자세한 내용은 [데스크톱 앱에서 Windows 런타임 API 사용](desktop-to-uwp-enhance.md)을 참조하세요.
 
 ## <a name="host-uwp-controls-xaml-islands"></a>호스트 UWP 컨트롤(XAML Islands)
 
@@ -50,18 +50,18 @@ Windows 10, 버전 1903부터 창 핸들(HWND)에 연결된 WPF, Windows Forms �
 
 ## <a name="use-the-visual-layer-in-desktop-apps"></a>데스크톱 앱에서 시각적 계층 사용
 
-이제 비 UWP 데스크톱 앱의 UWP API를 사용하여 WPF, Windows Forms 및 C++ Win32 앱의 모양, 느낌 및 기능을 향상시키고, UWP를 통해서만 사용할 수 있는 최신 Windows 10 UI 기능을 활용할 수 있습니다. 이러한 기능은 XAML Islands를 사용하여 호스트할 수 있는 기본 제공 UWP 컨트롤을 능가하는 사용자 지정 환경을 만들어야 할 때 유용합니다.
+이제 비 UWP 데스크톱 앱의 Windows 런타임 API를 사용하여 WPF, Windows Forms 및 C++ Win32 앱의 모양, 느낌 및 기능을 향상시키고, UWP를 통해서만 사용할 수 있는 최신 Windows 10 UI 기능을 활용할 수 있습니다. 이러한 기능은 XAML Islands를 사용하여 호스트할 수 있는 기본 제공 UWP 컨트롤을 능가하는 사용자 지정 환경을 만들어야 할 때 유용합니다.
 
 자세한 내용은 [시각적 계층을 사용하여 데스크톱 앱 현대화](visual-layer-in-desktop-apps.md)를 참조하세요.
 
 ## <a name="additional-features-available-to-apps-with-package-identity"></a>패키지 ID가 있는 앱에 사용할 수 있는 추가 기능
 
-일부 최신 Windows 10 환경은 [패키지 ID](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity)가 있는 데스크톱 앱에서만 사용할 수 있습니다. 이러한 기능에는 특정 UWP API, 패키지 확장 및 UWP 구성 요소가 포함됩니다. 자세한 내용은 [패키지 ID가 필요한 기능](modernize-packaged-apps.md)을 참조하세요.
+일부 최신 Windows 10 환경은 [패키지 ID](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity)가 있는 데스크톱 앱에서만 사용할 수 있습니다. 이러한 기능에는 특정 Windows 런타임 API, 패키지 확장 및 UWP 구성 요소가 포함됩니다. 자세한 내용은 [패키지 ID가 필요한 기능](modernize-packaged-apps.md)을 참조하세요.
 
 데스크톱 앱에 ID를 부여하는 방법에는 여러 가지가 있습니다.
 
 * [MSIX 패키지](/windows/msix/desktop/desktop-to-uwp-root)에 패키지합니다. MSIX는 모든 Windows 앱, WPF, Windows Forms 및 Win32 앱에 유니버설 패키징 환경을 제공하는 최신 앱 패키지 형식입니다. 강력한 설치 및 업데이트 환경, 유연한 기능 시스템을 갖춘 관리형 보안 모듈, Microsoft Store, 엔터프라이즈 관리 및 여러 사용자 지정 모델에 대한 지원 기능을 제공합니다. 자세한 내용은 MSIX 설명서의 [데스크톱 애플리케이션 패키지](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root)를 참조하세요.
-* 데스크톱 앱을 배포하기 위해 MSIX 패키지를 채택할 수 없는 경우 Windows 10 Insider Preview 빌드 10.0.19000.0부터 패키지 매니페스트만 포함된 *스파스 MSIX 패키지*를 만들어 패키지 ID를 부여할 수 있습니다. 자세한 내용은 [패키지되지 않은 데스크톱 앱에 ID 부여](grant-identity-to-nonpackaged-apps.md)를 참조하세요.
+* 데스크톱 앱을 배포하기 위해 MSIX 패키지를 채택할 수 없는 경우 Windows 10 버전 2004부터 패키지 매니페스트만 포함된 *스파스 MSIX 패키지*를 만들어 패키지 ID를 부여할 수 있습니다. 자세한 내용은 [패키지되지 않은 데스크톱 앱에 ID 부여](grant-identity-to-nonpackaged-apps.md)를 참조하세요.
 
 <a id="desktop-uwp-controls"/>
 

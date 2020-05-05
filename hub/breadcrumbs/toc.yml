@@ -1,40 +1,58 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Windows
+  tocHref: /windows/
+  topicHref: /windows/
   items:
-    - name: Windows
-      tocHref: /windows/
-      topicHref: /windows/
+    - name: 앱
+      tocHref: /windows/apps/
+      topicHref: /windows/apps/
       items:
-        - name: 앱
-          tocHref: /windows/apps/
-          topicHref: /windows/apps/
+        - name: 데스크톱 앱 빌드
+          tocHref: /windows/apps/desktop/
+          topicHref: /windows/apps/desktop/
+        - name: 데스크톱 앱 현대화
+          tocHref: /windows/apps/desktop/modernize/
+          topicHref: /windows/apps/desktop/modernize/
           items:
-            - name: 데스크톱 앱 빌드
-              tocHref: /windows/apps/desktop/
-              topicHref: /windows/apps/desktop/
-            - name: 데스크톱 앱 현대화
-              tocHref: /windows/apps/desktop/modernize/
-              topicHref: /windows/apps/desktop/modernize/
-            - name: .NET TraceProcessing
-              tocHref: /windows/apps/trace-processing/
-              topicHref: /windows/apps/trace-processing/overview
-        - name: 개발 환경
-          tocHref: /windows/dev-environment/
-          topicHref: /windows/dev-environment/
-          items:
-            - name: Python
-              tocHref: /windows/python/
-              topicHref: /windows/python/
-            - name: Node.js
-              tocHref: /windows/nodejs/
-              topicHref: /windows/nodejs/
-            - name: Mac-Windows
-              tocHref: /windows/dev-environment/mac-to-windows/
-              topicHref: /windows/dev-environment/mac-to-windows/
-            - name: 개발자 환경
-              tocHref: /windows/dev-environment/wsl
-              topicHref: /windows/wsl/about
-            - name: 개발자 환경
-              tocHref: /windows/dev-environment/wsl
-              topicHref: /windows/wsl/wsl2-about
+            - name: Windows 런타임 API 호출
+              topicHref: /windows/apps/desktop/modernize/desktop-to-uwp-enhance
+            - name: XAML Islands
+              topicHref: /windows/apps/desktop/modernize/xaml-islands
+            - name: 시각적 계층
+              topicHref: /windows/apps/desktop/modernize/visual-layer-in-desktop-apps
+            - name: 패키지 ID가 필요한 기능
+              topicHref: /windows/apps/desktop/modernize/modernize-packaged-apps
+            - name: '자습서: WPF 앱 현대화'
+              topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial
+        - name: .NET TraceProcessing
+          tocHref: /windows/apps/trace-processing/
+          topicHref: /windows/apps/trace-processing/overview
+        - name: Windows 10X용 개발
+          topicHref: /windows/apps/10x/faq
+        - name: Fluent Design System
+          topicHref: /windows/apps/fluent-design-system
+        - name: 내게 필요한 옵션
+          topicHref: /windows/apps/accessibility
+        - name: 음성
+          topicHref: /windows/apps/speech
+        - name: 기능 및 기술
+          topicHref: /windows/apps/features-and-technologies
+        - name: 최신 문서 업데이트
+          topicHref: /windows/apps/whats-new/latest-doc-updates
+    - name: 개발 환경
+      tocHref: /windows/dev-environment/
+      topicHref: /windows/dev-environment/
+      items:
+        - name: Python
+          tocHref: /windows/python/
+          topicHref: /windows/python
+        - name: Node.js
+          tocHref: /windows/nodejs/
+          topicHref: /windows/nodejs
+        - name: Android
+          tocHref: /windows/android/
+          topicHref: /windows/android/overview
+        - name: Mac-Windows
+          topicHref: /windows/dev-environment/mac-to-windows
+        - name: Linux용 Windows 하위 시스템
+          tocHref: /windows/dev-environment/wsl
+          topicHref: /windows/wsl/about

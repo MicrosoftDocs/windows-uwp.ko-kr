@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Windows를 사용하여 빌드
+title: Windows 개발 환경
 summary: Python, Node.js, Linux용 Windows 하위 시스템, Windows 터미널, Docker, MongoDB, PostgreSQL 등을 사용하도록 개발 환경을 설정합니다.
 metadata:
   author: mattwojo
@@ -9,12 +9,12 @@ metadata:
   ms.date: 09/15/2019
   ms.prod: dev-environment
   ms.topic: landing-page
-  ms.openlocfilehash: aaeb8b3818baf9b02d767222c2144a9066079362
-  ms.sourcegitcommit: 860e8303da3e36624f603ce3273d68911c696e5d
+  ms.openlocfilehash: 62e4cc8c5788780988b79d079ff4a6834a525a51
+  ms.sourcegitcommit: 0808a2719c007b3d7f55714e197ad080a1631a57
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72777267"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82630641"
 landingContent:
 - title: Python 시작
   linkLists:
@@ -72,6 +72,34 @@ landingContent:
       url: ../nodejs/web-frameworks.md#get-started-with-nuxtjs
     - text: Gatsby.js를 사용하여 웹앱 설정
       url: ../nodejs/web-frameworks.md#get-started-with-gatsbyjs
+- title: Android 시작
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows 기반 Android 개발 개요
+      url: ../android/overview.md
+    - text: Android용 플랫폼 간 프레임워크 비교
+      url: ../android/overview.md#cross-platform
+  - linkListType: get-started
+    links:
+    - text: 네이티브 Android
+      url: ../android/overview.md#native-android
+    - text: Xamarin.Android
+      url: ../android/xamarin-android.md
+    - text: Xamarin.Forms
+      url: ../android/xamarin-forms.md
+    - text: React Native
+      url: ../android/react-native.md
+    - text: PWA(Cordova, Ionic, PhoneGap)
+      url: ../android/pwa.md
+    - text: 게임 개발
+      url: ../android/overview.md#game-development
+  - linkListType: concept
+    links:
+    - text: Android 디바이스 또는 에뮬레이터에서 테스트
+      url: ../android/emulator.md
+    - text: 성능 향상을 위한 Windows Defender 설정 업데이트
+      url: ../android/defender-settings.md
 - title: WSL(Linux용 Windows 하위 시스템)
   linkLists:
   - linkListType: overview

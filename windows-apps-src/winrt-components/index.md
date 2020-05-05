@@ -6,17 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 76026c4f499a068bab689eadf050e0ec6277bbe8
-ms.sourcegitcommit: d38e2f31c47434cd6dbbf8fe8d01c20b98fabf02
+ms.openlocfilehash: 39759bec429bfe7952777d9669b7971a09136116
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70393690"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82034137"
 ---
 # <a name="windows-runtime-components"></a>Windows 런타임 구성 요소
-Windows 런타임 구성 요소는 C#, Visual Basic, JavaScript, C++ 등 모든 언어에서 인스턴스화하고 사용할 수 있는 자체 포함된 개체입니다.
 
-Visual Studio 및 C#, Visual Basic 또는 C++를 통해 UWP(유니버설 Windows 플랫폼) 앱에서 사용할 수 있는 Windows 런타임 구성 요소를 만들 수 있습니다.
+Windows 런타임 구성 요소는 C#, C++/WinRT, Visual Basic, JavaScript 및 C++/CX 등 모든 언어에서 참조하고 사용할 수 있는 자체 포함 소프트웨어 모듈입니다. Visual Studio를 통해 UWP(유니버설 Windows 플랫폼) 앱에서 사용할 수 있는 Windows 런타임 구성 요소를 만들 수 있습니다.
+
+> [!NOTE]
+> C++ 개발자의 경우 새로운 애플리케이션에 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 헤더 파일 기반 라이브러리로 구현된 WinRT(Windows 런타임) API용 최신의 완전한 표준 C++17 언어 프로젝션이며, 최신 Windows API에 최고 수준의 액세스를 제공하도록 설계되었습니다. C++/WinRT를 사용하여 Windows 런타임 구성 요소를 만드는 방법을 알아보려면 [C++/WinRT에서 이벤트 작성](../cpp-and-winrt-apis/author-events.md)을 참조하세요.
 
 | 항목 | 설명 |
 |-------|-------------|
