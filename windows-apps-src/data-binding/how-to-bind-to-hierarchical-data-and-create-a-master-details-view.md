@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 14b6ab96ac5423d1811618c6a3c91ccf56645664
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74255120"
 ---
 # <a name="bind-hierarchical-data-and-create-a-masterdetails-view"></a>계층적 데이터에 바인딩하고 마스터/자세히 보기 만들기
@@ -220,7 +220,7 @@ namespace MasterDetailsBinding
 </Page>
 ```
 
-[  **CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)에 직접 바인딩하면 컬렉션 자체에서 경로를 찾을 수 없는 바인딩에서 현재 항목에 바인딩할 수 있습니다. **CurrentItem** 속성을 바인딩 경로로 지정할 필요는 없습니다(모호한 경우에는 지정할 수 있음). 예를 들어 팀 보기를 나타내는 [**ContentControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl)의 [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 속성은 `Teams`**CollectionViewSource**에 바인딩되어 있습니다. 그러나 필요한 경우 **CollectionViewSource**가 팀 목록에서 현재 선택한 팀을 자동으로 제공하므로 [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)의 컨트롤은 `Team` 클래스의 속성에 바인딩됩니다.
+[  **CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)에 직접 바인딩하면 컬렉션 자체에서 경로를 찾을 수 없는 바인딩에서 현재 항목에 바인딩할 수 있습니다. **CurrentItem** 속성을 바인딩 경로로 지정할 필요는 없습니다(모호한 경우에는 지정할 수 있음). 예를 들어 팀 보기를 나타내는 [**ContentControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentControl)의 [**Content**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 속성은 `Teams`**CollectionViewSource**에 바인딩되어 있습니다. 그러나 필요한 경우 [CollectionViewSource**가 팀 목록에서 현재 선택한 팀을 자동으로 제공하므로** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)DataTemplate`Team`**의 컨트롤은**  클래스의 속성에 바인딩됩니다.
 
  
 

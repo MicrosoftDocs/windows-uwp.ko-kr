@@ -6,10 +6,10 @@ ms.date: 03/29/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 233666294555c46b5ba8b1e558eb32d6aed84e2a
-ms.sourcegitcommit: 08cb5a4ca2e02179ad6b768c841fe3d5216bcae3
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80614960"
 ---
 # <a name="develop-uwp-apps"></a>UWP 앱 개발

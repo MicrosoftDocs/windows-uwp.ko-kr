@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 59397f12ec66bfa2864d830eaf80a9dcaaf06592
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74257878"
 ---
 # <a name="planning-for-performance"></a>성능 계획
@@ -31,7 +31,7 @@ ms.locfileid: "74257878"
 
 사용자가 앱에서 작업을 완료하는 데 걸리는 시간의 허용 범위(*조작 클래스*)를 고려합니다. 각 조작 클래스에 대해 레이블, 인지된 사용자 정서 및 적합한 기간과 최대 기간을 할당합니다. 다음은 몇 가지 제안 사항입니다.
 
-| 조작 클래스 레이블 | 사용자 인식                 | 적합함            | 최대 구성          | 예                                                                     |
+| 조작 클래스 레이블 | 사용자 인식                 | 적합함            | 최대          | 예                                                                     |
 |-------------------------|---------------------------------|------------------|------------------|------------------------------------------------------------------------------|
 | 빠름                    | 최소한의 인지할 수 있는 지연      | 100밀리초 | 200밀리초 | 앱 바 표시, 단추 누르기(첫 응답)                        |
 | 일반                 | 적당히 빠름             | 300밀리초 | 500밀리초 | 크기 조정, 시맨틱 줌                                                        |

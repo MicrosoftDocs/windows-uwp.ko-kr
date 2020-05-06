@@ -6,10 +6,10 @@ ms.date: 09/06/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: fb63a5f7cefbccbedc09b0c74d9daea9d26b63a8
-ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74734958"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2017"></a>2017년 9월 Windows 개발자 문서의 새로운 내용
@@ -30,7 +30,7 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 
 ### <a name="xaml-basics-tutorials"></a>XAML 기본 사항 자습서
 
-새로운 [PhotoLab 샘플](https://github.com/Microsoft/Windows-appsample-photo-lab)과 함께 제공할 네 권의 [XAML 기본 사항 자습서](https://docs.microsoft.com/windows/uwp/design/basics/xaml-basics-ui)를 작성했습니다. 각각 사용자 인터페이스, 데이터 바인딩, 사용자 지정 스타일, 적응형 레이아웃 등 XAML 프로그래밍의 네 가지 주요 구성 요소를 다룹니다. 각 자습서는 부분적으로 완성된 PhotoLab 샘플 버전으로 시작하고, 최종 앱의 누락된 구성 요소를 단계별로 빌드합니다. 
+새로운 [PhotoLab 샘플](https://docs.microsoft.com/windows/uwp/design/basics/xaml-basics-ui)과 함께 제공할 네 권의 [XAML 기본 사항 자습서](https://github.com/Microsoft/Windows-appsample-photo-lab)를 작성했습니다. 각각 사용자 인터페이스, 데이터 바인딩, 사용자 지정 스타일, 적응형 레이아웃 등 XAML 프로그래밍의 네 가지 주요 구성 요소를 다룹니다. 각 자습서는 부분적으로 완성된 PhotoLab 샘플 버전으로 시작하고, 최종 앱의 누락된 구성 요소를 단계별로 빌드합니다. 
 
 ![사진 갤러리 페이지를 보여 주는 PhotoLab 샘플 스크린샷](images/PhotoLab-gallery-page.png)  
 

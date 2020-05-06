@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, 실험적, api
 ms.localizationpriority: medium
 ms.openlocfilehash: 542e007d07d490c2f18077e646f7598bfd2587c3
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75684908"
 ---
 # <a name="experimental-apis"></a>실험적 API
@@ -31,4 +31,4 @@ Intellisense를 사용하면 API가 실험적인지 여부를 알 수 있습니�
 
 ## <a name="providing-feedback"></a>사용자 의견 제공
 
-실험적 API를 시도했으며 피드백을 제공하려는 경우 [Windows 피드백 허브](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub)의 **개발자 플랫폼** 범주를 사용하세요.
+실험적 API를 시도했으며 피드백을 제공하려는 경우 **Windows 피드백 허브**의 [개발자 플랫폼](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub) 범주를 사용하세요.

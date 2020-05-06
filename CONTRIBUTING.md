@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5340c8375be9cf33a8f56fdba7bd36e9743767ab
-ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80482311"
 ---
 # <a name="contributing-to-uwp-conceptual-documentation"></a>UWP 개념 문서에 참여

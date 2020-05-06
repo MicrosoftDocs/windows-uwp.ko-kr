@@ -6,17 +6,17 @@ ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 65c3c2fb4b7a5a7f0b5f4b3c89773f3e21bd654d
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75684747"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>2017년 7월 Windows 개발자 문서의 새로운 내용
 
 Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 계속 업데이트되고 있습니다. 다음과 같은 기능 개요, 개발자 지침 및 코드 샘플이 Windows 개발자를 위한 새 정보와 업데이트된 정보를 포함하여 최근에 추가되었습니다.
 
-Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/your-first-app.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 살펴볼 수 있습니다.
+Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/your-first-app.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
 ## <a name="features"></a>기능
 
@@ -34,7 +34,7 @@ SDK Preview 빌드의 [Windows 참가자](https://insider.windows.com/)에서 �
 
 [표시](../design/style/reveal.md)는 앱의 중요한 요소를 강조 표시합니다. 
 
-![시각적 개체 표시](../design/style/images/Nav_Reveal_Animation.gif)
+![표시 화면 효과](../design/style/images/Nav_Reveal_Animation.gif)
 
 ### <a name="ui-controls"></a>UI 컨트롤
 
@@ -128,9 +128,9 @@ Windows S를 실행하는 디바이스에서 Windows 앱이 제대로 작동하�
 
 ![쇼핑 앱 샘플 스크린샷](images/shoppingcart.png)  
 
-## <a name="videos"></a>동영상
+## <a name="videos"></a>비디오
 
-### <a name="accessibility"></a>내게 필요한 옵션
+### <a name="accessibility"></a>접근성
 
 앱에 접근성 기능을 추가하여 더 많은 사용자가 사용할 수 있도록 합니다. [비디오를 시청](https://channel9.msdn.com/Blogs/One-Dev-Minute/Developing-Apps-for-Accessibility)하고 [접근성용 앱 개발](https://developer.microsoft.com/windows/accessible-apps)에 대해 자세히 알아보세요.
 
@@ -138,6 +138,6 @@ Windows S를 실행하는 디바이스에서 Windows 앱이 제대로 작동하�
 
 결제 요청 API는 고객과 판매자가 보다 원활하게 온라인 체크아웃 프로세스를 완료할 수 있도록 도와줍니다. [비디오를 시청](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-the-Payments-Request-API)하고 [결제 요청 설명서](https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-the-Payments-Request-API)를 살펴보세요.
 
-### <a name="windows-10-iot-core"></a>Windows 10 IoT Core
+### <a name="windows-10-iot-core"></a>Windows 10 IoT Core K
 
 Windows 10 IoT Core 및 유니버설 Windows 플랫폼을 사용하여 이 애완동물 인식 출입구와 같이 시각과 구성 요소 연결을 활용한 프로젝트의 프로토타입을 빠르게 제작하고 빌드할 수 있습니다. [동영상을 시청](https://channel9.msdn.com/Blogs/One-Dev-Minute/Building-a-Pet-Recognition-Door-Using-Windows-10-IoT-Core)하고 [Windows 10 IoT Core 시작](https://developer.microsoft.com/windows/iot) 방법을 알아보세요.

@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
-ms.openlocfilehash: fa97c99f14eee1cb76148c717b1e126a3f406fd1
-ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
+ms.openlocfilehash: eae966c130c52305b53cc4122844aeae49ecab92
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81266921"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82267488"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>C++/WinRT의 대리자를 사용한 이벤트 처리
 
@@ -79,7 +79,7 @@ MainPage::MainPage()
 void MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEventArgs const& /* args */) { ... }
 ```
 
-**RoutedEventHandler**를 생성하는 다른 방법도 있습니다. 아래는 [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) 문서 항목에서 가져온 구문 블록입니다(웹 페이지의 오른쪽 위 모서리에 있는 **언어** 드롭다운에서 *C++/WinRT* 선택). 아래 예제를 보면 다양한 생성자가 있습니다. 하나는 람다 함수를, 다른 하나는 프리 함수를, 그리고 나머지 하나(위에서 사용한 것)는 개체와 멤버 포인터 함수를 사용합니다.
+**RoutedEventHandler**를 생성하는 다른 방법도 있습니다. 아래는 [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) 문서 항목에서 가져온 구문 블록입니다(웹 페이지의 오른쪽 위 모서리에 있는 *언어* 드롭다운에서 **C++/WinRT** 선택). 아래 예제를 보면 다양한 생성자가 있습니다. 하나는 람다 함수를, 다른 하나는 프리 함수를, 그리고 나머지 하나(위에서 사용한 것)는 개체와 멤버 포인터 함수를 사용합니다.
 
 ```cppwinrt
 struct RoutedEventHandler : winrt::Windows::Foundation::IUnknown
@@ -96,7 +96,7 @@ struct RoutedEventHandler : winrt::Windows::Foundation::IUnknown
 함수 호출 연산자의 구문 역시 알아두는 것이 좋습니다. 대리자의 매개 변수로 무엇을 사용해야 할지 알 수 있기 때문입니다. 보다시피 이 경우에는 함수 호출 연산자 구문이 **MainPage::ClickHandler**의 매개 변수와 일치합니다.
 
 > [!NOTE]
-> 지정된 이벤트의 경우 해당 대리자 매개 변수의 세부 정보를 확인하려면 먼저 이벤트 자체에 대한 문서 항목으로 이동합니다. [UIElement.KeyDown 이벤트](/uwp/api/windows.ui.xaml.uielement.keydown)를 예제로 사용해 보겠습니다. 해당 항목을 방문하여 **언어** 드롭다운에서 *C++/WinRT*를 선택합니다. 항목의 시작 부분에 있는 구문 블록에는 다음이 표시됩니다.
+> 지정된 이벤트의 경우 해당 대리자 매개 변수의 세부 정보를 확인하려면 먼저 이벤트 자체에 대한 문서 항목으로 이동합니다. [UIElement.KeyDown 이벤트](/uwp/api/windows.ui.xaml.uielement.keydown)를 예제로 사용해 보겠습니다. 해당 항목을 방문하여 *언어* 드롭다운에서 **C++/WinRT**를 선택합니다. 항목의 시작 부분에 있는 구문 블록에는 다음이 표시됩니다.
 > 
 > ```cppwinrt
 > // Register
@@ -218,7 +218,7 @@ Button::Click_revoker Click(winrt::auto_revoke_t,
 
 ## <a name="delegate-types-for-asynchronous-actions-and-operations"></a>비동기 작업을 위한 대리자 형식
 
-위의 예제에서는 **RoutedEventHandler** 대리자 형식을 사용하지만 그 밖에도 다른 대리자 형식이 많습니다. 예를 들어 진행률 유무에 상관없이 비동기 작업은 완료되었거나 진행 중이면서 해당 형식의 대리자가 필요한 이벤트가 있습니다. 진행률이 포함된 비동기 작업에서 진행 중인 이벤트([**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)를 구현하는 모든 것)는 [**AsyncOperationProgressHandler**](/uwp/api/windows.foundation.asyncoperationprogresshandler) 형식의 대리자가 필요합니다. 다음은 람다 함수를 사용해 해당 형식의 대리자를 작성하는 코드 예제입니다. 이 예제에는 [**AsyncOperationWithProgressCompletedHandler**](/uwp/api/windows.foundation.asyncoperationwithprogresscompletedhandler) 대리자를 작성하는 방법도 나와있습니다.
+위의 예제에서는 **RoutedEventHandler** 대리자 형식을 사용하지만 그 밖에도 다른 대리자 형식이 많습니다. 예를 들어 진행률 유무에 상관없이 비동기 작업은 완료되었거나 진행 중이면서 해당 형식의 대리자가 필요한 이벤트가 있습니다. 진행률이 포함된 비동기 작업에서 진행 중인 이벤트([**IAsyncOperationWithProgress**](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)를 구현하는 모든 것)는 [**AsyncOperationProgressHandler**](/uwp/api/windows.foundation.asyncoperationprogresshandler-2) 형식의 대리자가 필요합니다. 다음은 람다 함수를 사용해 해당 형식의 대리자를 작성하는 코드 예제입니다. 이 예제에는 [**AsyncOperationWithProgressCompletedHandler**](/uwp/api/windows.foundation.asyncoperationwithprogresscompletedhandler-2) 대리자를 작성하는 방법도 나와있습니다.
 
 ```cppwinrt
 #include <winrt/Windows.Foundation.h>

@@ -7,10 +7,10 @@ ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, c#, c + +, JavaScript
 ms.localizationpriority: medium
 ms.openlocfilehash: d0870212df4deb7f12f790107ec988fac3eb69ab
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75685157"
 ---
 # <a name="create-your-first-app"></a>첫 번째 앱 만들기
@@ -65,13 +65,13 @@ UWP 이상으로 JavaScript 및 HTML 기술을 확장하여 웹앱 만들기 또
 
 웹앱을 UWP 프레임워크에 호스트된 웹앱으로 쉽게 패키지화하고 Microsoft Store에서 홍보할 수 있습니다.
 
-* [호스팅된 웹앱](https://developer.microsoft.com/windows/pwa)
+* [호스트된 웹앱](https://developer.microsoft.com/windows/pwa)
 * [웹 애플리케이션을 UWP 앱으로 변환](../porting/hwa-create-windows.md)
 
 
 ## <a name="see-also"></a>참고 항목
 
 * [코딩 시작](create-uwp-apps.md)
-* [UWP 앱이란?](universal-application-platform-guide.md)
+* [UWP 앱이란 무엇인가요?](universal-application-platform-guide.md)
 * [설정하기](get-set-up.md)
 * [Windows 계정 등록](sign-up.md)

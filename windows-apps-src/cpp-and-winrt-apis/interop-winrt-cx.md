@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, Interop, C++/CX
 ms.localizationpriority: medium
 ms.openlocfilehash: 0e54937391d3317f1b37415036aabc88a6cfaa41
-ms.sourcegitcommit: f288bcc108f9850671662c7b76c55c8313e88b42
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80290025"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>C++/WinRT와 C++/CX 간의 Interop

@@ -8,10 +8,10 @@ ms.topic: article
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
 ms.localizationpriority: medium
 ms.openlocfilehash: c725839a29c093c78eb977538da4c43d906051c6
-ms.sourcegitcommit: 08cb5a4ca2e02179ad6b768c841fe3d5216bcae3
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80614957"
 ---
 # <a name="usability-for-uwp-apps"></a>UWP 앱의 유용성
@@ -20,7 +20,7 @@ ms.locfileid: "80614957"
 
 이 섹션의 디자인 및 코딩 지침을 통해 접근성 기능을 추가하고, 세계화 및 지역화가 가능하도록 설정하고, 사용자가 환경을 사용자 지정할 수 있도록 설정하고, 사용자가 필요로 할 때 지원을 제공하여 UWP 앱을 더욱 포괄적으로 만들 수 있습니다.
 
-## <a name="accessibility"></a>내게 필요한 옵션
+## <a name="accessibility"></a>접근성
 
 접근성은 신체적 제약으로 인해 기존 사용자 인터페이스를 제대로 사용할 수 없는 사람들이 앱을 사용할 수 있도록 하는 것입니다. 일부 상황의 경우 접근성 요구 사항이 법으로 지정됩니다. 그러나 앱이 최대한 많은 사용자층을 확보할 수 있도록 하려면 법적 요구 사항에 관계없이 접근성 문제를 해결하는 것이 좋습니다.
 
@@ -230,7 +230,7 @@ Windows는 전 세계에서 언어, 지역, 문화 측면에서 다양한 사용
     :::column-end:::
     :::column:::
         <h3 style="margin-top: 10px; margin-bottom: 0px"><a href="../in-app-help/instructional-ui.md">UI 사용 안내</a></h3>
-        <p style="margin-top: 0px; margin-bottom: 50px">경우에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. 이러한 경우 찾지 못했을 수 있는 기능을 검색하고 사용할 수 있도록 UI를 통해 사용자에게 지침을 제공해야 합니다.</p>
+        <p style="margin-top: 0px; margin-bottom: 50px">경우에 따라 특정 터치 조작 등 사용자에게 명확하지 않을 수 있는 앱의 기능에 대해 설명하는 것이 유용할 수 있습니다. 이러한 경우 보지 못했을 수 있는 기능을 검색하고 사용할 수 있도록 UI를 통해 사용자에게 지침을 제공해야 합니다.</p>
     :::column-end:::
 :::row-end:::
 :::row:::

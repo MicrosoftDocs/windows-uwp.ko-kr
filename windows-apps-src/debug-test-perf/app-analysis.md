@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: e2977877b839f40e07b3eaa03b8349fb8439a401
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "73062758"
 ---
 # <a name="app-analysis-overview"></a>앱 분석 개요
@@ -131,7 +131,7 @@ DecodePixelWidth/Height가 이미지가 화면에 표시되는 것보다 명시�
 
 이 규칙은 요소가 로드 시 축소되었기 때문에 트리거되었습니다. 요소를 축소하거나 불투명도를 0으로 설정하면 요소가 만들어지는 것을 방지하지 않습니다. 이 규칙은 기본값이 false인 부울-표시 변환기를 사용하는 앱에서 발생할 수 있습니다.
 
-### <a name="solution"></a>해결 방법
+### <a name="solution"></a>솔루션
 
 [x:Load attribute](../xaml-platform/x-load-attribute.md) 또는 [x:DeferLoadStrategy](https://docs.microsoft.com/windows/uwp/xaml-platform/x-deferloadstrategy-attribute)를 사용하면 UI 일부의 로드를 지연시켰다가 필요할 때 로드할 수 있습니다. 이는 첫 번째 프레임에 표시되지 않는 UI 처리를 지연하는 좋은 방법입니다. 필요할 때 또는 지연된 논리 집합의 일부로 요소를 로드할 수 있습니다. 로딩을 트리거하려면 로드하려는 요소에서 findName을 호출합니다. x:Load는 요소를 활성화하는 x:DeferLoadStrategy의 기능이 로드되지 않도록 확장하며 로딩 상태가 x:Bind를 통해 제어되도록 합니다.
 
@@ -151,7 +151,7 @@ UI 가상화는 컬렉션 성능을 개선하는 데 몇 가지 핵심 요소 �
 
 프레임워크가 표시될 수 있는 요소를 만들어야 하므로 뷰포트 개념이 UI 가상화에 중요합니다. 일반적으로 ItemsControl의 뷰포트는 논리적 컨트롤 크기입니다. 예를 들어 ListView의 뷰포트는 ListView 요소의 너비 및 높이입니다. 일부 패널에서는 자동 크기 조정 행 또는 열을 사용하여 자식 요소(예: ScrollViewer 및 Grid)에 무제한 공간을 허용합니다. 가상화된 ItemsControl이 이와 같은 패널에 배치된 경우 모든 항목을 표시할 수 있는 공간을 차지하므로 가상화에 실패합니다. 
 
-### <a name="solution"></a>해결 방법
+### <a name="solution"></a>솔루션
 
 이 경우 사용 중인 ItemsControl에서 너비와 높이를 설정하여 가상화를 복원합니다.
 
@@ -169,7 +169,7 @@ UI 스레드 차단은 UI 스레드를 차단하는 오프-스레드 실행 함�
 
 UI 플랫폼 코드와 UI 앱 코드 모두 동일한 UI 스레드에서 실행됩니다. 이 스레드에서는 한 번에 하나의 명령만 실행될 수 있으므로 앱 코드가 이벤트를 처리하는 데 너무 오래 걸리는 경우 프레임워크에서 레이아웃을 실행할 수 없거나 사용자 개입을 나타내는 새 이벤트를 발생시킬 수 있습니다. 앱의 응답성은 작업을 처리하는 UI 스레드의 가용성과 관련이 있습니다.
 
-### <a name="solution"></a>해결 방법
+### <a name="solution"></a>솔루션
 
 앱의 일부가 제대로 작동하지 않더라도 앱과의 상호 작용이 가능할 수 있습니다. 예를 들어 앱에서 검색하는 데 오랜 시간이 걸리는 데이터를 표시할 경우 데이터를 비동기적으로 검색함으로써 코드가 앱의 시작 코드와 별개로 실행되게 할 수 있습니다. 데이터를 사용할 수 있게 되면 앱의 사용자 인터페이스를 그 데이터로 채웁니다. 이 플랫폼은 앱을 응답 가능한 상태로 유지할 수 있도록 여러 API의 비동기 버전을 제공합니다. 비동기 API를 사용하면 활성 실행 스레드가 상당한 시간 동안 차단되는 일이 없습니다. UI 스레드에서 API를 호출할 때 비동기 버전이 있다면 이 버전을 사용하세요.
 
@@ -185,7 +185,7 @@ UI 플랫폼 코드와 UI 앱 코드 모두 동일한 UI 스레드에서 실행�
 
 앱이 {x:Bind} 대신 {Binding}을 사용하고 있습니다. {Binding}을 사용하면 특수 작업 집합과 CPU 오버헤드가 발생합니다. {Binding}을 만들면 일련의 할당이 발생하고, 바인딩 대상을 업데이트하면 리플렉션 및 boxing이 발생할 수 있습니다.
 
-### <a name="solution"></a>해결 방법
+### <a name="solution"></a>솔루션
 
 빌드 시 바인딩을 컴파일하는 {x:Bind} 태그 확장을 사용합니다. {x:Bind} 바인딩(컴파일된 바인딩이라고도 함)은 성능이 뛰어나고, 바인딩 식에 대한 컴파일 시간 유효성 검사를 제공하며, 페이지의 partial 클래스로 생성되는 코드 파일에 중단점을 설정할 수 있도록 하여 디버깅을 지원합니다. 
 
@@ -203,13 +203,13 @@ x:Name이 있는 모든 리소스는 ResourceDictionary가 만들어지면 바�
 
 앱이 리소스에서 x:Name을 설정하고 있습니다.
 
-### <a name="solution"></a>해결 방법
+### <a name="solution"></a>솔루션
 
 코드 숨김에서 리소스를 참조하지 않는 경우 x:Name 대신 x:Key를 사용합니다.
 
 ## <a name="collections-control-is-using-a-non-virtualizing-panel"></a>컬렉션 컨트롤이 비가상화 패널을 사용하고 있음
 
-사용자 지정 항목 패널 템플릿(ItemsPanel 참조)을 제공하는 경우 ItemsWrapGrid 또는 ItemsStackPanel과 같은 가상화 패널을 사용해야 합니다. VariableSizedWrapGrid, WrapGrid 또는 StackPanel을 사용하는 경우에는 가상화할 수 없습니다. 또한 ItemsWrapGrid 또는 ItemsStackPanel을 사용하는 경우에만 ListView 이벤트 ChoosingGroupHeaderContainer, ChoosingItemContainer 및 ContainerContentChanging이 발생합니다.
+사용자 지정 항목 패널 템플릿(ItemsPanel 참조)을 제공하는 경우 ItemsWrapGrid 또는 ItemsStackPanel과 같은 가상화 패널을 사용해야 합니다. VariableSizedWrapGrid, WrapGrid 또는 StackPanel을 사용하는 경우에는 가상화할 수 없습니다. 또한 ItemsWrapGrid 또는 ItemsStackPanel을 사용할 경우에만 ChoosingGroupHeaderContainer, ChoosingItemContainer 및 ContainerContentChanging과 같은 ListView 이벤트가 발생됩니다.
 
 UI 가상화는 컬렉션 성능을 개선할 수 있는 가장 중요한 기능입니다. 이는 항목을 나타내는 UI 요소가 필요에 따라 만들어짐을 의미합니다. 1000개 항목의 컬렉션에 바인딩된 항목 컨트롤의 경우 동시에 모든 항목에 대한 UI를 만드는 것은 리소스 낭비입니다. 왜냐하면 이들을 동시에 모두 표시할 수 없기 때문입니다. ListView 및 GridView(및 기타 표준 ItemsControl 파생 컨트롤)는 UI 가상화를 수행합니다. 항목이 보기에 가까이(몇 페이지 밖) 스크롤되면 프레임워크가 항목에 대한 UI를 생성하고 이를 캐시합니다. 항목이 다시 표시될 것 같지 않은 경우 프레임워크는 메모리를 회수합니다.
 
@@ -223,7 +223,7 @@ UI 가상화는 컬렉션 성능을 개선하는 데 몇 가지 핵심 요소 �
 
 가상화를 지원하지 않는 패널을 사용하고 있습니다.
 
-### <a name="solution"></a>해결 방법
+### <a name="solution"></a>솔루션
 
 ItemsWrapGrid 또는 ItemsStackPanel과 같은 가상화 패널을 사용합니다.
 
@@ -239,7 +239,7 @@ XAML에서 AutomationProperties.Name을 설정하여 이름을 제공할 수 있
 
 요소의 UIA 이름이 null이거나 비어 있습니다. 이 규칙은 AutomationProperties.Name의 값이 아니라 UIA에 표시되는 내용을 확인합니다.
 
-### <a name="solution"></a>해결 방법
+### <a name="solution"></a>솔루션
 
 컨트롤의 XAML에서 AutomationProperties.Name 속성을 적절한 지역화된 문자열로 설정합니다.
 
@@ -259,7 +259,7 @@ XAML에서 AutomationProperties.Name을 설정하여 이름을 제공할 수 있
 
 UIA 부모가 동일한 UIA 요소는 Name 및 ControlType이 동일합니다.
 
-### <a name="solution"></a>해결 방법
+### <a name="solution"></a>솔루션
 
 AutomationProperties.Name을 사용하여 XAML에서 이름을 설정합니다. 이런 작업이 일반적으로 발생하는 목록에서는 바인딩을 사용하여 AutomationProperties.Name의 값을 데이터 원본에 바인딩합니다.
 

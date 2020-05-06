@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
 ms.openlocfilehash: 63907b3bfe3fc6dece900f1a7c09ac535e859471
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "80218453"
 ---
 # <a name="controls-for-windows-apps"></a>Windows 앱용 컨트롤
@@ -32,7 +32,7 @@ XAML 및 C#으로 컨트롤을 추가하고 스타일을 지정하는 방법에 
 :::row:::
     :::column:::
       <p><b><a href="controls-and-events-intro.md">컨트롤 추가 및 이벤트 처리</a></b> <br/>
-컨트롤을 앱에 추가하는 세 가지 주요 단계가 있습니다. 즉 앱 UI에 컨트롤을 추가하고, 컨트롤의 속성을 설정하고, 컨트롤의 이벤트 처리기에 코드를 추가하여 작업을 수행합니다.</p>
+앱에 컨트롤을 추가하는 세 가지 주요 단계는 앱 UI에 컨트롤 추가, 컨트롤의 속성 설정, 특정 작업을 수행하도록 컨트롤의 이벤트 처리기에 코드 추가입니다.</p>
     :::column-end:::
     :::column:::
       <p><b><a href="xaml-styles.md">컨트롤 스타일 지정</a></b> <br/>

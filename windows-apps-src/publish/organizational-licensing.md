@@ -7,16 +7,16 @@ ms.topic: article
 keywords: Windows 10, uwp, 비즈니스용 Store, 교육용 Store, 조직, 볼륨 라이선싱, 엔터프라이즈, 교육 Store, 비즈니스 Store, 대량 구매, 대량
 localizationpriority: high
 ms.openlocfilehash: 880e472b9a6ed19bae85c00b4014b431e3185f61
-ms.sourcegitcommit: a7effa01ca1c810e792b60f89ba38ce3bf0b310e
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "81545023"
 ---
 # <a name="organizational-licensing-options"></a>조직 라이선스 옵션
 
 
-앱 제출 시 [가격 책정 및 가용성](set-app-pricing-and-availability.md#organizational-licensing) 페이지의 **조직 라이선스** 섹션에서 비즈니스용 Microsoft Store 및 교육용 Microsoft Store를 통해 앱을 대량 구매용으로 제공할지 여부 및 그 방법을 지정할 수 있습니다.
+앱 제출 시 **가격 책정 및 가용성** 페이지의 [조직 라이선스](set-app-pricing-and-availability.md#organizational-licensing) 섹션에서 비즈니스용 Microsoft Store 및 교육용 Microsoft Store를 통해 앱을 대량 구매용으로 제공할지 여부 및 그 방법을 지정할 수 있습니다.
 
 이러한 설정을 통해 여러 사용자 라이선스를 취득하고 배포하는 조직(비즈니스 및 교육)에서 앱을 사용하도록 하여, PC, 태블릿, 휴대폰 등 여러 Windows 10 디바이스 유형에서 조직에 접근할 수 있는 기회를 늘릴 수 있습니다.
 

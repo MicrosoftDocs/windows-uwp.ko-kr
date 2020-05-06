@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
 ms.openlocfilehash: fb9cd2861fe826d9e8d112f2729d2922c68194ce
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72281895"
 ---
 # <a name="device-portal-for-mobile"></a>모바일용 디바이스 포털
@@ -31,7 +31,7 @@ Device Portal에 연결하려면 휴대폰 설정에서 디바이스 검색 및 
 
 ![개발자 모드 디바이스 검색 설정](images/device-portal/mob-dev-mode-pairing.png)
 
-3가지 방법인 USB, 로컬 호스트 및 로컬 네트워크(VPN 및 테더링 포함) 중에서 선택하여 Device Portal에 연결할 수 있습니다.
+USB, 로컬 호스트 및 로컬 네트워크(VPN 및 테더링 포함)를 통하는 세 가지 방법 중 선택하여 디바이스 포털에 연결할 수 있습니다.
 
 **Device Portal에 연결하려면**
 
@@ -78,10 +78,10 @@ Windows Mobile Device Portal에는 임의 프로세스를 종료하는 기능이
 - 성능 차트
 - ETW(Windows용 이벤트 추적)
 - 성능 추적(WPR) 
-- 디바이스
+- 장치
 - 네트워킹
 
 ## <a name="see-also"></a>참고 항목
 
-* [Windows Device Portal 개요](device-portal.md)
-* [Device Portal 핵심 API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [Windows 장치 포털 개요](device-portal.md)
+* [장치 포털 핵심 API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

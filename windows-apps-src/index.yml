@@ -12,10 +12,10 @@ metadata:
   ms.technology: uwp-conceptual-docs
   keywords: windows uwp, universal windows platform, Windows Runtime APIs, windows api, windows api ref, winrt api, windows api reference, uwp api, uwp api reference, develop uwp, design uwp, publish uwp
   ms.openlocfilehash: 688f34e3e2316133713e71c99763d86255914aee
-  ms.sourcegitcommit: b3ff4e7ec42a4234774b47ac39940e5ff7817ccd
+  ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/21/2020
+  ms.lasthandoff: 04/29/2020
   ms.locfileid: "77544993"
 landingContent:
 - title: UWP를 처음 사용하는 경우

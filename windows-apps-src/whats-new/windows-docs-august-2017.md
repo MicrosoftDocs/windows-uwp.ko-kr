@@ -6,17 +6,17 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: 824cdb74a809ae3f9ae2ed202a9889535021f711
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "75684722"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>2017년 8월 Windows 개발자 문서의 새로운 내용
 
 Windows 개발자 설명서는 Windows 플랫폼 전체에서 개발자가 사용할 수 있는 새로운 기능에 대한 정보로 계속 업데이트되고 있습니다. 다음과 같은 기능 개요, 개발자 지침 및 동영상이 Windows 개발자를 위한 새 정보와 업데이트된 정보를 포함하여 최근에 추가되었습니다.
 
-Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/your-first-app.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 살펴볼 수 있습니다.
+Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/your-first-app.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
 
 ## <a name="features"></a>기능
 
@@ -28,7 +28,7 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 
 ### <a name="conditional-xaml"></a>조건부 XAML
 
-이제 [버전 적응 앱](../debug-test-perf/version-adaptive-apps.md)을 만들 수 있는 [조건부 XAML](../debug-test-perf/conditional-xaml.md)을 미리 볼 수 있습니다. 조건부 XAML을 통해 XAML 태그에서 ApiInformation.IsApiContractPresent 메서드를 사용할 수 있습니다. 이를 통해 코드 숨김을 사용하지 않고도 API의 존재 여부를 기반으로 태그에서 속성을 설정하고 개체를 인스턴스화할 수 있습니다.
+이제 [버전 적응 앱](../debug-test-perf/conditional-xaml.md)을 만들 수 있는 [조건부 XAML](../debug-test-perf/version-adaptive-apps.md)을 미리 볼 수 있습니다. 조건부 XAML을 통해 XAML 태그에서 ApiInformation.IsApiContractPresent 메서드를 사용할 수 있습니다. 이를 통해 코드 숨김을 사용하지 않고도 API의 존재 여부를 기반으로 태그에서 속성을 설정하고 개체를 인스턴스화할 수 있습니다.
 
 ### <a name="game-mode"></a>게임 모드
 
@@ -45,7 +45,7 @@ UWP(유니버설 Windows 플랫폼)을 위한 [게임 모드](https://docs.micro
 
 ### <a name="data-schemas-for-store-products"></a>Microsoft Store 제품용 데이터 스키마
 
-[Store 제품용 데이터 스키마](../monetize/data-schemas-for-store-products.md) 문서가 추가되었습니다. 이 문서는 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct), [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense)를 포함하여 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store) 네임스페이스의 몇 가지 개체에 사용할 수 있는 Store 관련 데이터에 대한 스키마를 제공합니다.
+[Store 제품용 데이터 스키마](../monetize/data-schemas-for-store-products.md) 문서가 추가되었습니다. 이 문서는 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store), [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct)를 포함하여 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense) 네임스페이스의 몇 가지 개체에 사용할 수 있는 Store 관련 데이터에 대한 스키마를 제공합니다.
 
 ### <a name="desktop-bridge"></a>데스크톱 브리지
 
@@ -69,7 +69,7 @@ Xbox Live API를 사용하여 게임을 Xbox Live 소셜 게임 네트워크에 
 
 Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 자세한 내용은 [Xbox Live 개발자 프로그램 개요](https://docs.microsoft.com//gaming/xbox-live/developer-program-overview)를 참조하세요.
 
-## <a name="videos"></a>동영상
+## <a name="videos"></a>비디오
 
 ### <a name="mixed-reality"></a>혼합 현실
 

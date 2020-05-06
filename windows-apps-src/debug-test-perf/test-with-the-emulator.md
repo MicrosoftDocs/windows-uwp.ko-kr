@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f2cb92dca3da2d1f8e3eccfade6558f363c5b13
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 0b38cf60f1f890649af33ad34f244bc348af2832
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257872"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82148699"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 
@@ -54,7 +54,7 @@ Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows Phone OS 7.1 이전 �
 ### <a name="installing"></a>설치
 Windows 10 Mobile용 Microsoft 에뮬레이터는 Windows 10 SDK의 일부로 제공됩니다. Windows 10 SDK 및 에뮬레이터는 Visual Studio 설치 과정에서 설치될 수 있습니다. [Visual Studio 다운로드 페이지](https://developer.microsoft.com/windows/downloads)를 참조하세요.
 
-또한 [Microsoft 에뮬레이터 설치 프로그램](https://go.microsoft.com/fwlink/p/?LinkID=615095)을 사용하여 Windows 10 Mobile K용 Microsoft 에뮬레이터를 설치할 수 있습니다.
+또한 [Microsoft 에뮬레이터 설치 프로그램](https://download.microsoft.com/download/E/3/4/E347E8C5-BD79-49AF-941C-D08893A45268/emulator/EmulatorSetup.exe)을 사용하여 Windows 10 Mobile K용 Microsoft 에뮬레이터를 설치할 수 있습니다.
 
 ### <a name="uninstalling"></a>제거
 
@@ -393,7 +393,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 
 -   시뮬레이트되는 위치 속성은 위도, 경도, 정확도 및 PositionSource뿐입니다. 위치 시뮬레이터는 속도, 방향 등의 기타 속성을 시뮬레이트하지 않습니다.
 
-## <a name="network"></a>Network (네트워크)
+## <a name="network"></a>네트워크
 
 에뮬레이터의 **추가 도구**에 있는 **네트워크** 탭을 사용하여 여러 다른 네트워크 속도와 여러 다른 신호 강도로 앱을 테스트합니다. 이 기능은 앱에서 웹 서비스를 호출하거나 데이터를 전송하는 경우 유용합니다.
 
@@ -563,10 +563,10 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 
 | 기능            | Windows Phone 8.0 카메라 | Windows Phone 8.1 카메라  |
 |--------------------|--------------------------|---------------------------|
-| 해결 방법         | 640 x 480(VGA)          | 640 x 480(VGA) 이상 |
+| 해상도         | 640 x 480(VGA)          | 640 x 480(VGA) 이상 |
 | 자동 초점          | 예                      | 예                       |
-| Flash              | 아니요                       | 예                       |
-| 확대/축소               | 2x(디지털 또는 광학)  | 2x(디지털 또는 광학)   |
+| Flash              | 아니오                       | 예                       |
+| Zoom               | 2x(디지털 또는 광학)  | 2x(디지털 또는 광학)   |
 | 비디오 해상도   | 640 x 480(VGA)          | 640 x 480(VGA) 이상 |
 | 미리 보기 해상도 | 640 x 480(VGA)          | 640 x 480(VGA)           |
 
@@ -619,7 +619,7 @@ Windows Phone 에뮬레이터의 프레임 속도 카운터를 사용하여 실�
 
 다음은 에뮬레이터와 관련해서 알려진 문제이며, 발생할 경우 문제를 해결하는 제안 방법이 포함되어 있습니다.
 
-### <a name="error-message-failed-while-removing-virtual-ethernet-switch"></a>오류 메시지: "가상 이더넷 스위치를 제거하는 동안 오류가 발생했습니다".
+### <a name="error-message-failed-while-removing-virtual-ethernet-switch"></a>오류 메시지: "가상 이더넷 스위치를 제거하는 동안 오류가 발생했습니다."
 
 새 Windows 10 플라이트로 업데이트한 후를 포함하여 에뮬레이터와 관련된 가상 네트워크 스위치가 사용자 인터페이스를 통해 삭제할 수 없는 상태로 전환되는 경우가 있습니다.
 
@@ -646,7 +646,7 @@ Microsoft 에뮬레이터는 모든 VM, diff 디스크 및 에뮬레이터 특�
 하드웨어 가속을 사용하지 않도록 설정하려면
 
 1. 레지스트리 편집기를 시작합니다.
-2. 존재하지 않는 경우 다음 레지스트리 하위 키를 만듭니다. HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
+2. 없는 경우 다음 레지스트리 하위 키를 만듭니다. HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Xde\10.0
 3. 10.0 폴더를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 가리킨 다음 **DWORD 값**을 클릭합니다.
 4. **DisableRemoteFx**를 입력하고 Enter 키를 누릅니다.
 5. **DisableRemoteFx**를 두 번 클릭하고 **값** 데이터 상자에 1을 입력한 다음 **10진수** 옵션을 선택하고 **확인**을 클릭합니다.

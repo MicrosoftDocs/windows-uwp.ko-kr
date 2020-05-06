@@ -6,10 +6,10 @@ ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: cd84892f9d90a69379ac5a7f84dfa188adf1211e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74258791"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>2018년 5월 Windows 개발자 문서의 새로운 내용
@@ -33,7 +33,7 @@ Fluent Design System 동작의 기본적인 타이밍, 감속, 방향 및 중력
 
 ### <a name="fluent-design-updates"></a>Fluent Design 업데이트
 
-Fluent Design 페이지가 다음과 같이 시각적으로 업데이트되고 약간 변경되었습니다.
+시각적으로 업데이트되고 약간 변경된 Fluent 디자인 페이지는 다음과 같습니다.
 
 * [맞춤, 여백, 안쪽 여백](../design/layout/alignment-margin-padding.md)
 * [색](../design/style/color.md)
@@ -63,7 +63,7 @@ Fluent Design 페이지가 다음과 같이 시각적으로 업데이트되고 �
 
 Windows 커뮤니티 도구 키트의 이후 릴리스에서 WebView와 같은 기타 컨트롤을 찾으세요. 자세한 내용은 [WPF 및 Windows Forms 애플리케이션에서 UWP 컨트롤 호스트](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)를 참조하세요.
 
-### <a name="gaze-input-and-interactions"></a>응시 입력 및 조작
+### <a name="gaze-input-and-interactions"></a>응시 입력 및 상호 작용
 
 [눈의 위치와 움직임을 기반으로 사용자의 응시, 관심 및 현재 상태를 추적합니다.](../design/input/gaze-interactions.md) UWP 앱을 사용하고 상호 작용하는 이러한 강력하고 새로운 방법은 보조 기술로 특히 유용합니다. 또한 응시 입력은 게임(대상 획득 및 추적 포함)과 기존 입력 디바이스(예: 키보드, 마우스, 터치)를 사용할 수 없는 기타 대화형 시나리오에 유용한 기회를 제공합니다.
 
@@ -87,7 +87,7 @@ MSIX 패키징 형식은 파트너가 해당 도구 및 솔루션으로 MSIX 에
 
 ### <a name="page-transitions"></a>페이지 전환
 
-[페이지 전환](../design/motion/page-transitions.md)은 사용자를 앱의 페이지 간에 이동시킵니다. 이 기능은 탐색 계층 구조에서 사용자의 현재 위치를 이해하도록 하고 페이지 간 관계에 대한 피드백을 제공합니다.
+[페이지 전환](../design/motion/page-transitions.md)은 사용자를 앱의 페이지 간에 이동시킵니다. 사용자가 탐색 계층 구조상의 위치를 파악하고 페이지 간의 관계에 대한 피드백을 제공하는 데 도움이 됩니다.
 
 ### <a name="project-rome"></a>프로젝트 로마
 
@@ -103,7 +103,7 @@ MSIX 패키징 형식은 파트너가 해당 도구 및 솔루션으로 MSIX 에
 
 새로운 학습 트랙을 사용하여 시작 콘텐츠를 개선했습니다. 이러한 새 항목은 새 Windows 10 개발자에게 수행하려는 몇 가지 일반적인 작업에 대한 정보를 제공하기 위해 작성되었습니다. 이러한 항목은 자습서도 아니고 간편한 연습 과정을 제공하지도 않으며, 기존 설명서가 있는 위치와 사용 방법을 알려줍니다. 개선된 [코딩 시작](../get-started/create-uwp-apps.md) 페이지를 확인하거나 각 개별 학습 트랙을 살펴보세요.
 
-* [양식 작성](../get-started/construct-form-learning-track.md)
+* [양식 생성](../get-started/construct-form-learning-track.md)
 * [목록에 고객 표시](../get-started/display-customers-in-list-learning-track.md)
 * [설정 저장 및 로드](../get-started/settings-learning-track.md)
 * [파일 작업](../get-started/fileio-learning-track.md)
@@ -122,14 +122,14 @@ MSIX 패키징 형식은 파트너가 해당 도구 및 솔루션으로 MSIX 에
 
 ### <a name="cwinrt"></a>C++/WinRT
 
-C++/WinRT는 Windows 런타임 API를 작성하고 사용하는 새로운 방법입니다. 이는 헤더 파일에서만 구현되고 최신 앱 기능에 대한 최고 수준의 액세스를 제공하도록 설계되었습니다. [동영상을 시청](https://www.youtube.com/watch?v=TLSul1XxppA&feature=youtu.be)하여 작동 원리를 파악한 후 [개발자 문서 읽어 보고](../cpp-and-winrt-apis/index.md) 자세한 내용을 확인하세요.
+C++/WinRT는 Windows 런타임 API를 작성하고 사용하는 새로운 방법입니다. 이는 헤더 파일에서만 구현되고 최신 앱 기능에 대한 최고 수준의 액세스를 제공하도록 설계되었습니다. 이 [비디오를 시청](https://www.youtube.com/watch?v=TLSul1XxppA&feature=youtu.be)하여 작동 방식을 알아본 다음, [개발자 문서](../cpp-and-winrt-apis/index.md)에서 자세한 내용을 참조하세요.
 
 ### <a name="multi-instance-uwp-apps"></a>다중 인스턴스 UWP 앱
 
-Windows에서는 이제 UWP 앱의 여러 인스턴스를 각각 별도의 자체 프로세스로 실행할 수 있습니다. [동영상을 시청](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be)하여 이 기능을 지원하는 새 앱을 만드는 방법을 알아보고 [개발자 문서를 읽어](../launch-resume/multi-instance-uwp.md) 이 기능을 사용하는 방법과 이유에 대한 추가 지침을 확인하세요.
+Windows에서는 이제 UWP 앱의 여러 인스턴스를 각각 별도의 자체 프로세스로 실행할 수 있습니다. 이 [비디오를 시청](https://www.youtube.com/watch?v=clnnf4cigd0&feature=youtu.be)하여 이 기능을 지원하는 새 앱을 만드는 방법을 알아본 다음, [개발자 문서](../launch-resume/multi-instance-uwp.md)에서 이 기능을 사용하는 방법과 이유에 대한 자세한 지침을 참조하세요.
 
 ## <a name="samples"></a>샘플
 
 ### <a name="customer-database-tutorial"></a>고객 데이터베이스 자습서
 
-이 자습서는 고객 목록을 관리하기 위한 기본 UWP 앱을 만들고 엔터프라이즈 개발에서 유용한 개념 및 사례를 소개합니다. 로컬 SQLite 데이터베이스에 대한 UI 요소를 구현하고 작업을 추가하는 과정을 안내하며, 추가적인 작업을 원할 경우 원격 REST 데이터베이스에 연결하기 위한 대략적인 지침을 제공합니다. [여기에서 자습서를 확인하세요](../enterprise/customer-database-tutorial.md).
+이 자습서는 고객 목록을 관리하기 위한 기본 UWP 앱을 만들고 엔터프라이즈 개발에서 유용한 개념 및 사례를 소개합니다. UI 요소를 구현하고 로컬 SQLite 데이터베이스에 대한 작업을 추가하는 방법을 안내하고, 추가적으로 원하는 경우 원격 REST 데이터베이스에 연결하기 위한 대략적인 지침을 제공합니다. [여기에서 자습서를 확인하세요](../enterprise/customer-database-tutorial.md).
