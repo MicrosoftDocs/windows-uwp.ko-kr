@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Node.js, windows 10, 네이티브 windows, windows에 직접
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 456aac17f61ab0add3d35a48c74e151fa15e9e83
-ms.sourcegitcommit: 8efeb6672f759b1ea7e3e9e2f90e764480791142
+ms.openlocfilehash: fe1943da8c1de4f4fced5dec67079522d83f9a19
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75728474"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82173469"
 ---
 # <a name="set-up-your-nodejs-development-environment-directly-on-windows"></a>Windows에 직접 Node.js 개발 환경 설치
 
@@ -38,6 +38,7 @@ Node.js를 설치하는 여러 가지 방법이 있습니다. 버전이 매우 �
     ![노드 버전을 표시하지 않는 NVM 목록](../images/windows-nvm-powershell-no-node.png)
 
 6. `nvm install latest`를 사용하여 Node.js 최신 릴리스를 설치합니다(최신 기능 개선 사항을 테스트하는 것이 목적이지만 LTS 버전보다 이슈가 있을 가능성이 높음).
+
 7. 먼저 `nvm list available`을 사용하여 현재 LTS 버전 번호를 확인하고 안정적인 Node.js 최신 LTS 릴리스(권장)를 설치한 다음, `nvm install <version>`을 사용하여(`<version>`을 버전 번호로 변경) LTS 버전을 설치합니다(예: `nvm install 12.14.0`).
 
     ![사용 가능한 NVM 버전 목록](../images/windows-nvm-list.png)
@@ -46,8 +47,10 @@ Node.js를 설치하는 여러 가지 방법이 있습니다. 버전이 매우 �
 
     ![설치된 노드 버전을 표시하는 NVM 목록](../images/windows-nvm-node-installs.png)
 
-9. 현재 어떤 Node.js 버전이 기본값인지 확인하려면 `node --version`을 입력합니다.
+9. 필요한 Node.js 버전 번호가 설치되면 `nvm use <version>`을 입력하여 사용할 버전을 선택합니다(`<version>`을 숫자로 바꿈, 즉, `nvm use 12.9.0`).
+
 10. 프로젝트에 사용할 Node.js 버전을 변경하려면 새 프로젝트 디렉터리 `mkdir NodeTest`를 만들고 `cd NodeTest` 디렉터리로 들어간 다음, `nvm use <version>`을 입력하고 `<version>`을 사용하려는 버전 번호로 바꿉니다(예: v10.16.3`).
+
 11. `npm --version`을 사용하여 설치된 npm 버전을 확인합니다. 이 버전 번호는 현재 Node.js 버전과 연결된 npm 버전으로 자동 변경됩니다.
 
 ## <a name="alternative-version-managers"></a>대체 버전 관리자

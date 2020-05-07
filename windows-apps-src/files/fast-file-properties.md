@@ -6,10 +6,10 @@ ms.topic: article
 keywords: windows 10, uwp, 파일, 속성
 ms.localizationpriority: medium
 ms.openlocfilehash: 5ae884ca5424f50a7a835bc55602b5aa7c54096d
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "63799617"
 ---
 # <a name="fast-access-to-file-properties-in-uwp"></a>UWP의 파일 속성에 빠르게 액세스 
@@ -17,8 +17,8 @@ ms.locfileid: "63799617"
 라이브러리에서 파일 및 속성 목록을 신속하게 수집하고 앱에서 해당 속성을 사용하는 방법에 대해 알아봅니다.  
 
 필수 구성 요소 
-- **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍**   C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요. 
-- **라이브러리에 대한 액세스 권한**   이 예제의 코드에서는 **picturesLibrary** 기능이 필요하지만 파일 위치에는 다른 기능이 필요하거나 아무 기능도 필요하지 않을 수 있습니다. 자세한 내용은 [파일 액세스 권한](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)을 참조하세요. 
+- **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍**   C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기 API 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요. 
+- **라이브러리에 대한 액세스 권한**   이 예제의 코드에는 **picturesLibrary** 기능이 필요하지만, 파일 위치에는 다른 기능이 필요하거나 기능이 전혀 필요하지 않을 수 있습니다. 자세한 내용은 [파일 액세스 권한](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)을 참조하세요. 
 - **단순 파일 열거**    이 예제에서는 [QueryOptions](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions)를 사용하여 몇 가지 고급 열거 속성을 설정합니다. 작은 디렉터리에 대한 단순 파일 목록을 가져오는 방법에 대한 자세한 내용은 [파일 및 폴더 열거 및 쿼리](https://docs.microsoft.com/windows/uwp/files/quickstart-listing-files-and-folders)를 참조하세요. 
 
 ## <a name="usage"></a>사용  

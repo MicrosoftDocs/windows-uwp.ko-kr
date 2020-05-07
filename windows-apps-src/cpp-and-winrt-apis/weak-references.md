@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 강한, 약한, 참조
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 781b63f9f32a0fdf7edee6479b60fd82822cc745
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: dc991ff485d9e4ba90264e1b8082a40e0f4ab801
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209238"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82267482"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>C++/WinRT의 강한 참조 및 약한 참조
 
@@ -359,7 +359,7 @@ void OnCompositionScaleChanged(Windows::UI::Xaml::Controls::SwapChainPanel const
 
 ## <a name="weak-references-in-cwinrt"></a>C++/WinRT의 약한 참조
 
-위에서, 약한 참조를 사용하는 방법을 살펴보았습니다. 일반적으로 약한 참조는 순환 참조를 중단하는 데 적합합니다. 예를 들어 XAML 기반 UI 프레임워크의 기본 구현에서는 프레임워크의 이전 설계 때문에 순환 참조를 처리하기 위해 C++/WinRT의 약한 참조 메커니즘이 필요합니다. 그러나 XAML 외부에서는 약한 참조를 사용할 필요가 없습니다(본질적으로 XAML과 관련된 것은 아님). 대신, 순환 참조와 약한 참조가 필요하지 않는 방식으로 고유한 C++/WinRT API를 설계할 수 있어야 합니다. 
+위에서, 약한 참조를 사용하는 방법을 살펴보았습니다. 일반적으로 약한 참조는 순환 참조를 중단하는 데 적합합니다. 예를 들어 XAML 기반 UI 프레임워크의 기본 구현의 경우 프레임워크의 이전 설계로 인해 순환 참조를 처리하려면 C++/WinRT의 약한 참조 메커니즘이 필요합니다. 그러나 XAML 외부에서는 약한 참조를 사용할 필요가 없습니다(본질적으로 XAML과 관련된 것은 아님). 대신, 순환 참조와 약한 참조가 필요하지 않는 방식으로 고유한 C++/WinRT API를 설계할 수 있어야 합니다. 
 
 어떤 형식을 선언하든, 약한 참조가 필요한지 여부 또는 필요한 시기는 C++/WinRT에서 즉시 명확하게 드러나지 않습니다. 따라서 C++/WinRT는 고유한 C++/WinRT 형식이 직간접적으로 파생되는 구조체 템플릿 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements)에서 약한 참조 지원을 자동으로 제공합니다. 이 지원은 [**IWeakReferenceSource**](/windows/desktop/api/weakreference/nn-weakreference-iweakreferencesource)에 대해 개체를 실제로 쿼리하는 경우에만 비용이 발생한다는 점에서 P4P(Pay-for-Play)입니다. 명시적으로 [해당 지원을 옵트아웃](#opting-out-of-weak-reference-support)할 수도 있습니다.
 

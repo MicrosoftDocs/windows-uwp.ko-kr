@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Mac에서 Windows로, 바로 가기 키 매핑, Unix에서 Windows로 이동, Mac에서 Windows로 전환, MacBook에서 Surface로의 이동 지원, Macintosh 사용자용 Windows 사용 방법, Macintosh에서 Windows로 전환, 개발 환경으로의 변경 지원, Mac OS X에서 Windows로, Mac에서 PC로 이동 지원
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 8c23fa3e6791a3cd78d259b40e68606a30fd9395
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.openlocfilehash: 457abcec97247afcc0d63c983c8a6cda2de51c66
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80218443"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81643696"
 ---
 # <a name="guide-for-changing-your-dev-environment-from-mac-to-windows"></a>개발 환경을 Mac에서 Windows로 변경하기 위한 가이드
 
@@ -82,7 +82,7 @@ PowerShell은 [Mac에서도 사용할 수 있습니다](https://docs.microsoft.c
 
 3. WSL(Linux용 Windows 하위 시스템)
 
-WSL을 사용하면 Windows 내에서 Linux 셸을 실행할 수 있습니다. 즉, 선택 항목 및 설치된 특정 Linux 배포판에 따라 *bash** 또는 기타 셸을 실행할 수 있습니다. WSL을 사용하면 Mac 사용자에게 가장 익숙한 환경이 제공됩니다. 예를 들어, Windows 명령줄을 사용할 때처럼 **dir**을 사용하는 것이 **ls**를 사용하여 현재 디렉터리에 있는 파일을 나열합니다. WSL의 설치 및 사용에 대해 자세히 알아보려면 [Windows 10에 Linux용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/windows/wsl/install-win10)를 참조하세요.
+WSL을 사용하면 Windows 내에서 Linux 셸을 실행할 수 있습니다. 즉, 선택 항목 및 설치된 특정 Linux 배포판에 따라 **bash** 또는 기타 셸을 실행할 수 있습니다. WSL을 사용하면 Mac 사용자에게 가장 익숙한 환경이 제공됩니다. 예를 들어, Windows 명령줄을 사용할 때처럼 **dir**을 사용하는 것이 **ls**를 사용하여 현재 디렉터리에 있는 파일을 나열합니다. WSL의 설치 및 사용에 대해 자세히 알아보려면 [Windows 10에 Linux용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/windows/wsl/install-win10)를 참조하세요.
 
 4. Windows 터미널(미리 보기)
 

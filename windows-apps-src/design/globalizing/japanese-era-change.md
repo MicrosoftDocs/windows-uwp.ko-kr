@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp, 현지화 가능성, 현지화, 일본, 연호
 ms.localizationpriority: high
 ms.openlocfilehash: 7e8250ccae96ed835aba2a2a993fdde9ae31a884
-ms.sourcegitcommit: 139717a79af648a9231821bdfcaf69d8a1e6e894
+ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "67714115"
 ---
 # <a name="prepare-your-application-for-the-japanese-era-change"></a>일본의 시대 변경을 대비한 애플리케이션 준비
@@ -79,7 +79,7 @@ ms.locfileid: "67714115"
 
 ### <a name="gannen-"></a>*간넨*(元年)
 
-일본력의 형식은 일반적으로 **&lt;연호&gt;&lt;연도&gt;** 입니다. 예를 들어 2018년은 **헤이세이 30년**(平成30年)입니다.  단, 첫 번째 해는 특별합니다. **&lt;연호&gt; 1년 대신** **&lt;연호&gt; 元年**(*간넨*)을 사용합니다. 따라서 헤이세이 시대의 첫 번째 해는 平成元年(*헤이세이 간넨*)입니다. 애플리케이션이 새 시대의 첫 번째 해를 제대로 처리하여 令和元年을 출력하는지 확인합니다.
+일본력의 형식은 일반적으로 **&lt;연호&gt; &lt;연도&gt;** 입니다. 예를 들어 2018년은 **헤이세이 30년**(平成30年)입니다.  단, 첫 번째 해는 특별합니다. **&lt;연호&gt; 1년 대신** **&lt;연호&gt; 元年**(*간넨*)을 사용합니다. 따라서 헤이세이 시대의 첫 번째 해는 平成元年(*헤이세이 간넨*)입니다. 애플리케이션이 새 시대의 첫 번째 해를 제대로 처리하여 令和元年을 출력하는지 확인합니다.
 
 ## <a name="related-apis"></a>관련 API
 

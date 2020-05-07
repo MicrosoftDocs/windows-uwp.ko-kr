@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: b3143247eab0bd8ed4266b78e34ec54dafa4dd7e
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "74259564"
 ---
 # <a name="open-files-and-folders-with-a-picker"></a>선택기를 사용하여 파일 및 폴더 열기
@@ -105,7 +105,7 @@ else
 
     이 예제에서는 세 가지 속성을 설정하여 사용자가 선택할 수 있는 편리한 위치에 사진의 풍부한 시각적 개체를 만듭니다. [**ViewMode**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.viewmode), [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation) 및 [**FileTypeFilter**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.filetypefilter).
 
-    -   [**ViewMode**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.viewmode)를 [**PickerViewMode**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode) **Thumbnail** 열거 값으로 설정하면 사진 미리 보기를 사용하여 파일 선택기에 파일을 표시함으로써 풍부한 시각적 개체가 만들어집니다. 이렇게 하려면 사진이나 비디오와 같은 시각적 파일을 선택합니다. 그렇지 않으면 [**PickerViewMode.List**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode)를 사용합니다. **사진 또는 비디오 첨부** 및 **문서 첨부** 기능이 있는 가상 메일 앱은 파일 선택기를 표시하기 전에 기능에 적합한 **ViewMode**를 설정합니다.
+    -   [**ViewMode**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.viewmode)를 [**PickerViewMode**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode) **Thumbnail** 열거형 값으로 설정하면 파일 선택기에서 파일을 나타내기 위해 사진 미리 보기를 사용하여 풍부한 시각적 표시를 만듭니다. 이렇게 하려면 사진이나 비디오와 같은 시각적 파일을 선택합니다. 그렇지 않으면 [**PickerViewMode.List**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode)를 사용합니다. **사진 또는 비디오 첨부** 및 **문서 첨부** 기능이 있는 가상 메일 앱은 파일 선택기를 표시하기 전에 기능에 적합한 **ViewMode**를 설정합니다.
 
     -   [  **PickerLocationId.PicturesLibrary**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation)를 사용하여 [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerLocationId)을 사진으로 설정하면 사용자가 사진을 찾을 수 있을 것 같은 위치에서 시작됩니다. **SuggestedStartLocation**을 선택하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
 

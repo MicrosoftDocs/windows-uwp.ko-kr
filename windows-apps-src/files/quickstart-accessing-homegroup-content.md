@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 07d94f5b11acfe14bf55392c5cbf2c1b7bcfbeef
-ms.sourcegitcommit: aaa4b898da5869c064097739cf3dc74c29474691
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "66369392"
 ---
 # <a name="accessing-homegroup-content"></a>홈 그룹 콘텐츠 액세스
@@ -193,7 +193,7 @@ ms.locfileid: "66369392"
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **사용자가 선택한 파일을 읽을 수 있도록 열고 파일 스트림을**[**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement)의 원본으로 설정한 다음, 파일을 재생합니다.
+3.  **사용자가 선택한 파일을 읽을 수 있도록 열고, 파일 스트림을**  [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement)의 원본으로 설정한 다음, 파일을 재생합니다.
     ```cs
     if (file != null)
     {

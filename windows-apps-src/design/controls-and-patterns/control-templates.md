@@ -12,10 +12,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: f5d0c2f5c5aa6c5d5bfcaee8e9b0ec14bbcd4ff3
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "71339375"
 ---
 # <a name="control-templates"></a>컨트롤 템플릿
@@ -105,7 +105,7 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 
 [  **VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState) 개체를 사용하여 특정 상태일 때 나타나는 컨트롤의 모양을 지정합니다. **VisualState**에는 [**ControlTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter)에 있는 요소의 모양을 변경하는 [**Setter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.BeginStoryboard) 또는 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate)가 있습니다. 컨트롤이 [**VisualState.Name**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstate.name) 속성이 지정한 상태가 되면 **Setter** 또는 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)의 속성 변경 내용이 적용됩니다. 컨트롤이 상태에서 나가면 변경 내용이 제거됩니다. **VisualState** 개체를 [**VisualStateGroup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateGroup) 개체에 추가합니다. **VisualStateGroup** 개체를 **ControlTemplate**의 루트 [**FrameworkElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.FrameworkElement)에 설정한 [**VisualStateManager.VisualStateGroups**](https://docs.microsoft.com/dotnet/api/system.windows.visualstatemanager) 연결된 속성에 추가합니다.
 
-이 XAML은 `Checked`, `Unchecked` 및 `Indeterminate` 상태의 [**VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState) 개체를 보여 줍니다. 이 예제에서는 [**Border**](https://docs.microsoft.com/dotnet/api/system.windows.visualstatemanager)에 [**ControlTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border)의 루트 요소인 [**VisualStateManager.VisualStateGroups**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) 연결된 속성을 설정합니다. `Checked` **VisualState**는 `CheckGlyph`라는 [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)의 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)를 1로 지정합니다(이전 예제에 나와 있음). `Indeterminate` **VisualState**는 `IndeterminateGlyph`이라는 [**Ellipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse)의 **Opacity**를 1로 지정합니다. `Unchecked` **VisualState**에는 [**Setter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter) 또는 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)가 없으므로 [**CheckBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox)가 기본 모양으로 돌아갑니다.
+이 XAML은 `Checked`, `Unchecked` 및 `Indeterminate` 상태의 [**VisualState**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState) 개체를 보여 줍니다. 이 예제에서는 [**Border**](https://docs.microsoft.com/dotnet/api/system.windows.visualstatemanager)에 [**ControlTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Border)의 루트 요소인 [**VisualStateManager.VisualStateGroups**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) 연결된 속성을 설정합니다. `Checked` **VisualState**는 `CheckGlyph`라는 [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)의 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)를 1로 지정합니다(이전 예제에 나와 있음). `Indeterminate` **VisualState**는 `IndeterminateGlyph`라는 [**Ellipse**](/uwp/api/Windows.UI.Xaml.Shapes.Ellipse)의 **Opacity**를 1로 지정합니다. `Unchecked` **VisualState**에는 [**Setter**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Setter) 또는 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)가 없으므로 [**CheckBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox)가 기본 모양으로 돌아갑니다.
 
 ```XAML
 <ControlTemplate x:Key="CheckBoxTemplate1" TargetType="CheckBox">
@@ -200,7 +200,7 @@ XAML 컨트롤의 스타일과 템플릿을 문서화하는 항목은 앞에서 
 
 XAML 예제의 일부 속성에서 [{ThemeResource} 태그 확장](../../xaml-platform/themeresource-markup-extension.md)을 사용하는 리소스 참조를 봤을 것입니다. 이 기술은 단일 컨트롤 템플릿이 현재 활성화된 테마에 따라 값이 달라질 수 있는 리소스를 사용할 수 있도록 합니다. 테마의 주요 목적은 사용자가 시스템 전체에 어둡거나 밝거나 고대비 테마를 적용할 것인지 선택할 수 있게 하는 것이므로 이 기술은 특히 브러시와 색에 중요합니다. XAML 리소스 시스템을 사용하는 앱은 앱 UI의 테마 선택 항목이 사용자 시스템의 테마 선택을 반영하도록 해당 테마에 적합한 리소스 집합을 사용할 수 있습니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
 * [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics)
 * [사용자 지정 텍스트 편집 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl)

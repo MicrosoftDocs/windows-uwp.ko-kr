@@ -5,12 +5,12 @@ ms.date: 07/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: bbdce669faa73b1db2071173014dec474160affb
-ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
+ms.openlocfilehash: 26a0ea1ec70f4ae4255030541a6513541db1fb99
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81266951"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82267505"
 ---
 # <a name="more-advanced-concurrency-and-asynchrony-with-cwinrt"></a>C++/WinRT를 통한 고급 동시성 및 비동기
 
@@ -673,7 +673,7 @@ IAsyncAction Async(HANDLE event)
 IAsyncAction Async(winrt::handle event)
 {
     co_await DoWorkAsync();
-    co_await resume_on_signal(event); // The incoming handle *is* not valid here.
+    co_await resume_on_signal(event); // The incoming handle *is* valid here.
 }
 ```
 
@@ -717,7 +717,7 @@ IAsyncAction SampleCaller()
 
 ## <a name="asynchronous-timeouts-made-easy"></a>간편한 비동기 시간 제한
 
-C++/WinRT는 C++ 코루틴에 많이 투자됩니다. 동시성 코드 작성에 미치는 영향력은 다양합니다. 이 섹션에서는 비동기에 대한 세부 정보가 중요하지 않은 경우에 대해 설명하며, 원하는 것은 결과뿐입니다. 이러한 이유로 [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) Windows 런타임 비동기 작업 인터페이스에 대한 C++/WinRT의 구현에는 **std::function**에서 제공하는 것과 비슷한 **get** 함수가 있습니다.
+C++/WinRT는 C++ 코루틴에 많이 투자됩니다. 동시성 코드 작성에 미치는 영향력은 다양합니다. 이 섹션에서는 비동기에 대한 세부 정보가 중요하지 않은 경우에 대해 설명하며, 원하는 것은 결과뿐입니다. 이러한 이유로 [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) Windows 런타임 비동기 작업 인터페이스에 대한 C++/WinRT 구현에는 **std::future**에서 제공하는 것과 비슷한 **get** 함수가 있습니다.
 
 ```cppwinrt
 using namespace winrt::Windows::Foundation;

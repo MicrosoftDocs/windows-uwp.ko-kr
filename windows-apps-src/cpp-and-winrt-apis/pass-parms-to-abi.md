@@ -5,12 +5,12 @@ ms.date: 07/10/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, 프로젝션, 전달, 매개 변수, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: c1e172fc4dbd5b865add1828a98dc1a030d5dc6f
-ms.sourcegitcommit: 8b4c1fdfef21925d372287901ab33441068e1a80
+ms.openlocfilehash: 9c5ce6a30e68fe6fc26316bc2f41c6e2556b98ef
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67844349"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255257"
 ---
 # <a name="passing-parameters-into-the-abi-boundary"></a>매개 변수를 ABI 경계로 전달
 
@@ -45,15 +45,15 @@ ms.locfileid: "67844349"
 
 Windows 런타임 컬렉션은 이미 **IIterable**입니다.
 
-|전달할 수 있는 형식|Sync|Async|참고|
+|전달할 수 있는 형식|동기화|Async|참고|
 |-|-|-|-|
 | `nullptr` | 예 | 예 | 기본 메서드에서 `nullptr`을 지원하는지 확인해야 합니다.|
 | **IIterable\<T\>** | 예 | 예 | 또는 모든 항목을 변환할 수 있습니다.|
-| **std::vector\<T\> const&** | 예 | 아니오 ||
+| **std::vector\<T\> const&** | 예 | 아니요 ||
 | **std::vector\<T\>&&** | 예 | 예 | 변경되지 않도록 콘텐츠가 반복자로 이동됩니다.|
 | **std::initializer_list\<T\>** | 예 | 예 | 비동기 버전은 항목을 복사합니다.|
-| **std::initializer_list\<U\>** | 예 | 아니오 | **U**를 **T**로 변환할 수 있어야 합니다.|
-| `{ ForwardIt begin, ForwardIt end }` | 예 | 아니오 | `*begin`을 **T**로 변환할 수 있어야 합니다.|
+| **std::initializer_list\<U\>** | 예 | 아니요 | **U**를 **T**로 변환할 수 있어야 합니다.|
+| `{ ForwardIt begin, ForwardIt end }` | 예 | 아니요 | `*begin`을 **T**로 변환할 수 있어야 합니다.|
 
 **U**를 **T**로 변환할 수 있는 경우에도 **IIterable\<U\>** 및 **std::vector\<U\>** 는 허용되지 않습니다. **std::vector\<U\>** 의 경우, 이중 반복자 버전을 사용할 수 있습니다(자세한 내용은 아래 참조).
 
@@ -81,16 +81,16 @@ requestData.SetStorageItems({ storageFiles.begin(), storageFiles.end() }); // Bu
 
 [**IIterator\<T\>.GetMany(T\[\])** ](/uwp/api/windows.foundation.collections.iiterator-1.getmany)의 구현은 반복자가 `RandomAcessIt`인 경우 더 효율적입니다. 그렇지 않으면 해당 범위에 대해 여러 번 전달할 수 있습니다.
 
-|전달할 수 있는 형식|Sync|Async|참고|
+|전달할 수 있는 형식|동기화|Async|참고|
 |-|-|-|-|
 | `nullptr` | 예 | 예 | 기본 메서드에서 `nullptr`을 지원하는지 확인해야 합니다.|
 | **IIterable\<IKeyValuePair\<K, V\>\>** | 예 | 예 | 또는 모든 항목을 변환할 수 있습니다.|
-| **std::map\<K, V\> const&** | 예 | 아니오 ||
+| **std::map\<K, V\> const&** | 예 | 아니요 ||
 | **std::map\<K, V\>&&** | 예 | 예 | 변경되지 않도록 콘텐츠가 반복자로 이동됩니다.|
-| **std::unordered_map\<K, V\> const&** | 예 | 아니오 ||
+| **std::unordered_map\<K, V\> const&** | 예 | 아니요 ||
 | **std::unordered_map\<K, V\>&&** | 예 | 예 | 변경되지 않도록 콘텐츠가 반복자로 이동됩니다.|
 | **std::initializer_list\<std::pair\<K, V\>\>** | 예 | 예 | 형식 **K** 및 **V**는 정확하게 일치해야 합니다. 키는 중복될 수 없습니다. 비동기 버전은 항목을 복사합니다.|
-| `{ ForwardIt begin, ForwardIt end }` | 예 | 아니오 | `begin->first` 및 `begin->second`를 각각 **K** 및 **V**로 변환할 수 있어야 합니다.|
+| `{ ForwardIt begin, ForwardIt end }` | 예 | 아니요 | `begin->first` 및 `begin->second`를 각각 **K** 및 **V**로 변환할 수 있어야 합니다.|
 
 ## <a name="vector-view-parameters"></a>벡터 보기 매개 변수
 
@@ -98,14 +98,14 @@ requestData.SetStorageItems({ storageFiles.begin(), storageFiles.end() }); // Bu
 
 [**IVector\<T\>.GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview)를 사용하면 **IVector**에서 **IVectorView**를 가져올 수 있습니다.
 
-|전달할 수 있는 형식|Sync|Async|참고|
+|전달할 수 있는 형식|동기화|Async|참고|
 |-|-|-|-|
 | `nullptr` | 예 | 예 | 기본 메서드에서 `nullptr`을 지원하는지 확인해야 합니다.|
 | **IVectorView\<T\>** | 예 | 예 | 또는 모든 항목을 변환할 수 있습니다.|
-| **std::vector\<T\>const&** | 예 | 아니오 ||
+| **std::vector\<T\>const&** | 예 | 아니요 ||
 | **std::vector\<T\>&&** | 예 | 예 | 변경되지 않도록 콘텐츠가 보기로 이동됩니다.|
 | **std::initializer_list\<T\>** | 예 | 예 | 형식은 정확하게 일치해야 합니다. 비동기 버전은 항목을 복사합니다.|
-| `{ ForwardIt begin, ForwardIt end }` | 예 | 아니오 | `*begin`을 **T**로 변환할 수 있어야 합니다.|
+| `{ ForwardIt begin, ForwardIt end }` | 예 | 아니요 | `*begin`을 **T**로 변환할 수 있어야 합니다.|
 
 이중 반복자 버전은 직접 전달하기 위한 요구 사항에 맞지 않는 벡터 보기를 만드는 데 사용할 수 있습니다. 하지만 벡터는 직접 액세스를 지원하므로 `RandomAcessIter`를 전달하는 것이 좋습니다.
 
@@ -115,13 +115,13 @@ requestData.SetStorageItems({ storageFiles.begin(), storageFiles.end() }); // Bu
 
 **IMap::GetView**를 사용하면 **IMap**에서 **IMapView**를 가져올 수 있습니다.
 
-|전달할 수 있는 형식|Sync|Async|참고|
+|전달할 수 있는 형식|동기화|Async|참고|
 |-|-|-|-|
 | `nullptr` | 예 | 예 | 기본 메서드에서 `nullptr`을 지원하는지 확인해야 합니다.|
 | **IMapView\<K, V\>** | 예 | 예 | 또는 모든 항목을 변환할 수 있습니다.|
-| **std::map\<K, V\> const&** | 예 | 아니오 ||
+| **std::map\<K, V\> const&** | 예 | 아니요 ||
 | **std::map\<K, V\>&&** | 예 | 예 | 변경되지 않도록 콘텐츠가 보기로 이동됩니다.|
-| **std::unordered_map\<K, V\> const&**  | 예 | 아니오 ||
+| **std::unordered_map\<K, V\> const&**  | 예 | 아니요 ||
 | **std::unordered_map\<K, V\>&&** | 예 | 예 | 변경되지 않도록 콘텐츠가 보기로 이동됩니다.|
 | **std::initializer_list\<std::pair\<K, V\>\>** | 예 | 예 | 동기 및 비동기 버전에서 모두 항목을 복사합니다. 키를 중복할 수 없습니다.|
 
@@ -164,3 +164,5 @@ requestData.SetStorageItems({ storageFiles.begin(), storageFiles.end() }); // Bu
 | **std::vector<C>** | **C**의 C++ **std::vector**이며 여기서 **C**는 **T** 및 `sizeof(C) == sizeof(T)`로 변환 가능합니다. |
 | `{ T*, T* }` | 포인터의 쌍은 범위 [시작, 종료]를 나타냅니다.|
 | **std::initializer_list\<T\>** ||
+
+또한 [Windows 런타임 ABI 경계에서 C 스타일 배열을 전달하는 다양한 패턴](https://devblogs.microsoft.com/oldnewthing/20200205-00/?p=103398) 블로그 게시물도 참조하세요.

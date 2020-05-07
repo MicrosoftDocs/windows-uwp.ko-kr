@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5, 19H1
-ms.openlocfilehash: ab5b509aa69dc54d18ef3643d7ccd46bc2984676
-ms.sourcegitcommit: 8be8ed1ef4e496055193924cd8cea2038d2b1525
+ms.openlocfilehash: 68682d7b47e42995060601f5ae1c9b8d891aa3ff
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80614097"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81643711"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -472,7 +472,7 @@ End Sub
 
 다중 선택이 활성화되면 각 트리 보기 노드 옆에 확인란이 표시되고 선택된 항목이 강조 표시됩니다. 사용자는 확인란을 사용하여 항목을 선택 또는 선택 취소할 수 있습니다. 해당 항목을 클릭해도 여전히 항목이 호출됩니다.
 
-부모 노드를 선택하거나 선택 취소하면 해당 노드의 모든 자식 노드가 선택 또는 선택 취소됩니다. 모두 그런 것은 아니지만, 부모 노드 아래에 있는 일부 자식 노드의 경우 부모 노드의 확인란이 (검은색 상자로 채워진) 미확정으로 표시됩니다.
+부모 노드를 선택하거나 선택 취소하면 해당 노드의 모든 자식 노드가 선택 또는 선택 취소됩니다. 부모 노드 아래의 자식 중 전부가 아니라 일부만 선택하면 부모 노드의 확인란이 결정할 수 없음 상태로 표시됩니다.
 
 ![트리 보기에서 다중 선택](images/treeview-selection.png)
 

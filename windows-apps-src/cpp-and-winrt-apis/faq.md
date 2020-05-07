@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: d942fd58619c12192fd8429c0e8aeb5aa070fd4d
-ms.sourcegitcommit: 2a80888843bb53cc1f926dcdfc992cf065539a67
+ms.openlocfilehash: 95f5ad82831b6b07e0bbc2127947f777f0cd50e5
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81005453"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "81759929"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT에 대해 자주 묻는 질문
 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통해 Windows 런타임 API를 작성하거나 사용하는 방법과 관련된 질문과 대답입니다.
@@ -82,6 +82,8 @@ Windows 런타임 클래스(런타임 클래스)를 ‘사용’하기만 하는
 - 단, 매우 드물지만 종료 경합 또는 반 교착 상태와 관련된 경우는 **IClosable::Close**를 호출해야 합니다. 예를 들어 **Windows.UI.Composition** 형식을 사용한다면, C++/WinRT 래퍼의 소멸을 통해 개체를 삭제하는 대신 설정된 시퀀스에서 개체를 삭제하려는 경우가 발생할 수 있습니다.
 - 마지막으로 남은 개체 참조를 보관 가능한 다른 API로 전달해서 개체 참조가 남아 있지 않을 수도 있다면 **IClosable::Close**를 호출하는 것이 좋습니다.
 - 확실하지 않은 경우 래퍼가 소멸되면서 호출할 때까지 기다리지 않고 **IClosable::Close**를 수동으로 호출하는 것이 안전합니다.
+
+따라서 마지막 참조가 있다는 것을 알고 있는 경우 래퍼 소멸자에서 작업을 수행하도록 할 수 있습니다. 마지막 참조가 종료되기 전에 닫아야 하는 경우 **닫기**를 호출해야 합니다. 예외를 안전하게 보호하려면 RAII(resource-acquisition-is-initialization) 형식에서 **닫기**를 수행해야 합니다(이에 따라 해제 시 닫기가 수행됨). C++/WinRT에는 **unique_close** 래퍼가 없지만 직접 만들 수 있습니다.
 
 ## <a name="can-i-use-llvmclang-to-compile-with-cwinrt"></a>C++/WinRT로 컴파일하기 위해 LLVM/Clang을 사용할 수 있나요?
 LLVM 및 Clang 도구 체인은 C++/WinRT에서 지원되지 않지만 C++/WinRT의 표준 적합성의 유효성을 검사하기 위해 내부적으로 사용됩니다. 예를 들어 Microsoft가 내부적으로 수행하는 작업을 에뮬레이트하려는 경우 아래에 설명된 대로 실험해 볼 수 있습니다.

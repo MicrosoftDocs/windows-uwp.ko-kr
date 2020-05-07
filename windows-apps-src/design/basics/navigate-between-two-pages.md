@@ -14,10 +14,10 @@ dev_langs:
 - cppwinrt
 - cpp
 ms.openlocfilehash: c35795eeb6afa32e77acb507c687e334e454d0d5
-ms.sourcegitcommit: e0f6150c8f45b69a3e114d0556c2c3d5aed7238f
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "72560807"
 ---
 # <a name="implement-navigation-between-two-pages"></a>두 페이지 간의 탐색 구현
@@ -318,7 +318,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 
 Page1.xaml에서, 앞서 추가한 **HyperlinkButton**을 다음 [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel)로 바꿉니다.
 
-여기서는 텍스트 문자열 입력을 위한 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 레이블 및 [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) `name`을 추가합니다.
+여기서는 텍스트 문자열을 입력하기 위한 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 레이블 및 [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) `name`을 추가합니다.
 
 ```xaml
 <StackPanel>
@@ -450,7 +450,7 @@ Page1::Page1()
 }
 ```
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 * [UWP 앱의 탐색 디자인 기본 사항](https://docs.microsoft.com/windows/uwp/layout/navigation-basics)
 * [피벗](../controls-and-patterns/pivot.md)
 * [탐색 보기](../controls-and-patterns/navigationview.md)

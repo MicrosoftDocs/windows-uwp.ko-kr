@@ -6,10 +6,10 @@ ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
 ms.openlocfilehash: c23a9539d0fc3902f715917b380e8b6b3e132c15
-ms.sourcegitcommit: 1d868968297d0d6d02cc38fe84d0a3ab5bccfb60
+ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 04/29/2020
 ms.locfileid: "68974456"
 ---
 # <a name="tutorial-create-a-user-interface"></a>자습서: 사용자 인터페이스 만들기
@@ -183,7 +183,7 @@ XAML 편집기를 사용하여 컨트롤을 추가하려면 다음을 수행합�
 
     **RelativePanel**을 사용하는 레이아웃에 대한 자세한 내용은 [레이아웃 패널](https://docs.microsoft.com/windows/uwp/layout/layout-panels#relativepanel)을 참조하세요.
 
-2. **ImageGridView**라는 **GridView** 컨트롤을 **TextBlock** 요소 아래에 추가합니다. **RelativePanel**_연결된 속성_을 설정하여 컨트롤을 제목 텍스트 아래에 배치하고 화면의 전체 너비를 따라 늘립니다.
+2. **ImageGridView**라는 **GridView** 컨트롤을 **TextBlock** 요소 아래에 추가합니다. **RelativePanel** _연결된 속성_을 설정하여 컨트롤을 제목 텍스트 아래에 배치하고 화면의 전체 너비에 맞게 늘립니다.
 
     **이 XAML 추가**
 
