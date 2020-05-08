@@ -1,39 +1,39 @@
 ---
 ms.assetid: E322DFFE-8EEC-499D-87BC-EDA5CFC27551
-description: 제품 구매를 성공적으로 이행한 각 Microsoft Store 거래에서 거래 영수증을 선택적으로 반환할 수 있습니다.
-title: 영수증을 사용하여 제품 구매 확인
+description: 성공적인 제품 구매를 발생 시킨 각 Microsoft Store 트랜잭션에서는 트랜잭션 수신 확인을 선택적으로 반환할 수 있습니다.
+title: 확인 메일을 사용하여 제품 구매 검증
 ms.date: 04/16/2018
 ms.topic: article
-keywords: windows 10, uwp. 앱에서 바로 구매, IAP, 영수증, Windows.ApplicationModel.Store
+keywords: windows 10, uwp, 앱 내 구매, IAPs, 수신, Windows. ApplicationModel 스토어
 ms.localizationpriority: medium
-ms.openlocfilehash: a26d98de58c954f1bec588b335483de08404862b
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: ba87de0755469f373f9000f3d96d3021c9197985
+ms.sourcegitcommit: 28bd367ab8acc64d4b6f3f73adca12100cbd359f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259230"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82148883"
 ---
-# <a name="use-receipts-to-verify-product-purchases"></a>영수증을 사용하여 제품 구매 확인
+# <a name="use-receipts-to-verify-product-purchases"></a>확인 메일을 사용하여 제품 구매 검증
 
-제품 구매를 성공적으로 이행한 각 Microsoft Store 거래에서 거래 영수증을 선택적으로 반환할 수 있습니다. 이 영수증은 나열된 제품 및 통화 비용에 대한 정보를 고객에게 제공합니다.
+성공적인 제품 구매를 발생 시킨 각 Microsoft Store 트랜잭션에서는 트랜잭션 수신 확인을 선택적으로 반환할 수 있습니다. 이 영수증은 나열 된 제품 및 금액 비용에 대 한 정보를 고객에 게 제공 합니다.
 
-사용자가 앱을 구매했거나, Microsoft Store에서 추가 기능(앱에서 바로 구매 제품 또는 IAP라고도 함)을 구매했는지 확인해야 하는 경우 이 정보에 액세스할 수 있습니다. 예를 들어 다운로드 콘텐츠를 제공하는 게임을 가정해 보겠습니다. 게임 콘텐츠를 구매한 사용자가 다른 장치에서 플레이하려는 경우 사용자가 이미 콘텐츠를 소유하고 있는지 확인해야 합니다. 방법은 다음과 같습니다.
+이 정보에 대 한 액세스 권한이 있으면 앱에서 사용자가 앱을 구매 했는지 확인 하거나 Microsoft Store에서 추가 기능 (앱 내 제품 또는 IAP 라고도 함)을 구입 해야 하는 시나리오를 지원 합니다. 예를 들어 다운로드 한 콘텐츠를 제공 하는 게임을 가정해 보겠습니다. 게임 콘텐츠를 구매한 사용자가 다른 장치에서 재생 하려는 경우에는 사용자가 이미 콘텐츠를 소유 하 고 있는지 확인 해야 합니다. 방법은 다음과 같습니다.
 
 > [!IMPORTANT]
-> 이 문서에서는 [Windows.ApplicationModel.Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) 네임스페이스의 멤버를 사용하여 앱에서 바로 구매의 영수증을 가져오고 유효성을 검사하는 방법을 보여 줍니다. 앱에서 바로 구매(Windows 10, 버전 1607에 도입되었으며 Visual Studio에서 [Windows 10 Anniversary Edition(10.0, 빌드 14393)](https://docs.microsoft.com/uwp/api/Windows.Services.Store) 이상 릴리스를 대상으로 하는 프로젝트에 사용 가능)를 위해 **Windows.Services.Store** 네임스페이스를 사용하는 경우, 이 네임스페이스는 앱에서 바로 구매 건의 영수증을 받기 위해 API를 제공하지 않습니다. 그러나 Microsoft Store 컬렉션 API의 REST 메서드를 사용하여 구매 거래 데이터를 가져올 수 있습니다. 자세한 내용은 [앱에서 바로 구매의 영수증](in-app-purchases-and-trials.md#receipts)을 참조하세요.
+> 이 문서에서는 Windows 앱에서 제공 하는 구매에 대 한 확인을 가져오고 유효성을 검사 하기 위해 [Windows ApplicationModel. Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) 네임 스페이스의 멤버를 사용 하는 방법을 보여 줍니다. 앱 내 구매를 위해 Windows 10, 버전 1607에 도입 되 고 Windows 10 기념일 버전을 대상으로 하는 프로젝트에서 사용할 수 있는 [windows. Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store) 네임 스페이스를 사용 하는 경우 **(10.0; 빌드 14393)** 또는 Visual Studio의 이후 버전에서이 네임 스페이스는 앱에서 바로 구매에 대 한 구매 영수증을 얻기 위한 API를 제공 하지 않습니다. 그러나 Microsoft Store collection API에서 REST 메서드를 사용 하 여 구매 트랜잭션에 대 한 데이터를 가져올 수 있습니다. 자세한 내용은 [앱에서 바로 구매에 대 한 수신](in-app-purchases-and-trials.md#receipts)확인을 참조 하세요.
 
-## <a name="requesting-a-receipt"></a>영수증 요청
+## <a name="requesting-a-receipt"></a>수신 요청
 
 
-**Windows.ApplicationModel.Store** 네임스페이스는 영수증을 가져오는 다음 몇 가지 방법을 지원합니다.
+**Windows** 네임 스페이스는 다음과 같은 여러 가지 방법을 지원 합니다.
 
-* [CurrentApp.RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) 또는 [CurrentApp.RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync)(또는 이 메서드의 다른 오버로드 중 하나)를 사용하여 구매하는 경우 반환 값에 영수증이 포함되어 있습니다.
-* [CurrentApp.GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync) 메서드를 호출하여 앱과 앱의 모든 추가 기능에 대한 현재 영수증 정보를 검색할 수 있습니다.
+* [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) 또는 [Currentapp. RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) (또는이 메서드의 다른 오버 로드 중 하나)를 사용 하 여 구매할 경우 반환 값에는 수신이 포함 됩니다.
+* [GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync) 메서드를 호출 하 여 앱 및 앱의 모든 추가 기능에 대 한 현재 수신 정보를 검색할 수 있습니다.
 
-앱 영수증은 다음과 같습니다.
+앱 수신은 다음과 같이 표시 됩니다.
 
 > [!NOTE]
-> 이 예제는 XML을 쉽게 읽을 수 있도록 형식화되었습니다. 실제 앱 영수증에는 요소 사이에 공백이 포함되지 않습니다.
+> 이 예제는 XML을 읽을 수 있도록 하기 위해 형식이 지정 되었습니다. 실제 앱 수신 확인은 요소 사이에 공백을 포함 하지 않습니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -57,10 +57,10 @@ ms.locfileid: "74259230"
 </Receipt>
 ```
 
-제품 영수증은 다음과 같습니다.
+제품 확인은 다음과 같습니다.
 
 > [!NOTE]
-> 이 예제는 XML을 쉽게 읽을 수 있도록 형식화되었습니다. 실제 제품 영수증에는 요소 사이에 공백이 포함되지 않습니다.
+> 이 예제는 XML을 읽을 수 있도록 하기 위해 형식이 지정 되었습니다. 실제 제품 확인은 요소 사이에 공백을 포함 하지 않습니다.
 
 > [!div class="tabbedCodeSnippets"]
 ```xml
@@ -83,72 +83,72 @@ ms.locfileid: "74259230"
 </Receipt>
 ```
 
-이러한 영수증 예제 중 하나를 사용하여 유효성 검사 코드를 테스트할 수 있습니다. 영수증 내용에 대한 자세한 내용은 [요소 및 특성 설명](#receipt-descriptions)을 참조하세요.
+이러한 수신 예 중 하나를 사용 하 여 유효성 검사 코드를 테스트할 수 있습니다. 수신의 내용에 대 한 자세한 내용은 [요소 및 특성 설명을](#receipt-descriptions)참조 하십시오.
 
-## <a name="validating-a-receipt"></a>영수증 유효성 검사
+## <a name="validating-a-receipt"></a>수신 확인
 
-영수증의 신뢰성을 확인하려면 공용 인증서를 사용하여 영수증의 서명을 확인할 백 엔드 시스템(웹 서비스 또는 이와 유사한 것)이 필요합니다. 이 인증서를 가져오려면 URL ```https://go.microsoft.com/fwlink/p/?linkid=246509&cid=CertificateId```를 사용합니다. 여기서 ```CertificateId```는 영수증의 **CertificateId** 값입니다.
+수신의 신뢰성을 확인 하려면 공용 인증서를 사용 하 여 수신의 서명을 확인 하는 백 엔드 시스템 (웹 서비스 또는 이와 유사한 항목)이 필요 합니다. 이 인증서를 가져오려면 URL ```https://lic.apps.microsoft.com/licensing/certificateserver/?cid=CertificateId%60%60%60, where ```certificateid ' ' '는 수신의 **certificateid** 값입니다.
 
-다음은 해당 유효성 검사 프로세스 예입니다. 이 코드는 **System.Security** 어셈블리에 대한 참조를 포함하는 .NET Framework 콘솔 응용 프로그램에서 실행됩니다.
+다음은 유효성 검사 프로세스의 예입니다. 이 코드는 **System. 보안** 어셈블리에 대 한 참조를 포함 하는 .NET Framework 콘솔 응용 프로그램에서 실행 됩니다.
 
 > [!div class="tabbedCodeSnippets"]
 [!code-csharp[ReceiptVerificationSample](./code/ReceiptVerificationSample/cs/Program.cs#ReceiptVerificationSample)]
 
 <span id="receipt-descriptions" />
 
-## <a name="element-and-attribute-descriptions-for-a-receipt"></a>영수증의 요소 및 특성 설명
+## <a name="element-and-attribute-descriptions-for-a-receipt"></a>수신 확인에 대 한 요소 및 특성 설명
 
-이 섹션에서는 영수증의 요소와 특성을 설명합니다.
+이 섹션에서는 수신의 요소와 특성에 대해 설명 합니다.
 
-### <a name="receipt-element"></a>영수증 요소
+### <a name="receipt-element"></a>수신 요소
 
-이 파일의 루트 요소는 앱과 앱에서 바로 구매에 대한 정보를 포함하는 **Receipt** 요소입니다. 이 요소에는 다음과 같은 자식 요소가 있습니다.
+이 파일의 루트 요소는 앱 및 앱에서 바로 구매에 대 한 정보를 포함 하는 **수신** 요소입니다. 이 요소는 다음과 같은 자식 요소를 포함 합니다.
 
-|  요소  |  필수  |  수량  |  설명   |
+|  요소  |  필수  |  수량  |  Description   |
 |-------------|------------|--------|--------|
-|  [AppReceipt](#appreceipt)  |    아니요        |  0 또는 1  |  현재 앱에 대한 구매 정보를 포함합니다.            |
-|  [제품 수령](#productreceipt)  |     아니요       |  0개 이상    |   현재 앱에 대한 앱에서 바로 구매 정보를 포함합니다.     |
-|  서명  |      예      |  1   |   이 요소는 표준 [DSIG XML 구문](https://www.w3.org/TR/xmldsig-core/)입니다. 영수증 유효성 검사에 사용할 수 있는 서명이 포함된 **SignatureValue** 요소와 **SignedInfo** 요소를 포함합니다.      |
+|  [AppReceipt](#appreceipt)  |    예        |  0 또는 1  |  현재 앱에 대 한 구매 정보가 포함 되어 있습니다.            |
+|  [제품 수령](#productreceipt)  |     예       |  0개 이상    |   현재 앱에 대 한 앱에서의 구매에 대 한 정보를 포함 합니다.     |
+|  서명  |      예      |  1   |   이 요소는 표준 [DSIG 구문](https://www.w3.org/TR/xmldsig-core/)입니다. 여기에는 수신 확인 및 **SignedInfo** 요소를 확인 하는 데 사용할 수 있는 서명이 포함 된가 수 **값** 요소가 포함 됩니다.      |
 
-**Receipt**에는 다음 특성이 있습니다.
+**수신** 에는 다음과 같은 특성이 있습니다.
 
-|  특성  |  설명   |
+|  특성  |  Description   |
 |-------------|-------------------|
-|  **버전**  |    영수증의 버전 번호입니다.            |
-|  **CertificateId**  |     영수증에 서명하는 데 사용된 인증서 지문입니다.          |
-|  **ReceiptDate**  |    영수증이 서명되고 다운로드된 날짜입니다.           |  
-|  **ReceiptDeviceId**  |   이 영수증을 요청하는 데 사용된 디바이스를 식별합니다.         |  |
+|  **버전**  |    수신 확인의 버전 번호입니다.            |
+|  **CertificateId**  |     수신에 서명 하는 데 사용 되는 인증서 지문입니다.          |
+|  **ReceiptDate**  |    영수증이 서명 되 고 다운로드 된 날짜입니다.           |  
+|  **ReceiptDeviceId**  |   이 확인을 요청 하는 데 사용 되는 장치를 식별 합니다.         |  |
 
 <span id="appreceipt" />
 
 ### <a name="appreceipt-element"></a>AppReceipt 요소
 
-이 요소는 현재 앱에 대한 구매 정보를 포함합니다.
+이 요소에는 현재 앱에 대 한 구매 정보가 포함 됩니다.
 
-**AppReceipt**에는 다음 특성이 있습니다.
+**Appreceipt** 에는 다음과 같은 특성이 있습니다.
 
-|  특성  |  설명   |
+|  특성  |  Description   |
 |-------------|-------------------|
-|  **A-id**  |    구매를 식별합니다.           |
-|  **AppId**  |     OS에서 앱에 사용하는 패키지 패밀리 이름 값입니다.           |
-|  **LicenseType**  |    **Full** - 사용자가 앱의 처음 사용자용 버전을 구매한 경우 **Trial** - 사용자가 앱의 평가판을 다운로드한 경우           |  
-|  **PurchaseDate**  |    앱을 구매한 날짜입니다.          |  |
+|  **Id**  |    구매를 식별 합니다.           |
+|  **AppId**  |     OS에서 앱에 사용 하는 패키지 패밀리 이름 값입니다.           |
+|  **LicenseType**  |    사용자가 앱의 전체 버전을 구매한 경우 **전체**입니다. **평가판**-사용자가 앱의 평가판을 다운로드 한 경우           |  
+|  **PurchaseDate**  |    앱을 구입한 날짜입니다.          |  |
 
 <span id="productreceipt" />
 
-### <a name="productreceipt-element"></a>ProductReceipt 요소
+### <a name="productreceipt-element"></a>제품 수령 요소
 
-이 요소는 현재 앱에 대한 앱에서 바로 구매 정보를 포함합니다.
+이 요소는 현재 앱에 대 한 앱에서의 구매에 대 한 정보를 포함 합니다.
 
-**ProductReceipt**에는 다음 특성이 있습니다.
+**제품 확인** 에는 다음과 같은 특성이 있습니다.
 
-|  특성  |  설명   |
+|  특성  |  Description   |
 |-------------|-------------------|
-|  **A-id**  |    구매를 식별합니다.           |
-|  **AppId**  |     사용자가 구매를 수행한 앱을 식별합니다.           |
-|  **ProductId**  |     구매한 제품을 식별합니다.           |
-|  **ProductType**  |    제품 유형을 결정합니다. 현재 **Durable** 값만 지원합니다.          |  
-|  **PurchaseDate**  |    구매가 발생한 날짜입니다.          |  |
+|  **Id**  |    구매를 식별 합니다.           |
+|  **AppId**  |     사용자가 구매한 앱을 식별 합니다.           |
+|  **ProductId**  |     구매한 제품을 식별 합니다.           |
+|  **ProductType**  |    제품 유형을 결정 합니다. 현재는 **영 속**값만 지원 합니다.          |  
+|  **PurchaseDate**  |    구매가 발생 한 날짜입니다.          |  |
 
  
 

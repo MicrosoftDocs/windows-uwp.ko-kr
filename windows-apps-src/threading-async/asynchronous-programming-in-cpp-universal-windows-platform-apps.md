@@ -1,45 +1,45 @@
 ---
 ms.assetid: 34C00F9F-2196-46A3-A32F-0067AB48291B
-description: 이 문서에서는 설명 시각적 개체의 비동기 메서드 사용에 대 한 권장 되는 방법은 C++ 구성 요소 확장 (C++/CX) ppltasks.h의 concurrency 네임 스페이스에 정의 된 작업 클래스를 사용 하 여 합니다.
-title: C++의 비동기 프로그래밍
+description: 이 문서에서는 ppltasks.h의 concurrency 네임 스페이스에 정의 된 작업 클래스를 사용 하 여 Visual C++ 구성 요소 확장 (c + +/CX)에서 비동기 메서드를 사용 하는 권장 방법을 설명 합니다.
+title: C + +의 비동기 프로그래밍
 ms.date: 05/14/2018
 ms.topic: article
-keywords: windows 10, uwp, 스레드, 비동기, C++
+keywords: windows 10, uwp, 스레드, 비동기, c + +
 ms.localizationpriority: medium
-ms.openlocfilehash: d0caf002a68ea1de1342381c9b1a7f9d745a7342
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 73268a2aab0212277fb1caa158220cb7dbc180bf
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322030"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730068"
 ---
-# <a name="asynchronous-programming-in-ccx"></a>C++/CX의 비동기 프로그래밍
+# <a name="asynchronous-programming-in-ccx"></a>C + +/CX의 비동기 프로그래밍
 > [!NOTE]
-> 이 항목은 C++/CX 응용 프로그램 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다.
+> 이 항목은 C++/CX 애플리케이션 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 Windows 런타임(WinRT) API용 최신 표준 C++17 언어 프로젝션으로서 헤더 파일 기반 라이브러리로 구현되며, 오늘날 Windows API에 대해 최고 수준의 액세스를 제공하도록 설계되었습니다.
 
-이 문서에서는 시각적 개체의 비동기 메서드 사용에 대 한 권장 되는 방법에 설명 합니다 C++ 구성 요소 확장 (C++/CX)를 사용 하 여는 `task` 에 정의 된 클래스는 `concurrency` ppltasks.h의 네임 스페이스입니다.
+이 문서에서는 ppltasks.h의 `task` `concurrency` 네임 스페이스에 정의 된 클래스를 사용 하 여 Visual C++ 구성 요소 확장 (c + +/cx)에서 비동기 메서드를 사용 하는 데 권장 되는 방법을 설명 합니다.
 
-## <a name="universal-windows-platform-uwp-asynchronous-types"></a>UWP(유니버설 Windows 플랫폼) 비동기 형식
-UWP(유니버설 Windows 플랫폼)는 비동기 메서드를 호출하기 위한 잘 정의된 모델의 역할을 하며 그러한 메서드를 사용하는 데 필요한 유형을 제공합니다. UWP 비동기 모델에 익숙하지 않은 경우 이 문서에 앞서 [비동기 프로그래밍][AsyncProgramming]을 읽어 보세요.
+## <a name="universal-windows-platform-uwp-asynchronous-types"></a>UWP (유니버설 Windows 플랫폼) 비동기 형식
+UWP (유니버설 Windows 플랫폼)는 비동기 메서드를 호출 하기 위한 잘 정의 된 모델을 제공 하 고 이러한 메서드를 사용 하는 데 필요한 형식을 제공 합니다. UWP 비동기 모델에 익숙하지 않은 경우이 문서의 나머지 부분을 읽기 전에 [비동기 프로그래밍][AsyncProgramming] 을 참조 하세요.
 
-비동기 UWP Api에서 직접 사용할 수 있지만 C++를 선호 하는 접근 방식을 사용 하는 것은 [ **task 클래스** ][task-class] and its related types and functions, which are contained in the [**concurrency**][concurrencyNamespace] 네임 스페이스에 정의 된 `<ppltasks.h>`. **concurrency::task** 클래스의 유형은 일반용이지만 **/ZW** 컴파일러 스위치(UWP(유니버설 Windows 플랫폼) 앱 및 구성 요소에 필요)가 사용될 경우에는 task 클래스가 UWP 비동기 유형을 캡슐화하여 다음 작업을 수행하기가 쉬워집니다.
+C + +에서 직접 비동기 Windows 런타임 Api를 사용할 수 있지만, [**동시성**][concurrencyNamespace] 네임 스페이스에 포함 되 고에 `<ppltasks.h>`정의 된 [**작업 클래스**][task-class] 및 관련 형식 및 함수를 사용 하는 것이 좋습니다. **Concurrency:: task** 는 범용 형식 이지만 유니버설 WINDOWS 플랫폼 (UWP) 앱 및 구성 요소에 필요한 **/zw** 컴파일러 스위치가 사용 되는 경우 작업 클래스는 다음과 같은 작업을 용이 하 게 하기 위해 uwp 비동기 형식을 캡슐화 합니다.
 
--   여러 비동기 작업과 동기 작업을 함께 연결
+-   여러 비동기 및 동기 작업을 함께 연결
 
 -   작업 체인의 예외 처리
 
 -   작업 체인에서 취소 수행
 
--   해당 스레드 컨텍스트 또는 아파트에서 개별 작업 실행
+-   개별 작업이 적절 한 스레드 컨텍스트 또는 아파트에서 실행 되는지 확인 합니다.
 
-이 문서는 UWP 비동기 API와 함께 **task** 클래스를 사용하는 방법에 대한 기본 지침을 제공합니다. 자세한 설명서에 대 한 완료 **태스크** 및 이와 관련 된 메서드를 포함 하 여 [ **만들기\_태스크**][createTask], see [Task Parallelism (Concurrency Runtime)][taskParallelism]합니다. 
+이 문서에서는 UWP 비동기 Api에서 **작업** 클래스를 사용 하는 방법에 대 한 기본 지침을 제공 합니다. **작업 및 작업** [**\_만들기**][createTask]를 비롯 한 관련 메서드에 대 한 자세한 내용은 [작업 병렬 처리 (동시성 런타임)][taskParallelism]를 참조 하세요. 
 
-## <a name="consuming-an-async-operation-by-using-a-task"></a>작업을 통해 비동기 작업 사용
-다음 예제에서는 task 클래스를 통해 [**IAsyncOperation**][IAsyncOperation] 인터페이스를 반환하고 그 작업이 값을 생성하는 **async** 메서드를 사용하는 방법을 보여 줍니다. 다음은 기본 단계입니다.
+## <a name="consuming-an-async-operation-by-using-a-task"></a>작업을 사용 하 여 비동기 작업 사용
+다음 예제에서는 작업 클래스를 사용 하 여 [**iasyncoperation<tresult>**][Iasyncoperation<tresult>] 인터페이스를 반환 하 고 해당 작업에서 값을 생성 하는 **비동기** 메서드를 사용 하는 방법을 보여 줍니다. 기본 단계는 다음과 같습니다.
 
-1.  `create_task` 메서드를 호출하여 **IAsyncOperation^** 개체에 전달합니다.
+1.  메서드를 `create_task` 호출 하 고 **iasyncoperation<tresult> ^** 개체를 전달 합니다.
 
-2.  멤버 함수를 호출 [ **task:: then** ][taskThen] 작업에 제공 하는 람다는 호출할 비동기 작업이 완료 되 면 합니다.
+2.  작업에서 멤버 함수 [**task:: then**][taskThen] 을 호출 하 고 비동기 작업이 완료 되 면 호출 되는 람다를 제공 합니다.
 
 ``` cpp
 #include <ppltasks.h>
@@ -73,16 +73,16 @@ void App::TestAsync()
 }
 ```
 
-만들고에서 반환 된 작업을 [ **task:: then** ][taskThen] 함수 라고는 *연속*합니다. (이 경우) 사용자가 제공한 람다에 대한 입력 인수는 작업 연산이 완료될 때 생성하는 결과입니다. 이는 **IAsyncOperation** 인터페이스를 직접 사용하고 있다면 [**IAsyncOperation::GetResults**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_#Windows_Foundation_IAsyncOperation_1_GetResults)를 호출했을 때 검색되는 값과 동일합니다.
+[**Task:: then**][taskThen] 함수에서 만들고 반환 하는 작업을 *연속*작업 이라고 합니다. 사용자가 제공한 람다에 대 한 입력 인수 (이 경우)는 태스크 작업이 완료 될 때 생성 되는 결과입니다. **Iasyncoperation<tresult>** 인터페이스를 직접 사용 하는 경우 [**Iasyncoperation<tresult>:: GetResults**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperation_TResult_#Windows_Foundation_IAsyncOperation_1_GetResults) 를 호출 하 여 검색 되는 것과 동일한 값입니다.
 
-합니다 [ **task:: then** ][taskThen] 메서드가 즉시 반환 하 고 해당 대리자는 비동기 작업이 완료 될 때까지 실행 되지 않습니다. 이 예제에서 비동기 작업이 예외를 발생시키거나, 취소 요청의 결과로서 취소된 상태로 종료될 경우에는 연속 작업이 실행되지 않습니다. 나중에 이전 작업이 취소 또는 실패한 경우에도 실행되는 연속 작업을 작성하는 방법에 대해 살펴보겠습니다.
+[**Task:: then**][taskThen] 메서드는 즉시 반환 되며 해당 대리자는 비동기 작업이 성공적으로 완료 될 때까지 실행 되지 않습니다. 이 예제에서는 비동기 작업으로 인해 예외가 throw 되거나 취소 요청의 결과로 취소 된 상태에서 종료 되는 경우 연속 작업이 실행 되지 않습니다. 나중에 이전 태스크가 취소 되거나 실패 한 경우에도 실행 되는 연속 작업을 작성 하는 방법을 설명 합니다.
 
-로컬 스택에 task 변수를 선언하더라도 이 변수는 자신의 수명을 관리하므로 모든 작업이 완료되고 그에 대한 모든 참조가 범위를 벗어날 때까지 삭제되지 않습니다. 이는 작업이 완료되기 전에 메서드가 반환하는 경우에도 마찬가지입니다.
+로컬 스택에 작업 변수를 선언 하는 경우에는 작업을 완료 하기 전에 메서드가 반환 되는 경우에도 해당 작업이 완료 될 때까지 삭제 되지 않고 해당 작업에 대 한 모든 참조가 범위를 벗어날 때까지 해당 수명이 관리 됩니다.
 
 ## <a name="creating-a-chain-of-tasks"></a>작업 체인 만들기
-비동기 프로그래밍에서는 *작업 체인*이라고도 하는 작업 시퀀스를 정의하는 것이 일반적입니다. 각 연속 작업은 이전 작업이 완료된 경우에만 실행됩니다. 경우에 따라 이전(또는 *선행*) 작업은 연속 작업이 입력으로 받아들이는 값을 생성하기도 합니다. 사용 하 여는 [ **task:: then** ][taskThen] 메서드를 직관적이 고 간단한 방식으로 작업 체인을 만들 수 있습니다; 메서드가 반환를 **태스크<T>**  여기서  **T** 람다 함수의 반환 형식입니다. 여러 연속 작업 체인을 작성할 수 있습니다. `myTask.then(…).then(…).then(…);`
+비동기 프로그래밍에서는 각 연속 작업이 완료 될 때만 실행 되는 작업 순서 ( *작업 체인*이 라고도 함)를 정의 하는 것이 일반적입니다. 경우에 따라 이전 (또는 *선행*작업) 작업은 연속에서 입력으로 허용 하는 값을 생성 합니다. [**Task:: then**][taskThen] 메서드를 사용 하 여 직관적이 고 간단한 방법으로 작업 체인을 만들 수 있습니다. 메서드는 **T** 가 람다 함수의 반환 형식인 **작업<T> ** 을 반환 합니다. 작업 체인에 여러 연속을 구성할 수 있습니다.`myTask.then(…).then(…).then(…);`
 
-작업 체인은 연속이 새로운 비동기 작업(operation)을 만들 때 특히 유용합니다. 그러한 작업을 비동기 작업(task)이라고 합니다. 다음 예제에서는 두 개의 연속 작업이 있는 작업 체인을 보여 줍니다. 초기 작업은 기존 파일에 대한 핸들을 얻고, 해당 작업이 완료되면 첫 번째 연속 작업이 새 비동기 작업을 시작하여 파일을 삭제합니다. 이 작업이 완료되면 두 번째 연속 작업이 실행되고 확인 메시지가 표시됩니다.
+작업 체인은 연속 작업에서 새 비동기 작업을 만들 때 특히 유용 합니다. 이러한 작업을 비동기 작업 이라고 합니다. 다음 예에서는 두 개의 연속 작업이 있는 작업 체인을 보여 줍니다. 초기 태스크는 기존 파일에 대 한 핸들을 가져오고, 작업이 완료 되 면 첫 번째 연속 작업이 새 비동기 작업을 시작 하 여 파일을 삭제 합니다. 작업이 완료 되 면 두 번째 연속 작업이 실행 되 고 확인 메시지를 출력 합니다.
 
 ``` cpp
 #include <ppltasks.h>
@@ -102,36 +102,36 @@ void App::DeleteWithTasks(String^ fileName)
 }
 ```
 
-앞의 예제에는 4가지 중요 사항이 있습니다.
+앞의 예제에서는 네 가지 중요 한 사항을 보여 줍니다.
 
--   첫 번째 연속 작업은 [**IAsyncAction^** ][IAsyncAction] 개체를 **task<void>** 로 변환하고 **task**를 반환합니다.
+-   첫 번째 연속은 [**iasyncaction ^**][IAsyncAction] 개체를 **<void> 작업** 으로 변환 하 고 **작업**을 반환 합니다.
 
--   두 번째 연속 작업은 오류 처리를 수행하지 않으며, 따라서 입력으로 **task<void>** 가 아닌 **void**를 사용합니다. 이것은 값 기반 연속 작업입니다.
+-   두 번째 연속 작업은 오류 처리를 수행 하지 않으므로 **작업<void> ** 을 입력으로 사용 하지 않고 **void** 를 사용 합니다. 값 기반 연속입니다.
 
--   두 번째 연속 작업 때까지 실행 되지 않습니다 합니다 [ **DeleteAsync** ][deleteAsync] 작업을 완료 합니다.
+-   [**DeleteAsync**][deleteAsync] 작업이 완료 될 때까지 두 번째 연속 작업이 실행 되지 않습니다.
 
--   값을 기반으로 되었으면 하는 작업 이므로 두 번째 연속 작업에 대 한 호출에 의해 시작 [ **DeleteAsync** ][deleteAsync] 예외를 throw 두 번째 연속 작업 전혀 실행 되지 않습니다.
+-   두 번째 연속은 값을 기반으로 하기 때문에 [**DeleteAsync**][deleteAsync] 에 대 한 호출에 의해 시작 된 작업이 예외를 throw 하는 경우 두 번째 연속 작업이 전혀 실행 되지 않습니다.
 
-**참고**  은 작업 체인을 만들어 사용 하는 방법 중 하나는 **태스크** 비동기 작업을 작성 하는 클래스입니다. join 또는 choice 연산자 **&&** 및 **||** 를 사용하여 작업을 구성할 수도 있습니다. 자세한 내용은 [작업 병렬 처리 (동시성 런타임)][taskParallelism]합니다.
+**참고**  작업 체인을 만드는 **작업은 작업** 클래스를 사용 하 여 비동기 작업을 작성 하는 방법 중 하나일 뿐입니다. Join 및 choice 연산자 **&&** 와 **||** 을 사용 하 여 작업을 작성할 수도 있습니다. 자세한 내용은 [작업 병렬 처리 (동시성 런타임)][taskParallelism]를 참조 하세요.
 
 ## <a name="lambda-function-return-types-and-task-return-types"></a>람다 함수 반환 형식 및 작업 반환 형식
-작업 연속 작업에서 람다 함수의 반환 형식은 **task** 개체로 묶여 있습니다. 람다가 **double**을 반환하면 연속 작업의 작업 유형은 **task<double>** 가 됩니다. 그러나 작업 개체는 불필요하게 중첩된 반환 형식을 생성하지 않도록 설계되어 있습니다. 람다가 **IAsyncOperation&lt;SyndicationFeed^&gt;^** 를 반환하는 경우 연속 작업은 **task&lt;task&lt;SyndicationFeed^&gt;&gt;** 또는 **task&lt;IAsyncOperation&lt;SyndicationFeed^&gt;^&gt;^** 가 아닌 **task&lt;SyndicationFeed^&gt;** 를 반환합니다. 이 프로세스는 *비동기 래핑 해제*라고 하며 다음 연속 작업이 호출되기 전에 연속 작업 내부의 비동기 작업이 완료되었는지도 확인합니다.
+작업 연속에서 람다 함수의 반환 형식은 **작업** 개체에 래핑됩니다. 람다가 **double**을 반환 하는 경우 연속 작업의 형식은 **task<double>** 입니다. 그러나 작업 개체는 불필요 하 게 중첩 된 반환 형식을 생성 하지 않도록 디자인 되었습니다. 람다가 **iasyncoperation<tresult><SyndicationFeed ^>^** 을 반환 하는 경우 연속 작업은 작업<작업<**SyndicationFeed ^>>** 또는 **작업<iasyncoperation<tresult><SyndicationFeed ^>^>^**>아니라 작업 **<SyndicationFeed ^ **반환 합니다. 이 프로세스를 *비동기 래핑 해제* 하 고 다음 연속이 호출 되기 전에 연속 작업 내의 비동기 작업이 완료 되도록 합니다.
 
-앞 예제에서 람다가 [**IAsyncInfo**][IAsyncInfo] 개체를 반환했음에도 불구하고 작업이 **task<void>** 를 반환하는 것에 주목하세요. 다음 표에는 람다 함수와 바깥쪽 작업 간에 발생하는 유형 변환에 대한 요약이 나와 있습니다.
+이전 예제에서 작업은 람다가 [**IAsyncInfo**][IAsyncInfo] 개체를 반환한 경우에도 **작업<void> ** 을 반환 합니다. 다음 표에는 람다 함수와 바깥쪽 작업 간에 발생하는 유형 변환에 대한 요약이 나와 있습니다.
 
 | | |
 |--------------------------------------------------------|---------------------|
-| 람다 반환 형식                                     | `.then` 반환 형식 |
-| TResult                                                | task<TResult> |
-| IAsyncOperation<TResult>^                        | task<TResult> |
-| IAsyncOperationWithProgress&lt;TResult, TProgress&gt;^ | task<TResult> |
-|IAsyncAction^                                           | task<void>    |
-| IAsyncActionWithProgress<TProgress>^             |task<void>     |
-| task<TResult>                                    |task<TResult>  |
+| 람다 반환 형식                                     | `.then`반환 형식 |
+| TResult                                                | 임무<TResult> |
+| Iasyncoperation<tresult><TResult>^                        | 임무<TResult> |
+| IAsyncOperationWithProgress<TResult, TProgress>^ | 임무<TResult> |
+|IAsyncAction ^                                           | 임무<void>    |
+| Iasyncactionwithprogress<tprogress><TProgress>^             |임무<void>     |
+| 임무<TResult>                                    |임무<TResult>  |
 
 
 ## <a name="canceling-tasks"></a>작업 취소
-사용자에게 비동기 작업을 취소할 수 있는 옵션을 제공하는 것이 좋습니다. 경우에 따라서는 작업 체인의 외부에서 프로그래밍 방식으로 작업을 취소해야 할 수 있습니다. 하지만 각 \* **비동기** 반환 형식에는 [ **취소**][IAsyncInfoCancel] method that it inherits from [**IAsyncInfo**][IAsyncInfo], 하기에 비효율적인 것 외부 메서드를 노출 합니다. 작업 체인에서 취소를 지원 하는 기본 방법은 사용 하는 것을 [ **취소\_토큰\_소스** ](https://docs.microsoft.com/cpp/parallel/concrt/reference/cancellation-token-source-class) 만들려면를 [ **취소 \_토큰**](https://docs.microsoft.com/cpp/parallel/concrt/reference/cancellation-token-class), 다음 토큰 초기 작업의 생성자에 전달 하는 것입니다. 비동기 작업 취소 토큰을 사용 하 여 만들어지는 경우 및 [ **취소\_토큰\_source::cancel** ](https://docs.microsoft.com/cpp/parallel/concrt/reference/cancellation-token-source-class?view=vs-2017) 가 호출 작업이 자동으로 호출  **취소** 에 **IAsync\***  작업 및 전달 해당 연속 체인 취소를 요청 합니다. 다음 의사 코드에서는 기본 접근 방법을 보여 줍니다.
+비동기 작업을 취소 하는 옵션을 사용자에 게 제공 하는 것이 좋습니다. 작업 체인 외부에서 프로그래밍 방식으로 작업을 취소 해야 하는 경우도 있습니다. 각 \* **비동기** 반환 형식에는 [**IAsyncInfo**][IAsyncInfo]에서 상속 하는 [**취소**][IAsyncInfoCancel] 메서드가 있지만 외부 메서드에 노출 하는 것은 좋지 않습니다. 작업 체인에서 취소를 지 원하는 기본 방법은 취소 [**\_토큰\_소스**](https://docs.microsoft.com/cpp/parallel/concrt/reference/cancellation-token-source-class) 를 사용 하 여 [**취소\_토큰**](https://docs.microsoft.com/cpp/parallel/concrt/reference/cancellation-token-class)을 만든 다음 토큰을 초기 작업의 생성자에 전달 하는 것입니다. 취소 토큰을 사용 하 여 비동기 작업이 생성 되 고 [**취소\_\_토큰 source:: cancel**](https://docs.microsoft.com/cpp/parallel/concrt/reference/cancellation-token-source-class?view=vs-2017) 이 호출 되 면 태스크가 자동으로 **iasync\* ** 작업에서 **취소** 를 호출 하 고 취소 요청을 연속 체인으로 전달 합니다. 다음 의사 코드에서는 기본적인 방법을 보여 줍니다.
 
 ``` cpp
 //Class member:
@@ -146,16 +146,16 @@ auto getFileTask2 = create_task(documentsFolder->GetFileAsync(fileName),
 //getFileTask2.then ...
 ```
 
-작업 취소 된 경우는 [ **태스크\_취소** ][taskCanceled] exception is propagated down the task chain. Value-based continuations will simply not execute, but task-based continuations will cause the exception to be thrown when [**task::get**][taskGet] 라고 합니다. 오류 처리 연속을 사용 하는 경우 catch 하 고 있는지 확인 합니다 **태스크\_취소** 예외 명시적으로 합니다. [  **Platform::Exception**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class)에서 파생되지 않음).
+작업이 취소 되 면 작업 [**\_취소**][taskCanceled] 된 예외가 작업 체인에서 전파 됩니다. 값 기반 연속은 단순히 실행 되지 않지만 작업 기반 연속은 [**task:: get**][taskGet] 이 호출 될 때 예외를 throw 합니다. 오류 처리 연속이 있으면 **태스크가\_취소** 된 예외를 명시적으로 catch 하는지 확인 합니다. 이 예외는 [**Platform:: exception**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class)에서 파생 되지 않습니다.
 
-취소는 공동 작업입니다. 연속 작업에 단지 UWP 메서드를 호출하는 것 이상으로 장기 실행되는 일부 작업이 있을 경우 사용자 스스로 취소 토큰을 정기적으로 확인하고 취소된 토큰이 있으면 실행을 중지해야 합니다. 연속 작업에 할당 된 모든 리소스를 정리 하기 호출 [ **취소\_현재\_태스크** ](https://docs.microsoft.com/cpp/parallel/concrt/reference/concurrency-namespace-functions?view=vs-2017) 해당 작업을 취소 하 여 취소 된 아래로 전파 그 뒤에 나오는 값 기반 연속 작업입니다. [  **FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) 작업의 결과를 나타내는 작업 체인을 만들 수 있는 다른 예를 살펴봅시다. 사용자가 **취소** 단추를 선택하면 [**IAsyncInfo::Cancel**][IAsyncInfoCancel] 메서드가 호출되지 않습니다. 작업은 계속되는 대신 **nullptr**을 반환합니다. 연속 입력된 매개 변수 및 호출 테스트할 수 있습니다 **취소\_현재\_태스크** 입력 이면 **nullptr**합니다.
+취소는 협조적입니다. 연속 작업에서 UWP 메서드를 호출 하는 것 외에도 장기 실행 작업을 수행 하는 경우 취소 토큰의 상태를 정기적으로 확인 하 고 취소 된 경우 실행을 중지 해야 합니다. 연속 작업에서 할당 된 모든 리소스를 정리한 후에는 [**\_현재 작업 취소\_**](https://docs.microsoft.com/cpp/parallel/concrt/reference/concurrency-namespace-functions?view=vs-2017) 를 호출 하 여 해당 작업을 취소 하 고 그 다음에 나오는 값 기반 연속으로 취소를 전파 합니다. 또 다른 예: [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) 작업의 결과를 나타내는 작업 체인을 만들 수 있습니다. 사용자가 **취소** 단추를 선택 하면 [**IAsyncInfo:: cancel**][IAsyncInfoCancel] 메서드가 호출 되지 않습니다. 대신 작업이 성공 하지만 **nullptr**를 반환 합니다. 연속 작업은 입력 매개 변수를 테스트 하 고 입력이 **nullptr**인 경우 **\_현재\_작업 취소** 를 호출할 수 있습니다.
 
-자세한 내용은 [PPL에서의 취소](https://docs.microsoft.com/cpp/parallel/concrt/cancellation-in-the-ppl)를 참조하세요.
+자세한 내용은 [PPL에서의 취소](https://docs.microsoft.com/cpp/parallel/concrt/cancellation-in-the-ppl) 를 참조 하세요.
 
 ## <a name="handling-errors-in-a-task-chain"></a>작업 체인의 오류 처리
-선행 항목이 취소되었거나 예외가 발생한 경우에도 연속 작업을 실행하려면 선행 작업의 람다가 [**IAsyncAction^** ][IAsyncAction]을 반환하는 경우의 람다 함수에 대한 입력을 **task<TResult>** 또는 **task<void>** 로 지정하여 작업 기반 연속 작업으로 만듭니다.
+선행 작업이 취소 되거나 예외를 throw 한 경우에도 연속 작업이 실행 되도록 하려면 선행 작업의 람다가 [**iasyncaction ^**][IAsyncAction]을 반환 하는 경우 해당 람다 함수에 대 한 입력 **을<TResult> 작업** 또는 **태스크<void> ** 로 지정 하 여 연속 작업을 연속으로 만듭니다.
 
-작업 체인에서 오류 및 취소를 처리하기 위해 모든 연속 작업을 작업 기반으로 지정하거나, `try…catch` 블록 내에서 발생할 수 있는 각 작업을 묶을 필요는 없습니다. 대신 체인의 끝에 작업 기반 연속 작업을 추가하여 거기서 모든 오류를 처리할 수 있습니다. 모든 예외-여기에 [ **태스크\_취소** ][taskCanceled] 예외-작업 체인 아래로 전파 되며 오류 처리에서 처리할 수 있도록 모든 값 기반 연속을 무시 작업 기반 연속입니다. 오류 처리 작업 기반 연속 작업을 사용하도록 앞의 예제를 다시 작성할 수 있습니다.
+작업 체인에서 오류 및 취소를 처리 하려면 모든 연속 작업을 수행 하거나 `try…catch` 블록 내에서 throw 될 수 있는 모든 작업을 묶을 필요가 없습니다. 대신 체인의 끝에 작업 기반 연속을 추가 하 고 여기에서 모든 오류를 처리할 수 있습니다. [**작업\_취소**][taskCanceled] 예외를 포함 하는 모든 예외는 작업 체인을 전파 하 고 값 기반 연속을 무시 하므로 오류 처리 작업 기반 연속 작업에서 처리할 수 있습니다. 오류 처리 작업 기반 연속을 사용 하는 이전 예제를 다시 작성할 수 있습니다.
 
 ``` cpp
 #include <ppltasks.h>
@@ -191,14 +191,14 @@ void App::DeleteWithTasksHandleErrors(String^ fileName)
 }
 ```
 
-멤버 함수는 작업 기반 연속에서 이라고 [ **task:: get** ][taskGet] 태스크의 결과를 가져옵니다. 작업이 결과를 생성하지 않는 [**IAsyncAction**][IAsyncAction]이었다고 하더라도 **task::get**을 호출해야 합니다. **task::get**도 작업으로 전송된 예외를 가져오기 때문입니다. 입력 작업이 예외를 저장하는 경우 **task::get** 호출 시에 해당 예외가 발생합니다. 호출 하지 않아도 **task:: get**, 또는 체인의 끝에 작업 기반 연속을 사용 하지 않거나, throw 된 예외 형식을 catch 하지 마십시오는 **관찰 되지 않은\_태스크\_예외** 작업에 대 한 모든 참조가 삭제 된 경우 throw 됩니다.
+작업 기반 연속에서는 멤버 함수 [**task:: get**][taskGet] 을 호출 하 여 작업의 결과를 가져옵니다. 작업 **:: get** 은 작업에 전송 된 모든 예외도 가져오기 때문에 결과를 생성 하지 않는 [**iasyncaction**][IAsyncAction] 인 경우에도 **작업:: get** 을 호출 해야 합니다. 입력 작업에서 예외를 저장 하는 경우 **task:: get**에 대 한 호출에서 예외가 throw 됩니다. **Task:: get**을 호출 하지 않거나 체인의 끝에 작업 기반 연속을 사용 하지 않거나 throw 된 예외 형식을 catch 하지 않는 경우, 작업에 대 한 모든 참조가 삭제 되 **면\_관찰 되지 않은\_작업 예외가** throw 됩니다.
 
-처리할 수 있는 예외만 catch해야 합니다. 앱에 복구할 수 없는 오류가 발생하면 알 수 없는 상태에서 앱이 계속 실행되도록 하는 것보다 손상된 상태로 두는 것이 낫습니다. 또한 일반적으로 하려고 하지 마세요 catch 합니다 **관찰 되지 않은\_태스크\_예외** 자체입니다. 이 예외는 주로 진단용으로 사용됩니다. 때 **관찰 되지 않은\_태스크\_예외** 가 발생 했다는 것을 나타냅니다 코드의 버그입니다. 주요 원인은 처리해야 할 예외 또는 코드에서 다른 오류로 인해 발생한 복구할 수 없는 예외 때문입니다.
+처리할 수 있는 예외만 catch 합니다. 앱에 복구할 수 없는 오류가 발생 하는 경우 앱이 중단 될 때까지 지속 되도록 하는 것이 더 좋습니다. 또한 일반적으로 **\_관찰 되지 않은 작업\_예외** 자체를 catch 하지 않습니다. 이 예외는 주로 진단 목적으로 사용 됩니다. **\_관찰 되지 않은 작업\_예외가** throw 되 면 일반적으로 코드의 버그를 나타냅니다. 주로 처리 해야 하는 예외 또는 코드의 다른 오류로 인해 발생 하는 복구할 수 없는 예외가 원인일 수 있습니다.
 
 ## <a name="managing-the-thread-context"></a>스레드 컨텍스트 관리
-UWP 앱의 UI는 STA(단일 스레드 아파트)에서 실행됩니다. 해당 람다 반환 하는 작업을 [ **IAsyncAction**][IAsyncAction] or [**IAsyncOperation**][IAsyncOperation] 아파트를 인식 합니다. 사용자가 달리 지정하지 않는 한, 작업이 STA에서 만들어지면 작업의 모든 연속 작업 또한 기본적으로 STA에서 실행됩니다. 이는 전체 작업 체인이 부모 작업에서 아파트 인식을 상속한다는 의미입니다. 따라서 STA에서만 액세스할 수 있는 UI 컨트롤과의 조작 방식이 간소화됩니다.
+UWP 앱의 UI는 STA (단일 스레드 아파트)에서 실행 됩니다. 람다가 [**Iasyncaction**][IAsyncAction] 또는 [**iasyncoperation<tresult>**][Iasyncoperation<tresult>] 를 반환 하는 작업은 아파트를 인식 합니다. 태스크가 STA에서 만들어진 경우에는 달리 지정 하지 않는 한 모든 연속 작업은 기본적으로 실행 됩니다. 즉, 전체 작업 체인은 부모 작업에서 아파트 인식을 상속 합니다. 이 동작은 STA 에서만 액세스할 수 있는 UI 컨트롤과의 상호 작용을 간소화 하는 데 도움이 됩니다.
 
-예를 들어 XAML 페이지를 나타내는 모든 클래스의 멤버 함수에서 UWP 앱에서 채울 수 있습니다는 [ **ListBox** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox) 내에서 컨트롤을 [ **task:: then** ][taskThen] 메서드를 사용 하지 않고도 합니다 [ **디스패처** ](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) 개체입니다.
+예를 들어 UWP 앱에서 XAML 페이지를 나타내는 모든 클래스의 멤버 함수에서 [**디스패처**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) 개체를 사용 하지 않고도 [**task:: then**][taskThen] 메서드 내에서 [**ListBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox) 컨트롤을 채울 수 있습니다.
 
 ``` cpp
 #include <ppltasks.h>
@@ -217,11 +217,11 @@ void App::SetFeedText()
 }
 ```
 
-작업을 반환 하지 않는 경우는 [ **IAsyncAction**][IAsyncAction] or [**IAsyncOperation**][IAsyncOperation], 다음 아파트에서 인식 되지 않으면을 기본적으로 연속 실행은 첫 번째 사용 가능한 백그라운드 스레드입니다.
+태스크가 [**Iasyncaction**][IAsyncAction] 또는 [**iasyncoperation<tresult>**][Iasyncoperation<tresult>]를 반환 하지 않는 경우에는 아파트를 인식 하지 않으며 기본적으로 사용 가능한 첫 번째 백그라운드 스레드에서 연속 작업이 실행 됩니다.
 
-오버 로드를 사용 하 여 두 종류의 작업에 대 한 기본 스레드 컨텍스트를 재정의할 수 있습니다 [ **task:: then** ][taskThen] 사용 하는 한 [ **태스크\_연속\_상황에 맞는**](https://docs.microsoft.com/cpp/parallel/concrt/reference/task-continuation-context-class)합니다. 예를 들어, 경우에 따라서는 백그라운드 스레드에서 아파트 인식 작업의 연속 작업을 예약하는 것이 좋을 수 있습니다. 이러한 경우에 전달할 수 있습니다 [ **태스크\_연속\_context::use\_임의의** ][useArbitrary] 작업에서 다음 사용 가능한 스레드에서 작업을 예약 하는 다중 스레드 아파트 합니다. 이렇게 하면 해당 작업을 UI 스레드에서 발생하는 다른 작업과 동기화할 필요가 없으므로 연속 작업의 성능이 향상될 수 있습니다.
+작업 (task)의 오버 로드를 사용 하 여 작업의 각 종류에 대 한 기본 스레드 컨텍스트를 재정의할 수 있습니다. [**그러면**][taskThen] 작업 [**\_연속\_컨텍스트**](https://docs.microsoft.com/cpp/parallel/concrt/reference/task-continuation-context-class)를 사용 합니다. 예를 들어, 경우에 따라 백그라운드 스레드에서 아파트 인식 작업의 연속을 예약 하는 것이 좋을 수 있습니다. 이러한 경우, [**작업\_연속\_컨텍스트\_:: 임의의**][useArbitrary] 작업을 사용 하 여 다중 스레드 아파트의 다음 사용 가능한 스레드에서 작업을 예약 하는 작업을 수행할 수 있습니다. 이렇게 하면 해당 작업은 UI 스레드에서 발생 하는 다른 작업과 동기화 될 필요가 없기 때문에 연속 작업의 성능을 향상 시킬 수 있습니다.
 
-지정 하면 유용할 경우 다음 예제에서는 합니다 [ **작업\_연속\_context::use\_임의의** ][useArbitrary] 옵션을 표시 하는 방법을 기본 연속 컨텍스트는 스레드로부터 안전한 컬렉션에 대해 동시 작업을 동기화 하는 데 유용 합니다. 이 코드에서는 RSS 피드 및 각 URL에 대해 URL 목록 전체를 반복하고, 피드 데이터를 검색하기 위해 비동기 작업을 시작합니다. 피드가 검색되는 순서는 제어할 수 없지만 이는 그다지 중요하지 않습니다. 각 [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.isyndicationclient.retrievefeedasync) 작업이 완료되면 첫 번째 연속 작업이 [**SyndicationFeed^** ](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationFeed) 개체를 받은 다음 이를 사용하여 앱에서 정의된 `FeedData^` 개체를 초기화합니다. 이러한 각 작업은 다른에서 서로 독립적 이기 때문에 수 있습니다 잠재적으로 작업 속도를 지정 하 여 합니다 **태스크\_연속\_context::use\_임의의** 연속 컨텍스트 . 그러나 각 `FeedData` 개체가 초기화된 후에는 스레드로부터 안전한 컬렉션이 아닌 [**Vector**](https://docs.microsoft.com/cpp/cppcx/platform-collections-vector-class)에 추가해야 합니다. 따라서 연속 작업을 생성 하 고 지정할 [ **태스크\_연속\_context::use\_현재** ](https://docs.microsoft.com/cpp/parallel/concrt/reference/task-continuation-context-class?view=vs-2017) 에 대 한 모든 호출 되도록 [ **Append** ](https://docs.microsoft.com/uwp/api/windows.foundation.collections.ivector_t_.append) 동일한 Application Single-Threaded 아파트 (ASTA) 컨텍스트에서 발생 합니다. 때문에 [ **태스크\_연속\_context::use\_기본값** ](https://docs.microsoft.com/cpp/parallel/concrt/reference/task-continuation-context-class?view=vs-2017) 명시적으로 지정할 필요가 없습니다 되지만 이렇게 여기의 sake에 대 한 기본 컨텍스트는 쉽게 구별할 수 있도록 합니다.
+다음 예제에서는 [**작업\_연속\_컨텍스트:\_: 임의의 옵션 사용**][useArbitrary] 옵션을 지정 하는 것이 유용한 경우를 보여 줍니다. 또한 스레드로부터 안전 하지 않은 컬렉션에서 동시 작업을 동기화 하는 데 기본 연속 컨텍스트가 어떻게 유용한 지 보여 줍니다. 이 코드에서는 RSS 피드에 대 한 Url 목록을 반복 하 고 각 URL에 대해 피드 데이터를 검색 하는 비동기 작업을 시작 합니다. 피드가 검색 되는 순서를 제어할 수 없으며 걱정 하지 않아도 됩니다. 각 [**RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.isyndicationclient.retrievefeedasync) 작업이 완료 되 면 첫 번째 연속 작업은 [**SyndicationFeed ^**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationFeed) 개체를 수락 하 고이 개체를 사용 하 `FeedData^` 여 앱 정의 개체를 초기화 합니다. 이러한 각 작업은 서로 독립적 이므로 **작업\_연속\_컨텍스트\_:: 임의** 연속 컨텍스트 사용을 지정 하 여 작업 속도를 높일 수 있습니다. 그러나 각 `FeedData` 개체가 초기화 된 후에는 스레드로부터 안전한 컬렉션이 아닌 [**Vector**](https://docs.microsoft.com/cpp/cppcx/platform-collections-vector-class)에 추가 해야 합니다. 따라서 연속 작업을 만들고 [**작업\_연속\_컨텍스트:: Current를\_사용**](https://docs.microsoft.com/cpp/parallel/concrt/reference/task-continuation-context-class?view=vs-2017) 하 여 [**Append**](https://docs.microsoft.com/uwp/api/windows.foundation.collections.ivector_t_.append) 에 대 한 모든 호출이 동일한 응용 프로그램 단일 스레드 아파트 (ASTA) 컨텍스트에서 발생 하는지 확인 합니다. [**작업\_연속\_컨텍스트:: use\_default**](https://docs.microsoft.com/cpp/parallel/concrt/reference/task-continuation-context-class?view=vs-2017) 는 기본 컨텍스트입니다. 명시적으로 지정할 필요는 없으며 명확 하 게 하기 위해 여기에서 수행 합니다.
 
 ``` cpp
 #include <ppltasks.h>
@@ -282,29 +282,29 @@ void App::InitDataSource(Vector<Object^>^ feedList, vector<wstring> urls)
 }
 ```
 
-중첩 작업, 즉 연속 작업 내부에 만들어진 새 작업은 초기 작업의 아파트 인식을 상속하지 않습니다.
+연속 작업 내에서 생성 되는 새 작업 인 중첩 된 작업은 초기 작업의 아파트 인식 기능을 상속 하지 않습니다.
 
-## <a name="handing-progress-updates"></a>진행 상황 업데이트 처리
-[  **IAsyncOperationWithProgress**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_) 또는 [**IAsyncActionWithProgress**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)를 지원하는 메서드는 작업이 완료될 때까지 진행 상황을 정기적으로 업데이트합니다. 진행 상황 보고는 작업 및 연속 작업의 개념과는 별개입니다. 개체의 [**Progress**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_) 속성에 대한 대리자를 제공하면 되며, 대리자 사용의 전형적인 예는 UI에서 진행률 표시줄을 업데이트하는 것입니다.
+## <a name="handing-progress-updates"></a>진행률 업데이트 처리
+[**IAsyncOperationWithProgress**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_) 또는 [**Iasyncactionwithprogress**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_) 를 지 원하는 메서드는 작업이 완료 되기 전에 작업이 진행 되는 동안 주기적으로 진행률 업데이트를 제공 합니다. 진행률 보고는 태스크 및 연속 개념과는 독립적입니다. 개체의 [**Progress**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_) 속성에 대 한 대리자를 제공 하기만 하면 됩니다. 대리자를 일반적으로 사용 하는 것은 UI에서 진행률 표시줄을 업데이트 하는 것입니다.
 
 ## <a name="related-topics"></a>관련 항목
-* [C + 비동기 작업 만들기 + UWP 앱 용 CX](https://docs.microsoft.com/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps)
+* [UWP 앱 용 c + +/CX로 비동기 작업 만들기](https://docs.microsoft.com/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps)
 * [Visual C++ 언어 참조](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx)
 * [비동기 프로그래밍][AsyncProgramming]
 * [작업 병렬 처리 (동시성 런타임)][taskParallelism]
-* [concurrency::task](/cpp/parallel/concrt/reference/task-class)
+* [concurrency:: task](/cpp/parallel/concrt/reference/task-class)
 
 <!-- LINKS -->
 [AsyncProgramming]: <https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps> "AsyncProgramming"
-[concurrencyNamespace]: <https://docs.microsoft.com/cpp/parallel/concrt/reference/concurrency-namespace> "Namespace 동시성"
+[concurrencyNamespace]: <https://docs.microsoft.com/cpp/parallel/concrt/reference/concurrency-namespace> "Concurrency 네임 스페이스"
 [createTask]: <https://docs.microsoft.com/cpp/parallel/concrt/reference/concurrency-namespace-functions#create_task> "CreateTask"
 [deleteAsync]: <https://msdn.microsoft.com/library/windows/apps/BR227199> "DeleteAsync"
 [IAsyncAction]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx> "IAsyncAction"
-[IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598> "IAsyncOperation"
+[IAsyncOperation]: <https://msdn.microsoft.com/library/windows/apps/BR206598> "Iasyncoperation<tresult>"
 [IAsyncInfo]: <https://msdn.microsoft.com/library/windows/apps/BR206587> "IAsyncInfo"
 [IAsyncInfoCancel]: <https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel> "IAsyncInfoCancel"
-[taskCanceled]: <https://docs.microsoft.com/cpp/parallel/concrt/reference/task-canceled-class> "TaskCancelled"
-[task-class]: <https://docs.microsoft.com/cpp/parallel/concrt/reference/task-class#get> "Task 클래스"
+[taskCanceled]: <https://docs.microsoft.com/cpp/parallel/concrt/reference/task-canceled-class> "작업이 취소 됨"
+[task-class]: <https://docs.microsoft.com/cpp/parallel/concrt/reference/task-class#get> "작업 클래스"
 [taskGet]: <https://msdn.microsoft.com/library/windows/apps/xaml/hh750017.aspx> "TaskGet"
 [taskParallelism]: <https://docs.microsoft.com/cpp/parallel/concrt/task-parallelism-concurrency-runtime> "작업 병렬 처리"
 [taskThen]: <https://docs.microsoft.com/cpp/parallel/concrt/reference/task-class#then> "TaskThen"

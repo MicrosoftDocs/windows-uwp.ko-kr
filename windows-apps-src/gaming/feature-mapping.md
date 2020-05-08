@@ -1,19 +1,19 @@
 ---
-title: DirectX 11 API에 DirectX 9 기능 매핑
-description: Direct3D 9 게임에서 사용하는 기능이 Direct3D 11 및 UWP(유니버설 Windows 플랫폼)로 변환되는 방법을 이해합니다.
+title: Directx 11 기능을 DirectX 11 Api에 매핑
+description: Direct3D 9 게임에서 사용 하는 기능이 Direct3D 11 및 유니버설 Windows 플랫폼 (UWP)로 변환 되는 방식을 이해 합니다.
 ms.assetid: 3aa8a114-4e47-ae0a-9447-88ba324377b8
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx 9, directx 11, 포팅
 ms.localizationpriority: medium
-ms.openlocfilehash: c5c86ad836c94d990f5728ce9f7cfe49c754ce19
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: e0643773ca529540284f0749de6e91349f4e9c47
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210609"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730230"
 ---
-# <a name="map-directx-9-features-to-directx-11-apis"></a>DirectX 11 API에 DirectX 9 기능 매핑
+# <a name="map-directx-9-features-to-directx-11-apis"></a>Directx 11 기능을 DirectX 11 Api에 매핑
 
 
 
@@ -24,102 +24,102 @@ ms.locfileid: "79210609"
 -   기능 매핑
 
 
-Direct3D 9 게임에서 사용하는 기능이 Direct3D 11 및 UWP(유니버설 Windows 플랫폼)로 변환되는 방법을 이해합니다.
+Direct3D 9 게임에서 사용 하는 기능이 Direct3D 11 및 유니버설 Windows 플랫폼 (UWP)로 변환 되는 방식을 이해 합니다.
 
-## <a name="mapping-direct3d-9-to-directx-11-apis"></a>DirectX 11 API에 Direct3D 9 매핑
+## <a name="mapping-direct3d-9-to-directx-11-apis"></a>Direct3D 9를 DirectX 11 Api에 매핑
 
 
-[Direct3D](https://docs.microsoft.com/windows/desktop/direct3d)는 여전히 DirectX 그래픽의 기반이지만 API는 DirectX 9 이후로 변경되었습니다.
+[Direct3D](https://docs.microsoft.com/windows/desktop/direct3d) 는 아직 directx 그래픽의 기반 이지만 directx 9 이후에는 API가 변경 되었습니다.
 
--   Microsoft DXGI(DirectX Graphics Infrastructure)는 그래픽 어댑터를 설정하는 데 사용됩니다. [DXGI](https://docs.microsoft.com/windows/desktop/direct3ddxgi/dx-graphics-dxgi)를 사용하여 버퍼 형식을 선택하고, 스왑 체인을 만들고, 프레임을 표시하고, 공유 리소스를 만들 수 있습니다. [DXGI 개요](https://docs.microsoft.com/windows/desktop/direct3ddxgi/d3d10-graphics-programming-guide-dxgi)를 참조하세요.
--   Direct3D 디바이스 컨텍스트는 파이프라인 상태를 설정하고 렌더링 명령을 생성하는 데 사용됩니다. 대부분의 샘플에서는 즉각적인 컨텍스트를 사용하여 디바이스에 직접 렌더링합니다. 또한 Direct3D 11은 다중 스레딩 렌더링을 지원하며, 이 경우 지연된 컨텍스트가 사용됩니다. [Direct3D 11에서의 장치 소개](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-intro)를 참조하세요.
--   일부 기능은 사용되지 않는데, 특히 고정 함수 파이프라인은 사용되지 않습니다. [사용되지 않는 기능](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-programming-guide-api-features-deprecated)을 참조하세요.
+-   Microsoft DXGI (DirectX Graphics Infrastructure)는 그래픽 어댑터를 설정 하는 데 사용 됩니다. [DXGI](https://docs.microsoft.com/windows/desktop/direct3ddxgi/dx-graphics-dxgi) 를 사용 하 여 버퍼 형식을 선택 하 고, 스왑 체인을 만들고, 프레임을 표시 하 고, 공유 리소스를 만듭니다. [DXGI 개요](https://docs.microsoft.com/windows/desktop/direct3ddxgi/d3d10-graphics-programming-guide-dxgi)를 참조 하세요.
+-   Direct3D 장치 컨텍스트는 파이프라인 상태를 설정 하 고 렌더링 명령을 생성 하는 데 사용 됩니다. 대부분의 샘플은 직접 컨텍스트를 사용 하 여 장치에 직접 렌더링 합니다. Direct3D 11은 지연 컨텍스트가 사용 되는 다중 스레드 렌더링도 지원 합니다. [Direct3D 11의 장치 소개를](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-intro)참조 하세요.
+-   일부 기능은 더 이상 사용 되지 않습니다. 특히 고정 함수 파이프라인입니다. [사용 되지 않는 기능](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-programming-guide-api-features-deprecated)을 참조 하세요.
 
-Direct3D 11의 전체 기능 목록은 [Direct3D 11 기능](https://docs.microsoft.com/windows/desktop/direct3d11/direct3d-11-features) 및 [Direct3D 11 기능](https://docs.microsoft.com/windows/desktop/direct3d11/direct3d-11-1-features)을 참조하세요.
+Direct3D 11 기능의 전체 목록은 [direct3d 11 기능](https://docs.microsoft.com/windows/desktop/direct3d11/direct3d-11-features) 및 [direct3d 11 기능](https://docs.microsoft.com/windows/desktop/direct3d11/direct3d-11-1-features)을 참조 하세요.
 
 ## <a name="moving-from-direct2d-9-to-direct2d-11"></a>Direct2D 9에서 Direct2D 11로 이동
 
 
-[Direct2D(Windows)](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal)는 여전히 DirectX 그래픽 및 Windows의 중요한 부분입니다. 여전히 Direct2D를 사용하여 2D 게임을 그리고 Direct3D 위에 오버레이(HUD)를 그릴 수 있습니다.
+[Direct2D (Windows)](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal) 는 여전히 DirectX 그래픽 및 windows의 중요 한 부분입니다. 여전히 Direct2D를 사용 하 여 2D 게임을 그리고 Direct3D 위에 오버레이 (HUDs)를 그릴 수 있습니다.
 
-Direct2D는 Direct3D 위에서 실행됩니다. 2D 게임은 두 API 중 어느 쪽을 사용해서도 구현할 수 있습니다. 예를 들어, Direct3D를 사용하여 구현된 2D 게임은 직교 투영을 사용하고, 기본 요소의 그리기 순서를 제어하기 위한 Z 값을 설정하고, 픽셀 셰이더를 사용하여 특수 효과를 추가할 수 있습니다.
+Direct2D는 Direct3D 위에서 실행 됩니다. 두 API를 사용 하 여 2D 게임을 구현할 수 있습니다. 예를 들어 Direct3D를 사용 하 여 구현 된 2D 게임에서는 직교 프로젝션을 사용 하 고, Z 값을 설정 하 여 기본 형식의 그리기 순서를 제어 하 고, 픽셀 셰이더를 사용 하 여 특수 효과를 추가할 수 있습니다.
 
-Direct2D는 Direct3D를 기반으로 하므로 역시 DXGI 및 디바이스 컨텍스트를 사용합니다. [Direct2D API 개요](https://docs.microsoft.com/windows/desktop/Direct2D/the-direct2d-api)를 참조하세요.
+Direct2D는 Direct3D를 기반으로 하므로 DXGI 및 장치 컨텍스트를 사용 하기도 합니다. [DIRECT2D API 개요](https://docs.microsoft.com/windows/desktop/Direct2D/the-direct2d-api)를 참조 하세요.
 
-[DirectWrite](https://docs.microsoft.com/windows/desktop/DirectWrite/direct-write-portal) API는 Direct2D를 사용하여 서식 있는 텍스트에 대한 지원을 추가합니다. [DirectWrite 소개](https://docs.microsoft.com/windows/desktop/DirectWrite/introducing-directwrite)를 참조하세요.
+[DirectWrite](https://docs.microsoft.com/windows/desktop/DirectWrite/direct-write-portal) API는 Direct2D를 사용 하 여 서식 있는 텍스트에 대 한 지원을 추가 합니다. [DirectWrite 소개](https://docs.microsoft.com/windows/desktop/DirectWrite/introducing-directwrite)를 참조 하세요.
 
-## <a name="replace-deprecated-helper-libraries"></a>사용되지 않는 도우미 라이브러리 바꾸기
+## <a name="replace-deprecated-helper-libraries"></a>사용 되지 않는 도우미 라이브러리 바꾸기
 
 
-D3DX 및 DXUT는 더 이상 사용되지 않으며 UWP 게임에서 사용할 수 없습니다. 이러한 도우미 라이브러리는 텍스처 로드 및 메시 로드와 같은 작업에 대한 리소스를 제공했습니다.
+D3DX 및 DXUT는 더 이상 사용 되지 않으며 UWP 게임에서 사용할 수 없습니다. 이러한 도우미 라이브러리는 질감 로드 및 메시 로드와 같은 작업에 대 한 리소스를 제공 합니다.
 
--   [Direct3D 9에서 UWP로의 간단한 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습에서는 창을 설정하고, Direct3D를 초기화하고, 기본 3D 렌더링을 수행하는 방법을 보여 줍니다.
--   [DirectX로 작성한 간단한 UWP 게임](tutorial--create-your-first-uwp-directx-game.md) 연습에서는 그래픽, 파일 로드, UI, 컨트롤 및 소리를 비롯한 일반적인 게임 프로그래밍 작업을 보여 줍니다.
--   [DirectX 도구 키트](https://github.com/Microsoft/DirectXTK) 커뮤니티 프로젝트는 Direct3D 11 및 UWP 앱에 사용할 수 있는 도우미 클래스를 제공합니다.
+-   [Direct3d 9에서 UWP로의 단순 포트](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습에서는 창을 설정 하 고, Direct3D를 초기화 하 고, 기본 3d 렌더링을 수행 하는 방법을 보여 줍니다.
+-   [DirectX를 사용한 간단한 UWP 게임](tutorial--create-your-first-uwp-directx-game.md) 연습에서는 그래픽, 파일 로드, UI, 컨트롤 및 소리를 비롯 한 일반적인 게임 프로그래밍 작업을 보여 줍니다.
+-   [DirectX Tool Kit](https://github.com/Microsoft/DirectXTK) community 프로젝트는 Direct3D 11 및 UWP 앱에서 사용할 도우미 클래스를 제공 합니다.
 
 ## <a name="move-shader-programs-from-fx-to-hlsl"></a>FX에서 HLSL로 셰이더 프로그램 이동
 
 
-효과를 포함한 D3DX 유틸리티 라이브러리(D3DX 9, D3DX 10 및 D3DX 11)는 UWP에서는 사용되지 않습니다. 모든 UWP용 DirectX 게임은 효과 없이 [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl)을 사용하여 그래픽 파이프라인을 구동합니다.
+효과를 비롯 한 D3DX 유틸리티 라이브러리 (D3DX 9, D3DX 10 및 D3DX 11)는 UWP에서 사용 되지 않습니다. UWP 용 DirectX 게임은 모두 효과 없이 [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl) 를 사용 하 여 그래픽 파이프라인을 구동 합니다.
 
-Visual Studio에서는 여전히 내부의 FXC를 사용하여 셰이더 개체를 컴파일합니다. UWP 게임 셰이더는 미리 컴파일되어 있습니다. 바이트코드가 런타임에 로드된 다음 적절한 렌더링 단계 동안 각 셰이더 리소스가 그래픽 파이프라인에 바인딩됩니다. 셰이더는 고유한 별도의 .HLSL 파일로 이동되어야 하며, 렌더링 기술은 C++ 코드로 구현되어야 합니다.
+Visual Studio는 여전히 FXC.EXE를 사용 하 여 셰이더 개체를 컴파일합니다. UWP 게임 셰이더가 미리 컴파일됩니다. 바이트 코드는 런타임에 로드 되며, 각 셰이더 리소스는 적절 한 렌더링 패스 중에 그래픽 파이프라인에 바인딩됩니다. 셰이더는 별개의 자체로 이동 해야 합니다. HLSL 파일 및 렌더링 기술은 c + + 코드에서 구현 해야 합니다.
 
-셰이더 리소스 로드를 간단히 살펴보려면 [Direct3D 9에서 UWP로의 간단한 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md)을 참조하세요.
+셰이더 리소스를 로드 하는 방법에 대 한 간략 한 보기는 [Direct3D 9에서 UWP로의 단순 포트를](walkthrough--simple-port-from-direct3d-9-to-11-1.md)참조 하세요.
 
-Direct3D 11에는 Direct3D 기능 수준 11\_0 이상이 필요한 셰이더 모델 5가 도입 되었습니다. [Direct3D 11용 HLSL 셰이더 모델 5 기능](https://docs.microsoft.com/windows/desktop/direct3dhlsl/overviews-direct3d-11-hlsl)을 참조하세요.
+Direct3D 11에는 Direct3D 기능 수준 11\_0 이상이 필요한 셰이더 모델 5가 도입 되었습니다. [Direct3D 11에 대 한 HLSL 셰이더 모델 5 기능을](https://docs.microsoft.com/windows/desktop/direct3dhlsl/overviews-direct3d-11-hlsl)참조 하세요.
 
 ## <a name="replace-xnamath-and-d3dxmath"></a>XNAMath 및 D3DXMath 바꾸기
 
 
-XNAMath(또는 D3DXMath)를 사용하여 코드를 [DirectXMath](https://docs.microsoft.com/windows/desktop/dxmath/directxmath-portal)로 마이그레이션해야 합니다. DirectXMath에는 x86, x64 및 ARM에서 포팅 가능한 형식이 포함되어 있습니다. [XNA 수학 라이브러리에서 코드 마이그레이션](https://docs.microsoft.com/windows/desktop/dxmath/pg-xnamath-migration)을 참조하세요.
+XNAMath (또는 D3DXMath)를 사용 하는 코드는 [Directxmath](https://docs.microsoft.com/windows/desktop/dxmath/directxmath-portal)로 마이그레이션해야 합니다. DirectXMath에는 x86, x64 및 ARM에서 이식 가능한 형식이 포함 되어 있습니다. [XNA Math Library에서 코드 마이그레이션을](https://docs.microsoft.com/windows/desktop/dxmath/pg-xnamath-migration)참조 하세요.
 
-DirectXMath float 형식은 셰이더에 사용하기 편리합니다. 예를 들어, [**XMFLOAT4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4) 및 [**XMFLOAT4X4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4x4)는 편리하게 상수 버퍼에 맞게 데이터를 정렬합니다.
+DirectXMath float 형식은 셰이더를 사용 하는 데 편리 합니다. 예를 들어 [**XMFLOAT4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4) 및 [**XMFLOAT4X4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4x4) 는 상수 버퍼에 대 한 데이터를 편리 하 게 맞춥니다.
 
-## <a name="replace-directsound-with-xaudio2-and-background-audio"></a>DirectSound를 XAudio2(및 백그라운드 오디오)로 바꾸기
-
-
-DirectSound는 UWP에 지원되지 않음
-
--   [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-apis-portal)를 사용하여 게임에 소리 효과를 추가합니다.
-
-##  <a name="replace-directinput-with-xinput-and-uwp-apis"></a>DirectInput을 XInput 및 UWP API로 바꾸기
+## <a name="replace-directsound-with-xaudio2-and-background-audio"></a>DirectSound를 XAudio2 (및 배경 오디오)로 바꿉니다.
 
 
-DirectInput은 UWP에 지원되지 않음
+UWP에 대 한 DirectSound는 지원 되지 않습니다.
 
--   마우스, 키보드 및 터치식 입력에 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 입력 이벤트 콜백을 사용합니다.
--   게임 컨트롤러 지원(및 게임 컨트롤러 헤드셋 지원)에 [XInput](https://docs.microsoft.com/windows/desktop/xinput/getting-started-with-xinput) 1.4를 사용합니다. 데스크톱 및 UWP에 공유 코드베이스를 사용하는 경우 이전 버전과의 호환성에 대한 자세한 내용은 [XInput 버전](https://docs.microsoft.com/windows/desktop/xinput/xinput-versions)을 참조하세요.
--   게임에 앱 바를 사용해야 하는 경우 [**EdgeGesture**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.EdgeGesture) 이벤트를 등록합니다.
+-   [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-apis-portal) 를 사용 하 여 게임에 음향 효과를 추가 합니다.
+
+##  <a name="replace-directinput-with-xinput-and-windows-runtime-apis"></a>DirectInput을 XInput 및 Windows 런타임 Api로 바꾸기
+
+
+DirectInput는 UWP에 대해 지원 되지 않습니다.
+
+-   마우스, 키보드 및 터치 입력에 대해 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 입력 이벤트 콜백을 사용 합니다.
+-   게임 컨트롤러 지원 (및 게임 컨트롤러 헤드셋 지원)에 [XInput](https://docs.microsoft.com/windows/desktop/xinput/getting-started-with-xinput) 1.4를 사용 합니다. 데스크톱 및 UWP에 대 한 공유 코드 베이스를 사용 하는 경우 이전 버전과의 호환성에 대 한 자세한 내용은 [XInput 버전](https://docs.microsoft.com/windows/desktop/xinput/xinput-versions) 을 참조 하세요.
+-   게임에서 앱 바를 사용 해야 하는 경우 [**EdgeGesture**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.EdgeGesture) 이벤트를 등록 합니다.
 
 ## <a name="use-microsoft-media-foundation-instead-of-directshow"></a>DirectShow 대신 Microsoft 미디어 파운데이션 사용
 
 
-DirectShow는 더 이상 DirectX API(또는 Windows API)의 일부가 아닙니다. [Microsoft 미디어 파운데이션](https://docs.microsoft.com/windows/desktop/medfound/microsoft-media-foundation-sdk)은 공유 화면을 사용하여 Direct3D에 비디오 콘텐츠를 제공합니다. [Direct3D 11 비디오 API](https://docs.microsoft.com/windows/desktop/medfound/direct3d-11-video-apis)를 참조하세요.
+DirectShow는 더 이상 DirectX API (또는 Windows API)의 일부가 아닙니다. [Microsoft 미디어 파운데이션](https://docs.microsoft.com/windows/desktop/medfound/microsoft-media-foundation-sdk) 공유 화면을 사용 하 여 Direct3D에 비디오 콘텐츠를 제공 합니다. [Direct3D 11 Video api](https://docs.microsoft.com/windows/desktop/medfound/direct3d-11-video-apis)를 참조 하세요.
 
 ## <a name="replace-directplay-with-networking-code"></a>DirectPlay를 네트워킹 코드로 바꾸기
 
 
-Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서비스를 사용하는 경우 UWP 요구 사항을 준수하는 네트워킹 코드를 제공해야 합니다. 다음 API를 사용합니다.
+Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네트워크 서비스를 사용 하는 경우 UWP 요구 사항을 준수 하는 네트워킹 코드를 제공 해야 합니다. 다음 Api를 사용 합니다.
 
 -   [UWP 앱 용 Win32 및 COM (네트워킹) (Windows)](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps)
--   [**Windows. 네트워킹 네임 스페이스 (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.Networking)
--   [**Windows. 네트워킹용 네임 스페이스 (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
--   [**Windows. 연결 네임 스페이스 (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity)
--   [**Windows ApplicationModel. Background 네임 스페이스 (Windows)** ](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
+-   [**Windows. 네트워킹 네임 스페이스 (Windows)**](https://docs.microsoft.com/uwp/api/Windows.Networking)
+-   [**Windows. 네트워킹용 네임 스페이스 (Windows)**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
+-   [**Windows. 연결 네임 스페이스 (Windows)**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity)
+-   [**Windows ApplicationModel. Background 네임 스페이스 (Windows)**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
 
-다음 문서는 네트워킹 기능을 추가하고 앱의 패키지 매니페스트에 네트워킹에 대한 지원을 선언하는 데 도움이 됩니다.
+다음 문서를 참조 하 여 네트워킹 기능을 추가 하 고, 앱의 패키지 매니페스트에 네트워킹 지원을 선언할 수 있습니다.
 
--   [소켓 (/Sb/C++ 및 XAML C#을 사용 하 여 UWP 앱)에 연결 (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
--   [Websocket (/Sb/C++ 및 XAML C#을 사용 하는 UWP 앱)에 연결 (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh994396(v=win.10))
--   [웹 서비스 (/Vb/ C#C++ 및 XAML을 사용 하는 UWP 앱)에 연결 (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
+-   [소켓을 사용 하 여 연결 (c #/VB/C + + 및 XAML을 사용 하는 UWP 앱) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
+-   [Websocket을 사용 하 여 연결 (c #/VB/C + + 및 XAML을 사용 하는 UWP 앱) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh994396(v=win.10))
+-   [웹 서비스 (c #/VB/C + + 및 XAML을 사용 하는 UWP 앱)에 연결 (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
 -   [네트워킹 기본 사항](https://docs.microsoft.com/windows/uwp/networking/networking-basics)
 
-모든 UWP 앱(게임 포함)은 특정 유형의 백그라운드 작업을 사용하여, 앱이 일시 중단된 동안에도 연결을 유지합니다. 게임이 일시 중단된 동안 연결 상태를 유지해야 하는 경우 [네트워킹 기본 사항](https://docs.microsoft.com/windows/uwp/networking/networking-basics)을 참조하세요.
+모든 UWP 앱 (게임 포함)은 특정 유형의 백그라운드 작업을 사용 하 여 앱이 일시 중단 된 동안 연결을 유지 합니다. 일시 중단 된 동안 게임에서 연결 상태를 유지 해야 하는 경우 [네트워킹 기본 사항](https://docs.microsoft.com/windows/uwp/networking/networking-basics)을 참조 하세요.
 
 ## <a name="function-mapping"></a>함수 매핑
 
 
-다음 표는 Direct3D 9에서 Direct3D 11로 코드를 변환하는 데 도움이 됩니다. 또한 장치와 디바이스 컨텍스트를 구별하는 데에도 도움이 될 수 있습니다.
+다음 표를 사용 하 여 Direct3D 9에서 Direct3D 11로 코드를 변환할 수 있습니다. 또한 장치와 디바이스 컨텍스트를 구별하는 데에도 도움이 될 수 있습니다.
 
 <table>
 <colgroup>
@@ -129,7 +129,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <thead>
 <tr class="header">
 <th align="left">Direct3D9</th>
-<th align="left">Direct3D 11 해당 함수</th>
+<th align="left">Direct3D 11 동급</th>
 </tr>
 </thead>
 <tbody>
@@ -137,7 +137,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nn-d3d9helper-idirect3ddevice9">IDirect3DDevice9</a></p></td>
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11device2">ID3D11Device2</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d11_2/nn-d3d11_2-id3d11devicecontext2">ID3D11DeviceContext2</a></p>
-<p>그래픽 파이프라인 단계는 <a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-graphics-pipeline">그래픽 파이프라인</a>에 설명되어 있습니다.</p></td>
+<p>그래픽 파이프라인 단계는 <a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-graphics-pipeline">그래픽 파이프라인</a>에 설명 되어 있습니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nn-d3d9helper-idirect3d9">IDirect3D9</a></p></td>
@@ -147,11 +147,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-present">IDirect3DDevice9::P 다시 보낸</a></p></td>
-<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a></p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::Present1</a></p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-testcooperativelevel">IDirect3DDevice9::TestCooperativeLevel</a></p></td>
-<td align="left"><p>DXGI_PRESENT_TEST 플래그 설정을 통해<a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::Present1</a>을 호출합니다.</p></td>
+<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a> DXGI_PRESENT_TEST 플래그가 설정 된 상태에서 호출 합니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9">IDirect3DBaseTexture9</a></p>
@@ -207,11 +207,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-showcursor">IDirect3DDevice9::ShowCursor</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-setcursorposition">IDirect3DDevice9::SetCursorPosition</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-setcursorproperties">IDirect3DDevice9::SetCursorProperties</a></p></td>
-<td align="left"><p>표준 커서 API를 사용합니다.</p></td>
+<td align="left"><p>표준 커서 Api를 사용 합니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-reset">IDirect3DDevice9:: Reset</a></p></td>
-<td align="left"><p>LOST 디바이스 및 POOL_MANAGED는 더 이상 존재하지 않습니다. <a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::Present1</a>은 <a href="https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-error">DXGI_ERROR_DEVICE_REMOVED</a> 반환 값에서 실패할 수 있습니다.</p></td>
+<td align="left"><p>분실 한 장치 및 POOL_MANAGED 더 이상 존재 하지 않습니다. <a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a> 는 <a href="https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-error">DXGI_ERROR_DEVICE_REMOVED</a> 반환 값을 사용 하 여 실패할 수 있습니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawrectpatch">IDirect3DDevice9:DrawRectPatch</a></p>
@@ -224,24 +224,24 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settransform">IDirect3DDevice9: SetTransform</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-setfvf">IDirect3DDevice9:SetFVF</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexturestagestate">IDirect3DDevice9:SetTextureStageState</a></p></td>
-<td align="left"><p>고정 함수 파이프라인은 사용되지 않습니다.</p></td>
+<td align="left"><p>고정 함수 파이프라인은 더 이상 사용 되지 않습니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-checkdepthstencilmatch">IDirect3DDevice9:CheckDepthStencilMatch</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-checkdeviceformat">IDirect3DDevice9: CheckDeviceFormat</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-getdevicecaps">IDirect3DDevice9:GetDeviceCaps</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-validatedevice">IDirect3DDevice9: ValidateDevice</a></p></td>
-<td align="left"><p>기능 비트는 기능 수준으로 바뀌었습니다. 일부 형식 및 기능 사용 사례만 지정된 기능 수준에 대해 선택적입니다. <a href="https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport">ID3D11Device::CheckFeatureSupport</a> 및 <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-checkformatsupport">ID3D11Device::CheckFormatSupport</a>를 통해 이들을 확인할 수 있습니다.</p></td>
+<td align="left"><p>기능 비트는 기능 수준으로 바뀝니다. 지정 된 기능 수준에는 몇 가지 형식 및 기능 사용 사례만 선택할 수 있습니다. <a href="https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport">ID3D11Device:: CheckFeatureSupport</a> 및 <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-checkformatsupport">ID3D11Device:: checkformatsupport</a>를 사용 하 여 확인할 수 있습니다.</p></td>
 </tr>
 </tbody>
 </table>
 
  
 
-## <a name="surface-format-mapping"></a>화면 형식 매핑
+## <a name="surface-format-mapping"></a>표면 형식 매핑
 
 
-다음 표를 사용하여 Direct3D 9 형식을 DXGI 형식으로 변환합니다.
+다음 표를 사용 하 여 Direct3D 9 형식을 DXGI 형식으로 변환할 수 있습니다.
 
 <table>
 <colgroup>
@@ -261,7 +261,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R8G8B8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8R8G8B8</p></td>
@@ -279,7 +279,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X1R5G5B5</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A1R5G5B5</p></td>
@@ -291,7 +291,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_R3G3B2</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A8</p></td>
@@ -299,11 +299,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8R3G3B2</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X4R4G4B4</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A2B10G10R10</p></td>
@@ -316,7 +316,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_X8B8G8R8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_G16R16</p></td>
@@ -324,7 +324,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A2R10G10B10</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A16B16G16R16</p></td>
@@ -332,17 +332,17 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A8P8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_P8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8_UNORM</p>
-<div class="alert">   
-<strong>참고</strong> Direct3D 9 동작을 얻으려면 셰이더에 Swizzle를 사용 하 여 빨간색을 다른 구성 요소에 복제 합니다.
+<div class="alert">
+<strong>참고</strong>    Direct3D 9 동작을 얻으려면 셰이더에 swizzle를 사용 하 여 빨간색을 다른 구성 요소에 복제 합니다.
 </div>
 <div>
  
@@ -352,7 +352,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>D3DFMT_A8L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>   rrrg를 셰이더에 사용 하 여 빨간색을 복제 하 고 녹색을 알파 구성 요소로 이동 하 여 Direct3D 9 동작을 가져옵니다.
+<strong>참고</strong>    Direct3D 9 동작을 얻으려면 셰이더에 swizzle을 사용 하 여 빨간색을 복제 하 고 녹색을 알파 구성 요소로 이동 합니다.
 </div>
 <div>
  
@@ -360,7 +360,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_A4L4</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_V8U8</p></td>
@@ -368,11 +368,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L6V5U5</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X8L8V8U8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_Q8W8V8U8</p></td>
@@ -384,21 +384,21 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_W11V11U10</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_A2W10V10U10</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_UYVY</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R8G8_B8G8</p></td>
 <td align="left"><p>DXGI_FORMAT_G8R8_G8B8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>   Direct3D 9에서 데이터는 255.0 f에 의해 확장 되었지만 셰이더에 서 처리할 수 있습니다.
+<strong>참고</strong>    Direct3D 9에서 데이터는 255.0 f에 의해 확장 되었지만 셰이더에서 처리 될 수 있습니다.
 </div>
 <div>
  
@@ -406,13 +406,13 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_YUY2</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_G8R8_G8B8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_B8G8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>   Direct3D 9에서 데이터는 255.0 f에 의해 확장 되었지만 셰이더에 서 처리할 수 있습니다.
+<strong>참고</strong>    Direct3D 9에서 데이터는 255.0 f에 의해 확장 되었지만 셰이더에서 처리 될 수 있습니다.
 </div>
 <div>
  
@@ -420,13 +420,13 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_DXT1</p></td>
-<td align="left"><p>DXGI_FORMAT_BC1_UNORM 및 DXGI_FORMAT_BC1_UNORM_SRGB</p></td>
+<td align="left"><p>DXGI_FORMAT_BC1_UNORM & DXGI_FORMAT_BC1_UNORM_SRGB</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_DXT2</p></td>
-<td align="left"><p>DXGI_FORMAT_BC1_UNORM 및 DXGI_FORMAT_BC1_UNORM_SRGB</p>
+<td align="left"><p>DXGI_FORMAT_BC1_UNORM & DXGI_FORMAT_BC1_UNORM_SRGB</p>
 <div class="alert">
-<strong>참고</strong>   DXT1 및 DXT2은 a p i/하드웨어 관점에서 동일 합니다. 유일한 차이점은 애플리케이션에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
+<strong>참고</strong>    DXT1와 DXT2는 API/하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요 하지 않은 미리 증가 된 알파를 사용 하는지 여부입니다.
 </div>
 <div>
  
@@ -434,13 +434,13 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_DXT3</p></td>
-<td align="left"><p>DXGI_FORMAT_BC2_UNORM 및 DXGI_FORMAT_BC2_UNORM_SRGB</p></td>
+<td align="left"><p>DXGI_FORMAT_BC2_UNORM & DXGI_FORMAT_BC2_UNORM_SRGB</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_DXT4</p></td>
-<td align="left"><p>DXGI_FORMAT_BC2_UNORM 및 DXGI_FORMAT_BC2_UNORM_SRGB</p>
+<td align="left"><p>DXGI_FORMAT_BC2_UNORM & DXGI_FORMAT_BC2_UNORM_SRGB</p>
 <div class="alert">
-<strong>참고</strong>   DXT3 및 DXT4은 a p i/하드웨어 관점에서 동일 합니다. 유일한 차이점은 애플리케이션에서 추적할 수 있고 별도의 형식이 필요하지 않은 프리멀티플라이된 알파가 사용되는지 여부입니다.
+<strong>참고</strong>    DXT3와 DXT4는 API/하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요 하지 않은 미리 증가 된 알파를 사용 하는지 여부입니다.
 </div>
 <div>
  
@@ -448,31 +448,31 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_DXT5</p></td>
-<td align="left"><p>DXGI_FORMAT_BC3_UNORM 및 DXGI_FORMAT_BC3_UNORM_SRGB</p></td>
+<td align="left"><p>DXGI_FORMAT_BC3_UNORM & DXGI_FORMAT_BC3_UNORM_SRGB</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>D3DFMT_D16 및 D3DFMT_D16_LOCKABLE</p></td>
+<td align="left"><p>D3DFMT_D16 & D3DFMT_D16_LOCKABLE</p></td>
 <td align="left"><p>DXGI_FORMAT_D16_UNORM</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D32</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D15S1</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D24S8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D24X8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_D24X4S4</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D16</p></td>
@@ -484,11 +484,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_D24FS8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_S1D15</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_S8D24</p></td>
@@ -496,17 +496,17 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_X8D24</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_X4S4D24</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_L16</p></td>
 <td align="left"><p>DXGI_FORMAT_R16_UNORM</p>
 <div class="alert">
-<strong>참고</strong>   D3D9 동작을 얻으려면 셰이더에에서 r Swizzle를 사용 하 여 빨간색을 다른 구성 요소에 복제 합니다.
+<strong>참고</strong>    D3D9 동작을 얻으려면 셰이더에 swizzle를 사용 하 여 빨간색을 다른 구성 요소에 복제 합니다.
 </div>
 <div>
  
@@ -526,7 +526,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DFMT_MULTI2_ARGB8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_R16F</p></td>
@@ -554,7 +554,7 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DFMT_CxV8U8</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPE_FLOAT1</p></td>
@@ -574,13 +574,13 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPED3DCOLOR</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_UBYTE4</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8B8A8_UINT</p>
-<div class="alert">셰이더는 UINT 값을 가져오지만 Direct3D 9 style 정수 계열 float가 필요한 경우 (0.0 f, 1.0 f 
-<strong>...  </strong> 255. f), UINT는 셰이더의 float32로만 변환할 수 있습니다.
+<div class="alert">
+<strong>셰이더는 UINT</strong>    값을 가져오지만, Direct3D 9 스타일 정수 계열 float가 필요한 경우 (0.0 f, 1.0 f ... 255. f), UINT는 셰이더의 float32로만 변환할 수 있습니다.
 </div>
 <div>
  
@@ -589,8 +589,8 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPE_SHORT2</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16_SINT</p>
-<div class="alert">셰이더에는 값을 가져오지만, Direct3D 9 style 정수 계열 float가 필요한 경우에는 셰이더에서 a를 float32로만 변환할 수 있습니다 
-<strong>.  </strong>
+<div class="alert">
+<strong>셰이더는 값</strong>    을 가져오지만, Direct3D 9 style 정수 계열 float가 필요한 경우에는 셰이더에서 값을 float32로만 변환할 수 있습니다.
 </div>
 <div>
  
@@ -599,8 +599,8 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_SHORT4</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16B16A16_SINT</p>
-<div class="alert">셰이더에는 값을 가져오지만, Direct3D 9 style 정수 계열 float가 필요한 경우에는 셰이더에서 a를 float32로만 변환할 수 있습니다 
-<strong>.  </strong>
+<div class="alert">
+<strong>셰이더는 값</strong>    을 가져오지만, Direct3D 9 style 정수 계열 float가 필요한 경우에는 셰이더에서 값을 float32로만 변환할 수 있습니다.
 </div>
 <div>
  
@@ -628,11 +628,11 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_UDEC3</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>D3DDECLTYPE_DEC3N</p></td>
-<td align="left"><p>제공되지 않음</p></td>
+<td align="left"><p>사용할 수 없음</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>D3DDECLTYPE_FLOAT16_2</p></td>
@@ -643,20 +643,20 @@ Microsoft DirectPlay는 사용되지 않습니다. 게임에서 네트워크 서
 <td align="left"><p>DXGI_FORMAT_R16G16B16A16_FLOAT</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>FourCC 'ATI1'</p></td>
+<td align="left"><p>FourCC ' ATI1 '</p></td>
 <td align="left"><p>DXGI_FORMAT_BC4_UNORM</p>
 <div class="alert">
-<strong>참고</strong>  에는 기능 수준 10.0 이상이 필요 합니다.
+<strong>참고</strong>    기능 수준 10.0 이상 필요
 </div>
 <div>
  
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>FourCC 'ATI2'</p></td>
+<td align="left"><p>FourCC ' ATI2 '</p></td>
 <td align="left"><p>DXGI_FORMAT_BC5_UNORM</p>
 <div class="alert">
-<strong>참고</strong>  에는 기능 수준 10.0 이상이 필요 합니다.
+<strong>참고</strong>    기능 수준 10.0 이상 필요
 </div>
 <div>
  

@@ -1,59 +1,59 @@
 ---
-Description: 시뮬레이션 하 고 키보드, 마우스, 터치, 펜 및 UWP 앱에서 gamepad 같은 장치에서 입력을 자동화 합니다.
-title: 입력 삽입을 통해 사용자 입력 시뮬레이트
+Description: Windows 앱의 키보드, 마우스, 터치, 펜 및 게임 패드와 같은 장치에서 입력을 시뮬레이션 하 고 자동화 합니다.
+title: 입력 주입을 통해 사용자 입력 시뮬레이션
 label: Input injection
 template: detail.hbs
-keywords: 장치, 디지타이저, 입력, 조작, 삽입
+keywords: 장치, 디지타이저, 입력, 상호 작용, 주입
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ff3150d4c1ed713451669b8918906141daa9659
-ms.sourcegitcommit: 09edf480f2224e29e190fad8518f680c16e21c6d
+ms.openlocfilehash: d15305fecb562546bdeaf15c501890151c7dd29a
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065239"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968037"
 ---
-# <a name="simulate-user-input-through-input-injection"></a>입력 삽입을 통해 사용자 입력 시뮬레이트
+# <a name="simulate-user-input-through-input-injection"></a>입력 주입을 통해 사용자 입력 시뮬레이션
 
-UWP 응용 프로그램의 키보드, 마우스, 터치, 펜 및 게임 패드 등의 디바이스에서 사용자 입력을 시뮬레이트 및 자동화합니다.
+Windows 응용 프로그램의 키보드, 마우스, 터치, 펜 및 게임 패드와 같은 장치에서 사용자 입력을 시뮬레이션 하 고 자동화 합니다.
 
-> **중요 API**: [**Windows.UI.Input.Preview.Injection**](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection)
+> **중요 한 api**: Windows. ui&gt. [ **삽입**](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection)
 
 ## <a name="overview"></a>개요
 
-입력 삽입을 통해 UWP 응용 프로그램에서 다양한 입력 장치의 입력을 시뮬레이트하고 앱의 클라이언트 영역 외, 레지스트리 편집기와 같은 관리자 권한으로 실행되는 앱에서도 해당 입력을 어디에든 직접 연결할 수 있습니다.
+입력 주입을 사용 하면 Windows 응용 프로그램에서 다양 한 입력 장치에서 입력을 시뮬레이션 하 고, 앱의 클라이언트 영역 외부 (레지스트리 편집기와 같은 관리자 권한으로 실행 되는 앱에도)를 비롯 한 모든 위치에서 해당 입력을 보낼 수 있습니다.
 
-입력 삽입은 접근성, 테스트(임시, 자동), 그리고 원격 액세스 및 지원 기능을 포함하는 기능을 제공해야 하는 UWP 앱 및 도구에 유용합니다.
+입력 주입은 내게 필요한 옵션, 테스트 (임시, 자동), 원격 액세스 및 지원 기능을 포함 하는 기능을 제공 해야 하는 Windows 앱 및 도구에 유용 합니다.
 
-## <a name="setup"></a>설치 프로그램
+## <a name="setup"></a>설치
 
-UWP 앱에서 입력 삽입 API를 사용하려면 앱 매니페스트에 다음을 추가해야 합니다.
+Windows 앱에서 입력 주입 Api를 사용 하려면 앱 매니페스트에 다음을 추가 해야 합니다.
 
-1. **Package.appxmanifest** 파일을 마우스 오른쪽 단추로 클릭하고 **코드 보기**를 선택합니다.
-1. 다음 내용을 `Package` 노드에 삽입합니다.
+1. **Appxmanifest.xml** 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 선택 합니다.
+1. `Package` 노드에 다음을 삽입 합니다.
     - `xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"`
     - `IgnorableNamespaces="rescap"`
-1. 다음 내용을 `Capabilities` 노드에 삽입합니다.
+1. `Capabilities` 노드에 다음을 삽입 합니다.
     - `<rescap:Capability Name="inputInjectionBrokered" />`
 
-## <a name="duplicate-user-input"></a>사용자 이름 복제
+## <a name="duplicate-user-input"></a>중복 사용자 입력
 
-| ![터치식 입력 삽입 샘플](images/injection/touch-input-injection.gif) | 
+| ![터치식 입력 주입 샘플](images/injection/touch-input-injection.gif) | 
 |:--:|
-| *터치 입력된 주입 샘플* |
+| *터치식 입력 주입 샘플* |
 
-이 예에서 입력 삽입 API([Windows.UI.Input.Preview.Injection](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection))를 사용하여 앱의 한 지역에서 마우스 입력 이벤트를 수신 대기하고 해당 터치식 입력 이벤트를 다른 지역에서 시뮬레이트하는 방법을 설명합니다.
+이 예제에서는 입력 주입 Api ([Windows](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection))를 사용 하 여 앱의 한 지역에서 마우스 입력 이벤트를 수신 대기 하 고 다른 지역에서 해당 터치식 입력 이벤트를 시뮬레이트하는 방법을 보여 줍니다.
 
-**이 샘플을 다운로드할 [입력 주입 샘플 (터치 마우스)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)**
+**[입력 주입 샘플 (마우스 터치)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip) 에서이 샘플 다운로드**
 
-1. 먼저 UI(MainPage.xaml)를 설정합니다.
+1. 먼저 UI (MainPage)를 설정 합니다.
 
-    각각 네 개의 버튼이 있는 두 개의 그리드 영역(하나는 마우스 입력용, 다른 하나는 삽입된 터치식 입력용)이 있습니다.
+    두 개의 그리드 영역 (마우스 입력 용으로 하나 및 삽입 된 터치식 입력 용)이 있고 각각 네 개의 단추가 있습니다.
       > [!NOTE] 
-      > 그리드 배경 값을 할당 해야 합니다 (`Transparent`,이 경우), 그렇지 않으면 포인터 이벤트가 검색 되지 않습니다.
+      > 그리드 배경에는 값 (`Transparent`이 경우)을 할당 해야 합니다. 그렇지 않으면 포인터 이벤트가 검색 되지 않습니다.
 
-    입력 지역에서 마우스 클릭이 발견될 경우 해당 터치 이벤트가 입력 삽입 영역에 삽입됩니다. 삽입 입력으로 인한 버튼 클릭은 제목 영역에 보고됩니다.
+    입력 영역에서 마우스 클릭이 검색 되 면 해당 터치 이벤트가 입력 주입 영역에 삽입 됩니다. 삽입 입력의 단추 클릭이 제목 영역에 보고 됩니다.
 
     ```xaml
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -166,15 +166,15 @@ UWP 앱에서 입력 삽입 API를 사용하려면 앱 매니페스트에 다음
     </Grid>
     ```
 
-2. 그 다음, 앱을 초기화합니다.
+2. 다음으로 앱을 초기화 합니다.
     
-    이 조각에서 전역 개체를 선언하고 버튼 클릭 이벤트로 처리된 것으로 표시할 수 있는 마우스 입력 영역 내에서 포인터 이벤트([AddHandler](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler))에 해단 수신기를 선언합니다.
+    이 코드 조각에서는 전역 개체를 선언 하 고 마우스 입력 영역 내에서 단추 클릭 이벤트에 처리 된 것으로 표시 될 수 있는 포인터 이벤트 ([AddHandler](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler))의 수신기를 선언 합니다.
 
-    [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector) 개체는 입력 데이터 전송에 대한 가상 입력 장치를 나타냅니다.
+    [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector) 개체는 입력 데이터를 전송 하기 위한 가상 입력 장치를 나타냅니다.
 
-    `ContainerInput_PointerPressed` 처리기에서 터치 삽입 함수를 호출합니다.
+    `ContainerInput_PointerPressed` 처리기에서 터치 삽입 함수를 호출 합니다.
 
-    `ContainerInput_PointerReleased` 처리기에서 UninitializeTouchInjection을 호출하여 [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector) 개체를 종료합니다.
+    `ContainerInput_PointerReleased` 처리기에서 UninitializeTouchInjection을 호출 하 여 [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector) 개체를 종료 합니다.
 
     ```csharp
     public sealed partial class MainPage : Page
@@ -251,13 +251,13 @@ UWP 앱에서 입력 삽입 API를 사용하려면 앱 매니페스트에 다음
     ```
 3. 터치 입력 삽입 함수는 다음과 같습니다.
 
-    먼저 [TryCreate](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.trycreate)를 호출하여 [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector) 개체를 인스턴스화합니다.
+    먼저, [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector) 개체를 인스턴스화하기 위해 [trcreate](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.trycreate) 를 호출 합니다.
 
-    그 다음 [InitializeTouchInjection](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.initializetouchinjection)을 `Default`의 [InjectedInputVisualizationMode](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputvisualizationmode)로 호출합니다.
+    그런 다음 [InjectedInputVisualizationMode](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputvisualizationmode) 를 사용 하 여 [InitializeTouchInjection](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.initializetouchinjection) 를 `Default`호출 합니다.
 
-    삽입 지점을 계산한 후 [InjectedInputTouchInfo](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputtouchinfo)를 호출하여 삽입할 터치 지점 목록을 초기화합니다(이 예에서는 마우스 입력 포인터에 해당하는 한 터치 지점을 만듭니다).
+    삽입 지점을 계산한 후에는 [InjectedInputTouchInfo](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputtouchinfo) 를 호출 하 여 삽입할 터치 포인트 목록을 초기화 합니다 .이 예제에서는 마우스 입력 포인터에 해당 하는 터치 지점을 하나 만듭니다.
 
-    마지막으로, [InjectTouchInput](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.injecttouchinput)을 첫 번째는 포인터 아래로, 두 번째는 포인터 아래로 두 번 호출합니다.
+    마지막으로 [InjectTouchInput](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.injecttouchinput) 를 두 번 호출 합니다. 첫 번째는 포인터 아래로, 두 번째는 포인터 위입니다.
 
     ```csharp
     /// <summary>
@@ -359,10 +359,10 @@ UWP 앱에서 입력 삽입 API를 사용하려면 앱 매니페스트에 다음
     }
     ```
 
-4. 마지막으로, 입력 삽입 지역의 모든 버튼 [클릭](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase) 라우트된 이벤트를 처리하고 클릭한 버튼의 이름으로 UI를 업데이트합니다.
+4. 마지막으로 입력 주입 영역에서 모든 단추 [클릭](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase) 라우트된 이벤트를 처리 하 고 클릭 한 단추 이름으로 UI를 업데이트 합니다.
 
 ## <a name="see-also"></a>참조
 
-### <a name="topic-samples"></a>항목 샘플
+### <a name="topic-samples"></a>토픽 샘플
 
-- [입력된 주입 샘플 (터치 마우스)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)
+- [입력 삽입 샘플 (마우스로 터치)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-input-injection-mouse-to-touch.zip)

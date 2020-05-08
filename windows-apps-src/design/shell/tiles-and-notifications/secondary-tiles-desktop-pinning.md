@@ -1,40 +1,40 @@
 ---
-Description: Windows 데스크톱 응용 프로그램은 데스크톱 브리지 덕분에 보조 타일을 고정할 수 있습니다!
+Description: Windows 데스크톱 응용 프로그램은 데스크톱 브리지 덕분에 보조 타일을 고정할 수 있습니다.
 title: 데스크톱 응용 프로그램에서 보조 타일 고정
 label: Pin secondary tiles from desktop application
 template: detail.hbs
 ms.date: 05/25/2017
 ms.topic: article
-keywords: windows 10, 데스크톱 브리지, 보조 타일, 고정, 고정하기, 빠른 시작, 코드 샘플, 예, 보조타일, 데스크톱 응용 프로그램, win32, winforms, wpf
+keywords: windows 10, 데스크톱 브리지, 보조 타일, pin, 고정, 빠른 시작, 코드 샘플, 예제, secondarytile, 데스크톱 응용 프로그램, win32, winforms, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: cd6debb076aac4286c8cb9a33730ade4942b5030
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 7ddcd96eadbb6d2edbc3a72fa58ff3cc8931a09b
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209919"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730361"
 ---
 # <a name="pin-secondary-tiles-from-desktop-application"></a>데스크톱 응용 프로그램에서 보조 타일 고정
 
 
-Win32, Windows Forms, WPF 등의 Windows 데스크톱 응용 프로그램은 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop) 덕분에 보조 타일을 고정할 수 있습니다!
+[데스크톱 브리징](https://developer.microsoft.com/windows/bridges/desktop)덕분에 Windows 데스크톱 응용 프로그램 (예: Win32, WINDOWS FORMS, WPF)은 보조 타일을 고정할 수 있습니다.
 
 ![보조 타일의 스크린샷](images/secondarytiles.png)
 
 > [!IMPORTANT]
-> **Fall Creators Update 필요**: SDK 16299를 대상으로 삼고 빌드 16299 이상을 실행하여 데스크톱 브리지 앱에서 보조 타일을 고정해야 합니다.
+> **낙하 작성자 업데이트 필요**: 데스크톱 브리지 앱에서 보조 타일을 고정 하려면 SDK 16299을 대상으로 하 고 빌드 16299 이상을 실행 해야 합니다.
 
-WPF 또는 WinForms 응용 프로그램에서 보조 타일을 추가하는 방법은 순수 UWP 앱과 매우 유사합니다. 유일한 차이점은 기본 창 핸들(HWND)을 지정해야 한다는 점입니다. 이러한 이유로 타일을 고정할 때 Windows는 타일을 고정할 것인지 사용자에게 확인을 요청하는 모달 대화 상자를 표시합니다. 데스크톱 응용 프로그램이 소유자 창을 통해 SecondaryTile 개체를 구성하지 않으면 Windows는 어디에 대화 상자를 그려야 할지 알 수 없고 따라서 작업이 실패합니다.
-
-
-## <a name="package-your-app-with-desktop-bridge"></a>데스크톱 브리지를 사용하여 앱 패키징
-
-아직 데스크톱 브리지를 사용하여 앱을 패키징하지 않은 경우 [패키징해야만](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root) UWP API를 사용할 수 있습니다.
+WPF 또는 WinForms 응용 프로그램에서 보조 타일을 추가 하는 것은 순수 UWP 앱과 매우 유사 합니다. 유일한 차이점은 기본 창 핸들 (HWND)을 지정 해야 한다는 것입니다. 이는 타일을 고정 하는 경우 사용자가 타일을 고정할 지 여부를 확인 하는 모달 대화 상자를 표시 하기 때문입니다. 데스크톱 응용 프로그램에서 소유자 창을 사용 하 여 SecondaryTile 개체를 구성 하지 않는 경우 Windows에서는 대화를 그릴 위치를 알지 못하며 작업이 실패 합니다.
 
 
-## <a name="enable-access-to-iinitializewithwindow-interface"></a>IInitializeWithWindow 인터페이스에 대한 액세스 사용
+## <a name="package-your-app-with-desktop-bridge"></a>데스크톱 브리지를 사용 하 여 앱 패키지
 
-응용 프로그램이 C# 또는 Visual Basic 등 관리되는 언어로 작성된 경우 앱 코드의 IInitializeWithWindow 인터페이스를 다음 C# 예제에 나타나는 [ComImport](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.comimportattribute) 및 Guid 특성을 사용하여 선언합니다. 이 예제에서는 System.Runtime.InteropServices 네임스페이스에 대한 코드 파일에 using 문이 있다고 가정합니다.
+데스크톱 브리지를 사용 하 여 앱을 패키지 하지 않은 경우 Windows 런타임 Api를 사용 하기 전에 [먼저이 작업을 수행 해야 합니다](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root) .
+
+
+## <a name="enable-access-to-iinitializewithwindow-interface"></a>IInitializeWithWindow 인터페이스에 대 한 액세스 사용
+
+응용 프로그램이 c # 또는 Visual Basic와 같은 관리 되는 언어로 작성 된 경우 다음 c # 예제와 같이 [ComImport](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.comimportattribute) 및 Guid 특성을 사용 하 여 앱의 코드에서 IInitializeWithWindow 인터페이스를 선언 합니다. 이 예제에서는 코드 파일에 T e m 네임 스페이스에 대 한 using 문이 있다고 가정 합니다.
 
 ```csharp
 [ComImport]
@@ -46,12 +46,12 @@ public interface IInitializeWithWindow
 }
 ```
 
-또는 C++를 사용하는 경우 코드에 **shobjidl.h** 헤더 파일에 대한 참조를 추가합니다. 이 헤더 파일에는 *IInitializeWithWindow* 인터페이스의 선언이 포함되어 있습니다.
+또는 c + +를 사용 하는 경우 코드에 **shobjidl. h** 헤더 파일에 대 한 참조를 추가 합니다. 이 헤더 파일에는 *Iinitializewithwindow* 인터페이스의 선언이 포함 되어 있습니다.
 
 
 ## <a name="initialize-the-secondary-tile"></a>보조 타일 초기화
 
-일반 UWP 앱에서 하는 방법과 똑같은 방법으로 새 보조 타일 개체를 초기화합니다. 보조 타일을 만들고 고정하는 방법에 대한 자세한 내용은 [보조 타일 고정](secondary-tiles-pinning.md)을 참조하세요.
+정상적인 UWP 앱과 똑같이 새 보조 타일 개체를 초기화 합니다. 보조 타일을 만들고 고정 하는 방법에 대 한 자세한 내용은 [보조 타일 고정](secondary-tiles-pinning.md)을 참조 하세요.
 
 ```csharp
 // Initialize the tile with required arguments
@@ -66,7 +66,7 @@ SecondaryTile tile = new SecondaryTile(
 
 ## <a name="assign-the-window-handle"></a>창 핸들 할당
 
-데스크톱 응용 프로그램의 핵심 단계입니다. 개체를 [IInitializeWithWindow](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow) 개체로 캐스트합니다. 그런 다음 [IInitializeWithWindow.Initialize](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinitializewithwindow-initialize) 메서드를 호출하고, 모달 대화 상자의 소유자가 되려는 창의 핸들을 전달합니다. 다음 C# 예제에서는 앱 주 창의 핸들을 메서드에 전달하는 방법을 보여 줍니다.
+데스크톱 응용 프로그램에 대 한 주요 단계입니다. 개체를 [Iinitializewithwindow](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iinitializewithwindow) 개체로 캐스팅 합니다. 그런 다음, [Iinitializewithwindow Initialize](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iinitializewithwindow-initialize) 메서드를 호출 하 고 원하는 창의 핸들을 모달 대화 상자의 소유자로 전달 합니다. 다음 c # 예제에서는 응용 프로그램의 주 창 핸들을 메서드에 전달 하는 방법을 보여 줍니다.
 
 ```csharp
 // Assign the window handle
@@ -77,7 +77,7 @@ initWindow.Initialize(System.Diagnostics.Process.GetCurrentProcess().MainWindowH
 
 ## <a name="pin-the-tile"></a>타일 고정
 
-마지막으로, 일반 UWP 앱과 같은 방법으로 타일 고정을 요청합니다.
+마지막으로 일반적인 UWP 앱과 마찬가지로 타일 고정을 요청 합니다.
 
 ```csharp
 // Pin the tile
@@ -90,9 +90,9 @@ bool isPinned = await tile.RequestCreateAsync();
 ## <a name="send-tile-notifications"></a>타일 알림 보내기
 
 > [!IMPORTANT]
-> **2018년 4월 버전 17134.81 이상 필요**: 타일 또는 배지 알림을 데스크톱 브리지 앱의 보조 타일로 보내려면 빌드 17134.81 이상을 실행해야 합니다. 이 .81 서비스 업데이트 전에 타일 또는 배지 알림을 데스크톱 브리지 앱의 보조 타일로 보낼 때 0x80070490 *요소를 찾을 수 없음* 예외가 발생했습니다.
+> **4 월 2018 버전 17134.81 이상이 필요**합니다. 데스크톱 브리지 앱에서 보조 타일에 타일 또는 배지 알림을 보내려면 빌드 17134.81 이상을 실행 해야 합니다. 이. 81 업데이트를 설치 하기 전에 0x80070490 *요소를 찾을 수 없습니다* . 예외는 데스크톱 브리지 앱에서 보조 타일에 타일 또는 배지 알림을 보낼 때 발생 합니다.
 
-타일 또는 배지 알림 보내기는 UWP 앱과 동일합니다. 시작하려면 [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)를 참조하세요.
+타일 또는 배지 알림은 UWP 앱과 동일 합니다. 시작 하려면 [로컬 타일 알림 보내기](sending-a-local-tile-notification.md) 를 참조 하세요.
 
 
 ## <a name="resources"></a>리소스
