@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
-ms.openlocfilehash: c2d7db47a0731323cbbb45c471428a2496f8d479
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 1167819311c97c651375f3d6a00a6416399f4734
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80614938"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970018"
 ---
 # <a name="input-and-interactions"></a>입력 및 조작
 
@@ -169,13 +169,13 @@ To accommodate as many users and devices as possible, we recommend that you desi
 <div class="side-by-side-content-left">
 <p>
 <b>[Identify input devices](identify-input-devices.md)</b><br/>
-Identify the input devices connected to a Universal Windows Platform (UWP) device and identify their capabilities and attributes.
+Identify the input devices connected to a Windows app device and identify their capabilities and attributes.
 </p>
 </div>
 <div class="side-by-side-content-right">
 <p>
 <b>[Handle pointer input](handle-pointer-input.md)</b><br/>
-Receive, process, and manage input data from pointing devices, such as touch, mouse, pen/stylus, and touchpad, in Universal Windows Platform (UWP) apps.
+Receive, process, and manage input data from pointing devices, such as touch, mouse, pen/stylus, and touchpad, in Windows app apps.
 </p>
 </div>
 </div>

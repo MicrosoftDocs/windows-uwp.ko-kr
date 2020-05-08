@@ -354,7 +354,7 @@
               href: shell/tiles-and-notifications/toast-schema.md
             - name: 로컬 알림 메시지 보내기
               items:
-                - name: UWP 앱
+                - name: Windows 앱
                   href: shell/tiles-and-notifications/send-local-toast.md
                 - name: 데스크톱 앱
                   items:
