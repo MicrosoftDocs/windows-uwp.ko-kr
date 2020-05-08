@@ -8,14 +8,14 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a87fe2bbff1768da43d6cb366b173077555270f
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: cc182d05b1cc02dd62f66506c12fcfcfc8a03952
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63806984"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969778"
 ---
-# <a name="tiles-badges-and-notifications-for-uwp-apps"></a>UWP 앱에 대한 타일, 배지 및 알림
+# <a name="tiles-badges-and-notifications-for-windows-apps"></a>Windows 앱에 대한 타일, 배지 및 알림
  
 
 타일, 배지 및 알림을 사용하여 앱에 대한 진입점을 제공하고 사용자를 최신 상태로 유지하는 방법에 대해 알아봅니다.
@@ -23,7 +23,7 @@ ms.locfileid: "63806984"
 > **중요 API**: [UWP 커뮤니티 도구 키트 알림 NuGet 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="images/tile-and-live-tile.png" />
-타일은 시작 메뉴에 표시되는 앱의 표시를 말합니다. 모든 UWP 앱에는 타일이 있습니다. 다양한 타일 크기(작음, 중간, 넓음 및 큼)를 사용하도록 설정할 수 있습니다.</p>
+타일은 시작 메뉴에 표시되는 앱의 표시를 말합니다. 모든 Windows 앱에는 타일이 있습니다. 다양한 타일 크기(작음, 중간, 넓음 및 큼)를 사용하도록 설정할 수 있습니다.</p>
 
 <p>뉴스 헤드라인 또는 읽지 않은 가장 최근 메시지의 제목과 같은 새 정보를 사용자에게 전달하기 위해 <em>타일 알림</em>을 사용하여 타일을 업데이트할 수 있습니다.</p>
 
@@ -37,9 +37,9 @@ ms.locfileid: "63806984"
 | 문서 | 설명 |
 | --- | --- |
 | [타일 만들기](creating-tiles.md) | 앱의 기본 타일을 사용자 지정하고 다양한 화면 크기에 대한 자산을 제공합니다. |
-| [앱 아이콘 자산](app-assets.md) | Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘 자산은 UWP(유니버설 Windows 플랫폼) 앱에 대한 호출 카드입니다. 다음 지침에서는 시스템에서 앱 아이콘 자산을 표시하는 위치에 대해 자세히 설명하고 가장 완성도 높은 아이콘을 만드는 방법에 대한 자세한 디자인 팁을 제공합니다. |
+| [앱 아이콘 자산](app-assets.md) | Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘 자산은 Windows 앱에 대한 호출 카드입니다. 다음 지침에서는 시스템에서 앱 아이콘 자산을 표시하는 위치에 대해 자세히 설명하고 가장 완성도 높은 아이콘을 만드는 방법에 대한 자세한 디자인 팁을 제공합니다. |
 | [기본 타일 API](primary-tile-apis.md) | 앱의 기본 타일을 고정하도록 요청하고, 기본 타일이 현재 고정되어 있는지 확인합니다. |
-| [타일 콘텐츠](create-adaptive-tiles.md) | 타일 알림 콘텐츠는 Windows 10의 새로운 적응형 기능을 사용하도록 지정되어 다양한 화면 밀도에 맞게 조정되는 간단하고 유연한 표시(markup) 언어를 사용하여 고유한 타일 알림 콘텐츠를 디자인할 수 있습니다. 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. |
+| [타일 콘텐츠](create-adaptive-tiles.md) | 타일 알림 콘텐츠는 Windows 10의 새로운 적응형 기능을 사용하도록 지정되어 다양한 화면 밀도에 맞게 조정되는 간단하고 유연한 표시(markup) 언어를 사용하여 고유한 타일 알림 콘텐츠를 디자인할 수 있습니다. 이 문서에서는 Windows 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. |
 | [타일 콘텐츠 스키마](../tiles-and-notifications/tile-schema.md) | 다음은 적응형 타일을 만드는 데 사용되는 요소 및 특성입니다. |
 | [특수 타일 템플릿](special-tile-templates-catalog.md) | 특수 타일 템플릿은 애니메이션 효과가 추가되었거나 적응형 타일에서 불가능한 작업을 수행할 수 있도록 하는 고유한 템플릿입니다. |
 | [로컬 타일 알림 보내기](sending-a-local-tile-notification.md) | 로컬 타일 알림을 보내서 다양한 동적 콘텐츠를 라이브 타일에 추가하는 방법에 대해 알아봅니다. |
@@ -51,7 +51,7 @@ ms.locfileid: "63806984"
 | --- | --- |
 | [알림 메시지](adaptive-interactive-toasts.md) | 적응형 및 대화형 알림 메시지를 사용하면 더 많은 콘텐츠, 선택적 인라인 이미지 및 선택적 사용자 조작이 포함된 유연한 팝업 알림을 만들 수 있습니다. |
 | [로컬 알림 메시지 보내기](send-local-toast.md) | 대화형 알림 메시지를 보내는 방법에 대해 알아봅니다. |
-| [알림 시각화 도우미](notifications-visualizer.md) | 알림 시각화 도우미는 [Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1)의 UWP(유니버설 Windows 플랫폼) 앱으로, 개발자가 Windows 10용 적응형 라이브 타일을 디자인하는 데 도움이 됩니다. |
+| [알림 시각화 도우미](notifications-visualizer.md) | 알림 시각화 도우미는 [Store](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1)의 Windows 앱으로, 개발자가 Windows 10용 적응형 라이브 타일을 디자인하는 데 도움이 됩니다. |
 | [알림 전달 방법 선택](choosing-a-notification-delivery-method.md) | 이 문서에서는 타일 및 배지 업데이트와 알림 메시지 콘텐츠를 제공하는 네 가지 알림 옵션(로컬, 예약, 정기 및 푸시)에 대해 설명합니다. |
 | [정기 알림 개요](periodic-notification-overview.md) | 정기 알림(폴링된 알림이라고도 함)은 고정된 간격에 따라 클라우드 서비스에서 콘텐츠를 다운로드하여 타일 및 배지를 업데이트합니다. |
 | [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md) | 타사 개발자는 WNS(Windows 푸시 알림 서비스)를 사용하여 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. WNS는 에너지 효율적이며 신뢰할 수 있는 방법으로 사용자에게 새 업데이트를 전달하는 메커니즘을 제공합니다. |

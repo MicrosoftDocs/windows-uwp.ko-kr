@@ -1,6 +1,6 @@
 ---
-Description: UWP(유니버설 Windows 플랫폼) 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다.
-title: UWP 디바이스에 대한 UI 고려 사항
+Description: Windows 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다.
+title: Windows 디바이스에 대한 UI 고려 사항
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
 template: detail.hbs
@@ -8,18 +8,18 @@ keywords: 디바이스, 입력, 조작
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0808b5173f697fcca8d5e117f857d3861c327ae3
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 121025dc5e87e7e3953b9517144e36ab382795bb
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74258118"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968209"
 ---
-#  <a name="ui-considerations-for-uwp-devices"></a>UWP 디바이스에 대한 UI 고려 사항
+#  <a name="ui-considerations-for-windows-devices"></a>Windows 디바이스에 대한 UI 고려 사항
 
-![장치](../images/devices-2x.png)
+![디바이스](../images/devices-2x.png)
 
-UWP(유니버설 Windows 플랫폼) 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다.
+Windows 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다.
 
 ![Windows 기반 디바이스](images/device-primer/device-primer-ramp.png)
 
@@ -47,7 +47,7 @@ UI 고려 사항
 
 입력
 -   마우스
--   키보드
+-   Keyboard
 -   노트북과 통합 PC의 터치
 -   경우에 따라 Xbox 컨트롤러와 같은 게임 패드가 사용됨
 
@@ -96,7 +96,7 @@ UI 고려 사항
 
 실내의 소파에 앉아 TV와 상호 작용 하는 게임 패드 또는 리모컨을 사용하여 TV를 조작하는 환경을 **10피트 환경**이라고 합니다. 일반적으로 사용자가 화면에서 약 3m 떨어진 곳에 앉아 있기 때문에 이렇게 이름이 지정되었습니다. 이 경우 가령 *0.6m* 환경이나 PC 조작 시에는 존재하지 않는 고유한 과제가 발생합니다. Xbox One 또는 TV 화면에 연결되고 입력에 게임 패드 또는 리모컨을 사용하는 다른 모든 디바이스용 앱을 개발하는 경우 항상 이 점에 유의해야 합니다.
 
-3m 환경용으로 UWP 앱을 디자인하는 것은 여기에 나열된 다른 디바이스 범주를 디자인하는 것과 매우 다릅니다. 자세한 내용은 [Xbox 및 TV용 디자인](designing-for-tv.md)을 참조하세요.
+3m 환경용으로 Windows 앱을 디자인하는 것은 여기에 나열된 다른 디바이스 범주를 디자인하는 것과 매우 다릅니다. 자세한 내용은 [Xbox 및 TV용 디자인](designing-for-tv.md)을 참조하세요.
 
 화면 크기
 - 24인치 이상
@@ -118,7 +118,7 @@ UI 고려 사항
 
 입력
 - 게임 패드(예: Xbox 컨트롤러)
-- 리모컨
+- 원격
 - 음성(고객이 Kinect 또는 헤드셋을 가지고 있는 경우)
 
 일반적인 디바이스 기능

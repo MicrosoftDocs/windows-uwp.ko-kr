@@ -1,17 +1,17 @@
 ---
-description: 다양한 디바이스 및 화면 크기에서 멋지게 보이고 탐색하기 쉬운 UWP 앱을 디자인하고 코딩하는 방법을 알아봅니다.
-title: UWP 앱 레이아웃 개요
+description: 다양한 디바이스 및 화면 크기에서 멋지게 보이고 탐색하기 쉬운 Windows 앱을 디자인하고 코딩하는 방법을 알아봅니다.
+title: Windows 앱의 레이아웃 개요
 keywords: UWP 앱 레이아웃, 유니버설 windows 플랫폼, 앱 디자인, 인터페이스
 ms.date: 03/07/2018
 ms.topic: article
 ms.assetid: 1aa12606-8a99-4db3-8311-90e02fde9cf1
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ab0344acc40103620da5164faa397c081a4a079
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: c3647f6a4c3bbc3951fab45380762de472d13533
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68867331"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970778"
 ---
 # <a name="layout"></a>레이아웃
 

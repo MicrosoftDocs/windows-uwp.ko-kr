@@ -1,6 +1,6 @@
 ---
 Description: 체계적으로 잘 디자인된 동작은 앱에 생명을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다.
-title: UWP 앱의 동작 및 애니메이션
+title: Windows 앱의 동작
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
@@ -12,14 +12,14 @@ design-contact: jeffarn
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 31cf2134fb8f77809b75a5abf3e6980443452059
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 49fc31729bc8f195bacf1d743c570aa5293b33de
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68867400"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970338"
 ---
-# <a name="motion-for-uwp-apps"></a>UWP 앱의 동작
+# <a name="motion-for-windows-apps"></a>Windows 앱의 동작
 
 ![동작 아이콘](../images/motion-2x.png)
 
