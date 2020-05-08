@@ -1,53 +1,53 @@
 ---
-Description: 타사 개발자는 WNS(Windows 푸시 알림 서비스)를 사용하여 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. 응용 프로그램의 요구 사항에 따라 알림을 보내는 여러 가지 방법이 있습니다.
-title: 올바른 푸시 알림 채널 유형 선택
+Description: WNS (Windows Push Notification Services)를 사용 하면 타사 개발자가 자신의 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. 응용 프로그램의 필요에 따라 알림을 보내는 방법에는 여러 가지가 있습니다.
+title: 적절 한 푸시 알림 채널 유형 선택
 ms.date: 07/07/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 72bad5bff8092e63a73cc1e32f4424b70867d245
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 502395d1daa698e1b05e40f355e65f074219e9a5
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366036"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970858"
 ---
-# <a name="choosing-the-right-push-notification-channel-type"></a>올바른 푸시 알림 채널 유형 선택
+# <a name="choosing-the-right-push-notification-channel-type"></a>적절 한 푸시 알림 채널 유형 선택
 
-이 문서에서는 앱에 콘텐츠를 전달하는 데 도움이 되는 세 가지 유형의 UWP 푸시 알림 채널(주, 보조 및 대체)에 대해 다룹니다. 
+이 문서에서는 앱에 콘텐츠를 제공 하는 데 도움이 되는 세 가지 유형의 Windows 푸시 알림 채널 (기본, 보조 및 대체)을 설명 합니다. 
 
-(푸시 알림을 만드는 방법에 대 한 자세한 내용은 참조는 [Windows 푸시 알림 서비스 (WNS) 개요](../tiles-and-notifications/windows-push-notification-services--wns--overview.md).) 
+푸시 알림을 만드는 방법에 대 한 자세한 내용은 [WNS (Windows 푸시 Notification Services) 개요](../tiles-and-notifications/windows-push-notification-services--wns--overview.md)를 참조 하세요. 
 
-## <a name="types-of-push-channels"></a>푸시 채널 유형 
+## <a name="types-of-push-channels"></a>푸시 채널의 유형 
 
-UWP 앱에 알림에 보내는 데 사용할 수 있는 세 가지 유형의 푸시 채널이 있습니다. 구현되지 않은 것은 다음과 같습니다. 
+Windows 앱에 알림을 보내는 데 사용할 수 있는 푸시 채널에는 세 가지 유형이 있습니다. 아래에 이 계정과 키의 예제가 나와 있습니다. 
 
-[기본 채널](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) -"전통적인" 푸시 채널입니다. 송신 알림, raw, 타일 또는 배지 알림을 저장소의 모든 앱에서 사용할 수 있습니다. [여기서 자세한 내용을 알아보세요](windows-push-notification-services--wns--overview.md).
+[기본 채널](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) -"기존" 푸시 채널입니다. 는 스토어의 모든 앱에서 알림, 타일, raw 또는 배지 알림을 보내는 데 사용할 수 있습니다. [자세한 내용은 여기를 참조](windows-push-notification-services--wns--overview.md)하세요.
 
-[보조 타일 채널](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) -보조 타일에 타일 업데이트를 푸시하는 데 사용 합니다. 사용자의 시작 화면에 고정된 보조 타일에 타일 또는 배지 알림을 보내는 데만 사용할 수 있습니다.
+[보조 타일 채널](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) -타일 업데이트를 보조 타일로 푸시하는 데 사용 됩니다. 사용자의 시작 화면에 고정 된 보조 타일에 타일 또는 배지 알림을 보내는 데만 사용할 수 있습니다.
 
-[대체 채널](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) - 크리에이터 업데이트에 추가된 새로운 유형의 채널입니다. 스토어에서 등록되지 않은 앱을 포함하여 모든 UWP 앱에 원시 알림을 보낼 수 있습니다. 
+[대체 채널](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) -작성자 업데이트에 추가 된 새 형식의 채널입니다. 저장소에 등록 되지 않은 앱을 포함 하 여 모든 Windows 앱으로 원시 알림을 보낼 수 있습니다. 
 
 > [!NOTE]
-> 어떤 푸시 채널을 사용하든, 일단 장치에서 앱이 실행되면 항상 로컬 알림 메시지, 타일 또는 배지 알림을 보낼 수 있습니다. 포그라운드 앱 프로세스 또는 백그라운드 작업에서 로컬 알림을 보낼 수 있습니다. 
+> 앱이 장치에서 실행 되는 경우 사용 하는 푸시 채널에 관계 없이 항상 로컬 알림, 타일 또는 배지 알림을 보낼 수 있습니다. 포그라운드 앱 프로세스 또는 백그라운드 작업에서 로컬 알림을 보낼 수 있습니다. 
 
 
 ## <a name="primary-channels"></a>기본 채널
 
-현재 Windows에서 가장 일반적으로 사용되는 채널로, Microsoft Store를 통해 앱을 배포하는 거의 모든 시나리오에 적합합니다. 앱에 모든 종류의 알림을 보낼 수 있습니다. 
+이는 현재 Windows에서 가장 일반적으로 사용 되는 채널 이며 앱이 Microsoft Store를 통해 배포 되는 거의 모든 시나리오에 적합 합니다. 앱에 모든 유형의 알림을 보낼 수 있습니다. 
 
-### <a name="what-do-primary-channels-enable"></a>기본 채널로 무엇을 할 수 있을까요?
+### <a name="what-do-primary-channels-enable"></a>기본 채널은 어떤 기능을 사용할 수 있나요?
 
--   **기본 타일에 타일 또는 배지 업데이트를 보냅니다.** 사용자가 여러분의 타일을 시작 화면에 고정하기로 선택한다면 여러분에게는 아주 좋은 홍보 기회입니다. 앱 내에서 유용한 정보 또는 경험 미리 알림이 포함된 업데이트를 보내세요. 
--   **알림 메시지를 보냅니다.** 알림 메시지는 사용자 앞에서 즉시 몇 가지 정보를 얻을 수 있는 기회입니다. 셸을 사용하여 대부분의 앱 맨 위에 그리며, 사용자가 나중에 뒤로 이동하여 상호 작용할 수 있도록 알림 센터에 실시간으로 제공됩니다. 
--   **백그라운드 작업 트리거를 원시 알림을 보냅니다.** 알림을 기반으로 사용자 대신 작업을 수행해야 하는 경우가 종종 있습니다. 원시 알림을 사용하여 앱의 백그라운드 작업을 실행할 수 있습니다. 
--   **TLS를 사용 하 여 Windows에서 제공 하는 전송 중에 메시지 암호화 합니다.** WNS로 들어오고 사용자 장치로 나가는 메시지가 모두 실시간으로 암호화됩니다.  
+-   **타일 또는 배지 업데이트를 기본 타일로 보냅니다.** 사용자가 타일을 시작 화면에 고정 하도록 선택한 경우에는이를 해제할 수 있습니다. 앱 내에서 유용한 정보 또는 환경 미리 알림이 포함 된 업데이트를 보냅니다. 
+-   **알림 메시지를 보내는 중입니다.** 알림 메시지는 사용자 앞에 일부 정보를 즉시 얻을 수 있는 기회입니다. 이러한 항목은 셸을 통해 대부분의 앱을 기반으로 하 고, 사용자가 뒤로 돌아가 나중에 조작할 수 있도록 작업 센터에 살고 있습니다. 
+-   **백그라운드 작업을 트리거하는 원시 알림을 보냅니다.** 알림에 따라 사용자를 대신 하 여 일부 작업을 수행 하려는 경우가 있습니다. 원시 알림을 사용 하면 앱의 백그라운드 작업을 실행할 수 있습니다. 
+-   **TLS를 사용 하 여 Windows에서 제공 하는 전송의 메시지 암호화.** 메시지는 모두 WNS로 들어오고 사용자의 장치로 이동 하는 통신에서 암호화 됩니다.  
 
-### <a name="limitations-of-primary-channels"></a>기본 채널의 제한
+### <a name="limitations-of-primary-channels"></a>기본 채널의 제한 사항
 
--   알림을 푸시하려면 WNS REST API를 사용해야 하는데, 이 API는 장치 공급업체의 표준이 아닙니다. 
--   앱당 채널을 하나만 만들 수 있습니다. 
--   Microsoft Store에 앱을 등록해야 합니다.
+-   에는 장치 공급 업체 간에 표준이 아닌 REST API WNS를 사용 하 여 알림을 푸시 해야 합니다. 
+-   앱 당 하나의 채널만 만들 수 있습니다. 
+-   앱이 Microsoft Store에 등록 되어 있어야 합니다.
 
 ### <a name="creating-a-primary-channel"></a>기본 채널 만들기 
 
@@ -58,18 +58,18 @@ PushNotificationChannel channel =
 
 ## <a name="secondary-tile-channels"></a>보조 타일 채널
 
-타일 및 배지 업데이트를 보조 타일로 푸시하는 데 사용할 수 있는 채널입니다. 그룹 채팅의 새 메시지나 업데이트된 스포츠 점수처럼 사용자가 앱 내에서 상호 작용할 수 있는 흥미로운 활동 또는 작업에 대해 알리는 데 사용됩니다. 
+이러한 채널은 타일 및 배지 업데이트를 보조 타일로 푸시하는 데 사용할 수 있습니다. 앱에서 사용자에 게 그룹 채팅 또는 업데이트 된 스포츠 점수의 새 메시지와 같이 앱에서 상호 작용할 수 있는 관심 있는 작업 또는 정보를 사용자에 게 알리는 데 사용 됩니다. 
 
-### <a name="what-do-secondary-tile-channels-enable"></a>보조 타일 채널로 무엇을 할 수 있을까요
+### <a name="what-do-secondary-tile-channels-enable"></a>보조 타일 채널은 어떤 기능을 사용할 수 있나요?
 
--   보조 타일에 타일 또는 배지 알림 보내기. 보조 타일은 사용자를 다시 앱으로 불러 들이는 좋은 방법입니다. 보조 타일은 사용자가 관심을 갖고 있는 정보의 링크이며, 타일에 관련 정보를 표시하면 사용자를 계속 타일로 돌아오게 만들 수 있습니다.
--   다양한 타일 간 채널 분리(및 만료). 사용자가 시작 화면에 고정할 수 있는 다양한 유형의 보조 타일 간에 백 엔드 논리를 분리할 수 있습니다. 
--   TLS을 사용하여 Windows에서 제공하는 전송 중 메시지 암호화. WNS로 들어오고 사용자 장치로 나가는 메시지가 모두 실시간으로 암호화됩니다.  
+-   타일 또는 배지 알림을 보조 타일로 보냅니다. 보조 타일은 사용자를 앱으로 다시 가져오는 좋은 방법입니다. 이러한 정보는 관심 있는 정보에 대 한 딥 링크 이며 타일에 대 한 관련 정보를 배치 하면 다시 다시 가져오는 데 도움이 됩니다.
+-   여러 타일 간의 채널 (및 expiries) 분리. 이렇게 하면 사용자가 시작 화면에 고정할 수 있는 다양 한 유형의 보조 타일 사이에서 백 엔드의 논리를 구분할 수 있습니다. 
+-   TLS를 사용 하 여 Windows에서 제공 하는 전송의 메시지 암호화. 메시지는 모두 WNS로 들어오고 사용자의 장치로 이동 하는 통신에서 암호화 됩니다.  
 
-### <a name="limitations-of-secondary-tile-channels"></a>보조 타일 채널의 제한
+### <a name="limitations-of-secondary-tile-channels"></a>보조 타일 채널의 제한 사항
 
--   메시지 알림 또는 원시 알림을 사용할 수 없습니다. 보조 타일로 전송되는 메시지 알림 또는 원시 알림은 시스템에서 무시됩니다.
--   Microsoft Store에 앱을 등록해야 합니다.
+-   알림 또는 원시 알림은 허용 되지 않습니다. 보조 타일로 전송 된 알림 또는 원시 알림은 시스템에서 무시 됩니다.
+-   앱이 Microsoft Store에 등록 되어 있어야 합니다.
 
 
 ### <a name="creating-a-secondary-tile-channel"></a>보조 타일 채널 만들기 
@@ -81,18 +81,18 @@ PushNotificationChannel channel =
 
 ## <a name="alternate-channels"></a>대체 채널
 
-대체 채널을 사용하면 앱을 Microsoft Store에 등록하거나 앱에 사용되는 기본 채널 이외의 푸시 채널을 만들지 않고도 푸시 알림을 보낼 수 있습니다. 
+대체 채널을 사용 하면 앱에 사용 되는 기본 채널 외부에서 푸시 채널을 만들거나 Microsoft Store에 등록 하지 않고도 앱이 푸시 알림을 보낼 수 있습니다. 
  
-### <a name="what-do-alternate-channels-enable"></a>대체 채널로 무엇을 할 수 있을까요?
--   Windows 장치에서 실행되는 UWP에 원시 푸시 알림을 보냅니다. 그러나 대체 채널 원시 알림 (수 여전히 절전 로컬로 알림 메시지를 표시 하거나 타일 알림을 백그라운드 작업)만 허용 합니다.
--   앱 내의 다양한 기능에 대한 여러 원시 푸시 채널을 만들 수 있습니다. 한 앱에서 최대 1000개의 대체 채널을 만들 수 있으며 각 채널은 30일 동안 유효합니다. 이러한 각 채널은 앱에서 별도로 관리 또는 취소할 수 있습니다.
--   Microsoft Store에 앱을 등록하지 않고 대체 푸시 채널을 만들 수 있습니다. 앱을 Microsoft Store에 등록하지 않고 장치에 설치하더라도 계속해서 푸시 알림을 받을 수 있습니다.
--   서버에서 W3C 표준 REST API 및 VAPID 프로토콜을 사용하여 알림을 푸시할 수 있습니다. 대체 채널은 W3C 표준 프로토콜을 사용하며, 따라서 유지 관리해야 하는 서버 논리를 간소화할 수 있습니다.
--   종합적인 전체 메시지 암호화. 기본 채널이 전송 중 암호화를 제공하지만 보다 강력한 보안을 원하는 경우 대체 채널을 사용하여 앱이 암호화 헤더를 통과하게 하는 방법으로 메시지를 보호할 수 있습니다. 
+### <a name="what-do-alternate-channels-enable"></a>대체 채널은 어떤 기능을 사용할 수 있나요?
+-   모든 Windows 장치에서 실행 되는 Windows에 원시 푸시 알림을 보냅니다. 대체 채널은 원시 알림만 허용 합니다 (하지만 로컬에서 알림 또는 타일 알림을 표시 하는 백그라운드 작업의 절전 모드를 해제할 수 있음).
+-   앱이 앱 내에서 다양 한 기능에 대 한 여러 원시 푸시 채널을 만들 수 있습니다. 앱은 최대 1000 개의 대체 채널을 만들 수 있으며 각 채널은 30 일 동안 유효 합니다. 이러한 각 채널은 앱에서 별도로 관리 하거나 해지할 수 있습니다.
+-   Microsoft Store를 사용 하 여 앱을 등록 하지 않고도 대체 푸시 채널을 만들 수 있습니다. Microsoft Store에 등록 하지 않고 장치에 앱을 설치 하려는 경우에도 푸시 알림을 받을 수 있습니다.
+-   서버는 W3C 표준 REST Api 및 VAPID 프로토콜을 사용 하 여 알림을 푸시할 수 있습니다. 대체 채널은 W3C 표준 프로토콜을 사용 하므로 유지 관리 해야 하는 서버 논리를 단순화할 수 있습니다.
+-   전체, 종단 간, 메시지 암호화 전송 중에 기본 채널이 암호화를 제공 하는 반면, 추가 보안을 유지 하려는 경우에는 응용 프로그램이 암호화 헤더를 통과 하 여 메시지를 보호 하는 데 사용할 수 있는 대체 채널이 있습니다. 
 
-### <a name="limitations-of-alternate-channels"></a>대체 채널의 제한
--   앱의 서버 푸시를 보낼 수 없습니다. 알림 메시지, 타일 또는 배지 알림 유형입니다. 만 원시 알림 푸시를 보낼 수 있습니다. 하지만 앱이 백그라운드 작업에서 로컬 알림을 보내는 기능은 유지됩니다. 
--   기본 또는 보조 타일 채널 이외의 다른 REST API가 필요합니다. 표준 W3C REST API를 사용하기 때문에 앱에서 푸시 알림 메시지 또는 타일 업데이트를 보내려면 다른 논리가 필요합니다.
+### <a name="limitations-of-alternate-channels"></a>대체 채널의 제한 사항
+-   앱 서버에서 푸시 알림, 타일 또는 배지 유형 알림을 보낼 수 없습니다. 푸시 원시 알림만 보낼 수 있습니다. 앱은 여전히 백그라운드 작업에서 로컬 알림을 보낼 수 있습니다. 
+-   기본 또는 보조 타일 채널과는 다른 REST API 필요 합니다. 표준 W3C REST API를 사용 하면 앱에 푸시 알림 또는 타일 업데이트를 전송 하는 데 다른 논리가 있어야 함을 의미 합니다.
 
 ### <a name="creating-an-alternate-channel"></a>대체 채널 만들기 
 
@@ -101,20 +101,20 @@ PushNotificationChannel webChannel =
     await PushNotificationChannelManager.GetDefault().CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(applicationServerKey, appChannelId);
 ```
 
-## <a name="channel-type-comparison"></a>채널 유형 비교
-다음은 채널 유형을 비교한 정보입니다.
+## <a name="channel-type-comparison"></a>채널 형식 비교
+다음은 다양 한 유형의 채널을 빠르게 비교 하는 것입니다.
 
 <table>
 
 <tr class="header">
 <th align="left"><b>형식</b></th>
-<th align="left"><b>푸시 알림?</b></th>
-<th align="left"><b>타일/배지 푸시?</b></th>
-<th align="left"><b>원시 알림 푸시?</b></th>
+<th align="left"><b>푸시 알림</b></th>
+<th align="left"><b>타일/배지 푸시</b></th>
+<th align="left"><b>원시 알림 푸시</b></th>
 <th align="left"><b>인증</b></th>
 <th align="left"><b>API</b></th>
-<th align="left"><b>스토어에 등록 필요?</b></th>
-<th align="left"><b>채널</b></th>
+<th align="left"><b>스토어 등록이 필요 한가요?</b></th>
+<th align="left"><b>Channels</b></th>
 <th align="left"><b>암호화</b></th>
 </tr>
 
@@ -122,56 +122,56 @@ PushNotificationChannel webChannel =
 <tr class="odd">
 <td align="left">주</td>
 <td align="left">예</td>
-<td align="left">예 - 기본 타일만</td>
+<td align="left">예-기본 타일에만 해당</td>
 <td align="left">예</td>
 <td align="left">OAuth</td>
 <td align="left">WNS REST API</td>
 <td align="left">예</td>
-<td align="left">앱당 하나</td>
+<td align="left">앱 당 1 개</td>
 <td align="left">전송 중</td>
 </tr>
 <tr class="even">
 <td align="left">보조 타일</td>
-<td align="left">아니오</td>
-<td align="left">예 - 보조 타일만</td>
-<td align="left">아니요</td>
+<td align="left">예</td>
+<td align="left">예-보조 타일에만 해당</td>
+<td align="left">예</td>
 <td align="left">OAuth</td>
 <td align="left">WNS REST API</td>
 <td align="left">예</td>
-<td align="left">보조 타일당 하나</td>
+<td align="left">보조 타일 당 하나</td>
 <td align="left">전송 중</td>
 </tr>
 <tr class="odd">
-<td align="left">대체</td>
-<td align="left">아니오</td>
+<td align="left">또</td>
 <td align="left">아니요</td>
 <td align="left">예</td>
+<td align="left">예</td>
 <td align="left">VAPID</td>
-<td align="left">WebPush W3C 표준</td>
-<td align="left">아니오</td>
-<td align="left">앱당 1,000개</td>
-<td align="left">전송 중 + 헤더 통과를 통한 종합적 암호화 가능(앱 코드 필요)</td>
+<td align="left">WebPush W3C Standard</td>
+<td align="left">예</td>
+<td align="left">앱 당 1000</td>
+<td align="left">전송 중-헤더 통과를 사용 하 여 종단 간 암호화 가능 (앱 코드 필요)</td>
 </tr>
 </table>
 
-## <a name="choosing-the-right-channel"></a>올바른 채널 선택
+## <a name="choosing-the-right-channel"></a>오른쪽 채널 선택
 
-일반적으로 앱에서 기본 채널을 사용하는 것이 좋지만 다음과 같은 몇 가지 예외가 있습니다. 
+일반적으로 몇 가지 예외를 제외 하 고 앱에서 기본 채널을 사용 하는 것이 좋습니다. 
 
-1. 보조 타일에 타일 업데이트를 푸시하려는 경우 보조 타일 푸시 채널을 사용합니다.
-2. 다른 서비스에 채널을 전달하려는 경우(예: 브라우저) 대체 채널을 사용합니다.
-3. Windows 스토어에 나열되지 않는 앱(예: LOB 앱)을 만들려는 경우 대체 채널을 사용합니다.
-4. 서버에 다시 사용하고 싶은 기존 웹 푸시 코드가 있거나 백 엔드 서비스에 여러 채널을 만들고 싶은 경우 대체 채널을 사용합니다.
+1. 타일 업데이트를 보조 타일로 푸시하는 경우 보조 타일 푸시 채널을 사용 합니다.
+2. 다른 서비스 (예: 브라우저의 경우)에 채널을 전달 하는 경우 대체 채널을 사용 합니다.
+3. Windows 스토어에 나열 되지 않는 앱을 만드는 경우 (예: LOB 앱) 대체 채널을 사용 합니다.
+4. 서버에 기존 웹 푸시 코드를 다시 사용 하거나 백엔드 서비스에 여러 채널이 필요한 경우 대체 채널을 사용 합니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 * [로컬 타일 알림 보내기](../tiles-and-notifications/sending-a-local-tile-notification.md)
-* [적응형 및 대화형 알림 메시지](../tiles-and-notifications/adaptive-interactive-toasts.md)
+* [적응 및 대화형 알림 메시지](../tiles-and-notifications/adaptive-interactive-toasts.md)
 * [빠른 시작: 푸시 알림 보내기](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
 * [푸시 알림을 통해 배지를 업데이트 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
-* [요청, 생성 및 알림 채널을 저장 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
-* [응용 프로그램을 실행 하는 것에 대 한 알림을 차단 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
-* [WNS와 함께 Windows 푸시 알림 서비스 ()를 인증 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
+* [알림 채널을 요청, 생성 및 저장 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
+* [실행 중인 응용 프로그램에 대 한 알림을 가로채는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
+* [WNS (Windows 푸시 알림 서비스)를 사용 하 여 인증 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
 * [푸시 알림 서비스 요청 및 응답 헤더](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
-* [지침 및 푸시 알림에 대 한 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [푸시 알림에 대 한 지침 및 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
 * [원시 알림](raw-notification-overview.md)

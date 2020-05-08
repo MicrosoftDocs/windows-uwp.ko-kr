@@ -1,6 +1,6 @@
 ---
-Description: 끌어서 놓기 애니메이션은 목록 내에서 항목 이동, 다른 항목 위에 항목 놓기 등 사용자가 개체를 이동할 때 사용합니다.
-title: UWP 앱의 끌기 애니메이션
+Description: 사용자가 목록 내에서 항목을 이동 하거나 다른 항목의 맨 위에 있는 항목을 삭제 하는 등의 방법으로 개체를 이동 하는 경우 끌어서 놓기 애니메이션을 사용 합니다.
+title: 애니메이션 끌기
 ms.assetid: 6064755F-6E24-4901-A4FF-263F05F0DFD6
 label: Motion--Drag and drop
 template: detail.hbs
@@ -8,58 +8,58 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d4aa6b0b1a7d0e4d805e43ba308730ee483927aa
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 503360bc72694881c69bc3afd796f85474da5cfc
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320906"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970298"
 ---
-# <a name="drag-animations"></a>끌기 애니메이션
+# <a name="drag-animations"></a>애니메이션 끌기
 
 
 
 
-끌어서 놓기 애니메이션은 목록 내에서 항목 이동, 다른 항목 위에 항목 놓기 등 사용자가 개체를 이동할 때 사용합니다.
+사용자가 목록 내에서 항목을 이동 하거나 다른 항목의 맨 위에 있는 항목을 삭제 하는 등의 방법으로 개체를 이동 하는 경우 끌어서 놓기 애니메이션을 사용 합니다.
 
-> **중요 API**: [**DragItemThemeAnimation 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation)
+> **중요 한 api**: [ **DragItemThemeAnimation 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 
-**드래그 시작 애니메이션**
+**시작 애니메이션 끌기**
 
--   끌기 시작 애니메이션은 사용자가 개체를 이동하기 시작할 때 사용합니다.
--   애니메이션에 해당 개체를 포함하는 것은 끌어서 놓기 작업의 영향을 받는 다른 개체도 있는 경우에 한합니다.
--   끌기 시작 애니메이션으로 시작되는 모든 애니메이션 시퀀스를 완료하려면 끌기 끝 애니메이션을 사용합니다. 그러면 끌기 시작 애니메이션에 의해 끌어오는 개체의 크기가 반대로 변경됩니다.
+-   사용자가 개체를 이동 하기 시작할 때 끌기 시작 애니메이션을 사용 합니다.
+-   끌어서 놓기 작업의 영향을 받을 수 있는 다른 개체가 있는 경우에만 애니메이션에 영향을 받는 개체를 포함 합니다.
+-   끌기 시작 애니메이션으로 시작 하는 애니메이션 시퀀스를 완료 하려면 끌기 끝 애니메이션을 사용 합니다. 이렇게 하면 끌기 시작 애니메이션에 의해 발생 한 끌어 온 개체의 크기 변경이 취소 됩니다.
 
-**드래그 엔드 애니메이션**
+**끌기 종료 애니메이션**
 
--   끌기 끝 애니메이션은 사용자가 끌어온 항목을 놓을 때 사용합니다.
--   끌기 끝 애니메이션은 목록의 추가 및 삭제 애니메이션과 결합하여 사용합니다.
--   영향을 받는 개체를 끌기 시작 애니메이션에 포함한 경우에만 해당 개체를 끌기 끝 애니메이션에 포함합니다.
--   끌기 끝 애니메이션은 끌기 시작 애니메이션을 먼저 사용한 경우에만 사용합니다. 끌기 시퀀스가 완료되면 모든 개체가 원래의 크기로 돌아갈 수 있도록 두 애니메이션을 모두 사용해야 합니다.
+-   사용자가 끌어 온 개체를 놓을 때 끌기 끝 애니메이션을 사용 합니다.
+-   목록에 대 한 애니메이션 추가 및 삭제와 함께 끌기 끝 애니메이션을 사용 합니다.
+-   끌기 시작 애니메이션에서 영향을 받는 개체를 포함 한 경우에만 끌기 끝 애니메이션에 영향을 받는 개체를 포함 합니다.
+-   끌기 시작 애니메이션을 처음 사용 하지 않은 경우에는 끌기 끝 애니메이션을 사용 하지 마세요. 끌기 시퀀스가 완료되면 모든 개체가 원래의 크기로 돌아갈 수 있도록 두 애니메이션을 모두 사용해야 합니다.
 
-**끌어 애니메이션을 간에 입력**
+**Enter 애니메이션 간 끌기**
 
--   두 개의 다른 개체 사이에 놓을 수 있는 놓기 영역에 끌기 원본을 끌어올 경우 들어가기 사이 끌기 애니메이션을 사용합니다.
--   알맞은 놓기 대상 영역을 선택합니다. 이 영역은 사용자가 놓으려는 끌기 원본을 배치하기 힘들 정도로 작아서는 안 됩니다.
--   끌어놓기 영역을 표시하기 위해 영향을 받는 개체를 이동해야 하는 권장 방향은 서로 떨어진 방향입니다. 세로로 이동하는지 가로로 이동하는지 여부는 서로에 대해 영향을 받는 개체의 방향에 따라 다릅니다.
--   끌기 원본을 영역에 놓을 수 없는 경우 들어가기 사이 끌기 애니메이션을 사용하지 마세요. 들어가기 사이 끌기 애니메이션은 사용자에게 끌기 원본을 영향을 받는 개체 사이에 놓을 수 있음을 알려줍니다.
+-   사용자가 끌기 소스를 다른 두 개체 사이에 놓을 수 있는 끌어 놓기 영역으로 끌 때 enter 키 애니메이션을 사용 합니다.
+-   적절 한 놓기 대상 영역을 선택 하세요. 사용자가 끌어서 놓기에 대 한 끌기 원본을 배치 하기 어려운 경우에는이 영역을 작게 지정 하면 안 됩니다.
+-   끌어 놓기 영역을 표시 하기 위해 영향을 받는 개체를 이동 하는 권장 방향은 서로 직접적입니다. 세로 또는 가로로 이동 하는지 여부는 영향을 받는 개체의 방향에 따라 좌우 됩니다.
+-   끌기 소스를 영역에서 삭제할 수 없는 경우에는 enter 키 애니메이션을 사용 하지 마세요. Enter 키를 끌어서 놓기 애니메이션은 영향을 받는 개체 사이에 끌기 소스를 놓을 수 있음을 사용자에 게 알립니다.
 
-**Leave 애니메이션 간의 끌어**
+**나가기 애니메이션 사이를 끌기**
 
--   두 개의 다른 개체 사이에 놓을 수 있는 영역에서 멀리 개체를 끌어갈 경우 나가기 사이 끌기 애니메이션을 사용합니다.
--   나가기 사이 끌기 애니메이션은 들어가기 사이 끌기 애니메이션을 먼저 사용한 경우에만 사용합니다.
+-   사용자가 개체를 다른 두 개체 사이에 끌어 놓을 수 있는 영역 밖으로 끌 때 leave 애니메이션 사이에 끌기를 사용 합니다.
+-   Enter 키 애니메이션을 처음으로 사용 하지 않은 경우에는 나가기 애니메이션을 사용 하지 마세요.
 
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
-**개발자를 위한**
+**개발자용**
 * [애니메이션 개요](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
 * [끌어서 놓기 시퀀스에 애니메이션 적용](https://docs.microsoft.com/previous-versions/windows/apps/jj649427(v=win.10))
-* [빠른 시작: 애니메이션 라이브러리 애니메이션을 사용 하 여 UI](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
+* [빠른 시작: 라이브러리 애니메이션을 사용 하 여 UI에 애니메이션 효과 주기](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
 * [**DragItemThemeAnimation 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation)
 * [**DropTargetItemThemeAnimation 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.droptargetitemthemeanimation)
 * [**DragOverThemeAnimation 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.dragoverthemeanimation)

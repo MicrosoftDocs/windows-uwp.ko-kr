@@ -1,39 +1,39 @@
 ---
 ms.assetid: E2A1200C-9583-40FA-AE4D-C9E6F6C32BCF
 title: 스레드 풀에 작업 항목 제출
-description: 스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아보세요.
+description: 스레드 풀에 작업 항목을 전송 하 여 별도의 스레드에서 작업을 수행 하는 방법에 대해 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 스레드, 스레드 풀
 ms.localizationpriority: medium
-ms.openlocfilehash: d3dcd162e0a139328ef5885ac26edec04a279134
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: a9da63e05380987d69d97a74123e593acd0b8cb1
+ms.sourcegitcommit: 2dbf4a3f3473c1d3a0ad988bcbae6e75dfee3640
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259802"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619347"
 ---
 # <a name="submit-a-work-item-to-the-thread-pool"></a>스레드 풀에 작업 항목 제출
 
-Windows 10에서 UWP 앱에 대 한 \[ 업데이트 되었습니다. Windows 8.x 문서의 경우 [보관](https://docs.microsoft.com/previous-versions/windows/apps/mt244353(v=win.10)?redirectedfrom=MSDN) 을 참조 하세요 \]
+\[Windows 10의 UWP 앱 용으로 업데이트 되었습니다. Windows 8.x 문서는 [보관 파일](https://docs.microsoft.com/previous-versions/windows/apps/mt244353(v=win.10)?redirectedfrom=MSDN) 을 참조 하세요.\]
 
-<b>중요 API</b>
+<b>중요 한 Api</b>
 
 -   [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync)
 -   [**IAsyncAction**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)
 
-스레드 풀에 작업 항목을 제출하여 별도 스레드에서 작업하는 방법을 알아보세요. 스레드 풀을 사용하면 오랜 시간이 걸리는 작업을 완료하는 동시에 응답하는 UI를 유지하고 여러 작업을 병렬로 완료할 수 있습니다.
+스레드 풀에 작업 항목을 전송 하 여 별도의 스레드에서 작업을 수행 하는 방법에 대해 알아봅니다. 이를 사용 하 여 상당한 시간을 사용 하는 작업을 완료 하는 동안 응답성이 뛰어난 UI를 유지 관리 하 고이를 사용 하 여 여러 작업을 병렬로 완료할 수 있습니다.
 
 ## <a name="create-and-submit-the-work-item"></a>작업 항목 만들기 및 제출
 
-[  **RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync)를 호출하여 작업 항목을 만듭니다. 작업을 수행할 대리자를 제공합니다(람다 또는 대리자 함수를 사용할 수 있음). **RunAsync**는 [**IAsyncAction**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction) 개체를 반환합니다. 다음 단계에서 사용하기 위해 이 개체를 저장합니다.
+[**Runasync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync)를 호출 하 여 작업 항목을 만듭니다. 작업을 수행 하는 대리자를 제공 합니다. 람다 또는 대리자 함수를 사용할 수 있습니다. **Runasync** 는 [**iasyncaction**](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction) 개체를 반환 합니다. 다음 단계에서 사용 하기 위해이 개체를 저장 합니다.
 
-선택적으로 작업 항목의 우선 순위를 지정하고 다른 작업 항목과 동시에 실행할지 여부를 제어할 수 있도록 세 가지 버전의 [**RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync)를 사용할 수 있습니다.
+작업 항목의 우선 순위를 선택적으로 지정 하 고 다른 작업 항목과 동시에 실행 되는지 여부를 제어할 수 있도록 세 가지 버전의 [**Runasync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync) 를 사용할 수 있습니다.
 
 >[!NOTE]
 >[**CoreDispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 를 사용 하 여 UI 스레드에 액세스 하 고 작업 항목에서 진행률을 표시 합니다.
 
-다음 예제에서는 작업 항목을 만들고 작업을 수행할 람다를 제공합니다.
+다음 예제에서는 작업 항목을 만들고 작업을 수행 하기 위한 람다를 제공 합니다.
 
 ```csharp
 // The nth prime number to find.
@@ -269,15 +269,15 @@ auto asyncAction = ThreadPool::RunAsync(workItem);
 m_workItem = asyncAction;
 ```
 
-[  **RunAsync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync) 호출 뒤에 이 작업 항목은 스레드 풀에 의해 대기되고 스레드를 사용할 수 있게 되면 실행됩니다. 스레드 풀 작업 항목은 비동기적으로 실행되며 순서에 관계없이 실행될 수 있으므로 작업 항목이 독립적으로 작동하는지 확인합니다.
+[**Runasync**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpool.runasync)를 호출 하 고 나면 작업 항목이 스레드 풀에 의해 큐에 대기 되 고 스레드를 사용할 수 있게 되 면 실행 됩니다. 스레드 풀 작업 항목은 비동기적으로 실행 되며 순서에 관계 없이 작업 항목이 독립적으로 작동 하는지 확인 합니다.
 
-작업 항목은 [**IAsyncInfo.Status**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncinfo.status) 속성을 검사하고, 작업 항목이 취소된 경우 종료됩니다.
+작업 항목은 [**IAsyncInfo**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncinfo.status) 속성을 확인 하 고 작업 항목이 취소 되 면 종료 됩니다.
 
 ## <a name="handle-work-item-completion"></a>작업 항목 완료 처리
 
-작업 항목의 [**IAsyncAction.Completed**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction.completed) 속성을 설정하여 완료 처리기를 제공합니다. 작업 항목 완료를 처리할 대리자를 제공합니다(람다 또는 대리자 함수를 사용할 수 있음). 예를 들어 [**CoreDispatcher.RunAsync**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync)를 사용하여 UI 스레드에 액세스하고 결과를 표시합니다.
+작업 항목의 [**Iasyncaction. Completed**](https://docs.microsoft.com/uwp/api/windows.foundation.iasyncaction.completed) 속성을 설정 하 여 완료 처리기를 제공 합니다. 대리자 (람다 또는 대리자 함수를 사용 하 여)를 제공 하 여 작업 항목 완료를 처리 합니다. 예를 들어 [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 를 사용 하 여 UI 스레드에 액세스 하 고 결과를 표시 합니다.
 
-다음 예제에서는 1단계에서 제출된 작업 항목의 결과로 UI를 업데이트합니다.
+다음 예에서는 1 단계에서 제출한 작업 항목의 결과로 UI를 업데이트 합니다.
 
 ```cpp
 asyncAction->Completed = ref new AsyncActionCompletedHandler(
@@ -346,11 +346,11 @@ asyncAction.Completed = new AsyncActionCompletedHandler(
 });
 ```
 
-완료 처리기는 UI 업데이트를 디스패치하기 전에 작업 항목이 취소되었는지 여부를 확인합니다.
+완료 처리기는 UI 업데이트를 발송 하기 전에 작업 항목이 취소 되었는지 여부를 확인 합니다.
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
-Windows 8.1 용으로 작성 된 [ThreadPool 작업 항목 만들기 샘플](https://code.msdn.microsoft.com/windowsapps/Creating-a-ThreadPool-work-9665cdff) 에서이 빠른 시작의 코드를 다운로드 하 고 win\_Unap Windows 10 앱에서 소스 코드를 다시 사용 하 여 자세한 내용을 알아볼 수 있습니다.
+Windows 8.1 용으로 작성 된 [ThreadPool 작업 항목 만들기 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Thread%20pool%20sample) 에서이 빠른 시작의 코드를 다운로드 하 고 win\_unap Windows 10 앱에서 소스 코드를 다시 사용 하 여 자세한 내용을 알아볼 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 

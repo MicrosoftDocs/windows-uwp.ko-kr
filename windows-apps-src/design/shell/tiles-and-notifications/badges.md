@@ -1,6 +1,6 @@
 ---
 Description: 타일, 배지 및 알림을 사용하여 앱에 대한 진입점을 제공하고 사용자를 최신 상태로 유지하는 방법에 대해 알아봅니다.
-title: UWP 앱에 대한 배지 알림
+title: Windows 앱에 대 한 배지 알림
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
@@ -8,50 +8,50 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e0c3802f0b6163ad5f0e179d90148bae543aeab
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 1d3aa9658e8a57a7993eb79d164b1e17ac23b9ac
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320853"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970878"
 ---
-# <a name="badge-notifications-for-uwp-apps"></a>UWP 앱에 대한 배지 알림
+# <a name="badge-notifications-for-windows-apps"></a>Windows 앱에 대 한 배지 알림
 
  
 
 <div style="float:left; font-size:80%; text-align:left; margin: 0px 15px 15px 0px;">
-<img src="images/badge-example.png" alt="A tile with a numeric badge displaying the number 63 to indicate 63 unread mails." style="padding-bottom:0.0em; margin-bottom: 2px" /><br/>읽지 않은 메일 63개가 있다는 의미의 숫자 63이<br/> 표시된 숫자 배지를 포함하는 타일</div>
+<img src="images/badge-example.png" alt="A tile with a numeric badge displaying the number 63 to indicate 63 unread mails." style="padding-bottom:0.0em; margin-bottom: 2px" /><br/>숫자 배지를 표시 하는 타일<br/> 63의 읽지 않은 메일을 나타내는 숫자 63입니다.</div>
 
-알림 배지는 앱에 대한 요약 또는 상태 정보를 전달합니다. 숫자(1-99) 또는 시스템 제공 문자 모양 중 하나일 수 있습니다. 배지를 통해 전달하기 적합한 정보로는 온라인 게임의 네트워크 연결 상태, 메시지 앱의 사용자 상태, 메일 앱의 읽지 않은 메일 수, 소셜 미디어 앱의 새 게시 수 등이 있습니다. 
+알림 배지는 앱에 특정 한 요약 또는 상태 정보를 전달 합니다. 숫자 (1-99) 또는 시스템 제공 문자 모양 집합 중 하나일 수 있습니다. 배지를 통해 가장 잘 전달 되는 정보의 예로는 온라인 게임의 네트워크 연결 상태, 메시징 앱의 사용자 상태, 메일 응용 프로그램의 읽지 않은 메일 수, 소셜 미디어 앱의 새 게시물 수가 있습니다. 
 
-알림 배지는 앱의 작업 표시줄 아이콘 및 시작 타일의 오른쪽 아래 모서리에 앱 실행 여부와 관계없이 나타납니다. 배지는 모든 타일 크기에 표시할 수 있습니다.  
+알림 배지는 앱이 실행 되 고 있는지 여부에 관계 없이 앱의 작업 표시줄 아이콘 및 시작 타일의 오른쪽 아래 모퉁이에 표시 됩니다. 배지는 모든 타일 크기에 표시 될 수 있습니다.  
 
 > [!NOTE]
-> 직접 만든 배지 이미지를 제공할 수는 없으며, 시스템 제공 배지 이미지만 사용할 수 있습니다.
+> 사용자 고유의 배지 이미지를 제공할 수는 없습니다. 시스템 제공 배지 이미지만 사용할 수 있습니다.
 
 
 ## <a name="numeric-badges"></a>숫자 배지
 
 <table>
     <tr>
-        <th>값</th>
+        <th>Value</th>
         <th>배지</th>
         <th>XML</th>
     </tr>
     <tr>
-        <td>1-99 사이의 숫자. 값 0은 문자 값 "없음"과 동일하며 배지를 지웁니다.</td>
+        <td>1에서 99 사이의 숫자입니다. 값 0은 문자 모양 값 "none"과 같으며 배지를 지웁니다.</td>
         <td><img src="images/badges/badge-numeric.png" alt="A numeric badge less than 100." /></td>
         <td>`<badge value="1"/>`</td>
     </tr>
     <tr>
-        <td>99보다 큰 모든 숫자</td>
+        <td>99 보다 큰 숫자입니다.</td>
         <td><img src="images/badges/badge-numeric-greater.png" alt="A numeric badge greater than 99." /></td></td>
         <td>`<badge value="100"/>`</td>
     </tr>    
 </table>
 
 ## <a name="glyph-badges"></a>문자 배지
-배지는 숫자 대신 확장할 수 없는 상태 문자 모양 집합 중 하나를 표시할 수 있습니다. 
+배지는 숫자 대신 확장 가능 하지 않은 상태 문자 집합 중 하나를 표시할 수 있습니다. 
 
 <table>
 <tr>
@@ -60,22 +60,22 @@ ms.locfileid: "67320853"
     <th>XML</th>
 </tr>
 <tr>
-    <td>none</td>
-    <td>표시되는 배지 없음</td>
+    <td>없음</td>
+    <td>(배지는 표시 되지 않습니다.)</td>
     <td>`<badge value="none"/>`</td>
 </tr>
 <tr>
-    <td>activity</td>
+    <td>활동</td>
     <td><img src="images/badges/badge-activity.png" alt="Glyph" /></td>
     <td>`<badge value="activity"/>`</td>
 </tr>
 <tr>
-    <td>alarm</td>
+    <td>가진</td>
     <td><img src="images/badges/badge-alarm.png" alt="Glyph" /></td>
     <td>`<badge value="alarm"/>`</td>
 </tr>
 <tr>
-    <td>alert</td>
+    <td>경고</td>
     <td><img src="images/badges/badge-alert.png" alt="Glyph" /></td>
     <td>`<badge value="alert"/>`</td>
 </tr>
@@ -85,7 +85,7 @@ ms.locfileid: "67320853"
     <td>`<badge value="attention"/>`</td>
 </tr>
 <tr>
-    <td>available</td>
+    <td>사용 가능</td>
     <td><img src="images/badges/badge-available.png" alt="Glyph" /></td>
     <td>`<badge value="available"/>`</td>
 </tr>
@@ -100,7 +100,7 @@ ms.locfileid: "67320853"
     <td>`<badge value="busy"/>`</td>
 </tr>
 <tr>
-    <td>error</td>
+    <td>오류</td>
     <td><img src="images/badges/badge-error.png" alt="Glyph" /></td>
     <td>`<badge value="error"/>`</td>
 </tr>
@@ -128,7 +128,7 @@ ms.locfileid: "67320853"
 
 ## <a name="create-a-badge"></a>배지 만들기
 
-이러한 예제 배지 업데이트를 만드는 방법을 보여 줍니다.
+이 예제에서는 배지 업데이트를 만드는 방법을 보여 줍니다.
 
 ### <a name="create-a-numeric-badge"></a>숫자 배지 만들기
 
@@ -157,7 +157,7 @@ private void setBadgeNumber(int num)
 }
 ````
 
-### <a name="create-a-glyph-badge"></a>문자 모양 배지 만들기
+### <a name="create-a-glyph-badge"></a>문자 배지 만들기
 ````csharp
 private void updateBadgeGlyph()
 {
@@ -194,12 +194,12 @@ private void clearBadge()
 }
 ````
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
-* [알림 사용 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)<br/> 라이브 타일을 만들고, 배지 업데이트를 보내고, 알림 메시지를 표시하는 방법을 보여 줍니다. 
+* [알림 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)<br/> 라이브 타일을 만들고, 배지 업데이트를 보내고, 알림 메시지를 표시 하는 방법을 보여 줍니다. 
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
-* [적응형 및 대화형 알림 메시지](adaptive-interactive-toasts.md)
+* [적응 및 대화형 알림 메시지](adaptive-interactive-toasts.md)
 * [타일 만들기](creating-tiles.md)
 * [적응 타일 만들기](create-adaptive-tiles.md)
