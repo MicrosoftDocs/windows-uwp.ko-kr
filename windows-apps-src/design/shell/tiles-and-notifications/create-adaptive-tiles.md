@@ -1,6 +1,6 @@
 ---
-Description: 적응 타일 템플릿은 다양 한 화면 밀도에 맞게 조정 되는 단순 하 고 유연한 태그 언어를 사용 하 여 사용자 고유의 타일 알림 콘텐츠를 설계할 수 있도록 Windows 10의 새로운 기능입니다.
-title: 적응형 타일 만들기
+Description: 적응 타일 템플릿은 Windows 10의 새로운 기능으로, 다양 한 화면 밀도에 맞게 조정 되는 간단 하 고 유연한 태그 언어를 사용 하 여 고유한 타일 알림 콘텐츠를 디자인할 수 있습니다.
+title: 적응 타일 만들기
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
@@ -8,43 +8,43 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a3fa029c5046b1c3f20058275aec0ff901706e65
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: b91b5d8ce39f34c6065f6dce61e90a752b36c8ef
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320938"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971068"
 ---
-# <a name="create-adaptive-tiles"></a>적응형 타일 만들기
+# <a name="create-adaptive-tiles"></a>적응 타일 만들기
 
-적응 타일 템플릿은 다양 한 화면 밀도에 맞게 조정 되는 단순 하 고 유연한 태그 언어를 사용 하 여 사용자 고유의 타일 알림 콘텐츠를 설계할 수 있도록 Windows 10의 새로운 기능입니다. 이 문서에서는 UWP(유니버설 Windows 플랫폼) 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. 적응형 요소 및 특성의 전체 목록은 [적응형 타일 스키마](../tiles-and-notifications/tile-schema.md)를 참조하세요.
+적응 타일 템플릿은 Windows 10의 새로운 기능으로, 다양 한 화면 밀도에 맞게 조정 되는 간단 하 고 유연한 태그 언어를 사용 하 여 고유한 타일 알림 콘텐츠를 디자인할 수 있습니다. 이 문서에서는 Windows 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. 적응 요소 및 특성의 전체 목록은 [적응 타일 스키마](../tiles-and-notifications/tile-schema.md)를 참조 하세요.
 
-(원하는 경우에서 미리 설정 된 템플릿을 계속 사용할 수 있습니다 합니다 [Windows 8 타일 템플릿 카탈로그](https://docs.microsoft.com/previous-versions/windows/apps/hh761491(v=win.10)) Windows 10에 대 한 알림을 디자인 하는 경우입니다.)
+(원하는 경우 Windows 10에 대 한 알림을 디자인할 때 [windows 8 타일 템플릿 카탈로그](https://docs.microsoft.com/previous-versions/windows/apps/hh761491(v=win.10)) 에서 미리 설정 된 템플릿을 계속 사용할 수 있습니다.)
 
 
 ## <a name="getting-started"></a>시작
 
-**알림 라이브러리를 설치 합니다.** XML 대신 C#을 사용하여 알림을 생성하려면 [Microsoft.Toolkit.Uwp.Notifications](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)("notifications uwp" 검색)라는 NuGet 패키지를 설치합니다. 이 문서에서 제공하는 C# 샘플은 NuGet 패키지 버전 1.0.0을 사용합니다.
+**알림 라이브러리를 설치 합니다.** XML 대신 c #을 사용 하 여 알림을 생성 하려는 경우에 [는 이름이 "](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) notification uwp" 인 NuGet 패키지를 설치 합니다. 이 문서에 제공 된 c # 샘플에서는 NuGet 패키지의 버전 1.0.0을 사용 합니다.
 
-**알림 시각화 도우미를 설치 합니다.** 이 무료 UWP 앱은 Visual Studio의 XAML 편집기/디자인 뷰와 비슷하게 타일을 편집할 때 시각적 미리 보기를 곧바로 제공하여 적응형 라이브 타일을 디자인하는 데 도움이 됩니다. 자세한 내용은 [알림 시각화 도우미](notifications-visualizer.md)를 참조하거나 [Microsoft Store에서 알림 시각화 도우미를 다운로드하세요](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1).
+**알림 시각화 도우미를 설치 합니다.** 이 무료 Windows 앱을 사용 하면 Visual Studio의 XAML 편집기/디자인 뷰와 유사 하 게 편집할 때 타일에 대 한 즉각적인 시각적 미리 보기를 제공 하 여 적응 라이브 타일을 디자인할 수 있습니다. 자세한 내용은 [알림 시각화 도우미](notifications-visualizer.md) 를 참조 하거나, [스토어에서 알림 시각화 도우미를 다운로드](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1)하세요.
 
 
 ## <a name="how-to-send-a-tile-notification"></a>타일 알림을 보내는 방법
 
-[로컬 타일 알림 보내기에 대한 빠른 시작](sending-a-local-tile-notification.md)을 참조하세요. 아래 문서에서는 적응형 타일에 사용할 수 있는 모든 시각적 UI를 설명합니다.
+[로컬 타일 알림 전송에 대 한 빠른 시작을](sending-a-local-tile-notification.md)참조 하세요. 아래 설명서에서는 적응 타일에 대 한 모든 시각적 UI 가능성을 설명 합니다.
 
 
-## <a name="usage-guidance"></a>사용법 지침
+## <a name="usage-guidance"></a>사용 지침
 
 
-적응형 템플릿은 다양한 폼 팩터와 알림 유형에서 작동하도록 설계됩니다. 그룹 및 하위 그룹과 같은 요소는 콘텐츠를 연결하며 자체적으로 특정 시각적 동작을 의미하지 않습니다. 알림의 최종 모양은 휴대폰, 태블릿, 데스크톱 등 알림이 표시될 특정 디바이스에 따라 달라져야 합니다.
+적응 템플릿은 다양 한 폼 팩터 및 알림 유형 간에 작동 하도록 디자인 되었습니다. Group 및 부분군과 같은 요소는 콘텐츠를 함께 연결 하 고 특정 시각적 동작을 의미 하지는 않습니다. 알림의 최종 모양은 휴대폰, 태블릿, 데스크톱 또는 다른 장치 인지에 관계 없이 표시 되는 특정 장치를 기반으로 해야 합니다.
 
-힌트는 특정 시각적 동작을 얻기 위해 요소에 추가할 수 있는 선택적 특성입니다. 힌트는 디바이스별 또는 알림별로 다를 수 있습니다.
+힌트는 특정 시각적 동작을 얻기 위해 요소에 추가할 수 있는 선택적 특성입니다. 힌트는 장치별 또는 알림과 관련 될 수 있습니다.
 
-## <a name="a-basic-example"></a>기본 예제
+## <a name="a-basic-example"></a>기본 예
 
 
-이 예제에서는 적응형 타일 템플릿으로 무엇을 만들 수 있는지 보여 줍니다.
+이 예제에서는 적응 타일 템플릿에서 생성할 수 있는 작업을 보여 줍니다.
 
 ```xml
 <tile>
@@ -114,14 +114,14 @@ TileContent content = new TileContent()
 ## <a name="tile-sizes"></a>타일 크기
 
 
-각 타일 크기에 대한 콘텐츠는 XML 페이로드 내에서 별도의 [TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding) 요소에 개별적으로 지정합니다. 템플릿 특성을 다음 값 중 하나로 설정하여 대상 크기를 선택합니다.
+각 타일 크기의 콘텐츠는 XML 페이로드 내의 개별 [TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding) 요소에 개별적으로 지정 됩니다. 템플릿 특성을 다음 값 중 하나로 설정 하 여 대상 크기를 선택 합니다.
 
 -   TileSmall
 -   TileMedium
 -   TileWide
--   TileLarge(데스크톱에만 해당)
+-   TileLarge (데스크톱 전용)
 
-단일 타일 알림 XML 페이로드에서 이 예제에 나온 대로 지원하려는 각 타일 크기에 대한 &lt;binding&gt; 요소를 제공합니다.
+단일 타일 알림 XML 페이로드의 경우 다음 예와 같이 &lt;지원&gt; 하려는 각 타일 크기에 대 한 바인딩 요소를 제공 합니다.
 
 ```xml
 <tile>
@@ -201,14 +201,14 @@ TileContent content = new TileContent()
 
 **결과:**
 
-![적응형 타일 크기: 작음, 중간, 넓음 및 큼](images/adaptive-tiles-sizes.png)
+![적응 타일 크기: 작음, 중형, 넓게 및 큼](images/adaptive-tiles-sizes.png)
 
 ## <a name="branding"></a>브랜딩
 
 
-알림 페이로드에서 브랜딩 특성을 사용하여 라이브 타일 아래쪽의 브랜딩(표시 이름 및 모서리 로고)을 제어할 수 있습니다. "none," "name"만, "logo"만 또는 "nameAndLogo"를 사용하여 둘 다 표시하도록 선택할 수 있습니다.
+알림 페이로드의 브랜딩 특성을 사용 하 여 라이브 타일 (표시 이름 및 모퉁이 로고)의 맨 아래에 있는 브랜딩을 제어할 수 있습니다. "none," "name"만, "logo"만 또는 "nameAndLogo"를 사용하여 둘 다 표시하도록 선택할 수 있습니다.
 
-**참고**  Windows Mobile 모바일 모퉁이 로고, 따라서 "로고" 및 "nameAndLogo" 기본 "name"을 지원 하지 않습니다.
+**참고**  Windows mobile은 모퉁이 로고를 지원 하지 않으므로 "로고" 및 "nameandlogo"는 모바일의 "이름"으로 기본 설정 됩니다.
 
  
 
@@ -228,12 +228,12 @@ new TileVisual()
 
 **결과:**
 
-![적응형 타일, 이름 및 로고](images/adaptive-tiles-namelogo.png)
+![적응 타일, 이름 및 로고](images/adaptive-tiles-namelogo.png)
 
-특정 타일 크기에 대한 브랜딩은 다음 두 가지 방법 중 하나로 적용할 수 있습니다.
+브랜딩은 다음 두 가지 방법 중 하나로 특정 타일 크기에 적용 될 수 있습니다.
 
-1. [TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding) 요소에 특성 적용
-2. 전체 알림 페이로드에 영향을 주는 [TileVisual](../tiles-and-notifications/tile-schema.md#tilevisual) 요소에 특성 적용. 바인딩에 대한 브랜딩을 지정하지 않으면 시각적 요소에 제공된 브랜딩이 사용됩니다.
+1. [TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding) 요소에 특성을 적용 하 여
+2. 바인딩에 대해 브랜딩을 지정 하지 않는 경우 전체 알림 페이로드에 영향을 주는 [TileVisual](../tiles-and-notifications/tile-schema.md#tilevisual) 요소에 특성을 적용 하 여 시각적 요소에 제공 된 브랜딩을 사용 합니다.
 
 ```xml
 <tile>
@@ -274,22 +274,22 @@ TileContent content = new TileContent()
 };
 ```
 
-**기본 결과 브랜딩:**
+**기본 브랜딩 결과:**
 
 ![타일의 기본 브랜딩](images/adaptive-tiles-defaultbranding.png)
 
-알림 페이로드에서 브랜딩을 지정하지 않으면 기본 타일의 속성에 따라 브랜딩이 결정됩니다. 기본 타일에 표시 이름이 표시되는 경우 브랜딩의 기본값은 "name"입니다. 그렇지 않고 표시 이름이 표시되지 않는 경우 브랜딩의 기본값은 "none"입니다.
+알림 페이로드에 브랜딩을 지정 하지 않으면 기본 타일의 속성에 따라 브랜딩이 결정 됩니다. 기본 타일에 표시 이름이 표시 되 면 브랜딩은 기본적으로 "이름"으로 표시 됩니다. 그렇지 않으면 표시 이름이 표시 되지 않는 경우 브랜딩은 기본적으로 "없음"으로 표시 됩니다.
 
-**참고**    이 변경 내용에서 Windows 8.x는 "로고입니다."가 기본 브랜딩
+**참고**    이는 기본 브랜딩을 "로고" 였던 Windows 8.x에서 변경 된 내용입니다.
 
  
 
-## <a name="display-name"></a>Display name
+## <a name="display-name"></a>표시 이름
 
 
-**displayName** 특성에 원하는 텍스트 문자열을 입력하여 알림의 표시 이름을 재정의할 수 있습니다. 브랜딩과 마찬가지로 표시 이름은 전체 알림 페이로드에 적용되는 [TileVisual](../tiles-and-notifications/tile-schema.md#tilevisual) 요소나 개별 타일에만 적용되는 [TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding) 요소에 지정할 수 있습니다.
+**DisplayName** 특성을 사용 하 여 선택한 텍스트 문자열을 입력 하 여 알림의 표시 이름을 재정의할 수 있습니다. 브랜딩을 사용 하는 것 처럼 전체 알림 페이로드에 영향을 주는 [TileVisual](../tiles-and-notifications/tile-schema.md#tilevisual) 요소 또는 개별 타일에만 영향을 주는 [TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding) 요소에 대해이를 지정할 수 있습니다.
 
-**알려진 문제**  Windows Mobile에서 타일의 ShortName을 지정하면 알림에 제공된 표시 이름이 사용되지 않습니다(항상 ShortName이 표시됨). 
+**알려진 문제**  Windows Mobile에서 타일에 대해 짧은 이름를 지정 하면 알림에 제공 된 표시 이름이 사용 되지 않습니다 (짧은 이름 항상 표시 됨). 
 
 ```xml
 <tile>
@@ -333,12 +333,12 @@ TileContent content = new TileContent()
 
 **결과:**
 
-![적응형 타일 표시 이름](images/adaptive-tiles-displayname.png)
+![적응 타일 표시 이름](images/adaptive-tiles-displayname.png)
 
-## <a name="text"></a>텍스트 모드
+## <a name="text"></a>텍스트
 
 
-[AdaptiveText](../tiles-and-notifications/tile-schema.md#adaptivetext) 요소는 텍스트를 표시하는 데 사용됩니다. 힌트를 사용하여 텍스트가 표시되는 방식을 수정할 수 있습니다.
+[AdaptiveText](../tiles-and-notifications/tile-schema.md#adaptivetext) 요소는 텍스트를 표시 하는 데 사용 됩니다. 힌트를 사용 하 여 텍스트가 표시 되는 방식을 수정할 수 있습니다.
 
 ```xml
 <text>This is a line of text</text>
@@ -354,12 +354,12 @@ new AdaptiveText()
 
 **결과:**
 
-![적응형 타일 텍스트](images/adaptive-tiles-text.png)
+![적응 타일 텍스트](images/adaptive-tiles-text.png)
 
-## <a name="text-wrapping"></a>텍스트 배치
+## <a name="text-wrapping"></a>텍스트 줄 바꿈
 
 
-기본적으로 텍스트는 줄 바꿈되지 않고 타일의 가장자리를 벗어나 계속됩니다. **hint-wrap** 특성을 사용하여 텍스트 요소의 텍스트 배치를 설정할 수 있습니다. 또한 둘 다 양의 정수를 사용할 수 있는 **hint-minLines** 및 **hint-maxLines**를 사용하여 최대 및 최소 줄 수를 제어할 수도 있습니다.
+기본적으로 텍스트는 줄 바꿈되지 않고 타일의 가장자리에서 계속 됩니다. **힌트 줄 바꿈** 특성을 사용 하 여 텍스트 요소에 텍스트 줄 바꿈을 설정 합니다. **힌트-minlines** 및 **Hint-maxlines**를 사용 하 여 최소 및 최대 줄 수를 제어할 수도 있습니다. 둘 다 양의 정수를 허용 합니다.
 
 ```xml
 <text hint-wrap="true">This is a line of wrapping text</text>
@@ -376,12 +376,12 @@ new AdaptiveText()
 
 **결과:**
 
-![텍스트 배치를 적용한 적응형 타일](images/adaptive-tiles-textwrapping.png)
+![텍스트 줄 바꿈이 있는 적응 타일](images/adaptive-tiles-textwrapping.png)
 
 ## <a name="text-styles"></a>텍스트 스타일
 
 
-스타일은 텍스트 요소의 글꼴 크기, 색 및 두께를 제어합니다. 불투명도 60%로 설정하여 일반적으로 텍스트 색을 밝은 회색의 음영으로 만드는 각 스타일의 "미묘한" 변형을 비롯하여 다양한 스타일이 제공됩니다.
+스타일은 텍스트 요소의 글꼴 크기, 색 및 두께를 제어 합니다. 불투명도를 60%로 설정 하는 각 스타일의 "미묘한" 변형을 포함 하는 다양 한 스타일이 있습니다. 일반적으로 텍스트 색을 연한 회색 음영으로 만듭니다.
 
 ```xml
 <text hint-style="base">Header content</text>
@@ -404,9 +404,9 @@ new AdaptiveText()
 
 **결과:**
 
-![적응형 타일 텍스트 스타일](images/adaptive-tiles-textstyles.png)
+![적응 타일 텍스트 스타일](images/adaptive-tiles-textstyles.png)
 
-**참고**  힌트 스타일 지정 되지 않은 경우 스타일을 캡션 기본값으로 합니다.
+**힌트 스타일을 지정**  하지 않으면 스타일 기본값은 caption로 지정 됩니다.
 
  
 
@@ -414,20 +414,20 @@ new AdaptiveText()
 
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
-| &lt;text hint-style="\*" /&gt; | 글꼴 높이               | 글꼴 두께 |
-| 자막                        | 12epx(유효 픽셀) | Regular     |
-| 본문                           | 15epx                    | Regular     |
-| 하단                           | 15epx                    | Semibold    |
-| 부제목                       | 20epx                    | Regular     |
-| title                          | 24epx                    | Semilight   |
-| 하위 머리글                      | 34epx                    | 밝게       |
-| 헤더                         | 46epx                    | 밝게       |
+| &lt;텍스트 힌트-스타일 = "\*"/&gt; | 글꼴 높이               | 글꼴 두께 |
+| caption                        | 12 개의 유효 픽셀 (epx) | 일반     |
+| 본문                           | 15 window.epx.codesnippet                    | 일반     |
+| base                           | 15 window.epx.codesnippet                    | 약간 굵게    |
+| 제목                       | 20 window.epx.codesnippet                    | 일반     |
+| title                          | 24 window.epx.codesnippet                    | 굴림   |
+| subheader.aboutdocs                      | 34 window.epx.codesnippet                    | 밝게       |
+| 머리글                         | 46 window.epx.codesnippet                    | 밝게       |
 
  
 
 **숫자 텍스트 스타일 변형**
 
-다음 변형은 줄 높이를 줄여 위아래 콘텐츠가 텍스트와 더 가까워지게 합니다.
+이러한 변형은 줄 높이를 줄여 해당 내용이 텍스트에 훨씬 더 가깝게 배치 되도록 합니다.
 
 |                  |
 |------------------|
@@ -439,7 +439,7 @@ new AdaptiveText()
 
 **미묘한 텍스트 스타일 변형**
 
-각 스타일에는 일반적으로 텍스트 색을 밝은 회색의 음영으로 만드는 60% 불투명도를 텍스트에 부여하는 미묘한 변형이 있습니다.
+각 스타일에는 일반적으로 텍스트 색을 연한 회색으로 표시 하는 60% 불투명도를 텍스트에 제공 하는 미묘한 변형이 있습니다.
 
 |                        |
 |------------------------|
@@ -459,7 +459,7 @@ new AdaptiveText()
 ## <a name="text-alignment"></a>텍스트 맞춤
 
 
-텍스트를 가로로 왼쪽, 가운데 또는 오른쪽에 맞출 수 있습니다. 영어와 같이 왼쪽에서 오른쪽으로 쓰는 언어에서는 텍스트가 기본적으로 왼쪽에 맞춰집니다. 아랍어와 같이 오른쪽에서 왼쪽으로 쓰는 언어에서는 텍스트가 기본적으로 오른쪽에 맞춰집니다. 요소에서 **hint-align** 특성을 사용하여 맞춤을 수동으로 설정할 수 있습니다.
+텍스트를 가로 방향으로 왼쪽, 가운데 또는 오른쪽에 맞출 수 있습니다. 영어와 같이 왼쪽에서 오른쪽으로의 언어에서 텍스트 기본값은 왼쪽 맞춤입니다. 아랍어와 같은 오른쪽에서 왼쪽으로의 언어에서 텍스트 기본값은 오른쪽 맞춤입니다. 요소에 대 한 **힌트 맞춤** 특성을 사용 하 여 수동으로 맞춤을 설정할 수 있습니다.
 
 ```xml
 <text hint-align="center">Hello</text>
@@ -476,16 +476,16 @@ new AdaptiveText()
 
 **결과:**
 
-![적응형 타일 텍스트 맞춤](images/adaptive-tiles-textalignment.png)
+![적응 타일 텍스트 맞춤](images/adaptive-tiles-textalignment.png)
 
 ## <a name="groups-and-subgroups"></a>그룹 및 하위 그룹
 
 
-그룹은 그룹 내 콘텐츠가 관련이 있으며 콘텐츠의 적합성을 위해 전체적으로 표시되어야 함을 의미론적으로 선언할 수 있습니다. 예를 들어 머리글과 하위 머리글의 두 텍스트 요소가 있을 경우 머리글만 표시하면 의미가 통하지 않을 수 있습니다. 이러한 요소를 하위 그룹 내로 그룹화하면 요소는 모두 표시되거나(맞을 경우) 전혀 표시되지 않습니다(맞지 않을 경우).
+그룹을 사용 하 여 그룹 내부의 콘텐츠가 서로 관련 되어 있는지를 의미 있게 선언 하 고 콘텐츠를 이해 하기 쉽도록 전체에 표시 해야 합니다. 예를 들어 두 개의 텍스트 요소, 헤더 및 하위 헤더가 있을 수 있으며 표시 되는 헤더에 대해서만 의미가 없습니다. 하위 그룹 내에서 이러한 요소를 그룹화 하 여 요소를 모두 표시 하거나 (해당 하는 경우에는 맞지 않음) 전혀 표시 하지 않을 수 있습니다.
 
-디바이스 및 화면 전체에서 최상의 환경을 제공하려면 여러 그룹을 제공합니다. 여러 그룹이 있으면 타일이 큰 화면에 맞게 조정될 수 있습니다.
+장치 및 화면에서 최상의 환경을 제공 하려면 여러 그룹을 제공 합니다. 그룹이 여러 개인 경우 타일이 큰 화면에 맞게 조정 될 수 있습니다.
 
-**참고**  만 유효한 자식 그룹의 하위 그룹입니다.
+**참고**  그룹의 올바른 자식은 하위 그룹입니다.
 
  
 
@@ -571,14 +571,14 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 
 **결과:**
 
-![적응형 타일 그룹 및 하위 그룹](images/adaptive-tiles-groups-subgroups.png)
+![적응 타일 그룹 및 하위 그룹](images/adaptive-tiles-groups-subgroups.png)
 
-## <a name="subgroups-columns"></a>하위 그룹(열)
+## <a name="subgroups-columns"></a>하위 그룹 (열)
 
 
-하위 그룹에서도 데이터를 그룹 내의 의미적 섹션으로 나눌 수 있습니다. 라이브 타일의 경우 시각적으로는 열로 변환됩니다.
+또한 하위 그룹을 사용 하 여 그룹 내의 의미 체계 섹션으로 데이터를 나눌 수 있습니다. 라이브 타일의 경우이는 열로 시각적으로 변환 됩니다.
 
-**hint-weight** 특성을 사용하면 열 너비를 제어할 수 있습니다. **hint-weight**의 값은 **GridUnitType.Star** 동작과 동일하게 사용 가능한 공간의 가중 비율로 표시됩니다. 너비가 같은 열의 경우 각 열에 가중치를 1로 할당합니다.
+**힌트 가중치** 특성을 사용 하면 열의 너비를 제어할 수 있습니다. **힌트 가중치** 값은 사용 가능한 공간의 가중치 비율로 표현 되며 **system.windows.gridunittype>** 동작과 동일 합니다. 너비가 같은 열의 경우 각 가중치를 1로 할당 합니다.
 
 <table>
 <colgroup>
@@ -587,7 +587,7 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left">hint-weight</td>
+<td align="left">힌트-가중치</td>
 <td align="left">너비의 백분율</td>
 </tr>
 <tr class="even">
@@ -607,7 +607,7 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 <td align="left">25%</td>
 </tr>
 <tr class="even">
-<td align="left">총 가중치: 4</td>
+<td align="left">총 무게: 4</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -615,9 +615,9 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 
  
 
-![하위 그룹, 고른 열](images/adaptive-tiles-subgroups01.png)
+![하위 그룹, 열 짝수](images/adaptive-tiles-subgroups01.png)
 
-한 열을 다른 열보다 2배 크게 만들려면 작은 열은 가중치 1, 큰 열은 가중치 2를 할당합니다.
+한 열을 한 열에서 다른 열로 두 배로 만들려면 작은 열에 가중치 1을 할당 하 고 큰 열에 가중치 2를 할당 합니다.
 
 <table>
 <colgroup>
@@ -626,7 +626,7 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left">hint-weight</td>
+<td align="left">힌트-가중치</td>
 <td align="left">너비의 백분율</td>
 </tr>
 <tr class="even">
@@ -638,7 +638,7 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 <td align="left">66.7%</td>
 </tr>
 <tr class="even">
-<td align="left">총 가중치: 3</td>
+<td align="left">총 무게: 3</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -646,9 +646,9 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 
  
 
-![하위 그룹, 열 하나의 크기가 다른 열의 2배](images/adaptive-tiles-subgroups02.png)
+![하위 그룹, 한 열이 다른 열 크기의 2 배](images/adaptive-tiles-subgroups02.png)
 
-첫 번째 열이 총 너비의 20%를 차지하고 두 번째 열이 총 너비의 80%를 차지하도록 하려면 첫 번째 가중치는 20, 두 번째 가중치는 80으로 할당합니다. 총 가중치가 100과 같으면 백분율로 사용됩니다.
+첫 번째 열이 전체 너비의 20%를 차지 하 고 두 번째 열에서 총 너비의 80%를 차지 하도록 하려면 첫 번째 가중치를 20으로, 두 번째 가중치를 80에 할당 합니다. 총 가중치가 100 인 경우 백분율로 작용 합니다.
 
 <table>
 <colgroup>
@@ -657,7 +657,7 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left">hint-weight</td>
+<td align="left">힌트-가중치</td>
 <td align="left">너비의 백분율</td>
 </tr>
 <tr class="even">
@@ -669,7 +669,7 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 <td align="left">80%</td>
 </tr>
 <tr class="even">
-<td align="left">총 가중치: 100</td>
+<td align="left">총 무게: 100</td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -677,15 +677,15 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 
  
 
-![하위 그룹, 가중치 합계가 100](images/adaptive-tiles-subgroups03.png)
+![가중치가 합하면 100 인 하위 그룹](images/adaptive-tiles-subgroups03.png)
 
-**참고**  를 8 픽셀의 여백을 열 간에 자동으로 추가 됩니다.
+**참고**  8 픽셀 여백은 열 사이에 자동으로 추가 됩니다.
 
  
 
-하위 그룹이 두 개 이상인 경우 양의 정수만 사용할 수 있는 **hint-weight**를 지정해야 합니다. 첫 번째 하위 그룹에 대해 hint-weight를 지정하지 않으면 가중치 50이 할당됩니다. hint-weight를 지정하지 않은 다음 하위 그룹에는 100에서 이전 가중치의 합계를 뺀 값과 동일한 가중치 또는 1(결과가 0인 경우)이 할당됩니다. hint-weight를 지정하지 않은 나머지 하위 그룹에는 가중치 1이 할당됩니다.
+세 개 이상의 하위 그룹이 있는 경우 양의 정수만 허용 하는 **힌트 가중치**를 지정 해야 합니다. 첫 번째 하위 그룹에 대 한 힌트 가중치를 지정 하지 않으면 가중치가 50으로 할당 됩니다. 지정 된 힌트 가중치가 없는 다음 하위 그룹에는 100에 해당 하는 가중치 (이전 가중치의 합계를 뺀 값) 또는 결과가 0 인 경우 1로 할당 됩니다. 지정 된 힌트 가중치가 없는 나머지 하위 그룹에는 가중치가 1로 할당 됩니다.
 
-다음은 너비가 같은 열 5개를 포함하는 타일을 얻을 수 있는 방법을 보여 주는 날씨 타일의 샘플 코드입니다.
+너비가 같은 5 개의 열이 있는 타일을 달성할 수 있는 방법을 보여 주는 날씨 타일에 대 한 샘플 코드는 다음과 같습니다.
 
 ```xml
 <binding template="TileWide" displayName="Seattle" branding="name">
@@ -790,14 +790,14 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 ## <a name="images"></a>이미지
 
 
-&lt;image&gt; 요소는 타일 알림에 이미지를 표시하는 데 사용됩니다. 이미지는 타일 콘텐츠 내에 인라인으로 배치되거나(기본값) 콘텐츠 뒤에 배경 이미지로 배치되거나 알림 위에서 애니메이션 효과를 주는 미리 보기 이미지로 배치될 수 있습니다.
+&lt;이미지&gt; 요소는 타일 알림에 이미지를 표시 하는 데 사용 됩니다. 이미지는 타일 콘텐츠 내에 인라인으로 배치 될 수 있습니다 (기본값), 콘텐츠 뒤의 배경 이미지 또는 알림의 위쪽에서 애니메이션을 적용 하는 피킹 (peeking) 이미지
 
 > [!NOTE]
-> 참고: 앱의 패키지, 앱의 로컬 저장소 또는 웹에서 이미지를 사용할 수 있습니다. Fall Creators Update에서 일반 연결의 경우 웹 이미지는 최대 3MB이고 데이터 통신 연결의 경우 1MB입니다. Fall Creators Update를 아직 실행하지 않는 디바이스에서 웹 이미지는 200KB 이하여야 합니다.
+> 이미지는 앱의 패키지, 앱의 로컬 저장소 또는 웹에서 사용할 수 있습니다. 가 중 작성자 업데이트를 기준으로 웹 이미지는 일반 연결의 경우 최대 3mb, 요금제 연결의 경우 1mb가 될 수 있습니다. 아직가 중 작성자 업데이트를 실행 하지 않는 장치에서는 웹 이미지가 200 KB 보다 크지 않아야 합니다.
 
  
 
-추가 동작을 지정하지 않으면 이미지는 균일하게 축소 또는 확장되어 사용 가능한 너비를 채웁니다. 이 예제는 두 열과 인라인 이미지를 사용하는 타일을 보여 줍니다. 인라인 이미지는 늘어나서 열 너비를 채웁니다.
+추가 동작을 지정 하지 않으면 이미지는 사용 가능한 너비를 채우도록 균등 하 게 축소 또는 확장 됩니다. 이 예제에서는 두 개의 열과 인라인 이미지를 사용 하는 타일을 보여 줍니다. 인라인 이미지를 늘려 열의 너비를 채웁니다.
 
 ```xml
 <binding template="TileMedium" displayName="Seattle" branding="name">
@@ -875,11 +875,11 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 
 ![이미지 예제](images/adaptive-tiles-images01.png)
 
-&lt;binding&gt; 루트 또는 첫 번째 그룹에 배치된 이미지도 사용 가능한 높이에 맞게 늘어납니다.
+또한 &lt;바인딩&gt; 루트 또는 첫 번째 그룹에 배치 된 이미지는 사용 가능한 높이에 맞게 확장 됩니다.
 
 ### <a name="image-alignment"></a>이미지 맞춤
 
-**hint-align** 특성을 사용하여 이미지를 왼쪽, 가운데 또는 오른쪽으로 맞추도록 설정할 수 있습니다. 이 경우 이미지는 너비에 맞게 늘어나지 않고 기본 해상도로 표시됩니다.
+**힌트 맞춤** 특성을 사용 하 여 왼쪽, 가운데 또는 오른쪽 맞춤으로 이미지를 설정할 수 있습니다. 이렇게 하면 이미지가 채우기 너비로 확장 되는 대신 네이티브 해상도로 표시 됩니다.
 
 ```xml
 <binding template="TileLarge">
@@ -906,11 +906,11 @@ TileLarge = new TileBinding()
 
 **결과:**
 
-![이미지 맞춤 예제(왼쪽, 가운데, 오른쪽)](images/adaptive-tiles-imagealignment.png)
+![이미지 맞춤 예제 (왼쪽, 가운데, 오른쪽)](images/adaptive-tiles-imagealignment.png)
 
 ### <a name="image-margins"></a>이미지 여백
 
-기본적으로 인라인 이미지는 위아래 콘텐츠와의 사이에 8픽셀의 여백이 있습니다. 이미지의 **hint-removeMargin** 특성을 사용하면 이 여백을 제거할 수 있습니다. 그러나 이미지는 타일 가장자리와의 8픽셀 여백을 항상 유지하고 하위 그룹(열)은 열 사이의 8픽셀 안쪽 여백을 항상 유지합니다.
+기본적으로 인라인 이미지는 이미지의 위 또는 아래에 있는 모든 내용 사이에 8 픽셀의 여백을 갖습니다. 이 여백은 이미지에서 **힌트-removeMargin** 특성을 사용 하 여 제거할 수 있습니다. 그러나 이미지는 항상 타일의 가장자리에서 8 픽셀 여백을 유지 하 고 하위 그룹 (열)은 항상 열 사이의 8 픽셀 안쪽 여백을 유지 합니다.
 
 ```xml
 <binding template="TileMedium" branding="none">
@@ -986,11 +986,11 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 }
 ```
 
-![Hint remove 여백 예제](images/adaptive-tiles-removemargin.png)
+![힌트 여백 제거 예](images/adaptive-tiles-removemargin.png)
 
 ### <a name="image-cropping"></a>이미지 자르기
 
-**hint-crop** 특성을 사용하여 이미지를 원으로 자를 수 있습니다. 현재 이 특성은 "none"(기본값) 또는 "circle" 값만 지원합니다.
+현재 "none" (기본값) 또는 "circle" 값만 지 원하는 **힌트-자르기** 특성을 사용 하 여 이미지를 원형으로 자를 수 있습니다.
 
 ```xml
 <binding template="TileLarge" hint-textStacking="center">
@@ -1054,11 +1054,11 @@ TileLarge = new TileBinding()
 
 **결과:**
 
-![이미지 자르기 예제](images/adaptive-tiles-imagecropping.png)
+![이미지 자르기 예](images/adaptive-tiles-imagecropping.png)
 
 ### <a name="background-image"></a>배경 이미지
 
-배경 이미지를 설정하려면 이미지 요소를 &lt;binding&gt;의 루트에 배치하고 배치 특성을 "background"로 설정합니다.
+배경 이미지를 설정 하려면 이미지 요소를 &lt;바인딩의&gt; 루트에 배치 하 고 배치 특성을 "background"로 설정 합니다.
 
 ```xml
 <binding template="TileWide">
@@ -1136,11 +1136,11 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 
 **결과:**
 
-![배경 이미지 예제](images/adaptive-tiles-backgroundimage.png)
+![배경 이미지 예](images/adaptive-tiles-backgroundimage.png)
 
-### <a name="peek-image"></a>미리 보기 이미지
+### <a name="peek-image"></a>이미지 피킹
 
-타일의 위쪽에서 "움직이는" 이미지를 지정할 수 있습니다. 미리 보기 이미지는 애니메이션을 사용하여 타일 위쪽에서 위아래로 미끄러져 나타났다가 나중에 다시 미끄러져 사라져 타일에 주 콘텐츠를 표시합니다. 미리 보기 이미지를 설정하려면 &lt;binding&gt;의 루트에 이미지 요소를 배치하고 배치 특성을 "peek"로 설정합니다.
+타일의 위쪽에서 "피킹" 하는 이미지를 지정할 수 있습니다. Peek 이미지는 애니메이션을 사용 하 여 타일 위쪽에서 아래쪽/위쪽으로 이동 하 고 보기를 표시 한 다음 나중에 다시 이동 하 여 타일의 주 콘텐츠를 표시 합니다. Peek 이미지를 설정 하려면 이미지 요소를 &lt;바인딩의&gt;루트에 배치 하 고 배치 특성을 "peek"로 설정 합니다.
 
 ```xml
 <binding template="TileMedium" branding="name">
@@ -1177,11 +1177,11 @@ TileWide = new TileBinding()
 }
 ```
 
-![미리 보기 이미지의 예](images/adaptive-tiles-imagepeeking.png)
+![이미지 피킹 예](images/adaptive-tiles-imagepeeking.png)
 
-**미리 보기 및 배경 이미지에 대 한 원 자르기**
+**피킹 (peeking) 및 배경 이미지에 대 한 원형 자르기**
 
-미리 보기 및 배경 이미지의 hint-crop 특성을 사용하여 원 자르기 작업을 수행할 수 있습니다.
+피킹 (peeking) 및 배경 이미지의 힌트-자르기 특성을 사용 하 여 원 자르기를 수행 합니다.
 
 ```xml
 <image placement="peek" hint-crop="circle" src="Assets/Apps/Hipstame/hipster.jpg"/>
@@ -1195,26 +1195,26 @@ new TilePeekImage()
 }
 ```
 
-다음과 같은 결과가 표시됩니다.
+결과는 다음과 같습니다.
 
-![미리 보기 및 배경 이미지에 대한 원 자르기](images/circlecrop-image.png)
+![피킹 (peeking) 및 배경 이미지에 대 한 원형 자르기](images/circlecrop-image.png)
 
-**미리 보기 및 배경 이미지를 사용 합니다.**
+**피킹 (peeking) 및 배경 이미지 모두 사용**
 
-타일 알림에 미리 보기 및 배경 이미지 둘 다 사용하려면 알림 페이로드에 미리 보기 이미지와 배경 이미지 둘 다 지정합니다.
+타일 알림에 피킹 (peeking) 및 배경 이미지를 모두 사용 하려면 알림 페이로드의 피킹 (peeking) 이미지와 배경 이미지를 모두 지정 합니다.
 
-다음과 같은 결과가 표시됩니다.
+결과는 다음과 같습니다.
 
 ![함께 사용된 미리 보기 및 배경 이미지](images/peekandbackground.png)
 
 
-### <a name="peek-and-background-image-overlays"></a>미리 보기 및 배경 이미지 오버레이
+### <a name="peek-and-background-image-overlays"></a>피킹 (peeking) 및 배경 이미지 오버레이
 
-**hint-overlay**를 사용하여 배경 및 미리 보기 이미지에 검정 오버레이를 설정할 수 있습니다. 이 특성에는 0에서 100 사이의 정수를 사용할 수 있으며, 0이면 오버레이가 없고 100이면 전체 검정 오버레이가 설정됩니다. 오버레이를 사용하여 타일의 텍스트를 읽기 쉽게 만들 수 있습니다.
+0-100의 정수를 허용 하는 **힌트 오버레이**를 사용 하 여 배경에 검정색 오버레이를 설정 하 고, 0으로 오버레이 및 100이 완전 한 검은색 오버레이로 표시 되는 이미지를 피킹할 수 있습니다. 오버레이를 사용 하 여 타일의 텍스트를 읽을 수 있도록 할 수 있습니다.
 
-**배경 이미지에서 힌트 오버레이 사용 합니다.**
+**배경 이미지에서 힌트 오버레이 사용**
 
-페이로드에 일부 텍스트 요소가 있으면 배경 이미지는 기본적으로 20% 오버레이로 설정됩니다(없으면 기본적으로 0% 오버레이로 설정됨).
+페이로드에 일부 텍스트 요소가 있으면 배경 이미지는 기본적으로 20% 오버레이로 표시 됩니다 (그렇지 않은 경우 기본값은 0% 오버레이).
 
 ```xml
 <binding template="TileWide">
@@ -1241,11 +1241,11 @@ TileWide = new TileBinding()
 
 **힌트-오버레이 결과:**
 
-![이미지 hint-overlay의 예](images/adaptive-tiles-image-hintoverlay.png)
+![이미지 힌트 오버레이의 예](images/adaptive-tiles-image-hintoverlay.png)
 
-**힌트-오버레이 사용 하 여 미리 보기 이미지**
+**피킹 (peeking) 이미지에서 힌트 오버레이 사용**
 
-Windows 10 버전 1511에서는 배경 이미지와 마찬가지로 미리 보기 이미지에 대해서도 오버레이가 지원됩니다. 미리 보기 이미지 요소의 hint-overlay를 0-100 사이의 정수로 지정합니다. 미리 보기 이미지에 대한 기본 오버레이는 0(오버레이 없음)입니다.
+Windows 10 버전 1511에서는 배경 이미지와 마찬가지로 피킹 (peeking) 이미지에 대 한 오버레이도 지원 합니다. Peek image 요소에서 힌트-오버레이를 0-100의 정수로 지정 합니다. 이미지 피킹 (peeking)의 기본 오버레이는 0 (오버레이 없음)입니다.
 
 ```xml
 <binding template="TileMedium">
@@ -1269,18 +1269,18 @@ TileMedium = new TileBinding()
 }
 ```
 
-이 예제에서는 불투명도가 20%(왼쪽) 및 0%(오른쪽)인 미리 보기 이미지를 보여 줍니다.
+이 예제에서는 20% 불투명 (왼쪽) 및 0% 불투명도 (오른쪽)의 피킹 (peeking) 이미지를 보여 줍니다.
 
-![미리 보기 이미지의 hint-overlay](images/hintoverlay.png)
+![힌트-피킹 (peeking) 이미지의 오버레이](images/hintoverlay.png)
 
-## <a name="vertical-alignment-text-stacking"></a>세로 맞춤(텍스트 스택)
+## <a name="vertical-alignment-text-stacking"></a>세로 맞춤 (텍스트 쌓기)
 
 
-[TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding) 요소와 [AdaptiveSubgroup](../tiles-and-notifications/tile-schema.md#adaptivesubgroup) 요소 모두에서 **hint-textStacking** 속성을 사용하여 타일에서 콘텐츠의 세로 맞춤을 제어할 수 있습니다. 기본적으로 모든 콘텐츠는 세로로 위쪽에 맞춰지지만 콘텐츠를 아래쪽 또는 가운데에 맞출 수도 있습니다.
+[TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding) 요소와 [AdaptiveSubgroup](../tiles-and-notifications/tile-schema.md#adaptivesubgroup) 요소 모두에서 **힌트-textstacking** 특성을 사용 하 여 타일의 내용에 대 한 세로 맞춤을 제어할 수 있습니다. 기본적으로 모든 항목은 위쪽에 세로로 정렬 되지만 콘텐츠를 아래쪽 또는 가운데에 맞출 수도 있습니다.
 
-### <a name="text-stacking-on-binding-element"></a>바인딩 요소에서 텍스트 스택
+### <a name="text-stacking-on-binding-element"></a>바인딩 요소에 대 한 텍스트 쌓기
 
-[TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding) 수준에서 적용하는 경우 텍스트 스택은 알림 콘텐츠 전체의 세로 맞춤을 설정하며, 브랜딩/배지 영역 위의 사용 가능한 세로 공간에서 맞춥니다.
+[TileBinding](../tiles-and-notifications/tile-schema.md#tilebinding) 수준에서 적용 되는 경우 텍스트 맞춤은 알림 콘텐츠의 세로 맞춤을 전체로 설정 하 고, 사용 가능한 세로 공간을 브랜딩/배지 영역 위에 맞춥니다.
 
 ```xml
 <binding template="TileMedium" hint-textStacking="center" branding="logo">
@@ -1316,11 +1316,11 @@ TileMedium = new TileBinding()
 }
 ```
 
-![바인딩 요소에서 텍스트 스택](images/adaptive-tiles-textstack-bindingelement.png)
+![바인딩 요소에 대 한 텍스트 쌓기](images/adaptive-tiles-textstack-bindingelement.png)
 
-### <a name="text-stacking-on-subgroup-element"></a>하위 그룹 요소에서 텍스트 스택
+### <a name="text-stacking-on-subgroup-element"></a>하위 그룹 요소의 텍스트 쌓기
 
-[AdaptiveSubgroup](../tiles-and-notifications/tile-schema.md#adaptivesubgroup) 수준에서 적용하는 경우 텍스트 스택은 하위 그룹(열) 콘텐츠의 세로 맞춤을 설정하며, 전체 그룹 내의 사용 가능한 세로 공간에서 맞춥니다.
+[AdaptiveSubgroup](../tiles-and-notifications/tile-schema.md#adaptivesubgroup) 수준에서 적용 되는 경우 텍스트 맞춤은 하위 그룹 (열) 콘텐츠의 세로 맞춤을 설정 하 여 전체 그룹 내의 사용 가능한 세로 공간에 맞춥니다.
 
 ```xml
 <binding template="TileWide" branding="nameAndLogo">
@@ -1394,7 +1394,7 @@ TileWide = new TileBinding()
 * [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)
 * [특수 타일 템플릿](special-tile-templates-catalog.md)
 * [UWP 커뮤니티 도구 키트-알림](https://github.com/windows-toolkit/WindowsCommunityToolkit/tree/master/Microsoft.Toolkit.Uwp.Notifications)
-* [GitHub에서 Windows 알림](https://github.com/WindowsNotifications)
+* [GitHub의 Windows 알림](https://github.com/WindowsNotifications)
 
  
 

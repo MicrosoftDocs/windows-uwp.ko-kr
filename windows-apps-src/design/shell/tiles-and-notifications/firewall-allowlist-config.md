@@ -8,12 +8,12 @@ ms.date: 05/20/2019
 ms.topic: article
 keywords: windows 10, uwp, WNS, windows 알림 서비스, 알림, windows, 방화벽, 문제 해결, IP, 트래픽, 엔터프라이즈, 네트워크, IPv4, VIP, FQDN, 공용 IP 주소
 ms.localizationpriority: medium
-ms.openlocfilehash: 34e66249c5b44cbfecd81b9238eda2b1e5412b9a
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 7f87dc0cc174a22f474c91a58f3ffeb738822fa8
+ms.sourcegitcommit: 963316e065cf36c17b6360c3f89fba93a1a94827
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80080660"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82868910"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>WNS 트래픽을 지원 하기 위한 엔터프라이즈 방화벽 및 프록시 구성
 
@@ -60,6 +60,10 @@ ms.locfileid: "80080660"
         <IpRange Subnet=""/>
         <!-- See the file in Download Center for the complete list of IP ranges -->
     </ClientIPsIPv4>
+    <IdentityServiceDNS>
+        <DNS FQDN="login.microsoftonline.com"/>
+        <DNS FQDN="login.live.com"/>
+    </IdentityServiceDNS>
 </WNSPublicIpAddresses>
 
 ```

@@ -1,59 +1,59 @@
 ---
-Description: UWP 앱 및 플랫폼 텍스트 크기 조정을 지 원하는 사용자 지정/템플릿 기반 컨트롤을 빌드하십시오.
+Description: 플랫폼 텍스트 크기 조정을 지 원하는 사용자 지정/템플릿 컨트롤 및 Windows 앱을 빌드합니다.
 title: 텍스트 크기 조정
 label: Text scaling
 template: detail.hbs
-keywords: UWP, 텍스트, 크기 조정, 내게 필요한 옵션, "간편한 액세스", 표시, "더 큰 확인 text", 사용자 상호 작용, 입력
+keywords: UWP, 텍스트, 크기 조정, 접근성, "접근성", 표시, "텍스트 크게 만들기", 사용자 조작, 입력
 ms.date: 08/02/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 22ad7a1ac6160fd8b1cfb70c69f299c5d89192d3
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 4db3af0d2ec0ce1dbd0866f569ad9bf9b0392aa8
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57600818"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970568"
 ---
 # <a name="text-scaling"></a>텍스트 크기 조정
 
-![100 ~ 225% 확장 하는 텍스트의 예](images/coretext/text-scaling-news-hero-small.png)  
-*Windows 10 (225%를 100%)의 크기 조정 하는 텍스트의 예*
+![100% ~ 225%의 텍스트 크기 조정 예제](images/coretext/text-scaling-news-hero-small.png)  
+*Windows 10의 텍스트 크기 조정 예 (100% ~ 225%)*
 
 ## <a name="overview"></a>개요
 
-대부분의 사용자 (모바일 장치를 Surface Hub의 거 대 한 화면 데스크톱 모니터에는 랩톱)에서 컴퓨터 화면에서 텍스트를 읽기 어려울 수 있습니다. 반대로, 일부 사용자는 앱 및 웹 사이트에서 필요한 것 보다 더 큰 글꼴 크기를 찾습니다.
+여러 사용자가 컴퓨터 화면에서 텍스트를 읽는 경우 (모바일 장치에서 노트북에서 데스크톱 모니터로 Surface Hub) 반대로, 일부 사용자는 앱 및 웹 사이트에 사용 되는 글꼴 크기를 필요한 것 보다 더 많이 찾을 수 있습니다.
 
-텍스트를 광범위 한 사용자에 대 한 최대한으로 읽을 수 있도록 Windows OS와 개별 응용 프로그램에서 상대 글꼴 크기를 변경 하려면 사용자는 기능을 제공 합니다. 돋보기 (하는 앱을 일반적으로 방금 화면 영역 안의 모든 항목을 확대 하 고 자체 사용 편의성 문제를 소개)를 사용 하 여, 디스플레이 해상도 변경 하거나 (하는 표시 및 일반적인 보기에 따라 모든 크기를 조정 DPI 배율에 의존 하는 대신 거리)를 사용자에만 텍스트를 100% (기본값)에서 사이의 크기 조정 설정에 빠르게 액세스할 수 최대 225%입니다.
+가장 광범위 한 사용자가 텍스트를 최대한 이해 하기 위해 Windows는 사용자가 OS와 개별 응용 프로그램 모두에서 상대적 글꼴 크기를 변경할 수 있는 기능을 제공 합니다. 일반적으로 화면 영역 내의 모든 항목을 확대하고 자체의 유용성 문제를 제기하는 돋보기 앱을 사용하거나, 디스플레이 해상도를 변경하거나, 디스플레이 및 일반 시청 거리에 따라 모든 항목의 크기를 조정하는 DPI 배율을 사용하는 대신, 사용자가 설정에 빠르게 액세스하여 텍스트 크기만 100%(기본 크기)에서 최대 225%까지 조정할 수 있습니다.
 
 ## <a name="support"></a>지원
 
-유니버설 Windows 응용 프로그램 (표준 및 PWA)를 기본적으로 크기 조정 하는 텍스트를 지원 합니다.
+유니버설 Windows 응용 프로그램 (표준 및 PWA 모두)은 기본적으로 텍스트 크기 조정을 지원 합니다.
 
-UWP 응용 프로그램에서 사용자 지정 컨트롤, 사용자 지정 텍스트 화면, 컨트롤 하드 코드 된 높이, 이전 프레임 워크 또는 타사 타사 프레임 워크에 포함 된 경우 사용자에 게 일관적이 고 유용한 환경을 보장 하려면 몇 가지 업데이트 있을 가능성이 높습니다.  
+Windows 응용 프로그램에 사용자 지정 컨트롤, 사용자 지정 텍스트 표면, 하드 코드 된 컨트롤 높이, 이전 프레임 워크 또는 타사 프레임 워크가 포함 된 경우 사용자에 게 일관 되 고 유용한 환경을 유지 하기 위해 일부 업데이트를 수행 해야 할 수 있습니다.  
 
-DirectWrite, GDI 및 XAML SwapChainPanels 지원 하지 않습니다 기본적으로 텍스트 크기 조정, Win32 지원 메뉴, 아이콘 및 도구 모음에 제한 됩니다.  
+DirectWrite, GDI 및 XAML SwapChainPanels는 기본적으로 텍스트 크기 조정을 지원 하지 않지만 Win32 지원은 메뉴, 아이콘 및 도구 모음으로 제한 됩니다.  
 
 <!-- If you want to support text scaling in your application with these frameworks, you’ll need to support the text scaling change event outlined below and provide alternative sizes for your UI and content.   -->
 
 ## <a name="user-experience"></a>사용자 환경
 
-사용자가 텍스트 크기를 조정할 수 접근성 비전/디스플레이 화면-> 설정에 더 큰 슬라이더-> 텍스트 만들기를 사용 하 여 합니다.
+사용자는 설정-내게 필요한 옵션 > 비전/디스플레이 화면 > 설정에서 텍스트 크게 만들기 슬라이더를 사용 하 여 텍스트 크기 조정을 조정할 수 있습니다.
 
-![100 ~ 225% 확장 하는 텍스트의 예](images/coretext/text-scaling-settings-100-small.png)  
-*텍스트 크기 조정 설정에서 설정을 접근성-> 비전/디스플레이 화면->*
+![100% ~ 225%의 텍스트 크기 조정 예제](images/coretext/text-scaling-settings-100-small.png)  
+*설정에서 텍스트 크기 조정 설정-> 접근성-> 비전/디스플레이 화면*
 
 ## <a name="ux-guidance"></a>UX 지침
 
-텍스트의 크기를 조정 하는 대로 컨트롤과 컨테이너도의 크기를 조정 하며 텍스트 및 새 레이아웃에 맞게 원래 대로 되돌릴 수입니다. 응용 프로그램, 프레임 워크 및 플랫폼에 따라 이전에 설명한 것 처럼이 작업의 대부분 수행 됩니다. 다음 UX 지침 수 없는 경우를 설명 합니다.
+텍스트 크기를 조정할 때 컨트롤과 컨테이너는 텍스트와 새 레이아웃을 수용할 수 있도록 크기를 조정 하 고 다시 흐르게 해야 합니다. 앞에서 설명한 것 처럼 앱, 프레임 워크 및 플랫폼에 따라이 작업은 대부분 수행 됩니다. 다음 UX 지침에서는 이러한 경우를 설명 합니다.
 
 ### <a name="use-the-platform-controls"></a>플랫폼 컨트롤 사용
 
-않았습니다 말할이 이미 있습니까? 반복 되는 가치가 있습니다. 가능 하면 항상 최소한의 노력에 대 한 가장 포괄적인 사용자 환경을 가능한 가져오려고 다양 한 Windows 앱 프레임 워크와 함께 제공 되는 기본 제공 컨트롤을 사용 합니다.
+이미 생각 하시 나요? 반복 가능: 가능한 경우 항상 다양 한 Windows 앱 프레임 워크와 함께 제공 되는 기본 제공 컨트롤을 사용 하 여 최소한의 노력으로 가장 포괄적인 사용자 환경을 제공 합니다.
 
-예를 들어, 모든 UWP 텍스트 컨트롤 확장 환경 사용자 지정 또는 템플릿 없이 전체 텍스트를 지원 합니다.
+예를 들어 모든 UWP 텍스트 컨트롤은 사용자 지정 또는 템플릿 없이 전체 텍스트 크기 조정 환경을 지원 합니다.
 
-두 가지 표준 텍스트 컨트롤을 포함 하는 기본 UWP 앱에서 코드 조각은 다음과 같습니다.
+다음은 몇 가지 표준 텍스트 컨트롤을 포함 하는 기본 UWP 앱의 코드 조각입니다.
 
 ``` xaml
 <Grid>
@@ -93,14 +93,14 @@ DirectWrite, GDI 및 XAML SwapChainPanels 지원 하지 않습니다 기본적�
 </Grid>
 ```
 
-![100 ~ 225% 확장 하는 애니메이션 된 텍스트](images/coretext/text-scaling.gif)  
-*애니메이션 된 텍스트 크기 조정*
+![애니메이션 텍스트 크기 조정 100% ~ 225%](images/coretext/text-scaling.gif)  
+*애니메이션 텍스트 크기 조정*
 
 ### <a name="use-auto-sizing"></a>자동 크기 조정 사용
 
-컨트롤에 대 한 절대 크기를 지정 하지 마세요. 가능 하면 자동으로 사용자 및 장치 설정에 따라 컨트롤의 크기를 조정 하는 플랫폼을 사용 수 있습니다.  
+컨트롤의 절대 크기를 지정 하지 마세요. 가능 하면 플랫폼에서 사용자 및 장치 설정에 따라 컨트롤의 크기를 자동으로 조정 하도록 합니다.  
 
-이 코드 조각 앞의 예제에서 사용 하 여 합니다 `Auto` 및 `*` 표 열 집합과 let 플랫폼에 대 한 너비 값 표 내에서 포함 된 요소의 크기를 기준으로 앱 레이아웃을 조정 합니다.
+이전 예제의이 코드 조각에서는 그리드 열 집합에 대 `Auto` 한 `*` 및 너비 값을 사용 하 고 플랫폼이 그리드 내에 포함 된 요소의 크기에 따라 앱 레이아웃을 조정 하도록 합니다.
 
 ``` xaml
 <Grid.ColumnDefinitions>
@@ -112,28 +112,28 @@ DirectWrite, GDI 및 XAML SwapChainPanels 지원 하지 않습니다 기본적�
 
 ### <a name="use-text-wrapping"></a>텍스트 줄 바꿈 사용
 
-앱의 레이아웃은으로 유연 하 고 최대한 융통성을 위해 (많은 컨트롤 지원 하지 않습니다 텍스트 줄 바꿈 기본적으로) 하는 텍스트가 포함 된 모든 컨트롤에서 텍스트 줄 바꿈을 사용 하도록 설정 합니다.
+응용 프로그램의 레이아웃을 최대한 유연 하 고 유연 하 게 유지 하기 위해 텍스트가 포함 된 모든 컨트롤에서 텍스트 잘림을 가능 하 게 합니다. 대부분의 컨트롤은 기본적으로 텍스트 잘림을 지원 하지 않습니다.
 
-플랫폼, 클리핑을 포함 하 여 레이아웃을 조정 하려면 다른 메서드를 사용 하 텍스트 배치를 지정 하지 않으면, (앞의 예제 참조).
+텍스트 줄 바꿈을 지정 하지 않으면 플랫폼은 다른 메서드를 사용 하 여 클리핑 (이전 예제 참조)을 포함 하 여 레이아웃을 조정 합니다.
 
-여기에서 사용 하 여는 `AcceptsReturn` 고 `TextWrapping` 이 레이아웃을 확인 하려면 텍스트 상자 속성 최대한 유연 하 게 됩니다.
+여기서는 `AcceptsReturn` 및 `TextWrapping` 텍스트 상자 속성을 사용 하 여 레이아웃이 최대한 유연 하 게 작동 하는지 확인 합니다.
 
 ``` xaml
 <TextBox PlaceholderText="Type something here" 
           AcceptsReturn="True" TextWrapping="Wrap" />
 ```
 
-![애니메이션 텍스트 배치를 사용 하 여 100% ~ 225% 확장 하는 텍스트](images/coretext/text-scaling-textwrap.gif)  
-*애니메이션 된 텍스트를 텍스트 배치를 사용 하 여 크기 조정*
+![텍스트 줄 바꿈이 적용 된 텍스트 크기 조정 100% ~ 225%](images/coretext/text-scaling-textwrap.gif)  
+*텍스트 줄 바꿈이 있는 애니메이션 텍스트 크기 조정*
 
-### <a name="specify-text-trimming-behavior"></a>텍스트 잘라내기 동작을 지정 합니다.
+### <a name="specify-text-trimming-behavior"></a>텍스트 트리밍 동작 지정
 
-텍스트 줄 바꿈 기본 동작이 없는 경우 대부분의 텍스트 컨트롤 수 클립에 텍스트 또는 텍스트 잘라내기 동작에 대 한 줄임표를 지정 합니다. 줄임표 공간을 차지 자체적으로 클리핑 줄임표를 선호 됩니다.
+텍스트 줄 바꿈이 기본 동작이 아닌 경우 대부분의 텍스트 컨트롤은 텍스트를 클리핑 하거나 텍스트 트리밍 동작에 대 한 줄임표를 지정할 수 있습니다. 타원이 공간 자체를 차지 하므로 자르기는 줄임표로 기본 설정 됩니다.
 
 > [!NOTE]
-> 텍스트를 맞추는 경우 시작이 아닌 문자열의 끝을 자릅니다.
+> 텍스트를 클리핑 해야 하는 경우 시작 부분이 아니라 문자열의 끝을 자릅니다.
 
-이 예에서 사용 하 여 TextBlock에서 텍스트를 클리핑 하는 방법을 알아보겠습니다 합니다 [TextTrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) 속성입니다.
+이 예제에서는 [Texttrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) 속성을 사용 하 여 TextBlock의 텍스트를 자르는 방법을 보여 줍니다.
 
 ``` xaml
 <TextBlock TextTrimming="Clip">
@@ -141,14 +141,14 @@ DirectWrite, GDI 및 XAML SwapChainPanels 지원 하지 않습니다 기본적�
 </TextBlock>
 ```
 
-![100 ~ 225% 텍스트가 사용 하 여 크기 조정 하는 텍스트](images/coretext/text-scaling-clipping-small.png)  
-*텍스트 클리핑을 사용 하 여 크기 조정 하는 텍스트*
+![텍스트를 오려낸 텍스트 크기 조정 100% ~ 225%](images/coretext/text-scaling-clipping-small.png)  
+*텍스트를 오려낸 텍스트 크기 조정*
 
 ### <a name="use-a-tooltip"></a>도구 설명 사용
 
-있습니다 클립 텍스트를 도구 설명을 사용 하 여 사용자에 게 전체 텍스트를 제공 합니다.
+텍스트를 자르는 경우 도구 설명을 사용 하 여 전체 텍스트를 사용자에 게 제공 합니다.
 
-여기에 도구 설명 텍스트 배치를 지원 하지 않는 텍스트 블록에 추가 합니다.
+여기서는 텍스트 잘림을 지원 하지 않는 TextBlock에 도구 설명을 추가 합니다.
 
 ``` xaml
 <TextBlock TextTrimming="Clip">
@@ -159,21 +159,21 @@ DirectWrite, GDI 및 XAML SwapChainPanels 지원 하지 않습니다 기본적�
 </TextBlock>
 ```
 
-### <a name="dont-scale-font-based-icons-or-symbols"></a>글꼴 기반 아이콘 또는 기호 확장 되지 않는
+### <a name="dont-scale-font-based-icons-or-symbols"></a>글꼴 기반 아이콘 또는 기호의 크기를 조정 하지 않음
 
-글꼴 기반 아이콘 강조 또는 장식을 사용할 때는 이러한 문자 크기를 조정 사용 하지 않도록 설정 합니다.
+강조 또는 장식을 위한 글꼴 기반 아이콘을 사용 하는 경우 이러한 문자에 대 한 크기 조정을 사용 하지 않도록 설정 합니다.
 
-설정 된 [IsTextScaleFactorEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled) 속성을 `false` 대부분의 XAML에 대 한 제어 합니다.
+대부분의 [IsTextScaleFactorEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled) XAML 컨트롤에 `false` 대해 IsTextScaleFactorEnabled 속성을로 설정 합니다.
 
-### <a name="support-text-scaling-natively"></a>고유 하 게 크기 조정 지원 텍스트
+### <a name="support-text-scaling-natively"></a>기본적으로 텍스트 크기 조정 지원
 
-처리를 [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) UISettings 시스템 이벤트에 사용자 지정 프레임 워크 및 컨트롤입니다. 이 이벤트는 사용자가 시스템에 텍스트 배율 설정 될 때마다 발생 합니다.
+사용자 지정 프레임 워크 및 컨트롤에서 [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) uisettings 시스템 이벤트를 처리 합니다. 이 이벤트는 사용자가 시스템에서 텍스트 배율 인수를 설정 하는 때마다 발생 합니다.
 
 ## <a name="summary"></a>요약
 
-이 항목에서는 배율 조정을 지 원하는 Windows에서 텍스트의 개요를 제공 하 고 사용자 환경을 사용자 지정 하는 방법에 대 한 UX 및 개발자 지침을 포함 합니다.
+이 항목에서는 Windows의 텍스트 크기 조정 지원에 대 한 개요를 제공 하 고 사용자 환경을 사용자 지정 하는 방법에 대 한 UX 및 개발자 지침을 제공 합니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 ### <a name="api-reference"></a>API 참조
 

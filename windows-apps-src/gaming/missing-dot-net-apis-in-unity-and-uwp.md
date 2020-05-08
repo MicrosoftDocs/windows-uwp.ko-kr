@@ -1,55 +1,55 @@
 ---
 title: Unity 및 UWP에서 누락된 .NET API
-description: Unity에서 UWP 게임을 빌드할 때 누락된 .NET API와 일반적인 문제에 대한 해결 방법에 대해 알아보세요.
+description: Unity에서 UWP 게임을 빌드할 때 누락 된 .NET Api 및 일반적인 문제에 대 한 해결 방법을 알아봅니다.
 ms.assetid: 28A8B061-5AE8-4CDA-B4AB-2EF0151E57C1
 ms.date: 02/21/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, .net, unity
 ms.localizationpriority: medium
-ms.openlocfilehash: df93fbeb3a879a84873827a5ead926f96b02adcc
-ms.sourcegitcommit: 8ee0752099170aaf96c7cb105f7cc039b6e7ff06
+ms.openlocfilehash: 8c7f906a19ddbabea85b0426aca9e41a62327e36
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80968059"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729803"
 ---
 # <a name="missing-net-apis-in-unity-and-uwp"></a>Unity 및 UWP에서 누락된 .NET API
 
-.NET을 사용하여 UWP 게임을 빌드할 때 Unity 편집기나 독립 실행형 PC 게임에서 사용할 수 있는 몇 가지 API가 UWP에 대해 없는 것을 발견할 수 있습니다. UWP 앱용 .NET에 각 네임스페이스에 대한 전체 .NET Framework에서 제공하는 하위 집합 형식이 포함되어 있기 때문입니다.
+.NET을 사용 하 여 UWP 게임을 빌드하는 경우에는 Unity 편집기 또는 독립 실행형 PC 게임에서 사용할 수 있는 일부 Api가 UWP에 대해 존재 하지 않는 것을 알 수 있습니다. UWP 앱 용 .NET에는 각 네임 스페이스에 대해 전체 .NET Framework에서 제공 되는 형식의 하위 집합이 포함 되기 때문입니다.
 
-또한 일부 게임 엔진은 Unity의 Mono와 같은 UWP용 .NET과 완전히 호환되지 않는 다른 형식을 사용합니다. 따라서 사용자가 게임을 작성할 때 편집기에서 모든 것이 제대로 작동하지만 UWP용 빌드로 이동했을 때 **'System.Runtime.Serialization' 네임스페이스에 'Formatters' 형식 또는 네임스페이스가 존재하지 않습니다(어셈블리 참조가 누락되었습니까?)** 와 같은 오류가 발생할 수 있습니다.
+또한 일부 게임 엔진은 Unity의 Mono와 같이 UWP 용 .NET과 완전히 호환 되지 않는 .NET의 다양 한 기능을 사용 합니다. 따라서 게임을 작성 하는 경우 모든 것이 편집기에서 제대로 작동할 수 있지만 UWP에 대 한 빌드로 이동 하면 ' system.xml ' **네임 스페이스에 ' 포맷터 ' 형식 또는 네임 스페이스가 없습니다. 어셈블리 참조가 있는지 확인** 하세요.
 
-다행히 Unity에는 이러한 누락된 일부 API를 확장 메서드 및 대체 형식으로 제공하며, [유니버설 Windows 플랫폼: .NET 스크립팅 백 엔드에서 누락된 .NET 형식](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)에 설명되어 있습니다. 그러나 필요한 기능이 없는 경우 [Windows 8.x 앱용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))에서 WinRT 또는 UWP용 .NET API를 사용하기 위한 코드를 변환할 수 있는 방법에 대해 설명합니다. (Windows 8을 다루고 있지만 Windows 10 UWP 앱에도 적용할 수 있습니다.)
+다행히 Unity는 이러한 누락 된 Api 중 일부를 확장 메서드 및 대체 형식으로 제공 합니다. 이러한 Api는 [유니버설 Windows 플랫폼: .Net Scripting 백 엔드에서 누락 된 .Net 형식](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)에 설명 되어 있습니다. 그러나 필요한 기능을 여기에서 사용 하지 않는 경우 [Windows 8.x 앱 용 .net 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)) 에서는 Windows 런타임 api에 대해 WinRT 또는 .net을 사용 하도록 코드를 변환 하는 방법을 설명 합니다. 이는 Windows 8에 대해 설명 하지만 Windows 10 UWP 앱에도 적용 됩니다.
 
 ## <a name="net-standard"></a>.NET Standard
 
-일부 API가 작동하지 않는 이유를 이해하기 위해 여러 .NET 형식 및 UWP가 .NET을 구현하는 방식을 이해하는 것이 중요합니다. [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard)는 플랫폼 간 .NET API의 공식 사양이며 다른 .NET 형식을 통합합니다. .NET의 각 구현은 특정 버전의 .NET Standard를 지원합니다. [.NET 구현 지원](https://docs.microsoft.com/dotnet/standard/net-standard#net-implementation-support)에서 표준 및 구현 표를 볼 수 있습니다.
+일부 Api가 작동 하지 않는 이유를 이해 하려면 다양 한 .NET 버전 및 UWP에서 .NET을 구현 하는 방법을 이해 하는 것이 중요 합니다. [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard) 는 플랫폼 간 이며 다양 한 .net 기능을 통합 하는 .net api의 공식 사양입니다. .NET의 각 구현에서는 특정 버전의 .NET Standard을 지원 합니다. [.Net 구현 지원](https://docs.microsoft.com/dotnet/standard/net-standard#net-implementation-support)에서 표준 및 구현 표를 볼 수 있습니다.
 
-UWP SDK의 각 버전은 다른 수준의 .NET Standard를 따릅니다. 예를 들어 16299 SDK(Fall Creators Update)는 .NET Standard 2.0을 지원합니다.
+각 버전의 UWP SDK는 다른 수준의 .NET Standard을 준수 합니다. 예를 들어 16299 SDK (에 지 크리에이터 업데이트)는 .NET Standard 2.0을 지원 합니다.
 
-특정 .NET API가 대상으로 하는 UWP 버전에서 지원되는지 여부를 알고자 할 경우 [.NET Standard API 참조](https://docs.microsoft.com/dotnet/api/index?view=netstandard-2.0)를 확인하여 해당 UWP 버전에서 지원되는 .NET Standard의 버전을 선택할 수 있습니다.
+대상으로 하는 UWP 버전에서 특정 .NET API가 지원 되는지 확인 하려는 경우 [.NET STANDARD API 참조](https://docs.microsoft.com/dotnet/api/index?view=netstandard-2.0) 를 확인 하 고 해당 버전의 uwp에서 지원 되는 .NET Standard 버전을 선택할 수 있습니다.
 
-## <a name="scripting-backend-configuration"></a>스크립팅 백 엔드 구성
+## <a name="scripting-backend-configuration"></a>Scripting 백엔드 구성
 
-UWP를 빌드하는 데 문제가 있는 경우 먼저 **플레이어 설정**(**파일 > 빌드 설정**에서 **유니버설 Windows 플랫폼**과 **플레이어 설정**을 차례로 선택)을 확인해야 합니다. **기타 설정 > 구성** 아래에 있는 처음 세 개의 드롭다운(**스크립팅 런타임 버전**, **스크립팅 백 엔드**, 및 **Api 호환성 수준**)은 모두 고려할 중요한 설정입니다.
+UWP를 빌드하는 데 문제가 있는 경우 먼저 **플레이어 설정** (**파일 > 빌드 설정**, **유니버설 Windows 플랫폼**선택, **플레이어 설정**)을 확인 합니다. **기타 설정 > 구성**에서 처음 세 개의 드롭다운 (**scripting Runtime Version**, **Scripting 백 엔드**및 **Api 호환성 수준**)은 고려해 야 할 모든 중요 한 설정입니다.
 
-**스크립팅 런타임 버전**은 Unity 스크립팅 백 엔드가 사용하며 선택하는 .NET Framework 지원에 해당하는 (근사한) 버전을 다운로드할 수 있습니다. 그러나 해당 버전의 .NET Framework의 모든 API가 지원되지는 않으며 사용자 UWP가 대상으로 하는 버전의 .NET Standard만 지원됩니다.
+**스크립팅 런타임 버전** 은 사용자가 선택 하는 것과 동일한 .NET Framework 지원 버전을 가져올 수 있도록 하는 Unity scripting 백 엔드가 사용 하는 기능입니다. 그러나 해당 버전의 .NET Framework에 있는 모든 Api가 지원 되는 것은 아닙니다. UWP에서 대상으로 하는 .NET Standard 버전의 Api만 지원 됩니다.
 
-종종 새로운 .NET 릴리스를 통해 더 많은 API가 .NET Standard에 추가되어 독립 실행형과 UWP에서 동일한 코드를 사용하게 될 수 있습니다. 예를 들어 [System.Runtime.Serialization.Json](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json) 네임스페이스는 .NET Standard 2.0에서 도입되었습니다. **스크립팅 런타임 버전**을 **.NET 3.5 등가**(이전 버전의 .NET Standard를 대상으로 함)로 설정하는 경우, AP;를 사용하려고 하면 오류가 발생합니다. **.NET 4.6 등가**(.NET Standard 2.0 지원)로 전환하면 API가 작동합니다.
+새 .NET 릴리스를 사용 하는 경우 독립 실행형 및 UWP에서 동일한 코드를 사용할 수 있는 .NET Standard에 더 많은 Api가 추가 됩니다. 예를 들어, .NET Standard 2.0에서에 도입 [되었습니다.](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json) 이전 버전의 .NET Standard를 대상으로 하는 **스크립팅 런타임 버전** 을 **.net 3.5** 로 설정 하면 API를 사용 하려고 할 때 오류가 발생 합니다. .NET Standard 2.0을 지 원하는 **.net 4.6에 해당** 하는 것으로 전환 하면 API가 작동 합니다.
 
-**스크립팅 백 엔드**는 **.NET** 또는 **IL2CPP**일 수 있습니다. 이 항목에서는 여기에서 논의한 문제가 생기는 위치인 **.NET**을 선택한 것으로 가정합니다. 자세한 내용은 [스크립팅 백 엔드](https://docs.unity3d.com/Manual/windowsstore-scriptingbackends.html)를 참조하세요.
+**Scripting 백엔드** 는 **.net** 또는 **IL2CPP**일 수 있습니다. 이 항목에서는 여기서 설명 하는 문제가 발생 하는 경우 **.net**을 선택 했다고 가정 합니다. 자세한 내용은 [스크립팅 백 엔드](https://docs.unity3d.com/Manual/windowsstore-scriptingbackends.html) 를 참조 하세요.
 
-마지막으로 게임이 실행되기 원하는 버전의 .NET으로 **Api 호환성 수준**을 설정해야 합니다. 이는 **스크립팅 런타임 버전**과 일치해야 합니다.
+마지막으로, 게임을 실행할 .NET 버전으로 **Api 호환성 수준을** 설정 해야 합니다. 이는 **스크립팅 런타임 버전과**일치 해야 합니다.
 
-일반적으로 **스크립팅 런타임 버전** 및 **Api 호환성 수준**에 대해 .NET Framework와 더 많은 호환성을 획득하여 .NET API를 사용할 수 있도록 사용 가능한 가장 최신 버전을 선택해야 합니다.
+일반적으로 **런타임 버전** 및 **Api 호환성 수준을**스크립팅 하기 위해 사용 가능한 최신 버전을 선택 하 여 .NET Framework와의 호환성을 향상 시킬 수 있으므로 더 많은 .net api를 사용할 수 있습니다.
 
-![구성: 스크립팅 런타임 버전, 스크립팅 백 엔드, Api 호환성 수준](images/missing-dot-net-apis-in-unity-1.png)
+![구성: Scripting Runtime Version; 백 엔드 스크립팅 Api 호환성 수준](images/missing-dot-net-apis-in-unity-1.png)
 
 ## <a name="platform-dependent-compilation"></a>플랫폼 종속 컴파일
 
-UWP를 포함한 여러 플랫폼에 대해 Unity 게임을 작성하는 경우 플랫폼 종속 컴파일을 사용하여 게임을 UWP로 작성할 때에만 UWP용 코드를 실행하도록 하고자 할 수 있습니다. 이러한 방법으로 빌드 오류가 발생하지 않고 독립 실행형 데스크톱 및 기타 플랫폼, 그리고 UWP용 WinRT API에 대해 전체 .NET Framework를 사용할 수 있습니다.
+UWP를 비롯 한 여러 플랫폼에 대 한 Unity 게임을 빌드하는 경우에는 플랫폼 종속 컴파일을 사용 하 여 uwp로 작성 된 코드가 UWP로 작성 된 경우에만 실행 되도록 할 수 있습니다. 이러한 방식으로, 빌드 오류 없이 독립 실행형 데스크톱 및 기타 플랫폼에 대 한 전체 .NET Framework 및 UWP 용 WinRT Api를 사용할 수 있습니다.
 
-다음과 같은 지시문을 사용하여 UWP 앱으로 실행될 때 코드만 컴파일할 수 있습니다.
+다음 지시문을 사용 하 여 UWP 앱으로 실행 되는 경우에만 코드를 컴파일합니다.
 
 ```csharp
 #if NETFX_CORE
@@ -60,17 +60,17 @@ UWP를 포함한 여러 플랫폼에 대해 Unity 게임을 작성하는 경우 
 ```
 
 > [!NOTE]
-> `NETFX_CORE`는 .NET 스크립팅 백 엔드에 대해 코드를 C# 컴파일하는 경우에만 확인 하면 됩니다. IL2CPP와 같은 다른 스크립팅 백 엔드를 사용 하는 경우 대신 [`ENABLE_WINMD_SUPPORT`](https://docs.unity3d.com/Manual/windowsstore-code-snippets.html) 를 사용 합니다.
+> `NETFX_CORE`는 .NET scripting 백 엔드에 대해 c # 코드를 컴파일하는 경우에만 확인 하면 됩니다. IL2CPP와 같은 다른 스크립팅 백 엔드를 사용 하는 경우 대신을 [`ENABLE_WINMD_SUPPORT`](https://docs.unity3d.com/Manual/windowsstore-code-snippets.html) 사용 합니다.
 
-플랫폼 종속 컴파일 지시어의 전체 목록 [플랫폼 종속 컴파일](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html)을 참조하세요.
+플랫폼 종속 컴파일 지시문의 전체 목록은 [플랫폼 종속 컴파일](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html)을 참조 하세요.
 
-## <a name="common-issues-and-workarounds"></a>일반적인 문제 및 해결 방법
+## <a name="common-issues-and-workarounds"></a>일반적인 이슈 및 해결 방법
 
-다음 시나리오에서는 UWP 하위 집합에서 .NET API가 누락된 경우 발생할 수 있는 일반적인 문제와 이를 해결하는 방법에 대해 설명합니다.
+다음 시나리오에서는 .NET Api가 UWP 하위 집합에 없는 경우 발생할 수 있는 일반적인 문제 및 이러한 문제를 해결 하는 방법을 설명 합니다.
 
-### <a name="data-serialization-using-binaryformatter"></a>BinaryFormatter를 사용하여 데이터 직렬화
+### <a name="data-serialization-using-binaryformatter"></a>BinaryFormatter를 사용 하 여 데이터 직렬화
 
-일반적으로 게임은 플레이어가 쉽게 조작할 수 없도록 데이터를 직렬화하여 저장합니다. 그러나 개체를 바이너리로 직렬화하는 [BinaryFormatter](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.formatters.binary.binaryformatter)는 이전 버전의 .NET Standard(2.0 이전)에서 사용할 수 없습니다. 대신 [XmlSerializer](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer) 또는 [DataContractJsonSerializer](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json.datacontractjsonserializer)를 사용하는 것을 고려하세요.
+플레이어에서 쉽게 조작할 수 없도록 데이터를 직렬화 하는 게임이 일반적입니다. 그러나 개체를 이진으로 serialize 하는 [Binaryformatter](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.formatters.binary.binaryformatter)는 이전 버전의 .NET Standard (2.0 이전 버전)에서 사용할 수 없습니다. 대신 [XmlSerializer](https://docs.microsoft.com/dotnet/api/system.xml.serialization.xmlserializer) 또는 [DataContractJsonSerializer](https://docs.microsoft.com/dotnet/api/system.runtime.serialization.json.datacontractjsonserializer) 를 사용 하십시오.
 
 ```csharp
 private void Save()
@@ -90,17 +90,17 @@ private void Save()
 
 ### <a name="io-operations"></a>I/O 작업
 
-[FileStream](https://docs.microsoft.com/dotnet/api/system.io)과 같은 [System.IO](https://docs.microsoft.com/dotnet/api/system.io.filestream) 네임스페이스에서 일부 형식은 이전 버전의 .NET Standard에서 사용할 수 없습니다. 그러나 Unity는 이를 게임에서 사용할 수 있도록 [Directory](https://docs.microsoft.com/dotnet/api/system.io.directory), [File](https://docs.microsoft.com/dotnet/api/system.io.file) 및 **FileStream** 형식을 제공합니다.
+[System.IO](https://docs.microsoft.com/dotnet/api/system.io) 네임 스페이스의 일부 형식 (예: [FileStream](https://docs.microsoft.com/dotnet/api/system.io.filestream))은 이전 버전의 .NET Standard에서 사용할 수 없습니다. 그러나 Unity는 게임에서 사용할 수 있도록 [디렉터리](https://docs.microsoft.com/dotnet/api/system.io.directory), [파일](https://docs.microsoft.com/dotnet/api/system.io.file)및 **FileStream** 유형을 제공 합니다.
 
-또는 UWP 앱에만 제공되는 [Windows.Storage](https://docs.microsoft.com/uwp/api/Windows.Storage) API를 사용할 수도 있습니다. 그러나 이러한 API는 앱에서 특정 저장소를 작성하지 못하도록 하며 전체 파일 시스템에 대한 무료 액세스를 제공하지 않습니다. 자세한 내용은 [파일, 폴더 및 라이브러리](https://docs.microsoft.com/windows/uwp/files/)를 참조하세요.
+또는 UWP 앱 에서만 사용할 수 있는 [Windows 저장소](https://docs.microsoft.com/uwp/api/Windows.Storage) api를 사용할 수 있습니다. 그러나 이러한 Api는 앱이 특정 저장소에 쓰도록 제한 하 고 전체 파일 시스템에 대 한 무료 액세스를 제공 하지 않습니다. 자세한 내용은 [파일, 폴더 및 라이브러리](https://docs.microsoft.com/windows/uwp/files/) 를 참조 하십시오.
 
-중요한 정보는 [Close](https://docs.microsoft.com/dotnet/api/system.io.stream.close) 메서드는 .NET Standard 2.0 이상에서만 사용할 수 있다는 것입니다(그러나 Unity에서 확장 메서드를 제공함). 대신 [Dispose](https://docs.microsoft.com/dotnet/api/system.io.stream.dispose)를 사용하십시오.
+한 가지 중요 한 점은 [Close](https://docs.microsoft.com/dotnet/api/system.io.stream.close) 메서드는 .NET Standard 2.0 이상 에서만 사용할 수 있다는 것입니다. 단, Unity는 확장 메서드를 제공 합니다. 대신 [Dispose](https://docs.microsoft.com/dotnet/api/system.io.stream.dispose) 를 사용 하십시오.
 
 ### <a name="threading"></a>스레딩
 
-[ThreadPool](https://docs.microsoft.com/dotnet/api/system.threading)과 같은 [System.Threading](https://docs.microsoft.com/dotnet/api/system.threading.threadpool) 네임스페이스에서 일부 형식은 이전 버전의 .NET Standard에서 사용할 수 없습니다. 이 경우 [Windows.System.Threading](https://docs.microsoft.com/uwp/api/windows.system.threading) 네임스페이스를 사용할 수 있습니다.
+스레드 이름 (예: [ThreadPool](https://docs.microsoft.com/dotnet/api/system.threading.threadpool))의 일부 형식은 이전 버전의 .NET Standard에서 사용할 수 [없습니다.](https://docs.microsoft.com/dotnet/api/system.threading) 이러한 경우에는 [Windows. system.object](https://docs.microsoft.com/uwp/api/windows.system.threading) 네임 스페이스를 대신 사용할 수 있습니다.
 
-UWP 및 비 UWP 플랫폼 모두에 대해 준비하도록 플랫폼 종속 컴파일을 사용하여 Unity 게임에서 스레딩을 처리하는 방법은 다음과 같습니다.
+UWP 및 비 UWP 플랫폼을 준비 하기 위해 플랫폼 종속 컴파일을 사용 하 여 Unity 게임에서 스레딩을 처리할 수 있는 방법은 다음과 같습니다.
 
 ```csharp
 private void UsingThreads()
@@ -115,9 +115,9 @@ private void UsingThreads()
 
 ### <a name="security"></a>보안
 
-**System.Security.Cryptography.X509Certificates** 같은 일부 [System.Security.](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates?view=netstandard-2.0)* 네임스페이스는 UWP용 Unity 게임을 빌드할 때 사용할 수 없습니다. 이러한 경우, 동일한 기능의 상당 부분을 포함하는 **Windows.Security.** * API를 사용합니다.
+일부 **시스템 보안입니다** . * UWP 용 Unity 게임을 빌드하는 경우 [system.security.cryptography.x509certificates.x509certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates?view=netstandard-2.0)과 같은 네임 스페이스를 사용할 수 없습니다. 이러한 경우에는 **Windows 보안** 을 사용 합니다. * Api는 동일한 기능을 대부분 포함 합니다.
 
-다음 예제에서는 지정된 이름을 가진 인증서 저장소에서 인증서를 가져옵니다.
+다음 예제에서는 지정 된 이름의 인증서 저장소에서 인증서를 가져옵니다.
 
 ```cs
 private async void GetCertificatesAsync(string certStoreName)
@@ -134,15 +134,15 @@ private async void GetCertificatesAsync(string certStoreName)
     }
 ```
 
-WinRT 보안 API를 사용하는 방법에 대한 자세한 내용은 [보안](https://docs.microsoft.com/windows/uwp/security/)을 참조하세요.
+WinRT 보안 Api를 사용 하는 방법에 대 한 자세한 내용은 [보안](https://docs.microsoft.com/windows/uwp/security/) 을 참조 하세요.
 
 ### <a name="networking"></a>네트워킹
 
-**System.Net.Mail&period; 같은 일부** System[Net.](https://docs.microsoft.com/dotnet/api/system.net.mail?view=netstandard-2.0)* 네임스페이스 역시 UWP용 Unity 게임을 빌드할 때 사용할 수 없습니다. 이러한 API 중 대부분에서는 해당되는 **Windows.Networking.** * 및 **Windows.Web.** * WinRT API를 사용하여 비슷한 기능을 가져옵니다. 자세한 내용은 [네트워킹 및 웹 서비스](https://docs.microsoft.com/windows/uwp/networking/)를 참조하세요.
+**시스템&period;네트워크의 일부입니다.** * UWP 용 Unity 게임을 빌드하는 경우에는 [시스템 .net. 메일](https://docs.microsoft.com/dotnet/api/system.net.mail?view=netstandard-2.0)등의 네임 스페이스도 사용할 수 없습니다. 이러한 Api의 대부분은 해당 하는 **Windows. 네트워킹을 사용 합니다.** * 및 **Windows.** * WinRT Api를 통해 비슷한 기능을 얻을 수 있습니다. 자세한 내용은 [네트워킹 및 웹 서비스](https://docs.microsoft.com/windows/uwp/networking/) 를 참조 하세요.
 
-**System.Net.Mail**의 경우에는 [Windows.ApplicationModel.Email](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email) 네임슾이스를 사용합니다. 자세한 내용은 [이메일 전송](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email)을 참조하세요.
+**시스템 .Net Mail**의 경우에는 [Windows-Applicationmodel. Email](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email) 네임 스페이스를 사용 합니다. 자세한 내용은 [전자 메일 보내기](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email) 를 참조 하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 * [유니버설 Windows 플랫폼: .NET Scripting 백 엔드에서 .NET 형식이 누락 되었습니다.](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)
 * [UWP 앱 용 .NET 개요](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))

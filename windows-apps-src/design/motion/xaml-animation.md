@@ -1,144 +1,144 @@
 ---
 ms.assetid: 0C8DEE75-FB7B-4E59-81E3-55F8D65CD982
 title: 애니메이션 개요
-description: Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용하여 Windows 모양과 느낌을 앱에 통합할 수 있습니다.
+description: Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용 하 여 Windows 모양과 느낌을 앱에 통합할 수 있습니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 22e035639709005417084d564145d9de218009a8
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d6fa8740fba35ae6a50d91846bab79a4858de076
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366682"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970488"
 ---
 # <a name="animations-in-xaml"></a>XAML의 애니메이션
 
-UWP 애니메이션은 움직임과 대화형 작업을 추가하여 앱을 향상시킬 수 있습니다. Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용하면 Windows 모양과 느낌을 앱에 통합할 수 있습니다. 이 항목에서는 애니메이션 및 각 애니메이션이 사용되는 일반적인 시나리오의 예를 간략하게 소개합니다.
+애니메이션은 이동 및 대화형 작업을 추가 하 여 앱을 향상 시킬 수 있습니다. Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용 하 여 Windows 모양과 느낌을 앱에 통합할 수 있습니다. 이 항목에서는 각각을 사용 하는 일반적인 시나리오의 애니메이션과 예제에 대해 간략하게 설명 합니다.
 
 > [!TIP]
-> XAML용 Windows 런타임 컨트롤에는 일부 유형의 애니메이션이 애니메이션 라이브러리에서 가져온 기본 제공 동작으로 포함되어 있습니다. 앱에서 이러한 컨트롤을 사용하면 직접 프로그래밍하지 않고도 애니메이션 효과를 준 모양과 느낌을 얻을 수 있습니다.
+> XAML에 대 한 Windows 런타임 컨트롤은 애니메이션 라이브러리에서 제공 되는 기본 제공 동작으로 특정 형식의 애니메이션을 포함 합니다. 앱에서 이러한 컨트롤을 사용 하 여 직접 프로그래밍 하지 않고도 애니메이션 모양의 모양과 느낌을 얻을 수 있습니다.
 
-Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용할 경우 다음과 같은 이점이 있습니다.
+Windows 런타임 애니메이션 라이브러리의 애니메이션은 다음과 같은 이점을 제공 합니다.
 
--   [애니메이션에 대한 지침](https://docs.microsoft.com/windows/uwp/style/motion)에 따르는 동작
--   UI 상태를 빠르고 유연하게 전환하여 사용자에게 혼동을 주지 않고 정보를 알려 줍니다.
--   앱 내에서 사용자에게 전환을 나타내는 시각적 동작을 제공합니다.
+-   [애니메이션에 대 한 지침](https://docs.microsoft.com/windows/uwp/style/motion) 에 맞는 동작
+-   사용자에 게 알려 주지만 방해 하지 않는 UI 상태 간의 빠른 유체 전환
+-   앱 내에서 사용자로의 전환을 나타내는 시각적 동작
 
-예를 들어 사용자가 목록에 항목을 추가할 경우 새 항목을 목록에 바로 표시하는 대신 새 항목 위치에 애니메이션 효과를 주고, 목록의 다른 항목은 짧은 기간 동안 새 위치에 애니메이션 효과를 주어 추가된 항목을 위한 공간을 확보합니다. 이때 전환 동작은 컨트롤 조작이 사용자에게 보다 명확하게 나타나도록 합니다.
+예를 들어 사용자가 목록에 항목을 추가 하는 경우 새 항목이 목록에 즉시 표시 되는 대신 새 항목이 현재 위치로 표시 됩니다. 목록의 다른 항목은 짧은 시간 동안 새 위치에 애니메이션을 적용 하 여 추가 된 항목을 위한 공간을 만듭니다. 여기서 전환 동작은 사용자에 대 한 컨트롤 상호 작용을 보다 명확 하 게 합니다.
 
-Windows 10 버전 1607에서는 요소가 탐색 중 보기 간에 애니메이션 효과를 주기 위해 표시하는 애니메이션을 구현할 수 있는 새로운 [**ConnectedAnimationService**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice) API를 제공합니다. 이 API의 사용 패턴은 다른 애니메이션 라이브러리 API의 패턴과 다릅니다. **ConnectedAnimationService**의 사용은 [참조 페이지](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)에서 다룹니다.
+Windows 10, 버전 1607에서는 탐색 하는 동안 보기 사이에 애니메이션 효과를 주는 요소가 표시 되는 애니메이션을 구현 하기 위한 새로운 [**ConnectedAnimationService**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice) API를 도입 했습니다. 이 API는 다른 애니메이션 라이브러리 API의 사용 패턴과 다릅니다. **ConnectedAnimationService** 사용에 대해서는 [참조 페이지](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)에서 설명 합니다.
 
-애니메이션 라이브러리는 모든 가능 시나리오에 대해 애니메이션 효과를 제공하지는 않습니다. XAML에서 사용자 지정 애니메이션을 만들려는 경우가 있을 수 있습니다. 자세한 내용은 [스토리보드 애니메이션](storyboarded-animations.md)을 참조하세요.
+애니메이션 라이브러리는 가능한 모든 시나리오에 대 한 애니메이션을 제공 하지 않습니다. XAML에서 사용자 지정 애니메이션을 만들려는 경우가 있습니다. 자세한 내용은 [Storyboarded 애니메이션](storyboarded-animations.md)(영문)을 참조 하세요.
 
-또한 ScrollViewer의 스크롤 위치에 따라 항목에 애니메이션 효과를 주는 등의 특정 고급 시나리오의 경우 개발자가 시각적 계층 상호 운용을 사용하여 사용자 지정 애니메이션을 구현하려고 할 수 있습니다. 자세한 내용은 [시각적 계층](https://docs.microsoft.com/windows/uwp/composition/visual-layer)을 참조하세요.
+또한 ScrollViewer의 스크롤 위치에 따라 항목에 애니메이션을 적용 하는 것과 같은 특정 고급 시나리오의 경우 개발자는 비주얼 계층 상호 운용을 사용 하 여 사용자 지정 애니메이션을 구현할 수 있습니다. 자세한 내용은 [시각적 계층](https://docs.microsoft.com/windows/uwp/composition/visual-layer) 을 참조 하세요.
 
-## <a name="types-of-animations"></a>애니메이션 유형
+## <a name="types-of-animations"></a>애니메이션 형식
 
-Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리는 컨트롤 및 UI의 다른 부분에 애니메이션 동작을 적용하는 더 큰 목적으로 사용할 수 있습니다. 애니메이션 유형에는 여러 가지가 있습니다.
+Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리는 컨트롤과 UI의 다른 부분에 애니메이션 효과를 주는 데 더 큰 목표를 제공 합니다. 애니메이션에는 여러 가지 다른 형식이 있습니다.
 
--   *테마 전환*은 미리 정의된 Windows 런타임 XAML UI 유형의 컨트롤 또는 요소를 포함하여 UI에서 일부 조건이 변경될 경우 자동으로 적용됩니다. 이러한 애니메이션은 Windows 모양과 느낌을 지원하고 모든 앱이 조작 모드 변경 시 특정 UI 시나리오에 대해 수행하는 작업을 정의하므로 *테마 전환*이라고 합니다. 테마 전환은 애니메이션 라이브러리의 일부입니다.
--   *테마 애니메이션*은 미리 정의된 Windows 런타임 XAML UI 유형의 하나 이상의 속성에 대한 애니메이션입니다. 테마 애니메이션은 하나의 특정 요소를 대상으로 하고 컨트롤 내에서 특정 시각적 상태로 존재하는 반면, 테마 전환은 시각적 상태 외부에 있는 컨트롤의 속성에 할당되고 해당 상태 간 전환에 영향을 주므로 테마 애니메이션은 테마 전환과 다릅니다. 많은 Windows 런타임 XAML 컨트롤은 애니메이션이 시각적 상태에 따라 트리거되는, 컨트롤 템플릿의 일부인 스토리보드 내에 테마 애니메이션을 포함합니다. 템플릿을 수정하지 않는 한 해당 기본 제공 테마 애니메이션을 UI의 컨트롤에 사용할 수 있습니다. 그러나 템플릿을 대체하는 경우 기본 제공 컨트롤 테마 애니메이션도 제거됩니다. 해당 애니메이션을 복구하려면 컨트롤의 시각적 상태 집합 내에서 테마 애니메이션을 포함하는 스토리보드를 정의해야 합니다. 또한 시각적 상태 내에 없는 스토리보드에서 테마 애니메이션을 실행하고 [**Begin**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.begin) 메서드를 사용하여 시작할 수도 있지만 일반적이지 않습니다. 테마 애니메이션은 애니메이션 라이브러리의 일부입니다.
--   *시각적 전환*은 컨트롤이 정의된 시각적 상태 중 하나에서 다른 상태로 전환될 때 적용됩니다. 이러한 애니메이션은 직접 작성하는 사용자 지정 애니메이션으로, 일반적으로 컨트롤에 대해 작성한 사용자 지정 템플릿 및 해당 템플릿 내의 시각적 상태 정의와 연결되어 있습니다. 이 애니메이션은 상태 사이의 시간 동안에만 실행되며 이 시간은 일반적으로 최대 몇 초에 지나지 않을 정도로 짧습니다. 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션의 "VisualTransition" 섹션](https://docs.microsoft.com/previous-versions/windows/apps/jj819808(v=win.10))을 참조하세요.
--   *스토리보드 애니메이션*은 시간에 따라 Windows 런타임 종속성 속성의 값에 애니메이션 효과를 줍니다. 스토리보드는 시각적 전환의 일부로 정의하거나 런타임에 응용 프로그램에 의해 트리거될 수 있습니다. 자세한 내용은 [스토리보드 애니메이션](storyboarded-animations.md)을 참조하세요. 종속성 속성 및 이 속성이 있는 위치에 대한 자세한 내용은 [종속성 속성 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/dependency-properties-overview)를 참조하세요.
--   개발자는 새 [**ConnectedAnimationService**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice) API에서 제공하는 *연결된 애니메이션*을 통해 요소가 탐색 중 보기 간에 애니메이션 효과를 주기 위해 표시하는 효과를 쉽게 만들 수 있습니다. 이 API는 Windows 10 버전 1607부터 사용할 수 있습니다. 자세한 내용은 [**ConnectedAnimationService**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice) 항목을 참조하세요.
+-   미리 정의 된 Windows 런타임 XAML UI 형식의 컨트롤이 나 요소를 포함 하 여 UI의 특정 조건이 변경 되 면 *테마 전환이* 자동으로 적용 됩니다. 애니메이션은 Windows 모양과 느낌을 지원 하 고 한 상호 작용 모드에서 다른 상호 작용 모드로 변경 될 때 특정 UI 시나리오에 대해 모든 앱이 수행 하는 작업을 정의 하므로 *테마 전환* 이라고 합니다. 테마 전환은 애니메이션 라이브러리의 일부입니다.
+-   *테마 애니메이션* 은 미리 정의 된 WINDOWS 런타임 XAML UI 형식의 속성 하나 이상에 대 한 애니메이션입니다. 테마 애니메이션은 특정 요소 하나를 대상으로 하 고, 컨트롤 내의 특정 시각적 상태에 존재 하는 반면, 테마 전환은 시각적 상태 외부에 존재 하는 컨트롤의 속성에 할당 되 고 해당 상태 간의 전환에 영향을 주므로 테마 전환과는 다릅니다. 대부분의 Windows 런타임 XAML 컨트롤에는 시각적 상태에 의해 트리거되는 애니메이션을 포함 하는 컨트롤 템플릿의 일부인 storyboard 내 테마 애니메이션이 포함 되어 있습니다. 템플릿을 수정 하지 않는 한 UI의 컨트롤에 사용할 수 있는 기본 제공 테마 애니메이션을 사용할 수 있습니다. 그러나 템플릿을 바꾸는 경우 기본 제공 컨트롤 테마 애니메이션도 제거 됩니다. 이를 되돌리려면 컨트롤의 시각적 상태 집합 내에서 테마 애니메이션을 포함 하는 스토리 보드를 정의 해야 합니다. 시각적 상태에 있지 않은 storyboard에서 테마 애니메이션을 실행 하 여 [**Begin**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.begin) 메서드로 시작할 수도 있지만 일반적이 지 않습니다. 테마 애니메이션은 애니메이션 라이브러리의 일부입니다.
+-   *시각적 전환은* 컨트롤이 정의 된 시각적 상태 중 하나에서 다른 상태로 전환 될 때 적용 됩니다. 이러한 사용자 지정 애니메이션은 사용자가 작성 하는 사용자 지정 애니메이션 이며 일반적으로 컨트롤에 대해 작성 하는 사용자 지정 템플릿과 해당 템플릿 내의 시각적 상태 정의와 관련이 있습니다. 애니메이션은 상태 간 시간 동안만 실행 되며 일반적으로 짧은 시간 (가장 짧은 시간)입니다. 자세한 내용은 [Storyboarded 애니메이션 (시각적 상태)의 "Visualtransition" 섹션](https://docs.microsoft.com/previous-versions/windows/apps/jj819808(v=win.10))을 참조 하세요.
+-   *Storyboarded 애니메이션* 은 시간이 지남에 따라 Windows 런타임 종속성 속성의 값에 애니메이션 효과를 적용 합니다. 스토리 보드를 시각적 전환의 일부로 정의 하거나 응용 프로그램에서 런타임에 트리거할 수 있습니다. 자세한 내용은 [Storyboarded 애니메이션](storyboarded-animations.md)(영문)을 참조 하세요. 종속성 속성 및 존재 하는 위치에 대 한 자세한 내용은 [종속성 속성 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/dependency-properties-overview)를 참조 하세요.
+-   새 [**ConnectedAnimationService**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice) API에서 제공 하는 *연결 된 애니메이션* 을 통해 개발자는 탐색 하는 동안 요소가 보기 사이에 애니메이션 효과를 주는 효과를 쉽게 만들 수 있습니다. 이 API는 Windows 10 버전 1607부터 사용할 수 있습니다. 자세한 내용은 [**ConnectedAnimationService**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice) 를 참조 하세요.
 
-## <a name="animations-available-in-the-library"></a>라이브러리에서 사용 가능한 애니메이션
+## <a name="animations-available-in-the-library"></a>라이브러리에서 사용할 수 있는 애니메이션
 
-애니메이션 라이브러리에는 다음 애니메이션이 제공됩니다. 애니메이션의 주 사용 시나리오, 정의 방법에 대해 자세히 알아보고 애니메이션 예제를 보려면 애니메이션의 이름을 클릭하세요.
+애니메이션 라이브러리에서 제공 되는 애니메이션은 다음과 같습니다. 애니메이션의 이름을 클릭 하 여 기본 사용 시나리오, 정의 하는 방법 및 애니메이션 예제를 확인 합니다.
 
--   [전환 페이지](#page-transition): 이 페이지에는 전환 애니메이션을 적용 한 [ **프레임**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)합니다.
--   [콘텐츠 및 진입 전환](#content-transition-and-entrance-transition): 뷰 안팎으로 한 부분 또는 콘텐츠 집합에 애니메이션이 적용 됩니다.
--   [In/out, 페이드 및 crossfade](#fade-in-out-and-crossfade): 일시적인 요소나 컨트롤을 표시 하거나 콘텐츠 영역을 새로 고칩니다.
--   [위쪽/아래쪽 포인터](#pointer-up-down): 타일을 탭 하거나 클릭의 시각적 피드백을 제공합니다.
--   [위치 변경](#reposition): 요소에서 새 위치로 이동합니다.
--   [표시/숨기기 팝업](#show-hide-popup): 뷰를 기반으로 상황에 맞는 UI를 표시합니다.
--   [표시/숨기기 edge UI](#show-hide-edge-ui): Edge 기반 UI를 뷰 안팎으로 패널 등 대규모 UI를 포함 하 여 슬라이드 합니다.
--   [변경 내용 목록 항목](#list-item-changes): 추가 하거나 목록 또는 항목 다시 정렬에서 항목을 삭제 합니다.
--   [끌기/놓기](#drag-drop): 끌어서 놓기 작업을 하는 동안 시각적 피드백을 제공합니다.
+-   [페이지 전환](#page-transition): [**프레임**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)의 페이지 전환에 애니메이션 효과를 적용 합니다.
+-   [콘텐츠 및 표시 전환](#content-transition-and-entrance-transition): 하나의 조각 또는 콘텐츠 집합을 보기에 애니메이션 효과를 적용 합니다.
+-   [페이드 인/출력 및 페이드](#fade-in-out-and-crossfade)인: 일시적 요소나 컨트롤을 표시 하거나 콘텐츠 영역을 새로 고칩니다.
+-   [Pointer up/down](#pointer-up-down): 타일을 탭 하거나 클릭 하 여 시각적 피드백을 제공 합니다.
+-   [위치 변경](#reposition): 요소를 새 위치로 이동 합니다.
+-   [표시/숨기기 popup](#show-hide-popup): 뷰 위에 상황별 UI를 표시 합니다.
+-   [EDGE Ui 표시/숨기기](#show-hide-edge-ui): 패널과 같은 크게 ui를 포함 하는 슬라이드 가장자리 기반 ui를 표시 하거나 숨깁니다.
+-   [목록 항목 변경](#list-item-changes): 목록에서 항목을 추가 또는 삭제 하거나 항목의 순서를 다시 정렬 합니다.
+-   [끌어서 놓기](#drag-drop): 끌어서 놓기 작업을 수행 하는 동안 시각적 피드백을 제공 합니다.
 
 ### <a name="page-transition"></a>페이지 전환
 
-페이지 전환을 사용하여 앱 내 탐색에 애니메이션 효과를 줄 수 있습니다. 거의 모든 앱에서 탐색을 사용하므로 페이지 전환 애니메이션은 앱에서 사용되는 테마 애니메이션의 가장 일반적인 유형입니다. 페이지 전환 API에 대한 자세한 내용은 [**NavigationThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition)을 참조하세요.
+페이지 전환을 사용 하 여 앱 내에서 탐색에 애니메이션 효과를 주는 경우 거의 모든 앱에서 일종의 탐색을 사용 하므로 페이지 전환 애니메이션은 앱에서 사용 하는 가장 일반적인 유형의 테마 애니메이션입니다. 페이지 전환 Api에 대 한 자세한 내용은 [**NavigationThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) 를 참조 하세요.
 
 
 
-### <a name="content-transition-and-entrance-transition"></a>콘텐츠 전환 및 시작 전환
+### <a name="content-transition-and-entrance-transition"></a>콘텐츠 전환 및 입구 전환
 
-콘텐츠 전환 애니메이션([**ContentThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ContentThemeTransition))은 하나의 콘텐츠 또는 콘텐츠 집합을 현재 보기의 안이나 밖으로 이동하는 데 사용합니다. 예를 들어 콘텐츠 전환 애니메이션은 처음 페이지가 로드되었을 때나 페이지에서 한 섹션의 콘텐츠가 변경될 때 표시할 준비가 되지 않은 콘텐츠를 표시합니다.
+내용 전환 애니메이션 ([**ContentThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ContentThemeTransition))을 사용 하 여 조각 또는 콘텐츠 집합을 현재 뷰에서 이동 하거나 외부로 이동 합니다. 예를 들어 콘텐츠 전환 애니메이션은 페이지가 처음 로드 될 때 또는 페이지의 섹션에서 콘텐츠가 변경 될 때 표시할 준비가 되지 않은 콘텐츠를 표시 합니다.
 
-[**EntranceThemeTransition** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) 페이지 또는 UI 중 많은 부분이 먼저 로드 되 면 콘텐츠를 적용할 수 있는 동작을 나타냅니다. 따라서 처음 표시되는 콘텐츠는 콘텐츠가 변경된 경우와 다른 피드백을 제공할 수 있습니다. [**EntranceThemeTransition** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) 해당 하는 [ **NavigationThemeTransition** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) 기본 매개 변수를 사용 하 여 외부에서 사용할 수 있지만 [ **프레임**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)합니다.
+[**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) 는 페이지 또는 많은 UI 섹션이 처음 로드 될 때 콘텐츠에 적용할 수 있는 동작을 나타냅니다. 따라서 콘텐츠의 첫 번째 형태는 내용에 대 한 변경 내용에 비해 다른 피드백을 제공할 수 있습니다. [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) 는 기본 매개 변수를 사용 하는 [**NavigationThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) 와 동일 하지만 [**프레임**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)외부에서 사용 될 수 있습니다.
  
  
 <span id="fade-in-out-and-crossfade"/>
 
-### <a name="fade-inout-and-crossfade"></a>페이드 인/페이드 아웃 및 크로스페이드
+### <a name="fade-inout-and-crossfade"></a>페이드 인/아웃/페이드 아웃
 
-페이드 인/페이드 아웃 애니메이션은 임시 UI 또는 컨트롤을 표시하거나 숨기는 데 사용합니다. XAML에서 이러한 애니메이션은 [**FadeInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation) 및 [**FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)으로 표현됩니다. 하나의 예는 사용자 조작으로 새 컨트롤이 표시될 수 있는 앱 바에 있습니다. 또 다른 예는 일정 시간 동안 사용자 입력이 감지되지 않을 경우 흐려지는 이동 표시기 또는 임시 스크롤 막대입니다. 또한 콘텐츠가 동적으로 로드되어 앱이 자리 표시자 항목에서 최종 항목으로 전환할 때도 페이드 인 애니메이션을 사용해야 합니다.
+애니메이션 페이드 인 및 페이드 아웃을 사용 하 여 임시 UI 나 컨트롤을 표시 하거나 숨깁니다. XAML에서이는 [**FadeInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation) 및 [**FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)로 표시 됩니다. 한 가지 예는 사용자 상호 작용으로 인해 새 컨트롤이 표시 될 수 있는 앱 바에 있습니다. 또 다른 예는 일정 시간 동안 사용자 입력이 검색 되지 않은 후 페이드 아웃 되는 임시 스크롤 막대 또는 패닝 표시기입니다. 콘텐츠를 동적으로 로드할 때 응용 프로그램은 자리 표시자 항목에서 최종 항목으로 전환할 때 애니메이션에서 페이드를 사용 해야 합니다.
 
-크로스페이드 애니메이션은 항목의 상태가 변경될 때, 예를 들면 앱이 현재 보기의 콘텐츠를 새로 고칠 때 전환을 부드럽게 하기 위해 사용합니다. XAML 애니메이션 라이브러리는 전용 크로스페이드 애니메이션([**crossFade**](https://docs.microsoft.com/previous-versions/windows/apps/br212661(v=win.10))과 동일한 애니메이션 없음)을 제공하지 않지만 타이밍이 겹친 [**FadeInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation) 및 [**FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)을 사용하여 동일한 결과를 얻을 수 있습니다.
+항목의 상태가 변경 될 때 전환을 매끄럽게 하려면 페이드 애니메이션을 사용 합니다. 예를 들어 앱이 뷰의 현재 콘텐츠를 새로 고치는 경우입니다. XAML 애니메이션 라이브러리는 전용 페이드 애니메이션 ( [**교차**](https://docs.microsoft.com/previous-versions/windows/apps/br212661(v=win.10))일치에 해당 하지 않음)을 제공 하지 않지만 [**FadeInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation) 및 [**FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation) 를 사용 하 여 동일한 결과를 얻을 수 있으며 겹치는 타이밍을 제공 합니다.
 
 <span id="pointer-up-down"/>
 
-### <a name="pointer-updown"></a>포인터 위로/아래로
+### <a name="pointer-updown"></a>위쪽/아래쪽 포인터
 
-[  **PointerUpThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation) 및 [**PointerDownThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation) 애니메이션은 성공한 타일 탭 또는 클릭에 대한 사용자 피드백을 제공하는 데 사용합니다. 예를 들어 사용자가 타일의 아래쪽을 클릭하거나 탭하면 포인터 아래로 애니메이션이 재생됩니다. 클릭 또는 탭이 해제되면 포인터 위로 애니메이션이 재생됩니다.
+[**PointerUpThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation) 및 [**PointerDownThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation) 애니메이션을 사용 하 여 사용자에 게 성공적으로 탭 하거나 타일을 클릭 하는 데 대 한 피드백을 제공 합니다. 예를 들어 사용자가 타일에서 마우스를 클릭 하거나 탭 하면 포인터 다운 애니메이션이 재생 됩니다. 클릭 또는 탭이 해제 되 면 포인터 위쪽 애니메이션이 재생 됩니다.
 
-### <a name="reposition"></a>위치 변경
+### <a name="reposition"></a>변경할
 
-위치 변경 애니메이션([**RepositionThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation) 또는 [**RepositionThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeTransition))은 요소를 새 위치로 이동하는 데 사용합니다. 예를 들어 항목 컨트롤에서 헤더를 이동할 때 위치 변경 애니메이션이 사용됩니다.
+위치 변경 애니메이션 ([**RepositionThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation) 또는 [**RepositionThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeTransition))을 사용 하 여 요소를 새 위치로 이동 합니다. 예를 들어 항목 컨트롤에서 헤더를 이동 하면 위치 변경 애니메이션이 사용 됩니다.
 
 <span id="show-hide-popup"/>
 
 ### <a name="showhide-popup"></a>팝업 표시/숨기기
 
-[  **PopInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopInThemeAnimation) 및 [**PopOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation)은 현재 보기의 맨 위에 [**Popup**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Popup)이나 유사한 컨텍스트 UI를 표시하거나 숨기는 데 사용합니다. [**PopupThemeTransition** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopupThemeTransition) light 하려는 경우 유용한 사용자 의견을 사용 하는 테마 전환 팝업을 해제 됩니다.
+[**PopInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopInThemeAnimation) 및 [**PopOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation) 를 사용 하 여 현재 보기 위에 [**POPUP**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Popup) 또는 이와 유사한 컨텍스트 UI를 표시 하거나 숨길 수 있습니다. [**PopupThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopupThemeTransition) 팝업을 해제 하려는 경우 유용한 피드백 인 테마 전환입니다.
 
 <span id="show-hide-edge-ui"/>
 
 ### <a name="showhide-edge-ui"></a>가장자리 UI 표시/숨기기
 
-[  **EdgeUIThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition) 애니메이션은 가장자리 기반의 작은 UI를 보기의 안이나 밖으로 미는 데 사용합니다. 예를 들어 화면의 맨 위 또는 맨 아래에 사용자 지정 앱 바를 표시하거나 화면의 맨 위에 오류 및 경고에 대한 UI 화면을 표시할 때 이러한 애니메이션을 사용합니다.
+[**EdgeUIThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition) 애니메이션을 사용 하 여 작은 가장자리 기반 UI를 뷰로 이동 합니다. 예를 들어 화면 위쪽 또는 아래쪽에 사용자 지정 응용 프로그램 표시줄을 표시 하거나 화면 위쪽에 오류 및 경고에 대 한 UI 화면을 표시 하는 경우 이러한 애니메이션을 사용 합니다.
 
-[  **PaneThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PaneThemeTransition) 애니메이션은 창이나 패널을 표시하거나 숨기는 데 사용합니다. 이 애니메이션은 사용자 지정 키보드나 작업 창과 같이 가장자리 기반의 큰 UI에 적합합니다.
+[**PaneThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PaneThemeTransition) 애니메이션을 사용 하 여 창 또는 패널을 표시 하거나 숨깁니다. 이는 사용자 지정 키보드 또는 작업창과 같은 커다란 가장자리 기반 UI에 사용 됩니다.
 
-### <a name="list-item-changes"></a>목록 항목 변경
+### <a name="list-item-changes"></a>항목 변경 내용 목록
 
-[  **AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.AddDeleteThemeTransition) 애니메이션은 기존 목록에서 항목을 추가하거나 삭제할 때 애니메이션 동작을 추가하는 데 사용합니다. 추가의 경우 전환은 먼저 목록에서 기존 항목의 위치를 변경하여 새 항목을 위한 공간을 확보한 다음 새 항목을 추가합니다. 삭제의 경우 전환은 목록에서 항목을 제거하고, 필요한 경우 삭제한 항목이 제거된 다음 나머지 목록 항목의 위치를 변경합니다.
+기존 목록에서 항목을 추가 하거나 삭제할 때 애니메이션 동작을 추가 하려면 [**AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.AddDeleteThemeTransition) 애니메이션을 사용 합니다. 추가의 경우, 먼저 목록에서 기존 항목의 위치를 변경 하 여 새 항목의 공간을 확보 한 다음 새 항목을 추가 합니다. 삭제의 경우 전환은 목록에서 항목을 제거 하 고 필요한 경우 삭제 된 항목이 제거 된 후 나머지 목록 항목의 위치를 재배치 합니다.
 
-목록에서 항목의 위치가 변경되는 경우 별도의 [**ReorderThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ReorderThemeTransition)을 적용할 수도 있습니다. 이 전환은 관련된 삭제/추가 애니메이션을 사용하여 항목을 삭제하고 새 위치에 추가하는 경우와 다르게 애니메이션됩니다.
+항목이 목록에서 위치를 변경 하는 경우에는 별도의 [**ReorderThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ReorderThemeTransition) 적용 됩니다. 항목을 삭제 하 고 연결 된 delete/add 애니메이션을 사용 하 여 새 장소에 추가 하는 것과 다르게 애니메이션 효과가 적용 됩니다.
 
-이러한 애니메이션은 기본 [**ListView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) 및 [**GridView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview) 템플릿에 포함되므로 이러한 컨트롤을 이미 사용하고 있지 않은 경우 이러한 애니메이션을 수동으로 추가할 필요가 없습니다.
+이러한 애니메이션은 이러한 컨트롤을 이미 사용 하 고 있는 경우 해당 애니메이션을 수동으로 추가할 필요가 없도록 기본 [**ListView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) 및 [**GridView**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview) 템플릿에 포함 되어 있습니다.
 
 <span id="drag-drop"/>
 
-### <a name="dragdrop"></a>끌기/놓기
+### <a name="dragdrop"></a>끌어서 놓기
 
-끌기 애니메이션([**DragItemThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation), [**DragOverThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation))과 놓기 애니메이션([**DropTargetItemThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation))은 사용자가 항목을 끌거나 놓을 때 시각적 피드백을 제공하는 데 사용합니다.
+끌기 애니메이션 ([**DragItemThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation), [**DragOverThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation)) 및 drop 애니메이션 ([**DropTargetItemThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation))을 사용 하 여 사용자가 항목을 끌거나 놓을 때 시각적 피드백을 제공 합니다.
 
-활성화된 애니메이션은 사용자에게 놓은 항목 주위로 목록을 다시 정렬할 수 있음을 보여줍니다. 이는 항목을 현재 위치에 놓을 경우 목록의 어느 곳에 배치될지 사용자가 아는 데 도움이 됩니다. 이 애니메이션은 끌고 있는 항목을 목록의 다른 두 항목 사이에 놓을 수 있고 해당 두 항목이 사라지게 됨을 시각적 피드백으로 제공합니다.
+활성 상태인 경우 애니메이션은 삭제 된 항목을 기준으로 목록을 다시 정렬할 수 있음을 사용자에 게 보여 줍니다. 항목이 현재 위치에서 삭제 되는 경우 목록에 항목이 배치 될 위치를 사용자에 게 알려 주는 것이 유용 합니다. 애니메이션은 끌고 있는 항목을 목록에 있는 다른 두 항목 사이에 놓을 수 있음을 시각적으로 표시 하 고 해당 항목은 그 밖으로 이동 합니다.
 
 ## <a name="using-animations-with-custom-controls"></a>사용자 지정 컨트롤에 애니메이션 사용
 
-다음 표에는 이러한 Windows 런타임 컨트롤의 사용자 지정 버전을 만들 때 사용해야 하는 애니메이션에 대한 권장 사항이 요약되어 있습니다.
+다음 표에는 이러한 Windows 런타임 컨트롤의 사용자 지정 버전을 만들 때 사용 해야 하는 애니메이션에 대 한 권장 사항이 요약 되어 있습니다.
 
 | UI 유형 | 권장 애니메이션 |
 |---------|-----------------------|
-| 대화 상자 | [**FadeInThemeAnimation** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation) 하 고 [ **FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation) |
-| 플라이아웃 | [**PopInThemeAnimation** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation) 하 고 [ **PopOutThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
-| Tooltip | [**FadeInThemeAnimation** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation) 하 고 [ **FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation) |
-| 상황에 맞는 메뉴 | [**PopInThemeAnimation** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation) 하 고 [ **PopOutThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
+| 대화 상자 | [**FadeInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation) 및 [ **FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation) |
+| 플라이아웃 | [**PopInThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation) 및 [ **PopOutThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
+| Tooltip | [**FadeInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation) 및 [ **FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation) |
+| 상황에 맞는 메뉴 | [**PopInThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation) 및 [ **PopOutThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
 | 명령 모음 | [**EdgeUIThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.edgeuithemetransition.edgeuithemetransition) |
-| 작업 창 또는 가장자리 기반 패널 | [**PaneThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.panethemetransition.panethemetransition) |
-| 모든 UI 컨테이너의 콘텐츠 | [**ContentThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.contentthemetransition.contentthemetransition) |
-| 컨트롤 대상 또는 다른 어떤 애니메이션도 적용되지 않는 경우 | [**FadeInThemeAnimation** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.fadeinthemeanimation.fadeinthemeanimation) 하 고 [ **FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation) |
+| 작업창 또는 가장자리 기반 패널 | [**PaneThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.panethemetransition.panethemetransition) |
+| 모든 UI 컨테이너의 내용 | [**ContentThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.contentthemetransition.contentthemetransition) |
+| 컨트롤의 경우 또는 다른 애니메이션이 적용 되지 않는 경우 | [**FadeInThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.fadeinthemeanimation.fadeinthemeanimation) 및 [ **FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation) |
 
  
 
-## <a name="transition-animation-examples"></a>전환 애니메이션 예
+## <a name="transition-animation-examples"></a>전환 애니메이션 예제
 
-앱에서 애니메이션을 사용하여 사용자 인터페이스를 향상시키거나 사용자에게 불편을 주지 않으면서 더 멋진 모습으로 만들 수 있습니다. 그 방법 중 하나는 UI에 애니메이션 전환을 적용하는 것입니다. 그러면 뭔가가 화면에 들어오거나 나갈 때 또는 다른 변화가 있을 때 애니메이션을 이용하여 그 변화에 사용자의 관심을 끌 수 있습니다. 예를 들어 단추가 단순히 표시되거나 사라지기보다는 빠른 속도로 페이드 인하거나 페이드 아웃할 수 있습니다. 일관된 권장 또는 일반 애니메이션 전환을 만드는 데 사용할 수 있도록 다양한 API가 마련되었습니다. 다음 예제는 단추에 애니메이션을 적용하여 빠른 속도로 미끄러지듯 나타나게 하는 방법을 보여 줍니다.
+응용 프로그램에서 애니메이션을 사용 하 여 사용자 인터페이스를 개선 하거나 사용자에 게 성가신 작업 없이 더 매력적으로 만드는 것이 가장 좋습니다. 이 작업을 수행 하는 한 가지 방법은 UI에 애니메이션이 적용 된 전환을 적용 하는 것입니다 .이 경우에는 어떤 항목이 화면에 들어가거나 변경 되거나 변경 될 때 애니메이션이 사용자의 변경에 주의를 기울여야 합니다. 예를 들어 단추를 표시 하거나 사라지게 하는 대신 뷰에서 신속 하 게 페이드 인 및 페이드 아웃할 수 있습니다. 일관 된 권장 또는 일반적인 애니메이션 전환을 만드는 데 사용할 수 있는 많은 Api를 만들었습니다. 예제에서는 단추에 애니메이션을 적용 하 여 슬라이드를 빠르게 보기에 적용 하는 방법을 보여 줍니다.
 
 ```xml
 <Button Content="Transitioning Button">
@@ -150,9 +150,9 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
  </Button>
  ```
 
-이 코드에서 단추의 전환 컬렉션에 [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) 개체를 추가합니다. 이제 단추가 처음으로 렌더링될 때 단순히 나타나기보다는 빠른 속도로 미끄러지듯 화면에 들어옵니다. 애니메이션 개체의 몇 가지 속성을 설정하여 미끄러지는 거리와 방향을 조정할 수 있습니다. 그러나 사실 이는 특정 시나리오를 위한, 즉 눈길을 끄는 입장을 연출하는 단순한 API입니다.
+이 코드에서는 단추의 전환 컬렉션에 [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) 개체를 추가 합니다. 이제 단추가 처음 렌더링 되 면 바로 표시 되는 것이 아니라 뷰로 빠르게 슬라이드를 표시 합니다. 애니메이션 개체에 대 한 몇 가지 속성을 설정 하 여 얼마나 멀리의 슬라이드와 그 방향을 조정할 수 있지만 실제로는 특정 시나리오에 대 한 간단한 API 인 것입니다. 즉, 눈에 띄는 입구를 만들 수 있습니다.
 
-또한 앱의 스타일 리소스에서 전환 애니메이션 테마를 정의하여 동일하게 효과를 적용할 수 있습니다. 이 예제는 [**Style**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style)을 사용하여 적용한다는 점을 제외하고 이전의 예제와 동일합니다.
+응용 프로그램의 스타일 리소스에서 전환 애니메이션 테마를 정의 하 여 효과를 균일 하 게 적용할 수 있습니다. 이 예제는 이전 예제와 동일 하며 [**스타일**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style)을 사용 하 여 적용 됩니다.
 
 ```xml
 <UserControl.Resources>
@@ -172,7 +172,7 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 </StackPanel>
 ```
 
-이전의 예제는 개별 컨트롤에 테마 전환을 적용합니다. 그러나 테마 전환은 개체의 컨테이너에 적용할 경우 훨씬 더 흥미로워집니다. 이 작업을 하면 컨테이너의 모든 하위 개체가 전환에 참여합니다. 다음 예제에서는 직사각형의 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)에 [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition)을 적용합니다.
+이전 예제에서는 개별 컨트롤에 테마 전환을 적용 하지만, 테마 전환은 개체의 컨테이너에 적용 하는 경우 훨씬 더 흥미롭습니다. 이 작업을 수행 하면 컨테이너의 모든 자식 개체가 전환 작업에 포함 됩니다. 다음 예제에서는 [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) 사각형의 [**모눈**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) 에 적용 됩니다.
 
 ```xml
 <!-- If you set an EntranceThemeTransition animation on a panel, the
@@ -208,13 +208,13 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 </ItemsControl>
 ```
 
-[  **Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)의 자식 직사각형이 차례로 화면으로 전환되는데, 직사각형 각각에 이 애니메이션을 적용하여 한꺼번에 전환되는 것보다 큰 시각적인 즐거움을 선사합니다.
+이 애니메이션을 사각형에 개별적으로 적용 한 경우와 같이 [**눈금선**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) 의 자식 사각형은 한 번에 모두 표시 되는 것이 아니라 시각적으로 보기 편 된 방식으로 전환 됩니다.
 
 이 애니메이션의 데모는 다음과 같습니다.
 
-![보기로 전환하는 자식 직사각형을 보여 주는 애니메이션](./images/animation-child-rectangles.gif)
+![자식 사각형을 뷰로 전환 하는 애니메이션](./images/animation-child-rectangles.gif)
 
-컨테이너의 하위 개체 중 하나 이상의 위치가 바뀔 경우에도 이 하위 개체들은 재배치될 수 있습니다. 다음 예제에서는 직사각형의 그리드에 [**RepositionThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeTransition)을 적용합니다. 직사각형 중 하나를 제거하면 나머지 직사각형들은 새로운 위치로 재배치됩니다.
+해당 자식 중 하나 이상이 위치를 변경 하는 경우에도 컨테이너의 자식 개체가 다시 흐를 수 있습니다. 다음 예제에서는 사각형의 모눈에 [**RepositionThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeTransition) 를 적용 합니다. 사각형 중 하나를 제거 하면 다른 모든 사각형은 새 위치로 다시 흐릅니다.
 
 ```xml
 <Button Content="Remove Rectangle" Click="RemoveButton_Click"/>
@@ -276,7 +276,7 @@ void BlankPage::RemoveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::
 }
 ```
 
-하나의 개체 또는 개체 컨테이너에 여러 전환 애니메이션을 적용할 수 있습니다. 예를 들어 직사각형의 목록이 애니메이션 형태로 화면에 나타나게 하고 이들의 위치가 변경될 때도 애니메이션하려는 경우 다음과 같이 [**RepositionThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeTransition) 및 [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition)을 적용할 수 있습니다.
+단일 개체 또는 개체 컨테이너에 여러 개의 전환 애니메이션을 적용할 수 있습니다. 예를 들어 사각형 목록을 보기에 애니메이션 효과를 적용 하 고 위치를 변경 하는 경우에도 애니메이션 효과를 주려면 다음과 같이 [**RepositionThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeTransition) 와 [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) 를 적용 하면 됩니다.
 
 ```xml
 ...
@@ -289,25 +289,25 @@ void BlankPage::RemoveButton_Click(Platform::Object^ sender, Windows::UI::Xaml::
 ...      
 ```
 
-UI 요소를 추가하거나, 제거하거나, UI 요소의 순서를 다시 매기는 등의 작업을 수행할 때 UI 요소에 대한 애니메이션을 만들기 위한 몇 가지 전환 효과가 있습니다. 이러한 API의 이름에는 모두 "ThemeTransition"이 포함되어 있습니다.
+UI 요소를 추가, 제거, 다시 정렬 하는 등의 방법으로 애니메이션을 만드는 여러 가지 전환 효과가 있습니다. 이러한 Api의 이름에는 모두 "ThemeTransition"가 포함 됩니다.
 
 | API | 설명 |
 |-----|-------------|
-| [**NavigationThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) | [  **프레임**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)에서 페이지 탐색에 Windows 퍼스낼리티 애니메이션을 제공합니다. |
-| [**AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.AddDeleteThemeTransition) | 컨트롤에서 하위 개체나 콘텐츠를 추가하거나 삭제할 때 애니메이션 전환 동작을 제공합니다. 일반적으로 컨트롤은 항목 컨테이너입니다. |
-| [**ContentThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ContentThemeTransition) | 컨트롤의 콘텐츠가 바뀔 때 애니메이션 전환 동작을 제공합니다. [  **AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.AddDeleteThemeTransition)에 추가하여 이 API를 적용할 수 있습니다. |
-| [**EdgeUIThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition) | 작은 가장자리 UI 전환에 애니메이션 전환 동작을 제공합니다. |
-| [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) | 컨트롤이 처음으로 나타날 때 애니메이션 전환 동작을 제공합니다. |
-| [**PaneThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PaneThemeTransition) | 패널(큰 가장자리 UI) UI 전환에 애니메이션 전환 동작을 제공합니다. |
-| [**PopupThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopupThemeTransition) | 컨트롤의 팝 인 구성 요소(예: 개체의 도구 설명 같은 UI)가 나타날 때 적용되는 애니메이션 전환 동작을 제공합니다. |
-| [**ReorderThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ReorderThemeTransition) | 목록 보기 컨트롤 항목의 순서가 바뀔 때 애니메이션 전환 동작을 제공합니다. 일반적으로 이는 끌어서 놓기 동작의 결과로 일어납니다. 여러 컨트롤과 테마가 애니메이션에 다양한 특성을 부여할 수 있습니다. |
-| [**RepositionThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeTransition) | 컨트롤의 위치가 바뀔 때 애니메이션 전환 동작을 제공합니다. |
+| [**NavigationThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) | [**프레임**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)의 페이지 탐색에 대 한 Windows 취향에 맞는 애니메이션을 제공 합니다. |
+| [**AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.AddDeleteThemeTransition) | 컨트롤이 자식 또는 콘텐츠를 추가 하거나 삭제 하는 경우에 애니메이션 전환 동작을 제공 합니다. 일반적으로 컨트롤은 항목 컨테이너입니다. |
+| [**ContentThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ContentThemeTransition) | 컨트롤의 내용이 변경 되는 경우에 대 한 애니메이션 전환 동작을 제공 합니다. [**AddDeleteThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.AddDeleteThemeTransition)외에도이를 적용할 수 있습니다. |
+| [**EdgeUIThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition) | (소형) 가장자리 UI 전환에 대 한 애니메이션 전환 동작을 제공 합니다. |
+| [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) | 컨트롤이 처음으로 나타날 때 애니메이션 전환 동작을 제공 합니다. |
+| [**PaneThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PaneThemeTransition) | 패널 (large edge UI) UI 전환에 대 한 애니메이션 전환 동작을 제공 합니다. |
+| [**PopupThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopupThemeTransition) | 표시 되는 컨트롤의 팝업 구성 요소 (예: 개체의 도구 설명 처럼 UI)에 적용 되는 애니메이션 전환 동작을 제공 합니다. |
+| [**ReorderThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.ReorderThemeTransition) | 목록 뷰 컨트롤 항목이 순서를 변경 하는 경우에 대 한 애니메이션 전환 동작을 제공 합니다. 일반적으로이는 끌어서 놓기 작업의 결과로 발생 합니다. 서로 다른 컨트롤과 테마는 애니메이션에 대 한 다양 한 특성을 가질 수 있습니다. |
+| [**RepositionThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeTransition) | 컨트롤의 위치가 변경 될 때 애니메이션 전환 동작을 제공 합니다. |
 
  
 
-## <a name="theme-animation-examples"></a>테마 애니메이션 예
+## <a name="theme-animation-examples"></a>테마 애니메이션 예제
 
-전환 애니메이션은 간단하게 적용할 수 있습니다. 그러나 애니메이션 효과의 타이밍 및 순서를 추가로 제어하는 것이 필요한 경우도 있습니다. 애니메이션의 동작에 대해 일관성 있는 테마를 사용하면서 테마 애니메이션을 사용하여 추가적인 제어가 가능합니다. 또한 테마 애니메이션에는 사용자 지정 애니메이션보다 태그가 덜 필요합니다. 여기서는 [**FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)을 사용하여 직사각형이 화면에서 페이드 아웃하게 합니다.
+전환 애니메이션은 간단 하 게 적용할 수 있습니다. 하지만 애니메이션 효과의 타이밍과 순서를 좀 더 자세히 제어할 수 있습니다. 테마 애니메이션을 사용 하 여 애니메이션이 동작 하는 방식에 일관 된 테마를 계속 사용 하면서 더 많은 제어를 사용할 수 있습니다. 또한 테마 애니메이션에는 사용자 지정 애니메이션 보다 더 작은 태그만 필요 합니다. 여기서는 [**FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation) 를 사용 하 여 사각형을 뷰에서 페이드 아웃 합니다.
 
 ```xml
 <StackPanel>    
@@ -347,40 +347,40 @@ void BlankPage::Rectangle_Tapped(Object^ sender, PointerRoutedEventArgs^ e)
 }
 ```
 
-전환 애니메이션과 달리, 테마 애니메이션에는 자동으로 실행되는 기본 제공 트리거(전환)가 없습니다. XAML에서 정의할 때 테마 애니메이션을 포함하려면 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)를 사용해야 합니다. 애니메이션의 기본 동작을 변경할 수도 있습니다. 예를 들어 [**FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)에서 [**Duration**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.duration) 시간 값을 늘려 페이드 아웃의 속도를 늦출 수 있습니다.
+전환 애니메이션과 달리 테마 애니메이션은 자동으로 실행 되는 기본 제공 트리거 (전환)를 포함 하지 않습니다. XAML에서 정의 하는 경우 테마 애니메이션을 포함 하려면 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard) 를 사용 해야 합니다. 애니메이션의 기본 동작을 변경할 수도 있습니다. 예를 들어 [**FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)에서 [**Duration**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.timeline.duration) 시간 값을 늘려 페이드 아웃의 속도를 늦출 수 있습니다.
 
-**참고**  기본 애니메이션 기법을 보여 주는에서는 사용 하 고 앱 코드의 메서드를 호출 하 여 애니메이션을 시작 하려면 [ **스토리 보드**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)합니다. 제어할 수 있습니다 하는 방법을 **스토리 보드** 애니메이션을 사용 하 여 실행 합니다 [ **시작**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.begin)를 [ **중지**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.stop), [ **일시 중지**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.pause), 및 [ **Resume** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.resume) **스토리 보드** 메서드. 그러나 일반적으로 앱에 라이브러리 애니메이션을 포함하는 방법은 아닙니다. 대신 컨트롤 또는 요소에 적용된 XAML 스타일 및 템플릿에 라이브러리 애니메이션을 통합합니다. 템플릿 및 시각적 상태에 대해 알아보는 과정은 약간 더 복잡합니다. 그러나 [시각적 상태에 대한 스토리보드 애니메이션](https://docs.microsoft.com/previous-versions/windows/apps/jj819808(v=win.10)) 항목의 일부로 시각적 상태에서 라이브러리 애니메이션을 사용하는 방법을 설명합니다.
+**참고**  기본 애니메이션 기술을 보여 주기 위해 응용 프로그램 코드를 사용 하 여 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)의 메서드를 호출 하 여 애니메이션을 시작 합니다. [**시작**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.begin), [**중지**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.stop), [**일시 중지**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.pause)및 [**다시 시작**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard.resume) **storyboard** 메서드를 사용 하 여 **스토리 보드** 애니메이션을 실행 하는 방법을 제어할 수 있습니다. 그러나 일반적으로 앱에 라이브러리 애니메이션을 포함 하는 방법은 아닙니다. 대신 일반적으로 라이브러리 애니메이션을 컨트롤 또는 요소에 적용 되는 XAML 스타일 및 템플릿에 통합 합니다. 템플릿과 시각적 상태를 이해 하는 것은 약간 더 복잡 합니다. 그러나 시각적 상태에 [대 한 Storyboarded 애니메이션](https://docs.microsoft.com/previous-versions/windows/apps/jj819808(v=win.10)) 항목의 일부로 시각적 상태에서 라이브러리 애니메이션을 사용 하는 방법에 대해서도 설명 합니다.
 
  
 
-UI 요소에 다른 여러 테마 애니메이션을 적용하여 애니메이션 효과를 낼 수 있습니다. 이러한 API의 이름에는 모두 "ThemeAnimation"이 포함되어 있습니다.
+UI 요소에 다른 여러 테마 애니메이션을 적용 하 여 애니메이션 효과를 만들 수 있습니다. 이러한 API의 이름에는 모두 "ThemeAnimation"가 포함 됩니다.
 
 | API | 설명 |
 |-----|-------------|
-| [**DragItemThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation) | 끌고 있는 항목 요소에 적용되는 미리 구성된 애니메이션을 나타냅니다. |
-| [**DragOverThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation) | 끌고 있는 요소 아래의 요소에 적용되는 미리 구성된 애니메이션을 나타냅니다. |
-| [**DropTargetItemThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation) | 잠재적 놓기 대상 요소에 적용하는 미리 구성된 애니메이션 |
-| [**FadeInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation) | 컨트롤이 처음으로 나타날 때 적용하는 미리 구성된 불투명 애니메이션 |
-| [**FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation) | 컨트롤이 UI에서 제거되거나 숨겨질 때 적용하는 미리 구성된 불투명 애니메이션 |
-| [**PointerDownThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation) | 항목이나 요소를 탭 또는 클릭하는 사용자 동작을 위한 미리 구성된 애니메이션 |
-| [**PointerUpThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation) | 사용자가 항목이나 요소를 탭하고 동작이 해제된 후 실행되는 사용자 동작을 위한 미리 구성된 애니메이션 |
-| [**PopInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopInThemeAnimation) | 컨트롤이 나타날 때 그 팝 인 구성 요소에 적용하는 미리 구성된 애니메이션. 이 애니메이션은 불투명과 변환을 결합합니다. |
-| [**PopOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation) | 컨트롤이 닫히거나 제거될 때 그 팝 인 구성 요소에 적용하는 미리 구성된 애니메이션. 이 애니메이션은 불투명과 변환을 결합합니다. |
-| [**RepositionThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation) | 다시 배치되는 개체를 위한 미리 구성된 애니메이션 |
-| [**SplitCloseThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation) | [  **ComboBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) 열기 및 닫기의 스타일에서 애니메이션을 사용하여 대상 UI를 숨기는 미리 구성된 애니메이션입니다. |
-| [**SplitOpenThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation) | [  **ComboBox**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) 열기 및 닫기의 스타일에서 애니메이션을 사용하여 대상 UI를 표시하는 미리 구성된 애니메이션입니다. |
-| [**DrillInThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.drillinthemeanimation) | 사용자가 논리적 계층 구조에서 앞으로 이동할 때(예: 마스터 페이지에서 세부 정보 페이지로) 실행되는 미리 구성된 애니메이션을 나타냅니다. |
-| [**DrillOutThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.drilloutthemeanimation) | 사용자가 논리적 계층 구조에서 뒤로 이동할 때(예: 세부 정보 페이지에서 마스터 페이지로) 실행되는 미리 구성된 애니메이션을 나타냅니다. |
+| [**DragItemThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DragItemThemeAnimation) | 끌고 있는 항목 요소에 적용 되는 미리 구성 된 애니메이션을 나타냅니다. |
+| [**DragOverThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DragOverThemeAnimation) | 끌고 있는 요소 아래에 있는 요소에 적용 되는 미리 구성 된 애니메이션을 나타냅니다. |
+| [**DropTargetItemThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DropTargetItemThemeAnimation) | 잠재적 놓기 대상 요소에 적용 되는 미리 구성 된 애니메이션입니다. |
+| [**FadeInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation) | 컨트롤을 처음 표시할 때 컨트롤에 적용 되는 미리 구성 된 불투명 애니메이션입니다. |
+| [**FadeOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation) | UI에서 제거 되거나 숨겨진 경우 컨트롤에 적용 되는 미리 구성 된 불투명 애니메이션입니다. |
+| [**PointerDownThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation) | 항목 또는 요소를 탭 하거나 클릭 하는 사용자 작업에 대 한 미리 구성 된 애니메이션입니다. |
+| [**PointerUpThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation) | 사용자가 항목 또는 요소를 탭 하 고 작업을 해제 한 후 실행 되는 사용자 동작에 대 한 미리 구성 된 애니메이션입니다. |
+| [**PopInThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopInThemeAnimation) | 표시 되는 컨트롤의 pop 구성 요소에 적용 되는 미리 구성 된 애니메이션입니다. 이 애니메이션은 불투명도와 변환을 결합 합니다. |
+| [**PopOutThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation) | 컨트롤이 닫히거나 제거 될 때 컨트롤의 pop 구성 요소에 적용 되는 미리 구성 된 애니메이션입니다. 이 애니메이션은 불투명도와 변환을 결합 합니다. |
+| [**RepositionThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation) | 위치가 변경 될 때 개체에 대 한 미리 구성 된 애니메이션입니다. |
+| [**SplitCloseThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.SplitCloseThemeAnimation) | [**콤보 상자**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) 를 열고 닫는 스타일의 애니메이션을 사용 하 여 대상 UI를 구성 하는 미리 구성 된 애니메이션입니다. |
+| [**SplitOpenThemeAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.SplitOpenThemeAnimation) | [**콤보 상자**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) 를 열고 닫는 스타일에서 애니메이션을 사용 하 여 대상 UI를 표시 하는 미리 구성 된 애니메이션입니다. |
+| [**DrillInThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.drillinthemeanimation) | 마스터 페이지에서 세부 정보 페이지로 이동 하는 것과 같이 사용자가 논리적 계층 구조에서 이동할 때 실행 되는 미리 구성 된 애니메이션을 나타냅니다. |
+| [**DrillOutThemeAnimation**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.drilloutthemeanimation) | 사용자가 세부 페이지에서 마스터 페이지로 이동 하는 것과 같은 논리 계층 구조에서 뒤로 이동할 때 실행 되는 미리 구성 된 애니메이션을 나타냅니다. |
 
  
 
 ## <a name="create-your-own-animations"></a>직접 애니메이션 만들기
 
-테마 애니메이션으로는 필요 사항을 해결하기에 부족할 경우 직접 애니메이션을 만들 수 있습니다. 하나 이상의 속성 값에 애니메이션 효과를 주어 개체에 애니메이션 효과를 줍니다. 예를 들어 직사각형의 너비, [**RotateTransform**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.RotateTransform)의 각도 또는 단추의 색상 값에 애니메이션 효과를 줄 수 있습니다. 이런 유형의 사용자 지정 애니메이션을 스토리보드 애니메이션이라고 하고, Windows 런타임에서 미리 구성된 애니메이션 유형으로 이미 제공하는 라이브러리 애니메이션과 구분합니다. 스토리보드 애니메이션의 경우 특정 유형의 값을 변경할 수 있는 애니메이션(예: **Double**을 애니메이션하는 [**DoubleAnimation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DoubleAnimation))을 사용하고 해당 애니메이션을 [**Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard) 내에 배치하여 제어합니다.
+테마 애니메이션이 사용자 요구에 충분 하지 않은 경우 고유한 애니메이션을 만들 수 있습니다. 하나 이상의 속성 값에 애니메이션을 적용 하 여 개체에 애니메이션 효과를 적용 합니다. 예를 들어 사각형의 너비, [**system.windows.media.rotatetransform.angle**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.RotateTransform)의 각도 또는 단추의 색 값에 애니메이션 효과를 적용할 수 있습니다. 이 유형의 사용자 지정 애니메이션은 Windows 런타임 이미 미리 구성 된 애니메이션 형식으로 제공 되는 라이브러리 애니메이션과 구별 하기 위해 storyboarded 애니메이션입니다. Storyboarded 애니메이션의 경우 특정 형식의 값을 변경할 수 있는 애니메이션 (예: **Double**에 애니메이션 효과를 주는 [**system.windows.media.animation.doubleanimation.to**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.DoubleAnimation) )을 사용 하 고 해당 애니메이션을 [**스토리 보드**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard) 내에 배치 하 여 제어 합니다.
 
-애니메이션 효과를 주려는 속성은 *종속성 속성*이어야 합니다. 종속성 속성에 대한 자세한 내용은 [종속성 속성 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/dependency-properties-overview)를 참조하세요. 사용자 지정 스토리보드 애니메이션을 대상으로 하고 조정하는 방법을 비롯한 사용자 지정 스토리보드 애니메이션 만들기에 대한 자세한 내용은 [스토리보드 애니메이션](storyboarded-animations.md)을 참조하세요.
+애니메이션을 적용 하려면 애니메이션 속성은 *종속성 속성*이어야 합니다. 종속성 속성에 대 한 자세한 내용은 [종속성 속성 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/dependency-properties-overview)를 참조 하세요. 대상 지정 및 제어 하는 방법을 비롯 하 여 사용자 지정 storyboarded 애니메이션을 만드는 방법에 대 한 자세한 내용은 [storyboarded 애니메이션](storyboarded-animations.md)을 참조 하세요.
 
-사용자 지정 스토리보드 애니메이션을 정의할 XAML에서 가장 큰 앱 UI 정의 영역은 XAML에서 컨트롤에 대한 시각적 상태를 정의하는 경우입니다. 이 작업은 새 컨트롤 클래스를 만들고 있거나 컨트롤 템플릿에 시각적 상태가 있는 기존 컨트롤의 템플릿을 다시 만들고 있기 때문에 수행합니다. 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://docs.microsoft.com/previous-versions/windows/apps/jj819808(v=win.10))을 참조하세요.
+Xaml에서 사용자 지정 storyboarded 애니메이션을 정의할 수 있는 가장 큰 영역은 xaml에서 컨트롤의 시각적 상태를 정의 하는 경우입니다. 새 컨트롤 클래스를 만들거나 컨트롤 템플릿에서 시각적 상태가 있는 기존 컨트롤의 템플릿을 다시 작성 하기 때문에이 작업을 수행할 수 있습니다. 자세한 내용은 [시각적 상태에 대한 스토리보드 애니메이션](https://docs.microsoft.com/previous-versions/windows/apps/jj819808(v=win.10))을 참조하세요.
 
  
 

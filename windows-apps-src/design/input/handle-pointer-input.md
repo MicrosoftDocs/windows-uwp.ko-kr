@@ -1,49 +1,49 @@
 ---
-Description: UWP (유니버설 Windows 플랫폼) 응용 프로그램에서 터치, 마우스, 펜/스타일러스, 터치 패드 등의 포인팅 장치에서 입력 데이터를 수신, 처리 및 관리 합니다.
+Description: Windows 앱 응용 프로그램에서 터치, 마우스, 펜/스타일러스, 터치 패드 등의 포인팅 장치에서 입력 데이터를 수신, 처리 및 관리 합니다.
 title: 포인터 입력 처리
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
-keywords: 펜, 마우스, 터치 패드, 터치, 포인터, 입력, 사용자 조작
+keywords: 펜, 마우스, 터치 패드, 터치, 포인터, 입력, 사용자 상호 작용
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 97c4941a6ec694b3bb23864ede3119d6f76113d2
-ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
+ms.openlocfilehash: db3b87bd187c64b04615fb6722e4e1f2b666b7dc
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725996"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970068"
 ---
 # <a name="handle-pointer-input"></a>포인터 입력 처리
 
-UWP(유니버설 Windows 플랫폼) 응용 프로그램에서 터치, 마우스, 펜/스타일러스, 터치 패드 등의 포인팅 장치에서 입력 데이터를 수신하고, 처리하고, 관리합니다.
+Windows 앱 응용 프로그램의 포인팅 장치 (예: 터치, 마우스, 펜/스타일러스, 터치 패드)에서 입력 데이터를 수신, 처리 및 관리 합니다.
 
 > [!Important]
-> 요구 사항이 명확하게 잘 정의되어 있으며 플랫폼 컨트롤에서 지원하는 제스처가 시나리오를 지원하지 않는 경우에만 사용자 지정 조작을 만드세요.  
-> Windows 응용 프로그램의 조작 환경을 사용자 지정하는 경우, 사용자들을 해당 사항이 일관되고, 직관적이며, 검색 가능할 것으로 기대합니다. 이러한 이유로 [플랫폼 컨트롤](../controls-and-patterns/controls-by-function.md)에서 지원하는 항목에 대해 사용자 지정 조작을 모델링하는 것이 좋습니다. 플랫폼 컨트롤은 표준 조작, 애니메이션 효과를 준 물리적 효과, 시각적 피드백 및 접근성을 비롯하여 UWP(유니버설 Windows 플랫폼) 사용자 조작 환경 전체를 제공합니다. 
+> 명확 하 고 잘 정의 된 요구 사항이 있고 플랫폼 컨트롤에서 지 원하는 상호 작용이 시나리오를 지원 하지 않는 경우에만 사용자 지정 상호 작용을 만듭니다.  
+> Windows 응용 프로그램에서 상호 작용 환경을 사용자 지정 하는 경우 사용자는 일관성 있고 직관적 이며 검색 가능 하 게 될 것으로 간주 합니다. 이러한 이유로 [플랫폼 컨트롤](../controls-and-patterns/controls-by-function.md)에서 지 원하는 사용자 지정 상호 작용을 모델링 하는 것이 좋습니다. 플랫폼 컨트롤은 표준 상호 작용, 애니메이션 된 물리학 효과, 시각적 피드백 및 내게 필요한 옵션을 비롯 한 전체 Windows 앱 사용자 상호 작용 환경을 제공 합니다. 
 
 ## <a name="important-apis"></a>중요 API
 - [Windows.Devices.Input](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)
-- [Windows.UI.Input](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
-- [Windows.UI.Xaml.Input](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
+- [Windows. UI. 입력](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
+- [Windows. .Xaml. Input](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
 
 ## <a name="pointers"></a>포인터
-대부분의 조작 환경에는 일반적으로 터치, 마우스, 펜/스타일러스, 터치 패드 등의 입력 장치로 가리켜서 조작하려는 개체를 식별하는 사용자를 포함합니다. 이러한 입력 장치에서 제공하는 원시 HID(휴먼 인터페이스 장치) 데이터에는 많은 일반적인 속성이 포함되어 있으므로 데이터가 통합 입력 스택으로 올라가며 장치 독립적인 통합 포인터 데이터로 표시됩니다. 그런 다음 UWP 응용 프로그램은 사용 중인 입력 장치와 상관없이 이 데이터를 사용할 수 있습니다.
+대부분의 상호 작용 환경은 일반적으로 터치, 마우스, 펜/스타일러스, 터치 패드와 같은 입력 장치를 통해 상호 작용 하려는 개체를 식별 하는 사용자를 포함 합니다. 이러한 입력 장치에서 제공 하는 HID (raw 휴먼 인터페이스 장치) 데이터에 많은 공용 속성이 포함 되어 있기 때문에 데이터는 승격 되 고 통합 된 입력 스택으로 통합 되며 장치에 관계 없는 포인터 데이터로 노출 됩니다. 그러면 Windows 응용 프로그램에서 사용 되는 입력 장치에 대 한 걱정 없이이 데이터를 사용할 수 있습니다.
 
 > [!NOTE]
-> 앱에 장치 관련 정보가 필요한 경우 해당 정보가 원시 HID 데이터에서도 올라갑니다.
+> 또한 장치 관련 정보는 앱이 필요로 하는 원시 HID 데이터에서 승격 됩니다.
 
-입력 스택의 각 입력 지점(또는 연락처)은 다양한 포인터 이벤트 처리기에서 제공하는 [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.Pointer) 매개 변수를 통해 표시되는 [**Pointer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) 개체로 표시됩니다. 멀티 펜 또는 멀티 터치 입력의 경우 각 접점이 하나의 고유한 입력 포인터로 간주됩니다.
+입력 스택의 각 입력 지점 (또는 연락처)은 다양 한 포인터 이벤트 처리기에서 [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) 매개 변수를 통해 노출 되는 [**포인터**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.Pointer) 개체로 표시 됩니다. 다중 펜 또는 다중 터치 입력의 경우 각 연락처는 고유한 입력 포인터로 처리 됩니다.
 
 ## <a name="pointer-events"></a>포인터 이벤트
 
-포인터 이벤트는 입력 장치 유형 및 범위 또는 접촉의 감지 상태 등의 기본 정보와 위치, 압력, 접촉 기하 등의 확장 정보를 표시합니다. 또한 사용자가 누른 마우스 단추, 펜 지우개 팁을 사용 중인지 여부 등의 특정 디바이스 속성도 사용할 수 있습니다. 앱에서 입력 장치와 해당 접근 권한 값을 구분해야 할 경우에는 [입력 장치 식별](identify-input-devices.md)을 참조하세요.
+포인터 이벤트는 입력 장치 유형 및 검색 상태 (범위 내 또는 연락처)와 같은 기본 정보를 표시 하 고, 위치, 압력 및 접촉 geometry와 같은 확장 정보를 제공 합니다. 또한 사용자가 누른 마우스 단추 또는 펜 지우개 팁이 사용 되 고 있는지 여부와 같은 특정 장치 속성도 사용할 수 있습니다. 앱이 입력 장치와 해당 기능을 구분 해야 하는 경우 [입력 장치 식별](identify-input-devices.md)을 참조 하세요.
 
-UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습니다.
+Windows 앱은 다음과 같은 포인터 이벤트를 수신할 수 있습니다.
 
 > [!NOTE]
-> 포인터 이벤트 처리기 내의 해당 요소에 대해 [**CapturePointer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.capturepointer)를 호출하여 특정 UI 요소로 포인터 입력을 제한할 수 있습니다. 포인터가 요소로 캡처될 경우 포인터가 개체의 경계 영역 외부로 이동하더라도 해당 개체만 포인터 입력 이벤트를 받습니다. [  **IsInContact**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isincontact)(마우스 단추 누름, 터치 또는 스타일러스 접촉 중)이 true여야 **CapturePointer**가 성공적으로 수행됩니다.
+> 포인터 이벤트 처리기 내에서 해당 요소에 대해 [**CapturePointer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.capturepointer) 를 호출 하 여 포인터 입력을 특정 UI 요소로 제한 합니다. 요소가 요소에 의해 캡처될 때 포인터가 개체의 경계 영역 밖으로 이동 하더라도 해당 개체만 포인터 입력 이벤트를 수신 합니다. **CapturePointer** 성공 하려면 [**IsInContact**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isincontact) (마우스 단추 누름, 터치 또는 연락처의 스타일러스)이 true 여야 합니다.
 
 <table>
 <colgroup>
@@ -53,24 +53,24 @@ UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습�
 <thead>
 <tr class="header">
 <th align="left">이벤트</th>
-<th align="left">설명</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled"><strong>PointerCanceled</strong></a></p></td>
-<td align="left"><p>플랫폼에서 포인터를 취소할 경우 발생합니다. 이 작업은 다음과 같은 환경에서 발생할 수 있습니다.</p>
+<td align="left"><p>플랫폼에 의해 포인터가 취소 될 때 발생 합니다. 이 문제는 다음과 같은 경우에 발생할 수 있습니다.</p>
 <ul>
-<li>펜이 입력 표면 범위 내에서 감지되면 터치 포인터가 취소됩니다.</li>
-<li>100ms가 넘는 활성 접촉은 인식되지 않습니다.</li>
-<li>모니터/디스플레이가 변경됩니다(해상도, 설정, 다중 모니터 구성).</li>
-<li>데스크톱이 잠기거나 사용자가 로그오프했습니다.</li>
-<li>동시 접촉 수가 디바이스에서 지원하는 수를 초과했습니다.</li>
+<li>입력 표면의 범위 내에서 펜이 검색 되 면 터치 포인터가 취소 됩니다.</li>
+<li>100 밀리초를 초과 하는 활성 연락처는 검색 되지 않습니다.</li>
+<li>모니터/디스플레이 (해상도, 설정, 다중 mon 구성)가 변경 되었습니다.</li>
+<li>데스크톱이 잠겨 있거나 사용자가 로그 오프 했습니다.</li>
+<li>동시 연락처 수가 장치에서 지원 되는 수를 초과 했습니다.</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost"><strong>PointerCaptureLost</strong></a></p></td>
-<td align="left"><p>다른 UI 요소가 포인터를 캡처하거나, 포인터가 해제되거나, 다른 포인터가 프로그래밍 방식으로 캡처될 때 발생합니다.</p>
+<td align="left"><p>다른 UI 요소에서 포인터를 캡처하거나 포인터가 해제 되거나 프로그래밍 방식으로 다른 포인터가 캡처될 때 발생 합니다.</p>
 <div class="alert">
 <strong>참고</strong>  해당 포인터 캡처 이벤트가 없습니다.
 </div>
@@ -80,51 +80,51 @@ UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습�
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered"><strong>PointerEntered 됨</strong></a></p></td>
-<td align="left"><p>포인터가 요소의 경계 영역에 들어갈 때 발생합니다. 터치, 터치 패드, 마우스 및 펜 입력의 경우에는 약간 다른 방식으로 발생할 수 있습니다.</p>
+<td align="left"><p>포인터가 요소의 경계 영역에 들어갈 때 발생합니다. 이는 터치, 터치 패드, 마우스 및 펜 입력에 대해 약간 다른 방법으로 발생할 수 있습니다.</p>
 <ul>
-<li>터치의 경우 이벤트를 발생시키려면 요소를 직접 누르거나 요소의 경계 영역으로 이동하여 손가락을 접촉해야 합니다.</li>
-<li>마우스 및 터치 패드에는 항상 표시되는 화상 커서가 있으며 마우스 또는 터치 패드 버튼을 누르지 않은 경우에도 이 이벤트가 발생합니다.</li>
-<li>터치와 마찬가지로 펜에서도 요소를 직접 누르거나 요소의 경계 영역으로 이동하여 이 이벤트를 발생시킵니다. 그러나, 펜에는 가리키기 상태(<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>)도 있으며, true인 경우 이 이벤트가 발생합니다.</li>
+<li>터치를 사용 하려면 요소에 대 한 직접 터치에서 또는 요소의 경계 영역으로 이동 하 여이 이벤트를 발생 시킵니다.</li>
+<li>마우스 및 터치 패드에는 항상 표시 되는 화상 커서가 있으며 마우스 또는 터치 패드 단추를 누르지 않아도이 이벤트가 발생 합니다.</li>
+<li>터치와 마찬가지로 펜은 요소에 대 한 직접 펜을 사용 하거나 요소의 경계 영역으로 이동 하 여이 이벤트를 발생 시킵니다. 그러나 펜에는 true 인 경우이 이벤트를 발생 시키는 가리키기 상태 (<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>)도 있습니다.</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited"><strong>PointerExited</strong></a></p></td>
-<td align="left"><p>포인터가 요소 경계 영역을 벗어날 때 발생합니다. 터치, 터치 패드, 마우스 및 펜 입력의 경우에는 약간 다른 방식으로 발생할 수 있습니다.</p>
+<td align="left"><p>포인터가 요소의 경계 영역을 벗어나면 발생 합니다. 이는 터치, 터치 패드, 마우스 및 펜 입력에 대해 약간 다른 방법으로 발생할 수 있습니다.</p>
 <ul>
-<li>터치의 경우 손가락 접촉이 필요하며 포인터가 요소의 경계 영역을 벗어날 때 이 이벤트가 발생합니다.</li>
-<li>마우스 및 터치 패드에는 항상 표시되는 화상 커서가 있으며 마우스 또는 터치 패드 버튼을 누르지 않은 경우에도 이 이벤트가 발생합니다.</li>
-<li>터치와 마찬가지로 펜도 요소의 경계 영역을 벗어날 때 이 이벤트가 발생합니다. 그러나, 펜에는 가리키기 상태(<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>)도 있으며, 상태가 True에서 False로 변경되면 이 이벤트가 발생합니다.</li>
+<li>터치를 사용 하려면 손가락 연락처가 필요 하며 포인터가 요소의 경계 영역 밖으로 이동할 때이 이벤트를 발생 시킵니다.</li>
+<li>마우스 및 터치 패드에는 항상 표시 되는 화상 커서가 있으며 마우스 또는 터치 패드 단추를 누르지 않아도이 이벤트가 발생 합니다.</li>
+<li>터치와 마찬가지로 펜은 요소의 경계 영역 밖으로 이동할 때이 이벤트를 발생 시킵니다. 그러나 상태가 true에서 false로 변경 되 면이 이벤트를 발생 시키는 가리키기 상태 (<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>)도 있습니다.</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved"><strong>PointerMoved 됨</strong></a></p></td>
-<td align="left"><p>요소의 경계 영역 내에서 포인터가 좌표, 버튼 상태, 압력, 기울기 또는 접촉 기하(예: 너비 및 높이)를 변경할 때 발생합니다. 터치, 터치 패드, 마우스 및 펜 입력의 경우에는 약간 다른 방식으로 발생할 수 있습니다.</p>
+<td align="left"><p>요소의 경계 영역 내에서 포인터의 좌표, 단추 상태, 압력, 기울기 또는 접촉 기 하 도형 (예: 너비 및 높이)이 변경 될 때 발생 합니다. 이는 터치, 터치 패드, 마우스 및 펜 입력에 대해 약간 다른 방법으로 발생할 수 있습니다.</p>
 <ul>
-<li>터치의 경우 손가락 접촉이 필요하며 요소의 경계 영역 내에서 접촉할 경우에만 이 이벤트가 발생합니다.</li>
-<li>마우스 및 터치 패드에는 항상 표시되는 화상 커서가 있으며 마우스 또는 터치 패드 버튼을 누르지 않은 경우에도 이 이벤트가 발생합니다.</li>
-<li>터치와 마찬가지로 펜이 요소의 경계 영역 내에서 접촉할 경우 이 이벤트가 발생합니다. 그러나 펜에는 가리키기 상태([<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>](https://msdn.microsoft.com/library/windows/apps/br227977))도 있으며, true이고 요소의 경계 영역 내에 있는 경우 이 이벤트가 발생합니다.</li>
+<li>터치를 사용 하려면 손가락 연락처가 필요 하 고 요소의 경계 영역 내에 있는 연락처에 있는 경우에만이 이벤트를 발생 시킵니다.</li>
+<li>마우스 및 터치 패드에는 항상 표시 되는 화상 커서가 있으며 마우스 또는 터치 패드 단추를 누르지 않아도이 이벤트가 발생 합니다.</li>
+<li>터치와 마찬가지로 펜은 요소의 경계 영역 내에서 연락할 때이 이벤트를 발생 시킵니다. 그러나 펜에는 요소에 대 한 경계 영역 내에서 true 및이 이벤트가 발생 하는 가리키기 상태 (<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>)도 있습니다.</li>
 </ul></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed"><strong>PointerPressed</strong></a></p></td>
-<td align="left"><p>요소의 경계 영역 내에서 포인터가 누르기 동작(예: 터치 다운, 마우스 단추 누름, 펜 누름 또는 터치 패드 단추 누름)을 나타냅니다.</p>
-<p>이 이벤트가 수행되려면 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.capturepointer">CapturePointer</a>가 처리기에서 호출되어야 합니다.</p></td>
+<td align="left"><p>요소가 요소의 경계 영역 내에서 누름 동작 (예: 터치 다운, 마우스 단추 누름, 펜 아래로 또는 터치 패드 단추 누르기)을 나타내는 경우에 발생 합니다.</p>
+<p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.capturepointer">CapturePointer</a> 는이 이벤트에 대 한 처리기에서 호출 해야 합니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased"><strong>PointerReleased</strong></a></p></td>
-<td align="left"><p>포인터가 요소 경계 영역 내에서 해제 동작(예: 터치 업, 마우스 단추에서 손 떼기, 펜 업 또는 터치 패드 단추에서 손 떼기)을 나타내거나 포인터가 경계 영역 외부에서 캡처되는 경우 발생합니다.</p></td>
+<td align="left"><p>포인터가 요소의 경계 영역 내에서 터치, 마우스 단추 위로, 펜 위, 터치 패드 단추 등의 릴리스 작업을 나타내는 경우 또는 경계 영역 외부에서 포인터가 캡처된 경우 발생 합니다.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged"><strong>PointerWheelChanged</strong></a></p></td>
 <td align="left"><p>마우스 휠이 회전할 때 발생합니다.</p>
-<p>마우스 입력이 먼저 감지되면 마우스 입력이 할당된 단일 포인터와 연결됩니다. 마우스 단추(왼쪽, 휠 또는 오른쪽)를 클릭하면 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved">PointerMoved</a> 이벤트를 통해 포인터와 해당 단추 간의 보조 연결이 만들어집니다.</p></td>
+<p>마우스 입력은 마우스 입력이 처음 감지 될 때 할당 된 단일 포인터와 연결 됩니다. 마우스 단추 (왼쪽, 휠 또는 오른쪽)를 클릭 하면 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved">Pointermoved</a> 이벤트를 통해 포인터와 해당 단추 사이에 보조 연결이 생성 됩니다.</p></td>
 </tr>
 </tbody>
 </table> 
 
-## <a name="pointer-event-example"></a>포인터 이벤트 예제
+## <a name="pointer-event-example"></a>Pointer 이벤트 예제
 
-다음은 기본 포인터 추적 앱의 코드 조각으로, 여러 포인터를 위해 이벤트를 수신 대기하고 처리하며 연결된 포인터의 다양한 속성을 가져오는 방법을 보여 줍니다.
+다음은 여러 포인터에 대 한 이벤트를 수신 하 고 처리 하는 방법 및 연결 된 포인터에 대 한 다양 한 속성을 가져오는 방법을 보여 주는 기본 포인터 추적 앱의 일부 코드 조각입니다.
 
 ![포인터 응용 프로그램 UI](images/pointers/pointers1.gif)
 
@@ -132,11 +132,11 @@ UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습�
 
 ### <a name="create-the-ui"></a>UI 만들기
 
-다음 예에서는 [사각형](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle)(`Target`)을 포인터 입력을 사용하는 개체로 사용합니다. 대상의 색상은 포인터 상태가 변경될 때 변경됩니다.
+이 예제에서는 포인터 입력을 사용 [Rectangle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle) 하는`Target`개체에 사각형 ()을 사용 합니다. 포인터 상태가 변경 되 면 대상의 색이 변경 됩니다.
 
-각 포인터에 대한 세부 정보는 포인터가 이동할 때 포인터를 따라오는 부동 [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)에 표시됩니다. 포인터 이벤트 자체는 사각형의 오른쪽에 있는 [RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock)에 보고됩니다.
+각 포인터에 대 한 세부 정보는 포인터가 이동할 때 포인터 뒤에 오는 부동 [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 에 표시 됩니다. 포인터 이벤트 자체는 사각형 오른쪽의 [RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) 에 보고 됩니다.
 
-다음은 XAML(Extensible Application Markup Language) UI 예문입니다. 
+이 예제에서 UI에 대 한 Extensible Application Markup Language (XAML)입니다. 
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -189,13 +189,13 @@ UWP 앱은 다음과 같은 포인터 이벤트를 수신 대기할 수 있습�
 </Grid>
 ```
 
-### <a name="listen-for-pointer-events"></a>포인터 이벤트 수신
+### <a name="listen-for-pointer-events"></a>포인터 이벤트 수신 대기
 
-대부분의 경우에는 이벤트 처리기의 [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs)를 통해 포인터 정보를 가져오는 것이 좋습니다.
+대부분의 경우 이벤트 처리기의 [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) 을 통해 포인터 정보를 가져오는 것이 좋습니다.
 
-이벤트 인수가 필요한 포인터 정보를 표시하지 않으면 [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint)의 [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) 및 [**GetIntermediatePoints**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) 메서드를 통해 표시되는 확장된 [**PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) 정보에 액세스할 수 있습니다.
+이벤트 인수가 필요한 포인터 정보를 노출 하지 않는 경우 [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs)의 [**getcurrentpoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) 및 [**GetIntermediatePoints**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) 메서드를 통해 노출 된 확장 [**pointerpoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) 정보에 대 한 액세스 권한을 얻을 수 있습니다.
 
-다음은 각 활성 포인터 추적용으로 전역 사전 개체를 설정하고 대상 개체용으로 다양한 포인터 이벤트 수신기를 식별하는 코드입니다.
+다음 코드에서는 각 활성 포인터를 추적 하기 위해 전역 사전 개체를 설정 하 고 대상 개체에 대 한 다양 한 포인터 이벤트 수신기를 식별 합니다.
 
 ```CSharp
 // Dictionary to maintain information about each active pointer. 
@@ -235,12 +235,12 @@ public MainPage()
 
 ### <a name="handle-pointer-events"></a>포인터 이벤트 처리
 
-다음으로 UI 피드백을 사용하여 기본 포인터 이벤트 처리기에 대해 살펴봅니다.
+다음으로, UI 피드백을 사용 하 여 기본 포인터 이벤트 처리기를 보여 줍니다.
 
--   이 처리기는 [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트를 관리합니다. 이벤트 로그에 이벤트를 추가하고, 활성 포인터 사전에 포인터를 추가하고, 포인터 상세 정보를 표시합니다.
+-   이 처리기는 [**Pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트를 관리 합니다. 이벤트를 이벤트 로그에 추가 하 고, 활성 포인터 사전에 포인터를 추가 하 고, 포인터 세부 정보를 표시 합니다.
 
     > [!NOTE]
-    > [**Pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 및 [**pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) 이벤트는 항상 쌍으로 발생 하지 않습니다. 앱은 포인터 다운(예: [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited), [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled) 및 [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost))을 완료할 수도 있는 이벤트를 수신하고 처리해야 합니다.      
+    > [**Pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 및 [**pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) 이벤트는 항상 쌍으로 발생 하지 않습니다. 앱은 포인터를 종료할 수 있는 이벤트를 수신 하 고 처리 해야 합니다 (예: [**Pointerexited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited), [**pointerexited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled)및 [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost)).      
 
 ```csharp
 /// <summary>
@@ -282,7 +282,7 @@ void Target_PointerPressed(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   이 처리기는 [**PointerEntered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered) 이벤트를 관리합니다. 이벤트 로그에 이벤트를 추가하고, 포인터 모음에 포인터를 추가하고, 포인터 상세 정보를 표시합니다.
+-   이 처리기는 [**Pointerentered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered) 이벤트를 관리 합니다. 이벤트를 이벤트 로그에 추가 하 고 포인터 컬렉션에 포인터를 추가 하 고 포인터 세부 정보를 표시 합니다.
 
 ```csharp
 /// <summary>
@@ -319,10 +319,10 @@ private void Target_PointerEntered(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   이 처리기는 [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved) 이벤트를 관리합니다. 이벤트 로그에 이벤트를 추가하고 포인터 상세 정보를 업데이트합니다.
+-   이 처리기는 [**Pointermoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved) 이벤트를 관리 합니다. 이벤트를 이벤트 로그에 추가 하 고 포인터 세부 정보를 업데이트 합니다.
 
     > [!Important]
-    > 마우스 입력이 먼저 감지되면 마우스 입력이 할당된 단일 포인터와 연결됩니다. 마우스 단추(왼쪽, 휠 또는 오른쪽)를 클릭하면 [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트를 통해 포인터와 해당 단추 간의 보조 연결이 만들어집니다. [  **PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) 이벤트는 해당하는 동일한 마우스 단추를 해제한 경우에만 발생합니다(이 이벤트가 완료될 때까지는 다른 단추를 이 포인터와 연결할 수 없음). 이 독점적인 연결 때문에 다른 마우스 단추 클릭은 [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved) 이벤트를 통해 라우트됩니다.     
+    > 마우스 입력은 마우스 입력이 처음 감지 될 때 할당 된 단일 포인터와 연결 됩니다. 마우스 단추 (왼쪽, 휠 또는 오른쪽)를 클릭 하면 [**Pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트를 통해 포인터와 해당 단추 사이에 보조 연결이 생성 됩니다. [**Pointerreleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) 이벤트는 동일한 마우스 단추를 눌렀다 놓은 경우에만 발생 합니다 (이 이벤트가 완료 될 때까지 다른 단추는 포인터와 연결 될 수 없음). 이 배타적 연결로 인해 다른 마우스 단추 클릭은 [**Pointermoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved) 이벤트를 통해 라우팅됩니다.     
 
 ```csharp
 /// <summary>
@@ -369,7 +369,7 @@ private void Target_PointerMoved(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   이 처리기는 [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged) 이벤트를 관리합니다. 이벤트 로그에 이벤트를 추가하고, 포인터 배열에 포인터를 추가(필요한 경우)하고, 포인터 상세 정보를 표시합니다.
+-   이 처리기는 [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged) 이벤트를 관리 합니다. 이벤트를 이벤트 로그에 추가 하 고 포인터 배열 (필요한 경우)에 포인터를 추가 하 고 포인터 세부 정보를 표시 합니다.
 
 ```csharp
 /// <summary>
@@ -399,7 +399,7 @@ private void Target_PointerWheelChanged(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   이 처리기는 디지타이저와의 접촉이 종료되는 [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) 이벤트를 관리합니다. 이벤트 로그에 이벤트를 추가하고, 포인터 모음에서 포인터를 제거하고, 포인터 상세 정보를 업데이트합니다.
+-   이 처리기는 디지타이저와의 연결이 종료 되는 [**Pointerreleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) 이벤트를 관리 합니다. 이벤트를 이벤트 로그에 추가 하 고 포인터 컬렉션에서 포인터를 제거 하 고 포인터 세부 정보를 업데이트 합니다.
 
 ```csharp
 /// <summary>
@@ -451,7 +451,7 @@ void Target_PointerReleased(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   이 처리기는 디지타이저와의 접촉이 유지 관리되는 [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited) 이벤트를 관리합니다. 이벤트 로그에 이벤트를 추가하고, 포인터 배열에서 포인터를 제거하고, 포인터 상세 정보를 업데이트합니다.
+-   이 처리기는 디지타이저와의 연결이 유지 되는 경우 [**Pointerexited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited) 이벤트를 관리 합니다. 이벤트를 이벤트 로그에 추가 하 고 포인터 배열에서 포인터를 제거 하 고 포인터 세부 정보를 업데이트 합니다.
 
 ```csharp
 /// <summary>
@@ -486,7 +486,7 @@ private void Target_PointerExited(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   이 처리기는 [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled) 이벤트를 관리합니다. 이벤트 로그에 이벤트를 추가하고, 포인터 배열에서 포인터를 제거하고, 포인터 상세 정보를 업데이트합니다.
+-   이 처리기는 [**Pointercanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled) 이벤트를 관리 합니다. 이벤트를 이벤트 로그에 추가 하 고 포인터 배열에서 포인터를 제거 하 고 포인터 세부 정보를 업데이트 합니다.
 
 ```csharp
 /// <summary>
@@ -525,10 +525,10 @@ private void Target_PointerCanceled(object sender, PointerRoutedEventArgs e)
 }
 ```
 
--   이 처리기는 [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost) 이벤트를 관리합니다. 이벤트 로그에 이벤트를 추가하고, 포인터 배열에서 포인터를 제거하고, 포인터 상세 정보를 업데이트합니다.
+-   이 처리기는 [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost) 이벤트를 관리 합니다. 이벤트를 이벤트 로그에 추가 하 고 포인터 배열에서 포인터를 제거 하 고 포인터 세부 정보를 업데이트 합니다.
 
     > [!NOTE]
-    > [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost) 는 [**pointerreleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)대신 발생할 수 있습니다. 포인터 캡처는 사용자 조작, 프로그래밍 방식의 다른 포인터 캡처, [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) 호출 등 다양한 이유로 잃게 될 수 있습니다.     
+    > [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost) 는 [**pointerreleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)대신 발생할 수 있습니다. 포인터 캡처는 사용자 상호 작용, 다른 포인터의 프로그래밍 방식 캡처, [**Pointerreleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)호출 등 다양 한 이유로 손실 될 수 있습니다.     
 
 ```csharp
 /// <summary>
@@ -569,9 +569,9 @@ private void Target_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
 
 ### <a name="get-pointer-properties"></a>포인터 속성 가져오기
 
-앞에서 설명한 대로 [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint)의 [**GetCurrentPoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) 및 [**GetIntermediatePoints**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints)의 메서드를 통해 [**Windows.UI.Input.PointerPoint**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) 개체에서 가장 확장된 포인터를 가져와야 합니다. 다음은 작업 방법을 보여주는 코드 조각입니다.
+앞에서 설명한 것 처럼 PointerRoutedEventArgs의 [**Getcurrentpoint**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) 및 [**GetIntermediatePoints**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) 메서드를 통해 얻은 [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs)개체에서 대부분의 확장 된 포인터 정보를 가져와야 [**합니다.**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.PointerPoint) 다음 코드 조각에서는 방법을 보여 줍니다.
 
--   먼저 포인터별로 새로운 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)을 만듭니다.
+-   먼저 각 포인터에 대 한 새 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 을 만듭니다.
 
 ```csharp
 /// <summary>
@@ -594,7 +594,7 @@ void CreateInfoPop(PointerPoint ptrPt)
 }
 ```
 
--   그런 다음 해당 포인터와 연결된 기존의 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)에서 포인터 정보를 업데이트하는 방법을 제공합니다.
+-   그런 다음 해당 포인터와 연결 된 기존 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 의 포인터 정보를 업데이트 하는 방법을 제공 합니다.
 
 ```csharp
 /// <summary>
@@ -624,7 +624,7 @@ void UpdateInfoPop(PointerPoint ptrPt)
 }
 ```
 
--   마지막으로 다양한 포인터 속성을 쿼리합니다.
+-   마지막으로 다양 한 포인터 속성을 쿼리 합니다.
 
 ```csharp
 /// <summary>
@@ -676,28 +676,28 @@ String QueryPointer(PointerPoint ptrPt)
 ```
 
 ## <a name="primary-pointer"></a>기본 포인터
-터치 디지타이저나 터치 패드와 같은 일부 입력 장치는 기존에 사용하던 하나의 마우스나 펜 포인터가 아닌 여러 개의 포인터를 지원합니다(대부분의 경우 Surface Hub는 두 개의 펜 입력 지원). 
+터치 디지타이저 또는 터치 패드와 같은 일부 입력 장치는 마우스 또는 펜의 일반적인 단일 포인터 보다 더 많이 지원 합니다. 대부분의 경우 Surface Hub는 두 개의 펜 입력을 지원 합니다. 
 
-**[PointerPointerProperties](https://docs.microsoft.com/uwp/api/windows.ui.input.pointerpointproperties.IsPrimary)** 클래스의 읽기 전용 **[IsPrimary](https://docs.microsoft.com/uwp/api/windows.ui.input.pointerpointproperties)** 속성을 사용하면 단일 기본 포인터를 식별하고 차별화할 수 있습니다(기본 포인터는 항상 입력 시퀀스 중에 탐지되는 첫 번째 포인터임). 
+**[Pointerpointerproperties](https://docs.microsoft.com/uwp/api/windows.ui.input.pointerpointproperties)** 클래스의 읽기 전용 **[IsPrimary](https://docs.microsoft.com/uwp/api/windows.ui.input.pointerpointproperties.IsPrimary)** 속성을 사용 하 여 단일 기본 포인터를 식별 하 고 구분 합니다. 기본 포인터는 항상 입력 시퀀스 중에 검색 되는 첫 번째 포인터입니다. 
 
-기본 포인터를 식별함으로써 이를 사용하여 마우스나 펜 입력을 에뮬레이트하거나, 조작을 사용자 지정하거나 일부 다른 특정 기능 또는 UI를 제공할 수 있습니다.
+기본 포인터를 식별 하 여 마우스 또는 펜 입력을 에뮬레이트 하거나, 상호 작용을 사용자 지정 하거나, 기타 특정 기능 또는 UI를 제공 하는 데 사용할 수 있습니다.
 
 > [!NOTE]
-> 입력 시퀀스 중에 기본 포인터가 해제되거나, 취소되거나, 손실되면, 새로운 입력 순서가 시작될 때까지 기본 입력 포인터가 생성되지 않습니다(모든 포인터가 해제, 취소 또는 손실되면 입력 시퀀스가 종료됨).
+> 입력 시퀀스 중에 기본 포인터가 해제, 취소 또는 손실 된 경우 새 입력 시퀀스가 시작 될 때까지 기본 입력 포인터가 생성 되지 않습니다. 모든 포인터가 해제, 취소 또는 손실 될 때 입력 시퀀스가 종료 됩니다.
 
 ## <a name="primary-pointer-animation-example"></a>기본 포인터 애니메이션 예제
 
-다음은 특별한 가시적 피드백을 제공하여 사용자가 응용 프로그램에 있는 포인터 입력 간을 차별화하도록 돕는 방법을 보여주는 코드 조각입니다.
+이러한 코드 조각은 사용자가 응용 프로그램의 포인터 입력을 구분 하는 데 도움이 되는 특별 한 시각적 피드백을 제공 하는 방법을 보여 줍니다.
 
-이 특정 앱에서는 색상 및 애니메이션을 모두 사용하여 기본 포인터를 강조 표시합니다.
+이 특정 앱은 색과 애니메이션을 모두 사용 하 여 기본 포인터를 강조 표시 합니다.
 
-![애니메이션 시각적 피드백을 사용하는 포인터 응용 프로그램](images/pointers/pointers-usercontrol-animation.gif)
+![애니메이션 시각적 피드백을 포함 하는 포인터 응용 프로그램](images/pointers/pointers-usercontrol-animation.gif)
 
 **[포인터 입력 샘플 (UserControl with animation)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip) 에서이 샘플 다운로드**
 
 ### <a name="visual-feedback"></a>시각적 피드백
 
-XAML **[Ellipse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)** 개체를 기반으로 **[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.ellipse)** 을 정의합니다. 이 개체는 캔버스에서 각 개체의 위치를 강조 표시하며 **[Storyboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard)** 를 사용하여 기본 포인터에 해당하는 타원에 애니메이션 효과를 줍니다.
+각 포인터가 캔버스에 있는 위치를 강조 하 고 **[Storyboard](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.storyboard)** 를 사용 하 여 기본 포인터에 해당 하는 타원에 애니메이션 효과를 주는 XAML **[타원](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.ellipse)** 개체를 기반으로 **[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)** 을 정의 합니다.
 
 **XAML은 다음과 같습니다.**
 
@@ -769,7 +769,7 @@ XAML **[Ellipse](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.use
 </UserControl>
 ```
 
-관련 코드는 다음과 같습니다.
+코드 숨김이 여기에 나와 있습니다.
 ```csharp
 using Windows.Foundation;
 using Windows.UI.Xaml;
@@ -889,9 +889,9 @@ namespace UWP_Pointers
 ```
 
 ### <a name="create-the-ui"></a>UI 만들기
-이 예제의 UI는 입력 **[캔버스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas)** 로 제한됩니다. 여기에서 포인터를 추적하고 포인터 카운터 및 기본 포인터 식별자가 들어 있는 헤더 막대를 따라 포인터 표시기 및 기본 포인터 애니메이션을 렌더링합니다.
+이 예제의 UI는 포인터를 추적 하 여 포인터 카운터와 기본 포인터 식별자를 포함 하는 헤더 표시줄과 함께 포인터를 추적 하 고 포인터 표시기와 기본 포인터 애니메이션 (해당 하는 경우)을 렌더링 하는 입력 **[캔버스로](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas)** 제한 됩니다.
 
-MainPage.xaml은 다음과 같습니다.
+다음은 MainPage xaml입니다.
 
 ```xaml
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -942,24 +942,27 @@ MainPage.xaml은 다음과 같습니다.
 
 ### <a name="handle-pointer-events"></a>포인터 이벤트 처리
 
-마지막으로, MainPage.xaml.cs 관련 코드에 기본 포인터 이벤트 처리기를 정의합니다. 이전 예제에서 기본 사항을 설명했으므로 여기에서 코드를 재현하지는 않겠지만, 원하는 경우 [포인터 입력 샘플(애니메이션이 있는 UserControl)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)에서 작업 샘플을 다운로드할 수 있습니다.
+마지막으로 MainPage.xaml.cs 코드 숨김으로 기본 포인터 이벤트 처리기를 정의 합니다. 이전 예제에서 기본 사항을 다룬 바와 같이 여기서는 코드를 재현 하지 않지만 [포인터 입력 샘플 (UserControl with animation)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)에서 작업 샘플을 다운로드할 수 있습니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
-**토픽 샘플**
-* [포인터 입력 샘플 (기본)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers.zip)
-* [포인터 입력 샘플 (애니메이션 사용 UserControl)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)
+### <a name="topic-samples"></a>토픽 샘플
 
-**기타 샘플**
-* [기본 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-* [짧은 대기 시간 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
-* [사용자 상호 작용 모드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
-* [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+- [포인터 입력 샘플 (기본)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers.zip)
+- [포인터 입력 샘플 (애니메이션 사용 UserControl)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)
 
-**보관 샘플**
-* [Input: XAML 사용자 입력 이벤트 샘플](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
-* [입력: 장치 기능 샘플](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
-* [Input: 조작과 제스처 (C++) 샘플](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
-* [입력: 터치 적중 테스트 샘플](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
-* [XAML 스크롤, 패닝 및 확대/축소 샘플](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
-* [입력: 간소화 된 잉크 샘플](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
+### <a name="other-samples"></a>다른 샘플
+
+- [기본 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [짧은 대기 시간 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [사용자 상호 작용 모드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+
+### <a name="archive-samples"></a>보관 샘플
+
+- [Input: XAML 사용자 입력 이벤트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20XAML%20user%20input%20events%20sample)
+- [입력: 장치 기능 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Input%20Device%20capabilities%20sample%20(Windows%208))
+- [Input: 조작 및 제스처 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
+- [입력: 터치 적중 테스트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
+- [XAML 스크롤, 패닝 및 확대/축소 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
+- [입력: 간소화 된 잉크 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)

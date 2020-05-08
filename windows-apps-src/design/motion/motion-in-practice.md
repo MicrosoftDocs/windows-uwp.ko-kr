@@ -1,6 +1,6 @@
 ---
-Description: 기본 앱에서 함께 일 하는 방법을 Fluent 동작에 알아봅니다.
-title: 동작 중인 움직임 - UWP 앱의 애니메이션
+Description: 응용 프로그램에서 흐름 동작의 기본을 함께 제공 하는 방법에 대해 알아봅니다.
+title: 실제 동작-Windows 앱의 애니메이션
 label: Motion in practice
 template: detail.hbs
 ms.date: 10/02/2018
@@ -11,56 +11,56 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8cf010533d2d62559bb8dc0d214e04ab917e62bd
-ms.sourcegitcommit: d534f81590d881a18d677a648c59913029837a84
+ms.openlocfilehash: 45ab6c593b9e20f778e4b352a8b284cefe57c9a8
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535436"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970328"
 ---
-# <a name="bringing-it-together"></a>통합
+# <a name="bringing-it-together"></a>함께 가져오기
 
-타이밍, 감속, 방향 및 무게는 함께 작동하여 Fluent 동작의 기초를 형성합니다. 각각은 다른 것의 컨텍스트에서 간주되고 앱의 컨텍스트에서 적절하게 적용되어야 합니다.
+타이밍, 감속/방향성 및 무게는 함께 작동 하 여 흐름 동작의 기반을 형성 합니다. 각는 다른 항목의 컨텍스트에서 고려 되 고 앱의 컨텍스트에서 적절 하 게 적용 되어야 합니다.
 
-앱에서 Fluent 움직임을 적용하는 3가지 방법은 다음과 같습니다.
+앱에서 흐름 동작 기본 사항을 적용 하는 세 가지 방법은 다음과 같습니다.
 
 :::row:::
     :::column:::
-**암시적 애니메이션** 자동 트윈 및 표준화 된 값을 사용 하는 매우 간단한 Fluent 동작을 달성 하기 위해 매개 변수 변경에서 값 사이의 시간입니다.
+**암시적 애니메이션** 표준화 된 값을 사용 하 여 매우 간단한 흐름 동작을 수행 하기 위해 매개 변수의 값 사이에 자동 트윈 및 시간이 변경 되었습니다.
     :::column-end:::
     :::column:::
-**기본 제공 애니메이션** 공용 컨트롤 및 공유 중인 등 시스템 구성 요소는 "Fluent 기본적으로". 기본 사항 묵시적된 용도 사용 하 여 일관 된 방식으로 적용 되었습니다.
+**기본 제공 애니메이션** 시스템 구성 요소 (예: 공용 컨트롤 및 공유 동작)는 "기본적으로 흐름"입니다. 기본은 암시 된 사용량과 일관 된 방식으로 적용 됩니다.
     :::column-end:::
     :::column:::
-**사용자 지정 애니메이션 지침 권장 사항을 따르면** 경우 시스템 제공 하지 않습니다는 정확한 동작 솔루션 시나리오에 대 한 경우가 있을 수 있습니다. 이러한 경우 경험에 대 한 시작 점으로 기본 기본 권장 사항을 사용 합니다.
+**지침 권장 사항에 따라 사용자 지정 애니메이션** 시스템에서 시나리오에 대 한 정확한 동작 솔루션을 아직 제공 하지 않는 경우가 있을 수 있습니다. 이러한 경우 기본 권장 사항을 사용 환경에 대 한 시작 지점으로 사용 합니다.
     :::column-end:::
 :::row-end:::
 
 **전환 예제**
 
-![기능적 애니메이션](images/pageRefresh.gif)
+![함수 애니메이션](images/pageRefresh.gif)
 
 :::row:::
     :::column:::
-<b>방향 정방향 제한:</b><br>
-페이드 아웃을 적용 합니다. 150 m; 감속/가속: 기본 가속화 <b>표면은에서:</b><br>
-150px 위로 이동 합니다. 되 300ms; 감속/가속: 기본 감속
+<b>방향 전달:</b><br>
+페이드 아웃: 150m; 감속/가속: 기본 <b>에서 방향이 앞</b> 으로 빨라집니다.<br>
+위로 밀기 150px: 300ms; 감속/가속: 기본 감속
     :::column-end:::
     :::column:::
-<b>Out 이전 버전과 방향:</b><br>
-150px 아래로 이동 합니다. 150ms; 감속/가속: 기본 가속화 <b>에서 이전 버전과 방향:</b><br>
-페이드 인 합니다. 되 300ms; 감속/가속: 기본 감속
+<b>역방향 방향:</b><br>
+Slide down 150px: 150ms; 감속/가속: 기본 <b>방향으로 뒤로</b> 이동 합니다.<br>
+페이드 인: 300ms; 감속/가속: 기본 감속
     :::column-end:::
 :::row-end:::
 
-**개체 예제**
+**개체 예**
 
- ![300ms 움직임](images/control.gif)
+ ![300ms 동작](images/control.gif)
 
 :::row:::
     :::column:::
-<b>방향 확장 합니다.</b><br>
-증가: 되 300ms; 감속/가속: Standard
+<b>방향 확장:</b><br>
+증가: 300ms; 감속/가속: 표준
     :::column-end:::
     :::column:::
 <b>방향 계약:</b><br>
@@ -74,7 +74,7 @@ ms.locfileid: "67535436"
 <tr>
 <td><img src="images/xaml-controls-gallery-app-icon.png" alt="XAML controls gallery" width="168"></img></td>
 <td>
-    <p>있는 경우는 <strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱을 설치 하려면 여기를 클릭 <a href="xamlcontrolsgallery:/item/ImplicitTransition">앱을 열고 암시적 전환 중인 참조</a>합니다.</p>
+    <p><strong style="font-weight: semi-bold">XAML 컨트롤 갤러리</strong> 앱이 설치 되어 있는 경우 여기를 클릭 하 여 <a href="xamlcontrolsgallery:/item/ImplicitTransition">앱을 열고 동작의 암시적 전환을 확인</a>하세요.</p>
     <ul>
     <li><a href="https://www.microsoft.com/p/xaml-controls-gallery/9msvh128x2zt">XAML Controls Gallery 앱 가져오기(Microsoft Store)</a></li>
     <li><a href="https://github.com/Microsoft/Xaml-Controls-Gallery">소스 코드 가져오기(GitHub)</a></li>
@@ -85,34 +85,34 @@ ms.locfileid: "67535436"
 
 ## <a name="implicit-animations"></a>암시적 애니메이션
 
-> 암시적 애니메이션 필요한 Windows 10 버전 1809 ([17763 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상.
+> 암시적 애니메이션에는 Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상이 필요 합니다.
 
-암시적 애니메이션은 매개 변수를 변경 하는 동안 이전 및 새 값을 자동으로 보간하여 Fluent 동작을 달성 하는 간단한 방법입니다.
+암시적 애니메이션은 매개 변수를 변경 하는 동안 이전 값과 새 값 사이를 자동으로 보간 하 여 흐름 동작을 달성할 수 있는 간단한 방법입니다.
 
-암시적으로 같은 속성을 변경 애니메이션을 적용할 수 있습니다.
+다음 속성에 대 한 변경 내용에 암시적으로 애니메이션 효과를 적용할 수 있습니다.
 
 - [UIElement](/uwp/api/windows.ui.xaml.uielement)
   - **불투명도**
   - **회전**
-  - **소수 자릿수**
-  - **번역**
+  - **크기 조정**
+  - **Translation**
 
-- [테두리](/uwp/api/windows.ui.xaml.controls.border)하십시오 [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter), 또는 [패널](/uwp/api/windows.ui.xaml.controls.panel)
+- [Border](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)또는 [Panel](/uwp/api/windows.ui.xaml.controls.panel)
   - **배경**
 
-암시적으로 애니메이션 효과가 적용 된 변경 수 있는 각 속성에는 해당 _전환_ 속성입니다. 전환 형식을 해당에 할당 하는 속성에 애니메이션 효과 _전환_ 속성입니다. 이 테이블에 표시 된 _전환_ 속성 및 각각에 대해 사용 하도록 전환 형식입니다.
+변경 내용이 암시적으로 적용 될 수 있는 각 속성에는 해당 하는 _전환_ 속성이 있습니다. 속성에 애니메이션 효과를 주려면 해당 _전환_ 속성에 전환 유형을 할당 합니다. 다음 표에서는 _전환_ 속성과 각 속성에 사용할 전환 형식을 보여 줍니다.
 
-| 애니메이션된 속성 | 전환 속성 | 암시적 전환 형식 |
+| 애니메이션 속성 | Transition 속성 | 암시적 전환 유형 |
 | -- | -- | -- |
-| [UIElement.Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) | [OpacityTransition](/uwp/api/windows.ui.xaml.uielement.opacitytransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
+| [UIElement 불투명도](/uwp/api/windows.ui.xaml.uielement.opacity) | [OpacityTransition](/uwp/api/windows.ui.xaml.uielement.opacitytransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
 | [UIElement.Rotation](/uwp/api/windows.ui.xaml.uielement.rotation) | [RotationTransition](/uwp/api/windows.ui.xaml.uielement.rotationtransition) | [ScalarTransition](/uwp/api/windows.ui.xaml.scalartransition) |
 | [UIElement.Scale](/uwp/api/windows.ui.xaml.uielement.scale) | [ScaleTransition](/uwp/api/windows.ui.xaml.uielement.scaletransition) | [Vector3Transition](/uwp/api/windows.ui.xaml.vector3transition) |
 | [UIElement.Translation](/uwp/api/windows.ui.xaml.uielement.translation) | [TranslationTransition](/uwp/api/windows.ui.xaml.uielement.translationtransition) | [Vector3Transition](/uwp/api/windows.ui.xaml.vector3transition) |
-| [Border.Background](/uwp/api/windows.ui.xaml.controls.border.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.border.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
-| [ContentPresenter.Background](/uwp/api/windows.ui.xaml.controls.contentpresenter.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.contentpresenter.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
-| [Panel.Background](/uwp/api/windows.ui.xaml.controls.panel.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.panel.backgroundtransition)  | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
+| [테두리. 배경](/uwp/api/windows.ui.xaml.controls.border.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.border.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
+| [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.contentpresenter.backgroundtransition) | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
+| [Panel. 배경](/uwp/api/windows.ui.xaml.controls.panel.background) | [BackgroundTransition](/uwp/api/windows.ui.xaml.controls.panel.backgroundtransition)  | [BrushTransition](//uwp/api/windows.ui.xaml.uielement.brushtransition) |
 
-이 예제에서는 단추 컨트롤을 사용 하는 경우 페이드 인 및 페이드 아웃 비활성화 되었을 때를 확인 하려면 Opacity 속성 및 전환 사용 방법을 보여 줍니다.
+이 예제에서는 불투명도 속성 및 전환을 사용 하 여 컨트롤이 활성화 될 때 단추를 페이드 아웃 하 고 비활성화 된 경우 페이드 아웃 하는 방법을 보여 줍니다.
 
 ```xaml
 <Button x:Name="SubmitButton"
@@ -131,8 +131,8 @@ public double OpaqueIfEnabled(bool IsEnabled)
 }
 ```
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [동작 개요](index.md)
-- [시간 및 감속/가속](timing-and-easing.md)
+- [타이밍 및 감속](timing-and-easing.md)
 - [방향 및 무게](directionality-and-gravity.md)

@@ -1,5 +1,5 @@
 ---
-Description: 사용자는 이동 또는 스크롤을 통해 단일 보기 내에서 탐색하여 뷰포트 내에 맞지 않는 보기의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서의 라이브러리 또는 사진 앨범이 있습니다.
+Description: 이동 또는 스크롤을 통해 사용자는 단일 뷰 내에서 이동 하 여 뷰포트 내에 맞지 않는 뷰의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범이 있습니다.
 title: 이동
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
@@ -8,192 +8,184 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 945368e27c4f6215d2f5df20d52d916ead3597dd
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: b6e391354b34f00460eb5988f4e03c1ff07a9296
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74257950"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970118"
 ---
-# <a name="guidelines-for-panning"></a>이동에 대한 지침
+# <a name="guidelines-for-panning"></a>패닝에 대 한 지침
 
 
-사용자는 이동 또는 스크롤을 통해 단일 보기 내에서 탐색하여 뷰포트 내에 맞지 않는 보기의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서의 라이브러리 또는 사진 앨범이 있습니다.
+이동 또는 스크롤을 통해 사용자는 단일 뷰 내에서 이동 하 여 뷰포트 내에 맞지 않는 뷰의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범이 있습니다.
 
-> **중요 API**: [**Windows.UI.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**Windows.UI.Xaml.Input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
+> **중요 한 api**: [**windows**](https://docs.microsoft.com/uwp/api/Windows.UI.Input). Input, [**windows. .xaml**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
 
 
-## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
+## <a name="dos-and-donts"></a>실행 사항 및 금지 사항
 
 
 **표시기 및 스크롤 막대 패닝**
 
--   콘텐츠를 앱에 로드하기 전에 이동/스크롤이 가능한지 확인합니다.
+-   앱에 콘텐츠를 로드 하기 전에 패닝/스크롤이 가능한 지 확인 합니다.
 
--   위치 및 크기 신호를 제공하려면 이동 표시기 및 스크롤 막대를 표시하고, 사용자 지정 탐색 기능을 제공하려면 이를 숨기세요.
+-   위치 및 크기 큐를 제공 하기 위해 패닝 표시기 및 스크롤 막대를 표시 합니다. 사용자 지정 탐색 기능을 제공 하는 경우 숨깁니다.
 
-    **참고**  표준 스크롤 막대와 달리 패닝 표시기는 전적으로 정보를 제공 합니다. 입력 장치에 노출되지 않으며 어떤 방식으로도 조작할 수 없습니다.
+    **참고**  표준 스크롤 막대와 달리 패닝 표시기는 전적으로 정보를 제공 합니다. 이러한 장치는 입력 장치에 노출 되지 않으며 어떤 방식으로든 조작할 수 없습니다.
 
      
 
 **단일 축 패닝 (1 차원 오버플로)**
 
--   하나의 뷰포트 경계(세로 또는 가로)를 넘어가는 콘텐츠 영역에는 단일 축 이동을 사용합니다.
+-   하나의 뷰포트 경계 (세로 또는 가로) 이상으로 확장 되는 콘텐츠 영역에 대해 1 축 이동을 사용 합니다.
 
-    -   1차원 항목 목록에는 세로 이동을 사용합니다.
-    -   항목 그리드에는 가로 이동을 사용합니다.
--   사용자가 끌기 지점 간을 이동하고 중지할 수 있어야 하는 경우에는 단일 축 이동에 필수 끌기 지점을 사용하지 마세요. 필수 끌기 지점은 사용자가 끌기 지점에서 중지하도록 합니다. 대신 근접 끌기 지점을 사용하세요.
+    -   항목의 1 차원 목록에 대해 세로 방향으로 이동 합니다.
+    -   항목 그리드를 위한 가로 패닝
+-   사용자가 스냅 지점과 함께 팬 하 고 중지할 수 있어야 하는 경우 단일 축 패닝에서 필수 스냅 지점도 사용 하지 마세요. 필수 스냅 지점은 사용자가 맞춤 지점에서 중지 되도록 보장 합니다. 대신 근접 한 맞춤 위치를 사용 합니다.
 
 **자유형 패닝 (2 차원 오버플로)**
 
--   두 뷰포트 경계(세로 또는 가로)를 모두 넘어가는 콘텐츠 영역에는 2축 이동을 사용합니다.
+-   뷰포트 경계 (세로 및 가로) 이상으로 확장 되는 콘텐츠 영역에 대해 2 축 이동을 사용 합니다.
 
-    -   사용자가 여러 방향으로 이동할 가능성이 큰 구조화되지 않은 콘텐츠의 경우 기본 이동 경로 동작을 무시하고 자유형 이동을 사용합니다.
--   일반적으로 자유형 이동은 이미지나 지도 내에서 탐색하는 데 적합합니다.
+    -   기본 레일 동작을 재정의 하 고 사용자가 여러 방향으로 이동할 가능성이 높은 구조화 되지 않은 콘텐츠에 대해 자유형 이동을 사용 합니다.
+-   자유형 패닝은 일반적으로 이미지나 맵 내에서 탐색 하는 데 적합 합니다.
 
 **페이지 보기**
 
--   콘텐츠가 별도의 요소로 구성되어 있거나 전체 요소를 표시하려는 경우에는 필수 끌기 지점을 사용합니다. 책이나 잡지 페이지, 항목 열 또는 개별 이미지가 여기에 포함될 수 있습니다.
+-   콘텐츠를 불연속 요소로 구성 하거나 전체 요소를 표시 하려는 경우에는 필수 맞춤 위치를 사용 합니다. 여기에는 책 또는 잡지의 페이지, 항목의 열 또는 개별 이미지가 포함 될 수 있습니다.
 
-    -   각 논리 범위에 끌기 지점이 있어야 합니다.
-    -   각 요소의 크기를 보기에 맞게 조정해야 합니다.
+    -   각 논리적 경계에 스냅 지점을 배치 해야 합니다.
+    -   각 요소의 크기를 조정 하거나 뷰에 맞게 크기를 조정 해야 합니다.
 
 **논리적 및 핵심 사항**
 
--   사용자가 멈출 가능성이 큰 핵심 사항이나 논리적 위치가 콘텐츠에 있는 경우에는 근접 끌기 지점을 사용합니다. 예를 들어 섹션 헤더 등이 있습니다.
+-   콘텐츠 내에서 사용자가 중지할 수 있는 핵심 지점이 나 논리적 위치가 있으면 근접 한 스냅 지점을 사용 합니다. 예를 들어 섹션 헤더입니다.
 
--   최대 및 최소 크기 제약 조건이나 경계가 정의된 경우 사용자가 해당 경계에 도달하면 표시할 시각적 피드백을 사용합니다.
+-   최대 및 최소 크기 제약 조건 또는 경계가 정의 된 경우 시각적 피드백을 사용 하 여 사용자가 해당 경계에 도달 하거나이를 초과 하는 경우를 보여 줍니다.
 
 **포함 되거나 중첩 된 콘텐츠 연결**
 
--   텍스트 및 그리드 기반 콘텐츠에 단일 축 이동(일반적으로 가로) 및 열 레이아웃을 사용합니다. 이러한 경우 콘텐츠는 일반적으로 래핑되고 열 사이에서 자연스럽게 흐르며 UWP 앱에서 사용자 환경을 일관되고 검색 가능하도록 유지합니다.
+-   텍스트 및 표 기반 콘텐츠에는 단일 축 패닝 (일반적으로 가로) 및 열 레이아웃을 사용 합니다. 이러한 경우, 콘텐츠는 일반적으로 열에서 열로 자연스럽 게 래핑 및 전달 되며 사용자 환경을 일관 되 게 유지 하 고 Windows 앱에서 검색할 수 있도록 합니다.
 
--   포함된 이동 가능 영역을 사용하여 텍스트나 항목 목록을 표시하지 않습니다. 이동 표시기 및 스크롤 막대는 영역 내에서 입력 접촉이 감지되는 경우에만 표시되므로 직관적이거나 검색 가능한 사용자 환경이 아닙니다.
+-   포함 된 pannable 영역을 사용 하 여 텍스트 또는 항목 목록을 표시 하지 않습니다. 영역 내에서 입력 연락처가 검색 된 경우에만 패닝 표시기 및 스크롤 막대가 표시 되므로 직관적 이거나 검색 가능한 사용자 환경이 아닙니다.
 
--   다음과 같이 두 이동 가능 영역이 같은 방향으로 이동하는 경우에는 체인으로 연결하거나 다른 이동 가능 영역 내부에 포함하지 마세요. 이렇게 하면 자식 영역의 경계에 도달할 때 부모 영역이 의도치 않게 이동될 수 있습니다. 이동 축을 수직으로 지정하는 것을 고려하세요.
+-   여기에 표시 된 것 처럼 동일한 방향으로 이동 하는 경우 다른 pannable 지역 내에 하나의 pannable 지역을 연결 하거나 위치를 두지 마십시오. 이로 인해 자식 영역에 대 한 경계에 도달 하면 부모 영역이 실수로 따라 이동 될 수 있습니다. 패닝 축을 수직으로 만드는 것이 좋습니다.
 
-    ![컨테이너와 같은 방향으로 스크롤되는 포함된 이동 가능 영역을 보여 주는 이미지](images/scrolling-embedded3.png)
+    ![컨테이너와 동일한 방향으로 스크롤 하는 포함 된 pannable 영역을 보여 주는 이미지입니다.](images/scrolling-embedded3.png)
 
 ## <a name="additional-usage-guidance"></a>추가 사용법 지침
 
-터치를 사용하여 이동(하나 이상의 손가락으로 살짝 밀기 또는 밀기 제스처 사용)하는 것은 마우스를 사용하여 스크롤하는 것과 같습니다. 이동 조작 방식은 스크롤 막대를 클릭하는 것보다는 마우스 휠을 회전하거나 스크롤 상자를 미는 것과 가장 유사합니다. API에서 구분 하거나 특정 장치별 Windows UI에 필요한 경우를 제외 하 고는 두 가지 상호 작용을 패닝 이라고 지칭 합니다.
+터치를 사용 하 여 이동 하는 경우 하나 이상의 손가락으로 살짝 밀기 또는 밀기 제스처를 사용 하는 것은 마우스로 스크롤 하는 것과 같습니다. 패닝 상호 작용은 스크롤 막대를 클릭 하는 대신 마우스 휠을 회전 하거나 스크롤 상자를 슬라이딩 하는 것과 비슷합니다. API에서 구분 하거나 특정 장치별 Windows UI에 필요한 경우를 제외 하 고는 두 가지 상호 작용을 패닝 이라고 지칭 합니다.
 
 > <div id="main">
-> <strong>Windows 10의 작성자 업데이트-동작 변경</strong> 기본적으로 텍스트를 선택 하는 대신 활성 펜은 계획 (touch, 터치 패드, 수동 펜 등) UWP 앱에서 스크롤됩니다.  
-> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 무시하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer 클래스</a>의 API 참조 항목을 참조하세요.
+> <strong>Windows 10의 작성자 업데이트-동작 변경</strong> 기본적으로 텍스트를 선택 하는 대신 활성 펜은 터치, 터치 패드, 수동 펜 등의 Windows 앱에서 스크롤/계획 됩니다.  
+> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 재정의하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer 클래스</a>의 API 참조 항목을 참조하세요.
 > </div>
 
-입력 장치에 따라 사용자는 다음 중 하나를 사용하여 이동 가능한 영역 내에서 이동합니다.
+입력 장치에 따라 사용자는 다음 중 하나를 사용 하 여 pannable 지역 내에서 계획 합니다.
 
--   마우스, 터치 패드 또는 액티브 펜/스타일러스를 사용하여 스크롤 화살표를 클릭하거나 스크롤 상자를 끌거나 스크롤 막대 안을 클릭합니다.
--   마우스 휠 단추를 사용하여 스크롤 상자 끌기를 에뮬레이트합니다.
--   마우스가 지원하는 경우 확장된 단추(XBUTTON1 및 XBUTTON2)를 사용합니다.
--   키보드 화살표 키를 사용하여 스크롤 상자 끌기를 에뮬레이트하거나 페이지 키를 사용하여 스크롤 막대 내부 클릭을 에뮬레이트합니다.
--   터치, 터치 패드 또는 패시브 펜/스타일러스를 사용하여 손가락을 원하는 방향으로 밀거나 살짝 밉니다.
+-   스크롤 화살표를 클릭 하거나 스크롤 상자를 끌거나 스크롤 막대 내부를 클릭 하는 마우스, 터치 패드 또는 활성 펜/스타일러스입니다.
+-   스크롤 상자 끌기를 에뮬레이트하기 위한 마우스의 휠 단추입니다.
+-   마우스에서 지 원하는 경우 확장 된 단추 (XBUTTON1 및 있는)입니다.
+-   스크롤 상자를 에뮬레이트할 스크롤 상자 또는 페이지 키를 에뮬레이트할 키보드 화살표 키입니다.
+-   원하는 방향으로 손가락을 이동 하거나 살짝 밀기 위한 터치, 터치 패드 또는 수동 펜/스타일러스입니다.
 
-밀기는 손가락을 이동 방향으로 천천히 움직이는 것과 관련 있습니다. 이때 일대일 관계가 형성되어 콘텐츠가 손가락과 같은 속도 및 거리로 이동합니다. 살짝 밀기는 손가락을 빠르게 밀었다 떼는 것으로, 이때는 이동 애니메이션에 다음과 같은 물리학이 적용됩니다.
+슬라이딩에는 손가락을 패닝 방향으로 천천히 이동 하는 작업이 포함 됩니다. 그러면 일 대 일 관계가 생성 됩니다. 여기서 콘텐츠는 손가락의 속도와 거리가 계획. 손가락을 신속 하 게 이동 하 고 리프트 하는 살짝 밀기는 다음과 같은 물리가 패닝 애니메이션에 적용 됩니다.
 
--   감속(관성): 손가락을 들면 이동 속도가 느려집니다. 이 동작은 매끄러운 화면을 미끄러지다가 멈추는 것과 비슷합니다.
--   흡수: 감속 중 이동 가속도로 인해 끌기 지점이나 콘텐츠 영역 범위에 도달하면 약간 뒤로 튀는 효과가 발생합니다.
+-   감속 (관성): 손가락을 떼는 경우 팬이 감속 시작 됩니다. 이는 slippery 표면의 중지를 슬라이딩 하는 것과 비슷합니다.
+-   Absorption: 감속 중에 모멘텀를 패닝 하면 맞춤 지점이 나 콘텐츠 영역 경계에 도달할 경우 약간의 바운스 효과가 발생 합니다.
 
 **패닝 유형**
 
 Windows 8은 세 가지 유형의 이동을 지원 합니다.
 
--   단일 축 - 한 방향(가로 또는 세로)에서만 이동이 지원됩니다.
--   이동 경로 - 모든 방향에서 이동이 지원됩니다. 그러나 사용자가 특정 방향에서 거리 임계값을 넘으면 이동이 해당 축으로 제한됩니다.
--   자유형 - 모든 방향에서 이동이 지원됩니다.
+-   단일 축-패닝은 한 방향 으로만 지원 됩니다 (가로 또는 세로).
+-   레일 패닝은 모든 방향에서 지원 됩니다. 그러나 사용자가 특정 방향으로 거리 임계값을 초과 하면 패닝은 해당 축으로 제한 됩니다.
+-   자유형 패닝은 모든 방향에서 지원 됩니다.
 
 **패닝 UI**
 
-이동 조작 환경은 유사한 기능을 제공하지만 입력 디바이스에 고유합니다.
+이동에 대 한 상호 작용 환경은 입력 장치에 대해 고유 하며 여전히 유사한 기능을 제공 합니다.
 
-**이동 가능 영역** 이동 가능 영역 동작은 CSS 스타일시트를 통해 디자인 타임에 JavaScript를 사용하는 UWP 앱 개발자에게 노출됩니다.
+**Pannable 지역** Pannable 영역 동작은 디자인 타임에 CSS (CSS 스타일시트)를 통해 JavaScript 개발자를 사용 하 여 Windows 앱에 노출 됩니다.
 
-검색된 입력 디바이스에 따라 다음 두 가지 이동 표시 모드가 있습니다.
+검색 된 입력 장치를 기반으로 하는 두 개의 패닝 디스플레이 모드가 있습니다.
 
--   터치의 이동 표시기
--   마우스, 터치 패드, 키보드, 스타일러스를 비롯한 다른 입력 장치에 대한 스크롤 막대입니다.
+-   터치를 위한 패닝 표시기입니다.
+-   마우스, 터치 패드, 키보드 및 스타일러스를 비롯 한 다른 입력 장치의 스크롤 막대.
 
-**  이동** 표시기는 pannable 지역 내에 있는 경우에만 표시 됩니다. 마찬가지로, 스크롤 막대도 마우스 커서, 펜/스타일러스 커서 또는 키보드 포커스가 이동 가능 영역 내에 있을 때만 표시됩니다.
+**참고**  패닝 표시기는 pannable 지역 내에 있는 경우에만 표시 됩니다. 마찬가지로 스크롤 막대는 마우스 커서, 펜/스타일러스 커서 또는 키보드 포커스가 스크롤 가능 영역 내에 있는 경우에만 표시 됩니다.
 
  
 
-**이동 표시기** 이동 표시기는 스크롤 막대의 스크롤 상자와 비슷합니다. 이 표시기는 전체 이동 가능 영역에 대한 표시된 콘텐츠의 비율과 이동 가능 영역에서 표시된 콘텐츠의 상대적 위치를 나타납니다.
+**패닝 표시기** 패닝 표시기는 스크롤 막대의 스크롤 상자와 비슷합니다. 이는 pannable 영역에 표시 되는 콘텐츠의 비율과 pannable 영역에 표시 되는 콘텐츠의 상대적 위치를 표시 합니다.
 
-다음 다이어그램은 길이가 다른 두 개의 이동 가능 영역과 이동 표시기를 보여 줍니다.
+다음 다이어그램에서는 길이가 다른 두 개의 pannable 영역 및 패닝 표시기를 보여 줍니다.
 
-![길이가 다른 두 개의 이동 가능 영역과 이동 표시기를 보여 주는 이미지](images/scrolling-indicators.png)
+![길이가 다른 두 개의 pannable 영역 및 패닝 표시기를 보여 주는 이미지입니다.](images/scrolling-indicators.png)
 
 **이동 동작**
-**끌기 지점** 살짝 밀기 제스처를 사용하여 이동할 경우 터치 접촉을 들 때 관성 동작이 조작에 도입됩니다. 관성을 사용하면 사용자의 직접 입력 없이 일정한 거리 임계값에 도달할 때까지 콘텐츠가 계속 이동합니다. 끌기 지점을 사용하여 이 관성 동작을 수정할 수 있습니다.
+**끌기** 제스처를 사용 하 여 이동 하면 터치 접점이 리프트 될 때 관성 동작이 상호 작용에 도입 됩니다. 관성을 사용 하면 사용자의 직접 입력 없이도 특정 거리 임계값에 도달할 때까지 콘텐츠가 계속 이동 합니다. 맞추기 요소를 사용 하 여이 관성 동작을 수정 합니다.
 
-끌기 지점은 앱 콘텐츠에 논리적 멈춤을 지정합니다. 인식적으로, 끌기 지점은 사용자를 위한 페이징 메커니즘 역할을 하며 큰 이동 가능 영역에서 과도한 밀기나 살짝 밀기로 인한 피로를 최소화합니다. 끌기 지점을 통해 사용자 입력을 처리하고 콘텐츠나 키 정보의 특정 하위 집합이 뷰포트에 표시되도록 할 수 있습니다.
+맞춤 지점은 앱 콘텐츠의 논리적 중지를 지정 합니다. Cognitively, 스냅 지점은 사용자에 대 한 페이징 메커니즘 역할을 하며 과도 한 슬라이딩 또는 피로 (large pannable) 지역에서의 최소화 합니다. 이를 통해 부정확 한 사용자 입력을 처리 하 고 특정 콘텐츠나 키 정보의 하위 집합이 뷰포트에 표시 되도록 할 수 있습니다.
 
-다음 두 가지 끌기 지점 유형이 있습니다.
+다음과 같은 두 가지 유형의 스냅 지점이 있습니다.
 
--   근접 - 접촉을 뗀 후 끌기 지점의 거리 임계값 내에서 관성이 멈추면 끌기 지점이 선택됩니다. 근접 끌기 지점 사이에서 이동이 멈출 수도 있습니다.
--   필수 - 제스처의 방향과 속도에 따라 접촉을 떼기 전에 마지막으로 교차한 끌기 지점 바로 앞이나 뒤에 있는 끌기 지점이 선택됩니다. 필수 끌기 지점에서 이동이 멈추어야 합니다.
+-   근접-연락처가 리프트 된 후에 관성이 맞춤 지점의 거리 임계값 내에서 중지 되 면 맞춤 지점이 선택 됩니다. 근접 한 맞춤 지점의 경우에도 이동이 중지 될 수 있습니다.
+-   필수-제스처의 방향 및 속도에 따라, 선택 된 스냅 지점은 마지막 스냅 지점을 바로 앞 이나 뒤에 오도록 하는 것입니다. 패닝은 필수 맞춤 지점에서 중지 되어야 합니다.
 
-이동 끌기 지점은 웹 브라우저 및 사진 앨범과 같이 페이지가 매겨진 콘텐츠를 에뮬레이트하거나 뷰포트 또는 화면에 맞도록 동적으로 다시 그룹화될 수 있는 논리적인 항목 그룹이 있는 응용 프로그램에 유용합니다.
+이동 중심점은 페이지가 매겨진 콘텐츠를 에뮬레이트하는 웹 브라우저 및 사진 앨범이 나 뷰포트 또는 디스플레이에 맞게 동적으로 regrouped 수 있는 항목의 논리적 그룹화를 포함 하는 응용 프로그램에 유용 합니다.
 
-다음 다이어그램은 특정 지점으로 이동했다가 뗄 경우 콘텐츠가 자동으로 논리적 위치로 이동되는 방식을 보여 줍니다.
+다음 다이어그램에서는 특정 지점으로 이동 하 고 해제 하는 방법을 보여 줍니다. 그러면 콘텐츠가 논리적 위치로 자동으로 이동 합니다.
 
 |                                                                |                                                                                         |                                                                                                                 |
 |----------------------------------------------------------------|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| ![이동 가능 영역을 보여 주는 이미지](images/ux-panning-snap1.png) | ![이동 가능 영역이 왼쪽으로 이동되는 모습을 보여 주는 이미지](images/ux-panning-snap2.png) | ![논리적 끌기 지점에서 이동이 중지된 이동 가능 영역을 보여 주는 이미지](images/ux-panning-snap3.png) |
-| 살짝 밀어 이동합니다.                                                  | 터치 접촉을 들어 올립니다.                                                                     | 이동 가능 영역은 터치 접촉을 들어 올린 위치가 아니라 끌기 지점에서 멈춥니다.                                |
+| ![pannable 영역을 표시 하는 이미지입니다.](images/ux-panning-snap1.png) | ![왼쪽으로 따라 이동 되는 pannable 영역을 보여 주는 이미지입니다.](images/ux-panning-snap2.png) | ![논리적 스냅 지점에서의 이동이 중지 된 pannable 영역을 보여 주는 이미지입니다.](images/ux-panning-snap3.png) |
+| 이동 하 여 이동 합니다.                                                  | 터치 접점을 올립니다.                                                                     | Pannable 지역은 접촉이 리프트 된 위치가 아니라 맞춤 지점에서 중지 됩니다.                                |
 
  
 
-**레일** 디바이스의 치수와 해상도보다 더 넓고 클 수 있습니다. 따라서 2차원 이동(가로 및 세로)이 필요한 경우가 많습니다. 이러한 경우 레일은 동작 축을 따라 이동(세로 또는 가로)을 강조하여 사용자 환경을 향상시킵니다.
+**레일** 콘텐츠는 디스플레이 장치의 크기 및 해상도 보다 넓거나 클 수 있습니다. 이러한 이유로 2 차원 패닝 (가로 및 세로)은 종종 필요 합니다. 레일 동작 축의 움직임 (세로 또는 가로)을 강조 하 여 이러한 경우 사용자 환경을 개선 합니다.
 
-다음 다이어그램에서는 이동 경로의 개념을 보여 줍니다.
+다음 다이어그램에서는 레일의 개념을 보여 줍니다.
 
-![이동을 제한하는 이동 경로가 있는 화면의 다이어그램](images/ux-panning-rails.png)
+![이동을 제한 하는 레일의 화면 다이어그램](images/ux-panning-rails.png)
 
 **포함 되거나 중첩 된 콘텐츠 연결**
 
-사용자가 다른 확대/축소 가능 요소 또는 스크롤 가능 요소 안에 중첩된 요소에 대한 확대/축소 또는 스크롤 한계에 도달할 경우 하위 요소에서 시작된 상위 요소가 확대/축소 또는 스크롤 작업을 상위 요소가 계속해야 할지 여부를 지정할 수 있습니다. 이것을 확대/축소 또는 스크롤 체인이라고 합니다.
+사용자가 다른 확대/축소 가능 또는 스크롤할 수 있는 요소 내에 중첩 된 요소에 대 한 확대/축소 또는 스크롤 제한을 적중 한 후에는 부모 요소가 해당 자식 요소에서 확대/축소 또는 스크롤 작업을 시작 해야 하는지 여부를 지정할 수 있습니다. 이를 확대/축소 또는 스크롤 체인 이라고 합니다.
 
-체인 연결은 하나 이상의 단일 축 또는 자유형 이동 영역을 포함하는 단일 축 콘텐츠 영역 내에서 이동하는 데 사용됩니다(터치 접촉이 이러한 자식 영역 중 하나에서 이루어지는 경우). 특정 방향으로 자식 영역의 이동 경계에 도달하면 같은 방향의 부모 영역에서 이동이 활성화됩니다.
+연결은 하나 이상의 단일 축 또는 자유형 이동 지역이 포함 된 단일 축 콘텐츠 영역 내에서 이동 하는 데 사용 됩니다 (터치 contact가 이러한 자식 영역 중 하나에 있는 경우). 특정 방향으로 자식 영역의 패닝 경계에 도달 하면 부모 지역에서 동일한 방향으로 이동이 활성화 됩니다.
 
-하나의 이동 가능 영역이 다른 이동 가능 영역 안에 중첩되는 경우 컨테이너와 포함된 콘텐츠 사이에 충분한 공간을 지정하는 것이 중요합니다. 다음 다이어그램에서는 하나의 이동 가능 영역이 다른 이동 가능 영역 내에 위치하며 각 영역의 이동 방향은 수직입니다. 각 영역에서 사용자가 이동할 수 있는 공간은 충분합니다.
+Pannable 지역이 다른 pannable 지역 안에 중첩 된 경우 컨테이너와 포함 된 콘텐츠 사이에 충분 한 공간을 지정 하는 것이 중요 합니다. 다음 다이어그램에서는 하나의 pannable 지역이 서로 수직 방향으로 이동 하는 다른 pannable 지역 내에 배치 됩니다. 사용자가 각 지역에서 이동할 수 있는 공간이 많습니다.
 
-![포함된 이동 가능 영역을 보여 주는 이미지](images/scrolling-embedded.png)
+![포함 된 pannable 영역을 보여 주는 이미지입니다.](images/scrolling-embedded.png)
 
-다음 다이어그램처럼 충분한 공간이 없으면 포함된 이동 가능 영역이 컨테이너 내의 이동을 방해하여 하나 이상의 이동 가능 영역에서 의도하지 않은 이동이 발생할 수 있습니다.
+다음 다이어그램과 같이 공간이 충분 하지 않은 경우 포함 된 pannable 지역은 컨테이너의 이동을 방해할 수 있으며 하나 이상의 pannable 지역에서 의도 하지 않은 이동이 발생 합니다.
 
-![포함된 이동 가능 영역을 위한 충분한 여백이 없는 경우를 보여 주는 이미지](images/ux-panning-embedded-wrong.png)
+![포함 된 pannable 영역에 대 한 패딩 부족을 보여 주는 이미지입니다.](images/ux-panning-embedded-wrong.png)
 
-이 지침은 앨범(이전 또는 다음 이미지로 이동) 또는 세부 정보 영역 내에서 단일 축 이동을 지원하는 동시에 개별 이미지나 지도 내에서 제약 없는 이동을 지원하는 사진 앨범이나 지도 앱 같은 앱에도 유용합니다. 자유형 이동 이미지나 지도에 해당하는 세부 정보 또는 옵션 영역을 제공하는 앱에서는 이미지나 지도의 제약 없는 이동 영역이 세부 정보 영역으로의 이동을 방해할 수 있으므로 페이지 레이아웃을 세부 정보 및 옵션 영역으로 시작하는 것이 좋습니다.
+이 지침은 앨범 (이전 또는 다음 이미지) 또는 세부 정보 영역에서 단일 축 이동을 지 원하는 한편 개별 이미지 또는 지도 내에서 제한 되지 않은 이동을 지 원하는 사진 앨범 또는 앱 매핑과 같은 앱에도 유용 합니다. 자유형 패닝 이미지 또는 맵에 해당 하는 세부 정보 또는 옵션 영역을 제공 하는 앱에서는 이미지 또는 맵의 제한 되지 않은 이동 영역이 세부 정보 영역으로 이동 하는 것을 방해할 수 있으므로 페이지 레이아웃을 세부 정보 및 옵션 영역으로 시작 하는 것이 좋습니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
-
-* [사용자 지정 사용자 조작](https://docs.microsoft.com/windows/uwp/design/layout/index)
-* [ListView 및 GridView 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)
-* [키보드 접근성](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
+- [사용자 지정 사용자 조작](https://docs.microsoft.com/windows/uwp/design/layout/index)
+- [ListView 및 GridView 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)
+- [키보드 접근성](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
 
 **샘플**
-* [기본 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
-* [짧은 대기 시간 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
-* [사용자 상호 작용 모드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
-* [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+- [기본 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
+- [짧은 대기 시간 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)
+- [사용자 상호 작용 모드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/UserInteractionMode)
+- [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
 
 **보관 샘플**
-* [Input: XAML 사용자 입력 이벤트 샘플](https://code.msdn.microsoft.com/windowsapps/Input-3dff271b)
-* [입력: 장치 기능 샘플](https://code.msdn.microsoft.com/windowsapps/Input-device-capabilities-31b67745)
-* [입력: 터치 적중 테스트 샘플](https://code.msdn.microsoft.com/windowsapps/Touch-Hit-Testing-sample-5e35c690)
-* [XAML 스크롤, 패닝 및 확대/축소 샘플](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
-* [입력: 간소화 된 잉크 샘플](https://code.msdn.microsoft.com/windowsapps/Input-simplified-ink-sample-11614bbf)
-* [입력: Windows 8 제스처 샘플](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
-* [Input: 조작과 제스처 (C++) 샘플](https://code.msdn.microsoft.com/windowsapps/Manipulations-and-gestures-362b6b59)
-* [DirectX touch 입력 샘플](https://code.msdn.microsoft.com/windowsapps/Simple-Direct3D-Touch-f98db97e)
- 
-
- 
-
-
-
-
+- [Input: XAML 사용자 입력 이벤트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20XAML%20user%20input%20events%20sample)
+- [입력: 장치 기능 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Input%20Device%20capabilities%20sample%20(Windows%208))
+- [입력: 터치 적중 테스트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
+- [XAML 스크롤, 패닝 및 확대/축소 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
+- [입력: 간소화 된 잉크 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
+- [입력: Windows 8 제스처 샘플](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [Input: 조작 및 제스처 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
+- [DirectX touch 입력 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))
