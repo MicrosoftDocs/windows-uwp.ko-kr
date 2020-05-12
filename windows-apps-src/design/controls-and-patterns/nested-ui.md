@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: aa672c99dc83e7955c4d4f91b5bc34620c48ed01
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d2372044076e1885602dec806df95ad60e789cdd
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66364547"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968088"
 ---
 # <a name="nested-ui-in-list-items"></a>목록 항목의 중첩된 UI
 
@@ -56,9 +56,9 @@ ms.locfileid: "66364547"
 
 ## <a name="options-for-secondary-actions"></a>보조 작업에 대한 옵션
 
-목록 UI를 만들 때는 먼저 UWP를 지원하는 모든 입력 방법을 고려해야 합니다. 다른 종류의 입력에 대한 자세한 내용은 [입력 지침서](../input/index.md)를 참조하세요.
+목록 UI를 만들 때는 먼저 Windows를 지원하는 모든 입력 방법을 고려해야 합니다. 다른 종류의 입력에 대한 자세한 내용은 [입력 지침서](../input/index.md)를 참조하세요.
 
-UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 후에는 앱의 보조 작업이 기본 목록에 바로 가기로 표시될 정도로 중요한지 결정해야 합니다. 표시하는 작업이 많을수록 UI가 복잡해집니다. 보조 작업을 기본 목록 UI에 반드시 표시해야 하는지 아니면 다른 곳에 배치할 수도 있는지 결정합니다.
+Windows에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 후에는 앱의 보조 작업이 기본 목록에 바로 가기로 표시될 정도로 중요한지 결정해야 합니다. 표시하는 작업이 많을수록 UI가 복잡해집니다. 보조 작업을 기본 목록 UI에 반드시 표시해야 하는지 아니면 다른 곳에 배치할 수도 있는지 결정합니다.
 
 항상 모든 입력에서 이러한 작업에 액세스할 수 있어야 하는 경우에는 기본 목록 UI에 추가 작업을 표시할 수 있습니다.
 
@@ -97,7 +97,7 @@ UWP에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인된 
 
 ## <a name="consider-all-inputs"></a>모든 입력 고려
 
-중첩된 UI를 사용할 경우 모든 입력 유형으로 사용자 환경을 평가해야 합니다. 앞서 언급했듯이 중첩된 UI는 몇 가지 입력 유형에서는 올바르게 작동합니다. 그러나 일부 유형에서는 올바르게 작동하지 않을 수 있습니다. 특히 키보드, 컨트롤러 및 원격 입력은 중첩된 UI 요소에 액세스하는 것이 어려울 수 있습니다. UWP가 모든 입력 유형에 대해 올바르게 작동하려면 아래 지침을 따라야 합니다.
+중첩된 UI를 사용할 경우 모든 입력 유형으로 사용자 환경을 평가해야 합니다. 앞서 언급했듯이 중첩된 UI는 몇 가지 입력 유형에서는 올바르게 작동합니다. 그러나 일부 유형에서는 올바르게 작동하지 않을 수 있습니다. 특히 키보드, 컨트롤러 및 원격 입력은 중첩된 UI 요소에 액세스하는 것이 어려울 수 있습니다. Windows가 모든 입력 유형에 대해 올바르게 작동하려면 아래 지침을 따라야 합니다.
 
 ## <a name="nested-ui-handling"></a>중첩된 UI 처리
 

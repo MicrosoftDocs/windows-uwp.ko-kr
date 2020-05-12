@@ -1,16 +1,16 @@
 ---
-Description: UWP 앱에서 양식에 대한 레이아웃 지침
+Description: Windows 앱에서 양식에 대한 레이아웃 지침
 title: 양식
 template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: b6533864748b4245b16ec7bcea9d2a831ff1c88a
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 69ffaf4ff67d4ee78e78c195d759ae242a069e8e
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "76520448"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968514"
 ---
 # <a name="forms"></a>양식
 양식은 사용자가 데이터를 제출할 수 있고 이를 수집할 수 있는 컨트롤 그룹입니다. 일반적으로 양식은 설정 페이지, 설문 조사, 계정 생성 등에 사용됩니다. 
@@ -62,7 +62,7 @@ ms.locfileid: "76520448"
 
 [접근성을 위해 디자인](../accessibility/accessibility.md)하려면 사용자와 화면 읽기 프로그램이 분명히 인식하도록 모든 개별 컨트롤과 컨트롤 그룹에 레이블을 지정하세요. 
 
-글꼴 스타일의 경우 기본 [UWP 유형 램프](../style/typography.md)를 사용합니다. 페이지 제목에는 `TitleTextBlockStyle`을, 그룹 제목에는 `SubtitleTextBlockStyle`을, 컨트롤 레이블에는 `BodyTextBlockStyle`을 사용합니다.
+글꼴 스타일의 경우 기본 [Windows 유형 램프](../style/typography.md)를 사용합니다. 페이지 제목에는 `TitleTextBlockStyle`을, 그룹 제목에는 `SubtitleTextBlockStyle`을, 컨트롤 레이블에는 `BodyTextBlockStyle`을 사용합니다.
 
 <div class="mx-responsive-img">
 <table>
@@ -149,7 +149,7 @@ ms.locfileid: "76520448"
 ### <a name="additional-controls"></a>추가 컨트롤 
 UWP 컨트롤의 전체 목록을 보려면 [기능별 컨트롤 인덱스](controls-by-function.md)를 참조하세요.
 
-더 많은 복합 및 사용자 지정 UI 컨트롤을 알아보려면 [Telerik](https://www.telerik.com/), [SyncFusion](https://www.syncfusion.com/uwp-ui-controls), [DevExpress](https://www.devexpress.com/Products/NET/Controls/Win10Apps/), [Infragistics](https://www.infragistics.com/products/universal-windows-platform), [ComponentOne](https://www.componentone.com/Studio/Platform/UWP) 및 [ActiPro](https://www.actiprosoftware.com/products/controls/universal)와 같은 회사에서 제공되는 UWP 리소스를 확인하세요.
+더 많은 복합 및 사용자 지정 UI 컨트롤을 알아보려면 [Telerik](https://www.telerik.com/), [SyncFusion](https://www.syncfusion.com/uwp-ui-controls), [DevExpress](https://www.devexpress.com/Products/NET/Controls/Win10Apps/), [Infragistics](https://www.infragistics.com/products/universal-windows-platform), [ComponentOne](https://www.componentone.com/Studio/Platform/UWP) 및 [ActiPro](https://www.actiprosoftware.com/products/controls/universal)와 같은 회사에서 제공되는 리소스를 확인하세요.
 
 ## <a name="one-column-form-example"></a>하나의 열 양식 예제
 이 예제에서는 Acrylic [마스터/세부 정보](master-details.md) [목록 보기](lists.md) 및 [NavigationView](navigationview.md) 컨트롤을 사용합니다.

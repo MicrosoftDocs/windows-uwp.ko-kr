@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 08/31/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e9e0a426d51fddaf4ff509438176e9db7a3e474
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 279a02962693d74c8c9ac037c0e3ee08f44a560b
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684128"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969099"
 ---
 # <a name="tutorial-create-custom-styles"></a>자습서: 사용자 지정 스타일 만들기
 
@@ -32,7 +32,7 @@ PhotoLab 앱에는 두 개의 기본 페이지가 있습니다.
 
 ## <a name="part-1-create-a-fancy-slider-control"></a>1부: 멋진 슬라이더 컨트롤 만들기  
 
-UWP(유니버설 Windows 플랫폼)에서는 여러 가지 방법으로 앱 모양을 사용자 지정할 수 있습니다. 글꼴 및 인쇄 설정에서 색상 및 효과를 흐리게 처리하는 그라데이션에 이르기까지 많은 옵션이 있습니다. 
+Windows 앱에서는 여러 가지 방법으로 앱 모양을 사용자 지정할 수 있습니다. 글꼴 및 인쇄 설정에서 색상 및 효과를 흐리게 처리하는 그라데이션에 이르기까지 많은 옵션이 있습니다. 
 
 자습서의 첫 번째 부분에서는 일부 사진 편집 컨트롤을 장식해 보겠습니다. 
 

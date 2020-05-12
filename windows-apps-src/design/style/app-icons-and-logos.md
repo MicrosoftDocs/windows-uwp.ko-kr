@@ -9,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 25d9df392d6ed2725b171fe6513334a39458410b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0ad8b78538a2b047501361072a017658ba152e73
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684593"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971008"
 ---
 # <a name="app-icons-and-logos"></a>앱 아이콘 및 로고 
 
@@ -185,7 +185,7 @@ Visual Studio가 이미지 파일을 생성하여 프로젝트에 추가합니�
 
 Square150x150Logo-scale-100.png, Square150x150Logo-scale-200.png, Square150x150Logo-scale-400.png
 
-Visual Studio는 기본적으로 배지 로고를 생성하지 않습니다. 배지 로고는 고유하며 다른 앱 아이콘과 일치하면 안 되기 때문입니다. 자세한 내용은 [UWP 앱에 대한 배지 알림](/windows/uwp/design/shell/tiles-and-notifications/badges) 문서를 참조하세요. 
+Visual Studio는 기본적으로 배지 로고를 생성하지 않습니다. 배지 로고는 고유하며 다른 앱 아이콘과 일치하면 안 되기 때문입니다. 자세한 내용은 [Windows 앱에 대한 배지 알림 문서](/windows/uwp/design/shell/tiles-and-notifications/badges)를 참조하세요. 
 
 
 ## <a name="more-about-app-icon-assets"></a>앱 아이콘 자산에 대한 자세한 정보
@@ -253,13 +253,13 @@ Windows 작업 표시줄의 아이콘에 나타나는 이러한 자산의 예는
 
 
 ## <a name="more-about-splash-screen-assets"></a>시작 화면 자산에 대한 자세한 정보
-시작 화면에 대한 자세한 내용은 [UWP 시작 화면](/windows/uwp/launch-resume/splash-screens) 문서를 참조하세요.
+시작 화면에 대한 자세한 내용은 [Windows 앱 시작 화면](/windows/uwp/launch-resume/splash-screens)을 참조하세요.
 
 ## <a name="more-about-badge-logo-assets"></a>배지 로고 자산에 대한 자세한 정보
 
 자산 생성기를 사용하여 필요한 모든 자산을 생성하는 경우 자산 생성기가 기본적으로 배지 로고를 생성하지 않는 이유가 있습니다. 배지 로고는 다른 앱 자산과 매우 다릅니다. 배지 로고는 알림 및 앱의 타일에 표시되는 상태 이미지입니다. 
 
-자세한 내용은 [UWP 앱에 대한 배지 알림](/windows/uwp/design/shell/tiles-and-notifications/badges) 문서를 참조하세요.
+자세한 내용은 [Windows 앱에 대한 배지 알림](/windows/uwp/design/shell/tiles-and-notifications/badges)을 참조하세요.
 
 
 ## <a name="customizing-asset-padding"></a>자산 안쪽 여백 사용자 지정

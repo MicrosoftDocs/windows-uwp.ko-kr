@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5782c6e9ba42fed07c2b1382f2d17b1d311d0a13
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c66fc2b07b5ee5ce87b6c1f37657b3eec49f3105
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80893463"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970408"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
@@ -26,7 +26,7 @@ ms.locfileid: "80893463"
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **ItemsRepeater** 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **ItemsRepeater** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
 
 > **Windows UI 라이브러리 API:** [ItemsRepeater 클래스](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)
 >
@@ -774,7 +774,7 @@ public class MyPage : Page
 
 ## <a name="enable-accessibility"></a>접근성 사용
 
-[ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)는 기본 접근성 환경을 제공하지 않습니다. [UWP 앱의 유용성](/windows/uwp/design/usability)에 대한 설명서는 앱에서 포괄적인 사용자 환경을 제공할 수 있도록 풍부한 정보를 제공합니다. ItemsRepeater를 사용하여 사용자 지정 컨트롤을 만드는 경우 [사용자 지정 자동화 피어](/windows/uwp/design/accessibility/custom-automation-peers)에 대한 설명서를 꼭 참조하세요.
+[ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)는 기본 접근성 환경을 제공하지 않습니다. [Windows 앱의 유용성](/windows/uwp/design/usability)에 대한 설명서는 앱에서 포괄적인 사용자 환경을 제공할 수 있도록 풍부한 정보를 제공합니다. ItemsRepeater를 사용하여 사용자 지정 컨트롤을 만드는 경우 [사용자 지정 자동화 피어](/windows/uwp/design/accessibility/custom-automation-peers)에 대한 설명서를 꼭 참조하세요.
 
 ### <a name="keyboarding"></a>키보드
 ItemsRepeater가 제공하는 포커스 이동의 최소 키보드 지원은 XAML의 [키보드용 2D 방향 탐색](/windows/uwp/design/input/focus-navigation#2d-directional-navigation-for-keyboard)을 기반으로 합니다.

@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c08dad36929c7889f1896404df862230040e3499
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 9c35bc6cfcf36543482bcb42d0ccda7fd3102ac9
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "72163711"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970038"
 ---
 # <a name="guidelines-for-app-settings"></a>앱 설정에 대한 지침
 
-앱 설정은 앱 설정 페이지를 통해 UWP(유니버설 Windows 플랫폼) 앱에서 사용자 지정이 가능한 부분입니다. 예를 들어 사용자는 뉴스 리더 앱을 사용하여 표시할 뉴스 소스를 지정하거나 화면에 표시할 칼럼 수를 지정할 수 있는 한편, 날씨 앱의 설정을 사용하여 섭씨 및 화씨 중에서 기본 측정 단위를 선택할 수 있습니다. 이 문서에서는 앱 설정을 만들고 표시하기 위한 권장 사항 및 모범 사례에 대해 설명합니다.
+앱 설정은 앱 설정 페이지를 통해 Windows 앱에서 사용자 지정이 가능한 부분입니다. 예를 들어 사용자는 뉴스 리더 앱을 사용하여 표시할 뉴스 소스를 지정하거나 화면에 표시할 칼럼 수를 지정할 수 있는 한편, 날씨 앱의 설정을 사용하여 섭씨 및 화씨 중에서 기본 측정 단위를 선택할 수 있습니다. 이 문서에서는 앱 설정을 만들고 표시하기 위한 권장 사항 및 모범 사례에 대해 설명합니다.
 
 ## <a name="when-to-provide-a-settings-page"></a>설정 페이지를 제공해야 하는 경우
 
@@ -83,8 +83,8 @@ ms.locfileid: "72163711"
 
 
 앱에서 사용자가 앱의 색 모드를 선택하도록 허용하는 경우, “앱 모드 선택” 헤더와 함께 [라디오 단추](../controls-and-patterns/radio-button.md) 또는 [콤보 상자](../controls-and-patterns/combo-box.md)를 사용하여 이러한 옵션을 표시합니다. 포함할 수 있는 옵션
-- 밝게
-- 어둡게
+- Light
+- Dark
 - Windows 기본값
 
 또한 사용자가 현재 기본 앱 모드에 액세스하여 수정할 수 있도록 Windows 설정 앱의 색 페이지에 하이퍼링크를 추가하는 것이 좋습니다. 하이퍼링크 텍스트에 “Windows 색 설정”이라는 문자열을 사용하십시오.
@@ -125,7 +125,7 @@ Detailed redlines showing preferred text strings for the "Choose a mode" section
 - 앱 설정에 다음 컨트롤을 사용합니다.
 
     - [토글 스위치](../controls-and-patterns/toggles.md): 사용자가 값을 설정하거나 해제할 수 있습니다.
-    - [라디오 단추](../controls-and-patterns/radio-button.md): 사용자가 최대 5개의 상호 배타적인 관련 옵션으로 이루어진 집합에서 한 항목을 선택할 수 있습니다.
+    - [라디오 단추](../controls-and-patterns/radio-button.md): 사용자가 함께 사용할 수 없는 최대 5개의 관련 옵션으로 이루어진 세트에서 한 항목을 선택할 수 있습니다.
     - [텍스트 입력 상자](../controls-and-patterns/text-block.md): 사용자가 텍스트를 입력할 수 있습니다. 메일이나 암호와 같이, 사용자로부터 얻는 텍스트 형식에 해당하는 텍스트 입력 상자 형식을 사용합니다.
     - [하이퍼링크](../controls-and-patterns/hyperlinks.md): 사용자를 앱 내의 다른 페이지나 외부 웹 사이트로 이동합니다. 사용자가 하이퍼링크를 클릭하면 설정 플라이아웃이 해제됩니다.
     - [단추](../controls-and-patterns/buttons.md): 사용자가 현재 설정 플라이아웃을 해제하지 않고 즉각적인 작업을 시작할 수 있습니다.
@@ -138,7 +138,7 @@ Detailed redlines showing preferred text strings for the "Choose a mode" section
 
 
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 * [명령 디자인 기본 사항](https://docs.microsoft.com/windows/uwp/layout/commanding-basics)
 * [진행률 컨트롤에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/progress-controls)

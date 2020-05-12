@@ -1,7 +1,7 @@
 ---
 author: knicholasa
 description: Z-깊이, 즉 상대 깊이와 그림자는 앱에 깊이를 통합하여 자연스럽고 효율적으로 사용자가 집중할 수 있게 하는 두 가지 방법입니다.
-title: UWP 앱의 Z-깊이 및 그림자
+title: Windows 앱의 Z-깊이 및 그림자
 template: detail.hbs
 ms.date: 04/19/2019
 ms.topic: article
@@ -9,18 +9,18 @@ ms.custom: 19H1
 keywords: windows 10, uwp
 pm-contact: chigy
 ms.localizationpriority: medium
-ms.openlocfilehash: 216974ba564a192f94473469f3a7a49191ef2192
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 2655abd69f0f02efada9de5bab22e463c86b5d7e
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081394"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970188"
 ---
 # <a name="z-depth-and-shadow"></a>Z-깊이 및 그림자
 
 ![대각선 방향으로 차례로 누적된 네 개의 회색 사각형을 표시하는 gif입니다. 그림자가 표시되고 사라지도록 gif에 애니메이션 효과가 적용되었습니다.](images/elevation-shadow/shadow.gif)
 
-UI 요소의 시각적 계층 구조를 만들면 UI를 쉽게 검사하고 집중해야 하는 항목을 전달할 수 있습니다. 선택된 UI 요소를 앞으로 가져오는 작업인 승격은 소프트웨어에서 이러한 계층 구조를 구현하는 데 사용되는 경우가 많습니다. 이 문서에서는 Z-깊이와 그림자를 사용하여 UWP 앱에서 승격을 만드는 방법을 설명합니다.
+UI 요소의 시각적 계층 구조를 만들면 UI를 쉽게 검사하고 집중해야 하는 항목을 전달할 수 있습니다. 선택된 UI 요소를 앞으로 가져오는 작업인 승격은 소프트웨어에서 이러한 계층 구조를 구현하는 데 사용되는 경우가 많습니다. 이 문서에서는 Z-깊이와 그림자를 사용하여 Windows 앱에서 승격을 만드는 방법을 설명합니다.
 
 Z-깊이는 z축에서 두 표면 사이의 거리를 나타내기 위해 3D 앱 작성자 간에 사용되는 용어입니다. 개체와 뷰어 사이의 거리를 설명합니다. x/y 좌표와 비슷한 개념으로 생각하면 되지만, 단 z 방향입니다.
 
@@ -32,7 +32,7 @@ Z-깊이는 z축에서 두 표면 사이의 거리를 나타내기 위해 3D 앱
 
 그림자는 사용자가 승격을 인식하는 한 가지 방법입니다. 승격된 개체 위의 빛은 아래 화면에 그림자를 만듭니다. 개체가 높을수록 그림자가 더 크고 부드러워집니다. UI의 승격된 개체에 그림자가 반드시 필요한 것은 아니지만, 그림자는 승격 모양을 만드는 데 도움이 됩니다.
 
-UWP 앱에서는 미적 측면이 아닌 목적 중심으로 그림자를 사용해야 합니다. 그림자를 너무 많이 사용하면 그림자를 통해 사용자가 집중하게 하는 효과가 감소하거나 사라집니다.
+Windows 앱에서는 미적 측면이 아닌 목적 중심으로 그림자를 사용해야 합니다. 그림자를 너무 많이 사용하면 그림자를 통해 사용자가 집중하게 하는 효과가 감소하거나 사라집니다.
 
 표준 컨트롤을 사용하는 경우 ThemeShadow 그림자가 자동으로 UI에 통합됩니다. 그러나 ThemeShadow 또는 DropShadow API를 사용하여 UI에 그림자를 수동으로 포함할 수도 있습니다. 
 

@@ -1,31 +1,31 @@
 ---
 description: 앱에서 입력 체계를 사용하여 사용자가 콘텐츠를 쉽게 이해할 수 있도록 도와주는 방법을 알아보세요.
-title: UWP 앱의 입력 체계
+title: Windows 앱의 입력 체계
 ms.date: 04/06/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: cb2aef514c8787b5afe11ea5a2818012bfdf2f41
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 3a5b6df7a5d8333e0f4834c256a38fc912f8f51e
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "72282407"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970628"
 ---
-# <a name="typography"></a>입력 체계
+# <a name="typography-in-windows-apps"></a>Windows 앱의 입력 체계
 
 ![영웅 이미지](images/header-typography.svg)
 
-언어의 시각적 표현인 입력 체계의 주요 목적은 정보 전달입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 이 문서에서는 사용자가 콘텐츠를 쉽고 효율적으로 이해할 수 있도록 UWP 앱에서 입력 체계 스타일을 지정하는 방법에 대해 설명합니다.
+언어의 시각적 표현인 입력 체계의 주요 목적은 정보 전달입니다. 입력 체계의 스타일이 그 목표를 방해해서는 안 됩니다. 이 문서에서는 사용자가 콘텐츠를 쉽고 효율적으로 이해할 수 있도록 Windows 앱에서 입력 체계 스타일을 지정하는 방법에 대해 설명합니다.
 
 ## <a name="font"></a>글꼴
 
-앱의 UI 전체에서 한 가지 글꼴만 사용해야 하며 UWP 앱의 기본 글꼴인 **Segoe UI**를 계속 사용하는 것이 좋습니다. 크기와 픽셀 밀도에 따라 최적의 가독성을 유지하도록 설계되었으며, 시스템의 콘텐츠를 보완하는 깔끔하고 가볍고 개방적인 디자인을 제공합니다.
+앱의 UI 전체에서 한 가지 글꼴만 사용해야 하며 Windows 앱의 기본 글꼴인 **Segoe UI**를 계속 사용하는 것이 좋습니다. 크기와 픽셀 밀도에 따라 최적의 가독성을 유지하도록 설계되었으며, 시스템의 콘텐츠를 보완하는 깔끔하고 가볍고 개방적인 디자인을 제공합니다.
 
 ![Segoe UI 글꼴의 샘플 텍스트](images/type/segoe-sample.svg)
 
-영어 이외의 언어를 표시하거나 앱의 다른 글꼴을 선택하려면 UWP 앱의 권장 글꼴에서 [언어](#languages) 및 [글꼴](#fonts)을 참조하세요.
+영어 이외의 언어를 표시하거나 앱의 다른 글꼴을 선택하려면 Windows 앱의 권장 글꼴에서 [언어](#languages) 및 [글꼴](#fonts)을 참조하세요.
 
 :::row:::
     :::column:::
@@ -46,7 +46,7 @@ UWP 앱의 글꼴 크기는 모든 디바이스에서 자동으로 조정됩니�
 
 :::row:::
     :::column:::
-![허용](images/do.svg) UWP [유형 램프](#type-ramp) 크기 조정을 따릅니다.
+![허용](images/do.svg) Windows [유형 램프](#type-ramp) 크기 조정을 따릅니다.
     :::column-end:::
     :::column:::
 ![금지](images/dont.svg) 12픽셀보다 작은 글꼴 크기를 사용합니다.
@@ -57,7 +57,7 @@ UWP 앱의 글꼴 크기는 모든 디바이스에서 자동으로 조정됩니�
 
 :::row:::
     :::column:::
-사용자는 페이지를 검색할 때 시각적 계층 구조를 사용합니다. 머리글은 콘텐츠를 요약하고, 본문 텍스트는 자세한 정보를 제공합니다. 앱에서 명확한 시각적 계층 구조를 만들려면 UWP 유형 램프를 따릅니다.
+사용자는 페이지를 검색할 때 시각적 계층 구조를 사용합니다. 머리글은 콘텐츠를 요약하고, 본문 텍스트는 자세한 정보를 제공합니다. 앱에서 명확한 시각적 계층 구조를 만들려면 Windows 유형 램프를 따릅니다.
     :::column-end:::
     :::column:::
 ![텍스트 블록 스타일](images/type/type-hierarchy.svg)
@@ -66,7 +66,7 @@ UWP 앱의 글꼴 크기는 모든 디바이스에서 자동으로 조정됩니�
 
 ### <a name="type-ramp"></a>유형 램프
 
-UWP 유형 램프는 페이지의 유형 스타일 간에 중요한 관계를 설정하므로 사용자가 콘텐츠를 쉽게 읽을 수 있습니다. 모든 크기는 유효 픽셀로 설정되며 모든 디바이스에서 실행되는 UWP 앱에 최적화되어 있습니다.
+Windows 유형 램프는 페이지의 유형 스타일 간에 중요한 관계를 설정하므로 사용자가 콘텐츠를 쉽게 읽을 수 있습니다. 모든 크기는 유효 픽셀로 설정되며 모든 디바이스에서 실행되는 UWP 앱에 최적화되어 있습니다.
 
 ![유형 램프](images/type/type-ramp.png)
 

@@ -1,6 +1,6 @@
 ---
-Description: UWP(유니버설 Windows 플랫폼) API를 사용하여 Windows 10 사용자용 데스크톱 애플리케이션을 개선하세요.
-title: 데스크톱 앱에서 UWP API 사용
+Description: Windows 런타임 API를 사용하여 Windows 10 사용자용 데스크톱 애플리케이션을 개선하세요.
+title: 데스크톱 앱에서 Windows 런타임 API 호출
 ms.date: 08/20/2019
 ms.topic: article
 keywords: windows 10, uwp
@@ -8,24 +8,24 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 78d9760c5ef21b29d09babaace0f4379b6a51209
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 444699c00a17dd90fe4c08c44ff56d540cadb3d6
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75302607"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729865"
 ---
-# <a name="call-uwp-apis-in-desktop-apps"></a>데스크톱 앱에서 UWP API 호출
+# <a name="call-windows-runtime-apis-in-desktop-apps"></a>데스크톱 앱에서 Windows 런타임 API 호출
 
 UWP(유니버설 Windows 플랫폼) API를 사용하여 Windows 10 사용자를 지원하는 최신 경험을 데스크톱 앱에 추가할 수 있습니다.
 
-먼저 필요한 참조를 사용하여 프로젝트를 설정합니다. 그런 다음, 코드에서 UWP API를 호출하여 데스크톱 앱에 Windows 10 환경을 추가합니다. Windows 10 사용자를 위해 별도로 빌드할 수도 있고, 사용자가 실행하는 Windows 버전에 상관없이 모든 사용자에게 동일한 바이너리를 배포할 수도 있습니다.
+먼저 필요한 참조를 사용하여 프로젝트를 설정합니다. 그런 다음, 코드에서 Windows 런타임 API를 호출하여 데스크톱 앱에 Windows 10 환경을 추가합니다. Windows 10 사용자를 위해 별도로 빌드할 수도 있고, 사용자가 실행하는 Windows 버전에 상관없이 모든 사용자에게 동일한 바이너리를 배포할 수도 있습니다.
 
-일부 UWP API는 [패키지 ID](modernize-packaged-apps.md)가 있는 데스크톱 앱에서만 지원됩니다. 자세한 내용은 [사용 가능한 UWP API](desktop-to-uwp-supported-api.md)를 참조하세요.
+일부 Windows 런타임 API는 [패키지 ID](modernize-packaged-apps.md)가 있는 데스크톱 앱에서만 지원됩니다. 자세한 내용은 [사용 가능한 Windows 런타임 API](desktop-to-uwp-supported-api.md)를 참조하세요.
 
 ## <a name="set-up-your-project"></a>프로젝트 설정
 
-프로젝트에서 몇 가지를 변경해야 UWP API를 사용할 수 있습니다.
+프로젝트에서 몇 가지를 변경해야 Windows 런타임 API를 사용할 수 있습니다.
 
 ### <a name="modify-a-net-project-to-use-windows-runtime-apis"></a>Windows 런타임 API를 사용하도록 .NET 프로젝트 수정
 

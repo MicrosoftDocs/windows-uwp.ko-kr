@@ -6,16 +6,16 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 08853a201eff063b49dcc69d5827c9b54e324b75
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5bcc7d45646651cdb60228a3c08123378eedb960
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684876"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970618"
 ---
 # <a name="control-size-and-density"></a>컨트롤 크기 및 밀도
 
-컨트롤 크기와 밀도 조합을 사용하여 UWP(유니버설 Windows 플랫폼) 애플리케이션을 최적화하고 앱의 기능과 상호 작용 요구 사항에 가장 적합한 사용자 환경을 제공할 수 있습니다.
+컨트롤 크기와 밀도 조합을 사용하여 Windows 애플리케이션을 최적화하고 앱의 기능과 상호 작용 요구 사항에 가장 적합한 사용자 환경을 제공할 수 있습니다.
 
 기본적으로 UWP 앱은 저밀도(또는 `Standard`) 레이아웃을 사용하여 렌더링됩니다. 그러나 WinUI 2.1부터는 정보가 많은 UI와 비슷한 특수 시나리오를 위한 고밀도(또는 `Compact`) 레이아웃 옵션도 지원됩니다. 기본 스타일 리소스를 통해 지정할 수 있습니다(아래 예제 참조).
 
@@ -44,7 +44,7 @@ ms.locfileid: "75684876"
 **표준 크기는 터치와 포인터 입력을 모두 수용하도록 설계되었습니다.**
 
 > [!NOTE]
->유효 픽셀과 크기 조정에 대한 자세한 내용은 [UWP 앱 디자인 소개](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)를 참조하세요.
+>유효 픽셀과 크기 조정에 대한 자세한 내용은 [Windows 앱 디자인 소개](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)를 참조하세요.
 >
 > 시스템 수준 크기 조정에 대한 자세한 내용은 [맞춤, 여백, 안쪽 여백](../layout/alignment-margin-padding.md)을 참조하세요.
 
@@ -94,11 +94,11 @@ Windows 10 2018년 10월 업데이트(버전 1809)의 경우 모든 사용 시�
 </Grid>
 ```
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [터치 대상에 대한 지침](../input/guidelines-for-targeting.md)
 - [ResourceDictionary 및 XAML 리소스 참조](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)

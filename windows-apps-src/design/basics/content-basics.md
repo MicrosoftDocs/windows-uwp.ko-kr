@@ -1,6 +1,6 @@
 ---
-Description: UWP 앱에 콘텐츠를 표시하는 일반적인 페이지 패턴과 UI 요소의 개요를 설명합니다.
-title: UWP(유니버설 Windows 플랫폼) 앱용 콘텐츠 디자인 기본 사항
+Description: Windows 앱에 콘텐츠를 표시하는 일반적인 페이지 패턴과 UI 요소의 개요를 설명합니다.
+title: Windows 앱용 콘텐츠 디자인 기본 사항
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
 template: detail.hbs
@@ -9,14 +9,14 @@ ms.date: 12/01/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e5b46223ea7dfa5e43b5a50a04a4c3f31307d49
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: fdb4f21c2837fdc201d9e9847541cfd2bf728468
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63796299"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969348"
 ---
-# <a name="content-design-basics-for-uwp-apps"></a>UWP 앱의 콘텐츠 디자인 기본 사항
+# <a name="content-design-basics-for-windows-apps"></a>Windows 앱용 콘텐츠 디자인 기본 사항
 
 모든 앱의 주요 용도는 콘텐츠에 대한 액세스 권한을 제공하는 것입니다. 앱의 목적이 아주 다양하기 때문에 콘텐츠의 유형도 아주 많습니다. 사진 편집 앱은 사진이 콘텐츠이고, 여행 앱은 여행 목적지에 대한 정보와 지도가 콘텐츠인 식입니다. 
 

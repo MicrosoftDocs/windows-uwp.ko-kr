@@ -9,12 +9,12 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 824476cb098d0ff561fca67497a896586c70b8fb
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 098c46499e65c34e3699b09e137ea94c40590ef7
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75681964"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968009"
 ---
 # <a name="reveal-focus"></a>포커스 표시
 
@@ -168,7 +168,7 @@ FocusPrimaryBrush 속성은 **FocusVisualKind**가 **Reveal**로 설정되어 �
 
 ## <a name="reveal-focus-and-the-fluent-design-system"></a>포커스 표시 및 흐름 디자인 시스템
 
-포커스 표시는 앱에 조명을 추가하는 흐름 디자인 시스템의 구성 요소입니다. 흐름 디자인 시스템 및 기타 구성 요소에 대한 자세한 내용은 [UWP용 흐름 디자인 개요](/windows/apps/fluent-design-system)를 참조하세요.
+포커스 표시는 앱에 조명을 추가하는 흐름 디자인 시스템의 구성 요소입니다. Fluent Design 시스템 및 기타 구성 요소에 대한 자세한 내용은 [Fluent Design 개요](/windows/apps/fluent-design-system)를 참조하세요.
 
 ## <a name="related-articles"></a>관련된 문서
 

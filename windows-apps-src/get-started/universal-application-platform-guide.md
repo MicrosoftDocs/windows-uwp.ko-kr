@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
-ms.openlocfilehash: fdb06581639391c09c445c8497f67af28a8405df
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c9b2c270538ec49a139b88fb1c7eddb92acad10a
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75685010"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730090"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
@@ -152,6 +152,6 @@ UWP(유니버설 Windows 플랫폼) 앱을 빌드하는 경우 용어 “UWP(유
 
 Windows 런타임 및 WinRT API는 Windows API가 진화한 결과입니다. 원래 Windows는 일반적인 C 스타일 Win32 API를 통해 프로그래밍되었습니다. 여기에 COM API(대표적인 예로 [DirectX](https://docs.microsoft.com/windows/desktop/directx)가 있음)가 추가된 것입니다. Windows Forms, WPF, .NET 및 관리형 언어는 Windows 앱을 작성하는 고유한 방법과 고유한 API 기술 버전을 탄생시켰습니다. Windows 런타임은 내부적으로 볼 때 COM의 다음 단계에 해당합니다. 실제 ABI(애플리케이션 이진 인터페이스) 계층에서는 COM의 해당 루트가 표시됩니다. 하지만 Windows 런타임은 유용한 여러 다른 프로그래밍 언어에서 호출할 수 있도록 디자인되었습니다. 또한 해당하는 각 언어에 매우 자연스러운 방식으로 호출할 수 있습니다. 결과적으로, Windows 런타임에는 언어 프로젝션으로 알려져 있는 방식을 통해 액세스할 수 있습니다. C#, Visual Basic, 표준 C++, JavaScript 등으로의 Windows 런타임 언어 프로젝션이 있습니다. 또한 적절하게 패키징할 경우([데스크톱 브리지](/windows/uwp/porting/desktop-to-uwp-root) 참조), 다양한 애플리케이션 모델 중 하나에서 빌드한 앱에서 WinRT API를 호출할 수 있습니다. Win32, .NET, WinForms 및 WPF
 
-물론 UWP 앱에서도 WinRT API를 호출할 수 있습니다. UWP는 Windows 런타임을 기준으로 빌드된 애플리케이션 모델입니다. 기술적으로 UWP 애플리케이션 모델은 세부적인 내용은 공개되지 않을 수 있지만 사용자가 선택한 프로그래밍 언어에 따라 [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication)을 기준으로 빌드됩니다. 이 항목에서 설명하는 것처럼 가치 제안의 관점에서 볼 때, UWP는 사용자가 선택할 경우 Microsoft Store에 게시되고 다양한 디바이스 폼 팩터 중 하나에서 실행될 수 있는 단일 바이너리를 작성하게 됩니다. UWP 앱의 디바이스 연결은 앱을 호출 기능으로 제한하거나 조건부로 호출하는 UWP API 하위 세트에 따라 달라집니다.
+물론 UWP 앱에서도 WinRT API를 호출할 수 있습니다. UWP는 Windows 런타임을 기준으로 빌드된 애플리케이션 모델입니다. 기술적으로 UWP 애플리케이션 모델은 세부적인 내용은 공개되지 않을 수 있지만 사용자가 선택한 프로그래밍 언어에 따라 [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication)을 기준으로 빌드됩니다. 이 항목에서 설명하는 것처럼 가치 제안의 관점에서 볼 때, UWP는 사용자가 선택할 경우 Microsoft Store에 게시되고 다양한 디바이스 폼 팩터 중 하나에서 실행될 수 있는 단일 바이너리를 작성하게 됩니다. UWP 앱의 디바이스 연결은 앱을 호출 기능으로 제한하거나 조건부로 호출하는 Windows 런타임 API 하위 세트에 따라 달라집니다.
 
 다행히 이 섹션에서는 Windows 런타임 API를 기준으로 하는 기술과 유니버설 Windows 플랫폼의 메커니즘 및 비즈니스 가치 간 차이점을 잘 설명하고 있습니다.

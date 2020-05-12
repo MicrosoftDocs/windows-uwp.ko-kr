@@ -1,19 +1,19 @@
 ---
-title: UWP(유니버설 Windows 플랫폼) 앱의 명령
+title: Windows 앱에서 명령
 description: 현재 사용하는 디바이스 및 입력 형식에 관계없이, XamlUICommand 및 StandardUICommand 클래스를 ICommand 인터페이스와 함께 사용하여 다양한 컨트롤 형식에서 명령을 공유하고 관리할 수 있습니다.
 ms.service: ''
 ms.topic: overview
 ms.date: 09/13/2019
-ms.openlocfilehash: 2ad2a84a78006eafcdfa47d1faef533bea2224ff
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 24df2f6c67fe5a501461d5ce5e9c18a147c54672
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81123596"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968768"
 ---
-# <a name="commanding-in-universal-windows-platform-uwp-apps-using-standarduicommand-xamluicommand-and-icommand"></a>StandardUICommand, XamlUICommand 및 ICommand를 사용하는 UWP(유니버설 Windows 플랫폼) 앱의 명령
+# <a name="commanding-in-windows-app-apps-using-standarduicommand-xamluicommand-and-icommand"></a>StandardUICommand, XamlUICommand 및 ICommand를 사용하는 Windows 앱에서 명령
 
-이 토픽에서는 UWP(유니버설 Windows 플랫폼) 애플리케이션의 명령에 대해 설명합니다. 특히, 사용하는 디바이스 및 입력 형식에 관계없이 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 및 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 클래스를 ICommand 인터페이스와 함께 사용하여 다양한 컨트롤 형식에서 명령을 공유하고 관리하는 방법을 살펴보겠습니다.
+이 토픽에서는 Windows 앱 애플리케이션의 명령에 대해 설명합니다. 특히, 사용하는 디바이스 및 입력 형식에 관계없이 [XamlUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.xamluicommand) 및 [StandardUICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.standarduicommand) 클래스를 ICommand 인터페이스와 함께 사용하여 다양한 컨트롤 형식에서 명령을 공유하고 관리하는 방법을 살펴보겠습니다.
 
 ![공유 명령의 일반적인 용도를 나타내는 다이어그램: '즐겨찾기' 명령이 있는 다중 UI 화면](images/commanding/generic-commanding.png)
 
@@ -67,9 +67,9 @@ ms.locfileid: "81123596"
 
 **상황에 맞는 메뉴를 항상 제공** 관련된 모든 상황에 맞는 명령을 기존 상황에 맞는 메뉴 또는 CommandBarFlyout에 포함하는 것이 좋습니다. 둘 다 모든 입력 형식을 지원합니다. 예를 들어 명령이 포인터 가리키기 이벤트 중에만 노출되는 경우에는 터치 전용 디바이스에 사용할 수 없습니다.
 
-## <a name="commands-in-uwp-applications"></a>UWP 애플리케이션의 명령
+## <a name="commands-in-windows-applications"></a>Windows 애플리케이션의 명령
 
-UWP 애플리케이션에서 명령 환경을 공유하고 관리할 수 있는 몇 가지 방법이 있습니다. 클릭 같은 표준 상호 작용에 대한 이벤트 처리기를 코드 숨김에 정의하거나(이 방법은 UI의 복잡성에 따라 매우 비효율적일 수 있음), 표준 상호 작용에 대한 이벤트 수신기를 바인딩하거나, 컨트롤의 Command 속성을 명령 논리를 설명하는 ICommand 구현에 바인딩할 수 있습니다.
+Windows 애플리케이션에서 명령 환경을 공유하고 관리할 수 있는 몇 가지 방법이 있습니다. 클릭 같은 표준 상호 작용에 대한 이벤트 처리기를 코드 숨김에 정의하거나(이 방법은 UI의 복잡성에 따라 매우 비효율적일 수 있음), 표준 상호 작용에 대한 이벤트 수신기를 바인딩하거나, 컨트롤의 Command 속성을 명령 논리를 설명하는 ICommand 구현에 바인딩할 수 있습니다.
 
 코드 중복을 최소화하면서 효율적으로 명령 화면에 풍부하고 포괄적인 사용자 환경을 제공하려면 이 토픽에서 설명하는 명령 바인딩 기능을 사용하는 것이 좋습니다(표준 이벤트 처리는 개별 이벤트 토픽 참조).
 
@@ -614,7 +614,7 @@ private void ListViewSwipeContainer_PointerExited(object sender, PointerRoutedEv
 
 ## <a name="command-experiences-using-the-icommand-interface"></a>ICommand 인터페이스를 사용하는 명령 환경
 
-표준 UWP 컨트롤(단추, 목록, 선택, 일정, 예측 텍스트)은 여러 일반 명령 환경을 위한 기초를 제공합니다. 컨트롤 형식의 전체 목록은 [UWP 앱 컨트롤 및 패턴](index.md)을 참조하세요.
+표준 UWP 컨트롤(단추, 목록, 선택, 일정, 예측 텍스트)은 여러 일반 명령 환경을 위한 기초를 제공합니다. 컨트롤 형식의 전체 목록은 [Windows 앱을 위한 컨트롤 및 패턴](index.md)을 참조하세요.
 
 체계적인 명령 환경을 지원하는 가장 기본적인 방법은 ICommand 인터페이스 구현을 정의하는 것입니다(C++는 [Windows.UI.Xaml.Input.ICommand](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.icommand), C#은 [System.Windows.Input.ICommand](https://docs.microsoft.com/dotnet/api/system.windows.input.icommand)).  이 ICommand 인스턴스를 단추 같은 컨트롤에 바인딩할 수 있습니다.
 
@@ -1087,7 +1087,7 @@ namespace UICommand1
 
 유니버설 Windows 플랫폼은 컨트롤 형식, 디바이스 및 입력 형식에 관계 없이 명령을 공유하고 관리하는 앱을 빌드할 수 있는 강력하고 유연한 명령 시스템을 제공합니다.
 
-UWP 앱의 명령을 만들 때 다음 방법을 사용합니다.
+Windows 앱의 명령을 빌드할 때 다음 방법을 사용합니다.
 
 - XAML/코드 숨김의 이벤트를 수신 대기하고 처리합니다.
 - Click 같은 이벤트 처리 메서드에 바인딩
@@ -1101,7 +1101,7 @@ UWP 앱의 명령을 만들 때 다음 방법을 사용합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[UWP 앱 컨트롤 및 패턴](index.md)
+[Windows 앱을 위한 컨트롤 및 패턴](index.md)
 
 ### <a name="samples"></a>샘플
 

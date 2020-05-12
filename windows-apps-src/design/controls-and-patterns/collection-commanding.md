@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d520f811c9929721bfcb9d1c83fbff6a4891091
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: b97041e305cfaac2a5fe202212741a282dccdb54
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63801188"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968878"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>컬렉션 및 목록에 대한 상황에 맞는 명령
 
@@ -31,7 +31,7 @@ ms.locfileid: "63801188"
 
 ## <a name="creating-commands-for-all-input-types"></a>모든 입력 형식에 대한 명령 만들기
 
-사용자가 [다양한 디바이스와 입력](../devices/index.md)을 사용하여 UWP 앱과 상호 작용할 수 있으므로, 앱은 입력에 관계 없는 상황에 맞는 메뉴와 입력과 관련된 가속기를 통해 명령을 노출해야 합니다. 둘 다 포함하면 사용자가 입력 또는 디바이스 유형에 관계 없이 콘텐츠에 대한 명령을 신속하게 호출할 수 있습니다.
+사용자가 [다양한 디바이스와 입력](../devices/index.md)을 사용하여 Windows 앱과 상호 작용할 수 있으므로, 앱은 입력에 관계 없는 상황에 맞는 메뉴와 입력과 관련된 가속기를 통해 명령을 노출해야 합니다. 둘 다 포함하면 사용자가 입력 또는 디바이스 유형에 관계 없이 콘텐츠에 대한 명령을 신속하게 호출할 수 있습니다.
 
 다음 표에는 몇 가지 일반적인 컬렉션 명령과 이러한 명령을 노출하는 방법이 나와 있습니다. 
 
@@ -445,7 +445,7 @@ private void SwipeItem_Invoked(SwipeItem sender, SwipeItemInvokedEventArgs args)
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
-* 사용자가 모든 유형의 UWP 디바이스에서 모든 명령에 액세스할 수 있게 하세요.
+* 사용자가 모든 유형의 Windows 디바이스에서 모든 명령에 액세스할 수 있게 하세요.
 * 컬렉션 항목에 사용 가능한 모든 명령에 대한 액세스를 제공하는 상황에 맞는 메뉴를 포함하세요. 
 * 자주 사용하는 명령에 대한 입력 가속기를 제공하세요. 
 * [ICommand 인터페이스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)를 사용하여 명령을 구현하세요. 

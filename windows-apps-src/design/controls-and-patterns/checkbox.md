@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b91ca2de98142bf267cc42b56fba14a49a87bb06
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 3fca2695cbb57375964beff0f8a3fd9be603228c
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081238"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968928"
 ---
 # <a name="check-boxes"></a>확인란
 
@@ -29,7 +29,7 @@ ms.locfileid: "80081238"
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤에 대한 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 UWP 앱에 대한 새로운 컨트롤 및 UI 기능을 포함하는 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
 
 > **플랫폼 API:** [CheckBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.CheckBox), [Checked 이벤트](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked), [IsChecked 속성](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked)
 
@@ -89,11 +89,33 @@ checkBox1.Content = "I agree to the terms of service.";
 
 ### <a name="bind-to-ischecked"></a>IsChecked에 바인딩
 
-[IsChecked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked) 속성을 사용하여 확인란을 선택하거나 선택 취소 여부를 결정할 수 있습니다. IsChecked 속성의 값을 다른 이진 값에 바인딩할 수 있습니다. 그러나 IsChecked가 [nullable](https://docs.microsoft.com/dotnet/api/system.nullable-1) 부울 값이므로 값 변환기를 사용하여 부울 값으로 바인딩해야 합니다.
+[IsChecked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked) 속성을 사용하여 확인란을 선택하거나 선택 취소 여부를 결정할 수 있습니다. IsChecked 속성의 값을 다른 이진 값에 바인딩할 수 있습니다.
+그러나 IsChecked가 [nullable](https://docs.microsoft.com/dotnet/api/system.nullable-1) 부울 값이므로 캐스트 또는 값 변환기를 사용하여 부울 속성으로 바인딩해야 합니다. 이는 사용 중인 실제 바인딩 유형에 따라 달라지며 가능한 각 유형에 대한 예제는 아래에서 확인할 수 있습니다. 
 
 이 예제에서는 서비스 약관에 동의하는 확인란의 **IsChecked** 속성을 제출 단추의 [IsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled) 속성으로 바인딩합니다. 제출 단추는 서비스 약관에 동의하는 경우에만 사용할 수 있습니다.
 
-> 참고&nbsp;&nbsp;여기서는 관련 코드만 표시합니다. 데이터 바인딩 및 값 변환기에 대한 자세한 내용은 [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)를 참조하세요.
+#### <a name="using-xbind"></a>x:Bind 사용
+
+> 참고&nbsp;&nbsp;여기서는 관련 코드만 표시합니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)를 참조하세요. 특정 {x:Bind} 정보(예: 캐스팅)는 [여기](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)에서 자세히 설명합니다.
+
+```xaml
+<StackPanel Grid.Column="2" Margin="40">
+    <CheckBox x:Name="termsOfServiceCheckBox" Content="I agree to the terms of service."/>
+    <Button Content="Submit" 
+            IsEnabled="{x:Bind (x:Boolean)termsOfServiceCheckBox.IsChecked, Mode=OneWay}"/>
+</StackPanel>
+```
+
+확인란이 **확정되지 않은** 상태일 수도 있는 경우 바인딩의 [FallbackValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.fallbackvalue) 속성을 사용하여 이 상태를 나타내는 부울 값을 지정합니다. 이 경우 제출 단추도 사용하도록 설정하고 싶지 않습니다.
+
+```xaml
+<Button Content="Submit" 
+        IsEnabled="{x:Bind (x:Boolean)termsOfServiceCheckBox.IsChecked, Mode=OneWay, FallbackValue=False}"/>
+```
+
+#### <a name="using-xbind-or-binding"></a>x:Bind 또는 Binding 사용
+
+> 참고&nbsp;&nbsp;여기서는 {x:Bind} 사용 관련 코드만 표시합니다. {Binding} 예제에서는 {x:Bind}를 {Binding}으로 바꿉니다. 데이터 바인딩, 값 변환기, {x:Bind} 및 {Binding} 태그 확장 간의 차이점에 대한 자세한 내용은 [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)를 참조하세요.
 
 ```xaml
 ...
@@ -110,6 +132,7 @@ checkBox1.Content = "I agree to the terms of service.";
                         Converter={StaticResource NullableBooleanToBooleanConverter}, Mode=OneWay}"/>
 </StackPanel>
 ```
+
 
 ```csharp
 public class NullableBooleanToBooleanConverter : IValueConverter

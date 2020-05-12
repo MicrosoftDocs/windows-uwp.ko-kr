@@ -1,6 +1,6 @@
 ---
-Description: 패키지된 데스크톱 앱은 UWP 앱으로 완전히 전환되지 않았어도 다양한 UWP(유니버설 Windows 플랫폼) API를 사용할 수 있습니다. 이 문서는 패키지된 앱에서 사용할 수 있는 클래스를 나열합니다.
-title: 패키지된 데스크톱 앱에서 사용할 수 있는 UWP API(데스크톱 브리지)
+Description: 패키지된 데스크톱 앱은 UWP 앱으로 완전히 전환되지 않았어도 다양한 Windows 런타임 API를 사용할 수 있습니다. 이 문서는 패키지된 앱에서 사용할 수 있는 클래스를 나열합니다.
+title: 패키지된 데스크톱 앱에서 사용할 수 있는 Windows 런타임 API(데스크톱 브리지)
 ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp
@@ -9,18 +9,18 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 60a735af077d2121868e2613cb0f33e194e4330c
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 68c2427fe6b02385325f0f224cc837912621f6bb
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79209669"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82729858"
 ---
-# <a name="uwp-apis-available-to-desktop-apps"></a>데스크톱 앱에서 사용할 수 있는 UWP API
+# <a name="windows-runtime-apis-available-to-desktop-apps"></a>데스크톱 앱에서 사용할 수 있는 Windows 런타임 API
 
 데스크톱 앱은 UWP 앱으로 완전히 전환되지 않았어도 다양한 UWP(유니버설 Windows 플랫폼) API를 사용할 수 있습니다. 이 문서에는 데스크톱 앱에서 사용할 수 있는 클래스가 나열되어 있습니다.
 
-여러 UWP API를 데스크톱 앱에서 사용하려면 [패키지 ID](modernize-packaged-apps.md)가 필요합니다. 대부분의 UWP API는 패키지 ID가 있는 앱에서 잘 작동합니다. 그러나 일부 기능 영역은 아직 완전히 테스트되지 않았거나 현재 의도한 대로 작동하지 않습니다.
+여러 Windows 런타임 API에는 데스크톱 앱에서 사용할 [패키지 ID](modernize-packaged-apps.md)가 필요합니다. 대부분의 Windows 런타임 API는 패키지 ID가 있는 앱에서 잘 작동합니다. 그러나 일부 기능 영역은 아직 완전히 테스트되지 않았거나 현재 의도한 대로 작동하지 않습니다.
 
 | 기능 영역 | 세부 정보 |
 |--------------|---------|
@@ -45,9 +45,9 @@ ms.locfileid: "79209669"
 
 ## <a name="list-of-apis"></a>API 목록
 
-다음은 데스크톱 앱에서 지원되는 UWP API의 전체 목록입니다. [패키지 ID가 있는 앱에서만 지원되는 API](#new) 또는 [모든 데스크톱 앱에서 지원되는 API](#both)를 볼 수 있습니다.
+다음은 데스크톱 앱에서 지원되는 Windows 런타임 API의 전체 목록입니다. [패키지 ID가 있는 앱에서만 지원되는 API](#new) 또는 [모든 데스크톱 앱에서 지원되는 API](#both)를 볼 수 있습니다.
 
-UWP API를 사용하는 방법에 대한 예제는 GitHub에서 [데스크톱 브리지 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) 및 [UWP(유니버설 Windows 플랫폼) 앱 샘플](https://github.com/Microsoft/Windows-universal-samples)을 참조하세요. Windows용 앱 빌드 블로그 게시물 [Calling Windows 10 APIs From a Desktop Application(데스크톱 애플리케이션에서 Windows 10 API 호출)](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/)을 참조하세요.
+Windows 런타임 API를 사용하는 방법에 대한 예제는 GitHub에서 [데스크톱 브리지 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) 및 [UWP(유니버설 Windows 플랫폼) 앱 샘플](https://github.com/Microsoft/Windows-universal-samples)을 참조하세요. Windows용 앱 빌드 블로그 게시물 [Calling Windows 10 APIs From a Desktop Application(데스크톱 애플리케이션에서 Windows 10 API 호출)](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/)을 참조하세요.
 
 <a id="new" />
 

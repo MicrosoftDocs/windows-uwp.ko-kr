@@ -8,18 +8,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: 892e8e9bdeed562a83e566266a7391e9c24b2ad3
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 848d682b2672e1a397e3ac867ae981c707873e8e
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081733"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970418"
 ---
 # <a name="inking-controls"></a>잉크 입력 컨트롤
 
 
 
-UWP(유니버설 Windows 플랫폼) 앱에서 수동 입력을 간편하게 하는 두 가지 컨트롤은 [InkCanvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) 및 [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)입니다.
+Windows 앱에서 수동 입력을 간편하게 하는 두 가지 컨트롤은 [InkCanvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) 및 [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)입니다.
 
 InkCanvas 컨트롤은 펜 입력을 잉크 스트로크(색과 두께에 기본 설정 사용) 또는 지우기 스트로크로 렌더링합니다. 이 컨트롤은 기본 잉크 스트로크 속성을 변경하기 위한 기본 제공 UI를 포함하지 않는 투명 오버레이입니다.
 
@@ -84,7 +84,7 @@ InkCanvas 및 InkToolbar는 **Windows Ink 작업 영역**의 **스케치북**과
 ```
 
 > [!NOTE]
-> InkPresenter를 사용한 InkCanvas 사용자 지정에 대한 자세한 내용은 [“UWP 앱의 펜 조작 및 Windows Ink”](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions) 문서를 참조하세요.
+> InkPresenter를 사용한 InkCanvas 사용자 지정에 대한 자세한 내용은 [“Windows 앱의 펜 조작 및 Windows Ink”](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions) 문서를 참조하세요.
 
 InkToolbar 컨트롤은 InkCanvas와 함께 사용해야 합니다. InkToolbar(모든 기본 제공 도구 포함)를 앱에 통합하려면 다음과 같은 한 줄의 태그가 추가로 필요합니다.
 
@@ -170,6 +170,6 @@ InkToolbar는 최상위 항목일 수 있지만 일반적으로 "수동 입력" 
 
 ## <a name="related-articles"></a>관련된 문서
 
-- [UWP 앱의 펜 조작 및 Windows Ink](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions)
+- [Windows 앱의 펜 조작 및 Windows Ink](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions)
 - [Windows Ink 스트로크를 텍스트 및 셰이프로 인식](https://docs.microsoft.com/windows/uwp/design/input/convert-ink-to-text)
 - [Windows Ink 스트로크 데이터 저장 및 검색](https://docs.microsoft.com/windows/uwp/design/input/save-and-load-ink)

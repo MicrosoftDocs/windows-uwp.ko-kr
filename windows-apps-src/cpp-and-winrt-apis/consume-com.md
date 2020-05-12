@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, COM, 구성 요소, 클래스, 인터페이스
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a286056fc0c44d01482e23e52df0fa80eca0515
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.openlocfilehash: 1b6ce3ce56b4afbf4c45b406c8af369bee4b55bb
+ms.sourcegitcommit: 2dbf4a3f3473c1d3a0ad988bcbae6e75dfee3640
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80218523"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619327"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>C++/WinRT를 통한 COM 구성 요소 사용
 
@@ -127,7 +127,13 @@ winrt::check_hresult(D2D1CreateFactory(
 
 ## <a name="com-functions-that-take-an-iunknown-interface-pointer"></a>**IUnknown** 인터페이스 포인터를 사용하는 COM 함수
 
-[**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) 프리 함수를 호출하여 **IUnknown** 인터페이스 포인터를 사용하는 함수에 **com_ptr**을 전달할 수 있습니다. 코드 예제는 해당 항목을 참조하세요.
+[**com_ptr::get**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrget-function)을 사용하여 **IUnknown** 인터페이스 포인터를 사용하는 함수에 **com_ptr**을 전달할 수 있습니다.
+
+[**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) 프리 함수를 사용하여 프로젝션된 형식의 개체에 대한 기본 원시 [IUnknown 인터페이스](/windows/win32/api/unknwn/nn-unknwn-iunknown)의 주소(즉, 포인터)를 반환할 수 있습니다. 그런 다음, **IUnknown** 인터페이스 포인터를 사용하는 함수에 해당 주소를 전달할 수 있습니다.
+
+*프로젝션된 형식*에 대한 자세한 내용은 [C++/WinRT를 통한 API 사용](/windows/uwp/cpp-and-winrt-apis/consume-apis)을 참조하세요.
+
+**get_unknown**에 대한 코드 예제는 이 항목의 [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) 또는 [최소 Direct2D 애플리케이션의 전체 소스 코드 목록](/windows/uwp/cpp-and-winrt-apis/consume-com#full-source-code-listing-of-a-minimal-direct2d-application)을 참조하세요.
 
 ## <a name="passing-and-returning-com-smart-pointers"></a>COM 스마트 포인터 전달 및 반환
 

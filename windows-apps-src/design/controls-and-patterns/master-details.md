@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b7c21e5e6305c7b2941b46db562c93da0fdfe39
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 5ae8094ac3fbb1de8958b1cc138953d3e1b887cc
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684381"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970388"
 ---
 # <a name="masterdetails-pattern"></a>마스터/세부 정보 패턴
 
@@ -24,6 +24,9 @@ ms.locfileid: "75684381"
 > **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [SplitView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![마스터/세부 정보 패턴의 예](images/HIGSecOne_MasterDetail.png)
+
+> [!TIP]
+> 이 패턴을 구현하는 XAML 컨트롤을 사용하려면 Windows Community Toolkit의 [MasterDetailsView XAML 컨트롤](/windows/communitytoolkit/controls/masterdetailsview)을 사용하는 것이 좋습니다.
 
 ## <a name="is-this-the-right-pattern"></a>올바른 패턴인가요?
 
@@ -61,7 +64,7 @@ ms.locfileid: "75684381"
 
 세부 정보 보기 페이지의 경우 가장 적합한 [콘텐츠 요소](../layout/layout-panels.md)를 사용합니다. 별도의 필드가 많은 경우 **그리드** 레이아웃을 사용하여 요소를 양식에 정렬하는 것이 좋습니다.
 
-페이지 간의 탐색에 대한 내용은 [UWP 앱의 탐색 기록 및 뒤로 탐색](../basics/navigation-history-and-backwards-navigation.md)을 참조하세요.
+페이지 간의 탐색은 [Windows 앱의 탐색 기록 및 뒤로 탐색](../basics/navigation-history-and-backwards-navigation.md)을 참조하세요.
 
 ## <a name="side-by-side-style"></a>가로 정렬 스타일
 
@@ -98,6 +101,9 @@ ms.locfileid: "75684381"
 - [Windows Template Studio 마스터/세부 정보 샘플](https://github.com/Microsoft/WindowsTemplateStudio/tree/master/templates/Uwp/Pages/MasterDetail)
 - [고객 주문 데이터베이스 샘플](https://github.com/Microsoft/Windows-appsample-customers-orders-database)
 - [RSS 수집기 샘플](https://github.com/Microsoft/Windows-appsample-rssreader)
+
+> [!TIP]
+> 이 패턴을 구현하는 XAML 컨트롤을 사용하려면 Windows Community Toolkit의 [MasterDetailsView XAML 컨트롤](/windows/communitytoolkit/controls/masterdetailsview)을 사용하는 것이 좋습니다.
 
 ## <a name="related-articles"></a>관련된 문서
 

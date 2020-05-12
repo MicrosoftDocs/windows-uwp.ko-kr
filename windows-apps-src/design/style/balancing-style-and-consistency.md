@@ -1,17 +1,17 @@
 ---
 description: 독창성과 창의성을 보여주는 일관적이고 유용한 앱을 만드는 팁입니다.
-title: 스타일과 일관성 사이의 적절한 균형 유지(UWP 앱 디자인)
+title: 스타일과 일관성 사이의 적절한 균형 유지(Windows 앱 디자인)
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ecb511fad1aa4e1605d83090a5e4e8d98efff1be
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0972fcdaba2ed8c1a9a7b3f297302b0b90184bc2
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63790644"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970478"
 ---
 # <a name="balancing-style-and-consistency"></a>스타일과 일관성 사이의 적절한 균형 유지
 

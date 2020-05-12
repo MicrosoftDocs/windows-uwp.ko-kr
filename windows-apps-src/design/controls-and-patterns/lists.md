@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 75bc81f4295fb76f5a7cc61b3cadd1496f57dc4c
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 9896003fb1d55a2dbb57468848edd66a3d8d8d88
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80893483"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970398"
 ---
 # <a name="collections-and-lists"></a>컬렉션 및 목록
 
@@ -41,7 +41,7 @@ ms.locfileid: "80893483"
 
 이 문서에서 다루지 않는 시나리오 중 하나는 테이블 또는 여러 열에 컬렉션을 표시하는 것입니다. 컬렉션을 이 형식으로 표시하려는 경우 [Windows 커뮤니티 도구 키트](https://docs.microsoft.com/windows/communitytoolkit/)의 [DataGrid 컨트롤](https://docs.microsoft.com/windows/communitytoolkit/controls/datagrid)을 사용하는 것이 좋습니다. 
 
-> **Windows 10 Fall Creators Update - 동작 변경 사항** 이제 기본적으로 선택을 수행하는 대신 터치, 터치패드, 패시브 펜 등의 활성 펜이 UWP 앱의 목록을 스크롤/이동합니다.
+> **Windows 10 Fall Creators Update - 동작 변경 사항** 이제 기본적으로 선택을 수행하는 대신 터치, 터치패드, 패시브 펜 등의 활성 펜이 Windows 앱의 목록을 스크롤/이동합니다.
 > 앱이 이전 동작을 사용하는 경우 펜 스크롤을 재정의하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 [Scroll Viewer 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer)에 대한 API 참조 항목을 참조하세요.
 
 ## <a name="examples"></a>예

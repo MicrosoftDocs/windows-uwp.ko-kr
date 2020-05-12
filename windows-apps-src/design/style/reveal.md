@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 63a7ee8550b72356199645f54b587480275c2bcd
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 26e756b52d4faf18eff2fc684c7db94bca058642
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75685079"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82971078"
 ---
 # <a name="reveal-highlight"></a>강조 표시
 
@@ -282,7 +282,7 @@ ms.locfileid: "75685079"
 
 ## <a name="reveal-and-the-fluent-design-system"></a>표시 및 흐름 디자인 시스템
 
- 흐름 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질, 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 표시는 앱에 조명을 추가하는 흐름 디자인 시스템의 구성 요소입니다. 자세한 내용은 [UWP용 흐름 디자인 개요](/windows/apps/fluent-design-system)를 참조하세요.
+ 흐름 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질, 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 표시는 앱에 조명을 추가하는 흐름 디자인 시스템의 구성 요소입니다. 자세한 내용은 [Fluent Design 개요](/windows/apps/fluent-design-system)를 참조하세요.
 
 ## <a name="related-articles"></a>관련된 문서
 

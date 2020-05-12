@@ -1,18 +1,18 @@
 ---
-description: UWP 앱에서 테마 컬러 및 테마를 사용하는 방법을 알아봅니다.
-title: UWP 앱의 색
+description: Windows 앱에서 테마 컬러 및 테마를 사용하는 방법을 알아봅니다.
+title: Windows 앱의 색
 ms.date: 04/07/2019
 ms.topic: article
 keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7ab504657ae5e3142eb7db1d9517a013e9aaf5f3
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: f5e103b7661c53fb70561dd1bd654188be2704ff
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684578"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970768"
 ---
 # <a name="color"></a>색
 
@@ -20,7 +20,7 @@ ms.locfileid: "75684578"
 
 색은 앱의 사용자에게 정보를 전달하는 직관적인 방법입니다. 대화형 작업을 나타내거나 사용자 작업에 대한 피드백을 제공하고 인터페이스에 시각적 연속성을 부여하는 데 사용할 수 있습니다.
 
-UWP 앱에서 색은 주로 테마 컬러와 테마로 결정됩니다. 이 문서에서는 앱에서 색을 사용하는 방법과 테마 컬러 및 테마 리소스를 통해 모든 테마 컨텍스트에서 UWP 앱을 사용할 수 있도록 하는 방법을 설명합니다.
+Windows 앱에서 색은 주로 테마 컬러와 테마로 결정됩니다. 이 문서에서는 앱에서 색을 사용하는 방법과 테마 컬러 및 테마 리소스를 통해 모든 테마 컨텍스트에서 Windows 앱을 사용할 수 있도록 하는 방법을 설명합니다.
 
 ## <a name="color-principles"></a>색의 원칙
 
@@ -48,7 +48,7 @@ Windows에서 사용자는 자신의 환경 전체에 반영되는 테마 컬러
 
 ## <a name="themes"></a>테마
 
-UWP 앱은 밝거나 어두운 애플리케이션 테마를 사용할 수 있습니다. 이 테마는 앱의 배경, 텍스트, 아이콘, [공용 컨트롤](../controls-and-patterns/index.md)에 영향을 줍니다.
+Windows 앱은 밝거나 어두운 애플리케이션 테마를 사용할 수 있습니다. 이 테마는 앱의 배경, 텍스트, 아이콘, [공용 컨트롤](../controls-and-patterns/index.md)에 영향을 줍니다.
 
 ### <a name="light-theme"></a>밝은 테마
 
@@ -58,7 +58,7 @@ UWP 앱은 밝거나 어두운 애플리케이션 테마를 사용할 수 있습
 
 ![어두운 테마](images/color/dark-theme.svg)
 
-기본적으로 UWP 앱의 테마는 Windows 설정의 사용자 테마 기본 설정이거나 디바이스의 기본 테마(예: XBox의 어두운 색)입니다. 하지만 UWP 앱의 테마를 설정할 수 있습니다.
+기본적으로 Windows 앱의 테마는 Windows 설정의 사용자 테마 기본 설정이거나 디바이스의 기본 테마(예: XBox의 어두운 색)입니다. 하지만 사용자가 Windows 앱의 테마를 설정할 수 있습니다.
 
 ### <a name="changing-the-theme"></a>테마 변경
 

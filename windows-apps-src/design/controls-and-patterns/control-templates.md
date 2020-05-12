@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f5d0c2f5c5aa6c5d5bfcaee8e9b0ec14bbcd4ff3
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8ed4515a90df50a1ff8c0d6b82eb8cda5a4a78c9
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71339375"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968748"
 ---
 # <a name="control-templates"></a>컨트롤 템플릿
 
@@ -186,7 +186,7 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 
 ## <a name="controls-and-accessibility"></a>컨트롤 및 접근성
 
-컨트롤에 대한 새 템플릿을 만들 때 컨트롤의 동작 및 시각적 모양을 변경하는 것 외에 컨트롤이 접근성 프레임워크에 표시되는 방법도 변경할 수 있습니다. UWP(유니버설 Windows 플랫폼)는 접근성을 위한 Microsoft UI 자동화 프레임워크를 지원합니다. 모든 기본 컨트롤과 해당 템플릿은 컨트롤의 용도 및 기능에 적합한 일반 UI 자동화 컨트롤 유형 및 패턴을 지원합니다. 이러한 컨트롤 유형 및 패턴은 보조 기술 등의 UI 자동화 클라이언트에 의해 해석되며 이를 통해 액세스 가능한 더 큰 앱 UI의 일부로 컨트롤에 액세스할 수 있습니다.
+컨트롤에 대한 새 템플릿을 만들 때 컨트롤의 동작 및 시각적 모양을 변경하는 것 외에 컨트롤이 접근성 프레임워크에 표시되는 방법도 변경할 수 있습니다. Windows 앱은 접근성을 위한 Microsoft UI 자동화 프레임워크를 지원합니다. 모든 기본 컨트롤과 해당 템플릿은 컨트롤의 용도 및 기능에 적합한 일반 UI 자동화 컨트롤 유형 및 패턴을 지원합니다. 이러한 컨트롤 유형 및 패턴은 보조 기술 등의 UI 자동화 클라이언트에 의해 해석되며 이를 통해 액세스 가능한 더 큰 앱 UI의 일부로 컨트롤에 액세스할 수 있습니다.
 
 기본 컨트롤 논리를 구분하고 또한 UI 자동화의 일부 아키텍처 요구 사항을 충족시키기 위해 컨트롤 클래스에는 별도의 클래스인 자동화 피어에 대한 접근성 지원이 포함되어 있습니다. 보조 기술이 단추의 작업을 호출하도록 하는 등의 기능이 가능하도록 자동화 피어는 일부 명명된 부분이 템플릿에 있을 것으로 기대하므로 때때로 컨트롤 템플릿과 상호 작용합니다.
 

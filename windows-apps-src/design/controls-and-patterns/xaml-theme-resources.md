@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f2097a35d87594251ed2c0a04be06ccdb705902f
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: fc05ce50c19a04d5b90d225746c9af6569f49bd3
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80249857"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970438"
 ---
 # <a name="xaml-theme-resources"></a>XAML 테마 리소스
 
@@ -57,7 +57,7 @@ Windows 런타임은 런타임 조회를 위해 이러한 물리적 파일을 �
 
 "밝게", "어둡게" 및 "고대비" 테마에 대한 결합된 색 집합이 XAML의 *Windows 색 램프*를 구성합니다. 시스템 테마를 수정하거나 고유한 XAML 요소에 시스템 테마를 적용하려면 색 리소스의 구성 방식을 이해해야 합니다.
 
-UWP 앱에 색을 적용하는 방법에 대한 자세한 내용은 [UWP 앱의 색](../style/color.md)을 참조하세요.
+Windows 앱에 색을 적용하는 방법에 대한 자세한 내용은 [Windows 앱의 색](../style/color.md)을 참조하세요.
 
 ### <a name="light-and-dark-theme-colors"></a>밝게 및 어둡게 테마 색
 
@@ -147,7 +147,7 @@ XAML 프레임워크는 "밝게" 및 "어둡게" 테마에 맞게 조정된 값�
 
 ### <a name="windows-system-high-contrast-colors"></a>Windows 시스템 고대비 색
 
-XAML 프레임워크에서 제공하는 리소스 집합 외에, Windows 시스템 팔레트에서 가져온 색 값 집합이 있습니다. 이러한 색은 Windows 런타임 또는 UWP(유니버설 Windows 플랫폼) 앱에만 국한되지 않습니다. 그러나 색상 시스템이 "고대비" 테마를 사용하여 작동되고 앱이 실행될 때 많은 XAML [Brush](/uwp/api/Windows.UI.Xaml.Media.Brush) 리소스가 이러한 색을 사용합니다. XAML 프레임워크는 이러한 시스템 수준 색을 키 입력 리소스로 제공합니다. 키는 다음과 같은 이름 지정 형식을 따릅니다. `SystemColor[name]Color`
+XAML 프레임워크에서 제공하는 리소스 집합 외에, Windows 시스템 팔레트에서 가져온 색 값 집합이 있습니다. 이러한 색은 Windows 런타임 또는 Windows 앱에만 국한되지 않습니다. 그러나 색상 시스템이 "고대비" 테마를 사용하여 작동되고 앱이 실행될 때 많은 XAML [Brush](/uwp/api/Windows.UI.Xaml.Media.Brush) 리소스가 이러한 색을 사용합니다. XAML 프레임워크는 이러한 시스템 수준 색을 키 입력 리소스로 제공합니다. 키는 다음과 같은 이름 지정 형식을 따릅니다. `SystemColor[name]Color`
 
 다음 표에서는 XAML이 제공하는 시스템 수준 색을 Windows 시스템 팔레트에서 가져온 리소스 개체로 표시합니다. "접근성 이름" 열에는 Windows 설정 UI에서 색 레이블이 지정되는 방식이 표시됩니다. "간단한 고대비 이름" 열은 일반적인 XAML 컨트롤에서 색이 적용되는 방식을 한 단어로 나타냅니다. 이 설명은 뒷부분에서 설명되는 브러시 이름 지정 규칙의 일부로 사용됩니다. "초기 기본값" 열에는 시스템이 고대비에서 실행 중이 아닐 경우 얻게 되는 값이 표시됩니다.
 
@@ -224,7 +224,7 @@ themeresources.xaml 파일은 UI의 텍스트 컨테이너, 특히 [TextBlock](h
 <TextBlock Text="Caption" Style="{StaticResource CaptionTextBlockStyle}"/>
 ```
 
-앱에서 UWP 유형 램프를 사용하는 방법에 대한 자세한 내용은 [UWP 앱의 입력 체계](../style/typography.md)를 참조하세요.
+앱에서 Windows 유형 램프를 사용하는 방법에 대한 지침은 [Windows 앱의 입력 체계](../style/typography.md)를 참조하세요.
 
 ### <a name="basetextblockstyle"></a>BaseTextBlockStyle
 

@@ -9,16 +9,16 @@ design-contact: tbd
 dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
-ms.openlocfilehash: 36c8c6248b356bbb17da72b53b0480a27999b875
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 274481b2a282b025a637f7f6cc54dc0161c3e61d
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74257691"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968758"
 ---
 # <a name="contact-card"></a>연락처 카드
 
-연락처 카드는 [연락처](/uwp/api/Windows.ApplicationModel.Contacts.Contact)(UWP가 사용자와 회사를 나타내기 위해 사용하는 메커니즘)에 이름, 전화 번호, 주소 등의 연락처 정보를 표시합니다.  또한 연락처 카드는 사용자가 연락처 정보를 편집할 수 있게 해줍니다. 간략한 연락처 카드를 표시할 것인지, 추가 정보가 포함된 전체 연락처 카드를 표시할 것인지 선택할 수 있습니다.
+연락처 카드는 [연락처](/uwp/api/Windows.ApplicationModel.Contacts.Contact)(Windows가 사용자와 회사를 나타내기 위해 사용하는 메커니즘)에 이름, 전화 번호, 주소 등의 연락처 정보를 표시합니다.  또한 연락처 카드는 사용자가 연락처 정보를 편집할 수 있게 해줍니다. 간략한 연락처 카드를 표시할 것인지, 추가 정보가 포함된 전체 연락처 카드를 표시할 것인지 선택할 수 있습니다.
 
 > **중요 API**: [ShowContactCard 메서드](/uwp/api/windows.applicationmodel.contacts.contactmanager.showcontactcard),  [ShowFullContactCard 메서드](/uwp/api/windows.applicationmodel.contacts.contactmanager.showfullcontactcard), [IsShowContactCardSupported 메서드](/uwp/api/windows.applicationmodel.contacts.contactmanager.IsShowContactCardSupported), [Contact 클래스](/uwp/api/Windows.ApplicationModel.Contacts.Contact)  
 

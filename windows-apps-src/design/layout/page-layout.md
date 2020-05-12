@@ -1,29 +1,29 @@
 ---
-title: UWP 앱의 페이지 레이아웃
-description: 앱을 디자인할 때 가장 먼저 고려해야 할 사항은 레이아웃 구조입니다. 이 문서에서는 필요한 UI 요소와 페이지에서 이러한 요소를 배치할 위치를 비롯하여 기본 페이지 레이아웃의 공통 구조를 다룹니다. UWP 앱에서 각 페이지에는 일반적으로 탐색, 명령 및 콘텐츠 요소가 있습니다.
+title: Windows 앱용 페이지 레이아웃
+description: 앱을 디자인할 때 가장 먼저 고려해야 할 사항은 레이아웃 구조입니다. 이 문서에서는 필요한 UI 요소와 페이지에서 이러한 요소를 배치할 위치를 비롯하여 기본 페이지 레이아웃의 공통 구조를 다룹니다. Windows 앱에서 각 페이지에는 일반적으로 탐색, 명령 및 콘텐츠 요소가 있습니다.
 ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 localizationpriority: medium
-ms.openlocfilehash: 7333cebc945715412e3ff1140ca26e1ed5368704
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 3dbdf8d006472c288369fd528e89663aca5a9e10
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684542"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970888"
 ---
 # <a name="page-layout"></a>페이지 레이아웃
 
-UWP 앱에서 각 [**페이지**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page)에는 일반적으로 탐색, 명령 및 콘텐츠 요소가 있습니다. 
+Windows 앱에서 각 [**페이지**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page)에는 일반적으로 탐색, 명령 및 콘텐츠 요소가 있습니다. 
 
-앱에 여러 페이지를 포함할 수 있습니다. 사용자가 UWP 앱을 시작하면 애플리케이션에서는 애플리케이션의 [**창**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) 내부에 배치할 [**프레임**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)을 만듭니다. 그러면 이 프레임은 애플리케이션의 [**페이지**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) 인스턴스 간에 [탐색](../basics/navigate-between-two-pages.md)할 수 있습니다. 
+앱에 여러 페이지를 포함할 수 있습니다. 사용자가 Windows 앱을 시작하면 애플리케이션 코드는 애플리케이션의 [**창**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) 내부에 배치할 [**프레임**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)을 만듭니다. 그러면 이 프레임은 애플리케이션의 [**페이지**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) 인스턴스 간에 [탐색](../basics/navigate-between-two-pages.md)할 수 있습니다. 
 
 대부분의 페이지는 공통 레이아웃 구조를 따르며, 이 문서에서는 필요한 UI 요소와 페이지에서 이러한 요소를 배치할 위치를 다룹니다. 
 
 ![페이지 구조](images/page-components.svg)
 
 ## <a name="navigation"></a>탐색
-앱 레이아웃의 첫 번째 단계는 사용자가 앱의 페이지 간에 이동하는 방법을 정의하는 탐색 모델을 선택하는 것입니다. 이 문서에서는 두 가지 일반적인 탐색 패턴인 왼쪽 탐색과 위쪽 탐색에 대해 설명합니다. 다른 탐색 옵션 선택에 대한 지침은 [UWP 앱의 탐색 디자인 기본 사항](../basics/navigation-basics.md)을 참조하세요.
+앱 레이아웃의 첫 번째 단계는 사용자가 앱의 페이지 간에 이동하는 방법을 정의하는 탐색 모델을 선택하는 것입니다. 이 문서에서는 두 가지 일반적인 탐색 패턴인 왼쪽 탐색과 위쪽 탐색에 대해 설명합니다. 다른 탐색 옵션 선택에 대한 지침은 [Windows 앱의 탐색 디자인 기본 사항](../basics/navigation-basics.md)을 참조하세요.
 
 ![위쪽 및 왼쪽 탐색 패턴](images/top-left-nav.svg)
 
@@ -91,7 +91,7 @@ UWP 앱에서 각 [**페이지**](https://docs.microsoft.com/uwp/api/Windows.UI.
 [양식](../controls-and-patterns/forms.md)은 사용자의 데이터를 수집하고 제출할 수 있는 컨트롤 그룹입니다. 전부 그런 것은 아니지만 대부분의 앱은 페이지 설정과 포털 로그인, 피드백 허브, 계정 생성 등의 프로세스에 양식을 사용합니다. 
 
 ## <a name="sample-apps"></a>방법
-이러한 패턴을 구현하는 방법을 보려면 [UWP 샘플 앱](https://developer.microsoft.com/windows/samples)을 확인하세요.
+이러한 패턴을 구현하는 방법을 보려면 [Windows 샘플 앱](https://developer.microsoft.com/windows/samples)을 확인하세요.
 - [BuildCast 비디오 플레이어](https://github.com/Microsoft/BuildCast)
 - [Lunch Scheduler](https://github.com/Microsoft/Windows-appsample-lunch-scheduler)
 - [Coloring Book](https://github.com/Microsoft/Windows-appsample-coloringbook)

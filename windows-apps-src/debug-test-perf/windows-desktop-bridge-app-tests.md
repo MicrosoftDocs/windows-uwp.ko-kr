@@ -6,12 +6,12 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: c7ffd500f3b616367ac26dffbbfc03d43b507dac
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 37c382fb81a4527b730840142643ff72b9020127
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77089409"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730289"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Windows 데스크톱 브리지 앱 테스트
 
@@ -37,7 +37,7 @@ Windows 데스크톱 브리지 앱의 선택적 테스트는 정보만을 제공
 이 테스트는 패키지 레지스트리를 검색하여 파일 연결 동사가 등록되어 있는지 검사합니다. 
 
 **테스트 정보**  
-광범위한 유니버설 Windows 플랫폼 API를 사용하여 변환된 데스크톱 앱을 향상시킬 수 있습니다. 이 테스트는 앱의 UWP 바이너리에서 비-UWP API를 호출하지 않는지 검사합니다. UWP 바이너리에는 **AppContainer** 플래그 설정이 있습니다.
+광범위한 Windows 런타임 API를 사용하여 변환된 데스크톱 앱을 향상시킬 수 있습니다. 이 테스트는 앱의 UWP 바이너리에서 비-Windows 런타임 API를 호출하지 않는지 검사합니다. UWP 바이너리에는 **AppContainer** 플래그 설정이 있습니다.
 
 **수정 작업**  
 [데스크톱-UWP 브리지: 앱 확장](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions)에서 이러한 확장에 대한 설명 및 적절히 사용하는 방법을 확인할 수 있습니다. 

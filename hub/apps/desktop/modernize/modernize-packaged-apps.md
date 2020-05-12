@@ -8,25 +8,25 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ec1c56f205b270262f618ffb46db16b38276975d
-ms.sourcegitcommit: d7eccdb27c22bccac65bd014e62b6572a6b44602
+ms.openlocfilehash: 1930d879177bc9282a3b55d019aa2bef7eb8f120
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142516"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730088"
 ---
 # <a name="features-that-require-package-identity"></a>패키지 ID가 필요한 기능
 
 [최신 Windows 10 환경](index.md)으로 데스크톱 앱을 업데이트하려는 경우 [패키지 ID](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity)가 있는 데스크톱 앱에서만 많은 기능을 사용할 수 있습니다. 데스크톱 앱에 패키지 ID를 부여하는 방법에는 여러 가지가 있습니다.
 
 * [MSIX 패키지](/windows/msix/desktop/desktop-to-uwp-root)에 패키지합니다. MSIX는 모든 Windows 앱, WPF, Windows Forms 및 Win32 앱에 유니버설 패키징 환경을 제공하는 최신 앱 패키지 형식입니다. 강력한 설치 및 업데이트 환경, 유연한 기능 시스템을 갖춘 관리형 보안 모듈, Microsoft Store, 엔터프라이즈 관리 및 여러 사용자 지정 모델에 대한 지원 기능을 제공합니다. 자세한 내용은 MSIX 설명서의 [데스크톱 애플리케이션 패키지](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root)를 참조하세요.
-* 데스크톱 앱을 배포하기 위해 MSIX 패키지를 채택할 수 없는 경우 Windows 10 Insider Preview 빌드 10.0.19000.0부터 패키지 매니페스트만 포함된 *스파스 MSIX 패키지*를 만들어 패키지 ID를 부여할 수 있습니다. 자세한 내용은 [패키지되지 않은 데스크톱 앱에 ID 부여](grant-identity-to-nonpackaged-apps.md)를 참조하세요.
+* 데스크톱 앱을 배포하기 위해 MSIX 패키지를 채택할 수 없는 경우 Windows 10 버전 2004부터 패키지 매니페스트만 포함된 *스파스 MSIX 패키지*를 만들어 패키지 ID를 부여할 수 있습니다. 자세한 내용은 [패키지되지 않은 데스크톱 앱에 ID 부여](grant-identity-to-nonpackaged-apps.md)를 참조하세요.
 
 데스크톱 앱에 패키지 ID가 있는 경우 앱에서 다음 기능을 사용할 수 있습니다.
 
-## <a name="use-uwp-apis-that-require-package-identity"></a>패키지 ID가 필요한 UWP API 사용
+## <a name="use-windows-runtime-apis-that-require-package-identity"></a>패키지 ID가 필요한 Windows 런타임 API 사용
 
-다음 UWP API 목록은 데스크톱 앱에서 패키지 ID를 사용해야 합니다. [API 목록](desktop-to-uwp-supported-api.md#list-of-apis)
+다음 Windows 런타임 API 목록에는 데스크톱 앱에서 사용할 패키지 ID가 필요합니다. [API 목록](desktop-to-uwp-supported-api.md#list-of-apis).
 
 ## <a name="integrate-with-package-extensions"></a>확장 패키지와 통합
 
@@ -36,7 +36,7 @@ ms.locfileid: "73142516"
 
 ## <a name="extend-with-uwp-components"></a>UWP 구성 요소를 사용하여 확장
 
-일부 Windows 10 환경(예제: 터치 구현 UI 페이지)은 최신 앱 컨테이너 내부에서 실행해야 합니다. 일반적으로 UWP API로 기존 데스크톱 애플리케이션을 [향상](desktop-to-uwp-enhance.md)하여 환경을 추가할 것인지 먼저 결정해야 합니다. 환경을 구현하기 위해 UWP 구성 요소를 사용해야 하는 경우 UWP 프로젝트를 솔루션에 추가하고 앱 서비스를 사용하여 데스크톱 애플리케이션과 UWP 구성 요소 간에 통신할 수 있습니다.
+일부 Windows 10 환경(예: 터치 지원 UI 페이지)은 최신 앱 컨테이너 내부에서 실행해야 합니다. 일반적으로 Windows 런타임 API로 기존 데스크톱 애플리케이션을 [향상](desktop-to-uwp-enhance.md)시켜서 환경을 추가할 것인지 먼저 결정해야 합니다. 환경을 구현하기 위해 UWP 구성 요소를 사용해야 하는 경우 UWP 프로젝트를 솔루션에 추가하고 앱 서비스를 사용하여 데스크톱 애플리케이션과 UWP 구성 요소 간에 통신할 수 있습니다.
 
 자세한 내용은 [UWP 구성 요소를 사용하여 데스크톱 앱 확장](desktop-to-uwp-extend.md)을 참조하세요.
 

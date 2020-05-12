@@ -1,16 +1,16 @@
 ---
 Description: 레이아웃 패널을 사용하여 앱에서 UI 요소를 정렬하고 그룹화합니다.
-title: UWP(유니버설 Windows 플랫폼) 앱용 레이아웃 패널
+title: Windows 앱에 대한 레이아웃 패널
 ms.date: 04/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9322ba847aeb7eb64c2654e1105582478a0d3b47
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 68aceb1fe4b0136bac9f8ff342f079f0dc23c1c7
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79210209"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970948"
 ---
 # <a name="layout-panels"></a>레이아웃 패널
 
@@ -182,7 +182,7 @@ Grid의 특정 셀에 개체의 위치를 지정하려면 [**Grid.Column**](http
 
 **Auto** 또는 배율 크기 조정을 사용하면 열이나 행 안에서 공간을 분배할 수 있습니다. UI 요소가 해당 콘텐츠 또는 부모 컨테이너에 맞게 크기를 조정하려면 자동 크기 조정을 사용합니다. 그리드의 행과 열에서 자동 크기 조정을 사용할 수도 있습니다. 자동 크기 조정을 사용하려면 UI 요소의 Height 및/또는 Width를 **Auto**로 설정합니다.
 
-가중 비율에 따라 그리드의 행과 열 사이에서 사용 가능한 공간을 분배하려면 *배율 크기 조정*이라고도 하는 가변 크기 조정을 사용합니다. XAML에서는 배율 값이 \*\*(또는 가중 배율 크기 조정의 경우 *n*\*)로 표현됩니다. 예를 들어 2열 레이아웃에서 첫 번째 열을 두 번째 열보다 5배 너비로 지정하려면 \*\*ColumnDefinition[**요소에서**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.columndefinition.width)Width[ **속성에 대해 "5**" 및 "](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition)"를 사용합니다.
+가중 비율에 따라 그리드의 행과 열 사이에서 사용 가능한 공간을 분배하려면 *배율 크기 조정*이라고도 하는 가변 크기 조정을 사용합니다. XAML에서는 배율 값이 \*(또는 가중 배율 크기 조정의 경우 *n*\*)로 표현됩니다. 예를 들어 2열 레이아웃에서 첫 번째 열을 두 번째 열보다 5배 너비로 지정하려면 [**ColumnDefinition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColumnDefinition) 요소에서 [**Width**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.columndefinition.width) 속성에 대해 "5\*" 및 "\*"를 사용합니다.
 
 이 예제에서는 4개의 열을 가진 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)에서 고정, 자동, 가변 크기 조정을 조합합니다.
 
@@ -272,6 +272,6 @@ Canvas는 자식의 크기를 조정하지 않습니다. 각 요소는 해당 �
 
 [  **ItemsControl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel)에서 항목을 표시하기 위한 [**ItemsPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl)로만 사용할 수 있는 몇 가지 특별한 용도의 패널이 있습니다. [  **ItemsStackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsStackPanel), [**ItemsWrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsWrapGrid), [**VirtualizingStackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.VirtualizingStackPanel) 및 [**WrapGrid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WrapGrid)가 이러한 패널입니다. 일반 UI 레이아웃에는 이러한 패널을 사용할 수 없습니다.
 
-## <a name="get-the-sample-code"></a>샘플 코드 다운로드
+## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
-- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여 줍니다.
+- [XAML 컨트롤 갤러리 샘플](https://github.com/Microsoft/Xaml-Controls-Gallery) - 대화형 형식으로 모든 XAML 컨트롤을 보여줍니다.
