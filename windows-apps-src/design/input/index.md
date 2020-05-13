@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
-ms.openlocfilehash: 1167819311c97c651375f3d6a00a6416399f4734
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 83c6fc59d1161352eda636c91c89f34d87391545
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970018"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234608"
 ---
 # <a name="input-and-interactions"></a>입력 및 조작
 
@@ -175,7 +175,7 @@ Identify the input devices connected to a Windows app device and identify their 
 <div class="side-by-side-content-right">
 <p>
 <b>[Handle pointer input](handle-pointer-input.md)</b><br/>
-Receive, process, and manage input data from pointing devices, such as touch, mouse, pen/stylus, and touchpad, in Windows app apps.
+Receive, process, and manage input data from pointing devices, such as touch, mouse, pen/stylus, and touchpad, in Windows apps.
 </p>
 </div>
 </div>
