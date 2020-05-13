@@ -99,6 +99,8 @@
               href: ../audio-video-camera/dash-profile-support.md
         - name: 미디어 캐스팅
           href: ../audio-video-camera/media-casting.md
+        - name: 원격 Bluetooth 연결 디바이스에서 오디오 재생 사용
+          href: ../audio-video-camera/enable-remote-audio-playback.md
         - name: PlayReady DRM
           href: ../audio-video-camera/playready-client-sdk.md
           items:

@@ -8,12 +8,12 @@ keywords: 디바이스, 입력, 조작
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 121025dc5e87e7e3953b9517144e36ab382795bb
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 37b77e62f14418611047a3af49bd15ed4f8094b4
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968209"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234870"
 ---
 #  <a name="ui-considerations-for-windows-devices"></a>Windows 디바이스에 대한 UI 고려 사항
 

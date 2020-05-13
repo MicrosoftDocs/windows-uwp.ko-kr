@@ -8,12 +8,12 @@ keywords: windows 10, uwp
 pm-contact: clint.rutkas
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a8899b4a61ddc55616ea7068c5707f7a7897026a
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 6d3d78f88d1899d20eedbbb99c6cf5794ff55f35
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970588"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234267"
 ---
 # <a name="windows-template-studio"></a>Windows Template Studio
 

@@ -1,10 +1,15 @@
-- name: 개발자용 Windows 10 빌드 18362의 새로운 기능
-  href: ../whats-new/windows-10-build-18362.md
+- name: 개발자용 Windows 10 빌드 19041의 새로운 기능
+  href: ../whats-new/windows-10-build-19041.md
   items:
-    - name: Windows 10 빌드 18362의 API 추가
-      href: ../whats-new/windows-10-build-18362-api-diff.md
+    - name: Windows 10 빌드 19041의 API 추가
+      href: ../whats-new/windows-10-build-19041-api-diff.md
 - name: 이전 버전의 Windows 10
   items:
+    - name: 개발자용 Windows 10 빌드 18362의 새로운 기능
+      href: ../whats-new/windows-10-build-18362.md
+      items:
+        - name: Windows 10 빌드 18362의 API 추가
+          href: ../whats-new/windows-10-build-18362-api-diff.md
     - name: 개발자용 Windows 10 빌드 17763의 새로운 기능
       href: ../whats-new/windows-10-build-17763.md
       items:

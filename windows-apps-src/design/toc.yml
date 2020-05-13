@@ -546,6 +546,8 @@
           href: accessibility/basic-accessibility-information.md
         - name: 키보드 접근성
           href: accessibility/keyboard-accessibility.md
+        - name: 화면 판독기 및 하드웨어 시스템 단추
+          href: accessibility/system-button-narration.md
         - name: 랜드마크 및 머리글
           href: accessibility/landmarks-and-headings.md
         - name: 고대비 테마
