@@ -8,12 +8,12 @@ keywords: 음성, 음성, 음성 인식, 자연어, 받아쓰기, 입력, 사용
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9cd347b115a920c71ca1eb9b5f466adf05c69c64
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: a1db38120252febefd55933fa106f473b3f920d8
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968248"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234862"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>음성 인식기 언어 지정
 
@@ -31,7 +31,7 @@ ms.locfileid: "82968248"
 
 음성 인식 및 인식 제약 조건에 대 한 기본적인 지식이 있어야 합니다.
 
-Windows 앱 앱을 처음 개발 하는 경우 여기에 설명 된 기술에 익숙해질 수 있도록 다음 항목을 참조 하세요.
+Windows 앱 개발에 익숙하지 않은 경우이 항목을 살펴보고 여기에 설명 된 기술에 대해 알아보세요.
 
 -   [첫 번째 앱 만들기](https://docs.microsoft.com/windows/uwp/get-started/your-first-app)
 -   [이벤트 및 라우트된 이벤트](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview) 를 사용 하 여 이벤트에 대해 알아보기 개요
@@ -56,7 +56,7 @@ var language = SpeechRecognizer.SystemSpeechLanguage;
 
 설치 된 언어는 장치 마다 다를 수 있습니다. 특정 제약 조건에 종속 된 언어가 있는지 확인 해야 합니다.
 
-**참고**  새 언어 팩을 설치한 후에는 다시 부팅 해야 합니다. 지정 된 언어가 지원 되지 않거나 설치가\_완료\_되지 않은 경우 오류 코드 sperr을 찾을 수 없는 예외가 발생 합니다 (0x8004503a).
+**참고**    새 언어 팩을 설치한 후에는 다시 부팅 해야 합니다. \_ \_ 지정 된 언어가 지원 되지 않거나 설치가 완료 되지 않은 경우 오류 코드 sperr을 찾을 수 없는 예외가 발생 합니다 (0x8004503a).
 
  
 

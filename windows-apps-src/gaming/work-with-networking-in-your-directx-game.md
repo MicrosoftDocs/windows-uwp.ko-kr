@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 네트워킹, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e693016fa6b87f231c1cbbfac4c2e55d44623c9
-ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
+ms.openlocfilehash: d2d1487c708b8618feec5cb735fb8af260608e00
+ms.sourcegitcommit: 0f2ae8f97daac440c8e86dc07d11d356de29515c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82606372"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280273"
 ---
 # <a name="networking-for-games"></a>게임을 위한 네트워킹
 
@@ -121,7 +121,7 @@ UWP 앱 인 DirectX 게임에서 예외가 발생 하면 오류의 원인에 대
 
 [**DatagramSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.DatagramSocket), [**Streamsocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocket)또는 [**StreamSocketListener**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamSocketListener) 작업에서 오류가 발생 하면 예외가 throw 됩니다. 예외의 원인은 **HRESULT** 값으로 표시 되는 오류 값입니다. [**GetStatus**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.socketerror.getstatus) 메서드는 소켓 작업에서 [**SocketErrorStatus**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.SocketErrorStatus) 열거형 값으로 네트워크 오류를 변환 하는 데 사용 됩니다. 대부분의 **SocketErrorStatus** 열거형 값은 네이티브 Windows 소켓 작업에서 반환 되는 오류에 해당 합니다. 앱은 특정 **SocketErrorStatus** 열거 값을 필터링 하 여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
-매개 변수 유효성 검사 오류의 경우 응용 프로그램은 예외의 **HRESULT** 를 사용 하 여 예외를 발생 시킨 오류에 대 한 자세한 정보를 확인할 수도 있습니다. 가능한 **HRESULT** 값은 *winerror.h* 헤더 파일에 나와 있습니다. 대부분의 매개 변수 유효성 검사 오류에 대해 반환 되는 **HRESULT** 는 **\_E invalidarg**입니다.
+매개 변수 유효성 검사 오류의 경우 응용 프로그램은 예외의 **HRESULT** 를 사용 하 여 예외를 발생 시킨 오류에 대 한 자세한 정보를 확인할 수도 있습니다. 가능한 **HRESULT** 값은 *winerror.h* 헤더 파일에 나와 있습니다. 대부분의 매개 변수 유효성 검사 오류에 대해 반환 되는 **HRESULT** 는 **E \_ invalidarg**입니다.
 
 스트림 소켓 연결을 시도할 때 예외를 처리 하는 코드를 추가 합니다.
 
@@ -273,7 +273,7 @@ Windows:: [**Web:: Http:: HttpClient**](https://docs.microsoft.com/uwp/api/Windo
 
 C + +를 사용 하는 앱에서 [**Platform:: exception**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class) 은 예외가 발생할 때 앱을 실행 하는 동안 오류를 나타냅니다. [**Platform:: Exception:: HResult**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#hresult) 속성은 특정 예외에 할당 된 **HResult** 를 반환 합니다. [**Platform:: Exception:: Message**](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#message) 속성은 **HRESULT** 값과 연결 된 시스템 제공 문자열을 반환 합니다. 가능한 **HRESULT** 값은 *winerror.h* 헤더 파일에 나와 있습니다. 앱은 예외의 원인에 따라 앱 동작을 수정 하는 특정 **HRESULT** 값을 기준으로 필터링 할 수 있습니다.
 
-대부분의 매개 변수 유효성 검사 오류에 대해 반환 되는 **HRESULT** 는 **\_E invalidarg**입니다. 일부 잘못된 메서드 호출의 경우 반환되는 **HRESULT**는 **E\_ILLEGAL\_METHOD\_CALL**입니다.
+대부분의 매개 변수 유효성 검사 오류에 대해 반환 되는 **HRESULT** 는 **E \_ invalidarg**입니다. 일부 잘못된 메서드 호출의 경우 반환되는 **HRESULT**는 **E\_ILLEGAL\_METHOD\_CALL**입니다.
 
 [**Httpclient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 를 사용 하 여 HTTP 서버에 연결 하려고 할 때 예외를 처리 하는 코드를 추가 합니다.
 
@@ -388,7 +388,7 @@ using namespace Windows::Web::Http;
 
 **샘플**
 
-* [DatagramSocket 샘플](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)
+* [DatagramSocket 샘플](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/ControlChannelTrigger%20StreamSocket%20sample%20(Windows%208))
 * [HttpClient 샘플]( https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)
-* [근접 샘플](https://code.msdn.microsoft.com/windowsapps/Proximity-Sample-88129731)
+* [근접 샘플](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/Proximity%20sample%20(Windows%208))
 * [StreamSocket 샘플](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)

@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 39b019495235ca2ff4bec2f9e6bc1b9230a15599
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ff19eea5a2fa57d4e5b2728ddbd87e5d99ff539a
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969528"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234137"
 ---
 # <a name="expose-basic-accessibility-information"></a>기본적인 접근성 정보 표시  
 
@@ -29,7 +29,7 @@ ms.locfileid: "82969528"
 
 이 표에서는 XAML UI에서 다양 한 형식의 요소에 대해 액세스 가능한 이름을 정의 하거나 가져오는 방법을 설명 합니다.
 
-| 요소 형식 | Description |
+| 요소 형식 | 설명 |
 |--------------|-------------|
 | 정적 텍스트 | [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 및 [**RichTextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) 요소의 경우 액세스 가능한 이름이 표시 (내부) 텍스트에서 자동으로 결정 됩니다. 해당 요소의 모든 텍스트가 이름으로 사용 됩니다. [내부 텍스트에서 이름을](#name_from_inner_text)참조 하세요. |
 | 이미지 | XAML [**이미지**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) 요소는 **img** 및 유사한 요소의 HTML **alt** 특성에 대 한 직접적인 아날로그를 포함 하지 않습니다. [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name) 를 사용 하 여 이름을 제공 하거나 캡션 기술을 사용 합니다. [이미지에 액세스할 수 있는 이름을](#images)참조 하세요. |
@@ -56,7 +56,7 @@ XAML 어휘에 속하는 컨트롤 및 기타 UI 요소는 해당 정의의 일�
 ## <a name="influencing-the-ui-automation-tree-views"></a>UI 자동화 트리 보기에 영향  
 Ui 자동화 프레임 워크에는 ui 자동화 클라이언트가 세 개의 가능한 뷰 (raw, 컨트롤 및 내용)를 사용 하 여 UI의 요소 간 관계를 검색할 수 있는 트리 보기의 개념이 있습니다. 컨트롤 뷰는 ui 자동화 클라이언트에서 대화형 UI의 요소에 대 한 적절 한 표현과 조직을 제공 하기 때문에 자주 사용 하는 뷰입니다. 일반적으로 테스트 도구를 사용 하면 도구에서 요소 조직을 표시할 때 사용할 트리 뷰를 선택할 수 있습니다.
 
-UI 자동화 프레임 워크가 Windows 앱 앱에 대 한 UI를 나타내는 경우 기본적으로 컨트롤 파생 클래스와 몇 가지 다른 [**요소가 컨트롤 뷰에**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) 표시 됩니다. 하지만 경우에 따라 요소가 정보를 복제 하거나 접근성 시나리오에서 중요 하지 않은 정보를 제공 하는 UI 컴퍼지션 때문에 컨트롤이 컨트롤 뷰에 표시 되는 것을 원하지 않을 수 있습니다. 연결 된 속성 [**Automationproperties**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accessibilityviewproperty) 를 사용 하 여 요소가 트리 뷰에 노출 되는 방식을 변경 합니다. 요소를 **원시** 트리에 배치 하면 대부분의 보조 기술에서 해당 요소를 뷰의 일부로 보고 하지 않습니다. 기존 컨트롤에서 작동 하는 방법에 대 한 몇 가지 예제를 보려면 텍스트 편집기에서 일반 .xaml 디자인 참조 XAML 파일을 열고 템플릿에서 **Automationproperties** 를 검색 합니다.
+UI 자동화 프레임 워크가 Windows 앱에 대 한 UI를 나타내는 경우 기본적으로 컨트롤 파생 클래스와 몇 가지 다른 [**요소가 컨트롤 뷰에**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) 표시 됩니다. 하지만 경우에 따라 요소가 정보를 복제 하거나 접근성 시나리오에서 중요 하지 않은 정보를 제공 하는 UI 컴퍼지션 때문에 컨트롤이 컨트롤 뷰에 표시 되는 것을 원하지 않을 수 있습니다. 연결 된 속성 [**Automationproperties**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.accessibilityviewproperty) 를 사용 하 여 요소가 트리 뷰에 노출 되는 방식을 변경 합니다. 요소를 **원시** 트리에 배치 하면 대부분의 보조 기술에서 해당 요소를 뷰의 일부로 보고 하지 않습니다. 기존 컨트롤에서 작동 하는 방법에 대 한 몇 가지 예제를 보려면 텍스트 편집기에서 일반 .xaml 디자인 참조 XAML 파일을 열고 템플릿에서 **Automationproperties** 를 검색 합니다.
 
 <span id="name_from_inner_text"/>
 <span id="NAME_FROM_INNER_TEXT"/>
@@ -150,7 +150,7 @@ Windows에서는 *데이터 바인딩*이라는 기능을 통해 연결 된 데�
 ## <a name="accessible-names-and-localization"></a>액세스 가능한 이름 및 지역화  
 액세스 가능한 이름이 지역화 된 요소 이기도 한지 확인 하려면 지역화할 수 있는 문자열을 리소스로 저장 한 다음 [x:Uid 지시문](https://docs.microsoft.com/windows/uwp/xaml-platform/x-uid-directive) 값을 사용 하 여 리소스 연결을 참조 하는 데 올바른 기술을 사용 해야 합니다. 액세스할 수 있는 이름이 명시적으로 설정 된 [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name) 사용에서 오는 경우에도 지역화할 수 있는 문자열이 있는지 확인 합니다.
 
-[**Automationproperties**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.AutomationProperties) 속성과 같은 연결 된 속성은 리소스 이름에 대해 특별 한 한정 구문을 사용 하므로 리소스가 특정 요소에 적용 되는 연결 된 속성을 참조할 수 있습니다. 예를 들어, 이라는 `MediumButton` UI 요소에 적용 되는 `MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name` [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name) 의 리소스 이름은입니다.
+[**Automationproperties**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.AutomationProperties) 속성과 같은 연결 된 속성은 리소스 이름에 대해 특별 한 한정 구문을 사용 하므로 리소스가 특정 요소에 적용 되는 연결 된 속성을 참조할 수 있습니다. 예를 들어, 이라는 UI 요소에 적용 되는 [**AutomationProperties.Name**](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.name) 의 리소스 이름은 `MediumButton` 입니다. `MediumButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name`
 
 <span id="related_topics"/>
 

@@ -7,12 +7,12 @@ ms.date: 10/18/2017
 ms.topic: article
 ms.assetid: e6bb3464-dd8e-402c-9c56-dd9e51002a49
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fac74f92ec814a84ecc9eb9d2ae64986af7e572
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 614e6d81a4f30c0b9a277c94964c16189f2247f8
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970578"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234279"
 ---
 # <a name="usability-for-windows-apps"></a>Windows 앱의 유용성
 
@@ -44,7 +44,7 @@ ms.locfileid: "82970578"
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-<p><b><a href="../accessibility/designing-inclusive-software.md">Designing inclusive software</a></b><br/>Learn about evolving inclusive design with Windows app apps for Windows 10.  Design and build inclusive software with accessibility in mind.</p>
+<p><b><a href="../accessibility/designing-inclusive-software.md">Designing inclusive software</a></b><br/>Learn about evolving inclusive design with Windows apps for Windows 10.  Design and build inclusive software with accessibility in mind.</p>
                     </div>
                 </div>
             </div>

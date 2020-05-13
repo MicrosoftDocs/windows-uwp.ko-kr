@@ -1,5 +1,5 @@
 ---
-Description: Windows 10 용 Windows 앱 앱으로 진화 하는 포괄 디자인에 대해 알아봅니다.  내게 필요한 옵션을 염두에 두면 포함 소프트웨어를 설계 하 고 구축 합니다.
+Description: Windows 10 용 Windows 앱으로 진화 하는 포괄 디자인에 대해 알아봅니다.  내게 필요한 옵션을 염두에 두면 포함 소프트웨어를 설계 하 고 구축 합니다.
 ms.assetid: A6393A57-53F2-4F06-89AF-0D806FD76DB0
 title: Windows 10에서 포함 소프트웨어 디자인
 label: Designing inclusive software
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f048d9d3541b52994713c8040c451a421df3e0a
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: f7286394f68d6cda82581a825117f12ce98493ba
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969438"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234083"
 ---
 # <a name="designing-inclusive-software-for-windows-10"></a>Windows 10 용 포함 소프트웨어 디자인  
 
-Windows 10 용 Windows 앱 앱으로 진화 하는 포괄 디자인에 대해 알아봅니다.  내게 필요한 옵션을 염두에 두면 포함 소프트웨어를 설계 하 고 구축 합니다.
+Windows 10 용 Windows 앱으로 진화 하는 포괄 디자인에 대해 알아봅니다.  내게 필요한 옵션을 염두에 두면 포함 소프트웨어를 설계 하 고 구축 합니다.
 
 Microsoft에서는 설계 원칙과 관행을 개발 하 고 있습니다. 이는 경험, 느낌, 기능 및 행동을 경험 하는 방법을 알려줍니다. 큐브 뷰를 상승 하 고 있습니다.
 
@@ -46,7 +46,7 @@ Microsoft에서는 설계 원칙과 관행을 개발 하 고 있습니다. 이�
 
 과반수의 컴퓨터 사용자(54%)는 일부 형태의 보조 기술을 인식하고, 44%의 컴퓨터 사용자는 일부 형태의 보조 기술을 사용하지만 이들 중 유용한 AT를 사용하지 않는 사용자가 많습니다(Forrester 2004).  
 
-Microsoft에서 의뢰 하 고 Forrester 연구에서 수행 하는 2003-2004 연구는 64 &mdash; 18 세 &mdash; 사이의 미국에 있는 컴퓨터 사용자의 절반 57% 이상이 보조 기술을 활용할 수 있음을 발견 했습니다. 이러한 사용자는 대부분 장애가 있거나 장애가 발생 하는 것으로 식별 되지 않았지만 컴퓨터를 사용할 때 특정 작업 관련 문제 또는 장애가 있는 사용자를 나타냅니다. Forrester (2003) 또한 다음과 같은 특정 어려움이 있는 사용자 수를 찾았습니다. 네 가지 경험을 통해 시각적 어려움이 있습니다. Wrists 또는 손을 통해 네 가지 경험을 경험 하 게 될 것입니다. 5 가지 경험을 통해 어려움이 발생 합니다.  
+Microsoft에서 의뢰 하 고 Forrester 연구에서 수행 하는 2003-2004 연구는 &mdash; &mdash; 64 18 세 사이의 미국에 있는 컴퓨터 사용자의 절반 57% 이상이 보조 기술을 활용할 수 있음을 발견 했습니다. 이러한 사용자는 대부분 장애가 있거나 장애가 발생 하는 것으로 식별 되지 않았지만 컴퓨터를 사용할 때 특정 작업 관련 문제 또는 장애가 있는 사용자를 나타냅니다. Forrester (2003) 또한 다음과 같은 특정 어려움이 있는 사용자 수를 찾았습니다. 네 가지 경험을 통해 시각적 어려움이 있습니다. Wrists 또는 손을 통해 네 가지 경험을 경험 하 게 될 것입니다. 5 가지 경험을 통해 어려움이 발생 합니다.  
 
 영구적 장애 외에도 개별 환경에서 발생 하는 문제의 심각도 및 유형은 수명에 따라 달라질 수 있습니다. 정상적인 사람이 아닙니다. 이 기능은 항상 변경 됩니다. Margaret Meade는 "모두 고유 합니다. 모든 것을 고유 하 게 만들어 보세요. "  
 

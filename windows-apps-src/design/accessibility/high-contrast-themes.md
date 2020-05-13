@@ -1,5 +1,5 @@
 ---
-description: 고대비 테마가 활성화 되어 있을 때 Windows 앱 앱을 사용할 수 있는지 확인 하는 데 필요한 단계를 설명 합니다.
+description: 고대비 테마가 활성화 되어 있을 때 Windows 앱을 사용할 수 있는지 확인 하는 데 필요한 단계를 설명 합니다.
 ms.assetid: FD7CA6F6-A8F1-47D8-AA6C-3F2EC3168C45
 title: 고대비 테마
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 118f604b8c8c95a863773270825ff4db5c5a1b3a
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ce3fe9ea96f4b4ce2f541fb5f7a9682a0dee5e0e
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969458"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234034"
 ---
 # <a name="high-contrast-themes"></a>고대비 테마  
 
@@ -37,7 +37,7 @@ Windows는 사용자가 사용 하도록 선택할 수 있는 OS 및 앱에 대�
 <Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
 ```
 
-첫 번째 `#E6E6E6` 예제에서 색을 인라인으로 설정 하면 그리드는 모든 테마에서 해당 배경색을 유지 합니다. 사용자가 고대비 블랙 테마로 전환 하면 앱이 검정색 배경으로 표시 될 것입니다. 는 `#E6E6E6` 거의 흰색 이므로 일부 사용자가 앱과 상호 작용 하지 못할 수 있습니다.
+`#E6E6E6`첫 번째 예제에서 색을 인라인으로 설정 하면 그리드는 모든 테마에서 해당 배경색을 유지 합니다. 사용자가 고대비 블랙 테마로 전환 하면 앱이 검정색 배경으로 표시 될 것입니다. `#E6E6E6`는 거의 흰색 이므로 일부 사용자가 앱과 상호 작용 하지 못할 수 있습니다.
 
 두 번째 예제에서는 [**{Themeresource} 태그 확장**](../../xaml-platform/themeresource-markup-extension.md) 을 사용 하 여 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) 요소의 전용 속성인 [**ThemeDictionaries**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries) collection의 색을 참조 합니다. **ThemeDictionaries** 를 사용 하면 XAML에서 사용자의 현재 테마에 따라 색을 자동으로 바꿀 수 있습니다.
 
@@ -114,7 +114,7 @@ Windows는 사용자가 사용 하도록 선택할 수 있는 OS 및 앱에 대�
 * 앱이 실행 되는 동안 모든 4 개의 고대비 테마에서 테스트 합니다. 사용자는 테마를 전환할 때 앱을 다시 시작 하지 않아도 됩니다.
 * 일관 됩니다.
 
-**하지 말아야 할 일**
+**안 함**
 
 * **System.windows.forms.systeminformation.highcontrast** 테마에서 색을 하드 코딩 합니다. **systemcolor * 색** 리소스를 사용 합니다.
 * 미관에 대 한 색 리소스를 선택 합니다. 테마를 사용 하 여 변경 합니다.
@@ -154,7 +154,7 @@ Windows는 사용자가 사용 하도록 선택할 수 있는 OS 및 앱에 대�
 <Grid Background="{ThemeResource BrandedPageBackgroundBrush}">
 ```
 
-BrandedPageBackgroundBrush을 참조 하기 위해 두 번 사용 되는 것은 **systemcolorwindowcolor** 를 두 번 사용 **BrandedPageBackgroundBrush**하는 것입니다. ** \{\} ** 응용 프로그램을 런타임에 올바르게 테마에 맞게 입력 해야 합니다. 앱에서 기능을 테스트 하는 것이 좋습니다. 고대비 테마를 전환 하면 표 배경이 자동으로 업데이트 됩니다. 또한 서로 다른 고대비 테마 간에 전환할 때 업데이트 됩니다.
+BrandedPageBackgroundBrush을 참조 하기 위해 두 번 사용 되는 것은 **Systemcolorwindowcolor** 를 두 번 사용 **BrandedPageBackgroundBrush**하는 것입니다. ** \{ \} ** 응용 프로그램을 런타임에 올바르게 테마에 맞게 입력 해야 합니다. 앱에서 기능을 테스트 하는 것이 좋습니다. 고대비 테마를 전환 하면 표 배경이 자동으로 업데이트 됩니다. 또한 서로 다른 고대비 테마 간에 전환할 때 업데이트 됩니다.
 
 ## <a name="when-to-use-borders"></a>테두리를 사용 하는 경우
 

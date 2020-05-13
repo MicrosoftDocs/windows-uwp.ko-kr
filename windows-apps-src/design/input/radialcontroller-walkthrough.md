@@ -6,12 +6,12 @@ keywords: 전화 걸기, 방사형, 자습서
 ms.date: 03/11/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 74bb75fb6bced451daeb6f03fba78636d0998cec
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 3972e04c59748efabd51b423f6f24fc22291a6d1
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970278"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234890"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-windows-app"></a>자습서: Windows 앱의 Surface 전화 접속 및 기타 휠 장치 지원
 
@@ -38,37 +38,37 @@ Surface 다이얼은 사용자가 펜, 터치, 마우스 등의 기본 입력 �
 - 메뉴 항목을 강조 표시 하거나 (메뉴가 활성화 된 경우) 앱에서 현재 작업을 수정 하려면 (메뉴가 활성화 되지 않은 경우) 회전 합니다.
 - 강조 표시 된 메뉴 항목을 클릭 하 여 선택 하거나 (메뉴가 활성화 된 경우) 앱에서 명령을 호출 합니다 (메뉴가 활성화 되어 있지 않은 경우).
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 * Windows 10 크리에이터 스 업데이트 이상을 실행 하는 컴퓨터 또는 가상 컴퓨터
 * [Visual Studio 2019](https://developer.microsoft.com/windows/downloads)
 * [Windows 10 SDK(10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * 휠 장치 (현재는 [Surface 전화 접속](https://www.microsoft.com/store/d/Surface-Dial/925R551SKTGN?icid=Surface_Accessories_ModB_Surface_Dial_103116) 만)
-* Visual Studio를 사용 하 여 Windows 앱 앱을 처음 사용 하는 경우이 자습서를 시작 하기 전에 다음 항목을 확인 하세요.  
-    * [설정하기](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
+* Visual Studio를 사용 하 여 Windows 앱을 개발 하는 경우이 자습서를 시작 하기 전에 다음 항목을 참조 하세요.  
+    * [설정](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
     * ["Hello, 세계" 앱 만들기 (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 
 ## <a name="set-up-your-devices"></a>장치 설정
 
 1. Windows 장치가 설정 되어 있는지 확인 합니다.
-2. **시작**으로 이동 하 고 **설정** > **장치** > **Bluetooth & 기타 장치**를 선택한 후 **bluetooth** 를 켜 세요.
+2. **시작**으로 이동 하 고 **설정**  >  **장치**  >  **Bluetooth & 기타 장치**를 선택한 후 **bluetooth** 를 켜 세요.
 3. 화면 전화 접속의 아래쪽을 제거 하 여 배터리 구획을 열고 안에 AAA 배터리가 두 개 있는지 확인 합니다.
 4. 전화 접속의 아래쪽에 배터리 탭이 있으면 제거 합니다.
 5. Bluetooth 조명이 깜박일 때까지 배터리 옆의 작은 인세트 단추를 길게 누릅니다.
 6. Windows 장치로 돌아가서 **Bluetooth 또는 다른 장치 추가**를 선택 합니다.
-7. **장치 추가** 대화 상자에서 **Bluetooth** > **Surface 전화 걸기**를 선택 합니다. 이제 **Bluetooth & 기타 장치** 설정 페이지에서 **마우스, 키보드, & 펜** 의 장치 목록에 Surface 전화 걸기가 연결 되어 추가 됩니다.
+7. **장치 추가** 대화 상자에서 **Bluetooth**  >  **Surface 전화 걸기**를 선택 합니다. 이제 **Bluetooth & 기타 장치** 설정 페이지에서 **마우스, 키보드, & 펜** 의 장치 목록에 Surface 전화 걸기가 연결 되어 추가 됩니다.
 8. 몇 초 동안 눌러 전화 걸기를 테스트 하 여 기본 제공 메뉴를 표시 합니다.
 9. 메뉴가 화면에 표시 되지 않는 경우 (다이얼도 진동 해야 함) Bluetooth 설정으로 돌아가서 장치를 제거 하 고 장치를 다시 연결 해 보세요.
 
 > [!NOTE]
 > 휠 장치는 **휠** 설정을 통해 구성할 수 있습니다.
 > 1. **시작** 메뉴에서 **설정**을 선택 합니다.
-> 2. **장치** > **휠**을 선택 합니다.    
+> 2. **장치**  >  **휠**을 선택 합니다.    
 > ![휠 설정 화면](images/radialcontroller/wheel-settings.png)
 
 이제이 자습서를 시작할 준비가 되었습니다. 
 
-## <a name="sample-code"></a>예제 코드
+## <a name="sample-code"></a>샘플 코드
 이 자습서에서는 샘플 앱을 사용 하 여 설명 된 개념과 기능을 보여 줍니다.
 
 [GitHub](https://github.com/) 에서이 Visual Studio 샘플 및 소스 코드 다운로드 [-appsample-radialcontroller 샘플](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-RadialController):
@@ -88,7 +88,7 @@ Surface 다이얼은 사용자가 펜, 터치, 마우스 등의 기본 입력 �
 | 구성 요소 | Description |
 | --- | --- |
 | [ **RadialController** 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Input.RadialController) 및 관련 항목 | 표면 전화 접속과 같은 휠 입력 장치 또는 액세서리를 나타냅니다. |
-| [**IRadialControllerConfigurationInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerconfigurationinterop) / [**IRadialControllerInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerinterop)<br/>여기서는이 기능에 대해 다루지 않습니다. 자세한 내용은 [Windows 클래식 데스크톱 샘플](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/RadialController)을 참조 하세요. | Windows 앱과의 상호 운용성을 가능 하 게 합니다. |
+| [**IRadialControllerConfigurationInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerconfigurationinterop)  /  [ **IRadialControllerInterop**](https://docs.microsoft.com/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerinterop)<br/>여기서는이 기능에 대해 다루지 않습니다. 자세한 내용은 [Windows 클래식 데스크톱 샘플](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/RadialController)을 참조 하세요. | Windows 앱과의 상호 운용성을 가능 하 게 합니다. |
 
 ## <a name="step-1-run-the-sample"></a>1 단계: 샘플 실행
 
@@ -98,7 +98,7 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 3. F5 키를 눌러 컴파일, 배포 및 실행 합니다. 
 
 > [!NOTE]
-> 또는 **디버그** > **디버깅 시작** 메뉴 항목을 선택 하거나 여기에 표시 된 **로컬 컴퓨터** 실행 단추를 선택할 수 있습니다 ![. Visual Studio 빌드 프로젝트 단추](images/radialcontroller/wheel-vsrun.png)
+> 또는 **디버그**  >  **디버깅 시작** 메뉴 항목을 선택 하거나 여기에 표시 된 **로컬 컴퓨터** 실행 단추를 선택할 수 있습니다. ![ Visual Studio 빌드 프로젝트 단추](images/radialcontroller/wheel-vsrun.png)
 
 앱 창이 열리고 몇 초 동안 시작 화면이 표시 되 면이 초기 화면이 표시 됩니다.
 
@@ -125,7 +125,7 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 먼저 앱에 대 한 UI를 추가 해 보겠습니다.
 
 1. MainPage_Basic .xaml 파일을 엽니다.
-2. 이 단계의 제목으로 표시 된 코드를 찾습니다 ("\<!--3 단계: 휠 입력을 위한 컨트롤 추가-->").
+2. 이 단계의 제목으로 표시 된 코드를 찾습니다 (" \< !--3 단계: 휠 입력을 위한 컨트롤 추가-->").
 3. 다음 줄의 주석 처리를 제거 합니다.
 
     ```xaml
@@ -346,7 +346,7 @@ Surface Dial 및 기타 휠 장치를 사용 하 여 사용자에 게 현재 상
 이 단계에서는 슬라이더를 연결 하 고 스위치 컨트롤을 전환 하 고 햅 피드백 동작을 동적으로 지정 하는 데 사용 하 여 햅 피드백을 사용자 지정할 수 있는 방법을 보여 줍니다. 이 예에서는 사용자 의견을 활성화 하기 위해 설정/해제 스위치를 on으로 설정 해야 합니다. 반면 슬라이더 값은 클릭 피드백이 반복 되는 빈도를 지정 합니다. 
 
 > [!NOTE]
-> **설정** >  **Devices**장치 > **휠** 페이지에서 사용자가 햅 피드백을 사용 하지 않도록 설정할 수 있습니다.
+> **설정**  >   **장치**  >  **휠** 페이지에서 사용자가 햅 피드백을 사용 하지 않도록 설정할 수 있습니다.
 
 1. App.xaml.cs 파일을 엽니다.
 2. 이 단계의 제목으로 표시 된 코드를 찾습니다 ("6 단계: 장치 haptics 사용자 지정").
@@ -358,7 +358,7 @@ Surface Dial 및 기타 휠 장치를 사용 하 여 사용자에 게 현재 상
     rootFrame.Navigate(typeof(MainPage), e.Arguments);
     ```
 4. MainPage_Haptics .xaml 파일을 엽니다.
-5. 이 단계의 제목으로 표시 된 코드를 찾습니다 ("\<!--6 단계: 장치 Haptics 사용자 지정-->").
+5. 이 단계의 제목으로 표시 된 코드를 찾습니다 (" \< !--6 단계: 장치 Haptics 사용자 지정-->").
 6. 다음 줄의 주석 처리를 제거 합니다. 이 UI 코드는 현재 장치에서 지원 되는 haptics 기능을 나타냅니다.    
 
     ```xaml
@@ -638,7 +638,7 @@ Surface Studio와 연결 된 Surface 전화 접속은 훨씬 더 독특한 사�
 
 [RadialController 사용자 지정](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-radialcontroller-customization.zip)
 
-#### <a name="other-samples"></a>다른 샘플
+#### <a name="other-samples"></a>기타 샘플
 [서적 샘플 강조](https://github.com/Microsoft/Windows-appsample-coloringbook)
 
 [유니버설 Windows 플랫폼 샘플(C# 및 C++)](https://github.com/Microsoft/Windows-universal-samples/tree/b78d95134ce2d57c848e0a8dc339fc362748fb9c/Samples/RadialController)

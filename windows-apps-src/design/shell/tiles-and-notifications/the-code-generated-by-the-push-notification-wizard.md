@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9651af0c9caaae58bad82b2e33c1b0621b205054
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 6a3429607ecd9245dd10722fbb47d06d7aa6ef75
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970458"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234831"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>푸시 알림 마법사에서 생성된 코드
  
@@ -42,7 +42,7 @@ var <mobile-service-name>Client = new Microsoft.WindowsAzure.MobileServices.Mobi
 ## <a name="registration-for-push-notifications"></a>푸시 알림 등록
 
 
-Push. register. \*UploadChannel 메서드는 푸시 알림을 받기 위해 장치를 등록 합니다. 스토어는 응용 프로그램의 설치 된 인스턴스를 추적 하 고 푸시 알림 채널을 제공 합니다. [**Pushnotificationchannelmanager**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager)를 참조 하세요.
+\*UploadChannel 메서드는 푸시 알림을 받기 위해 장치를 등록 합니다. 스토어는 응용 프로그램의 설치 된 인스턴스를 추적 하 고 푸시 알림 채널을 제공 합니다. [**Pushnotificationchannelmanager**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager)를 참조 하세요.
 
 클라이언트 코드는 JavaScript 백 엔드와 .NET 백 엔드 모두와 비슷합니다. 기본적으로 JavaScript 백 엔드 서비스에 대 한 푸시 알림을 추가 하면 notifyAllUsers custom API에 대 한 샘플 호출이 UploadChannel 메서드에 삽입 됩니다.
 
@@ -207,7 +207,7 @@ function sendNotifications(request) {
 
 SendNotifications 함수는 알림 메시지로 단일 알림을 보냅니다. 다른 형식의 푸시 알림을 사용할 수도 있습니다.
 
-**팁**  스크립트를 편집 하는 동안 도움을 받는 방법에 대 한 자세한 내용은 [서버 쪽 JavaScript에 대해 IntelliSense 사용](https://blogs.msdn.com/b/visualstudio/archive/2013/07/26/enabling-intellisense-for-mobile-services-javascript-in-visual-studio.aspx)을 참조 하세요.
+**팁**    스크립트를 편집 하는 동안 도움을 받는 방법에 대 한 자세한 내용은 [서버 쪽 JavaScript에 대해 IntelliSense 사용](https://blogs.msdn.com/b/visualstudio/archive/2013/07/26/enabling-intellisense-for-mobile-services-javascript-in-visual-studio.aspx)을 참조 하세요.
 
  
 
@@ -220,7 +220,7 @@ Windows에서는 푸시 알림이 아닌 알림을 지원 합니다. 알림에 �
 
 Windows는 푸시 알림에 응답 하므로 앱이 실행 되 고 있지 않을 때 이러한 알림을 대부분 처리할 수 있습니다. 예를 들어 푸시 알림을 통해 로컬 메일 앱이 실행 되 고 있지 않은 경우에도 새 메일 메시지를 사용할 수 있는 시기를 사용자에 게 알릴 수 있습니다. Windows는 텍스트 메시지의 첫 번째 줄과 같은 메시지를 표시 하 여 알림 메시지를 처리 합니다. Windows는 새 메일 메시지 수를 반영 하도록 앱의 라이브 타일을 업데이트 하 여 타일 또는 배지 알림을 처리 합니다. 이러한 방식으로 앱의 사용자에 게 새 정보를 확인 하도록 요청할 수 있습니다. 앱이 실행 되는 동안 원시 알림을 받을 수 있으며 앱에 데이터를 전송 하는 데 사용할 수 있습니다. 앱이 실행 되 고 있지 않은 경우 푸시 알림을 모니터링 하는 백그라운드 작업을 설정할 수 있습니다.
 
-Windows 앱 앱에 대 한 지침에 따라 푸시 알림을 사용 해야 합니다. 이러한 알림은 사용자의 리소스를 사용 하 고 남용 경우 혼란을 받을 수 있기 때문입니다. [푸시 알림에 대 한 지침 및 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)을 참조 하세요.
+Windows 앱에 대 한 지침에 따라 푸시 알림을 사용 해야 합니다. 이러한 알림은 사용자의 리소스를 사용 하 고 남용 경우 혼란을 받을 수 있기 때문입니다. [푸시 알림에 대 한 지침 및 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)을 참조 하세요.
 
 푸시 알림을 사용 하 여 라이브 타일을 업데이트 하는 경우 [타일 및 배지에 대 한 지침 및 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles)의 지침을 따라야 합니다.
 
@@ -233,7 +233,7 @@ Mobile Services에서 충분 한 유연성을 제공 하지 않거나, c # 또�
 
 모바일 서비스에서 예약 된 작업을 실행 하 여 푸시 알림을 보낼 수도 있습니다. [모바일 서비스에서 되풀이 작업 예약](https://azure.microsoft.com/documentation/articles/mobile-services-schedule-recurring-tasks/)을 참조하세요.
 
-**경고**  푸시 알림 마법사를 한 번 실행 한 후에는 다른 모바일 서비스에 대 한 등록 코드를 추가 하는 데 마법사를 두 번 실행 하지 마세요. 프로젝트 마다 마법사를 두 번 이상 실행 하면 [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync) 메서드에 대 한 호출이 겹쳐지는 코드를 생성 하 여 런타임 예외가 발생 합니다. 둘 이상의 모바일 서비스에 대 한 푸시 알림을 등록 하려면 마법사를 한 번 실행 한 다음 **CreatePushNotificationChannelForApplicationAsync** 에 대 한 호출이 동시에 실행 되지 않도록 등록 코드를 다시 작성 합니다. 예를 들어, 마법사에서 생성 된 코드를 push. register로 이동 하 여이를 수행할 수 있습니다. \* ( **CreatePushNotificationChannelForApplicationAsync**에 대 한 호출 포함)은 onlaunched 된 이벤트 외부에 있지만이에 대 한 구체적인 내용은 앱의 아키텍처에 따라 달라 집니다.
+**경고**    푸시 알림 마법사를 한 번 실행 한 후에는 마법사를 두 번 실행 하 여 다른 모바일 서비스의 등록 코드를 추가 하지 마세요. 프로젝트 마다 마법사를 두 번 이상 실행 하면 [**CreatePushNotificationChannelForApplicationAsync**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync) 메서드에 대 한 호출이 겹쳐지는 코드를 생성 하 여 런타임 예외가 발생 합니다. 둘 이상의 모바일 서비스에 대 한 푸시 알림을 등록 하려면 마법사를 한 번 실행 한 다음 **CreatePushNotificationChannelForApplicationAsync** 에 대 한 호출이 동시에 실행 되지 않도록 등록 코드를 다시 작성 합니다. 예를 들어, 마법사에서 생성 된 코드를 push. register로 이동 하 여이를 수행할 수 있습니다. \* ( **CreatePushNotificationChannelForApplicationAsync**에 대 한 호출 포함)은 onlaunched 된 이벤트 외부에 있지만이에 대 한 구체적인 내용은 앱의 아키텍처에 따라 달라 집니다.
 
  
 

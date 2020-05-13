@@ -8,16 +8,16 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b91b5d8ce39f34c6065f6dce61e90a752b36c8ef
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: bbc0f23ad712850e565814febe5b7e681e58a85d
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971068"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234571"
 ---
 # <a name="create-adaptive-tiles"></a>적응 타일 만들기
 
-적응 타일 템플릿은 Windows 10의 새로운 기능으로, 다양 한 화면 밀도에 맞게 조정 되는 간단 하 고 유연한 태그 언어를 사용 하 여 고유한 타일 알림 콘텐츠를 디자인할 수 있습니다. 이 문서에서는 Windows 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. 적응 요소 및 특성의 전체 목록은 [적응 타일 스키마](../tiles-and-notifications/tile-schema.md)를 참조 하세요.
+적응 타일 템플릿은 Windows 10의 새로운 기능으로, 다양 한 화면 밀도에 맞게 조정 되는 간단 하 고 유연한 태그 언어를 사용 하 여 고유한 타일 알림 콘텐츠를 디자인할 수 있습니다. 이 문서에서는 Windows 앱에 대 한 적응 라이브 타일을 만드는 방법을 보여 줍니다. 적응 요소 및 특성의 전체 목록은 [적응 타일 스키마](../tiles-and-notifications/tile-schema.md)를 참조 하세요.
 
 (원하는 경우 Windows 10에 대 한 알림을 디자인할 때 [windows 8 타일 템플릿 카탈로그](https://docs.microsoft.com/previous-versions/windows/apps/hh761491(v=win.10)) 에서 미리 설정 된 템플릿을 계속 사용할 수 있습니다.)
 
@@ -121,7 +121,7 @@ TileContent content = new TileContent()
 -   TileWide
 -   TileLarge (데스크톱 전용)
 
-단일 타일 알림 XML 페이로드의 경우 다음 예와 같이 &lt;지원&gt; 하려는 각 타일 크기에 대 한 바인딩 요소를 제공 합니다.
+단일 타일 알림 XML 페이로드의 경우 &lt; &gt; 다음 예와 같이 지원 하려는 각 타일 크기에 대 한 바인딩 요소를 제공 합니다.
 
 ```xml
 <tile>
@@ -208,7 +208,7 @@ TileContent content = new TileContent()
 
 알림 페이로드의 브랜딩 특성을 사용 하 여 라이브 타일 (표시 이름 및 모퉁이 로고)의 맨 아래에 있는 브랜딩을 제어할 수 있습니다. "none," "name"만, "logo"만 또는 "nameAndLogo"를 사용하여 둘 다 표시하도록 선택할 수 있습니다.
 
-**참고**  Windows mobile은 모퉁이 로고를 지원 하지 않으므로 "로고" 및 "nameandlogo"는 모바일의 "이름"으로 기본 설정 됩니다.
+**참고**    Windows Mobile은 모퉁이 로고를 지원 하지 않으므로 "로고" 및 "nameAndLogo"는 모바일의 "이름"으로 기본 설정 됩니다.
 
  
 
@@ -406,7 +406,7 @@ new AdaptiveText()
 
 ![적응 타일 텍스트 스타일](images/adaptive-tiles-textstyles.png)
 
-**힌트 스타일을 지정**  하지 않으면 스타일 기본값은 caption로 지정 됩니다.
+**참고**    힌트 스타일을 지정 하지 않은 경우 스타일은 기본적으로 caption로 설정 됩니다.
 
  
 
@@ -414,14 +414,14 @@ new AdaptiveText()
 
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
-| &lt;텍스트 힌트-스타일 = "\*"/&gt; | 글꼴 높이               | 글꼴 두께 |
-| caption                        | 12 개의 유효 픽셀 (epx) | 일반     |
-| 본문                           | 15 window.epx.codesnippet                    | 일반     |
+| &lt;텍스트 힌트-스타일 = " \* "/&gt; | 글꼴 높이               | 글꼴 두께 |
+| caption                        | 12 개의 유효 픽셀 (epx) | Regular     |
+| 본문                           | 15 window.epx.codesnippet                    | Regular     |
 | base                           | 15 window.epx.codesnippet                    | 약간 굵게    |
-| 제목                       | 20 window.epx.codesnippet                    | 일반     |
+| 제목                       | 20 window.epx.codesnippet                    | Regular     |
 | title                          | 24 window.epx.codesnippet                    | 굴림   |
-| subheader.aboutdocs                      | 34 window.epx.codesnippet                    | 밝게       |
-| 머리글                         | 46 window.epx.codesnippet                    | 밝게       |
+| subheader.aboutdocs                      | 34 window.epx.codesnippet                    | Light       |
+| 머리글                         | 46 window.epx.codesnippet                    | Light       |
 
  
 
@@ -485,7 +485,7 @@ new AdaptiveText()
 
 장치 및 화면에서 최상의 환경을 제공 하려면 여러 그룹을 제공 합니다. 그룹이 여러 개인 경우 타일이 큰 화면에 맞게 조정 될 수 있습니다.
 
-**참고**  그룹의 올바른 자식은 하위 그룹입니다.
+**참고**    그룹의 올바른 자식은 하위 그룹입니다.
 
  
 
@@ -679,7 +679,7 @@ private static AdaptiveGroup CreateGroup(string from, string subject, string bod
 
 ![가중치가 합하면 100 인 하위 그룹](images/adaptive-tiles-subgroups03.png)
 
-**참고**  8 픽셀 여백은 열 사이에 자동으로 추가 됩니다.
+**참고**    열 사이에 8 픽셀 여백이 자동으로 추가 됩니다.
 
  
 
@@ -790,7 +790,7 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 ## <a name="images"></a>이미지
 
 
-&lt;이미지&gt; 요소는 타일 알림에 이미지를 표시 하는 데 사용 됩니다. 이미지는 타일 콘텐츠 내에 인라인으로 배치 될 수 있습니다 (기본값), 콘텐츠 뒤의 배경 이미지 또는 알림의 위쪽에서 애니메이션을 적용 하는 피킹 (peeking) 이미지
+&lt;이미지 &gt; 요소는 타일 알림에 이미지를 표시 하는 데 사용 됩니다. 이미지는 타일 콘텐츠 내에 인라인으로 배치 될 수 있습니다 (기본값), 콘텐츠 뒤의 배경 이미지 또는 알림의 위쪽에서 애니메이션을 적용 하는 피킹 (peeking) 이미지
 
 > [!NOTE]
 > 이미지는 앱의 패키지, 앱의 로컬 저장소 또는 웹에서 사용할 수 있습니다. 가 중 작성자 업데이트를 기준으로 웹 이미지는 일반 연결의 경우 최대 3mb, 요금제 연결의 경우 1mb가 될 수 있습니다. 아직가 중 작성자 업데이트를 실행 하지 않는 장치에서는 웹 이미지가 200 KB 보다 크지 않아야 합니다.
@@ -875,7 +875,7 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 
 ![이미지 예제](images/adaptive-tiles-images01.png)
 
-또한 &lt;바인딩&gt; 루트 또는 첫 번째 그룹에 배치 된 이미지는 사용 가능한 높이에 맞게 확장 됩니다.
+&lt; &gt; 또한 바인딩 루트 또는 첫 번째 그룹에 배치 된 이미지는 사용 가능한 높이에 맞게 확장 됩니다.
 
 ### <a name="image-alignment"></a>이미지 맞춤
 
@@ -1058,7 +1058,7 @@ TileLarge = new TileBinding()
 
 ### <a name="background-image"></a>배경 이미지
 
-배경 이미지를 설정 하려면 이미지 요소를 &lt;바인딩의&gt; 루트에 배치 하 고 배치 특성을 "background"로 설정 합니다.
+배경 이미지를 설정 하려면 이미지 요소를 바인딩의 루트에 배치 하 &lt; &gt; 고 배치 특성을 "background"로 설정 합니다.
 
 ```xml
 <binding template="TileWide">
@@ -1140,7 +1140,7 @@ private static AdaptiveSubgroup CreateSubgroup(string day, string image, string 
 
 ### <a name="peek-image"></a>이미지 피킹
 
-타일의 위쪽에서 "피킹" 하는 이미지를 지정할 수 있습니다. Peek 이미지는 애니메이션을 사용 하 여 타일 위쪽에서 아래쪽/위쪽으로 이동 하 고 보기를 표시 한 다음 나중에 다시 이동 하 여 타일의 주 콘텐츠를 표시 합니다. Peek 이미지를 설정 하려면 이미지 요소를 &lt;바인딩의&gt;루트에 배치 하 고 배치 특성을 "peek"로 설정 합니다.
+타일의 위쪽에서 "피킹" 하는 이미지를 지정할 수 있습니다. Peek 이미지는 애니메이션을 사용 하 여 타일 위쪽에서 아래쪽/위쪽으로 이동 하 고 보기를 표시 한 다음 나중에 다시 이동 하 여 타일의 주 콘텐츠를 표시 합니다. Peek 이미지를 설정 하려면 이미지 요소를 바인딩의 루트에 배치 하 &lt; &gt; 고 배치 특성을 "peek"로 설정 합니다.
 
 ```xml
 <binding template="TileMedium" branding="name">

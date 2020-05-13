@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: de18e77137941acfba6e9cb3fb6421de8fe156f0
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 5f7c124c1d77cbce140cb42cdc07682dad8f78f2
+ms.sourcegitcommit: 0f2ae8f97daac440c8e86dc07d11d356de29515c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730256"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83280253"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows 10 게임 개발 가이드
 
@@ -119,7 +119,7 @@ Xbox Live 크리에이터 프로그램을 사용 하면 누구나 Xbox Live를 �
 
 소매점 하드웨어만 사용 하 여 전용 개발자 키트 없이 작성자 프로그램에서 게임을 배포 하 고 디자인 하 고 게시할 수 있습니다. 시작 하려면 Xbox One에서 [개발 모드 정품 인증 앱](https://docs.microsoft.com/windows/uwp/xbox-apps/devkit-activation) 을 다운로드 하세요.
 
-더 많은 Xbox Live 기능에 액세스 하려는 경우 전용 마케팅 및 개발 지원 및 기본 Xbox One 스토어에서 추천 될 기회는 [ID@Xbox](https://www.xbox.com/Developers/id) 프로그램에 적용 됩니다.
+더 많은 Xbox Live 기능에 액세스 하려는 경우 전용 마케팅 및 개발 지원 및 기본 Xbox One 스토어에서 추천 될 기회는 프로그램에 적용 됩니다 [ID@Xbox](https://www.xbox.com/Developers/id) .
 
 <table>
     <colgroup>
@@ -134,7 +134,7 @@ Xbox Live 크리에이터 프로그램을 사용 하면 누구나 Xbox Live를 �
 
 #### <a name="idxbox"></a>ID@Xbox
 
-이 ID@Xbox 프로그램을 사용 하면 Windows 및 Xbox one에서 자격을 갖춘 게임 개발자에 게 자동으로 게시할 수 있습니다. Xbox One 용으로 개발 하거나 Gamerscore, 성과, 순위표 등의 Xbox Live 기능을 Windows 10 게임에 추가 하려면로 ID@Xbox등록 하세요. 개발자가 ID@Xbox 되어 성과를 발휘할 하 고 성공을 최대화 하는 데 필요한 도구와 지원을 받으세요. 파트너 센터에서 개발자 계정을 등록 ID@Xbox 하기 전에 먼저를 적용 하는 것이 좋습니다.
+이 ID@Xbox 프로그램을 사용 하면 Windows 및 Xbox one에서 자격을 갖춘 게임 개발자에 게 자동으로 게시할 수 있습니다. Xbox One 용으로 개발 하거나 Gamerscore, 성과, 순위표 등의 Xbox Live 기능을 Windows 10 게임에 추가 하려면로 등록 하세요 ID@Xbox . 개발자가 되어 성과를 ID@Xbox 발휘할 하 고 성공을 최대화 하는 데 필요한 도구와 지원을 받으세요. ID@Xbox파트너 센터에서 개발자 계정을 등록 하기 전에 먼저를 적용 하는 것이 좋습니다.
 
 <table>
     <colgroup>
@@ -218,7 +218,7 @@ Windows 10 게임 기능을 이해 하 고 게임 개발을 신속 하 게 시�
     </tr>
     <tr>
         <td>Windows 게임 샘플 (MSDN 코드 갤러리)</td>
-        <td><a href="https://code.msdn.microsoft.com/windowsapps/site/search?f%5B0%5D.Type=SearchText&f%5B0%5D.Value=game&f%5B1%5D.Type=Contributors&f%5B1%5D.Value=Microsoft&f%5B1%5D.Text=Microsoft">Microsoft Store 게임 샘플</a></td>
+        <td><a href="https://docs.microsoft.com/samples/browse/?term=games">Microsoft Store 게임 샘플</a></td>
     </tr>
     <tr>
         <td>JavaScript 2D 게임 샘플</td>
@@ -961,7 +961,7 @@ Windows 10에는 Windows 10 장치에서 공통 API 플랫폼을 제공 하는 U
     </tr>
     <tr>
         <td>UWP 개발을 위한 설정</td>
-        <td><a href="https://docs.microsoft.com/windows/uwp/get-started/get-set-up">설정하기</a></td>
+        <td><a href="https://docs.microsoft.com/windows/uwp/get-started/get-set-up">설정</a></td>
     </tr>
 </table>
 
@@ -1496,7 +1496,7 @@ HDR의 전체 색 기능을 사용 하는 게임 콘텐츠를 빌드합니다.
 </table>
 
 
-### <a name="globalization-and-localization"></a>세계화 및 지역화
+### <a name="globalization-and-localization"></a>전역화 및 지역화
 
 Windows 플랫폼용 세계 시장 대응성 게임을 개발 하 고 Microsoft의 인기 제품에 내장 된 국가별 기능에 대해 알아보세요.
 
@@ -1805,7 +1805,7 @@ Xbox Live는 전 세계 수 백만 명의 게이머를 연결하는 최고의 �
     </tr>  
 </table>
 
-### <a name="for-managed-partners-and-developers-in-the-idxbox-program"></a>ID@Xbox 프로그램의 관리 되는 파트너 및 개발자 용
+### <a name="for-managed-partners-and-developers-in-the-idxbox-program"></a>프로그램의 관리 되는 파트너 및 개발자 용 ID@Xbox
 
 <table>
     <colgroup>
@@ -1834,7 +1834,7 @@ Xbox Live는 전 세계 수 백만 명의 게이머를 연결하는 최고의 �
     </tr>
     <tr>
         <td>샘플</td>
-        <td><a href="https://github.com/Microsoft/xbox-live-samples/tree/master/Samples/ID%40XboxSDK">개발자를 위한 ID@Xbox 코드 샘플</a></td>
+        <td><a href="https://github.com/Microsoft/xbox-live-samples/tree/master/Samples/ID%40XboxSDK">개발자를 위한 코드 샘플 ID@Xbox</a></td>
     </tr>  
     <tr>
         <td>Xbox Live 게임 개발 개요 (비디오)</td>
@@ -1855,7 +1855,7 @@ Xbox Live는 전 세계 수 백만 명의 게이머를 연결하는 최고의 �
 </table>
 
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 <table>
     <colgroup>

@@ -7,16 +7,16 @@ ms.date: 03/07/2018
 ms.topic: article
 keywords: windows 10, uwp, win32, 데스크톱, 알림 메시지 보내기, 알림 보내기, 바탕 화면 브리지, msix, 스파스 패키지, c + +, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: cc87f9281b9623c1f1b46def8f886cfebeb0438f
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 3e103c41de7bf169629085fd259e23e17804360d
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968298"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234664"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>데스크톱 c + + WRL apps에서 로컬 알림 메시지 보내기
 
-데스크톱 앱 (패키지 된 [Msix](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 얻기 위해 [스파스 패키지](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱 및 클래식 패키지 되지 않은 Win32 앱 포함)은 Windows 앱 앱과 마찬가지로 대화형 알림 메시지를 보낼 수 있습니다. 그러나 MSIX 또는 스파스 패키지를 사용 하지 않는 경우 다양 한 활성화 체계와 패키지 id의 잠재적 부족으로 인해 데스크톱 앱에 대 한 몇 가지 특별 한 단계가 있습니다.
+데스크톱 앱 (패키지 된 [Msix](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 얻기 위해 [스파스 패키지](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱 및 클래식 패키지 되지 않은 Win32 앱 포함)은 Windows 앱과 마찬가지로 대화형 알림 메시지를 보낼 수 있습니다. 그러나 MSIX 또는 스파스 패키지를 사용 하지 않는 경우 다양 한 활성화 체계와 패키지 id의 잠재적 부족으로 인해 데스크톱 앱에 대 한 몇 가지 특별 한 단계가 있습니다.
 
 > [!IMPORTANT]
 > UWP 앱을 작성 하는 경우 [uwp 설명서](send-local-toast.md)를 참조 하세요. 다른 데스크톱 언어는 [데스크톱 c #](send-local-toast-desktop.md)을 참조 하세요.
@@ -42,7 +42,7 @@ Win32 앱에 대해 Windows 10 SDK를 사용 하도록 설정 하지 않은 경�
 
 GitHub의 [desktopnotificationmanagercompat .h](https://raw.githubusercontent.com/WindowsNotifications/desktop-toasts/master/CPP-WRL/DesktopToastsCppWrlApp/DesktopNotificationManagerCompat.h) 및 [desktopnotificationmanagercompat .cpp](https://raw.githubusercontent.com/WindowsNotifications/desktop-toasts/master/CPP-WRL/DesktopToastsCppWrlApp/DesktopNotificationManagerCompat.cpp) 파일을 프로젝트에 복사 합니다. 호환성 라이브러리는 데스크톱 알림의 복잡성을 대부분 추상화 합니다. 다음 지침에는 호환 라이브러리가 필요 합니다.
 
-미리 컴파일된 헤더를 사용 하는 경우에는 `#include "stdafx.h"` 를 DesktopNotificationManagerCompat .cpp 파일의 첫 번째 줄로 지정 해야 합니다.
+미리 컴파일된 헤더를 사용 하는 경우에는를 `#include "stdafx.h"` DesktopNotificationManagerCompat .cpp 파일의 첫 번째 줄로 지정 해야 합니다.
 
 
 ## <a name="step-3-include-the-header-files-and-namespaces"></a>3 단계: 헤더 파일 및 네임 스페이스 포함
@@ -99,7 +99,7 @@ CoCreatableClass(NotificationActivator);
 1. **Xmlns: com** 에 대 한 선언
 2. **Xmlns: desktop** 에 대 한 선언
 3. **IgnorableNamespaces** 특성, **com** 및 **desktop**
-4. **com:** #4 단계에서 GUID를 사용 하 여 com 활성기에 대 한 확장입니다. 알림 메시지의 시작을 `Arguments="-ToastActivated"` 알 수 있도록를 포함 해야 합니다.
+4. **com:** #4 단계에서 GUID를 사용 하 여 com 활성기에 대 한 확장입니다. `Arguments="-ToastActivated"`알림 메시지의 시작을 알 수 있도록를 포함 해야 합니다.
 5. **desktop:** TOAST 활성기 CLSID (#4의 GUID)를 선언 하는 **windows. toastNotificationActivation** 용 확장입니다.
 
 **Appxmanifest.xml**
@@ -145,7 +145,7 @@ Win32 앱을 식별 하는 고유한 AUMID를 선택 합니다. 이는 일반적
 
 #### <a name="step-51-wix-installer"></a>5.1 단계: WiX 설치 관리자
 
-설치 관리자에 대해 WiX를 사용 하는 경우 다음에 표시 된 것 처럼 **Product. wxs** 파일을 편집 하 여 두 개의 바로 가기 속성을 시작 메뉴 바로 가기에 추가 합니다. 아래 `{}` 와 같이 #4 단계에서 GUID가로 묶여 있는지 확인 합니다.
+설치 관리자에 대해 WiX를 사용 하는 경우 다음에 표시 된 것 처럼 **Product. wxs** 파일을 편집 하 여 두 개의 바로 가기 속성을 시작 메뉴 바로 가기에 추가 합니다. 아래와 같이 #4 단계에서 GUID가로 묶여 있는지 확인 `{}` 합니다.
 
 **Product. wxs**
 
@@ -405,11 +405,11 @@ MSIX/sparse 패키지 앱을 배포 하 고 디버그 하려면 패키지 [된 �
 
 MSIX/sparse 패키지와 클래식 Win32 앱을 모두 설치한 경우 알림 활성화를 처리할 때 MSIX/sparse 패키지 앱이 클래식 Win32 앱을 대체 합니다. 즉, 클래식 Win32 앱의 알림을 클릭 하면 MSIX/sparse 패키지 앱을 계속 해 서 시작 합니다. MSIX/sparse 패키지 앱을 제거 하면 정품 인증을 다시 클래식 Win32 앱으로 되돌립니다.
 
-를 수신 `HRESULT 0x800401f0 CoInitialize has not been called.`하는 경우 api를 호출 `CoInitialize(nullptr)` 하기 전에 앱에서를 호출 해야 합니다.
+를 수신 하 `HRESULT 0x800401f0 CoInitialize has not been called.` `CoInitialize(nullptr)` 는 경우 api를 호출 하기 전에 앱에서를 호출 해야 합니다.
 
-호환성 Api를 `HRESULT 0x8000000e A method was called at an unexpected time.` 호출 하는 동안 수신 하는 경우 필요한 Register 메서드를 호출 하지 못했음을 의미 합니다. 또는 msix/sparse 패키지 앱의 경우 현재 앱을 msix/스파스 컨텍스트에서 실행 하 고 있지 않습니다.
+호환성 Api를 호출 하는 동안 수신 하는 경우 `HRESULT 0x8000000e A method was called at an unexpected time.` 필요한 Register 메서드를 호출 하지 못했음을 의미 합니다. 또는 MSIX/sparse 패키지 앱의 경우 현재 앱을 MSIX/스파스 컨텍스트에서 실행 하 고 있지 않습니다.
 
-많은 `unresolved external symbol` 컴파일 오류가 발생 하면 #1 단계에서 추가 **종속성** 에 추가 `runtimeobject.lib` 하지 않을 수 있습니다 (또는 디버그 구성에만 추가 하 고 릴리스 구성은 추가 하지 않음).
+많은 `unresolved external symbol` 컴파일 오류가 발생 하면 `runtimeobject.lib` #1 단계에서 추가 **종속성** 에 추가 하지 않을 수 있습니다 (또는 디버그 구성에만 추가 하 고 릴리스 구성은 추가 하지 않음).
 
 
 ## <a name="handling-older-versions-of-windows"></a>이전 버전의 Windows 처리
@@ -420,11 +420,11 @@ Windows 8은 알림 메시지를 도입 했지만 ToastText01와 같은 [레거�
 
 | OS | To Generic | COM 활성기 | 레거시 알림 템플릿 |
 | -- | ------------ | ------------- | ---------------------- |
-| 윈도우 10 | 지원됨 | 지원됨 | 지원 됨 (COM 서버를 활성화 하지 않음) |
+| Windows 10 | 지원됨 | 지원됨 | 지원 됨 (COM 서버를 활성화 하지 않음) |
 | Windows 8.1/8 | N/A | 해당 없음 | 지원 여부 |
-| Windows 7 및 낮음 | N/A | N/A | N/A |
+| Windows 7 및 낮음 | N/A | N/A | 해당 없음 |
 
-Windows 10에서 실행 되 고 있는지 확인 하려면 `<VersionHelpers.h>` 헤더를 포함 하 고 **IsWindows10OrGreater** 메서드를 확인 합니다. True가 반환 되 면이 설명서에 설명 된 모든 메서드를 계속 호출 합니다. 
+Windows 10에서 실행 되 고 있는지 확인 하려면 헤더를 포함 하 `<VersionHelpers.h>` 고 **IsWindows10OrGreater** 메서드를 확인 합니다. True가 반환 되 면이 설명서에 설명 된 모든 메서드를 계속 호출 합니다. 
 
 ```cpp
 #include <VersionHelpers.h>

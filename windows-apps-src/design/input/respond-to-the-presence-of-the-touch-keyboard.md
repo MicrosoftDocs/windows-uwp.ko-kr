@@ -7,12 +7,12 @@ template: detail.hbs
 keywords: 키보드, 접근성, 탐색, 포커스, 텍스트, 입력, 사용자 상호 작용
 ms.date: 07/13/2018
 ms.topic: article
-ms.openlocfilehash: 76b468eedd136522a4af9fb5880049278548865d
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 969d0c24c86a47e72cbfec08d835c25b6e6779c4
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970268"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234882"
 ---
 # <a name="respond-to-the-presence-of-the-touch-keyboard"></a>터치 키보드의 현재 상태에 응답
 
@@ -39,7 +39,7 @@ ms.locfileid: "82970268"
 
 표준 키보드 상호 작용, 키보드 입력 및 이벤트 처리 및 UI 자동화를 기본적으로 이해 해야 합니다.
 
-Windows 앱 앱을 처음 개발 하는 경우 여기에 설명 된 기술에 익숙해질 수 있도록 다음 항목을 참조 하세요.
+Windows 앱 개발에 익숙하지 않은 경우이 항목을 살펴보고 여기에 설명 된 기술에 대해 알아보세요.
 
 - [첫 번째 앱 만들기](https://docs.microsoft.com/windows/uwp/get-started/your-first-app)
 - [이벤트 및 라우트된 이벤트](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview) 를 사용 하 여 이벤트에 대해 알아보기 개요
@@ -66,7 +66,7 @@ Windows 앱 앱을 처음 개발 하는 경우 여기에 설명 된 기술에 �
 
     ![터치 키보드를 표시 하거나 표시 하지 않는 폼](images/touch-keyboard-pan1.png)
 
-    경우에 따라 전체 시간에 화면에 유지 해야 하는 UI 요소가 있습니다. 폼 컨트롤이 패닝 영역에 포함 되 고 중요 한 UI 요소가 고정 되도록 UI를 디자인 합니다. 예를 들어:
+    경우에 따라 전체 시간에 화면에 유지 해야 하는 UI 요소가 있습니다. 폼 컨트롤이 패닝 영역에 포함 되 고 중요 한 UI 요소가 고정 되도록 UI를 디자인 합니다. 예:
 
     ![항상 보기 상태를 유지 해야 하는 영역을 포함 하는 폼입니다.](images/touch-keyboard-pan2.png)
 

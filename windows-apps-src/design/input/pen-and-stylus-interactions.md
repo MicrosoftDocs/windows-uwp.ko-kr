@@ -1,6 +1,6 @@
 ---
-Description: 자연 스러운 필기 및 그리기 환경을 위한 디지털 잉크를 비롯 하 여 펜 및 스타일러스 장치에서 사용자 지정 상호 작용을 지 원하는 Windows 앱 앱을 빌드 하세요.
-title: Windows 앱의 펜 상호 작용 및 Windows Ink
+Description: 자연 스러운 필기 및 그리기 환경을 위한 디지털 잉크를 비롯 하 여 펜 및 스타일러스 장치에서 사용자 지정 상호 작용을 지 원하는 Windows 앱을 빌드 하세요.
+title: Windows 앱의 펜 조작 및 Windows Ink
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen interactions and Windows Ink in Windows apps
 template: detail.hbs
@@ -8,21 +8,21 @@ keywords: Windows Ink, Windows Ink, DirectInk, InkPresenter, InkCanvas, 필기 �
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c2cda9b2775ac1e0dca2cd37d1082bc6d75b1bad
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 1c9986ee6d4dacc929a8c2d243becf7d5c9d973e
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968388"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234900"
 ---
-# <a name="pen-interactions-and-windows-ink-in-windows-apps"></a>Windows 앱의 펜 상호 작용 및 Windows Ink
+# <a name="pen-interactions-and-windows-ink-in-windows-apps"></a>Windows 앱의 펜 조작 및 Windows Ink
 
 ![화면 펜](images/ink/hero-small.png)  
 *Surface Pen* ( [Microsoft Store](https://www.microsoft.com/p/surface-pen/8zl5c82qmg6b)에서 구매할 수 있음)
 
 ## <a name="overview"></a>개요
 
-Windows 앱 앱에서 펜 입력을 최적화 하 여 표준 [**포인터 장치**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.PointerDevice) 기능 및 사용자에 게 가장 적합 한 windows Ink 환경을 제공 합니다.
+Windows 앱에서 펜 입력을 최적화 하 여 표준 [**포인터 장치**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.PointerDevice) 기능 및 사용자에 게 가장 적합 한 windows Ink 환경을 제공 합니다.
 
 > [!NOTE]
 > 이 항목에서는 Windows Ink 플랫폼에 대해 중점적으로 설명 합니다. 마우스, 터치 및 터치 패드와 유사한 일반적인 포인터 입력 처리의 경우 [포인터 입력 처리](handle-pointer-input.md)를 참조 하세요.
@@ -462,7 +462,7 @@ Windows 잉크 플랫폼에서는 스트로크 선택과 같이 수정 된 입�
 
 ## <a name="other-articles-in-this-section"></a>이 단원의 다른 문서
 
-| 항목 | Description |
+| 항목 | 설명 |
 | --- | --- |
 | [잉크 스트로크 인식](convert-ink-to-text.md) | 필기 인식을 사용 하 여 잉크 스트로크를 텍스트로 변환 하거나 사용자 지정 인식을 사용 하 여 도형으로 변환 합니다. |
 | [잉크 스트로크 저장 및 검색](save-and-load-ink.md) | 포함 된 ISF (Ink Serialize 된 형식) 메타 데이터를 사용 하 여 GIF (그래픽 교환 형식) 파일에 잉크 스트로크 데이터를 저장 합니다. |

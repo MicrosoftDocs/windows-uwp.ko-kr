@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e0591a62134f09c1b3a9d115d038020e95f0c139
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 2d6ddf03541e94f89d0950a4f4c03eebaa0e396e
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970718"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234474"
 ---
 # <a name="mouse-interactions"></a>마우스 상호 작용
 
-터치 입력을 위한 Windows 앱 앱 디자인을 최적화 하 고 기본적으로 기본적인 마우스 지원을 받으세요. 
+터치 입력을 위한 Windows 앱 디자인을 최적화 하 고 기본적으로 기본적인 마우스 지원을 받으세요. 
 
 ![마우스](images/input-patterns/input-mouse.jpg)
 
@@ -59,7 +59,7 @@ ms.locfileid: "82970718"
 <td align="left"><p>마우스 오른쪽 단추를 클릭 하 여 선택 하 고 명령</p></td>
 <td align="left"><p>마우스 오른쪽 단추를 클릭 하 여 탐색 모음 (있는 경우)을 표시 하 고 전역 명령이 포함 된 앱 모음을 표시 합니다. 요소를 마우스 오른쪽 단추로 클릭 하 여 선택 하 고 선택한 요소에 대 한 상황별 명령이 포함 된 앱 표시줄을 표시 합니다.</p>
 <div class="alert">
-<strong>참고</strong>  선택 또는 앱 바 명령이 적절 한 UI 동작이 아니면 마우스 오른쪽 단추를 클릭 하 여 상황에 맞는 메뉴를 표시 합니다. 그러나 모든 명령 동작에 대해 앱 바를 사용 하는 것이 좋습니다.
+<strong>참고</strong>    선택 또는 앱 바 명령이 적절 한 UI 동작이 아니면 마우스 오른쪽 단추를 클릭 하 여 상황에 맞는 메뉴를 표시 합니다. 그러나 모든 명령 동작에 대해 앱 바를 사용 하는 것이 좋습니다.
 </div>
 <div>
  

@@ -1,5 +1,5 @@
 ---
-Description: 알림 시각화 도우미는 Store의 Windows 앱으로, 개발자가 Windows 10용 적응형 라이브 타일을 디자인하는 데 도움이 됩니다.
+Description: 알림 시각화 도우미는 개발자가 Windows 10 용 적응 라이브 타일을 설계 하는 데 도움이 되는 새로운 Windows 앱입니다.
 title: 알림 시각화 도우미
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 template: detail.hbs
@@ -7,19 +7,19 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c8d355570ef7002d1424457bf29f8161680f2c77
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 5f9dc51a8ba387018a50e95702db1c539e889a5d
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971038"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234682"
 ---
 # <a name="notifications-visualizer"></a>알림 시각화 도우미
 
  
 
 
-알림 시각화 도우미는 개발자가 Windows 10에 대 한 적응 라이브 타일 및 대화형 알림 [메시지를 디자인 하는](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) 데 도움이 되는 새로운 windows 앱 앱입니다.
+알림 시각화 도우미는 개발자가 Windows 10에 대 한 적응 라이브 타일 및 대화형 알림 메시지를 디자인 하는 데 도움이 되는 새로운 [windows 앱입니다](https://www.microsoft.com/store/apps/notifications-visualizer/9nblggh5xsl1) .
 
 
 ## <a name="overview"></a>개요

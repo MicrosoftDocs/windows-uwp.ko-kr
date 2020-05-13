@@ -1,5 +1,5 @@
 ---
-Description: 액세스 가능한 Windows 앱 앱을 만들려는 경우 방지할 수 있는 방법을 나열 합니다.
+Description: 액세스 가능한 Windows 앱을 만들려는 경우 방지할 수 있는 방법을 나열 합니다.
 ms.assetid: 024A9B70-9821-45BB-93F1-61C0B2ECF53E
 title: 피해야 할 접근성 사례
 label: Accessibility practices to avoid
@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 95c23a00ebc9ee2563340fbd5594d53ac7edb066
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 75dad7eb676bd2d2a9d95fa57122085329e5e144
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970008"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233948"
 ---
 # <a name="accessibility-practices-to-avoid"></a>피해야 할 접근성 사례
 
-액세스 가능한 Windows 앱 앱을 만들려는 경우 다음을 방지 하는 방법 목록을 참조 하세요. 
+액세스할 수 있는 Windows 앱을 만들려는 경우 다음을 방지 하는 방법 목록을 참조 하세요. 
 
 * Microsoft UI 자동화 지원이 이미 구현 된 **기본 Windows 컨트롤 또는 컨트롤을 사용할 수 있는 경우 사용자 지정 UI 요소를 빌드하지 마세요** . 표준 Windows 컨트롤은 기본적으로 액세스할 수 있으며, 일반적으로 응용 프로그램에 관련 된 몇 가지 내게 필요한 옵션 특성만 추가 해야 합니다. 이와 대조적으로 실제 사용자 지정 컨트롤에 대 한 [**Automationpeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 지원 구현은 약간 더 관련이 있습니다 ( [사용자 지정 자동화 피어](custom-automation-peers.md)참조).
 * **정적 텍스트 또는 다른 비 대화형 요소를 탭 순서에 배치 하지** 않습니다. 예를 들어, 대화형이 아닌 요소에 대해 [**TabIndex**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.tabindex) 속성을 설정 합니다. 비 대화형 요소는 탭 순서에 있는 경우 사용자에 대 한 키보드 탐색의 효율성을 줄이기 때문에 키보드 접근성 지침에 대 한 것입니다. 많은 보조 기술에서 탭 순서를 사용 하 고 보조 기술 사용자에 게 앱의 인터페이스를 제공 하는 방법에 대 한 논리의 일부로 요소에 초점을 맞출 수 있는 기능을 사용 합니다. 탭 순서의 텍스트 전용 요소는 탭 순서 (단추, 확인란, 텍스트 입력 필드, 콤보 상자, 목록 등)에서 대화형 요소만 필요로 하는 사용자를 혼동할 수 있습니다.

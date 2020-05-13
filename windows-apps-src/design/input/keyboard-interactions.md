@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: 1d883243b60b2b2693fbf0f21315008e556b5743
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 44cb122f70825df3ceef043d84e57cd077780749
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970758"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234704"
 ---
 # <a name="keyboard-interactions"></a>키보드 상호 작용
 
@@ -55,7 +55,7 @@ Windows 앱을 디자인 하 고 최적화 하는 방법에 대해 알아봅니�
 
 이 항목에서 설명 하는 장치 및 도구는 다음과 같습니다.
 
-| 장치/도구                       | Description     |
+| 장치/도구                       | 설명     |
 |-----------------------------------|-----------------|
 |키보드 (하드웨어 및 소프트웨어)   |표준 하드웨어 키보드 외에도 Windows 응용 프로그램은 [터치 (또는 소프트웨어) 키보드](#software-keyboard) 와 [화상 키보드](#on-screen-keyboard)라는 두 가지 소프트웨어 키보드를 지원 합니다.|
 |게임 패드 및 리모컨         |Xbox 게임 패드 및 원격 제어는 [10 피트 환경](../devices/designing-for-tv.md)에서 기본적인 입력 장치입니다. 게임 패드 및 원격 제어에 대 한 Windows 지원에 대 한 자세한 내용은 [게임 패드 및 원격 제어 상호 작용](gamepad-and-remote-interactions.md)을 참조 하세요.|
@@ -89,13 +89,13 @@ UWP는 모든 입력 유형과 환경에서 잘 작동 하는 단일 포커스 �
 
 키보드를 사용 하 여 컨트롤 (탐색 요소 포함)을 사용 하려면 컨트롤에 포커스가 있어야 합니다. 컨트롤에서 키보드 포커스를 수신 하는 한 가지 방법은 응용 프로그램의 탭 순서에서 탭 정지로 식별 하 여 탭 탐색을 통해 액세스할 수 있도록 하는 것입니다.
 
-탭 순서에 컨트롤을 포함 하려면 [IsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_IsEnabled) 속성을 **true** 로 설정 하 고 [istabstop](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) 속성을 **true**로 설정 해야 합니다.
+탭 순서에 컨트롤을 포함 하려면 [IsEnabled](/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_IsEnabled) 속성을 **true** 로 설정 하 고 [istabstop](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) 속성을 **true**로 설정 해야 합니다.
 
-탭 순서에서 컨트롤을 구체적으로 제외 하려면 [Istabstop](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) 속성을 **false**로 설정 합니다.
+탭 순서에서 컨트롤을 구체적으로 제외 하려면 [Istabstop](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) 속성을 **false**로 설정 합니다.
 
-기본적으로 탭 순서는 UI 요소가 생성 되는 순서를 반영 합니다. 예 `StackPanel` 를 들어에 `Button`, `Checkbox` `TextBox`및가 포함 된 경우 탭 순서는 `Button`, `Checkbox`및 `TextBox`입니다.
+기본적으로 탭 순서는 UI 요소가 생성 되는 순서를 반영 합니다. 예를 들어에, 및가 포함 된 경우 `StackPanel` `Button` `Checkbox` `TextBox` 탭 순서는 `Button` , `Checkbox` 및 `TextBox` 입니다.
 
-[TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) 속성을 설정 하 여 기본 탭 순서를 재정의할 수 있습니다.
+[TabIndex](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) 속성을 설정 하 여 기본 탭 순서를 재정의할 수 있습니다.
 
 #### <a name="tab-order-should-be-logical-and-predictable"></a>탭 순서는 논리적이 고 예측 가능 해야 합니다.
 
@@ -119,7 +119,7 @@ UWP는 모든 입력 유형과 환경에서 잘 작동 하는 단일 포커스 �
 
 초기 포커스는 응용 프로그램 또는 페이지가 처음 시작 되거나 활성화 될 때 포커스를 받는 UI 요소를 지정 합니다. 키보드를 사용 하는 경우이 요소에서 사용자가 응용 프로그램의 UI와 상호 작용 하기 시작 합니다.
 
-UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높은 [TabIndex](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) 가 있는 요소로 설정 됩니다. 컨테이너 컨트롤의 자식 요소는 무시 됩니다. 타이의 시각적 트리에서 첫 번째 요소가 포커스를 받습니다.
+UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높은 [TabIndex](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_TabIndex) 가 있는 요소로 설정 됩니다. 컨테이너 컨트롤의 자식 요소는 무시 됩니다. 타이의 시각적 트리에서 첫 번째 요소가 포커스를 받습니다.
 
 #### <a name="set-initial-focus-on-the-most-logical-element"></a>가장 논리적 요소에 초기 포커스 설정
 
@@ -143,7 +143,7 @@ UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높�
 -   탭 **키** 탭 순서에서 실행 가능한/활성 컨트롤 간을 이동 합니다.
 -   **Shift + tab** 을 누르면 역방향 탭 순서로 컨트롤이 이동 합니다. 사용자가 화살표 키를 사용 하 여 컨트롤 내부를 탐색 하는 경우 포커스는 컨트롤 내에서 마지막으로 알려진 값으로 설정 됩니다.
 -   **화살표 키는** 사용자가 "내부 탐색"을 입력 하면 컨트롤 관련 "내부 탐색"을 노출 하 고, 화살표 키는 컨트롤에서 이동 하지 않습니다. 일부 사례:
-    -   위쪽/아래쪽 화살표 키 `ListView` 를 누르면 포커스가로 이동 합니다.`MenuFlyout`
+    -   위쪽/아래쪽 화살표 키를 누르면 포커스가로 이동 합니다. `ListView``MenuFlyout`
     -   현재 선택 되어 있는 값 `Slider` 을 수정 합니다.`RatingsControl`
     -   캐럿 이동`TextBox`
     -   항목 확장/축소`TreeView`
@@ -154,7 +154,7 @@ UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높�
 
 응용 프로그램 UI의 전체 구성 내에서 관계를 강화 하는 일련의 관련 컨트롤에 화살표 키 탐색을 제공 합니다.
 
-예를 들어 여기 `ContentDialog` 에 표시 된 컨트롤은 기본적으로 단추의 가로 행에 대해 내부 탐색을 제공 합니다 (사용자 지정 컨트롤의 경우 [컨트롤 그룹](#control-group) 섹션 참조).
+예를 들어 `ContentDialog` 여기에 표시 된 컨트롤은 기본적으로 단추의 가로 행에 대해 내부 탐색을 제공 합니다 (사용자 지정 컨트롤의 경우 [컨트롤 그룹](#control-group) 섹션 참조).
 
 ![대화 상자 예제](images/keyboard/dialog.png)
 
@@ -166,7 +166,7 @@ UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높�
 
 관련 컨트롤 또는 보완 컨트롤의 컬렉션에 대해 단일 탭 정지를 정의 하면 앱에서 전체 탭 정지의 수를 최소화할 수 있습니다.
 
-예를 들어 다음 이미지에서는 두 개의 누적 `ListView` 된 컨트롤을 보여 줍니다. 왼쪽의 이미지는 탭 정지에 사용 되는 화살표 키 탐색을 사용 하 여 `ListView` 컨트롤 간을 탐색 하는 반면, 오른쪽의 이미지는 tab 키를 사용 하 여 부모 컨트롤을 트래버스할 필요가 없기 때문에 자식 요소 간의 탐색을 더 쉽고 효율적으로 만들 수 있는 방법을 보여 줍니다.
+예를 들어 다음 이미지에서는 두 개의 누적 된 컨트롤을 보여 줍니다 `ListView` . 왼쪽의 이미지는 탭 정지에 사용 되는 화살표 키 탐색을 사용 하 여 컨트롤 간을 탐색 하 `ListView` 는 반면, 오른쪽의 이미지는 tab 키를 사용 하 여 부모 컨트롤을 트래버스할 필요가 없기 때문에 자식 요소 간의 탐색을 더 쉽고 효율적으로 만들 수 있는 방법을 보여 줍니다.
 
 
 <table>
@@ -184,7 +184,7 @@ UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높�
 
 #### <a name="text-entry"></a>텍스트 항목
 
-및 `TextBox` `RichEditBox`와 같은 텍스트 입력을 위해 특별히 디자인 된 컨트롤의 경우 모든 키보드 입력은 텍스트를 입력 하거나 탐색 하는 데 사용 되며,이는 다른 키보드 명령 보다 우선적으로 적용 됩니다. 예를 들어 `AutoSuggestBox` 컨트롤의 드롭다운 메뉴는 **Space** 키를 선택 명령으로 인식 하지 않습니다.
+및와 같은 텍스트 입력을 위해 특별히 디자인 된 컨트롤의 경우 `TextBox` `RichEditBox` 모든 키보드 입력은 텍스트를 입력 하거나 탐색 하는 데 사용 되며,이는 다른 키보드 명령 보다 우선적으로 적용 됩니다. 예를 들어 컨트롤의 드롭다운 메뉴는 `AutoSuggestBox` **Space** 키를 선택 명령으로 인식 하지 않습니다.
 
 ![텍스트 입력](images/keyboard/text-entry.png)
 
@@ -197,9 +197,9 @@ UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높�
 #### <a name="enter-key"></a>Enter 키
 
 **Enter** 키를 누르면 포커스가 있는 컨트롤에 따라 다양 한 일반적인 사용자 상호 작용을 수행할 수 있습니다.
--   또는 `Hyperlink`와 같은 명령 컨트롤을 `Button` 활성화 합니다. 최종 사용자 혼란을 방지 하기 위해 **Enter** 키를 사용 하면 또는 `ToggleButton` `AppBarToggleButton`와 같은 명령 컨트롤과 같은 컨트롤을 활성화할 수도 있습니다.
--   `ComboBox` 및 `DatePicker`와 같은 컨트롤에 대 한 선택 UI를 표시 합니다. 또한 **Enter** 키는 선택 UI를 커밋하고 닫습니다.
--   `ListView`,, 등의 목록 컨트롤 `GridView`을 활성화 `ComboBox`합니다.
+-   또는와 같은 명령 컨트롤을 `Button` 활성화 `Hyperlink` 합니다. 최종 사용자 혼란을 방지 하기 위해 **Enter** 키를 사용 하면 또는와 같은 명령 컨트롤과 같은 컨트롤을 활성화할 수도 있습니다 `ToggleButton` `AppBarToggleButton` .
+-   및와 같은 컨트롤에 대 한 선택 UI를 표시 합니다 `ComboBox` `DatePicker` . 또한 **Enter** 키는 선택 UI를 커밋하고 닫습니다.
+-   `ListView`,, 등의 목록 컨트롤을 활성화 `GridView` `ComboBox` 합니다.
     -   **Enter** 키를 선택 하면 해당 항목과 연결 된 추가 작업 (새 창 열기)이 없는 한 선택 작업이 목록 및 그리드 항목의 **공간** 키로 수행 됩니다.
     -   추가 동작이 컨트롤과 연결 된 경우에는 **Enter** 키를 사용 하 여 추가 작업을 수행 하 고 **Space** key는 선택 작업을 수행 합니다.
 
@@ -210,8 +210,8 @@ UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높�
 Esc 키를 사용 하면 사용자가 임시 UI (해당 UI의 모든 진행 중인 작업과 함께)를 취소할 수 있습니다.
 
 이러한 환경의 예는 다음과 같습니다.
--   사용자가 선택한 `ComboBox` 값을 가진을 열고 화살표 키를 사용 하 여 포커스 선택을 새 값으로 이동 합니다. Esc 키를 누르면가 `ComboBox` 닫히고 선택한 값이 원래 값으로 다시 설정 됩니다.
--   사용자가 전자 메일에 대 한 영구 삭제 작업을 호출 하 고 `ContentDialog` 작업을 확인 하 라는 메시지가 표시 됩니다. 사용자가 의도 한 작업이 아니라 **Esc** 키를 눌러 대화 상자를 닫습니다. **Esc** 키가 **취소** 단추와 연결 되 면 대화 상자가 닫히고 작업이 취소 됩니다. **Esc** 키는 일시적 UI에만 영향을 주며 앱 UI를 닫거나 뒤로 이동 하지는 않습니다.
+-   사용자가 `ComboBox` 선택한 값을 가진을 열고 화살표 키를 사용 하 여 포커스 선택을 새 값으로 이동 합니다. Esc 키를 누르면가 닫히고 `ComboBox` 선택한 값이 원래 값으로 다시 설정 됩니다.
+-   사용자가 전자 메일에 대 한 영구 삭제 작업을 호출 하 고 작업을 확인 하 라는 메시지가 표시 됩니다 `ContentDialog` . 사용자가 의도 한 작업이 아니라 **Esc** 키를 눌러 대화 상자를 닫습니다. **Esc** 키가 **취소** 단추와 연결 되 면 대화 상자가 닫히고 작업이 취소 됩니다. **Esc** 키는 일시적 UI에만 영향을 주며 앱 UI를 닫거나 뒤로 이동 하지는 않습니다.
 
 ![Esc 키](images/keyboard/esc-key.png)
 
@@ -220,8 +220,8 @@ Esc 키를 사용 하면 사용자가 임시 UI (해당 UI의 모든 진행 중�
 **Home** 및 **end** 키를 사용 하면 사용자가 UI 영역의 시작 이나 끝으로 스크롤할 수 있습니다.
 
 이러한 환경의 예는 다음과 같습니다.
--   및 `ListView` `GridView` 컨트롤의 경우 **Home** 키를 누르면 포커스가 첫 번째 요소로 이동 하 여 뷰로 스크롤됩니다. 반면, **최종** 키는 포커스를 마지막 요소로 이동 하 여 뷰로 스크롤합니다.
--   `ScrollView` 컨트롤의 경우에는 **Home** 키가 영역의 맨 위로 스크롤되며 **최종** 키는 영역의 아래쪽으로 스크롤됩니다. 포커스는 변경 되지 않습니다.
+-   `ListView`및 컨트롤의 경우 `GridView` **Home** 키를 누르면 포커스가 첫 번째 요소로 이동 하 여 뷰로 스크롤됩니다. 반면, **최종** 키는 포커스를 마지막 요소로 이동 하 여 뷰로 스크롤합니다.
+-   컨트롤의 경우에는 `ScrollView` **Home** 키가 영역의 맨 위로 스크롤되며 **최종** 키는 영역의 아래쪽으로 스크롤됩니다. 포커스는 변경 되지 않습니다.
 
 ![home 및 end 키](images/keyboard/home-and-end.png)
 
@@ -229,7 +229,7 @@ Esc 키를 사용 하면 사용자가 임시 UI (해당 UI의 모든 진행 중�
 
 **페이지** 키를 사용 하면 사용자가 개별 증가값으로 UI 영역을 스크롤할 수 있습니다.
 
-예를 들어 및 `ListView` `GridView` 컨트롤의 경우 **page up** 키는 영역을 "page" (일반적으로 뷰포트 높이) 만큼 위로 스크롤하고 영역 위쪽으로 포커스를 이동 합니다. 또는 **page down** 키를 눌러 영역을 페이지 아래로 스크롤하고 영역 아래쪽으로 포커스를 이동 합니다.
+예를 들어 `ListView` 및 컨트롤의 경우 `GridView` **page up** 키는 영역을 "page" (일반적으로 뷰포트 높이) 만큼 위로 스크롤하고 영역 위쪽으로 포커스를 이동 합니다. 또는 **page down** 키를 눌러 영역을 페이지 아래로 스크롤하고 영역 아래쪽으로 포커스를 이동 합니다.
 
 ![page up/down 키](images/keyboard/page-up-and-down.png)
 
@@ -339,15 +339,15 @@ UWP 컨트롤은 기본적으로 화살표 키 탐색을 지원 합니다. 사�
 
 접근성 사용자는 일반적으로 화살표 키를 사용 하 여 단추 컬렉션을 탐색 하지 않는 잘 설정 된 키보드 탐색 규칙을 사용 합니다. 그러나 시각 장애가 없는 사용자는 동작이 자연스럽 게 느껴질 수 있습니다.
 
-이 경우 기본 UWP 동작의 예는 `ContentDialog`입니다. 화살표 키를 사용 하 여 단추 간을 탐색할 수 있지만 각 단추는 탭 정지 이기도 합니다.
+이 경우 기본 UWP 동작의 예는 `ContentDialog` 입니다. 화살표 키를 사용 하 여 단추 간을 탐색할 수 있지만 각 단추는 탭 정지 이기도 합니다.
 
 ##### <a name="assign-single-tab-stop-to-familiar-ui-patterns"></a>친숙 한 UI 패턴에 단일 탭 정지 할당
 
 레이아웃이 컨트롤 그룹에 대해 잘 알려진 UI 패턴을 따르는 경우 그룹에 단일 탭 정지를 할당 하면 사용자의 탐색 효율성이 향상 될 수 있습니다.
 
-다음은 이러한 템플릿의 예입니다.
+다음과 같은 경우를 예로 들 수 있습니다.
 -   `RadioButtons`
--   `ListViews` 처럼 보이지만 단일 처럼 동작 합니다.`ListView`
+-   `ListViews`처럼 보이지만 단일 처럼 동작 합니다.`ListView`
 -   타일의 그리드와 같이 모양과 동작 하는 UI (예: 시작 메뉴 타일)
 
 #### <a name="specifying-control-group-behavior"></a>컨트롤 그룹 동작 지정
@@ -373,7 +373,7 @@ UWP 키보드 동작 및 내레이터가 지 원하는 몇 가지 차이점은 �
 
 #### <a name="case-study--autosuggestbox-control"></a>사례 연구 – AutoSuggestBox 컨트롤
 
-사용자가 Enter 키를 `AutoSuggestBox` 눌러 검색 쿼리를 전송할 수 있으므로의 검색 단추는 tab 키와 화살표 키를 사용 **Enter** 하 여 표준 키보드 탐색에 액세스할 수 없습니다. 그러나 사용자가 Caps Lock + 화살표 키를 누를 때 내레이터를 통해 액세스할 수 있습니다.
+`AutoSuggestBox`사용자가 **enter** 키를 눌러 검색 쿼리를 전송할 수 있으므로의 검색 단추는 tab 키와 화살표 키를 사용 하 여 표준 키보드 탐색에 액세스할 수 없습니다. 그러나 사용자가 Caps Lock + 화살표 키를 누를 때 내레이터를 통해 액세스할 수 있습니다.
 
 ![키보드 포커스 autosuggest](images/keyboard/auto-suggest-keyboard.png)
 
@@ -405,8 +405,8 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 | Space         | 단추                            | 선택 단추       |
 | Enter         | 단추                            | 선택 단추       |
 | 이스케이프        | B 단추                            | 뒤로 단추         |
-| 홈/끝      | N/A                                 | N/A                 |
-| Page Up/Down  | 세로 스크롤에 대 한 트리거 단추, 가로 스크롤에 대 한 범퍼 단추   | N/A                 |
+| 홈/끝      | 해당 없음                                 | 해당 없음                 |
+| Page Up/Down  | 세로 스크롤에 대 한 트리거 단추, 가로 스크롤에 대 한 범퍼 단추   | 해당 없음                 |
 
 게임 패드 및 원격 제어 사용에 사용할 UWP 앱을 디자인할 때 알아야 할 몇 가지 주요 차이점은 다음과 같습니다.
 -   텍스트 항목을 사용 하려면 사용자가를 눌러 텍스트 컨트롤을 활성화 해야 합니다.
@@ -419,7 +419,7 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 
 #### <a name="directional-navigation"></a>방향 탐색
 
-방향 탐색은 (화살표 키, D-패드) 방향 키를 누른 상태에서 해당 시각적 방향으로 포커스를 이동 하려고 하는 UWP [Focus 관리자](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.FocusManager) 도우미 클래스를 통해 관리 됩니다.
+방향 탐색은 (화살표 키, D-패드) 방향 키를 누른 상태에서 해당 시각적 방향으로 포커스를 이동 하려고 하는 UWP [Focus 관리자](/uwp/api/Windows.UI.Xaml.Input.FocusManager) 도우미 클래스를 통해 관리 됩니다.
 
 키보드와는 달리, 앱이 [마우스 모드](gamepad-and-remote-interactions.md#mouse-mode)에서 opts 면 전체 응용 프로그램에 대 한 방향성 탐색이 게임 패드 및 원격 제어에 적용 됩니다. 방향성 탐색 최적화에 대 한 자세한 내용은 [게임 패드 및 원격 제어 상호 작용](gamepad-and-remote-interactions.md) 을 참조 하세요.
 
@@ -501,6 +501,7 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 
 사용자 지정 컨트롤에서 이와 동일한 동작을 에뮬레이트하는 것이 좋습니다. 이 동작을 구현 하는 방법에 대 한 코드 샘플은 [프로그래밍 방식 포커스 탐색](focus-navigation-programmatic.md#find-the-first-and-last-focusable-element) 설명서에서 찾을 수 있습니다.
 
+
 ## <a name="test-your-app"></a>앱 테스트
 
 지원 되는 모든 입력 장치를 사용 하 여 앱을 테스트 하 여 UI 요소를 일관 되 고 직관적인 방식으로 탐색 하 고 예기치 않은 요소가 원하는 탭 순서를 방해 하지 않도록 합니다.
@@ -510,6 +511,7 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 * [입력 디바이스 식별](identify-input-devices.md)
 * [터치 키보드의 현재 상태에 응답](respond-to-the-presence-of-the-touch-keyboard.md)
 * [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
+* [NavigationView 컨트롤 키보드 사용 특성](/windows/uwp/design/controls-and-patterns/navigationview#hierarchical-navigation) 
 
 ## <a name="appendix"></a>부록
 
@@ -560,12 +562,12 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 
 키보드 상호 작용 성공으로 사용자는 키보드만 사용 하 여 기본 앱 시나리오를 수행할 수 있습니다. 즉, 사용자가 모든 대화형 요소에 연결 하 고 기본 기능을 활성화할 수 있습니다. 키보드 탐색, 내게 필요한 옵션에 대 한 액세스 키, 고급 사용자를 위한 액셀러레이터 키 (또는 바로 가기 키)를 비롯 한 다양 한 요소가 성공 수준에 영향을 줄 수 있습니다.
 
-**참고**  터치 키보드는 토글 및 대부분의 시스템 명령을 지원 하지 않습니다.
+**참고**    터치 키보드는 토글 및 대부분의 시스템 명령을 지원 하지 않습니다.
 
 #### <a name="on-screen-keyboard"></a>화상 키보드
 소프트웨어 키보드와 마찬가지로 화상 키보드는 터치, 마우스, 펜/스타일러스 또는 다른 포인팅 장치를 사용 하 여 데이터를 입력 하 고 입력 하는 실제 키보드 대신 사용할 수 있는 시각적 소프트웨어 키보드입니다 (터치 화면은 필요 하지 않음). 화상 키보드는 물리적 키보드를 사용 하지 않는 시스템이 나 이동성 장애가 있는 사용자가 기존의 물리적 입력 장치를 사용 하지 못하도록 하는 데 제공 됩니다. 화상 키보드는 하드웨어 키보드의 기능을 대부분 에뮬레이션 합니다.
 
-화상 키보드는 설정 &gt; 쉬운 액세스의 키보드 페이지에서 설정할 수 있습니다.
+화상 키보드는 설정 쉬운 액세스의 키보드 페이지에서 설정할 수 있습니다 &gt; .
 
 **참고** 화상 키보드가 터치 키보드 보다 우선 하므로 화상 키보드가 있는 경우 표시 되지 않습니다.
 

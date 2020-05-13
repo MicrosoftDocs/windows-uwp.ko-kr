@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱 응용 프로그램에서 터치, 마우스, 펜/스타일러스, 터치 패드 등의 포인팅 장치에서 입력 데이터를 수신, 처리 및 관리 합니다.
+Description: Windows 응용 프로그램에서 터치, 마우스, 펜/스타일러스, 터치 패드 등의 포인팅 장치에서 입력 데이터를 수신, 처리 및 관리 합니다.
 title: 포인터 입력 처리
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
@@ -8,16 +8,16 @@ keywords: 펜, 마우스, 터치 패드, 터치, 포인터, 입력, 사용자 �
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: db3b87bd187c64b04615fb6722e4e1f2b666b7dc
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 609f6f1ad33c3736d9ac99ec40cbbfe7ade9500a
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970068"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234822"
 ---
 # <a name="handle-pointer-input"></a>포인터 입력 처리
 
-Windows 앱 응용 프로그램의 포인팅 장치 (예: 터치, 마우스, 펜/스타일러스, 터치 패드)에서 입력 데이터를 수신, 처리 및 관리 합니다.
+Windows 응용 프로그램의 포인팅 장치 (예: 터치, 마우스, 펜/스타일러스, 터치 패드)에서 입력 데이터를 수신, 처리 및 관리 합니다.
 
 > [!Important]
 > 명확 하 고 잘 정의 된 요구 사항이 있고 플랫폼 컨트롤에서 지 원하는 상호 작용이 시나리오를 지원 하지 않는 경우에만 사용자 지정 상호 작용을 만듭니다.  
@@ -53,7 +53,7 @@ Windows 앱은 다음과 같은 포인터 이벤트를 수신할 수 있습니�
 <thead>
 <tr class="header">
 <th align="left">이벤트</th>
-<th align="left">Description</th>
+<th align="left">설명</th>
 </tr>
 </thead>
 <tbody>
@@ -72,7 +72,7 @@ Windows 앱은 다음과 같은 포인터 이벤트를 수신할 수 있습니�
 <td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost"><strong>PointerCaptureLost</strong></a></p></td>
 <td align="left"><p>다른 UI 요소에서 포인터를 캡처하거나 포인터가 해제 되거나 프로그래밍 방식으로 다른 포인터가 캡처될 때 발생 합니다.</p>
 <div class="alert">
-<strong>참고</strong>  해당 포인터 캡처 이벤트가 없습니다.
+<strong>참고</strong>    해당 포인터 캡처 이벤트가 없습니다.
 </div>
 <div>
  
@@ -132,7 +132,7 @@ Windows 앱은 다음과 같은 포인터 이벤트를 수신할 수 있습니�
 
 ### <a name="create-the-ui"></a>UI 만들기
 
-이 예제에서는 포인터 입력을 사용 [Rectangle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle) 하는`Target`개체에 사각형 ()을 사용 합니다. 포인터 상태가 변경 되 면 대상의 색이 변경 됩니다.
+이 예제에서는 포인터 입력을 사용 [Rectangle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle) 하 `Target` 는 개체에 사각형 ()을 사용 합니다. 포인터 상태가 변경 되 면 대상의 색이 변경 됩니다.
 
 각 포인터에 대 한 세부 정보는 포인터가 이동할 때 포인터 뒤에 오는 부동 [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 에 표시 됩니다. 포인터 이벤트 자체는 사각형 오른쪽의 [RichTextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) 에 보고 됩니다.
 
@@ -951,7 +951,7 @@ namespace UWP_Pointers
 - [포인터 입력 샘플 (기본)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers.zip)
 - [포인터 입력 샘플 (애니메이션 사용 UserControl)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)
 
-### <a name="other-samples"></a>다른 샘플
+### <a name="other-samples"></a>기타 샘플
 
 - [기본 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
 - [짧은 대기 시간 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LowLatencyInput)

@@ -8,16 +8,16 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: 'windows 10, uwp, win32, 데스크톱, 알림 메시지 보내기, 알림 보내기, 데스크톱 브리지, msix, 스파스 패키지, c #, c sharp, 알림 메시지, wpf'
 ms.localizationpriority: medium
-ms.openlocfilehash: f177660ce6e367caf69de849839a94472f5343fb
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 679254aa35ea49e72f7feaae02ba0ccbddeafdad
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968288"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233668"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>데스크톱 c # 앱에서 로컬 알림 메시지 보내기
 
-데스크톱 앱 (패키지 된 [Msix](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 얻기 위해 [스파스 패키지](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱 및 클래식 패키지 되지 않은 Win32 앱 포함)은 Windows 앱 앱과 마찬가지로 대화형 알림 메시지를 보낼 수 있습니다. 그러나 MSIX 또는 스파스 패키지를 사용 하지 않는 경우 다양 한 활성화 체계와 패키지 id의 잠재적 부족으로 인해 데스크톱 앱에 대 한 몇 가지 특별 한 단계가 있습니다.
+데스크톱 앱 (패키지 된 [Msix](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 얻기 위해 [스파스 패키지](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱 및 클래식 패키지 되지 않은 Win32 앱 포함)은 Windows 앱과 마찬가지로 대화형 알림 메시지를 보낼 수 있습니다. 그러나 MSIX 또는 스파스 패키지를 사용 하지 않는 경우 다양 한 활성화 체계와 패키지 id의 잠재적 부족으로 인해 데스크톱 앱에 대 한 몇 가지 특별 한 단계가 있습니다.
 
 > [!IMPORTANT]
 > UWP 앱을 작성 하는 경우 [uwp 설명서](send-local-toast.md)를 참조 하세요. 다른 데스크톱 언어는 [데스크톱 c + + WRL](send-local-toast-desktop-cpp-wrl.md)를 참조 하세요.
@@ -27,7 +27,7 @@ ms.locfileid: "82968288"
 
 Win32 앱에서 Windows 런타임 Api를 참조 하지 않은 경우 먼저이 작업을 수행 해야 합니다.
 
-프로젝트에 `Microsoft.Windows.SDK.Contracts` [NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts) 를 설치 하기만 하면 됩니다. [Windows 런타임 api 사용](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-enhance)에 대 한 자세한 내용은 여기를 참조 하세요.
+`Microsoft.Windows.SDK.Contracts`프로젝트에 [NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts) 를 설치 하기만 하면 됩니다. [Windows 런타임 api 사용](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-enhance)에 대 한 자세한 내용은 여기를 참조 하세요.
 
 
 ## <a name="step-2-copy-compat-library-code"></a>2 단계: 호환 라이브러리 코드 복사
@@ -70,7 +70,7 @@ public class MyNotificationActivator : NotificationActivator
 1. **Xmlns: com** 에 대 한 선언
 2. **Xmlns: desktop** 에 대 한 선언
 3. **IgnorableNamespaces** 특성, **com** 및 **desktop**
-4. **com:** #4 단계에서 GUID를 사용 하 여 com 활성기에 대 한 확장입니다. 알림 메시지의 시작을 `Arguments="-ToastActivated"` 알 수 있도록를 포함 해야 합니다.
+4. **com:** #4 단계에서 GUID를 사용 하 여 com 활성기에 대 한 확장입니다. `Arguments="-ToastActivated"`알림 메시지의 시작을 알 수 있도록를 포함 해야 합니다.
 5. **desktop:** TOAST 활성기 CLSID (#3의 GUID)를 선언 하는 **windows. toastNotificationActivation** 용 확장입니다.
 
 **Appxmanifest.xml**
@@ -117,7 +117,7 @@ Win32 앱을 식별 하는 고유한 AUMID를 선택 합니다. 이는 일반적
 
 #### <a name="step-41-wix-installer"></a>4.1 단계: WiX 설치 관리자
 
-설치 관리자에 대해 WiX를 사용 하는 경우 다음에 표시 된 것 처럼 **Product. wxs** 파일을 편집 하 여 두 개의 바로 가기 속성을 시작 메뉴 바로 가기에 추가 합니다. 아래 `{}` 와 같이 #3 단계에서 GUID가로 묶여 있는지 확인 합니다.
+설치 관리자에 대해 WiX를 사용 하는 경우 다음에 표시 된 것 처럼 **Product. wxs** 파일을 편집 하 여 두 개의 바로 가기 속성을 시작 메뉴 바로 가기에 추가 합니다. 아래와 같이 #3 단계에서 GUID가로 묶여 있는지 확인 `{}` 합니다.
 
 **Product. wxs**
 
@@ -219,7 +219,7 @@ DesktopNotificationManagerCompat.CreateToastNotifier().Show(toast);
 OnActivated 메서드 내에서 알림 메시지에 지정 된 인수를 구문 분석 하 고 사용자가 입력 하거나 선택한 사용자 입력을 가져온 다음 적절 하 게 앱을 활성화할 수 있습니다.
 
 > [!NOTE]
-> **Onactivated** 된 메서드는 UI 스레드에서 호출 되지 않습니다. UI 스레드 작업을 수행 하려면를 호출 `Application.Current.Dispatcher.Invoke(callback)`해야 합니다.
+> **Onactivated** 된 메서드는 UI 스레드에서 호출 되지 않습니다. UI 스레드 작업을 수행 하려면를 호출 해야 `Application.Current.Dispatcher.Invoke(callback)` 합니다.
 
 ```csharp
 // The GUID must be unique to your app. Create a new GUID if copying this code.
@@ -297,7 +297,7 @@ public class MyNotificationActivator : NotificationActivator
 }
 ```
 
-응용 프로그램을 닫는 동안 적절히 시작을 지원 하려면 `App.xaml.cs` 파일에서 **ONSTARTUP** 메서드 (WPF 앱의 경우)를 재정의 하 여 알림에서 시작 하 고 있는지 여부를 확인 합니다. 알림에서 시작 하는 경우 "-ToastActivated 됨"의 시작 인수가 있습니다. 이 메시지가 표시 되 면 일반 시작 활성화 코드의 실행을 중지 하 고 **Onactivated** 된 코드 핸들이 시작 되도록 허용 해야 합니다.
+응용 프로그램을 닫는 동안 적절히 시작을 지원 하려면 `App.xaml.cs` 파일에서 **onstartup** 메서드 (WPF 앱의 경우)를 재정의 하 여 알림에서 시작 하 고 있는지 여부를 확인 합니다. 알림에서 시작 하는 경우 "-ToastActivated 됨"의 시작 인수가 있습니다. 이 메시지가 표시 되 면 일반 시작 활성화 코드의 실행을 중지 하 고 **Onactivated** 된 코드 핸들이 시작 되도록 허용 해야 합니다.
 
 ```csharp
 protected override async void OnStartup(StartupEventArgs e)
@@ -337,7 +337,7 @@ WPF의 경우 활성화 시퀀스는 다음과 같습니다.
 
 앱이 실행 되 고 있지 않은 경우:
 
-1. 에서 `App.xaml.cs` **onstartup** 은 "-toastactivated 됨"의 **Args** 를 사용 하 여 호출 됩니다.
+1. 에서 **Onstartup** `App.xaml.cs` 은 "-toastactivated 됨"의 **Args** 를 사용 하 여 호출 됩니다.
 2. **Notificationactivator** 에서 **onactivated** 됨을 호출 합니다.
 
 

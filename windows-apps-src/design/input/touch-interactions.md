@@ -1,5 +1,5 @@
 ---
-Description: 터치에 최적화 되어 있지만 입력 장치에서 기능적으로 일관 된 직관적인 직관적인 사용자 상호 작용 환경을 사용 하 여 Windows 앱 앱을 만듭니다.
+Description: 터치에 최적화 되어 있지만 입력 장치에서 기능적으로 일관 된 직관적인 고유의 사용자 상호 작용 환경을 사용 하 여 Windows 앱을 만듭니다.
 title: 터치 조작
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
@@ -8,12 +8,12 @@ keywords: 터치, 포인터, 입력, 사용자 상호 작용
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 99926de0ea26b0cef9184756add777a39330d934
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: e753b5c92dc22f967e2f518e8435d3a4fb41a529
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970258"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234843"
 ---
 # <a name="touch-interactions"></a>터치 조작
 
@@ -192,7 +192,7 @@ Finger 및 핸드 폐색은 다음을 통해 방지할 수 있습니다.
 
 UWP에서 지 원하는 기본 터치 제스처 집합은 다음과 같습니다.
 
-| 이름           | 유형                 | Description                                                                            |
+| 속성           | 유형                 | 설명                                                                            |
 |----------------|----------------------|----------------------------------------------------------------------------------------|
 | 탭            | 정적 제스처       | 한 손가락을 화면에 터치 하 고 리프트 합니다.                                            |
 | 길게 누르기 | 정적 제스처       | 한 손가락은 화면에 접촉 하 여 제자리에 유지 됩니다.                                      |
@@ -222,7 +222,7 @@ For more info about gestures, manipulations, and interactions, see [Custom user 
 
 다음은 포인터 이벤트 목록과 관련 이벤트 인수입니다.
 
-| 이벤트 또는 클래스                                                       | Description                                                   |
+| 이벤트 또는 클래스                                                       | 설명                                                   |
 |----------------------------------------------------------------------|---------------------------------------------------------------|
 | [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed)             | 단일 손가락이 화면에 닿을 때 발생 합니다.               |
 | [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)           | 동일한 터치 접점이 리프트 될 때 발생 합니다.                |
@@ -238,7 +238,7 @@ For more info about gestures, manipulations, and interactions, see [Custom user 
 
 다음 예제에서는 [**Pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed), [**pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)및 [**pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited) 이벤트를 사용 하 여 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 개체의 탭 상호 작용을 처리 하는 방법을 보여 줍니다.
 
-먼저 Extensible Application Markup Language ( [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) XAML) `touchRectangle` 에서 이라는 사각형을 만듭니다.
+먼저 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) `touchRectangle` Extensible Application Markup Language (XAML)에서 이라는 사각형을 만듭니다.
 
 ```XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -419,7 +419,7 @@ End Sub
 
 다음은 조작 이벤트 및 관련 이벤트 인수의 목록입니다.
 
-| 이벤트 또는 클래스                                                                                               | Description                                                                                                                               |
+| 이벤트 또는 클래스                                                                                               | 설명                                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | [**System.windows.uielement.manipulationstarting> 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting)                                   | 조작 프로세서가 처음으로 만들어지면 발생합니다.                                                                                  |
 | [**System.windows.uielement.manipulationstarted> 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted)                                     | 입력 장치가 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)에서 조작을 시작할 때 발생 합니다.                                            |
@@ -446,7 +446,7 @@ End Sub
 
 다음 예제에서는 [**system.windows.uielement.manipulationdelta>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트를 사용 하 여 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 의 슬라이드 상호 작용을 처리 하 고 화면에서 이동 하는 방법을 보여 줍니다.
 
-첫째, `touchRectangle` 이라는 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 은 [**높이**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 와 [**너비가**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) 200 인 XAML로 생성 됩니다.
+첫째, 이라는 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 은 `touchRectangle` [**높이**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 와 [**너비가**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) 200 인 XAML로 생성 됩니다.
 
 ```XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -456,7 +456,7 @@ End Sub
 </Grid>
 ```
 
-그런 다음 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)을 변환 하기 `dragTranslation` 위해 라는 전역 [**system.windows.media.translatetransform.x**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) 을 만듭니다. [**System.windows.uielement.manipulationdelta>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트 수신기는 **사각형**에 지정 `dragTranslation` 되며 **사각형**의 [**rendertransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform) 에 추가 됩니다.
+그런 다음 사각형을 변환 하기 위해 라는 전역 [**system.windows.media.translatetransform.x**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) 을 `dragTranslation` 만듭니다. [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) [**System.windows.uielement.manipulationdelta>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트 수신기는 **사각형**에 지정 되며 `dragTranslation` **사각형**의 [**rendertransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform) 에 추가 됩니다.
 
 ```cpp
 // Global translation transform used for changing the position of 

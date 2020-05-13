@@ -1,5 +1,5 @@
 ---
-Description: 터치 패드에 최적화 되어 있지만 입력 장치에서 기능적으로 일관 된 직관적인 직관적인 사용자 조작 환경을 사용 하 여 Windows 앱 앱을 만듭니다.
+Description: 터치 패드에 최적화 되어 있지만 입력 장치에서 기능적으로 일관 된 직관적인 직관적인 사용자 조작 환경을 사용 하 여 Windows 앱을 만듭니다.
 title: 터치 패드 상호 작용
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
@@ -8,12 +8,12 @@ keywords: 터치 패드, PTP, 터치, 포인터, 입력, 사용자 상호 작용
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: afbdf5c672328acfc60a82f9f66c75dc52370c99
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ffc3ce96c7e8c2ad4a34aecd1ca85ff644bdef97
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970238"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234481"
 ---
 # <a name="touchpad-design-guidelines"></a>터치 패드 디자인 지침
 
@@ -51,15 +51,15 @@ ms.locfileid: "82970238"
 
 간결한 터치 패드 상호 작용 집합은 시스템 전체에서 일관 되 게 사용 됩니다. 터치 및 마우스 입력을 위해 앱을 최적화 하 고,이 언어를 사용 하면 앱이 사용자에 게 친숙 한 친숙 한 느낌을 높이고 응용 프로그램을 더 쉽게 배우고 사용할 수 있게 됩니다.
 
-사용자는 표준 터치 패드에 사용할 수 있는 것 보다 훨씬 더 높은 정밀도 터치 패드 제스처 및 상호 작용 동작을 설정할 수 있습니다. 이러한 두 이미지는 표준 터치 패드 및 전체 자릿수 터치 &gt; 패드 &gt; 에 대 한 설정 장치 마우스 & 터치 패드의 서로 다른 터치 패드 설정 페이지를 표시 합니다.
+사용자는 표준 터치 패드에 사용할 수 있는 것 보다 훨씬 더 높은 정밀도 터치 패드 제스처 및 상호 작용 동작을 설정할 수 있습니다. 이러한 두 이미지는 &gt; &gt; 표준 터치 패드 및 전체 자릿수 터치 패드에 대 한 설정 장치 마우스 & 터치 패드의 서로 다른 터치 패드 설정 페이지를 표시 합니다.
 
 ![표준 터치 패드 설정](images/mouse-touchpad-settings-standard.png)
 
-<sup>표준\\ 터치\\ 패드 설정</sup>
+<sup>표준 \\ 터치 패드 \\ 설정</sup>
 
 ![windows precision 터치 패드 설정](images/mouse-touchpad-settings-ptp.png)
 
-<sup>Windows\\ Precision\\ 터치\\ 패드 설정</sup>
+<sup>Windows \\ Precision \\ 터치 패드 \\ 설정</sup>
 
 일반적인 작업을 수행 하기 위한 터치 패드 최적화 제스처의 몇 가지 예는 다음과 같습니다.
 

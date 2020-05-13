@@ -6,19 +6,19 @@ keywords: 잉크, 잉크, tuorial
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a1b4dc6fbec0e16428035348114b1b160d50cff0
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: d0df2b531510d86591c44bc69f6ed5c6ad9f200f
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968148"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234620"
 ---
 # <a name="tutorial-support-ink-in-your-windows-app"></a>자습서: Windows 앱에서 잉크 지원
 
 ![화면 펜](images/ink/ink-hero-small.png)  
 *Surface Pen* ( [Microsoft Store](https://www.microsoft.com/p/surface-pen/8zl5c82qmg6b)에서 구매할 수 있음)
 
-이 자습서에서는 Windows Ink를 사용 하 여 작성 및 그리기를 지 원하는 기본 Windows 앱 앱을 만드는 방법을 단계별로 설명 합니다. 각 단계에서 설명한 다양 한 기능 및 관련 Windows Ink Api ( [Windows ink 플랫폼의 구성 요소](#components-of-the-windows-ink-platform)참조)를 보여 주기 위해 GitHub에서 다운로드할 수 있는 샘플 앱에서 코드 조각을 사용 합니다 ( [샘플 코드](#sample-code)참조).
+이 자습서에서는 Windows Ink를 사용 하 여 작성 및 그리기를 지 원하는 기본 Windows 앱을 만드는 방법을 단계별로 설명 합니다. 각 단계에서 설명한 다양 한 기능 및 관련 Windows Ink Api ( [Windows ink 플랫폼의 구성 요소](#components-of-the-windows-ink-platform)참조)를 보여 주기 위해 GitHub에서 다운로드할 수 있는 샘플 앱에서 코드 조각을 사용 합니다 ( [샘플 코드](#sample-code)참조).
 
 다음에 중점을 둡니다.
 * 기본 잉크 지원 추가
@@ -33,21 +33,21 @@ ms.locfileid: "82968148"
 
 Windows 잉크를 사용 하면 신속 하 고 필기 한 노트와 주석에서 화이트 보드 데모로, 아키텍처 및 엔지니어링 드로잉부터 개인 masterpieces에 이르기까지 거의 모든 펜 및 종이 환경 에서도을 고객에 게 제공할 수 있습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 * 현재 버전의 Windows 10을 실행 하는 컴퓨터 (또는 가상 컴퓨터)
 * [Visual Studio 2019 및 RS2 SDK](https://developer.microsoft.com/windows/downloads)
 * [Windows 10 SDK(10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * 구성에 따라 [Microsoft.netcore.universalwindowsplatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform) NuGet 패키지를 설치 하 고 시스템 설정에서 **개발자 모드** 를 사용 하도록 설정 해야 할 수 있습니다. 개발자는 개발자 기능을 사용 하 여 개발자 기능을 사용 하 여 > & 보안-> > 업데이트 합니다.
-* Visual Studio를 사용 하 여 Windows 앱 앱을 처음 사용 하는 경우이 자습서를 시작 하기 전에 다음 항목을 확인 하세요.  
-    * [설정하기](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
+* Visual Studio를 사용 하 여 Windows 앱을 개발 하는 경우이 자습서를 시작 하기 전에 다음 항목을 참조 하세요.  
+    * [설정](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
     * ["Hello, 세계" 앱 만들기 (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
 * **[선택 사항]** 디지털 펜 및 해당 디지털 펜의 입력을 지 원하는 디스플레이를 포함 하는 컴퓨터입니다.
 
 > [!NOTE] 
 > Windows Ink는 마우스 및 터치를 사용 하 여 그리기를 지원할 수 있지만 (이 자습서의 3 단계에서이 작업을 수행 하는 방법을 보여 줍니다) 최적의 Windows Ink 환경을 위해 디지털 펜과 디지털 펜의 입력을 지 원하는 디스플레이가 있는 컴퓨터를 사용 하는 것이 좋습니다.
 
-## <a name="sample-code"></a>예제 코드
+## <a name="sample-code"></a>샘플 코드
 이 자습서 전체에서 샘플 잉크 앱을 사용 하 여 설명 된 개념과 기능을 보여 줍니다.
 
 [GitHub](https://github.com/) 에서이 Visual Studio 샘플 및 소스 코드 다운로드 [-appsample-시작-잉크 샘플](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink):
@@ -79,7 +79,7 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 3. F5 키를 눌러 컴파일, 배포 및 실행 합니다.  
 
    > [!NOTE]
-   > 또는 **디버그** > **디버깅 시작** 메뉴 항목을 선택 하거나 여기에 표시 된 **로컬 컴퓨터** 실행 단추를 선택할 수 있습니다.
+   > 또는 **디버그**  >  **디버깅 시작** 메뉴 항목을 선택 하거나 여기에 표시 된 **로컬 컴퓨터** 실행 단추를 선택할 수 있습니다.
    > ![Visual Studio 빌드 프로젝트 단추](images/ink/ink-vsrun-small.png)
 
 앱 창이 열리고 몇 초 동안 시작 화면이 표시 되 면이 초기 화면이 표시 됩니다.
@@ -112,7 +112,7 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 ```
 
 4. MainPage .xaml 파일을 엽니다.
-5. 이 단계의 제목으로 표시 된 코드를 찾습니다 ("\<!--2 단계: 기본 잉크를 사용 하 여 InkCanvas-->").
+5. 이 단계의 제목으로 표시 된 코드를 찾습니다 (" \< !--2 단계: 기본 잉크를 사용 하 여 InkCanvas-->").
 6. 다음 줄의 주석 처리를 제거 합니다.  
 
 ``` xaml
@@ -165,7 +165,7 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 
 ### <a name="in-the-sample"></a>샘플의
 1. MainPage .xaml 파일을 엽니다.
-2. 이 단계의 제목으로 표시 된 코드 ("\<!--4 단계: 잉크 도구 모음 추가-->")를 찾습니다.
+2. 이 단계의 제목으로 표시 된 코드 (" \< !--4 단계: 잉크 도구 모음 추가-->")를 찾습니다.
 3. 다음 줄의 주석 처리를 제거 합니다.  
 
 ``` xaml
@@ -212,14 +212,14 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 > [!NOTE]
 > **펜 & Windows Ink** 설정에서 필기 인식을 향상 시킬 수 있습니다.
 > 1. 시작 메뉴를 열고 **설정**을 선택 합니다.
-> 2. 설정 화면에서 **장치** > **펜 & Windows Ink**를 선택 합니다.
+> 2. 설정 화면에서 **장치**  >  **펜 & Windows Ink**를 선택 합니다.
 > ![잉크 작업 영역에 있는 Sketchpad의 InkToolbar](images/ink/ink-settings-small.png)
 > 3. 필기 **개인 설정** 대화 상자를 열려면 **가져오기를 선택 하 여 필기를 확인** 합니다.
 > ![잉크 작업 영역에 있는 Sketchpad의 InkToolbar](images/ink/ink-settings-handwritingpersonalization-small.png)
 
 ### <a name="in-the-sample"></a>이 샘플의 내용은 다음과 같습니다.
 1. MainPage .xaml 파일을 엽니다.
-2. 이 단계의 제목으로 표시 된 코드를 찾습니다 ("\<!--5 단계: 필기 인식 지원-->").
+2. 이 단계의 제목으로 표시 된 코드를 찾습니다 (" \< !--5 단계: 필기 인식 지원-->").
 3. 다음 줄의 주석 처리를 제거 합니다.  
 
 ``` xaml
@@ -347,7 +347,7 @@ Windows 잉크는 Windows에서 지 원하는 대부분의 언어에 대 한 텍
 
 ### <a name="in-the-sample"></a>이 샘플의 내용은 다음과 같습니다.
 1. MainPage .xaml 파일을 엽니다.
-2. 이 단계의 제목으로 표시 된 코드 찾기 ("\<!--6 단계: 셰이프 인식-->")
+2. 이 단계의 제목으로 표시 된 코드 찾기 (" \< !--6 단계: 셰이프 인식-->")
 3. 이 줄의 주석 처리를 제거 합니다.  
 
 ``` xaml
@@ -402,7 +402,7 @@ ISF 파일은 잉크 스트로크 속성 및 동작을 설명 하는 추가 메�
 
 ### <a name="in-the-sample"></a>이 샘플의 내용은 다음과 같습니다.
 1. MainPage .xaml 파일을 엽니다.
-2. 이 단계의 제목으로 표시 된 코드를 찾습니다 ("\<!--7 단계: 잉크 저장 및 로드 중-->").
+2. 이 단계의 제목으로 표시 된 코드를 찾습니다 (" \< !--7 단계: 잉크 저장 및 로드 중-->").
 3. 다음 줄의 주석 처리를 제거 합니다. 
 
 ``` xaml
@@ -464,7 +464,7 @@ Windows ink는 잉크 스트로크를 복사 하 여 클립보드에 붙여 넣�
 
 ## <a name="related-articles"></a>관련된 문서
 
-* [Windows 앱의 펜 상호 작용 및 Windows Ink](pen-and-stylus-interactions.md)
+* [Windows 앱의 펜 조작 및 Windows Ink](pen-and-stylus-interactions.md)
 
 ### <a name="samples"></a>샘플
 

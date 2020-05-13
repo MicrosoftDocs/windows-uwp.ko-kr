@@ -8,16 +8,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3d2866b3e04d2fa531e9bd538badd96205a8c65
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 37fb7cc81d1a86a159526af5d580a02482d13f9a
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969428"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233971"
 ---
 # <a name="developing-inclusive-windows-apps"></a>포괄 Windows 앱 개발  
 
-이 문서에서는 액세스 가능한 Windows 앱 앱을 개발 하는 방법을 설명 합니다. 특히 앱에 대 한 논리 계층 구조를 디자인 하는 방법을 이해 하 고 있다고 가정 합니다. 키보드 탐색, 색 및 대비 설정, 보조 기술 지원 등을 포함 하는 내게 필요한 옵션 지원 Windows 앱을 개발 하는 방법을 알아봅니다.
+이 문서에서는 내게 필요한 옵션 지원 Windows 앱을 개발 하는 방법을 설명 합니다. 특히 앱에 대 한 논리 계층 구조를 디자인 하는 방법을 이해 하 고 있다고 가정 합니다. 키보드 탐색, 색 및 대비 설정, 보조 기술 지원 등을 포함 하는 내게 필요한 옵션 지원 Windows 앱을 개발 하는 방법을 알아봅니다.
 
 아직 이해하지 못했으면 [포괄 소프트웨어 디자인](designing-inclusive-software.md)을 먼저 읽고 시작하세요.
 

@@ -8,18 +8,18 @@ ms.date: 07/13/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b5462dcd5714c765853174ae62f56f99c5d5cdcc
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 15386febd99180c30671a313465b11f7fe63ffd0
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969524"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234109"
 ---
 # <a name="custom-automation-peers"></a>사용자 지정 자동화 피어  
 
 Microsoft UI 자동화에 대 한 자동화 피어의 개념과 고유한 사용자 지정 UI 클래스에 대 한 자동화 지원을 제공 하는 방법을 설명 합니다.
 
-UI 자동화는 자동화 클라이언트에서 다양 한 UI 플랫폼과 프레임 워크의 사용자 인터페이스를 검사 하거나 운영 하는 데 사용할 수 있는 프레임 워크를 제공 합니다. Windows 앱 앱을 작성 하는 경우 UI에 사용 하는 클래스는 이미 UI 자동화를 지원 합니다. 봉인 되지 않은 기존 클래스에서 파생 하 여 새로운 종류의 UI 컨트롤이 나 지원 클래스를 정의할 수 있습니다. 이 작업을 수행 하는 동안 클래스는 접근성을 지원 해야 하지만 기본 UI 자동화 지원에서 다루지 않는 동작을 추가할 수 있습니다. 이 경우 기본 구현에서 사용 하는 [**automationpeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 클래스에서 파생 하 여 기존 UI 자동화 지원을 확장 하 고, 필요한 지원을 피어 구현에 추가 하 고, 새 피어를 만들어야 하는 Windows 앱 컨트롤 인프라에 알립니다.
+UI 자동화는 자동화 클라이언트에서 다양 한 UI 플랫폼과 프레임 워크의 사용자 인터페이스를 검사 하거나 운영 하는 데 사용할 수 있는 프레임 워크를 제공 합니다. Windows 앱을 작성 하는 경우 UI에 사용 하는 클래스는 이미 UI 자동화를 지원 합니다. 봉인 되지 않은 기존 클래스에서 파생 하 여 새로운 종류의 UI 컨트롤이 나 지원 클래스를 정의할 수 있습니다. 이 작업을 수행 하는 동안 클래스는 접근성을 지원 해야 하지만 기본 UI 자동화 지원에서 다루지 않는 동작을 추가할 수 있습니다. 이 경우 기본 구현에서 사용 하는 [**automationpeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 클래스에서 파생 하 여 기존 UI 자동화 지원을 확장 하 고, 필요한 지원을 피어 구현에 추가 하 고, 새 피어를 만들어야 하는 Windows 앱 컨트롤 인프라에 알립니다.
 
 UI 자동화를 사용 하면 화면 판독기와 같은 내게 필요한 옵션 응용 프로그램 및 보조 기술 뿐만 아니라 품질 보증 (테스트) 코드도 사용할 수 있습니다. 두 시나리오에서 UI 자동화 클라이언트는 사용자 인터페이스 요소를 검사 하 고 앱 외부의 다른 코드에서 앱과의 사용자 상호 작용을 시뮬레이션할 수 있습니다. 모든 플랫폼에서 UI 자동화에 대 한 정보 및 더 광범위 한 의미에서 [Ui 자동화 개요](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-uiautomationoverview)를 참조 하세요.
 
@@ -76,7 +76,7 @@ UWP는 WPF (Windows Forms, Windows Presentation Foundation) 및 Microsoft Silver
 
 프레임 워크에 대 한 자동화 피어가 구현 되는 방법에 관계 없이 UI 자동화 클라이언트 기능은 UWP에 연결 되지 않으므로 보조 기술과 같은 기존 UI 자동화 클라이언트는 COM과 같은 다른 프로그래밍 모델을 사용 하 게 될 가능성이 높습니다. COM에서 클라이언트는 속성, 이벤트 또는 트리 검사를 위해 요청 된 패턴 또는 일반 UI 자동화 프레임 워크를 구현 하는 COM 컨트롤 패턴 인터페이스에 대해 **QueryInterface** 를 수행할 수 있습니다. 패턴의 경우 UI 자동화 프레임 워크는 해당 인터페이스 코드를 앱 UI 자동화 공급자 및 관련 피어에 대해 실행 되는 UWP 코드로 마샬링합니다.
 
-C\# 또는 Microsoft Visual Basic를 사용 하 여 UWP 앱과 같은 관리 코드 프레임 워크에 대 한 컨트롤 패턴을 구현 하는 경우 COM 인터페이스 표현을 사용 하는 대신 .NET Framework 인터페이스를 사용 하 여 이러한 패턴을 나타낼 수 있습니다. 예를 들어 **호출** 패턴의 Microsoft .NET 공급자 구현에 대 한 UI 자동화 패턴 인터페이스는 [**IInvokeProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Provider.IInvokeProvider)입니다.
+C 또는 Microsoft Visual Basic를 사용 하 여 UWP 앱과 같은 관리 코드 프레임 워크에 대 한 컨트롤 패턴을 구현 하는 경우 \# COM 인터페이스 표현을 사용 하는 대신 .NET Framework 인터페이스를 사용 하 여 이러한 패턴을 나타낼 수 있습니다. 예를 들어 **호출** 패턴의 Microsoft .NET 공급자 구현에 대 한 UI 자동화 패턴 인터페이스는 [**IInvokeProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Provider.IInvokeProvider)입니다.
 
 컨트롤 패턴, 공급자 인터페이스 및 해당 용도에 대 한 목록은 [컨트롤 패턴 및 인터페이스](control-patterns-and-interfaces.md)를 참조 하세요. 컨트롤 형식 목록에 대해서는 [UI 자동화 컨트롤 형식 개요](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-controltypesoverview)를 참조 하세요.
 
@@ -116,7 +116,7 @@ Ui 자동화 컨트롤 [패턴을 구현](https://docs.microsoft.com/windows/des
 
 사용자 지정 컨트롤 클래스를 작성 하 고 새 자동화 피어를 제공 하려는 경우 사용자 지정 컨트롤에 대 한 [**Oncreateautomationpeer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.oncreateautomationpeer) 메서드를 재정의 하 여 피어의 새 인스턴스를 반환 하도록 해야 합니다. 피어 클래스는 [**automationpeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer)에서 직접 또는 간접적으로 파생 되어야 합니다.
 
-예를 들어 다음 코드는 사용자 지정 컨트롤이 `NumericUpDown` UI 자동화를 위해 피어 `NumericUpDownPeer` 를 사용 해야 함을 선언 합니다.
+예를 들어 다음 코드는 사용자 지정 컨트롤이 `NumericUpDown` UI 자동화를 위해 피어를 사용 해야 함을 선언 합니다 `NumericUpDownPeer` .
 
 ```csharp
 using Windows.UI.Xaml.Automation.Peers;
@@ -193,7 +193,7 @@ protected:
 <span id="CHOOSING_THE_CORRECT_PEER_BASE_CLASS"/>
 
 ### <a name="choosing-the-correct-peer-base-class"></a>올바른 피어 기본 클래스 선택  
-사용자가 파생 하는 컨트롤 클래스의 기존 피어 논리와 가장 일치 하는 항목을 제공 하는 기본 클래스에서 [**Automationpeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 가 파생 되는지 확인 합니다. 이전 예제의 경우가 범위 [**기반**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.RangeBase)에서 파생 되기 `NumericUpDown` 때문에 피어를 기반으로 하는 범위 [**지정 클래스를**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer) 사용할 수 있습니다. 가장 근접 하 게 일치 하는 피어 클래스를 파생 하는 방법에 대해 병렬로 사용 하 여 기본 피어 클래스가 이미 [**IRangeValueProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Provider.IRangeValueProvider) 기능을 구현 하기 때문에 최소한의 기능을 재정의 하지 않을 수 있습니다.
+사용자가 파생 하는 컨트롤 클래스의 기존 피어 논리와 가장 일치 하는 항목을 제공 하는 기본 클래스에서 [**Automationpeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 가 파생 되는지 확인 합니다. 이전 예제의 경우가 범위 `NumericUpDown` [**기반**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.RangeBase)에서 파생 되기 때문에 피어를 기반으로 하는 범위 지정 클래스 [**를**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer) 사용할 수 있습니다. 가장 근접 하 게 일치 하는 피어 클래스를 파생 하는 방법에 대해 병렬로 사용 하 여 기본 피어 클래스가 이미 [**IRangeValueProvider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Provider.IRangeValueProvider) 기능을 구현 하기 때문에 최소한의 기능을 재정의 하지 않을 수 있습니다.
 
 기본 [**컨트롤**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) 클래스에 해당 하는 피어 클래스가 없습니다. **컨트롤**에서 파생 되는 사용자 지정 컨트롤에 해당 하는 피어 클래스가 필요한 경우 [**FrameworkElementAutomationPeer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer)에서 사용자 지정 피어 클래스를 파생 시킵니다.
 
@@ -456,7 +456,7 @@ public class IndexCardAutomationPeer : FrameworkElementAutomationPeer, IExpandCo
 
 UI 자동화 이벤트는 다음 범주로 분류 됩니다.
 
-| 이벤트 | Description |
+| 이벤트 | 설명 |
 |-------|-------------|
 | 속성 변경 | UI 자동화 요소 또는 컨트롤 패턴의 속성이 변경 될 때 발생 합니다. 예를 들어 클라이언트가 응용 프로그램의 확인란 컨트롤을 모니터링 해야 하는 경우 [**ToggleState**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.provider.itoggleprovider.togglestate) 속성의 속성 변경 이벤트를 수신 하도록 등록할 수 있습니다. 확인란 컨트롤을 선택 하거나 선택 취소 하면 공급자가 이벤트를 발생 시키고 클라이언트가 필요에 따라 작동할 수 있습니다. |
 | 요소 작업 | 사용자 또는 프로그래밍 방식 작업에서 UI가 변경 되 면 발생 합니다. 예를 들어 **호출** 패턴을 통해 단추를 클릭 하거나 호출할 때입니다. |
@@ -529,10 +529,10 @@ AccessibilityView를 사용 하는 주요 시나리오는 UI 자동화 뷰에서
 
 피어로 전달 되는 매개 변수의 경우 입력의 유효성을 검사할 수 있으며, **null** 이 전달 되었고 구현에 유효한 값이 아닌 경우 [**argumentnullexception**](https://docs.microsoft.com/dotnet/api/system.argumentnullexception) 을 throw 할 수 있습니다. 그러나 피어에서 후속 작업을 수행 하는 경우 호스트 컨트롤과의 피어 상호 작용에는 비동기 문자가 포함 됩니다. 피어가 컨트롤의 UI 스레드를 차단 하지 않아도 되는 것은 아닙니다. 따라서 개체를 사용할 수 있거나, 피어가 만들어지거나 자동화 피어 메서드가 처음 호출 될 때 또는 컨트롤 상태가 변경 된 경우에는 특정 속성을 가진 상황이 발생할 수 있습니다. 이러한 경우에는 공급자가 throw 할 수 있는 두 가지 전용 예외가 있습니다.
 
-* API가 전달 된 원래 정보에 따라 피어의 소유자 또는 관련 피어 요소에 액세스할 수 없는 경우 [**Elementnot사용할**](https://docs.microsoft.com/dotnet/api/system.windows.automation.elementnotavailableexception) 수 있는 예외를 Throw 합니다. 예를 들어 메서드를 실행 하려고 하지만 닫힌 모달 대화 상자와 같이 소유자가 UI에서 제거 된 후에는 피어가 있을 수 있습니다. Non-.NET client의 경우 [**UIA\_E\_elementnotavailable**](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-error-codes)에 매핑됩니다.
-* 여전히 소유자 이지만 해당 소유자가 [**IsEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled)`=`**false** 와 같은 모드에 있는 경우에는 피어에서 [**system.windows.automation.elementnotenabledexception**](https://docs.microsoft.com/dotnet/api/system.windows.automation.elementnotenabledexception) 에서 수행 하려고 하는 특정 프로그래밍 변경 내용의 일부를 차단 하는 경우에 Throw 됩니다. Non-.NET client의 경우 [**UIA\_E\_elementnotenabled**](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-error-codes)에 매핑됩니다.
+* API가 전달 된 원래 정보에 따라 피어의 소유자 또는 관련 피어 요소에 액세스할 수 없는 경우 [**Elementnot사용할**](https://docs.microsoft.com/dotnet/api/system.windows.automation.elementnotavailableexception) 수 있는 예외를 Throw 합니다. 예를 들어 메서드를 실행 하려고 하지만 닫힌 모달 대화 상자와 같이 소유자가 UI에서 제거 된 후에는 피어가 있을 수 있습니다. Non-.NET client의 경우 [**UIA \_ E \_ elementnotavailable**](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-error-codes)에 매핑됩니다.
+* 여전히 소유자 이지만 해당 소유자가 [**IsEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled)false와 같은 모드에 있는 경우에는 피어에서 [**system.windows.automation.elementnotenabledexception**](https://docs.microsoft.com/dotnet/api/system.windows.automation.elementnotenabledexception) 에서 `=` **false** 수행 하려고 하는 특정 프로그래밍 변경 내용의 일부를 차단 하는 경우에 Throw 됩니다. Non-.NET client의 경우 [**UIA \_ E \_ elementnotenabled**](https://docs.microsoft.com/windows/desktop/WinAuto/uiauto-error-codes)에 매핑됩니다.
 
-이 외에 피어는 피어 지원에서 throw 되는 예외와 관련 하 여 상대적으로는 안 됩니다. 대부분의 클라이언트는 피어의 예외를 처리 하 고 클라이언트와 상호 작용할 때 사용자가 수행할 수 있는 실행 가능한 선택 항목으로 전환할 수 없습니다. 따라서 피어 구현 내에서 다시 throw 없는 경우에도 작동 하지 않고 예외를 catch 하는 것은 피어가 작동 하지 않는 항목이 발생할 때마다 예외를 throw 하는 것 보다 더 나은 전략입니다. 또한 대부분의 UI 자동화 클라이언트는 관리 코드로 작성 되지 않습니다. 대부분은 COM으로 작성 되며, 피어에 대 한 액세스를 종료 하는 UI 자동화 클라이언트 메서드를 호출할 때마다 **HRESULT** 에서 **\_OK** 를 확인 하는 것입니다.
+이 외에 피어는 피어 지원에서 throw 되는 예외와 관련 하 여 상대적으로는 안 됩니다. 대부분의 클라이언트는 피어의 예외를 처리 하 고 클라이언트와 상호 작용할 때 사용자가 수행할 수 있는 실행 가능한 선택 항목으로 전환할 수 없습니다. 따라서 피어 구현 내에서 다시 throw 없는 경우에도 작동 하지 않고 예외를 catch 하는 것은 피어가 작동 하지 않는 항목이 발생할 때마다 예외를 throw 하는 것 보다 더 나은 전략입니다. 또한 대부분의 UI 자동화 클라이언트는 관리 코드로 작성 되지 않습니다. 대부분은 COM으로 작성 되며, 피어에 대 한 액세스를 종료 하는 UI 자동화 클라이언트 메서드를 호출할 때마다 **HRESULT** 에서 ** \_ OK** 를 확인 하는 것입니다.
 
 <span id="related_topics"/>
 

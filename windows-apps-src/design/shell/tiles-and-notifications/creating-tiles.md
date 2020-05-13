@@ -1,5 +1,5 @@
 ---
-Description: 타일은 시작 메뉴에 표시되는 앱의 표시를 말합니다. 모든 앱에는 타일이 있습니다. Microsoft Visual Studio에서 새 Windows 앱 앱 프로젝트를 만들 때 앱의 이름과 로고를 표시 하는 기본 타일이 포함 됩니다.
+Description: 타일은 시작 메뉴에 표시되는 앱의 표시를 말합니다. 모든 앱에는 타일이 있습니다. Microsoft Visual Studio에서 새 Windows 앱 프로젝트를 만들 때 앱의 이름과 로고를 표시 하는 기본 타일이 포함 됩니다.
 title: Windows 앱의 타일
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0882ac67766bc2ce037133cf8a39b5393f616e13
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 8823116b8fed3503ccf0dadc488956c93ae6c32b
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970998"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234455"
 ---
 # <a name="tiles-for-windows-apps"></a>Windows 앱의 타일
 
  
 
-*타일* 은 시작 메뉴의 앱 표현입니다. 모든 앱에는 타일이 있습니다. Microsoft Visual Studio에서 새 Windows 앱 앱 프로젝트를 만들 때 앱의 이름과 로고를 표시 하는 기본 타일이 포함 됩니다.앱을 처음 설치할 때 Windows에서이 타일을 표시 합니다. 앱이 설치 된 후 알림을 통해 타일의 콘텐츠를 변경할 수 있습니다. 예를 들어 타일을 변경 하 여 새 정보 (예: 뉴스 헤드라인) 또는 가장 최근의 읽지 않은 메시지의 제목을 사용자에 게 전달할 수 있습니다.
+*타일* 은 시작 메뉴의 앱 표현입니다. 모든 앱에는 타일이 있습니다. Microsoft Visual Studio에서 새 Windows 앱 프로젝트를 만들 때 앱의 이름과 로고를 표시 하는 기본 타일이 포함 됩니다.앱을 처음 설치할 때 Windows에서이 타일을 표시 합니다. 앱이 설치 된 후 알림을 통해 타일의 콘텐츠를 변경할 수 있습니다. 예를 들어 타일을 변경 하 여 새 정보 (예: 뉴스 헤드라인) 또는 가장 최근의 읽지 않은 메시지의 제목을 사용자에 게 전달할 수 있습니다.
 
 ## <a name="configure-the-default-tile"></a>기본 타일 구성
 
@@ -55,11 +55,11 @@ Visual Studio에서 새 프로젝트를 만들면 앱의 이름과 로고가 표
 
     크기 조정 된 이미지는 다음과 같은 명명 규칙을 따릅니다.
     
-    *&lt;&gt;* *이미지 이름&gt;. 배율 배율 인수 &lt;* 입니다. *이미지 파일 확장명&gt; &lt;* 
+    * &lt; 이미지 이름 &gt; *. 배율* &lt; 배율 인수 &gt; *입니다.* &lt; 이미지 파일 확장명 &gt; * 
 
     예: SplashScreen. scale-100
 
-    이미지를 참조 하는 경우 이미지 * &lt;이름&gt;* 으로 참조 합니다. *이미지 파일 확장명&gt; (이 예에서는 "SplashScreen")입니다. &lt;* 시스템은 사용자가 제공한 이미지에서 장치의 적절 한 크기 조정 이미지를 자동으로 선택 합니다.
+    이미지를 참조 하는 경우 이미지 * &lt; 이름 &gt; *으로 참조 합니다.* &lt; 이미지 파일 확장명 &gt; * (이 예에서는 "SplashScreen")입니다. 시스템은 사용자가 제공한 이미지에서 장치의 적절 한 크기 조정 이미지를 자동으로 선택 합니다.
 
 -   필요 하지는 않지만, 사용자가 앱의 타일 크기를 해당 크기로 조정할 수 있도록 광범위 하 고 큰 타일 크기에 로고를 제공 하는 것이 좋습니다. 이러한 추가 이미지를 제공 하려면 **Defaulttile** 요소를 만들고 **Wide310x150Logo** 및 **Square310x310Logo** 특성을 사용 하 여 추가 이미지를 지정 합니다.
 ```    XML
