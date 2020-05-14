@@ -2,7 +2,7 @@
 Description: NavigationView는 앱에 대한 최상위 탐색 패턴을 구현하는 적응형 컨트롤입니다.
 title: 탐색 보기
 template: detail.hbs
-ms.date: 10/02/2018
+ms.date: 05/02/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: yulikl
@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 17eb1a2f24e9fd893fee1a0aff349989577375c7
-ms.sourcegitcommit: af4050f69168c15b0afaaa8eea66a5ee38b88fed
+ms.openlocfilehash: 85cd58233de0feeded449e55cb1175087a64e61d
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80081700"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970368"
 ---
 # <a name="navigation-view"></a>탐색 보기
 
@@ -29,13 +29,13 @@ NavigationView 컨트롤은 앱에 대한 최상위 탐색을 제공합니다. �
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **NavigationView** 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **NavigationView** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
 
 > **플랫폼 API**: [Windows.UI.Xaml.Controls.NavigationView 클래스](/uwp/api/windows.ui.xaml.controls.navigationview)
 >
 > **Windows UI 라이브러리 API**: [Microsoft.UI.Xaml.Controls.NavigationView 클래스](/uwp/api/microsoft.ui.xaml.controls.navigationview)
 >
-> ‘위쪽’ 탐색과 같은 NavigationView의 몇 가지 기능을 사용하려면 Windows 10 버전 1809([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상이나 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)가 필요합니다. 
+> _위쪽_ 및 _계층적_ 탐색과 같은 NavigationView의 몇 가지 기능을 사용하려면 Windows 10 버전 1809([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상이나 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)가 필요합니다.
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -648,6 +648,242 @@ void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const & /* 
     }
 }
 ```
+## <a name="hierarchical-navigation"></a>계층적 탐색
+일부 앱은 단순한 탐색 항목 목록 이상을 필요로 하는 더 복잡한 계층 구조를 포함할 수 있습니다. 최상위 탐색 항목을 사용하여 특정 페이지를 표시하는 자식 항목을 포함하는 페이지 범주를 표시할 수도 있습니다. 다른 페이지로만 연결되는 허브 스타일 페이지가 있는 경우에도 유용합니다. 이러한 경우 계층적 NavigationView를 만들어야 합니다.
+
+창에서 중첩된 탐색 항목의 계층적 목록을 표시하려면 `MenuItems` 속성 또는 **NavigationViewItem**의 `MenuItemsSource` 속성을 사용합니다.
+각 NavigationViewItem은 다른 NavigationViewItems를 포함하고 항목 헤더 및 구분 기호와 같은 요소를 구성할 수 있습니다. `MenuItemsSource`를 사용할 때 계층적 목록을 표시하려면 `ItemTemplate`을 NavigationViewItem으로 설정하고 해당 `MenuItemsSource` 속성을 계층의 다음 수준에 바인딩합니다.
+
+NavigationViewItem은 중첩된 수준을 원하는 만큼 포함할 수 있지만, 앱의 탐색 계층 구조를 단순하게 유지하는 것이 좋습니다. 두 수준이 유용성과 이해력에 이상적입니다.
+
+NavigationView는 위쪽, 왼쪽 및 LeftCompact 창 표시 모드의 계층 구조를 표시합니다. 다음은 각 창 표시 모드에서 확장된 하위 트리가 표시되는 모양입니다.
+
+![계층 구조가 포함된 NavigationView](images/navigation-view-hierarchy-labeled.png)
+
+### <a name="adding-a-hierarchy-of-items-in-markup"></a>태그에 항목의 계층 구조 추가
+태그에서 앱 탐색 계층 구조를 선언합니다.
+
+```Xaml
+<!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
+<muxc:NavigationView>
+    <muxc:NavigationView.MenuItems>
+        <muxc:NavigationViewItem Content="Home" Icon="Home" ToolTipService.ToolTip="Home"/>
+        <muxc:NavigationViewItem Content="Collections" Icon="Keyboard" ToolTipService.ToolTip="Collections">
+            <muxc:NavigationViewItem.MenuItems>
+                <muxc:NavigationViewItem Content="Notes" Icon="Page" ToolTipService.ToolTip="Notes"/>
+                <muxc:NavigationViewItem Content="Mail" Icon="Mail" ToolTipService.ToolTip="Mail"/>
+            </muxc:NavigationViewItem.MenuItems>
+        </muxc:NavigationViewItem>
+    </muxc:NavigationView.MenuItems>
+</muxc:NavigationView>
+```
+
+### <a name="adding-a-hierarchy-of-items-using-data-binding"></a>데이터 바인딩을 사용하여 항목의 계층 구조 추가
+
+다음을 통해 메뉴 항목의 계층 구조를 NavigationView에 추가 
+* MenuItemsSource 속성을 계층적 데이터에 바인딩
+* 항목 템플릿을 NavigationViewMenuItem으로 정의하고, 해당 콘텐츠는 메뉴 항목의 레이블로 설정 및 MenuItemsSource 속성은 계층 구조의 다음 수준에 바인딩됨
+
+또한 이 예제에서는 **Expanding** 및 **Collapsing** 이벤트를 설명합니다. 이러한 이벤트는 자식 항목을 포함하는 메뉴 항목에 대해 발생합니다.
+
+```xaml
+<!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
+<DataTemplate x:Key="NavigationViewMenuItem" x:DataType="local:Category">
+    <muxc:NavigationViewItem Content="{x:Bind Name}" MenuItemsSource="{x:Bind Children}"/>
+</DataTemplate>
+<muxc:NavigationView x:Name="navview" 
+    MenuItemsSource="{x:Bind categories, Mode=OneWay}" 
+    MenuItemTemplate="{StaticResource NavigationViewMenuItem}" 
+    ItemInvoked="{x:Bind OnItemInvoked}" 
+    Expanding="OnItemExpanding" 
+    Collapsed="OnItemCollapsed" 
+    PaneDisplayMode="Left">
+    
+    <StackPanel Margin="10,10,0,0">
+        <TextBlock Margin="0,10,0,0" x:Name="ExpandingItemLabel" Text="Last Expanding: N/A"/>
+        <TextBlock x:Name="CollapsedItemLabel" Text="Last Collapsed: N/A"/>
+    </StackPanel>    
+</muxc:NavigationView>
+```
+
+```csharp
+public class Category
+{
+    public String Name { get; set; }
+    public String Icon { get; set; }
+    public ObservableCollection<Category> Children { get; set; }
+}
+    
+public sealed partial class HierarchicalNavigationViewDataBinding : Page
+{
+    public HierarchicalNavigationViewDataBinding()
+    {
+        this.InitializeComponent();
+    }  
+    
+    public ObservableCollection<Category> Categories = new ObservableCollection<Category>()
+    {
+        new Category(){
+            Name = "Menu Item 1",
+            Icon = "Icon",
+            Children = new ObservableCollection<Category>() {
+               new Category(){
+                    Name = "Menu Item 2",
+                    Icon = "Icon",
+                    Children = new ObservableCollection<Category>() {
+                        new Category() { 
+                            Name  = "Menu Item 2", 
+                            Icon = "Icon",
+                            Children = new ObservableCollection<Category>() {
+                                new Category() { Name  = "Menu Item 3", Icon = "Icon" },
+                                new Category() { Name  = "Menu Item 4", Icon = "Icon" }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        new Category(){
+            Name = "Menu Item 5",
+            Icon = "Icon",
+            Children = new ObservableCollection<Category>() {
+                new Category(){
+                    Name = "Menu Item 6",
+                    Icon = "Icon",
+                    Children = new ObservableCollection<Category>() {
+                        new Category() { Name  = "Menu Item 7", Icon = "Icon" },
+                        new Category() { Name  = "Menu Item 8", Icon = "Icon" }
+                    }
+                }
+            }
+        },
+        new Category(){ Name = "Menu Item 9", Icon = "Icon" }
+    };
+    private void OnItemInvoked(object sender, NavigationViewItemInvokedEventArgs e)
+    {
+        var clickedItem = e.InvokedItem;
+        var clickedItemContainer = e.InvokedItemContainer;
+    }
+    private void OnItemExpanding(object sender, NavigationViewItemExpandingEventArgs e)
+    {
+        var nvib = e.ExpandingItemContainer;
+        var name = "Last Expanding: " + nvib.Content.ToString();
+        ExpandingItemLabel.Text = name;
+    }
+    private void OnItemCollapsed(object sender, NavigationViewItemCollapsedEventArgs e)
+    {
+        var nvib = e.CollapsedItemContainer;
+        var name = "Last Collapsed: " + nvib.Content;
+        CollapsedItemLabel.Text = name;
+    }
+}
+```
+### <a name="selection"></a>선택
+기본적으로 모든 항목은 자식을 포함하거나 호출 및 선택할 수 있습니다.
+사용자에게 탐색 옵션의 계층 트리를 제공할 때 앱에 부모 항목에 연결된 대상 페이지가 없는 경우와 같이 부모 항목을 선택할 수 없도록 설정할 수도 있습니다. 부모 항목을 선택할 수 _있는_ 경우 왼쪽 확장 또는 위쪽 창 표시 모드를 사용하는 것이 좋습니다. LeftCompact 모드를 사용하면 사용자가 부모 항목을 탐색하여 호출될 때마다 자식 하위 트리를 열 수 있습니다.
+
+선택 항목을 선택하면 왼쪽 모드의 경우 왼쪽 가장자리를 따라, 위쪽 모드에서는 아래쪽 가장자리를 따라 선택 표시기가 표시됩니다. 아래에는 부모 항목이 선택된 왼쪽 및 위쪽 모드의 NavigationViews가 나와 있습니다.
+
+![부모가 선택된 왼쪽 모드의 NavigationView](images/navigation-view-selection.png)
+
+![부모가 선택된 위쪽 모드의 NavigationView](images/navigation-view-selection-top.png)
+
+선택한 항목이 항상 표시되는 것은 아닙니다. 축소되거나 확장되지 않은 하위 트리의 자식을 선택하면 첫 번째로 표시되는 상위 항목이 선택된 상태로 표시됩니다. 하위 트리가 확장되면 선택 표시기가 선택된 항목으로 다시 이동합니다.
+
+예를 들어 위의 이미지에서 사용자가 일정 항목을 선택한 다음, 사용자가 해당 하위 트리를 축소할 수 있습니다. 이 경우 계정이 일정의 첫 번째 상위 항목이기 때문에 계정 항목 아래에 선택 표시기가 표시됩니다. 사용자가 하위 트리를 다시 확장하면 선택 표시기가 일정 항목으로 다시 이동합니다. 
+
+전체 NavigationView에는 둘 이상의 선택 표시기가 표시되지 않습니다.
+
+위쪽과 왼쪽 모드 모두에서 NavigationViewItems의 화살표를 클릭하면 하위 트리가 확장되거나 축소됩니다. NavigationViewItem에서 _아무데나_ 클릭하거나 탭하면 `ItemInvoked` 이벤트가 트리거되고 하위 트리도 축소 또는 확장됩니다.
+
+항목이 호출될 때 선택 표시기를 표시하지 않도록 하려면 아래와 같이 [SelectsOnInvoked](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.navigationviewitem.selectsoninvoked?view=winui-2.3) 속성을 False로 설정합니다.
+
+```xaml
+<!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
+<DataTemplate x:Key="NavigationViewMenuItem" x:DataType="local:Category">
+    <muxc:NavigationViewItem Content="{x:Bind Name}" 
+        MenuItemsSource="{x:Bind Children}"
+        SelectsOnInvoked="{x:Bind IsLeaf}" />
+</DataTemplate>
+<muxc:NavigationView x:Name="navview" 
+    MenuItemsSource="{x:Bind categories, Mode=OneWay}" 
+    MenuItemTemplate="{StaticResource NavigationViewMenuItem}">
+   
+</muxc:NavigationView>
+```
+
+```csharp
+public class Category
+{
+    public String Name { get; set; }
+    public String Icon { get; set; }
+    public ObservableCollection<Category> Children { get; set; }
+    public bool IsLeaf { get; set; }
+}
+    
+public sealed partial class HierarchicalNavigationViewDataBinding : Page
+{
+    public HierarchicalNavigationViewDataBinding()
+    {
+        this.InitializeComponent();
+    }      
+    
+    public ObservableCollection<Category> Categories = new ObservableCollection<Category>()
+    {
+        new Category(){
+            Name = "Menu Item 1",
+            Icon = "Icon",
+            Children = new ObservableCollection<Category>() {
+                new Category(){
+                    Name = "Menu Item 2",
+                    Icon = "Icon",
+                    Children = new ObservableCollection<Category>() {
+                        new Category() { 
+                            Name  = "Menu Item 2", 
+                            Icon = "Icon",
+                            Children = new ObservableCollection<Category>() {
+                                new Category() { Name  = "Menu Item 3", Icon = "Icon", IsLeaf = true },
+                                new Category() { Name  = "Menu Item 4", Icon = "Icon", IsLeaf = true }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        new Category(){
+            Name = "Menu Item 5",
+            Icon = "Icon",
+            Children = new ObservableCollection<Category>() {
+                new Category(){
+                    Name = "Menu Item 6",
+                    Icon = "Icon",
+                    Children = new ObservableCollection<Category>() {
+                        new Category() { Name  = "Menu Item 7", Icon = "Icon", IsLeaf = true },
+                        new Category() { Name  = "Menu Item 8", Icon = "Icon", IsLeaf = true }
+                    }
+                }
+            }
+        },
+        new Category(){ Name = "Menu Item 9", Icon = "Icon", IsLeaf = true }
+    };
+}
+```
+
+### <a name="keyboarding-within-hierarchical-navigationview"></a>계층적 NavigationView 내의 키보드 사용
+사용자는 [키보드](https://docs.microsoft.com/windows/uwp/design/input/keyboard-interactions)를 사용하여 탐색 보기 주위에서 포커스를 이동할 수 있습니다. 화살표 키는 창 내에서 “내부 탐색”을 노출하고 [트리 보기](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tree-view)에서 제공하는 상호 작용을 따릅니다. 키 동작은 HierarchicalNavigationView의 위쪽 및 왼쪽 컴팩트 모드에서 표시되는 NavigationView 또는 플라이아웃 메뉴를 통해 탐색할 때 변경됩니다. 다음은 각 키가 계층적 NavigationView에서 수행할 수 있는 특정 작업입니다.
+
+| 키      |      왼쪽 모드에서      |  위쪽 모드에서 | 플라이아웃에서  |
+|----------|------------------------|--------------|------------|
+| 위로 |현재 포커스를 둔 항목 바로 위에 있는 항목으로 포커스를 이동합니다. | 아무 작업도 하지 않습니다. |현재 포커스를 둔 항목 바로 위에 있는 항목으로 포커스를 이동합니다.|
+| 아래로|현재 포커스를 둔 항목 바로 아래에 포커스를 이동합니다.* | 아무 작업도 하지 않습니다. | 현재 포커스를 둔 항목 바로 아래에 포커스를 이동합니다.* |
+| 오른쪽 |아무 작업도 하지 않습니다.  |현재 포커스를 둔 항목 바로 오른쪽에 있는 항목으로 포커스를 이동합니다. |아무 작업도 하지 않습니다.|
+| 왼쪽 |아무 작업도 하지 않습니다. | 현재 포커스를 둔 항목 바로 왼쪽에 있는 항목으로 포커스를 이동합니다.  |아무 작업도 하지 않습니다. |
+| 스페이스바/Enter 키 |항목에 자식 항목이 있으면 항목을 확장/축소하고 포커스를 변경하지 않습니다.   | 항목에 자식 항목이 있으면 자식 항목을 플라이아웃으로 확장하고 플라이아웃의 첫 번째 항목에 포커스를 둡니다. | 항목을 호출하거나 선택하고 플라이아웃을 닫습니다. |
+| Esc | 아무 작업도 하지 않습니다. | 아무 작업도 하지 않습니다. | 플라이아웃을 닫습니다.|
+
+스페이스바 또는 Enter 키는 항상 항목을 호출하거나 선택합니다.
+
+*항목이 시각적으로 인접하지 않아도 되는 경우 창의 목록에 있는 마지막 항목에서 설정 항목으로 포커스가 이동합니다. 
 
 ## <a name="navigation-view-customization"></a>탐색 보기 사용자 지정
 
@@ -717,7 +953,7 @@ void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const & /* 
 ```
 
 ### <a name="top-whitespace"></a>상단 공백
-일부 앱은 [해당 창의 제목 표시줄을 사용자 지정](https://docs.microsoft.com/windows/uwp/design/shell/title-bar)하여 해당 앱 콘텐츠를 제목 표시줄 영역으로 확장하도록 선택할 수 있습니다. NavigationView가 [ExtendViewIntoTitleBar](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.extendviewintotitlebar) API**를 사용하여 제목 표시줄** 로 확장되는 앱의 루트 요소인 경우, 컨트롤은 대화형 요소의 위치를 자동으로 조정하여 [끌기 가능 영역](https://docs.microsoft.com/windows/uwp/design/shell/title-bar#draggable-regions)과 겹치지 않도록 합니다. 
+일부 앱은 [해당 창의 제목 표시줄을 사용자 지정](https://docs.microsoft.com/windows/uwp/design/shell/title-bar)하여 해당 앱 콘텐츠를 제목 표시줄 영역으로 확장하도록 선택할 수 있습니다. NavigationView가 [ExtendViewIntoTitleBar](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.extendviewintotitlebar) API**를 사용하여 제목 표시줄 **로 확장되는 앱의 루트 요소인 경우, 컨트롤은 대화형 요소의 위치를 자동으로 조정하여 [끌기 가능 영역](https://docs.microsoft.com/windows/uwp/design/shell/title-bar#draggable-regions)과 겹치지 않도록 합니다. 
 ![제목 표시줄로 확장되는 앱](images/navigation-view-with-titlebar-padding.png)
 
 앱이 [Window.SetTitleBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.settitlebar) 메서드를 호출하여 끌기 가능 영역을 지정하고 뒤로 및 메뉴 단추를 앱 창의 상단에 더 가깝게 나타내려면 `IsTitleBarAutoPaddingEnabled`를 False로 설정합니다.
@@ -744,4 +980,4 @@ NavigationView의 헤더 영역 위치를 추가로 조정하려면 *NavigationV
 - [NavigationView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview)
 - [마스터/세부](master-details.md)
 - [탐색 기본 사항](../basics/navigation-basics.md)
-- [UWP용 흐름 디자인 개요](/windows/apps/fluent-design-system)
+- [Fluent Design 개요](/windows/apps/fluent-design-system)
