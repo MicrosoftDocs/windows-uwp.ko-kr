@@ -5,12 +5,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ee49b5fe5b5956e9069ea196c4d2e029b3a15763
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: e7d6ea614a9d85eadfcb807c6e6100dbe15ed0c4
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68729514"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970738"
 ---
 # <a name="show-multiple-views-for-an-app"></a>앱에 대한 여러 보기 표시
 
@@ -32,11 +32,11 @@ ms.locfileid: "68729514"
 
 각 앱 레이아웃은 고유하지만, 콘텐츠의 오른쪽 위와 같은 예측 가능한 위치에 “새 창” 단추를 배치하여 새 창으로 열 수 있도록 하는 것이 좋습니다. [상황에 맞는 메뉴](../controls-and-patterns/menus.md)에 “새 창에서 열기” 옵션을 넣는 것도 좋습니다.
 
-동일한 인스턴스에 대해 별도의 창을 만드는 대신, 앱의 개별 인스턴스를 만들려면 [다중 인스턴스 UWP 앱 만들기](../../launch-resume/multi-instance-uwp.md)를 참조하세요.
+동일한 인스턴스에 대해 별도의 창을 만드는 대신, 앱의 개별 인스턴스를 만들려면 [다중 인스턴스 Windows 앱 만들기](../../launch-resume/multi-instance-uwp.md)를 참조하세요.
 
 ## <a name="windowing-hosts"></a>창 작업 호스트
 
-앱 내에서 UWP 콘텐츠를 호스트할 수 있는 방법에는 여러 가지가 있습니다.
+앱 내에서 Windows 콘텐츠를 호스트할 수 있는 방법에는 여러 가지가 있습니다.
 
 - [CoreWindow](/uwp/api/windows.ui.core.corewindow)/[ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview)
 
@@ -47,7 +47,7 @@ ms.locfileid: "68729514"
     ApplicationView를 사용하여 앱에 보조 창을 표시하는 방법에 대한 자세한 내용은 [ApplicationView 사용](application-view.md)을 참조하세요.
 - [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow)
 
-    AppWindow는 생성 시 사용된 것과 동일한 UI 스레드에서 작동하기 때문에 간편하게 다중 창 UWP 앱을 만들 수 있게 해줍니다.
+    AppWindow는 생성 시 사용된 것과 동일한 UI 스레드에서 작동하기 때문에 간편하게 다중 창 Windows 앱을 만들 수 있게 해줍니다.
 
     AppWindow 클래스와 [WindowManagement](/uwp/api/windows.ui.windowmanagement) 네임스페이스의 기타 API는 Windows 10 버전 1903(SDK 18362)부터 사용할 수 있습니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우에는 ApplicationView를 사용하여 보조 창을 만들어야 합니다.
 

@@ -5,18 +5,30 @@ ms.date: 04/13/2020
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C#, 샘플, 클립보드, 사례, 연구
 ms.localizationpriority: medium
-ms.openlocfilehash: ecfbe1831014bce0cb7259c935ab0ae7a8af3de8
-ms.sourcegitcommit: 8b7b677c7da24d4f39e14465beec9c4a3779927d
+ms.openlocfilehash: de19d4624cbcf6f102b2eb2067c9f0ff9c583f0b
+ms.sourcegitcommit: 29daa3959304d748e4dec4e6f8e774fade65aa8d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81266941"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82851607"
 ---
 # <a name="porting-the-clipboard-sample-tocwinrtfromcmdasha-case-study"></a>C#에서 클립보드 샘플을 C++/WinRT로 이식(사례 연구)
 
 이 항목에서는 [UWP(유니버설 Windows 플랫폼) 앱 샘플](https://github.com/microsoft/Windows-universal-samples) 중 하나를 [C#](/visualstudio/get-started/csharp)에서 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)로 포팅하는 사례 연구를 제공합니다. 연습을 진행하면서 샘플을 직접 이식하여 이식을 연습해보고 값진 경험을 얻을 수 있습니다.
 
-또한 C#에서 C++/WinRT로 이식할 때의 특정 기술 세부 정보를 다루는 다양한 섹션을 제공하는 [C#에서 C++/WinRT로 이동](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp)도 참조하세요.
+C#에서 C++/WinRT로 이식하는 데 관련된 기술 세부 정보에 대한 포괄적인 카탈로그는 [C#에서 C++/WinRT로 이동](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp) 관련 문서를 참조하세요.
+
+## <a name="a-brief-preface-about-c-and-c-source-code-files"></a>C# 및 C++ 소스 코드 파일에 대한 간략한 소개
+
+C# 프로젝트에서 소스 코드 파일은 주로 `.cs` 파일입니다. C++로 이동하면 더 많은 종류의 소스 코드 파일을 사용합니다. 그 이유는 컴파일러 간의 차이점, C++ 소스 코드가 다시 사용되는 방식, 형식 및 해당 기능(메서드)에 대한 *선언* 및 *정의* 개념과 관련이 있습니다.
+
+함수 *선언*은 함수의 *서명*(반환 형식, 이름, 매개 변수 형식 및 이름)만 설명합니다. 함수 *정의*에는 함수의 *본문*(구현)이 포함됩니다.
+
+형식에 관해서는 약간 다릅니다. 형식은 해당 이름을 제공하고 모든 멤버 함수(및 기타 멤버)를 *선언*하여(최소한으로) *정의*합니다. 해당 멤버 함수를 정의하지 않아도 형식을 *정의*할 수 있습니다.
+
+- 공통 C++ 소스 코드 파일은 `.h` 및 `.cpp` 파일입니다. `.h` 파일은 *헤더* 파일이며 하나 이상의 형식을 정의합니다. 헤더에서 멤버 함수 정의가 *가능*하긴 하지만, 일반적으로 `cpp` 파일이 담당합니다. 따라서 가상 형식의 C++ 형식 **MyClass**의 경우 `MyClass.h`에서 **MyClass**를 정의하고, `MyClass.cpp`에서 해당 멤버 함수를 정의합니다. 다른 개발자가 클래스를 다시 사용하기 위해 `.h` 파일 및 개체 코드만 공유합니다. 구현에서 지적 재산권을 구성하기 때문에 `.cpp` 파일은 비밀로 유지해야 합니다.
+- 미리 컴파일된 헤더(`pch.h`). 일반적으로 애플리케이션에 포함되는 헤더 파일 세트가 있으며, 이는 거의 변경되지 않습니다. 따라서 컴파일할 때마다 해당 헤더 세트의 콘텐츠를 처리하는 대신, 해당 헤더를 하나로 집계하고, 한 번 컴파일한 다음, 빌드할 때마다 미리 컴파일(precompilation) 단계의 출력을 사용할 수 있습니다. *미리 컴파일된 헤더* 파일(일반적으로 `pch.h`)을 통해 이 작업을 수행합니다.
+- `.idl` 파일. 이러한 파일에는 IDL(Interface Definition Language)이 포함되어 있습니다. IDL을 Windows 런타임 형식에 대한 헤더 파일로 간주할 수 있습니다. [**MainPage** 형식에 대한 IDL](#idl-for-the-mainpage-type) 섹션에서 IDL에 대해 자세히 설명합니다.
 
 ## <a name="download-and-test-the-clipboard-sample"></a>클립보드 샘플 다운로드 및 테스트
 
@@ -72,19 +84,30 @@ C# 버전의 샘플에서 `SampleConfiguration.cs` 소스 코드 파일을 확�
 
 ### <a name="idl-for-the-mainpage-type"></a>**MainPage** 형식에 대한 IDL
 
+IDL(인터페이스 정의 언어)과 C++/WinRT를 사용하여 프로그래밍하는 경우 어떻게 유용한지 간략하게 설명하면서 이 섹션을 시작해 보겠습니다. IDL은 Windows 런타임 형식의 호출이 가능한 화면을 설명하는 일종의 소스 코드입니다. 형식에서 호출 가능한(또는 퍼블릭) 화면은 *프로젝션*되어 형식이 사용될 수 있도록 합니다. 형식에서 이 *프로젝션된* 부분은 형식의 실제 내부 구현(호출할 수 없으며 퍼블릭이 아님)과 대조됩니다. 이는 IDL에서 정의하는 프로젝션된 부분에 불과합니다.
+
+`.idl` 파일 내에서 IDL 소스 코드를 작성한 후에는 IDL을 컴퓨터에서 읽을 수 있는 메타데이터 파일(Windows 메타데이터라고도 함)로 컴파일할 수 있습니다. 이러한 메타데이터 파일의 확장명은 `.winmd`이며, 다음과 같이 사용됩니다.
+
+- `.winmd`는 구성 요소에서 Windows 런타임 형식을 설명할 수 있습니다. 애플리케이션 프로젝트에서 Windows 런타임 구성 요소(WRC)를 참조하는 경우 애플리케이션 프로젝트는 WRC에 속하는 Windows 메타데이터를 읽습니다(해당 메타데이터는 별도의 파일에 있을 수도 있고, WRC 자체와 동일한 파일로 패키지될 수도 있음). 따라서 애플리케이션 내에서 WRC의 형식을 사용할 수 있습니다.
+- `.winmd`는 동일한 애플리케이션의 다른 부분에서 사용될 수 있도록 애플리케이션의 한 부분에서 Windows 런타임 형식을 설명할 수 있습니다. 예를 들어 동일한 앱의 XAML 페이지에서 사용하는 Windows 런타임 형식이 있습니다.
+- Windows 런타임 형식(기본 제공 또는 타사)을 더 쉽게 사용할 수 있도록 C++/WinRT 빌드 시스템은 `.winmd` 파일을 사용하여 이러한 Windows 런타임 형식의 프로젝션된 부분을 나타내는 래퍼 형식을 생성합니다.
+- 사용자 고유의 Windows 런타임 형식을 더 쉽게 구현할 수 있도록 하려면 C++/WinRT 빌드 시스템은 IDL을 `.winmd` 파일로 전환한 다음, 이를 사용하여 프로젝션의 래퍼를 생성하고, 구현을 기반으로 하는 스텁을 생성합니다(이러한 스텁은 이 항목의 뒷부분에서 더 자세히 설명).
+
+C++/WinRT와 함께 사용하는 특정 버전의 IDL은 [Microsoft 인터페이스 정의 언어 3.0](/uwp/midl-3/intro)입니다. 이 섹션의 나머지 부분에서는 C# **MainPage** 형식에 대해 자세히 살펴보겠습니다. C++/WinRT **MainPage** 형식의 *프로젝션*에 있어야 하는 부분(즉, 호출 가능 또는 퍼블릭, 화면)과 해당 구현에 포함될 수 있는 부분을 결정합니다. IDL을 작성하게 되면(이후 섹션에서 수행할 예정) 그 안에서 호출 가능한 부분만 정의할 것이기 때문에 이러한 차이점은 중요합니다.
+
 **MainPage** 형식을 함께 구현하는 C# 소스 코드 파일은 `MainPage.xaml`(복사하여 곧 이식함), `MainPage.xaml.cs` 및 `SampleConfiguration.cs`입니다.
 
 C++/WinRT 버전에서는 비슷한 방식으로 **MainPage** 형식을 소스 코드 파일에서 고려합니다. `MainPage.xaml.cs`의 논리를 사용하고 대부분의 경우에서 `MainPage.h` 및 `MainPage.cpp`로 변환합니다. 또한 `SampleConfiguration.cs`의 논리에서는 `SampleConfiguration.h` 및 `SampleConfiguration.cpp`로 변환합니다.
 
-C# UWP(유니버설 Windows 플랫폼) 애플리케이션은 Windows 런타임 형식입니다. 그러나 C++/WinRT 애플리케이션에서 형식을 작성하는 경우 해당 형식이 Windows 런타임 형식인지, 아니면 일반 C++ 클래스/구조체/열거형인지 선택할 수 있습니다.
+C# UWP(유니버설 Windows 플랫폼) 애플리케이션의 클래스는 당연히 Windows 런타임 형식입니다. 그러나 C++/WinRT 애플리케이션에서 형식을 작성하는 경우 해당 형식이 Windows 런타임 형식인지, 아니면 일반 C++ 클래스/구조체/열거형인지 선택할 수 있습니다.
 
-C++/WinRT 프로젝트에서 **MainPage**는 이미 Windows 런타임 형식이므로 해당 측면을 변경할 필요가 없습니다. 특히 *런타임 클래스*입니다.
+프로젝트의 모든 XAML 페이지는 Windows 런타임 형식이어야 하므로 **MainPage**는 Windows 런타임 형식이어야 합니다. C++/WinRT 프로젝트에서 **MainPage**는 이미 Windows 런타임 형식이므로 해당 측면을 변경할 필요가 없습니다. 특히 *런타임 클래스*입니다.
 
 - 특정 형식의 런타임 클래스를 작성해야 하는지 여부에 대한 자세한 내용은 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis) 항목을 참조하세요.
-- *구현 형식* 및 *프로젝션된 형식* 개념은 C++/WinRT로 작업할 때 중요합니다. 위에서 언급한 항목과 [C++/WinRT를 통한 API 사용](/windows/uwp/cpp-and-winrt-apis/consume-apis)에서 자세히 알아볼 수 있습니다.
-- 런타임 클래스와 `.idl` 파일 간 연결에 대한 내용은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](/windows/uwp/cpp-and-winrt-apis/binding-property) 항목을 읽고 작업을 진행합니다. 해당 항목에서는 새로운 런타임 클래스 작성 프로세스를 진행하며, 첫 번째 단계는 새 **Midl 파일(.idl)** 항목을 프로젝트에 추가하는 것입니다.
+- C++/WinRT에서 런타임 클래스의 내부 구현과 그에 대한 프로젝션된(퍼블릭) 부분은 서로 다른 두 클래스 형식으로 존재합니다. 이러한 형식을 *구현 형식*과 *프로젝션된 형식*이라고 합니다. 위의 글머리 기호에서 언급된 항목과 [C++/WinRT를 통한 API 사용](/windows/uwp/cpp-and-winrt-apis/consume-apis)에서 자세히 알아볼 수 있습니다.
+- 런타임 클래스와 IDL(`.idl` 파일) 간 연결에 대한 자세한 내용은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](/windows/uwp/cpp-and-winrt-apis/binding-property) 항목을 읽고 작업을 진행합니다. 해당 항목에서는 새로운 런타임 클래스 작성 프로세스를 진행하며, 첫 번째 단계는 새 **Midl 파일(.idl)** 항목을 프로젝트에 추가하는 것입니다.
 
-**MainPage**의 경우 C++/WinRT 프로젝트에 필요한 `MainPage.idl` 파일이 이미 있습니다. 그러나 이 연습에서는 *새* `.idl` 파일을 프로젝트에 추가합니다.
+**MainPage**의 경우 C++/WinRT 프로젝트에 필요한 `MainPage.idl` 파일이 이미 있습니다. 프로젝트 템플릿에서 생성되기 때문입니다. 단, 이 연습의 뒷부분에서는 `.idl` 파일을 프로젝트에 더 추가합니다.
 
 그러면 기존 `MainPage.idl` 파일에 추가해야 하는 IDL의 목록이 바로 표시됩니다. 그 전에는 수행할 작업과 수행하지 않을 작업에 대한 이유를 IDL에 포함해야 합니다.
 
@@ -139,7 +162,7 @@ ScenarioControl.ItemsSource = itemCollection;
 
 이제 `MainPage.idl` 파일에 IDL에서 선언하기로 결정한 **Mainpage**의 새 형식 및 새 멤버를 추가해 보겠습니다. 이와 동시에 Visual Studio 프로젝트 템플릿이 제공한 **Mainpage**의 자리 표시자 멤버를 IDL에서 제거합니다.
 
-따라서 C++/WinRT 프로젝트에서 `MainPage.idl`을 열고 아래 목록과 같이 편집합니다. 편집 내용 중 하나는 **Clipboard**에서 **SDKTemplate**으로 네임스페이스 이름을 변경하는 것입니다. 원할 경우 `MainPage.idl`의 현재 콘텐츠를 삭제하고 아래 목록에 붙여 넣을 수 있습니다. 또 다른 수정 사항은 **Scenario::ClassType**의 이름을 **Scenario::ClassName**으로 변경한다는 것입니다.
+따라서 C++/WinRT 프로젝트에서 `MainPage.idl`을 열고 아래 목록과 같이 편집합니다. 편집 내용 중 하나는 **Clipboard**에서 **SDKTemplate**으로 네임스페이스 이름을 변경하는 것입니다. 원하는 경우 `MainPage.idl`의 전체 내용을 다음 코드로 바꾸기만 하면 됩니다. 또 다른 수정 사항은 **Scenario::ClassType**의 이름을 **Scenario::ClassName**으로 변경한다는 것입니다.
 
 ```idl
 // MainPage.idl
@@ -183,13 +206,15 @@ Visual Studio에서 C++/WinRT 프로젝트에 대해 프로젝트 속성 **공�
 
 ### <a name="save-the-idl-and-re-generate-stub-files"></a>IDL 저장 및 스텁 파일 다시 생성
 
-[XAML 컨트롤(C++/WinRT 속성에 바인딩)](/windows/uwp/cpp-and-winrt-apis/binding-property) 항목을 읽어보면 *스텁 파일* 개념을 확인할 수 있습니다. C++/WinRT 프로젝트를 빌드할 때 `.idl` 파일의 콘텐츠를 기준으로 `cppwinrt.exe` 도구를 통해 스텁 파일이 생성됩니다. 해당 항목에 이에 대한 자세한 내용이 포함되어 있습니다.
+[XAML 컨트롤, C++/WinRT 속성에 바인딩](/windows/uwp/cpp-and-winrt-apis/binding-property) 항목에서는 *스텁 파일*의 개념을 소개하고 작업에 대한 연습을 보여 줍니다. 스텁은 이 항목에서도 앞서 언급한 바 있습니다. C++/WinRT 빌드 시스템이 `.idl` 파일의 콘텐츠를 Windows 메타데이터로 변환하면 해당 메타데이터에서 `cppwinrt.exe`라는 도구가 구현 기반이 되는 스텁을 생성한다는 내용이었습니다.
+
+IDL에서 항목을 추가, 제거 또는 변경하거나 빌드할 때마다 빌드 시스템은 이러한 스텁 파일에서 스텁 구현을 업데이트합니다. 따라서 IDL을 변경하고 빌드할 때마다 이러한 스텁 파일을 보고 변경된 서명을 복사하여 프로젝트에 붙여넣는 것이 좋습니다. 잠시 후에 이러한 작업을 수행하는 방법에 대한 자세한 내용과 예제를 살펴보겠습니다. 그러나 이에 대한 장점은 구현 형식의 모양과 해당 메서드의 서명에 대해 항상 알 수 있는 오류 없는 방법을 제공한다는 점입니다.
 
 연습의 이 시점에서 `MainPage.idl` 파일 편집을 완료하게 되므로 지금 저장해야 합니다. 지금은 프로젝트가 완료 상태까지 빌드되지는 않지만 지금 빌드를 수행하면 **MainPage**의 스텁 파일이 다시 생성되므로 유용합니다.
 
-이 C++/WinRT 프로젝트의 경우 이러한 스텁 파일은 `\Clipboard\Clipboard\Generated Files\sources` 폴더에 생성됩니다. 부분 빌드가 완료된 후에도 이러한 항목을 찾을 수 있습니다. 다시 말하지만 예상한 것처럼 빌드가 완전히 성공하는 것은 아닙니다. 그러나 여기서 중요한 단계는 스텁 생성이 생성할 것이라는 사실입니다.  중요한 파일은 `MainPage.h` 및 `MainPage.cpp`입니다.
+이 C++/WinRT 프로젝트의 경우 스텁 파일은 `\Clipboard\Clipboard\Generated Files\sources` 폴더에 생성됩니다. 부분 빌드가 완료된 후에도 이러한 항목을 찾을 수 있습니다. 다시 말하지만 예상한 것처럼 빌드가 완전히 성공하는 것은 아닙니다. 그러나 여기서 중요한 단계는 스텁 생성이 생성할 것이라는 사실입니다.  중요한 파일은 `MainPage.h` 및 `MainPage.cpp`입니다.
 
-이러한 두 스텁 파일에서는 IDL예 추가한 **MainPage**의 새 멤버(예: **Current** 및 **FEATURE_NAME**)에 대한 스텁 구현을 확인할 수 있습니다. 이러한 스텁 구현을 프로젝트에 이미 있는 `MainPage.h` 및 `MainPage.cpp` 파일에 복사합니다. 이와 동시에 IDL로 수행한 것처럼, Visual Studio 프로젝트 템플릿이 제공하는**Mainpage**의 자리 표시자 멤버(**MyProperty**라는 더미 속성 및 **ClickHandler**라는 이벤트 처리기)를 기존 파일에서 제거합니다.
+이러한 두 스텁 파일에서는 IDL에 추가한 **MainPage**의 멤버(예: **Current** 및 **FEATURE_NAME**)에 대한 새로운 스텁 구현을 확인할 수 있습니다. 이러한 스텁 구현을 프로젝트에 이미 있는 `MainPage.h` 및 `MainPage.cpp` 파일에 복사합니다. 이와 동시에 IDL로 수행한 것처럼, Visual Studio 프로젝트 템플릿이 제공하는**Mainpage**의 자리 표시자 멤버(**MyProperty**라는 더미 속성 및 **ClickHandler**라는 이벤트 처리기)를 기존 파일에서 제거합니다.
 
 실제로 유지하려는 현재 **MainPage** 버전의 유일한 멤버는 생성자입니다.
 
@@ -559,7 +584,7 @@ void MainPage::UpdateStatus(hstring const& strMessage, SDKTemplate::NotifyType c
 ...
 ```
 
-C#에서 중첩 속성을 *dot into*할 수 있습니다. 따라서 C# **MainPage** 형식은 `Dispatcher` 구문을 사용하여 자체 **Dispatcher** 속성에 액세스할 수 있습니다. 또한 C#은 `Dispatcher.HasThreadAccess`와 같은 구문을 사용하여 해당 값을 추가로 *dot into*할 수 있습니다. C++/WinRT에서 속성은 접근자 함수로 구현되므로 구문은 각 함수 호출에 대해 괄호를 추가한다는 측면에서만 다릅니다.
+C#에서는 점 표기법을 사용하여 중첩된 속성에 *dot into*할 수 있습니다. 따라서 C# **MainPage** 형식은 `Dispatcher` 구문을 사용하여 자체 **Dispatcher** 속성에 액세스할 수 있습니다. 또한 C#은 `Dispatcher.HasThreadAccess`와 같은 구문을 사용하여 해당 값을 추가로 *dot into*할 수 있습니다. C++/WinRT에서 속성은 접근자 함수로 구현되므로 구문은 각 함수 호출에 대해 괄호를 추가한다는 측면에서만 다릅니다.
 
 |C#|C++/WinRT|
 |-|-|
@@ -1127,7 +1152,7 @@ Clipboard 샘플에는 UI의 표준 `MainPage.xaml` 시작점 외에 5가지 기
 
 이러한 각각의 5개 XAML 페이지 형식에서 자동으로 생성된 더미 속성(`Int32 MyProperty;` 및 구현)도 제거하겠습니다.
 
-먼저 C++/WinRT 프로젝트에 새 **Midl 파일(.idl)** 항목을 추가합니다. 이름을 `Project.idl`이라고 지정합니다. `Project.idl`의 기본 내용을 삭제하고 그 자리에 아래 목록을 붙여넣습니다.
+먼저 C++/WinRT 프로젝트에 새 **Midl 파일(.idl)** 항목을 추가합니다. 이름을 `Project.idl`이라고 지정합니다. `Project.idl`의 전체 내용을 다음 코드로 바꿉니다.
 
 ```idl
 // Project.idl
