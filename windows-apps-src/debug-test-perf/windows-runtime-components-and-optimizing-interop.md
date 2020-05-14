@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cc68520bbf83ec637c0814c333dfada2f974d1e
-ms.sourcegitcommit: ae9c1646398bb5a4a888437628eca09ae06e6076
+ms.openlocfilehash: 2b5fd5061f3b466743cad2e9e412d79caebaf2f0
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74735008"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730284"
 ---
 # <a name="uwp-components-and-optimizing-interop"></a>UWP 구성 요소 및 interop 최적화
 
@@ -28,7 +28,7 @@ Interop 성능 문제를 방지하면서 네이티브 형식과 관리되는 형
 
 UWP에는 UWP 앱을 만들 수 있는 모든 언어에서 액세스 가능한 형식의 라이브러리가 있습니다. C# 또는 Microsoft Visual Basic에서 .NET 개체를 사용하는 것과 동일한 방법으로 UWP 형식을 사용합니다. UWP 구성 요소에 액세스하기 위해 플랫폼에서 메서드를 호출하게 할 필요 없습니다. 그러면 훨씬 더 간단하게 앱을 만들 수 있지만, 상호 운용성이 예상보다 클 수 있음을 알고 있어야 합니다. UWP 구성 요소가 C# 또는 Visual Basic이 아닌 언어로 개발된 경우 그 구성 요소를 사용할 때 상호 운용성의 경계를 넘게 됩니다. 상호 운용성의 경계를 넘으면 앱의 성능에 영향을 줄 수 있습니다.
 
-C# 또는 Visual Basic으로 UWP 앱을 개발할 때 자주 사용하는 두 가지 API 집합은 UWP API와 UWP 앱용 .NET API입니다. 일반적으로 UWP에 정의되는 형식은 "Windows"로 시작하는 네임스페이스에 있고 .NET 형식은 "System"으로 시작하는 네임스페이스에 있습니다. 그러나 예외가 있습니다. UWP 앱용 .NET의 형식을 사용할 때는 상호 운용성이 필요하지 않습니다. UWP를 사용하는 영역에서 성능이 저조할 경우 UWP 앱용 .NET API를 사용하여 성능을 높일 수도 있습니다.
+C# 또는 Visual Basic으로 UWP 앱을 개발할 때 자주 사용하는 두 가지 API 집합은 Windows 런타임 API와 UWP 앱용 .NET API입니다. 일반적으로 UWP에 정의되는 형식은 "Windows"로 시작하는 네임스페이스에 있고 .NET 형식은 "System"으로 시작하는 네임스페이스에 있습니다. 그러나 예외가 있습니다. UWP 앱용 .NET의 형식을 사용할 때는 상호 운용성이 필요하지 않습니다. UWP를 사용하는 영역에서 성능이 저조할 경우 UWP 앱용 .NET API를 사용하여 성능을 높일 수도 있습니다.
 
 **참고**   Windows 10과 함께 제공되는 UWP 구성 요소는 대부분 C++로 구현되므로 C# 또는 Visual Basic에서 사용할 때 상호 운용성의 경계를 넘습니다. 언제나 그렇듯 코드 변경에 투자하기 전에 UWP 구성 요소의 사용이 앱의 성능에 영향을 주는지 확인하기 위해 앱을 측정해 봐야 합니다.
 
@@ -52,7 +52,7 @@ UWP 또는 UWP 앱용 .NET을 사용하여 작업을 수행할 수 있는 경우
 
 UWP 구성 요소가 UWP 개체를 반환할 때 그 개체를 .NET 개체로 복사하는 것이 유용할 수 있습니다. 이는 컬렉션과 스트림을 다룰 때 특히 중요합니다.
 
-컬렉션을 반환하는 UWP API를 호출하고 그 컬렉션을 여러 차례 저장하고 액세스하는 경우, 컬렉션을 .NET 컬렉션으로 복사한 다음 .NET 버전을 계속 사용하는 것이 효과적일 수 있습니다.
+컬렉션을 반환하는 Windows 런타임 API를 호출하고 그 컬렉션을 여러 차례 저장하고 액세스하는 경우, 컬렉션을 .NET 컬렉션으로 복사한 다음, .NET 버전을 계속 사용하는 것이 효과적일 수 있습니다.
 
 ### <a name="cache-the-results-of-calls-to-uwp-components-for-later-use"></a>UWP 구성 요소에 대한 호출 결과를 캐시에 저장하여 나중에 사용
 
@@ -72,7 +72,7 @@ C++ 또는 JavaScript로 개발되는 앱에서 사용 가능한 UWP 구성 요�
 
 UWP는 네이티브 코드와 관리 코드 간의 상호 운용을 간편하게 하지만 주의하지 않을 경우 성능 비용이 발생할 수 있습니다. 여기에서는 관리되는 UWP 앱에서 interop를 사용할 경우 우수한 성능을 얻는 방법을 보여 줍니다.
 
-UWP를 통해 개발자는 각 언어로 사용 가능한 UWP API의 프로젝션 덕분에 선택한 언어로 XAML을 사용하는 UWP 앱을 작성할 수 있습니다. C# 또는 Visual Basic으로 앱을 작성하면 UWP API가 대개 네이티브 코드로 구현되기 때문에 interop 비용으로 이런 편의가 제공되고 C# 또는 Visual Basic에서 UWP를 호출하려면 CLR이 관리 스택 프레임에서 네이티브 스택 프레임으로 전환되고 함수 매개 변수를 네이티브 코드를 통해 액세스할 수 있는 표현으로 마샬링해야 합니다. 대부분 앱의 경우 이 오버헤드는 무시할 수 있습니다. 그러나 앱의 중요 경로에서 UWP API에 대해 수십만 개에서 수백만 개까지 많은 호출을 생성하면 이 부담이 눈에 띌 수 있습니다. 일반적으로 언어 간 전환에 소요되는 시간은 나머지 코드 실행에 비해 작아야 합니다. 이에 대해서는 다음 다이어그램에 나와 있습니다.
+UWP를 통해 개발자는 각 언어로 사용 가능한 Windows 런타임 API의 프로젝션 덕분에 선택한 언어로 XAML을 사용하는 앱을 작성할 수 있습니다. C# 또는 Visual Basic으로 앱을 작성하면 Windows 런타임 API가 대개 네이티브 코드로 구현되기 때문에 interop 비용으로 이런 편의가 제공되고 C# 또는 Visual Basic에서 UWP를 호출하려면 CLR이 관리 스택 프레임에서 네이티브 스택 프레임으로 전환되고 함수 매개 변수를 네이티브 코드를 통해 액세스할 수 있는 표현으로 마샬링해야 합니다. 대부분 앱의 경우 이 오버헤드는 무시할 수 있습니다. 그러나 앱의 중요 경로에서 Windows 런타임 API에 대해 수십만 개에서 수백만 개까지 많은 호출을 생성할 경우 그 비용이 눈에 띄게 상승할 수 있습니다. 일반적으로 언어 간 전환에 소요되는 시간은 나머지 코드 실행에 비해 작아야 합니다. 이에 대해서는 다음 다이어그램에 나와 있습니다.
 
 ![Interop 전환이 프로그램 실행 시간을 독점해서는 안 됩니다.](images/interop-transitions.png)
 
@@ -80,7 +80,7 @@ UWP를 통해 개발자는 각 언어로 사용 가능한 UWP API의 프로젝�
 
 앱을 측정하고 interop가 앱 실행 시간의 많은 부분을 차지하고 있는지 확인한 다음 interop 비용을 최적화해야 합니다. Visual Studio에서 앱의 성능을 분석할 때 **함수** 보기를 사용하여 UWP를 호출하는 메서드에 소요된 포괄 시간을 확인하여 interop 비용의 상한값을 쉽게 알 수 있습니다.
 
-interop 오버헤드로 인해 앱이 느려지면 활발한 코드 경로에서 UWP API에 대한 호출을 줄여 성능을 개선할 수 있습니다. 예를 들어 [**UIElements**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)의 위치 및 크기를 지속적으로 쿼리하여 많은 물리학 계산을 수행하고 있는 게임 엔진이 필요한 정보를 **UIElements**에서 로컬 변수로 저장하고 이 캐시된 값에서 계산을 수행하고 계산이 완료된 후 최종 결과를 다시 **UIElements**에 할당하여 많은 시간을 절약할 수 있습니다. 다른 예제: C# 또는 Visual Basic 코드에서 컬렉션에 많이 액세스하는 경우에는 [**Windows.Foundation.Collections**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections) 네임스페이스의 컬렉션이 아니라 [**System.Collections**](https://docs.microsoft.com/dotnet/api/system.collections) 네임스페이스의 컬렉션을 사용하는 것이 보다 효율적입니다. UWP 구성 요소에 대한 호출을 통합할 수도 있습니다. 이것이 가능한 한 가지 예제는 [**Windows.Storage.BulkAccess**](https://docs.microsoft.com/uwp/api/Windows.Storage.BulkAccess) API를 사용하는 것입니다.
+interop 오버헤드로 인해 앱이 느려지면 활발한 코드 경로에서 Windows 런타임 API에 대한 호출을 줄여 성능을 개선할 수 있습니다. 예를 들어 [**UIElements**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)의 위치 및 크기를 지속적으로 쿼리하여 많은 물리학 계산을 수행하고 있는 게임 엔진이 필요한 정보를 **UIElements**에서 로컬 변수로 저장하고 이 캐시된 값에서 계산을 수행하고 계산이 완료된 후 최종 결과를 다시 **UIElements**에 할당하여 많은 시간을 절약할 수 있습니다. 다른 예제: C# 또는 Visual Basic 코드에서 컬렉션에 많이 액세스하는 경우에는 [**Windows.Foundation.Collections**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections) 네임스페이스의 컬렉션이 아니라 [**System.Collections**](https://docs.microsoft.com/dotnet/api/system.collections) 네임스페이스의 컬렉션을 사용하는 것이 보다 효율적입니다. UWP 구성 요소에 대한 호출을 통합할 수도 있습니다. 이것이 가능한 한 가지 예제는 [**Windows.Storage.BulkAccess**](https://docs.microsoft.com/uwp/api/Windows.Storage.BulkAccess) API를 사용하는 것입니다.
 
 ### <a name="building-a-uwp-component"></a>UWP 구성 요소 빌드
 

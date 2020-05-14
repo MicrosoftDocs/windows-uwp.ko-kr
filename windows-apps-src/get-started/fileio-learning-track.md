@@ -6,12 +6,12 @@ ms.topic: article
 keywords: 시작, uwp, windows 10, 학습 트랙, 파일, 파일 io, 파일 읽기, 파일 쓰기, 파일 만들기, 텍스트 쓰기, 텍스트 읽기
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1270d49cc8746b2793b1414306f9ee842cb40f40
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c36f4885dffa86452543f05f5b7a59a882d25710
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82166249"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730053"
 ---
 # <a name="work-with-files"></a>파일 작업
 
@@ -26,7 +26,7 @@ ms.locfileid: "82166249"
 파일의/에 텍스트를 읽거나 쓰기 위해 알아야 할 주요 형식은 다음과 같습니다.
 
 - [Windows.Storage.StorageFile](https://docs.microsoft.com/uwp/api/windows.storage.storagefile)은 파일을 나타냅니다. 이 클래스에는 파일에 대한 정보를 제공하는 속성과 파일을 만들고, 열고, 복사하고, 삭제하고, 이름을 변경하는 메서드가 있습니다.
-아마도 여러분은 문자열 경로를 다루는 데 익숙할 수 것입니다. 문자열 경로를 사용하는 일부 UWP API가 있기는 하지만, UWP에서 작업하는 일부 파일에 경로가 없거나 다루기가 어려운 경로가 있을 수 있기 때문에 **StorageFile**을 사용하여 파일을 나타내는 경우가 훨씬 더 많을 것입니다. [StorageFile.GetFileFromPathAsync()](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.getfilefrompathasync)를 사용하여 문자열 경로를 **StorageFile**로 변환합니다. 
+아마도 여러분은 문자열 경로를 다루는 데 익숙할 수 것입니다. 문자열 경로를 사용하는 일부 Windows 런타임 API가 있기는 하지만, UWP에서 작업하는 일부 파일에 경로가 없거나 다루기 어려운 경로가 있을 수 있기 때문에 **StorageFile**을 사용하여 파일을 나타내는 경우가 훨씬 더 많을 것입니다. [StorageFile.GetFileFromPathAsync()](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.getfilefrompathasync)를 사용하여 문자열 경로를 **StorageFile**로 변환합니다. 
 
 - [FileIO](https://docs.microsoft.com/uwp/api/windows.storage.fileio) 클래스는 쉽게 텍스트를 읽고 쓰는 방법을 제공합니다. 이 클래스는 바이트 배열 또는 버퍼 콘텐츠를 읽거나 쓸 수 있습니다. 이 클래스는 [PathIO](https://docs.microsoft.com/uwp/api/windows.storage.pathio) 클래스와 매우 유사합니다. 문자열 경로 대신 **PathIO**처럼 **StorageFile**을 사용한다는 차이가 있습니다.
 - [Windows.Storage.StorageFolder](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder)는 폴더(디렉터리)를 나타냅니다. 이 클래스에는 파일을 만들고, 폴더의 콘텐츠를 쿼리하고, 폴더를 만들고, 이름을 바꾸고, 삭제하는 메서드와 폴더에 대한 정보를 제공하는 속성이 있습니다. 

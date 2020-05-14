@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
-ms.openlocfilehash: 250e3626c5abee43cf3b8ca3320c78ec4f8f9751
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: ddf2cd876ac629f4cb3c49e349e43dee8fdb0c7a
+ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80662389"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82730308"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -29,8 +29,8 @@ C++/WinRT는 Microsoft에서 추천하는 [C++/CX](/cpp/cppcx/visual-c-language-
 ## <a name="language-projections"></a>언어 프로젝션
 Windows 런타임은 COM(구성 요소 개체 모델) API를 기반으로 하며, ‘언어 프로젝션’을 통해 액세스하도록 설계되었습니다.  프로젝션은 COM 세부 정보를 숨기며, 지정된 언어에 더욱 자연스러운 프로그래밍 환경을 제공합니다.
 
-### <a name="the-cwinrt-language-projection-in-the-windows-uwp-api-reference-content"></a>Windows UWP API 참조 콘텐츠의 C++/WinRT 언어 프로젝션
-[Windows UWP API](https://docs.microsoft.com/uwp/api/)를 검색할 때는 오른쪽 위에 있는 **언어** 콤보 상자를 클릭하고 **C++/WinRT**를 선택하여 C++/WinRT 언어 프로젝션에 표시되는 API 구문 블록을 확인합니다.
+### <a name="the-cwinrt-language-projection-in-the-windows-runtime-api-reference-content"></a>Windows 런타임 API 참조 콘텐츠의 C++/WinRT 언어 프로젝션
+[Windows 런타임 API](https://docs.microsoft.com/uwp/api/)를 검색할 때는 오른쪽 위에 있는 **언어** 콤보 상자를 클릭하고 **C++/WinRT**를 선택하여 C++/WinRT 언어 프로젝션에 표시되는 API 구문 블록을 확인합니다.
 
 ## <a name="visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package"></a>C++/WinRT, XAML, VSIX 확장 및 NuGet 패키지에 대한 Visual Studio 지원
 Visual Studio 지원의 경우 Visual Studio 2019 또는 Visual Studio 2017(최소 15.6 버전, 15.7 이상 권장)이 필요합니다. Visual Studio Installer 내에서 **유니버설 Windows 플랫폼 개발** 워크로드를 설치합니다. **설치 세부 정보** > **유니버설 Windows 플랫폼 개발**에서 **C++(v14x) 유니버설 Windows 플랫폼 도구** 옵션을 확인합니다(아직 확인하지 않은 경우). 또한 Windows **설정** > **업데이트 \& 보안** > **개발자용**에서 **사이드로드 앱** 옵션 대신에 **개발자 모드** 옵션을 선택합니다.
@@ -151,4 +151,4 @@ C++/WinRT 프로그래밍에서 일부 C++ 표준 라이브러리 데이터 형�
 * [C++/WinRT 시작](get-started.md)
 * [표준 C++ 데이터 형식 및 C++/WinRT](std-cpp-data-types.md)
 * [C++/WinRT의 문자열 처리](strings.md)
-* [Windows UWP API](https://docs.microsoft.com/uwp/api/)
+* [Windows 런타임 API](https://docs.microsoft.com/uwp/api/)

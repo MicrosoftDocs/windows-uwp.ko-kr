@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
-ms.openlocfilehash: f7c5eb595f3347eb4670e4f7c0a50aa930341d3e
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 9848fc9e330a725f52ce2a7fae8b13f300476cf7
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74735038"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970198"
 ---
 # <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>자습서: Grid 및 StackPanel을 사용하여 간단한 날씨 앱 만들기
 
@@ -120,6 +120,6 @@ XAML에서 **Grid**는 일련의 행과 열로 이루어집니다. **Grid** 내�
 원하는 경우 위의 레이아웃을 실험해보고, 날씨 데이터를 표시할 수 있는 다양한 방법을 살펴보세요.
 
 ## <a name="related-articles"></a>관련된 문서
-UWP 앱 레이아웃 디자인 소개를 보려면 [UWP 앱 디자인 소개](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro)를 참조하세요.
+Windows 앱 레이아웃 디자인 소개를 보려면 [Windows 앱 디자인 소개](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro)를 참조하세요.
 
 다양한 화면 크기에 맞게 조정되는 반응형 레이아웃을 만드는 방법에 대한 자세한 내용은 [XAML을 사용하여 페이지 레이아웃 정의](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)를 참조하세요.

@@ -1,19 +1,19 @@
 ---
 description: 이 문서에서는 XAML 호스팅 API를 사용하여 C++ Win32 앱에서 사용자 지정 UWP 컨트롤을 호스트하는 방법을 보여 줍니다.
 title: XAML 호스팅 API를 사용하여 C++ Win32 앱에서 사용자 지정 UWP 컨트롤 호스트
-ms.date: 03/23/2020
+ms.date: 04/07/2020
 ms.topic: article
 keywords: windows 10, uwp, C++, Win32, xaml islands, 사용자 지정 컨트롤, 사용자 정의 컨트롤, 호스트 컨트롤
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 93badc28c9c4fa1684836fc4a883e54661e8d4dc
-ms.sourcegitcommit: 7112e4ec3f19d46a1fc4d81d1c29fd9c01522610
+ms.openlocfilehash: eac2574d48864ba8b8dc907c8a7ec43ef266358b
+ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80986963"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82606340"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>C++ Win32 앱에서 사용자 지정 UWP 컨트롤 호스트
 
@@ -512,6 +512,72 @@ ms.locfileid: "80986963"
 
 9. 파일을 저장합니다.
 10. 솔루션을 빌드하고 성공적으로 빌드되는지 확인합니다.
+
+## <a name="add-a-control-from-the-winui-library-to-the-custom-control"></a>WinUI 라이브러리의 컨트롤을 사용자 지정 컨트롤에 추가
+
+일반적으로 UWP 컨트롤은 Windows 10 OS의 일부로 출시되었으며 개발자가 Windows SDK를 통해 사용할 수 있게 되었습니다. [WinUI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)는 Windows SDK에서 UWP 컨트롤의 업데이트된 버전이 Windows SDK 릴리스에 연결되지 않은 NuGet 패키지에 배포되는 대체 방법입니다. 이 라이브러리에는 Windows SDK 및 기본 UWP 플랫폼에 속하지 않는 새 컨트롤도 포함되어 있습니다. 자세한 내용은 [WinUI 라이브러리 로드맵](https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md)을 참조하세요.
+
+이 섹션에서는 WinUI 라이브러리의 UWP 컨트롤을 사용자 정의 컨트롤에 추가하는 방법을 보여 줍니다.
+
+1. **MyUWPApp** 프로젝트에서 최신 시험판 또는 릴리스 버전의 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지를 설치합니다.
+
+    > [!NOTE]
+    > 데스크톱 앱이 [MSIX 패키지](https://docs.microsoft.com/windows/msix)에 패키지된 경우 시험판 또는 릴리스 버전의 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NugGet 패키지를 사용할 수 있습니다. 데스크톱 앱이 MSIX를 사용하여 패키지되지 않은 경우 시험판 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지를 설치해야 합니다.
+
+2. 이 프로젝트의 pch.h 파일에서 다음 `#include` 문을 추가하고 변경 내용을 저장합니다. 이러한 명령문은 WinUI 라이브러리에서 프로젝트로 필요한 프로젝션 헤더 집합을 가져옵니다. 이 단계는 WinUI 라이브러리를 사용하는 C++/WinRT 프로젝트에 필요합니다. 자세한 내용은 [이 문서](https://docs.microsoft.com/uwp/toolkits/winui/getting-started#additional-steps-for-a-cwinrt-project)를 참조하세요.
+
+    ```cpp
+    #include "winrt/Microsoft.UI.Xaml.Automation.Peers.h"
+    #include "winrt/Microsoft.UI.Xaml.Controls.Primitives.h"
+    #include "winrt/Microsoft.UI.Xaml.Media.h"
+    #include "winrt/Microsoft.UI.Xaml.XamlTypeInfo.h"
+    ```
+
+3. 동일한 프로젝트의 App.xaml 파일에서 다음 자식 요소를 `<xaml:XamlApplication>` 요소에 추가하고 변경 내용을 저장합니다.
+
+    ```xml
+    <Application.Resources>
+        <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+    </Application.Resources>
+    ```
+
+    이 요소를 추가한 후에는 이 파일의 내용이 다음과 같이 표시됩니다.
+
+    ```xml
+    <Toolkit:XamlApplication
+        x:Class="MyUWPApp.App"
+        xmlns:Toolkit="using:Microsoft.Toolkit.Win32.UI.XamlHost"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:MyUWPApp">
+        <Application.Resources>
+            <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>
+        </Application.Resources>
+    </Toolkit:XamlApplication>
+    ```
+
+4. 동일한 프로젝트에서 MyUserControl.xaml 파일을 열고 `<UserControl>` 요소에 다음 네임스페이스 선언을 추가합니다.
+
+    ```xml
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+    ```
+
+5. 동일한 파일에서 `<winui:RatingControl />` 요소를 `<StackPanel>`의 자식으로 추가하고 변경 내용을 저장합니다. 이 요소는 [RatingControl](WinUI 라이브러리에서 https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.ratingcontrol 클래스)의 인스턴스를 추가합니다. 이 요소를 추가한 후 `<StackPanel>`은 다음과 같이 표시됩니다.
+
+    ```xml
+    <StackPanel HorizontalAlignment="Center" Spacing="10" 
+                Padding="20" VerticalAlignment="Center">
+        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" 
+                       Text="Hello from XAML Islands" FontSize="30" />
+        <TextBlock HorizontalAlignment="Center" Margin="15" TextWrapping="Wrap"
+                       Text="😍❤💋🌹🎉😎�🐱‍👤" FontSize="16" />
+        <Button HorizontalAlignment="Center" 
+                x:Name="Button" Click="ClickHandler">Click Me</Button>
+        <winui:RatingControl />
+    </StackPanel>
+    ```
+
+6. 솔루션을 빌드하고 성공적으로 빌드되는지 확인합니다.
 
 ## <a name="test-the-app"></a>앱 테스트
 

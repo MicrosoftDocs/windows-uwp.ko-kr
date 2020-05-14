@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9739933f9fd23c6f169c24c4f789e53ba894708d
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8d969c5282fa03fb11d108d2b2c8e0fe44dfde49
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80696626"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82968458"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 
@@ -36,9 +36,9 @@ ms.locfileid: "80696626"
 
 ## <a name="acrylic-and-the-fluent-design-system"></a>아크릴 및 Fluent 디자인 시스템
 
- Fluent 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질 및 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 아크릴은 앱에 물리적 질감(소재)과 깊이를 추가하는 Fluent 디자인 시스템 구성 요소입니다. 자세한 내용은 [UWP용 Fluent 디자인 개요](/windows/apps/fluent-design-system)를 참조하세요.
+ Fluent 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질 및 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 아크릴은 앱에 물리적 질감(소재)과 깊이를 추가하는 Fluent 디자인 시스템 구성 요소입니다. 자세한 내용은 [Fluent Design 개요](/windows/apps/fluent-design-system)를 참조하세요.
 
- ## <a name="video-summary"></a>비디오 요약
+ ## <a name="video-summary"></a>동영상 요약
 
 > [!VIDEO https://channel9.msdn.com/Events/Windows/Windows-Developer-Day-Fall-Creators-Update/WinDev002/player]
 
@@ -102,7 +102,7 @@ XAML 컨트롤 갤러리 앱이 설치된 경우 <a href="xamlcontrolsgallery:/i
 
 뿐만 아니라 다음과 같은 경우 오직 배경 아크릴만이 투명도 및 질감을 단색으로 대체합니다.
  - 바탕 화면에서 앱 창이 비활성화되는 경우
- - UWP 앱이 휴대폰, Xbox, HoloLens 또는 태블릿 모드에서 실행되는 경우
+ - Windows 앱이 휴대폰, Xbox, HoloLens 또는 태블릿 모드에서 실행되는 경우
 
 ### <a name="legibility-considerations"></a>가독성 고려 사항
 앱에서 사용자에게 표시하는 모든 텍스트는 [명암비를 충족](../accessibility/accessible-text-requirements.md)해야 합니다. Microsoft는 하이 컬러 검은색, 흰색 또는 심지어 미디엄 컬러 회색 텍스트까지 아크릴 위에서 명암비를 충족하도록 아크릴 제작법을 최적화했습니다. 플랫폼에서 제공하는 테마 리소스는 불투명도 80%의 대비 색조 색이 기본값입니다. 아크릴에 하이 컬러 본문 텍스트를 배치하면 가독성을 유지하면서도 색조 불투명도를 낮출 수 있습니다. 어둠 모드에서는 색조 불투명도를 70%로 할 수 있고, 밝음 모드 아크릴은 불투명도 50%에서 명암비를 충족합니다.

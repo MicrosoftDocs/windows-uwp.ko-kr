@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: fa8dd744120d5751dcf8c10a090ccc31094000d2
-ms.sourcegitcommit: df0cd9c82d1c0c17ccde424e3c4a6ff680c31a35
+ms.openlocfilehash: 5f3e4eee486edd47901fc2b97a6e10c880cb04b1
+ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80482497"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82606302"
 ---
 # <a name="host-a-custom-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML Islands를 사용하여 WPF 앱에서 사용자 지정 UWP 컨트롤 호스트
 
@@ -235,7 +235,10 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트하려면 앱을 사용
 
 이 섹션에서는 WPF 앱에서 이 컨트롤을 호스트할 수 있도록 WinUI 라이브러리의 UWP 컨트롤을 사용자 정의 컨트롤에 추가하는 방법을 보여 줍니다.
 
-1. UWP 앱 프로젝트에서 최신 버전의 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지를 설치합니다.
+1. UWP 앱 프로젝트에서 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지의 최신 릴리스 또는 시험판을 설치합니다.
+
+    > [!NOTE]
+    > 데스크톱 앱이 [MSIX 패키지](https://docs.microsoft.com/windows/msix)에 패키지된 경우 시험판 또는 릴리스 버전의 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NugGet 패키지를 사용할 수 있습니다. 데스크톱 앱이 MSIX를 사용하여 패키지되지 않은 경우 시험판 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지를 설치해야 합니다.
 
 2. 이 프로젝트의 App.xaml 파일에서 다음 자식 요소를 `<xaml:XamlApplication>` 요소에 추가합니다.
 
@@ -268,7 +271,7 @@ WPF 앱에서 사용자 지정 UWP 컨트롤을 호스트하려면 앱을 사용
     xmlns:winui="using:Microsoft.UI.Xaml.Controls"
     ```
 
-5. 동일한 파일에서 `<winui:RatingControl />` 요소를 `<StackPanel>`의 자식으로 추가합니다. 이 요소는 WinUI 라이브러리에서 [RatingControl](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.ratingcontrol?view=winui-2.2) 클래스의 인스턴스를 추가합니다. 이 요소를 추가한 후 `<StackPanel>`은 다음과 같이 표시됩니다.
+5. 동일한 파일에서 `<winui:RatingControl />` 요소를 `<StackPanel>`의 자식으로 추가합니다. 이 요소는 WinUI 라이브러리에서 [RatingControl](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.ratingcontrol) 클래스의 인스턴스를 추가합니다. 이 요소를 추가한 후 `<StackPanel>`은 다음과 같이 표시됩니다.
 
     ```xml
     <StackPanel Background="LightCoral">
