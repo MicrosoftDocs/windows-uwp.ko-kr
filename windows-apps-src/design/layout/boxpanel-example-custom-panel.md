@@ -12,12 +12,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fe1389e3c3db28f834217b4f163c48633c32d14
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 68ca40a48b8b8d04bcd8b01584856233e9a99e7c
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71340161"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82970208"
 ---
 # <a name="boxpanel-an-example-custom-panel"></a>BoxPanel, 예제 사용자 지정 패널
 
@@ -47,7 +47,7 @@ ms.locfileid: "71340161"
 
 [  **Panel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Panel)에서 사용자 지정 클래스를 파생시켜 시작합니다. 가장 쉬운 방법은 Microsoft Visual Studio의 **솔루션 탐색기**에서 프로젝트에 대한 **추가** | **새 항목** | **클래스** 상황에 맞는 메뉴 옵션을 사용하여 이 클래스에 대한 별도 코드 파일을 정의하는 것입니다. 클래스(및 파일) 이름을 `BoxPanel`로 지정합니다.
 
-클래스 템플릿 파일은 구체적으로 UWP(유니버설 Windows 플랫폼) 앱용으로 지정되지 않기 때문에 많은 **using** 문으로 시작하지 않습니다. 따라서 **using** 문을 먼저 추가합니다. 필요하지 않은 몇 가지 **using** 문과 함께 템플릿 파일이 시작될 수도 있으며 이 파일은 삭제할 수 있습니다. 다음은 일반적인 사용자 지정 패널 코드에 필요한 형식을 확인할 수 있는 **using** 문의 제안 목록입니다.
+클래스 템플릿 파일은 구체적으로 Windows 앱용으로 지정되지 않기 때문에 많은 **using** 문으로 시작하지 않습니다. 따라서 **using** 문을 먼저 추가합니다. 필요하지 않은 몇 가지 **using** 문과 함께 템플릿 파일이 시작될 수도 있으며 이 파일은 삭제할 수 있습니다. 다음은 일반적인 사용자 지정 패널 코드에 필요한 형식을 확인할 수 있는 **using** 문의 제안 목록입니다.
 
 ```CSharp
 using System;

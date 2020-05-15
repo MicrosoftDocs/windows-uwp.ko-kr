@@ -6,14 +6,18 @@ ms.date: 06/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8db29561afa06a2f6a2be67565d59e9387240d1c
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 29c6609a2e57abede7fe606be8c028e503270d4c
+ms.sourcegitcommit: f910b29d35ac7afd0b759640bcac1d2fee399b3d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74259201"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82973279"
 ---
 # <a name="network-communications-in-the-background"></a>백그라운드 네트워크 통신
+
+> [!NOTE]
+> **일부 정보는 상업용으로 출시되기 전에 상당 부분 수정될 수 있는 시험판 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 명시적 또는 묵시적 보증을 하지 않습니다.**
+
 포그라운드에 없을 때 네트워크 통신을 계속하려면 앱 백그라운드 작업과 이러한 두 옵션 중 하나를 사용할 수 있습니다.
 - 소켓 브로커. 앱이 오랜 기간 연결하기 위해 소켓을 사용하는 경우 포그라운드를 벗어날 때 시스템 소켓 브로커에 소켓 소유권을 위임할 수 있습니다. 그런 다음 브로커는 트래픽이 소켓에 도착하면 앱을 활성화하고 소유권을 다시 앱으로 이전하며, 앱은 도착하는 트래픽을 처리합니다.
 - 컨트롤 채널 트리거. 
@@ -160,6 +164,10 @@ case SocketActivityTriggerReason.SocketClosed:
 WebSockets, [**IXMLHTTPRequest2**](https://docs.microsoft.com/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2), [**System.Net.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 또는 [**Windows.Web.Http.HttpClient**](/uwp/api/windows.web.http.httpclient)를 사용하는 경우 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)를 사용해야 합니다.
 
 ## <a name="controlchanneltrigger-with-websockets"></a>ControlChannelTrigger와 WebSockets
+
+> [!IMPORTANT]
+> 이 섹션에서 설명하는 기능(**ControlChannelTrigger with WebSockets**)은 SDK 버전 10.0.15063.0 이전 버전에서 지원됩니다. [Windows 10 Insider Preview](https://www.microsoft.com/software-download/windowsinsiderpreviewSDK)의 시험판 버전에서도 지원됩니다.
+
 [  **MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 또는 [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket)을 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)와 함께 사용할 경우 몇 가지 특별히 고려해야 하는 사항이 있습니다. **MessageWebSocket** 또는 **StreamWebSocket**을 **ControlChannelTrigger**와 함께 사용할 때 따라야 하는 몇 가지 전송별 사용 패턴과 모범 사례가 있습니다. 또한 이러한 고려 사항은 **StreamWebSocket**에서 패킷을 수신하는 요청이 처리되는 방식에도 영향을 줍니다. **MessageWebSocket**에서 패킷을 수신하는 요청은 영향을 받지 않습니다.
 
 [  **MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 또는 [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket)을 [**ControlChannelTrigger**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger)와 함께 사용할 때는 다음과 같은 사용 패턴과 모범 사례를 따라야 합니다.

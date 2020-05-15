@@ -1,5 +1,5 @@
 ---
-Description: UWP(유니버설 Windows 플랫폼) 앱의 두 기본 페이지 간에 피어 투 피어 탐색을 사용하도록 설정하는 방법에 대해 알아봅니다.
+Description: Windows 앱의 두 기본 페이지 간에 피어 투 피어 탐색을 사용하도록 설정하는 방법에 대해 알아봅니다.
 title: 두 페이지 간의 피어 투 피어 탐색
 ms.assetid: 0A364C8B-715F-4407-9426-92267E8FB525
 label: Peer-to-peer navigation between two pages
@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: c35795eeb6afa32e77acb507c687e334e454d0d5
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: ef50b2d84ae9785a13d8c8dd13ca5a399dae142d
+ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "72560807"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82969248"
 ---
 # <a name="implement-navigation-between-two-pages"></a>두 페이지 간의 탐색 구현
 
@@ -451,6 +451,6 @@ Page1::Page1()
 ```
 
 ## <a name="related-articles"></a>관련된 문서
-* [UWP 앱의 탐색 디자인 기본 사항](https://docs.microsoft.com/windows/uwp/layout/navigation-basics)
+* [Windows 앱용 탐색 디자인 기본 사항](https://docs.microsoft.com/windows/uwp/layout/navigation-basics)
 * [피벗](../controls-and-patterns/pivot.md)
 * [탐색 보기](../controls-and-patterns/navigationview.md)
