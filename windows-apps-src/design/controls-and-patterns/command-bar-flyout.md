@@ -12,18 +12,18 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6b85177e5d3d0f4a2a37010ba9122861216a4b6b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: bdd18fea2fe563fcee835e6b61e24d6a9b03d029
+ms.sourcegitcommit: f945df77f8a19961ba053ee62e593ec8e015038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081957"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82989815"
 ---
 # <a name="command-bar-flyout"></a>명령 모음 플라이아웃
 
 명령 모음 플라이아웃은 사용자가 일반적인 작업에 쉽게 액세스할 수 있도록 요소와 관련된 부동 도구 모음을 UI 캔버스에 표시합니다.
 
-![확장된 텍스트 명령 모음 플라이아웃](images/command-bar-flyout-header.png)
+![확장된 텍스트 명령 모음 플라이아웃](images/command-bar-flyout-text-full.png)
 
 [CommandBar](app-bars.md)처럼 CommandBarFlyout에는 명령을 추가하는 데 사용할 수 있는 **PrimaryCommands** 및 **SecondaryCommands** 속성이 있습니다. 두 컬렉션 중 하나에 또는 둘 모두에 명령을 배치할 수 있습니다. 기본 및 보조 명령이 표시되는 시기와 방법은 디스플레이 모드에 따라 달라집니다.
 
@@ -36,7 +36,7 @@ ms.locfileid: "80081957"
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **CommandBarFlyout** 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **CommandBarFlyout** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
 
 >**Windows UI 라이브러리 API**: [CommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
 >
@@ -417,5 +417,5 @@ TextCommandBarFlyout은 사용자 지정할 수 없으며, 각 텍스트 컨트�
 
 ## <a name="related-articles"></a>관련된 문서
 
-- [UWP 앱의 명령 디자인 기본 사항](../basics/commanding-basics.md)
+- [Windows 앱용 명령 디자인 기본 사항](../basics/commanding-basics.md)
 - [CommandBar 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)

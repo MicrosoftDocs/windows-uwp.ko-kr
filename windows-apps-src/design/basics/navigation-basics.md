@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4973ccaf066b2694412f04b09b8725da2fc31c36
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ed38be070263bbd619e44daf5c747a97299b3cf7
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969238"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233854"
 ---
 # <a name="navigation-design-basics-for-windows-apps"></a>Windows 앱용 탐색 디자인 기본 사항
 

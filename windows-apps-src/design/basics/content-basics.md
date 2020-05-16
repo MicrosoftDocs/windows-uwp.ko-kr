@@ -9,12 +9,12 @@ ms.date: 12/01/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fdb4f21c2837fdc201d9e9847541cfd2bf728468
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 2ea7d6da9461aa3c8dc2bd4d3f50c5d14c3928bb
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969348"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233930"
 ---
 # <a name="content-design-basics-for-windows-apps"></a>Windows 앱용 콘텐츠 디자인 기본 사항
 
