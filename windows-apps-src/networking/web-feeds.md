@@ -32,7 +32,7 @@ ms.locfileid: "72282266"
 
 UWP(유니버설 Windows 플랫폼)는 0.91에서 RSS 2.0까지의 RSS 형식 표준과 0.3에서 1.0까지의 Atom 표준에 대한 피드 검색을 지원합니다. [  **Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication) 네임스페이스의 클래스는 RSS 및 Atom 요소를 모두 나타낼 수 있는 피드 및 피드 항목을 정의할 수 있습니다.
 
-또한 Atom 1.0 및 RSS 2.0 형식은 모두 공식 사양에 정의되지 않은 요소 또는 특성을 피드 문서에 포함하도록 허용합니다. 시간이 지나면서 이러한 사용자 지정 요소 및 특성은 GData 및 OData 등의 다른 웹 서비스 데이터 형식에서 사용하는 도메인별 정보를 정의하는 방법이 되었습니다. 이 추가된 기능을 지원하기 위해 [**SyndicationNode**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationNode) 클래스는 일반 XML 요소를 나타냅니다. [  **Windows.Data.Xml.Dom**](https://docs.microsoft.com/uwp/api/Windows.Data.Xml.Dom) 네임스페이스의 클래스와 함께 **SyndicationNode**를 사용하면 앱이 특성, 확장 및 앱에 포함될 수 있는 모든 콘텐츠에 액세스할 수 있습니다.
+또한 Atom 1.0 및 RSS 2.0 형식은 모두 공식 사양에 정의되지 않은 요소 또는 특성을 피드 문서에 포함하도록 허용합니다. 시간이 지나면서 이러한 사용자 지정 요소 및 특성은 GData 및 OData 등의 다른 웹 서비스 데이터 형식에서 사용하는 도메인별 정보를 정의하는 방법이 되었습니다. 이 추가된 기능을 지원하기 위해 [**SyndicationNode**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication.SyndicationNode) 클래스는 일반 XML 요소를 나타냅니다. [**Windows.Data.Xml.Dom**](https://docs.microsoft.com/uwp/api/Windows.Data.Xml.Dom) 네임스페이스의 클래스와 함께 **SyndicationNode**를 사용하면 앱이 특성, 확장 및 앱에 포함될 수 있는 모든 콘텐츠에 액세스할 수 있습니다.
 
 신디케이티드 콘텐츠 게시물의 경우 Atom 게시물 프로토콜의 UWP 구현([**Windows.Web.AtomPub**](https://docs.microsoft.com/uwp/api/Windows.Web.AtomPub))은 Atom 및 Atom 게시물 표준에 따라서만 피드 콘텐츠 작업을 지원합니다.
 

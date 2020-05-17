@@ -559,7 +559,7 @@ Microsoft Store를 사용하려면 Direct3D를 사용하는 모든 애플리케�
 
 ### <a name="corrective-action"></a>수정 작업
 
-앱이 일시 중단될 때마다 해당 [**IDXGIDevice3**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) 인터페이스에서 [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgidevice3) API를 호출해야 합니다.
+앱이 일시 중단될 때마다 해당 [**IDXGIDevice3**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgidevice3) 인터페이스에서 [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) API를 호출해야 합니다.
 
 ## <a name="app-capabilities-test"></a>앱 접근 권한 값 테스트
 

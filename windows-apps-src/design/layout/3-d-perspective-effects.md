@@ -47,7 +47,7 @@ ms.locfileid: "66365245"
 
 ## <a name="planeprojection-class"></a>PlaneProjection 클래스
 
-[  **PlaneProjection**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)을 사용하여 UIElement의 [**Projection**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.projection) 속성을 설정하면 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PlaneProjection)에 3D 효과를 적용할 수 있습니다. **PlaneProjection**은 변형이 공간에 렌더링되는 방법을 정의합니다. 다음 예에서는 간단한 사례를 보여 줍니다.
+[**PlaneProjection**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.PlaneProjection)을 사용하여 UIElement의 [**Projection**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.projection) 속성을 설정하면 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)에 3D 효과를 적용할 수 있습니다. **PlaneProjection**은 변형이 공간에 렌더링되는 방법을 정의합니다. 다음 예에서는 간단한 사례를 보여 줍니다.
 
 ```xml
 <Image Source="kid.png">

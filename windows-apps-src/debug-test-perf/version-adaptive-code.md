@@ -73,7 +73,7 @@ ApiInformation, API 계약 및 Visual Studio 구성에 대한 중요한 배경 �
 
 ### <a name="example-1-new-enum-value"></a>예제 1: 새 열거형 값
 
-Windows 10 버전 1607에서는 [InputScopeNameValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopenamevalue) 열거형에 새 값 **ChatWithoutEmoji**가 추가됩니다. 이 새로운 입력 범위는 **Chat** 입력 범위와 동일한 입력 동작을 포함하고 있지만(맞춤법 검사, 자동 완성, 자동 대문자 표시), 이모지 단추가 없는 터치 키보드에 매핑됩니다. 이는 고유한 이모지 선택기를 만들고 터치 키보드에서 기본 제공 이모지 단추를 사용하지 않도록 설정하려는 경우에 유용합니다. 
+Windows 10, 버전 1607에서는 새로운 값인 **ChatWithoutEmoji**를 [InputScopeNameValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscopenamevalue) 열거형에 추가합니다. 이 새로운 입력 범위는 **Chat** 입력 범위와 동일한 입력 동작을 포함하고 있지만(맞춤법 검사, 자동 완성, 자동 대문자 표시), 이모지 단추가 없는 터치 키보드에 매핑됩니다. 이는 고유한 이모지 선택기를 만들고 터치 키보드에서 기본 제공 이모지 단추를 사용하지 않도록 설정하려는 경우에 유용합니다. 
 
 이 예제에서는 **ChatWithoutEmoji** 열거형 값이 있는지 확인하고 있으면 **TextBox**의 [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성을 설정하는 방법을 보여 줍니다. 이 값이 앱이 실행되는 시스템에 없는 경우 **InputScope**는 대신 **Chat**로 설정됩니다. 표시된 코드는 Page 생성자나 Page.Loaded 이벤트 처리기에 배치될 수 있습니다.
 

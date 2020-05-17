@@ -31,7 +31,7 @@ ms.locfileid: "63813163"
 | 항목                                                                                                          | 설명                         |
 |----------------------------------------------------------------------------------------------------------------|-------------------------------------|
 | [비동기 프로그래밍(UWP 앱)](asynchronous-programming-universal-windows-platform-apps.md)              | UWP(유니버설 Windows 플랫폼)의 비동기 프로그래밍과 C#, Microsoft Visual Basic .NET, Visual C++ 구성 요소 확장(C++/CX) 및 JavaScript의 표현에 대해 설명합니다. |
-| [C++/CX의 비동기 프로그래밍(UWP 앱)](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)| 이 문서에서는 ppltasks.h의 <code>task</code> 네임스페이스에 정의된 <code>concurrency</code> 클래스를 사용하여 C++/CX의 비동기 메서드를 이용하는 권장 방법을 설명합니다. |
+| [C++/CX의 비동기 프로그래밍(UWP 앱)](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)| 이 문서에서는 ppltasks.h의 <code>concurrency</code> 네임스페이스에 정의된 <code>task</code> 클래스를 사용하여 C++/CX의 비동기 메서드를 이용하는 권장 방법을 설명합니다. |
 | [스레드 풀 사용 모범 사례](best-practices-for-using-the-thread-pool.md)                         | 이 항목에서는 스레드 풀 작업을 위한 모범 사례에 대해 설명합니다. |
 | [C# 또는 Visual Basic에서 비동기 API 호출](call-asynchronous-apis-in-csharp-or-visual-basic.md)             | UWP(유니버설 Windows 플랫폼)에는 여러 비동기 API가 포함되어 있으므로 앱이 장시간 작업을 수행하는 동안에도 응답 가능한 상태를 유지할 수 있습니다. 이 항목에서는 C# 또는 Microsoft Visual Basic에서 UWP의 비동기 메서드를 사용하는 방법을 설명합니다. |
 | [정기 작업 항목 만들기](create-a-periodic-work-item.md)                                                   | 주기적으로 반복되는 작업 항목을 만드는 방법을 알아봅니다. |

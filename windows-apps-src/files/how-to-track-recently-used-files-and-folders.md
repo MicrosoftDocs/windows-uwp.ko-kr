@@ -22,7 +22,7 @@ ms.locfileid: "74259604"
 
 사용자가 자주 액세스하는 파일을 앱의 MRU(최근에 사용한 목록)에 추가하여 추적할 수 있습니다. 플랫폼은 마지막으로 액세스한 시간을 기반으로 항목을 정렬하고 목록의 25개 항목 제한에 도달한 경우 가장 오래된 항목을 제거하여 MRU를 자동으로 관리합니다. 모든 앱에는 자체 MRU가 있습니다.
 
-앱의 MRU는 정적 [**StorageApplicationPermissions.MostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList) 속성에서 가져오는 [**StorageItemMostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist) 클래스로 표현됩니다. MRU 항목은 [**IStorageItem**](https://docs.microsoft.com/uwp/api/Windows.Storage.IStorageItem) 개체로 저장되므로 파일을 나타내는 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 개체와 폴더를 나타내는 [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) 개체를 모두 MRU에 추가할 수 있습니다.
+앱의 MRU는 정적 [**StorageApplicationPermissions.MostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist) 속성에서 가져오는 [**StorageItemMostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList) 클래스로 표현됩니다. MRU 항목은 [**IStorageItem**](https://docs.microsoft.com/uwp/api/Windows.Storage.IStorageItem) 개체로 저장되므로 파일을 나타내는 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 개체와 폴더를 나타내는 [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) 개체를 모두 MRU에 추가할 수 있습니다.
 
 > [!NOTE]
 > 전체 샘플을 보려면 [파일 선택기 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FilePicker) 및 [파일 액세스 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess)을 참조하세요.
@@ -61,8 +61,8 @@ ms.locfileid: "74259604"
 
 검색하려는 항목에 가장 적합한 검색 방법을 사용합니다.
 
--   파일은 [**GetFileAsync**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)를 사용하여 [**StorageFile**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.getfileasync)로 검색합니다.
--   폴더는 [**GetFolderAsync**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder)를 사용하여 [**StorageFolder**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.getfolderasync)로 검색합니다.
+-   파일은 [**GetFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.getfileasync)를 사용하여 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)로 검색합니다.
+-   폴더는 [**GetFolderAsync**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.getfolderasync)를 사용하여 [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder)로 검색합니다.
 -   파일 또는 폴더를 나타낼 수 있는 제네릭 [**IStorageItem**](https://docs.microsoft.com/uwp/api/Windows.Storage.IStorageItem)은 [**GetItemAsync**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageitemmostrecentlyusedlist.getitemasync)를 사용하여 검색합니다.
 
 방금 추가한 파일로 돌아가는 방법은 다음과 같습니다.
@@ -91,7 +91,7 @@ MRU의 25개 항목 제한에 도달한 후 새 항목을 추가하려고 하면
 
 ## <a name="future-access-list"></a>향후 액세스 목록
 
-MRU뿐만 아니라 앱에는 향후 액세스 목록도 있습니다. 파일 및 폴더를 선택하여 사용자는 액세스하지 못할 수 있는 항목에 대한 액세스 권한을 앱에 부여할 수 있습니다. 이러한 항목을 향후 액세스 목록에 추가하면 나중에서 앱이 이러한 항목에 다시 액세스하려는 경우 해당 권한이 유지됩니다. 앱의 향후 액세스 목록은 정적 [**StorageApplicationPermissions.FutureAccessList**](https://docs.microsoft.com/uwp/api/Windows.Storage.AccessCache.StorageItemAccessList) 속성에서 가져오는 [**StorageItemAccessList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.futureaccesslist) 클래스로 표현됩니다.
+MRU뿐만 아니라 앱에는 향후 액세스 목록도 있습니다. 파일 및 폴더를 선택하여 사용자는 액세스하지 못할 수 있는 항목에 대한 액세스 권한을 앱에 부여할 수 있습니다. 이러한 항목을 향후 액세스 목록에 추가하면 나중에서 앱이 이러한 항목에 다시 액세스하려는 경우 해당 권한이 유지됩니다. 앱의 향후 액세스 목록은 정적 [**StorageApplicationPermissions.FutureAccessList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.futureaccesslist) 속성에서 가져오는 [**StorageItemAccessList**](https://docs.microsoft.com/uwp/api/Windows.Storage.AccessCache.StorageItemAccessList) 클래스로 표현됩니다.
 
 사용자가 항목을 선택하면 MRU뿐만 아니라 향후 액세스 목록에도 추가하는 것이 좋습니다.
 

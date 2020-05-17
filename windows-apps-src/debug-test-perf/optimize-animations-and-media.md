@@ -32,7 +32,7 @@ UWP 앱의 주요 측면은 매끄러운 조작입니다. 여기에는 "손가�
 -   제로 기간 애니메이션
 -   [  **Canvas.Left**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.left) 및 [**Canvas.Top**](https://docs.microsoft.com/dotnet/api/system.windows.controls.canvas.top) 속성에 대한 애니메이션
 -   [  **UIElement.Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity) 속성에 대한 애니메이션
--   [  **SolidColorBrush.Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 하위 속성을 대상으로 할 때 유형 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush)의 속성에 대한 애니메이션
+-   [**SolidColorBrush.Color**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush.Color) 하위 속성을 대상으로 할 때 유형 [**Brush**](/uwp/api/Windows.UI.Xaml.Media.Brush)의 속성에 대한 애니메이션
 -   반환 값 유형의 하위 속성을 대상으로 할 때 다음 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 속성에 대한 애니메이션
 
     -   [**RenderTransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform)
@@ -117,7 +117,7 @@ XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표�
 
 ### <a name="delay-setting-the-source-for-a-mediaplayerelement"></a>MediaPlayerElement에 대한 소스 설정 지연
 
-미디어 엔진은 부담이 큰 개체이고 XAML 프레임워크에서는 dll 로드 및 큰 개체 만들기를 최대한 오래 지연합니다. [  **소스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) 속성을 통해 소스가 설정된 후 [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement)가 이 작업을 수행해야 합니다. 사용자가 실제로 미디어를 재생할 준비가 될 때 이 항목을 설정하면 **MediaPlayerElement**와 관련된 대부분의 부담이 최대한 오래 지연됩니다.
+미디어 엔진은 부담이 큰 개체이고 XAML 프레임워크에서는 dll 로드 및 큰 개체 만들기를 최대한 오래 지연합니다. [**소스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) 속성을 통해 소스가 설정된 후 [**MediaPlayerElement**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement)가 이 작업을 수행해야 합니다. 사용자가 실제로 미디어를 재생할 준비가 될 때 이 항목을 설정하면 **MediaPlayerElement**와 관련된 대부분의 부담이 최대한 오래 지연됩니다.
 
 ### <a name="set-mediaplayerelementpostersource"></a>MediaPlayerElement.PosterSource 설정
 
@@ -127,7 +127,7 @@ XAML 프레임워크는 단독으로 렌더링되는 동영상 콘텐츠의 표�
 
 언제나 스크러빙은 미디어 플랫폼의 응답 성능을 실현하기 위한 힘든 작업입니다. 일반적으로 사람들은 슬라이더 값을 변경하여 이 목적을 달성합니다. 다음은 스크러빙을 가능한 효율적으로 만드는 방법에 대한 몇 가지 팁입니다.
 
--   [  **MediaPlayerElement.MediaPlayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.mediaplayer)의 [**Position**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.position)을 쿼리하는 타이머에 따라 [**Slider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) 값을 업데이트합니다. 타이머에 대한 적절한 업데이트 빈도를 사용해야 합니다. **Position** 속성만 재생하는 동안 모든 250밀리초마다 업데이트합니다.
+-   [**MediaPlayerElement.MediaPlayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.mediaplayer)의 [**Position**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.position)을 쿼리하는 타이머에 따라 [**Slider**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) 값을 업데이트합니다. 타이머에 대한 적절한 업데이트 빈도를 사용해야 합니다. **Position** 속성만 재생하는 동안 모든 250밀리초마다 업데이트합니다.
 -   슬라이더에서 단계 빈도 크기는 동영상 길이를 통해 조정되어야 합니다.
 -   슬라이더에서 [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed), [**PointerMoved**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved), [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) 이벤트를 구독하여 사용자가 슬라이더의 위치 조정 컨트롤을 끌 때 [**PlaybackRate**](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession.playbackrate) 속성을 0으로 설정합니다.
 -   [  **PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) 이벤트 처리기에서 수동으로 미디어 위치를 슬라이더 위치 값으로 설정하여 스크러빙하는 동안 최적의 위치 조정 컨트롤 끌기를 제공합니다.
