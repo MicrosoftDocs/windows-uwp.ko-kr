@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: dbae7ada227b4f3019a2e17c91e6b06b7f2f276f
-ms.sourcegitcommit: 0acdafcf75fcd19e5c3181eb16defcfee3918cb2
+ms.openlocfilehash: d050e2b4a7659f8910ce603ec7e90b703cc7722f
+ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81441868"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82606242"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>데스크톱 앱에서 UWP XAML 컨트롤 호스트(XAML Islands)
 
@@ -129,6 +129,8 @@ UWP XAML 호스팅 API를 기반으로 다양한 유형의 XAML Island 컨트롤
 
 ### <a name="supported-only-with-workarounds"></a>임시 방편으로만 지원
 
+:heavy_check_mark: XAML Island의 [WinUI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)에서 UWP 컨트롤을 호스팅하는 것은 현재 릴리스의 XAML Islands에서 조건부로 지원됩니다. 데스크톱 앱이 [MSIX 패키지](https://docs.microsoft.com/windows/msix)를 배포에 사용하는 경우 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NugGet 패키지의 시험판 또는 릴리스 버전에서 WinUI 컨트롤을 호스팅할 수 있습니다. 데스크톱 앱이 MSIX를 사용하여 패키지되지 않은 경우 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지의 시험판 버전을 설치한 경우에만 WinUI 컨트롤을 호스팅할 수 있습니다.
+
 :heavy_check_mark: XAML Island에서 XAML 콘텐츠 트리의 루트 요소에 액세스하여 루트 요소가 호스팅되는 컨텍스트에 대한 관련 정보를 얻으려면 [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow), [ApplicationView](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview) 및 [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window)를 사용하지 마세요. 그 대신 [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot) 클래스를 사용하세요. 자세한 내용은 [이 섹션](#window-host-context-for-xaml-islands)을 참조하세요.
 
 :heavy_check_mark: WPF, Windows Forms 또는 C++ Win32 앱에서 [공유 계약](/windows/uwp/app-to-app/share-data)을 지원하려면 앱에서 [IDataTransferManagerInterop](https://docs.microsoft.com/windows/win32/api/shobjidl_core/nn-shobjidl_core-idatatransfermanagerinterop) 인터페이스를 사용하여 특정 창의 공유 작업을 시작하는 [DataTransferManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager) 개체를 가져와야 합니다. WPF 앱에서 이 인터페이스를 사용하는 방법을 보여주는 샘플은 [ShareSource 샘플](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/ShareSource)을 참조하세요.
@@ -150,6 +152,8 @@ UWP XAML 호스팅 API를 기반으로 다양한 유형의 XAML Island 컨트롤
 :no_entry_sign: `@Places` 및 `@People` 콘텐츠 링크를 사용하는 텍스트 컨트롤. 이 기능에 대한 자세한 내용은 [이 문서](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/content-links)를 참조하세요.
 
 :no_entry_sign: XAML 아일랜드는 [TextBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox), [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox) 또는 [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox) 같은 텍스트 입력을 받는 컨트롤이 포함된 [ContentDialog](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ContentDialog) 호스팅을 지원하지 않습니다. 이렇게 하면 입력 컨트롤이 키 누름에 제대로 응답하지 않습니다. XAML 아일랜드를 사용하여 비슷한 기능을 구현하려면 입력 컨트롤이 포함된 [Popup](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.Popup)을 호스트하는 것이 좋습니다.
+
+:no_entry_sign: XAML Islands는 현재 호스트팅된 [Windows.UI.Xaml.Controls.Image](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) 컨트롤 또는 [Windows.UI.Xaml.Media.Imaging.SvgImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.svgimagesource) 개체를 사용하여 SVG 파일을 표시하는 것을 지원하지 않습니다. 이 문제를 해결하려면 표시할 이미지 파일을 JPG 또는 PNG와 같은 래스터 기반 형식으로 변환합니다.
 
 ### <a name="window-host-context-for-xaml-islands"></a>XAML 아일랜드에 대한 창 호스트 컨텍스트
 
