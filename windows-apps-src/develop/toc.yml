@@ -819,6 +819,8 @@
           items:
             - name: 값 범주 및 참조
               href: ../cpp-and-winrt-apis/cpp-value-categories.md
+    - name: 'C#/WinRT'
+      href: ../csharp-winrt/index.md
     - name: 보안
       href: ../security/index.md
       items:

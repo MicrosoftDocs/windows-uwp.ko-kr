@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 41674ecb468023ac6e97cc01d1867478e8a3d70d
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: c93a05967c6cdc7fd7dcdbab9b5c4afa2c1382a7
+ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970428"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83579870"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -274,7 +274,7 @@ Dim pictureNode As New muxc.TreeViewNode With {.Content = picturesFolder}
         <muxc:TreeViewItem>
             <StackPanel Orientation="Horizontal">
                 <Image Width="20" Source="Assets/file.png"/>
-                <TextBlock Text="{Binding Name}"/>
+                <TextBlock Text="{x:Bind Name}"/>
             </StackPanel>
         </muxc:TreeViewItem>
     </DataTemplate>
@@ -816,54 +816,55 @@ namespace TreeViewTest
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TreeViewTest"
     xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    xmlns:storage="using:Windows.Storage"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Page.Resources>
-        <DataTemplate x:Key="TreeViewItemDataTemplate">
+        <DataTemplate x:Key="TreeViewItemDataTemplate" x:DataType="TreeViewNode">
             <Grid Height="44">
-                <TextBlock Text="{Binding Content.DisplayName}"
+                <TextBlock Text="{x:Bind ((storage:IStorageItem)Content).Name}"
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"
                            Style="{ThemeResource BodyTextBlockStyle}"/>
             </Grid>
         </DataTemplate>
 
-        <DataTemplate x:Key="MusicItemDataTemplate">
+        <DataTemplate x:Key="MusicItemDataTemplate" x:DataType="TreeViewNode">
             <StackPanel Height="44" Orientation="Horizontal">
                 <SymbolIcon Symbol="Audio" Margin="0,0,4,0"/>
-                <TextBlock Text="{Binding Content.DisplayName}"
+                <TextBlock Text="{x:Bind ((storage:StorageFile)Content).DisplayName}"
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"
                            Style="{ThemeResource BodyTextBlockStyle}"/>
             </StackPanel>
         </DataTemplate>
 
-        <DataTemplate x:Key="PictureItemDataTemplate">
+        <DataTemplate x:Key="PictureItemDataTemplate" x:DataType="TreeViewNode">
             <StackPanel Height="44" Orientation="Horizontal">
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEB9F;"
                           Margin="0,0,4,0"/>
-                <TextBlock Text="{Binding Content.DisplayName}"
+                <TextBlock Text="{x:Bind ((storage:StorageFile)Content).DisplayName}"
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"
                            Style="{ThemeResource BodyTextBlockStyle}"/>
             </StackPanel>
         </DataTemplate>
 
-        <DataTemplate x:Key="MusicFolderDataTemplate">
+        <DataTemplate x:Key="MusicFolderDataTemplate" x:DataType="TreeViewNode">
             <StackPanel Height="44" Orientation="Horizontal">
                 <SymbolIcon Symbol="MusicInfo" Margin="0,0,4,0"/>
-                <TextBlock Text="{Binding Content.DisplayName}"
+                <TextBlock Text="{x:Bind ((storage:StorageFolder)Content).DisplayName}"
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"
                            Style="{ThemeResource BodyTextBlockStyle}"/>
             </StackPanel>
         </DataTemplate>
 
-        <DataTemplate x:Key="PictureFolderDataTemplate">
+        <DataTemplate x:Key="PictureFolderDataTemplate" x:DataType="TreeViewNode">
             <StackPanel Height="44" Orientation="Horizontal">
                 <SymbolIcon Symbol="Pictures" Margin="0,0,4,0"/>
-                <TextBlock Text="{Binding Content.DisplayName}"
+                <TextBlock Text="{x:Bind ((storage:StorageFolder)Content).DisplayName}"
                            HorizontalAlignment="Left"
                            VerticalAlignment="Center"
                            Style="{ThemeResource BodyTextBlockStyle}"/>
