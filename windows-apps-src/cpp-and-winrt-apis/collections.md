@@ -99,7 +99,7 @@ Windows::Foundation::Collections::IVectorView<float> view{ winrt::single_threade
 
 ### <a name="observable-collection"></a>Observable 컬렉션
 
-‘관찰 가능한’ 컬렉션을 구현하는 형식의 새 개체를 검색하려면 요소 형식에 상관없이 [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) 함수 템플릿을 호출합니다.  그러나 XAML 항목 컨트롤에 바인딩하는 데 적합한 관찰 가능한 컬렉션을 만들려면 **IInspectable**을 요소 형식으로 사용합니다.
+‘관찰 가능한’ 컬렉션을 구현하는 형식의 새 개체를 검색하려면 요소 형식에 상관없이 [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) 함수 템플릿을 호출합니다. 그러나 XAML 항목 컨트롤에 바인딩하는 데 적합한 관찰 가능한 컬렉션을 만들려면 **IInspectable**을 요소 형식으로 사용합니다.
 
 개체는 [**IObservableVector**](/uwp/api/windows.foundation.collections.iobservablevector_t_)로 반환되며, 이 개체는 반환된 개체의 함수 및 속성을 호출하는 데 사용되는 인터페이스이거나 바인딩된 컨트롤입니다.
 
