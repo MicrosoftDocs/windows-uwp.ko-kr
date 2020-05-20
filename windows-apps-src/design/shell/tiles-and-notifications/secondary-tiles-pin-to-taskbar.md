@@ -21,7 +21,7 @@ ms.locfileid: "82971018"
 <img alt="Taskbar pinning" src="../images/taskbar/pin-secondary-ui.png" width="972"/>
 
 > [!IMPORTANT]
-> **제한 된 액세스 api**:이 api는 제한 된 액세스 기능입니다. 이 API를 사용 하려면에 문의 [taskbarsecondarytile@microsoft.com](mailto:taskbarsecondarytile@microsoft.com?Subject=Limited%20Access%20permission%20to%20use%20secondary%20tiles%20on%20taskbar)하세요.
+> **제한 된 액세스 api**:이 api는 제한 된 액세스 기능입니다. 이 API를 사용 하려면에 문의 하세요 [taskbarsecondarytile@microsoft.com](mailto:taskbarsecondarytile@microsoft.com?Subject=Limited%20Access%20permission%20to%20use%20secondary%20tiles%20on%20taskbar) .
 
 > **10 월 2018 업데이트 필요**: 작업 표시줄에 고정 하려면 SDK 17763를 대상으로 하 고 빌드 17763 이상을 실행 해야 합니다.
 

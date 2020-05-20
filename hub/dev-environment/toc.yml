@@ -1,6 +1,36 @@
 - name: Windows 개발 환경
   href: index.yml
   items:
+    - name: Windows 패키지 관리자
+      items:
+        - name: 개요
+          href: ../package-manager/index.md
+        - name: winget 도구 사용
+          items:
+            - name: 개요
+              href: ../package-manager/winget/index.md
+            - name: hash 명령
+              href: ../package-manager/winget/hash.md
+            - name: help 명령
+              href: ../package-manager/winget/help.md
+            - name: install 명령
+              href: ../package-manager/winget/install.md
+            - name: search 명령
+              href: ../package-manager/winget/search.md
+            - name: show 명령
+              href: ../package-manager/winget/show.md
+            - name: source 명령
+              href: ../package-manager/winget/source.md
+            - name: validate 명령
+              href: ../package-manager/winget/validate.md
+        - name: 패키지 제출
+          items:
+            - name: 개요
+              href: ../package-manager/package/index.md
+            - name: 패키지 매니페스트 만들기
+              href: ../package-manager/package/manifest.md
+            - name: 리포지토리에 매니페스트 제출
+              href: ../package-manager/package/repository.md
     - name: Python을 사용하여 개발
       items:
         - name: 개요

@@ -7,72 +7,105 @@
           href: desktop/index.md
         - name: 앱 플랫폼 선택
           href: desktop/choose-your-platform.md
-    - name: 데스크톱 앱 현대화
+        - name: 데스크톱 앱 현대화
+          items:
+            - name: 개요
+              href: desktop/modernize/index.md
+            - name: Windows 런타임 API 호출
+              items:
+                - name: 개요
+                  href: desktop/modernize/desktop-to-uwp-enhance.md
+                - name: 사용 가능한 Windows 런타임 API
+                  href: desktop/modernize/desktop-to-uwp-supported-api.md
+            - name: 호스트 UWP XAML 컨트롤(XAML Islands)
+              items:
+                - name: 개요
+                  href: desktop/modernize/xaml-islands.md
+                - name: WPF 및 Windows Forms 앱의 XAML Islands
+                  items:
+                    - name: 표준 UWP 컨트롤 호스트
+                      href: desktop/modernize/host-standard-control-with-xaml-islands.md
+                    - name: 사용자 지정 UWP 컨트롤 호스트
+                      href: desktop/modernize/host-custom-control-with-xaml-islands.md
+                - name: Win32 앱의 C++ XAML Islands
+                  items:
+                    - name: UWP XAML 호스팅 API 사용
+                      href: desktop/modernize/using-the-xaml-hosting-api.md
+                    - name: 표준 UWP 컨트롤 호스트
+                      href: desktop/modernize/host-standard-control-with-xaml-islands-cpp.md
+                    - name: 사용자 지정 UWP 컨트롤 호스트
+                      href: desktop/modernize/host-custom-control-with-xaml-islands-cpp.md
+                    - name: 고급 시나리오
+                      href: desktop/modernize/advanced-scenarios-xaml-islands-cpp.md
+            - name: 시각적 계층(Windows.UI.Composition) 사용
+              items:
+                - name: 개요
+                  href: desktop/modernize/visual-layer-in-desktop-apps.md
+                - name: WPF
+                  href: desktop/modernize/using-the-visual-layer-with-wpf.md
+                - name: Windows Forms
+                  href: desktop/modernize/using-the-visual-layer-with-windows-forms.md
+                - name: Win32
+                  href: desktop/modernize/using-the-visual-layer-with-win32.md
+            - name: 패키지 ID가 필요한 기능
+              items:
+                - name: 개요
+                  href: desktop/modernize/modernize-packaged-apps.md
+                - name: 확장 패키지와 통합
+                  href: desktop/modernize/desktop-to-uwp-extensions.md
+                - name: UWP 구성 요소를 사용하여 확장
+                  href: desktop/modernize/desktop-to-uwp-extend.md
+                - name: 패키지된 앱 배포
+                  href: desktop/modernize/desktop-to-uwp-distribute.md
+            - name: '자습서: WPF 앱 현대화'
+              items:
+                - name: 개요
+                  href: desktop/modernize/modernize-wpf-tutorial.md
+                - name: Contoso Expenses 앱을 .NET Core 3으로 마이그레이션
+                  href: desktop/modernize/modernize-wpf-tutorial-1.md
+                - name: XAML Islands를 사용하여 UWP InkCanvas 컨트롤 추가
+                  href: desktop/modernize/modernize-wpf-tutorial-2.md
+                - name: XAML Islands를 사용하여 UWP CalendarView 컨트롤 추가
+                  href: desktop/modernize/modernize-wpf-tutorial-3.md
+                - name: Windows 10 사용자 작업 및 알림 추가
+                  href: desktop/modernize/modernize-wpf-tutorial-4.md
+                - name: MSIX로 패키징 및 배포
+                  href: desktop/modernize/modernize-wpf-tutorial-5.md
+            - name: 패키지되지 않은 데스크톱 앱에 ID 부여
+              href: desktop/modernize/grant-identity-to-nonpackaged-apps.md
+    - name: Windows UI 라이브러리(WinUI)
       items:
         - name: 개요
-          href: desktop/modernize/index.md
-        - name: Windows 런타임 API 호출
+          href: winui/index.md
+        - name: Windows UI 라이브러리 3.0 Preview 1
           items:
-            - name: 개요
-              href: desktop/modernize/desktop-to-uwp-enhance.md
-            - name: 사용 가능한 Windows 런타임 API
-              href: desktop/modernize/desktop-to-uwp-supported-api.md
-        - name: 호스트 UWP XAML 컨트롤(XAML Islands)
+            - name: 다운로드 및 릴리스 정보
+              href: winui/winui3/index.md
+            - name: 데스크톱 앱용 WinUI 3.0 시작
+              href: winui/winui3/get-started-winui3-for-desktop.md
+        - name: Windows UI 2.x 라이브러리
+          href: winui/winui2/index.md
           items:
-            - name: 개요
-              href: desktop/modernize/xaml-islands.md
-            - name: WPF 및 Windows Forms 앱의 XAML Islands
+            - name: 설치
               items:
-                - name: 표준 UWP 컨트롤 호스트
-                  href: desktop/modernize/host-standard-control-with-xaml-islands.md
-                - name: 사용자 지정 UWP 컨트롤 호스트
-                  href: desktop/modernize/host-custom-control-with-xaml-islands.md
-            - name: Win32 앱의 C++ XAML Islands
+                - name: 시작
+                  href: winui/winui2/getting-started.md
+                - name: NuGet 패키지 목록
+                  href: winui/winui2/nuget-packages.md
+            - name: 릴리스 정보
               items:
-                - name: UWP XAML 호스팅 API 사용
-                  href: desktop/modernize/using-the-xaml-hosting-api.md
-                - name: 표준 UWP 컨트롤 호스트
-                  href: desktop/modernize/host-standard-control-with-xaml-islands-cpp.md
-                - name: 사용자 지정 UWP 컨트롤 호스트
-                  href: desktop/modernize/host-custom-control-with-xaml-islands-cpp.md
-                - name: 고급 시나리오
-                  href: desktop/modernize/advanced-scenarios-xaml-islands-cpp.md
-        - name: 시각적 계층(Windows.UI.Composition) 사용
-          items:
-            - name: 개요
-              href: desktop/modernize/visual-layer-in-desktop-apps.md
-            - name: WPF
-              href: desktop/modernize/using-the-visual-layer-with-wpf.md
-            - name: Windows Forms
-              href: desktop/modernize/using-the-visual-layer-with-windows-forms.md
-            - name: Win32
-              href: desktop/modernize/using-the-visual-layer-with-win32.md
-        - name: 패키지 ID가 필요한 기능
-          items:
-            - name: 개요
-              href: desktop/modernize/modernize-packaged-apps.md
-            - name: 확장 패키지와 통합
-              href: desktop/modernize/desktop-to-uwp-extensions.md
-            - name: UWP 구성 요소를 사용하여 확장
-              href: desktop/modernize/desktop-to-uwp-extend.md
-            - name: 패키지된 앱 배포
-              href: desktop/modernize/desktop-to-uwp-distribute.md
-        - name: '자습서: WPF 앱 현대화'
-          items:
-            - name: 개요
-              href: desktop/modernize/modernize-wpf-tutorial.md
-            - name: Contoso Expenses 앱을 .NET Core 3으로 마이그레이션
-              href: desktop/modernize/modernize-wpf-tutorial-1.md
-            - name: XAML Islands를 사용하여 UWP InkCanvas 컨트롤 추가
-              href: desktop/modernize/modernize-wpf-tutorial-2.md
-            - name: XAML Islands를 사용하여 UWP CalendarView 컨트롤 추가
-              href: desktop/modernize/modernize-wpf-tutorial-3.md
-            - name: Windows 10 사용자 작업 및 알림 추가
-              href: desktop/modernize/modernize-wpf-tutorial-4.md
-            - name: MSIX로 패키징 및 배포
-              href: desktop/modernize/modernize-wpf-tutorial-5.md
-        - name: 패키지되지 않은 데스크톱 앱에 ID 부여
-          href: desktop/modernize/grant-identity-to-nonpackaged-apps.md
+                - name: 개요
+                  href: winui/winui2/release-notes/index.md
+                - name: WinUI 2.4
+                  href: winui/winui2/release-notes/winui-2.4.md
+                - name: WinUI 2.3
+                  href: winui/winui2/release-notes/winui-2.3.md
+                - name: WinUI 2.2
+                  href: winui/winui2/release-notes/winui-2.2.md
+                - name: WinUI 2.1
+                  href: winui/winui2/release-notes/winui-2.1.md
+                - name: WinUI 2.0
+                  href: winui/winui2/release-notes/winui-2.0.md
     - name: Windows 10X용 개발
       items:
         - name: Windows 10X Dev FAQ
@@ -87,3 +120,5 @@
       href: features-and-technologies.md
     - name: 최신 문서 업데이트
       href: whats-new/latest-doc-updates.md
+    - name: Microsoft Build 2020 관련 문서
+      href: whats-new/build2020-docs.md

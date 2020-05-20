@@ -21,11 +21,11 @@ ms.locfileid: "82880863"
 
 대칭 이동 모델 교환 체인을 사용 하 여 게임에서 [**Idxgiswapchain::P 재전송**](/windows/win32/api/dxgi/nf-dxgi-idxgiswapchain-present)을 호출할 때마다 백 버퍼 "대칭 이동"이 대기 됩니다. 렌더링 루프가 Present ()를 호출 하면 시스템은 이전 프레임을 제시 하기 전까지 스레드를 차단 하 여 실제로 표시 되기 전에 새 프레임을 큐에 대기 시킬 수 있습니다. 이렇게 하면 게임에서 프레임을 그리는 시간과 시스템에서 프레임을 표시 하는 데 걸리는 시간 사이에 추가 대기 시간이 발생 합니다. 대부분의 경우,이 시스템은 게임에서 렌더링 되는 시간과 각 프레임을 표시 하는 시간 사이에 항상 전체 추가 프레임을 대기 하는 안정 된 상태에 도달 합니다. 시스템이 새 프레임을 수락할 준비가 될 때까지 기다린 다음 현재 데이터를 기반으로 프레임을 렌더링 하 고 프레임을 즉시 큐에 대기 하는 것이 좋습니다.
 
-[**DXGI\_스왑\_체인\_플래그\_프레임\_대기 시간\_대기 가능\_개체**](/windows/win32/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) 플래그를 사용 하 여 대기 가능 스왑 체인을 만듭니다. 이러한 방식으로 만들어진 스왑 체인은 시스템이 실제로 새 프레임을 받아들일 준비가 되었을 때 렌더링 루프에 알릴 수 있습니다. 이렇게 하면 현재 데이터를 기반으로 게임을 렌더링 한 다음 결과를 현재 큐에 바로 배치할 수 있습니다.
+[**DXGI \_ 스왑 \_ 체인 \_ 플래그 \_ 프레임 \_ 대기 시간 \_ 대기 가능 \_ 개체**](/windows/win32/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) 플래그를 사용 하 여 대기 가능 스왑 체인을 만듭니다. 이러한 방식으로 만들어진 스왑 체인은 시스템이 실제로 새 프레임을 받아들일 준비가 되었을 때 렌더링 루프에 알릴 수 있습니다. 이렇게 하면 현재 데이터를 기반으로 게임을 렌더링 한 다음 결과를 현재 큐에 바로 배치할 수 있습니다.
 
-## <a name="step-1-create-a-waitable-swap-chain"></a>1단계. 대기 가능 스왑 체인 만들기
+## <a name="step-1-create-a-waitable-swap-chain"></a>1단계: 대기 가능 스왑 체인 만들기
 
-[**CreateSwapChainForCoreWindow**](/windows/win32/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow)를 호출할 때 [**\_DXGI\_스왑\_\_체인\_플래그\_프레임\_대기 시간 대기 가능 개체**](/windows/win32/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) 플래그를 지정 합니다.
+[**CreateSwapChainForCoreWindow**](/windows/win32/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow)를 호출할 때 [**DXGI \_ 스왑 \_ 체인 \_ 플래그 \_ 프레임 \_ 대기 시간 \_ 대기 가능 \_ 개체**](/windows/win32/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) 플래그를 지정 합니다.
 
 ```cpp
 swapChainDesc.Flags = DXGI_SWAP_CHAIN_FLAG_FRAME_LATENCY_WAITABLE_OBJECT; // Enable GetFrameLatencyWaitableObject().

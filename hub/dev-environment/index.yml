@@ -9,13 +9,29 @@ metadata:
   ms.date: 09/15/2019
   ms.prod: dev-environment
   ms.topic: landing-page
-  ms.openlocfilehash: 62e4cc8c5788780988b79d079ff4a6834a525a51
-  ms.sourcegitcommit: 0808a2719c007b3d7f55714e197ad080a1631a57
+  ms.openlocfilehash: da9899c3851779853c1f99cb829c98d44f61586f
+  ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82630641"
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83579950"
 landingContent:
+- title: Windows 패키지 관리자
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 개요
+      url: ../package-manager/index.md
+  - linkListType: get-started
+    links:
+    - text: winget 도구 사용
+      url: ../package-manager/winget/index.md
+    - text: 패키지 제출
+      url: ../package-manager/package/index.md
+  - linkListType: reference
+    links:
+    - text: winget 명령줄
+      url: ../package-manager/winget/index.md#commands
 - title: Python 시작
   linkLists:
   - linkListType: get-started

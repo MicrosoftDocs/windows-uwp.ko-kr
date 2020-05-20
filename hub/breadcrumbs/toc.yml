@@ -9,20 +9,72 @@
         - name: 데스크톱 앱 빌드
           tocHref: /windows/apps/desktop/
           topicHref: /windows/apps/desktop/
-        - name: 데스크톱 앱 현대화
-          tocHref: /windows/apps/desktop/modernize/
-          topicHref: /windows/apps/desktop/modernize/
           items:
-            - name: Windows 런타임 API 호출
-              topicHref: /windows/apps/desktop/modernize/desktop-to-uwp-enhance
-            - name: XAML Islands
-              topicHref: /windows/apps/desktop/modernize/xaml-islands
-            - name: 시각적 계층
-              topicHref: /windows/apps/desktop/modernize/visual-layer-in-desktop-apps
-            - name: 패키지 ID가 필요한 기능
-              topicHref: /windows/apps/desktop/modernize/modernize-packaged-apps
-            - name: '자습서: WPF 앱 현대화'
-              topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial
+            - name: 데스크톱 앱 현대화
+              tocHref: /windows/apps/desktop/modernize/
+              topicHref: /windows/apps/desktop/modernize/
+              items:
+                - name: Windows 런타임 API 호출
+                  topicHref: /windows/apps/desktop/modernize/desktop-to-uwp-enhance
+                  items:
+                    - name: 사용 가능한 Windows 런타임 API
+                      topicHref: /windows/apps/desktop/modernize/desktop-to-uwp-supported-api
+                - name: XAML Islands
+                  topicHref: /windows/apps/desktop/modernize/xaml-islands
+                  items:
+                    - name: WPF 앱에서 표준 UWP 컨트롤 호스팅
+                      topicHref: /windows/apps/desktop/modernize/host-standard-control-with-xaml-islands
+                    - name: WPF 앱에서 사용자 지정 UWP 컨트롤 호스팅
+                      topicHref: /windows/apps/desktop/modernize/host-custom-control-with-xaml-islands
+                    - name: UWP XAML 호스팅 API 사용
+                      topicHref: /windows/apps/desktop/modernize/using-the-xaml-hosting-api
+                    - name: C++ Win32 앱에서 표준 UWP 컨트롤 호스트
+                      topicHref: /windows/apps/desktop/modernize/host-standard-control-with-xaml-islands-cpp
+                    - name: C++ Win32 앱에서 사용자 지정 UWP 컨트롤 호스트
+                      topicHref: /windows/apps/desktop/modernize/host-custom-control-with-xaml-islands-cpp
+                    - name: C++ Win32 앱의 XAML Islands에 대한 고급 시나리오
+                      topicHref: /windows/apps/desktop/modernize/advanced-scenarios-xaml-islands-cpp
+                - name: 시각적 계층
+                  topicHref: /windows/apps/desktop/modernize/visual-layer-in-desktop-apps
+                  items:
+                    - name: WPF
+                      topicHref: /windows/apps/desktop/modernize/using-the-visual-layer-with-wpf
+                    - name: Windows Forms
+                      topicHref: /windows/apps/desktop/modernize/using-the-visual-layer-with-windows-forms
+                    - name: Win32
+                      topicHref: /windows/apps/desktop/modernize/using-the-visual-layer-with-win32
+                - name: 패키지 ID가 필요한 기능
+                  topicHref: /windows/apps/desktop/modernize/modernize-packaged-apps
+                  items:
+                    - name: 확장 패키지와 통합
+                      topicHref: /windows/apps/desktop/modernize/desktop-to-uwp-extensions
+                    - name: UWP 구성 요소를 사용하여 확장
+                      topicHref: /windows/apps/desktop/modernize/desktop-to-uwp-extend
+                    - name: 패키지 데스크톱 앱 배포
+                      topicHref: /windows/apps/desktop/modernize/desktop-to-uwp-distribute
+                - name: '자습서: WPF 앱 현대화'
+                  topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial
+                  items:
+                    - name: 1부
+                      topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial-1
+                    - name: 2부
+                      topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial-2
+                    - name: 3부
+                      topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial-3
+                    - name: 4부
+                      topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial-4
+                    - name: 5부
+                      topicHref: /windows/apps/desktop/modernize/modernize-wpf-tutorial-5
+        - name: Windows UI 라이브러리(WinUI)
+          tocHref: /windows/apps/winui/
+          topicHref: /windows/apps/winui/
+          items:
+            - name: WinUI 3
+              tocHref: /windows/apps/winui/winui3/
+              topicHref: /windows/apps/winui/winui3
+            - name: WinUI 2
+              tocHref: /windows/apps/winui/winui2/
+              topicHref: /windows/apps/winui/winui2
         - name: .NET TraceProcessing
           tocHref: /windows/apps/trace-processing/
           topicHref: /windows/apps/trace-processing/overview
@@ -42,6 +94,9 @@
       tocHref: /windows/dev-environment/
       topicHref: /windows/dev-environment/
       items:
+        - name: Windows 패키지 관리자
+          tocHref: /windows/package-manager/
+          topicHref: /windows/package-manager
         - name: Python
           tocHref: /windows/python/
           topicHref: /windows/python

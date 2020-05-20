@@ -72,7 +72,7 @@ Windows의 게임 프로그래밍에 대 한 자세한 내용은 다음 리소�
 -   [ANGLE: Windows에서 OPENGL ES 2.0 그래픽 코드 실행](https://channel9.msdn.com/Events/Build/2015/3-686) – Tony Balogh
 -   [Advanced DirectX12 Graphics And Performance](https://channel9.msdn.com/Events/Build/2015/3-673) – Max McMullen
 
-## <a name="other-resources"></a>기타 리소스
+## <a name="other-resources"></a>다른 리소스
 
 
 -   [CodePlex](https://www.codeplex.com/)

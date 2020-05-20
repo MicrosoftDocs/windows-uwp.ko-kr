@@ -100,7 +100,7 @@ Windows Pc에는 많은 [Android 에뮬레이터 옵션](https://www.androidauth
 
 1. 아직 설치 하지 않은 경우 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)을 다운로드 합니다. Visual Studio 설치 관리자를 사용 하 여 [작업을 수정](https://docs.microsoft.com/visualstudio/install/modify-visual-studio?view=vs-2019#modify-workloads) 하 고 **.net 워크 로드를 사용한 모바일 개발**이 있는지 확인 합니다.
 
-2. 새 프로젝트를 만듭니다. [Android Emulator를 설정한](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/)후에는 [Android Device Manager](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/device-manager?tabs=windows&pivots=windows#requirements) 를 사용 하 여 다양 한 Android 가상 장치를 만들고, 복제 하 고, 사용자 지정 하 고, 시작할 수 있습니다. 도구 메뉴에서 **도구** > **Android** > **Android Device Manager**를 사용 하 여 Android Device Manager를 시작 합니다.
+2. 새 프로젝트를 만듭니다. [Android Emulator를 설정한](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/)후에는 [Android Device Manager](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/device-manager?tabs=windows&pivots=windows#requirements) 를 사용 하 여 다양 한 Android 가상 장치를 만들고, 복제 하 고, 사용자 지정 하 고, 시작할 수 있습니다. 도구 메뉴에서 **도구**  >  **Android**  >  **Android Device Manager**를 사용 하 여 Android Device Manager를 시작 합니다.
 
 3. Android Device Manager 열리면 **+ 새로** 만들기를 선택 하 여 새 장치를 만듭니다.
 
@@ -110,7 +110,7 @@ Windows Pc에는 많은 [Android 에뮬레이터 옵션](https://www.androidauth
 
     ![Visual Studio 시작 Android Emulator](../images/vs-target-device-menu.png)
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](https://docs.microsoft.com/dual-screen/android/)
 

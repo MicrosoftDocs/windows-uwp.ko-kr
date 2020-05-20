@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: b966d00455bce390457e148c60b57296375ac2fa
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 86586cfc0f054181f08cd3cd75731e6c53ea4b92
+ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730248"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83579930"
 ---
 # <a name="modernize-your-desktop-apps"></a>데스크톱 앱 현대화
 
@@ -21,6 +21,17 @@ Windows 10 및 UWP(유니버설 Windows 플랫폼)는 데스크톱 앱에서 최
 
 > [!NOTE]
 > Windows 10으로 데스크톱 앱을 마이그레이션하기 위한 지원이 필요한가요? [Desktop App Assure](https://docs.microsoft.com/FastTrack/win-10-desktop-app-assure) 서비스는 앱을 Windows 10으로 이식하려는 개발자에게 직접적인 무료 지원을 제공합니다. 이 프로그램은 모든 ISV 및 적격 엔터프라이즈에서 사용할 수 있습니다. 자격 및 프로그램 자체에 대한 자세한 내용은 [https://docs.microsoft.com/fasttrack/win-10-app-assure-assistance-offered](https://docs.microsoft.com/fasttrack/win-10-app-assure-assistance-offered)를 참조하세요. 당장 시작하려면 [요청을 제출](https://fasttrack.microsoft.com/dl/daa)하세요.
+
+## <a name="windows-ui-library"></a>Windows UI Library
+
+Windows UI Library는 Windows 10 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. WinUI는 하위 버전의 Windows 10을 대상으로 하는 UWP 앱을 위한 최신 버전 및 업데이트된 버전의 UWP 컨트롤을 제공하는 도구 키트로 시작되었습니다. WinUI는 대상 범위를 늘려 왔으며, 이제는 UWP, .NET 및 Win32에서 Windows 10 앱에 사용되는 최신 기본 UI(사용자 인터페이스) 플랫폼으로 자리잡았습니다.
+
+데스크톱 앱에서 다음과 같은 방법으로 WinUI를 사용할 수 있습니다.
+
+* [XAML Islands](xaml-islands.md)를 사용하도록 기존 WPF, Windows Forms 및 C++/Win32 앱을 업데이트하여 앱에서 WinUI 2.x 컨트롤을 호스트할 수 있습니다.
+* [WinUI 3.0 Preview 1](../../winui/winui3/index.md)부터 [전적으로 WinUI 기반 UI를 사용하는 .NET 및 C++/Win32 앱을 만들 수 있습니다](../../winui/winui3/get-started-winui3-for-desktop.md).
+
+[Windows UI(WinUI) 라이브러리](../../winui/index.md)를 참조하세요.
 
 ## <a name="msix-packages"></a>MSIX 패키지
 
@@ -79,12 +90,6 @@ Windows 10, 버전 1903부터 창 핸들(HWND)에 연결된 WPF, Windows Forms �
 | [ComboBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/combo-box#make-a-combo-box-editable) | 컨트롤에 나열되지 않는 값을 입력할 수 있도록 편집 가능한 콤보 상자를 제공합니다.  |
 | [TreeView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tree-view) | 데이터 바인딩, 항목 템플릿 및 끌어서 놓기를 사용하도록 트리 보기를 구성할 수 있습니다.  |
 | [DataGridView](https://docs.microsoft.com/windows/communitytoolkit/controls/datagrid) |   행과 열에 데이터 컬렉션을 표시할 수 있는 유연한 방법을 제공합니다. 이 컨트롤은 [Windows 커뮤니티 도구 키트](https://docs.microsoft.com/windows/uwpcommunitytoolkit/)에서 사용할 수 있습니다.  |
-
-## <a name="windows-ui-library"></a>Windows UI Library
-
-Windows UI Library는 UWP 앱용 새 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. Windows UI Library API는 이전 버전의 Windows 10에서 작동하므로 사용자가 최신 버전의 Windows 10을 실행하지 않더라도 앱이 작동할 수 있습니다. 따라서 새 컨트롤을 채택하여 Windows UI Library에서 릴리스하면서 버전 확인 또는 조건부 XAML을 포함할지에 대해 걱정하지 않아도 됩니다.
-
-[Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요.
 
 ## <a name="other-technologies-for-modern-desktop-apps"></a>최신 데스크톱 앱을 위한 기타 기술
 

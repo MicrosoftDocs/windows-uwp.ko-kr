@@ -87,7 +87,7 @@ ms.locfileid: "82148883"
 
 ## <a name="validating-a-receipt"></a>수신 확인
 
-수신의 신뢰성을 확인 하려면 공용 인증서를 사용 하 여 수신의 서명을 확인 하는 백 엔드 시스템 (웹 서비스 또는 이와 유사한 항목)이 필요 합니다. 이 인증서를 가져오려면 URL ```https://lic.apps.microsoft.com/licensing/certificateserver/?cid=CertificateId%60%60%60, where ```certificateid ' ' '는 수신의 **certificateid** 값입니다.
+수신의 신뢰성을 확인 하려면 공용 인증서를 사용 하 여 수신의 서명을 확인 하는 백 엔드 시스템 (웹 서비스 또는 이와 유사한 항목)이 필요 합니다. 이 인증서를 가져오려면 URL ```https://lic.apps.microsoft.com/licensing/certificateserver/?cid=CertificateId%60%60%60, where ``` certificateid ' ' '는 수신의 **certificateid** 값입니다.
 
 다음은 유효성 검사 프로세스의 예입니다. 이 코드는 **System. 보안** 어셈블리에 대 한 참조를 포함 하는 .NET Framework 콘솔 응용 프로그램에서 실행 됩니다.
 
@@ -112,9 +112,9 @@ ms.locfileid: "82148883"
 
 **수신** 에는 다음과 같은 특성이 있습니다.
 
-|  특성  |  Description   |
+|  attribute  |  Description   |
 |-------------|-------------------|
-|  **버전**  |    수신 확인의 버전 번호입니다.            |
+|  **Version**  |    수신 확인의 버전 번호입니다.            |
 |  **CertificateId**  |     수신에 서명 하는 데 사용 되는 인증서 지문입니다.          |
 |  **ReceiptDate**  |    영수증이 서명 되 고 다운로드 된 날짜입니다.           |  
 |  **ReceiptDeviceId**  |   이 확인을 요청 하는 데 사용 되는 장치를 식별 합니다.         |  |
@@ -127,7 +127,7 @@ ms.locfileid: "82148883"
 
 **Appreceipt** 에는 다음과 같은 특성이 있습니다.
 
-|  특성  |  Description   |
+|  attribute  |  Description   |
 |-------------|-------------------|
 |  **Id**  |    구매를 식별 합니다.           |
 |  **AppId**  |     OS에서 앱에 사용 하는 패키지 패밀리 이름 값입니다.           |
@@ -142,7 +142,7 @@ ms.locfileid: "82148883"
 
 **제품 확인** 에는 다음과 같은 특성이 있습니다.
 
-|  특성  |  Description   |
+|  attribute  |  Description   |
 |-------------|-------------------|
 |  **Id**  |    구매를 식별 합니다.           |
 |  **AppId**  |     사용자가 구매한 앱을 식별 합니다.           |

@@ -1,6 +1,6 @@
 ---
-Description: 데스크톱 응용 프로그램과 UWP 앱 간에 코드 공유
-title: 데스크톱 응용 프로그램과 UWP 앱 간에 코드 공유
+Description: 데스크톱 애플리케이션 및 UWP 앱 간의 코드 공유
+title: 데스크톱 애플리케이션 및 UWP 앱 간의 코드 공유
 ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -82,7 +82,7 @@ Northwind 샘플 데이터베이스에서 고객을 표시 하는 매우 기본�
 
 ![Windows Forms 앱](images/desktop-to-uwp/win-forms-app.png)
 
-프로젝트는 **Northwind**라는 정적 클래스가 있는 .NET Standard 2.0 클래스 라이브러리를 포함 합니다. 이 코드를 **Northwind** 클래스로 이동 ``SQLConnection``하는 경우, ``SqlCommand``및 ``SqlDataReader`` 클래스를 사용 하 고 .NET Standard 2.0에서 사용할 수 없는 클래스를 사용 하기 때문에 컴파일되지 않습니다.
+프로젝트는 **Northwind**라는 정적 클래스가 있는 .NET Standard 2.0 클래스 라이브러리를 포함 합니다. 이 코드를 **Northwind** 클래스로 이동 하는 경우 ``SQLConnection`` , ``SqlCommand`` 및 ``SqlDataReader`` 클래스를 사용 하 고 .NET Standard 2.0에서 사용할 수 없는 클래스를 사용 하기 때문에 컴파일되지 않습니다.
 
 ```csharp
 public static ArrayList GetCustomerNames()
@@ -112,9 +112,9 @@ public static ArrayList GetCustomerNames()
 }
 
 ```
-그러나 [.NET API 브라우저](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0) 를 사용 하 여 다른 대안을 찾을 수 있습니다. , ``DbConnection`` ``DbCommand``및 ``DbDataReader`` 클래스는 모두 .NET Standard 2.0에서 사용할 수 있으므로 대신 사용할 수 있습니다.  
+그러나 [.NET API 브라우저](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0) 를 사용 하 여 다른 대안을 찾을 수 있습니다. ``DbConnection``, ``DbCommand`` 및 클래스는 ``DbDataReader`` 모두 .NET Standard 2.0에서 사용할 수 있으므로 대신 사용할 수 있습니다.  
 
-이 수정 된 버전은 이러한 클래스를 사용 하 여 고객 목록을 가져오지만 ``DbConnection`` 클래스를 만들려면 클라이언트 응용 프로그램에서 만든 팩터리 개체를 전달 해야 합니다.
+이 수정 된 버전은 이러한 클래스를 사용 하 여 고객 목록을 가져오지만 클래스를 만들려면 ``DbConnection`` 클라이언트 응용 프로그램에서 만든 팩터리 개체를 전달 해야 합니다.
 
 ```csharp
 public static ArrayList GetCustomerNames(DbProviderFactory factory)
@@ -282,9 +282,9 @@ Android, iOS 및 플랫폼 간 프로젝트를 시작 하려면 [Xamarin 개발�
 
 ## <a name="next-steps"></a>다음 단계
 
-**질문에 대 한 답변 찾기**
+**질문에 대한 답변 찾기**
 
-질문이 있으십니까? Stack Overflow에 대해 문의해 주세요. 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링 합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 요청할 수도 있습니다.
+질문이 있으세요? Stack Overflow에서 질문하세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 문의할 수도 있습니다.
 
 **피드백 제공 또는 기능 제안**
 

@@ -7,12 +7,12 @@ keywords: windows win32, 데스크톱 개발
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: c27826980127674b4a4356af8a3c36056e86bd83
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 5a55a1578fba7052396ecec725db2678ea8bd6ff
+ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74056865"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83580020"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Windows PC용 데스크톱 앱 빌드
 
@@ -62,6 +62,9 @@ Windows PC용 데스크톱 앱 빌드를 위한 주요 플랫폼에는 4가지�
 </tr>
 </tbody>
 </table>
+
+> [!NOTE]
+> 이러한 모든 애플리케이션 플랫폼은 클래식 Windows 데스크톱에서 실행되고 해당 환경의 기능을 최대한 활용하는 Word, Excel, Photoshop 등의 데스크톱 앱을 만들 수 있는 완전한 UI 프레임워크 및 UI 컨트롤 세트를 제공합니다. Windows 10에서 각 플랫폼은 Windows UI(WinUI) 라이브러리를 사용하여 사용자 인터페이스를 만들 수 있습니다. 데스크톱 앱용 WinUI에 대한 자세한 내용은 [이 섹션](choose-your-platform.md#windows-ui-library)을 참조하세요.
 
 ## <a name="update-existing-desktop-apps-for-windows-10"></a>Windows 10용 기존 데스크톱 앱 업데이트
 

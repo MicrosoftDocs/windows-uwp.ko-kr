@@ -20,7 +20,7 @@ ms.locfileid: "82730312"
 이 문서의 예제에서는 c #을 사용 하 여 만든 앱을 포함 하 여 UWP 앱에서 사용할 수 있는 네이티브 코드 Windows 런타임 구성 요소를 만드는 과정을 안내 합니다. 이 도우미 구성 요소는 OpenCV의 흐림 이미지 처리 함수를 사용 하는 단일 메서드인 **흐림 효과**를 노출 합니다. 구성 요소는 기본 이미지 데이터 버퍼에 대 한 포인터를 가져오는 전용 메서드를 구현 하며,이를 통해 OpenCV 라이브러리에서 직접 사용할 수 있으며 도우미 구성 요소를 간단 하 게 확장 하 여 다른 OpenCV 처리 기능을 구현할 수 있습니다. 
 
 * **\Bitmap**사용에 대 한 소개는 [비트맵 이미지 만들기, 편집 및 저장](imaging.md)을 참조 하세요. 
-* OpenCV 라이브러리를 사용 하는 방법에 대 한 자세한 [https://opencv.org](https://opencv.org)내용은을 참조 하세요.
+* OpenCV 라이브러리를 사용 하는 방법에 대 한 자세한 내용은을 참조 [https://opencv.org](https://opencv.org) 하세요.
 * **[MediaFrameReader](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader)** 를 사용 하 여이 문서에 나와 있는 opencv 도우미 구성 요소를 사용 하 여 카메라의 프레임에 대 한 실시간 이미지 처리를 구현 하는 방법을 보려면 [MediaFrameReader에서 opencv 사용](use-opencv-with-mediaframereader.md)을 참조 하세요.
 * 몇 가지 다른 효과를 구현 하는 전체 코드 예제는 Windows 유니버설 샘플 GitHub 리포지토리의 [카메라 프레임 + OpenCV 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraOpenCV) 을 참조 하세요.
 
@@ -101,7 +101,7 @@ Include 지시문 뒤에 다음 **using** 지시문을 추가 합니다.
 ## <a name="related-topics"></a>관련 항목
 
 * [BitmapEncoder 옵션 참조](bitmapencoder-options-reference.md)
-* [이미지 메타데이터](image-metadata.md)
+* [이미지 메타 데이터](image-metadata.md)
  
 
  

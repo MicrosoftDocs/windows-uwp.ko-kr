@@ -24,7 +24,7 @@ ms.locfileid: "82255208"
 
 이 자습서를 사용 하려면 다음이 필요 합니다.
 
-- 윈도우 10
+- Windows 10
 - [Visual Studio 2019: Community, Professional 또는 Enterprise](https://visualstudio.microsoft.com/downloads/) (참고 참조)
 - Visual Studio 2019에 대 한 ".NET을 사용한 모바일 개발" 워크 로드
 
@@ -49,7 +49,7 @@ Xamarin은 **TimeChangerAndroid**이라는 단일 프로젝트를 사용 하 여
 
 프로젝트의 **Resources\layout** 디렉터리에서 **activity_main**를 엽니다. 이 파일의 XML은 TimeChanger를 열 때 사용자에 게 표시 되는 첫 번째 화면을 정의 합니다.
 
-TimeChanger UI는 단순 합니다. 현재 시간을 표시 하 고 1 시간 단위로 시간을 조정 하는 단추를 포함 합니다. 세로 `LinearLayout` 를 사용 하 여 단추 위에 있는 시간을 맞추고 가로 `LinearLayout` 를 사용 하 여 단추를 나란히 정렬 합니다. 콘텐츠는 **android: 중력** 특성을 세로로 `LinearLayout` **가운데 맞춤** 으로 설정 하 여 화면 가운데에 배치 됩니다.
+TimeChanger UI는 단순 합니다. 현재 시간을 표시 하 고 1 시간 단위로 시간을 조정 하는 단추를 포함 합니다. 세로를 사용 하 여 `LinearLayout` 단추 위에 있는 시간을 맞추고 가로를 사용 하 여 단추를 나란히 `LinearLayout` 정렬 합니다. 콘텐츠는 **android: 중력** 특성을 세로로 **가운데 맞춤** 으로 설정 하 여 화면 가운데에 배치 됩니다 `LinearLayout` .
 
 **Activity_main** 의 내용을 다음 코드로 바꿉니다.
 
@@ -93,13 +93,13 @@ TimeChanger UI는 단순 합니다. 현재 시간을 표시 하 고 1 시간 단
 
 ### <a name="set-the-current-time"></a>현재 시간 설정
 
-먼저 시간이 표시 되는에 대 `TextView` 한 참조를 가져옵니다. **FindViewById** 를 사용 하 여 이전 단계의 xml에서로 `"@+id/timeDisplay"` 설정 된 올바른 **android: id** 를 사용 하 여 모든 UI 요소를 검색 합니다. 현재 시간을 `TextView` 표시 하는입니다.
+먼저 시간이 표시 되는에 대 한 참조를 가져옵니다 `TextView` . **FindViewById** 를 사용 하 여 이전 단계의 xml에서로 설정 된 올바른 **android: id** 를 사용 하 여 모든 UI 요소를 검색 합니다 `"@+id/timeDisplay"` . `TextView`현재 시간을 표시 하는입니다.
 
 ```csharp
 var timeDisplay = FindViewById<TextView>(Resource.Id.timeDisplay);
 ```
 
-Ui 스레드에서 ui 컨트롤을 업데이트 해야 합니다. 다른 스레드에서 변경한 내용이 화면에 표시 되 면 해당 컨트롤을 제대로 업데이트 하지 못할 수 있습니다. 이 코드는 항상 UI 스레드에서 실행 되는 것은 아닙니다. **Runonuithread** 메서드를 사용 하 여 업데이트가 제대로 표시 되는지 확인 합니다. 전체 `UpdateTimeLabel` 메서드는 다음과 같습니다.
+Ui 스레드에서 ui 컨트롤을 업데이트 해야 합니다. 다른 스레드에서 변경한 내용이 화면에 표시 되 면 해당 컨트롤을 제대로 업데이트 하지 못할 수 있습니다. 이 코드는 항상 UI 스레드에서 실행 되는 것은 아닙니다. **Runonuithread** 메서드를 사용 하 여 업데이트가 제대로 표시 되는지 확인 합니다. 전체 메서드는 다음과 같습니다 `UpdateTimeLabel` .
 
 ```csharp
 private void UpdateTimeLabel(object state = null)
@@ -147,7 +147,7 @@ public void UpButton_Click(object sender, System.EventArgs e)
 
 ### <a name="wire-up-the-up-and-down-buttons-to-their-corresponding-event-handlers"></a>해당 이벤트 처리기에 위쪽 및 아래쪽 단추를 연결 합니다.
 
-단추를 해당 이벤트 처리기와 연결 하려면 먼저 FindViewById를 사용 하 여 해당 id로 단추를 찾습니다. Button 개체에 대 한 참조를 만들었으면 이벤트에 `Click` 이벤트 처리기를 추가할 수 있습니다.
+단추를 해당 이벤트 처리기와 연결 하려면 먼저 FindViewById를 사용 하 여 해당 id로 단추를 찾습니다. Button 개체에 대 한 참조를 만들었으면 이벤트에 이벤트 처리기를 추가할 수 있습니다 `Click` .
 
 ```csharp
 Button upButton = FindViewById<Button>(Resource.Id.upButton);

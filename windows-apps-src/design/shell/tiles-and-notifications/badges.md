@@ -34,7 +34,7 @@ ms.locfileid: "82970878"
 
 <table>
     <tr>
-        <th>Value</th>
+        <th>값</th>
         <th>배지</th>
         <th>XML</th>
     </tr>
@@ -100,7 +100,7 @@ ms.locfileid: "82970878"
     <td>`<badge value="busy"/>`</td>
 </tr>
 <tr>
-    <td>오류</td>
+    <td>error</td>
     <td><img src="images/badges/badge-error.png" alt="Glyph" /></td>
     <td>`<badge value="error"/>`</td>
 </tr>

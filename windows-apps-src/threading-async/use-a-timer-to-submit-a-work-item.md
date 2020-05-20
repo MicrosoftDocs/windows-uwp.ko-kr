@@ -16,7 +16,7 @@ ms.locfileid: "82619337"
 # <a name="use-a-timer-to-submit-a-work-item"></a>타이머를 사용하여 작업 항목 제출
 
 
-<b>중요 한 Api</b>
+<b>중요 API</b>
 
 -   [**Windows 네임 스페이스**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
 -   [**Windows. System.object 네임 스페이스**](https://docs.microsoft.com/uwp/api/Windows.System.Threading)
@@ -27,7 +27,7 @@ ms.locfileid: "82619337"
 
 [**Createtimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer) 메서드를 사용 하 여 작업 항목에 대 한 타이머를 만듭니다. 작업을 수행 하는 람다를 제공 하 고 *delay* 매개 변수를 사용 하 여 스레드 풀이 작업 항목을 사용 가능한 스레드에 할당할 수 있을 때까지 대기 하는 시간을 지정 합니다. 지연 시간은 [**TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan) 구조체를 사용 하 여 지정 합니다.
 
-> **참고**   [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 를 사용 하 여 UI에 액세스 하 고 작업 항목에서 진행률을 표시할 수 있습니다.
+> **참고**    [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 를 사용 하 여 UI에 액세스 하 고 작업 항목에서 진행률을 표시할 수 있습니다.
 
 다음 예제에서는 3 분 내에 실행 되는 작업 항목을 만듭니다.
 
@@ -228,7 +228,7 @@ UWP (유니버설 Windows 플랫폼) 앱은 UI 스레드를 차단할 수 있으
 ## <a name="related-topics"></a>관련 항목
 
 * [스레드 풀에 작업 항목 제출](submit-a-work-item-to-the-thread-pool.md)
-* [스레드 풀 사용 모범 사례](best-practices-for-using-the-thread-pool.md)
+* [스레드 풀을 사용하기 위한 모범 사례](best-practices-for-using-the-thread-pool.md)
 * [타이머를 사용하여 작업 항목 제출](use-a-timer-to-submit-a-work-item.md)
  
 

@@ -26,7 +26,7 @@ ms.locfileid: "82730041"
 | [PointOfService 종단 간](pos-get-started.md)  | 위의 예제를 활용 하 여 PointOfService 주변 장치와 상호 작용 하는 방법에 대 한 종단 간 예제입니다. |
 |
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 | 항목   | Description |
 |:--------|:------------|
@@ -39,7 +39,7 @@ ms.locfileid: "82730041"
 |
 
 
-## <a name="sample-code"></a>예제 코드
+## <a name="sample-code"></a>샘플 코드
 + [바코드 스캐너 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
 + [현금 서랍 샘플]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
 + [줄 표시 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)

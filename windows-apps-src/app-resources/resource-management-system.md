@@ -35,7 +35,7 @@ ms.locfileid: "82868883"
 ### <a name="advanced-functionality-resourcemanager"></a>고급 기능 (ResourceManager)
 [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live) 클래스 ( [**Windows.**](/uwp/api/windows.applicationmodel.resources.core?branch=live) r e c. c u r e s. c u l. c u r e s. 이는 **Resourceloader** 클래스에서 제공 하는 것 이상으로 진행 됩니다.
 
-[**Namedresource**](/uwp/api/windows.applicationmodel.resources.core.namedresource?branch=live) 개체는 여러 언어 또는 기타 정규화 된 변형이 있는 개별 논리 리소스를 나타냅니다. 또는와 같은 문자열 리소스 식별자 `Header1`또는와 같은 리소스 파일 이름을 사용 하 여 자산이 나 리소스의 논리적 보기에 대해 설명 합니다. `logo.jpg`
+[**Namedresource**](/uwp/api/windows.applicationmodel.resources.core.namedresource?branch=live) 개체는 여러 언어 또는 기타 정규화 된 변형이 있는 개별 논리 리소스를 나타냅니다. 또는와 같은 문자열 리소스 식별자 또는와 같은 리소스 파일 이름을 사용 하 여 자산이 나 리소스의 논리적 보기에 대해 설명 합니다 `Header1` `logo.jpg` .
 
 [**ResourceCandidate**](/uwp/api/windows.applicationmodel.resources.core.resourcecandidate?branch=live) 개체는 단일 구체적 리소스 값과 해당 한정자 (예: 영어의 경우 "Hello World") 또는 "scale-100"를 **100** 해상도와 관련 된 정규화 된 이미지 리소스로 나타냅니다.
 
@@ -50,9 +50,9 @@ ResourceContext resourceContext = ResourceContext.GetForCurrentView()
 var str = resourceMap.GetValue("String1", resourceContext).ValueAsString;
 ```
 
-**참고** 리소스 식별자는 URI 의미 체계가 적용 되는 URI (Uniform Resource Identifier) 조각으로 취급 됩니다. 예를 들어 `GetValue("Caption%20")` 는로 `GetValue("Caption ")`처리 됩니다. 리소스 식별자의 "?" 또는 "#"은 리소스 경로 평가를 종료 하므로 사용 하지 마십시오. 예를 들어 "MyResource? 3"은 "MyResource"로 처리 됩니다.
+**참고** 리소스 식별자는 URI 의미 체계가 적용 되는 URI (Uniform Resource Identifier) 조각으로 취급 됩니다. 예를 들어 `GetValue("Caption%20")` 는로 처리 됩니다 `GetValue("Caption ")` . 리소스 식별자의 "?" 또는 "#"은 리소스 경로 평가를 종료 하므로 사용 하지 마십시오. 예를 들어 "MyResource? 3"은 "MyResource"로 처리 됩니다.
 
-**ResourceManager** 는 앱의 문자열 리소스에 대 한 액세스를 지원할 뿐만 아니라 다양 한 파일 리소스를 열거 하 고 검사 하는 기능도 유지 관리 합니다. 파일 및 파일 내에서 시작 되는 다른 리소스 간에 충돌을 피하기 위해 인덱싱된 파일 경로는 모두 예약 된 "파일" **Resourcemap** 하위 트리 내에 상주 합니다. 예를 들어 파일 `\Images\logo.png` 은 리소스 이름 `Files/images/logo.png`에 해당 합니다.
+**ResourceManager** 는 앱의 문자열 리소스에 대 한 액세스를 지원할 뿐만 아니라 다양 한 파일 리소스를 열거 하 고 검사 하는 기능도 유지 관리 합니다. 파일 및 파일 내에서 시작 되는 다른 리소스 간에 충돌을 피하기 위해 인덱싱된 파일 경로는 모두 예약 된 "파일" **Resourcemap** 하위 트리 내에 상주 합니다. 예를 들어 파일은 `\Images\logo.png` 리소스 이름에 해당 `Files/images/logo.png` 합니다.
 
 [**StorageFile**](/uwp/api/Windows.Storage.StorageFile?branch=live) api는 파일에 대 한 참조를 리소스로 투명 하 게 처리 하며 일반적인 사용 시나리오에 적합 합니다. **ResourceManager** 는 현재 컨텍스트를 재정의 하려는 경우와 같은 고급 시나리오에만 사용 해야 합니다.
 

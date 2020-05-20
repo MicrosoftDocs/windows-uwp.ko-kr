@@ -40,17 +40,17 @@ ms.locfileid: "82970128"
 
 ## <a name="privacy"></a>개인 정보 취급 방침
 
-눈 추적 장치에서 수집 하는 잠재적으로 중요 한 개인 데이터로 인해 응용 프로그램의 응용 프로그램 `gazeInput` 매니페스트에 기능을 선언 해야 합니다 (다음 **설정** 섹션 참조). 선언 된 경우 Windows는 응용 프로그램을 처음 실행할 때 동의 대화 상자를 자동으로 표시 합니다. 사용자는 앱이 눈 추적 장치와 통신 하 고이 데이터에 액세스할 수 있는 권한을 부여 해야 합니다.
+눈 추적 장치에서 수집 하는 잠재적으로 중요 한 개인 데이터로 인해 `gazeInput` 응용 프로그램의 응용 프로그램 매니페스트에 기능을 선언 해야 합니다 (다음 **설정** 섹션 참조). 선언 된 경우 Windows는 응용 프로그램을 처음 실행할 때 동의 대화 상자를 자동으로 표시 합니다. 사용자는 앱이 눈 추적 장치와 통신 하 고이 데이터에 액세스할 수 있는 권한을 부여 해야 합니다.
 
 또한 앱이 눈 추적 데이터를 수집, 저장 또는 전송 하는 경우 앱의 개인 정보 취급 방침에서이를 설명 하 고 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책의](https://docs.microsoft.com/legal/windows/agreements/store-policies) **개인 정보** 에 대 한 기타 모든 요구 사항을 준수 해야 합니다.
 
-## <a name="setup"></a>설치
+## <a name="setup"></a>설치 프로그램
 
 Windows 앱에서 응시 입력 Api를 사용 하려면 다음을 수행 해야 합니다. 
 
-- 앱 매니페스트에서 `gazeInput` 기능을 지정 합니다.
+- `gazeInput`앱 매니페스트에서 기능을 지정 합니다.
 
-    Visual Studio 매니페스트 디자이너를 사용 하 여 **appxmanifest.xml** 파일을 열거나, **코드 보기**를 선택 하 여 기능을 수동으로 추가 하 고, 다음 `DeviceCapability` 을 `Capabilities` 노드에 삽입 합니다.
+    Visual Studio 매니페스트 디자이너를 사용 하 여 **appxmanifest.xml** 파일을 열거나, **코드 보기**를 선택 하 여 기능을 수동으로 추가 하 고, 다음을 노드에 삽입 합니다 `DeviceCapability` `Capabilities` .
 
     ```xaml
     <Capabilities>
@@ -233,15 +233,15 @@ Windows 앱에서 응시 입력 Api를 사용 하려면 다음을 수행 해야 
 
 3. 다음으로, 응시 장치 감시자 메서드를 추가 합니다. 
     
-    `StartGazeDeviceWatcher`에서는 [createwatcher](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview.createwatcher) 를 호출 하 고, 아이 추적 장치 이벤트 수신기 ([Deviceadded](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview.added), [deviceadded](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview.updated)및 [DeviceRemoved](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview.removed))를 선언 합니다.
+    에서는 `StartGazeDeviceWatcher` [createwatcher](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview.createwatcher) 를 호출 하 고, 아이 추적 장치 이벤트 수신기 ([deviceadded](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview.added), [deviceadded](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview.updated)및 [DeviceRemoved](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview.removed))를 선언 합니다.
 
-    에서 `DeviceAdded`눈 추적 장치의 상태를 확인 합니다. 실행 가능한 장치인 경우 장치 수를 증가 시키고 응시 추적을 사용 하도록 설정 합니다. 자세한 내용은 다음 단계를 참조 하세요.
+    에서 `DeviceAdded` 눈 추적 장치의 상태를 확인 합니다. 실행 가능한 장치인 경우 장치 수를 증가 시키고 응시 추적을 사용 하도록 설정 합니다. 자세한 내용은 다음 단계를 참조 하세요.
 
-    에서는 `DeviceUpdated`장치가 recalibrated 때이 이벤트가 트리거되는 경우에도 응시 추적을 사용 하도록 설정 합니다.
+    에서는 `DeviceUpdated` 장치가 recalibrated 때이 이벤트가 트리거되는 경우에도 응시 추적을 사용 하도록 설정 합니다.
 
-    `DeviceRemoved`에서는 장치 카운터를 감소 하 고 장치 이벤트 처리기를 제거 합니다.
+    에서는 `DeviceRemoved` 장치 카운터를 감소 하 고 장치 이벤트 처리기를 제거 합니다.
 
-    `StopGazeDeviceWatcher`에서는 응시 장치 감시자를 종료 합니다. 
+    에서는 `StopGazeDeviceWatcher` 응시 장치 감시자를 종료 합니다. 
 
 ```csharp
     /// <summary>
@@ -328,9 +328,9 @@ Windows 앱에서 응시 입력 Api를 사용 하려면 다음을 수행 해야 
     }
 ```
 
-4. 여기서는 장치가에서 `IsSupportedDevice` 실행 가능한 지 확인 하 고, 그럴 경우에서 `TryEnableGazeTrackingAsync`응시 추적을 사용 하도록 설정 해 봅니다.
+4. 여기서는 장치가에서 실행 가능한 지 확인 하 `IsSupportedDevice` 고, 그럴 경우에서 응시 추적을 사용 하도록 설정 해 봅니다 `TryEnableGazeTrackingAsync` .
 
-    `TryEnableGazeTrackingAsync`에서는 응시 이벤트 처리기를 선언 하 고 [GazeInputSourcePreview ()](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview.getforcurrentview) 를 호출 하 여 입력 소스에 대 한 참조를 가져옵니다 .이는 ui 스레드에서 호출 해야 합니다. [ui 스레드 응답성 유지](https://docs.microsoft.com/windows/uwp/debug-test-perf/keep-the-ui-thread-responsive)를 참조 하세요.
+    에서는 `TryEnableGazeTrackingAsync` 응시 이벤트 처리기를 선언 하 고 [GazeInputSourcePreview ()](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview.getforcurrentview) 를 호출 하 여 입력 소스에 대 한 참조를 가져옵니다 .이는 ui 스레드에서 호출 해야 합니다. [ui 스레드 응답성 유지](https://docs.microsoft.com/windows/uwp/debug-test-perf/keep-the-ui-thread-responsive)를 참조 하세요.
 
     > [!NOTE]
     > 응용 프로그램에 호환 되는 눈 추적 장치가 연결 되어 필요한 경우에만 [GazeInputSourcePreview ()](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview.getforcurrentview) 를 호출 해야 합니다. 그렇지 않으면 동의 대화 상자가 필요 하지 않습니다.
@@ -403,9 +403,9 @@ Windows 앱에서 응시 입력 Api를 사용 하려면 다음을 수행 해야 
 
 5. 다음으로, 응시 이벤트 처리기를 설정 합니다.
 
-    및 `GazeEntered` `GazeExited`의 응시 추적 타원을 각각 표시 하 고 숨깁니다.
+    및의 응시 추적 타원을 각각 표시 하 고 숨깁니다 `GazeEntered` `GazeExited` .
 
-    `GazeMoved`에서는 [GazeEnteredPreviewEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs)의 [Currentpoint](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs.currentpoint) 에서 제공 하는 [EyeGazePosition](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview.eyegazeposition) 을 기반으로 하 여 응시 추적 타원이 이동 합니다. 또한 진행률 표시줄의 위치 변경을 트리거하는 [RadialProgressBar](https://docs.microsoft.com/windows/communitytoolkit/controls/radialprogressbar)에서 응시 포커스 타이머를 관리 합니다. 자세한 내용은 다음 단계를 참조 하세요.
+    에서는 `GazeMoved` [GazeEnteredPreviewEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs)의 [currentpoint](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs.currentpoint) 에서 제공 하는 [EyeGazePosition](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview.eyegazeposition) 을 기반으로 하 여 응시 추적 타원이 이동 합니다. 또한 진행률 표시줄의 위치 변경을 트리거하는 [RadialProgressBar](https://docs.microsoft.com/windows/communitytoolkit/controls/radialprogressbar)에서 응시 포커스 타이머를 관리 합니다. 자세한 내용은 다음 단계를 참조 하세요.
 
     ```csharp
     /// <summary>
@@ -596,7 +596,7 @@ Windows 앱에서 응시 입력 Api를 사용 하려면 다음을 수행 해야 
     }
     ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 ### <a name="resources"></a>리소스
 

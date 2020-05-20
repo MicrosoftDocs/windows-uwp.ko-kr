@@ -1,5 +1,5 @@
 ---
-Description: 이 문서에서는 타일 및 배지 업데이트 및 \#toast 알림 콘텐츠를 제공 하는 8212; 로컬, \#예약, 정기 및 푸시&8212의 네 가지 알림&옵션을 설명 합니다.
+Description: 이 문서에서는 \# \# 타일 및 배지 업데이트 및 toast 알림 콘텐츠를 제공 하는 8212; 로컬, 예약, 정기 및 푸시&8212의 네 가지 알림&옵션을 설명 합니다.
 title: 알림 전달 방법 선택
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
@@ -28,7 +28,7 @@ ms.locfileid: "82970828"
 앱에서 알림을 배달 하는 데 사용할 수 있는 메커니즘에는 다음 네 가지가 있습니다.
 
 -   **로컬**
--   **예약**
+-   **예약됨**
 -   **정기적인**
 -   **푸시**
 
@@ -55,13 +55,13 @@ ms.locfileid: "82970828"
 <td align="left">타일, 배지, 알림</td>
 <td align="left">앱이 실행 되는 동안 알림을 보내거나, 타일 또는 배지를 직접 업데이트 하거나, 알림 메시지를 보내는 API 호출 집합입니다.</td>
 <td align="left"><ul>
-<li>음악 앱은 타일을 업데이트 하 여 &quot;현재 재생&quot;중인 항목을 표시 합니다.</li>
+<li>음악 앱은 타일을 업데이트 하 여 현재 재생 중인 항목을 표시 &quot; &quot; 합니다.</li>
 <li>게임 앱은 사용자가 게임을 떠날 때 사용자의 높은 점수를 사용 하 여 타일을 업데이트 합니다.</li>
 <li>응용 프로그램이 활성화 될 때 앱이 제거 되는 새 정보가 있음을 나타내는 문자 모양의 배지입니다.</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left">예약</td>
+<td align="left">예약됨</td>
 <td align="left">타일, 알림</td>
 <td align="left">지정 된 시간에 업데이트 하기 위해 미리 알림을 예약 하는 API 호출 집합입니다.</td>
 <td align="left"><ul>
@@ -74,12 +74,12 @@ ms.locfileid: "82970828"
 <td align="left">새 콘텐츠에 대 한 클라우드 서비스를 폴링하여 고정 된 시간 간격으로 타일 및 배지를 정기적으로 업데이트 하는 알림입니다.</td>
 <td align="left"><ul>
 <li>날씨 앱은 예측을 30 분 간격으로 보여 주는 타일을 업데이트 합니다.</li>
-<li>일일 &quot;거래&quot; 사이트는 매일 아침에 업데이트를 업데이트 합니다.</li>
+<li>&quot;일일 거래 사이트는 매일 &quot; 아침에 업데이트를 업데이트 합니다.</li>
 <li>이벤트가 매일 자정에 표시 된 카운트다운을 업데이트할 때 까지의 기간 (일)을 표시 하는 타일입니다.</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left">밀어넣기</td>
+<td align="left">푸시</td>
 <td align="left">타일, 배지, 알림, Raw</td>
 <td align="left">앱이 실행 되 고 있지 않은 경우에도 클라우드 서버에서 전송 되는 알림</td>
 <td align="left"><ul>

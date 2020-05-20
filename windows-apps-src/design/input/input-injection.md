@@ -26,15 +26,15 @@ Windows 응용 프로그램의 키보드, 마우스, 터치, 펜 및 게임 패�
 
 입력 주입은 내게 필요한 옵션, 테스트 (임시, 자동), 원격 액세스 및 지원 기능을 포함 하는 기능을 제공 해야 하는 Windows 앱 및 도구에 유용 합니다.
 
-## <a name="setup"></a>설치
+## <a name="setup"></a>설치 프로그램
 
 Windows 앱에서 입력 주입 Api를 사용 하려면 앱 매니페스트에 다음을 추가 해야 합니다.
 
 1. **Appxmanifest.xml** 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 선택 합니다.
-1. `Package` 노드에 다음을 삽입 합니다.
+1. 노드에 다음을 삽입 합니다 `Package` .
     - `xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"`
     - `IgnorableNamespaces="rescap"`
-1. `Capabilities` 노드에 다음을 삽입 합니다.
+1. 노드에 다음을 삽입 합니다 `Capabilities` .
     - `<rescap:Capability Name="inputInjectionBrokered" />`
 
 ## <a name="duplicate-user-input"></a>중복 사용자 입력
@@ -51,7 +51,7 @@ Windows 앱에서 입력 주입 Api를 사용 하려면 앱 매니페스트에 �
 
     두 개의 그리드 영역 (마우스 입력 용으로 하나 및 삽입 된 터치식 입력 용)이 있고 각각 네 개의 단추가 있습니다.
       > [!NOTE] 
-      > 그리드 배경에는 값 (`Transparent`이 경우)을 할당 해야 합니다. 그렇지 않으면 포인터 이벤트가 검색 되지 않습니다.
+      > 그리드 배경에는 값 ( `Transparent` 이 경우)을 할당 해야 합니다. 그렇지 않으면 포인터 이벤트가 검색 되지 않습니다.
 
     입력 영역에서 마우스 클릭이 검색 되 면 해당 터치 이벤트가 입력 주입 영역에 삽입 됩니다. 삽입 입력의 단추 클릭이 제목 영역에 보고 됩니다.
 
@@ -172,9 +172,9 @@ Windows 앱에서 입력 주입 Api를 사용 하려면 앱 매니페스트에 �
 
     [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector) 개체는 입력 데이터를 전송 하기 위한 가상 입력 장치를 나타냅니다.
 
-    `ContainerInput_PointerPressed` 처리기에서 터치 삽입 함수를 호출 합니다.
+    처리기에서 `ContainerInput_PointerPressed` 터치 삽입 함수를 호출 합니다.
 
-    `ContainerInput_PointerReleased` 처리기에서 UninitializeTouchInjection을 호출 하 여 [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector) 개체를 종료 합니다.
+    처리기에서 `ContainerInput_PointerReleased` UninitializeTouchInjection을 호출 하 여 [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector) 개체를 종료 합니다.
 
     ```csharp
     public sealed partial class MainPage : Page
@@ -253,7 +253,7 @@ Windows 앱에서 입력 주입 Api를 사용 하려면 앱 매니페스트에 �
 
     먼저, [InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector) 개체를 인스턴스화하기 위해 [trcreate](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.trycreate) 를 호출 합니다.
 
-    그런 다음 [InjectedInputVisualizationMode](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputvisualizationmode) 를 사용 하 여 [InitializeTouchInjection](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.initializetouchinjection) 를 `Default`호출 합니다.
+    그런 다음 [InjectedInputVisualizationMode](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputvisualizationmode) 를 사용 하 여 [InitializeTouchInjection](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector.initializetouchinjection) 를 호출 `Default` 합니다.
 
     삽입 지점을 계산한 후에는 [InjectedInputTouchInfo](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputtouchinfo) 를 호출 하 여 삽입할 터치 포인트 목록을 초기화 합니다 .이 예제에서는 마우스 입력 포인터에 해당 하는 터치 지점을 하나 만듭니다.
 
@@ -361,7 +361,7 @@ Windows 앱에서 입력 주입 Api를 사용 하려면 앱 매니페스트에 �
 
 4. 마지막으로 입력 주입 영역에서 모든 단추 [클릭](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase) 라우트된 이벤트를 처리 하 고 클릭 한 단추 이름으로 UI를 업데이트 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 ### <a name="topic-samples"></a>토픽 샘플
 

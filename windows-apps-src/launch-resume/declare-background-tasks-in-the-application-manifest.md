@@ -18,7 +18,7 @@ ms.locfileid: "82606202"
 
 
 
-**중요 한 Api**
+**중요 API**
 
 -   [**BackgroundTasks 스키마**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
 -   [**Windows ApplicationModel. 배경**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
@@ -90,7 +90,7 @@ Out-of-process 백그라운드 작업은 응용 프로그램 매니페스트에�
 
 2.  작업 유형 특성 목록을 변경 하 여이 백그라운드 작업에 사용 되는 작업 등록 유형을 표시 합니다. 여러 트리거 형식으로 백그라운드 작업을 등록 한 경우에는 각 작업 요소에 대해 다른 작업 요소 및 형식 특성을 추가 합니다.
 
-    **참고**  사용 중인 각 트리거 유형을 나열 해야 합니다. 그렇지 않으면 백그라운드 작업이 선언 되지 않은 트리거 형식에 등록 되지 않습니다. [**register**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) 메서드가 실패 하 고 예외를 throw 합니다.
+    **참고**    사용 중인 각 트리거 형식을 나열 해야 합니다. 그렇지 않으면 백그라운드 작업이 선언 되지 않은 트리거 형식에 등록 되지 않습니다. [**register**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) 메서드가 실패 하 고 예외가 throw 됩니다.
 
     이 코드 조각 예제는 시스템 이벤트 트리거와 푸시 알림을 사용 하는 것을 나타냅니다.
 
@@ -154,8 +154,8 @@ Out-of-process 백그라운드 작업은 응용 프로그램 매니페스트에�
 
 * 기본적으로 BackgroundTaskHost 프로세스에서 실행 됩니다.
 * 포그라운드 응용 프로그램과 동일한 프로세스에서.
-* 를 `ResourceGroup` 사용 하 여 여러 백그라운드 작업을 동일한 호스팅 프로세스에 추가 하거나 다른 프로세스로 구분 합니다.
-* 를 `SupportsMultipleInstances` 사용 하 여 새 트리거가 발생할 때마다 자체 리소스 제한 (메모리, cpu)을 가져오는 새 프로세스에서 백그라운드 프로세스를 실행 합니다.
+* `ResourceGroup`를 사용 하 여 여러 백그라운드 작업을 동일한 호스팅 프로세스에 추가 하거나 다른 프로세스로 구분 합니다.
+* `SupportsMultipleInstances`를 사용 하 여 새 트리거가 발생할 때마다 자체 리소스 제한 (메모리, cpu)을 가져오는 새 프로세스에서 백그라운드 프로세스를 실행 합니다.
 
 ### <a name="run-in-the-same-process-as-your-foreground-application"></a>포그라운드 응용 프로그램과 동일한 프로세스에서 실행
 
@@ -209,7 +209,7 @@ Out-of-process 백그라운드 작업은 응용 프로그램 매니페스트에�
 
 ### <a name="run-in-a-new-process-each-time-a-trigger-fires-with-the-supportsmultipleinstances-attribute"></a>SupportsMultipleInstances 특성을 사용 하 여 트리거가 발생 될 때마다 새 프로세스에서 실행
 
-이 예에서는 새 트리거가 발생할 때마다 자체 리소스 제한 (메모리 및 CPU)을 가져오는 새 프로세스에서 실행 되는 백그라운드 작업을 선언 합니다. 를 사용 하면이 `SupportsMultipleInstances` 동작을 사용할 수 있습니다. 이 특성을 사용 하려면 SDK 버전 ' 10.0.15063 ' (Windows 10 크리에이터 업데이트) 이상을 대상으로 해야 합니다.
+이 예에서는 새 트리거가 발생할 때마다 자체 리소스 제한 (메모리 및 CPU)을 가져오는 새 프로세스에서 실행 되는 백그라운드 작업을 선언 합니다. 를 사용 하면 `SupportsMultipleInstances` 이 동작을 사용할 수 있습니다. 이 특성을 사용 하려면 SDK 버전 ' 10.0.15063 ' (Windows 10 크리에이터 업데이트) 이상을 대상으로 해야 합니다.
 
 ```xml
 <Package
@@ -230,7 +230,7 @@ Out-of-process 백그라운드 작업은 응용 프로그램 매니페스트에�
 ```
 
 > [!NOTE]
-> 과 `SupportsMultipleInstances`함께 또는 `ResourceGroup` `ServerName` 를 지정할 수 없습니다.
+> 과 함께 또는를 지정할 수 없습니다 `ResourceGroup` `ServerName` `SupportsMultipleInstances` .
 
 ## <a name="related-topics"></a>관련 항목
 

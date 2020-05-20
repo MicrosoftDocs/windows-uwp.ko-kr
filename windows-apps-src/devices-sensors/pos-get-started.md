@@ -207,7 +207,7 @@ if (claimedBarcodeScanner != null)
 > [!NOTE]
 > 요청 된 지점 및 취소 서비스 장치 클래스 모두 [은 windows.foundation.iclosable 인터페이스](https://docs.microsoft.com/uwp/api/windows.foundation.iclosable)를 구현 합니다. 장치가 네트워크 또는 Bluetooth를 통해 앱에 연결 된 경우 다른 앱이 연결 하려면 먼저 요청 된 개체와 취소 개체를 모두 삭제 해야 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 + [바코드 스캐너 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
 + [현금 서랍 샘플]( https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CashDrawer)
 + [줄 표시 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)

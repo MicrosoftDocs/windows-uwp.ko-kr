@@ -1,7 +1,7 @@
 ---
 ms.assetid: 79C284CA-C53A-4C24-807E-6D4CE1A29BFA
 description: 이 섹션에서는 이전 Windows 8.1 버전에서 Windows 10 버전으로 변경 된 내용을 지원 하도록 PlayReady 웹 앱을 수정 하는 방법을 설명 합니다.
-title: PlayReady 암호화 된 미디어 확장
+title: PlayReady 암호화된 미디어 확장
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -13,7 +13,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 05/01/2020
 ms.locfileid: "82619317"
 ---
-# <a name="playready-encrypted-media-extension"></a>PlayReady 암호화 된 미디어 확장
+# <a name="playready-encrypted-media-extension"></a>PlayReady 암호화된 미디어 확장
 
 
 
@@ -37,7 +37,7 @@ Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹
     Windows 8.1에서와 같이 여러 키 식별자 (KeyIDs)가 포함 된 PlayReady 개체를 사용 하거나 여러 KeyIDs로 [콘텐츠 암호 해독 모델 데이터 (CDMData)](https://docs.microsoft.com/previous-versions/windows/apps/dn457361(v=ieb.10)?redirectedfrom=MSDN) 를 사용할 수 있습니다.
 
     > [!NOTE]
-    > Windows 10에서는 CDMData의 &lt;KeyID&gt; 에서 여러 키 식별자를 사용할 수 있습니다.
+    > Windows 10에서는 &lt; CDMData의 KeyID에서 여러 키 식별자를 사용할 수 &gt; 있습니다.
 
 -   실시간 만료 지원 또는 제한 된 기간 라이선스 (LDL)가 추가 되었습니다.
 
@@ -67,12 +67,12 @@ Web Apps에 대 한 PlayReady는 현재 [2013 년 5 월 10 일 W3C 암호화 된
 
 이 섹션에서는 웹 앱이 PlayReady 하드웨어 DRM을 사용 하는 방법 및 보호 된 콘텐츠가 지원 하지 않는 경우 하드웨어 DRM을 사용 하지 않도록 설정 하는 방법을 설명 합니다.
 
-PlayReady 하드웨어 DRM을 사용 하려면 JavaScript 웹 앱에서의 `com.microsoft.playready.hardware` 키 시스템 식별자와 함께 **isTypeSupported** EME 메서드를 사용 하 여 브라우저에서 playready 하드웨어 DRM 지원을 쿼리해야 합니다.
+PlayReady 하드웨어 DRM을 사용 하려면 JavaScript 웹 앱에서의 키 시스템 식별자와 함께 **isTypeSupported** EME 메서드를 사용 하 여 `com.microsoft.playready.hardware` 브라우저에서 playready 하드웨어 DRM 지원을 쿼리해야 합니다.
 
 일부 콘텐츠가 하드웨어 DRM에서 지원 되지 않는 경우도 있습니다. 하드웨어 DRM에서는 칵테일 콘텐츠가 지원 되지 않습니다. 칵테일 콘텐츠를 재생 하려는 경우 하드웨어 DRM을 옵트아웃 해야 합니다. 일부 하드웨어 DRM은 HEVC를 지원 하 고 일부는 지원 하지 않습니다. HEVC 콘텐츠를 재생 하려는 경우 하드웨어 DRM이이를 지원 하지 않으면 옵트아웃 (opt out) 할 수 있습니다.
 
 > [!NOTE]
-> HEVC 콘텐츠가 지원 되는지 여부를 확인 하려면 인스턴스화 `com.microsoft.playready`후 [**PlayReadyStatics 하드웨어**](https://docs.microsoft.com/uwp/api/windows.media.protection.playready.playreadystatics.checksupportedhardware) 메서드를 사용 합니다.
+> HEVC 콘텐츠가 지원 되는지 여부를 확인 하려면 인스턴스화 후 `com.microsoft.playready` [**PlayReadyStatics 하드웨어**](https://docs.microsoft.com/uwp/api/windows.media.protection.playready.playreadystatics.checksupportedhardware) 메서드를 사용 합니다.
 
 ## <a name="add-secure-stop-to-your-web-app"></a>웹앱에 보안 중지 추가
 
@@ -90,7 +90,7 @@ Secure stop은 PlayReady 장치가 지정 된 콘텐츠에 대해 미디어 재�
 프레젠테이션의 정상적인 종료를 위한 보안 중지를 설정 하려면 다음을 수행 합니다.
 
 1.  재생이 시작 되기 전에 **Onended** 이벤트를 등록 합니다.
-2.  **Onended** 이벤트 처리기는 media foundation에서 `removeAttribute("src")` 토폴로지를 분리 하 고, 암호 해독기를 삭제 하 고, 중지 상태를 설정 하기 위해 media Foundation이 트리거하는 **NULL** 로 설정 하기 위해 video/audio 요소 개체에서를 호출 해야 합니다.
+2.  **Onended** 이벤트 처리기는 `removeAttribute("src")` media foundation에서 토폴로지를 분리 하 고, 암호 해독기를 삭제 하 고, 중지 상태를 설정 하기 위해 media foundation이 트리거하는 **NULL** 로 설정 하기 위해 video/audio 요소 개체에서를 호출 해야 합니다.
 3.  처리기 내에서 secure stop CDM 세션을 시작 하 여이 시점에서 재생이 중지 되었음을 알리는 보안 중지 챌린지를 서버에 보낼 수 있지만 나중에 수행할 수도 있습니다.
 
 사용자가 페이지에서 다른 곳으로 이동 하거나 탭 또는 브라우저를 닫을 때 보안 중지를 설정 하려면 다음을 수행 합니다.
@@ -262,13 +262,13 @@ function formatSecureStopCDMData(encodedSessionId, customData, encodedPublisherC
 ```
 
 > [!NOTE]
-> 위의 샘플 `<SessionID>B64 encoded session ID</SessionID>` 에서 보안 중지 데이터는 별표 (\*)가 될 수 있으며,이는 기록 된 모든 보안 중지 세션의 와일드 카드입니다. 즉, **SessionID** 태그를 특정 세션이 나 와일드 카드 (\*)로 설정 하 여 모든 보안 중지 세션을 선택할 수 있습니다.
+> 위의 샘플에서 보안 중지 데이터는 `<SessionID>B64 encoded session ID</SessionID>` 별표 ()가 될 수 있으며 \* ,이는 기록 된 모든 보안 중지 세션의 와일드 카드입니다. 즉, **SessionID** 태그를 특정 세션이 나 와일드 카드 ( \* )로 설정 하 여 모든 보안 중지 세션을 선택할 수 있습니다.
 
 ## <a name="programming-considerations-for-encrypted-media-extension"></a>암호화 된 미디어 확장에 대 한 프로그래밍 고려 사항
 
 이 섹션에는 Windows 10 용 PlayReady 사용 웹 앱을 만들 때 고려해 야 할 프로그래밍 고려 사항이 나열 되어 있습니다.
 
-앱이 종료 될 때까지 앱에서 만든 **Msmediakeys** 및 **Msmediakeysession** 개체는 모두 활성 상태로 유지 되어야 합니다. 이러한 개체를 활성 상태로 유지 하는 한 가지 방법은 해당 개체를 전역 변수로 할당 하는 것입니다. 변수는 범위를 벗어난 것 이며 함수 내에서 지역 변수로 선언 된 경우 가비지 컬렉션에 적용 됩니다. 예를 들어 다음 샘플에서는 *g\_msmediakeys* 및 *\_g mediakeysession* 변수를 전역 변수로 할당 합니다. 그런 다음이 변수는 함수에서 **msmediakeys** 및 **msmediakeysession** 개체에 할당 됩니다.
+앱이 종료 될 때까지 앱에서 만든 **Msmediakeys** 및 **Msmediakeysession** 개체는 모두 활성 상태로 유지 되어야 합니다. 이러한 개체를 활성 상태로 유지 하는 한 가지 방법은 해당 개체를 전역 변수로 할당 하는 것입니다. 변수는 범위를 벗어난 것 이며 함수 내에서 지역 변수로 선언 된 경우 가비지 컬렉션에 적용 됩니다. 예를 들어 다음 샘플에서는 *g \_ msmediakeys* 및 *g \_ mediakeysession* 변수를 전역 변수로 할당 합니다. 그런 다음이 변수는 함수에서 **msmediakeys** 및 **msmediakeysession** 개체에 할당 됩니다.
 
 ``` syntax
 var g_msMediaKeys;
@@ -298,7 +298,7 @@ function foo() {
 
 자세한 내용은 [샘플 응용 프로그램](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/PlayReady)을 참조 하세요.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 - [PlayReady DRM](playready-client-sdk.md)
 
 
