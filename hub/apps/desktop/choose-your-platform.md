@@ -8,38 +8,27 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, 데스크톱 개발
-ms.openlocfilehash: 906126c14dd32a9c0196d53deab5bc36c07f4bef
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: c14b092b9cce9ce7e3b180eaedef657e2d3d03db
+ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729842"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83580010"
 ---
 # <a name="choose-your-app-platform"></a>앱 플랫폼 선택
 
 Windows PC에 대한 새 데스크톱 애플리케이션을 만들려는 경우 가장 먼저 해야할 것은 사용할 애플리케이션 플랫폼을 결정하는 것입니다. Windows는 각각 서로 다른 강점이 있는 네 가지 주요 애플리케이션 플랫폼을 제공합니다.
 
-* [UWP(유니버설 Windows 플랫폼)](#uwp)
-* [WPF(.NET)](#wpf)
-* [Windows Forms(.NET)](#windows-forms)
-* [Win32](#win32)
+* [UWP(유니버설 Windows 플랫폼)](#uwp): 이 플랫폼은 Windows 10을 실행하는 모든 디바이스에 대한 CTS(공용 형식 시스템), API 및 애플리케이션 모델을 제공합니다. UWP 애플리케이션은 네이티브이거나 관리형일 수 있습니다.
+* [WPF](#wpf) 및 [Windows Forms](#windows-forms): 이러한 .NET 기반 플랫폼은 관리형 애플리케이션을 위한 공용 형식 시스템, API 및 애플리케이션 모델을 제공합니다.
+* [Win32](#win32): Windows 및 하드웨어에 직접 액세스해야 하는 기본 C/C++ Windows 애플리케이션을 위한 원본 플랫폼입니다. 따라서 Win32 API는 가장 높은 수준의 성능과 시스템 하드웨어에 대한 직접 액세스가 필요한 애플리케이션에 적합한 플랫폼입니다.
 
-이러한 모든 애플리케이션 플랫폼을 사용하여 클래식 Windows 데스크톱에서 실행되고 해당 환경의 특정 기능을 최대한 활용하는 Word, Excel, Photoshop과 같은 데스크톱 앱을 만들 수 있습니다. 그러나 이러한 플랫폼 중 일부는 몇 가지 특성을 공유하며 특정 유형의 애플리케이션에 더 적합합니다.
+각 플랫폼에는 클래식 Windows 데스크톱에서 실행되고 해당 환경의 기능을 최대한 활용하는 Word, Excel, Photoshop 등의 데스크톱 앱을 만들 수 있는 완전한 UI 프레임워크 및 UI 컨트롤 세트가 포함되어 있습니다. Windows 10에서 각 플랫폼은 [WinUI(Windows UI) 라이브러리](#windows-ui-library)를 사용하여 사용자 인터페이스를 만들 수 있습니다.
 
-* **UWP**. 이 플랫폼은 Windows 10을 실행하는 모든 디바이스에 대한 CTS(공용 형식 시스템), API 및 애플리케이션 모델을 제공합니다. UWP 애플리케이션은 네이티브이거나 관리형일 수 있습니다. 
-
-* **WPF 및 Windows Forms**. 이러한 플랫폼은 .NET에서 실행되는 관리형 애플리케이션에 대한 CTS(공용 형식 시스템), API 및 애플리케이션 모델을 제공합니다.
-
-* **Win32 API**. Win32 API(Windows API라고도 함)는 Windows 및 하드웨어에 직접 액세스해야 하는 네이티브 C/C++ Windows 애플리케이션을 위한 원본 플랫폼입니다. 따라서 Win32 API는 가장 높은 수준의 성능과 시스템 하드웨어에 대한 직접 액세스가 필요한 애플리케이션에 적합한 플랫폼입니다.
-
-Windows 10에서 이러한 모든 플랫폼은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui)를 사용하여 사용자 인터페이스를 만들 수 있도록 지원합니다. WinUI는 기존 XAML 컨트롤의 향상된 버전과 새 컨트롤을 포함한 최신 컨트롤 세트를 제공합니다. 또한 WinUI는 이전 버전의 Windows 10도 지원하여 가용성을 최대화합니다.
-
-UWP 및 .NET은 Visual Studio와 긴밀하게 통합되었습니다. 이는 특히 개발자 생산성, 정교하고 사용자 지정 가능한 UI, 애플리케이션 보안 분야에서 다양한 이점을 제공합니다. 이러한 프레임워크는 UI를 신속하게 만들기 위한 비주얼 디자이너 및 UI 태그를 지원하므로 LOB(기간 업무) 애플리케이션에 특히 적합합니다.
-
-이 문서에서는 이러한 플랫폼에 대해 자세히 설명하고 애플리케이션에 가장 적합한 플랫폼을 결정하는 데 도움을 줍니다. 
+이러한 플랫폼 중 일부는 몇 가지 공통적인 특성을 갖고 있으며 특정 유형의 애플리케이션에 더 적합합니다. 예를 들어 UWP 및 .NET은 Visual Studio와 긴밀하게 통합되었습니다. 이는 특히 개발자 생산성, 정교하고 사용자 지정 가능한 UI, 애플리케이션 보안 분야에서 다양한 이점을 제공합니다. 이러한 프레임워크는 UI를 신속하게 만들기 위한 비주얼 디자이너 및 UI 태그를 지원하므로 LOB(기간 업무) 애플리케이션에 특히 적합합니다.
 
 > [!NOTE]
-> 선택한 앱 플랫폼이 무엇이든 UWP(유니버설 Windows 플랫폼)의 여러 기능을 사용하여 Windows 10의 앱에 최신 환경을 제공할 수 있습니다. 예를 들어, WPF, Windows Forms 또는 Win32 API를 사용하여 데스크톱 앱을 빌드한 경우에도 UWP에 처음 도입된 많은 기능(예: MSIX 패키지 배포 및 UWP XAML 제어)을 계속 사용할 수 있습니다. 자세한 내용은 [데스크톱 앱 현대화](modernize/index.md)를 참조하세요.
+> 어떤 앱 플랫폼을 선택하든, 여러 Windows 10 기능을 사용하여 앱에서 최신 환경을 제공할 수 있습니다. 예를 들어 WPF, Windows Forms 또는 Win32 API를 사용하여 데스크톱 앱을 빌드하더라도 MSIX 패키지 배포를 계속 사용할 수 있습니다. 데스크톱 앱을 현대화하는 모든 방법에 대한 자세한 내용은 [데스크톱 앱 현대화](modernize/index.md)를 참조하세요.
 
 ## <a name="uwp"></a>UWP
 
@@ -99,6 +88,16 @@ C++와 함께 Win32 API를 사용하면 WinRT 및 .NET과 같은 관리형 런�
 * [기술 및 기능](/windows/win32/desktop-app-technologies)
 * [API 참조](/windows/win32/apiindex/windows-api-list/)
 * [샘플](https://github.com/Microsoft/Windows-classic-samples)
+
+## <a name="windows-ui-library"></a>Windows UI Library
+
+Windows 10에서 각각의 주요 데스크톱 플랫폼은 [WinUI(Windows UI) 라이브러리](../winui/index.md)를 사용하여 사용자 인터페이스를 만들 수 있습니다. WinUI는 하위 버전의 Windows 10을 대상으로 하는 UWP 앱을 위한 최신 버전 및 업데이트된 버전의 UWP 컨트롤을 제공하는 도구 키트로 시작되었습니다. WinUI는 대상 범위를 늘려 왔으며, 이제는 UWP, .NET 및 Win32에서 Windows 10 앱에 사용되는 최신 기본 UI(사용자 인터페이스) 플랫폼으로 자리잡았습니다.
+
+데스크톱 앱에서 다음과 같은 방법으로 WinUI를 사용할 수 있습니다.
+
+* UWP 앱은 Windows SDK에서 제공하는 UWP 컨트롤 대신 WinUI 컨트롤을 사용할 수 있습니다.
+* [XAML Islands](modernize/xaml-islands.md)를 사용하도록 기존 WPF, Windows Forms 및 C++/Win32 앱을 업데이트하여 앱에서 WinUI 2.x 컨트롤을 호스트할 수 있습니다.
+* [WinUi 3.0 Preview 1](../winui/winui3/index.md)부터 [전적으로 WinUI 기반 UI를 사용하는 .NET 및 C++/Win32 앱을 만들 수 있습니다](../winui/winui3/get-started-winui3-for-desktop.md).
 
 ## <a name="platform-comparison-uwp-wpf-and-windows-forms"></a>플랫폼 비교: UWP, WPF 및 Windows Forms
 

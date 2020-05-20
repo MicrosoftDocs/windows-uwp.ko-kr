@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: d050e2b4a7659f8910ce603ec7e90b703cc7722f
-ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
+ms.openlocfilehash: 4175fdf2cbb10912c22e0b0058629819c87dbc63
+ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82606242"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83579920"
 ---
 # <a name="host-uwp-xaml-controls-in-desktop-apps-xaml-islands"></a>데스크톱 앱에서 UWP XAML 컨트롤 호스트(XAML Islands)
 
@@ -129,7 +129,7 @@ UWP XAML 호스팅 API를 기반으로 다양한 유형의 XAML Island 컨트롤
 
 ### <a name="supported-only-with-workarounds"></a>임시 방편으로만 지원
 
-:heavy_check_mark: XAML Island의 [WinUI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)에서 UWP 컨트롤을 호스팅하는 것은 현재 릴리스의 XAML Islands에서 조건부로 지원됩니다. 데스크톱 앱이 [MSIX 패키지](https://docs.microsoft.com/windows/msix)를 배포에 사용하는 경우 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NugGet 패키지의 시험판 또는 릴리스 버전에서 WinUI 컨트롤을 호스팅할 수 있습니다. 데스크톱 앱이 MSIX를 사용하여 패키지되지 않은 경우 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지의 시험판 버전을 설치한 경우에만 WinUI 컨트롤을 호스팅할 수 있습니다.
+:heavy_check_mark: XAML Island의 [WinUI 2.x 라이브러리](../../winui/index.md)의 컨트롤을 호스팅하는 것은 현재 XAML Islands 릴리스에서 조건부로 지원됩니다. 데스크톱 앱이 [MSIX 패키지](https://docs.microsoft.com/windows/msix)를 배포에 사용하는 경우 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NugGet 패키지의 시험판 또는 릴리스 버전에서 WinUI 컨트롤을 호스팅할 수 있습니다. 데스크톱 앱이 MSIX를 사용하여 패키지되지 않은 경우 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지의 시험판 버전을 설치한 경우에만 WinUI 컨트롤을 호스팅할 수 있습니다. [WinUI 3.0 라이브러리](../../winui/winui3/index.md)의 컨트롤을 호스팅하는 기능은 이후 릴리스에서 지원할 예정입니다.
 
 :heavy_check_mark: XAML Island에서 XAML 콘텐츠 트리의 루트 요소에 액세스하여 루트 요소가 호스팅되는 컨텍스트에 대한 관련 정보를 얻으려면 [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow), [ApplicationView](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview) 및 [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window)를 사용하지 마세요. 그 대신 [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot) 클래스를 사용하세요. 자세한 내용은 [이 섹션](#window-host-context-for-xaml-islands)을 참조하세요.
 
