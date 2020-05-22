@@ -11,12 +11,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fc05ce50c19a04d5b90d225746c9af6569f49bd3
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: b16ad72541f34e40d1b0cf534082eb68b0843141
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970438"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234727"
 ---
 # <a name="xaml-theme-resources"></a>XAML 테마 리소스
 
@@ -202,7 +202,7 @@ For many examples of how the brushes are used in the XAML control templates, see
 -->
 
 > [!NOTE]
-> \[‘단순한 고대비 이름’\]\[’단순한 밝게/어둡게 이름’\]의 모든 조합이 브러시 리소스로 제공되는 것은 아닙니다.  
+> \[‘단순한 고대비 이름’\]\[’단순한 밝게/어둡게 이름’\]의 모든 조합이 브러시 리소스로 제공되는 것은 아닙니다. 
 
 ## <a name="the-xaml-type-ramp"></a>XAML 유형 램프
 

@@ -7,14 +7,14 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d0e7ad60e8c709cf4a7b075b1d7307bbd61ed79c
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 299a25bb92c5afdb86ebc1569a1f98916baa3d09
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969358"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83233958"
 ---
-# <a name="introduction-to-uwp-app-design"></a>UWP 앱 디자인 소개
+# <a name="introduction-to-windows-app-design"></a>Windows 앱 디자인 소개
 
 ![샘플 조명 앱](images/introUWP-header.jpg)
 

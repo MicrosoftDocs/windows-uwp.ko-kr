@@ -1,16 +1,16 @@
 ---
 title: Windows 10 Fall Creators Update API 변경 사항
 description: 개발자는 다음 목록을 사용하여 Windows 10 빌드 16299에서 새롭게 추가되었거나 변경된 네임스페이스를 식별할 수 있습니다.
-keywords: 새로운 기능, 새로운 기능, 업데이트, Windows 10, 1709, 가을, 크리에이터스, api, 16299
+keywords: Windows 10, 1709, API, 16299
 ms.date: 11/02/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 25707dfbf6753c51b4cf47bcbe95dc66802ee781
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 3acf698ecfa3fdbcde751691049a217a573d4102
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63780440"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234714"
 ---
 # <a name="new-apis-in-windows-10-build-16299"></a>Windows 10 빌드 16299의 새로운 API
 

@@ -1,20 +1,20 @@
 ---
 title: Windows 10 빌드 17134의 새로운 기능
 description: Windows 10 빌드 17134 및 새로운 개발자 도구는 유니버설 Windows 플랫폼이 지원되는 도구, 기능 및 환경을 제공합니다.
-keywords: 새로운 기능, 새로운 기능, 업데이트, 업데이트, 기능, 신규, Windows 10, 최신, 개발자, 17134
+keywords: Windows 10, 17134, 1803
 ms.date: 04/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cce2c6c36918a117ba6aee25987be9060b3ec148
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 12c788cae02cdc5a0cf8e26f02ea03264960ce49
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74258871"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234371"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17134"></a>개발자용 Windows 10 빌드 17134의 새로운 기능
 
-Visual Studio 2019 및 업데이트된 SDK와 함께 사용되는 Windows 10 빌드 17134(4월 업데이트 또는 버전 1803이라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 알아볼 수 있습니다.
+Visual Studio 2019 및 업데이트된 SDK와 함께 사용되는 Windows 10 빌드 17134(4월 업데이트 또는 버전 1803이라고도 함)는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)하면 [새로운 유니버설 Windows 앱을 생성](../get-started/create-uwp-apps.md)하거나 [Windows의 기존 앱 코드](../porting/index.md)를 사용하는 방법을 살펴볼 수 있습니다.
 
 다음은 이 릴리스에서 Windows 개발자가 관심을 갖는 신규 및 개선 기능 및 안내 모음입니다. Windows SDK에 추가된 새 네임스페이스의 전체 목록은 [Windows 10 빌드 17134 API 변경 내용](windows-10-build-17134-api-diff.md)을 참조하세요. Windows 10의 주요 기능에 대한 자세한 내용은 [Windows 10의 새로운 기능](https://developer.microsoft.com/windows/windows-10-for-developers)을 참조하세요. 그리고 이전에 있었던 그리고 앞으로 있을 Windows 플랫폼 기능 추가에 대한 개략적인 내용은 [Windows 개발자 플랫폼 기능](https://developer.microsoft.com/windows/platform/features)을 참조하세요.
 
@@ -32,7 +32,7 @@ Fluent Design 업데이트 | 새로운 정보 및 지침으로 많은 Fluent Des
 페이지 레이아웃 | [XAML 페이지 레이아웃](../design/layout/layouts-with-xaml.md) 문서가 유연한 레이아웃 및 시각적 상태에 대한 새로운 정보로 업데이트되었습니다. 이러한 기능을 사용하며 귀하의 앱의 여러 요소의 위치를 지정하는 방법과 사용 가능한 시각적 공간에 맞추는 방법에 대해 보다 더 잘 제어할 수 있습니다.
 당겨서 새로 고침 | [당겨서 새로 고침](../design/controls-and-patterns/pull-to-refresh.md) 컨트롤을 사용하면 데이터 목록을 아래로 당겨서 더 많은 데이터를 검색할 수 있습니다. 터치 스크린이 있는 디바이스에서 널리 사용됩니다.
 탐색 보기 | [탐색 보기](../design/controls-and-patterns/navigationview.md) 컨트롤은 사용자 앱의 최상위 수준 탐색에 대한 축소 가능한 탐색 메뉴를 제공합니다. 이 컨트롤은 탐색 창(햄버거 메뉴) 패턴을 구현하며 여러 창 크기에 맞춰 창의 디스플레이 모드를 자동으로 조정합니다.
-포커스 표시 | 새 [포커스 표시](../design/style/reveal-focus.md) 효과는 Xbox One 및 텔레비전 화면 등의 환경에 조명을 제공합니다. 사용자가 게임 패드 또는 키보드 포커스를 포커스 가능 요소(예: 단추)로 이동하면 이러한 요소의 테두리에 애니메이션 효과를 줍니다.
+포커스 표시 | 새 [포커스 표시](../design/style/reveal-focus.md) 효과는 Xbox One 및 텔레비전 화면 등의 환경에 조명을 제공합니다. 사용자가 게임 패드 또는 키보드 포커스를 이동하면 버튼과 같이 포커스 맞출 수 있는 요소의 테두리를 애니메이션화합니다.
 소리 | XAML은 이제 **SpatialAudioMode** 속성으로 3D 오디오를 지원합니다. 구성 방법에 대한 정보는 [소리](../design/style/sound.md)를 참조하세요.
 타일 | [추적형 타일 알림](../design/shell/tiles-and-notifications/chaseable-tile-notifications.md)이 JavaScript 기반 UWP 앱에서 지원됩니다.<br><br>이제 보조 타일 및 배지 알림이 [데스크톱 브리지 앱에서 지원](../design/shell/tiles-and-notifications/secondary-tiles-desktop-pinning.md#send-tile-notifications)됩니다.
 트리 보기 | [TreeView](../design/controls-and-patterns/tree-view.md) 컨트롤은 중첩된 항목이 포함된 노드를 확장 및 축소하는 계층적 목록을 만듭니다. 이 컨트롤은 UI의 폴더 구조 또는 중첩된 관계를 나타내는 데 사용할 수 있습니다.
@@ -50,21 +50,21 @@ Fluent Design 업데이트 | 새로운 정보 및 지침으로 많은 Fluent Des
  :------ | :------
 적응형 카드 | [적응형 카드](https://docs.microsoft.com/adaptive-cards/)는 개발자가 일반적이고 일관된 방법으로 UI 콘텐츠를 교환할 수 있는 개방형 카드 교환 형식입니다. 적응형 카드는 해당 콘텐츠를 호스트 애플리케이션의 모양과 느낌으로 자동으로 렌더링될 수 있는 JSON 개체로 설명합니다.
 앱 리소스 그룹 | [AppResourceGroupInfo](https://docs.microsoft.com/uwp/api/windows.system.appresourcegroupinfo) 클래스에 앱을 일시 중단, 활성(다시 시작), 종료된 상태로 변환하는 데 사용할 수 있는 새로운 메서드가 있습니다.
-다양한 파일 시스템 액세스 | **broadFileSystemAccess** 기능을 사용하면 앱이 파일 선택기 스타일 프롬프트 없이 현재 앱을 실행하는 사용자와 같은 파일 시스템에 액세스할 수 있습니다. 자세한 내용은 [파일 액세스 권한](../files/file-access-permissions.md) 및 **앱 접근 권한 값 선언**의 [broadFileSystemAccess](../packaging/app-capability-declarations.md) 항목을 참조하세요.
+다양한 파일 시스템 액세스 | **broadFileSystemAccess** 기능을 사용하면 앱이 파일 선택기 스타일 프롬프트 없이 현재 앱을 실행하는 사용자와 같은 파일 시스템에 액세스할 수 있습니다. 자세한 내용은 [파일 액세스 권한](../files/file-access-permissions.md) 및 [앱 접근 권한 값 선언](../packaging/app-capability-declarations.md)의 **broadFileSystemAccess** 항목을 참조하세요.
 C++/WinRT | [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/)는 WinRT(Windows Runtime) API를 위한 완전한 표준의 최신 C++17 언어 프로젝션입니다. 이는 헤더 파일에서만 구현되고 최신 Windows API에 대한 최고 수준의 액세스를 제공하도록 설계되었습니다. C++/WinRT에서 표준 준수 C++17 컴파일러를 사용하여 WinRT API를 작성하고 이용할 수 있습니다. C++ 애플리케이션(Win32 - UWP)에서는 C++/WinRT를 사용하여 코드를 표준화하고 최신의 정리된 상태로 유지하며, 애플리케이션을 가볍고 빠르게 만듭니다.
 콘솔 UWP 앱 | 이제 DOS 또는 PowerShell 콘솔 창 등의 콘솔 창에서 실행되는 C++ /WinRT 또는 /CX UWP 콘솔 앱을 작성할 수 있습니다. 콘솔 앱은 입출력에 콘솔 창을 사용합니다. 이제 UWP 콘솔 앱이 Microsoft Store에 게시될 수 있으며 앱 목록에 항목과 시작 메뉴에 고정할 수 있는 기본 타일이 있습니다. 자세한 내용은 [유니버설 Windows 플랫폼 콘솔 앱 만들기](../launch-resume/console-uwp.md)를 참조하세요.
 확장된 앱 매니페스트 접근 권한 값 | 다양한 파일 시스템 액세스, 서비스 지점 디바이스에 바코드 스캐너 사용, UWP 콘솔 앱 정의 등의 몇 가지 기능이 앱 패키지 매니페스트 스키마에 추가되었습니다. 자세한 내용은 [Windows 10의 앱 매니페스트 변경 사항](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/what-s-changed-in-windows-10)을 참조하세요.
 AT(접근성 기술)에 대해 지원되는 이정표 및 머리글 | 랜드마크 및 머리글은 화면 읽기 프로그램 등의 보조 기술의 사용자에 대한 효율적인 탐색에 도움이 되는 사용자 인터페이스의 섹션을 정의합니다. 자세한 내용은 [주요 건물 및 머리글](../design/accessibility/landmarks-and-headings.md)을 참조하세요.
 Machine Learning | Windows Machine Learning은 미리 숙련된 기계 학습 모델을 Windows 10 디바이스에서 평가하는 앱을 빌드할 수 있습니다. 플랫폼에 대한 자세한 내용은 [Windows Machine Learning](https://docs.microsoft.com/windows/ai/)을 참조하세요. </br> [MachineLearning](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning.preview) 네임스페이스에는 앱이 기계 학습 모델을 로드하고, 데이터를 입력으로 바인딩하고, 결과를 계산하도록 하는 클래스가 포함되어 있습니다.
 지도 컨트롤 | [MapControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol) 클래스에 특정 지역(예: 시/도)의 언어에 따라 지도 컨트롤에서 콘텐츠를 표시하는 데 사용할 수 있는 **Region**이라는 새 속성이 있습니다.
-지도 요소 | [MapElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement) 클래스에 사용자가 **MapElement**와 상호 작용할 수 있는지 여부를 지정하는 데 사용할 수 있는 [IsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement)라는 새 속성이 있습니다.
-지도 위치 정보 | [PlaceInfo](https://docs.microsoft.com/uwp/api/windows.services.maps.placeinfo) 클래스에는 주소 및 표시 이름을 사용하여 **PlaceInfo**를 만드는 데 사용할 수 있는 새로운 메서드 [CreateFromAddress](https://docs.microsoft.com/uwp/api/windows.services.maps.placeinfo)가 포함됩니다.
+지도 요소 | [MapElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement) 클래스에 사용자가 [MapElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapelement)와 상호 작용할 수 있는지 여부를 지정하는 데 사용할 수 있는 **IsEnabled**라는 새 속성이 있습니다.
+지도 위치 정보 | [PlaceInfo](https://docs.microsoft.com/uwp/api/windows.services.maps.placeinfo) 클래스에는 주소 및 표시 이름을 사용하여 [PlaceInfo](https://docs.microsoft.com/uwp/api/windows.services.maps.placeinfo)를 만드는 데 사용할 수 있는 새로운 메서드 **CreateFromAddress**가 포함됩니다.
 지도 서비스 | [MapRouteDrivingOptions](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutedrivingoptions) 클래스에는 지정된 날짜 및 시간에 일반적인 교통 조건으로 경로를 계산하는 데 사용할 수 있는 **DepartureTime**이라는 새 속성이 포함됩니다.
 다중 인스턴스 UWP 앱 | UWP 앱은 여러 인스턴스를 지원할 수 있습니다. 다중 인스턴스 UWP 앱의 인스턴스를 실행 중이며 후속 정품 인증을 요청하는 경우 플랫폼은 기존 인스턴스를 활성화하지 않습니다. 대신 다른 프로세스에서 실행 중인 인스턴스를 새로 만듭니다. 자세한 내용은 [다중 인스턴스 유니버설 Windows 앱 만들기](../launch-resume/multi-instance-uwp.md)를 참조하세요.
 패키지 리소스 인덱싱 API 및 사용자 지정 빌드 시스템 | [PRI(패키지 리소스 인덱싱) API](https://docs.microsoft.com/windows/uwp/app-resources/pri-apis-custom-build-systems)를 사용하여 UWP 앱 리소스에 대한 사용자 지정 빌드 시스템을 개발할 수 있습니다. 빌드 시스템은 UWP 앱에 필요한 복잡도 수준에 상관없이 PRI 파일을 만들고 버전화하고 덤프할 수 있습니다. 현재 MakePri.exe 명령줄 도구를 사용하는 사용자 지정 빌드 시스템이 있는 경우 PRI API를 대신 호출하도록 전환하는 것이 좋습니다. 이렇게 하면 성능과 제어가 향상됩니다.
 PlayReady | Microsoft PlayReady는 무단 사용으로부터 디지털 콘텐츠를 보호하기 위한 일련의 기술입니다. PlayReady는 모든 종류의 디바이스 및 앱 및 모든 운영 체제에서 실행됩니다. [앱에 PlayReady를 포함하는 방법을 알아봅니다.](https://docs.microsoft.com/playready/)
 개인 대상 | 지정한 사용자만 앱의 Store 목록을 볼 수 있도록 하고 싶은 경우에는 새 **개인 대상** 옵션을 사용합니다. 지정한 그룹(들)의 구성원이 아닌 사용자는 앱을 검색하거나 사용할 수 없게 됩니다. 이 옵션은 다른 사람이 앱을 다운로드할 수 없거나 Store 목록을 볼 수 없도록 한 상태에서 테스터에게 앱을 배포할 수 있기 때문에 베타 테스트에 유용합니다. 자세한 내용은 [표시 여부 옵션 선택](../publish/choose-visibility-options.md)을 참조하세요.
-점진적 웹앱 | Microsoft Edge 및 UWP 웹앱에서 [PWA(점진적 웹앱)](https://docs.microsoft.com/microsoft-edge/progressive-web-apps)를 지원합니다! </br> * [표준 기반 웹 기술](https://developer.mozilla.org/Apps/Progressive) 및 [기능 검색](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)을 사용하면 푸시 알림, 오프라인 지원 및 OS 통합이 포함된 네이티브 앱 환경을 제공하도록 웹앱을 개선할 수 있으며 아직 PWA 기술을 지원하지 않는 브라우저와 플랫폼에서 뛰어난 기준 웹앱 환경을 제공합니다. </br> * 앱에 [매니페스트 파일을 추가](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started)하면 전체 UWP 디바이스 패밀리(보안 [Windows 10 S 모드 디바이스](https://www.microsoft.com/windows/windows-10-s) 포함)에서 앱을 설치하고 [Microsoft Store](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/microsoft-store)에서 배포할 수 있습니다. </br> PWA는 *호스트된 웹앱*이 자연스럽게 진화된 형태이지만 오프라인 시나리오를 위한 표준 기반 지원에서 *서비스 작업자*, *캐시* 및 *API 푸시*의 도움을 받습니다.
+프로그레시브 웹앱 | Microsoft Edge 및 UWP 웹앱에서 [PWA(점진적 웹앱)](https://docs.microsoft.com/microsoft-edge/progressive-web-apps)를 지원합니다! </br> * [표준 기반 웹 기술](https://developer.mozilla.org/Apps/Progressive) 및 [기능 검색](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)을 사용하면 푸시 알림, 오프라인 지원 및 OS 통합이 포함된 네이티브 앱 환경을 제공하도록 웹앱을 개선할 수 있으며 아직 PWA 기술을 지원하지 않는 브라우저와 플랫폼에서 뛰어난 기준 웹앱 환경을 제공합니다. </br> * 앱에 [매니페스트 파일을 추가](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started)하면 전체 UWP 디바이스 패밀리(보안 [Windows 10 S 모드 디바이스](https://www.microsoft.com/windows/windows-10-s) 포함)에서 앱을 설치하고 [Microsoft Store](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/microsoft-store)에서 배포할 수 있습니다. </br> PWA는 *호스트된 웹앱*이 자연스럽게 진화된 형태이지만 오프라인 시나리오를 위한 표준 기반 지원에서 *서비스 작업자*, *캐시* 및 *API 푸시*의 도움을 받습니다.
 화면 캡처 | [Windows.Graphics.Capture 네임스페이스](https://docs.microsoft.com/uwp/api/windows.graphics.capture)는 디스플레이 또는 애플리케이션 창에서 프레임을 획득하고 비디오 스트림 또는 스냅샷을 만들어 협업 및 대화형 환경을 빌드하기 위해 API를 제공합니다. 자세한 내용은 [화면 캡처](../audio-video-camera/screen-capture.md)를 참고하세요.
 시스템 트리거 | [CustomSystemEventTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.customsystemeventtrigger)를 사용하여 OS가 필요한 시스템 트리거를 제공하지 않는 경우 사용자가 시스템 트리거를 지정할 수 있습니다. 이러한 경우는 하드웨어 드라이버 및 UWP 앱이 둘 다 타사 제품인 경우, 하드웨어 드라이버가 앱이 처리하는 사용자 지정 이벤트를 발생하게 해야 할 때입니다. 예를 들어, 오디오 잭이 연결되어 있을 때 사용자에게 알려야 하는 오디오 카드가 있습니다.
 사용자 활동 | 새 [UserActivity 설명서](../launch-resume/useractivities.md)는 여러 디바이스에서 사용자가 앱에서 수행하고 있던 작업을 재개하도록 돕는 방법에 대해 설명합니다.</br>**UserActivitySessionHistoryItem** 클래스에 사용자의 최근 활동을 검색하는 새로운 메서드가 있습니다. 자세한 내용은 [GetRecentUserActivitiesAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivitychannel.getrecentuseractivitiesasync) 및 해당 오버로드를 참조하세요.
@@ -80,7 +80,7 @@ Microsoft Store에서 패키지 업데이트 다운로드 및 설치 | [Microsof
 저장소 컨텍스트 | [StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 클래스가 새로운 메서드를 선택할 수 있도록 업데이트되었습니다. 이러한 메서드는 앱에 대한 패키지 업데이트 및 추가 기능의 다운로드 및 설치를 관리합니다.
 이제 모든 개발자가 구독 추가를 사용할 수 있습니다. | 구독 추가를 만들고 게시하여 자동화된 반복 청구 기간으로 귀하의 앱 및 게임에서 디지털 제품(앱 기능 또는 디지털 콘텐츠)을 판매할 수 있습니다. 자세한 내용은 [앱에 구독 추가 기능을 사용하도록 설정](../monetize/enable-subscription-add-ons-for-your-app.md)을 참조하세요. **이 기능은 모든 Windows 개발자에게 제공되며 업데이트된 SDK가 필요하지 않습니다.**
 
-## <a name="videos"></a>비디오
+## <a name="videos"></a>동영상
 
 다음 동영상은 Fall Creators Update 이후 게시되었으며 개발자를 위한 Windows 10의 새로운 기능과 향상된 기능을 소개합니다.
 
@@ -106,7 +106,7 @@ Windows Machine Learning은 미리 숙련된 기계 학습 모델을 Windows 10 
 
 ### <a name="package-a-net-app-in-visual-studio"></a>Visual Studio에서 .NET 앱 패키징
 
-그 어느 때보다도 쉽게 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져올 수 있습니다. [동영상을 시청](https://www.youtube.com/watch?v=fJkbYPyd08w)하여 배포를 위해 .NET 앱을 패키징하는 방법을 알아보고 자세한 내용은 [이 페이지를 확인](../porting/desktop-to-uwp-packaging-dot-net.md)하세요.
+그 어느 때보다도 쉽게 데스크톱 앱을 유니버설 Windows 플랫폼으로 가져올 수 있습니다. [동영상을 시청](https://www.youtube.com/watch?v=fJkbYPyd08w)하여 배포를 위해 .NET 앱을 패키징하는 방법을 알아보고 자세한 내용은 [이 페이지를 확인](../porting/desktop-to-uwp-packaging-dot-net.md)하세요.
 
 ### <a name="xbox-live-creators-program"></a>Xbox Live 크리에이터스 프로그램
 

@@ -1,17 +1,17 @@
 ---
 title: Windows 10 빌드 17763의 새로운 기능
 description: Windows 10 빌드 17763 및 새로운 개발자 도구는 유니버설 Windows 플랫폼에서 지원되는 도구, 기능 및 환경을 제공합니다.
-keywords: 새로운 기능, 새로운 기능, 업데이트, 업데이트, 기능, 새 항목, Windows 10, 최신, 개발자, 17763
+keywords: Windows 10, 17763, 1809
 ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d26d88377aec4306ad0711724760ec13e6568d85
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 77b47866bc064baec7c0ecf556eb615f67af0554
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684762"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234382"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>개발자용 Windows 10 빌드 17763의 새로운 기능
 

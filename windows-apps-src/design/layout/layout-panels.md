@@ -5,12 +5,12 @@ ms.date: 04/02/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 68aceb1fe4b0136bac9f8ff342f079f0dc23c1c7
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: e5a796f95efb418f7d70062ca2d73bbea7220d95
+ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970948"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83234853"
 ---
 # <a name="layout-panels"></a>레이아웃 패널
 
