@@ -8,72 +8,39 @@ ms.topic: article
 keywords: NodeJS, Node.js, windows 10, microsoft, nodejs 학습, windows의 노드, wsl의 노드, windows 기반 linux의 노드, windows에 노드 설치, vs code를 사용하는 nodejs, windows에서 노드를 사용하여 개발, windows에서 nodejs를 사용하여 개발, WSL에 노드 설치, Linux용 Windows 하위 시스템의 NodeJS
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: c987f5bea387c630a1b9ef23c928d7a1bb8fadfc
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 1ea8973e1db665d1fe66ef6b5f5699319131d605
+ms.sourcegitcommit: 2af814b7f94ee882f42fae8f61130b9cc9833256
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75835377"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83717132"
 ---
 # <a name="set-up-your-nodejs-development-environment-with-wsl-2"></a>WSL 2를 사용하여 Node.js 개발 환경 설치
 
-다음은 WSL(Linux용 Windows 하위 시스템)을 사용하여 Node.js 개발 환경을 설치하는 방법을 안내하는 단계별 가이드입니다. 이 가이드를 사용하려면 [WSL 2](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/)를 설치하여 사용할 수 있도록 Windows Insider Preview 빌드를 설치하여 실행해야 합니다. WSL 2는 특히 Node.js와 관련하여 WSL 1보다 속도와 성능이 크게 향상되었습니다. 많은 Node.js 웹 개발용 npm 모듈과 자습서는 Linux 사용자를 위해 작성되었으며, Linux 기반 패키징 및 설치 도구를 사용합니다. 대부분의 웹앱은 Linux에도 배포되므로 WSL 2를 사용하면 개발 환경과 프로덕션 환경 간에 일관성을 유지할 수 있습니다.
+다음은 WSL(Linux용 Windows 하위 시스템)을 사용하여 Node.js 개발 환경을 설치하는 방법을 안내하는 단계별 가이드입니다.
+
+[Docker Desktop](https://docs.docker.com/docker-for-windows/wsl-tech-preview/#download)을 실행하는 기능을 비롯하여 성능 속도 및 시스템 호출 호환성이 크게 향상될 수 있으므로 업데이트된 WSL 2를 설치하고 실행하는 것이 좋습니다. 많은 Node.js 웹 개발용 npm 모듈과 자습서는 Linux 사용자를 위해 작성되었으며, Linux 기반 패키징 및 설치 도구를 사용합니다. 대부분의 웹앱은 Linux에도 배포되므로 WSL 2를 사용하면 개발 환경과 프로덕션 환경 간에 일관성을 유지할 수 있습니다.
 
 > [!NOTE]
 > Windows에서 직접 Node.js를 사용하는 경우 또는 Windows Server 프로덕션 환경을 사용할 계획인 경우 [Windows에 직접 Node.js 개발 환경 설치](./setup-on-windows.md) 가이드를 참조하세요.
 
-## <a name="install-windows-10-insider-preview-build"></a>Windows 10 Insider Preview 빌드 설치
-
-1. 다음과 같이 **[최신 버전의 Windows 10을 설치합니다](https://www.microsoft.com/software-download/windows10)** . **지금 업데이트**를 선택하여 업데이트 도우미를 다운로드합니다. 다운로드가 완료되면 업데이트 도우미를 열어 현재 최신 버전의 Windows를 실행하고 있는지 확인하고, 그렇지 않은 경우 도우미 창 내부에서 **지금 업데이트**를 선택하여 머신을 업데이트합니다. *(Windows 10 최신 버전을 실행 중인 경우 이 단계는 선택 사항입니다.)*
-
-    ![Windows 업데이트 도우미](../images/windows-update-assistant2019.png)
-
-2. **[시작 > 설정 > Windows 참가자 프로그램](ms-settings:windowsinsider)** 으로 이동합니다. Windows 참가자 프로그램 창 내에서 **시작**을 선택한 다음, **계정 연결**을 선택합니다.
-
-    ![Windows 참가자 프로그램 설정](../images/windows-insider-program-settings.png)
-
-3. 다음과 같이 **[Windows 참가자로 등록](https://insider.windows.com/getting-started/#register)** 합니다. 참가자 프로그램에 등록하지 않은 경우 [Microsoft 계정](https://account.microsoft.com/account)을 사용하여 등록해야 합니다.
-
-    ![Windows 참가자 등록](../images/windows-insider-account.png)
-
-4. **초기 링** 업데이트를 받도록 선택하거나 **다음 Windows 릴리스 콘텐츠로 건너뜁니다**. **나중에 다시 시작**을 확인하고 선택합니다. 다시 시작하기 전에 몇 가지 설정을 더 변경해야 합니다.
-
-    ![Windows 참가자 초기 링](../images/windows-insider-fast.png)
-
-## <a name="enable-windows-subsystem-for-linux-and-virtual-machine-platform"></a>Linux용 Windows 하위 시스템 및 Virtual Machine 플랫폼 사용
-
-1. **Windows 설정**에 있는 상태에서 **Windows 기능 설정 또는 해제**를 검색합니다.
-2. **Windows 기능** 목록이 표시되면 목록을 스크롤하여 **Virtual Machine 플랫폼** 및 **Linux용 Windows 하위 시스템**을 찾아 둘 다 사용하도록 확인란을 선택한 다음, **확인**을 선택합니다.
-3. 메시지가 표시되면 컴퓨터를 다시 시작합니다.
-
-    ![Windows 기능 사용](../images/windows-feature-settings.png)
-
-## <a name="install-a-linux-distribution"></a>Linux 배포 설치
-
-WSL에서 실행할 수 있는 몇 가지 Linux 배포가 있습니다. Microsoft Store에서 원하는 배포를 찾아 설치할 수 있습니다. 현재 있기 있고 잘 지원되고 있는 [Ubuntu 18.04 LTS](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q)부터 시작하는 것이 좋습니다.
-
-1. 이 [Ubuntu 18.04 LTS](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q) 링크, Microsoft Store를 차례로 열고, **가져오기**를 선택합니다. *(이는 매우 큰 다운로드이며 설치하는데 시간이 걸릴 수 있습니다.)*
-
-2. 다운로드가 완료되면 Microsoft Store에서 **시작**을 선택하거나 **시작** 메뉴에서 "Ubuntu 18.04 LTS"를 입력하여 시작합니다.
-
-3. 배포를 처음 실행하는 경우 계정 이름과 암호를 만들라는 메시지가 표시됩니다. 이후에는 기본적으로 이 사용자로 자동으로 로그인됩니다. 원하는 사용자 이름과 암호를 선택할 수 있습니다. Windows 사용자 이름과는 관련이 없습니다.
-
-    ![Microsoft Store의 Linux 배포판](../images/store-linux-distros.png)
-
-`lsb_release -dc`를 입력하여 현재 사용 중인 Linux 배포를 확인할 수 있습니다. Ubuntu 배포를 업데이트하려면 `sudo apt update && sudo apt upgrade`를 사용합니다. 최신 패키지를 유지하기 위해 정기적으로 업데이트하는 것이 좋습니다. 이 업데이트는 Windows에서 자동으로 처리하지 않습니다. Microsoft Store에서 사용 가능한 다른 Linux 배포에 대한 링크, 대체 구현 설치 방법 또는 문제 해결은 [Windows 10에 Linux용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/windows/wsl/install-win10)를 참조하세요.
-
 ## <a name="install-wsl-2"></a>WSL 2 설치
 
-WSL 2는 WSL의 [새 아키텍처 버전](https://docs.microsoft.com/windows/wsl/wsl2-about)으로, Linux 배포판이 Windows와 상호 작용하는 방식을 변경하여 성능을 높이고 전체 시스템 호출 호환성을 추가합니다.
+WSL 2를 사용하고 설치하려면 [WSL 설치 문서](https://docs.microsoft.com/windows/wsl/install-win10)의 단계를 따르세요. 이 단계에는 Linux 배포판(예: Ubuntu) 선택이 포함됩니다.
 
-1. PowerShell에서 `wsl -l` 명령을 입력하여 머신에 설치된 WSL 배포판 목록을 볼 수 있습니다. 이 목록에 Ubuntu-18.04가 표시될 것입니다.
-2. 이제 `wsl --set-version Ubuntu-18.04 2` 명령을 입력하여 WSL 2를 사용하도록 Ubuntu 설치를 설정합니다.
-3. `wsl --list --verbose`(또는 `wsl -l -v`) 명령을 사용하여 설치된 각 배포판에서 사용하는 WSL 버전을 확인합니다.
+WSL 2와 Linux 배포판을 설치했으면 Linux 배포판(Windows 시작 메뉴에서 찾을 수 있음)을 열고 `lsb_release -dc` 명령을 사용하여 버전과 코드 이름을 확인합니다.
 
-    ![Linux용 Windows 하위 시스템 버전 설정](../images/wsl-versions.png)
+최신 패키지를 유지하기 위해 설치 직후를 포함하여 Linux 배포를 정기적으로 업데이트하는 것이 좋습니다. 이 업데이트는 Windows에서 자동으로 처리하지 않습니다. 배포를 업데이트하려면 `sudo apt update && sudo apt upgrade` 명령을 사용합니다.  
 
-> [!TIP]
-> 설치한 Linux 배포판을 WSL 2로 설정할 수 있습니다. 동일한 지침을 따르되(PowerShell 사용), 'Ubuntu-18.04'가 설치된 배포판 중 대상으로 지정하고 싶은 배포판의 이름으로 변경하기만 하면 됩니다. 다시 WSL 1로 변경하려면 위와 동일한 명령을 실행하되, '2'를 '1'로 바꾸면 됩니다.  `wsl --set-default-version 2` 명령을 입력하여 WSL 2를 새로 설치된 배포판의 기본값으로 설정할 수도 있습니다.
+## <a name="install-windows-terminal-optional"></a>Windows 터미널 설치(선택 사항)
+
+새 Windows 터미널을 사용하면 여러 탭(여러 Linux 명령 프롬프트, Windows 명령 프롬프트, PowerShell, Azure CLI 간에 신속하게 전환), 사용자 지정 키 바인딩(탭 열기 또는 닫기, 복사+붙여넣기 등을 위한 바로 가기 키), 검색 기능 및 사용자 지정 테마(색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도)를 사용할 수 있습니다. [자세한 정보를 알아보세요](https://docs.microsoft.com/windows/terminal).
+
+1. 다음과 같이 [Microsoft Store에서 Windows 터미널(미리 보기)](https://www.microsoft.com/store/apps/9n0dx20hk701)을 받습니다. Microsoft Store를 통해 설치하면 업데이트가 자동으로 처리됩니다.
+
+2. 설치가 완료되면 Windows 터미널을 열고 **설정**을 선택한 다음, `settings.json` 파일을 사용하여 터미널을 사용자 지정합니다.
+
+    ![Windows 터미널 설정](../images/windows-terminal-settings.png)
 
 ## <a name="install-nvm-nodejs-and-npm"></a>nvm, node.js 및 npm 설치
 
@@ -99,8 +66,7 @@ Node.js를 설치하는 여러 가지 방법이 있습니다. 버전이 매우 �
 9. `node --version` 명령을 사용하여 Node.js가 설치되어 있는지 여부 및 현재 기본 버전을 확인합니다. 그리고 `npm --version` 명령을 사용하여 npm이 설치되어 있는지 확인합니다(`which node` 또는 `which npm` 명령을 사용하여 기본 버전에 사용되는 경로도 확인 가능).
 10. 프로젝트에 사용할 Node.js 버전을 변경하려면 새 프로젝트 디렉터리 `mkdir NodeTest`를 만들고 `cd NodeTest` 디렉터리로 들어간 다음, `nvm use node`를 입력하여 현재 버전으로 전환하거나 `nvm use --lts`를 입력하여 LTS 버전으로 전환합니다. `nvm use v8.2.1`처럼 설치한 버전의 특정 번호를 사용할 수도 있습니다. (사용 가능한 모든 Node.js 버전을 나열하려면 `nvm ls-remote` 명령을 사용합니다.)
 
-> [!TIP]
-> NVM을 사용하여 Node.js 및 NPM을 설치하는 경우 SUDO 명령을 사용하여 새 패키지를 설치할 필요가 없습니다.
+NVM을 사용하여 Node.js 및 NPM을 설치하는 경우 SUDO 명령을 사용하여 새 패키지를 설치할 필요가 없습니다.
 
 > [!NOTE]
 > 출시 당시에는 NVM v0.35.2가 사용 가능한 최신 버전이었습니다. [GitHub 프로젝트 페이지에서 최신 버전의 NVM](https://github.com/nvm-sh/nvm)을 확인할 수 있으며, 최신 버전만 포함하도록 위의 명령을 조정할 수 있습니다.
@@ -162,16 +128,6 @@ Node.js 확장 팩을 설치하는 방법은 다음과 같습니다.
 - [Chrome용 디버거](https://code.visualstudio.com/blogs/2016/02/23/introducing-chrome-debugger-for-vs-code): Node.js를 사용하여 서버 쪽에서 개발을 마친 후에는 클라이언트 쪽에서 개발하고 테스트해야 합니다. 이 확장은 VS Code 편집기를 Chrome 브라우저 디버깅 서비스와 통합하여 효율성을 높입니다.
 - [다른 편집기의 키맵](https://marketplace.visualstudio.com/search?target=VSCode&category=Keymaps&sortBy=Downloads): Atom, Sublime, Vim, eMacs, 메모장++ 등의 다른 텍스트 편집기에서 전환할 때 이러한 확장을 사용하여 익숙한 환경을 만들 수 있습니다.
 - [설정 동기화](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync): GitHub를 사용하는 여러 설치에서 VS Code 설정을 동기화할 수 있습니다. 여러 머신에서 작업하는 경우 이렇게 하면 여러 머신의 환경을 일관되게 유지할 수 있습니다.
-
-## <a name="install-windows-terminal-optional"></a>Windows 터미널 설치(선택 사항)
-
-새 Windows 터미널을 사용하면 여러 탭(명령 프롬프트, PowerShell 또는 여러 Linux 배포판 간에 신속하게 전환), 사용자 지정 키 바인딩(탭을 열거나 닫는 개발자 고유의 바로 가기 키 만들기, 복사+붙여넣기 등), 이모지 ☺ 및 사용자 지정 테마(색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도)를 사용할 수 있습니다. [자세한 정보를 알아보세요](https://devblogs.microsoft.com/commandline/).
-
-1. 다음과 같이 [Microsoft Store에서 Windows 터미널(미리 보기)](https://www.microsoft.com/store/apps/9n0dx20hk701)을 받습니다. Microsoft Store를 통해 설치하면 업데이트가 자동으로 처리됩니다.
-
-2. 설치가 완료되면 Windows 터미널을 열고 **설정**을 선택한 다음, `profile.json` 파일을 사용하여 터미널을 사용자 지정합니다. [Windows 터미널 설정 편집에 대해 자세히 알아보세요](https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md).
-
-    ![Windows 터미널 설정](../images/windows-terminal-settings.png)
 
 ## <a name="set-up-git-optional"></a>Git 설치(선택 사항)
 

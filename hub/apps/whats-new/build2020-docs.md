@@ -6,18 +6,22 @@ ms.date: 05/11/2020
 ms.localizationpriority: medium
 ms.author: jken
 author: grantmestrength
-ms.openlocfilehash: 9f632c8f47ec42027918c3776492967e60c09764
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 0880d7e7299db2a1a0f7de69400b7bb9c5d0efd9
+ms.sourcegitcommit: 10ec5a20dd1152a1037ebc4fba1a28cc96593586
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580440"
+ms.locfileid: "83665866"
 ---
 # <a name="microsoft-build---the-windows-documentation"></a>Microsoft Build - Windows 설명서
 
 ![Build 영웅 이미지](../images/build-banner.jpeg)
 
 [Microsoft Build 2020](https://mybuild.microsoft.com) 중에 언급한 내용을 지원하는 설명서의 링크를 모아 놓았습니다. 이벤트가 진행되면 이 페이지도 업데이트되므로 다시 방문하여 새 소식을 확인하세요.
+
+## <a name="project-reunion"></a>프로젝트 리유니언
+
+* [프로젝트 리유니언](https://blogs.windows.com/windowsdeveloper/2020/05/19/developing-for-all-1-billion-windows-10-devices-and-beyond/)은 Windows 개발의 미래입니다.
 
 ## <a name="windows-terminal"></a>Windows 터미널
 

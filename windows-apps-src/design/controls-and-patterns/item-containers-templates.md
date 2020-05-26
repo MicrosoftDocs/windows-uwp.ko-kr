@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2445f1b718532fd0862c276e8fadf12e88fe36ac
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d0834a905c50b92003c3aa78ff8226d35c25e5dd
+ms.sourcegitcommit: ddc65c170834bcce524b5e1d36e6755eae1e3af2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79209078"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83729894"
 ---
 # <a name="item-containers-and-templates"></a>항목 컨테이너 및 템플릿
 
@@ -313,7 +313,7 @@ GridView에 데이터를 표시할 수 있습니다. 다음은 그리드 레이�
 
 - 가리키기 - 데이터 템플릿 아래에 그려지는 밝은 회색 사각형입니다.  
 - 선택 – 데이터 템플릿 아래에 그려지는 밝은 파란색 사각형입니다. 
-- 키보드 포커스 - 항목 템플릿 위에 표시되는 흑백 점선입니다. 
+- 키보드 포커스 – 항목 템플릿 위에 그려진 [높은 가시성 포커스 화면 효과](/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals) 입니다.
 
 ![목록 보기 상태 시각적 개체](images/listview-state-visuals.png)
 
@@ -456,10 +456,10 @@ SelectionMode:&nbsp;&nbsp; | Single/Extended | 다중
 
 상태/브러시 이름 | 인라인 스타일 | 오버레이 스타일
 ------------|--------------|--------------
-<b>Normal</b><ul><li><b>CheckBoxBrush=“Red”</b></li></ul> | ![인라인 항목 선택 일반](images/listview-item-normal.png) | ![오버레이 항목 선택 일반](images/gridview-item-normal.png)
-<b>PointerOver</b><ul><li><b>PointerOverForeground=“DarkOrange”</b></li><li><b>PointerOverBackground=“MistyRose”</b></li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 포인터 가리키기](images/listview-item-pointerover.png) | ![오버레이 항목 선택 포인터 가리키기](images/gridview-item-pointerover.png)
+<b>Normal</b><ul><li><b>CheckBoxBrush="Red"</b></li></ul> | ![인라인 항목 선택 일반](images/listview-item-normal.png) | ![오버레이 항목 선택 일반](images/gridview-item-normal.png)
+<b>PointerOver</b><ul><li><b>PointerOverForeground="DarkOrange"</b></li><li><b>PointerOverBackground=“MistyRose”</b></li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 포인터 가리키기](images/listview-item-pointerover.png) | ![오버레이 항목 선택 포인터 가리키기](images/gridview-item-pointerover.png)
 <b>Pressed</b><ul><li><b>PressedBackground=“LightCyan”</b></li><li>PointerOverForeground="DarkOrange"</li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 누름](images/listview-item-pressed.png) | ![오버레이 항목 선택 누름](images/gridview-item-pressed.png)
-<b>Selected</b><ul><li><b>SelectedForeground=“Navy”</b></li><li><b>SelectedBackground=“Khaki”</b></li><li><b>CheckBrush=“Green”</b></li><li>CheckBoxBrush="Red"(인라인만 해당)</li></ul> | ![인라인 항목 선택 선택됨](images/listview-item-selected.png) | ![오버레이 항목 선택 선택됨](images/gridview-item-selected.png)
+<b>Selected</b><ul><li><b>SelectedForeground="Navy"</b></li><li><b>SelectedBackground=“Khaki”</b></li><li><b>CheckBrush="Green"</b></li><li>CheckBoxBrush="Red"(인라인만 해당)</li></ul> | ![인라인 항목 선택 선택됨](images/listview-item-selected.png) | ![오버레이 항목 선택 선택됨](images/gridview-item-selected.png)
 <b>PointerOverSelected</b><ul><li><b>SelectedPointerOverBackground=“Lavender”</b></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki"(오버레이만 해당)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red"(인라인만 해당)</li></ul> | ![인라인 항목 선택 포인터 가리키기 선택됨](images/listview-item-pointeroverselected.png) | ![오버레이 항목 선택 포인터 가리키기 선택됨](images/gridview-item-pointeroverselected.png)
 <b>PressedSelected</b><ul><li><b>SelectedPressedBackground=“MediumTurquoise”</b></li></li><li>SelectedForeground="Navy"</li><li>SelectedBackground="Khaki"(오버레이만 해당)</li><li>CheckBrush="Green"</li><li>CheckBoxBrush="Red"(인라인만 해당)</li></ul> | ![인라인 항목 선택 누름 선택됨](images/listview-item-pressedselected.png) | ![오버레이 항목 선택 누름 선택됨](images/gridview-item-pressedselected.png)
 <b>Focused</b><ul><li><b>FocusBorderBrush=“Crimson”</b></li><li><b>FocusSecondaryBorderBrush=“Gold”</b></li><li>CheckBoxBrush="Red"</li></ul> | ![인라인 항목 선택 포커스 있음](images/listview-item-focused.png) | ![오버레이 항목 선택 포커스 있음](images/gridview-item-focused.png)

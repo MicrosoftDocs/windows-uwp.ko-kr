@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5, 19H1
-ms.openlocfilehash: c93a05967c6cdc7fd7dcdbab9b5c4afa2c1382a7
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 80072be15a28883e5d29a7393edd112cf6fa47be
+ms.sourcegitcommit: 7e8c7f89212c88dcc0274c69d2c3365194c0954a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83579870"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688500"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -821,7 +821,7 @@ namespace TreeViewTest
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Page.Resources>
-        <DataTemplate x:Key="TreeViewItemDataTemplate" x:DataType="TreeViewNode">
+        <DataTemplate x:Key="TreeViewItemDataTemplate" x:DataType="muxc:TreeViewNode">
             <Grid Height="44">
                 <TextBlock Text="{x:Bind ((storage:IStorageItem)Content).Name}"
                            HorizontalAlignment="Left"
@@ -830,7 +830,7 @@ namespace TreeViewTest
             </Grid>
         </DataTemplate>
 
-        <DataTemplate x:Key="MusicItemDataTemplate" x:DataType="TreeViewNode">
+        <DataTemplate x:Key="MusicItemDataTemplate" x:DataType="muxc:TreeViewNode">
             <StackPanel Height="44" Orientation="Horizontal">
                 <SymbolIcon Symbol="Audio" Margin="0,0,4,0"/>
                 <TextBlock Text="{x:Bind ((storage:StorageFile)Content).DisplayName}"
@@ -840,7 +840,7 @@ namespace TreeViewTest
             </StackPanel>
         </DataTemplate>
 
-        <DataTemplate x:Key="PictureItemDataTemplate" x:DataType="TreeViewNode">
+        <DataTemplate x:Key="PictureItemDataTemplate" x:DataType="muxc:TreeViewNode">
             <StackPanel Height="44" Orientation="Horizontal">
                 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEB9F;"
                           Margin="0,0,4,0"/>
@@ -851,7 +851,7 @@ namespace TreeViewTest
             </StackPanel>
         </DataTemplate>
 
-        <DataTemplate x:Key="MusicFolderDataTemplate" x:DataType="TreeViewNode">
+        <DataTemplate x:Key="MusicFolderDataTemplate" x:DataType="muxc:TreeViewNode">
             <StackPanel Height="44" Orientation="Horizontal">
                 <SymbolIcon Symbol="MusicInfo" Margin="0,0,4,0"/>
                 <TextBlock Text="{x:Bind ((storage:StorageFolder)Content).DisplayName}"
@@ -861,7 +861,7 @@ namespace TreeViewTest
             </StackPanel>
         </DataTemplate>
 
-        <DataTemplate x:Key="PictureFolderDataTemplate" x:DataType="TreeViewNode">
+        <DataTemplate x:Key="PictureFolderDataTemplate" x:DataType="muxc:TreeViewNode">
             <StackPanel Height="44" Orientation="Horizontal">
                 <SymbolIcon Symbol="Pictures" Margin="0,0,4,0"/>
                 <TextBlock Text="{x:Bind ((storage:StorageFolder)Content).DisplayName}"

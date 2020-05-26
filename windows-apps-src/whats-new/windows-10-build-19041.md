@@ -5,12 +5,12 @@ keywords: 새로운 기능, 새 기능, Windows, Windows 10, 업데이트, 업�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e5f07e83d7e2e1b96c4bade5a2a6998c11e0559
-ms.sourcegitcommit: dbb368861c85c45f34ea0d5b77eb3af2416be1b2
+ms.openlocfilehash: bb7630afd6cc69497494a2e86e6c5e3544acefec
+ms.sourcegitcommit: f806d5f3b0c1e046c903d3388092c0e059d21858
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83382805"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83790985"
 ---
 # <a name="whats-new-for-developers-in-windows-10-build-19041"></a>Windows 10 빌드 19041의 개발자용 새로운 기능
 
@@ -36,7 +36,7 @@ Wi-Fi | 여러 가지 새로운 기본 WiFi 함수 및 구조가 추가되었습
 Wi-Fi 핫스팟 2 | [웹 사이트를 통해 Wi-Fi 프로필 프로비저닝](/windows/win32/nativewifi/prov-wifi-profile-via-website)에서 Wi-Fi 핫스팟 2에 대한 새로운 기능을 설명합니다.
 Windows Holographic interop | [`windows.graphics.holographic.interop.h`](/windows/win32/api/windows.graphics.holographic.interop) 헤더가 17개의 Win32 API와 함께 추가되었습니다. API는 Win32와 Windows 런타임 간의 상호 운용을 위한 것입니다. API는 Windows 10 빌드 18362에 추가되었으며, 헤더는 빌드 19041에 새로 추가되었습니다.
 Windows 소켓 | Windows 소켓 2 SPI 콘텐츠에 대한 기능이 향상되었습니다. 많은 항목이 향상되고 확대되었으며 그중 하나의 예로 [LPWSPEVENTSELECT 콜백 함수](/windows/win32/api/ws2spi/nc-ws2spi-lpwspeventselect) 항목이 있습니다.
-XAML 아일랜드 - 기본 사항 | XAML 아일랜드를 사용하여 데스크톱 Windows 앱에서 UWP XAMl 컨트롤을 호스트합니다. [WPF 앱에서 표준 UWP 컨트롤 호스트](/windows/apps/desktop/modernize/host-standard-control-with-xaml-island) 방법 및 [C++ Win32 앱에서 표준 UWP 컨트롤 호스트](/windows/apps/desktop/modernize/host-standard-control-with-xaml-islands-cpp) 방법을 알아봅니다.
+XAML 아일랜드 - 기본 사항 | XAML 아일랜드를 사용하여 데스크톱 Windows 앱에서 UWP XAMl 컨트롤을 호스트합니다. [WPF 앱에서 표준 UWP 컨트롤 호스트](/windows/apps/desktop/modernize/host-standard-control-with-xaml-islands) 방법 및 [C++ Win32 앱에서 표준 UWP 컨트롤 호스트](/windows/apps/desktop/modernize/host-standard-control-with-xaml-islands-cpp) 방법을 알아봅니다.
 XAML 아일랜드 - 사용자 지정 컨트롤 | [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) 및 [Microsoft.Toolkit.Win32.UI.SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) NuGet 패키지를 사용하여 .NET 및 C++ Win32 앱에서 사용자 지정 UWP XAML 컨트롤을 보다 쉽게 호스트할 수 있습니다. </br> 단계별 연습은 [WPF 앱에서 사용자 지정 UWP 컨트롤 호스트](/windows/apps/desktop/modernize/host-custom-control-with-xaml-islands) 및 [C++ Win32 앱에서 사용자 지정 UWP 컨트롤 호스트](/windows/apps/desktop/modernize/host-custom-control-with-xaml-islands-cpp)를 참조하세요. </br> 마지막으로 좀 더 복잡한 C++ Win32 시나리오에 대한 지침은 [XAML 아일랜드에 대한 고급 시나리오](/windows/apps/desktop/modernize/advanced-scenarios-xaml-islands-cpp)를 참조하세요.
 
 ## <a name="build-with-windows"></a>Windows를 사용하여 빌드

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: aa60db28003c4f231cf36b653c5e69b422978c1a
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 28dc4a62bf580da41d424c98c186413dc96a8aae
+ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71340061"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83775824"
 ---
 # <a name="transforms-overview"></a>변환 개요
 
@@ -37,6 +37,8 @@ UI에서 요소의 상대 좌표계를 변경하여 Windows 런타임 API에서 
 XAML 레이아웃에서 변형은 레이아웃 단계가 완료된 후에 적용되므로 사용 가능한 공간 계산 및 다른 레이아웃 결정은 변형이 적용되기 전에 수행되었습니다. 레이아웃이 앞에 오기 때문에 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) 셀 또는 레이아웃 중 공간을 할당하는 유사한 레이아웃 컨테이너에 있는 요소를 변형하는 경우 예기치 않은 결과가 발생할 수 있습니다. 부모 컨테이너 내의 공간을 나눌 때 변형 후 치수를 계산하지 않은 영역에 그리려고 하기 때문에 변형된 요소가 잘리거나 감춰진 것처럼 나타날 수 있습니다. 변형 결과를 실험하고 일부 설정을 조정해야 할 수도 있습니다. 예를 들어 적응형 레이아웃과 배율 크기 조정을 사용하는 대신 부모가 충분한 공간을 할당하도록 레이아웃 공간에 대해 고정 픽셀 측정을 선언하거나 **Center** 속성을 변경해야 할 수 있습니다.
 
 **마이그레이션 참조:**  WPF(Windows Presentation Foundation)에는 레이아웃 단계 전에 변형을 적용하는 **LayoutTransform** 속성이 있었습니다. 그러나 Windows 런타임 XAML은 **LayoutTransform** 속성을 지원하지 않습니다. Microsoft Silverlight에도 이 속성이 없었습니다.
+
+대안으로, Windows 커뮤니티 도구 키트는 애플리케이션의 모든 FrameworkElement에 매트릭스 변환을 적용하는 [LayoutTransformControl](/windows/communitytoolkit/controls/LayoutTransformControl)을 제공합니다.
 
 ## <a name="span-idapplying_a_transform_to_a_ui_elementspanspan-idapplying_a_transform_to_a_ui_elementspanspan-idapplying_a_transform_to_a_ui_elementspanapplying-a-transform-to-a-ui-element"></a><span id="Applying_a_transform_to_a_UI_element"></span><span id="applying_a_transform_to_a_ui_element"></span><span id="APPLYING_A_TRANSFORM_TO_A_UI_ELEMENT"></span>UI 요소에 변형 적용
 

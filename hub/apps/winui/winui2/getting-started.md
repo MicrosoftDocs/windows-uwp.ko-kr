@@ -4,12 +4,12 @@ description: Windows UI 라이브러리를 설치하고 사용하는 방법입�
 ms.topic: reference
 ms.date: 05/08/2020
 keywords: Windows 10, UWP, 도구 키트 SDK
-ms.openlocfilehash: 2205a95dfd342503674662d5cb0e4ed598eda870
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 585475df4138c6a5d4d8b885582137c972a64287
+ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580410"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83775865"
 ---
 # <a name="getting-started-with-the-windows-ui-library"></a>Windows UI 라이브러리 시작
 
@@ -18,7 +18,7 @@ ms.locfileid: "83580410"
 라이브러리는 신규 또는 기존 Visual Studio 프로젝트에 추가할 수 있는 NuGet 패키지로 제공됩니다.
 
 > [!NOTE]
-> WinUI 3.0 초기 미리 보기를 사용하는 방법에 대한 자세한 내용은 [WinUI 3.0(알파)](../winui3/index.md)을 참조하세요.
+> WinUI 3.0 초기 미리 보기를 사용하는 방법에 대한 자세한 내용은 [WinUI 3.0 Preview 1](../winui3/index.md)을 참조하세요.
 
 ## <a name="download-and-install-the-windows-ui-library"></a>Windows UI 라이브러리 다운로드 및 설치
 
@@ -39,12 +39,12 @@ ms.locfileid: "83580410"
 
 4. WinUI(Windows UI) 테마 리소스를 App.xaml 리소스에 추가합니다. 추가 애플리케이션 리소스가 있는지 여부에 따라 이를 수행하는 두 가지 방법이 있습니다.
 
-    a. 다른 애플리케이션 리소스가 없으면 `<XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>`를 Application.Resources에 추가합니다. 
+    a. 다른 애플리케이션 리소스가 없으면 `<XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>`를 Application.Resources에 추가합니다.
 
     ``` XAML
     <Application>
         <Application.Resources>
-            <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" /> 
+            <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
         </Application.Resources>
     </Application>
     ```
@@ -57,7 +57,7 @@ ms.locfileid: "83580410"
             <ResourceDictionary>
                 <ResourceDictionary.MergedDictionaries>
                     <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
-                </ResourceDictionary.MergedDictionaries> 
+                </ResourceDictionary.MergedDictionaries>
             </ResourceDictionary>
         </Application.Resources>
     </Application>
@@ -102,6 +102,6 @@ WinUI는 GitHub에 호스팅되는 오픈 소스 프로젝트입니다.
 
 [Windows UI 라이브러리 리포지토리](https://aka.ms/winui)에서 버그 보고서를 제출하고, 기능을 요청하고, 커뮤니티 코드를 제공할 수 있습니다.
 
-## <a name="other-resources"></a>다른 리소스 
+## <a name="other-resources"></a>다른 리소스
 
 UWP를 처음 사용하는 경우 개발자 포털의 [UWP 개발 시작](https://developer.microsoft.com/windows/getstarted) 페이지를 방문하는 것이 좋습니다.

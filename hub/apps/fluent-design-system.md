@@ -8,16 +8,16 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: f46d6ba99d4342e1e4fe7a9926082a5981fd690a
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 6cc020930e3b768f74ddb7cdfef3338ae537bd5d
+ms.sourcegitcommit: f806d5f3b0c1e046c903d3388092c0e059d21858
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74666906"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83791018"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Windows 앱 작성자용 Fluent 디자인 시스템
 
-![Fluent 디자인 헤더](images/fluent/fluentdesign-app-header.jpg)
+![Fluent 디자인 헤더](images/fluent/fluentdesign-app-header.png)
 
 ## <a name="introduction"></a>소개
 

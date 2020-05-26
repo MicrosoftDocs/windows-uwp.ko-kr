@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Python, Windows 10, Microsoft, Windows의 Python, WSL을 사용하는 Python 웹, Linux용 Windows 하위 시스템을 사용하는 Python 웹앱, Windows에서 Python 웹 개발, Windows의 Flask 앱, Windows의 Django 앱, Python 웹, Windows에서 Flask 웹 개발, Windows에서 Django 웹 개발, Python을 사용한 Windows 웹 개발, VS Code Python 웹 개발, Remote - WSL 확장, Ubuntu, WSL, venv, pip, Microsoft Python 확장, Windows에서 Python 실행, Windows에서 Python 사용, Windows에서 Python으로 빌드
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 8cbc8343764e4de57bd418ecdb36bd606b037c68
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 3ae3b04738152ff1a142e1599cc05357006456b9
+ms.sourcegitcommit: 2af814b7f94ee882f42fae8f61130b9cc9833256
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80218483"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83717142"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>웹 개발을 위해 Windows에서 Python 사용 시작
 
@@ -25,30 +25,18 @@ WSL(Linux용 Windows 하위 시스템)을 사용하여 Windows에서 웹 개발�
 
 Python을 웹 개발 이외의 용도로 사용하는 경우 Microsoft Store를 사용하여 Python을 Windows 10에 직접 설치하는 것이 좋습니다. WSL은 GUI 데스크톱 또는 애플리케이션(예: PyGame, Gnome, KDE 등)을 지원하지 않습니다. 이러한 경우 Python을 Windows에 직접 설치하고 사용합니다. Python을 처음 사용하는 경우 [초보자를 위한 Windows에서 Python 사용 시작](./beginners.md) 가이드를 참조하세요. 운영 체제에서 일반적인 작업을 자동화하는 데 관심이 있는 경우 [스크립팅 및 자동화를 위해 Windows에서 Python 사용 시작](./scripting.md) 가이드를 참조하세요. 일부 고급 시나리오의 경우 [python.org](https://www.python.org/downloads/windows/)에서 특정 Python 릴리스를 직접 다운로드하거나 Anaconda, Jython, PyPy, WinPython, IronPython 등과 같은 [대체 구현](https://www.python.org/download/alternatives)을 설치하는 것이 좋습니다. 대체 구현을 선택하는 특별한 이유가 있는 고급 Python 프로그래머인 경우에만 이를 추천합니다.
 
-## <a name="enable-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 사용
+## <a name="install-windows-subsystem-for-linux"></a>Linux용 Windows 하위 시스템 설치
 
-WSL을 사용하면 대부분의 명령줄 도구, 유틸리티 및 애플리케이션이 포함된 GNU/Linux 환경을 수정하지 않고 Windows 파일 시스템 및 즐겨찾는 도구(예: Visual Studio Code)와 완벽하게 통합하여 Windows에서 직접 실행할 수 있습니다. WSL을 사용하도록 설정하기 전에 [최신 버전의 Windows 10](https://www.microsoft.com/software-download/windows10)이 있는지 확인하세요.
+WSL을 사용하면 Windows 및 자주 사용하는 도구(예: Visual Studio Code, Outlook 등)와 직접 통합된 GNU/Linux 명령줄 환경을 실행할 수 있습니다.
 
-컴퓨터에서 WSL을 사용하도록 설정하려면 다음을 수행해야 합니다.
+WSL(또는 요구에 따라 WSL 2)를 사용하고 설치하려면 [WSL 설치 문서](https://docs.microsoft.com/windows/wsl/install-win10)의 단계를 따르세요. 이 단계에는 Linux 배포판(예: Ubuntu) 선택이 포함됩니다.
 
-1. **시작** 메뉴(왼쪽 아래의 Windows 아이콘)로 이동하여 "Windows 기능 켜기/끄기"를 입력하고, **제어판**에 대한 링크를 선택하여 **Windows 기능** 팝업 메뉴를 엽니다. 목록에서 "Linux용 Windows 하위 시스템"을 찾고, 이 확인란을 선택하여 해당 기능을 설정합니다.
+WSL과 Linux 배포판을 설치했으면 Linux 배포판(Windows 시작 메뉴에서 찾을 수 있음)을 열고 `lsb_release -dc` 명령을 사용하여 버전과 코드 이름을 확인합니다.
 
-2. 메시지가 표시되면 컴퓨터를 다시 시작합니다.
-
-## <a name="install-a-linux-distribution"></a>Linux 배포 설치
-
-WSL에서 실행할 수 있는 몇 가지 Linux 배포가 있습니다. Microsoft Store에서 원하는 배포를 찾아 설치할 수 있습니다. 현재 있기 있고 잘 지원되고 있는 [Ubuntu 18.04 LTS](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q)부터 시작하는 것이 좋습니다.
-
-1. 이 [Ubuntu 18.04 LTS](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q) 링크, Microsoft Store를 차례로 열고, **가져오기**를 선택합니다. *(이는 매우 큰 다운로드이며 설치하는데 시간이 걸릴 수 있습니다.)*
-
-2. 다운로드가 완료되면 Microsoft Store에서 **시작**을 선택하거나 **시작** 메뉴에서 "Ubuntu 18.04 LTS"를 입력하여 시작합니다.
-
-3. 배포를 처음 실행하는 경우 계정 이름과 암호를 만들라는 메시지가 표시됩니다. 이후에는 기본적으로 이 사용자로 자동으로 로그인됩니다. 임의의 사용자 이름과 암호를 선택할 수 있습니다. Windows 사용자 이름과는 관련이 없습니다.
-
-`lsb_release -d`를 입력하여 현재 사용 중인 Linux 배포를 확인할 수 있습니다. Ubuntu 배포를 업데이트하려면 `sudo apt update && sudo apt upgrade`를 사용합니다. 최신 패키지를 유지하기 위해 정기적으로 업데이트하는 것이 좋습니다. 이 업데이트는 Windows에서 자동으로 처리하지 않습니다. Microsoft Store에서 사용 가능한 다른 Linux 배포에 대한 링크, 대체 구현 설치 방법 또는 문제 해결은 [Windows 10에 Linux용 Windows 하위 시스템 설치 가이드](https://docs.microsoft.com/windows/wsl/install-win10)를 참조하세요.
+최신 패키지를 유지하기 위해 설치 직후를 포함하여 Linux 배포를 정기적으로 업데이트하는 것이 좋습니다. 이 업데이트는 Windows에서 자동으로 처리하지 않습니다. 배포를 업데이트하려면 `sudo apt update && sudo apt upgrade` 명령을 사용합니다.  
 
 > [!TIP]
-> 여러 명령줄(Ubuntu, PowerShell, Windows 명령 프롬프트 등)을 사용하려는 경우 또는 텍스트, 배경색, 키 바인딩 등을 비롯한 [터미널을 사용자 지정](https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md)하려는 경우 새 [Windows 터미널](https://github.com/microsoft/terminal/blob/master/doc/user-docs/index.md)을 사용해 보세요.
+> 여러 탭(여러 Linux 명령 프롬프트, Windows 명령 프롬프트, PowerShell, Azure CLI 간에 신속하게 전환), 사용자 지정 키 바인딩(탭 열기 또는 닫기, 복사+붙여넣기 등을 위한 바로 가기 키), 검색 기능 및 사용자 지정 테마(색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도)를 사용하려면 [Microsoft Store에서 새 Windows 터미널 설치](https://www.microsoft.com/store/apps/9n0dx20hk701)를 고려합니다. [자세한 정보를 알아보세요](https://docs.microsoft.com/windows/terminal).
 
 ## <a name="set-up-visual-studio-code"></a>Visual Studio Code 설정
 
@@ -72,7 +60,7 @@ VS Code를 사용하여 [IntelliSense](https://code.visualstudio.com/docs/editor
 ![Ubuntu 터미널](../images/ubuntu-terminal.png)
 
 > [!TIP]
-> WSL(Linux용 Windows 하위 시스템)을 사용할 때 기억해야 할 중요한 사항은 **현재 두 개의 서로 다른 파일 시스템**, 즉 1) Windows 파일 시스템 및 2) Linux 파일 시스템(WSL, 여기서는 Ubuntu) 간에 작업하고 있다는 것입니다. 패키지를 설치하고 파일을 저장하는 위치에 주의해야 합니다. Windows 파일 시스템에는 한 버전의 도구 또는 패키지를 설치하고, Linux 파일 시스템에는 완전히 다른 버전을 설치할 수 있습니다. Windows 파일 시스템에서 도구를 업데이트해도 Linux 파일 시스템의 도구에는 영향을 주지 않으며, 그 반대의 경우도 마찬가지입니다. WSL은 컴퓨터의 고정 드라이브를 Linux 배포의 `/mnt/<drive>` 폴더 아래에 탑재합니다. 예를 들어 Windows C: 드라이브는 `/mnt/c/` 아래에 탑재됩니다. Ubuntu 터미널에서 Windows 파일에 액세스하고 해당 파일에서 Linux 애플리케이션 및 도구를 사용할 수 있으며, 그 반대의 경우도 마찬가지입니다. 대부분의 웹 도구가 원래 Linux용으로 작성되어 Linux 프로덕션 환경에 배포되는 경우 Python 웹 개발을 위해 Linux 파일 시스템에서 작업하는 것이 좋습니다. 또한 파일 이름과 관련하여 대/소문자를 구분하지 않는 Windows와 같이 파일 시스템 의미 체계를 혼합하지 않도록 방지합니다. 즉, WSL은 이제 Linux 및 Windows 파일 시스템 간의 이동을 지원하므로 어느 쪽에서든 파일을 호스팅할 수 있습니다. [자세한 정보를 알아보세요](https://devblogs.microsoft.com/commandline/do-not-change-linux-files-using-windows-apps-and-tools/). 또한 [WSL2가 Windows에 곧 출시](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/)될 예정이며, 몇 가지 향상된 기능을 제공합니다. 이제 [Windows 참가자 빌드 18917에서 사용](https://docs.microsoft.com/windows/wsl/wsl2-install)해 볼 수 있습니다.
+> WSL(Linux용 Windows 하위 시스템)을 사용할 때 기억해야 할 중요한 사항은 **현재 두 개의 서로 다른 파일 시스템**, 즉 1) Windows 파일 시스템 및 2) Linux 파일 시스템(WSL, 여기서는 Ubuntu) 간에 작업하고 있다는 것입니다. 패키지를 설치하고 파일을 저장하는 위치에 주의해야 합니다. Windows 파일 시스템에는 한 버전의 도구 또는 패키지를 설치하고, Linux 파일 시스템에는 완전히 다른 버전을 설치할 수 있습니다. Windows 파일 시스템에서 도구를 업데이트해도 Linux 파일 시스템의 도구에는 영향을 주지 않으며, 그 반대의 경우도 마찬가지입니다. WSL은 컴퓨터의 고정 드라이브를 Linux 배포의 `/mnt/<drive>` 폴더 아래에 탑재합니다. 예를 들어 Windows C: 드라이브는 `/mnt/c/` 아래에 탑재됩니다. Ubuntu 터미널에서 Windows 파일에 액세스하고 해당 파일에서 Linux 애플리케이션 및 도구를 사용할 수 있으며, 그 반대의 경우도 마찬가지입니다. 대부분의 웹 도구가 원래 Linux용으로 작성되어 Linux 프로덕션 환경에 배포되는 경우 Python 웹 개발을 위해 Linux 파일 시스템에서 작업하는 것이 좋습니다. 또한 파일 이름과 관련하여 대/소문자를 구분하지 않는 Windows와 같이 파일 시스템 의미 체계를 혼합하지 않도록 방지합니다. 즉, WSL은 이제 Linux 및 Windows 파일 시스템 간의 이동을 지원하므로 어느 쪽에서든 파일을 호스팅할 수 있습니다. [자세한 정보를 알아보세요](https://devblogs.microsoft.com/commandline/do-not-change-linux-files-using-windows-apps-and-tools/).
 
 ## <a name="install-python-pip-and-venv"></a>Python, pip 및 venv 설치
 
@@ -99,7 +87,7 @@ Python 개발 프로젝트에는 가상 환경을 사용하는 것이 좋습니�
 
 ## <a name="open-a-wsl---remote-window"></a>Remote - WSL 창 열기
 
-VS Code는 이전에 설치된 Remote - WSL 확장을 사용하여 Linux 하위 시스템을 원격 서버로 처리합니다. 그러면 WSL을 통합 개발 환경으로 사용할 수 있습니다. [자세한 정보를 알아보세요](https://code.visualstudio.com/docs/remote/wsl). 
+VS Code는 이전에 설치된 Remote - WSL 확장을 사용하여 Linux 하위 시스템을 원격 서버로 처리합니다. 그러면 WSL을 통합 개발 환경으로 사용할 수 있습니다. [자세한 정보를 알아보세요](https://code.visualstudio.com/docs/remote/wsl).
 
 1. `code .`를 입력하여 Ubuntu 터미널에서 VS Code의 프로젝트 폴더를 엽니다("."는 현재 폴더를 열도록 VS Code에 지시함).
 
