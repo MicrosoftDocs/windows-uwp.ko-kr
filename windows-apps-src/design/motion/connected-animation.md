@@ -9,12 +9,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 385c11e48695c2486fd5a2b72633923454e2f8ea
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ad94d7b887e28ac01156592ac47cfc9ac4783193
+ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970638"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83775904"
 ---
 # <a name="connected-animation-for-windows-apps"></a>Windows 앱에 대 한 연결 된 애니메이션
 
@@ -49,13 +49,13 @@ ms.locfileid: "82970638"
 <iframe width=640 height=360 src='https://microsoft.sharepoint.com/portals/hub/_layouts/15/VideoEmbedHost.aspx?chId=552c725c%2De353%2D4118%2Dbd2b%2Dc2d0584c9848&amp;vId=b2daa5ee%2Dbe15%2D4503%2Db541%2D1328a6587c36&amp;width=640&amp;height=360&amp;autoPlay=false&amp;showInfo=true' allowfullscreen></iframe>
 -->
 
-## <a name="video-summary"></a>비디오 요약
+## <a name="video-summary"></a>동영상 요약
 
 > [!VIDEO https://channel9.msdn.com/Events/Windows/Windows-Developer-Day-Fall-Creators-Update/WinDev005/player]
 
 ## <a name="connected-animation-and-the-fluent-design-system"></a>연결 된 애니메이션 및 흐름 디자인 시스템
 
- 흐름 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질, 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 연결 된 애니메이션은 응용 프로그램에 동작을 추가 하는 흐름 디자인 시스템 구성 요소입니다. 자세히 알아보려면 [흐름 디자인 개요](/windows/apps/fluent-design-system)를 참조 하세요.
+ Fluent 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질 및 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 연결 된 애니메이션은 응용 프로그램에 동작을 추가 하는 흐름 디자인 시스템 구성 요소입니다. 자세한 내용은 [Fluent Design 개요](/windows/apps/fluent-design-system)를 참조하세요.
 
 ## <a name="why-connected-animation"></a>애니메이션을 연결 하는 이유
 
@@ -271,7 +271,7 @@ void PrepareAnimationWithItem(ContactsItem item)
 자세히 보기에서 뒤로 탐색 하는 경우와 같이이 요소를 대상으로 사용 하 여 애니메이션을 시작 하려면 [TryStartConnectedAnimationAsync](/uwp/api/windows.ui.xaml.controls.listviewbase.trystartconnectedanimationasync)를 사용 합니다. 방금 ListView에 대 한 데이터 소스를 로드 한 경우 TryStartConnectedAnimationAsync는 해당 항목 컨테이너가 생성 될 때까지 애니메이션을 시작할 때까지 기다립니다.
 
 ```csharp
-private void ContactsListView_Loaded(object sender, RoutedEventArgs e)
+private async void ContactsListView_Loaded(object sender, RoutedEventArgs e)
 {
     ContactsItem item = GetPersistedItem(); // Get persisted item
     if (item != null)

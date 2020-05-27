@@ -1,66 +1,66 @@
 ---
-Description: Microsoft 시험 응시 앱을 위한 JavaScript API를 사용하면 평가의 보안을 유지할 수 있습니다. 시험 응시에서는 테스트 중 학생이 다른 컴퓨터나 인터넷 리소스를 사용할 수 없도록 보안 브라우저를 제공합니다.
-title: JavaScript API 시험 응시.
+Description: Microsoft에서 테스트 앱을 사용 하기 위한 JavaScript API를 통해 보안 평가를 수행할 수 있습니다. 테스트를 수행 하면 테스트 중에 학생이 다른 컴퓨터나 인터넷 리소스를 사용 하지 못하도록 하는 보안 브라우저가 제공 됩니다.
+title: 테스트 JavaScript API를 사용 합니다.
 ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
 ms.date: 08/08/2018
 ms.topic: article
 keywords: windows 10, uwp, 교육
 ms.localizationpriority: medium
-ms.openlocfilehash: 31672ff989da7d72f751a33ec3df3d8d528e22ec
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 3708252908c9f63bbb5070ef864b8418c857ac19
+ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317816"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854726"
 ---
-# <a name="take-a-test-javascript-api"></a>JavaScript API 시험 응시
+# <a name="take-a-test-javascript-api"></a>테스트 JavaScript API를 사용 합니다.
 
-[시험](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) 는 렌더링 중요 테스트를 위해 잠긴 온라인 평가 콘텐츠 보안을 제공 하는 방법 대신 평가 중점적으로 강사를 허용 하는 브라우저 기반 UWP 앱 테스트 환경입니다. 이를 위해 이 앱에서는 모든 웹 응용 프로그램이 활용할 수 있는 JavaScript API를 사용합니다. 시험 응시 API는 고강도 일반 코어 테스트를 위해 [SBAC 브라우저 API 표준](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf)을 지원합니다.
+[테스트 수행](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) 은 한계가 테스트에 대 한 잠긴 온라인 평가를 렌더링 하는 브라우저 기반 UWP 앱으로, 교육자가 보안 테스트 환경을 제공 하는 방법이 아닌 평가 콘텐츠에 집중할 수 있게 해줍니다. 이를 위해 웹 응용 프로그램에서 활용할 수 있는 JavaScript API를 사용 합니다. 테스트 실행 API는 높은 한계가 일반 코어 테스트를 위한 [SBAC BROWSER api 표준을](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) 지원 합니다.
 
-앱 자체에 대한 자세한 내용은 [시험 응시 앱 기술 참조](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)를 참조하세요. 문제 해결 도움말은 [이벤트 뷰어를 사용하여 Microsoft 시험 응시 문제 해결](troubleshooting.md)을 참조하세요.
+앱 자체에 대 한 자세한 내용은 [테스트 앱 사용 기술 참조](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) 를 참조 하세요. 문제 해결 도움말 [은 Microsoft의 이벤트 뷰어를 사용 하 여 테스트 수행](troubleshooting.md)을 참조 하세요.
 
 ## <a name="reference-documentation"></a>참조 설명서
-시험 응시 API는 다음 네임스페이스로 존재합니다. 모든 API는 글로벌 `SecureBrowser`개체에 따라 달라짐에 주의하십시오.
+다음 네임 스페이스에는 테스트 수행 Api가 있습니다. 모든 Api는 전역 개체에 따라 달라 집니다 `SecureBrowser` .
 
-| Namespace | 설명 |
+| 네임스페이스 | Description |
 |-----------|-------------|
-|[보안 네임 스페이스](#security-namespace)|테스트를 위해 장치를 잠그고 테스트 환경을 제어하도록 해주는 API가 들어 있습니다. |
+|[보안 네임 스페이스](#security-namespace)|테스트 환경을 테스트 하 고 적용 하기 위해 장치를 잠글 수 있는 Api를 포함 합니다. |
 
-### <a name="security-namespace"></a>보안 네임스페이스
+### <a name="security-namespace"></a>보안 네임 스페이스
 
-보안 네임 스페이스를 사용 하면 장치를 잠그는, 사용자 및 시스템 프로세스의 목록을 확인, MAC 및 IP 주소를 얻는 및 캐시 된 웹 리소스를 지울 수 있습니다.
+보안 네임 스페이스를 사용 하 여 장치를 잠그고, 사용자 및 시스템 프로세스 목록을 확인 하 고, MAC 및 IP 주소를 가져오고, 캐시 된 웹 리소스를 지울 수 있습니다.
 
-| 메서드 | 설명   |
+| 방법 | Description   |
 |--------|---------------|
-|[lockDown](#lockDown) | 테스트를 위해 장치를 잠급니다. |
-|[isEnvironmentSecure](#isEnvironmentSecure) | 잠금 컨텍스트가 디바이스에 적용되는지 결정합니다. |
-|[getDeviceInfo](#getDeviceInfo) | 테스트 응용 프로그램이 실행되는 플랫폼에 대한 세부 정보를 가져옵니다. |
-|[examineProcessList](#examineProcessList)|실행 중인 사용자 및 시스템 프로세스의 목록을 가져옵니다.|
-|[close](#close) | 브라우저를 닫고 디바이스의 잠금을 해제합니다. |
-|[getPermissiveMode](#getPermissiveMode)|허용 모드가 켜져 있는지 아니면 꺼져 있는지 확인합니다.|
-|[setPermissiveMode](#setPermissiveMode)|허용 모드를 켜거나 끕니다.|
+|[보안](#lockDown) | 테스트를 위해 장치를 잠급니다. |
+|[Is환경 보안](#isEnvironmentSecure) | 잠금 컨텍스트가 장치에 계속 적용 되는지 여부를 결정 합니다. |
+|[getDeviceInfo](#getDeviceInfo) | 테스트 응용 프로그램이 실행 되는 플랫폼에 대 한 세부 정보를 가져옵니다. |
+|[examineProcessList](#examineProcessList)|실행 중인 사용자 및 시스템 프로세스 목록을 가져옵니다.|
+|[닫습니다](#close) | 브라우저를 닫고 장치의 잠금을 해제 합니다. |
+|[getPermissiveMode](#getPermissiveMode)|허용 모드가 설정 되어 있는지 여부를 확인 합니다.|
+|[setPermissiveMode](#setPermissiveMode)|허용 모드를 설정 하거나 해제 합니다.|
 |[emptyClipBoard](#emptyClipBoard)|시스템 클립보드를 지웁니다.|
-|[getMACAddress](#getMACAddress)|디바이스의 MAC 주소 목록을 가져옵니다.|
-|[getStartTime](#getStartTime) | 테스트 앱이 시작된 시간을 가져옵니다. |
-|[getCapability](#getCapability) | 기능의 사용 여부를 쿼리합니다. |
-|[setCapability](#setCapability)|지정된 기능을 사용하거나 사용하지 않도록 설정합니다.| 
-|[isRemoteSession](#isRemoteSession) | 현재 세션이 원격으로 로그인되었는지 확인합니다. |
-|[isVMSession](#isVMSession) | 현재 세션이 가상 컴퓨터에서 실행되고 있는지 확인합니다. |
+|[getMACAddress만](#getMACAddress)|장치의 MAC 주소 목록을 가져옵니다.|
+|[getStartTime](#getStartTime) | 테스트 앱이 시작 된 시간을 가져옵니다. |
+|[getCapability](#getCapability) | 기능이 사용 되는지 여부를 쿼리 합니다. |
+|[setCapability](#setCapability)|지정 된 기능을 사용 하거나 사용 하지 않도록 설정 합니다.| 
+|[isRemoteSession](#isRemoteSession) | 현재 세션이 원격으로 로그인 했는지 확인 합니다. |
+|[isVMSession](#isVMSession) | 현재 세션이 가상 컴퓨터에서 실행 되 고 있는지 확인 합니다. |
 
 ---
 
 <span id="lockDown"/>
 
-### <a name="lockdown"></a>LockDown
-디바이스를 잠급니다. 디바이스의 잠금을 해제하는 데도 사용됩니다. 테스트 웹 응용 프로그램은 이 호출을 수행한 후에 학생들이 테스트를 시작하도록 허용합니다. 구현자는 테스트 환경의 보안을 유지하는 데 필요한 모든 작업을 수행해야 합니다. 환경 보안을 설정 하는 단계는 장치 특정 및 예를 들어, 사용 하지 않도록 설정 화면 캡처, 보안 모드에 있을 때 음성 채팅을 사용 하지 않도록 설정, 시스템 클립보드를 지우면, 키오스크 모드에 들어가면 OSX 10.7 +의 공간을 사용 하지 않도록 설정 같은 측면이 포함 장치 등 테스트 응용 프로그램 평가 시작 하 고 학생 평가 완료 하 고 보안 테스트 벗어났습니다 잠금을 사용 하지 않도록 설정 됩니다 전에 잠금 사용 하도록 설정 됩니다.
+### <a name="lockdown"></a>보안
+장치를 잠급니다. 장치를 잠금 해제 하는 데도 사용 됩니다. 테스트 웹 응용 프로그램은 학생이 테스트를 시작 하도록 허용 하기 전에이 호출을 호출 합니다. 구현자는 테스트 환경을 보호 하는 데 필요한 모든 작업을 수행 하는 데 필요 합니다. 환경을 보호 하기 위해 수행 하는 단계는 장치에 따라 다릅니다. 예를 들어 화면 캡처 사용 안 함, 보안 모드에서 음성 채팅 사용 안 함, 시스템 클립보드 지우기, 키오스크 모드로 전환, OSX 10.7 + 장치에서 공백 사용 안 함 등의 측면이 있습니다. 테스트 응용 프로그램은 평가 시작 됩니다 이전에 잠금을 사용 하도록 설정 하 고 학생이 평가를 완료 하 고 보안 테스트를 하지 않을 때 잠금을 사용 하지 않도록 설정 합니다.
 
 **구문**  
 `void SecureBrowser.security.lockDown(Boolean enable, Function onSuccess, Function onError);`
 
 **매개 변수**  
-* `enable` - **true 이면** 잠금 화면 위에 Take-a-테스트 앱을 실행 하 고이 설명 하는 정책을 적용 하 [문서](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)합니다. 앱이 잠겨 있지 않으면 잠금 화면 위에서 시험 응시의 실행을 중지하고 닫는 **false**입니다. 이 경우 영향을 주지 않습니다.  
-* `onSuccess` -[선택 사항] 성공적으로 사용 되거나 사용 하지 않도록 설정 된 잠금을 후 호출할 함수입니다. `Function(Boolean currentlockdownstate)` 형식이어야 합니다.  
-* `onError` -[선택 사항] 잠금 작업에 실패 하면 호출할 함수입니다. `Function(Boolean currentlockdownstate)` 형식이어야 합니다.  
+* `enable` - 잠금 화면 위에서 테스트 후 앱을 실행 하 고이 [문서](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)에서 설명 하는 정책을 적용 하려면 **true로 설정** 합니다. **false로 설정** 하면 잠금 화면 위에서 테스트 실행이 중지 되 고 앱이 잠기지 않은 경우 닫힙니다. 이 경우에는 아무 효과가 없습니다.  
+* `onSuccess`-[선택 사항] 잠금을 사용 하거나 사용 하지 않도록 설정 하 고 나면 호출할 함수입니다. 형식 이어야 합니다 `Function(Boolean currentlockdownstate)` .  
+* `onError`-[선택 사항] 잠금 작업이 실패 한 경우 호출할 함수입니다. 형식 이어야 합니다 `Function(Boolean currentlockdownstate)` .  
 
 **요구 사항**  
 Windows 10, 버전 1709
@@ -69,14 +69,14 @@ Windows 10, 버전 1709
 
 <span id="isEnvironmentSecure" />
 
-### <a name="isenvironmentsecure"></a>isEnvironmentSecure
-잠금 컨텍스트가 디바이스에 적용되는지 결정합니다. 테스트 웹 응용 프로그램은 학생이 테스트를 시작하도록 허용하기 전에 및 테스트 중 주기적으로 이 함수를 호출합니다.
+### <a name="isenvironmentsecure"></a>Is환경 보안
+잠금 컨텍스트가 장치에 계속 적용 되는지 여부를 결정 합니다. 테스트 웹 응용 프로그램은 학생 들이 테스트 내부에서 테스트를 시작 하 고 주기적으로 테스트를 시작 하도록 허용 하기 전에이를 호출 합니다.
 
 **구문**  
 `void SecureBrowser.security.isEnvironmentSecure(Function callback);`
 
 **매개 변수**  
-* `callback` -이 함수가 완료 될 때 호출할 함수입니다. `Function(String state)` 형식이어야 하며, `state`는 두 개의 필드가 들어 있는 JSON 문자열입니다. 첫 번째는 `secure` 필드이며, 필요한 모든 잠금이 활성화되어 있는 경우에만(또는 기능이 비활성화된 경우) `true`가 표시되어 안전한 테스트 환경을 보장하며, 앱이 잠금 모드에 들어간 이후 이 중 어떤 것도 손상되지 않았음을 보장합니다. 다른 필드 `messageKey`에는 공급 업체 관련 정보가 들어 있습니다. 이 필드의 용도는 공급 업체가 부울 `secure` 플래그를 늘리는 추가 정보를 입력하도록 하는 것입니다.
+* `callback`-이 함수가 완료 될 때 호출할 함수입니다. 형식 이어야 합니다 `Function(String state)` `state` . 여기서은 두 필드를 포함 하는 JSON 문자열입니다. 첫 번째는 `secure` 필드입니다 .이 필드는 `true` 보안 테스트 환경을 사용 하도록 설정 하는 데 필요한 모든 잠금이 설정 된 경우에만 표시 되 고, 앱이 잠금 모드로 전환 된 후에는 이러한 기능이 모두 손상 된 경우에만 표시 됩니다. 다른 필드인에는 `messageKey` 공급 업체별 기타 세부 정보 또는 정보가 포함 되어 있습니다. 여기서의 목적은 공급 업체에서 부울 플래그를 보강 하는 추가 정보를 입력할 수 있도록 하는 것입니다 `secure` .
 
 ```JSON
 {
@@ -93,18 +93,18 @@ Windows 10, 버전 1709
 <span id="getDeviceInfo" />
 
 ### <a name="getdeviceinfo"></a>getDeviceInfo
-테스트 응용 프로그램이 실행되는 플랫폼에 대한 세부 정보를 가져옵니다. 사용자 에이전트에서 인식할 수 있었던 모든 정보를 확대하는 데 사용됩니다.
+테스트 응용 프로그램이 실행 되는 플랫폼에 대 한 세부 정보를 가져옵니다. 사용자 에이전트에서 뚜렷한 된 정보를 보강 하는 데 사용 됩니다.
 
 **구문**  
 `void SecureBrowser.security.getDeviceInfo(Function callback);`
 
 **매개 변수**  
-* `callback` -이 함수가 완료 될 때 호출할 함수입니다. `Function(String infoObj)` 형식이어야 하며, `infoObj`는 여러 개의 필드가 들어 있는 JSON 문자열입니다. 다음 필드를 지원해야 합니다.
-    * `os` OS 종류를 나타냅니다 (예: Windows, macOS, Linux, iOS, Android 등.)
-    * `name` 있는 경우 OS 릴리스 이름 나타냅니다 (예: 시에라리온, Ubuntu)입니다.
-    * `version` OS 버전을 나타냅니다 (예: 10.1, 10 pro, 등.)
-    * `brand` 보안 브라우저 브랜딩 나타냅니다 (예: OAKS, CA, SmarterApp 등)
-    * `model` 모바일 장치에만 해당;에 대 한 장치 모델을 나타내는 null/사용 하지 않는 데스크톱 브라우저에 대 한 합니다.
+* `callback`-이 함수가 완료 될 때 호출할 함수입니다. 형식 이어야 합니다 `Function(String infoObj)` `infoObj` . 여기서는 여러 필드를 포함 하는 JSON 문자열입니다. 다음 필드를 지원 해야 합니다.
+    * `os`OS 유형 (예: Windows, macOS, Linux, iOS, Android 등)을 나타냅니다.
+    * `name`OS 릴리스 이름 (있는 경우)을 나타냅니다 (예: 시에라리온, Ubuntu).
+    * `version`OS 버전을 나타냅니다 (예: 10.1, 10 Pro 등).
+    * `brand`보안 브라우저 브랜딩을 나타냅니다 (예: OAKS, CA, SmarterApp 등).
+    * `model`모바일 장치에 대 한 장치 모델만 나타냅니다. 데스크톱 브라우저의 경우 null/사용 되지 않습니다.
 
 **요구 사항**  
 Windows 10, 버전 1709
@@ -114,16 +114,16 @@ Windows 10, 버전 1709
 <span id="examineProcessList" />
 
 ### <a name="examineprocesslist"></a>examineProcessList
-사용자가 소유한 클라이언트 컴퓨터에서 실행 중인 모든 프로세스 목록을 가져옵니다. 테스트 응용 프로그램은 이 함수를 호출하여 목록을 확인하고 테스트 주기 동안 예상 차단 프로세스 목록과 비교합니다. 이 호출은 평가 시작 시 및 학생이 평가를 수행하는 동안 주기적으로 호출되어야 합니다. 차단된 프로세스가 발견되면 테스트 무결성을 유지하기 위해 평가를 중지해야 합니다.
+사용자가 소유한 클라이언트 컴퓨터에서 실행 중인 모든 프로세스 목록을 가져옵니다. 테스트 응용 프로그램은이를 호출 하 여 목록을 검사 하 고 테스트 주기 중에 블랙 리스트에 된 것으로 간주 된 프로세스 목록과 비교 합니다. 이 호출은 평가를 시작할 때와 학생 들이 평가를 수행 하는 동안 주기적으로 호출 해야 합니다. 블랙 리스트에 프로세스가 검색 되 면 테스트 무결성을 유지 하기 위해 평가를 중지 해야 합니다.
 
 **구문**  
 `void SecureBrowser.security.examineProcessList(String[] blacklistedProcessList, Function callback);`
 
 **매개 변수**  
-* `blacklistedProcessList` -목록 테스트 응용 프로그램에 블랙 리스트에 추가 하는 프로세스입니다.  
-`callback` -호출할 함수를 활성 프로세스 발견 되었습니다. `Function(String foundBlacklistedProcesses)` 형식이어야 하며, `foundBlacklistedProcesses`는  `"['process1.exe','process2.exe','processEtc.exe']"` 형식이어야 합니다. 차단된 프로세스가 없으면 비어 있게 됩니다. null인 경우, 원래 함수 호출에서 오류가 발생했음을 나타냅니다.
+* `blacklistedProcessList`-테스트 응용 프로그램에 블랙 리스트에 된 프로세스의 목록입니다.  
+`callback`-활성 프로세스를 찾은 후 호출할 함수입니다. 형식 이어야 합니다. `Function(String foundBlacklistedProcesses)` 여기서 `foundBlacklistedProcesses` 는 형식 `"['process1.exe','process2.exe','processEtc.exe']"` 입니다. 블랙 리스트에 프로세스를 찾을 수 없는 경우 비어 있습니다. Null 인 경우에는 원래 함수 호출에서 오류가 발생 했음을 나타냅니다.
 
-**설명** 시스템 프로세스는 이 목록에 포함되지 않습니다.
+**설명** 이 목록에는 시스템 프로세스가 포함 되지 않습니다.
 
 **요구 사항**  
 Windows 10, 버전 1709
@@ -133,15 +133,15 @@ Windows 10, 버전 1709
 <span id="close"/>
 
 ### <a name="close"></a>닫기
-브라우저를 닫고 디바이스의 잠금을 해제합니다. 사용자가 브라우저를 종료하도록 선택하는 경우 테스트 응용 프로그램에서 이 함수를 호출해야 합니다.
+브라우저를 닫고 장치의 잠금을 해제 합니다. 사용자가 브라우저를 종료 하면 테스트 응용 프로그램에서이를 호출 해야 합니다.
 
 **구문**  
 `void SecureBrowser.security.close(restart);`
 
 **매개 변수**  
-* `restart` -이 매개 변수는 무시 됩니다 있지만 제공 해야 합니다.
+* `restart`-이 매개 변수는 무시 되지만 제공 되어야 합니다.
 
-**설명** Windows 10 버전 1607에서는 초기에 장치가 잠겨 있어야 합니다. 이후 버전에서 이 방법은 디바이스가 잠겨 있는지 여부와 관계 없이 브라우저를 닫습니다.
+**설명** Windows 10 버전 1607에서 장치는 처음에 잠가야 합니다. 이후 버전에서이 메서드는 장치가 잠겨 있는지 여부에 관계 없이 브라우저를 닫습니다.
 
 **요구 사항**  
 Windows 10, 버전 1709
@@ -151,13 +151,13 @@ Windows 10, 버전 1709
 <span id="getPermissiveMode" />
 
 ### <a name="getpermissivemode"></a>getPermissiveMode
-허용 모드가 켜져 있는지 아니면 꺼져 있는지 확인하려면 테스트 웹 응용 프로그램에서 이 함수를 호출해야 합니다. 허용 모드에서는 보안 브라우저에 보조 기술이 작동할 수 있도록 브라우저의 엄격한 보안 후크 중 일부가 해제 가능 상태가 됩니다. 예를 들어, 다른 응용 프로그램 UI가 브라우저 위에 표시되지 않도록 적극적으로 방어하는 브라우저의 경우 허용 모드에 있을 때 이를 해제할 수 있습니다. 
+테스트 웹 응용 프로그램은이를 호출 하 여 관대 한 모드가 설정 되어 있는지 여부를 확인 해야 합니다. 관대 한 모드에서 브라우저는 보안 브라우저에서 보조 기술을 사용할 수 있도록 엄격한 보안 후크 중 일부를 완화할 것으로 예상 합니다. 예를 들어, 다른 응용 프로그램 Ui를 가장 먼저 표시 하지 않도록 하는 브라우저는 허용 모드에서이를 완화 하는 것이 좋습니다. 
 
 **구문**  
 `void SecureBrowser.security.getPermissiveMode(Function callback)`
 
 **매개 변수**  
-* `callback` -이 호출이 완료 될 때 호출할 함수입니다. `Function(Boolean permissiveMode)` 형식이어야 하며, `permissiveMode`는 브라우저가 현재 허용 모드에 있는지를 나타냅니다. 지정되지 않거나 null인 경우 가져오기 작업에 오류가 발생합니다.
+* `callback`-이 호출이 완료 될 때 호출할 함수입니다. 형식 이어야 합니다. `Function(Boolean permissiveMode)` 여기서는 `permissiveMode` 브라우저가 현재 허용 모드 인지 여부를 나타냅니다. 정의 되지 않았거나 null 이면 가져오기 작업에서 오류가 발생 한 것입니다.
 
 **요구 사항**  
 Windows 10, 버전 1709
@@ -167,14 +167,14 @@ Windows 10, 버전 1709
 <span id="setPermissiveMode" />
 
 ### <a name="setpermissivemode"></a>setPermissiveMode
-허용 모드를 켜기 또는 끄기로 전환하려면 테스트 웹 응용 프로그램에서 이 함수를 호출해야 합니다. 허용 모드에서는 보안 브라우저에 보조 기술이 작동할 수 있도록 브라우저의 엄격한 보안 후크 중 일부가 해제 가능 상태가 됩니다. 예를 들어, 다른 응용 프로그램 UI가 브라우저 위에 표시되지 않도록 적극적으로 방어하는 브라우저의 경우 허용 모드에 있을 때 이를 해제할 수 있습니다. 
+테스트 웹 응용 프로그램은이를 호출 하 여 허용 모드를 설정 하거나 해제 해야 합니다. 관대 한 모드에서 브라우저는 보안 브라우저에서 보조 기술을 사용할 수 있도록 엄격한 보안 후크 중 일부를 완화할 것으로 예상 합니다. 예를 들어, 다른 응용 프로그램 Ui를 가장 먼저 표시 하지 않도록 하는 브라우저는 허용 모드에서이를 완화 하는 것이 좋습니다. 
 
 **구문**  
 `void SecureBrowser.security.setPermissiveMode(Boolean enable, Function callback)`
 
 **매개 변수**  
-* `enable` 의도 한 관대 한 모드 상태를 나타내는-부울 값입니다.  
-* `callback` -이 호출이 완료 될 때 호출할 함수입니다. `Function(Boolean permissiveMode)` 형식이어야 하며, `permissiveMode`는 브라우저가 현재 허용 모드에 있는지를 나타냅니다. 지정되지 않거나 null인 경우 설정 작업에 오류가 발생합니다.
+* `enable`-의도 된 허용 모드 상태를 나타내는 부울 값입니다.  
+* `callback`-이 호출이 완료 될 때 호출할 함수입니다. 형식 이어야 합니다. `Function(Boolean permissiveMode)` 여기서는 `permissiveMode` 브라우저가 현재 허용 모드 인지 여부를 나타냅니다. 정의 되지 않았거나 null 이면 설정 작업에서 오류가 발생 한 것입니다.
 
 **요구 사항**  
 Windows 10, 버전 1709
@@ -184,7 +184,7 @@ Windows 10, 버전 1709
 <span id="emptyClipBoard"/>
 
 ### <a name="emptyclipboard"></a>emptyClipBoard
-시스템 클립보드를 지웁니다. 시스템 클립보드에 저장되어 있을 수 있는 데이터를 강제로 지우려면 테스트 응용 프로그램에서 이 함수를 호출해야 합니다. **[lockDown](#lockDown)** 함수도 이 작업을 수행합니다.
+시스템 클립보드를 지웁니다. 테스트 응용 프로그램은이를 호출 하 여 시스템 클립보드에 저장 될 수 있는 모든 데이터를 강제로 지워야 합니다. **[잠금](#lockDown)** 기능도이 작업을 수행 합니다.
 
 **구문**  
 `void SecureBrowser.security.emptyClipBoard();`
@@ -196,17 +196,17 @@ Windows 10, 버전 1709
 
 <span id="getMACAddress" />
 
-### <a name="getmacaddress"></a>getMACAddress
-디바이스의 MAC 주소 목록을 가져옵니다. 진단을 보조하려면 테스트 응용 프로그램에서 이 함수를 호출해야 합니다. 
+### <a name="getmacaddress"></a>getMACAddress만
+장치의 MAC 주소 목록을 가져옵니다. 진단에 도움이 되도록 테스트 응용 프로그램에서이를 호출 해야 합니다. 
 
 **구문**  
 `void SecureBrowser.security.getMACAddress(Function callback);`
 
 **매개 변수**  
-* `callback` -이 호출이 완료 될 때 호출할 함수입니다. `Function(String addressArray)` 형식이어야 하며, `addressArray`는  `"['00:11:22:33:44:55','etc']"` 형식이어야 합니다.
+* `callback`-이 호출이 완료 될 때 호출할 함수입니다. 형식 이어야 합니다. `Function(String addressArray)` 여기서 `addressArray` 는 형식 `"['00:11:22:33:44:55','etc']"` 입니다.
 
-**설명**  
-학교에서는 방화벽/NAT/프록시가 일반적으로 사용되므로 원본 IP 주소를 사용하여 테스트 서버 내 최종 사용자 컴퓨터 간을 구별하기는 어렵습니다. MAC 주소는 앱이 진단 용도로 일반적인 방화벽으로 보호되고 있는 최종 클라이언트 컴퓨터를 구별하도록 해줍니다.
+**주의**  
+방화벽/p s/프록시가 학교에서 일반적으로 사용 되기 때문에 원본 IP 주소를 사용 하 여 테스트 서버 내에서 최종 사용자 컴퓨터를 구분 하는 것은 어렵습니다. MAC 주소를 사용 하면 응용 프로그램에서 진단 목적을 위해 최종 클라이언트 컴퓨터를 일반 방화벽 뒤에 구분할 수 있습니다.
 
 **요구 사항**  
 Windows 10, 버전 1709
@@ -216,13 +216,13 @@ Windows 10, 버전 1709
 <span id="getStartTime" />
 
 ### <a name="getstarttime"></a>getStartTime
-테스트 앱이 시작된 시간을 가져옵니다.
+테스트 앱이 시작 된 시간을 가져옵니다.
 
 **구문**  
-`DateTime SecureBrowser.settings.getStartTime();`
+`DateTime SecureBrowser.security.getStartTime();`
 
-**반환**  
-테스트가 시작된 시간을 나타내는 DateTime 개체입니다.
+**돌려**  
+테스트 앱이 시작 된 시간을 나타내는 DateTime 개체입니다.
 
 **요구 사항**  
 Windows 10, 버전 1709
@@ -232,52 +232,52 @@ Windows 10, 버전 1709
 <span id="getCapability"/>
 
 ### <a name="getcapability"></a>getCapability
-기능의 사용 여부를 쿼리합니다. 
+기능이 사용 되는지 여부를 쿼리 합니다. 
 
 **구문**  
 `Object SecureBrowser.security.getCapability(String feature)`
 
 **매개 변수**  
-`feature` -쿼리 하는 기능을 확인 하려면 문자열입니다. 유효한 기능 문자열은 "screenMonitoring", "printing", "textSuggestions"입니다(대소문자 구문).
+`feature`-쿼리할 기능을 결정 하는 문자열입니다. 유효한 기능 문자열은 "screenMonitoring", "인쇄" 및 "textSuggestions" (대/소문자 구분 안 함)입니다.
 
 **반환 값**  
-이 함수는 JavaScript 개체 또는 리터럴을 `{<feature>:true|false}` 형식으로 반환합니다. 쿼리된 기능을 활성화하는 경우 **true**, 기능을 사용하지 않거나 기능 문자열이 유효하지 않은 경우 **false**입니다.
+이 함수는 형식의 JavaScript 개체나 리터럴을 반환 `{<feature>:true|false}` 합니다. 쿼리 된 기능을 사용할 수 있으면 **true** 이 고, 기능을 사용할 수 없거나 기능 문자열이 잘못 된 경우 **false** 입니다.
 
-**요구 사항** Windows 10 버전 1703
+**요구 사항** Windows 10, 버전 1703
 
 ---
 
 <span id="setCapability"/>
 
 ### <a name="setcapability"></a>setCapability
-브라우저에 특정 기능을 사용하도록 설정하거나 사용하지 않도록 설정합니다.
+브라우저에서 특정 기능을 사용 하거나 사용 하지 않도록 설정 합니다.
 
 **구문**  
 `void SecureBrowser.security.setCapability(String feature, String value, Function onSuccess, Function onError)`
 
 **매개 변수**  
-* `feature` -문자열을 설정 하는 기능을 결정입니다. 유효한 기능 문자열은 `"screenMonitoring"`, `"printing"` 및 `"textSuggestions"`입니다(대/소문자 구문).  
-* `value` -의도 한 기능에 대 한 설정입니다. `"true"`또는 `"false"`이어야 합니다.  
-* `onSuccess` -[옵션] 설정 작업이 성공적으로 완료 된 후 호출할 함수입니다. `Function(String jsonValue)` 형식이어야 하며, *jsonValue*는 `{<feature>:true|false|undefined}` 형식이어야 합니다.  
-* `onError` -[선택 사항] set 작업이 실패 한 경우 호출할 함수입니다. `Function(String jsonValue)` 형식이어야 하며, *jsonValue*는 `{<feature>:true|false|undefined}` 형식이어야 합니다.
+* `feature`-설정할 기능을 결정 하는 문자열입니다. 유효한 기능 문자열은 `"screenMonitoring"` , `"printing"` 및 `"textSuggestions"` (대/소문자 구분 안 함)입니다.  
+* `value`-기능에 대 한 의도 된 설정입니다. 또는 중 하나 여야 `"true"` 합니다 `"false"` .  
+* `onSuccess`-[선택 사항] set 작업이 성공적으로 완료 된 후 호출할 함수입니다. `Function(String jsonValue)` *JsonValue* 가 형식의 형식 이어야 합니다 `{<feature>:true|false|undefined}` .  
+* `onError`-[선택 사항] 설정 작업이 실패 한 경우 호출할 함수입니다. `Function(String jsonValue)` *JsonValue* 가 형식의 형식 이어야 합니다 `{<feature>:true|false|undefined}` .
 
-**설명**  
-대상 기능이 브라우저에 알려지지 않은 기능인 경우, 이 함수에서 `undefined` 값을 전달하여 함수를 콜백합니다.
+**주의**  
+대상 기능을 브라우저에서 알 수 없는 경우이 함수는 값을 `undefined` 콜백 함수에 전달 합니다.
 
-**요구 사항** Windows 10 버전 1703
+**요구 사항** Windows 10, 버전 1703
 
 ---
 
 <span id="isRemoteSession"/>
 
 ### <a name="isremotesession"></a>isRemoteSession
-현재 세션이 원격으로 로그인되었는지 확인합니다.
+현재 세션이 원격으로 로그인 했는지 확인 합니다.
 
 **구문**  
 `Boolean SecureBrowser.security.isRemoteSession();`
 
 **반환 값**  
-현재 세션이 원격인 경우 **true** 이며, 그렇지 않은 경우 **false**입니다.
+현재 세션이 원격 이면 **true** 이 고, 그렇지 않으면 **false**입니다.
 
 **요구 사항**  
 Windows 10, 버전 1709
@@ -287,16 +287,16 @@ Windows 10, 버전 1709
 <span id="isVMSession"/>
 
 ### <a name="isvmsession"></a>isVMSession
-현재 세션이 가상 컴퓨터 내에서 실행되고 있는지 확인합니다.
+현재 세션이 가상 컴퓨터 내에서 실행 되 고 있는지 확인 합니다.
 
 **구문**  
 `Boolean SecureBrowser.security.isVMSession();`
 
 **반환 값**  
-현재 세션이 가상 컴퓨터에서 실행되고 있으면 **true**, 그렇지 않으면 **false**입니다.
+현재 세션이 가상 컴퓨터에서 실행 되 고 있으면 **true** 이 고, 그렇지 않으면 **false**입니다.
 
-**설명**  
-이 API 확인은 적절한 API를 구현하는 특정 하이퍼바이저에서 실행되고 있는 VM 세션만 검색할 수 있습니다.
+**주의**  
+이 API 검사는 적절 한 Api를 구현 하는 특정 하이퍼바이저에서 실행 중인 VM 세션만 검색할 수 있습니다.
 
 **요구 사항**  
 Windows 10, 버전 1709

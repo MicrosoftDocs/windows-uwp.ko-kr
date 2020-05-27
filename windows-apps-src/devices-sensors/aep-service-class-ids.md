@@ -1,36 +1,34 @@
 ---
 ms.assetid: 23001DA5-C099-4C02-ACE9-3597F06ECBF4
-title: AEP service 클래스 Id
+title: AEP 서비스 클래스 ID
 description: 연결 끝점 (AEP) 서비스는 지정 된 프로토콜을 통해 장치가 지 원하는 서비스에 대 한 프로그래밍 계약을 제공 합니다. 이러한 서비스 중 일부는이를 참조할 때 사용 해야 하는 식별자를 설정 합니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 67bba732efd199c5093bb75e9b0a2c41b67e568c
-ms.sourcegitcommit: 28bd367ab8acc64d4b6f3f73adca12100cbd359f
+ms.openlocfilehash: 0af0e8b17578c2ef3cd3fb0a466446b06f8e4a00
+ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82148577"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854739"
 ---
-# <a name="aep-service-class-ids"></a>AEP service 클래스 Id
-
-
-
-**중요 한 Api**
-
-- [**Windows. Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)
+# <a name="aep-service-class-ids"></a>AEP 서비스 클래스 ID
 
 연결 끝점 (AEP) 서비스는 지정 된 프로토콜을 통해 장치가 지 원하는 서비스에 대 한 프로그래밍 계약을 제공 합니다. 이러한 서비스 중 일부는이를 참조할 때 사용 해야 하는 식별자를 설정 합니다. 이러한 계약은 **ServiceClassId** 속성을 사용 하 여 식별 됩니다. 이 항목에는 잘 알려진 여러 AEP service 클래스 Id가 나열 되어 있습니다. AEP 서비스 클래스 ID는 사용자 지정 클래스 Id가 있는 프로토콜에도 적용 됩니다.
 
 앱 개발자는 클래스 Id에 기반한 AQS (고급 쿼리 구문) 필터를 사용 하 여 해당 쿼리를 사용 하려는 AEP 서비스로 제한 해야 합니다. 이렇게 하면 쿼리 결과가 관련 서비스로 제한 되 고 장치에 대 한 성능, 배터리 수명 및 서비스 품질이 크게 향상 됩니다. 예를 들어 응용 프로그램은 이러한 서비스 클래스 Id를 사용 하 여 장치를 Miracast 동기화 또는 DLNA 디지털 미디어 렌더러 (DMR)로 사용할 수 있습니다. 장치와 서비스가 서로 상호 작용 하는 방법에 대 한 자세한 내용은 [**Deviceinformationkind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind)를 참조 하세요.
 
+> **중요 API**
+>
+> - [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)
+
 ## <a name="bluetooth-and-bluetooth-le-services"></a>Bluetooth 및 Bluetooth LE 서비스
 
 Bluetooth 서비스는 Bluetooth 프로토콜 또는 Bluetooth LE 프로토콜의 두 프로토콜 중 하나에 속합니다. 이러한 프로토콜에 대 한 식별자는 다음과 같습니다.
 
--   Bluetooth 프로토콜 ID: {e0cbf06c-cd8b-4647-bb8a}
--   Bluetooth LE 프로토콜 ID: {bb7bb05e-5972-42b5-94fc-76eaa7084d49}
+- Bluetooth 프로토콜 ID: {e0cbf06c-cd8b-4647-bb8a}
+- Bluetooth LE 프로토콜 ID: {bb7bb05e-5972-42b5-94fc-76eaa7084d49}
 
 Bluetooth 프로토콜은 모두 동일한 기본 형식을 따라 여러 서비스를 지원 합니다. GUID의 처음 4 자리는 서비스에 따라 다르지만 모든 Bluetooth Guid는 **0000-0000-1000-8000-00805F9B34FB**로 끝납니다. 예를 들어 RFCOMM 서비스의 기반이는 0x0003 이므로 전체 ID는 **00030000-0000-1000-8000-00805F9B34FB**입니다. 다음 표에서는 몇 가지 일반적인 Bluetooth 서비스를 보여 줍니다.
 
@@ -70,9 +68,7 @@ Bluetooth 프로토콜은 모두 동일한 기본 형식을 따라 여러 서비
 | GATT-사용자 데이터                     | **181C0000-0000-1000-8000-00805F9B34FB** |
 | GATT-무게 눈금                  | **181D0000-0000-1000-8000-00805F9B34FB** |
 
- 
-
-사용 가능한 Bluetooth 서비스의 전체 목록은 여기 및 여기에서 Bluetooth의 프로토콜 및 [서비스 페이지를](https://www.bluetooth.org/en-us/specification/assigned-numbers/service-discovery) 참조 [하세요.](https://go.microsoft.com/fwlink/p/?LinkID=619587) [**GattServiceUuids**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceUuids) API를 사용 하 여 몇 가지 일반적인 GATT 서비스를 가져올 수도 있습니다.
+사용 가능한 Bluetooth 서비스의 전체 목록은 [GATT services 사양](https://www.bluetooth.com/specifications/gatt/services/)을 참조 하세요. [**GattServiceUuids**](/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile.GattServiceUuids) API를 사용 하 여 몇 가지 일반적인 GATT 서비스를 가져올 수도 있습니다.
 
 ## <a name="custom-bluetooth-le-services"></a>사용자 지정 Bluetooth LE 서비스
 
@@ -101,8 +97,6 @@ UPnP 서비스는 다음 프로토콜 식별자를 사용 합니다. {0e261de4-1
 | 콘텐츠 디렉터리                  | **89e701dd-0597-5279-a31c-235991d0db1c**  |
 | 다이얼                               | **085dfa4a-3948-53c7-a0d7-16d8ec26b29b**  |
 
- 
-
 ## <a name="wsd-services"></a>WSD 서비스
 
 WSD 서비스는 다음 프로토콜 식별자를 사용 합니다. {782232aa-a2f9-4993-971b-aedc551346b0}
@@ -114,8 +108,6 @@ WSD 서비스는 다음 프로토콜 식별자를 사용 합니다. {782232aa-a2
 | 프린터      | **65dca7bd-2611-583e-9a12-ad90f47749cf** |
 | 스캐너      | **56ec8b9e-0237-5cae-aa3f-d322dd2e6c1e** |
 
- 
-
 ## <a name="aqs-sample"></a>AQS 샘플
 
 이 AQS는 전화 걸기를 지 원하는 모든 UPnP **Associationendpointservice** 개체를 필터링 합니다. 이 경우 [**Deviceinformationkind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind) 는 **Ationentationendpointservice**로 설정 됩니다.
@@ -124,7 +116,3 @@ WSD 서비스는 다음 프로토콜 식별자를 사용 합니다. {782232aa-a2
 System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}" AND
 System.Devices.AepService.ServiceClassId:="{085DFA4A-3948-53C7-A0D7-16D8EC26B29B}"
 ```
-
- 
-
- 
