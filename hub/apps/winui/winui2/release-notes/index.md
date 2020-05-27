@@ -3,16 +3,16 @@ title: WinUI 릴리스 정보
 description: WinUI 릴리스 정보 색인입니다.
 ms.date: 05/08/2020
 ms.topic: reference
-ms.openlocfilehash: 93e98d771eace65f502d77ffe8e1891ab09ff40a
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: cf1cf75d7f92107c88f27008bff53c76d37715ec
+ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580230"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83775815"
 ---
 # <a name="windows-ui-library-2x-release-notes"></a>Windows UI 라이브러리 2.x 릴리스 정보
 
-Windows UI(WinUI) 라이브러리는 GitHub에 호스팅되는 오픈 소스 프로젝트입니다. 모든 새 릴리스는 [Windows UI 라이브러리 GitHub 리포지토리](https://aka.ms/winui)에서 빌드됩니다. 
+WinUI(Windows UI) 라이브러리는 GitHub에 호스팅되는 오픈 소스 프로젝트입니다. 모든 새 릴리스는 [Windows UI 라이브러리 GitHub 리포지토리](https://aka.ms/winui)에서 빌드됩니다.
 
 또한 [Windows UI 라이브러리 리포지토리](https://aka.ms/winui)에서 버그 보고서를 제출하고, 기능을 요청하고, 커뮤니티 코드를 제공할 수 있습니다.
 
@@ -49,9 +49,9 @@ API 참조 문서는 [Windows UI 라이브러리 API](/uwp/api/overview/winui/)�
 | [2.4](winui-2.4.md) | 안정 | 2020년 5월 | [릴리스 정보](winui-2.4.md) | [RadialGradientBrush](winui-2.4.md#radialgradientbrush), [ProgressRing](winui-2.4.md#progressring), [TabView 업데이트](winui-2.4.md#tabview-updates), [TextBox 컨트롤 제품군에 대한 어두운 테마 업데이트](winui-2.4.md#dark-theme-updates-to-textbox-family-of-controls), [계층적 탐색](winui-2.4.md#hierarchical-navigation),  |
 | [2.3](winui-2.3.md) | 안정 | 2019년 11월 | [릴리스 정보](winui-2.3.md) | [진행률 표시줄 시각적 새로 고침](winui-2.3.md#progress-bar-visual-refresh), [NumberBox](winui-2.3.md#numberbox), [RadioButtons](winui-2.3.md#radiobuttons) |
 | [2.2](winui-2.2.md) | 안정 | 2019년 8월 | [릴리스 정보](winui-2.2.md) | [TabView](winui-2.2.md#tabview), [NavigationView 업데이트](winui-2.2.md#navigationview-updates), [비주얼 스타일 업데이트](winui-2.2.md#visual-style-updates)  |
-| [2.1](winui-2.1.md) | 안정 | 2019년 4월 | [릴리스 정보](winui-2.1.md) | [GitHub](https://github.com/microsoft/microsoft-ui-xaml)의 첫 번째 오픈 소스 릴리스입니다. <br />[ItemsRepeater](winui-2.1.md#itemsrepeater), [AnimatedVisualPlayer](winui-2.1.md#animatedvisualplayer), [TeachingTip](winui-2.1.md#teachingtip), [RadioMenuFlyoutItem](winui-2.1.md#radiomenuflyoutitem), [CompactDensity](winui-2.1.md#compactdensity), [Shadows](winui-2.1.md#shadows). |
-| [2.0](winui-2.0.md) | 안정 | 2018년 10월 | [릴리스 정보](winui-2.0.md) | 초기 릴리스.<br>Windows UWP 앱용 공식 네이티브 Fluent 컨트롤 및 기능이 포함되어 있습니다.  |
+| [2.1](winui-2.1.md) | 안정 | 2019년 4월 | [릴리스 정보](winui-2.1.md) | [GitHub](https://github.com/microsoft/microsoft-ui-xaml)의 **첫 번째 오픈 소스 릴리스**입니다. [ItemsRepeater](winui-2.1.md#itemsrepeater), [AnimatedVisualPlayer](winui-2.1.md#animatedvisualplayer), [TeachingTip](winui-2.1.md#teachingtip), [RadioMenuFlyoutItem](winui-2.1.md#radiomenuflyoutitem), [CompactDensity](winui-2.1.md#compactdensity), [Shadows](winui-2.1.md#shadows)를 포함합니다. |
+| [2.0](winui-2.0.md) | 안정 | 2018년 10월 | [릴리스 정보](winui-2.0.md) | **초기 릴리스**입니다. Windows UWP 앱용 공식 네이티브 Fluent 컨트롤 및 기능이 포함되어 있습니다.  |
 
-### <a name="winui-3-alpha"></a>WinUI 3 알파
+### <a name="winui-3-preview-1"></a>WinUI 3 Preview 1
 
-WinUI 3 초기 미리 보기를 사용하는 방법에 대한 자세한 내용은 [WinUI 3.0(알파)](../../winui3/index.md)을 참조하세요.
+WinUI 3 초기 미리 보기를 사용하는 방법에 대한 내용은 [WinUI 3.0 Preview 1](../../winui3/index.md)을 참조하세요.

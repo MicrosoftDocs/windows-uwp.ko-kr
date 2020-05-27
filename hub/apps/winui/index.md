@@ -4,12 +4,12 @@ description: Windows 앱 개발을 위한 WinUI 라이브러리입니다.
 ms.topic: article
 ms.date: 05/11/2020
 keywords: windows 10, uwp, 도구 키트 sdk, winui, Windows UI 라이브러리
-ms.openlocfilehash: 2afa6b1eadc98300e3de76a1dfc6ede66a2a56e5
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 01eed4a82bfe14b70c86ade1b82c487e33e6f6f6
+ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580180"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83775887"
 ---
 # <a name="windows-ui-library-winui"></a>Windows UI 라이브러리(WinUI)
 
@@ -38,7 +38,7 @@ Windows 10의 이전 버전과 하위 수준 호환성을 유지하므로, 사�
 
 설치 지침은 [Windows UI 라이브러리 시작](winui2/getting-started.md)을 참조하세요.
 
-### <a name="related-links"></a>관련 링크
+### <a name="related-links-for-winui-2x"></a>WinUI 2.x에 대한 관련 링크
 
 - [WinUI 2.x 라이브러리 개요](winui2/index.md)
 - [API 문서](https://docs.microsoft.com/uwp/api/overview/winui/)
@@ -52,7 +52,7 @@ WinUI 3은 UWP SDK에서 완전히 분리된 네이티브 Windows 10 UI 플랫�
 Windows UI 3.0 라이브러리는 UWP SDK에서 Xaml, 컴퍼지션 및 입력 API를 완전히 분리하여 전체 Windows 10 네이티브 UI 플랫폼을 포함할 수 있도록 WinUI의 범위를 크게 확장할 수 있습니다.
 
 WinUI는 모든 Windows 앱의 전달 경로 역할을 합니다. 네이티브 UWP 또는 Win32 앱에서 UI 계층으로 사용하거나, [Xaml Islands](https://docs.microsoft.com/windows/apps/desktop/modernize/xaml-islands)를 통해 데스크톱 앱을 하나씩 현대화할 수 있습니다.
- 
+
 > [!NOTE]
 > WinUI 3.0 Preview 1은 WinUI 3.0의 시험판 빌드입니다. [WinUI GitHub 리포지토리](https://github.com/microsoft/microsoft-ui-xaml)에 대한 피드백을 환영합니다.
 
@@ -65,10 +65,10 @@ WinUI는 모든 Windows 앱의 전달 경로 역할을 합니다. 네이티브 U
 > [!Important]
 > WinUI 3.0 Preview 1의 목적은 개발자 커뮤니티에서 초기 평가를 받고 피드백을 수집하는 것입니다. 프로덕션 앱에는 사용하면 **안 됩니다**.
 
-### <a name="related-links"></a>관련 링크
+### <a name="related-links-for-winui-30"></a>WinUI 3.0에 대한 관련 링크
 
 - [WinUI 3.0 Preview 1(2020년 5월)](winui3/index.md)
-- [XAML 컨트롤 갤러리(WinUI 3.0 Preview 1) 앱](https://github.com/microsoft/Xaml-Controls-Gallery/tree/winui3alpha)
+- [XAML 컨트롤 갤러리(WinUI 3.0 Preview 1) 앱](https://github.com/microsoft/Xaml-Controls-Gallery/tree/winui3preview)
 
 ## <a name="winui-resources"></a>WinUI 리소스
 

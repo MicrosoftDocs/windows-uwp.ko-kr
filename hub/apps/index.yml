@@ -11,20 +11,20 @@ metadata:
   ms.date: 11/08/2019
   ms.localizationpriority: medium
   uhfHeaderId: MSDocsHeader-WinDevCenter
-  ms.openlocfilehash: c97b18f07998faed28f4ecc83115bb0d5daaa313
-  ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+  ms.openlocfilehash: 1192e0d34ad0f754917bf156432646d0ace1458a
+  ms.sourcegitcommit: 10ec5a20dd1152a1037ebc4fba1a28cc96593586
   ms.translationtype: HT
   ms.contentlocale: ko-KR
   ms.lasthandoff: 05/19/2020
-  ms.locfileid: "83579998"
+  ms.locfileid: "83665876"
 highlightedContent:
   items:
   - title: Visual Studio 및 Windows SDK 받기
     itemType: download
     url: https://developer.microsoft.com/windows/downloads
-  - title: 사용자 인터페이스 및 디자인 지침
+  - title: 최신 릴리스의 개발자를 위한 새로운 기능
     itemType: overview
-    url: /windows/apps/fluent-design-system
+    url: https://docs.microsoft.com/windows/uwp/whats-new/windows-10-build-19041
   - title: 참가자 프로그램에 참여하세요.
     itemType: overview
     url: https://docs.microsoft.com/windows-insider
@@ -44,7 +44,7 @@ productDirectory:
     links:
     - url: /windows/apps/winui/
       text: 시작
-  - title: Linux용 Windows 하위 시스템, Python 및 기타 도구
+  - title: Linux용 Windows 하위 시스템, Windows Terminal, Python 및 기타 도구
     imageSrc: https://docs.microsoft.com/media/logos/logo_linux-color.svg
     links:
     - url: /windows/dev-environment/

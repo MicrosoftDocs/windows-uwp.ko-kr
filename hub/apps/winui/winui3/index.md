@@ -3,12 +3,12 @@ title: WinUI 3.0 Preview 1(2020년 5월)
 description: WinUI 3.0 Preview의 개요를 설명합니다.
 ms.date: 05/14/2020
 ms.topic: article
-ms.openlocfilehash: 9141fe7ff215f28557020c7f76dd35c3560edfe5
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 3aac14807f8455eb9a9294c40ddc76ddfa224659
+ms.sourcegitcommit: 7e8c7f89212c88dcc0274c69d2c3365194c0954a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580140"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688481"
 ---
 # <a name="windows-ui-library-30-preview-1-may-2020"></a>Windows UI 라이브러리 3.0 Preview 1(2020년 5월)
 
@@ -64,12 +64,12 @@ Visual Studio 2019, 버전 16.7 Preview 1을 설치합니다. [Visual Studio Pre
 
 Visual Studio Preview를 설치할 때 다음 워크로드를 포함해야 합니다.
 
-- .NET Win32 개발
+- .NET 데스크톱 개발
 - 유니버설 Windows 플랫폼 개발
 
 C++ 앱을 빌드하려면 다음 워크로드도 포함해야 합니다.
 
-- C++를 사용한 Win32 개발
+- C++를 사용한 데스크톱 개발
 - 유니버설 Windows 플랫폼 워크로드에 대한 *C++(v142) 유니버설 Windows 플랫폼 도구* 선택적 구성 요소
 
 ### <a name="visual-studio-project-templates"></a>Visual Studio 프로젝트 템플릿
@@ -133,24 +133,30 @@ WinUI 3.0 Preview 1은 Windows 10 2018년 4월 업데이트(버전 1803 - 빌드
 - MapControl
 - NavigationView를 사용하여 계층적 탐색
 - SwapChainPanel은 투명성을 지원하지 않습니다.
-- C#에서 `System.WeakReference<T>` 대신 `WinRT.WeakReference<T>`를 사용해야 합니다.
 - 글로벌 표시는 솔리드 브러시인 폴백 동작을 사용합니다.
 - XAML Islands는 이 릴리스에서 지원되지 않습니다.
 - 타사 에코시스템 라이브러리는 완전하게 작동하지 않습니다.
 - IME가 작동하지 않습니다.
 - Windows.UI.Text 네임스페이스의 메서드를 호출할 수 없습니다.
-  
+
+### <a name="known-issues"></a>알려진 문제
+
+- C# 데스크톱 앱에서 다음을 확인할 수 있습니다.
+   - Windows 개체(Xaml 개체 포함)에 대한 약한 참조에는 `System.WeakReference<T>` 대신 `WinRT.WeakReference<T>`를 사용해야 합니다.
+   - [Point](https://docs.microsoft.com/uwp/api/Windows.Foundation.Point), [Rect](https://docs.microsoft.com/uwp/api/Windows.Foundation.Rect) 및 [Size](https://docs.microsoft.com/uwp/api/Windows.Foundation.Size) 구조체에는 Double이 아닌 Float 형식의 멤버가 있습니다.
+
+
 ## <a name="xaml-controls-gallery-winui-30-preview-1-branch"></a>Xaml 컨트롤 갤러리(WinUI 3.0 Preview 1 분기)
 
-모든 WinUI 3.0 Preview 1 컨트롤 및 기능을 포함하고 있는 샘플 앱은 [Xaml 컨트롤 갤러리의 WinUI 3.0 Preview 1 분기](https://github.com/microsoft/Xaml-Controls-Gallery/tree/winui3preview1)를 참조하세요.
+모든 WinUI 3.0 Preview 1 컨트롤 및 기능을 포함하고 있는 샘플 앱은 [Xaml 컨트롤 갤러리의 WinUI 3.0 Preview 1 분기](https://github.com/microsoft/Xaml-Controls-Gallery/tree/winui3preview)를 참조하세요.
 
 ![WinUI 3.0 Preview 1 Xaml 컨트롤 갤러리 앱](images/WinUI3XamlControlsGallery.png)<br/>
 *WinUI 3.0 Preview 1 Xaml 컨트롤 갤러리 앱의 예*
 
-샘플을 다운로드하려면 다음 명령을 사용하여 **winui3preview1** 분기를 복제합니다.
+샘플을 다운로드하려면 다음 명령을 사용하여 **winui3preview** 분기를 복제합니다.
 
-> `git clone --single-branch --branch winui3preview1 https://github.com/microsoft/Xaml-Controls-Gallery.git`
+> `git clone --single-branch --branch winui3preview https://github.com/microsoft/Xaml-Controls-Gallery.git`
 
-복제 후, 로컬 Git 환경에서 **winui3preview1** 분기로 전환해야 합니다.
+복제 후, 로컬 Git 환경에서 **winui3preview** 분기로 전환해야 합니다.
 
-> `git checkout winui3preview1`
+> `git checkout winui3preview`
