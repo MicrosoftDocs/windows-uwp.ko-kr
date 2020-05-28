@@ -7,12 +7,12 @@ keywords: 장치, 디지타이저, 입력, 상호 작용, 주입
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d15305fecb562546bdeaf15c501890151c7dd29a
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 7bcd63d940e53d90d925f83f27e4c77165a11650
+ms.sourcegitcommit: 124cea09be7f12444bfff541badb65d539d55c83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968037"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84124116"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>입력 주입을 통해 사용자 입력 시뮬레이션
 
@@ -22,7 +22,7 @@ Windows 응용 프로그램의 키보드, 마우스, 터치, 펜 및 게임 패�
 
 ## <a name="overview"></a>개요
 
-입력 주입을 사용 하면 Windows 응용 프로그램에서 다양 한 입력 장치에서 입력을 시뮬레이션 하 고, 앱의 클라이언트 영역 외부 (레지스트리 편집기와 같은 관리자 권한으로 실행 되는 앱에도)를 비롯 한 모든 위치에서 해당 입력을 보낼 수 있습니다.
+입력 주입을 통해 Windows 응용 프로그램은 다양 한 입력 장치에서 입력을 시뮬레이션 하 고 앱의 클라이언트 영역 외부 (레지스트리 편집기와 같은 관리자 권한으로 실행 되는 앱에도)를 비롯 한 모든 위치에서 해당 입력을 보낼 수 있습니다.
 
 입력 주입은 내게 필요한 옵션, 테스트 (임시, 자동), 원격 액세스 및 지원 기능을 포함 하는 기능을 제공 해야 하는 Windows 앱 및 도구에 유용 합니다.
 
