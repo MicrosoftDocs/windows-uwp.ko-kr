@@ -5,12 +5,12 @@ keywords: Uwp 앱 개발 스레딩 비동기 플랫폼 개요 포털 개발 개�
 ms.date: 03/29/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 233666294555c46b5ba8b1e558eb32d6aed84e2a
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: f969c1c9ea5bb436ebad8d5e0410b6bf553885c0
+ms.sourcegitcommit: d1eba7cf79cd2885b5bf8f5501bc44a569ab9864
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80614960"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84172605"
 ---
 # <a name="develop-uwp-apps"></a>UWP 앱 개발
 
@@ -156,7 +156,7 @@ Windows 10용 UWP 앱을 만드는 방법 문서와 코드입니다.
     :::column-end:::
     :::column:::
         <h3 style="margin-top: 10px; margin-bottom: 0px">플랫폼</h3>
-        <a href="/windows/uwp/cpp-and-winrt-apis/">C++/WinRT<</a><br/>
+        <a href="/windows/uwp/cpp-and-winrt-apis/">C++/WinRT</a><br/>
         <a href="/windows/uwp/launch-resume/">실행, 다시 시작 및 백그라운드 작업</a><br/>
         <a href="/windows/uwp/security/">보안</a><br/>
         <a href="/windows/uwp/threading-async/">스레딩 및 비동기 프로그래밍</a><br/>
