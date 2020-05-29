@@ -6,14 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 지도 인증 키, 지도 컨트롤
 ms.localizationpriority: medium
-ms.openlocfilehash: ab0d1900398c313021600c18338ecc1201241410
-ms.sourcegitcommit: f806d5f3b0c1e046c903d3388092c0e059d21858
+ms.openlocfilehash: 2f4a76edfe5772665564cb8890ffcdf56205a2f7
+ms.sourcegitcommit: d1eba7cf79cd2885b5bf8f5501bc44a569ab9864
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791001"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84172595"
 ---
 # <a name="request-a-maps-authentication-key"></a>지도 인증 키 요청
+
+> [!WARNING]
+> 온라인 maps 서비스는 이전 버전의 Windows 10에서 사용 하지 못할 수 있습니다. 다음 버전에서는 없습니다가 더 이상 지도를 표시 하지 않을 수 있으며, Windows. Maps 네임 스페이스의 Api는 결과를 반환 하지 않을 수 있습니다.
+> - Windows 10, 버전 1607 및 이전 버전: map services는 전 세계 2020 년 10 월부터 사용할 수 없습니다.
+> - Windows 10, 버전 1703 및 이전 버전: [중국에서 판매 되는 일부 장치](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-mapcontrol-desktop-chinavariantwin10) 에서 지도 서비스를 사용할 수 없음
 
 [유니버설 windows 앱](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) 은 [**없습니다**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) [**네임 스페이스**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps) 에서 서비스를 사용 하 고 매핑하기 전에 인증 되어야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 항목에서는 [Bing Maps 개발자 센터](https://www.bingmapsportal.com/) 에서 지도 인증 키를 요청 하 고 앱에 추가 하는 방법에 대해 설명 합니다.
 
