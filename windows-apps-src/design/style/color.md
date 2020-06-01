@@ -7,12 +7,15 @@ keywords: windows 10, uwp
 design-contact: karenmui
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f5e103b7661c53fb70561dd1bd654188be2704ff
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+dev_langs:
+- csharp
+- cppwinrt
+ms.openlocfilehash: c87dfbdc00df36c75a5b0b865376af352edcabbb
+ms.sourcegitcommit: 577a54d36145f91c8ade8e4509d4edddd8319137
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970768"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83867363"
 ---
 # <a name="color"></a>색
 
@@ -235,6 +238,9 @@ XAML에서 [**Color**](https://docs.microsoft.com/uwp/api/windows.ui.color) 구�
 
 ```csharp
 Color LightBlue = Color.FromArgb(255,54,192,255);
+```
+```cppwinrt
+Windows::UI::Color LightBlue = Windows::UI::ColorHelper::FromArgb(255,54,192,255);
 ```
 
 문자 “Argb”는 네 가지 색 구성 요소인 알파(불투명도), 빨간색, 녹색, 파란색을 나타냅니다. 각 인수의 범위는 0~255입니다. 기본 불투명도 255(100% 불투명)를 제공하는 첫 번째 값을 생략할 수 있습니다.

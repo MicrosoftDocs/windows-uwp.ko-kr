@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f5ec09f8fdfa0a8b4b8c7161cc6d91a3013230d7
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 489215c0289695832cb895d8566063a93ae2336c
+ms.sourcegitcommit: 577a54d36145f91c8ade8e4509d4edddd8319137
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970688"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83867353"
 ---
 # <a name="tabview"></a>TabView
 
@@ -110,28 +110,26 @@ private void TabView_TabCloseRequested(muxc.TabView sender, muxc.TabViewTabClose
 
 ```xaml
 <muxc:TabView HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-    <muxc:TabView.TabItems>
-        <muxc:TabViewItem Header="Home" IsClosable="False">
-            <muxc:TabViewItem.IconSource>
-                <muxc:SymbolIconSource Symbol="Home" />
-            </muxc:TabViewItem.IconSource>
-        </muxc:TabViewItem>
-        <muxc:TabViewItem Header="Document 1">
-            <muxc:TabViewItem.IconSource>
-                <muxc:SymbolIconSource Symbol="Document" />
-            </muxc:TabViewItem.IconSource>
-        </muxc:TabViewItem>
-        <muxc:TabViewItem Header="Document 2">
-            <muxc:TabViewItem.IconSource>
-                <muxc:SymbolIconSource Symbol="Document" />
-            </muxc:TabViewItem.IconSource>
-        </muxc:TabViewItem>
-        <muxc:TabViewItem Header="Document 3">
-            <muxc:TabViewItem.IconSource>
-                <muxc:SymbolIconSource Symbol="Document" />
-            </muxc:TabViewItem.IconSource>
-        </muxc:TabViewItem>
-    </muxc:TabView.TabItems>
+    <muxc:TabViewItem Header="Home" IsClosable="False">
+        <muxc:TabViewItem.IconSource>
+            <muxc:SymbolIconSource Symbol="Home" />
+        </muxc:TabViewItem.IconSource>
+    </muxc:TabViewItem>
+    <muxc:TabViewItem Header="Document 1">
+        <muxc:TabViewItem.IconSource>
+            <muxc:SymbolIconSource Symbol="Document" />
+        </muxc:TabViewItem.IconSource>
+    </muxc:TabViewItem>
+    <muxc:TabViewItem Header="Document 2">
+        <muxc:TabViewItem.IconSource>
+            <muxc:SymbolIconSource Symbol="Document" />
+        </muxc:TabViewItem.IconSource>
+    </muxc:TabViewItem>
+    <muxc:TabViewItem Header="Document 3">
+        <muxc:TabViewItem.IconSource>
+            <muxc:SymbolIconSource Symbol="Document" />
+        </muxc:TabViewItem.IconSource>
+    </muxc:TabViewItem>
 
     <muxc:TabView.TabStripHeader>
         <Grid x:Name="ShellTitlebarInset" Background="Transparent" />

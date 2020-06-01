@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 299a25bb92c5afdb86ebc1569a1f98916baa3d09
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: add292dd5b58c3e8da1a0ce2c2371bf211b2a617
+ms.sourcegitcommit: 7704c888a28edc7ab0515a75afac93d1dda4d693
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83233958"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84151952"
 ---
 # <a name="introduction-to-windows-app-design"></a>Windows 앱 디자인 소개
 
@@ -120,7 +120,7 @@ UWP 앱은 Windows [셸](../shell/tiles-and-notifications/creating-tiles.md)에�
 
 타일은 [시작] 메뉴와 앱이 실행될 때 표시되며, 앱에서 진행되는 상황을 한 눈에 확인할 수 있습니다. 이러한 기능은 내부의 콘텐츠와 제공되는 인텔리전스 및 기술로부터 나오는 것입니다.
 
-UWP 앱에는 앱의 아이콘과 ID에 따라 사용자 지정할 수 있는 4가지 크기(작은, 중간, 넓은, 큰)의 타일이 있습니다. UWP 앱의 타일 디자인에 대한 지침은 [타일 및 아이콘 자산에 대한 지침](../shell/tiles-and-notifications/app-assets.md)을 참조하세요.
+UWP 앱에는 앱의 아이콘과 ID에 따라 사용자 지정할 수 있는 4가지 크기(작은, 중간, 넓은, 큰)의 타일이 있습니다. UWP 앱의 타일 디자인에 대한 지침은 [타일 및 아이콘 자산에 대한 지침](../style/app-icons-and-logos.md)을 참조하세요.
     :::column-end:::
     :::column:::
 ![시작 메뉴의 타일](images/shell.svg)

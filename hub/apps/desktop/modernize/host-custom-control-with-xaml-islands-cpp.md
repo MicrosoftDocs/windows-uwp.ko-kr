@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: eac2574d48864ba8b8dc907c8a7ec43ef266358b
-ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
+ms.openlocfilehash: dbe40498d128fa483f2c414e088060ec90fc1c22
+ms.sourcegitcommit: c4f912ba0313ae49632f81e38d7d2d983ac132ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82606340"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84200786"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>C++ Win32 앱에서 사용자 지정 UWP 컨트롤 호스트
 
@@ -243,6 +243,7 @@ ms.locfileid: "82606340"
         ```cpp
         #include "pch.h"
         #include "App.h"
+        #include "App.g.cpp"
         using namespace winrt;
         using namespace Windows::UI::Xaml;
         namespace winrt::MyUWPApp::implementation

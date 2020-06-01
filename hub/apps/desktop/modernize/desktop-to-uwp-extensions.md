@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: d1f01774d5950dbb73cff2e5c38f16167b4b812b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: b048de69a8a259509e5a5c54c5f1d61675a25a18
+ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79209719"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854728"
 ---
 # <a name="integrate-your-desktop-app-with-windows-10-and-uwp"></a>데스크톱 앱을 Windows 10 및 UWP와 통합
 
@@ -1372,7 +1372,7 @@ XPS(XML Paper Specification) 형식으로 인쇄 데이터를 수신하려면 �
 
 이러한 확장은 모든 디바이스에서 실행되는 유니버설 Windows 플랫폼 사용자 인터페이스를 만들고 싶으면서도 Win32 애플리케이션의 구성 요소가 완전 신뢰 모드에서 계속 실행되도록 하고 싶은 경우에 유용하게 사용할 수 있습니다.
 
-Win32 앱을 위한 Windows 앱 패키지를 만든 후 UWP 앱의 패키지 파일에 이 확장을 추가하기만 하면 됩니다. 이 확장은 Windows 앱 패키지의 실행 파일을 시작하려 한다는 것을 나타냅니다.  UWP 앱과 Win32 앱 간에 통신을 원하는 경우에는 하나 이상의 [앱 서비스](/windows/uwp/launch-resume/app-services.md)를 설정할 수 있습니다. 이 시나리오에 대한 자세한 내용은 [여기](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/)를 참조하세요.
+Win32 앱을 위한 Windows 앱 패키지를 만든 후 UWP 앱의 패키지 파일에 이 확장을 추가하기만 하면 됩니다. 이 확장은 Windows 앱 패키지의 실행 파일을 시작하려 한다는 것을 나타냅니다.  UWP 앱과 Win32 앱 간에 통신을 원하는 경우에는 하나 이상의 [앱 서비스](/windows/uwp/launch-resume/app-services)를 설정할 수 있습니다. 이 시나리오에 대한 자세한 내용은 [여기](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 
