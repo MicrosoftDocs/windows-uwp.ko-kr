@@ -6,16 +6,19 @@ ms.author: kevinla
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: b44f20021a0fa33da862e2361be60b730b041b49
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: cb897f25324ab8a516d18f5defe7cffa3e6a0109
+ms.sourcegitcommit: 5a145eda92b5915393e58006867cdd8b98e922f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83824974"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166252"
 ---
 # <a name="source-command-winget"></a>source 명령(winget)
 
 [!INCLUDE [preview-note](../../includes/package-manager-preview.md)]
+
+> [!NOTE]
+> **source** 명령은 현재 내부용으로만 사용됩니다. 추가 원본은 현재 지원되지 않습니다.
 
 [winget](index.md) 도구의 **source** 명령은 Windows 패키지 관리자에서 액세스하는 리포지토리를 관리합니다. **source** 명령을 사용하면 리포지토리를 **추가**, **제거**, **나열** 및 **업데이트**할 수 있습니다.
 
@@ -70,22 +73,24 @@ ms.locfileid: "83824974"
 
 | 유형  | 설명 |
 |--------------|-------------|
-| **Microsoft.PreIndexed.Package** | \<default> 원본 유형입니다. |
+| **Microsoft.PreIndexed.Package** | 원본 \<default>의 유형입니다. |
 
-## <a name="list"></a>목록
+## <a name="list"></a>list
 
 **list** 하위 명령은 현재 사용하도록 설정된 원본을 열거합니다. 이 하위 명령은 특정 원본에 대한 세부 정보도 제공합니다.
 
-사용법: `winget list [-n, --name] \<name>`
+사용법: `winget source list [-n, --name] \<name>`
 
 ### <a name="list-all"></a>list all
 
 **list** 하위 명령 자체는 지원되는 원본의 전체 목록을 표시합니다. 예:
 
 ```CMD
-> C:\winget list
-> Current sources:
->     Contoso ->  https://www.contoso.com/cache
+> C:\winget source list
+> Name   Arg
+> -----------------------------------------
+> winget https://winget.azureedge.net/cache
+
 ```
 
 ### <a name="list-source-details"></a>list source details
@@ -111,23 +116,23 @@ ms.locfileid: "83824974"
 
 **update** 하위 명령은 개별 원본 또는 모든 원본을 강제로 업데이트합니다.
 
-사용법: `winget update [-n, --name] \<name>`
+사용법: `winget source update [-n, --name] \<name>`
 
 ### <a name="update-all"></a>update all
 
-**update** 하위 명령 자체는 각 리포지토리에 요청하고 업데이트합니다. 예를 들면 다음과 같습니다. `C:\winget update`
+**update** 하위 명령 자체는 각 리포지토리에 요청하고 업데이트합니다. 예: `C:\winget update`
 
-### <a name="update-source"></a>업데이트 원본
+### <a name="update-source"></a>update source
 
-**--name** 옵션과 결합된 **update** 하위 명령은 개별 원본으로 이동하여 업데이트할 수 있습니다. 예: `C:\winget update --name contoso`
+**--name** 옵션과 결합된 **update** 하위 명령은 개별 원본으로 이동하여 업데이트할 수 있습니다. 예: `C:\winget source update --name contoso`
 
-## <a name="remove"></a>제거
+## <a name="remove"></a>remove
 
 **remove** 하위 명령은 원본을 제거합니다. 이 하위 명령에는 원본을 식별하기 위해  **--name** 옵션 및 **name 인수**가 필요합니다.
 
 사용법: `winget source add [-n, --name] \<name>`
 
-예를 들면 다음과 같습니다. `winget source remove --name Contoso`
+예: `winget source remove --name Contoso`
 
 ## <a name="reset"></a>reset
 
@@ -135,11 +140,11 @@ ms.locfileid: "83824974"
 
 사용법: `winget source reset`
 
-예를 들면 다음과 같습니다. `winget source reset`
+예: `winget source reset`
 
 ## <a name="default-repository"></a>기본 리포지토리
 
-Windows 패키지 관리자에서 기본 리포지토리를 지정합니다. **list** 명령을 사용하여 리포지토리를 식별할 수 있습니다. 예를 들면 다음과 같습니다. `winget source list`
+Windows 패키지 관리자에서 기본 리포지토리를 지정합니다. **list** 명령을 사용하여 리포지토리를 식별할 수 있습니다. 예: `winget source list`
 
 ## <a name="related-topics"></a>관련 항목
 

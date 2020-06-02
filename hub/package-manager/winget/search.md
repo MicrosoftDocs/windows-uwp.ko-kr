@@ -6,12 +6,12 @@ ms.author: kevinla
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: edbd11724ed523f7d6efc57af9a8ef3a7e06bf5a
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 5a176c1138ebfe3f3a9eb2cbef02dad745cfe170
+ms.sourcegitcommit: 8193aef04deb3514eb2d34bfe5cb9424ba12cd76
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83824964"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83865020"
 ---
 # <a name="search-command-winget"></a>search 명령(winget)
 
@@ -49,7 +49,7 @@ ms.locfileid: "83824964"
 | **--id**        |   검색을 애플리케이션 ID로 제한합니다. ID에는 게시자 및 애플리케이션 이름이 포함됩니다. |
 | **--name**      |  검색을 애플리케이션 이름으로 제한합니다. |
 | **--moniker**  |    검색을 지정된 모니커로 제한합니다. |
-|  **--tag**    |  검색을 애플리케이션에 대해 나열된 태그로 제한합니다. |
+| **--tag**    |  검색을 애플리케이션에 대해 나열된 태그로 제한합니다. |
 | **--command**   |   검색을 애플리케이션 이름으로 제한합니다. |
 
 문자열이 하위 문자열로 처리됩니다. 또한 검색은 기본적으로 대/소문자를 구분하지 않습니다. 예를 들어 `winget search micro`는 다음을 반환할 수 있습니다.
@@ -64,7 +64,7 @@ search 명령은 결과를 제한하는 데 도움이 되는 여러 옵션 또�
 
 | 옵션  | 설명 |
  --------------|-------------|
-| **e, --exact**  |     대/소문자 구분 검사를 포함하여 쿼리에서 정확한 문자열을 사용합니다. 하위 문자열의 기본 동작을 사용하지 않습니다.  |  
+| **-e, --exact**  |     대/소문자 구분 검사를 포함하여 쿼리에서 정확한 문자열을 사용합니다. 하위 문자열의 기본 동작을 사용하지 않습니다.  |  
 | **-n, --count**      |  표시 출력을 지정된 개수로 제한합니다. |
 | **-s, --source**     |  검색을 지정된 [source](source.md) 이름으로 제한합니다.  |
 

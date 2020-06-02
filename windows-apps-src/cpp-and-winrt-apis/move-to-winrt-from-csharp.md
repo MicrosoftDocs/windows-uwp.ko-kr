@@ -5,12 +5,12 @@ ms.date: 07/15/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, 프로젝션, 이식, 마이그레이션, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 804c22b782dada9c0bde3c379ebfe5a37f1dcff9
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 38ad2d4f2b0af65424e6d9fa50f2c21b626e1914
+ms.sourcegitcommit: 3125d5e2e32831481790266f44967851585888b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81759940"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84172834"
 ---
 # <a name="move-to-cwinrt-from-c"></a>C#에서 C++/WinRT로 이동
 
@@ -27,7 +27,7 @@ UWP(유니버설 Windows 플랫폼) 앱 샘플 중 하나를 이식하는 방법
 - [**언어 프로젝션 이식**](#port-the-language-projection). WinRT(Windows 런타임)는 다양한 프로그래밍 언어로 *프로젝션*됩니다. 이러한 언어 프로젝션 각각은 문제의 프로그래밍 언어에 자연스러운 느낌을 주도록 설계되었습니다. C#의 경우 일부 Windows 런타임 형식이 .NET 형식으로 프로젝션됩니다. 예를 들어 [**System.Collections.Generic.IReadOnlyList\<T\>** ](/dotnet/api/system.collections.generic.ireadonlylist-1)를 [**Windows.Foundation.Collections.IVectorView\<T\>** ](/uwp/api/windows.foundation.collections.ivectorview-1)로 다시 변환할 수 있습니다. 또한 C#에서 일부 Windows 런타임 작업은 편리한 C# 언어 기능으로 프로젝션됩니다. 예를 들어 C#에서 `+=` 연산자 구문을 사용하여 이벤트 처리 대리자를 등록합니다. 이에 따라 이러한 언어 기능을 수행되는 기본 작업(이 예에서는 이벤트 등록)으로 다시 변환할 수 있습니다.
 - [**언어 구문 이식**](#port-language-syntax). 이러한 변경 중 대부분은 한 기호를 다른 기호로 바꾸는 간단한 기계적 변환입니다. 예를 들어 점(`.`)을 이중 콜론(`::`)으로 변경합니다.
 - [**언어 프로시저 이식**](#port-language-procedure). 이러한 변경 중 일부는 단순하고 반복적인 변경일 수 있습니다(예: `myObject.MyProperty`에서 `myObject.MyProperty()`로). 다른 변경은 더 심층적으로 변경해야 합니다(예: **System.Text.StringBuilder** 사용과 관련된 프로시저를 **std::wostringstream** 사용과 관련된 프로시저로 이식).
-- [**C++/WinRT와 관련된 이식 작업**](#porting-tasks-that-are-specific-to-cwinrt). Windows 런타임의 특정 세부 정보는 C# 내부에서 암시적으로 처리됩니다. 이러한 세부 정보는 C++/WinRT에서 명시적으로 수행됩니다. 예를 들어 `.idl` 파일을 사용하여 런타임 클래스를 정의합니다.
+- [**C++/WinRT와 관련된 이식 관련 작업**](#porting-related-tasks-that-are-specific-to-cwinrt). Windows 런타임의 특정 세부 정보는 C# 내부에서 암시적으로 처리됩니다. 이러한 세부 정보는 C++/WinRT에서 명시적으로 수행됩니다. 예를 들어 `.idl` 파일을 사용하여 런타임 클래스를 정의합니다.
 
 이 항목의 나머지 부분은 이러한 분류에 따라 구성되어 있습니다.
 
@@ -88,6 +88,21 @@ namespace winrt::MyProject::implementation
     }
 };
 ```
+
+한 가지 마지막 시나리오는 *바인드*를 태그에서 이벤트 처리기로 이식할 C# 프로젝트입니다(이 시나리오에 대한 자세한 배경은 [x:Bind의 함수](/windows/uwp/data-binding/function-bindings) 참조).
+
+```xaml
+<Button x:Name="OpenButton" Click="{x:Bind OpenButton_Click}" />
+```
+
+해당 태그를 보다 단순한 `Click="OpenButton_Click"`으로 변경하면 됩니다. 또는 원하는 경우 해당 태그를 그대로 유지할 수 있습니다. 이를 지원하려면 IDL에서 이벤트 처리기를 선언하기만 하면 됩니다.
+
+```idl
+void OpenButton_Click(Object sender, Windows.UI.Xaml.RoutedEventArgs e);
+```
+
+> [!NOTE]
+> 이를 [Fire and forget](/windows/uwp/cpp-and-winrt-apis/concurrency-2#fire-and-forget)으로 *구현*하더라도 함수를 `void`로 선언합니다.
 
 ## <a name="port-language-syntax"></a>언어 구문 이식
 
@@ -230,7 +245,7 @@ Most recent status is <Run Text="{x:Bind LatestOperation.Status}"/>.
 
 [**BuildClipboardFormatsOutputString** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#buildclipboardformatsoutputstring) 및 [**DisplayChangedFormats** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#displaychangedformats)도 참조하세요.
 
-## <a name="porting-tasks-that-are-specific-to-cwinrt"></a>C++/WinRT와 관련된 이식 작업
+## <a name="porting-related-tasks-that-are-specific-to-cwinrt"></a>C++/WinRT와 관련된 이식 관련 작업
 
 ### <a name="define-your-runtime-classes-in-idl"></a>IDL에서 런타임 클래스 정의
 
@@ -309,7 +324,7 @@ C# 프로젝트에서는 XAML 태그에서 프라이빗 멤버 및 명명된 요
 
 ### <a name="making-a-data-source-available-to-xaml-markup"></a>XAML 태그에서 데이터 원본을 사용할 수 있도록 만들기
 
-C++/WinRT 버전 2.0.190530.8 이상에서 [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector)는 **[IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector_t_)\<T\>** 및 **IObservableVector\<IInspectable\>** 을 모두 지원하는 관찰 가능한 벡터를 만듭니다. 예제는 [**Scenarios** 속성 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#scenarios)을 참조하세요.
+C++/WinRT 버전 2.0.190530.8 이상에서 [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector)는 **[IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector_t_)\<T\>** 및 **IObservableVector\<IInspectable\>** 를 모두 지원하는 관찰 가능한 벡터를 만듭니다. 예제는 [**Scenarios** 속성 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#scenarios)을 참조하세요.
 
 다음과 같이 **Midl 파일(.idl)** 을 작성할 수 있습니다([런타임 클래스를 Midl 파일(.idl)로 팩터링](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl)도 참조).
 
@@ -368,7 +383,7 @@ XAML 데이터 바인딩을 수행하려면 항목 원본에서 **[IIterable](/u
 - **IVector\<IInspectable\>**
 - **IBindableIterable**(요소를 반복하여 프라이빗 컬렉션에 저장)
 
-**IVector\<T\>** 와 같은 제네릭 인터페이스는 런타임에 검색할 수 없습니다. 각 **IVector\<T\>** 에는 **T**의 함수인 다른 IID(인터페이스 식별자)가 있습니다. 모든 개발자는 임의로 **T** 집합을 확장할 수 있으므로 XAML 바인딩 코드는 쿼리할 전체 집합을 알 수 없습니다. **IEnumerable\<T\>** 를 구현하는 모든 CLR 개체에서 **IEnumerable**을 자동으로 구현하므로 이 제한은 C#에서 문제가 되지 않습니다. ABI 수준에서는 **IObservableVector\<T\>** 를 구현하는 모든 개체에서 **IObservableVector\<IInspectable\>** 을 자동으로 구현한다는 것을 의미합니다.
+**IVector\<T\>** 와 같은 제네릭 인터페이스는 런타임에 검색할 수 없습니다. 각 **IVector\<T\>** 에는 **T**의 함수인 다른 IID(인터페이스 식별자)가 있습니다. 모든 개발자는 임의로 **T** 집합을 확장할 수 있으므로 XAML 바인딩 코드는 쿼리할 전체 집합을 알 수 없습니다. **IEnumerable\<T\>** 를 구현하는 모든 CLR 개체에서 **IEnumerable**을 자동으로 구현하므로 이 제한은 C#에서 문제가 되지 않습니다. ABI 수준에서는 **IObservableVector\<T\>** 를 구현하는 모든 개체에서 **IObservableVector\<IInspectable\>** 를 자동으로 구현한다는 것을 의미합니다.
 
 C++/WinRT는 이러한 보장을 제공하지 않습니다. C++/WinRT 런타임 클래스에서 **IObservableVector\<T\>** 를 구현하는 경우 **IObservableVector\<IInspectable\>** 의 구현도 어떻게든 제공된다고 가정할 수 없습니다.
 

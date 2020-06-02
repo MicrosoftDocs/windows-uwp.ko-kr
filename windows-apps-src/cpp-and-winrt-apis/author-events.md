@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: 6fb9b98ec362b59ad2593bbce24654f1dcfc7638
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: fc12bf1abeabd1a1c3cfccfe3c6d3f12ebda65f3
+ms.sourcegitcommit: c4f912ba0313ae49632f81e38d7d2d983ac132ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79209208"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84200777"
 ---
 # <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 
@@ -71,6 +71,7 @@ namespace winrt::BankAccountWRC::implementation
 ```cppwinrt
 // BankAccount.cpp
 ...
+#include "BankAccountWRC.g.cpp"
 namespace winrt::BankAccountWRC::implementation
 {
     winrt::event_token BankAccount::AccountIsInDebit(Windows::Foundation::EventHandler<float> const& handler)
@@ -158,7 +159,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 
 구성 요소와 해당 소비 애플리케이션 사이 같은 ABI(Application Binary Interface)를 통해 이벤트에 액세스할 수 있어야 하는 경우 이벤트에는 Windows 런타임 대리자 형식이 사용되어야 합니다. 위 예제에서는 [**Windows::Foundation::EventHandler\<T\>** ](/uwp/api/windows.foundation.eventhandler) Windows 런타임 대리자 형식을 사용합니다. [**TypedEventHandler\<TSender, TResult\>** ](/uwp/api/windows.foundation.eventhandler)는 Windows 런타임 대리자 형식의 또 다른 예입니다.
 
-두 대리자 형식의 형식 매개 변수는 ABI를 가로질러야 하므로 형식 매개 변수도 Windows 런타임 형식이어야 합니다. 여기에는 Microsoft 및 타사 런타임 클래스와 숫자, 문자열 등의 기본 형식이 포함됩니다. 해당 제약 조건을 잊을 경우 컴파일러가 “WinRT 형식이어야 합니다.” 오류를 처리하는 데 도움이 될 수 있습니다. 
+두 대리자 형식의 형식 매개 변수는 ABI를 가로질러야 하므로 형식 매개 변수도 Windows 런타임 형식이어야 합니다. 여기에는 Microsoft 및 타사 런타임 클래스와 숫자, 문자열 등의 기본 형식이 포함됩니다. 해당 제약 조건을 잊을 경우 컴파일러가 “WinRT 형식이어야 합니다.” 오류를 처리하는 데 도움이 될 수 있습니다.
 
 이벤트를 통해 매개 변수나 인수를 전달할 필요가 없는 경우에는 고유한 단순 Windows 런타임 대리자 형식을 정의할 수 있습니다. 아래 예제에서는 **BankAccount** 런타임 클래스의 더 단순한 버전을 보여 줍니다. **SignalDelegate**라는 대리자 형식을 선언한 다음, 이 대리자 형식을 사용하여 매개 변수가 있는 이벤트 대신 신호 형식 이벤트를 발생시킵니다.
 
@@ -287,7 +288,7 @@ logCallback(L"Hello, World!");
 
 대리자가 아닌 이벤트를 함수 매개 변수로 전달하는 것이 좋습니다. [**winrt::event**](/uwp/cpp-ref-for-winrt/event)의 **add** 함수는 하나의 예외입니다. 이 경우에는 대리자를 전달해야 하기 때문입니다. 대리자는 하나 또는 여러 개의 클라이언트 등록을 지원하는지 여부에 따라 다양한 Windows 런타임 언어에 걸쳐 다른 형식을 사용할 수 있기 때문에 이 지침이 제공됩니다. 여러 구독자 모델이 있는 이벤트는 훨씬 더 예측 가능하고 일관성 있는 옵션을 구성합니다.
 
-이벤트 처리기 대리자의 서명은 두 개의 매개 변수인 ‘발신자’(**IInspectable**) 및 *args*([**RoutedEventArgs**](/uwp/api/windows.ui.xaml.routedeventargs)와 같은 일부 이벤트 인수 형식)로 구성됩니다. 
+이벤트 처리기 대리자의 서명은 두 개의 매개 변수인 ‘발신자’(**IInspectable**) 및 *args*([**RoutedEventArgs**](/uwp/api/windows.ui.xaml.routedeventargs)와 같은 일부 이벤트 인수 형식)로 구성됩니다.
 
 내부 API를 디자인하는 경우에는 이 지침이 반드시 적용되는 것은 아닙니다. 그래도 내부 API는 일반적으로 시간이 지남에 따라 공개됩니다.
 

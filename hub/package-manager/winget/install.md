@@ -6,12 +6,12 @@ ms.author: kevinla
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: c903c923a82edc03ffdce9c5790060cb65232cf8
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 8c460ccd18bb1bb12e5322e0e08a17edbd9692f7
+ms.sourcegitcommit: 5a145eda92b5915393e58006867cdd8b98e922f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83824994"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84166245"
 ---
 # <a name="install-command-winget"></a>install 명령(winget)
 
@@ -47,14 +47,33 @@ ms.locfileid: "83824994"
 | **--name**   |  검색을 애플리케이션 이름으로 제한합니다. |  
 | **--moniker**   | 검색을 애플리케이션에 대해 나열된 모니커로 제한합니다. |  
 | **-v, --version**  |  설치할 정확한 버전을 지정할 수 있습니다. 지정되지 않으면 가장 높은 버전의 최신 애플리케이션을 설치합니다. |  
-| **--tag**   |   검색을 애플리케이션에 대해 나열된 태그로 제한합니다. |  
-| **-s, -source**   |  검색을 제공된 원본 이름으로 제한합니다. 원본 이름이 뒤에 나와야 합니다. |  
-| **-e, -exact**   |   대/소문자 구분 검사를 포함하여 쿼리에서 정확한 문자열을 사용합니다. 하위 문자열의 기본 동작을 사용하지 않습니다. |  
-| **-i, -interactive** |  대화형 모드에서 설치 관리자를 실행합니다. 기본 환경에는 설치 관리자 진행률이 표시됩니다. |  
-| **-h, -silent** |  자동 모드에서 설치 관리자를 실행합니다. 이 경우 모든 UI가 표시되지 않습니다. 기본 환경에는 설치 관리자 진행률이 표시됩니다. |  
+| **-s, --source**   |  검색을 제공된 원본 이름으로 제한합니다. 원본 이름이 뒤에 나와야 합니다. |  
+| **-e, --exact**   |   대/소문자 구분 검사를 포함하여 쿼리에서 정확한 문자열을 사용합니다. 하위 문자열의 기본 동작을 사용하지 않습니다. |  
+| **-i, --interactive** |  대화형 모드에서 설치 관리자를 실행합니다. 기본 환경에는 설치 관리자 진행률이 표시됩니다. |  
+| **-h, --silent** |  자동 모드에서 설치 관리자를 실행합니다. 이 경우 모든 UI가 표시되지 않습니다. 기본 환경에는 설치 관리자 진행률이 표시됩니다. |  
 | **-o, --log**  |  로깅을 로그 파일에 보냅니다. 쓰기 권한이 있는 파일의 경로를 제공해야 합니다. |
-| **-override** | 설치 관리자에 직접 전달되는 문자열입니다.    |
-| **-l,--location** |    설치할 위치입니다(지원되는 경우). |
+| **--override** | 설치 관리자에 직접 전달되는 문자열입니다.    |
+| **-l, --location** |    설치할 위치입니다(지원되는 경우). |
+
+### <a name="example-queries"></a>예제 쿼리
+
+다음 예제에서는 애플리케이션의 특정 버전을 설치합니다.
+
+```CMD
+winget install powertoys --version 0.15.2
+```
+
+다음 예제에서는 해당 ID에서 애플리케이션을 설치합니다.
+
+```CMD
+winget install --id Microsoft.PowerToys
+```
+
+다음 예제에서는 버전 및 ID별로 애플리케이션을 설치합니다.
+
+```CMD
+winget install --id Microsoft.PowerToys --version 0.15.2
+```
 
 ## <a name="multiple-selections"></a>여러 선택 항목
 
@@ -68,11 +87,11 @@ ms.locfileid: "83824994"
 
 | 옵션  | 설명 |
 |-------------|-------------|  
-|  **-m,--manifest** | 설치할 애플리케이션의 매니페스트에 대한 경로입니다. |
+|  **-m, --manifest** | 설치할 애플리케이션의 매니페스트에 대한 경로입니다. |
 
 ### <a name="log-files"></a>로그 파일
 
-리디렉션되지 않는 경우 winget에 대한 로그 파일은 ** \%temp%\\AICLI\\ *.log** 폴더에 있습니다.
+리디렉션되지 않는 경우 winget에 대한 로그 파일은 **\%temp%\\AICLI\\*.log** 폴더에 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 

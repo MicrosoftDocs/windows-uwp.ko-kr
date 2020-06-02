@@ -3,15 +3,15 @@ ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: 디바이스를 개발에 사용하도록 설정
 description: 개발 및 디버깅을 위해 Windows 10 디바이스를 구성합니다.
 keywords: 개발자 라이선스 Visual Studio 시작, 개발자 라이선스 디바이스 활성화
-ms.date: 04/09/2019
+ms.date: 05/22/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b360f75ccf08d9cc00eeba2948215b7240627a8
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: f41c7b706f4c088142a77092cf176ed543e21567
+ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80320420"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854779"
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 
@@ -62,7 +62,7 @@ ms.locfileid: "80320420"
 > [!NOTE]
 > Windows 참가자 빌드 18956부터 테스트용 로드는 기본적으로 사용하도록 설정되어 있습니다. 이제 특별한 구성 없이 서명된 MSIX 패키지를 디바이스에 배포할 수 있습니다.
 
-테스트용으로 앱 로드 설정은 일반적으로 Microsoft Store를 거치지 않고 관리 디바이스에 사용자 지정 앱을 설치해야 하는 회사나 학교에서 사용하거나 타사 소스에서 앱을 실행해야 하는 모든 사용자가 사용합니다. 이 경우 이전에 설정 페이지 이미지에 표시된 대로 조직에서 *UWP 앱* 설정을 사용하지 않는 정책을 적용하는 경우가 일반적입니다. 또한 조직에서는 필요한 인증서 및 테스트용 로드 앱의 설치 위치를 제공합니다. 자세한 내용은 TechNet 문서 [Windows 10에서 앱을 테스트용으로 로드](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) 및 [Microsoft Intune에서 앱 배포 시작](https://docs.microsoft.com/intune/deploy-use/add-apps)을 참조하세요.
+테스트용으로 앱 로드 설정은 일반적으로 Microsoft Store를 거치지 않고 관리 디바이스에 사용자 지정 앱을 설치해야 하는 회사나 학교에서 사용하거나 타사 소스에서 앱을 실행해야 하는 모든 사용자가 사용합니다. 이 경우 이전에 설정 페이지 이미지에 표시된 대로 조직에서 *UWP 앱* 설정을 사용하지 않는 정책을 적용하는 경우가 일반적입니다. 또한 조직에서는 필요한 인증서 및 테스트용 로드 앱의 설치 위치를 제공합니다. 자세한 내용은 TechNet 문서 [Windows 10에서 앱 사이드로드](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) 및 [Microsoft Intune 기본 사항](https://docs.microsoft.com/mem/intune/fundamentals/)을 참조하세요.
 
 디바이스 패밀리 관련 정보
 
