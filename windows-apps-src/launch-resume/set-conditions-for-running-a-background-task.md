@@ -1,6 +1,6 @@
 ---
 title: 백그라운드 작업 실행 조건 설정
-description: 백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법에 대해 알아봅니다.
+description: 백그라운드 작업이 실행 되는 시기를 제어 하는 조건을 설정 하는 방법에 대해 알아봅니다.
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
 ms.date: 07/06/2018
 ms.topic: article
@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 618c8891551d851c27414968be76fb465eb89bf0
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 04f351a2eed5290e31a3f40c5421addf01422154
+ms.sourcegitcommit: cc645386b996f6e59f1ee27583dcd4310f8fb2a6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260415"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84262784"
 ---
 # <a name="set-conditions-for-running-a-background-task"></a>백그라운드 작업 실행 조건 설정
 
@@ -25,23 +25,23 @@ ms.locfileid: "74260415"
 - [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)
 - [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
 
-백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법에 대해 알아봅니다.
+백그라운드 작업이 실행 되는 시기를 제어 하는 조건을 설정 하는 방법에 대해 알아봅니다.
 
-경우에 따라 백그라운드 작업을 성공적으로 수행하려면 특정한 조건을 충족해야 합니다. 백그라운드 작업을 등록할 때 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)에 지정된 조건을 하나 이상 지정할 수 있습니다. 트리거가 실행되면 조건을 확인합니다. 그런 다음 백그라운드 작업이 큐에 보관되지만 모든 필요한 조건이 충족될 때에만 실행됩니다.
+백그라운드 작업에 성공 하려면 특정 조건이 충족 되어야 하는 경우가 있습니다. 백그라운드 작업을 등록할 때 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType) 에서 지정 하는 조건 중 하나 이상을 지정할 수 있습니다. 트리거를 실행 한 후 조건이 검사 됩니다. 백그라운드 작업은 큐에 대기 되지만 모든 필수 조건이 충족 될 때까지 실행 되지 않습니다.
 
-백그라운드 작업에 조건을 설정하면 작업이 불필요하게 실행되지 않으므로 배터리 사용 시간과 CPU가 절약됩니다. 예를 들어 백그라운드 작업이 타이머에 따라 실행되고 인터넷 연결이 필요한 경우 작업을 등록하기 전에 **InternetAvailable** 조건을 [**TaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)에 추가합니다. 그러면 타이머가 경과*되고* 인터넷을 사용할 수 있을 때 백그라운드 작업만 실행하여 작업에서 시스템 리소스와 배터리를 불필요하게 사용하는 것을 방지할 수 있습니다.
+백그라운드 작업에 조건을 배치 하면 작업이 불필요 하 게 실행 되지 않도록 하 여 배터리 수명과 CPU가 절약 됩니다. 예를 들어 백그라운드 작업을 타이머에서 실행 하 고 인터넷에 연결 해야 하는 경우 작업을 등록 하기 전에 [**Internetavailable**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 에 **internetavailable** 조건을 추가 합니다. 이렇게 하면 타이머가 경과 *하* 여 인터넷을 사용할 수 있는 경우에만 백그라운드 작업을 실행 하 여 작업에서 시스템 리소스 및 배터리 수명을 불필요 하 게 사용할 수 있습니다.
 
-동일한TaskBuilder[**에서** AddCondition](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)을 여러 번 호출하여 여러 조건을 결합할 수도 있습니다. **UserPresent** 및 **UserNotPresent**와 같은 충돌하는 조건을 추가하지 않도록 주의하세요.
+동일한 [**Taskbuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)에서 **addcondition** 을 여러 번 호출 하 여 여러 조건을 결합할 수도 있습니다. **Userpresent** 및 **usernotpresent**와 같이 충돌 하는 조건을 추가 하지 않도록 주의 합니다.
 
 ## <a name="create-a-systemcondition-object"></a>SystemCondition 개체 만들기
 
-이 항목에서는 앱에 백그라운드 작업이 이미 연결되어 있으며, [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 개체(**taskBuilder**)를 만드는 코드가 앱에 포함되어 있다고 가정합니다.  백그라운드 작업을 먼저 만들어야 하는 경우 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
+이 항목에서는 사용자에 게 앱과 이미 연결 된 백그라운드 작업이 있으며, 앱에 **Taskbuilder**라는 [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 개체를 만드는 코드가 이미 포함 되어 있다고 가정 합니다.  먼저 백그라운드 작업을 만들어야 하는 경우 in-process 백그라운드 작업 [만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md) 을 참조 하세요.
 
-이 항목은 포그라운드 앱과 동일한 프로세스에서 실행되는 백그라운드 작업뿐만 아니라 out-of-process에서 실행되는 백그라운드 작업에도 적용됩니다.
+이 항목은 포그라운드 앱과 동일한 프로세스에서 실행 되는 작업 뿐만 아니라 out-of-process를 실행 하는 백그라운드 작업에 적용 됩니다.
 
-조건을 추가하기 전에 백그라운드 작업이 실행되기 위해 충족해야 하는 조건을 나타낼 [**SystemCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition) 개체를 만듭니다. 생성자에서 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType) 열거형 값으로 충족해야 하는 조건을 지정합니다.
+조건을 추가 하기 전에 백그라운드 작업을 실행 하는 데 적용 해야 하는 조건을 나타내는 [**systemcondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition) 개체를 만듭니다. 생성자에서 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType) 열거형 값을 사용 하 여 충족 해야 하는 조건을 지정 합니다.
 
-다음 코드는 [InternetAvailable**조건을 지정하는**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition)SystemCondition 개체를 만듭니다.
+다음 코드는 **Internetavailable** 조건을 지정 하는 [**systemcondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition) 개체를 만듭니다.
 
 ```csharp
 SystemCondition internetCondition = new SystemCondition(SystemConditionType.InternetAvailable);
@@ -58,9 +58,9 @@ SystemCondition ^ internetCondition = ref new SystemCondition(SystemConditionTyp
 
 ## <a name="add-the-systemcondition-object-to-your-background-task"></a>백그라운드 작업에 SystemCondition 개체 추가
 
-조건을 추가하려면 [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.addcondition) 개체에 대해 [**AddCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 메서드를 호출하고 [**SystemCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition) 개체를 전달합니다.
+조건을 추가 하려면 [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 개체에서 [**addcondition**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.addcondition) 메서드를 호출 하 고 [**systemcondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition) 개체를 전달 합니다.
 
-다음 코드는 **taskBuilder**를 사용하여 **InternetAvailable** 조건을 추가합니다.
+다음 코드는 **Taskbuilder** 를 사용 하 여 **internetavailable** 조건을 추가 합니다.
 
 ```csharp
 taskBuilder.AddCondition(internetCondition);
@@ -76,9 +76,9 @@ taskBuilder->AddCondition(internetCondition);
 
 ## <a name="register-your-background-task"></a>백그라운드 작업 등록
 
-이제 [**Register**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) 메서드를 사용하여 백그라운드 작업을 등록할 수 있으며, 지정한 조건을 충족하는 경우에만 백그라운드 작업이 시작됩니다.
+이제 [**register**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register) 메서드를 사용 하 여 백그라운드 작업을 등록할 수 있으며, 백그라운드 작업은 지정 된 조건이 충족 될 때까지 시작 되지 않습니다.
 
-다음 코드는 작업을 등록하고 결과 BackgroundTaskRegistration 개체를 저장합니다.
+다음 코드는 작업을 등록 하 고 결과 BackgroundTaskRegistration 개체를 저장 합니다.
 
 ```csharp
 BackgroundTaskRegistration task = taskBuilder.Register();
@@ -93,16 +93,11 @@ BackgroundTaskRegistration ^ task = taskBuilder->Register();
 ```
 
 > [!NOTE]
-> 유니버설 Windows 앱에서 백그라운드 트리거 형식을 등록하기 전에 [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync)를 호출해야 합니다.
+> 등록 시 백그라운드 작업 등록 매개 변수의 유효성이 검사 됩니다. 등록 매개 변수가 잘못 된 경우 오류가 반환 됩니다. 앱이 백그라운드 작업 등록에 실패 하는 시나리오를 정상적으로 처리 하는지 확인 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체가 있는 경우 충돌이 발생할 수 있습니다.
 
-업데이트를 릴리스한 후 유니버설 Windows 앱이 계속해서 제대로 실행되도록 하려면 앱이 업데이트된 후 시작될 때 [**RemoveAccess**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.removeaccess) 및 [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync)를 차례로 호출해야 합니다. 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
+## <a name="place-multiple-conditions-on-your-background-task"></a>백그라운드 작업에 여러 조건 추가
 
-> [!NOTE]
-> 백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
-
-## <a name="place-multiple-conditions-on-your-background-task"></a>백그라운드 작업에 여러 조건 배치
-
-여러 조건을 추가하려면 앱에서 [**AddCondition**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.addcondition) 메서드를 여러 번 호출합니다. 이러한 호출은 작업 등록이 적용되기 전에 수행되어야 합니다.
+여러 조건을 추가 하기 위해 앱은 [**Addcondition**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.addcondition) 메서드를 여러 번 호출 합니다. 이러한 호출은 작업을 효과적으로 수행 하기 전에 발생 해야 합니다.
 
 > [!NOTE]
 > 충돌 하는 조건을 백그라운드 작업에 추가 하지 않도록 주의 합니다.
@@ -178,7 +173,7 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 ## <a name="remarks"></a>설명
 
 > [!NOTE]
-> 필요한 경우에만 실행 되 고, 그렇지 않으면 실행 되지 않도록 백그라운드 작업에 대 한 조건을 선택 합니다. 다른 백그라운드 작업 조건에 대한 자세한 내용은 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)을 참조하세요.
+> 필요한 경우에만 실행 되 고, 그렇지 않으면 실행 되지 않도록 백그라운드 작업에 대 한 조건을 선택 합니다. 다른 백그라운드 작업 조건에 대 한 설명은 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType) 를 참조 하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -189,7 +184,7 @@ BackgroundTaskRegistration ^ task = recurringTaskBuilder->Register();
 * [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)
 * [백그라운드 작업 등록](register-a-background-task.md)
 * [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
-* [백그라운드 작업의 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
+* [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
 * [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
 * [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)

@@ -7,12 +7,12 @@ keywords: windows win32, 데스크톱 개발
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a55a1578fba7052396ecec725db2678ea8bd6ff
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: d052ad0f670bccd9b32d2e3643520dd6129ed22a
+ms.sourcegitcommit: cc645386b996f6e59f1ee27583dcd4310f8fb2a6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580020"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84262744"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Windows PC용 데스크톱 앱 빌드
 
@@ -58,7 +58,7 @@ Windows PC용 데스크톱 앱 빌드를 위한 주요 플랫폼에는 4가지�
 <tr class="even">
 <td><a href="https://docs.microsoft.com/dotnet/framework/winforms/">Windows Forms</a></td>
 <td><p>경량 UI 모델을 사용하는 관리형 LOB(기간 업무) 앱용으로 설계된 .NET 기반 플랫폼입니다. 이러한 앱은 <a href="https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0">.NET Core 3</a> 또는 전체 .NET Framework를 대상으로 지정할 수 있습니다.</p></td>
-<td><a href="/dotnet/framework/winforms/getting-started-with-windows-forms">시작</a><br/><a href="https://docs.microsoft.com/dotnet/api/index">API 참조(.NET)</a><br/><a href="https://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=Technology&f%5B0%5D.Value=Windows%20Forms">샘플</a></td>
+<td><a href="/dotnet/framework/winforms/getting-started-with-windows-forms">시작</a><br/><a href="https://docs.microsoft.com/dotnet/api/index">API 참조(.NET)</a></td>
 </tr>
 </tbody>
 </table>

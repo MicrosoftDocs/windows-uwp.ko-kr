@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 86586cfc0f054181f08cd3cd75731e6c53ea4b92
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 31d7805e7ae936e5c7427b54f2eb9b0ad4b4c3e9
+ms.sourcegitcommit: 37e4af3ba203295c7e88448414cf7ea537ab5402
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83579930"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84257384"
 ---
 # <a name="modernize-your-desktop-apps"></a>데스크톱 앱 현대화
 
@@ -74,7 +74,7 @@ Windows 10, 버전 1903부터 창 핸들(HWND)에 연결된 WPF, Windows Forms �
 * [MSIX 패키지](/windows/msix/desktop/desktop-to-uwp-root)에 패키지합니다. MSIX는 모든 Windows 앱, WPF, Windows Forms 및 Win32 앱에 유니버설 패키징 환경을 제공하는 최신 앱 패키지 형식입니다. 강력한 설치 및 업데이트 환경, 유연한 기능 시스템을 갖춘 관리형 보안 모듈, Microsoft Store, 엔터프라이즈 관리 및 여러 사용자 지정 모델에 대한 지원 기능을 제공합니다. 자세한 내용은 MSIX 설명서의 [데스크톱 애플리케이션 패키지](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root)를 참조하세요.
 * 데스크톱 앱을 배포하기 위해 MSIX 패키지를 채택할 수 없는 경우 Windows 10 버전 2004부터 패키지 매니페스트만 포함된 *스파스 MSIX 패키지*를 만들어 패키지 ID를 부여할 수 있습니다. 자세한 내용은 [패키지되지 않은 데스크톱 앱에 ID 부여](grant-identity-to-nonpackaged-apps.md)를 참조하세요.
 
-<a id="desktop-uwp-controls"/>
+<a id="desktop-uwp-controls"></a>
 
 ## <a name="uwp-controls-optimized-for-desktop-apps"></a>데스크톱 앱용으로 최적화된 UWP 컨트롤
 
