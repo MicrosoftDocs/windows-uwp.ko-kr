@@ -2,18 +2,22 @@
 Description: Windows 10 배에 대 한 몇 가지 기본적인 개발자 질문에 대 한 답변을 알아보세요.
 title: Windows 10 배 개발자 FAQ
 ms.topic: article
-ms.date: 04/1/2020
+ms.date: 06/02/2020
 ms.localizationpriority: medium
 ms.author: quradic
 author: QuinnRadich
-ms.openlocfilehash: d168faf16bdd8a88e0cd4c52c680781061bfcf0d
-ms.sourcegitcommit: dadbc20564e4b0c0ecbab5fd5649dbf8ab08095a
+ms.openlocfilehash: 3ba14e33c098d3515522a9a5907065751fafba87
+ms.sourcegitcommit: 13bda6040988461a61b1b5561fde2f7a54835ccd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80581957"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84318239"
 ---
 # <a name="windows-10x-developer-faq"></a>Windows 10 배 개발자 FAQ
+
+> [!IMPORTANT]
+> 최근 Windows 10 및 Windows 10 배의 우선 순위에 대 한 일부 변경 내용을 발표 했습니다.
+> 이러한 공지에는 Windows 10 배 폼 팩터 우선 순위에 대 한 변경 내용이 포함 됩니다. [자세한 내용은 여기를 참조 하세요.](https://blogs.windows.com/windowsexperience/2020/05/04/accelerating-innovation-in-windows-10-to-meet-customers-where-they-are/)
 
 Windows 10 배은 이중 화면 장치에서 사용 하도록 최적화 된 Windows 제품군의 제품 라인입니다. 개발자는 Windows 10 배 응용 프로그램을 최적화 하 고, 모바일 및 이중 화면 대상 그룹에 대 한 새로운 기능을 활용 하 고, 동일한 범위의 Windows 10 기능 및 풍부한 데스크톱 지원을 계속 제공 하 여 더 광범위 한 대상 그룹에 연결할 수 있습니다. Microsoft는 [2019 년 말에 Windows 10 배을 발표](https://blogs.windows.com/windowsexperience/2019/10/02/introducing-windows-10x-enabling-dual-screen-pcs-in-2020/#6qxkItE2XMPu24uw.97)했으며, 년 2020 말에 출시 하려고 노력 하 고 있습니다.
 
