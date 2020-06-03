@@ -11,12 +11,12 @@ metadata:
   ms.date: 11/08/2019
   ms.localizationpriority: medium
   uhfHeaderId: MSDocsHeader-WinDevCenter
-  ms.openlocfilehash: 1192e0d34ad0f754917bf156432646d0ace1458a
-  ms.sourcegitcommit: 10ec5a20dd1152a1037ebc4fba1a28cc96593586
+  ms.openlocfilehash: bbd56295c7a44c4d2c7d212f9e824dea6d5be64a
+  ms.sourcegitcommit: ad5a03ea01a3d825931a1abc40f472e88a41c04f
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/19/2020
-  ms.locfileid: "83665876"
+  ms.lasthandoff: 06/02/2020
+  ms.locfileid: "84303886"
 highlightedContent:
   items:
   - title: Visual Studio 및 Windows SDK 받기
@@ -40,7 +40,7 @@ productDirectory:
     - url: /windows/apps/desktop/
       text: 시작
   - title: Windows UI 라이브러리(WinUI)
-    imageSrc: images/logo-winui.jpg
+    imageSrc: images/logo-winui.svg
     links:
     - url: /windows/apps/winui/
       text: 시작
