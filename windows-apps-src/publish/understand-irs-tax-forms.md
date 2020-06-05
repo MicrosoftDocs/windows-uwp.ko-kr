@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 세금, irs, 내부 수익 서비스, 세금, 수입 세금, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: ab115b5cb2b64c6f5bd05b166e904773948a876c
-ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
+ms.openlocfilehash: 4a385c9c351dc0bb5db857fe7d1f5f267347f1f1
+ms.sourcegitcommit: 31c925736391ab166c06f34258564b00aeebd83a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83854709"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84428912"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Microsoft에서 발급 한 IRS 세금 양식 이해
 
@@ -32,20 +32,21 @@ ms.locfileid: "83854709"
 세금 형태는 다음 주소에서 사용자에 게 전송 됩니다.
 
 **미국 시민:**
-<table>
-<tr><th>비즈니스 그룹</th><th>법적 엔터티</th><th>주소</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft Corporation</td><td>One Microsoft Way<br>Redmond WA 98052 USA</td></tr>
-<tr><td>광고</td><td>Microsoft Online Inc.</td><td>6100 Neil<br>Reno, NV 89511 USA</td></tr>
-<table> 
+
+| 비즈니스 그룹         | 법적 엔터티          | 주소                                          |
+|------------------------|-----------------------|--------------------------------------------------|
+| Windows, Office, Azure | Microsoft Corporation | One Microsoft Way<br>Redmond, WA 98052 USA       |
+| 광고            | Microsoft Online Inc. | 6880 시에라리온 센터 Parkway<br>Reno, NV 98511 USA |
 
 **미국 이외의 시민:**
-<table>
-<tr><th>비즈니스 그룹</th><th>법적 엔터티</th><th>주소</th></tr>
-<tr><td>Windows, Office, Azure</td><td>Microsoft 아일랜드 운영이 제한 됨 (microsoft Corporation의 정규화 된 중개자 역할을 하는 microsoft 아일랜드를 통해 Microsoft Corporation에서 지불)</td><td>한 Microsoft 장소<br>남부 &nbsp; 관할지 &nbsp; 비즈니스 &nbsp; 공원<br>Leopardstown, 더블린 18 아일랜드</td></tr>
-<tr><td>보내기</td><td>Microsoft 아일랜드 작업 제한 (microsoft online Inc.의 경우 결제는 microsoft online i n c. 용 지급 agent 역할을 통해 microsoft online inc.)</td><td>한 Microsoft 장소<br>남부 &nbsp; 관할지 &nbsp; 비즈니스 &nbsp; 공원<br>Leopardstown, 더블린 18 아일랜드</td></tr>
-<tr><td>광고</td><td>Microsoft Online Inc.</td><td>6100 Neil<br>Reno, NV 89511 USA</td></tr>
-<tr><td colspan="3">* 다음 국가의 시민은 Microsoft 아일랜드 작업을 제한 하 여 광고 수익을 지불 합니다. 오스트리아, 벨기에, 불가리아, 크로아티아, 키프로스, Czechia, 덴마크, 에스토니아, 핀란드, 프랑스, 독일, 그리스, 헝가리, 아일랜드, 남자 섬, 이탈리아, 라트비아, 리히텐슈타인, 리투아니아, 룩셈부르크, 몰타, 모나코, 네덜란드, 노르웨이, 폴란드, 포르투갈, 루마니아, 슬로바키아, 슬로베니아, 남아프리카</td></tr>
-</table>
+| 비즈니스 그룹         | 법적 엔터티          | 주소                                          |
+|------------------------|-----------------------|--------------------------------------------------|
+| Windows, Office, Azure | Microsoft 아일랜드 운영이 제한 됨 (microsoft Corporation의 정규화 된 중개자 역할을 하는 microsoft 아일랜드를 통해 Microsoft Corporation에서 지불) | 한 Microsoft 장소<br>남부 &nbsp; 관할지 &nbsp; 비즈니스 &nbsp; 공원<br>Leopardstown, 더블린 18 아일랜드|
+| 광고\*          | Microsoft 아일랜드 작업 제한 (microsoft online Inc.의 경우 결제는 microsoft online i n c. 용 지급 agent 역할을 통해 microsoft online inc.) | 한 Microsoft 장소<br>남부 &nbsp; 관할지 &nbsp; 비즈니스 &nbsp; 공원<br>Leopardstown, 더블린 18 아일랜드 |
+| 광고            | Microsoft Online Inc. | 6880 시에라리온 센터 Parkway<br>Reno, NV 98511 USA |
+
+>[!NOTE]
+> \*다음 국가의 시민은 Microsoft 아일랜드 작업을 제한 하 여 광고 수익을 지불 합니다. 오스트리아, 벨기에, 불가리아, 크로아티아, 키프로스, Czechia, 덴마크, 에스토니아, 핀란드, 프랑스, 독일, 그리스, 헝가리, 아일랜드, 남자 섬, 이탈리아, 라트비아, 리히텐슈타인, 리투아니아, 룩셈부르크, 몰타, 모나코, 네덜란드, 노르웨이, 폴란드, 포르투갈, 루마니아, 슬로바키아, 슬로베니아, 남아프리카
 
 ## <a name="for-developers-located-in-the-united-states"></a>미국에 거주 하는 개발자 용
 
@@ -61,14 +62,14 @@ ms.locfileid: "83854709"
   <tr> 
      <td valign="top">(I) Minecraft Marketplace의 Windows 10 또는 (ii) 판매에 대 한 Microsoft Store 통해 브라질과 중국에서 만든 (i) 앱 판매에 대해 <b>최소 $10</b> 을 받았습니다.<br>
 <br>
-<b>디스크나</b><br>
+<b>OR</b><br>
 <br>
 해당 세금 년도 (예: 콘테스트 지불 또는 판촉의 지불 또는 판촉)에서 Microsoft의 앱 판매와 관련 되지 않은 지불로 최소 $600을 받았습니다.</td>
     <td valign="top"><b>1099-기타</b> :<br>지불자: Microsoft Corporation<br>EIN: * * * * * 4442<br><br><b>중요</b>: Microsoft에서 받은 지불 금액에 관계 없이 특정 비즈니스 엔터티에 1099-기타 양식이 수신 되지 않습니다.  자세한 내용은 세금 전문가에 게 문의 하세요.</td>
   </tr>
   <tr>
     <td valign="top">위의 항목이 적용 되지 않습니다.</td>
-    <td valign="top">None</td>
+    <td valign="top">없음</td>
   </tr>
   <tr>
     <td valign="top">&nbsp;</td>
@@ -84,7 +85,7 @@ ms.locfileid: "83854709"
   </tr>
   <tr> 
      <td valign="top">해당 세금 연도의 앱에서 광고의 <b>지불에서 $600 미만의 지불을</b> 받았습니다.</td>
-     <td valign="top">None</td>
+     <td valign="top">없음</td>
   </tr>
 </table>
 
