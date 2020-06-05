@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f79b7247a7e1a1889c530a16c280f490db51042e
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 2e385f6b9977eead6aed52215080588e4f9d8c27
+ms.sourcegitcommit: cc645386b996f6e59f1ee27583dcd4310f8fb2a6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970748"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84262774"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>화면 크기 및 중단점
 
@@ -98,8 +98,3 @@ UWP 앱은 모든 Windows 10 디바이스에서 앱을 쉽게 알아볼 수 있�
 - 열/영역은 최대 3개까지 사용합니다.
 - 검색 상자를 표시합니다.
 - 항상 표시되도록 [탐색 창](../controls-and-patterns/navigationview.md)을 도킹 모드로 전환합니다.
-
->[!TIP] 
-> [**휴대폰용 Continuum**](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN)을 통해 사용자는 호환되는 Windows 10 모바일 디바이스를 모니터, 마우스 및 키보드에 연결하여 휴대폰을 노트북처럼 사용할 수 있습니다. 특정 중단점에 대해 디자인할 때 이 새로운 기능에 유의하세요. 휴대폰이 항상 크기 클래스로 유지되지는 않습니다.
-
-

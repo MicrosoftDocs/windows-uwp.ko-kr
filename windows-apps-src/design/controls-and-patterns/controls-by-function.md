@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 32038d6e25ec450dae59d0c1d7e9c8703fdc8018
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c593ea76535bec6a9d8ab41f0bcd4f2299162615
+ms.sourcegitcommit: db48036af630f33f0a2f7a908bfdfec945f3c241
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82148835"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84437213"
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 
@@ -627,7 +627,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 <ProgressBar x:Name="progressBar1" Value="50" Width="100"/>
 ```
 
-![확정되지 않은 진행률 표시줄 컨트롤](images/controls/progress-bar-indeterminate.png)
+![확정되지 않은 진행률 표시줄 컨트롤](images/controls/progress-bar-indeterminate.gif)
 
 확정되지 않은 진행 상황을 표시하는 진행률 표시줄입니다.
 
