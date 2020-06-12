@@ -8,14 +8,14 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: b9a4d0fb13b28babb3d99d0f763d9e7dc6decd2b
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 56104dd5608356b47a405c37eba71e544c5ba23c
+ms.sourcegitcommit: 37e4af3ba203295c7e88448414cf7ea537ab5402
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83233779"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84257446"
 ---
-# <a name="inking-controls"></a>잉크 입력 컨트롤
+# <a name="inking-controls"></a>수동 입력 컨트롤
 
 
 
@@ -72,7 +72,7 @@ Microsoft Edge는 **웹 메모**에 대해 InkCanvas 및 InkToolbar를 사용합
 
 **Windows Ink 작업 영역**
 
-InkCanvas 및 InkToolbar는 **Windows Ink 작업 영역**의 **스케치북**과 **화면 스케치**에서도 사용됩니다.  
+InkCanvas 및 InkToolbar는 **Windows Ink 작업 영역**의 **캡처 및 스케치**에서도 사용됩니다.  
 ![Windows Ink 작업 영역의 InkToolbar](images/ink-tools-ink-workspace.png)
 
 ## <a name="create-an-inkcanvas-and-inktoolbar"></a>InkCanvas 및 InkToolbar 만들기

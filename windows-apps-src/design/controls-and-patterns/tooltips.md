@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f0b0ca87e86d487708a55e6aa75bf106c40c384
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 621b687e54cfba55bfd176d4fe0072e47cf79183
+ms.sourcegitcommit: db48036af630f33f0a2f7a908bfdfec945f3c241
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970558"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84437154"
 ---
 # <a name="tooltips"></a>도구 설명
 
@@ -76,9 +76,9 @@ ms.locfileid: "82970558"
 </tr>
 </table>
 
-Bing 지도 앱의 도구 설명입니다.
+Windows 지도 앱의 도구 설명입니다.
 
-![Bing 지도 앱의 도구 설명](images/control-examples/tool-tip-maps.png)
+![Windows 지도 앱의 도구 설명](images/control-examples/tool-tip-maps.png)
 
 ## <a name="create-a-tooltip"></a>도구 설명 만들기
 

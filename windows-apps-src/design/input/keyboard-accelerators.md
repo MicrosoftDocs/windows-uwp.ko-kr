@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e2509743bf9e847fb740816e3552f4172cf644c
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 694ab7a3897bdf13189d61ab70ed05b9169b834c
+ms.sourcegitcommit: 020d0ff0e5abf46b2ed660eac61251b32bf150bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970708"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716041"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 
@@ -331,7 +331,7 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 
 앱 간 기능의 차이로 인해 항상 불가능 한 것은 아닙니다.
 
-| **편집** | **일반 키보드 액셀러레이터** |
+| **편집 중** | **일반 키보드 액셀러레이터** |
 | ------------- | ----------------------------------- |
 | 편집 모드 시작 | Ctrl+E |
 | 포커스가 있는 컨트롤 또는 창에서 모든 항목 선택 | Ctrl + A |
@@ -349,7 +349,7 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 | 선택한 항목 삭제 (실행 취소 하지 않음) | Shift + Del |
 | 굵게 | Ctrl + B |
 | 밑줄 | Ctrl + U |
-| 기울임꼴 | Ctrl + I |
+| 기울임꼴 | Ctrl+I |
 
 | **탐색** | |
 | ------------- | ----------------------------------- |
@@ -364,7 +364,7 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 | 축소 | Ctrl +- | 
 | 기본 뷰로 확대/축소 | Ctrl + 0 | 
 | 저장 | Ctrl+S | 
-| 닫습니다 | Ctrl+W | 
+| 닫기 | Ctrl+W | 
 | Print | Ctrl+P | 
 
 지역화 된 버전의 Windows에서는 일부 조합이 유효 하지 않습니다. 예를 들어, 스페인어 버전의 Windows에서는 ctrl + N을 Ctrl + B 대신 굵게 사용 합니다. 앱이 지역화 된 경우 지역화 된 키보드 액셀러레이터를 제공 하는 것이 좋습니다.
@@ -530,8 +530,8 @@ XAML에서 입력 버블링 파이프라인은 하나만 있는 것 처럼 키 �
 미리 보기 입력 이벤트는 다른 이벤트 보다 먼저 발생 합니다. 이러한 이벤트를 처리 하지 않으면 포커스가 있는 요소에 대 한 액셀러레이터 키가 실행 된 후 KeyDown 이벤트가 발생 합니다. 두 이벤트 모두 처리 될 때까지 버블링 됩니다.
 
 
-![키 이벤트 시퀀스](images/accelerators/accelerators_keyevents.png)
-***키 이벤트 시퀀스***
+![키 이벤트 시퀀스 ](images/accelerators/accelerators_keyevents.png)
+ ***키 이벤트 시퀀스***
 
 이벤트 순서:
 
@@ -576,8 +576,8 @@ protected override void OnProcessKeyboardAccelerators(
 
 모든 키보드 액셀러레이터 키를 지역화 하는 것이 좋습니다. XAML 선언에서 표준 UWP 리소스 (. resw) 파일 및 x:Uid 특성을 사용 하 여이 작업을 수행할 수 있습니다. 이 예제에서 Windows 런타임는 리소스를 자동으로 로드 합니다.
 
-![Uwp 리소스를 사용한 키보드 액셀러레이터 키](images/accelerators/accelerators_localization.png)
-파일***키보드 액셀러레이터 uwp 리소스 파일을 사용한*** 지역화
+![UWP 리소스를 사용한 키보드 액셀러레이터 키 파일 ](images/accelerators/accelerators_localization.png)
+ ***키보드 액셀러레이터 uwp 리소스 파일을 사용한*** 지역화
 
 ``` xaml
 <Button x:Uid="myButton" Click="OnSave">
@@ -602,8 +602,8 @@ void AddAccelerator(
       { 
         Modifiers = keyModifiers, Key = key
       };
-    accelerator.Invoked = handler;
-    this.KeyAccelerators.Add(accelerator);
+    accelerator.Invoked += handler;
+    this.KeyboardAccelerators.Add(accelerator);
   }
 ```
 
@@ -635,9 +635,9 @@ public class MyListView : ListView
 
 ## <a name="related-articles"></a>관련된 문서
 
-- [키보드 상호 작용](keyboard-interactions.md)
+- [키보드 조작](keyboard-interactions.md)
 - [액세스 키](access-keys.md)
 
 ### <a name="samples"></a>샘플
 
-- [XAML Controls Gallery](https://github.com/Microsoft/Xaml-Controls-Gallery)
+- [XAML 컨트롤 갤러리](https://github.com/Microsoft/Xaml-Controls-Gallery)

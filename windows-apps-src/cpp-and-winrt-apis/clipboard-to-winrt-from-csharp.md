@@ -5,12 +5,12 @@ ms.date: 04/13/2020
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C#, 샘플, 클립보드, 사례, 연구
 ms.localizationpriority: medium
-ms.openlocfilehash: de19d4624cbcf6f102b2eb2067c9f0ff9c583f0b
-ms.sourcegitcommit: 29daa3959304d748e4dec4e6f8e774fade65aa8d
+ms.openlocfilehash: 660eac0cb2b0679815d628f60b77bc5ac01d042f
+ms.sourcegitcommit: 8eae7aec4c4ffb8a0c30e9d03744942fb23958d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82851607"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84334238"
 ---
 # <a name="porting-the-clipboard-sample-tocwinrtfromcmdasha-case-study"></a>C#에서 클립보드 샘플을 C++/WinRT로 이식(사례 연구)
 
@@ -32,10 +32,11 @@ C# 프로젝트에서 소스 코드 파일은 주로 `.cs` 파일입니다. C++�
 
 ## <a name="download-and-test-the-clipboard-sample"></a>클립보드 샘플 다운로드 및 테스트
 
-[클립보드 샘플](https://docs.microsoft.com/samples/microsoft/windows-universal-samples/clipboard/) 웹 페이지를 방문한 후 **ZIP 다운로드**를 클릭합니다. 다운로드한 파일의 압축을 풀고 폴더 구조를 확인합니다.
+[클립보드 샘플](/samples/microsoft/windows-universal-samples/clipboard/) 웹 페이지를 방문한 후 **ZIP 다운로드**를 클릭합니다. 다운로드한 파일의 압축을 풀고 폴더 구조를 확인합니다.
 
-- 샘플 소스 코드의 C# 버전은 `cs`라는 폴더에 포함되어 있습니다. C# 버전에서 사용되는 다른 파일은 `shared` 및 `SharedContent` 폴더에서 찾을 수 있습니다.
-- GitHub에 있는 [샘플 리포지토리](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/Clipboard)의 [cppwinrt 폴더](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/Clipboard/cppwinrt)에서 샘플 소스 코드의 C++/WinRT 버전을 찾을 수 있습니다.
+- 샘플 소스 코드의 C# 버전은 `cs`라는 폴더에 포함되어 있습니다.
+- 샘플 소스 코드의 C++/WinRT 버전은 `cppwinrt`라는 폴더에 포함되어 있습니다.
+- &mdash;C# 버전과 C++/WinRT 버전에서 사용되는&mdash; 다른 파일은 `shared` 및 `SharedContent` 폴더에 있습니다.
 
 이 항목의 연습에서는 C# 소스 코드에서 이식하여 Clipboard 샘플의 C++/WinRT 버전을 다시 만드는 방법을 보여 줍니다. 이를 통해 고유한 C# 프로젝트를 C++/WinRT로 이식하는 방법을 확인할 수 있습니다.
 
@@ -60,7 +61,7 @@ Microsoft Visual Studio에서 새 C++/WinRT 프로젝트를 만들어 이식 프
 - **/Package/Applications/Application** 요소 내에서 **Id** 특성의 값을 기록해 둡니다. *애플리케이션 ID*입니다.
 - **/Package/mp:PhoneIdentity** 요소 내에서 **PhoneProductId** 특성의 값을 기록해 둡니다. 마찬가지로 새로 만든 프로젝트의 경우 패키지 이름이 설정된 GUID와 동일하게 설정됩니다.
 
-그런 다음, C# 프로젝트에서 C++/WinRT 프로젝트로 `Package.appxmanifest`를 복사합니다. 마지막으로, 기록한 3개의 값을 복원할 수 있습니다. 또는 새 프로젝트의 경우와 마찬가지로 복사한 값을 편집하여 애플리케이션 및 조직에 맞는 고유한 값으로 지정할 수 있습니다. 예를 들어 이 경우 패키지 이름 값을 복원하는 대신 복사된 값을 *Microsoft.SDKSamples.Clipboard.CS*에서 *Microsoft.SDKSamples.Clipboard.CppWinRT*로 변경하면 됩니다. 또한 애플리케이션 ID를 *App*으로 설정된 상태로 유지할 수 있습니다. 패키지 이름 또는  애플리케이션 ID가 다른 경우 두 애플리케이션의 애플리케이션 사용자 모델 ID(AUMID)가 다릅니다.
+그런 다음, C# 프로젝트에서 C++/WinRT 프로젝트로 `Package.appxmanifest`를 복사합니다. 마지막으로, 기록한 3개의 값을 복원할 수 있습니다. 또는 새 프로젝트의 경우와 마찬가지로 복사한 값을 편집하여 애플리케이션 및 조직에 맞는 고유한 값으로 지정할 수 있습니다. 예를 들어 이 경우 패키지 이름 값을 복원하는 대신 복사된 값을 *Microsoft.SDKSamples.Clipboard.CS*에서 *Microsoft.SDKSamples.Clipboard.CppWinRT*로 변경하면 됩니다. 또한 애플리케이션 ID를 *App*으로 설정된 상태로 유지할 수 있습니다. 패키지 이름 또는 애플리케이션 ID가 다른 경우 두 애플리케이션의 애플리케이션 사용자 모델 ID(AUMID)가 다릅니다.
 
 이 연습의 목적에 맞게 `Package.appxmanifest`를 추가로 몇 가지 변경하는 것이 좋습니다. *클립보드 C# 샘플* 문자열이 세 번 나옵니다. 이 문자열을 *클립보드 C++/WinRT 샘플*로 변경합니다.
 
@@ -154,7 +155,7 @@ foreach (Scenario s in scenarios)
 ScenarioControl.ItemsSource = itemCollection;
 ```
 
-**Scenario** 개체의 컬렉션이 **ListBox**(항목 컨트롤)의 [**ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성에 할당됩니다. **Scenario**는 XAML과 상호 운용되어야 하므로  Windows 런타임 형식이어야 합니다. 따라서 IDL에 정의해야 합니다. IDL에 **Scenario** 형식을 정의하면 C++/WinRT 빌드 시스템은 백그라운드 헤더 파일에서 **Scenario**의 소스 코드 정의를 생성하게 됩니다(이 연습에서 중요하지 않은 이름 및 위치).
+**Scenario** 개체의 컬렉션이 **ListBox**(항목 컨트롤)의 [**ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성에 할당됩니다. **Scenario**는 XAML과 상호 운용되어야 하므로 Windows 런타임 형식이어야 합니다. 따라서 IDL에 정의해야 합니다. IDL에 **Scenario** 형식을 정의하면 C++/WinRT 빌드 시스템은 백그라운드 헤더 파일에서 **Scenario**의 소스 코드 정의를 생성하게 됩니다(이 연습에서 중요하지 않은 이름 및 위치).
 
 다시 말하지만 **MainPage.Scenarios**는 방금 IDL에 포함해야 한다고 설명한 **Scenario** 개체의 컬렉션입니다. 이러한 이유로 **MainPage.Scenarios**를 IDL에 선언해야 합니다.
 
@@ -212,7 +213,7 @@ IDL에서 항목을 추가, 제거 또는 변경하거나 빌드할 때마다 �
 
 연습의 이 시점에서 `MainPage.idl` 파일 편집을 완료하게 되므로 지금 저장해야 합니다. 지금은 프로젝트가 완료 상태까지 빌드되지는 않지만 지금 빌드를 수행하면 **MainPage**의 스텁 파일이 다시 생성되므로 유용합니다.
 
-이 C++/WinRT 프로젝트의 경우 스텁 파일은 `\Clipboard\Clipboard\Generated Files\sources` 폴더에 생성됩니다. 부분 빌드가 완료된 후에도 이러한 항목을 찾을 수 있습니다. 다시 말하지만 예상한 것처럼 빌드가 완전히 성공하는 것은 아닙니다. 그러나 여기서 중요한 단계는 스텁 생성이 생성할 것이라는 사실입니다.  중요한 파일은 `MainPage.h` 및 `MainPage.cpp`입니다.
+이 C++/WinRT 프로젝트의 경우 스텁 파일은 `\Clipboard\Clipboard\Generated Files\sources` 폴더에 생성됩니다. 부분 빌드가 완료된 후에도 이러한 항목을 찾을 수 있습니다. 다시 말하지만 예상한 것처럼 빌드가 완전히 성공하는 것은 아닙니다. 그러나 여기서 중요한 단계는 스텁 생성이 생성할 것이라는 사실입니다. 중요한 파일은 `MainPage.h` 및 `MainPage.cpp`입니다.
 
 이러한 두 스텁 파일에서는 IDL에 추가한 **MainPage**의 멤버(예: **Current** 및 **FEATURE_NAME**)에 대한 새로운 스텁 구현을 확인할 수 있습니다. 이러한 스텁 구현을 프로젝트에 이미 있는 `MainPage.h` 및 `MainPage.cpp` 파일에 복사합니다. 이와 동시에 IDL로 수행한 것처럼, Visual Studio 프로젝트 템플릿이 제공하는**Mainpage**의 자리 표시자 멤버(**MyProperty**라는 더미 속성 및 **ClickHandler**라는 이벤트 처리기)를 기존 파일에서 제거합니다.
 
@@ -406,7 +407,7 @@ hstring implementation::MainPage::FEATURE_NAME()
 여기에서 볼 수 있듯이 **MainPage::current**가 프로젝션된 형식인 **SDKTemplate::MainPage** 형식으로 선언됩니다. 구현 형식인 **SDKTemplate::implementation::MainPage** 형식이 아닙니다. 프로젝션된 형식은 XAML 상호 운용을 위해 프로젝트 내에서 또는 이진 파일 간에 사용되도록 디자인된 형식입니다. 구현 형식은 프로젝션된 형식에 노출한 기능을 구현하는 데 사용됩니다. **MainPage::current**(`MainPage.h`)의 선언이 구현 네임스페이스(**winrt::SDKTemplate::implementation**) 내에 나타나기 때문에, 정규화되지 않은 **MainPage**는 구현 형식을 참조했을 것입니다. 따라서 **MainPage::current**를 프로젝션된 형식 **winrt::SDKTemplate::MainPage**의 인스턴스로 지정하려고 한다는 사실을 명확히 하기 위해 **SDKTemplate::** 로 한정합니다.
 
 생성자에는 설명을 나타낼 수 있는 `MainPage::current = *this;`와 관련된 몇 가지 지점이 있습니다.
-- 구현 형식의 멤버 내에서 `this` 포인터를 사용하는 경우 `this` 포인터는 물론  구현 형식에 대한 포인터입니다.
+- 구현 형식의 멤버 내에서 `this` 포인터를 사용하는 경우 `this` 포인터는 물론 구현 형식에 대한 포인터입니다.
 - `this` 포인터를 해당하는 프로젝션된 형식으로 변환하려면 역참조합니다. 여기에 나와 있는 것처럼 IDL에서 구현 형식을 생성하는 경우 구현 형식에는 프로젝션된 형식으로 변환되는 변환 연산자가 있습니다. 할당이 여기에서 진행되는 것이 바로 이때문입니다.
 
 해당 세부 정보에 대한 자세한 내용은 [구현 형식과 인터페이스의 인스턴스화 및 반환](/windows/uwp/cpp-and-winrt-apis/author-apis#instantiating-and-returning-implementation-types-and-interfaces)을 참조하세요.
@@ -450,7 +451,7 @@ public partial class MainPage : Page
 ...
 ```
 
-이전 조사에서 이 **Scenario** 개체의 컬렉션이 **ListBox**에 표시되는 것을 알 수 있습니다. C++/WinRT에는 항목 컨트롤의 **ItemsSource** 속성에 할당할 수 있는 컬렉션 종류가 제한됩니다  . 이 컬렉션은 벡터 또는 observable 벡터여야 하고 해당 요소는 다음 중 하나여야 합니다.
+이전 조사에서 이 **Scenario** 개체의 컬렉션이 **ListBox**에 표시되는 것을 알 수 있습니다. C++/WinRT에는 항목 컨트롤의 **ItemsSource** 속성에 할당할 수 있는 컬렉션 종류가 제한됩니다. 이 컬렉션은 벡터 또는 observable 벡터여야 하고 해당 요소는 다음 중 하나여야 합니다.
 
 - 런타임 클래스 또는
 - [**IInspectable**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)
@@ -590,7 +591,7 @@ C#에서는 점 표기법을 사용하여 중첩된 속성에 *dot into*할 수 
 |-|-|
 |`Dispatcher.HasThreadAccess`|`Dispatcher().HasThreadAccess()`|
 
-**NotifyUser**의 C# 버전이 [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync)를 호출하면 비동기 콜백 대리자를 람다 함수로 구현합니다. C++/WinRT 버전은 동일한 작업을 수행하지만 구문은 약간 다릅니다. C++/WinRT에서는 `this` 포인터(멤버 함수를 호출하려고 하므로) 뿐만 아니라 사용하려는 두 개의 매개 변수를 캡처합니다  . 대리자를 람다로 구현하는 방법에 대한 자세한 내용 및 코드 예제는 [C++/WinRT의 대리자를 사용한 이벤트 처리](/windows/uwp/cpp-and-winrt-apis/handle-events) 항목을 참조하세요. 또한 이 특정 사례에서 `var task =` 부분은 무시해도 됩니다. 반환된 비동기 개체를 기다리지 않을 것이므로 저장할 필요가 없습니다. 
+**NotifyUser**의 C# 버전이 [**CoreDispatcher.RunAsync**](/uwp/api/windows.ui.core.coredispatcher.runasync)를 호출하면 비동기 콜백 대리자를 람다 함수로 구현합니다. C++/WinRT 버전은 동일한 작업을 수행하지만 구문은 약간 다릅니다. C++/WinRT에서는 `this` 포인터(멤버 함수를 호출하려고 하므로) 뿐만 아니라 사용하려는 두 개의 매개 변수를 캡처합니다. 대리자를 람다로 구현하는 방법에 대한 자세한 내용 및 코드 예제는 [C++/WinRT의 대리자를 사용한 이벤트 처리](/windows/uwp/cpp-and-winrt-apis/handle-events) 항목을 참조하세요. 또한 이 특정 사례에서 `var task =` 부분은 무시해도 됩니다. 반환된 비동기 개체를 기다리지 않을 것이므로 저장할 필요가 없습니다. 
 
 ### <a name="implement-the-remaining-mainpage-members"></a>남은 **MainPage** 멤버 구현
 
@@ -625,7 +626,7 @@ C#에서는 점 표기법을 사용하여 중첩된 속성에 *dot into*할 수 
 > [!NOTE]
 > 경우에 따라 소스 코드에서 XAML 태그의 UI 요소에 대한 참조를 볼 수 있습니다(`MainPage.xaml`). 이러한 참조를 보게 되면 XAML에 간단한 자리 표시자 요소를 추가하여 일시적으로 해결할 수 있습니다. 이렇게 하면 각 하위 섹션 후에 프로젝트가 계속 빌드됩니다. 다른 방법은 지금 C# 프로젝트에서 C++/WinRT 프로젝트로 `MainPage.xaml`의 전체 콘텐츠를  복사하여 참조를 해결하는 것입니다. 그러나 이 작업을 수행하는 경우 잠시 중지했다가 다시 빌드하기 위해 한참 대기해야 할 수 있습니다. 따라서 모든 오타나 기타 오류가 발생하는 경우를 방지할 수 있습니다.
 >
-> **MainPage** 클래스에 대한 명령형 코드의 이식이 끝나면  XAML 파일의 내용을 복사하고, 안심하고 프로젝트를 계속 빌드할 수 있습니다.
+> **MainPage** 클래스에 대한 명령형 코드의 이식이 끝나면 XAML 파일의 내용을 복사하고, 안심하고 프로젝트를 계속 빌드할 수 있습니다.
 
 #### <a name="isclipboardcontentchangedenabled"></a>**IsClipboardContentChangedEnabled**
 
@@ -779,7 +780,7 @@ using namespace Windows::UI::Notifications;
 
 컴파일러/링커 오류의 가장 일반적인 원인은 필요한 C++/WinRT Windows 네임스페이스 헤더 파일을 포함하지 않는 경우입니다. 한 가지 가능한 오류에 대한 자세한 내용은 [링커에서 “LNK2019: 확인되지 않은 외부 기호” 오류가 발생하는 이유는 무엇인가요?](/windows/uwp/cpp-and-winrt-apis/faq#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error)를 참조하세요.
 
-연습 과정을 진행하면서 **DisplayToast**를 직접 이식하려는 경우 코드의 결과를 다운로드한 C++/WinRT 버전의 Clipboard 샘플 소스 코드([`Windows-universal-samples/Samples/Clipboard/cppwinrt`](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/Clipboard/cppwinrt)`/Clipboard.sln`에 제공)와 비교할 수 있습니다.
+연습 과정을 진행하면서 **DisplayToast**를 직접 이식하려는 경우, 그 결과를 다운로드한 [클립보드 샘플](/samples/microsoft/windows-universal-samples/clipboard/) 소스 코드의 ZIP에서 C++/WinRT 버전의 코드와 비교할 수 있습니다.
 
 #### <a name="enableclipboardcontentchangednotifications"></a>**EnableClipboardContentChangedNotifications**
 
@@ -986,7 +987,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-또한 C++/WinRT로 이식되는 동급 항목이 있습니다. C++/WinRT 버전에서 이벤트 처리기는 `public`입니다. 여기서 볼 수 있듯이 `private:` 선언 전에  선언합니다. 왜냐하면 이와 같이 XAML 태그에 등록된 이벤트 처리기가 C++/WinRT에서 `public`이어야 XAML 태그가 액세스할 수 있기 때문입니다. 앞서 **MainPage::EnableClipboardContentChangedNotifications**에서 한 것처럼 명령형 코드에 이벤트 처리기를 등록하는 경우에는 이벤트 처리기가 `public`일 필요가 없습니다.
+또한 C++/WinRT로 이식되는 동급 항목이 있습니다. C++/WinRT 버전에서 이벤트 처리기는 `public`입니다. 여기서 볼 수 있듯이 `private:` 선언 전에 선언합니다. 왜냐하면 이와 같이 XAML 태그에 등록된 이벤트 처리기가 C++/WinRT에서 `public`이어야 XAML 태그가 액세스할 수 있기 때문입니다. 앞서 **MainPage::EnableClipboardContentChangedNotifications**에서 한 것처럼 명령형 코드에 이벤트 처리기를 등록하는 경우에는 이벤트 처리기가 `public`일 필요가 없습니다.
 
 ```xaml
 <!-- MainPage.xaml -->
@@ -1048,7 +1049,7 @@ void SampleState::DisplayChangedFormats()
 
 위의 C++/WinRT 버전 디자인은 약간 비효율적입니다. 먼저 **std::wostringstream**을 만듭니다. 하지만 **BuildClipboardFormatsOutputString** 메서드(이전에 이식함)도 호출합니다. 해당 메서드는 자체 **std::wostringstream**을 만듭니다. 또한 해당 스트림을 **winrt::hstring**으로 전환한 후 반환합니다. [**hstring::c_str**](/uwp/cpp-ref-for-winrt/hstring#hstringc_str-function) 함수를 호출하여 반환된 **hstring**을 C 스타일 문자열로 전환한 후 스트림으로 삽입합니다. 메서드를 통해 직접 문자열을 삽입할 수 있도록 **std::wostringstream**을 하나만 만들고 주위에 참조를 전달하는 것이 더 효율적입니다.
 
-이 작업은 Clipboard 샘플 [소스 코드](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/Clipboard/cppwinrt)의 C++/WinRT 버전에서 수행합니다. 해당 소스 코드에는 출력 스트림에 대한 참조를 사용하고 작동하는 **SampleState::AddClipboardFormatsOutputString**라는 새 프라이빗 정적 메서드가 있습니다. 그런 다음, **SampleState::DisplayChangedFormats** 및 **SampleState::BuildClipboardFormatsOutputString** 메서드가 해당 새 메서드를 호출하도록 리팩터링됩니다. 이 항목의 코드 목록과 기능적으로 동일하지만 좀 더 효율적입니다.
+이 작업은 [클립보드 샘플](/samples/microsoft/windows-universal-samples/clipboard/) 소스 코드의 C++/WinRT 버전(다운로드한 ZIP에 있음)에서 수행합니다. 해당 소스 코드에는 출력 스트림에 대한 참조를 사용하고 작동하는 **SampleState::AddClipboardFormatsOutputString**라는 새 프라이빗 정적 메서드가 있습니다. 그런 다음, **SampleState::DisplayChangedFormats** 및 **SampleState::BuildClipboardFormatsOutputString** 메서드가 해당 새 메서드를 호출하도록 리팩터링됩니다. 이 항목의 코드 목록과 기능적으로 동일하지만 좀 더 효율적입니다.
 
 #### <a name="footer_click"></a>**Footer_Click**
 
@@ -1104,7 +1105,7 @@ void MainPage::Footer_Click(Windows::Foundation::IInspectable const& sender, Win
 
 #### <a name="handleclipboardchanged"></a>**HandleClipboardChanged**
 
-이 메서드 이식과 관련된 새로운 항목은 없습니다. 샘플 소스 코드에서 C# 및 C++/WinRT 버전을 비교할 수 있습니다.
+이 메서드 이식과 관련된 새로운 항목은 없습니다. 다운로드한 [클립보드 샘플](/samples/microsoft/windows-universal-samples/clipboard/) 소스 코드의 ZIP에서 C# 및 C++/WinRT 버전을 비교할 수 있습니다.
 
 #### <a name="onclipboardchanged-and-onwindowactivated"></a>**OnClipboardChanged** 및 **OnWindowActivated**
 

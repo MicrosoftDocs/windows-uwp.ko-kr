@@ -5,12 +5,12 @@ ms.date: 07/12/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, Windows UI 라이브러리, WinUI
 ms.localizationpriority: medium
-ms.openlocfilehash: 0dce8e7ea08b18921f228b3da2e679a9edb02228
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8242055e3c448e2720226859f2ea10e1ae54794f
+ms.sourcegitcommit: db48036af630f33f0a2f7a908bfdfec945f3c241
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79200981"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84437137"
 ---
 # <a name="a-simple-cwinrt-windows-ui-library-example"></a>간단한 C++/WinRT Windows UI 라이브러리 예제
 
@@ -49,26 +49,28 @@ Visual Studio에서 **비어 있는 앱(C++/WinRT)** 프로젝트 템플릿을 �
 </muxc:NavigationView>
 ```
 
-## <a name="edit-mainpagecpp-and-h-as-necessary"></a>필요에 따라 MainPage.cpp 및 .h를 편집합니다.
+## <a name="edit-pchh-as-necessary"></a>필요에 따라 pch.h 편집
+
+NuGet 패키지(예: 이전에 추가한 **Microsoft.UI.Xaml** 패키지)를 C++/WinRT 프로젝트에 추가하고 프로젝트를 빌드하면 도구에서 일단의 프로젝션 헤더 파일을 프로젝트의 `\Generated Files\winrt` 폴더에 생성합니다. 연습을 수행하고 나면 이제 `\HelloWinUICppWinRT\HelloWinUICppWinRT\Generated Files\winrt` 폴더가 생깁니다. 이러한 헤더 파일을 프로젝트로 가져와서 새 형식에 대한 참조가 확인되도록 하려면 미리 컴파일된 헤더 파일(일반적으로 `pch.h`)로 이동하여 포함시킬 수 있습니다.
+
+사용하는 형식에 해당하는 헤더만 포함해야 합니다. 하지만, 여기에 있는 것은 **Microsoft.UI.Xaml** 패키지에 대해 생성된 모든 헤더 파일이 포함된 예제입니다.
+
+```cppwinrt
+// pch.h
+...
+#include "winrt/Microsoft.UI.Xaml.Automation.Peers.h"
+#include "winrt/Microsoft.UI.Xaml.Controls.h"
+#include "winrt/Microsoft.UI.Xaml.Controls.Primitives.h"
+#include "winrt/Microsoft.UI.Xaml.Media.h"
+#include "winrt/Microsoft.UI.Xaml.XamlTypeInfo.h"
+...
+```
+
+## <a name="edit-mainpagecpp"></a>MainPage.cpp 편집
 
 *myButton*이 더 이상 XAML 태그에 없으므로 `MainPage.cpp`에서 **MainPage::ClickHandler** 구현 내의 코드를 삭제합니다.
 
-`MainPage.h`에서 include를 아래 목록과 같이 편집합니다.
-
-```cppwinrt
-#include "MainPage.g.h"
-#include "winrt/Microsoft.UI.Xaml.Controls.h"
-#include "winrt/Microsoft.UI.Xaml.XamlTypeInfo.h"
-```
-
-이제 프로젝트를 빌드합니다.
-
-NuGet 패키지(예: 이전에 추가한 **Microsoft.UI.Xaml** 패키지)를 C++/WinRT 프로젝트에 추가하고 프로젝트를 빌드하면 도구에서 일단의 프로젝션 헤더 파일을 프로젝트의 `\Generated Files\winrt` 폴더에 생성합니다. 연습을 수행하고 나면 이제 `\HelloWinUICppWinRT\HelloWinUICppWinRT\Generated Files\winrt` 폴더가 생깁니다. 위의 `MainPage.h`를 편집하면 WinUI에 대한 해당 프로젝션 헤더 파일이 **MainPage**에 표시됩니다. 그리고 **MainPage**의 **Microsoft::UI::Xaml::Controls::NavigationView** 형식에 대한 참조에서 이를 확인해야 합니다.
-
-> [!IMPORTANT]
-> 실제 애플리케이션에서는 WinUI 프로젝션 헤더 파일을 프로젝트의 *모든* XAML 페이지에 표시하려고 합니다. **MainPage**에만 표시하는 것이 아닙니다. 이 경우 두 WinUI 프로젝션 헤더 파일의 include를 미리 컴파일된 헤더 파일(일반적으로 `pch.h`)로 이동합니다. 그런 다음, 프로젝트의 모든 위치에서 NuGet 패키지의 형식에 대한 참조를 확인합니다. 이 연습에서 빌드되는 애플리케이션과 같이 최소한의 단일 페이지 애플리케이션에서는 `pch.h`를 사용할 필요가 없으며 헤더를 `MainPage.h`에 포함하는 것이 적절합니다.
-
-이제 프로젝트를 실행할 수 있습니다.
+이제 프로젝트를 빌드하고 실행할 수 있습니다.
 
 ![간단한 C++/WinRT Windows UI 라이브러리의 스크린샷](images/winui.png)
 

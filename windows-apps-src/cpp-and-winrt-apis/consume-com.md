@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, COM, 구성 요소, 클래스, 인터페이스
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b6ce3ce56b4afbf4c45b406c8af369bee4b55bb
-ms.sourcegitcommit: 2dbf4a3f3473c1d3a0ad988bcbae6e75dfee3640
+ms.openlocfilehash: d5fae09192262b63b11175bf08e7a2c522b31abd
+ms.sourcegitcommit: 82d441e3b9da920cf860fad6b59d6b848466c90f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619327"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84271882"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>C++/WinRT를 통한 COM 구성 요소 사용
 
@@ -22,7 +22,7 @@ ms.locfileid: "82619327"
 
 COM을 사용하여 프로그래밍하는 경우 개체가 아닌 인터페이스로 직접 작업합니다(COM의 발전된 형태인 Windows 런타임 API의 경우에도 백그라운드에서 동일한 방식으로 작동함). 예를 들어 COM 클래스에서 함수를 호출하려면 클래스를 활성화하고 인터페이스를 다시 가져온 다음, 해당 인터페이스에서 함수를 호출합니다. 개체의 상태에 액세스하려면 데이터 멤버에 직접 액세스하지 않고, 대신 인터페이스에서 접근자 및 변경자 함수를 호출합니다.
 
-보다 구체적으로, 인터페이스 ‘포인터’ 조작을 말하는 것입니다.  이러한 용도로, C++/WinRT에 있는 COM 스마트 포인터 형식, 즉 [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) 형식을 활용합니다.
+보다 구체적으로, 인터페이스 ‘포인터’ 조작을 말하는 것입니다. 이러한 용도로, C++/WinRT에 있는 COM 스마트 포인터 형식, 즉 [**winrt::com_ptr**](/uwp/cpp-ref-for-winrt/com-ptr) 형식을 활용합니다.
 
 ```cppwinrt
 #include <d2d1_1.h>
@@ -168,9 +168,19 @@ void ExampleFunction(winrt::com_ptr<ID3D11Device> const& device)
 
 ## <a name="full-source-code-listing-of-a-minimal-direct2d-application"></a>최소 Direct2D 애플리케이션의 전체 소스 코드 목록
 
-이 소스 코드 예제를 빌드 및 실행하려는 경우, 먼저 Visual Studio에서 새 **코어 앱(C++/WinRT)** 을 만듭니다. `Direct2D`는 프로젝트에 적합한 이름이지만, 원하는 이름을 임의로 지정할 수 있습니다.
+> [!NOTE]
+> &mdash;프로젝트 템플릿 및 빌드 지원을 함께 제공하는 C++/WinRT Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법을 포함&mdash;하는 C++/WinRT용 Visual Studio 개발 설정에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
+
+이 소스 코드 예제를 빌드하고 실행하려면 먼저 최신 버전의 C++/WinRT Visual Studio Extension(VSIX)을 설치(또는 업데이트)합니다. 위의 메모를 참조하세요. 그런 다음, Visual Studio에서 새 **주요 앱(C++/WinRT)** 을 만듭니다. `Direct2D`는 프로젝트에 적합한 이름이지만, 원하는 이름을 임의로 지정할 수 있습니다. 일반적으로 사용 가능한 최신(미리 보기 아님) 버전의 Windows SDK를 대상으로 합니다.
+
+### <a name="step-1-edit-pchh"></a>1단계. `pch.h`을 편집합니다.
 
 `pch.h`를 열고 `windows.h`를 포함하는 즉시 `#include <unknwn.h>`를 추가합니다. [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown)을 사용하고 있기 때문입니다. 해당 헤더가 다른 헤더에 포함된 경우에도 **winrt::get_unknown**을 사용할 때마다 명시적으로 `#include <unknwn.h>`를 수행하는 것이 좋습니다.
+
+> [!NOTE]
+> 이 단계를 생략하면 빌드 오류 *'get_unknown': identifier not found*가 발생합니다.
+
+### <a name="step-2-edit-appcpp"></a>2단계. `App.cpp`을 편집합니다.
 
 `App.cpp`를 열고 전체 내용을 삭제한 다음, 아래 목록을 붙여넣습니다.
 
