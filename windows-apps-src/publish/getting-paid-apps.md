@@ -6,12 +6,12 @@ ms.date: 05/29/2020
 ms.topic: article
 keywords: windows 10, uwp, 지불, 앱 판매, 앱 진행, 지급, 매장 요금, 지급 보류, 백분율
 ms.localizationpriority: medium
-ms.openlocfilehash: 5927e6636f1c5a60b4f3453e0493755176c649ad
-ms.sourcegitcommit: 8eae7aec4c4ffb8a0c30e9d03744942fb23958d9
+ms.openlocfilehash: 0d42677aeda694e2fc8924cee1832b62d98b15e5
+ms.sourcegitcommit: a937963ce63a14c254420926661b9b68be28a8ee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84334228"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746773"
 ---
 # <a name="getting-paid"></a>지급 받기
 앱, 추가 기능 및 광고 수입에 대 한 결제를 수신 하는 방법에 대 한 몇 가지 중요 한 정보는 다음과 같습니다.
@@ -40,7 +40,7 @@ ms.locfileid: "84334228"
 > [!NOTE] 
 > 이러한 가격 책정 계층은 앱 내에서 제공 하는 추가 기능에도 적용 됩니다.
 
-각 가격 책정 계층에는 매장에서 제공 하는 각 통화에 해당 하는 값이 있습니다. 이러한 값을 사용 하 여 전 세계의 비슷한 가격 지점에서 앱을 판매할 수 있습니다. 그러나 외부 환율이 변경 되기 때문에 정확한 판매량은 통화 마다 약간씩 다를 수 있습니다.
+각 가격 책정 계층에는 매장에서 제공 하는 각 통화에 해당 하는 값이 있습니다. 이러한 값을 사용 하 여 전 세계의 비슷한 가격 지점에서 앱을 판매할 수 있습니다. 그러나 외부 환율이 변경 되기 때문에 정확한 판매량은 통화 마다 약간씩 다를 수 있습니다. 환율이 매월 계산 됩니다. 트랜잭션이 발생 한 시기에 따라 적절 한 환율이 적용 됩니다. 환율 및이에 해당 하는 날짜 범위는 각각 exchangeRate 및 exchangeRateDate 열의 지급 보고서에 표시 됩니다.
 
 또한 특정 시장의 현지 통화로 선택한 무료 형식 가격을 입력할 수 있는 옵션도 제공 됩니다. 이 작업을 수행 하는 경우 새 가격으로 업데이트를 제출 하지 않으면 가격은 조정 되지 않습니다 (변환 요금이 변경 되는 경우에도). 
 

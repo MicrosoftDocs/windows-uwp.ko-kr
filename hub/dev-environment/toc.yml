@@ -1,36 +1,6 @@
 - name: Windows 개발 환경
   href: index.yml
   items:
-    - name: Windows 패키지 관리자
-      items:
-        - name: 개요
-          href: ../package-manager/index.md
-        - name: winget 도구 사용
-          items:
-            - name: 개요
-              href: ../package-manager/winget/index.md
-            - name: hash 명령
-              href: ../package-manager/winget/hash.md
-            - name: help 명령
-              href: ../package-manager/winget/help.md
-            - name: install 명령
-              href: ../package-manager/winget/install.md
-            - name: search 명령
-              href: ../package-manager/winget/search.md
-            - name: show 명령
-              href: ../package-manager/winget/show.md
-            - name: source 명령
-              href: ../package-manager/winget/source.md
-            - name: validate 명령
-              href: ../package-manager/winget/validate.md
-        - name: 패키지 제출
-          items:
-            - name: 개요
-              href: ../package-manager/package/index.md
-            - name: 패키지 매니페스트 만들기
-              href: ../package-manager/package/manifest.md
-            - name: 리포지토리에 매니페스트 제출
-              href: ../package-manager/package/repository.md
     - name: Python을 사용하여 개발
       items:
         - name: 개요
@@ -83,6 +53,40 @@
           href: ../android/defender-settings.md
         - name: 디바이스 또는 에뮬레이터에서 테스트
           href: ../android/emulator.md
+    - name: Windows 패키지 관리자
+      items:
+        - name: 개요
+          href: ../package-manager/index.md
+        - name: winget 도구 사용
+          items:
+            - name: 개요
+              href: ../package-manager/winget/index.md
+            - name: hash 명령
+              href: ../package-manager/winget/hash.md
+            - name: help 명령
+              href: ../package-manager/winget/help.md
+            - name: install 명령
+              href: ../package-manager/winget/install.md
+            - name: search 명령
+              href: ../package-manager/winget/search.md
+            - name: show 명령
+              href: ../package-manager/winget/show.md
+            - name: source 명령
+              href: ../package-manager/winget/source.md
+            - name: validate 명령
+              href: ../package-manager/winget/validate.md
+        - name: 패키지 제출
+          items:
+            - name: 개요
+              href: ../package-manager/package/index.md
+            - name: 패키지 매니페스트 만들기
+              href: ../package-manager/package/manifest.md
+            - name: 리포지토리에 매니페스트 제출
+              href: ../package-manager/package/repository.md
+    - name: Linux용 Windows 하위 시스템
+      href: 'https://docs.microsoft.com/windows/wsl/'
+    - name: Windows 터미널
+      href: 'https://docs.microsoft.com/windows/terminal/'
     - name: Mac-Windows 가이드
       items:
         - name: 개발 환경 변경
@@ -95,21 +99,3 @@
           href: 'mac-to-windows.md#terminal-and-shell'
         - name: 앱 및 유틸리티
           href: 'mac-to-windows.md#apps-and-utilities'
-    - name: Linux용 Windows 하위 시스템
-      items:
-        - name: WSL 정보
-          href: 'https://docs.microsoft.com/windows/wsl/about?context=/windows/dev-environment/dev-environment-context'
-        - name: WSL 2 정보
-          href: 'https://docs.microsoft.com/windows/wsl/wsl2-about?context=/windows/dev-environment/dev-environment-context'
-        - name: WSL 1 및 WSL 2
-          href: 'https://docs.microsoft.com/windows/wsl/wsl2-ux-changes?context=/windows/dev-environment/dev-environment-context'
-        - name: 사용자 계정 및 사용 권한
-          href: 'https://docs.microsoft.com/windows/wsl/user-support?context=/windows/dev-environment/dev-environment-context'
-    - name: Windows 터미널
-      items:
-        - name: 개요
-          href: 'https://github.com/microsoft/terminal#terminal--console-overview'
-        - name: 사용자 가이드
-          href: 'https://github.com/microsoft/terminal/blob/master/doc/user-docs/index.md'
-        - name: 사용자 지정 설정
-          href: 'https://github.com/microsoft/terminal/blob/master/doc/user-docs/UsingJsonSettings.md'

@@ -6,12 +6,12 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, UWP, 연락처, 일정, 약속, 이메일 메시지
 ms.localizationpriority: medium
-ms.openlocfilehash: 8abb3773b2fa18a25716baf641d04c7ad37a293c
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: b2e3f0b1d93d2b2c32e117f61fd7514077ca3923
+ms.sourcegitcommit: 90fe7a9a5bfa7299ad1b78bbef289850dfbf857d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74255447"
+ms.lasthandoff: 06/13/2020
+ms.locfileid: "84756549"
 ---
 # <a name="contacts-my-people-and-calendar"></a>연락처, 내 피플 및 일정
 
@@ -36,7 +36,7 @@ ms.locfileid: "74255447"
 ## <a name="related-topics"></a>관련 항목
 
 * [약속 API 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Appointments)
-* [연락처 관리자 API 샘플](https://code.msdn.microsoft.com/windowsapps/Contact-manager-API-sample-319bdcef)
-* [연락처 선택기 앱 샘플](https://code.msdn.microsoft.com/windowsapps/Contact-Picker-App-sample-fc6677a1)
-* [연락처 작업 처리 샘플](https://code.msdn.microsoft.com/windowsapps/Handling-Contact-Actions-359380e2)
+* [연락처 관리자 API 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Contact%20manager%20API%20sample)
+* [연락처 선택기 앱 샘플](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/ContactPicker)
+* [연락처 작업 처리 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Windows%208.1%20Store%20app%20samples/99866-Windows%208.1%20Store%20app%20samples/Handling%20Contact%20Actions)
 * [연락처 카드 통합 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)

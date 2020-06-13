@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: fae8031ec8255cbfef313a9b75f459750be0aee3
-ms.sourcegitcommit: 37e4af3ba203295c7e88448414cf7ea537ab5402
+ms.openlocfilehash: 2528ae4dabf072872ce765eb7bfd696c2b29d3f7
+ms.sourcegitcommit: a937963ce63a14c254420926661b9b68be28a8ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84257472"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746783"
 ---
 # <a name="design-toolkits-and-samples-for-windows-apps"></a>Windows 앱용 디자인 도구 키트 및 샘플
 
@@ -45,22 +45,6 @@ v1901, 2019년 1월<br>
     :::column-end:::
 :::row-end:::
 
-:::row:::
-    :::column:::
-![영웅 이미지](images/adobe-illustrator.png)
-<b>Adobe Illustrator 도구 키트</b><br>
-v1806, 2018년 6월<br>
-<a href="https://aka.ms/adobeillustratortoolkit">다운로드</a>
-    :::column-end:::
-    :::column:::
-![영웅 이미지](images/adobe-photoshop.png)
-<b>Adobe Photoshop 도구 키트</b><br>
-v1705, 2017년 5월<br>
-<a href="https://aka.ms/adobephotoshoptoolkit">다운로드</a>
-    :::column-end:::
-    :::column:::
-    :::column-end:::
-:::row-end:::
 
 ## <a name="developer-toolkits-and-libraries"></a>개발자 도구 키트 및 라이브러리
 
