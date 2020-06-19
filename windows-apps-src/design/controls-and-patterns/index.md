@@ -8,12 +8,12 @@ ms.date: 03/23/2020
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: 63907b3bfe3fc6dece900f1a7c09ac535e859471
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 82e6d91b5a4147237cd04b46dc5b69b8151fece9
+ms.sourcegitcommit: 6dd6d61c912daab2cc4defe5ba0cf717339f7765
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80218453"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84978385"
 ---
 # <a name="controls-for-windows-apps"></a>Windows 앱용 컨트롤
 
@@ -32,7 +32,7 @@ XAML 및 C#으로 컨트롤을 추가하고 스타일을 지정하는 방법에 
 :::row:::
     :::column:::
       <p><b><a href="controls-and-events-intro.md">컨트롤 추가 및 이벤트 처리</a></b> <br/>
-앱에 컨트롤을 추가하는 세 가지 주요 단계는 앱 UI에 컨트롤 추가, 컨트롤의 속성 설정, 특정 작업을 수행하도록 컨트롤의 이벤트 처리기에 코드 추가입니다.</p>
+컨트롤을 앱에 추가하는 세 가지 주요 단계가 있습니다. 즉 앱 UI에 컨트롤을 추가하고, 컨트롤의 속성을 설정하고, 컨트롤의 이벤트 처리기에 코드를 추가하여 작업을 수행합니다.</p>
     :::column-end:::
     :::column:::
       <p><b><a href="xaml-styles.md">컨트롤 스타일 지정</a></b> <br/>
@@ -95,8 +95,8 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 - [인물 사진](person-picture.md) ![WinUI 로고](images/winui-logo-16x16.png)
 - [피벗](pivot.md)
 - [진행률 표시줄](progress-controls.md) ![WinUI 로고](images/winui-logo-16x16.png)
-- [진행률 링](progress-controls.md)
-- [라디오 단추](radio-button.md)
+- [진행률 링](progress-controls.md) ![WinUI 로고](images/winui-logo-16x16.png)
+- [라디오 단추](radio-button.md) ![WinUI 로고](images/winui-logo-16x16.png)
 - [평점 컨트롤](rating.md) ![WinUI 로고](images/winui-logo-16x16.png)
 - [반복 단추](buttons.md#create-a-repeat-button)
 - [서식 있는 편집 상자](rich-edit-box.md)
