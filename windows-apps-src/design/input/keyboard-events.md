@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ce9d15139d45cce01feb979f18167abee89a1f28
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 73b9ba40eb11d67e82ca3014c2758746d45df40f
+ms.sourcegitcommit: 6dd6d61c912daab2cc4defe5ba0cf717339f7765
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82558817"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84978395"
 ---
 # <a name="keyboard-events"></a>키보드 이벤트
 
@@ -94,12 +94,12 @@ void MyProject::MainPage::Grid_KeyUp(
 
 모든 키보드 이벤트는 이벤트 데이터에 대해 [**KeyRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.KeyRoutedEventArgs) 를 사용 하 고 **KeyRoutedEventArgs** 에는 다음 속성이 포함 됩니다.
 
--   [**Key**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.key)
+-   [**키**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.key)
 -   [**KeyStatus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.keystatus)
--   [**Handled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled)
+-   [**처리됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled)
 -   [**Originalsource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.routedeventargs.originalsource) ( [**system.windows.routedeventargs.handled**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEventArgs)에서 상속)
 
-### <a name="key"></a>Key
+### <a name="key"></a>키
 
 키를 누르면 [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) 이벤트가 발생 합니다. 마찬가지로, 키가 해제 된 경우에는 [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) 이 발생 합니다. 일반적으로 특정 키 값을 처리 하는 이벤트를 수신 대기 합니다. 눌러져 있거나 해제 된 키를 확인 하려면 이벤트 데이터의 [**키**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.key) 값을 확인 합니다. **키** 가 [**virtualkey**](https://docs.microsoft.com/uwp/api/Windows.System.VirtualKey) 값을 반환 합니다. **Virtualkey** 열거형에는 지원 되는 모든 키가 포함 되어 있습니다.
 
@@ -319,7 +319,7 @@ void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
 
 ### <a name="addhandler-and-already-handled-keyboard-events"></a>AddHandler 및 이미 처리 한 키보드 이벤트
 
-이미 처리 된 것으로 표시 된 이벤트에 대 한 작업을 수행할 수 있는 처리기를 연결 하는 특수 기법을 사용할 수 있습니다. 이 기술은 C\#에서 + =와 같이 처리기를 추가 하는 데 XAML 특성 또는 언어별 구문을 사용 하지 않고 [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) 메서드를 사용 하 여 처리기를 등록 합니다.
+이미 처리 된 것으로 표시 된 이벤트에 대 한 작업을 수행할 수 있는 처리기를 연결 하는 특수 기법을 사용할 수 있습니다. 이 기술은 C에서 + =와 같이 처리기를 추가 하는 데 XAML 특성 또는 언어별 구문을 사용 하지 않고 [**AddHandler**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.addhandler) 메서드를 사용 하 여 처리기를 등록 합니다 \# .
 
 이 기술의 일반적인 제한 사항은 **AddHandler** API가 [**2csystem.delegate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.RoutedEvent) idnentifying 형식의 매개 변수를 사용 하 여 해당 라우트된 이벤트를 확인 하는 것입니다. 모든 라우트된 이벤트에서 **2csystem.delegate** 식별자를 제공 하는 것은 아닙니다. 따라서 이러한 고려 사항은 [**처리**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled) 된 사례에서 처리 될 수 있는 라우트된 이벤트에 영향을 줍니다. [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown) 및 [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트에는 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)의 라우트된 이벤트 식별자 ([**KeyDownEvent**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydownevent) 및 [**keyupevent**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyupevent))가 있습니다. 그러나 [**TextChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) 등의 다른 이벤트에는 라우트된 이벤트 식별자가 없으므로 **AddHandler** 기술과 함께 사용할 수 없습니다.
 
@@ -367,7 +367,7 @@ UI 요소에 대해 명령을 사용할 수 있는 경우 불연속 입력 이�
 
 또 다른 예는 [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)입니다. 화살표 키와 같은 일부 키는 **TextBox By TextBox** 로 간주 되지 않으며 대신 컨트롤 UI 동작에 특정 한 것으로 간주 됩니다. **텍스트 상자** 는 이러한 이벤트 사례를 처리 된 것으로 표시 합니다.
 
-사용자 지정 컨트롤은 [**OnKeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.onkeydown) / [**OnKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.onkeyup)를 재정의 하 여 키 이벤트에 대해 이와 유사한 재정의 동작을 구현할 수 있습니다. 사용자 지정 컨트롤에서 특정 액셀러레이터 키를 처리 하거나 [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)에 대해 설명 된 시나리오와 유사한 컨트롤 또는 포커스 동작이 있는 경우이 논리를 고유한 **OnKeyDown** / **OnKeyUp** 재정의에 두어야 합니다.
+사용자 지정 컨트롤은 [**OnKeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.onkeydown)OnKeyUp를 재정의 하 여 키 이벤트에 대해 이와 유사한 재정의 동작을 구현할 수 있습니다  /  [**OnKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.onkeyup). 사용자 지정 컨트롤에서 특정 액셀러레이터 키를 처리 하거나 [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)에 대해 설명 된 시나리오와 유사한 컨트롤 또는 포커스 동작이 있는 경우이 논리를 고유한 **OnKeyDown**  /  **OnKeyUp** 재정의에 두어야 합니다.
 
 ## <a name="the-touch-keyboard"></a>터치 키보드
 
@@ -381,11 +381,11 @@ UI 요소에 대해 명령을 사용할 수 있는 경우 불연속 입력 이�
 
 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 사용자가 앱에서 데이터를 쉽고 빠르게 입력할 수 있도록 지원할 수 있습니다. 입력 범위는 컨트롤이 필요로 하는 텍스트 입력 형식에 대 한 힌트를 제공 하므로 시스템에서 입력 형식에 대 한 특수 터치 키보드 레이아웃을 제공할 수 있습니다. 예를 들어 텍스트 상자를 4 자리 PIN을 입력 하는 데만 사용 하는 경우 [**Inputscope**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성을 [**Number**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue)로 설정 합니다. 그러면 사용자가 더 쉽게 PIN을 입력할 수 있도록 하는 숫자 키패드 레이아웃을 시스템에 표시 합니다. 자세한 내용은 [입력 범위를 사용 하 여 터치 키보드 변경](https://docs.microsoft.com/windows/uwp/design/input/use-input-scope-to-change-the-touch-keyboard)을 참조 하세요.
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 ### <a name="developers"></a>개발자
 
-- [키보드 상호 작용](keyboard-interactions.md)
+- [키보드 조작](keyboard-interactions.md)
 - [입력 디바이스 식별](identify-input-devices.md)
 - [터치 키보드의 현재 상태에 응답](respond-to-the-presence-of-the-touch-keyboard.md)
 
