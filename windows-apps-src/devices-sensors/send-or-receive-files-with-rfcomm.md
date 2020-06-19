@@ -1,7 +1,7 @@
 ---
 ms.assetid: 5B3A6326-15EE-4618-AA8C-F1C7FB5232FB
 title: Bluetooth RFCOMM
-description: 이 문서에서는 파일을 보내거나 받는 방법에 대한 예제 코드와 함께 UWP(유니버설 Windows 플랫폼) 앱의 Bluetooth RFCOMM에 대한 개요를 제공합니다.
+description: 이 문서에서는 파일을 보내거나 받는 방법에 대 한 예제 코드와 함께 UWP (RFCOMM) 앱 유니버설 Windows 플랫폼에 대 한 개요를 제공 합니다.
 ms.date: 07/19/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -10,40 +10,40 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 1fb1a971e897bc88d090c589b266542c6de2d1c9
-ms.sourcegitcommit: b432a639fb3d15ebd22d429ccee4dbb03e8550ca
+ms.openlocfilehash: 2c48b4bbfb7fb361b598722d070962db32665042
+ms.sourcegitcommit: d708ac4ec4fac0135dafc0d8c5161ef9fd945ce7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77778524"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069460"
 ---
 # <a name="bluetooth-rfcomm"></a>Bluetooth RFCOMM
 
 **중요 API**
 
 - [**Windows. Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
-- [**Rfcomm.** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm)
+- [**Rfcomm.**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm)
 
-이 문서에서는 파일을 보내거나 받는 방법에 대한 예제 코드와 함께 UWP(유니버설 Windows 플랫폼) 앱의 Bluetooth RFCOMM에 대한 개요를 제공합니다.
+이 문서에서는 파일을 보내거나 받는 방법에 대 한 예제 코드와 함께 UWP (RFCOMM) 앱 유니버설 Windows 플랫폼에 대 한 개요를 제공 합니다.
 
 ## <a name="overview"></a>개요
 
-[  **instantiation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm) 네임스페이스의 API는 [**Windows.Devices.Bluetooth.Rfcomm**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) 및 [**enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice)을 포함하여 Windows.Devices에 대한 기존 패턴을 기반으로 합니다. 데이터 읽기 및 쓰기는 [**Windows.Storage.Streams**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReader) 및 [**established data stream patterns**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams)의 개체를 사용하도록 디자인되었습니다. SDP(Service Discovery Protocol) 특성마다 값과 필요한 형식이 있습니다. 그러나 일부 일반적인 디바이스에 값 형식이 잘못된 SDP 특성이 구현되어 있습니다. 또한 여러 RFCOMM 사용에는 추가 SDP 특성이 필요하지 않습니다. 이러한 이유로, 이 API는 개발자가 필요한 정보를 얻을 수 있는 구분 분석되지 않은 SDP 데이터에 대한 액세스를 제공합니다.
+[**Rfcomm**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm) 네임 스페이스의 api는 [**열거**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration) 및 [**인스턴스화**](https://docs.microsoft.com/uwp/api/Windows.Devices.Portable.StorageDevice)를 포함 하 여 windows 용 기존 패턴을 기반으로 합니다. 데이터 읽기 및 쓰기는 [**설정 된 데이터 스트림 패턴과**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReader) [**Windows**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams)의 개체를 활용 하도록 설계 되었습니다. SDP (서비스 검색 프로토콜) 특성에는 값과 예상 형식이 있습니다. 그러나 일부 일반적인 장치에는 값이 예상 된 유형이 아닌 SDP 특성의 구현이 잘못 되었습니다. 또한 RFCOMM의 많은 용도에는 추가 SDP 특성이 필요 하지 않습니다. 이러한 이유로이 API는 개발자가 필요한 정보를 얻을 수 있는 구문 분석 되지 않은 SDP 데이터에 대 한 액세스를 제공 합니다.
 
-RFCOMM API에는 서비스 식별자 개념이 사용됩니다. 서비스 식별자는 128비트 GUID지만 일반적으로는 16비트 또는 32비트 정수로도 지정됩니다. RFCOMM API는 128비트 GUID는 물론 32비트 정수로도 지정 및 사용할 수 있도록 하는 서비스 식별자용 래퍼를 제공하지만, 16비트 정수는 제공하지 않습니다. 언어가 32비트 정수까지 자동으로 확대되고 식별자가 여전히 올바르게 생성될 수 있으므로 이는 API에 문제가 되지 않습니다.
+RFCOMM Api는 서비스 식별자의 개념을 사용 합니다. 서비스 식별자는 단순히 128 비트 GUID 이지만 16 비트 또는 32 비트 정수로 지정 되기도 합니다. RFCOMM API는 32 비트 정수와 함께 지정 128 하 고 사용할 수 있도록 허용 하 고 16 비트 정수를 제공 하지 않는 서비스 식별자에 대 한 래퍼를 제공 합니다. 이는 언어에서 자동으로 32 비트 정수로 업사이징 하 고 식별자가 올바르게 생성 될 수 있기 때문에 API에는 문제가 되지 않습니다.
 
-앱은 백그라운드 작업으로 다단계 장치 작업을 수행할 수 있으므로 앱이 백그라운드로 이동되고 일시 중단된 경우에도 실행을 완료할 수 있습니다. 따라서 사용자가 앉아서 진행률 표시기를 주시하지 않더라도 콘텐츠 동기화와 지속적인 설정 또는 펌웨어 변경 등 신뢰할 수 있는 장치 서비스가 가능합니다. 장치 서비스에는 [**DeviceServicingTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceServicingTrigger)를 사용하고 콘텐츠 동기화에는 [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger)를 사용합니다. 이러한 백그라운드 작업은 앱이 백그라운드에서 실행될 수 있는 시간을 제한하며, 무기한 작업이나 무기한 동기화를 허용하지 않습니다.
+앱은 백그라운드 작업에서 여러 단계 장치 작업을 수행할 수 있으므로 앱이 백그라운드로 이동 하 고 일시 중단 된 경우에도 완료 될 때까지 실행 될 수 있습니다. 이를 통해 사용자가 진행률 표시줄을 표시 하 고 시청 하지 않고도 지속적 설정 또는 펌웨어 및 콘텐츠 동기화를 변경 하는 등의 신뢰할 수 있는 장치 서비스를 사용할 수 있습니다. 장치 서비스의 경우 [**DeviceServicingTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceServicingTrigger) 를 사용 하 고 콘텐츠 동기화에는 [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger) 를 사용 합니다. 이러한 백그라운드 작업은 앱이 백그라운드에서 실행 될 수 있는 시간을 제한 하며 무한 작업이 나 무한 동기화를 허용 하기 위한 것이 아닙니다.
 
-RFCOMM 작업에 대해 자세히 설명하는 전체 코드 샘플은 GitHub의 [**Bluetooth Rfcomm 채팅 샘플**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BluetoothRfcommChat)(영문)을 참조하세요.  
+RFCOMM 작업에 대해 자세히 설명 하는 전체 코드 샘플은 Github의 [**Bluetooth RFCOMM 채팅 샘플**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BluetoothRfcommChat) 을 참조 하세요.  
 
-## <a name="send-a-file-as-a-client"></a>파일을 클라이언트로 보내기
+## <a name="send-a-file-as-a-client"></a>클라이언트로 파일 보내기
 
-파일을 보낼 때 가장 기본적인 시나리오는 원하는 서비스에 따라 연결된 디바이스에 연결하는 것입니다. 이 단계는 다음과 같습니다.
+파일을 보낼 때 가장 기본적인 시나리오는 원하는 서비스에 따라 페어링된 장치에 연결 하는 것입니다. 다음 단계를 포함합니다.
 
-- RfcommDeviceService 함수 **\*** 함수를 사용 하 여 원하는 서비스의 쌍을 이루는 장치 인스턴스를 열거 하는 데 사용할 수 있는 AQS 쿼리를 생성할 수 있습니다.
-- 열거된 디바이스를 선택하고, [**RfcommDeviceService**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService)를 만들고, 필요에 따라 SDP 특성을 읽습니다([**established data helpers**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReader)를 사용하여 특성 데이터 구문 분석).
-- 소켓을 만들고 [**RfcommDeviceService.ConnectionHostName**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionhostname) 및 [**RfcommDeviceService.ConnectionServiceName**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionservicename) 속성을 사용하여 적절한 매개 변수로 원격 장치 서비스에 [**StreamSocket.ConnectAsync**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.connectasync)합니다.
-- 설정된 데이터 스트림 패턴을 따라 파일의 데이터 청크를 읽어와 소켓의 [**StreamSocket.OutputStream**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.outputstream)을 통해 장치로 보낼 수 있습니다.
+- **RfcommDeviceService \* ** 함수를 사용 하 여 원하는 서비스의 쌍을 이루는 장치 인스턴스를 열거 하는 데 사용할 수 있는 AQS 쿼리를 생성할 수 있습니다.
+- 열거 된 장치를 선택 하 고, [**RfcommDeviceService**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService)을 만들고, 필요에 따라 SDP 특성을 읽습니다. [**설정 된 데이터 도우미**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReader) 를 사용 하 여 특성의 데이터를 구문 분석 합니다.
+- 소켓을 만들고 [**RfcommDeviceService**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionhostname) 및 [**RfcommDeviceService**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservice.connectionservicename) 속성을 사용 하 여 원격 장치 서비스에 적절 한 매개 변수를 사용 하 여 [**ConnectAsync**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.connectasync) 합니다.
+- 설정 된 데이터 스트림 패턴을 따라 파일에서 데이터 청크를 읽고 소켓의 [**Streamsocket**](https://docs.microsoft.com/uwp/api/windows.networking.sockets.streamsocket.outputstream) 에서 장치로 보냅니다.
 
 ```csharp
 using System;
@@ -349,17 +349,17 @@ bool IsCompatibleVersion(RfcommDeviceService^ service)
 }
 ```
 
-## <a name="receive-file-as-a-server"></a>파일을 서버로 받기
+## <a name="receive-file-as-a-server"></a>서버를 수신 하는 파일
 
-또 다른 일반적인 RFCOMM 앱 시나리오는 PC에서 서비스를 호스팅하고 다른 디바이스를 위해 이 서비스를 표시하는 것입니다.
+또 다른 일반적인 RFCOMM 앱 시나리오는 PC에서 서비스를 호스팅하고 다른 장치에 대 한 서비스를 제공 하는 것입니다.
 
-- [  **RfcommServiceProvider**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider)를 만들어 원하는 서비스를 보급합니다.
-- 필요에 따라 [**established data helpers**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReader)를 사용하여 특성 데이터를 생성함으로써 SDP 특성을 설정하고 다른 장치에서 검색하도록 SDP 레코드를 알리기 시작합니다.
-- 클라이언트 디바이스에 연결하기 위해 소켓 수신기를 만들어서 들어오는 연결 요청에 대한 수신 대기를 시작합니다.
-- 연결이 수신되면 향후 처리를 위해 연결된 소켓을 저장합니다.
-- 설정된 데이터 스트림 패턴을 따라서 소켓의 InputStream에서 데이터 청크를 읽어와 파일에 저장합니다.
+- 원하는 서비스를 보급 하는 [**RfcommServiceProvider**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider) 를 만듭니다.
+- 필요에 따라 SDP 특성을 설정 하 고 ( [**설정 된 데이터 도우미**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.DataReader) 를 사용 하 여 특성의 데이터를 생성 함) 검색할 다른 장치에 대해 sdp 레코드를 보급 하기 시작 합니다.
+- 클라이언트 장치에 연결 하려면 소켓 수신기를 만들어 들어오는 연결 요청에 대 한 수신 대기를 시작 합니다.
+- 연결이 수신 되 면 나중에 처리 하기 위해 연결 된 소켓을 저장 합니다.
+- 설정 된 데이터 스트림 패턴을 따라 소켓의 InputStream에서 데이터 청크를 읽고 파일에 저장 합니다.
 
-백그라운드에서 RFCOMM 서비스를 유지하려면 [**RfcommConnectionTrigger**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.rfcommconnectiontrigger)를 사용합니다. 서비스에 연결할 때 백그라운드 작업이 트리거됩니다. 개발자는 백그라운드 작업에서 소켓에 대한 핸들을 수신합니다. 백그라운드 작업은 오랫동안 실행되며 소켓이 사용되는 동안 유지됩니다.    
+RFCOMM 서비스를 백그라운드에서 유지 하기 위해 [**RfcommConnectionTrigger**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.rfcommconnectiontrigger)를 사용 합니다. 백그라운드 작업은 서비스에 대 한 연결에서 트리거됩니다. 개발자는 백그라운드 작업의 소켓에 대 한 핸들을 받습니다. 백그라운드 작업은 장기 실행 되며 소켓이 사용 중인 동안에는 지속 됩니다.    
 
 ```csharp
 Windows.Devices.Bluetooth.Rfcomm.RfcommServiceProvider _provider;
