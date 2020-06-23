@@ -1,19 +1,19 @@
 ---
-title: DirectX 게임에서 리소스 로드
+title: DirectX 게임에 리소스 로드
 description: '대부분의 게임에서는 로컬 저장소 또는 다른 데이터 스트림에서 리소스와 자산 (예: 셰이더, 질감, 미리 정의 된 메시 또는 기타 그래픽 데이터)을 로드 합니다.'
 ms.assetid: e45186fa-57a3-dc70-2b59-408bff0c0b41
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 리소스 로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a779e0d17cdc3f5a11dd720467e3a0572e3c124
-ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
+ms.openlocfilehash: 56eaebfeb6d644c4c15f14f0613b1e3b1781f637
+ms.sourcegitcommit: 22ed0d4edad5e6bab352e641cf86cf455cf83825
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82606312"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133996"
 ---
-# <a name="load-resources-in-your-directx-game"></a>DirectX 게임에서 리소스 로드
+# <a name="load-resources-in-your-directx-game"></a>DirectX 게임에 리소스 로드
 
 
 
@@ -21,14 +21,14 @@ ms.locfileid: "82606312"
 
 예를 들어 게임의 다각형 개체에 대 한 메시는 다른 도구로 생성 되어 특정 형식으로 내보낼 수 있습니다. 질감 등에도 마찬가지입니다. 일반적으로 압축 되지 않은 플랫 비트맵은 대부분의 도구에서 일반적으로 작성 되 고 대부분의 그래픽 Api에서 이해 될 수 있지만 게임에서 사용 하는 것은 매우 비효율적입니다. 여기서는 Direct3D (모델), 질감 (비트맵) 및 컴파일된 셰이더 개체와 함께 사용할 수 있는 세 가지 유형의 그래픽 리소스를 로드 하는 기본 단계를 안내 합니다.
 
-## <a name="what-you-need-to-know"></a>기억해야 하는 사항
+## <a name="what-you-need-to-know"></a>알아야 하는 작업
 
 
 ### <a name="technologies"></a>기술
 
 -   병렬 패턴 라이브러리 (ppltasks.h)
 
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>필수 구성 요소
 
 -   기본 Windows 런타임 이해
 -   비동기 작업 이해
@@ -130,7 +130,7 @@ return m_basicReaderWriter->ReadDataAsync(filename).then([=](const Platform::Arr
 
 그러나 모든 비동기 로드가 완료 될 때까지 게임을 적절 하 게 시작 하지 않는 것이 좋습니다. 특정 필드와 같은 로드가 완료 될 때 신호를 보내기 위한 몇 가지 메서드를 만들고, 로드 메서드에 람다 식을 사용 하 여 완료 될 때 해당 신호를 설정 합니다. 로드 된 리소스를 사용 하는 구성 요소를 시작 하기 전에 변수를 확인 합니다.
 
-다음은 BasicLoader .cpp에 정의 된 비동기 메서드를 사용 하 여 셰이더, 메시 및 게임 시작 시 질감을 로드 하는 예제입니다. 모든 로드 메서드가 완료 되 면 게임 개체 **m\_loadingComplete**에서 특정 필드를 설정 합니다.
+다음은 BasicLoader .cpp에 정의 된 비동기 메서드를 사용 하 여 셰이더, 메시 및 게임 시작 시 질감을 로드 하는 예제입니다. 모든 로드 메서드가 완료 되 면 게임 개체 **m \_ loadingComplete**에서 특정 필드를 설정 합니다.
 
 ```cpp
 void ResourceLoading::CreateDeviceResources()
@@ -209,7 +209,7 @@ void ResourceLoading::CreateDeviceResources()
 
 -   데이터 스트림의 첫 번째 32 비트 (4 바이트)에는 메시에 서 uint32 값으로 표시 되는 꼭 짓 점 (numVertices 짓 점)의 수가 포함 됩니다.
 -   데이터 스트림의 다음 32 비트 (4 바이트)에는 uint32 값으로 표시 되는 메시의 인덱스 수 (numIndices)가 포함 됩니다.
--   그런 다음 후속 (numVertices \* Sizeof (**basicvertex**)) 비트는 꼭 짓 점 데이터를 포함 합니다.
+-   그런 다음 후속 ( \* **numvertices Sizeof (basicvertex**)) 비트는 꼭 짓 점 데이터를 포함 합니다.
 -   데이터의 마지막 (numIndices \* 16) 비트에는 uint16 값의 시퀀스로 표시 되는 인덱스 데이터가 포함 되어 있습니다.
 
 지점은 로드 한 메시 데이터의 비트 수준 레이아웃을 파악 하는 것입니다. 또한 endian와 일치 해야 합니다. 모든 Windows 8 플랫폼은 작은 endian입니다.
@@ -239,7 +239,7 @@ task<void> BasicLoader::LoadMeshAsync(
 }
 ```
 
-**CreateMesh** 는 파일에서 로드 된 바이트 데이터를 해석 하 고 꼭 짓 점 및 인덱스 목록을 각각 [**ID3D11Device:: createbuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer) 에 전달 하 고 D3D11\_bind\_vertex\_buffer 또는 D3D11\_bind\_인덱스\_버퍼를 지정 하 여 메시에 대 한 꼭 짓 점 버퍼 및 인덱스 버퍼를 만듭니다. **Basicloader**에서 사용 되는 코드는 다음과 같습니다.
+**CreateMesh** 는 파일에서 로드 된 바이트 데이터를 해석 하 고 꼭 짓 점 및 인덱스 목록을 각각 [**ID3D11Device:: createbuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createbuffer) 에 전달 하 고 D3D11 \_ bind \_ vertex \_ buffer 또는 D3D11 \_ bind \_ 인덱스 \_ 버퍼를 지정 하 여 메시에 대 한 꼭 짓 점 버퍼 및 인덱스 버퍼를 만듭니다. **Basicloader**에서 사용 되는 코드는 다음과 같습니다.
 
 ```cpp
 void BasicLoader::CreateMesh(
@@ -306,7 +306,7 @@ void BasicLoader::CreateMesh(
 
 다음으로 질감을 로드 하는 방법을 살펴보겠습니다.
 
-### <a name="loading-textures"></a>질감 로드
+### <a name="loading-textures"></a>텍스처 로드
 
 게임에서 가장 일반적으로 사용할 수 있는 자산과 디스크 및 메모리의 파일을 대부분 구성 하는 것은 질감입니다. 메시와 마찬가지로 질감은 다양 한 형식으로 제공 될 수 있으며,이를 로드할 때 Direct3D에서 사용할 수 있는 형식으로 변환 합니다. 또한 질감은 다양 한 형식으로 제공 되며 다른 효과를 만드는 데 사용 됩니다. 질감에 대 한 밉 레벨을 사용 하 여 거리 개체의 모양과 성능을 향상 시킬 수 있습니다. 먼지 및 광원 맵은 기본 질감의 효과 및 세부 정보를 계층화 하는 데 사용 됩니다. 그리고 법선 지도는 픽셀 별 조명 계산에 사용 됩니다. 오늘날의 게임에서는 일반적인 장면에 수천 개의 개별 질감이 있을 수 있으며, 코드에서이를 모두 효과적으로 관리 해야 합니다.
 
@@ -320,14 +320,14 @@ DDS 파일은 다음 정보를 포함 하는 이진 파일입니다.
 
 -   파일의 데이터에 대 한 설명입니다.
 
-    데이터는 [**DDS\_헤더**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-header)를 사용 하 여 헤더 설명과 함께 설명 됩니다. 픽셀 형식은 [**DDS\_PIXELFORMAT**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-pixelformat)를 사용 하 여 정의 됩니다. **Dds\_헤더** 및 **dds\_PIXELFORMAT** 구조는 사용 되지 않는 DDSURFACEDESC2, DDSCAPS2 및 DDPIXELFORMAT DirectDraw 7 구조를 대체 합니다. **DDS\_헤더** 는 DDSURFACEDESC2 및 DDSCAPS2에 해당 하는 이진 값입니다. **DDS\_PIXELFORMAT** 는 DDPIXELFORMAT에 해당 하는 이진 값입니다.
+    데이터는 [**dds \_ 헤더**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-header)를 사용 하 여 헤더 설명과 함께 설명 됩니다. 픽셀 형식은 [**dds \_ PIXELFORMAT**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-pixelformat)를 사용 하 여 정의 됩니다. **Dds \_ 헤더** 및 **dds \_ PIXELFORMAT** 구조는 사용 되지 않는 DDSURFACEDESC2, DDSCAPS2 및 DDPIXELFORMAT DirectDraw 7 구조를 대체 합니다. **DDS \_ 헤더** 는 DDSURFACEDESC2 및 DDSCAPS2에 해당 하는 이진 값입니다. **DDS \_ PIXELFORMAT** 는 DDPIXELFORMAT에 해당 하는 이진 값입니다.
 
     ```cpp
     DWORD               dwMagic;
     DDS_HEADER          header;
     ```
 
-    [**Dds\_PIXELFORMAT**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-pixelformat) 의 **dwFlags** 값을 ddpf\_FOURCC로 설정 하 고 **DwFourCC** 를 "DX10"로 설정 하면 추가 [**\_DDS 헤더\_DXT10**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-header-dxt10) 구조가 부동 소수점 형식, sRGB 형식 등의 RGB 픽셀 형식으로 표현할 수 없는 질감 배열 또는 DXGI 형식을 수용 하기 위해 제공 됩니다. **\_DDS 헤더\_DXT10** 구조가 있으면 전체 데이터 설명이 다음과 같이 표시 됩니다.
+    [**Dds \_ PIXELFORMAT**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-pixelformat) 의 **dwFlags** 값을 ddpf FOURCC로 설정 하 \_ 고 **dwFourCC** 를 "DX10"로 설정 하면 추가 [**DDS \_ 헤더 \_ DXT10**](https://docs.microsoft.com/windows/desktop/direct3ddds/dds-header-dxt10) 구조가 부동 소수점 형식, sRGB 형식 등의 RGB 픽셀 형식으로 표현할 수 없는 질감 배열 또는 DXGI 형식을 수용 하기 위해 제공 됩니다. **DDS \_ 헤더 \_ DXT10** 구조가 있으면 전체 데이터 설명이 다음과 같이 표시 됩니다.
 
     ```cpp
     DWORD               dwMagic;
@@ -551,7 +551,7 @@ task<void> BasicLoader::LoadShaderAsync(
 
 ```
 
-이 예제에서는 **basicreaderwriter** 인스턴스 (**\_m basicreaderwriter**)를 사용 하 여 제공 된 컴파일된 셰이더 개체 (.cof) 파일에서 바이트 스트림으로 읽습니다. 작업이 완료 되 면 람다는 파일에서 로드 된 바이트 데이터를 사용 하 여 [**ID3D11Device:: CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader) 를 호출 합니다. 콜백은 로드에 성공 했음을 나타내는 일부 플래그를 설정 해야 하며, 코드는 셰이더를 실행 하기 전에이 플래그를 확인 해야 합니다.
+이 예제에서는 **basicreaderwriter** 인스턴스 (**m \_ basicreaderwriter**)를 사용 하 여 제공 된 컴파일된 셰이더 개체 (.cof) 파일에서 바이트 스트림으로 읽습니다. 작업이 완료 되 면 람다는 파일에서 로드 된 바이트 데이터를 사용 하 여 [**ID3D11Device:: CreatePixelShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createpixelshader) 를 호출 합니다. 콜백은 로드에 성공 했음을 나타내는 일부 플래그를 설정 해야 하며, 코드는 셰이더를 실행 하기 전에이 플래그를 확인 해야 합니다.
 
 꼭 짓 점 셰이더는 약간 더 복잡 합니다. 꼭 짓 점 셰이더의 경우 꼭 짓 점 데이터를 정의 하는 별도의 입력 레이아웃도 로드 합니다. 다음 코드를 사용 하 여 사용자 지정 꼭 짓 점 입력 레이아웃과 함께 꼭 짓 점 셰이더를 비동기적으로 로드할 수 있습니다. 메시에서 로드 하는 꼭 짓 점 정보를이 입력 레이아웃으로 올바르게 나타낼 수 있어야 합니다.
 
@@ -685,12 +685,11 @@ task<void> BasicLoader::LoadShaderAsync(
         }
     });
 }
-
 ```
 
 이 코드에서 꼭 짓 점 셰이더의 CSFILE 파일의 바이트 데이터를 읽은 후에는 [**ID3D11Device:: CreateVertexShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createvertexshader)를 호출 하 여 꼭 짓 점 셰이더를 만듭니다. 그런 다음 동일한 람다에서 셰이더에 대 한 입력 레이아웃을 만듭니다.
 
-다른 셰이더 형식 (예: 선체 및 geometry 셰이더)은 특정 구성이 필요할 수도 있습니다. 다양 한 셰이더 로드 메서드에 대 한 전체 코드는 BasicLoader 및 [Direct3D 리소스 로딩 샘플]( https://code.msdn.microsoft.com/windowsapps/Direct3D-Resource-Loading-25406148)에 [대 한 전체 코드](complete-code-for-basicloader.md) 에서 제공 됩니다.
+다른 셰이더 형식 (예: 선체 및 geometry 셰이더)은 특정 구성이 필요할 수도 있습니다. 다양 한 셰이더 로드 메서드에 대 한 전체 코드는 BasicLoader 및 [Direct3D 리소스 로딩 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/Direct3D%20resource%20loading%20sample%20(Windows%208)/C%2B%2B)에 [대 한 전체 코드](complete-code-for-basicloader.md) 에서 제공 됩니다.
 
 ## <a name="remarks"></a>설명
 
@@ -698,7 +697,7 @@ task<void> BasicLoader::LoadShaderAsync(
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Direct3D 리소스 로딩 샘플]( https://code.msdn.microsoft.com/windowsapps/Direct3D-Resource-Loading-25406148)
+* [Direct3D 리소스 로딩 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/Direct3D%20resource%20loading%20sample%20(Windows%208)/C%2B%2B)
 * [BasicLoader에 대 한 전체 코드](complete-code-for-basicloader.md)
 * [BasicReaderWriter에 대 한 전체 코드](complete-code-for-basicreaderwriter.md)
 * [DDSTextureLoader에 대 한 전체 코드](complete-code-for-ddstextureloader.md)

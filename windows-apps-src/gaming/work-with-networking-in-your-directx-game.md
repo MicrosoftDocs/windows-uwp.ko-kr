@@ -1,19 +1,19 @@
 ---
-title: 게임을 위한 네트워킹
+title: 게임의 네트워킹
 description: DirectX 게임에 네트워킹 기능을 개발 하 고 통합 하는 방법에 대해 알아봅니다.
 ms.assetid: 212eee15-045c-8ba1-e274-4532b2120c55
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 네트워킹, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: d2d1487c708b8618feec5cb735fb8af260608e00
-ms.sourcegitcommit: 0f2ae8f97daac440c8e86dc07d11d356de29515c
+ms.openlocfilehash: 005dc30bc71d6d9087a3cc15880ffa3936d0a7f7
+ms.sourcegitcommit: 22ed0d4edad5e6bab352e641cf86cf455cf83825
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83280273"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133966"
 ---
-# <a name="networking-for-games"></a>게임을 위한 네트워킹
+# <a name="networking-for-games"></a>게임의 네트워킹
 
 
 
@@ -389,6 +389,6 @@ using namespace Windows::Web::Http;
 **샘플**
 
 * [DatagramSocket 샘플](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/ControlChannelTrigger%20StreamSocket%20sample%20(Windows%208))
-* [HttpClient 샘플]( https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)
+* [HttpClient 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/HttpClient%20sample)
 * [근접 샘플](https://github.com/microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples/Proximity%20sample%20(Windows%208))
 * [StreamSocket 샘플](https://code.msdn.microsoft.com/windowsapps/StreamSocket-Sample-8c573931)
