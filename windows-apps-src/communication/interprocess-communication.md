@@ -4,12 +4,12 @@ description: 이 항목에서는 유니버설 Windows 플랫폼 (UWP) 응용 프
 ms.date: 03/23/2020
 ms.topic: article
 keywords: windows 10, uwp
-ms.openlocfilehash: 2407a54439157be16b186b48759746238962f8b4
-ms.sourcegitcommit: 2d375e1c34473158134475af401532cc55fc50f4
+ms.openlocfilehash: 5db029db3ffb538802f39aa616c96dbe75601eac
+ms.sourcegitcommit: bf7d4f6739aeeaac735aae3dd0dcbda63a8c5e69
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888511"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256383"
 ---
 # <a name="interprocess-communication-ipc"></a>프로세스 간 통신(IPC)
 
@@ -29,11 +29,11 @@ ms.locfileid: "80888511"
 
 [RunFullTrust](/windows/uwp/packaging/app-capability-declarations#restricted-capabilities) 기능이 포함 된 패키지 된 응용 프로그램은 [패키지 매니페스트](/uwp/schemas/appxpackage/uapmanifestschema/element-com-extension)를 통해 IPC 용 out-of-process COM 서버를 등록할 수 있습니다. 이를 패키지 된 [COM](https://blogs.windows.com/windowsdeveloper/2017/04/13/com-server-ole-document-support-desktop-bridge/)이라고 합니다.
 
-## <a name="filesystem"></a>있어
+## <a name="filesystem"></a>파일 시스템
 
 ### <a name="broadfilesystemaccess"></a>BroadFileSystemAccess
 
-패키지 된 응용 프로그램은 [broadFileSystemAccess](/windows/uwp/files/file-access-permissions#accessing-additional-locations) 제한 된 기능을 선언 하 여 광범위 한 파일 시스템을 통해 IPC를 수행할 수 있습니다.
+패키지 된 응용 프로그램은 [broadFileSystemAccess](/windows/uwp/files/file-access-permissions#accessing-additional-locations) 제한 된 기능을 선언 하 여 광범위 한 파일 시스템을 통해 IPC를 수행할 수 있습니다. 이 기능은 [Windows 저장소](/uwp/api/Windows.Storage) api를 부여 하 고 광범위 한 파일 시스템에 대 한 Win32 api 액세스를 [xxxFromApp](/previous-versions/windows/desktop/legacy/mt846585(v=vs.85)) 합니다.
 
 기본적으로 패키지 된 응용 프로그램에 대 한 파일 시스템을 통한 IPC는이 섹션에 설명 된 다른 메커니즘으로 제한 됩니다.
 
@@ -73,25 +73,25 @@ ValueSet를 통해 응용 프로그램에 [SharedStorageAccessManager](/uwp/api/
 
 보안 및 네트워크 격리를 유지 하기 위해 IPC에 대 한 루프백 연결은 기본적으로 패키지 된 응용 프로그램에 대해 차단 됩니다. [기능](/previous-versions/windows/apps/hh770532(v=win.10)) 및 [매니페스트 속성](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules)을 사용 하 여 신뢰할 수 있는 패키지 응용 프로그램 간에 루프백 연결을 사용 하도록 설정할 수 있습니다.
 
-* 루프백 연결에 참여 하는 패키지 된 응용 프로그램은 모두 [패키지 매니페스트에서](/uwp/schemas/appxpackage/uapmanifestschema/element-capability)`privateNetworkClientServer` 기능을 선언 해야 합니다.
+* 루프백 연결에 참여 하는 패키지 된 응용 프로그램은 모두 `privateNetworkClientServer` [패키지 매니페스트에서](/uwp/schemas/appxpackage/uapmanifestschema/element-capability)기능을 선언 해야 합니다.
 * 패키지 매니페스트 내에서 [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules) 를 선언 하 여 두 개의 패키지 된 응용 프로그램이 루프백을 통해 통신할 수 있습니다.
     * 각 응용 프로그램은 [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules)에 다른 응용 프로그램을 나열 해야 합니다. 클라이언트는 서버에 대 한 "출력" 규칙을 선언 하 고 서버는 지원 되는 클라이언트에 대 한 "in" 규칙을 선언 합니다.
 
 > [!NOTE]
 > 이러한 규칙에서 응용 프로그램을 식별 하는 데 필요한 패키지 패밀리 이름은 개발 시간 동안 Visual Studio의 패키지 매니페스트 편집기를 통해, Microsoft Store을 통해 게시 된 응용 프로그램의 경우 [파트너 센터](/windows/uwp/publish/view-app-identity-details) 를 통해, 이미 설치 된 응용 프로그램의 경우 [add-appxpackage](/powershell/module/appx/get-appxpackage?view=win10-ps) PowerShell 명령을 통해 찾을 수 있습니다.
 
-패키지 되지 않은 응용 프로그램 및 서비스에는 패키지 id가 없으므로 [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules)에서 선언할 수 없습니다. CheckNetIsolation를 통해 패키지 되지 않은 응용 프로그램 및 서비스와 루프백을 통해 연결 하도록 패키지 된 응용 프로그램을 구성할 수 있습니다 [.](/previous-versions/windows/apps/hh780593(v=win.10))그러나이는 컴퓨터에 로컬로 액세스 하 고 관리자 권한이 있는 테스트용으로 로드 또는 디버깅 시나리오 에서만 가능 합니다.
+패키지 되지 않은 응용 프로그램 및 서비스에는 패키지 id가 없으므로 [LoopbackAccessRules](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-loopbackaccessrules)에서 선언할 수 없습니다. [CheckNetIsolation.exe](/previous-versions/windows/apps/hh780593(v=win.10))를 통해 루프백을 통해 패키지 되지 않은 응용 프로그램 및 서비스와 연결 하도록 패키지 된 응용 프로그램을 구성할 수 있지만이는 컴퓨터에 로컬로 액세스 하 고 관리자 권한이 있는 테스트용으로 로드 또는 디버깅 시나리오 에서만 가능 합니다.
 
-* 루프백 연결에 참여 하는 패키지 된 응용 프로그램은 모두 [패키지 매니페스트에서](/uwp/schemas/appxpackage/uapmanifestschema/element-capability)`privateNetworkClientServer` 기능을 선언 해야 합니다.
-* 패키지 응용 프로그램이 패키지 되지 않은 응용 프로그램 또는 서비스에 연결 하는 경우 `CheckNetIsolation.exe LoopbackExempt -a -n=<PACKAGEFAMILYNAME>`를 실행 하 여 패키지 된 응용 프로그램에 대 한 루프백 예외를 추가 합니다.
-* 패키지 되지 않은 응용 프로그램 또는 서비스가 패키지 된 응용 프로그램에 연결 하는 경우 `CheckNetIsolation.exe LoopbackExempt -is -n=<PACKAGEFAMILYNAME>`를 실행 하 여 패키지 된 응용 프로그램이 인바운드 루프백 연결을 받을 수 있도록 합니다.
-    * [CheckNetIsolation](/previous-versions/windows/apps/hh780593(v=win.10)) 는 패키지 된 응용 프로그램이 연결을 수신 대기 하는 동안 계속 실행 되어야 합니다.
-    * `-is` 플래그는 Windows 10 버전 1607 (10.0;에 도입 되었습니다. 빌드 14393).
+* 루프백 연결에 참여 하는 패키지 된 응용 프로그램은 모두 `privateNetworkClientServer` [패키지 매니페스트에서](/uwp/schemas/appxpackage/uapmanifestschema/element-capability)기능을 선언 해야 합니다.
+* 패키지 응용 프로그램이 패키지 되지 않은 응용 프로그램 또는 서비스에 연결 하는 경우를 실행 `CheckNetIsolation.exe LoopbackExempt -a -n=<PACKAGEFAMILYNAME>` 하 여 패키지 된 응용 프로그램에 대 한 루프백 예외를 추가 합니다.
+* 패키지 되지 않은 응용 프로그램 또는 서비스가 패키지 된 응용 프로그램에 연결 되는 경우 `CheckNetIsolation.exe LoopbackExempt -is -n=<PACKAGEFAMILYNAME>` 를 실행 하 여 패키지 된 응용 프로그램이 인바운드 루프백 연결을 수신할 수 있도록 합니다.
+    * 패키지 된 응용 프로그램이 연결을 수신 대기 하는 동안에는 [CheckNetIsolation.exe](/previous-versions/windows/apps/hh780593(v=win.10)) 를 계속 실행 해야 합니다.
+    * `-is`플래그가 Windows 10, 버전 1607 (10.0;)에서 도입 되었습니다. 빌드 14393).
 
 > [!NOTE]
-> [CheckNetIsolation](/previous-versions/windows/apps/hh780593(v=win.10)) 의 `-n` 플래그에 필요한 패키지 패밀리 이름은 개발 시간 동안 Visual Studio의 패키지 매니페스트 편집기를 통해, Microsoft Store를 통해 게시 된 응용 프로그램의 경우 [파트너 센터](/windows/uwp/publish/view-app-identity-details) 를 통해, 이미 설치 된 응용 프로그램의 경우 [add-appxpackage](/powershell/module/appx/get-appxpackage?view=win10-ps) PowerShell 명령을 통해 찾을 수 있습니다.
+> CheckNetIsolation.exe플래그에 필요한 패키지 패밀리 이름은 `-n` 개발 시간 [CheckNetIsolation.exe](/previous-versions/windows/apps/hh780593(v=win.10)) 동안 Visual Studio의 패키지 매니페스트 편집기를 통해, Microsoft Store를 통해 게시 된 응용 프로그램의 경우 [파트너 센터](/windows/uwp/publish/view-app-identity-details) 를 통해, 이미 설치 된 응용 프로그램의 경우 [add-appxpackage](/powershell/module/appx/get-appxpackage?view=win10-ps) PowerShell 명령을 통해 찾을 수 있습니다.
 
-[CheckNetIsolation](/previous-versions/windows/apps/hh780593(v=win.10)) 는 [네트워크 격리 문제를 디버그](/previous-versions/windows/apps/hh780593(v=win.10)#debug-network-isolation-issues)하는 데에도 유용 합니다.
+[CheckNetIsolation.exe](/previous-versions/windows/apps/hh780593(v=win.10)) 는 [네트워크 격리 문제를 디버깅](/previous-versions/windows/apps/hh780593(v=win.10)#debug-network-isolation-issues)하는 데에도 유용 합니다.
 
 ## <a name="pipes"></a>파이프
 
@@ -101,7 +101,7 @@ ValueSet를 통해 응용 프로그램에 [SharedStorageAccessManager](/uwp/api/
 
 * 기본적으로 패키지 응용 프로그램의 명명 된 파이프는 프로세스가 완전 신뢰 되지 않는 한 동일한 패키지 내의 프로세스 간에만 지원 됩니다.
 * 명명 된 파이프는 [명명 된 개체를 공유](/windows/uwp/communication/sharing-named-objects)하는 지침에 따라 패키지에서 공유할 수 있습니다.
-* 패키지 응용 프로그램의 명명 된 파이프는 파이프 이름에 `\\.\pipe\LOCAL\` 구문을 사용 해야 합니다.
+* 패키지 응용 프로그램의 명명 된 파이프는 파이프 이름에 구문을 사용 해야 합니다 `\\.\pipe\LOCAL\` .
 
 ## <a name="registry"></a>레지스트리
 
