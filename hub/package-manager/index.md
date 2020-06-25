@@ -1,17 +1,15 @@
 ---
 title: Windows 패키지 관리자
-description: ''
-author: denelon
-ms.author: denelon
+description: Windows 패키지 관리자는 애플리케이션을 Windows 10에 설치하기 위한 명령줄 도구와 서비스 세트로 구성된 포괄적인 패키지 관리자 솔루션입니다.
 ms.date: 05/03/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f7a6533d3dea9c304e9be7d8e689ab537a46449
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 5b25f2c651e11a5ff97a630bb802b236771f5441
+ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580100"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334627"
 ---
 # <a name="windows-package-manager-preview"></a>Windows 패키지 관리자(미리 보기)
 
