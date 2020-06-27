@@ -1,31 +1,33 @@
 ---
-title: 게임 샘플 확장
-description: UWP DirectX 게임에서 XAML 오버레이를 구현하는 방법을 자세히 알아보세요.
+title: 샘플 게임 확장
+description: UWP DirectX 게임에 대해 XAML 오버레이를 구현 하는 방법에 대해 알아봅니다.
 keywords: DirectX, XAML
 ms.date: 10/24/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 39fc465a38aa31e86d5c6162c4b333517c9efb4d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 06b52e5b6fdba1db83c941e770cd49360085accf
+ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367697"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409552"
 ---
-# <a name="extend-the-game-sample"></a>게임 샘플 확장
+# <a name="extend-the-sample-game"></a>샘플 게임 확장
 
-지금까지 기본적인 UWP(유니버설 Windows 플랫폼) DirectX 3D 게임의 주요 구성 요소에 대해 알아봤습니다. 뷰 공급자 및 렌더링 파이프라인을 포함한 게임의 프레임워크를 설정하고 기본 게임 루프를 구현할 수 있습니다. 또한 기본적인 사용자 인터페이스 오버레이를 만들고 소리를 통합하고 컨트롤을 구현할 수 있습니다. 지금은 자신만의 고유한 게임을 만들고 있는 중이지만, 더 많은 도움말 및 정보가 필요한 경우에는 다음 리소스를 확인합니다.
+> [!NOTE]
+> 이 항목은 DirectX 자습서 시리즈 [를 사용 하 여 단순 유니버설 Windows 플랫폼 (UWP) 게임 만들기](tutorial--create-your-first-uwp-directx-game.md) 의 일부입니다. 해당 링크의 항목은 계열의 컨텍스트를 설정 합니다.
 
--   [DirectX 그래픽 및 게임](https://docs.microsoft.com/windows/desktop/directx)
--   [Direct3D 11 개요](https://docs.microsoft.com/windows/desktop/direct3d11/dx-graphics-overviews)
--   [Direct3D 11 참조](https://docs.microsoft.com/windows/desktop/direct3d11/d3d11-graphics-reference)
+이 시점에서 UWP (기본 유니버설 Windows 플랫폼) DirectX 3D 게임의 주요 구성 요소에 대해 살펴보았습니다. 보기 공급자 및 렌더링 파이프라인을 포함 하 여 게임의 프레임 워크를 설정 하 고 기본 게임 루프를 구현할 수 있습니다. 기본 사용자 인터페이스 오버레이를 만들고, 소리를 통합 하 고, 컨트롤을 구현할 수도 있습니다. 자신의 게임을 만드는 방법을 알고 있지만 추가 도움말과 정보가 필요한 경우 이러한 리소스를 확인 하세요.
 
-## <a name="using-xaml-for-the-overlay"></a>오버레이에서 XAML 사용
+-   [DirectX 그래픽 및 게임](/windows/desktop/directx)
+-   [Direct3D 11 개요](/windows/desktop/direct3d11/dx-graphics-overviews)
+-   [Direct3D 11 참조](/windows/desktop/direct3d11/d3d11-graphics-reference)
 
+## <a name="using-xaml-for-the-overlay"></a>오버레이에 XAML 사용
 
-이 문서에서 자세히 다루지는 않았지만, 오버레이에서 [Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal) 대신 XAML을 사용하는 것도 하나의 방법입니다. XAML은 사용자 인터페이스 요소를 작성하는 데 있어 Direct2D 보다 장점이 많습니다. 가장 중요 한 장점은 편리한 DirectX 게임에 Windows 10 모양과 느낌을 통합 하기가 어렵다는 것입니다. UWP 앱을 정의하는 대부분의 공통 요소, 스타일 및 동작이 XAML 모델로 긴밀하게 통합되어 게임 개발자가 훨씬 더 적은 작업으로 구현할 수 있습니다. 고유한 게임 디자인에 복잡한 사용자 인터페이스가 있는 경우 Direct2D 대신 XAML 사용을 고려해 보세요.
+자세히 설명 하지 않은 한 가지 대안은 오버레이의 [Direct2D](/windows/desktop/Direct2D/direct2d-portal) 대신 XAML을 사용 하는 것입니다. XAML은 사용자 인터페이스 요소를 그리기 위해 Direct2D에 비해 많은 이점을 제공 합니다. 가장 중요 한 혜택은 Windows 10 모양과 느낌을 DirectX 게임에 더 편리 하 게 통합 하는 것입니다. UWP 앱을 정의 하는 대부분의 공통 요소, 스타일 및 동작은 XAML 모델에 긴밀 하 게 통합 되어 게임 개발자가 구현 하는 데 더 많은 작업을 수행 합니다. 사용자 고유의 게임 디자인에 복잡 한 사용자 인터페이스가 있는 경우 Direct2D 대신 XAML을 사용 하는 것이 좋습니다.
 
-XAML에서는 Direct2D와 비슷한 모양의 게임 인터페이스를 훨씬 손쉽게 만들 수 있습니다.
+XAML을 사용 하면 이전에 만든 Direct2D 유사 하 게 게임 인터페이스를 만들 수 있습니다.
 
 ### <a name="xaml"></a>XAML
 ![XAML 오버레이](./images/simple-dx-game-extend-xaml.PNG)
@@ -33,18 +35,17 @@ XAML에서는 Direct2D와 비슷한 모양의 게임 인터페이스를 훨씬 �
 ### <a name="direct2d"></a>Direct2D
 ![D2D 오버레이](./images/simple-dx-game-extend-d2d.PNG)
 
-최종 결과는 비슷하지만, Direct2D 구현과 XAML 인터페이스 구현 간에 많은 차이점이 있습니다.
+유사한 최종 결과가 있지만 Direct2D와 XAML 인터페이스를 구현 하는 것 사이에는 여러 가지 차이점이 있습니다.
 
 기능 | XAML| Direct2D
 :----------|:----------- | :-----------
-오버레이 정의 | XAML 파일 `\*.xaml`에 정의되어 있습니다. 일단 XAML을 이해하면 보다 정교한 오버레이를 생성 및 구성하는 것이 Direct2D에 비해 훨씬 쉽습니다.| Direct2D 대상 버퍼에 수동으로 배치되고 기록되는 Direct2D 원형 및 [DirectWrite](https://docs.microsoft.com/windows/desktop/DirectWrite/direct-write-portal) 문자열 컬렉션으로 정의됩니다. 
-사용자 인터페이스 요소 | XAML 사용자 인터페이스 요소는 [**Windows::UI::Xaml**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml) 및 [**Windows::UI::Xaml::Controls**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls) 같이 Windows 런타임 XAML API의 일부인 표준화된 요소로부터 나옵니다. XAML 사용자 인터페이스 요소의 동작을 처리하는 코드는 코드 숨김 파일인 Main.xaml.cpp에 정의되어 있습니다. | 사각형 및 줄임표처럼 간단한 셰이프를 그릴 수 있습니다.
-창 크기 조정 | 핸들 크기를 자연스럽게 조정하고 상태 변경 이벤트를 확인하여 이에 맞게 오버레이 변환 | 오버레이의 구성 요소를 다시 그리는 방법을 수동으로 지정해야 합니다.
+오버레이 정의 | XAML 파일에 정의 `\*.xaml` 됩니다. XAML을 이해 하 고 나면 Direct2D에 비해 더 복잡 한 오버레이를 만들고 구성 하는 것이 simpiler 됩니다.| Direct2D 기본 형식의 컬렉션으로 정의 되 고 [DirectWrite](/windows/desktop/DirectWrite/direct-write-portal) 문자열을 수동으로 배치 하 여 Direct2D 대상 버퍼에 기록 합니다. 
+사용자 인터페이스 요소 | XAML 사용자 인터페이스 요소는 [**windows:: ui:: xaml**](/uwp/api/Windows.UI.Xaml) 및 [**WINDOWS:: Ui:: Xaml:: 컨트롤**](/uwp/api/Windows.UI.Xaml.Controls)을 포함 하 여 Windows 런타임 xaml api의 일부인 표준화 된 요소에서 제공 됩니다. XAML 사용자 인터페이스 요소의 동작을 처리 하는 코드는 코드 숨김 파일인 .xaml에 정의 되어 있습니다. | 사각형 및 타원과 같은 간단한 셰이프를 그릴 수 있습니다.
+창 크기 조정 | 기본적으로 크기 조정 및 보기 상태 변경 이벤트를 처리 하 고 적절 하 게 오버레이를 변형 합니다. | 오버레이 구성 요소를 다시 그리는 방법을 수동으로 지정 해야 합니다.
 
+또 다른 큰 차이점에는 [스왑 체인이](/windows/uwp/graphics-concepts/swap-chains)포함 됩니다. 스왑 체인을 [**Windows:: UI:: Core:: CoreWindow**](/uwp/api/windows.ui.core.corewindow) 개체에 연결할 필요가 없습니다. 대신, XAML을 통합 하는 DirectX 앱은 새 [**SwapChainPanel**](/uwp/api/windows.ui.xaml.controls.swapchainpanel) 개체가 생성 될 때 스왑 체인을 연결 합니다. 
 
-또 다른 큰 차이점은 [스왑 체인](https://docs.microsoft.com/windows/uwp/graphics-concepts/swap-chains)과 관련이 있습니다. 스왑 체인을 [**Windows::UI::Core::CoreWindow**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow) 개체에 연결할 필요가 없습니다. 대신에 [**SwapChainPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.swapchainpanel) 개체가 새로 구성되면 XAML이 통합된 DirectX 앱을 스왑 체인을 연결합니다. 
-
-다음 조각은 [**DirectXPage.xaml**](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/DirectXPage.xaml) 파일에서 **SwapChainPanel**를 위한 XAML을 선언하는 방법을 보여줍니다.
+다음 코드 조각에서는 [**Directxpage**](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/DirectXPage.xaml) 파일에서 **SwapChainPanel** 에 대 한 xaml을 선언 하는 방법을 보여 줍니다.
 ```xml
 <Page
     x:Class="Simple3DGameXaml.DirectXPage"
@@ -54,8 +55,6 @@ XAML에서는 Direct2D와 비슷한 모양의 게임 인터페이스를 훨씬 �
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-
     <SwapChainPanel x:Name="DXSwapChainPanel">
 
     <!-- ... XAML user controls and elements -->
@@ -64,7 +63,7 @@ XAML에서는 Direct2D와 비슷한 모양의 게임 인터페이스를 훨씬 �
 </Page>
 ```
 
-**SwapChainPanel** 개체는 [시작 시](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/App.xaml.cpp#L45-L51) 앱 단일 항목에서 생성된 현재 창 개체의 [**콘텐츠**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window.Content) 속성으로 설정됩니다.
+**SwapChainPanel** 개체는 [시작 시](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/App.xaml.cpp#L45-L51) 응용 프로그램 singleton에 의해 생성 된 현재 창 개체의 [**콘텐츠**](/uwp/api/Windows.UI.Xaml.Window.Content) 속성으로 설정 됩니다.
 
 ```cpp
 void App::OnLaunched(_In_ LaunchActivatedEventArgs^ /* args */)
@@ -77,10 +76,9 @@ void App::OnLaunched(_In_ LaunchActivatedEventArgs^ /* args */)
 }
 ```
 
+구성 된 스왑 체인을 XAML로 정의 된 [**SwapChainPanel**](/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) 인스턴스에 연결 하려면 기본 네이티브 [**ISwapChainPanelNative**](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-iswapchainpanelnative) 인터페이스 구현에 대 한 포인터를 가져와서 구성 된 스왑 체인을 전달 하 여 [**ISwapChainPanelNative:: SetSwapChain**](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-iswapchainpanelnative-setswapchain) 를 호출 해야 합니다. 
 
-구성된 스왑 체인을 XAML에 정의된 [**SwapChainPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) 인스턴스에 연결하려면 기본 네이티브 [**ISwapChainPanelNative**](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-iswapchainpanelnative) 인터페이스 구현에 대한 포인터를 가져오고 여기에서 [**ISwapChainPanelNative::SetSwapChain**](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-iswapchainpanelnative-setswapchain)를 호출하여 구성된 스왑 체인에 전달해야 합니다. 
-
-[  **DX::DeviceResources::CreateWindowSizeDependentResources**](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/Common/DeviceResources.cpp#L218-L521)에서 나온 다음 조각에는 DirectX/XAML 상호 운용성을 위한 이 기능이 자세히 설명되어 있습니다.
+[**DX::D eviceresources:: CreateWindowSizeDependentResources**](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/Common/DeviceResources.cpp#L218-L521) 의 다음 코드 조각은 DIRECTX/XAML interop에 대해이 정보를 자세히 설명 합니다.
 
 ```cpp
         ComPtr<IDXGIDevice3> dxgiDevice;
@@ -130,11 +128,10 @@ void App::OnLaunched(_In_ LaunchActivatedEventArgs^ /* args */)
     }
 ```
 
-이 프로세스에 대한 자세한 내용은 [DirectX 및 XAML 상호 운용](directx-and-xaml-interop.md)을 참조하세요.
+이 프로세스에 대 한 자세한 내용은 [DirectX 및 XAML interop](directx-and-xaml-interop.md)를 참조 하세요.
 
-## <a name="sample"></a>샘플
+## <a name="sample"></a>예제
 
-오버레이에 XAML을 사용하는 이 게임 버전을 다운로드하려면 [Direct3D 슈팅 게임 샘플(XAML)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameXaml)로 이동하세요.
+오버레이에 대해 XAML을 사용 하는이 게임의 버전을 다운로드 하려면 [Direct3D 해결 샘플 게임 (XAML)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameXaml)로 이동 합니다.
 
-
-나머지 항목에서 논의한 게임 샘플 버전과 달리, XAML 버전은 [App.cpp](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameDX/cpp/App.cpp) 및 [GameInfoOverlay.cpp](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp) 대신에 [App.xaml.cpp](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/App.xaml.cpp) 및 [DirectXPage.xaml.cpp](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/DirectXPage.xaml.cpp) 파일에서 프레임워크를 정의합니다.
+이러한 항목의 나머지 부분에서 설명 하는 샘플 게임의 버전과 달리 XAML 버전은 각각 [app.config](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameDX/cpp/App.cpp) 및 [GameInfoOverlay](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameDX/cpp/GameInfoOverlay.cpp)대신 app.xaml [및](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/App.xaml.cpp) [directxpage](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/DirectXPage.xaml.cpp) 파일에 프레임 워크를 정의 합니다.

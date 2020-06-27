@@ -1,63 +1,68 @@
 ---
-title: 카메라 바코드 스캐너 기호
-description: 카메라 바코드 스캐너에서 지원되는 기호
+title: 카메라 바코드 스캐너 Symbologies
+description: 카메라 바코드 스캐너 지원 Symbologies
 ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: cc2aaaf4e9779cb2be712119fb1dacdf946952c5
-ms.sourcegitcommit: 0dec04de501a3db6b22dfd4a320fc09b5c4a21b5
+ms.openlocfilehash: 481d10f2fea076f45124a3c75819dfe6494300bf
+ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70243322"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85448403"
 ---
-# <a name="symbologies"></a>기호
-이 항목에서는 다음을 포함 하 여 Windows 10과 함께 제공 되는 소프트웨어 바코드 디코더가 지 원하는 각 symbologies에 대 한 샘플 바코드를 제공 합니다. UPC/e, 코드 39, 코드 128, 인터리브 2/5, 세로 막대형 전방향, 세로 막대형 스택형, QR 코드 및 GS1DWCode.
+# <a name="symbologies"></a>Symbologies
 
-## <a name="1d-symbologies"></a>1D 기호
+이 항목은 Windows 10과 함께 제공 되는 소프트웨어 바코드 디코더가 지 원하는 각 symbologies에 대 한 샘플 바코드를 제공 합니다. 여기서는 UPC/e, 코드 39, 코드 128, 인터리브 2/5, 세로 막대형 전방향, 세로 막대형 스택형, QR 코드 및 GS1DWCode을 포함 합니다.
 
-### <a name="code-39"></a>코드 39
-![샘플 바코드 - 코드 39](images/pos/sample-barcode-code39.png)
+Windows 10은 소프트웨어 디코더와 결합 된 표준 렌즈 카메라를 사용 하 여 바코드 스캐너를 생성 합니다. 이 문서는 소프트웨어 디코더에 의해 지원 되는 symbologies을 나타냅니다. 기본 제공 하드웨어 디코더가 있는 전용 바코드 스캐너 장치에서 추가 symbologies 지원 될 수 있습니다. 자세한 내용은 바코드 스캐너 제조업체에 문의 하세요. 별도로 지정 하지 않는 한, 나열 된 symbologies는 모든 버전의 Windows 10 빌드 17134 이상에서 지원 됩니다.
 
-### <a name="code-128"></a>코드 128
-![샘플 바코드 - 코드 128](images/pos/sample-barcode-code128.png)
-
-### <a name="databar-omnidirectional"></a>Databar Omnidirectional
-![샘플 바코드 - Databar Omnidirectional](images/pos/sample-barcode-databar-omnidirectional.png) 
-### <a name="databar-stacked"></a>Databar Stacked
-![샘플 바코드 - Databar Stacked](images/pos/sample-barcode-databar-stacked.png)
-
-### <a name="ean-8"></a>EAN-8
-![샘플 바코드 - EAN-8](images/pos/sample-barcode-ean8.png)
-
-### <a name="ean-13"></a>EAN-13
-![샘플 바코드 - EAN-13](images/pos/sample-barcode-ean13.png)
-
-### <a name="interleaved-2-of-5"></a>Interleaved 2 of 5
-![샘플 바코드 - Interleaved 2 of 5](images/pos/sample-barcode-interleaved-2-of-5.png)
-
-### <a name="upc-a"></a>UPC-A
-![샘플 바코드 - UPC A](images/pos/sample-barcode-upca.png)
-
-### <a name="upc-e"></a>UPC-E
-![샘플 바코드 - UPC E](images/pos/sample-barcode-upce.png)
-
-## <a name="2d-symbologies"></a>2D 기호
-### <a name="qr-code"></a>QR 코드
-![샘플 바코드 - QR 코드](images/pos/sample-barcode-qrcode.png)
-
-## <a name="digital-watermark"></a>디지털 워터마크
-### <a name="gs1-dwcode"></a>GS1 DWCode
-
-카메라 바코드 스캐너 응용 프로그램에서 아래의 패키지 이미지를 스캔하여 작동 중인 GS1DWCode를 확인합니다.  이미지는 UPCA 856107006854로 인코딩됩니다.  GS1DWCode 기능에 대한 자세한 내용은 http://www.digimarc.com 을 참조하세요.
-
-![샘플 바코드 - GS1DWCode](images/pos/rice-box-v7.jpg)
+[GetSupportedSymbologiesAsync](/uwp/api/windows.devices.pointofservice.barcodescanner.getsupportedsymbologiesasync) 를 사용 하 여 바코드 스캐너에서 지 원하는 특정 symbologies를 확인 합니다.
 
 > [!NOTE]
-> Windows 10에 기본 제공되는 소프트웨어 디코더는  [*Digimarc Corporation*](https://www.digimarc.com/)이 무료로 제공합니다.
+> Windows 10에 기본 제공 되는 소프트웨어 디코더는 [*Digimarc Corporation*](https://www.digimarc.com/)에서 제공 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="1d-symbologies"></a>1D Symbologies
+
+### <a name="code-39"></a>코드 39
+![샘플 바코드-코드 39](images/pos/sample-barcode-code39.png)
+
+### <a name="code-128"></a>코드 128
+![샘플 바코드-코드 128](images/pos/sample-barcode-code128.png)
+
+### <a name="databar-omnidirectional"></a>세로 막대형 전방향
+![샘플 바코드-세로 막대형 전방향](images/pos/sample-barcode-databar-omnidirectional.png) 
+### <a name="databar-stacked"></a>누적 세로 막대형
+![샘플 바코드-세로 막대형 스택형](images/pos/sample-barcode-databar-stacked.png)
+
+### <a name="ean-8"></a>EAN-8
+![샘플 바코드-e-8](images/pos/sample-barcode-ean8.png)
+
+### <a name="ean-13"></a>EAN-13
+![샘플 바코드-e-13](images/pos/sample-barcode-ean13.png)
+
+### <a name="interleaved-2-of-5"></a>인터리브 2/5
+![샘플 바코드-인터리브 2/5](images/pos/sample-barcode-interleaved-2-of-5.png)
+
+### <a name="upc-a"></a>UPC-A
+![샘플 바코드-UPC A](images/pos/sample-barcode-upca.png)
+
+### <a name="upc-e"></a>UPC-E
+![샘플 바코드-UPC E](images/pos/sample-barcode-upce.png)
+
+## <a name="2d-symbologies"></a>2D Symbologies
+### <a name="qr-code"></a>QR 코드
+![샘플 바코드-QR 코드](images/pos/sample-barcode-qrcode.png)
+
+## <a name="digital-watermark"></a>디지털 워터 마크
+### <a name="gs1-dwcode"></a>GS1-DWCode
+
+카메라 바코드 스캐너 응용 프로그램을 사용 하 여 아래 패키지 이미지를 스캔 하 여 GS1DWCode 작동 하는지 확인 합니다.  이미지는 UPCA 856107006854로 인코딩됩니다.  http://www.digimarc.comGS1DWCode 기능에 대 한 자세한 내용은을 참조 하세요.
+
+![샘플 바코드-GS1DWCode](images/pos/Rice-Box-V7.jpg)
+
+## <a name="see-also"></a>추가 정보
 
 ### <a name="samples"></a>샘플
 

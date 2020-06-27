@@ -1,16 +1,16 @@
 ---
 title: Bluetooth GATT 클라이언트
 description: 이 문서에서는 일반적인 사용 사례에 대 한 샘플 코드와 함께 GATT (Bluetooth Generic Attribute Profile) for 유니버설 Windows 플랫폼 (UWP) 앱에 대 한 개요를 제공 합니다.
-ms.date: 02/08/2017
+ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e894b750ba2119e2cca6f316f9671c51386d800c
-ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
+ms.openlocfilehash: 5c17351cf964ffb05dc60dbaf5c6ced1db467f78
+ms.sourcegitcommit: 015291bdf2e7d67076c1c85fc025f49c840ba475
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83854679"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469538"
 ---
 # <a name="bluetooth-gatt-client"></a>Bluetooth GATT 클라이언트
 
@@ -21,6 +21,11 @@ ms.locfileid: "83854679"
 - 장치에서 지원 되는 서비스 및 특성 열거
 - 특성에 대 한 읽기 및 쓰기
 - 특성 값이 변경 될 때 알림 구독
+
+> [!Important]
+> *Appxmanifest.xml*에서 "bluetooth" 기능을 선언 해야 합니다.
+>
+> `<Capabilities> <DeviceCapability Name="bluetooth" /> </Capabilities>`
 
 > **중요 API**
 >
@@ -196,7 +201,7 @@ if (result == GattCommunicationStatus.Success)
 - 클라이언트 특성 구성 설명자 (CCCD)에 쓰기
 - ValueChanged 이벤트를 처리 합니다.
 
-CCCD에 쓰려면이 클라이언트에서 특정 특성 값이 변경 될 때마다이를 확인 하려고 하는 서버 장치에 지시 합니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
+CCCD에 쓰려면이 클라이언트에서 특정 특성 값이 변경 될 때마다이를 확인 하려고 하는 서버 장치에 지시 합니다. 다음을 수행합니다.
 
 ```csharp
 GattCommunicationStatus status = await selectedCharacteristic.WriteClientCharacteristicConfigurationDescriptorAsync(
