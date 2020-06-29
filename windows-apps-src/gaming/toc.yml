@@ -93,7 +93,7 @@
           items:
             - name: 프로젝트 설정
               href: ../gaming/tutorial--setting-up-the-games-infrastructure.md
-            - name: UWP 프레임워크
+            - name: UWP 앱 프레임워크
               href: ../gaming/tutorial--building-the-games-uwp-app-framework.md
             - name: 게임 흐름 관리
               href: ../gaming/tutorial-game-flow-management.md
@@ -114,7 +114,7 @@
         - name: Marble Maze
           href: ../gaming/developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md
           items:
-            - name: 기본 사항
+            - name: 기본 항목
               href: ../gaming/marble-maze-sample-fundamentals.md
             - name: 앱 구조
               href: ../gaming/marble-maze-application-structure.md
@@ -173,7 +173,7 @@
               href: ../graphics-concepts/introduction-to-buffers.md
             - name: 인덱스 버퍼
               href: ../graphics-concepts/index-buffers.md
-        - name: 장치
+        - name: 디바이스
           href: ../graphics-concepts/devices.md
           items:
             - name: 디바이스 유형
@@ -422,7 +422,7 @@
                   href: ../graphics-concepts/bc6h-format.md
                 - name: BC7 형식
                   href: ../graphics-concepts/bc7-format.md
-    - name: 기본 사항
+    - name: 기본 항목
       href: ../gaming/directx-fundamentals.md
       items:
         - name: 2D 그래픽

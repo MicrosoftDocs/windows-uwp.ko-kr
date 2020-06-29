@@ -3,12 +3,12 @@ title: WinUI 3.0 Preview 1(2020년 5월)
 description: WinUI 3.0 Preview의 개요를 설명합니다.
 ms.date: 05/14/2020
 ms.topic: article
-ms.openlocfilehash: 3aac14807f8455eb9a9294c40ddc76ddfa224659
-ms.sourcegitcommit: 7e8c7f89212c88dcc0274c69d2c3365194c0954a
+ms.openlocfilehash: cbf61c618685501957e7dec081ae132995f15df5
+ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83688481"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85448383"
 ---
 # <a name="windows-ui-library-30-preview-1-may-2020"></a>Windows UI 라이브러리 3.0 Preview 1(2020년 5월)
 
@@ -109,6 +109,7 @@ WinUI 3.0 Preview 1은 Windows 10 2018년 4월 업데이트(버전 1803 - 빌드
 
 ### <a name="developer-tools"></a>개발자 도구
 
+- 현재 C# 및 C++/WinRT 앱만 지원됩니다.
 - 데스크톱 앱은 .NET 5와 C# 8을 지원하며 패키지되어야 합니다.
 - UWP 앱은 .NET 네이티브 및 C# 7.3을 지원합니다.
 - Intellisense가 불완전합니다.
