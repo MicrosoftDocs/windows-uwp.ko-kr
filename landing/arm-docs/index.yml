@@ -6,16 +6,16 @@ metadata:
   description: ARM64 win32 및 UWP 앱 개발을 시작하는 데 필요한 정보를 제공합니다.
   ms.service: guidance
   ms.topic: landing-page
-  author: msatranjr
-  ms.author: misatran
+  author: hickeys
+  ms.author: hickeys
   ms.date: 05/08/2018
   ms.localizationpriority: medium
-  ms.openlocfilehash: 953b284568f17cedcd89c3459706ac4c88200111
-  ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+  ms.openlocfilehash: 2777d1f2d4c65be24f8582aa5c3e451b783244fe
+  ms.sourcegitcommit: 97d2ef33253af210ad2d4f036b4820056ff03f62
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/29/2020
-  ms.locfileid: "80380368"
+  ms.lasthandoff: 06/26/2020
+  ms.locfileid: "85441620"
 landingContent:
 - title: ARM 기반 Windows 10 정보
   linkLists:
@@ -40,7 +40,7 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: SDK를 사용하여 ARM64 앱 빌드
-      url: https://blogs.windows.com/buildingapps/?p=52087
+      url: https://blogs.windows.com/windowsdeveloper/2018/11/15/official-support-for-windows-10-on-arm-development/
     - text: ARM의 UWP 앱
       url: /windows/uwp/porting/apps-on-arm-troubleshooting-arm32
     - text: ARM에서 디버그
