@@ -32,4 +32,4 @@
     - name: 복잡한 앱 빌드
       href: ../get-started/plan-your-app.md
 - name: Windows 앱 샘플 가져오기
-  href: ../get-started/get-uwp-app-samples.md
+  href: ../get-started/get-app-samples.md
