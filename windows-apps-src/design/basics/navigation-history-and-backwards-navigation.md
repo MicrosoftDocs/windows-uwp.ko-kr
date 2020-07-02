@@ -7,12 +7,12 @@ ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0601aea88d0705377490fb4adf26ce3da9c4e573
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 705b0ecb474c0bb821c3a21f4b8b66073984827f
+ms.sourcegitcommit: 015291bdf2e7d67076c1c85fc025f49c840ba475
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969149"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469578"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-windows-apps"></a>Windows 앱을 위한 탐색 기록 및 뒤로 탐색
 
@@ -201,7 +201,7 @@ App.xaml 코드 숨김:
 ```csharp
 // App.xaml.cs
 Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += App_BackRequested;
-Frame rootFrame = Window.Current.Content;
+Frame rootFrame = Window.Current.Content as Frame;
 rootFrame.PointerPressed += On_PointerPressed;
 
 private void App_BackRequested(object sender, Windows.UI.Core.BackRequestedEventArgs e)

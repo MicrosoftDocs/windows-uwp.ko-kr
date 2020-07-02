@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: a38f5fa7f3ef99f5970ec5d476fb65761aa39db4
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 73e867071058dfde71979318d6d711d79460f30b
+ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75302587"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334555"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>최신 UWP 구성 요소로 데스크톱 앱 확장
 
@@ -25,7 +25,7 @@ ms.locfileid: "75302587"
 
 준비가 되었으면 시작하겠습니다.
 
-<a id="setup" />
+<a id="setup"></a>
 
 ## <a name="first-setup-your-solution"></a>먼저 솔루션 설정
 
@@ -110,7 +110,7 @@ XAML 기반 UI를 표시하려면 다음 작업을 수행합니다.
 
 :five: [UWP 프로젝트에서 원하는 페이지 표시](#parse)
 
-<a id="solution-setup" />
+<a id="solution-setup"></a>
 
 ### <a name="setup-your-solution"></a>솔루션 설정
 
@@ -122,7 +122,7 @@ XAML 기반 UI를 표시하려면 다음 작업을 수행합니다.
 
 여기에서 Windows Forms 프로젝트의 이름은 **Landmarks**이며 XAML UI를 포함하는 UWP 프로젝트의 이름은 **MapUI**입니다.
 
-<a id="xaml-UI" />
+<a id="xaml-UI"></a>
 
 ### <a name="create-a-xaml-ui"></a>XAML UI 만들기
 
@@ -171,7 +171,7 @@ UWP 프로젝트에 XAML UI를 추가합니다. 기본 지도의 XAML은 다음�
 > [!NOTE]
 > 지도 컨트롤은 인터넷에서 데이터를 다운로드 합니다. 지도 컨트롤을 사용하고 있다면, 인터넷 클라이언트 기능을 매니페스트에 추가해야 합니다.
 
-<a id="start" />
+<a id="start"></a>
 
 ### <a name="start-the-uwp-app"></a>UWP 앱 시작
 
@@ -196,7 +196,7 @@ private async void ShowMap(double lat, double lon)
 }
 ```
 
-<a id="parse" />
+<a id="parse"></a>
 
 ### <a name="parse-parameters-and-show-a-page"></a>매개 변수 분석 및 페이지 표시
 
@@ -271,7 +271,7 @@ protected override void OnNavigatedTo(NavigationEventArgs e)
 
 :five: [데스크톱 애플리케이션을 수정하여 공유 파일 가져오기](#modify-desktop)
 
-<a id="share-extension" />
+<a id="share-extension"></a>
 
 다음 단계  
 
@@ -299,7 +299,7 @@ UWP 프로젝트가 생성한 실행 파일 이름과 진입점 클래스 이름
 
 또 앱과 공유할 수 있는 파일 형식을 지정해야 합니다. 이 예제에서는 [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 애플리케이션을 비트맵 이미지의 공유 대상으로 지정하여 지원되는 파일 형식에 대한 `Bitmap`을 지정합니다.
 
-<a id="override" />
+<a id="override"></a>
 
 ### <a name="override-the-onsharetargetactivated-event-handler"></a>OnShareTargetActivated 이벤트 처리기 재정의
 
@@ -332,7 +332,7 @@ private async void shareWithDesktopApplication(ShareOperation shareOperation)
 
 이 코드에서는 사용자가 공유하는 이미지를 앱 로컬 스토리지 폴더에 저장합니다. 나중에 동일한 폴더에서 이미지를 가져오도록 데스크톱 애플리케이션을 수정합니다. 데스크톱 애플리케이션은 UWP 앱과 동일한 패키지에 포함되기 때문에 이 작업을 수행할 수 있습니다.
 
-<a id="desktop-extensions" />
+<a id="desktop-extensions"></a>
 
 ### <a name="add-desktop-extensions-to-the-uwp-project"></a>UWP 프로젝트에 데스크톱 확장 추가
 
@@ -340,7 +340,7 @@ UWP 앱 프로젝트에 **UWP용 Windows 데스크톱 확장** 확장을 추가�
 
 ![데스크톱 확장](images/desktop-to-uwp/desktop-extensions.png)
 
-<a id="full-trust" />
+<a id="full-trust"></a>
 
 ### <a name="add-the-full-trust-process-extension"></a>완전 신뢰 프로세스 확장 추가
 
@@ -356,7 +356,7 @@ UWP 앱 프로젝트에 **UWP용 Windows 데스크톱 확장** 확장을 추가�
 
 이 확장을 통해 UWP 앱은 파일을 공유하려는 데스크톱 애플리케이션을 시작할 수 있습니다. 예를 들어 [WPF PhotoStoreDemo](https://github.com/Microsoft/WPF-Samples/tree/master/Sample%20Applications/PhotoStoreDemo) 데스크톱 애플리케이션의 실행 파일을 참조합니다.
 
-<a id="modify-desktop" />
+<a id="modify-desktop"></a>
 
 ### <a name="modify-the-desktop-application-to-get-the-shared-file"></a>데스크톱 애플리케이션을 수정하여 공유 파일 가져오기
 
@@ -414,7 +414,7 @@ private void Watcher_Created(object sender, FileSystemEventArgs e)
 
 :three: [백그라운드 작업 등록](#register-background-task)
 
-<a id="implement-task" />
+<a id="implement-task"></a>
 
 ### <a name="implement-the-background-task"></a>백그라운드 작업 구현
 
@@ -455,7 +455,7 @@ public sealed class SiteVerifier : IBackgroundTask
     }
 ```
 
-<a id="configure-background-task" />
+<a id="configure-background-task"></a>
 
 ### <a name="configure-the-background-task"></a>백그라운드 작업 구성
 
@@ -473,7 +473,7 @@ public sealed class SiteVerifier : IBackgroundTask
 
 ![Timer 속성](images/desktop-to-uwp/background-task-entry-point.png)
 
-<a id="register-background-task" />
+<a id="register-background-task"></a>
 
 ### <a name="register-the-background-task"></a>백그라운드 작업 등록
 

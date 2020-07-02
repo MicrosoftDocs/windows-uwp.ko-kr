@@ -4,12 +4,12 @@ description: Windows UI 라이브러리를 설치하고 사용하는 방법입�
 ms.topic: reference
 ms.date: 05/08/2020
 keywords: Windows 10, UWP, 도구 키트 SDK
-ms.openlocfilehash: 585475df4138c6a5d4d8b885582137c972a64287
-ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
+ms.openlocfilehash: d96efb2f3de3084d74e06e70ff2811a944604f56
+ms.sourcegitcommit: 47899c30a39087bca1f058a4395cf58daacf5ae9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83775865"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345477"
 ---
 # <a name="getting-started-with-the-windows-ui-library"></a>Windows UI 라이브러리 시작
 
@@ -71,7 +71,7 @@ ms.locfileid: "83775865"
     * XAML 페이지에서 참조를 페이지 위쪽에 추가합니다.
 
         ```xaml
-        xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+        xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
         ```
 
     * 코드에서(형식 이름을 한정하지 않고 사용하려는 경우) using 지시문을 추가할 수 있습니다.

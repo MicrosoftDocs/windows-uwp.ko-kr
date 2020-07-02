@@ -9,12 +9,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 68c2427fe6b02385325f0f224cc837912621f6bb
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 63648743536dae9f7655f82674ad04255a13f437
+ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82729858"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334403"
 ---
 # <a name="windows-runtime-apis-available-to-desktop-apps"></a>데스크톱 앱에서 사용할 수 있는 Windows 런타임 API
 
@@ -49,7 +49,7 @@ ms.locfileid: "82729858"
 
 Windows 런타임 API를 사용하는 방법에 대한 예제는 GitHub에서 [데스크톱 브리지 샘플](https://github.com/Microsoft/DesktopBridgeToUWP-Samples) 및 [UWP(유니버설 Windows 플랫폼) 앱 샘플](https://github.com/Microsoft/Windows-universal-samples)을 참조하세요. Windows용 앱 빌드 블로그 게시물 [Calling Windows 10 APIs From a Desktop Application(데스크톱 애플리케이션에서 Windows 10 API 호출)](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/)을 참조하세요.
 
-<a id="new" />
+<a id="new"></a>
 
 ### <a name="apis-supported-only-in-apps-with-package-identity"></a>패키지 ID가 있는 앱에서만 지원되는 API
 
@@ -375,7 +375,7 @@ Windows 런타임 API를 사용하는 방법에 대한 예제는 GitHub에서 [�
 * [Windows.UI.StartScreen.JumpList](https://docs.microsoft.com/uwp/api/Windows.UI.StartScreen.JumpList)
 * [Windows.UI.StartScreen.JumpListItem](https://docs.microsoft.com/uwp/api/Windows.UI.StartScreen.JumpListItem)
 
-<a id="both" />
+<a id="both"></a>
 
 ### <a name="apis-supported-in-all-desktop-applications"></a>모든 데스크톱 애플리케이션에서 지원되는 API
 

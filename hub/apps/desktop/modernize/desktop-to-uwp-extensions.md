@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: b048de69a8a259509e5a5c54c5f1d61675a25a18
-ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
+ms.openlocfilehash: d9f5ca95678a8b31ed53cfdf2c4e6433bca504c8
+ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83854728"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334452"
 ---
 # <a name="integrate-your-desktop-app-with-windows-10-and-uwp"></a>데스크톱 앱을 Windows 10 및 UWP와 통합
 
@@ -36,7 +36,7 @@ ms.locfileid: "83854728"
 * [특정 형식의 파일 상황에 맞는 메뉴에 옵션 추가](#add)
 * [URL을 사용하여 특정 형식의 파일을 직접 열기](#open)
 
-<a id="point" />
+<a id="point"></a>
 
 ### <a name="point-existing-start-tiles-and-taskbar-buttons-to-your-packaged-app"></a>기존의 [시작] 타일 및 작업 표시줄 단추가 나의 패키지된 앱을 가리키도록 지정
 
@@ -55,7 +55,6 @@ ms.locfileid: "83854728"
         <DesktopApp ShortcutPath="[path]" />
     </DesktopAppMigration>
 </Extension>
-
 ```
 
 전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-rescap3-desktopappmigration)서 찾을 수 있습니다.
@@ -93,7 +92,7 @@ ms.locfileid: "83854728"
 
 [transition/migration/uninstallation 경로가 포함된 WPF 사진 뷰어](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
 
-<a id="make" />
+<a id="make"></a>
 
 ### <a name="make-your-packaged-application-open-files-instead-of-your-desktop-app"></a>패키지된 애플리케이션이 데스크톱 앱 대신 파일을 열도록 지정
 
@@ -154,7 +153,7 @@ ms.locfileid: "83854728"
 
 [transition/migration/uninstallation 경로가 포함된 WPF 사진 뷰어](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
 
-<a id="associate" />
+<a id="associate"></a>
 
 ### <a name="associate-your-packaged-application-with-a-set-of-file-types"></a>패키지된 애플리케이션을 파일 형식 세트와 연결
 
@@ -212,7 +211,7 @@ ms.locfileid: "83854728"
 
 [transition/migration/uninstallation 경로가 포함된 WPF 사진 뷰어](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
 
-<a id="add" />
+<a id="add"></a>
 
 ### <a name="add-options-to-the-context-menus-of-files-that-have-a-certain-file-type"></a>특정 형식의 파일 상황에 맞는 메뉴에 옵션 추가
 
@@ -279,7 +278,7 @@ ms.locfileid: "83854728"
 
 [transition/migration/uninstallation 경로가 포함된 WPF 사진 뷰어](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/DesktopAppTransition)
 
-<a id="open" />
+<a id="open"></a>
 
 ### <a name="open-certain-types-of-files-directly-by-using-a-url"></a>URL을 사용하여 특정 형식의 파일을 직접 열기
 
@@ -341,7 +340,7 @@ ms.locfileid: "83854728"
 * [앱의 예외 방화벽 만들기](#rules)
 * [패키지의 원하는 폴더에 DLL 파일 배치](#load-paths)
 
-<a id="rules" />
+<a id="rules"></a>
 
 ### <a name="create-firewall-exception-for-your-app"></a>앱의 예외 방화벽 만들기
 
@@ -403,7 +402,7 @@ ms.locfileid: "83854728"
 </Package>
 ```
 
-<a id="load-paths" />
+<a id="load-paths"></a>
 
 ### <a name="place-your-dll-files-into-any-folder-of-the-package"></a>패키지의 원하는 폴더에 DLL 파일 배치
 
@@ -467,7 +466,7 @@ ms.locfileid: "83854728"
 * [파일 형식에 대한 상황에 맞는 메뉴 처리기 지정](#context-menu)
 * [클라우드 서비스의 파일을 파일 탐색기에 표시](#cloud-files)
 
-<a id="define" />
+<a id="define"></a>
 
 ### <a name="define-how-your-application-behaves-when-users-select-and-open-multiple-files-at-the-same-time"></a>사용자가 여러 파일을 선택하여 동시에 열 때 애플리케이션의 동작 정의
 
@@ -541,7 +540,7 @@ ms.locfileid: "83854728"
 
 사용자가 15개 이하의 파일을 열 경우 **MultiSelectModel** 특성에 대한 기본 설정은 *Player*입니다. 그렇지 않은 경우에는 *Document*가 기본 설정입니다. UWP 앱은 항상 *Player*로 시작됩니다.
 
-<a id="show" />
+<a id="show"></a>
 
 ### <a name="show-file-contents-in-a-thumbnail-image-within-file-explorer"></a>파일 탐색기 내의 미리 보기 이미지에 파일 내용 표시
 
@@ -604,7 +603,7 @@ ms.locfileid: "83854728"
 </Package>
 ```
 
-<a id="preview" />
+<a id="preview"></a>
 
 ### <a name="show-file-contents-in-the-preview-pane-of-file-explorer"></a>파일 탐색기의 미리 보기 창에 파일 내용 표시
 
@@ -665,7 +664,7 @@ ms.locfileid: "83854728"
 </Package>
 ```
 
-<a id="enable" />
+<a id="enable"></a>
 
 ### <a name="enable-users-to-group-files-by-using-the-kind-column-in-file-explorer"></a>사용자가 파일 탐색기에서 [종류] 열을 사용하여 파일을 그룹화할 수 있도록 설정
 
@@ -733,7 +732,7 @@ ms.locfileid: "83854728"
 </Package>
 ```
 
-<a id="make-file-properties" />
+<a id="make-file-properties"></a>
 
 ### <a name="make-file-properties-available-to-search-index-property-dialogs-and-the-details-pane"></a>검색, 색인, 속성 대화 상자, 세부 정보 창에서 파일 속성을 사용할 수 있도록 설정
 
@@ -790,7 +789,7 @@ ms.locfileid: "83854728"
 </Package>
 ```
 
-<a id="context-menu" />
+<a id="context-menu"></a>
 
 ### <a name="specify-a-context-menu-handler-for-a-file-type"></a>파일 형식에 대한 상황에 맞는 메뉴 처리기 지정
 
@@ -888,7 +887,7 @@ ms.locfileid: "83854728"
 </Package>
 ```
 
-<a id="cloud-files" />
+<a id="cloud-files"></a>
 
 ### <a name="make-files-from-your-cloud-service-appear-in-file-explorer"></a>클라우드 서비스의 파일을 파일 탐색기에 표시
 
@@ -951,7 +950,7 @@ ms.locfileid: "83854728"
 </Package>
 ```
 
-<a id="start" />
+<a id="start"></a>
 
 ## <a name="start-your-application-in-different-ways"></a>다른 방법으로 애플리케이션을 시작합니다.
 
@@ -961,7 +960,7 @@ ms.locfileid: "83854728"
 * [사용자가 디바이스를 PC에 연결할 때 애플리케이션을 시작할 수 있도록 설정](#autoplay)
 * [Microsoft Store에서 업데이트를 받은 후 자동으로 다시 시작](#updates)
 
-<a id="protocol" />
+<a id="protocol"></a>
 
 ### <a name="start-your-application-by-using-a-protocol"></a>프로토콜을 사용하여 애플리케이션 시작
 
@@ -1012,7 +1011,7 @@ ms.locfileid: "83854728"
 </Package>
 ```
 
-<a id="alias" />
+<a id="alias"></a>
 
 ### <a name="start-your-application-by-using-an-alias"></a>별칭을 사용하여 애플리케이션 시작
 
@@ -1068,7 +1067,7 @@ ms.locfileid: "83854728"
 
 전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
-<a id="executable" />
+<a id="executable"></a>
 
 ### <a name="start-an-executable-file-when-users-log-into-windows"></a>사용자가 Windows에 로그인할 때 실행 파일 시작
 
@@ -1131,7 +1130,7 @@ ms.locfileid: "83854728"
  </Package>
 ```
 
-<a id="autoplay" />
+<a id="autoplay"></a>
 
 ### <a name="enable-users-to-start-your-application-when-they-connect-a-device-to-their-pc"></a>사용자가 디바이스를 PC에 연결할 때 애플리케이션을 시작할 수 있도록 설정
 
@@ -1190,7 +1189,7 @@ ms.locfileid: "83854728"
 </Package>
 ```
 
-<a id="updates" />
+<a id="updates"></a>
 
 ### <a name="restart-automatically-after-receiving-an-update-from-the-microsoft-store"></a>Microsoft Store에서 업데이트를 받은 후 자동으로 다시 시작
 
@@ -1203,7 +1202,7 @@ ms.locfileid: "83854728"
 애플리케이션의 각 창에서 [WM_ENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-endsession) 메시지를 수신하면 애플리케이션은 데이터를 저장한 후 종료됩니다.
 
 >[!NOTE]
-또한 활성 창은 애플리케이션이 [WM ENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-endsession)을 처리하지 않는 경우에도 [WM_CLOSE](https://docs.microsoft.com/windows/desktop/winmsg/wm-close) 메시지를 수신합니다.
+> 또한 활성 창은 애플리케이션이 [WM ENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-endsession)을 처리하지 않는 경우에도 [WM_CLOSE](https://docs.microsoft.com/windows/desktop/winmsg/wm-close) 메시지를 수신합니다.
 
 이때 애플리케이션에서 30초 내에 프로세스를 종료하지 않으면 플랫폼에서 강제로 프로세스를 종료합니다.
 
@@ -1217,7 +1216,7 @@ ms.locfileid: "83854728"
 * [다른 Windows 애플리케이션과 글꼴 공유](#fonts)
 * [UWP(유니버설 Windows 플랫폼) 앱에서 Win32 프로세스 시작](#win32-process)
 
-<a id="printing" />
+<a id="printing"></a>
 
 ### <a name="make-your-application-appear-as-the-print-target-in-applications-that-support-printing"></a>애플리케이션이 인쇄를 지원하는 애플리케이션에 인쇄 대상으로 표시되도록 설정
 
@@ -1269,7 +1268,7 @@ XPS(XML Paper Specification) 형식으로 인쇄 데이터를 수신하려면 �
 
 이 확장을 사용하는 샘플은 [여기](https://github.com/Microsoft/DesktopBridgeToUWP-Samples/tree/master/Samples/PrintToPDF)서 찾을 수 있습니다.
 
-<a id="fonts" />
+<a id="fonts"></a>
 
 ### <a name="share-fonts-with-other-windows-applications"></a>다른 Windows 애플리케이션과 글꼴 공유
 
@@ -1317,7 +1316,7 @@ XPS(XML Paper Specification) 형식으로 인쇄 데이터를 수신하려면 �
 </Package>
 ```
 
-<a id="win32-process" />
+<a id="win32-process"></a>
 
 ### <a name="start-a-win32-process-from-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱에서 Win32 프로세스 시작
 

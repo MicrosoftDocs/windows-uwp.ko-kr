@@ -1,17 +1,15 @@
 ---
 title: search 명령
 description: 설치할 수 있는 사용 가능한 애플리케이션에 대한 원본을 쿼리합니다.
-author: KevinLaMS
-ms.author: kevinla
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a176c1138ebfe3f3a9eb2cbef02dad745cfe170
-ms.sourcegitcommit: 8193aef04deb3514eb2d34bfe5cb9424ba12cd76
+ms.openlocfilehash: 366d2176fe9465495d8ed8f2eeb7912229bd07f1
+ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83865020"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334476"
 ---
 # <a name="search-command-winget"></a>search 명령(winget)
 

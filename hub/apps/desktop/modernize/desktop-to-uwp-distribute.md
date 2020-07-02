@@ -8,12 +8,12 @@ ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 14ad6707b7203dddd9aa7be186e76da677bbd675
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 7eb57e8cea83a4d45087be4c4685ada8d108fa7a
+ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75302707"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334499"
 ---
 # <a name="distribute-your-packaged-desktop-app"></a>패키지 데스크톱 앱 배포
 
@@ -35,7 +35,7 @@ Microsoft Store에 제출하기 전에 애플리케이션에 서명할 필요가
 >[!IMPORTANT]
 > 애플리케이션을 Microsoft Store에 게시할 계획이라면 Windows 10 S를 실행되는 디바이스에서 애플리케이션이 올바르게 작동하는지 확인하세요. 이것은 Store 요구 사항입니다. [Windows 10 S용 Windows 앱 테스트](/windows/msix/desktop/desktop-to-uwp-test-windows-s)를 참조하세요.
 
-<a id="side-load" />
+<a id="side-load"></a>
 
 ## <a name="distribute-your-application-without-placing-it-onto-the-microsoft-store"></a>Microsoft Store에 배치하지 않고 애플리케이션을 배포
 
@@ -58,7 +58,7 @@ Windows 10 S를 실행하는 디바이스에 애플리케이션을 배포하려�
 
 애플리케이션을 다른 디바이스에 테스트용으로 로드하는 방법은 [Windows 10에서 LOB 앱을 테스트용으로 로드](/windows/application-management/sideload-apps-in-windows-10)를 참조하세요.
 
-<a id="transition-users" />
+<a id="transition-users"></a>
 
 ## <a name="transition-users-to-your-packaged-app"></a>패키지된 앱으로 사용자 전환
 
@@ -126,7 +126,7 @@ private void MigrateUserData()
 
 ```csharp
 private void RemoveDesktopApp()
-{              
+{
     //Typically, you can find your uninstall string at this location.
     String uninstallString = (String)Microsoft.Win32.Registry.GetValue
         (@"HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion" +
