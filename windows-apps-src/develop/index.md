@@ -5,12 +5,12 @@ keywords: Uwp 앱 개발 스레딩 비동기 플랫폼 개요 포털 개발 개�
 ms.date: 03/29/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f969c1c9ea5bb436ebad8d5e0410b6bf553885c0
-ms.sourcegitcommit: d1eba7cf79cd2885b5bf8f5501bc44a569ab9864
+ms.openlocfilehash: 86fa9fb7f2cea7f190640b02fdcf219c3376115d
+ms.sourcegitcommit: 6cdba316bdbd85a2429259ebfb59ff94440e234a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84172605"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882852"
 ---
 # <a name="develop-uwp-apps"></a>UWP 앱 개발
 
@@ -41,7 +41,7 @@ Windows 10용 UWP 앱을 만드는 방법 문서와 코드입니다.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage" style="background-color: #f2f2f2">                 
-                            <img src="https://docs.microsoft.com//media/hubs/windows/win_developer-uwp.svg" alt=" "/>
+                            <img src="https://docs.microsoft.com//media/hubs/windows/win_developer-uwp.svg" alt="UWP overview"/>
                         </div>
                     </div>
                     <div class="cardText">
@@ -60,7 +60,7 @@ Windows 10용 UWP 앱을 만드는 방법 문서와 코드입니다.
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage" style="background-color: #f2f2f2">                
-                            <img src="https://docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt=" " />
+                            <img src="https://docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt="Porting guide" />
                         </div>
                     </div>                
                     <div class="cardText">
