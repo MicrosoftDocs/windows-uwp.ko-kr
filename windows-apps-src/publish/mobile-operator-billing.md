@@ -6,17 +6,17 @@ ms.date: 05/29/2020
 ms.topic: article
 keywords: windows 10, uwp, 모바일 운영자, 모바일 청구, 모바일 운영자 요금 청구
 ms.localizationpriority: medium
-ms.openlocfilehash: 16783e71a170118f470a351a7f5dc4c2a178405e
-ms.sourcegitcommit: 8eae7aec4c4ffb8a0c30e9d03744942fb23958d9
+ms.openlocfilehash: 2be7938faddaf50c96005f32c77f523ebf4061e3
+ms.sourcegitcommit: ae195892efb9d3abd1190776617984d4219c6777
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84334218"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85913230"
 ---
 # <a name="mobile-operator-billing"></a>모바일 운영자 요금 청구
 
 > [!NOTE]
-> 지급 계정 구성, 지급 누락, 지급 배치 또는 기타 항목을 포함 하 여 지급에 대 한 지원을 찾고 있는 경우 [여기](https://developer.microsoft.com/windows/support)에서 지원 담당자에 게 문의 하세요.
+> 지급 계정 구성, 지급 누락, 지급 보류 등을 포함하여 지급과 관련된 지원이 필요한 경우 [여기](https://developer.microsoft.com/windows/support)의 지원에 문의하세요.
 
 Microsoft Store은 Windows 10을 실행 하는 장치, Windows 10 Mobile을 실행 하는 휴대폰 및 Xbox One 콘솔에 대 한 지불 방법으로 모바일 운영자 요금 청구를 제공 합니다. 고객의 모바일 운영자가이 기능을 지 원하는 경우 고객은 지불 방법으로 모바일 운영자 대금 청구를 추가 하 고 모바일 계정을 사용 하 여 스토어 구매를 수행 하는 데 사용할 수 있습니다.
 
@@ -30,16 +30,16 @@ Microsoft Store은 Windows 10을 실행 하는 장치, Windows 10 Mobile을 실�
 | 국가/지역       | 모바일 운영자                                        |
 |----------------------|---------------------------------------------------------|
 | 오스트레일리아            | Optus                                                   |
-| 오스트리아              | Hutchison 3G 오스트리아, A1 Telekom, T-모바일/tele-transmission  |
+| 오스트리아              | A1 Telekom, Hutchison 3G 오스트리아, T-모바일/tele-transmission  |
 | 벨기에              | 기본, Proximus                                          |
 | 캐나다               | Telus                                                   |
 | 체코              | T-모바일                                                |
 | 덴마크              | 3, TDC/., Telenor, Telia                         |
 | 핀란드              | DNA, Elisa                                              |
-| 프랑스               | 주황                                                  |
+| 프랑스               | Orange                                                  |
 | 독일              | O2, Telekom Deutschland, Vodafone                       |
 | 헝가리              | Telenor                                                 |
-| 이탈리아                | 바람, Tre                                               |
+| 이탈리아                | Tre, 바람                                               |
 | 말레이시아             | 에서 digi                                                    |
 | 네덜란드          | KPN/통신 요새                                           |
 | 노르웨이               | Telenor/Talkmore, Telia/OneCall                     |
@@ -47,11 +47,11 @@ Microsoft Store은 Windows 10을 실행 하는 장치, Windows 10 Mobile을 실�
 | 싱가포르            | M1 제한 된 StarHub                                     |
 | 슬로바키아             | 슬로바키아어 Telekom                                          |
 | 남아프리카 공화국         | Vodacom                                                 |
-| 스페인                | 주황                                                  |
-| 스웨덴               | 통신, 3                                              |
-| 스위스          | Swisscom, 일출                                       |
+| 스페인                | Orange                                                  |
+| 스웨덴               | 3, 통신 또는                                              |
+| 스위스          | 일출, Swisscom                                       |
 | 대만               | FarEasTone                                              |
 | 터키               | Turkcell                                                |
 | 아랍에미리트연합국 | Etisalat                                                |
 | 미국        | 스 프린트, Verizon                                         |
-| 영국       | O2, 3 영국, EE                                            |
+| 영국       | 3 영국, EE, O2, Vodaphone                                 |
