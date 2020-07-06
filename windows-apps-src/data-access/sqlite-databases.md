@@ -1,16 +1,16 @@
 ---
 title: UWP 앱에서 SQLite 데이터베이스 사용
 description: UWP 앱에서 SQLite 데이터베이스를 사용합니다.
-ms.date: 11/30/2018
+ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp, SQLite, 데이터베이스
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e10dc35464472a16f64ec94cd0fdd78c41eb484
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c8eb384be08addd75e77f37d6fb579a179e68581
+ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75302727"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85448353"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>UWP 앱에서 SQLite 데이터베이스 사용
 SQLite를 사용하여 사용자의 디바이스에 있는 경량 데이터베이스에 데이터를 저장하고 검색할 수 있습니다. 이 가이드에서는 그 방법을 보여줍니다.
@@ -98,6 +98,9 @@ UWP 프로젝트의 최소 버전을 Fall Creator Update로 올리면 몇 가지
 솔루션을 마우스 오른쪽 단추로 클릭한 다음, **솔루션용 NuGet 패키지 관리**를 클릭합니다.
 
 ![NuGet 패키지 관리](images/manage-nuget-2.png)
+
+> [!NOTE]
+> .NET Standard 클래스 라이브러리가 UWP 앱의 앱 폴더 및 이미지 자산에 액세스할 수 있도록 하려면 해당 **속성**에서 **EmbeddedResource** 및 **CopyAlways**로 표시해야 합니다.
 
 여기서 선택할 수 있습니다. Windows에 포함된 SQLite 버전을 사용할 수도 있고, 또는 특정 SQLite 버전을 사용해야 하는 이유가 있는 경우 패키지에 SQLite 라이브러리를 포함시킬 수도 있습니다.
 

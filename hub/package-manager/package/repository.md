@@ -1,17 +1,15 @@
 ---
 title: 리포지토리에 매니페스트 제출
-description: ''
-author: denelon
-ms.author: denelon
+description: 애플리케이션을 설명하는 패키지 매니페스트가 만들어지면 이 매니페스트를 Windows 패키지 관리자 리포지토리에 제출할 수 있습니다.
 ms.date: 04/29/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c5ebcc564b4db16c1d16385cbeaf7fd6d82c8f18
-ms.sourcegitcommit: 8193aef04deb3514eb2d34bfe5cb9424ba12cd76
+ms.openlocfilehash: 19a66b2d0724eb0f4f8c3f171033e4e616751717
+ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83865030"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334591"
 ---
 # <a name="submit-your-manifest-to-the-repository"></a>리포지토리에 매니페스트 제출
 
@@ -112,7 +110,7 @@ Windows 패키지 관리자 리포지토리에 대한 모든 애플리케이션 
 
 * 매니페스트는 [스키마 요구 사항](manifest.md#manifest-contents)을 준수합니다.
 * 매니페스트의 모든 URL은 안전한 웹 사이트로 연결됩니다.
-* 설치 관리자 및 애플리케이션에는 바이러스가 없습니다.
+* 설치 관리자 및 애플리케이션에는 바이러스가 없습니다. 의도치 않게 패키지가 맬웨어로 식별될 수 있습니다. 맬웨어가 아니라고 생각되면 [여기](https://www.microsoft.com/wdsi/filesubmission)서 설치 관리자를 Defender 팀에 제출하여 분석할 수 있습니다.
 * 애플리케이션은 관리자 및 비 관리자 모두에 대해 올바르게 설치 및 제거됩니다.
 * 설치 관리자는 비 대화형 모드를 지원합니다.
 * 모든 매니페스트 항목은 정확하고 잘못 해석되지 않습니다.

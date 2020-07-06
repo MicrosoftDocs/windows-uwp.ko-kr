@@ -5,15 +5,15 @@ ms.date: 06/21/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 속성
 ms.localizationpriority: medium
-ms.openlocfilehash: 06934c1c3b23c244fb32ffa957cffb926ffd1bb0
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 12a20ae3df6ae83723550bf365aadab99b1b3b7b
+ms.sourcegitcommit: 90fe7a9a5bfa7299ad1b78bbef289850dfbf857d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79209198"
+ms.lasthandoff: 06/13/2020
+ms.locfileid: "84756532"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>XAML 컨트롤, C++/WinRT 속성에 바인딩
-XAML 컨트롤에 효과적으로 바인딩할 수 있는 속성은 *식별할 수 있는*(observable) 속성이라고 합니다. 이 아이디어는 ‘관찰자 패턴’이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다.  이 항목에서는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)에서 관찰 가능한 속성을 구현하는 방법과 XAML 컨트롤을 이 속성에 바인딩하는 방법을 보여줍니다(배경 정보는 [데이터 바인딩](/windows/uwp/data-binding) 참조).
+XAML 컨트롤에 효과적으로 바인딩할 수 있는 속성은 *식별할 수 있는*(observable) 속성이라고 합니다. 이 아이디어는 ‘관찰자 패턴’이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다. 이 항목에서는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)에서 관찰 가능한 속성을 구현하는 방법과 XAML 컨트롤을 이 속성에 바인딩하는 방법을 보여줍니다(배경 정보는 [데이터 바인딩](/windows/uwp/data-binding) 참조).
 
 > [!IMPORTANT]
 > C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
@@ -47,7 +47,7 @@ namespace Bookstore
 > [!NOTE]
 > 보기 모델 클래스(실제로는 애플리케이션에서 선언하는 런타임 클래스)는 기본 클래스에서 파생될 필요가 없습니다. 위에 선언된 **BookSku** 클래스가 해당하는 예입니다. 이 클래스는 인터페이스를 구현하지만 기본 클래스에서 파생되지 않습니다.
 >
-> 기본 클래스에서 ‘파생된’ 애플리케이션에서 선언하는 런타임 클래스를 ‘구성 가능’ 클래스라고 합니다.   또한 구성 가능 클래스에 관련된 제약 조건이 있습니다. 애플리케이션이 Visual Studio 및 Microsoft Store에서 제출의 유효성 검사에 사용되는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 통과하여 Microsoft Store로 성공적으로 수집되려면 구성 가능 클래스는 기본적으로 Windows 기본 클래스에서 파생되어야 합니다. 즉, 상속 계층 구조의 루트에 있는 클래스는 Windows.* 네임스페이스에서 시작되는 형식이어야 합니다. 기본 클래스에서 런타임 클래스를 파생시켜야 하는 경우(예를 들어 파생시킬 모든 보기 모델에 대한 **BindableBase** 클래스를 구현하려면) [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)에서 파생시킬 수 있습니다.
+> 기본 클래스에서 ‘파생된’ 애플리케이션에서 선언하는 런타임 클래스를 ‘구성 가능’ 클래스라고 합니다.  또한 구성 가능 클래스에 관련된 제약 조건이 있습니다. 애플리케이션이 Visual Studio 및 Microsoft Store에서 제출의 유효성 검사에 사용되는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 통과하여 Microsoft Store로 성공적으로 수집되려면 구성 가능 클래스는 기본적으로 Windows 기본 클래스에서 파생되어야 합니다. 즉, 상속 계층 구조의 루트에 있는 클래스는 Windows.* 네임스페이스에서 시작되는 형식이어야 합니다. 기본 클래스에서 런타임 클래스를 파생시켜야 하는 경우(예를 들어 파생시킬 모든 보기 모델에 대한 **BindableBase** 클래스를 구현하려면) [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)에서 파생시킬 수 있습니다.
 >
 > 보기 모델은 보기의 추상화이므로 보기(XAML 태그)에 직접 바인딩됩니다. 데이터 모델은 데이터의 추상화이며 보기 모델에서만 사용되고 XAML에 직접 바인딩되지 않습니다. 따라서 데이터 모델을 런타임 클래스가 아니라 C++ 구조체 또는 클래스로 선언할 수 있습니다. MIDL로 선언할 필요가 없으며 원하는 모든 상속 계층 구조를 자유롭게 사용할 수 있습니다.
 
@@ -56,7 +56,13 @@ namespace Bookstore
 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **파일 탐색기에서 폴더 열기**를 클릭합니다. 파일 탐색기에서 프로젝트 폴더가 열립니다. 여기서 스텁 파일인 `BookSku.h` 및 `BookSku.cpp`를 `\Bookstore\Bookstore\Generated Files\sources\` 폴더에서 프로젝트 폴더인 `\Bookstore\Bookstore\`로 복사합니다. **솔루션 탐색기**에서 프로젝트 노드를 선택하고 **모든 파일 표시**가 켜져 있는지 확인합니다. 복사한 스텁 파일을 마우스 오른쪽 단추로 클릭하고 **프로젝트에 포함**을 클릭합니다.
 
 ## <a name="implement-booksku"></a>**BookSku** 구현
-이제 `\Bookstore\Bookstore\BookSku.h`와 `BookSku.cpp`를 열고 런타임 클래스를 구현합니다. `BookSku.h`에서 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)을 가져올 생성자, 제목 문자열을 저장할 프라이빗 멤버 및 제목 변경 시 발생되는 이벤트에 사용할 프라이빗 멤버를 추가합니다. 이 변경을 수행한 후 `BookSku.h`가 다음과 같이 표시됩니다.
+이제 `\Bookstore\Bookstore\BookSku.h`와 `BookSku.cpp`를 열고 런타임 클래스를 구현합니다. `BookSku.h`에서 다음과 같이 변경합니다.
+
+- [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) 값을 사용하는 생성자를 추가합니다. 이 값은 제목 문자열입니다.
+- 제목 문자열을 저장할 프라이빗 멤버를 추가합니다.
+- 제목이 변경될 때 발생시킬 이벤트에 대한 또 다른 프라이빗 멤버를 추가합니다.
+
+이 변경을 수행한 후 `BookSku.h`가 다음과 같이 표시됩니다.
 
 ```cppwinrt
 // BookSku.h

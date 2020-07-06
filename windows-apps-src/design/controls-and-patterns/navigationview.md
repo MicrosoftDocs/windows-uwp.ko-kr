@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2ac2e95e4233a490187066e0d19f1eeb4f330265
-ms.sourcegitcommit: 3b8fac693c0b031def5cedc8ae3632a2aa00f1f6
+ms.openlocfilehash: b1f3881081b22fd98e9956f3c2fe45922531677b
+ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "84467753"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85448413"
 ---
 # <a name="navigation-view"></a>탐색 보기
 
@@ -332,7 +332,7 @@ PaneDisplayMode가 LeftMinimal로 설정된 탐색 보기
 ![위쪽 또는 왼쪽 적응형 동작의 예 1](images/navigation-top-to-left.png)
 
 ```xaml
-<Grid >
+<Grid>
     <NavigationView x:Name="NavigationViewControl" >
         <NavigationView.MenuItems>
             <NavigationViewItem Content="A" x:Name="A" />
@@ -412,7 +412,7 @@ NavigationView에는 기본 제공 뒤로 단추가 있지만, 앞으로 탐색�
 > 이 코드는 NavigationView의 [Windows UI 라이브러리](/uwp/toolkits/winui/) 버전을 사용하는 방법을 보여 줍니다. NavigationView의 플랫폼 버전을 사용하는 경우에는 앱 프로젝트의 최소 버전이 SDK 17763 이상이어야 합니다. 플랫폼 버전을 사용하려면 `muxc:`에 대한 모든 참조를 제거합니다.
 
 ```xaml
-<!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
+<Page ... xmlns:muxc="using:Microsoft.UI.Xaml.Controls" ... >
 <Grid>
     <muxc:NavigationView x:Name="NavView"
                          Loaded="NavView_Loaded"
@@ -467,6 +467,7 @@ NavigationView에는 기본 제공 뒤로 단추가 있지만, 앞으로 탐색�
         </VisualStateGroup>
     </VisualStateManager.VisualStateGroups>
 </Grid>
+</Page>
 ```
 
 > [!IMPORTANT]
@@ -560,7 +561,9 @@ private void NavView_SelectionChanged(muxc.NavigationView sender,
     }
 }
 
-private void NavView_Navigate(string navItemTag, Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo transitionInfo)
+private void NavView_Navigate(
+    string navItemTag,
+    Windows.UI.Xaml.Media.Animation.NavigationTransitionInfo transitionInfo)
 {
     Type _page = null;
     if (navItemTag == "settings")
@@ -672,181 +675,42 @@ namespace winrt::NavigationViewCppWinRT::implementation
 {
     struct MainPage : MainPageT<MainPage>
     {
-        MainPage()
-        {
-            InitializeComponent();
-            m_pages.push_back(std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>(L"home", winrt::xaml_typename<NavigationViewCppWinRT::HomePage>()));
-            m_pages.push_back(std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>(L"apps", winrt::xaml_typename<NavigationViewCppWinRT::AppsPage>()));
-            m_pages.push_back(std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>(L"games", winrt::xaml_typename<NavigationViewCppWinRT::GamesPage>()));
-            m_pages.push_back(std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>(L"music", winrt::xaml_typename<NavigationViewCppWinRT::MusicPage>()));
-        }
+        MainPage();
 
-        double MainPage::NavViewCompactModeThresholdWidth()
-        {
-            return NavView().CompactModeThresholdWidth();
-        }
-
-        void ContentFrame_NavigationFailed(Windows::Foundation::IInspectable const& /* sender */, Windows::UI::Xaml::Navigation::NavigationFailedEventArgs const& args)
-        {
-            throw winrt::hresult_error(E_FAIL, winrt::hstring(L"Failed to load Page ") + args.SourcePageType().Name);
-        }
-
-        // List of ValueTuple holding the Navigation Tag and the relative Navigation Page
-        std::vector<std::pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>> m_pages;
-
-        void NavView_Loaded(Windows::Foundation::IInspectable const& /* sender */, Windows::UI::Xaml::RoutedEventArgs const& /* args */)
-        {
-            // You can also add items in code.
-            NavView().MenuItems().Append(muxc::NavigationViewItemSeparator());
-            muxc::NavigationViewItem navigationViewItem;
-            navigationViewItem.Content(winrt::box_value(L"My content"));
-            navigationViewItem.Icon(wuxc::SymbolIcon(static_cast<wuxc::Symbol>(0xF1AD)));
-            navigationViewItem.Tag(winrt::box_value(L"content"));
-            NavView().MenuItems().Append(navigationViewItem);
-            m_pages.push_back(std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>(L"content", winrt::xaml_typename<NavigationViewCppWinRT::MyContentPage>()));
-
-            // Add handler for ContentFrame navigation.
-            ContentFrame().Navigated({ this, &MainPage::On_Navigated });
-
-            // NavView doesn't load any page by default, so load home page.
-            NavView().SelectedItem(NavView().MenuItems().GetAt(0));
-            // If navigation occurs on SelectionChanged, this isn't needed.
-            // Because we use ItemInvoked to navigate, we need to call Navigate
-            // here to load the home page.
-            NavView_Navigate(L"home", Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo());
-
-            // Add keyboard accelerators for backwards navigation.
-            Windows::UI::Xaml::Input::KeyboardAccelerator goBack;
-            goBack.Key(Windows::System::VirtualKey::GoBack);
-            goBack.Invoked({ this, &MainPage::BackInvoked });
-            KeyboardAccelerators().Append(goBack);
-
-            // ALT routes here
-            Windows::UI::Xaml::Input::KeyboardAccelerator altLeft;
-            goBack.Key(Windows::System::VirtualKey::Left);
-            goBack.Modifiers(Windows::System::VirtualKeyModifiers::Menu);
-            goBack.Invoked({ this, &MainPage::BackInvoked });
-            KeyboardAccelerators().Append(altLeft);
-        }
-
-        void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const& /* sender */, muxc::NavigationViewItemInvokedEventArgs const& args)
-        {
-            if (args.IsSettingsInvoked())
-            {
-                NavView_Navigate(L"settings", args.RecommendedNavigationTransitionInfo());
-            }
-            else if (args.InvokedItemContainer())
-            {
-                NavView_Navigate(winrt::unbox_value_or<winrt::hstring>(args.InvokedItemContainer().Tag(), L"").c_str(), args.RecommendedNavigationTransitionInfo());
-            }
-        }
+        double NavViewCompactModeThresholdWidth();
+        void ContentFrame_NavigationFailed(
+            Windows::Foundation::IInspectable const& /* sender */,
+            Windows::UI::Xaml::Navigation::NavigationFailedEventArgs const& args);
+        void NavView_Loaded(
+            Windows::Foundation::IInspectable const& /* sender */,
+            Windows::UI::Xaml::RoutedEventArgs const& /* args */);
+        void NavView_ItemInvoked(
+            Windows::Foundation::IInspectable const& /* sender */,
+            muxc::NavigationViewItemInvokedEventArgs const& args);
 
         // NavView_SelectionChanged is not used in this example, but is shown for completeness.
-        // You will typically handle either ItemInvoked or SelectionChanged to perform navigation,
+        // You'll typically handle either ItemInvoked or SelectionChanged to perform navigation,
         // but not both.
-        void NavView_SelectionChanged(muxc::NavigationView const& /* sender */, muxc::NavigationViewSelectionChangedEventArgs const& args)
-        {
-            if (args.IsSettingsSelected())
-            {
-                NavView_Navigate(L"settings", args.RecommendedNavigationTransitionInfo());
-            }
-            else if (args.SelectedItemContainer())
-            {
-                NavView_Navigate(winrt::unbox_value_or<winrt::hstring>(args.SelectedItemContainer().Tag(), L"").c_str(), args.RecommendedNavigationTransitionInfo());
-            }
-        }
+        void NavView_SelectionChanged(
+            muxc::NavigationView const& /* sender */,
+            muxc::NavigationViewSelectionChangedEventArgs const& args);
+        void NavView_Navigate(
+            std::wstring navItemTag,
+            Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& transitionInfo);
+        void NavView_BackRequested(
+            muxc::NavigationView const& /* sender */,
+            muxc::NavigationViewBackRequestedEventArgs const& /* args */);
+        void BackInvoked(
+            Windows::UI::Xaml::Input::KeyboardAccelerator const& /* sender */,
+            Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args);
+        bool On_BackRequested();
+        void On_Navigated(
+            Windows::Foundation::IInspectable const& /* sender */,
+            Windows::UI::Xaml::Navigation::NavigationEventArgs const& args);
 
-        void NavView_Navigate(std::wstring navItemTag, Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& transitionInfo)
-        {
-            Windows::UI::Xaml::Interop::TypeName pageTypeName;
-            if (navItemTag == L"settings")
-            {
-                pageTypeName = winrt::xaml_typename<NavigationViewCppWinRT::SettingsPage>();
-            }
-            else
-            {
-                for (auto&& eachPage : m_pages)
-                {
-                    if (eachPage.first == navItemTag)
-                    {
-                        pageTypeName = eachPage.second;
-                        break;
-                    }
-                }
-            }
-            // Get the page type before navigation so you can prevent duplicate
-            // entries in the backstack.
-            Windows::UI::Xaml::Interop::TypeName preNavPageType = ContentFrame().CurrentSourcePageType();
-
-            // Navigate only if the selected page isn't currently loaded.
-            if (pageTypeName.Name != L"" && preNavPageType.Name != pageTypeName.Name)
-            {
-                ContentFrame().Navigate(pageTypeName, nullptr, transitionInfo);
-            }
-        }
-
-        void NavView_BackRequested(muxc::NavigationView const& /* sender */, muxc::NavigationViewBackRequestedEventArgs const& /* args */)
-        {
-            On_BackRequested();
-        }
-
-        void BackInvoked(Windows::UI::Xaml::Input::KeyboardAccelerator const& /* sender */, Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args)
-        {
-            On_BackRequested();
-            args.Handled(true);
-        }
-
-        bool On_BackRequested()
-        {
-            if (!ContentFrame().CanGoBack())
-                return false;
-
-            // Don't go back if the nav pane is overlaid.
-            if (NavView().IsPaneOpen() &&
-                (NavView().DisplayMode() == muxc::NavigationViewDisplayMode::Compact ||
-                    NavView().DisplayMode() == muxc::NavigationViewDisplayMode::Minimal))
-                return false;
-
-            ContentFrame().GoBack();
-            return true;
-        }
-
-        void On_Navigated(Windows::Foundation::IInspectable const& /* sender */, Windows::UI::Xaml::Navigation::NavigationEventArgs const& args)
-        {
-            NavView().IsBackEnabled(ContentFrame().CanGoBack());
-
-            if (ContentFrame().SourcePageType().Name == winrt::xaml_typename<NavigationViewCppWinRT::SettingsPage>().Name)
-            {
-                // SettingsItem is not part of NavView.MenuItems, and doesn't have a Tag.
-                NavView().SelectedItem(NavView().SettingsItem().as<muxc::NavigationViewItem>());
-                NavView().Header(winrt::box_value(L"Settings"));
-            }
-            else if (ContentFrame().SourcePageType().Name != L"")
-            {
-                for (auto&& eachPage : m_pages)
-                {
-                    if (eachPage.second.Name == args.SourcePageType().Name)
-                    {
-                        for (auto&& eachMenuItem : NavView().MenuItems())
-                        {
-                            auto navigationViewItem = eachMenuItem.try_as<muxc::NavigationViewItem>();
-                            {
-                                if (navigationViewItem)
-                                {
-                                    winrt::hstring hstringValue = winrt::unbox_value_or<winrt::hstring>(navigationViewItem.Tag(), L"");
-                                    if (hstringValue == eachPage.first)
-                                    {
-                                        NavView().SelectedItem(navigationViewItem);
-                                        NavView().Header(navigationViewItem.Content());
-                                    }
-                                }
-                            }
-                        }
-                        break;
-                    }
-                }
-            }
-        }
+    private:
+        // Vector of std::pair holding the Navigation Tag and the relative Navigation Page.
+        std::vector<std::pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>> m_pages;
     };
 }
 
@@ -864,6 +728,216 @@ namespace winrt::NavigationViewCppWinRT::factory_implementation
 
 namespace winrt::NavigationViewCppWinRT::implementation
 {
+    MainPage::MainPage()
+    {
+        InitializeComponent();
+        m_pages.push_back(std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>
+            (L"home", winrt::xaml_typename<NavigationViewCppWinRT::HomePage>()));
+        m_pages.push_back(std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>
+            (L"apps", winrt::xaml_typename<NavigationViewCppWinRT::AppsPage>()));
+        m_pages.push_back(std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>
+            (L"games", winrt::xaml_typename<NavigationViewCppWinRT::GamesPage>()));
+        m_pages.push_back(std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>
+            (L"music", winrt::xaml_typename<NavigationViewCppWinRT::MusicPage>()));
+    }
+
+    double MainPage::NavViewCompactModeThresholdWidth()
+    {
+        return NavView().CompactModeThresholdWidth();
+    }
+
+    void MainPage::ContentFrame_NavigationFailed(
+        Windows::Foundation::IInspectable const& /* sender */,
+        Windows::UI::Xaml::Navigation::NavigationFailedEventArgs const& args)
+    {
+        throw winrt::hresult_error(
+            E_FAIL, winrt::hstring(L"Failed to load Page ") + args.SourcePageType().Name);
+    }
+
+    // List of ValueTuple holding the Navigation Tag and the relative Navigation Page
+    std::vector<std::pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>> m_pages;
+
+    void MainPage::NavView_Loaded(
+        Windows::Foundation::IInspectable const& /* sender */,
+        Windows::UI::Xaml::RoutedEventArgs const& /* args */)
+    {
+        // You can also add items in code.
+        NavView().MenuItems().Append(muxc::NavigationViewItemSeparator());
+        muxc::NavigationViewItem navigationViewItem;
+        navigationViewItem.Content(winrt::box_value(L"My content"));
+        navigationViewItem.Icon(wuxc::SymbolIcon(static_cast<wuxc::Symbol>(0xF1AD)));
+        navigationViewItem.Tag(winrt::box_value(L"content"));
+        NavView().MenuItems().Append(navigationViewItem);
+        m_pages.push_back(
+            std::make_pair<std::wstring, Windows::UI::Xaml::Interop::TypeName>(
+                L"content", winrt::xaml_typename<NavigationViewCppWinRT::MyContentPage>()));
+
+        // Add handler for ContentFrame navigation.
+        ContentFrame().Navigated({ this, &MainPage::On_Navigated });
+
+        // NavView doesn't load any page by default, so load home page.
+        NavView().SelectedItem(NavView().MenuItems().GetAt(0));
+        // If navigation occurs on SelectionChanged, then this isn't needed.
+        // Because we use ItemInvoked to navigate, we need to call Navigate
+        // here to load the home page.
+        NavView_Navigate(L"home",
+            Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo());
+
+        // Add keyboard accelerators for backwards navigation.
+        Windows::UI::Xaml::Input::KeyboardAccelerator goBack;
+        goBack.Key(Windows::System::VirtualKey::GoBack);
+        goBack.Invoked({ this, &MainPage::BackInvoked });
+        KeyboardAccelerators().Append(goBack);
+
+        // ALT routes here
+        Windows::UI::Xaml::Input::KeyboardAccelerator altLeft;
+        goBack.Key(Windows::System::VirtualKey::Left);
+        goBack.Modifiers(Windows::System::VirtualKeyModifiers::Menu);
+        goBack.Invoked({ this, &MainPage::BackInvoked });
+        KeyboardAccelerators().Append(altLeft);
+    }
+
+    void MainPage::NavView_ItemInvoked(
+        Windows::Foundation::IInspectable const& /* sender */,
+        muxc::NavigationViewItemInvokedEventArgs const& args)
+    {
+        if (args.IsSettingsInvoked())
+        {
+            NavView_Navigate(L"settings", args.RecommendedNavigationTransitionInfo());
+        }
+        else if (args.InvokedItemContainer())
+        {
+            NavView_Navigate(
+                winrt::unbox_value_or<winrt::hstring>(
+                    args.InvokedItemContainer().Tag(), L"").c_str(),
+                args.RecommendedNavigationTransitionInfo());
+        }
+    }
+
+    // NavView_SelectionChanged is not used in this example, but is shown for completeness.
+    // You will typically handle either ItemInvoked or SelectionChanged to perform navigation,
+    // but not both.
+    void MainPage::NavView_SelectionChanged(
+        muxc::NavigationView const& /* sender */,
+        muxc::NavigationViewSelectionChangedEventArgs const& args)
+    {
+        if (args.IsSettingsSelected())
+        {
+            NavView_Navigate(L"settings", args.RecommendedNavigationTransitionInfo());
+        }
+        else if (args.SelectedItemContainer())
+        {
+            NavView_Navigate(
+                winrt::unbox_value_or<winrt::hstring>(
+                    args.SelectedItemContainer().Tag(), L"").c_str(),
+                args.RecommendedNavigationTransitionInfo());
+        }
+    }
+
+    void MainPage::NavView_Navigate(
+        std::wstring navItemTag,
+        Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo const& transitionInfo)
+    {
+        Windows::UI::Xaml::Interop::TypeName pageTypeName;
+        if (navItemTag == L"settings")
+        {
+            pageTypeName = winrt::xaml_typename<NavigationViewCppWinRT::SettingsPage>();
+        }
+        else
+        {
+            for (auto&& eachPage : m_pages)
+            {
+                if (eachPage.first == navItemTag)
+                {
+                    pageTypeName = eachPage.second;
+                    break;
+                }
+            }
+        }
+        // Get the page type before navigation so you can prevent duplicate
+        // entries in the backstack.
+        Windows::UI::Xaml::Interop::TypeName preNavPageType =
+            ContentFrame().CurrentSourcePageType();
+
+        // Navigate only if the selected page isn't currently loaded.
+        if (pageTypeName.Name != L"" && preNavPageType.Name != pageTypeName.Name)
+        {
+            ContentFrame().Navigate(pageTypeName, nullptr, transitionInfo);
+        }
+    }
+
+    void MainPage::NavView_BackRequested(
+        muxc::NavigationView const& /* sender */,
+        muxc::NavigationViewBackRequestedEventArgs const& /* args */)
+    {
+        On_BackRequested();
+    }
+
+    void MainPage::BackInvoked(
+        Windows::UI::Xaml::Input::KeyboardAccelerator const& /* sender */,
+        Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args)
+    {
+        On_BackRequested();
+        args.Handled(true);
+    }
+
+    bool MainPage::On_BackRequested()
+    {
+        if (!ContentFrame().CanGoBack())
+            return false;
+
+        // Don't go back if the nav pane is overlaid.
+        if (NavView().IsPaneOpen() &&
+            (NavView().DisplayMode() == muxc::NavigationViewDisplayMode::Compact ||
+                NavView().DisplayMode() == muxc::NavigationViewDisplayMode::Minimal))
+            return false;
+
+        ContentFrame().GoBack();
+        return true;
+    }
+
+    void MainPage::On_Navigated(
+        Windows::Foundation::IInspectable const& /* sender */,
+        Windows::UI::Xaml::Navigation::NavigationEventArgs const& args)
+    {
+        NavView().IsBackEnabled(ContentFrame().CanGoBack());
+
+        if (ContentFrame().SourcePageType().Name ==
+            winrt::xaml_typename<NavigationViewCppWinRT::SettingsPage>().Name)
+        {
+            // SettingsItem is not part of NavView.MenuItems, and doesn't have a Tag.
+            NavView().SelectedItem(NavView().SettingsItem().as<muxc::NavigationViewItem>());
+            NavView().Header(winrt::box_value(L"Settings"));
+        }
+        else if (ContentFrame().SourcePageType().Name != L"")
+        {
+            for (auto&& eachPage : m_pages)
+            {
+                if (eachPage.second.Name == args.SourcePageType().Name)
+                {
+                    for (auto&& eachMenuItem : NavView().MenuItems())
+                    {
+                        auto navigationViewItem =
+                            eachMenuItem.try_as<muxc::NavigationViewItem>();
+                        {
+                            if (navigationViewItem)
+                            {
+                                winrt::hstring hstringValue =
+                                    winrt::unbox_value_or<winrt::hstring>(
+                                        navigationViewItem.Tag(), L"");
+                                if (hstringValue == eachPage.first)
+                                {
+                                    NavView().SelectedItem(navigationViewItem);
+                                    NavView().Header(navigationViewItem.Content());
+                                }
+                            }
+                        }
+                    }
+                    break;
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -874,7 +948,9 @@ namespace winrt::NavigationViewCppWinRT::implementation
 아래는 **NavView_ItemInvoked** 처리기의 대체 버전입니다. 이 버전의 처리기의 기술은 먼저 탐색하려는 페이지의 전체 유형 이름을 [**NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)의 태그에 저장하는 것과 관련이 있습니다. 처리기에서는 해당 값을 unboxing하고 [**Windows::UI::Xaml::Interop::TypeName**](/uwp/api/windows.ui.xaml.interop.typename) 개체로 전환한 다음, 이 개체를 사용하여 대상 페이지로 이동합니다. 위 예제에 표시되는 `_pages`라는 매핑 변수를 사용할 필요가 없으며, 태그 내부의 값이 유효한 형식인지 확인하는 단위 테스트를 만들 수 있습니다. [C++/WinRT를 사용해 스칼라 값을 IInspectable로 boxing 및 unboxing](/windows/uwp/cpp-and-winrt-apis/boxing)을 참조하세요.
 
 ```cppwinrt
-void MainPage::NavView_ItemInvoked(Windows::Foundation::IInspectable const & /* sender */, Windows::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs const & args)
+void MainPage::NavView_ItemInvoked(
+    Windows::Foundation::IInspectable const & /* sender */,
+    Windows::UI::Xaml::Controls::NavigationViewItemInvokedEventArgs const & args)
 {
     if (args.IsSettingsInvoked())
     {
@@ -929,56 +1005,61 @@ NavigationView는 위쪽, 왼쪽 및 LeftCompact 창 표시 모드의 계층 구
 또한 이 예에서는 [Expanding](/uwp/api/microsoft.ui.xaml.controls.navigationview.expanding?view=winui-2.4) 및 [Collapsed](/uwp/api/microsoft.ui.xaml.controls.navigationview.collapsed?view=winui-2.4) 이벤트를 설명합니다. 이러한 이벤트는 자식 항목을 포함하는 메뉴 항목에 대해 발생합니다.
 
 ```xaml
-<!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
-<DataTemplate x:Key="NavigationViewMenuItem" x:DataType="local:Category">
-    <muxc:NavigationViewItem Content="{x:Bind Name}" MenuItemsSource="{x:Bind Children}"/>
-</DataTemplate>
-<muxc:NavigationView x:Name="navview" 
-    MenuItemsSource="{x:Bind categories, Mode=OneWay}" 
+<Page ... xmlns:muxc="using:Microsoft.UI.Xaml.Controls" ... >
+    <Page.Resources>
+        <DataTemplate x:Key="NavigationViewMenuItem" x:DataType="local:Category">
+            <muxc:NavigationViewItem Content="{x:Bind Name}" MenuItemsSource="{x:Bind Children}"/>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid>
+        <muxc:NavigationView x:Name="navview" 
+    MenuItemsSource="{x:Bind Categories, Mode=OneWay}" 
     MenuItemTemplate="{StaticResource NavigationViewMenuItem}" 
     ItemInvoked="{x:Bind OnItemInvoked}" 
     Expanding="OnItemExpanding" 
     Collapsed="OnItemCollapsed" 
     PaneDisplayMode="Left">
-    
-    <StackPanel Margin="10,10,0,0">
-        <TextBlock Margin="0,10,0,0" x:Name="ExpandingItemLabel" Text="Last Expanding: N/A"/>
-        <TextBlock x:Name="CollapsedItemLabel" Text="Last Collapsed: N/A"/>
-    </StackPanel>    
-</muxc:NavigationView>
+            <StackPanel Margin="10,10,0,0">
+                <TextBlock Margin="0,10,0,0" x:Name="ExpandingItemLabel" Text="Last Expanding: N/A"/>
+                <TextBlock x:Name="CollapsedItemLabel" Text="Last Collapsed: N/A"/>
+            </StackPanel>
+        </muxc:NavigationView>
+    </Grid>
+</Page>
 ```
 
 ```csharp
 public class Category
 {
     public String Name { get; set; }
-    public String Icon { get; set; }
+    public String CategoryIcon { get; set; }
     public ObservableCollection<Category> Children { get; set; }
 }
-    
+
 public sealed partial class HierarchicalNavigationViewDataBinding : Page
 {
     public HierarchicalNavigationViewDataBinding()
     {
         this.InitializeComponent();
     }  
-    
+
     public ObservableCollection<Category> Categories = new ObservableCollection<Category>()
     {
         new Category(){
-            Name = "Menu Item 1",
-            Icon = "Icon",
+            Name = "Menu item 1",
+            CategoryIcon = "Icon",
             Children = new ObservableCollection<Category>() {
-               new Category(){
-                    Name = "Menu Item 2",
-                    Icon = "Icon",
+                new Category(){
+                    Name = "Menu item 2",
+                    CategoryIcon = "Icon",
                     Children = new ObservableCollection<Category>() {
-                        new Category() { 
-                            Name  = "Menu Item 2", 
-                            Icon = "Icon",
+                        new Category() {
+                            Name  = "Menu item 3",
+                            CategoryIcon = "Icon",
                             Children = new ObservableCollection<Category>() {
-                                new Category() { Name  = "Menu Item 3", Icon = "Icon" },
-                                new Category() { Name  = "Menu Item 4", Icon = "Icon" }
+                                new Category() { Name  = "Menu item 4", CategoryIcon = "Icon" },
+                                new Category() { Name  = "Menu item 5", CategoryIcon = "Icon" }
                             }
                         }
                     }
@@ -986,21 +1067,22 @@ public sealed partial class HierarchicalNavigationViewDataBinding : Page
             }
         },
         new Category(){
-            Name = "Menu Item 5",
-            Icon = "Icon",
+            Name = "Menu item 6",
+            CategoryIcon = "Icon",
             Children = new ObservableCollection<Category>() {
                 new Category(){
-                    Name = "Menu Item 6",
-                    Icon = "Icon",
+                    Name = "Menu item 7",
+                    CategoryIcon = "Icon",
                     Children = new ObservableCollection<Category>() {
-                        new Category() { Name  = "Menu Item 7", Icon = "Icon" },
-                        new Category() { Name  = "Menu Item 8", Icon = "Icon" }
+                        new Category() { Name  = "Menu item 8", CategoryIcon = "Icon" },
+                        new Category() { Name  = "Menu item 9", CategoryIcon = "Icon" }
                     }
                 }
             }
         },
-        new Category(){ Name = "Menu Item 9", Icon = "Icon" }
+        new Category(){ Name = "Menu item 10", CategoryIcon = "Icon" }
     };
+
     private void OnItemInvoked(object sender, NavigationViewItemInvokedEventArgs e)
     {
         var clickedItem = e.InvokedItem;
@@ -1009,19 +1091,275 @@ public sealed partial class HierarchicalNavigationViewDataBinding : Page
     private void OnItemExpanding(object sender, NavigationViewItemExpandingEventArgs e)
     {
         var nvib = e.ExpandingItemContainer;
-        var name = "Last Expanding: " + nvib.Content.ToString();
+        var name = "Last expanding: " + nvib.Content.ToString();
         ExpandingItemLabel.Text = name;
     }
     private void OnItemCollapsed(object sender, NavigationViewItemCollapsedEventArgs e)
     {
         var nvib = e.CollapsedItemContainer;
-        var name = "Last Collapsed: " + nvib.Content;
+        var name = "Last collapsed: " + nvib.Content;
         CollapsedItemLabel.Text = name;
     }
 }
 ```
+
+```cppwinrt
+// Category.idl
+namespace HierarchicalNavigationViewDataBinding
+{
+    runtimeclass Category
+    {
+        String Name;
+        String CategoryIcon;
+        Windows.Foundation.Collections.IObservableVector<Category> Children;
+    }
+}
+
+// Category.h
+#pragma once
+#include "Category.g.h"
+
+namespace winrt::HierarchicalNavigationViewDataBinding::implementation
+{
+    struct Category : CategoryT<Category>
+    {
+        Category();
+        Category(winrt::hstring name,
+            winrt::hstring categoryIcon,
+            Windows::Foundation::Collections::
+                IObservableVector<HierarchicalNavigationViewDataBinding::Category> children);
+
+        winrt::hstring Name();
+        void Name(winrt::hstring const& value);
+        winrt::hstring CategoryIcon();
+        void CategoryIcon(winrt::hstring const& value);
+        Windows::Foundation::Collections::
+            IObservableVector<HierarchicalNavigationViewDataBinding::Category> Children();
+        void Children(Windows::Foundation::Collections:
+            IObservableVector<HierarchicalNavigationViewDataBinding::Category> const& value);
+
+    private:
+        winrt::hstring m_name;
+        winrt::hstring m_categoryIcon;
+        Windows::Foundation::Collections::
+            IObservableVector<HierarchicalNavigationViewDataBinding::Category> m_children;
+    };
+}
+
+// Category.cpp
+#include "pch.h"
+#include "Category.h"
+#include "Category.g.cpp"
+
+namespace winrt::HierarchicalNavigationViewDataBinding::implementation
+{
+    Category::Category()
+    {
+        m_children = winrt::single_threaded_observable_vector<HierarchicalNavigationViewDataBinding::Category>();
+    }
+
+    Category::Category(
+        winrt::hstring name,
+        winrt::hstring categoryIcon,
+        Windows::Foundation::Collections::
+            IObservableVector<HierarchicalNavigationViewDataBinding::Category> children)
+    {
+        m_name = name;
+        m_categoryIcon = categoryIcon;
+        m_children = children;
+    }
+
+    hstring Category::Name()
+    {
+        return m_name;
+    }
+
+    void Category::Name(hstring const& value)
+    {
+        m_name = value;
+    }
+
+    hstring Category::CategoryIcon()
+    {
+        return m_categoryIcon;
+    }
+
+    void Category::CategoryIcon(hstring const& value)
+    {
+        m_categoryIcon = value;
+    }
+
+    Windows::Foundation::Collections::IObservableVector<HierarchicalNavigationViewDataBinding::Category>
+        Category::Children()
+    {
+        return m_children;
+    }
+
+    void Category::Children(
+        Windows::Foundation::Collections::IObservableVector<HierarchicalNavigationViewDataBinding::Category>
+            const& value)
+    {
+        m_children = value;
+    }
+}
+
+// MainPage.idl
+import "Category.idl";
+
+namespace HierarchicalNavigationViewDataBinding
+{
+    [default_interface]
+    runtimeclass MainPage : Windows.UI.Xaml.Controls.Page
+    {
+        MainPage();
+        Windows.Foundation.Collections.IObservableVector<Category> Categories{ get; };
+    }
+}
+
+// MainPage.h
+#pragma once
+
+#include "MainPage.g.h"
+
+namespace muxc
+{
+    using namespace winrt::Microsoft::UI::Xaml::Controls;
+};
+
+namespace winrt::HierarchicalNavigationViewDataBinding::implementation
+{
+    struct MainPage : MainPageT<MainPage>
+    {
+        MainPage();
+
+        Windows::Foundation::Collections::IObservableVector<HierarchicalNavigationViewDataBinding::Category>
+            Categories();
+
+        void OnItemInvoked(muxc::NavigationView const& sender, muxc::NavigationViewItemInvokedEventArgs const& args);
+        void OnItemExpanding(
+            muxc::NavigationView const& sender,
+            muxc::NavigationViewItemExpandingEventArgs const& args);
+        void OnItemCollapsed(
+            muxc::NavigationView const& sender,
+            muxc::NavigationViewItemCollapsedEventArgs const& args);
+
+    private:
+        Windows::Foundation::Collections::
+            IObservableVector<HierarchicalNavigationViewDataBinding::Category> m_categories;
+    };
+}
+
+namespace winrt::HierarchicalNavigationViewDataBinding::factory_implementation
+{
+    struct MainPage : MainPageT<MainPage, implementation::MainPage>
+    {
+    };
+}
+
+// MainPage.cpp
+#include "pch.h"
+#include "MainPage.h"
+#include "MainPage.g.cpp"
+
+#include "Category.h"
+
+namespace winrt::HierarchicalNavigationViewDataBinding::implementation
+{
+    MainPage::MainPage()
+    {
+        InitializeComponent();
+
+        m_categories = 
+            winrt::single_threaded_observable_vector<HierarchicalNavigationViewDataBinding::Category>();
+
+        auto menuItem10 = winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+            (L"Menu item 10", L"Icon", nullptr);
+
+        auto menuItem9 = winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+            (L"Menu item 9", L"Icon", nullptr);
+        auto menuItem8 = winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+            (L"Menu item 8", L"Icon", nullptr);
+        auto menuItem7Children = 
+            winrt::single_threaded_observable_vector<HierarchicalNavigationViewDataBinding::Category>();
+        menuItem7Children.Append(*menuItem9);
+        menuItem7Children.Append(*menuItem8);
+
+        auto menuItem7 = winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+            (L"Menu item 7", L"Icon", menuItem7Children);
+        auto menuItem6Children = 
+            winrt::single_threaded_observable_vector<HierarchicalNavigationViewDataBinding::Category>();
+        menuItem6Children.Append(*menuItem7);
+
+        auto menuItem6 = winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+            (L"Menu item 6", L"Icon", menuItem6Children);
+
+        auto menuItem5 = winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+            (L"Menu item 5", L"Icon", nullptr);
+        auto menuItem4 = winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+            (L"Menu item 4", L"Icon", nullptr);
+        auto menuItem3Children =
+            winrt::single_threaded_observable_vector<HierarchicalNavigationViewDataBinding::Category>();
+        menuItem3Children.Append(*menuItem5);
+        menuItem3Children.Append(*menuItem4);
+
+        auto menuItem3 = winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+            (L"Menu item 3", L"Icon", menuItem3Children);
+        auto menuItem2Children = 
+            winrt::single_threaded_observable_vector<HierarchicalNavigationViewDataBinding::Category>();
+        menuItem2Children.Append(*menuItem3);
+
+        auto menuItem2 = winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+            (L"Menu item 2", L"Icon", menuItem2Children);
+        auto menuItem1Children = 
+            winrt::single_threaded_observable_vector<HierarchicalNavigationViewDataBinding::Category>();
+        menuItem1Children.Append(*menuItem2);
+
+        auto menuItem1 = winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+            (L"Menu item 1", L"Icon", menuItem1Children);
+
+        m_categories.Append(*menuItem1);
+        m_categories.Append(*menuItem6);
+        m_categories.Append(*menuItem10);
+    }
+
+    Windows::Foundation::Collections::IObservableVector<HierarchicalNavigationViewDataBinding::Category>
+        MainPage::Categories()
+    {
+        return m_categories;
+    }
+
+    void MainPage::OnItemInvoked(
+        muxc::NavigationView const& /* sender */,
+        muxc::NavigationViewItemInvokedEventArgs const& args)
+    {
+        auto clickedItem = args.InvokedItem();
+        auto clickedItemContainer = args.InvokedItemContainer();
+    }
+
+    void MainPage::OnItemExpanding(
+        muxc::NavigationView const& /* sender */,
+        muxc::NavigationViewItemExpandingEventArgs const& args)
+    {
+        auto nvib = args.ExpandingItemContainer();
+        auto name = L"Last expanding: " + winrt::unbox_value<winrt::hstring>(nvib.Content());
+        ExpandingItemLabel().Text(name);
+    }
+
+    void MainPage::OnItemCollapsed(
+        muxc::NavigationView const& /* sender */,
+        muxc::NavigationViewItemCollapsedEventArgs const& args)
+    {
+        auto nvib = args.CollapsedItemContainer();
+        auto name = L"Last collapsed: " + winrt::unbox_value<winrt::hstring>(nvib.Content());
+        CollapsedItemLabel().Text(name);
+    }
+}
+```
+
 ### <a name="selection"></a>선택
+
 기본적으로 모든 항목은 자식을 포함하거나 호출 및 선택할 수 있습니다.
+
 사용자에게 탐색 옵션의 계층 트리를 제공할 때 앱에 부모 항목에 연결된 대상 페이지가 없는 경우와 같이 부모 항목을 선택할 수 없도록 설정할 수도 있습니다. 부모 항목을 선택할 수 _있는_ 경우 왼쪽 확장 또는 위쪽 창 표시 모드를 사용하는 것이 좋습니다. LeftCompact 모드를 사용하면 사용자가 부모 항목을 탐색하여 호출될 때마다 자식 하위 트리를 열 수 있습니다.
 
 선택 항목을 선택하면 왼쪽 모드의 경우 왼쪽 가장자리를 따라, 위쪽 모드에서는 아래쪽 가장자리를 따라 선택 표시기가 표시됩니다. 아래에는 부모 항목이 선택된 왼쪽 및 위쪽 모드의 NavigationViews가 나와 있습니다.
@@ -1041,51 +1379,56 @@ public sealed partial class HierarchicalNavigationViewDataBinding : Page
 항목이 호출될 때 선택 표시기를 표시하지 않도록 하려면 아래와 같이 [SelectsOnInvoked](/uwp/api/microsoft.ui.xaml.controls.navigationviewitem.selectsoninvoked?view=winui-2.3) 속성을 False로 설정합니다.
 
 ```xaml
-<!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
-<DataTemplate x:Key="NavigationViewMenuItem" x:DataType="local:Category">
-    <muxc:NavigationViewItem Content="{x:Bind Name}" 
-        MenuItemsSource="{x:Bind Children}"
-        SelectsOnInvoked="{x:Bind IsLeaf}" />
-</DataTemplate>
-<muxc:NavigationView x:Name="navview" 
-    MenuItemsSource="{x:Bind categories, Mode=OneWay}" 
+<Page ... xmlns:muxc="using:Microsoft.UI.Xaml.Controls" ... >
+    <Page.Resources>
+        <DataTemplate x:Key="NavigationViewMenuItem" x:DataType="local:Category">
+            <muxc:NavigationViewItem Content="{x:Bind Name}"
+            MenuItemsSource="{x:Bind Children}"
+            SelectsOnInvoked="{x:Bind IsLeaf}"/>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid>
+        <muxc:NavigationView x:Name="navview" 
+    MenuItemsSource="{x:Bind Categories, Mode=OneWay}" 
     MenuItemTemplate="{StaticResource NavigationViewMenuItem}">
-   
-</muxc:NavigationView>
+        </muxc:NavigationView>
+    </Grid>
+</Page>
 ```
 
 ```csharp
 public class Category
 {
     public String Name { get; set; }
-    public String Icon { get; set; }
+    public String CategoryIcon { get; set; }
     public ObservableCollection<Category> Children { get; set; }
     public bool IsLeaf { get; set; }
 }
-    
+
 public sealed partial class HierarchicalNavigationViewDataBinding : Page
 {
     public HierarchicalNavigationViewDataBinding()
     {
         this.InitializeComponent();
-    }      
-    
+    }  
+
     public ObservableCollection<Category> Categories = new ObservableCollection<Category>()
     {
         new Category(){
-            Name = "Menu Item 1",
-            Icon = "Icon",
+            Name = "Menu item 1",
+            CategoryIcon = "Icon",
             Children = new ObservableCollection<Category>() {
                 new Category(){
-                    Name = "Menu Item 2",
-                    Icon = "Icon",
+                    Name = "Menu item 2",
+                    CategoryIcon = "Icon",
                     Children = new ObservableCollection<Category>() {
-                        new Category() { 
-                            Name  = "Menu Item 2", 
-                            Icon = "Icon",
+                        new Category() {
+                            Name  = "Menu item 3",
+                            CategoryIcon = "Icon",
                             Children = new ObservableCollection<Category>() {
-                                new Category() { Name  = "Menu Item 3", Icon = "Icon", IsLeaf = true },
-                                new Category() { Name  = "Menu Item 4", Icon = "Icon", IsLeaf = true }
+                                new Category() { Name  = "Menu item 4", CategoryIcon = "Icon", IsLeaf = true },
+                                new Category() { Name  = "Menu item 5", CategoryIcon = "Icon", IsLeaf = true }
                             }
                         }
                     }
@@ -1093,25 +1436,145 @@ public sealed partial class HierarchicalNavigationViewDataBinding : Page
             }
         },
         new Category(){
-            Name = "Menu Item 5",
-            Icon = "Icon",
+            Name = "Menu item 6",
+            CategoryIcon = "Icon",
             Children = new ObservableCollection<Category>() {
                 new Category(){
-                    Name = "Menu Item 6",
-                    Icon = "Icon",
+                    Name = "Menu item 7",
+                    CategoryIcon = "Icon",
                     Children = new ObservableCollection<Category>() {
-                        new Category() { Name  = "Menu Item 7", Icon = "Icon", IsLeaf = true },
-                        new Category() { Name  = "Menu Item 8", Icon = "Icon", IsLeaf = true }
+                        new Category() { Name  = "Menu item 8", CategoryIcon = "Icon", IsLeaf = true },
+                        new Category() { Name  = "Menu item 9", CategoryIcon = "Icon", IsLeaf = true }
                     }
                 }
             }
         },
-        new Category(){ Name = "Menu Item 9", Icon = "Icon", IsLeaf = true }
+        new Category(){ Name = "Menu item 10", CategoryIcon = "Icon", IsLeaf = true }
     };
 }
 ```
 
+```cppwinrt
+// Category.idl
+namespace HierarchicalNavigationViewDataBinding
+{
+    runtimeclass Category
+    {
+        ...
+        Boolean IsLeaf;
+    }
+}
+
+// Category.h
+...
+struct Category : CategoryT<Category>
+{
+    ...
+    Category(winrt::hstring name,
+        winrt::hstring categoryIcon,
+        Windows::Foundation::Collections::IObservableVector<HierarchicalNavigationViewDataBinding::Category> children,
+        bool isleaf = false);
+    ...
+    bool IsLeaf();
+    void IsLeaf(bool value);
+
+private:
+    ...
+    bool m_isleaf;
+};
+
+// Category.cpp
+...
+Category::Category(winrt::hstring name,
+    winrt::hstring categoryIcon,
+    Windows::Foundation::Collections::IObservableVector<HierarchicalNavigationViewDataBinding::Category> children,
+    bool isleaf) : m_name(name), m_categoryIcon(categoryIcon), m_children(children), m_isleaf(isleaf) {}
+...
+bool Category::IsLeaf()
+{
+    return m_isleaf;
+}
+
+void Category::IsLeaf(bool value)
+{
+    m_isleaf = value;
+}
+
+// MainPage.h and MainPage.cpp
+// Delete OnItemInvoked, OnItemExpanding, and OnItemCollapsed.
+
+// MainPage.cpp
+...
+MainPage::MainPage()
+{
+    InitializeComponent();
+
+    m_categories = winrt::single_threaded_observable_vector<HierarchicalNavigationViewDataBinding::Category>();
+
+    auto menuItem10 = 
+        winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+        (L"Menu item 10", L"Icon", nullptr, true);
+
+    auto menuItem9 = 
+        winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+        (L"Menu item 9", L"Icon", nullptr, true);
+    auto menuItem8 = 
+        winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+        (L"Menu item 8", L"Icon", nullptr, true);
+    auto menuItem7Children = 
+        winrt::single_threaded_observable_vector<HierarchicalNavigationViewDataBinding::Category>();
+    menuItem7Children.Append(*menuItem9);
+    menuItem7Children.Append(*menuItem8);
+
+    auto menuItem7 = 
+        winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+        (L"Menu item 7", L"Icon", menuItem7Children);
+    auto menuItem6Children = 
+        winrt::single_threaded_observable_vector<HierarchicalNavigationViewDataBinding::Category>();
+    menuItem6Children.Append(*menuItem7);
+
+    auto menuItem6 = 
+        winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+        (L"Menu item 6", L"Icon", menuItem6Children);
+
+    auto menuItem5 = 
+        winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+        (L"Menu item 5", L"Icon", nullptr, true);
+    auto menuItem4 = 
+        winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+        (L"Menu item 4", L"Icon", nullptr, true);
+    auto menuItem3Children = 
+        winrt::single_threaded_observable_vector<HierarchicalNavigationViewDataBinding::Category>();
+    menuItem3Children.Append(*menuItem5);
+    menuItem3Children.Append(*menuItem4);
+
+    auto menuItem3 = 
+        winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+        (L"Menu item 3", L"Icon", menuItem3Children);
+    auto menuItem2Children = 
+        winrt::single_threaded_observable_vector<HierarchicalNavigationViewDataBinding::Category>();
+    menuItem2Children.Append(*menuItem3);
+
+    auto menuItem2 = 
+        winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+        (L"Menu item 2", L"Icon", menuItem2Children);
+    auto menuItem1Children = 
+        winrt::single_threaded_observable_vector<HierarchicalNavigationViewDataBinding::Category>();
+    menuItem1Children.Append(*menuItem2);
+
+    auto menuItem1 = 
+        winrt::make_self<HierarchicalNavigationViewDataBinding::implementation::Category>
+        (L"Menu item 1", L"Icon", menuItem1Children);
+
+    m_categories.Append(*menuItem1);
+    m_categories.Append(*menuItem6);
+    m_categories.Append(*menuItem10);
+}
+...
+```
+
 ### <a name="keyboarding-within-hierarchical-navigationview"></a>계층적 NavigationView 내의 키보드 사용
+
 사용자는 [키보드](/windows/uwp/design/input/keyboard-interactions)를 사용하여 탐색 보기 주위에서 포커스를 이동할 수 있습니다. 화살표 키는 창 내에서 “내부 탐색”을 노출하고 [트리 보기](/windows/uwp/design/controls-and-patterns/tree-view)에서 제공하는 상호 작용을 따릅니다. 키 동작은 HierarchicalNavigationView의 위쪽 및 왼쪽 컴팩트 모드에서 표시되는 NavigationView 또는 플라이아웃 메뉴를 통해 탐색할 때 변경됩니다. 다음은 각 키가 계층적 NavigationView에서 수행할 수 있는 특정 작업입니다.
 
 | 키      |      왼쪽 모드에서      |  위쪽 모드에서 | 플라이아웃에서  |
@@ -1152,9 +1615,7 @@ public sealed partial class HierarchicalNavigationViewDataBinding : Page
 > 이 코드는 AcrylicBrush의 [Windows UI 라이브러리](/uwp/toolkits/winui/) 버전을 사용하는 방법을 보여 줍니다. AcrylicBrush 플랫폼 버전을 사용하는 경우에는 앱 프로젝트의 최소 버전이 SDK 16299 이상이어야 합니다. 플랫폼 버전을 사용하려면 `muxm:`에 대한 모든 참조를 제거합니다.
 
 ```xaml
-<Application
-    <!-- ... -->
-    xmlns:muxm="using:Microsoft.UI.Xaml.Media">
+<Application ... xmlns:muxm="using:Microsoft.UI.Xaml.Media" ...>
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -1195,10 +1656,14 @@ public sealed partial class HierarchicalNavigationViewDataBinding : Page
 ```
 
 ### <a name="top-whitespace"></a>상단 공백
-일부 앱은 [해당 창의 제목 표시줄을 사용자 지정](/windows/uwp/design/shell/title-bar)하여 해당 앱 콘텐츠를 제목 표시줄 영역으로 확장하도록 선택할 수 있습니다. NavigationView가 [ExtendViewIntoTitleBar](/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.extendviewintotitlebar) API**를 사용하여 제목 표시줄** 로 확장되는 앱의 루트 요소인 경우, 컨트롤은 대화형 요소의 위치를 자동으로 조정하여 [끌기 가능 영역](/windows/uwp/design/shell/title-bar#draggable-regions)과 겹치지 않도록 합니다. 
+
+> `IsTitleBarAutoPaddingEnabled` 속성을 사용하려면 [Windows UI 라이브러리](/uwp/toolkits/winui/) 2.2 이상이 필요합니다.
+
+일부 앱은 [해당 창의 제목 표시줄을 사용자 지정](/windows/uwp/design/shell/title-bar)하여 해당 앱 콘텐츠를 제목 표시줄 영역으로 확장하도록 선택할 수 있습니다. NavigationView가 [ExtendViewIntoTitleBar](/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.extendviewintotitlebar) API**를 사용하여 제목 표시줄** 로 확장되는 앱의 루트 요소인 경우, 컨트롤은 대화형 요소의 위치를 자동으로 조정하여 [끌기 가능 영역](/windows/uwp/design/shell/title-bar#draggable-regions)과 겹치지 않도록 합니다.
+
 ![제목 표시줄로 확장되는 앱](images/navigation-view-with-titlebar-padding.png)
 
-앱이 [Window.SetTitleBar](/uwp/api/windows.ui.xaml.window.settitlebar) 메서드를 호출하여 끌기 가능 영역을 지정하고 뒤로 및 메뉴 단추를 앱 창의 상단에 더 가깝게 나타내려면 `IsTitleBarAutoPaddingEnabled`를 False로 설정합니다.
+앱이 [Window.SetTitleBar](/uwp/api/windows.ui.xaml.window.settitlebar) 메서드를 호출하여 끌기 가능 영역을 지정할 때 [뒤로] 및 [메뉴] 단추를 앱 창의 상단에 더 가깝게 이동하려면 [IsTitleBarAutoPaddingEnabled](/uwp/api/microsoft.ui.xaml.controls.navigationview.istitlebarautopaddingenabled)를 **false**로 설정합니다.
 
 ![추가 패딩 없이 제목 표시줄로 확장되는 앱](images/navigation-view-no-titlebar-padding.png)
 

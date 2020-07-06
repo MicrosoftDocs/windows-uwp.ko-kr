@@ -6,12 +6,12 @@ keywords: 개발자 라이선스 Visual Studio 시작, 개발자 라이선스 �
 ms.date: 05/22/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f41c7b706f4c088142a77092cf176ed543e21567
-ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
+ms.openlocfilehash: 4402200726da93bb820946c9849d8c15bd1c5d8d
+ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83854779"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85448393"
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 
@@ -39,43 +39,6 @@ ms.locfileid: "83854779"
 
 > [!NOTE]
 > 개발자 모드를 사용하도록 설정하려면 관리자 권한이 필요합니다. 디바이스가 조직의 소유인 경우 이 옵션을 사용하지 못하게 설정해 놓았을 수도 있습니다.
-
-다음은 데스크톱 디바이스 패밀리의 설정 페이지입니다.
-
-![설정으로 이동하고 업데이트 및 보안을 선택한 후 개발자용을 선택하여 옵션 확인](images/devmode-pc-options.png)
-
-## <a name="which-setting-should-i-choose-sideload-apps-or-developer-mode"></a>테스트용으로 앱 로드 또는 개발자 모드 중에서 어떤 설정을 선택해야 하나요?
-
-> [!NOTE]
-> Windows 참가자 빌드 18956부터 테스트용 로드 옵션이 제거되었으며, 개발자 모드는 이제 토글 방식으로 전환됩니다. 다음 섹션에서 테스트용 로드에 대한 자세한 내용을 참조하세요.
-
- 디바이스를 개발 또는 단순히 테스트용 로드에 사용할 수 있습니다.
-
--   *Microsoft Store 앱*이 기본 설정입니다. 사용하는 앱이 개발용 앱이 아니거나 회사에서 지급한 특수한 내부 앱을 사용하는 경우 이 설정을 계속 활성 상태로 유지하세요.
--   *테스트용 로드*는 Microsoft Store에서 인증되지 않은 앱을 설치한 후 실행 또는 테스트하는 것입니다. 예를 들어 회사에서만 사용하는 내부용 앱입니다.
--   *개발자 모드*를 사용하면 앱을 테스트용으로 로드할 수 있을 뿐만 아니라 Visual Studio에서 디버그 모드로 앱을 실행할 수 있습니다.
-
-기본적으로 Microsoft Store의 UWP(유니버설 Windows 플랫폼) 앱만 설치할 수 있습니다. 개발자 기능을 사용하도록 이러한 설정을 변경하면 디바이스의 보안 수준을 변경할 수 있습니다. 확인되지 않은 원본에서 앱을 설치하지 않아야 합니다.
-
-### <a name="sideload-apps"></a>앱 테스트용 로드
-
-> [!NOTE]
-> Windows 참가자 빌드 18956부터 테스트용 로드는 기본적으로 사용하도록 설정되어 있습니다. 이제 특별한 구성 없이 서명된 MSIX 패키지를 디바이스에 배포할 수 있습니다.
-
-테스트용으로 앱 로드 설정은 일반적으로 Microsoft Store를 거치지 않고 관리 디바이스에 사용자 지정 앱을 설치해야 하는 회사나 학교에서 사용하거나 타사 소스에서 앱을 실행해야 하는 모든 사용자가 사용합니다. 이 경우 이전에 설정 페이지 이미지에 표시된 대로 조직에서 *UWP 앱* 설정을 사용하지 않는 정책을 적용하는 경우가 일반적입니다. 또한 조직에서는 필요한 인증서 및 테스트용 로드 앱의 설치 위치를 제공합니다. 자세한 내용은 TechNet 문서 [Windows 10에서 앱 사이드로드](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) 및 [Microsoft Intune 기본 사항](https://docs.microsoft.com/mem/intune/fundamentals/)을 참조하세요.
-
-디바이스 패밀리 관련 정보
-
--   데스크톱 디바이스 패밀리에서: 앱 패키지(.appx) 및 패키지("Add-AppDevPackage.ps1")로 만든 Windows PowerShell 스크립트를 실행하여 앱을 실행하는 데 필요한 모든 인증서를 설치할 수 있습니다. 자세한 내용은 [UWP 앱 패키징](/windows/msix/package/packaging-uwp-apps)을 참조하세요.
-
--   모바일 디바이스 패밀리에서: 필요한 인증서가 이미 설치되어 있는 경우 파일을 탭하여 이메일로 전송되거나 SD 카드에 있는 .appx를 설치할 수 있습니다.
-
-
-**앱 테스트용 로드**를 사용하면 신뢰할 수 있는 인증서가 없는 디바이스에 앱을 설치할 수 없으므로 개발자 모드보다 안전합니다.
-
-> [!NOTE]
-> 앱을 테스트용으로 로드하는 경우에도 여전히 신뢰할 수 있는 소스의 앱만을 설치해야 합니다. Microsoft Store에서 인증되지 않은 테스트용 로드 앱을 설치할 경우 이러한 앱을 테스트용으로 로드하는 데 필요한 모든 권한을 확보했으며 이러한 앱을 설치하고 실행하여 발생할 수 있는 피해에 대해 전적으로 책임을 진다는 점에 동의하는 것입니다. 이 [개인정보처리방침](https://privacy.microsoft.com/privacystatement)의 Windows &gt; Microsoft Store 섹션을 참조하세요.
-
 
 ### <a name="developer-mode"></a>개발자 모드
 
@@ -106,6 +69,26 @@ ms.locfileid: "83854779"
 - [Xbox용 디바이스 포털](../xbox-apps/device-portal-xbox.md)
 
 개발자 모드 또는 디바이스 포털을 사용하도록 설정하는 데 문제가 있는 경우 [알려진 문제](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) 포럼에서 이 문제에 대한 해결 방법을 찾아보거나 [개발자 모드 패키지 설치 실패](#failure-to-install-developer-mode-package)를 방문하여 추가 세부 정보를 살펴보고 개발자 모드 패키지의 차단을 해제하려면 어떤 WSUS KB를 허용해야 하는지 확인하세요.
+
+### <a name="sideload-apps"></a>앱 테스트용 로드
+
+> [!NOTE]
+> 최신 Windows 10 업데이트부터 테스트용 로드가 기본적으로 사용됩니다. 이제 특별한 구성 없이 서명된 MSIX 패키지를 디바이스에 배포할 수 있습니다. 이전 버전의 Windows 10을 사용하는 경우 기본적으로 Microsoft Store의 앱만 실행할 수 있도록 설정되며, Microsoft가 아닌 소스의 앱을 설치하려면 테스트용 로드를 사용하도록 설정해야 합니다.
+
+테스트용으로 앱 로드 설정은 일반적으로 Microsoft Store를 거치지 않고 관리 디바이스에 사용자 지정 앱을 설치해야 하는 회사나 학교에서 사용하거나 타사 소스에서 앱을 실행해야 하는 모든 사용자가 사용합니다. 이 경우 이전에 설정 페이지 이미지에 표시된 대로 조직에서 *UWP 앱* 설정을 사용하지 않는 정책을 적용하는 경우가 일반적입니다. 또한 조직에서는 필요한 인증서 및 테스트용 로드 앱의 설치 위치를 제공합니다. 자세한 내용은 TechNet 문서 [Windows 10에서 앱 사이드로드](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) 및 [Microsoft Intune 기본 사항](https://docs.microsoft.com/mem/intune/fundamentals/)을 참조하세요.
+
+디바이스 패밀리 관련 정보
+
+-   데스크톱 디바이스 패밀리에서: 앱 패키지(.appx) 및 패키지("Add-AppDevPackage.ps1")로 만든 Windows PowerShell 스크립트를 실행하여 앱을 실행하는 데 필요한 모든 인증서를 설치할 수 있습니다. 자세한 내용은 [UWP 앱 패키징](/windows/msix/package/packaging-uwp-apps)을 참조하세요.
+
+-   모바일 디바이스 패밀리에서: 필요한 인증서가 이미 설치되어 있는 경우 파일을 탭하여 이메일로 전송되거나 SD 카드에 있는 .appx를 설치할 수 있습니다.
+
+
+**앱 테스트용 로드**를 사용하면 신뢰할 수 있는 인증서가 없는 디바이스에 앱을 설치할 수 없으므로 개발자 모드보다 안전합니다.
+
+> [!NOTE]
+> 앱을 테스트용으로 로드하는 경우에도 여전히 신뢰할 수 있는 소스의 앱만을 설치해야 합니다. Microsoft Store에서 인증되지 않은 테스트용 로드 앱을 설치할 경우 이러한 앱을 테스트용으로 로드하는 데 필요한 모든 권한을 확보했으며 이러한 앱을 설치하고 실행하여 발생할 수 있는 피해에 대해 전적으로 책임을 진다는 점에 동의하는 것입니다. 이 [개인정보처리방침](https://privacy.microsoft.com/privacystatement)의 Windows &gt; Microsoft Store 섹션을 참조하세요.
+
 
 ### <a name="ssh"></a>SSH
 

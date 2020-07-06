@@ -1,16 +1,16 @@
 ---
 title: UWP 앱에서 SQL Server 데이터베이스 사용
 description: UWP 앱에서 SQL Server 데이터베이스를 사용합니다.
-ms.date: 03/28/2019
+ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp, SQL Server, 데이터베이스
 ms.localizationpriority: medium
-ms.openlocfilehash: 54907dac63580794b7df42fa2e61162d16be8a1b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d5c5c0f107a9e9a2adb0587b544a2c74b8321886
+ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75302567"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85448343"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>UWP 앱에서 SQL Server 데이터베이스 사용
 앱에서 [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient) 네임스페이스를 사용하여 SQL Server 데이터베이스에 직접 연결한 다음, 데이터를 저장하고 검색할 수 있습니다.
@@ -32,6 +32,9 @@ ms.locfileid: "75302567"
 **기능** 탭에서 SQL Server 인증에 Windows 인증을 사용하는 경우 **엔터프라이즈 인증** 확인란을 선택합니다.
 
 ![엔터프라이즈 인증 기능](images/enterprise-authentication.png)
+
+> [!IMPORTANT]
+> 또한 Windows 인증 사용 여부에 관계없이 **인터넷(클라이언트 및 서버)** , **인터넷(클라이언트)** , **개인 네트워크(클라이언트 및 서버)** 를 선택해야 합니다.
 
 <a id="use-data" />
 

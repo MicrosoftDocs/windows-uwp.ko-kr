@@ -5,12 +5,12 @@ ms.date: 11/30/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, 상호 운용성, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: 91602c75cdaddc325407529ab4d231db46ecca39
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 4249618a4b26fd7e8129547a679c80c5e2ed6903
+ms.sourcegitcommit: a2b340dc3a28e845830eeb9ce00342a3f7351d62
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79209148"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85835001"
 ---
 # <a name="interop-between-cwinrt-and-the-abi"></a>C++/WinRT와 ABI 사이의 Interop
 
@@ -43,7 +43,7 @@ namespace ABI::Windows::Foundation
 
 **IUriRuntimeClass**는 COM 인터페이스입니다. 하지만 **IUriRuntimeClass**가 **IInspectable**을 기반으로 한다는 점에서 Windows 런타임 인터페이스에 더욱 가깝습니다. 예외 발생보다는 오히려 **HRESULT** 반환 형식에 주의하세요. 또한 **HSTRING** 핸들 같은 아티팩트의 사용도 주의할 필요가 있습니다(작업을 마치면 핸들을 다시 `nullptr`로 설정하는 것이 좋음). 이렇게 하면 Windows 런타임이 애플리케이션 이진 수준, 즉 COM 프로그래밍 수준에서 어떻게 보이는지 알 수 있습니다.
 
-Windows 런타임은 COM(구성 요소 개체 모델) API를 기반으로 합니다. 따라서 Windows 런타임에는 COM API를 통하거나, ‘언어 프로젝션’을 통해 액세스할 수 있습니다.  프로젝션은 COM 세부 정보를 숨기며, 지정된 언어에 더욱 자연스러운 프로그래밍 환경을 제공합니다.
+Windows 런타임은 COM(구성 요소 개체 모델) API를 기반으로 합니다. 따라서 Windows 런타임에는 COM API를 통하거나, ‘언어 프로젝션’을 통해 액세스할 수 있습니다. 프로젝션은 COM 세부 정보를 숨기며, 지정된 언어에 더욱 자연스러운 프로그래밍 환경을 제공합니다.
 
 예를 들어, “%WindowsSdkDir%Include\10.0.17134.0\cppwinrt\winrt” 폴더(다시 말하지만 필요한 경우 사용자 요건에 맞게 SDK 버전 번호를 조정) 안을 보면 C++/WinRT 언어 프로젝션 헤더를 찾을 수 있습니다. Windows 네임스페이스마다 ABI 헤더가 하나씩 있는 것처럼 각 Windows 네임스페이스에도 헤더가 있습니다. 다음은 C++/WinRT 헤더 중 하나를 추가하는 예제입니다.
 
@@ -108,6 +108,9 @@ int main()
 
 **as** 함수의 구현이 [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))를 호출합니다. [**AddRef**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)만 호출하는 하위 수준의 변환을 원한다면 도우미 함수로 [**winrt::copy_to_abi**](/uwp/cpp-ref-for-winrt/copy-to-abi)와 [**winrt::copy_from_abi**](/uwp/cpp-ref-for-winrt/copy-from-abi)를 사용할 수 있습니다. 다음 코드 예제에서는 이 하위 수준 변환을 위의 코드 예제에 추가합니다.
 
+> [!IMPORTANT]
+> ABI 형식과 상호 운용할 때 사용되는 ABI 형식이 C++/WinRT 개체의 기본 인터페이스에 해당해야 합니다. 그렇지 않으면 ABI 형식에서 메서드를 호출하면 실제로는 기본 인터페이스의 동일한 vtable 슬롯에서 메서드가 호출되고 예기치 않은 결과가 발생합니다. [**winrt::copy_to_abi**](/uwp/cpp-ref-for-winrt/copy-from-abi)는 모든 ABI 형식에 **void\*** 를 사용하고 호출자가 형식 불일치에 주의한다고 가정하므로 컴파일 시 이 문제를 방지하지 않습니다. 이는 ABI 형식이 전혀 사용되지 않을 때 C++/WinRT 헤더가 ABI 헤더를 참조하도록 요구하는 일이 없도록 방지하기 위한 조치입니다.
+
 ```cppwinrt
 int main()
 {
@@ -117,11 +120,11 @@ int main()
 
     // Convert to an ABI type.
     ptr = nullptr;
-    winrt::copy_to_abi(uri, *ptr.put_void());
+    winrt::copy_to_abi(uriAsIStringable, *ptr.put_void());
 
     // Convert from an ABI type.
     uri = nullptr;
-    winrt::copy_from_abi(uri, ptr.get());
+    winrt::copy_from_abi(uriAsIStringable, ptr.get());
     ptr = nullptr;
 }
 ```
@@ -133,11 +136,11 @@ int main()
 
     // Copy to an owning raw ABI pointer with copy_to_abi.
     abi::IStringable* owning{ nullptr };
-    winrt::copy_to_abi(uri, *reinterpret_cast<void**>(&owning));
+    winrt::copy_to_abi(uriAsIStringable, *reinterpret_cast<void**>(&owning));
 
     // Copy from a raw ABI pointer.
     uri = nullptr;
-    winrt::copy_from_abi(uri, owning);
+    winrt::copy_from_abi(uriAsIStringable, owning);
     owning->Release();
 ```
 
@@ -151,14 +154,14 @@ int main()
     // Lowest-level conversions that only copy addresses
 
     // Convert to a non-owning ABI object with get_abi.
-    abi::IStringable* non_owning{ static_cast<abi::IStringable*>(winrt::get_abi(uri)) };
+    abi::IStringable* non_owning{ static_cast<abi::IStringable*>(winrt::get_abi(uriAsIStringable)) };
     WINRT_ASSERT(non_owning);
 
     // Avoid interlocks this way.
-    owning = static_cast<abi::IStringable*>(winrt::detach_abi(uri));
-    WINRT_ASSERT(!uri);
-    winrt::attach_abi(uri, owning);
-    WINRT_ASSERT(uri);
+    owning = static_cast<abi::IStringable*>(winrt::detach_abi(uriAsIStringable));
+    WINRT_ASSERT(!uriAsIStringable);
+    winrt::attach_abi(uriAsIStringable, owning);
+    WINRT_ASSERT(uriAsIStringable);
 ```
 
 ## <a name="convert_from_abi-function"></a>convert_from_abi 함수

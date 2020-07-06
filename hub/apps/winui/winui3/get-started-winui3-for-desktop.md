@@ -8,25 +8,25 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: ab67507153e0ff7065baffa92ea6ec35aee5b132
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 8775113c22716259f9449899b577481738dc6c0f
+ms.sourcegitcommit: da1c0ae251883987f105bc2919b2d67846194bc5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580770"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85198521"
 ---
 # <a name="get-started-with-winui-30-for-desktop-apps"></a>데스크톱 앱용 WinUI 3.0 시작
 
-WinUI 3.0 Preview 1에는 전적으로 WinUI 기반 사용자 인터페이스를 사용하여 관리형 데스크톱 C#/.NET 및 기본 C++/Win32 데스크톱 앱을 만들 수 있는 새로운 프로젝트 템플릿이 도입되었습니다. 이 프로젝트 템플릿을 사용하여 앱을 만들면 애플리케이션의 사용자 인터페이스 전체가 창, 컨트롤 및 WinUI 3.0에서 제공하는 기타 유형의 UI를 사용하여 구현됩니다. 
+WinUI 3.0 Preview 1에는 전적으로 WinUI 기반 사용자 인터페이스를 사용하여 관리형 데스크톱 C#/.NET 및 기본 C++/Win32 데스크톱 앱을 만들 수 있는 새로운 프로젝트 템플릿이 도입되었습니다. 이 프로젝트 템플릿을 사용하여 앱을 만들면 애플리케이션의 사용자 인터페이스 전체가 창, 컨트롤 및 WinUI 3.0에서 제공하는 기타 유형의 UI를 사용하여 구현됩니다.
 
-WinUI 3.0 Preview 1에는 Visual Studio 2019의 다음과 같은 **데스크톱의 WinUI**가 추가되었습니다.
+WinUI 3.0 Preview 1은 WinUI 3.0을 사용하는 데스크톱 앱을 빌드할 수 있도록 Visual Studio 2019에 다음 프로젝트 템플릿을 추가합니다.
 
-* .NET 5를 대상으로 하는 C# 앱 및 라이브러리:
-  * 비어 있는 앱, 패키지됨(데스크톱의 WinUI)
-  * 클래스 라이브러리(데스크톱의 WinUI)
+* .NET 5를 대상으로 하는 C# 앱 및 라이브러리에 대한 프로젝트 템플릿:
+  * **비어 있는 앱, 패키지됨(데스크톱의 WinUI)**
+  * **클래스 라이브러리(데스크톱의 WinUI)**
 
-* C++/Win32 앱:
-  * 비어 있는 앱, 패키지됨(데스크톱의 WinUI)
+* C++/Win32 앱에 대한 프로젝트 템플릿:
+  * **비어 있는 앱, 패키지됨(데스크톱의 WinUI)**
 
 앱 프로젝트 템플릿은 앱을 배포용 [MSIX 패키지](https://docs.microsoft.com/windows/msix/overview)로 빌드하도록 구성되는 WinUI 앱 프로젝트 및 [Windows 애플리케이션 패키징 프로젝트](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 생성합니다.
 
@@ -41,6 +41,9 @@ WinUI 3.0 Preview 1에는 Visual Studio 2019의 다음과 같은 **데스크톱�
 3. .NET 5 Preview 4의 x64 및 x86 버전을 모두 설치합니다.
     * x64: [https://aka.ms/dotnet/net5/preview4/Sdk/dotnet-sdk-win-x64.exe](https://aka.ms/dotnet/net5/preview4/Sdk/dotnet-sdk-win-x64.exe)
     * x86: [https://aka.ms/dotnet/net5/preview4/Sdk/dotnet-sdk-win-x86.exe](https://aka.ms/dotnet/net5/preview4/Sdk/dotnet-sdk-win-x86.exe)
+
+    > [!NOTE]
+    > WinUI 3.0 Preview 1을 사용하려면 .NET 5 Preview 4가 필요합니다. .NET 5보다 높은 미리 보기 버전은 WinUI 3.0 Preview 1에서 지원되지 않습니다.
 
 4. Visual Studio 2019용 WinUI 3.0 Preview 1 프로젝트 템플릿이 들어 있는 VSIX 확장을 설치합니다. 자세한 내용은 [다음 지침](index.md#visual-studio-project-templates)을 참조하세요.
 

@@ -7,13 +7,13 @@ manager: jken
 ms.topic: article
 keywords: NodeJS, Node.js, windows 10, microsoft, nodejs 학습, windows의 노드, wsl의 노드, windows 기반 linux의 노드, windows에 노드 설치, vs code를 사용하는 nodejs, windows에서 노드를 사용하여 개발, windows에서 nodejs를 사용하여 개발, WSL에 노드 설치, Linux용 Windows 하위 시스템의 NodeJS
 ms.localizationpriority: medium
-ms.date: 09/19/2019
-ms.openlocfilehash: 1ea8973e1db665d1fe66ef6b5f5699319131d605
-ms.sourcegitcommit: 2af814b7f94ee882f42fae8f61130b9cc9833256
+ms.date: 06/09/2020
+ms.openlocfilehash: 494db609db577bd2b199f828fcf80e80a5c8c624
+ms.sourcegitcommit: 22ed0d4edad5e6bab352e641cf86cf455cf83825
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83717132"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133976"
 ---
 # <a name="set-up-your-nodejs-development-environment-with-wsl-2"></a>WSL 2를 사용하여 Node.js 개발 환경 설치
 
@@ -51,7 +51,12 @@ Node.js를 설치하는 여러 가지 방법이 있습니다. 버전이 매우 �
 
 1. Ubuntu 18.04 명령줄을 엽니다.
 2. `sudo apt-get install curl` 명령을 사용하여 cURL(명령줄을 사용하여 인터넷에서 콘텐츠를 다운로드하는 데 사용되는 도구)을 설치합니다.
-3. `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash` 명령을 사용하여 nvm을 설치합니다.
+3. `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash` 명령을 사용하여 nvm을 설치합니다.
+
+> [!NOTE]
+> 출시 당시에는 NVM v0.35.3이 사용 가능한 최신 버전이었습니다. [GitHub 프로젝트 페이지에서 최신 버전의 NVM](https://github.com/nvm-sh/nvm)을 확인할 수 있으며, 최신 버전만 포함하도록 위의 명령을 조정할 수 있습니다.
+cURL을 사용하여 최신 버전의 NVM을 설치하면 이전 버전이 대체되고, NVM을 사용하여 설치한 노드 버전은 그대로 유지됩니다. 예를 들면 다음과 같습니다. `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash`
+
 4. 설치를 확인하려면 `command -v nvm` 명령을 입력합니다. 그러면 'nvm'이 반환됩니다. '명령을 찾을 수 없음' 메시지가 수신되거나 응답이 없으면 현재 터미널을 닫았다가 열고 다시 시도해 보세요. [nvm github 리포지토리에서 자세한 정보를 알아보세요](https://github.com/nvm-sh/nvm).
 5. `nvm ls` 명령을 사용하여 현재 설치된 노드 버전을 나열합니다.
 
@@ -67,10 +72,6 @@ Node.js를 설치하는 여러 가지 방법이 있습니다. 버전이 매우 �
 10. 프로젝트에 사용할 Node.js 버전을 변경하려면 새 프로젝트 디렉터리 `mkdir NodeTest`를 만들고 `cd NodeTest` 디렉터리로 들어간 다음, `nvm use node`를 입력하여 현재 버전으로 전환하거나 `nvm use --lts`를 입력하여 LTS 버전으로 전환합니다. `nvm use v8.2.1`처럼 설치한 버전의 특정 번호를 사용할 수도 있습니다. (사용 가능한 모든 Node.js 버전을 나열하려면 `nvm ls-remote` 명령을 사용합니다.)
 
 NVM을 사용하여 Node.js 및 NPM을 설치하는 경우 SUDO 명령을 사용하여 새 패키지를 설치할 필요가 없습니다.
-
-> [!NOTE]
-> 출시 당시에는 NVM v0.35.2가 사용 가능한 최신 버전이었습니다. [GitHub 프로젝트 페이지에서 최신 버전의 NVM](https://github.com/nvm-sh/nvm)을 확인할 수 있으며, 최신 버전만 포함하도록 위의 명령을 조정할 수 있습니다.
-cURL을 사용하여 최신 버전의 NVM을 설치하면 이전 버전이 대체되고, NVM을 사용하여 설치한 노드 버전은 그대로 유지됩니다. 예를 들면 다음과 같습니다. `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash`
 
 ## <a name="alternative-version-managers"></a>대체 버전 관리자
 
@@ -131,11 +132,7 @@ Node.js 확장 팩을 설치하는 방법은 다음과 같습니다.
 
 ## <a name="set-up-git-optional"></a>Git 설치(선택 사항)
 
-다른 사람과 협업할 계획이거나 GitHub 같은 오픈 소스 사이트에 프로젝트를 호스팅할 계획인 분들을 위해 VS Code는 [Git을 사용한 버전 제어](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)를 지원합니다. VS Code의 소스 제어 탭은 모든 변경 내용을 추적하며, UI에 바로 빌드된 일반적인 Git 명령(추가, 커밋, 푸시, 끌어오기)를 포함하고 있습니다.
-
-1. Git은 Linux용 Windows 하위 시스템 배포판과 함께 설치되지만, git 구성 파일을 설정해야 합니다. 이렇게 하려면 터미널에서 `git config --global user.name "Your Name"`을 입력한 다음, `git config --global user.email "youremail@domain.com"`을 입력합니다. 아직 Git 계정이 없으면 [GitHub에서 가입](https://github.com/join)할 수 있습니다. 이전에 Git를 사용한 경험이 없는 경우 [GitHub 가이드](https://guides.github.com/)를 보면 시작하는 데 도움이 될 수 있습니다. git config를 편집해야 하는 경우 nano: `nano ~/.gitconfig`와 같은 기본 제공 텍스트 편집기를 사용하여 편집할 수 있습니다.
-
-2. 노드 프로젝트에 [.gitignore 파일](https://help.github.com/en/articles/ignoring-files)을 추가하는 것이 좋습니다. 다음은 [GitHub의 Node.js용 기본 gitignore 템플릿](https://github.com/github/gitignore/blob/master/Node.gitignore)입니다. [GitHub 웹 사이트를 사용하여 새 리포지토리 만들기](https://help.github.com/articles/create-a-repo)를 선택하면 Node.js 프로젝트용으로 설정된 .gitignore 파일인 README 파일을 사용하여 리포지토리를 초기화하는 확인란과 필요에 따라 라이선스를 추가할 수 있는 옵션이 제공됩니다.
+WSL에서 NodeJS 프로젝트용 Git을 설정하려면 WSL 설명서의 [Linux용 Windows 하위 시스템에서 Git 사용 시작](https://docs.microsoft.com/windows/wsl/tutorials/wsl-git) 문서를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

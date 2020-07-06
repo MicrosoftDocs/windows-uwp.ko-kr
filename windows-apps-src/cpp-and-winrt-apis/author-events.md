@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: fc12bf1abeabd1a1c3cfccfe3c6d3f12ebda65f3
-ms.sourcegitcommit: c4f912ba0313ae49632f81e38d7d2d983ac132ad
+ms.openlocfilehash: e7cb0e10efec9077292faa8f8d72a7dad1da2c1b
+ms.sourcegitcommit: 83f4a528b5e3fc2b140c76fdf2acf734d6d851d4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84200777"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84683382"
 ---
 # <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 
@@ -26,7 +26,7 @@ ms.locfileid: "84200777"
 
 먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Windows 런타임 구성 요소(C++/WinRT)** 프로젝트를 만든 다음, 이름을 *BankAccountWRC*("은행 계좌 Windows 런타임 구성 요소"인 경우)로 지정합니다. 프로젝트 이름을 *BankAccountWRC*로 지정하면 이 항목의 나머지 단계를 가장 쉽게 수행할 수 있습니다. 아직 프로젝트를 빌드하지 마세요.
 
-새로 만든 프로젝트에는 `Class.idl`이라는 이름의 파일이 포함되어 있습니다. 해당 파일의 이름을 바꿉니다`BankAccount.idl`(`.idl` 파일의 이름을 바꾸면 자동으로 종속 `.h` 및 `.cpp` 파일의 이름도 바뀜). `BankAccount.idl`의 콘텐츠를 아래 목록으로 바꿉니다.
+새로 만든 프로젝트에는 `Class.idl`이라는 이름의 파일이 포함되어 있습니다. 솔루션 탐색기에서 `BankAccount.idl` 파일의 이름을 바꿉니다(`.idl` 파일의 이름을 바꾸면 자동으로 종속 `.h` 및 `.cpp` 파일의 이름도 바뀜). `BankAccount.idl`의 콘텐츠를 아래 목록으로 바꿉니다.
 
 ```idl
 // BankAccountWRC.idl
@@ -92,6 +92,8 @@ namespace winrt::BankAccountWRC::implementation
 }
 ```
 
+또한 두 파일에서 `static_assert`를 삭제해야 합니다.
+
 > [!NOTE]
 > 자동 이벤트 취소자에 대한 자세한 정보는 [등록된 대리자 취소](handle-events.md#revoke-a-registered-delegate)를 참조하세요. 이벤트에 대한 자동 이벤트 취소자 구현을 무료로 가져올 수 있습니다. 즉, 이벤트 취소자(C++/WinRT 프로젝션을 통해 제공)에 대한 오버로드를 구현할 필요가 없습니다.
 
@@ -103,7 +105,7 @@ namespace winrt::BankAccountWRC::implementation
 
 ## <a name="create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component"></a>주요 앱(BankAccountCoreApp)을 만들어 Windows 런타임 구성 요소 테스트
 
-이제 *BankAccountWRC* 솔루션 또는 새로운 솔루션에서 새 프로젝트를 만듭니다. **주요 앱(C++/WinRT)** 프로젝트를 만들어서 이름을 *BankAccountCoreApp*이라고 지정합니다.
+이제 *BankAccountWRC* 솔루션 또는 새로운 솔루션에서 새 프로젝트를 만듭니다. **주요 앱(C++/WinRT)** 프로젝트를 만들어서 이름을 *BankAccountCoreApp*이라고 지정합니다. 두 프로젝트가 동일한 솔루션에 있는 경우 *BankAccountCoreApp*을 시작 프로젝트로 설정합니다.
 
 > [!NOTE]
 > 앞에서 설명한 것처럼 Windows 런타임 구성 요소에 대한 Windows 런타임 메타데이터 파일(*BankAccountWRC*라는 프로젝트)이 `\BankAccountWRC\Debug\BankAccountWRC\` 폴더에 생성됩니다. 해당 경로의 첫 번째 세그먼트는 솔루션 파일이 포함된 폴더의 이름입니다. 다음 세그먼트는 `Debug`라는 하위 디렉터리입니다. 마지막 세그먼트는 Windows 런타임 구성 요소에 대해 이름이 지정된 하위 디렉터리입니다. 프로젝트 *BankAccountWRC*의 이름을 지정하지 않은 경우 메타데이터 파일은 `\<YourProjectName>\Debug\<YourProjectName>\` 폴더에 있습니다.
@@ -155,11 +157,117 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 
 이제 창을 클릭할 때마다 은행 계좌의 잔고에서 1이 감액됩니다. 이벤트가 예상한 대로 발생하는지 확인하려면 **AccountIsInDebit** 이벤트를 처리하는 람다 식에 중단점을 입력한 후 앱을 실행하여 창 내부를 클릭합니다.
 
-## <a name="parameterized-delegates-and-simple-signals-across-an-abi"></a>ABI에서 매개 변수가 있는 대리자 및 단순 신호
+## <a name="parameterized-delegates-across-an-abi"></a>ABI에서 매개 변수가 있는 대리자
 
 구성 요소와 해당 소비 애플리케이션 사이 같은 ABI(Application Binary Interface)를 통해 이벤트에 액세스할 수 있어야 하는 경우 이벤트에는 Windows 런타임 대리자 형식이 사용되어야 합니다. 위 예제에서는 [**Windows::Foundation::EventHandler\<T\>** ](/uwp/api/windows.foundation.eventhandler) Windows 런타임 대리자 형식을 사용합니다. [**TypedEventHandler\<TSender, TResult\>** ](/uwp/api/windows.foundation.eventhandler)는 Windows 런타임 대리자 형식의 또 다른 예입니다.
 
-두 대리자 형식의 형식 매개 변수는 ABI를 가로질러야 하므로 형식 매개 변수도 Windows 런타임 형식이어야 합니다. 여기에는 Microsoft 및 타사 런타임 클래스와 숫자, 문자열 등의 기본 형식이 포함됩니다. 해당 제약 조건을 잊을 경우 컴파일러가 “WinRT 형식이어야 합니다.” 오류를 처리하는 데 도움이 될 수 있습니다.
+두 대리자 형식의 형식 매개 변수는 ABI를 가로질러야 하므로 형식 매개 변수도 Windows 런타임 형식이어야 합니다. 여기에는 Windows 런타임 클래스, 타사 런타임 클래스, 숫자나 문자열 같은 기본 형식이 포함됩니다. 해당 제약 조건을 잊을 경우 컴파일러가 “WinRT 형식이어야 합니다.” 오류를 처리하는 데 도움이 될 수 있습니다.
+
+다음은 코드 목록 형식의 예제입니다. 이 토픽의 앞부분에서 만든 **BankAccountWRC** 및 **BankAccountCoreApp** 프로젝트를 시작하고, 다음 목록의 코드와 비슷하게 보이도록 해당 프로젝트의 코드를 편집합니다.
+
+첫 번째 목록은 **BankAccountWRC** 프로젝트에 대한 것입니다. 아래와 같이 `BankAccountWRC.idl`을 편집한 다음, 앞에서 `BankAccount.h` 및 `.cpp`를 복사한 것처럼 `MyEventArgs.h` 및 `.cpp`를 프로젝트에(`Generated Files` 폴더의) 복사합니다.
+
+```cppwinrt
+// BankAccountWRC.idl
+namespace BankAccountWRC
+{
+    [default_interface]
+    runtimeclass MyEventArgs
+    {
+        Single Balance{ get; };
+    }
+
+    [default_interface]
+    runtimeclass BankAccount
+    {
+        ...
+        event Windows.Foundation.EventHandler<BankAccountWRC.MyEventArgs> AccountIsInDebit;
+        ...
+    };
+}
+
+// MyEventArgs.h
+#pragma once
+#include "MyEventArgs.g.h"
+
+namespace winrt::BankAccountWRC::implementation
+{
+    struct MyEventArgs : MyEventArgsT<MyEventArgs>
+    {
+        MyEventArgs() = default;
+        MyEventArgs(float balance);
+        float Balance();
+
+    private:
+        float m_balance{ 0.f };
+    };
+}
+
+// MyEventArgs.cpp
+#include "pch.h"
+#include "MyEventArgs.h"
+#include "MyEventArgs.g.cpp"
+
+namespace winrt::BankAccountWRC::implementation
+{
+    MyEventArgs::MyEventArgs(float balance) : m_balance(balance)
+    {
+    }
+
+    float MyEventArgs::Balance()
+    {
+        return m_balance;
+    }
+}
+
+// BankAccount.h
+...
+struct BankAccount : BankAccountT<BankAccount>
+{
+...
+    winrt::event_token AccountIsInDebit(Windows::Foundation::EventHandler<BankAccountWRC::MyEventArgs> const& handler);
+...
+private:
+    winrt::event<Windows::Foundation::EventHandler<BankAccountWRC::MyEventArgs>> m_accountIsInDebitEvent;
+...
+}
+...
+
+// BankAccount.cpp
+#include "MyEventArgs.h"
+...
+winrt::event_token BankAccount::AccountIsInDebit(Windows::Foundation::EventHandler<BankAccountWRC::MyEventArgs> const& handler) { ... }
+...
+void BankAccount::AdjustBalance(float value)
+{
+    m_balance += value;
+
+    if (m_balance < 0.f)
+    {
+        auto args = winrt::make_self<winrt::BankAccountWRC::implementation::MyEventArgs>(m_balance);
+        m_accountIsInDebitEvent(*this, *args);
+    }
+}
+...
+```
+
+이 목록은 **BankAccountCoreApp** 프로젝트에 대한 것입니다.
+
+```cppwinrt
+// App.cpp
+...
+void Initialize(CoreApplicationView const&)
+{
+    m_eventToken = m_bankAccount.AccountIsInDebit([](const auto&, BankAccountWRC::MyEventArgs args)
+    {
+        float balance = args.Balance();
+        WINRT_ASSERT(balance < 0.f); // Put a breakpoint here.
+    });
+}
+...
+```
+
+## <a name="simple-signals-across-an-abi"></a>ABI에서 단순 신호
 
 이벤트를 통해 매개 변수나 인수를 전달할 필요가 없는 경우에는 고유한 단순 Windows 런타임 대리자 형식을 정의할 수 있습니다. 아래 예제에서는 **BankAccount** 런타임 클래스의 더 단순한 버전을 보여 줍니다. **SignalDelegate**라는 대리자 형식을 선언한 다음, 이 대리자 형식을 사용하여 매개 변수가 있는 이벤트 대신 신호 형식 이벤트를 발생시킵니다.
 

@@ -1,17 +1,15 @@
 ---
 title: install 명령
 description: 지정된 애플리케이션을 설치합니다.
-author: KevinLaMS
-ms.author: kevinla
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c460ccd18bb1bb12e5322e0e08a17edbd9692f7
-ms.sourcegitcommit: 5a145eda92b5915393e58006867cdd8b98e922f5
+ms.openlocfilehash: 5daae6dabee1201dd9df0b83dc56f98b06b15487
+ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84166245"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334527"
 ---
 # <a name="install-command-winget"></a>install 명령(winget)
 
@@ -78,6 +76,12 @@ winget install --id Microsoft.PowerToys --version 0.15.2
 ## <a name="multiple-selections"></a>여러 선택 항목
 
 **winget**에 제공된 쿼리로 인해 단일 애플리케이션이 생성되지 않으면 **winget**에서 검색 결과를 표시합니다. 이 경우 올바른 설치를 위해 검색을 구체화하는 데 필요한 추가 데이터가 제공됩니다.
+
+선택 항목을 하나의 파일로 제한하는 가장 좋은 방법은 애플리케이션 **id**를 **정확한** 쿼리 옵션과 결합하여 사용하는 것입니다.  예:
+
+```CMD
+winget install --id Git.Git -e 
+```
 
 ## <a name="local-install"></a>로컬 설치
 

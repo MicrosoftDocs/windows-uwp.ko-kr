@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 80072be15a28883e5d29a7393edd112cf6fa47be
-ms.sourcegitcommit: 7e8c7f89212c88dcc0274c69d2c3365194c0954a
+ms.openlocfilehash: d5308f49499f4bdec9db0087cef54ac2fa0bb805
+ms.sourcegitcommit: 69b7fe203d8384d0ade37122ae9d2c4568f6d168
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83688500"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267170"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -488,6 +488,10 @@ End Sub
 - 사용자가 부모 노드를 선택하면 해당 부모 노드에서 실현된 모든 자식 노드가 선택됩니다. 마찬가지로, 모든 자녀 노드를 선택하면 부모 노드도 선택됩니다.
 - **SelectAll** 메서드는 **SelectedNodes** 컬렉션에 실현된 노드만 추가합니다.
 - 미실현 자식 노드가 있는 부모 노드를 선택하면 실현되었을 때 자식 노드가 선택됩니다.
+
+#### <a name="selecteditemselecteditems"></a>SelectedItem/SelectedItems
+
+WinUI 2.2부터 TreeView에는 [SelectedItem](/uwp/api/microsoft.ui.xaml.controls.treeview.selecteditem) 및 [SelectedItems](/uwp/api/microsoft.ui.xaml.controls.treeview.selecteditems) 속성이 있습니다. 두 속성을 사용하여 선택한 노드의 콘텐츠를 직접 가져올 수 있습니다. 여러 항목을 선택할 수 있도록 설정된 경우 SelectedItem에는 SelectedItems 컬렉션의 첫 번째 항목이 포함됩니다.
 
 ## <a name="code-examples"></a>코드 예제
 

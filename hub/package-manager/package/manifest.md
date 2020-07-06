@@ -1,17 +1,15 @@
 ---
 title: 패키지 매니페스트 만들기
-description: ''
-author: denelon
-ms.author: denelon
+description: 소프트웨어 패키지를 Windows 패키지 관리자 리포지토리에 제출하려면 먼저 패키지 매니페스트를 만듭니다.
 ms.date: 04/29/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8eceb29abbdc7f765628dbd8dbd6f6d0be21f132
-ms.sourcegitcommit: e2689c72d5b381eafdb1075090d1961f4c1cb37a
+ms.openlocfilehash: 7ecc6687527ca330f466e6a97ef14c0b5c9b56cf
+ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84055157"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334615"
 ---
 # <a name="create-your-package-manifest"></a>패키지 매니페스트 만들기
 
@@ -58,7 +56,7 @@ License: string # The open source license or copyright.
 InstallerType: string # Enumeration of supported installer types (exe, msi, msix, inno, wix, nullsoft, appx).
 Installers:
   - Arch: string # Enumeration of supported architectures.
-  - URL: string # Path to download installation file.
+  - Url: string # Path to download installation file.
   - Sha256: string # SHA256 calculated from installer.
 ManifestVersion: 0.1.0
 ```
@@ -164,6 +162,17 @@ ManifestVersion: 0.1.0
 
 > [!NOTE]
 > 설치 관리자가 .exe이고 Nullsoft 또는 Inno를 사용하여 빌드된 경우 해당 값을 대신 지정할 수 있습니다. Nullsoft 또는 Inno를 지정하면 클라이언트는 설치 프로그램의 진행률 설치 동작을 통해 silent and silent를 자동으로 설정합니다.
+
+## <a name="installer-switches"></a>설치 관리자 스위치
+
+종종 명령줄에서 `-?`를 설치 관리자에 전달하여 설치 관리자에 사용할 수 있는 자동 `Switches`를 확인할 수 있습니다. 다음은 다양한 설치 관리자 유형에 사용할 수 있는 일반적인 자동 `Swtiches`입니다.
+
+| 설치 관리자 | 명령  | 문서 |  
+| :--- | :-- | :--- |  
+| MSI | `/q` | [MSI 명령줄 옵션](https://docs.microsoft.com/windows/win32/msi/command-line-options) |
+| InstallShield | `/s`  | [InstallShield 명령줄 매개 변수](https://docs.flexera.com/installshield19helplib/helplibrary/IHelpSetup_EXECmdLine.htm) |
+| Inno 설정 | `/SILENT or /VERYSILENT` | [Inno 설정 설명서](https://jrsoftware.org/ishelp/) |
+| Nullsoft | `/S` | [Nullsoft 자동 설치 관리자/제거 프로그램](https://nsis.sourceforge.io/Docs/Chapter4.html#silent) |
 
 ## <a name="tips-and-best-practices"></a>팁 및 모범 사례
 
