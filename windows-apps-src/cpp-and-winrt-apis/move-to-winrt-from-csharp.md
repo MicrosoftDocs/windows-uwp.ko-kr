@@ -5,12 +5,12 @@ ms.date: 07/15/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, 프로젝션, 이식, 마이그레이션, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 38ad2d4f2b0af65424e6d9fa50f2c21b626e1914
-ms.sourcegitcommit: 3125d5e2e32831481790266f44967851585888b3
+ms.openlocfilehash: 21032a99c389e968728fe2dac2875475efc351c4
+ms.sourcegitcommit: 379fd00bfcc6c5f1e3c7e379a367b08641a7f961
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84172834"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84819015"
 ---
 # <a name="move-to-cwinrt-from-c"></a>C#에서 C++/WinRT로 이동
 
@@ -24,14 +24,14 @@ UWP(유니버설 Windows 플랫폼) 앱 샘플 중 하나를 이식하는 방법
 
 필요한 이식 변경의 종류에 따라 4가지 범주로 그룹화할 수 있습니다.
 
-- [**언어 프로젝션 이식**](#port-the-language-projection). WinRT(Windows 런타임)는 다양한 프로그래밍 언어로 *프로젝션*됩니다. 이러한 언어 프로젝션 각각은 문제의 프로그래밍 언어에 자연스러운 느낌을 주도록 설계되었습니다. C#의 경우 일부 Windows 런타임 형식이 .NET 형식으로 프로젝션됩니다. 예를 들어 [**System.Collections.Generic.IReadOnlyList\<T\>** ](/dotnet/api/system.collections.generic.ireadonlylist-1)를 [**Windows.Foundation.Collections.IVectorView\<T\>** ](/uwp/api/windows.foundation.collections.ivectorview-1)로 다시 변환할 수 있습니다. 또한 C#에서 일부 Windows 런타임 작업은 편리한 C# 언어 기능으로 프로젝션됩니다. 예를 들어 C#에서 `+=` 연산자 구문을 사용하여 이벤트 처리 대리자를 등록합니다. 이에 따라 이러한 언어 기능을 수행되는 기본 작업(이 예에서는 이벤트 등록)으로 다시 변환할 수 있습니다.
-- [**언어 구문 이식**](#port-language-syntax). 이러한 변경 중 대부분은 한 기호를 다른 기호로 바꾸는 간단한 기계적 변환입니다. 예를 들어 점(`.`)을 이중 콜론(`::`)으로 변경합니다.
-- [**언어 프로시저 이식**](#port-language-procedure). 이러한 변경 중 일부는 단순하고 반복적인 변경일 수 있습니다(예: `myObject.MyProperty`에서 `myObject.MyProperty()`로). 다른 변경은 더 심층적으로 변경해야 합니다(예: **System.Text.StringBuilder** 사용과 관련된 프로시저를 **std::wostringstream** 사용과 관련된 프로시저로 이식).
+- [**언어 프로젝션 이식**](#changes-that-involve-the-language-projection). WinRT(Windows 런타임)는 다양한 프로그래밍 언어로 *프로젝션*됩니다. 이러한 언어 프로젝션 각각은 문제의 프로그래밍 언어에 자연스러운 느낌을 주도록 설계되었습니다. C#의 경우 일부 Windows 런타임 형식이 .NET 형식으로 프로젝션됩니다. 예를 들어 [**System.Collections.Generic.IReadOnlyList\<T\>** ](/dotnet/api/system.collections.generic.ireadonlylist-1)를 [**Windows.Foundation.Collections.IVectorView\<T\>** ](/uwp/api/windows.foundation.collections.ivectorview-1)로 다시 변환할 수 있습니다. 또한 C#에서 일부 Windows 런타임 작업은 편리한 C# 언어 기능으로 프로젝션됩니다. 예를 들어 C#에서 `+=` 연산자 구문을 사용하여 이벤트 처리 대리자를 등록합니다. 이에 따라 이러한 언어 기능을 수행되는 기본 작업(이 예에서는 이벤트 등록)으로 다시 변환할 수 있습니다.
+- [**언어 구문 이식**](#changes-that-involve-the-language-syntax). 이러한 변경 중 대부분은 한 기호를 다른 기호로 바꾸는 간단한 기계적 변환입니다. 예를 들어 점(`.`)을 이중 콜론(`::`)으로 변경합니다.
+- [**언어 프로시저 이식**](#changes-that-involve-procedures-within-the-language). 이러한 변경 중 일부는 단순하고 반복적인 변경일 수 있습니다(예: `myObject.MyProperty`에서 `myObject.MyProperty()`로). 다른 변경은 더 심층적으로 변경해야 합니다(예: **System.Text.StringBuilder** 사용과 관련된 프로시저를 **std::wostringstream** 사용과 관련된 프로시저로 이식).
 - [**C++/WinRT와 관련된 이식 관련 작업**](#porting-related-tasks-that-are-specific-to-cwinrt). Windows 런타임의 특정 세부 정보는 C# 내부에서 암시적으로 처리됩니다. 이러한 세부 정보는 C++/WinRT에서 명시적으로 수행됩니다. 예를 들어 `.idl` 파일을 사용하여 런타임 클래스를 정의합니다.
 
 이 항목의 나머지 부분은 이러한 분류에 따라 구성되어 있습니다.
 
-## <a name="port-the-language-projection"></a>언어 프로젝션 이식
+## <a name="changes-that-involve-the-language-projection"></a>언어 프로젝션과 관련된 변경 내용
 
 ||C#|C++/WinRT|참고 항목|
 |-|-|-|-|
@@ -39,7 +39,8 @@ UWP(유니버설 Windows 플랫폼) 앱 샘플 중 하나를 이식하는 방법
 |프로젝션 네임스페이스|`using System;`|`using namespace Windows::Foundation;`||
 ||`using System.Collections.Generic;`|`using namespace Windows::Foundation::Collections;`||
 |컬렉션 크기|`collection.Count`|`collection.Size()`|[**BuildClipboardFormatsOutputString** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#buildclipboardformatsoutputstring)|
-|읽기 전용 컬렉션|[**IReadOnlyList\<T\>** ](/dotnet/api/system.collections.generic.ireadonlylist-1)|[**IVectorView\<T\>** ](/uwp/api/windows.foundation.collections.ivectorview-1)|[**BuildClipboardFormatsOutputString** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#buildclipboardformatsoutputstring)|
+|일반적인 컬렉션 형식|[**IList\<T\>** ](/dotnet/api/system.collections.generic.ilist-1) 및 요소를 추가하는 **Add**.|[**IVector\<T\>** ](/uwp/api/windows.foundation.collections.ivector-1) 및 요소를 추가하는 **Append**. 모든 곳에서 **std::vector**를 사용하는 경우 **push_back**을 사용하여 요소를 추가합니다.||
+|읽기 전용 컬렉션 형식|[**IReadOnlyList\<T\>** ](/dotnet/api/system.collections.generic.ireadonlylist-1)|[**IVectorView\<T\>** ](/uwp/api/windows.foundation.collections.ivectorview-1)|[**BuildClipboardFormatsOutputString** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#buildclipboardformatsoutputstring)|
 |클래스 멤버인 이벤트 처리기 대리자|`myObject.EventName += Handler;`|`token = myObject.EventName({ get_weak(), &Class::Handler });`|[**EnableClipboardContentChangedNotifications** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#enableclipboardcontentchangednotifications)|
 |해지 이벤트 처리기 대리자|`myObject.EventName -= Handler;`|`myObject.EventName(token);`|[**EnableClipboardContentChangedNotifications** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#enableclipboardcontentchangednotifications)|
 |결합형 컨테이너|[**IDictionary\<K, V\>** ](/dotnet/api/system.collections.generic.idictionary-2)|[**IMap\<K, V\>** ](/uwp/api/windows.foundation.collections.imap-2)||
@@ -104,27 +105,30 @@ void OpenButton_Click(Object sender, Windows.UI.Xaml.RoutedEventArgs e);
 > [!NOTE]
 > 이를 [Fire and forget](/windows/uwp/cpp-and-winrt-apis/concurrency-2#fire-and-forget)으로 *구현*하더라도 함수를 `void`로 선언합니다.
 
-## <a name="port-language-syntax"></a>언어 구문 이식
+## <a name="changes-that-involve-the-language-syntax"></a>언어 구문과 관련된 변경 내용
 
 ||C#|C++/WinRT|참고 항목|
 |-|-|-|-|
 |액세스 한정자|`public \<member\>`|`public:`<br>&nbsp;&nbsp;&nbsp;&nbsp;`\<member\>`|[**Button_Click** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#button_click)|
+|데이터 멤버 액세스|`this.variable`|`this->variable`||
 |비동기 작업|`async Task ...`|`IAsyncAction ...`||
 |비동기 연산|`async Task<T> ...`|`IAsyncOperation<T> ...`||
 |fire-and-forget 메서드(비동기 함축)|`async void ...`|`winrt::fire_and_forget ...`|[**CopyButton_Click** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#copybutton_click)|
-|협조적 대기|`await ...`|`co_await ...`|[**CopyButton_Click** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#copybutton_click)|
 |열거형 상수 액세스|`E.Value`|`E::Value`|[**DisplayChangedFormats** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#displaychangedformats)|
+|협조적 대기|`await ...`|`co_await ...`|[**CopyButton_Click** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#copybutton_click)|
+|프로젝션된 형식 컬렉션(프라이빗 필드)|`private List<MyRuntimeClass> myRuntimeClasses = new List<MyRuntimeClass>();`|`std::vector`<br>`<MyNamespace::MyRuntimeClass>`<br>`m_myRuntimeClasses;`||
+|GUID 생성|`private static readonly Guid myGuid = new Guid("C380465D-2271-428C-9B83-ECEA3B4A85C1");`|`winrt::guid myGuid{ 0xC380465D, 0x2271, 0x428C, { 0x9B, 0x83, 0xEC, 0xEA, 0x3B, 0x4A, 0x85, 0xC1} };`||
 |네임스페이스 구분 기호|`A.B.T`|`A::B::T`||
 |Null|`null`|`nullptr`|[**UpdateStatus** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#updatestatus)|
+|형식 개체 가져오기|`typeof(MyType)`|`winrt::xaml_typename<MyType>()`|[**Scenarios** 속성 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#scenarios)|
 |메서드에 대한 매개 변수 선언|`MyType`|`MyType const&`|[매개 변수 전달](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing)|
 |비동기 메서드에 대한 매개 변수 선언|`MyType`|`MyType`|[매개 변수 전달](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing)|
 |정적 메서드 호출|`T.Method()`|`T::Method()`||
 |문자열|`string` 또는 **System.String**|[**winrt::hstring**](/uw/cpp-ref-for-winrt/hstring)|[C++/WinRT의 문자열 처리](/windows/uwp/cpp-and-winrt-apis/strings)|
 |문자열 리터럴|`"a string literal"`|`L"a string literal"`|[생성자, **Current** 및 **FEATURE_NAME** 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#the-constructor-current-and-feature_name)|
-|축자/원시 문자열 리터럴|`@"verbatim string literal"`|`LR"(raw string literal)"`|[**DisplayToast** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp##displaytoast)|
-|데이터 멤버 액세스|`this.variable`|`this->variable`||
-|using 지시문|`using A.B.C;`|`using namespace A::B::C;`|[생성자, **Current** 및 **FEATURE_NAME** 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#the-constructor-current-and-feature_name)|
 |유추(또는 추론) 형식|`var`|`auto`|[**BuildClipboardFormatsOutputString** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#buildclipboardformatsoutputstring)|
+|using 지시문|`using A.B.C;`|`using namespace A::B::C;`|[생성자, **Current** 및 **FEATURE_NAME** 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#the-constructor-current-and-feature_name)|
+|축자/원시 문자열 리터럴|`@"verbatim string literal"`|`LR"(raw string literal)"`|[**DisplayToast** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp##displaytoast)|
 
 > [!NOTE]
 > 헤더 파일에 지정된 네임스페이스에 대한 `using namespace` 지시문이 없으면 해당 네임스페이스에 대한 모든 형식 이름을 정규화하거나 적어도 컴파일러에서 찾을 수 있을 만큼 충분히 한정해야 합니다. 예제는 [**DisplayToast** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp##displaytoast)을 참조하세요.
@@ -145,7 +149,7 @@ C# 정적 필드는 C++/WinRT 정적 접근자 및/또는 변경자 함수가 �
 
 [C#에서 C++/WinRT로 클립보드 샘플 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp)에서는 C# 및 C++/WinRT 프로젝트에서 *동일한* XAML 태그(리소스 포함) 및 자산 파일을 사용할 수 있었습니다. 이를 위해 태그를 편집해야 하는 경우도 있습니다. [**MainPage** 이식을 완료하는 데 필요한 XAML 및 스타일 복사](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#copy-the-xaml-and-styles-necessary-to-finish-up-porting-mainpage)를 참조하세요.
 
-## <a name="port-language-procedure"></a>언어 프로시저 이식
+## <a name="changes-that-involve-procedures-within-the-language"></a>언어 내의 프로시저와 관련된 변경 내용
 
 ||C#|C++/WinRT|참고 항목|
 |-|-|-|-|
@@ -168,13 +172,39 @@ C# 정적 필드는 C++/WinRT 정적 접근자 및/또는 변경자 함수가 �
 |문자열 작성|`StringBuilder builder;`<br>`builder.Append(...);`|`std::wostringstream builder;`<br>`builder << ...;`|[문자열 작성](#string-building)|
 |문자열 보간|`$"{i++}) {s.Title}"`|[**winrt::to_hstring**](/uwp/cpp-ref-for-winrt/to-hstring) 및/또는 [**winrt::hstring::operator+** ](/uwp/cpp-ref-for-winrt/hstring#operator-concatenation-operator)|[**OnNavigatedTo** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#onnavigatedto)|
 |비교할 빈 문자열|**System.String.Empty**|[**winrt::hstring::empty**](/uwp/cpp-ref-for-winrt/hstring#hstringempty-function)|[**UpdateStatus** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#updatestatus)|
+|빈 문자열 만들기|`var myEmptyString = String.Empty;`|`winrt::hstring myEmptyString{ L"" };`||
 |사전 작업|`map[k] = v; // replaces any existing`<br>`v = map[k]; // throws if not present`<br>`map.ContainsKey(k)`|`map.Insert(k, v); // replaces any existing`<br>`v = map.Lookup(k); // throws if not present`<br>`map.HasKey(k)`||
 |형식 변환(실패 시 throw)|`(MyType)v`|`v.as<MyType>()`|[**Footer_Click** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#footer_click)|
 |형식 변환(실패 시 null)|`v as MyType`|`v.try_as<MyType>()`|[**PasteButton_Click** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#pastebutton_click)|
 |X:Name이 있는 XAML 요소는 속성임|`MyNamedElement`|`MyNamedElement()`|[생성자, **Current** 및 **FEATURE_NAME** 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#the-constructor-current-and-feature_name)|
 |UI 스레드로 전환|**CoreDispatcher.RunAsync**|**CoreDispatcher.RunAsync** 또는 [**winrt::resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground)|[**NotifyUser** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#notifyuser) 및 [**HistoryAndRoaming** 메서드 이식](/windows/uwp/cpp-and-winrt-apis/clipboard-to-winrt-from-csharp#historyandroaming)|
+|XAML 페이지의 명령형 코드에서 UI 요소 생성|[UI 요소 생성](#ui-element-construction) 참조|[UI 요소 생성](#ui-element-construction) 참조||
 
 다음 섹션에서는 표의 일부 항목에 대해 자세히 설명합니다.
+
+### <a name="ui-element-construction"></a>UI 요소 생성
+
+다음 코드 예제는 XAML 페이지의 명령형 코드에서 UI 요소를 생성하는 방법을 보여줍니다.
+
+```csharp
+var myTextBlock = new TextBlock()
+{
+    Text = "Text",
+    Style = (Windows.UI.Xaml.Style)this.Resources["MyTextBlockStyle"]
+};
+```
+
+```cppwinrt
+TextBlock myTextBlock;
+myTextBlock.Text(L"Text");
+myTextBlock.Style(
+    winrt::unbox_value<Windows::UI::Xaml::Style>(
+        Resources().Lookup(
+            winrt::box_value(L"MyTextBlockStyle")
+        )
+    )
+);
+```
 
 ### <a name="tostring"></a>ToString()
 
