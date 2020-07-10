@@ -4,12 +4,12 @@ description: Windows UI 라이브러리용 NuGet 패키지를 나열합니다.
 ms.topic: article
 ms.date: 04/15/2020
 keywords: Windows 10, UWP, 도구 키트 SDK
-ms.openlocfilehash: 2bda405977733a6191c4434fd8bd2c63b2ce10ce
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: fdb11193273f7f6c54ef82076939c033d5a4168c
+ms.sourcegitcommit: 6cdba316bdbd85a2429259ebfb59ff94440e234a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580710"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882871"
 ---
 # <a name="windows-ui-library-nuget-packages"></a>Windows UI 라이브러리 NuGet 패키지
 
@@ -25,7 +25,7 @@ NuGet은 Visual Studio에 기본적으로 제공되는 .Net 애플리케이션�
 
 Visual Studio 패키지 관리자에서 검색하면 다음과 비슷한 목록이 표시됩니다(버전 번호는 다를 수 있지만 이름은 동일해야 함).
 
-![](images/NugetPackages.png)
+![NuGet 패키지 관리자](images/NugetPackages.png)
 
 ## <a name="update-nuget-packages"></a>NuGet 패키지 업데이트
 

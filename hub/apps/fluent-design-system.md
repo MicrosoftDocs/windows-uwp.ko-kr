@@ -8,12 +8,12 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: 6cc020930e3b768f74ddb7cdfef3338ae537bd5d
-ms.sourcegitcommit: f806d5f3b0c1e046c903d3388092c0e059d21858
+ms.openlocfilehash: 7d340b3db12aef964a65860855acc0f0722cda64
+ms.sourcegitcommit: 6cdba316bdbd85a2429259ebfb59ff94440e234a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83791018"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882935"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Windows 앱 작성자용 Fluent 디자인 시스템
 
@@ -58,7 +58,7 @@ Fluent 디자인 문서에는 디자인 지침 외에도 디자인을 수행하�
 </Grid>
 ```
 
-![](images/fluent/xaml-example.png)
+![XAML 예제](images/fluent/xaml-example.png)
 
 
 > UWP 개발을 처음 접하는 경우 [UWP 시작 페이지](/windows/uwp/get-started)를 확인하세요.

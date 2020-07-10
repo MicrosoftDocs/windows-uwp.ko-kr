@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 6a52e12f9d60ee4abb4b1aed3043a69c25845267
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 9d08dd0f43f1c505124203028c69326e10eea26c
+ms.sourcegitcommit: 6cdba316bdbd85a2429259ebfb59ff94440e234a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71317101"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882877"
 ---
 # <a name="part-1-migrate-the-contoso-expenses-app-to-net-core-3"></a>1부: Contoso Expenses 앱을 .NET Core 3으로 마이그레이션
 
@@ -234,7 +234,7 @@ Contoso 지출이라는 샘플 WPF 데스크톱 앱을 현대화하는 방법을
 2. **NuGet 패키지 관리**를 선택합니다.
 3. **NuGet 패키지 관리자** 창에서 **찾아보기**를 클릭합니다. `Microsoft.Windows.Compatibility` 패키지를 검색하고 안정적인 최신 버전을 설치합니다.
 
-    ![](images/wpf-modernize-tutorial/WindowsCompatibilityPack.png)
+    ![NuGet 패키지 설치](images/wpf-modernize-tutorial/WindowsCompatibilityPack.png)
 
 4. 이제 **ContosoExpenses.Data** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **빌드**를 선택하여 프로젝트를 다시 컴파일합니다.
 
