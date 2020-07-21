@@ -6,22 +6,22 @@ ms.date: 07/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 084f9d17c773bbbfa0234d0093f0691583189c15
-ms.sourcegitcommit: 8008b7820793fa58b13e2938bf49969b3e692b46
+ms.openlocfilehash: b5b5678ad1a0666e6f008a2ec69ba63c35441edf
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81688198"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493518"
 ---
 # <a name="raising-events-in-windows-runtime-components"></a>Windows 런타임 구성 요소에서 이벤트 발생
 
 > [!NOTE]
-> [C + +/winrt](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) Windows 런타임 구성 요소에서 이벤트를 발생 시키는 방법에 대 한 자세한 내용은 [c + +/Winrt의 Author 이벤트](../cpp-and-winrt-apis/author-events.md)를 참조 하세요.
+> [C + +/winrt](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Windows 런타임 구성 요소에서 이벤트를 발생 시키는 방법에 대 한 자세한 내용은 [c + +/Winrt의 Author 이벤트](/windows/uwp/cpp-and-winrt-apis/author-events)를 참조 하세요.
 
 Windows 런타임 구성 요소가 백그라운드 스레드 (작업자 스레드)에서 사용자 정의 대리자 형식의 이벤트를 발생 시키고 JavaScript가 이벤트를 받을 수 있도록 하려는 경우 이러한 방법 중 하나를 사용 하 여 구현 하거나 생성할 수 있습니다.
 
 -   (옵션 1) 이벤트를 JavaScript 스레드 컨텍스트로 마샬링하기 위해 [**CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher) 를 통해 이벤트를 발생 시킵니다. 일반적으로 이 방법이 최선의 옵션이지만 이 방법을 사용해도 가장 빠른 성능이 제공되지 않는 경우도 있습니다.
--   (옵션 2) ** [Windows 기반](/uwp/api/windows.foundation.eventhandler-1)\<개체\> ** 를 사용 합니다 (이벤트 유형 정보는 손실 되지 않음). 옵션 1을 사용할 수 없거나 성능이 적절 하지 않은 경우 형식 정보 손실이 허용 되는 경우이 옵션을 선택 하는 것이 좋습니다. C # Windows 런타임 구성 요소를 작성 하는 경우에는 **Windows 기반\<개체\> ** 형식을 사용할 수 없습니다. 대신, 해당 형식은 [**system.object**](/dotnet/api/system.eventhandler)로 프로젝션 되므로 대신 사용 해야 합니다.
+-   (옵션 2) ** [Windows 기반 처리기](/uwp/api/windows.foundation.eventhandler-1) \<Object\> ** 를 사용 합니다 (이벤트 유형 정보는 손실 되지 않음). 옵션 1을 사용할 수 없거나 성능이 적절 하지 않은 경우 형식 정보 손실이 허용 되는 경우이 옵션을 선택 하는 것이 좋습니다. C # Windows 런타임 구성 요소를 작성 하는 경우에는 **Windows \<Object\> ** 를 사용할 수 없습니다. 대신 해당 형식이 [**system.object**](/dotnet/api/system.eventhandler)로 프로젝션 되므로이를 대신 사용 해야 합니다.
 -   (옵션 3) 구성 요소에 대 한 고유한 프록시 및 스텁을 만듭니다. 이 옵션은 구현하기가 가장 어렵지만 형식 정보를 유지하며, 요구되는 시나리오에서 옵션 1에 비해 더 나은 성능을 제공할 수 있습니다.
 
 이러한 옵션 중 하나를 사용하지 않고 백그라운드 스레드에서 이벤트를 발생시키면 JavaScript 클라이언트가 이벤트를 받지 못합니다.
@@ -71,14 +71,14 @@ public void MakeToastWithDispatcher(string message)
 }
 ```
 
-## <a name="option-2-use-eventhandlerltobjectgt-but-lose-type-information"></a>(옵션 2) EventHandler&lt;개체&gt; 를 사용 하지만 형식 정보를 손실 합니다.
+## <a name="option-2-use-eventhandlerltobjectgt-but-lose-type-information"></a>(옵션 2) EventHandler 개체를 사용 &lt; &gt; 하지만 형식 정보를 손실 합니다.
 
 > [!NOTE]
-> C # Windows 런타임 구성 요소를 작성 하는 경우에는 **Windows 기반\<개체\> ** 형식을 사용할 수 없습니다. 대신, 해당 형식은 [**system.object**](/dotnet/api/system.eventhandler)로 프로젝션 되므로 대신 사용 해야 합니다.
+> C # Windows 런타임 구성 요소를 작성 하는 경우에는 **Windows \<Object\> ** 를 사용할 수 없습니다. 대신 해당 형식이 [**system.object**](/dotnet/api/system.eventhandler)로 프로젝션 되므로이를 대신 사용 해야 합니다.
 
-백그라운드 스레드에서 이벤트를 보내는 또 다른 방법은 이벤트의 형식&gt; 으로 [Windows](/uwp/api/windows.foundation.eventhandler)&lt;를 사용 하는 것입니다. Windows에서는 이러한 제네릭 형식의 구체적인 인스턴스화를 제공하며 이를 위한 프록시 및 스텁을 제공합니다. 단점은 이벤트 인수 및 전송자의 형식 정보가 손실된다는 점입니다. C++ 및 .NET 클라이언트는 이벤트를 받았을 때 어떤 형식을 캐스팅해야 할지 설명서를 통해 알아야 합니다. JavaScript 클라이언트에는 원래 형식 정보가 필요하지 않습니다. JavaScript 클라이언트는 메타데이터에 있는 이름을 기반으로 인수 속성을 찾습니다.
+백그라운드 스레드에서 이벤트를 보내는 또 다른 방법은 [Windows.Foundation.EventHandler](/uwp/api/windows.foundation.eventhandler) &lt; &gt; 이벤트의 형식으로 Windows를 사용 하는 것입니다. Windows에서는 이러한 제네릭 형식의 구체적인 인스턴스화를 제공하며 이를 위한 프록시 및 스텁을 제공합니다. 단점은 이벤트 인수 및 전송자의 형식 정보가 손실된다는 점입니다. C++ 및 .NET 클라이언트는 이벤트를 받았을 때 어떤 형식을 캐스팅해야 할지 설명서를 통해 알아야 합니다. JavaScript 클라이언트에는 원래 형식 정보가 필요하지 않습니다. JavaScript 클라이언트는 메타데이터에 있는 이름을 기반으로 인수 속성을 찾습니다.
 
-이 예제에서는 c #&lt;&gt; 에서 다음과 같이 Windows를 사용 하는 방법을 보여 줍니다.
+이 예제에서는 &lt; &gt; c #에서 다음과 같이 Windows를 사용 하는 방법을 보여 줍니다.
 
 ```csharp
 public sealed Class1
@@ -124,11 +124,11 @@ toastCompletedEventHandler: function (event) {
 
 완전히 유지되는 형식 정보가 있는 사용자 정의 이벤트 형식에서 잠재적인 성능 향상 이점을 얻으려면 사용자 고유 프록시 및 스텁 개체를 만들어 앱 패키지에 포함해야 합니다. 일반적으로 드문 경우지만 다른 두 옵션 모두 적절하지 않은 경우에만 이 옵션을 사용해야 합니다. 또한 이 옵션을 사용할 경우 다른 두 옵션을 사용할 때보다 성능이 더 낫다는 보장이 없습니다. 실제 성능은 여러 요인에 따라 달라집니다. Visual Studio 프로파일러 또는 기타 프로파일링 도구를 사용하여 실제 응용 프로그램 성능을 측정하고 이벤트에 병목 현상이 있는지 여부를 확인합니다.
 
-이 문서의 나머지 부분에서는 c #을 사용 하 여 기본 Windows 런타임 구성 요소를 만든 다음 c + +를 사용 하 여 JavaScript가 비동기 작업에서 구성 요소에 의해 발생 하는 Windows Foundation. TypedEventHandler&lt;tsender, TResult&gt; 이벤트를 사용할 수 있도록 하는 프록시 및 스텁을 위한 DLL을 만드는 방법을 보여 줍니다. C++ 또는 Visual Basic을 사용하여 구성 요소를 만들 수도 있습니다. 프록시 및 스텁 만들기와 관련 된 단계는 동일 합니다. 이 연습은 Windows 런타임 in-process 구성 요소 샘플 만들기 (c + +/CX)를 기반으로 하며 용도를 설명 하는 데 도움이 됩니다.
+이 문서의 나머지 부분에서는 c #을 사용 하 여 기본 Windows 런타임 구성 요소를 만든 다음 c + +를 사용 하 여 JavaScript가 &lt; &gt; 비동기 작업에서 구성 요소에 의해 발생 하는 Windows Foundation. TypedEventHandler tsender, TResult 이벤트를 사용할 수 있도록 하는 프록시 및 스텁을 위한 DLL을 만드는 방법을 보여 줍니다. C++ 또는 Visual Basic을 사용하여 구성 요소를 만들 수도 있습니다. 프록시 및 스텁 만들기와 관련 된 단계는 동일 합니다. 이 연습은 Windows 런타임 in-process 구성 요소 샘플 만들기 (c + +/CX)를 기반으로 하며 용도를 설명 하는 데 도움이 됩니다.
 
 이 연습에는 이러한 부분이 있습니다.
 
--   여기서는 두 가지 기본 Windows 런타임 클래스를 만듭니다. 한 클래스는 TValue 형식의 [&lt;&gt; ](/uwp/api/windows.foundation.typedeventhandler-2) 이벤트를 노출 하 고, 다른 클래스는 JavaScript에 반환 되는 형식으로 서, JavaScript로 반환 됩니다. 이후 단계를 완료할 때까지 이러한 클래스는 JavaScript와 통신할 수 없습니다.
+-   여기서는 두 가지 기본 Windows 런타임 클래스를 만듭니다. 한 클래스는 TValue 형식의 이벤트를 노출 하 고, 다른 클래스는 JavaScript에 반환 되는 형식으로 서 [ &lt; , &gt; ](/uwp/api/windows.foundation.typedeventhandler-2) JavaScript로 반환 됩니다. 이후 단계를 완료할 때까지 이러한 클래스는 JavaScript와 통신할 수 없습니다.
 -   이 앱은 기본 클래스 개체를 활성화 하 고, 메서드를 호출 하 고, Windows 런타임 구성 요소에 의해 발생 하는 이벤트를 처리 합니다.
 -   프록시 및 스텁 클래스를 생성 하는 도구에 필요 합니다.
 -   그런 다음 IDL 파일을 사용 하 여 프록시 및 스텁 용 C 소스 코드를 생성 합니다.
@@ -138,11 +138,11 @@ toastCompletedEventHandler: function (event) {
 
 Visual Studio의 메뉴 모음에서 **파일 &gt; 새로 만들기 프로젝트**를 선택 합니다. **새 프로젝트** 대화 상자에서 **JavaScript &gt; 유니버설 Windows** 를 확장 한 다음 새 **앱**을 선택 합니다. 프로젝트 이름을 ToasterApplication로 지정한 다음 **확인** 단추를 선택 합니다.
 
-C # Windows 런타임 구성 요소를 솔루션에 추가 합니다. 솔루션 탐색기에서 솔루션에 대 한 바로 가기 메뉴를 열고 **새 &gt; 프로젝트 추가**를 선택 합니다. **Visual c # &gt; Microsoft Store** 를 확장 한 다음 **Windows 런타임 구성 요소**를 선택 합니다. 프로젝트 이름을 ToasterComponent로 지정한 다음 **확인** 단추를 선택 합니다. ToasterComponent는 이후 단계에서 만들 구성 요소의 루트 네임스페이스가 됩니다.
+C # Windows 런타임 구성 요소를 솔루션에 추가 합니다. 솔루션 탐색기에서 솔루션에 대 한 바로 가기 메뉴를 열고 ** &gt; 새 프로젝트 추가**를 선택 합니다. **Visual c # &gt; Microsoft Store** 를 확장 한 다음 **Windows 런타임 구성 요소**를 선택 합니다. 프로젝트 이름을 ToasterComponent로 지정한 다음 **확인** 단추를 선택 합니다. ToasterComponent는 이후 단계에서 만들 구성 요소의 루트 네임스페이스가 됩니다.
 
 솔루션 탐색기에서 솔루션에 대 한 바로 가기 메뉴를 열고 **속성**을 선택 합니다. **속성 페이지** 대화 상자의 왼쪽 창에서 **구성 속성** 을 선택한 다음 대화 상자의 위쪽에서 **구성** 을 **디버그** 로 설정 하 고 **플랫폼** 을 x86, x64 또는 ARM으로 설정 합니다. **확인** 단추를 선택합니다.
 
-**중요 한** 플랫폼 = 모든 CPU는 나중에 솔루션에 추가할 네이티브 코드 Win32 DLL에 사용할 수 없으므로 작동 하지 않습니다.
+**중요**   Platform = 모든 CPU는 나중에 솔루션에 추가할 네이티브 코드 Win32 DLL에 사용할 수 없으므로 작동 하지 않습니다.
 
 솔루션 탐색기에서 class1.cs의 이름을 프로젝트 이름과 일치하도록 ToasterComponent.cs로 바꿉니다. 파일에 있는 클래스가 새 파일 이름에 맞게 자동으로 바뀝니다.
 
@@ -150,7 +150,7 @@ C # Windows 런타임 구성 요소를 솔루션에 추가 합니다. 솔루션 
 
 프록시 및 스텁이 필요한 경우 구성 요소가 인터페이스를 사용하여 public 멤버를 노출해야 합니다. ToasterComponent.cs에서 토스터에 대한 인터페이스를 하나 정의하고 토스터가 생성하는 알림에 대해 다른 인터페이스를 정의합니다.
 
-**참고** c #에서는이 단계를 건너뛸 수 있습니다. 대신 먼저 클래스를 만든 다음 바로 가기 메뉴를 열고 ** &gt; 리팩터링 인터페이스 추출**을 선택 합니다. 생성되는 코드에서 인터페이스에 public 액세스 가능성을 수동으로 제공합니다.
+**참고**   C #에서는이 단계를 건너뛸 수 있습니다. 대신 먼저 클래스를 만든 다음 바로 가기 메뉴를 열고 **리팩터링 &gt; 인터페이스 추출**을 선택 합니다. 생성되는 코드에서 인터페이스에 public 액세스 가능성을 수동으로 제공합니다.
 
 ```csharp
     public interface IToaster
@@ -218,7 +218,7 @@ IToast 인터페이스에는 알림 형식을 설명 하기 위해 검색할 수
 
 위의 코드에서는 알림을 만든 다음 스레드 풀 작업 항목을 스핀업하여 알림을 발생시킵니다. IDE는 비동기 호출에 wait 키워드를 적용 하도록 제안할 수 있지만 메서드는 작업 결과에 따라 달라 지는 작업을 수행 하지 않으므로이 경우에는 필요 하지 않습니다.
 
-**Note**이전 코드의 비동기 호출에서는 스레드 풀을 사용 하 여 백그라운드 스레드에서 이벤트를 발생 시키는 간단한 방법을 보여 줍니다.  다음 예제와 같이 이러한 특정 메서드를 작성할 수 있으며 .NET 작업 스케줄러가 async/await 호출을 UI 스레드에 다시 자동으로 마샬링해야 하므로 이 메서드는 제대로 작동할 것입니다.
+**참고**   이전 코드의 비동기 호출에서는 스레드 풀을 사용 하 여 백그라운드 스레드에서 이벤트를 발생 시키는 간단한 방법을 보여 줍니다. 다음 예제와 같이 이러한 특정 메서드를 작성할 수 있으며 .NET 작업 스케줄러가 async/await 호출을 UI 스레드에 다시 자동으로 마샬링해야 하므로 이 메서드는 제대로 작동할 것입니다.
   
 ```csharp
     public async void MakeToast(string message)
@@ -233,7 +233,7 @@ IToast 인터페이스에는 알림 형식을 설명 하기 위해 검색할 수
 
 ## <a name="to-program-the-javascript-app"></a>JavaScript 앱을 프로그래밍하려면
 
-이제 알림을 만들기 위해 방금 정의한 클래스를 사용하도록 JavaScript 앱에 단추를 추가할 수 있습니다. 이 작업을 수행하기 전에, 방금 만든 ToasterComponent 프로젝트에 대한 참조를 추가해야 합니다. 솔루션 탐색기에서 ToasterApplication 프로젝트에 대 한 바로 가기 메뉴를 열고 **참조 추가 &gt; **를 선택한 다음 **새 참조 추가** 단추를 선택 합니다. 참조 추가 대화 상자의 솔루션 아래에 있는 왼쪽 창에서 구성 요소 프로젝트를 선택한 다음 가운데 창에서 ToasterComponent를 선택합니다. **확인** 단추를 선택합니다.
+이제 알림을 만들기 위해 방금 정의한 클래스를 사용하도록 JavaScript 앱에 단추를 추가할 수 있습니다. 이 작업을 수행하기 전에, 방금 만든 ToasterComponent 프로젝트에 대한 참조를 추가해야 합니다. 솔루션 탐색기에서 ToasterApplication 프로젝트에 대 한 바로 가기 메뉴를 열고 ** &gt; 참조 추가**를 선택한 다음 **새 참조 추가** 단추를 선택 합니다. 참조 추가 대화 상자의 솔루션 아래에 있는 왼쪽 창에서 구성 요소 프로젝트를 선택한 다음 가운데 창에서 ToasterComponent를 선택합니다. **확인** 단추를 선택합니다.
 
 솔루션 탐색기에서 ToasterApplication 프로젝트에 대 한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택 합니다.
 
@@ -273,7 +273,7 @@ MakeToast 함수는 단추로 후크 되어야 합니다. 알림을 만든 결�
     </body>
 ```
 
-TypedEventHandler를 사용 하지 않는 경우 이제 로컬 컴퓨터에서 앱을 실행 하 고 단추를 클릭 하 여 알림을 만들 수 있습니다. 그러나 앱에서 아무 변화가 없습니다. 이유를 확인 하려면 To Completedevent를 실행 하는 관리 코드를 디버그 하겠습니다. 프로젝트를 중지 한 다음 메뉴 모음에서 **디버그 &gt; Toaster 응용 프로그램 속성**을 선택 합니다. **디버거 형식** 을 **관리 전용**으로 변경 합니다. 메뉴 모음에서 ** &gt; 디버그 예외**를 선택한 다음 **공용 언어 런타임 예외**를 선택 합니다.
+TypedEventHandler를 사용 하지 않는 경우 이제 로컬 컴퓨터에서 앱을 실행 하 고 단추를 클릭 하 여 알림을 만들 수 있습니다. 그러나 앱에서 아무 변화가 없습니다. 이유를 확인 하려면 To Completedevent를 실행 하는 관리 코드를 디버그 하겠습니다. 프로젝트를 중지 한 다음 메뉴 모음에서 **디버그 &gt; Toaster 응용 프로그램 속성**을 선택 합니다. **디버거 형식** 을 **관리 전용**으로 변경 합니다. 메뉴 모음에서 **디버그 &gt; 예외**를 선택한 다음 **공용 언어 런타임 예외**를 선택 합니다.
 
 이제 앱을 실행하고 알림 만들기 단추를 클릭합니다. 디버거가 잘못된 캐스팅 예외를 catch합니다. 메시지만으로 확실하지는 않지만 이 예외는 해당 인터페이스에 대한 프록시가 누락되어 발생하고 있습니다.
 
@@ -283,7 +283,7 @@ TypedEventHandler를 사용 하지 않는 경우 이제 로컬 컴퓨터에서 �
 
 ## <a name="to-generate-guids-for-the-components-interfaces-c-and-other-net-languages"></a>구성 요소의 인터페이스에 대 한 Guid를 생성 하려면 (c # 및 기타 .NET 언어)
 
-메뉴 모음에서 도구 &gt; GUID 만들기를 선택 합니다. 대화 상자에서 5를 선택 합니다. \[Guid ("xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx ... xxxx ")\]. 새 GUID 단추를 선택한 다음 복사 단추를 선택합니다.
+메뉴 모음에서 도구 &gt; GUID 만들기를 선택 합니다. 대화 상자에서 5를 선택 합니다. \[Guid ("xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx ... xxxx ") \] . 새 GUID 단추를 선택한 다음 복사 단추를 선택합니다.
 
 ![guid 생성기 도구](./images/guidgeneratortool.png)
 
@@ -330,10 +330,10 @@ winmdidl /outdir:output "$(TargetPath)"
 midl /metadata_dir "%WindowsSdkDir%References\CommonConfiguration\Neutral" /iid "$(ProjectDir)$(TargetName)_i.c" /env win32 /h "$(ProjectDir)$(TargetName).h" /winmd "Output\$(TargetName).winmd" /W1 /char signed /nologo /winrt /dlldata "$(ProjectDir)dlldata.c" /proxy "$(ProjectDir)$(TargetName)_p.c" "Output\$(TargetName).idl"
 ```
 
-**중요**  ARM 또는 x64 프로젝트 구성의 경우 MIDL/env 매개 변수를 x64 또는 arm32로 변경 합니다.
+**중요**    ARM 또는 x64 프로젝트 구성의 경우 MIDL/env 매개 변수를 x64 또는 arm32로 변경 합니다.
 
 Winmd 파일이 변경 될 때마다 IDL 파일이 다시 생성 되도록 하려면 **빌드에서 프로젝트 출력을 업데이트할 때** **빌드 후 이벤트 실행** 을 변경 합니다.
-빌드 이벤트 속성 페이지는 빌드 이벤트와 비슷해야 ![합니다.](./images/buildevents.png)
+빌드 이벤트 속성 페이지는 빌드 이벤트와 비슷해야 합니다. ![](./images/buildevents.png)
 
 솔루션을 다시 빌드하여 IDL을 생성하고 컴파일합니다.
 
@@ -414,11 +414,11 @@ Extensions XML 노드를 패키지 노드의 직계 자식으로 붙여넣고, �
 
 넘어가기 전에 다음 사항을 확인해야 합니다.
 
--   ProxyStub ClassId는 ToasterComponent\_파일의 첫 번째 GUID로 설정 됩니다. 이 파일에서 classId로 정의된 첫 번째 GUID를 사용하세요. 이 GUID는 ITypedEventHandler2의 GUID와 동일할 수 있습니다.
+-   ProxyStub ClassId는 ToasterComponent 파일의 첫 번째 GUID로 설정 됩니다 \_ . 이 파일에서 classId로 정의된 첫 번째 GUID를 사용하세요. 이 GUID는 ITypedEventHandler2의 GUID와 동일할 수 있습니다.
 -   경로는 프록시 이진 파일의 패키지 상대 경로입니다. 이 연습에서는 proxies.dll이 ToasterApplication.winmd와 동일한 폴더에 있습니다.
 -   GUID가 올바른 형식입니다. 잘못된 형식일 가능성이 높습니다.
--   매니페스트의 인터페이스 Id는 ToasterComponent\_파일의 iid와 일치 합니다.
--   매니페스트에서 인터페이스 이름은 고유합니다. 이 이름은 시스템에서 사용되지 않으므로 사용자가 값을 선택할 수 있습니다. 정의한 인터페이스와 확실하게 일치하는 인터페이스 이름을 선택하는 것이 좋습니다. 생성된 인터페이스의 이름은 생성된 인터페이스를 나타내야 합니다. ToasterComponent\_파일을 사용 하 여 인터페이스 이름을 생성 하는 데 도움이 됩니다.
+-   매니페스트의 인터페이스 Id는 ToasterComponent 파일의 Iid와 일치 합니다 \_ .
+-   매니페스트에서 인터페이스 이름은 고유합니다. 이 이름은 시스템에서 사용되지 않으므로 사용자가 값을 선택할 수 있습니다. 정의한 인터페이스와 확실하게 일치하는 인터페이스 이름을 선택하는 것이 좋습니다. 생성된 인터페이스의 이름은 생성된 인터페이스를 나타내야 합니다. ToasterComponent 파일을 사용 하 여 \_ 인터페이스 이름을 생성 하는 데 도움이 됩니다.
 
 지금 솔루션을 실행하려고 시도하면 proxies.dll이 페이로드의 일부가 아니라는 오류가 발생합니다. ToasterApplication 프로젝트의 **참조** 폴더에 대 한 바로 가기 메뉴를 열고 **참조 추가**를 선택 합니다. Proxies 프로젝트 옆의 확인란을 선택합니다. ToasterComponent 옆의 확인란도 선택되어 있는지 확인합니다. **확인** 단추를 선택합니다.
 

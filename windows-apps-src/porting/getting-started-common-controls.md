@@ -6,52 +6,52 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc45f21acf5b9a485cf6bd5ead18482f1920bf99
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 979dabe193fc1ab6ecaa8c31a70ca2364448986e
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260146"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493288"
 ---
 # <a name="getting-started-common-controls"></a>시작: 공용 컨트롤
 
 
 ## <a name="common-controls-list"></a>공용 컨트롤 목록
 
-이전 섹션에서는 두 개의 컨트롤 즉, 단추와 텍스트 블록만 사용했습니다. 물론, 많은 컨트롤을 사용할 수 있습니다. 앱에서 사용하는 몇 가지 일반적인 컨트롤과 이와 동일한 iOS 컨트롤은 다음과 같습니다. iOS 컨트롤은 사전순으로 나열되어 있고 그 옆에 가장 유사한 UWP(유니버설 Windows 플랫폼) 컨트롤이 나열되어 있습니다.
+이전 섹션에서는 button 및 textblock의 두 가지 컨트롤만 작업 했습니다. 물론, 많은 컨트롤을 사용할 수 있습니다. 앱에서 사용 하는 몇 가지 일반적인 컨트롤 및 해당 iOS가 여기에 해당 합니다. IOS 컨트롤은 가장 유사한 유니버설 Windows 플랫폼 (UWP) 컨트롤 옆에 사전순으로 나열 됩니다.
 
-UWP 컨트롤은 실행 중인 장치 유형을 인식하여 그에 따라 모양과 기능을 변경할 수 있습니다. 예를 들어 프로젝트에서 [**DatePicker**](https://docs.microsoft.com/previous-versions/windows/apps/br211681(v=win.10)) 컨트롤을 사용하는 경우 데스크톱 컴퓨터와 휴대폰에서 서로 다르게 보이고 동작하도록 자체적으로 최적화할 수 있습니다. 아무 작업도 수행할 필요가 없습니다. 컨트롤이 런타임에 자동으로 조정됩니다.
+UWP 컨트롤에 대 한 자세한 내용은 실행 중인 장치 유형을 적절 하 게 변경 하 고 그에 따라 모양 및 기능을 변경 하는 것입니다. 예를 들어, 프로젝트에서 [**DatePicker**](https://docs.microsoft.com/previous-versions/windows/apps/br211681(v=win.10)) 컨트롤을 사용 하는 경우 휴대폰과 비교 하 여 데스크톱 컴퓨터에서 다르게 표시 하 고 다르게 동작 하도록 최적화할 수 있습니다. 아무것도 수행할 필요가 없습니다. 컨트롤은 런타임에 자체적으로 조정 됩니다.
 
-| iOS 컨트롤(클래스/프로토콜) | 해당 하는 UWP 컨트롤 |
+| iOS 컨트롤 (클래스/프로토콜) | 해당 하는 UWP 컨트롤 |
 |------------------------------|--------------------------------------|
-| 활동 표시기(**UIActivityIndicatorView**) | [**ProgressRing**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing) <br/> [빠른 시작: 진행률 컨트롤 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh780651(v=win.10)) 참조 |
-| 광고 배너 보기(**ADBannerView**) 및 광고 배너 보기 대리자(**ADBannerViewDelegate**) | [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) <br/> [앱에서 광고 표시](../monetize/display-ads-in-your-app.md) 참조 |
-| 단추(UIButton) | [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) <br/> [빠른 시작: 단추 컨트롤 추가](https://docs.microsoft.com/previous-versions/windows/apps/jj153346(v=win.10)) 참조 |
-| 날짜 선택기(UIDatePicker) | [DatePicker](https://docs.microsoft.com/previous-versions/windows/apps/br211681(v=win.10)) |
-| 이미지 보기(UIImageView) | [이미지](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) <br/> [Image 및 ImageBrush](https://docs.microsoft.com/windows/uwp/controls-and-patterns/images-imagebrushes) 참조 |
-| 레이블(UILabel) | [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) <br/> [빠른 시작: 텍스트 표시](https://docs.microsoft.com/previous-versions/windows/apps/hh700392(v=win.10)) 참조 |
-| 지도 보기(MKMapView) 및 지도 보기 대리자(MKMapViewDelegate) | [UWP 앱에 대 한 Bing Maps](https://msdn.microsoft.com/library/hh846481) 참조 |
-| 탐색 컨트롤러(UINavigationController) 및 탐색 컨트롤러 대리자(UINavigationControllerDelegate) | [Frame](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) <br/> [탐색](https://docs.microsoft.com/windows/uwp/layout/navigation-basics) 참조 |
-| 페이지 컨트롤(UIPageControl) | [페이지](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) <br/> [탐색](https://docs.microsoft.com/windows/uwp/layout/navigation-basics) 참조 |
-| 선택기 보기(UIPickerView) 및 선택기 보기 대리자(UIPickerViewDelegate) | [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox) <br/> [콤보 상자 및 목록 상자 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh780616(v=win.10))도 참조 |
-| 진행률 표시줄(UIProgressView) | [ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar) <br/> [빠른 시작: 진행률 컨트롤 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh780651(v=win.10)) 참조 |
-| 스크롤 보기(UIScrollView) 및 스크롤 보기 대리자(UIScrollViewDelegate) | [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) <br/>  [XAML(Extensible Application Markup Language) 스크롤, 이동 및 확대/축소 샘플](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)(영문) 참조 |
-| 검색 창(UISearchBar) 및 검색 창 대리자(UISearchBarDelegate) | [앱에 검색 추가](https://docs.microsoft.com/previous-versions/windows/apps/jj130767(v=win.10)) 참조 <br/>  [빠른 시작: 앱에 검색 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh868180(v=win.10)) 참조 |
-| 세그먼트 컨트롤(UISegmentedControl) | 없음 |
-| 슬라이더(UISlider) | [슬라이더](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) <br/>  [슬라이더를 추가하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh868197(v=win.10))도 참조 |
-| 분할 보기 컨트롤러(UISplitViewController) 및 분할 보기 컨트롤러 대리자(UISplitViewControllerDelegate) | 없음 |
-| 스위치(UISwitch) | [ToggleSwitch](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToggleSwitch) <br/>  [설정/해제 스위치를 추가하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh868198(v=win.10)) 참조 |
-| 탭 바 컨트롤러(UITabBarController) 및 탭 바 컨트롤러 대리자(UITabBarControllerDelegate) | 없음 |
-| 테이블 보기 컨트롤러(UITableViewController), 테이블 보기(UITableView), 테이블 보기 대리자(UITableViewDelegate) 및 테이블 셀(UITableViewCell) | [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) <br/>  [빠른 시작: ListView 및 GridView 컨트롤 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh780650(v=win.10))도 참조 |
-| 텍스트 필드(UITextField) 및 텍스트 필드 대리자(UITextFieldDelegate) | [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) <br/>  [텍스트 표시 및 편집](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/text-controls)참조 |
-| 텍스트 보기(UITextView) 및 텍스트 보기 대리자(UITextViewDelegate) | [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) <br/>  [빠른 시작: 텍스트 표시](https://docs.microsoft.com/previous-versions/windows/apps/hh700392(v=win.10)) 참조 |
-| 보기(UIView) 및 보기 컨트롤러(UIViewController) | [페이지](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) <br/>  [탐색](https://docs.microsoft.com/windows/uwp/layout/navigation-basics) 참조 |
-| 웹 보기(UIWebView) 및 웹 보기 대리자(UIWebViewDelegate) | [WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) <br/>  [XAML WebView 컨트롤 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-WebView-control-sample-58ad63f7) 참조 |
-| 창(UIWindow) | [Frame](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) <br/>  [탐색](https://docs.microsoft.com/windows/uwp/layout/navigation-basics) 참조 |
+| 활동 표시기 (**UIActivityIndicatorView**) | [**ProgressRing**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing) <br/> 참고 항목 [: 빠른 시작: 진행률 컨트롤 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh780651(v=win.10)) |
+| 광고 배너 보기 (**ADBannerView**) 및 ad 배너 뷰 대리자 (**ADBannerViewDelegate**) | [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) <br/> 또한 [앱에서 광고 표시를](../monetize/display-ads-in-your-app.md) 참조 하세요. |
+| 단추 (UIButton) | [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) <br/> 참고 항목 [: 빠른 시작: 단추 컨트롤 추가](https://docs.microsoft.com/previous-versions/windows/apps/jj153346(v=win.10)) |
+| 날짜 선택기 (UIDatePicker) | [DatePicker](https://docs.microsoft.com/previous-versions/windows/apps/br211681(v=win.10)) |
+| 이미지 뷰 (UIImageView) | [이미지](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) <br/> 참고 항목 [이미지 및 ImageBrush](https://docs.microsoft.com/windows/uwp/controls-and-patterns/images-imagebrushes) |
+| 레이블 (UILabel) | [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) <br/> 참고 항목 [: 빠른 시작: 텍스트 표시](https://docs.microsoft.com/previous-versions/windows/apps/hh700392(v=win.10)) |
+| 지도 보기 (MKMapView) 및 지도 보기 대리자 (MKMapViewDelegate) | [UWP 앱에 대 한 Bing Maps](https://msdn.microsoft.com/library/hh846481) 참조 |
+| 탐색 컨트롤러 (UINavigationController) 및 탐색 컨트롤러 대리자 (UINavigationControllerDelegate) | [Frame](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) <br/> 참고 항목 [탐색](https://docs.microsoft.com/windows/uwp/layout/navigation-basics) |
+| 페이지 컨트롤 (UIPageControl) | [호출](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) <br/> 참고 항목 [탐색](https://docs.microsoft.com/windows/uwp/layout/navigation-basics) |
+| 선택 보기 (UIPickerView) 및 선택기 뷰 대리자 (UIPickerViewDelegate) | [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox) <br/> [콤보 상자 및 목록 상자 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh780616(v=win.10)) 도 참조 하세요. |
+| 진행률 표시줄 (UIProgressView) | [ProgressBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar) <br/> 참고 항목 [: 빠른 시작: 진행률 컨트롤 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh780651(v=win.10)) |
+| 스크롤 뷰 (UIScrollView) 및 scroll view 대리자 (UIScrollViewDelegate) | [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) <br/>  [Extensible Application Markup Language (XAML) 스크롤, 패닝 및 확대/축소 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample%20(Windows%208)) 도 참조 하세요. |
+| 검색 창(UISearchBar) 및 검색 창 대리자(UISearchBarDelegate) | [앱에 검색 추가를](https://docs.microsoft.com/previous-versions/windows/apps/jj130767(v=win.10)) 참조 하세요. <br/>  참고 항목 [: 빠른 시작: 앱에 검색 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh868180(v=win.10)) |
+| 분할 컨트롤 (UISegmentedControl) | 없음 |
+| 슬라이더 (UISlider) | [슬라이더](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Slider) <br/>  또한 [슬라이더를 추가 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh868197(v=win.10)) 을 참조 하세요. |
+| 분할 뷰 컨트롤러 (UISplitViewController) 및 분할 뷰 컨트롤러 대리자 (UISplitViewControllerDelegate) | 없음 |
+| 스위치 (UISwitch) | [ToggleSwitch](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToggleSwitch) <br/>  또한 [토글 스위치를 추가 하는 방법을](https://docs.microsoft.com/previous-versions/windows/apps/hh868198(v=win.10)) 참조 하세요. |
+| 탭 표시줄 컨트롤러 (Uitabbar Controller) 및 탭 모음 컨트롤러 대리자 (Uitab바 Controllerdelegate) | 없음 |
+| 테이블 뷰 컨트롤러 (UITableViewController), 테이블 뷰 (UITableView), 테이블 뷰 대리자 (Uitableviewcontroller) 및 테이블 셀 (Uitableviewcontroller) | [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) <br/>  참고 항목 [: 빠른 시작: ListView 및 GridView 컨트롤 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh780650(v=win.10)) |
+| 텍스트 필드 (UITextField) 및 텍스트 필드 대리자 (UITextFieldDelegate) | [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) <br/>  또한 [텍스트 표시 및 편집을](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/text-controls) 참조 하세요. |
+| 텍스트 뷰 (UITextView) 및 텍스트 뷰 대리자 (UITextViewDelegate) | [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) <br/>  참고 항목 [: 빠른 시작: 텍스트 표시](https://docs.microsoft.com/previous-versions/windows/apps/hh700392(v=win.10)) |
+| 보기 (UIView) 및 뷰 컨트롤러 (UIViewController) | [호출](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) <br/>  참고 항목 [탐색](https://docs.microsoft.com/windows/uwp/layout/navigation-basics) |
+| 웹 보기 (UIWebView 보기) 및 웹 보기 대리자 (UIWebViewDelegate) | [WebView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView) <br/>  [XAML 웹 보기 컨트롤 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20WebView%20control%20sample%20(Windows%208)) 도 참조 하세요. |
+| 창 (UIWindow) | [Frame](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) <br/>  참고 항목 [탐색](https://docs.microsoft.com/windows/uwp/layout/navigation-basics) |
 
-기타 컨트롤에 대해서는 [컨트롤 목록](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/)을 참조하세요.
+더 많은 컨트롤은 [컨트롤 목록](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/)을 참조 하세요.
 
-**참고**  JAVASCRIPT 및 HTML을 사용 하는 UWP 앱에 대 한 컨트롤 목록은 [controls list](https://docs.microsoft.com/previous-versions/windows/apps/hh465453(v=win.10))를 참조 하세요.
+**참고**    JavaScript 및 HTML을 사용 하는 UWP 앱에 대 한 컨트롤 목록은 [controls list](https://docs.microsoft.com/previous-versions/windows/apps/hh465453(v=win.10))를 참조 하세요.
 
 ### <a name="next-step"></a>다음 단계
 

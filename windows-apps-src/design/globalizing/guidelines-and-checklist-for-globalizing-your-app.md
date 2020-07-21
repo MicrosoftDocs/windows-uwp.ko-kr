@@ -8,18 +8,18 @@ ms.date: 11/02/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 지역화 가능성, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: f08c8178781c82e8961fd180d4b75912359b4da9
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: d71cf2289654860b47aef18c117ac9d6d36fab0a
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730270"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493248"
 ---
 # <a name="guidelines-for-globalization"></a>세계화 지침
 
 다양 한 언어 및 문화권 구성을 사용 하는 시스템에서 적절 하 게 작동 하는 방식으로 앱을 디자인 하 고 개발 합니다. [**세계화**](/uwp/api/Windows.Globalization?branch=live) api를 사용 하 여 데이터 서식 지정 그리고 언어, 지역, 문자 분류, 시스템 작성, 날짜/시간 형식 지정, 숫자, 통화, 가중치 및 정렬 규칙에 대 한 코드의 가정을 방지 합니다.
 
-| 권장 | Description |
+| 권장 사항 | 설명 |
 | ------------- | ----------- |
 | 문자열을 조작 하 고 비교할 때 문화권을 고려해 야 합니다. | 예를 들어 문자열을 비교 하기 전에 문자열의 대/소문자를 변경 하지 마십시오. [문자열 사용에 대 한 권장 사항을](/dotnet/standard/base-types/best-practices-strings?branch=live#recommendations_for_string_usage)참조 하세요. |
 | 문자열 및 기타 데이터를 정렬 (정렬) 할 때 항상 사전순으로 수행 된다고 가정 하지 마십시오. | 라틴어 스크립트를 사용 하지 않는 언어의 경우 데이터 정렬은 발음 또는 펜 스트로크 수와 같은 요소를 기준으로 합니다. 라틴어 스크립트를 사용 하는 언어에도 항상 영문자 정렬을 사용 하지는 않습니다. 예를 들어 일부 문화권에서 전화 번호부는 사전순으로 정렬 되지 않을 수 있습니다. Windows에서 사용자의 정렬을 처리할 수 있지만 사용자 고유의 정렬 알고리즘을 만드는 경우 대상 시장에서 사용 되는 정렬 방법을 고려해 야 합니다. |
@@ -43,7 +43,7 @@ ms.locfileid: "82730270"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [문자열 사용에 대한 권장 사항](/dotnet/standard/base-types/best-practices-strings?branch=live#recommendations_for_string_usage)
+* [문자열 사용에 대 한 권장 사항](/dotnet/standard/base-types/best-practices-strings?branch=live#recommendations_for_string_usage)
 * [날짜/시간/숫자 형식 세계화](use-global-ready-formats.md)
 * [사용자 프로필 언어 및 앱 매니페스트 언어 이해](manage-language-and-region.md)
 * [BCP-47 언어 태그](https://tools.ietf.org/html/bcp47)
@@ -55,4 +55,4 @@ ms.locfileid: "82730270"
 
 ## <a name="samples"></a>샘플
 
-* [세계화 기본 설정 샘플](https://code.msdn.microsoft.com/windowsapps/Globalization-preferences-6654eb36)
+* [세계화 기본 설정 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Globalization%20preferences%20sample%20(Windows%208))

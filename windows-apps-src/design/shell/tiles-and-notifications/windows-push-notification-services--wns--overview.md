@@ -7,12 +7,12 @@ ms.date: 03/06/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fa70346dc6033ac1f879a1c2429c3c4222b8c0ec
-ms.sourcegitcommit: 368660812e143de5def5e5328a2eadb178cd5544
+ms.openlocfilehash: 41f258124824e6dc7d11aae085365e0d50d8a0f2
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85129110"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493268"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요 
 
@@ -86,7 +86,7 @@ WNS를 통해 알림을 보내려면 앱을 파트너 센터 대시보드에 등
 
 ### <a name="important-notes"></a>중요
 
--   앱에 대 한 알림 채널 URI가 항상 동일 하 게 유지 된다는 것을 보장 하지는 않습니다. 앱이 실행 될 때마다 새 채널을 요청 하 고 URI가 변경 되 면 해당 서비스를 업데이트할 것을 권장 합니다. 개발자는 채널 URI를 수정할 수 없으며 블랙 박스 문자열로 간주 해야 합니다. 지금은 채널 Uri는 30 일 후에 만료 됩니다. Windows 10 앱이 백그라운드에서 주기적으로 해당 채널을 갱신 하는 경우 Windows 8.1에 대 한 [푸시 및 정기 알림 샘플](https://code.msdn.microsoft.com/windowsapps/push-and-periodic-de225603) 을 다운로드 하 고 해당 소스 코드 및/또는이에 대해 설명 하는 패턴을 다시 사용할 수 있습니다.
+-   앱에 대 한 알림 채널 URI가 항상 동일 하 게 유지 된다는 것을 보장 하지는 않습니다. 앱이 실행 될 때마다 새 채널을 요청 하 고 URI가 변경 되 면 해당 서비스를 업데이트할 것을 권장 합니다. 개발자는 채널 URI를 수정할 수 없으며 블랙 박스 문자열로 간주 해야 합니다. 지금은 채널 Uri는 30 일 후에 만료 됩니다. Windows 10 앱이 백그라운드에서 주기적으로 해당 채널을 갱신 하는 경우 Windows 8.1에 대 한 [푸시 및 정기 알림 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Push%20and%20periodic%20notifications%20client-side%20sample%20(Windows%208)) 을 다운로드 하 고 해당 소스 코드 및/또는이에 대해 설명 하는 패턴을 다시 사용할 수 있습니다.
 -   클라우드 서비스와 클라이언트 앱 간의 인터페이스는 개발자에 의해 구현 됩니다. 앱이 자체 서비스를 사용 하 여 인증 프로세스를 진행 하 고 HTTPS와 같은 보안 프로토콜을 통해 데이터를 전송 하는 것이 좋습니다.
 -   클라우드 서비스는 항상 채널 URI가 "notify.windows.com" 도메인을 사용 하는지 확인 하는 것이 중요 합니다. 서비스는 다른 도메인의 채널에 알림을 푸시 하지 않아야 합니다. 앱에 대 한 콜백이 손상 되는 경우 악의적인 공격자가 채널 URI를 전송 하 여 WNS를 스푸핑할 수 있습니다. 도메인을 검사 하지 않으면 클라우드 서비스는 잠재적으로이 공격자에 게 정보를 공개할 수 있습니다.
 -   클라우드 서비스가 만료 된 채널에 알림을 배달 하려고 하면 WNS는 [응답 코드 410](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))을 반환 합니다. 해당 코드에 대 한 응답으로 서비스는 더 이상 해당 URI에 알림을 보내려고 시도 하지 않습니다.

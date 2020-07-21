@@ -2,16 +2,16 @@
 ms.assetid: B4A550E7-1639-4C9A-A229-31E22B1415E7
 title: 센서 방향
 description: 가 속도계, 회전 계, 나침반, 경사 계 및 OrientationSensor 클래스의 센서 데이터는 해당 참조 축에 의해 정의 됩니다. 이러한 축은 장치의 가로 방향으로 정의 되 고 사용자가 장치를 전환할 때 장치를 사용 하 여 회전 합니다.
-ms.date: 05/24/2017
+ms.date: 07/03/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4659aaba330d3b41451e91e450ff601e3fcf5407
-ms.sourcegitcommit: 42a2d9e47f682ba42d91fed587f4d5924bde9c9a
+ms.openlocfilehash: b61b7bcd18419ec9be719b5f565e5503953be7c3
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85840767"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493475"
 ---
 # <a name="sensor-orientation"></a>센서 방향
 
@@ -26,7 +26,12 @@ ms.locfileid: "85840767"
 
 센서에 대 한 참조 축을 이해 하려면 장치 방향에서 표시 방향을 구분 해야 합니다. 표시 방향은 방향 텍스트와 이미지가 화면에 표시 되는 반면 장치 방향은 장치를 물리적으로 배치 하는 것입니다.
 
-다음 다이어그램에서 장치 및 표시 방향은 [가로](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations) (표시 된 센서 축이 가로 방향에 따라 지정 됨) 이며, z 축이 장치에서 확장 됩니다.
+> [!NOTE]
+> 다음 이미지에 표시 된 것 처럼 양의 z 축은 장치 화면에서 확장 됩니다.
+> :::image type="content" source="images/sensor-orientation-zaxis-1-small.png" alt-text="랩톱의 Z 축":::
+
+다음 다이어그램에서는 장치와 디스플레이 방향이 모두 [가로](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations) 방향으로 표시 됩니다. 표시 된 센서 축은 가로 방향에만 적용 됩니다.
+
 
 이 다이어그램은 표시 및 장치 방향을 [가로로](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations)표시 합니다.
 
@@ -34,11 +39,11 @@ ms.locfileid: "85840767"
 
 다음 다이어그램에서는 [LandscapeFlipped](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations)의 표시 및 장치 방향을 모두 보여 줍니다.
 
-![LandscapeFlipped의 디스플레이 및 장치 방향](images/sensor-orientation-b-small.jpg)
+:::image type="content" source="images/sensor-orientation-b-small.jpg" alt-text="LandscapeFlipped의 디스플레이 및 장치 방향":::
 
 이 최종 다이어그램은 장치 방향이 [LandscapeFlipped](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations)는 동안 표시 방향을 가로로 보여 줍니다.
 
-![장치 방향이 LandscapeFlipped 된 상태에서 가로 방향 표시](images/sensor-orientation-c-small.jpg)
+:::image type="content" source="images/sensor-orientation-c-small.jpg" alt-text="장치 방향이 LandscapeFlipped 된 상태에서 가로 방향 표시":::
 
 [**GetForCurrentView**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.getforcurrentview) 메서드를 [**currentorientation**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.currentorientation) 속성과 함께 사용 하 여 [**DisplayInformation**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayInformation) 클래스를 통해 방향 값을 쿼리할 수 있습니다. 그런 다음 [**Displayorientations**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations) 열거와 비교 하 여 논리를 만들 수 있습니다. 지원 되는 모든 방향에 대해 참조 축에서 해당 방향으로의 변환을 지원 해야 합니다.
 
@@ -48,10 +53,10 @@ ms.locfileid: "85840767"
 
 | 방향 | 가로-우선 | 세로-우선 |
 |-------------|-----------------|----------------|
-| **가로** | ![가로 방향-첫 번째 장치](images/sensor-orientation-0-small.jpg) | ![세로 방향으로 가로-첫 번째 장치](images/sensor-orientation-1-small.jpg) |
-| **세로** | ![가로-세로 방향의 첫 번째 장치](images/sensor-orientation-2-small.jpg) | ![세로 방향 세로 방향 기본 장치](images/sensor-orientation-3-small.jpg) |
-| **LandscapeFlipped** | ![LandscapeFlipped 방향의 가로-첫 번째 장치](images/sensor-orientation-4-small.jpg) | ![LandscapeFlipped 방향 세로-첫 번째 장치](images/sensor-orientation-5-small.jpg) | 
-| **PortraitFlipped** | ![PortraitFlipped 방향의 가로-첫 번째 장치](images/sensor-orientation-6-small.jpg)| ![PortraitFlipped 방향 세로-첫 번째 장치](images/sensor-orientation-7-small.jpg) |
+| **가로** | :::image type="content" source="images/sensor-orientation-0-small.jpg" alt-text="가로 방향-첫 번째 장치"::: | :::image type="content" source="images/sensor-orientation-1-small.jpg" alt-text="세로 방향으로 가로-첫 번째 장치"::: |
+| **세로** | :::image type="content" source="images/sensor-orientation-2-small.jpg" alt-text="가로-세로 방향의 첫 번째 장치"::: | :::image type="content" source="images/sensor-orientation-3-small.jpg" alt-text="세로 방향 세로 방향 기본 장치"::: |
+| **LandscapeFlipped** | :::image type="content" source="images/sensor-orientation-4-small.jpg" alt-text="LandscapeFlipped 방향의 가로-첫 번째 장치"::: | :::image type="content" source="images/sensor-orientation-5-small.jpg" alt-text="LandscapeFlipped 방향 세로-첫 번째 장치":::
+| **PortraitFlipped** | :::image type="content" source="images/sensor-orientation-6-small.jpg" alt-text="PortraitFlipped 방향의 가로-첫 번째 장치"::: | :::image type="content" source="images/sensor-orientation-7-small.jpg" alt-text="PortraitFlipped 방향 세로-첫 번째 장치"::: |
 
 ## <a name="devices-broadcasting-display-and-headless-devices"></a>디스플레이 및 헤드리스 장치 브로드캐스트 장치
 
@@ -66,9 +71,9 @@ ms.locfileid: "85840767"
 | 사용 됩니다. | 나침반 제목에 대 한 참조 축 | 북쪽 (가로-위쪽)을 향한 경우의 API 나침반 제목 | 북쪽 북부 (세로-우선)를 향한 경우의 API 나침반 제목 |나침반 제목 보정 (가로-세로) | 나침반 제목 보정 (세로 우선) |
 |---------------------|------------------------------------|---------------------------------------------------------|--------------------------------------------------------|------------------------------------------------|-----------------------------------------------|
 | 가로           | -Z | 0   | 270 | 제목               | (제목 + 90) %360  |
-| 세로            |  지원 | 90  | 0   | (제목 + 270) %360 |  제목              |
+| 세로            |  Y | 90  | 0   | (제목 + 270) %360 |  제목              |
 | LandscapeFlipped    |  Z | 180 | 90  | (제목 + 180) %360 | (제목 + 270) %360 |
-| PortraitFlipped     |  지원 | 270 | 180 | (제목 + 90) %360  | (제목 + 180) %360 |
+| PortraitFlipped     |  Y | 270 | 180 | (제목 + 90) %360  | (제목 + 180) %360 |
 
 머리글을 올바르게 표시 하기 위해 표에 표시 된 것 처럼 나침반 제목을 수정 합니다. 다음 코드 조각에서는이 작업을 수행 하는 방법을 보여 줍니다.
 
@@ -111,7 +116,7 @@ private void ReadingChanged(object sender, CompassReadingChangedEventArgs e)
 | 참조 축        |  X |  Y | Z |
 |-----------------------|----|----|---|
 | **가로**         |  X |  Y | Z |
-| **세로**          |  지원 | -X | Z |
+| **세로**          |  Y | -X | Z |
 | **LandscapeFlipped**  | -X | -y | Z |
 | **PortraitFlipped**   | -y |  X | Z |
 
@@ -159,13 +164,13 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 ## <a name="display-orientation-and-device-orientation"></a>방향 및 장치 방향 표시
 
-[**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) 데이터는 다른 방식으로 변경 해야 합니다. 이러한 여러 방향을 Z 축에서 시계 반대 방향으로 회전 하는 것으로 간주 하므로 사용자의 방향을 다시 가져오려면 회전을 반대로 해야 합니다. 4 원수 데이터의 경우 오일러의 수식을 사용 하 여 참조 4 원수로 회전을 정의할 수 있으며 참조 회전 행렬을 사용할 수도 있습니다.
+[**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) 데이터는 다른 방식으로 변경 해야 합니다. 이러한 여러 방향을 z 축에서 시계 반대 방향으로 회전 하는 것으로 간주 하므로 사용자의 방향을 다시 가져오려면 회전을 반대로 해야 합니다. 4 원수 데이터의 경우 오일러의 수식을 사용 하 여 참조 4 원수로 회전을 정의할 수 있으며 참조 회전 행렬을 사용할 수도 있습니다.
 
-![오일러의 수식](images/eulers-formula.png)
+:::image type="content" source="images/eulers-formula.png" alt-text="오일러의 수식":::
 
 원하는 상대적인 방향을 얻으려면 참조 개체와 절대 개체를 곱합니다. 이 수치는 비가 환이 지 않습니다.
 
-![절대 개체와 참조 개체를 곱합니다.](images/orientation-formula.png)
+:::image type="content" source="images/orientation-formula.png" alt-text="절대 개체와 참조 개체를 곱합니다.":::
 
 위의 식에서 절대 개체는 센서 데이터에서 반환 됩니다.
 
@@ -176,6 +181,6 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 | **LandscapeFlipped** | 180                                | 0-i-j-k                           | \[1 0 0<br/> 0 1 0<br/> 0 0 1]               |
 | **PortraitFlipped**  | 270                                | cos (-135 ⁰) + (i + j + k) * sin (-135 ⁰)     | \[0 -1 0<br/> 1 0 0<br/> 0 0 1]             |
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [동작 및 방향 센서 통합](https://docs.microsoft.com/windows-hardware/design/whitepapers/integrating-motion-and-orientation-sensors)
