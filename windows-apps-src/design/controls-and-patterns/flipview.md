@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f4871b4a43284052a89d0fd37412528840e1ea5a
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 51c43efc859e20606679b385051684730eee1922
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968738"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493388"
 ---
 # <a name="flip-view"></a>보기 대칭 이동
 
@@ -24,9 +24,10 @@ ms.locfileid: "82968738"
 
 **Windows UI 라이브러리 가져오기**
 
-|  |  |
-| - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+<img src="images/winui-logo-64x64.png" alt="WinUI logo"
+     style="float: left; margin-right: 15px;" />
+
+Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요.
 
 > **플랫폼 API:** [FlipView 클래스](/uwp/api/windows.ui.xaml.controls.flipview), [ItemsSource 속성](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [ItemTemplate 속성](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)
 
@@ -207,7 +208,7 @@ stackPanel1.Children.Add(flipView1);
 
 ![상황 표시기 예제](images/controls_contextindicator.jpg)
 
-FlipView에 상황 표시기를 추가하는 방법을 보여 주는 예제 코드는 [XAML FlipView 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-FlipView-control-0ae45312)을 참조하세요.
+FlipView에 상황 표시기를 추가하는 방법을 보여 주는 예제 코드는 [XAML FlipView 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20FlipView%20control%20sample%20(Windows%208))을 참조하세요.
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 

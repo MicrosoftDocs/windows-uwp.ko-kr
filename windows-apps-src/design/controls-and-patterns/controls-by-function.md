@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c593ea76535bec6a9d8ab41f0bcd4f2299162615
-ms.sourcegitcommit: db48036af630f33f0a2f7a908bfdfec945f3c241
+ms.openlocfilehash: fc695b483eefef4210432d5ce55a23ae201740bc
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84437213"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493148"
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 
@@ -324,7 +324,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 디자인 및 방법: [Image 및 ImageBrush](images-imagebrushes.md) 
 
-샘플 코드: [XAML 이미지 샘플](https://code.msdn.microsoft.com/windowsapps/0f5d56ae-5e57-48e1-9cd9-993115b027b9)
+샘플 코드: [XAML 컨트롤 갤러리](https://docs.microsoft.com/samples/microsoft/xaml-controls-gallery/xaml-controls-gallery/)
 
 ## <a name="graphics-and-ink"></a>그래픽 및 잉크
 
@@ -353,7 +353,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 방법: [셰이프 그리기](../../graphics/drawing-shapes.md) 
 
-샘플 코드: [XAML 벡터 기반 그리기 샘플](https://code.msdn.microsoft.com/windowsapps/Drawing-bfc39296)
+샘플 코드: [XAML 벡터 기반 그리기 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20vector-based%20drawing%20sample%20(Windows%208))
 
 ## <a name="layout-controls"></a>레이아웃 컨트롤
 
@@ -453,7 +453,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 
 디자인 및 방법: [스크롤 및 이동 컨트롤 가이드](scroll-controls.md) 
 
-샘플 코드: [XAML 스크롤, 이동 및 확대/축소 샘플](https://code.msdn.microsoft.com/windowsapps/xaml-scrollviewer-pan-and-949d29e9)
+샘플 코드: [XAML 스크롤, 이동 및 확대/축소 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample%20(Windows%208))
 
 ### <a name="stack-panel"></a>스택 패널
 가로 또는 세로 방향으로 지정된 단일 행에 자식 요소를 배열하는 레이아웃 패널입니다.
@@ -591,7 +591,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 디자인 및 방법: 웹 보기에 대한 지침 
 
-샘플 코드: [XAML WebView 컨트롤 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-WebView-control-sample-58ad63f7)
+샘플 코드: [XAML WebView 컨트롤 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20WebView%20control%20sample%20(Windows%208))
 
 ### <a name="semantic-zoom"></a>시맨틱 줌
 
@@ -612,7 +612,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 디자인 및 방법: [시맨틱 줌 컨트롤 가이드](semantic-zoom.md)
 
-샘플 코드: [XAML GridView 그룹화 및 SemanticZoom 샘플](https://code.msdn.microsoft.com/windowsapps/groupedgridview-77c59e8e)
+샘플 코드: [XAML GridView 그룹화 및 SemanticZoom 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20GridView%20grouping%20and%20SemanticZoom%20sample%20(Windows%208))
 
 ## <a name="progress-controls"></a>진행률 컨트롤
 
@@ -682,7 +682,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 디자인 및 방법: [텍스트 컨트롤](text-controls.md), [암호 상자 컨트롤 가이드](password-box.md) 
 
-샘플 코드: [XAML 텍스트 표시 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a), [XAML 텍스트 편집 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-editing-sample-fb0493ad)
+샘플 코드: [XAML 텍스트 표시 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20text%20display%20sample%20(Windows%208)), [XAML 텍스트 편집 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20text%20editing%20sample%20(Windows%208))
 
 ### <a name="rich-edit-box"></a>서식 있는 편집 상자
 사용자가 서식 있는 텍스트, 하이퍼링크, 이미지 등의 콘텐츠가 포함된 서식 있는 텍스트 문서를 편집할 수 있는 컨트롤입니다.
@@ -695,7 +695,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 디자인 및 방법: [텍스트 컨트롤](text-controls.md), [서식 있는 편집 상자 컨트롤 가이드](rich-edit-box.md)
 
-샘플 코드: [XAML 텍스트 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
+샘플 코드: [XAML 텍스트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20text%20display%20sample%20(Windows%208))
 
 ### <a name="search-box"></a>검색 상자
 자동 제안 상자를 참조하세요.
