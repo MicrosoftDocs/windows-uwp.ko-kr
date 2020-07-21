@@ -12,7 +12,7 @@
         - name: 자동화 시작
           href: ../python/scripting.md
         - name: 데이터베이스 시작
-          href: ../python/databases.md
+          href: 'https://docs.microsoft.com/windows/wsl/tutorials/wsl-database'
         - name: FAQ
           href: ../python/faqs.md
         - name: 리소스
@@ -30,7 +30,7 @@
         - name: 웹 프레임워크 시작
           href: ../nodejs/web-frameworks.md
         - name: 데이터베이스 시작
-          href: ../nodejs/databases.md
+          href: '.https://docs.microsoft.com/windows/wsl/tutorials/wsl-database'
         - name: 컨테이너 시작
           href: ../nodejs/containers.md
     - name: Android를 사용하여 개발
@@ -92,10 +92,10 @@
         - name: 개발 환경 변경
           href: mac-to-windows.md
         - name: 바로 가기 키
-          href: 'mac-to-windows.md#keyboard-shortcuts'
+          href: mac-to-windows.md#keyboard-shortcuts
         - name: 트랙 패드 바로 가기
-          href: 'mac-to-windows.md#trackpad-shortcuts'
+          href: mac-to-windows.md#trackpad-shortcuts
         - name: 터미널 및 셸
-          href: 'mac-to-windows.md#terminal-and-shell'
+          href: mac-to-windows.md#terminal-and-shell
         - name: 앱 및 유틸리티
-          href: 'mac-to-windows.md#apps-and-utilities'
+          href: mac-to-windows.md#apps-and-utilities
