@@ -1,14 +1,14 @@
 ---
 title: WinUI 2.1 릴리스 정보
 description: 새로운 기능 및 버그 수정이 포함된 WinUI 2.1 릴리스에 대한 정보입니다.
-ms.date: 04/15/2020
+ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: f62dd912d76f8045a46d467f49167cdc426b75c2
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: f362c4ae7654d6ef3b888b908c4779fce62af5fe
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580620"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493088"
 ---
 # <a name="windows-ui-library-21"></a>Windows UI 라이브러리 2.1
 

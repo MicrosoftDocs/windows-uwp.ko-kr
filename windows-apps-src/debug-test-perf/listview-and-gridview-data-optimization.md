@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d00a41c5a58935a4ecfe623c71a1264a2dc1132
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 6db47510b28e42ab1ef638af6a980eb4ca7290d4
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71339615"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493168"
 ---
 # <a name="listview-and-gridview-data-virtualization"></a>ListView 및 GridView 데이터 가상화
 
@@ -41,7 +41,7 @@ ms.locfileid: "71339615"
 
 이와 같은 데이터 원본은 지속적으로 확장될 수 있는 메모리 내 목록입니다. 항목 컨트롤은 표준 [**IList**](https://docs.microsoft.com/dotnet/api/system.collections.ilist) 인덱서 및 개수 속성을 사용하는 항목을 요청합니다. 개수는 데이터 세트의 실제 크기가 아니라 항목 수를 로컬로 나타내야 합니다.
 
-항목 컨트롤이 기존 데이터의 끝에 가까워지면 [**ISupportIncrementalLoading.HasMoreItems**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems)를 호출합니다. **true**를 반환하면 로드할 권장 항목 수를 전달하는 [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync)를 호출합니다. 데이터를 로드하는 위치(로컬 디스크, 네트워크 또는 클라우드)에 따라 권장 개수와 다른 개수의 항목을 로드하도록 선택할 수 있습니다. 예를 들어 서비스에서 50개 항목의 일괄 처리를 지원하지만 항목 컨트롤에서 10개를 요청하는 경우 50개를 로드할 수 있습니다. 백 엔드에서 데이터를 로드하고 목록에 추가한 후 항목 컨트롤이 새 항목을 인식하도록 [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) 또는 [**IObservableVector&lt;T&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_)를 통해 변경 알림을 발생시킵니다. 또한 실제로 로드한 항목 수를 반환합니다. 권장 개수보다 적은 항목을 로드하거나 항목 컨트롤이 중간에 훨씬 멀리 이동/스크롤된 경우 추가 항목에 대해 데이터 원본가 다시 호출되고 주기가 계속됩니다. Windows 8.1용 [XAML 데이터 바인딩 샘플](https://code.msdn.microsoft.com/windowsapps/Data-Binding-7b1d67b5)을 다운로드하고 Windows 10 앱에서 해당 소스 코드를 재사용하여 자세히 알아볼 수 있습니다.
+항목 컨트롤이 기존 데이터의 끝에 가까워지면 [**ISupportIncrementalLoading.HasMoreItems**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading.hasmoreitems)를 호출합니다. **true**를 반환하면 로드할 권장 항목 수를 전달하는 [**ISupportIncrementalLoading.LoadMoreItemsAsync**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.isupportincrementalloading.loadmoreitemsasync)를 호출합니다. 데이터를 로드하는 위치(로컬 디스크, 네트워크 또는 클라우드)에 따라 권장 개수와 다른 개수의 항목을 로드하도록 선택할 수 있습니다. 예를 들어 서비스에서 50개 항목의 일괄 처리를 지원하지만 항목 컨트롤에서 10개를 요청하는 경우 50개를 로드할 수 있습니다. 백 엔드에서 데이터를 로드하고 목록에 추가한 후 항목 컨트롤이 새 항목을 인식하도록 [**INotifyCollectionChanged**](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged) 또는 [**IObservableVector&lt;T&gt;** ](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IObservableVector_T_)를 통해 변경 알림을 발생시킵니다. 또한 실제로 로드한 항목 수를 반환합니다. 권장 개수보다 적은 항목을 로드하거나 항목 컨트롤이 중간에 훨씬 멀리 이동/스크롤된 경우 추가 항목에 대해 데이터 원본가 다시 호출되고 주기가 계속됩니다. Windows 8.1용 [XAML 데이터 바인딩 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20data%20binding%20sample%20(Windows%208))을 다운로드하고 Windows 10 앱에서 해당 소스 코드를 재사용하여 자세히 알아볼 수 있습니다.
 
 ## <a name="random-access-data-virtualization"></a>임의 액세스 데이터 가상화
 

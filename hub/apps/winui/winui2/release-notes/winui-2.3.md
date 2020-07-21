@@ -1,14 +1,14 @@
 ---
 title: WinUI 2.3 릴리스 정보
 description: 새로운 기능 및 버그 수정이 포함된 WinUI 2.3 릴리스에 대한 정보입니다.
-ms.date: 04/15/2020
+ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: a61932a6f0060a4be79424e02aad3dd312128aef
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 9540f5314e6df02e95943279647d643bdbbef3c5
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580460"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493488"
 ---
 # <a name="windows-ui-library-23"></a>Windows UI 라이브러리 2.3
 

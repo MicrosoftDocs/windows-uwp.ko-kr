@@ -5,12 +5,12 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 컬렉션
 ms.localizationpriority: medium
-ms.openlocfilehash: a98056190d035910a8ed83d2f37799a98b685ce6
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 388e8ebb062dbbb33ffb269f2adcced34a7e577c
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "70304527"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493648"
 ---
 # <a name="xaml-items-controls-bind-to-a-cwinrt-collection"></a>XAML 항목 컨트롤, C++/WinRT 컬렉션에 바인딩
 
@@ -22,6 +22,7 @@ XAML 항목에 효과적으로 바인딩할 수 있는 컬렉션은 *식별할 �
 > C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
 ## <a name="what-does-observable-mean-for-a-collection"></a>컬렉션을 얘기할 때 ‘관찰 가능하다는 것’은 무슨 뜻인가요? 
+
 컬렉션을 나타내는 런타임 클래스에서 요소 추가 또는 제거 시 [**IObservableVector&lt;T&gt;::VectorChanged**](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged) 이벤트가 발생하도록 선택하는 경우, 이 런타임 클래스는 관찰 가능한 컬렉션이 됩니다. XAML 항목 컨트롤은 업데이트된 컬렉션을 가져와 현재 요소를 표시하도록 스스로 업데이트함으로써 이러한 이벤트에 바인딩하여 처리할 수 있습니다.
 
 > [!NOTE]
@@ -93,6 +94,7 @@ Windows::Foundation::Collections::IObservableVector<Bookstore::BookSku> Bookstor
 ```
 
 ## <a name="bind-a-listbox-to-the-bookskus-property"></a>ListBox를 **BookSkus** 속성에 바인딩
+
 `MainPage.xaml`을 엽니다. 여기에는 기본 UI 페이지에 사용할 XAML 태그가 포함되어 있습니다. 다음 태그를 **Button**과 동일한 **StackPanel** 내부에 추가합니다.
 
 ```xaml
@@ -121,9 +123,11 @@ void MainPage::ClickHandler(IInspectable const&, RoutedEventArgs const&)
 이제 프로젝트를 빌드하고 실행합니다. 단추를 클릭하여 **Click** 이벤트 처리기를 실행합니다. 앞에서 **Append** 구현이 UI가 컬렉션의 변경 사실을 알 수 있도록 이벤트를 발생시키고, 그러면 **ListBox**가 컬렉션을 다시 쿼리하여 **Items** 값을 업데이트하는 것을 확인했습니다. 이와 마찬가지로 책 중 하나의 제목이 변경되면 변경된 해당 제목이 단추와 목록 상자 모두에 반영됩니다.
 
 ## <a name="important-apis"></a>중요 API
+
 * [IObservableVector&lt;T&gt;::VectorChanged](/uwp/api/windows.foundation.collections.iobservablevector-1.vectorchanged)
 * [winrt::make 함수 템플릿](/uwp/cpp-ref-for-winrt/make)
 
 ## <a name="related-topics"></a>관련 항목
+
 * [C++/WinRT를 통한 API 사용](consume-apis.md)
 * [C++/WinRT를 통한 API 작성](author-apis.md)

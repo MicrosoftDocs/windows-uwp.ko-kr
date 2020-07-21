@@ -8,12 +8,12 @@ ms.topic: article
 keywords: NodeJS, Node.js, windows 10, microsoft, nodejs 학습, windows 노드, 초보자를 위한 windows 노드, windows 노드로 개발, windows에서 nodejs로 개발
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 433eb5701696f590f10d8b3276481098b9ec073d
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d40d701dc3ae973e0834d0b329527e69854b9e36
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75657085"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86492868"
 ---
 # <a name="get-started-using-nodejs-on-windows-for-beginners"></a>초보자를 위한 Windows에서 Node.js 사용 시작
 
@@ -148,5 +148,5 @@ Node.js에는 서버 쪽 웹앱을 개발하는 데 유용한 도구가 포함�
 이 가이드에서는 Node.js를 사용하여 수행할 수 있는 작업에 대한 몇 가지 기본적인 사항을 배우고, VS Code에서 Node.js 명령줄을 사용해 보고, Express.js를 사용하여 간단한 웹앱을 만든 후 웹 브라우저에서 로컬로 실행하고, 몇 가지 기본 제공 Node.js 모듈을 사용해 보았습니다. 널리 사용되는 Node.js 웹 프레임워크를 설치 및 사용하는 방법에 대한 자세한 내용은 Next.js(React를 기준으로 하는 서버 렌더링 웹 프레임워크), Nuxt.js(Vue를 기준으로 하는 서버 렌더링 웹 프레임워크) 및 Gatsby(React를 기준으로 하는 정적 렌더링 웹 프레임워크)를 다루는 다음 가이드를 계속 진행합니다. MongoDB 또는 PostgreSQL 데이터베이스나 Docker 컨테이너로 작업하는 방법을 학습하는 과정으로 건너뛸 수도 있습니다.
 
 - [Windows에서 Node.js 웹 프레임워크 시작](./web-frameworks.md)
-- [Node.js 앱을 데이터베이스에 연결](./databases.md)
+- [Node.js 앱을 데이터베이스에 연결](https://docs.microsoft.com/windows/wsl/tutorials/wsl-database)
 - [Node.js에서 Docker 컨테이너 사용 시작](./containers.md)

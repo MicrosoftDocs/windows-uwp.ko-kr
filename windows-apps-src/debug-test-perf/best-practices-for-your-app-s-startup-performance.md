@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ae37ab763b6705fbb3f341569904972ebb181412
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 38e9d49d9ec717bc1d28305d83d12e2696a32b3b
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74254680"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86492858"
 ---
 # <a name="best-practices-for-your-apps-startup-performance"></a>앱 시작 성능 모범 사례
 
@@ -323,7 +323,7 @@ XAML 앱의 시작 성능은 시작하는 동안 만드는 요소 수와 직접�
 > End Class
 > ```
 
-연장된 시작 화면 사용의 예를 보려면 [시작 화면 샘플](https://code.msdn.microsoft.com/windowsapps/Splash-screen-sample-89c1dc78)을 참조하세요.
+연장된 시작 화면 사용의 예를 보려면 [시작 화면 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Splash%20screen%20sample%20(Windows%208))을 참조하세요.
 
 ### <a name="phase-3"></a>3단계
 
