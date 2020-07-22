@@ -7,6 +7,8 @@
           href: desktop/index.md
         - name: 앱 플랫폼 선택
           href: desktop/choose-your-platform.md
+        - name: Windows 앱용 Visual Studio 템플릿
+          href: desktop/visual-studio-templates.md
         - name: 데스크톱 앱 현대화
           items:
             - name: 개요
@@ -77,18 +79,23 @@
       items:
         - name: 개요
           href: winui/index.md
-        - name: Windows UI 라이브러리 3.0 Preview 1
+        - name: Windows UI 라이브러리 3.0 Preview 2
           items:
-            - name: 다운로드 및 릴리스 정보
+            - name: 개요 및 릴리스 정보
               href: winui/winui3/index.md
-            - name: 데스크톱 앱용 WinUI 3.0 시작
+            - name: 데스크톱 앱용 WinUI 3 시작
               href: winui/winui3/get-started-winui3-for-desktop.md
+            - name: UWP 앱용 WinUI 3 시작
+              href: winui/winui3/get-started-winui3-for-uwp.md
+            - name: C++/WinRT를 사용한 UWP 및 WinUI 3 앱용 템플릿 기반 XAML 컨트롤
+              href: winui/winui3/xaml-templated-controls-cppwinrt-winui3.md
         - name: Windows UI 2.x 라이브러리
-          href: winui/winui2/index.md
           items:
+            - name: 개요
+              href: winui/winui2/index.md
             - name: 설치
               items:
-                - name: 시작
+                - name: WinUI 2.x 시작
                   href: winui/winui2/getting-started.md
                 - name: NuGet 패키지 목록
                   href: winui/winui2/nuget-packages.md

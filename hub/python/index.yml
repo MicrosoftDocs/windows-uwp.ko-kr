@@ -10,12 +10,12 @@ metadata:
   ms.prod: dev-environment
   ms.technology: windows-python
   ms.topic: landing-page
-  ms.openlocfilehash: 42ca85644c0759e3c3bb561d3decfe42560d95c9
-  ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+  ms.openlocfilehash: e9bf81f267010fa7500a60fcf327ab7540683efa
+  ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/29/2020
-  ms.locfileid: "72517797"
+  ms.lasthandoff: 07/20/2020
+  ms.locfileid: "86493588"
 landingContent:
 - title: 초보자를 위한 시작
   linkLists:
@@ -57,16 +57,10 @@ landingContent:
       url: ./scripting.md#example-script-to-modify-all-files-in-a-directory
 - title: 데이터베이스 시작
   linkLists:
-  - linkListType: concept
-    links:
-    - text: MongoDB 및 PostgreSQL
-      url: ./databases.md
   - linkListType: quickstart
     links:
-    - text: PostgreSQL 설치 및 실행
-      url: ./databases.md#install-postgresql
-    - text: MongoDB 설치 및 실행
-      url: ./databases.md#install-mongodb
+    - text: MySQL, PostgreSQL, SQLite, Microsoft SQL Server, MongoDB 또는 Redis 설치 및 실행
+      url: https://docs.microsoft.com/windows/wsl/tutorials/wsl-database
 - title: 추가 리소스
   linkLists:
   - linkListType: reference

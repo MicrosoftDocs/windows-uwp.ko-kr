@@ -10,12 +10,12 @@ metadata:
   ms.prod: dev-environment
   ms.technology: windows-node
   ms.topic: landing-page
-  ms.openlocfilehash: 32c477cf230b7f8b5490b6f8ae7d227b6000aa77
-  ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+  ms.openlocfilehash: 6af50395c4ffd8e9ea0b2e0eb9543be3e47367f7
+  ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/29/2020
-  ms.locfileid: "72314807"
+  ms.lasthandoff: 07/20/2020
+  ms.locfileid: "86493458"
 landingContent:
 - title: Node.js 개발 환경 설정
   linkLists:
@@ -53,16 +53,10 @@ landingContent:
       url: ./web-frameworks.md#get-started-with-gatsbyjs
 - title: 데이터베이스 시작
   linkLists:
-  - linkListType: concept
-    links:
-    - text: MongoDB 및 PostgreSQL
-      url: ./databases.md
   - linkListType: quickstart
     links:
-    - text: MongoDB 시작
-      url: ./databases.md#install-mongodb
-    - text: PostgreSQL 시작
-      url: ./databases.md#install-postgresql
+    - text: MySQL, PostgreSQL, SQLite, Microsoft SQL Server, MongoDB 또는 Redis 설치 및 실행
+      url: https://docs.microsoft.com/windows/wsl/tutorials/wsl-database
 - title: 컨테이너 시작
   linkLists:
   - linkListType: concept

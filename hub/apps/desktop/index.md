@@ -7,12 +7,12 @@ keywords: windows win32, 데스크톱 개발
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: d052ad0f670bccd9b32d2e3643520dd6129ed22a
-ms.sourcegitcommit: cc645386b996f6e59f1ee27583dcd4310f8fb2a6
+ms.openlocfilehash: 20399b9a6398b1f17f74d2de74cc4b5e4ba270ac
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84262744"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86492998"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Windows PC용 데스크톱 앱 빌드
 
@@ -20,9 +20,7 @@ ms.locfileid: "84262744"
 
 ## <a name="platforms-for-desktop-apps"></a>데스크톱 앱용 플랫폼
 
-Windows PC용 데스크톱 앱 빌드를 위한 주요 플랫폼에는 4가지가 있습니다. 각 플랫폼은 앱의 수명 주기를 정의하는 앱 모델과 전체 UI 컨트롤 집합, Windows 기능 사용을 위한 포괄적인 관리형 또는 네이티브 API 집합에 대한 액세스를 제공합니다.
-
-다음 표에서는 플랫폼에 대해 소개합니다. 각 플랫폼에 대한 추가 리소스를 비롯한 이 플랫폼의 상세 비교는 [앱 플랫폼 선택](choose-your-platform.md)을 참조하세요.
+Windows PC용 데스크톱 앱 빌드를 위한 주요 플랫폼에는 4가지가 있습니다. 각 플랫폼은 앱의 수명 주기, 완전한 UI 프레임워크 및 UI 컨트롤 세트를 정의하는 앱 모델을 제공합니다. 이를 통해 Word, Excel 및 Photoshop과 같은 데스크톱 앱을 만들고 Windows 기능을 사용하기 위한 포괄적인 관리형 또는 네이티브 API 세트에 액세스할 수 있습니다. 각 플랫폼에 대한 추가 리소스를 비롯한 이 플랫폼의 상세 비교는 [앱 플랫폼 선택](choose-your-platform.md)을 참조하세요.
 
 <br/>
 
@@ -46,8 +44,8 @@ Windows PC용 데스크톱 앱 빌드를 위한 주요 플랫폼에는 4가지�
 <td><a href="/windows/uwp/get-started/">시작</a><br/><a href="/uwp/">API 참조</a><br/><a href="https://github.com/Microsoft/Windows-universal-samples">샘플</a></td>
 </tr>
 <tr class="even">
-<td><a href="https://docs.microsoft.com/windows/win32/">Win32</a></td>
-<td><p>Windows 및 하드웨어에 직접 액세스해야 하는 네이티브 C/C++ Windows 앱을 위한 플랫폼입니다.</p></td>
+<td><a href="https://docs.microsoft.com/windows/win32/">C++/Win32</a></td>
+<td><p>Windows 및 하드웨어에 직접 액세스해야 하는 네이티브 Windows 앱에 적합한 플랫폼입니다.</p></td>
 <td><a href="/windows/win32/desktop-programming/">시작</a><br/><a href="/windows/win32/apiindex/windows-api-list/">API 참조</a><br/><a href="https://github.com/Microsoft/Windows-classic-samples">샘플</a></td>
 </tr>
 <tr class="odd">
@@ -64,7 +62,7 @@ Windows PC용 데스크톱 앱 빌드를 위한 주요 플랫폼에는 4가지�
 </table>
 
 > [!NOTE]
-> 이러한 모든 애플리케이션 플랫폼은 클래식 Windows 데스크톱에서 실행되고 해당 환경의 기능을 최대한 활용하는 Word, Excel, Photoshop 등의 데스크톱 앱을 만들 수 있는 완전한 UI 프레임워크 및 UI 컨트롤 세트를 제공합니다. Windows 10에서 각 플랫폼은 Windows UI(WinUI) 라이브러리를 사용하여 사용자 인터페이스를 만들 수 있습니다. 데스크톱 앱용 WinUI에 대한 자세한 내용은 [이 섹션](choose-your-platform.md#windows-ui-library)을 참조하세요.
+> Windows 10에서 이러한 각 플랫폼은 WinUI(Windows UI) 라이브러리를 사용하여 사용자 인터페이스를 만들 수도 있습니다. 데스크톱 앱용 WinUI에 대한 자세한 내용은 [이 섹션](choose-your-platform.md#windows-ui-library)을 참조하세요.
 
 ## <a name="update-existing-desktop-apps-for-windows-10"></a>Windows 10용 기존 데스크톱 앱 업데이트
 
@@ -94,6 +92,7 @@ Windows용 새 데스크톱 앱을 만드는 경우 시작에 도움이 되는 �
 | 문서 | 설명 |
 |---------|-------------|
 | [앱 플랫폼 선택](choose-your-platform.md) | 주요 데스크톱 앱 플랫폼을 상세히 비교하며, 요구 사항에 적합한 플랫폼을 선택하는 데 도움이 될 수 있습니다. 이 문서에서는 각 플랫폼 관련 문서에 대한 유용한 링크도 제공합니다. |
+| [Windows 앱용 Visual Studio 프로젝트 템플릿](visual-studio-templates.md) | C\# 또는 C++를 사용하여 Windows 10 디바이스용 앱을 빌드하는 데 도움이 되도록 Visual Studio에서 제공하는 프로젝트 및 항목 템플릿에 대해 설명합니다. |
 | [데스크톱 앱 현대화](/windows/apps/desktop/modernize) | WPF, Windows Forms 및 C++ Win32 앱을 비롯한 모든 데스크톱 앱에서 사용할 수 있는 최신 Windows 10 및 UWP 개발 기능을 설명합니다. |
 | [기능 및 기술](/windows/apps/features-and-technologies) | 각각의 주요 데스크톱 앱 플랫폼을 통해 액세스할 수 있는 Windows 기능 개요와 관련 문서 링크를 제공합니다. |
 
