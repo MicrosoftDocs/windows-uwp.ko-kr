@@ -5,20 +5,22 @@ ms.date: 06/21/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 속성
 ms.localizationpriority: medium
-ms.openlocfilehash: 12a20ae3df6ae83723550bf365aadab99b1b3b7b
-ms.sourcegitcommit: 90fe7a9a5bfa7299ad1b78bbef289850dfbf857d
+ms.openlocfilehash: 5ba06ece905e6a91a2279f0fe78e867a8f943bb3
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2020
-ms.locfileid: "84756532"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86492938"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>XAML 컨트롤, C++/WinRT 속성에 바인딩
+
 XAML 컨트롤에 효과적으로 바인딩할 수 있는 속성은 *식별할 수 있는*(observable) 속성이라고 합니다. 이 아이디어는 ‘관찰자 패턴’이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다. 이 항목에서는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)에서 관찰 가능한 속성을 구현하는 방법과 XAML 컨트롤을 이 속성에 바인딩하는 방법을 보여줍니다(배경 정보는 [데이터 바인딩](/windows/uwp/data-binding) 참조).
 
 > [!IMPORTANT]
 > C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
 ## <a name="what-does-observable-mean-for-a-property"></a>속성을 얘기할 때 *관찰 가능하다는 것*은 무슨 뜻인가요?
+
 **BookSku**라고 하는 런타임 클래스에 이름이 **Title**인 속성이 있다고 가정하겠습니다. **BookSku**에서 **Title** 값이 바뀔 때마다 [**INotifyPropertyChanged::PropertyChanged**](/uwp/api/windows.ui.xaml.data.inotifypropertychanged.PropertyChanged) 이벤트가 발생하도록 선택한다면 **Title**은 관찰 가능한 속성이 됩니다. 이벤트가 발생하거나 발생하지 않는 **BookSku**의 동작에 따라서 관찰 가능한 속성인지 알 수 있습니다.
 
 XAML 텍스트 요소, 즉 컨트롤은 업데이트된 값을 가져와 새로운 값을 표시하도록 스스로 업데이트함으로써 이러한 이벤트에 바인딩하여 처리할 수 있습니다.
@@ -27,7 +29,8 @@ XAML 텍스트 요소, 즉 컨트롤은 업데이트된 값을 가져와 새로�
 > 프로젝트 템플릿 및 빌드 지원을 함께 제공하는 C++/WinRT Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
 
 ## <a name="create-a-blank-app-bookstore"></a>비어 있는 앱(Bookstore) 만들기
-먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **비어 있는 앱(C++/WinRT)** 프로젝트를 만들고 이름을 *Bookstore*라고 지정합니다.
+
+먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **비어 있는 앱(C++/WinRT)** 프로젝트를 만들고 이름을 *Bookstore*라고 지정합니다. **솔루션 및 프로젝트를 같은 디렉터리에 배치**를 선택하지 않아야 합니다. 일반적으로 사용 가능한 최신(미리 보기 아님) 버전의 Windows SDK를 대상으로 합니다.
 
 지금부터 관찰 가능한 제목 속성을 갖는 동시에 책을 표현할 새로운 클래스를 작성하려고 합니다. 동일한 컴파일 단위 내에서 클래스를 작성하고 사용합니다. 하지만 XAML에서 이 클래스에 바인딩할 수 있어야 하므로 결국 런타임 클래스가 될 것입니다. 그 밖에도 런타임 클래스를 작성하고 사용하는 데 모두 C++/WinRT를 사용합니다.
 
@@ -47,7 +50,7 @@ namespace Bookstore
 > [!NOTE]
 > 보기 모델 클래스(실제로는 애플리케이션에서 선언하는 런타임 클래스)는 기본 클래스에서 파생될 필요가 없습니다. 위에 선언된 **BookSku** 클래스가 해당하는 예입니다. 이 클래스는 인터페이스를 구현하지만 기본 클래스에서 파생되지 않습니다.
 >
-> 기본 클래스에서 ‘파생된’ 애플리케이션에서 선언하는 런타임 클래스를 ‘구성 가능’ 클래스라고 합니다.  또한 구성 가능 클래스에 관련된 제약 조건이 있습니다. 애플리케이션이 Visual Studio 및 Microsoft Store에서 제출의 유효성 검사에 사용되는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 통과하여 Microsoft Store로 성공적으로 수집되려면 구성 가능 클래스는 기본적으로 Windows 기본 클래스에서 파생되어야 합니다. 즉, 상속 계층 구조의 루트에 있는 클래스는 Windows.* 네임스페이스에서 시작되는 형식이어야 합니다. 기본 클래스에서 런타임 클래스를 파생시켜야 하는 경우(예를 들어 파생시킬 모든 보기 모델에 대한 **BindableBase** 클래스를 구현하려면) [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)에서 파생시킬 수 있습니다.
+> 기본 클래스에서 ‘파생된’ 애플리케이션에서 선언하는 런타임 클래스를 ‘구성 가능’ 클래스라고 합니다. 또한 구성 가능 클래스에 관련된 제약 조건이 있습니다. 애플리케이션이 Visual Studio 및 Microsoft Store에서 제출의 유효성 검사에 사용되는 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 테스트를 통과하여 Microsoft Store로 성공적으로 수집되려면 구성 가능 클래스는 기본적으로 Windows 기본 클래스에서 파생되어야 합니다. 즉, 상속 계층 구조의 루트에 있는 클래스는 Windows.* 네임스페이스에서 시작되는 형식이어야 합니다. 기본 클래스에서 런타임 클래스를 파생시켜야 하는 경우(예를 들어 파생시킬 모든 보기 모델에 대한 **BindableBase** 클래스를 구현하려면) [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject)에서 파생시킬 수 있습니다.
 >
 > 보기 모델은 보기의 추상화이므로 보기(XAML 태그)에 직접 바인딩됩니다. 데이터 모델은 데이터의 추상화이며 보기 모델에서만 사용되고 XAML에 직접 바인딩되지 않습니다. 따라서 데이터 모델을 런타임 클래스가 아니라 C++ 구조체 또는 클래스로 선언할 수 있습니다. MIDL로 선언할 필요가 없으며 원하는 모든 상속 계층 구조를 자유롭게 사용할 수 있습니다.
 
@@ -240,7 +243,7 @@ namespace winrt::Bookstore::implementation
 ...
 ```
 
-`\Bookstore\Bookstore\MainPage.cpp`에서 [**winrt::make**](/uwp/cpp-ref-for-winrt/make)(구현 형식 포함)를 호출하여 프로젝션된 형식의 새 인스턴스를 m_mainViewModel에 할당합니다. 책 제목의 초기 값을 할당합니다. MainViewModel 속성 접근자를 구현합니다. 마지막으로 단추의 이벤트 처리기에서 책 제목을 업데이트합니다. 또한 **MyProperty** 속성도 제거합니다.
+아래 목록에 표시된 것처럼 `\Bookstore\Bookstore\MainPage.cpp`에서 다음과 같이 변경합니다. [**winrt::make**](/uwp/cpp-ref-for-winrt/make)(**BookstoreViewModel** 구현 형식 포함)를 호출하여 프로젝션된 **BookstoreViewModel** 형식의 새 인스턴스를 *m_mainViewModel*에 할당합니다. 위에서 살펴본 것처럼, **BookstoreViewModel** 생성자는 새 **BookSku** 개체를 프라이빗 데이터 멤버로 만들고, 처음에는 제목을 `L"Atticus"`로 설정합니다. 단추의 이벤트 처리기(**ClickHandler**)에서 책의 제목을 게시된 제목으로 업데이트합니다. 마지막으로, **MainViewModel** 속성의 접근자를 구현합니다. 또한 **MyProperty** 속성도 제거합니다.
 
 ```cppwinrt
 // MainPage.cpp

@@ -5,19 +5,19 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: 66c162b7ae9cd588bea1062ed8c953d94d1b691c
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: de461f94897110aaf1ff06b3863a7112c61fda1f
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "70393771"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86492948"
 ---
 # <a name="consume-apis-with-cwinrt"></a>C++/WinRT를 통한 API 사용
 
 이번 항목에서는 Windows에 포함되든, 혹은 외부 구성 요소 공급업체나 사용자 자신 중 어디에서 구현되든 상관없이 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) API를 사용하는 방법에 대해서 설명합니다.
 
 ## <a name="if-the-api-is-in-a-windows-namespace"></a>API가 Windows 네임스페이스에 있는 경우
-이는 Windows 런타임 API를 가장 흔하게 사용하는 경우입니다. 메타데이터에서 정의된 Windows 네임스페이스의 모든 형식에 대해 C++/WinRT는 C++에 편리한 형식(‘프로젝션된 형식’이라고 함)을 정의합니다.  프로젝션된 형식은 Windows 형식과 동일한 정규화된 이름을 가지지만 C++ 구문을 사용하여 C++ **winrt** 네임스페이스에 배치됩니다. 예를 들어 [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri)는 C++/WinRT에 **winrt::Windows::Foundation::Uri**로 프로젝션됩니다.
+이는 Windows 런타임 API를 가장 흔하게 사용하는 경우입니다. 메타데이터에서 정의된 Windows 네임스페이스의 모든 형식에 대해 C++/WinRT는 C++에 편리한 형식(‘프로젝션된 형식’이라고 함)을 정의합니다. 프로젝션된 형식은 Windows 형식과 동일한 정규화된 이름을 가지지만 C++ 구문을 사용하여 C++ **winrt** 네임스페이스에 배치됩니다. 예를 들어 [**Windows::Foundation::Uri**](/uwp/api/windows.foundation.uri)는 C++/WinRT에 **winrt::Windows::Foundation::Uri**로 프로젝션됩니다.
 
 다음은 간단한 코드 예제입니다. 다음 코드 예제를 복사하여 **Windows 콘솔 애플리케이션(C++/WinRT)** 프로젝트의 주 원본 코드 파일에 직접 붙여넣으려는 경우 먼저 프로젝트 속성에서 **미리 컴파일된 헤더 사용 안 함**을 설정합니다.
 
@@ -50,21 +50,21 @@ int main()
 `contosoUri` 값이 범위를 벗어나면 소멸되고 기본 인터페이스에 대한 참조를 릴리스합니다. 해당 참조가 지원하는 Windows 런타임 **Windows.Foundation.Uri** 개체에 대한 마지막 참조인 경우 지원 개체도 소멸할 수 있습니다.
 
 > [!TIP]
-> ‘프로젝션된 형식’이란 API를 사용할 목적으로 런타임 클래스에 대한 래퍼를 말합니다.  ‘프로젝션된 인터페이스’는 Windows 런타임 인터페이스에 대한 래퍼를 말합니다. 
+> ‘프로젝션된 형식’이란 API를 사용할 목적으로 런타임 클래스에 대한 래퍼를 말합니다. ‘프로젝션된 인터페이스’는 Windows 런타임 인터페이스에 대한 래퍼를 말합니다.
 
 ## <a name="cwinrt-projection-headers"></a>C++/WinRT 프로젝션 헤더
-C++/WinRT에서 Windows 네임스페이스 API를 사용하려면 `%WindowsSdkDir%Include<WindowsTargetPlatformVersion>\cppwinrt\winrt` 폴더에서 헤더를 포함해야 합니다. 하위 네임스페이스의 형식이 바로 부모 네임스페이스의 형식을 참조하는 것은 일반적입니다. 결과적으로 각 C++/WinRT 프로젝션 헤더에 부모 네임스페이스 헤더 파일이 자동으로 포함되므로, 명시적으로 포함할 ‘필요’가 없습니다.  그러나 포함해도 오류가 발생하지는 않습니다.
+C++/WinRT에서 Windows 네임스페이스 API를 사용하려면 `%WindowsSdkDir%Include<WindowsTargetPlatformVersion>\cppwinrt\winrt` 폴더에서 헤더를 포함해야 합니다. 하위 네임스페이스의 형식이 바로 부모 네임스페이스의 형식을 참조하는 것은 일반적입니다. 결과적으로 각 C++/WinRT 프로젝션 헤더에 부모 네임스페이스 헤더 파일이 자동으로 포함되므로, 명시적으로 포함할 ‘필요’가 없습니다. 그러나 포함해도 오류가 발생하지는 않습니다.
 
 예를 들어 [**Windows::Security::Cryptography::Certificates**](/uwp/api/windows.security.cryptography.certificates) 네임스페이스의 경우 해당하는 C++/WinRT 형식 정의는 `winrt/Windows.Security.Cryptography.Certificates.h`에 위치합니다. **Windows::Security::Cryptography::Certificates**는 부모 **Windows::Security::Cryptography** 네임스페이스의 형식을 필요로 하며, 해당 네임스페이스의 형식에는 자체 부모 형식인 **Windows::Security**가 필요할 수 있습니다.
 
 따라서 `winrt/Windows.Security.Cryptography.Certificates.h`를 포함하면 해당 파일이 `winrt/Windows.Security.Cryptography.h`를 포함하고 `winrt/Windows.Security.Cryptography.h`가 `winrt/Windows.Security.h`를 포함합니다. `winrt/Windows.h`가 없기 때문에 여기에서 추적이 중지됩니다. 이 전이적 포함 프로세스는 두 번째 수준 네임스페이스에서 중지됩니다.
 
-이 프로세스는 부모 네임스페이스에 정의된 클래스에 필요한 ‘선언’ 및 ‘구현’을 제공하는 헤더 파일을 전이적으로 포함합니다.  
+이 프로세스는 부모 네임스페이스에 정의된 클래스에 필요한 ‘선언’ 및 ‘구현’을 제공하는 헤더 파일을 전이적으로 포함합니다.
 
-한 네임스페이스에 있는 형식의 멤버는 다른 관련되지 않은 네임스페이스에서 하나 이상의 형식을 참조할 수 있습니다. 컴파일러가 이러한 멤버 정의를 성공적으로 컴파일하려면 컴파일러는 이러한 모든 형식의 클로저에 대한 형식 선언을 볼 필요가 있습니다. 따라서 각 C++/WinRT 프로젝션 헤더는 모든 종속 형식을 ‘선언’하는 데 필요한 네임스페이스 헤더를 포함합니다.  부모 네임스페이스와 달리 이 프로세스는 참조된 형식에 대한 ‘구현’에서 끌어오지 ‘않습니다’.  
+한 네임스페이스에 있는 형식의 멤버는 다른 관련되지 않은 네임스페이스에서 하나 이상의 형식을 참조할 수 있습니다. 컴파일러가 이러한 멤버 정의를 성공적으로 컴파일하려면 컴파일러는 이러한 모든 형식의 클로저에 대한 형식 선언을 볼 필요가 있습니다. 따라서 각 C++/WinRT 프로젝션 헤더는 모든 종속 형식을 ‘선언’하는 데 필요한 네임스페이스 헤더를 포함합니다. 부모 네임스페이스와 달리 이 프로세스는 참조된 형식에 대한 ‘구현’에서 끌어오지 ‘않습니다’.
 
 > [!IMPORTANT]
-> 실제로 관련 없는 네임스페이스에서 선언한 형식을 ‘사용’하려는 경우(인스턴스화, 메서드 호출 등) 형식에 대한 적절한 네임스페이스 헤더 파일을 포함해야 합니다.  ‘구현’이 아닌 ‘선언’만 자동으로 포함됩니다.  
+> 실제로 관련 없는 네임스페이스에서 선언한 형식을 ‘사용’하려는 경우(인스턴스화, 메서드 호출 등) 형식에 대한 적절한 네임스페이스 헤더 파일을 포함해야 합니다. ‘구현’이 아닌 ‘선언’만 자동으로 포함됩니다.
 
 예를 들어 `winrt/Windows.Security.Cryptography.Certificates.h`만 포함하는 경우, 이 네임스페이스(등을 전이적으로)에서 선언을 끌어올 수 있습니다.
 
@@ -266,7 +266,7 @@ auto smallBox{
 > [!NOTE]
 > 프로젝트 템플릿 및 빌드 지원을 함께 제공하는 C++/WinRT Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
 
-애플리케이션 프로젝트에서 Windows 런타임 구성 요소의 Windows 런타임 메타데이터(`.winmd`) 파일을 참조하여 빌드합니다. 빌드 도중 `cppwinrt.exe` 도구가 구성 요소의 API 표면을 완전하게 설명하거나 ‘프로젝션’하는 표준 C++ 라이브러리를 생성합니다.  다시 말해서 생성된 라이브러리에는 구성 요소에 프로젝션된 형식이 포함됩니다.
+애플리케이션 프로젝트에서 Windows 런타임 구성 요소의 Windows 런타임 메타데이터(`.winmd`) 파일을 참조하여 빌드합니다. 빌드 도중 `cppwinrt.exe` 도구가 구성 요소의 API 표면을 완전하게 설명하거나 ‘프로젝션’하는 표준 C++ 라이브러리를 생성합니다. 다시 말해서 생성된 라이브러리에는 구성 요소에 프로젝션된 형식이 포함됩니다.
 
 그런 다음, Windows 네임스페이스 형식과 마찬가지로 헤더를 추가한 다음, 생성자 중 하나를 통해 프로젝션된 형식을 생성합니다. 애플리케이션 프로젝트의 시작 코드가 런타임 클래스를 등록하고, 프로젝션된 형식의 생성자는 [**RoActivateInstance**](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roactivateinstance)를 호출하여 참조된 구성 요소의 런타임 클래스를 활성화합니다.
 
@@ -280,7 +280,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 };
 ```
 
-Windows 런타임 구성 요소에서 구현된 API의 사용에 대한 자세한 내용과 코드, 그리고 연습은 [C++/WinRT의 이벤트 작성](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component)을 참조하세요.
+Windows 런타임 구성 요소에서 구현된 API 사용에 대한 자세한 내용과 코드 및 연습은 [C++/WinRT를 사용한 C++/WinRT 런타임 구성 요소](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt) 및 [C++/WinRT의 이벤트 작성](/windows/uwp/cpp-and-winrt-apis/author-events)을 참조하세요.
 
 ## <a name="if-the-api-is-implemented-in-the-consuming-project"></a>API가 사용하는 프로젝트에 구현된 경우
 XAML UI에서 사용되는 형식은 XAML과 동일한 프로젝트에 있다고 해도 런타임 클래스이어야 합니다.
@@ -449,7 +449,8 @@ struct MyPage : Page
 * [winrt::Windows::Foundation::IUnknown 구조체](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown)
 
 ## <a name="related-topics"></a>관련 항목
-* [C++/WinRT의 이벤트 작성](author-events.md#create-a-core-app-bankaccountcoreapp-to-test-the-windows-runtime-component)
-* [C++/WinRT와 ABI 사이의 상호 운용성](interop-winrt-abi.md)
-* [C++/WinRT 소개](intro-to-using-cpp-with-winrt.md)
-* [XAML 컨트롤(C++/WinRT 속성에 바인딩)](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)
+* [C++/WinRT의 이벤트 작성](/windows/uwp/cpp-and-winrt-apis/author-events)
+* [C++/WinRT와 ABI 사이의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-abi)
+* [C++/WinRT 소개](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)
+* [C++/WinRT를 사용한 Windows 런타임 구성 요소](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt)
+* [XAML 컨트롤(C++/WinRT 속성에 바인딩)](/windows/uwp/cpp-and-winrt-apis/binding-property)

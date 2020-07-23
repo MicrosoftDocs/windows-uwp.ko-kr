@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
-ms.openlocfilehash: eae966c130c52305b53cc4122844aeae49ecab92
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5960de52c6cd68e98f80e7618f34dd0a94d08312
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82267488"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493368"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>C++/WinRT의 대리자를 사용한 이벤트 처리
 
@@ -257,7 +257,7 @@ void ProcessFeedAsync()
 위의 “코루틴” 주석에서도 알 수 있듯이 비동기 작업에서 완료된 이벤트에 대리자를 사용하지 않아도 코루틴을 더욱 자연스럽게 사용할 수 있다는 것을 알 수 있습니다. 자세한 내용과 코드 예제는 [C++/WinRT로 동시성 및 비동기 작업](concurrency.md)을 참조하세요.
 
 > [!NOTE]
-> 비동기 작업에 대해 ‘완료 처리기’를 둘 이상 구현하는 것은 올바르지 않습니다.  완료 이벤트에 단일 대리자를 사용하거나 완료 이벤트를 `co_await`할 수 있습니다. 둘 다 사용하면 두 번째는 실패합니다.
+> 비동기 작업에 대해 ‘완료 처리기’를 둘 이상 구현하는 것은 올바르지 않습니다. 완료 이벤트에 단일 대리자를 사용하거나 완료 이벤트를 `co_await`할 수 있습니다. 둘 다 사용하면 두 번째는 실패합니다.
 
 코루틴 대신에 대리자를 계속 사용하는 경우 더 간단한 구문을 선택할 수 있습니다.
 
@@ -295,6 +295,6 @@ winrt::hstring f(ListView listview)
 * [winrt::implements::get_strong 함수](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)
 
 ## <a name="related-topics"></a>관련 항목
-* [C++/WinRT의 이벤트 작성](author-events.md)
-* [C++/WinRT를 통한 동시성 및 비동기 작업](concurrency.md)
-* [C++/WinRT의 강력하고 약한 참조](weak-references.md)
+* [C++/WinRT의 이벤트 작성](/windows/uwp/cpp-and-winrt-apis/author-events)
+* [C++/WinRT를 통한 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)
+* [C++/WinRT의 강력하고 약한 참조](/windows/uwp/cpp-and-winrt-apis/weak-references)
