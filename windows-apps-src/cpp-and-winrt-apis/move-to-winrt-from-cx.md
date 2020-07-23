@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: c5f8b9548bba704a7035b014ca3728db8bcbcc16
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 7282f85d5dcc093cbdabb1e03471ed533136fa7f
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80662379"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493578"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>C++/CX에서 C++/WinRT로 이동
 
@@ -18,7 +18,7 @@ ms.locfileid: "80662379"
 
 ## <a name="porting-strategies"></a>이식 전략
 
-C++/CX 코드를 C++/WinRT로 점진적으로 이식할 수 있습니다. C++/CX 및 C++/WinRT 코드는 같은 프로젝트에 공존할 수 있으며, XAML 컴파일러 지원 및 Windows 런타임 구성 요소의 예외가 있습니다. 이 두 가지 예외를 위해 C++/CX 또는 C++/WinRT를 동일한 프로젝트 내에서 대상으로 지정해야 합니다.
+C++/CX 코드를 C++/WinRT로 점진적으로 이식할 수 있습니다. C++/CX 및 C++/WinRT 코드는 같은 프로젝트에 공존할 수 있으며, XAML 컴파일러 지원 및 Windows 런타임 구성 요소의 예외가 있습니다. 이 두 가지 예외를 위해 C++/CX 또는 C++/WinRT를 동일한 프로젝트 내에서 대상으로 지정해야 합니다. 즉, 모든 XAML 페이지 형식은 완전히 C++/CX이거나 완전히 C++/WinRT여야 합니다. XAML 페이지 형식 외부의 동일한 프로젝트 내에서 여전히 C++/CX와 C++/WinRT를 혼합할 수 있습니다.
 
 > [!IMPORTANT]
 > 프로젝트가 XAML 애플리케이션을 빌드하는 경우 권장하는 한 가지 워크플로는 먼저 C++/WinRT 프로젝트 템플릿 중 하나를 사용하여 Visual Studio에서 새 프로젝트를 만드는 것입니다([Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 그런 다음, C++/CX 프로젝트에서 원본 코드 및 태그 복사를 시작합니다. **프로젝트** \> **새 항목 추가...** \> **Visual C++**  > **빈 페이지(C++/WinRT)** 를 사용하여 새 XAML 페이지를 추가할 수 있습니다.
@@ -28,9 +28,13 @@ C++/CX 코드를 C++/WinRT로 점진적으로 이식할 수 있습니다. C++/CX
 > [!NOTE]
 > [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 및 Windows SDK는 둘 다 루트 네임스페이스인 **Windows**에서 형식을 선언합니다. C++/WinRT에 프로젝션된 Windows 형식은 Windows 형식과 동일한 정규화된 이름을 사용하지만 C++ **winrt** 네임스페이스에 배치됩니다. 이렇게 네임스페이스를 구별하여 원하는 대로 C++/CX에서 C++/WinRT로 이식할 수 있습니다.
 
-위에 언급된 예외 사항을 고려하면서 C++/CX 프로젝트를 C++/WinRT로 이식하는 첫 번째 단계는 C++/WinRT 지원을 수동으로 추가하는 것입니다([Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 이 작업을 수행하려면 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/)를 프로젝트에 설치합니다. Visual Studio에서 프로젝트를 열고, **프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기**를 차례로 클릭하고, 검색 상자에서 **Microsoft.Windows.CppWinRT**를 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치**를 클릭하여 해당 프로젝트에 대한 패키지를 설치합니다. 해당 변경의 효과 중 하나는 프로젝트에서 C++/CX에 대한 지원이 꺼진다는 것입니다. 빌드 메시지를 통해 C++/CX의 모든 종속성을 찾고 이식할 수 있도록 지원을 해제한 채로 두는 것이 좋습니다. 또는 지원을 다시 설정하고(프로젝트 속성의 **C/C++** \> **일반** \> **Windows 런타임 확장 사용** \> **예(/ZW)** 에서), 점진적으로 이식할 수 있습니다.
+## <a name="first-steps-in-porting-a-ccx-project-to-cwinrt"></a>C++/CX 프로젝트를 C++/WinRT로 이식하는 첫 번째 단계
 
-또는 Visual Studio의 C++/WinRT 프로젝트 속성 페이지를 사용하여 다음 속성을 `.vcxproj` 파일에 수동으로 추가합니다. 비슷한 사용자 지정 옵션(`cppwinrt.exe` 도구의 동작을 미세 조정) 목록은 Microsoft.Windows.CppWinRT NuGet 패키지 [추가 정보](https://github.com/microsoft/cppwinrt/blob/master/nuget/readme.md#customizing)를 참조하세요.
+위에 언급된 예외 사항을 고려하면서 C++/CX 프로젝트를 C++/WinRT로 이식하는 첫 번째 단계는 C++/WinRT 지원을 수동으로 추가하는 것입니다([Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 이 작업을 수행하려면 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/)를 프로젝트에 설치합니다. Visual Studio에서 프로젝트를 열고, **프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기**를 차례로 클릭하고, 검색 상자에서 **Microsoft.Windows.CppWinRT**를 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치**를 클릭하여 해당 프로젝트에 대한 패키지를 설치합니다. 해당 변경의 효과 중 하나는 프로젝트에서 C++/CX에 대한 지원이 꺼진다는 것입니다.
+
+한 번에 이식할 수 있는 경우에는 빌드 메시지에서 C++/CX에 대한 모든 종속성을 찾아서 이식할 수 있도록 지원 기능을 해제하는 것이 좋습니다.
+
+또는 점진적으로 이식해야 하는 경우에는 지원을 다시 켭니다(프로젝트 속성에서 **C/C++** \> **일반** \> **Windows 런타임 확장 사용** \> **예(/ZW)** ). 또는 XAML 프로젝트의 경우 Visual Studio의 C++/WinRT 프로젝트 속성 페이지를 사용하여 `.vcxproj` 파일에 다음 속성을 수동으로 추가합니다(프로젝트 속성에서 **공용 속성** \> **C++/WinRT** \> **프로젝트 언어** \> **C++/CX**). 비슷한 사용자 지정 옵션(`cppwinrt.exe` 도구의 동작을 미세 조정) 목록은 Microsoft.Windows.CppWinRT NuGet 패키지 [추가 정보](https://github.com/microsoft/cppwinrt/blob/master/nuget/readme.md#customizing)를 참조하세요. **Midl 파일(.idl)** 의 콘텐츠를 스텁 파일로 처리해야 할 때마다 해당 속성 값을 다시 **C++/WinRT**로 변경해야 한다는 점에 유의해야 합니다.
 
 ```xml
 <syntaxhighlight lang="xml">
@@ -56,7 +60,7 @@ C++/WinRT 프로젝션된 Windows API 헤더를 포함하는 경우(예: `winrt/
 
 ### <a name="xaml-markup-files"></a>XAML 태그 파일
 
-| | C++/CX | C++/WinRT |
+| 파일 원본 | C++/CX | C++/WinRT |
 | - | - | - |
 | **개발자 XAML 파일** | MyPage.xaml<br/>MyPage.xaml.h<br/>MyPage.xaml.cpp | MyPage.xaml<br/>MyPage.h<br/>MyPage.cpp<br/>MyPage.idl(아래 참조) |
 | **생성된 XAML 파일** | MyPage.xaml.g.h<br/>MyPage.xaml.g.hpp | MyPage.xaml.g.h<br/>MyPage.xaml.g.hpp<br/>MyPage.g.h |
@@ -246,7 +250,7 @@ private:
 };
 ```
 
-C++/WinRT 개체는 값입니다. 따라서 스택에 또는 개체의 필드로 이를 할당할 수 있습니다. C++/WinRT 개체를 할당하기 위해 ‘절대’ `ref new`(또는 `new`)를 사용해서는 안 됩니다.  백그라운드에서 **RoActivateInstance**는 여전히 호출되고 있습니다.
+C++/WinRT 개체는 값입니다. 따라서 스택에 또는 개체의 필드로 이를 할당할 수 있습니다. C++/WinRT 개체를 할당하기 위해 ‘절대’ `ref new`(또는 `new`)를 사용해서는 안 됩니다. 백그라운드에서 **RoActivateInstance**는 여전히 호출되고 있습니다.
 
 ```cppwinrt
 using namespace winrt::Windows::Storage::Streams;
@@ -333,7 +337,7 @@ boxes.resize(10, nullptr); // 10 empty references.
 
 ## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>기본 런타임 클래스에서 파생된 항목 클래스로 변환
 
-파생된 형식의 개체를 참조하는 기본에 대한 참조를 포함하는 것이 일반적입니다. C++/CX에서는 `dynamic_cast`를 사용하여 기본에 대한 참조를 파생에 대한 참조로 ‘캐스팅’합니다.  `dynamic_cast`는 실제로 [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))에 대한 숨겨진 호출입니다. 다음은 종속성 속성 변경 이벤트를 처리하며 **DependencyObject**에서 다시 종속성 속성을 소유하는 실제 형식으로 캐스팅하려는 일반적인 예제입니다.
+파생된 형식의 개체를 참조하는 기본에 대한 참조를 포함하는 것이 일반적입니다. C++/CX에서는 `dynamic_cast`를 사용하여 기본에 대한 참조를 파생에 대한 참조로 ‘캐스팅’합니다. `dynamic_cast`는 실제로 [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))에 대한 숨겨진 호출입니다. 다음은 종속성 속성 변경 이벤트를 처리하며 **DependencyObject**에서 다시 종속성 속성을 소유하는 실제 형식으로 캐스팅하려는 일반적인 예제입니다.
 
 ```cppcx
 void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject^ d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs^ e)
@@ -699,7 +703,7 @@ Most recent status is <Run Text="{x:Bind LatestOperation.Status}"/>.
 
 C++/CX 및 C++/WinRT는 문자열 작성을 위해 표준 **std::wstringstream**을 따릅니다.
 
-| | C++/CX | C++/WinRT |
+| 작업 | C++/CX | C++/WinRT |
 |-|-|-|
 | 문자열 추가, null 유지 | `stream.print(s->Data(), s->Length);` | `stream << std::wstring_view{ s };` |
 | 문자열 추가, 첫 번째 null에서 중지 | `stream << s->Data();` | `stream << s.c_str();` |
@@ -727,11 +731,11 @@ C++/CX 및 C++/WinRT는 문자열 작성을 위해 표준 **std::wstringstream**
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
-* [C++/WinRT의 이벤트 작성](author-events.md)
-* [C++/WinRT를 통한 동시성 및 비동기 작업](concurrency.md)
-* [C++/WinRT를 통한 API 사용](consume-apis.md)
-* [C++/WinRT의 대리자를 사용한 이벤트 처리](handle-events.md)
-* [C++/WinRT와 C++/CX 간의 상호 운용성](interop-winrt-cx.md)
+* [C++/WinRT의 이벤트 작성](/windows/uwp/cpp-and-winrt-apis/author-events)
+* [C++/WinRT를 통한 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)
+* [C++/WinRT를 통한 API 사용](/windows/uwp/cpp-and-winrt-apis/consume-apis)
+* [C++/WinRT의 대리자를 사용한 이벤트 처리](/windows/uwp/cpp-and-winrt-apis/handle-events)
+* [C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx)
 * [Microsoft 인터페이스 정의 언어 3.0 참조](/uwp/midl-3)
-* [WRL에서 C++/WinRT로 이동](move-to-winrt-from-wrl.md)
-* [C++/WinRT의 문자열 처리](strings.md)
+* [WRL에서 C++/WinRT로 이동](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-wrl)
+* [C++/WinRT의 문자열 처리](/windows/uwp/cpp-and-winrt-apis/strings)

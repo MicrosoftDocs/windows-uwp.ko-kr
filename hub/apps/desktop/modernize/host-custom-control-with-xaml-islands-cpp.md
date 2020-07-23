@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: dbe40498d128fa483f2c414e088060ec90fc1c22
-ms.sourcegitcommit: c4f912ba0313ae49632f81e38d7d2d983ac132ad
+ms.openlocfilehash: 8c2133c4f1132b55d62149ad5aaf42e04fc5da5b
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84200786"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493326"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>C++ Win32 앱에서 사용자 지정 UWP 컨트롤 호스트
 
@@ -63,12 +63,7 @@ ms.locfileid: "84200786"
     1. **MyUWPApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
     2. **찾아보기** 탭을 선택하고 [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) 패키지를 검색한 후 이 패키지의 v6.0.0 이상 버전을 설치합니다.
 
-4. **MyUWPApp** 노드를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다. **공용 속성** -> **C++/WinRT** 페이지에서 다음 속성을 설정한 다음, **적용**을 클릭합니다.
-
-    * **세부 정부 표시**를 **보통**으로 설정합니다.
-    * **최적화됨**을 **아니요**로 설정합니다.
-
-    완료되면 속성 페이지가 다음과 같이 표시됩니다.
+4. **MyUWPApp** 노드를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다. **공용 속성** -> **C++/WinRT** 페이지에서 **Verbosity** 속성을 **normal**로 설정한 다음, **적용**을 클릭합니다. 완료되면 속성 페이지가 다음과 같이 표시됩니다.
 
     ![C++/WinRT 프로젝트 속성](images/xaml-islands/xaml-island-cpp-1.png)
 
@@ -260,6 +255,9 @@ ms.locfileid: "84200786"
             }
         }
         ```
+
+        > [!NOTE]
+        > `#include "App.g.cpp"` 문은 프로젝트 속성의 **공용 속성** -> **C++/WinRT** 페이지에서 **Optimized** 속성이 **Yes**로 설정된 경우에 필요합니다. 새 C++/WinRT 프로젝트의 기본값입니다. **Optimized** 속성의 효과에 대한 자세한 내용은 [이 섹션](/windows/uwp/cpp-and-winrt-apis/author-apis#opt-in-to-uniform-construction-and-direct-implementation-access)을 참조하세요.
 
 4. **app.base.h**라는 **MyUWPApp** 프로젝트에 새 헤더 파일을 추가합니다.
 5. **app.base.h** 파일에 다음 코드를 추가하고 저장한 후 닫습니다.

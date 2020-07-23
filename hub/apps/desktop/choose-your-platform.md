@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, 데스크톱 개발
-ms.openlocfilehash: c14b092b9cce9ce7e3b180eaedef657e2d3d03db
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 778c15bc511404fad9cf5713876f89c7fef56165
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580010"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493008"
 ---
 # <a name="choose-your-app-platform"></a>앱 플랫폼 선택
 
@@ -39,6 +39,7 @@ UWP를 사용하여 Windows PC용 데스크톱 애플리케이션을 만들 수 
 UWP에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 * [시작](/windows/uwp/get-started/)
+* [프로젝트 템플릿](visual-studio-templates.md#uwp-templates)
 * [디자인 및 UI](/windows/uwp/design/)
 * [기술 및 기능](/windows/uwp/develop/)
 * [API 참조](/uwp/)
@@ -50,7 +51,8 @@ WPF는 .NET Core 또는 전체 .NET Framework에 액세스할 수 있는 관리�
 
 WPF에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-* [시작(WPF)](https://docs.microsoft.com/dotnet/framework/wpf/getting-started/).
+* [시작(WPF)](https://docs.microsoft.com/dotnet/framework/wpf/getting-started/)
+* [프로젝트 템플릿](visual-studio-templates.md#net-templates)
 * [첫 번째 앱 만들기(.NET Core)](/visualstudio/get-started/csharp/tutorial-wpf/)
 * [첫 번째 앱 만들기(.NET Framework)](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application/)
 * [WPF 앱을 .NET Core로 마이그레이션](/dotnet/desktop-wpf/migration/convert-project-from-net-framework/)
@@ -64,6 +66,7 @@ Windows Forms는 경량 UI 모델과 .NET Core 또는 전체 .NET Framework에 �
 Windows Forms에 대한 자세한 내용은 다음 문서를 참조하세요.
 
 * [Windows Forms 시작](https://docs.microsoft.com/dotnet/framework/winforms/getting-started-with-windows-forms)
+* [프로젝트 템플릿](visual-studio-templates.md#net-templates)
 * [첫 번째 Windows Forms 앱 만들기](/dotnet/framework/winforms/creating-a-new-windows-form)
 * [자습서: 사진 뷰어 만들기](/visualstudio/ide/tutorial-1-create-a-picture-viewer?view=vs-2019)
 * [API 참조(.NET)](https://docs.microsoft.com/dotnet/api/index)
@@ -84,6 +87,7 @@ C++와 함께 Win32 API를 사용하면 WinRT 및 .NET과 같은 관리형 런�
 자세한 내용은 다음 문서를 참조하세요.
 
 * [시작](/windows/win32/desktop-programming/)
+* [프로젝트 템플릿](visual-studio-templates.md#cwin32-templates)
 * [첫 번째 Win32 및 C++ 앱 만들기](/windows/win32/learnwin32/learn-to-program-for-windows/)
 * [기술 및 기능](/windows/win32/desktop-app-technologies)
 * [API 참조](/windows/win32/apiindex/windows-api-list/)
@@ -97,7 +101,7 @@ Windows 10에서 각각의 주요 데스크톱 플랫폼은 [WinUI(Windows UI) �
 
 * UWP 앱은 Windows SDK에서 제공하는 UWP 컨트롤 대신 WinUI 컨트롤을 사용할 수 있습니다.
 * [XAML Islands](modernize/xaml-islands.md)를 사용하도록 기존 WPF, Windows Forms 및 C++/Win32 앱을 업데이트하여 앱에서 WinUI 2.x 컨트롤을 호스트할 수 있습니다.
-* [WinUi 3.0 Preview 1](../winui/winui3/index.md)부터 [전적으로 WinUI 기반 UI를 사용하는 .NET 및 C++/Win32 앱을 만들 수 있습니다](../winui/winui3/get-started-winui3-for-desktop.md).
+* [WinUi 3.0](../winui/winui3/index.md)부터 [전적으로 WinUI 기반 UI를 사용하는 .NET 및 C++/Win32 앱을 만들 수 있습니다](../winui/winui3/get-started-winui3-for-desktop.md).
 
 ## <a name="platform-comparison-uwp-wpf-and-windows-forms"></a>플랫폼 비교: UWP, WPF 및 Windows Forms
 

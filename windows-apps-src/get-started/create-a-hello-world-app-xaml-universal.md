@@ -6,14 +6,14 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, Hello world
 ms.localizationpriority: medium
-ms.openlocfilehash: 93c78845a218620a8a46fc4439733734099b9853
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 7c4d4ba374c68509c0378e769262afda0dae7422
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "73847610"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86492838"
 ---
-# <a name="create-a-hello-world-app-xaml"></a>Hello, world 앱 만들기(XAML)
+# <a name="create-a-hello-world-app-xaml"></a>"Hello, World!" 앱(XAML) 만들기
 
 이 자습서는 XAML과 C#을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)에 대한 간단한 "Hello, world" 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows 10 디바이스에서 실행되는 앱을 빌드할 수 있습니다.
 
@@ -242,4 +242,4 @@ XAML을 통해 앱에서 사용할 컨트롤을 배치하는 방법을 알아보
 * [UWP 앱 개발에 대한 방법 문서](https://docs.microsoft.com/windows/uwp/develop/)
 * [UWP 개발자를 위한 코드 샘플](https://developer.microsoft.com/windows/samples)
 * [유니버설 Windows 앱이란?](universal-application-platform-guide.md)
-* [Windows 계정 가입](sign-up.md)
+* [Windows 계정 등록](sign-up.md)

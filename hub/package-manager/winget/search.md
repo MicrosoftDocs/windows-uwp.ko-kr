@@ -4,12 +4,12 @@ description: 설치할 수 있는 사용 가능한 애플리케이션에 대한 
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 366d2176fe9465495d8ed8f2eeb7912229bd07f1
-ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
+ms.openlocfilehash: 7038f9b31c4c0446e3af56cac2d118598347d4d3
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334476"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493258"
 ---
 # <a name="search-command-winget"></a>search 명령(winget)
 
@@ -48,7 +48,7 @@ ms.locfileid: "85334476"
 | **--name**      |  검색을 애플리케이션 이름으로 제한합니다. |
 | **--moniker**  |    검색을 지정된 모니커로 제한합니다. |
 | **--tag**    |  검색을 애플리케이션에 대해 나열된 태그로 제한합니다. |
-| **--command**   |   검색을 애플리케이션 이름으로 제한합니다. |
+| **--command**   |   검색을 애플리케이션에 대해 나열된 명령으로 제한합니다. |
 
 문자열이 하위 문자열로 처리됩니다. 또한 검색은 기본적으로 대/소문자를 구분하지 않습니다. 예를 들어 `winget search micro`는 다음을 반환할 수 있습니다.
 

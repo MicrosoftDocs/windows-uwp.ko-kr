@@ -6,14 +6,14 @@ ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c388b9b81744c0d27d96c1f97b4e405af63eaef
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 79022d1be13b98be4b086cbe452e55767ca0cedc
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80524080"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86492914"
 ---
-# <a name="create-a-hello-world-app-in-ccx"></a>C++/CX로 "Hello world" 앱 만들기
+# <a name="create-a-hello-world-app-in-ccx"></a>C++/CX에서 "Hello, World!" 앱 만들기
 
 > [!IMPORTANT]
 > 이 자습서에서는 C++/CX를 사용합니다. Microsoft가 C++/WinRT를 출시했습니다. C++/WinRT는 WinRT(Windows Runtime) API를 위한 완전한 표준의 최신 C++17 언어 프로젝션입니다. 이 언어에 대한 자세한 내용은 [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/)를 참조하세요.
@@ -247,9 +247,9 @@ MainPage::MainPage()
 
    이와 동시에 MainPage.xaml에서 [**Button**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button)에 대한 XAML은 다음과 같이 [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 처리기를 선언하도록 업데이트됩니다.
 
-    ```xaml
-    <Button Content="Say &quot;Hello&quot;" Click="Button_Click"/>
-    ```
+```xaml
+<Button Content="Say &quot;Hello&quot;" Click="Button_Click"/>
+```
 
    xaml 코드에 수동으로 추가할 수도 있습니다. 이는 디자이너가 로드되지 않은 경우에 유용할 수 있습니다. 수동으로 입력한 경우 "Click"을 입력한 다음 IntelliSense에서 새 이벤트 처리기를 추가하는 옵션을 팝업하도록 합니다. 이렇게 하면 Visual Studio에서 필요한 메서드 선언 및 스텁을 만듭니다.
 
@@ -257,12 +257,12 @@ MainPage::MainPage()
 
 5.  MainPage.xaml.cpp에서 방금 만든 **Button\_Click** 이벤트 처리기에 다음 코드를 추가합니다. 이 코드는 `nameInput` [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 컨트롤에서 사용자 이름을 검색한 다음, 이 이름을 사용하여 인사말을 만듭니다. `greetingOutput` [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)에 결과가 표시됩니다.
 
-    ```cpp
-    void HelloWorld::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
-    {
-        greetingOutput->Text = "Hello, " + nameInput->Text + "!";
-    }
-    ```
+```cpp
+void HelloWorld::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e)
+{
+    greetingOutput->Text = "Hello, " + nameInput->Text + "!";
+}
+```
 
 6.  해당 프로젝트를 시작 프로젝트로 설정하고 나서 F5 키를 눌러서 앱을 빌드하고 실행합니다. 텍스트 상자에 이름을 입력하고 단추를 클릭하면 앱에서 개인 설정 인사말을 표시합니다.
 
@@ -279,20 +279,20 @@ MainPage::MainPage()
 1.  App.xaml을 엽니다.
 2.  여는 [**Application**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) 태그에서 [**RequestedTheme**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.requestedtheme) 속성을 편집하고 해당 값을 **Dark**로 설정합니다.
 
-    ```xaml
-    RequestedTheme="Dark"
-    ```
+```xaml
+RequestedTheme="Dark"
+```
 
-    어두운 테마가 있는 전체 [**Application**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) 태그는 다음과 같습니다.
+    Here's the full [**Application**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) tag with the dark theme :
 
-    ```xaml
-        <Application
-        x:Class="HelloWorld.App"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="using:HelloWorld"
-        RequestedTheme="Dark">
-    ```
+```xaml
+    <Application
+    x:Class="HelloWorld.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloWorld"
+    RequestedTheme="Dark">
+```
 
 3.  F5 키를 눌러 앱을 빌드 및 실행합니다. 해당 프로젝트에 어두운 테마가 사용됩니다.
 
@@ -321,9 +321,9 @@ MainPage::MainPage()
 
      XAML 디자인 화면에서 텍스트의 모양이 변경됩니다. XAML 편집기에서 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)에 대한 XAML이 업데이트됩니다.
 
-    ```xaml
-    <TextBlock Text="What's your name?" Style="{ThemeResource BaseTextBlockStyle}"/>
-    ```
+```xaml
+<TextBlock Text="What's your name?" Style="{ThemeResource BaseTextBlockStyle}"/>
+```
 
 7.  프로세스를 반복하여 글꼴 크기를 설정하고 `greetingOutput`[**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 요소에 **BaseTextBlockStyle**을 할당합니다.
 
@@ -331,16 +331,16 @@ MainPage::MainPage()
 
     이제 XAML은 다음과 같습니다.
 
-    ```xaml
-    <StackPanel x:Name="contentPanel" Margin="120,30,0,0">
-        <TextBlock Style="{ThemeResource BaseTextBlockStyle}" FontSize="18" Text="What's your name?"/>
-        <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
-            <TextBox x:Name="nameInput" Width="300" HorizontalAlignment="Left"/>
-            <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
-        </StackPanel>
-        <TextBlock Style="{ThemeResource BaseTextBlockStyle}" FontSize="18" x:Name="greetingOutput"/>
+```xaml
+<StackPanel x:Name="contentPanel" Margin="120,30,0,0">
+    <TextBlock Style="{ThemeResource BaseTextBlockStyle}" FontSize="18" Text="What's your name?"/>
+    <StackPanel x:Name="inputPanel" Orientation="Horizontal" Margin="0,20,0,20">
+        <TextBox x:Name="nameInput" Width="300" HorizontalAlignment="Left"/>
+        <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="Button_Click"/>
     </StackPanel>
-    ```
+    <TextBlock Style="{ThemeResource BaseTextBlockStyle}" FontSize="18" x:Name="greetingOutput"/>
+</StackPanel>
+```
 
 8.  F5 키를 눌러 앱을 빌드 및 실행합니다. 이제 모양은 다음과 같습니다.
 
@@ -354,27 +354,27 @@ MainPage::MainPage()
 
 1.  XAML 편집기에서 이 XAML 블록을 루트 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) 요소의 여는 태그 뒤에 추가합니다.
 
-    ```xaml
-    <VisualStateManager.VisualStateGroups>
-        <VisualStateGroup>
-            <VisualState x:Name="wideState">
-                <VisualState.StateTriggers>
-                    <AdaptiveTrigger MinWindowWidth="641" />
-                </VisualState.StateTriggers>
-            </VisualState>
-            <VisualState x:Name="narrowState">
-                <VisualState.StateTriggers>
-                    <AdaptiveTrigger MinWindowWidth="0" />
-                </VisualState.StateTriggers>
-                <VisualState.Setters>
-                    <Setter Target="contentPanel.Margin" Value="20,30,0,0"/>
-                    <Setter Target="inputPanel.Orientation" Value="Vertical"/>
-                    <Setter Target="inputButton.Margin" Value="0,4,0,0"/>
-                </VisualState.Setters>
-            </VisualState>
-        </VisualStateGroup>
-    </VisualStateManager.VisualStateGroups>
-    ```
+```xaml
+<VisualStateManager.VisualStateGroups>
+    <VisualStateGroup>
+        <VisualState x:Name="wideState">
+            <VisualState.StateTriggers>
+                <AdaptiveTrigger MinWindowWidth="641" />
+            </VisualState.StateTriggers>
+        </VisualState>
+        <VisualState x:Name="narrowState">
+            <VisualState.StateTriggers>
+                <AdaptiveTrigger MinWindowWidth="0" />
+            </VisualState.StateTriggers>
+            <VisualState.Setters>
+                <Setter Target="contentPanel.Margin" Value="20,30,0,0"/>
+                <Setter Target="inputPanel.Orientation" Value="Vertical"/>
+                <Setter Target="inputButton.Margin" Value="0,4,0,0"/>
+            </VisualState.Setters>
+        </VisualState>
+    </VisualStateGroup>
+</VisualStateManager.VisualStateGroups>
+```
 
 2.  로컬 컴퓨터에서 앱을 디버그합니다. 641 DIP(디바이스 독립적인 픽셀)보다 좁은 경우가 아니라면 UI가 이전과 동일한 모양으로 표시됩니다.
 3.  모바일 디바이스 에뮬레이터에서 앱을 디버그합니다. UI가 `narrowState`에 정의된 속성을 사용하며, 작은 화면에 올바르게 나타납니다.

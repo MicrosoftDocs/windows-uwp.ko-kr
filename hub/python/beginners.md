@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, python 학습, 초보자를 위한 windows 기반 python, microsoft store에서 python 설치, vs code를 사용하는 python, windows의 pygame
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 688ae004dad8653e70d86b3b91652b6898c1e9d3
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5dee553fedc81f0b482d4b79f4d7d8be3a7bb106
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74881281"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493498"
 ---
 # <a name="get-started-using-python-on-windows-for-beginners"></a>초보자를 위한 Windows에서 Python 사용 시작
 

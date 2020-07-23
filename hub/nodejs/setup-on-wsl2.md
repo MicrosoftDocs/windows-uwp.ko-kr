@@ -8,12 +8,12 @@ ms.topic: article
 keywords: NodeJS, Node.js, windows 10, microsoft, nodejs 학습, windows의 노드, wsl의 노드, windows 기반 linux의 노드, windows에 노드 설치, vs code를 사용하는 nodejs, windows에서 노드를 사용하여 개발, windows에서 nodejs를 사용하여 개발, WSL에 노드 설치, Linux용 Windows 하위 시스템의 NodeJS
 ms.localizationpriority: medium
 ms.date: 06/09/2020
-ms.openlocfilehash: 494db609db577bd2b199f828fcf80e80a5c8c624
-ms.sourcegitcommit: 22ed0d4edad5e6bab352e641cf86cf455cf83825
+ms.openlocfilehash: e8fb06cb1e68d5dfa7f23e6966f917c96eb79859
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133976"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493278"
 ---
 # <a name="set-up-your-nodejs-development-environment-with-wsl-2"></a>WSL 2를 사용하여 Node.js 개발 환경 설치
 
@@ -36,7 +36,7 @@ WSL 2와 Linux 배포판을 설치했으면 Linux 배포판(Windows 시작 메�
 
 새 Windows 터미널을 사용하면 여러 탭(여러 Linux 명령 프롬프트, Windows 명령 프롬프트, PowerShell, Azure CLI 간에 신속하게 전환), 사용자 지정 키 바인딩(탭 열기 또는 닫기, 복사+붙여넣기 등을 위한 바로 가기 키), 검색 기능 및 사용자 지정 테마(색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도)를 사용할 수 있습니다. [자세한 정보를 알아보세요](https://docs.microsoft.com/windows/terminal).
 
-1. 다음과 같이 [Microsoft Store에서 Windows 터미널(미리 보기)](https://www.microsoft.com/store/apps/9n0dx20hk701)을 받습니다. Microsoft Store를 통해 설치하면 업데이트가 자동으로 처리됩니다.
+1. 다음과 같이 [Microsoft Store에서 Windows 터미널](https://www.microsoft.com/store/apps/9n0dx20hk701)을 받습니다. Microsoft Store를 통해 설치하면 업데이트가 자동으로 처리됩니다.
 
 2. 설치가 완료되면 Windows 터미널을 열고 **설정**을 선택한 다음, `settings.json` 파일을 사용하여 터미널을 사용자 지정합니다.
 
@@ -140,5 +140,5 @@ Node.js 개발 환경 설정이 완료되었습니다. Node.js 환경 사용을 
 
 - [초보자용 Node.js 시작](./beginners.md)
 - [Windows에서 Node.js 웹 프레임워크 시작](./web-frameworks.md)
-- [Node.js 앱을 데이터베이스에 연결](./databases.md)
+- [Node.js 앱을 데이터베이스에 연결](https://docs.microsoft.com/windows/wsl/tutorials/wsl-database)
 - [Node.js에서 Docker 컨테이너 사용 시작](./containers.md)

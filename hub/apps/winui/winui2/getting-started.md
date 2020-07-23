@@ -2,23 +2,23 @@
 title: Windows UI 라이브러리 시작
 description: Windows UI 라이브러리를 설치하고 사용하는 방법입니다.
 ms.topic: reference
-ms.date: 05/08/2020
+ms.date: 07/15/2020
 keywords: Windows 10, UWP, 도구 키트 SDK
-ms.openlocfilehash: d96efb2f3de3084d74e06e70ff2811a944604f56
-ms.sourcegitcommit: 47899c30a39087bca1f058a4395cf58daacf5ae9
+ms.openlocfilehash: 336439d35c74073db490772dbfdae4ca3e580625
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345477"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86492958"
 ---
-# <a name="getting-started-with-the-windows-ui-library"></a>Windows UI 라이브러리 시작
+# <a name="getting-started-with-the-windows-ui-2x-library"></a>Windows UI 2.x 라이브러리 시작
 
 [WinUI 2.4](release-notes/winui-2.4.md)는 안정적인 최신 버전의 WinUI이며, 프로덕션 환경의 앱에 사용해야 합니다.
 
 라이브러리는 신규 또는 기존 Visual Studio 프로젝트에 추가할 수 있는 NuGet 패키지로 제공됩니다.
 
 > [!NOTE]
-> WinUI 3.0 초기 미리 보기를 사용하는 방법에 대한 자세한 내용은 [WinUI 3.0 Preview 1](../winui3/index.md)을 참조하세요.
+> WinUI 3 초기 미리 보기를 사용하는 방법에 대한 자세한 내용은 [Windows UI 라이브러리 3 Preview 2(2020년 7월)](../winui3/index.md)를 참조하세요.
 
 ## <a name="download-and-install-the-windows-ui-library"></a>Windows UI 라이브러리 다운로드 및 설치
 

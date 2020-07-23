@@ -6,24 +6,24 @@ ms.date: 01/25/2017
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, c#, c + +, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: d0870212df4deb7f12f790107ec988fac3eb69ab
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d1731ec0a2b2df247d88be008af2cc6647a3bd6b
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75685157"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86493378"
 ---
 # <a name="create-your-first-app"></a>첫 번째 앱 만들기
 
 [UWP 플랫폼](universal-application-platform-guide.md)을 시작합니다! 이 자습서는 선택한 언어로 첫 번째 UWP 앱을 만드는 데 도움이 됩니다.
 
-시작하려면 즐겨 쓰는 언어를 선택하세요!
+시작하려면 원하는 언어를 선택합니다.
 
 ## <a name="c-and-xaml"></a>C# 및 XAML
 
-.NET, WPF 또는 Silverlight 기술을 통해 XAML과 C#을 사용하여 앱을 빌드합니다.
+.NET, WPF 또는 Silverlight 기술을 사용하여 C#에서 XAML(Extensible Application Markup Language)로 앱을 빌드합니다.
 
-* [XAML과 C를 사용하여 "Hello, world" 앱 만들기](create-a-hello-world-app-xaml-universal.md)
+* [XAML과 C#을 사용하여 "Hello, World!" 앱 만들기](create-a-hello-world-app-xaml-universal.md)
 
 기본적인 내용을 배우거나 기억을 되살리려면 다음 내용을 읽어보세요.
 
@@ -31,26 +31,26 @@ ms.locfileid: "75685157"
 * [완전 초보자용 VB 기본 사항](https://docs.microsoft.com/learn/?l=jqMOvLKbC_9206218965)
 * [Windows 10 개발자 가이드](https://docs.microsoft.com/learn/)
 
-"Hello, World!"보다 약간 더 재미있는 무언가를 시도할 준비가 되었다면, 다음 자습서를 시도해 보세요.
+## <a name="cwinrt-and-xaml"></a>C++/WinRT 및 XAML
 
-* [XAML 및 UWP의 데이터 바인딩](xaml-basics-intro.md)
-* [C# 및 MonoGame으로 작성된 간단한 Microsoft Store용 2D UWP 게임](get-started-tutorial-game-mg2d.md)
+표준 C++에 대한 프로그래밍 전문 지식을 활용하여 C++/WinRT에서 XAML(Extensible Application Markup Language)로 앱을 빌드합니다.
 
+* [C++/WinRT를 사용하여 "Hello, World!" 앱 만들기](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cppwinrt)
+
+C++/WinRT에 대해 자세히 알아보세요.
+
+* [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)
 
 ## <a name="visualc-component-extensions-ccx-and-xaml"></a>Visual C++ 구성 요소 확장(C++/CX) 및 XAML
 
-C++ 프로그래밍 전문 지식을 활용하여 Visual C++ 구성 요소 확장(C++/CX) 및 XAML로 앱을 빌드합니다.
+C++ 프로그래밍 전문 지식을 활용하여 Visual C++ 구성 요소 확장(C++/CX) 및 XAML(Extensible Application Markup Language)로 앱을 빌드합니다.
 
-* [XAML과 C++/CX를 사용하여 "Hello, world" 앱 만들기](create-a-basic-windows-10-app-in-cpp.md)
+* [C++/CX를 사용하여 "Hello, World!" 앱 만들기](create-a-basic-windows-10-app-in-cpp.md)
 
-여기에서 C++에 대한 자세한 정보를 볼 수 있습니다.
+여기서 C++에 대해 자세히 알아보세요.
 
 * [UWP 앱용 C++](https://docs.microsoft.com/cpp/cppcx/universal-windows-apps-cpp?view=vs-2019)
 * [데스크톱 앱용 C++](https://docs.microsoft.com/cpp/windows/desktop-applications-visual-cpp?view=vs-2019)
-
-"Hello, World!"보다 약간 더 재미있는 무언가를 시도할 준비가 되었다면, 다음 자습서를 시도해 보세요.
-
-* [XAML 및 UWP의 데이터 바인딩](xaml-basics-intro.md)
 
 ## <a name="javascript-and-html"></a>JavaScript 및 HTML
 
@@ -68,10 +68,16 @@ UWP 이상으로 JavaScript 및 HTML 기술을 확장하여 웹앱 만들기 또
 * [호스트된 웹앱](https://developer.microsoft.com/windows/pwa)
 * [웹 애플리케이션을 UWP 앱으로 변환](../porting/hwa-create-windows.md)
 
+## <a name="next-steps"></a>다음 단계
+
+"Hello, World!"보다 좀 더 재미있는 것을 시도할 준비가 되었다면 다음 자습서를 진행하세요.
+
+* [자습서: 사용자 인터페이스 만들기](/windows/uwp/design/basics/xaml-basics-ui)
+* [C# 및 MonoGame으로 작성된 간단한 Microsoft Store용 2D UWP 게임](get-started-tutorial-game-mg2d.md)
 
 ## <a name="see-also"></a>참고 항목
 
 * [코딩 시작](create-uwp-apps.md)
-* [UWP 앱이란 무엇인가요?](universal-application-platform-guide.md)
+* [UWP 앱이란?](universal-application-platform-guide.md)
 * [설정하기](get-set-up.md)
 * [Windows 계정 등록](sign-up.md)

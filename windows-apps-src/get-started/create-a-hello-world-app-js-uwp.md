@@ -6,14 +6,14 @@ ms.date: 09/12/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a161a5e26bd647a37b06a270ef6714d54bc16d80
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 88ae290bf88a21aa2846697833d099df663915f6
+ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74467414"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86492968"
 ---
-# <a name="create-a-hello-world-app-js"></a>"Hello, world" 앱 만들기(JS)
+# <a name="create-a-hello-world-app-js"></a>"Hello, World!" 앱(JS) 만들기
 
 이 자습서에서는 JavaScript 및 HTML을 사용하여 Windows 10의 UWP(유니버설 Windows 플랫폼)를 대상으로 하는 간단한 Hello, world 앱을 만드는 방법을 설명합니다. Microsoft Visual Studio의 단일 프로젝트를 사용하여 Windows 10 디바이스에서 실행되는 앱을 빌드할 수 있습니다.
 
