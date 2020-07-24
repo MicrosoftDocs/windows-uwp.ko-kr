@@ -8,12 +8,12 @@ keywords: 음성, 음성, 음성 인식, 자연어, 받아쓰기, 입력, 사용
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a1db38120252febefd55933fa106f473b3f920d8
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 8e672d67909a9090ac622ec53894a53fa8485f16
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234862"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997770"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>음성 인식기 언어 지정
 
@@ -90,13 +90,7 @@ SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](https://docs.microso
 
 ## <a name="related-articles"></a>관련된 문서
 
-**개발자**
-
 * [음성 조작](speech-interactions.md)
-
-**디자이너**
-
-* [음성 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)
 
 **샘플**
 

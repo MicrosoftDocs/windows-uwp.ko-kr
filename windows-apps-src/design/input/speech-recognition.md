@@ -1,28 +1,28 @@
 ---
-Description: 음성 인식 기능을 사용하여 입력을 제공하고, 동작이나 명령을 지정하고 작업을 수행합니다.
+Description: 음성 인식을 사용 하 여 입력을 제공 하 고, 작업 또는 명령을 지정 하 고, 작업을 수행할 수 있습니다.
 title: 음성 인식
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
 template: detail.hbs
-keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입력, 사용자 조작
+keywords: 음성, 음성, 음성 인식, 자연어, 받아쓰기, 입력, 사용자 조작
 ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5192177edf284d1fe6e0c6eb06bf8713fbff8b4e
-ms.sourcegitcommit: c660def841abc742600fbcf6ed98e1f4f7beb8cc
+ms.openlocfilehash: 8ecdd882357a7e20506ab6116748d57ab0dde33f
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80218383"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997720"
 ---
 # <a name="speech-recognition"></a>음성 인식
 
 
-음성 인식 기능을 사용하여 입력을 제공하고, 동작이나 명령을 지정하고 작업을 수행합니다.
+음성 인식을 사용 하 여 입력을 제공 하 고, 작업 또는 명령을 지정 하 고, 작업을 수행할 수 있습니다.
 
-> **중요 API**: [**Windows.Media.SpeechRecognition**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition)
+> **중요 한 api**: [ **SpeechRecognition**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition)
 
-음성 인식은 음성 런타임, 런타임을 프로그래밍하기 위한 인식 API, 바로 사용할 수 있는 받아쓰기 및 웹 검색 문법, 사용자가 음성 인식 기능을 검색하고 사용하는 데 도움이 되는 기본 시스템 UI로 구성됩니다.
+음성 인식은 음성 인식, 받아쓰기 및 웹 검색에 대 한 바로 사용할 수 있는 문법 및 사용자가 음성 인식 기능을 검색 하 고 사용 하는 데 도움이 되는 기본 시스템 UI를 프로그래밍 하기 위한 인식 Api로 구성 됩니다.
 
 ## <a name="configure-speech-recognition"></a>음성 인식 구성
 
@@ -208,34 +208,34 @@ var AudioCapturePermissions = WinJS.Class.define(
 
 ## <a name="recognize-speech-input"></a>음성 입력 인식
 
-*제약 조건*은 앱이 음성 입력에서 인식하는 단어와 구(어휘)를 정의합니다. 제약 조건은 음성 인식의 핵심 이며, 앱에서 음성 인식의 정확도를 보다 강력 하 게 제어할 수 있습니다.
+*제약 조건은* 앱이 음성 입력에서 인식 하는 단어 및 구 (어휘)를 정의 합니다. 제약 조건은 음성 인식의 핵심 이며, 앱에서 음성 인식의 정확도를 보다 강력 하 게 제어할 수 있습니다.
 
 음성 입력을 인식 하는 데 다음 형식의 제약 조건을 사용할 수 있습니다.
 
-### <a name="predefined-grammars"></a>미리 정의된 문법
+### <a name="predefined-grammars"></a>미리 정의 된 문법
 
-미리 정의된 받아쓰기 및 웹 검색 문법은 사용자가 문법을 작성할 필요 없이 앱에 대한 음성 인식 기능을 제공합니다. 이러한 문법을 사용할 때 음성 인식은 원격 웹 서비스에서 수행되고 결과가 디바이스로 반환됩니다.
+미리 정의 된 받아쓰기 및 웹 검색 문법은 문법을 작성할 필요 없이 앱에 대 한 음성 인식을 제공 합니다. 이러한 문법을 사용 하는 경우 원격 웹 서비스에서 음성 인식이 수행 되며 결과가 장치에 반환 됩니다.
 
-기본 자유 텍스트 받아쓰기 문법은 사용자가 특정 언어로 말할 수 있는 대부분의 단어와 구를 인식할 수 있으며 짧은 구를 인식하도록 최적화되어 있습니다. [  **SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) 개체에 대한 제약 조건을 지정하지 않으면 미리 정의된 받아쓰기 문법이 사용됩니다. 자유 텍스트 받아쓰기는 사용자가 말할 수 있는 내용을 제한하지 않으려는 경우에 유용합니다. 일반적인 사용에는 노트 만들기나 메시지 내용 받아쓰기가 포함됩니다.
+기본 자유 텍스트 받아쓰기 문법은 사용자가 특정 언어로 말할 수 있는 대부분의 단어와 구를 인식할 수 있으며, 짧은 구를 인식 하도록 최적화 되어 있습니다. [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) 개체에 대 한 제약 조건을 지정 하지 않으면 미리 정의 된 받아쓰기 문법이 사용 됩니다. 자유 텍스트 받아쓰기는 사용자가 말할 수 있는 항목의 종류를 제한 하지 않으려는 경우에 유용 합니다. 일반적인 용도에는 메모 만들기 또는 메시지 내용 받아쓰기가 포함 됩니다.
 
-받아쓰기 문법과 같은 웹 검색 문법에는 사용자가 말할 수 있는 매우 많은 단어 및 구가 포함되어 있습니다. 그러나 웹 검색 문법은 사람들이 일반적으로 웹을 검색할 때 사용하는 용어를 인식하도록 최적화되어 있습니다.
+받아쓰기 문법 같은 웹 검색 문법에는 사용자가 말할 수 있는 많은 수의 단어와 구가 포함 되어 있습니다. 그러나 일반적으로 웹을 검색할 때 사용자가 사용 하는 용어를 인식 하도록 최적화 되어 있습니다.
 
 > [!NOTE]
-> 미리 정의 된 받아쓰기 및 웹 검색 문법이 클 수 있습니다. 즉, 장치가 아니라 온라인 상태 이므로 장치에 설치 된 사용자 지정 문법에 따라 성능이 빠르지 않을 수 있습니다.     
+> 미리 정의 된 받아쓰기 및 웹 검색 문법이 클 수 있으며 장치가 온라인 상태 (장치에 있지 않음) 이기 때문에 장치에 설치 된 사용자 지정 문법에 따라 성능이 빠르지 않을 수 있습니다.     
 
-이러한 미리 정의된 문법은 최대 10초의 음성 입력을 인식하는 데 사용할 수 있으며 특별한 작성 작업이 필요하지 않습니다. 그러나 네트워크에 연결되어 있어야 합니다.
+이러한 미리 정의 된 문법은 최대 10 초 음성 입력을 인식 하는 데 사용 될 수 있으며 사용자의 작성 노력이 필요 하지 않습니다. 그러나 네트워크에 연결 해야 합니다.
 
-웹 서비스 제약 조건을 사용하려면 **설정 -> 개인 정보 -> 음성, 수동 입력 및 입력** 페이지에서 "내 정보 표시" 옵션을 켜고 **설정**에서 음성 입력 및 받아쓰기 지원을 사용하도록 설정해야 합니다.
+웹 서비스 제약 조건을 사용 하려면 **설정-> 개인 정보-> 음성, 잉크 및 입력**에서 "자세히 알아보기" 옵션을 설정 하 여 음성 입력 및 받아쓰기 지원을 **설정** 에서 사용 하도록 설정 해야 합니다.
 
-여기에서는 음성 입력이 사용되도록 설정되어 있는지 테스트하고 설정되어 있지 않으면 설정 -> 개인 정보 -> 음성, 수동 입력 및 입력 페이지를 여는 방법을 보여 줍니다.
+여기서는 음성 입력을 사용 하도록 설정 했는지 여부를 테스트 하 고, 그렇지 않은 경우 개인 정보 > 음성, 수동 입력 및 입력 페이지를 > 하는 방법을 보여 줍니다.
 
-먼저, 전역 변수(HResultPrivacyStatementDeclined)를 0x80045509의 HResult 값으로 초기화합니다. [C\# 또는 Visual Basic에서 예외 처리](https://docs.microsoft.com/previous-versions/windows/apps/dn532194(v=win.10))를 참조 하세요.
+먼저 HResultPrivacyStatementDeclined (전역 변수)를 0x80045509의 HResult 값으로 초기화 합니다. [C \# 또는 Visual Basic의 예외 처리](https://docs.microsoft.com/previous-versions/windows/apps/dn532194(v=win.10))를 참조 하세요.
 
 ```csharp
 private static uint HResultPrivacyStatementDeclined = 0x80045509;
 ```
 
-그런 다음 인식하는 동안 표준 예외를 catch하여 [**HResult**](https://docs.microsoft.com/uwp/api/Windows.Foundation.HResult) 값이 HResultPrivacyStatementDeclined 변수 값과 같은지 테스트합니다. 같으면 경고를 표시하고 `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));`를 호출하여 설정 페이지를 엽니다.
+그런 다음 recogntion 중에 표준 예외를 catch 하 고 [**HResult**](https://docs.microsoft.com/uwp/api/Windows.Foundation.HResult) 값이 HResultPrivacyStatementDeclined 변수의 값과 같은지 테스트 합니다. 이 경우 경고를 표시 하 고를 호출 `await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-accounts"));` 하 여 설정 페이지를 엽니다.
 
 ```csharp
 catch (Exception exception)
@@ -262,34 +262,34 @@ catch (Exception exception)
 
 ### <a name="programmatic-list-constraints"></a>프로그래밍 목록 제약 조건 
 
-프로그래밍 방식 목록 제약 조건은 단어 또는 구 목록을 사용하여 간단한 문법을 만드는 가벼운 방법을 제공합니다. 짧고 고유한 구를 인식하는 데는 목록 제약 조건이 유용합니다. 음성 인식 엔진이 일치를 확인하기 위해서만 음성을 처리해야 하므로 문법의 모든 단어를 명시적으로 지정하면 인식 정확도도 향상됩니다. 또한 목록은 프로그래밍 방식으로도 업데이트할 수 있습니다.
+프로그래밍 목록 제약 조건은 단어 또는 구의 목록을 사용 하 여 간단한 문법을 만드는 간단한 방법을 제공 합니다. List 제약 조건은 짧고 고유한 문구를 인식 하는 데 적합 합니다. 음성 인식 엔진이 일치 항목을 확인 하기 위해 음성만 처리 해야 하므로 문법의 모든 단어를 명시적으로 지정 하면 인식 정확도도 향상 됩니다. 목록을 프로그래밍 방식으로 업데이트할 수도 있습니다.
 
-목록 제약 조건은 앱이 인식 작업에 대해 받아들이는 음성 입력을 나타내는 문자열 배열로 구성됩니다. 음성 인식 목록 제약 조건 개체를 만들고 문자열 배열을 전달하여 앱에서 목록 제약 조건을 만들 수 있습니다. 그런 다음 인식기 제약 조건 컬렉션에 해당 개체를 추가합니다. 음성 인식기가 배열에 있는 문자열 중 하나를 인식하면 인식에 성공합니다.
+목록 제약 조건은 앱이 인식 작업에 대해 허용할 음성 입력을 나타내는 문자열 배열로 구성 됩니다. 음성 인식 목록 제약 조건 개체를 만들고 문자열 배열을 전달 하 여 앱에서 목록 제약 조건을 만들 수 있습니다. 그런 다음 해당 개체를 인식기의 제약 조건 컬렉션에 추가 합니다. 음성 인식기가 배열의 문자열 중 하나를 인식할 때 인식이 성공 합니다.
 
 [**SpeechRecognitionListConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint)를 참조 하세요.
 
 ### <a name="srgs-grammars"></a>SRGS 문법
 
-SRGS(Speech Recognition Grammar Specification) 문법은 프로그래밍 방식 목록 제약 조건과 달리 [SRGS 버전 1.0](https://www.w3.org/TR/speech-grammar/)에서 정의한 XML 형식을 사용하는 정적 문서입니다. SRGS 문법을 사용하면 단일 인식에서 여러 시맨틱 의미를 캡처할 수 있으므로 음성 인식 환경을 가장 잘 제어할 수 있습니다.
+SRGS (음성 인식 문법 사양) 문법은 프로그래밍 목록 제약 조건과 달리 [SRGS 버전 1.0](https://www.w3.org/TR/speech-grammar/)에 정의 된 XML 형식을 사용 하는 정적 문서입니다. SRGS 문법은 단일 인식에서 여러 의미 체계 의미를 캡처할 수 있도록 하 여 음성 인식 경험을 가장 효과적으로 제어할 수 있도록 합니다.
 
  [**SpeechRecognitionGrammarFileConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint)를 참조 하세요.
 
 ### <a name="voice-command-constraints"></a>음성 명령 제약 조건
 
-VCD(음성 명령 정의) XML 파일을 사용하여 사용자가 앱을 활성화할 때 동작을 시작하기 위해 말할 수 있는 명령을 정의합니다. 자세한 내용은 [Cortana를 통해 음성 명령을 사용 하 여 포그라운드 앱 활성화](https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana)를 참조 하세요.
+VCD (음성 명령 정의) XML 파일을 사용 하 여 사용자가 앱을 활성화할 때 작업을 시작 하는 데 사용할 수 있는 명령을 정의 합니다. 자세한 내용은 [Cortana를 통해 음성 명령을 사용 하 여 포그라운드 앱 활성화](https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana)를 참조 하세요.
 
-[**SpeechRecognitionVoiceCommandDefinitionConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint)/를 참조 하세요.
+[ **SpeechRecognitionVoiceCommandDefinitionConstraint** 참조](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint)/
 
-**참고**  사용 하는 제약 조건 형식의 유형은 만들려는 인식 환경의 복잡성에 따라 달라 집니다. 어떤 유형이나 특정 인식 작업에 가장 적합한 선택이 될 수 있으며, 앱에서 모든 제약 조건 유형의 용도를 찾을 수 있습니다.
-제약 조건을 시작하려면 [사용자 지정 인식 제약 조건 정의](define-custom-recognition-constraints.md)을 참조하세요.
+**참고**    사용할 제약 조건 형식의 유형은 만들려는 인식 환경의 복잡성에 따라 달라 집니다. 는 특정 인식 작업에 가장 적합 한 선택 이며 앱에서 모든 유형의 제약 조건에 대 한 사용을 찾을 수 있습니다.
+제약 조건을 시작 하려면 [사용자 지정 인식 제약 조건 정의](define-custom-recognition-constraints.md)를 참조 하세요.
 
-미리 정의된 유니버설 Windows 앱 받아쓰기 문법은 언어의 단어와 짧은 구를 대부분 인식합니다. 사용자 지정 제약 조건 없이 음성 인식기 개체를 인스턴스화할 때 기본적으로 활성화됩니다.
+미리 정의 된 유니버설 Windows 앱 받아쓰기 문법을 언어로 된 대부분의 단어와 짧은 구를 인식 합니다. 사용자 지정 제약 조건 없이 음성 인식기 개체가 인스턴스화될 때 기본적으로 활성화 됩니다.
 
-이 예제에서는 다음 작업을 수행하는 방법을 보여 줍니다.
+이 예제에서는 다음을 수행 하는 방법을 보여 줍니다.
 
-- 음성 인식기 만들기
-- 기본 유니버설 Windows 앱 제약 조건 컴파일(음성 인식기의 문법 집합에 추가된 문법 없음)
-- 기본 인식 UI 및 [**RecognizeWithUIAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizewithuiasync) 메서드에서 제공하는 TTS 피드백을 사용하여 음성 수신 대기 시작 기본 UI가 필요하지 않은 경우 [**RecognizeAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizeasync) 메서드를 사용합니다.
+- 음성 인식기를 만듭니다.
+- 기본 유니버설 Windows 앱 제약 조건을 컴파일합니다 (음성 인식기의 문법 집합에 문법이 추가 되지 않음).
+- [**RecognizeWithUIAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizewithuiasync) 메서드에서 제공 하는 기본 인식 UI 및 TTS 피드백을 사용 하 여 음성 수신 대기를 시작 합니다. 기본 UI가 필요 하지 않은 경우 [**RecognizeAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizeasync) 메서드를 사용 합니다.
 
 ```CSharp
 private async void StartRecognizing_Click(object sender, RoutedEventArgs e)
@@ -312,29 +312,29 @@ private async void StartRecognizing_Click(object sender, RoutedEventArgs e)
 ## <a name="customize-the-recognition-ui"></a>인식 UI 사용자 지정
 
 
-앱에서 [**SpeechRecognizer.RecognizeWithUIAsync**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizewithuiasync)를 호출하여 음성 인식을 시도하는 경우 여러 화면이 다음과 같은 순서로 표시됩니다.
+앱이 [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.recognizewithuiasync)를 호출 하 여 음성 인식을 시도 하면 몇 가지 화면이 다음 순서로 표시 됩니다.
 
-미리 정의된 문법(받아쓰기 또는 웹 검색)을 기반으로 한 제약 조건을 사용하는 경우
+미리 정의 된 문법 (받아쓰기 또는 웹 검색)을 기반으로 하는 제약 조건을 사용 하는 경우:
 
--   **Listening** 화면
--   **생각하는 중** 화면
--   **Heard you say** 화면 또는 오류 화면
+-   **수신 대기** 화면입니다.
+-   **생각** 화면입니다.
+-   **말하는** 화면 또는 오류 화면입니다.
 
-단어 또는 구 목록을 기반으로 한 제약 조건이나 SRGS 문법 파일을 기반으로 한 제약 조건을 사용하는 경우
+단어 또는 구 목록을 기반으로 하는 제약 조건을 사용 하거나 SRGS 문법 파일을 기반으로 하는 제약 조건을 사용 하는 경우:
 
--   **Listening** 화면
+-   **수신 대기** 화면입니다.
 -   **확인 내용** 화면 - 사용자가 말한 내용을 둘 이상의 가능한 결과로 해석할 수 있는 경우
--   **Heard you say** 화면 또는 오류 화면
+-   **말하는** 화면 또는 오류 화면입니다.
 
-아래 이미지는 SRGS 문법 파일을 기반으로 한 제약 조건을 사용하는 음성 인식기 화면 간의 흐름 예제를 보여 줍니다. 이 예제에서는 음성 인식이 성공적이었습니다.
+다음 이미지는 SRGS 문법 파일을 기반으로 제약 조건을 사용 하는 음성 인식기 화면 간 흐름의 예를 보여 줍니다. 이 예제에서는 음성 인식이 성공 했습니다.
 
-![SGRS 문법 파일을 기반으로 한 제약 조건의 초기 인식 화면](images/speech-listening-initial.png)
+![sgrs 문법 파일을 기반으로 하는 제약 조건에 대 한 초기 인식 화면](images/speech-listening-initial.png)
 
-![SGRS 문법 파일을 기반으로 한 제약 조건의 중간 인식 화면](images/speech-listening-intermediate.png)
+![sgrs 문법 파일을 기반으로 하는 제약 조건에 대 한 중간 인식 화면](images/speech-listening-intermediate.png)
 
-![SGRS 문법 파일을 기반으로 한 제약 조건의 최종 인식 화면](images/speech-listening-complete.png)
+![sgrs 문법 파일을 기반으로 하는 제약 조건에 대 한 최종 인식 화면](images/speech-listening-complete.png)
 
-**Listening** 화면에는 앱에서 인식할 수 있는 단어 또는 구 예제가 제공될 수 있습니다. 여기에서는 [**SpeechRecognizerUIOptions**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions) 클래스([**SpeechRecognizer.UIOptions**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.uioptions) 속성을 호출하여 얻음)의 속성을 사용해서 **Listening** 화면에서 콘텐츠를 사용자 지정하는 방법을 보여 줍니다.
+**수신 대기** 화면은 앱에서 인식할 수 있는 단어 또는 구의 예를 제공할 수 있습니다. 여기서는 [**SpeechRecognizer**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.uioptions) 속성을 호출 하 여 가져온 [**SpeechRecognizerUIOptions**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizerUIOptions) 클래스의 속성을 사용 하 여 **수신** 화면에서 콘텐츠를 사용자 지정 하는 방법을 보여 줍니다.
 
 ```CSharp
 private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
@@ -366,19 +366,10 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
-
-**가**
 * [음성 조작](speech-interactions.md)
-**디자이너**
-* [음성 디자인 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/speech-interactions)
+
 **샘플**
+
 * [음성 인식 및 음성 합성 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
- 
-
- 
-
-
-
-

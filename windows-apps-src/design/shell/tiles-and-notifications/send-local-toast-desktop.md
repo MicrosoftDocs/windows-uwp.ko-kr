@@ -1,6 +1,6 @@
 ---
 Description: 'Win32 c # 앱이 로컬 알림 메시지를 보내고 알림 메시지를 클릭 하 여 사용자를 처리 하는 방법을 알아봅니다.'
-title: '데스크톱 c # 앱에서 로컬 알림 메시지 보내기'
+title: 데스크톱 C# 앱에서 로컬 알림 메시지 보내기
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Send a local toast notification from desktop C# apps
 template: detail.hbs
@@ -8,14 +8,14 @@ ms.date: 01/23/2018
 ms.topic: article
 keywords: 'windows 10, uwp, win32, 데스크톱, 알림 메시지 보내기, 알림 보내기, 데스크톱 브리지, msix, 스파스 패키지, c #, c sharp, 알림 메시지, wpf'
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d8332745b44bc688fbf2ca7cf3b42cf7300d579
-ms.sourcegitcommit: 179f8098d10e338ad34fa84934f1654ec58161cd
+ms.openlocfilehash: 6f1eef86045f44fa75363b54fa58e3e7089d64e0
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717642"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997930"
 ---
-# <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>데스크톱 c # 앱에서 로컬 알림 메시지 보내기
+# <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>데스크톱 C# 앱에서 로컬 알림 메시지 보내기
 
 데스크톱 앱 (패키지 된 [Msix](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 얻기 위해 [스파스 패키지](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱 및 클래식 패키지 되지 않은 Win32 앱 포함)은 Windows 앱과 마찬가지로 대화형 알림 메시지를 보낼 수 있습니다. 그러나 MSIX 또는 스파스 패키지를 사용 하지 않는 경우 다양 한 활성화 체계와 패키지 id의 잠재적 부족으로 인해 데스크톱 앱에 대 한 몇 가지 특별 한 단계가 있습니다.
 
@@ -58,17 +58,17 @@ public class MyNotificationActivator : NotificationActivator
 그런 다음 알림 플랫폼에 등록 해야 합니다. MSIX/sparse 패키지를 사용 하는지 아니면 클래식 Win32를 사용 하는지에 따라 다른 단계가 있습니다. 두 단계를 모두 지 원하는 경우에는 두 단계를 모두 수행 해야 합니다 (그러나 코드를 분기할 필요는 없으며 라이브러리에서 사용자를 위해 처리 함).
 
 
-### <a name="msixsparse-packages"></a>MSIX/sparse 패키지
+#### <a name="msixsparse-packages"></a>[MSIX/sparse 패키지](#tab/msix-sparse)
 
 [Msix](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) 또는 [스파스 패키지](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 경우 (또는 둘 다를 지 원하는 경우) appxmanifest.xml에서 다음을 추가 **합니다**.
 
 1. **Xmlns: com** 에 대 한 선언
 2. **Xmlns: desktop** 에 대 한 선언
 3. **IgnorableNamespaces** 특성, **com** 및 **desktop**
-4. **com:** #4 단계에서 GUID를 사용 하 여 com 활성기에 대 한 확장입니다. `Arguments="-ToastActivated"`알림 메시지의 시작을 알 수 있도록를 포함 해야 합니다.
-5. **desktop:** TOAST 활성기 CLSID (#3의 GUID)를 선언 하는 **windows. toastNotificationActivation** 용 확장입니다.
+4. **com:** #2 단계에서 GUID를 사용 하 여 com 활성기에 대 한 확장입니다. `Arguments="-ToastActivated"`알림 메시지의 시작을 알 수 있도록를 포함 해야 합니다.
+5. **desktop:** TOAST 활성기 CLSID (#2의 GUID)를 선언 하는 **windows. toastNotificationActivation** 용 확장입니다.
 
-**Appxmanifest.xml**
+**Package.appxmanifest**
 
 ```xml
 <!--Add these namespaces-->
@@ -104,15 +104,15 @@ public class MyNotificationActivator : NotificationActivator
 ```
 
 
-### <a name="classic-win32"></a>클래식 Win32
+#### <a name="classic-win32"></a>[클래식 Win32](#tab/classic)
 
-클래식 Win32를 사용 하는 경우 (또는 둘 다를 지 원하는 경우) 시작의 앱 바로 가기에서 응용 프로그램 사용자 모델 ID (AUMID) 및 toast 활성기 CLSID (#3의 GUID)를 선언 해야 합니다.
+클래식 Win32를 사용 하는 경우 (또는 둘 다를 지 원하는 경우) 시작의 앱 바로 가기에서 응용 프로그램 사용자 모델 ID (AUMID) 및 toast 활성기 CLSID (#2의 GUID)를 선언 해야 합니다.
 
 Win32 앱을 식별 하는 고유한 AUMID를 선택 합니다. 이는 일반적으로 [CompanyName] 형식입니다. [AppName] 이지만 모든 앱에서 고유한 지 확인 하는 것이 좋습니다 (끝에 일부 숫자를 추가 하는 데 사용 가능).
 
-#### <a name="step-31-wix-installer"></a>3.1 단계: WiX 설치 관리자
+### <a name="step-31-wix-installer"></a>3.1 단계: WiX 설치 관리자
 
-설치 관리자에 대해 WiX를 사용 하는 경우 다음에 표시 된 것 처럼 **Product. wxs** 파일을 편집 하 여 두 개의 바로 가기 속성을 시작 메뉴 바로 가기에 추가 합니다. 아래와 같이 #3 단계에서 GUID가로 묶여 있는지 확인 `{}` 합니다.
+설치 관리자에 대해 WiX를 사용 하는 경우 다음에 표시 된 것 처럼 **Product. wxs** 파일을 편집 하 여 두 개의 바로 가기 속성을 시작 메뉴 바로 가기에 추가 합니다. 아래와 같이 #2 단계에서 GUID가로 묶여 있는지 확인 `{}` 합니다.
 
 **Product. wxs**
 
@@ -132,9 +132,9 @@ Win32 앱을 식별 하는 고유한 AUMID를 선택 합니다. 이는 일반적
 > 실제로 알림을 사용 하려면 AUMID 및 CLSID를 사용 하 여 바로 가기 키가 표시 되도록 정상적으로 디버깅 하기 전에 설치 관리자를 통해 앱을 설치 해야 합니다. 시작 바로 가기가 있는 후 Visual Studio에서 F5 키를 사용 하 여 디버그할 수 있습니다.
 
 
-#### <a name="step-32-register-aumid-and-com-server"></a>3.2 단계: AUMID 및 COM 서버 등록
+### <a name="step-32-register-aumid-and-com-server"></a>3.2 단계: AUMID 및 COM 서버 등록
 
-그런 다음, 응용 프로그램의 시작 코드 (알림 Api를 호출 하기 전에)에서 설치 관리자에 관계 없이 **RegisterAumidAndComServer** 메서드를 호출 하 여 #3 단계에서 알림 활성기 클래스를 지정 하 고 위에서 사용 했던 AUMID를 지정 합니다.
+그런 다음, 응용 프로그램의 시작 코드 (알림 Api를 호출 하기 전에)에서 설치 관리자에 관계 없이 **RegisterAumidAndComServer** 메서드를 호출 하 여 #2 단계에서 알림 활성기 클래스를 지정 하 고 위에서 사용 했던 AUMID를 지정 합니다.
 
 ```csharp
 // Register AUMID and COM server (for MSIX/sparse package apps, this no-ops)
@@ -145,12 +145,14 @@ MSIX/sparse 패키지와 클래식 Win32를 모두 지 원하는 경우에는이
 
 이 방법을 사용 하면 AUMID를 지속적으로 제공 하지 않고도 호환성 Api를 호출 하 여 알림을 보내고 관리할 수 있습니다. 그리고 COM 서버에 대 한 LocalServer32 레지스트리 키를 삽입 합니다.
 
+---
+
 
 ## <a name="step-4-register-com-activator"></a>4 단계: COM 활성기 등록
 
 MSIX/sparse 패키지와 클래식 Win32 앱 모두에 대해 알림 활성화를 처리할 수 있도록 알림 활성기 유형을 등록 해야 합니다.
 
-응용 프로그램의 시작 코드에서 다음 **registeractivator** 메서드를 호출 하 여 #3 단계에서 만든 **notificationactivator** 클래스의 구현을 전달 합니다. 이는 알림 활성화를 수신 하기 위해 호출 해야 합니다.
+응용 프로그램의 시작 코드에서 다음 **registeractivator** 메서드를 호출 하 여 #2 단계에서 만든 **notificationactivator** 클래스의 구현을 전달 합니다. 이는 알림 활성화를 수신 하기 위해 호출 해야 합니다.
 
 ```csharp
 // Register COM server and activator type
@@ -165,7 +167,7 @@ Notification notification manager **호환** 클래스를 사용 하 여 **to **
 > [!NOTE]
 > 원시 XML을 사용 하는 대신 아래와 같이 c #을 사용 하 여 알림을 생성할 수 있도록 [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) 를 설치 합니다.
 
-레거시 Windows 8.1 알림 템플릿이 #3 단계에서 만든 COM 알림 활성기를 활성화 하지 않으므로 아래 (또는 XML을 직접 작성 하는 경우 Toastcontent 템플릿) **에서 볼 수 있는지 확인 합니다.**
+레거시 Windows 8.1 알림 템플릿이 #2 단계에서 만든 COM 알림 활성기를 활성화 하지 않으므로 아래 (또는 XML을 직접 작성 하는 경우 Toastcontent 템플릿) **에서 볼 수 있는지 확인 합니다.**
 
 > [!IMPORTANT]
 > Http 이미지는 자신의 매니페스트에 인터넷 기능이 있는 MSIX/sparse 패키지 앱 에서만 지원 됩니다. 클래식 Win32 앱은 http 이미지를 지원 하지 않습니다. 로컬 앱 데이터에 이미지를 다운로드 하 고 로컬에서 참조 해야 합니다.
