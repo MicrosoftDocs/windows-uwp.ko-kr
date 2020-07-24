@@ -96,7 +96,7 @@
           href: controls-and-patterns/rating.md
         - name: 슬라이더
           href: controls-and-patterns/slider.md
-        - name: Toggle
+        - name: 토글 스위치
           href: controls-and-patterns/toggles.md
     - name: 컬렉션
       items:
@@ -360,7 +360,7 @@
                   items:
                     - name: 개요
                       href: shell/tiles-and-notifications/toast-desktop-apps.md
-                    - name: 'C# 앱'
+                    - name: C# 앱
                       href: shell/tiles-and-notifications/send-local-toast-desktop.md
                     - name: C++ WRL 앱
                       href: shell/tiles-and-notifications/send-local-toast-desktop-cpp-wrl.md
@@ -527,7 +527,7 @@
   items:
     - name: 개요
       href: usability/index.md
-    - name: 내게 필요한 옵션
+    - name: 액세스 가능성
       href: accessibility/accessibility.md
       items:
         - name: 개요
