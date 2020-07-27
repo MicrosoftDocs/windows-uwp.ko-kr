@@ -178,14 +178,12 @@
       href: ../publish/insights-report.md
     - name: 광고 성과 보고서
       href: ../publish/advertising-performance-report.md
-    - name: 광고 캠페인 보고서
-      href: ../publish/ad-campaign-report.md
     - name: 분석 보고서 다운로드
       href: ../publish/download-analytic-reports.md
 - name: 지급 받기
   href: ../publish/getting-paid-apps.md
   items:
-    - name: 지급 계좌 및 세금 양식 설정
+    - name: 지급 계정 및 세금 양식 설정
       href: ../publish/setting-up-your-payout-account-and-tax-forms.md
     - name: '지급 임계값, 방법 및 기간'
       href: ../publish/payment-thresholds-methods-and-timeframes.md
@@ -210,3 +208,5 @@
       href: ../publish/store-app-quality.md
     - name: 개발자 준수 사항
       href: ../publish/store-developer-code-of-conduct.md
+    - name: 'Microsoft Store 제품 순위, 배치 및 마케팅 공개 명세서'
+      href: 'https://aka.ms/disclosurepolicypdf'

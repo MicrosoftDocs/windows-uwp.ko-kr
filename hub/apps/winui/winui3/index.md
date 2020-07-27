@@ -3,12 +3,12 @@ title: WinUI 3 Preview 2(2020년 7월)
 description: WinUI 3 Preview 2 릴리스에 대한 개요입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: 6dd29b7da0ce2d0f3a08538d392792337f1e1b5a
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 0acea4520f10d5f64baa29cb64fdf0ba1cc4552e
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493069"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997960"
 ---
 # <a name="windows-ui-library-3-preview-2-july-2020"></a>Windows UI 라이브러리 3 Preview 2(2020년 7월)
 
@@ -103,6 +103,9 @@ WinUI 프로젝트에서 사용할 수 있는 항목 템플릿은 다음과 같�
 ## <a name="bug-fixes-and-other-improvements-in-winui-3-preview-2"></a>WinUI 3 Preview 2의 버그 수정 및 기타 개선 사항
 
 Preview 2의 버그 수정 및 기타 업데이트에 대한 포괄적인 목록입니다. 이 릴리스에서 해결된 가장 중요한 버그 수정의 목록은 [릴리스 알림](https://aka.ms/winui3/preview2-announcement)을 참조하세요.
+
+> [!NOTE]
+> WinUI 3 Preview 2는 WinUI 2 라이브러리 버전 2.4.2를 사용합니다. 
 
 - [INotifyCollectionChanged](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-5.0) 및 [INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-5.0)는 이제 C# 데스크톱 앱에서 예상대로 작동합니다.
   - 이를 통해 백 엔드에서 업데이트되는 동안 UI에서 업데이트되지 않는 컬렉션 컨트롤과 관련된 몇 가지 다른 문제가 해결되었습니다.

@@ -426,7 +426,7 @@
                 - name: 중간 광고
                   href: ../monetize/interstitial-ads.md
                   items:
-                    - name: 'C#의 중간 광고 샘플 코드'
+                    - name: C#의 중간 광고 샘플 코드
                       href: ../monetize/interstitial-ad-sample-code-in-c.md
                     - name: JavaScript의 중간 광고 샘플 코드
                       href: ../monetize/interstitial-ad-sample-code-in-javascript.md
@@ -448,7 +448,7 @@
                 - name: 광고 오류 처리
                   href: ../monetize/error-handling-with-advertising-libraries.md
                   items:
-                    - name: 'XAML/C#에서 오류 처리 연습'
+                    - name: XAML/C#에서 오류 처리 연습
                       href: ../monetize/error-handling-in-xamlc-walkthrough.md
                     - name: JavaScript에서 오류 처리 연습
                       href: ../monetize/error-handling-in-javascript-walkthrough.md
@@ -457,7 +457,7 @@
               items:
                 - name: HTML 및 JavaScript 문제 해결 가이드
                   href: ../monetize/html-and-javascript-troubleshooting-guide.md
-                - name: 'XAML과 C# 문제 해결 가이드'
+                - name: XAML과 C# 문제 해결 가이드
                   href: ../monetize/xaml-and-c-troubleshooting-guide.md
             - name: 릴리스 정보
               href: ../monetize/release-notes-for-the-advertising-libraries.md
@@ -722,8 +722,6 @@
                   href: ../monetize/change-the-billing-state-of-a-subscription-for-a-user.md
                 - name: Microsoft Store ID 키 갱신
                   href: ../monetize/renew-a-windows-store-id-key.md
-            - name: 광고 네트워크용 앱 메타데이터 API
-              href: ../monetize/app-metadata-api-for-advertising-networks.md
         - name: Microsoft Store에 요청 보내기
           href: ../monetize/send-requests-to-the-store.md
         - name: 소매 데모(RDX) 기능 추가
@@ -799,9 +797,9 @@
           href: ../cpp-and-winrt-apis/interop-winrt-cx.md
         - name: WRL에서 C++/WinRT로 이동
           href: ../cpp-and-winrt-apis/move-to-winrt-from-wrl.md
-        - name: 'C#에서 샘플 앱 포팅'
+        - name: C#에서 샘플 앱 포팅
           href: ../cpp-and-winrt-apis/clipboard-to-winrt-from-csharp.md
-        - name: 'C#에서 C++/WinRT로 이동'
+        - name: C#에서 C++/WinRT로 이동
           href: ../cpp-and-winrt-apis/move-to-winrt-from-csharp.md
         - name: ABI와 상호 운용
           href: ../cpp-and-winrt-apis/interop-winrt-abi.md
@@ -819,7 +817,7 @@
           items:
             - name: 값 범주 및 참조
               href: ../cpp-and-winrt-apis/cpp-value-categories.md
-    - name: 'C#/WinRT'
+    - name: C#/WinRT
       href: ../csharp-winrt/index.md
     - name: 보안
       href: ../security/index.md
@@ -930,11 +928,13 @@
     - name: Windows 런타임 구성 요소
       href: ../winrt-components/index.md
       items:
+        - name: C++/WinRT를 사용한 Windows 런타임 구성 요소
+          href: ../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md
         - name: C++/CX가 포함된 Windows 런타임 구성 요소
           href: ../winrt-components/creating-windows-runtime-components-in-cpp.md
         - name: C++/CX Windows 런타임 구성 요소 연습
           href: ../winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md
-        - name: 'C# 및 Visual Basic이 포함된 Windows 런타임 구성 요소'
+        - name: C# 및 Visual Basic이 포함된 Windows 런타임 구성 요소
           href: ../winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic.md
           items:
             - name: Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자
@@ -947,7 +947,7 @@
               href: ../winrt-components/distributing-a-managed-windows-runtime-component.md
             - name: Windows 런타임 형식의 .NET 매핑
               href: ../winrt-components/net-framework-mappings-of-windows-runtime-types.md
-        - name: 'C# 또는 Visual Basic Windows 런타임 구성 요소 연습'
+        - name: C# 또는 Visual Basic Windows 런타임 구성 요소 연습
           href: ../winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md
         - name: Windows 런타임 구성 요소에서 이벤트 발생
           href: ../winrt-components/raising-events-in-windows-runtime-components.md
@@ -1438,7 +1438,7 @@
           href: ../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md
         - name: 스레드 풀을 사용하기 위한 모범 사례
           href: ../threading-async/best-practices-for-using-the-thread-pool.md
-        - name: 'C# 또는Visual Basic에서 비동기식 API 호출'
+        - name: C# 또는Visual Basic에서 비동기식 API 호출
           href: ../threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.md
         - name: 정기 작업 항목 만들기
           href: ../threading-async/create-a-periodic-work-item.md
