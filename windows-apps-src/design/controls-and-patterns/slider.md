@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ed202bca80518333201595987c4af631f82f0853
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: a1de8437c5b463b13e3adb8c4d7eb7161663f4d6
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970788"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997970"
 ---
 # <a name="sliders"></a>슬라이더
 
@@ -73,10 +73,6 @@ ms.locfileid: "82970788"
 </td>
 </tr>
 </table>
-
-Windows Phone에서 볼륨을 제어하는 슬라이더입니다.
-
-![Windows Phone에서 볼륨을 제어하는 슬라이더](images/control-examples/slider-phone.png)
 
 Windows 표시 설정에서 텍스트 크기를 변경하는 슬라이더입니다.
 

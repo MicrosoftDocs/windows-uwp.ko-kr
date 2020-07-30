@@ -12,12 +12,12 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 34eca0c822b0da96cae39463777c5c3e9888240c
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 25ca05dc6c604d40092cdc28d186de4b835774b2
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970808"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86998000"
 ---
 # <a name="progress-controls"></a>진행률 컨트롤
 
@@ -213,7 +213,3 @@ Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows
 
 - [ProgressBar 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar)
 - [ProgressRing 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing)
-
-**개발자용(XAML)**
-- [진행률 컨트롤 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh780651(v=win.10))
-- [Windows Phone에 대한 미확정 사용자 지정 진행률 표시줄을 만드는 방법](https://msdn.microsoft.com/library/windows/apps/gg442303.aspx)

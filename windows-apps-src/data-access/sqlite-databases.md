@@ -5,12 +5,12 @@ ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp, SQLite, 데이터베이스
 ms.localizationpriority: medium
-ms.openlocfilehash: c8eb384be08addd75e77f37d6fb579a179e68581
-ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
+ms.openlocfilehash: 0db89408d5bc0af8b9101768a6498e70f9be6147
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85448353"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997940"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>UWP 앱에서 SQLite 데이터베이스 사용
 SQLite를 사용하여 사용자의 디바이스에 있는 경량 데이터베이스에 데이터를 저장하고 검색할 수 있습니다. 이 가이드에서는 그 방법을 보여줍니다.
@@ -75,7 +75,7 @@ Visual Studio 2015를 사용하고 있다면 **설치된 항목** 탭을 선택�
 
 ![SQLite 패키지](images/sqlite-package.png)
 
-이 가이드의 [SQLite 데이터베이스에서 데이터를 추가 및 검색](#use-data)으로 이동합니다.
+이 가이드의 [SQLite 데이터베이스에서 데이터를 추가 및 검색](/windows/uwp/data-access/sqlite-databases#add-and-retrieve-data-in-a-sqlite-database)으로 이동합니다.
 
 ### <a name="the-minimum-version-of-your-project-targets-the-fall-creators-update"></a>프로젝트 최소 버전의 대상이 Fall Creators Update인 경우
 
@@ -122,7 +122,6 @@ Windows에 포함된 SQLite 버전의 사용 방법부터 시작하겠습니다.
 
 ![SQLite 패키지](images/sqlite-package-v2.png)
 
-<a id="use-data" />
 
 ## <a name="add-and-retrieve-data-in-a-sqlite-database"></a>SQLite 데이터베이스에서 데이터를 추가 및 검색
 
@@ -173,7 +172,6 @@ using Microsoft.Data.Sqlite;
 using System.Collections.Generic;
 ```
 
-<a id="initialize" />
 
 ### <a name="initialize-the-sqlite-database"></a>SQLite 데이터베이스 초기화
 
@@ -217,7 +215,6 @@ public App()
 }
 ```
 
-<a id="insert" />
 
 ### <a name="insert-data-into-the-sqlite-database"></a>SQLite 데이터베이스에 데이터 삽입
 
@@ -247,7 +244,6 @@ public static void AddData(string inputText)
 }
 ```
 
-<a id="retrieve" />
 
 ### <a name="retrieve-data-from-the-sqlite-database"></a>SQLite 데이터베이스에서 데이터 검색
 
