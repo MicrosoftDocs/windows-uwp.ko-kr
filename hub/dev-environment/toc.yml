@@ -1,101 +1,117 @@
 - name: Windows 개발 환경
-  href: index.yml
+  href: overview.md
   items:
-    - name: Python을 사용하여 개발
+    - name: 개요
       items:
-        - name: 개요
-          href: ../python/index.yml
-        - name: 초보자를 위한 시작
-          href: ../python/beginners.md
-        - name: 웹 개발 시작
-          href: ../python/web-frameworks.md
-        - name: 자동화 시작
-          href: ../python/scripting.md
-        - name: 데이터베이스 시작
-          href: 'https://docs.microsoft.com/windows/wsl/tutorials/wsl-database'
-        - name: FAQ
-          href: ../python/faqs.md
-        - name: 리소스
-          href: ../python/resources.md
-    - name: Node.js를 사용하여 개발
-      items:
-        - name: 개요
-          href: ../nodejs/index.yml
-        - name: WSL2를 사용하여 설정(Linux)
-          href: ../nodejs/setup-on-wsl2.md
-        - name: Windows를 사용하여 설정(초보자)
-          href: ../nodejs/setup-on-windows.md
-        - name: 초보자를 위한 시작
-          href: ../nodejs/beginners.md
-        - name: 웹 프레임워크 시작
-          href: ../nodejs/web-frameworks.md
-        - name: 데이터베이스 시작
-          href: '.https://docs.microsoft.com/windows/wsl/tutorials/wsl-database'
-        - name: 컨테이너 시작
-          href: ../nodejs/containers.md
-    - name: Android를 사용하여 개발
-      items:
-        - name: 개요
-          href: ../android/overview.md
-        - name: 네이티브 Android 시작
-          href: ../android/native-android.md
-        - name: 플랫폼 간 시작
-          items:
-            - name: Xamarin Native
-              href: ../android/xamarin-android.md
-            - name: Xamarin Forms
-              href: ../android/xamarin-forms.md
-            - name: React Native
-              href: ../android/react-native.md
-            - name: 'PWA(Ionic, PhoneGap, Cordova)'
-              href: ../android/pwa.md
-        - name: 성능 향상을 위한 Defender 설정
-          href: ../android/defender-settings.md
-        - name: 디바이스 또는 에뮬레이터에서 테스트
-          href: ../android/emulator.md
-    - name: Windows 패키지 관리자
-      items:
-        - name: 개요
-          href: ../package-manager/index.md
-        - name: winget 도구 사용
-          items:
-            - name: 개요
-              href: ../package-manager/winget/index.md
-            - name: hash 명령
-              href: ../package-manager/winget/hash.md
-            - name: help 명령
-              href: ../package-manager/winget/help.md
-            - name: install 명령
-              href: ../package-manager/winget/install.md
-            - name: search 명령
-              href: ../package-manager/winget/search.md
-            - name: show 명령
-              href: ../package-manager/winget/show.md
-            - name: source 명령
-              href: ../package-manager/winget/source.md
-            - name: validate 명령
-              href: ../package-manager/winget/validate.md
-        - name: 패키지 제출
-          items:
-            - name: 개요
-              href: ../package-manager/package/index.md
-            - name: 패키지 매니페스트 만들기
-              href: ../package-manager/package/manifest.md
-            - name: 리포지토리에 매니페스트 제출
-              href: ../package-manager/package/repository.md
-    - name: Linux용 Windows 하위 시스템
-      href: 'https://docs.microsoft.com/windows/wsl/'
-    - name: Windows 터미널
-      href: 'https://docs.microsoft.com/windows/terminal/'
-    - name: Mac-Windows 가이드
-      items:
-        - name: 개발 환경 변경
+        - name: 워크플로 및 성능 카운터
+          href: tips.md
+        - name: 개발자 스토리
+          href: dev-stories.md
+        - name: 인기 있는 자습서
+          href: tutorials.md
+        - name: Mac-Windows 가이드
           href: mac-to-windows.md
         - name: 바로 가기 키
           href: mac-to-windows.md#keyboard-shortcuts
-        - name: 트랙 패드 바로 가기
-          href: mac-to-windows.md#trackpad-shortcuts
-        - name: 터미널 및 셸
-          href: mac-to-windows.md#terminal-and-shell
-        - name: 앱 및 유틸리티
-          href: mac-to-windows.md#apps-and-utilities
+    - name: 개발 경로
+      items:
+        - name: Python 시작
+          items:
+            - name: 개요
+              href: ../python/index.yml
+            - name: 초보자를 위한 시작
+              href: ../python/beginners.md
+            - name: 웹 개발 시작
+              href: ../python/web-frameworks.md
+            - name: 자동화 시작
+              href: ../python/scripting.md
+            - name: FAQ
+              href: ../python/faqs.md
+        - name: Node.js 시작
+          items:
+            - name: 개요
+              href: ../nodejs/index.yml
+            - name: WSL2를 사용하여 설정
+              href: ../nodejs/setup-on-wsl2.md
+            - name: Windows를 사용하여 설정(초보자)
+              href: ../nodejs/setup-on-windows.md
+            - name: 초보자를 위한 시작
+              href: ../nodejs/beginners.md
+            - name: 웹 프레임워크 시작
+              href: ../nodejs/web-frameworks.md
+        - name: Android 시작
+          items:
+            - name: 개요
+              href: ../android/overview.md
+            - name: 네이티브 Android 시작
+              href: ../android/native-android.md
+            - name: 플랫폼 간 시작
+              items:
+                - name: Xamarin Native
+                  href: ../android/xamarin-android.md
+                - name: Xamarin Forms
+                  href: ../android/xamarin-forms.md
+                - name: React Native
+                  href: ../android/react-native.md
+                - name: 'PWA(Ionic, PhoneGap, Cordova)'
+                  href: ../android/pwa.md
+            - name: 성능 향상을 위한 Defender 설정
+              href: ../android/defender-settings.md
+            - name: 디바이스 또는 에뮬레이터에서 테스트
+              href: ../android/emulator.md
+        - name: C 및 C++ 시작
+          href: 'https://docs.microsoft.com/cpp/'
+        - name: C# 시작
+          href: 'https://docs.microsoft.com/dotnet/csharp/'
+        - name: Azure에서 Java 시작
+          href: 'https://docs.microsoft.com/azure/developer/java/'
+        - name: PowerShell 시작
+          href: 'https://docs.microsoft.com/powershell/'
+        - name: WSL에서 데이터베이스 시작
+          href: 'https://docs.microsoft.com/windows/wsl/tutorials/wsl-database'
+    - name: 도구 및 플랫폼
+      items:
+        - name: Linux용 Windows 하위 시스템
+          href: 'https://docs.microsoft.com/windows/wsl/'
+        - name: Windows 터미널
+          href: 'https://docs.microsoft.com/windows/terminal/'
+        - name: Windows 패키지 관리자
+          items:
+            - name: 개요
+              href: ../package-manager/index.md
+            - name: winget 도구 사용
+              items:
+                - name: 개요
+                  href: ../package-manager/winget/index.md
+                - name: hash 명령
+                  href: ../package-manager/winget/hash.md
+                - name: help 명령
+                  href: ../package-manager/winget/help.md
+                - name: install 명령
+                  href: ../package-manager/winget/install.md
+                - name: search 명령
+                  href: ../package-manager/winget/search.md
+                - name: show 명령
+                  href: ../package-manager/winget/show.md
+                - name: source 명령
+                  href: ../package-manager/winget/source.md
+                - name: validate 명령
+                  href: ../package-manager/winget/validate.md
+            - name: 패키지 제출
+              items:
+                - name: 개요
+                  href: ../package-manager/package/index.md
+                - name: 패키지 매니페스트 만들기
+                  href: ../package-manager/package/manifest.md
+                - name: 리포지토리에 매니페스트 제출
+                  href: ../package-manager/package/repository.md
+        - name: PowerToys
+          href: 'https://github.com/microsoft/PowerToys'
+        - name: VS 코드
+          href: 'https://code.visualstudio.com/docs'
+        - name: Visual Studio
+          href: 'https://docs.microsoft.com/visualstudio/windows/?view=vs-2019'
+        - name: Azure
+          href: 'https://docs.microsoft.com/azure/?product=featured'
+        - name: .NET
+          href: 'https://docs.microsoft.com/dotnet/'

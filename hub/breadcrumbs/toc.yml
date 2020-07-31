@@ -108,6 +108,12 @@
           topicHref: /windows/android/overview
         - name: Mac-Windows
           topicHref: /windows/dev-environment/mac-to-windows
+        - name: 팁
+          topicHref: /windows/dev-environment/tips
+        - name: 개발자 스토리
+          topicHref: /windows/dev-environment/dev-stories
+        - name: 자습서
+          topicHref: /windows/dev-environment/tutorials
         - name: Linux용 Windows 하위 시스템
           tocHref: /windows/dev-environment/wsl
           topicHref: /windows/wsl/about
