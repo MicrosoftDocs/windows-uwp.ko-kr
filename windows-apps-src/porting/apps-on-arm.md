@@ -5,12 +5,12 @@ ms.date: 05/22/2020
 ms.topic: article
 keywords: windows 10 s, 항상 연결 됨, ARM, ARM64, x86 에뮬레이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 006de4f1f04ffb98d46b6ceb981d3d0fba311026
-ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
+ms.openlocfilehash: 679afeb1915bfcb84445ca97453a884654249a0e
+ms.sourcegitcommit: 2aa82d60d7f9edf7ae7f9a550a8d044e2040c08a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83854749"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87443350"
 ---
 # <a name="windows-10-on-arm"></a>ARM 기반 Windows 10
 원래 Windows 10 (Windows 10 Mobile과 구분 됨)은 x86 및 x64 프로세서로 구동 된 Pc 에서만 실행 될 수 있습니다. 이제 Windows 10 desktop은 ARM64 프로세서에서 구동 하는 컴퓨터에서이 컴퓨터에서 실행 될 수 있습니다. ARM CPU 아키텍처의 전력 절약 특성을 통해 이러한 Pc는 모든 배터리 수명 및 모바일 데이터 네트워크에 대 한 지원을 받을 수 있습니다. 이러한 Pc는 뛰어난 응용 프로그램 호환성을 제공 하며 기존 x86 win32 응용 프로그램을 수정 하지 않고 실행할 수 있습니다. 자세한 내용 또는 데모는 [채널 9 비디오에서 항상 연결 된 PC](https://channel9.msdn.com/Events/Build/2017/P4171)를 살펴보세요.
@@ -41,11 +41,11 @@ Visual Studio 2019는 ARM의 Windows 10에 대 한 몇 가지 도구 다운로�
 
 ### <a name="visual-c-redistributable"></a>Visual C++ 재배포 가능 패키지
 
-ARM 앱에는 Visual C++ Redist 패키지를 사용할 수 있습니다. [Visual studio downlaods 페이지](https://visualstudio.microsoft.com/downloads/) 를 방문 하 여 **모든 다운로드**까지 아래로 스크롤하고 **다른 도구 및 프레임 워크**를 연 다음 **Visual Studio 2019에 대 한 Microsoft Visual C++ 재배포 가능** 항목으로 이동 합니다. **ARM64** 라디오 단추를 선택한 다음 **다운로드**를 선택 합니다.
+ARM 앱에는 Visual C++ Redist 패키지를 사용할 수 있습니다. [Visual studio 다운로드 페이지](https://visualstudio.microsoft.com/downloads/) 를 방문 하 여 **모든 다운로드**까지 아래로 스크롤하고 **다른 도구 및 프레임 워크**를 연 다음 **Visual Studio 2019에 대 한 Microsoft Visual C++ 재배포 가능** 항목으로 이동 합니다. **ARM64** 라디오 단추를 선택한 다음 **다운로드**를 선택 합니다.
 
 ### <a name="remote-tools"></a>원격 도구
 
-ARM 앱에는 Visual Studio용 원격 도구를 사용할 수 있습니다. [Visual studio downlaods 페이지](https://visualstudio.microsoft.com/downloads/) 를 방문 하 여 **모든 다운로드**까지 아래로 스크롤하고 **visual studio 2019 용 도구**를 연 다음 **Visual Studio용 원격 도구 2019** 항목으로 이동 합니다. **ARM64* 라디오 단추를 선택한 다음 **다운로드**를 선택 합니다.
+ARM 앱에는 Visual Studio용 원격 도구를 사용할 수 있습니다. [Visual studio 다운로드 페이지](https://visualstudio.microsoft.com/downloads/) 를 방문 하 여 **모든 다운로드**로 스크롤하고 **visual studio 2019 용 도구**를 연 다음 **Visual Studio용 원격 도구 2019** 항목으로 이동 합니다. **ARM64* 라디오 단추를 선택한 다음 **다운로드**를 선택 합니다.
 
 
 ## <a name="in-this-section"></a>섹션 내용
