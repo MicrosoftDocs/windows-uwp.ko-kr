@@ -12,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 57002a1edafd5dd7a367220fc0425fdc52b711d1
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: b68b5bc5fc6042d7abeae6944c351af178b70874
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970848"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86998020"
 ---
 # <a name="password-box"></a>비밀번호 상자
 
@@ -145,9 +145,7 @@ PasswordBox에는 사용자가 암호 텍스트를 표시하기 위해 터치하
 
 다른 [PasswordRevealMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordRevealMode) 열거형 값 **Hidden** 및 **Visible**는 암호 표시 단추를 숨기고 암호가 가려지는지 여부를 프로그래밍 방식으로 관리할 수 있도록 합니다.
 
-암호를 항상 가리려면 PasswordRevealMode를 Hidden으로 설정합니다. 암호를 항상 가릴 필요가 없으면 사용자 지정 UI를 제공하여 사용자가 Hidden 및 Visible 간에 PasswordRevealMode를 전환할 수 있도록 합니다.
-
-이전 버전의 Windows Phone에서 PasswordBox는 확인란을 사용하여 암호를 가릴지 여부를 전환합니다. 다음 예제에 표시된 대로 앱에 대한 유사한 UI를 만들 수 있습니다. [ToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton)과 같은 기타 컨트롤을 사용하여 사용자가 모드 간을 전환하도록 할 수도 있습니다.
+암호를 항상 가리려면 PasswordRevealMode를 Hidden으로 설정합니다. 암호를 항상 가릴 필요가 없으면 사용자 지정 UI를 제공하여 사용자가 Hidden 및 Visible 간에 PasswordRevealMode를 전환할 수 있도록 합니다. 예를 들어 다음 예제와 같이 확인란을 사용하여 암호를 가릴 것인지 여부를 전환할 수 있습니다. [ToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton)과 같은 기타 컨트롤을 사용하여 사용자가 모드 간을 전환하도록 할 수도 있습니다.
 
 이 예제에서는 [CheckBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox)를 사용하여 사용자가 PasswordBox의 표시 모드를 전환하는 방법을 보여 줍니다.
 

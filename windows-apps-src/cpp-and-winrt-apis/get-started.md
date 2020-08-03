@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 시작하기, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: 968c347927edf0ad44476ec4bdca97aae19bb9a4
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 3e17e3f8107e82547ec0d367099f621e5b2e590a
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493038"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997850"
 ---
 # <a name="get-started-with-cwinrt"></a>C++/WinRT 시작
 
@@ -71,7 +71,9 @@ int main()
 헤더에는 C++/WinRT에 프로젝션된 Windows API가 포함됩니다. 즉, C++/WinRT는 각 Windows 형식에 해당하는 C++에 편리한 형식(‘프로젝션된 형식’이라고 함)을 정의합니다. 프로젝션된 형식은 Windows 형식과 동일한 정규화된 이름을 갖지만 C++ **winrt** 네임스페이스에 배치됩니다. 이러한 형식을 미리 컴파일된 헤더에 포함하면 증분 빌드 시간을 줄일 수 있습니다.
 
 > [!IMPORTANT]
-> Windows 네임스페이스의 형식을 사용하려는 경우 항상, 해당하는 C++/WinRT Windows 네임스페이스 헤더 파일을 위와 같이 포함합니다. ‘해당’ 헤더는 형식의 네임스페이스와 동일한 이름을 가진 헤더입니다. 예를 들어 [**Windows::Foundation::Collections::PropertySet**](/uwp/api/windows.foundation.collections.propertyset) 런타임 클래스에 대해 C++/WinRT 프로젝션을 사용하려면 `#include <winrt/Windows.Foundation.Collections.h>`를 지정합니다. `winrt/Windows.Foundation.Collections.h`를 포함하는 경우 `winrt/Windows.Foundation.h`는 포함하지 않아도 됩니다. 각 C++/WinRT 프로젝션 헤더에 부모 네임스페이스 헤더 파일이 자동으로 포함되므로, 명시적으로 포함할 필요가 없습니다. 그러나 포함해도 오류가 발생하지는 않습니다.
+> Windows 네임스페이스의 형식을 사용하려는 경우에는 항상 해당하는 C++/WinRT Windows 네임스페이스 헤더 파일을 위와 같이 `#include`해야 합니다. ‘해당’ 헤더는 형식의 네임스페이스와 동일한 이름을 가진 헤더입니다. 예를 들어 [**Windows::Foundation::Collections::PropertySet**](/uwp/api/windows.foundation.collections.propertyset) 런타임 클래스에 C++/WinRT 프로젝션을 사용하려면 `winrt/Windows.Foundation.Collections.h` 헤더를 포함합니다.
+> 
+> 일반적으로 C++/WinRT 프로젝션 헤더가 부모 네임스페이스 헤더 파일을 자동으로 포함합니다. 예를 들어 `winrt/Windows.Foundation.Collections.h`는 `winrt/Windows.Foundation.h`를 포함합니다. 하지만 이 구현 세부 정보는 시간이 지나면 변경되므로 이 동작을 사용하면 안 됩니다. 필요한 헤더를 명시적으로 포함해야 합니다.
 
 ```cppwinrt
 using namespace winrt;

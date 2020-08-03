@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c23a9539d0fc3902f715917b380e8b6b3e132c15
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 23cadaca6f82d7cb43834f5a86c56a3fa34cb00e
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68974456"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997800"
 ---
 # <a name="tutorial-create-a-user-interface"></a>자습서: 사용자 인터페이스 만들기
 
@@ -558,5 +558,4 @@ XAML 편집기를 사용하여 컨트롤을 추가하려면 다음을 수행합�
 
 ## <a name="get-the-final-version-of-the-photolab-sample"></a>PhotoLab 샘플의 최종 버전 다운로드
 
-이 자습서에서는 완전한 사진 편집 앱으로 빌드하지 않습니다. 따라서 [최종 버전](https://github.com/Microsoft/Windows-appsample-photo-lab)을 확인하여 사용자 지정 애니메이션 및 휴대폰 지원과 같은 다른 기능을 확인해야 합니다.
-
+이 자습서에서는 완전한 사진 편집 앱으로 빌드하지 않습니다. 따라서 [최종 버전](https://github.com/Microsoft/Windows-appsample-photo-lab)을 확인하여 사용자 지정 애니메이션 및 적응형 레이아웃 같은 다른 기능을 확인해야 합니다.

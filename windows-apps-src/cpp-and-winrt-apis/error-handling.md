@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 오류, 처리, 예외
 ms.localizationpriority: medium
-ms.openlocfilehash: 37819d1626d3adc6f5647f447567a9273e72668d
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 1092427659cfbf2fb7d1b5dbfc9cb8802dcfeccd
+ms.sourcegitcommit: 1e8f51d5730fe748e9fe18827895a333d94d337f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68270127"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87296158"
 ---
 # <a name="error-handling-with-cwinrt"></a>C++/WinRT를 통한 오류 처리
 
@@ -19,9 +19,9 @@ ms.locfileid: "68270127"
 ## <a name="avoid-catching-and-throwing-exceptions"></a>예외 catch 및 throw 방지
 [예외로부터 안전한 코드](/cpp/cpp/how-to-design-for-exception-safety)를 계속 작성하면서, 가능한 한 예외 catch 및 throw를 방지하는 것이 좋습니다. 예외 처리기가 없는 경우, Windows에서 문제가 있는 위치를 추적하는 데 도움이 되는 오류 보고서(크래시 미니덤프 포함)를 자동으로 생성합니다.
 
-catch할 수 있는 예외를 throw하지 마세요. 또한 예상된 실패에 대해 예외를 사용하지 마세요. ‘예기치 않은 런타임 오류가 발생하는 경우에만’ 예외를 throw하고, 다른 모든 경우에는 실패 원인과 가까운 오류/결과 코드로 직접 처리합니다.  그러면 예외가 throw되는 경우 원인이 코드의 버그이거나 시스템의 예외적인 오류 상태임을 알 수 있습니다. 
+catch할 수 있는 예외를 throw하지 마세요. 또한 예상된 실패에 대해 예외를 사용하지 마세요. ‘예기치 않은 런타임 오류가 발생하는 경우에만’ 예외를 throw하고, 다른 모든 경우에는 실패 원인과 가까운 오류/결과 코드로 직접 처리합니다.&mdash; 그러면 예외가 throw되는 경우 원인이 코드의 버그이거나 시스템의 예외적인 오류 상태임을 알 수 있습니다.
 
-Windows 레지스트리에 액세스하는 시나리오를 고려해 보세요. 앱이 레지스트리에서 값을 읽지 못할 경우 예상된 실패여야 하며, 정상적으로 처리해야 합니다. 예외를 throw하지 말고, 값을 읽지 못했다는 것과 읽지 못한 이유를 나타내는 `bool` 또는 `enum` 값을 반환합니다. 반면에 레지스트리에 값을 ‘쓰지’ 못할 경우 애플리케이션에서 쉽게 처리할 수 있는 문제보다 심각한 문제가 있음을 나타낼 가능성이 큽니다.  이러한 경우, 애플리케이션을 계속하지 않는 것이 좋으므로 오류 보고서를 생성하는 예외가 애플리케이션에 의한 손상을 방지하는 가장 빠른 방법입니다.
+Windows 레지스트리에 액세스하는 시나리오를 고려해 보세요. 앱이 레지스트리에서 값을 읽지 못할 경우 예상된 실패여야 하며, 정상적으로 처리해야 합니다. 예외를 throw하지 말고, 값을 읽지 못했다는 것과 읽지 못한 이유를 나타내는 `bool` 또는 `enum` 값을 반환합니다. 반면에 레지스트리에 값을 ‘쓰지’ 못할 경우 애플리케이션에서 쉽게 처리할 수 있는 문제보다 심각한 문제가 있음을 나타낼 가능성이 큽니다. 이러한 경우, 애플리케이션을 계속하지 않는 것이 좋으므로 오류 보고서를 생성하는 예외가 애플리케이션에 의한 손상을 방지하는 가장 빠른 방법입니다.
 
 또 다른 예로, [**StorageFile.GetThumbnailAsync**](/uwp/api/windows.storage.storagefile.getthumbnailasync#Windows_Storage_StorageFile_GetThumbnailAsync_Windows_Storage_FileProperties_ThumbnailMode_) 호출의 미리 보기 이미지를 검색하고 [**BitmapSource.SetSourceAsync**](/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsourceasync#Windows_UI_Xaml_Media_Imaging_BitmapSource_SetSourceAsync_Windows_Storage_Streams_IRandomAccessStream_)에 미리 보기를 전달하는 경우를 고려해 보세요. 호출 시퀀스에서 `nullptr`을 **SetSourceAsync**에 전달하는 경우(이미지 파일을 읽을 수 없음, 파일 확장명 때문에 이미지 데이터가 포함된 것 같지만 실제로는 이미지 데이터가 없음), 잘못된 포인터 예외가 throw됩니다. 코드에서 이러한 경우를 발견하면 예외로 catch 및 처리하는 대신 **GetThumbnailAsync**에서 반환되는 `nullptr`을 확인합니다.
 
@@ -30,7 +30,7 @@ Windows 레지스트리에 액세스하는 시나리오를 고려해 보세요. 
 그러나 예외가 throw될 가능성이 없는 이벤트에서 적절한 소멸자가 호출되도록 하는 런타임 오버헤드로 인해 성능이 저하될 가능성이 더 큽니다. 이 확인 작업의 비용은 예외가 실제로 throw되었는지 여부에 관계없이 발생합니다. 따라서 컴파일러에서 잠재적으로 예외를 throw할 수 있는 함수를 예상할 수 있도록 해야 합니다. 컴파일러가 특정 함수에 예외가 없음을 입증할 수 있는 경우(`noexcept` 사양), 생성하는 코드를 최적화할 수 있습니다.
 
 ## <a name="catching-exceptions"></a>예외 catch
-[Windows 런타임 ABI](interop-winrt-abi.md#what-is-the-windows-runtime-abi-and-what-are-abi-types) 계층에서 발생하는 오류 조건은 HRESULT 값의 형식으로 반환됩니다. 하지만 코드에서 HRESULT를 처리할 필요는 없습니다. 사용 측면에서 API를 위해 생성된 C++/WinRT 프로젝션 코드는 ABI 계층에서 오류 HRESULT 코드를 검색하고, 이 코드를 catch하여 처리할 수 있는 [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 예외로 변환합니다. HRESULTS를 ‘처리’하려는 경우 **winrt::hresult** 형식을 사용합니다. 
+[Windows 런타임 ABI](interop-winrt-abi.md#what-is-the-windows-runtime-abi-and-what-are-abi-types) 계층에서 발생하는 오류 조건은 HRESULT 값의 형식으로 반환됩니다. 하지만 코드에서 HRESULT를 처리할 필요는 없습니다. 사용 측면에서 API를 위해 생성된 C++/WinRT 프로젝션 코드는 ABI 계층에서 오류 HRESULT 코드를 검색하고, 이 코드를 catch하여 처리할 수 있는 [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 예외로 변환합니다. HRESULTS를 ‘처리’하려는 경우 **winrt::hresult** 형식을 사용합니다.
 
 예를 들어 애플리케이션이 해당 컬렉션을 반복하는 동안 사용자가 사진 라이브러리에서 이미지를 삭제하면 프로젝션에서 예외가 throw됩니다. 이 경우 해당 예외를 catch 및 처리해야 합니다. 이러한 경우를 보여 주는 코드 예제는 다음과 같습니다.
 
@@ -58,7 +58,7 @@ IAsyncAction MakeThumbnailsAsync()
         }
         catch (winrt::hresult_error const& ex)
         {
-            winrt::hresult hr = ex.to_abi(); // HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND).
+            winrt::hresult hr = ex.code(); // HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND).
             winrt::hstring message = ex.message(); // The system cannot find the file specified.
         }
     }
@@ -66,6 +66,8 @@ IAsyncAction MakeThumbnailsAsync()
 ```
 
 `co_await`된 함수를 호출하는 경우 코루틴에서 이와 동일한 패턴을 사용합니다. HRESULT를 예외로 변환하는 또 다른 예로, 구성 요소 API에서 반환된 E_OUTOFMEMORY로 인해 **std::bad_alloc**가 throw되는 경우가 있습니다.
+
+HRESULT 코드를 살펴볼 때 [**winrt::hresult_error::code**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresult_errorcode-function)를 사용하는 것이 좋습니다. 반면 [**winrt::hresult_error::to_abi**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresult_errorto_abi-function) 함수는 COM 오류 개체로 변환되어 COM 스레드 로컬 스토리지에 상태를 푸시합니다.
 
 ## <a name="throwing-exceptions"></a>예외 발생
 지정된 함수 호출이 실패하면 애플리케이션을 복구할 수 없다고 결정하는 경우가 있습니다(더 이상 예상대로 작동할 것으로 신뢰할 수 없음). 아래 코드 예제는 [**winrt::handle**](/uwp/cpp-ref-for-winrt/handle) 값을 [**CreateEvent**](https://docs.microsoft.com/windows/desktop/api/synchapi/nf-synchapi-createeventa)에서 반환된 HANDLE의 래퍼로 사용합니다. 그런 다음, `bool` 값을 만들어 핸들을 [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool) 함수 템플릿에 전달합니다. **winrt::check_bool**은 `bool`이나 `false`(오류 조건) 또는 `true`(성공 조건)로 변환할 수 있는 모든 값으로 작업합니다.
@@ -94,7 +96,7 @@ Windows API는 다양한 반환 값 형식을 사용하여 런타임 오류를 �
 ## <a name="throwing-exceptions-when-authoring-an-api"></a>API를 작성할 때 예외 throw
 모든 [Windows 런타임 ABI(애플리케이션 이진 인터페이스)](interop-winrt-abi.md#what-is-the-windows-runtime-abi-and-what-are-abi-types) 경계(또는 ABI 경계)는 *noexcept*여야 합니다. 즉, 예외가 여기서 발생하면 안 됩니다. API를 작성할 때 ABI 경계는 항상 C++ `noexcept` 키워드를 사용하여 표시해야 합니다. `noexcept`에는 C++의 특정 동작이 있습니다. C++ 예외가 `noexcept` 경계에 도달하면 프로세스에서 **std::terminate**를 사용하여 페일 패스트합니다. 처리되지 않은 예외는 거의 항상 프로세스에서 알 수 없는 상태를 나타내므로 이 동작은 일반적으로 바람직합니다.
 
-예외는 ABI 경계를 넘지 않아야 하므로 구현에서 발생하는 오류 조건은 ABI 계층에서 HRESULT 오류 코드 형식으로 반환됩니다. C++/WinRT를 사용하여 API를 작성하는 경우 구현에서 throw한 모든 예외를 HRESULT로 변환할 수 있도록 코드가 생성됩니다.  [**winrt::to_hresult**](/uwp/cpp-ref-for-winrt/error-handling/to-hresult) 함수는 생성된 코드에서 다음과 같은 패턴으로 사용됩니다.
+예외는 ABI 경계를 넘지 않아야 하므로 구현에서 발생하는 오류 조건은 ABI 계층에서 HRESULT 오류 코드 형식으로 반환됩니다. C++/WinRT를 사용하여 API를 작성하는 경우 구현에서 throw한 모든 예외를 HRESULT로 변환할 수 있도록 코드가 생성됩니다. [**winrt::to_hresult**](/uwp/cpp-ref-for-winrt/error-handling/to-hresult) 함수는 생성된 코드에서 다음과 같은 패턴으로 사용됩니다.
 
 ```cppwinrt
 HRESULT DoWork() noexcept

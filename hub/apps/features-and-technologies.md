@@ -6,12 +6,12 @@ ms.date: 05/08/2019
 ms.localizationpriority: medium
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: 6bae7fdef4e9cdf05dfa6f56160f1021033123e6
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c214a31162b64853fd2115170ef1fd7766cafe96
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77705778"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997950"
 ---
 # <a name="features-and-technologies-for-windows-apps"></a>Windows 앱의 기능 및 기술
 

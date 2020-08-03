@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 707c2ed110498f4ef18fea31ace87d1fd2434112
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d8f8d869bd18b6d3e6897d91b2616bc4eb1335d0
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "67820338"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997840"
 ---
 # <a name="create-data-bindings"></a>데이터 바인딩 만들기
 
@@ -18,7 +18,7 @@ ms.locfileid: "67820338"
 
 이 자습서에서는 상용구를 데이터 바인딩으로 바꾸고 UI와 데이터 간에 직접 연결을 만드는 방법을 알아봅니다. 또한 화면 표시를 위해 데이터에 서식을 지정하거나 변환하고 UI와 데이터를 동기화 상태로 유지하는 방법을 알아봅니다. 이 자습서를 완료하면 XAML 및 C# 코드의 단순성과 구성을 개선하여 쉽게 유지 관리하고 확장할 수 있게 됩니다.
 
-PhotoLab 샘플의 간소화된 버전부터 시작합니다. 시작 버전에는 전체 데이터 계층 및 기본 XAML 페이지 레이아웃이 포함되어 있으며, 코드를 탐색하기 쉽도록 많은 기능이 생략되었습니다. 이 자습서에서는 전체 앱을 빌드하지 않으므로, 사용자 지정 애니메이션 및 휴대폰 지원과 같은 기능을 살펴보려면 최종 버전을 확인하세요. 최종 버전은 [Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab) 리포지토리의 루트 폴더에서 확인할 수 있습니다. 
+PhotoLab 샘플의 간소화된 버전부터 시작합니다. 시작 버전에는 전체 데이터 계층 및 기본 XAML 페이지 레이아웃이 포함되어 있으며, 코드를 탐색하기 쉽도록 많은 기능이 생략되었습니다. 이 자습서에서는 전체 앱을 빌드하지 않으므로, 사용자 지정 애니메이션 및 적응형 레이아웃 같은 기능을 살펴보려면 최종 버전을 확인하세요. 최종 버전은 [Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab) 리포지토리의 루트 폴더에서 확인할 수 있습니다. 
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -160,7 +160,7 @@ PhotoLab 샘플에서 이러한 바인딩을 사용하면 코드 숨김 대신 �
               ItemsSource="{x:Bind Images}" 
     ```
 
-    **Images** 속성이 **ObservableCollection\<ImageFileInfo\>** 형식이므로, **GridView**에 표시된 개별 항목은 **ImageFileInfo** 형식입니다. 이 형식은 1부에서 설명한 **x:DataType** 값과 일치합니다. 
+    **Images** 속성은 **ObservableCollection\<ImageFileInfo\>** 형식이므로, **GridView**에 표시된 개별 항목은 **ImageFileInfo** 형식입니다. 이 형식은 1부에서 설명한 **x:DataType** 값과 일치합니다. 
 
 지금까지 살펴본 모든 바인딩은 일회성, 읽기 전용 바인딩입니다. 이 바인딩은 일반 **x:Bind** 식의 기본 동작입니다. 데이터는 초기화 시점에만 로드되므로 고성능 바인딩을 만들 수 있고, 대규모 데이터 세트의 여러 복잡한 뷰를 완벽하게 지원할 수 있습니다. 
 
@@ -171,7 +171,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     = new ObservableCollection<ImageFileInfo>();
 ```
 
-**Images** 속성 값은 절대로 변경되지 않지만 속성이 **ObservableCollection\<T\>** 형식이기 때문에 컬렉션의 ‘콘텐츠’는 변경될 수 있으며, 바인딩이 자동으로 변경 내용을 확인하고 UI를 업데이트합니다.  
+**Images** 속성 값은 절대로 변경되지 않지만 속성이 **ObservableCollection\<T\>** 형식이기 때문에 컬렉션의 *콘텐츠*는 변경될 수 있으며, 바인딩이 자동으로 변경 내용을 확인하고 UI를 업데이트합니다. 
 
 이 동작을 테스트하기 위해 현재 선택한 이미지를 삭제하는 단추를 임시로 추가하겠습니다. 이미지를 선택하면 세부 정보 페이지로 이동하게 되므로 최종 버전에는 이 단추가 없습니다. 하지만 XAML은 **InitializeComponent** 메서드 호출을 통해 페이지 생성자에서 초기화되지만 **Images** 컬렉션은 나중에 **OnNavigatedTo** 메서드에서 채워지므로, 최종 PhotoLab 샘플에서 **ObservableCollection\<T\>** 의 동작이 여전히 중요합니다. 
 
@@ -236,9 +236,9 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     **Binding** 식은 **x:DataType** 값을 인식하지 않지만, **Binding** 식에는 거의 동일한 방식으로 작동하는 **ElementName** 값이 있습니다. 이 값은 **Binding Value**가 페이지에서 지정된 요소(즉, 해당 **x:Name** 값을 가진 요소)의 **Value** 속성에 바인딩됨을 바인딩 엔진에 알려줍니다. 코드 숨김에 있는 속성에 바인딩하려는 경우 ```{Binding MyCodeBehindProperty, ElementName=page}```와 같이 표시됩니다. 여기서 **page**는 XAML의 **Page** 요소에 설정된 **x:Name** 값을 참조합니다. 
     
     > [!NOTE]
-    > 기본적으로 **Binding** 식은 ‘단방향’이므로, 바인딩된 속성 값이 변경되면 UI가 자동으로 업데이트됩니다.  
+    > 기본적으로 **Binding** 식은 ‘단방향’이므로, 바인딩된 속성 값이 변경되면 UI가 자동으로 업데이트됩니다. 
     > 
-    > 반면에 **x:Bind**의 기본값은 ‘일회성’으로, 바인딩된 속성의 변경 내용이 무시됩니다.  가장 높은 성능 옵션이고, 대부분 정적인 읽기 전용 데이터에 바인딩되기 때문에 이 옵션이 기본값입니다. 
+    > 반면에 **x:Bind**의 기본값은 ‘일회성’으로, 바인딩된 속성의 변경 내용이 무시됩니다. 가장 높은 성능 옵션이고, 대부분 정적인 읽기 전용 데이터에 바인딩되기 때문에 이 옵션이 기본값입니다. 
     >
     > 단, 값이 변경될 수 있는 속성과 함께 **x:Bind**를 사용하는 경우 ```Mode=OneWay``` 또는 ```Mode=TwoWay```를 추가해야 합니다. 관련 예제는 다음 섹션에서 확인할 수 있습니다.
 
@@ -428,7 +428,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
 1. MainPage.xaml에서 이름이 **ImageGridView**인 **GridView**를 찾은 다음, **ItemClick** 값을 추가합니다. 
 
     > [!TIP] 
-    > 복사/붙여넣기 대신 아래의 변경 내용을 입력하면 “\<New Event Handler\>”라는 IntelliSense 팝업이 표시됩니다. Tab 키를 누르면 기본 메서드 처리기 이름으로 값이 채워지고 다음 단계에 표시된 메서드가 자동으로 제거됩니다. 그런 다음, F12 키를 눌러 코드 숨김의 메서드로 이동할 수 있습니다. 
+    > 복사/붙여넣기 대신 아래의 변경 내용을 입력하면 "\<New Event Handler\>"라는 IntelliSense 팝업이 표시됩니다. Tab 키를 누르면 기본 메서드 처리기 이름으로 값이 채워지고 다음 단계에 표시된 메서드가 자동으로 제거됩니다. 그런 다음, F12 키를 눌러 코드 숨김의 메서드로 이동할 수 있습니다. 
 
     **이전:**
     ```xaml

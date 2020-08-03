@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
-ms.openlocfilehash: 5960de52c6cd68e98f80e7618f34dd0a94d08312
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: cd67ea63fc633716cabf9a293a5faeeed6d24b70
+ms.sourcegitcommit: 1e8f51d5730fe748e9fe18827895a333d94d337f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493368"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87296184"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>C++/WinRT의 대리자를 사용한 이벤트 처리
 
@@ -39,10 +39,14 @@ ms.locfileid: "86493368"
 
 ```cppwinrt
 // MainPage.h
-void ClickHandler(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::RoutedEventArgs const& args);
+void ClickHandler(
+    winrt::Windows::Foundation::IInspectable const& sender,
+    winrt::Windows::UI::Xaml::RoutedEventArgs const& args);
 
 // MainPage.cpp
-void MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+void MainPage::ClickHandler(
+    IInspectable const& /* sender */,
+    RoutedEventArgs const& /* args */)
 {
     Button().Content(box_value(L"Clicked"));
 }
@@ -67,7 +71,9 @@ MainPage::MainPage()
 
 ```cppwinrt
 // MainPage.h
-static void ClickHandler(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::RoutedEventArgs const& args);
+static void ClickHandler(
+    winrt::Windows::Foundation::IInspectable const& sender,
+    winrt::Windows::UI::Xaml::RoutedEventArgs const& args);
 
 // MainPage.cpp
 MainPage::MainPage()
@@ -76,7 +82,9 @@ MainPage::MainPage()
 
     Button().Click( MainPage::ClickHandler );
 }
-void MainPage::ClickHandler(IInspectable const& /* sender */, RoutedEventArgs const& /* args */) { ... }
+void MainPage::ClickHandler(
+    IInspectable const& /* sender */,
+    RoutedEventArgs const& /* args */) { ... }
 ```
 
 **RoutedEventHandler**를 생성하는 다른 방법도 있습니다. 아래는 [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) 문서 항목에서 가져온 구문 블록입니다(웹 페이지의 오른쪽 위 모서리에 있는 *언어* 드롭다운에서 **C++/WinRT** 선택). 아래 예제를 보면 다양한 생성자가 있습니다. 하나는 람다 함수를, 다른 하나는 프리 함수를, 그리고 나머지 하나(위에서 사용한 것)는 개체와 멤버 포인터 함수를 사용합니다.
@@ -106,7 +114,9 @@ struct RoutedEventHandler : winrt::Windows::Foundation::IUnknown
 > 위 정보는 **UIElement.KeyDown** 이벤트(현재 항목)에 대리자 형식의 **KeyEventHandler**가 있다는 것을 알려 줍니다. KeyEventHandler가 이 이벤트 유형에 대리자를 등록할 때 전달하는 형식이기 때문입니다. 따라서 이제 항목의 링크에 따라 해당 [KeyEventHandler delegate](/uwp/api/windows.ui.xaml.input.keyeventhandler) 형식으로 이동합니다. 여기서 구문 블록은 함수 호출 연산자를 포함합니다. 위에서 언급한 것처럼 대리자의 매개 변수로 무엇을 사용해야 할지 알려 줍니다.
 > 
 > ```cppwinrt
-> void operator()(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
+> void operator()(
+    winrt::Windows::Foundation::IInspectable const& sender,
+    winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
 > ```
 >
 >  살펴본 대로 대리자는 **IInspectable**을 sender로 사용하고 [KeyRoutedEventArgs 클래스](/uwp/api/windows.ui.xaml.input.keyroutedeventargs) 인스턴스를 args로 사용하도록 선언해야 합니다.
@@ -182,7 +192,10 @@ struct Example : ExampleT<Example>
 {
     Example(winrt::Windows::UI::Xaml::Controls::Button button)
     {
-        m_event_revoker = button.Click(winrt::auto_revoke, [this](IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+        m_event_revoker = button.Click(
+            winrt::auto_revoke,
+            [this](IInspectable const& /* sender */,
+            RoutedEventArgs const& /* args */)
         {
             // ...
         });
@@ -193,7 +206,7 @@ private:
 };
 ```
 
-아래는 [**ButtonBase::Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트의 문서 항목에서 가져온 구문 블록입니다. 블록을 보면 서로 다른 등록 및 취소 함수가 3개 있습니다. 세 번째 오버로드에서 어떤 형식의 이벤트 취소자를 선언해야 할지 정확히 알 수 있습니다.
+아래는 [**ButtonBase::Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트의 문서 항목에서 가져온 구문 블록입니다. 블록을 보면 서로 다른 등록 및 취소 함수가 3개 있습니다. 세 번째 오버로드에서 어떤 형식의 이벤트 취소자를 선언해야 할지 정확히 알 수 있습니다. 그리고 *register* 및 *revoke with event_revoker* 오버로드에 동일한 유형의 대리자를 전달할 수 있습니다.
 
 ```cppwinrt
 // Register
@@ -236,14 +249,20 @@ void ProcessFeedAsync()
     auto async_op_with_progress = syndicationClient.RetrieveFeedAsync(rssFeedUri);
 
     async_op_with_progress.Progress(
-        [](IAsyncOperationWithProgress<SyndicationFeed, RetrievalProgress> const& /* sender */, RetrievalProgress const& args)
+        [](
+            IAsyncOperationWithProgress<SyndicationFeed,
+            RetrievalProgress> const& /* sender */,
+            RetrievalProgress const& args)
         {
             uint32_t bytes_retrieved = args.BytesRetrieved;
             // use bytes_retrieved;
         });
 
     async_op_with_progress.Completed(
-        [](IAsyncOperationWithProgress<SyndicationFeed, RetrievalProgress> const& sender, AsyncStatus const /* asyncStatus */)
+        [](
+            IAsyncOperationWithProgress<SyndicationFeed,
+            RetrievalProgress> const& sender,
+            AsyncStatus const /* asyncStatus */)
         {
             SyndicationFeed syndicationFeed = sender.GetResults();
             // use syndicationFeed;

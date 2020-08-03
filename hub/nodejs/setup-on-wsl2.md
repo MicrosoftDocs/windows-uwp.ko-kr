@@ -7,13 +7,13 @@ manager: jken
 ms.topic: article
 keywords: NodeJS, Node.js, windows 10, microsoft, nodejs 학습, windows의 노드, wsl의 노드, windows 기반 linux의 노드, windows에 노드 설치, vs code를 사용하는 nodejs, windows에서 노드를 사용하여 개발, windows에서 nodejs를 사용하여 개발, WSL에 노드 설치, Linux용 Windows 하위 시스템의 NodeJS
 ms.localizationpriority: medium
-ms.date: 06/09/2020
-ms.openlocfilehash: e8fb06cb1e68d5dfa7f23e6966f917c96eb79859
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.date: 07/28/2020
+ms.openlocfilehash: ce4e736751d5586c6ab4489e976fc397b1be0301
+ms.sourcegitcommit: 6b83f1854a113490dcd4f52425ecade9e66e0b44
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493278"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87333797"
 ---
 # <a name="set-up-your-nodejs-development-environment-with-wsl-2"></a>WSL 2를 사용하여 Node.js 개발 환경 설치
 
@@ -85,7 +85,10 @@ NVM을 사용하여 Node.js 및 NPM을 설치하는 경우 SUDO 명령을 사용
 
 ## <a name="install-your-favorite-code-editor"></a>선호하는 코드 편집기 설치
 
-Node.js 프로젝트에는 **Visual Studio Code**와 **원격 WSL 확장**을 사용하는 것이 좋습니다. 이렇게 하면 VS Code가 “클라이언트-서버” 아키텍처로 분할되어 클라이언트(사용자 인터페이스)는 Windows 머신에서 실행되고 서버(코드, Git, 플러그 인 등)는 원격으로 실행됩니다.
+Node.js 프로젝트에는 Visual Studio Code와 원격 WSL 확장을 사용하는 것이 좋습니다. 이렇게 하면 VS Code가 “클라이언트-서버” 아키텍처로 분할되고, 클라이언트(VS Code 사용자 인터페이스)는 Windows 운영 체제에서 실행되고, 서버(코드, Git, 플러그 인 등)는 WSL Linux 배포판에서 "원격"으로 실행됩니다. 
+
+> [!NOTE]
+> 이 "원격" 시나리오는 여러분에게 익숙한 시나리오와 약간 다릅니다. WSL은 프로젝트 코드가 Windows 운영 체제와 별도로 실행되지만 여전히 로컬 컴퓨터에 있는 실제 Linux 배포판을 지원합니다. 원격 WSL 확장은 클라우드에서 실행되지 않지만 마치 원격 서버인 것처럼 Linux 하위 시스템에 연결합니다. Windows와 함께 실행되도록 설정한 WSL 환경의 로컬 컴퓨터에서 계속 실행됩니다. 
 
 - Linux 기반 Intellisense 및 린트가 지원됩니다.
 - 프로젝트는 Linux에서 자동으로 빌드됩니다.

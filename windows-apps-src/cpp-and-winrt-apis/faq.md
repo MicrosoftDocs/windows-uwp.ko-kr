@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 95f5ad82831b6b07e0bbc2127947f777f0cd50e5
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 23f1733f5710d86c8481899f5865d0c190e21885
+ms.sourcegitcommit: 1e8f51d5730fe748e9fe18827895a333d94d337f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81759929"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87296195"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT에 대해 자주 묻는 질문
 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통해 Windows 런타임 API를 작성하거나 사용하는 방법과 관련된 질문과 대답입니다.
@@ -28,7 +28,7 @@ ms.locfileid: "81759929"
 호환성이 손상되는 변경 내용을 비롯한 전체 변경 내용 세트는 [C++/WinRT 2.0의 뉴스 및 변경 내용](news.md#news-and-changes-in-cwinrt-20)을 참조하세요. 예를 들어 Windows 런타임 컬렉션에서 범위 기반의 `for`를 사용하는 경우 이제 `#include <winrt/Windows.Foundation.Collections.h>`가 필요합니다.
 
 ## <a name="why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134"></a>새 프로젝트가 컴파일되지 않는 이유는 무엇인가요? Visual Studio 2017(버전 15.8.0 이상) 및 SDK 버전 17134를 사용하고 있습니다.
-Visual Studio 2017(버전 15.8.0 이상)을 사용 중이고 Windows SDK 버전 10.0.17134.0(Windows 10 버전, 1803)을 대상으로 하는 경우, 새로 만든 C++/WinRT 프로젝트가 컴파일되지 않고 “오류 C3861: ‘from_abi’: 식별자를 찾을 수 없음” 오류와 *base.h*에서 발생하는 기타 오류가 표시될 수 있습니다.  해결 방법으로, 보다 규칙에 맞는 Windows SDK 최신 버전을 대상으로 지정하거나, 프로젝트 속성 **C/C++**  > **언어** > **적합성 모드: 아니요**를 설정합니다. 또는 **추가 옵션** 아래의 프로젝트 속성 **C/C++**  > **명령줄**에 **/permissive-** 가 표시되는 경우 삭제합니다.
+Visual Studio 2017(버전 15.8.0 이상)을 사용 중이고 Windows SDK 버전 10.0.17134.0(Windows 10 버전, 1803)을 대상으로 하는 경우, 새로 만든 C++/WinRT 프로젝트가 컴파일되지 않고 “오류 C3861: ‘from_abi’: 식별자를 찾을 수 없음” 오류와 *base.h*에서 발생하는 기타 오류가 표시될 수 있습니다. 해결 방법으로, 보다 규칙에 맞는 Windows SDK 최신 버전을 대상으로 지정하거나, 프로젝트 속성 **C/C++**  > **언어** > **적합성 모드: 아니요**를 설정합니다. 또는 **추가 옵션** 아래의 프로젝트 속성 **C/C++**  > **명령줄**에 **/permissive-** 가 표시되는 경우 삭제합니다.
 
 ## <a name="how-do-i-resolve-the-build-error-the-cwinrt-vsix-no-longer-provides-project-build-support--please-add-a-project-reference-to-the-microsoftwindowscppwinrt-nuget-package"></a>빌드 오류 “C++/WinRT VSIX에서 더 이상 프로젝트 빌드 지원을 제공하지 않습니다.  Microsoft.Windows.CppWinRT Nuget 패키지에 프로젝트 참조를 추가하세요.”를 해결하려면 어떻게 하나요?
 **Microsoft.Windows.CppWinRT** NuGet 패키지를 프로젝트에 설치합니다. 자세한 내용은 [이전 버전의 VSIX 확장](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension)을 참조하세요.
@@ -43,10 +43,10 @@ VSIX 확장 버전 1.0.190128.4 이상의 경우 [Visual Studio의 C++/WinRT 지
 ## <a name="whats-a-runtime-class"></a>*런타임 클래스*란 무엇인가요?
 런타임 클래스는 일반적으로 실행 가능한 경계를 넘어서 최신 COM 인터페이스를 통해 활성화 및 사용할 수 있는 형식입니다. 하지만 런타임 클래스를 구현하는 컴파일 단위 내에서 사용할 수도 있습니다. 런타임 클래스는 IDL(Interface Definition Language)로 선언하며, C++/WinRT를 사용하여 표준 C++로 구현할 수 있습니다.
 
-## <a name="what-do-the-projected-type-and-the-implementation-type-mean"></a>‘프로젝션된 형식’과 ‘구현 형식’은 무엇을 의미하나요?  
-Windows 런타임 클래스(런타임 클래스)를 ‘사용’하기만 하는 경우에는 ‘프로젝션된 형식’만 처리하게 됩니다.   C++/WinRT는 ‘언어 프로젝션’이므로, 프로젝션된 형식이란 C++/WinRT를 사용하여 C++로 ‘프로젝션된’ Windows 런타임의 표면 중 일부를 말합니다.   자세한 내용은 [C++/WinRT를 통한 API 사용](consume-apis.md)을 참조하세요.
+## <a name="what-do-the-projected-type-and-the-implementation-type-mean"></a>‘프로젝션된 형식’과 ‘구현 형식’은 무엇을 의미하나요? 
+Windows 런타임 클래스(런타임 클래스)를 ‘사용’하기만 하는 경우에는 ‘프로젝션된 형식’만 처리하게 됩니다.  C++/WinRT는 ‘언어 프로젝션’이므로, 프로젝션된 형식이란 C++/WinRT를 사용하여 C++로 ‘프로젝션된’ Windows 런타임의 표면 중 일부를 말합니다.  자세한 내용은 [C++/WinRT를 통한 API 사용](consume-apis.md)을 참조하세요.
 
-‘구현 형식’에는 런타임 클래스 구현이 포함되므로, 런타임 클래스를 구현하는 프로젝트에서만 사용할 수 있습니다.  런타임 클래스를 구현하는 프로젝트(Windows 런타임 구성 요소 프로젝트 또는 XAML UI를 사용하는 프로젝트)에서 작업 중인 경우 런타임 클래스의 구현 형식과 C++/WinRT에 프로젝션된 런타임 클래스를 나타내는 프로젝션된 형식 간의 차이점을 잘 아는 것이 중요합니다. 자세한 내용은 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
+‘구현 형식’에는 런타임 클래스 구현이 포함되므로, 런타임 클래스를 구현하는 프로젝트에서만 사용할 수 있습니다. 런타임 클래스를 구현하는 프로젝트(Windows 런타임 구성 요소 프로젝트 또는 XAML UI를 사용하는 프로젝트)에서 작업 중인 경우 런타임 클래스의 구현 형식과 C++/WinRT에 프로젝션된 런타임 클래스를 나타내는 프로젝션된 형식 간의 차이점을 잘 아는 것이 중요합니다. 자세한 내용은 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
 ## <a name="do-i-need-to-declare-a-constructor-in-my-runtime-classs-idl"></a>런타임 클래스의 IDL로 생성자를 선언해야 하나요?
 런타임 클래스가 구현하는 컴파일 단위의 외부에서 사용하도록 설계된 경우에 한합니다(여기에서 런타임 클래스는 Windows 런타임 클라이언트 앱에서 일반 용도로 사용하는 Windows 런타임 구성 요소임). 생성자를 IDL로 선언하는 목적과 결과에 대한 자세한 내용은 [런타임 클래스 생성자](author-apis.md#runtime-class-constructors)를 참조하세요.
@@ -197,6 +197,9 @@ a.f();
 #pragma pop_macro("TRY")
 #pragma pop_macro("GetCurrentTime")
 ```
+
+## <a name="how-do-i-speed-up-symbol-loading"></a>기호 로딩 속도를 높이려면 어떻게 할까요??
+Visual Studio의 **도구** > **옵션** > **디버깅** > **기호**에서 *지정한 모듈만 로드*를 선택합니다. 그런 다음, 스택 목록에서 DLL을 마우스 오른쪽 단추로 클릭하고 개별 모듈을 로드할 수 있습니다.
 
 > [!NOTE]
 > 이 항목에서 질문에 대한 답변을 찾지 못한 경우, [Visual Studio C++ 개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/62/index.html)를 방문하거나 [Stack Overflow의 `c++-winrt` 태그](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt)를 사용하여 도움말을 찾을 수 있습니다.

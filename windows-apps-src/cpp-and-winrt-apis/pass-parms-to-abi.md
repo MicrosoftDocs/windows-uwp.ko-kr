@@ -5,12 +5,12 @@ ms.date: 07/10/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, 프로젝션, 전달, 매개 변수, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c5ce6a30e68fe6fc26316bc2f41c6e2556b98ef
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 51cde2332d3d9df9d1f488aa7f8246f9e1e2ed36
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255257"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997980"
 ---
 # <a name="passing-parameters-into-the-abi-boundary"></a>매개 변수를 ABI 경계로 전달
 
@@ -41,7 +41,7 @@ ms.locfileid: "82255257"
 
 ## <a name="iterable-parameters"></a>반복 가능한 매개 변수
 
-**winrt::param::iterable\<T\>** 및 **winrt::param::async_iterable\<T\>** 는 **IIterable\<T\>** 를 사용하는 API로의 매개 변수 전달을 간소화합니다.
+**winrt::param::iterable\<T\>** 및 **winrt::param::async_iterable\<T\>** 을 사용하면 **IIterable\<T\>** 을 사용하는 API로 간단하게 매개 변수를 전달할 수 있습니다.
 
 Windows 런타임 컬렉션은 이미 **IIterable**입니다.
 
@@ -55,9 +55,9 @@ Windows 런타임 컬렉션은 이미 **IIterable**입니다.
 | **std::initializer_list\<U\>** | 예 | 아니요 | **U**를 **T**로 변환할 수 있어야 합니다.|
 | `{ ForwardIt begin, ForwardIt end }` | 예 | 아니요 | `*begin`을 **T**로 변환할 수 있어야 합니다.|
 
-**U**를 **T**로 변환할 수 있는 경우에도 **IIterable\<U\>** 및 **std::vector\<U\>** 는 허용되지 않습니다. **std::vector\<U\>** 의 경우, 이중 반복자 버전을 사용할 수 있습니다(자세한 내용은 아래 참조).
+**U**를 **T**로 변환할 수 있더라도 **IIterable\<U\>** 및 **std::vector\<U\>** 는 허용되지 않습니다. **std::vector\<U\>** 의 경우 이중 반복자 버전을 사용할 수 있습니다(자세한 내용은 아래 참조).
 
-경우에 따라서는 사용자가 가진 개체가 실제로 사용자가 원하는 **IIterable**을 구현할 수 있습니다. 예를 들어 [**FileOpenPicker.PickMultipleFilesAsync**](/uwp/api/windows.storage.pickers.fileopenpicker.pickmultiplefilesasync)에 의해 생성된 **IVectorView\<StorageFile\>** 은 **IIterable<StorageFile>** 을 구현합니다. 또한 **IIterable<IStorageItem>** 도 구현하지만 사용자가 명시적으로 요청해야 합니다.
+경우에 따라서는 사용자가 가진 개체가 실제로 사용자가 원하는 **IIterable**을 구현할 수 있습니다. 예를 들어 [**FileOpenPicker.PickMultipleFilesAsync**](/uwp/api/windows.storage.pickers.fileopenpicker.pickmultiplefilesasync)에 의해 생성된 **IVectorView\<StorageFile\>** 는 **IIterable\<StorageFile\>** 을 구현합니다. 또한 **IIterable\<IStorageItem\>** 도 구현하지만 사용자가 명시적으로 요청해야 합니다.
 
 ```cppwinrt
 IVectorView<StorageFile> pickedFiles{ co_await filePicker.PickMultipleFilesAsync() };
@@ -79,7 +79,7 @@ requestData.SetStorageItems(storageFiles); // This doesn't work.
 requestData.SetStorageItems({ storageFiles.begin(), storageFiles.end() }); // But this works.
 ```
 
-[**IIterator\<T\>.GetMany(T\[\])** ](/uwp/api/windows.foundation.collections.iiterator-1.getmany)의 구현은 반복자가 `RandomAcessIt`인 경우 더 효율적입니다. 그렇지 않으면 해당 범위에 대해 여러 번 전달할 수 있습니다.
+[**IIterator\<T\>.GetMany(T\[\])** ](/uwp/api/windows.foundation.collections.iiterator-1.getmany)의 구현은 반복자가 `RandomAcessIt`인 경우에 더 효율적입니다. 그렇지 않으면 해당 범위에 대해 여러 번 전달할 수 있습니다.
 
 |전달할 수 있는 형식|동기화|Async|참고|
 |-|-|-|-|
@@ -94,7 +94,7 @@ requestData.SetStorageItems({ storageFiles.begin(), storageFiles.end() }); // Bu
 
 ## <a name="vector-view-parameters"></a>벡터 보기 매개 변수
 
-**winrt::param::vector_view\<T\>** 및 **winrt::param::async_vector_view\<T\>** 는 **IVectorView\<T\>** 를 사용하는 API로의 매개 변수 전달을 간소화합니다.
+**winrt::param::vector_view\<T\>** 및 **winrt::param::async_vector_view\<T\>** 를 사용하면 **IVectorView\<T\>** 를 사용하는 API로 간단하게 매개 변수를 전달할 수 있습니다.
 
 [**IVector\<T\>.GetView**](/uwp/api/windows.foundation.collections.ivector-1.getview)를 사용하면 **IVector**에서 **IVectorView**를 가져올 수 있습니다.
 
@@ -111,7 +111,7 @@ requestData.SetStorageItems({ storageFiles.begin(), storageFiles.end() }); // Bu
 
 ## <a name="map-view-parameters"></a>맵 보기 매개 변수
 
-**winrt::param::map_view\<T\>** 및 **winrt::param::async_map_view\<T\>** 는 **IMapView\<T\>** 를 사용하는 API로의 매개 변수 전달을 간소화합니다.
+**winrt::param::map_view\<T\>** 및 **winrt::param::async_map_view\<T\>** 를 사용하면 **IMapView\<T\>** 를 사용하는 API로 간단하게 매개 변수를 전달할 수 있습니다.
 
 **IMap::GetView**를 사용하면 **IMap**에서 **IMapView**를 가져올 수 있습니다.
 
@@ -127,7 +127,7 @@ requestData.SetStorageItems({ storageFiles.begin(), storageFiles.end() }); // Bu
 
 ## <a name="vector-parameters"></a>벡터 매개 변수
 
-**winrt::param::vector\<T\>** 는 **IVector\<T\>** 를 사용하는 API로의 매개 변수 전달을 간소화합니다.
+**winrt::param::vector\<T\>** 를 사용하면 **IVector\<T\>** 를 사용하는 API로 간단하게 매개 변수를 전달할 수 있습니다.
 
 |전달할 수 있는 형식|참고|
 |-|-|
@@ -140,7 +140,7 @@ requestData.SetStorageItems({ storageFiles.begin(), storageFiles.end() }); // Bu
 
 ## <a name="map-parameters"></a>맵 매개 변수
 
-**winrt::param::map\<T\>** 는 **IMap\<T\>** 를 사용하는 API로의 매개 변수 전달을 간소화합니다.
+**winrt::param::map\<T\>** 을 사용하면 **IMap\<T\>** 을 사용하는 API로 간단하게 매개 변수를 전달할 수 있습니다.
 
 |전달할 수 있는 형식|참고|
 |-|-|
@@ -154,7 +154,7 @@ requestData.SetStorageItems({ storageFiles.begin(), storageFiles.end() }); // Bu
 
 ## <a name="array-parameters"></a>배열 매개 변수
 
-**winrt::array_view\<T\>** 는 **winrt::param** 네임스페이스에 없지만 C 스타일 배열(*호환 배열*)에 해당하는 매개 변수에 사용됩니다.
+**winrt::array_view\<T\>** 는 **winrt::param** 네임스페이스에 없지만, C 스타일 배열인 매개 변수에 사용되며, 이 배열을 *준수 배열*이라고도 합니다.
 
 |전달할 수 있는 형식|참고|
 |-|-|

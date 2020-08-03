@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc12d76cf34b5a631435a7535567aab0cafb0f44
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: dcccc862768b276c3c7965e51e8b2c30dca61e59
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970378"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86998010"
 ---
 # <a name="media-player"></a>미디어 플레이어
 
@@ -85,7 +85,7 @@ XAML에서 [MediaPlayerElement](https://docs.microsoft.com/uwp/api/windows.ui.xa
 
 대부분의 시나리오, 특히 큰 화면의 경우에는 이중 행 컨트롤 레이아웃(아래 참조)을 사용하는 것이 좋습니다. 이 레이아웃의 경우 컨트롤을 위한 공간이 더 많으며, 사용자는 타임라인을 더욱 쉽게 조작할 수 있습니다.
 
-![휴대폰에 이중 행으로 표시되는 MTC 컨트롤의 예](images/controls/mtc_double_inprod.png)
+![MTC 컨트롤의 예, 이중 행](images/controls/mtc_double_inprod.png)
 
 **시스템 미디어 전송 컨트롤**
 

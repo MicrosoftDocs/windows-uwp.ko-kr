@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 08/30/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b9c5348063f277d4d76cbea120689328bcc217b1
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 389b4ec2566a392de35ae43505274511b4294f9f
+ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684149"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86997790"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>자습서: 적응형 레이아웃 만들기
 
@@ -332,4 +332,4 @@ Visual Studio 도구 모음에서 대상 디바이스를 **로컬 컴퓨터**로
 
 ## <a name="get-the-final-version-of-the-photolab-sample"></a>PhotoLab 샘플의 최종 버전 다운로드
 
-이 자습서에서는 전체적인 사진 편집 앱을 빌드하지 않으므로 [최종 버전](https://github.com/Microsoft/Windows-appsample-photo-lab)을 확인하여 사용자 지정 애니메이션 및 휴대폰 지원과 같은 다른 기능을 살펴보세요.
+이 자습서에서는 전체적인 사진 편집 앱을 빌드하지 않으므로 [최종 버전](https://github.com/Microsoft/Windows-appsample-photo-lab)을 확인하여 사용자 지정 애니메이션 및 스타일 같은 다른 기능을 살펴보세요.

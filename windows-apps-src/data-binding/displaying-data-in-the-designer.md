@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5f08c2cc39bb4cdf9a49351f70143a0f86df1fb7
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 2c717a74824db43984794b67638dd19b51b5dacd
+ms.sourcegitcommit: 83225cd9f3ef184277fc293d09982ecd511cc088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74254720"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87160878"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
 =============================================================================================
@@ -26,6 +26,10 @@ ms.locfileid: "74254720"
 
 -   [Bookstore1](https://codeload.github.com/MicrosoftDocs/windows-topic-specific-samples/zip/Bookstore1Universal_10) 앱 다운로드
 -   [Bookstore2](https://codeload.github.com/MicrosoftDocs/windows-topic-specific-samples/zip/Bookstore2Universal_10) 앱 다운로드
+
+
+> [!NOTE]
+> 이 문서의 스크린샷은 이전 버전의 Visual Studio에서 가져왔습니다. Visual Studio 2019를 사용하는 경우 개발 환경과 정확하게 일치하지 않을 수 있습니다.
 
 <a name="setting-datacontext-in-markup"></a>태그에서 DataContext 설정
 -----------------------------
@@ -44,7 +48,7 @@ public MainPage()
 
 ![스파스 디자인 UI](images/displaying-data-in-the-designer-01.png)
 
-시도해 볼 첫 번째 해결 방법은 해당 **DataContext** 할당을 주석으로 처리하고 대신 페이지 태그에 **DataContext**를 설정하는 것입니다. 이렇게 하면 라이브 데이터가 런타임뿐 아니라 디자인 타임에도 표시됩니다. 이렇게 하려면 먼저 XAML 페이지를 엽니다. 그런 다음, **문서 개요** 창에서 디자인 가능한 루트 요소(일반적으로 **\[Page\]** 레이블 사용)를 클릭하여 선택합니다. **속성** 창에서 **DataContext** 속성(일반 범주 내에 있음)을 클릭한 다음 **새로 만들기** 클릭합니다. **개체 선택** 대화 상자에서 뷰 모델 유형을 클릭한 다음 **확인**을 클릭합니다.
+시도해 볼 첫 번째 해결 방법은 해당 **DataContext** 할당을 주석으로 처리하고 대신 페이지 태그에 **DataContext**를 설정하는 것입니다. 이렇게 하면 라이브 데이터가 런타임뿐 아니라 디자인 타임에도 표시됩니다. 이렇게 하려면 먼저 XAML 페이지를 엽니다. 그런 다음, **문서 개요** 창에서 디자인 가능한 루트 요소(일반적으로 **\[Page\]** 레이블 사용)를 클릭하여 선택합니다. **속성** 창에서 **DataContext** 속성(일반 범주 내에 있음)을 찾아 수정합니다. **개체 선택** 대화 상자에서 뷰 모델 유형을 선택한 다음, **확인**을 클릭합니다.
 
 ![DataContext 설정을 위한 UI](images/displaying-data-in-the-designer-02.png)
 

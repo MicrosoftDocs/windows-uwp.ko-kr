@@ -4,7 +4,7 @@ title: 명령 모음
 label: App bars/command bars
 template: detail.hbs
 op-migration-status: ready
-ms.date: 05/19/2017
+ms.date: 07/23/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 868b4145-319b-4a97-82bd-c98d966144db
@@ -13,12 +13,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 97507e0d9a954bc102bd4d2bcd825369df4cced7
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: f7b2c260d20c95012297c1f78037626844f6badf
+ms.sourcegitcommit: 83225cd9f3ef184277fc293d09982ecd511cc088
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970048"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87160886"
 ---
 # <a name="command-bar"></a>명령 모음
 
@@ -54,10 +54,6 @@ CommandBar 컨트롤은 유연하고 가벼운 범용 컨트롤로서 [AppBarBut
 확장된 명령 모음입니다.
 
 ![확장된 명령 모음](images/control-examples/command-bar-photos.png)
-
-Windows Phone의 Outlook 일정 명령 모음입니다.
-
-![Outlook 일정 앱의 명령 모음](images/control-examples/command-bar-calendar-phone.png)
 
 ## <a name="anatomy"></a>구조
 
@@ -260,7 +256,7 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 사용자에게 힌트를 더 또는 덜 제공하도록 ClosedDisplayMode를 변경하면 주변 요소의 레이아웃에 영향을 줍니다. 반면, CommandBar가 닫힘과 열림 간에 전환하는 경우 다른 요소의 레이아웃에 영향을 주지 않습니다.
 
 ## <a name="placement"></a>배치
-명령 모음은 앱 창의 맨 위, 앱 창의 맨 아래에 배치하거나 인라인으로 배치할 수 있습니다.
+명령 모음을 ```Grid.row``` 같은 레이아웃 컨트롤에 포함시켜 앱 창의 맨 위, 앱 창의 맨 아래에 배치하거나 인라인으로 배치할 수 있습니다.
 
 ![앱 바 배치의 예 1](images/AppbarGuidelines_Placement1.png)
 

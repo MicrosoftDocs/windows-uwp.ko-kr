@@ -5,12 +5,12 @@ ms.date: 07/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: 26a0ea1ec70f4ae4255030541a6513541db1fb99
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: ff00264d0806e7fbdfcabd000ec68857b1485dcd
+ms.sourcegitcommit: 1e8f51d5730fe748e9fe18827895a333d94d337f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82267505"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87296156"
 ---
 # <a name="more-advanced-concurrency-and-asynchrony-with-cwinrt"></a>C++/WinRT를 통한 고급 동시성 및 비동기
 
@@ -81,11 +81,14 @@ IAsyncAction DoWorkAsync(TextBlock textblock)
     co_await winrt::resume_background();
     // Do compute-bound work here.
 
-    co_await winrt::resume_foreground(textblock.Dispatcher()); // Switch to the foreground thread associated with textblock.
+    // Switch to the foreground thread associated with textblock.
+    co_await winrt::resume_foreground(textblock.Dispatcher());
 
     textblock.Text(L"Done!"); // Guaranteed to work.
 }
 ```
+
+**winrt::resume_foreground** 함수는 선택적 우선 순위 매개 변수를 사용합니다. 해당 매개 변수를 사용하는 경우 위에 표시된 패턴을 사용하는 것이 좋습니다. 그렇지 않은 경우 `co_await winrt::resume_foreground(someDispatcherObject);`를 `co_await someDispatcherObject;`로 단순화하도록 선택할 수 있습니다.
 
 ## <a name="execution-contexts-resuming-and-switching-in-a-coroutine"></a>코루틴의 실행 컨텍스트, 다시 시작 및 전환
 
@@ -145,7 +148,7 @@ IAsyncAction MainPage::ClickHandler(IInspectable /* sender */, RoutedEventArgs /
 }
 ```
 
-이 시나리오에서 **StorageFile::OpenAsync** 호출은 약간 비효율적입니다. 처리기가 호출자에 실행을 반환할 수 있도록 다시 시작 시 필요한 백그라운드 스레드로의 컨텍스트 전환이 있으며, 다시 시작된 후 C++/WinRT가 UI 스레드 컨텍스트를 복원합니다. 그러나 이 경우에는 UI를 업데이트할 때까지 UI 스레드에 있지 않아도 됩니다. **winrt::resume_background** 호출 ‘전에’ 호출하는 Windows 런타임 API가 많을수록, 불필요한 컨텍스트 전환이 많이 발생합니다.  해결 방법은 그전에 Windows 런타임 API를 호출하지 ‘않는’ 것입니다.  모든 호출을 **winrt::resume_background** 뒤로 이동합니다.
+이 시나리오에서 **StorageFile::OpenAsync** 호출은 약간 비효율적입니다. 처리기가 호출자에 실행을 반환할 수 있도록 다시 시작 시 필요한 백그라운드 스레드로의 컨텍스트 전환이 있으며, 다시 시작된 후 C++/WinRT가 UI 스레드 컨텍스트를 복원합니다. 그러나 이 경우에는 UI를 업데이트할 때까지 UI 스레드에 있지 않아도 됩니다. **winrt::resume_background** 호출 ‘전에’ 호출하는 Windows 런타임 API가 많을수록, 불필요한 컨텍스트 전환이 많이 발생합니다. 해결 방법은 그전에 Windows 런타임 API를 호출하지 ‘않는’ 것입니다. 모든 호출을 **winrt::resume_background** 뒤로 이동합니다.
 
 ```cppwinrt
 IAsyncAction MainPage::ClickHandler(IInspectable /* sender */, RoutedEventArgs /* args */)
@@ -595,7 +598,7 @@ int main()
 ```
 
 > [!NOTE]
-> 비동기 작업에 대해 ‘완료 처리기’를 둘 이상 구현하는 것은 올바르지 않습니다.  완료 이벤트에 단일 대리자를 사용하거나 완료 이벤트를 `co_await`할 수 있습니다. 둘 다 사용하면 두 번째는 실패합니다. 다음 두 종류의 완료 처리기 중 하나만 사용해야 하며, 동일한 비동기 개체에 대해 둘 다 사용하면 안 됩니다.
+> 비동기 작업에 대해 ‘완료 처리기’를 둘 이상 구현하는 것은 올바르지 않습니다. 완료 이벤트에 단일 대리자를 사용하거나 완료 이벤트를 `co_await`할 수 있습니다. 둘 다 사용하면 두 번째는 실패합니다. 다음 두 종류의 완료 처리기 중 하나만 사용해야 하며, 동일한 비동기 개체에 대해 둘 다 사용하면 안 됩니다.
 
 ```cppwinrt
 auto async_op_with_progress{ CalcPiTo5DPs() };
@@ -655,7 +658,7 @@ winrt::fire_and_forget MyClass::MyMediaBinder_OnBinding(MediaBinder const&, Medi
 
 ## <a name="awaiting-a-kernel-handle"></a>커널 핸들 대기
 
-C++/WinRT는 커널 이벤트에서 신호를 받을 때까지 일시 중단하는 데 사용할 수 있는 **resume_on_signal** 클래스를 제공합니다. `co_await resume_on_signal(h)`이 반환될 때까지 핸들이 계속 유효하게 유지되는지 확인해야 합니다. 이 첫 번째 예제와 같이 **resume_on_signal**이 시작되기도 전에 핸들이 손실되었을 수 있으므로 **resume_on_signal** 자체는 이 작업을 수행할 수 없습니다.
+C++/WinRT는 커널 이벤트에서 신호를 받을 때까지 일시 중단하는 데 사용할 수 있는 [**winrt::resume_on_signal**](/uwp/cpp-ref-for-winrt/resume-on-signal) 함수를 제공합니다. `co_await resume_on_signal(h)`이 반환될 때까지 핸들이 계속 유효하게 유지되는지 확인해야 합니다. 이 첫 번째 예제와 같이 **resume_on_signal**이 시작되기도 전에 핸들이 손실되었을 수 있으므로 **resume_on_signal** 자체는 이 작업을 수행할 수 없습니다.
 
 ```cppwinrt
 IAsyncAction Async(HANDLE event)
@@ -712,6 +715,21 @@ IAsyncAction SampleCaller()
     event.close(); // Our handle is closed, but Async still has a valid handle.
 
     co_await async; // Will wake up when *event* is signaled.
+}
+```
+
+이 예제와 같이 **resume_on_signal**에 시간 제한 값을 전달할 수 있습니다.
+
+```cppwinrt
+winrt::handle event = ...
+
+if (co_await winrt::resume_on_signal(event.get(), std::literals::2s))
+{
+    puts("signaled");
+}
+else
+{
+    puts("timed out");
 }
 ```
 
