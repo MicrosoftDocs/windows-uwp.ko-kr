@@ -450,6 +450,18 @@
           href: input/respond-to-the-presence-of-the-touch-keyboard.md
         - name: 입력 범위를 사용하여 터치 키보드 변경
           href: input/use-input-scope-to-change-the-touch-keyboard.md
+    - name: 텍스트 입력
+      items:
+        - name: 사용자 지정 텍스트 입력
+          href: input/custom-text-input.md
+        - name: 텍스트 크기 조정
+          href: input/text-scaling.md
+        - name: 텍스트 및 이미지 선택
+          href: input/guidelines-for-textselection.md
+        - name: 입력 방법 편집기
+          href: input/input-method-editors.md
+        - name: 입력 방법 편집기 요구 사항
+          href: input/input-method-editor-requirements.md
     - name: 게임 패드 및 리모컨
       href: input/gamepad-and-remote-interactions.md
     - name: 터치 패드
@@ -497,10 +509,6 @@
       href: input/input-injection.md
     - name: 입력 디바이스 식별
       href: input/identify-input-devices.md
-    - name: 사용자 지정 텍스트 입력
-      href: input/custom-text-input.md
-    - name: 텍스트 크기 조정
-      href: input/text-scaling.md
     - name: 끌어서 놓기
       href: input/drag-and-drop.md
     - name: 광학 줌 및 크기 조정
@@ -509,8 +517,6 @@
       href: input/guidelines-for-panning.md
     - name: 회전
       href: input/guidelines-for-rotation.md
-    - name: 텍스트 및 이미지 선택
-      href: input/guidelines-for-textselection.md
     - name: 대상 지정
       href: input/guidelines-for-targeting.md
     - name: 시각적 피드백

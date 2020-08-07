@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 5d18e78047b26e080041b15d12d94f8ef5d340b2
-ms.sourcegitcommit: 90fe7a9a5bfa7299ad1b78bbef289850dfbf857d
+ms.openlocfilehash: ee5985cc92dfc580c50d02f17c6d9f5777e8928d
+ms.sourcegitcommit: dccba7256765116f06cf96143eb3cbaa12d7fe0b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2020
-ms.locfileid: "84756559"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523559"
 ---
 # <a name="data-binding-in-depth"></a>데이터 바인딩 심층 분석
 
