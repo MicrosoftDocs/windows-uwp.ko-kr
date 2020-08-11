@@ -4,17 +4,17 @@ description: .NET 4.5부터 관리 코드를 사용 하 여 Windows 런타임 �
 ms.assetid: A5672966-74DF-40AB-B01E-01E3FCD0AD7A
 ms.date: 12/04/2018
 ms.topic: article
+keywords: windows 10, uwp
+ms.localizationpriority: medium
 dev_langs:
 - csharp
 - vb
-keywords: windows 10, uwp
-ms.localizationpriority: medium
-ms.openlocfilehash: 3ac5e08b328e8e094906d2e1793ea87fa2e66ae4
-ms.sourcegitcommit: 91ac6db556fa2a49374fffb143f55fed864200ac
+ms.openlocfilehash: a52bca6ecc08016d1cb7633acadd362e2215cd3a
+ms.sourcegitcommit: 9beb6cce7375b726ad90ee84b72754268ae2819a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82173489"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88047780"
 ---
 # <a name="windows-runtime-components-with-c-and-visual-basic"></a>C# 및 Visual Basic이 포함된 Windows 런타임 구성 요소
 
@@ -28,9 +28,9 @@ Visual Basic 또는 c #으로 작성 된 UWP 앱 에서만 사용 하도록 구�
 
 외부적으로 형식의 멤버는 매개 변수 및 반환 값에 대 한 Windows 런타임 형식만 노출할 수 있습니다. 다음 목록에서는 Windows 런타임 구성 요소에서 노출 되는 .NET 형식에 대 한 제한 사항을 설명 합니다.
 
-- 구성 요소에 있는 모든 공용 형식 및 멤버의 필드, 매개 변수 및 반환 값은 Windows 런타임 형식이어야 합니다. 이 제한에는 사용자가 작성 하는 Windows 런타임 형식과 Windows 런타임 자체에서 제공 하는 형식이 포함 됩니다. 또한 많은 .NET 형식을 포함 합니다. 이러한 형식을 포함 하는 것은 관리 코드&mdash;에서 Windows 런타임를 자연스럽 게 사용할 수 있도록 하기 위해 .net에서 제공 하는 지원의 일부입니다. 코드는 기본 Windows 런타임 형식 대신 익숙한 .net 형식을 사용 하기 위해 표시 됩니다. 예를 들어, **Int32** 및 **Double**과 같은 .net 기본 형식, **DateTimeOffset** 및 **Uri**와 같은 특정 기본 형식, 그리고 일반적으로 사용 되는 일부 제네릭 인터페이스 형식 (예: **&lt;ienumerable t&gt; ** (Of T) Visual Basic) 및 **IDictionary&lt;TKey, TValue&gt;** 등을 사용할 수 있습니다. 이러한 제네릭 형식의 형식 인수는 Windows 런타임 형식 이어야 합니다. 이 내용은이 항목의 뒷부분에 있는 [관리 코드에 Windows 런타임 형식 전달](#passing-windows-runtime-types-to-managed-code) 및 [Windows 런타임에 관리 되는 형식 전달](#passing-managed-types-to-the-windows-runtime)단원에서 설명 합니다.
+- 구성 요소에 있는 모든 공용 형식 및 멤버의 필드, 매개 변수 및 반환 값은 Windows 런타임 형식이어야 합니다. 이 제한에는 사용자가 작성 하는 Windows 런타임 형식과 Windows 런타임 자체에서 제공 하는 형식이 포함 됩니다. 또한 많은 .NET 형식을 포함 합니다. 이러한 형식을 포함 하는 것은 관리 코드에서 Windows 런타임를 자연스럽 게 사용할 수 있도록 하기 위해 .NET에서 제공 하는 지원의 일부입니다 &mdash; . 코드는 기본 Windows 런타임 형식 대신 익숙한 .net 형식을 사용 하기 위해 표시 됩니다. 예를 들어, **Int32** 및 **Double**과 같은 .Net 기본 형식, **DateTimeOffset** 및 **Uri**와 같은 특정 기본 형식, 그리고 일반적으로 사용 되는 일부 제네릭 인터페이스 형식 (예: **Ienumerable &lt; t &gt; ** (Of T) Visual Basic) 및 **IDictionary &lt; TKey, TValue &gt; **등을 사용할 수 있습니다. 이러한 제네릭 형식의 형식 인수는 Windows 런타임 형식 이어야 합니다. 이 내용은이 항목의 뒷부분에 있는 [관리 코드에 Windows 런타임 형식 전달](#passing-windows-runtime-types-to-managed-code) 및 [Windows 런타임에 관리 되는 형식 전달](#passing-managed-types-to-the-windows-runtime)단원에서 설명 합니다.
 
-- 공용 클래스와 인터페이스에는 메서드, 속성 및 이벤트가 포함될 수 있습니다. 이벤트에 대 한 대리자를 선언 하거나 **EventHandler&lt;T&gt; ** 대리자를 사용할 수 있습니다. 공용 클래스 또는 인터페이스에는 다음을 사용할 수 없습니다.
+- 공용 클래스와 인터페이스에는 메서드, 속성 및 이벤트가 포함될 수 있습니다. 이벤트에 대 한 대리자를 선언 하거나 **EventHandler &lt; T &gt; ** 대리자를 사용할 수 있습니다. 공용 클래스 또는 인터페이스에는 다음을 사용할 수 없습니다.
     - 제네릭이 아니어야 합니다.
     - Windows 런타임 인터페이스가 아닌 인터페이스를 구현 합니다. 그러나 고유한 Windows 런타임 인터페이스를 만들고 구현할 수 있습니다.
     - Windows 런타임에 없는 형식 (예: **system.object** 및 **system.object**)에서 파생 됩니다.
@@ -82,26 +82,26 @@ C # 또는 Visual Basic에서 이러한 형식에 대 한 언어 키워드를 �
 
 | Windows 런타임                                  | .NET                                    |
 |-|-|
-| IIterable&lt;T&gt;                               | IEnumerable&lt;T&gt;                              |
-| IVector&lt;T&gt;                                 | IList&lt;T&gt;                                    |
-| IVectorView&lt;T&gt;                             | IReadOnlyList&lt;T&gt;                            |
-| IMap&lt;K, V&gt;                                 | IDictionary&lt;TKey, TValue&gt;                   |
-| IMapView&lt;K, V&gt;                             | Ireadonlydictionary<string&lt;TKey, TValue&gt;           |
-| Inputiterator<ikeyvaluepair<k&lt;K, V&gt;                        | KeyValuePair&lt;TKey, TValue&gt;                  |
+| IIterable&lt;T&gt;                               | IEnumerable &lt; T&gt;                              |
+| IVector&lt;T&gt;                                 | IList &lt; T&gt;                                    |
+| IVectorView&lt;T&gt;                             | IReadOnlyList &lt; T&gt;                            |
+| IMap &lt; K, V&gt;                                 | IDictionary &lt; TKey, TValue&gt;                   |
+| IMapView&lt;K, V&gt;                             | Ireadonlydictionary<string &lt; TKey, TValue&gt;           |
+| Inputiterator<ikeyvaluepair<k &lt; K, V&gt;                        | KeyValuePair &lt; TKey, TValue&gt;                  |
 | IBindableIterable                                | IEnumerable                                       |
 | IBindableVector                                  | IList                                             |
 | Windows.UI.Xaml.Data.INotifyPropertyChanged      | System.ComponentModel.INotifyPropertyChanged      |
 | Windows.UI.Xaml.Data.PropertyChangedEventHandler | System.ComponentModel.PropertyChangedEventHandler |
 | Windows.UI.Xaml.Data.PropertyChangedEventArgs    | System.ComponentModel.PropertyChangedEventArgs    |
 
-하나의 형식이 두 개 이상의 인터페이스를 구현하는 경우 구현된 인터페이스 중 하나만 매개 변수 형식 또는 멤버의 반환 형식으로 사용할 수 있습니다. 예를 들어 Visual Basic의 **사전&lt;int, 문자열&gt; ** (**사전 (정수, 문자열)** )을 **IDictionary&lt;int, string&gt;**, **ireadonlydictionary<string&lt;int, string&gt;** 또는 **IEnumerable&lt;KeyValuePair&lt;TKey, TValue&gt;** 로 전달 하거나 반환할 수 있습니다.
+하나의 형식이 두 개 이상의 인터페이스를 구현하는 경우 구현된 인터페이스 중 하나만 매개 변수 형식 또는 멤버의 반환 형식으로 사용할 수 있습니다. 예를 들어 Visual Basic의 **사전 &lt; int, &gt; 문자열** (**사전 (정수, 문자열)** )을 **IDictionary &lt; int, string &gt; **, **ireadonlydictionary<string &lt; int, string &gt; **또는 **IEnumerable &lt; KeyValuePair &lt; TKey, TValue &gt; &gt; **로 전달 하거나 반환할 수 있습니다.
 
 > [!IMPORTANT]
-> JavaScript는 관리되는 형식이 구현하는 인터페이스 목록에 첫 번째로 표시되는 인터페이스를 사용합니다. 예를 들어, **&lt;문자열&gt; ** 을 JavaScript 코드로 반환 하는 경우 문자열을 반환 형식으로 지정 하는 인터페이스에 관계 없이 **&lt;IDictionary int&gt; ** 로 표시 됩니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
+> JavaScript는 관리되는 형식이 구현하는 인터페이스 목록에 첫 번째로 표시되는 인터페이스를 사용합니다. 예를 들어, 문자열을 JavaScript 코드로 반환 하는 경우 ** &lt; 문자열 &gt; ** 을 반환 형식으로 지정 하는 인터페이스에 관계 없이 ** &lt; &gt; IDictionary int** 로 표시 됩니다. 즉, 첫 번째 인터페이스가 나머지 인터페이스에 나타나는 멤버를 포함하고 있지 않은 경우 해당 멤버는 JavaScript에 표시되지 않습니다.
 
-Windows 런타임에서 **IMap&lt;K, v&gt; ** 및 **IMapView&lt;K, v&gt; ** 는 inputiterator<ikeyvaluepair<k를 사용 하 여 반복 됩니다. 관리 코드에 전달 하는 경우 해당 코드는 **IDictionary&lt;tkey, TValue&gt; ** 및 **ireadonlydictionary<string&lt;tkey, TValue&gt;** 으로 표시 되므로 자연스럽 게 **KeyValuePair&lt;tkey, TValue&gt; ** 를 사용 하 여이를 열거 합니다.
+Windows 런타임에서 **IMap &lt; K, &gt; v** 및 **IMapView &lt; K, v &gt; ** 는 inputiterator<ikeyvaluepair<k를 사용 하 여 반복 됩니다. 관리 코드에 전달 하는 경우 해당 코드는 **IDictionary &lt; Tkey, &gt; TValue** 및 **ireadonlydictionary<string &lt; tkey, TValue &gt; **으로 표시 되므로 자연스럽 게 **KeyValuePair &lt; tkey, TValue &gt; ** 를 사용 하 여이를 열거 합니다.
 
-인터페이스가 관리 코드에 표시되는 방식은 이러한 인터페이스를 구현하는 형식이 표시되는 방식에 영향을 미칩니다. 예를 들어, **PropertySet** 클래스는 관리 코드에 **IDictionary&lt;TKey, TValue&gt;** 로 표시 되는 **IMap&lt;K, V&gt;** 를 구현 합니다. **PropertySet** 는 다른 **IDictionary&lt;TKey,&gt; TValue** **&lt;&gt;를 구현**하는 것 처럼 표시 됩니다. 따라서 관리 코드에서 **add** 메서드를 포함 하는 것 처럼 표시 됩니다 .이 메서드는 .net 사전에서 **add** 메서드 처럼 동작 합니다. **Insert** 메서드가 없는 것 같습니다. [C # 또는 Visual Basic Windows 런타임 구성 요소를 만들고 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)하는 연습 항목에서이 예제를 확인할 수 있습니다.
+인터페이스가 관리 코드에 표시되는 방식은 이러한 인터페이스를 구현하는 형식이 표시되는 방식에 영향을 미칩니다. 예를 들어, **PropertySet** 클래스는 관리 코드에 **IDictionary &lt; TKey, &gt; TValue**로 표시 되는 **IMap &lt; K, V &gt; **를 구현 합니다. **PropertySet** 는 다른 **IDictionary &lt; TKey &gt; , TValue** ** &lt; &gt; 를 구현**하는 것 처럼 표시 됩니다. 따라서 관리 코드에서 **add** 메서드를 포함 하는 것 처럼 표시 됩니다 .이 메서드는 .net 사전에서 **add** 메서드 처럼 동작 합니다. **Insert** 메서드가 없는 것 같습니다. [C # 또는 Visual Basic Windows 런타임 구성 요소를 만들고 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)하는 연습 항목에서이 예제를 확인할 수 있습니다.
 
 ## <a name="passing-managed-types-to-the-windows-runtime"></a>Windows 런타임에 관리 형식 전달
 
@@ -177,13 +177,13 @@ Windows 8.1부터 Windows 런타임에는 **IStringable** **에서 제공**하�
 
 ## <a name="asynchronous-operations"></a>비동기 작업
 
-구성 요소에서 비동기 메서드를 구현 하려면 메서드 이름의 끝에 "Async"를 추가 하 고 비동기 작업 또는 작업을 나타내는 **iasyncaction**, **&lt;iasyncactionwithprogress&gt;**, **iasyncoperation<tresult>&lt;TResult&gt;** 또는 **IAsyncOperationWithProgress&lt;TResult, tprogress&gt;** Windows 런타임 중 하나를 반환 합니다.
+구성 요소에서 비동기 메서드를 구현 하려면 메서드 이름의 끝에 "Async"를 추가 하 고 비동기 작업 또는 작업을 나타내는 **iasyncaction**, **iasyncactionwithprogress &lt; &gt; **, **iasyncoperation<tresult> &lt; &gt; TResult**또는 **IAsyncOperationWithProgress &lt; TResult, tprogress &gt; **Windows 런타임 중 하나를 반환 합니다.
 
-.Net 작업 ( [**task**](/dotnet/api/system.threading.tasks.task) 클래스 및 제네릭 [**작업&lt;TResult&gt; **](/dotnet/api/system.threading.tasks.task-1) 클래스)을 사용 하 여 비동기 메서드를 구현할 수 있습니다. C# 또는 Visual Basic 작성 된 비동기 메서드에서 반환된 작업이나 [**Task.Run**](/dotnet/api/system.threading.tasks.task.run) 작업(Task)에서 반환된 작업 등 진행 중인 작업을 나타내는 작업을 반환해야 합니다. 생성자를 사용하여 작업을 만드는 경우 반환하기 전에 해당 [Task.Start](/dotnet/api/system.threading.tasks.task.start) 메서드를 호출해야 합니다.
+.NET 작업 ( [**task**](/dotnet/api/system.threading.tasks.task) 클래스 및 제네릭 [**작업 &lt; TResult &gt; **](/dotnet/api/system.threading.tasks.task-1) 클래스)을 사용 하 여 비동기 메서드를 구현할 수 있습니다. C# 또는 Visual Basic 작성 된 비동기 메서드에서 반환된 작업이나 [**Task.Run**](/dotnet/api/system.threading.tasks.task.run) 작업(Task)에서 반환된 작업 등 진행 중인 작업을 나타내는 작업을 반환해야 합니다. 생성자를 사용하여 작업을 만드는 경우 반환하기 전에 해당 [Task.Start](/dotnet/api/system.threading.tasks.task.start) 메서드를 호출해야 합니다.
 
-( `await` `Await` Visual Basic)를 사용 하는 메서드에는 `async` 키워드 (`Async` Visual Basic)가 필요 합니다. Windows 런타임 구성 요소에서 이러한 메서드를 노출 하는 경우 **실행** 메서드에 `async` 전달 하는 대리자에 키워드를 적용 합니다.
+(Visual Basic)를 사용 하는 메서드에는 `await` `Await` `async` 키워드 ( `Async` Visual Basic)가 필요 합니다. Windows 런타임 구성 요소에서 이러한 메서드를 노출 하는 경우 `async` **실행** 메서드에 전달 하는 대리자에 키워드를 적용 합니다.
 
-취소 또는 진행 상황 보고를 지원하지 않는 비동기 작업의 경우 [WindowsRuntimeSystemExtensions.AsAsyncAction](https://docs.microsoft.com/dotnet/api/system) 또는 [AsAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/dotnet/api/system) 확장 메서드를 사용하여 작업을 적절한 인터페이스에 래핑할 수 있습니다. 예를 들어 다음 코드는 task를 사용 하 여 비동기 메서드를 구현 합니다 **&lt;.&gt; TResult** 메서드를 실행 하 여 작업을 시작 합니다. **AsAsyncOperation&lt;TResult&gt; ** 확장 메서드는 작업을 Windows 런타임 비동기 작업으로 반환 합니다.
+취소 또는 진행 상황 보고를 지원하지 않는 비동기 작업의 경우 [WindowsRuntimeSystemExtensions.AsAsyncAction](https://docs.microsoft.com/dotnet/api/system) 또는 [AsAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/dotnet/api/system) 확장 메서드를 사용하여 작업을 적절한 인터페이스에 래핑할 수 있습니다. 예를 들어 다음 코드는 Task를 사용 하 여 비동기 메서드를 구현 합니다 **. &lt; TResult &gt; ** 메서드를 실행 하 여 작업을 시작 합니다. **AsAsyncOperation &lt; TResult &gt; ** 확장 메서드는 작업을 Windows 런타임 비동기 작업으로 반환 합니다.
 
 ```csharp
 public static IAsyncOperation<IList<string>> DownloadAsStringsAsync(string id)
@@ -222,7 +222,7 @@ function asyncExample(id) {
 
 취소 또는 진행률 보고를 지 원하는 비동기 작업 및 작업의 경우 [**system.runtime.interopservices.windowsruntime.asyncinfo**](/dotnet/api/system.runtime.interopservices.windowsruntime) 클래스를 사용 하 여 시작 된 작업을 생성 하 고, 작업의 취소 및 진행률 보고 기능을 해당 Windows 런타임 인터페이스의 취소 및 진행률 보고 기능에 연결 합니다. 취소 및 진행률 보고를 모두 지 원하는 예제는 [c # 또는 Visual Basic Windows 런타임 구성 요소를 만들고 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)하는 연습을 참조 하세요.
 
-비동기 메서드가 취소 또는 진행률 보고를 지원 하지 않는 경우에도 **system.runtime.interopservices.windowsruntime.asyncinfo** 클래스의 메서드를 사용할 수 있습니다. Visual Basic 람다 함수 또는 c # 무명 메서드를 사용 하는 경우 token 및 [**iprogress&lt;t&gt; **](https://docs.microsoft.com/dotnet/api/system.iprogress-1) 인터페이스에 대 한 매개 변수를 제공 하지 마세요. C# 람다 함수를 사용하는 경우 토큰 매개 변수를 제공하되 무시합니다. AsAsyncOperation&lt;tresult&gt; 메서드를 사용 하는 이전 예제는 [**system.runtime.interopservices.windowsruntime.asyncinfo&lt;tresult&gt;(Func&lt;CancellationToken, Task&lt;TResult&gt;**](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime)) 메서드 오버 로드를 대신 사용 하는 경우 다음과 같이 표시 됩니다.
+비동기 메서드가 취소 또는 진행률 보고를 지원 하지 않는 경우에도 **system.runtime.interopservices.windowsruntime.asyncinfo** 클래스의 메서드를 사용할 수 있습니다. Visual Basic 람다 함수 또는 c # 무명 메서드를 사용 하는 경우 token 및 [**Iprogress &lt; t &gt; **](https://docs.microsoft.com/dotnet/api/system.iprogress-1) 인터페이스에 대 한 매개 변수를 제공 하지 마세요. C# 람다 함수를 사용하는 경우 토큰 매개 변수를 제공하되 무시합니다. AsAsyncOperation tresult 메서드를 사용 하는 이전 예제는 &lt; &gt; [**system.runtime.interopservices.windowsruntime.asyncinfo &lt; tresult &gt; (Func &lt; CancellationToken, Task &lt; &gt; &gt; TResult**](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime)) 메서드 오버 로드를 대신 사용 하는 경우 다음과 같이 표시 됩니다.
 
 ```csharp
 public static IAsyncOperation<IList<string>> DownloadAsStringsAsync(string id)
@@ -247,7 +247,7 @@ Public Shared Function DownloadAsStringsAsync(ByVal id As String) _
 End Function
 ```
 
-취소 또는 진행률 보고를 선택적으로 지 원하는 비동기 메서드를 만드는 경우 취소 토큰 또는 **iprogress&lt;t&gt; ** 인터페이스에 대 한 매개 변수를 포함 하지 않는 오버 로드를 추가 하는 것이 좋습니다.
+취소 또는 진행률 보고를 선택적으로 지 원하는 비동기 메서드를 만드는 경우 취소 토큰 또는 **Iprogress &lt; t &gt; ** 인터페이스에 대 한 매개 변수를 포함 하지 않는 오버 로드를 추가 하는 것이 좋습니다.
 
 ## <a name="throwing-exceptions"></a>예외 발생
 
@@ -269,7 +269,7 @@ Windows 앱용 .NET에 포함된 모든 예외 형식을 발생시킬 수 있습
 
 ## <a name="declaring-and-raising-events"></a>이벤트 선언 및 발생
 
-이벤트에 대한 데이터를 저장하는 형식을 선언하면 EventArgs 대신 Object에서 파생되는데 그 이유는 EventArgs가 Windows 런타임 형식이 아니기 때문입니다. 이벤트 형식으로 [**&lt;EventHandler&gt; teventargs**](https://docs.microsoft.com/dotnet/api/system.eventhandler-1) 를 사용 하 고 이벤트 인수 형식을 제네릭 형식 인수로 사용 합니다. .NET 응용 프로그램에서와 마찬가지로 이벤트를 발생 시킵니다.
+이벤트에 대한 데이터를 저장하는 형식을 선언하면 EventArgs 대신 Object에서 파생되는데 그 이유는 EventArgs가 Windows 런타임 형식이 아니기 때문입니다. 이벤트 형식으로 [**EventHandler &lt; teventargs &gt; **](https://docs.microsoft.com/dotnet/api/system.eventhandler-1) 를 사용 하 고 이벤트 인수 형식을 제네릭 형식 인수로 사용 합니다. .NET 응용 프로그램에서와 마찬가지로 이벤트를 발생 시킵니다.
 
 Windows 런타임 구성 요소가 JavaScript 또는 C++에서 사용되는 경우 이벤트는 해당 언어에 필요한 Windows 런타임 이벤트 패턴을 따릅니다. C # 또는 Visual Basic에서 구성 요소를 사용 하는 경우 이벤트는 일반적인 .NET 이벤트로 표시 됩니다. 예제는 [c # 또는 Visual Basic Windows 런타임 구성 요소를 만들고 JavaScript에서 호출](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)하는 연습에서 제공 됩니다.
 
