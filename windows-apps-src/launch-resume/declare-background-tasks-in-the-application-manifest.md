@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 32472f698381f4b109f280f0b964f00cdbcec66a
-ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
+ms.openlocfilehash: e1580bdc62585cb777334c217419b4de6a691add
+ms.sourcegitcommit: 894decaf374f22bf39d4aecc1ab50d34ac011e31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82606202"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162568"
 ---
 # <a name="declare-background-tasks-in-the-application-manifest"></a>애플리케이션 매니페스트에서 백그라운드 작업 선언
 
@@ -21,7 +21,7 @@ ms.locfileid: "82606202"
 **중요 API**
 
 -   [**BackgroundTasks 스키마**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
--   [**Windows ApplicationModel. 배경**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
+-   [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
 
 응용 프로그램 매니페스트에서 확장으로 선언 하 여 백그라운드 작업을 사용 하도록 설정 합니다.
 
@@ -107,7 +107,7 @@ Out-of-process 백그라운드 작업은 응용 프로그램 매니페스트에�
 
 앱에서 등록 된 각 추가 백그라운드 작업 클래스에 대해 2 단계를 반복 합니다.
 
-다음 예제는 [백그라운드 작업 샘플]( https://code.msdn.microsoft.com/windowsapps/Background-Task-Sample-9209ade9)의 전체 응용 프로그램 요소입니다. 이는 총 3 개의 트리거 형식으로 2 개의 백그라운드 작업 클래스를 사용 하는 방법을 보여 줍니다. 이 예제의 확장 섹션을 복사 하 고 필요에 따라 수정 하 여 응용 프로그램 매니페스트에서 백그라운드 작업을 선언 합니다.
+다음 예제는 [백그라운드 작업 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask)의 전체 응용 프로그램 요소입니다. 이는 총 3 개의 트리거 형식으로 2 개의 백그라운드 작업 클래스를 사용 하는 방법을 보여 줍니다. 이 예제의 확장 섹션을 복사 하 고 필요에 따라 수정 하 여 응용 프로그램 매니페스트에서 백그라운드 작업을 선언 합니다.
 
 ```xml
 <Applications>
@@ -152,7 +152,7 @@ Out-of-process 백그라운드 작업은 응용 프로그램 매니페스트에�
 
 백그라운드 작업이 실행 되는 위치를 지정할 수 있습니다.
 
-* 기본적으로 BackgroundTaskHost 프로세스에서 실행 됩니다.
+* 기본적으로 BackgroundTaskHost.exe 프로세스에서 실행 됩니다.
 * 포그라운드 응용 프로그램과 동일한 프로세스에서.
 * `ResourceGroup`를 사용 하 여 여러 백그라운드 작업을 동일한 호스팅 프로세스에 추가 하거나 다른 프로세스로 구분 합니다.
 * `SupportsMultipleInstances`를 사용 하 여 새 트리거가 발생할 때마다 자체 리소스 제한 (메모리, cpu)을 가져오는 새 프로세스에서 백그라운드 프로세스를 실행 합니다.
@@ -175,7 +175,7 @@ Out-of-process 백그라운드 작업은 응용 프로그램 매니페스트에�
 
 ### <a name="specify-where-your-background-task-runs-with-the-resourcegroup-attribute"></a>ResourceGroup 특성으로 백그라운드 태스크가 실행 되는 위치를 지정 합니다.
 
-다음은 BackgroundTaskHost 프로세스에서 실행 되지만 동일한 앱의 다른 백그라운드 작업 인스턴스와는 다른 작업을 실행 하는 백그라운드 작업을 선언 하는 XML 예제입니다. 특성은 `ResourceGroup` 함께 실행할 백그라운드 작업을 식별 합니다.
+다음은 BackgroundTaskHost.exe 프로세스에서 실행 되지만 동일한 앱의 다른 백그라운드 작업 인스턴스와는 다른 작업을 실행 하는 백그라운드 작업을 선언 하는 XML 예제입니다. 특성은 `ResourceGroup` 함께 실행할 백그라운드 작업을 식별 합니다.
 
 ```xml
 <Extensions>

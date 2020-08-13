@@ -10,16 +10,16 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: d2b6ba88587f4f536d4fe6fc2750a520166fde18
-ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
+ms.openlocfilehash: f660c17cd981ca830f0751819d01bf2141408ecc
+ms.sourcegitcommit: 894decaf374f22bf39d4aecc1ab50d34ac011e31
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82606352"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162558"
 ---
 # <a name="handle-a-cancelled-background-task"></a>취소된 백그라운드 작업 처리
 
-**중요 한 Api**
+**중요 API**
 
 -   [**BackgroundTaskCanceledEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskcanceledeventhandler)
 -   [**IBackgroundTaskInstance**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)
@@ -67,7 +67,7 @@ void ExampleBackgroundTask::OnCanceled(
 }
 ```
 
-** \_Cancelrequested** 이라는 플래그 변수를 백그라운드 작업 클래스에 추가 합니다. 이 변수는 취소 요청이 수행 된 시간을 나타내는 데 사용 됩니다.
+** \_ Cancelrequested** 이라는 플래그 변수를 백그라운드 작업 클래스에 추가 합니다. 이 변수는 취소 요청이 수행 된 시간을 나타내는 데 사용 됩니다.
 
 ```csharp
 volatile bool _CancelRequested = false;
@@ -83,9 +83,9 @@ private:
     volatile bool CancelRequested;
 ```
 
-1 단계에서 만든 **oncanceled** 메서드에서, 플래그 변수 ** \_cancelrequested** 을 **true**로 설정 합니다.
+1 단계에서 만든 **Oncanceled** 메서드에서, 플래그 변수 ** \_ cancelrequested** 을 **true**로 설정 합니다.
 
-전체 [백그라운드 작업 샘플]( https://code.msdn.microsoft.com/windowsapps/Background-Task-Sample-9209ade9) **oncanceled** 메서드는 ** \_cancelrequested** 을 **true** 로 설정 하 고 잠재적으로 유용한 디버그 출력을 기록 합니다.
+전체 [백그라운드 작업 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask) **oncanceled** 메서드는 ** \_ cancelrequested** 을 **true** 로 설정 하 고 잠재적으로 유용한 디버그 출력을 기록 합니다.
 
 ```csharp
 private void OnCanceled(IBackgroundTaskInstance sender, BackgroundTaskCancellationReason reason)
@@ -131,9 +131,9 @@ taskInstance->Canceled += ref new BackgroundTaskCanceledEventHandler(this, &Exam
 
 ## <a name="handle-cancellation-by-exiting-your-background-task"></a>백그라운드 작업을 종료 하 여 취소를 처리 합니다.
 
-취소 요청을 받으면 백그라운드 작업을 수행 하는 메서드가 작업을 중지 하 고 ** \_cancelrequested** 가 **true**로 설정 된 경우를 인식 하 여 종료 해야 합니다. In-process 백그라운드 작업의 경우이는 **OnBackgroundActivated** 메서드에서 반환 하는 것을 의미 합니다. Out-of-process 백그라운드 작업의 경우이는 **Run** 메서드에서 반환 하는 것을 의미 합니다.
+취소 요청을 받으면 백그라운드 작업을 수행 하는 메서드가 작업을 중지 하 고 ** \_ cancelrequested** 가 **true**로 설정 된 경우를 인식 하 여 종료 해야 합니다. In-process 백그라운드 작업의 경우이는 **OnBackgroundActivated** 메서드에서 반환 하는 것을 의미 합니다. Out-of-process 백그라운드 작업의 경우이는 **Run** 메서드에서 반환 하는 것을 의미 합니다.
 
-백그라운드 작업 클래스의 코드를 수정 하 여 작업할 때 플래그 변수를 확인 합니다. ** \_Cancelrequested** 됨이 true로 설정 된 경우 계속 해 서 작업을 중지 합니다.
+백그라운드 작업 클래스의 코드를 수정 하 여 작업할 때 플래그 변수를 확인 합니다. ** \_ Cancelrequested** 됨이 true로 설정 된 경우 계속 해 서 작업을 중지 합니다.
 
 백그라운드 작업 [샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BackgroundTask) 에는 백그라운드 작업이 취소 되는 경우 정기 타이머 콜백을 중지 하는 검사가 포함 되어 있습니다.
 
@@ -411,7 +411,7 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 - [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
 - [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
 - [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)
-- [백그라운드 작업의 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
+- [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
 - [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
 - [백그라운드 작업 디버그](debug-a-background-task.md)
 - [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
