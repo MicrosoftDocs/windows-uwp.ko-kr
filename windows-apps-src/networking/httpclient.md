@@ -6,12 +6,12 @@ ms.date: 06/05/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 57927ff77f060a1ea1bd7720d8831f31c5355264
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: a222037600ad90d63421ed2037e6706686688f71
+ms.sourcegitcommit: 9c2b21081158e712a856158d25dce76b3e213a9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74259203"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88129760"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -269,6 +269,58 @@ private async Task TryPostJsonAsync()
     {
         // Write out any exceptions.
         Debug.WriteLine(ex);
+    }
+}
+```
+
+```cppwinrt
+// pch.h
+#pragma once
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Security.Cryptography.h>
+#include <winrt/Windows.Storage.Streams.h>
+#include <winrt/Windows.Web.Http.Headers.h>
+
+// main.cpp : Defines the entry point for the console application.
+#include "pch.h"
+#include <iostream>
+#include <sstream>
+using namespace winrt;
+using namespace Windows::Foundation;
+using namespace Windows::Storage::Streams;
+
+int main()
+{
+    init_apartment();
+
+    Windows::Web::Http::HttpResponseMessage httpResponseMessage;
+    std::wstring httpResponseBody;
+
+    try
+    {
+        // Construct the HttpClient and Uri. This endpoint is for test purposes only.
+        Windows::Web::Http::HttpClient httpClient;
+        Uri requestUri{ L"https://www.contoso.com/post" };
+
+        // Construct the JSON to post.
+        Windows::Web::Http::HttpStringContent jsonContent(
+            L"{ \"firstName\": \"Eliot\" }",
+            UnicodeEncoding::Utf8,
+            L"application/json");
+
+        // Post the JSON, and wait for a response.
+        httpResponseMessage = httpClient.PostAsync(
+            requestUri,
+            jsonContent).get();
+
+        // Make sure the post succeeded, and write out the response.
+        httpResponseMessage.EnsureSuccessStatusCode();
+        httpResponseBody = httpResponseMessage.Content().ReadAsStringAsync().get();
+        std::wcout << httpResponseBody.c_str();
+    }
+    catch (winrt::hresult_error const& ex)
+    {
+        std::wcout << ex.message().c_str();
     }
 }
 ```
