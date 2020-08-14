@@ -60,7 +60,7 @@
           href: ../audio-video-camera/process-media-frames-with-mediaframereader.md
           items:
             - name: MediaFrameReader를 사용하여 오디오 프레임 처리
-              href: ../audio-video-camera/use-opencv-with-mediaframereader.md
+              href: ../audio-video-camera/process-audio-frames-with-mediaframereader.md
             - name: MediaFrameReader와 함께 OpenCV 사용
               href: ../audio-video-camera/use-opencv-with-mediaframereader.md
         - name: MediaFrameSourceGroup을 사용하여 다양한 소스로부터 캡처
@@ -795,6 +795,8 @@
           href: ../cpp-and-winrt-apis/move-to-winrt-from-cx.md
         - name: C++/CX와 상호 운용
           href: ../cpp-and-winrt-apis/interop-winrt-cx.md
+        - name: 비동기 및 C++/CX와 상호 운용
+          href: ../cpp-and-winrt-apis/interop-winrt-cx-async.md
         - name: WRL에서 C++/WinRT로 이동
           href: ../cpp-and-winrt-apis/move-to-winrt-from-wrl.md
         - name: C#에서 샘플 앱 포팅
