@@ -6,12 +6,12 @@ ms.date: 09/12/2019
 keywords: Windows 10의 접근성, 접근성, 접근성 지원 win32 앱 빌드, 접근성 지원 UWP 앱 빌드, 접근성 지원 WPF 앱 빌드, 접근성 지원 WinForms 앱 빌드
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
-ms.openlocfilehash: 2739546061febcfc96403ed5520fdcbd8bc2c462
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 04dc3571f6b2d8ddf57a3695330070d7c5b5061e
+ms.sourcegitcommit: 9beb6cce7375b726ad90ee84b72754268ae2819a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "76725936"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88047790"
 ---
 # <a name="accessibility-in-windows-10"></a>Windows 10의 접근성
 
@@ -77,7 +77,7 @@ ms.locfileid: "76725936"
 
       XAML UI 모델 및 .NET Framework를 사용하여 관리형 Windows 애플리케이션용으로 설정된 플랫폼에서 접근성 지원 앱과 도구를 개발합니다.
 
-      [접근성 모범 사례](https://docs.microsoft.com/dotnet/framework/ui-automation/accessibility-best-practices)
+      [액세스 가능성에 대한 유용한 정보](https://docs.microsoft.com/dotnet/framework/ui-automation/accessibility-best-practices)
 
       [UI 자동화 기본 사항](https://docs.microsoft.com/dotnet/framework/ui-automation/index)
 
@@ -96,7 +96,7 @@ ms.locfileid: "76725936"
    :::column:::
       ![Windows Forms 플랫폼 앱](images/platform-winforms.png)
 
-      **WinForms(Windows Forms)**
+      **Windows Forms(WinForms)**
 
       XAML UI 모델 및 .NET Framework를 사용하여 관리형 Windows 애플리케이션용 접근성 지원 앱과 도구를 개발합니다.
 
@@ -104,9 +104,9 @@ ms.locfileid: "76725936"
 
       [접근성 지원 Windows 애플리케이션 만들기](https://docs.microsoft.com/dotnet/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application)
 
-      [접근성 지침을 지원하는 Windows Forms 컨트롤의 속성](https://docs.microsoft.com/dotnet/framework/winforms/advanced/properties-on-windows-forms-controls-that-support-accessibility-guidelines)
+      [내게 필요한 옵션 지침을 지원하는 Windows Forms 컨트롤의 속성](https://docs.microsoft.com/dotnet/framework/winforms/advanced/properties-on-windows-forms-controls-that-support-accessibility-guidelines)
 
-      [Windows Form의 컨트롤에 접근성 정보 제공](https://docs.microsoft.com/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)
+      [Windows Form의 컨트롤에 내게 필요한 옵션 정보 제공](https://docs.microsoft.com/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -140,7 +140,7 @@ ms.locfileid: "76725936"
       MSDN 코드 갤러리를 대체하는 새로운 샘플 브라우저입니다.
    :::column-end:::
    :::column:::
-      [MSDN 코드 갤러리(사용 중지됨)](https://code.msdn.microsoft.com/site/search?query=accessibility&f%5B0%5D.Value=accessibility&f%5B0%5D.Type=SearchText&ac=2)
+      [MSDN 코드 갤러리(GitHub 아카이브)](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample)
 
       Windows, Windows Phone, Microsoft Azure, Office, SharePoint, Silverlight 및 기타 제품용 샘플을 다운로드합니다.
    :::column-end:::
@@ -236,7 +236,7 @@ ms.locfileid: "76725936"
    :::column-end:::
 :::row-end:::
 
-## <a name="other-resources"></a>다른 리소스
+## <a name="other-resources"></a>기타 리소스
 
 :::row:::
    :::column span="3":::

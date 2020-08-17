@@ -3,19 +3,19 @@ title: Windows 기반의 Python 설명서
 summary: 개발 환경 설정, 스크립팅 및 자동화, 웹앱 빌드, FAQ를 포함하여 Windows에서 Python으로 개발을 시작하세요.
 metadata:
   author: mattwojo
-  description: Windows에서 Python으로 개발을 시작하세요.
+  description: Windows에서 Python으로 개발을 시작하세요. 개발 환경을 설정하고, 웹앱을 빌드하고, 데이터베이스에 연결하기 위한 리소스를 참조하세요.
   manager: jken
   ms.author: mattwoj
   ms.date: 09/15/2019
   ms.prod: dev-environment
   ms.technology: windows-python
   ms.topic: landing-page
-  ms.openlocfilehash: e9bf81f267010fa7500a60fcf327ab7540683efa
-  ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+  ms.openlocfilehash: 5c19f6fba69ede76c6a29a1fd3dda7637d40373f
+  ms.sourcegitcommit: b6138f9565252460ace6fa0acdc2a902e591681a
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 07/20/2020
-  ms.locfileid: "86493588"
+  ms.lasthandoff: 08/15/2020
+  ms.locfileid: "88243255"
 landingContent:
 - title: 초보자를 위한 시작
   linkLists:

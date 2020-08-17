@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Windows 설정, 개발 환경, 개발 도구, 개발 경로, Microsoft, Windows, 개발자, 팁, 성능, WSL, 터미널, nodejs, python
 ms.localizationpriority: medium
 ms.date: 07/24/2020
-ms.openlocfilehash: e62ca938a23910290a8c63682fc2fde77ec0ea92
-ms.sourcegitcommit: 1e06168ada5ce6013b1d07c428548f084464a286
+ms.openlocfilehash: 4c9311c8aacf708e92feaea0b26ac20a01403257
+ms.sourcegitcommit: 894decaf374f22bf39d4aecc1ab50d34ac011e31
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363737"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88162578"
 ---
 # <a name="set-up-your-development-environment-on-windows-10"></a>Windows 10에서 개발 환경 설정
 
@@ -87,8 +87,8 @@ ms.locfileid: "87363737"
     :::column:::
        [![Windows 패키지 관리자](../images/winget.png)](https://docs.microsoft.com/windows/package-manager/)<br>
         **[Windows 패키지 관리자](https://docs.microsoft.com/windows/package-manager/)**<br>
-        명령줄에서 포괄적인 패키지 관리자인 WinGet을 사용하여 Windows 10에 애플리케이션을 설치합니다.<br>
-        [WinGet(공개 미리 보기) 설치](https://docs.microsoft.com/windows/package-manager/winget/#install-winget)
+        명령줄에서 포괄적인 패키지 관리자인 winget.exe 클라이언트를 사용하여 Windows 10에 애플리케이션을 설치합니다.<br>
+        [Windows 패키지 관리자(공개 미리 보기) 설치](https://docs.microsoft.com/windows/package-manager/winget/#install-winget)
     :::column-end:::
     :::column:::
        [![PowerToys](../images/powertoys.png)](https://github.com/microsoft/PowerToys)<br>

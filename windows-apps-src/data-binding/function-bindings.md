@@ -5,17 +5,17 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp, xBind
 ms.localizationpriority: medium
-ms.openlocfilehash: 879be9591bae36a1dbcd485387fbb4ac7f502fea
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5d74e99526ed5531db92ba88a1053e07a3fc993b
+ms.sourcegitcommit: c7f33dbe9516d28664df1b91e03edca3cb9fb0c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66360078"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87871689"
 ---
 # <a name="functions-in-xbind"></a>X:bind 함수
 
 > [!NOTE]
-> 앱에서 **{x:Bind}** 와 함께 데이터 바인딩을 사용하는 방법 및 **{x:Bind}** 와 **{Binding}** 간 비교에 대한 일반 정보는 [데이터 바인딩 심층 분석](data-binding-in-depth.md)을 참조하세요.
+> 앱에서 **{x:Bind}** 를 사용하여 데이터 바인딩을 사용하는 방법(및 **{x:Bind}** 와 **{Binding}** 간 전체 비교)에 대한 일반 정보는 [데이터 바인딩 심층 분석](data-binding-in-depth.md) 및 [{x:Bind} 태그 확장](../xaml-platform/x-bind-markup-extension.md)을 참조하세요.
 
 Windows 10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리프 단계로 사용할 수 있습니다. 그러면 다음과 같은 이점이 있습니다.
 
@@ -61,7 +61,7 @@ class ColorEntry
 
 ## <a name="path-to-the-function"></a>함수 경로
 
-함수 경로는 다른 속성 경로처럼 지정되며 점(.), 인덱서 또는 함수를 찾을 캐스트를 포함할 수 있습니다.
+[함수 경로](../xaml-platform/x-bind-markup-extension.md#property-path)는 다른 속성 경로처럼 지정되며 [점](../xaml-platform/x-bind-markup-extension.md#property-path-resolution)(.), [인덱서](../xaml-platform/x-bind-markup-extension.md#collections) 또는 함수를 찾을 [캐스트](../xaml-platform/x-bind-markup-extension.md#casting)를 포함할 수 있습니다.
 
 정적 함수는 XMLNamespace:ClassName.MethodName 구문을 사용하여 지정할 수 있습니다. 예를 들어, 다음 구문을 사용하여 코드 숨김에서 정적 함수에 바인딩합니다.
 
@@ -120,7 +120,7 @@ namespace MyNamespace
 ```
 
 ```csharp
-public class Person:INotifyPropertyChanged
+public class Person : INotifyPropertyChanged
 {
     //Implementation for an Icon property and a CancellationToken property with PropertyChanged notifications
     ...
@@ -183,3 +183,6 @@ public class Person:INotifyPropertyChanged
 ```xaml
 <TextBlock Text="{x:Bind a.MyFunc(b), BindBack=a.MyFunc2, Mode=TwoWay}" />
 ```
+
+## <a name="see-also"></a>참조
+* [{x:Bind} 태그 확장](../xaml-platform/x-bind-markup-extension.md)

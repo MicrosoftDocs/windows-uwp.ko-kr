@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 강한, 약한, 참조
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: dc991ff485d9e4ba90264e1b8082a40e0f4ab801
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c8ca914737698c22d52657d20ee655d20491b3e8
+ms.sourcegitcommit: a9f44bbb23f0bc3ceade3af7781d012b9d6e5c9a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82267482"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180768"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>C++/WinRT의 강한 참조 및 약한 참조
 
@@ -105,7 +105,7 @@ IAsyncOperation<winrt::hstring> RetrieveValueAsync()
 }
 ```
 
-C++/WinRT 클래스는 직간접적으로 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) 템플릿에서 파생됩니다. 이런 이유로, C++/WinRT 개체는 해당 [**implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) protected 멤버 함수를 호출하여 *this* 포인터에 대한 강한 참조를 검색할 수 있습니다. 위의 코드 예제에서는 실제로 `strong_this` 변수를 사용할 필요가 없습니다. **get_strong**을 호출하기만 하면 C++/WinRT 개체의 참조 개수가 증가하고 암시적 *this* 포인터가 유효한 상태로 유지됩니다.
+C++/WinRT 클래스는 직간접적으로 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) 템플릿에서 파생됩니다. 이런 이유로, C++/WinRT 개체는 해당 [**implements::get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) protected 멤버 함수를 호출하여 *this* 포인터에 대한 강한 참조를 검색할 수 있습니다. 위의 코드 예제에서는 실제로 `strong_this` 변수를 사용할 필요가 없습니다. **get_strong**을 호출하기만 하면 C++/WinRT 개체의 참조 개수가 증가하고 암시적 *this* 포인터가 유효한 상태로 유지됩니다.
 
 > [!IMPORTANT]
 > **get_strong**은 **winrt::implements** 구조체 템플릿의 멤버 함수이므로, C++/WinRT 클래스와 같이 **winrt::implements**에서 직간접적으로 파생된 클래스에서만 호출할 수 있습니다. **winrt::implements**에서 파생하는 방법에 대한 자세한 내용과 예제는 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)을 참조하세요.
@@ -251,9 +251,9 @@ event_source.Event([this](auto&& ...)
 
 두 경우 모두, 원시 *this* 포인터를 캡처합니다. 이렇게 하면 참조 계산에 영향을 미치지 않으므로 현재 개체가 삭제되지 않도록 방지할 수 없습니다.
 
-### <a name="the-solution"></a>해결 방법
+### <a name="the-solution"></a>솔루션
 
-해결 방법은 강한 참조(또는 나중에 확인하겠지만 더 적절한 경우 약한 참조)를 캡처하는 것입니다. 강한 참조는 참조 개수를 ‘증가’시키고 현재 개체를 활성 상태로 ‘유지’합니다.   캡처 변수(이 예제에서 `strong_this`*이*(가) 호출됨)만 선언하고 이 포인터에 대한 강력한 참조 를 검색하는 [**implements.get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)에 대한 호출로 초기화합니다.
+해결 방법은 강한 참조(또는 나중에 확인하겠지만 더 적절한 경우 약한 참조)를 캡처하는 것입니다. 강한 참조는 참조 개수를 ‘증가’시키고 현재 개체를 활성 상태로 ‘유지’합니다.**** 캡처 변수(이 예제에서 `strong_this`가 호출됨)만 선언하고 *this* 포인터에 대한 강력한 참조를 검색하는 [**implements::get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)에 대한 호출로 초기화합니다.
 
 > [!IMPORTANT]
 > **get_strong**은 **winrt::implements** 구조체 템플릿의 멤버 함수이므로, C++/WinRT 클래스와 같이 **winrt::implements**에서 직간접적으로 파생된 클래스에서만 호출할 수 있습니다. **winrt::implements**에서 파생하는 방법에 대한 자세한 내용과 예제는 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)을 참조하세요.
@@ -410,7 +410,7 @@ struct MyRuntimeClass: MyRuntimeClassT<MyRuntimeClass, no_weak_ref>
 }
 ```
 
-variadic 매개 변수 팩에서 마커 구조체가 표시되는 위치는 중요하지 않습니다. 옵트아웃된 형식의 약한 참조를 요청하는 경우 컴파일러에서 “약한 참조 지원에만 사용됩니다.” 오류를 도와줍니다. 
+variadic 매개 변수 팩에서 마커 구조체가 표시되는 위치는 중요하지 않습니다. 옵트아웃된 형식의 약한 참조를 요청하는 경우 컴파일러에서 “약한 참조 지원에만 사용됩니다.” 오류를 도와줍니다.**
 
 ## <a name="important-apis"></a>중요 API
 * [implements::get_weak 함수](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)
