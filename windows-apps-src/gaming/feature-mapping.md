@@ -6,28 +6,20 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx 9, directx 11, 포팅
 ms.localizationpriority: medium
-ms.openlocfilehash: e0643773ca529540284f0749de6e91349f4e9c47
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 3470c8153cc0f6ba6d272e5ed1163c7f2c911c4c
+ms.sourcegitcommit: 7c1711d68496b781ed7d5b54e8ef5442e58661fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730230"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88578227"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Directx 11 기능을 DirectX 11 Api에 매핑
 
-
-
-**요약**
-
--   [DirectX 포트 계획](plan-your-directx-port.md)
--   [Direct3D 9에서 Direct3D 11로 중요 한 변경 내용](understand-direct3d-11-1-concepts.md)
--   기능 매핑
-
-
 Direct3D 9 게임에서 사용 하는 기능이 Direct3D 11 및 유니버설 Windows 플랫폼 (UWP)로 변환 되는 방식을 이해 합니다.
 
-## <a name="mapping-direct3d-9-to-directx-11-apis"></a>Direct3D 9를 DirectX 11 Api에 매핑
+또한 [DirectX 포트 계획](plan-your-directx-port.md)및 [Direct3D 9에서 Direct3d 11로 중요 한 변경 사항](understand-direct3d-11-1-concepts.md)을 참조 하세요.
 
+## <a name="mapping-direct3d-9-to-directx-11-apis"></a>Direct3D 9를 DirectX 11 Api에 매핑
 
 [Direct3D](https://docs.microsoft.com/windows/desktop/direct3d) 는 아직 directx 그래픽의 기반 이지만 directx 9 이후에는 API가 변경 되었습니다.
 
@@ -39,7 +31,6 @@ Direct3D 11 기능의 전체 목록은 [direct3d 11 기능](https://docs.microso
 
 ## <a name="moving-from-direct2d-9-to-direct2d-11"></a>Direct2D 9에서 Direct2D 11로 이동
 
-
 [Direct2D (Windows)](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal) 는 여전히 DirectX 그래픽 및 windows의 중요 한 부분입니다. 여전히 Direct2D를 사용 하 여 2D 게임을 그리고 Direct3D 위에 오버레이 (HUDs)를 그릴 수 있습니다.
 
 Direct2D는 Direct3D 위에서 실행 됩니다. 두 API를 사용 하 여 2D 게임을 구현할 수 있습니다. 예를 들어 Direct3D를 사용 하 여 구현 된 2D 게임에서는 직교 프로젝션을 사용 하 고, Z 값을 설정 하 여 기본 형식의 그리기 순서를 제어 하 고, 픽셀 셰이더를 사용 하 여 특수 효과를 추가할 수 있습니다.
@@ -50,7 +41,6 @@ Direct2D는 Direct3D를 기반으로 하므로 DXGI 및 장치 컨텍스트를 �
 
 ## <a name="replace-deprecated-helper-libraries"></a>사용 되지 않는 도우미 라이브러리 바꾸기
 
-
 D3DX 및 DXUT는 더 이상 사용 되지 않으며 UWP 게임에서 사용할 수 없습니다. 이러한 도우미 라이브러리는 질감 로드 및 메시 로드와 같은 작업에 대 한 리소스를 제공 합니다.
 
 -   [Direct3d 9에서 UWP로의 단순 포트](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습에서는 창을 설정 하 고, Direct3D를 초기화 하 고, 기본 3d 렌더링을 수행 하는 방법을 보여 줍니다.
@@ -59,17 +49,15 @@ D3DX 및 DXUT는 더 이상 사용 되지 않으며 UWP 게임에서 사용할 �
 
 ## <a name="move-shader-programs-from-fx-to-hlsl"></a>FX에서 HLSL로 셰이더 프로그램 이동
 
-
 효과를 비롯 한 D3DX 유틸리티 라이브러리 (D3DX 9, D3DX 10 및 D3DX 11)는 UWP에서 사용 되지 않습니다. UWP 용 DirectX 게임은 모두 효과 없이 [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl) 를 사용 하 여 그래픽 파이프라인을 구동 합니다.
 
 Visual Studio는 여전히 FXC.EXE를 사용 하 여 셰이더 개체를 컴파일합니다. UWP 게임 셰이더가 미리 컴파일됩니다. 바이트 코드는 런타임에 로드 되며, 각 셰이더 리소스는 적절 한 렌더링 패스 중에 그래픽 파이프라인에 바인딩됩니다. 셰이더는 별개의 자체로 이동 해야 합니다. HLSL 파일 및 렌더링 기술은 c + + 코드에서 구현 해야 합니다.
 
 셰이더 리소스를 로드 하는 방법에 대 한 간략 한 보기는 [Direct3D 9에서 UWP로의 단순 포트를](walkthrough--simple-port-from-direct3d-9-to-11-1.md)참조 하세요.
 
-Direct3D 11에는 Direct3D 기능 수준 11\_0 이상이 필요한 셰이더 모델 5가 도입 되었습니다. [Direct3D 11에 대 한 HLSL 셰이더 모델 5 기능을](https://docs.microsoft.com/windows/desktop/direct3dhlsl/overviews-direct3d-11-hlsl)참조 하세요.
+Direct3D 11에는 Direct3D 기능 수준 11 0 이상이 필요한 셰이더 모델 5가 도입 \_ 되었습니다. [Direct3D 11에 대 한 HLSL 셰이더 모델 5 기능을](https://docs.microsoft.com/windows/desktop/direct3dhlsl/overviews-direct3d-11-hlsl)참조 하세요.
 
 ## <a name="replace-xnamath-and-d3dxmath"></a>XNAMath 및 D3DXMath 바꾸기
-
 
 XNAMath (또는 D3DXMath)를 사용 하는 코드는 [Directxmath](https://docs.microsoft.com/windows/desktop/dxmath/directxmath-portal)로 마이그레이션해야 합니다. DirectXMath에는 x86, x64 및 ARM에서 이식 가능한 형식이 포함 되어 있습니다. [XNA Math Library에서 코드 마이그레이션을](https://docs.microsoft.com/windows/desktop/dxmath/pg-xnamath-migration)참조 하세요.
 
@@ -77,13 +65,11 @@ DirectXMath float 형식은 셰이더를 사용 하는 데 편리 합니다. 예
 
 ## <a name="replace-directsound-with-xaudio2-and-background-audio"></a>DirectSound를 XAudio2 (및 배경 오디오)로 바꿉니다.
 
-
 UWP에 대 한 DirectSound는 지원 되지 않습니다.
 
 -   [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-apis-portal) 를 사용 하 여 게임에 음향 효과를 추가 합니다.
 
 ##  <a name="replace-directinput-with-xinput-and-windows-runtime-apis"></a>DirectInput을 XInput 및 Windows 런타임 Api로 바꾸기
-
 
 DirectInput는 UWP에 대해 지원 되지 않습니다.
 
@@ -93,11 +79,9 @@ DirectInput는 UWP에 대해 지원 되지 않습니다.
 
 ## <a name="use-microsoft-media-foundation-instead-of-directshow"></a>DirectShow 대신 Microsoft 미디어 파운데이션 사용
 
-
 DirectShow는 더 이상 DirectX API (또는 Windows API)의 일부가 아닙니다. [Microsoft 미디어 파운데이션](https://docs.microsoft.com/windows/desktop/medfound/microsoft-media-foundation-sdk) 공유 화면을 사용 하 여 Direct3D에 비디오 콘텐츠를 제공 합니다. [Direct3D 11 Video api](https://docs.microsoft.com/windows/desktop/medfound/direct3d-11-video-apis)를 참조 하세요.
 
 ## <a name="replace-directplay-with-networking-code"></a>DirectPlay를 네트워킹 코드로 바꾸기
-
 
 Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네트워크 서비스를 사용 하는 경우 UWP 요구 사항을 준수 하는 네트워킹 코드를 제공 해야 합니다. 다음 Api를 사용 합니다.
 
@@ -117,7 +101,6 @@ Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네�
 모든 UWP 앱 (게임 포함)은 특정 유형의 백그라운드 작업을 사용 하 여 앱이 일시 중단 된 동안 연결을 유지 합니다. 일시 중단 된 동안 게임에서 연결 상태를 유지 해야 하는 경우 [네트워킹 기본 사항](https://docs.microsoft.com/windows/uwp/networking/networking-basics)을 참조 하세요.
 
 ## <a name="function-mapping"></a>함수 매핑
-
 
 다음 표를 사용 하 여 Direct3D 9에서 Direct3D 11로 코드를 변환할 수 있습니다. 또한 장치와 디바이스 컨텍스트를 구별하는 데에도 도움이 될 수 있습니다.
 
@@ -231,15 +214,12 @@ Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네�
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-checkdeviceformat">IDirect3DDevice9: CheckDeviceFormat</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-getdevicecaps">IDirect3DDevice9:GetDeviceCaps</a></p>
 <p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-validatedevice">IDirect3DDevice9: ValidateDevice</a></p></td>
-<td align="left"><p>기능 비트는 기능 수준으로 바뀝니다. 지정 된 기능 수준에는 몇 가지 형식 및 기능 사용 사례만 선택할 수 있습니다. <a href="https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport">ID3D11Device:: CheckFeatureSupport</a> 및 <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-checkformatsupport">ID3D11Device:: checkformatsupport</a>를 사용 하 여 확인할 수 있습니다.</p></td>
+<td align="left"><p>기능 비트는 기능 수준으로 대체 됩니다. 지정 된 기능 수준에는 몇 가지 형식 및 기능 사용 사례만 선택할 수 있습니다. <a href="https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-checkfeaturesupport">ID3D11Device:: CheckFeatureSupport</a> 및 <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10device-checkformatsupport">ID3D11Device:: checkformatsupport</a>를 사용 하 여 확인할 수 있습니다.</p></td>
 </tr>
 </tbody>
 </table>
 
- 
-
 ## <a name="surface-format-mapping"></a>표면 형식 매핑
-
 
 다음 표를 사용 하 여 Direct3D 9 형식을 DXGI 형식으로 변환할 수 있습니다.
 
@@ -342,7 +322,7 @@ Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네�
 <td align="left"><p>D3DFMT_L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>    Direct3D 9 동작을 얻으려면 셰이더에 swizzle를 사용 하 여 빨간색을 다른 구성 요소에 복제 합니다.
+<strong>참고</strong>    셰이더에서. r swizzle를 사용 하 여 다른 구성 요소와 빨간색을 중복 하 여 Direct3D 9 동작을 가져옵니다.
 </div>
 <div>
  
@@ -352,7 +332,7 @@ Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네�
 <td align="left"><p>D3DFMT_A8L8</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8_UNORM</p>
 <div class="alert">
-<strong>참고</strong>    Direct3D 9 동작을 얻으려면 셰이더에 swizzle을 사용 하 여 빨간색을 복제 하 고 녹색을 알파 구성 요소로 이동 합니다.
+<strong>참고</strong>    Swizzle rrrg를 사용 하 여 red를 복제 하 고 녹색을 알파 구성 요소로 이동 하 여 Direct3D 9 동작을 가져옵니다.
 </div>
 <div>
  
@@ -426,7 +406,7 @@ Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네�
 <td align="left"><p>D3DFMT_DXT2</p></td>
 <td align="left"><p>DXGI_FORMAT_BC1_UNORM & DXGI_FORMAT_BC1_UNORM_SRGB</p>
 <div class="alert">
-<strong>참고</strong>    DXT1와 DXT2는 API/하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요 하지 않은 미리 증가 된 알파를 사용 하는지 여부입니다.
+<strong>참고</strong>    DXT1 및 DXT2는 API/하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요 하지 않은 미리 증가 된 알파를 사용 하는지 여부입니다.
 </div>
 <div>
  
@@ -440,7 +420,7 @@ Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네�
 <td align="left"><p>D3DFMT_DXT4</p></td>
 <td align="left"><p>DXGI_FORMAT_BC2_UNORM & DXGI_FORMAT_BC2_UNORM_SRGB</p>
 <div class="alert">
-<strong>참고</strong>    DXT3와 DXT4는 API/하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요 하지 않은 미리 증가 된 알파를 사용 하는지 여부입니다.
+<strong>참고</strong>    DXT3 및 DXT4는 API/하드웨어 관점에서 동일 합니다. 유일한 차이점은 응용 프로그램에서 추적할 수 있고 별도의 형식이 필요 하지 않은 미리 증가 된 알파를 사용 하는지 여부입니다.
 </div>
 <div>
  
@@ -506,7 +486,7 @@ Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네�
 <td align="left"><p>D3DFMT_L16</p></td>
 <td align="left"><p>DXGI_FORMAT_R16_UNORM</p>
 <div class="alert">
-<strong>참고</strong>    D3D9 동작을 얻으려면 셰이더에 swizzle를 사용 하 여 빨간색을 다른 구성 요소에 복제 합니다.
+<strong>참고</strong>    D3D9 동작을 얻으려면 셰이더에 swizzle을 사용 하 여 빨간색을 다른 구성 요소에 복제 합니다.
 </div>
 <div>
  
@@ -580,7 +560,7 @@ Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네�
 <td align="left"><p>D3DDECLTYPE_UBYTE4</p></td>
 <td align="left"><p>DXGI_FORMAT_R8G8B8A8_UINT</p>
 <div class="alert">
-<strong>셰이더는 UINT</strong>    값을 가져오지만, Direct3D 9 스타일 정수 계열 float가 필요한 경우 (0.0 f, 1.0 f ... 255. f), UINT는 셰이더의 float32로만 변환할 수 있습니다.
+<strong>참고</strong>    셰이더는 UINT 값을 가져오지만, Direct3D 9 스타일 정수 계열 float가 필요한 경우 (0.0 f, 1.0 f ... 255. f), UINT는 셰이더의 float32로만 변환할 수 있습니다.
 </div>
 <div>
  
@@ -590,7 +570,7 @@ Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네�
 <td align="left"><p>D3DDECLTYPE_SHORT2</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16_SINT</p>
 <div class="alert">
-<strong>셰이더는 값</strong>    을 가져오지만, Direct3D 9 style 정수 계열 float가 필요한 경우에는 셰이더에서 값을 float32로만 변환할 수 있습니다.
+<strong>참고</strong>    셰이더는에 지 값을 가져오지만, Direct3D 9 스타일 정수 계열 float가 필요한 경우에는 셰이더에서 값을 float32로만 변환할 수 있습니다.
 </div>
 <div>
  
@@ -600,7 +580,7 @@ Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네�
 <td align="left"><p>D3DDECLTYPE_SHORT4</p></td>
 <td align="left"><p>DXGI_FORMAT_R16G16B16A16_SINT</p>
 <div class="alert">
-<strong>셰이더는 값</strong>    을 가져오지만, Direct3D 9 style 정수 계열 float가 필요한 경우에는 셰이더에서 값을 float32로만 변환할 수 있습니다.
+<strong>참고</strong>    셰이더는에 지 값을 가져오지만, Direct3D 9 스타일 정수 계열 float가 필요한 경우에는 셰이더에서 값을 float32로만 변환할 수 있습니다.
 </div>
 <div>
  
@@ -665,12 +645,28 @@ Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네�
 </tbody>
 </table>
 
- 
+## <a name="additional-mapping-info"></a>추가 매핑 정보
 
- 
+- **IDirect3DDevice9:: SetCursorPosition** 는 [**SetCursorPos**](/windows/desktop/api/winuser/nf-winuser-setcursorpos)로 바뀝니다.
+- **IDirect3DDevice9:: SetCursorProperties** 는 [**setcursor**](/windows/desktop/api/winuser/nf-winuser-setcursor)로 대체 됩니다.
+- **IDirect3DDevice9:: SetIndices** 는 [**ID3D11DeviceContext:: IASetIndexBuffer**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetindexbuffer)로 바뀝니다.
+- **IDirect3DDevice9:: SetRenderTarget** 은 [**ID3D11DeviceContext:: OMSetRenderTargets**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-omsetrendertargets)로 바뀝니다.
+- **IDirect3DDevice9:: SetScissorRect** 은 [**ID3D11DeviceContext:: RSSetScissorRects**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-rssetscissorrects)로 바뀝니다.
+- **IDirect3DDevice9:: SetStreamSource** 는 [**ID3D11DeviceContext:: IASetVertexBuffers**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetvertexbuffers)로 바뀝니다.
+- **IDirect3DDevice9:: SetVertexDeclaration** 은 [**ID3D11DeviceContext:: IASetInputLayout**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout)로 바뀝니다.
+- **IDirect3DDevice9:: SetViewport** 는 [**ID3D11DeviceContext:: RSSetViewports**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-rssetviewports)로 바뀝니다.
+- **IDirect3DDevice9:: ShowCursor** 는 [**ShowCursor**](/windows/desktop/api/winuser/nf-winuser-showcursor)로 바뀝니다.
 
- 
+**IDirect3DDevice9:: SetGammaRamp** 를 통해 비디오 카드의 하드웨어 감마 램프를 제어할 **수 있습니다.** [감마 수정 사용](/windows/win32/direct3ddxgi/using-gamma-correction)을 참조 하세요.
 
+**IDirect3DDevice9::P rocessvertices** 은 Geometry 셰이더의 스트림 출력 기능으로 대체 됩니다. [스트림 출력 단계 시작](/windows/win32/direct3d11/d3d10-graphics-programming-guide-output-stream-stage-getting-started)을 참조 하세요.
 
+사용자 클립을 설정 하는 **IDirect3DDevice9:: SetClipPlane** 메서드는 VS_4_0 이상에서 사용할 수 있는 HLSL **SV_ClipDistance** 버텍스 셰이더 출력 의미 체계 ( [의미 체계](/windows/win32/direct3dhlsl/dx-graphics-hlsl-semantics)참조) 또는 새로운 HLSL clipplanes 함수 특성 ( [기능 수준 9 하드웨어의 사용자 클립 평면](/windows/win32/direct3dhlsl/user-clip-planes-on-10level9)참조)으로 대체 되었습니다.
 
+**IDirect3DDevice9:: SetPaletteEntries** 및 **IDirect3DDevice9:: SetCurrentTexturePalette** 는 사용 되지 않습니다. 이를 대신 256x1 **R8G8B8A8** 질감에서 색을 조회 하는 픽셀 셰이더에 바꿉니다.
 
+**DrawRectPatch**, **drawtripatch**, **SetNPatchMode**및 **DeletePatch** 와 같은 고정 함수 공간 분할 함수는 더 이상 사용 되지 않습니다. 이를 프로그래밍 가능 파이프라인 SM 5.0 공간 분할 셰이더로 대체 합니다 (하드웨어가 공간 분할 셰이더를 지 원하는 경우).
+
+**IDirect3DDevice9:: SetFVF**및 FVF 코드는 더 이상 지원 되지 않습니다. D3D11 입력 레이아웃으로 이식 하기 전에 D3D8/D3D9 FVF 코드에서 D3D9 Vertex 선언으로 이식 해야 합니다.
+
+VS_4_0 이상에서 꼭 짓 점 셰이더를 시작할 때 약간의 비트 연산을 사용 하 여 직접 지원 되지 않는 모든 **D3DDECLTYPE** 유형을 매우 효율적으로 에뮬레이션할 수 있습니다.
