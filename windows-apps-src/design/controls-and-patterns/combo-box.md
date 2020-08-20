@@ -10,12 +10,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: f484df97c6d29281941c8eed7b91fd0b156fff60
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 65f65fc62f839e379535f4e1a3df8a188620fed9
+ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88502365"
 ---
 # <a name="combo-box-and-list-box"></a>콤보 상자 및 목록 상자
 
@@ -23,7 +23,7 @@ ms.locfileid: "82968788"
 
 콤보 상자를 닫으면 콤보 상자는 현재 선택한 항목을 표시하거나 선택된 항목이 없는 경우 비어 있습니다. 사용자가 콤보 상자를 확장하면 콤보 상자는 선택 가능한 항목 목록을 표시합니다.
 
-![압축 상태의 드롭다운 목록의 예](images/combo_box_collapsed.png)
+![압축 상태의 드롭다운 목록의 예](images/combo-box-expand.gif)
 
 > _헤더를 표시하는 압축 상태의 콤보 상자_
 
