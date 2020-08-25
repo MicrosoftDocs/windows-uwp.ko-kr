@@ -4,19 +4,19 @@ title: 시맨틱 줌
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 08/07/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 35613366078531a9e342df0b4314d049fde844e9
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 3398be1569143e253b2b9cb9ee25133ee7fe5fd9
+ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88502345"
 ---
 # <a name="semantic-zoom"></a>시맨틱 줌
 
@@ -59,17 +59,17 @@ ms.locfileid: "80081570"
 </tr>
 </table>
 
+**XAML 컨트롤 갤러리**
+
+컨트롤 갤러리의 SemanticZoom 섹션에서는 사용자가 컨트롤 형식의 그룹화된 섹션을 빠르게 확대/축소할 수 있는 탐색 환경을 보여줍니다. 
+
+![XAMl 컨트롤 갤러리에서 사용되는 시맨틱 줌 예제](images/semanticzoom-gallery.gif)
+
 **사진 앱**
 
 사진 앱에 사용된 시맨틱 줌은 다음과 같습니다. 사진은 월별로 그룹화됩니다. 기본 그리드 보기에서 월 머리글을 선택하면 더 빠른 탐색을 위해 월 목록 보기로 화면이 축소됩니다.
 
 ![사진 앱에 사용된 시맨틱 줌](images/control-examples/semantic-zoom-photos.png)
-
-**주소록**
-
-주소록은 시맨틱 줌을 사용하여 훨씬 더 쉽게 탐색할 수 있는 데이터 집합의 또 다른 예입니다. 축소 보기를 사용하여 원하는 문자로 신속하게 이동하거나(왼쪽 이미지) 확대 보기를 사용하여 개별 데이터 항목을 표시할 수 있습니다(오른쪽 이미지).
-
-![연락처 목록에 사용된 시맨틱 줌의 예](images/semanticzoom-win10.png)
 
 ## <a name="create-a-semantic-zoom"></a>시맨틱 줌 만들기
 

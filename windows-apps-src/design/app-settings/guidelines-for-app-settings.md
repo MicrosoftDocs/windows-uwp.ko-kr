@@ -4,16 +4,16 @@ title: 앱 설정에 대한 지침
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 08/07/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a9b27094a5861151b907dc7787828068122e4a54
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 418c33952c4be6be08683b5e396f423f771bb997
+ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83233981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88502385"
 ---
 # <a name="guidelines-for-app-settings"></a>앱 설정에 대한 지침
 
@@ -46,13 +46,13 @@ ms.locfileid: "83233981"
 
 탐색 창 레이아웃에서는 앱 설정이 탐색 선택 항목 목록의 마지막 항목이고 맨 아래에 고정되어야 합니다.
 
-![탐색 창의 앱 설정 진입점](images/appsettings-entrypoint-navpane.png)
+![탐색 창의 앱 설정 진입점](images/appsettings-nav-settings.png)
 
 **앱 바**
 
-[앱 바](../controls-and-patterns/app-bars.md) 또는 도구 모음을 사용하는 경우, “자세히” 오버플로 메뉴에서 설정 진입점을 마지막 항목으로 배치합니다. 설정 진입점이 눈에 잘 띄어야 하는 앱의 경우에는 오버플로 내부가 아니라 앱 바에 직접 진입점을 배치하세요.
+[앱 바](../controls-and-patterns/app-bars.md) 또는 도구 모음을 사용하는 경우, “자세히” 오버플로 메뉴에서 설정 진입점을 마지막 항목 중 하나로 배치합니다. 설정 진입점이 눈에 잘 띄어야 하는 앱의 경우에는 오버플로 내부가 아니라 앱 바에 직접 진입점을 배치하세요.
 
-![앱 바의 앱 설정 진입점](images/appsettings-entrypoint-tabs.png)
+![앱 바의 앱 설정 진입점](../controls-and-patterns/images/appbar_rs2_overflow_icons.png)
 
 **허브**
 
@@ -69,15 +69,10 @@ ms.locfileid: "83233981"
 ## <a name="layout"></a>레이아웃
 
 
-데스크톱 및 모바일 모두에서 앱 설정 창은 전체 화면으로 열리고 전체 창을 채워야 합니다. 앱 설정 메뉴가 최대 4개의 최상위 그룹 사이에 있으면 이들 그룹은 한 열씩 아래로 계단식 배열되어야 합니다.
-
-데스크톱:
+앱 설정 창은 전체 화면으로 열리고 전체 창을 채웁니다. 앱 설정 메뉴가 최대 4개의 최상위 그룹 사이에 있으면 이들 그룹은 한 열씩 아래로 계단식 배열되어야 합니다.
 
 ![데스크톱의 앱 설정 페이지 레이아웃](images/appsettings-layout-navpane-desktop.png)
 
-모바일:
-
-![휴대폰의 앱 설정 페이지 레이아웃](images/appsettings-layout-navpane-mobile.png)
 
 ## <a name="color-mode-settings"></a>“컬러 모드” 설정
 

@@ -5,12 +5,12 @@ ms.date: 10/09/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, Interop, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: c786256efb5488fff65a8e2bdb4c5d2ca0fa181c
-ms.sourcegitcommit: a9f44bbb23f0bc3ceade3af7781d012b9d6e5c9a
+ms.openlocfilehash: d3fa04f0aabe001dc87ce4292dff7557432583a6
+ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88502288"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>C++/WinRT와 C++/CX 간의 Interop
 
@@ -27,7 +27,9 @@ ms.locfileid: "88180798"
 
 ## <a name="the-from_cx-and-to_cx-functions"></a>**from_cx** 및 **to_cx** 함수
 
-다음은 변환 도우미 함수 두 개를 포함하는 `interop_helpers.h`라는 헤더 파일의 소스 코드 목록입니다. 다음 섹션에서는 함수에 대해 설명하고 프로젝트에서 헤더 파일을 만들고 사용하는 방법을 설명합니다.
+다음은 변환 도우미 함수 두 개를 포함하는 `interop_helpers.h`라는 헤더 파일의 소스 코드 목록입니다. 프로젝트를 점진적으로 이식할 때, 여전히 C++/CX 형식인 부분과 C++/WinRT로 이식된 부분이 있습니다. 이러한 도우미 함수를 사용하여 두 부분 사이의 경계 지점 프로젝트에서 C++/CX와 C++/WinRT 간에 개체를 변환할 수 있습니다.
+
+코드 목록 다음에 나오는 섹션에서는 두 가지 함수를 설명하고 프로젝트에서 헤더 파일을 만들고 사용하는 방법을 설명합니다.
 
 ```cppwinrt
 // interop_helpers.h
@@ -39,8 +41,7 @@ T from_cx(Platform::Object^ from)
     T to{ nullptr };
 
     winrt::check_hresult(reinterpret_cast<::IUnknown*>(from)
-        ->QueryInterface(winrt::guid_of<T>(),
-            reinterpret_cast<void**>(winrt::put_abi(to))));
+        ->QueryInterface(winrt::guid_of<T>(), winrt::put_abi(to)));
 
     return to;
 }
@@ -99,11 +100,9 @@ C++/CX 프로젝트에서 C++/CX와 C++/WinRT를 혼합하려면&mdash;프로젝
 또는(XAML 프로젝트의 경우) Visual Studio에서 C++/WinRT 프로젝트 속성 페이지를 사용하여 C++/CX 지원을 추가할 수 있습니다. 프로젝트 속성에서 **공용 속성** \> **C++/WinRT** \> **프로젝트 언어** \> **C++/CX**를 선택합니다. 이렇게 하면 `.vcxproj` 파일에 다음 속성이 추가됩니다.
 
 ```xml
-<syntaxhighlight lang="xml">
   <PropertyGroup Label="Globals">
     <CppWinRTProjectLanguage>C++/CX</CppWinRTProjectLanguage>
   </PropertyGroup>
-</syntaxhighlight>
 ```
 
 > [!IMPORTANT]

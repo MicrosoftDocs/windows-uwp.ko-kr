@@ -1,6 +1,6 @@
 ---
 title: Windows에서 Python으로 개발하기 위한 리소스
-description: Windows에서 Python으로 개발하기 위한 리소스 목록입니다.
+description: 'Windows에서 Python으로 개발하는 데 유용한 리소스(예: 온라인 과정 및 웹 개발)에 대해 알아봅니다.'
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, microsoft, windows 10, 자습서, 온라인 과정, 블로그, 이벤트
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 24bda3a9eb76dac2e584540161e551ce6bb7ff4e
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 136da1d69a61cb90c9c80cab5d7ecd822d64820d
+ms.sourcegitcommit: b6138f9565252460ace6fa0acdc2a902e591681a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75683666"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88243245"
 ---
 # <a name="resources-for-developing-with-python-on-windows"></a>Windows에서 Python으로 개발하기 위한 리소스
 

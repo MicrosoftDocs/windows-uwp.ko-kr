@@ -1,6 +1,6 @@
 ---
 title: Windows에서 Python 사용에 대한 질문과 대답입니다.
-description: Windows에서 Python 사용에 대한 질문과 대답입니다.
+description: 개발을 위해 Windows에서 Python을 사용하는 방법에 대한 FAQ(질문과 대답)의 답변을 검토하면 유용합니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, pip, py.exe, 파일 경로, PYTHONPATH, python 배포, python 패키징
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 6dbf86e0f9435e44140159ebb2bcbc3d67928999
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 2541186a1dd0f205d88e1e14c146934490afff55
+ms.sourcegitcommit: b6138f9565252460ace6fa0acdc2a902e591681a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74663560"
+ms.lasthandoff: 08/15/2020
+ms.locfileid: "88243265"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Windows에서 Python 사용에 대한 질문과 대답입니다.
 

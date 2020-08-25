@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c6eb22fbe0488fa9a36160ce9e704d10727e4c9
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8bb01c76879bd00e10286ef429415cf4817315b7
+ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66364479"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88502422"
 ---
 # <a name="search-and-find-in-page"></a>검색 및 페이지에서 찾기
 
@@ -56,13 +56,13 @@ ms.locfileid: "66364479"
 
 몇 가지 일반적인 검색 범위는 다음과 같습니다.
 
-**전역** 및 **문맥/구체화.**   여러 클라우드 및 로컬 콘텐츠 소스에서 검색합니다. URL, 문서, 미디어, 작업, 앱 등의 다양한 결과가 표시됩니다.
+**전역** 및 **문맥/구체화.**  여러 클라우드 및 로컬 콘텐츠 소스에서 검색합니다. URL, 문서, 미디어, 작업, 앱 등의 다양한 결과가 표시됩니다.
 
 **웹.**   웹 색인을 검색합니다. 페이지, 엔터티, 대답 등의 결과가 표시됩니다.
 
 **내 콘텐츠.**   디바이스, 클라우드, 소셜 그래프 등에서 검색합니다. 결과는 다양하지만 사용자 계정에 대한 연결로 제한됩니다.
 
-힌트 텍스트를 사용하여 검색 범위를 전달합니다. 예를 들면 다음과 같습니다.
+힌트 텍스트를 사용하여 검색 범위를 전달합니다. 다음은 이러한 템플릿의 예입니다.
 
 "Windows 및 웹 검색"
 
@@ -87,13 +87,12 @@ ms.locfileid: "66364479"
 
 검색 아이콘을 클릭하기 전:
 
-![검색 아이콘 및 축소된 검색 상자의 예](images/search-icon-collapsed.png)
+![검색 아이콘 및 축소된 검색 상자의 예](images/search-icon-collapsed-maps.png)
 
- 
 
 검색 아이콘을 클릭한 후:
 
-![검색 아이콘 및 확장된 검색 상자의 예](images/search-icon-expanded.png)
+![탐색 메뉴에서 검색하는 예제](images/search-icon-expanded-maps.png)
 
  
 
@@ -120,13 +119,13 @@ Windows 도구 모음에서 작업으로 검색:
 
 앱 캔버스에서 입력으로 검색:
 
-![앱 캔버스에서 검색하는 예제](images/search-canvas-contacts.png)
+![앱 캔버스에서 검색하는 예제](images/search-app-canvas.png)
 
  
 
-탐색 창에서 검색:
+Maps 앱의 탐색 창에서 검색:
 
-![탐색 메뉴에서 검색하는 예제](images/search-navmenu.png)
+![탐색 메뉴에서 검색하는 예제](images/search-icon-expanded-maps.png)
 
  
 
@@ -166,7 +165,7 @@ Windows 도구 모음에서 작업으로 검색:
 -   페이지에 있는 텍스트 일치 항목 수를 사용자에게 표시하는 일치 항목 카운터를 포함하세요.
 -   바로 가기 키(CTRL+F)를 사용하도록 설정하세요.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 
 페이지에서 찾기 기능에 액세스하는 간편한 방법을 제공합니다. 모바일 UI의 이 예제에서는 확장 가능한 메뉴에서 두 개의 "...에 추가" 명령 후 "페이지에서 찾기"가 표시됩니다.
@@ -210,7 +209,7 @@ Windows 도구 모음에서 작업으로 검색:
  
 
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 * [자동 제안 상자](auto-suggest-box.md)
 

@@ -5,12 +5,12 @@ ms.date: 08/06/2020
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, Interop, C++/CX, PPL, 작업, 코루틴
 ms.localizationpriority: medium
-ms.openlocfilehash: daa263836e9024a0aaa55b239b1a0db9437f1cd5
-ms.sourcegitcommit: a9f44bbb23f0bc3ceade3af7781d012b9d6e5c9a
+ms.openlocfilehash: d80fedcadaee96dcd4fae4081dcc117b55a1e498
+ms.sourcegitcommit: 2a90b41e455ba0a2b7aff6f771638fb3a2228db4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88181079"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88513430"
 ---
 # <a name="asynchrony-and-interop-between-cwinrt-and-ccx"></a>비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성
 
@@ -19,28 +19,33 @@ ms.locfileid: "88181079"
 
 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)에서 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)로 점진적으로 이식하는 방법을 설명하는 고급 항목입니다. 이 항목은 [C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx) 항목이 중단된 부분에서 다시 시작됩니다.
 
-코드베이스의 크기나 복잡성으로 인해 프로젝트를 점진적으로 이식해야 하는 경우에는 C++/CX와 C++/WinRT 코드가 동일한 프로젝트에 한동안 나란히 존재하는 이식 프로세스가 필요합니다. 비동기 코드가 있는 경우에는 소스 코드를 점진적으로 이식할 때 프로젝트에 PPL(병렬 패턴 라이브러리) 작업 체인과 코루틴이 나란히 존재해야 할 수 있습니다. 이 항목에서는 비동기 C++/CX 코드와 비동기 C++/WinRT 코드 간의 상호 운용을 위한 기법을 중점적으로 다룹니다. 이러한 기법을 개별적으로 사용하거나 함께 사용할 수 있습니다.
+코드베이스의 크기나 복잡성으로 인해 프로젝트를 점진적으로 이식해야 하는 경우에는 C++/CX와 C++/WinRT 코드가 동일한 프로젝트에 한동안 나란히 존재하는 이식 프로세스가 필요합니다. 비동기 코드가 있는 경우에는 소스 코드를 점진적으로 이식할 때 프로젝트에 PPL(병렬 패턴 라이브러리) 작업 체인과 코루틴이 나란히 존재해야 할 수 있습니다. 이 항목에서는 비동기 C++/CX 코드와 비동기 C++/WinRT 코드 간의 상호 운용을 위한 기법을 중점적으로 다룹니다. 이러한 기법을 개별적으로 사용하거나 함께 사용할 수 있습니다. 이 기법을 사용하면 각 변경 내용이 프로젝트 도처에 제어할 수 없게 쏟아지는 상황을 겪지 않고 전체 프로젝트를 이식하는 경로를 따라 점진적이고 제어된 방식으로 로컬 변경을 수행할 수 있습니다.
 
-이 항목을 읽기 전에 [C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx)을 참조하는 것이 좋습니다. 점진적 이식을 위해 프로젝트를 준비하는 방법을 보여주는 항목입니다. 또한, C++/CX 개체를 C++/WinRT 개체로(또는 그 반대로) 변환하는 데 사용할 수 있는 두 가지 도우미 함수도 보여줍니다. 비 동시성에 대한 이 항목은 해당 정보를 기반으로 하며 해당 도우미 함수를 사용합니다.
+이 항목을 읽기 전에 [C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx)을 참조하는 것이 좋습니다. 점진적 이식을 위해 프로젝트를 준비하는 방법을 보여주는 항목입니다. 또한, C++/CX 개체를 C++/WinRT 개체로(또는 그 반대로) 변환하는 데 사용할 수 있는 두 가지 도우미 함수도 보여줍니다. 비동시성에 대한 이 항목은 해당 정보를 기반으로 하며 해당 도우미 함수를 사용합니다.
 
 > [!NOTE]
-> 점진적인 이식에는 몇 가지 제한 사항이 있습니다. Windows 런타임 구성 요소 프로젝트가 있는 경우에는 점진적으로 이식하는 것이 불가능하며 프로젝트를 한 번에 이식해야 합니다. XAML 프로젝트의 경우, 언제든지, XAML 페이지 형식이 모두 C++/WinRT 또는 모두 C++/CX 중 하나여야 합니다.  자세한 내용은 [C++/CX에서 C++/WinRT로 이동](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-cx)을 참조하세요.
+> C++/CX에서 C++/WinRT로 점진적으로 이식하는 데는 몇 가지 제한 사항이 있습니다. [Windows 런타임 구성 요소](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt) 프로젝트가 있는 경우에는 점진적으로 이식하는 것이 불가능하며 프로젝트를 한 번에 이식해야 합니다. XAML 프로젝트의 경우, 언제든지, XAML 페이지 형식이 모두 C++/WinRT 또는 모두 C++/CX 중 하나여야 합니다.  자세한 내용은 [C++/CX에서 C++/WinRT로 이동](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-cx) 항목을 참조하세요.
 
 ## <a name="the-reason-an-entire-topic-is-dedicated-to-asynchronous-code-interop"></a>전체 항목에서 비동기 코드 interop에 주력하는 이유
 
-C++/CX에서 C++/WinRT로 이식하는 작업은 [PPL(병렬 패턴 라이브러리)](/cpp/parallel/concrt/parallel-patterns-library-ppl) 작업에서 코루틴으로 이동하는 작업을 제외하면 일반적으로 간단합니다. 모델이 서로 다릅니다. PPL 작업에서 코루틴으로 자연스러운 일대일 매핑은 없으며 모든 경우에 작동하는 코드를 기계적으로 이식하는 간단한 방법도 없습니다.
+C++/CX에서 C++/WinRT로 이식하는 작업은 [PPL(병렬 패턴 라이브러리)](/cpp/parallel/concrt/parallel-patterns-library-ppl) 작업에서 코루틴으로 이동하는 작업을 제외하면 일반적으로 간단합니다. 모델이 서로 다릅니다. PPL 작업에서 코루틴으로 자연스러운 일대일 매핑은 없으며 코드를 기계적으로 이식하는(모든 경우에 맞는) 간단한 방법도 없습니다.
 
-작업에서 코루틴으로 변환하면 상당히 간소화된다는 좋은 점이 있습니다. 또한, 개발 팀이 비동기 코드 이식의 어려움을 극복하고 나면 이식 작업의 나머지는 대체로 기계적인 부분이라고 보고하는 경우가 많습니다.
+작업에서 코루틴으로 변환하면 상당히 간소화된다는 좋은 점이 있습니다. 그리고 개발 팀이 비동기식 코드 이식의 어려움을 극복하고 나면 이식 작업의 나머지는 대체로 기계적인 부분이라고 보고하는 경우가 많습니다.
 
-알고리즘은 원래 동기 API에 맞게 작성된 경우가 많습니다. 그런 다음, 작업 및 명시적 연속으로 변환되며, &mdash;결과가 기본 논리를 의도와 달리 난독 처리하는 경우가 많습니다. 예를 들어, 루프는 재귀가 됩니다. if-else 분기는 작업의 중첩 트리(체인)가 됩니다. 공유 변수는 **shared_ptr**이 됩니다. PPL 소스 코드의 부자연스러운 구조를 분석하기 위해서는 먼저 뒤로 물러나 원래 코드의 의도를 이해(즉, 원래 동기 버전을 파악)하는 것이 좋습니다. 그런 다음, `co_await`를 적절한 위치에 삽입합니다.
+알고리즘은 원래 동기 API에 맞게 작성된 경우가 많습니다. 그런 다음, 작업 및 명시적 연속으로 변환되며, &mdash;결과가 기본 논리를 의도와 달리 난독 처리하는 경우가 많습니다. 예를 들어, 루프는 재귀가 됩니다. if-else 분기는 작업의 중첩 트리(체인)가 됩니다. 공유 변수는 **shared_ptr**이 됩니다. PPL 소스 코드의 부자연스러운 구조를 분석하기 위해서는 먼저 뒤로 물러나 원래 코드의 의도를 이해(즉, 원래 동기 버전을 파악)하는 것이 좋습니다. 그런 다음, `co_await`(협조적 대기)를 적절한 위치에 삽입합니다.
 
 따라서 이식을 시작할 비동기 코드의 C#(C++/CX 보다는) 버전이 있으면 더 간편하고 깔끔하게 이식을 진행할 수 있습니다. C# 코드는 `await`를 사용합니다. 따라서 C# 코드는 동기 버전으로 시작한 다음, 적절한 위치에 `await`를 삽입하는 원칙을 이미 본질적으로 따릅니다.
 
+C# 버전 프로젝트가 *없으면* 이 항목에 설명된 기술을 사용할 수 있습니다. 그리고 C++/WinRT로 이식하고 나면, 비동기 코드의 구조가 C#으로 이식하기 더 쉬워집니다.
+
 ## <a name="some-background-in-asynchronous-programming"></a>비동기 프로그래밍에 대한 몇 가지 배경
 
-비동기 프로그래밍 개념 및 용어에 대한 확고한 기준을 갖기 위해, 일반적으로 Windows 런타임 비동기 프로그래밍과 관련된 장면을 설정하고 두 C++ 언어 프로젝션이 각각 다른 방식으로 그 위에 계층화되는 방식을 간략하게 설정하겠습니다.
+비동기 프로그래밍 개념 및 용어에 대한 공통적인 참조 프레임을 갖기 위해, 일반적으로 Windows 런타임 비동기 프로그래밍과 관련된 장면을 설정하고 두 가지 C++ 언어 프로젝션이 각각 다른 방식으로 그 위에 계층화되는 방식을 간략하게 설정하겠습니다.
 
-프로젝트에는 비동기식으로 작동하는 메서드가 있습니다. 대부분의 경우에는 다른 작업을 수행하기 전에 해당 작업이 완료될 때까지 기다려야 합니다. 메서드는 비동기 메서드를 기다릴 수 있도록 비동기 작업 개체를 반환합니다. 하지만, 비동기식으로 수행되는 작업이 완료될 때까지 기다릴 필요가 없거나 기다리지 않으려는 경우가 있습니다. 이런 경우에는 메서드가 비동기 작업 개체를 반환할 필요가 없습니다. 기다리지 않으려는 비동기 메서드를 *fire-and-forget* 메서드라고 합니다.
+프로젝트에는 비동기식으로 작동하는 메서드가 있고 주요한 두 가지 종류가 있습니다.
+
+- 다른 작업을 수행하기 전에 비동기 작업이 완료될 때까지 기다리는 것이 일반적입니다. 즉, 비동기 작업 개체를 반환하는 메서드를 기다릴 수 있습니다.
+- 하지만, 비동기식으로 수행되는 작업이 완료될 때까지 기다릴 필요가 없거나 기다리지 않으려는 경우가 있습니다. 이런 경우에는 비동기 메서드가 비동기 작업 개체를 반환하지 *않는* 것이 더 효율적입니다. 이와 같은 &mdash;기다리지 않는&mdash; 비동기 메서드를 *fire-and-forget* 메서드라고 합니다.
 
 ### <a name="windows-runtime-async-objects-iasyncxxx"></a>Windows 런타임 비동기 개체(**IAsyncXxx**)
 
@@ -66,32 +71,34 @@ C++/CX에서 C++/WinRT로 이식하는 작업은 [PPL(병렬 패턴 라이브러
 두 경우 모두, 메서드 자체는 `return` 키워드를 사용하여 완료되면 호출자가 실제로 원하는 값(예: 파일, 바이트 배열 또는 부울)을 생성하는 비동기 개체를 반환합니다.
 
 > [!NOTE]
-> 비동기 C++/CX 메서드가 **IAsyncXxx**\^를 반환하면 **TResult**는 Windows 런타임 형식으로 제한됩니다. 예를 들어 부울 값은 Windows 런타임 형식이지만 C++/CX 프로젝션된 형식(예: **Platform::Array<byte>** ^)은 아닙니다.
+> 비동기 C++/CX 메서드가 **IAsyncXxx**\^를 반환하면 **TResult**(있는 경우)는 Windows 런타임 형식으로 제한됩니다. 예를 들어 부울 값은 Windows 런타임 형식이지만 C++/CX 프로젝션된 형식(예: **Platform::Array<byte>** ^)은 아닙니다.
 
 ### <a name="cwinrt-async"></a>C++/WinRT 비동기
 
 C++/WinRT는C++ 코루틴을 프로그래밍 모델에 통합합니다. 코루틴 및 `co_await` 문은 결과를 협력하여 기다리는 자연스러운 방법을 제공합니다.
 
-각 **IAsyncXxx** 형식은 **winrt::Windows::Foundation** C++/WinRT 네임스페이스의 해당 형식으로 프로젝션됩니다. 이것을 **winrt::IAsyncXxx**라고 하겠습니다. C++/WinRT 코루틴의 반환 형식은 **winrt::IAsyncXxx** 또는 [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget)입니다. 그리고, `return` 키워드를 사용하여 비동기 개체를 반환하는 대신, 코루틴은 `co_return` 키워드를 사용하여 호출자가 실제로 원하는 값(예: 파일, 바이트 배열 또는 부울)을 반환합니다.
+각 **IAsyncXxx** 형식은 **winrt::Windows::Foundation** C++/WinRT 네임스페이스의 해당 형식으로 프로젝션됩니다. 이러한 항목을 **winrt::IAsyncXxx**(C++/CX의 **IAsyncXxx**\^와 비교)라고 하겠습니다.
+
+C++/WinRT 코루틴의 반환 형식은 **winrt::IAsyncXxx** 또는 [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget)입니다. 그리고, `return` 키워드를 사용하여 비동기 개체를 반환하는 대신, 코루틴은 `co_return` 키워드를 사용하여 호출자가 실제로 원하는 값(예: 파일, 바이트 배열 또는 부울)을 협조적으로 반환합니다.
 
 메서드에 `co_await` 문이 하나 이상(또는 `co_return`이나 `co_yield`가 하나 이상) 포함되어 있으면, 메서드는 이러한 이유로 코루틴입니다.
 
-자세한 내용은 [C++/WinRT로 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)을 참조하세요.
+자세한 내용과 코드 예제는 [C++/WinRT로 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)을 참조하세요.
 
 ## <a name="the-direct3d-game-sample-simple3dgamedx"></a>Direct3D 게임 샘플(**Simple3DGameDX**)
 
-이 항목에는 비동기 코드를 점진적으로 이식하는 방법을 보여주는 몇 가지 연습이 포함되어 있습니다. 사례 연구가 가능하도록, [Direct3D 게임 샘플](/samples/microsoft/windows-universal-samples/simple3dgamedx/)(다른 이름: **Simple3DGameDX**)의 C++/CX 버전을 사용하겠습니다. 이 프로젝트에서 C++/CX 소스 코드를 가져와서 비동기 코드를 C++/WinRT로 점진적으로 이식하는 방법에 대한 몇 가지 예를 보여드리겠습니다.
+이 항목에는 비동기 코드를 점진적으로 이식하는 방법을 보여주는 몇 가지 특정 프로그래밍 기법에 대한 연습이 포함되어 있습니다. 사례 연구가 가능하도록, [Direct3D 게임 샘플](/samples/microsoft/windows-universal-samples/simple3dgamedx/)(다른 이름: **Simple3DGameDX**)의 C++/CX 버전을 사용하겠습니다. 이 프로젝트에서 C++/CX 소스 코드를 가져와서 비동기 코드를 C++/WinRT로 점진적으로 이식하는 방법에 대한 몇 가지 예를 보여드리겠습니다.
 
 - 위 링크에서 ZIP을 다운로드하고 압축을 풉니다.
 - Visual Studio에서 C++/CX 프로젝트(`cpp` 폴더에 있음)를 엽니다.
-- 그런 다음, C++/WinRT 지원을 프로젝트에 추가해야 합니다. 그렇게 하기 위해 수행하는 단계는 [C++/CX 프로젝트를 가져와서 C++/WinRT 지원 추가](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx#taking-a-ccx-project-and-adding-cwinrt-support)에 설명되어 있습니다. `interop_helpers.h` 헤더 파일을 프로젝트에 추가하는 단계는 특히 중요합니다. 이 항목에서는 해당 도우미 함수에 의존하기 때문입니다.
+- 그런 다음, C++/WinRT 지원을 프로젝트에 추가해야 합니다. 그렇게 하기 위해 수행하는 단계는 [C++/CX 프로젝트를 가져와서 C++/WinRT 지원 추가](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx#taking-a-ccx-project-and-adding-cwinrt-support)에 설명되어 있습니다. 이 섹션에서 `interop_helpers.h` 헤더 파일을 프로젝트에 추가하는 단계는 특히 중요합니다. 이 항목에서는 해당 도우미 함수에 의존하기 때문입니다.
 - 마지막으로 `#include <pplawait.h>`를 `pch.h`에 추가합니다. 그러면 PPL에 대한 코루틴 지원이 제공됩니다(지원에 대한 자세한 내용은 다음 섹션에 있음).
 
-빌드하면 **바이트**가 모호하다는 오류가 발생합니다. 이것을 해결하는 방법은 다음과 같습니다.
+아직 빌드하지 마십시오. 그렇지 않으면 **바이트**가 모호하다는 오류가 발생합니다. 이것을 해결하는 방법은 다음과 같습니다.
 
 - `BasicLoader.cpp`를 열고 `using namespace std;`를 주석으로 처리합니다.
 - 동일한 소스 코드 파일에서 **shared_ptr**을 **std::shared_ptr**로 정규화해야 합니다. 이 작업은 해당 파일 내에서 찾기 및 바꾸기를 사용하여 수행할 수 있습니다.
-- **vector**를 **std::vector**로, **string**은 **std::string**으로 정규화합니다.
+- 그런 다음, **vector**를 **std::vector**로, **string**을 **std::string**으로 정규화합니다.
 
 이제 프로젝트가 다시 빌드되고, C++/WinRT가 지원되며, **from_cx** 및 **to_cx** interop 도우미 함수가 포함됩니다.
 
@@ -99,30 +106,32 @@ C++/WinRT는C++ 코루틴을 프로그래밍 모델에 통합합니다. 코루�
 
 ## <a name="overview-of-porting-ccx-async-to-cwinrt"></a>C++/CX 비동기를 C++/WinRT로 이식하는 방법에 대한 개요
 
-간단히 말해, 이식하는 동안, PPL 작업 체인을 `co_await`에 대한 호출로 변경하게 됩니다. 메서드의 반환 값을 PPL 작업에서 C++/WinRT **IAsyncXxx** 개체나 **IAsyncXxx**\^로 변경합니다. 그리고 **IAsyncXxx**\^는 C++/WinRT **IAsyncXxx**로 변경합니다.
+간단히 말해, 이식하는 동안, PPL 작업 체인을 `co_await`에 대한 호출로 변경하게 됩니다. 메서드의 반환 값을 PPL 작업에서 C++/WinRT **winrt::IAsyncXxx** 개체로 변경합니다. **IAsyncXxx**\^가 있으면 이것도 C++/WinRT **winrt::IAsyncXxx**로 변경합니다.
 
-다시 말하지만, 코루틴은 `co_xxx`를 호출하는 메서드입니다. C++/WinRT 코루틴은 `co_return`을 사용하여 해당 값을 반환합니다. PPL에 대한 코루틴 지원 덕분에(`pplawait.h` 제공), `co_return`을 사용하여 코루틴에서 PPL 작업을 반환할 수도 있습니다. 또한 두 작업 모두와 **IAsyncXxx**를 `co_await`할 수 있습니다. 하지만 `co_return`을 사용하여 **IAsyncXxx**\^를 반환할 수 없습니다. 다음 표는 다양한 비동기 기법 간의 상호 운용성 지원을 설명합니다.
+다시 말하지만, 코루틴은 `co_xxx`를 호출하는 메서드입니다. C++/WinRT 코루틴은 `co_return`을 사용하여 해당 값을 협조적으로 반환합니다. PPL에 대한 코루틴 지원 덕분에(`pplawait.h` 제공), `co_return`을 사용하여 코루틴에서 PPL 작업을 반환할 수도 있습니다. 또한 두 작업 모두와 **IAsyncXxx**를 `co_await`할 수 있습니다. 하지만 `co_return`을 사용하여 **IAsyncXxx**\^를 반환할 수 없습니다. 아래 표는 그림에서 `pplawait.h`를 사용하는 다양한 비동기 기법 간의 interop 지원을 설명합니다.
 
-|메서드|이 항목을 `co_await`할 수 있습니까?|이 항목에서 `co_return`할 수 있습니까?|
+|방법|`co_await`할 수 있나요?|이 항목에서 `co_return`할 수 있나요?|
 |-|-|-|
-|메서드가 task\<void\> 반환|예|예|
-|메서드가 task\<T\> 반환|아니요|예|
-|메서드가 IAsyncXxx\^ 반환|예|아니요. 단, `co_return`을 사용하는 작업을 **create_async**로 래핑합니다.|
-|메서드가 winrt::IAsyncXxx 반환|예|예|
+|메서드가 **task\<void\>** 반환|예|예|
+|메서드가 **task\<T\>** 반환|아니요|예|
+|메서드가 **IAsyncXxx**^ 반환|예|아니요. 단, `co_return`을 사용하는 작업을 **create_async**로 래핑합니다.|
+|메서드가 **winrt::IAsyncXxx** 반환|예|예|
 
-이 표를 사용하여 관심 있는 interop 기법으로 바로 이동할 수 있습니다.
+다음 표를 사용하여 관심있는 interop 기술을 설명하는 이 항목의 섹션으로 바로 이동하거나 여기에서 계속 읽으십시오.
 
 |비동기 interop 기법|이 항목의 섹션|
 |-|-|
-|`co_await`를 사용하여 fire-and-forget 메서드 내에서 **task\<void\>** 메서드를 기다립니다.|[fire-and-forget 메서드 내에서 **task\<void\>** 대기](#await-taskvoid-within-a-fire-and-forget-method)|
+|`co_await`를 사용하여 fire-and-forget 메서드 내에서 또는 생성자 내에서 **task\<void\>** 메서드를 기다립니다.|[fire-and-forget 메서드 내에서 **task\<void\>** 대기](#await-taskvoid-within-a-fire-and-forget-method)|
 |`co_await`를 사용하여 **task\<void\>** 메서드 내에서 **task\<void\>** 메서드를 기다립니다.|[**task\<void\>** 메서드 내에서 **task\<void\>** 대기](#await-taskvoid-within-a-taskvoid-method)|
 |`co_await`를 사용하여 **task\<T\>** 메서드 내에서 **task\<void\>** 메서드를 기다립니다.|[**task\<T\>** 메서드 내에서 **task\<void\>** 대기](#await-taskvoid-within-a-taskt-method)|
 |`co_await`를 사용하여 **IAsyncXxx**^ 메서드를 기다립니다.|[프로젝트의 나머지 부분은 변경하지 않고 **task** 메서드에서 **IAsyncXxx**^ 대기](#await-an-iasyncxxx-in-a-task-method-leaving-the-rest-of-the-project-unchanged)|
 |**task\<void\>** 메서드 내에서 `co_return`을 사용합니다.|[**task\<void\>** 메서드 내에서 **task\<void\>** 대기](#await-taskvoid-within-a-taskvoid-method)|
-|**task\<T\>** 메서드 내에서 `co_return` 사용|[프로젝트의 나머지 부분은 변경하지 않고 **task** 메서드에서 **IAsyncXxx**^ 대기](#await-an-iasyncxxx-in-a-task-method-leaving-the-rest-of-the-project-unchanged)|
-|`co_return`을 사용하는 작업을 **create_async**로 래핑|[`co_return`을 사용하는 작업을 **create_async**로 래핑](#wrap-create_async-around-a-task-that-uses-co_return)|
-|**concurrency::wait** 이식|[**concurrency::wait**를 `co_await winrt::resume_after`로 이식](#port-concurrencywait-to-co_await-winrtresume_after)|
+|**task\<T\>** 메서드 내에서 `co_return`을 사용합니다.|[프로젝트의 나머지 부분은 변경하지 않고 **task** 메서드에서 **IAsyncXxx**^ 대기](#await-an-iasyncxxx-in-a-task-method-leaving-the-rest-of-the-project-unchanged)|
+|`co_return`을 사용하는 작업을 **create_async**로 래핑합니다.|[`co_return`을 사용하는 작업을 **create_async**로 래핑](#wrap-create_async-around-a-task-that-uses-co_return)|
+|**concurrency::wait**를 이식합니다.|[**concurrency::wait**를 `co_await winrt::resume_after`로 이식](#port-concurrencywait-to-co_await-winrtresume_after)|
 |**task\<void\>** 대신 **winrt::IAsyncXxx**를 반환합니다.|[**task\<void\>** 반환 형식을 **winrt::IAsyncXxx**로 이식](#port-a-taskvoid-return-type-to-winrtiasyncxxx)|
+|**winrt::IAsyncXxx\<T\>** (T는 기본 형식)를 **task\<T\>** 로 변환합니다.|[**winrt::IAsyncXxx\<T\>** (T는 기본 형식)를 **task\<T\>** 로 변환](#convert-a-winrtiasyncxxxt-t-is-primitive-to-a-taskt)|
+|**winrt::IAsyncXxx\<T\>** (T는 Windows 런타임 형식)를 **task\<T^\>** 로 변환합니다.|[**winrt::IAsyncXxx\<T\>** (T는 Windows 런타임 형식)를 **task\<T^\>** 로 변환](#convert-a-winrtiasyncxxxt-t-is-a-windows-runtime-type-to-a-taskt)|
 
 다음은 몇 가지 지원을 보여주는 짧은 코드 예제입니다.
 
@@ -138,10 +147,11 @@ concurrency::task<bool> TaskAsync()
 
 Windows::Foundation::IAsyncOperation<bool>^ IAsyncXxxCppCXAsync()
 {
-    // co_return true; // Error! Can't do that.
-    return concurrency::create_async([=]() -> task<bool> {
+    // co_return true; // Error! Can't do that. But you can do
+    // the following.
+    return concurrency::create_async([=]() -> concurrency::task<bool> {
         co_return true;
-    });
+        });
 }
 
 winrt::Windows::Foundation::IAsyncOperation<bool> IAsyncXxxCppWinRTAsync()
@@ -153,7 +163,7 @@ concurrency::task<bool> CppCXAsync()
 {
     bool b1 = co_await TaskAsync();
     bool b2 = co_await IAsyncXxxCppCXAsync();
-    bool b3 = co_await IAsyncXxxCppWinRTAsync();
+    co_return co_await IAsyncXxxCppWinRTAsync();
 }
 
 winrt::fire_and_forget CppWinRTAsync()
@@ -164,13 +174,17 @@ winrt::fire_and_forget CppWinRTAsync()
 }
 ```
 
-이러한 강력한 interop 옵션을 사용하더라도 점진적인 이식은 시스템의 나머지 부분에 영향을 주지 않고 정확하게 수행할 수 있는 변경 사항을 선택하는 데 달려 있습니다. 임의의 명확하지 않은 부분을 고수하여 전체 프로젝트가 흐트러지지 않도록 하는 것이 좋습니다. 이렇게 하려면 특정 순서로 작업을 수행해야 합니다. 이런 종류의 비동기 관련 이식 변경을 수행하는 몇 가지 예를 살펴보겠습니다.
+> [!IMPORTANT]
+> 이러한 강력한 interop 옵션을 사용하더라도 점진적인 이식은 프로젝트의 나머지 부분에 영향을 주지 않고 정확하게 수행할 수 있는 변경 사항을 선택하는 데 달려 있습니다. 임의의 명확하지 않은 부분을 고수하여 전체 프로젝트의 구조가 흐트러지지 않도록 하는 것이 좋습니다. 이렇게 하려면 특정 순서로 작업을 수행해야 합니다. 다음으로 이런 종류의 비동기 관련 이식/interop 변경을 수행하는 몇 가지 예를 살펴보겠습니다.
 
 ## <a name="await-a-taskvoid-method-leaving-the-rest-of-the-project-unchanged"></a>프로젝트의 나머지 부분은 변경하지 않고 **task\<void\>** 메서드 대기
 
-**task\<void\>** 를 반환하는 메서드는 비동기식으로 작업을 수행하지만 궁극적으로 값은 생성하지 않습니다. 이런 메서드를 `co_await`할 수 있습니다.
+**task\<void\>** 를 반환하는 메서드는 비동기식으로 작업을 수행하고 비동기 작업 개체를 반환하지만 궁극적으로 값은 생성하지 않습니다. 이런 메서드를 `co_await`할 수 있습니다.
 
-비동기 코드를 점진적으로 이식하는 작업을 시작하기 좋은 부분은 해당 메서드를 호출하는 곳을 찾는 것입니다. 이러한 부분에서는 작업 및/또는 각 작업에서 해당 continuation으로 전달되는 값이 없는 작업 체인을 생성 및/또는 반환합니다. 이와 같은 부분에서 비동기 코드를 `co_await` 문과 바꿀 수 있습니다.
+비동기 코드를 점진적으로 이식하는 작업을 시작하기 좋은 부분은 그런 메서드를 호출하는 곳을 찾는 것입니다. 이러한 위치에는 작업을 만들거나 반환하는 작업이 포함됩니다. 또한 각 작업에서 continuation으로 값이 전달되지 않는 종류의 작업 체인이 포함될 수 있습니다. 이와 같은 부분에서 비동기 코드를 `co_await` 문과 바꿀 수 있습니다.
+
+> [!NOTE]
+> 이 항목을 진행하면서 이 전략의 이점을 확인할 수 있습니다. 특정 **task\<void\>** 메서드가 `co_await`를 통해 배타적으로 호출되면 해당 메서드를 C++/WinRT로 자유롭게 이식하고 **winrt::IAsyncXxx**를 반환하도록 할 수 있습니다.
 
 몇 가지 예를 살펴보겠습니다. **Simple3DGameDX** 프로젝트를 엽니다([Direct3D 게임 샘플](#the-direct3d-game-sample-simple3dgamedx) 참조).
 
@@ -183,11 +197,11 @@ winrt::fire_and_forget CppWinRTAsync()
 
 **create_task** 및/또는 **task\<void\>** 메서드만 호출되는 작업 체인을 포함하는 `void` 메서드에 대한 프로젝트 종속성 그래프의 루트를 확인합니다.
 
-**Simple3DGameDX**에서는 **GameMain::Update** 메서드 구현에서 일치 항목을 찾을 수 있습니다. 소스 코드 파일 `GameMain.cpp`에 있습니다.
+**Simple3DGameDX**에서는 **GameMain::Update** 메서드 구현에서 이와 같은 코드를 찾을 수 있습니다. 소스 코드 파일 `GameMain.cpp`에 있습니다.
 
 #### <a name="gamemainupdate"></a>**GameMain::Update**
 
-다음은 비동기식으로 완료되는 두 부분을 보여주는 메서드의 C++/CX 버전에서 추출한 부분입니다.
+다음은 비동기식으로 완료되는 메서드의 두 부분을 보여주는 메서드의 C++/CX 버전에서 추출한 부분입니다.
 
 ```cppcx
 void GameMain::Update()
@@ -215,7 +229,7 @@ void GameMain::Update()
 
 **Simple3DGame::LoadLevelAsync** 메서드(PPL **task\<void\>** 를 반환함)에 대한 호출을 볼 수 있습니다. 그 다음은 동기 작업을 수행하는 *continuation*입니다. **LoadLevelAsync**는 비동기식이지만 값을 반환하지 않습니다. 따라서 작업에서 continuation으로 전달되는 값이 없습니다.
 
-이 두 곳의 코드를 동일한 방식으로 변경할 수 있습니다. 코드는 아래 목록 뒤에 설명되어 있습니다. 여기서 class-member 코루틴에서 *this* 포인터에 액세스하는 안전한 방법에 대해 언급할 수도 있습니다. 하지만 이 내용은 이후 섹션으로 미루겠습니다. 지금은 이 코드가 작동합니다.
+이 두 곳에서 같은 종류의 코드 변경을 수행할 수 있습니다. 코드는 아래 목록 뒤에 설명되어 있습니다. 여기서 class-member 코루틴에서 *this* 포인터에 액세스하는 안전한 방법에 대해 언급할 수도 있습니다. 하지만 이 내용은 이후 섹션([`co_await` 및 *this* 포인터에 대한 설명](#the-deferred-discussion-about-co_await-and-the-this-pointer))으로 미루겠습니다. &mdash;지금은 이 코드가 작동합니다.
 
 ```cppcx
 winrt::fire_and_forget GameMain::Update()
@@ -239,15 +253,15 @@ winrt::fire_and_forget GameMain::Update()
 
 보이는 것처럼 **LoadLevelAsync**가 작업을 반환하기 때문에 작업을`co_await`할 수 있습니다. 그리고 명시적인 continuation이 필요하지 않습니다. &mdash;`co_await` 뒤에 오는 코드는 **LoadLevelAsync**가 완료되는 경우에만 실행됩니다.
 
-`co_await`를 도입하면 메서드가 코루틴으로 바뀌므로 `void`를 반환할 수 없습니다. fire-and-forget 메서드이므로 [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget)을 반환합니다.
+`co_await`를 도입하면 메서드가 코루틴으로 바뀌므로 `void`를 반환하도록 둘 수 없습니다. fire-and-forget 메서드이므로 [**winrt::fire_and_forget**](/uwp/cpp-ref-for-winrt/fire-and-forget)을 반환하도록 변경했습니다.
 
-또한, `GameMain.h`의 선언에서 **GameMain::Update**의 반환 형식을 `void`에서 **winrt::fire_and_forget**으로 변경해야 합니다.
+`GameMain.h`도 편집해야 합니다. 선언에서도 **GameMain::Update**의 반환 형식을 `void`에서 **winrt::fire_and_forget**으로 변경합니다.
 
 프로젝트 복사본에서 이 내용을 변경할 수 있으며 게임은 계속 빌드되고 동일하게 실행됩니다. 소스 코드는 여전히 기본적으로 C++/CX이지만 이제는 C++/WinRT와 동일한 패턴을 사용하기 때문에, 나머지 코드를 기계적으로 이식할 수 있는 수준에 조금 더 가까워졌습니다.
 
 #### <a name="gamemainresetgame"></a>**GameMain::ResetGame**
 
-**GameMain::ResetGame**은 또 다른 fire-and-forget 메서드이며, **LoadLevelAsync**를 호출합니다. 따라서 동일한 변경 작업을 수행할 수 있습니다.
+**GameMain::ResetGame**은 또 다른 fire-and-forget 메서드이며, **LoadLevelAsync**를 호출합니다. 따라서 연습을 원하면 동일한 코드를 변경할 수 있습니다.
 
 #### <a name="gamemainondevicerestored"></a>**GameMain::OnDeviceRestored**
 
@@ -289,7 +303,7 @@ void GameMain::OnDeviceRestored()
 
 비동기 코드를 이식하려면 **create_task**를 모두 제거한 **다음**, 호출과 해당 중괄호를 제거하고 중첩되지 않은 명령문으로 메서드를 간소화합니다.
 
-`return`(작업을 반환함)이 있으면 `co_await`로 변경합니다. 아무것도 반환하지 않는 `return` 하나만 남게 되므로 삭제합니다. 완료되면 no-op 작업이 사라지고 메서드의 비동기 부분 개요가 다음과 같이 표시됩니다. 마찬가지로, 덜 흥미로운 동기 코드는 줄임표로 표시됩니다.
+`co_await`로 작업을 반환하는 `return`이 있으면 변경합니다. 아무것도 반환하지 않는 `return` 하나만 남게 되므로 삭제합니다. 완료되면 no-op 작업이 사라지고 메서드의 비동기 부분 개요가 다음과 같이 표시됩니다. 마찬가지로, 덜 흥미로운 동기 코드는 생략됩니다.
 
 ```cppcx
 winrt::fire_and_forget GameMain::OnDeviceRestored()
@@ -306,7 +320,7 @@ winrt::fire_and_forget GameMain::OnDeviceRestored()
 }
 ```
 
-여기에서 볼 수 있듯이 훨씬 간단하고 읽기 쉽습니다.
+여기에서 볼 수 있듯이 이런 형식의 비동기 구조는 훨씬 더 간단하고 읽기 쉽습니다.
 
 #### <a name="gamemaingamemain"></a>**GameMain::GameMain**
 
@@ -344,7 +358,7 @@ GameMain::GameMain(...) : ...
 }
 ```
 
-하지만 생성자가 **winrt::fire_and_forget**를 반환할 수 없기 때문에 비동기 코드를 새 **GameMain::ConstructInBackground** fire-and-forget 메서드로 이동하고, 코드를 `co_await` 문으로 평면화하고, 생성자로부터 새 메서드를 호출합니다.
+하지만 생성자가 **winrt::fire_and_forget**를 반환할 수 없기 때문에 비동기 코드를 새 **GameMain::ConstructInBackground** fire-and-forget 메서드로 이동하고, 코드를 `co_await` 문으로 평면화하고, 생성자로부터 새 메서드를 호출합니다. 다음은 결과입니다.
 
 ```cppcx
 GameMain::GameMain(...) : ...
@@ -368,13 +382,13 @@ winrt::fire_and_forget GameMain::ConstructInBackground()
 }
 ```
 
-이것이 fire-and-forget 메서드의 전부이며, **GameMain**의 &mdash;모든 비동기 코드는 실제로&mdash; 코루틴으로 변경되었습니다. 원하는 경우, 다른 클래스에서 fire-and-forget 메서드를 찾아서 비슷한 변경을 적용할 수도 있습니다.
+이제 **GameMain**의 모든 fire-and-forget 메서드&mdash;사실상 모든 비동기 코드&mdash;가 코루틴으로 변경되었습니다. 원하는 경우, 다른 클래스에서 fire-and-forget 메서드를 찾아서 비슷한 변경을 적용할 수도 있습니다.
 
 ### <a name="the-deferred-discussion-about-co_await-and-the-this-pointer"></a>`co_await` 및 *this* 포인터에 대한 설명
 
 **GameMain::Update**를 변경할 때 *this* 포인터에 대한 설명을 미뤄두었습니다. 이제 설명해보겠습니다.
 
-이 내용은 지금까지 변경한 모든 메서드에 적용됩니다. fire-and-forget 뿐만 아니라 모든 코루틴에 적용됩니다. `co_await`를 메서드에 도입하면 일시 중단 지점이 도입됩니다. 그래서 클래스 멤버에 액세스할 때마다 일시 중단 지점 후에 사용하는 *this* 포인터에 주의해야 합니다.
+이 내용은 지금까지 변경한 모든 메서드에 적용됩니다. fire-and-forget 뿐만 아니라 모든 코루틴에 적용됩니다. `co_await`를 메서드에 도입하면 일시 중단 지점이 도입됩니다. 그래서 클래스 멤버에 액세스할 때마다 일시 중단 지점 *후에* 사용하는 *this* 포인터에 주의해야 합니다.
 
 간단히 말해 솔루션은 [**implements::get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)을 호출하는 것입니다. 하지만, 이 문제와 솔루션에 대한 자세한 내용은 [class-member 코루틴에서 *this* 포인터에 안전하게 액세스](/windows/uwp/cpp-and-winrt-apis/weak-references#safely-accessing-the-this-pointer-in-a-class-member-coroutine)를 참조하세요.
 
@@ -410,6 +424,8 @@ void App::Load(Platform::String^)
 ```
 
 하지만 이제 **GameMain**이 **winrt::implements**에서 파생되기 때문에 다른 방식으로 구성해야 합니다. 이런 경우 [**winrt::make_self**](/uwp/cpp-ref-for-winrt/make-self) 함수 템플릿을 사용합니다. 자세한 내용은 [구현 형식과 인터페이스의 인스턴스화 및 반환](/windows/uwp/cpp-and-winrt-apis/author-apis#instantiating-and-returning-implementation-types-and-interfaces)을 참조하세요.
+
+해당 코드 줄을 아래 코드 줄로 바꿉니다.
 
 ```cppwinrt
     ...
@@ -454,7 +470,7 @@ winrt::fire_and_forget GameMain::Update()
 
 ### <a name="await-taskvoid-within-a-taskvoid-method"></a>**task\<void\>** 메서드 내에서 **task\<void\>** 대기
 
-다음으로 간단한 경우는 스스로 **task\<void\>** 를 반환하는 메서드 내에서 **task\<void\>** 를 기다리는 것입니다. **task\<void\>** 를 `co_await`할 수 있고 `co_return`할 수 있기 때문입니다.
+다음으로 간단한 경우는 스스로 **task\<void\>** 를 반환하는 메서드 내에서 **task\<void\>** 를 기다리는 것입니다. **task\<void\>** 를 `co_await`할 수 있고 여기에서 `co_return`할 수 있기 때문입니다.
 
 **Simple3DGame::LoadLevelAsync** 메서드 구현에서 매우 간단한 예제를 찾을 수 있습니다. 소스 코드 파일 `Simple3DGame.cpp`에 있습니다.
 
@@ -480,11 +496,13 @@ task<void> Simple3DGame::LoadLevelAsync()
 }
 ```
 
+매우 큰 변화처럼 보이지는 않습니다. 하지만 이제 `co_await`를 통해 **GameRenderer::LoadLevelResourcesAsync**를 호출하기 때문에 작업 대신 **winrt::IAsyncXxx**를 반환하도록 자유롭게 이식할 수 있습니다. 이 작업은 나중에 [**task\<void\>** 반환 형식을 **winrt::IAsyncXxx**로 이식](#port-a-taskvoid-return-type-to-winrtiasyncxxx) 섹션에서 진행하겠습니다.
+
 ### <a name="await-taskvoid-within-a-taskt-method"></a>**task\<T\>** 메서드 내에서 **task\<void\>** 대기
 
 **Simple3DGameDX**에서 찾을 수 있는 적절한 예는 없지만 패턴을 보여주기 위한 가상의 예를 고안할 수 있습니다.
 
-아래 코드 예제는 **task\<void\>** 의 간단한 `co_await`를 보여줍니다. 그런 다음, **task\<T\>** 반환 형식을 충족하기 위해 Windows 런타임 메서드와 `co_return` 결과 파일을 co_awaiting하여 **StorageFile\^** 을 비동기식으로 반환합니다.
+아래 코드 예제의 첫 번째 줄은 **task\<void\>** 의 간단한 `co_await`를 보여줍니다. 그런 다음, **task\<T\>** 반환 유형을 충족하기 위해 **StorageFile\^** 을 비동기식으로 반환해야 합니다. 이렇게 하려면 Windows 런타임 API를 `co_await`하고 결과 파일을 `co_return`합니다.
 
 ```cppcx
 task<StorageFile^> Simple3DGame::LoadLevelAndRetrieveFileAsync(
@@ -496,7 +514,7 @@ task<StorageFile^> Simple3DGame::LoadLevelAndRetrieveFileAsync(
 }
 ```
 
-다음 단계는 더 많은 메서드를 이렇게 C++/WinRT로 이식하는 것입니다.
+다음과 같이, 더 많은 메서드를 C++/WinRT로 이식할 수도 있습니다.
 
 ```cppcx
 winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>
@@ -513,9 +531,11 @@ Simple3DGame::LoadLevelAndRetrieveFileAsync(
 
 ## <a name="await-an-iasyncxxx-in-a-task-method-leaving-the-rest-of-the-project-unchanged"></a>프로젝트의 나머지 부분은 변경하지 않고 **task** 메서드에서 **IAsyncXxx**^ 대기
 
-**task\<void\>** 를 `co_await`하는 방법을 살펴보았습니다. 프로젝트의 메서드이든 비동기 Windows API(예: [**StorageFolder.GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync))이든 **IAsyncXxx**를 반환하는 메서드를 `co_await`할 수도 있습니다.
+**task\<void\>** 를 `co_await`하는 방법을 살펴보았습니다. 프로젝트의 메서드이든 비동기 Windows API(예: 이전 섹션에서 협조적으로 기다린 [**StorageFolder.GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync))이든 **IAsyncXxx**를 반환하는 메서드를 `co_await`할 수도 있습니다.
 
-이 코드를 변경할 수 있는 위치에 대한 예는 **BasicReaderWriter::ReadDataAsync**(`BasicReaderWriter.cpp`에 구현된 부분 참조)에서 살펴보겠습니다. 원본 C++/CX 버전은 다음과 같습니다.
+이런 종류의 코드를 변경할 수 있는 위치에 대한 예는 **BasicReaderWriter::ReadDataAsync**(`BasicReaderWriter.cpp`에 구현된 부분 참조)에서 살펴보겠습니다.
+
+원본 C++/CX 버전은 다음과 같습니다.
 
 ```cppcx
 task<Platform::Array<byte>^> BasicReaderWriter::ReadDataAsync(
@@ -534,7 +554,7 @@ task<Platform::Array<byte>^> BasicReaderWriter::ReadDataAsync(
 }
 ```
 
-Windows API를 `co_await`할 수 있을 뿐만 아니라 메서드가 비동기식으로 반환하는 값(이 경우 바이트 배열)을 `co_return`할 수도 있습니다. 첫 번째 단계에서는 이러한 변경을 수행하는 방법만 보여줍니다. 다음 섹션에서는 실제로 C++/CX 코드를 C++/WinRT로 이식합니다.
+아래 코드 목록은 **IAsyncXxx**^를 반환하는 Windows API를 `co_await`할 수 있음을 보여줍니다. 뿐만 아니라 **BasicReaderWriter::ReadDataAsync**가 비동기식으로 반환하는 값(이 경우 바이트 배열)을 `co_return`할 수도 있습니다. 첫 번째 단계에서는 이러한 변경을 수행하는 방법만 보여줍니다. 다음 섹션에서는 실제로 C++/CX 코드를 C++/WinRT로 이식합니다.
 
 ```cppcx
 task<Platform::Array<byte>^> BasicReaderWriter::ReadDataAsync(
@@ -580,30 +600,128 @@ task<Platform::Array<byte>^> BasicReaderWriter::ReadDataAsync(
 ```
 
 > [!NOTE]
-> **ReadDataAsync**에서는 새 C++/CX 배열을 생성하고 반환했습니다. 물론 메서드의 반환 유형을 충족하기 위해 그렇게 했습니다(프로젝트의 나머지 부분을 변경할 필요가 없도록).
+> 위의 **ReadDataAsync**에서는 새 C++/CX 배열을 생성하고 반환합니다. 물론 메서드의 반환 유형을 충족하기 위해 그렇게 합니다(프로젝트의 나머지 부분을 변경할 필요가 없도록).
 >
-> 자체 프로젝트에서 이식 후 메서드의 끝에 도달하면 C++/WinRT 개체만 있는 다른 예를 접할 수 있습니다. 이것을 `co_return`하려면 **to_cx**를 호출하여 변환합니다. 가상의 예는 다음과 같습니다.
+> 자체 프로젝트에서 이식 후 메서드의 끝에 도달하면 C++/WinRT 개체만 있는 다른 예를 접할 수 있습니다. 이것을 `co_return`하려면 **to_cx**를 호출하여 변환합니다. 자세한 정보와 예제는 다음 섹션에 나와 있습니다.
+
+## <a name="convert-a-winrtiasyncxxxt-to-a-taskt"></a>**winrt::IAsyncXxx\<T\>** 를 **task\<T\>** 로 변환
+
+이 섹션에서는 비동기식 메서드를 C++/WinRT로 이식했지만(**winrt::IAsyncXxx\<T\>** 를 반환하도록), 작업을 반환하듯이 이 메서드를 호출하는 C++/CX 코드가 아직 있는 상황을 다룹니다.
+
+- 한 가지 경우는 **T**가 기본 형식이어서 변환이 필요하지 않은 상황입니다.
+- 다른 경우는 **T**가 Windows 런타임 형식이어서, **T**^로 변환해야 하는 상황입니다.
+
+### <a name="convert-a-winrtiasyncxxxt-t-is-primitive-to-a-taskt"></a>**winrt::IAsyncXxx\<T\>** (T는 기본 형식)를 **task\<T\>** 로 변환
+
+이 섹션의 패턴은 기본 값을 비동기식으로 반환하는 경우 적용됩니다(부울 값을 사용하여 설명). C++/WinRT로 이미 이식한 메서드에 아래와 같은 시그니처가 있는 예를 살펴보겠습니다.
+
+```cppwinrt
+winrt::Windows::Foundation::IAsyncOperation<bool>
+MyClass::GetBoolMemberFunctionAsync()
+{
+    bool value = ...
+    co_return value;
+}
+```
+
+해당 메서드에 대한 호출을 다음과 같은 작업으로 변환할 수 있습니다.
 
 ```cppcx
-task<Windows::Storage::StorageFile^> RetrieveFileAsync()
+task<bool> MyClass::RetrieveBoolTask()
 {
-    winrt::Windows::Storage::StorageFile storageFile = co_await ...
+    co_return co_await GetBoolMemberFunctionAsync();
+}
+```
+
+또는 다음과 같이 변환할 수 있습니다.
+
+```cppcx
+task<bool> MyClass::RetrieveBoolTask()
+{
+    return concurrency::create_task(
+        [this]() -> concurrency::task<bool> {
+            auto result = co_await GetBoolMemberFunctionAsync();
+            co_return result;
+        });
+}
+```
+
+람다 함수의 **task** 반환 유형은 컴파일러가 추론할 수 없기 때문에 명시적입니다.
+
+다음과 같은 임의의 작업 체인 내에서 메서드를 호출할 수도 있습니다. 마찬가지로, 명시적인 람다 반환 형식을 사용합니다.
+
+```cppcx
+...
+.then([this]() -> concurrency::task<bool> {
+    co_return co_await GetBoolMemberFunctionAsync();
+}).then([this](bool result) {
+    ...
+});
+...
+```
+
+### <a name="convert-a-winrtiasyncxxxt-t-is-a-windows-runtime-type-to-a-taskt"></a>**winrt::IAsyncXxx\<T\>** (T는 Windows 런타임 형식)를 **task\<T^\>** 로 변환
+
+이 섹션의 패턴은 Windows 런타임 값을 비동기식으로 반환하는 경우 적용됩니다(**StorageFile** 값을 사용하여 설명). C++/WinRT로 이미 이식한 메서드에 아래와 같은 시그니처가 있는 예를 살펴보겠습니다.
+
+```cppwinrt
+winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::StorageFile>
+MyClass::GetStorageFileMemberFunctionAsync()
+{
+    co_return co_await winrt::Windows::Storage::StorageFile::GetFileFromPathAsync
+    (L"MyFile.txt");
+}
+```
+
+다음 목록에서는 해당 메서드에 대한 호출을 작업으로 변환하는 방법을 보여줍니다. 반환된 C++/WinRT 개체를 C++/CX 핸들(*hat*이라고도 함) 개체로 반환하려면 **to_cx** interop 도우미 함수를 호출해야 합니다.
+
+```cppcx
+task<Windows::Storage::StorageFile^> RetrieveStorageFileTask()
+{
+    winrt::Windows::Storage::StorageFile storageFile =
+        co_await GetStorageFileMemberFunctionAsync();
     co_return to_cx<Windows::Storage::StorageFile>(storageFile);
 }
 ```
 
+아래는 더 간결한 버전입니다.
+
+```cppcx
+task<Windows::Storage::StorageFile^> RetrieveStorageFileTask()
+{
+    co_return to_cx<Windows::Storage::StorageFile>(GetStorageFileMemberFunctionAsync());
+}
+```
+
+또한 해당 패턴을 재사용 가능한 함수 템플릿으로 래핑하고 일반적으로 작업을 반환하듯이 `return`하도록 선택할 수도 있습니다.
+
+```cppcx
+template<typename ResultTypeCX, typename Awaitable>
+concurrency::task<ResultTypeCX^> to_task(Awaitable awaitable)
+{
+    co_return to_cx<ResultTypeCX>(co_await awaitable);
+}
+
+task<Windows::Storage::StorageFile^> RetrieveStorageFileTask()
+{
+    return to_task<Windows::Storage::StorageFile>(GetStorageFileMemberFunctionAsync());
+}
+```
+
+이 방법이 괜찮으면 `interop_helpers.h`에 **to_task**를 추가하면 됩니다.
+
 ## <a name="wrap-create_async-around-a-task-that-uses-co_return"></a>`co_return`을 사용하는 작업을 **create_async**로 래핑
 
-**IAsyncXxx**\^를 직접 `co_return`할 수는 없지만 유사한 작업을 수행할 수 있습니다. `co_return`을 사용하는 작업이 있으면 [**concurrency::create_async**](/cpp/parallel/concrt/reference/concurrency-namespace-functions#create_async)로 래핑할 수 있습니다.
+**IAsyncXxx**\^를 직접 `co_return`할 수는 없지만 유사한 작업을 수행할 수 있습니다. 협조적으로 값을 반환하는 작업이 있으면 [**concurrency::create_async**](/cpp/parallel/concrt/reference/concurrency-namespace-functions#create_async)에 대한 호출 내부에 래핑할 수 있습니다.
 
 가상의 예는 다음과 같습니다. **Simple3DGameDX**에서 가져올 수 있는 예는 없습니다.
 
 ```cppcx
-Windows::Foundation::IAsyncOperation<bool>^ Simple3DGame::ReturnBooleanAsync()
+Windows::Foundation::IAsyncOperation<bool>^ MyClass::RetrieveBoolAsync()
 {
     return concurrency::create_async(
         [this]() -> concurrency::task<bool> {
-            bool result = co_await BooleanMemberFunctionAsync();
+            bool result = co_await GetBoolMemberFunctionAsync();
             co_return result;
         });
 }
@@ -670,7 +788,7 @@ task<void> GameRenderer::CreateGameDeviceResourcesAsync(_In_ Simple3DGame^ game)
 
 **Simple3DGameDX** 작업의 단계에서 **Simple3DGame::LoadLevelAsync**를 호출하는 프로젝트의 모든 위치에는 `co_await`를 사용하여 호출을 수행합니다.
 
-즉, 메서드의 반환 형식을 **task\<void\>** 에서 **winrt::Windows::Foundation::IAsyncAction**으로 변경할 수 있습니다.
+즉, 메서드의 반환 형식을 **task\<void\>** 에서 **winrt::Windows::Foundation::IAsyncAction**(나머지는 변경하지 않고 그대로 두고)으로 간단히 변경할 수 있습니다.
 
 ```cppcx
 winrt::Windows::Foundation::IAsyncAction Simple3DGame::LoadLevelAsync()
@@ -681,7 +799,7 @@ winrt::Windows::Foundation::IAsyncAction Simple3DGame::LoadLevelAsync()
 }
 ```
 
-이제 메서드의 나머지 부분과 해당 종속성을 C++/WinRT로 이식하는 것은 상당히 기계적입니다.
+이제 메서드의 나머지 부분과 해당 종속성(예: *m_level* 등)을 C++/WinRT로 이식하는 것은 상당히 기계적입니다.
 
 ### <a name="gamerendererloadlevelresourcesasync"></a>**GameRenderer::LoadLevelResourcesAsync**
 
@@ -732,9 +850,11 @@ winrt::Windows::Foundation::IAsyncAction GameRenderer::LoadLevelResourcesAsync()
 }
 ```
 
-### <a name="basicreaderwriterreaddataasync"></a>**BasicReaderWriter::ReadDataAsync**
+### <a name="the-goalmdashfully-port-a-method-to-cwinrt"></a>목표&mdash;메서드를 C++/WinRT로 완전히 이식
 
-**BasicReaderWriter::ReadDataAsync**를 C++/WinRT로 완전히 이식하여 연습을 마치겠습니다. 지난번 이 메서드를 볼 때는([프로젝트의 나머지 부분은 변경하지 않고 **ReadDataAsync**(대부분)를 C++/WinRT로 이식](#port-readdataasync-mostly-to-cwinrt-leaving-the-rest-of-the-project-unchanged)에서) 대부분 C++/WinRT로 이식되었습니다. 하지만 **Platform::Array\<byte\>** ^ 작업을 계속 반환했습니다.
+**BasicReaderWriter::ReadDataAsync** 메서드를 C++/WinRT로 완전히 이식하는 최종 목표의 예를 살펴보면서 이 연습을 마무리하겠습니다.
+
+지난번 이 메서드를 볼 때는([프로젝트의 나머지 부분은 변경하지 않고 **ReadDataAsync**(대부분)를 C++/WinRT로 이식](#port-readdataasync-mostly-to-cwinrt-leaving-the-rest-of-the-project-unchanged) 섹션에서) *대부분* C++/WinRT로 이식되었습니다. 하지만 **Platform::Array\<byte\>** ^ 작업을 계속 반환했습니다.
 
 ```cppwinrt
 task<Platform::Array<byte>^> BasicReaderWriter::ReadDataAsync(
@@ -752,7 +872,7 @@ task<Platform::Array<byte>^> BasicReaderWriter::ReadDataAsync(
 }
 ```
 
-작업을 반환하는 대신, C++/WinRT [**IBuffer**](/uwp/api/windows.storage.streams.ibuffer) 개체를 비동기식으로 반환하도록 변경하겠습니다. 그러면 호출 사이트에서 코드를 변경해야 합니다.
+작업을 반환하는 대신 **IAsyncOperation**을 반환하도록 변경하겠습니다. 그리고 **IAsyncOperation**을 통해 바이트 배열을 반환하는 대신 C++/WinRT [**IBuffer**](/uwp/api/windows.storage.streams.ibuffer) 개체를 반환하겠습니다. 그렇게 하려면 호출 사이트의 코드도 다음과 같이 약간 변경해야 합니다.
 
 C++/WinRT 구문 개체를 사용하도록 메서드의 구현, 메서드의 매개 변수, *m_location* 데이터 멤버를 이식한 후 모습은 다음과 같습니다.
 
@@ -803,10 +923,10 @@ winrt::Windows::Foundation::IAsyncAction BasicLoader::LoadTextureAsync(...)
 
 ## <a name="important-apis"></a>중요 API
 
-* [IAsyncAction](/uwp/api/windows.foundation.iasyncaction),
-* [IAsyncActionWithProgress&lt;TProgress&gt;](/uwp/api/windows.foundation.iasyncactionwithprogress-1),
-* [IAsyncOperation&lt;TResult&gt;](/uwp/api/windows.foundation.iasyncoperation-1),
-* [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](/uwp/api/windows.foundation.iasyncoperationwithprogress-2).
+* [IAsyncAction](/uwp/api/windows.foundation.iasyncaction)
+* [IAsyncActionWithProgress&lt;TProgress&gt;](/uwp/api/windows.foundation.iasyncactionwithprogress-1)
+* [IAsyncOperation&lt;TResult&gt;](/uwp/api/windows.foundation.iasyncoperation-1)
+* [IAsyncOperationWithProgress&lt;TResult, TProgress&gt;](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)
 * [implements::get_strong](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)
 * [concurrency::create_async](/cpp/parallel/concrt/reference/concurrency-namespace-functions#create_async)
 * [concurrency::create_task](/cpp/parallel/concrt/reference/concurrency-namespace-functions#create_task)
