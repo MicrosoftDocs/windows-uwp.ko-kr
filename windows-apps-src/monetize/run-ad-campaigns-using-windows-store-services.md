@@ -1,64 +1,64 @@
 ---
 ms.assetid: 8e6c3d3d-0120-40f4-9f90-0b0518188a1a
 description: Microsoft Store 프로 모션 API를 사용 하 여 또는 조직의 파트너 센터 계정에 등록 된 앱에 대 한 프로 모션 광고 캠페인을 프로그래밍 방식으로 관리 합니다.
-title: 스토어 서비스를 사용하여 광고 캠페인 실행
+title: 스토어 서비스를 사용 하 여 ad 캠페인 실행
 ms.date: 06/04/2018
 ms.topic: article
-keywords: windows 10, uwp, Microsoft Store 프로모션 API, 광고 캠페인
+keywords: windows 10, uwp, Microsoft Store 프로 모션 API, ad 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: 54a9fcf524231f641ca92cb037bb6dcd01b8502f
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 560f9b545cc7c7b547e707bffb2b19904c36863b
+ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260185"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846773"
 ---
-# <a name="run-ad-campaigns-using-store-services"></a>스토어 서비스를 사용하여 광고 캠페인 실행
+# <a name="run-ad-campaigns-using-store-services"></a>스토어 서비스를 사용 하 여 ad 캠페인 실행
 
-*Microsoft Store 프로 모션 API* 를 사용 하 여 또는 조직의 파트너 센터 계정에 등록 된 앱에 대 한 프로 모션 광고 캠페인을 프로그래밍 방식으로 관리 합니다. 이 API를 사용하여 대상 지정 및 창작 광고와 같은 캠페인 및 기타 관련 자산을 만들고 업데이트하고 모니터링할 수 있습니다. 이 API는 특히 파트너 센터를 사용 하지 않고 많은 양의 캠페인을 만드는 개발자에 게 유용 합니다. 이 API는 Azure AD(Azure Active Directory)를 사용하여 앱 또는 서비스의 호출을 인증합니다.
+*Microsoft Store 프로 모션 API* 를 사용 하 여 또는 조직의 파트너 센터 계정에 등록 된 앱에 대 한 프로 모션 광고 캠페인을 프로그래밍 방식으로 관리 합니다. 이 API를 사용 하 여 캠페인을 만들고, 업데이트 하 고, 대상 및 creatives 등의 기타 관련 자산을 모니터링할 수 있습니다. 이 API는 특히 파트너 센터를 사용 하지 않고 많은 양의 캠페인을 만드는 개발자에 게 유용 합니다. 이 API는 Azure Active Directory (Azure AD)를 사용 하 여 앱 또는 서비스에서 호출을 인증 합니다.
 
-다음 단계에서는 종단 간 프로세스를 설명합니다.
+다음 단계는 종단 간 프로세스를 설명 합니다.
 
-1.  [필수 조건](#prerequisites)을 모두 완료했는지 확인합니다.
-2.  Microsoft Store 프로모션 API에서 메서드를 호출하기 전에 [Azure AD 액세스 토큰을 가져옵니다](#obtain-an-azure-ad-access-token). 토큰을 가져온 후 만료되기 전에 이 토큰을 Microsoft Store 프로모션 API에 대한 호출에 사용할 수 있는 시간은 60분입니다. 토큰이 만료된 후 새 토큰을 생성할 수 있습니다.
-3.  [Microsoft Store 프로모션 API를 호출합니다](#call-the-windows-store-promotions-api).
+1.  모든 [필수 구성 요소](#prerequisites)를 완료 했는지 확인 합니다.
+2.  Microsoft Store 프로 모션 API에서 메서드를 호출 하기 전에 [AZURE AD 액세스 토큰을 가져옵니다](#obtain-an-azure-ad-access-token). 토큰을 가져온 후에는 토큰이 만료 되기 전에 Microsoft Store 프로 모션 API에 대 한 호출에서이 토큰을 사용 하는 데 60 분이 소요 됩니다. 토큰이 만료 된 후 새 토큰을 생성할 수 있습니다.
+3.  [Microsoft Store 프로 모션 API를 호출](#call-the-windows-store-promotions-api)합니다.
 
 또는 파트너 센터를 사용 하 여 ad 캠페인을 만들고 관리할 수 있으며, Microsoft Store 프로 모션 API를 통해 프로그래밍 방식으로 만드는 모든 ad 캠페인은 파트너 센터 에서도 액세스할 수 있습니다. 파트너 센터에서 ad 캠페인을 관리 하는 방법에 대 한 자세한 내용은 [앱에 대 한 광고 캠페인 만들기](../publish/create-an-ad-campaign-for-your-app.md)를 참조 하세요.
 
 > [!NOTE]
-> 파트너 센터 계정이 있는 개발자는 Microsoft Store 프로 모션 API를 사용 하 여 앱에 대 한 광고 캠페인을 관리할 수 있습니다. 광고회사는 광고주를 대리하여 광고 캠페인을 실행하기 위해 이 API에 대 한 액세스를 요청할 수도 있습니다. 이 API에 대한 자세한 내용을 알기 원하거나 이 API에 대한 액세스를 요청하려는 광고회사는 storepromotionsapi@microsoft.com으로 요청을 보내시기 바랍니다.
+> 파트너 센터 계정이 있는 개발자는 Microsoft Store 프로 모션 API를 사용 하 여 앱에 대 한 광고 캠페인을 관리할 수 있습니다. 또한 미디어 기관은이 API에 대 한 액세스를 요청 하 여 광고주를 대신 하 여 ad 캠페인을 실행할 수 있습니다. 이 API에 대 한 자세한 정보를 알고자 하거나 액세스를 요청 하는 미디어 에이전시 인 경우에 요청을 보냅니다 storepromotionsapi@microsoft.com .
 
 <span id="prerequisites" />
 
-## <a name="step-1-complete-prerequisites-for-using-the-microsoft-store-promotions-api"></a>1단계: Microsoft Store 프로모션 API를 사용하기 위한 필수 조건 완료
+## <a name="step-1-complete-prerequisites-for-using-the-microsoft-store-promotions-api"></a>1 단계: Microsoft Store 프로 모션 API를 사용 하기 위한 필수 구성 요소 완료
 
-Microsoft Store 프로모션 API를 호출하는 코드 작성을 시작하기 전에 다음 필수 조건을 완료했는지 확인합니다.
+Microsoft Store 프로 모션 API를 호출 하는 코드 작성을 시작 하기 전에 다음 필수 구성 요소를 완료 했는지 확인 합니다.
 
-* 이 API를 사용 하 여 ad 캠페인을 성공적으로 만들고 시작 하려면 먼저 [파트너 센터의 **ad 캠페인** 페이지를 사용 하 여 유료 ad 캠페인을 만들고](../publish/create-an-ad-campaign-for-your-app.md)이 페이지에서 결제 방법을 하나 이상 추가 해야 합니다. 이렇게 하면 이 API를 사용하여 광고 캠페인의 청구 가능한 배달 라인을 성공적으로 만들 수 있습니다. 이 API를 사용 하 여 만든 ad 캠페인의 배달 줄은 파트너 센터의 **ad 캠페인** 페이지에서 선택한 기본 결제 방법을 자동으로 청구 합니다.
+* 이 API를 사용 하 여 ad 캠페인을 성공적으로 만들고 시작 하려면 먼저 [파트너 센터의 **ad 캠페인** 페이지를 사용 하 여 유료 ad 캠페인을 만들고](../publish/create-an-ad-campaign-for-your-app.md)이 페이지에서 결제 방법을 하나 이상 추가 해야 합니다. 이 작업을 수행한 후에는이 API를 사용 하 여 광고 캠페인에 대해 청구 가능한 배달 줄을 성공적으로 만들 수 있습니다. 이 API를 사용 하 여 만든 ad 캠페인의 배달 줄은 파트너 센터의 **ad 캠페인** 페이지에서 선택한 기본 결제 방법을 자동으로 청구 합니다.
 
-* 사용자(또는 조직)에게 Azure AD 디렉터리와 해당 디렉터리에 대한 [전역 관리자](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) 권한이 있어야 합니다. 이미 Office 365 또는 Microsoft의 다른 비즈니스 서비스를 사용하는 경우 이미 Azure AD 디렉터리가 있습니다. 그렇지 않으면 추가 비용 없이 [파트너 센터에서 새 AZURE AD를 만들](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
+* 사용자(또는 조직)는 Azure AD 디렉터리가 있어야 하고 디렉터리에 대한 [전역 관리자](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) 권한이 있어야 합니다. Microsoft에서 이미 Microsoft 365 또는 다른 비즈니스 서비스를 사용 하는 경우 Azure AD 디렉터리가 이미 있습니다. 그렇지 않으면 추가 비용 없이 [파트너 센터에서 새 AZURE AD를 만들](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
 
-* Azure AD 응용 프로그램을 파트너 센터 계정에 연결 하 고, 응용 프로그램에 대 한 테 넌 트 ID와 클라이언트 ID를 검색 하 고, 키를 생성 해야 합니다. Azure AD 응용 프로그램은 Microsoft Store 프로모션 API를 호출할 앱 또는 서비스입니다. API에 전달하는 Azure AD 액세스 토큰을 가져오려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
+* Azure AD 응용 프로그램을 파트너 센터 계정에 연결 하 고, 응용 프로그램에 대 한 테 넌 트 ID와 클라이언트 ID를 검색 하 고, 키를 생성 해야 합니다. Azure AD 응용 프로그램은 Microsoft Store 프로 모션 API를 호출 하려는 응용 프로그램 또는 서비스를 나타냅니다. API에 전달하는 Azure AD 액세스 토큰을 얻으려면 테넌트 ID, 클라이언트 ID 및 키가 필요합니다.
     > [!NOTE]
-    > 이 작업은 한 번만 수행하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키는 Azure AD 액세스 토큰을 새로 만들 때마다 다시 사용할 수 있습니다.
+    > 이 작업은 한 번만 수행 하면 됩니다. 테넌트 ID, 클라이언트 ID 및 키가 있으면 새 Azure AD 액세스 토큰을 만들어야 할 때마다 다시 사용할 수 있습니다.
 
 Azure AD 응용 프로그램을 파트너 센터 계정에 연결 하 고 필요한 값을 검색 하려면 다음을 수행 합니다.
 
-1.  파트너 센터에서 조직의 [파트너 센터 계정을 조직의 AZURE AD 디렉터리와 연결](../publish/associate-azure-ad-with-partner-center.md)합니다.
+1.  파트너 센터에서 [조직의 파트너 센터 계정을 조직의 Azure AD 디렉터리에 연결합니다](../publish/associate-azure-ad-with-partner-center.md).
 
-2.  그런 다음 파트너 센터의 **계정 설정** 섹션에 있는 **사용자** 페이지에서 파트너 센터 계정에 대 한 프로 모션 캠페인을 관리 하는 데 사용할 앱 또는 서비스를 나타내는 [Azure AD 응용 프로그램을 추가](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) 합니다. 이 응용 프로그램에 **관리자** 역할을 할당하도록 합니다. 응용 프로그램이 아직 Azure AD 디렉터리에 존재 하지 않는 경우 [파트너 센터에서 새 AZURE ad 응용 프로그램을 만들](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account)수 있습니다. 
+2.  그런 다음 파트너 센터의 **계정 설정** 섹션에 있는 **사용자** 페이지에서 파트너 센터 계정에 대 한 프로 모션 캠페인을 관리 하는 데 사용할 앱 또는 서비스를 나타내는 [Azure AD 응용 프로그램을 추가](../publish/add-users-groups-and-azure-ad-applications.md#add-azure-ad-applications-to-your-partner-center-account) 합니다. 이 애플리케이션을 **관리자** 역할에 할당해야 합니다. 애플리케이션이 아직 Azure AD 디렉터리에 존재하지 않는 경우 [파트너 센터에서 새 Azure AD 애플리케이션 만들 수 있습니다](../publish/add-users-groups-and-azure-ad-applications.md#create-a-new-azure-ad-application-account-in-your-organizations-directory-and-add-it-to-your-partner-center-account). 
 
-3.  **사용자** 페이지로 돌아가서 Azure AD 응용 프로그램의 이름을 클릭하여 응용 프로그램 설정으로 이동하고 **테넌트 ID** 및 **클라이언트 ID** 값을 복사합니다.
+3.  **사용자** 페이지로 돌아가 Azure AD 애플리케이션의 이름을 클릭하여 애플리케이션 설정으로 이동한 다음 **테넌트 ID**와 **클라이언트 ID** 값을 복사합니다.
 
-4. **새 키 추가**를 클릭합니다. 다음 화면에서 **키** 값을 복사합니다. 이 페이지를 벗어난 후에는 이 정보에 다시 액세스할 수 없습니다. 자세한 내용은 [AD 응용 프로그램 키 관리](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys)를 참조하세요.
+4. **새 키 추가**를 클릭합니다. 다음 화면에서 **키** 값을 복사합니다. 이 페이지를 나가면 이 정보에 다시 액세스할 수 없습니다. 자세한 내용은 [Azure AD 애플리케이션 키 관리](../publish/add-users-groups-and-azure-ad-applications.md#manage-keys)를 참조하세요.
 
 <span id="obtain-an-azure-ad-access-token" />
 
 ## <a name="step-2-obtain-an-azure-ad-access-token"></a>2단계: Azure AD 액세스 토큰 가져오기
 
-Microsoft Store 프로모션 API에서 메서드를 호출하기 전에 먼저 API에 있는 각 메서드의 **Authorization** 헤더에 전달하는 Azure AD 액세스 토큰을 가져와야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 API에 대한 추가 호출에 계속 사용할 수 있도록 해당 토큰을 새로 고칠 수 있습니다.
+Microsoft Store 프로 모션 API에서 메서드를 호출 하기 전에 먼저 API의 각 메서드에 대 한 **인증** 헤더에 전달 하는 Azure AD 액세스 토큰을 가져와야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료 된 후에는 API에 대 한 추가 호출에서 토큰을 계속 사용할 수 있도록 토큰을 새로 고칠 수 있습니다.
 
-액세스 토큰을 가져오려면 [클라이언트 자격 증명을 사용한 서비스 간 호출](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/)의 지침에 따라 HTTP POST를 ```https://login.microsoftonline.com/<tenant_id>/oauth2/token``` 끝점에 보냅니다. 다음은 샘플 요청입니다.
+액세스 토큰을 가져오려면 [클라이언트 자격 증명을 사용 하 여 서비스 호출](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) 에 대 한 지침에 따라 HTTP POST를 끝점으로 보냅니다 ```https://login.microsoftonline.com/<tenant_id>/oauth2/token``` . 샘플 요청은 다음과 같습니다.
 
 ```syntax
 POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
@@ -71,46 +71,46 @@ grant_type=client_credentials
 &resource=https://manage.devcenter.microsoft.com
 ```
 
-POST URI에 있는 *테 넌 트\_id* 값과 *클라이언트\_id* 및 *클라이언트\_비밀* 매개 변수에 대해 이전 섹션에서 파트너 센터에서 검색 한 응용 프로그램의 테 넌 트 id, 클라이언트 id 및 키를 지정 합니다. *resource* 매개 변수에는 ```https://manage.devcenter.microsoft.com```을 지정해야 합니다.
+POST URI와 클라이언트 * \_ id* 및 *클라이언트 \_ 암호* 매개 변수의 *테 넌 트 \_ Id* 값에 대해 이전 섹션의 파트너 센터에서 검색 한 응용 프로그램의 테 넌 트 id, 클라이언트 id 및 키를 지정 합니다. *리소스* 매개 변수에는 ```https://manage.devcenter.microsoft.com```을 지정해야 합니다.
 
-만료된 액세스 토큰은 [여기](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens)의 지침에 따라 새로 고칠 수 있습니다.
+액세스 토큰이 만료 되 면 [여기](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens)에 설명 된 지침에 따라 새로 고칠 수 있습니다.
 
 <span id="call-the-windows-store-promotions-api" />
 
-## <a name="step-3-call-the-microsoft-store-promotions-api"></a>3단계: Microsoft Store 프로모션 API 호출
+## <a name="step-3-call-the-microsoft-store-promotions-api"></a>3 단계: Microsoft Store 프로 모션 API 호출
 
-Azure AD 액세스 토큰이 있으면 Microsoft Store 프로모션 API를 호출할 준비가 된 것입니다. 액세스 토큰을 각 메서드의 **Authorization** 헤더로 전달해야 합니다.
+Azure AD 액세스 토큰이 있으면 Microsoft Store 프로 모션 API를 호출할 준비가 된 것입니다. 각 메서드의 **인증** 헤더에 액세스 토큰을 전달 해야 합니다.
 
-Microsoft Store 프로모션 API 컨텍스트에서 광고 캠페인은 캠페인에 대한 고급 정보를 포함하는 *캠페인* 개체와 광고 캠페인에 대한 *배달 라인*, *타기팅 프로필* 및 *크리에이티브*를 나타내는 추가 개체로 구성됩니다. API는 이러한 개체 유형으로 그룹화된 일련의 메소드를 포함합니다. 캠페인을 만들려면 일반적으로 이들 각 개체에 대해 다른 POST 메소드를 호출합니다. 또한 API는 모든 개체를 검색하는 데 사용할 수 있는 GET 메소드와 캠페인, 배달 라인 및 타기팅 프로필 개체를 편집하는 데 사용할 수 있는 PUT 메서드도 제공합니다.
+Microsoft Store 프로 모션 API의 컨텍스트에서 ad 캠페인은 캠페인에 대 한 개략적인 정보를 포함 하는 *캠페인* 개체와, 광고 캠페인에 대 한 *배달 선*, *대상 프로필*및 *creatives* 를 나타내는 추가 개체를 구성 합니다. API에는 이러한 개체 형식으로 그룹화 되는 다양 한 메서드 집합이 포함 되어 있습니다. 캠페인을 만들려면 일반적으로 이러한 각 개체에 대해 다른 POST 메서드를 호출 합니다. 또한 API는 캠페인, 배달 선 및 대상 프로필 개체를 편집 하는 데 사용할 수 있는 개체 및 PUT 메서드를 검색 하는 데 사용할 수 있는 GET 메서드를 제공 합니다.
 
-이러한 개체 및 관련 메서드에 대한 자세한 내용은 다음 표를 참조하세요.
+이러한 개체 및 관련 메서드에 대 한 자세한 내용은 다음 표를 참조 하십시오.
 
 
 | Object       | 설명   |
 |---------------|-----------------|
-| 캠페인 |  이 개체는 광고 캠페인을 나타내며, 광고 캠페인의 개체 모델 계층에서 상단에 위치합니다. 이 개체는 실행 중인 캠페인의 유형(유료, 하우스 또는 커뮤니티), 캠페인 목표, 캠페인의 배달 라인 및 기타 세부 정보를 식별합니다. 각 캠페인은 한 앱에만 연결할 수 있습니다.<br/><br/>이 개체와 관련된 메서드에 대한 자세한 내용은 [광고 캠페인 관리](manage-ad-campaigns.md)를 참조하세요.<br/><br/>**참고**&nbsp;&nbsp;광고 캠페인을 만든 후 [Microsoft Store 분석 API](get-ad-campaign-performance-data.md)의 [광고 캠페인 성과 데이터 가져오기](access-analytics-data-using-windows-store-services.md) 메서드를 사용하여 캠페인의 성과 데이터를 검색할 수 있습니다.  |
-| 배달 라인 | 각 캠페인에는 인벤토리를 구매하고 광고를 전달하는 데 사용되는 배달 라인이 하나 이상 있습니다. 각 배달 라인에 대해 타기팅을 설정하고, 입찰 가격을 설정할 수 있으며, 예산을 설정하고 사용할 크리에이티브와 연결하여 지출할 금액을 결정할 수 있습니다.<br/><br/>이 개체와 관련된 메서드에 대한 자세한 내용은 [광고 캠페인 배달 라인 관리](manage-delivery-lines-for-ad-campaigns.md)를 참조하세요. |
-| 타기팅 프로필 | 각 배달 라인에는 타깃으로 설정할 사용자, 지역 및 인벤토리 유형을 지정하는 타기팅 프로필이 하나씩 있습니다. 타기팅 프로필은 템플릿으로 만들고 배달 라인 사이에서 공유할 수 있습니다.<br/><br/>이 개체와 관련된 메서드에 대한 자세한 내용은 [광고 캠페인 타기팅 프로필 관리](manage-targeting-profiles-for-ad-campaigns.md)를 참조하세요. |
-| 크리에이티브 | 모든 배달 라인에는 캠페인의 일부로서 고객에게 표시되는 광고를 나타내는 크리에이티브가 하나 이상 있습니다. 크리에이티브는 하나 이상의 배달 라인과 연결될 수 있으며, 항상 동일한 앱을 나타내는 경우 여러 광고 캠페인에서 공유될 수도 있습니다.<br/><br/>이 개체와 관련된 메서드에 대한 자세한 내용은 [광고 캠페인 크리에이티브 관리](manage-creatives-for-ad-campaigns.md)를 참조하세요. |
+| 캠페인 |  이 개체는 ad 캠페인을 나타내며, 광고 캠페인의 개체 모델 계층 구조 맨 위에 있습니다. 이 개체는 실행 중인 캠페인 유형 (유료, 집 또는 커뮤니티), 캠페인 목표, 캠페인의 배달 선 및 기타 세부 정보를 식별 합니다. 각 캠페인은 하나의 앱에만 연결할 수 있습니다.<br/><br/>이 개체와 관련 된 메서드에 대 한 자세한 내용은 [ad 캠페인 관리](manage-ad-campaigns.md)를 참조 하세요.<br/><br/>**Note** &nbsp; 참고 &nbsp; 광고 캠페인을 만든 후 [Microsoft Store 분석 API](access-analytics-data-using-windows-store-services.md)에서 [ad 캠페인 성능 데이터 가져오기](get-ad-campaign-performance-data.md) 방법을 사용 하 여 캠페인에 대 한 성능 데이터를 검색할 수 있습니다.  |
+| 배달 라인 | 모든 캠페인에는 재고를 구입 하 고 광고를 배달 하는 데 사용 되는 하나 이상의 배달 회선이 있습니다. 각 배달 라인에 대해 대상을 설정 하 고, 입찰 가격을 설정 하 고, 사용 하려는 creatives에 대 한 예산 및 링크를 설정 하 여 비용을 결정 하는 데 사용할 수 있습니다.<br/><br/>이 개체와 관련 된 메서드에 대 한 자세한 내용은 [ad 캠페인의 배달 선 관리](manage-delivery-lines-for-ad-campaigns.md)를 참조 하세요. |
+| 대상 프로필 | 모든 배달 라인에는 대상으로 지정할 사용자, 지역 및 재고 유형을 지정 하는 대상 프로필이 하나 있습니다. 대상 프로필을 템플릿으로 만들고 배달 줄에서 공유할 수 있습니다.<br/><br/>이 개체와 관련 된 메서드에 대 한 자세한 내용은 [ad 캠페인의 대상 프로필 관리](manage-targeting-profiles-for-ad-campaigns.md)를 참조 하세요. |
+| Creatives | 모든 배달 라인에는 캠페인의 일부로 고객에 게 표시 되는 광고를 나타내는 하나 이상의 creatives 있습니다. Creative는 항상 동일한 앱을 나타내는 ad 캠페인을 통해 하나 이상의 배달 선과 연결 될 수 있습니다.<br/><br/>이 개체와 관련 된 메서드에 대 한 자세한 내용은 [Manage creatives for ad 캠페인과](manage-creatives-for-ad-campaigns.md)항목을 참조 하세요. |
 
 
-다음 다이어그램은 캠페인, 배달 라인, 타기팅 프로필 및 크리에이티브 간 관계를 보여 줍니다.
+다음 다이어그램은 캠페인, 배달 선, 대상 프로필 및 creatives 간의 관계를 보여 줍니다.
 
-![광고 캠페인 계층](images/ad-campaign-hierarchy.png)
+![Ad 캠페인 계층 구조](images/ad-campaign-hierarchy.png)
 
 ## <a name="code-example"></a>코드 예제
 
-다음 코드 예제는 Azure AD 액세스 토큰을 얻고 C# 콘솔 앱에서 Microsoft Store 프로모션 API를 호출하는 방법을 보여 줍니다. 이 코드 예제를 사용하려면 시나리오에 맞는 적절한 값을 *tenantId*, *clientId*, *clientSecret* 및 *appID* 변수에 할당합니다. 이 예제에서 Microsoft Store 프로모션 API가 반환한 JSON 데이터를 역직렬화하려면 Newtonsoft의 [Json.NET 패키지](https://www.newtonsoft.com/json)가 필요합니다.
+다음 코드 예제에서는 Azure AD 액세스 토큰을 가져오고 c # 콘솔 앱에서 Microsoft Store 프로 모션 API를 호출 하는 방법을 보여 줍니다. 이 코드 예제를 사용 하려면 사용자의 시나리오에 맞게 *tenantId*, *clientId*, *clientSecret*및 *appID* 변수를 적절 한 값에 할당 합니다. 이 예에서는 Newtonsoft.json의 [Json.NET 패키지가](https://www.newtonsoft.com/json) Microsoft Store 프로 모션 API에서 반환 된 Json 데이터를 deserialize 해야 합니다.
 
 [!code-csharp[PromotionsApi](./code/StoreServicesExamples_Promotions/cs/Program.cs#PromotionsApiExample)]
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Ad 캠페인 관리](manage-ad-campaigns.md)
+* [광고 캠페인 관리](manage-ad-campaigns.md)
 * [광고 캠페인의 배달 선 관리](manage-delivery-lines-for-ad-campaigns.md)
 * [광고 캠페인의 대상 프로필 관리](manage-targeting-profiles-for-ad-campaigns.md)
 * [Ad 캠페인에 대 한 creatives 관리](manage-creatives-for-ad-campaigns.md)
-* [Ad 캠페인 성능 데이터 가져오기](get-ad-campaign-performance-data.md)
+* [광고 캠페인 성과 데이터 가져오기](get-ad-campaign-performance-data.md)
 
 
  

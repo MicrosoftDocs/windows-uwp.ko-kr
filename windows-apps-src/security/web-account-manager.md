@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: e5b835c837ca750f2ccc1ebad9ec119047b02ce7
-ms.sourcegitcommit: 97d2ef33253af210ad2d4f036b4820056ff03f62
+ms.openlocfilehash: 7cf4cfa4b87842cd7113b36220cdfdff69449a3a
+ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85441630"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846793"
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 
@@ -174,7 +174,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 
 이 예에서는 "wl" 문자열을 _범위_ 매개 변수에 전달 합니다. 범위는 특정 사용자에 게 제공 하는 서비스에서 요청 하는 정보의 유형을 나타냅니다. 특정 범위는 사용자의 기본 정보 (예: 이름 및 전자 메일 주소)에 대 한 액세스만 제공 하는 반면 다른 범위는 사용자의 사진이 나 전자 메일 받은 편지함과 같은 중요 한 정보에 대 한 액세스 권한을 부여할 수 있습니다. 일반적으로 앱은 함수를 구현 하는 데 필요한 최소 허용 범위를 사용 해야 합니다. 서비스 공급자는 서비스에 사용할 토큰을 가져오는 데 필요한 범위에 대 한 설명서를 제공 합니다. 
 
-* Office 365 및 Outlook.com 범위의 경우 [v2.0 인증 끝점을 사용하여 Office 365 및 Outlook.com API 인증](https://developer.microsoft.com/graph/docs/concepts/auth_overview)을 참조하세요. 
+* Microsoft 365 및 Outlook.com 범위는 [Outlook REST API (버전 2.0) 사용](/previous-versions/office/office-365-api/api/version-2.0/use-outlook-rest-api)을 참조 하세요. 
 * OneDrive 범위는 [onedrive 인증 및 로그인](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes)을 참조 하세요. 
 
 > [!TIP]
@@ -420,7 +420,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 이론적으로는 모든 항목에 대해 설정 명령을 사용할 수 있습니다. 그러나 위에서 설명한 것과 같은 직관적인 계정 관련 시나리오로 사용을 제한 하는 것이 좋습니다. 
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 [Windows... i a.](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core)
 

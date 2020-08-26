@@ -6,14 +6,14 @@ label: Send a local toast notification from desktop C# apps
 template: detail.hbs
 ms.date: 01/23/2018
 ms.topic: article
-keywords: 'windows 10, uwp, win32, 데스크톱, 알림 메시지 보내기, 알림 보내기, 데스크톱 브리지, msix, 스파스 패키지, c #, c sharp, 알림 메시지, wpf'
+keywords: 'windows 10, uwp, win32, 데스크톱, 알림 메시지 보내기, 알림 보내기, 바탕 화면 브리지, msix, 스파스 패키지, c #, c #, 알림 메시지, wpf, 알림 메시지 보내기 wpf, 알림 메시지 보내기 winforms, 알림 메시지 보내기 c #, 알림 wpf, 알림 c # 보내기 #'
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f1eef86045f44fa75363b54fa58e3e7089d64e0
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: 8a339a4f2dca52a9bc04b1bba92f149a3e627878
+ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997930"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846753"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>데스크톱 C# 앱에서 로컬 알림 메시지 보내기
 
