@@ -6,12 +6,12 @@ ms.date: 04/17/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 31d7805e7ae936e5c7427b54f2eb9b0ad4b4c3e9
-ms.sourcegitcommit: 37e4af3ba203295c7e88448414cf7ea537ab5402
+ms.openlocfilehash: c871149f764024de41309f21dbd036848633a2af
+ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84257384"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846733"
 ---
 # <a name="modernize-your-desktop-apps"></a>데스크톱 앱 현대화
 
@@ -97,7 +97,7 @@ Windows 10, 버전 1903부터 창 핸들(HWND)에 연결된 WPF, Windows Forms �
 
 Microsoft Graph는 수백만 사용자 데이터와 상호 작용하는 조직 및 소비자를 위한 앱을 빌드하는 데 사용할 수 있는 API 컬렉션입니다. Microsoft Graph는 데이터에 액세스하기 위한 REST API 및 클라이언트 라이브러리를 다음에 제공합니다.
 * Azure Active Directory
-* Office 365 서비스: SharePoint, OneDrive, Outlook/Exchange, Microsoft Teams, OneNote, Planner, Excel
+* Microsoft 365 Office 앱: SharePoint, OneDrive, Outlook/Exchange, Microsoft Teams, OneNote, Planner, Excel
 * Enterprise Mobility + Security 서비스: Identity Manager, Intune, Advanced Threat Analytics, Advanced Threat Protection.
 * Windows 10 서비스: 작업 및 디바이스
 
