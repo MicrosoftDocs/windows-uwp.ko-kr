@@ -1,6 +1,6 @@
 ---
-Description: 흐름 동작에서 방향 및 무게를 사용 하는 방법에 대해 알아봅니다.
 title: 방향성 및 중력-Windows 앱의 애니메이션
+description: 예제를 확인 하 여 이동 방향, 탐색 방향 및 애니메이션 장면에서의 무게를 사용 하는 방법에 대해 알아봅니다.
 label: Directionality and gravity
 template: detail.hbs
 ms.date: 10/02/2018
@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ddcfac5e36500a8fc6dc41c7c86037f5a1483203
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: a9b6fbc639ac225e68a6ae1b008537cba6f72ead
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970648"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88943113"
 ---
 # <a name="directionality-and-gravity"></a>방향 및 무게
 
@@ -59,7 +59,7 @@ ms.locfileid: "82970648"
 
 후방 탐색의 경우 이동이 반전 됩니다 (B-A). 사용자가 다시 탐색할 때 가능한 한 빨리 이전 상태로 돌아갈 것으로 예상 됩니다. 타이밍은 더 빠르고 직접적 이며 감속 감속/가속을 사용 합니다.
 
-여기서 이러한 priciples는 앞으로 및 뒤로 탐색 하는 동안 선택한 항목이 화면에 유지 되는 경우 적용 됩니다.
+여기서 이러한 원칙은 앞으로 및 뒤로 탐색 하는 동안 선택한 항목이 화면에 유지 되는 경우 적용 됩니다.
 
 ![지속적인 움직임의 UI 예](images/continuous3.gif)
 
@@ -116,7 +116,7 @@ ms.locfileid: "82970648"
 
 ![방향 뒤로](images/continuity-photos.gif)
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [동작 개요](index.md)
 - [타이밍 및 감속](timing-and-easing.md)

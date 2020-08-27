@@ -1,17 +1,17 @@
 ---
 ms.assetid: 454953E1-DD8F-44B7-A614-7BAD8C683536
 title: 회전계 사용
-description: 회전 계를 사용 하 여 사용자 이동의 변경 내용을 검색 하는 방법을 알아봅니다.
+description: 회전 계 API를 사용 하 여 각도 속도 및 회전 동작과 같은 사용자 이동의 변경을 검색 하는 앱에서 회전 계 입력을 통합 하는 방법에 대해 알아봅니다.
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a6ad3b98c559dff8781c96a98a6428a4d1f95a4
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 10d65a6b752c904d7145c3c5e09194dab7c8e0a5
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493128"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88943093"
 ---
 # <a name="use-the-gyrometer"></a>회전계 사용
 

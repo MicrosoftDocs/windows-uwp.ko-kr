@@ -1,16 +1,16 @@
 ---
 title: 카메라 바코드 스캐너 Symbologies
-description: 카메라 바코드 스캐너 지원 Symbologies
+description: Windows 10과 함께 제공 되는 소프트웨어 바코드 디코더에 의해 지원 되는 각 symbologies에 대 한 샘플 바코드를 봅니다.
 ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 481d10f2fea076f45124a3c75819dfe6494300bf
-ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
+ms.openlocfilehash: a9618402a6ee76a20ff5f95418ee7280b39db4a2
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85448403"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88943133"
 ---
 # <a name="symbologies"></a>Symbologies
 
@@ -62,7 +62,7 @@ Windows 10은 소프트웨어 디코더와 결합 된 표준 렌즈 카메라를
 
 ![샘플 바코드-GS1DWCode](images/pos/Rice-Box-V7.jpg)
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참조
 
 ### <a name="samples"></a>샘플
 

@@ -1,17 +1,17 @@
 ---
 title: 사용자 인터페이스 추가
-description: DirectX UWP 게임에 2D 사용자 인터페이스 오버레이를 추가 하는 방법에 대해 알아봅니다.
+description: Direct2D Api를 사용 하 여 DirectX UWP 게임에 헤드 표시 및 게임 상태 메뉴가 포함 된 2D 사용자 인터페이스 오버레이를 추가 하는 방법을 알아봅니다.
 ms.assetid: fa40173e-6cde-b71b-e307-db90f0388485
 ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 사용자 인터페이스, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: b6b59bd4f42d31e1f29cc1af298199b42cce6781
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: cbe67a50cd51f17aa628ff2e02955fd90781392f
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409542"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942823"
 ---
 # <a name="add-a-user-interface"></a>사용자 인터페이스 추가
 
@@ -240,9 +240,9 @@ auto windowBounds = m_deviceResources->GetLogicalSize();
 
 오버레이는 **상태** 및 **동작**의 두 섹션으로 구분 됩니다. **상태** secton **제목** 및 **본문** 사각형으로 세분화 됩니다. **작업** 섹션에는 하나의 사각형만 있습니다. 각 사각형의 용도는 서로 다릅니다.
 
--   `titleRectangle`제목 텍스트를 포함 합니다.
--   `bodyRectangle`본문 텍스트를 포함 합니다.
--   `actionRectangle`플레이어에 게 특정 작업을 수행 하도록 알리는 텍스트를 포함 합니다.
+-   `titleRectangle` 제목 텍스트를 포함 합니다.
+-   `bodyRectangle` 본문 텍스트를 포함 합니다.
+-   `actionRectangle` 플레이어에 게 특정 작업을 수행 하도록 알리는 텍스트를 포함 합니다.
 
 게임에는 6 가지 상태를 설정할 수 있습니다. 오버레이의 **상태** 부분을 사용 하 여 전달 된 게임의 상태입니다. **상태** 사각형은 다음 상태에 해당 하는 여러 메서드를 사용 하 여 업데이트 됩니다.
 
@@ -317,7 +317,7 @@ auto windowBounds = m_deviceResources->GetLogicalSize();
     ```
 
 - 라는 비트맵이 생성 되 `m_levelBitmap` 고 **createbitmap**을 사용 하 여 현재 DPI를 고려 합니다.
-- `m_levelBitmap`는 [**ID2D1DeviceContext:: SetTarget**](/windows/desktop/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-settarget)를 사용 하 여 2d 렌더링 대상으로 설정 됩니다.
+- `m_levelBitmap` 는 [**ID2D1DeviceContext:: SetTarget**](/windows/desktop/api/d2d1_1/nf-d2d1_1-id2d1devicecontext-settarget)를 사용 하 여 2d 렌더링 대상으로 설정 됩니다.
 - 비트맵은 [**ID2D1RenderTarget:: Clear**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-clear)를 사용 하 여 모든 픽셀이 검정색으로 지워집니다.
 - [**ID2D1RenderTarget:: BeginDraw**](/windows/desktop/api/d2d1/nf-d2d1-id2d1rendertarget-begindraw) 를 호출 하 여 그리기를 시작 합니다. 
 - **DrawText** 는 `m_titleString` `m_bodyString` `m_actionString` 해당 **ID2D1SolidColorBrush**를 사용 하 여, 및에 저장 된 텍스트를 approperiate 사각형에 그리도록 호출 합니다.
