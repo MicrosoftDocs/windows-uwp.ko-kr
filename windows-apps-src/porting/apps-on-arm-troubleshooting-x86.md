@@ -1,54 +1,54 @@
 ---
-title: x86 데스크톱 앱의 문제 해결
-description: ARM을 기반으로 실행되는 경우 x86 앱 관련 일반적인 문제 및 이를 해결하는 방법.
+title: X86 데스크톱 응용 프로그램 문제 해결
+description: 드라이버, 셸 확장 및 디버깅에 대 한 정보를 포함 하 여 ARM64에서 실행 되는 x86 데스크톱 앱과 관련 된 일반적인 문제를 해결 하는 방법에 대해 알아봅니다.
 ms.date: 05/09/2018
 ms.topic: article
-keywords: windows 10 s, 항상 연결, x86 ARM 기반 에뮬레이션, 문제 해결
+keywords: windows 10 s, 항상 연결 됨, ARM의 x86 에뮬레이션, 문제 해결
 ms.localizationpriority: medium
-ms.openlocfilehash: a71f33438a336aba67afbb30b19987b0e0aef83b
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 4dbb3c485d3f6ba3ba410e2a960162880b6f3660
+ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75683936"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970271"
 ---
-# <a name="troubleshooting-x86-desktop-apps"></a>x86 데스크톱 앱의 문제 해결
+# <a name="troubleshooting-x86-desktop-apps"></a>X86 데스크톱 응용 프로그램 문제 해결
 >[!IMPORTANT]
-> 이제 ARM64 SDK를 Visual Studio 15.8 미리 보기 1의 일부로 사용할 수 있습니다. 앱이 최대 기본 속도로 실행되도록 ARM64에 앱을 다시 컴파일하는 것이 좋습니다. 자세한 내용은 [ARM 개발에서 Windows 10에 대한 Visual Studio 지원 초기 미리 보기](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) 블로그 게시물을 참조하세요.
+> ARM64 SDK는 이제 Visual Studio 15.8 Preview 1의 일부로 제공 됩니다. 앱이 전체 기본 속도로 실행 되도록 앱을 ARM64에 다시 컴파일하는 것이 좋습니다. 자세한 내용은 [ARM 개발의 Windows 10에 대 한 Visual Studio 지원의 초기 미리 보기](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) 블로그 게시물을 참조 하세요.
 
-x86 데스크톱 앱 x86 컴퓨터에서와 다르게 작동하는 경우 문제 해결에 도움이 되는 몇 가지 지침은 다음과 같습니다.
+X86 데스크톱 앱이 x86 컴퓨터에서 수행 하는 방식으로 작동 하지 않는 경우 문제를 해결 하는 데 도움이 되는 몇 가지 지침은 다음과 같습니다.
 
 |문제|솔루션|
 |-----|--------|
-| 앱은 ARM용으로 고안되지 않은 드라이버를 사용합니다. | x86 드라이버를 ARM64에 다시 컴파일합니다. [WDK를 사용하여 ARM64 드라이버 빌드](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers)를 참조하세요. |
-| 앱은 x64에서만 사용할 수 있습니다. | Microsoft Store용으로 개발하는 경우 앱의 ARM 버전을 제출하세요. 자세한 내용은 [앱 패키지 아키텍처](/windows/msix/package/device-architecture)를 참조하세요. Win32 개발자는 앱을 ARM64에 다시 컴파일하는 것이 좋습니다. 자세한 내용은 [ARM 개발에서 Windows 10에 대한 Visual Studio 지원 초기 미리 보기](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/)를 참조하세요. |
-| 앱은 1.1 이상의 OpenGL 버전을 사용하거나 하드웨어 가속 OpenGL이 필요합니다. | 사용 가능한 경우 앱의 DirectX 모드를 사용합니다. DirectX 9, DirectX 10, DirectX 11, DirectX 12를 사용하는 x86 앱은 ARM에서 작동합니다. 자세한 내용은 [DirectX 그래픽 및 게임](https://docs.microsoft.com/windows/desktop/directx)을 참조하세요. |
-| x86 앱이 예상대로 작동하지 않습니다. | [ARM의 프로그램 호환성 문제 해결사](apps-on-arm-program-compat-troubleshooter.md)의 지침을 따라 호환성 문제 해결사 사용을 시도해 보세요. 몇 가지 문제 해결 단계는 [ARM의 x86 앱 문제 해결](apps-on-arm-troubleshooting-x86.md) 문서를 참조하세요. |
+| 앱은 ARM 용으로 설계 되지 않은 드라이버를 사용 합니다. | ARM64에 x86 드라이버를 다시 컴파일합니다. [WDK를 사용 하 여 ARM64 드라이버 빌드](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers)를 참조 하세요. |
+| 앱은 x 64에만 사용할 수 있습니다. | Microsoft Store 용으로 개발 하는 경우 ARM 버전의 앱을 제출 합니다. 자세한 내용은 [앱 패키지 아키텍처](/windows/msix/package/device-architecture)를 참조 하세요. Win32 개발자 인 경우 ARM64에 앱을 다시 컴파일하는 것이 좋습니다. 자세한 내용은 [ARM 개발의 Windows 10에 대 한 Visual Studio 지원의 초기 미리 보기](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/)를 참조 하세요. |
+| 앱이 1.1 이후의 OpenGL 버전을 사용 하거나 하드웨어 가속 OpenGL을 요구 합니다. | 앱의 DirectX 모드를 사용 합니다 (사용 가능한 경우). DirectX 9, DirectX 10, DirectX 11 및 DirectX 12를 사용 하는 x86 앱은 ARM에서 작동 합니다. 자세한 내용은 [DirectX Graphics And 게이밍](https://docs.microsoft.com/windows/desktop/directx)를 참조 하세요. |
+| X86 앱이 예상 대로 작동 하지 않습니다. | [ARM의 프로그램 호환성 문제 해결사](apps-on-arm-program-compat-troubleshooter.md)에서 지침에 따라 호환성 문제 해결사를 사용해 보세요. 다른 문제 해결 단계는 [ARM의 x86 앱 문제 해결](apps-on-arm-troubleshooting-x86.md) 문서를 참조 하세요. |
 
 ## <a name="best-practices-for-wow"></a>WOW 모범 사례
-앱이 WOW에서 실행되는 것을 발견하고 x64 시스템에 있는 것으로 가정할 때 한 가지 일반적인 문제점이 발생합니다. 이렇게 가정했으면 앱은 다음을 수행할 수 있습니다.
+앱에서 WOW를 실행 하는 것을 검색 한 후 x64 시스템에 있다고 가정 하는 일반적인 문제 중 하나가 발생 합니다. 이러한 가정이 적용 되 면 앱에서 다음을 수행할 수 있습니다.
 
-- ARM에서 지원되지 않는 자체의 x64 버전을 설치하려고 시도합니다.
-- 기본 레지스트리 보기에서 다른 소프트웨어를 확인합니다.
-- 64비트 .NET Framework를 사용할 수 있는 것으로 가정합니다.
+- ARM에서 지원 되지 않는 자체의 x64 버전을 설치 해 보세요.
+- 네이티브 레지스트리 보기에서 다른 소프트웨어를 확인 합니다.
+- 64 비트 .NET framework를 사용할 수 있다고 가정 합니다.
 
-일반적으로 앱은 WOW에서 실행되는지 결정할 때 호스트 시스템에 대해 가정하지 않아야 합니다. 가능한 한 운영 체제의 기본 구성 요소와 상호 작용하지 않도록 합니다.
+일반적으로 앱은 WOW에서 실행 되도록 결정 되 면 호스트 시스템에 대 한 가정을 하지 않아야 합니다. 가능한 한 OS의 네이티브 구성 요소와 상호 작용 하지 않도록 합니다.
 
-앱은 기본 레지스트리 보기에서 레지스트리 키를 배치하거나 WOW의 존재 여부에 따라 기능을 수행할 수 있습니다. 원래 **IsWow64Process**는 앱이 x64 컴퓨터에서 실행되고 있는지 여부만 나타냅니다. 앱은 이제 [IsWow64Process2](https://docs.microsoft.com/windows/desktop/api/wow64apiset/nf-wow64apiset-iswow64process2)를 사용하여 WOW를 지원하는 시스템에서 실행 중인지 여부를 확인해야 합니다. 
+앱은 기본 레지스트리 보기 아래에 레지스트리 키를 추가 하거나 WOW 유무에 따라 함수를 수행할 수 있습니다. 원래 **IsWow64Process**  는 응용 프로그램이 x64 컴퓨터에서 실행 되 고 있는지만 나타냅니다. 앱은 이제 [IsWow64Process2](https://docs.microsoft.com/windows/desktop/api/wow64apiset/nf-wow64apiset-iswow64process2) 을 사용 하 여 WOW를 지 원하는 시스템에서 실행 되 고 있는지 확인 해야 합니다. 
 
 ## <a name="drivers"></a>드라이버 
-모든 커널 모드 드라이버, [사용자 모드 드라이버 프레임워크(UMDF)](https://docs.microsoft.com/windows-hardware/drivers/wdf/overview-of-the-umdf) 드라이버 및 인쇄 드라이버가 운영 체제의 아키텍처와 일치하도록 컴파일되어야 합니다. x86 앱에 드라이버가 있는 경우 그 드라이버를 ARM64에 대해 다시 컴파일해야 합니다. x86 앱은 에뮬레이션 하에 잘 실행될지도 모르지만 그 드라이버는 ARM64에 대해 다시 컴파일해야 하며 해당 드라이버를 사용하는 모든 앱 환경을 사용할 수 없게 됩니다. ARM64에 대한 드라이버를 컴파일하는 것에 대한 자세한 내용은 [WDK를 사용하여 ARM64 드라이버 빌드](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers)를 참조하세요.
+모든 커널 모드 드라이버, [UMDF (사용자 모드 드라이버 프레임 워크)](https://docs.microsoft.com/windows-hardware/drivers/wdf/overview-of-the-umdf) 드라이버 및 인쇄 드라이버는 OS 아키텍처와 일치 하도록 컴파일해야 합니다. X86 앱에 드라이버가 있는 경우 ARM64에 대해 해당 드라이버를 다시 컴파일해야 합니다. X86 앱은 에뮬레이션에서 제대로 실행 될 수 있으며, ARM64에 대해 드라이버를 다시 컴파일해야 하며, 드라이버에 종속 된 앱 환경을 사용할 수 없게 됩니다. ARM64 드라이버를 컴파일하는 방법에 대 한 자세한 내용은 [WDK를 사용 하 여 ARM64 드라이버 빌드](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers)를 참조 하세요.
 
 ## <a name="shell-extensions"></a>셸 확장 
-Windows 구성 요소를 연결하거나 DLL을 Windows 프로세스에 로드하려고 시도하는 앱은 시스템의 아키텍처, 즉, ARM64와 일치하도록 DLL을 다시 컴파일해야 합니다. 일반적으로 이러한 메서드는 Ime (입력기), 보조 기술 및 셸 확장 앱에서 사용 됩니다. 예를 들어, 탐색기에 클라우드 저장소 아이콘을 표시 하거나 상황에 맞는 메뉴를 마우스 오른쪽 단추로 클릭 합니다. 앱 또는 DLL을 ARM64에 다시 컴파일하는 방법을 알아보려면 [ARM 개발에서 Windows 10에 대한 Visual Studio 지원 초기 미리 보기](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) 블로그 게시물을 참조하세요. 
+Windows 구성 요소를 후크 하거나 해당 Dll을 Windows 프로세스로 로드 하려는 앱은 시스템의 아키텍처와 일치 하도록 해당 Dll을 다시 컴파일해야 합니다. 예: ARM64. 일반적으로 이러한 메서드는 Ime (입력기), 보조 기술 및 셸 확장 앱에서 사용 됩니다. 예를 들어, 탐색기에 클라우드 저장소 아이콘을 표시 하거나 상황에 맞는 메뉴를 마우스 오른쪽 단추로 클릭 합니다. ARM64에 앱 또는 Dll을 다시 컴파일하는 방법에 대 한 자세한 내용은 [ARM 개발의 Windows 10에 대 한 Visual Studio 지원의 초기 미리 보기](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/) 블로그 게시물을 참조 하세요. 
 
 ## <a name="debugging"></a>디버깅
-앱의 동작에 대해 더 깊이 탐구하려면 [ARM 기반 디버깅](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugging-arm64)을 참조하여 ARM 기반 디버깅을 위한 도구 및 전략에 대해 자세한 정보를 알아보세요.
+응용 프로그램의 동작을 더 자세히 조사 하려면 arm에서 [디버깅](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugging-arm64) 을 참조 하 여 arm에서 디버깅 하기 위한 도구 및 전략에 대해 자세히 알아보세요.
 
-## <a name="virtual-machines"></a>가상 머신
-Windows 하이퍼바이저 플랫폼은 Qualcomm Snapdragon 835 모바일 PC 플랫폼에서 지원되지 않습니다. 따라서 Hyper-V를 사용하여 가상 컴퓨터를 실행할 수 없습니다. 현재 추후 Qualcomm 칩셋에 대한 기술에 계속 투자하고 있습니다. 
+## <a name="virtual-machines"></a>Virtual Machines
+Qualcomm Snapdragon 835 Mobile PC 플랫폼에서는 Windows 하이퍼바이저 플랫폼이 지원 되지 않습니다. 따라서 Hyper-v를 사용 하 여 실행 중인 가상 컴퓨터는 작동 하지 않습니다. 향후 Qualcomm 칩셋에는 이러한 기술에 계속 투자 하 고 있습니다. 
 
 ## <a name="dynamic-code-generation"></a>동적 코드 생성
 X86 데스크톱 앱은 런타임에 ARM64 명령을 생성 하는 시스템에 의해 ARM64에서 에뮬레이션 됩니다. 즉, x86 데스크톱 앱이 동적 코드를 생성 하거나 프로세스에서 수정할 수 없도록 하는 경우 ARM64에서 x 86으로 실행 되도록 해당 앱을 지원할 수 없습니다. 
 
-이는 보안을 완화 하기 위한 것입니다. 일부 앱 은 `ProcessDynamicCodePolicy` 플래그가 있는 [SetProcessMitigationPolicy](https://docs.microsoft.com/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setprocessmitigationpolicy) API를 사용 하 여 프로세스에서 사용 하도록 설정 합니다. X86 프로세스로 ARM64에서 성공적으로 실행 하려면이 완화 정책을 사용 하지 않도록 설정 해야 합니다. 
+이는 보안을 완화 하기 위한 것입니다. 일부 앱은 플래그가 있는 [SetProcessMitigationPolicy](https://docs.microsoft.com/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setprocessmitigationpolicy) API를 사용 하 여 프로세스에서 사용 하도록 설정 `ProcessDynamicCodePolicy` 합니다. X86 프로세스로 ARM64에서 성공적으로 실행 하려면이 완화 정책을 사용 하지 않도록 설정 해야 합니다. 

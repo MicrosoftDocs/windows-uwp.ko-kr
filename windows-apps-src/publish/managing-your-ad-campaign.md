@@ -1,51 +1,51 @@
 ---
-Description: 파트너 센터에서 앱에 대 한 광고 캠페인을 관리 합니다.
 title: 광고 캠페인 관리
+description: 캠페인 세부 정보 편집 및 보고를 포함 하 여 앱에 대 한 광고 캠페인을 관리 하기 위한 파트너 센터의 기능에 대해 알아봅니다.
 ms.assetid: 42A9457E-15BD-4A61-B828-1C51D0FC9DA0
 ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f7ee8f95ad1471c73d5ac9e7bb08796dadd6411
-ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
+ms.openlocfilehash: 6a2cccf0392c4e71cc76449d1cfe505af092871e
+ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507027"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970151"
 ---
 # <a name="manage-your-ad-campaign"></a>광고 캠페인 관리
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세히 알아보기](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
-[파트너 센터](https://partner.microsoft.com/dashboard)에서 앱에 대 한 광고 캠페인을 관리 하려면 왼쪽 탐색 메뉴에서 **관심** 영역을 확장 한 다음 **ad 캠페인**을 선택 합니다. 앱과 연결된 모든 광고 캠페인과 각 광고 캠페인의 노출 수, 클릭 수 및 설치 수가 표시됩니다. 노출 수, 클릭 수 및 설치 수에 대한 자세한 내용은 [광고 캠페인 보고서](promote-your-app-report.md)에서 이러한 용어에 대한 정의를 참조하세요.
+[파트너 센터](https://partner.microsoft.com/dashboard)에서 앱에 대 한 광고 캠페인을 관리 하려면 왼쪽 탐색 메뉴에서 **관심** 영역을 확장 한 다음 **ad 캠페인**을 선택 합니다. 앱과 관련 된 모든 ad 캠페인이 표시 되 고, 클릭 하 여 각 광고 캠페인에 대 한 설치와 함께 표시 됩니다. 노출, 클릭 및 설치에 대 한 자세한 내용은 [Ad 캠페인 보고서](promote-your-app-report.md)에서 해당 용어에 대 한 정의를 참조 하세요.
 
-광고 캠페인 목록을 필터링하려면 **섹션 필터** 드롭다운을 클릭하고 다음 필터에서 선택합니다.
+광고 캠페인 목록을 필터링 하려면 **섹션 필터** 드롭다운을 클릭 하 고 다음 필터 중에서 선택 합니다.
 
--   **날짜**: 광고 캠페인과 연결된 노출 수, 클릭 수 및 설치 수에 대한 데이터 범위를 지정합니다.
--   **상태**: 광고 캠페인의 상태를 지정합니다.
-    -   **활성**은 광고 캠페인이 실행 중이고 데이터를 처리하는 상태임을 나타냅니다. 광고 캠페인을 일시적으로 중단하려면 광고 캠페인 테이블의 **작업** 열에서 **일시 중지**를 클릭합니다.
-    -   **일시 중지됨**은 광고 캠페인이 보류 중이고 데이터를 처리하지 않는 상태임을 나타냅니다. 광고 캠페인을 다시 시작하려면 광고 캠페인 테이블의 **작업** 열에서 **다시 시작**을 클릭합니다.
+-   **날짜**: 광고 캠페인과 연결 된 광고, 클릭 및 설치에 대 한 데이터 범위를 지정 합니다.
+-   **상태**: ad 캠페인의 상태를 지정 합니다.
+    -   **활성** 은 광고 캠페인이 데이터를 실행 하 고 처리 하 고 있음을 나타냅니다. Ad 캠페인을 일시적으로 일시 중지 하려면 광고 캠페인 테이블의 **작업** 열에서 **일시 중지** 를 클릭 합니다.
+    -   **일시 중지** 됨은 광고 캠페인이 일시적으로 데이터를 처리 하 고 있지 않음을 나타냅니다. Ad 캠페인을 재개 하려면 ad 캠페인 테이블의 **작업** 열에서 **다시 시작** 을 클릭 합니다.
     -   **종료됨**은 광고 캠페인을 만들거나 마지막으로 수정할 때 지정한 광고 캠페인의 종료 날짜에 도달했다는 의미입니다.
-    -   **주의 필요**는 광고 캠페인에 청구 실패 또는 사용자 지정 광고 디자인의 유효성 검사 실패 등 주의가 필요한 문제가 있음을 나타냅니다. 문제를 수정하려면 광고 캠페인 테이블의 **작업** 열에서 텍스트를 클릭합니다.
--   **캠페인 종류**: 유료 또는 [하우스](about-house-ads.md) 광고 캠페인을 표시할지 여부를 지정합니다.
+    -   **주의가 필요** 합니다. 광고 캠페인에는 청구 오류 또는 유효성 검사에 실패 한 사용자 지정 광고 디자인 등 주의가 필요한 문제가 있음을 나타냅니다. 문제를 해결 하려면 광고 캠페인 테이블의 **작업** 열에 있는 텍스트를 클릭 합니다.
+-   **캠페인 유형**: 유료 또는 [집](about-house-ads.md) 광고 캠페인을 표시할지 여부를 지정 합니다.
 
 ## <a name="reporting"></a>보고
 
 
-보고 상세 정보가 이 페이지에 표시됩니다. 자세한 내용은 [광고 캠페인 보고서](promote-your-app-report.md)를 참조하세요.
+보고 세부 정보는이 페이지에 표시 됩니다. 자세한 내용은 [광고 캠페인 보고서](promote-your-app-report.md)를 참조 하세요.
 
 
 ## <a name="edit-an-ad-campaign"></a>광고 캠페인 편집
 
-광고 캠페인을 변경하려면 해당 이름을 클릭하여 광고 캠페인의 세부 정보 페이지로 이동합니다. 변경한 후 **검토**를 클릭하고, 세부 정보를 검토한 다음 **확인**을 클릭합니다.
+광고 캠페인을 변경 하려면 해당 이름을 클릭 하 여 해당 광고 캠페인에 대 한 세부 정보 페이지로 이동 합니다. 변경을 수행한 후 **검토**를 클릭 하 고 세부 정보를 검토 한 다음 **확인**을 클릭 합니다.
 
 
 ## <a name="related-topics"></a>관련 항목
 
 
-* [앱에 대 한 광고 캠페인 만들기](create-an-ad-campaign-for-your-app.md)
-* [사내 광고 정보](about-house-ads.md)
+* [앱 광고 캠페인 만들기](create-an-ad-campaign-for-your-app.md)
+* [하우스 광고 정보](about-house-ads.md)
 * [앱 설치 광고 보고서](app-install-ads-reports.md)
 * [일반적인 질문](common-questions.md)
  

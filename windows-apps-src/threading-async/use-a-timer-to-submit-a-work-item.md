@@ -1,17 +1,17 @@
 ---
 ms.assetid: AAE467F9-B3C7-4366-99A2-8A880E5692BE
 title: 타이머를 사용하여 작업 항목 제출
-description: 타이머가 경과 된 후에 실행 되는 작업 항목을 만드는 방법에 대해 알아봅니다.
+description: Windows.system.threading.threadpooltimer API를 사용 하 여 유니버설 Windows 플랫폼 (UWP) 앱에서 타이머가 경과할 때 작업 항목을 전송 하는 타이머를 만드는 방법에 대해 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 타이머, 스레드
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b5c0982c10cde25fc5f61314c540c194d6519a2
-ms.sourcegitcommit: 2dbf4a3f3473c1d3a0ad988bcbae6e75dfee3640
+ms.openlocfilehash: 2c34f50d7b5abec28b11fc67a7e0515f07206060
+ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619337"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88970131"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>타이머를 사용하여 작업 항목 제출
 
@@ -19,7 +19,7 @@ ms.locfileid: "82619337"
 <b>중요 API</b>
 
 -   [**Windows 네임 스페이스**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
--   [**Windows. System.object 네임 스페이스**](https://docs.microsoft.com/uwp/api/Windows.System.Threading)
+-   [** Tem를Windows.Sys합니다. 스레딩 네임 스페이스**](https://docs.microsoft.com/uwp/api/Windows.System.Threading)
 
 타이머가 경과 된 후에 실행 되는 작업 항목을 만드는 방법에 대해 알아봅니다.
 
