@@ -1,6 +1,6 @@
 ---
-Description: ParallaxView 컨트롤을 사용 하 여 앱에 깊이와 움직임을 추가 합니다.
-title: 시차를 사용 하 여 앱에 깊이와 움직임을 추가 합니다.
+title: 시차를 사용하여 앱에 깊이와 움직임을 추가합니다.
+description: UWP 앱에서 ParallaxView 컨트롤을 사용 하 여 뷰어에서 항목이 배경의 항목 보다 빠르게 이동 하는 시각적 효과를 만드는 방법에 대해 알아봅니다.
 ms.assetid: ''
 label: Parallax View
 template: detail.hbs
@@ -12,12 +12,12 @@ design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d659683d6871d9d48fd17b73c74477e7bd03e258
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 5ded09e2de6e3aafa0108d3f7ef66808cb02bfd8
+ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970498"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89043575"
 ---
 # <a name="parallax"></a>시차
 
@@ -45,7 +45,7 @@ ms.locfileid: "82970498"
 
 ## <a name="parallax-and-the-fluent-design-system"></a>시차 및 흐름 디자인 시스템
 
- 흐름 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질, 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 시차는 응용 프로그램에 동작, 깊이 및 크기 조정을 추가 하는 흐름 디자인 시스템 구성 요소입니다. 자세히 알아보려면 [흐름 디자인 개요](/windows/apps/fluent-design-system)를 참조 하세요.
+ Fluent 디자인 시스템을 사용하면 조명, 깊이, 움직임, 재질 및 배율이 통합된 선명한 현대식 UI를 만들 수 있습니다. 시차는 응용 프로그램에 동작, 깊이 및 크기 조정을 추가 하는 흐름 디자인 시스템 구성 요소입니다. 자세한 내용은 [Fluent Design 개요](/windows/apps/fluent-design-system)를 참조하세요.
 
 ## <a name="how-it-works-in-a-user-interface"></a>사용자 인터페이스에서 작동 방식
 
@@ -121,8 +121,8 @@ VerticalShift 및 HorizontalShift 속성을 사용 하 여 시차 효과의 정�
 - ListViewItems에 이미지가 포함 된 경우 ListViewItems에서 시차를 사용 하는 것이 좋습니다.
 - 어디에서 나 사용 하지 마세요. 과도 하 게 영향을 줄 수 있습니다.
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [ParallaxView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview) 
 - [UWP용 흐름 디자인](/windows/apps/fluent-design-system)
-- [시스템의 과학: 흐름 설계 및 깊이](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
+- [시스템의 과학: 흐름 디자인 및 깊이](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)

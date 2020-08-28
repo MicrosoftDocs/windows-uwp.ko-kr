@@ -1,34 +1,34 @@
 ---
-description: iOS에서 UWP로 이동
 Search.SourceType: Video
 title: iOS에서 UWP로 이동
+description: IOS 개발자가 Windows 10 및 UWP (유니버설 Windows 플랫폼)를 포함 하도록 사용자 기반을 확장 하는 데 사용할 수 있는 도구에 대해 알아봅니다.
 ms.assetid: 7a05751d-02df-4240-9ba5-d95f65a7a9c5
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 266a5f147b57e522088dab2ec298b54596ef77b7
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 608f254114a200850341837528cb7506597c3bed
+ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260154"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89043525"
 ---
 # <a name="move-from-ios-to-uwp"></a>iOS에서 UWP로 이동
 
-Windows 10 및 UWP(유니버설 Windows 플랫폼)가 포함될 수 있도록 사용자 기반을 확장하는 방법에 대해 궁금한 iOS 개발자인 경우 도움이 되는 방법이 다양하게 늘어나고 있습니다. 사용할 수 있는 방법은 작업 중인 앱 유형(게임, 라이프스타일, 엔터프라이즈 등)과 개발 프로세스의 진행 정도에 따라 달라집니다. 예를 들면 주로 OpenGL 또는 Cocos2D에 종속되어 완성되었거나 거의 완성된 게임은 [iOS용 Windows 브리지](https://developer.microsoft.com/windows/bridges/ios)에 적합하고, 중소기업용 플랫폼 간 앱을 계획하고 있는 경우에는 [Xamarin.Forms](https://docs.microsoft.com/xamarin/xamarin-forms/)를 사용해 보세요. Unity와 같은 플랫폼 간 도구에서 앱을 작성한 경우 [Windows에 게시](https://blogs.unity3d.com/2015/09/09/windows-10-universal-apps-in-unity-5-2/)하는 작업은 매우 간단합니다.
+Windows 10 및 유니버설 Windows 플랫폼 (UWP)를 포함 하도록 사용자 기반을 확장 하는 방법에 대 한 자세한 내용은 iOS 개발자에 게 도움이 되는 다양 한 도구가 있습니다. 수행할 수 있는 방법은 작업 중인 앱의 유형 (게임, 라이프 스타일, 엔터프라이즈 등) 및 개발 프로세스에 있는 정도에 따라 달라 집니다. 예를 들어 OpenGL 또는 Cocos2D에 크게 의존 하는 완료 된 게임 또는 거의 완료 된 게임은 [iOS 용 Windows 브리지](https://developer.microsoft.com/windows/bridges/ios)를 사용 하는 것이 적합 한 반면, 소규모 비즈니스에 대 한 플랫폼 간 앱을 계획 하는 경우 [xamarin.ios](https://docs.microsoft.com/xamarin/xamarin-forms/)를 사용 하는 것을 고려해 야 합니다. Unity와 같은 플랫폼 간 도구에서 앱을 작성 한 경우 [Windows에 게시](https://blogs.unity3d.com/2015/09/09/windows-10-universal-apps-in-unity-5-2/) 하는 것은 매우 간단 합니다.
 
-## <a name="why-windows"></a>왜 Windows여야 할까요?
+## <a name="why-windows"></a>Windows?
 
-현재 Windows는 아주 많은 디바이스에서 실행되고 있습니다. UWP는 개발자에게 데스크톱 컴퓨터, 게임 콘솔 및 홀로그램 디스플레이와 같은 다양한 디바이스에서 응답성이 뛰어난 사용자 인터페이스를 구축하도록 설계된 최신 API 집합을 제공합니다. 하나의 Visual Studio 솔루션과, 다양한 플랫폼에 맞게 자동으로 최적화할 수 있게 하는 사용자 인터페이스 컨트롤을 사용하면 코드 사용이 줄어들면서도 더 많은 하드웨어에서 실행하고 있음을 알게 됩니다.
+현재 Windows는 상당한 수의 장치에서 실행 되 고 있습니다. UWP는 개발자에 게 데스크톱 컴퓨터, 게임 콘솔 및 holographic 표시와 같이 다양 한 장치에서 원활 응답성 사용자 인터페이스를 만들도록 설계 된 최신 Api 집합을 제공 합니다. 단일 Visual Studio 솔루션을 사용 하 고 여러 플랫폼에서 자동으로 최적화 하기에 충분 한 스마트 인 사용자 인터페이스 컨트롤을 사용 하 여 더 작은 코드를 작성 하 고 더 많은 하드웨어에서 실행 하는 경우가 많습니다.
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/How-to-Convert-your-iOS-app-to-Windows/player]
 
 | 항목 | 설명 |
 |-------|-------------|
-| [IOS 및 UWP 앱 개발에 대 한 접근 방식 선택](selecting-an-approach-to-ios-and-uwp-app-development.md) | 플랫폼 간 앱을 개발할 때 어떤 방법을 선택할 수 있나요? |
-| [IOS 개발자를 위한 UWP 시작](getting-started-with-uwp-for-ios-developers.md) | Windows 10용 개발을 고려하는 iOS 개발자인 경우 이러한 문서는 시작하는 데 도움이 됩니다. |
-| [Windows 10을 사용 하 여 Mac 설정](setting-up-your-mac-with-windows-10.md) | 현재 Mac 컴퓨터를 사용하여 Windows용 앱을 개발합니다. |
+| [iOS 및 UWP 앱 개발 방법 선택](selecting-an-approach-to-ios-and-uwp-app-development.md) | 플랫폼 간 앱을 개발할 때 선택할 수 있는 항목은 무엇 인가요? |
+| [iOS 개발자용 UWP 시작](getting-started-with-uwp-for-ios-developers.md) | Windows 10 용 개발을 고려 하는 iOS 개발자 라면 이러한 문서를 시작 하는 것이 좋습니다. |
+| [Windows 10에서 Mac 설정](setting-up-your-mac-with-windows-10.md) | 현재 Mac 컴퓨터를 사용 하 여 Windows 용 앱을 개발할 수 있습니다. |
 
 ## <a name="related-topics"></a>관련 항목
 
