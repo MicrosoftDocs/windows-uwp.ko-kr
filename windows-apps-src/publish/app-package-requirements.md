@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 패키지 요구 사항, 패키지, 패키지 형식, 지원 되는 버전, 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c478b038ff729f753696d10fc18b21391a3a7de
-ms.sourcegitcommit: 96b7be654a0922eeb421b5fa51ebfc586abe74fe
+ms.openlocfilehash: 851aaa28a7c42d395a16ee78a49a7e8bc5712f62
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84945991"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158107"
 ---
 # <a name="app-package-requirements"></a>앱 패키지 요구 사항
 
@@ -47,9 +47,9 @@ UWP 앱의 경우 Visual Studio는 사용자가 다운로드 하는 앱의 크�
 
 ## <a name="building-the-app-package-manually"></a>수동으로 앱 패키지 빌드
 
-Visual Studio를 사용 하 여 패키지를 만들지 않는 경우 [패키지 매니페스트를 수동으로 만들어야](https://docs.microsoft.com/uwp/schemas/appxpackage/how-to-create-a-package-manifest-manually)합니다.
+Visual Studio를 사용 하 여 패키지를 만들지 않는 경우 [패키지 매니페스트를 수동으로 만들어야](/uwp/schemas/appxpackage/how-to-create-a-package-manifest-manually)합니다.
 
-전체 매니페스트 세부 정보 및 요구 사항은 [앱 패키지 매니페스트](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest) 설명서를 참조 하세요. 인증서를 전달 하려면 매니페스트가 패키지 매니페스트 스키마를 따라야 합니다.
+전체 매니페스트 세부 정보 및 요구 사항은 [앱 패키지 매니페스트](/uwp/schemas/appxpackage/appx-package-manifest) 설명서를 참조 하세요. 인증서를 전달 하려면 매니페스트가 패키지 매니페스트 스키마를 따라야 합니다.
 
 매니페스트에는 계정 및 앱에 대 한 특정 정보가 포함 되어야 합니다. 이 정보는 대시보드의 앱 개요 페이지에 있는 앱 **관리** 섹션에서 [앱 Id 세부 정보 보기를 참조](view-app-identity-details.md) 하 여 찾을 수 있습니다.
 
@@ -57,7 +57,7 @@ Visual Studio를 사용 하 여 패키지를 만들지 않는 경우 [패키지 
 > 매니페스트의 값은 대/소문자를 구분 합니다. 공백과 기타 문장 부호도 일치 해야 합니다. 값을 신중 하 게 입력 하 고 검토 하 여 올바른지 확인 합니다.
 
 
-앱 번들 (. msixbundle 또는 .appxbundle)은 다른 매니페스트를 사용 합니다. 앱 번들 매니페스트에 대 한 세부 정보 및 요구 사항은 [번들 매니페스트](https://docs.microsoft.com/uwp/schemas/bundlemanifestschema/bundle-manifest) 설명서를 참조 하세요. . Msixbundle 또는 .appxbundle에서 포함 된 각 패키지의 매니페스트는 [Identity](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소의 **ProcessorArchitecture** 특성을 제외 하 고 동일한 요소 및 특성을 사용 해야 합니다.
+앱 번들 (. msixbundle 또는 .appxbundle)은 다른 매니페스트를 사용 합니다. 앱 번들 매니페스트에 대 한 세부 정보 및 요구 사항은 [번들 매니페스트](/uwp/schemas/bundlemanifestschema/bundle-manifest) 설명서를 참조 하세요. . Msixbundle 또는 .appxbundle에서 포함 된 각 패키지의 매니페스트는 [Identity](/uwp/schemas/appxpackage/uapmanifestschema/element-identity) 요소의 **ProcessorArchitecture** 특성을 제외 하 고 동일한 요소 및 특성을 사용 해야 합니다.
 
 > [!TIP]
 > 패키지를 제출 하기 전에 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md) 를 실행 해야 합니다. 이를 통해 매니페스트에 인증 또는 전송 오류가 발생할 수 있는 문제가 있는지 확인할 수 있습니다.
@@ -77,7 +77,7 @@ Visual Studio를 사용 하 여 패키지를 만들지 않는 경우 [패키지 
 
 ## <a name="supported-versions"></a>지원되는 버전
 
-UWP 앱의 경우 모든 패키지는 저장소에서 지 원하는 Windows 10 버전을 대상으로 해야 합니다. 패키지에서 지 원하는 버전은 응용 프로그램 매니페스트의 [Targetdevicefamily](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) 요소의 **MinVersion** 및 **MaxVersionTested** 특성에 표시 되어야 합니다.
+UWP 앱의 경우 모든 패키지는 저장소에서 지 원하는 Windows 10 버전을 대상으로 해야 합니다. 패키지에서 지 원하는 버전은 응용 프로그램 매니페스트의 [Targetdevicefamily](/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily) 요소의 **MinVersion** 및 **MaxVersionTested** 특성에 표시 되어야 합니다.
 
 에서 현재 지원 되는 버전의 범위는 다음과 같습니다. 
 - 최소: 10.0.10240.0
@@ -86,12 +86,8 @@ UWP 앱의 경우 모든 패키지는 저장소에서 지 원하는 Windows 10 �
 
 ## <a name="storemanifest-xml-file"></a>StoreManifest XML 파일
 
-StoreManifest.xml은 앱 패키지에 포함 될 수 있는 선택적 구성 파일입니다. 응용 프로그램을 Microsoft Store 장치 앱으로 선언 하는 것과 같은 기능을 사용 하도록 설정 하는 것과 같은 기능을 사용 하도록 설정 하는 것이 고 패키지 매니페스트가 적용 되지 않는 장치에 적용 되는 패키지의 요구 사항을 선언 하는 것입니다 사용 되는 경우 앱 패키지를 사용 하 여 StoreManifest.xml 전송 되며 앱 주 프로젝트의 루트 폴더에 있어야 합니다. 자세한 내용은 [StoreManifest 스키마](https://docs.microsoft.com/uwp/schemas/storemanifest/store-manifest-schema-portal)를 참조 하세요.
+StoreManifest.xml은 앱 패키지에 포함 될 수 있는 선택적 구성 파일입니다. 응용 프로그램을 Microsoft Store 장치 앱으로 선언 하는 것과 같은 기능을 사용 하도록 설정 하는 것과 같은 기능을 사용 하도록 설정 하는 것이 고 패키지 매니페스트가 적용 되지 않는 장치에 적용 되는 패키지의 요구 사항을 선언 하는 것입니다 사용 되는 경우 앱 패키지를 사용 하 여 StoreManifest.xml 전송 되며 앱 주 프로젝트의 루트 폴더에 있어야 합니다. 자세한 내용은 [StoreManifest 스키마](/uwp/schemas/storemanifest/store-manifest-schema-portal)를 참조 하세요.
 
  
 
  
-
-
-
-

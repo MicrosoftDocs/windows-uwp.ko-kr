@@ -1,39 +1,39 @@
 ---
 ms.assetid: B48E21AB-0EA5-444B-8333-393DD8D1B76D
 title: 엔터프라이즈 공유 저장소
-description: 엔터프라이즈 공유 저장소는 LOB(기간 업무) 앱의 로컬 데이터 위치를 정의하여 데이터를 공유합니다.
+description: 엔터프라이즈 공유 저장소는 데이터를 공유 하는 lob (기간 업무) 앱에 대 한 로컬 데이터 위치를 정의 합니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 05a646979977bca5c19be2efe3f8bec12994cb19
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 595d2d23cca3f128e8be5447f125ab30aedccf9d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259631"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168407"
 ---
 # <a name="enterprise-shared-storage"></a>엔터프라이즈 공유 저장소
 
-공유 저장소는 두 개의 위치로 구성되며 여기서 제한된 접근 권한 값 **enterpriseDeviceLockdown** 및 엔터프라이즈 인증서가 있는 앱이 모든 읽기 및 쓰기 권한을 가집니다. **enterpriseDeviceLockdown** 접근 권한 값을 통해 앱은 디바이스 잠금 API를 사용하고 엔터프라이즈 공유 저장소 폴더에 액세스할 수 있습니다. API에 대한 자세한 내용은 [**Windows.Embedded.DeviceLockdown**](https://docs.microsoft.com/uwp/api/Windows.Embedded.DeviceLockdown?redirectedfrom=MSDN) 네임스페이스를 참조하세요.  
+공유 저장소는 제한 된 기능  **Enterprisedevicelockdown** 구성 된 앱과 모든 읽기 및 쓰기 액세스 권한이 있는 두 개의 위치로 구성 됩니다. **Enterprisedevicelockdown** 기능을 사용 하면 앱에서 장치 잠금 API를 사용 하 고 엔터프라이즈 공유 저장소 폴더에 액세스할 수 있습니다. API에 대 한 자세한 내용은 [**Windows Embedded. DeviceLockdown**](/uwp/api/Windows.Embedded.DeviceLockdown) 네임 스페이스를 참조 하세요.  
 
-이러한 위치는 로컬 드라이브에 설정됩니다.
+이러한 위치는 로컬 드라이브에 설정 됩니다.
 - \Data\SharedData\Enterprise\Persistent
 - \Data\SharedData\Enterprise\Non-Persistent
 
 ## <a name="scenarios"></a>시나리오
 
-엔터프라이즈 공유 저장소는 다음과 같은 시나리오를 지원합니다.
+엔터프라이즈 공유 저장소는 다음과 같은 시나리오에 대 한 지원을 제공 합니다.
 
-- 동일한 앱의 인스턴스 간에 앱의 인스턴스 내에서 데이터를 공유할 수 있습니다. 적절한 접근 권한 값 및 인증서가 있다고 가정하는 두 앱 간에도 마찬가지입니다.
-- 로컬 하드 드라이브에서 \Data\SharedData\Enterprise\Persistent 폴더에 데이터를 저장할 수 있으며 디바이스가 초기화된 후에도 지속됩니다.
-- MDM(모바일 디바이스 관리) 서비스를 통해 디바이스에서 파일의 읽기, 쓰기 및 삭제 등과 같이 파일을 조작합니다. MDM 서비스를 통해 엔터프라이즈 공유 저장소를 사용하는 방법에 대한 자세한 내용은 [EnterpriseExtFileSystem CSP](https://docs.microsoft.com/windows/client-management/mdm/enterpriseextfilessystem-csp?redirectedfrom=MSDN)를 참조하세요.
+- 앱의 인스턴스 내에서 동일한 앱의 인스턴스 간에 데이터를 공유 하거나, 둘 다 적절 한 기능 및 인증서를 포함 하 고 있는 경우에도 앱 간에 데이터를 공유할 수 있습니다.
+- \Data\SharedData\Enterprise\Persistent 폴더에 있는 로컬 하드 드라이브에 데이터를 저장할 수 있으며 장치가 다시 설정 된 후에도 지속 됩니다.
+- MDM(모바일 디바이스 관리) 서비스를 통해 디바이스에서 파일의 읽기, 쓰기 및 삭제 등과 같이 파일을 조작합니다. MDM 서비스를 통해 엔터프라이즈 공유 저장소를 사용 하는 방법에 대 한 자세한 내용은 [Enterpriseextfilesystem CSP](/windows/client-management/mdm/enterpriseextfilessystem-csp)를 참조 하세요.
 
 ## <a name="access-enterprise-shared-storage"></a>엔터프라이즈 공유 저장소 액세스
 
-다음 예제에서는 패키지 매니페스트의 엔터프라이즈 공유 저장소에 액세스할 수 있는 접근 권한 값을 선언하는 방법과 Windows.Storage.StorageFolder 클래스를 사용하여 공유 저장소 폴더에 액세스하는 방법을 보여 줍니다.
+다음 예제에서는 패키지 매니페스트에서 엔터프라이즈 공유 저장소에 액세스 하는 기능을 선언 하는 방법과 Windows. StorageFolder 클래스를 사용 하 여 공유 저장소 폴더에 액세스 하는 방법을 보여 줍니다.
 
-앱 패키지 매니페스트에서 다음 접근 권한 값을 포함합니다.
+앱 패키지 매니페스트에는 다음 기능이 포함 됩니다.
 
 ```xml
 <Package
@@ -50,7 +50,7 @@ ms.locfileid: "74259631"
 </Capabilities>
 ```
 
-공유 데이터 위치에 액세스하려면 앱에서 다음 코드를 사용합니다.
+공유 데이터 위치에 액세스 하기 위해 앱은 다음 코드를 사용 합니다.
 
 ```csharp
 using System;
@@ -75,4 +75,3 @@ IReadOnlyList<StorageFile> sortedItems =
 foreach (StorageFile file in sortedItems)
     Debug.WriteLine(file.Name + ", " + file.DateCreated);
 ```
-

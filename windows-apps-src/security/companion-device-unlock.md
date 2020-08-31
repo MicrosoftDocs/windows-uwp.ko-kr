@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: 89f3d331-20cd-457b-83e8-1a22aaab2658
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e1e27ad47385b3ded743d39cc6a347cab5960ce
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: d9d9041b5e90ce8ffc16fe0158dda597f99b41bc
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493138"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157947"
 ---
 # <a name="windows-unlock-with-windows-hello-companion-iot-devices"></a>Windows Hello 부록 (IoT) 장치를 사용 하 여 windows 잠금 해제
 
@@ -40,7 +40,7 @@ Windows Hello 동반 장치는 Windows 10 데스크톱과 함께 작동 하 여 
 
 ### <a name="biometric-enabled-windows-hello-companion-devices"></a>생체 인식 사용 Windows Hello 동반 장치
 
-동반 장치에서 생체 인식을 지 원하는 경우 경우에 따라 windows [생체 인식 프레임 워크](https://msdn.microsoft.com/windows/hardware/commercialize/design/device-experiences/windows-hello) 는 windows Hello 부록 장치 프레임 워크 보다 더 나은 솔루션 일 수 있습니다. 연락 하시기 바랍니다 [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com) . 적절 한 접근 방식을 선택 하는 데 도움이 될 것입니다.
+동반 장치에서 생체 인식을 지 원하는 경우 경우에 따라 windows [생체 인식 프레임 워크](/windows-hardware/design/device-experiences/windows-hello) 는 windows Hello 부록 장치 프레임 워크 보다 더 나은 솔루션 일 수 있습니다. 연락 하시기 바랍니다 [cdfonboard@microsoft.com](mailto:cdfonboard@microsoft.com) . 적절 한 접근 방식을 선택 하는 데 도움이 될 것입니다.
 
 ### <a name="components-of-the-solution"></a>솔루션의 구성 요소
 
@@ -52,7 +52,7 @@ Windows Hello 부록 장치 프레임 워크는 Windows에서 실행 되는 서�
 
 Windows Hello 부록 장치 프레임 워크와 통합 하려면 다음이 필요 합니다.
 
-- Windows 앱 스토어에서 다운로드 되는 동반 장치용 [UWP (유니버설 Windows 플랫폼)](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) windows Hello 동반 장치 앱입니다. 
+- Windows 앱 스토어에서 다운로드 되는 동반 장치용 [UWP (유니버설 Windows 플랫폼)](../get-started/universal-application-platform-guide.md) windows Hello 동반 장치 앱입니다. 
 - Windows Hello 부록 장치에서 2 256 비트 HMAC 키를 만들고이를 사용 하 여 HMAC를 생성할 수 있습니다 (SHA-256 사용).
 - Windows 10 desktop의 보안 설정이 올바르게 구성 되어 있습니다. 함께 제공 되는 인증 서비스를 사용 하려면 Windows Hello 도우미 장치를 연결 하기 전에이 PIN을 설정 해야 합니다. 사용자는 설정 > 계정 > 로그인 옵션을 통해 PIN을 설정 해야 합니다.
 
@@ -92,7 +92,7 @@ Windows Hello 부록 장치가 PC와 통신할 수 있으려면 먼저 사용할
 - 사용자는 Windows Hello 동반 장치를 사용 하 여 잠금을 해제 하려는 각 대상 Windows 10 데스크톱 장치에 대 한 PIN을 설정 합니다.
 - 사용자는 windows 10 desktop 장치에서 windows Hello 부록 장치 앱을 실행 하 여 windows 10 desktop에 windows Hello 부록 장치를 등록 합니다.
 
-메모:
+참고:
 
 - Windows Hello 부록 장치 앱의 검색, 다운로드 및 시작이 간소화 되 고, 가능한 경우 자동화 된 경우 (예: Windows 10 desktop 장치 쪽에서 NFC 판독기의 Windows Hello 도우미 장치를 누르면 앱을 다운로드할 수 있음) 그러나이는 Windows Hello 부록 장치 및 Windows Hello 부록 장치 앱의 책임입니다.
 - 엔터프라이즈 환경에서는 MDM을 통해 Windows Hello 부록 장치 앱을 배포할 수 있습니다.
@@ -385,7 +385,7 @@ Windows Hello 부록 장치 프레임 워크를 사용 하면 Windows Hello 부�
 
 이러한 각 상태에 대 한 세부 정보는 다음과 같습니다.
 
-| 시스템 상태                         | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 시스템 상태                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |----------------------------   |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    |
 | WaitingForUserConfirmation    | 이 상태 변경 알림 이벤트는 잠금 화면이 종료 될 때 발생 합니다 (예: 사용자가 Windows + L을 눌렀음을). 이 상태에서 장치를 찾는 데 어려움이 있는 경우와 관련 된 오류 메시지를 요청 하지 않는 것이 좋습니다. 일반적으로 내재 된 신호를 사용할 수 있는 경우에만 메시지를 표시 하는 것이 좋습니다. Windows Hello 부록 장치 앱은이 상태에서 인증에 대 한 첫 번째 API 호출을 수행 해야 합니다. 예를 들어, 동반 장치가 의도 신호를 수집 하 고 (예: NFC 판독기를 탭 하 고, 박수와 같은 특정 제스처를 사용 하 여) Windows Hello 부록 장치 앱 백그라운드 작업에서 의도 신호가 검색 된 도우미 장치에서 표시를 받습니다. 그렇지 않고 Windows Hello 동반 장치 앱이 PC를 사용 하 여 인증 흐름을 시작 하는 경우 (사용자가 잠금 해제 화면 또는 스페이스바를 눌러) Windows Hello 부록 장치 앱은 다음 상태 (CollectingCredential)를 기다려야 합니다.   |
 | CollectingCredential          | 이 상태 변경 알림 이벤트는 사용자가 노트북을 열거나 키보드에서 아무 키나 적중 하거나 잠금 해제 화면으로 swipes 때 발생 합니다. Windows Hello 동반 장치에서 위의 작업을 사용 하 여 의도 신호 수집을 시작 하는 경우 Windows Hello 부록 장치 앱에서 수집을 시작 해야 합니다. 예를 들어 사용자가 PC의 잠금을 해제 하 고 있는지 확인 하는 기능을 제공 하는 장치에서 pop를 사용 합니다. Windows Hello 도우미 디바이스 앱에서 사용자가 Windows Hello 도우미 디바이스에 사용자 현재 상태를 제공하도록 요구하는 경우 이때 오류 사례를 제공하는 것이 좋습니다.                                                                                                                                                                                                                                                                                                                                             |

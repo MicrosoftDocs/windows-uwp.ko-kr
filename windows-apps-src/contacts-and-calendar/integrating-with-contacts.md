@@ -1,5 +1,5 @@
 ---
-description: 연락처 카드의 작업 옆에 앱을 추가하는 방법을 보여 줍니다.
+description: 연락처 카드의 작업 옆에 앱을 추가 하는 방법을 보여 줍니다.
 MSHAttr: PreferredLib:/library/windows/apps
 title: 연락처 카드의 작업에 앱 연결
 ms.date: 02/08/2017
@@ -7,30 +7,30 @@ ms.topic: article
 keywords: windows 10, uwp, 연락처, 연락처 카드, 주석
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 ms.localizationpriority: medium
-ms.openlocfilehash: 8310b7c5b629d8d3a35a05b1124b140ebf35cf17
-ms.sourcegitcommit: 05be6929cd380a9dd241cc1298fd53f11c93d774
+ms.openlocfilehash: 246a74ca008e1b8c89460aabb652accf35c842b1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73061869"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154717"
 ---
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a>연락처 카드의 작업에 앱 연결
 
-연락처 카드 또는 미니 연락처 카드의 작업 옆에 앱을 표시할 수 있습니다. 사용자는 앱을 선택하여 프로필 페이지 열기, 전화 걸기, 메시지 보내기 등의 작업을 수행할 수 있습니다.
+앱은 연락처 카드 또는 미니 연락처 카드의 작업 옆에 표시 될 수 있습니다. 사용자는 앱을 선택하여 프로필 페이지 열기, 전화 걸기, 메시지 보내기 등의 작업을 수행할 수 있습니다.
 
 ![연락처 카드 및 미니 연락처 카드](images/all-contact-cards.png)
 
-시작하려면 기존 연락처를 찾거나 새로 만듭니다. *주석*과 몇 개의 패키지 매니페스트 항목을 만들어 앱에서 지원하는 작업을 설명합니다. 그런 다음 작업을 수행하는 코드를 작성합니다.
+시작 하려면 기존 연락처를 찾거나 새 연락처를 만듭니다. 다음으로, *주석* 및 몇 가지 패키지 매니페스트 항목을 만들어 앱이 지 원하는 작업을 설명 합니다. 그런 다음 작업을 수행 하는 코드를 작성 합니다.
 
-전체 샘플을 보려면 [연락처 카드 통합 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)을 참조하세요.
+전체 샘플은 [연락처 카드 통합 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)을 참조 하세요.
 
 ## <a name="find-or-create-a-contact"></a>연락처 찾기 또는 만들기
 
-앱에서 사람들 간의 연결을 도와주는 경우 Windows에서 연락처를 검색한 다음 주석을 답니다. 앱에서 연락처를 관리하는 경우 Windows 연락처 목록에 추가한 다음 주석을 달 수 있습니다.
+앱이 다른 사용자와 연결 하는 데 도움이 되는 경우 Windows에서 연락처를 검색 한 다음 주석을 답니다. 앱에서 연락처를 관리 하는 경우 Windows 연락처 목록에 추가 하 고 주석을 달 수 있습니다.
 
 ### <a name="find-a-contact"></a>연락처 찾기
 
-이름, 메일 주소 또는 전화 번호를 사용하여 연락처를 찾습니다.
+이름, 전자 메일 주소 또는 전화 번호를 사용 하 여 연락처를 찾습니다.
 
 ```cs
 ContactStore contactStore = await ContactManager.RequestStoreAsync();
@@ -44,7 +44,7 @@ Contact contact = contacts[0];
 
 ### <a name="create-a-contact"></a>연락처 만들기
 
-앱이 주소록과 유사한 경우 연락처를 만든 다음 연락처 목록에 추가합니다.
+앱이 주소록과 같은 경우 연락처를 만든 다음 연락처 목록에 추가 합니다.
 
 ```cs
 Contact contact = new Contact();
@@ -76,11 +76,11 @@ await contactList.SaveContactAsync(contact);
 
 ```
 
-## <a name="tag-each-contact-with-an-annotation"></a>주석을 사용하여 각 연락처에 태그 지정
+## <a name="tag-each-contact-with-an-annotation"></a>주석을 사용 하 여 각 연락처 태그
 
-앱에서 수행할 수 있는 작업 목록(예: 영상 통화, 메시지)을 사용하여 각 연락처에 태그를 지정합니다.
+각 연락처에 앱에서 수행할 수 있는 작업 (작업) 목록 (예: 비디오 통화 및 메시징)에 태그를 지정할 수 있습니다.
 
-그런 다음 앱이 해당 사용자를 식별하기 위해 내부적으로 사용하는 ID에 연락처 ID를 연결합니다.
+그런 다음 연락처 ID를 앱에서 내부적으로 사용 하는 ID에 연결 하 여 해당 사용자를 식별 합니다.
 
 ```cs
 ContactAnnotationStore annotationStore = await
@@ -106,11 +106,11 @@ annotation.SupportedOperations = ContactAnnotationOperations.Message |
 await annotationList.TrySaveAnnotationAsync(annotation);
 ```
 
-## <a name="register-for-each-operation"></a>각 작업 등록
+## <a name="register-for-each-operation"></a>각 작업에 대해 등록
 
-패키지 매니페스트에서 주석에 나열한 각 작업을 등록합니다.
+패키지 매니페스트에서 주석에 나열 된 각 작업에 대해 등록 합니다.
 
-매니페스트의 ``Extensions`` 요소에 프로토콜 처리기를 추가하여 등록합니다.
+매니페스트의 요소에 프로토콜 처리기를 추가 하 여 등록 ``Extensions`` 합니다.
 
 ```xml
 <Extensions>
@@ -136,25 +136,25 @@ await annotationList.TrySaveAnnotationAsync(annotation);
   </uap:Extension>
 </Extensions>
 ```
-Visual Studio 매니페스트 디자이너의 **선언** 탭에서 이러한 처리기를 추가할 수도 있습니다.
+Visual Studio의 매니페스트 디자이너의 **선언** 탭에서 이러한 항목을 추가할 수도 있습니다.
 
 ![매니페스트 디자이너의 선언 탭](images/manifest-designer-protocols.png)
 
 ## <a name="find-your-app-next-to-actions-in-a-contact-card"></a>연락처 카드의 작업 옆에서 앱 찾기
 
-피플 앱을 엽니다. 주석 및 패키지 매니페스트에서 지정한 각 작업 옆에 앱이 나타납니다.
+피플 앱을 엽니다. 사용자의 앱은 주석 및 패키지 매니페스트에 지정 된 각 작업 (작업) 옆에 표시 됩니다.
 
 ![연락처 카드](images/a-contact-card.png)
 
-사용자가 작업에 대해 해당 앱을 선택할 경우 다음에 연락처 카드를 열면 이 작업의 기본 앱으로 표시됩니다.
+사용자가 작업에 대 한 앱을 선택 하는 경우 다음 번에 사용자가 연락처 카드를 열 때 해당 작업에 대 한 기본 앱으로 표시 됩니다.
 
 ## <a name="find-your-app-next-to-actions-in-a-mini-contact-card"></a>미니 연락처 카드의 작업 옆에서 앱 찾기
 
-미니 연락처 카드에서 작업을 나타내는 탭에 앱이 나타납니다.
+미니 연락처 카드에서 작업을 나타내는 탭에 앱이 표시 됩니다.
 
 ![미니 연락처 카드](images/mini-contact-card.png)
 
-**메일** 앱 등의 앱에서는 미니 연락처 카드가 열립니다. 해당 앱에서도 열 수 있습니다. 다음 코드는 이 작업을 수행하는 방법을 보여 줍니다.
+**메일** 앱과 같은 앱은 미니 연락처 카드를 엽니다. 앱을 열 수도 있습니다. 이 코드에서는이 작업을 수행 하는 방법을 보여 줍니다.
 
 ```cs
 public async void OpenContactCard(object sender, RoutedEventArgs e)
@@ -175,21 +175,21 @@ public async void OpenContactCard(object sender, RoutedEventArgs e)
 }
 ```
 
-미니 연락처 카드를 사용하는 더 많은 예제를 보려면 [연락처 카드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCards)을 참조하세요.
+미니 연락처 카드를 사용 하는 더 많은 예제를 보려면 [연락처 카드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCards)을 참조 하세요.
 
-연락처 카드와 마찬가지로 각 탭은 사용자가 앱으로 돌아가기 쉽도록 마지막으로 사용한 앱을 저장합니다.
+연락처 카드와 마찬가지로 각 탭에서 사용자가 마지막으로 사용한 앱을 기억 하므로 앱에 쉽게 돌아올 수 있습니다.
 
-## <a name="perform-operations-when-users-select-your-app-in-a-contact-card"></a>사용자가 연락처 카드에서 앱을 선택할 때 작업 수행
+## <a name="perform-operations-when-users-select-your-app-in-a-contact-card"></a>사용자가 연락처 카드에서 앱을 선택 하는 경우 작업 수행
 
-**App.cs** 파일의 [Application.OnActivated](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated) 메서드를 재정의하고 사용자를 앱의 페이지로 이동합니다. [연락처 카드 통합 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration)에서는 이 작업을 수행하는 한 가지 방법을 보여 줍니다.
+**App.cs** 파일에서 [Application. onactivated](/uwp/api/windows.ui.xaml.application.onactivated) 된 메서드를 재정의 하 고 사용자를 앱의 페이지로 이동 합니다. [연락처 카드 통합 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCardIntegration) 에서는이 작업을 수행 하는 한 가지 방법을 보여 줍니다.
 
-페이지의 코드 숨김 파일에서 [Page.OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) 메서드를 재정의합니다. 연락처 카드는 이 메서드에 작업 이름과 사용자 ID를 전달합니다.
+페이지의 코드 숨겨진 파일에서 [OnNavigatedTo](/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) 메서드를 재정의 합니다. 연락처 카드는이 메서드에 작업 이름 및 사용자 ID를 전달 합니다.
 
-영상 통화나 음성 통화를 시작하려면 [VoIP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP)을 참조하세요. [WIndows.ApplicationModel.Calls](https://docs.microsoft.com/uwp/api/windows.applicationmodel.calls) 네임스페이스에서 전체 API를 확인할 수 있습니다.
+비디오 또는 오디오 통화를 시작 하려면이 샘플: [VoIP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/VoIP)을 참조 하세요. 전체 API는 [WIndows. ApplicationModel.](/uwp/api/windows.applicationmodel.calls) 네임 스페이스에서 찾을 수 있습니다.
 
-메시지를 간편하게 하려면 [Windows.ApplicationModel.Chat](https://docs.microsoft.com/uwp/api/windows.applicationmodel.chat) 네임스페이스를 참조하세요.
+메시징을 용이 하 게 하려면 [Windows ApplicationModel. 채팅](/uwp/api/windows.applicationmodel.chat) 네임 스페이스를 참조 하세요.
 
-다른 앱을 시작할 수도 있습니다. 다음 코드에서는 이 작업을 수행합니다.
+다른 앱을 시작할 수도 있습니다. 이 코드가 수행 하는 작업입니다.
 
 ```cs
 protected override async void OnNavigatedTo(NavigationEventArgs e)
@@ -213,4 +213,4 @@ protected override async void OnNavigatedTo(NavigationEventArgs e)
 }
 ```
 
-```args.uri.scheme``` 속성에는 작업 이름이 포함되고 ```args.uri.Query``` 속성에는 사용자 ID가 포함됩니다.
+속성에는 ```args.uri.scheme``` 작업 이름이 포함 되 고, 속성에는 ```args.uri.Query``` 사용자의 ID가 포함 됩니다.

@@ -1,5 +1,5 @@
 ---
-Description: 흐름 동작에서 타이밍 및 감속/가속 함수를 사용 하는 방법에 대해 알아봅니다.
+description: UI 내에서 입력, 종료 또는 이동 하는 개체에 대 한 동작을 자연스럽 게 만드는 타이밍 및 감속/가속의 중요성을 알아봅니다.
 title: 타이밍 및 감속
 label: Timing and easing
 template: detail.hbs
@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 098a75da573a977aa393197a61a62b0337f0dc06
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 46ec373ffb7ad141bcff36c33fa35900c888daf8
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970508"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054433"
 ---
 # <a name="timing-and-easing"></a>타이밍 및 감속
 
@@ -217,7 +217,7 @@ CubicBezierEasingFunction standard =
  _moveAnimation.Duration = TimeSpan.FromMilliseconds(500);
 ```
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [동작 개요](index.md)
 - [방향 및 무게](directionality-and-gravity.md)

@@ -5,12 +5,12 @@ author: maiak
 ms.author: maiak
 ms.date: 02/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: e04f306a6a5c03d1f502b9cfb6c2cbb737e0098f
-ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+ms.openlocfilehash: 6ad0f5977ed4d739ce3133c9e67c0eefc6e0cbd9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629084"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168827"
 ---
 # <a name="use-streaming-with-traceprocessor"></a>TraceProcessor와 함께 스트리밍 사용
 
@@ -141,7 +141,7 @@ class Program
 
 버퍼링과 스트리밍 간 사용의 몇 가지 주요 차이점은 다음과 같습니다.
 
-1. 버퍼링은 [IPendingResult&lt;t&gt;](https://docs.microsoft.com/dotnet/api/microsoft.windows.eventtracing.ipendingresult-1)을 반환 하 고, 저장 된 결과는 추적이 처리 되기 전에만 사용할 수 있습니다. 추적이 처리 된 후 foreach 및 LINQ와 같은 기술을 사용 하 여 결과를 열거할 수 있습니다.
+1. 버퍼링은 [IPendingResult &lt; T &gt; ](/dotnet/api/microsoft.windows.eventtracing.ipendingresult-1)를 반환 하 고이에 포함 된 결과는 추적이 처리 된 후에만 사용할 수 있습니다. 추적이 처리 된 후 foreach 및 LINQ와 같은 기술을 사용 하 여 결과를 열거할 수 있습니다.
 2. 스트리밍은 void를 반환 하 고 대신 콜백 인수를 사용 합니다. 각 항목을 사용할 수 있게 되 면 콜백을 한 번 호출 합니다. 데이터가 버퍼링 되지 않으므로 foreach 또는 LINQ를 사용 하 여 열거할 결과 목록이 없습니다. 스트리밍 콜백은 처리가 완료 된 후에 사용 하기 위해 저장 하려는 데이터의 모든 부분을 버퍼링 해야 합니다.
 3. 버퍼링 된 데이터를 처리 하는 코드는 trace 호출 후에 표시 됩니다. Process ()-보류 중인 결과를 사용할 수 있습니다.
 4. 스트리밍 데이터를 처리 하는 코드는 trace 호출 앞에 표시 됩니다. Process (), 추적에 대 한 콜백입니다. UseStreaming ... () 메서드.
@@ -151,7 +151,7 @@ class Program
 
 경우에 따라 추적 데이터가 이벤트 시퀀스에서 발생 합니다. 예를 들어 syscall는 별도의 enter 및 exit 이벤트를 통해 기록 되지만 두 이벤트의 결합 된 데이터는 더 유용할 수 있습니다. 메서드 추적입니다. UseStreaming(). UseSyscalls ()은 이러한 이벤트의 데이터를 상호 연결 하 고 쌍을 사용할 수 있게 될 때이를 제공 합니다. 추적을 통해 상관 관계가 지정 된 데이터의 몇 가지 유형이 있습니다. UseStreaming():
 
-| 코드                                        | 설명                                                                                                                                     |
+| 코드                                        | Description                                                                                                                                     |
 |---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | 추적. UseStreaming(). UseContextSwitchData() | 압축 및 비 압축 이벤트에서 상호 관련 된 컨텍스트 스위치 데이터를 스트림 하 고 원시 비 압축 이벤트 보다 더 정확 하 게 SwitchInThreadIds. |
 | 추적. UseStreaming(). UseScheduledTasks()    | 예약 된 작업 데이터와 상관 관계가 지정 된 스트림입니다.                                                                                                         |
@@ -162,7 +162,7 @@ class Program
 
 또한 추적. UseStreaming ()는 여러 개의 독립 실행형 이벤트 형식에 대해 구문 분석 된 이벤트를 제공 합니다.
 
-| 코드                                               | 설명                                     |
+| 코드                                               | Description                                     |
 |----------------------------------------------------|-------------------------------------------------|
 | 추적. UseStreaming(). UseLastBranchRecordEvents()   | 스트림이 LBR (last branch record) 이벤트를 구문 분석 했습니다. |
 | 추적. UseStreaming(). UseReadyThreadEvents()        | 스트림이 준비 된 스레드 이벤트를 구문 분석 했습니다.             |
@@ -176,7 +176,7 @@ class Program
 
 마지막으로 추적입니다. UseStreaming ()는 위의 목록에서 데이터를 상호 연결 하는 데 사용 되는 기본 이벤트도 제공 합니다. 이러한 기본 이벤트는 다음과 같습니다.
 
-| 코드                                                        | 설명                                                                                | 포함됨                                 |
+| 코드                                                        | Description                                                                                | 포함된 운영 체제                                 |
 |-------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------------------------------------|
 | 추적. UseStreaming(). UseCompactContextSwitchEvents()        | 스트림은 압축 컨텍스트 전환 이벤트를 구문 분석 합니다.                                              | 추적. UseStreaming(). UseContextSwitchData() |
 | 추적. UseStreaming(). UseContextSwitchEvents()               | 스트림을 구문 분석 한 컨텍스트 전환 이벤트입니다. 일부 경우에는 SwitchInThreadIds 정확 하지 않을 수 있습니다. | 추적. UseStreaming(). UseContextSwitchData() |

@@ -1,5 +1,5 @@
 ---
-Description: 응용 프로그램에서 흐름 동작의 기본을 함께 제공 하는 방법에 대해 알아봅니다.
+description: 앱에서 타이밍, 감속, 방향 및 무게와 같은 흐름 동작 기본 사항을 함께 제공 하는 방법에 대해 알아봅니다.
 title: 실제 동작-Windows 앱의 애니메이션
 label: Motion in practice
 template: detail.hbs
@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 45ab6c593b9e20f778e4b352a8b284cefe57c9a8
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 8604d925ffefc96cd74726909afab6e2016cce76
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970328"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054533"
 ---
 # <a name="bringing-it-together"></a>함께 가져오기
 
@@ -95,7 +95,7 @@ Slide down 150px: 150ms; 감속/가속: 기본 <b>방향으로 뒤로</b> 이동
   - **불투명도**
   - **회전**
   - **크기 조정**
-  - **Translation**
+  - **변환**
 
 - [Border](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)또는 [Panel](/uwp/api/windows.ui.xaml.controls.panel)
   - **배경**
@@ -131,7 +131,7 @@ public double OpaqueIfEnabled(bool IsEnabled)
 }
 ```
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [동작 개요](index.md)
 - [타이밍 및 감속](timing-and-easing.md)

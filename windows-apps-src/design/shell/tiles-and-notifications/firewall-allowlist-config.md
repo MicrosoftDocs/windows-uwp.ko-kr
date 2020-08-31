@@ -7,12 +7,12 @@ ms.date: 05/20/2019
 ms.topic: article
 keywords: windows 10, uwp, WNS, windows 알림 서비스, 알림, windows, 방화벽, 문제 해결, IP, 트래픽, 엔터프라이즈, 네트워크, IPv4, VIP, FQDN, 공용 IP 주소
 ms.localizationpriority: medium
-ms.openlocfilehash: 9594b90bd3bf9a4db082586a2823f4013340b85a
-ms.sourcegitcommit: b5232934702b28102c4014a96b34f2e459c9660d
+ms.openlocfilehash: a2eb09a0b1cc6f135a23b038207bb442eb741bf8
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928010"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169207"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>WNS 트래픽을 지원 하기 위한 엔터프라이즈 방화벽 및 프록시 구성
 
@@ -85,10 +85,10 @@ ms.locfileid: "87928010"
 
 ## <a name="related-topics"></a>관련 항목
 
-* [빠른 시작: 푸시 알림 보내기](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
-* [알림 채널을 요청, 생성 및 저장 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
-* [실행 중인 응용 프로그램에 대 한 알림을 가로채는 방법](https://docs.microsoft.com/previous-versions/windows/apps/jj709907(v=win.10))
-* [WNS (Windows 푸시 알림 서비스)를 사용 하 여 인증 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
-* [푸시 알림 서비스 요청 및 응답 헤더](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
-* [푸시 알림에 대 한 지침 및 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [빠른 시작: 푸시 알림 보내기](/previous-versions/windows/apps/hh868252(v=win.10))
+* [알림 채널을 요청, 생성 및 저장 하는 방법](/previous-versions/windows/apps/hh465412(v=win.10))
+* [실행 중인 응용 프로그램에 대 한 알림을 가로채는 방법](/previous-versions/windows/apps/jj709907(v=win.10))
+* [WNS (Windows 푸시 알림 서비스)를 사용 하 여 인증 하는 방법](/previous-versions/windows/apps/hh465407(v=win.10))
+* [푸시 알림 서비스 요청 및 응답 헤더](/previous-versions/windows/apps/hh465435(v=win.10))
+* [푸시 알림에 대 한 지침 및 검사 목록](./windows-push-notification-services--wns--overview.md)
  

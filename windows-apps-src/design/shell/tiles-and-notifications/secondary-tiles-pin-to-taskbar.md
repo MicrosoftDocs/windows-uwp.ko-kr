@@ -1,5 +1,5 @@
 ---
-Description: 작업 표시줄에 보조 타일을 고정 하는 방법을 알아봅니다.
+description: 작업 표시줄에 보조 타일을 고정 하 여 사용자에 게 앱 내의 콘텐츠에 대 한 빠른 액세스를 제공 하는 방법을 알아봅니다.
 title: 작업 표시줄에 보조 타일 고정
 label: Pin secondary tiles to taskbar
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 11/28/2018
 ms.topic: article
 keywords: windows 10, uwp, 작업 표시줄에 고정, 보조 타일, 보조 타일을 작업 표시줄에 고정, 바로 가기
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d4041faf2fbc729291da902e66be1e0979f9d97
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: a57fa9c6a268b22df3c1772e0aec111c769d907b
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971018"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054193"
 ---
 # <a name="pin-secondary-tiles-to-taskbar"></a>작업 표시줄에 보조 타일 고정
 
@@ -229,4 +229,4 @@ await StartScreenManager.GetDefault().TryRemoveSecondaryTileAsync("myTileId");
 ## <a name="resources"></a>리소스
 
 * [Task바 관리자 클래스](https://docs.microsoft.com/uwp/api/windows.ui.shell.taskbarmanager)
-* [보조 타일을 시작에 고정](secondary-tiles-pinning.md)
+* [시작에 보조 타일 고정](secondary-tiles-pinning.md)

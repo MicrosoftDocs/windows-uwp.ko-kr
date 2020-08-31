@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 2dde6ed3-7f53-48a6-aebe-2605230decb8
 ms.localizationpriority: medium
-ms.openlocfilehash: 0364964f069537ee934771184eb9c6ffda6f346f
-ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
+ms.openlocfilehash: 52a740f3dec2f0106beb76a6a96903ac71bf5035
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970291"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157797"
 ---
 # <a name="introduction-to-multi-user-applications"></a>다중 사용자 애플리케이션 소개
 
 이 항목은 Xbox 다중 사용자 모델에 대 한 간단한 개요를 제공 하기 위한 것입니다.
 
-Xbox One 사용자 모델은 단일 장치에서 협조적으로 게임을 실행 하는 여러 사용자를 지 원하는 게임 콘솔의 요구 사항에 맞게 조정 됩니다. 이를 통해 고유한 컨트롤러를 사용 하는 여러 사용자가 동시에 로그인 하 고 한 번의 대화형 세션에서 콘솔을 사용할 수 있습니다. 이는 다른 Windows 장치와 다릅니다. 예를 들어:
+Xbox One 사용자 모델은 단일 장치에서 협조적으로 게임을 실행 하는 여러 사용자를 지 원하는 게임 콘솔의 요구 사항에 맞게 조정 됩니다. 이를 통해 고유한 컨트롤러를 사용 하는 여러 사용자가 동시에 로그인 하 고 한 번의 대화형 세션에서 콘솔을 사용할 수 있습니다. 이는 다른 Windows 장치와 다릅니다. 예:
 * **Windows 데스크톱 pc** 에서는 여러 사용자가 동일한 장치를 사용할 수 있지만 각 사용자는 고유한 대화형 세션을 가지 며 각 세션은 장치의 다른 세션과 완전히 독립적입니다.
 * **Windows** phone에서는 단일 사용자만 장치를 사용할 수 있습니다. 이 단일 사용자는 OOBE (기본 제공 환경) 중에 결정 되며 사용자가 로그인 한 후에는 로그 아웃할 수 없습니다. 실제로 다른 사용자가 장치를 사용 하려는 경우 장치를 다시 설정 해야 합니다. 
 * **Xbox one** 을 사용 하면 여러 사용자가 로그인 하 여 단일 대화형 세션에서 동시에 장치를 사용할 수 있습니다.
@@ -44,7 +44,7 @@ UWP 게임은 Xbox One 다중 사용자 모델을 옵트인 (opt in) 하도록 �
 개발자는 KeyUp 및 KeyDown 라우트된 이벤트에서 사용 되는 KeyRoutedEventArgs를 사용 하 여 여러 입력에서 생성 된 이벤트를 구분할 수 있습니다.
 Windows.System를 사용 합니다. UserDeviceAssociation. FindUserFromDeviceId 메서드는 특정 입력에 연결 된 사용자를 식별 하는 데 도움이 됩니다.
 
-자세한 내용은 [KeyRoutedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.keyroutedeventargs.deviceid) 항목을 참조 하세요.
+자세한 내용은 [KeyRoutedEventArgs](/uwp/api/windows.ui.xaml.input.keyroutedeventargs.deviceid) 항목을 참조 하세요.
 
 
 ## <a name="guidance-on-which-model-to-choose"></a>선택할 모델에 대 한 지침

@@ -6,19 +6,19 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 605b8cf927067da78785ec470cfdbe27852205fd
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: c7f0e1ba5c78ce41a5326d3643b5afe80f380b3c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493188"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155177"
 ---
 # <a name="walkthrough-of-creating-a-ccx-windows-runtime-component-and-calling-it-from-javascript-or-c"></a>C++/CX Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출하는 연습
 
 > [!NOTE]
-> 이 항목은 C++/CX 애플리케이션 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 사용하는 것이 좋습니다. C++/WinRT는 헤더 파일 기반 라이브러리로 구현된 WinRT(Windows 런타임) API용 최신의 완전한 표준 C++17 언어 프로젝션이며, 최신 Windows API에 최고 수준의 액세스를 제공하도록 설계되었습니다. C + +/WinRT를 사용 하 여 Windows 런타임 구성 요소를 만드는 방법에 대 한 자세한 [Windows 런타임 내용은 c + +/WinRT를](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt)사용 하는 구성 요소
+> 이 항목은 C++/CX 애플리케이션 유지에 도움을 주기 위해 작성되었습니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 헤더 파일 기반 라이브러리로 구현된 WinRT(Windows 런타임) API용 최신의 완전한 표준 C++17 언어 프로젝션이며, 최신 Windows API에 최고 수준의 액세스를 제공하도록 설계되었습니다. C++/WinRT를 사용하여 Windows 런타임 구성 요소를 만드는 방법에 자세한 내용은 [C++/WinRT를 사용한 Windows 런타임 구성 요소](./create-a-windows-runtime-component-in-cppwinrt.md)를 참조하세요.
 
-이 연습에서는 JavaScript, C# 또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다. 이 연습을 시작하기 전에 ABI(Abstract Binary Interface), ref 클래스 및 ref 클래스로 보다 쉽게 작업할 수 있게 하는 Visual C++ 구성 요소 확장과 같은 개념을 이해해야 합니다. 자세한 내용은 [c + +/cx를 사용 하는 Windows 런타임 구성 요소](creating-windows-runtime-components-in-cpp.md) 및 [Visual C++ 언어 참조 (c + +/cx)](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx)를 참조 하세요.
+이 연습에서는 JavaScript, C# 또는 Visual Basic에서 호출할 수 있는 기본 Windows 런타임 구성 요소 DLL을 만드는 방법을 보여 줍니다. 이 연습을 시작하기 전에 쉽게 ref 클래스를 사용할 수 있게 해주는 ABI(추상 이진 인터페이스), ref 클래스, Visual C++ 구성 요소 확장 등의 개념을 이해해야 합니다. 자세한 내용은 [c + +/cx를 사용 하는 Windows 런타임 구성 요소](creating-windows-runtime-components-in-cpp.md) 및 [Visual C++ 언어 참조 (c + +/cx)](/cpp/cppcx/visual-c-language-reference-c-cx)를 참조 하세요.
 
 ## <a name="creating-the-c-component-dll"></a>C++ 구성 요소 DLL 만들기
 이 예제에서는 구성 요소 프로젝트를 먼저 만들지만 실제로는 JavaScript 프로젝트를 먼저 만들 수도 있습니다. 만드는 순서는 중요하지 않습니다.
@@ -35,7 +35,7 @@ ms.locfileid: "86493188"
 4. **확인** 단추를 선택합니다.
 
 ## <a name="to-add-an-activatable-class-to-the-component"></a>**구성 요소에 활성화 가능한 클래스를 추가하려면**
-활성화할 수 있는 클래스는 클라이언트 코드에서 **새** 식을 사용 하 여 만들 수 있는 클래스입니다 (Visual Basic의**새로운** 또는 c + +의 **ref new** ). 구성 요소에서 **public ref 클래스로 sealed**로 선언 합니다. 사실 Class1.h 및 .cpp 파일에는 ref 클래스가 이미 있습니다. 이름을 변경할 수 있지만이 예제에서는 기본 이름인 Class1을 사용 합니다. ref 클래스 또는 일반 클래스가 추가로 필요한 경우 구성 요소에서 해당 클래스를 정의할 수 있습니다. Ref 클래스에 대 한 자세한 내용은 [형식 시스템 (c + +/cx)](https://docs.microsoft.com/cpp/cppcx/type-system-c-cx)을 참조 하세요.
+활성화할 수 있는 클래스는 클라이언트 코드에서 **새** 식을 사용 하 여 만들 수 있는 클래스입니다 (Visual Basic의**새로운** 또는 c + +의 **ref new** ). 구성 요소에서 **public ref 클래스로 sealed**로 선언 합니다. 사실 Class1.h 및 .cpp 파일에는 ref 클래스가 이미 있습니다. 이름을 변경할 수 있지만이 예제에서는 기본 이름인 Class1을 사용 합니다. ref 클래스 또는 일반 클래스가 추가로 필요한 경우 구성 요소에서 해당 클래스를 정의할 수 있습니다. Ref 클래스에 대 한 자세한 내용은 [형식 시스템 (c + +/cx)](/cpp/cppcx/type-system-c-cx)을 참조 하세요.
 
 다음 \# include 지시문을 Class1. h에 추가 합니다.
 
@@ -426,7 +426,7 @@ function ButtonClear_Click() {
 }
 ```
 
-WinJS에 대 한 기존 호출을에 대 한 기존 호출을 다음 코드로 대체 하 여 이벤트 수신기를 추가 하는 코드를 추가 합니다 default.js. 이에 대 한 자세한 설명은 ["Hello, 세계" 앱 만들기 (JS)](/windows/uwp/get-started/create-a-hello-world-app-js-uwp)를 참조 하세요.
+WinJS에 대 한 기존 호출을에 대 한 기존 호출을 다음 코드로 대체 하 여 이벤트 수신기를 추가 하는 코드를 추가 합니다 default.js. 이에 대 한 자세한 설명은 ["Hello, 세계" 앱 만들기 (JS)](../get-started/create-a-hello-world-app-js-uwp.md)를 참조 하세요.
 
 ```JavaScript
 args.setPromise(WinJS.UI.processAll().then( function completed() {

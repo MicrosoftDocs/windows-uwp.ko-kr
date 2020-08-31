@@ -1,99 +1,99 @@
 ---
 title: 관계 기반 애니메이션
-description: 다른 개체 속성을 기반으로 동작을 만듭니다.
+description: 모션이 다른 개체의 속성에 따라 달라 지는 경우 ExpressionAnimations를 사용 하 여 관계 기반 애니메이션을 만드는 방법을 알아봅니다.
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: bfed00cf4866d79d4ac3097026cc09c70f9327cd
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 91e3ae5b23b7429633053f4d4d876f02127d26e3
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318175"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054423"
 ---
 # <a name="relation-based-animations"></a>관계 기반 애니메이션
 
-이 문서에서는 Composition ExpressionAnimations를 사용하여 관계 기반 애니메이션을 만드는 방법을 간략하게 안내합니다.
+이 문서에서는 컴퍼지션 ExpressionAnimations을 사용 하 여 관계 기반 애니메이션을 만드는 방법에 대 한 간략 한 개요를 제공 합니다.
 
-## <a name="dynamic-relation-based-experiences"></a>동적 관계 기반 경험
+## <a name="dynamic-relation-based-experiences"></a>동적 관계 기반 환경
 
-앱에서 동작 경험을 빌드할 때 동작이 시간을 기반으로 하지 않고 다른 개체의 속성에 종속되는 경우가 있습니다. KeyFrameAnimations는 이러한 유형의 동작 경험을 쉽게 표현할 수 없습니다. 이러한 특정 인스턴스에서 동작은 더 이상 개별적이고 사전 정의되어야 할 필요가 없습니다. 대신, 다른 개체 속성과의 관계에 따라 동작이 동적으로 적응할 수 있습니다. 예를 들어, 개체의 수평 위치를 기준으로 개체 불투명도에 애니메이션 효과를 줄 수 있습니다. 다른 예로 고정 헤더와 시차 등의 동작 경험을 들 수 있습니다.
+앱에서 동작 환경을 빌드하는 경우 동작이 시간 기반이 아닌 다른 개체의 속성에 따라 달라 지는 경우가 있습니다. Key프레임 애니메이션은 이러한 유형의 동작 환경을 매우 쉽게 표현할 수 없습니다. 이러한 특정 인스턴스에서 더 이상 동작을 불연속 하 고 미리 정의할 필요가 없습니다. 대신, 동작은 다른 개체 속성과의 관계에 따라 동적으로 조정할 수 있습니다. 예를 들어 가로 위치를 기준으로 개체의 불투명도에 애니메이션 효과를 적용할 수 있습니다. 다른 예로는 고정 헤더 및 시차 같은 동작 환경이 있습니다.
 
-이러한 유형의 동작 경험을 통해 개별적이고 독립적이기보다는 연결되어 있는 느낌이 강한 UI를 만들 수 있습니다. 이 UI는 사용자에게 동적 UI 경험이라는 인상을 줍니다.
+이러한 종류의 동작 환경에서는 단일 및 독립에 상관 없이 더 많은 연결 된 것으로 판단 되는 UI를 만들 수 있습니다. 사용자에 게는 동적 UI 환경을 제공 합니다.
 
-![궤도를 선회하는 원](images/animation/orbit.gif)
+![Orbiting 원](images/animation/orbit.gif)
 
-![시차가 포함된 목록 보기](images/animation/parallax.gif)
+![시차를 사용 하 여 목록 보기](images/animation/parallax.gif)
 
 ## <a name="using-expressionanimations"></a>ExpressionAnimations 사용
 
-관계 기반 동작 경험을 만들려면 ExpressionAnimation 형식을 사용합니다. ExpressionAnimations(또는 줄여서 Expressions)는 시스템이 수학적 관계, 즉 매 프레임마다 애니메이션 속성의 값을 계산하는 데 사용하는 관계를 사용할 수 있는 새로운 유형의 애니메이션입니다. 달리 말해, Expressions는 단순히 프레임별 애니메이션 속성의 원하는 값을 정의하는 수학적 식입니다. Expressions는 다음과 같은 여러 가지 시나리오에서 매우 다양한 용도로 사용할 수 있는 구성 요소입니다.
+관계 기반 동작 환경을 만들려면 ExpressionAnimation 유형을 사용 합니다. ExpressionAnimations (또는 short의 경우)는 수학적 관계를 표현할 수 있도록 하는 새로운 유형의 애니메이션입니다 .이는 시스템에서 모든 프레임에 애니메이션 효과를 주는 데 사용 되는 관계입니다. 또 다른 방법으로, 식은 프레임당 애니메이션 속성의 원하는 값을 정의 하는 수학적 방정식입니다. 식은 다음과 같은 다양 한 시나리오에서 사용할 수 있는 매우 다양 한 구성 요소입니다.
 
-- 상대적 크기, 오프셋 애니메이션.
-- 고정 헤더, ScrollViewer가 있는 시차. ([기존 ScrollViewer 경험 향상](scroll-input-animations.md)을 참조하세요.)
-- InertiaModifiers 및 InteractionTracker가 있는 끌기 지점. ([관성 한정자로 끌기 지점 만들기](inertia-modifiers.md)를 참조하세요.)
+- 상대적 크기, 오프셋 애니메이션입니다.
+- 고정 헤더, 시차 ScrollViewer. ( [기존 ScrollViewer 환경 향상](scroll-input-animations.md)을 참조 하세요.)
+- InertiaModifiers 및 InteractionTracker를 사용 하 여 요소를 맞춥니다. ( [관성 한정자를 사용 하 여 맞추기 요소 만들기](inertia-modifiers.md)를 참조 하세요.)
 
-ExpressionAnimations를 사용하여 작업하기 전에 알아두면 좋은 몇 가지 유의사항이 있습니다.
+ExpressionAnimations 함께 작업 하는 경우 앞으로 설명할 수 있는 몇 가지 사항이 있습니다.
 
-- 기간 무제한 - 비슷한 유형인 KeyFrameAnimation과 달리 Expressions에는 정해진 기간이 없습니다. Expressions는 수학적 관계이기 때문에 상시 "실행 중인" 애니메이션입니다. 원한다면 이러한 애니메이션을 중지할 수 있습니다.
-- 실행 중이지만 항상 평가 중인 것은 아닙니다. 상시 실행되는 애니메이션의 경우 항상 성능이 관건입니다. 하지만 걱정할 필요는 없습니다. 시스템은 매우 지능적이기 때문에 Expression은 입력값 또는 매개 변수가 변경되었는지만 다시 평가할 것입니다.
-- 올바른 개체 유형으로 해석 - Expressions는 수학적 관계이므로 Expression을 정의하는 수식은 애니메이션 대상과 동일한 유형의 속성으로 해석되어야 합니다. 예를 들어, Offset에 애니메이션을 적용하면 Expression은 Vector3 유형으로 해석됩니다.
+- 종료 하지 않음 – Key프레임 애니메이션 형제와 달리 식에는 한정 된 기간이 없습니다. 식은 수학적 관계 이므로 지속적으로 "실행" 되는 애니메이션입니다. 을 선택 하는 경우 이러한 애니메이션을 중지 하는 옵션이 있습니다.
+- 항상 실행 되는 것은 아니지만 실행 되는 애니메이션은 항상 실행 되는 애니메이션에서 항상 문제가 됩니다. 하지만 걱정 하지 않아도 되는 경우에는 입력 또는 매개 변수가 변경 된 경우에만 식이 다시 계산 됩니다.
+- 올바른 개체 형식으로 확인 – 식이 수학적 관계 이므로 식을 정의 하는 수식이 애니메이션 대상으로 지정 되는 동일한 형식의 속성으로 확인 되는 것이 중요 합니다. 예를 들어 오프셋에 애니메이션을 적용 하는 경우 식은 Vector3 형식으로 확인 되어야 합니다.
 
-### <a name="components-of-an-expression"></a>Expression의 구성 요소
+### <a name="components-of-an-expression"></a>식의 구성 요소
 
-Expression의 수학적 관계를 구축할 때 몇 가지 핵심 구성 요소가 있습니다.
+식의 수학적 관계를 작성할 때 다음과 같은 몇 가지 핵심 구성 요소가 있습니다.
 
-- 매개 변수 - 상수 값 또는 다른 Composition 개체에 대한 참조를 나타내는 값입니다.
-- 수학 연산자 - 여러 매개 변수를 결합해 수식을 구성하는 더하기(+), 빼기(-), 곱하기(*), 나누기(/) 등의 일반적인 수학 연산자입니다. 보다 큼(>), 같음(==), 3항 연산자(조건 ? ifTrue : ifFalse), 등의 조건부 연산자도 포함합니다.
-- 수학 함수 – System.Numerics 기반의 수학 함수/바로 가기입니다. 지원되는 함수 전체 목록을 보려면 [ExpressionAnimation](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ExpressionAnimation)을 참조하세요.
+- Parameters – 상수 값 또는 다른 컴퍼지션 개체에 대 한 참조를 나타내는 값입니다.
+- 수치 연산자 – 매개 변수를 결합 하 여 방정식을 형성 하는 일반적인 수치 연산자 더하기 (+), 빼기 (-), 곱하기 (*), 나누기 (/) 또한 보다 큼 (>), 같음 (= =), 삼항 연산자 (조건) 등의 조건부 연산자도 포함 되어 있습니다. ifTrue: ifFalse) 등
+- 수치 연산 함수 – system.string을 기반으로 하는 수치 연산 함수/바로 가기입니다. 지원 되는 함수의 전체 목록은 [Expressionanimation](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ExpressionAnimation)을 참조 하세요.
 
-Expressions는 또한 ExpressionAnimation 시스템 내에서만 고유한 의미를 갖는 특수 구문인 키워드 집합을 지원합니다. 이 목록은 [ExpressionAnimation](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ExpressionAnimation) 문서에 수록되어 있습니다(수학 함수 전체 목록과 함께).
+식은 ExpressionAnimation 시스템 내 에서만 의미가 있는 특수 구와 키워드 집합을 지원 합니다. 이러한 목록은 [Expressionanimation](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ExpressionAnimation) 설명서의 전체 수학 함수 목록과 함께 나열 됩니다.
 
-### <a name="creating-expressions-with-expressionbuilder"></a>ExpressionBuilder로 Expressions 만들기
+### <a name="creating-expressions-with-expressionbuilder"></a>ExpressionBuilder를 사용 하 여 식 만들기
 
-UWP 앱에서 Expressions를 빌드하는 방법은 두 가지입니다.
+UWP 앱에서 식을 작성 하는 두 가지 옵션은 다음과 같습니다.
 
-1. 하나는 공용 API를 통해 문자열로 수식을 작성하는 것입니다.
-1. 오픈 소스 ExpressionBuilder 도구를 통해 형식이 안전한 개체 모델에서 수식을 작성하는 것입니다. [Github 원본 및 설명서](https://github.com/microsoft/WindowsCompositionSamples/tree/master/ExpressionBuilder)를 참조하세요.
+1. 공식 공용 API를 통해 문자열로 수식을 작성 합니다.
+1. 오픈 소스 ExpressionBuilder 도구를 통해 형식이 안전한 개체 모델에서 수식을 작성 합니다. [Github 원본 및 설명서](https://github.com/microsoft/WindowsCompositionSamples/tree/master/ExpressionBuilder)를 참조 하세요.
 
-이 문서에서는 ExpressionBuilder를 사용하여 Expressions를 정의하겠습니다.
+이 문서의 편의를 위해 ExpressionBuilder를 사용 하 여 식을 정의 합니다.
 
 ### <a name="parameters"></a>매개 변수
 
-매개 변수는 Expression의 핵심을 구성합니다. 다음 두 종류의 매개 변수가 있습니다.
+매개 변수는 식의 핵심을 구성 합니다. 다음과 같은 두 가지 유형의 매개 변수가 있습니다.
 
-- 상수: 형식화된 System.Numeric 변수를 나타내는 매개 변수입니다. 이러한 매개 변수는 애니메이션이 시작될 때 한 번 값을 할당 받습니다.
-- 참조: CompositionObject에 대한 참조를 나타내는 매개 변수입니다. 이러한 매개 변수는 애니메이션이 시작된 후에도 지속적으로 값을 업데이트합니다.
+- 상수: 형식화 된 system.string 변수를 나타내는 매개 변수입니다. 이러한 매개 변수는 애니메이션이 시작 될 때 한 번 할당 된 값을 가져옵니다.
+- 참조: CompositionObjects에 대 한 참조를 나타내는 매개 변수입니다 .이 매개 변수는 애니메이션이 시작 된 후 해당 값을 지속적으로 가져옵니다.
 
-일반적으로 참조는 Expression의 출력이 어떻게 동적으로 변할 수 있는지 결정하는 주요 요소입니다. 이러한 참조가 변경되면 Expression의 출력도 변경됩니다. 문자열을 사용하여 Expression을 만들거나 템플릿 작업 시나리오에 사용하는 경우(여러 CompositionObjects를 대상으로 삼기 위해 Expression 사용) 매개 변수의 이름을 지정하고 값을 설정해야 합니다. 자세한 내용은 예제 섹션을 참조하세요.
+일반적으로 참조는 식의 출력이 동적으로 변경 될 수 있는 방법에 대 한 주요 측면입니다. 이러한 참조가 변경 되 면 식의 출력이 결과로 변경 됩니다. 문자열을 사용 하 여 식을 만들거나 템플릿 시나리오에서 사용 하는 경우 (여러 CompositionObjects를 대상으로 하는 식을 사용 하 여) 매개 변수의 값을 설정 하 고 값을 설정 해야 합니다. 자세한 내용은 예제 섹션을 참조하세요.
 
-### <a name="working-with-keyframeanimations"></a>KeyFrameAnimations 작업
+### <a name="working-with-keyframeanimations"></a>Key프레임 애니메이션 사용
 
-Expressions는 KeyFrameAnimations와 함께 사용할 수도 있습니다. 이 경우, Expression을 사용하여 한 번에 KeyFrame의 값을 정의할 수 있습니다. 이러한 유형의 KeyFrames를 ExpressionKeyFrames라고 합니다.
+식은 Key프레임 애니메이션에도 사용할 수 있습니다. 이러한 경우 식을 사용 하 여 특정 시점의 키 프레임 값을 정의 하려고 합니다. 이러한 형식 키프레임은 ExpressionKeyFrames 이라고 합니다.
 
 ```csharp
 KeyFrameAnimation.InsertExpressionKeyFrame(Single, String)
 KeyFrameAnimation.InsertExpressionKeyFrame(Single, ExpressionNode)
 ```
 
-그러나 ExpressionAnimations와 달리 ExpressionKeyFrames는 KeyFrameAnimation이 시작될 때 한 번만 평가됩니다. KeyFrame의 값으로 ExpressionAnimation이 아닌 문자열(또는 ExpressionBuilder를 사용하는 경우 ExpressionNode)을 전달해야 합니다.
+그러나 Expressionanimations과 달리 Expressionanimations Key프레임 애니메이션을 시작할 때 한 번만 평가 됩니다. ExpressionAnimation은 문자열 (Expressionanimation를 사용 하는 경우 Expressionanimation) 대신 키 프레임의 값으로 전달 하지 않습니다.
 
 ## <a name="example"></a>예제
 
-이제 Expressions, 특히 Windows UI 샘플 갤러리의 PropertySet 샘플을 사용하는 예제를 살펴보겠습니다. 파란색 공의 궤도 동작을 관리하는 Expression을 살펴보겠습니다.
+이제 식 사용 예를 살펴보겠습니다. 특히 Windows UI 샘플 갤러리의 PropertySet 샘플을 살펴보겠습니다. 파란색 구슬의 궤도 동작 동작을 관리 하는 식을 살펴보겠습니다.
 
-![궤도를 선회하는 원](images/animation/orbit.gif)
+![Orbiting 원](images/animation/orbit.gif)
 
-전체 경험에 다음과 같은 세 개의 구성 요소가 작동하고 있습니다.
+총 환경을 위한 세 가지 구성 요소가 있습니다.
 
-1. KeyFrameAnimation: 빨간색 공의 Y 오프셋에 애니메이션을 적용합니다.
-1. **Rotation** 속성이 있는 PropertySet: 궤도를 구동하며, 다른 KeyFrameAnimation에서 애니메이션을 적용합니다.
-1. ExpressionAnimation: 완벽한 궤도를 유지하기 위해 빨간 공 오프셋과 Rotation 속성을 참조하는 파란 공의 오프셋을 구동합니다.
+1. 빨간색 구슬의 Y 오프셋에 애니메이션을 적용 하는 Key프레임 애니메이션입니다.
+1. 다른 Key프레임 애니메이션에 의해 애니메이션이 적용 되는 궤도를 구동 하는 데 도움이 되는 **회전** 속성을 사용 하는 PropertySet입니다.
+1. 빨강 구슬 오프셋 및 회전 속성을 참조 하는 파란색 구슬의 오프셋을 구동 하 여 완벽 한 궤도를 유지 하는 ExpressionAnimation입니다.
 
-이 문서에서는 #3에서 정의한 ExpressionAnimation에 집중합니다. 또한 ExpressionBuilder 클래스를 사용하여 이 Expression을 구성하겠습니다. 문자열을 통해 이 경험을 빌드하는 데 사용된 코드의 사본은 뒷부분에 수록되어 있습니다.
+#3에 정의 된 ExpressionAnimation에 초점을 맞춘 것입니다. 또한 ExpressionBuilder 클래스를 사용 하 여이 식을 생성할 것입니다. 문자열을 통해이 환경을 빌드하는 데 사용 되는 코드 복사본이 끝에 나열 됩니다.
 
-이 수식에서는 PropertySet에서 참조해야 하는 두 가지 속성이 있습니다. 하나는 중심점 오프셋이고 다른 하나는 회전입니다.
+이 수식에서는 PropertySet에서 참조 해야 하는 두 가지 속성이 있습니다. 하나는 centerpoint 오프셋이 고 다른 하나는 회전입니다.
 
 ```
 var propSetCenterPoint =
@@ -103,7 +103,7 @@ _propertySet.GetReference().GetVector3Property("CenterPointOffset");
 var propSetRotation = _propertySet.GetReference().GetScalarProperty("Rotation");
 ```
 
-다음으로, 실제 궤도 회전을 설명하는 Vector3 구성 요소를 정의해야 합니다.
+다음으로 실제 orbiting 회전에 대해 계정을 지정 하는 Vector3 구성 요소를 정의 해야 합니다.
 
 ```
 var orbitRotation = EF.Vector3(
@@ -112,18 +112,18 @@ var orbitRotation = EF.Vector3(
 ```
 
 > [!NOTE]
-> `EF` 약식 "using" 표기법을 ExpressionBuilder.ExpressionFunctions 정의 합니다.
+> `EF` 는 식 작성기. Expressionbuilder를 정의 하는 간단한 "using" 표기법입니다.
 
-마지막으로, 이러한 구성 요소를 결합하고 빨간색 공의 위치를 참조하여 수학적 관계를 정의합니다.
+마지막으로, 이러한 구성 요소를 함께 결합 하 고 빨강 해골의 위치를 참조 하 여 수학적 관계를 정의 합니다.
 
 ```
 var orbitExpression = redSprite.GetReference().Offset + propSetCenterPoint + orbitRotation;
 blueSprite.StartAnimation("Offset", orbitExpression);
 ```
 
-만약 이 Expression을 그대로 사용하는 동시에 다른 시각 개체 두 개, 즉 궤도를 선회하는 원 집합 2개를 사용하고 싶다면 어떻게 해야 할까요? CompositionAnimations를 사용하면 애니메이션을 다시 사용하고 여러 CompositionObject를 대상으로 지정할 수 있습니다. 추가 궤도 사례에 이 Expression을 사용할 때 변경해야 하는 유일한 것은 시각 개체에 대한 참조입니다. 이를 템플릿 작업이라고 합니다.
+가상의 상황에서이 동일한 식을 사용 하 고 두 개의 다른 시각적 개체를 사용 하는 경우 두 개의 orbiting 원 집합을 의미 합니다. CompositionAnimations를 사용 하면 애니메이션을 다시 사용 하 고 여러 CompositionObjects를 대상으로 지정할 수 있습니다. 추가 궤도 케이스에이 식을 사용할 때 변경 해야 하는 유일한 사항은 시각적 개체에 대 한 참조입니다. 이 템플릿을 호출 합니다.
 
-이 경우 예전에 빌드한 Expression을 수정합니다. CompositionObject에 대한 참조를 "가져오는" 대신, 이름을 가진 참조를 만든 다음 다른 값을 할당합니다.
+이 경우 이전에 작성 한 식을 수정 합니다. CompositionObject에 대 한 참조를 "가져오는" 대신 이름을 사용 하 여 참조를 만든 다음 다른 값을 할당 합니다.
 
 ```
 var orbitExpression = ExpressionValues.Reference.CreateVisualReference("orbitRoundVisual");
@@ -134,7 +134,7 @@ orbitExpression.SetReferenceParameter("orbitRoundVisual", yellowSprite);
 greenSprite.StartAnimation("Offset", orbitExpression);
 ```
 
-공개 API를 통해 문자열로 Expression을 정의한 경우 코드는 다음과 같습니다.
+공용 API를 통해 문자열을 사용 하 여 식을 정의한 경우 코드는 다음과 같습니다.
 
 ```
 ExpressionAnimation expressionAnimation =

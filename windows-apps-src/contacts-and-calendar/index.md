@@ -1,17 +1,17 @@
 ---
-description: UWP 앱에서 연락처 및 일정 정보를 사용하는 방법
+description: 사용자가 연락처 및 약속에 액세스하여 콘텐츠, 이메일, 일정 정보 또는 메시지를 공유할 수 있는 방법을 확인하세요.
 title: 연락처 및 일정
 ms.assetid: b7e53ab5-2828-4fb7-8656-2bec70b3467f
 ms.date: 05/18/2018
 ms.topic: article
 keywords: Windows 10, UWP, 연락처, 일정, 약속, 이메일 메시지
 ms.localizationpriority: medium
-ms.openlocfilehash: b2e3f0b1d93d2b2c32e117f61fd7514077ca3923
-ms.sourcegitcommit: 90fe7a9a5bfa7299ad1b78bbef289850dfbf857d
+ms.openlocfilehash: e94810ef3fac9c21221181338b7efd8d78fefb97
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/13/2020
-ms.locfileid: "84756549"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054153"
 ---
 # <a name="contacts-my-people-and-calendar"></a>연락처, 내 피플 및 일정
 

@@ -1,33 +1,33 @@
 ---
 title: 바코드 스캐너 구성
-description: 원하는 응용 프로그램에 대 한 바코드 스캐너를 구성 하는 방법에 알아봅니다.
+description: 원하는 응용 프로그램에 대해 바코드 스캐너를 구성 하는 방법을 알아봅니다.
 ms.date: 08/29/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 8466c56ef73a1c38c67e28cf52de7f380e6c563a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 96deeb82f0aa04929ac33001b1aee0603e6474c7
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321579"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168507"
 ---
 # <a name="configure-a-barcode-scanner"></a>바코드 스캐너 구성
 
-바코드 스캐너는 몇 가지 모드로 구성이 가능합니다.  바코드 스캐너를 원하는 응용 프로그램에 맞게 올바르게 구성하는 것이 중요합니다.
+바코드 스캐너는 여러 가지 모드로 구성할 수 있습니다.  원하는 응용 프로그램에 대해 바코드 스캐너를 올바르게 구성 하는 것이 중요 합니다.
 
-바코드 스캐너가 Windows에 키보드로 나타나도록 해주는 **키보드 웨지** 모드에서 다양한 바코드 스캐너를 구성할 수 있습니다.  따라서 메모장 같이 바코드 스캐너를 인식하지 못하는 응용 프로그램에 대해서도 바코드를 스캔할 수 있습니다.  이 모드에서 바코드를 스캔할 때 키보드를 사용하여 데이터를 입력하는 것처럼 바코드 스캐너에서 디코딩된 데이터가 삽입 지점에 삽입됩니다.  UWP 응용 프로그램에서 바코드 스캐너를 더 많이 제어하고 싶은 경우에는 키보드가 아닌 웨지 모드로 이를 구성해야 합니다.
+여러 바코드 스캐너를 **키보드 쐐기형** 모드로 구성할 수 있습니다. 그러면 바코드 스캐너가 Windows에 키보드로 표시 됩니다.  이 기능을 사용 하면 메모장과 같이 바코드 스캐너가 인식 하지 않는 응용 프로그램으로 바코드를 스캔할 수 있습니다.  이 모드에서 바코드를 검색 하면 키보드를 사용 하 여 데이터를 입력 한 것 처럼 바코드 스캐너에서 디코딩된 데이터가 삽입 지점에 삽입 됩니다.  UWP 응용 프로그램에서 바코드 스캐너를 더 효율적으로 제어 하려면 비 키보드 쐐기형 모드에서 구성 해야 합니다.
 
 ## <a name="usb-barcode-scanner"></a>USB 바코드 스캐너
-USB에 연결된 바코드 스캐너는 Windows에 포함된 바코드 스캐너 드라이버에서 작동하도록 **HID POS 스캐너** 모드로 구성해야 합니다. 이 드라이버는의 구현 된 **판매의 지점 HID 사용량 테이블** 사양에 게시 [USB HID](https://www.usb.org/hid)합니다.  바코드 스캐너 설명서를 참조하거나 바코드 스캐너 제조업체에게 **HID POS 스캐너** 모드를 활성화하기 위한 지침을 문의하세요.  **HID POS 스캐너**로 구성이 된 바코드 스캐너는 **POS 바코드 스캐너** 노드 아래의 장치 관리자에 **POS HID 바코드 스캐너**로 표시됩니다.
+Windows에 포함 된 바코드 스캐너 드라이버를 사용 하려면 **HID POS 스캐너** 모드에서 USB 연결 바코드 스캐너를 구성 해야 합니다. 이 드라이버는 [USB hid](https://www.usb.org/hid)에 게시 된 **HID Point Of Sale 사용 테이블** 사양을 구현한 것입니다.  **HID POS 스캐너** 모드를 사용 하도록 설정 하는 방법에 대 한 지침은 바코드 스캐너 설명서를 참조 하거나 바코드 스캐너 제조업체에 문의 하세요.  **HID POS 스캐너** 로 구성 된 후에는 바코드 스캐너가 pos **바코드** 스캐너 노드 아래에 있는 Device Manager에 **pos HID 바코드 스캐너**로 표시 됩니다.
 
-바코드 스캐너 제조업체는 **HID POS 스캐너** 이외의 모드를 사용하여 UWP 바코드 스캐너 API를 지원하는 공급업체별 드라이버도 가지고 있을 수 있습니다.  UWP 바코드 스캐너 Api와 호환 되는 제조업체에서 제공한 드라이버를 이미 설치한 경우 공급 업체 특정 장치 아래에 표시 될 수 있습니다 **POS 바코드 스캐너** 장치 관리자에서.
+바코드 스캐너 제조업체에는 **HID POS 스캐너**이외의 모드를 사용 하 여 UWP 바코드 스캐너 api를 지 원하는 공급 업체별 드라이버만 있을 수 있습니다.  UWP 바코드 스캐너 Api와 호환 되는 제조업체에서 제공 하는 드라이버를 이미 설치한 경우 Device Manager의 **POS 바코드 스캐너** 아래에 공급 업체별 장치가 표시 될 수 있습니다.
 
 ## <a name="bluetooth-barcode-scanner"></a>Bluetooth 바코드 스캐너
-Bluetooth에 연결된 바코드 스캐너는 UWP 바코드 스캐너 API에서 작동할 수 있도록 **직렬 포트 프로토콜 - 간단한 직렬 인터페이스(SPP-SSI)** 모드로 구성해야 합니다.o work with the UWP Barcode Scanner APIs.  바코드 스매너 설명서를 참조하거나 바코드 스캐너 제조업체에게 **SPP-SSI 모드**를 활성화하기 위한 지침을 문의하세요.
+UWP 바코드 스캐너 Api에서 작동 하려면 Bluetooth 연결 된 스캐너를 **직렬 포트 프로토콜-SPP (Simple Serial Interface)** 모드에서 구성 해야 합니다.  **SPP-SSI 모드**를 사용 하도록 설정 하는 지침은 바코드 스캐너 설명서를 참조 하거나 바코드 스캐너 제조업체에 문의 하세요.
 
-사용 하 여 연결 해야 Bluetooth 바코드 스캐너를 사용 하려면 먼저 **설정 > 장치 > Bluetooth & 다른 장치 > 추가 Bluetooth 또는 기타 장치**합니다.
+Bluetooth 바코드 스캐너를 사용 하려면 먼저 **설정 > 장치 > bluetooth & 기타 장치를 사용 하 여 bluetooth 또는 다른 장치를 추가 >** 합니다.
 
-시작 하 고 사용 하 여 연결 프로세스를 제어할 수 있습니다 합니다 [Windows.Devices.Enumeration](https://docs.microsoft.com/uwp/api/windows.devices.enumeration) 네임 스페이스입니다.  참조 [쌍 장치](https://docs.microsoft.com/windows/uwp/devices-sensors/pair-devices) 자세한 내용은 합니다.
+[Windows. Devices](/uwp/api/windows.devices.enumeration) 네임 스페이스를 사용 하 여 페어링 프로세스를 시작 하 고 제어할 수 있습니다.  자세한 내용은 [장치 페어링](./pair-devices.md) 을 참조 하세요.
 
 [!INCLUDE [feedback](./includes/pos-feedback.md)]

@@ -6,12 +6,12 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp, 트레일러, 비디오, 스크린 샷, 이미지, 아이콘, 스토어 목록, 저장소 목록 이미지
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a09395a57a83eaa57124173723b96a87d14b3b3
-ms.sourcegitcommit: a937963ce63a14c254420926661b9b68be28a8ee
+ms.openlocfilehash: da9d6517a43550693596d15c735e3134c5c60a7a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746753"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155317"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>앱 스크린샷, 이미지 및 예고편
 
@@ -32,7 +32,7 @@ ms.locfileid: "84746753"
 여러 가지를 제공할 수 있지만 모든 장치 제품군에 대 한 스크린샷 하나만 필요 합니다. 최대 9 개의 데스크톱 스크린샷 및 다른 장치 제품군에 대 한 최대 8 개의 스크린샷 앱이 지 원하는 각 장치 제품군에 대 한 스크린샷 4 개 이상을 제공 하 여 앱이 장치 유형을 어떻게 확인할 수 있도록 하는 것이 좋습니다. 앱에서 지원 하지 않는 장치 제품군에 대 한 스크린샷을 포함 하지 않습니다. **데스크톱** 스크린샷은 고객이 Surface Hub 장치에도 표시 됩니다.
 
 > [!NOTE]
-> Microsoft Visual Studio는 [스크린샷을 캡처하는 데 도움이](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator#BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store)되는 도구를 제공 합니다.
+> Microsoft Visual Studio는 [스크린샷을 캡처하는 데 도움이](/visualstudio/debugger/run-windows-store-apps-in-the-simulator#BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store)되는 도구를 제공 합니다.
 
 각 스크린샷에는 가로 또는 세로 방향의 .png 파일이 있어야 하며 파일 크기는 50 MB 보다 클 수 없습니다.
 
@@ -55,7 +55,7 @@ ms.locfileid: "84746753"
 [여러 언어](supported-languages.md)에 대 한 매장 목록을 만드는 경우 각각에 대 한 **매장 목록** 페이지가 표시 됩니다. 동일한 이미지를 사용 하는 경우에도 각 언어에 대 한 이미지를 개별적으로 업로드 하 고 각 언어에 사용할 캡션을 제공 해야 합니다. 많은 언어로 저장 목록이 있는 경우 [목록 데이터를 내보내고 오프 라인으로 작업](import-and-export-store-listings.md)하 여 업데이트 하는 것이 더 쉬울 수 있습니다.
 
 
-## <a name="store-logos"></a>Store 로고
+## <a name="store-logos"></a>스토어 로고
 
 스토어 로고를 업로드 하 여 스토어에 사용자 지정 된 디스플레이를 추가로 만들 수 있습니다. 스토어 목록이 앱이 지 원하는 모든 장치 및 OS 버전에 최적으로 표시 되도록 이러한 이미지를 제공 하는 것이 좋습니다. Xbox에서 고객이 앱을 사용할 수 있는 경우 이러한 이미지 중 일부가 필요 합니다.
 
@@ -81,7 +81,7 @@ ms.locfileid: "84746753"
 
 이 이미지는 Windows Phone 8.1 및 이전 버전에서 적절 하 게 표시 하는 데 필요 합니다. 이전에 게시 된 앱이 Windows Phone 8.1 이전 버전을 지원 하 고이 이미지를 제공 하지 않으면 해당 고객에 게 앱 목록과 함께 빈 아이콘이 표시 됩니다. 앱에 Windows Phone 8.1 또는 이전 버전을 대상으로 하는 패키지만 있는 경우에도 Windows 10의 고객에 게 적용 됩니다.
 
-등록에 UWP 패키지만 포함 된 경우이 이미지를 제공 하지 *않아도 됩니다.* (Windows 10 및 Xbox에서 고객에 대 한 확인란을 선택 하지 않는 한, 다음 섹션에 설명 된 대로 **내 패키지의 이미지 대신 업로드 된 로고 이미지를 표시**합니다.)
+등록에 UWP 패키지만 포함 된 경우이 이미지를 제공 하지 *않아도 됩니다.* (Windows 10 및 Xbox에서 고객에 대 한 확인란을 선택 하지 않는 한, 다음 섹션에 설명 된 대로  **내 패키지의 이미지 대신 업로드 된 로고 이미지를 표시**합니다.)
 
 ### <a name="display-only-uploaded-logo-images-in-the-store"></a>저장소에 업로드 된 로고 이미지만 표시
 
@@ -169,7 +169,7 @@ Windows 10 (Xbox 포함)의 고객에 게 목록을 표시할 때 스토어에�
 
 | 동영상 | 오디오 |
 | --- | --- |
-| <ul><li>코덱: [h.264](https://docs.microsoft.com/windows/desktop/DirectShow/h-264-video-types) (AVC1)  </li><li>프로그레시브 스캔 (인터레이스 없음)</li><li>높은 프로필</li><li>연속 된 B 프레임 2 개</li><li>닫힌 GOP. 프레임 속도로 절반의 GOP</li><li>CABAC</li><li>50MB/초 </li><li>색 공간: 4.2.0</li></ul> | <ul><li>코덱: AAC-LC</li><li>채널: 스테레오 또는 서라운드 소리</li><li>샘플링 주기: 48 KHz</li><li>오디오 비트 전송률: 스테레오의 경우 384 k b/초, 서라운드 사운드의 경우 512 k b/초</li></ul> |
+| <ul><li>코덱: [h.264](/windows/desktop/DirectShow/h-264-video-types) (AVC1)  </li><li>프로그레시브 스캔 (인터레이스 없음)</li><li>높은 프로필</li><li>연속 된 B 프레임 2 개</li><li>닫힌 GOP. 프레임 속도로 절반의 GOP</li><li>CABAC</li><li>50MB/초 </li><li>색 공간: 4.2.0</li></ul> | <ul><li>코덱: AAC-LC</li><li>채널: 스테레오 또는 서라운드 소리</li><li>샘플링 주기: 48 KHz</li><li>오디오 비트 전송률: 스테레오의 경우 384 k b/초, 서라운드 사운드의 경우 512 k b/초</li></ul> |
 
 > [!WARNING]
 > 고객은 AVC1 이외의 코덱으로 인코딩된 MP4 파일에 대 한 오디오를 듣지 못할 수 있습니다.
@@ -231,7 +231,3 @@ H.264 메자닌 파일의 경우 다음을 수행 하는 것이 좋습니다.
 > Windows Phone 8.1 이전 버전을 지 원하는 모든 제출물에 대 한 [매장 로고](#store-logos) 섹션에서 300 x 300 앱 타일 아이콘 이미지를 제공 해야 합니다. 그러면 앱이 빈 아이콘으로 스토어에 표시 되지 않습니다.  
 
 **Windows 8.1 및 이전 버전의 경우**일부 판촉 레이아웃에서 **414 x 180** 픽셀 크기의 이미지를 사용할 수 있습니다. 앱이 Windows 8.1 또는 이전 버전에서 실행 되는 경우이 크기의 이미지를 제공 하는 것이 좋습니다.
-
-
-
-

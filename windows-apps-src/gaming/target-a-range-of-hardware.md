@@ -1,31 +1,31 @@
 ---
-title: 다양한 하드웨어에서 그림자 맵 지원
-description: 더 빠른 디바이스에서 충실도가 더 높은 그림자를 렌더링하고 덜 강력한 디바이스에서 보다 빠른 그림자를 렌더링합니다.
+title: 하드웨어 범위에서 섀도 맵 지원
+description: 더 빠른 장치에서 더 높은 성능의 그림자를 렌더링 하 고, 더 낮은 수준의 장치에서 더 빠른 그림자를 렌더링 합니다.
 ms.assetid: d97c0544-44f2-4e29-5e02-54c45e0dff4e
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, 게임, 그림자 맵, directx
+keywords: windows 10, uwp, 게임, 섀도 맵, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 1087a063fa19bea716b86143c10097711cef9205
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 2c21b1c77b15435458d75a1772a914aa95048559
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66367904"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168297"
 ---
-# <a name="support-shadow-maps-on-a-range-of-hardware"></a>다양한 하드웨어에서 그림자 맵 지원
+# <a name="support-shadow-maps-on-a-range-of-hardware"></a>하드웨어 범위에서 섀도 맵 지원
 
 
 
 
-더 빠른 디바이스에서 충실도가 더 높은 그림자를 렌더링하고 덜 강력한 디바이스에서 보다 빠른 그림자를 렌더링합니다. 4 부 [연습: Direct3D 11에서 깊이 버퍼를 사용 하 여 섀도 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md)합니다.
+더 빠른 장치에서 더 높은 성능의 그림자를 렌더링 하 고, 더 낮은 수준의 장치에서 더 빠른 그림자를 렌더링 합니다. 연습 4 부 [: Direct3D 11에서 깊이 버퍼를 사용 하 여 섀도 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md).
 
-## <a name="comparison-filter-types"></a>비교 필터 형식
+## <a name="comparison-filter-types"></a>비교 필터 유형
 
 
-디바이스가 성능 저하를 감당할 수 있는 경우에만 선형 필터링을 사용합니다. 일반적으로 Direct3D 기능 수준 9\_1 장치 그림자 선형 필터링에 대 한 예비 하는 데 필요한 기능 부족 필요는 없습니다. 이러한 디바이스에서는 대신 포인트 필터링을 사용합니다. 선형 필터링을 사용하는 경우 그림자 가장자리를 혼합하도록 픽셀 셰이더를 조정합니다.
+장치에서 성능 저하를 감당할 수 있는 경우에만 선형 필터링을 사용 합니다. 일반적으로 Direct3D 기능 수준 9 \_ 1 장치에는 그림자에 대 한 선형 필터링을 위한 충분 한 전원이 없습니다. 이러한 장치에는 대신 지점 필터링을 사용 합니다. 선형 필터링을 사용 하는 경우 그림자 가장자리가 혼합 되도록 픽셀 셰이더를 조정 합니다.
 
-포인트 필터링에 대한 비교 샘플러를 만듭니다.
+포인트 필터링을 위한 비교 샘플러를 만듭니다.
 
 ```cpp
 D3D11_SAMPLER_DESC comparisonSamplerDesc;
@@ -57,7 +57,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-그런 다음 선형 필터링에 대한 샘플러를 만듭니다.
+그런 다음 선형 필터링을 위한 샘플러를 만듭니다.
 
 ```cpp
 comparisonSamplerDesc.Filter = D3D11_FILTER_COMPARISON_MIN_MAG_MIP_LINEAR;
@@ -69,7 +69,7 @@ DX::ThrowIfFailed(
     );
 ```
 
-샘플러를 선택합니다.
+샘플러 선택:
 
 ```cpp
 ID3D11PixelShader* pixelShader;
@@ -96,7 +96,7 @@ context->PSSetSamplers(0, 1, comparisonSampler);
 context->PSSetShaderResources(0, 1, m_shadowResourceView.GetAddressOf());
 ```
 
-선형 필터링으로 그림자 가장자리를 혼합합니다.
+선형 필터링을 사용 하 여 그림자 가장자리 Blend:
 
 ```cpp
 // Blends the shadow area into the lit area.
@@ -105,22 +105,22 @@ float3 shadow = (1.0f - lighting) * ambient;
 return float4(input.color * (light + shadow), 1.f);
 ```
 
-## <a name="shadow-buffer-size"></a>그림자 버퍼 크기
+## <a name="shadow-buffer-size"></a>섀도 버퍼 크기
 
 
-더 큰 그림자 맵은 농담이 고르지 않게 보이지 않지만 그래픽 메모리에서 공간을 더 차지합니다. 게임에서 여러 그림자 맵 크기로 실험하고 여러 형식의 장치 및 여러 표시 크기의 결과를 확인합니다. 그래픽 메모리를 더 적게 사용하면서 더 나은 결과를 내는 중첩된 그림자 맵과 같은 최적화를 고려하세요. [그림자 깊이 맵을 향상시키기 위한 일반적인 기법](https://docs.microsoft.com/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps)을 참조하세요.
+더 큰 그림자 맵은 blocky로 표시 되지 않지만 그래픽 메모리에서 더 많은 공간을 차지 합니다. 게임에서 다른 그림자 맵 크기를 실험 하 고 다양 한 유형의 장치 및 다른 디스플레이 크기의 결과를 관찰 합니다. 더 작은 그래픽 메모리를 사용 하 여 더 나은 결과를 얻을 수 있도록 종속 된 그림자 맵과 같은 최적화를 고려 합니다. [그림자 깊이 맵을 개선 하는 일반적인 방법을](/windows/desktop/DxTechArts/common-techniques-to-improve-shadow-depth-maps)참조 하세요.
 
-## <a name="shadow-buffer-depth"></a>그림자 버퍼 깊이
+## <a name="shadow-buffer-depth"></a>섀도 버퍼 깊이
 
 
-그림자 버퍼에서 정밀도가 높을수록 깊이 테스트 결과가 더욱 정확하므로 Z-버퍼 충돌과 같은 문제를 방지하는 데 도움이 됩니다. 하지만 더 큰 그림자 맵처럼 정밀도가 더 높으면 메모리를 더 많이 차지합니다. 게임-DXGI 다른 깊이 전체 자릿수 형식으로 실험해 보세요\_형식\_R24G8\_DXGI와 TYPELESS\_형식\_R16\_TYPELESS-에 속도 품질을 확인 합니다. 다양 한 기능 수준입니다.
+섀도 버퍼의 전체 자릿수를 더 정확 하 게 지정 하면 z 버퍼와 같은 문제를 방지할 수 있습니다. 하지만 더 큰 그림자 맵과 마찬가지로 정밀도가 클수록 더 많은 메모리가 사용 됩니다. 게임에서 다양 한 깊이 전체 자릿수를 사용 하 여 실험-DXGI \_ 형식 \_ R24G8 형식 \_ 및 \_ \_ R16 \_ 유형 없음-다른 기능 수준의 속도와 품질을 관찰 합니다.
 
 ## <a name="optimizing-precompiled-shaders"></a>미리 컴파일된 셰이더 최적화
 
 
-Windows 스토어 앱은 동적 셰이더 컴파일을 사용할 수 있지만 동적 셰이더 연결을 사용하는 것이 더 빠릅니다. 컴파일러 지시문과 `#ifdef` 블록을 사용하여 서로 다른 버전의 셰이더를 만들 수도 있습니다. 텍스트 편집기에서 Visual Studio 프로젝트 파일을 열고 HLSL에 대한 여러 `<FxcCompiler>` 항목(각각에 적절한 전처리기 정의가 포함된)을 추가하여 이 작업을 수행합니다. 이 다른 filenames; 필요는 note 이 경우 Visual Studio 추가 \_지점 및 \_선형적 셰이더의 다양 한 버전으로 합니다.
+UWP (유니버설 Windows 플랫폼) 앱은 동적 셰이더 컴파일을 사용할 수 있지만 동적 셰이더 링크를 사용 하는 것이 더 빠릅니다. 컴파일러 지시문 및 `#ifdef` 블록을 사용 하 여 다른 버전의 셰이더를 만들 수도 있습니다. 이렇게 하려면 텍스트 편집기에서 Visual Studio 프로젝트 파일을 열고 `<FxcCompiler>` HLSL에 대 한 여러 항목을 추가 합니다 (각각 적절 한 전처리기 정의가 포함 됨). 이 경우 다른 파일 이름이 있습니다. 이 경우 Visual Studio는 \_ point와 linear를 \_ 다른 버전의 셰이더에 추가 합니다.
 
-선형 필터링된 버전의 셰이더에 대한 프로젝트 파일 항목은 LINEAR를 정의합니다.
+셰이더의 선형 필터링 버전에 대 한 프로젝트 파일 항목은 선형을 정의 합니다.
 
 ```xml
 <FxCompile Include="Content\ShadowPixelShader.hlsl">
@@ -149,7 +149,7 @@ Windows 스토어 앱은 동적 셰이더 컴파일을 사용할 수 있지만 �
 </FxCompile>
 ```
 
-선형 필터링된 버전의 셰이더에 대한 프로젝트 파일 항목은 전처리기 정의를 포함하지 않습니다.
+셰이더의 선형 필터링 버전에 대 한 프로젝트 파일 항목에는 전처리기 정의가 포함 되어 있지 않습니다.
 
 ```xml
 <FxCompile Include="Content\ShadowPixelShader.hlsl">
@@ -175,7 +175,3 @@ Windows 스토어 앱은 동적 셰이더 컴파일을 사용할 수 있지만 �
  
 
  
-
-
-
-

@@ -1,5 +1,5 @@
 ---
-Description: 알림 미러링을 사용 하는 방법에 대해 알아봅니다.
+description: 클라우드에서 작동 센터에서 제공 하는 알림 미러링을 사용 하 여 PC에서 휴대폰의 알림 메시지를 확인 하는 방법을 알아봅니다.
 title: 알림 미러링
 label: Notification mirroring
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 12/15/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림, 클라우드의 동작 센터, 알림 미러링, 알림, 교차 장치
 ms.localizationpriority: medium
-ms.openlocfilehash: b897c6574f6cbfe78406d1c624f2e3b7286ef582
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 13e3e9f0b675ef0e5f9e0787f0544f87689cf74a
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971058"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054013"
 ---
 # <a name="notification-mirroring"></a>알림 미러링
 
@@ -52,7 +52,7 @@ Windows 앱 개발자, 엔터프라이즈 및 사용자가 알림 미러링을 �
 
 때때로 다른 장치에 미러링되지 않으려는 장치 관련 알림이 있을 수 있습니다. 알림 알림에서 **미러링** 속성을 설정 하 여 특정 알림이 미러링되지 않도록 차단할 수 있습니다. 현재이 미러링 속성은 로컬 알림에 대해서만 설정할 수 있습니다 (WNS 푸시 알림을 보낼 때 지정할 수 없음).
 
-**알려진 문제**: `ToastNotificationHistory.GetHistory()` API를 통해 미러링 속성을 검색 하면 지정 된 옵션 대신 항상 기본값 (**허용 됨**)이 반환 됩니다. 모든 것이 작동 하는 것은 걱정 하지 마세요. 손상 된 값만 검색 하는 것입니다.
+**알려진 문제**: API를 통해 미러링 속성을 검색 `ToastNotificationHistory.GetHistory()` 하면 지정 된 옵션 대신 항상 기본값 (**허용 됨**)이 반환 됩니다. 모든 것이 작동 하는 것은 걱정 하지 마세요. 손상 된 값만 검색 하는 것입니다.
 
 ```csharp
 var toast = new ToastNotification(xml)
@@ -67,7 +67,7 @@ ToastNotificationManager.CreateToastNotifier().Show(toast);
 
 ### <a name="as-a-developer-opt-out-completely"></a>개발자로 서 완전히 옵트아웃
 
-일부 개발자는 알림 미러링의 앱을 완전히 옵트아웃 (opt out) 할 수 있습니다. 모든 앱이 미러링의 이점을 누릴 수 있지만 쉽게 옵트아웃 하 게 됩니다. 다음 메서드를 한 번만 호출 하면 앱이 옵트아웃 됩니다. 예를 들어, 내 `App.xaml.cs`앱의 생성자에이 호출을 추가할 수 있습니다.
+일부 개발자는 알림 미러링의 앱을 완전히 옵트아웃 (opt out) 할 수 있습니다. 모든 앱이 미러링의 이점을 누릴 수 있지만 쉽게 옵트아웃 하 게 됩니다. 다음 메서드를 한 번만 호출 하면 앱이 옵트아웃 됩니다. 예를 들어, 내 앱의 생성자에이 호출을 추가할 수 `App.xaml.cs` 있습니다.
 
 ```csharp
 public App()

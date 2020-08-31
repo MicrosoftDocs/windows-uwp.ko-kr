@@ -1,45 +1,45 @@
 ---
 title: 화면에 그리기
-description: 마지막으로, 화면에 회전하는 큐브를 그리는 코드를 포팅합니다.
+description: GXDI 및 Direct3D Api를 사용 하 여 OpenGL 코드를 DirectX로 이식 하 고 회전 하는 큐브를 화면에 그리는 방법에 대해 알아봅니다.
 ms.assetid: cc681548-f694-f613-a19d-1525a184d4ab
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 그래픽
 ms.localizationpriority: medium
-ms.openlocfilehash: 68d2c6ec250286b9820ff218f9b35637f49f3b97
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 7380ede77eeb14f8b1865d4c948387df7e072453
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368756"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054503"
 ---
 # <a name="draw-to-the-screen"></a>화면에 그리기
 
 
 
 
-**중요 한 Api**
+**중요 API**
 
 -   [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d)
 -   [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview)
 -   [**IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1)
 
-마지막으로, 화면에 회전하는 큐브를 그리는 코드를 포팅합니다.
+마지막으로 회전 하는 큐브를 그리는 코드를 화면에 이식 합니다.
 
-OpenGL ES 2.0에서 그리기 컨텍스트는 EGLContext 형식으로 정의되며, 이 형식에는 창에 표시되는 최종 이미지를 구성하는 데 사용되는 렌더링 대상에 그리는 데 필요한 리소스 창과 창 및 화면 매개 변수가 포함됩니다. 이 컨텍스트를 사용하여 디스플레이에 셰이더 파이프라인의 결과를 올바르게 표시하도록 그래픽 리소스를 구성합니다. 기본 리소스 중 하나는 "백 버퍼"(또는 "프레임 버퍼 개체")이며, 여기에는 디스플레이에 표시할 준비가 된 최종, 작성된 렌더링 대상이 포함됩니다.
+OpenGL ES 2.0에서 그리기 컨텍스트는 창에 표시 되는 최종 이미지를 구성 하는 데 사용 되는 렌더링 대상으로 그리기에 필요한 리소스 뿐만 아니라 창 및 surface 매개 변수를 포함 하는 E글 컨텍스트 형식으로 정의 됩니다. 이 컨텍스트를 사용 하 여 디스플레이에 셰이더 파이프라인의 결과를 올바르게 표시 하도록 그래픽 리소스를 구성할 수 있습니다. 기본 리소스 중 하나는 표시에 사용할 수 있는 최종 합성 렌더링 대상을 포함 하는 "백 버퍼" (또는 "프레임 버퍼 개체")입니다.
 
-Direct3D를 사용하면 디스플레이에 그리기 위한 그래픽 리소스를 구성하는 프로세스가 더욱 교육적으로 되어 좀 더 많은 API를 필요로 하게 됩니다. (Microsoft Visual Studio Direct3D 템플릿을 간소화할 수 있습니다 훨씬이 프로세스를 통해!) (Direct3D 장치 컨텍스트)는 컨텍스트를 가져오려면 먼저 가져와야 합니다는 [ **ID3D11Device1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 개체를 만들고 구성 하는 데 사용 된 [ **ID3D11DeviceContext1**  ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 개체입니다. 이러한 두 개체는 디스플레이에 그리는 데 필요한 특정 리소스를 구성하는 데 함께 사용됩니다.
+Direct3D를 사용 하는 경우 디스플레이에 그리기 위한 그래픽 리소스를 구성 하는 프로세스는 더 didactic 더 많은 Api가 필요 합니다. Microsoft Visual Studio Direct3D 템플릿에서는이 프로세스를 크게 간소화할 수 있습니다. 컨텍스트 (Direct3D 장치 컨텍스트)를 가져오려면 먼저 [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 개체를 가져온 다음이 개체를 사용 하 여 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 개체를 만들고 구성 해야 합니다. 이러한 두 개체를 함께 사용 하 여 표시로 그리기에 필요한 특정 리소스를 구성 합니다.
 
-요약하자면, DXGI API는 그래픽 어댑터에 직접 관련된 리소스를 관리하기 위한 API를 주로 포함하고 있고, Direct3D는 GPU와 CPU에서 실행되는 주 프로그램 간을 연결할 수 있게 해주는 API를 포함하고 있습니다.
+간단히 말해서, DXGI Api에는 그래픽 어댑터와 직접 관련 된 리소스를 관리 하기 위한 Api가 포함 되어 있으며, Direct3D에는 CPU에서 실행 되는 GPU와 기본 프로그램 간 인터페이스를 사용할 수 있도록 하는 Api가 포함 되어 있습니다.
 
-이 샘플에서의 비교를 위해 각 API의 관련 형식이 다음에 나와 있습니다.
+이 샘플의 비교를 위해 각 API의 관련 형식은 다음과 같습니다.
 
--   [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1): 그래픽 장치 및 해당 리소스의 가상 표현을 제공 합니다.
--   [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1): 버퍼를 구성 하 고 렌더링 명령을 실행 하는 인터페이스를 제공 합니다.
--   [**IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1): 스왑 체인 백 버퍼 OpenGL ES 2.0에서 비슷합니다. 스왑 체인은 디스플레이를 위한 렌더링된 최종 이미지가 포함된 그래픽 어댑터상의 메모리 영역이며, 화면에 최신 렌더를 표시하기 위해 작성 및 "스왑"될 수 있는 여러 버퍼를 포함하고 있기 때문에 "스왑 체인"이라고 합니다.
--   [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview): 여기에 Direct3D 장치 컨텍스트 그리고 스왑 체인에 의해 제공 되는 2D 비트맵 버퍼에 포함 합니다. OpenGL ES 2.0과 마찬가지로, 여러 렌더링 대상이 있을 수 있으며 이 중 일부는 스왑 체인에 바인딩되어 있지 않지만 멀티패스 음영 기술에 사용됩니다.
+-   [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1): 그래픽 장치 및 해당 리소스에 대 한 가상 표현을 제공 합니다.
+-   [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1): 버퍼를 구성 하 고 렌더링 명령을 실행 하기 위한 인터페이스를 제공 합니다.
+-   [**IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1): 스왑 체인은 OpenGL ES 2.0의 백 버퍼와 유사 합니다. 표시를 위해 렌더링 된 최종 이미지를 포함 하는 그래픽 어댑터의 메모리 영역입니다. 이를 "스왑 체인" 이라고 하며,이를 "교환" 하 여 화면에 최신 렌더링을 제공할 수 있습니다.
+-   [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview):이는 Direct3D 장치 컨텍스트가 그려지는 2d 비트맵 버퍼를 포함 하 고 교환 체인에서 제공 됩니다. OpenGL ES 2.0와 마찬가지로 여러 렌더링 대상이 있을 수 있으며, 일부는 스왑 체인에 바인딩되지 않지만 다중 패스 음영 기술에 사용 됩니다.
 
-템플릿에서 렌더러 개체에는 다음과 같은 필드가 포함되어 있습니다.
+템플릿에서 렌더러 개체에는 다음 필드가 포함 됩니다.
 
 Direct3D 11: 장치 및 장치 컨텍스트 선언
 
@@ -52,7 +52,7 @@ Microsoft::WRL::ComPtr<IDXGISwapChain1>                      m_swapChainCoreWind
 Microsoft::WRL::ComPtr<ID3D11RenderTargetView>          m_d3dRenderTargetViewWin;
 ```
 
-백 버퍼가 렌더링 대상으로 구성되어 스왑 체인에 제공되는 방법은 다음과 같습니다.
+백 버퍼를 렌더링 대상으로 구성 하 고 스왑 체인에 제공 하는 방법은 다음과 같습니다.
 
 ``` syntax
 ComPtr<ID3D11Texture2D> backBuffer;
@@ -63,19 +63,19 @@ m_d3dDevice->CreateRenderTargetView(
   &m_d3dRenderTargetViewWin);
 ```
 
-스왑 체인이 디스플레이에 사용할 수 있는 "백 버퍼"로 텍스처를 나타내는 [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d)에 대한 [**IDXGISurface1**](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgisurface1)을 Direct3D 런타임에서 암시적으로 만듭니다.
+Direct3D 런타임은 스왑 체인이 표시 하는 데 사용할 수 있는 "백 버퍼"로 텍스처를 나타내는 [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d)에 대 한 [**IDXGISurface1**](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgisurface1) 를 암시적으로 만듭니다.
 
-Direct3D 장치 및 디바이스 컨텍스트와 렌더링 대상의 초기화 및 구성은 Direct3D 템플릿의 사용자 지정 **CreateDeviceResources** 및 **CreateWindowSizeDependentResources** 메서드에 있습니다.
+Direct3d 장치 및 장치 컨텍스트의 초기화 및 구성과 렌더링 대상은 Direct3D 템플릿의 custom **CreateDeviceResources** and **CreateWindowSizeDependentResources** 메서드를 통해 찾을 수 있습니다.
 
-EGL 및 EGLContext 형식에 관련된 Direct3D 디바이스 컨텍스트에 대한 자세한 내용은 [DXGI 및 Direct3D로 EGL 코드 포팅](moving-from-egl-to-dxgi.md)을 읽어 보세요.
+관련 된 Direct3D 장치 컨텍스트에 대 한 자세한 내용은이에 대 한 정보를 [참조 하세요.](moving-from-egl-to-dxgi.md)
 
-## <a name="instructions"></a>지침
+## <a name="instructions"></a>Instructions
 
-### <a name="step-1-rendering-the-scene-and-displaying-it"></a>1단계: 장면 렌더링 및 표시
+### <a name="step-1-rendering-the-scene-and-displaying-it"></a>1 단계: 장면 렌더링 및 표시
 
-큐브 데이터를 업데이트한 후(이 경우 약간 y축을 기준으로 회전) Render 메서드는 뷰포트를 그리기 컨텍스트(EGLContext)의 차원으로 설정합니다. 이 컨텍스트에는 구성된 디스플레이(EGLDisplay)를 사용하여 창 화면(EGLSurface)에 표시할 색 버퍼가 포함됩니다. 이때 예제에서는 꼭짓점 데이터 특성을 업데이트하고, 인덱스 버퍼를 다시 바인딩하고, 큐브를 그리고, 디스플레이 화면에 음영 파이프라인으로 그려진 색 버퍼에서 스왑합니다.
+큐브 데이터를 업데이트 한 후 (이 경우 y 축 주위에서 조금씩 회전) Render 메서드는 뷰포트를 그리기 컨텍스트의 차원 (E글 컨텍스트)으로 설정 합니다. 이 컨텍스트에는 구성 된 디스플레이 (E글 표시)를 사용 하 여 창 화면에 표시 되는 색 버퍼 (EGLSurface)가 포함 됩니다. 이번에는이 예제에서 꼭 짓 점 데이터 특성을 업데이트 하 고, 인덱스 버퍼를 다시 바인딩하고, 큐브를 그리고, 음영 파이프라인으로 그려진 색 버퍼를 표시 화면으로 바꿉니다.
 
-OpenGL ES 2.0: 표시에 대 한 프레임 렌더링
+OpenGL ES 2.0: 표시할 프레임 렌더링
 
 ``` syntax
 void Render(GraphicsContext *drawContext)
@@ -121,19 +121,19 @@ void Render(GraphicsContext *drawContext)
 }
 ```
 
-Direct3D 11에서 이 프로세스는 매우 유사합니다. (Direct3D 템플릿의 뷰포트 및 렌더링 대상 구성을 사용하고 있다고 가정합니다.)
+Direct3D 11에서 프로세스는 매우 유사 합니다. (Direct3D 템플릿에서 뷰포트 및 렌더링 대상 구성을 사용 하 고 있다고 가정 합니다.
 
--   [  **ID3D11DeviceContext1::UpdateSubresource**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nf-d3d11_1-id3d11devicecontext1-updatesubresource1)에 대한 호출로 상수 버퍼(이 경우, 모델-보기-투영 행렬)를 업데이트합니다.
--   [  **ID3D11DeviceContext1::IASetVertexBuffers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetvertexbuffers)로 꼭짓점 버퍼를 설정합니다.
--   [  **ID3D11DeviceContext1::IASetIndexBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetindexbuffer)로 인덱스 버퍼를 설정합니다.
--   [  **ID3D11DeviceContext1::IASetPrimitiveTopology**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology)로 특정 삼각형 토폴로지(삼각형 목록)를 설정합니다.
--   [  **ID3D11DeviceContext1::IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout)으로 꼭짓점 버퍼의 입력 레이아웃을 설정합니다.
--   [  **ID3D11DeviceContext1::VSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-vssetshader)로 꼭짓점 셰이더를 바인딩합니다.
--   [  **ID3D11DeviceContext1::PSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader)로 조각 셰이더를 바인딩합니다.
--   셰이더를 통해 인덱싱된 꼭짓점을 보내고 색 결과를 [**ID3D11DeviceContext1::DrawIndexed**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed)로 렌더링 대상 버퍼에 출력합니다.
--   [  **IDXGISwapChain1::Present1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1)로 렌더링 대상 버퍼를 표시합니다.
+-   상수 버퍼 (이 경우 모델-뷰-프로젝션 행렬)를 [**ID3D11DeviceContext1:: UpdateSubresource**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nf-d3d11_1-id3d11devicecontext1-updatesubresource1)에 대 한 호출로 업데이트 합니다.
+-   [**ID3D11DeviceContext1:: IASetVertexBuffers**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetvertexbuffers)를 사용 하 여 꼭 짓 점 버퍼를 설정 합니다.
+-   [**ID3D11DeviceContext1:: IASetIndexBuffer**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetindexbuffer)를 사용 하 여 인덱스 버퍼를 설정 합니다.
+-   [**ID3D11DeviceContext1:: IASetPrimitiveTopology**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology)를 사용 하 여 특정 삼각형 토폴로지 (삼각형 목록)를 설정 합니다.
+-   [**ID3D11DeviceContext1:: IASetInputLayout**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-iasetinputlayout)를 사용 하 여 꼭 짓 점 버퍼의 입력 레이아웃을 설정 합니다.
+-   [**ID3D11DeviceContext1:: VSSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-vssetshader)를 사용 하 여 꼭 짓 점 셰이더를 바인딩합니다.
+-   [**ID3D11DeviceContext1::P SSetShader**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-pssetshader)를 사용 하 여 조각 셰이더를 바인딩합니다.
+-   셰이더를 통해 인덱싱된 버텍스를 보내고 [**ID3D11DeviceContext1::D rawindexed**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-drawindexed)로 색 결과를 렌더링 대상 버퍼에 출력 합니다.
+-   [**IDXGISwapChain1::P resent1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1)를 사용 하 여 렌더링 대상 버퍼를 표시 합니다.
 
-Direct3D 11: 표시에 대 한 프레임 렌더링
+Direct3D 11: 표시할 프레임 렌더링
 
 ``` syntax
 void RenderObject::Render()
@@ -196,23 +196,23 @@ void RenderObject::Render()
 
 ```
 
-[  **IDXGISwapChain1::Present1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1)을 호출하면 구성된 디스플레이에 프레임이 출력됩니다.
+[**IDXGISwapChain1::P resent1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1) 가 호출 되 면 프레임이 구성 된 표시로 출력 됩니다.
 
 ## <a name="previous-step"></a>이전 단계
 
 
-[포트는 GLSL](port-the-glsl.md)
+[인 포트](port-the-glsl.md)
 
 ## <a name="remarks"></a>설명
 
-이 예제에서는 특히 UWP(유니버설 Windows 플랫폼) DirectX 앱에 대한 장치 리소스 구성의 복잡성이 심하기 때문에 해당 내용에 주석을 달았습니다. 전체 템플릿 코드를 검토하되, 특히 창과 장치 리소스 설정 및 관리를 수행하는 부분을 검토하는 것이 좋습니다. UWP 앱은 회전 이벤트뿐만 아니라 일시 중단/다시 시작 이벤트를 지원해야 하며, 템플릿은 인터페이스 손실이나 디스플레이 매개 변수 변경을 처리하기 위한 모범 사례를 보여 줍니다.
+이 예제는 주석을 다 (UWP) DirectX 앱에 대 유니버설 Windows 플랫폼 한 장치 리소스를 구성 하는 복잡 한 정도를 합니다. 전체 템플릿 코드, 특히 창 및 장치 리소스 설정 및 관리를 수행 하는 파트를 검토 하는 것이 좋습니다. UWP 앱은 일시 중단/다시 시작 이벤트 뿐만 아니라 회전 이벤트를 지원 해야 하며, 템플릿에서 인터페이스 손실 또는 표시 매개 변수의 변경에 대 한 모범 사례를 보여 줍니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 
-* [방법: Direct3D 11로 간단한 OpenGL ES 2.0 렌더러를 포트](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
-* [셰이더 개체 포트](port-the-shader-config.md)
-* [포트는 GLSL](port-the-glsl.md)
+* [방법: 간단한 OpenGL ES 2.0 렌더러를 Direct3D 11로 이식](port-a-simple-opengl-es-2-0-renderer-to-directx-11-1.md)
+* [셰이더 개체 이식](port-the-shader-config.md)
+* [인 포트](port-the-glsl.md)
 * [화면에 그리기](draw-to-the-screen.md)
 
  

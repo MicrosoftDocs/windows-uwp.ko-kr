@@ -1,17 +1,17 @@
 ---
 title: UWP 게임에 클라우드 서비스 사용
-description: UWP 게임을 위한 백 엔드로 클라우드를 구현 하는 방법에 대해 자세히 알아보세요.
+description: 플랫폼 및 장치에서 UWP 게임을 개발 하는 경우 클라우드 백 엔드를 사용 하 여 수요에 따라 게임 크기를 조정 하는 데 도움을 줍니다.
 ms.assetid: 1a7088e0-0d7b-11e6-8e05-0002a5d5c51b
 ms.date: 03/27/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 클라우드 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d959c490474a6280d878be9679abafc31b565d8
-ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
+ms.openlocfilehash: 7c0cfd98a37c4822d80eded7fe69e23c54bcdc89
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846863"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054413"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>UWP 게임에 클라우드 서비스 사용
 
@@ -49,7 +49,7 @@ Windows 10의 UWP (유니버설 Windows 플랫폼)는 Microsoft 장치에서 게
     </colgroup>
     <tr class="header" align="left">
         <th>개발자</th>
-        <th>설명</th>
+        <th>Description</th>
         <th>주요 게임 시나리오</th>
         <th>자세한 정보</th>
     </tr>
@@ -150,7 +150,7 @@ Windows 10의 UWP (유니버설 Windows 플랫폼)는 Microsoft 장치에서 게
 
     PaaS (Platform as a Service)는 IaaS와 유사 하지만 서버, 저장소, 네트워킹 등의 인프라 관리도 포함 합니다. 따라서 물리적 서버 및 데이터 센터 인프라를 구매 하지 않고 소프트웨어 라이선스, 기본 응용 프로그램 인프라, 미들웨어, 개발 도구 또는 기타 리소스를 구입 하 고 관리할 필요가 없습니다.
 
-* [SaaS (Software as a Service)](https://azure.microsoft.com/overview/what-is-saas/)
+* [SaaS(Software as a Service)](https://azure.microsoft.com/overview/what-is-saas/)
 
     SaaS(Software as a Service)를 도입하면 사용자가 인터넷을 통해 클라우드 기반 앱에 연결하여 사용할 수 있습니다. 클라우드 서비스 공급자 로부터 종 량 제 방식으로 구매 하는 완전 한 소프트웨어 솔루션을 제공 합니다.  일반적인 예로는 전자 메일, 일정 및 office 도구 (예: Office 앱 Microsoft 365)가 있습니다. 조직의 앱 사용을 임대 하 고 사용자가 일반적으로 웹 브라우저를 사용 하 여 인터넷을 통해 연결 합니다. 모든 기본 인프라, 미들웨어, 앱 소프트웨어 및 앱 데이터는 서비스 공급자의 데이터 센터에 있습니다. 서비스 공급자는 하드웨어 및 소프트웨어를 관리 하 고 적절 한 서비스 계약을 사용 하 여 게임과 데이터의 가용성과 보안도 보장 합니다. SaaS를 통해 조직은 최소의 사전 투자 비용으로 신속하게 앱을 시작하고 실행할 수 있습니다.
 

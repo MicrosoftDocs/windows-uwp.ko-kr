@@ -5,12 +5,12 @@ ms.date: 05/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: f5f19d1337a7ae49f46ab65d8420fedb775eeb2f
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 7f8f180c25aca0be3bfe9131de4e2c415fbe7968
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730381"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168467"
 ---
 # <a name="getting-started-with-point-of-service"></a>서비스 지점 시작
 
@@ -205,7 +205,7 @@ if (claimedBarcodeScanner != null)
 ```
 
 > [!NOTE]
-> 요청 된 지점 및 취소 서비스 장치 클래스 모두 [은 windows.foundation.iclosable 인터페이스](https://docs.microsoft.com/uwp/api/windows.foundation.iclosable)를 구현 합니다. 장치가 네트워크 또는 Bluetooth를 통해 앱에 연결 된 경우 다른 앱이 연결 하려면 먼저 요청 된 개체와 취소 개체를 모두 삭제 해야 합니다.
+> 요청 된 지점 및 취소 서비스 장치 클래스 모두 [은 windows.foundation.iclosable 인터페이스](/uwp/api/windows.foundation.iclosable)를 구현 합니다. 장치가 네트워크 또는 Bluetooth를 통해 앱에 연결 된 경우 다른 앱이 연결 하려면 먼저 요청 된 개체와 취소 개체를 모두 삭제 해야 합니다.
 
 ## <a name="see-also"></a>참고 항목
 + [바코드 스캐너 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BarcodeScanner)
@@ -213,4 +213,3 @@ if (claimedBarcodeScanner != null)
 + [줄 표시 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/LineDisplay)
 + [자기 줄무늬 판독기 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MagneticStripeReader)
 + [POSPrinter 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/PosPrinter)
-

@@ -1,17 +1,17 @@
 ---
 title: 게임용 입력 시스템
-description: 입력 장치를 효과적으로 사용 하기 위한 패턴 및 기술에 대해 알아봅니다.
+description: UWP (유니버설 Windows 플랫폼) 게임에서 입력 장치를 효과적으로 사용 하기 위한 패턴 및 기술을 알아봅니다.
 ms.assetid: CBAD3345-3333-4924-B6D8-705279F52676
 ms.date: 11/20/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 입력
 ms.localizationpriority: medium
-ms.openlocfilehash: aa2036cb8d91b17d084e4e4922d01d4256bdb7de
-ms.sourcegitcommit: 29eb375bc634bf733be58107c1d648dc818da7f8
+ms.openlocfilehash: eb543e86221f8f1a37565c2e6e6bf1fe4a8d3635
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051328"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89054493"
 ---
 # <a name="input-practices-for-games"></a>게임용 입력 시스템
 
@@ -314,9 +314,9 @@ if (buttonArrangement == buttonSelection)
 
 남아 있는 배터리 수명의 백분율을 기준으로 코드에서 그리기 UI와 같은 일부 작업을 수행 하는 경우에는 위의 값을 준수 하는지 확인 합니다. 예를 들어 컨트롤러의 배터리가 부족할 때 플레이어에 게 경고를 표시 하려면 10%에 도달할 때이를 수행 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-* [Tem를Windows.Sys합니다. 사용자 클래스](https://docs.microsoft.com/uwp/api/windows.system.user)
+* [ Tem를Windows.Sys합니다. 사용자 클래스](https://docs.microsoft.com/uwp/api/windows.system.user)
 * [IGameController 인터페이스입니다.](https://docs.microsoft.com/uwp/api/windows.gaming.input.igamecontroller)
 * [Windows GamepadButtons 열거형](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamepadbuttons)
 * [UserGamepadPairingUWP 샘플](/samples/microsoft/xbox-atg-samples/usergamepadpairinguwp/)

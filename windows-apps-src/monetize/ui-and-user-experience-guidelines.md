@@ -1,207 +1,207 @@
 ---
 ms.assetid: 7a38a352-6e54-4949-87b1-992395a959fd
-description: 앱 내 광고에 대한 UI 및 사용자 환경 지침을 알아봅니다.
-title: 광고의 UI 및 사용자 환경 지침
+description: 앱에서 배너 광고, 중간 광고 및 네이티브 광고를 사용 하 여 뛰어난 UI 및 사용자 환경을 제공 하기 위한 지침을 참조 하세요.
+title: 광고에 대 한 UI 및 사용자 환경 지침
 ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 지침, 모범 사례
 ms.localizationpriority: medium
-ms.openlocfilehash: d64d5c544f6ec9e1356cc024e634286336dc9f91
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 014cc5a7be370ed5fd579af9bc4ab7600cb96689
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210249"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158357"
 ---
-# <a name="ui-and-user-experience-guidelines-for-ads"></a>광고의 UI 및 사용자 환경 지침
+# <a name="ui-and-user-experience-guidelines-for-ads"></a>광고에 대 한 UI 및 사용자 환경 지침
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 정보](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
-이 문서에서는 앱 내 배너 광고, 중간 광고와 기본 광고로 뛰어난 환경을 제공하기 위한 지침을 제시합니다. 앱의 모양과 느낌을 디자인하는 방법에 대한 일반적인 지침은 [디자인 및 UI](https://developer.microsoft.com/windows/apps/design)를 참조하세요.
+이 문서에서는 앱에서 배너 광고, 중간 광고 및 기본 광고를 사용 하 여 뛰어난 환경을 제공 하기 위한 지침을 제공 합니다. 앱에 대 한 모양과 느낌을 디자인 하는 방법에 대 한 일반적인 지침은 [& UI 디자인](https://developer.microsoft.com/windows/apps/design)을 참조 하세요.
 
 > [!IMPORTANT]
-> 앱 내 광고를 사용할 때는 [정책 10.10](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content)(광고 수행 및 콘텐츠)을 포함하되 이에 국한되지 않는 Microsoft Store 정책을 준수해야 합니다. 특히 앱의 배너 광고 또는 중간 광고 구현은 Microsoft Store 정책의 [정책 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) 요구 사항을 충족해야 합니다. 이 문서에는 이 정책을 위반하는 구현의 예가 포함되어 있습니다. 이러한 예는 정책을 더 잘 이해하는 데 도움을 드리기 위한 하나의 방법으로서 정보 제공의 목적으로만 제공됩니다. 일부만 예로 든 것이며 이 문서에는 열거되지 않았지만 Microsoft Store 정책을 위반하는 다른 여러 가지 예가 있을 수 있습니다.
+> 앱에서 광고를 사용 하는 경우 [정책 10.10](/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) (광고 수행 및 콘텐츠)을 포함 하 여 Microsoft Store 정책을 준수 해야 합니다. 특히 응용 프로그램의 배너 광고 또는 중간 광고 구현은 Microsoft Store 정책 [정책 10.10.1](/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content)의 요구 사항을 충족 해야 합니다. 이 문서에는이 정책을 위반 하는 구현의 예가 포함 되어 있습니다. 이러한 예제는 정책을 보다 잘 이해 하는 데 도움이 되는 방법으로 정보를 제공 하기 위해서만 제공 됩니다. 이러한 예제는 포괄적이 지 않으며이 문서에 나열 되지 않은 Microsoft Store 정책을 위반 하는 다른 여러 가지 방법이 있을 수 있습니다.
 
-## <a name="general-best-practices"></a>일반적인 모범 사례
+## <a name="general-best-practices"></a>일반적인 유용한 정보
 
-이 문서에서 다양한 유형의 광고에 대한 지침을 검토하기 전에 먼저 광고 수익을 개선하기 위해 이러한 일반 모범 사례를 검토합니다.
+이 문서에서 다양 한 유형의 광고에 대 한 지침을 검토 하기 전에 먼저 이러한 일반적인 모범 사례를 검토 하 여 ad 수익을 개선 하세요.
 
-* [세심하게 광고 배치 계획](https://blogs.windows.com/buildingapps/2017/04/10/monetizing-app-advertisement-placement/). [광고 단위 가시성 최적화](optimize-ad-unit-viewability.md)에 대한 관련 지침을 확인하세요.
-* [중간 비디오 광고를 대체하여 중간 배너 광고 사용](https://blogs.windows.com/buildingapps/2017/04/17/monetizing-app-use-interstitial-banner-fallback-interstitial-video/)합니다.
-* [더 나은 대상이 지정된 광고를 제공하기 위해 사용자 파악](https://blogs.windows.com/buildingapps/2017/05/17/monetize-app-know-user-serve-better-targeted-ads/).
-* [최신 광고 라이브러리 사용](https://blogs.windows.com/buildingapps/2017/05/22/earn-money-moving-latest-advertising-libraries/).
-* [앱에 대해 정확한 COPPA 설정](https://blogs.windows.com/buildingapps/2017/06/21/monetizing-app-set-coppa-settings-app/).
+* [광고 배치를 신중 하 게 계획](https://blogs.windows.com/buildingapps/2017/04/10/monetizing-app-advertisement-placement/)합니다. [Ad 단위의 viewability 최적화](optimize-ad-unit-viewability.md)에 대 한 관련 지침을 참조 하세요.
+* 중간 [배너 광고를 중간 비디오 광고에 대 한 대체 (fallback)로 사용](https://blogs.windows.com/buildingapps/2017/04/17/monetizing-app-use-interstitial-banner-fallback-interstitial-video/)합니다.
+* [더 나은 대상 광고를 제공 하기 위해 사용자](https://blogs.windows.com/buildingapps/2017/05/17/monetize-app-know-user-serve-better-targeted-ads/)에 게 알립니다.
+* [최신 광고 라이브러리를 사용](https://blogs.windows.com/buildingapps/2017/05/22/earn-money-moving-latest-advertising-libraries/)합니다.
+* [앱에 대 한 올바른 COPPA 설정을 설정](https://blogs.windows.com/buildingapps/2017/06/21/monetizing-app-set-coppa-settings-app/)합니다.
 
 
-## <a name="guidelines-for-banner-ads"></a>배너 광고에 대한 지침
+## <a name="guidelines-for-banner-ads"></a>배너 광고 지침
 
-다음 섹션에서는 [AdControl](banner-ads.md)을 사용하여 앱 내 [배너 광고](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol)를 구현하는 방법에 대한 권장 사항과 Microsoft Store 정책의 [정책 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content)을 위반하는 구현의 예를 제시합니다.
+다음 섹션에서는 [Adcontrol](/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 을 사용 하 여 앱에서 [배너 광고](banner-ads.md) 를 구현 하는 방법에 대 한 권장 사항 및 Microsoft Store 정책의 [정책 10.10.1](/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) 을 위반 하는 구현 예제를 제공 합니다.
 
 ### <a name="best-practices"></a>모범 사례
 
-앱 내 배너 광고를 구현할 때는 이러한 모범 사례를 따르는 것이 좋습니다.
+앱에서 배너 광고를 구현할 때 다음 모범 사례를 따르는 것이 좋습니다.
 
-* 실행 중인 디바이스의 레이아웃에 잘 맞는 [IAB(Interactive Advertising Bureau) 크기를 사용](https://blogs.windows.com/buildingapps/2017/04/03/monetizing-app-use-interactive-advertising-bureau-ad-sizes/)하세요.
+* 장치의 레이아웃과 잘 맞는 [대화형 광고 기관 크기를 사용](https://blogs.windows.com/buildingapps/2017/04/03/monetizing-app-use-interactive-advertising-bureau-ad-sizes/) 합니다.
 
-* 앱 UI의 대부분을 기능 컨트롤 및 콘텐츠에 할애합니다.
+* 기능 제어 및 콘텐츠에 대 한 대부분의 앱 UI를 활용 합니다.
 
-* 사용 환경에 맞게 광고를 디자인합니다. 디자이너에게 광고 형태를 계획하기 위한 샘플 광고를 제공합니다. 앱의 잘 계획된 광고 예제 2가지는 콘텐츠 형태 광고 레이아웃 및 분할 레이아웃입니다.
+* 사용자 환경에 대 한 광고를 디자인 합니다. 광고의 모양을 계획 하는 샘플 광고를 디자이너에 게 제공 합니다. 앱에서 잘 계획 된 광고의 두 가지 예는 광고 콘텐츠 레이아웃 및 분할 레이아웃입니다.
 
-  개발 및 테스트 단계에서 다양한 크기의 광고가 앱 내에서 표시되고 작동하는 방식을 보려면 [테스트 광고 단위](set-up-ad-units-in-your-app.md#test-ad-units)를 활용할 수 있습니다. 테스트를 완료한 경우 인증을 위해 앱을 제출하기 전에 [라이브 광고 단위로 앱을 업데이트](set-up-ad-units-in-your-app.md#live-ad-units)해야 합니다.
+  개발 및 테스트 단계에서 앱 내에서 다양 한 ad 크기가 표시 되 고 작동 하는 방식을 확인 하기 위해 [테스트 ad 단위](set-up-ad-units-in-your-app.md#test-ad-units)를 활용할 수 있습니다. 테스트를 완료 한 후에는 인증을 위해 앱을 제출 하기 전에 [라이브 ad 단위를 사용 하 여 앱을 업데이트](set-up-ad-units-in-your-app.md#live-ad-units) 해야 합니다.
 
-* 광고를 사용할 수 없는 시간을 계획합니다. 광고가 앱으로 전송되지 않는 시간이 있을 수 있습니다. 페이지에 광고가 표시되는지 여부에 따라 페이지가 돋보이는 방식으로 레이아웃을 지정합니다. 자세한 내용은 [광고 오류 처리](error-handling-with-advertising-libraries.md)를 참조하세요.
+* 광고를 사용할 수 없는 시간을 계획 합니다. 광고가 앱에 전송 되지 않는 경우가 있을 수 있습니다. 광고를 표시 하는 것 처럼 보이는 방식으로 페이지를 레이아웃 합니다. 자세한 내용은 [ad 오류 처리](error-handling-with-advertising-libraries.md)를 참조 하세요.
 
-* 오버레이로 처리하는 것이 가장 효과적인 사용자 경고 시나리오가 있을 경우 오버레이를 표시한 상태로 [AdControl.Suspend](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.suspend)를 호출하고 경고 시나리오가 완료되면 [AdControl.Resume](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.resume)을 호출하세요.
+* 오버레이를 사용 하 여 가장 잘 처리 되는 사용자에 게 경고 하는 시나리오가 있는 경우 오버레이를 표시 한 다음 adcontrol을 호출 [합니다. 경고](/uwp/api/microsoft.advertising.winrt.ui.adcontrol.suspend) 시나리오가 완료 되 면 [다시 시작](/uwp/api/microsoft.advertising.winrt.ui.adcontrol.resume) 합니다.
 
-### <a name="practices-to-avoid"></a>피해야 할 사례
+### <a name="practices-to-avoid"></a>예방 방법
 
-앱 내 배너 광고를 구현할 때는 이러한 사례를 피하는 것이 좋습니다.
+앱에서 배너 광고를 구현 하는 경우 다음 방법을 사용 하지 않는 것이 좋습니다.
 
-* 열린 공간에 광고를 고정하지 않습니다. 광고 공간을 찾을 수 있는 첫 번째 열린 공간에 배치하면 안 됩니다. 대신, 앱의 전체 디자인에 통합되어야 합니다.
+* 광고를 오픈 부동산으로 전환 하지 않습니다. 광고 공간을 찾을 수 있는 첫 번째 열린 공간에 배치하면 안 됩니다. 대신 앱의 전체 설계에 통합 되어야 합니다.
 
-* 지나친 광고로 앱을 포화시키지 않습니다. 앱에 광고가 너무 많으면 모양이 정신 없고 유용성이 떨어집니다. 광고로 수익을 창출할 수 있지만 앱 자체를 희생해서는 안 됩니다.
+* 앱을 과도 하 게 광고 및 포화 하지 않습니다. 앱에 너무 많은 광고는 자신의 모양과 유용성을 저하 시킬 수 있습니다. 광고를 사용 하 여 비용을 만들려고 하지만 앱 자체를 사용 하는 것은 아닙니다.
 
-* 사용자가 핵심 작업이 아닌 다른 부분에 정신이 팔리게 하면 안 됩니다. 일차적인 포커스는 항상 앱에 있어야 합니다. 광고 공간은 이차적인 포커스가 유지되도록 통합해야 합니다.
+* 사용자의 핵심 작업에서 사용자를 방해 마세요. 일차적인 포커스는 항상 앱에 있어야 합니다. Ad 공간이 통합 되어 보조 포커스를 유지 해야 합니다.
 
 ### <a name="examples-of-policy-violations"></a>정책 위반의 예
 
-이 섹션에서는 Microsoft Store 정책의 [정책 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content)을 위반하는 배너 광고 시나리오의 예를 제시합니다. 이러한 예는 정책을 더 잘 이해하는 데 도움을 드리기 위한 하나의 방법으로서 설명의 목적으로만 제공됩니다. 일부만 예로 든 것이며 여기에는 열거되지 않았지만 정책 10.10.1을 위반하는 다른 여러 가지 예가 있을 수 있습니다.
+이 섹션에서는 Microsoft Store 정책의 [정책 10.10.1](/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) 를 위반 하는 배너 광고 시나리오의 예를 제공 합니다. 이러한 예제는 정책을 이해 하는 데 도움이 되는 방법 으로만 교육용 으로만 제공 됩니다. 이러한 예제는 포괄적이 지 않으며 여기에 나열 되지 않은 정책 10.10.1를 위반 하는 다른 여러 가지 방법이 있을 수 있습니다.
 
-* [AdControl.Suspend](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol)를 먼저 호출하지 않고 **AdControl**의 불투명도를 변경하거나 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.suspend) 위에 다른 컨트롤을 배치하는 등 사용자의 배너 광고 보기 기능을 방해하는 모든 행위.
+* 모든 작업을 수행 하 [여 adcontrol](/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 을 먼저 호출 하지 않고 adcontrol의 불투명도를 변경 하거나 **adcontrol** 위에 다른 컨트롤을 배치 하는 등의 배너 광고를 보는 기능을 방해 [합니다.](/uwp/api/microsoft.advertising.winrt.ui.adcontrol.suspend)
 
-* 사용자가 배너 광고를 클릭해야 앱에서 작업을 수행할 수 있거나 사용자가 앱 디자인 때문에 어쩔 수 없이 배너 광고를 클릭해야 하는 경우.
+* 사용자가 배너 광고를 클릭 하 여 앱에서 작업을 수행 하도록 하거나 앱 디자인의 결과로 사용자가 배너 광고를 클릭 하도록 합니다.
 
-* 사용자 개입 없이 [AdControl](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 개체를 바꾸거나 페이지를 강제로 새로 고치는 등 어떤 식으로든 배너 광고의 기본 제공되는 최소 새로 고침 타이머를 무시하는 경우.
+* [Adcontrol](/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 개체 교체 또는 사용자 개입 없이 페이지 새로 고침 적용을 포함 하 여 모든 방법으로 배너 광고에 대해 기본 제공 되는 최소 새로 고침 타이머를 무시 합니다.
 
 * 개발 및 테스트 중 또는 에뮬레이터에서 live ad 단위 (파트너 센터에서 가져오는 ad 단위)를 사용 합니다.
 
-* 앱 컨텍스트에서 실행되는 Microsoft 광고 라이브러리 이외의 다른 방식을 통해 광고 서비스를 호출하는 코드를 작성하거나 배포하는 경우.
+* 응용 프로그램의 컨텍스트에서 실행 되는 Microsoft 광고 라이브러리 이외의 수단을 통해 광고 서비스를 호출 하는 코드를 작성 하거나 배포 합니다.
 
-* Microsoft 광고 라이브러리로 생성된 문서화되지 않은 인터페이스 또는 자식 개체(예: **WebView** 또는 **MediaElement**)를 조작하는 경우.
+* **웹 보기** 또는 **MediaElement**와 같이 Microsoft 광고 라이브러리에서 만든 문서화 되지 않은 인터페이스 또는 자식 개체와 상호 작용
 
 * 광고를 viewbox 하 여 광고의 크기를 줄이면 일반적인 페이지에서 광고를 더 많이 허용 합니다.
 
 <span id="interstitialbestpractices10" />
 
-## <a name="guidelines-for-interstitial-ads"></a>중간 광고에 대한 지침
+## <a name="guidelines-for-interstitial-ads"></a>중간 광고에 대 한 지침
 
-과하지 않게 사용될 경우 [중간 광고](interstitial-ads.md)는 사용자 만족도에 부정적인 영향을 주지 않으면서 앱 수익을 크게 높일 수 있습니다. 그렇지만 잘못 사용하면 이러한 광고는 정반대의 효과를 가져올 수 있습니다.
+원활를 사용 하는 경우 [중간 광고](interstitial-ads.md) 는 사용자 만족도에 부정적인 영향을 주지 않고 앱 수익을 크게 증가 시킬 수 있습니다. 이러한 광고는 부적절 하 게 사용 될 경우 정확히 반대 효과가 있습니다.
 
-다음 섹션에서는 [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad)를 사용하여 앱 내 동영상 및 배너 중간 광고를 구현하는 방법에 대한 권장 사항과 Microsoft Store 정책의 [정책 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content)을 위반하는 구현의 예를 제시합니다. 정책이 관련되는 경우를 제외하고, 개발자가 어느 누구보다 자신의 앱에 대해 잘 알고 있으므로 가장 적절한 결정은 본인이 내리는 것이 좋습니다. 그렇지만 앱 평점 및 수익이 긴밀하게 결합되어 있다는 사실을 명심해야 합니다.
+다음 섹션에서는 [Interstitialad](/uwp/api/microsoft.advertising.winrt.ui.interstitialad)를 사용 하 여 앱에서 중간 비디오 광고 및 중간 배너 광고를 구현 하는 방법에 대 한 권장 사항을 제공 하 고 Microsoft Store 정책의 [정책 10.10.1](/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) 을 위반 하는 구현 예를 제공 합니다. 정책에 관심이 있는 경우를 제외 하 고 모든 사용자가 앱을 더 잘 알고 있기 때문에 최상의 최종 결정을 내릴 수 있습니다. 가장 중요 한 점은 앱 등급과 수익이 긴밀 하 게 결합 된다는 것입니다.
 
 ### <a name="best-practices"></a>모범 사례
 
-앱 내 중간 광고를 구현할 때는 이러한 모범 사례를 따르는 것이 좋습니다.
+앱에서 중간 광고를 구현할 때 다음 모범 사례를 따르는 것이 좋습니다.
 
-* 게임 레벨 중간과 같이 앱의 자연스러운 흐름 도중에 중간 광고를 표시합니다.
+* 게임 수준 간의 일반적인 앱 흐름 내에서 중간 광고에 맞춥니다.
 
-* 광고를 다음과 같은 구체적인 혜택과 연결합니다.
+* 다음을 비롯 하 여 광고를 유형 upsides 연결 합니다.
 
-    * 레벨 완료를 위한 힌트
+    * 수준 완료에 대 한 힌트입니다.
 
-    * 레벨을 다시 시도하기 위한 추가 시간
+    * 수준을 다시 시도할 시간이 추가 됩니다.
 
-    * 사용자 지정 아바타 특징(예: 문신 또는 모자)
+    * 사용자 지정 아바타 기능 (예: 문신 또는 hat)
 
-* 앱이 동영상 중간 광고를 시청해야 완료되는 경우 닫기 단추를 누를 때 오류 메시지가 나타나도 놀라지 않도록 해당 규칙을 미리 언급합니다.
+* 앱에서 중간 비디오 광고를 완료 해야 하는 경우 해당 규칙을 미리 언급 하 여 닫기 단추를 누르면 오류 메시지가 나타나지 않도록 합니다.
 
-* 이상적으로 광고를 표시해야 하는 시간보다 30-60초 전쯤에 광고를 미리 가져옵니다([InterstitialAd.RequestAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 호출).
+* Ad를 미리 인출 하려면 ( [Interstitialad. RequestAd](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad)를 호출 하 여) 30-60 초 정도를 표시 해야 합니다.
 
-* [InterstitialAd](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) 클래스에 노출된 4개의 모든 이벤트(**Canceled**, **Completed**, **AdReady** 및 **ErrorOccurred**)를 구독한 후 앱에 적절한 결정을 내리는 데 사용합니다.
+* [Interstitialad](/uwp/api/microsoft.advertising.winrt.ui.interstitialad) 클래스 (**취소 됨**, **완료 됨**, **adready**및 **erroroccurred**)에서 노출 된 네 개의 이벤트를 모두 구독 하 고이를 사용 하 여 앱에 대 한 적절 한 결정을 내립니다.
 
-* 서버 일치 광고 대신 일부 기본 제공 환경이 사용되도록 합니다. 이렇게 하면 다음과 같은 시나리오에서 유용할 수 있습니다.
+* 서버와 일치 하는 ad 대신를 사용 하는 몇 가지 기본 제공 환경이 있습니다. 이는 다음과 같은 몇 가지 시나리오에서 유용 합니다.
 
-    * 광고 서버에 연결할 수 없는 오프라인 모드
+    * 오프 라인 모드, ad 서버에 연결할 수 없는 경우
 
-    * **ErrorOccurred** 이벤트가 발생하는 경우
+    * **Erroroccurred** 이벤트가 발생 하면이 오류가 발생 합니다.
 
-    * [ConnectionProfile](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity.ConnectionProfile)을 기준으로 사용자 대역폭을 저장하도록 선택하는 경우 **ConnectionProfile** 클래스에 도움이 될 수 있는 API가 있습니다.
+    * [Connectionprofile](/uwp/api/Windows.Networking.Connectivity.ConnectionProfile)에 따라 사용자 대역폭을 저장 하도록 선택 하는 경우 **connectionprofile** 클래스에는 도움이 될 수 있는 api가 있습니다.
 
-* 10초 이내에 이동할 수 없는 경우와 같은 타당한 이유가 있는 경우가 아니면 기본(30초) 시간 제한을 사용합니다. 중간 광고는 특히, 고속 연결이 제공되지 않는 시장에서 표준 배너 광고보다 다운로드하는 데 훨씬 더 오래 걸립니다.
+* 그렇지 않은 경우에는 기본값 (30 초) 시간 제한을 사용 합니다. 그렇지 않으면 10 초 미만으로 이동 하지 않습니다. 중간 광고는 표준 배너 광고 보다 다운로드 하는 데 더 많은 시간이 걸립니다. 특히 고속 연결이 없는 시장에서 사용 합니다.
 
-* 사용자의 데이터 요금제를 염두에 둡니다. 예를 들어 데이터 제한에 가까워졌거나 제한을 초과하는 모바일 디바이스에서는 동영상 중간 광고를 표시하지 않거나 광고를 제공하기 전에 사용자에게 경고를 합니다. [ConnectionProfile](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity.ConnectionProfile) 클래스에 도움이 될 수 있는 API가 있습니다.
+* 사용자의 데이터 요금제를 염두에 둘 수 있습니다. 예를 들어, 데이터 제한이 거의 발생 하지 않은 모바일 장치에서 중간 비디오 광고를 제공 하기 전에 사용자를 표시 하지 않거나 사용자에 게 경고 합니다. [Connectionprofile](/uwp/api/Windows.Networking.Connectivity.ConnectionProfile) 클래스에는 도움이 될 수 있는 api가 있습니다.
 
-* 초기 전송 후 앱을 지속적으로 향상시킵니다. [광고 보고서](../publish/advertising-performance-report.md)를 살펴보고 채우기 및 동영상 중간 광고 완료 속도 향상에 도움이 되도록 디자인을 변경합니다.
+* 초기 제출 후 지속적으로 앱을 개선 하세요. [광고 보고서](../publish/advertising-performance-report.md) 를 확인 하 고 디자인을 변경 하 여 채우기 및 중간 비디오 완료 비율을 개선 합니다.
 
-### <a name="practices-to-avoid"></a>피해야 할 사례
+### <a name="practices-to-avoid"></a>예방 방법
 
-앱 내 중간 광고를 구현할 때는 이러한 사례를 피하는 것이 좋습니다.
+앱에서 중간 광고를 구현할 때 이러한 방법을 사용 하지 않는 것이 좋습니다.
 
-* 지나친 광고를 삼갑니다. 사용자가 게임을 하는 것 외에 분명하게 선택적인 구체적 혜택을 받는 경우가 아니면 5분 간격 이상으로 광고를 제공하지 않도록 합니다.
+* 과도 하 게 수행 하지 마세요. 사용자가 게임을 재생 하는 것 외에도 선택적으로 분명 한 이점을 제공 하는 경우를 제외 하 고 5 분 마다 광고를 강제로 실행 하지 마세요.
 
-* 사용자가 잘못된 타일을 클릭한 것으로 오인할 수 있으므로 앱을 시작할 때는 중간 광고를 표시하지 않습니다.
+* 사용자가 잘못 된 타일을 클릭 했을 수 있으므로 앱 시작 시 interstitials를 표시 하지 않습니다.
 
-* 종료할 때 중간 광고를 표시하지 않습니다. 완료 속도가 거의 제로에 가까워지므로 잘못된 인벤토리입니다.
+* Exit에서 interstitials를 표시 하지 않습니다. 이는 잘못 된 인벤토리 이므로 완료 요금은 0에 근접 하 게 됩니다.
 
-* 두 개 이상의 중간 광고를 연속으로 표시하지 않습니다. 진행률 표시줄이 시작점으로 다시 설정되게 되어 사용자에게 혼란을 줍니다. 많은 사람들이 코딩 버그나 광고 제공 버그 정도로 생각합니다.
+* 두 개 이상의 중간 광고를 다시 표시 하지 않습니다. 사용자는 ad 진행률 표시줄이 시작 지점으로 다시 설정 되는 것을 볼 수 있습니다. 대부분은 코딩 또는 광고 제공 버그 라고 생각 합니다.
 
-* 동영상 중간 광고를 가져오고 5분 이상 경과한 후 [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show)를 호출하지 않습니다. 좋은 인벤토리는 미리 가져온 광고가 청구 가능한 광고 노출로 최대한 많이 변환되도록 합니다.
+* [Interstitialad. Show](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show)를 호출 하기 전에는 중간 비디오 광고를 5 분 이상 인출 하지 마십시오. 좋은 인벤토리는 미리 인출 된 광고를 청구 가능한 대상으로 변환 하는 것을 최대화 합니다.
 
-* 광고 제공이 실패할 경우 광고를 사용할 수 없는 것과 같은 벌칙을 부과하지 않습니다. 예를 들어 "광고를 시청하여 *xxx* 받기" UI 옵션을 표시하는 경우 사용자가 자신의 역할을 해낼 경우 *xxx*를 제공해야 합니다. 다음 두 가지 옵션을 고려해야 합니다.
+* Ad를 사용할 수 없는 경우와 같이 ad 서비스의 오류에 대해 사용자에 게 penalize 마세요. 예를 들어 "ad를 사용 하 여 *xxx*가져오기"에 대 한 UI 옵션을 표시 하는 경우 사용자가 해당 파트를 만든 경우 *xxx* 를 제공 해야 합니다. 고려해 야 할 두 가지 옵션은 다음과 같습니다.
 
-    * [InterstitialAd.AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready) 이벤트가 발생하지 않는 한 이 옵션을 포함하지 않습니다.
+    * [Interstitialad. AdReady](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready) 이벤트가 발생 하지 않는 한 옵션을 포함 하지 마세요.
 
-    * 앱에 실제 광고와 동일한 이점을 가져오는 기본 제공 환경을 포함합니다.
+    * 앱에 실제 ad와 동일한 혜택을 제공 하는 기본 제공 환경이 포함 되어 있어야 합니다.
 
-* 멀티 플레이어 게임을 하는 사용자에게 경쟁적 우위를 제공하기 위해 중간 광고를 사용하지 않습니다. 예를 들어 1인칭 슈팅 게임에서 사용자가 중간 광고를 볼 경우 더 좋은 총을 제공한다고 사용자를 유인하지 않습니다. 플레이어의 아바타에 적용된 사용자 지정 셔츠는 위장 효과를 제공하지 않으면 괜찮습니다.
+* 사용자가 다중 플레이어 게임에서 경쟁력 있는 이점을 얻을 수 있도록 하려면 중간 광고를 사용 하지 마세요. 예를 들어 중간 광고를 확인 하는 경우 사용자가 첫 번째 사용자 슈팅 게임에서 더 나은를 사용 하도록 유도 하지 않습니다. 플레이어의 아바타에 게는 camouflage를 제공 하지 않는 사용자 지정 셔츠가 있습니다.
 
 ### <a name="examples-of-policy-violations"></a>정책 위반의 예
 
-이 섹션에서는 Microsoft Store 정책의 [정책 10.10.1](https://docs.microsoft.com/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content)을 위반하는 중간 광고 시나리오의 예를 제시합니다. 이러한 예는 정책을 더 잘 이해하는 데 도움을 드리기 위한 하나의 방법으로서 설명의 목적으로만 제공됩니다. 일부만 예로 든 것이며 여기에는 열거되지 않았지만 정책 10.10.1을 위반하는 다른 여러 가지 예가 있을 수 있습니다.
+이 섹션에서는 Microsoft Store 정책의 [정책 10.10.1](/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) 를 위반 하는 중간 광고 시나리오의 예를 제공 합니다. 이러한 예제는 정책을 이해 하는 데 도움이 되는 방법 으로만 교육용 으로만 제공 됩니다. 이러한 예제는 포괄적이 지 않으며 여기에 나열 되지 않은 정책 10.10.1를 위반 하는 다른 여러 가지 방법이 있을 수 있습니다.
 
-* 중간 광고 컨테이너 위에 UI 요소 배치.
+* 중간 ad 컨테이너에 UI 요소 배치
 
-* 사용자가 앱에 연결된 동안 [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) 호출.
+* [Interstitialad](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) 를 호출 하 고 있습니다. 사용자가 앱을 사용 하는 동안 표시 됩니다.
 
-* 통화로 사용 가능하거나 다른 사용자와 거래할 수 있는 것을 얻기 위해 중간 광고 사용.
+* 중간 광고를 사용 하 여 다른 사용자와 통화 또는 거래로 사용 될 수 있는 모든 항목을 가져옵니다.
 
-* [InterstitialAd.ErrorOccurred](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.erroroccurred) 이벤트에 대한 이벤트 처리기의 컨텍스트에서 새 중간 광고 요청. 이렇게 하면 무한 루프가 발생하고 광고 서비스에서 작동 문제가 발생할 수 있습니다.
+* [Interstitialad](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.erroroccurred) 에 대 한 이벤트 처리기의 컨텍스트에서 새 중간 광고를 요청 합니다. 이로 인해 무한 루프가 발생 하 여 광고 서비스에 대 한 운영 문제를 일으킬 수 있습니다.
 
-* 단순히 일련의 광고에 대한 백업 광고를 위해 중간 광고 요청. 중간 광고를 요청한 후 [InterstitialAd.AdReady](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready) 이벤트를 받은 경우 앱에 표시되는 다음 중간 광고는 [InterstitialAd.Show](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) 메서드를 통해 표시할 준비가 된 광고여야 합니다.
+* 중간 광고를 요청 하는 것은 폭포 광고 시퀀스에 대 한 백업 ad만 있으면 됩니다. 중간 광고를 요청 하 고 [Interstitialad. AdReady](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.adready) 이벤트를 수신 하는 경우 앱에 표시 되는 다음 중간 Ad가 [Interstitialad. Show](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) 메서드를 통해 표시 될 준비가 된 ad 여야 합니다.
 
 * 개발 및 테스트 중 또는 에뮬레이터에서 live ad 단위 (파트너 센터에서 가져오는 ad 단위)를 사용 합니다.
 
-* 앱 컨텍스트에서 실행되는 Microsoft 광고 라이브러리 이외의 다른 방식을 통해 광고 서비스를 호출하는 코드를 작성하거나 배포하는 경우.
+* 응용 프로그램의 컨텍스트에서 실행 되는 Microsoft 광고 라이브러리 이외의 수단을 통해 광고 서비스를 호출 하는 코드를 작성 하거나 배포 합니다.
 
-* Microsoft 광고 라이브러리로 생성된 문서화되지 않은 인터페이스 또는 자식 개체(예: **WebView** 또는 **MediaElement**)를 조작하는 경우.
+* **웹 보기** 또는 **MediaElement**와 같이 Microsoft 광고 라이브러리에서 만든 문서화 되지 않은 인터페이스 또는 자식 개체와 상호 작용
 
-## <a name="guidelines-for-native-ads"></a>기본 광고에 대한 지침
+## <a name="guidelines-for-native-ads"></a>네이티브 광고에 대 한 지침
 
-[기본 광고](native-ads.md)는 사용자에게 광고 콘텐츠를 제시하는 방식을 많이 컨트롤할 수 있습니다. 이러한 요구 사항과 지침을 따르면 광고 메시지가 사용자에 도달하도록 만들고, 동시에 사용자에게 혼란을 주는 기본 광고 환경을 전달하는 것을 피할 수 있습니다.
+[기본 광고](native-ads.md) 를 통해 사용자에 게 광고 콘텐츠를 제공 하는 방법을 제어할 수 있습니다. 이러한 요구 사항 및 지침에 따라 사용자에 게 혼란 스 럽 고 기본적인 광고 환경을 제공 하지 않고 광고주의 메시지가 사용자에 게 도달 하도록 합니다.
 
-### <a name="register-the-container-for-your-native-ad"></a>기본 광고 컨테이너 등록
+### <a name="register-the-container-for-your-native-ad"></a>네이티브 ad에 대 한 컨테이너 등록
 
-코드에서 [NativeAdV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadv2.registeradcontainer) 개체의 [RegisterAdContainer](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadv2) 메서드를 호출, 기본 광고의 컨테이너로 작동하는 UI 요소를 등록해야 합니다. 또한 광고를 클릭 가능한 대상으로 등록하는 특정 컨트롤을 호출할 수도 있습니다. 이는 광고 노출과 클릭을 올바르게 추적하는 데 필요합니다.
+코드에서 [NativeAdV2](/uwp/api/microsoft.advertising.winrt.ui.nativeadv2) 개체의 [registeradcontainer](/uwp/api/microsoft.advertising.winrt.ui.nativeadv2.registeradcontainer) 메서드를 호출 하 여 기본 광고의 컨테이너 역할을 하는 UI 요소를 등록 하 고 필요에 따라 광고에 대해 클릭 가능한 대상으로 등록 하려는 특정 컨트롤을 등록 해야 합니다. 광고 노출 및 클릭을 적절히 추적 하는 데 필요 합니다.
 
-사용할 수 있는 **RegisterAdContainer** 메서드의 오버로드 2개는 다음과 같습니다.
+사용할 수 있는 **Registeradcontainer** 메서드에는 두 가지 오버 로드가 있습니다.
 
-* 기본 광고 요소 모두에 대한 전체 컨테이너를 클릭할 수 있도록 **RegisterAdContainer(FrameworkElement)** 메서드를 호출하고, 컨테이너 컨트롤을 메서드로 전달합니다. 예를 들어, **StackPanel**에 모두 호스트된 별개 컨트롤의 기본 광고 요소 전부를 표시하고, 전체 **StackPanel**을 클릭할 수 있도록 하려면, **StackPanel**을 이 메서드로 전달합니다.
+* 모든 개별 네이티브 ad 요소의 전체 컨테이너를 클릭 가능 하 게 하려면 **Registeradcontainer (FrameworkElement)** 메서드를 호출 하 고 컨테이너 컨트롤을 메서드에 전달 합니다. 예를 들어 모든 기본 ad 요소를 **StackPanel** 에 호스팅된 별도의 컨트롤에 표시 하 고 전체 **StackPanel** 을 클릭 가능 하 게 하려면 **stackpanel** 을이 메서드에 전달 합니다.
 
-* 특정 기본 광고 요소만 클릭할 수 있도록 하려면, **RegisterAdContainer (FrameworkElement, IVector(FrameworkElement))** 메서드를 호출합니다. 두 번째 매개 변수로 전달한 컨트롤만 클릭할 수 있습니다.
+* 특정 네이티브 ad 요소만 클릭할 수 있도록 하려면 **Registeradcontainer (frameworkelement, IVector (frameworkelement))** 메서드를 호출 합니다. 두 번째 매개 변수에 전달 하는 컨트롤만 클릭할 수 있습니다.
 
-### <a name="required-native-ad-elements"></a>필수 기본 광고 요소
+### <a name="required-native-ad-elements"></a>필수 네이티브 ad 요소
 
-최소한 기본 광고 디자인에서 사용자에게 [NativeAdV2](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.nativeadv2) 개체의 속성에 의해 제공된 다음 기본 광고 요소를 항상 표시해야 합니다. 이러한 요소를 포함하지 않으면, 광고 단위의 성과가 나빠지고 수익이 하락할 수 있습니다.
+최소한 [NativeAdV2](/uwp/api/microsoft.advertising.winrt.ui.nativeadv2) 개체의 속성에서 제공 하는 다음 네이티브 ad 요소를 네이티브 ad 디자인의 사용자에 게 항상 표시 해야 합니다. 이러한 요소를 포함 하지 않으면 ad 단위에 대 한 성능이 저하 되 고 낮은 결과가 표시 될 수 있습니다.
 
-1. 항상 기본 광고 제목을 표시합니다(**Title** 속성에서 이용 가능). 최소 25자 이상을 표시할 수 있는 충분한 공간을 제공합니다. 제목이 너무 길면, 추가 텍스트를 줄임표로 바꿉니다.
-2. 항상 다음 요소 중 하나 이상을 표시해 앱 나머지 부분과 기본 광고 환경을 차별화 하고, 광고주가 제공하는 콘텐츠를 명확히 설명합니다.
-    * 구별할 수 있는 *광고* 아이콘(**AdIcon** 속성에서 사용 가능). 이 아이콘은 Microsoft에서 제공됩니다.
-    * *sponsored by* 텍스트(**SponsoredBy** 속성에서 사용 가능). 이 텍스트는 광고주가 제공합니다.
-    * *sponsored by* 텍스트를 대신해 "후원 콘텐츠", "홍보 콘텐츠", "권장 콘텐츠" 등 앱 나머지 부분과 기본 광고 환경을 구분하는 데 도움을 주는 다른 텍스트를 표시할 수도 있습니다.
+1. 항상 기본 광고 ( **title** 속성에서 사용 가능)의 제목을 표시 합니다. 25 자 이상을 표시할 수 있는 충분 한 공간을 제공 합니다. 제목이 더 길면 추가 텍스트를 줄임표로 바꿉니다.
+2. 응용 프로그램의 나머지 부분과 네이티브 ad 환경을 구분 하는 데 도움이 되도록 다음 요소 중 하나를 항상 표시 하 고, 광고주에서 콘텐츠를 제공 한다는 것을 명확 하 게 호출 합니다.
+    * **Adicon** 속성에서 사용할 수 있는 구별 가능한 *ad* 아이콘입니다. 이 아이콘은 Microsoft에서 제공 합니다.
+    * **SponsoredBy** 속성에서 사용할 수 있는 지원 *되* 는 텍스트입니다. 이 텍스트는 광고주에서 제공 합니다.
+    * 텍스트에 대 한 대 안으로, 앱의 나머지 부분 (예: "후원 콘텐츠", "판촉 콘텐츠", "추천 콘텐츠" 등)에서 기본 광고 환경을 구분 하는 데 도움이 되는 *다른 텍스트를* 표시 하도록 선택할 수 있습니다.
 
 ### <a name="user-experience"></a>사용자 환경
 
-기본 광고가 앱 나머지 부분과 명확히 구분되어야 하고, 실수로 클릭하는 것을 방지하기 위해 주변에 공간이 있어야 합니다. 광고 콘텐츠를 앱 나머지와 분리하기 위해 경계, 다른 배경, 기타 UI를 사용합니다. 실수로 클릭을 하는 것은 장기적으로 최종 사용자의 경험이나 광고 기반 수익에 도움이 되지 않는다는 점을 유념하세요.
+기본 광고는 앱의 나머지 부분에서 명확 하 게 구분 해야 하며 실수로 클릭 하지 않도록 하기 위한 공간을 확보 해야 합니다. 테두리, 다른 배경 또는 다른 UI를 사용 하 여 응용 프로그램의 나머지 부분과 광고 콘텐츠를 분리 합니다. 실수로 광고를 클릭 하는 것은 장기적으로 광고 기반 수익과 최종 사용자 환경에 유용 하지 않습니다.
 
-### <a name="description"></a>설명
+### <a name="description"></a>Description
 
-광고에 대한 설명을 표시하려면(**NativeAdV2** 개체의 **설명** 속성에 사용 가능), 75자 이상을 표시할 수 있는 충분한 공간을 제공하세요. 애니메이션을 사용해 광고 설명의 콘텐츠를 전부 표시하는 것이 좋습니다.
+**NativeAdV2** 개체의 **description** 속성에서 사용할 수 있는 ad에 대 한 설명을 표시 하도록 선택 하는 경우 최소 75 자를 표시 하는 데 충분 한 공간을 제공 합니다. 애니메이션을 사용 하 여 광고 설명의 전체 콘텐츠를 표시 하는 것이 좋습니다.
 
-### <a name="call-to-action"></a>Call to action
+### <a name="call-to-action"></a>조치 사항
 
-*call to action*(행동 촉발) 텍스트(**NativeAdV2** 개체의 **CallToAction** 속성에서 사용 가능)는 아주 중요한 광고 구성 요소입니다. 이러한 텍스트를 표시하려면, 다음 지침을 따릅니다.
+*작업 텍스트에 대 한 호출* ( **NativeAdV2** 개체의 **calltoaction** 속성에서 사용 가능)은 광고의 중요 한 구성 요소입니다. 이 텍스트를 표시 하도록 선택 하는 경우 다음 지침을 따르세요.
 
-* 항상 단추나 하이퍼링크 등 클릭할 수 있는 컨트롤로 *Call to action* 텍스트를 표시합니다.
-* 항상 전체 *Call to action* 텍스트를 표시합니다.
-* *Call to action* 텍스트를 광고주의 나머지 홍보 텍스트와 분리합니다.
+* 단추 또는 하이퍼링크와 같은 클릭 가능한 컨트롤에 대해 사용자에 게 *작업 텍스트에* 대 한 호출을 항상 표시 합니다.
+* *작업 텍스트에 대 한 호출은* 항상 전체로 표시 합니다.
+* *작업 텍스트에 대 한 호출이* 광고주에서 프로 모션 텍스트의 나머지 부분과 구분 되는지 확인 합니다.

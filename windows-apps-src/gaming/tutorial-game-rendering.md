@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 렌더링
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a3f689f86e629ce81946927fa732a3ab692b219
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: a87382aeffb0e0b7a8eaca1c4baec8561049e91e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409512"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168247"
 ---
 # <a name="rendering-framework-ii-game-rendering"></a>렌더링 프레임 워크 II: 게임 렌더링
 
@@ -21,7 +21,7 @@ ms.locfileid: "85409512"
 [렌더링 프레임 워크](tutorial--assembling-the-rendering-pipeline.md)에서 장면 정보를 사용 하 여 표시 화면에 표시 하는 방법을 살펴보았습니다. 이제 이전 단계를 수행 하 고 렌더링을 위해 데이터를 준비 하는 방법을 알아봅니다.
 
 >[!Note]
->이 샘플에 대 한 최신 게임 코드를 다운로드 하지 않은 경우 [Direct3D sample game](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX)로 이동 합니다. 이 샘플은 여러 UWP 기능 샘플 컬렉션의 일부입니다. 샘플을 다운로드 하는 방법에 대 한 지침은 [GitHub에서 UWP 샘플 가져오기](/windows/uwp/get-started/get-uwp-app-samples)를 참조 하세요.
+>이 샘플에 대 한 최신 게임 코드를 다운로드 하지 않은 경우 [Direct3D sample game](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX)로 이동 합니다. 이 샘플은 여러 UWP 기능 샘플 컬렉션의 일부입니다. 샘플을 다운로드 하는 방법에 대 한 지침은 [GitHub에서 UWP 샘플 가져오기](../get-started/get-app-samples.md)를 참조 하세요.
 
 ## <a name="objective"></a>Objective
 
