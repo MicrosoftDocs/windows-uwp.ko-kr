@@ -2,20 +2,27 @@
 title: UWP(유니버설 Windows 플랫폼) 앱이란?
 description: 이 가이드에서는 Windows 10을 실행하는 다양한 디바이스에서 실행할 수 있는 UWP(유니버설 Windows 플랫폼) 앱에 대해 알아봅니다.
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
-ms.date: 05/07/2018
+ms.date: 08/21/2020
 ms.topic: article
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
-ms.openlocfilehash: c9b2c270538ec49a139b88fb1c7eddb92acad10a
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 412dfe7d9e2387a90bc51f834755e8565f170812
+ms.sourcegitcommit: ab68ff43139f2423091bf8830c00f8a0fc7326ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730090"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88785035"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
-![유니버설 Windows 플랫폼 앱은 다양한 디바이스에서 실행되며, 적응형 사용자 인터페이스, 자연스러운 사용자 입력, 하나의 Store, 파트너 센터, 다양한 클라우드 서비스를 지원합니다.](images/universalapps-overview.png)
+
+## <a name="where-does-uwp-fit-in-the-microsoft-development-story"></a>UWP는 Microsoft 개발 스토리의 어디에 적합한가요?
+
+UWP는 Windows용 클라이언트 애플리케이션을 만드는 여러 가지 방법 중 하나입니다. UWP 앱은 WinRT API를 사용하여 인터넷에 연결된 디바이스에 이상적인 강력한 UI와 고급 비동기 기능을 제공합니다. UWP 앱은 Win32 API와 .NET 클래스를 여전히 사용할 수 있습니다([UWP 앱의 API 집합](https://docs.microsoft.com/previous-versions/mt186421(v=vs.85)), [UWP 앱의 DLL](https://docs.microsoft.com/previous-versions/mt186422(v=vs.85)), [UWP 앱용 .NET](https://docs.microsoft.com/dotnet/api/index?view=dotnet-uwp-10.0) 참조).
+
+Microsoft 개발 스토리는 지속적으로 발전하고 있으며 [WinUI](https://docs.microsoft.com/windows/apps/winui/), [MSIX](https://docs.microsoft.com/windows/msix/) 및 [Project Reunion](https://github.com/microsoft/ProjectReunion)과 같은 이니셔티브와 함께 UWP는 클라이언트 앱을 만들 수 있는 강력한 도구입니다.
+
+## <a name="features-of-a-uwp-app"></a>UWP 앱의 기능
 
 UWP 앱은 다음과 같습니다.
 
@@ -77,7 +84,7 @@ Windows에서는 다음과 같은 기능으로 UI를 여러 디바이스에 맞�
 - 가장 간단한 옵션은 유료 다운로드입니다. 가격만 정하세요.
 - 평가판은 사용자가 앱을 구입하기 전에 시험 삼아 사용하여 기존의 "프리미엄(Freemium)" 옵션보다 앱 검색률과 구매전환율을 더욱 쉽게 높일 수 있게 해줍니다.
 - 사용자에게 인센티브를 제공하기 위한 판매 가격입니다.
-- 앱에서 바로 구매 기능과 광고도 사용할 수 있습니다.
+- 앱에서 바로 구매.
 
 ### <a name="apps-from-the-microsoft-store-provide-a-seamless-install-uninstall-and-upgrade-experience"></a>Microsoft Store의 앱으로 설치, 제거 및 업그레이드를 원활하게 수행할 수 있는 환경 제공
 

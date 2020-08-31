@@ -7,12 +7,12 @@ manager: jken
 ms.topic: article
 keywords: android, windows, windows defender, 설정, 구성, 제외,% USERPROFILE%, devenv.exe, 성능, 속도, 빌드, gradle
 ms.date: 04/28/2020
-ms.openlocfilehash: d818c4f568698a121fb7051ec5e6e2d246bff924
-ms.sourcegitcommit: 24b19e7ee06e5bb11a0dae334806741212490ee9
+ms.openlocfilehash: 0437ffc263c618e52c7a3e4dc3256e9fcd502c8e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255137"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154867"
 ---
 # <a name="update-windows-defender-settings-to-improve-performance"></a>성능 향상을 위한 Windows Defender 설정 업데이트
 
@@ -20,7 +20,7 @@ ms.locfileid: "82255137"
 
 ## <a name="windows-defender-overview"></a>Windows Defender 개요
 
-Windows 10 버전 1703 이상에서 windows [Defender 바이러스 백신](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/windows-defender-security-center-antivirus) 앱은 windows 보안의 일부입니다. Windows Defender는 바이러스, 랜 섬 웨어, 스파이웨어 및 기타 보안 위협에 대해 기본 제공 되는 실시간 보호를 통해 PC를 안전 하 게 유지 하는 것을 목표로 합니다.
+Windows 10 버전 1703 이상에서 windows [Defender 바이러스 백신](/windows/security/threat-protection/windows-defender-antivirus/windows-defender-security-center-antivirus) 앱은 windows 보안의 일부입니다. Windows Defender는 바이러스, 랜 섬 웨어, 스파이웨어 및 기타 보안 위협에 대해 기본 제공 되는 실시간 보호를 통해 PC를 안전 하 게 유지 하는 것을 목표로 합니다.
 
 **그러나**Windows Defender의 실시간 보호를 사용 하면 Android 앱을 개발할 때 파일 시스템 액세스 및 빌드 속도가 크게 느려질 수 있습니다.
 
@@ -48,18 +48,18 @@ Android 빌드 속도를 향상 시키려면 다음을 수행 하 여 [Windows D
 
 다음 목록에서는 Windows Defender 실시간 검색의 제외로 추가 하도록 권장 되는 각 Android Studio 디렉터리의 기본 위치를 보여 줍니다.
 
-- Gradle 캐시:`%USERPROFILE%\.gradle`
-- Android Studio 프로젝트:`%USERPROFILE%\AndroidStudioProjects`
-- Android SDK:`%USERPROFILE%\AppData\Local\Android\SDK`
-- Android Studio 시스템 파일:`%USERPROFILE%\.AndroidStudio<version>\system`
+- Gradle 캐시: `%USERPROFILE%\.gradle`
+- Android Studio 프로젝트: `%USERPROFILE%\AndroidStudioProjects`
+- Android SDK: `%USERPROFILE%\AppData\Local\Android\SDK`
+- Android Studio 시스템 파일: `%USERPROFILE%\.AndroidStudio<version>\system`
 
 Android Studio에 의해 설정 된 기본 위치를 사용 하지 않았거나 GitHub에서 프로젝트를 다운로드 한 경우에는 이러한 디렉터리 위치가 프로젝트에 적용 되지 않을 수 있습니다 (예:). 현재 Android 개발 프로젝트의 디렉터리에 제외를 추가 하는 것이 좋습니다. 언제 든 지 찾을 수 있습니다.
 
 고려해 야 할 추가 제외 사항은 다음과 같습니다.
 
-- Visual Studio 개발 환경 프로세스:`devenv.exe`
-- Visual Studio 빌드 프로세스:`msbuild.exe`
-- JetBrains 디렉터리:`%LOCALAPPDATA%\JetBrains\<Transient directory (folder)>`
+- Visual Studio 개발 환경 프로세스: `devenv.exe`
+- Visual Studio 빌드 프로세스: `msbuild.exe`
+- JetBrains 디렉터리: `%LOCALAPPDATA%\JetBrains\<Transient directory (folder)>`
 
 그룹 정책 제어 환경의 디렉터리 위치를 사용자 지정 하는 방법을 비롯 하 여 바이러스 백신 검색 제외를 추가 하는 방법에 대 한 자세한 내용은 Android Studio 설명서의 [바이러스 백신 영향](https://developer.android.com/studio/intro/studio-config#antivirus-impact) 섹션을 참조 하십시오.
 
@@ -68,7 +68,7 @@ Android Studio에 의해 설정 된 기본 위치를 사용 하지 않았거나 
 
 ## <a name="additional-resources"></a>추가 리소스
 
-- [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](https://docs.microsoft.com/dual-screen/android/)
+- [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](/dual-screen/android/)
 
 - [Windows Defender 제외를 추가 하 여 성능 향상](./defender-settings.md)
 

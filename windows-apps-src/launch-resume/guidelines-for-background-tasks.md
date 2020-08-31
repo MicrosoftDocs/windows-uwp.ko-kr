@@ -1,17 +1,17 @@
 ---
 title: 백그라운드 작업 지침
-description: 앱이 백그라운드 작업을 실행 하기 위한 요구 사항을 충족 하는지 확인 합니다.
+description: 응용 프로그램에서 in-process 백그라운드 작업을 개발 하 고 실행 하는 방법에 대 한 자세한 지침을 확인 하세요.
 ms.assetid: 18FF1104-1F73-47E1-9C7B-E2AA036C18ED
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 7709e93ba14d3ecf5418accc41a9fe52c968fcec
-ms.sourcegitcommit: cc645386b996f6e59f1ee27583dcd4310f8fb2a6
+ms.openlocfilehash: bdcf398b448a3b0571b07063b9d4e70800259248
+ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84262764"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89094590"
 ---
 # <a name="guidelines-for-background-tasks"></a>백그라운드 작업 지침
 
@@ -28,12 +28,12 @@ In-process **및 out-of-process 백그라운드 작업:** Windows 10 버전 1607
 
 |고려 사항 | 영향 |
 |--------------|--------|
-|회복   | 백그라운드 프로세스가 다른 프로세스에서 실행 되는 경우 백그라운드 프로세스의 작동이 중단 되 면 포그라운드 응용 프로그램이 작동 하지 않습니다. 또한 이전 실행 시간 제한을 실행 하는 경우 앱 내 에서도 백그라운드 작업을 종료할 수 있습니다. 포그라운드 앱과 분리 된 작업으로 백그라운드 작업을 분리 하는 것은 포그라운드 및 백그라운드 프로세스가 서로 통신 하는 데 필요 하지 않은 경우에 더 적합할 수 있습니다 (in-process 백그라운드 작업의 주요 이점 중 하나는 프로세스 간 통신에 대 한 필요성을 제거 하기 때문). |
+|복원력   | 백그라운드 프로세스가 다른 프로세스에서 실행 되는 경우 백그라운드 프로세스의 작동이 중단 되 면 포그라운드 응용 프로그램이 작동 하지 않습니다. 또한 이전 실행 시간 제한을 실행 하는 경우 앱 내 에서도 백그라운드 작업을 종료할 수 있습니다. 포그라운드 앱과 분리 된 작업으로 백그라운드 작업을 분리 하는 것은 포그라운드 및 백그라운드 프로세스가 서로 통신 하는 데 필요 하지 않은 경우에 더 적합할 수 있습니다 (in-process 백그라운드 작업의 주요 이점 중 하나는 프로세스 간 통신에 대 한 필요성을 제거 하기 때문). |
 |단순함    | In-process 백그라운드 작업은 프로세스 간 통신이 필요 하지 않으며 작성 하기 복잡 합니다.  |
 |사용 가능한 트리거 | In-process 백그라운드 작업은 [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.deviceusetrigger?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.deviceservicingtrigger) 및 **i startuptask**트리거를 지원 하지 않습니다. |
 |VoIP | In-process 백그라운드 작업은 응용 프로그램 내에서 VoIP 백그라운드 작업을 활성화 하는 것을 지원 하지 않습니다. |  
 
-**트리거 인스턴스 수에 대 한 제한:** 앱이 등록할 수 있는 일부 트리거의 인스턴스 수에는 제한이 있습니다. 앱은 앱 인스턴스당 [Applicationtrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger), [MediaProcessingTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger) 및 [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.deviceusetrigger?f=255&MSPPError=-2147217396) 를 한 번만 등록할 수 있습니다. 앱이이 제한을 초과 하면 등록 시 예외가 throw 됩니다.
+**트리거 인스턴스 수에 대 한 제한:** 앱이 등록할 수 있는 일부 트리거의 인스턴스 수에는 제한이 있습니다. 앱은 앱 인스턴스당   [Applicationtrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger), [MediaProcessingTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger) 및 [DeviceUseTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.deviceusetrigger?f=255&MSPPError=-2147217396) 를 한 번만 등록할 수 있습니다. 앱이이 제한을 초과 하면 등록 시 예외가 throw 됩니다.
 
 **CPU 할당량:** 백그라운드 작업은 트리거 유형에 따라 가져오는 벽 시계 사용 시간의 양에 따라 제한 됩니다. 대부분의 트리거는 벽 시계 사용을 30 초로 제한 하지만, 일부는 집약적 작업을 완료 하기 위해 최대 10 분까지 실행할 수 있습니다. 백그라운드 작업은 배터리 수명을 절약 하 고 포그라운드 앱에 더 나은 사용자 환경을 제공 하기 위해 간단 해야 합니다. 백그라운드 작업에 적용 되는 리소스 제약 조건에 대 한 [백그라운드 작업으로 앱 지원](support-your-app-with-background-tasks.md) 을 참조 하세요.
 

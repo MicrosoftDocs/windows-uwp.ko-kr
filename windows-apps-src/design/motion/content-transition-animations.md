@@ -1,6 +1,6 @@
 ---
-Description: 콘텐츠 전환 애니메이션을 사용하면 컨테이너 또는 배경을 일정하게 유지하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인됩니다. 바꿀 기존 콘텐츠가 있는 경우 해당 콘텐츠는 페이드 아웃됩니다.
-title: 콘텐츠 전환 애니메이션에 대한 지침
+Description: 콘텐츠 전환 애니메이션을 사용 하면 컨테이너 또는 백그라운드 상수를 유지 하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인 됩니다. 기존 콘텐츠가 바뀔 경우 해당 콘텐츠가 페이드 아웃 됩니다.
+title: 콘텐츠 전환 애니메이션에 대 한 지침
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
 template: detail.hbs
 ms.date: 05/19/2017
@@ -10,46 +10,42 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7703f2dfac2eed6df1f59b8e1cdfa6371e240eb4
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 8d498c3214effd64895c6a894802a9ccc82ff357
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317107"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169267"
 ---
 # <a name="content-transition-animations"></a>콘텐츠 전환 애니메이션
 
 
 
-콘텐츠 전환 애니메이션을 사용하면 컨테이너 또는 배경을 일정하게 유지하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인됩니다. 바꿀 기존 콘텐츠가 있는 경우 해당 콘텐츠는 페이드 아웃됩니다.
+콘텐츠 전환 애니메이션을 사용 하면 컨테이너 또는 백그라운드 상수를 유지 하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인 됩니다. 기존 콘텐츠가 바뀔 경우 해당 콘텐츠가 페이드 아웃 됩니다.
 
-> **중요 API**: [**ContentThemeTransition 클래스 (XAML)** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.contentthemetransition)
+> **중요 한 api**: [ **ContentThemeTransition 클래스 (XAML)**](/uwp/api/windows.ui.xaml.media.animation.contentthemetransition)
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 
--   빈 컨테이너에 넣을 새 항목 집합이 있을 때 시작 애니메이션을 사용하세요. 예를 들어, 앱을 최초로 로드한 다음 앱의 콘텐츠 중 일부를 즉시 표시할 수 없는 경우도 있습니다. 콘텐츠가 표시할 수 있게 되면 콘텐츠 전환 애니메이션을 사용하여 그 최신 콘텐츠를 보기로 가져옵니다.
--   어떤 콘텐츠의 집합을 이미 보기 내의 동일한 컨테이너에 상주하는 다른 콘텐츠의 집합으로 바꾸려면 콘텐츠 전환을 사용합니다.
--   새 콘텐츠를 가져오려면 일반 페이지 흐름이나 읽는 순서와 반대로 해당 콘텐츠를 보기로 밀어 올립니다(아래에서 위쪽으로).
--   새 콘텐츠를 논리적인 방식으로 소개합니다. 예를 들어 콘텐츠의 가장 중요한 부분을 마지막에 소개합니다.
--   콘텐츠를 업데이트할 콘테이너가 두 개 이상일 경우 모든 전환 애니메이션을 시차나 지연 없이 동시에 트리거합니다.
--   전체 페이지가 변경되는 경우에는 콘텐츠 전환 애니메이션을 사용하지 마세요. 이 경우에는 페이지 전환 애니메이션을 대신 사용합니다.
--   콘텐츠를 새로 고치기만 하는 경우에는 콘텐츠 전환 애니메이션을 사용하지 마세요. 콘텐츠 전환 애니메이션은 이동을 나타내는 데 사용됩니다. 새로 고침의 경우 페이드 애니메이션을 사용합니다.
+-   빈 컨테이너로 가져올 새 항목 집합이 있는 경우에는 나타내기 애니메이션을 사용 합니다. 예를 들어 앱의 초기 로드 후 앱 콘텐츠의 일부를 즉시 표시 하지 못할 수 있습니다. 콘텐츠를 표시할 준비가 되 면 콘텐츠 전환 애니메이션을 사용 하 여 해당 하는 콘텐츠를 뷰로 가져옵니다.
+-   콘텐츠 전환을 사용 하 여 한 콘텐츠 집합을 보기 내의 동일한 컨테이너에 이미 있는 다른 콘텐츠 집합으로 바꿉니다.
+-   새 콘텐츠를 가져올 때 일반 페이지 흐름이 나 읽기 순서를 기준으로 해당 콘텐츠를 아래쪽에서 위쪽으로 이동 합니다.
+-   논리적 방식으로 새 콘텐츠를 소개 합니다. 예를 들어 마지막으로 가장 중요 한 콘텐츠를 소개 합니다.
+-   콘텐츠를 업데이트할 컨테이너가 둘 이상 있는 경우에는 시차 또는 지연 없이 모든 전환 애니메이션을 동시에 트리거합니다.
+-   전체 페이지를 변경 하는 경우 콘텐츠 전환 애니메이션을 사용 하지 마세요. 이 경우 페이지 전환 애니메이션을 대신 사용 합니다.
+-   콘텐츠를 새로 고치는 경우 콘텐츠 전환 애니메이션을 사용 하지 마세요. 콘텐츠 전환 애니메이션은 움직임을 보여 주기 위한 것입니다. 새로 고침의 경우 페이드 애니메이션을 사용 합니다.
 
 
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
-**개발자 (XAML)**
-* [애니메이션 개요](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
-* [콘텐츠 전환에 애니메이션 적용](https://docs.microsoft.com/previous-versions/windows/apps/jj649426(v=win.10))
-* [빠른 시작: 애니메이션 라이브러리 애니메이션을 사용 하 여 UI](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
-* [**ContentThemeTransition 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.contentthemetransition)
-
- 
+**개발자용(XAML)**
+* [애니메이션 개요](./xaml-animation.md)
+* [콘텐츠 전환에 애니메이션 적용](/previous-versions/windows/apps/jj649426(v=win.10))
+* [빠른 시작: 라이브러리 애니메이션을 사용 하 여 UI에 애니메이션 효과 주기](/previous-versions/windows/apps/hh452703(v=win.10))
+* [**ContentThemeTransition 클래스**](/uwp/api/windows.ui.xaml.media.animation.contentthemetransition)
 
  
 
-
-
-
+ 

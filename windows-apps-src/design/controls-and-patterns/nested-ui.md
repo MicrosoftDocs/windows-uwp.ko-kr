@@ -1,6 +1,6 @@
 ---
-Description: 중첩된 UI를 사용하여 한 목록 항목에서 여러 작업을 사용합니다.
 title: 목록 항목의 중첩된 UI
+description: 중요한 작업을 수행할 수 있는 추가 옵션을 사용자에게 제공하기 위해 ListView 및 GridView 항목에서 중첩된 UI를 만드는 방법을 알아봅니다.
 label: Nested UI in list items
 template: detail.hbs
 ms.date: 05/19/2017
@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d2372044076e1885602dec806df95ad60e789cdd
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 9a8b53eef3538ca637fa5b351b74125eebdfe2b3
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968088"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942843"
 ---
 # <a name="nested-ui-in-list-items"></a>목록 항목의 중첩된 UI
 

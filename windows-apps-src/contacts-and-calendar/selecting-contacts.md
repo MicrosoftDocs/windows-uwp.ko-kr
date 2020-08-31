@@ -2,54 +2,54 @@
 description: Windows.ApplicationModel.Contacts 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다.
 title: 연락처 선택
 ms.assetid: 35FEDEE6-2B0E-4391-84BA-5E9191D4E442
-keywords: 연락처, 연락처 선택, 단일 연락처 선택, 여러 연락처 선택, 여러 데이터 연락처 선택, 특정 연락처 선택, 특정 데이터 연락처 선택, 특정 필드 선택
+keywords: 연락처를 선택 하 고 단일 연락처 선택을 선택 하 여 여러 연락처 연락처를 선택 하 고, 여러 개의 특정 연락처 데이터 연락처 선택, 특정 데이터 연락처 선택, 특정 필드 선택
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 634b72032b37fe4a6bc4ea44a2e4fe27abede47d
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: dcf8fefb82de3cccf3d914ae6003c991107888e1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74255069"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154687"
 ---
 # <a name="select-contacts"></a>연락처 선택
 
 
 
-[  **Windows.ApplicationModel.Contacts**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts) 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다. 여기서는 단일 연락처나 여러 연락처를 선택하는 방법을 설명하고 연락처 선택 기능을 구성하여 앱에 필요한 연락처 정보만 검색하는 방법을 보여 줍니다.
+[  **Windows.ApplicationModel.Contacts**](/uwp/api/Windows.ApplicationModel.Contacts) 네임스페이스를 통해 연락처를 선택하는 여러 가지 옵션이 있습니다. 여기서는 단일 연락처나 여러 연락처를 선택하는 방법을 설명하고 연락처 선택 기능을 구성하여 앱에 필요한 연락처 정보만 검색하는 방법을 보여 줍니다.
 
-## <a name="set-up-the-contact-picker"></a>연락처 선택 기능 설정
+## <a name="set-up-the-contact-picker"></a>연락처 선택 설정
 
-[  **Windows.ApplicationModel.Contacts.ContactPicker**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.ContactPicker) 인스턴스를 만들고 변수에 할당합니다.
+Windows. r e n a l e.. [**연락처 선택기**](/uwp/api/Windows.ApplicationModel.Contacts.ContactPicker) 의 인스턴스를 만들어 변수에 할당 합니다.
 
 ```cs
 var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
 ```
 
-## <a name="set-the-selection-mode-optional"></a>선택 모드 설정(옵션)
+## <a name="set-the-selection-mode-optional"></a>선택 모드를 설정 합니다 (선택 사항).
 
-기본적으로 연락처 선택 기능은 사용자가 선택하는 연락처에 대해 사용 가능한 데이터를 모두 검색합니다. [  **SelectionMode**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactpicker.selectionmode) 속성을 사용하면 연락처 선택 기능이 앱에 필요한 데이터 필드만 검색하도록 구성할 수 있습니다. 사용 가능한 연락처 데이터의 하위 집합만 필요한 경우에 이것은 연락처 선택 기능을 더 효율적으로 사용하는 방법입니다.
+기본적으로 연락처 선택은 사용자가 선택한 연락처에 대해 사용 가능한 모든 데이터를 검색 합니다. [**SelectionMode**](/uwp/api/windows.applicationmodel.contacts.contactpicker.selectionmode) 속성을 사용 하면 연락처 선택기를 구성 하 여 앱에 필요한 데이터 필드만 검색할 수 있습니다. 사용 가능한 연락처 데이터의 하위 집합만 필요한 경우 연락처 선택기를 사용 하는 보다 효율적인 방법입니다.
 
-먼저 [**SelectionMode**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactpicker.selectionmode) 속성을 **Fields**로 설정합니다.
+먼저 [**SelectionMode**](/uwp/api/windows.applicationmodel.contacts.contactpicker.selectionmode) 속성을 **필드**로 설정 합니다.
 
 ```cs
 contactPicker.SelectionMode = Windows.ApplicationModel.Contacts.ContactSelectionMode.Fields;
 ```
 
-그런 다음 [**desiredFieldsWithContactFieldType**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactpicker.desiredfieldswithcontactfieldtype) 속성을 사용하여 연락처 선택 기능에서 검색할 필드를 지정합니다. 이 예제에서는 연락처 선택 기능에서 메일 주소를 검색하도록 구성합니다:
+그런 다음 [**DesiredFieldsWithContactFieldType**](/uwp/api/windows.applicationmodel.contacts.contactpicker.desiredfieldswithcontactfieldtype) 속성을 사용 하 여 연락처 선택기에서 검색할 필드를 지정 합니다. 이 예제에서는 전자 메일 주소를 검색 하도록 연락처 선택기를 구성 합니다.
 
 ``` cs
 contactPicker.DesiredFieldsWithContactFieldType.Add(Windows.ApplicationModel.Contacts.ContactFieldType.Email);
 ```
 
-## <a name="launch-the-picker"></a>선택기 시작
+## <a name="launch-the-picker"></a>선택 시작
 
 ```cs
 Contact contact = await contactPicker.PickContactAsync();
 ```
 
-사용자가 하나 이상의 연락처를 선택하도록 하려면 [**pickContactsAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactpicker.pickcontactsasync)를 사용합니다.
+사용자가 연락처를 하나 이상 선택 하도록 하려면 [**PickContactsAsync**](/uwp/api/windows.applicationmodel.contacts.contactpicker.pickcontactsasync) 을 사용 합니다.
 
 ```cs
 public IList<Contact> contacts;
@@ -58,9 +58,9 @@ contacts = await contactPicker.PickContactsAsync();
 
 ## <a name="process-the-contacts"></a>연락처 처리
 
-선택 기능이 반환되면 사용자가 연락처를 선택했는지 확인합니다. 선택한 경우 연락처 정보를 처리합니다.
+선택이 반환 되 면 사용자가 연락처를 선택 했는지 여부를 확인 합니다. 그렇다면 연락처 정보를 처리 합니다.
 
-다음 예제에서는 단일 연락처를 처리하는 방법을 보여 줍니다. 여기서는 연락처의 이름을 검색하여 [OutputName**이라는** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)TextBlock 컨트롤로 복사합니다.
+다음 예제에서는 단일 연락처를 처리하는 방법을 보여 줍니다. 여기서 연락처의 이름을 검색 하 고 *OutputName*이라는 [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 컨트롤에 복사 합니다.
 
 ```cs
 if (contact != null)
@@ -73,7 +73,7 @@ else
 }
 ```
 
-다음 예제에서는 여러 연락처를 처리하는 방법을 보여 줍니다.
+이 예제에서는 여러 연락처를 처리 하는 방법을 보여 줍니다.
 
 ```cs
 if (contacts != null && contacts.Count > 0)
@@ -85,9 +85,9 @@ if (contacts != null && contacts.Count > 0)
 }
 ```
 
-## <a name="complete-example-single-contact"></a>완전한 예제(단일 연락처)
+## <a name="complete-example-single-contact"></a>전체 예제 (단일 연락처)
 
-이 예제에서는 연락처 선택 기능을 사용하여 메일 주소, 위치 및 전화 번호와 함께 단일 연락처의 이름을 검색합니다.
+이 예제에서는 연락처 선택기를 사용 하 여 전자 메일 주소, 위치 또는 전화 번호와 함께 단일 연락처의 이름을 검색 합니다.
 
 ```cs
 // ...
@@ -165,9 +165,9 @@ private void AppendContactFieldValues<T>(TextBlock content, IList<T> fields)
 }
 ```
 
-## <a name="complete-example-multiple-contacts"></a>완전한 예제(여러 연락처)
+## <a name="complete-example-multiple-contacts"></a>전체 예제 (여러 연락처)
 
-이 예제에서는 연락처 선택 기능을 사용하여 여러 연락처를 검색한 다음 [라는ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)`OutputContacts` 컨트롤에 연락처를 추가합니다.
+이 예제에서는 연락처 선택기를 사용 하 여 여러 연락처를 검색 한 다음 이라는 [**ListView**](/uwp/api/Windows.UI.Xaml.Controls.ListView) 컨트롤에 연락처를 추가 합니다 `OutputContacts` .
 
 ```cs
 MainPage rootPage = MainPage.Current;
@@ -230,4 +230,4 @@ public class ContactItemAdapter
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
-지금까지 연락처 선택 기능을 사용하여 연락처 정보를 검색하는 방법을 간략히 살펴보았습니다. 연락처 및 연락처 선택 기능을 사용하는 방법에 대한 더 많은 예제를 보려면 GitHub에서 [유니버설 Windows 앱 샘플](https://github.com/Microsoft/Windows-universal-samples)을 다운로드합니다.
+이제 연락처 선택기를 사용 하 여 연락처 정보를 검색 하는 방법을 기본적으로 이해 하 고 있습니다. GitHub에서 [유니버설 Windows 앱 샘플](https://github.com/Microsoft/Windows-universal-samples) 을 다운로드 하 여 연락처 및 연락처 선택기를 사용 하는 방법에 대 한 더 많은 예제를 확인 합니다.

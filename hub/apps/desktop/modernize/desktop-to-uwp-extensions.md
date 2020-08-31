@@ -1,19 +1,19 @@
 ---
-Description: 확장을 사용하여 미리 정의된 방법으로 패키지 데스크톱 앱과 Windows 10을 통합할 수 있습니다.
+description: 확장을 사용하여 미리 정의된 방법으로 패키지 데스크톱 앱과 Windows 10을 통합할 수 있습니다.
 title: 데스크톱 브리지를 사용하여 기존 데스크톱 앱 현대화
-ms.date: 04/18/2018
+ms.date: 08/25/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: d9f5ca95678a8b31ed53cfdf2c4e6433bca504c8
-ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
+ms.openlocfilehash: fb1daddeb743909417d6483223d5386e64ca5241
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334452"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942783"
 ---
 # <a name="integrate-your-desktop-app-with-windows-10-and-uwp"></a>데스크톱 앱을 Windows 10 및 UWP와 통합
 
@@ -406,11 +406,15 @@ ms.locfileid: "85334452"
 
 ### <a name="place-your-dll-files-into-any-folder-of-the-package"></a>패키지의 원하는 폴더에 DLL 파일 배치
 
-이러한 폴더를 식별할 수 있도록 확장을 사용합니다. 이 방법으로 시스템에서는 사용자가 배치하는 파일을 찾아 로드할 수 있습니다. 이 확장이 _%PATH%_ 환경 변수를 대체한다고 생각하시면 됩니다.
+[uap6:LoaderSearchPathOverride](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride) 확장을 사용하여 앱의 프로세스에 대한 로더 검색 경로에 사용할 앱 패키지 루트 경로를 기준으로 앱 패키지에서 최대 5개의 폴더 경로를 선언합니다.
 
-이 확장을 사용하지 않으면 시스템에서는 프로세스의 패키지 종속성 그래프, 패키지 루트 폴더, 시스템 디렉터리( _%SystemRoot%\system32_)를 순서대로 검색합니다. 자세한 정보는 [Windows 앱의 검색 순서](https://docs.microsoft.com/windows/desktop/Dlls/dynamic-link-library-search-order)를 참조하세요.
+Windows 앱의 [DLL 검색 순서](https://docs.microsoft.com/windows/win32/dlls/dynamic-link-library-search-order)는 패키지에 실행 권한이 있는 경우 패키지 종속성 그래프에 패키지가 포함됩니다. 기본적으로 여기에는 선택적인 기본 프레임워크 패키지가 포함되지만 패키지 매니페스트의 [uap6:AllowExecution](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-allowexecution) 요소로 덮어쓸 수 있습니다.
 
-각 패키지는 이러한 확장 중 하나만 포함할 수 있습니다. 따라서 이 중 하나를 주 패키지에 추가한 다음, 하나를 각 [선택적 패키지 및 관련 세트](/windows/msix/package/optional-packages)에 추가할 수 있습니다.
+DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포함합니다. 유효 경로에 대한 자세한 내용은 [EffectivePath](https://docs.microsoft.com/uwp/api/windows.applicationmodel.package.effectivepath) 속성(WinRT)과 [PackagePathType](https://docs.microsoft.com/windows/win32/api/appmodel/ne-appmodel-packagepathtype) 열거형(Win32)을 참조하세요.
+
+패키지가 [uap6:LoaderSearchPathOverride](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride)를 지정하는 경우에는 패키지의 유효 경로 대신 이 정보가 사용됩니다.
+
+각 패키지에는 [uap6:LoaderSearchPathOverride](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride) 확장을 하나만 포함할 수 있습니다. 따라서 이 중 하나를 주 패키지에 추가한 다음, 하나를 각 [선택적 패키지 및 관련 세트](/windows/msix/package/optional-packages)에 추가할 수 있습니다.
 
 #### <a name="xml-namespace"></a>XML 네임스페이스
 
@@ -429,10 +433,10 @@ ms.locfileid: "85334452"
 
 ```
 
-|이름 | 설명 |
+|이름 | Description |
 |-------|-------------|
 |범주 |항상 ``windows.loaderSearchPathOverride``입니다.
-|FolderPath | dll 파일을 포함하는 폴더의 경로입니다. 패키지의 루트 폴더와 관련된 경로를 지정합니다. 한 확장에서 최대 5개의 경로를 지정할 수 있습니다. 시스템이 패키지의 루트 폴더에서 파일을 검색하려는 경우 이러한 경로 중 하나에 대해 빈 문자열을 사용합니다. 중복 경로를 포함하면 안 되며, 경로가 선행 또는 후행 슬래시 또는 백슬래시를 포함하지 않도록 해야 합니다. <br><br> 시스템은 하위 폴더를 검색하지 않으므로 시스템에서 로드하려는 DLL 파일을 포함하는 각 폴더를 명시적으로 나열해야 합니다.|
+|FolderPath | DLL 파일이 포함된 폴더의 경로입니다. 패키지의 루트 폴더와 관련된 경로를 지정합니다. 한 확장에서 최대 5개의 경로를 지정할 수 있습니다. 시스템이 패키지의 루트 폴더에서 파일을 검색하려는 경우 이러한 경로 중 하나에 대해 빈 문자열을 사용합니다. 중복 경로를 포함하지 않고, 경로에 선행 및 후행 슬래시 또는 백슬래시가 포함되지 않도록 해야 합니다. <br><br> 시스템은 하위 폴더를 검색하지 않으므로 시스템에서 로드하려는 DLL 파일을 포함하는 각 폴더를 명시적으로 나열해야 합니다.|
 
 #### <a name="example"></a>예제
 
@@ -494,7 +498,7 @@ ms.locfileid: "85334452"
 
 전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
-|이름 |설명 |
+|이름 |Description |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름은 파일 형식을 구성하고 그룹화하는 데 사용할 수 있습니다. 이름은 공백 없이 모두 소문자여야 합니다. |
@@ -569,7 +573,7 @@ ms.locfileid: "85334452"
 
 전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
-|이름 |설명 |
+|이름 |Description |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름은 파일 형식을 구성하고 그룹화하는 데 사용할 수 있습니다. 이름은 공백 없이 모두 소문자여야 합니다. |
@@ -631,7 +635,7 @@ ms.locfileid: "85334452"
 
 전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
-|이름 |설명 |
+|이름 |Description |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름은 파일 형식을 구성하고 그룹화하는 데 사용할 수 있습니다. 이름은 공백 없이 모두 소문자여야 합니다. |
@@ -696,7 +700,7 @@ ms.locfileid: "85334452"
 
 전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
-|이름 |설명 |
+|이름 |Description |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름은 파일 형식을 구성하고 그룹화하는 데 사용할 수 있습니다. 이름은 공백 없이 모두 소문자여야 합니다. |
@@ -757,7 +761,7 @@ ms.locfileid: "85334452"
 
 전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
-|이름 |설명 |
+|이름 |Description |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름은 파일 형식을 구성하고 그룹화하는 데 사용할 수 있습니다. 이름은 공백 없이 모두 소문자여야 합니다. |
@@ -823,7 +827,7 @@ ms.locfileid: "85334452"
 
 [com:ComServer](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-com-comserver) 및 [desktop4:FileExplorerContextMenus](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus)에서 전체 스키마 참조를 찾아보세요.
 
-#### <a name="instructions"></a>지침
+#### <a name="instructions"></a>Instructions
 
 상황에 맞는 메뉴 처리기를 등록하려면 다음 지침을 따르세요.
 
@@ -913,7 +917,7 @@ ms.locfileid: "85334452"
 
 ```
 
-|이름 |설명 |
+|이름 |Description |
 |-------|-------------|
 |범주 |항상 ``windows.cloudfiles``입니다.
 |iconResource |클라우드 파일 공급자 서비스를 나타내는 아이콘입니다. 이 아이콘은 파일 탐색기의 탐색 창에 표시됩니다.  사용자가 이 아이콘을 선택하면 클라우드 서비스의 파일이 표시됩니다. |
@@ -983,10 +987,10 @@ ms.locfileid: "85334452"
 
 전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol)서 찾을 수 있습니다.
 
-|이름 |설명 |
+|이름 |Description |
 |-------|-------------|
 |범주 |항상 ``windows.protocol``입니다.
-|이름 |프로토콜 이름입니다. |
+|이름 |프로토콜의 이름입니다. |
 |매개 변수 |애플리케이션이 활성화될 때 애플리케이션에 이벤트 인수로 전달할 매개 변수 및 값의 목록입니다. 변수가 파일 경로를 포함할 수 있는 경우에는 매개 변수 값을 따옴표로 묶습니다. 이렇게 해야 경로에 공백이 포함된 경우에 발생하는 모든 문제를 방지할 수 있습니다. |
 
 ### <a name="example"></a>예제
@@ -1035,11 +1039,11 @@ ms.locfileid: "85334452"
 </Extension>
 ```
 
-|이름 |설명 |
+|이름 |Description |
 |-------|-------------|
 |범주 |항상 ``windows.appExecutionAlias``입니다.
 |실행 파일 |별칭이 호출될 때 시작할 실행 파일의 상대 경로입니다. |
-|별칭 |앱의 간단한 이름입니다. 항상 확장명이 ".exe"로 끝나야 합니다. 패키지의 각 애플리케이션에 대해 하나의 앱 실행 별칭만 지정할 수 있습니다. 여러 앱이 같은 별칭으로 등록되는 경우 시스템은 다른 앱에서 재정의할 가능성이 없는 고유한 별칭을 선택하기 위해 마지막에 등록된 항목을 호출합니다.
+|Alias |앱의 간단한 이름입니다. 항상 확장명이 ".exe"로 끝나야 합니다. 패키지의 각 애플리케이션에 대해 하나의 앱 실행 별칭만 지정할 수 있습니다. 여러 앱이 같은 별칭으로 등록되는 경우 시스템은 다른 앱에서 재정의할 가능성이 없는 고유한 별칭을 선택하기 위해 마지막에 등록된 항목을 호출합니다.
 |
 
 #### <a name="example"></a>예제
@@ -1098,7 +1102,7 @@ ms.locfileid: "85334452"
 </Extension>
 ```
 
-|이름 |설명 |
+|이름 |Description |
 |-------|-------------|
 |범주 |항상 ``windows.startupTask``입니다.|
 |실행 파일 |시작하려는 실행 파일의 상대 경로입니다. |
@@ -1153,7 +1157,7 @@ ms.locfileid: "85334452"
   </AutoPlayHandler>
 ```
 
-|이름 |설명 |
+|이름 |Description |
 |-------|-------------|
 |범주 |항상 ``windows.autoPlayHandler``입니다.
 |ActionDisplayName |사용자가 PC에 연결하는 디바이스로 수행할 수 있는 작업을 나타내는 문자열(예: "파일 가져오기" 또는 "비디오 재생")입니다. |
@@ -1240,7 +1244,7 @@ XPS(XML Paper Specification) 형식으로 인쇄 데이터를 수신하려면 �
 
 전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-appprinter)서 찾을 수 있습니다.
 
-|이름 |설명 |
+|이름 |Description |
 |-------|-------------|
 |범주 |항상 ``windows.appPrinter``입니다.
 |DisplayName |앱의 인쇄 대상 목록에 표시할 이름입니다. |
@@ -1290,7 +1294,7 @@ XPS(XML Paper Specification) 형식으로 인쇄 데이터를 수신하려면 �
 
 전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-sharedfonts)서 찾을 수 있습니다.
 
-|이름 |설명 |
+|이름 |Description |
 |-------|-------------|
 |범주 |항상 ``windows.sharedFonts``입니다.
 |파일 |공유하려는 글꼴이 포함된 파일입니다. |
@@ -1336,7 +1340,7 @@ XPS(XML Paper Specification) 형식으로 인쇄 데이터를 수신하려면 �
 </Extension>
 ```
 
-|이름 |설명 |
+|이름 |Description |
 |-------|-------------|
 |범주 |항상 ``windows.fullTrustProcess``입니다.
 |GroupID |실행 파일에 전달할 매개 변수 세트를 식별하는 문자열입니다. |

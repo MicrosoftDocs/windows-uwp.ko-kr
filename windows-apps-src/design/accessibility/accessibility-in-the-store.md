@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ad128aca1a633c5ce33830b5ee9231f7a794a60c
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 320d5cc4232d613a4fb437fbd11f3c83287b3030
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82969678"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154107"
 ---
 # <a name="accessibility-in-the-store"></a>스토어의 접근성  
 
@@ -40,7 +40,7 @@ Microsoft Store에서 액세스할 수 있는 Windows 앱을 선언 하기 위�
     * 바로 가기 키를 사용 하 여 기본 앱 기능에 연결 합니다.
     * 키보드를 사용 하지 않는 장치에 대해 탭 및 화살표에 대해 내레이터 터치 제스처를 사용 합니다.
 * 앱 UI를 시각적으로 액세스할 수 있는지 확인: 4.5의 최소 텍스트 명암비는 1이 고,는 정보를 전달 하기 위해 색만 사용 하지 않습니다.
-* [**검사**](https://docs.microsoft.com/windows/desktop/WinAuto/inspect-objects) 및 [**UIAVerify**](https://docs.microsoft.com/windows/desktop/WinAuto/ui-automation-verify) 와 같은 내게 필요한 옵션 테스트 도구를 사용 하 여 접근성 구현을 확인 하 고 이러한 도구에서 보고 하는 모든 우선 순위 1 오류를 해결 했습니다.
+* [**검사**](/windows/desktop/WinAuto/inspect-objects) 및 [**UIAVerify**](/windows/desktop/WinAuto/ui-automation-verify) 와 같은 내게 필요한 옵션 테스트 도구를 사용 하 여 접근성 구현을 확인 하 고 이러한 도구에서 보고 하는 모든 우선 순위 1 오류를 해결 했습니다.
 * 내레이터, 돋보기, 화상 키보드, 고대비 테마 및 조정 된 dpi 설정을 사용 하 여 앱의 기본 시나리오를 최종에서 끝으로 확인 했습니다.
 
 이러한 절차를 검토 하 고 이러한 절차를 수행 하는 데 도움이 되는 리소스에 대 한 링크를 보려면 [내게 필요한 옵션 검사 목록을](accessibility-checklist.md) 참조 하십시오.
@@ -48,4 +48,4 @@ Microsoft Store에서 액세스할 수 있는 Windows 앱을 선언 하기 위�
 <span id="related_topics"/>
 
 ## <a name="related-topics"></a>관련 항목    
-* [액세스 가능성](accessibility.md) 
+* [접근성](accessibility.md)

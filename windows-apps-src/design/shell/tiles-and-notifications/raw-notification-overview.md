@@ -1,5 +1,5 @@
 ---
-Description: 원시 알림은 짧고 일반적인 목적의 알림으로,
+description: 엄격 하 게 지침을 제공 하 고 UI 구성 요소를 포함 하지 않는 간단한 범용 푸시 알림과 같은 원시 알림에 대해 알아봅니다.
 title: 푸시 알림 개요
 ms.assetid: A867C75D-D16E-4AB5-8B44-614EEB9179C7
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5eb90e47a1d821c489e06a9ce19c913eb6702767
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 2c4072070837d0bde67b644e2536bc2c93b0efc3
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493238"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053973"
 ---
 # <a name="raw-notification-overview"></a>푸시 알림 개요
 

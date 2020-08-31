@@ -1,64 +1,64 @@
 ---
-title: 지도에 경로 및 길 찾기 표시
-description: 경로 및 길 찾기를 요청하고 앱에 표시합니다.
+title: 지도에 경로 및 방향 표시
+description: MapRouteFinder 클래스를 사용 하 여 경로 및 방향을 검색 하 고 UWP (유니버설 Windows 플랫폼) 앱의 없습니다에 표시 하는 방법에 대해 알아봅니다.
 ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
 ms.date: 09/20/2017
 ms.topic: article
-keywords: windows 10, uwp, 경로, 지도, 위치, 길 찾기
+keywords: windows 10, uwp, 경로, 지도, 위치, 방향
 ms.localizationpriority: medium
-ms.openlocfilehash: e9e464f9a3b49d3a94edbc8593df58e1e7c24515
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 49c3d47bb4e1a20f89200950d505d382ac2e8335
+ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259335"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89094730"
 ---
-# <a name="display-routes-and-directions-on-a-map"></a>지도에 경로 및 길 찾기 표시
+# <a name="display-routes-and-directions-on-a-map"></a>지도에 경로 및 방향 표시
 
 
 
 경로 및 길 찾기를 요청하고 앱에 표시합니다.
 
 >[!Note]
->앱에서 지도 사용에 대한 자세한 내용을 알아보려면 [UWP(유니버설 Windows 플랫폼) 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)을 다운로드하세요.
->지도가 앱의 핵심 기능이 아닌 경우 대신 Windows 지도 앱을 실행하는 것이 좋습니다. `bingmaps:`, `ms-drive-to:` 및 `ms-walk-to:` URI 스키마로 Windows 지도 앱을 실행하여 특정 지도 및 턴바이턴 길 찾기를 표시할 수 있습니다. 자세한 내용은 [Windows 지도 앱 실행](https://docs.microsoft.com/windows/uwp/launch-resume/launch-maps-app)을 참조하세요.
+>앱에서 지도를 사용 하는 방법에 대 한 자세한 내용을 보려면 [UWP (유니버설 Windows 플랫폼) 맵 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)을 다운로드 하세요.
+>매핑이 앱의 핵심 기능이 아니면 대신 Windows Maps 앱을 시작 하는 것이 좋습니다. `bingmaps:`, `ms-drive-to:` 및 `ms-walk-to:` URI 체계를 사용 하 여 Windows maps 앱을 특정 맵으로 시작 하 고 방향을 다시 설정할 수 있습니다. 자세한 내용은 [Windows 지도 앱 실행](https://docs.microsoft.com/windows/uwp/launch-resume/launch-maps-app)을 참조하세요.
 
  
-## <a name="an-intro-to-maproutefinder-results"></a>MapRouteFinder 결과 소개
+## <a name="an-intro-to-maproutefinder-results"></a>MapRouteFinder 결과를 소개 합니다.
 
 
-다음은 경로 및 길 찾기 클래스의 관계입니다.
+경로 및 방향의 클래스는 다음과 같이 관련 됩니다.
 
-* [  **MapRouteFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinder) 클래스에는 경로와 길 찾기를 가져오는 메서드가 있습니다. 이러한 메서드는 [**MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult)를 반환합니다.
+* [**MapRouteFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinder) 클래스에는 경로와 방향을 가져오는 메서드가 있습니다. 이러한 메서드는 [**MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult)을 반환 합니다.
 
-* [  **MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult)에는 [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) 개체가 포함되어 있습니다. [MapRouteFinderResult**의** ](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinderresult.route)Route 속성을 통해 이 개체에 액세스합니다.
+* [**MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult) 에는 [**maproute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) 개체가 포함 되어 있습니다. **MapRouteFinderResult**의 [**Route**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinderresult.route) 속성을 통해이 개체에 액세스 합니다.
 
-* [  **MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute)에는 [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg) 개체 컬렉션이 포함됩니다. [MapRoute**의** ](https://docs.microsoft.com/uwp/api/windows.services.maps.maproute.legs)Legs 속성을 통해 이 컬렉션에 액세스합니다.
+* [**Maproute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) 에는 [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg) 개체의 컬렉션이 포함 되어 있습니다. **Maproute**의 [**변**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproute.legs) 속성을 통해이 컬렉션에 액세스 합니다.
 
-* 각 [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg)에는 [**MapRouteManeuver**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteManeuver) 개체 컬렉션이 포함됩니다. [MapRouteLeg**의** ](https://docs.microsoft.com/uwp/api/windows.services.maps.maprouteleg.maneuvers)Maneuvers 속성을 통해 이 컬렉션에 액세스합니다.
+* 각 [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg) 에는 [**MapRouteManeuver**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteManeuver) 개체의 컬렉션이 포함 되어 있습니다. **MapRouteLeg**의 [**연습**](https://docs.microsoft.com/uwp/api/windows.services.maps.maprouteleg.maneuvers) 속성을 통해이 컬렉션에 액세스 합니다.
 
-[  **MapRouteFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinder) 클래스의 메서드를 호출하여 운전 또는 보행 경로와 길 찾기를 가져옵니다. 예를 들어 [**GetDrivingRouteAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getdrivingrouteasync) 또는 [**GetWalkingRouteAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getwalkingrouteasync)입니다.
+[**MapRouteFinder**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinder) 클래스의 메서드를 호출 하 여 구동 경로 및 지침을 가져옵니다. 예를 들면 [**GetDrivingRouteAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getdrivingrouteasync) 또는 [**GetWalkingRouteAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getwalkingrouteasync)입니다.
 
-경로를 요청할 경우 다음을 지정할 수 있습니다.
+경로를 요청 하는 경우 다음을 지정할 수 있습니다.
 
-* 시작점과 끝점만 제공하거나 일련의 중간 지점을 제공하여 경로를 계산할 수 있습니다.
+* 시작점과 끝점을 제공 하거나 경로를 계산 하는 일련의 waypoints 제공할 수 있습니다.
 
-    *정지* 웨이포인트는 각각의 여행 일정이 있는 추가 경로 다리를 추가합니다. *정지* 웨이포인트를 지정하려면 [**GetDrivingRouteFromWaypointsAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getwalkingroutefromwaypointsasync) 오버로드 중에서 사용합니다.
+    *Stop* waypoints는 각각 자체의 일정을 포함 하는 추가 경로를 추가 합니다. *Stop* waypoints을 지정 하려면 [**GetDrivingRouteFromWaypointsAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getwalkingroutefromwaypointsasync) 오버 로드 중 하나를 사용 합니다.
 
-    *경유* 웨이포인트는 *정지* 웨이포인트 사이의 중간 위치를 정의합니다. 이는 경로 다리를 추가하지 않습니다.  이것은 단지 경로가 통과해야 하는 웨이포인트일 뿐입니다. *정지* 웨이포인트를 지정하려면 [**GetDrivingRouteFromEnhancedWaypointsAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getdrivingroutefromenhancedwaypointsasync) 오버로드 중에서 사용합니다.
+    이동 경로를 *통해* *stop* waypoints 사이의 중간 위치를 정의 합니다. 경로 다리를 추가 하지 않습니다.  단순히 경로를 통과 해야 하는 waypoints 있습니다. Waypoints를 *통해* 지정 하려면 [**GetDrivingRouteFromEnhancedWaypointsAsync**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinder.getdrivingroutefromenhancedwaypointsasync) 오버 로드 중 하나를 사용 합니다.
 
-* 최적화(예: 거리 최소화)를 지정할 수 있습니다.
+* 최적화를 지정할 수 있습니다 (예: 거리 최소화).
 
-* 제한 사항(예: 고속도로 회피)을 지정할 수 있습니다.
+* 제한 (예: 톨게이트 방지)을 지정할 수 있습니다.
 
-## <a name="display-directions"></a>길 찾기 표시
+## <a name="display-directions"></a>표시 방향
 
-[  **MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult) 개체에는 [**Route**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) 속성을 통해 액세스할 수 있는 [**MapRoute**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinderresult.route) 개체가 포함됩니다.
+[**MapRouteFinderResult**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteFinderResult) 개체에는 [**경로**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutefinderresult.route) 속성을 통해 액세스할 수 있는 [**maproute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) 개체가 포함 되어 있습니다.
 
-계산된 [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute)에는 경로를 따라 이동하는 데 소요되는 시간, 경로 길이, 그리고 경로 구간을 포함하는 [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg) 개체를 제공하는 속성이 있습니다. 각 **MapRouteLeg** 개체에는 [**MapRouteManeuver**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteManeuver) 개체 컬렉션이 포함됩니다. **MapRouteManeuver** 개체에는 [**InstructionText**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutemaneuver.instructiontext) 속성을 통해 액세스할 수 있는 길 찾기가 포함됩니다.
+계산 된 [**Maproute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) 에는 경로를 트래버스하는 시간, 경로의 길이, 경로의 다리를 포함 하는 [**MapRouteLeg**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteLeg) 개체의 컬렉션을 제공 하는 속성이 있습니다. 각 **MapRouteLeg** 개체에는 [**MapRouteManeuver**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRouteManeuver) 개체의 컬렉션이 포함 되어 있습니다. **MapRouteManeuver** 개체에는 [**InstructionText**](https://docs.microsoft.com/uwp/api/windows.services.maps.maproutemaneuver.instructiontext) 속성을 통해 액세스할 수 있는 지침이 포함 되어 있습니다.
 
 >[!IMPORTANT]
->지도 서비스를 사용하려면 먼저 지도 인증 키를 지정해야 합니다. 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
+>Maps 인증 키를 지정 해야 map service를 사용할 수 있습니다. 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조 하세요.
 
  
 
@@ -117,7 +117,7 @@ private async void button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-이 예제는 `tbOutputText` 입력란에 다음 결과를 표시합니다.
+이 예에서는 텍스트 상자에 다음 결과를 표시 합니다 `tbOutputText` .
 
 ``` syntax
 Total estimated time (minutes) = 18.4833333333333
@@ -135,13 +135,13 @@ Turn right onto James St.
 You have reached your destination.
 ```
 
-## <a name="display-routes"></a>경로 표시
+## <a name="display-routes"></a>표시 경로
 
 
-[  **MapControl**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute)에 [**MapRoute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)를 표시하려면 [MapRoute**를 사용하여** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapRouteView)MapRouteView를 생성합니다. 그런 다음 **MapRouteView**를 [MapControl**의** ](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.routes)Routes 컬렉션에 추가합니다.
+[**없습니다**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)에 [**maproute**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps.MapRoute) 를 표시 하려면 **Maproute**를 사용 하 여 [**MapRouteView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapRouteView) 를 생성 합니다. 그런 다음 **MapRouteView** 를 **없습니다**의 [**경로**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.routes) 컬렉션에 추가 합니다.
 
 >[!IMPORTANT]
->지도 서비스 또는 지도 컨트롤을 사용하려면 먼저 지도 인증 키를 지정해야 합니다. 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
+>Maps 인증 키를 지정 해야 map service 또는 map 컨트롤을 사용할 수 있습니다. 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조 하세요.
 
  
 
@@ -190,11 +190,11 @@ private async void ShowRouteOnMap()
 }
 ```
 
-다음 예제에서는 [MapWithRoute**라는** ](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)MapControl 컨트롤에 다음을 표시합니다.
+이 예제에서는 **Mapwithroute**라는 [**없습니다**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 에 다음을 표시 합니다.
 
-![경로를 표시하는 지도 컨트롤.](images/routeonmap.png)
+![경로를 표시 하는 지도 컨트롤입니다.](images/routeonmap.png)
 
-다음은 두 *정지* 웨이포인트 사이에 *경유* 웨이포인트를 사용하는 이 예제의 버전입니다.
+다음은 두 *stop* waypoints 사이에서 이동 경로를 *통해* 를 사용 하는이 예제의 버전입니다.
 
 ```csharp
 using System;

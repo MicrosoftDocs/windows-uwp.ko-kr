@@ -1,29 +1,29 @@
 ---
 title: PointOfService 장치 클레임 및 모델 사용
-description: PointOfService 클레임 및 모델 사용에 대 한 자세한 정보
+description: 서비스 지점 장치 클레임을 사용 하 고 Api를 사용 하 여 장치를 클레임 하 고 i/o 작업에 사용 하도록 설정 합니다.
 ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: bc3a8afbc0d3ca4655e0b1745090db633bcd92b7
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 1977fd5db2f2e026ae4bbab21de9683f275e96d3
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684671"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053753"
 ---
 # <a name="point-of-service-device-claim-and-enable-model"></a>서비스 지점 장치 클레임 및 모델 사용
 
 ## <a name="claiming-for-exclusive-use"></a>배타적 사용에 대 한 클레임
 
-성공적으로 PointOfService 장치 개체를 만들었으면 입력 또는 출력에 장치를 사용하기 전에 먼저 장치 유형에 대한 적절한 클레임 메서드를 사용하여 요청해야 합니다.  클레임은 응용 프로그램에 장치의 여러 기능에 대한 독점적인 액세스를 부여하여 한 응용 프로그램이 다른 응용 프로그램의 장치 사용을 방해하지 않도록 합니다.  한 번에 하나의 응용 프로그램만 PointOfService 장치에 대한 단독 사용을 주장할 수 있습니다. 
+PointOfService 장치 개체를 성공적으로 만든 후에는 장치 유형에 대 한 적절 한 클레임 방법을 사용 하 여 입력 또는 출력에 장치를 사용 하도록 요청 해야 합니다.  클레임은 한 응용 프로그램이 다른 응용 프로그램에서 장치를 사용 하는 것을 방해 하지 않도록 응용 프로그램에 많은 장치 기능에 대 한 단독 액세스 권한을 부여 합니다.  한 번에 하나의 응용 프로그램만 독점 사용을 위해 PointOfService 장치를 요청할 수 있습니다. 
 
 > [!Note]
 > 클레임 작업은 장치에 대 한 배타적 잠금을 설정 하지만 작동 상태로 전환 하지 않습니다.  자세한 내용은 [장치에서 i/o 작업을 사용 하도록 설정](#enable-device-for-io-operations) 을 참조 하세요.
 
 ### <a name="apis-used-to-claim--release"></a>클레임/릴리스에 사용 되는 Api
 
-|장치|클레임 | 릴리스 | 
+|디바이스|클레임 | Release | 
 |-|:-|:-|
 |BarcodeScanner | [ClaimScannerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.claimscannerasync) | [ClaimedBarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.close) |
 |CashDrawer | [CashDrawer. ClaimDrawerAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.cashdrawer.claimdrawerasync) | [ClaimedCashDrawer](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.close) | 
@@ -38,7 +38,7 @@ ms.locfileid: "75684671"
 
 ### <a name="apis-used-enable--disable"></a>사용/사용 안 함 Api 사용
 
-| 장치 | 활성화 | 사용 안 함 | IsEnabled? |
+| 디바이스 | 사용 | 사용 안 함 | IsEnabled? |
 |-|:-|:-|:-|
 |ClaimedBarcodeScanner | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.disableasync) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isenabled) | 
 |ClaimedCashDrawer | [EnableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.enableasync) | [DisableAsync](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.disableasync) | [IsEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.isenabled) |
@@ -51,7 +51,7 @@ ms.locfileid: "75684671"
 
 ## <a name="code-sample-claim-and-enable"></a>코드 샘플: 클레임 및 사용
 
-이 샘플은 성공적으로 바코드 스캐너 개체를 만든 후 바코드 스캐너 장치를 주장하는 방법을 보여 줍니다.
+이 샘플에서는 바코드 스캐너 개체를 성공적으로 만든 후 바코드 스캐너 장치를 요청 하는 방법을 보여 줍니다.
 
 ```Csharp
 
@@ -80,18 +80,18 @@ ms.locfileid: "75684671"
 ```
 
 > [!Warning]
-> 클레임은 다음과 같은 환경에서 실패할 수 있습니다.
-> 1. 다른 앱이 동일한 장치에 대한 클레임을 요청하고 앱이 **ReleaseDeviceRequested** 이벤트에 대한 응답으로 **RetainDevice**를 발급하지 않았습니다.  (자세한 내용은 아래 [클레임 협상](#claim-negotiation) 섹션을 참조하세요.)
-> 2. 앱이 일시 중단되어 장치 개체가 종료되고 그 결과로 클레임이 더 이상 유효하지 않습니다. (자세한 내용은 [장치 개체 수명 주기](pos-basics-deviceobject.md#device-object-lifecycle)를 참조하세요.)
+> 클레임은 다음과 같은 경우에 손실 될 수 있습니다.
+> 1. 다른 앱이 동일한 장치의 클레임을 요청 했지만 앱이 **ReleaseDeviceRequested** 이벤트에 대 한 응답으로 **RetainDevice** 을 실행 하지 않았습니다.  자세한 내용은 아래의 [클레임 협상](#claim-negotiation) 을 참조 하세요.
+> 2. 앱이 일시 중단 되었으며,이로 인해 장치 개체가 닫히고 클레임은 더 이상 유효 하지 않습니다. 자세한 내용은 [장치 개체 수명 주기](pos-basics-deviceobject.md#device-object-lifecycle) 를 참조 하세요.
 
 
 ## <a name="claim-negotiation"></a>클레임 협상
 
-Windows는 멀티태스킹 환경이기 때문에 동일한 컴퓨터의 여러 응용 프로그램이 협력하는 방식으로 주변 장치에 액세스해야 합니다.  PointOfService API는 여러 응용 프로그램이 컴퓨터에 연결된 주변 장치를 공유할 수 있도록 협상 모델을 제공합니다.
+Windows는 다중 태스킹 환경 이므로 동일한 컴퓨터의 여러 응용 프로그램이 협조적 방식으로 주변 장치에 액세스 해야 할 수 있습니다.  PointOfService Api는 여러 응용 프로그램이 컴퓨터에 연결 된 주변 장치를 공유할 수 있도록 하는 협상 모델을 제공 합니다.
 
-동일한 컴퓨터의 두 번째 응용 프로그램이 이미 다른 응용 프로그램에서 요청된 PointOfService 주변 장치에 대한 클레임을 요청하면 **ReleaseDeviceRequested** 이벤트 알림이 게시됩니다. 활성 클레임이 있는 응용 프로그램이 장치를 사용하고 있는 경우 현재 클레임을 잃지 않기 위해 **RetainDevice**를 호출하여 이벤트 알림에 응답해야 합니다. 
+동일한 컴퓨터의 두 번째 응용 프로그램이 다른 응용 프로그램에서 이미 요청한 PointOfService 주변 장치에 대 한 클레임을 요청 하는 경우 **ReleaseDeviceRequested** 이벤트 알림이 게시 됩니다. 응용 프로그램이 현재 장치를 사용 하 고 있는 경우 클레임의 손실을 방지 하기 위해 활성 클레임을 사용 하는 응용 프로그램은 **RetainDevice** 를 호출 하 여 이벤트 알림에 응답 해야 합니다. 
 
-활성 클레임이 있는 응용 프로그램이 즉시 **RetainDevice**로 응답하지 않는 경우 해당 응용 프로그램이 일시 중단되었거나 장치가 필요하지 않은 것으로 간주되며 클레임이 취소되고 새 응용 프로그램에 제공됩니다. 
+활성 클레임이 있는 응용 프로그램이 **RetainDevice** 를 사용 하 여 응답 하지 않으면 응용 프로그램이 일시 중단 되었거나 장치가 필요 하지 않은 것으로 간주 되 고 클레임이 해지 되 고 새 응용 프로그램에 제공 됩니다. 
 
 첫 번째 단계는 **RetainDevice**를 사용 하 여 **ReleaseDeviceRequested** 이벤트에 응답 하는 이벤트 처리기를 만드는 것입니다.  
 
@@ -138,9 +138,9 @@ Windows는 멀티태스킹 환경이기 때문에 동일한 컴퓨터의 여러 
 
 
 
-### <a name="apis-used-for-claim-negotiation"></a>클레임 협상에 사용되는 API
+### <a name="apis-used-for-claim-negotiation"></a>클레임 협상에 사용 되는 Api
 
-|클레임한 장치|릴리스 알림| 장치 보유 |
+|요청 받은 장치|릴리스 알림| 장치 보존 |
 |-|:-|:-|
 |ClaimedBarcodeScanner | [ReleaseDeviceRequested](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.releasedevicerequested) | [RetainDevice](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.retaindevice)
 |ClaimedCashDrawer | [ReleaseDeviceRequested](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.releasedevicerequested) | [RetainDevice](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedcashdrawer.retaindevice)

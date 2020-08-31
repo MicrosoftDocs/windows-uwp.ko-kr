@@ -1,17 +1,17 @@
 ---
 title: 탐색 시작
-description: 탐색 시작
+description: UWP (유니버설 Windows 플랫폼) 프레임 클래스를 사용 하 여 여러 뷰가 있는 Windows 10 앱에 페이지 탐색을 추가 하는 방법에 대해 알아봅니다.
 ms.assetid: F4DF5C5F-C886-4483-BBDA-498C4E2C1BAF
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 22d2f73ba6a14ace1319285ca436db4738f84548
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 3d26bf6e63c61207142b8945c48f9925a7459844
+ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493298"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89094690"
 ---
 # <a name="getting-started-navigation"></a>시작: 탐색
 

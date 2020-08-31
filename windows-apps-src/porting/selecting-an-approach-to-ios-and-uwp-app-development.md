@@ -1,19 +1,19 @@
 ---
-description: 플랫폼 간 앱을 개발할 때 선택 하는 항목은 무엇 인가요?
-title: IOS 및 UWP 앱 개발에 대 한 접근 방식 선택
+description: Windows, iOS 및 Android를 지 원하는 앱을 작성 하는 데 도움이 되는 도구와 기술에 대해 알아봅니다.
+title: iOS 및 UWP 앱 개발 방법 선택
 ms.assetid: 5CDAB313-07B7-4A32-A49B-026361DCC853
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 538fbc33d161f5f91033427af76438f49d3d3b68
-ms.sourcegitcommit: 28bd367ab8acc64d4b6f3f73adca12100cbd359f
+ms.openlocfilehash: 83a316a729fc1c2042dde5541e2b187bf8903188
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82148581"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89171187"
 ---
-# <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>IOS 및 UWP 앱 개발에 대 한 접근 방식 선택
+# <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>iOS 및 UWP 앱 개발 방법 선택
 
 
 플랫폼 간 앱을 개발할 때 선택할 수 있는 항목은 무엇 인가요?
@@ -76,7 +76,7 @@ Windows 및 iOS는 매우 다른 beasts 것 처럼 보일 수 있지만, 두 플
 
     스프라이트 처리 및 물리학 모델링을 위한 플랫폼 간 코드 라이브러리입니다.
 
--   [영향 .js](https://impactjs.com/)
+-   [Impact.js](https://impactjs.com/)
 
     HTML 기반 게임 라이브러리.
 

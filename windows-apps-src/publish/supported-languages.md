@@ -6,19 +6,19 @@ ms.date: 03/07/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a3b3ada3415e6f1abc98dc3c351f6db791adc984
-ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
+ms.openlocfilehash: 79d729f97bef68a429c57894e6c0eeeab389c642
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89043435"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170897"
 ---
 # <a name="supported-languages"></a>지원되는 언어
 
 
 100 이상의 언어로 Microsoft Store에 앱을 제출할 수 있습니다.
 
-앱에서 언어를 구성 하는 방법에 대 한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md) 및 [사용자 프로필 언어 및 앱 매니페스트 언어 이해](../design/globalizing/manage-language-and-region.md)를 참조 하세요. 여러 언어를 지 원하는 앱을 작성 하는 데 도움이 되는 [다국어 앱 도구 키트](https://docs.microsoft.com/windows/uwp/design/globalizing/use-mat) 도 있습니다.
+앱에서 언어를 구성 하는 방법에 대 한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md) 및 [사용자 프로필 언어 및 앱 매니페스트 언어 이해](../design/globalizing/manage-language-and-region.md)를 참조 하세요. 여러 언어를 지 원하는 앱을 작성 하는 데 도움이 되는 [다국어 앱 도구 키트](../design/globalizing/use-mat.md) 도 있습니다.
 
 ## <a name="supported-languages"></a>지원되는 언어
 
@@ -138,7 +138,3 @@ Microsoft Store에서 지 원하는 언어입니다. 앱은 이러한 언어를 
  
 
  
-
-
-
-

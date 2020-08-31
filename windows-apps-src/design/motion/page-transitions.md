@@ -1,6 +1,6 @@
 ---
-Description: Windows 앱에서 페이지 전환을 사용 하는 방법에 대해 알아봅니다.
 title: 페이지 전환
+description: UWP (유니버설 Windows 플랫폼) 페이지 전환을 사용 하 여 사용자에 게 앱의 페이지 간 관계에 대 한 피드백을 제공 하는 방법을 알아봅니다.
 template: detail.hbs
 ms.date: 04/08/2018
 ms.topic: article
@@ -8,12 +8,12 @@ keywords: windows 10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6239d8409767cab06d4d2c8c9c3abb9d743ca1c9
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: c77f99e170bdfe6689a9bfd4e8d8075ec2154d28
+ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970518"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89094679"
 ---
 # <a name="page-transitions"></a>페이지 전환
 
@@ -97,7 +97,7 @@ myFrame.Navigate(typeof(Page2), null, new SuppressNavigationTransitionInfo());
 
 ## <a name="backwards-navigation"></a>뒤로 탐색
 
-를 사용 `Frame.GoBack(NavigationTransitionInfo)` 하 여 역방향으로 탐색할 때 특정 전환을 재생할 수 있습니다.
+`Frame.GoBack(NavigationTransitionInfo)`를 사용 하 여 역방향으로 탐색할 때 특정 전환을 재생할 수 있습니다.
 
 이는 화면 크기에 따라 탐색 동작을 동적으로 수정할 경우에 유용 합니다. 예를 들어 반응 형 마스터/세부 시나리오에서입니다.
 

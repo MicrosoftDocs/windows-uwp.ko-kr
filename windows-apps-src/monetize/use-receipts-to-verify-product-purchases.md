@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 앱 내 구매, IAPs, 수신, Windows. ApplicationModel 스토어
 ms.localizationpriority: medium
-ms.openlocfilehash: ba87de0755469f373f9000f3d96d3021c9197985
-ms.sourcegitcommit: 28bd367ab8acc64d4b6f3f73adca12100cbd359f
+ms.openlocfilehash: 0bbdaa8164e5d3a7e660fc4667b7cfe3c090bc10
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82148883"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89171327"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>확인 메일을 사용하여 제품 구매 검증
 
@@ -20,15 +20,15 @@ ms.locfileid: "82148883"
 이 정보에 대 한 액세스 권한이 있으면 앱에서 사용자가 앱을 구매 했는지 확인 하거나 Microsoft Store에서 추가 기능 (앱 내 제품 또는 IAP 라고도 함)을 구입 해야 하는 시나리오를 지원 합니다. 예를 들어 다운로드 한 콘텐츠를 제공 하는 게임을 가정해 보겠습니다. 게임 콘텐츠를 구매한 사용자가 다른 장치에서 재생 하려는 경우에는 사용자가 이미 콘텐츠를 소유 하 고 있는지 확인 해야 합니다. 방법은 다음과 같습니다.
 
 > [!IMPORTANT]
-> 이 문서에서는 Windows 앱에서 제공 하는 구매에 대 한 확인을 가져오고 유효성을 검사 하기 위해 [Windows ApplicationModel. Store](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Store) 네임 스페이스의 멤버를 사용 하는 방법을 보여 줍니다. 앱 내 구매를 위해 Windows 10, 버전 1607에 도입 되 고 Windows 10 기념일 버전을 대상으로 하는 프로젝트에서 사용할 수 있는 [windows. Store](https://docs.microsoft.com/uwp/api/Windows.Services.Store) 네임 스페이스를 사용 하는 경우 **(10.0; 빌드 14393)** 또는 Visual Studio의 이후 버전에서이 네임 스페이스는 앱에서 바로 구매에 대 한 구매 영수증을 얻기 위한 API를 제공 하지 않습니다. 그러나 Microsoft Store collection API에서 REST 메서드를 사용 하 여 구매 트랜잭션에 대 한 데이터를 가져올 수 있습니다. 자세한 내용은 [앱에서 바로 구매에 대 한 수신](in-app-purchases-and-trials.md#receipts)확인을 참조 하세요.
+> 이 문서에서는 Windows 앱에서 제공 하는 구매에 대 한 확인을 가져오고 유효성을 검사 하기 위해 [Windows ApplicationModel. Store](/uwp/api/Windows.ApplicationModel.Store) 네임 스페이스의 멤버를 사용 하는 방법을 보여 줍니다. 앱 내 구매를 위해 Windows 10, 버전 1607에 도입 되 고 Windows 10 기념일 버전을 대상으로 하는 프로젝트에서 사용할 수 있는 [windows. Store](/uwp/api/Windows.Services.Store) 네임 스페이스를 사용 하는 경우 **(10.0; 빌드 14393)** 또는 Visual Studio의 이후 버전에서이 네임 스페이스는 앱에서 바로 구매에 대 한 구매 영수증을 얻기 위한 API를 제공 하지 않습니다. 그러나 Microsoft Store collection API에서 REST 메서드를 사용 하 여 구매 트랜잭션에 대 한 데이터를 가져올 수 있습니다. 자세한 내용은 [앱에서 바로 구매에 대 한 수신](in-app-purchases-and-trials.md#receipts)확인을 참조 하세요.
 
 ## <a name="requesting-a-receipt"></a>수신 요청
 
 
 **Windows** 네임 스페이스는 다음과 같은 여러 가지 방법을 지원 합니다.
 
-* [RequestAppPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) 또는 [Currentapp. RequestProductPurchaseAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) (또는이 메서드의 다른 오버 로드 중 하나)를 사용 하 여 구매할 경우 반환 값에는 수신이 포함 됩니다.
-* [GetAppReceiptAsync](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync) 메서드를 호출 하 여 앱 및 앱의 모든 추가 기능에 대 한 현재 수신 정보를 검색할 수 있습니다.
+* [RequestAppPurchaseAsync](/uwp/api/windows.applicationmodel.store.currentapp.requestapppurchaseasync) 또는 [Currentapp. RequestProductPurchaseAsync](/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) (또는이 메서드의 다른 오버 로드 중 하나)를 사용 하 여 구매할 경우 반환 값에는 수신이 포함 됩니다.
+* [GetAppReceiptAsync](/uwp/api/windows.applicationmodel.store.currentapp.getappreceiptasync) 메서드를 호출 하 여 앱 및 앱의 모든 추가 기능에 대 한 현재 수신 정보를 검색할 수 있습니다.
 
 앱 수신은 다음과 같이 표시 됩니다.
 
@@ -112,9 +112,9 @@ ms.locfileid: "82148883"
 
 **수신** 에는 다음과 같은 특성이 있습니다.
 
-|  attribute  |  Description   |
+|  특성  |  Description   |
 |-------------|-------------------|
-|  **Version**  |    수신 확인의 버전 번호입니다.            |
+|  **버전**  |    수신 확인의 버전 번호입니다.            |
 |  **CertificateId**  |     수신에 서명 하는 데 사용 되는 인증서 지문입니다.          |
 |  **ReceiptDate**  |    영수증이 서명 되 고 다운로드 된 날짜입니다.           |  
 |  **ReceiptDeviceId**  |   이 확인을 요청 하는 데 사용 되는 장치를 식별 합니다.         |  |
@@ -127,9 +127,9 @@ ms.locfileid: "82148883"
 
 **Appreceipt** 에는 다음과 같은 특성이 있습니다.
 
-|  attribute  |  Description   |
+|  특성  |  설명   |
 |-------------|-------------------|
-|  **Id**  |    구매를 식별 합니다.           |
+|  **ID**  |    구매를 식별 합니다.           |
 |  **AppId**  |     OS에서 앱에 사용 하는 패키지 패밀리 이름 값입니다.           |
 |  **LicenseType**  |    사용자가 앱의 전체 버전을 구매한 경우 **전체**입니다. **평가판**-사용자가 앱의 평가판을 다운로드 한 경우           |  
 |  **PurchaseDate**  |    앱을 구입한 날짜입니다.          |  |
@@ -142,9 +142,9 @@ ms.locfileid: "82148883"
 
 **제품 확인** 에는 다음과 같은 특성이 있습니다.
 
-|  attribute  |  Description   |
+|  특성  |  설명   |
 |-------------|-------------------|
-|  **Id**  |    구매를 식별 합니다.           |
+|  **ID**  |    구매를 식별 합니다.           |
 |  **AppId**  |     사용자가 구매한 앱을 식별 합니다.           |
 |  **ProductId**  |     구매한 제품을 식별 합니다.           |
 |  **ProductType**  |    제품 유형을 결정 합니다. 현재는 **영 속**값만 지원 합니다.          |  

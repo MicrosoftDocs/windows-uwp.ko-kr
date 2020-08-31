@@ -1,39 +1,39 @@
 ---
 title: 마우스 모드를 사용하지 않도록 설정하는 방법
-description: 기본 마우스 모드를 사용하지 않도록 설정하는 지침입니다.
+description: 'HTML 및 UWP (XAML/c # 유니버설 Windows 플랫폼) 응용 프로그램에서 기본 마우스 모드를 해제 하는 방법에 대해 알아봅니다.'
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e57ee4e6-7807-4943-a933-c2b4dc80fc01
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e4b8868f416494daf978d65d4a4ccde02d6ccf5
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 16b2df2d84c0064c2549c75d867123d90e663314
+ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57656628"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89094600"
 ---
 # <a name="how-to-disable-mouse-mode"></a>마우스 모드를 사용하지 않도록 설정하는 방법
-모든 응용 프로그램은 기본적으로 마우스 모드를 사용합니다. 즉, 옵트아웃(opt out)하지 않은 모든 응용 프로그램은 콘솔의 Microsoft Edge 브라우저에 있는 것과 유사한 마우스 포인터를 받게 됩니다. 마우스 모드를 끄고 방향 컨트롤러 탐색에 최적화하는 것이 좋습니다.   
+기본적으로 모든 응용 프로그램에 마우스 모드가 설정 되어 있습니다. 즉, 옵트아웃 되지 않은 모든 응용 프로그램은 마우스 포인터를 받습니다 (콘솔의 가장자리 브라우저에 있는 것과 유사). 이 기능을 해제 하 고 방향 컨트롤러 탐색을 최적화 하는 것이 좋습니다.   
    
 ## <a name="html"></a>HTML   
-JavaScript UWP(유니버설 Windows 플랫폼) 앱에서 방향 컨트롤러 탐색을 켜려면 [TVHelpers 방향 탐색](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation) JavaScript 라이브러리를 사용합니다. 앱 패키지에 방향 탐색 JavaScript 파일을 포함하고 방향 컨트롤러 탐색이 필요한 모든 HTML 페이지에서 다음과 같이 참조를 추가합니다.
+UWP (JavaScript 유니버설 Windows 플랫폼) 앱에서 방향 컨트롤러 탐색을 켜려면 [Tvhelpers 방향 탐색](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation) JavaScript 라이브러리를 사용 합니다. 앱 패키지에 방향성 탐색 JavaScript 파일을 포함 하 고, 방향 컨트롤러 탐색이 필요한 모든 HTML 페이지에 해당 파일에 대 한 참조를 추가 합니다.
 
 ```code
 <script src="directionalnavigation-1.0.0.0.js"></script>
 ```
-자세한 내용은 [방향 탐색 wiki](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation)를 참조하세요.
+자세한 내용은 [방향 탐색 wiki](https://github.com/Microsoft/TVHelpers/wiki/Using-DirectionalNavigation)를 참조 하세요.
 
-마우스 모드를 끄는 대신 DOM 또는 WinRT 게임 패드 API를 직접 사용하려는 경우 게임 패드가 필요한 모든 페이지에서 다음을 실행합니다. 
+대신 마우스 모드를 끄고 DOM 또는 WinRT 게임 패드 Api를 직접 사용 하려는 경우 필요한 모든 페이지에 대해 다음을 실행 합니다. 
    
 ```code
 navigator.gamepadInputEmulation = "gamepad";
 ```   
 
-   이 속성은 기본적으로 마우스 모드를 사용할 수 있는 `mouse`로 설정됩니다. 이 속성을 `keyboard`로 설정하면 마우스 모드가 꺼지고 대신에, 게임 패드 입력이 DOM 키보드 이벤트를 생성합니다. 이 속성을 `gamepad`로 설정하면 마우스 모드가 꺼지고 DOM 키보드 이벤트가 생성되지 않으며, 사용자가 DOM 또는 WinRT 게임 패드 API를 사용할 수 있게 됩니다.
+   이 속성은 기본적으로로 설정 `mouse` 되며, 마우스 모드를 사용 합니다. 이를 설정 하면 `keyboard` 마우스 모드가 꺼집니다. 대신 게임 패드 입력은 DOM 키보드 이벤트를 생성 합니다. 이를 설정 하면 `gamepad` 마우스 모드가 꺼지고 dom 키보드 이벤트가 생성 되지 않으며 dom 또는 WinRT 게임 패드 api만 사용할 수 있습니다.
 
 ## <a name="xaml"></a>XAML    
-마우스 모드를 끄려면 앱의 생성자에 다음을 추가합니다.   
+마우스 모드를 해제 하려면 앱에 대 한 생성자에 다음을 추가 합니다.   
    
 ```code
 public App() {
@@ -43,10 +43,10 @@ public App() {
 }
 ```
 
-## <a name="cdirectx"></a>C++/DirectX   
-C++/DirectX 앱을 작성할 경우에는 수행할 작업이 없습니다. 마우스 모드는 HTML 및 XAML 응용 프로그램에만 적용됩니다.
+## <a name="cdirectx"></a>C + +/DirectX   
+C + +/Va 앱을 작성 하는 경우에는 아무 작업도 수행 하지 않습니다. 마우스 모드는 HTML 및 XAML 응용 프로그램에만 적용 됩니다.
 
 ## <a name="see-also"></a>참고 항목
-- [Xbox 용 모범 사례](tailoring-for-xbox.md)
-- [Xbox One에서 UWP](index.md)
+- [Xbox에 대 한 모범 사례](tailoring-for-xbox.md)
+- [Xbox One의 UWP](index.md)
 

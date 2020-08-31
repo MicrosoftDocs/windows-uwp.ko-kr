@@ -6,17 +6,17 @@ ms.date: 03/25/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 11d992baf42f320856134f0e8fba845c5ad61393
-ms.sourcegitcommit: 96b7be654a0922eeb421b5fa51ebfc586abe74fe
+ms.openlocfilehash: a1683cdad189b9e369700e25b47a6f0bf0796702
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84945931"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89171027"
 ---
 # <a name="in-app-ads"></a>앱 내 광고
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세히 알아보기](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 정보](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 **Monetize** &gt; [파트너 센터](https://partner.microsoft.com/dashboard) 의 수익 창출 ad **앱 광고** 페이지를 사용 하 여 다음에 대 한 ad 단위를 만들고 관리할 수 있습니다.
 
@@ -61,8 +61,8 @@ ms.locfileid: "84945931"
 
 계정에서 하나 이상의 앱에 대 한 ad 단위를 만든 후 이러한 ad 단위는 **수익 창출** &gt; **앱 내 광고** 페이지의 아래쪽에 있는 테이블에 표시 됩니다. 이 테이블에는 각 ad 단위의 **응용 프로그램 id** 및 **ad 단위 id** 와 기타 정보가 표시 됩니다. 앱에 광고를 표시 하려면 코드에서 이러한 값을 사용 해야 합니다. 자세한 내용은 [앱에서 ad 단위 설정](../monetize/set-up-ad-units-in-your-app.md)을 참조 하세요.
 
-* 앱이 [배너 광고](../monetize/banner-ads.md)를 표시 하는 경우 이러한 값을 [adcontrol](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 개체의 [ApplicationId](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) 및 [ad담당자 id](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol.adunitid) 속성에 할당 합니다.
-* 앱이 [중간 광고](../monetize/interstitial-ads.md)를 표시 하는 경우 이러한 값을 [Interstitialad](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad) 개체의 [requestad](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드에 전달 합니다.
+* 앱이 [배너 광고](../monetize/banner-ads.md)를 표시 하는 경우 이러한 값을 [adcontrol](/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 개체의 [ApplicationId](/uwp/api/microsoft.advertising.winrt.ui.adcontrol.applicationid) 및 [ad담당자 id](/uwp/api/microsoft.advertising.winrt.ui.adcontrol.adunitid) 속성에 할당 합니다.
+* 앱이 [중간 광고](../monetize/interstitial-ads.md)를 표시 하는 경우 이러한 값을 [Interstitialad](/uwp/api/microsoft.advertising.winrt.ui.interstitialad) 개체의 [requestad](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드에 전달 합니다.
 * 앱이 [네이티브 광고](../monetize/native-ads.md)를 표시 하는 경우 이러한 값을 **NativeAdsManagerV2** 생성자에 전달 합니다.
   > [!IMPORTANT]
   > 하나의 앱 에서만 각 ad 단위를 사용할 수 있습니다. 둘 이상의 앱에서 ad 단위를 사용 하는 경우 해당 ad 단위에 대 한 광고가 제공 되지 않습니다.

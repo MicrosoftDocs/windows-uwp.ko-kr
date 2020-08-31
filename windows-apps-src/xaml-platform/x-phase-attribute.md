@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bf1372289afcc8649fff6c2ed56ad85aad46b76c
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: 70c867441aff2532627f6e2bb1bfbdc50a1510dc
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997990"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169027"
 ---
 # <a name="xphase-attribute"></a>x:Phase 특성
 
 
-[{X:bind} 태그 확장과](x-bind-markup-extension.md) 함께 **x:phase** 를 사용 하 여 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 및 [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) 항목을 증분 방식으로 렌더링 하 고 패닝 환경을 향상 시킵니다. **X:phase** 는 [**ContainerContentChanging**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging) 이벤트를 사용 하 여 목록 항목의 렌더링을 수동으로 제어 하는 것과 동일한 결과를 얻는 선언적 방법을 제공 합니다. 또한 [ListView 및 GridView 항목을 증분 업데이트를](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally)참조 하세요.
+[{X:bind} 태그 확장과](x-bind-markup-extension.md) 함께 **x:phase** 를 사용 하 여 [**ListView**](/uwp/api/Windows.UI.Xaml.Controls.ListView) 및 [**GridView**](/uwp/api/Windows.UI.Xaml.Controls.GridView) 항목을 증분 방식으로 렌더링 하 고 패닝 환경을 향상 시킵니다. **X:phase** 는 [**ContainerContentChanging**](/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging) 이벤트를 사용 하 여 목록 항목의 렌더링을 수동으로 제어 하는 것과 동일한 결과를 얻는 선언적 방법을 제공 합니다. 또한 [ListView 및 GridView 항목을 증분 업데이트를](../debug-test-perf/optimize-gridview-and-listview.md#update-items-incrementally)참조 하세요.
 
 ## <a name="xaml-attribute-usage"></a>XAML 특성 사용
 
@@ -28,7 +28,7 @@ ms.locfileid: "86997990"
 ## <a name="xaml-values"></a>XAML 값
 
 
-| 용어 | 설명 |
+| 용어 | Description |
 |------|-------------|
 | PhaseValue | 요소가 처리 되는 단계를 나타내는 숫자입니다. 기본값은 0입니다. | 
 
@@ -69,15 +69,14 @@ ms.locfileid: "86997990"
 3.  PrettyFileSize 및 prettyImageSize 텍스트 블록을 표시 합니다.
 4.  이미지를 표시 합니다.
 
-단계적으로 중단는 [**ListViewBase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase) 에서 파생 된 컨트롤을 사용 하 고 데이터 바인딩을 위해 항목 템플릿을 증분 처리 하는 [{x:bind}](x-bind-markup-extension.md) 의 기능입니다. 목록 항목을 렌더링 하는 경우 **ListViewBase** 는 다음 단계로 이동 하기 전에 뷰의 모든 항목에 대해 단일 단계를 렌더링 합니다. 렌더링 작업은 목록이 스크롤 될 때 필요한 작업을 다시 평가할 수 있고 더 이상 표시 되지 않는 항목에 대해 수행 되지 않도록 시간 분할 된 일괄 처리에서 수행 됩니다.
+단계적으로 중단는 [**ListViewBase**](/uwp/api/Windows.UI.Xaml.Controls.ListViewBase) 에서 파생 된 컨트롤을 사용 하 고 데이터 바인딩을 위해 항목 템플릿을 증분 처리 하는 [{x:bind}](x-bind-markup-extension.md) 의 기능입니다. 목록 항목을 렌더링 하는 경우 **ListViewBase** 는 다음 단계로 이동 하기 전에 뷰의 모든 항목에 대해 단일 단계를 렌더링 합니다. 렌더링 작업은 목록이 스크롤 될 때 필요한 작업을 다시 평가할 수 있고 더 이상 표시 되지 않는 항목에 대해 수행 되지 않도록 시간 분할 된 일괄 처리에서 수행 됩니다.
 
-**X:phase** 특성은 [{x:bind}](x-bind-markup-extension.md)를 사용 하는 데이터 템플릿의 모든 요소에 지정할 수 있습니다. 요소에 0이 아닌 단계가 있는 경우 해당 단계를 처리 하 고 바인딩을 업데이트할 때까지 요소가 **표시**되지 않고 **불투명도**를 통해 숨겨집니다. [**ListViewBase**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewBase)파생 컨트롤을 스크롤하면 화면에 더 이상 표시 되지 않는 항목에서 항목 템플릿을 재활용 하 여 새로 표시 되는 항목을 렌더링 합니다. 템플릿 내의 UI 요소는 데이터 바인딩될 때까지 이전 값을 유지 합니다. 단계적으로 중단를 설정 하면 데이터 바인딩 단계가 지연 되므로 단계적으로 중단가 유효 하지 않은 경우 UI 요소를 숨겨야 합니다.
+**X:phase** 특성은 [{x:bind}](x-bind-markup-extension.md)를 사용 하는 데이터 템플릿의 모든 요소에 지정할 수 있습니다. 요소에 0이 아닌 단계가 있는 경우 해당 단계를 처리 하 고 바인딩을 업데이트할 때까지 요소가 **표시**되지 않고 **불투명도**를 통해 숨겨집니다. [**ListViewBase**](/uwp/api/Windows.UI.Xaml.Controls.ListViewBase)파생 컨트롤을 스크롤하면 화면에 더 이상 표시 되지 않는 항목에서 항목 템플릿을 재활용 하 여 새로 표시 되는 항목을 렌더링 합니다. 템플릿 내의 UI 요소는 데이터 바인딩될 때까지 이전 값을 유지 합니다. 단계적으로 중단를 설정 하면 데이터 바인딩 단계가 지연 되므로 단계적으로 중단가 유효 하지 않은 경우 UI 요소를 숨겨야 합니다.
 
 각 UI 요소에는 지정 된 단계가 하나만 있을 수 있습니다. 이 경우 요소의 모든 바인딩에 적용 됩니다. 단계가 지정 되지 않은 경우 0 단계를 가정 합니다.
 
-단계 번호는 연속적이 지 않아도 되며 [**ContainerContentChangingEventArgs**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.containercontentchangingeventargs.phase)의 값과 동일 합니다. [**ContainerContentChanging**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging) 이벤트는 **x:phase** 바인딩이 처리 되기 전에 각 단계에 대해 발생 합니다.
+단계 번호는 연속적이 지 않아도 되며 [**ContainerContentChangingEventArgs**](/uwp/api/windows.ui.xaml.controls.containercontentchangingeventargs.phase)의 값과 동일 합니다. [**ContainerContentChanging**](/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging) 이벤트는 **x:phase** 바인딩이 처리 되기 전에 각 단계에 대해 발생 합니다.
 
 단계적으로 중단은 { [Binding}](binding-markup-extension.md) 바인딩이 아니라 [{x:bind}](x-bind-markup-extension.md) 바인딩에만 영향을 줍니다.
 
-단계적으로 중단는 단계적으로 중단을 인식 하는 컨트롤을 사용 하 여 항목 템플릿이 렌더링 되는 경우에만 적용 됩니다. Windows 10의 경우 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 및 [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)를 의미 합니다. 단계적으로 중단는 다른 항목 컨트롤에 사용 되는 데이터 템플릿이나 [**system.windows.controls.contentcontrol.contenttemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.contenttemplate) 또는 [**Hub**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Hub) 섹션과 같은 다른 시나리오에는 적용 되지 않습니다. 이러한 경우 모든 UI 요소는 한 번에 데이터 바인딩됩니다.
-
+단계적으로 중단는 단계적으로 중단을 인식 하는 컨트롤을 사용 하 여 항목 템플릿이 렌더링 되는 경우에만 적용 됩니다. Windows 10의 경우 [**ListView**](/uwp/api/Windows.UI.Xaml.Controls.ListView) 및 [**GridView**](/uwp/api/Windows.UI.Xaml.Controls.GridView)를 의미 합니다. 단계적으로 중단는 다른 항목 컨트롤에 사용 되는 데이터 템플릿이나 [**system.windows.controls.contentcontrol.contenttemplate**](/uwp/api/windows.ui.xaml.controls.contentcontrol.contenttemplate) 또는 [**Hub**](/uwp/api/Windows.UI.Xaml.Controls.Hub) 섹션과 같은 다른 시나리오에는 적용 되지 않습니다. 이러한 경우 모든 UI 요소는 한 번에 데이터 바인딩됩니다.

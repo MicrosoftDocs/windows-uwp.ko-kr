@@ -1,6 +1,6 @@
 ---
-Description: 당겨서 새고 고침 컨트롤을 사용하여 목록에 새 콘텐츠를 가져올 수 있습니다.
 title: 당겨서 새로 고침
+description: 사용자가 더 많은 데이터를 검색하기 위해 터치를 사용하여 데이터 목록을 아래로 당길 수 있는, 당겨서 새로 고침 컨트롤을 구현하는 방법을 알아봅니다.
 label: Pull-to-refresh
 template: detail.hbs
 ms.date: 03/07/2018
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: faff0857679d50f6995640bbf9bf0222bb0d2e37
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 1164113b4e4c6b64c6ee1e3d98e0bdc4c8b635ea
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081607"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942853"
 ---
 # <a name="pull-to-refresh"></a>당겨서 새로 고침
 

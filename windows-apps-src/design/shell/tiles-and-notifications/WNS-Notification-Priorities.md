@@ -5,12 +5,12 @@ ms.date: 01/10/2017
 ms.topic: article
 keywords: windows 10, uwp, WinRT API, WNS
 localizationpriority: medium
-ms.openlocfilehash: 3310b34b2748bd684e46e04775c973680f8e03a9
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 3b6642054f9c63a03764267e5886b67fd4a9ac7d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282245"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169217"
 ---
 # <a name="wns-notification-priorities"></a>WNS 알림 우선 순위
 간단한 헤더를 사용 하 여 알림의 우선 순위를 WNS POST 메시지로 설정 하 여 배터리 인식 상황에서 알림이 배달 되는 방식을 제어할 수 있습니다.
@@ -25,15 +25,15 @@ WNS 우선 순위는 중요 하지 않은 작업을 배터리로 이동 하는 �
 
 Windows에서는 사용자 또는 앱에 중요 한 알림을 알지 못합니다. 따라서 시스템은 전적으로 앱을 사용 하 여 알림을 위한 올바른 우선 순위를 설정 합니다. 
 
-## <a name="priorities"></a>우선순위
+## <a name="priorities"></a>우선 순위
 푸시 알림을 보낼 때 앱에서 사용할 수 있는 4 가지 우선 순위가 있습니다. 우선 순위는 개별 알림에 설정 되므로 즉시 배달 해야 하는 알림 (예: IM 메시지) 및 대기할 수 있는 알림 (예: 연락처 사진 업데이트)을 선택할 수 있습니다.
 
 우선 순위는 다음과 같습니다. 
 
-|    우선 순위    |    사용자 재정의    |    설명    |    예제    |
+|    우선 순위    |    사용자 재정의    |    Description    |    예제    |
 |----------------|---------------------|-------------------|---------------|
 |    높음    |    예 – 사용자가 앱의 모든 알림을 차단 하거나 앱이 배터리 절약 모드로 제한 되지 않도록 할 수 있습니다.    |    장치에서 알림을 받을 수 있는 경우 즉시 전달 해야 하는 가장 중요 한 알림입니다. VoIP 통화 또는 장치의 절전 모드를 해제 해야 하는 중요 한 경고와 같은 항목은이 범주에 속합니다.    |    VoIP 통화, 시간이 중요 한 경고    |
-|    보통    |    예 – 사용자가 앱의 모든 알림을 차단 하거나 앱이 배터리 절약 모드로 제한 되지 않도록 할 수 있습니다.    |    이러한 항목은 중요 한 것은 아니지만 바로 수행할 필요는 없지만 사용자가 백그라운드에서 실행 되지 않는 경우에는 표정이 됩니다.    |    보조 메일 계정 동기화, 라이브 타일 업데이트    |
+|    중간    |    예 – 사용자가 앱의 모든 알림을 차단 하거나 앱이 배터리 절약 모드로 제한 되지 않도록 할 수 있습니다.    |    이러한 항목은 중요 한 것은 아니지만 바로 수행할 필요는 없지만 사용자가 백그라운드에서 실행 되지 않는 경우에는 표정이 됩니다.    |    보조 메일 계정 동기화, 라이브 타일 업데이트    |
 |    낮음    |    예 – 사용자가 앱의 모든 알림을 차단 하거나 앱이 배터리 절약 모드로 제한 되지 않도록 할 수 있습니다.    |    사용자가 장치를 사용 하거나 백그라운드 작업을 수행 하는 경우에만 의미가 있는 알림입니다. 이러한 캐시는 사용자가 장치에 로그인 하거나 장치에 연결 될 때까지 처리 되지 않습니다.    |    연락처 상태 (온라인/오프 라인)    |
 |    매우 낮음     |    아니요 – 낮은 우선 순위의 알림이 배터리 절약 모드에서 제한 되지 않도록 방지할 수 없습니다.    |    이는 배터리 절약 정책을 재정의할 수 없다는 점을 제외 하 고는 낮은 우선 순위와 거의 동일 합니다. 이러한 알림은 배터리 보호기에서 배달 되지 않습니다.    |    동기화 서비스에 대 한 파일 동기화    |
 
@@ -41,13 +41,13 @@ Windows에서는 사용자 또는 앱에 중요 한 알림을 알지 못합니�
 
 ## <a name="setting-the-priority"></a>우선 순위 설정
 
-알림 요청에 우선 순위를 설정 하는 작업은 POST 요청에서 추가 헤더를 통해 수행 되며, `X-WNS-PRIORITY`입니다. 우선 순위에 매핑되는 1에서 4 사이의 정수 값입니다. 
+알림 요청에 우선 순위를 설정 하는 작업은 POST 요청에서 추가 헤더를 통해 수행 됩니다 `X-WNS-PRIORITY` . 우선 순위에 매핑되는 1에서 4 사이의 정수 값입니다. 
 
 | 우선 순위 이름 | X WNS-우선 순위 값 | 기본값: |
 |---------------|----------------------|------------------|
-| 높음 | 1 | 알림 |
+| 높음 | 1 | 알림을 |
 | 중간 | 2 | 타일 및 배지 |
-| 낮음 | 3 | 원시 |
+| 낮음 | 3 | Raw |
 | 매우 낮음 | 4 |  |
 
 이전 버전과 호환 되려면 우선 순위를 설정 하지 않아도 됩니다. 앱이 알림의 우선 순위를 설정 하지 않은 경우 시스템에서 기본 우선 순위를 제공 합니다. 기본값은 위의 차트에 표시 되며 기존 버전의 Windows 동작과 일치 합니다. 
@@ -58,17 +58,17 @@ Windows에서는 사용자 또는 앱에 중요 한 알림을 알지 못합니�
 
 각 우선 순위에 대 한 보다 구체적인 권장 동작이 아래에 나열 되어 있습니다. 이는 각 장치가 차트에 따라 정확 하 게 작동 하는 것을 보장 하지는 않습니다. Oem은 동작을 다르게 구성할 수 있지만 대부분은이 차트에 가깝습니다. 
 
-| 장치 상태    | PRIORITY 높음    |    PRIORITY 보통        | PRIORITY 낮음    |    PRIORITY 매우 낮음    |
+| 디바이스 상태    | 우선 순위: 높음    |    우선 순위: 중형        | 우선 순위: 낮음    |    우선 순위: 매우 낮음    |
 |-------------------------------------------------------|----------------------------------------------------|----------------------------------------------------|----------------------------------------------------|--------------------------|
-|    화면 켜기 또는 연결 됨    |    조각을    |    조각을    |    조각을    |    조각을    |
-|    화면 끄기 및 배터리 켜기    |    조각을    |    사용자가 제외 된 경우: 다른 사용자: 일괄 처리     |    사용자가 제외 된 경우: 다른 사용자: cache *를 제공 합니다.    |    캐시    |
+|    화면 켜기 또는 연결 됨    |    제공    |    제공    |    제공    |    제공    |
+|    화면 끄기 및 배터리 켜기    |    제공    |    사용자가 제외 된 경우: 다른 사용자: 일괄 처리     |    사용자가 제외 된 경우: 다른 사용자: cache *를 제공 합니다.    |    캐시    |
 |    배터리 절약 사용    |    사용자가 제외 된 경우: Else: cache를 제공 합니다.    |    사용자가 제외 된 경우: Else: cache를 제공 합니다.    |    사용자가 제외 된 경우: Else: cache를 제공 합니다.    |    캐시     |
 |    배터리 사용 + 배터리 절약 사용 + 화면 끄기    |    사용자가 제외 된 경우: Else: cache를 제공 합니다.    |    사용자가 제외 된 경우: Else: cache를 제공 합니다.    |    사용자가 제외 된 경우: Else: cache를 제공 합니다.    |    캐시    |
 
 낮은 우선 순위 알림은 기본적으로 화면 끄기와 Windows Phone 기반 장치에 대해서만 배터리에 대해 제공 됩니다. 이는 기존 MPNS 정책과 maintian 호환성을 위한 것입니다. 또한 네 번째와 다섯 번째 행은 동일 하지만 다른 시나리오를 호출 하는 것입니다.
 
-배터리 보호기에서 앱을 제외 하려면 사용자가 설정에서 "앱의 배터리 사용"으로 이동 하 고 "앱에서 백그라운드 작업을 실행 하도록 허용"을 선택 해야 합니다. 이 사용자 선택은 응용 프로그램을 높음, 중간 및 낮은 우선 순위의 알림에 대 한 배터리 보호기에서 제외 합니다. [BACKGROUNDEXECUTIONMANAGER API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccesskindasync#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessKindAsync_Windows_ApplicationModel_Background_BackgroundAccessRequestKind_System_String_) 를 호출 하 여 사용자의 권한을 프로그래밍 방식으로 요청할 수도 있습니다.  
+배터리 보호기에서 앱을 제외 하려면 사용자가 설정에서 "앱의 배터리 사용"으로 이동 하 고 "앱에서 백그라운드 작업을 실행 하도록 허용"을 선택 해야 합니다. 이 사용자 선택은 응용 프로그램을 높음, 중간 및 낮은 우선 순위의 알림에 대 한 배터리 보호기에서 제외 합니다. [BACKGROUNDEXECUTIONMANAGER API](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccesskindasync#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessKindAsync_Windows_ApplicationModel_Background_BackgroundAccessRequestKind_System_String_) 를 호출 하 여 사용자의 권한을 프로그래밍 방식으로 요청할 수도 있습니다.  
 
 ## <a name="related-topics"></a>관련 항목
 - [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
-- [백그라운드에서 실행할 수 있는 권한 요청](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccesskindasync#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessKindAsync_Windows_ApplicationModel_Background_BackgroundAccessRequestKind_System_String_)
+- [백그라운드에서 실행할 수 있는 권한 요청](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccesskindasync#Windows_ApplicationModel_Background_BackgroundExecutionManager_RequestAccessKindAsync_Windows_ApplicationModel_Background_BackgroundAccessRequestKind_System_String_)

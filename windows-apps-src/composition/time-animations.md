@@ -1,92 +1,92 @@
 ---
 title: 시간 애니메이션
-description: KeyFrame Animation 클래스를 사용하여 시간이 지남에 따라 UI를 변경합니다.
+description: Key프레임 애니메이션 클래스를 사용 하 여 UI 변경을 통해 사용자를 안내 하는 시간 기반 애니메이션을 만드는 방법을 알아봅니다.
 ms.date: 12/12/2018
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 838a8c3a6dfe89de49fddefd28c53cea563408cf
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: c63f59e7bcf282dc829d0fb8fa5971113f7638ad
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57593168"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053593"
 ---
 # <a name="time-based-animations"></a>시간 기반 애니메이션
 
-구성 요소가 도입되거나 전체 사용자 경험이 변경되면 최종 사용자는 시간을 두고 적응하거나 즉시 이를 받아들입니다. Windows 플랫폼에서 이전 보다 선호 됩니다 후자-즉시 자주 변경 하는 사용자 환경을 혼동 및 내용에 따라 할 수 없기 때문에 최종 사용자를 놀라게 됩니다. 그러면 최종 사용자들은 사용 환경이 불안하고 부자연스럽다고 인식합니다.
+또는 전체 사용자 환경에서 구성 요소가 변경 되 면 최종 사용자가 시간이 지남에 따라 또는 즉각적으로 두 가지 방법으로이를 관찰 하는 경우가 많습니다. Windows 플랫폼에서 이전은 발생 한 작업을 수행할 수 없기 때문에 종종 혼동을 주는 최종 사용자 환경을 즉시 변경 하는 후자 사용자 환경 보다 우선적으로 적용 됩니다. 그러면 최종 사용자가 jarring 및 비 자연으로 환경을 인식 합니다.
 
-대신, 시간을 두고 UI를 변경하여 최종 사용자에게 안내를 제공하거나 경험 변경 내용을 알릴 수 있습니다. Windows 플랫폼에서는 KeyFrameAnimations라고도 하는 시간 기반 애니메이션을 사용하여 이 작업을 수행합니다. KeyFrameAnimations를 사용하면 시간을 두고 UI를 변경하고, 시작 방법 및 시작 시간, 종료 상태에 도달하는 방법을 비롯하여 애니메이션의 각 요소를 제어할 수 있습니다. 예를 들어 300밀리초 동안 새로운 위치에 애니메이션으로 개체를 표현하면 즉시 "이동"되도록 하는 것보다 즐거운 경험이 됩니다. 즉시 변경하는 대신 애니메이션을 사용하면 결과적으로 더 즐겁고 매력적인 경험을 창출할 수 있습니다.
+대신 시간에 따라 UI를 변경 하 여 최종 사용자에 게 안내 하거나 경험에 대 한 변경 내용을 알릴 수 있습니다. Windows 플랫폼에서이 작업은 Key프레임 애니메이션이 라고도 하는 시간 기반 애니메이션을 사용 하 여 수행 됩니다. Key프레임 애니메이션을 사용 하면 시간에 따른 UI를 변경 하 고, 시작 방법 및 시기 및 애니메이션의 종료 상태에 대 한 제어를 포함 하 여 애니메이션의 각 측면을 제어할 수 있습니다. 예를 들어 개체를 새 위치에서 300 밀리초 보다 더 빠르게 적용 하는 것이 해당 위치에서 "teleporting" 하는 것 보다 더 좋습니다. 애니메이션을 즉시 변경 하는 대신 사용 하는 경우에는 더 편리 하 고 매력적인 환경을 제공 합니다.
 
-## <a name="types-of-time-based-animations"></a>시간 기반 애니메이션 유형
+## <a name="types-of-time-based-animations"></a>시간 기반 애니메이션의 형식
 
-Windows에서 멋진 사용자 환경을 구축하는 데 사용할 수 있는 시간 기반 애니메이션에는 두 가지 범주가 있습니다.
+Windows에서 멋진 사용자 환경을 빌드하는 데 사용할 수 있는 시간 기반 애니메이션에는 두 가지 범주가 있습니다.
 
-**명시적 애니메이션** – 이름에서 알 수 있듯이 명시적으로 애니메이션을 시작하여 업데이트합니다.
-**암시적 애니메이션** – 이 애니메이션은 조건이 충족될 때 사용자를 대신하여 시스템에 의해 시작됩니다.
+**명시적 애니메이션** – 이름이 나타내는 것 처럼 애니메이션을 명시적으로 시작 하 여 업데이트를 수행 합니다.
+**암시적 애니메이션** – 조건이 충족 될 때 사용자를 대신 하 여 시스템에서이 애니메이션을 시작 합니다.
 
-이 문서에서는 KeyFrameAnimations를 사용하여 _명시적_ 시간 기반 애니메이션을 만들고 활용하는 방법에 대해 설명합니다.
+이 문서에서는 Key프레임 애니메이션을 사용 하 여 _명시적_ 시간 기반 애니메이션을 만들고 사용 하는 방법을 설명 합니다.
 
-명시적이든 암시적이든, 시간 기반 애니메이션은 애니메이션을 적용할 수 있는 CompositionObjects의 속성에 따라 다양한 유형으로 분류할 수 있습니다.
+명시적 및 암시적 시간 기반 애니메이션 모두에는 애니메이션 효과를 적용할 수 있는 CompositionObjects의 다양 한 속성 유형에 해당 하는 다양 한 형식이 있습니다.
 
-- ColorKeyFrameAnimation
+- Colorkey프레임 애니메이션
 - QuaternionKeyFrameAnimation
 - ScalarKeyFrameAnimation
 - Vector2KeyFrameAnimation
 - Vector3KeyFrameAnimation
 - Vector4KeyFrameAnimation
 
-## <a name="create-time-based-animations-with-keyframeanimations"></a>KeyFrameAnimations로 시간 기반 애니메이션 만들기
+## <a name="create-time-based-animations-with-keyframeanimations"></a>Key프레임 애니메이션을 사용 하 여 시간 기반 애니메이션 만들기
 
-KeyFrameAnimations로 명시적인 시간 기반 애니메이션을 만드는 방법을 설명하기 전에 몇 가지 개념을 살펴보겠습니다.
+Key프레임 애니메이션을 사용 하 여 명시적 시간 기반 애니메이션을 만드는 방법을 설명 하기 전에 몇 가지 개념을 살펴보겠습니다.
 
-- KeyFrames - 애니메이션 효과를 내는 데 사용되는 개별 "스냅샷"입니다.
-  - 키-값 쌍으로 정의됩니다. 키는 애니메이션 수명에서 이 "스냅샷"이 발생하는 위치인 0과 1 사이에서 얼마나 진행되었는지 나타냅니다. 다른 매개 변수는 이 시점의 속성 값을 나타냅니다.
-- KeyFrameAnimation 속성 - UI 요구 사항을 충족시키기 위해 적용할 수 있는 사용자 지정 옵션입니다.
-  - DelayTime – StartAnimation이 호출된 후 애니메이션을 시작하기 전의 시간입니다.
-  - Duration – 애니메이션의 지속 시간.
-  - IterationBehavior – 애니메이션의 수 또는 무한 반복 동작.
-  - IterationCount - 키 프레임 애니메이션이 반복되는 유한 횟수.
-  - KeyFrame Count - 특정 키 프레임 애니메이션에서 읽은 키 프레임 수.
-  - StopBehavior – StopAnimation이 호출될 때 애니메이션 효과를 주려는 속성 값의 동작 지정.
-  - Direction – 재생에 대한 애니메이션 방향을 지정합니다.
-- Animation Group - 동시에 여러 애니메이션을 시작합니다.
-  - 동시에 여러 속성에 애니메이션을 적용하려는 경우에 주로 사용됩니다.
+- 키 프레임 – 애니메이션이 애니메이션 효과를 주는 개별 "스냅숏"입니다.
+  - 키 & 값 쌍으로 정의 됩니다. 키는 0과 1 사이의 진행률을 나타내며,이 "snapshot"은 애니메이션 수명의 즉, 위치를 나타냅니다. 이 때 다른 매개 변수는 속성 값을 나타냅니다.
+- Key프레임 애니메이션 속성 – UI의 요구 사항을 충족 하기 위해 적용할 수 있는 사용자 지정 옵션입니다.
+  - DelayTime – StartAnimation이 호출 된 후 애니메이션이 시작 되기 전의 시간입니다.
+  - 기간 – 애니메이션의 지속 시간입니다.
+  - IterationBehavior – 애니메이션에 대 한 카운트 또는 무한 반복 동작입니다.
+  - IterationCount – 키 프레임 애니메이션이 반복 되는 유한 시간 수입니다.
+  - 키 프레임 수 – 특정 키 프레임 애니메이션에서의 키 프레임 수를 읽습니다.
+  - StopBehavior – Stopbehavior이 호출 될 때 애니메이션 속성 값의 동작을 지정 합니다.
+  - Direction – 재생할 애니메이션의 방향을 지정 합니다.
+- 애니메이션 그룹 – 여러 애니메이션을 동시에 시작 합니다.
+  - 동시에 여러 속성에 애니메이션 효과를 주기 위해 사용 되는 경우가 많습니다.
 
-자세한 내용은 [CompositionAnimationGroup](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionanimationgroup)을 참조하세요.
+자세한 내용은 [CompositionAnimationGroup](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionanimationgroup)를 참조 하세요.
 
-이러한 개념을 염두에 두고 KeyFrameAnimation을 구성하는 일반적인 공식을 살펴보겠습니다.
+이러한 개념을 염두에 두면 Key프레임 애니메이션을 생성 하는 일반적인 수식을 살펴보겠습니다.
 
-1. CompositionObject와 애니메이션을 적용해야 하는 해당 속성을 확인합니다.
-1. 애니메이션을 적용하려는 속성 유형과 일치하는 작성자의 KeyFrameAnimation Type 템플릿을 만듭니다.
-1. 애니메이션 템플릿을 사용하여 KeyFrames를 추가하고 애니메이션의 속성을 정의하기 시작합니다.
-    - 하나 이상의 KeyFrame이 필요합니다(100% 또는 1f 키 프레임).
-    - 기간도 정의하는 것이 좋습니다.
-1. 한 번이 애니메이션을 실행 하 고 애니메이션 효과 주려는 속성을 대상으로 하는 CompositionObject StartAnimation(...) 호출 수 있습니다. 특히 다음 사항에 주의하세요.
+1. 애니메이션을 적용 해야 하는 CompositionObject 및 해당 속성을 식별 합니다.
+1. 애니메이션을 적용할 속성의 형식과 일치 하는 compositor의 Key프레임 애니메이션 형식 템플릿을 만듭니다.
+1. 애니메이션 템플릿을 사용 하 여 키 프레임을 추가 하 고 애니메이션의 속성을 정의 합니다.
+    - 하나 이상의 키프레임이 필요 합니다 (100% 또는 1f 키 프레임).
+    - 또한 기간을 정의 하는 것이 좋습니다.
+1. 이 애니메이션을 실행할 준비가 되 면 애니메이션을 적용할 속성을 대상으로 하는 CompositionObject에서 StartAnimation (...)을 호출 합니다. 특히 다음에 대한 내용을 설명합니다.
     - `visual.StartAnimation("targetProperty", CompositionAnimation animation);`
     - `visual.StartAnimationGroup(AnimationGroup animationGroup);`
-1. 실행 중인 애니메이션이 있는 있고 애니메이션이 나 애니메이션 그룹을 중지 하려는 경우에 이러한 Api를 사용할 수 있습니다.
+1. 애니메이션을 실행 하 고 애니메이션 또는 애니메이션 그룹을 중지 하려는 경우 다음 Api를 사용할 수 있습니다.
     - `visual.StopAnimation("targetProperty");`
     - `visual.StopAnimationGroup(AnimationGroup AnimationGroup);`
 
-이 공식을 실제로 사용하는 예를 살펴보겠습니다.
+작업에서이 수식을 확인 하는 예를 살펴보겠습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
-이 예제에서는 1 초 애니메이션 < 200,0,0 >를 < 0,0,0 >에서 시각적 요소의 오프셋을 적용 해야 합니다. 또한 이러한 위치 사이에서 시각적 애니메이션을 10회 보고 싶습니다.
+이 예제에서는 <0, 0, 0>를 <200, 0, 0> 1 초 이상으로 표시 하는 것이 좋습니다. 또한 이러한 위치 간의 시각적 효과를 10 번 확인 하려고 합니다.
 
 ![키 프레임 애니메이션](images/animation/animated-rectangle.gif)
 
-먼저 애니메이션을 적용할 CompositionObject 및 속성을 식별하는 것으로 시작합니다. 이 경우 빨간색 사각형은 `redVisual`라는 컴퍼지션 시각으로 표시됩니다. 이 개체에서 애니메이션을 시작합니다.
+먼저 애니메이션을 적용할 CompositionObject 및 속성을 식별 합니다. 이 경우 빨간색 사각형은 라는 컴퍼지션 시각적 개체로 표시 됩니다 `redVisual` . 이 개체에서 애니메이션을 시작 합니다.
 
-그런 다음 오프셋 속성에 애니메이션을 적용하려고 하므로 Vector3KeyFrameAnimation(오프셋은 Vector3 유형)을 만들어야 합니다. 또한 KeyFrameAnimation에 해당하는 KeyFrames를 정의합니다.
+그런 다음 Offset 속성에 애니메이션 효과를 주기 때문에 Vector3KeyFrameAnimation (Offset은 Vector3 형식)를 만들어야 합니다. 또한 Key프레임 애니메이션에 대 한 해당 키 프레임을 정의 합니다.
 
 ```csharp
     Vector3KeyFrameAnimation animation = compositor.CreateVector3KeyFrameAnimation();
     animation.InsertKeyFrame(1f, new Vector3(200f, 0f, 0f));
 ```
 
-두 위치 (현재 및 < 200,0,0 >) 10 시간 사이 애니메이션 효과를 동작 함께 기간을 설명 하기 위해 KeyFrameAnimation의 속성을 정의 합니다.
+그런 다음 두 위치 (현재 및 <200, 0>) 사이에 애니메이션 효과를 주는 동작을 설명 하는 Key프레임 애니메이션의 속성을 정의 합니다.
 
 ```csharp
     animation.Duration = TimeSpan.FromSeconds(2);
@@ -95,7 +95,7 @@ KeyFrameAnimations로 명시적인 시간 기반 애니메이션을 만드는 �
     animation.IterationCount = 10;
 ```
 
-마지막으로, 애니메이션을 실행하려면 CompositionObject의 속성을 기반으로 시작해야 합니다.
+마지막으로 애니메이션을 실행 하려면 CompositionObject의 속성에서 애니메이션을 시작 해야 합니다.
 
 ```csharp
 redVisual.StartAnimation("Offset", animation);

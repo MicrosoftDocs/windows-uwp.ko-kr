@@ -1,6 +1,6 @@
 ---
-Description: 사용자가 지정된 범위의 값을 설정할 수 있습니다.
 title: 슬라이더
+description: 사용자가 트랙을 따라 Thumb 컨트롤을 이동하여 값 범위에서 선택할 수 있는 Windows UI 라이브러리 슬라이더 컨트롤을 구현하는 방법을 알아봅니다.
 ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
 template: detail.hbs
@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a1de8437c5b463b13e3adb8c4d7eb7161663f4d6
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: a51bfb262e81668d167a380a9f3572011dbf7e2c
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997970"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88943103"
 ---
 # <a name="sliders"></a>슬라이더
 

@@ -6,22 +6,22 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0af0e8b17578c2ef3cd3fb0a466446b06f8e4a00
-ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
+ms.openlocfilehash: 025db9ae6ed3b7ab2c532ddc140fd5279db58777
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83854739"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168617"
 ---
 # <a name="aep-service-class-ids"></a>AEP 서비스 클래스 ID
 
 연결 끝점 (AEP) 서비스는 지정 된 프로토콜을 통해 장치가 지 원하는 서비스에 대 한 프로그래밍 계약을 제공 합니다. 이러한 서비스 중 일부는이를 참조할 때 사용 해야 하는 식별자를 설정 합니다. 이러한 계약은 **ServiceClassId** 속성을 사용 하 여 식별 됩니다. 이 항목에는 잘 알려진 여러 AEP service 클래스 Id가 나열 되어 있습니다. AEP 서비스 클래스 ID는 사용자 지정 클래스 Id가 있는 프로토콜에도 적용 됩니다.
 
-앱 개발자는 클래스 Id에 기반한 AQS (고급 쿼리 구문) 필터를 사용 하 여 해당 쿼리를 사용 하려는 AEP 서비스로 제한 해야 합니다. 이렇게 하면 쿼리 결과가 관련 서비스로 제한 되 고 장치에 대 한 성능, 배터리 수명 및 서비스 품질이 크게 향상 됩니다. 예를 들어 응용 프로그램은 이러한 서비스 클래스 Id를 사용 하 여 장치를 Miracast 동기화 또는 DLNA 디지털 미디어 렌더러 (DMR)로 사용할 수 있습니다. 장치와 서비스가 서로 상호 작용 하는 방법에 대 한 자세한 내용은 [**Deviceinformationkind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind)를 참조 하세요.
+앱 개발자는 클래스 Id에 기반한 AQS (고급 쿼리 구문) 필터를 사용 하 여 해당 쿼리를 사용 하려는 AEP 서비스로 제한 해야 합니다. 이렇게 하면 쿼리 결과가 관련 서비스로 제한 되 고 장치에 대 한 성능, 배터리 수명 및 서비스 품질이 크게 향상 됩니다. 예를 들어 응용 프로그램은 이러한 서비스 클래스 Id를 사용 하 여 장치를 Miracast 동기화 또는 DLNA 디지털 미디어 렌더러 (DMR)로 사용할 수 있습니다. 장치와 서비스가 서로 상호 작용 하는 방법에 대 한 자세한 내용은 [**Deviceinformationkind**](/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind)를 참조 하세요.
 
 > **중요 API**
 >
-> - [**Windows.Devices.Enumeration**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)
+> - [**Windows.Devices.Enumeration**](/uwp/api/Windows.Devices.Enumeration)
 
 ## <a name="bluetooth-and-bluetooth-le-services"></a>Bluetooth 및 Bluetooth LE 서비스
 
@@ -110,7 +110,7 @@ WSD 서비스는 다음 프로토콜 식별자를 사용 합니다. {782232aa-a2
 
 ## <a name="aqs-sample"></a>AQS 샘플
 
-이 AQS는 전화 걸기를 지 원하는 모든 UPnP **Associationendpointservice** 개체를 필터링 합니다. 이 경우 [**Deviceinformationkind**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind) 는 **Ationentationendpointservice**로 설정 됩니다.
+이 AQS는 전화 걸기를 지 원하는 모든 UPnP **Associationendpointservice** 개체를 필터링 합니다. 이 경우 [**Deviceinformationkind**](/uwp/api/Windows.Devices.Enumeration.DeviceInformationKind) 는 **Ationentationendpointservice**로 설정 됩니다.
 
 ``` syntax
 System.Devices.AepService.ProtocolId:="{0e261de4-12f0-46e6-91ba-428607ccef64}" AND

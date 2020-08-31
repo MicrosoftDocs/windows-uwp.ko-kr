@@ -2,20 +2,23 @@
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
 title: Windows 데스크톱의 장치 포털
 description: Windows Device Portal이 Windows 데스크톱의 진단 및 자동화를 제공하는 방법을 알아봅니다.
-ms.date: 02/06/2019
+ms.date: 08/20/2020
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 73f7e827c0ec8ca289d3523da06601de978a91d2
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: dc3ca2379ae7dd704d96e383cc02314ee9423fb7
+ms.sourcegitcommit: 508fb9e763aa5967beebf7bf5e77d7ad12baa566
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79210189"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714491"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Windows 데스크톱의 장치 포털
 
-Windows 장치 포털을 사용하여 진단 정보를 살펴보고 브라우저 창에서 HTTP를 통해 데스크톱을 조작할 수 있습니다. Device Portal을 사용하여 다음 작업을 수행할 수 있습니다.
+Windows 장치 포털은 웹 브라우저에서 HTTP를 통해 진단 정보를 살펴보고 데스크톱 PC와 상호 작용할 수 있는 디버깅 도구입니다. 다른 디바이스를 디버그하려면 [Windows 장치 포털 개요](device-portal.md)를 참조하세요.
+
+
+Device Portal을 사용하여 다음 작업을 수행할 수 있습니다.
 - 실행 중인 프로세스 목록 확인 및 조작
 - 앱 설치, 삭제, 시작 및 종료
 - Wi-Fi 프로필 변경, 신호 강도 보기 및 ipconfig 확인
@@ -35,17 +38,24 @@ Windows 10 1607 버전부터 데스크톱의 새로운 기능 중 일부는 개�
 
 ### <a name="turn-on-device-portal"></a>장치 포털 켜기
 
-**설정**의 **개발자** 섹션에서 장치 포털을 사용하도록 설정할 수 있습니다. 장치 포털을 사용하도록 설정하는 경우 해당하는 사용자 이름과 암호도 만들어야 합니다. Microsoft 계정 또는 기타 Windows 자격 증명은 사용하지 마세요. 
+**설정**의 **개발자** 섹션에서 장치 포털을 사용하도록 설정할 수 있습니다. 장치 포털을 사용하도록 설정하는 경우 해당하는 사용자 이름과 암호도 만들어야 합니다. Microsoft 계정 또는 기타 Windows 자격 증명은 사용하지 마세요.
 
-![[설정] 앱의 장치 포털 섹션](images/device-portal/device-portal-desk-settings.png) 
+![[설정] 앱의 장치 포털 섹션](images/device-portal/device-portal-desk-settings.png)
 
-장치 포털이 사용하도록 설정되면 섹션 아래쪽에 웹 링크가 표시됩니다. 나열된 URL의 끝에 첨부되어 있는 포트 번호를 적어 둡니다. 이 포트 번호는 장치 포털을 사용하도록 설정할 때 무작위로 생성되지만, 데스크톱을 다시 부팅해도 동일하게 유지됩니다. 
+장치 포털이 사용하도록 설정되면 섹션 아래쪽에 웹 링크가 표시됩니다. 나열된 URL의 끝에 첨부되어 있는 포트 번호를 적어 둡니다. 이 포트 번호는 장치 포털을 사용하도록 설정할 때 무작위로 생성되지만, 데스크톱을 다시 부팅해도 동일하게 유지됩니다.
 
-이러한 링크를 사용하여 두 가지 방법으로(로컬 네트워크(VPN 포함)를 통해 또는 로컬 호스트를 통해) 장치 포털에 연결할 수 있습니다.
+이러한 링크를 사용하여 두 가지 방법으로(로컬 네트워크(VPN 포함)를 통해 또는 로컬 호스트를 통해) 장치 포털에 연결할 수 있습니다. 연결되면 다음과 같이 표시됩니다.
+
+![디바이스 포털](images/device-portal/device-portal-example.png)
+
+
+### <a name="turn-off-device-portal"></a>장치 포털 끄기
+
+**설정**의 **개발자** 섹션에서 장치 포털을 사용하지 않도록 설정할 수 있습니다.
 
 ### <a name="connect-to-device-portal"></a>장치 포털에 연결
 
-로컬 호스트를 통해 연결하려면 브라우저 창을 열고, 여기에 표시된 주소를 사용하려는 연결 유형에 입력합니다.
+로컬 호스트를 통해 연결하려면 브라우저 창을 열고, 사용 중인 연결 유형에 대해 여기에 표시된 주소를 입력합니다.
 
 * Localhost: `http://127.0.0.1:<PORT>` 또는 `http://localhost:<PORT>`
 * 로컬 네트워크: `https://<IP address of the desktop>:<PORT>`
@@ -56,23 +66,31 @@ Windows 10 1607 버전부터 데스크톱의 새로운 기능 중 일부는 개�
 
 ## <a name="device-portal-content-on-windows-desktop"></a>Windows 데스크톱의 장치 포털 콘텐츠
 
-Windows 데스크톱의 장치 포털은 표준 페이지 세트를 제공합니다. 자세한 설명은 [Windows 장치 포털 개요](device-portal.md)를 참조하세요.
+Windows 데스크톱의 장치 포털에는 [Windows 장치 포털 개요](device-portal.md)에 설명된 페이지 세트가 표시됩니다.
 
 - 앱 관리자
+- Xbox Live
 - 파일 탐색기
 - 실행 중인 프로세스
 - 성능
-- Debug
-- ETW(Windows용 이벤트 추적)
+- 디버그
+- ETW(Windows용 이벤트 추적) 로깅
 - 성능 추적
 - 디바이스 관리자
+- Bluetooth
 - 네트워킹
-- 크래시 데이터
+- 충돌 데이터
 - 기능
-- 혼합 현실
+- Mixed Reality
 - 스트리밍 설치 디버거
 - 위치
 - 스크래치
+
+## <a name="using-device-portal-for-windows-desktop-to-test-and-debug-msix-apps"></a>Windows 데스크톱의 장치 포털을 사용하여 MSIX 앱 테스트 및 디버그
+
+
+> [!VIDEO https://www.youtube.com/embed/PdgXeOMt4hk]
+
 
 ## <a name="more-device-portal-options"></a>기타 장치 포털 옵션
 
@@ -105,7 +123,7 @@ Device Portal용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음
     - 특정 구성과 표시되는 디버그 메시지를 사용하는 독립 실행형 장치 포털 버전을 실행합니다. [패키지된 플러그인](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-plugin)을 빌드하는 데 가장 유용합니다. 
     - 패키지된 플러그인을 테스트하기 위해 이를 실행하는 방법에 대한 자세한 내용은 [MSDN 잡지 문서](https://msdn.microsoft.com/magazine/mt826332.aspx)를 참조하세요.
 
-## <a name="common-errors-and-issues"></a>일반적인 오류 및 이슈
+## <a name="troubleshooting"></a>문제 해결
 
 다음은 장치 포털을 설정할 때 발생할 수 있는 일반적인 오류입니다.
 
@@ -129,7 +147,7 @@ Windows 10 시험판 빌드에 개발자 패키지를 설치하려고 할 때 �
 
 요금제 인터넷 연결을 사용하는 경우 이 오류가 발생할 수 있습니다. 요금제 연결에서는 개발자 패키지를 다운로드할 수 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 * [Windows 장치 포털 개요](device-portal.md)
 * [장치 포털 핵심 API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)

@@ -9,12 +9,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ad94d7b887e28ac01156592ac47cfc9ac4783193
-ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
+ms.openlocfilehash: ff252faf4dd49929ec46c2ceaa02f94011e6b225
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83775904"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169327"
 ---
 # <a name="connected-animation-for-windows-apps"></a>Windows 앱에 대 한 연결 된 애니메이션
 
@@ -22,7 +22,7 @@ ms.locfileid: "83775904"
 
 연결 된 애니메이션에서 요소는 UI 내용이 변경 되는 동안 두 보기 사이에 "continue"가 표시 되 고, 화면에서 소스 뷰의 위치부터 새 뷰의 대상까지 이동 합니다. 이렇게 하면 보기 간의 공통 콘텐츠를 강조 하 고 전환의 일부로 멋진 및 동적 효과를 만듭니다.
 
-> **중요 한 api**: [ConnectedAnimation 클래스](/uwp/api/windows.ui.xaml.media.animation.connectedanimation), [ConnectedAnimationService 클래스](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)
+> **중요 한 api**:  [ConnectedAnimation 클래스](/uwp/api/windows.ui.xaml.media.animation.connectedanimation), [ConnectedAnimationService 클래스](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)
 
 
 ## <a name="examples"></a>예
@@ -63,12 +63,12 @@ ms.locfileid: "83775904"
 
 ## <a name="when-to-use-connected-animation"></a>연결 된 애니메이션을 사용 하는 경우
 
-연결 된 애니메이션은 일반적으로 페이지를 변경할 때 사용 되지만, UI에서 콘텐츠를 변경 하 고 사용자가 컨텍스트를 유지 관리 하려는 환경에도 적용 될 수 있습니다. 원본 뷰와 대상 뷰 간에 이미지 또는 다른 UI가 공유 될 때마다 [탐색에서 드릴](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition) 하는 대신 연결 된 애니메이션을 사용 하는 것이 좋습니다.
+연결 된 애니메이션은 일반적으로 페이지를 변경할 때 사용 되지만, UI에서 콘텐츠를 변경 하 고 사용자가 컨텍스트를 유지 관리 하려는 환경에도 적용 될 수 있습니다. 원본 뷰와 대상 뷰 간에 이미지 또는 다른 UI가 공유 될 때마다 [탐색에서 드릴](/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition) 하는 대신 연결 된 애니메이션을 사용 하는 것이 좋습니다.
 
 ## <a name="configure-connected-animation"></a>연결 된 애니메이션 구성
 
 > [!IMPORTANT]
-> 이 기능을 사용 하려면 앱의 대상 버전이 Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 이어야 합니다. 이전 Sdk에서는 구성 속성을 사용할 수 없습니다. 적응 코드 또는 조건부 XAML을 사용 하 여 SDK 17763 보다 낮은 최소 버전을 대상으로 지정할 수 있습니다. 자세한 내용은 [버전 적응 앱](/windows/uwp/debug-test-perf/version-adaptive-apps)을 참조 하세요.
+> 이 기능을 사용 하려면 앱의 대상 버전이 Windows 10, 버전 1809 ([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 이어야 합니다. 이전 Sdk에서는 구성 속성을 사용할 수 없습니다. 적응 코드 또는 조건부 XAML을 사용 하 여 SDK 17763 보다 낮은 최소 버전을 대상으로 지정할 수 있습니다. 자세한 내용은 [버전 적응 앱](../../debug-test-perf/version-adaptive-apps.md)을 참조 하세요.
 
 Windows 10, 버전 1809부터, 연결 된 애니메이션은 앞으로 및 뒤로 페이지 탐색을 위해 특별히 조정 된 애니메이션 구성을 제공 하 여 흐름 디자인을 추가로 구체화 합니다.
 

@@ -1,22 +1,22 @@
 ---
-description: XAML 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 클래스를 연결합니다. 코드 partial 클래스는 별도의 코드 파일에 정의되고, 태그 partial 클래스는 XAML 컴파일 시 코드 생성을 통해 만들어집니다.
+description: 태그와 코드 숨김으로 partial 클래스를 조인 하도록 XAML 컴파일을 구성 합니다. 코드 partial 클래스는 별도의 코드 파일에 정의 되 고, 태그 partial 클래스는 XAML 컴파일 중에 코드 생성에 의해 생성 됩니다.
 title: xClass 특성
 ms.assetid: 40A7C036-133A-44DF-9D11-0D39232C948F
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dcda1677a8b5d289fd4c5e86db69212004f00824
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: be238be3414fb17ff64a5c6d5da713f614c297be
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371099"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169087"
 ---
 # <a name="xclass-attribute"></a>x:Class 특성
 
 
-XAML 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 클래스를 연결합니다. 코드 partial 클래스는 별도의 코드 파일에 정의되고, 태그 partial 클래스는 XAML 컴파일 시 코드 생성을 통해 만들어집니다.
+태그와 코드 숨김으로 partial 클래스를 조인 하도록 XAML 컴파일을 구성 합니다. 코드 partial 클래스는 별도의 코드 파일에 정의 되 고, 태그 partial 클래스는 XAML 컴파일 중에 코드 생성에 의해 생성 됩니다.
 
 ## <a name="xaml-attribute-usage"></a>XAML 특성 사용
 
@@ -29,20 +29,19 @@ XAML 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 클래�
 
 ## <a name="xaml-values"></a>XAML 값
 
-| 용어 | 설명 |
+| 용어 | Description |
 |------|-------------|
-| 네임스페이스 | (선택 사항) _classname_에서 지정한 partial 클래스가 포함된 네임스페이스를 지정합니다. _namespace_를 지정한 경우 점(.)은 _namespace_와 _classname_을 분리합니다. _namespace_를 생략한 경우 _classname_은 네임스페이스가 없는 것으로 간주됩니다. |
-| 클래스이름 | 필수. 로드된 XAML 및 해당 XAML의 코드 숨김을 연결하는 partial 클래스의 이름을 지정합니다. | 
+| namespace | 선택 사항입니다. _Classname_으로 식별 되는 partial 클래스를 포함 하는 네임 스페이스를 지정 합니다. _Namespace_ 를 지정 하면 점 (.)은 _네임 스페이스_ 와 _classname_을 구분 합니다. _Namespace_ 를 생략 하면 _classname_ 에는 네임 스페이스가 없는 것으로 간주 됩니다. |
+| classname | 필수 요소. 해당 XAML에 대해 로드 된 XAML 및 코드를 연결 하는 partial 클래스의 이름을 지정 합니다. | 
 
 ## <a name="remarks"></a>설명
 
-**x:Class**는 XAML 파일/개체 트리의 루트이고 빌드 작업이 컴파일 중인 모든 요소의 특성으로 선언하거나, 컴파일된 응용 프로그램의 응용 프로그램 정의에서 [**Application**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) 루트의 특성으로 선언할 수 있습니다. **x:Class**를 루트 노드 이외의 다른 요소에 선언하거나 XAML 파일이 **페이지** 빌드 작업과 컴파일되지 않은 경우에 선언하면 컴파일 시간 오류가 발생합니다.
+**x:Class** 는 XAML 파일/개체 트리의 루트인 모든 요소에 대 한 특성으로 선언 될 수 있으며, 빌드 작업 또는 컴파일된 응용 프로그램에 대 한 응용 프로그램 정의의 [**응용**](/uwp/api/Windows.UI.Xaml.Application) 프로그램 루트에 대해 컴파일됩니다. 루트 노드가 아닌 모든 요소에 대해 **x:Class** 를 선언 하 고, **페이지** 빌드 작업으로 컴파일되지 않은 XAML 파일의 경우에는 컴파일 시간 오류가 발생 합니다.
 
-**x:Class**로 사용되는 클래스는 중첩된 클래스가 될 수 없습니다.
+**X:Class** 로 사용 된 클래스는 중첩 된 클래스가 될 수 없습니다.
 
-**x:Class** 특성의 값은 클래스의 정규화된 이름을 지정하는 문자열이어야 합니다. 네임스페이스 정보를 생략할 수도 있는데 이는 코드 숨김에서도 구조가 동일한 경우, 즉 클래스 수준에서 클래스 정의가 시작되는 경우에만 가능합니다. 페이지 또는 응용 프로그램 정의에 대한 코드 숨김 파일은 프로젝트의 일부로 포함된 코드 파일에 들어 있어야 합니다. 코드 숨김 클래스는 public이어야 합니다. 코드 숨김 클래스는 partial이어야 합니다.
+**X:Class** 특성의 값은 클래스의 정규화 된 이름을 지정 하는 문자열 이어야 합니다. 코드 숨김이 구조화 된 방법 (클래스 정의가 클래스 수준에서 시작 됨) 인 경우에만 네임 스페이스 정보를 생략할 수 있습니다. 페이지 또는 응용 프로그램 정의에 대 한 코드 숨겨진 파일은 프로젝트의 일부로 포함 된 코드 파일 내에 있어야 합니다. 코드 숨김이 클래스는 public 이어야 합니다. 코드 숨김이 클래스는 부분 이어야 합니다.
 
 ## <a name="clr-language-rules"></a>CLR 언어 규칙
 
-코드 숨김 파일이 C++ 파일이어도 CLR 언어 폼을 계속 따르는 특정 규칙이 있어서 XAML 구문에서 차이가 없습니다. 특히 XAML과 연관된 C++ 코드 파일에서 네임스페이스와 클래스이름 사이의 구분 기호가 "::"일지라도 **x:Class** 값의 네임스페이스와 클래스 이름 구성 요소 사이의 구분 기호는 항상 점(".")입니다. C++에서 중첩 네임스페이스를 선언하는 경우 **x:Class** 값의 *namespace* 부분을 지정할 때 연속된 중첩 네임스페이스 문자열 사이의 구분 기호도 "::"이 아닌 "."이어야 합니다.
-
+코드 숨김이 파일은 c + + 파일 일 수 있지만 XAML 구문에 차이가 없도록 CLR 언어 폼을 따르는 특정 규칙도 있습니다. 특히, 모든 **x:Class** 값의 네임 스페이스와 classname 구성 요소 사이에 있는 구분 기호는 항상 점 (".") 이며,이는 XAML과 연결 된 c + + 코드 파일에서 네임 스페이스와 classname 사이의 구분 기호가 "::"입니다. C + +에서 중첩 된 네임 스페이스를 선언 하는 경우 **x:Class** 값의 *네임 스페이스* 부분을 지정 하는 경우 연속 된 중첩 된 네임 스페이스 문자열 간의 구분 기호가 "::"이 아닌 "." 여야 합니다.

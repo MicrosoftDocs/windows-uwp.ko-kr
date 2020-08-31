@@ -1,55 +1,55 @@
 ---
-title: SourceModifier로 당겨서 새로 고침
-description: SourceModifiers를 사용하여 사용자 지정 당겨서 새로 고침 컨트롤 만들기
+title: 소스 한정자를 사용 하 여 끌어오기-새로 고침
+description: InteractionTracker의 Sourcemodifier 대 기능을 사용 하 여 사용자 지정 끌어오기-새로 고침 컨트롤을 만드는 방법에 대해 알아봅니다.
 ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 87e4eb90b4801d01ecb85c91b5e64ccc9155d199
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: b20b4b22d1de2252864287b97bedc4a1fc176602
+ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318091"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89053963"
 ---
-# <a name="pull-to-refresh-with-source-modifiers"></a>SourceModifier로 당겨서 새로 고침
+# <a name="pull-to-refresh-with-source-modifiers"></a>소스 한정자를 사용 하 여 끌어오기-새로 고침
 
-이 문서에서는 InteractionTracker의 SourceModifier 기능을 사용하는 방법에 대해 자세히 살펴보고, 사용자 지정 당겨서 새로 고침 컨트롤을 만들어 실제 용례를 시연하겠습니다.
+이 문서에서는 InteractionTracker의 Sourcemodifier 대 기능을 사용 하는 방법에 대해 자세히 알아보고 사용자 지정 끌어오기-새로 고침 컨트롤을 만들어 사용을 보여 줍니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
-여기에서는 여러분이 이 문서에서 다룬 개념에 익숙하다고 가정합니다.
+여기서는 다음 문서에서 설명 하는 개념에 대해 잘 알고 있다고 가정 합니다.
 
 - [입력 기반 애니메이션](input-driven-animations.md)
-- [사용자 지정 조작 경험과 InteractionTracker](interaction-tracker-manipulations.md)
+- [InteractionTracker를 사용 하는 사용자 지정 조작 환경](interaction-tracker-manipulations.md)
 - [관계 기반 애니메이션](relation-animations.md)
 
-## <a name="what-is-a-sourcemodifier-and-why-are-they-useful"></a>SourceModifier란 무엇이고 어떤 면에서 유용한가요?
+## <a name="what-is-a-sourcemodifier-and-why-are-they-useful"></a>Sourcemodifier 대 무엇 이며 유용한 이유는 무엇 인가요?
 
-[InertiaModifiers](inertia-modifiers.md)와 마찬가지로 SourceModifier에서는 InteractionTracker의 동작을 보다 정밀하게 제어할 수 있습니다. 하지만 InteractionTracker가 관성 상태에 진입한 이후 동작을 정의하는 InertiaModifiers와 달리, SourceModifiers는 InteractionTracker가 상호 작용 상태에 있는 동안 동작을 정의합니다. 이러한 경우, "손가락에만 의존하는" 기존 방식과 다른 경험을 원합니다.
+[InertiaModifiers](inertia-modifiers.md)와 마찬가지로 SourceModifiers는 InteractionTracker의 동작에 대 한 미세 제어를 제공 합니다. 하지만 InteractionTracker가 관성로 전환 된 후에 동작을 정의 하는 InertiaModifiers와는 달리, SourceModifiers는 계속 상호 작용 중인 상태에서 동작을 정의 합니다. 이러한 경우 기존 "손가락에 고정"과는 다른 환경을 원합니다.
 
-전형적인 예는 당겨서 새로 고치는 경험입니다. 사용자가 콘텐츠를 새로 고치기 위해 목록을 당겼을 때 목록이 손가락과 같은 속도로 이동한 후 특정 거리 뒤에 멈추면 동작이 갑작스럽고 기계적으로 느껴질 것입니다. 사용자가 적극적으로 목록과 상호 작용하는 동안 저항감을 유발하면 보다 자연스러운 경험이 창출될 것입니다. 이 미묘한 차이가 목록과 상호 작용하는 전반적인 최종 사용자 경험을 보다 역동적이고 매력적으로 만듭니다. 예제 섹션에서는 이를 빌드하는 방법에 대해 자세히 설명합니다.
+이에 대 한 일반적인 예는 끌어오기-새로 고침 환경입니다. 사용자가 목록에서 콘텐츠를 새로 고치는 경우 목록에서 손가락의 속도와 동일한 속도로 계획 특정 거리 후에 중지 되는 경우에는 동작이 급격 하 고 기계적으로 판단 됩니다. 사용자가 목록과 적극적으로 상호 작용 하는 동안 저항 느낌을 도입 하는 것이 더 자연 스러운 환경입니다. 이 작은 nuance는 전체 최종 사용자가 목록과 상호 작용 하는 데 도움이 됩니다. 예제 섹션에서는이를 빌드하는 방법에 대해 자세히 설명 합니다.
 
-2개 유형의 Source Modifier가 있습니다.
+원본 한정자에는 두 가지 유형이 있습니다.
 
-- DeltaPosition – 터치 팬으로 상호 작용하는 동안 손가락의 현재 프레임 위치와 이전 프레임 위치 사이의 델타입니다. 이 Source Modifier를 사용하면 추가 처리를 위해 상호 작용의 델타 위치를 보내기 전에 수정할 수 있습니다. 이것은 Vector3 유형의 매개 변수이며 개발자는 InteractionTracker에 전달하기 전에 위치의 X 또는 Y 또는 Z 속성을 수정하기로 선택할 수 있습니다.
-- DeltaScale - 터치 확대/축소 상호 작용 중에 적용된 이전 프레임 스케일과 현재 프레임 스케일 사이의 델타입니다. 이 Source Modifier를 통해 상호 작용의 확대/축소 수준을 수정할 수 있습니다. 이는 개발자가 InteractionTracker에 전달하기 전에 수정할 수 있는 float 형식 속성입니다.
+- DeltaPosition – 터치 팬 상호 작용 중에 현재 프레임 위치와 손가락의 이전 프레임 위치 사이의 델타입니다. 이 소스 한정자를 사용 하면 추가 처리를 위해 보내기 전에 상호 작용의 델타 위치를 수정할 수 있습니다. 이 매개 변수는 Vector3 형식 매개 변수 이며 개발자는 InteractionTracker에 전달 하기 전에 위치의 X 또는 Y 또는 Z 특성을 수정 하도록 선택할 수 있습니다.
+- DeltaScale-현재 프레임 비율과 터치 확대/축소 상호 작용 중에 적용 된 이전 프레임 눈금 사이의 델타입니다. 이 소스 한정자를 사용 하 여 상호 작용의 확대/축소 수준을 수정할 수 있습니다. 개발자가 InteractionTracker에 전달 하기 전에 수정할 수 있는 float 형식 특성입니다.
 
-InteractionTracker가 상호 작용 중 상태에 있으면 할당된 각각의 Source Modifier를 평가하고 그 중 하나가 적용되는지 판단합니다. 즉, InteractionTracker에 여러 Source Modifier를 생성하고 지정할 수 있습니다. 하지만 각각을 정의할 때 다음을 수행해야 합니다.
+InteractionTracker가 상호 작용 중인 상태 이면 해당 클래스에 할당 된 각 소스 한정자를 계산 하 고 적용 되는지 확인 합니다. 즉, 여러 소스 한정자를 만들어 InteractionTracker에 할당할 수 있습니다. 하지만 각를 정의할 때는 다음을 수행 해야 합니다.
 
-1. 조건 정의 – 이 특정 Source Modifier가 적용되어야 하는 시점에 대한 조건문을 정의하는 식입니다.
-1. DeltaPosition/DeltaScale 정의 - 위의 정의된 조건이 충족될 때 DeltaPosition 또는 DeltaScale을 변경하는 Source Modifier 식입니다.
+1. 조건 정의-이 특정 소스 한정자를 적용 해야 하는 경우 조건문을 정의 하는 식입니다.
+1. DeltaPosition/DeltaScale – 위의 정의 된 조건이 충족 될 때 DeltaPosition 또는 DeltaScale를 변경 하는 소스 한정자 식을 정의 합니다.
 
 ## <a name="example"></a>예제
 
-이제 Source Modifier를 사용하여 기존 XAML ListView 컨트롤로 사용자 지정 끌어서 새로 고침 경험을 만드는 방법을 살펴보겠습니다. 이 경험을 빌드하기 위해 XAML ListView 위에 누적될 "새로 고침 패널"로 캔버스를 사용하겠습니다.
+이제 소스 한정자를 사용 하 여 기존 XAML ListView 컨트롤을 사용 하 여 사용자 지정 끌어오기-새로 고침 환경을 만드는 방법을 살펴보겠습니다. 이 환경을 빌드하기 위해 XAML ListView 위에 누적 되는 "새로 고침 패널"로 캔버스를 사용 하 게 됩니다.
 
-최종 사용자 경험의 경우, 사용자가 활발하게 목록을 이동(터치를 이용)하다가 위치가 특정 지점을 넘어간 후 이동을 중지할 때 "저항"하는 효과를 만들어야 합니다.
+최종 사용자 환경에서는 사용자가 목록을 적극적으로 이동 하 고 위치를 특정 지점으로 이동 하 고 나 서 이동을 중지 하는 것 처럼 "저항" 효과를 만들려고 합니다.
 
-![당겨서 새로 고침이 적용된 목록](images/animation/city-list.gif)
+![끌어오기-새로 고침을 사용 하는 목록](images/animation/city-list.gif)
 
-이 경험의 작업 코드는 [GitHub의 Window UI 개발자 랩 리포](https://github.com/microsoft/WindowsCompositionSamples)에서 확인할 수 있습니다. 아래에 이 경험을 빌드하는 과정을 단계별로 안내합니다.
-XAML 태그 코드는 다음과 같이 구성됩니다.
+이 환경에 대 한 작업 코드는 [GitHub의 창 UI 개발자 리포지토리](https://github.com/microsoft/WindowsCompositionSamples)에서 찾을 수 있습니다. 다음은 해당 환경을 빌드하는 단계별 연습입니다.
+XAML 태그 코드에서 다음을 수행 합니다.
 
 ```xaml
 <StackPanel Height="500" MaxHeight="500" x:Name="ContentPanel" HorizontalAlignment="Left" VerticalAlignment="Top" >
@@ -67,9 +67,9 @@ ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.IsScrollInertiaEnabled="F
 </StackPanel>
 ```
 
-ListView(`ThumbnailList`)는 이미 스크롤이 적용된 XAML 컨트롤이므로, 맨 위 항목에 도달해 더 이상 스크롤할 수 없을 때 스크롤 동작이 상위 항목(`ContentPanel`)으로 연결되도록 해야 합니다. (ContentPanel은 원본 한정자를 적용 합니다.) ScrollViewer.IsVerticalScrollChainingEnabled로 설정 해야 합니다. 그러려면 **true** ListView 태그에 있습니다. 또한 VisualInteractionSource의 연결 모드를 **Always**로 설정해야 합니다.
+ListView ()는 `ThumbnailList` 이미 스크롤되는 XAML 컨트롤이 기 때문에 `ContentPanel` 최상위 항목에 도달 하 여 더 이상 스크롤할 수 없으면 부모 항목 ()에 연결 해야 합니다. (ContentPanel은 소스 한정자를 적용 하는 위치입니다.) 이를 수행 하려면 ListView 태그에서 ScrollViewer을 **true** 로 설정 해야 합니다. VisualInteractionSource에 대 한 연결 모드를 **항상**로 설정 해야 합니다.
 
-_handledEventsToo_ 매개 변수를 사용하여 PointerPressedEvent 처리기를 **true**로 설정해야 합니다. 이 옵션을 사용하지 않으면 ListView 컨트롤이 해당 이벤트를 처리된 것으로 표시하므로 PointerPressedEvent가 ContentPanel에 연결되지 않고 상위 비주얼 체인으로 보내지지 않습니다.
+_HandledEventsToo_ 매개 변수를 **true**로 설정 하 여 Pointer보도 sedevent 처리기를 설정 해야 합니다. 이 옵션을 사용 하지 않으면, ListView 컨트롤이 해당 이벤트를 처리 된 것으로 표시 하 고 시각적 체인으로 전송 되지 않으므로 Pointer보도 Sedevent가 ContentPanel에 연결 되지 않습니다.
 
 ```csharp
 //The PointerPressed handler needs to be added using AddHandler method with the //handledEventsToo boolean set to "true"
@@ -78,7 +78,7 @@ _handledEventsToo_ 매개 변수를 사용하여 PointerPressedEvent 처리기�
 ContentPanel.AddHandler(PointerPressedEvent, new PointerEventHandler( Window_PointerPressed), true);
 ```
 
-이제 이를 InteractionTracker와 연결할 준비가 되었습니다. InteractionTracker의 위치를 활용하게 될 Expression, InteractionTracker, VisualInteractionSource을 설정하는 것으로 시작합니다.
+이제 InteractionTracker와 연결할 준비가 되었습니다. InteractionTracker, VisualInteractionSource 및 InteractionTracker의 위치를 활용 하는 식을 설정 하 여 시작 합니다.
 
 ```csharp
 // InteractionTracker and VisualInteractionSource setup.
@@ -100,7 +100,7 @@ m_positionExpression.SetReferenceParameter("tracker", _tracker);
 _contentPanelVisual.StartAnimation("Offset.Y", m_positionExpression);
 ```
 
-이 설정을 사용하면 새로 고침 패널이 시작 위치의 뷰포트 외부에 있고 사용자가 보는 모든 것이 listView입니다. 이동(panning)이 ContentPanel에 도달하면 PointerPressed 이벤트가 발생하고, InteractionTracker를 사용하여 조작 경험을 유도하도록 시스템에 요청합니다.
+이 설정을 사용 하는 경우 새로 고침 패널은 뷰포트의 시작 위치에서 제외 되 고 사용자에 게 표시 되는 모든 사용자가 listView로 표시 됩니다 .이 이벤트는 시스템에서 InteractionTracker를 사용 하 여 조작 환경을 구동 하도록 요청 하는 경우에 발생 합니다.
 
 ```csharp
 private void Window_PointerPressed(object sender, PointerRoutedEventArgs e)
@@ -113,11 +113,11 @@ if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Touch
 ```
 
 > [!NOTE]
-> 처리된 이벤트를 연결할 필요가 없는 경우 PointerPressedEvent 처리기를 추가하는 작업은 속성(`PointerPressed="Window_PointerPressed"`)을 사용하여 XAML 태그를 통해 직접 수행할 수 있습니다.
+> 처리 된 이벤트 체인이 필요 하지 않은 경우 특성 ()을 사용 하 여 XAML 태그를 통해 Pointer보도 Sedevent 처리기를 직접 추가할 수 있습니다 `PointerPressed="Window_PointerPressed"` .
 
-다음 단계에서는 Source Modifier를 설정합니다. _저항_ 및 _중지_ 동작을 설정하기 위해 두 가지 Source Modifier를 사용하게 됩니다.
+다음 단계는 소스 한정자를 설정 하는 것입니다. 이 동작을 얻으려면 2 개의 소스 한정자를 사용 합니다. _저항_ 및 _중지_.
 
-- 저항 - RefreshPanel 높이에 도달할 때까지 DeltaPosition.Y를 절반 속도로 이동시킵니다.
+- 저항 – RefreshPanel의 높이에 도달할 때까지 DeltaPosition를 속도의 절반으로 이동 합니다.
 
 ```csharp
 CompositionConditionalValue resistanceModifier = CompositionConditionalValue.Create (_compositor);
@@ -131,7 +131,7 @@ resistanceModifier.Condition = resistanceCondition;
 resistanceModifier.Value = resistanceAlternateValue;
 ```
 
-- 중지 – 전체 RefreshPanel이 화면에 나타난 후 이동을 중지합니다.
+- 중지 – 전체 RefreshPanel이 화면에 있는 후 이동을 중지 합니다.
 
 ```csharp
 CompositionConditionalValue stoppingModifier = CompositionConditionalValue.Create (_compositor);
@@ -147,10 +147,10 @@ List<CompositionConditionalValue> modifierList = new List<CompositionConditional
 _interactionSource.ConfigureDeltaPositionYModifiers(modifierList);
 ```
 
-이 다이어그램은 SourceModifiers 설정을 시각화한 것입니다.
+이 다이어그램은 SourceModifiers 설정의 시각화를 제공 합니다.
 
-![이동 다이어그램](images/animation/source-modifiers-diagram.png)
+![패닝 다이어그램](images/animation/source-modifiers-diagram.png)
 
-이제 SourceModifier를 사용하면 ListView를 아래로 이동해 맨 위 항목에 도달할 때, RefreshPanel 높이에 도달할 때까지 새로 고침 패널이 팬의 절반 속도로 아래로 당겨진 후 이동이 중지될 것입니다.
+이제 SourceModifiers을 사용 하 여 ListView를 이동 하 고 최상위 항목에 도달할 때 새로 고침 패널을 다시 시작 하는 것을 알 수 있습니다.
 
-전체 샘플에서 키 프레임 애니메이션은 RefreshPanel 캔버스에서의 상호 작용 중 아이콘을 회전시키는 데 사용됩니다. 원하는 콘텐츠를 대신 사용하거나, InteractionTracker의 위치를 활용하여 해당 애니메이션을 별도로 구동할 수 있습니다.
+전체 샘플에서 키 프레임 애니메이션은 RefreshPanel 캔버스에서 상호 작용 하는 동안 아이콘을 회전 하는 데 사용 됩니다. 모든 콘텐츠를 해당 위치에 사용 하거나 InteractionTracker의 위치를 활용 하 여 해당 애니메이션을 따로 구동 할 수 있습니다.

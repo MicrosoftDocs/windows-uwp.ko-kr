@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e7dee32d-3756-430d-a026-32c1ee288a85
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ff826be0f5b0b8e9a6723fbb1593663f1748c3d
-ms.sourcegitcommit: d708ac4ec4fac0135dafc0d8c5161ef9fd945ce7
+ms.openlocfilehash: 7d41e49f599e1fe5e835443f7c8cb732e625491e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85069471"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168597"
 ---
 # <a name="bluetooth-developer-faq"></a>Bluetooth 개발자 FAQ
 
@@ -22,7 +22,7 @@ ms.locfileid: "85069471"
 
 ### <a name="bluetooth-le-windowsdevicesbluetoothgenericattributeprofile"></a>Bluetooth LE (Windows. 장치.
 
-Bluetooth 저 에너지를 지 원하는 장치와 통신 하는 경우 GATT Api를 사용 합니다. 사용 사례가 자주 나 낮은 대역폭 이거나 저전력이 필요한 경우 Bluetooth 저 에너지는 답입니다. 이 기능을 포함 하는 기본 네임 스페이스는 [Windows](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile). 
+Bluetooth 저 에너지를 지 원하는 장치와 통신 하는 경우 GATT Api를 사용 합니다. 사용 사례가 자주 나 낮은 대역폭 이거나 저전력이 필요한 경우 Bluetooth 저 에너지는 답입니다. 이 기능을 포함 하는 기본 네임 스페이스는 [Windows](/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile). 
 
 **Bluetooth LE을 사용 하지 않는 경우**
 - 높은 대역폭, 높은 빈도 시나리오. 지속적으로 많은 양의 데이터와 동기화를 유지 해야 하는 경우 Bluetooth 클래식 또는 WiFi를 사용 하는 것이 좋습니다. 
@@ -33,7 +33,7 @@ RFCOMM Api는 양방향 직렬 포트 스타일 통신을 수행할 수 있는 �
 
 **Bluetooth Rfcomm를 사용 하지 않는 경우** 
 - 알림을. Bluetooth GATT 프로토콜에는이에 대 한 특정 명령이 있으며,이로 인해 전원 그리기가 크게 줄어들고 응답 시간이 단축 됩니다. 
-- 근접 또는 상태 검색을 확인 하는 중입니다. [보급 알림 api](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement) 를 사용 하 고 Bluetooth LE을 통해 연결 하는 것이 좋습니다. 
+- 근접 또는 상태 검색을 확인 하는 중입니다. [보급 알림 api](/uwp/api/windows.devices.bluetooth.advertisement) 를 사용 하 고 Bluetooth LE을 통해 연결 하는 것이 좋습니다. 
 
 
 ## <a name="why-does-my-bluetooth-le-device-stop-responding-after-a-disconnect"></a>연결을 끊은 후 Bluetooth LE 장치가 응답을 중지 하는 이유는 무엇 인가요?
@@ -63,7 +63,7 @@ Windows 10 릴리스 1511부터 개발자는 페어링 핸드셰이크를 제어
 
 Bluetooth RFCOMM (클래식)를 활용 하는 경우 장치를 사용 하기 전에 장치를 페어링 하지 않아도 됩니다. Windows 10 릴리스 1607부터 주변 장치를 쿼리하고 연결 하기만 하면 됩니다. 업데이트 된 [RFCOMM Chat 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/BluetoothRfcommChat) 은이 기능을 보여 줍니다. 
 
-**(14393 이상)** Bluetooth 저 에너지 (GATT 클라이언트)에는이 기능을 사용할 수 없기 때문에 이러한 장치에 액세스 하려면 설정 페이지를 통하거나 [Windows.](https://docs.microsoft.com/uwp/api/windows.devices.enumeration) i n s. i n t api를 사용 해야 합니다.
+**(14393 이상)** Bluetooth 저 에너지 (GATT 클라이언트)에는이 기능을 사용할 수 없기 때문에 이러한 장치에 액세스 하려면 설정 페이지를 통하거나 [Windows.](/uwp/api/windows.devices.enumeration) i n s. i n t api를 사용 해야 합니다.
 
 **(15030 이상)** Bluetooth 장치 페어링은 더 이상 필요 하지 않습니다. 원격 장치의 현재 상태를 쿼리하려면 GetgattGetCharacteristicsAsync Async 및와 같은 새 비동기 Api를 사용 합니다. 자세한 내용은 [클라이언트 문서](gatt-client.md) 를 참조 하세요. 
 

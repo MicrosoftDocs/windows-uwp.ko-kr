@@ -2,54 +2,49 @@
 title: 적응형 레이아웃 만들기 자습서
 description: 이 문서는 XAML의 적응형 레이아웃의 기본 사항에 대해 설명합니다.
 keywords: XAML, UWP, 시작
-ms.date: 08/30/2017
+ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 389b4ec2566a392de35ae43505274511b4294f9f
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: b172f2da7fa8953045db4eab3818df02ce43e00c
+ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997790"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942893"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>자습서: 적응형 레이아웃 만들기
 
-이 자습서에서는 XAML의 적응형 및 맞춤형 레이아웃 기능을 사용하여 모든 디바이스에서 똑같이 보이는 앱을 만드는 기본 사항을 다룹니다. VisualStateManager 및 AdaptiveTrigger 요소를 사용하여 새 DataTemplate을 만들고, 창 끌기 지점을 추가하고, 앱의 레이아웃을 조정하는 방법을 알아봅니다. 이러한 도구를 사용하여 소형 디바이스 화면에 맞는 이미지 편집 프로그램을 최적화합니다. 
+이 자습서에서는 XAML의 레이아웃 기능을 사용하여 어떤 크기에도 잘 어울리는 앱을 만드는 기본 사항을 다룹니다. 창 중단점을 추가하고, 새 DataTemplate을 만들고, VisualStateManager 클래스를 사용하여 앱의 레이아웃을 조정하는 방법을 알아봅니다. 이 도구를 사용하여 작은 창 크기에 맞게 이미지 편집 프로그램을 최적화합니다.
 
-사용할 이미지 편집 프로그램은 페이지/화면이 다음과 같이 두 가지입니다.
-
-**메인 페이지** - 각 이미지 파일에 대한 정보와 함께 사진 갤러리 보기를 표시합니다.
+이미지 편집 프로그램에는 다음과 같은 두 페이지가 있습니다. _기본 페이지_는 각 이미지 파일에 대한 일부 정보와 함께 사진 갤러리 보기를 표시합니다.
 
 ![MainPage](../basics/images/xaml-basics/mainpage.png)
 
-**세부 정보 페이지** - 사진을 하나 선택하면 해당 사진이 표시됩니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
+*세부 정보 페이지*는 선택한 단일 사진을 표시합니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
 
 ![DetailPage](../basics/images/xaml-basics/detailpage.png)
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-* Visual Studio 2019: [Visual Studio 2019 Community(무료) 다운로드](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&campaign=WinDevCenter&ocid=wdgcx-windevcenter-community-download) 
-* Windows 10 SDK(10.0.15063.468 이상):  [최신 Windows SDK(무료)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
-* Windows 모바일 에뮬레이터: [Windows 10 모바일 에뮬레이터(무료)](https://developer.microsoft.com/windows/downloads/sdk-archive)
++ Visual Studio 2019: [Visual Studio 2019 다운로드](https://visualstudio.microsoft.com/downloads/)(Community Edition은 무료입니다.)
++ Windows 10 SDK(10.0.17763.0 이상):  [최신 Windows SDK(무료)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
++ Windows 10, 버전 1809 이상
 
 ## <a name="part-0-get-the-starter-code-from-github"></a>0부: github에서 시작 코드 다운로드
 
-이 자습서에서는 PhotoLab 샘플의 간소화된 버전부터 시작합니다. 
+이 자습서에서는 PhotoLab 샘플의 간소화된 버전부터 시작합니다.
 
-1. [https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab)으로 이동합니다. 샘플이 있는 GitHub 페이지로 이동됩니다. 
+1. GitHub의 샘플 페이지([https://github.com/Microsoft/Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab))로 이동합니다.
 2. 다음으로, 샘플을 복제 또는 다운로드해야 합니다. **복제 또는 다운로드** 단추를 클릭합니다. 하위 메뉴가 나타납니다.
-    <figure>
-        <img src="../basics/images/xaml-basics/clone-repo.png" alt="The Clone or download menu on GitHub">
-        <figcaption>PhotoLab 샘플의 GitHub 페이지에 있는 <b>복제 또는 다운로드</b> 메뉴</figcaption>
-    </figure>
+    ![PhotoLab 샘플의 GitHub 페이지에 있는 복제 또는 다운로드 메뉴](images/xaml-basics/clone-repo.png)
 
     **GitHub에 익숙하지 않은 경우:**
-    
+
     a. **ZIP 다운로드**를 클릭하고 파일을 로컬에 저장합니다. 그러면 필요한 프로젝트 파일이 모두 포함된 .zip 파일이 다운로드됩니다.
 
-    b. 파일의 압축을 풉니다. 파일 탐색기를 사용하여 앞에서 다운로드한 .zip 파일로 이동한 다음, 해당 파일을 마우스 오른쪽 단추로 클릭하고 **모두 압축 풀기...** 를 선택합니다. 
+    b. 파일의 압축을 풉니다. 파일 탐색기를 사용하여 방금 다운로드한 .zip 파일을 찾아 마우스 오른쪽 단추로 클릭하고, **압축 풀기...** 를 선택합니다.
 
-    c. 샘플의 로컬 복사본을 찾아서 `Windows-appsample-photo-lab-master\xaml-basics-starting-points\adaptive-layout` 디렉토리로 이동합니다.    
+    c. 샘플의 로컬 복사본을 찾고, `Windows-appsample-photo-lab-master\xaml-basics-starting-points\adaptive-layout` 디렉터리로 이동합니다.
 
     **GitHub에 익숙한 경우:**
 
@@ -57,33 +52,56 @@ ms.locfileid: "86997790"
 
     b. `Windows-appsample-photo-lab\xaml-basics-starting-points\adaptive-layout` 디렉터리로 이동합니다.
 
-3. `Photolab.sln`을 클릭하여 프로젝트를 엽니다.
+3. `Photolab.sln`을 두 번 클릭하여 Visual Studio에서 솔루션을 엽니다.
 
-## <a name="part-1-run-the-mobile-emulator"></a>1부: 모바일 에뮬레이터 실행
+## <a name="part-1-define-window-breakpoints"></a>1부: 창 중단점 정의
 
-Visual Studio 도구 모음에서 솔루션 플랫폼이 ARM이 아닌 x86 또는 x64로 설정되어 있는지 확인한 다음, 대상 디바이스를 로컬 컴퓨터에서 설치한 모바일 에뮬레이터 중 하나로 변경합니다(예: Mobile Emulator 10.0.15063 WVGA 5인치 1GB). **F5**를 눌러 선택한 모바일 에뮬레이터에서 사진 갤러리 앱을 실행합니다.
+앱을 실행합니다. 전체 화면에는 잘 어울리지만 창을 너무 작게 축소하는 경우 UI(사용자 인터페이스)가 적합하지 않습니다. [VisualStateManager](/uwp/api/windows.ui.xaml.visualstatemanager)를 사용하여 다양한 창 크기게 맞게 UI를 조정하면 최종 사용자 환경을 항상 멋진 모습과 느낌으로 유지할 수 있습니다.
 
-앱이 시작되자마자 앱이 작동하기는 하는데, 작은 뷰포트 같은 곳에서 앱을 보기가 불편하다는 것을 알 수 있습니다. 유연한 그리드 요소는 표시되는 열 수를 줄여서 제한된 화면 영역을 수용하려고 시도하지만, 이렇게 작은 뷰포트에는 적합하지 않은 레이아웃으로 남게 됩니다.
+![작은 창: 이전](../basics/images/xaml-basics/adaptive-layout-small-before.png)
 
-![모바일 레이아웃: 이후](../basics/images/xaml-basics/adaptive-layout-mobile-before.png)
+앱 레이아웃에 대한 자세한 내용은 문서에서 [레이아웃](/windows/uwp/design/layout/) 섹션을 참조하세요.
 
-## <a name="part-2-build-a-tailored-mobile-layout"></a>2부: 맞춤형 모바일 레이아웃 빌드
-소형 디바이스에서 이 앱이 멋지게 보이도록, XAML 페이지에서 모바일 디바이스가 감지된 경우에만 사용되는 별도의 스타일 세트를 만들겠습니다.
+### <a name="add-window-breakpoints"></a>창 중단점 추가
+
+첫 번째 단계에서는 다양한 시각적 상태가 적용되는 중단점을 정의합니다. 소형, 중형 및 대형 화면의 중단점에 대한 자세한 내용은 [화면 크기 및 중단점](/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design)을 참조하세요.
+
+솔루션 탐색기에서 App.xaml을 열고, 닫는 `</ResourceDictionary>` 태그 바로 앞에 `MergedDictionaries` 뒤에 다음 코드를 추가합니다.
+
+```xaml
+    <!--  Window width adaptive breakpoints.  -->
+    <x:Double x:Key="MinWindowBreakpoint">0</x:Double>
+    <x:Double x:Key="MediumWindowBreakpoint">641</x:Double>
+    <x:Double x:Key="LargeWindowBreakpoint">1008</x:Double>
+```
+
+이렇게 하면 중단점이 3개 생성되어, 3가지 범위의 창 크기에 대해 새로운 시각적 상태를 만들 수 있습니다.
+
++ 작음(0-640픽셀 너비)
++ 보통(641-1007픽셀 너비)
++ 큼(1007픽셀을 초과하는 너비)
+
+이 예에서는 작은 창 크기에 대해서만 새로운 모양을 만듭니다. 중형 및 대형 크기는 동일한 모양을 사용합니다.
+
+## <a name="part-2-add-a-data-template-for-small-window-sizes"></a>2부: 작은 창 크기에 대한 데이터 템플릿 추가
+
+작은 창에서도 이 앱이 멋지게 보이도록 하기 위해, 사용자가 창을 축소하는 경우 이미지 갤러리 보기의 이미지가 표시되는 방식을 최적화하는 새 데이터 템플릿을 만들 수 있습니다.
 
 ### <a name="create-a-new-datatemplate"></a>새 DataTemplate 만들기
-이미지에 대한 새 DataTemplate을 만들어서 애플리케이션의 갤러리 보기를 조정하겠습니다. 솔루션 탐색기에서 MainPage.xaml을 열고 **Page.Resources** 태그에 다음 코드를 추가합니다.
 
-```XAML
-<DataTemplate x:Key="ImageGridView_MobileItemTemplate"
+ 솔루션 탐색기에서 MainPage.xaml을 열고 `Page.Resources` 태그에 다음 코드를 추가합니다.
+
+```xaml
+<DataTemplate x:Key="ImageGridView_SmallItemTemplate"
               x:DataType="local:ImageFileInfo">
 
     <!-- Create image grid -->
     <Grid Height="{Binding ItemSize, ElementName=page}"
           Width="{Binding ItemSize, ElementName=page}">
-        
+
         <!-- Place image in grid, stretching it to fill the pane-->
         <Image x:Name="ItemImage"
-               Source="{x:Bind ImagePreview}"
+               Source="{x:Bind ImageSource, Mode=OneWay}"
                Stretch="UniformToFill">
         </Image>
 
@@ -94,11 +112,10 @@ Visual Studio 도구 모음에서 솔루션 플랫폼이 ARM이 아닌 x86 또�
 이 갤러리 템플릿은 이미지 주위의 경계선을 없애고 각 미리 보기 아래의 이미지 메타데이터(파일 이름, 평점 등)를 제거하여 화면 공간을 절약합니다. 대신 각 미리 보기를 간단한 사각형으로 표시합니다.
 
 ### <a name="add-metadata-to-a-tooltip"></a>도구 설명에 메타데이터 추가
-사용자가 각 이미지의 메타데이터에 액세스할 수 있어야 하므로 각 이미지 항목에 도구 설명을 추가합니다. 방금 만든 DataTemplate의 **이미지** 태그 내에 다음 코드를 추가합니다.
 
-```XAML
-<Image ...>
+사용자가 각 이미지의 메타데이터에 액세스할 수 있어야 하므로 각 이미지 항목에 도구 설명을 추가합니다. 방금 만든 DataTemplate의 `Image` 태그 내에 다음 코드를 추가합니다.
 
+```xaml
     <!-- Add a tooltip to the image that displays metadata -->
     <ToolTipService.ToolTip>
         <ToolTip x:Name="tooltip">
@@ -130,117 +147,47 @@ Visual Studio 도구 모음에서 솔루션 플랫폼이 ARM이 아닌 x86 또�
             </StackPanel>
         </ToolTip>
     </ToolTipService.ToolTip>
-</Image>
 ```
 
 마우스로 미리 보기를 가리키거나 터치 스크린을 길게 누르면 이미지의 제목, 파일 유형 및 크기가 표시됩니다.
 
-### <a name="add-a-visualstatemanager-and-statetrigger"></a>VisualStateManager 및 StateTrigger 추가
+## <a name="part-3-define-visual-states"></a>3부: 시각적 상태 정의
 
-이제 데이터를 위한 새 레이아웃을 만들었지만, 앱은 현재 기본 스타일 대신 이 레이아웃을 사용해야 하는 시기를 알지 못합니다. 이 문제를 해결하려면 **VisualStateManager**를 추가해야 합니다. 페이지의 루트 요소인 **RelativePanel**에 다음 코드를 추가합니다.
+이제 데이터를 위한 새 레이아웃을 만들었지만, 앱은 현재 기본 스타일 대신 이 레이아웃을 사용해야 하는 시기를 알지 못합니다. 이 문제를 해결하려면 [VisualStateManager](/uwp/api/windows.ui.xaml.visualstatemanager)와 [VisualState](/uwp/api/windows.ui.xaml.visualstate) 정의를 추가해야 합니다.
 
-```XAML
+### <a name="add-a-visualstatemanager"></a>VisualStateManager 추가
+
+페이지의 루트 요소인 `RelativePanel`에 다음 코드를 추가합니다.
+
+```xaml
 <VisualStateManager.VisualStateGroups>
     <VisualStateGroup>
+    ...
 
-        <!-- Add a new VisualState for mobile devices -->
-        <VisualState x:Key="Mobile">
-
-            <!-- Trigger visualstate when a mobile device is detected -->
-            <VisualState.StateTriggers>
-                <local:MobileScreenTrigger InteractionMode="Touch" />
-            </VisualState.StateTriggers>
+        <!-- Large window VisualState -->
+        <VisualState x:Key="LargeWindow">
 
         </VisualState>
+
+        <!-- Medium window VisualState -->
+        <VisualState x:Key="MediumWindow">
+
+        </VisualState>
+
+        <!-- Small window VisualState -->
+        <VisualState x:Key="SmallWindow">
+
+        </VisualState>
+
     </VisualStateGroup>
 </VisualStateManager.VisualStateGroups>
 ```
 
-그러면 앱이 모바일 디바이스에서 실행 중임을 감지할 때 트리거되는 새로운 **VisualState** 및 **StateTrigger**가 추가됩니다(이 작업의 논리는 PhotoLab 디렉토리에 제공되는 MobileScreenTrigger.cs에서 찾을 수 있음). **StateTrigger**가 시작될 때 앱은 **VisualState**에 할당된 레이아웃 속성을 사용합니다.
+### <a name="create-statetriggers-to-apply-the-visual-state"></a>시각적 상태를 적용하는 StateTrigger 생성
 
-### <a name="add-visualstate-setters"></a>VisualState setter 추가
-다음으로, **VisualState** setter를 사용하여 상태가 트리거될 때 적용할 속성을 **VisualStateManager**에게 알려줍니다. 각 setter는 특정 XAML 요소의 속성 하나를 대상으로 삼아 지정된 값으로 설정합니다. 이 코드를 **VisualState.StateTriggers** 요소 아래에 있는 방금 만든 모바일 **VisualState**에 추가합니다. 
+다음으로 각 맞춤 지점에 해당하는 `StateTriggers`를 만듭니다. MainPage.xaml에서는 방금 2부에서 만든 `VisualStateManager`에 다음 코드를 추가합니다.
 
-```XAML
-<VisualStateManager.VisualStateGroups>
-    <VisualStateGroup>
-
-        <VisualState x:Key="Mobile">
-            ...
-
-            <!-- Add setters for mobile visualstate -->
-            <VisualState.Setters>
-
-                <!-- Move GridView about the command bar -->
-                <Setter Target="ImageGridView.(RelativePanel.Above)"
-                        Value="MainCommandBar" />
-
-                <!-- Switch to mobile layout -->
-                <Setter Target="ImageGridView.ItemTemplate"
-                        Value="{StaticResource ImageGridView_MobileItemTemplate}" />
-
-                <!-- Switch to mobile container styles -->
-                <Setter Target="ImageGridView.ItemContainerStyle"
-                        Value="{StaticResource ImageGridView_MobileItemContainerStyle}" />
-
-                <!-- Move command bar to bottom of the screen -->
-                <Setter Target="MainCommandBar.(RelativePanel.AlignBottomWithPanel)"
-                        Value="True" />
-                <Setter Target="MainCommandBar.(RelativePanel.AlignLeftWithPanel)"
-                        Value="True" />
-                <Setter Target="MainCommandBar.(RelativePanel.AlignRightWithPanel)"
-                        Value="True" />
-
-                <!-- Adjust the zoom slider to fit mobile screens -->
-                <Setter Target="ZoomSlider.Minimum"
-                        Value="80" />
-                <Setter Target="ZoomSlider.Maximum"
-                        Value="180" />
-                <Setter Target="ZoomSlider.TickFrequency"
-                        Value="20" />
-                <Setter Target="ZoomSlider.Value"
-                        Value="100" />
-            </VisualState.Setters>
-
-        </VisualState>
-    </VisualStateGroup>
-</VisualStateManager.VisualStateGroups>
-
-```
-
-이 setter는 이미지 갤러리의 **ItemTemplate**을 첫 번째 파트에서 생성한 **DataTemplate**으로 설정하고, 명령 모음과 확대/축소 슬라이더를 화면 하단에 정렬하여 휴대폰 화면에서 엄지 손가락으로 훨씬 쉽게 접근할 수 있게 해줍니다.
-
-### <a name="run-the-app"></a>앱 실행
-이제 모바일 에뮬레이터를 사용하여 앱을 실행합니다. 새 레이아웃이 성공적으로 표시됩니까? 아래 그림과 같이 작은 미리 보기 이미지가 표시됩니다. 여전히 이전 레이아웃이 표시되는 경우 **VisualStateManager** 코드에 오타가 있을 수 있습니다.
-
-![모바일 레이아웃: 이후](../basics/images/xaml-basics/adaptive-layout-mobile-after.png)
-
-## <a name="part-3-adapt-to-multiple-window-sizes-on-a-single-device"></a>3부: 한 디바이스에서 여러 창 크기 조정
-새로운 맞춤형 레이아웃을 만들면 모바일 디바이스의 반응형 디자인 문제를 해결할 수 있지만, 데스크톱과 태블릿의 경우는 어떨까요? 앱이 전체 화면으로 보기에는 좋지만, 사용자가 창을 축소하면 어색한 인터페이스로 표시될 수 있습니다. **VisualStateManager**를 사용하여 한 디바이스에서 여러 창 크기를 조정함으로써 최종 사용자 환경을 항상 적절한 모습과 느낌으로 유지할 수 있습니다.
-
-![작은 창: 이전](../basics/images/xaml-basics/adaptive-layout-small-before.png)
-
-### <a name="add-window-snap-points"></a>창 끌기 지점 추가
-첫 번째 단계는 서로 다른 **VisualStates**가 트리거되는 "끌기 지점"을 정의하는 것입니다. 솔루션 탐색기에서 App.xaml을 열고 **Application** 태그 간에 다음 코드를 추가합니다.
-
-```XAML
-<Application.Resources>
-    <!--  window width adaptive snap points  -->
-    <x:Double x:Key="MinWindowSnapPoint">0</x:Double>
-    <x:Double x:Key="MediumWindowSnapPoint">641</x:Double>
-    <x:Double x:Key="LargeWindowSnapPoint">1008</x:Double>
-</Application.Resources>
-```
-
-이렇게 하면 세 개의 끌기 지점이 제공되므로, 다음 세 가지 범위의 창 크기에 대한 새 **VisualStates**를 만들 수 있습니다.
-+ 작음(0-640픽셀 너비)
-+ 보통(641-1007픽셀 너비)
-+ 큼(1007픽셀을 초과하는 너비)
-
-### <a name="create-new-visualstates-and-statetriggers"></a>새 VisualStates 및 StateTriggers 만들기
-다음으로, 각 끌기 지점에 해당하는 **VisualStates** 및 **StateTriggers**를 만듭니다. MainPage.xaml에서는 방금 2부에서 만든 **VisualStateManager**에 다음 코드를 추가합니다.
-
-```XAML
+```xaml
 <VisualStateManager.VisualStateGroups>
     <VisualStateGroup>
     ...
@@ -252,7 +199,7 @@ Visual Studio 도구 모음에서 솔루션 플랫폼이 ARM이 아닌 x86 또�
             <VisualState.StateTriggers>
                 <AdaptiveTrigger MinWindowWidth="{StaticResource LargeWindowSnapPoint}"/>
             </VisualState.StateTriggers>
-     
+
         </VisualState>
 
         <!-- Medium window VisualState -->
@@ -262,7 +209,7 @@ Visual Studio 도구 모음에서 솔루션 플랫폼이 ARM이 아닌 x86 또�
             <VisualState.StateTriggers>
                 <AdaptiveTrigger MinWindowWidth="{StaticResource MediumWindowSnapPoint}"/>
             </VisualState.StateTriggers>
-        
+
         </VisualState>
 
         <!-- Small window VisualState -->
@@ -279,22 +226,21 @@ Visual Studio 도구 모음에서 솔루션 플랫폼이 ARM이 아닌 x86 또�
 </VisualStateManager.VisualStateGroups>
 ```
 
-### <a name="add-setters"></a>setter 추가
-마지막으로, 이러한 setter를 **SmallWindow** 상태에 추가합니다.
+각 시각적 상태가 트리거되면 앱은 활성 `VisualState`에 할당된 레이아웃 속성을 사용합니다.
 
-```XAML
+### <a name="set-properties-for-each-visual-state"></a>각 시각적 상태의 속성 설정
 
-<VisualState x:Key="SmallWindow">
-    ...
+마지막으로 상태가 트리거될 때 어떤 속성을 적용할지를 `VisualStateManager`에 알리는 각 시각적 상태에 대한 속성을 설정합니다. 각 setter는 특정 XAML 요소의 속성 하나를 대상으로 삼아 지정된 값으로 설정합니다. 다음 코드를 방금 만든 `SmallWindow` 시각적 상태에, `StateTriggers` 뒤에 추가합니다.
 
+```xaml
     <!-- Small window setters -->
     <VisualState.Setters>
 
-        <!-- Apply mobile itemtemplate and styles -->
+        <!-- Apply small template and styles -->
         <Setter Target="ImageGridView.ItemTemplate"
-                Value="{StaticResource ImageGridView_MobileItemTemplate}" />
+                Value="{StaticResource ImageGridView_SmallItemTemplate}" />
         <Setter Target="ImageGridView.ItemContainerStyle"
-                Value="{StaticResource ImageGridView_MobileItemContainerStyle}" />
+                Value="{StaticResource ImageGridView_SmallItemContainerStyle}" />
 
         <!-- Adjust the zoom slider to fit small windows-->
         <Setter Target="ZoomSlider.Minimum"
@@ -306,27 +252,24 @@ Visual Studio 도구 모음에서 솔루션 플랫폼이 ARM이 아닌 x86 또�
         <Setter Target="ZoomSlider.Value"
                 Value="100" />
     </VisualState.Setters>
-
-</VisualState>
-
 ```
 
-이 setter는 뷰포트의 너비가 641픽셀보다 작을 때마다 모바일 **DataTemplate** 및 스타일을 데스크톱 앱에 적용합니다. 또한 작은 화면에 더 잘 맞도록 확대/축소 슬라이더를 조정합니다.
+이러한 setter는 이미지 갤러리의 `ItemTemplate`을 이전 섹션에서 만든 새 `DataTemplate`으로 설정합니다. 또한 작은 화면에 더 잘 맞도록 확대/축소 슬라이더를 조정합니다.
 
 ### <a name="run-the-app"></a>앱 실행
 
-Visual Studio 도구 모음에서 대상 디바이스를 **로컬 컴퓨터**로 설정하고 앱을 실행합니다. 앱이 로드되면 창의 크기를 변경해 봅니다. 창을 작은 크기로 축소하면 앱이 2부에서 만든 모바일 레이아웃으로 전환되는 것을 볼 수 있습니다.
+앱을 실행합니다. 앱이 로드되면 창의 크기를 변경해 봅니다. 창을 작은 크기로 축소하면 앱이 2부에서 만든 작은 레이아웃으로 전환되는 것을 볼 수 있습니다.
 
 ![작은 창: 이후](../basics/images/xaml-basics/adaptive-layout-small-after.png)
 
 ## <a name="going-further"></a>더 나아가기
 
-이제 이 실습을 완료했으므로, 여러분은 혼자 더 많은 실습을 수행할 수 있는 충분한 적응형 레이아웃 지식을 얻었습니다. 이전에 추가한 모바일 전용 도구 설명에 평점 컨트롤을 추가해 보세요. 또는 더 큰 문제를 해결하려면 큰 화면 크기에 맞게 레이아웃을 최적화하세요(TV 화면 또는 Surface Studio).
+이제 이 실습을 완료했으므로, 여러분은 혼자 더 많은 실습을 수행할 수 있는 충분한 적응형 레이아웃 지식을 얻었습니다. 더 큰 문제를 해결하려면 Surface Hub와 같은 더 큰 화면 크기에 맞게 레이아웃을 최적화해보세요. Surface Hub 레이아웃을 테스트하려면 [Visual Studio를 사용하여 Surface Hub 앱 테스트](/windows/uwp/debug-test-perf/test-surface-hub-apps-using-visual-studio)를 참조하세요.
 
 문제가 있는 경우 [XAML을 사용하여 페이지 레이아웃 정의](../layout/layouts-with-xaml.md)의 다음 섹션에서 더 많은 지침을 찾을 수 있습니다.
 
-+ [시각적 상태 및 상태 트리거](https://docs.microsoft.com/windows/uwp/design/layout/layouts-with-xaml#visual-states-and-state-triggers)
-+ [맞춤형 레이아웃](https://docs.microsoft.com/windows/uwp/design/layout/layouts-with-xaml#tailored-layouts)
++ [시각적 상태 및 상태 트리거](/windows/uwp/design/layout/layouts-with-xaml#visual-states-and-state-triggers)
++ [맞춤형 레이아웃](/windows/uwp/design/layout/layouts-with-xaml#tailored-layouts)
 
 또는 초기 사진 편집 앱의 빌드 방법에 대해 자세히 알아보려면 XAML [사용자 인터페이스](../basics/xaml-basics-ui.md) 및 [데이터 바인딩](../../data-binding/xaml-basics-data-binding.md)의 이 자습서를 확인하세요.
 
