@@ -1,68 +1,68 @@
 ---
 ms.assetid: b7a4ac8a-d91e-461b-a060-cc6fcea8e778
-title: 시각적 계층을 XAML과 함께 사용
-description: 시각적 계층 API를 기존 XAML 콘텐츠와 함께 사용하여 고급 애니메이션 및 효과를 만드는 기술을 알아봅니다.
+title: XAML과 함께 시각적 계층 사용
+description: 시각적 계층 API를 기존 XAML 콘텐츠와 함께 사용 하 여 고급 애니메이션과 효과를 만드는 방법에 대해 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d6c1b4c477bfe5c4f584227491ef5a94e375fa2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 5b0c8f9909f59cb3a0dd5e16a6bb1c46fc069bfb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74255667"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160807"
 ---
-# <a name="using-the-visual-layer-with-xaml"></a>시각적 계층을 XAML과 함께 사용
+# <a name="using-the-visual-layer-with-xaml"></a>XAML과 함께 시각적 계층 사용
 
-시각적 계층 기능을 사용하는 대부분의 앱은 XAML을 사용하여 기본 UI 콘텐츠를 정의합니다. Windows 10 1주년 업데이트에는 XAML 프레임워크 및 시각적 계층에 대한 새로운 기능이 있으며 이 두 가지 기술을 쉽게 결합하여 매력적인 사용자 환경을 만들 수 있습니다.
-XAML 및 시각적 계층 interop 기능은 XAML API를 단독으로 사용하여 구현할 수 없는 고급 애니메이션 및 효과를 만드는 데 사용할 수 있습니다. 다음을 포함합니다.
+시각적 계층 기능을 사용 하는 대부분의 앱은 XAML을 사용 하 여 기본 UI 콘텐츠를 정의 합니다. Windows 10 기념일 업데이트에는 XAML 프레임 워크 및 시각적 계층에 새로운 기능이 있습니다 .이를 통해 이러한 두 기술을 결합 하 여 뛰어난 사용자 환경을 만들 수 있습니다.
+Xaml 및 시각적 계층 interop 기능을 사용 하 여 XAML Api를 단독으로 사용할 수 없는 고급 애니메이션 및 효과를 만들 수 있습니다. 다음 내용이 포함됩니다.
 
-- 흐리고 불투명한 유리 효과 같은 브러시 효과
+- 흐림 효과 및 frosted 유리와 같은 브러시 효과
 - 동적 조명 효과
-- 스크롤 기반 애니메이션 및 시차
+- 스크롤 구동 애니메이션 및 시차
 - 자동 레이아웃 애니메이션
-- 정확한 픽셀 그림자
+- 픽셀-완벽 한 그림자
 
-이러한 효과와 애니메이션은 기존 XAML 콘텐츠에 적용할 수 있으므로 새로운 기능을 활용하기 위해 XAML 앱 구조를 크게 변경하지 않아도 됩니다.
-레이아웃 애니메이션, 그림자 및 흐림 효과는 아래 레시피 섹션에서 설명합니다. 시차를 구현하는 코드 샘플에 대한 자세한 내용은 [ParallaxingListItems 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK%2010586/ParallaxingListItems)을 참조하세요. [WindowsUIDevLabs 리포지토리](https://github.com/microsoft/WindowsCompositionSamples)에 애니메이션, 그림자 및 효과를 구현하기 위한 다른 몇 가지 샘플도 있습니다.
+이러한 효과와 애니메이션은 기존 XAML 콘텐츠에 적용 될 수 있으므로 새 기능을 활용 하기 위해 XAML 앱을 크게 재구성할 필요가 없습니다.
+레이아웃 애니메이션, 그림자 및 흐림 효과는 아래 조리법 섹션에서 설명 합니다. 시차을 구현 하는 코드 샘플은 [ParallaxingListItems 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK%2010586/ParallaxingListItems)을 참조 하세요. [Windowsuidevlabs 리포지토리에](https://github.com/microsoft/WindowsCompositionSamples) 는 애니메이션, 그림자 및 효과를 구현 하기 위한 몇 가지 다른 샘플도 있습니다.
 
 ## <a name="the-xamlcompositionbrushbase-class"></a>XamlCompositionBrushBase 클래스
 
-**XamlCompositionBrush**는 **CompositionBrush**로 영역을 칠하는 XAML 브러시에 대한 기본 클래스를 제공합니다. 이는 쉽게 흐리고 불투명한 유리 같은 구성 효과를 XAML UI 요소에 적용하는 데 사용할 수 있습니다.
+**XamlCompositionBrush** 는 **CompositionBrush**를 사용 하 여 영역을 그리는 XAML 브러시에 대 한 기본 클래스를 제공 합니다. 이를 사용 하 여 흐림 효과 또는 frosted 유리와 같은 컴퍼지션 효과를 XAML UI 요소에 쉽게 적용할 수 있습니다.
 
-XAML UI와 브러시 사용에 대한 자세한 내용은 [**브러시**](/windows/uwp/design/style/brushes#xamlcompositionbrushbase) 섹션을 참조하세요.
+XAML UI에서 브러시를 사용 하는 방법에 대 한 자세한 내용은 [**브러시**](../design/style/brushes.md#xamlcompositionbrushbase) 섹션을 참조 하십시오.
 
-코드 샘플은 [**XamlCompositionBrushBase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)에 대한 참조 페이지를 참조하세요.
+코드 샘플은 [**XamlCompositionBrushBase**](/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)의 참조 페이지를 참조하세요.
 
 ## <a name="the-xamllight-class"></a>XamlLight 클래스
 
-**XamlLight**는 **CompositionLight**로 동적으로 영역을 밝히는 XAML 조명 효과에 대한 기본 클래스를 제공합니다.
+**Xamllight** 는 **CompositionLight**영역을 동적으로 밝게 하는 XAML 조명 효과에 대 한 기본 클래스를 제공 합니다.
 
-XAML UI 요소 조명을 포함한 조명 사용에 대한 자세한 내용은 [**조명을**](xaml-lighting.md) 섹션을 참조하세요.
+조명 XAML UI 요소를 비롯 한 광원 사용에 대 한 자세한 내용은 [**조명**](xaml-lighting.md) 섹션을 참조 하세요.
 
-코드 샘플은 [**XamlLight**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamllight)에 대한 참조 페이지를 참조하세요.
+코드 예제를 보려면 [**Xamllight**](/uwp/api/windows.ui.xaml.media.xamllight)에 대 한 참조 페이지를 참조 하세요.
 
 ## <a name="the-elementcompositionpreview-class"></a>ElementCompositionPreview 클래스
 
-[**ElementCompositionPreview**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview) 는 XAML 및 비주얼 계층 interop 기능을 제공 하는 정적 클래스입니다. 시각적 계층 및 해당 기능의 개요는 [시각적 계층](https://docs.microsoft.com/windows/uwp/graphics/visual-layer)을 참조하세요. **ElementCompositionPreview** 클래스는 다음 메서드를 제공합니다.
+[**ElementCompositionPreview**](/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview) 는 XAML 및 비주얼 계층 interop 기능을 제공 하는 정적 클래스입니다. 시각적 계층 및 해당 기능에 대 한 개요는 [시각적 계층](./visual-layer.md)을 참조 하세요. **ElementCompositionPreview** 클래스는 다음 메서드를 제공 합니다.
 
--   [**Getelementvisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual)개체:이 요소를 렌더링 하는 데 사용 되는 "유인물" 시각적 개체 가져오기
--   [**Setelementchildvisual**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual)개체: "수동" 시각적 개체를이 요소의 시각적 트리의 마지막 자식으로 설정 합니다. 이 시각적 개체는 나머지 요소의 맨 위에 표시됩니다. 
--   [**Getelementchildvisual 개체**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): **setelementchildvisual** 개체를 사용 하 여 시각적 집합 검색
--   [**GetScrollViewerManipulationPropertySet**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): **ScrollViewer** 에서 스크롤 오프셋을 기반으로 60fps 애니메이션을 만드는 데 사용할 수 있는 개체를 가져옵니다.
+-   [**Getelementvisual**](/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual)개체:이 요소를 렌더링 하는 데 사용 되는 "유인물" 시각적 개체 가져오기
+-   [**Setelementchildvisual**](/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.setelementchildvisual)개체: "수동" 시각적 개체를이 요소의 시각적 트리의 마지막 자식으로 설정 합니다. 이 시각적 개체는 요소의 나머지 부분 위에 그려집니다. 
+-   [**GetElementChildVisual**](/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): **SetElementChildVisual**을 사용하여 시각적 개체 설정을 검색합니다.
+-   [**GetScrollViewerManipulationPropertySet**](/uwp/api/windows.ui.xaml.hosting.elementcompositionpreview.getelementvisual): **ScrollViewer** 에서 스크롤 오프셋을 기반으로 60fps 애니메이션을 만드는 데 사용할 수 있는 개체를 가져옵니다.
 
-## <a name="remarks-on-elementcompositionpreviewgetelementvisual"></a>ElementCompositionPreview.GetElementVisual에 대한 설명
+## <a name="remarks-on-elementcompositionpreviewgetelementvisual"></a>ElementCompositionPreview에 대 한 설명
 
-**ElementCompositionPreview.GetElementVisual**은 지정된 **UIElement**를 렌더링하는 데 사용할 "핸드아웃" 시각적 개체를 반환합니다. **Visual.Opacity**, **Visual.Offset** 및 **Visual.Size**와 같은 속성은 UIElement의 상태에 따라 XAML 프레임워크에 의해 설정됩니다. 이렇게 하면 암시적 위치 변경 애니메이션 등의 기술을 사용할 수 있습니다(*레시피* 참조).
+**ElementCompositionPreview** 지정 된 **UIElement**를 렌더링 하는 데 사용 되는 "유인물" 시각적 개체를 반환 합니다. **표시**되는 속성은 UIElement의 상태를 기반으로 하 **는 XAML** 프레임 워크에 의해 설정 **됩니다.** 이렇게 하면 암시적인 애니메이션 위치 변경 ( *조리법*참조)과 같은 기술을 사용할 수 있습니다.
 
-**Offset** 및 **Size**는 XAML 프레임워크 레이아웃의 결과로 설정되므로 개발자는 이러한 속성에 애니메이션을 적용하거나 수정할 때 주의해야 합니다. 개발자는 요소의 왼쪽 위 모서리에 레이아웃의 부모와 동일한 위치가 있는 경우에만 Offset에 애니메이션 효과를 주거나 수정해야 합니다. Size는 일반적으로 수정할 수 없지만 속성에 액세스하는 것은 유용할 수 있습니다. 예를 들어 아래의 그림자 및 불투명한 유리 샘플은 애니메이션에 대한 입력으로 핸드아웃 시각적 개체 크기를 사용합니다.
+**오프셋과** **크기** 는 XAML 프레임 워크 레이아웃의 결과로 설정 되므로 개발자는 이러한 속성을 수정 하거나 애니메이션 효과를 적용할 때 주의 해야 합니다. 개발자는 요소의 왼쪽 위 모퉁이가 레이아웃의 부모와 동일한 위치인 경우에만 오프셋을 수정 하거나 애니메이션 효과를 적용 해야 합니다. 크기는 일반적으로 수정 되지 않아야 하지만 속성에 액세스 하는 것이 유용할 수 있습니다. 예를 들어, 아래의 그림자 및 Frosted 유리 샘플은 유인물 시각적 개체의 크기를 애니메이션에 대 한 입력으로 사용 합니다.
 
-그 외 주의할 점은 업데이트된 핸드아웃 시각적 개체 속성은 해당 UIElement에 반영되지 않습니다. 예를 들어 **UIElement.Opacity**를 0.5로 설정하면 해당 핸드아웃 시각적 개체의 Opacity가 0.5로 설정됩니다. 그러나 핸드아웃 시각적 개체의 **Opacity**를 0.5로 설정하면 콘텐츠의 불투명도가 50%로 표시되지만 해당 UIElement의 Opacity 속성 값이 변경되지는 않습니다.
+추가 주의 사항으로, 유인물 시각적 개체의 업데이트 된 속성은 해당 UIElement에 반영 되지 않습니다. 예를 들어 **UIElement** 를 0.5로 설정 하면 해당 하는 유인물 시각적 개체의 불투명도가 0.5로 설정 됩니다. 그러나 유인물 시각적 개체의 **불투명도** 를 0.5로 설정 하면 콘텐츠가 50% 불투명도로 표시 되지만 해당 UIElement의 opacity 속성 값은 변경 되지 않습니다.
 
-### <a name="example-of-offset-animation"></a>**Offset** 애니메이션 예
+### <a name="example-of-offset-animation"></a>**오프셋** 애니메이션의 예
 
-#### <a name="incorrect"></a>틀림
+#### <a name="incorrect"></a>틀렸습니다.
 
 ```xaml
 <Border>
@@ -75,7 +75,7 @@ XAML UI 요소 조명을 포함한 조명 사용에 대한 자세한 내용은 [
 ElementCompositionPreview.GetElementVisual(MyImage).StartAnimation("Offset", parallaxAnimation);
 ```
 
-#### <a name="correct"></a>맞음
+#### <a name="correct"></a>정답입니다.
 
 ```xaml
 <Border>
@@ -90,25 +90,25 @@ ElementCompositionPreview.GetElementVisual(MyImage).StartAnimation("Offset", par
 ElementCompositionPreview.GetElementVisual(MyImage).StartAnimation("Offset", parallaxAnimation);
 ```
 
-## <a name="the-elementcompositionpreviewsetelementchildvisual-method"></a>**ElementCompositionPreview.SetElementChildVisual** 메서드
+## <a name="the-elementcompositionpreviewsetelementchildvisual-method"></a>**ElementCompositionPreview. SetElementChildVisual**
 
-**ElementCompositionPreview.SetElementChildVisual**을 통해 개발자가 요소의 시각적 트리의 일부로 나타나는 "핸드인" 시각적 개체를 제공할 수 있습니다. 이렇게 하면 개발자가 XAML UI 내에 시각적 기반 콘텐츠를 표시할 수 있는 "컴퍼지션 섬"을 만들 수 있습니다. 시각적 기반 콘텐츠는 XAML 콘텐츠의 동일한 접근성과 사용자 환경을 보장하지 않으므로 개발자는 이 기술을 사용하는 것에 대해 보수적이어야 합니다. 따라서 일반적으로 이 기술은 아래의 레시피 섹션에 설명된 것처럼 사용자 지정 효과를 구현하는 데 있어 필요한 경우에만 사용하는 것이 좋습니다.
+**ElementCompositionPreview** 개발자는 요소 시각적 트리의 일부로 표시 되는 "수동" 시각적 개체를 제공할 수 있습니다. 이를 통해 개발자는 시각적 기반 콘텐츠가 XAML UI 내에 표시 될 수 있는 "컴퍼지션 섬"을 만들 수 있습니다. 시각적 개체 기반 콘텐츠는 XAML 콘텐츠에 대 한 액세스 가능성 및 사용자 환경이 동일 하지 않기 때문에 개발자는이 기법을 사용 하는 것이 좋습니다. 따라서 일반적으로이 기법은 아래의 조리법 섹션에서 볼 수 있는 것과 같은 사용자 지정 효과를 구현 하는 데 필요한 경우에만 사용 하는 것이 좋습니다.
 
 ## <a name="getalphamask-methods"></a>**GetAlphaMask** 메서드
 
-[**이미지**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image), [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)및 [**shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape) 는 각각 요소의 모양의 회색조 이미지를 나타내는 **CompositionBrush** 을 반환 하는 **GetAlphaMask** 라는 메서드를 구현 합니다. 이 **CompositionBrush**는 컴퍼지션 **DropShadow**에 대한 입력으로 사용할 수 있으므로 그림자는 사각형 대신 요소의 모양을 반영할 수 있습니다. 이렇게 하면 텍스트, 알파 이미지 및 모양에 대한 정확한 픽셀, 등고선 기반 그림자를 사용할 수 있습니다. 이 API의 예를 보려면 아래의 *그림자*를 참조하세요.
+[**이미지**](/uwp/api/Windows.UI.Xaml.Controls.Image), [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock)및 [**shape**](/uwp/api/Windows.UI.Xaml.Shapes.Shape) 는 각각 요소의 모양의 회색조 이미지를 나타내는 **CompositionBrush** 을 반환 하는 **GetAlphaMask** 라는 메서드를 구현 합니다. 이 **CompositionBrush** 는 컴퍼지션 **dropshadow**의 입력으로 사용할 수 있으므로 그림자는 사각형 대신 요소의 모양을 반영할 수 있습니다. 이를 통해 텍스트, 알파 및 모양이 포함 된 이미지에 대해 픽셀을 완벽 하 게 배분 된 그림자를 사용할 수 있습니다. 이 API에 대 한 예제는 아래 *그림자 삭제* 를 참조 하세요.
 
 ## <a name="recipes"></a>레시피
 
-### <a name="reposition-animation"></a>위치 변경 애니메이션
+### <a name="reposition-animation"></a>애니메이션 위치 변경
 
-개발자는 컴퍼지션 암시적 애니메이션을 사용하여 부모 관련 요소의 레이아웃 변경 사항에 자동으로 애니메이션 효과를 줄 수 있습니다. 예를 들어 아래 단추의 **Margin**이 변경된 경우 새 레이아웃 위치에 자동으로 애니메이션 효과를 줍니다.
+개발자는 컴퍼지션 암시적 애니메이션을 사용 하 여 부모를 기준으로 요소 레이아웃의 변경 내용에 자동으로 애니메이션 효과를 적용할 수 있습니다. 예를 들어 아래 단추의 **여백을** 변경 하면 새 레이아웃 위치에 자동으로 애니메이션 효과가 적용 됩니다.
 
 #### <a name="implementation-overview"></a>구현 개요
 
-1. 대상 요소에 대한 핸드아웃 **시각적 개체**를 가져옵니다.
-1. **Offset** 속성 변경 사항에 자동으로 애니메이션 효과를 주는 **ImplicitAnimationCollection**을 만듭니다.
-1. 백업 시각적 개체와 **ImplicitAnimationCollection**을 연결합니다.
+1. 대상 요소에 대 한 유인물 **시각적 개체** 가져오기
+1. **Offset** 속성의 변경 내용에 자동으로 애니메이션 효과를 주는 **ImplicitAnimationCollection** 만들기
+1. **ImplicitAnimationCollection** 을 지원 되는 시각적 개체와 연결
 
 ```xaml
 <Button x:Name="RepositionTarget" Content="Click Me" />
@@ -142,16 +142,16 @@ private void InitializeRepositionAnimation(UIElement repositionTarget)
 
 ### <a name="drop-shadow"></a>그림자
 
-**UIElement**에 정확한 픽셀 그림자를 적용합니다(예: 사진을 포함하는 **타원**). 그림자에는 앱에서 만든 **SpriteVisual**이 필요하므로 **ElementCompositionPreview.SetElementChildVisual**을 사용하여 **SpriteVisual**을 포함하는 "호스트" 요소를 만들어야 합니다.
+예를 들어 그림을 포함 하는 **타원과** 같은 픽셀 수준의 완벽 한 그림자를 **UIElement**에 적용 합니다. 섀도를 사용 하려면 앱에서 만든 **SpriteVisual** 가 필요 하므로 **ElementCompositionPreview**를 사용 하 여 **SpriteVisual** 를 포함 하는 "host" 요소를 만들어야 합니다.
 
 #### <a name="implementation-overview"></a>구현 개요
 
-1. 호스트 요소에 대한 핸드아웃 **시각적 개체**를 가져옵니다.
-2. Windows.UI.Composition **DropShadow**를 만듭니다.
-3. 마스크를 통해 대상 요소에서 모양을 가져오도록 **DropShadow**를 구성합니다.
-    - **DropShadow**는 기본적으로 사각형이므로 대상이 사각형인 경우에는 구성할 필요가 없습니다.
-4. 새 **SpriteVisual**에 그림자를 첨부하고 **SpriteVisual**을 호스트 요소의 자식으로 설정합니다.
-5. **ExpressionAnimation**을 사용하여 호스트 크기에 **SpriteVisual** 크기를 바인딩합니다.
+1. 호스트 요소에 대 한 유인물 **시각적 개체** 가져오기
+2. Windows. a u. 컴퍼지션 **Dropshadow** 를 만듭니다.
+3. 마스크를 통해 대상 요소에서 셰이프를 가져오도록 **Dropshadow** 를 구성 합니다.
+    - **Dropshadow** 는 기본적으로 사각형 이므로 대상이 사각형 인 경우에는 필요 하지 않습니다.
+4. 새 **SpriteVisual**에 그림자를 연결 하 고 **SpriteVisual** 를 host 요소의 자식으로 설정 합니다.
+5. **SpriteVisual** 크기를 **expressionanimation** 을 사용 하 여 호스트 크기에 바인딩
 
 ```xaml
 <Grid Width="200" Height="200">
@@ -199,7 +199,7 @@ private void InitializeDropShadow(UIElement shadowHost, Shape shadowTarget)
 }
 ```
 
-다음 두 가지 목록은 동일한 XAML 구조를 사용하는 이전 C# 코드의 [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index) 및 [C++/CX](https://docs.microsoft.com/cpp/cppcx/visual-c-language-reference-c-cx) 등가를 표시합니다.
+다음 두 목록은 동일한 XAML 구조를 사용 하 여 이전 C&#35; 코드와 동일한 [c + +/Winrt](../cpp-and-winrt-apis/index.md) 및 [c + +/cx](/cpp/cppcx/visual-c-language-reference-c-cx) 를 보여 줍니다.
 
 ```cppwinrt
 #include <winrt/Windows.UI.Composition.h>
@@ -283,16 +283,16 @@ void MainPage::InitializeDropShadow(Windows::UI::Xaml::UIElement^ shadowHost, Wi
 
 ### <a name="frosted-glass"></a>불투명한 유리
 
-백그라운드 콘텐츠에 색조를 부여하고 흐리게 하는 효과를 만듭니다. 효과를 사용하려면 개발자는 Win2D NuGet 패키지를 설치해야 합니다. 설치 지침은 [Win2D 홈페이지](https://microsoft.github.io/Win2D/html/Introduction.htm)를 참조하세요.
+배경 내용의 흐린 및 색조로 효과를 만듭니다. 개발자는 효과를 사용 하려면 Win2D NuGet 패키지를 설치 해야 합니다. 설치 지침은 [Win2D 홈 페이지](https://microsoft.github.io/Win2D/html/Introduction.htm) 를 참조 하세요.
 
 #### <a name="implementation-overview"></a>구현 개요
 
-1.  호스트 요소에 대한 핸드아웃 **시각적 개체**를 가져옵니다.
-2.  Win2D 및 **CompositionEffectSourceParameter**를 사용하여 흐림 효과 트리를 만듭니다.
-3.  효과 트리를 기반으로 **CompositionEffectBrush**를 만듭니다.
-4.  **SpriteVisual** 뒤의 콘텐츠에 효과를 적용할 수 있도록 **CompositionEffectBrush**의 입력을 **CompositionBackdropBrush**로 설정합니다.
-5.  **CompositionEffectBrush**를 새 **SpriteVisual**의 콘텐츠로 설정하고 **SpriteVisual**을 호스트 요소의 자식으로 설정합니다. 또는 XamlCompositionBrushBase를 사용할 수 있습니다.
-6.  **ExpressionAnimation**을 사용하여 호스트 크기에 **SpriteVisual** 크기를 바인딩합니다.
+1.  호스트 요소에 대 한 유인물 **시각적 개체** 가져오기
+2.  Win2D 및 **CompositionEffectSourceParameter** 를 사용 하 여 흐림 효과 트리 만들기
+3.  효과 트리를 기반으로 **CompositionEffectBrush** 만들기
+4.  **CompositionEffectBrush** 의 입력을 **CompositionBackdropBrush**로 설정 하 여 효과를 **SpriteVisual** 뒤의 내용에 적용할 수 있도록 합니다.
+5.  **CompositionEffectBrush** 을 새 **SpriteVisual**의 콘텐츠로 설정 하 고 **SpriteVisual** 를 host 요소의 자식으로 설정 합니다. XamlCompositionBrushBase를 사용할 수도 있습니다.
+6.  **SpriteVisual** 크기를 **expressionanimation** 을 사용 하 여 호스트 크기에 바인딩
 
 ```xaml
 <Grid Width="300" Height="300" Grid.Column="1">
@@ -362,8 +362,8 @@ private void InitializeFrostedGlass(UIElement glassHost)
 
 ## <a name="additional-resources"></a>추가 리소스
 
-- [시각적 계층 개요](https://docs.microsoft.com/windows/uwp/composition/visual-layer)
-- [**ElementCompositionPreview** 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview)
-- [WindowsUIDevLabs GitHub](https://github.com/microsoft/WindowsCompositionSamples)의 고급 UI 및 Composition 샘플
+- [시각적 계층 개요](./visual-layer.md)
+- [**ElementCompositionPreview** 클래스](/uwp/api/Windows.UI.Xaml.Hosting.ElementCompositionPreview)
+- [Windowsuidevlabs GitHub](https://github.com/microsoft/WindowsCompositionSamples) 의 고급 UI 및 컴퍼지션 샘플
 - [BasicXamlInterop 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK%2010586/BasicXamlInterop)
 - [ParallaxingListItems 샘플](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SampleGallery/Samples/SDK%2010586/ParallaxingListItems)

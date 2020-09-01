@@ -1,60 +1,60 @@
 ---
 ms.assetid: 1889AC3A-A472-4294-89B8-A642668A8A6E
 title: 방향 센서 사용
-description: 방향 센서를 사용하여 디바이스 방향을 확인하는 방법을 알아봅니다.
+description: 방향 센서를 사용 하 여 장치 방향을 결정 하는 방법에 대해 알아봅니다.
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 407c76c41d4a8620e2168e8e03dd2a3e24d73b61
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0217567fd2b78542b745a02fbdfa3bd816d9a2b6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66369568"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159457"
 ---
 # <a name="use-the-orientation-sensor"></a>방향 센서 사용
 
 
-**중요 한 Api**
+**중요 API**
 
--   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
--   [**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor)
--   [**SimpleOrientation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.SimpleOrientation)
+-   [**Windows.Devices.Sensors**](/uwp/api/Windows.Devices.Sensors)
+-   [**OrientationSensor**](/uwp/api/Windows.Devices.Sensors.OrientationSensor)
+-   [**SimpleOrientation**](/uwp/api/Windows.Devices.Sensors.SimpleOrientation)
 
 **샘플**
 
 -   [방향 센서 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/OrientationSensor)
 -   [간단한 방향 센서 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SimpleOrientationSensor)
 
-방향 센서를 사용하여 디바이스 방향을 확인하는 방법을 알아봅니다.
+방향 센서를 사용 하 여 장치 방향을 결정 하는 방법에 대해 알아봅니다.
 
-두 가지 유형의 Api에 포함 하는 방향 센서를 가지는 [ **Windows.Devices.Sensors** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors) 네임 스페이스: [**OrientationSensor** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) 하 고 [ **SimpleOrientation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.SimpleOrientation)합니다. 두 센서는 모두 방향 센서이지만 해당 용어가 오버로드되어 매우 다른 용도로 사용됩니다. 그러나 둘 다 방향 센서이므로 모두 이 문서에서 다뤄집니다.
+OrientationSensor 네임 스페이스에 포함 된 두 가지 유형의 방향 센서 Api ( [**OrientationSensor**](/uwp/api/Windows.Devices.Sensors.OrientationSensor) 및 [**SimpleOrientation**](/uwp/api/Windows.Devices.Sensors.SimpleOrientation))가 [**있습니다.**](/uwp/api/Windows.Devices.Sensors) 이러한 센서는 모두 방향 센서 이지만 해당 용어는 오버 로드 되며 매우 다른 용도로 사용 됩니다. 그러나 두 가지 모두 방향 센서가 기 때문에이 문서에 설명 되어 있습니다.
 
-[  **OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) API는 3차원 앱이 쿼터니언과 회전 행렬을 가져오는 데 사용됩니다. 쿼터 니 언을 지점의 회전으로 가장 쉽게 이해할 수 있습니다 \[x, y, z\] (세 개의 축 회전을 나타내는 회전 행렬을 사용 하 여 대조) 임의의 축에 대 한 합니다. 쿼터니언의 수학적 배경은 쿼터니언이 복소수의 기하학적 속성과 허수의 수학적 속성과 관련이 있으므로 매우 매력적이지만 이에 대한 작업은 간단하고 DirectX같은 프레임워크가 이를 지원합니다. 복합 3-D 앱은 방향 센서를 사용하여 사용자 시각을 조정할 수 있습니다. 이 센서는 가속도계, 회전계 및 나침반의 입력을 결합합니다.
+[**OrientationSensor**](/uwp/api/Windows.Devices.Sensors.OrientationSensor) API는 3 차원 앱에 사용 되며 4 원수와 회전 행렬을 가져옵니다. 4 원수는 \[ 임의의 축에 대 한 점 x, y, z의 회전으로 가장 쉽게 이해 될 수 있습니다 \] (3 개의 축을 중심으로 회전을 나타내는 회전 매트릭스와 대조). 복소수는 복소수의 기하학 속성과 복소수의 수학적 속성을 포함 하지만, 이러한 작업을 수행 하는 것은 간단 하며 DirectX와 같은 프레임 워크는 이러한 작업을 지원 하기 때문에 매우 exotic. 복잡 한 3 차원 앱은 방향 센서를 사용 하 여 사용자의 큐브 뷰를 조정할 수 있습니다. 이 센서는가 속도계, 회전 계 및 나침반의 입력을 결합 합니다.
 
-[  **SimpleOrientation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.SimpleOrientation) API는 세로 위로, 세로 아래로, 가로 왼쪽, 가로 오른쪽과 같은 정의 측면에서 현재 장치 방향을 확인하는 데 사용됩니다. 장치가 앞면 위로 또는 앞면 아래로인지도 탐지할 수 있습니다. "왼쪽 가로" 또는 "등록 portrait" 등의 속성을 반환 하는 대신이 센서 회전 값을 반환 합니다. "회전 하지", "Rotated90DegreesCounterclockwise", 및 등입니다. 다음 표는 일반적인 방향 속성을 해당 센서 표기에 매핑합니다.
+[**SimpleOrientation**](/uwp/api/Windows.Devices.Sensors.SimpleOrientation) API는 세로 위쪽, 세로 아래쪽, 가로 왼쪽 및 가로 오른쪽과 같은 정의 측면에서 현재 장치 방향을 결정 하는 데 사용 됩니다. 또한 장치가 얼굴을 차지 하 고 있는지 여부를 감지할 수 있습니다. "세로 위쪽" 또는 "가로 왼쪽"과 같은 속성을 반환 하는 대신이 센서는 "회전 안 함", "Rotated90DegreesCounterclockwise" 등의 회전 값을 반환 합니다. 다음 표에서는 일반적인 방향 속성을 해당 센서 읽기에 매핑합니다.
 
-| 방향     | 해당 센서 표기      |
+| 방향     | 해당 센서 판독값      |
 |-----------------|-----------------------------------|
-| Portrait Up(세로 위로)     | NotRotated                        |
-| Landscape Left(가로 왼쪽)  | Rotated90DegreesCounterclockwise  |
-| Portrait Down(세로 아래로)   | Rotated180DegreesCounterclockwise |
-| Landscape Right(가로 오른쪽) | Rotated270DegreesCounterclockwise |
+| 세로 위쪽     | NotRotated                        |
+| 왼쪽 가로  | Rotated90DegreesCounterclockwise  |
+| 세로 아래로   | Rotated180DegreesCounterclockwise |
+| 가로 오른쪽 | Rotated270DegreesCounterclockwise |
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
-사용 하 여 Extensible Application Markup Language (XAML), Microsoft Visual 친숙 해야 C#, 및 이벤트입니다.
+Extensible Application Markup Language (XAML), Microsoft Visual c # 및 이벤트에 대해 잘 알고 있어야 합니다.
 
-사용하는 장치 또는 에뮬레이터가 방향 센서를 지원해야 합니다.
+사용 중인 장치 또는 에뮬레이터에서 방향 센서를 지원 해야 합니다.
 
 ## <a name="create-an-orientationsensor-app"></a>OrientationSensor 앱 만들기
 
-이 섹션은 두 개의 하위 섹션으로 나뉩니다. 첫 번째 하위 섹션에서는 처음부터 방향 응용 프로그램을 만드는 데 필요한 단계를 안내합니다. 다음 하위 섹션에서는 방금 만든 앱에 대해 설명합니다.
+이 섹션은 두 개의 하위 섹션으로 구성 되어 있습니다. 첫 번째 하위 섹션에서는 방향 응용 프로그램을 처음부터 만드는 데 필요한 단계를 안내 합니다. 다음 하위 섹션에서는 방금 만든 앱에 대해 설명 합니다.
 
-###  <a name="instructions"></a>지침
+###  <a name="instructions"></a>Instructions
 
--   **Visual C#** 프로젝트 템플릿에서 **빈 앱(유니버설 Windows)** 를 선택하여 새 프로젝트를 만듭니다.
+-   **Visual c #** 프로젝트 템플릿에서 **빈 앱 (유니버설 Windows)** 을 선택 하 여 새 프로젝트를 만듭니다.
 
 -   프로젝트의 MainPage.xaml.cs 파일을 열고 기존 코드를 다음 코드로 바꿉니다.
 
@@ -129,9 +129,9 @@ ms.locfileid: "66369568"
     }
 ```
 
-이전 코드 조각의 네임스페이스 이름을 프로젝트에 지정한 이름으로 바꾸어야 합니다. 예를 들어 **OrientationSensorCS**라는 프로젝트를 만든 경우 `namespace App1` 을 `namespace OrientationSensorCS`로 바꿉니다.
+이전 코드 조각에서 네임 스페이스의 이름을 프로젝트에 지정한 이름으로 바꿔야 합니다. 예를 들어 **OrientationSensorCS**이라는 프로젝트를 만든 경우를 `namespace App1` 로 바꿉니다 `namespace OrientationSensorCS` .
 
--   MainPage.xaml 파일을 열고 원본 콘텐츠를 다음 XML로 바꿉니다.
+-   MainPage .xaml 파일을 열고 원래 내용을 다음 XML로 바꿉니다.
 
 ```xml
         <Page
@@ -175,25 +175,25 @@ ms.locfileid: "66369568"
     </Page>
 ```
 
-이전 코드 조각에서 클래스 이름의 첫 번째 부분을 앱의 네임스페이스로 바꾸어야 합니다. 예를 들어 **OrientationSensorCS**라는 프로젝트를 만든 경우 `x:Class="App1.MainPage"` 을 `x:Class="OrientationSensorCS.MainPage"`로 바꿉니다. 또한 `xmlns:local="using:App1"`을 `xmlns:local="using:OrientationSensorCS"`로 바꾸어야 합니다.
+이전 코드 조각의 클래스 이름 중 첫 번째 부분을 응용 프로그램의 네임 스페이스로 바꾸어야 합니다. 예를 들어 **OrientationSensorCS**이라는 프로젝트를 만든 경우를 `x:Class="App1.MainPage"` 로 바꿉니다 `x:Class="OrientationSensorCS.MainPage"` . 또한를로 바꾸어야 `xmlns:local="using:App1"` 합니다 `xmlns:local="using:OrientationSensorCS"` .
 
--   F5 키를 누르거나 **디버그** > **디버깅 시작**을 선택하여 앱을 빌드, 배포 및 실행합니다.
+-   F5 키를 누르거나 **디버그**  >  **디버깅 시작** 을 선택 하 여 앱을 빌드, 배포 및 실행 합니다.
 
-앱이 실행 중이면 디바이스를 이동하거나 에뮬레이터 도구를 사용하여 방향을 변경할 수 있습니다.
+앱이 실행 되 면 장치를 이동 하거나 에뮬레이터 도구를 사용 하 여 방향을 변경할 수 있습니다.
 
--   Visual Studio로 돌아가서 Shift+F5를 눌러 앱을 중지하거나 **디버그** > **디버깅 중지**를 선택하여 앱을 중지합니다.
+-   Visual Studio로 돌아가서 Shift + F5 키를 누르거나 **디버그**  >  **디버깅 중지** 를 선택 하 여 앱을 중지 함으로써 앱을 중지 합니다.
 
 ###  <a name="explanation"></a>설명
 
-앞의 예는 앱에서 방향 센서 입력을 통합하기 위해 작성해야 하는 코드의 양이 얼마나 작은지를 보여줍니다.
+이전 예제에서는 앱에서 방향 센서 입력을 통합 하기 위해 작성 해야 하는 코드의 양을 보여 줍니다.
 
-앱은 **MainPage** 메서드에서 기본 방향 센서와 연결합니다.
+앱은 **Mainpage** 메서드에서 기본 방향 센서와의 연결을 설정 합니다.
 
 ```csharp
 _sensor = OrientationSensor.GetDefault();
 ```
 
-앱은 **MainPage** 메서드 내에서 보고 간격을 설정합니다. 이 코드는 디바이스에서 지원되는 최소 간격을 검색하여 요청된 16밀리초 간격(약 60Hz 새로 고침 빈도)과 비교합니다. 지원되는 최소 간격이 요청된 간격보다 큰 경우 코드는 값을 최소값으로 설정합니다. 그렇지 않으면 값을 요청된 간격으로 설정합니다.
+앱은 **Mainpage** 메서드 내에서 보고서 간격을 설정 합니다. 이 코드는 장치에서 지 원하는 최소 간격을 검색 하 고 요청 된 간격을 16 밀리초 (60-Hz 새로 고침 빈도 근사치)와 비교 합니다. 지원 되는 최소 간격이 요청 된 간격 보다 클 경우 코드에서 값을 최소값으로 설정 합니다. 그렇지 않으면 값을 요청 된 간격으로 설정 합니다.
 
 ```csharp
 uint minReportInterval = _sensor.MinimumReportInterval;
@@ -201,22 +201,22 @@ uint reportInterval = minReportInterval > 16 ? minReportInterval : 16;
 _sensor.ReportInterval = reportInterval;
 ```
 
-새 센서 데이터는 **ReadingChanged** 메서드에서 캡처됩니다. 센서 드라이버는 센서에서 새 데이터를 받을 때마다 이 이벤트 처리기를 사용하여 이 값을 앱에 전달합니다. 앱은 다음 줄에서 이 이벤트 처리기를 등록합니다.
+새 센서 데이터가 **readingchanged 이벤트가 발생할** 메서드에서 캡처됩니다. 센서 드라이버가 센서 로부터 새 데이터를 받을 때마다이 이벤트 처리기를 사용 하 여 앱에 값을 전달 합니다. 앱은 다음 줄에이 이벤트 처리기를 등록 합니다.
 
 ```csharp
 _sensor.ReadingChanged += new TypedEventHandler<OrientationSensor,
 OrientationSensorReadingChangedEventArgs>(ReadingChanged);
 ```
 
-이 새 값은 프로젝트의 XAML에서 찾은 TextBlock에 쓰입니다.
+이러한 새 값은 프로젝트의 XAML에 있는 Textblock에 기록 됩니다.
 
 ## <a name="create-a-simpleorientation-app"></a>SimpleOrientation 앱 만들기
 
-이 섹션은 두 개의 하위 섹션으로 나뉩니다. 첫 번째 하위 섹션에서는 처음부터 간단한 방향 응용 프로그램을 만드는 데 필요한 단계를 안내합니다. 다음 하위 섹션에서는 방금 만든 앱에 대해 설명합니다.
+이 섹션은 두 개의 하위 섹션으로 구성 되어 있습니다. 첫 번째 하위 섹션에서는 간단한 방향 응용 프로그램을 처음부터 만드는 데 필요한 단계를 안내 합니다. 다음 하위 섹션에서는 방금 만든 앱에 대해 설명 합니다.
 
-### <a name="instructions"></a>지침
+### <a name="instructions"></a>Instructions
 
--   **Visual C#** 프로젝트 템플릿에서 **빈 앱(유니버설 Windows)** 를 선택하여 새 프로젝트를 만듭니다.
+-   **Visual c #** 프로젝트 템플릿에서 **빈 앱 (유니버설 Windows)** 을 선택 하 여 새 프로젝트를 만듭니다.
 
 -   프로젝트의 MainPage.xaml.cs 파일을 열고 기존 코드를 다음 코드로 바꿉니다.
 
@@ -299,9 +299,9 @@ OrientationSensorReadingChangedEventArgs>(ReadingChanged);
     }
 ```
 
-이전 코드 조각의 네임스페이스 이름을 프로젝트에 지정한 이름으로 바꾸어야 합니다. 예를 들어 **SimpleOrientationCS**라는 프로젝트를 만든 경우 `namespace App1` 을 `namespace SimpleOrientationCS`로 바꿉니다.
+이전 코드 조각에서 네임 스페이스의 이름을 프로젝트에 지정한 이름으로 바꿔야 합니다. 예를 들어 **SimpleOrientationCS**이라는 프로젝트를 만든 경우를 `namespace App1` 로 바꿉니다 `namespace SimpleOrientationCS` .
 
--   MainPage.xaml 파일을 열고 원본 콘텐츠를 다음 XML로 바꿉니다.
+-   MainPage .xaml 파일을 열고 원래 내용을 다음 XML로 바꿉니다.
 
 ```xml
     <Page
@@ -321,32 +321,32 @@ OrientationSensorReadingChangedEventArgs>(ReadingChanged);
     </Page>
 ```
 
-이전 코드 조각에서 클래스 이름의 첫 번째 부분을 앱의 네임스페이스로 바꾸어야 합니다. 예를 들어 **SimpleOrientationCS**라는 프로젝트를 만든 경우 `x:Class="App1.MainPage"` 을 `x:Class="SimpleOrientationCS.MainPage"`로 바꿉니다. 또한 `xmlns:local="using:App1"`을 `xmlns:local="using:SimpleOrientationCS"`로 바꾸어야 합니다.
+이전 코드 조각의 클래스 이름 중 첫 번째 부분을 응용 프로그램의 네임 스페이스로 바꾸어야 합니다. 예를 들어 **SimpleOrientationCS**이라는 프로젝트를 만든 경우를 `x:Class="App1.MainPage"` 로 바꿉니다 `x:Class="SimpleOrientationCS.MainPage"` . 또한를로 바꾸어야 `xmlns:local="using:App1"` 합니다 `xmlns:local="using:SimpleOrientationCS"` .
 
--   F5 키를 누르거나 **디버그** > **디버깅 시작**을 선택하여 앱을 빌드, 배포 및 실행합니다.
+-   F5 키를 누르거나 **디버그**  >  **디버깅 시작** 을 선택 하 여 앱을 빌드, 배포 및 실행 합니다.
 
-앱이 실행 중이면 디바이스를 이동하거나 에뮬레이터 도구를 사용하여 방향을 변경할 수 있습니다.
+앱이 실행 되 면 장치를 이동 하거나 에뮬레이터 도구를 사용 하 여 방향을 변경할 수 있습니다.
 
--   Visual Studio로 돌아가서 Shift+F5를 눌러 앱을 중지하거나 **디버그** > **디버깅 중지**를 선택하여 앱을 중지합니다.
+-   Visual Studio로 돌아가서 Shift + F5 키를 누르거나 **디버그**  >  **디버깅 중지** 를 선택 하 여 앱을 중지 함으로써 앱을 중지 합니다.
 
 ### <a name="explanation"></a>설명
 
-앞의 예는 앱에서 단순 방향 센서 입력을 통합하기 위해 작성해야 하는 코드의 양이 얼마나 작은지를 보여줍니다.
+이전 예제에서는 간단한 방향 센서 입력을 앱에 통합 하기 위해 작성 해야 하는 코드의 양을 보여 줍니다.
 
-앱은 **MainPage** 메서드에서 기본 센서와 연결합니다.
+앱은 **Mainpage** 메서드의 기본 센서와의 연결을 설정 합니다.
 
 ```csharp
 _simpleorientation = SimpleOrientationSensor.GetDefault();
 ```
 
-새 센서 데이터는 **OrientationChanged** 메서드에서 캡처됩니다. 센서 드라이버는 센서에서 새 데이터를 받을 때마다 이 이벤트 처리기를 사용하여 이 값을 앱에 전달합니다. 앱은 다음 줄에서 이 이벤트 처리기를 등록합니다.
+새 센서 데이터가 **OrientationChanged** 메서드에서 캡처됩니다. 센서 드라이버가 센서 로부터 새 데이터를 받을 때마다이 이벤트 처리기를 사용 하 여 앱에 값을 전달 합니다. 앱은 다음 줄에이 이벤트 처리기를 등록 합니다.
 
 ```csharp
 _simpleorientation.OrientationChanged += new TypedEventHandler<SimpleOrientationSensor,
 SimpleOrientationSensorOrientationChangedEventArgs>(OrientationChanged);
 ```
 
-이 새 값은 프로젝트의 XAML에서 찾은 TextBlock에 쓰입니다.
+이러한 새 값은 프로젝트의 XAML에서 찾은 TextBlock에 기록 됩니다.
 
 ```csharp
 <TextBlock HorizontalAlignment="Left" Height="24" Margin="8,8,0,0" TextWrapping="Wrap" Text="Current Orientation:" VerticalAlignment="Top" Width="101" Foreground="#FFF8F7F7"/>

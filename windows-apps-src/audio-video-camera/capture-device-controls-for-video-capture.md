@@ -1,97 +1,93 @@
 ---
 ms.assetid: 708170E1-777A-4E4A-9F77-5AB28B88B107
-description: 이 문서에서는 수동 디바이스 컨트롤을 사용하여 HDR 비디오, 노출 우선 순위 등의 향상된 비디오 캡처 시나리오를 가능하게 하는 방법을 보여 줍니다.
+description: 이 문서에서는 수동 장치 컨트롤을 사용 하 여 HDR 비디오 및 노출 우선 순위를 비롯 한 향상 된 비디오 캡처 시나리오를 사용 하는 방법을 보여 줍니다.
 title: 비디오 캡처를 위한 수동 카메라 컨트롤
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d20f2d372354cf7bbfa596318f165c424f08c8ee
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: d484571f69025ceb1ce8c6eeb827c46cacfa15ed
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66358860"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160977"
 ---
 # <a name="manual-camera-controls-for-video-capture"></a>비디오 캡처를 위한 수동 카메라 컨트롤
 
 
 
-이 문서에서는 수동 디바이스 컨트롤을 사용하여 HDR 비디오, 노출 우선 순위 등의 향상된 비디오 캡처 시나리오를 가능하게 하는 방법을 보여 줍니다.
+이 문서에서는 수동 장치 컨트롤을 사용 하 여 HDR 비디오 및 노출 우선 순위를 비롯 한 향상 된 비디오 캡처 시나리오를 사용 하는 방법을 보여 줍니다.
 
-이 문서에서 설명하는 비디오 디바이스 컨트롤은 모두 동일한 패턴을 사용하여 앱에 추가됩니다. 먼저, 앱이 실행 중인 현재 디바이스에서 컨트롤이 지원되는지를 확인합니다. 컨트롤이 지원되는 경우 컨트롤에 대해 원하는 모드를 설정합니다. 일반적으로 특정 컨트롤이 현재 디바이스에서 지원되지 않으면 사용자가 기능을 사용하도록 설정할 수 있는 UI 요소를 사용하지 않도록 설정하거나 숨겨야 합니다.
+이 문서에서 설명 하는 비디오 장치 컨트롤은 모두 동일한 패턴을 사용 하 여 앱에 추가 됩니다. 먼저 앱이 실행 되는 현재 장치에서 컨트롤이 지원 되는지 확인 합니다. 컨트롤이 지원 되는 경우 컨트롤에 대 한 원하는 모드를 설정 합니다. 일반적으로 현재 장치에서 특정 컨트롤이 지원 되지 않는 경우 사용자가 기능을 사용할 수 있도록 하는 UI 요소를 사용 하지 않도록 설정 하거나 숨깁니다.
 
-이 문서에서 다루는 모든 API 디바이스 컨트롤은 [**Windows.Media.Devices**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices) 네임스페이스의 멤버입니다.
+이 문서에서 설명 하는 모든 장치 컨트롤 Api는 [**Windows. Media. Devices**](/uwp/api/Windows.Media.Devices) 네임 스페이스의 멤버입니다.
 
 [!code-cs[VideoControllersUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoControllersUsing)]
 
 > [!NOTE] 
-> 이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 보다 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본적인 미디어 캡처 패턴을 파악하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있다고 가정합니다.
+> 이 문서는 기본 사진 및 비디오 캡처를 구현 하는 단계를 설명 하는 [MediaCapture을 사용 하 여 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명 된 개념 및 코드를 기반으로 합니다. 고급 캡처 시나리오로 전환 하기 전에 해당 문서의 기본적인 미디어 캡처 패턴을 숙지 하는 것이 좋습니다. 이 문서의 코드는 앱에 이미 올바르게 초기화 된 MediaCapture 인스턴스가 있다고 가정 합니다.
 
 ## <a name="hdr-video"></a>HDR 비디오
 
-HDR(High Dynamic Range) 비디오 기능은 캡처 디바이스의 비디오 스트림에 HDR 처리를 적용합니다. [  **HdrVideoControl.Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.hdrvideocontrol.supported) 속성을 확인하여 HDR 비디오가 지원되는지 검토합니다.
+HDR (high dynamic range) 비디오 기능은 캡처 장치의 비디오 스트림에 HDR 처리를 적용 합니다. [**HdrVideoControl**](/uwp/api/windows.media.devices.hdrvideocontrol.supported) 속성을 선택 하 여 HDR 비디오가 지원 되는지 확인 합니다.
 
-HDR 비디오 컨트롤은 세 가지 모드인 켜짐, 꺼짐 및 자동을 지원합니다. 즉, 디바이스는 HDR 비디오 처리가 미디어 캡처를 향상시키는지를 동적으로 확인하고 향상시킬 경우 HDR 비디오를 사용하도록 설정합니다. 현재 디바이스에서 특정 모드가 지원되는지 확인하려면 [**HdrVideoControl.SupportedModes**](https://docs.microsoft.com/uwp/api/windows.media.devices.hdrvideocontrol.supportedmodes) 컬렉션이 원하는 모드를 포함하는지 확인합니다.
+HDR 비디오 컨트롤은 on, off 및 automatic의 세 가지 모드를 지원 합니다. 즉, 장치는 HDR 비디오 처리로 인해 미디어 캡처가 향상 되는지 여부를 동적으로 결정 하 고, 그럴 경우 HDR 비디오를 사용 하도록 설정 합니다. 특정 모드가 현재 장치에서 지원 되는지 확인 하려면 [**HdrVideoControl**](/uwp/api/windows.media.devices.hdrvideocontrol.supportedmodes) 컬렉션에 원하는 모드가 포함 되어 있는지 확인 하세요.
 
-[  **HdrVideoControl.Mode**](https://docs.microsoft.com/uwp/api/windows.media.devices.hdrvideocontrol.mode)를 원하는 모드로 설정하여 HDR 비디오 처리를 사용하거나 사용하지 않도록 설정합니다.
+[**HdrVideoControl**](/uwp/api/windows.media.devices.hdrvideocontrol.mode) 을 원하는 모드로 설정 하 여 HDR 비디오 처리를 사용 하거나 사용 하지 않도록 설정 합니다.
 
 [!code-cs[SetHdrVideoMode](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSetHdrVideoMode)]
 
 ## <a name="exposure-priority"></a>노출 우선 순위
 
-[  **ExposurePriorityVideoControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.ExposurePriorityVideoControl)을 사용할 경우 캡처 디바이스의 비디오 프레임을 평가하여 비디오가 낮은 조명 장면을 캡처하는지를 확인합니다. 따라서 이 컨트롤은 각 프레임의 노출 시간을 늘리고 캡처된 비디오의 시각적 품질을 개선하기 위해 캡처한 비디오의 프레임 속도를 낮춥니다.
+[**ExposurePriorityVideoControl**](/uwp/api/Windows.Media.Devices.ExposurePriorityVideoControl)사용 하도록 설정 되 면 캡처 장치에서 비디오 프레임을 평가 하 여 비디오가 낮은 밝은 장면을 캡처 하 고 있는지 확인 합니다. 그렇다면 각 프레임에 대 한 노출 시간을 늘리고 캡처한 비디오의 시각적 품질을 향상 시키기 위해 캡처된 비디오의 프레임 속도로 줄어듭니다.
 
-[  **ExposurePriorityVideoControl.Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.exposurepriorityvideocontrol.supported) 속성을 확인하여 현재 디바이스에서 노출 우선 순위 컨트롤이 지원되는지를 확인합니다.
+[**ExposurePriorityVideoControl**](/uwp/api/windows.media.devices.exposurepriorityvideocontrol.supported) 속성을 확인 하 여 현재 장치에서 노출 우선 순위 컨트롤이 지원 되는지 여부를 확인 합니다.
 
-[  **ExposurePriorityVideoControl.Enabled**](https://docs.microsoft.com/uwp/api/windows.media.devices.exposurepriorityvideocontrol.enabled)를 원하는 모드로 설정하여 노출 우선순위 컨트롤을 사용하거나 사용하지 않도록 설정합니다.
+[**ExposurePriorityVideoControl**](/uwp/api/windows.media.devices.exposurepriorityvideocontrol.enabled) 을 원하는 모드로 설정 하 여 노출 우선 순위 컨트롤을 사용 하거나 사용 하지 않도록 설정 합니다.
 
 [!code-cs[EnableExposurePriority](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetEnableExposurePriority)]
 
-## <a name="temporal-denoising"></a>임시 디노이징
-Windows 10, 버전 1803부터는 비디오를 지원하는 장치에서 비디오를 일시적으로 디노이징할 수 있습니다. 이 기능은 실시간으로 여러 인접 프레임의 이미지 데이터를 융합하여 시각적 노이즈가 적은 비디오 프레임을 생성합니다.
+## <a name="temporal-denoising"></a>임시 denoising
+Windows 10 버전 1803부터 비디오를 지 원하는 장치에서 비디오에 대 한 임시 denoising를 사용 하도록 설정할 수 있습니다. 이 기능은 인접 한 여러 프레임의 이미지 데이터를 실시간으로 결합 시각적 노이즈가 떨어지는 비디오 프레임을 생성 합니다.
 
-[  **VideoTemporalDenoisingControl**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol)을 통해  앱은 현재 디바이스에서 임시 디노이징 기능이 지원되는지 확인할 수 있고 그럴 경우 지원되는 디노이징 모드를 알할 수 있습니다. 사용 가능한 denoising 모드는 [ **해제**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingmode)를 [ **온**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingmode), 및 [ **자동** ](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingmode). 장치는 모든 모드를 지원 하지 않을 수 있지만 모든 장치 중 하나를 지원 해야 합니다 **자동** 또는 **에** 하 고 **해제**합니다.
+앱은 [**VideoTemporalDenoisingControl**](/uwp/api/windows.media.devices.videotemporaldenoisingcontrol) 를 사용 하 여 현재 장치에서 임시 denoising이 지원 되는지 여부를 확인 하 고, 있는 경우 지원 되는 denoising 모드를 확인할 수 있습니다. 사용 가능한 denoising 모드는 [**Off**](/uwp/api/windows.media.devices.videotemporaldenoisingmode), [**On**](/uwp/api/windows.media.devices.videotemporaldenoisingmode)및 [**Auto**](/uwp/api/windows.media.devices.videotemporaldenoisingmode)입니다. 장치에서 일부 모드를 지원 하지 않을 수 있지만 모든 장치에서 **자동** 또는 **켜기** 및 **끄기**를 지원 해야 합니다.
 
-다음 예제에서는 간단한 UI를 사용하여 사용자가 다른 디노이징 모드로 전환할 수 있는 라디오 버튼을 제공합니다.
+다음 예제에서는 간단한 UI를 사용 하 여 사용자가 denoising 모드 간을 전환할 수 있는 라디오 단추를 제공 합니다.
 
 [!code-xml[SnippetDenoiseXAML](./code/BasicMediaCaptureWin10/cs/MainPage.xaml#SnippetDenoiseXAML)]
 
-다음 메서드에서 [**VideoTemporalDenoisingControl.Supported**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol.supported) 속성을 확인하여 임시 디노이징이 현재 디바이스에서 지원되고 있는지 확인할 수 있습니다. 지원되는 경우, **Off** 및 **Auto** 또는 **On**이 지원되는지 확인하고 이 경우에 라디오 단추가 표시되는지도 확인합니다. 그 다음 이 메서드가 지원되면 **Auto** 및 **On** 단추가 표시되도록 합니다.
+다음 방법에서는 [**VideoTemporalDenoisingControl**](/uwp/api/windows.media.devices.videotemporaldenoisingcontrol.supported) 속성을 확인 하 여 현재 장치에서 임시 denoising가 모두 지원 되는지 확인 합니다. 그렇다면 **Off** 및 **Auto** 또는 **On** 이 지원 되는지 확인 합니다 .이 경우 라디오 단추가 표시 됩니다. 그런 다음 이러한 메서드가 지원 되는 경우 **자동** 및 **켜기** 단추가 표시 됩니다.
 
 [!code-cs[SnippetUpdateDenoiseCapabilities](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetUpdateDenoiseCapabilities)]
 
-라디오 단추의 **Checked** 이벤트 처리기에서 이 단추의 이름을 확인하고 [**VideoTemporalDenoisingControl.Mode**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol.mode) 속성을 설정하여 해당 모드를 설정합니다.
+라디오 단추에 대해 **checked** 이벤트 처리기에서 단추의 이름을 선택 하 고 [**VideoTemporalDenoisingControl**](/uwp/api/windows.media.devices.videotemporaldenoisingcontrol.mode) 속성을 설정 하 여 해당 모드를 설정 합니다.
 
 [!code-cs[SnippetDenoiseButtonChecked](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetDenoiseButtonChecked)]
 
-### <a name="disabling-temporal-denoising-while-processing-frames"></a>프레임을 처리하는 동안 임시 디노이징 비활성화
-임시 디노이징 기능을 사용하여 처리된 비디오는 인간의 눈에 더욱 만족스럽게 보일 수 있습니다. 그러나 임시 디노이징이 이미지 일관성에 영향을 미치고 프레임의 세부 사항을 감소시킬 수 있으므로 등록 또는 광학 문자 인식과 같이 프레임에서 이미지 처리를 수행하는 응용 프로그램은 이미지 처리가 활성화될 때 프로그래밍 방식으로 비노이징 기능을 비활성화할 수 있습니다.
+### <a name="disabling-temporal-denoising-while-processing-frames"></a>프레임을 처리 하는 동안 임시 denoising 사용 안 함
+임시 denoising를 사용 하 여 처리 된 비디오는 인간 눈에 더 보기 편 수 있습니다. 그러나 temporal denoising는 이미지 일관성에 영향을 줄 수 있고 프레임의 세부 정보의 양을 낮출 수 있으므로, 이미지 처리를 사용 하도록 설정 하면 프레임에서 이미지 처리를 수행 하는 앱 (예: 등록 또는 광학 인식)에서 프로그래밍 방식으로 denoising을 사용 하지 않도록 설정할 수 있습니다.
 
-다음 예제는 지원되는 디노이징 모드를 결정하고 일부 클래스 변수에 이 정보를 저장합니다.
+다음 예에서는 지원 되는 denoising 모드를 확인 하 고 일부 클래스 변수에이 정보를 저장 합니다.
 
 [!code-cs[SnippetDenoiseFrameReaderVars](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetDenoiseFrameReaderVars)]
 
 [!code-cs[SnippetDenoiseCapabilitiesForFrameProcessing](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetDenoiseCapabilitiesForFrameProcessing)]
 
-앱이 프레임 처리를 지원할 때 프레임 처리에서 디노이징되지 않은 원시 프레임을 사용할 수 있도록 디노이징 모드를 지원하면 앱은 디노이징 모드를 **Off**로 설정합니다.
+앱에서 프레임 처리를 사용 하는 경우 프레임 처리가 denoised 되지 않은 원시 프레임을 사용할 수 있도록 해당 모드가 지원 되는 경우 denoising 모드를 **Off** 로 설정 합니다.
 
 [!code-cs[SnippetEnableFrameProcessing](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetEnableFrameProcessing)]
 
-앱에서 프레임 처리를 비활성화하면 지원되는 모드에 따라 앱은 디노이징 모드를 **On** 또는 **Auto**로 설정합니다.
+앱에서 프레임 prcessing를 사용 하지 않도록 설정 하면 지원 되는 모드에 따라 denoising 모드가 **켜기** 또는 **자동**으로 설정 됩니다.
 
 [!code-cs[SnippetDisableFrameProcessing](./code/BasicMediaCaptureWin10/cs/MainPage.ManualControls.xaml.cs#SnippetDisableFrameProcessing)]
 
-이미지 처리를 위한 비디오 프레임을 가져오는 방법에 대한 자세한 내용은 [MediaFrameReader를 사용하여 미디어 프레임 처리](process-media-frames-with-mediaframereader.md)를 참조하세요.
+이미지 처리를 위한 비디오 프레임을 얻는 방법에 대 한 자세한 내용은 [MediaFrameReader를 사용 하 여 미디어 프레임 처리](process-media-frames-with-mediaframereader.md)를 참조 하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
-* [MediaFrameReader 사용 하 여 미디어 처리 프레임](process-media-frames-with-mediaframereader.md)
-*  [**VideoTemporalDenoisingControl**](https://docs.microsoft.com/uwp/api/windows.media.devices.videotemporaldenoisingcontrol)
+* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaFrameReader를 사용하여 미디어 프레임 처리](process-media-frames-with-mediaframereader.md)
+*  [**VideoTemporalDenoisingControl**](/uwp/api/windows.media.devices.videotemporaldenoisingcontrol)
  
-
-
-
-

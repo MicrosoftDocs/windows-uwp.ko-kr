@@ -7,12 +7,12 @@ keywords: ime, 입력 방법 편집기, 입력, 상호 작용
 ms.date: 07/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ecf150973defb0a431fc7248181ddf648576ac77
-ms.sourcegitcommit: 86ce67a03e87fa1282849b2fcb4f89d1cf23a091
+ms.openlocfilehash: 5a34c15826bff757b7c4277b87cc5fed53a6f109
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87840081"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160007"
 ---
 # <a name="custom-input-method-editor-ime-requirements"></a>사용자 지정 IME (입력기) 요구 사항
 
@@ -181,7 +181,7 @@ IME는 다음 조건을 충족 하는 경우 통합 검색 환경과 호환 됩�
 
 ## <a name="ui-design-guidelines"></a>UI 디자인 지침
 
-모든 Ime는 [Windows 앱 디자인 및 코드](/windows/uwp/design/)에 설명 된 사용자 환경 지침을 따라야 합니다.
+모든 Ime는 [Windows 앱 디자인 및 코드](../index.md)에 설명 된 사용자 환경 지침을 따라야 합니다.
 
 ### <a name="dont-use-sticky-windows"></a>고정 창을 사용 하지 않음
 
@@ -206,7 +206,7 @@ IME 브랜드 아이콘은 최신 서체에서 렌더링 된 입력 문자 모�
 
 IME 모드 아이콘은 1 픽셀의 외부 스트로크를 50% 불투명도의 검정색으로 포함 하는 현대 서체에서 흰색 입력 문자 모양으로 정의 됩니다.
 
-| 아이콘 | 설명 |
+| 아이콘 | Description |
 | --- | --- |
 | :::image type="content" source="images/IMEs/ime-brand-icon-traditional-chinese.png" alt-text="중국어 번체 ChangeJie의 예제 IME 브랜드 아이콘"::: | 중국어 번체 ChangeJie의 예제 IME 브랜드 아이콘 |
 | :::image type="content" source="images/IMEs/ime-brand-icon-traditional-chinese-new.png" alt-text="중국어 번체 새 ChangeJie의 예제 IME 브랜드 아이콘."::: | 중국어 번체 ChangeJie의 예제 IME 브랜드 아이콘 |
@@ -301,4 +301,4 @@ Ime가 접근성 요구 사항을 준수 하 고 내레이터를 사용 하도�
 - [ITfFnSearchCandidateProvider](/windows/win32/api/ctffunc/nn-ctffunc-itffnsearchcandidateprovider)
 - [ITfIntegratableCandidateListUIElement](/windows/win32/api/ctffunc/nn-ctffunc-itfintegratablecandidatelistuielement)
 - [SendInput](/windows/win32/api/winuser/nf-winuser-sendinput)
-- [접근성](/windows/uwp/design/accessibility/accessibility)
+- [접근성](../accessibility/accessibility.md)

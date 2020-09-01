@@ -1,55 +1,55 @@
 ---
-Description: 음성 인식에 대한 사용자 지정 제약 조건을 정의하고 사용하는 방법을 알아봅니다.
+Description: 음성 인식에 대 한 사용자 지정 제약 조건을 정의 하 고 사용 하는 방법에 대해 알아봅니다.
 title: 사용자 지정 인식 제약 조건 정의
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
 template: detail.hbs
-keywords: 음성 명령, 목소리, 음성 인식, 자연어, 받아쓰기, 입력, 사용자 조작
+keywords: 음성, 음성, 음성 인식, 자연어, 받아쓰기, 입력, 사용자 조작
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b94c946222f510c7f1b1f7619b67ee83e6c2256
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: b48564469fd77f3c670739a7095124ed7399a1fe
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258011"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160077"
 ---
 # <a name="define-custom-recognition-constraints"></a>사용자 지정 인식 제약 조건 정의
 
-음성 인식에 대한 사용자 지정 제약 조건을 정의하고 사용하는 방법을 알아봅니다.
+음성 인식에 대 한 사용자 지정 제약 조건을 정의 하 고 사용 하는 방법에 대해 알아봅니다.
 
-> **중요 API**: [**SpeechRecognitionTopicConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint), [**SpeechRecognitionListConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint), [**SpeechRecognitionGrammarFileConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint)
+> **중요 한 api**: [**SpeechRecognitionTopicConstraint**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint), [**SpeechRecognitionListConstraint**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint), [**SpeechRecognitionGrammarFileConstraint**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint)
 
-인식할 수 있는 어휘를 정의하려면 음성 인식에 하나 이상의 제약 조건이 필요합니다. 제약 조건을 지정하지 않으면 유니버설 Windows 앱의 미리 정의된 받아쓰기 문법이 사용됩니다. [음성 인식](speech-recognition.md)을 참조하세요.
+음성 인식은 인식할 수 있는 어휘를 정의 하는 하나 이상의 제약 조건이 필요 합니다. 제약 조건을 지정 하지 않으면 유니버설 Windows 앱의 미리 정의 된 받아쓰기 문법이 사용 됩니다. [음성 인식](speech-recognition.md)을 참조 하세요.
 
 ## <a name="add-constraints"></a>제약 조건 추가
 
-[  **SpeechRecognizer.Constraints**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.constraints) 속성을 사용하여 음성 인식기에 제약 조건을 추가합니다.
+[**SpeechRecognizer**](/uwp/api/windows.media.speechrecognition.speechrecognizer.constraints) 속성을 사용 하 여 음성 인식기에 제약 조건을 추가 합니다.
 
-여기서는 앱 내에서 사용되는 세 종류의 음성 인식 제약 조건에 대해 설명합니다. Cortana 음성 명령 제약 조건의 경우 [cortana에서 음성 명령을 사용 하 여 포그라운드 앱 시작](https://docs.microsoft.com/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana)을 참조 하세요.
+여기서는 앱 내에서 사용 되는 세 가지 종류의 음성 인식 제약 조건을 다룹니다. Cortana 음성 명령 제약 조건의 경우 [cortana에서 음성 명령을 사용 하 여 포그라운드 앱 시작](/cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana)을 참조 하세요.
 
-- [**SpeechRecognitionTopicConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint)-미리 정의 된 문법 (받아쓰기 또는 웹 검색)을 기반으로 하는 제약 조건입니다.
-- [**SpeechRecognitionListConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint)-단어 또는 구의 목록을 기반으로 하는 제약 조건입니다.
-- [**SpeechRecognitionGrammarFileConstraint**](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint)-음성 인식 문법 사양 (SRGS) 파일에 정의 된 제약 조건입니다.
+- [**SpeechRecognitionTopicConstraint**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint)-미리 정의 된 문법 (받아쓰기 또는 웹 검색)을 기반으로 하는 제약 조건입니다.
+- [**SpeechRecognitionListConstraint**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint)-단어 또는 구의 목록을 기반으로 하는 제약 조건입니다.
+- [**SpeechRecognitionGrammarFileConstraint**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint)-음성 인식 문법 사양 (SRGS) 파일에 정의 된 제약 조건입니다.
 
-각 음성 인식기에 하나의 제약 조건 컬렉션을 사용할 수 있습니다. 다음과 같은 제약 조건 조합만 유효합니다.
+각 음성 인식기에는 하나의 제약 조건 컬렉션이 있을 수 있습니다. 이러한 제약 조건 조합만 유효 합니다.
 
-- 단일 항목 제한 조건(받아쓰기 또는 웹 검색)
-- Windows 10 Fall Creators Update(10.0.16299.15) 이상의 경우, 단일 항목 제한 조건을 목록 제한 조건과 결합할 수 있습니다.
-- 목록 제약 조건 및/또는 문법 파일 제약 조건 조합
+- 단일 항목 제약 조건 (받아쓰기 또는 웹 검색)
+- Windows 10 10.0.16299.15 (Windows 10) 작성자 업데이트 () 이상에서는 단일 토픽 제약 조건을 list 제약 조건과 함께 사용할 수 있습니다.
+- 목록 제약 조건 및/또는 문법 파일 제약 조건의 조합입니다.
 
 > [!Important]
-> 인식 프로세스를 시작하기 전에 **[SpeechRecognizer.CompileConstraintsAsync](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync)** 메서드를 호출하여 제약 조건을 컴파일합니다.
+> 인식 프로세스를 시작 하기 전에 **[SpeechRecognizer CompileConstraintsAsync](/uwp/api/windows.media.speechrecognition.speechrecognizer.compileconstraintsasync)** 메서드를 호출 하 여 제약 조건을 컴파일합니다.
 
-## <a name="specify-a-web-search-grammar-speechrecognitiontopicconstraint"></a>웹 검색 문법(SpeechRecognitionTopicConstraint) 지정
+## <a name="specify-a-web-search-grammar-speechrecognitiontopicconstraint"></a>웹 검색 문법 지정 (SpeechRecognitionTopicConstraint)
 
-음성 인식기의 제약 조건 컬렉션에 항목 제약 조건(받아쓰기 또는 웹 검색 문법)을 추가해야 합니다.
+토픽 제약 조건 (받아쓰기 또는 웹 검색 문법)을 음성 인식기의 제약 조건 컬렉션에 추가 해야 합니다.
 
 > [!NOTE]
-> 이제 [SpeechRecognitionTopicConstraint](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint)와 함께 [SpeechRecognitionListConstraint](https://docs.microsoft.com/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint)를 사용하여 받아쓰는 동안 사용될 것으로 생각되는 도메인별 키워드 세트를 제공하여 받아쓰기 정확도를 향상시킬 수 있습니다.
+> [SpeechRecognitionTopicConstraint](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint) 와 함께 [SpeechRecognitionListConstraint](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint) 를 사용 하 여 받아쓰기 중에 사용 될 가능성이 높은 도메인 특정 키워드 집합을 제공 함으로써 받아쓰기 정확도를 높일 수 있습니다.
 
-여기서는 제약 조건 컬렉션에 웹 검색 문법을 추가합니다.
+여기서는 웹 검색 문법을 제약 조건 컬렉션에 추가 합니다.
 
 ```CSharp
 private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
@@ -81,16 +81,16 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="specify-a-programmatic-list-constraint-speechrecognitionlistconstraint"></a>프로그래밍 방식으로 목록 제약 조건(SpeechRecognitionListConstraint) 지정
+## <a name="specify-a-programmatic-list-constraint-speechrecognitionlistconstraint"></a>프로그래밍 목록 제약 조건 지정 (SpeechRecognitionListConstraint)
 
-음성 인식기의 제약 조건 컬렉션에 목록 제약 조건을 추가해야 합니다.
+음성 인식기의 제약 조건 컬렉션에 목록 제약 조건을 추가 해야 합니다.
 
-다음 사항을 기억하세요.
+다음 사항을 염두에 두어야 합니다.
 
-- 제약 조건 컬렉션에 여러 목록 제약 조건을 추가할 수 있습니다.
-- 문자열 값에 대한 **IIterable&lt;String&gt;** 을 구현하는 모든 컬렉션을 사용할 수 있습니다.
+- 제약 조건 컬렉션에 여러 list 제약 조건을 추가할 수 있습니다.
+- 문자열 값으로 **iiterable<t> &lt; string &gt; ** 을 구현 하는 모든 컬렉션을 사용할 수 있습니다.
 
-여기서는 프로그래밍 방식으로 단어 배열을 목록 제약 조건으로 지정하고 음성 인식기의 제약 조건 컬렉션에 추가합니다.
+여기서는 프로그래밍 방식으로 단어 배열을 목록 제약 조건으로 지정 하 고이를 음성 인식기의 제약 조건 컬렉션에 추가 합니다.
 
 ```CSharp
 private async void YesOrNo_Click(object sender, RoutedEventArgs e)
@@ -120,31 +120,31 @@ private async void YesOrNo_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="specify-an-srgs-grammar-constraint-speechrecognitiongrammarfileconstraint"></a>SRGS 문법 제약 조건(SpeechRecognitionGrammarFileConstraint) 지정
+## <a name="specify-an-srgs-grammar-constraint-speechrecognitiongrammarfileconstraint"></a>SpeechRecognitionGrammarFileConstraint (SRGS 문법 제약 조건) 지정
 
-음성 인식기의 제약 조건 컬렉션에 SRGS 문법 파일을 추가해야 합니다.
+SRGS 문법 파일은 음성 인식기의 제약 조건 컬렉션에 추가 해야 합니다.
 
-SRGS 버전 1.0은 음성 인식에 대한 XML 형식 문법을 만들기 위한 산업 표준 생성 언어입니다. 유니버설 Windows 앱에서는 음성 인식 문법을 만들 때 SRGS 외에 다른 방법을 사용할 수도 있지만, 특히 더 복잡한 음성 인식 시나리오의 경우 SRGS를 사용하여 문법을 만드는 방법이 최상의 결과를 생성한다는 것을 알 수 있습니다.
+SRGS 버전 1.0는 음성 인식에 대 한 XML 형식 문법을 만들기 위한 업계 표준 태그 언어입니다. 유니버설 Windows 앱은 음성 인식 문법을 만드는 데 SRGS를 사용 하는 대신 사용할 수 있는 대안을 제공 하지만 SRGS를 사용 하 여 문법 만들기는 특히 더 많은 음성 인식 시나리오에 적합 한 최상의 결과를 생성 하는 것을 알 수 있습니다.
 
-SRGS 문법은 앱에 대한 복잡한 음성 조작을 구성하는 데 도움이 되는 전체 기능 집합을 제공합니다. 예를 들어 SRGS 문법을 사용하여 다음을 수행할 수 있습니다.
+SRGS 문법은 앱에 대 한 복잡 한 음성 상호 작용을 설계 하는 데 도움이 되는 전체 기능 집합을 제공 합니다. 예를 들어 SRGS 문법을 사용 하면 다음을 수행할 수 있습니다.
 
-- 인식되는 단어와 구문을 말해야 하는 순서를 지정합니다.
-- 인식되는 여러 목록과 구문의 단어를 조합합니다.
-- 다른 문법에 연결합니다.
-- 대체 단어나 구문에 가중치를 할당하여 음성 입력과 일치하는 데 사용될 가능성을 높이거나 낮춥니다.
-- 선택적 단어나 구문을 포함합니다.
-- 문법과 일치하지 않는 임의 음성이나 백그라운드 노이즈와 같은 지정되지 않거나 예상하지 못한 입력을 필터링하는 데 도움이 되는 특수 규칙을 사용합니다.
-- 의미 체계를 사용하여 음성 인식이 앱에 어떤 의미인지를 정의합니다.
-- 문법 또는 lexicon 링크를 통해 인라인으로 발음을 지정합니다.
+- 단어와 구를 인식 하기 위해 음성 해야 하는 순서를 지정 합니다.
+- 여러 목록과 구의 단어를 조합 하 여 인식 합니다.
+- 다른 문법에 대 한 링크입니다.
+- 대체 단어나 구에 가중치를 할당 하 여 음성 입력을 일치 시키는 데 사용 될 가능성을 늘리거나 줄입니다.
+- 선택적 단어 또는 문구를 포함 합니다.
+- 문법에 일치 하지 않는 임의 음성 또는 배경 노이즈와 같이 지정 되지 않거나 예기치 않은 입력을 필터링 하는 데 도움이 되는 특수 규칙을 사용 합니다.
+- 의미 체계를 사용 하 여 앱에 대 한 음성 인식 의미를 정의 합니다.
+- 문법에서 인라인 또는 어휘에 대 한 링크를 통해 발음를 지정 합니다.
 
-SRGS 요소 및 특성에 대한 자세한 내용은 [SRGS 문법 XML 참고](https://msdn.microsoft.com/library/hh361653)를 참조하세요. SRGS 문법 만들기를 시작하려면 [기본 XML 문법을 만드는 방법](https://msdn.microsoft.com/library/hh361658)을 참조하세요.
+SRGS 요소 및 특성에 대 한 자세한 내용은 [SRGS 문법 XML 참조](/previous-versions/office/developer/speech-technologies/hh361653(v=office.14)) 를 참조 하세요. SRGS 문법을 만들기 시작 하려면 [How To Create a BASIC XML grammar](/previous-versions/office/developer/speech-technologies/hh361658(v=office.14))항목을 참조 하세요.
 
-다음 사항을 기억하세요.
+다음 사항을 염두에 두어야 합니다.
 
 - 제약 조건 컬렉션에 여러 문법 파일 제약 조건을 추가할 수 있습니다.
-- SRGS 규칙을 준수하는 XML 기반 문법 문서에 .grxml 파일 확장명을 사용합니다.
+- SRGS 규칙을 준수 하는 XML 기반 문법 문서에는 grxml 파일 확장명을 사용 합니다.
 
-이 예제에서는 srgs.grxml이라는 파일에 정의된 SRGS 문법을 사용합니다(나중에 설명). 파일 속성에서 **패키지 동작**은 **콘텐츠**로 설정되고 **출력 디렉터리로 복사**는 **항상 복사**로 설정됩니다.
+이 예제에서는 SRGS 라는 파일에 정의 된 SRGS 문법을 사용 합니다 (뒷부분에서 설명). 파일 속성에서 **패키지 작업** 은 **출력 디렉터리로 복사** 가 **항상 복사**로 설정 된 **콘텐츠로** 설정 됩니다.
 
 ```CSharp
 private async void Colors_Click(object sender, RoutedEventArgs e)
@@ -171,9 +171,9 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-이 SRGS 파일(srgs.grxml)에는 의미 해석 태그도 포함되어 있습니다. 이러한 태그는 앱에 문법 일치 데이터를 반환하는 메커니즘을 제공합니다. 문법은 [SISR (음성 인식) 1.0 사양에 대해](https://www.w3.org/TR/semantic-interpretation/) W3C (World Wide Web 컨소시엄) 의미 체계 해석을 준수 해야 합니다.
+이 SRGS 파일 (SRGS)은 의미 체계 해석 태그를 포함 합니다. 이러한 태그는 응용 프로그램에 문법을 일치 하는 데이터를 반환 하는 메커니즘을 제공 합니다. 문법은 [SISR (음성 인식) 1.0 사양에 대해](https://www.w3.org/TR/semantic-interpretation/) W3C (World Wide Web 컨소시엄) 의미 체계 해석을 준수 해야 합니다.
 
-여기서는 "yes" 및 "no"의 변형을 수신 대기합니다.
+여기서는 "yes" 및 "no"의 변형을 수신 대기 합니다.
 
 ```CSharp
 <grammar xml:lang="en-US" 
@@ -212,17 +212,17 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 
 ## <a name="manage-constraints"></a>제약 조건 관리
 
-인식에 대한 제약 조건 컬렉션이 로드된 후 앱은 제약 조건의 [**IsEnabled**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.ispeechrecognitionconstraint.isenabled) 속성을 **true** 또는 **false**로 설정하여 인식 작업에 어떤 제약 조건을 사용할지 관리할 수 있습니다. 기본 설정은 **true**입니다.
+인식을 위해 제약 조건 컬렉션을 로드 한 후에는 제약 조건의 [**IsEnabled**](/uwp/api/windows.media.speechrecognition.ispeechrecognitionconstraint.isenabled) 속성을 **true** 또는 **false**로 설정 하 여 인식 작업에 사용할 제약 조건을 앱에서 관리할 수 있습니다. 기본 설정은 **true**입니다.
 
-일반적으로 인식 작업별로 제약 조건을 로드, 언로드 및 컴파일하는 것이 아니라 제약 조건을 한 번 로드한 다음 필요에 따라 사용하거나 사용하지 않도록 설정하는 것이 더 효율적입니다. 필요한 경우 [**IsEnabled**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.ispeechrecognitionconstraint.isenabled) 속성을 사용합니다.
+일반적으로 제약 조건을 한 번 로드 하 고 각 인식 작업에 대 한 로드, 언로드 및 컴파일 제약 조건을 사용 하지 않고 필요에 따라 사용 하지 않도록 설정 하는 것이 더 효율적입니다. 필요에 따라 [**IsEnabled**](/uwp/api/windows.media.speechrecognition.ispeechrecognitionconstraint.isenabled) 속성을 사용 합니다.
 
-제약 조건 수를 제한하여 음성 인식기에서 음성 입력의 일치 항목을 찾는 데 필요한 데이터 양을 제한합니다. 이렇게 하면 음성 인식의 성능과 정확도를 모두 향상시킬 수 있습니다.
+음성 인식기가 음성 입력에 대해 검색 하 고 일치 해야 하는 데이터의 양을 제한 하기 위해 제약 조건 수를 제한 합니다. 그러면 음성 인식의 성능과 정확도를 모두 높일 수 있습니다.
 
-현재 인식 작업의 컨텍스트에서 앱에 필요할 수 있는 구에 따라 어떤 제약 조건을 사용할지 결정합니다. 예를 들어 현재 앱 컨텍스트가 색을 표시하는 것일 경우 동물 이름을 인식하는 제약 조건을 사용할 필요가 없습니다.
+앱이 현재 인식 작업의 컨텍스트에서 사용할 수 있는 구에 따라 사용할 제약 조건을 결정 합니다. 예를 들어 현재 응용 프로그램 컨텍스트가 색을 표시 하는 경우 동물의 이름을 인식 하는 제약 조건을 설정할 필요가 없을 것입니다.
 
-말할 수 있는 내용을 사용자에게 메시지로 표시하려면 [**SpeechRecognizer.UIOptions**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizeruioptions.audibleprompt) 속성을 통해 설정되는 [**SpeechRecognizerUIOptions.AudiblePrompt**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizeruioptions.exampletext) 및 [**SpeechRecognizerUIOptions.ExampleText**](https://docs.microsoft.com/uwp/api/windows.media.speechrecognition.speechrecognizer.uioptions) 속성을 사용합니다. 사용자가 인식 작업 중 말할 수 있는 내용을 알면 활성 제약 조건과 일치할 수 있는 구를 말할 가능성이 증가합니다.
+사용자에 게 말할 수 있는 항목을 묻는 메시지를 표시 하려면 [**SpeechRecognizer**](/uwp/api/windows.media.speechrecognition.speechrecognizer.uioptions) 속성을 사용 하 여 설정 된 AudiblePrompt 및 [**SpeechRecognizerUIOptions**](/uwp/api/windows.media.speechrecognition.speechrecognizeruioptions.exampletext) 속성을 사용 [**SpeechRecognizerUIOptions**](/uwp/api/windows.media.speechrecognition.speechrecognizeruioptions.audibleprompt) . 사용자가 인식 작업 중에 말할 수 있는 사항을 준비 하면 활성 제약 조건에 일치 시킬 수 있는 구를 말할 가능성이 높아집니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [음성 조작](speech-interactions.md)
 

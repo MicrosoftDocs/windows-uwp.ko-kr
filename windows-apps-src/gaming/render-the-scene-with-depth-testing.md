@@ -1,29 +1,29 @@
 ---
-title: 깊이 테스트로 장면 렌더링
-description: 꼭짓점(또는 기하 도형) 셰이더와 픽셀 셰이더에 깊이 테스트를 추가하여 그림자 효과를 만듭니다.
+title: 깊이 테스트를 사용 하 여 장면 렌더링
+description: 꼭 짓 점 (또는 기 하 도형) 셰이더 및 픽셀 셰이더에 깊이 테스트를 추가 하 여 그림자 효과를 만듭니다.
 ms.assetid: bf496dfb-d7f5-af6b-d588-501164608560
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, 게임, 렌더링, 장면, 깊이 테스트, direct3d, 그림자
+keywords: windows 10, uwp, 게임, 렌더링, 장면, 깊이 테스트, direct3d, 그림자
 ms.localizationpriority: medium
-ms.openlocfilehash: d1c2c4e5d45b28c318085f4ce257b587f23f1426
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: fd38378e0a1f4cbdf4f9ded246b4b94ed3a705eb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368104"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159247"
 ---
-# <a name="render-the-scene-with-depth-testing"></a>깊이 테스트로 장면 렌더링
+# <a name="render-the-scene-with-depth-testing"></a>깊이 테스트를 사용 하 여 장면 렌더링
 
 
 
 
-꼭짓점(또는 기하 도형) 셰이더와 픽셀 셰이더에 깊이 테스트를 추가하여 그림자 효과를 만듭니다. 3 부 [연습: Direct3D 11에서 깊이 버퍼를 사용 하 여 섀도 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md)합니다.
+꼭 짓 점 (또는 기 하 도형) 셰이더 및 픽셀 셰이더에 깊이 테스트를 추가 하 여 그림자 효과를 만듭니다. [연습의 3부: Direct3D 11의 깊이 버퍼를 사용하여 그림자 볼륨 구현](implementing-depth-buffers-for-shadow-mapping.md).
 
-## <a name="include-transformation-for-light-frustum"></a>광원 절두체에 대한 변환 포함
+## <a name="include-transformation-for-light-frustum"></a>밝은 부분에 대 한 변환 포함
 
 
-꼭짓점 셰이더는 각 꼭짓점에 대한 변형된 광원 공간 위치를 계산해야 합니다. 상수 버퍼를 사용하는 광원 공간 모델, 보기 및 프로젝션 매트릭스를 제공합니다. 또한 이 상수 버퍼를 사용하여 조명 계산을 위해 광원 위치 및 법선을 제공할 수 있습니다. 깊이 테스트 중 광원 공간에서 변환된 위치를 사용합니다.
+꼭 짓 점 셰이더는 각 꼭 짓 점에 대해 변환 된 밝은 공간 위치를 계산 해야 합니다. 상수 버퍼를 사용 하 여 광원 모델, 뷰 및 프로젝션 행렬을 제공 합니다. 또한이 상수 버퍼를 사용 하 여 조명 계산에 대 한 밝은 위치 및 법선을 제공할 수 있습니다. 밝은 공간에서 변형 된 위치는 깊이 테스트 중에 사용 됩니다.
 
 ```cpp
 PixelShaderInput main(VertexShaderInput input)
@@ -62,12 +62,12 @@ PixelShaderInput main(VertexShaderInput input)
 }
 ```
 
-그 다음에 픽셀 셰이더는 픽셀이 그림자에 있는지 여부를 테스트하기 위해 꼭짓점 셰이더에서 제공하는 보간된 광원 공간 위치를 사용합니다.
+그런 다음 픽셀 셰이더는 꼭 짓 점 셰이더에 제공 된 보간된 조명 공간 위치를 사용 하 여 픽셀이 그림자 인지 여부를 테스트 합니다.
 
-## <a name="test-whether-the-position-is-in-the-light-frustum"></a>위치가 광원 절두체에 있는지 여부 테스트
+## <a name="test-whether-the-position-is-in-the-light-frustum"></a>위치가 밝은 부분에 있는지 여부를 테스트 합니다.
 
 
-먼저 X 및 Y 좌표를 정규화하여 픽셀이 광원의 보기 절두체에 있는지 확인합니다. 범위 내에서 둘 다 하는 경우 \[0, 1\] 섀도에 픽셀의 가능성이 있습니다. 그렇지 않으면 깊이 테스트를 건너뛸 수 있습니다. 셰이더는 [Saturate](https://docs.microsoft.com/windows/desktop/direct3dhlsl/saturate)를 호출하고 원래 값과 결과를 비교하여 빠르게 이를 테스트할 수 있습니다.
+먼저 X 및 Y 좌표를 표준화 하 여 픽셀이 조명의 시야에 있는지 확인 합니다. 둘 다 0, 1 범위 내에 있는 경우 \[ \] 픽셀이 그림자가 될 수 있습니다. 그렇지 않으면 깊이 테스트를 건너뛸 수 있습니다. 셰이더는 [포화](/windows/desktop/direct3dhlsl/saturate) 를 호출 하 고 결과를 원래 값과 비교 하 여이를 빠르게 테스트할 수 있습니다.
 
 ```cpp
 // Compute texture coordinates for the current point's location on the shadow map.
@@ -86,10 +86,10 @@ if ((saturate(shadowTexCoords.x) == shadowTexCoords.x) &&
 {
 ```
 
-## <a name="depth-test-against-the-shadow-map"></a>그림자 맵에 대한 깊이 테스트
+## <a name="depth-test-against-the-shadow-map"></a>그림자 맵에 대 한 깊이 테스트
 
 
-샘플 비교 함수([SampleCmp](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplecmp) 또는 [SampleCmpLevelZero](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplecmplevelzero))를 사용하여 깊이 맵에 대해 광원 공간에서 픽셀의 깊이를 테스트합니다. `z / w`를 사용하여 정규화된 광원 공간 깊이 값을 계산하고 값을 비교 함수에 전달합니다. 여기서는 샘플러에 대해 LessOrEqual 비교 테스트를 사용하므로 비교 테스트에 통과하면 내장 함수에서 0을 반환하며, 이는 픽셀이 그림자에 있다는 것을 나타냅니다.
+샘플 비교 함수 ( [Samplecmp](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplecmp) 또는 [SampleCmpLevelZero](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-samplecmplevelzero))를 사용 하 여 깊이 맵에 대 한 밝은 공간의 픽셀 깊이를 테스트 합니다. 정규화 된 밝은 공간 깊이 값을 계산 하 `z / w` 고, 값을 비교 함수에 전달 합니다. 샘플러에 대 한 LessOrEqual 비교 테스트를 사용 하기 때문에 비교 테스트가 통과할 때 내장 함수는 0을 반환 합니다. 픽셀이 그림자 임을 나타냅니다.
 
 ```cpp
 // Use an offset value to mitigate shadow artifacts due to imprecise 
@@ -118,10 +118,10 @@ lighting = float(shadowMap.SampleCmpLevelZero(
     );
 ```
 
-## <a name="compute-lighting-in-or-out-of-shadow"></a>그림자 안이나 밖에서 조명 계산
+## <a name="compute-lighting-in-or-out-of-shadow"></a>광선 내 또는 섀도 외부 계산
 
 
-픽셀이 그림자에 없는 경우 픽셀 셰이더가 직접 조명을 계산하고 픽셀 값에 이 값을 추가해야 합니다.
+픽셀이 그림자에 없으면 픽셀 셰이더는 직접 조명을 계산 하 고 픽셀 값에 추가 해야 합니다.
 
 ```cpp
 return float4(input.color * (ambient + DplusS(N, L, NdotL, input.view)), 1.f);
@@ -150,18 +150,14 @@ float3 DplusS(float3 N, float3 L, float NdotL, float3 view)
 }
 ```
 
-그렇지 않으면 픽셀 셰이더가 자연광을 사용하여 픽셀 값을 계산해야 합니다.
+그렇지 않으면 픽셀 셰이더는 앰비언트 조명을 사용 하 여 픽셀 값을 계산 해야 합니다.
 
 ```cpp
 return float4(input.color * ambient, 1.f);
 ```
 
-이 연습의 다음 부분에서 [다양한 하드웨어의 그림자 맵 지원](target-a-range-of-hardware.md) 방법에 대해 알아보세요.
+이 연습의 다음 부분에서는 [하드웨어 범위에서 섀도 맵을 지 원하는](target-a-range-of-hardware.md)방법에 대해 알아봅니다.
 
  
 
  
-
-
-
-

@@ -7,12 +7,12 @@ keywords: ime, 입력 방법 편집기, 입력, 상호 작용
 ms.date: 07/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 438c53a0f3fbec1fdac0206bde3584c738759de4
-ms.sourcegitcommit: 86ce67a03e87fa1282849b2fcb4f89d1cf23a091
+ms.openlocfilehash: 8e7782dea8cd634fd9fe3bac4a3e4c870cd680e9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87840052"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159947"
 ---
 # <a name="input-method-editors-ime"></a>IME (입력기)
 
@@ -41,7 +41,7 @@ IME (입력기)는 사용자가 표준 QWERTY 키보드에서 쉽게 나타낼 �
 
 - 디지털 서명 해야 합니다.
 - 적절 한 IME 플래그가 올바르게 설정 된 상태에서 [TSF (텍스트 서비스 프레임 워크)](/windows/win32/tsf/text-services-framework) 를 인식 해야 합니다.
-- [Ime (입력기) 요구 사항](input-method-editor-requirements.md) 및 [디자인 및 코드 Windows 앱](/windows/uwp/design/) 에 설명 된 지침을 따라야 합니다.
+- [Ime (입력기) 요구 사항](input-method-editor-requirements.md) 및 [디자인 및 코드 Windows 앱](../index.md) 에 설명 된 지침을 따라야 합니다.
 
 이러한 요구 사항을 충족 하지 않는 타사 IME의 실행이 차단 됩니다.
 

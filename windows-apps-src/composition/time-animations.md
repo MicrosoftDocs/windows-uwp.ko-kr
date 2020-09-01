@@ -5,12 +5,12 @@ ms.date: 12/12/2018
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: c63f59e7bcf282dc829d0fb8fa5971113f7638ad
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: 8846fc11dc39a3931d8f3278caf13b7aff464bc2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89053593"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160837"
 ---
 # <a name="time-based-animations"></a>시간 기반 애니메이션
 
@@ -53,7 +53,7 @@ Key프레임 애니메이션을 사용 하 여 명시적 시간 기반 애니메
 - 애니메이션 그룹 – 여러 애니메이션을 동시에 시작 합니다.
   - 동시에 여러 속성에 애니메이션 효과를 주기 위해 사용 되는 경우가 많습니다.
 
-자세한 내용은 [CompositionAnimationGroup](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionanimationgroup)를 참조 하세요.
+자세한 내용은 [CompositionAnimationGroup](/uwp/api/windows.ui.composition.compositionanimationgroup)를 참조 하세요.
 
 이러한 개념을 염두에 두면 Key프레임 애니메이션을 생성 하는 일반적인 수식을 살펴보겠습니다.
 

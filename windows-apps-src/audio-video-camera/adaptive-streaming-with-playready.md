@@ -1,34 +1,34 @@
 ---
 ms.assetid: BF877F23-1238-4586-9C16-246F3F25AE35
-description: 이 문서에서는 Microsoft PlayReady 콘텐츠 보호와 함께 멀티미디어 콘텐츠의 적응 스트리밍을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다.
-title: PlayReady를 사용한 적응 스트리밍
+description: 이 문서에서는 Microsoft PlayReady content protection을 사용 하는 멀티미디어 콘텐츠의 적응 스트리밍을 유니버설 Windows 플랫폼 (UWP) 앱에 추가 하는 방법을 설명 합니다.
+title: PlayReady를 사용 하 여 적응 스트리밍
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e0f6ef206dc836e48bfc904767ff8c8c7bdca9db
-ms.sourcegitcommit: a20457776064c95a74804f519993f36b87df911e
+ms.openlocfilehash: 3bef1e1061948c4327426485621b9f611fc51f21
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71340048"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161247"
 ---
 # <a name="adaptive-streaming-with-playready"></a>PlayReady를 사용한 적응 스트리밍
 
 
-이 문서에서는 Microsoft PlayReady 콘텐츠 보호와 함께 멀티미디어 콘텐츠의 적응 스트리밍을 UWP(유니버설 Windows 플랫폼) 앱에 추가하는 방법을 설명합니다. 
+이 문서에서는 Microsoft PlayReady content protection을 사용 하는 멀티미디어 콘텐츠의 적응 스트리밍을 유니버설 Windows 플랫폼 (UWP) 앱에 추가 하는 방법을 설명 합니다. 
 
-이 기능은 현재 DASH(Dynamic Streaming over HTTP) 콘텐츠 재생을 지원합니다.
+이 기능은 현재 HTTP (대시) 콘텐츠를 통한 동적 스트리밍 재생을 지원 합니다.
 
-HLS(Apple의 HTTP 라이브 스트리밍)는 PlayReady에서 지원되지 않습니다.
+HLS (Apple의 HTTP 라이브 스트리밍)는 PlayReady에서 지원 되지 않습니다.
 
-부드러운 스트리밍도 현재 기본적으로 지원되지 않습니다. 그러나 PlayReady는 확장 가능하고, 추가 코드 또는 라이브러리를 사용하여 PlayReady에서 보호하는 부드러운 스트리밍을 지원할 수 있으므로 소프트웨어나 하드웨어 DRM(디지털 권한 관리)까지 활용됩니다.
+부드러운 스트리밍은 현재 기본적으로 지원 되지 않습니다. 그러나 PlayReady는 확장 가능 하며 추가 코드 또는 라이브러리를 사용 하 여 소프트웨어 또는 하드웨어 DRM (디지털 권한 관리)을 활용 하 여 PlayReady로 보호 된 부드러운 스트리밍을 지원할 수 있습니다.
 
-이 문서에서는 PlayReady 관련 적응 스트리밍 측면만 다룹니다. 적응 스트리밍의 일반적인 구현에 대한 자세한 내용은 [적응 스트리밍](adaptive-streaming.md)을 참조하세요.
+이 문서는 PlayReady와 관련 된 적응 스트리밍의 측면만 다룹니다. 일반에서 적응 스트리밍을 구현 하는 방법에 대 한 자세한 내용은 [적응 스트리밍](adaptive-streaming.md)을 참조 하세요.
 
-이 문서에서는 GitHub의 Microsoft **Windows-universal-samples** 리포지토리에서 [적응 스트리밍 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AdaptiveStreaming) 코드를 사용합니다. 시나리오 4에서는 PlayReady를 이용한 적응 스트리밍 사용을 다룹니다. 저장소의 루트 수준으로 이동하고 **ZIP 다운로드** 단추를 선택하여 ZIP 파일의 리포지토리를 다운로드할 수 있습니다.
+이 문서에서는 GitHub의 Microsoft **Windows 유니버설 샘플** 리포지토리에서 [적응 스트리밍 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AdaptiveStreaming) 의 코드를 사용 합니다. 시나리오 4에서는 PlayReady로 적응 스트리밍을 사용 하는 방법을 다룹니다. 리포지토리의 루트 수준으로 이동 하 고 **Zip 다운로드** 단추를 선택 하 여 zip 파일에서 리포지토리를 다운로드할 수 있습니다.
 
-다음 **using** 문이 필요합니다.
+다음 **using 문을 사용** 해야 합니다.
 
 ```csharp
 using LicenseRequest;
@@ -44,9 +44,9 @@ using Windows.Media.Streaming.Adaptive;
 using Windows.UI.Xaml.Controls;
 ```
 
-**LicenseRequest** 네임스페이스는 Microsoft에서 라이선스 실시권자에게 제공하는 PlayReady 파일인 **CommonLicenseRequest.cs**에서 가져온 네임스페이스입니다.
+**LicenseRequest** 네임 스페이스는 Microsoft에서 정식으로 제공 하는 PlayReady 파일인 **CommonLicenseRequest.cs**에서 가져온 것입니다.
 
-몇 가지 전역 변수를 선언해야 합니다.
+몇 가지 전역 변수를 선언 해야 합니다.
 
 ```csharp
 private AdaptiveMediaSource ams = null;
@@ -55,7 +55,7 @@ private string playReadyLicenseUrl = "";
 private string playReadyChallengeCustomData = "";
 ```
 
-다음 상수 선언이 필요할 수도 있습니다.
+다음 상수를 선언 하는 것도 좋습니다.
 
 ```csharp
 private const uint MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = 0x8004B895;
@@ -63,9 +63,9 @@ private const uint MSPR_E_CONTENT_ENABLING_ACTION_REQUIRED = 0x8004B895;
 
 ## <a name="setting-up-the-mediaprotectionmanager"></a>MediaProtectionManager 설정
 
-PlayReady 콘텐츠 보호를 UWP 앱에 추가하려면 [MediaProtectionManager](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.MediaProtectionManager) 개체를 설정해야 합니다. [  **AdaptiveMediaSource**](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource) 개체를 초기화할 때 이 작업을 수행합니다.
+UWP 앱에 PlayReady 콘텐츠 보호를 추가 하려면 [MediaProtectionManager](/uwp/api/Windows.Media.Protection.MediaProtectionManager) 개체를 설정 해야 합니다. [**AdaptiveMediaSource**](/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource) 개체를 초기화할 때이 작업을 수행 합니다.
 
-다음 코드는 [MediaProtectionManager](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.MediaProtectionManager)를 설정합니다.
+다음 코드는 [MediaProtectionManager](/uwp/api/Windows.Media.Protection.MediaProtectionManager)을 설정 합니다.
 
 ```csharp
 private void SetUpProtectionManager(ref MediaElement mediaElement)
@@ -98,9 +98,9 @@ private void SetUpProtectionManager(ref MediaElement mediaElement)
 }
 ```
 
-이 코드를 앱에 복사하여 필수 작업인 콘텐츠 보호를 간단하게 설정할 수 있습니다.
+이 코드는 콘텐츠 보호를 설정 하는 데 필요 하므로 앱에 간단 하 게 복사할 수 있습니다.
 
-[ComponentLoadFailed](https://docs.microsoft.com/uwp/api/windows.media.protection.mediaprotectionmanager.componentloadfailed) 이벤트는 이진 데이터를 로드하지 못했을 때 발생합니다. 로드가 완료되지 않았음을 알리는 이벤트 처리기를 추가하여 이 문제를 처리해야 합니다.
+Blob [Loadfailed](/uwp/api/windows.media.protection.mediaprotectionmanager.componentloadfailed) 이벤트는 이진 데이터의 로드가 실패할 때 발생 합니다. 이를 처리 하는 이벤트 처리기를 추가 해야 합니다 .이를 통해 로드가 완료 되지 않았다는 신호를 발생 시킬 수 있습니다.
 
 ```csharp
 private void ProtectionManager_ComponentLoadFailed(
@@ -111,7 +111,7 @@ private void ProtectionManager_ComponentLoadFailed(
 }
 ```
 
-마찬가지로 서비스가 요청될 때 발생하는 [ServiceRequested](https://docs.microsoft.com/uwp/api/windows.media.protection.mediaprotectionmanager.servicerequested) 이벤트에 대한 이벤트 처리기를 추가해야 합니다. 이 코드는 서비스의 요청 종류를 확인하고 적절하게 응답합니다.
+마찬가지로 서비스가 요청 될 때 발생 하는 [ServiceRequested](/uwp/api/windows.media.protection.mediaprotectionmanager.servicerequested) 이벤트에 대 한 이벤트 처리기를 추가 해야 합니다. 이 코드는 요청 종류를 확인 하 고 적절 하 게 응답 합니다.
 
 ```csharp
 private async void ProtectionManager_ServiceRequested(
@@ -141,7 +141,7 @@ private async void ProtectionManager_ServiceRequested(
 
 ## <a name="individualization-service-requests"></a>개별화 서비스 요청
 
-다음 코드는 사후 대응적으로 PlayReady 개별화 서비스 요청을 만듭니다. 함수에 매개 변수로 요청을 전달합니다. 호출을 try/catch 블록으로 둘러싸고 예외가 없는 경우 요청이 성공적으로 완료되었다고 합니다.
+다음 코드 대응적는 PlayReady 개별화 서비스 요청을 수행 합니다. 요청을 함수에 대 한 매개 변수로 전달 합니다. Try/catch 블록에 호출을 묶고, 예외가 없는 경우 요청이 성공적으로 완료 되었다고 표시 합니다.
 
 ```csharp
 async Task<bool> ReactiveIndivRequest(
@@ -180,7 +180,7 @@ async Task<bool> ReactiveIndivRequest(
 }
 ```
 
-또는 개별화 서비스 요청을 사전 대응적으로 만들 수 있으며 이 경우에는 `ProtectionManager_ServiceRequested`의 `ReactiveIndivRequest`을 호출하는 코드 대신 다음 함수를 호출합니다.
+또는에서를 호출 하는 코드 대신 다음 함수를 호출 하는 경우 개별화 서비스 요청을 사전에 만들 수 있습니다 `ReactiveIndivRequest` `ProtectionManager_ServiceRequested` .
 
 ```csharp
 async void ProActiveIndivRequest()
@@ -192,7 +192,7 @@ async void ProActiveIndivRequest()
 
 ## <a name="license-acquisition-service-requests"></a>라이선스 취득 서비스 요청
 
-요청이 [PlayReadyLicenseAcquisitionServiceRequest](https://docs.microsoft.com/uwp/api/Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest)인 경우에는 다음 함수를 호출하여 PlayReady 라이선스를 요청하고 취득합니다. 요청이 성공했는지 여부를 전달했다고 **MediaProtectionServiceCompletion** 개체에 알리고 요청을 완료합니다.
+대신 요청이 [PlayReadyLicenseAcquisitionServiceRequest](/uwp/api/Windows.Media.Protection.PlayReady.PlayReadyLicenseAcquisitionServiceRequest)인 경우 다음 함수를 호출 하 여 PlayReady 라이선스를 요청 하 고 가져옵니다. 요청이 성공 했는지 여부를 전달 하는 **MediaProtectionServiceCompletion** 개체를 알리고 요청을 완료 합니다.
 
 ```csharp
 async void LicenseAcquisitionRequest(
@@ -274,7 +274,7 @@ async void LicenseAcquisitionRequest(
 
 ## <a name="initializing-the-adaptivemediasource"></a>AdaptiveMediaSource 초기화
 
-마지막으로, 지정된 [Uri](https://docs.microsoft.com/dotnet/api/system.uri) 및 [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement)에서 만든 [AdaptiveMediaSource](https://docs.microsoft.com/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource)를 초기화하는 함수가 필요합니다. **Uri**는 미디어 파일(HLS 또는 DASH)에 대한 링크여야 하며 **MediaElement**는 XAML에 정의되어야 합니다.
+마지막으로, 지정 된 [Uri](/dotnet/api/system.uri) 및 [MediaElement](/uwp/api/Windows.UI.Xaml.Controls.MediaElement)에서 만든 [AdaptiveMediaSource](/uwp/api/Windows.Media.Streaming.Adaptive.AdaptiveMediaSource)를 초기화 하는 함수가 필요 합니다. **Uri** 는 미디어 파일에 대 한 링크 (HLS 또는 대시) 여야 합니다. **MediaElement** 는 XAML에서 정의 해야 합니다.
 
 ```csharp
 async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
@@ -293,11 +293,7 @@ async private void InitializeAdaptiveMediaSource(System.Uri uri, MediaElement m)
 }
 ```
 
-적응 스트리밍의 시작을 처리하는 모든 이벤트(예: 단추 Click 이벤트)에서 이 기능을 호출할 수 있습니다.
+적응 스트리밍의 시작을 처리 하는 모든 이벤트에서이 함수를 호출할 수 있습니다. 예를 들어 단추 클릭 이벤트에 있습니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 - [PlayReady DRM](playready-client-sdk.md)
-
-
-
-

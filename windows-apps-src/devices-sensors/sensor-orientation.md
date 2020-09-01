@@ -6,21 +6,21 @@ ms.date: 07/03/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b61b7bcd18419ec9be719b5f565e5503953be7c3
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 8836753778b1dd5dcbc8856b0df5ec1f11d8e753
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493475"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159807"
 ---
 # <a name="sensor-orientation"></a>센서 방향
 
-[**가 속도계**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer), [**회전 계**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Gyrometer), [**나침반**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Compass), [**경사 계**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Inclinometer)및 [**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) 클래스의 센서 데이터는 해당 참조 축에 의해 정의 됩니다. 이러한 축은 장치의 참조 프레임에 의해 정의 되 고 사용자가 장치를 전환할 때 장치를 사용 하 여 회전 합니다. 사용자가 장치를 회전할 때 앱에서 자동 회전을 지원 하 고 장치를 수용 하기 위해 자동 회전을 지 원하는 경우에는 사용 하기 전에 reorients에 대 한 센서 데이터를 조정 해야 합니다.
+[**가 속도계**](/uwp/api/Windows.Devices.Sensors.Accelerometer), [**회전 계**](/uwp/api/Windows.Devices.Sensors.Gyrometer), [**나침반**](/uwp/api/Windows.Devices.Sensors.Compass), [**경사 계**](/uwp/api/Windows.Devices.Sensors.Inclinometer)및 [**OrientationSensor**](/uwp/api/Windows.Devices.Sensors.OrientationSensor) 클래스의 센서 데이터는 해당 참조 축에 의해 정의 됩니다. 이러한 축은 장치의 참조 프레임에 의해 정의 되 고 사용자가 장치를 전환할 때 장치를 사용 하 여 회전 합니다. 사용자가 장치를 회전할 때 앱에서 자동 회전을 지원 하 고 장치를 수용 하기 위해 자동 회전을 지 원하는 경우에는 사용 하기 전에 reorients에 대 한 센서 데이터를 조정 해야 합니다.
 
 ### <a name="important-apis"></a>중요 API
 
-- [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
-- [**Windows. Devices. 사용자 지정**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Custom)
+- [**Windows.Devices.Sensors**](/uwp/api/Windows.Devices.Sensors)
+- [**Windows. Devices. 사용자 지정**](/uwp/api/Windows.Devices.Sensors.Custom)
 
 ## <a name="display-orientation-vs-device-orientation"></a>방향 및 장치 방향 표시
 
@@ -30,22 +30,22 @@ ms.locfileid: "86493475"
 > 다음 이미지에 표시 된 것 처럼 양의 z 축은 장치 화면에서 확장 됩니다.
 > :::image type="content" source="images/sensor-orientation-zaxis-1-small.png" alt-text="랩톱의 Z 축":::
 
-다음 다이어그램에서는 장치와 디스플레이 방향이 모두 [가로](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations) 방향으로 표시 됩니다. 표시 된 센서 축은 가로 방향에만 적용 됩니다.
+다음 다이어그램에서는 장치와 디스플레이 방향이 모두 [가로](/uwp/api/Windows.Graphics.Display.DisplayOrientations) 방향으로 표시 됩니다. 표시 된 센서 축은 가로 방향에만 적용 됩니다.
 
 
-이 다이어그램은 표시 및 장치 방향을 [가로로](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations)표시 합니다.
+이 다이어그램은 표시 및 장치 방향을 [가로로](/uwp/api/Windows.Graphics.Display.DisplayOrientations)표시 합니다.
 
 :::image type="content" source="images/sensor-orientation-a-small.jpg" alt-text="표시 및 장치 방향 (가로)":::
 
-다음 다이어그램에서는 [LandscapeFlipped](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations)의 표시 및 장치 방향을 모두 보여 줍니다.
+다음 다이어그램에서는 [LandscapeFlipped](/uwp/api/Windows.Graphics.Display.DisplayOrientations)의 표시 및 장치 방향을 모두 보여 줍니다.
 
 :::image type="content" source="images/sensor-orientation-b-small.jpg" alt-text="LandscapeFlipped의 디스플레이 및 장치 방향":::
 
-이 최종 다이어그램은 장치 방향이 [LandscapeFlipped](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations)는 동안 표시 방향을 가로로 보여 줍니다.
+이 최종 다이어그램은 장치 방향이 [LandscapeFlipped](/uwp/api/Windows.Graphics.Display.DisplayOrientations)는 동안 표시 방향을 가로로 보여 줍니다.
 
 :::image type="content" source="images/sensor-orientation-c-small.jpg" alt-text="장치 방향이 LandscapeFlipped 된 상태에서 가로 방향 표시":::
 
-[**GetForCurrentView**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.getforcurrentview) 메서드를 [**currentorientation**](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.currentorientation) 속성과 함께 사용 하 여 [**DisplayInformation**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayInformation) 클래스를 통해 방향 값을 쿼리할 수 있습니다. 그런 다음 [**Displayorientations**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Display.DisplayOrientations) 열거와 비교 하 여 논리를 만들 수 있습니다. 지원 되는 모든 방향에 대해 참조 축에서 해당 방향으로의 변환을 지원 해야 합니다.
+[**GetForCurrentView**](/uwp/api/windows.graphics.display.displayinformation.getforcurrentview) 메서드를 [**currentorientation**](/uwp/api/windows.graphics.display.displayinformation.currentorientation) 속성과 함께 사용 하 여 [**DisplayInformation**](/uwp/api/Windows.Graphics.Display.DisplayInformation) 클래스를 통해 방향 값을 쿼리할 수 있습니다. 그런 다음 [**Displayorientations**](/uwp/api/Windows.Graphics.Display.DisplayOrientations) 열거와 비교 하 여 논리를 만들 수 있습니다. 지원 되는 모든 방향에 대해 참조 축에서 해당 방향으로의 변환을 지원 해야 합니다.
 
 ## <a name="landscape-first-vs-portrait-first-devices"></a>가로 및 세로-첫 번째 장치
 
@@ -164,7 +164,7 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 ## <a name="display-orientation-and-device-orientation"></a>방향 및 장치 방향 표시
 
-[**OrientationSensor**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.OrientationSensor) 데이터는 다른 방식으로 변경 해야 합니다. 이러한 여러 방향을 z 축에서 시계 반대 방향으로 회전 하는 것으로 간주 하므로 사용자의 방향을 다시 가져오려면 회전을 반대로 해야 합니다. 4 원수 데이터의 경우 오일러의 수식을 사용 하 여 참조 4 원수로 회전을 정의할 수 있으며 참조 회전 행렬을 사용할 수도 있습니다.
+[**OrientationSensor**](/uwp/api/Windows.Devices.Sensors.OrientationSensor) 데이터는 다른 방식으로 변경 해야 합니다. 이러한 여러 방향을 z 축에서 시계 반대 방향으로 회전 하는 것으로 간주 하므로 사용자의 방향을 다시 가져오려면 회전을 반대로 해야 합니다. 4 원수 데이터의 경우 오일러의 수식을 사용 하 여 참조 4 원수로 회전을 정의할 수 있으며 참조 회전 행렬을 사용할 수도 있습니다.
 
 :::image type="content" source="images/eulers-formula.png" alt-text="오일러의 수식":::
 
@@ -183,4 +183,4 @@ private void ReadingChanged(object sender, GyrometerReadingChangedEventArgs e)
 
 ## <a name="see-also"></a>참고 항목
 
-[동작 및 방향 센서 통합](https://docs.microsoft.com/windows-hardware/design/whitepapers/integrating-motion-and-orientation-sensors)
+[동작 및 방향 센서 통합](/windows-hardware/design/whitepapers/integrating-motion-and-orientation-sensors)

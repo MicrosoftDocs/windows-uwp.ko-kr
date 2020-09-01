@@ -6,20 +6,20 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e38d64750b410369a9ff9ebf871267b03e0ad07e
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: 4bed5ad24c1478d47456d1e35a83ba4c54f99406
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89054343"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159547"
 ---
 # <a name="use-the-accelerometer"></a>가속도계 사용
 
 
 **중요 API**
 
--   [**Windows.Devices.Sensors**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors)
--   [**가속도계**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sensors.Accelerometer)
+-   [**Windows.Devices.Sensors**](/uwp/api/Windows.Devices.Sensors)
+-   [**가속도계**](/uwp/api/Windows.Devices.Sensors.Accelerometer)
 
 **샘플**
 

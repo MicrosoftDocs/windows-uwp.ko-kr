@@ -6,33 +6,29 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 97b6bd0c3567c00902a9528d54e6417f41ac66ed
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 6181625690b4abddd4fdd4cbd9032bee64b6658d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66359103"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161207"
 ---
 # <a name="audio-device-information-properties"></a>오디오 디바이스 정보 속성
 
-이 문서에는 오디오 디바이스와 관련된 디바이스 정보 속성이 나열되어 있습니다. Windows에서 각 하드웨어 디바이스에는 디바이스에 대한 특정 정보가 필요하거나 디바이스 선택기를 빌드할 때 사용할 수 있는 디바이스에 대한 자세한 정보를 제공하는 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 속성이 연결되어 있습니다. Windows에서 디바이스를 열거하는 방법에 대한 일반적인 내용은 [디바이스 열거](../devices-sensors/enumerate-devices.md) 및 [디바이스 정보 속성](../devices-sensors/device-information-properties.md)을 참조하세요.
+이 문서에는 오디오 장치와 관련 된 장치 정보 속성이 나열 되어 있습니다. Windows에서 각 하드웨어 장치에는 장치에 대 한 특정 정보가 필요 하거나 장치 선택기를 빌드할 때 사용할 수 있는 장치에 대 한 자세한 정보를 제공 하는 장치에 대 한 자세한 정보를 제공 하는 연결 된 [**deviceinformation**](/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 속성이 있습니다. Windows에서 장치를 열거 하는 방법에 대 한 일반적인 정보는 [열거 장치](../devices-sensors/enumerate-devices.md) 및 [장치 정보 속성](../devices-sensors/device-information-properties.md)을 참조 하세요.
 
 
-|이름|형식|설명|
+|이름|유형|Description|
 |------------------------------------------------------------|------------|------------------------------------------------------|
-|**System.Devices.AudioDevice.Microphone.SensitivityInDbfs**|Double|마이크 민감도를 전체 범위(dBFS) 단위를 기준으로 데시벨로 지정합니다.|
-|**System.Devices.AudioDevice.Microphone.SignalToNoiseRatioInDb**|Double|데시벨(dB) 단위로 측정되는 마이크 SNR(신호-잡음 비율)을 지정합니다.|
-|**System.Devices.AudioDevice.SpeechProcessingSupported**|Boolean|오디오 디바이스가 음성 처리를 지원하는지 여부를 나타냅니다.|
-|**System.Devices.AudioDevice.RawProcessingSupported**|Boolean|오디오 디바이스가 원시 처리를 지원하는지 여부를 나타냅니다.|
-|**System.Devices.MicrophoneArray.Geometry**|부호 없는 문자[]|마이크 배열에 대한 기하 도형 데이터입니다.|
+|**SensitivityInDbfs (시스템 장치.**|Double|DBFS (전체 크기 조정) 단위를 기준으로 하 여 마이크 민감도를 데시벨 단위로 지정 합니다.|
+|**SignalToNoiseRatioInDb (시스템 장치.**|Double|데시벨 (dB) 단위로 측정 되는 마이크 신호를 SNR (노이즈 비율)로 지정 합니다.|
+|**System.object. SpeechProcessingSupported**|부울|오디오 장치가 음성 처리를 지원 하는지 여부를 나타냅니다.|
+|**System.object. RawProcessingSupported**|부울|오디오 장치가 원시 처리를 지원 하는지 여부를 나타냅니다.|
+|**MicrophoneArray.**|unsigned char []|마이크 배열의 기 하 도형 데이터입니다.|
 
 ## <a name="related-topics"></a>관련 항목
 
 * [디바이스 열거](../devices-sensors/enumerate-devices.md)
-* [장치 정보 속성](../devices-sensors/device-information-properties.md)
-* [장치 선택기를 빌드](../devices-sensors/build-a-device-selector.md)
+* [디바이스 정보 속성](../devices-sensors/device-information-properties.md)
+* [디바이스 선택기 빌드](../devices-sensors/build-a-device-selector.md)
 * [미디어 재생](media-playback.md)
-
-
-
-
