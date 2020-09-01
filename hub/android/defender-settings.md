@@ -66,7 +66,7 @@ Android Studio에 의해 설정 된 기본 위치를 사용 하지 않았거나 
 > [!Note]
 > Daniel Knoodle는 [Visual Studio 2017에 대 한 Windows Defender 제외](https://gist.github.com/dknoodle/5a66b8b8a3f2243f4ca5c855b323cb7b#file-windows-defender-exclusions-vs-2017-ps1-L10)를 추가 하는 권장 스크립트가 포함 된 GitHub 리포지토리를 설정 했습니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](/dual-screen/android/)
 

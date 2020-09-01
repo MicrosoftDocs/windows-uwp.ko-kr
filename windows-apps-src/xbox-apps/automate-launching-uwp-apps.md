@@ -1,56 +1,56 @@
 ---
 title: Windows 10 UWP(유니버설 Windows 플랫폼) 앱 시작 자동화
-description: 개발자는 프로토콜 활성화 및 시작 활성화를 사용하여 자동화 테스트를 위해 해당 UWP 앱 또는 게임을 자동으로 시작할 수 있습니다.
+description: 개발자는 프로토콜 활성화 및 시작 활성화를 사용 하 여 자동화 된 테스트를 위해 UWP 앱 또는 게임의 시작을 자동화할 수 있습니다.
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 02/08/2017
-ms.openlocfilehash: abc0b40178dc9b7c386342af6a6d85c6fb61945a
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 661576ede9a940f7f8aa71715900306d2c2b28a9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320265"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154877"
 ---
 # <a name="automate-launching-windows-10-uwp-apps"></a>Windows 10 UWP 앱 시작 자동화
 
 ## <a name="introduction"></a>소개
 
-개발자는 UWP(유니버설 Windows 플랫폼) 앱의 자동 시작을 실현하기 위해 몇 가지 옵션을 사용할 수 있습니다. 이 문서에서는 프로토콜 활성화 및 시작 활성화를 사용하여 앱을 시작하는 방법을 알아봅니다.
+개발자는 UWP (유니버설 Windows 플랫폼 자동 시작) 앱을 얻기 위한 몇 가지 옵션을 사용할 수 있습니다. 이 문서에서는 프로토콜 활성화 및 시작 활성화를 사용 하 여 앱을 시작 하는 방법을 알아봅니다.
 
-*프로토콜 활성화*을 사용하면 앱이 자신을 지정된 프로토콜에 대한 처리기로 등록할 수 있습니다. 
+*프로토콜 활성화* 를 사용 하면 앱이 자신을 지정 된 프로토콜에 대 한 처리기로 등록할 수 있습니다. 
 
-*시작 활성화*는 앱 타일에서 시작하는 것과 같은 앱의 일반적인 시작 방법입니다.
+앱 타일에서 시작 하는 것과 같이 앱을 정상적 *으로 시작 하는 것입니다.*
 
-각 활성화 방법에서 명령줄 또는 시작 관리자 응용 프로그램 중 하나를 선택하여 사용할 수 있습니다. 모든 활성화 방법에서, 앱이 현재 실행되고 있는 경우 활성화를 수행하면 앱이 포그라운드로 나오고(다시 활성화) 새로운 활성화 인수가 제공됩니다. 따라서 활성화 명령을 유연하게 사용하여 앱에 새 메시지를 제공할 수 있습니다. 활성화 방법에서 새로 업데이트된 앱을 실행하려면 프로젝트를 컴파일한 후 배포해야 합니다. 
+각 활성화 방법을 사용 하는 경우 명령줄 또는 시작 관리자 응용 프로그램을 사용 하는 옵션이 있습니다. 모든 활성화 방법에 대해 앱이 현재 실행 중인 경우 활성화는 응용 프로그램을 포그라운드로 가져오고 (다시 활성화 됨) 새 활성화 인수를 제공 합니다. 이렇게 하면 유연 하 게 활성화 명령을 사용 하 여 앱에 새 메시지를 제공할 수 있습니다. 새로 업데이트 된 앱을 실행 하려면 활성화 방법에 대해 프로젝트를 컴파일하고 배포 해야 합니다. 
 
 ## <a name="protocol-activation"></a>프로토콜 활성화
 
-다음 단계에 따라 앱에 대한 프로토콜 활성화를 설정합니다. 
+앱에 대 한 프로토콜 활성화를 설정 하려면 다음 단계를 수행 합니다. 
 
-1. Visual Studio에서 **Package.appxmanifest** 파일을 엽니다.
-2. **선언** 탭을 선택합니다.
-3. **사용 가능한 선언** 드롭다운 목록에서 **프로토콜**을 선택한 후 **추가**를 선택합니다.
-4. **속성** 아래의 **이름** 필드에 앱을 실행하기 위한 고유한 이름을 입력합니다. 
+1. Visual Studio에서 **appxmanifest.xml** 파일을 엽니다.
+2. **선언** 탭을 선택 합니다.
+3. **사용 가능한 선언** 드롭다운 아래에서 **프로토콜**을 선택 하 고 **추가**를 선택 합니다.
+4. **속성**의 **이름** 필드에 앱을 시작 하는 고유한 이름을 입력 합니다. 
 
     ![프로토콜 활성화](images/automate-uwp-apps-1.png)
 
-5. 파일을 저장하고 프로젝트를 배포합니다. 
-6. 프로젝트가 배포된 후에 프로토콜 활성화를 설정해야 합니다. 
-7. **제어판\모든 제어판 항목\기본 프로그램**으로 이동한 후 **파일 형식 또는 프로토콜을 특정 프로그램과 연결**을 선택합니다. **프로토콜** 섹션으로 스크롤하여 해당 프로토콜이 목록에 표시되는지 확인합니다. 
+5. 파일을 저장 하 고 프로젝트를 배포 합니다. 
+6. 프로젝트를 배포한 후에는 프로토콜 활성화를 설정 해야 합니다. 
+7. **Control Panel\All Control Panel Items\Default** program로 이동 하 여 **파일 형식 또는 프로토콜을 특정 프로그램과 연결**을 선택 합니다. **프로토콜 섹션으로** 스크롤하여 프로토콜이 나열 되는지 확인 합니다. 
 
-프로토콜 활성화를 설정했으므로 이 프로토콜을 사용하여 앱을 활성화하기 위한 두 가지 옵션(명령줄 또는 시작 관리자 응용 프로그램) 중 하나를 사용할 수 있습니다. 
+이제 프로토콜 활성화가 설정 되었으므로 프로토콜을 사용 하 여 앱을 활성화 하는 두 가지 옵션 (명령줄 또는 시작 관리자 응용 프로그램)이 있습니다. 
 
 ### <a name="command-line"></a>명령줄
 
-앱은 명령줄에 start 명령, 이전에 설정한 프로토콜 이름, 콜론(“:”) 및 매개 변수를 차례로 사용하여 프로토콜을 통해 앱을 활성화할 수 있습니다. 매개 변수는 임의의 문자열일 수 있지만 URI(Uniform Resource Identifier) 기능을 활용하려면 표준 URI 형식에 따르는 것이 좋습니다. 
+명령줄을 사용 하 여 명령을 시작한 다음 이전에 설정한 프로토콜 이름, 콜론 (":") 및 매개 변수를 사용 하 여 앱을 프로토콜을 활성화할 수 있습니다. 매개 변수는 임의의 임의의 문자열일 수 있습니다. 그러나 URI (Uniform Resource Identifier) 기능을 활용 하려면 표준 URI 형식을 따르는 것이 좋습니다. 
 
   ```
   scheme://username:password@host:port/path.extension?query#fragment
   ```
 
-Uri 개체에는 다음 형식으로 URI 문자열을 구문 분석하는 메서드가 있습니다. 자세한 내용은 [URI 클래스(MSDN)](https://docs.microsoft.com/uwp/api/windows.foundation.uri)를 참조하세요. 
+Uri 개체에는 URI 문자열을이 형식으로 구문 분석 하는 메서드가 있습니다. 자세한 내용은 [Uri 클래스 (MSDN)](/uwp/api/windows.foundation.uri)를 참조 하세요. 
 
-예를 들면 다음과 같습니다.
+예:
 
   ```
   >start bingnews:
@@ -58,11 +58,11 @@ Uri 개체에는 다음 형식으로 URI 문자열을 구문 분석하는 메서
   >start myapplication://single-player/level3?godmode=1&ammo=200
   ```
 
-프로토콜 명령줄 활성화에서는 유니코드 문자가 지원되며 원시 URI의 경우 2038자의 제한이 적용됩니다. 
+프로토콜 명령줄 활성화는 원시 URI에서 2038 자까지 유니코드 문자 제한을 지원 합니다. 
 
 ### <a name="launcher-application"></a>시작 관리자 응용 프로그램
 
-시작하는 경우 WinRT API를 지원하는 별도의 응용 프로그램을 만듭니다. 시작 관리자 프로그램에서 프로토콜 활성화로 시작하기 위한 C++ 코드는 다음 샘플에 나와 있습니다. 여기서 **PackageURI**는 인수가 있는 응용 프로그램의 URI(예: `myapplication:` 또는 `myapplication:protocol activation arguments`)입니다.
+시작 하려면 WinRT API를 지 원하는 별도의 응용 프로그램을 만듭니다. 시작 프로그램에서 프로토콜 활성화를 사용 하 여 시작 하기 위한 c + + 코드는 다음 샘플에 나와 있습니다. 여기서 **Packageuri** 는 인수를 사용 하는 응용 프로그램의 uri입니다. 예를 들면 `myapplication:` 또는 `myapplication:protocol activation arguments` 입니다.
 
 ```
 bool ProtocolLaunchURI(Platform::String^ URI)
@@ -101,42 +101,42 @@ Uri(URI));
        }
 }
 ```
-시작 관리자 응용 프로그램을 사용한 프로토콜 활성화는 인수에 대해 명령줄을 사용한 프로토콜 활성화의 경우와 동일한 제한이 적용됩니다. 둘 다 유니코드 문자를 지원하며, 원시 URI에 대해 2038자의 제한이 적용됩니다. 
+시작 관리자 응용 프로그램을 사용 하는 프로토콜 활성화는 명령줄에서 프로토콜 활성화와 같은 인수에 대 한 제한 사항이 동일 합니다. 는 모두 원시 URI에서 2038 자까지 유니코드 문자를 지원 합니다. 
 
-## <a name="launch-activation"></a>시작 활성화
+## <a name="launch-activation"></a>활성화 시작
 
-시작 활성화를 사용하여 앱을 시작할 수도 있습니다. 필요한 설정은 없지만 UWP 앱의 AUMID(응용 프로그램 사용자 모델 ID)가 필요합니다. AUMID는 패키지 제품군 이름, 느낌표 및 응용 프로그램 ID로 구성됩니다. 
+시작 활성화를 사용 하 여 앱을 시작할 수도 있습니다. 설치는 필요 하지 않지만 UWP 앱의 응용 프로그램 사용자 모델 ID (AUMID)가 필요 합니다. AUMID는 패키지 제품군 이름 뒤에 느낌표와 응용 프로그램 ID가 나옵니다. 
 
-패키지 패밀리 이름을 가져오는 가장 좋은 방법은 다음 단계를 완료하는 것입니다.
+패키지 제품군 이름을 가져오는 가장 좋은 방법은 다음 단계를 완료 하는 것입니다.
 
-1. **Package.appxmanifest** 파일을 엽니다.
-2. **패키징** 탭에서 **패키지 이름**을 입력합니다.
+1. **Appxmanifest.xml** 파일을 엽니다.
+2. **패키징** 탭에서 **패키지 이름을**입력 합니다.
 
-    ![시작 활성화](images/automate-uwp-apps-2.png)
+    ![활성화 시작](images/automate-uwp-apps-2.png)
 
-3. **패키지 제품군 이름**이 나열되지 않으면 PowerShell을 열고 `>get-appxpackage MyPackageName`을(를) 실행하여 **PackageFamilyName**을 찾습니다.
+3. **패키지 제품군 이름이** 나열 되지 않은 경우 PowerShell을 열고를 실행 `>get-appxpackage MyPackageName` 하 여 **PackageFamilyName**를 찾습니다.
 
-응용 프로그램 ID는 XML 뷰에 열려 있는 **Package.appxmanifest** 파일의 `<Applications>` 요소 아래에서 볼 수 있습니다.
+응용 프로그램 ID는 요소 아래에 있는 **appxmanifest.xml** 파일 (XML 뷰로 열림)에서 찾을 수 있습니다. `<Applications>`
 
 ### <a name="command-line"></a>명령줄
 
-UWP 앱의 시작 활성화를 수행하기 위한 도구는 Windows 10 SDK와 함께 설치됩니다. 이 도구를 명령줄에서 실행할 수도 있고 시작할 앱의 AUMID가 인수로 사용될 수도 있습니다.
+UWP 앱의 시작 활성화를 수행 하는 도구는 Windows 10 SDK와 함께 설치 됩니다. 이 파일은 명령줄에서 실행할 수 있으며 응용 프로그램의 AUMID 인수로 시작 됩니다.
 
 ```
 C:\Program Files (x86)\Windows Kits\10\App Certification Kit\microsoft.windows.softwarelogo.appxlauncher.exe <AUMID>
 ```
 
-이 도구는 다음과 같습니다.
+다음과 같이 표시 됩니다.
 
 ```
 "C:\Program Files (x86)\Windows Kits\10\App Certification Kit\microsoft.windows.softwarelogo.appxlauncher.exe" MyPackageName_ph1m9x8skttmg!AppId
 ```
 
-이 옵션은 명령줄 인수를 지원하지 않습니다. 
+이 옵션은 명령줄 인수를 지원 하지 않습니다. 
 
 ### <a name="launcher-application"></a>시작 관리자 응용 프로그램
 
-시작하는 데 COM을 사용하도록 지원하는 별도의 응용 프로그램을 만들 수 있습니다. 다음 예제에서는 시작 관리자 프로그램에서 시작 활성화로 시작하기 위한 C++ 코드를 보여 줍니다. 이 코드를 사용하여 **ApplicationActivationManager** 개체를 만들고, 앞에서 찾은 AUMID 및 인수를 전달하여 **ActivateApplication**을 호출합니다. 다른 매개 변수에 대한 자세한 내용은 [IApplicationActivationManager::ActivateApplication 메서드(MSDN)](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication)를 참조하세요.
+를 시작 하는 데 사용 하는 COM 사용을 지 원하는 별도의 응용 프로그램을 만들 수 있습니다. 다음 예제에서는 시작 관리자 프로그램에서 시작 활성화를 사용 하 여 시작 하는 c + + 코드를 보여 줍니다. 이 코드를 사용 하 여 **ApplicationActivationManager** 개체를 만들고 이전에 찾은 AUMID 인수를 전달 하는 **응용 프로그램** 을 호출할 수 있습니다. 다른 매개 변수에 대 한 자세한 내용은 [IApplicationActivationManager:: 응용 프로그램 메서드 (MSDN)](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication)를 참조 하세요.
 
 ```
 #include <ShObjIdl.h>
@@ -178,11 +178,11 @@ Manager. hr = 0x%08lx \n", AUMID, hr);
 }
 ```
 
-앞에 나오는 시작 방법(명령줄 사용)과 달리, 이 메서드는 전달되는 인수를 지원합니다.
+이전 메서드 (즉, 명령줄 사용)와는 달리이 메서드는 전달 되는 인수를 지원 합니다.
 
-## <a name="accepting-arguments"></a>인수 수락
+## <a name="accepting-arguments"></a>인수 허용
 
-UWP 앱의 활성화 시 전달된 인수를 수락하려면 앱에 일부 코드를 추가해야 합니다. 프로토콜 활성화 또는 시작 활성화가 발생했는지 확인하려면 **OnActivated** 이벤트를 재정의하고 인수 형식을 확인한 후 원시 문자열 또는 URI 개체의 사전 분석된 값을 가져옵니다. 
+UWP 앱 활성화 시 전달 된 인수를 허용 하려면 앱에 일부 코드를 추가 해야 합니다. 프로토콜 활성화 또는 활성화 시작이 발생 했는지 확인 하려면 **onactivated** 이벤트를 재정의 하 고 인수 형식을 확인 한 다음 원시 문자열 또는 Uri 개체의 미리 구문 분석 된 값을 가져옵니다. 
 
 이 예제에서는 원시 문자열을 가져오는 방법을 보여 줍니다.
 
@@ -208,8 +208,7 @@ void OnActivated(IActivatedEventArgs^ args)
 ```
 
 ## <a name="summary"></a>요약
-다양한 방법으로 UWP 앱을 시작할 수 있습니다. 요구 사항 및 사용 사례에 따라 좀 더 적절한 방법을 사용하는 것이 좋습니다. 
+요약 하자면, 다양 한 방법을 사용 하 여 UWP 앱을 시작할 수 있습니다. 요구 사항 및 사용 사례에 따라 다른 방법이 다른 방법 보다 더 적합할 수 있습니다. 
 
-## <a name="see-also"></a>참조
-- [Xbox One에서 UWP](index.md)
-
+## <a name="see-also"></a>참고 항목
+- [Xbox One의 UWP](index.md)

@@ -26,7 +26,7 @@ ms.locfileid: "89155007"
 
 ## <a name="xaml-values"></a>XAML 값
 
-| 용어 | Description |
+| 용어 | 설명 |
 |------|-------------|
 | key | 요청한 리소스의 키입니다. 이 키는 초기에 [**ResourceDictionary**](/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 의해 할당 됩니다. 리소스 키는 XamlName 문법에 정의 된 임의의 문자열일 수 있습니다. |
 

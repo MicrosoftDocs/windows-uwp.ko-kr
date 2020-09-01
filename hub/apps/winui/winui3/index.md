@@ -3,12 +3,12 @@ title: WinUI 3 Preview 2(2020년 7월)
 description: WinUI 3 Preview 2 릴리스에 대한 개요입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: 4d971ffd3ec44ab766122dbb80847b9c2ccfc891
-ms.sourcegitcommit: e6b1ed3c9ddcf650e2f71c29d81bffac6ab292f4
+ms.openlocfilehash: c57132ec5219ef32f2b2b69168592e07f49d904b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2020
-ms.locfileid: "89116808"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168777"
 ---
 # <a name="windows-ui-library-3-preview-2-july-2020"></a>Windows UI 라이브러리 3 Preview 2(2020년 7월)
 
@@ -54,7 +54,7 @@ WinUI 3 Preview 2에는 WinUI 기반 사용자 인터페이스와 WinUI 라이�
 
 4. [WinUI 3 Preview 2 VSIX 패키지](https://aka.ms/winui3/previewdownload)를 다운로드하여 설치합니다. 이 VSIX 패키지는 WinUI 3 프로젝트 템플릿 및 WinUI 3 라이브러리가 포함된 NuGet 패키지를 Visual Studio 2019에 추가합니다.
 
-    VSIX 패키지를 Visual Studio에 추가하는 방법에 대한 지침은 [Visual Studio 확장 찾기 및 사용](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2019#install-without-using-the-manage-extensions-dialog-box)을 참조하세요.
+    VSIX 패키지를 Visual Studio에 추가하는 방법에 대한 지침은 [Visual Studio 확장 찾기 및 사용](/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2019#install-without-using-the-manage-extensions-dialog-box)을 참조하세요.
 
 
 ## <a name="create-winui-projects"></a>WinUI 프로젝트 만들기
@@ -99,10 +99,10 @@ WinUI 프로젝트에서 사용할 수 있는 항목 템플릿은 다음과 같�
 |----------|----------|-------------|
 | 빈 페이지(WinUI) | C# 및 C++ | WinUI 라이브러리의 **Microsoft.UI.Xaml.Controls.Page** 클래스에서 파생되는 새 페이지를 정의하는 XAML 파일 및 코드 파일을 추가합니다. |
 | 빈 창(데스크톱의 WinUI) | C# 및 C++ | WinUI 라이브러리의 **Microsoft.UI.Xaml.Window** 클래스에서 파생되는 새 창을 정의하는 XAML 파일 및 코드 파일을 추가합니다. |
-| 사용자 지정 컨트롤(WinUI) | C# 및 C++ | 기본 스타일을 사용하여 템플릿 기반 컨트롤을 만드는 코드 파일을 추가합니다. 템플릿 기반 컨트롤은 WinUI 라이브러리의 **Microsoft.UI.Xaml.Controls.Control** 클래스에서 파생됩니다.<p></p>이 항목 템플릿을 사용하는 방법을 보여 주는 연습은 [C++/WinRT를 사용한 UWP 및 WinUI 3 앱용 템플릿 기반 XAML 컨트롤](xaml-templated-controls-cppwinrt-winui3.md)을 참조하세요. 템플릿 기반 컨트롤에 대한 자세한 내용은 [사용자 지정 XAML 컨트롤](https://docs.microsoft.com/archive/msdn-magazine/2019/may/xaml-custom-xaml-controls)을 참조하세요. |
+| 사용자 지정 컨트롤(WinUI) | C# 및 C++ | 기본 스타일을 사용하여 템플릿 기반 컨트롤을 만드는 코드 파일을 추가합니다. 템플릿 기반 컨트롤은 WinUI 라이브러리의 **Microsoft.UI.Xaml.Controls.Control** 클래스에서 파생됩니다.<p></p>이 항목 템플릿을 사용하는 방법을 보여 주는 연습은 [C++/WinRT를 사용한 UWP 및 WinUI 3 앱용 템플릿 기반 XAML 컨트롤](xaml-templated-controls-cppwinrt-winui3.md)을 참조하세요. 템플릿 기반 컨트롤에 대한 자세한 내용은 [사용자 지정 XAML 컨트롤](/archive/msdn-magazine/2019/may/xaml-custom-xaml-controls)을 참조하세요. |
 | 리소스 사전(WinUI) | C# 및 C++ | XAML 리소스의 빈 키 컬렉션을 추가합니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)를 확인하세요. |
 | 리소스 파일(WinUI) | C# 및 C++ | 앱에 대한 문자열 및 조건부 리소스를 저장하는 파일을 추가합니다. 이 항목을 사용하여 앱을 지역화할 수 있습니다. 자세한 내용은 [UI 및 앱 패키지 매니페스트의 문자열 지역화](/windows/uwp/app-resources/localize-strings-ui-manifest)를 참조하세요. |
-| 사용자 지정 컨트롤(WinUI) | C# 및 C++ | WinUI 라이브러리의 **Microsoft.UI.Xaml.Controls.UserControl** 클래스에서 파생되는 사용자 지정 컨트롤을 만드는 XAML 파일 및 코드 파일을 추가합니다. 일반적으로 사용자 지정 컨트롤은 관련된 기존 컨트롤을 캡슐화하고 자체 논리를 제공합니다.<p></p>사용자 지정 컨트롤에 대한 자세한 내용은 [사용자 지정 XAML 컨트롤](https://docs.microsoft.com/archive/msdn-magazine/2019/may/xaml-custom-xaml-controls)을 참조하세요. |
+| 사용자 지정 컨트롤(WinUI) | C# 및 C++ | WinUI 라이브러리의 **Microsoft.UI.Xaml.Controls.UserControl** 클래스에서 파생되는 사용자 지정 컨트롤을 만드는 XAML 파일 및 코드 파일을 추가합니다. 일반적으로 사용자 지정 컨트롤은 관련된 기존 컨트롤을 캡슐화하고 자체 논리를 제공합니다.<p></p>사용자 지정 컨트롤에 대한 자세한 내용은 [사용자 지정 XAML 컨트롤](/archive/msdn-magazine/2019/may/xaml-custom-xaml-controls)을 참조하세요. |
 
 ## <a name="bug-fixes-and-other-improvements-in-winui-3-preview-2"></a>WinUI 3 Preview 2의 버그 수정 및 기타 개선 사항
 
@@ -111,10 +111,10 @@ Preview 2의 버그 수정 및 기타 업데이트에 대한 포괄적인 목록
 > [!NOTE]
 > WinUI 3 Preview 2는 WinUI 2 라이브러리 버전 2.4.2를 사용합니다. 
 
-- [INotifyCollectionChanged](https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-5.0) 및 [INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-5.0)는 이제 C# 데스크톱 앱에서 예상대로 작동합니다.
+- [INotifyCollectionChanged](/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-5.0) 및 [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-5.0)는 이제 C# 데스크톱 앱에서 예상대로 작동합니다.
   - 이를 통해 백 엔드에서 업데이트되는 동안 UI에서 업데이트되지 않는 컬렉션 컨트롤과 관련된 몇 가지 다른 문제가 해결되었습니다.
   - *GitHub에서 [비슷한 문제](https://github.com/microsoft/microsoft-ui-xaml/issues/2490)를 제출해 주신 @hshristov에게 감사드립니다.*
-- Preview 2는 이제 데스크톱 앱용 [.NET 5 Preview 5](https://docs.microsoft.com/dotnet/api/?view=net-5.0)와 호환됩니다.
+- Preview 2는 이제 데스크톱 앱용 [.NET 5 Preview 5](/dotnet/api/?view=net-5.0)와 호환됩니다.
 - WinUI 3에는 이제 [WinUI 2.4](../winui2/release-notes/winui-2.4.md)와 관련된 패리티가 있습니다. 여기에는 [계층적 NavigationView](../winui2/release-notes/winui-2.4.md#hierarchical-navigation) 및 [ProgressRing](../winui2/release-notes/winui-2.4.md#progressring)과 같은 새로운 컨트롤과 기능이 포함되어 있습니다.
 - 작동 중단 수정됨: 터치를 통해 [TabView](/windows/uwp/design/controls-and-patterns/tab-view)를 사용합니다.
 - [XAML Controls Gallery 샘플](#xaml-controls-gallery-winui-3-preview-2-branch)의 [NavigationView](/windows/uwp/design/controls-and-patterns/navigationview)에서 이제 Left-compact 모드 대신 Left 모드를 사용합니다.
@@ -122,7 +122,7 @@ Preview 2의 버그 수정 및 기타 업데이트에 대한 포괄적인 목록
   - *GitHub에서 [이 문제](https://github.com/microsoft/microsoft-ui-xaml/issues/2563)를 제출해 주신 @paulovilla에게 감사드립니다.*
 - 작동 중단 수정됨: [TextBox](/windows/uwp/design/controls-and-patterns/text-box) 메뉴가 작동하는 동안 XAML UI와 상호 작용합니다.
 - 여러 페이지로 이동하면 [XAML Controls Gallery 샘플](#xaml-controls-gallery-winui-3-preview-2-branch) 제목 텍스트가 더 이상 스크램블되지 않습니다.
-- [WebView2](https://docs.microsoft.com/microsoft-edge/webview2/)에서 터치를 사용하더라도 더 이상 약간의 오프셋이 위치에 제공되지 않습니다.
+- [WebView2](/microsoft-edge/webview2/)에서 터치를 사용하더라도 더 이상 약간의 오프셋이 위치에 제공되지 않습니다.
 - WinUIEdit.dll의 클래스가 Windows.UI.Text 네임스페이스에서 Microsoft.UI.Text 네임스페이스로 이동되었습니다.
 - 작동 중단 수정됨: 다중 선택 모드(Windows 10 버전 1803)의 [TreeView](/windows/uwp/design/controls-and-patterns/tree-view)에서 항목을 선택합니다.
 - Point, Rect 및 Size 멤버는 이제 데스크톱 앱용 API의 C# 프로젝션에서 Double 형식으로 지정됩니다.
@@ -152,7 +152,7 @@ WinUI 3 Preview 1에서 도입되었고 WinUI 3 Preview 2에서 계속 지원되
 - [RadialGradientBrush](/windows/uwp/design/style/brushes#radial-gradient-brushes)
 - [TabView 업데이트](/windows/uwp/design/controls-and-patterns/tab-view)
 - 어두운 테마 업데이트
-- [WebView2](https://docs.microsoft.com/microsoft-edge/hosting/webview2)의 향상된 기능 및 업데이트
+- [WebView2](/microsoft-edge/hosting/webview2)의 향상된 기능 및 업데이트
   - 높은 DPI 지원
   - 창 크기 조정 및 이동 지원
   - 최신 버전의 Edge를 대상으로 업데이트됨

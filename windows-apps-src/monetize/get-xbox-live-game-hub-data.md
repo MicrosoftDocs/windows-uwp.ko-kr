@@ -39,14 +39,14 @@ Microsoft Store analytics API에서이 방법을 사용 하 여 [Xbox Live 사�
 
 ### <a name="request-header"></a>요청 헤더
 
-| header        | 유형   | Description                                                                 |
+| 헤더        | 유형   | Description                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | 권한 부여 | 문자열 | 필수 요소. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 매개 변수        | 형식   |  Description      |  필수  
+| 매개 변수        | 형식   |  설명      |  필수  
 |---------------|--------|---------------|------|
 | applicationId | 문자열 | Xbox Live 게임 허브 데이터를 검색 하려는 게임의 [상점 ID](in-app-purchases-and-trials.md#store-ids) 입니다.  |  예  |
 | metricType | 문자열 | 검색할 Xbox Live 분석 데이터의 유형을 지정 하는 문자열입니다. 이 메서드의 경우 **communitymanagergamehub**값을 지정 합니다.  |  예  |
@@ -77,7 +77,7 @@ Authorization: Bearer <your access token>
 
 *값* 배열의 요소에는 다음 값이 포함 됩니다.
 
-| 값               | 형식   | Description                           |
+| 값               | 형식   | 설명                           |
 |---------------------|--------|-------------------------------------------|
 | date                | 문자열 | 이 개체의 게임 허브 데이터에 대 한 날짜입니다. |
 | applicationId       | 문자열 | 게임 허브 데이터를 검색 하는 게임의 저장소 ID입니다.     |

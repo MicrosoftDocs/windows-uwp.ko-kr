@@ -18,7 +18,7 @@ ms.locfileid: "89155417"
 
 X86 데스크톱 앱이 x86 컴퓨터에서 수행 하는 방식으로 작동 하지 않는 경우 문제를 해결 하는 데 도움이 되는 몇 가지 지침은 다음과 같습니다.
 
-|문제|솔루션|
+|문제|해결 방법|
 |-----|--------|
 | 앱은 ARM 용으로 설계 되지 않은 드라이버를 사용 합니다. | ARM64에 x86 드라이버를 다시 컴파일합니다. [WDK를 사용 하 여 ARM64 드라이버 빌드](/windows-hardware/drivers/develop/building-arm64-drivers)를 참조 하세요. |
 | 앱은 x 64에만 사용할 수 있습니다. | Microsoft Store 용으로 개발 하는 경우 ARM 버전의 앱을 제출 합니다. 자세한 내용은 [앱 패키지 아키텍처](/windows/msix/package/device-architecture)를 참조 하세요. Win32 개발자 인 경우 ARM64에 앱을 다시 컴파일하는 것이 좋습니다. 자세한 내용은 [ARM 개발의 Windows 10에 대 한 Visual Studio 지원의 초기 미리 보기](https://blogs.windows.com/buildingapps/2018/05/08/visual-studio-support-for-windows-10-on-arm-development/)를 참조 하세요. |

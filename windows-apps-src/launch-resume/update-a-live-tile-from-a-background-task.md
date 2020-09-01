@@ -1,6 +1,6 @@
 ---
 title: 백그라운드 작업에서 라이브 타일 업데이트
-description: 백그라운드 작업을 사용 하 여 최신 콘텐츠를 사용 하 여 앱의 라이브 타일을 업데이트 합니다.
+description: 백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다.
 Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
 ms.date: 01/11/2018
@@ -21,7 +21,7 @@ ms.locfileid: "89155777"
 -   [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
 -   [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
 
-백그라운드 작업을 사용 하 여 최신 콘텐츠를 사용 하 여 앱의 라이브 타일을 업데이트 합니다.
+백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다.
 
 앱에 라이브 타일을 추가 하는 방법을 보여 주는 비디오는 다음과 같습니다.
 
