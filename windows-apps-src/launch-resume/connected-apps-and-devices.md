@@ -29,11 +29,11 @@ Windows 10, 버전 1607에 도입 된 [원격 시스템 api](/uwp/api/Windows.Sy
 
 플랫폼 간 통합에 대 한 리소스를 비롯 하 여 일반적으로 프로젝트 로마에 대 한 자세한 내용은 [aka.ms/project-rome](https://developer.microsoft.com/windows/project-rome)를 참조 하세요.
 
-| 항목 | Description |
+| 항목 | 설명 |
 |-------|-------------|
-| [원격 디바이스에서 앱 시작](launch-a-remote-app.md) | 원격 장치에서 앱을 시작 하는 방법을 알아봅니다. 이 항목에서는 가장 간단한 사용 사례 및 예비 설정에 대해 설명 합니다.  |
-| [원격 디바이스 검색](discover-remote-devices.md)  | 연결할 수 있는 장치를 검색 하는 방법을 알아봅니다. |
-| [원격 앱 서비스와 통신](communicate-with-a-remote-app-service.md) | 원격 장치에서 앱과 상호 작용 하는 방법에 대해 알아봅니다. |
+| [원격 디바이스에서 앱 시작](launch-a-remote-app.md) | 원격 디바이스에서 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 가장 간단한 사용 사례 및 예비 설정에 대해 설명 합니다.  |
+| [원격 디바이스 검색](discover-remote-devices.md)  | 연결할 수 있는 디바이스를 검색하는 방법을 알아봅니다. |
+| [원격 앱 서비스와 통신](communicate-with-a-remote-app-service.md) | 원격 디바이스에서 앱을 조작하는 방법을 알아봅니다. |
 | [원격 세션을 통해 디바이스 연결](remote-sessions.md) | 원격 세션에서 여러 디바이스를 연결하여 공유 환경을 만듭니다. |
 | [디바이스 간에도 사용자 활동 계속 수행](useractivities.md)| 사용자가 앱에서 수행 하 던 작업을 여러 장치에 걸쳐 다시 시작 하도록 지원 합니다.|
 | [사용자 활동 모범 사례](useractivities-best-practices.md)| 사용자 활동을 만들고 업데이트 하기 위한 권장 방법에 대해 알아봅니다.|

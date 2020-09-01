@@ -68,7 +68,7 @@ XAML 프레임 워크에서 만든 시각적 개체를 가져오고 [**ElementCo
 
 자세한 내용은 [시각적 계층을 사용하여 데스크톱 앱 현대화](/windows/apps/desktop/modernize/visual-layer-in-desktop-apps)를 참조하세요.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 * [**API에 대 한 전체 참조 설명서**](/uwp/api/Windows.UI.Composition)
 * [Windowsuidevlabs GitHub](https://github.com/microsoft/WindowsCompositionSamples) 의 고급 UI 및 컴퍼지션 샘플

@@ -19,7 +19,7 @@ Microsoft Store analytics API에서이 메서드를 사용 하 여 가장 최근
 > [!IMPORTANT]
 > 이 방법은 xbox Live 서비스를 사용 하는 Xbox 또는 게임의 게임만 지원 합니다. 이러한 게임은 [Microsoft 파트너](/gaming/xbox-live/developer-program-overview.md#microsoft-partners) 에서 게시 한 게임과 [ ID@Xbox 프로그램](/gaming/xbox-live/developer-program-overview.md#id)을 통해 제출 된 게임을 포함 하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 통과 해야 합니다. 이 메서드는 현재 [Xbox Live 크리에이터 프로그램](/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시 된 게임을 지원 하지 않습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 이 방법을 사용 하려면 먼저 다음을 수행 해야 합니다.
 
@@ -38,7 +38,7 @@ Microsoft Store analytics API에서이 메서드를 사용 하 여 가장 최근
 
 ### <a name="request-header"></a>요청 헤더
 
-| header        | 유형   | Description                                                                 |
+| 헤더        | 유형   | Description                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | 권한 부여 | 문자열 | 필수 요소. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
@@ -46,12 +46,12 @@ Microsoft Store analytics API에서이 메서드를 사용 하 여 가장 최근
 ### <a name="request-parameters"></a>요청 매개 변수
 
 
-| 매개 변수        | 형식   |  Description      |  필수  
+| 매개 변수        | 형식   |  설명      |  필수  
 |---------------|--------|---------------|------|
 | applicationId | 문자열 | Xbox Live 성과 데이터를 검색 하려는 게임의 [상점 ID](in-app-purchases-and-trials.md#store-ids) 입니다.  |  예  |
 | metricType | 문자열 | 검색할 Xbox Live 분석 데이터의 유형을 지정 하는 문자열입니다. 이 메서드의 경우 **성과**값을 지정 합니다.  |  예  |
-| top | int | 요청에 반환할 데이터 행 수입니다. 지정 되지 않은 경우 최대값 및 기본값은 1만입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에는 다음 데이터 페이지를 요청 하는 데 사용할 수 있는 다음 링크가 포함 됩니다. |  예  |
-| skip | int | 쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용 하 여 많은 데이터 집합을 페이징 합니다. 예를 들어 top = 10000과 skip = 0은 처음 1만 개의 데이터 행을 검색 하 고 top = 10000 및 skip = 10000은 데이터의 다음 1만 행을 검색 하는 식입니다. |  예  |
+| top | int | 요청에 반환할 데이터 행 수입니다. 지정 되지 않은 경우 최대값 및 기본값은 1만입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에는 다음 데이터 페이지를 요청 하는 데 사용할 수 있는 다음 링크가 포함 됩니다. |  아니요  |
+| skip | int | 쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용 하 여 많은 데이터 집합을 페이징 합니다. 예를 들어 top = 10000과 skip = 0은 처음 1만 개의 데이터 행을 검색 하 고 top = 10000 및 skip = 10000은 데이터의 다음 1만 행을 검색 하는 식입니다. |  아니요  |
 
 
 ### <a name="request-example"></a>요청 예제
@@ -75,7 +75,7 @@ Authorization: Bearer <your access token>
 
 *값* 배열의 요소에는 다음 값이 포함 됩니다.
 
-| 값               | 형식   | Description                           |
+| 값               | 형식   | 설명                           |
 |---------------------|--------|-------------------------------------------|
 | applicationId       | 문자열 | 성과 데이터를 검색 하는 게임의 저장소 ID입니다.     |
 | reportDateTime     | 문자열 |  성과 데이터의 날짜입니다.    |

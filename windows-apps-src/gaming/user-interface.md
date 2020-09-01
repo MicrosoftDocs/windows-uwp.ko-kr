@@ -19,7 +19,7 @@ ms.locfileid: "89159037"
 
 UWP (DirectX and 유니버설 Windows 플랫폼) 템플릿을 사용 하면 게임의 시작 점으로 프로젝트를 빠르게 만들 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 
 프로젝트를 만들려면 다음을 수행 해야 합니다.

@@ -110,7 +110,7 @@ Windows Pc에는 많은 [Android 에뮬레이터 옵션](https://www.androidauth
 
     ![Visual Studio 시작 Android Emulator](../images/vs-target-device-menu.png)
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](/dual-screen/android/)
 

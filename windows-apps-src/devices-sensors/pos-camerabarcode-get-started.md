@@ -166,7 +166,7 @@ private async Task SelectScannerAsync(string scannerDeviceId)
 
 바코드가 디코딩되는 경우 스캐너 동작을 제어 하려면 [**IsDisabledOnDataReceived**](/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdisabledondatareceived#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDisabledOnDataReceived) 의 원하는 값을 설정 합니다.
 
-| 값 | Description |
+| 값 | 설명 |
 | ----- | ----------- |
 | True   | 하나의 바코드만 검색 한 후 중지 |
 | False  | 중지 하지 않고 계속 해 서 바코드 스캔 |

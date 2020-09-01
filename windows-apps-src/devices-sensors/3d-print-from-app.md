@@ -24,7 +24,7 @@ ms.locfileid: "89175497"
 > [!NOTE]
 > 이 가이드의 샘플 코드에서는 간단한 설명을 위해 오류 보고 및 처리가 상당히 간소화 되었습니다.
 
-## <a name="setup"></a>설치 프로그램
+## <a name="setup"></a>설치
 
 
 3D 인쇄 기능을 사용할 수 있는 응용 프로그램 클래스에서 [**Printing3D**](/uwp/api/Windows.Graphics.Printing3D) 네임 스페이스를 추가 합니다.

@@ -55,7 +55,7 @@ ms.locfileid: "89158733"
 >[!Important]
 > JSON 파일에는. json 파일 접미사가 없어야 합니다.
 
-**Windows-app-v-link** 라는 json 파일 (. json 파일 확장명 제외)을 만들고 앱의 패키지 패밀리 이름을 제공 합니다. 예:
+**Windows-app-v-link** 라는 json 파일 (. json 파일 확장명 제외)을 만들고 앱의 패키지 패밀리 이름을 제공 합니다. 예를 들면 다음과 같습니다.
 
 ``` JSON
 [{

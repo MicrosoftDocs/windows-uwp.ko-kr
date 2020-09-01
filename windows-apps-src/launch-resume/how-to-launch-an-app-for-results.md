@@ -1,6 +1,6 @@
 ---
 title: 결과를 위한 앱 실행
-description: 다른 앱에서 앱을 시작 하 고 두 앱 간에 데이터를 교환 하는 방법을 알아봅니다. 이를 결과에 대 한 앱 시작 이라고 합니다.
+description: 다른 앱에서 앱을 시작하고 두 사이에서 데이터를 교환하는 방법을 알아봅니다. 이를 결과를 위한 앱 실행이라고 합니다.
 ms.assetid: AFC53D75-B3DD-4FF6-9FC0-9335242EE327
 ms.date: 02/08/2017
 ms.topic: article
@@ -23,7 +23,7 @@ ms.locfileid: "89158768"
 -   [**LaunchUriForResultsAsync**](/uwp/api/windows.system.launcher.launchuriforresultsasync)
 -   [**ValueSet**](/uwp/api/Windows.Foundation.Collections.ValueSet)
 
-다른 앱에서 앱을 시작 하 고 두 앱 간에 데이터를 교환 하는 방법을 알아봅니다. 이를 *결과에 대 한 앱 시작*이라고 합니다. 다음 예제에서는 [**LaunchUriForResultsAsync**](/uwp/api/windows.system.launcher.launchuriforresultsasync) 를 사용 하 여 결과에 대 한 앱을 시작 하는 방법을 보여 줍니다.
+다른 앱에서 앱을 시작하고 두 사이에서 데이터를 교환하는 방법을 알아봅니다. 이를 *결과에 대 한 앱 시작*이라고 합니다. 다음 예제에서는 [**LaunchUriForResultsAsync**](/uwp/api/windows.system.launcher.launchuriforresultsasync) 를 사용 하 여 결과에 대 한 앱을 시작 하는 방법을 보여 줍니다.
 
 Windows 10의 새로운 앱 간 통신 Api를 통해 Windows 앱 및 Windows Web apps에서 앱을 시작 하 고 데이터 및 파일을 교환할 수 있습니다. 이렇게 하면 여러 앱에서 매시업 솔루션을 빌드할 수 있습니다. 이러한 새 Api를 사용 하 여 사용자가 여러 앱을 사용 해야 하는 복잡 한 작업을 이제 원활 하 게 처리할 수 있습니다. 예를 들어 앱에서 소셜 네트워킹 앱을 시작 하 여 연락처를 선택 하거나, 체크 아웃 앱을 시작 하 여 지불 프로세스를 완료할 수 있습니다.
 

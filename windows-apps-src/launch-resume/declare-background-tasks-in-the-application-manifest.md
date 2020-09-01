@@ -1,6 +1,6 @@
 ---
 title: 애플리케이션 매니페스트에서 백그라운드 작업 선언
-description: 응용 프로그램 매니페스트에서 확장으로 선언 하 여 백그라운드 작업을 사용 하도록 설정 합니다.
+description: 앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다.
 ms.assetid: 6B4DD3F8-3C24-4692-9084-40999A37A200
 ms.date: 02/08/2017
 ms.topic: article
@@ -23,7 +23,7 @@ ms.locfileid: "89155957"
 -   [**BackgroundTasks 스키마**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
 -   [**Windows.ApplicationModel.Background**](/uwp/api/Windows.ApplicationModel.Background)
 
-응용 프로그램 매니페스트에서 확장으로 선언 하 여 백그라운드 작업을 사용 하도록 설정 합니다.
+앱 매니페스트에서 백그라운드 작업을 확장으로 선언하여 사용할 수 있습니다.
 
 > [!Important]
 >  이 문서는 out-of-process 백그라운드 작업에만 적용 됩니다. In-process 백그라운드 작업은 매니페스트에서 선언 되지 않습니다.

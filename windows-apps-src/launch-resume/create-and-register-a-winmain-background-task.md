@@ -1,6 +1,6 @@
 ---
 title: Winmain 백그라운드 작업 만들기 및 등록
-description: 패키지 된 winmain 앱이 실행 되 고 있지 않을 수 있는 경우 기본 프로세스 또는 out-of-process에서 실행할 수 있는 COM 백그라운드 작업을 만듭니다.
+description: 패키지된 winmain 앱이 실행되고 있지 않을 때 기본 프로세스에서 또는 프로세스 외부에서 실행할 수 있는 COM 백그라운드 작업을 만듭니다.
 ms.assetid: 8CBD4986-6E65-4374-BC7C-C38908E417E1
 ms.date: 03/27/2020
 ms.topic: article

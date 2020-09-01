@@ -26,7 +26,7 @@ Windows 10에는 데스크톱, 랩톱, 태블릿, 휴대폰 장치 등에 매력
 
 이러한 연습을 시작 하려면 Windows 10 및 Microsoft Visual Studio가 설치 된 컴퓨터가 필요 합니다. [UWP 앱 프로그래밍을 위한 개발자 다운로드](https://developer.microsoft.com/windows/downloads)에서 다운로드할 수 있습니다. PC가 없나요? Mac을 사용 하는 것은 걱정 하지 마세요. [mac에서 Windows 및 dev Tools 설치](setting-up-your-mac-with-windows-10.md)를 참조 하세요.
 
-| 항목 | Description |
+| 항목 | 설명 |
 |-------|-------------|
 | [시작: 프로젝트 만들기](getting-started-creating-a-project.md) | Visual Studio는 Xcode에서 iOS 및 Mac OS에 대 한 것 이므로 Windows에 해당 합니다. 이 연습에서는 Visual Studio를 사용 하는 데 도움이 됩니다. |
 | [시작: 프로그래밍 언어 선택](getting-started-choosing-a-programming-language.md) | 좀 더 진행 하기 전에 UWP 앱을 개발할 때 선택할 수 있는 프로그래밍 언어에 대해 알고 있어야 합니다. |

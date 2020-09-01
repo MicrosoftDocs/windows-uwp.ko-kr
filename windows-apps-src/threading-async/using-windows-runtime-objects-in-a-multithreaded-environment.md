@@ -160,7 +160,7 @@ End Sub
 
 Ui 스레드에서 실행 되 고 ui 스레드가 아닌 스레드에서 호출 될 때 예외를 throw 하는 개체의 경우 UI 스레드의 [CoreDispatcher](/uwp/api/Windows.UI.Core.CoreDispatcher) 개체를 사용 하 여 호출을 디스패치할 수 있습니다.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 [C# 가이드](/dotnet/csharp/)
 
 [Visual Basic 가이드](/dotnet/visual-basic/)

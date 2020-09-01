@@ -57,7 +57,7 @@ ms.locfileid: "89167557"
 
 무료 평가 기간 동안 및 후에 앱이 어떻게 동작 하는지 설명 해야 합니다. 그러면 고객이 앱의 동작에 영향을 주지 않습니다. 앱을 설명 하는 방법에 대 한 자세한 내용은 [앱 설명 만들기](../publish/create-app-store-listings.md)를 참조 하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 이 예제에는 다음과 같은 필수 구성 요소가 있습니다.
 * **Windows 10 기념일 Edition (10.0;)을 대상으로 하는 UWP (유니버설 Windows 플랫폼) 앱 용 Visual Studio 프로젝트입니다. 빌드 14393)** 이상 릴리스

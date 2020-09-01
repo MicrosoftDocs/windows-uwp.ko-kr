@@ -56,7 +56,7 @@ Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 앱에 대 �
 </tbody>
 </table>
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 아직 수행 하지 않은 경우 이러한 메서드를 사용 하기 전에 Microsoft Store 제출 API에 대 한 모든 [필수 구성 요소](create-and-manage-submissions-using-windows-store-services.md#prerequisites) 를 완료 합니다.
 
@@ -97,7 +97,7 @@ Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 앱에 대 �
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값      | 형식   | Description        |
+| 값      | 형식   | 설명        |
 |------------|--------|--------------|
 | 애플리케이션      | array  | 이 추가 기능이 연결 된 [응용 프로그램을 나타내는 하나의 응용 프로그램 리소스](#application-object) 를 포함 하는 배열입니다. 이 배열에서는 하나의 항목만 지원 됩니다.  |
 | id | 문자열  | 추가 기능에 대 한 저장소 ID입니다. 이 값은 저장소에서 제공 됩니다. 예 매장 ID는 9NBLGGH4TNMP입니다.  |

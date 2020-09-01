@@ -1,6 +1,6 @@
 ---
 title: 앱 일시 중단 처리
-description: 시스템이 앱을 일시 중단 하는 경우 중요 한 응용 프로그램 데이터를 저장 하는 방법을 알아봅니다.
+description: 시스템에서 앱을 일시 중단할 때 중요한 애플리케이션 데이터를 저장하는 방법을 배웁니다.
 ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
 ms.date: 07/06/2018
 ms.topic: article
@@ -24,7 +24,7 @@ ms.locfileid: "89171827"
 
 - [**Suspending**](/uwp/api/windows.ui.xaml.application.suspending)
 
-시스템이 앱을 일시 중단 하는 경우 중요 한 응용 프로그램 데이터를 저장 하는 방법을 알아봅니다. 이 예제에서는 [**일시 중단**](/uwp/api/windows.ui.xaml.application.suspending) 이벤트에 대 한 이벤트 처리기를 등록 하 고 문자열을 파일에 저장 합니다.
+시스템에서 앱을 일시 중단할 때 중요한 애플리케이션 데이터를 저장하는 방법을 배웁니다. 이 예제에서는 [**일시 중단**](/uwp/api/windows.ui.xaml.application.suspending) 이벤트에 대 한 이벤트 처리기를 등록 하 고 문자열을 파일에 저장 합니다.
 
 ## <a name="register-the-suspending-event-handler"></a>일시 중단 이벤트 처리기 등록
 

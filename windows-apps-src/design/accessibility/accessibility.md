@@ -21,7 +21,7 @@ ms.locfileid: "89163377"
 
 > 앱에 대 한 액세스 가능성과 관련 된 Microsoft Store 선언도 있습니다.
 
-| 아티클 | Description |
+| 아티클 | 설명 |
 |---------|-------------|
 | [접근성 개요](accessibility-overview.md) | 이 문서는 Windows 앱에 대 한 내게 필요한 옵션 시나리오와 관련 된 개념과 기술에 대 한 개요입니다. |
 | [포괄 소프트웨어 디자인](designing-inclusive-software.md) | Windows 10 용 Windows 앱으로 진화 하는 포괄 디자인에 대해 알아봅니다.  내게 필요한 옵션을 염두에 두면 포함 소프트웨어를 설계 하 고 구축 합니다. |

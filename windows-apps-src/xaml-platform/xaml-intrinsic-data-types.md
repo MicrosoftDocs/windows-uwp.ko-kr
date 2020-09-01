@@ -22,7 +22,7 @@ Xaml 내장 데이터 형식이 사용 되는 가장 일반적인 장소는 리�
 
 Windows 런타임 XAML은 이러한 형식에 대 한 언어 수준 지원을 제공 합니다.
 
-| XAML 기본 형식 | Description |
+| XAML 기본 형식 | 설명 |
 |-------|-------------|
 | **x:Boolean**  | CLR 지원의 경우은 [**부울**](/dotnet/api/system.boolean)에 해당 합니다. XAML은 **X:boolean** 의 값을 대/소문자를 구분 하지 않고 구문 분석 합니다. "X:Bool"은 허용 되는 대안이 아닙니다. |
 | **x:String**   | CLR 지원의 경우는 [**문자열**](/dotnet/api/system.string)에 해당 합니다. 문자열에 대 한 인코딩은 기본적으로 주변 XML 인코딩으로 설정 됩니다. |

@@ -13,7 +13,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 08/31/2020
 ms.locfileid: "89175317"
 ---
-# <a name="getting-started"></a>시작
+# <a name="getting-started"></a>시작하기
 
 이 문서는 Windows 또는 Xbox에서 게임을 개발 하려는 작성자를 위한 시작 가이드입니다. 
 

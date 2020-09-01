@@ -18,7 +18,7 @@ ms.locfileid: "89164837"
 >[!WARNING]
 > 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 정보](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
-Microsoft Advertising SDK를 사용 하 여 Windows 10 용 유니버설 Windows 플랫폼 (UWP) 앱에 광고를 배치 하 여 수익 기회를 늘립니다. Ad 수익 화 플랫폼은 앱에 원활 하 게 통합 될 수 있고 널리 사용 되는 여러 ad 네트워크를 통한 중재를 지 원하는 다양 한 ad 형식을 제공 합니다. 이 플랫폼은 OpenRTB, 방대한 2.x, MRAID 2 및 VPAID 3 표준과 호환 되며 MOAT 및 IAS와 호환 됩니다. 
+Microsoft Advertising SDK를 사용 하 여 Windows 10 용 유니버설 Windows 플랫폼 (UWP) 앱에 광고를 배치 하 여 수익 기회를 늘립니다. Ad 수익 화 플랫폼은 앱에 원활 하 게 통합 될 수 있고 널리 사용 되는 여러 ad 네트워크를 통한 중재를 지 원하는 다양 한 ad 형식을 제공 합니다. 이 플랫폼은 OpenRTB, VAST 2.x, MRAID 2 및 VPAID 3 표준을 준수하며 MOAT 및 IAS와 호환됩니다. 
 
 <br/>
 

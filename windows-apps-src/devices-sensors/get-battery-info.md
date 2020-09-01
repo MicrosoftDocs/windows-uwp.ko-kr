@@ -1,7 +1,7 @@
 ---
 ms.assetid: 90BB59FC-90FE-453E-A8DE-9315E29EB98C
 title: 배터리 정보 가져오기
-description: Windows의 Api를 사용 하 여 자세한 배터리 정보를 얻는 방법에 대해 알아봅니다.
+description: Windows.Devices.Power 네임스페이스에서 API를 사용하여 자세한 배터리 정보를 가져오는 방법을 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -21,7 +21,7 @@ ms.locfileid: "89172237"
 -   [**Windows. 장치. 전원**](/uwp/api/Windows.Devices.Power)
 -   [**DeviceInformation. FindAllAsync**](/uwp/api/windows.devices.enumeration.deviceinformation.findallasync)
 
-[**Windows**](/uwp/api/Windows.Devices.Power) 의 api를 사용 하 여 자세한 배터리 정보를 얻는 방법에 대해 알아봅니다. *배터리 보고서* ([**BatteryReport**](/uwp/api/Windows.Devices.Power.BatteryReport))는 배터리 또는 배터리 집계의 요금, 용량 및 상태를 설명 합니다. 이 항목에서는 앱이 배터리 보고서를 받고 변경 내용에 대 한 알림 메시지를 표시 하는 방법을 보여 줍니다. 코드 예제는이 항목의 끝에 나열 된 기본 배터리 앱에서 가져온 것입니다.
+[  **Windows.Devices.Power**](/uwp/api/Windows.Devices.Power) 네임스페이스에서 API를 사용하여 자세한 배터리 정보를 가져오는 방법을 알아봅니다. *배터리 보고서* ([**BatteryReport**](/uwp/api/Windows.Devices.Power.BatteryReport))는 배터리 또는 배터리 집계의 요금, 용량 및 상태를 설명 합니다. 이 항목에서는 앱이 배터리 보고서를 받고 변경 내용에 대 한 알림 메시지를 표시 하는 방법을 보여 줍니다. 코드 예제는이 항목의 끝에 나열 된 기본 배터리 앱에서 가져온 것입니다.
 
 ## <a name="get-aggregate-battery-report"></a>집계 배터리 보고서 가져오기
 

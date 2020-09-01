@@ -1,6 +1,6 @@
 ---
 title: Microsoft Store 앱 열기
-description: 이 항목에서는 windows 스토어 URI 체계에 대해 설명 합니다. 앱은이 URI 체계를 사용 하 여 스토어의 특정 페이지에 Microsoft Store 앱을 시작할 수 있습니다.
+description: 이 항목에서는 ms-windows-store URI 체계에 대해 설명합니다. 앱은이 URI 체계를 사용 하 여 스토어의 특정 페이지에 Microsoft Store 앱을 시작할 수 있습니다.
 ms.assetid: 9A9C6576-1637-47D1-AC3B-D1A20D49E0FF
 ms.date: 02/08/2017
 ms.topic: article
@@ -28,7 +28,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 ## <a name="ms-windows-store-uri-scheme-reference"></a>ms-chap: URI 체계 참조
 
 <table>
-<tr><th>Description</th><th></th><th>URI 체계</th></tr>
+<tr><th>설명</th><th></th><th>URI 체계</th></tr>
 <tr><td>저장소의 홈 페이지를 시작 합니다.</td><td /><td>ms-windows 스토어:/home</td></tr>
 <tr><td>저장소에서 최상위 수준 세로를 시작 합니다.<p>참고: 모든 사용자가 모든 감축할에 액세스할 수 있는 것은 아닙니다.</p>
 </td><td /><td>

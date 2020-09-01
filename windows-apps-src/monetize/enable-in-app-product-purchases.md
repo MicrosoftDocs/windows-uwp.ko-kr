@@ -23,7 +23,7 @@ ms.locfileid: "89171577"
 > [!NOTE]
 > 앱 내 제품은 평가판 앱에서 제공할 수 없습니다. 앱의 평가판을 사용 하는 고객은 앱의 전체 버전을 구입 하는 경우 앱 내 제품만 구매할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 -   고객이 구매할 기능을 추가할 수 있는 Windows 앱입니다.
 -   새 앱 내 제품을 처음으로 코딩 하 고 테스트 하는 경우 [Currentapp](/uwp/api/Windows.ApplicationModel.Store.CurrentApp) 개체 대신 [currentappsimulator](/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator) 개체를 사용 해야 합니다. 이러한 방식으로 라이브 서버를 호출 하는 대신 라이선스 서버에 대 한 시뮬레이션 된 호출을 사용 하 여 라이선스 논리를 확인할 수 있습니다. 이렇게 하려면% userprofile% \\ AppData \\ 로컬 \\ 패키지 \\ &lt; 패키지 이름 &gt; \\ localstate \\ Microsoft \\ Windows 스토어 \\ apidata에서 이름이 WindowsStoreProxy.xml 인 파일을 사용자 지정 해야 합니다. Microsoft Visual Studio 시뮬레이터는 앱을 처음 실행할 때이 파일을 만들거나 런타임에 사용자 지정 항목을 로드할 수도 있습니다. 자세한 내용은 [CurrentAppSimulator에서 WindowsStoreProxy.xml 파일 사용](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy)을 참조 하세요.

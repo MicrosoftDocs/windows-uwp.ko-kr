@@ -32,7 +32,7 @@ ms.locfileid: "89174607"
 
 <img alt="Toast with progress bar properties labeled" src="images/toast-progressbar-annotated.png" width="626"/>
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
 | **제목** | string 또는 [Bindablestring](toast-schema.md#bindablestring) | false | 선택적 제목 문자열을 가져오거나 설정 합니다. 데이터 바인딩을 지원 합니다. |
 | **값** | double 또는 [AdaptiveProgressBarValue](toast-schema.md#adaptiveprogressbarvalue) 또는 [BindableProgressBarValue](toast-schema.md#bindableprogressbarvalue) | false | 진행률 표시줄의 값을 가져오거나 설정 합니다. 데이터 바인딩을 지원 합니다. 기본값은 0입니다. 0.0에서 1.0, 또는 사이의 double 일 수 있습니다 `AdaptiveProgressBarValue.Indeterminate` `new BindableProgressBarValue("myProgressValue")` . |

@@ -1,6 +1,6 @@
 ---
 title: ms-tonepicker 체계
-description: 이 항목에서는 tonepicker URI 체계에 대해 설명 하 고이 체계를 사용 하 여 톤 선택을 표시 하 고 톤을 저장 하며 톤에 대 한 친숙 한 이름을 가져오는 방법을 설명 합니다.
+description: 이 항목에서는 ms-tonepicker URI 스키마에 대해 설명하고 이를 사용해 톤 선택기를 표시하여 톤을 선택하고, 톤을 저장하고, 톤의 식별 이름을 가져오는 방법을 설명합니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -43,7 +43,7 @@ if (status != LaunchQuerySupportStatus.Available)
 
 톤 선택기를 표시 하기 위해 전달할 수 있는 인수는 다음과 같습니다.
 
-| 매개 변수 | 형식 | 필수 | 가능한 값 | Description |
+| 매개 변수 | 형식 | 필수 | 가능한 값 | 설명 |
 |-----------|------|----------|-------|-------------|
 | 작업 | 문자열 | 예 | "PickRingtone" | 톤 선택기를 엽니다. |
 | CurrentToneFilePath | 문자열 | no | 기존 톤 토큰입니다. | 톤 선택기에서 현재 톤으로 표시할 톤입니다. 이 값을 설정 하지 않으면 기본적으로 목록의 첫 번째 톤이 선택 됩니다.<br>이는 파일 경로를 엄격히 말하는 것이 아닙니다. `CurrenttoneFilePath`톤 선택에서 반환 된 값에서에 적합 한 값을 가져올 수 있습니다 `ToneToken` .  |
@@ -90,7 +90,7 @@ if (result.Status == LaunchUriStatus.Success)
 
 톤 보호기를 표시 하기 위해 전달할 수 있는 인수는 다음과 같습니다.
 
-| 매개 변수 | 형식 | 필수 | 가능한 값 | Description |
+| 매개 변수 | 형식 | 필수 | 가능한 값 | 설명 |
 |-----------|------|----------|-------|-------------|
 | 작업 | 문자열 | 예 | "SaveRingtone" | 벨 소리를 저장할 선택기를 엽니다. |
 | ToneFileSharingToken | 문자열 | 예 | 저장할 벨 소리 파일의 [SharedStorageAccessManager](/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager) 파일 공유 토큰입니다. | 특정 사운드 파일을 벨 소리로 저장 합니다. 파일에 대해 지원 되는 콘텐츠 형식은 mpeg audio 및 x-y 오디오입니다. |
@@ -154,7 +154,7 @@ if (result.Status == LaunchUriStatus.Success)
 
 톤의 이름을 가져오기 위해 전달할 수 있는 인수는 다음과 같습니다.
 
-| 매개 변수 | 형식 | 필수 | 가능한 값 | Description |
+| 매개 변수 | 형식 | 필수 | 가능한 값 | 설명 |
 |-----------|------|----------|-------|-------------|
 | 작업 | 문자열 | 예 | "GetToneName" | 톤의 이름을 가져오려고 함을 나타냅니다. |
 | ToneToken | 문자열 | 예 | 톤 토큰 | 표시 이름을 가져올 톤 토큰입니다. |

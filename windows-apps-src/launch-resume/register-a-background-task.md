@@ -1,6 +1,6 @@
 ---
 title: 백그라운드 작업 등록
-description: 대부분의 백그라운드 작업을 안전 하 게 등록 하는 데 다시 사용할 수 있는 함수를 만드는 방법에 대해 알아봅니다.
+description: 대부분의 백그라운드 작업을 안전하게 등록하기 위해 다시 사용할 수 있는 함수를 만드는 방법을 알아봅니다.
 ms.assetid: 8B1CADC5-F630-48B8-B3CE-5AB62E3DFB0D
 ms.date: 02/08/2017
 ms.topic: article
@@ -22,7 +22,7 @@ ms.locfileid: "89172967"
 -   [**BackgroundTaskBuilder 클래스**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
 -   [**SystemCondition 클래스**](/uwp/api/Windows.ApplicationModel.Background.SystemCondition)
 
-대부분의 백그라운드 작업을 안전 하 게 등록 하는 데 다시 사용할 수 있는 함수를 만드는 방법에 대해 알아봅니다.
+대부분의 백그라운드 작업을 안전하게 등록하기 위해 다시 사용할 수 있는 함수를 만드는 방법을 알아봅니다.
 
 이 항목은 in-process 백그라운드 작업과 out-of-process 백그라운드 작업에 모두 적용 됩니다. 이 항목에서는 등록 해야 하는 백그라운드 작업이 이미 있다고 가정 합니다. 백그라운드 작업을 작성 하는 방법에 대 한 자세한 내용은 out-of-process를 [실행 하는 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md) 또는 [In-process 백그라운드 작업 생성 및 등록](create-and-register-an-inproc-background-task.md) 을 참조 하세요.
 

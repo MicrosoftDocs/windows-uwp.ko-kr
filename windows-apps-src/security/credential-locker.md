@@ -124,7 +124,7 @@ vault.Remove(new Windows.Security.Credentials.PasswordCredential(
     "My App", username, password));
 ```
 
-## <a name="best-practices"></a>모범 사례
+## <a name="best-practices"></a>최선의 구현 방법
 
 
 암호에는 자격 증명 보관만 사용 하 고, 더 큰 데이터 blob에는 사용 하지 마십시오.

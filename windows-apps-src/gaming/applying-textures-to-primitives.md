@@ -19,7 +19,7 @@ ms.locfileid: "89156487"
 
 **목표:** 기본 형식에 질감을 적용 하려면입니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 이 항목을 최대한 활용 하려면 c + +에 대해 잘 알고 있어야 합니다. 또한 그래픽 프로그래밍 개념에 대 한 기본 경험이 필요 합니다. 그리고 가급적 [빠른 시작: DirectX 리소스 설정, 이미지 표시](setting-up-directx-resources.md), [셰이더 및 그리기 기본 형식 만들기](creating-shaders-and-drawing-primitives.md), [기본 형식에 대 한 깊이 및 효과 사용](using-depth-and-effects-on-primitives.md)과 같은 작업을 이미 수행 해야 합니다.
 

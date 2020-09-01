@@ -23,7 +23,7 @@ ms.locfileid: "89167817"
 
 **ms screenclip:** 다음 매개 변수를 사용 합니다.
 
-| 매개 변수 | 형식 | 필수 | Description |
+| 매개 변수 | 형식 | 필수 | 설명 |
 | --- | --- | --- | --- |
 | source | 문자열 | no | URI를 시작한 원본을 나타내는 자유형 문자열입니다. |
 | delayInSeconds | int | no | 1에서 30 사이의 정수 값입니다. URI 호출과 캡처 시작 시간 사이의 지연 (전체 초)을 지정 합니다. |
@@ -35,7 +35,7 @@ ms.locfileid: "89167817"
 
 **ms screensketch:** 다음 매개 변수를 사용 합니다.
 
-| 매개 변수 | 형식 | 필수 | Description |
+| 매개 변수 | 형식 | 필수 | 설명 |
 | --- | --- | --- | --- |
 | sharedAccessToken | 문자열 | no | 캡처 & 스케치 앱에서 열 파일을 식별 하는 토큰입니다. SharedStorageAccessManager에서 검색 [되었습니다. AddFile](/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile). 이 매개 변수를 생략 하면 파일이 열려 있지 않고 앱이 시작 됩니다. |
 | secondarySharedAccessToken | 문자열 | no | 캡처에 대 한 메타 데이터가 포함 된 JSON 파일을 식별 하는 문자열입니다. 메타 데이터에는 x, y 좌표 및/또는 [userActivity](/uwp/api/windows.applicationmodel.useractivities.useractivity)배열이 있는 **clipPoints** 필드가 포함 될 수 있습니다. |

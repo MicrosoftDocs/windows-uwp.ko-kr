@@ -44,7 +44,7 @@ ms.locfileid: "89172507"
 
 또한 앱이 눈 추적 데이터를 수집, 저장 또는 전송 하는 경우 앱의 개인 정보 취급 방침에서이를 설명 하 고 [앱 개발자 계약](/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책의](/legal/windows/agreements/store-policies) **개인 정보** 에 대 한 기타 모든 요구 사항을 준수 해야 합니다.
 
-## <a name="setup"></a>설치 프로그램
+## <a name="setup"></a>설치
 
 Windows 앱에서 응시 입력 Api를 사용 하려면 다음을 수행 해야 합니다. 
 

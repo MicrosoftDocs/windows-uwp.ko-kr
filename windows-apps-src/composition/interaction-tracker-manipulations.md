@@ -16,7 +16,7 @@ ms.locfileid: "89163597"
 
 이 문서에서는 InteractionTracker를 사용 하 여 사용자 지정 조작 환경을 만드는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 여기서는 다음 문서에서 설명 하는 개념에 대해 잘 알고 있다고 가정 합니다.
 
@@ -61,7 +61,7 @@ InteractionTracker는 10586 SDK 버전의 네임 스페이스에 도입 되었�
 
 앞에서 설명한 것 처럼 InteractionTracker은 4 가지 상태를 포함 하는 상태 시스템이 며 각각은 다른 네 가지 상태를 전환할 수 있습니다. 이러한 상태 간에 InteractionTracker 전환 하는 방법에 대 한 자세한 내용은 [InteractionTracker](/uwp/api/windows.ui.composition.interactions.interactiontracker) 클래스 설명서를 참조 하세요.
 
-| 시스템 상태 | Description |
+| 시스템 상태 | 설명 |
 |-------|-------------|
 | 유휴 상태 | 활성, 주행 입력 또는 애니메이션 없음 |
 | 상호 작용 중 | 활성 사용자 입력 검색 됨 |

@@ -1,36 +1,36 @@
 ---
 title: 유니버설 Windows 플랫폼 콘솔 앱 만들기
-description: 이 항목에서는 콘솔 창에서 실행되는 UWP 앱을 작성하는 방법을 설명합니다.
+description: 이 항목에서는 콘솔 창에서 실행 되는 UWP 앱을 작성 하는 방법에 대해 설명 합니다.
 keywords: 콘솔 uwp
 ms.date: 08/02/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c2dba15d78301c84f4064bcd6548d44e3c17beb2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: cab52a84e631404fc4cbd682d6cedef7e799d387
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366352"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162667"
 ---
 # <a name="create-a-universal-windows-platform-console-app"></a>유니버설 Windows 플랫폼 콘솔 앱 만들기
 
-이 항목에서는 만드는 방법을 설명 합니다는 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 또는 C++/CX 유니버설 Windows 플랫폼 (UWP) 콘솔 앱입니다.
+이 항목에서는 [c + +/Winrt](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) 또는 UWP (c + +/cx 유니버설 Windows 플랫폼) 콘솔 앱을 만드는 방법에 대해 설명 합니다.
 
-Windows 10, 버전 1803에서부터 작성할 수 있습니다 C++/WinRT 또는 C++UWP /CX 콘솔 DOS 또는 PowerShell 콘솔 창과 같은 콘솔 창에서 실행 되는 앱입니다. 콘솔 앱, 입력 및 출력에 대 한 콘솔 창을 사용 하 고 사용할 수 있습니다 [유니버설 C 런타임](/cpp/c-runtime-library/reference/crt-alphabetical-function-reference) 와 같은 함수 **printf** 하 고 **getchar**합니다. UWP 콘솔 앱을 Microsoft Store에 게시할 수 있습니다. UWP 콘솔 앱에는 앱 목록의 항목과 시작 메뉴에 고정할 수 있는 기본 타일이 있습니다. 명령줄에서 일반적으로 시작 됩니다 있지만 UWP 콘솔 앱을 시작 메뉴에서 시작할 수 있습니다.
+Windows 10 버전 1803부터 DOS 또는 PowerShell 콘솔 창과 같은 콘솔 창에서 실행 되는 c + +/WinRT 또는 c + +/CX UWP 콘솔 앱을 작성할 수 있습니다. 콘솔 앱은 입력 및 출력을 위해 콘솔 창을 사용 하며 **printf** 및 **Getchar**와 같은 [유니버설 C 런타임](/cpp/c-runtime-library/reference/crt-alphabetical-function-reference) 함수를 사용할 수 있습니다. UWP 콘솔 앱을 Microsoft Store에 게시할 수 있습니다. 앱 목록에 항목이 있고 시작 메뉴에 고정 될 수 있는 기본 타일이 있습니다. UWP 콘솔 앱은 시작 메뉴에서 시작할 수 있지만 일반적으로 명령줄에서 시작 합니다.
 
-작업의 하나를 확인 하려면 UWP 콘솔 앱을 만드는 방법에 대 한 비디오 다음과 같습니다.
+실행 중인 작업을 보려면 UWP 콘솔 앱을 만드는 방법에 대 한 비디오를 참조 하세요.
 
 > [!VIDEO https://www.youtube.com/embed/bwvfrguY20s]
 
 ## <a name="use-a-uwp-console-app-template"></a>UWP 콘솔 앱 템플릿 사용 
 
-UWP 콘솔 앱을 만들려면 먼저 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=AndrewWhitechapelMSFT.ConsoleAppUniversal)에 있는 **콘솔 앱(유니버설) 프로젝트 템플릿**을 설치하세요. 설치 된 템플릿 아래에서 사용할 수 있다면 **새 프로젝트** > **설치 됨** > **기타 언어**  >  **Visual C++**   >  **Windows Universal** 으로 **콘솔 앱 C++/WinRT (유니버설 Windows)** 하 고 **콘솔 C++/CX (유니버설 Windows)** 합니다.
+UWP 콘솔 앱을 만들려면 먼저 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=AndrewWhitechapelMSFT.ConsoleAppUniversal)에서 사용할 수 있는 **콘솔 앱 (유니버설) 프로젝트 템플릿을**설치 합니다. 그러면 설치 된 템플릿이 **새 프로젝트**에  >  **설치**된  >  **다른 언어로**제공 됩니다  >  **Visual C++**  >  .**Windows 유니버설** 을 **콘솔 앱 c + +/winrt (유니버설 windows)** 및 **콘솔 앱 c + +/cx (유니버설 windows)** Visual C++ 합니다.
 
-## <a name="add-your-code-to-main"></a>main()에 코드 추가
+## <a name="add-your-code-to-main"></a>Main ()에 코드를 추가 합니다.
 
-템플릿은 `main()` 함수가 포함된 **Program.cpp**를 추가합니다. 이는 UWP 콘솔 앱에서 실행이 시작되는 위치입니다. `__argc` 및 `__argv` 매개 변수로 명령줄 인수에 액세스합니다. `main()`에서 제어가 반환되면 UWP 콘솔 앱이 종료됩니다.
+템플릿은 함수를 포함 하는 Program을 추가 합니다 **.** `main()` 이 경우 UWP 콘솔 앱에서 실행이 시작 됩니다. 및 매개 변수를 사용 하 여 명령줄 인수에 액세스 `__argc` `__argv` 합니다. 에서 제어가 반환 될 때 UWP 콘솔 앱이 종료 `main()` 됩니다.
 
-다음 예제에서는 **Program.cpp** 을 추가 합니다 **콘솔 앱 C+ + WinRT** 템플릿:
+다음 예제는 **콘솔 앱 c + +/WinRT** 템플릿에서 **추가 됩니다.**
 
 ```cppwinrt
 #include "pch.h"
@@ -58,13 +58,13 @@ int __cdecl main()
 
 ## <a name="uwp-console-app-behavior"></a>UWP 콘솔 앱 동작
 
-UWP 콘솔 앱은 실행되는 디렉토리 및 하위 디렉토리에서 파일 시스템에 액세스할 수 있습니다. 이는 템플릿이 [AppExecutionAlias](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap5-appexecutionalias) 확장을 앱의 Package.appxmanifest 파일에 추가하기 때문에 가능합니다. 이 확장을 사용하면 사용자가 콘솔 창에서 앨리어스를 입력하여 앱을 시작할 수 있습니다. 앱이 시스템 경로에 있지 않아도 앱을 시작할 수 있습니다.
+UWP 콘솔 앱은 실행 중인 디렉터리에서 파일 시스템에 액세스할 수 있습니다. 이는 템플릿이 앱의 appxmanifest.xml 파일에 [Appexecutionalias](/uwp/schemas/appxpackage/uapmanifestschema/element-uap5-appexecutionalias) 확장을 추가 하기 때문에 가능 합니다. 이 확장을 사용 하면 사용자가 콘솔 창에서 별칭을 입력 하 여 앱을 시작할 수도 있습니다. 앱이 시작 하기 위해 시스템 경로에 있을 필요는 없습니다.
 
-[파일 액세스 권한](https://docs.microsoft.com/windows/uwp/files/file-access-permissions)에서 설명된 대로 제한된 접근 권한 값 `broadFileSystemAccess`를 추가하여 파일 시스템에 대한 광범위한 액세스 권한을 UWP 콘솔 앱에 추가적으로 제공할 수 있습니다. 이 접근 권한 값은 [**Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage) 네임스페이스의 API에 대해 작동합니다.
+또한 `broadFileSystemAccess` [파일 액세스 권한](../files/file-access-permissions.md)에 설명 된 대로 제한 된 기능을 추가 하 여 파일 시스템에 대 한 광범위 한 액세스를 UWP 콘솔 앱에 제공할 수 있습니다. 이 기능은 [**Windows. Storage**](/uwp/api/Windows.Storage) 네임 스페이스의 api와 함께 작동 합니다.
 
-템플릿이 [SupportsMultipleInstances](multi-instance-uwp.md) 접근 권한 값을 앱의 Package.appxmanifest 파일에 추가하므로 여러 개의 UWP 콘솔 앱 인스턴스를 한 번에 실행할 수 있습니다.
+템플릿이 앱의 appxmanifest.xml 파일에 [SupportsMultipleInstances](multi-instance-uwp.md) 기능을 추가 하기 때문에 UWP 콘솔 앱의 인스턴스를 한 번에 하나만 실행할 수 있습니다.
 
-또한 템플릿은 `Subsystem="console"` 접근 권한 값을 Package.appxmanifest 파일에 추가하여 이 UWP 앱이 콘솔 앱임을 표시합니다. `desktop4` 및 iot2 `namespace` 접두사를 참고하세요. UWP 콘솔 앱은 데스크톱 및 사물 인터넷(IoT) 프로젝트에서만 지원됩니다.
+또한 `Subsystem="console"` 이 템플릿은이 UWP 앱이 콘솔 앱 임을 나타내는 appxmanifest.xml 파일에 기능을 추가 합니다. `desktop4`및 iot2 접두사를 확인 `namespace` 합니다. UWP 콘솔 앱은 데스크톱 및 IoT (사물 인터넷) 프로젝트 에서만 지원 됩니다.
 
 ```xml
 <Package
@@ -97,12 +97,12 @@ UWP 콘솔 앱은 실행되는 디렉토리 및 하위 디렉토리에서 파일
 </Package>
 ```
 
-## <a name="additional-considerations-for-uwp-console-apps"></a>UWP 콘솔 앱을 위한 추가 고려 사항
+## <a name="additional-considerations-for-uwp-console-apps"></a>UWP 콘솔 앱에 대 한 추가 고려 사항
 
-- 만 C++/WinRT 및 C++/CX UWP 앱 콘솔 앱을 수 있습니다.
+- C + +/WinRT 및 c + +/CX UWP 앱만 콘솔 앱이 될 수 있습니다.
 - UWP 콘솔 앱은 데스크톱 또는 IoT 프로젝트 유형을 대상으로 해야 합니다.
-- Uwp 콘솔 창을 만들 수 없습니다. 사용자 동의 프롬프트와 같은 MessageBox(), 또는 Location(), 어떤 이유로 창을 만들 수 있는 다른 API 사용할 수 없습니다.
-- UWP 콘솔 앱은 백그라운드 작업을 사용하지도 않고 백그라운드 작업으로 저장하지 않을 수도 있습니다.
-- [명령줄 활성화](https://blogs.windows.com/buildingapps/2017/07/05/command-line-activation-universal-windows-apps/#5YJUzjBoXCL4MhAe.97)를 제외하고 UWP 콘솔 앱은 파일 연결, 프로토콜 연결 등의 활성화를 지원하지 않습니다.
-- UWP 콘솔 앱은 다중 인스턴스를 지원하지만 [다중 인스턴스 리디렉션](multi-instance-uwp.md)은 지원하지 않습니다.
-- UWP 앱에 사용할 수 있는 Win32 API 목록을 보려면 [UWP 앱용 Win32 및 COM API](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps)를 참조하세요.
+- UWP 콘솔 앱은 창을 만들지 못할 수 있습니다. MessageBox (), 위치 () 또는 사용자 동의 프롬프트와 같은 어떤 이유로 든 창을 만들 수 있는 다른 API는 사용할 수 없습니다.
+- UWP 콘솔 앱은 백그라운드 작업을 사용 하거나 백그라운드 작업으로 사용할 수 없습니다.
+- [명령줄 활성화](https://blogs.windows.com/buildingapps/2017/07/05/command-line-activation-universal-windows-apps/#5YJUzjBoXCL4MhAe.97)를 제외 하 고 UWP 콘솔 앱은 파일 연결, 프로토콜 연결 등의 활성화 계약을 지원 하지 않습니다.
+- UWP 콘솔 앱은 다중 인스턴스를 지원 하지만 [다중 인스턴스 리디렉션을](multi-instance-uwp.md) 지원 하지 않습니다.
+- UWP 앱에서 사용할 수 있는 Win32 Api 목록은 [uwp 앱 용 win32 및 COM api](/uwp/win32-and-com/win32-and-com-for-uwp-apps) 를 참조 하세요.

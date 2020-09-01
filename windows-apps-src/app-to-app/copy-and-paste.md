@@ -15,7 +15,7 @@ ms.locfileid: "89175767"
 ---
 # <a name="copy-and-paste"></a>복사 및 붙여넣기
 
-이 문서에서는 클립보드를 사용 하 여 UWP (유니버설 Windows 플랫폼) 앱에서 복사 및 붙여넣기를 지 원하는 방법을 설명 합니다. 복사 및 붙여넣기는 앱 간에 또는 앱 내에서 데이터를 교환 하는 일반적인 방법 이며 거의 모든 앱은 어느 정도까지 클립보드 작업을 지원할 수 있습니다. 여러 가지 다른 복사 및 붙여넣기 시나리오를 보여 주는 전체 코드 예제는 [클립보드 샘플](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/Clipboard)을 참조 하세요.
+이 문서에서는 클립보드를 사용 하 여 UWP (유니버설 Windows 플랫폼) 앱에서 복사 및 붙여넣기를 지 원하는 방법을 설명 합니다. 복사 및 붙여넣기는 앱 간에 또는 앱 내에서 데이터를 교환하는 기본적인 방법으로, 거의 모든 앱이 클립보드 작업을 어느 정도 지원할 수 있습니다. 여러 가지 다른 복사 및 붙여넣기 시나리오를 보여 주는 전체 코드 예제는 [클립보드 샘플](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/Clipboard)을 참조 하세요.
 
 ## <a name="check-for-built-in-clipboard-support"></a>기본 제공 클립보드 지원 확인
 

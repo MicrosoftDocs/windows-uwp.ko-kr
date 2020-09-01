@@ -26,7 +26,7 @@ Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 파트너 �
 | GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [앱에 대한 추가 기능 가져오기](get-add-ons-for-an-app.md)         |
 | GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) |
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 아직 수행 하지 않은 경우 이러한 메서드를 사용 하기 전에 Microsoft Store 제출 API에 대 한 모든 [필수 구성 요소](create-and-manage-submissions-using-windows-store-services.md#prerequisites) 를 완료 합니다.
 
@@ -89,7 +89,7 @@ Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 파트너 �
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description         |
+| 값           | 형식    | 설명         |
 |-----------------|---------|----------------------|
 | inAppProductId            | 문자열  | 추가 기능에 대 한 저장소 ID입니다. 이 값은 저장소에서 제공 됩니다. 예 매장 ID는 9NBLGGH4TNMP입니다.   |
 
@@ -121,7 +121,7 @@ Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 파트너 �
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description           |
+| 값           | 형식    | 설명           |
 |-----------------|---------|------------------------|
 | flightId            | 문자열  | 비행 패키지의 ID입니다. 이 값은 파트너 센터에서 제공 합니다.  |
 | friendlyName           | 문자열  | 개발자가 지정한 패키지의 이름입니다.   |

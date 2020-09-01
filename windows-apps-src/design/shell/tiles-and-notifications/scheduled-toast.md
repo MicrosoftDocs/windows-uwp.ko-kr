@@ -26,7 +26,7 @@ ms.locfileid: "89172357"
 > **중요 한 api**: [ScheduledToastNotification 클래스](/uwp/api/Windows.UI.Notifications.ScheduledToastNotification)
 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 이 항목을 완벽 하 게 이해 하려면 다음을 수행 하는 것이 좋습니다.
 

@@ -92,7 +92,7 @@ OM (출력 병합기) 단계는 다음의 조합을 사용 하 여 마지막으�
 
 렌더링 대상 슬롯을 임의로 조합 하 여 사용할 수 있습니다 (최대 8 개). 그러나 리소스 뷰를 여러 렌더링 대상 슬롯에 동시에 바인딩할 수는 없습니다. 리소스를 동시에 사용 하지 않는 한 뷰를 다시 사용할 수 있습니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>섹션 항목
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>섹션 내용
 
 
 <table>
@@ -103,7 +103,7 @@ OM (출력 병합기) 단계는 다음의 조합을 사용 하 여 마지막으�
 <thead>
 <tr class="header">
 <th align="left">항목</th>
-<th align="left">Description</th>
+<th align="left">설명</th>
 </tr>
 </thead>
 <tbody>

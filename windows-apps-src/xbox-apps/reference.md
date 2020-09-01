@@ -17,7 +17,7 @@ ms.locfileid: "89172777"
 
 이 섹션에는 콘솔을 원격으로 구성 하 고 관리 하는 데 사용 되는 Xbox Device Portal REST API에 대 한 참조 항목이 포함 되어 있습니다.
 
-| URI        | Description |
+| URI        | 설명 |
 |------------|-------------|
 |[/api/app/packagemanager/register](wdp-loose-folder-register-api.md)| 느슨한 폴더에 포함 된 앱을 등록 합니다. |
 |[/api/app/packagemanager/upload](wdp-folder-upload.md)| 콘솔에 전체 폴더를 업로드 합니다. |

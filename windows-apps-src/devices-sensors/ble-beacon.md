@@ -1,24 +1,24 @@
 ---
-title: Bluetooth 보급 알림
+title: Bluetooth 광고
 description: 이 섹션에는 AdvertisementWatcher 및 AdvertisementPublisher Api의 사용자를 통해 Bluetooth 저 에너지 (LE) 보급 알림을 유니버설 Windows 플랫폼 (UWP) 앱에 통합 하는 방법에 대 한 문서가 포함 되어 있습니다.
 ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: ff10bbc0-03a7-492c-b5fe-c5b9ce8ca32e
 ms.localizationpriority: medium
-ms.openlocfilehash: 2300871292e08588b0c2124c67a379d403ae53b3
-ms.sourcegitcommit: 015291bdf2e7d67076c1c85fc025f49c840ba475
+ms.openlocfilehash: 319038f8922aac2686dab6836f94ead5018effdf
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469528"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159747"
 ---
 # <a name="bluetooth-le-advertisements"></a>Bluetooth LE 광고
 
 
 **중요 API**
 
--   [**Windows.Devices.Bluetooth.Advertisement**](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement)
+-   [**Windows.Devices.Bluetooth.Advertisement**](/uwp/api/windows.devices.bluetooth.advertisement)
 
 이 문서에서는 유니버설 Windows 플랫폼 (UWP) 앱에 대 한 Bluetooth 저 에너지 (LE) 보급 알림 오류에 대 한 개요를 제공 합니다.  
 
@@ -31,8 +31,8 @@ ms.locfileid: "85469528"
 
 개발자가 LE 보급 Api를 사용 하 여 수행할 수 있는 두 가지 주요 함수는 다음과 같습니다.
 
--   [알림 감시자](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher): 근처의 탐지 장치를 수신 대기 하 고 페이로드 또는 근접성에 따라 필터링 합니다.  
--   [보급 알림 게시자](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher): 개발자에 게 보급을 대신 하 여 Windows에 대 한 페이로드를 정의 합니다.  
+-   [알림 감시자](/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher): 근처의 탐지 장치를 수신 대기 하 고 페이로드 또는 근접성에 따라 필터링 합니다.  
+-   [보급 알림 게시자](/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher): 개발자에 게 보급을 대신 하 여 Windows에 대 한 페이로드를 정의 합니다.  
 
 Github의 [Bluetooth 보급 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BluetoothAdvertisement) 에서 전체 샘플 코드를 찾을 수 있습니다.
 
@@ -48,7 +48,7 @@ Github의 [Bluetooth 보급 샘플](https://github.com/Microsoft/Windows-univers
 
 Bluetooth LE 보급 알림을 통해 장치는 보급 알림 이라는 특정 페이로드를 지속적으로 오류를 발생 시킬 수 있습니다. 이 보급 알림은 이러한 특정 advertisment을 수신 하도록 설정 된 경우 주변의 Bluetooth LE 지원 장치에서 볼 수 있습니다.
 
-> **참고**: 사용자 개인 정보 보호를 위해 보급 알림의 수명은 앱의 수명에 연결 됩니다. BluetoothLEAdvertisementPublisher을 만들고 백그라운드에서 광고에 대해 백그라운드 작업에서 Start를 호출할 수 있습니다. 백그라운드 작업에 대 한 자세한 내용은 [시작, 다시 시작 및 백그라운드 작업](https://docs.microsoft.com/windows/uwp/launch-resume/index)을 참조 하세요.
+> **참고**: 사용자 개인 정보 보호를 위해 보급 알림의 수명은 앱의 수명에 연결 됩니다. BluetoothLEAdvertisementPublisher을 만들고 백그라운드에서 광고에 대해 백그라운드 작업에서 Start를 호출할 수 있습니다. 백그라운드 작업에 대 한 자세한 내용은 [시작, 다시 시작 및 백그라운드 작업](../launch-resume/index.md)을 참조 하세요.
 
 ### <a name="basic-publishing"></a>기본 게시
 

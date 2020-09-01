@@ -92,7 +92,7 @@ typedef struct
 -   [Microsoft Visual C++](/previous-versions/60k1461a(v=vs.140))
 -   OpenGL ES 2.0
 
-### <a name="prerequisites"></a>필수 구성 요소
+### <a name="prerequisites"></a>필수 조건
 
 -   선택 사항입니다. [포트 코드 코드를 DXGI 및 Direct3D로](moving-from-egl-to-dxgi.md)검토 합니다. DirectX에서 제공 하는 그래픽 인터페이스를 더 잘 이해 하려면이 항목을 참조 하세요.
 
@@ -107,7 +107,7 @@ typedef struct
 <thead>
 <tr class="header">
 <th align="left">항목</th>
-<th align="left">Description</th>
+<th align="left">설명</th>
 </tr>
 </thead>
 <tbody>
@@ -132,7 +132,7 @@ typedef struct
 
  
 
-## <a name="span-idadditional_resourcesspanadditional-resources"></a><span id="additional_resources"></span>추가 리소스
+## <a name="span-idadditional_resourcesspanadditional-resources"></a><span id="additional_resources"></span>추가 자료
 
 
 -   [UWP DirectX 게임 개발을 위한 개발 환경 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)

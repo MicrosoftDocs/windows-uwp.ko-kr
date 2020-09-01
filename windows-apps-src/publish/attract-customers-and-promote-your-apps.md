@@ -119,7 +119,7 @@ ms.locfileid: "89164267"
 
 [구입 보고서](acquisitions-report.md)
 
-[REST API 사용 하 여 분석 데이터 가져오기](../monetize/access-analytics-data-using-windows-store-services.md)
+[REST API를 사용하여 분석 데이터 가져오기](../monetize/access-analytics-data-using-windows-store-services.md)
 
 ## <a name="other-ways-to-promote-your-app"></a>앱을 승격 하는 다른 방법
 

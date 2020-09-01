@@ -1,6 +1,6 @@
 ---
 title: 백그라운드 작업 실행 조건 설정
-description: 백그라운드 작업이 실행 되는 시기를 제어 하는 조건을 설정 하는 방법에 대해 알아봅니다.
+description: 백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법을 알아봅니다.
 ms.assetid: 10ABAC9F-AA8C-41AC-A29D-871CD9AD9471
 ms.date: 07/06/2018
 ms.topic: article
@@ -25,7 +25,7 @@ ms.locfileid: "89167737"
 - [**SystemConditionType**](/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)
 - [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
 
-백그라운드 작업이 실행 되는 시기를 제어 하는 조건을 설정 하는 방법에 대해 알아봅니다.
+백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법을 알아봅니다.
 
 백그라운드 작업에 성공 하려면 특정 조건이 충족 되어야 하는 경우가 있습니다. 백그라운드 작업을 등록할 때 [**SystemConditionType**](/uwp/api/Windows.ApplicationModel.Background.SystemConditionType) 에서 지정 하는 조건 중 하나 이상을 지정할 수 있습니다. 트리거를 실행 한 후 조건이 검사 됩니다. 백그라운드 작업은 큐에 대기 되지만 모든 필수 조건이 충족 될 때까지 실행 되지 않습니다.
 

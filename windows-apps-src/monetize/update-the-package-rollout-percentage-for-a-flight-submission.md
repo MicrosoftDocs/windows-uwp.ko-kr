@@ -18,7 +18,7 @@ ms.locfileid: "89158327"
 
 Microsoft Store 제출 API에서이 메서드를 사용 하 여 패키지 비행 제출의 [롤아웃 백분율을 업데이트](../publish/gradual-package-rollout.md#setting-the-rollout-percentage) 합니다. Microsoft Store 제출 API를 사용 하 여 패키지 비행 전송을 만드는 프로세스에 대 한 자세한 내용은 [패키지 비행 전송 관리](manage-flight-submissions.md)를 참조 하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 이 방법을 사용 하려면 먼저 다음을 수행 해야 합니다.
 
@@ -38,14 +38,14 @@ Microsoft Store 제출 API에서이 메서드를 사용 하 여 패키지 비행
 
 ### <a name="request-header"></a>요청 헤더
 
-| header        | 유형   | Description                                                                 |
+| 헤더        | 유형   | Description                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | 권한 부여 | 문자열 | 필수 요소. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 이름        | 유형   | Description                                                                 |
+| 이름        | 유형   | 설명                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
 | applicationId | 문자열 | 필수 요소. 업데이트 하려는 패키지 출시 비율을 사용 하 여 패키지 비행 제출을 포함 하는 앱의 저장소 ID입니다. 저장소 ID에 대 한 자세한 내용은 [앱 id 세부 정보 보기](../publish/view-app-identity-details.md)를 참조 하세요.  |
 | flightId | 문자열 | 필수 요소. 업데이트 하려는 패키지 출시 비율을 사용 하 여 제출을 포함 하는 패키지 비행의 ID입니다. 이 ID는 [패키지 비행 만들기](create-a-flight.md) 요청에 대 한 응답 데이터와 [앱에 대 한 패키지 항공편 가져오기](get-flights-for-an-app.md)요청에 사용할 수 있습니다. 파트너 센터에서 만든 비행의 경우이 ID는 파트너 센터의 비행 페이지에 대 한 URL 에서도 사용할 수 있습니다.  |

@@ -39,7 +39,7 @@ Windows Bluetooth Api에 표시 되는 일반적인 머리글자어는 일반 �
 ## <a name="watchers-and-publishers-beacons"></a>감시자 및 게시자 (탐지 장치)
 중앙 및 주변 역할 외에도 관찰자 및 브로드캐스터 역할이 있습니다. 일반적으로 방송사는 통신을 위해 보급 알림 패킷에 제공 되는 제한 된 공간을 사용 하기 때문에 GATT를 통해 통신 하지 않습니다. 마찬가지로 관찰자는 데이터를 수신 하기 위해 연결을 설정할 필요가 없으며, 주변 광고를 검색 합니다. 근처의 보급 알림을 관찰 하도록 Windows를 구성 하려면 [BluetoothLEAdvertisementWatcher](/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher) 클래스를 사용 합니다. 신호 페이로드를 브로드캐스트하려면 [BluetoothLEAdvertisementPublisher](/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementpublisher) 클래스를 사용 합니다. 자세한 내용은 [보급 알림](ble-beacon.md) 항목을 참조 하세요.
 
-## <a name="see-also"></a>관련 항목
+## <a name="see-also"></a>참고 항목
 - [Windows.Devices.Bluetooth.GenericAttributeProfile](/uwp/api/windows.devices.bluetooth.genericattributeprofile)
 - [Windows.Devices.Bluetooth.Advertisement](/uwp/api/windows.devices.bluetooth.advertisement)
 - [Bluetooth 핵심 사양](https://www.bluetooth.com/specifications/bluetooth-core-specification)

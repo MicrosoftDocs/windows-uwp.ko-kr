@@ -45,7 +45,7 @@ ms.locfileid: "89173297"
 <tr class="header">
 <th align="left">배달 방법</th>
 <th align="left">사용 방법</th>
-<th align="left">Description</th>
+<th align="left">설명</th>
 <th align="left">예</th>
 </tr>
 </thead>
@@ -151,7 +151,7 @@ API 호출이 로컬 인 동안 알림은 웹 이미지를 참조할 수 있습�
 
 기본적으로 푸시 알림은 장치에서 받은 시간부터 3 일 후에 만료 됩니다. 필요한 경우 명시적 만료 시간으로이 기본값을 재정의할 수 있습니다 (알림을는 최대 3 일).
 
-자세한 내용은 다음을 참조하세요.
+자세한 내용은 다음을 참조하십시오.
 
 -   [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
 -   [푸시 알림에 대 한 지침](./windows-push-notification-services--wns--overview.md)
