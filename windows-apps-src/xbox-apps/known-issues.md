@@ -1,23 +1,23 @@
 ---
-title: Xbox 개발자 프로그램에서 UWP의 알려진 문제
-description: Xbox 개발자 프로그램의 UWP에 대 한 알려진 문제를 나열 합니다.
+title: Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제
+description: Xbox One Developer Program의 UWP에서 알려진 몇 가지 문제에 대해 알아보고 다른 도움말 리소스에 액세스 하는 방법을 참조 하세요.
 ms.date: 03/29/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 ms.localizationpriority: medium
-ms.openlocfilehash: dbf9d40d4dc2cfedaa78cbca5b16c4cc26d2d4e1
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 52421d17de5f26fe29060c39d33b51cc85fa197a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730070"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174557"
 ---
-# <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Xbox 개발자 프로그램에서 UWP의 알려진 문제
+# <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제
 
 이 항목에서는 Xbox One Developer Program의 UWP에서 알려진 문제에 대해 설명 합니다. 이 프로그램에 대 한 자세한 내용은 [Xbox의 UWP](index.md)를 참조 하세요. 
 
-\[API 참조 항목의 링크에서 여기를 제공 하 고 범용 장치 패밀리 API 정보를 찾고 있는 경우 [Xbox에서 아직 지원 되지 않는 UWP 기능](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN)을 참조 하세요.\]
+\[API 참조 항목의 링크에서 여기를 제공 하 고 범용 장치 패밀리 API 정보를 찾고 있는 경우 [Xbox에서 아직 지원 되지 않는 UWP 기능](/uwp/extension-sdks/uwp-limitations-on-xbox)을 참조 하세요.\]
 
 다음 목록에서는 발생할 수 있는 몇 가지 알려진 문제를 중점적으로 설명 하지만이 목록은 완전 하지 않습니다. 
 
@@ -60,7 +60,7 @@ System.UnauthorizedAccessException: Access is denied. (Excep_FromHResult 0x80070
 
 ## <a name="windows-runtime-api-coverage"></a>Windows 런타임 API 범위
 
-모든 Windows 런타임 Api가 Xbox에서 지원 되는 것은 아닙니다. 작동 하지 않는 Api 목록은 [Xbox에서 아직 지원 되지 않는 UWP 기능](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN)을 참조 하세요. 다른 Api와 관련 된 문제를 발견 한 경우 포럼에 보고 해 주세요. 
+모든 Windows 런타임 Api가 Xbox에서 지원 되는 것은 아닙니다. 작동 하지 않는 Api 목록은 [Xbox에서 아직 지원 되지 않는 UWP 기능](/uwp/extension-sdks/uwp-limitations-on-xbox)을 참조 하세요. 다른 Api와 관련 된 문제를 발견 한 경우 포럼에 보고 해 주세요. 
 
 
 ## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>WDP로 이동 하면 인증서 경고가 발생 합니다.
@@ -115,6 +115,6 @@ namespace TestDNLA {
 }
 ```
 
-## <a name="see-also"></a>참조
-- [질문과 대답](frequently-asked-questions.md)
+## <a name="see-also"></a>참고 항목
+- [자주 묻는 질문](frequently-asked-questions.md)
 - [Xbox One의 UWP](index.md)

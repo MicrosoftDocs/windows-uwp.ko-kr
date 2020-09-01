@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 비디오, scheduler, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: b42c917a0532a015a789c8b4ac57d59c65804ce1
-ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
+ms.openlocfilehash: 6baf26b083cce08557a9b09f2ba95d5ad889f4a4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970201"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175107"
 ---
 # <a name="show-ads-in-video-content"></a>비디오 콘텐츠에 광고 표시
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세히 알아보기](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 정보](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 이 연습에서는 **Adscheduler** 클래스를 사용 하 여 HTML로 JavaScript를 사용 하 여 작성 된 UWP (유니버설 Windows 플랫폼) 앱에서 비디오 콘텐츠에 광고를 표시 하는 방법을 보여 줍니다.
 
@@ -73,7 +73,7 @@ ms.locfileid: "88970201"
     > [!NOTE]
     > 이 줄 `<head>` 은 main.js 포함 후 섹션에 배치 해야 합니다. 그렇지 않으면 프로젝트를 빌드할 때 오류가 발생 합니다.
 
-6.  프로젝트의 main.js 파일에서 새 **Adscheduler** 개체를 만드는 코드를 추가 합니다. 비디오 콘텐츠를 호스트 하는 **MediaPlayer** 를 전달 합니다. [WinJS](https://docs.microsoft.com/previous-versions/windows/apps/hh440975)후에 실행 되도록 코드를 배치 해야 합니다.
+6.  프로젝트의 main.js 파일에서 새 **Adscheduler** 개체를 만드는 코드를 추가 합니다. 비디오 콘텐츠를 호스트 하는 **MediaPlayer** 를 전달 합니다. [WinJS](/previous-versions/windows/apps/hh440975)후에 실행 되도록 코드를 배치 해야 합니다.
 
     [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet2)]
 
@@ -81,7 +81,7 @@ ms.locfileid: "88970201"
 
     * Microsoft ad 서버에서 ad 일정을 요청 하는 권한을 받은 Microsoft 파트너인 경우 **Requestschedule** 를 사용 하 고 microsoft 담당자가 제공한 응용 프로그램 id 및 AD 단위 id를 지정 합니다.
 
-        이 [메서드는 두](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps#asynchronous-patterns-in-uwp-using-javascript)개의 함수 포인터가 전달 되는 비동기 구문으로, 약속이 성공적으로 완료 될 때 호출할 **onComplete** 함수에 대 한 포인터와 오류가 발생 한 경우 호출 하는 **onError** 함수에 대 한 포인터를 사용 합니다. **OnComplete** 함수에서 비디오 콘텐츠 재생을 시작 합니다. 예약 된 시간에 ad가 재생을 시작 합니다. **OnError** 함수에서 오류를 처리 한 다음 비디오 재생을 시작 합니다. 비디오 콘텐츠는 광고 없이 재생 됩니다. **OnError** 함수의 인수는 다음 멤버를 포함 하는 개체입니다.
+        이 [메서드는 두](../threading-async/asynchronous-programming-universal-windows-platform-apps.md#asynchronous-patterns-in-uwp-using-javascript)개의 함수 포인터가 전달 되는 비동기 구문으로, 약속이 성공적으로 완료 될 때 호출할 **onComplete** 함수에 대 한 포인터와 오류가 발생 한 경우 호출 하는 **onError** 함수에 대 한 포인터를 사용 합니다. **OnComplete** 함수에서 비디오 콘텐츠 재생을 시작 합니다. 예약 된 시간에 ad가 재생을 시작 합니다. **OnError** 함수에서 오류를 처리 한 다음 비디오 재생을 시작 합니다. 비디오 콘텐츠는 광고 없이 재생 됩니다. **OnError** 함수의 인수는 다음 멤버를 포함 하는 개체입니다.
 
         [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet3)]
 
@@ -165,7 +165,7 @@ Ad 클라이언트 및 미디어 플레이어는 기본 비디오 콘텐츠를 �
 
 ### <a name="onerroroccurred"></a>onErrorOccurred  
 
-이 이벤트는 **Adscheduler** 에 오류가 발생할 때 발생 합니다. 오류 코드 값에 대 한 자세한 내용은 [ErrorCode](https://docs.microsoft.com/uwp/api/microsoft.advertising.errorcode)를 참조 하십시오.
+이 이벤트는 **Adscheduler** 에 오류가 발생할 때 발생 합니다. 오류 코드 값에 대 한 자세한 내용은 [ErrorCode](/uwp/api/microsoft.advertising.errorcode)를 참조 하십시오.
 
 ### <a name="onpodcountdown"></a>onPodCountdown
 

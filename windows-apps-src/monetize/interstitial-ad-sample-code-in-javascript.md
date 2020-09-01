@@ -1,17 +1,17 @@
 ---
 ms.assetid: 646977ed-1705-4ea7-a3db-a6b9aac70703
-description: JavaScript/HTML을 사용 하 여 중간 광고를 시작 하는 방법을 알아봅니다.
+description: JavaScript 및 HTML로 작성 된 유니버설 Windows 플랫폼 (UWP) 앱을 사용 하 여 중간 광고를 시작 하는 방법을 알아봅니다.
 title: JavaScript의 중간 광고 샘플 코드
 ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 중간, javascript, 샘플 코드
 ms.localizationpriority: medium
-ms.openlocfilehash: b9aaf24ac4471c9873035afa91294dabd0487a4c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 764d5dd3f48afa7c446c51ff88090cba88654eba
+ms.sourcegitcommit: e273e5901bfa6596dfef4cc741bb1c42614c25ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164587"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89238268"
 ---
 # <a name="interstitial-ad-sample-code-in-javascript"></a>JavaScript의 중간 광고 샘플 코드
 

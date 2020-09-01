@@ -1,24 +1,24 @@
 ---
 title: Xbox Live 테스트 사용자 관리 API 참조
-description: 프로그래밍 방식으로 사용자 관리 API에 액세스하는 방법을 알아봅니다.
+description: Xbox 장치 포털 REST API를 사용 하 여 콘솔에서 사용자 목록을 가져오거나 업데이트 하는 방법에 대해 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 70876ab6-8222-4940-b4fb-65b581a77d6a
-ms.openlocfilehash: 52f333af73084ed14982b9d09b6770c8294980f7
-ms.sourcegitcommit: 6169660ea437915265165c4631d9702587e4793d
+ms.openlocfilehash: 0f05bc84469585fc10bfff6a7f0d0f0976a0080d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74902523"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174677"
 ---
 # <a name="xbox-live-user-management"></a>Xbox Live 사용자 관리
 
 ## <a name="request"></a>요청
 
-콘솔에서 사용자 목록을 가져오거나 기존 사용자 추가, 제거, 로그인, 로그아웃, 수정 등 목록을 업데이트할 수 있습니다.
+콘솔에서 사용자 목록을 가져오거나, 기존 사용자를 추가, 제거, 로그인, 로그 아웃 또는 수정할 수 있습니다.
 
-| 메서드        | 요청 URI     | 
+| 방법        | 요청 URI     | 
 | ------------- |-----------------|
 | GET           | /ext/user |
 | PUT           | /ext/user |
@@ -34,39 +34,39 @@ ms.locfileid: "74902523"
 
 **요청 본문**
 
-PUT 호출에는 다음 구조를 사용하는 JSON 배열이 포함되어야 합니다.
+PUT에 대 한 호출은 다음 구조의 JSON 배열을 포함 해야 합니다.
 
 * 사용자
-  * AutoSignIn(선택 사항): EmailAddress 또는 UserId로 지정된 계정에 대해 자동 로그인을 사용하거나 사용하지 않도록 설정하는 부울입니다.
-  * EmailAddress(선택 사항 - 보증된 사용자를 로그인하지 않는 한 UserId가 제공되지 않은 경우 제공해야 함): 수정/추가/삭제할 사용자를 지정하는 메일 주소입니다.
-  * 암호(선택 사항 - 사용자가 현재 콘솔에 없을 경우 제공해야 함): 콘솔에 새 사용자를 추가하는 데 사용되는 암호입니다.
-  * SignedIn(선택 사항): 제공된 계정을 로그인 또는 로그아웃해야 하는지를 지정하는 부울입니다.
-  * UserId(선택 사항 - 보증된 사용자를 로그인하지 않는 한 EmailAddress가 제공되지 않은 경우 제공해야 함): 수정/추가/삭제할 사용자를 지정하는 UserId입니다.
-  * SponsoredUser(선택 사항): 보증된 사용자를 추가할지 여부를 지정하는 부울입니다.
+  * AutoSignIn (선택 사항): EmailAddress 또는 UserId로 지정 된 계정에 대해 자동 로그인을 사용 하지 않거나 사용 하도록 설정 합니다.
+  * EmailAddress (선택 사항-사용자에 게 로그인 하지 않는 경우 UserId가 제공 되지 않으면 제공 되어야 함): 수정/추가/삭제할 사용자를 지정 하는 전자 메일 주소입니다.
+  * 암호 (선택 사항)-콘솔에 새 사용자를 추가 하는 데 사용 되는 암호 (선택 사항): 암호를 입력 해야 합니다.
+  * (선택 사항): 제공 된 계정에 로그인 또는 로그 아웃 해야 하는지 여부를 지정 하는 부울입니다.
+  * UserId (선택 사항-후원 된 사용자에 게 로그인 하지 않는 경우 EmailAddress를 제공 하지 않으면 제공 해야 함): 수정/추가/삭제할 사용자를 지정 하는 UserId입니다.
+  * SponsoredUser (선택 사항): 후원 사용자를 추가할지 여부를 지정 하는 부울입니다.
   * Delete (선택 사항): 콘솔에서이 사용자를 삭제 하도록 지정 하는 부울
 
 ## <a name="response"></a>응답
 
 **응답 본문**
 
-GET 호출은 다음 속성이 있는 JSON 배열을 반환합니다.
+GET을 호출 하면 다음 속성을 사용 하 여 JSON 배열을 반환 합니다.
 
 * 사용자
-  * AutoSignIn(선택 사항)
-  * EmailAddress(선택 사항)
-  * Gamertag
-  * SignedIn
+  * AutoSignIn (선택 사항)
+  * EmailAddress (선택 사항)
+  * 게이머 태그
+  * 이상
   * UserId
   * XboxUserId
-  * SponsoredUser(선택 사항)
+  * SponsoredUser (선택 사항)
   
 **상태 코드**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+이 API는 다음과 같은 예상 상태 코드를 포함 합니다.
 
-| HTTP 상태 코드   | 설명     | 
+| HTTP 상태 코드   | Description     | 
 | ------------------ |-----------------|
-| 200                | GET 호출 성공 및 응답 본문에 사용자 JSON 배열이 반환됨 |
-| 204                | PUT 호출 성공 및 콘솔의 사용자가 업데이트됨 |
-| 4XX                | 잘못된 요청 데이터 또는 형식에 대한 다양한 오류 |
-| 5XX                | 예기치 않은 오류에 대한 오류 코드 |
+| 200                | 성공적으로 GET을 호출 하 고 응답 본문에서 반환 된 사용자의 JSON 배열을 반환 합니다. |
+| 204                | PUT을 호출 하 고 콘솔의 사용자를 업데이트 했습니다. |
+| 4XX                | 잘못 된 요청 데이터 또는 형식에 대 한 다양 한 오류 |
+| 5XX                | 예기치 않은 오류에 대 한 오류 코드 |

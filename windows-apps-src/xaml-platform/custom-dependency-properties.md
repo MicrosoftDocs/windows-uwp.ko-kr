@@ -1,5 +1,5 @@
 ---
-description: C++, C# 또는 Visual Basic으로 작성한 Windows 런타임 앱의 사용자 지정 종속성 속성을 정의하고 구현하는 방법에 대해 설명합니다.
+description: 'C + +, c # 또는 Visual Basic를 사용 하 여 Windows 런타임 앱의 사용자 지정 종속성 속성을 정의 하 고 구현 하는 방법을 설명 합니다.'
 title: 사용자 지정 종속성 속성
 ms.assetid: 5ADF7935-F2CF-4BB6-B1A5-F535C2ED8EF8
 ms.date: 07/12/2018
@@ -11,73 +11,73 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: eadb0d1547387789fc202b833294e761f2faf22c
-ms.sourcegitcommit: eb24481869d19704dd7bcf34e5d9f6a9be912670
+ms.openlocfilehash: e7a14383f127f12b5ba13e67e1690c0d7a936c82
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79448596"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174217"
 ---
 # <a name="custom-dependency-properties"></a>사용자 지정 종속성 속성
 
-여기에서는 C++, C# 또는 Visual Basic으로 작성된 Windows 런타임 앱의 고유 종속성 속성을 정의하고 구현하는 방법에 대해 설명합니다. 앱 개발자 및 구성 요소 작성자가 사용자 지정 종속성 속성을 만들려고 하는 이유를 나열합니다. 사용자 지정 종속성 속성 구현 단계와 종속성 속성의 성능, 유용성 또는 다양성을 향상시킬 수 있는 몇 가지 모범 사례를 설명합니다.
+여기서는 c + +, c # 또는 Visual Basic를 사용 하 여 Windows 런타임 앱에 대 한 고유한 종속성 속성을 정의 하 고 구현 하는 방법을 설명 합니다. 앱 개발자와 구성 요소 작성자가 사용자 지정 종속성 속성을 만들려는 이유가 나와 있습니다. 사용자 지정 종속성 속성에 대 한 구현 단계 뿐만 아니라 종속성 속성의 성능을 향상 시킬 수 있는 몇 가지 모범 사례를 설명 합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
-개발자가 [종속성 속성 개요](dependency-properties-overview.md)를 읽었고 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해한다고 가정합니다. 이 항목에 있는 예를 이해하려면 XAML과 C++, C# 또는 Visual Basic을 사용하여 기본 Windows 런타임 앱을 작성하는 방법도 알고 있어야 합니다.
+[종속성 속성 개요](dependency-properties-overview.md) 를 읽고 기존 종속성 속성의 소비자 관점에서 종속성 속성을 이해 하 고 있다고 가정 합니다. 이 항목의 예제를 따르려면 XAML을 이해 하 고 c + +, c # 또는 Visual Basic를 사용 하 여 기본 Windows 런타임 앱을 작성 하는 방법을 알고 있어야 합니다.
 
-## <a name="what-is-a-dependency-property"></a>종속성 속성이란?
+## <a name="what-is-a-dependency-property"></a>종속성 속성 이란?
 
-속성에 대해 스타일 지정, 데이터 바인딩, 애니메이션 및 기본값을 지원하려면 종속성 속성으로 구현해야 합니다. 종속성 속성 값은 클래스의 필드로 저장되지 않고 xaml 프레임워크에서 저장되며, [**DependencyProperty.Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 메서드를 호출하여 속성을 Windows 런타임 속성 시스템에 등록할 때 검색되는 키를 사용하여 참조됩니다.   종속성 속성은 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)에서 파생된 형식에서만 사용할 수 있습니다. 그러나 **DependencyObject**는 클래스 계층에서 매우 상위이므로 UI 및 표시 지원을 위한 클래스는 대부분 종속성 속성을 지원할 수 있습니다. 종속성 속성과 이 설명서의 설명 내용에 사용된 일부 용어 및 규칙에 대한 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조하세요.
+속성에 대 한 스타일 지정, 데이터 바인딩, 애니메이션 및 기본값을 지원 하려면 종속성 속성으로 구현 해야 합니다. 종속성 속성 값은 클래스에 필드로 저장 되지 않고, xaml 프레임 워크에 의해 저장 되며, 속성을 속성 시스템에 Windows 런타임 등록 하는 경우에는 [**DependencyProperty**](/uwp/api/windows.ui.xaml.dependencyproperty.register) 메서드를 호출 하 여 검색 되는 키를 사용 하 여 참조 됩니다.   종속성 속성은 [**DependencyObject**](/uwp/api/Windows.UI.Xaml.DependencyObject)에서 파생 된 형식 에서만 사용할 수 있습니다. 그러나 **DependencyObject** 는 클래스 계층 구조에서 매우 높습니다. 따라서 UI 및 프레젠테이션 지원을 위한 대부분의 클래스는 종속성 속성을 지원할 수 있습니다. 종속성 속성에 대 한 자세한 내용과이 설명서에서 설명 하는 데 사용 되는 용어 및 규칙에 대 한 자세한 내용은 [종속성 속성 개요](dependency-properties-overview.md)를 참조 하세요.
 
-Windows 런타임의 종속성 속성 예는 [**Control.Background**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.background), [**FrameworkElement.Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) 및 [**TextBox.Text**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text) 등 여러 가지가 있습니다.
+Windows 런타임에서 종속성 속성의 예로는 [**컨트롤. Background**](/uwp/api/windows.ui.xaml.controls.control.background), [**FrameworkElement. Width**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width)및 [**TextBox**](/uwp/api/windows.ui.xaml.controls.textbox.text)등이 있습니다.
 
-규칙에 따라 클래스별로 노출된 각 종속성 속성에는 동일한 클래스에 대해 노출되고 종속성 속성의 식별자를 제공하는DependencyProperty[**형식의 해당**public static readonly](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 속성이 있습니다. 식별자 이름 지정 규칙은 종속성 속성 이름이 오고 이름 뒤에 "Property" 문자열을 추가하는 것입니다. 예를 들어 **Control.Background** 속성의 해당 **DependencyProperty** 식별자는 [**Control.BackgroundProperty**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.backgroundproperty)입니다. 식별자는 종속성 속성에 대한 정보를 등록된 대로 저장하며, [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 호출 등 종속성 속성과 관련된 다른 작업에 사용될 수 있습니다.
+규칙은 클래스에 의해 노출 되는 각 종속성 속성에 동일한 클래스에 노출 되는 [**DependencyProperty**](/uwp/api/Windows.UI.Xaml.DependencyProperty) 형식의 해당 **public static readonly** 속성이 있으므로에서 종속성 속성에 대 한 식별자를 제공 한다는 것입니다. 식별자 이름은 다음 규칙을 따릅니다. 종속성 속성의 이름은 이름 끝에 "Property" 문자열이 추가 됩니다. 예를 들어, BackgroundProperty 속성에 해당 하 **는** **DependencyProperty** 식별자는 [**control.**](/uwp/api/windows.ui.xaml.controls.control.backgroundproperty). 식별자는 등록 된 종속성 속성에 대 한 정보를 저장 하 고, [**SetValue**](/uwp/api/windows.ui.xaml.dependencyobject.setvalue)호출과 같이 종속성 속성을 포함 하는 다른 작업에 사용할 수 있습니다.
 
 ## <a name="property-wrappers"></a>속성 래퍼
 
-종속성 속성에는 일반적으로 래퍼 구현이 포함되어 있습니다. 래퍼가 없으면 속성을 가져오거나 설정하는 유일한 방법은 종속성 속성 유틸리티 메서드 [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 및 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue)를 사용하여 식별자를 매개 변수로 전달하는 것입니다. 이 방법은 원칙적으로 속성인 항목에 부자연스러운 사용법입니다. 그러나 래퍼가 있으면 종속성 속성을 참조하는 고유 코드 및 모든 기타 코드에서 사용하는 언어에 자연스러운 간단한 개체-속성 구문을 사용할 수 있습니다.
+종속성 속성에는 일반적으로 래퍼 구현이 있습니다. 래퍼가 없으면 속성을 가져오거나 설정 하는 유일한 방법은 종속성 속성 유틸리티 메서드인 [**GetValue**](/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 와 [**SetValue**](/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 를 사용 하 여 식별자를 매개 변수로 전달 하는 것입니다. 이는 속성에 서비스가 표면적으로 된 항목에 대 한 보다 자연스럽 된 사용입니다. 그러나 래퍼를 사용 하 여 코드와 종속성 속성을 참조 하는 다른 모든 코드는 사용 중인 언어에 대 한 자연 스러운 간단한 개체 속성 구문을 사용할 수 있습니다.
 
-사용자 지정 종속성 속성을 구현하고 호출하기 쉽게 공개하려면 속성 래퍼도 정의하세요. 속성 래퍼는 리플렉션 또는 정적 분석 프로세스에 종속성 속성에 대한 기본 정보를 보고하는 경우에도 유용합니다. 특히 래퍼는 [**ContentPropertyAttribute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Markup.ContentPropertyAttribute) 같은 특성을 지정하는 위치입니다.
+사용자 지정 종속성 속성을 직접 구현 하 고 해당 속성을 public이 고 호출 하기 쉽도록 하려면 속성 래퍼를 정의 합니다. 속성 래퍼는 리플렉션 또는 정적 분석 프로세스에 대 한 종속성 속성에 대 한 기본 정보를 보고 하는 데에도 유용 합니다. 특히, 래퍼는 [**ContentPropertyAttribute**](/uwp/api/Windows.UI.Xaml.Markup.ContentPropertyAttribute)와 같은 특성을 저장 하는 위치입니다.
 
 ## <a name="when-to-implement-a-property-as-a-dependency-property"></a>속성을 종속성 속성으로 구현하는 시기
 
-클래스가 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)에서 파생된 경우 클래스에서 공개 읽기/쓰기 속성을 구현할 때마다 속성을 종속성 속성으로 작동하게 할 수 있는 옵션이 있습니다. 프라이빗 필드로 속성을 지원하는 일반적인 기술이 충분한 경우가 있습니다. 사용자 지정 속성을 종속성 속성으로 정의하는 것이 불필요하거나 부적절한 경우도 있습니다. 속성을 지원하려는 시나리오에 따라 선택이 달라질 수 있습니다.
+클래스가 [**DependencyObject**](/uwp/api/Windows.UI.Xaml.DependencyObject)에서 파생 되는 한 클래스에서 공용 읽기/쓰기 속성을 구현할 때마다 속성을 종속성 속성으로 사용할 수 있는 옵션이 있습니다. 경우에 따라 전용 필드를 사용 하 여 속성을 백업 하는 일반적인 방법을 사용 하는 것이 적절 합니다. 사용자 지정 속성을 종속성 속성으로 정의 하는 것은 항상 필요 하거나 적절 하지 않습니다. 선택은 속성에서 지원 하려는 시나리오에 따라 달라 집니다.
 
-속성이 Windows 런타임 또는 Windows 런타임 앱의 다음 기능 중 하나 이상을 지원하도록 하려는 경우 해당 속성을 종속성 속성으로 구현하는 것을 고려할 수 있습니다.
+속성을 종속성 속성으로 구현 하는 것이 좋습니다 .이 속성을 종속성 속성으로 구현 하 여 Windows 런타임 또는 Windows 런타임 앱의 이러한 기능 중 하나 이상을 지원할 수 있습니다.
 
-- [  **Style**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style)을 통한 속성 설정
-- [  **{Binding}** ](binding-markup-extension.md)을 사용하여 데이터 바인딩에 유효한 대상 속성 역할 수행
-- [  **Storyboard**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)를 통해 애니메이션 값 지원
-- 다음에 의해 속성 값이 변경된 시점 보고
-  - 속성 시스템 자체에서 수행된 작업
+- 스타일을 통해 속성 설정 [ **Style**](/uwp/api/Windows.UI.Xaml.Style)
+- [ **{Binding}** 을 (를) 사용 하 여 데이터 바인딩의 유효한 대상 속성으로 작동](binding-markup-extension.md)
+- Storyboard를 통해 애니메이션 된 값 지원 [ **Storyboard**](/uwp/api/Windows.UI.Xaml.Media.Animation.Storyboard)
+- 속성의 값이 다음에 의해 변경 된 경우 보고:
+  - 속성 시스템 자체에서 수행 하는 작업
   - 환경
   - 사용자 작업
-  - 읽기 및 쓰기 스타일
+  - 스타일 읽기 및 쓰기
 
-## <a name="checklist-for-defining-a-dependency-property"></a>종속성 속성 정의 검사 목록
+## <a name="checklist-for-defining-a-dependency-property"></a>종속성 속성을 정의 하기 위한 검사 목록
 
-종속성 속성 정의는 개념 집합으로 간주될 수 있습니다. 구현에서는 코드의 한 줄에 여러 개념이 언급될 수 있으므로 이러한 개념이 반드시 절차적 단계일 필요는 없습니다. 이 목록은 간단한 개요만 제공합니다. 이 항목의 뒷 부분에서 각 개념을 더 자세히 설명하고 여러 언어로 코드 예를 제공합니다.
+종속성 속성을 정의 하는 것은 개념 집합으로 간주할 수 있습니다. 이러한 개념은 몇 가지 개념을 구현에서 코드 한 줄로 해결할 수 있기 때문에 반드시 절차적 단계는 아닙니다. 이 목록에서는 간략 한 개요만 제공 합니다. 각 개념에 대 한 자세한 내용은이 항목의 뒷부분에서 설명 하며, 예제 코드는 여러 언어로 표시 됩니다.
 
-- 속성 시스템에 속성 이름을 등록하여([**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출) 소유자 형식 및 속성 값 형식을 지정합니다.
-  - 속성 메타데이터를 예상하는 [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register)에는 필수 매개 변수가 있습니다. 해당 값으로 **null**을 지정하거나, 속성 변경 동작이나 [**ClearValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.clearvalue)를 호출하여 복원할 수 있는 메타데이터 기반 기본값을 원하는 경우 [**PropertyMetadata**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertymetadata) 인스턴스를 지정합니다.
-- [  **DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 식별자를 소유자 형식의 **public static readonly** 속성 멤버로 정의합니다.
-- 구현하는 언어에 사용되는 속성 접근자 모델 다음에 래퍼 속성을 정의합니다. 래퍼 속성 이름은Register[**에서 사용한** name](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 문자열과 일치해야 합니다. **GetValue** 및 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue)를 호출하고 고유 속성의 식별자를 매개 변수로 전달하여 [get**및**set](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 접근자를 구현하고 래핑하는 종속성 속성과 래퍼를 연결합니다.
-- (옵션) [**ContentPropertyAttribute**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Markup.ContentPropertyAttribute) 같은 특성을 래퍼에 지정합니다.
+- 속성 이름에 속성 시스템 (호출 [**레지스터**](/uwp/api/windows.ui.xaml.dependencyproperty.register))을 등록 하 여 소유자 유형 및 속성 값의 유형을 지정 합니다.
+  - 속성 메타 데이터를 필요로 하는 [**레지스터**](/uwp/api/windows.ui.xaml.dependencyproperty.register) 에 대 한 필수 매개 변수가 있습니다. 이에 대해 **null** 을 지정 하거나, 속성 변경 동작 또는 [**clearvalue**](/uwp/api/windows.ui.xaml.dependencyobject.clearvalue)를 호출 하 여 복원할 수 있는 메타 데이터 기반 기본값을 지정 하려면 [**PropertyMetadata**](/uwp/api/windows.ui.xaml.propertymetadata)의 인스턴스를 지정 합니다.
+- Owner 형식의 **public static readonly** 속성 멤버로 [**DependencyProperty**](/uwp/api/Windows.UI.Xaml.DependencyProperty) 식별자를 정의 합니다.
+- 구현 하는 언어에서 사용 되는 속성 접근자 모델을 따라 래퍼 속성을 정의 합니다. 래퍼 속성 이름은 [**Register**](/uwp/api/windows.ui.xaml.dependencyproperty.register)에서 사용한 *이름* 문자열과 일치 해야 합니다. [**GetValue**](/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 와 [**SetValue**](/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 를 호출 하 고 고유한 속성의 식별자를 매개 변수로 전달 하 여 래퍼를 래핑하는 종속성 속성에 연결 하려면 **get** 및 **set** 접근자를 구현 합니다.
+- 필드 래퍼에 [**ContentPropertyAttribute**](/uwp/api/Windows.UI.Xaml.Markup.ContentPropertyAttribute) 와 같은 특성을 추가 합니다.
 
 > [!NOTE]
-> 사용자 지정 연결 된 속성을 정의 하는 경우 일반적으로 래퍼를 생략 합니다. 대신 XAML 프로세서가 사용할 수 있는 다른 스타일의 접근자를 작성합니다. [사용자 지정 연결된 속성](custom-attached-properties.md)을 참조하세요. 
+> 사용자 지정 연결 된 속성을 정의 하는 경우 일반적으로 래퍼를 생략 합니다. 대신 XAML 프로세서에서 사용할 수 있는 다른 스타일의 접근자를 작성 합니다. [사용자 지정 연결 된 속성](custom-attached-properties.md)을 참조 하세요. 
 
 ## <a name="registering-the-property"></a>속성 등록
 
-속성이 종속성 속성이 되도록 하려면 Windows 런타임 속성 시스템에서 관리하는 속성 저장소에 해당 속성을 등록해야 합니다.  속성을 등록하려면 [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 메서드를 호출합니다.
+속성이 종속성 속성인 경우 속성을 Windows 런타임 속성 시스템에 의해 유지 관리 되는 속성 저장소에 등록 해야 합니다.  속성을 등록 하려면 [**register**](/uwp/api/windows.ui.xaml.dependencyproperty.register) 메서드를 호출 합니다.
 
-Microsoft .NET 언어(C# 및 Microsoft Visual Basic)의 경우 클래스 본문 내에서(클래스 내부이나 멤버 정의 외부임) [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register)를 호출합니다. 식별자는 [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 메서드 호출에서 반환 값으로 제공됩니다. [  **Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출은 일반적으로 정적 생성자로 수행되거나, 클래스의 일부인DependencyProperty[**형식의**public static readonly](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 속성 초기화의 일부로 수행됩니다. 이 속성은 종속성 속성의 식별자를 노출합니다. 다음은 [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출의 예입니다.
+Microsoft .NET 언어 (c # 및 Microsoft Visual Basic)의 경우 클래스 본문 내에서 [**Register**](/uwp/api/windows.ui.xaml.dependencyproperty.register) 를 호출 합니다 (클래스 내에서는 멤버 정의 외부). 이 식별자는 [**Register**](/uwp/api/windows.ui.xaml.dependencyproperty.register) 메서드 호출에서 반환 값으로 제공 됩니다. [**레지스터**](/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출은 일반적으로 정적 생성자 또는 클래스의 일부로 [**DependencyProperty**](/uwp/api/Windows.UI.Xaml.DependencyProperty) 형식의 **public static readonly** 속성을 초기화 하는 과정의 일부로 생성 됩니다. 이 속성은 종속성 속성의 식별자를 노출 합니다. 다음은 [**레지스터**](/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출의 예입니다.
 
 > [!NOTE]
-> 종속성 속성을 식별자 속성 정의의 일부로 등록 하는 것은 일반적인 구현 이지만 클래스 정적 생성자에서 종속성 속성을 등록할 수도 있습니다. 종속성 속성을 초기화하는 데 두 줄 이상의 코드가 필요한 경우 이 방법이 적절할 수 있습니다.
+> 종속성 속성을 식별자 속성 정의의 일부로 등록 하는 것은 일반적인 구현 이지만 클래스 정적 생성자에서 종속성 속성을 등록할 수도 있습니다. 이 접근 방식은 종속성 속성을 초기화 하는 코드 줄이 두 개 이상 필요한 경우에 적합할 수 있습니다.
 
-/Cx C++의 경우 헤더와 코드 파일 간에 구현을 분할 하는 방법에 대 한 옵션을 사용할 수 있습니다. 일반적인 분할은 **get** 구현은 포함되고 **set**는 포함되지 않도록 식별자 자체를 헤더의 **publicstatic** 속성으로 선언하는 것입니다. **get** 구현은 초기화되지 않은 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 인스턴스인 프라이빗 필드를 참조합니다. 래퍼 및 해당 래퍼의 **get** 및 **set** 구현을 선언할 수도 있습니다. 이 경우 헤더에 일부 최소 구현이 포함됩니다. 래퍼에 Windows 런타임 특성이 필요한 경우 헤더에도 특성이 필요합니다. 코드 파일에서 앱이 처음으로 시작될 때만 실행되는 도우미 함수 내에 [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출을 배치합니다. **Register**의 반환 값을 사용하여 헤더에서 선언한 정적이나 초기화되지 않은 식별자를 채웁니다. 이는 처음에 구현 파일의 루트 범위에서 **nullptr**로 설정한 식별자입니다.
+C + +/CX의 경우 헤더와 코드 파일 간에 구현을 분할 하는 방법에 대 한 옵션이 있습니다. 일반적인 분할은 **get** 구현이 있지만 **set**은 없는 헤더에서 식별자 자체를 **공용 정적** 속성으로 선언 하는 것입니다. **Get** 구현은 초기화 되지 않은 [**DependencyProperty**](/uwp/api/Windows.UI.Xaml.DependencyProperty) 인스턴스인 전용 필드를 참조 합니다. 래퍼를 선언 하 고 래퍼를 **get** 및 **set로** 구현할 수도 있습니다. 이 경우 헤더에는 최소한의 구현이 포함 됩니다. 래퍼에 특성 Windows 런타임 필요한 경우에는 헤더의 특성도 필요 합니다. 앱이 처음 초기화 될 때만 실행 되는 도우미 함수 내에서 [**등록**](/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출을 코드 파일에 배치 합니다. **레지스터** 의 반환 값을 사용 하 여 처음에 구현 파일의 루트 범위에서 **nullptr** 로 설정 하는 헤더에 선언 된 초기화 되지 않은 정적 식별자를 채웁니다.
 
 ```csharp
 public static readonly DependencyProperty LabelProperty = DependencyProperty.Register(
@@ -166,23 +166,23 @@ void ImageWithLabelControl::RegisterDependencyProperties()
 ```
 
 > [!NOTE]
-> C++/Cx 코드의 경우 전용 필드와 [**DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty) 를 표시 하는 공용 읽기 전용 속성을 갖는 이유는 종속성 속성을 사용 하는 다른 호출자가 식별자를 public으로 요구 하는 속성 시스템 유틸리티 api를 사용할 수 있도록 하는 것입니다. 식별자를 프라이빗 상태로 유지하면 다른 사용자가 이러한 유틸리티 API를 사용할 수 없습니다. 이러한 API 및 시나리오의 예로는 선택에 따라 [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 또는 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue), [**ClearValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.clearvalue), [**GetAnimationBaseValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getanimationbasevalue), [**SetBinding**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.setbinding)및 [**Setter.Property**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.setter.property)가 있습니다. Windows 런타임 메타데이터 규칙에서는 공용 필드가 허용되지 않으므로 여기에서 공용 필드를 사용할 수 없습니다.
+> C + +/CX 코드의 경우 전용 필드와 [**DependencyProperty**](/uwp/api/Windows.UI.Xaml.DependencyProperty) 를 표시 하는 공용 읽기 전용 속성이 있는 이유는 종속성 속성을 사용 하는 다른 호출자가 식별자를 public으로 요구 하는 속성 시스템 유틸리티 api를 사용할 수 있도록 하는 것입니다. 식별자를 개인으로 유지 하는 경우 사용자는 이러한 유틸리티 Api를 사용할 수 없습니다. 이러한 API 및 시나리오의 예로는 [**GetValue**](/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 또는 [**SetValue**](/uwp/api/windows.ui.xaml.dependencyobject.setvalue) By choice, [**clearvalue**](/uwp/api/windows.ui.xaml.dependencyobject.clearvalue), [**Getanimationbasevalue**](/uwp/api/windows.ui.xaml.dependencyobject.getanimationbasevalue), [**setbinding**](/uwp/api/windows.ui.xaml.frameworkelement.setbinding)및 [**Setter 속성이**](/uwp/api/windows.ui.xaml.setter.property)있습니다. Windows 런타임 메타 데이터 규칙이 public 필드를 허용 하지 않기 때문에이에 대 한 public 필드를 사용할 수 없습니다.
 
 ## <a name="dependency-property-name-conventions"></a>종속성 속성 이름 규칙
 
-종속성 속성에 대한 명명 규칙이 있습니다. 예외 상황을 제외하고는 항상 이 규칙을 따릅니다. 종속성 속성에는 [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register)의 첫 번째 매개 변수로 제공되는 고유 기본 이름(앞의 예에서는 "Label")이 있습니다. 이름은 각 등록 형식 내에서 고유해야 하며 이러한 고유성 요구 사항은 모든 상속되는 멤버에도 적용됩니다. 기본 형식을 통해 상속되는 종속성 속성은 이미 등록 형식의 일부로 간주됩니다. 상속되는 속성의 이름은 다시 등록될 수 없습니다.
+종속성 속성에 대 한 명명 규칙이 있습니다. 예외적인 상황을 제외 하 고 모두 팔 로우 합니다. 종속성 속성 자체에는 [**Register**](/uwp/api/windows.ui.xaml.dependencyproperty.register)의 첫 번째 매개 변수로 제공 되는 기본 이름 (앞의 예제에서는 "레이블")이 있습니다. 이름은 각 등록 형식 내에서 고유 해야 하며, 상속 된 멤버에도 고유성 요구 사항이 적용 됩니다. 기본 형식을 통해 상속 된 종속성 속성은 이미 등록 된 형식의 일부로 간주 됩니다. 상속 된 속성의 이름을 다시 등록할 수 없습니다.
 
 > [!WARNING]
-> 여기서 제공 하는 이름은 원하는 언어의 프로그래밍에서 유효한 문자열 식별자 일 수 있지만 일반적으로 종속성 속성을 XAML로도 설정할 수 있습니다. XAML에서 설정하도록 하려면 선택하는 속성 이름이 유효한 XAML 이름이어야 합니다. 자세한 내용은 [XAML 개요](xaml-overview.md)를 참조하세요.
+> 여기서 제공 하는 이름은 원하는 언어의 프로그래밍에서 유효한 문자열 식별자 일 수 있지만 일반적으로 종속성 속성을 XAML로도 설정할 수 있습니다. XAML로 설정 하려면 선택한 속성 이름이 올바른 XAML 이름 이어야 합니다. 자세한 내용은 [XAML 개요](xaml-overview.md)를 참조 하세요.
 
-식별자 속성을 만드는 경우 등록한 속성 이름을 "Property" 접미사와 연결합니다(예: "LabelProperty"). 이 속성은 종속성 속성 식별자이며 고유 속성 래퍼에서 수행하는 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 및 [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 호출의 입력으로 사용됩니다. 속성 시스템 및 [ **{x:Bind}** ](x-bind-markup-extension.md) 등의 다른 XAML 프로세서에서도 사용됩니다.
+식별자 속성을 만들 때 속성의 이름을 접미사 "Property" (예: "LabelProperty")와 함께 등록 한 것과 결합 합니다. 이 속성은 종속성 속성에 대 한 식별자 이며 고유한 속성 래퍼에서 수행 하는 [**SetValue**](/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 및 [**GetValue**](/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 호출에 대 한 입력으로 사용 됩니다. 속성 시스템 및 [ **{X:bind}** 와 같은 다른 XAML 프로세서에도 사용 됩니다.](x-bind-markup-extension.md)
 
 ## <a name="implementing-the-wrapper"></a>래퍼 구현
 
-속성 래퍼는 [get**구현에서**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue)GetValue를, [set**구현에서**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue)SetValue를 호출합니다.
+속성 래퍼는 **get** 구현에서 [**GetValue**](/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 를 호출 하 고 **집합** 구현에서 [**SetValue**](/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 를 호출 해야 합니다.
 
 > [!WARNING]
-> 예외적인 경우를 제외 하 고 래퍼 구현은 [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 및 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 작업을 수행 해야 합니다. 그렇지 않으면 속성이 XAML을 통해 설정되는 경우와 코드를 통해 설정되는 경우에 동작이 달라집니다. 효율성을 위해 XAML 파서는 종속성 속성을 설정할 때 래퍼를 무시하고 **SetValue**를 통해 백업 저장소에 통신합니다.
+> 예외적인 경우를 제외 하 고 래퍼 구현은 [**GetValue**](/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 및 [**SetValue**](/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 작업을 수행 해야 합니다. 그렇지 않으면 코드가 코드를 통해 설정 된 경우와 XAML을 통해 속성을 설정할 때 다른 동작이 발생 합니다. 효율성을 위해 XAML 파서는 종속성 속성을 설정할 때 래퍼를 무시 합니다. 및는 **SetValue**를 통해 백업 저장소와 통신 합니다.
 
 ```csharp
 public String Label
@@ -233,23 +233,23 @@ public:
   }
 ```
 
-## <a name="property-metadata-for-a-custom-dependency-property"></a>사용자 지정 종속성 속성의 속성 메타데이터
+## <a name="property-metadata-for-a-custom-dependency-property"></a>사용자 지정 종속성 속성의 속성 메타 데이터
 
-속성 메타데이터가 종속성 속성에 할당되면 속성 소유자 형식이나 서브클래스의 모든 인스턴스에 대한 해당 속성에 동일한 메타데이터가 적용됩니다. 속성 메타데이터에서는 다음 두 동작을 지정할 수 있습니다.
+속성 메타 데이터가 종속성 속성에 할당 되 면 속성 소유자 형식 또는 해당 하위 클래스의 모든 인스턴스에 대해 동일한 메타 데이터가 해당 속성에 적용 됩니다. 속성 메타 데이터에서 다음 두 가지 동작을 지정할 수 있습니다.
 
-- 속성 시스템이 속성의 모든 케이스에 할당하는 기본값
-- 속성 값 변경이 발견될 때마다 속성 시스템 내에서 자동으로 호출되는 정적 콜백 메서드
+- 속성 시스템에서 속성의 모든 사례에 할당 하는 기본값입니다.
+- 속성 값 변경이 검색 될 때마다 속성 시스템에서 자동으로 호출 되는 정적 콜백 메서드입니다.
 
-### <a name="calling-register-with-property-metadata"></a>속성 메타데이터로 레지스터 호출
+### <a name="calling-register-with-property-metadata"></a>속성 메타 데이터를 사용 하 여 등록 호출
 
-이전 [**DependencyProperty.Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출 예에서는 *propertyMetadata* 매개 변수에 대해 null 값을 전달했습니다. 종속성 속성에서 기본값을 제공하거나 속성이 변경된 콜백을 사용할 수 있도록 하려면 이 접근 권한 값 중 하나 또는 둘 다를 제공하는 [**PropertyMetadata**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyMetadata) 인스턴스를 정의해야 합니다.
+[**DependencyProperty**](/uwp/api/windows.ui.xaml.dependencyproperty.register)를 호출 하는 이전 예제에서 *propertyMetadata* 매개 변수에 대해 null 값을 전달 했습니다. 종속성 속성이 기본값을 제공 하거나 속성 변경 콜백을 사용 하도록 하려면 이러한 기능 중 하나 또는 둘 모두를 제공 하는 [**PropertyMetadata**](/uwp/api/Windows.UI.Xaml.PropertyMetadata) 인스턴스를 정의 해야 합니다.
 
-일반적으로 [**PropertyMetadata**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyMetadata)를 인라인으로 만든 인스턴스로서, [**DependencyProperty.Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register)용 매개 변수 내에서 제공합니다.
+일반적으로 [**PropertyMetadata**](/uwp/api/Windows.UI.Xaml.PropertyMetadata) [**에 대 한**](/uwp/api/windows.ui.xaml.dependencyproperty.register)매개 변수 내에서 인라인 생성 인스턴스로 제공 됩니다.
 
 > [!NOTE]
-> [**CreateDefaultValueCallback**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.createdefaultvaluecallback) 구현을 정의 하는 경우 **PropertyMetadata** 인스턴스를 정의 하기 위해 [**PropertyMetadata**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyMetadata) 생성자를 호출 하는 대신 유틸리티 메서드 [**PropertyMetadata**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertymetadata.create) 를 사용 해야 합니다.
+> [**CreateDefaultValueCallback**](/uwp/api/windows.ui.xaml.createdefaultvaluecallback) 구현을 정의 하는 경우 **PropertyMetadata** 인스턴스를 정의 하기 위해 [**PropertyMetadata**](/uwp/api/Windows.UI.Xaml.PropertyMetadata) 생성자를 호출 하는 대신 유틸리티 메서드 [**PropertyMetadata**](/uwp/api/windows.ui.xaml.propertymetadata.create) 를 사용 해야 합니다.
 
-이 다음 예에서는 [**PropertyChangedCallback**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 값으로 [**PropertyMetadata**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyMetadata) 인스턴스를 참조하여 이전에 보여진 [**DependencyProperty.Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertychangedcallback) 예를 수정합니다. "OnLabelChanged" 콜백의 구현은 이 섹션의 뒷부분에 설명되어 있습니다.
+다음 예에서는 이전에 표시 된 DependencyProperty를 수정 합니다. [**Propertychangedcallback**](/uwp/api/windows.ui.xaml.propertychangedcallback) 값을 사용 하 여 [**PropertyMetadata**](/uwp/api/Windows.UI.Xaml.PropertyMetadata) 인스턴스를 참조 하 여 예제를 [**등록 합니다.**](/uwp/api/windows.ui.xaml.dependencyproperty.register) "OnLabelChanged" 콜백의 구현은이 단원의 뒷부분에 나와 있습니다.
 
 ```csharp
 public static readonly DependencyProperty LabelProperty = DependencyProperty.Register(
@@ -294,9 +294,9 @@ DependencyProperty^ ImageWithLabelControl::_LabelProperty =
 
 ### <a name="default-value"></a>기본값
 
-속성을 설정 해제하면 속성이 항상 특정 기본값을 반환하도록 종속성 속성에 대한 기본값을 지정할 수 있습니다. 이 값은 해당 속성의 유형에 대한 내부 기본값과 다를 수 있습니다.
+속성이 설정 되어 있지 않은 경우 속성에서 항상 특정 기본값을 반환 하도록 종속성 속성의 기본값을 지정할 수 있습니다. 이 값은 해당 속성의 형식에 대 한 기본 기본값과 다를 수 있습니다.
 
-기본값을 지정하지 않으면 참조 형식의 경우 종속성 속성 기본값이 Null이고, 값 형식이나 언어 primitive의 경우 해당 형식의 기본값입니다(예를 들어, 정수의 경우 0이나 문자열의 경우 빈 문자열). 기본값을 설정하는 주된 이유는 속성에서 [**ClearValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.clearvalue)를 호출하면 이 값이 복원된다는 것입니다. 개별 속성 기준 기본값 설정이 생성자 특히 값 형식의 기본값 설정보다 더 편리할 수 있습니다. 그러나 참조 형식의 경우 기본값 설정으로 의도하지 않은 단일 패턴이 만들어지지 않도록 해야 합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [모범 사례](#best-practices)를 참조하세요.
+기본값이 지정 되지 않은 경우 종속성 속성의 기본값은 참조 형식의 경우 null이 고, 값 형식 또는 언어 기본 형식의 기본값 (예: 정수의 경우 0, 문자열의 경우 빈 문자열)의 기본값입니다. 기본값을 설정 하는 주된 이유는 속성에서 [**Clearvalue**](/uwp/api/windows.ui.xaml.dependencyobject.clearvalue) 를 호출할 때이 값이 복원 된다는 것입니다. 속성 단위로 기본값을 설정 하는 것은 생성자에서 기본값을 설정 하는 것 보다 더 편리할 수 있습니다. 특히 값 형식에 대 한 값입니다. 그러나 참조 형식의 경우 기본값을 설정 해도 의도 하지 않은 singleton 패턴이 생성 되지 않도록 해야 합니다. 자세한 내용은이 항목의 뒷부분에 나오는 [모범 사례](#best-practices) 를 참조 하십시오.
 
 ```cppwinrt
 // ImageWithLabelControl.cpp
@@ -312,21 +312,21 @@ Windows::UI::Xaml::DependencyProperty ImageWithLabelControl::m_labelProperty =
 ```
 
 > [!NOTE]
-> [**이 dependencyproperty.unsetvalue로**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.unsetvalue)의 기본값을 사용 하 여 등록 하지 마십시오. 등록하는 경우 속성 소비자를 혼란스럽게 하고 속성 시스템 내에 의도하지 않은 결과를 발생시킵니다.
+> [**이 dependencyproperty.unsetvalue로**](/uwp/api/windows.ui.xaml.dependencyproperty.unsetvalue)의 기본값을 사용 하 여 등록 하지 마십시오. 이렇게 하면 속성 소비자가 혼동 되며 속성 시스템 내에서 의도 하지 않은 결과가 발생 합니다.
 
 ### <a name="createdefaultvaluecallback"></a>CreateDefaultValueCallback
 
-일부 시나리오에서는 두 개 이상의 UI 스레드에서 사용되는 개체에 대한 종속성 속성을 정의하게 됩니다. 여러 앱에 의해 사용되는 데이터 개체나 두 개 이상의 앱에서 사용하는 컨트롤을 정의하는 경우 이럴 수 있습니다. 기본값 인스턴스가 아닌, 속성을 등록한 스레드에 제한된 [**CreateDefaultValueCallback**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.createdefaultvaluecallback) 구현을 제공하여 서로 다른 UI 스레드 간 개체 교환을 가능하게 할 수 있습니다. 기본적으로 [**CreateDefaultValueCallback**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.createdefaultvaluecallback)은 기본값에 대한 팩터리를 정의합니다. **CreateDefaultValueCallback**에 의해 반환되는 값은 항상 개체를 사용하는 현재 UI **CreateDefaultValueCallback** 스레드와 연결되어 있습니다.
+일부 시나리오에서는 둘 이상의 UI 스레드에서 사용 되는 개체에 대 한 종속성 속성을 정의 합니다. 여러 앱에서 사용 하는 데이터 개체 또는 둘 이상의 앱에서 사용 하는 컨트롤을 정의 하는 경우이 문제가 발생할 수 있습니다. 속성을 등록 한 스레드와 연결 된 기본 값 인스턴스가 아닌 [**CreateDefaultValueCallback**](/uwp/api/windows.ui.xaml.createdefaultvaluecallback) 구현을 제공 하 여 서로 다른 UI 스레드 간에 개체를 교환할 수 있습니다. 기본적으로 [**CreateDefaultValueCallback**](/uwp/api/windows.ui.xaml.createdefaultvaluecallback) 는 기본값에 대 한 팩터리를 정의 합니다. **CreateDefaultValueCallback** 에서 반환 되는 값은 항상 개체를 사용 하는 현재 UI **CreateDefaultValueCallback** 스레드와 연결 됩니다.
 
-[  **CreateDefaultValueCallback**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.createdefaultvaluecallback)을 지정하는 메타데이터를 정의하기 위해서는 [**PropertyMetadata.Create**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertymetadata.create)을 호출하여 메타데이터 인스턴스를 반환해야 합니다. [**PropertyMetadata**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyMetadata) 생성자에는 **CreateDefaultValueCallback** 매개 변수를 포함하는 서명이 없습니다.
+[**CreateDefaultValueCallback**](/uwp/api/windows.ui.xaml.createdefaultvaluecallback)를 지정 하는 메타 데이터를 정의 하려면 [**PropertyMetadata**](/uwp/api/windows.ui.xaml.propertymetadata.create) 를 호출 하 여 메타 데이터 인스턴스를 반환 해야 합니다. [**PropertyMetadata**](/uwp/api/Windows.UI.Xaml.PropertyMetadata) 생성자에는 **CreateDefaultValueCallback** 매개 변수를 포함 하는 서명이 없습니다.
 
-[  **CreateDefaultValueCallback**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.createdefaultvaluecallback)에 대한 전형적인 구현 패턴은 새 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) 클래스를 생성하고 **DependencyObject**의 각 속성의 특정 속성 값을 설정한 다음 **CreateDefaultValueCallback** 메서드의 반환 값을 통해 **Object** 참조로서 새 클래스를 반환하는 것입니다.
+[**CreateDefaultValueCallback**](/uwp/api/windows.ui.xaml.createdefaultvaluecallback) 에 대 한 일반적인 구현 패턴은 새 [**dependencyobject**](/uwp/api/Windows.UI.Xaml.DependencyObject) 클래스를 만들고, **dependencyobject** 의 각 속성에 대 한 특정 속성 값을 의도 된 기본값으로 설정한 다음, **CreateDefaultValueCallback** 메서드의 반환 값을 통해 새 클래스를 **개체** 참조로 반환 하는 것입니다.
 
 ### <a name="property-changed-callback-method"></a>속성 변경 콜백 메서드
 
-해당 속성과 다른 종속성 속성의 조작을 정의하거나 속성이 변경될 때마다 개체의 내부 속성 또는 상태를 업데이트하기 위해 속성 변경 콜백 메서드를 정의할 수 있습니다. 콜백을 호출하면 유효한 속성 값 변경이 있다고 속성 시스템이 결정합니다. 콜백 메서드는 정적이므로 콜백의 *d* 매개 변수가 중요합니다. 변경이 보고된 클래스 인스턴스를 알려주기 때문입니다. 일반 구현에서는 이벤트 데이터의 [**NewValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencypropertychangedeventargs.newvalue) 속성을 사용하며 대개 *d*로 전달되는 개체에서 다른 변경을 수행하는 방법으로 해당 값을 처리합니다. 속성 변경에 대한 또 다른 응답은 **NewValue**에서 보고한 값을 거부하거나 [**OldValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencypropertychangedeventargs.oldvalue)를 복원하거나 값을 **NewValue**에 적용되는 프로그래밍 제약 조건으로 설정하는 것입니다.
+속성 변경 콜백 메서드를 정의 하 여 다른 종속성 속성과의 속성 상호 작용을 정의 하거나 속성이 변경 될 때마다 개체의 내부 속성 또는 상태를 업데이트할 수 있습니다. 콜백을 호출하면 유효한 속성 값 변경이 있다고 속성 시스템이 결정합니다. 콜백 메서드는 정적 이기 때문에 콜백의 *d* 매개 변수는 변경 내용을 보고 한 클래스의 인스턴스를 알려 주므로 중요 합니다. 일반적인 구현에서는 이벤트 데이터의 [**NewValue**](/uwp/api/windows.ui.xaml.dependencypropertychangedeventargs.newvalue) 속성을 사용 하 고 일반적으로 *d*로 전달 된 개체에 대 한 다른 변경을 수행 하 여 해당 값을 처리 합니다. 속성 변경에 대 한 추가 응답은 **NewValue**에서 보고 하는 값을 거부 하거나, [**OldValue**](/uwp/api/windows.ui.xaml.dependencypropertychangedeventargs.oldvalue)를 복원 하거나, **NewValue**에 적용 되는 프로그래밍 제약 조건으로 값을 설정 하는 것입니다.
 
-다음 예는 [**PropertyChangedCallback**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertychangedcallback) 구현을 보여 줍니다. 이전 [**Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 예에서 [**PropertyMetadata**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyMetadata) 구성 인수의 일부로 참조된다고 표시된 메서드를 구현합니다. 이 콜백으로 설명되는 시나리오에서는 클래스에 이름이 "HasLabelValue"인, 계산된 읽기 전용 속성도 있습니다(구현 표시 안 됨). "Label" 속성이 재평가될 때마다 이 콜백 메서드가 호출되며 콜백을 통해 종속 계산 값이 종속성 속성 변경 내용과 동기화된 상태를 유지할 수 있습니다.
+다음 예제에서는 [**Propertychangedcallback**](/uwp/api/windows.ui.xaml.propertychangedcallback) 구현을 보여 줍니다. [**PropertyMetadata**](/uwp/api/Windows.UI.Xaml.PropertyMetadata)에 대 한 생성 인수의 일부로 이전 [**레지스터**](/uwp/api/windows.ui.xaml.dependencyproperty.register) 예제에서 참조 한 메서드를 구현 합니다. 이 콜백에 의해 해결 된 시나리오는 클래스에 "HasLabelValue" (구현이 표시 되지 않음) 라는 계산 된 읽기 전용 속성을 포함 한다는 것입니다. "Label" 속성이 재평가 될 때마다이 콜백 메서드가 호출 되 고 콜백이 종속 된 계산 값을 종속성 속성의 변경 내용과 동기화 상태로 유지할 수 있습니다.
 
 ```csharp
 private static void OnLabelChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
@@ -373,9 +373,9 @@ static void OnLabelChanged(DependencyObject^ d, DependencyPropertyChangedEventAr
 }
 ```
 
-### <a name="property-changed-behavior-for-structures-and-enumerations"></a>구조 및 열거에 대해 속성이 변경된 동작
+### <a name="property-changed-behavior-for-structures-and-enumerations"></a>구조체 및 열거형의 속성 변경 동작
 
-[  **DependencyProperty**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyProperty)의 유형이 열거 또는 구조인 경우 구조의 내부 값 또는 열거 값이 변경되지 않더라도 콜백이 호출될 수 있습니다. 이것은 값이 변할 경우에만 호출되는 문자열과 같은 기본 시스템과는 다릅니다. 이것은 이 값들에 대한 boxiung 및 unboxing 작업의 부작용으로서 내부적으로 수행됩니다. 값이 열거 또는 구조인 속성에 대한 [**PropertyChangedCallback**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.propertychangedcallback) 메서드가 있을 경우 직접 값을 캐스팅하고 지금 캐스팅 값에 사용할 수 있는 오버로드된 비교 연산자를 사용하여 [**OldValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencypropertychangedeventargs.oldvalue) 및 [**NewValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencypropertychangedeventargs.newvalue)를 비교해야 합니다. 또는, 그러한 연산자를 사용할 수 없을 경우(사용자 지정 구조 사례일 수 있음), 개별 값을 비교해야 할 수 있습니다. 그 결과 값이 변하지 않았다면 일반적으로 어떤 작업이든 선택하지 않게 됩니다.
+[**DependencyProperty**](/uwp/api/Windows.UI.Xaml.DependencyProperty) 형식이 열거형 또는 구조체 인 경우 구조체의 내부 값 또는 열거형 값이 변경 되지 않은 경우에도 콜백이 호출 될 수 있습니다. 이는 값이 변경 된 경우에만 호출 되는 문자열과 같은 시스템 기본 형식과는 다릅니다. 이는 내부적으로 수행 되는 이러한 값에 대 한 box 및 unbox 작업의 부작용입니다. 값이 열거형 또는 구조체 인 속성에 대 한 [**Propertychangedcallback**](/uwp/api/windows.ui.xaml.propertychangedcallback) 메서드가 있는 경우 값을 직접 캐스팅 하 고 현재 캐스팅 값에 사용할 수 있는 오버 로드 된 비교 연산자를 사용 하 여 [**OldValue**](/uwp/api/windows.ui.xaml.dependencypropertychangedeventargs.oldvalue) 및 [**NewValue**](/uwp/api/windows.ui.xaml.dependencypropertychangedeventargs.newvalue) 를 비교 해야 합니다. 또는 이러한 연산자를 사용할 수 없는 경우 (사용자 지정 구조에 대 한 경우) 개별 값을 비교 해야 할 수 있습니다. 일반적으로 값이 변경 되지 않은 경우에는 아무 작업도 수행 하지 않도록 선택 합니다.
 
 ```csharp
 private static void OnVisibilityValueChanged(DependencyObject d, DependencyPropertyChangedEventArgs e) {
@@ -423,61 +423,61 @@ static void OnVisibilityValueChanged(DependencyObject^ d, DependencyPropertyChan
 
 ## <a name="best-practices"></a>모범 사례
 
-사용자 지정 종속성 속성을 정의하는 경우 모범 사례로 다음 사항을 고려합니다.
+사용자 지정 종속성 속성을 정의할 때 모범 사례를 염두에 두고 다음 사항을 고려 하십시오.
 
 ### <a name="dependencyobject-and-threading"></a>DependencyObject 및 스레딩
 
-모든 [**Window**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) 인스턴스는 Windows 런타임 앱에 표시되는 현재 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window)와 연결된 UI 스레드에 만들어야 합니다. 각 **DependencyObject**는 주 UI 스레드에 만들어야 하지만 개체는 [**Dispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.dispatcher)를 호출하여 다른 스레드의 디스패처 참조를 사용하여 액세스할 수 있습니다.
+모든 [**DependencyObject**](/uwp/api/Windows.UI.Xaml.DependencyObject) 인스턴스는 Windows 런타임 앱에 표시 되는 현재 [**창과**](/uwp/api/Windows.UI.Xaml.Window) 연결 된 UI 스레드에서 만들어야 합니다. 각 **DependencyObject** 를 주 UI 스레드에 만들어야 하지만 [**디스패처**](/uwp/api/windows.ui.xaml.dependencyobject.dispatcher)를 호출 하 여 다른 스레드의 디스패처 참조를 사용 하 여 개체에 액세스할 수 있습니다.
 
-[  **DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)의 스레딩 측면은 일반적으로 UI 스레드에서 실행되는 코드만 종속성 속성의 값을 변경하거나 읽을 수 있다는 의미이므로 관련이 있습니다. 스레딩 문제는 보통 **async** 패턴 및 백그라운드 작업자 스레드를 올바르게 사용하는 일반적인 UI 코드로 방지할 수 있습니다. 일반적으로 직접 **DependencyObject** 유형을 정의하여 **DependencyObject**가 적합하지 않을 수 있는 데이터 원본이나 다른 시나리오에 사용하려고 하는 경우에만 **DependencyObject** 관련 스레딩 문제가 발생합니다.
+[**DependencyObject**](/uwp/api/Windows.UI.Xaml.DependencyObject) 의 스레딩 측면은 일반적으로 UI 스레드에서 실행 되는 코드만 변경 하거나 종속성 속성의 값을 읽을 수 있다는 것을 의미 하기 때문에 관련이 있습니다. 스레드 문제는 일반적으로 **비동기** 패턴 및 백그라운드 작업자 스레드를 올바르게 사용 하는 일반적인 UI 코드에서 피할 수 있습니다. 일반적으로 사용자 고유의 **dependencyobject** 형식을 정의 하 고이를 데이터 원본 또는 **dependencyobject** 가 반드시 적절 하지 않아도 되는 다른 시나리오에 사용 하려는 경우에만 **dependencyobject**관련 스레딩 문제를 실행 합니다.
 
-### <a name="avoiding-unintentional-singletons"></a>의도하지 않은 단일 패턴 방지
+### <a name="avoiding-unintentional-singletons"></a>의도 하지 않은 단일 항목 방지
 
-참조 형식이 사용되는 종속성 속성을 선언하고 [**PropertyMetadata**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.PropertyMetadata)를 설정하는 코드의 일부로 해당 참조 형식의 생성자를 호출하는 경우 의도하지 않은 단일 패턴이 발생할 수 있습니다. 모든 종속성 속성 사용에서 **PropertyMetadata** 인스턴스를 하나만 공유하므로 생성된 단일 참조 형식을 공유하려는 것입니다. 그러면 종속성 속성을 통해 설정한 값 형식의 모든 하위 속성이 의도하지 않은 방식으로 다른 개체에 전파됩니다.
+참조 형식을 사용 하는 종속성 속성을 선언 하 고 [**PropertyMetadata**](/uwp/api/Windows.UI.Xaml.PropertyMetadata)를 설정 하는 코드의 일부로 해당 참조 형식에 대 한 생성자를 호출 하는 경우 의도 하지 않은 singleton이 발생할 수 있습니다. 종속성 속성을 모두 사용 하면 **PropertyMetadata** 의 인스턴스를 하나만 공유 하므로 생성 된 단일 참조 형식을 공유 하려고 합니다. 종속성 속성을 통해 설정한 값 형식의 모든 하위 속성은 의도 하지 않은 방식으로 다른 개체에 전파 됩니다.
 
-Null이 아닌 값이 필요한 경우 클래스 생성자를 사용하여 참조 형식 종속성 속성의 초기 값을 설정할 수 있으나 이렇게 하면 [종속성 속성 개요](dependency-properties-overview.md)를 위해 로컬 값으로 간주됩니다. 클래스에서 템플릿을 지원하는 경우 이 목적을 위해서는 템플릿을 사용하는 것이 더 적절할 수 있습니다. 단일 패턴을 방지하지만 유용한 기본값을 제공하는 또 다른 방법은 해당 클래스의 값에 적절한 기본값을 제공하는 참조 형식의 정적 속성을 노출하는 것입니다.
+Null이 아닌 값을 원하는 경우 클래스 생성자를 사용 하 여 참조 형식 종속성 속성의 초기 값을 설정할 수 있지만이 값은 [종속성 속성 개요](dependency-properties-overview.md)의 용도에 대 한 로컬 값으로 간주 됩니다. 클래스가 템플릿을 지 원하는 경우이 용도로 템플릿을 사용 하는 것이 더 적합할 수 있습니다. Singleton 패턴을 방지 하지만 여전히 유용한 기본값을 제공 하는 또 다른 방법은 해당 클래스의 값에 대 한 적절 한 기본값을 제공 하는 정적 속성을 참조 형식에 노출 하는 것입니다.
 
 ### <a name="collection-type-dependency-properties"></a>컬렉션 형식 종속성 속성
 
-컬렉션 형식 종속성 속성에는 고려해야 할 몇 가지 추가 구현 문제가 있습니다.
+컬렉션 형식 종속성 속성에는 고려할 몇 가지 추가 구현의 문제점이 있습니다.
 
-Windows 런타임 API에서 컬렉션 형식 종속성 속성은 상대적으로 자주 사용되지 않습니다. 대부분의 경우 항목이 [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject) 서브클래스인 컬렉션을 사용할 수 있으나 컬렉션 속성 자체는 기본 CLR 또는 C++ 속성으로 구현됩니다. 종속성 속성이 관련된 몇 가지 일반적인 시나리오에 컬렉션이 반드시 적합한 것은 아니기 때문입니다. 예를 들면 다음과 같습니다.
+컬렉션 형식 종속성 속성은 Windows 런타임 API에서 비교적 드물게 발생 합니다. 대부분의 경우 항목이 [**DependencyObject**](/uwp/api/Windows.UI.Xaml.DependencyObject) 하위 클래스 이지만 컬렉션 속성 자체가 기존 CLR 또는 c + + 속성으로 구현 되는 컬렉션을 사용할 수 있습니다. 이는 컬렉션은 종속성 속성이 관련 된 일반적인 시나리오에 반드시 적합할 필요는 없기 때문입니다. 예:
 
-- 일반적으로 컬렉션은 애니메이션하지 않습니다.
-- 일반적으로 스타일 또는 템플릿을 사용하여 컬렉션의 항목을 미리 채우지 않습니다.
-- 컬렉션에 바인딩하는 것이 주요 시나리오이긴 하지만 컬렉션이 바인딩 소스이기 위해 종속성 속성일 필요는 없습니다. 바인딩 대상의 경우 [**ItemsControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) 또는 [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)의 서브클래스를 사용하여 컬렉션 항목을 지원하거나 보기 모델 패턴을 사용하는 것이 더 일반적입니다. 컬렉션 바인딩에 대한 자세한 내용은 [데이터 바인딩 심층 분석](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)을 참조하세요.
-- 컬렉션 변경 알림은 **INotifyPropertyChanged** 또는 **INotifyCollectionChanged** 같은 인터페이스를 통해 또는 [**ObservableCollection&lt;T&gt;** ](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1)에서 컬렉션 형식을 파생시키는 방법을 통해 더 효과적으로 설명됩니다.
+- 일반적으로 컬렉션에 애니메이션 효과를 주지 않습니다.
+- 일반적으로 스타일 또는 템플릿을 사용 하 여 컬렉션의 항목을 미리 채웁니다.
+- 컬렉션에 바인딩하는 것은 주요 시나리오 이지만 컬렉션은 종속성 속성이 될 필요는 없습니다. 바인딩 대상의 경우 [**ItemsControl**](/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) 또는 [**DataTemplate**](/uwp/api/Windows.UI.Xaml.DataTemplate) 의 서브 클래스를 사용 하 여 컬렉션 항목을 지원 하거나 뷰 모델 패턴을 사용 하는 것이 더 일반적입니다. 컬렉션과의 바인딩에 대 한 자세한 내용은 [데이터 바인딩 심층](../data-binding/data-binding-in-depth.md)분석을 참조 하세요.
+- **INotifyPropertyChanged** 또는 **INotifyCollectionChanged**와 같은 인터페이스를 통해 또는 [**system.collections.objectmodel.observablecollection &lt; T &gt; **](/dotnet/api/system.collections.objectmodel.observablecollection-1)에서 컬렉션 형식을 파생 하 여 컬렉션 변경에 대 한 알림을 더 쉽게 해결할 수 있습니다.
 
-하지만 컬렉션 형식 종속성 속성에 대한 시나리오도 존재합니다. 다음의 3개 섹션에서는 컬렉션 형식 종속성 속성을 구현하는 방법에 대한 몇 가지 지침을 제공합니다.
+그러나 컬렉션 형식 종속성 속성에 대 한 시나리오가 존재 합니다. 다음 세 섹션에서는 컬렉션 형식 종속성 속성을 구현 하는 방법에 대 한 몇 가지 지침을 제공 합니다.
 
 ### <a name="initializing-the-collection"></a>컬렉션 초기화
 
-종속성 속성을 만드는 경우 종속성 속성 메타데이터로 기본값을 설정할 수 있습니다. 하지만 단일 정적 컬렉션을 기본값으로 사용하지 않도록 주의해야 합니다. 대신 의도적으로 컬렉션 속성 소유자 클래스에 대해 클래스 생성자 논리의 일부로 컬렉션 값을 고유(인스턴스) 컬렉션으로 설정해야 합니다.
+종속성 속성을 만들 때 종속성 속성 메타 데이터를 통해 기본값을 설정할 수 있습니다. 그러나 singleton 정적 컬렉션을 기본값으로 사용 하지 않도록 주의 해야 합니다. 대신 컬렉션 속성의 owner 클래스에 대 한 클래스 생성자 논리의 일부로 컬렉션 값을 고유 (인스턴스) 컬렉션으로 의도적으로 설정 해야 합니다.
 
 ### <a name="change-notifications"></a>변경 알림
 
-컬렉션을 종속성 속성으로 정의해도 "PropertyChanged" 콜백 메서드를 호출하는 속성 시스템이라는 이유로 컬렉션의 항목에 대한 변경 알림을 자동으로 제공하지 않습니다. 컬렉션 또는 컬렉션 항목 알림이 필요하면(예를 들어 데이터 바인딩 시나리오의 경우) **INotifyPropertyChanged** 또는 **INotifyCollectionChanged** 인터페이스를 구현합니다. 자세한 내용은 [데이터 바인딩 심층 분석](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)을 참조하세요.
+컬렉션을 종속성 속성으로 정의 하면 "PropertyChanged" 콜백 메서드를 호출 하는 속성 시스템을 통해 컬렉션의 항목에 대 한 변경 알림이 자동으로 제공 되지 않습니다. 컬렉션 또는 컬렉션 항목에 대 한 알림을 원할 경우 (예: 데이터 바인딩 시나리오의 경우) **INotifyPropertyChanged** 또는 **INotifyCollectionChanged** 인터페이스를 구현 합니다. 자세한 내용은 [심층 데이터 바인딩](../data-binding/data-binding-in-depth.md)을 참조 하세요.
 
 ### <a name="dependency-property-security-considerations"></a>종속성 속성 보안 고려 사항
 
-종속성 속성은 public 속성으로 선언합니다. 종속성 속성 식별자는 **public static readonly** 멤버로 선언합니다. 언어(예: **protected**)에서 허용하는 다른 액세스 수준을 선언하려고 시도해도 종속성 속성은 항상 속성-시스템 API와 함께 식별자를 통해 액세스할 수 있습니다. 종속성 속성 식별자는 내부 또는 프라이빗으로 선언할 수 없습니다. 이렇게 하면 속성 시스템이 올바르게 작동할 수 없기 때문입니다.
+종속성 속성을 공용 속성으로 선언 합니다. 종속성 속성 식별자를 **공용 정적 읽기 전용** 멤버로 선언 합니다. 언어에서 허용 하는 다른 액세스 수준 (예: **protected**)을 선언 하려고 해도 종속성 속성은 항상 속성 시스템 api와 함께 식별자를 통해 액세스할 수 있습니다. 속성 시스템이 제대로 작동할 수 없기 때문에 종속성 속성 식별자를 internal 또는 private으로 선언 하는 작업은 작동 하지 않습니다.
 
-래퍼 속성은 순전히 편의를 위한 것입니다. 래퍼에 적용되는 보안 메커니즘은 [**GetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 또는 [**SetValue**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyobject.setvalue)를 대신 호출하여 무시할 수 있습니다. 그러므로 래퍼 속성을 공개 상태로 유지하세요. 그렇지 않으면 실질적인 보안상 장점을 전혀 제공하지도 않으면서 정상 호출자가 속성을 사용하기 더 어려워집니다.
+래퍼 속성은 단지 편의를 위해, 대신 [**GetValue**](/uwp/api/windows.ui.xaml.dependencyobject.getvalue) 또는 [**SetValue**](/uwp/api/windows.ui.xaml.dependencyobject.setvalue) 를 호출 하 여 래퍼에 적용 되는 보안 메커니즘을 건너뛸 수 있습니다. 따라서 래퍼 속성을 공개로 유지 합니다. 그렇지 않으면 실제 보안 혜택을 제공 하지 않고 합법적인 호출자가 사용할 수 있는 속성을 어렵게 만듭니다.
 
-Windows 런타임은 사용자 지정 종속성 속성을 읽기 전용으로 등록할 방법을 제공하지 않습니다.
+Windows 런타임는 사용자 지정 종속성 속성을 읽기 전용으로 등록 하는 방법을 제공 하지 않습니다.
 
 ### <a name="dependency-properties-and-class-constructors"></a>종속성 속성 및 클래스 생성자
 
-클래스 생성자는 가상 메서드를 호출하지 않아야 한다는 일반적인 원칙이 있습니다. 파생된 클래스 생성자의 기본 초기화를 수행하기 위해 생성자가 호출될 수 있기 때문입니다. 또한 생성된 개체 인스턴스가 아직 완전히 초기화되지 않은 경우 생성자를 통해 가상 메서드를 입력할 수도 있습니다. [  **DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)에서 이미 파생된 클래스에서 파생을 시도하는 경우 속성 시스템이 내부에서 해당 서비스의 일부로 가상 메서드를 호출하고 노출합니다. 가능한 런타임 초기화 문제를 방지하려면 클래스 생성자 내에 종속성 속성 값을 설정하지 마세요.
+클래스 생성자가 가상 메서드를 호출 하지 않아야 하는 일반적인 원칙이 있습니다. 이는 생성자를 호출 하 여 파생 클래스 생성자의 기본 초기화를 수행 하 고, 생성 되는 개체 인스턴스가 아직 완전히 초기화 되지 않았을 때 생성자를 통해 가상 메서드를 입력 하는 경우에 발생할 수 있기 때문입니다. [**DependencyObject**](/uwp/api/Windows.UI.Xaml.DependencyObject)에서 이미 파생 된 클래스에서 파생 하는 경우 속성 시스템 자체에서 해당 서비스의 일부로 내부적으로 가상 메서드를 호출 하 고 노출 한다는 점에 주의 해야 합니다. 런타임 초기화에 대 한 잠재적인 문제를 방지 하려면 클래스의 생성자 내에서 종속성 속성 값을 설정 하지 마세요.
 
-### <a name="registering-the-dependency-properties-for-ccx-apps"></a>C++/CX 앱의 종속성 속성 등록
+### <a name="registering-the-dependency-properties-for-ccx-apps"></a>C + +/CX 앱에 대 한 종속성 속성 등록
 
-C++/CX로 속성 등록을 위해 구현하는 일은 C#의 경우보다 어렵습니다. 이는 헤더와 구현 파일과 구분해야 하며 구현 파일의 루트 범위에서 초기화하는 것은 잘못된 용례이기 때문입니다. C++/Cx ( C++ 시각적 구성 요소 확장)는 루트 범위의 정적 이니셜라이저 코드를 **DllMain**에 직접 배치 하는 C# 반면 컴파일러는 정적 이니셜라이저를 클래스에 할당 하므로 **DllMain** 로드 잠금 문제가 발생 하지 않습니다. 여기서는 클래스당 함수 하나씩, 클래스에 대한 종속성 속성 등록을 모두 수행하는 도우미 함수를 선언하는 방식이 가장 좋습니다. 그런 다음, 앱이 사용하는 각 사용자 지정 클래스에 대해 사용할 각 사용자 지정 클래스에 의해 노출되는 도우미 등록 함수를 참조해야 합니다. [ 이전에Application constructor](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.-ctor)`App::App()`(`InitializeComponent`)의 일환으로 각 도우미 등록 함수를 한 번 호출합니다. 이 생성자는 앱이 실제로 처음 참조될 때만 실행되며 예를 들어 일시 중단된 앱이 다시 시작되는 경우 다시 실행되지 않습니다. 또한 이전 C++ 등록 예제에서 본 것처럼, 각Register[**호출 시**nullptr](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register) 확인은 함수 호출자가 해당 속성을 두 번 등록할 수 없도록 하므로 매우 중요합니다. 두 번째로 등록 호출이 발생하고 이러한 확인이 이루어지지 않는 경우 속성 이름이 중복 항목이므로 앱이 충돌합니다. C++/CX 버전 샘플의 코드를 원하는 경우 [XAML 사용자 및 사용자 지정 컨트롤 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/XAML%20user%20and%20custom%20controls%20sample)에서 이 구현 패턴을 참조할 수 있습니다.
+C++/CX로 속성 등록을 위해 구현하는 일은 C#의 경우보다 어렵습니다. 이는 헤더와 구현 파일과 구분해야 하며 구현 파일의 루트 범위에서 초기화하는 것은 잘못된 용례이기 때문입니다. (Visual C++ 구성 요소 확장 (c + +/CX)은 루트 범위의 정적 이니셜라이저 코드를 **DllMain**에 직접 배치 하는 반면, c # 컴파일러는 정적 이니셜라이저를 클래스에 할당 하므로 **DllMain** 로드 잠금 문제를 방지 합니다. 여기에서 가장 좋은 방법은 클래스에 대 한 모든 종속성 속성 등록을 수행 하는 도우미 함수를 선언 하는 것입니다. 클래스 마다 함수 하나를 선언 합니다. 그런 다음 앱이 사용 하는 각 사용자 지정 클래스에 대해 사용 하려는 각 사용자 지정 클래스에 의해 노출 되는 도우미 등록 함수를 참조 해야 합니다. 이전에 [**응용 프로그램 생성자**](/uwp/api/windows.ui.xaml.application.-ctor) ()의 일부로 각 도우미 등록 함수를 한 번 호출 `App::App()` `InitializeComponent` 합니다. 이 생성자는 앱이 처음으로 참조 되는 경우에만 실행 됩니다. 예를 들어 일시 중단 된 앱이 다시 시작 되 면 다시 실행 되지 않습니다. 또한 이전 C++ 등록 예제에서 본 것처럼, 각 [**Register**](/uwp/api/windows.ui.xaml.dependencyproperty.register) 호출 시 **nullptr** 확인은 함수 호출자가 해당 속성을 두 번 등록할 수 없도록 하므로 매우 중요합니다. 두 번째 등록 호출은 속성 이름이 중복 되기 때문에 이러한 검사 없이 앱을 중단 시킬 수 있습니다. 샘플의 c + +/CX 버전에 대 한 코드를 살펴보면 [XAML 사용자 및 사용자 지정 컨트롤 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/XAML%20user%20and%20custom%20controls%20sample) 에서이 구현 패턴을 볼 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-- [**DependencyObject**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DependencyObject)
-- [**DependencyProperty. Register**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.dependencyproperty.register)
+- [**DependencyObject**](/uwp/api/Windows.UI.Xaml.DependencyObject)
+- [**DependencyProperty. Register**](/uwp/api/windows.ui.xaml.dependencyproperty.register)
 - [종속성 속성 개요](dependency-properties-overview.md)
 - [XAML 사용자 및 사용자 지정 컨트롤 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/XAML%20user%20and%20custom%20controls%20sample)
  

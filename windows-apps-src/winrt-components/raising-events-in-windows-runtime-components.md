@@ -6,17 +6,17 @@ ms.date: 07/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b5b5678ad1a0666e6f008a2ec69ba63c35441edf
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: b44e4ba86ab96474d4770c32024b8edc5641c396
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493518"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174287"
 ---
 # <a name="raising-events-in-windows-runtime-components"></a>Windows 런타임 구성 요소에서 이벤트 발생
 
 > [!NOTE]
-> [C + +/winrt](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Windows 런타임 구성 요소에서 이벤트를 발생 시키는 방법에 대 한 자세한 내용은 [c + +/Winrt의 Author 이벤트](/windows/uwp/cpp-and-winrt-apis/author-events)를 참조 하세요.
+> [C + +/winrt](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) Windows 런타임 구성 요소에서 이벤트를 발생 시키는 방법에 대 한 자세한 내용은 [c + +/Winrt의 Author 이벤트](../cpp-and-winrt-apis/author-events.md)를 참조 하세요.
 
 Windows 런타임 구성 요소가 백그라운드 스레드 (작업자 스레드)에서 사용자 정의 대리자 형식의 이벤트를 발생 시키고 JavaScript가 이벤트를 받을 수 있도록 하려는 경우 이러한 방법 중 하나를 사용 하 여 구현 하거나 생성할 수 있습니다.
 

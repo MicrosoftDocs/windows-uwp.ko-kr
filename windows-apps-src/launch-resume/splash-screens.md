@@ -1,35 +1,35 @@
 ---
 title: 시작 화면
-description: 이 섹션에서는 앱의 시작 화면을 설정 및 구성하는 방법을 설명합니다.
+description: 이 섹션에서는 앱의 시작 화면을 설정 하 고 구성 하는 방법을 설명 합니다.
 ms.assetid: 6b954bb3-e5b0-46d1-8afc-fb805536cf6d
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 09eadb8467725cbf40f3fb54d32741960fc89321
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 490f5f70efcd21fe2be5c909bcc409daf1feeeea
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371865"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175127"
 ---
 # <a name="splash-screens"></a>시작 화면
 
-모든 UWP 앱에는 사용자 지정할 수 있는 이미지와 배경색이 조합된 시작 화면이 있어야 합니다.
+모든 UWP 앱에는 이미지의 복합 인 시작 화면 및 배경색 (둘 다 사용자 지정할 수 있음)이 있어야 합니다.
 
-사용자가 앱을 실행하는 즉시 시작 화면이 표시됩니다. 이 화면에서는 앱 리소스가 초기화되는 동안 즉각적인 피드백을 제공합니다. 앱을 조작할 수 있게 되면 시작 화면이 해제됩니다.
+사용자가 앱을 시작 하면 시작 화면이 즉시 표시 됩니다. 앱 리소스가 초기화 되는 동안 사용자에 게 즉각적인 피드백을 제공 합니다. 앱이 상호 작용할 준비가 되 면 시작 화면이 해제 됩니다.
 
-앱의 시작 화면을 잘 디자인할수록 더 많은 사용자가 방문하게 됩니다. 다음은 간단한 절제된 시작 화면입니다.
+잘 디자인 된 시작 화면을 통해 앱을 더 쉽게 초대할 수 있습니다. 간단한 understated 시작 화면은 다음과 같습니다.
 
-![시작 화면 샘플의 시작 화면에 대한 75% 배율 화면 캡처입니다.](images/regularsplashscreen.png)
+![시작 화면 샘플에서 시작 화면의 75% 배율이 조정 된 화면 캡처입니다.](images/regularsplashscreen.png)
 
-이 시작 화면은 녹색 배경색과 투명 배경 PNG 이미지를 결합하여 만든 것입니다.
+이 시작 화면은 녹색 배경색과 투명 한 배경 PNG 이미지를 결합 하 여 만듭니다.
 
-배경색이 있는 간단한 이미지는 앱을 실행 중인 디바이스에 관계없이 제대로 표시됩니다. 다양한 화면 크기에 맞게 배경의 크기만 변경됩니다. 이미지는 항상 원래대로 유지됩니다.
+배경색이 있는 단순 이미지는 앱이 실행 되는 장치에 관계 없이 양호 합니다. 배경의 크기만 다양 한 화면 크기를 보정 하도록 변경 됩니다. 이미지는 항상 그대로 유지 됩니다.
 
-또한 [**SplashScreen**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.SplashScreen) 클래스를 사용하여 앱의 시작 환경을 사용자 지정할 수 있습니다. 사용자가 만든 연장된 시작 화면을 배치하여 앱에 앱 UI 준비나 네트워킹 작업 완료와 같은 추가 작업을 완료할 수 있는 시간을 제공할 수 있습니다. **SplashScreen** 클래스를 사용하여 시작 화면이 해제될 때 사용자에게 알려 개시 애니메이션을 시작하도록 할 수도 있습니다.
+또한 [**SplashScreen**](/uwp/api/Windows.ApplicationModel.Activation.SplashScreen) 클래스를 사용 하 여 앱의 시작 환경을 사용자 지정할 수 있습니다. 만든 확장 된 시작 화면을 배치 하 여 앱 UI 준비 또는 네트워킹 작업 완료와 같은 추가 작업을 완료 하는 데 더 많은 시간을 앱에 제공할 수 있습니다. 또한 **SplashScreen** 클래스를 사용 하 여 시작 화면이 해제 될 때 사용자에 게 알리고 애니메이션을 시작할 수 있습니다.
 
-| 항목 | 설명 |
+| 항목 | Description |
 |-------|-------------|
 | [시작 화면 추가](add-a-splash-screen.md) | 앱의 시작 화면 이미지와 배경색을 설정합니다. |
-| [시작 화면을 더 오래 표시](create-a-customized-splash-screen.md) | 앱의 연장된 시작 화면을 만들어 시작 화면을 더 오랫동안 표시합니다. 이 연장된 화면은 앱을 시작할 때 표시되는 시작 화면을 모방하며 사용자 지정할 수 있습니다. |
+| [시작 화면을 더 오래 표시](create-a-customized-splash-screen.md) | 앱에 대 한 확장 된 시작 화면을 만들어 더 많은 시간 동안 시작 화면을 표시 합니다. 이 확장 화면은 앱이 시작 될 때 표시 되는 시작 화면을 모방한 사용자 지정할 수 있습니다. |

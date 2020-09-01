@@ -1,17 +1,17 @@
 ---
 ms.assetid: bf0a8b01-79f1-4944-9d78-9741e235dbe9
 title: Xbox용 디바이스 포털
-description: Xbox one에 대 한 장치 포털을 사용 하도록 설정 하는 방법에 대해 알아봅니다 .이를 통해 개발 Xbox에 원격으로 액세스할 수 있습니다.
+description: Xbox one 용 Xbox 장치 포털을 사용 하도록 설정 하는 방법에 대해 알아보세요 .이를 통해 개발 Xbox에 원격으로 액세스할 수 있습니다.
 ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 485cd9dc5a7ecb437cacf4a2c9c6eee57c3717f1
-ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
+ms.openlocfilehash: ed490b0474b919d4439e5b74b676d5974a3c6a30
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89043485"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174787"
 ---
 # <a name="device-portal-for-xbox"></a>Xbox용 디바이스 포털
 
@@ -53,7 +53,7 @@ Windows 장치 포털의 **앱 관리자** 페이지와 마찬가지로 Xbox 장
 
 ### <a name="xbox-live-game-saves"></a>Xbox Live (게임 저장)
 
-Windows 장치 포털 및 Xbox 장치 포털에는 **Xbox Live** 페이지가 있습니다. 그러나 xbox 장치 포털에는 xbox **Live 게임을 저장**하는 고유한 섹션이 있어 xbox에 설치 된 게임의 데이터를 저장할 수 있습니다. **서비스 구성 ID (SCID)** 를 입력 하 고 (자세한 내용은 [Xbox Live 서비스 구성](https://docs.microsoft.com/gaming/xbox-live/xbox-live-service-configuration.md#get-your-ids) 참조), **Membername (MSA)** 를 입력 **하 고,** **입력 파일 (. json 또는 .xml)** 을 찾은 다음, 단추 중 하나 (**다시 설정**, **가져오기**, **내보내기**및 **삭제**)를 선택 하 여 저장 데이터를 조작 합니다.
+Windows 장치 포털 및 Xbox 장치 포털에는 **Xbox Live** 페이지가 있습니다. 그러나 xbox 장치 포털에는 xbox **Live 게임을 저장**하는 고유한 섹션이 있어 xbox에 설치 된 게임의 데이터를 저장할 수 있습니다. **서비스 구성 ID (SCID)** 를 입력 하 고 (자세한 내용은 [Xbox Live 서비스 구성](/gaming/xbox-live/xbox-live-service-configuration.md#get-your-ids) 참조), **Membername (MSA)** 를 입력 **하 고,** **입력 파일 (. json 또는 .xml)** 을 찾은 다음, 단추 중 하나 (**다시 설정**, **가져오기**, **내보내기**및 **삭제**)를 선택 하 여 저장 데이터를 조작 합니다.
 
 **생성** 섹션에서 더미 데이터를 생성 하 고 지정 된 입력 파일에 저장할 수 있습니다. **컨테이너 (기본값 2)**, **blob (기본값 3)** 및 **blob 크기 (기본값 1024)** 를 입력 하 고 **생성**을 선택 하면 됩니다.
 
@@ -187,7 +187,7 @@ Xbox 장치 포털의 **네트워크** 페이지는 xbox 장치 포털에 고유
 
 여기서 장치가 있는 Xbox Live 샌드박스를 변경할 수 있습니다. 상자에 샌드박스 이름을 입력 하 고 **변경**을 선택 합니다.
 
-### <a name="scratch"></a>펜
+### <a name="scratch"></a>스크래치
 
 사용자가 원하는 대로 사용자 지정할 수 있는 빈 작업 영역입니다. 메뉴 (왼쪽 상단에 있는 메뉴 단추 클릭)를 사용 하 여 도구를 추가할 수 있습니다 ( **작업 영역에 도구 추가**, 추가 하려는 도구, **추가**를 차례로 선택). 이 메뉴를 사용 하 여 작업 영역 자체를 관리할 뿐만 아니라 작업 영역에 도구를 추가할 수 있습니다.
 
@@ -199,7 +199,7 @@ Xbox 장치 포털의 **네트워크** 페이지는 xbox 장치 포털에 고유
 
 ![게임 이벤트 데이터](images/device-portal-xbox-22.PNG)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 * [Windows 장치 포털 개요](../debug-test-perf/device-portal.md)
-* [장치 포털 코어 API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [장치 포털 핵심 API 참조](../debug-test-perf/device-portal-api-core.md)

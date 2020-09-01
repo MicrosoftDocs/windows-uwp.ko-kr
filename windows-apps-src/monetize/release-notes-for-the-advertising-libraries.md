@@ -6,17 +6,17 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 릴리스 정보
 ms.localizationpriority: medium
-ms.openlocfilehash: 10762d28191dfe59ae6f63f06cbeb0dd3e8a9f51
-ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
+ms.openlocfilehash: 8faf352040b9d7bdc9fc8bc79804d5903573d41d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88969921"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174967"
 ---
 # <a name="release-notes-for-the-advertising-libraries"></a>광고 라이브러리의 릴리스 정보
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세히 알아보기](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 정보](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
 이 섹션에서는 Microsoft 광고 라이브러리의 현재 릴리스에 대 한 릴리스 정보를 제공 합니다. 이러한 라이브러리는 Windows 10, Windows 8.1 Windows Phone 8.1 및 Windows Phone 8 용 XAML 및 JavaScript/HTML 앱을 지원 합니다.
 
@@ -35,7 +35,7 @@ Microsoft 광고 라이브러리를 사용 하는 경우 프로젝트의 **모�
 
 ## <a name="c-support"></a>C + + 지원
 
-Microsoft 광고 라이브러리 ( **Adcontrol** 및 **Interstitialad** 클래스 포함)는*interop*(Windows 런타임 상호 운용성)을 사용 하 여 c + + 및 DirectX로 작성 된 앱을 지원 합니다. XAML 및 c + +를 사용한 프로그래밍에 대 한 자세한 내용 및 예제는 [형식 시스템](https://docs.microsoft.com/cpp/cppcx/type-system-c-cx)을 참조 하세요.
+Microsoft 광고 라이브러리 ( **Adcontrol** 및 **Interstitialad** 클래스 포함)는*interop*(Windows 런타임 상호 운용성)을 사용 하 여 c + + 및 DirectX로 작성 된 앱을 지원 합니다. XAML 및 c + +를 사용한 프로그래밍에 대 한 자세한 내용 및 예제는 [형식 시스템](/cpp/cppcx/type-system-c-cx)을 참조 하세요.
 
 ## <a name="no-toolbox-control"></a>도구 상자 컨트롤 없음
 

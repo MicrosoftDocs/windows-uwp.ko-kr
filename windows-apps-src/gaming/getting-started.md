@@ -6,12 +6,12 @@ ms.date: 01/25/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 시작
 localizationpriority: medium
-ms.openlocfilehash: eb2feeaa7d4ad67ecb9d6b54c5bc275faf9cc0bd
-ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
+ms.openlocfilehash: 7d3e50f5d32cd8c6a497ff3de67005972d3a0f7f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970241"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175317"
 ---
 # <a name="getting-started"></a>시작
 
@@ -54,7 +54,7 @@ UWP DirectX 개발을 시작 하려면 [directx를 사용 하 여 간단한 UWP 
 
 Xbox 게임을 개발 하거나 게임에서 Xbox Live 기능을 사용 하려는 경우 [Xbox Live 크리에이터 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator) 또는 프로그램 중 하나를 참여 [ID@Xbox](https://www.xbox.com/Developers/id) 하세요. 
 
-각 프로그램에서 사용할 수 있는 Xbox Live 기능에 대해 자세히 알아보려면 [기능 표](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#feature-table)를 참조 하세요. 자세한 내용은 [개발자 프로그램](e2e.md#developer-programs)을 참조 하세요.
+각 프로그램에서 사용할 수 있는 Xbox Live 기능에 대해 자세히 알아보려면 [기능 표](/gaming/xbox-live/developer-program-overview.md#feature-table)를 참조 하세요. 자세한 내용은 [개발자 프로그램](e2e.md#developer-programs)을 참조 하세요.
 
 > [!Note]
 > Xbox Live 크리에이터 프로그램은 모든 개발자가 사용할 수 있습니다. **누구나** Xbox 게임을 게시할 수 있습니다. Xbox Live 크리에이터 프로그램의 제목을 만들려면 파트너 센터에서이 옵션을 사용 하도록 설정 하기만 하면 됩니다. 파트너 센터 계정에 등록 하는 방법에 대 한 자세한 내용은 아래의 [5 단계](#step-5-sign-up-for-a-partner-center-account) 를 참조 하세요.

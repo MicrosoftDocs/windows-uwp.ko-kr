@@ -1,5 +1,5 @@
 ---
-Description: 보조 타일을 고정 하 여 Windows 앱에서 시작 하는 방법을 알아봅니다.
+description: 보조 타일을 만들고 유니버설 Windows 플랫폼 (UWP) 앱에서 프로그래밍 방식으로 시작 메뉴에 고정 하는 방법을 알아봅니다.
 title: 시작에 보조 타일 고정
 label: Pin secondary tiles to Start
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: windows 10, uwp, 보조 타일, pin, 고정, 빠른 시작, 코드 샘플, 예제, secondarytile
 ms.localizationpriority: medium
-ms.openlocfilehash: 7499a9a4040850595f616a5de0badb9efeab635f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8e3949bd4534d32f202aaec78b91eb8c780e6db8
+ms.sourcegitcommit: e273e5901bfa6596dfef4cc741bb1c42614c25ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172317"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89238288"
 ---
 # <a name="pin-secondary-tiles-to-start"></a>시작에 보조 타일 고정
 

@@ -12,12 +12,12 @@ design-contact: conrwi
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ded09e2de6e3aafa0108d3f7ef66808cb02bfd8
-ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
+ms.openlocfilehash: 5eac1b5d95dff4887258278f9ff700adaf663194
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89043575"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175547"
 ---
 # <a name="parallax"></a>시차
 
@@ -56,14 +56,14 @@ Ui에서 UI를 스크롤하거나 계획 때 다른 개체를 다른 속도로 �
  
 ## <a name="using-the-parallaxview-control-to-create-a-parallax-effect"></a>ParallaxView 컨트롤을 사용 하 여 시차 효과 만들기
 
-시차 효과를 만들려면 [ParallaxView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview) 컨트롤을 사용 합니다. 이 컨트롤은 목록과 같은 전경 요소의 스크롤 위치를 이미지와 같은 배경 요소에 연결 합니다. 전경 요소를 스크롤하면 배경 요소에 애니메이션 효과를 적용 하 여 시차 효과를 만듭니다. 
+시차 효과를 만들려면 [ParallaxView](/uwp/api/Windows.UI.Xaml.Controls.Parallaxview) 컨트롤을 사용 합니다. 이 컨트롤은 목록과 같은 전경 요소의 스크롤 위치를 이미지와 같은 배경 요소에 연결 합니다. 전경 요소를 스크롤하면 배경 요소에 애니메이션 효과를 적용 하 여 시차 효과를 만듭니다. 
 
-ParallaxView 컨트롤을 사용 하려면 소스 요소, 배경 요소를 제공 하 고 [VerticalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift) (세로 스크롤의 경우) 및/또는 [HorizontalShift](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift) (가로 스크롤) 속성을 0 보다 큰 값으로 설정 합니다. 
-* Source 속성은 전경 요소에 대 한 참조를 사용 합니다. 시차 효과가 발생 하려면 전경을 [ScrollViewer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) 또는 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) 나 [RichTextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)와 같은 ScrollViewer를 포함 하는 요소 여야 합니다. 
+ParallaxView 컨트롤을 사용 하려면 소스 요소, 배경 요소를 제공 하 고 [VerticalShift](/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.VerticalShift) (세로 스크롤의 경우) 및/또는 [HorizontalShift](/uwp/api/Windows.UI.Xaml.Controls.Parallaxview.HorizontalShift) (가로 스크롤) 속성을 0 보다 큰 값으로 설정 합니다. 
+* Source 속성은 전경 요소에 대 한 참조를 사용 합니다. 시차 효과가 발생 하려면 전경을 [ScrollViewer](/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) 또는 [ListView](/uwp/api/windows.ui.xaml.controls.listview) 나 [RichTextBox](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)와 같은 ScrollViewer를 포함 하는 요소 여야 합니다. 
 
-* 배경 요소를 설정 하려면 해당 요소를 ParallaxView 컨트롤의 자식으로 추가 합니다. 배경 요소는 [이미지](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Image) 또는 패널 등의 추가 UI 요소를 포함 하는 모든 [UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement)일 수 있습니다. 
+* 배경 요소를 설정 하려면 해당 요소를 ParallaxView 컨트롤의 자식으로 추가 합니다. 배경 요소는 [이미지](/uwp/api/Windows.UI.Xaml.Controls.Image) 또는 패널 등의 추가 UI 요소를 포함 하는 모든 [UIElement](/uwp/api/windows.ui.xaml.uielement)일 수 있습니다. 
 
-시차 효과를 만들려면 ParallaxView가 전경 요소 뒤에 있어야 합니다. [Grid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid) 및 [Canvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas) 패널을 사용 하면 항목을 서로 계층화 하 여 ParallaxView 컨트롤에서 잘 작동 합니다.  
+시차 효과를 만들려면 ParallaxView가 전경 요소 뒤에 있어야 합니다. [Grid](/uwp/api/windows.ui.xaml.controls.grid) 및 [Canvas](/uwp/api/windows.ui.xaml.controls.canvas) 패널을 사용 하면 항목을 서로 계층화 하 여 ParallaxView 컨트롤에서 잘 작동 합니다.  
 
 이 예에서는 목록에 대해 시차 효과를 만듭니다.
  
@@ -121,8 +121,8 @@ VerticalShift 및 HorizontalShift 속성을 사용 하 여 시차 효과의 정�
 - ListViewItems에 이미지가 포함 된 경우 ListViewItems에서 시차를 사용 하는 것이 좋습니다.
 - 어디에서 나 사용 하지 마세요. 과도 하 게 영향을 줄 수 있습니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
-- [ParallaxView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview) 
+- [ParallaxView 클래스](/uwp/api/Windows.UI.Xaml.Controls.Parallaxview) 
 - [UWP용 흐름 디자인](/windows/apps/fluent-design-system)
 - [시스템의 과학: 흐름 디자인 및 깊이](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)

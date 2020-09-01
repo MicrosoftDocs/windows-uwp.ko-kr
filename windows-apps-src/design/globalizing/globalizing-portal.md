@@ -1,7 +1,7 @@
 ---
 Description: 앱을 전역화 하 고 지역화 하는 이점 및 이러한 용어의 의미에 대해 알아보세요.
 Search.SourceType: Video
-title: 세계화 및 지역화
+title: 전역화 및 지역화
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
 label: Intro
 template: detail.hbs
@@ -9,12 +9,12 @@ ms.date: 12/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 지역화 가능성, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: d60f0e825cefec0ba6ad5bcdd6a705f0992019b4
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 479b5d21e40b998fac9380d34be1a50d7d87e9e0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82967918"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173477"
 ---
 # <a name="globalization-and-localization"></a>세계화 및 지역화
 
@@ -38,7 +38,7 @@ Windows는 전 세계에서 언어, 지역, 문화 측면에서 다양한 사용
 - 정렬 규칙
 
 >[!NOTE]
-> Windows 운영 체제 버전에서 지원 되는 로캘 이름 목록은 [WINDOWS LCID (언어 코드 식별자) 참조](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f)의 [부록 a: 제품 동작](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) 에서 표 태그 열을 참조 하세요.
+> Windows 운영 체제 버전에서 지원 되는 로캘 이름 목록은 [WINDOWS LCID (언어 코드 식별자) 참조](/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f)의 [부록 a: 제품 동작](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) 에서 표 태그 열을 참조 하세요.
 
 지역화 **가능성** 은 지역화를 위해 세계화 된 앱을 준비 하 고 앱이 지역화 준비가 되었는지 확인 하는 프로세스입니다. 앱을 지역화할 수 있도록 올바르게 설정 하면 이후 지역화 프로세스에서 앱의 기능 결함을 발견할 수 없습니다. 지역화할 수 있는 앱의 가장 중요 한 속성은 해당 실행 코드가 응용 프로그램의 지역화할 수 있는 리소스와 완전히 분리 되어 있다는 것입니다.
 
@@ -55,7 +55,7 @@ Windows는 전 세계에서 언어, 지역, 문화 측면에서 다양한 사용
 
 대부분의 지역화 팀은 프로세스를 지원 하기 위해 특수 도구를 사용 합니다. 예를 들어, 되풀이 텍스트의 번역을 재활용 합니다.
 
-| 문서 | 설명 |
+| 아티클 | Description |
 |---------|-------------|
 | [세계화 지침](guidelines-and-checklist-for-globalizing-your-app.md) | 다양 한 언어 및 문화권 구성을 사용 하는 시스템에서 적절 하 게 작동 하는 방식으로 앱을 디자인 하 고 개발 합니다. |
 | [사용자 프로필 언어 및 앱 매니페스트 언어 이해](manage-language-and-region.md) | 이 항목에서는 "사용자 프로필 언어 목록", "앱 매니페스트 언어 목록" 및 "app runtime language list" 라는 용어를 정의 합니다. 이 항목 및이 기능 영역의 다른 항목에서 이러한 용어를 사용할 예정 이므로 무엇을 의미 하는지 알아 두어야 합니다. |

@@ -1,31 +1,31 @@
 ---
 title: 백그라운드에서 무기한 실행
-description: extendedExecutionUnconstrained 기능을 사용하여 백그라운드 작업 또는 확장된 실행 세션을 백그라운드에서 무기한 실행하세요.
+description: ExtendedExecutionUnconstrained 기능을 사용 하 여 백그라운드에서 백그라운드 작업 또는 확장 된 실행 세션을 무기한으로 실행 합니다.
 ms.assetid: 6E48B8B6-D3BF-4AE2-85FB-D463C448C9D3
 keywords: 백그라운드 작업, 확장 된 실행, 리소스, 제한, 백그라운드 작업
 ms.date: 10/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 55025d0348abdf311ebf020c70ccf9029bf7ec5a
-ms.sourcegitcommit: ebd35887b00d94f1e76f7d26fa0d138ec4abe567
+ms.openlocfilehash: 9ec77b0f4777f12d20ec13bcfbac864993afd441
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73888662"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175117"
 ---
 # <a name="run-in-the-background-indefinitely"></a>백그라운드에서 무기한 실행
 
-사용자에게 최상의 환경을 제공하기 위해 Windows는 UWP(유니버설 Windows 플랫폼) 앱에 대한 리소스 제한을 적용합니다. 포그라운드 앱에는 가장 많은 메모리와 실행 시간이 주어지며, 백그라운드 앱은 더 적습니다. 따라서 사용자는 포그라운드 앱의 성능 저하 및 배터리 사용량의 많은 소모로부터 보호됩니다.
+사용자에 게 최상의 환경을 제공 하기 위해 Windows는 UWP (유니버설 Windows 플랫폼) 앱에 대 한 리소스 제한을 설정 합니다. 포그라운드 앱에는 메모리 및 실행 시간이 가장 많이 제공 됩니다. 백그라운드 앱이 줄어듭니다. 따라서 사용자는 포그라운드 앱 성능이 저하 되 고 배터리가 많이 소모 되지 않도록 보호 됩니다.
 
-하지만 UWP 앱을 개인용으로 개발하는 개발자(Microsoft Store에 게시되지 않고 테스트용으로 로드된 앱) 또는 엔터프라이즈 UWP 앱을 개발하는 개발자는 백그라운드나 확장 없이 장치에서 사용할 수 있는 모든 리소스를 사용하려고 할 수 있습니다. 기간 업무 및 개인 UWP 응용 프로그램은 Windows 크리에이터스 업데이트(버전 1703)의 API를 사용하여 제한 기능을 해제할 수 있습니다. 이러한 API를 사용하는 경우 앱을 Microsoft Store에 게시할 수 없습니다.
+그러나 개인 용 UWP 앱 (즉, Microsoft Store에 게시 되지 않은 테스트용 로드 된 앱)을 작성 하는 개발자 또는 엔터프라이즈 UWP 앱을 작성 하는 개발자는 백그라운드 또는 확장 된 실행 제한 없이 장치에서 사용 가능한 모든 리소스를 사용 하는 것이 좋습니다. Lob (기간 업무) 및 개인 UWP 응용 프로그램은 Windows 크리에이터 업데이트 (버전 1703)에서 Api를 사용 하 여 제한을 해제할 수 있습니다. 이러한 Api를 사용 하는 경우 Microsoft Store에 앱을 배치할 수 없습니다.
 
-## <a name="run-while-minimized"></a>최소화된 상태로 실행
+## <a name="run-while-minimized"></a>최소화 된 상태에서 실행
 
-UWP 앱이 포그라운드에서 실행되지 않을 때 일시 중단된 상태로 이동합니다. 데스크톱에서는 사용자가 앱을 최소화할 때 발생합니다. 앱은 최소화된 상태에서 계속 실행하기 위해 확장된 실행 세션을 사용합니다. Microsoft Store에서 허용하는 확장된 실행 API는 [확장 실행을 사용하여 앱 일시 중단 연기](https://docs.microsoft.com/windows/uwp/launch-resume/run-minimized-with-extended-execution)에 세부적으로 나와 있습니다.
+UWP 앱은 포그라운드로 실행 되 고 있지 않을 때 일시 중단 됨 상태로 전환 됩니다. 바탕 화면에서 사용자가 앱을 최소화할 때 발생 합니다. 앱은 최소화 된 상태에서 계속 실행 하기 위해 확장 된 실행 세션을 사용 합니다. Microsoft Store에서 허용 하는 확장 된 실행 Api는 [확장 된 실행으로 앱 일시 중단 연기](./run-minimized-with-extended-execution.md)에 자세히 설명 되어 있습니다.
 
-Microsoft Store에 제출하지 않는 앱을 개발하는 경우, 장치의 에너지 상태에 관계없이 앱이 최소화된 상태로 계속 실행될 수 있도록 [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) 및 `extendedExecutionUnconstrained` 제한 기능을 사용할 수 있습니다.  
+Microsoft Store에 제출 하기에 적합 하지 않은 앱을 개발 하는 경우 [ExtendedExecutionForegroundSession](/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) `extendedExecutionUnconstrained` 장치의 에너지 상태와 관계 없이 앱이 최소화 된 상태에서 계속 실행 될 수 있도록 제한 된 기능과 함께 ExtendedExecutionForegroundSession를 사용할 수 있습니다.  
 
-`extendedExecutionUnconstrained` 기능이 앱의 매니페스트에 제한 기능으로 추가됩니다. 제한 기능에 대한 자세한 내용은 [앱 접근 권한 값 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.
+`extendedExecutionUnconstrained`기능은 앱의 매니페스트에 제한 된 기능으로 추가 됩니다. 제한 된 기능에 대 한 자세한 내용은 [앱 기능 선언](../packaging/app-capability-declarations.md) 을 참조 하세요.
 
 > **참고:** *Xmlns: rescap* XML 네임 스페이스 선언을 추가 하 고 *rescap* 접두사를 사용 하 여 기능을 선언 합니다.
 
@@ -42,7 +42,7 @@ _Package.appxmanifest_
 </Package>
 ```
 
-`extendedExecutionUnconstrained` 기능을 사용하면 [ExtendedExecutionForegroundSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) 및 [ExtendedExecutionForegroundReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason)은 [ExtendedExecutionSession](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionsession) 및 [ExtendedExecutionReason](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionreason) 대신 사용됩니다. 세션을 만들고, 구성원을 설정하고, 확장을 비동기적으로 요청하기 위한 동일한 패턴이 여전히 적용됩니다. 
+기능을 사용 하는 경우 `extendedExecutionUnconstrained` [ExtendedExecutionSession](/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionsession) 및 [ExtendedExecutionReason](/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionreason)대신 [ExtendedExecutionForegroundSession](/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundsession) 및 [ExtendedExecutionForegroundReason](/uwp/api/windows.applicationmodel.extendedexecution.foreground.extendedexecutionforegroundreason) 가 사용 됩니다. 세션을 만들고, 멤버를 설정 하 고, 확장을 요청 하는 동일한 패턴이 여전히 적용 됩니다. 
 
 ```cs
 var newSession = new ExtendedExecutionForegroundSession();
@@ -63,13 +63,13 @@ switch (result)
 }
 ```
 
-앱이 포그라운드로 오자마자 이 확장된 실행 세션을 요청할 수 있습니다. 제한되지 않은 확장 실행 세션은 에너지 할당량이나 운영 체제 배터리 절약 모드에 의해 제한되지 않습니다. 세션 개체에 대한 참조가 존재하는 한 앱은 실행 상태를 유지하고 일시 중단된 상태가 되지 않습니다. 앱이 사용자에 의해 닫히면 세션이 취소됩니다.
+앱이 포그라운드로 들어오는 즉시이 확장 된 실행 세션을 요청할 수 있습니다. 제한 없는 확장 실행 세션은 에너지 할당량 또는 운영 체제 배터리 보호기로 제한 되지 않습니다. 세션 개체에 대 한 참조가 있으면 앱이 실행 중 상태가 되 고 일시 중단 됨 상태로 전환 됩니다. 사용자가 앱을 닫으면 세션이 해지 됩니다.
 
-**Revoked** 이벤트에 등록하면 앱에서 필요한 정리 작업을 수행할 수 있습니다. 일시 중단된 상태에서 [ExtendedExecutionReason.SavingData](https://docs.microsoft.com/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionreason)가 있는 확장된 실행 세션을 생성하여 앱이 종료되고 메모리에서 제거되기 전에 사용자 데이터를 저장할 수 있습니다.
+**해지** 된 이벤트를 등록 하면 앱에서 필요한 정리 작업을 수행할 수 있습니다. 일시 중단 상태에서는 앱이 종료 되 고 메모리에서 제거 되기 전에   [ExtendedExecutionReason. SavingData](/uwp/api/windows.applicationmodel.extendedexecution.extendedexecutionreason) 를 사용 하 여 확장 된 실행 세션을 만들어 사용자 데이터를 저장할 수 있습니다.
 
-## <a name="run-background-tasks-indefinitely"></a>백그라운드 작업 무기한 실행
+## <a name="run-background-tasks-indefinitely"></a>무기한으로 백그라운드 작업 실행
 
-유니버설 Windows 플랫폼에서 백그라운드 작업은 사용자 인터페이스 없이 백그라운드에서 실행되는 프로세스입니다. 백그라운드 작업은 일반적으로 취소되기 전에 최대 25초 동안 실행될 수 있습니다. 장기 실행 작업 중 일부에는 백그라운드 작업이 유휴 상태이거나 메모리를 사용하고 있지 않은지 확인하는 검사가 있습니다. Windows 크리에이터스 업데이트(버전 1703)에서 [extendedBackgroundTaskTime](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) 제한된 접근 권한 값은 이러한 제한을 제거하기 위해 도입되었습니다. **extendedBackgroundTaskTime** 기능이 앱의 매니페스트 파일에 제한 기능으로 추가됩니다.
+유니버설 Windows 플랫폼에서 백그라운드 작업은 사용자 인터페이스의 폼 없이 백그라운드에서 실행 되는 프로세스입니다. 백그라운드 작업은 일반적으로 최대 25 초 동안 실행 될 수 있으며 취소 됩니다. 또한 오래 실행 되는 작업 중 일부에는 백그라운드 작업이 유휴 상태가 아니거나 메모리를 사용 하 고 있지 않은지 확인 해야 합니다. Windows 크리에이터 업데이트 (버전 1703)에서는 이러한 한도를 제거 하기 위해 [extendedBackgroundTaskTime](../packaging/app-capability-declarations.md) 제한 된 기능이 도입 되었습니다. **ExtendedBackgroundTaskTime** 기능은 앱의 매니페스트 파일에 제한 된 기능으로 추가 됩니다.
 
 > **참고:** *Xmlns: rescap* XML 네임 스페이스 선언을 추가 하 고 *rescap* 접두사를 사용 하 여 기능을 선언 합니다.
 
@@ -86,12 +86,12 @@ _Package.appxmanifest_
 </Package>
 ```
 
-이 기능은 실행 시간 제한과 유휴 작업 감시를 제거합니다. 트리거 또는 앱 서비스 호출에 의해 백그라운드 작업이 시작되고 **Run** 메서드에서 제공하는 [BackgroundTaskInstance](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)에 지연이 있으면 무기한 실행될 수 있습니다. 앱이 **Windows에서 관리됨**으로 설정된 경우 여전히 앱에 적용된 에너지 할당량을 가질 수 있으며, 배터리 절약 모드가 활성화되어 있을 때 해당 백그라운드 작업은 활성화되지 않습니다. OS 설정으로 변경할 수 있습니다. 자세한 내용은 [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity)에서 확인할 수 있습니다.
+이 기능은 실행 시간 제한 및 유휴 작업 watchdog을 제거 합니다. 트리거 또는 app service 호출로 인해 백그라운드 작업이 시작 된 후에는 **실행** 메서드에서 제공 하는 [BackgroundTaskInstance](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance) 에서 지연이 발생 하면 무기한 실행 될 수 있습니다. 앱이 **Windows에서 관리**하도록 설정 된 경우에는 여전히 에너지 할당량이 적용 될 수 있으며 배터리 절약이 활성화 되 면 백그라운드 작업이 활성화 되지 않습니다.OS 설정으로 변경할 수 있습니다. [백그라운드 작업 최적화](../debug-test-perf/optimize-background-activity.md)에서 추가 정보를 사용할 수 있습니다.
 
-유니버설 Windows 플랫폼은 백그라운드 작업 실행을 모니터링하여 배터리 수명을 늘리고 원활한 포그라운드 앱 환경을 보장합니다. 그러나 개인 앱 및 엔터프라이즈 기간 업무 앱은 확장된 실행과 **extendedBackgroundTaskTime** 기능을 사용하여 장치의 리소스 가용성에 관계없이 필요한 만큼 실행되는 앱을 만들 수 있습니다.
+유니버설 Windows 플랫폼은 백그라운드 작업 실행을 모니터링 하 여 배터리 수명 및 부드러운 포그라운드 앱 환경을 보장 합니다. 그러나 개인 앱 및 엔터프라이즈 기간 업무 앱은 확장 된 실행 및 **extendedBackgroundTaskTime** 기능을 사용 하 여 장치의 리소스 가용성에 관계 없이 필요한 경우에만 실행 되는 앱을 만들 수 있습니다.
 
-**extendedExecutionUnconstrained** 및 **extendedBackgroundTaskTime** 기능은 UWP 앱의 기본 정책을 재정의할 수 있으며 배터리를 상당히 소모할 수 있습니다. 이러한 기능을 사용하기 전에 먼저 기본 확장 실행 및 백그라운드 작업 시간 정책이 요구 사항을 충족하지 않은지 확인하고, 배터리 제한 조건에서 테스트를 수행하여 앱이 장치에 미칠 영향을 파악하세요.
+**ExtendedExecutionUnconstrained** 및 **extendedBackgroundTaskTime** 기능은 UWP 앱에 대 한 기본 정책을 재정의할 수 있으며 상당한 배터리가 소모 될 수 있습니다. 이러한 기능을 사용 하기 전에 먼저 기본 확장 실행 및 백그라운드 작업 시간 정책이 사용자의 요구를 충족 하지 않는지 확인 하 고 배터리 제한 조건에서 테스트를 수행 하 여 앱이 장치에 주는 영향을 파악 합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[백그라운드 작업 리소스 제한 제거](https://docs.microsoft.com/windows/application-management/enterprise-background-activity-controls)
+[백그라운드 작업 리소스 제한 제거](/windows/application-management/enterprise-background-activity-controls)

@@ -1,6 +1,6 @@
 ---
 Description: Windows 앱을 디자인 하 고 최적화 하는 방법에 대해 알아봅니다. 그러면 키보드 전원 사용자와 장애가 있는 사용자 및 기타 접근성 요구 사항이 있는 최상의 환경을 제공할 수 있습니다.
-title: 키보드 상호 작용
+title: 키보드 조작
 ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
@@ -11,14 +11,14 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: 44cb122f70825df3ceef043d84e57cd077780749
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: f4f2e9e13f492dd9a38d737c0c86dd3b1e632279
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234704"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173487"
 ---
-# <a name="keyboard-interactions"></a>키보드 상호 작용
+# <a name="keyboard-interactions"></a>키보드 조작
 
 ![키보드 주인공 이미지](images/keyboard/keyboard-hero.jpg)
 
@@ -55,7 +55,7 @@ Windows 앱을 디자인 하 고 최적화 하는 방법에 대해 알아봅니�
 
 이 항목에서 설명 하는 장치 및 도구는 다음과 같습니다.
 
-| 장치/도구                       | 설명     |
+| 장치/도구                       | Description     |
 |-----------------------------------|-----------------|
 |키보드 (하드웨어 및 소프트웨어)   |표준 하드웨어 키보드 외에도 Windows 응용 프로그램은 [터치 (또는 소프트웨어) 키보드](#software-keyboard) 와 [화상 키보드](#on-screen-keyboard)라는 두 가지 소프트웨어 키보드를 지원 합니다.|
 |게임 패드 및 리모컨         |Xbox 게임 패드 및 원격 제어는 [10 피트 환경](../devices/designing-for-tv.md)에서 기본적인 입력 장치입니다. 게임 패드 및 원격 제어에 대 한 Windows 지원에 대 한 자세한 내용은 [게임 패드 및 원격 제어 상호 작용](gamepad-and-remote-interactions.md)을 참조 하세요.|
@@ -144,9 +144,9 @@ UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높�
 -   **Shift + tab** 을 누르면 역방향 탭 순서로 컨트롤이 이동 합니다. 사용자가 화살표 키를 사용 하 여 컨트롤 내부를 탐색 하는 경우 포커스는 컨트롤 내에서 마지막으로 알려진 값으로 설정 됩니다.
 -   **화살표 키는** 사용자가 "내부 탐색"을 입력 하면 컨트롤 관련 "내부 탐색"을 노출 하 고, 화살표 키는 컨트롤에서 이동 하지 않습니다. 일부 사례:
     -   위쪽/아래쪽 화살표 키를 누르면 포커스가로 이동 합니다. `ListView``MenuFlyout`
-    -   현재 선택 되어 있는 값 `Slider` 을 수정 합니다.`RatingsControl`
-    -   캐럿 이동`TextBox`
-    -   항목 확장/축소`TreeView`
+    -   현재 선택 되어 있는 값 `Slider` 을 수정 합니다. `RatingsControl`
+    -   캐럿 이동 `TextBox`
+    -   항목 확장/축소 `TreeView`
 
 이러한 기본 동작을 사용 하 여 응용 프로그램의 키보드 탐색을 최적화 합니다.
 
@@ -284,7 +284,7 @@ UWP에서 액세스 키 지원에 대 한 자세한 내용은 [액세스 키](ac
 | 연속 선택                  | Shift + 화살표 키                                  |
 | 저장                                 | Ctrl+S                                           |
 | 찾기                                 | Ctrl+F                                           |
-| Print                                | Ctrl+P                                           |
+| 인쇄                                | Ctrl+P                                           |
 | 복사                                 | Ctrl+C                                           |
 | 잘라내기                                  | Ctrl+X                                           |
 | 붙여넣기                                | Ctrl+V                                           |
@@ -306,9 +306,9 @@ Windows 시스템 바로 가기의 포괄적인 목록은 [windows 용 바로 �
 #### <a name="arrow-key-navigation"></a>화살표 키 탐색
 
 UI 영역에 비슷한 관련 컨트롤 그룹이 있는 경우 사용자는 화살표 키 탐색을 지원 합니다.
--   `AppBarButtons`에서`CommandBar`
+-   `AppBarButtons` 에서 `CommandBar`
 -   `ListItems`또는 `GridItems` 내부 `ListView``GridView`
--   `Buttons`내부의`ContentDialog`
+-   `Buttons` 내부의 `ContentDialog`
 
 UWP 컨트롤은 기본적으로 화살표 키 탐색을 지원 합니다. 사용자 지정 레이아웃 및 컨트롤 그룹의 경우 `XYFocusKeyboardNavigation="Enabled"` 를 사용 하 여 유사한 동작을 제공 합니다.
 
@@ -345,7 +345,7 @@ UWP 컨트롤은 기본적으로 화살표 키 탐색을 지원 합니다. 사�
 
 레이아웃이 컨트롤 그룹에 대해 잘 알려진 UI 패턴을 따르는 경우 그룹에 단일 탭 정지를 할당 하면 사용자의 탐색 효율성이 향상 될 수 있습니다.
 
-다음과 같은 경우를 예로 들 수 있습니다.
+다음은 이러한 템플릿의 예입니다.
 -   `RadioButtons`
 -   `ListViews`처럼 보이지만 단일 처럼 동작 합니다.`ListView`
 -   타일의 그리드와 같이 모양과 동작 하는 UI (예: 시작 메뉴 타일)
@@ -511,7 +511,7 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 * [입력 디바이스 식별](identify-input-devices.md)
 * [터치 키보드의 현재 상태에 응답](respond-to-the-presence-of-the-touch-keyboard.md)
 * [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
-* [NavigationView 컨트롤 키보드 사용 특성](/windows/uwp/design/controls-and-patterns/navigationview#hierarchical-navigation) 
+* [NavigationView 컨트롤 키보드 사용 특성](../controls-and-patterns/navigationview.md#hierarchical-navigation) 
 
 ## <a name="appendix"></a>부록
 
@@ -545,7 +545,7 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 -   트리 항목
 -   메뉴
 -   메뉴 모음
--   메뉴 항목
+-   Menu item
 -   도구 모음
 -   목록
 -   목록 항목

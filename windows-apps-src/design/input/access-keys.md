@@ -1,6 +1,6 @@
 ---
 Description: '사용자가 포인터 장치 (예: 터치 또는 마우스) 대신 키보드를 통해 앱의 표시 되는 UI를 신속 하 게 탐색 하 고 상호 작용할 수 있는 직관적인 방법을 제공 하 여 Windows 앱의 유용성 및 내게 필요한 옵션을 개선 하는 방법에 대해 알아봅니다.'
-title: 액세스 키 디자인 지침
+title: 선택키 설계 지침
 label: Access keys design guidelines
 keywords: 키보드, 액세스 키, keytip, 키 팁, 접근성, 탐색, 포커스, 텍스트, 입력, 사용자 상호 작용
 template: detail.hbs
@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c0d5808c462beb72341fd83c6fc4c1cfc0178b2f
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ca8c21729f27e30e7703291c04a940301a3feb26
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970978"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173897"
 ---
 # <a name="access-keys"></a>액세스 키
 
@@ -25,7 +25,7 @@ ms.locfileid: "82970978"
 바로 가기 키를 사용 하 여 Windows 응용 프로그램에서 일반적인 작업 호출에 대 한 자세한 내용은 [액셀러레이터 키](keyboard-accelerators.md) 항목을 참조 하세요. 
 
 > [!NOTE]
-> 키보드는 특정 장애가 있는 사용자에 게 중요 하며 ( [키보드 접근성](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)참조) 앱과 상호 작용 하는 보다 효율적인 방법으로 선호 하는 사용자를 위한 중요 한 도구 이기도 합니다.
+> 키보드는 특정 장애가 있는 사용자에 게 중요 하며 ( [키보드 접근성](../accessibility/keyboard-accessibility.md)참조) 앱과 상호 작용 하는 보다 효율적인 방법으로 선호 하는 사용자를 위한 중요 한 도구 이기도 합니다.
 
 Windows 앱은 키 팁 이라는 시각적 신호를 통해 키보드 기반 액세스 키 및 연결 된 UI 피드백 모두에 대해 플랫폼 컨트롤에서 기본 제공 되는 지원을 제공 합니다.
 
@@ -72,11 +72,11 @@ UI에 적절 한 액세스 키를 지정 하 고 모든 사용자 지정 컨트�
 
 다음 이미지는 Word의 두 가지 액세스 키 범위를 보여 줍니다. 첫 번째는 사용자가 탭 및 다른 최상위 명령을 선택할 수 있도록 하는 기본 액세스 키를 표시 하 고, 두 번째는 홈 탭에 대 한 보조 액세스 키를 표시 합니다.
 
-![Microsoft word의 기본 액세스 키](images/accesskeys/primary-access-keys-word.png)
-_microsoft word의 기본 액세스_ 키
+![Microsoft word의 기본 액세스 키 ](images/accesskeys/primary-access-keys-word.png)
+ _microsoft word의 기본 액세스_ 키
 
-![Microsoft word의 보조 액세스 키](images/accesskeys/secondary-access-keys-word.png)
-microsoft_word의 보조 액세스_ 키
+![Microsoft word의 보조 액세스 키 microsoft ](images/accesskeys/secondary-access-keys-word.png)
+ _word의 보조 액세스_ 키
 
 여러 범위의 요소에 대해 액세스 키를 복제할 수 있습니다. 앞의 예제에서 "2"는 주 범위의 실행 취소에 대 한 선택 키이 고, 보조 범위의 "기울임꼴" 이기도 합니다.
 
@@ -241,7 +241,7 @@ _영어 및 스페인어 리소스 문자열 폴더_
 
 _리소스. resw 파일에 지정 된 AccessKey 속성을 지정 합니다._
 
-자세한 내용은 [UI 리소스 변환](https://docs.microsoft.com/previous-versions/windows/apps/hh965329(v=win.10)) (영문)을 참조 하세요.
+자세한 내용은 [UI 리소스 변환](/previous-versions/windows/apps/hh965329(v=win.10)) (영문)을 참조 하세요.
 
 ## <a name="key-tip-positioning"></a>키 팁 위치 지정
 
@@ -353,14 +353,12 @@ _주요 팁 사용자 지정 옵션_
 
 XAML 프레임 워크는 UI 자동화 클라이언트가 사용자 인터페이스의 요소에 대 한 정보를 검색할 수 있도록 하는 자동화 속성을 노출 합니다.
 
-UIElement 또는 TextElement 컨트롤에서 AccessKey 속성을 지정 하는 경우 [Automationproperties. accesskey](https://docs.microsoft.com/dotnet/api/system.windows.automation.automationproperties.accesskey) 속성을 사용 하 여이 값을 가져올 수 있습니다. 내레이터와 같은 내게 필요한 옵션 지원 클라이언트는 요소가 포커스를 가질 때마다이 속성의 값을 읽습니다.
+UIElement 또는 TextElement 컨트롤에서 AccessKey 속성을 지정 하는 경우 [Automationproperties. accesskey](/dotnet/api/system.windows.automation.automationproperties.accesskey) 속성을 사용 하 여이 값을 가져올 수 있습니다. 내레이터와 같은 내게 필요한 옵션 지원 클라이언트는 요소가 포커스를 가질 때마다이 속성의 값을 읽습니다.
 
 ## <a name="related-articles"></a>관련된 문서
 
-* [키보드 상호 작용](keyboard-interactions.md)
+* [키보드 조작](keyboard-interactions.md)
 * [키보드 액셀러레이터](keyboard-accelerators.md)
 
 **샘플**
 * [XAML 컨트롤 갤러리 (즉, XamlUiBasics)](https://github.com/Microsoft/Windows-universal-samples/tree/c2aeaa588d9b134466bbd2cc387c8ff4018f151e/Samples/XamlUIBasics)
-
-

@@ -6,12 +6,12 @@ ms.date: 09/12/2019
 keywords: Windows 10의 음성, 음성, 음성, 대화, win32 음성 앱, UWP speech 앱, WPF speech apps, WinForms speech apps
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
-ms.openlocfilehash: 7ac8d782591ce8f3716e491714c4cbf241e80b6c
-ms.sourcegitcommit: 8a88a05ad89aa180d41a93152632413694f14ef8
+ms.openlocfilehash: d810f08a2db60309e4528167bcb4bddc95d850c6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76726553"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174157"
 ---
 # <a name="speech-voice-and-conversation-in-windows-10"></a>Windows 10의 음성, 음성 및 대화
 
@@ -19,7 +19,7 @@ ms.locfileid: "76726553"
 
 음성은 사용자가 마우스, 키보드, 터치, 컨트롤러 또는 제스처를 기반으로 하 여 Windows 응용 프로그램, 보완 또는 대체 (기존 상호 작용 환경)를 조작 하는 데 효과적이 고 자연스럽 고 즐겁게 가능 합니다.
 
-음성 인식, 받아쓰기, 음성 합성 (텍스트-음성 또는 TTS 라고도 함)과 같은 음성 기반 기능 및 대화형 음성 도우미 (예: Cortana 또는 Alexa)는 사용자가 사용할 수 있는 액세스 가능 하 고 포함 된 사용자 환경을 제공할 수 있습니다. 다른 입력 장치가 충분 하지 않을 수 있는 응용 프로그램입니다.
+음성 인식, 받아쓰기, 음성 합성 (텍스트-음성 또는 TTS 라고도 함) 및 대화형 음성 도우미 (예: Cortana 또는 Alexa)와 같은 음성 기반 기능을 사용 하면 다른 입력 장치가 충분 하지 않을 때 응용 프로그램을 사용할 수 있는 액세스 가능 하 고 포함 된 사용자 환경을 제공할 수 있습니다.
 
 이 페이지에서는 다양 한 Windows 개발 프레임 워크에서 Windows 응용 프로그램을 빌드하는 개발자에 게 음성 인식, 음성 합성 및 대화 지원을 제공 하는 방법에 대 한 정보를 제공 합니다.
 
@@ -33,17 +33,17 @@ ms.locfileid: "76726553"
 
       Windows 10 응용 프로그램 및 게임을 위한 최신 플랫폼에서 음성 지원 앱을 빌드 하 고 Windows 장치 (Pc, 휴대폰, Xbox One, HoloLens 등 포함)에서 Microsoft Store에 게시 합니다.
 
-      [음성 조작](https://docs.microsoft.com/windows/uwp/design/input/speech-interactions)
+      [음성 조작](/windows/uwp/design/input/speech-interactions)
 
-      [음성 인식](https://docs.microsoft.com/windows/uwp/design/input/speech-recognition)
+      [음성 인식](/windows/uwp/design/input/speech-recognition)
 
-      [연속 받아쓰기](https://docs.microsoft.com/windows/uwp/design/input/enable-continuous-dictation)
+      [연속 받아쓰기](/windows/uwp/design/input/enable-continuous-dictation)
 
-      [음성 합성](https://docs.microsoft.com/uwp/api/windows.media.speechsynthesis)
+      [음성 합성](/uwp/api/windows.media.speechsynthesis)
 
-      [대화형 에이전트](https://docs.microsoft.com/uwp/api/windows.applicationmodel.conversationalagent)
+      [대화형 에이전트](/uwp/api/windows.applicationmodel.conversationalagent)
 
-      [Cortana 음성 명령](https://docs.microsoft.com/cortana/voice-commands/vcd)
+      [Cortana 음성 명령](/cortana/voice-commands/vcd)
    :::column-end:::
    :::column:::
       ![Win32 플랫폼 앱](images/platform-win32.png)
@@ -65,7 +65,7 @@ ms.locfileid: "76726553"
 
       XAML UI 모델 및 .NET Framework를 사용하여 관리형 Windows 애플리케이션용으로 설정된 플랫폼에서 접근성 지원 앱과 도구를 개발합니다.
 
-      [.NET Framework용 System.Speech 프로그래밍 가이드](https://docs.microsoft.com/previous-versions/office/developer/speech-technologies/hh361625(v=office.14))
+      [.NET Framework용 System.Speech 프로그래밍 가이드](/previous-versions/office/developer/speech-technologies/hh361625(v=office.14))
    :::column-end:::
    :::column:::
       ![Azure 음성 서비스](images/platform-azure-speech.png)
@@ -74,13 +74,13 @@ ms.locfileid: "76726553"
 
       Azure speech services를 사용 하 여 액세스할 수 있는 웹 사이트를 디자인, 빌드 및 테스트 합니다.
 
-      [음성 텍스트](https://azure.microsoft.com/services/cognitive-services/speech-to-text/)
+      [음성 텍스트 변환](https://azure.microsoft.com/services/cognitive-services/speech-to-text/)
 
       [텍스트 음성 변환](https://azure.microsoft.com/services/cognitive-services/text-to-speech/)
       
       [음성 번역](https://azure.microsoft.com/services/cognitive-services/speech-translation/)
 
-      [음성 우선 가상 도우미](https://docs.microsoft.com/azure/cognitive-services/speech-service/voice-first-virtual-assistants)
+      [음성 우선 가상 도우미](/azure/cognitive-services/speech-service/voice-first-virtual-assistants)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -92,16 +92,16 @@ ms.locfileid: "76726553"
 :::row-end:::
 :::row:::
    :::column:::
-      [Microsoft 에이전트](https://docs.microsoft.com/windows/win32/lwef/microsoft-agent)
+      [Microsoft 에이전트](/windows/win32/lwef/microsoft-agent)
 
       [Microsoft Speech SASDK (Software Development Kit) 버전 1.0](https://www.microsoft.com/download/details.aspx?id=2200)
    :::column-end:::
    :::column:::
-      [SAPI (Microsoft Speech API) 5.3](https://docs.microsoft.com/previous-versions/windows/desktop/ms723627(v=vs.85))
+      [SAPI (Microsoft Speech API) 5.3](/previous-versions/windows/desktop/ms723627(v=vs.85))
 
-      [SAPI (Microsoft Speech API) 5.4](https://docs.microsoft.com/previous-versions/windows/desktop/ee125663(v=vs.85))
+      [SAPI (Microsoft Speech API) 5.4](/previous-versions/windows/desktop/ee125663(v=vs.85))
 
-      [Bing Speech 인식 컨트롤](https://docs.microsoft.com/previous-versions/bing/speech/dn434583(v%3dmsdn.10))
+      [Bing Speech 인식 컨트롤](/previous-versions/bing/speech/dn434583(v=msdn.10))
    :::column-end:::
 :::row-end:::
 
@@ -111,7 +111,7 @@ ms.locfileid: "76726553"
 
 :::row:::
    :::column:::
-      [코드 샘플 브라우저](https://docs.microsoft.com/samples/browse/?term=speech)
+      [코드 샘플 브라우저](/samples/browse/?term=speech)
 
       새 샘플 브라우저 (MSDN 코드 갤러리 대체)
    :::column-end:::
@@ -134,13 +134,13 @@ ms.locfileid: "76726553"
    :::column-end:::
 :::row-end:::
 
-## <a name="videos"></a>비디오
+## <a name="videos"></a>동영상
 
 음성 상호 작용을 통합 하는 Windows 응용 프로그램을 빌드하는 방법에 대 한 다양 한 비디오입니다.
 
 :::row:::
    :::column:::
-      **Cortana 및 음성 플랫폼 세부 정보**
+      **Cortana 및 음성 플랫폼 심층 분석**
    :::column-end:::
    :::column:::
       **유니버설 Windows 앱에서 Cortana 확장성**

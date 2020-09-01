@@ -5,12 +5,12 @@ author: maiak
 ms.author: maiak
 ms.date: 02/23/2020
 ms.topic: tutorial
-ms.openlocfilehash: 170a8c3084e180714a319d67dca2b6a5756ea474
-ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+ms.openlocfilehash: ef4d3df6e5a5dd93dbcb2caadc8e3f299aad581c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629114"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173697"
 ---
 # <a name="access-trace-data"></a>추적 데이터 액세스
 
@@ -18,7 +18,7 @@ ms.locfileid: "77629114"
 
 Microsoft. Windows. EventTracing
 
-이 패키지를 사용 하 여 추적 파일의 데이터에 액세스할 수 있습니다. 추적 파일이 아직 없는 경우 [Windows 성능 레코더](https://docs.microsoft.com/windows-hardware/test/wpt/start-a-recording) 를 사용 하 여 만들 수 있습니다.
+이 패키지를 사용 하 여 추적 파일의 데이터에 액세스할 수 있습니다. 추적 파일이 아직 없는 경우 [Windows 성능 레코더](/windows-hardware/test/wpt/start-a-recording) 를 사용 하 여 만들 수 있습니다.
 
 다음 예제 콘솔 앱에서는 추적에 포함 된 모든 프로세스의 명령줄에 액세스 하는 방법을 보여 줍니다.
 
@@ -56,13 +56,13 @@ class Program
 
 ## <a name="using-traceprocessor"></a>TraceProcessor 사용
 
-추적을 처리 하려면 [Traceprocessor. Create](https://docs.microsoft.com/dotnet/api/microsoft.windows.eventtracing.traceprocessor.create)를 호출 합니다. 핵심 인터페이스는 [ITraceProcessor](https://docs.microsoft.com/dotnet/api/microsoft.windows.eventtracing.itraceprocessor)이 인터페이스를 사용 하면 다음과 같은 패턴이 포함 됩니다.
+추적을 처리 하려면 [Traceprocessor. Create](/dotnet/api/microsoft.windows.eventtracing.traceprocessor.create)를 호출 합니다. 핵심 인터페이스는 [ITraceProcessor](/dotnet/api/microsoft.windows.eventtracing.itraceprocessor)이 인터페이스를 사용 하면 다음과 같은 패턴이 포함 됩니다.
 
 1. 먼저, 추적에서 사용 하려는 데이터를 프로세서에 알려 주십시오.
 2. 둘째, 추적을 처리 합니다. 하거나
 3. 마지막으로 결과에 액세스 합니다.
 
-프로세서에 필요한 데이터 종류를 알려 주는 것은 가능한 모든 종류의 추적 데이터를 처리 하는 데 시간을 소비할 필요가 없음을 의미 합니다. 대신, [Traceprocessor](https://docs.microsoft.com/dotnet/api/microsoft.windows.eventtracing.traceprocessor) 는 요청 하는 특정 종류의 데이터를 제공 하는 데 필요한 작업만 수행 합니다.
+프로세서에 필요한 데이터 종류를 알려 주는 것은 가능한 모든 종류의 추적 데이터를 처리 하는 데 시간을 소비할 필요가 없음을 의미 합니다. 대신, [Traceprocessor](/dotnet/api/microsoft.windows.eventtracing.traceprocessor) 는 요청 하는 특정 종류의 데이터를 제공 하는 데 필요한 작업만 수행 합니다.
 
 ## <a name="recommended-project-settings"></a>권장 프로젝트 설정
 
@@ -70,11 +70,11 @@ TraceProcessor와 함께 사용 하는 몇 가지 프로젝트 설정이 있습�
 
 1. Exe를 64 비트로 실행 하는 것이 좋습니다.
 
-    새 C# .NET Framework 콘솔 응용 프로그램에 대 한 Visual Studio 기본값은 32 비트를 선호 하는 CPU입니다. .NET Core의 기본값은 이미 권장 설정입니다.
+    새 c # .NET Framework 콘솔 응용 프로그램에 대 한 Visual Studio 기본값은 32 비트를 선호 하는 CPU입니다. .NET Core의 기본값은 이미 권장 설정입니다.
 
     추적 처리는 메모리를 많이 사용 하는 경우, 특히 추적 크기가 크면 TraceProcessor를 사용 하는 exe에서 플랫폼 대상을 x 64로 변경 하거나 32 비트를 사용 하지 않는 것이 좋습니다. 이러한 설정을 변경 하려면 프로젝트의 속성 아래에 있는 빌드 탭을 참조 하세요. 모든 구성에 대해 이러한 설정을 변경 하려면 구성 드롭다운이 현재 구성의 기본값 대신 모든 구성으로 설정 되어 있는지 확인 합니다.
 
-2. 이전 패키지 .config 모드가 아니라 최신 스타일의 PackageReference 모드를 사용 하 여 NuGet을 사용 하는 것이 좋습니다.
+2. 이전 packages.config 모드가 아닌 최신 스타일의 PackageReference 모드를 사용 하 여 NuGet을 사용 하는 것이 좋습니다.
 
     새 프로젝트에 대 한 기본값을 변경 하려면 도구, NuGet 패키지 관리자, 패키지 관리자 설정, 패키지 관리, 기본 패키지 관리 형식을 참조 하세요.
 
@@ -82,7 +82,7 @@ TraceProcessor와 함께 사용 하는 몇 가지 프로젝트 설정이 있습�
 
 .Etl 파일은 추적에서 많은 종류의 데이터를 캡처할 수 있습니다. .Etl 파일에 있는 데이터는 추적이 캡처될 때 사용 하도록 설정 된 공급자에 따라 달라 집니다. 다음 목록에서는 TraceProcessor에서 사용할 수 있는 추적 데이터의 종류를 보여 줍니다.
 
-| 코드                                      | 설명                                                                                                                | 관련 된 WPA 항목                                                    |
+| 코드                                      | Description                                                                                                                | 관련 된 WPA 항목                                                    |
 |-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
 | 추적. UseClassicEvents()                  | 스키마 정보를 포함 하지 않는 추적의 클래식 ETW 이벤트를 제공 합니다.                                         | 일반 이벤트 테이블 (이벤트 유형이 클래식 또는 WPP 인 경우)             |
 | 추적. UseConnectedStandbyData()           | 연결 된 대기를 시작 하 고 종료 하는 시스템에 대 한 추적 데이터를 제공 합니다.                                        | CS 요약 테이블                                                     |
@@ -143,7 +143,7 @@ TraceProcessor와 함께 사용 하는 몇 가지 프로젝트 설정이 있습�
 | 추적. UseWinINetData()                    | Windows 인터넷 (WinINet)을 통한 인터넷 작업에 대 한 추적의 데이터를 제공 합니다.                                         | 다운로드 정보 테이블                                               |
 | 추적. UseWorkingSetData()                 | 각 프로세스 또는 커널 범주에 대 한 작업 집합에 있던 가상 메모리의 페이지에 대 한 추적의 데이터를 제공 합니다. | 가상 메모리 스냅숏 테이블                                       |
 
-[ITraceSource](https://docs.microsoft.com/dotnet/api/microsoft.windows.eventtracing.itracesource) 에서 사용 가능한 모든 추적 데이터에 대 한 확장 메서드를 참조 하거나 "trace"에서 사용할 수 있는 메서드를 검사 합니다. IntelliSense에서 표시 됩니다.
+[ITraceSource](/dotnet/api/microsoft.windows.eventtracing.itracesource) 에서 사용 가능한 모든 추적 데이터에 대 한 확장 메서드를 참조 하거나 "trace"에서 사용할 수 있는 메서드를 검사 합니다. IntelliSense에서 표시 됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 

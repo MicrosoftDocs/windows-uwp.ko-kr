@@ -7,12 +7,12 @@ template: detail.hbs
 keywords: 키보드, 접근성, 탐색, 포커스, 텍스트, 입력, 사용자 상호 작용
 ms.date: 07/13/2018
 ms.topic: article
-ms.openlocfilehash: 969d0c24c86a47e72cbfec08d835c25b6e6779c4
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: cc3577a116e47ca054e7dea5dbbb657fa37cb8b6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234882"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173357"
 ---
 # <a name="respond-to-the-presence-of-the-touch-keyboard"></a>터치 키보드의 현재 상태에 응답
 
@@ -20,8 +20,8 @@ ms.locfileid: "83234882"
 
 ### <a name="important-apis"></a>중요 API
 
-- [AutomationPeer](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer)
-- [InputPane](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.InputPane)
+- [AutomationPeer](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer)
+- [InputPane](/uwp/api/Windows.UI.ViewManagement.InputPane)
 
 ![기본 레이아웃 모드의 터치 키보드](images/keyboard/default.png)
 
@@ -29,7 +29,7 @@ ms.locfileid: "83234882"
 
 터치 키보드는 터치를 지 원하는 장치에 대 한 텍스트 입력을 사용 하도록 설정 합니다. Windows 앱 텍스트 입력 컨트롤은 사용자가 편집 가능한 입력 필드를 탭 하면 기본적으로 터치 키보드를 호출 합니다. 터치 키보드는 일반적으로 사용자가 폼의 컨트롤 간을 탐색 하는 동안 계속 표시 되지만이 동작은 폼 내의 다른 컨트롤 형식에 따라 달라질 수 있습니다.
 
-표준 텍스트 입력 컨트롤에서 파생 되지 않은 사용자 지정 텍스트 입력 컨트롤에서 해당 터치 키보드 동작을 지원 하려면 <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer">Automationpeer</a> 클래스를 사용 하 여 컨트롤을 Microsoft ui 자동화에 노출 하 고 올바른 UI 자동화 컨트롤 패턴을 구현 해야 합니다. [키보드 접근성](https://docs.microsoft.com/windows/uwp/design/accessibility/keyboard-accessibility) 및 [사용자 지정 자동화 피어](https://docs.microsoft.com/windows/uwp/design/accessibility/custom-automation-peers)를 참조 하세요.
+표준 텍스트 입력 컨트롤에서 파생 되지 않은 사용자 지정 텍스트 입력 컨트롤에서 해당 터치 키보드 동작을 지원 하려면 <a href="/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer">Automationpeer</a> 클래스를 사용 하 여 컨트롤을 Microsoft ui 자동화에 노출 하 고 올바른 UI 자동화 컨트롤 패턴을 구현 해야 합니다. [키보드 접근성](../accessibility/keyboard-accessibility.md) 및 [사용자 지정 자동화 피어](../accessibility/custom-automation-peers.md)를 참조 하세요.
 
 이 지원이 사용자 지정 컨트롤에 추가 되 면 터치 키보드의 유무에 따라 적절 하 게 응답할 수 있습니다.
 
@@ -41,12 +41,12 @@ ms.locfileid: "83234882"
 
 Windows 앱 개발에 익숙하지 않은 경우이 항목을 살펴보고 여기에 설명 된 기술에 대해 알아보세요.
 
-- [첫 번째 앱 만들기](https://docs.microsoft.com/windows/uwp/get-started/your-first-app)
-- [이벤트 및 라우트된 이벤트](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview) 를 사용 하 여 이벤트에 대해 알아보기 개요
+- [첫 번째 앱 만들기](../../get-started/your-first-app.md)
+- [이벤트 및 라우트된 이벤트](../../xaml-platform/events-and-routed-events-overview.md) 를 사용 하 여 이벤트에 대해 알아보기 개요
 
 **사용자 환경 지침:**
 
-키보드 입력에 최적화 된 유용한 앱 디자인에 대 한 유용한 팁은 [키보드 상호 작용](https://docs.microsoft.com/windows/uwp/design/input/keyboard-interactions) 을 참조 하세요.
+키보드 입력에 최적화 된 유용한 앱 디자인에 대 한 유용한 팁은 [키보드 상호 작용](./keyboard-interactions.md) 을 참조 하세요.
 
 ## <a name="touch-keyboard-and-a-custom-ui"></a>터치 키보드 및 사용자 지정 UI
 
@@ -54,7 +54,7 @@ Windows 앱 개발에 익숙하지 않은 경우이 항목을 살펴보고 여�
 
 - 양식과의 전체 상호 작용 전체에서 터치 키보드를 표시 합니다.
 
-- 텍스트 입력의 컨텍스트에서 포커스가 텍스트 입력 필드에서 이동할 때 키보드를 유지 하기 위해 사용자 지정 컨트롤에 적절 한 UI 자동화 [AutomationControlType](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType) 있는지 확인 합니다. 예를 들어 텍스트 입력 시나리오의 중간에 열리는 메뉴가 있고 키보드를 유지 하려는 경우 메뉴에 **AutomationControlType** of 메뉴가 있어야 합니다.
+- 텍스트 입력의 컨텍스트에서 포커스가 텍스트 입력 필드에서 이동할 때 키보드를 유지 하기 위해 사용자 지정 컨트롤에 적절 한 UI 자동화 [AutomationControlType](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType) 있는지 확인 합니다. 예를 들어 텍스트 입력 시나리오의 중간에 열리는 메뉴가 있고 키보드를 유지 하려는 경우 메뉴에 **AutomationControlType** of 메뉴가 있어야 합니다.
 
 - 터치 키보드를 제어 하기 위해 UI 자동화 속성을 조작 하지 마세요. 다른 내게 필요한 옵션 도구는 UI 자동화 속성의 정확도를 사용 합니다.
 
@@ -62,7 +62,7 @@ Windows 앱 개발에 익숙하지 않은 경우이 항목을 살펴보고 여�
 
     터치 키보드는 화면에서 많은 부분을 occludes 때문에, 사용자가 현재 표시 되지 않는 컨트롤을 비롯 하 여 폼의 컨트롤을 탐색할 때 포커스가 있는 입력 필드가 뷰로 스크롤되는 지 확인 합니다.
 
-    UI를 사용자 지정 하는 경우 [**Inputpane**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.InputPane) 개체에서 표시 하는 이벤트 [표시](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.showing) 및 [숨기기](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.hiding) 를 처리 하 여 터치 키보드의 모양에 비슷한 동작을 제공 합니다.
+    UI를 사용자 지정 하는 경우 [**Inputpane**](/uwp/api/Windows.UI.ViewManagement.InputPane) 개체에서 표시 하는 이벤트 [표시](/uwp/api/windows.ui.viewmanagement.inputpane.showing) 및 [숨기기](/uwp/api/windows.ui.viewmanagement.inputpane.hiding) 를 처리 하 여 터치 키보드의 모양에 비슷한 동작을 제공 합니다.
 
     ![터치 키보드를 표시 하거나 표시 하지 않는 폼](images/touch-keyboard-pan1.png)
 
@@ -72,7 +72,7 @@ Windows 앱 개발에 익숙하지 않은 경우이 항목을 살펴보고 여�
 
 ## <a name="handling-the-showing-and-hiding-events"></a>표시 및 숨기기 이벤트 처리
 
-터치 키보드의 [표시](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.showing) 및 [숨기기](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.inputpane.hiding) 이벤트에 대 한 이벤트 처리기를 연결 하는 예제는 다음과 같습니다.
+터치 키보드의 [표시](/uwp/api/windows.ui.viewmanagement.inputpane.showing) 및 [숨기기](/uwp/api/windows.ui.viewmanagement.inputpane.hiding) 이벤트에 대 한 이벤트 처리기를 연결 하는 예제는 다음과 같습니다.
 
 ```csharp
 using Windows.UI.ViewManagement;
@@ -210,9 +210,9 @@ void Scenario2_ShowHideEvents::OnHiding(InputPane^ /*sender*/, InputPaneVisibili
 
 ## <a name="related-articles"></a>관련된 문서
 
-- [키보드 상호 작용](keyboard-interactions.md)
-- [키보드 접근성](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
-- [사용자 지정 자동화 피어](https://docs.microsoft.com/windows/uwp/accessibility/custom-automation-peers)
+- [키보드 조작](keyboard-interactions.md)
+- [키보드 접근성](../accessibility/keyboard-accessibility.md)
+- [사용자 지정 자동화 피어](../accessibility/custom-automation-peers.md)
 
 ### <a name="samples"></a>샘플
 

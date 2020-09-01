@@ -8,12 +8,12 @@ ms.date: 01/24/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 942c24e8f5c7c521502ee5a9f9eb7175bf04b94f
-ms.sourcegitcommit: 2a1ceeacf5cdadc803bad83dc3ceb57a16ce79a3
+ms.openlocfilehash: 4c05f39c0497a2e2ef369abd04ed437f8387e60f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89067515"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173997"
 ---
 # <a name="landmarks-and-headings"></a>랜드마크 및 머리글
 
@@ -33,14 +33,14 @@ Windows 설정 앱의 **접근성** 페이지를 참조 하세요.
 
 설정 앱은 랜드마크 및 제목 없이 액세스할 수 있지만,이를 통해 더 사용할 수 있게 됩니다. 화면 읽기 프로그램 사용자는 필요한 그룹 (이정표)에 빠르고 쉽게 액세스할 수 있으며 하위 그룹 (제목)으로 신속 하 게 이동할 수 있습니다.
 
-[LandmarkTypeProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.LandmarkTypeProperty) 를 사용 하 여 UI 요소를 원하는 [랜드마크 유형](https://docs.microsoft.com/windows/desktop/WinAuto/landmark-type-identifiers) 으로 설정 합니다. 이 랜드마크 UI 요소는 해당 랜드마크에 적합 한 다른 모든 UI 요소를 캡슐화 합니다.
+[LandmarkTypeProperty](/uwp/api/windows.ui.xaml.automation.automationproperties.LandmarkTypeProperty) 를 사용 하 여 UI 요소를 원하는 [랜드마크 유형](/windows/desktop/WinAuto/landmark-type-identifiers) 으로 설정 합니다. 이 랜드마크 UI 요소는 해당 랜드마크에 적합 한 다른 모든 UI 요소를 캡슐화 합니다.
 
-[LocalizedLandmarkTypeProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.LocalizedLandmarkTypeProperty) 를 사용 하 여 특히 이정표의 이름을로 합니다. 주 또는 탐색 등의 미리 정의 된 랜드마크 유형을 선택 하는 경우 이러한 이름이 랜드마크 이름에 사용 됩니다. 그러나 랜드마크 형식을 custom으로 설정 하는 경우에는이 속성을 통해 이정표의 이름을 지정 해야 합니다. 이 속성을 사용 하 여 사용자 지정이 아닌 랜드마크 형식에서 기본 이름을 재정의할 수도 있습니다.
+[LocalizedLandmarkTypeProperty](/uwp/api/windows.ui.xaml.automation.automationproperties.LocalizedLandmarkTypeProperty) 를 사용 하 여 특히 이정표의 이름을로 합니다. 주 또는 탐색 등의 미리 정의 된 랜드마크 유형을 선택 하는 경우 이러한 이름이 랜드마크 이름에 사용 됩니다. 그러나 랜드마크 형식을 custom으로 설정 하는 경우에는이 속성을 통해 이정표의 이름을 지정 해야 합니다. 이 속성을 사용 하 여 사용자 지정이 아닌 랜드마크 형식에서 기본 이름을 재정의할 수도 있습니다.
 
-[HeadingLevel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties.headinglevelproperty) 를 사용 하 여 UI 요소를 *Level1* 에서 *Level9*까지 특정 수준의 머리글로 설정 합니다.
+[HeadingLevel](/uwp/api/windows.ui.xaml.automation.automationproperties.headinglevelproperty) 를 사용 하 여 UI 요소를 *Level1* 에서 *Level9*까지 특정 수준의 머리글로 설정 합니다.
 
 ## <a name="examples"></a>예
 
-Windows 데스크톱 앱에서 일반적인 프로그래밍 가능성 문제를 해결 하는 방법을 보여 주는 다양 한 코드 샘플은 [windows 데스크톱 앱에서 일반적인 프로그래밍 가능성 문제를 해결 하기 위한 코드 샘플](https://docs.microsoft.com/accessibility-tools-docs/)을 참조 하세요.
+Windows 데스크톱 앱에서 일반적인 프로그래밍 가능성 문제를 해결 하는 방법을 보여 주는 다양 한 코드 샘플은 [windows 데스크톱 앱에서 일반적인 프로그래밍 가능성 문제를 해결 하기 위한 코드 샘플](/accessibility-tools-docs/)을 참조 하세요.
 
 이러한 코드 샘플은 UI에서 많은 내게 필요한 옵션 문제를 해결 하는 데 도움이 될 수 있는[ Windows 용 내게 필요한 옵션 지원](https://github.com/microsoft/accessibility-insights-windows)기능에서 직접 참조 됩니다.

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 81b3930c-6af9-406d-9d1e-8ee6a13ec38a
 ms.localizationpriority: medium
-ms.openlocfilehash: a3e95eae10fb06135f0fed1b92f1717f5e5fdf4d
-ms.sourcegitcommit: 0f2ae8f97daac440c8e86dc07d11d356de29515c
+ms.openlocfilehash: 5d36d1d47670023b2ee462ba9cd88449b2769079
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83280283"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174327"
 ---
 # <a name="brokered-windows-runtime-components-for-a-side-loaded-uwp-app"></a>테스트용으로 로드 된 UWP 앱에 대해 조정 된 Windows 런타임 구성 요소
 
@@ -30,7 +30,7 @@ Windows에는 *테스트용으로 로드 된 응용 프로그램을 위해 조�
 
 마지막으로, 엔터프라이즈 개발의 .NET 런타임 및 C 언어의 과도 한 침투를 감안 \# 하 여이 기능은 UWP 앱과 데스크톱 구성 요소 쪽 모두에 .net을 사용 하는 것에 중점을 두어 개발 되었습니다. UWP 앱에서 사용할 수 있는 다른 언어 및 런타임이 있지만 함께 제공 되는 샘플은 C만을 보여주고 \# .net 런타임으로만 제한 됩니다.
 
-## <a name="application-components"></a>응용 프로그램 구성 요소
+## <a name="application-components"></a>애플리케이션 구성 요소
 
 >**참고**   이 기능은 .NET의 용도로만 사용 됩니다. 클라이언트 앱과 데스크톱 구성 요소는 둘 다 .NET을 사용해서 작성해야 합니다.
 
@@ -44,7 +44,7 @@ Windows에는 *테스트용으로 로드 된 응용 프로그램을 위해 조�
 
 **계약**
 
-테스트용으로 로드하는 애플리케이션과 데스크톱 구성 요소 간의 계약은 UWP 형식 시스템의 사용 조건에 설명되어 있습니다. 여기 \# 에는 UWP를 나타낼 수 있는 하나 이상의 C 클래스를 선언 하는 작업이 포함 됩니다. C를 사용 하 여 Windows 런타임 클래스를 만들기 위한 특정 요구 사항은 MSDN 항목 [c \# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](https://docs.microsoft.com/previous-versions/windows/apps/br230301(v=vs.140)) 를 참조 하세요 \# .
+테스트용으로 로드하는 애플리케이션과 데스크톱 구성 요소 간의 계약은 UWP 형식 시스템의 사용 조건에 설명되어 있습니다. 여기 \# 에는 UWP를 나타낼 수 있는 하나 이상의 C 클래스를 선언 하는 작업이 포함 됩니다. C를 사용 하 여 Windows 런타임 클래스를 만들기 위한 특정 요구 사항은 MSDN 항목 [c \# 및 Visual Basic에서 Windows 런타임 구성 요소 만들기](/previous-versions/windows/apps/br230301(v=vs.140)) 를 참조 하세요 \# .
 
 >**참고**   이 시점에서 데스크톱 구성 요소와 테스트용으로 로드 된 응용 프로그램 간의 Windows 런타임 구성 요소 계약에서 열거형은 지원 되지 않습니다.
 
@@ -106,7 +106,7 @@ namespace Fabrikam
 
 Visual Studio에서 이 작업을 수행하려면 새로 만든 프로젝트를 마우스 오른쪽 단추로 클릭하고 "프로젝트 언로드"를 선택한 다음 마우스 오른쪽 단추를 다시 클릭하고 "EnterpriseServer.csproj 편집"을 선택하여 편집을 위해 프로젝트 파일인 XML 파일을 엽니다.
 
-열려 있는 파일에서 OutputType 태그를 검색 \< 하 \> 고 해당 값을 "winmdobj"로 변경 합니다.
+열린 파일에서 태그를 검색 하 \<OutputType\> 고 해당 값을 "winmdobj"로 변경 합니다.
 
 **3 단계:** "참조" Windows 메타 데이터 파일 (winmd 파일)을 만드는 빌드 규칙을 만듭니다. 즉 구현이 없는 빌드 규칙을 만듭니다.
 
@@ -177,9 +177,9 @@ Visual Studio에서 이 작업을 수행하려면 새로 만든 프로젝트를 
 </Extension>
 ```
 
-이 애플리케이션 구성에 적용되지 않는 outOfProcessServer 범주에 항목이 여러 개 있기 때문에, 범주는 inProcessServer입니다. <Path>구성 요소는 항상 clrhost .dll을 포함 해야 합니다. 그러나이는 적용 **되지** 않으며 다른 값 지정은 정의 되지 않은 방식으로 실패 합니다.
+이 애플리케이션 구성에 적용되지 않는 outOfProcessServer 범주에 항목이 여러 개 있기 때문에, 범주는 inProcessServer입니다. <Path>구성 요소는 항상 clrhost.dll를 포함 해야 합니다. 그러나이는 적용 **되지** 않으며 다른 값 지정은 정의 되지 않은 방식으로 실패 합니다.
 
-<ActivatableClass> 섹션은 앱 패키지의 Windows 런타임 구성 요소에서 기본으로 사용되는 실제 In-Process RuntimeClass와 동일합니다. <ActivatableClassAttribute>는 새 요소 이며 Name = "DesktopApplicationPath" 및 Type = "string"은 필수 및 고정입니다. Value 특성은 데스크톱 구성 요소의 구현 winmd가 상주하는 위치를 가리킵니다(자세한 내용은 다음 섹션 참고). 데스크톱 구성 요소에서 기본으로 사용하는 각 RuntimeClass에는 고유한 <ActivatableClass> 요소 트리가 있어야 합니다. ActivatableClassId는 RuntimeClass의 네임스페이스로 정규화된 이름과 일치해야 합니다.
+<ActivatableClass> 섹션은 앱 패키지의 Windows 런타임 구성 요소에서 기본으로 사용되는 실제 In-Process RuntimeClass와 동일합니다. <ActivatableClassAttribute> 는 새 요소 이며 Name = "DesktopApplicationPath" 및 Type = "string"은 필수 및 고정입니다. Value 특성은 데스크톱 구성 요소의 구현 winmd가 상주하는 위치를 가리킵니다(자세한 내용은 다음 섹션 참고). 데스크톱 구성 요소에서 기본으로 사용하는 각 RuntimeClass에는 고유한 <ActivatableClass> 요소 트리가 있어야 합니다. ActivatableClassId는 RuntimeClass의 네임스페이스로 정규화된 이름과 일치해야 합니다.
 
 "계약 정의" 섹션의 설명대로, 데스크톱 구성 요소의 참조 winmd를 프로젝트에서 참조해야 합니다. Visual Studio 프로젝트 시스템은 일반적으로 이름이 같은 2개 수준의 디렉터리 구조를 만듭니다. 이 샘플에서는 EnterpriseIPCApplication \\ enterpriseipcapplication입니다. 참조 **winmd** 는이 두 번째 수준 디렉터리에 수동으로 복사 된 후 프로젝트 참조 대화 상자가 사용 됩니다 **. (찾아보기** 를 클릭 합니다. 단추)를 클릭 하 여이 **winmd**를 찾고 참조 합니다. 그런 다음 데스크톱 구성 요소의 최상위 네임 스페이스 (예: Fabrikam)는 프로젝트의 참조 부분에서 최상위 노드로 표시 됩니다.
 
@@ -406,7 +406,7 @@ Visual Studio에서 이 작업을 수행하려면 새로 만든 프로젝트를 
 
 위의 참조는 이 하이브리드 서버의 정상적인 작동에 중요한 참조가 세심하게 혼합된 것입니다. 프로토콜은 프로젝트 OutputType을 편집하는 방법에서 설명한 대로 .csproj 파일을 열고 필요에 따라 이러한 참조를 추가하는 것입니다.
 
-참조가 제대로 구성되면 다음 작업은 서버의 기능을 구현하는 것입니다.  [Windows 런타임 구성 요소와의 상호 운용성에 대 한 모범 사례 (C \# /Vb/c + + 및 XAML을 사용 하는 UWP 앱)](https://docs.microsoft.com/previous-versions/windows/apps/hh750311(v=win.10))항목을 참조 하세요.
+참조가 제대로 구성되면 다음 작업은 서버의 기능을 구현하는 것입니다.  [Windows 런타임 구성 요소와의 상호 운용성에 대 한 모범 사례 (C \# /Vb/c + + 및 XAML을 사용 하는 UWP 앱)](/previous-versions/windows/apps/hh750311(v=win.10))항목을 참조 하세요.
 구현의 일환으로 데스크톱 코드를 호출할 수 있는 Windows 런타임 구성 요소 dll을 만드는 작업입니다. 함께 제공되는 샘플에는 Windows 런타임에서 사용되는 다음과 같은 주요 패턴이 있습니다.
 
 -   메서드 호출
@@ -476,7 +476,7 @@ IPC 방법에서는 두 프로세스 사이에 Windows 런타임 인터페이스
 
 **Visual Studio에서 프록시 만들기**
 
-일반 UWP 앱 패키지 내에서 사용할 프록시 및 스텁을 만들고 등록 하는 프로세스는 [Windows 런타임 구성 요소에서 이벤트 발생](https://docs.microsoft.com/previous-versions/windows/apps/dn169426(v=vs.140))항목에 설명 되어 있습니다.
+일반 UWP 앱 패키지 내에서 사용할 프록시 및 스텁을 만들고 등록 하는 프로세스는 [Windows 런타임 구성 요소에서 이벤트 발생](/previous-versions/windows/apps/dn169426(v=vs.140))항목에 설명 되어 있습니다.
 이 문서에서 설명하는 단계는 아래에서 설명하는 프로세스보다 더 복잡합니다. 전역으로 등록하는 것이 아니라, 애플리케이션 패키지 내부에서 프록시/스텁을 등록해야 하기 때문입니다.
 
 **1 단계:** 데스크톱 구성 요소 프로젝트에 대 한 솔루션을 사용 하 여 Visual Studio에서 프록시/스텁 프로젝트를 만듭니다.
@@ -487,7 +487,7 @@ IPC 방법에서는 두 프로세스 사이에 Windows 런타임 인터페이스
 
 **3 단계:** 프로젝트에서 모든 CPP/H 파일을 삭제 합니다.
 
-**4 단계:** 이전 "계약 정의" 섹션에는 **winmdidl**, **midl**, **mdmerge .exe**등을 실행 하는 빌드 후 명령이 포함 되어 있습니다. 이 Post-Build 명령의 midl 단계 출력 중 하나는 다음 네 가지 중요한 출력을 생성합니다.
+**4 단계:** 이전 "계약 정의" 섹션에는 **winmdidl.exe**, **midl.exe**, **mdmerge.exe**등을 실행 하는 빌드 후 명령이 포함 되어 있습니다. 이 Post-Build 명령의 midl 단계 출력 중 하나는 다음 네 가지 중요한 출력을 생성합니다.
 
 a) Dlldata.c
 
@@ -577,7 +577,7 @@ struct PersonStruct
 
 서버를 변경하는 경우 이전에 실행 중인 인스턴스가 더 이상 실행되지 않는지 확인해야 합니다. 궁극적으로 COM에서 프로세스를 청소하지만 런다운 타이머는 반복적인 개발에 효율적인 것보다 더 오래 걸립니다. 따라서 개발 중에는 이전에 실행 중인 인스턴스를 중단하는 것이 일반적인 단계입니다. 이렇게 하려면 개발자가 서버를 호스트하는 dllhost 인스턴스를 추적해야 합니다.
 
-작업 관리자 또는 다른 타사 앱을 사용하여 서버 프로세스를 찾아서 중단할 수 있습니다. 명령줄 도구 **TaskList .exe** 도 포함 되어 있으며 다음과 같은 유연한 구문을 포함 합니다.
+작업 관리자 또는 다른 타사 앱을 사용하여 서버 프로세스를 찾아서 중단할 수 있습니다. 명령줄 도구 **TaskList.exe** 포함 되어 있으며 다음과 같은 유연한 구문을 포함 합니다.
 
   
  | **명령** | **작업** |
@@ -586,7 +586,7 @@ struct PersonStruct
  | tasklist /FI "IMAGENAME eq dllhost.exe" /M | 모든 dllhost.exe 인스턴스에 대한 정보를 나열합니다. /M 스위치는 로드한 모듈을 나열합니다. |
  | tasklist /FI "PID eq 12564" /M | 해당 PID를 알고 있는 경우 이 옵션을 사용하여 dllhost.exe를 쿼리할 수 있습니다. |
 
-브로커 서버에 대 한 모듈 목록은 로드 된 모듈 목록에서 *clrhost .dll* 을 나열 해야 합니다.
+브로커 서버에 대 한 모듈 목록은 로드 된 모듈 목록에 *clrhost.dll* 를 나열 해야 합니다.
 
 ## <a name="resources"></a>리소스
 
@@ -594,9 +594,8 @@ struct PersonStruct
 
 -   [안정적이 고 신뢰할 수 있는 Microsoft Store 앱 제공](https://blogs.msdn.com/b/b8/archive/2012/05/17/delivering-reliable-and-trustworthy-metro-style-apps.aspx)
 
--   [앱 계약 및 확장(Windows 스토어 앱)](https://docs.microsoft.com/previous-versions/windows/apps/hh464906(v=win.10))
+-   [앱 계약 및 확장(Windows 스토어 앱)](/previous-versions/windows/apps/hh464906(v=win.10))
 
--   [Windows 10에서 앱을 테스트용으로 로드하는 방법](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)
+-   [Windows 10에서 앱을 테스트용으로 로드하는 방법](../get-started/enable-your-device-for-development.md)
 
 -   [비즈니스에 UWP 앱 배포](https://blogs.msdn.com/b/windowsstore/archive/2012/04/25/deploying-metro-style-apps-to-businesses.aspx)
-

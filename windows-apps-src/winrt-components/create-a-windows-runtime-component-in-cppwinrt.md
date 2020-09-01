@@ -1,48 +1,48 @@
 ---
-title: C + +/WinRT를 사용 하 여 Windows 런타임 구성 요소
-description: 이 항목에서는 [c + +/Winrt](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 를 사용 하 여 &mdash; Windows 런타임 언어를 사용 하 여 빌드된 유니버설 Windows 앱에서 호출할 수 있는 구성 요소를 Windows 런타임 구성 요소를 만들고 사용 하는 방법을 보여 줍니다.
+title: C++/WinRT를 사용한 Windows 런타임 구성 요소
+description: 이 항목에서는 [c + +/Winrt](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) 를 사용 하 여 &mdash; Windows 런타임 언어를 사용 하 여 빌드된 유니버설 Windows 앱에서 호출할 수 있는 구성 요소를 Windows 런타임 구성 요소를 만들고 사용 하는 방법을 보여 줍니다.
 ms.date: 07/06/2020
 ms.topic: article
 keywords: windows 10, uwp, windows, 런타임, 구성 요소, 구성 요소, Windows 런타임 구성 요소, WRC, c + +/WinRT
 ms.localizationpriority: medium
-ms.openlocfilehash: e47175579fcfc5544587ff36baaaa653003c4c63
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 1f84158311ef789851c268e9e21dbf5317063370
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86494156"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174317"
 ---
-# <a name="windows-runtime-components-with-cwinrt"></a>C + +/WinRT를 사용 하 여 Windows 런타임 구성 요소
+# <a name="windows-runtime-components-with-cwinrt"></a>C++/WinRT를 사용한 Windows 런타임 구성 요소
 
-이 항목에서는 [c + +/Winrt](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 를 사용 하 여 &mdash; Windows 런타임 언어를 사용 하 여 빌드된 유니버설 Windows 앱에서 호출할 수 있는 구성 요소를 Windows 런타임 구성 요소를 만들고 사용 하는 방법을 보여 줍니다.
+이 항목에서는 [c + +/Winrt](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) 를 사용 하 여 &mdash; Windows 런타임 언어를 사용 하 여 빌드된 유니버설 Windows 앱에서 호출할 수 있는 구성 요소를 Windows 런타임 구성 요소를 만들고 사용 하는 방법을 보여 줍니다.
 
 C + +/WinRT.에서 Windows 런타임 구성 요소를 작성 하는 데는 몇 가지 이유가 있습니다.
 - 복잡 하거나 계산 집약적인 작업에서 c + +의 성능 이점을 누릴 수 있습니다.
 - 이미 작성 되 고 테스트 된 표준 c + + 코드를 다시 사용 합니다.
 - 로 작성 된 UWP (유니버설 Windows 플랫폼) 앱에 Win32 기능을 노출 하려면 (예: c #)
 
-일반적으로 c + +/WinRT 구성 요소를 제작할 때 다른 패키지의 코드에서 데이터를 전달 하는 ABI (응용 프로그램 이진 인터페이스) 경계를 제외 하 고 표준 c + + 라이브러리의 형식 및 기본 제공 형식을 사용할 수 있습니다 `.winmd` . ABI에서 Windows 런타임 형식을 사용 합니다. 또한 c + +/WinRT 코드에서 대리자 및 이벤트와 같은 형식을 사용 하 여 구성 요소에서 발생 하 고 다른 언어로 처리 될 수 있는 이벤트를 구현 합니다. C + +/Winrtd에 대 한 자세한 내용은 [c + +/vb](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 를 참조 하세요.
+일반적으로 c + +/WinRT 구성 요소를 제작할 때 다른 패키지의 코드에서 데이터를 전달 하는 ABI (응용 프로그램 이진 인터페이스) 경계를 제외 하 고 표준 c + + 라이브러리의 형식 및 기본 제공 형식을 사용할 수 있습니다 `.winmd` . ABI에서 Windows 런타임 형식을 사용 합니다. 또한 c + +/WinRT 코드에서 대리자 및 이벤트와 같은 형식을 사용 하 여 구성 요소에서 발생 하 고 다른 언어로 처리 될 수 있는 이벤트를 구현 합니다. C + +/Winrtd에 대 한 자세한 내용은 [c + +/vb](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) 를 참조 하세요.
 
 이 항목의 나머지 부분에서는 c + +/WinRT에서 Windows 런타임 구성 요소를 작성 한 다음 응용 프로그램에서 사용 하는 방법을 안내 합니다.
 
 이 항목에서 빌드할 Windows 런타임 구성 요소는 은행 계좌를 나타내는 런타임 클래스를 포함 합니다. 또한이 항목에서는 bank 계정 런타임 클래스를 사용 하는 핵심 앱을 보여 주고 잔액을 조정 하기 위해 함수를 호출 합니다.
 
 > [!NOTE]
-> 프로젝트 템플릿 및 빌드 지원을 함께 제공하는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
+> 프로젝트 템플릿 및 빌드 지원을 함께 제공하는 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
 
 > [!IMPORTANT]
-> C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](/windows/uwp/cpp-and-winrt-apis/consume-apis)과 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)을 참조하세요.
+> C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](../cpp-and-winrt-apis/consume-apis.md)과 [C++/WinRT를 통한 API 작성](../cpp-and-winrt-apis/author-apis.md)을 참조하세요.
 
 ## <a name="create-a-windows-runtime-component-bankaccountwrc"></a>Windows 런타임 구성 요소(BankAccountWRC) 만들기
 
-먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Windows 런타임 구성 요소(C++/WinRT)** 프로젝트를 만든 다음, 이름을 *BankAccountWRC*("은행 계좌 Windows 런타임 구성 요소"인 경우)로 지정합니다. **같은 디렉터리에 솔루션 및 프로젝트** 를 모두 선택 하지 않은 상태로 두어야 합니다. 일반적으로 사용 가능한 최신(미리 보기 아님) 버전의 Windows SDK를 대상으로 합니다. 프로젝트 이름을 *BankAccountWRC*로 지정하면 이 항목의 나머지 단계를 가장 쉽게 수행할 수 있습니다. 
+먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **Windows 런타임 구성 요소(C++/WinRT)** 프로젝트를 만든 다음, 이름을 *BankAccountWRC*("은행 계좌 Windows 런타임 구성 요소"인 경우)로 지정합니다. **솔루션 및 프로젝트를 같은 디렉터리에 배치**를 선택하지 않아야 합니다. 일반적으로 사용 가능한 최신(미리 보기 아님) 버전의 Windows SDK를 대상으로 합니다. 프로젝트 이름을 *BankAccountWRC*로 지정하면 이 항목의 나머지 단계를 가장 쉽게 수행할 수 있습니다. 
 
 아직 프로젝트를 빌드하지 마세요.
 
 새로 만든 프로젝트에는 `Class.idl`이라는 이름의 파일이 포함되어 있습니다. 솔루션 탐색기에서 `BankAccount.idl` 파일의 이름을 바꿉니다(`.idl` 파일의 이름을 바꾸면 자동으로 종속 `.h` 및 `.cpp` 파일의 이름도 바뀜). `BankAccount.idl`의 콘텐츠를 아래 목록으로 바꿉니다.
 
 > [!NOTE]
-> 물론, 이러한 방식으로 프로덕션 재무 소프트웨어를 구현 하지 않아도 됩니다. `Single`편의상이 예제에서는를 사용 합니다.
+> 물론, 이러한 방식으로 프로덕션 재무 소프트웨어를 구현 하지 않아도 됩니다. `Single` 편의상이 예제에서는를 사용 합니다.
 
 ```idl
 // BankAccountWRC.idl
@@ -139,4 +139,4 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 
 C + +/WinRT Windows 런타임 구성 요소에 더 많은 기능 또는 새로운 Windows 런타임 형식을 추가 하려면 위에 표시 된 것과 동일한 패턴을 따를 수 있습니다. 먼저 IDL을 사용 하 여 노출 하려는 기능을 정의 합니다. 그런 다음 Visual Studio에서 프로젝트를 빌드하여 스텁 구현을 생성 합니다. 그런 다음 구현을 적절 하 게 완료 합니다. IDL에서 정의 하는 메서드, 속성 및 이벤트는 Windows 런타임 구성 요소를 사용 하는 응용 프로그램에 표시 됩니다. IDL에 대 한 자세한 내용은 [Microsoft 인터페이스 정의 언어 3.0 소개](/uwp/midl-3/intro)를 참조 하세요.
 
-Windows 런타임 구성 요소에 이벤트를 추가 하는 방법에 대 한 예제는 [c + +/WinRT의 Author 이벤트](/windows/uwp/cpp-and-winrt-apis/author-events)를 참조 하세요.
+Windows 런타임 구성 요소에 이벤트를 추가 하는 방법에 대 한 예제는 [c + +/WinRT의 Author 이벤트](../cpp-and-winrt-apis/author-events.md)를 참조 하세요.

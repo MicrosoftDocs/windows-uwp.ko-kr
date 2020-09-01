@@ -1,126 +1,122 @@
 ---
 ms.assetid: B5D915E4-4280-422C-BA0E-D574C534410B
-description: 이 문서에서는 SceneAnalysisEffect 및 FaceDetectionEffect를 사용하여 미디어 캡처 미리 보기 스트림의 콘텐츠를 분석하는 방법을 설명합니다.
+description: 이 문서에서는 SceneAnalysisEffect 및 FaceDetectionEffect를 사용 하 여 미디어 캡처 미리 보기 스트림의 콘텐츠를 분석 하는 방법을 설명 합니다.
 title: 카메라 프레임 분석 효과
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 406af54cfaae8710cea2d989278a16f28c8dd619
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 365f6ddde709d81a308059af2ec6fa9051e8ad92
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74256213"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173657"
 ---
 # <a name="effects-for-analyzing-camera-frames"></a>카메라 프레임 분석 효과
 
 
 
-이 문서에서는 [**SceneAnalysisEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.SceneAnalysisEffect) 및 [**FaceDetectionEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.FaceDetectionEffect)를 사용하여 미디어 캡처 미리 보기 스트림의 콘텐츠를 분석하는 방법을 설명합니다.
+이 문서에서는 [**SceneAnalysisEffect**](/uwp/api/Windows.Media.Core.SceneAnalysisEffect) 및 [**FaceDetectionEffect**](/uwp/api/Windows.Media.Core.FaceDetectionEffect) 를 사용 하 여 미디어 캡처 미리 보기 스트림의 콘텐츠를 분석 하는 방법을 설명 합니다.
 
 ## <a name="scene-analysis-effect"></a>장면 분석 효과
 
-[  **SceneAnalysisEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.SceneAnalysisEffect)는 미디어 캡처 미리 보기 스트림의 비디오 프레임을 분석하고 캡처 결과를 개선하는 처리 옵션을 권장합니다. 현재 효과는 HDR(High Dynamic Range) 처리를 사용하여 캡처를 향상할 수 있는지 여부를 감지할 수 있도록 지원합니다.
+[**SceneAnalysisEffect**](/uwp/api/Windows.Media.Core.SceneAnalysisEffect) 는 미디어 캡처 미리 보기 스트림의 비디오 프레임을 분석 하 고 캡처 결과를 개선 하는 처리 옵션을 권장 합니다. 현재이 효과는 HDR (High Dynamic Range) 처리를 사용 하 여 캡처를 향상할 수 있는지 검색 하는 것을 지원 합니다.
 
-효과가 HDR 사용을 권장하는 경우 다음과 같은 방식으로 사용할 수 있습니다.
+HDR 사용을 권장 하는 경우 다음과 같은 방법으로이 작업을 수행할 수 있습니다.
 
--   [  **AdvancedPhotoCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.AdvancedPhotoCapture) 클래스를 사용하여 Windows 기본 제공 HDR 처리 알고리즘을 사용해 사진을 캡처합니다. 자세한 내용은 [HDR(High Dynamic Range) 사진 캡처](high-dynamic-range-hdr-photo-capture.md)를 참조하세요.
+-   [**AdvancedPhotoCapture**](/uwp/api/Windows.Media.Capture.AdvancedPhotoCapture) 클래스를 사용 하 여 Windows 기본 제공 HDR 처리 알고리즘을 사용 하 여 사진을 캡처할 수 있습니다. 자세한 내용은 [HDR (High Dynamic Range) 사진 캡처](high-dynamic-range-hdr-photo-capture.md)를 참조 하세요.
 
--   [  **HdrVideoControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.HdrVideoControl)을 사용하여 Windows 기본 제공 HDR 처리 알고리즘을 사용해 동영상을 캡처합니다. 자세한 내용은 [비디오 캡처를 위한 캡처 디바이스 컨트롤](capture-device-controls-for-video-capture.md)을 참조하세요.
+-   [**HdrVideoControl**](/uwp/api/Windows.Media.Devices.HdrVideoControl) 를 사용 하 여 Windows 기본 제공 HDR 처리 알고리즘을 통해 비디오를 캡처합니다. 자세한 내용은 [비디오 캡처를 위한 장치 컨트롤 캡처](capture-device-controls-for-video-capture.md)를 참조 하세요.
 
--   [  **VariablePhotoSequenceControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.Core.VariablePhotoSequenceController)을 사용하여 프레임 시퀀스를 캡처하며 그런 다음 사용자 지정 HDR 구현을 사용하여 복합적으로 구성할 수 있습니다. 자세한 내용은 [가변 사진 시퀀스](variable-photo-sequence.md)를 참조하세요.
+-   [**VariablePhotoSequenceControl**](/uwp/api/Windows.Media.Devices.Core.VariablePhotoSequenceController) 를 사용 하 여 사용자 지정 HDR 구현을 사용 하 여 합성할 수 있는 프레임 시퀀스를 캡처할 수 있습니다. 자세한 내용은 [변수 사진 시퀀스](variable-photo-sequence.md)를 참조 하세요.
 
-### <a name="scene-analysis-namespaces"></a>장면 분석 네임스페이스
+### <a name="scene-analysis-namespaces"></a>장면 분석 네임 스페이스
 
-장면 분석을 사용하려면 앱에 기본적인 미디어 캡처에 필요한 네임스페이스 외에도 다음 네임스페이스가 있어야 합니다.
+장면 분석을 사용 하려면 앱이 기본 미디어 캡처에 필요한 네임 스페이스 외에도 다음 네임 스페이스를 포함 해야 합니다.
 
 [!code-cs[SceneAnalysisUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSceneAnalysisUsing)]
 
-### <a name="initialize-the-scene-analysis-effect-and-add-it-to-the-preview-stream"></a>장면 분석 효과를 초기화하고 미리 보기 스트림에 추가
+### <a name="initialize-the-scene-analysis-effect-and-add-it-to-the-preview-stream"></a>장면 분석 효과를 초기화 하 고 미리 보기 스트림에 추가 합니다.
 
-비디오 효과는 두 개의 API, 효과 정의(캡처 장치가 효과를 초기화하는 데 필요한 설정을 제공함), 효과 인스턴스(효과를 제어하는 데 사용할 수 있음)를 사용하여 구현됩니다. 코드 내의 여러 위치에서 효과 인스턴스에 액세스해야 할 수도 있으므로, 일반적으로 개체를 보유하도록 멤버 변수를 선언해야 합니다.
+비디오 효과는 캡처 장치에서 효과를 초기화 하는 데 필요한 설정과 효과를 제어 하는 데 사용할 수 있는 효과 인스턴스를 제공 하는 효과 정의 인 두 개의 Api를 사용 하 여 구현 됩니다. 코드 내의 여러 위치에서 효과 인스턴스에 액세스할 수 있으므로 일반적으로 개체를 보유 하는 멤버 변수를 선언 해야 합니다.
 
 [!code-cs[DeclareSceneAnalysisEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareSceneAnalysisEffect)]
 
-앱에서 **MediaCapture** 개체를 초기화한 후에 새 [**SceneAnalysisEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.SceneAnalysisEffectDefinition) 인스턴스를 만듭니다.
+앱에서 **MediaCapture** 개체를 초기화 한 후 [**SceneAnalysisEffectDefinition**](/uwp/api/Windows.Media.Core.SceneAnalysisEffectDefinition)의 새 인스턴스를 만듭니다.
 
-[MediaCapture**개체에 대해**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync)AddVideoEffectAsync를 호출하여 캡처 디바이스에 효과를 등록하고, **SceneAnalysisEffectDefinition**을 제공하고 [**MediaStreamType.VideoPreview**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType)를 지정하여 캡처 스트림이 아니라 동영상 미리 보기 스트림에 효과를 적용해야 한다는 것을 나타냅니다. **AddVideoEffectAsync**는 추가된 효과의 인스턴스를 반환합니다. 이 메서드는 여러 효과 유형에 사용할 수 있으므로, 반환된 인스턴스를 [**SceneAnalysisEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.SceneAnalysisEffect) 개체에 캐스팅해야 합니다.
+**MediaCapture** 개체에서 [**AddVideoEffectAsync**](/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync) 를 호출 하 여 캡처 장치에 효과를 등록 하 고, **SceneAnalysisEffectDefinition** 를 제공 하 고, [**mediastreamtype VideoPreview**](/uwp/api/Windows.Media.Capture.MediaStreamType) 을 지정 하 여 효과를 캡처 스트림과 달리 비디오 미리 보기 스트림에 적용 해야 함을 표시 합니다. **AddVideoEffectAsync** 는 추가 된 효과의 인스턴스를 반환 합니다. 이 메서드는 여러 효과 형식에 사용할 수 있으므로 반환 된 인스턴스를 [**SceneAnalysisEffect**](/uwp/api/Windows.Media.Core.SceneAnalysisEffect) 개체로 캐스팅 해야 합니다.
 
-장면 분석의 결과를 수신하려면 [**SceneAnalyzed**](https://docs.microsoft.com/uwp/api/windows.media.core.sceneanalysiseffect.sceneanalyzed) 이벤트에 대한 처리기를 등록해야 합니다.
+장면 분석의 결과를 수신 하려면 [**SceneAnalyzed**](/uwp/api/windows.media.core.sceneanalysiseffect.sceneanalyzed) 이벤트에 대 한 처리기를 등록 해야 합니다.
 
-현재 장면 분석 효과에는 High Dynamic Range 분석기만 포함됩니다. 효과의 [**HighDynamicRangeControl.Enabled**](https://docs.microsoft.com/uwp/api/windows.media.core.highdynamicrangecontrol.enabled)를 true로 설정하여 HDR 분석을 사용하도록 설정합니다.
+현재 장면 분석 효과는 높은 동적 범위 분석기만 포함 합니다. 효과의 HighDynamicRangeControl를 true로 설정 하 여 HDR 분석을 사용 하도록 설정 [**합니다.**](/uwp/api/windows.media.core.highdynamicrangecontrol.enabled)
 
 [!code-cs[CreateSceneAnalysisEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateSceneAnalysisEffectAsync)]
 
 ### <a name="implement-the-sceneanalyzed-event-handler"></a>SceneAnalyzed 이벤트 처리기 구현
 
-장면 분석의 결과는 **SceneAnalyzed** 이벤트 처리기에 반환됩니다. 처리기에 전달된 [**SceneAnalyzedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.SceneAnalyzedEventArgs) 개체에는 [**HighDynamicRangeOutput**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.SceneAnalysisEffectFrame) 개체가 포함된 [**SceneAnalysisEffectFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.HighDynamicRangeOutput) 개체가 있습니다. High Dynamic Range 출력의 [**Certainty**](https://docs.microsoft.com/uwp/api/windows.media.core.highdynamicrangeoutput.certainty) 속성은 0과 1.0 사이의 값을 제공합니다(0은 HDR 처리가 캡처 결과 개선에 도움이 되지 않음을 나타내고 1.0은 HDR 처리가 도움이 된다는 것을 나타냄). HDR을 사용하거나 결과를 사용자에게 표시하고 사용자가 결정하도록 할 임계값 포인트를 결정할 수 있습니다.
+장면 분석의 결과는 **SceneAnalyzed** 이벤트 처리기에서 반환 됩니다. 처리기에 전달 된 [**SceneAnalyzedEventArgs**](/uwp/api/Windows.Media.Core.SceneAnalyzedEventArgs) 개체에는 [**Highdynamicrangeoutput**](/uwp/api/Windows.Media.Core.HighDynamicRangeOutput) 개체가 있는 [**SceneAnalysisEffectFrame**](/uwp/api/Windows.Media.Core.SceneAnalysisEffectFrame) 개체가 있습니다. 높은 동적 범위 출력의 [**확신**](/uwp/api/windows.media.core.highdynamicrangeoutput.certainty) 속성은 0에서 1.0 사이의 값을 제공 합니다. 여기서 0은 hdr 처리가 캡처 결과를 개선 하는 데 도움이 되지 않으며 1.0은 hdr 처리가 도움이 됨을 나타냅니다. 에서는 HDR를 사용 하거나 사용자에 게 결과를 표시 하 고 사용자가 결정 하도록 하는 임계값 지점을 결정할 수 있습니다.
 
 [!code-cs[SceneAnalyzed](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetSceneAnalyzed)]
 
-처리기에 전달된 [**HighDynamicRangeOutput**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.HighDynamicRangeOutput) 개체에는 HDR 처리를 위해 가변 사진 시퀀스를 캡처하는 데 권장되는 프레임 컨트롤러가 포함된 [**FrameControllers**](https://docs.microsoft.com/uwp/api/windows.media.core.highdynamicrangeoutput.framecontrollers) 속성도 있습니다. 자세한 내용은 [가변 사진 시퀀스](variable-photo-sequence.md)를 참조하세요.
+또한 처리기로 전달 되는 [**Highdynamicrangeoutput**](/uwp/api/Windows.Media.Core.HighDynamicRangeOutput) 개체에는 HDR 처리를 위한 변수 사진 시퀀스를 캡처하기 위한 제안 프레임 컨트롤러를 포함 하는 [**FrameControllers**](/uwp/api/windows.media.core.highdynamicrangeoutput.framecontrollers) 속성이 있습니다. 자세한 내용은 [변수 사진 시퀀스](variable-photo-sequence.md)를 참조 하세요.
 
 ### <a name="clean-up-the-scene-analysis-effect"></a>장면 분석 효과 정리
 
-앱이 캡처를 완료하면 **MediaCapture** 개체를 처분하기 전에 먼저 효과의 [**HighDynamicRangeAnalyzer.Enabled**](https://docs.microsoft.com/uwp/api/windows.media.core.highdynamicrangecontrol.enabled) 속성을 false로 설정하고 [**SceneAnalyzed**](https://docs.microsoft.com/uwp/api/windows.media.core.sceneanalysiseffect.sceneanalyzed) 이벤트 처리기를 등록 취소하여 장면 분석 효과를 사용하지 않도록 설정해야 합니다. [  **MediaCapture.ClearEffectsAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.cleareffectsasync)를 호출하고 효과가 추가된 비디오 미리 보기 스트림을 지정합니다. 마지막으로, 멤버 변수를 null로 설정합니다.
+앱이 캡처를 완료 한 후에는 **MediaCapture** 개체를 삭제 하기 전에 효과의 [**Highdynamicrangeanalyzer**](/uwp/api/windows.media.core.highdynamicrangecontrol.enabled) 를 false로 설정 하 고 [**SceneAnalyzed**](/uwp/api/windows.media.core.sceneanalysiseffect.sceneanalyzed) 이벤트 처리기를 등록 취소 하 여 장면 분석 효과를 사용 하지 않도록 설정 해야 합니다. MediaCapture를 호출 하 여 효과가 추가 된 스트림 이후 비디오 미리 보기 스트림을 지정 합니다 [**.**](/uwp/api/windows.media.capture.mediacapture.cleareffectsasync) 마지막으로 멤버 변수를 null로 설정 합니다.
 
 [!code-cs[CleanUpSceneAnalysisEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpSceneAnalysisEffectAsync)]
 
-## <a name="face-detection-effect"></a>얼굴 감지 효과
+## <a name="face-detection-effect"></a>얼굴 검색 효과
 
-[  **FaceDetectionEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.FaceDetectionEffect)는 미디어 캡처 미리 보기 스트림 내에서 얼굴의 위치를 식별합니다. 이 효과는 미리 보기 스트림에서 얼굴이 감지될 때마다 알림을 받을 수 있게 하며 미리 보기 프레임 내에서 감지된 각 얼굴에 대해 경계 상자를 제공합니다. 지원되는 장치에서 얼굴 감지 효과를 사용하면 장면에서 가장 중요한 얼굴에 대한 노출과 포커스가 향상됩니다.
+[**FaceDetectionEffect**](/uwp/api/Windows.Media.Core.FaceDetectionEffect) 는 미디어 캡처 미리 보기 스트림 내에서 얼굴의 위치를 식별 합니다. 이 효과를 사용 하면 미리 보기 스트림에서 얼굴이 검색 될 때마다 알림을 받을 수 있으며 미리 보기 프레임 내에서 검색 된 각 면에 대 한 경계 상자를 제공할 수 있습니다. 지원 되는 장치에서 얼굴 검색 효과는 향상 된 노출을 제공 하며 장면의 가장 중요 한 면에 집중 합니다.
 
-### <a name="face-detection-namespaces"></a>얼굴 감지 네임스페이스
+### <a name="face-detection-namespaces"></a>얼굴 감지 네임 스페이스
 
-얼굴 감지를 사용하려면 앱에 기본적인 미디어 캡처에 필요한 네임스페이스 외에도 다음 네임스페이스가 있어야 합니다.
+얼굴 감지를 사용 하려면 앱이 기본 미디어 캡처에 필요한 네임 스페이스 외에도 다음 네임 스페이스를 포함 해야 합니다.
 
 [!code-cs[FaceDetectionUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetectionUsing)]
 
-### <a name="initialize-the-face-detection-effect-and-add-it-to-the-preview-stream"></a>얼굴 감지 효과를 초기화하고 미리 보기 스트림에 추가
+### <a name="initialize-the-face-detection-effect-and-add-it-to-the-preview-stream"></a>얼굴 검색 효과를 초기화 하 고 미리 보기 스트림에 추가 합니다.
 
-비디오 효과는 두 개의 API, 효과 정의(캡처 장치가 효과를 초기화하는 데 필요한 설정을 제공함), 효과 인스턴스(효과를 제어하는 데 사용할 수 있음)를 사용하여 구현됩니다. 코드 내의 여러 위치에서 효과 인스턴스에 액세스해야 할 수도 있으므로, 일반적으로 개체를 보유하도록 멤버 변수를 선언해야 합니다.
+비디오 효과는 캡처 장치에서 효과를 초기화 하는 데 필요한 설정과 효과를 제어 하는 데 사용할 수 있는 효과 인스턴스를 제공 하는 효과 정의 인 두 개의 Api를 사용 하 여 구현 됩니다. 코드 내의 여러 위치에서 효과 인스턴스에 액세스할 수 있으므로 일반적으로 개체를 보유 하는 멤버 변수를 선언 해야 합니다.
 
 [!code-cs[DeclareFaceDetectionEffect](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetDeclareFaceDetectionEffect)]
 
-앱에서 **MediaCapture** 개체를 초기화한 후에 새 [**FaceDetectionEffectDefinition**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.FaceDetectionEffectDefinition) 인스턴스를 만듭니다. [  **DetectionMode**](https://docs.microsoft.com/uwp/api/windows.media.core.facedetectioneffectdefinition.detectionmode) 속성을 설정하여 얼굴 감지 속도와 얼굴 감지의 정확성 중에서 우선 순위를 지정합니다. 미리 보기 경험이 뚝뚝 끊길 수 있으므로 들어오는 프레임이 얼굴 감지 완료까지 대기하느라 지연되지 않도록 지정하려면 [**SynchronousDetectionEnabled**](https://docs.microsoft.com/uwp/api/windows.media.core.facedetectioneffectdefinition.synchronousdetectionenabled)를 설정합니다.
+앱에서 **MediaCapture** 개체를 초기화 한 후 [**FaceDetectionEffectDefinition**](/uwp/api/Windows.Media.Core.FaceDetectionEffectDefinition)의 새 인스턴스를 만듭니다. [**DetectionMode**](/uwp/api/windows.media.core.facedetectioneffectdefinition.detectionmode) 속성을 설정 하 여 더 빠른 얼굴 검색 또는 더 정확한 얼굴 검색의 우선 순위를 지정 합니다. [**SynchronousDetectionEnabled**](/uwp/api/windows.media.core.facedetectioneffectdefinition.synchronousdetectionenabled) 를 설정 하 여이 작업을 수행 하면 미리 보기 환경이 고르지 않을 수 있으므로 들어오는 프레임에서 얼굴 감지를 완료할 때까지 지연 되지 않도록 지정 합니다.
 
-[MediaCapture**개체에 대해**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync)AddVideoEffectAsync를 호출하여 캡처 디바이스에 효과를 등록하고, **FaceDetectionEffectDefinition**을 제공하고 [**MediaStreamType.VideoPreview**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType)를 지정하여 캡처 스트림이 아니라 동영상 미리 보기 스트림에 효과를 적용해야 한다는 것을 나타냅니다. **AddVideoEffectAsync**는 추가된 효과의 인스턴스를 반환합니다. 이 메서드는 여러 효과 유형에 사용할 수 있으므로, 반환된 인스턴스를 [**FaceDetectionEffect**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.FaceDetectionEffect) 개체에 캐스팅해야 합니다.
+**MediaCapture** 개체에서 [**AddVideoEffectAsync**](/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync) 를 호출 하 여 캡처 장치에 효과를 등록 하 고, **FaceDetectionEffectDefinition** 를 제공 하 고, [**mediastreamtype VideoPreview**](/uwp/api/Windows.Media.Capture.MediaStreamType) 을 지정 하 여 효과를 캡처 스트림과 달리 비디오 미리 보기 스트림에 적용 해야 함을 표시 합니다. **AddVideoEffectAsync** 는 추가 된 효과의 인스턴스를 반환 합니다. 이 메서드는 여러 효과 형식에 사용할 수 있으므로 반환 된 인스턴스를 [**FaceDetectionEffect**](/uwp/api/Windows.Media.Core.FaceDetectionEffect) 개체로 캐스팅 해야 합니다.
 
-[  **FaceDetectionEffect.Enabled**](https://docs.microsoft.com/uwp/api/windows.media.core.facedetectioneffect.enabled) 속성을 설정하여 효과를 사용하거나 사용하지 않도록 설정합니다. [  **FaceDetectionEffect.DesiredDetectionInterval**](https://docs.microsoft.com/uwp/api/windows.media.core.facedetectioneffect.desireddetectioninterval) 속성을 설정하여 효과가 프레임을 분석하는 빈도를 조정합니다. 미디어 캡처가 진행 중인 동안 이 두 속성을 모두 조정할 수 있습니다.
+[**FaceDetectionEffect**](/uwp/api/windows.media.core.facedetectioneffect.enabled) 속성을 설정 하 여 효과를 사용 하거나 사용 하지 않도록 설정 합니다. [**FaceDetectionEffect DesiredDetectionInterval**](/uwp/api/windows.media.core.facedetectioneffect.desireddetectioninterval) 속성을 설정 하 여 효과에서 프레임을 분석 하는 빈도를 조정 합니다. 미디어 캡처가 진행 중일 때 이러한 속성을 모두 조정할 수 있습니다.
 
 [!code-cs[CreateFaceDetectionEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateFaceDetectionEffectAsync)]
 
-### <a name="receive-notifications-when-faces-are-detected"></a>얼굴이 감지되면 알림 수신
+### <a name="receive-notifications-when-faces-are-detected"></a>얼굴이 감지 되 면 알림 받기
 
-얼굴 감지 시 비디오 미리 보기에서 감지된 얼굴 주변에 상자를 그리는 것과 같은 일부 작업이 수행되도록 하려면 [**FaceDetected**](https://docs.microsoft.com/uwp/api/windows.media.core.facedetectioneffect.facedetected) 이벤트에 대해 등록할 수 있습니다.
+비디오 미리 보기에서 검색 된 얼굴 주위의 상자를 그리는 등 얼굴 감지 시 일부 작업을 수행 하려는 경우 [**FaceDetected**](/uwp/api/windows.media.core.facedetectioneffect.facedetected) 이벤트를 등록할 수 있습니다.
 
 [!code-cs[RegisterFaceDetectionHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterFaceDetectionHandler)]
 
-이벤트에 대한 처리기에서 [**FaceDetectedEventArgs**](https://docs.microsoft.com/uwp/api/windows.media.core.facedetectioneffectframe.detectedfaces)의 [**FaceDetectionEffectFrame.DetectedFaces**](https://docs.microsoft.com/uwp/api/Windows.Media.Core.FaceDetectedEventArgs) 속성에 액세스하여 프레임에서 감지된 모든 얼굴의 목록을 가져올 수 있습니다. [  **FaceBox**](https://docs.microsoft.com/uwp/api/windows.media.faceanalysis.detectedface.facebox) 속성은 감지된 얼굴이 포함된 사각형을 미리 보기 스트림 크기에 대해 상대적인 단위로 설명하는 [**BitmapBounds**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.BitmapBounds) 구조입니다. 미리 보기 스트림 좌표를 화면 좌표로 변환하는 샘플 코드를 보려면 [얼굴 감지 UWP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFaceDetection)을 참조하세요.
+이벤트에 대 한 처리기에서 [**FaceDetectedEventArgs**](/uwp/api/Windows.Media.Core.FaceDetectedEventArgs)의 [**FaceDetectionEffectFrame DetectedFaces**](/uwp/api/windows.media.core.facedetectioneffectframe.detectedfaces) 속성에 액세스 하 여 프레임에서 검색 된 모든 얼굴의 목록을 가져올 수 있습니다. [**FaceBox**](/uwp/api/windows.media.faceanalysis.detectedface.facebox) 속성은 미리 보기 스트림 차원과 관련 하 여 검색 된 얼굴을 포함 하는 사각형을 설명 하는 [**BitmapBounds**](/uwp/api/Windows.Graphics.Imaging.BitmapBounds) 구조체입니다. 미리 보기 스트림 좌표를 화면 좌표로 변환 하는 샘플 코드를 보려면 [face 검색 UWP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFaceDetection)을 참조 하세요.
 
 [!code-cs[FaceDetected](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetFaceDetected)]
 
-### <a name="clean-up-the-face-detection-effect"></a>얼굴 감지 효과 정리
+### <a name="clean-up-the-face-detection-effect"></a>얼굴 검색 효과 정리
 
-앱이 캡처를 완료하면 **MediaCapture** 개체를 처분하기 전에 먼저 효과의 [**FaceDetectionEffect.Enabled**](https://docs.microsoft.com/uwp/api/windows.media.core.facedetectioneffect.enabled)를 사용하여 얼굴 감지 효과를 사용하지 않도록 설정하고 이전에 등록해 둔 [**FaceDetected**](https://docs.microsoft.com/uwp/api/windows.media.core.facedetectioneffect.facedetected) 이벤트 처리기를 등록 취소해야 합니다. [  **MediaCapture.ClearEffectsAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.cleareffectsasync)를 호출하고 효과가 추가된 비디오 미리 보기 스트림을 지정합니다. 마지막으로, 멤버 변수를 null로 설정합니다.
+앱이 캡처를 완료 한 후 **MediaCapture** 개체를 삭제 하기 전에 [**FaceDetectionEffect**](/uwp/api/windows.media.core.facedetectioneffect.enabled) 를 사용 하 여 얼굴 검색 효과를 사용 하지 않도록 설정 하 고 이전에 등록 한 경우 [**FaceDetected**](/uwp/api/windows.media.core.facedetectioneffect.facedetected) 이벤트 처리기를 등록 취소 해야 합니다. MediaCapture를 호출 하 여 효과가 추가 된 스트림 이후 비디오 미리 보기 스트림을 지정 합니다 [**.**](/uwp/api/windows.media.capture.mediacapture.cleareffectsasync) 마지막으로 멤버 변수를 null로 설정 합니다.
 
 [!code-cs[CleanUpFaceDetectionEffectAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpFaceDetectionEffectAsync)]
 
-### <a name="check-for-focus-and-exposure-support-for-detected-faces"></a>감지된 얼굴에 대한 포커스 및 노출 지원 확인
+### <a name="check-for-focus-and-exposure-support-for-detected-faces"></a>검색 된 면에 대 한 포커스 및 노출이 지원 되는지 확인 합니다.
 
-일부 장치에는 감지된 얼굴을 기반으로 포커스 및 노출을 조정할 수 있는 캡처 장치가 없습니다. 얼굴 감지에는 장치 리소스가 사용되기 때문에, 이 기능을 사용하여 캡처를 향상할 수 있는 장치에서만 얼굴 감지를 사용하도록 설정해야 할 수 있습니다. 얼굴 기반 캡처 최적화를 사용할 수 있는지 여부를 알아보려면 초기화된 [MediaCapture**에 대한** ](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.VideoDeviceController)VideoDeviceController[](capture-photos-and-video-with-mediacapture.md)를 가져온 다음 비디오 디바이스 컨트롤러의 [**RegionsOfInterestControl**](https://docs.microsoft.com/uwp/api/Windows.Media.Devices.RegionsOfInterestControl)을 가져옵니다. [  **MaxRegions**](https://docs.microsoft.com/uwp/api/windows.media.devices.regionsofinterestcontrol.maxregions)가 하나 이상의 영역을 지원하는지 확인합니다. 그런 다음, [**AutoExposureSupported**](https://docs.microsoft.com/uwp/api/windows.media.devices.regionsofinterestcontrol.autoexposuresupported) 또는 [**AutoFocusSupported**](https://docs.microsoft.com/uwp/api/windows.media.devices.regionsofinterestcontrol.autofocussupported)가 true인지 여부를 확인합니다. 이러한 조건이 충족되는 경우 디바이스는 얼굴 감지를 활용하여 캡처를 향상할 수 있습니다.
+모든 장치에는 검색 된 면에 따라 포커스 및 노출을 조정할 수 있는 캡처 장치가 없습니다. 얼굴 검색은 장치 리소스를 사용 하므로,이 기능을 사용 하 여 캡처를 향상 시킬 수 있는 장치 에서만 얼굴 감지를 사용 하도록 설정할 수 있습니다. 얼굴 기반 캡처 최적화를 사용할 수 있는지 확인 하려면 초기화 된 [MediaCapture](./index.md) 에 대 한 [**VideoDeviceController**](/uwp/api/Windows.Media.Devices.VideoDeviceController) 을 가져온 다음 비디오 장치 컨트롤러의 [**RegionsOfInterestControl**](/uwp/api/Windows.Media.Devices.RegionsOfInterestControl)를 가져옵니다. [**Maxregions**](/uwp/api/windows.media.devices.regionsofinterestcontrol.maxregions) 하나 이상의 지역을 지원 하는지 확인 하세요. 그런 다음 [**AutoExposureSupported**](/uwp/api/windows.media.devices.regionsofinterestcontrol.autoexposuresupported) 또는 [**AutoFocusSupported**](/uwp/api/windows.media.devices.regionsofinterestcontrol.autofocussupported) 가 true 인지 확인 합니다. 이러한 조건이 충족 되 면 장치에서 얼굴 감지를 활용 하 여 캡처를 향상 시킬 수 있습니다.
 
 [!code-cs[AreFaceFocusAndExposureSupported](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetAreFaceFocusAndExposureSupported)]
 
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture를 사용 하는 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
-
-
-
-

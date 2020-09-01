@@ -1,32 +1,32 @@
 ---
-title: 자기 띠 데이터 가져오기 및 이해
-description: 마그네틱 띠에서 데이터를 해석 하는 방법에 알아봅니다.
+title: 자기 띠 데이터 획득 및 이해
+description: UWP (유니버설 Windows 플랫폼) POS (Point of Service) Api를 사용 하 여 자기 stripe 판독기에서 데이터를 가져오고 해석 하는 방법에 대해 알아봅니다.
 ms.date: 10/04/2018
 ms.topic: article
-keywords: windows 10, uwp, 서비스, pos, 마그네틱 띠 판독기 지점
+keywords: windows 10, uwp, 서비스 지점, pos, 자기 줄무늬 판독기
 ms.localizationpriority: medium
-ms.openlocfilehash: 12b88d942e4b5a9c90880f6bd362ba9e7e011186
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 2a405a66fbc243925c4c9bbd5b1ee499a9a7b9f8
+ms.sourcegitcommit: e273e5901bfa6596dfef4cc741bb1c42614c25ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67321547"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89238278"
 ---
-# <a name="obtain-and-understand-magnetic-stripe-data"></a>자기 띠 데이터 가져오기 및 이해
+# <a name="obtain-and-understand-magnetic-stripe-data"></a>자기 띠 데이터 획득 및 이해
 
-에 설명 된 단계를 사용 하 여 응용 프로그램에서 마그네틱 띠 판독기에 설정한 후 [Point of Service 시작](pos-basics.md), 여기에서 데이터 가져오기를 시작할 준비가 되었습니다. 합니다.
+[서비스 지점 시작](pos-basics.md)에 설명 된 단계를 사용 하 여 응용 프로그램에서 자기 줄무늬 판독기를 설정 하면 데이터 가져오기를 시작할 준비가 된 것입니다.
 
-## <a name="subscribe-to-datareceived-events"></a>구독할 * DataReceived 이벤트
+## <a name="subscribe-to-datareceived-events"></a>* DataReceived 이벤트를 구독 합니다.
 
-판독기 인식 스와이프 카드 때마다 세 가지 이벤트 중 하나가 발생 합니다.
+판독기가 스와이프 카드를 인식할 때마다 다음과 같은 세 가지 이벤트 중 하나가 발생 합니다.
 
-* [AamvaCardDataReceived 이벤트](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.aamvacarddatareceived): 차량 카드 학습은 때 발생 합니다.
-* [BankCardDataReceived 이벤트](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.aamvacarddatareceived): 은행 카드 학습은 때 발생 합니다.
-* [VendorSpecificDataReceived 이벤트](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.vendorspecificdatareceived): 공급 업체별 카드 학습은 때 발생 합니다.
+* [AamvaCardDataReceived Event](/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.aamvacarddatareceived): 화물 차량 카드가 스와이프 때 발생 합니다.
+* [BankCardDataReceived Event](/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.aamvacarddatareceived): 은행 카드가 스와이프 때 발생 합니다.
+* [VendorSpecificDataReceived Event](/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader.vendorspecificdatareceived): 공급 업체별 카드가 스와이프 때 발생 합니다.
 
-응용 프로그램 에서만 마그네틱 띠 판독기에서 지원 되는 이벤트를 구독 해야 합니다. 카드 유형을 사용 하 여 지를 볼 수 있습니다 [MagneticStripeReader.SupportedCardTypes](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereader.supportedcardtypes)합니다.
+응용 프로그램은 자기 줄무늬 판독기에서 지원 되는 이벤트를 구독 하기만 하면 됩니다. [MagneticStripeReader](/uwp/api/windows.devices.pointofservice.magneticstripereader.supportedcardtypes)에서 지원 되는 카드의 유형을 확인할 수 있습니다.
 
-다음 코드에서는 세 가지 구독 ***DataReceived** 이벤트:
+다음 코드는 세 개의 ***Datareceived** 이벤트를 구독 하는 방법을 보여 줍니다.
 
 ```cs
 private void SubscribeToEvents(ClaimedMagneticStripeReader claimedReader, MagneticStripeReader reader)
@@ -49,15 +49,15 @@ private void SubscribeToEvents(ClaimedMagneticStripeReader claimedReader, Magnet
 }
 ```
 
-전달할 이벤트 처리기를 [ClaimedMagneticStripeReader](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader) 및 *args* 개체 형식의 이벤트에 따라 달라 집니다.
+이벤트 처리기에는 이벤트에 따라 형식이 달라 지는 [ClaimedMagneticStripeReader](/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader) 및 *args* 개체가 전달 됩니다.
 
-* **AamvaCardDataReceived** 이벤트: [MagneticStripeReaderAamvaCardDataReceivedEventArgs 클래스](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderaamvacarddatareceivedeventargs)
-* **BankCardDataReceived** 이벤트: [MagneticStripeReaderBankCardDataReceivedEventArgs Class](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderbankcarddatareceivedeventargs)
-* **VendorSpecificDataReceived** 이벤트: [MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs Class](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadervendorspecificcarddatareceivedeventargs)
+* **AamvaCardDataReceived** 이벤트: [MagneticStripeReaderAamvaCardDataReceivedEventArgs 클래스](/uwp/api/windows.devices.pointofservice.magneticstripereaderaamvacarddatareceivedeventargs)
+* **BankCardDataReceived** 이벤트: [MagneticStripeReaderBankCardDataReceivedEventArgs 클래스](/uwp/api/windows.devices.pointofservice.magneticstripereaderbankcarddatareceivedeventargs)
+* **VendorSpecificDataReceived** 이벤트: [MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs 클래스](/uwp/api/windows.devices.pointofservice.magneticstripereadervendorspecificcarddatareceivedeventargs)
 
 ## <a name="get-the-data"></a>데이터 가져오기
 
-에 대 한 합니다 **AamvaCardDataReceived** 및 **BankCardDataReceived** 이벤트를 가져올 수 있습니다에서 직접 데이터 중 일부를 *args* 개체입니다. 다음 예제에서는 몇 가지 속성을 가져오고 멤버 변수에 할당을 보여 줍니다.
+**AamvaCardDataReceived** 및 **BankCardDataReceived** 이벤트의 경우 *args* 개체에서 직접 일부 데이터를 가져올 수 있습니다. 다음 예제에서는 몇 가지 속성을 가져오고 멤버 변수에 할당 하는 방법을 보여 줍니다.
 
 ```cs
 private string _accountNumber;
@@ -75,17 +75,17 @@ private void Reader_BankCardDataReceived(
 }
 ```
 
-그러나 모든 데이터를 비롯 한 일부 데이터를는 **VendorSpecificDataReceived** 이벤트를 통해 검색 해야 합니다 **보고서** 속성인 개체의는 *args* 매개 변수입니다. 형식의 이것이 [MagneticStripeReaderReport](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport)합니다.
+그러나 **VendorSpecificDataReceived** 이벤트의 모든 데이터를 포함 한 일부 데이터는 *args* 매개 변수의 속성인 **Report** 개체를 통해 검색 되어야 합니다. [MagneticStripeReaderReport](/uwp/api/windows.devices.pointofservice.magneticstripereaderreport)유형입니다.
 
-사용할 수는 [CardType](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.cardtype) 속성을 어떤 형식의 카드에 되었습니다 누르거나 살짝 밀거나 파악 하 고 다음에서 데이터를 해석 하는 방법을 알리는 데 사용 하는 하는 [Track1](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track1)를 [Track2](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track2)를 [ Track3](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track3), 및 [Track4](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track4)합니다.
+[Track1](/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track1), [Track2](/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track2), [Track3](/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track3)및 [Track4](/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.track4)의 데이터를 해석 하는 방법을 알려주는 데 사용 [하 여 스와이프](/uwp/api/windows.devices.pointofservice.magneticstripereaderreport.cardtype) 된 카드 유형을 확인할 수 있습니다.
 
-각 트랙 데이터로으로 표시 됩니다 [MagneticStripeReaderTrackData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata) 개체입니다. 이 클래스에서 다음과 같은 유형의 데이터를 가져올 수 있습니다.
+각 트랙의 데이터는 [MagneticStripeReaderTrackData](/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata) 개체로 표현 됩니다. 이 클래스에서 다음 형식의 데이터를 가져올 수 있습니다.
 
-* [데이터](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.data): 원시 또는 디코딩된 데이터입니다.
-* [DiscretionaryData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.discretionarydata): 임의 데이터입니다. 
-* [EncryptedData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.encrypteddata): 암호화된 데이터입니다.
+* [데이터](/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.data): 원시 또는 디코딩된 데이터입니다.
+* [DiscretionaryData](/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.discretionarydata): 임의 데이터입니다. 
+* [EncryptedData](/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata.encrypteddata): 암호화 된 데이터입니다.
 
-다음 코드 조각은 보고서 및 추적 데이터를 가져와서 카드 종류를 확인 합니다.
+다음 코드 조각에서는 보고서 및 트랙 데이터를 가져온 다음 카드 유형을 확인 합니다.
 
 ```cs
 private void GetTrackData(MagneticStripeReaderBankCardDataReceivedEventArgs args)
@@ -117,12 +117,12 @@ private void GetTrackData(MagneticStripeReaderBankCardDataReceivedEventArgs args
 
 [!INCLUDE [feedback](./includes/pos-feedback.md)]
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
-* [마그네틱 띠 판독기](pos-magnetic-stripe-reader.md)
-* [ClaimedMagneticStripeReader 클래스](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader)
-* [MagneticStripeReaderAamvaCardDataReceivedEventArgs 클래스](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderaamvacarddatareceivedeventargs)
-* [MagneticStripeReaderBankCardDataReceivedEventArgs 클래스](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderbankcarddatareceivedeventargs)
-* [MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs Class](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadervendorspecificcarddatareceivedeventargs)
-* [MagneticStripeReaderReport](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereaderreport)
-* [MagneticStripeReaderTrackData](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata)
+* [자기 띠 판독기](pos-magnetic-stripe-reader.md)
+* [ClaimedMagneticStripeReader 클래스](/uwp/api/windows.devices.pointofservice.claimedmagneticstripereader)
+* [MagneticStripeReaderAamvaCardDataReceivedEventArgs 클래스](/uwp/api/windows.devices.pointofservice.magneticstripereaderaamvacarddatareceivedeventargs)
+* [MagneticStripeReaderBankCardDataReceivedEventArgs 클래스](/uwp/api/windows.devices.pointofservice.magneticstripereaderbankcarddatareceivedeventargs)
+* [MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs 클래스](/uwp/api/windows.devices.pointofservice.magneticstripereadervendorspecificcarddatareceivedeventargs)
+* [MagneticStripeReaderReport](/uwp/api/windows.devices.pointofservice.magneticstripereaderreport)
+* [MagneticStripeReaderTrackData](/uwp/api/windows.devices.pointofservice.magneticstripereadertrackdata)

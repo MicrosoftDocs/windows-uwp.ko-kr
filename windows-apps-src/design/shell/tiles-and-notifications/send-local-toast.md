@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림 메시지 보내기, 알림, 알림 보내기, 알림 메시지, 방법, 빠른 시작, 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: 23a1739b8f5859d128c97ff28350a548b61286d2
-ms.sourcegitcommit: 63597f83f154ce41ebaf69c075093919c430297c
+ms.openlocfilehash: 8e099ae97f67ca2f61a9e771f7ad015305b851d0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82034187"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174597"
 ---
 # <a name="send-a-local-toast-notification"></a>로컬 알림 메시지 보내기
 
@@ -21,7 +21,7 @@ ms.locfileid: "82034187"
 알림 메시지는 앱이 현재 앱 내부에 있지 않은 상태에서 사용자를 생성 하 고 제공할 수 있는 메시지입니다. 이 빠른 시작에서는 새로운 적응 템플릿 및 대화형 작업을 통해 Windows 10 알림 메시지를 만들고, 제공 하 고, 표시 하는 단계를 안내 합니다. 이러한 작업은 구현 하는 가장 간단한 알림 인 로컬 알림을 통해 보여 줍니다.
 
 > [!IMPORTANT]
-> 데스크톱 응용 프로그램 (패키지 된 [Msix](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 얻기 위해 [스파스 패키지](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱, 기본 패키지 되지 않은 Win32 앱 포함)은 알림을 보내고 활성화를 처리 하는 서로 다른 단계를 포함 합니다. 알림을을 구현 하는 방법에 대 한 자세한 내용은 [데스크톱 앱](toast-desktop-apps.md) 설명서를 참조 하세요.
+> 데스크톱 응용 프로그램 (패키지 된 [Msix](/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 얻기 위해 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱, 기본 패키지 되지 않은 Win32 앱 포함)은 알림을 보내고 활성화를 처리 하는 서로 다른 단계를 포함 합니다. 알림을을 구현 하는 방법에 대 한 자세한 내용은 [데스크톱 앱](toast-desktop-apps.md) 설명서를 참조 하세요.
 
 다음 작업을 진행 합니다.
 
@@ -39,14 +39,14 @@ ms.locfileid: "82034187"
 * 포그라운드 활성화 처리
 * 백그라운드 활성화 처리
 
-> **중요 한 api**: [to notification 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification), [ToastNotificationActivatedEventArgs 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
+> **중요 한 api**: [to notification 클래스](/uwp/api/Windows.UI.Notifications.ToastNotification), [ToastNotificationActivatedEventArgs 클래스](/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 항목을 완벽 하 게 이해 하려면 다음을 수행 하는 것이 좋습니다.
 
-* 알림 메시지 알림 용어 및 개념에 대 한 작업 정보입니다. 자세한 내용은 [알림 및 알림 센터 개요](https://blogs.msdn.microsoft.com/tiles_and_toasts/2015/07/08/toast-notification-and-action-center-overview-for-windows-10/)를 참조 하세요.
+* 알림 메시지 알림 용어 및 개념에 대 한 작업 정보입니다. 자세한 내용은 [알림 및 알림 센터 개요](/archive/blogs/tiles_and_toasts/toast-notification-and-action-center-overview-for-windows-10)를 참조 하세요.
 * Windows 10 알림 메시지 내용에 대해 잘 알고 있어야 합니다. 자세한 내용은 [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)를 참조 하세요.
 * Windows 10 UWP 앱 프로젝트
 
@@ -54,7 +54,7 @@ ms.locfileid: "82034187"
 > Windows 8/8.1과 달리 앱에서 알림 메시지를 표시할 수 있다는 것을 응용 프로그램의 매니페스트에서 더 이상 선언할 필요가 없습니다. 모든 앱은 알림 메시지를 보내고 표시할 수 있습니다.
 
 > [!NOTE]
-> **Windows 8/8.1 앱**: [보관 된 설명서](https://docs.microsoft.com/previous-versions/windows/apps/hh868254(v=win.10))를 사용 하세요.
+> **Windows 8/8.1 앱**: [보관 된 설명서](/previous-versions/windows/apps/hh868254(v=win.10))를 사용 하세요.
 
 
 ## <a name="install-nuget-packages"></a>NuGet 패키지 설치
@@ -67,7 +67,7 @@ ms.locfileid: "82034187"
 
 ## <a name="add-namespace-declarations"></a>네임스페이스 선언 추가
 
-`Windows.UI.Notifications`알림 Api를 포함 합니다.
+`Windows.UI.Notifications` 알림 Api를 포함 합니다.
 
 ```csharp
 using Windows.UI.Notifications;
@@ -193,7 +193,7 @@ ToastActionsCustom actions = new ToastActionsCustom()
 
 ### <a name="combining-the-above-to-construct-the-full-content"></a>위의를 결합 하 여 전체 콘텐츠 생성
 
-이제 콘텐츠 생성이 완료 되었으며,이를 사용 하 여 [**To notification**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification) 개체를 인스턴스화할 수 있습니다.
+이제 콘텐츠 생성이 완료 되었으며,이를 사용 하 여 [**To notification**](/uwp/api/Windows.UI.Notifications.ToastNotification) 개체를 인스턴스화할 수 있습니다.
 
 **참고**: 사용자가 알림 메시지 본문을 탭 할 때 수행 해야 하는 정품 인증 유형을 지정 하기 위해 root 요소 내에 활성화 유형을 제공할 수도 있습니다. 일반적으로 알림의 본문을 탭 하 여 일관 된 사용자 환경을 만들기 위해 포그라운드에서 앱을 시작 해야 하지만, 사용자에 게 가장 적합 한 특정 시나리오에 맞게 다른 활성화 유형을 사용할 수 있습니다.
 
@@ -238,9 +238,9 @@ toast.ExpirationTime = DateTime.Now.AddDays(2);
 
 보내는 알림을 프로그래밍 방식으로 제거 하거나 교체 하려는 경우에는 Tag 속성 (필요한 경우 그룹 속성)을 사용 하 여 알림에 대 한 기본 키를 제공 해야 합니다. 그런 다음 나중에이 기본 키를 사용 하 여 알림을 제거 하거나 바꿀 수 있습니다.
 
-이미 제공 된 알림 메시지를 교체/제거 하는 방법에 대 한 자세한 내용은 빠른 시작: 알림 메시지 [관리 센터 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10))를 참조 하세요.
+이미 제공 된 알림 메시지를 교체/제거 하는 방법에 대 한 자세한 내용은 빠른 시작: 알림 메시지 [관리 센터 (XAML)](/previous-versions/windows/apps/dn631260(v=win.10))를 참조 하세요.
 
-태그 및 그룹 결합은 복합 기본 키로 작동 합니다. Group은 보다 일반적인 식별자로, "wallPosts", "messages", "friendRequests" 등의 그룹을 할당할 수 있습니다. 그런 다음 태그는 그룹 내에서 알림 자체를 고유 하 게 식별 해야 합니다. 일반 그룹을 사용 하면 [REMOVEGROUP API](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_)를 사용 하 여 해당 그룹에서 모든 알림을 제거할 수 있습니다.
+태그 및 그룹 결합은 복합 기본 키로 작동 합니다. Group은 보다 일반적인 식별자로, "wallPosts", "messages", "friendRequests" 등의 그룹을 할당할 수 있습니다. 그런 다음 태그는 그룹 내에서 알림 자체를 고유 하 게 식별 해야 합니다. 일반 그룹을 사용 하면 [REMOVEGROUP API](/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_)를 사용 하 여 해당 그룹에서 모든 알림을 제거할 수 있습니다.
 
 ```csharp
 toast.Tag = "18365";
@@ -250,7 +250,7 @@ toast.Group = "wallPosts";
 
 ## <a name="send-the-notification"></a>알림 보내기
 
-알림을 초기화 한 후에는 알림 메시지를 전달 [하 고 Show](https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastnotifier) ()를 호출 하 여 알림 메시지를 생성 하면 됩니다.
+알림을 초기화 한 후에는 알림 메시지를 전달 [하 고 Show](/uwp/api/windows.ui.notifications.toastnotifier) ()를 호출 하 여 알림 메시지를 생성 하면 됩니다.
 
 ```csharp
 ToastNotificationManager.CreateToastNotifier().Show(toast);
@@ -267,10 +267,10 @@ UWP 앱은 자체 알림을 제거 하 고 제거 해야 합니다. 앱이 시�
 
 1. 사용자가 대화의 새 메시지에 대해 여러 알림을를 수신 합니다.
 2. 사용자가 이러한 알림을 중 하나를 탭 하 여 대화를 엽니다.
-3. 앱은 대화를 연 다음 해당 대화에 대해 앱에서 제공 하는 그룹에서 [Removegroup](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_) 을 사용 하 여 해당 대화에 대 한 모든 알림을를 지웁니다.
+3. 앱은 대화를 연 다음 해당 대화에 대해 앱에서 제공 하는 그룹에서 [Removegroup](/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_) 을 사용 하 여 해당 대화에 대 한 모든 알림을를 지웁니다.
 4. 이제 사용자의 작업 센터는 알림 상태를 올바르게 반영 합니다. 해당 대화에 대 한 부실 알림이 작업 센터에 남아 있기 때문입니다.
 
-모든 알림을 지우거 나 특정 알림을 제거 하는 방법에 대 한 자세한 내용은 [빠른 시작: 동작 센터에서 알림 메시지 관리 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10))를 참조 하세요.
+모든 알림을 지우거 나 특정 알림을 제거 하는 방법에 대 한 자세한 내용은 [빠른 시작: 동작 센터에서 알림 메시지 관리 (XAML)](/previous-versions/windows/apps/dn631260(v=win.10))를 참조 하세요.
 
 
 ## <a name="activation-handling"></a>활성화 처리
@@ -291,7 +291,7 @@ Windows 10에서 사용자가 최신 알림 (또는 알림 단추)을 클릭 **�
 아래에 표시 된 예제에서는 알림 콘텐츠에 처음 제공 된 인수 문자열을 검색할 수 있습니다. 텍스트 상자와 선택 상자에서 사용자가 제공한 입력을 검색할 수도 있습니다.
 
 > [!IMPORTANT]
-> 사용자의 프레임을 초기화 하 고 **Onlaunched** 코드와 마찬가지로 창을 활성화 해야 합니다. 앱이 닫히고 처음 실행 되는 경우에도 **사용자가 알림을 클릭 하면 Onlaunched이 호출 되지**않습니다. 동일한 초기화가 둘 다에서 발생 해야 하기 때문에 **Onlaunched** 및 **onlaunched** 된 메서드를 사용자 고유의 `OnLaunchedOrActivated` 메서드에 결합 하는 것이 좋습니다.
+> 사용자의 프레임을 초기화 하 고 **Onlaunched** 코드와 마찬가지로 창을 활성화 해야 합니다. 앱이 닫히고 처음 실행 되는 경우에도 **사용자가 알림을 클릭 하면 Onlaunched이 호출 되지**않습니다. 동일한 초기화가 둘 다에서 발생 해야 하기 때문에 **Onlaunched** 및 **onlaunched** 된 메서드를 사용자 고유의 메서드에 결합 하는 것이 좋습니다 `OnLaunchedOrActivated` .
 
 ```csharp
 protected override void OnActivated(IActivatedEventArgs e)
@@ -361,7 +361,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 알림 (또는 알림 내부의 단추)에서 백그라운드 활성화를 지정 하면 포그라운드 앱을 활성화 하는 대신 백그라운드 작업이 실행 됩니다.
 
-백그라운드 작업에 대 한 자세한 내용은 [백그라운드 작업을 사용 하 여 앱 지원](/windows/uwp/launch-resume/support-your-app-with-background-tasks)을 참조 하세요.
+백그라운드 작업에 대 한 자세한 내용은 [백그라운드 작업을 사용 하 여 앱 지원](../../../launch-resume/support-your-app-with-background-tasks.md)을 참조 하세요.
 
 빌드 14393 이상을 대상으로 하는 경우 처리 중인 백그라운드 작업을 사용 하 여 작업을 크게 간소화할 수 있습니다. In-process 백그라운드 작업은 이전 버전의 Windows에서 실행 되지 않습니다. 이 코드 샘플에서는 in-process 백그라운드 작업을 사용 합니다.
 
@@ -418,7 +418,7 @@ protected override async void OnBackgroundActivated(BackgroundActivatedEventArgs
 
 ## <a name="plain-vanilla-code-snippets"></a>일반 "바닐라" 코드 조각
 
-NuGet에서 알림 라이브러리를 사용 하지 않는 경우 아래 표시 된 대로 수동으로 XML을 생성 하 여 [To notification](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)을 만들 수 있습니다.
+NuGet에서 알림 라이브러리를 사용 하지 않는 경우 아래 표시 된 대로 수동으로 XML을 생성 하 여 [To notification](/uwp/api/Windows.UI.Notifications.ToastNotification)을 만들 수 있습니다.
 
 ```csharp
 using Windows.UI.Notifications;
@@ -503,5 +503,5 @@ var toast = new ToastNotification(toastXml);
 
 * [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/quickstart-sending-local-toast-win10)
 * [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)
-* [To Notification 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
-* [ToastNotificationActivatedEventArgs 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
+* [To Notification 클래스](/uwp/api/Windows.UI.Notifications.ToastNotification)
+* [ToastNotificationActivatedEventArgs 클래스](/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)

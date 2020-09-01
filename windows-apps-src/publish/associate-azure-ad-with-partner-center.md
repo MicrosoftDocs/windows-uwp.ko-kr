@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, azure ad, azure 테 넌 트, aad 테 넌 트, azure ad 테 넌 트, 테 넌 트 관리, 테 넌 트
 ms.localizationpriority: medium
-ms.openlocfilehash: fa26f4ea3fa91f43dea117ff5ffd2fec87514544
-ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
+ms.openlocfilehash: e30768b376b2bca01deb3d9b21d867db393d7604
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846763"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174817"
 ---
 # <a name="associate-azure-active-directory-with-your-partner-center-account"></a>파트너 센터 계정에 Azure Active Directory 연결
 
@@ -19,7 +19,7 @@ ms.locfileid: "88846763"
 [파트너 센터](https://partner.microsoft.com/dashboard) 는 다중 사용자 계정 액세스 및 관리를 위해 Azure AD를 활용 합니다. 조직에서 이미 Microsoft 365 또는 Microsoft의 다른 비즈니스 서비스를 사용 하는 경우 Azure AD가 이미 있는 것입니다. 그렇지 않으면 추가 비용 없이 파트너 센터 내에서 새 Azure AD 테 넌 트를 만들 수 있습니다.
 
 > [!TIP]
-> 이 항목은 [파트너 센터](https://partner.microsoft.com/dashboard)의 windows apps 개발자 프로그램에만 적용 되지만 테 넌 트를 연결 하 고 사용자를 관리 하는 것은 Windows 데스크톱 응용 프로그램 (자세한 내용은 [windows 데스크톱 응용 프로그램 프로그램](https://docs.microsoft.com/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users) 참조) 및 windows 하드웨어 개발자 프로그램에서 유사 하 게 작동 합니다 **. 관리자** 역할에 대 한 참조는 **관리자** 역할이 있는 하드웨어 계정에도 적용 됩니다. 자세한 내용은 [대시보드 관리](https://docs.microsoft.com/windows-hardware/drivers/dashboard/dashboard-administration) 를 참조 하세요.
+> 이 항목은 [파트너 센터](https://partner.microsoft.com/dashboard)의 windows apps 개발자 프로그램에만 적용 되지만 테 넌 트를 연결 하 고 사용자를 관리 하는 것은 Windows 데스크톱 응용 프로그램 (자세한 내용은 [windows 데스크톱 응용 프로그램 프로그램](/windows/desktop/appxpkg/windows-desktop-application-program#add-and-manage-account-users) 참조) 및 windows 하드웨어 개발자 프로그램에서 유사 하 게 작동 합니다 **. 관리자** 역할에 대 한 참조는 **관리자** 역할이 있는 하드웨어 계정에도 적용 됩니다. 자세한 내용은 [대시보드 관리](/windows-hardware/drivers/dashboard/dashboard-administration) 를 참조 하세요.
 
 단일 Azure AD 테 넌 트를 여러 파트너 센터 계정에 연결할 수 있습니다. 여러 계정 사용자를 추가 하려면 파트너 센터 계정과 연결 된 하나의 Azure AD 테 넌 트가 있어야 하지만 단일 파트너 센터 계정에 여러 Azure AD 테 넌 트를 추가 하는 옵션도 있습니다. 파트너 센터 계정의 **관리자** 역할을 보유한 사용자에게는 계정에서 Azure AD 테넌트를 추가 및 제거할 수 있는 옵션이 주어집니다.
 
@@ -38,7 +38,7 @@ ms.locfileid: "88846763"
 5.  연결에 성공하면 파트너 센터의 **사용자** 섹션에서 계정 사용자를 추가하고 관리할 준비가 된 것입니다.
 
 > [!IMPORTANT]
-> 새 사용자를 만들거나 Azure AD에 대 한 다른 변경 작업을 수행 하려면 해당 테 넌 트에 대 한 [전역 관리자 권한이](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) 있는 계정을 사용 하 여 해당 azure ad 테 넌 트에 로그인 해야 합니다. 그러나 테 넌 트를 연결 하거나 해당 테 넌 트에 이미 있는 사용자를 파트너 센터 계정에 추가 하기 위해 전역 관리자 권한이 필요 하지 않습니다.
+> 새 사용자를 만들거나 Azure AD에 대 한 다른 변경 작업을 수행 하려면 해당 테 넌 트에 대 한 [전역 관리자 권한이](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) 있는 계정을 사용 하 여 해당 azure ad 테 넌 트에 로그인 해야 합니다. 그러나 테 넌 트를 연결 하거나 해당 테 넌 트에 이미 있는 사용자를 파트너 센터 계정에 추가 하기 위해 전역 관리자 권한이 필요 하지 않습니다.
 
 
 ## <a name="create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account"></a>파트너 센터 계정과 연결할 새 Azure AD를 만드세요.
@@ -78,5 +78,3 @@ Azure AD 테 넌 트를 파트너 센터 계정에 연결한 후에는 **테** �
 
 > [!TIP]
 > 현재 동일한 테 넌 트의 계정을 사용 하 여 파트너 센터에 로그인 한 경우에는 테 넌 트를 제거할 수 없습니다. 테넌트를 제거하려면 계정과 연결된 다른 테넌트에 대한 **관리자**로서 파트너 센터에 로그인해야 합니다. 계정과 연결된 테넌트가 하나뿐인 경우 해당 테넌트는 계정을 연 Microsoft 계정으로 로그인해야만 제거할 수 있습니다.
-
-

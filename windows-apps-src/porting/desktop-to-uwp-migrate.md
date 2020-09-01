@@ -5,12 +5,12 @@ ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c07a3bbff4b29d2b59ef7d6d8a5912ce3675a4e
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 2e13c656f02531d500a72aa74b2d3c5d6cc29aa4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730349"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174937"
 ---
 # <a name="move-from-a-desktop-application-to-uwp"></a>데스크톱 응용 프로그램에서 UWP로 이동
 
@@ -70,7 +70,7 @@ WPF, Windows Forms 또는 C++ Win32 데스크톱 앱에서 직접 여러 Windows
 &nbsp;
 > [!VIDEO https://www.youtube-nocookie.com/embed/rzs_FGPyAlY?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=2]
 
-코드가 표준과 호환 되지 않는 경우 해당 코드를 구현할 수 있는 다른 방법을 고려 합니다. 먼저 [.NET API 브라우저](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0)를 엽니다. 해당 브라우저를 사용 하 여 .NET Standard 2.0에서 사용할 수 있는 API를 검토할 수 있습니다. 목록의 범위를 .NET Standard 2.0으로 지정 해야 합니다.
+코드가 표준과 호환 되지 않는 경우 해당 코드를 구현할 수 있는 다른 방법을 고려 합니다. 먼저 [.NET API 브라우저](/dotnet/api/?view=netstandard-2.0)를 엽니다. 해당 브라우저를 사용 하 여 .NET Standard 2.0에서 사용할 수 있는 API를 검토할 수 있습니다. 목록의 범위를 .NET Standard 2.0으로 지정 해야 합니다.
 
 ![dot net 옵션](images/desktop-to-uwp/dot-net-option.png)
 
@@ -112,7 +112,7 @@ public static ArrayList GetCustomerNames()
 }
 
 ```
-그러나 [.NET API 브라우저](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0) 를 사용 하 여 다른 대안을 찾을 수 있습니다. ``DbConnection``, ``DbCommand`` 및 클래스는 ``DbDataReader`` 모두 .NET Standard 2.0에서 사용할 수 있으므로 대신 사용할 수 있습니다.  
+그러나 [.NET API 브라우저](/dotnet/api/?view=netstandard-2.0) 를 사용 하 여 다른 대안을 찾을 수 있습니다. ``DbConnection``, ``DbCommand`` 및 클래스는 ``DbDataReader`` 모두 .NET Standard 2.0에서 사용할 수 있으므로 대신 사용할 수 있습니다.  
 
 이 수정 된 버전은 이러한 클래스를 사용 하 여 고객 목록을 가져오지만 클래스를 만들려면 ``DbConnection`` 클라이언트 응용 프로그램에서 만든 팩터리 개체를 전달 해야 합니다.
 
@@ -216,7 +216,7 @@ public sealed partial class MainPage : Page
 }
 ```
 
-UWP를 시작 하려면 [uwp 앱 이란?](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)을 참조 하세요.
+UWP를 시작 하려면 [uwp 앱 이란?](../get-started/universal-application-platform-guide.md)을 참조 하세요.
 
 ### <a name="reach-ios-and-android-devices"></a>IOS 및 Android 장치에 도달
 
@@ -239,7 +239,7 @@ UWPs와 마찬가지로 .NET Standard 2.0 클래스 라이브러리에서 비즈
 ![Xamarin 앱](images/desktop-to-uwp/xamarin-projects.png)
 
 >[!NOTE]
->플랫폼 간 프로젝트는 플랫폼에 한정 되지 않는 기능을 갖춘 앱에 적합 합니다. IOS, Android 및 Windows에서 실행 되는 하나의 네이티브 XAML 기반 UI를 빌드하는 데 사용할 수 있습니다. 자세한 내용은 [여기](https://docs.microsoft.com/xamarin/xamarin-forms/)를 참조 하세요.
+>플랫폼 간 프로젝트는 플랫폼에 한정 되지 않는 기능을 갖춘 앱에 적합 합니다. IOS, Android 및 Windows에서 실행 되는 하나의 네이티브 XAML 기반 UI를 빌드하는 데 사용할 수 있습니다. [여기](/xamarin/xamarin-forms/)에서 자세한 내용을 알아보세요.
 
 그런 다음 Android, iOS 또는 플랫폼 간 프로젝트에서 클래스 라이브러리 프로젝트에 대 한 참조를 추가 합니다.
 
@@ -278,7 +278,7 @@ public class MainActivity : ListActivity
 }
 ```
 
-Android, iOS 및 플랫폼 간 프로젝트를 시작 하려면 [Xamarin 개발자 포털](https://docs.microsoft.com/xamarin)을 참조 하세요.
+Android, iOS 및 플랫폼 간 프로젝트를 시작 하려면 [Xamarin 개발자 포털](/xamarin)을 참조 하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

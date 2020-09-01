@@ -1,6 +1,6 @@
 ---
 Description: 적응 타일 템플릿은 Windows 10의 새로운 기능으로, 다양 한 화면 밀도에 맞게 조정 되는 간단 하 고 유연한 태그 언어를 사용 하 여 고유한 타일 알림 콘텐츠를 디자인할 수 있습니다.
-title: 적응 타일 만들기
+title: 적응형 타일 만들기
 ms.assetid: 1246B58E-D6E3-48C7-AD7F-475D113600F9
 label: Create adaptive tiles
 template: detail.hbs
@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bbc0f23ad712850e565814febe5b7e681e58a85d
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 7cee236b385b6129e7ab1a9cacd549f217f6e734
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234571"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175607"
 ---
-# <a name="create-adaptive-tiles"></a>적응 타일 만들기
+# <a name="create-adaptive-tiles"></a>적응형 타일 만들기
 
-적응 타일 템플릿은 Windows 10의 새로운 기능으로, 다양 한 화면 밀도에 맞게 조정 되는 간단 하 고 유연한 태그 언어를 사용 하 여 고유한 타일 알림 콘텐츠를 디자인할 수 있습니다. 이 문서에서는 Windows 앱에 대 한 적응 라이브 타일을 만드는 방법을 보여 줍니다. 적응 요소 및 특성의 전체 목록은 [적응 타일 스키마](../tiles-and-notifications/tile-schema.md)를 참조 하세요.
+적응 타일 템플릿은 Windows 10의 새로운 기능으로, 다양 한 화면 밀도에 맞게 조정 되는 간단 하 고 유연한 태그 언어를 사용 하 여 고유한 타일 알림 콘텐츠를 디자인할 수 있습니다. 이 문서에서는 Windows 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. 적응 요소 및 특성의 전체 목록은 [적응 타일 스키마](../tiles-and-notifications/tile-schema.md)를 참조 하세요.
 
-(원하는 경우 Windows 10에 대 한 알림을 디자인할 때 [windows 8 타일 템플릿 카탈로그](https://docs.microsoft.com/previous-versions/windows/apps/hh761491(v=win.10)) 에서 미리 설정 된 템플릿을 계속 사용할 수 있습니다.)
+(원하는 경우 Windows 10에 대 한 알림을 디자인할 때 [windows 8 타일 템플릿 카탈로그](/previous-versions/windows/apps/hh761491(v=win.10)) 에서 미리 설정 된 템플릿을 계속 사용할 수 있습니다.)
 
 
 ## <a name="getting-started"></a>시작
@@ -415,13 +415,13 @@ new AdaptiveText()
 |                                |                           |             |
 |--------------------------------|---------------------------|-------------|
 | &lt;텍스트 힌트-스타일 = " \* "/&gt; | 글꼴 높이               | 글꼴 두께 |
-| caption                        | 12 개의 유효 픽셀 (epx) | Regular     |
-| 본문                           | 15 window.epx.codesnippet                    | Regular     |
+| caption                        | 12 개의 유효 픽셀 (epx) | 주기적     |
+| 본문                           | 15 window.epx.codesnippet                    | 주기적     |
 | base                           | 15 window.epx.codesnippet                    | 약간 굵게    |
-| 제목                       | 20 window.epx.codesnippet                    | Regular     |
+| 제목                       | 20 window.epx.codesnippet                    | 주기적     |
 | title                          | 24 window.epx.codesnippet                    | 굴림   |
-| subheader.aboutdocs                      | 34 window.epx.codesnippet                    | Light       |
-| 머리글                         | 46 window.epx.codesnippet                    | Light       |
+| subheader.aboutdocs                      | 34 window.epx.codesnippet                    | 밝음       |
+| header                         | 46 window.epx.codesnippet                    | 밝음       |
 
  
 
@@ -1399,7 +1399,3 @@ TileWide = new TileBinding()
  
 
  
-
-
-
-

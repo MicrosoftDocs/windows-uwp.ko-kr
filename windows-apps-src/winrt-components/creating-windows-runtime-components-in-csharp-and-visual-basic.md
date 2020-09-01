@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: a52bca6ecc08016d1cb7633acadd362e2215cd3a
-ms.sourcegitcommit: 9beb6cce7375b726ad90ee84b72754268ae2819a
+ms.openlocfilehash: 7a1235159b0f9d69e7fcedd334aeb9e9246d3d2b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88047780"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174297"
 ---
 # <a name="windows-runtime-components-with-c-and-visual-basic"></a>C# 및 Visual Basic이 포함된 Windows 런타임 구성 요소
 
@@ -24,7 +24,7 @@ Visual Basic 또는 c #으로 작성 된 UWP 앱 에서만 사용 하도록 구�
 
 ## <a name="declaring-types-in-windows-runtime-components"></a>Windows 런타임 구성 요소에서 형식 선언
 
-내부적으로 구성 요소의 Windows 런타임 형식은 UWP 앱에서 허용 되는 모든 .NET 기능을 사용할 수 있습니다. 자세한 내용은 [UWP 앱 용 .net](https://docs.microsoft.com/dotnet/api/index?view=dotnet-uwp-10.0)을 참조 하세요.
+내부적으로 구성 요소의 Windows 런타임 형식은 UWP 앱에서 허용 되는 모든 .NET 기능을 사용할 수 있습니다. 자세한 내용은 [UWP 앱 용 .net](/dotnet/api/index?view=dotnet-uwp-10.0)을 참조 하세요.
 
 외부적으로 형식의 멤버는 매개 변수 및 반환 값에 대 한 Windows 런타임 형식만 노출할 수 있습니다. 다음 목록에서는 Windows 런타임 구성 요소에서 노출 되는 .NET 형식에 대 한 제한 사항을 설명 합니다.
 
@@ -183,7 +183,7 @@ Windows 8.1부터 Windows 런타임에는 **IStringable** **에서 제공**하�
 
 (Visual Basic)를 사용 하는 메서드에는 `await` `Await` `async` 키워드 ( `Async` Visual Basic)가 필요 합니다. Windows 런타임 구성 요소에서 이러한 메서드를 노출 하는 경우 `async` **실행** 메서드에 전달 하는 대리자에 키워드를 적용 합니다.
 
-취소 또는 진행 상황 보고를 지원하지 않는 비동기 작업의 경우 [WindowsRuntimeSystemExtensions.AsAsyncAction](https://docs.microsoft.com/dotnet/api/system) 또는 [AsAsyncOperation&lt;TResult&gt;](https://docs.microsoft.com/dotnet/api/system) 확장 메서드를 사용하여 작업을 적절한 인터페이스에 래핑할 수 있습니다. 예를 들어 다음 코드는 Task를 사용 하 여 비동기 메서드를 구현 합니다 **. &lt; TResult &gt; ** 메서드를 실행 하 여 작업을 시작 합니다. **AsAsyncOperation &lt; TResult &gt; ** 확장 메서드는 작업을 Windows 런타임 비동기 작업으로 반환 합니다.
+취소 또는 진행 상황 보고를 지원하지 않는 비동기 작업의 경우 [WindowsRuntimeSystemExtensions.AsAsyncAction](/dotnet/api/system) 또는 [AsAsyncOperation&lt;TResult&gt;](/dotnet/api/system) 확장 메서드를 사용하여 작업을 적절한 인터페이스에 래핑할 수 있습니다. 예를 들어 다음 코드는 Task를 사용 하 여 비동기 메서드를 구현 합니다 **. &lt; TResult &gt; ** 메서드를 실행 하 여 작업을 시작 합니다. **AsAsyncOperation &lt; TResult &gt; ** 확장 메서드는 작업을 Windows 런타임 비동기 작업으로 반환 합니다.
 
 ```csharp
 public static IAsyncOperation<IList<string>> DownloadAsStringsAsync(string id)
@@ -208,7 +208,7 @@ Public Shared Function DownloadAsStringsAsync(ByVal id As String) _
 End Function
 ```
 
-다음 JavaScript 코드는 [**WinJS**](https://docs.microsoft.com/previous-versions/windows/apps/br211867(v=win.10)) 개체를 사용 하 여 메서드를 호출 하는 방법을 보여 줍니다. 다음 메서드에 전달된 함수는 비동기 호출이 완료될 때 실행됩니다. StringList 매개 변수는 **DownloadAsStringAsync** 메서드에서 반환 되는 문자열 목록을 포함 하며 함수는 필요한 모든 처리 작업을 수행 합니다.
+다음 JavaScript 코드는 [**WinJS**](/previous-versions/windows/apps/br211867(v=win.10)) 개체를 사용 하 여 메서드를 호출 하는 방법을 보여 줍니다. 다음 메서드에 전달된 함수는 비동기 호출이 완료될 때 실행됩니다. StringList 매개 변수는 **DownloadAsStringAsync** 메서드에서 반환 되는 문자열 목록을 포함 하며 함수는 필요한 모든 처리 작업을 수행 합니다.
 
 ```javascript
 function asyncExample(id) {
@@ -222,7 +222,7 @@ function asyncExample(id) {
 
 취소 또는 진행률 보고를 지 원하는 비동기 작업 및 작업의 경우 [**system.runtime.interopservices.windowsruntime.asyncinfo**](/dotnet/api/system.runtime.interopservices.windowsruntime) 클래스를 사용 하 여 시작 된 작업을 생성 하 고, 작업의 취소 및 진행률 보고 기능을 해당 Windows 런타임 인터페이스의 취소 및 진행률 보고 기능에 연결 합니다. 취소 및 진행률 보고를 모두 지 원하는 예제는 [c # 또는 Visual Basic Windows 런타임 구성 요소를 만들고 JavaScript에서 호출](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)하는 연습을 참조 하세요.
 
-비동기 메서드가 취소 또는 진행률 보고를 지원 하지 않는 경우에도 **system.runtime.interopservices.windowsruntime.asyncinfo** 클래스의 메서드를 사용할 수 있습니다. Visual Basic 람다 함수 또는 c # 무명 메서드를 사용 하는 경우 token 및 [**Iprogress &lt; t &gt; **](https://docs.microsoft.com/dotnet/api/system.iprogress-1) 인터페이스에 대 한 매개 변수를 제공 하지 마세요. C# 람다 함수를 사용하는 경우 토큰 매개 변수를 제공하되 무시합니다. AsAsyncOperation tresult 메서드를 사용 하는 이전 예제는 &lt; &gt; [**system.runtime.interopservices.windowsruntime.asyncinfo &lt; tresult &gt; (Func &lt; CancellationToken, Task &lt; &gt; &gt; TResult**](https://docs.microsoft.com/dotnet/api/system.runtime.interopservices.windowsruntime)) 메서드 오버 로드를 대신 사용 하는 경우 다음과 같이 표시 됩니다.
+비동기 메서드가 취소 또는 진행률 보고를 지원 하지 않는 경우에도 **system.runtime.interopservices.windowsruntime.asyncinfo** 클래스의 메서드를 사용할 수 있습니다. Visual Basic 람다 함수 또는 c # 무명 메서드를 사용 하는 경우 token 및 [**Iprogress &lt; t &gt; **](/dotnet/api/system.iprogress-1) 인터페이스에 대 한 매개 변수를 제공 하지 마세요. C# 람다 함수를 사용하는 경우 토큰 매개 변수를 제공하되 무시합니다. AsAsyncOperation tresult 메서드를 사용 하는 이전 예제는 &lt; &gt; [**system.runtime.interopservices.windowsruntime.asyncinfo &lt; tresult &gt; (Func &lt; CancellationToken, Task &lt; &gt; &gt; TResult**](/dotnet/api/system.runtime.interopservices.windowsruntime)) 메서드 오버 로드를 대신 사용 하는 경우 다음과 같이 표시 됩니다.
 
 ```csharp
 public static IAsyncOperation<IList<string>> DownloadAsStringsAsync(string id)
@@ -259,28 +259,28 @@ Windows 앱용 .NET에 포함된 모든 예외 형식을 발생시킬 수 있습
 
     > **팁**.현재, 스택 추적에는 관리되는 예외 형식이 포함되어 있지만 예외 형식을 식별하기 위해 추적을 구문 분석하지 않는 것이 좋습니다. 대신 이 섹션의 뒷부분에서 설명하는 HRESULT 값을 사용하세요.
 
--   C++에서 예외는 플랫폼 예외로 나타납니다. 관리 되는 예외의 HResult 속성을 특정 플랫폼 예외의 HRESULT에 매핑할 수 있으면 특정 예외가 사용 됩니다. 그렇지 않으면 [**Platform:: COMException**](https://docs.microsoft.com/cpp/cppcx/platform-comexception-class) 예외가 throw 됩니다. C++ 코드에서는 관리 예외의 메시지 텍스트를 사용할 수 없습니다. 특정 플랫폼 예외가 발생된 경우 해당 예외 형식에 대한 기본 메시지 텍스트가 나타납니다. 그렇지 않은 경우 메시지 텍스트가 나타나지 않습니다. [예외(C++/CX)](https://docs.microsoft.com/cpp/cppcx/exceptions-c-cx)를 참조하세요.
+-   C++에서 예외는 플랫폼 예외로 나타납니다. 관리 되는 예외의 HResult 속성을 특정 플랫폼 예외의 HRESULT에 매핑할 수 있으면 특정 예외가 사용 됩니다. 그렇지 않으면 [**Platform:: COMException**](/cpp/cppcx/platform-comexception-class) 예외가 throw 됩니다. C++ 코드에서는 관리 예외의 메시지 텍스트를 사용할 수 없습니다. 특정 플랫폼 예외가 발생된 경우 해당 예외 형식에 대한 기본 메시지 텍스트가 나타납니다. 그렇지 않은 경우 메시지 텍스트가 나타나지 않습니다. [예외(C++/CX)](/cpp/cppcx/exceptions-c-cx)를 참조하세요.
 -   C# 또는 Visual Basic에서 예외는 일반적인 관리 예외입니다.
 
-구성 요소에서 예외가 발생할 때 HResult 속성 값이 해당 구성 요소와 관련된 비공용 예외 형식을 발생시켜 JavaScript 또는 C++ 호출자에서 예외를 쉽게 처리하도록 할 수 있습니다. HRESULT는 예외 개체의 number 속성을 통해 JavaScript 호출자가 사용할 수 있고 [**COMException:: HRESULT**](https://docs.microsoft.com/cpp/cppcx/platform-comexception-class#hresult) 속성을 통해 c + + 호출자가 사용할 수 있습니다.
+구성 요소에서 예외가 발생할 때 HResult 속성 값이 해당 구성 요소와 관련된 비공용 예외 형식을 발생시켜 JavaScript 또는 C++ 호출자에서 예외를 쉽게 처리하도록 할 수 있습니다. HRESULT는 예외 개체의 number 속성을 통해 JavaScript 호출자가 사용할 수 있고 [**COMException:: HRESULT**](/cpp/cppcx/platform-comexception-class#hresult) 속성을 통해 c + + 호출자가 사용할 수 있습니다.
 
 > [!NOTE]
 > HRESULT에 음수 값을 사용 합니다. 양수 값은 성공으로 해석되어 JavaScript 또는 C++ 호출자에서 예외가 발생되지 않습니다.
 
 ## <a name="declaring-and-raising-events"></a>이벤트 선언 및 발생
 
-이벤트에 대한 데이터를 저장하는 형식을 선언하면 EventArgs 대신 Object에서 파생되는데 그 이유는 EventArgs가 Windows 런타임 형식이 아니기 때문입니다. 이벤트 형식으로 [**EventHandler &lt; teventargs &gt; **](https://docs.microsoft.com/dotnet/api/system.eventhandler-1) 를 사용 하 고 이벤트 인수 형식을 제네릭 형식 인수로 사용 합니다. .NET 응용 프로그램에서와 마찬가지로 이벤트를 발생 시킵니다.
+이벤트에 대한 데이터를 저장하는 형식을 선언하면 EventArgs 대신 Object에서 파생되는데 그 이유는 EventArgs가 Windows 런타임 형식이 아니기 때문입니다. 이벤트 형식으로 [**EventHandler &lt; teventargs &gt; **](/dotnet/api/system.eventhandler-1) 를 사용 하 고 이벤트 인수 형식을 제네릭 형식 인수로 사용 합니다. .NET 응용 프로그램에서와 마찬가지로 이벤트를 발생 시킵니다.
 
-Windows 런타임 구성 요소가 JavaScript 또는 C++에서 사용되는 경우 이벤트는 해당 언어에 필요한 Windows 런타임 이벤트 패턴을 따릅니다. C # 또는 Visual Basic에서 구성 요소를 사용 하는 경우 이벤트는 일반적인 .NET 이벤트로 표시 됩니다. 예제는 [c # 또는 Visual Basic Windows 런타임 구성 요소를 만들고 JavaScript에서 호출](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)하는 연습에서 제공 됩니다.
+Windows 런타임 구성 요소가 JavaScript 또는 C++에서 사용되는 경우 이벤트는 해당 언어에 필요한 Windows 런타임 이벤트 패턴을 따릅니다. C # 또는 Visual Basic에서 구성 요소를 사용 하는 경우 이벤트는 일반적인 .NET 이벤트로 표시 됩니다. 예제는 [c # 또는 Visual Basic Windows 런타임 구성 요소를 만들고 JavaScript에서 호출](./walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)하는 연습에서 제공 됩니다.
 
 사용자 지정 이벤트 접근자를 구현한 경우(Visual Basic에서는 **Custom** 키워드로 이벤트 선언) 해당 구현의 Windows 런타임 이벤트 패턴을 따라야 합니다. [Windows 런타임 구성 요소의 사용자 지정 이벤트 및 이벤트 접근자](custom-events-and-event-accessors-in-windows-runtime-components.md)를 참조 하세요. C # 또는 Visual Basic 코드에서 이벤트를 처리 하는 경우에도 일반적인 .NET 이벤트로 표시 됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-직접 사용하기 위해 Windows 런타임 구성 요소를 만든 경우 해당 기능이 다른 개발자에게도 유용할 수 있습니다. 다른 개발자에게 배포하기 위해 구성 요소를 패키지하는 방법에는 두 가지가 있습니다. [관리되는 Windows 런타임 구성 요소 배포](https://docs.microsoft.com/previous-versions/windows/apps/jj614475(v=vs.140))를 참조하세요.
+직접 사용하기 위해 Windows 런타임 구성 요소를 만든 경우 해당 기능이 다른 개발자에게도 유용할 수 있습니다. 다른 개발자에게 배포하기 위해 구성 요소를 패키지하는 방법에는 두 가지가 있습니다. [관리되는 Windows 런타임 구성 요소 배포](/previous-versions/windows/apps/jj614475(v=vs.140))를 참조하세요.
 
-Visual Basic 및 c # 언어 기능 및 Windows 런타임에 대 한 .NET 지원에 대 한 자세한 내용은 [Visual Basic 및 c # 언어 참조](https://docs.microsoft.com/visualstudio/welcome-to-visual-studio-2015?view=vs-2015)를 참조 하세요.
+Visual Basic 및 c # 언어 기능 및 Windows 런타임에 대 한 .NET 지원에 대 한 자세한 내용은 [Visual Basic 및 c # 언어 참조](/visualstudio/welcome-to-visual-studio-2015?view=vs-2015)를 참조 하세요.
 
 ## <a name="related-topics"></a>관련 항목
-* [UWP 앱용 .NET](https://docs.microsoft.com/dotnet/api/index?view=dotnet-uwp-10.0)
+* [UWP 앱용 .NET](/dotnet/api/index?view=dotnet-uwp-10.0)
 * [C# 또는 Visual Basic Windows 런타임 구성 요소를 만들고 JavaScript에서 호출하는 연습](walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript.md)

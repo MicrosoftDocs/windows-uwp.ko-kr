@@ -6,19 +6,19 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a2cccf0392c4e71cc76449d1cfe505af092871e
-ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
+ms.openlocfilehash: 92f670fbacef8c3e87cf1b3389a3d8ab9a9db444
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970151"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174777"
 ---
 # <a name="manage-your-ad-campaign"></a>광고 캠페인 관리
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세히 알아보기](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 정보](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
-[파트너 센터](https://partner.microsoft.com/dashboard)에서 앱에 대 한 광고 캠페인을 관리 하려면 왼쪽 탐색 메뉴에서 **관심** 영역을 확장 한 다음 **ad 캠페인**을 선택 합니다. 앱과 관련 된 모든 ad 캠페인이 표시 되 고, 클릭 하 여 각 광고 캠페인에 대 한 설치와 함께 표시 됩니다. 노출, 클릭 및 설치에 대 한 자세한 내용은 [Ad 캠페인 보고서](promote-your-app-report.md)에서 해당 용어에 대 한 정의를 참조 하세요.
+[파트너 센터](https://partner.microsoft.com/dashboard)에서 앱에 대 한 광고 캠페인을 관리 하려면 왼쪽 탐색 메뉴에서 **관심** 영역을 확장 한 다음 **ad 캠페인**을 선택 합니다. 앱과 관련 된 모든 ad 캠페인이 표시 되 고, 클릭 하 여 각 광고 캠페인에 대 한 설치와 함께 표시 됩니다. 노출, 클릭 및 설치에 대 한 자세한 내용은 [Ad 캠페인 보고서](/windows/uwp/publish/ad-campaign-report)에서 해당 용어에 대 한 정의를 참조 하세요.
 
 광고 캠페인 목록을 필터링 하려면 **섹션 필터** 드롭다운을 클릭 하 고 다음 필터 중에서 선택 합니다.
 
@@ -33,7 +33,7 @@ ms.locfileid: "88970151"
 ## <a name="reporting"></a>보고
 
 
-보고 세부 정보는이 페이지에 표시 됩니다. 자세한 내용은 [광고 캠페인 보고서](promote-your-app-report.md)를 참조 하세요.
+보고 세부 정보는이 페이지에 표시 됩니다. 자세한 내용은 [광고 캠페인 보고서](/windows/uwp/publish/ad-campaign-report)를 참조 하세요.
 
 
 ## <a name="edit-an-ad-campaign"></a>광고 캠페인 편집
@@ -46,12 +46,8 @@ ms.locfileid: "88970151"
 
 * [앱 광고 캠페인 만들기](create-an-ad-campaign-for-your-app.md)
 * [하우스 광고 정보](about-house-ads.md)
-* [앱 설치 광고 보고서](app-install-ads-reports.md)
+* [앱 설치 광고 보고서](/windows/uwp/publish/ad-campaign-report)
 * [일반적인 질문](common-questions.md)
  
 
  
-
-
-
-

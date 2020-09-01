@@ -1,30 +1,30 @@
 ---
 ms.assetid: 9347AD7C-3A90-4073-BFF4-9E8237398343
-description: 이 문서에는 UWP 앱의 형식 지원과 오디오 및 비디오 코덱이 나열되어 있습니다.
+description: 이 문서에서는 UWP 앱에 대 한 오디오 및 비디오 코덱 및 형식 지원을 나열 합니다.
 title: 지원되는 코덱
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b122aa6436e55c80276cdd684b7c10cc3c47d28
-ms.sourcegitcommit: 49a34e957433966ac8d4822b5822f21087aa61c3
+ms.openlocfilehash: bf61935459d8b842a3d26fcfe546995427d98d3f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74153716"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175697"
 ---
 # <a name="supported-codecs"></a>지원되는 코덱
 
-이 문서에서는 각 장치 제품군에서 UWP 앱에 기본적으로 사용할 수 있는 오디오, 동영상, 이미지 코덱 및 형식을 나열합니다. 이 표에 나열된 코덱은 지정된 장치 제품군에 대한 Windows 10 설치에 포함되어 있는 코덱입니다. 사용자와 앱은 사용할 수 있는 추가 코덱을 설치할 수 있습니다. 특정 장치에서 현재 사용할 수 있는 코덱의 집합을 런타임에 쿼리할 수 있습니다. 자세한 내용은 [디바이스에 설치된 코덱에 대한 쿼리](codec-query.md)를 참조하세요.
+이 문서에는 각 장치 제품군에 대해 기본적으로 UWP 앱에 대 한 오디오, 비디오 및 이미지 코덱 및 형식 가용성이 나열 되어 있습니다. 이러한 표에는 지정 된 장치 제품군에 대 한 Windows 10 설치에 포함 된 코덱이 나열 되어 있습니다. 사용자 및 앱은 사용 가능한 추가 코덱을 설치할 수 있습니다. 런타임에 특정 장치에 대해 현재 사용할 수 있는 코덱 집합을 쿼리할 수 있습니다. 자세한 내용은 [장치에 설치 된 코덱 쿼리](codec-query.md)를 참조 하세요.
 
-아래 표에서 “D”는 디코더 지원을 나타내고 “E”는 인코더 지원을 나타냅니다.
+아래 표에서 "D"는 디코더가 지원 되며 "E"는 인코더 지원을 나타냅니다.
 
-## <a name="audio-codec--format-support"></a>오디오 코덱 및 형식 지원
+## <a name="audio-codec--format-support"></a>오디오 코덱 & 형식 지원
 
-다음 표에는 각 장치 제품군의 오디오 코덱과 형식 지원이 표시되어 있습니다.
+다음 표에서는 각 장치 제품군에 대 한 오디오 코덱 및 형식 지원을 보여 줍니다.
 
 > [!NOTE] 
-> AMR-NB 지원이 표시되어 있으며 이 코덱은 서버 SKU에서 지원되지 않습니다.
+> AMR-NB 지원이 표시 되는 경우이 코덱은 서버 Sku에서 지원 되지 않습니다.
 
  
 
@@ -55,7 +55,7 @@ ms.locfileid: "74153716"
 <th align="left">ADTS</th>
 <th align="left">ASF</th>
 <th align="left">RIFF</th>
-<th align="left">AVI</th>
+<th align="left">기본값으로</th>
 <th align="left">AC-3</th>
 <th align="left">AMR</th>
 <th align="left">3GP</th>
@@ -65,7 +65,7 @@ ms.locfileid: "74153716"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1 / AAC+</td>
+<td align="left">AAC v1/AAC +</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -80,7 +80,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2 / eAAC+</td>
+<td align="left">AAC v2/eAAC +</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -125,7 +125,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">EAC3/EC3</td>
+<td align="left">EAC3 / EC3</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left">D</td>
@@ -185,7 +185,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">G.711 (A-Law, µ-law)</td>
+<td align="left">711 (법률, μ 법률)</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -215,7 +215,7 @@ ms.locfileid: "74153716"
 <td align="left">D</td>
 </tr>
 <tr class="odd">
-<td align="left">IMA ADPCM</td>
+<td align="left">이미지 ADPCM</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -339,7 +339,7 @@ ms.locfileid: "74153716"
 
  
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>모바일
 
 <table>
 <colgroup>
@@ -366,7 +366,7 @@ ms.locfileid: "74153716"
 <th align="left">ADTS</th>
 <th align="left">ASF</th>
 <th align="left">RIFF</th>
-<th align="left">AVI</th>
+<th align="left">기본값으로</th>
 <th align="left">AC-3</th>
 <th align="left">AMR</th>
 <th align="left">3GP</th>
@@ -376,7 +376,7 @@ ms.locfileid: "74153716"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1 / AAC+</td>
+<td align="left">AAC v1/AAC +</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -391,7 +391,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2 / eAAC+</td>
+<td align="left">AAC v2/eAAC +</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -422,21 +422,21 @@ ms.locfileid: "74153716"
 </tr>
 <tr class="even">
 <td align="left">AC3</td>
-<td align="left">D, Lumia Icon, 830, 930, 1520에만 해당</td>
+<td align="left">D, Lumia 아이콘, 830, 930, 1520에만 해당</td>
 <td align="left"></td>
-<td align="left">D, Lumia Icon, 830, 930, 1520에만 해당</td>
+<td align="left">D, Lumia 아이콘, 830, 930, 1520에만 해당</td>
 <td align="left"></td>
-<td align="left">D, Lumia Icon, 830, 930, 1520에만 해당</td>
-<td align="left">D, Lumia Icon, 830, 930, 1520에만 해당</td>
-<td align="left">D, Lumia Icon, 830, 930, 1520에만 해당</td>
-<td align="left">D, Lumia Icon, 830, 930, 1520에만 해당</td>
+<td align="left">D, Lumia 아이콘, 830, 930, 1520에만 해당</td>
+<td align="left">D, Lumia 아이콘, 830, 930, 1520에만 해당</td>
+<td align="left">D, Lumia 아이콘, 830, 930, 1520에만 해당</td>
+<td align="left">D, Lumia 아이콘, 830, 930, 1520에만 해당</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">EAC3/EC3</td>
+<td align="left">EAC3 / EC3</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -496,7 +496,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">G.711 (A-Law, µ-law)</td>
+<td align="left">711 (법률, μ 법률)</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -526,7 +526,7 @@ ms.locfileid: "74153716"
 <td align="left">D</td>
 </tr>
 <tr class="odd">
-<td align="left">IMA ADPCM</td>
+<td align="left">이미지 ADPCM</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -650,7 +650,7 @@ ms.locfileid: "74153716"
 
  
 
-### <a name="iot-core-x86"></a>IoT Core(x86)
+### <a name="iot-core-x86"></a>IoT Core (x86)
 
 <table>
 <colgroup>
@@ -677,7 +677,7 @@ ms.locfileid: "74153716"
 <th align="left">ADTS</th>
 <th align="left">ASF</th>
 <th align="left">RIFF</th>
-<th align="left">AVI</th>
+<th align="left">기본값으로</th>
 <th align="left">AC-3</th>
 <th align="left">AMR</th>
 <th align="left">3GP</th>
@@ -687,7 +687,7 @@ ms.locfileid: "74153716"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1 / AAC+</td>
+<td align="left">AAC v1/AAC +</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -702,7 +702,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2 / eAAC+</td>
+<td align="left">AAC v2/eAAC +</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -747,7 +747,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">EAC3/EC3</td>
+<td align="left">EAC3 / EC3</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left">D</td>
@@ -807,7 +807,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">G.711 (A-Law, µ-law)</td>
+<td align="left">711 (법률, μ 법률)</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -837,7 +837,7 @@ ms.locfileid: "74153716"
 <td align="left">D</td>
 </tr>
 <tr class="odd">
-<td align="left">IMA ADPCM</td>
+<td align="left">이미지 ADPCM</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -961,7 +961,7 @@ ms.locfileid: "74153716"
 
  
 
-### <a name="iot-core-arm"></a>IoT Core(ARM)
+### <a name="iot-core-arm"></a>IoT Core (ARM)
 
 <table>
 <colgroup>
@@ -988,7 +988,7 @@ ms.locfileid: "74153716"
 <th align="left">ADTS</th>
 <th align="left">ASF</th>
 <th align="left">RIFF</th>
-<th align="left">AVI</th>
+<th align="left">기본값으로</th>
 <th align="left">AC-3</th>
 <th align="left">AMR</th>
 <th align="left">3GP</th>
@@ -998,7 +998,7 @@ ms.locfileid: "74153716"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1 / AAC+</td>
+<td align="left">AAC v1/AAC +</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1013,7 +1013,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2 / eAAC+</td>
+<td align="left">AAC v2/eAAC +</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1058,7 +1058,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">EAC3/EC3</td>
+<td align="left">EAC3 / EC3</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1118,7 +1118,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">G.711 (A-Law, µ-law)</td>
+<td align="left">711 (법률, μ 법률)</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1148,7 +1148,7 @@ ms.locfileid: "74153716"
 <td align="left">D</td>
 </tr>
 <tr class="odd">
-<td align="left">IMA ADPCM</td>
+<td align="left">이미지 ADPCM</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1299,7 +1299,7 @@ ms.locfileid: "74153716"
 <th align="left">ADTS</th>
 <th align="left">ASF</th>
 <th align="left">RIFF</th>
-<th align="left">AVI</th>
+<th align="left">기본값으로</th>
 <th align="left">AC-3</th>
 <th align="left">AMR</th>
 <th align="left">3GP</th>
@@ -1309,7 +1309,7 @@ ms.locfileid: "74153716"
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">HE-AAC v1 / AAC+</td>
+<td align="left">AAC v1/AAC +</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1324,7 +1324,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">HE-AAC v2 / eAAC+</td>
+<td align="left">AAC v2/eAAC +</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1369,7 +1369,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">EAC3/EC3</td>
+<td align="left">EAC3 / EC3</td>
 <td align="left">D</td>
 <td align="left"></td>
 <td align="left">D</td>
@@ -1429,7 +1429,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">G.711 (A-Law, µ-law)</td>
+<td align="left">711 (법률, μ 법률)</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1459,7 +1459,7 @@ ms.locfileid: "74153716"
 <td align="left">D</td>
 </tr>
 <tr class="odd">
-<td align="left">IMA ADPCM</td>
+<td align="left">이미지 ADPCM</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1583,13 +1583,13 @@ ms.locfileid: "74153716"
 
  
 
-## <a name="video-codec--format-support"></a>비디오 코덱 및 형식 지원
+## <a name="video-codec--format-support"></a>비디오 코덱 & 형식 지원
 
-다음 표에는 각 장치 제품군의 비디오 코덱과 형식 지원이 표시되어 있습니다.
+다음 표에서는 각 장치 제품군에 대 한 비디오 코덱 및 형식 지원을 보여 줍니다.
 
 > [!NOTE] 
-> H.265 지원이 표시되어 있으면 장치 제품군의 일부 장치에서는 지원되지 않을 수도 있습니다.
-> MPEG-2/MPEG-1 지원이 표시되어 있으면 선택적 Microsoft DVD 유니버설 Windows 앱이 설치되어 있는 경우에만 지원됩니다.
+> 265 지원이 표시 되는 경우 장치 제품군 내의 모든 장치에서 지원 되는 것은 아닙니다.
+> MPEG-2/MPEG-4 지원이 표시 되는 경우 선택적 Microsoft DVD 유니버설 Windows 앱을 설치 하는 경우에만 지원 됩니다.
 
  
 
@@ -1625,8 +1625,8 @@ ms.locfileid: "74153716"
 <th align="left">3GPP2</th>
 <th align="left">AVCHD</th>
 <th align="left">ASF</th>
-<th align="left">AVI</th>
-<th align="left">MKV</th>
+<th align="left">기본값으로</th>
+<th align="left">.MKV</th>
 <th align="left">DV</th>
 </tr>
 </thead>
@@ -1664,7 +1664,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">MPEG-4(파트 2)</td>
+<td align="left">MPEG-4 (2 부)</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D</td>
@@ -1680,7 +1680,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">H.265</td>
+<td align="left">265</td>
 <td align="left"></td>
 <td align="left">D</td>
 <td align="left">D/E</td>
@@ -1712,7 +1712,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">H.263</td>
+<td align="left">263</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D/E</td>
@@ -1792,7 +1792,7 @@ ms.locfileid: "74153716"
 <td align="left">D</td>
 </tr>
 <tr class="odd">
-<td align="left">Motion JPEG</td>
+<td align="left">움직이는 JPEG</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D</td>
@@ -1812,7 +1812,7 @@ ms.locfileid: "74153716"
 
  
 
-### <a name="mobile"></a>Mobile
+### <a name="mobile"></a>모바일
 
 <table>
 <colgroup>
@@ -1844,8 +1844,8 @@ ms.locfileid: "74153716"
 <th align="left">3GPP2</th>
 <th align="left">AVCHD</th>
 <th align="left">ASF</th>
-<th align="left">AVI</th>
-<th align="left">MKV</th>
+<th align="left">기본값으로</th>
+<th align="left">.MKV</th>
 <th align="left">DV</th>
 </tr>
 </thead>
@@ -1883,7 +1883,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">MPEG-4(파트 2)</td>
+<td align="left">MPEG-4 (2 부)</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D</td>
@@ -1899,7 +1899,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">H.265</td>
+<td align="left">265</td>
 <td align="left"></td>
 <td align="left">D</td>
 <td align="left">D/E</td>
@@ -1931,7 +1931,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">H.263</td>
+<td align="left">263</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D/E</td>
@@ -2011,7 +2011,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">Motion JPEG</td>
+<td align="left">움직이는 JPEG</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D</td>
@@ -2031,7 +2031,7 @@ ms.locfileid: "74153716"
 
  
 
-### <a name="iot-core-x86"></a>IoT Core(x86)
+### <a name="iot-core-x86"></a>IoT Core (x86)
 
 <table>
 <colgroup>
@@ -2063,8 +2063,8 @@ ms.locfileid: "74153716"
 <th align="left">3GPP2</th>
 <th align="left">AVCHD</th>
 <th align="left">ASF</th>
-<th align="left">AVI</th>
-<th align="left">MKV</th>
+<th align="left">기본값으로</th>
+<th align="left">.MKV</th>
 <th align="left">DV</th>
 </tr>
 </thead>
@@ -2102,7 +2102,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">MPEG-4(파트 2)</td>
+<td align="left">MPEG-4 (2 부)</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D</td>
@@ -2118,7 +2118,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">H.265</td>
+<td align="left">265</td>
 <td align="left"></td>
 <td align="left">D</td>
 <td align="left">D/E</td>
@@ -2150,7 +2150,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">H.263</td>
+<td align="left">263</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D/E</td>
@@ -2230,7 +2230,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">Motion JPEG</td>
+<td align="left">움직이는 JPEG</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D</td>
@@ -2250,7 +2250,7 @@ ms.locfileid: "74153716"
 
  
 
-### <a name="iot-arm"></a>IoT(ARM)
+### <a name="iot-arm"></a>IoT (ARM)
 
 <table>
 <colgroup>
@@ -2282,8 +2282,8 @@ ms.locfileid: "74153716"
 <th align="left">3GPP2</th>
 <th align="left">AVCHD</th>
 <th align="left">ASF</th>
-<th align="left">AVI</th>
-<th align="left">MKV</th>
+<th align="left">기본값으로</th>
+<th align="left">.MKV</th>
 <th align="left">DV</th>
 </tr>
 </thead>
@@ -2321,7 +2321,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">MPEG-4(파트 2)</td>
+<td align="left">MPEG-4 (2 부)</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -2337,7 +2337,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">H.265</td>
+<td align="left">265</td>
 <td align="left"></td>
 <td align="left">D</td>
 <td align="left">D/E</td>
@@ -2369,7 +2369,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">H.263</td>
+<td align="left">263</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -2449,7 +2449,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">Motion JPEG</td>
+<td align="left">움직이는 JPEG</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D</td>
@@ -2501,8 +2501,8 @@ ms.locfileid: "74153716"
 <th align="left">3GPP2</th>
 <th align="left">AVCHD</th>
 <th align="left">ASF</th>
-<th align="left">AVI</th>
-<th align="left">MKV</th>
+<th align="left">기본값으로</th>
+<th align="left">.MKV</th>
 <th align="left">DV</th>
 </tr>
 </thead>
@@ -2540,7 +2540,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">MPEG-4(파트 2)</td>
+<td align="left">MPEG-4 (2 부)</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D</td>
@@ -2556,7 +2556,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">H.265</td>
+<td align="left">265</td>
 <td align="left"></td>
 <td align="left">D</td>
 <td align="left">D/E</td>
@@ -2588,7 +2588,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="left">H.263</td>
+<td align="left">263</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D/E</td>
@@ -2668,7 +2668,7 @@ ms.locfileid: "74153716"
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left">Motion JPEG</td>
+<td align="left">움직이는 JPEG</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left">D</td>
@@ -2686,7 +2686,7 @@ ms.locfileid: "74153716"
 </tbody>
 </table>
 
-## <a name="image-codec--format-support"></a>이미지 코덱 및 형식 지원 
+## <a name="image-codec--format-support"></a>이미지 코덱 & 형식 지원 
 
 <table>
 <colgroup>
@@ -2696,9 +2696,9 @@ ms.locfileid: "74153716"
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">코덱</th>
+<th align="left">Codec</th>
 <th align="left">데스크톱</th>
-<th align="left">기타 디바이스 패밀리</th>
+<th align="left">기타 장치 패밀리</th>
 </tr>
 </thead>
 <tr class="odd">
@@ -2707,7 +2707,7 @@ ms.locfileid: "74153716"
 <td align="left">D/E</td>
 </tr>
 <tr class="even">
-<td align="left">DDS</td>
+<td align="left">DD</td>
 <td align="left">D/E<sup>1</sup></td>
 <td align="left">D/E<sup>1</sup></td>
 </tr>
@@ -2722,7 +2722,7 @@ ms.locfileid: "74153716"
 <td align="left">D/E</td>
 </tr>
 <tr class="odd">
-<td align="left">ICO</td>
+<td align="left">.ICO</td>
 <td align="left">D</td>
 <td align="left">D</td>
 </tr>
@@ -2747,14 +2747,14 @@ ms.locfileid: "74153716"
 <td align="left">D/E</td>
 </tr>
 <tr class="even">
-<td align="left">카메라 원시</td>
+<td align="left">카메라 RAW</td>
 <td align="left">D<sup>3</sup></td>
-<td align="left">아니요</td>
+<td align="left">예</td>
 </tr>
 </table>
 
-<sup>1</sup> BC1에서 BC5까지의 압축을 사용하는 DDS 이미지가 지원됩니다.  
-<sup>2</sup> RAW가 아닌 미리 보기가 포함된 DNG 이미지가 지원됩니다.  
-<sup>3</sup> 특정 카메라 RAW 형식만 지원됩니다.  
+<sup>1</sup> DDS 이미지를 사용 하 여 BC1를 통해 BC5 압축을 지원 합니다.  
+<sup>2</sup> -RAW embedded 미리 보기가 포함 된 dng 이미지가 지원 됩니다.  
+<sup>3</sup> 특정 카메라 원시 형식만 지원 됩니다.  
 
-이미지 코덱에 대한 자세한 내용은 [네이티브 WIC 코덱](https://docs.microsoft.com/windows/desktop/wic/native-wic-codecs)을 참조하세요.
+이미지 코덱에 대 한 자세한 내용은 [네이티브 WIC 코덱](/windows/desktop/wic/native-wic-codecs)을 참조 하세요.

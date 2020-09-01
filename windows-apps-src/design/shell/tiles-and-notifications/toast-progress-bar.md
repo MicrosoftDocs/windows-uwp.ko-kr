@@ -7,12 +7,12 @@ ms.date: 12/07/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림, 진행률 표시줄, 알림 진행률 표시줄, 알림, 알림 데이터 바인딩
 ms.localizationpriority: medium
-ms.openlocfilehash: 55f92b2ffb5e4c206f791e35e425c73b2ddbab22
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: 4219154a3fe3241b9c1871c07a1fbbb2b63f2348
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89054023"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174607"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>알림 진행률 표시줄 및 데이터 바인딩
 
@@ -23,7 +23,7 @@ ms.locfileid: "89054023"
 
 알림 내부의 진행률 표시줄은 "확정 되지 않음" (특정 값이 없거나 작업이 발생 했음을 나타내는 점에 애니메이션 됨) 또는 "활성화 상태의" (막대의 특정 백분율이 60%와 같이 채워짐) 일 수 있습니다.
 
-> **중요 한 api**: [notificationdata 클래스](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationdata), [to notification. Update 메서드](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier.Update), [to notification 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotification)
+> **중요 한 api**: [notificationdata 클래스](/uwp/api/windows.ui.notifications.notificationdata), [to notification. Update 메서드](/uwp/api/Windows.UI.Notifications.ToastNotifier.Update), [to notification 클래스](/uwp/api/Windows.UI.Notifications.ToastNotification)
 
 > [!NOTE]
 > 바탕 화면 에서만 알림 표시줄의 진행률 표시줄을 지원 합니다. 다른 장치에서 진행률 표시줄이 알림에서 삭제 됩니다.
@@ -157,7 +157,7 @@ public void SendUpdatableToastWithProgress()
 }
 ```
 
-그런 다음 **데이터** 값을 변경 하려는 경우에는 [**Update**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotifier.Update) 메서드를 사용 하 여 전체 알림 페이로드를 다시 생성 하지 않고 새 데이터를 제공 합니다.
+그런 다음 **데이터** 값을 변경 하려는 경우에는 [**Update**](/uwp/api/Windows.UI.Notifications.ToastNotifier.Update) 메서드를 사용 하 여 전체 알림 페이로드를 다시 생성 하지 않고 새 데이터를 제공 합니다.
 
 ```csharp
 using Windows.UI.Notifications;
@@ -188,7 +188,7 @@ public void UpdateProgress()
 
 전체 알림을 대체 하는 대신 **Update** 메서드를 사용 하면 알림 메시지가 작업 센터의 동일한 위치에 유지 되 고 위나 아래로 이동 하지 않습니다. 진행률 표시줄이 채워지면 몇 초 마다 알림 센터의 맨 위로 이동 하는 경우 사용자에 게 매우 혼란 스 러 울 것입니다.
 
-업데이트 **메서드는** 열거형 ( [**NotificationUpdateResult**](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationupdateresult))을 반환 합니다 .이 열거형을 사용 하면 업데이트가 성공 했는지 여부 또는 알림을 찾을 수 없는지 여부를 알 수 있습니다. 즉, 사용자가 알림을 해제 했 고 업데이트 보내기를 중지 해야 합니다. 진행 작업이 완료 될 때까지 다른 알림을 팝 하지 않는 것이 좋습니다 (예: 다운로드가 완료 된 경우).
+업데이트 **메서드는** 열거형 ( [**NotificationUpdateResult**](/uwp/api/windows.ui.notifications.notificationupdateresult))을 반환 합니다 .이 열거형을 사용 하면 업데이트가 성공 했는지 여부 또는 알림을 찾을 수 없는지 여부를 알 수 있습니다. 즉, 사용자가 알림을 해제 했 고 업데이트 보내기를 중지 해야 합니다. 진행 작업이 완료 될 때까지 다른 알림을 팝 하지 않는 것이 좋습니다 (예: 다운로드가 완료 된 경우).
 
 
 ## <a name="elements-that-support-data-binding"></a>데이터 바인딩을 지 원하는 요소

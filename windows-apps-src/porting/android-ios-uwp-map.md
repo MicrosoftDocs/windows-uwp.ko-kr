@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f8afe892b7b8e91e72c1be7c655c8bc00998dd4
-ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
+ms.openlocfilehash: 0591b32671c7e1e74b47a41448f3b77b915a7dc7
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89094620"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174907"
 ---
 # <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 앱 개념 매핑
 
@@ -354,7 +354,7 @@ Android 또는 iOS 기술 및/또는 코드를 사용 하는 개발자 인 경�
 <td align="left"><strong>목록 뷰 최적화입니다.</strong> <br><br>데이터 목록을 최적화 하는 데 도움이 되는 기본 제공 패턴으로 많은 양의 데이터를 표시 해야 하는 경우 성능이 저하 되는 경우가 많습니다.</td>
 <td align="left"><strong>ViewHolder</strong> 디자인 패턴은 재사용 가능한 UI 요소를 사용할 수 있도록 하는 여러 뷰 조회를 방지 하는 데 사용 됩니다.</td>
 <td align="left"><strong>Uitableview</strong>의 성능을 향상 시키기 위해 최적화 범위를 만들 수 있으며, 기본 제공 되는 경우는 없습니다.</td>
-<td align="left"><strong>UI 가상화</strong> 를 기본적으로 제공 하는 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview">ListView</a> 및 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview">GridView</a> 컨트롤을 사용 하 여 부드러운 패닝 및 스크롤 환경을 제공 하 고 시작 시간을 단축할 수 있습니다. 데이터 원본에서 <a href="https://docs.microsoft.com/dotnet/api/system.collections.ilist">IList</a> 및 <a href="https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged">INotifyCollectionChanged</a> 를 구현 하 여 <strong>데이터 가상화</strong> 를 제공 하 고 성능을 향상 시킬 수도 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview">ListView 및 GridView UI 최적화</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/listview-and-gridview-data-optimization">ListView 및 GridView 데이터 가상화</a></td>
+<td align="left"><strong>UI 가상화</strong> 를 기본적으로 제공 하는 <a href="/uwp/api/windows.ui.xaml.controls.listview">ListView</a> 및 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview">GridView</a> 컨트롤을 사용 하 여 부드러운 패닝 및 스크롤 환경을 제공 하 고 시작 시간을 단축할 수 있습니다. 데이터 원본에서 <a href="/dotnet/api/system.collections.ilist">IList</a> 및 <a href="https://docs.microsoft.com/dotnet/api/system.collections.specialized.inotifycollectionchanged">INotifyCollectionChanged</a> 를 구현 하 여 <strong>데이터 가상화</strong> 를 제공 하 고 성능을 향상 시킬 수도 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview">ListView 및 GridView UI 최적화</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/listview-and-gridview-data-optimization">ListView 및 GridView 데이터 가상화</a></td>
 </tr>
 </tbody>
 </table>
@@ -450,7 +450,7 @@ Android 또는 iOS 기술 및/또는 코드를 사용 하는 개발자 인 경�
 </tr>
 </tbody>
 </table>
-<h2 id="notifications">알림</h2>
+<h2 id="notifications">공지</h2>
 <table style="width:100%">
 <colgroup>
 <col width="20%" />
@@ -482,7 +482,7 @@ Android 또는 iOS 기술 및/또는 코드를 사용 하는 개발자 인 경�
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>로컬 알림 예약</strong> <br><br>예약 된 시간에 앱에서 보낸 로컬 알림</td>
 <td align="left">알림과 작업은 <strong>Notificationcompat</strong> 를 사용 하 여 정의 되며, <strong>AlarmManager</strong> 및 <strong>BroadcastReceiver</strong>를 사용 하 여 앱 내에서 예약 하 고 처리할 수 있습니다.</td>
-<td align="left">로컬 알림은 <strong>UILocalNotification</strong> <b> scheduleLocalNotification:<strong>. |를 사용 하 여 예약 될 수 있습니다. ScheduledToastNotification를 사용 하 여 알림 메시지를 예약할 수 </strong> <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ScheduledToastNotification">ScheduledToastNotification</a>있습니다<strong>. TileNotification 클래스를 사용 하 여 앱에서 타일 알림을 보내거나 </strong> <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileNotification">TileNotification class</a> <strong> <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ScheduledTileNotification">ScheduledTileNotification</a>로 타일 알림을 예약할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-adaptive-interactive-toasts">적응형 및 대화형 알림 메시지</a><br/><br/><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-sending-a-local-tile-notification">로컬 타일 알림 보내기</a> | | </strong>푸시 알림을 보내는 중입니다.</b> 푸시 알림 서버에서 전송 되 고 선택적으로 앱 내에서 처리 되는 알림입니다.</td>
+<td align="left">로컬 알림은 <strong>UILocalNotification</strong> <b> scheduleLocalNotification:<strong>. |를 사용 하 여 예약 될 수 있습니다. ScheduledToastNotification를 사용 하 여 알림 메시지를 예약할 수 </strong> <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ScheduledToastNotification">ScheduledToastNotification</a>있습니다<strong>. TileNotification 클래스를 사용 하 여 앱에서 타일 알림을 보내거나 </strong> <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileNotification">TileNotification class</a> <strong> <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ScheduledTileNotification">ScheduledTileNotification</a>로 타일 알림을 예약할 수 있습니다.<br/><br/><a href="https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-adaptive-interactive-toasts">적응형 및 대화형 알림 메시지</a><br/><br/><a href="/windows/uwp/controls-and-patterns/tiles-and-notifications-sending-a-local-tile-notification">로컬 타일 알림 보내기</a> | | </strong>푸시 알림을 보내는 중입니다.</b> 푸시 알림 서버에서 전송 되 고 선택적으로 앱 내에서 처리 되는 알림입니다.</td>
 <td align="left"><strong>Google Cloud Messaging</strong> 는 Android에 대 한 푸시 알림 지원을 제공 합니다.</td>
 </tr>
 </tbody>

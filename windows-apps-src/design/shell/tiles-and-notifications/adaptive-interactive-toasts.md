@@ -8,12 +8,12 @@ ms.date: 11/20/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림 메시지, 대화형 알림을, 적응 알림을, 알림 콘텐츠, 알림 페이로드
 ms.localizationpriority: medium
-ms.openlocfilehash: bda62b76973adb7b6cfe068cdd9ca33b1a54454c
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 97dd16d712dca3de69a98c608b7c8947ebbddfea
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970928"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173367"
 ---
 # <a name="toast-content"></a>알림 콘텐츠
 
@@ -22,7 +22,7 @@ ms.locfileid: "82970928"
 > **중요 API**: [UWP 커뮤니티 도구 키트 알림 NuGet 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 > [!NOTE]
-> Windows 8.1 및 Windows Phone 8.1에서 레거시 템플릿을 보려면 [레거시 알림 템플릿 카탈로그](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10))를 참조 하세요.
+> Windows 8.1 및 Windows Phone 8.1에서 레거시 템플릿을 보려면 [레거시 알림 템플릿 카탈로그](/previous-versions/windows/apps/hh761494(v=win.10))를 참조 하세요.
 
 
 ## <a name="getting-started"></a>시작
@@ -238,7 +238,7 @@ Http 및 https 원격 웹 이미지의 경우 각 개별 이미지의 파일 크
 
 | 일반 연결 | 요금제 연결 | 동일 하 게 작성자 업데이트 전 |
 | - | - | - |
-| 3MB | 1MB | 200KB |
+| 3 MB | 1MB | 200KB |
 
 이미지가 파일 크기를 초과 하거나 다운로드에 실패 하거나 시간이 초과 되 면 이미지가 삭제 되 고 나머지 알림이 표시 됩니다.
 
@@ -303,7 +303,7 @@ ToastContent toastContent = new ToastContent()
 진행률 표시줄을 사용 하는 방법에 대해 자세히 알아보려면 [알림 진행률 표시줄](toast-progress-bar.md)을 참조 하세요.
 
 
-## <a name="headers"></a>헤더
+## <a name="headers"></a>headers
 
 **크리에이터 업데이트의 새로운**기능: 알림 센터 내의 헤더 아래에서 알림을 그룹화 할 수 있습니다. 예를 들어 머리글 아래에 있는 그룹 채팅의 메시지 또는 머리글 아래에 있는 공통 테마의 그룹 알림을 그룹화 할 수 있습니다.
 
@@ -318,7 +318,7 @@ ToastContent toastContent = new ToastContent()
 
 이 추가 콘텐츠는 적응 [타일 설명서](create-adaptive-tiles.md)를 읽어 자세히 알아볼 수 있는 적응을 사용 하 여 지정 됩니다.
 
-적응 콘텐츠는 [**AdaptiveGroup**](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/toast-schema#adaptivegroup)내에 포함 되어야 합니다. 그렇지 않으면 적응을 사용 하 여 렌더링 되지 않습니다.
+적응 콘텐츠는 [**AdaptiveGroup**](./toast-schema.md#adaptivegroup)내에 포함 되어야 합니다. 그렇지 않으면 적응을 사용 하 여 렌더링 되지 않습니다.
 
 
 ### <a name="columns-and-text-elements"></a>열 및 텍스트 요소
@@ -798,7 +798,7 @@ ToastContent content = new ToastContent()
 -   선택적으로 사용자 지정 콘텐츠 문자열을 지정 합니다.
     -   문자열을 제공 하지 않는 경우 "다시 알림" 및 "해제"에 대해 지역화 된 문자열을 자동으로 사용 합니다.
 -   필요에 따라 **Selectionboxid**를 지정 합니다.
-    -   사용자가 다시 알림 간격을 선택 하지 않고 시스템에 정의 된 시간 간격 (OS 전체에 걸쳐 일치)에 대해 알림을 한 번만 다시 알리도록 하려는 경우에는 어떠한 입력 &lt;&gt; 도 구성 하지 않습니다.
+    -   사용자가 다시 알림 간격을 선택 하지 않고 시스템에 정의 된 시간 간격 (OS 전체에 걸쳐 일치)에 대해 알림을 한 번만 다시 알리도록 하려는 경우에는 어떠한 입력도 구성 하지 않습니다 &lt; &gt; .
     -   다시 알림 간격 선택 항목을 제공 하려면 다음을 수행 합니다.
         -   다시 알림 작업에서 **Selectionboxid** 를 지정 합니다.
         -   입력의 id를 다시 알림 동작의 **Selectionboxid** 와 일치 시킵니다.

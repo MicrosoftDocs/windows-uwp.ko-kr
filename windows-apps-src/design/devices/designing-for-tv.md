@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5025a63f5c96365ba1f14311b9c68ed41f4fc5aa
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 491b67322c8b328c21446d50951daad61f15ad3d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234590"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175577"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Xbox 및 TV용 디자인
 
@@ -40,7 +40,7 @@ Xbox One 또는 TV 화면에 출력 되는 다른 장치에 대 한 앱을 개�
 앱이 10 피트 환경에서 잘 작동 하도록 하는 데이 문서의 단계를 모두 수행 하는 것은 아니지만 앱을 이해 하 고 앱에 적절 한 결정을 내릴 때 앱의 특정 요구 사항에 맞게 조정 된 10 피트 환경을 구현 하는 것이 좋습니다.
 10 피트 환경에서 앱을 개발 하는 경우 다음과 같은 디자인 원칙을 고려해 야 합니다.
 
-### <a name="simple"></a>간단한
+### <a name="simple"></a>단순
 
 10 피트 환경용 디자인은 고유한 문제 집합을 제공 합니다. 해상도 및 보기 거리를 통해 사용자가 너무 많은 정보를 처리 하기 어려울 수 있습니다.
 디자인을 깔끔하게 유지 하 고 가능한 가장 간단한 구성 요소로 축소 해 보세요. TV에 표시 되는 정보의 양은 데스크톱이 아닌 휴대폰에서 볼 수 있는 것과 비교할 수 있어야 합니다.
@@ -147,7 +147,7 @@ bool result =
     Windows.UI.ViewManagement.ApplicationViewScaling.TrySetDisableLayoutScaling(true);
 ```
 
-`result`에서 옵트아웃 (opt out) 했는지 여부를 알려 줍니다.
+`result` 에서 옵트아웃 (opt out) 했는지 여부를 알려 줍니다.
 
 HTML/JavaScript에 대 한 샘플 코드를 비롯 한 자세한 내용은 [크기 조정을 해제 하는 방법](../../xbox-apps/disable-scaling.md)을 참조 하세요.
 
@@ -185,7 +185,7 @@ TV 안전 하지 않은 영역은 다음 이미지의 파란색 영역으로 표
 
 ### <a name="drawing-ui-to-the-edge"></a>가장자리에 UI 그리기
 
-사용자에 게 더 많은 집중 교육을 제공 하기 위해 특정 UI 요소를 사용 하 여 화면 가장자리로 확장 하는 것이 좋습니다. 여기에는 [ScrollViewers](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer), [Nav 창](../controls-and-patterns/navigationview.md)및 [CommandBars](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)가 포함 됩니다.
+사용자에 게 더 많은 집중 교육을 제공 하기 위해 특정 UI 요소를 사용 하 여 화면 가장자리로 확장 하는 것이 좋습니다. 여기에는 [ScrollViewers](/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer), [Nav 창](../controls-and-patterns/navigationview.md)및 [CommandBars](/uwp/api/Windows.UI.Xaml.Controls.CommandBar)가 포함 됩니다.
 
 반면에 대화형 요소와 텍스트는 일부 Tv에서 잘리지 않도록 하기 위해 항상 화면 가장자리를 피하는 것도 중요 합니다. 화면 가장자리의 5% 내에서 필수적이 지 않은 시각적 개체만 그리는 것이 좋습니다. [UI 요소 크기 조정](#ui-element-sizing)에 설명 된 대로, Xbox one 콘솔의 기본 배율 비율 200%에 해당 하는 UWP 앱은 960 x 540 epx의 영역을 사용 하므로 앱의 UI에서 다음과 같은 영역에 필수 UI를 배치 하지 않아야 합니다.
 
@@ -205,7 +205,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
     (Windows.UI.ViewManagement.ApplicationViewBoundsMode.UseCoreWindow);
 ```
 
-이 코드 줄을 사용 하면 앱 창이 화면 가장자리로 확장 되므로 모든 대화형 및 필수 UI를 앞에서 설명한 TV 안전 영역으로 이동 해야 합니다. 상황에 맞는 메뉴 및 열린 [ComboBoxes](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)같은 임시 UI는 TV 안전 영역 내에 자동으로 남아 있습니다.
+이 코드 줄을 사용 하면 앱 창이 화면 가장자리로 확장 되므로 모든 대화형 및 필수 UI를 앞에서 설명한 TV 안전 영역으로 이동 해야 합니다. 상황에 맞는 메뉴 및 열린 [ComboBoxes](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)같은 임시 UI는 TV 안전 영역 내에 자동으로 남아 있습니다.
 
 ![핵심 창 경계](images/designing-for-tv/core-window-bounds.png)
 
@@ -213,7 +213,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
 
 탐색 창은 일반적으로 화면 가장자리 근처에 그려져 있으므로 배경을 TV 안전 하지 않은 영역으로 확장 하 여 잘못 된 간격을 도입 하지 않도록 합니다. 이렇게 하려면 탐색 창의 배경색을 앱 배경의 색으로 변경 하면 됩니다.
 
-앞에서 설명한 대로 핵심 창 경계를 사용 하면 UI를 화면 가장자리에 그릴 수 있지만 [SplitView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SplitView)의 콘텐츠에 양의 여백을 사용 하 여 TV 안전 영역 내에 유지 해야 합니다.
+앞에서 설명한 대로 핵심 창 경계를 사용 하면 UI를 화면 가장자리에 그릴 수 있지만 [SplitView](/uwp/api/Windows.UI.Xaml.Controls.SplitView)의 콘텐츠에 양의 여백을 사용 하 여 TV 안전 영역 내에 유지 해야 합니다.
 
 ![화면 가장자리로 확장 된 탐색 창](images/designing-for-tv/tv-safe-areas-2.png)
 
@@ -239,7 +239,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
 </SplitView>
 ```
 
-[명령 모음](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar) 은 일반적으로 앱의 하나 이상 가장자리 근처에 배치 되는 창의 또 다른 예입니다. TV에서는 배경이 화면 가장자리로 확장 되어야 합니다. 또한 일반적으로 "..."로 표시 되는 **더 많은** 단추를 포함 합니다. 오른쪽에는 TV 안전 영역에 남아 있어야 합니다. 다음은 원하는 상호 작용 및 시각적 효과를 얻기 위한 몇 가지 다른 전략입니다.
+[명령 모음](/uwp/api/Windows.UI.Xaml.Controls.CommandBar) 은 일반적으로 앱의 하나 이상 가장자리 근처에 배치 되는 창의 또 다른 예입니다. TV에서는 배경이 화면 가장자리로 확장 되어야 합니다. 또한 일반적으로 "..."로 표시 되는 **더 많은** 단추를 포함 합니다. 오른쪽에는 TV 안전 영역에 남아 있어야 합니다. 다음은 원하는 상호 작용 및 시각적 효과를 얻기 위한 몇 가지 다른 전략입니다.
 
 **옵션 1**: 배경색을 `CommandBar` 페이지 배경과 동일한 색 또는 투명 한 색으로 변경 합니다.
 
@@ -280,7 +280,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
 
 ![스크롤 그리드 포커스는 TV 안전 영역에 유지 되어야 합니다.](images/designing-for-tv/scrolling-grid-focus.png)
 
-UWP에는 포커스를 [VisibleBounds](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview.visiblebounds)내부에 유지 하는 기능이 있지만 목록/그리드 항목을 안전 영역 보기로 스크롤할 수 있도록 안쪽 여백을 추가 해야 합니다. 특히 다음 코드 조각과 같이 [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 또는 [GridView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)의 [ItemsPresenter](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsPresenter)에 양의 여백을 추가 합니다.
+UWP에는 포커스를 [VisibleBounds](/uwp/api/windows.ui.viewmanagement.applicationview.visiblebounds)내부에 유지 하는 기능이 있지만 목록/그리드 항목을 안전 영역 보기로 스크롤할 수 있도록 안쪽 여백을 추가 해야 합니다. 특히 다음 코드 조각과 같이 [ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView) 또는 [GridView](/uwp/api/Windows.UI.Xaml.Controls.GridView)의 [ItemsPresenter](/uwp/api/Windows.UI.Xaml.Controls.ItemsPresenter)에 양의 여백을 추가 합니다.
 
 ```xml
 <Style x:Key="TitleSafeListViewStyle"
@@ -331,9 +331,9 @@ UWP에는 포커스를 [VisibleBounds](https://docs.microsoft.com/uwp/api/window
 ```
 
 > [!NOTE]
-> 이 코드 조각은 특히에 해당 합니다. `ListView` 스타일의 경우 `GridView` [ControlTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) 와 [스타일](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) 모두에 대해 [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) 특성을로 설정 `GridView` 합니다.
+> 이 코드 조각은 특히에 해당 합니다. `ListView` 스타일의 경우 `GridView` [ControlTemplate](/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) 와 [스타일](/uwp/api/Windows.UI.Xaml.Style) 모두에 대해 [TargetType](/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) 특성을로 설정 `GridView` 합니다.
 
-항목이 표시 되는 방식을 보다 세부적으로 제어 하기 위해 응용 프로그램이 버전 1803 이상을 대상으로 하는 경우 [BringIntoViewRequested 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)를 사용할 수 있습니다. [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) 다음 코드 조각과 **ListView** / 같이 내부 **ScrollViewer** 가 실행 되기 전에이를 catch 하기 위해 ListView**GridView** 의 ItemsPanel에 넣을 수 있습니다.
+항목이 표시 되는 방식을 보다 세부적으로 제어 하기 위해 응용 프로그램이 버전 1803 이상을 대상으로 하는 경우 [BringIntoViewRequested 이벤트](/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)를 사용할 수 있습니다. [ItemsPanel](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) 다음 코드 조각과 **ListView** / 같이 내부 **ScrollViewer** 가 실행 되기 전에이를 catch 하기 위해 ListView**GridView** 의 ItemsPanel에 넣을 수 있습니다.
 
 ```xaml
 <GridView x:Name="gridView">
@@ -403,7 +403,7 @@ Xbox One에서는 사용자가 PC에서 강조 색을 선택할 수 있는 것 �
 
 또한 Xbox One의 사용자 색 집합은 Pc, 휴대폰 및 기타 장치의 사용자 색 집합과 동일 하지 않습니다.
 
-앱에서 **SystemControlForegroundAccentBrush**또는 색 리소스 (**SystemAccentColor**)와 같은 브러시 리소스를 사용 하거나 대신 [UIColorType *](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.UIColorType) API를 통해 악센트 색을 직접 호출 하는 경우 해당 색은 Xbox one에서 사용할 수 있는 악센트 색으로 바뀝니다. 고대비 브러시 색은 PC와 휴대폰에서와 동일한 방법으로 시스템에서 가져옵니다.
+앱에서 **SystemControlForegroundAccentBrush**또는 색 리소스 (**SystemAccentColor**)와 같은 브러시 리소스를 사용 하거나 대신 [UIColorType *](/uwp/api/Windows.UI.ViewManagement.UIColorType) API를 통해 악센트 색을 직접 호출 하는 경우 해당 색은 Xbox one에서 사용할 수 있는 악센트 색으로 바뀝니다. 고대비 브러시 색은 PC와 휴대폰에서와 동일한 방법으로 시스템에서 가져옵니다.
 
 일반적으로 강조 색에 대 한 자세한 내용은 [강조 색](../style/color.md#accent-color)을 참조 하세요.
 
@@ -420,9 +420,9 @@ TV를 설계할 때 색은 렌더링 되는 TV에 따라 크게 다르게 표시
 지금까지 Xbox의 앱은이 "TV 안전" 색 범위 내에서 색을 조정 해야 했습니다. 그러나 적합 한 작성자 업데이트로 시작 하는 Xbox One은 전체 범위 콘텐츠를 TV 안전 범위로 자동으로 확장 합니다. 즉, 대부분의 앱 개발자는 TV 안전 색에 대해 더 이상 걱정할 필요가 없습니다.
 
 > [!IMPORTANT]
-> TV 안전 색 범위에 이미 있는 비디오 콘텐츠에는 [미디어 파운데이션](https://docs.microsoft.com/windows/desktop/medfound/microsoft-media-foundation-sdk)을 사용 하 여 재생할 때이 색 크기 조정 효과가 적용 되지 않습니다.
+> TV 안전 색 범위에 이미 있는 비디오 콘텐츠에는 [미디어 파운데이션](/windows/desktop/medfound/microsoft-media-foundation-sdk)을 사용 하 여 재생할 때이 색 크기 조정 효과가 적용 되지 않습니다.
 
-DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 비디오를 렌더링 하기 위해 고유한 스왑 체인을 만드는 경우 [IDXGISwapChain3:: SetColorSpace1](https://docs.microsoft.com/windows/desktop/api/dxgi1_4/nf-dxgi1_4-idxgiswapchain3-setcolorspace1)를 호출 하 여 사용 하는 색 공간을 지정할 수 있습니다. 그러면 시스템에서 색의 크기를 조정 해야 하는지 여부를 알 수 있습니다.
+DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 비디오를 렌더링 하기 위해 고유한 스왑 체인을 만드는 경우 [IDXGISwapChain3:: SetColorSpace1](/windows/desktop/api/dxgi1_4/nf-dxgi1_4-idxgiswapchain3-setcolorspace1)를 호출 하 여 사용 하는 색 공간을 지정할 수 있습니다. 그러면 시스템에서 색의 크기를 조정 해야 하는지 여부를 알 수 있습니다.
 
 ## <a name="guidelines-for-ui-controls"></a>UI 컨트롤에 대 한 지침
 
@@ -430,13 +430,13 @@ DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 �
 
 ### <a name="pivot-control"></a>피벗 컨트롤
 
-[피벗](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) 은 다른 머리글이 나 탭을 선택 하 여 앱 내에서 보기를 빠르게 탐색 합니다. 컨트롤은 어떤 머리글에 포커스가 있는지 밑줄을 사용 하 여 게임 패드/원격을 사용할 때 현재 선택 된 헤더를 보다 명확 하 게 합니다.
+[피벗](/uwp/api/Windows.UI.Xaml.Controls.Pivot) 은 다른 머리글이 나 탭을 선택 하 여 앱 내에서 보기를 빠르게 탐색 합니다. 컨트롤은 어떤 머리글에 포커스가 있는지 밑줄을 사용 하 여 게임 패드/원격을 사용할 때 현재 선택 된 헤더를 보다 명확 하 게 합니다.
 
 ![피벗 밑줄](images/designing-for-tv/pivot-underline.png)
 
-[IsHeaderItemsCarouselEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabledproperty) 속성을로 설정 하면 `true` 선택 된 피벗 머리글이 항상 첫 번째 위치로 이동 하는 것이 아니라 피벗이 항상 동일한 위치를 유지할 수 있습니다. TV와 같은 큰 화면 표시에서는 헤더 래핑이 사용자에게 방해가 될 수 있으므로 환경이 개선됩니다. 모든 피벗 머리글이 한 번에 화면에 맞지 않는 경우 고객이 다른 헤더를 볼 수 있도록 스크롤 막대가 있습니다. 그러나 최상의 환경을 제공 하기 위해 모든 것이 화면에 적합 한지 확인 해야 합니다. 자세한 내용은 [탭 및 피벗](/windows/uwp/design/controls-and-patterns/pivot)을 참조 하세요.
+[IsHeaderItemsCarouselEnabled](/uwp/api/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabledproperty) 속성을로 설정 하면 `true` 선택 된 피벗 머리글이 항상 첫 번째 위치로 이동 하는 것이 아니라 피벗이 항상 동일한 위치를 유지할 수 있습니다. TV와 같은 큰 화면 표시에서는 헤더 래핑이 사용자에게 방해가 될 수 있으므로 환경이 개선됩니다. 모든 피벗 머리글이 한 번에 화면에 맞지 않는 경우 고객이 다른 헤더를 볼 수 있도록 스크롤 막대가 있습니다. 그러나 최상의 환경을 제공 하기 위해 모든 것이 화면에 적합 한지 확인 해야 합니다. 자세한 내용은 [탭 및 피벗](../controls-and-patterns/pivot.md)을 참조 하세요.
 
-### <a name="navigation-pane"></a>탐색 창<a name="navigation-pane" />
+### <a name="navigation-pane"></a>탐색 창 <a name="navigation-pane" />
 
 탐색 창 ( *햄버거 메뉴*라고도 함)은 UWP 앱에서 일반적으로 사용 되는 탐색 컨트롤입니다. 일반적으로 사용자가 다른 페이지로 이동 하는 목록 스타일 메뉴에서 선택할 수 있는 몇 가지 옵션이 포함 된 창입니다. 일반적으로이 창은 공간 절약을 위해 축소 된 상태로 시작 되며, 사용자는 단추를 클릭 하 여 열 수 있습니다.
 
@@ -444,7 +444,7 @@ DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 �
 
 ### <a name="commandbar-labels"></a>CommandBar 레이블
 
-해당 높이가 최소화 되 고 일관 되 게 유지 되도록 [CommandBar](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar) 의 아이콘 오른쪽에 레이블을 배치 하는 것이 좋습니다. 이 작업은 [CommandBar. DefaultLabelPosition](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.defaultlabelpositionproperty) 속성을로 설정 하 여 수행할 수 `CommandBarDefaultLabelPosition.Right` 있습니다.
+해당 높이가 최소화 되 고 일관 되 게 유지 되도록 [CommandBar](/uwp/api/Windows.UI.Xaml.Controls.CommandBar) 의 아이콘 오른쪽에 레이블을 배치 하는 것이 좋습니다. 이 작업은 [CommandBar. DefaultLabelPosition](/uwp/api/windows.ui.xaml.controls.commandbar.defaultlabelpositionproperty) 속성을로 설정 하 여 수행할 수 `CommandBarDefaultLabelPosition.Right` 있습니다.
 
 ![아이콘 오른쪽에 레이블이 있는 명령 모음](images/designing-for-tv/commandbar.png)
 
@@ -452,7 +452,7 @@ DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 �
 
 ### <a name="tooltip"></a>Tooltip
 
-[도구 설명](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ToolTip) 컨트롤은 사용자가 마우스를 위로 가져갈 때 UI에 추가 정보를 제공 하는 방법으로 도입 되었습니다. 게임 패드 및 원격의 경우 `Tooltip` 요소가 포커스를 가질 때 잠깐 후에 표시 되 고, 잠시 동안 화면을 유지 한 후 사라집니다. 너무 많은를 사용 하는 경우이 동작이 혼란을 수 있습니다 `Tooltip` . `Tooltip`TV를 설계할 때를 사용 하지 않도록 합니다.
+[도구 설명](/uwp/api/Windows.UI.Xaml.Controls.ToolTip) 컨트롤은 사용자가 마우스를 위로 가져갈 때 UI에 추가 정보를 제공 하는 방법으로 도입 되었습니다. 게임 패드 및 원격의 경우 `Tooltip` 요소가 포커스를 가질 때 잠깐 후에 표시 되 고, 잠시 동안 화면을 유지 한 후 사라집니다. 너무 많은를 사용 하는 경우이 동작이 혼란을 수 있습니다 `Tooltip` . `Tooltip`TV를 설계할 때를 사용 하지 않도록 합니다.
 
 ### <a name="button-styles"></a>단추 스타일
 
@@ -468,7 +468,7 @@ DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 �
 
 ### <a name="mediatransportcontrols"></a>MediaTransportControls
 
-[MediaTransportControls](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaTransportControls) 요소를 사용 하면 사용자가 재생, 일시 중지, 폐쇄 캡션 등을 수행할 수 있는 기본 재생 환경을 제공 하 여 미디어와 상호 작용할 수 있습니다. 이 컨트롤은 [MediaPlayerElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement) 의 속성 이며 두 개의 레이아웃 옵션인 *단일 행* 및 *두 행*을 지원 합니다. 단일 행 레이아웃에서 슬라이더와 재생 단추는 모두 한 행에 있으며 슬라이더 왼쪽에 있는 재생/일시 중지 단추가 있습니다. 이중 행 레이아웃에서 슬라이더는 자체 행을 차지 하며 재생 단추는 별도의 아래쪽 행에 있습니다. 10 피트 환경을 디자인 하는 경우 더 나은 게임 패드 탐색을 제공 하므로 이중 행 레이아웃을 사용 해야 합니다. 이중 행 레이아웃을 사용 하도록 설정 하려면 `IsCompact="False"` 의 요소에서를 설정 `MediaTransportControls` [TransportControls](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement.transportcontrols) `MediaPlayerElement` 합니다.
+[MediaTransportControls](/uwp/api/Windows.UI.Xaml.Controls.MediaTransportControls) 요소를 사용 하면 사용자가 재생, 일시 중지, 폐쇄 캡션 등을 수행할 수 있는 기본 재생 환경을 제공 하 여 미디어와 상호 작용할 수 있습니다. 이 컨트롤은 [MediaPlayerElement](/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement) 의 속성 이며 두 개의 레이아웃 옵션인 *단일 행* 및 *두 행*을 지원 합니다. 단일 행 레이아웃에서 슬라이더와 재생 단추는 모두 한 행에 있으며 슬라이더 왼쪽에 있는 재생/일시 중지 단추가 있습니다. 이중 행 레이아웃에서 슬라이더는 자체 행을 차지 하며 재생 단추는 별도의 아래쪽 행에 있습니다. 10 피트 환경을 디자인 하는 경우 더 나은 게임 패드 탐색을 제공 하므로 이중 행 레이아웃을 사용 해야 합니다. 이중 행 레이아웃을 사용 하도록 설정 하려면 `IsCompact="False"` 의 요소에서를 설정 `MediaTransportControls` [TransportControls](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.transportcontrols) `MediaPlayerElement` 합니다.
 
 ```xml
 <MediaPlayerElement x:Name="mediaPlayerElement1"  
@@ -482,7 +482,7 @@ DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 �
 
 미디어를 앱에 추가 하는 방법에 대 한 자세한 내용을 보려면 [미디어 재생](../controls-and-patterns/media-playback.md) 을 방문 하세요.
 
-> ! [참고] `MediaPlayerElement` 는 Windows 10 버전 1607 이상 에서만 사용할 수 있습니다. 이전 버전의 Windows 10 용 응용 프로그램을 개발 하는 경우에는 [MediaElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement) 를 대신 사용 해야 합니다. 위의 권장 사항은에 `MediaElement` 도 적용 되며, 속성은 `TransportControls` 동일한 방식으로 액세스 됩니다.
+> ! [참고] `MediaPlayerElement` 는 Windows 10 버전 1607 이상 에서만 사용할 수 있습니다. 이전 버전의 Windows 10 용 응용 프로그램을 개발 하는 경우에는 [MediaElement](/uwp/api/Windows.UI.Xaml.Controls.MediaElement) 를 대신 사용 해야 합니다. 위의 권장 사항은에 `MediaElement` 도 적용 되며, 속성은 `TransportControls` 동일한 방식으로 액세스 됩니다.
 
 ### <a name="search-experience"></a>검색 환경
 

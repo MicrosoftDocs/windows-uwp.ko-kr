@@ -1,18 +1,18 @@
 ---
 Description: WNS (Windows Push Notification Services)를 사용 하면 타사 개발자가 자신의 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. 응용 프로그램의 필요에 따라 알림을 보내는 방법에는 여러 가지가 있습니다.
-title: 적절 한 푸시 알림 채널 유형 선택
+title: 올바른 푸시 알림 채널 유형 선택
 ms.date: 07/07/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 502395d1daa698e1b05e40f355e65f074219e9a5
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 166abeb792e86fc44568a5ee29263262214657cf
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970858"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173827"
 ---
-# <a name="choosing-the-right-push-notification-channel-type"></a>적절 한 푸시 알림 채널 유형 선택
+# <a name="choosing-the-right-push-notification-channel-type"></a>올바른 푸시 알림 채널 유형 선택
 
 이 문서에서는 앱에 콘텐츠를 제공 하는 데 도움이 되는 세 가지 유형의 Windows 푸시 알림 채널 (기본, 보조 및 대체)을 설명 합니다. 
 
@@ -20,13 +20,13 @@ ms.locfileid: "82970858"
 
 ## <a name="types-of-push-channels"></a>푸시 채널의 유형 
 
-Windows 앱에 알림을 보내는 데 사용할 수 있는 푸시 채널에는 세 가지 유형이 있습니다. 아래에 이 계정과 키의 예제가 나와 있습니다. 
+Windows 앱에 알림을 보내는 데 사용할 수 있는 푸시 채널에는 세 가지 유형이 있습니다. 해당 항목은 다음과 같습니다. 
 
-[기본 채널](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) -"기존" 푸시 채널입니다. 는 스토어의 모든 앱에서 알림, 타일, raw 또는 배지 알림을 보내는 데 사용할 수 있습니다. [자세한 내용은 여기를 참조](windows-push-notification-services--wns--overview.md)하세요.
+[기본 채널](/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) -"기존" 푸시 채널입니다. 는 스토어의 모든 앱에서 알림, 타일, raw 또는 배지 알림을 보내는 데 사용할 수 있습니다. [자세한 내용은 여기를 참조](windows-push-notification-services--wns--overview.md)하세요.
 
-[보조 타일 채널](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) -타일 업데이트를 보조 타일로 푸시하는 데 사용 됩니다. 사용자의 시작 화면에 고정 된 보조 타일에 타일 또는 배지 알림을 보내는 데만 사용할 수 있습니다.
+[보조 타일 채널](/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) -타일 업데이트를 보조 타일로 푸시하는 데 사용 됩니다. 사용자의 시작 화면에 고정 된 보조 타일에 타일 또는 배지 알림을 보내는 데만 사용할 수 있습니다.
 
-[대체 채널](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) -작성자 업데이트에 추가 된 새 형식의 채널입니다. 저장소에 등록 되지 않은 앱을 포함 하 여 모든 Windows 앱으로 원시 알림을 보낼 수 있습니다. 
+[대체 채널](/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) -작성자 업데이트에 추가 된 새 형식의 채널입니다. 저장소에 등록 되지 않은 앱을 포함 하 여 모든 Windows 앱으로 원시 알림을 보낼 수 있습니다. 
 
 > [!NOTE]
 > 앱이 장치에서 실행 되는 경우 사용 하는 푸시 채널에 관계 없이 항상 로컬 알림, 타일 또는 배지 알림을 보낼 수 있습니다. 포그라운드 앱 프로세스 또는 백그라운드 작업에서 로컬 알림을 보낼 수 있습니다. 
@@ -107,20 +107,20 @@ PushNotificationChannel webChannel =
 <table>
 
 <tr class="header">
-<th align="left"><b>형식</b></th>
+<th align="left"><b>유형</b></th>
 <th align="left"><b>푸시 알림</b></th>
 <th align="left"><b>타일/배지 푸시</b></th>
 <th align="left"><b>원시 알림 푸시</b></th>
 <th align="left"><b>인증</b></th>
 <th align="left"><b>API</b></th>
 <th align="left"><b>스토어 등록이 필요 한가요?</b></th>
-<th align="left"><b>Channels</b></th>
+<th align="left"><b>채널</b></th>
 <th align="left"><b>암호화</b></th>
 </tr>
 
 
 <tr class="odd">
-<td align="left">주</td>
+<td align="left">기본</td>
 <td align="left">예</td>
 <td align="left">예-기본 타일에만 해당</td>
 <td align="left">예</td>
@@ -143,7 +143,7 @@ PushNotificationChannel webChannel =
 </tr>
 <tr class="odd">
 <td align="left">또</td>
-<td align="left">아니요</td>
+<td align="left">예</td>
 <td align="left">예</td>
 <td align="left">예</td>
 <td align="left">VAPID</td>
@@ -166,12 +166,12 @@ PushNotificationChannel webChannel =
 ## <a name="related-articles"></a>관련된 문서
 
 * [로컬 타일 알림 보내기](../tiles-and-notifications/sending-a-local-tile-notification.md)
-* [적응 및 대화형 알림 메시지](../tiles-and-notifications/adaptive-interactive-toasts.md)
-* [빠른 시작: 푸시 알림 보내기](https://docs.microsoft.com/previous-versions/windows/apps/hh868252(v=win.10))
-* [푸시 알림을 통해 배지를 업데이트 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
-* [알림 채널을 요청, 생성 및 저장 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465412(v=win.10))
-* [실행 중인 응용 프로그램에 대 한 알림을 가로채는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465450(v=win.10))
-* [WNS (Windows 푸시 알림 서비스)를 사용 하 여 인증 하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh465407(v=win.10))
-* [푸시 알림 서비스 요청 및 응답 헤더](https://docs.microsoft.com/previous-versions/windows/apps/hh465435(v=win.10))
-* [푸시 알림에 대 한 지침 및 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+* [적응형 및 대화형 알림 메시지](../tiles-and-notifications/adaptive-interactive-toasts.md)
+* [빠른 시작: 푸시 알림 보내기](/previous-versions/windows/apps/hh868252(v=win.10))
+* [푸시 알림을 통해 배지를 업데이트 하는 방법](/previous-versions/windows/apps/hh465450(v=win.10))
+* [알림 채널을 요청, 생성 및 저장 하는 방법](/previous-versions/windows/apps/hh465412(v=win.10))
+* [실행 중인 응용 프로그램에 대 한 알림을 가로채는 방법](/previous-versions/windows/apps/hh465450(v=win.10))
+* [WNS (Windows 푸시 알림 서비스)를 사용 하 여 인증 하는 방법](/previous-versions/windows/apps/hh465407(v=win.10))
+* [푸시 알림 서비스 요청 및 응답 헤더](/previous-versions/windows/apps/hh465435(v=win.10))
+* [푸시 알림에 대 한 지침 및 검사 목록](./windows-push-notification-services--wns--overview.md)
 * [원시 알림](raw-notification-overview.md)

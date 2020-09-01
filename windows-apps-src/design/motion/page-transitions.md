@@ -8,18 +8,18 @@ keywords: windows 10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c77f99e170bdfe6689a9bfd4e8d8075ec2154d28
-ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
+ms.openlocfilehash: b1fc38f5224ae9627f4c793a800ab747cfa1c2b6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89094679"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173857"
 ---
 # <a name="page-transitions"></a>페이지 전환
 
 페이지 전환은 앱의 페이지 간 사용자를 탐색 하 여 페이지 간 관계로 피드백을 제공 합니다. 페이지 전환은 사용자가 탐색 계층 구조의 맨 위에 있는지, 형제 페이지 간에 이동 하는지, 아니면 페이지 계층 구조를 심층적으로 탐색 하는지 이해 하는 데 도움이 됩니다.
 
-앱에서 페이지를 탐색 하 고, *페이지를 새로 고치고* , *드릴*하 고, [**NavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationtransitioninfo)의 서브 클래스로 표시 되는 두 가지 애니메이션이 제공 됩니다.
+앱에서 페이지를 탐색 하 고, *페이지를 새로 고치고* , *드릴*하 고, [**NavigationTransitionInfo**](/uwp/api/windows.ui.xaml.media.animation.navigationtransitioninfo)의 서브 클래스로 표시 되는 두 가지 애니메이션이 제공 됩니다.
 
 ## <a name="examples"></a>예
 
@@ -45,7 +45,7 @@ ms.locfileid: "89094679"
 
 ![페이지 새로 고침 애니메이션](images/page-refresh.gif)
 
-페이지 새로 고침 애니메이션은 [**EntranceNavigationTransitionInfoClass**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.entrancenavigationtransitioninfo)로 표시 됩니다.
+페이지 새로 고침 애니메이션은 [**EntranceNavigationTransitionInfoClass**](/uwp/api/windows.ui.xaml.media.animation.entrancenavigationtransitioninfo)로 표시 됩니다.
 
 ```csharp
 // Explicitly play the page refresh animation
@@ -53,7 +53,7 @@ myFrame.Navigate(typeof(Page2), null, new EntranceNavigationTransitionInfo());
 
 ```
 
-**참고**: [**프레임**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame) 은 자동으로 [**NavigationThemeTransition**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) 를 사용 하 여 두 페이지 간의 탐색에 애니메이션 효과를 적용 합니다. 기본적으로 애니메이션은 페이지 새로 고침입니다.
+**참고**: [**프레임**](/uwp/api/windows.ui.xaml.controls.frame) 은 자동으로 [**NavigationThemeTransition**](/uwp/api/windows.ui.xaml.media.animation.navigationthemetransition) 를 사용 하 여 두 페이지 간의 탐색에 애니메이션 효과를 적용 합니다. 기본적으로 애니메이션은 페이지 새로 고침입니다.
 
 ## <a name="drill"></a>Drill
 
@@ -63,7 +63,7 @@ myFrame.Navigate(typeof(Page2), null, new EntranceNavigationTransitionInfo());
 
 ![드릴 애니메이션](images/drill.gif)
 
-드릴 애니메이션은 [**DrillInNavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.drillinnavigationtransitioninfo) 클래스로 표현 됩니다.
+드릴 애니메이션은 [**DrillInNavigationTransitionInfo**](/uwp/api/windows.ui.xaml.media.animation.drillinnavigationtransitioninfo) 클래스로 표현 됩니다.
 
 ```csharp
 // Play the drill in animation
@@ -86,7 +86,7 @@ myFrame.Navigate(typeof(LeftPage), null, new SlideNavigationTransitionInfo() { E
 
 ## <a name="suppress"></a>표시 안 함
 
-탐색 하는 동안 애니메이션 재생을 방지 하려면 다른 **NavigationTransitionInfo** 하위 형식 대신 [**SuppressNavigationTransitionInfo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) 를 사용 합니다.
+탐색 하는 동안 애니메이션 재생을 방지 하려면 다른 **NavigationTransitionInfo** 하위 형식 대신 [**SuppressNavigationTransitionInfo**](/uwp/api/windows.ui.xaml.media.animation.suppressnavigationtransitioninfo) 를 사용 합니다.
 
 ```csharp
 // Suppress the default animation

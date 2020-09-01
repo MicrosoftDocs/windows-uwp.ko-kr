@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 소리
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e624c750bfce0633bc91d440fd883341b831836
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: 04a9ea70914be3c60826df8753eca2ad1c30f19d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409652"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175187"
 ---
 # <a name="add-sound"></a>소리 추가
 
@@ -21,7 +21,7 @@ ms.locfileid: "85409652"
 이 항목에서는 [XAudio2](/windows/desktop/xaudio2/xaudio2-introduction) api를 사용 하 여 간단한 사운드 엔진을 만듭니다. __XAudio2__를 처음 접하는 경우에는 [오디오 개념](#audio-concepts)에 대 한 간단한 소개를 포함 했습니다.
 
 >[!Note]
->이 샘플에 대 한 최신 게임 코드를 다운로드 하지 않은 경우 [Direct3D sample game](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX)로 이동 합니다. 이 샘플은 여러 UWP 기능 샘플 컬렉션의 일부입니다. 샘플을 다운로드 하는 방법에 대 한 지침은 [GitHub에서 UWP 샘플 가져오기](/windows/uwp/get-started/get-uwp-app-samples)를 참조 하세요.
+>이 샘플에 대 한 최신 게임 코드를 다운로드 하지 않은 경우 [Direct3D sample game](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX)로 이동 합니다. 이 샘플은 여러 UWP 기능 샘플 컬렉션의 일부입니다. 샘플을 다운로드 하는 방법에 대 한 지침은 [GitHub에서 UWP 샘플 가져오기](../get-started/get-app-samples.md)를 참조 하세요.
 
 ## <a name="objective"></a>Objective
 
@@ -482,7 +482,7 @@ XAudio2 음성 개체에는 원본, 서브 믹스 및 마스터링 음성의 세
 
 오디오 그래프는 [XAudio2 음성](/windows/desktop/xaudio2/xaudio2-voices)의 컬렉션입니다. 오디오는 소스 음성에서 오디오 그래프의 한쪽에서 시작 하 고, 필요에 따라 하나 이상의 서브 믹스 음성을 통과 하 고, 마스터링 음성에서 끝납니다. 오디오 그래프에는 현재 재생 중인 각 사운드, 0 개 이상의 서브 믹스 음성 및 1 개의 마스터링 음성이 포함 된 원본 음성이 포함 됩니다. 가장 간단한 오디오 그래프와 XAudio2에서 노이즈를 만드는 데 필요한 최소는 마스터링 음성으로 직접 출력 되는 단일 원본 음성입니다. 자세한 내용을 보려면 [오디오 그래프](/windows/desktop/xaudio2/audio-graphs)로 이동 하세요.
 
-### <a name="additional-reading"></a>추가 참조 항목
+### <a name="additional-reading"></a>추가 자료
 
 * [방법: XAudio2 초기화](/windows/desktop/xaudio2/how-to--initialize-xaudio2)
 * [방법: XAudio2에서 오디오 데이터 파일 로드](/windows/desktop/xaudio2/how-to--load-audio-data-files-in-xaudio2)

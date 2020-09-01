@@ -6,19 +6,19 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 컨트롤, 입력
 ms.localizationpriority: medium
-ms.openlocfilehash: dfe864f0b8c16cce9cc8d413c41a4e3324cf2e9b
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: 87a56c9213aabce23801f305d8a100f536f0889b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409662"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175237"
 ---
 # <a name="add-controls"></a>컨트롤 추가
 
 > [!NOTE]
 > 이 항목은 DirectX 자습서 시리즈 [를 사용 하 여 단순 유니버설 Windows 플랫폼 (UWP) 게임 만들기](tutorial--create-your-first-uwp-directx-game.md) 의 일부입니다. 해당 링크의 항목은 계열의 컨텍스트를 설정 합니다.
 
-\[Windows 10의 UWP 앱 용으로 업데이트 되었습니다. Windows 8.x 문서는 [보관 파일](/previous-versions/windows/apps/mt244353(v=win.10)?redirectedfrom=MSDN) 을 참조 하세요.\]
+\[ Windows 10의 UWP 앱 용으로 업데이트 되었습니다. Windows 8.x 문서는 [보관 파일](/previous-versions/windows/apps/mt244353(v=win.10)?redirectedfrom=MSDN) 을 참조 하세요. \]
 
 UWP (좋은 유니버설 Windows 플랫폼) 게임은 다양 한 인터페이스를 지원 합니다. 잠재적 플레이어는 물리적 단추가 없는 태블릿에 Windows 10을 포함 하거나, Xbox 컨트롤러가 연결 된 PC 또는 고성능 마우스 및 게임 키보드를 사용 하는 최신 데스크톱 게임 rig를 사용할 수 있습니다. 게임에서 컨트롤은 [**MoveLookController**](https://github.com/Microsoft/Windows-universal-samples/blob/ef073ed8a2007d113af1d88eddace479e3bf0e07/SharedContent/cpp/GameContent/MoveLookController.cpp) 클래스에서 구현 됩니다. 이 클래스는 세 가지 유형의 입력 (마우스 및 키보드, 터치 및 게임 패드)을 모두 단일 컨트롤러에 집계 합니다. 최종 결과는 여러 장치에서 작동 하는 장르 표준 이동 모양 컨트롤을 사용 하는 첫 번째 사람의 슈팅입니다.
 
@@ -34,7 +34,7 @@ UWP (좋은 유니버설 Windows 플랫폼) 게임은 다양 한 인터페이스
 - 게임 패드
 
 >[!Note]
->이 샘플에 대 한 최신 게임 코드를 다운로드 하지 않은 경우 [Direct3D sample game](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX)로 이동 합니다. 이 샘플은 여러 UWP 기능 샘플 컬렉션의 일부입니다. 샘플을 다운로드 하는 방법에 대 한 지침은 [GitHub에서 UWP 샘플 가져오기](/windows/uwp/get-started/get-uwp-app-samples)를 참조 하세요.
+>이 샘플에 대 한 최신 게임 코드를 다운로드 하지 않은 경우 [Direct3D sample game](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX)로 이동 합니다. 이 샘플은 여러 UWP 기능 샘플 컬렉션의 일부입니다. 샘플을 다운로드 하는 방법에 대 한 지침은 [GitHub에서 UWP 샘플 가져오기](../get-started/get-app-samples.md)를 참조 하세요.
 
 ## <a name="common-control-behaviors"></a>일반적인 제어 동작
 
@@ -43,7 +43,7 @@ UWP (좋은 유니버설 Windows 플랫폼) 게임은 다양 한 인터페이스
 
 샘플 게임의 **MoveLookController** 클래스는 초기화 되 면 다음과 같은 4 개의 포인터 관련 이벤트와 한 개의 마우스 특정 이벤트를 등록 합니다.
 
-이벤트 | 설명
+이벤트 | Description
 :------ | :-------
 [**CoreWindow::P ointerPressed 있습니다.**](/uwp/api/windows.ui.core.corewindow.pointerpressed) | 왼쪽 또는 오른쪽 마우스 단추를 눌 었는 경우 또는 터치 서피스가 수행 되었습니다.
 [**CoreWindow::P ointerMoved 됨**](/uwp/api/windows.ui.core.corewindow.pointermoved) |터치 화면에서 마우스를 이동 했거나 끌기 작업을 수행 했습니다.

@@ -1,6 +1,6 @@
 ---
 Description: 터치 및 펜 입력에 사용 하는 것과 동일한 기본 포인터 이벤트를 처리 하 여 앱의 마우스 입력에 응답 합니다.
-title: 마우스 상호 작용
+title: 마우스 조작
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
 template: detail.hbs
@@ -8,14 +8,14 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2d6ddf03541e94f89d0950a4f4c03eebaa0e396e
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 242f7c30260956bc84478153f39b0da4d8461e12
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234474"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173407"
 ---
-# <a name="mouse-interactions"></a>마우스 상호 작용
+# <a name="mouse-interactions"></a>마우스 조작
 
 터치 입력을 위한 Windows 앱 디자인을 최적화 하 고 기본적으로 기본적인 마우스 지원을 받으세요. 
 
@@ -86,46 +86,46 @@ ms.locfileid: "83234474"
 
 ## <a name="mouse-input-events"></a>마우스 입력 이벤트
 
-대부분의 마우스 입력은 모든 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 개체에서 지 원하는 일반적인 라우트된 입력 이벤트를 통해 처리할 수 있습니다. 이러한 개체는 다음과 같습니다.
+대부분의 마우스 입력은 모든 [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) 개체에서 지 원하는 일반적인 라우트된 입력 이벤트를 통해 처리할 수 있습니다. 여기에는 다음이 포함됩니다.
 
-- [**BringIntoViewRequested**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
-- [**CharacterReceived**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.characterreceived)
-- [**컨텍스트 취소 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextcanceled)
-- [**ContextRequested 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.contextrequested)
-- [**DoubleTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.doubletapped)
-- [**System.windows.dragdrop.dragenter>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragenter)
-- [**System.windows.dragdrop.dragleave>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragleave)
-- [**System.windows.uielement.dragover>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragover)
-- [**DragStarting**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dragstarting)
-- [**그림자**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.drop)
-- [**DropCompleted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.dropcompleted)
-- [**Get이상 포커스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gettingfocus)
-- [**System.windows.uielement.gotfocus>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.gotfocus)
-- [**Ctrl**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)
-- [**KeyDown**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keydown)
-- [**KeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.keyup)
-- [**LosingFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.losingfocus)
-- [**LostFocus**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.lostfocus)
-- [**System.windows.uielement.manipulationcompleted>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted)
-- [**System.windows.uielement.manipulationdelta>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta)
-- [**System.windows.uielement.manipulationinertiastarting>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationinertiastarting)
-- [**System.windows.uielement.manipulationstarted>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted)
-- [**System.windows.uielement.manipulationstarting>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting)
-- [**NoFocusCandidateFound**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.nofocuscandidatefound)
-- [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled)
-- [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost)
-- [**PointerEntered 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered)
-- [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited)
-- [**PointerMoved 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved)
-- [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed)
-- [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)
-- [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
-- [**System.windows.forms.control.previewkeydown>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeydown)
-- [**PreviewKeyUp**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.previewkeyup)
-- [**오른쪽 탭**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped)
-- [**탭**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped)
+- [**BringIntoViewRequested**](/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)
+- [**CharacterReceived**](/uwp/api/windows.ui.xaml.uielement.characterreceived)
+- [**컨텍스트 취소 됨**](/uwp/api/windows.ui.xaml.uielement.contextcanceled)
+- [**ContextRequested 됨**](/uwp/api/windows.ui.xaml.uielement.contextrequested)
+- [**DoubleTapped**](/uwp/api/windows.ui.xaml.uielement.doubletapped)
+- [**System.windows.dragdrop.dragenter>**](/uwp/api/windows.ui.xaml.uielement.dragenter)
+- [**System.windows.dragdrop.dragleave>**](/uwp/api/windows.ui.xaml.uielement.dragleave)
+- [**System.windows.uielement.dragover>**](/uwp/api/windows.ui.xaml.uielement.dragover)
+- [**DragStarting**](/uwp/api/windows.ui.xaml.uielement.dragstarting)
+- [**그림자**](/uwp/api/windows.ui.xaml.uielement.drop)
+- [**DropCompleted**](/uwp/api/windows.ui.xaml.uielement.dropcompleted)
+- [**Get이상 포커스**](/uwp/api/windows.ui.xaml.uielement.gettingfocus)
+- [**System.windows.uielement.gotfocus>**](/uwp/api/windows.ui.xaml.uielement.gotfocus)
+- [**Ctrl**](/uwp/api/windows.ui.xaml.uielement.holding)
+- [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown)
+- [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup)
+- [**LosingFocus**](/uwp/api/windows.ui.xaml.uielement.losingfocus)
+- [**LostFocus**](/uwp/api/windows.ui.xaml.uielement.lostfocus)
+- [**System.windows.uielement.manipulationcompleted>**](/uwp/api/windows.ui.xaml.uielement.manipulationcompleted)
+- [**System.windows.uielement.manipulationdelta>**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta)
+- [**System.windows.uielement.manipulationinertiastarting>**](/uwp/api/windows.ui.xaml.uielement.manipulationinertiastarting)
+- [**System.windows.uielement.manipulationstarted>**](/uwp/api/windows.ui.xaml.uielement.manipulationstarted)
+- [**System.windows.uielement.manipulationstarting>**](/uwp/api/windows.ui.xaml.uielement.manipulationstarting)
+- [**NoFocusCandidateFound**](/uwp/api/windows.ui.xaml.uielement.nofocuscandidatefound)
+- [**PointerCanceled**](/uwp/api/windows.ui.xaml.uielement.pointercanceled)
+- [**PointerCaptureLost**](/uwp/api/windows.ui.xaml.uielement.pointercapturelost)
+- [**PointerEntered 됨**](/uwp/api/windows.ui.xaml.uielement.pointerentered)
+- [**PointerExited**](/uwp/api/windows.ui.xaml.uielement.pointerexited)
+- [**PointerMoved 됨**](/uwp/api/windows.ui.xaml.uielement.pointermoved)
+- [**PointerPressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed)
+- [**PointerReleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased)
+- [**PointerWheelChanged**](/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)
+- [**System.windows.forms.control.previewkeydown>**](/uwp/api/windows.ui.xaml.uielement.previewkeydown)
+- [**PreviewKeyUp**](/uwp/api/windows.ui.xaml.uielement.previewkeyup)
+- [**오른쪽 탭**](/uwp/api/windows.ui.xaml.uielement.righttapped)
+- [**탭**](/uwp/api/windows.ui.xaml.uielement.tapped)
 
-그러나 [Windows](https://docs.microsoft.com/uwp/api/windows.ui.input)의 포인터, 제스처 및 조작 이벤트를 사용 하 여 각 장치 (예: 마우스 휠 이벤트)의 특정 기능을 활용할 수 있습니다.
+그러나 [Windows](/uwp/api/windows.ui.input)의 포인터, 제스처 및 조작 이벤트를 사용 하 여 각 장치 (예: 마우스 휠 이벤트)의 특정 기능을 활용할 수 있습니다.
 
 **샘플:** 의 [Basicinput 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)을 참조 하세요.
 
@@ -144,7 +144,7 @@ ms.locfileid: "83234474"
 
 마우스 포인터에는 표준 커서 집합을 사용할 수 있습니다. 이러한 요소는 요소의 기본 동작을 나타내는 데 사용 됩니다.
 
-각 표준 커서에는 해당 하는 기본 이미지가 연결 되어 있습니다. 사용자 또는 앱은 언제 든 지 표준 커서와 연결 된 기본 이미지를 바꿀 수 있습니다. [**Pointercursor**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointercursor) 함수를 통해 커서 이미지를 지정 합니다.
+각 표준 커서에는 해당 하는 기본 이미지가 연결 되어 있습니다. 사용자 또는 앱은 언제 든 지 표준 커서와 연결 된 기본 이미지를 바꿀 수 있습니다. [**Pointercursor**](/uwp/api/windows.ui.core.corewindow.pointercursor) 함수를 통해 커서 이미지를 지정 합니다.
 
 마우스 커서를 사용자 지정 해야 하는 경우:
 
@@ -158,7 +158,7 @@ ms.locfileid: "83234474"
 
 - [포인터 입력 처리](handle-pointer-input.md)
 - [입력 디바이스 식별](identify-input-devices.md)
-- [이벤트 및 라우트된 이벤트 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/events-and-routed-events-overview)
+- [이벤트 및 라우트된 이벤트 개요](../../xaml-platform/events-and-routed-events-overview.md)
 
 ### <a name="samples"></a>샘플
 
