@@ -1,19 +1,19 @@
 ---
 ms.assetid: 4e8cc0c0-b14c-472c-9e1c-4601d10289d2
 description: Windows SDK, Microsoft Advertising SDK, Microsoft Store Services SDK 및 Microsoft Store는 앱에서 더 큰 수익을 창출하고 사용자 참여를 통해 고객을 확보할 수 있게 해주는 다양한 기능을 제공합니다.
-title: 수익 창출, 참여 및 Store 서비스
+title: 수익 창출, 참여 및 Microsoft Store 서비스
 ms.date: 11/29/2017
 ms.topic: article
 keywords: Windows 10, uwp, 수익 창출, 참여, 프로모션, Microsoft Store 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: 7beee974bceceab02984ae6499a9c5db0b0281b9
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: dd6262677cd548fa8e690fde5a90ab1f2662ea2a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74259298"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155647"
 ---
-# <a name="monetization-engagement-and-store-services"></a>수익 창출, 참여 및 Store 서비스
+# <a name="monetization-engagement-and-store-services"></a>수익 창출, 참여 및 Microsoft Store 서비스
 
 Windows SDK, Microsoft Advertising SDK, Microsoft Store Services SDK 및 Microsoft Store는 앱에서 더 큰 수익을 창출하고 사용자 참여를 통해 고객을 확보할 수 있게 해주는 다양한 기능을 제공합니다. 이 섹션의 항목에서는 이러한 기능을 앱에 빌드하는 방법을 보여 줍니다.
 
@@ -111,7 +111,7 @@ Microsoft Store에서 청구하는 수수료 및 앱으로 번 돈을 지급 받
  항목                | 설명                 |
 |--------------------|-----------------------------|
 | [Microsoft 제휴 프로그램](https://www.microsoftaffiliates.com/) | 앱, 블로그, 웹 페이지 또는 기타 커뮤니케이션에서 Microsoft 제품으로 연결되도록 하고 수수료를 받으세요. Microsoft Store에서 판매하는 앱, 게임, 음악, 동영상, 하드웨어, 액세서리 및 기타 상품을 연결할 수 있습니다.
-| [A/B 실험](https://docs.microsoft.com/windows/uwp/monetize/run-app-experiments-with-a-b-testing) | 모든 고객에 대해 기능을 변경하기 전에 앱에서 A/B 테스트를 실행하여 일부 고객에 대한 기능 변경 효과를 측정합니다.
+| [A/B 실험](./run-app-experiments-with-a-b-testing.md) | 모든 고객에 대해 기능을 변경하기 전에 앱에서 A/B 테스트를 실행하여 일부 고객에 대한 기능 변경 효과를 측정합니다.
 | [Microsoft Store Services SDK를 사용하여 고객과 소통](microsoft-store-services-sdk.md) | Microsoft Store Services SDK는 고객과의 소통을 도와주는 기능을 앱에 추가할 때 사용하는 라이브러리 및 도구를 제공합니다. 이러한 기능으로는 대상 알림, A/B 테스트, 앱에서 피드백 허브 시작이 포함됩니다.
 | [앱에서 피드백 허브 시작](launch-feedback-hub-from-your-app.md) | UWP 앱에 코드를 추가하여 문제, 제안 및 좋아요를 제출할 수 있는 피드백 허브로 Windows 10 고객을 안내합니다. 그런 다음, 파트너 센터의 [피드백 보고서](../publish/feedback-report.md)에서 이 피드백을 관리합니다. 이 기능은 Microsoft Store Services SDK가 필요합니다. 
 | [파트너 센터 푸시 알림을 받도록 앱 구성](configure-your-app-to-receive-dev-center-notifications.md) | [파트너 센터 푸시 알림](../publish/send-push-notifications-to-your-apps-customers.md)을 수신할 수 있도록 UWP 앱용 알림 채널을 등록하고, 푸시 알림을 통해 앱 실행 속도 결과를 추적합니다. 이 기능은 Microsoft Store Services SDK가 필요합니다.
@@ -127,7 +127,7 @@ Microsoft Store에서 청구하는 수수료 및 앱으로 번 돈을 지급 받
 이러한 보고서를 사용하여 Microsoft Store에서 앱이 기능하는 방식을 지속적으로 감시합니다.
 
 - [지급 요약](../publish/payout-summary.md)
-- [취득 보고서](../publish/acquisitions-report.md)
+- [구입 보고서](../publish/acquisitions-report.md)
 - [추가 기능 구입 보고서](../publish/add-on-acquisitions-report.md)
 - [광고 성과 보고서](../publish/advertising-performance-report.md)
 - [REST API를 사용하여 분석 데이터 가져오기](access-analytics-data-using-windows-store-services.md)

@@ -9,27 +9,27 @@ metadata:
   ms.author: tedhudek
   ms.topic: hub-page
   uhfHeaderId: MSDocsHeader-DocsL1
-  ms.openlocfilehash: 588fb1ddf7581867d705d531c3459a6962f07d56
-  ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+  ms.openlocfilehash: f57585392a34cdf6bf61dce474b48efbc8ec9f58
+  ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/29/2020
-  ms.locfileid: "77903320"
+  ms.lasthandoff: 08/31/2020
+  ms.locfileid: "89166687"
 productDirectory:
   items:
   - title: 애플리케이션 개발자
     imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
     summary: Windows PC 및 기타 디바이스용 애플리케이션과 솔루션을 설계, 개발 및 배포합니다.
-    url: /windows/apps/
+    url: ./apps/index.yml
   - title: 하드웨어 개발자
     imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
     summary: Windows PC 및 기타 디바이스용 하드웨어와 디바이스 드라이버를 설계, 개발 및 배포합니다.
-    url: https://docs.microsoft.com/windows-hardware/drivers/
+    url: /windows-hardware/drivers/
   - title: IT 전문가용 Windows 10
     imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
     summary: Windows 10을 실행하는 디바이스를 평가, 계획, 배포, 보호 및 관리합니다.
-    url: https://docs.microsoft.com/windows/windows-10/
+    url: /windows/windows-10/
   - title: IT 전문가용 Windows Server
     imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
     summary: Windows Server에서 연결된 애플리케이션, 네트워크 및 웹 서비스를 빌드하고 배포합니다.
-    url: https://docs.microsoft.com/windows-server/
+    url: /windows-server/

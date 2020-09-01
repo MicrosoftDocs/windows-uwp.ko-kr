@@ -6,12 +6,12 @@ ms.date: 10/04/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업, 앱 서비스, 연결된 디바이스, 원격 시스템
 ms.localizationpriority: medium
-ms.openlocfilehash: 9280a240f35c2fdf5290c94d837e2fafc008dbfd
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 3e3a8266c3f1f9ce80496770fb79c96be5db9d6b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80483014"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158736"
 ---
 # <a name="launching-resuming-and-background-tasks"></a>실행, 다시 시작 및 백그라운드 작업
 
@@ -95,7 +95,7 @@ ms.locfileid: "80483014"
 | 항목 | 설명 |
 |-------|-------------|
 | [백그라운드 작업 지침](guidelines-for-background-tasks.md)                                       | 앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다. |
-| [백그라운드 작업에서 센서 및 디바이스에 액세스](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 기기에 액세스할 수 있습니다. |
+| [백그라운드 작업에서 센서 및 디바이스에 액세스](access-sensors-and-devices-from-a-background-task.md)   | [**DeviceUseTrigger**](/uwp/api/Windows.ApplicationModel.Background.DeviceUseTrigger)를 사용하면 포그라운드 앱이 일시 중단된 경우에도 유니버설 Windows 앱이 백그라운드로 센서와 주변 기기에 액세스할 수 있습니다. |
 | [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)       | 포그라운드 앱과 같은 프로세스에서 실행되는 백그라운드 작업을 만들고 등록합니다. |
 | [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)           | 앱과 별도의 프로세스로 실행하는 백그라운드 작업을 만들고 등록한 다음, 앱이 포그라운드에 없는 경우 실행되도록 등록합니다. |
 | [winmain 앱에 대한 COM 백그라운드 작업 만들기 및 등록](create-and-register-a-winmain-background-task.md) | 패키지된 winmain 앱이 실행되고 있지 않을 때 기본 프로세스에서 또는 프로세스 외부에서 실행할 수 있는 COM 백그라운드 작업을 만듭니다. |
@@ -105,16 +105,16 @@ ms.locfileid: "80483014"
 | [백그라운드 작업 등록 그룹화](group-background-tasks.md)                                             | 그룹으로 백그라운드 작업 등록 격리 |
 | [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)                                 | 영구적 스토리지를 통해 앱에 취소를 보고하여 취소 요청을 인식하고 작업을 중지하는 백그라운드 작업을 만드는 방법을 알아봅니다. |
 | [백그라운드 작업 진행 및 완료 모니터링](monitor-background-task-progress-and-completion.md)       | 앱에서 백그라운드 작업 진행률 및 완료를 인식하는 방법에 대해 알아봅니다. |
-| [백그라운드 작업 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-background-activity) |백그라운드에서 사용하는 에너지를 줄이고 백그라운드 작업에 대한 사용자 설정을 조작하는 방법을 알아봅니다. |
+| [백그라운드 작업 최적화](../debug-test-perf/optimize-background-activity.md) |백그라운드에서 사용하는 에너지를 줄이고 백그라운드 작업에 대한 사용자 설정을 조작하는 방법을 알아봅니다. |
 | [백그라운드 작업 등록](register-a-background-task.md)                                                 | 대부분의 백그라운드 작업을 안전하게 등록하기 위해 다시 사용할 수 있는 함수를 만드는 방법을 알아봅니다. |
-| [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)         | [  **SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다. |
+| [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)         | [  **SystemTrigger**](/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 이벤트에 응답하는 백그라운드 작업을 만드는 방법을 알아봅니다. |
 | [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)                                    | 일회성 백그라운드 작업을 예약하거나 정기적 백그라운드 작업을 실행하는 방법을 알아봅니다. |
 | [백그라운드에서 무기한 실행](run-in-the-background-indefinetly.md)                                    | 접근 권한 값을 사용하여 백그라운드 작업 또는 확장된 실행 세션을 백그라운드에서 무기한 실행하세요. |
-| [앱 내에서 백그라운드 작업 트리거](trigger-background-task-from-app.md) | [ApplicationTrigger](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger)를 사용하여 앱 내에서 백그라운드 작업을 활성화하는 방법을 알아봅니다.|
+| [앱 내에서 백그라운드 작업 트리거](trigger-background-task-from-app.md) | [ApplicationTrigger](/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger)를 사용하여 앱 내에서 백그라운드 작업을 활성화하는 방법을 알아봅니다.|
 | [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)             | 백그라운드 작업이 실행되는 시간을 제어하는 조건을 설정하는 방법을 알아봅니다. |
-| [백그라운드에서 데이터 전송](https://docs.microsoft.com/windows/uwp/networking/background-transfers)                 | 백그라운드 전송 API를 사용하여 백그라운드에서 파일을 복사합니다. |
-| [백그라운드 작업의 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)                   | 백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다. |
-| [유지 관리 트리거 사용](use-a-maintenance-trigger.md)                                                   | 디바이스가 연결되어 있는 동안 [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다. |
+| [백그라운드에서 데이터 전송](../networking/background-transfers.md)                 | 백그라운드 전송 API를 사용하여 백그라운드에서 파일을 복사합니다. |
+| [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)                   | 백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다. |
+| [유지 관리 트리거 사용](use-a-maintenance-trigger.md)                                                   | 디바이스가 연결되어 있는 동안 [**MaintenanceTrigger**](/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다. |
 
 ## <a name="remote-systems"></a>원격 시스템
 

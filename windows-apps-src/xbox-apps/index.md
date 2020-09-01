@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 2d935f53-84db-4108-86dc-cb6a0749782f
 ms.localizationpriority: medium
-ms.openlocfilehash: aecb0a6e6a7d9dfbe05a43b760b044d032fff4e1
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 1fe3e4e23bc2be46d3ddb09d9ebf83b5fda5ce9d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75685028"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173717"
 ---
 # <a name="uwp-on-xbox-one"></a>Xbox One의 UWP
 
 Xbox One에서 UWP(유니버설 Windows 플랫폼)용 앱 빌드를 시작합니다.
 
-Xbox One의 UWP는 앱과 게임 개발을 둘 다 지원합니다. Xbox에서 게임이나 앱을 실험, 제작, 테스트하기 위해 개발자 프로그램에 참여할 필요는 없습니다. [파트너 센터](https://partner.microsoft.com/dashboard)의 [개발자 계정](https://developer.microsoft.com/store/register)만 있으면 됩니다. Xbox One에 게임을 게시하고 판매할 준비가 되었거나 Windows 10의 Xbox Live가 제공하는 장점을 누리려면 [Xbox Live 크리에이터스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator)에 참여하거나 [ID@Xbox](https://www.xbox.com/Developers/id) 개발자가 되어야 합니다. ID@Xbox 개발자가 될 생각이라면 개발자 계정에 등록하기 전에 프로그램 참가 신청부터 하는 것이 좋습니다. 자세한 내용은 [개발자 프로그램 개요](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview)를 참조하세요.
+Xbox One의 UWP는 앱과 게임 개발을 둘 다 지원합니다. Xbox에서 게임이나 앱을 실험, 제작, 테스트하기 위해 개발자 프로그램에 참여할 필요는 없습니다. [파트너 센터](https://partner.microsoft.com/dashboard)의 [개발자 계정](https://developer.microsoft.com/store/register)만 있으면 됩니다. Xbox One에 게임을 게시하고 판매할 준비가 되었거나 Windows 10의 Xbox Live가 제공하는 장점을 누리려면 [Xbox Live 크리에이터스 프로그램](https://developer.microsoft.com/games/xbox/xboxlive/creator)에 참여하거나 [ID@Xbox](https://www.xbox.com/Developers/id) 개발자가 되어야 합니다. ID@Xbox 개발자가 될 생각이라면 개발자 계정에 등록하기 전에 프로그램 참가 신청부터 하는 것이 좋습니다. 자세한 내용은 [개발자 프로그램 개요](/gaming/xbox-live/developer-program-overview)를 참조하세요.
 
 이 섹션에는 설정 단계, 인증 프로세스 안내, 필요한 버전의 Visual Studio 및 Windows 10 도구 설치 정보, 간단한 첫 번째 애플리케이션을 빌드, 실행, 디버그하는 단계 등이 포함되어 있습니다. 
 
@@ -40,7 +40,7 @@ Xbox One의 UWP는 앱과 게임 개발을 둘 다 지원합니다. Xbox에서 �
 |[다중 사용자 애플리케이션 소개](multi-user-applications.md)| Xbox One의 MUA(다중 사용자 애플리케이션)에 대해 설명합니다. |
 | [Xbox One 개발 작업 자동화](https://github.com/Microsoft/WindowsDevicePortalWrapper/tree/v0.9.4) | GitHub의 WindowsDevicePortalWrapper 프로젝트는 앱을 배포하거나 시작하는 등의 일반적인 개발 작업을 자동화할 수 있는 라이브러리를 제공합니다. 이 프로젝트에는 일반적인 작업에 API를 사용하는 방법을 보여주는 XboxWdpDriver.exe 샘플이 포함되어 있습니다. |
 |[기존 게임을 Xbox로 가져오기](development-lanes-landing.md)|게임이 제작된 기반 기술을 바탕으로 UWP를 사용하여 게임을 Xbox로 가져오는 프로세스를 촉진할 수 있는 단계별 지침을 안내할 수 있습니다.|
-|[Xbox One에서 아직 지원되지 않는 UWP 기능](https://docs.microsoft.com/uwp/extension-sdks/uwp-limitations-on-xbox?redirectedfrom=MSDN)|  Xbox One에서 아직 완전히 작동하지 않는 UWP 기능 영역을 설명합니다.|
+|[Xbox One에서 아직 지원되지 않는 UWP 기능](/uwp/extension-sdks/uwp-limitations-on-xbox)|  Xbox One에서 아직 완전히 작동하지 않는 UWP 기능 영역을 설명합니다.|
 
 ## <a name="videos"></a>동영상
 
@@ -55,4 +55,4 @@ Channel 9에 대한 다음 영상에서도 멋진 Xbox용 앱을 빌드하는 �
 
 - [Windows 10 UWP 앱 시작 자동화](automate-launching-uwp-apps.md)
 - [게임 개발용 CPUSets](cpusets-games.md)
-- [Xbox One용 점진적 웹앱](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/xbox-considerations)
+- [Xbox One용 점진적 웹앱](/microsoft-edge/progressive-web-apps/xbox-considerations)

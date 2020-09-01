@@ -6,12 +6,12 @@ ms.date: 10/17/2019
 ms.topic: article
 keywords: Windows 10, UWP, 게임, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: db551135fab4e29b49b3031ad3338fa9a2e58379
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: b1a4f741a8050e1b78c64f8a3594ae3d9ec4854b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "72548396"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175277"
 ---
 # <a name="game-programming"></a>게임 프로그래밍
 
@@ -28,7 +28,7 @@ DirectX를 사용하여 UWP 게임을 개발하는 방법에 대해 알아보려
 
 게임 개발 개요 및 자습서를 최대한 활용하려면 이러한 주제에 대해 잘 알고 있는 것이 좋습니다.
 
-- [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index)는 DirectX로 UWP 게임을 개발하는 데 권장되는 언어 프로젝션입니다. C++/WinRT는 WinRT(Windows Runtime) API를 위한 표준 최신 C++17 언어 프로젝션입니다. Microsoft C++를 Component Extensions(C++/CX)로 대체합니다. C++/WinRT를 사용하여 DirectX API를 호출하는 코드 예제는 [최소 Direct2D 애플리케이션의 전체 소스 코드 목록](/windows/uwp/cpp-and-winrt-apis/consume-com#full-source-code-listing-of-a-minimal-direct2d-application)을 참조하세요.
+- [C++/WinRT](../cpp-and-winrt-apis/index.md)는 DirectX로 UWP 게임을 개발하는 데 권장되는 언어 프로젝션입니다. C++/WinRT는 WinRT(Windows Runtime) API를 위한 표준 최신 C++17 언어 프로젝션입니다. Microsoft C++를 Component Extensions(C++/CX)로 대체합니다. C++/WinRT를 사용하여 DirectX API를 호출하는 코드 예제는 [최소 Direct2D 애플리케이션의 전체 소스 코드 목록](../cpp-and-winrt-apis/consume-com.md#full-source-code-listing-of-a-minimal-direct2d-application)을 참조하세요.
 - 기본 그래픽 프로그래밍 용어
 - 기본 Windows 프로그래밍 개념
 - Direct3D 9 이상 API에 대한 기본 지식.

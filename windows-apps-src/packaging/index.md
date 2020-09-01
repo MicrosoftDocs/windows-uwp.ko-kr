@@ -6,19 +6,19 @@ ms.date: 07/22/2019
 ms.topic: article
 keywords: windows 10, uwp, 패키징
 ms.localizationpriority: medium
-ms.openlocfilehash: bb772007cd5c4391634f9df6ba0b6d2037a7b5de
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 35adf8db66bbfaa1be11c0b389efea88b5c2437b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77089479"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164366"
 ---
 # <a name="packaging-apps"></a>앱 패키징
 
-이 섹션에는 UWP(유니버설 Windows 플랫폼) 앱을 배포하고 설치할 수 있도록 MSIX 및 .appx 앱 패키지에 패키징하는 방법에 대한 문서 링크가 포함되어 있습니다. 일부 링크는 [MSIX 설명서](https://docs.microsoft.com/windows/msix/)의 관련 문서로 이동합니다.
+이 섹션에는 UWP(유니버설 Windows 플랫폼) 앱을 배포하고 설치할 수 있도록 MSIX 및 .appx 앱 패키지에 패키징하는 방법에 대한 문서 링크가 포함되어 있습니다. 일부 링크는 [MSIX 설명서](/windows/msix/)의 관련 문서로 이동합니다.
 
 > [!NOTE]
-> Windows 10에서 UWP 앱의 원래 앱 패키징 형식은 .appx였습니다. Windows 10 버전 1809부터 이 패키징 형식의 이름이 .msix로 바뀌었으며 .NET 및 C++/Win32 데스크톱 앱을 비롯한 모든 유형의 Windows 앱을 지원하도록 확장되었습니다. MSIX 지원도 Windows 이전 버전으로 확장 중입니다. 자세한 내용은 [MSIX 설명서](https://docs.microsoft.com/windows/msix/)를 참조하세요.
+> Windows 10에서 UWP 앱의 원래 앱 패키징 형식은 .appx였습니다. Windows 10 버전 1809부터 이 패키징 형식의 이름이 .msix로 바뀌었으며 .NET 및 C++/Win32 데스크톱 앱을 비롯한 모든 유형의 Windows 앱을 지원하도록 확장되었습니다. MSIX 지원도 Windows 이전 버전으로 확장 중입니다. 자세한 내용은 [MSIX 설명서](/windows/msix/)를 참조하세요.
 
 | 항목 | 설명 |
 |-------|-------------|
@@ -31,5 +31,5 @@ ms.locfileid: "77089479"
 | [앱 설치 관리자를 사용하여 Windows 10 앱 설치](/windows/msix/app-installer/app-installer-root) | 앱 설치 관리자를 사용하면 앱 패키지를 두 번 클릭하여 Windows 10 앱을 설치할 수 있습니다. |
 | [WinAppDeployCmd.exe 도구를 사용하여 앱 설치](install-universal-windows-apps-with-the-winappdeploycmd-tool.md) | Windows 애플리케이션 배포(WinAppDeployCmd.exe)는 Windows 10 머신의 UWP 앱을 Windows 10 Mobile 디바이스에 배포하는 데 사용할 수 있는 명령줄 도구입니다. Windows 10 Mobile 디바이스가 Microsoft Visual Studio나 해당 앱에 대한 솔루션 없이 동일한 서브넷에서 사용 가능하거나 USB로 연결되면 이 도구를 사용하여 .appx 패키지를 배포할 수 있습니다. 이 문서는 이 도구를 사용하여 UWP 앱을 설치하는 방법을 설명합니다. |
 | [UWP 앱에 대한 자동화된 빌드 설정](auto-build-package-uwp-apps.md) | 자동화된 빌드 프로세스의 일부로 앱을 패키징하려는 경우 이 항목에서 VSTS(Visual Studio Team Services)를 사용하여 수행하는 방법을 보여 줍니다. |
-| [앱 기능 선언](app-capability-declarations.md) | 사진, 음악 또는 디바이스(예: 카메라 또는 마이크)와 같은 특정 API 또는 리소스에 액세스하려면 앱의 [패키지 매니페스트](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest)에서 접근 권한 값을 선언해야 합니다. |
+| [앱 기능 선언](app-capability-declarations.md) | 사진, 음악 또는 디바이스(예: 카메라 또는 마이크)와 같은 특정 API 또는 리소스에 액세스하려면 앱의 [패키지 매니페스트](/uwp/schemas/appxpackage/appx-package-manifest)에서 접근 권한 값을 선언해야 합니다. |
 | [Microsoft Store에서 패키지 업데이트 다운로드 및 설치](self-install-package-updates.md) | UWP 앱은 프로그래밍 방식으로 패키지 업데이트를 확인하고 업데이트를 설치할 수 있습니다. 또한 앱은 파트너 센터에 필수로 표시된 패키지를 쿼리할 수 있으며, 필수 업데이트가 설치될 때까지 기능을 사용하지 않도록 설정할 수 있습니다.  |

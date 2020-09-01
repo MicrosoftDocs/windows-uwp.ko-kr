@@ -6,12 +6,12 @@ ms.date: 02/12/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2de9d5ae04c526c7c35fda4a7aef713814b4fbc2
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: db6cf7937e0d757d946154a4c87e7e4da3fde2cb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77258330"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175757"
 ---
 # <a name="app-to-app-communication"></a>앱 간 통신
 
@@ -25,16 +25,16 @@ ms.locfileid: "77258330"
 
 UWP 앱은 다른 UWP 앱에 기능을 제공하는 [앱 서비스](../launch-resume/how-to-create-and-consume-an-app-service.md)를 만들 수도 있습니다. 앱 서비스는 호스트 앱에서 배경 작업으로 실행되며 다른 앱에 서비스를 제공할 수 있습니다. 예를 들어, 앱 서비스는 다른 앱에서 사용할 수 있는 바코드 스캐너 서비스를 제공할 수 있습니다.
 
-## <a name="in-this-section"></a>이 섹션의 내용
+## <a name="in-this-section"></a>섹션 내용
 
 | 항목 | 설명 |
 |-------|-------------|
 | [데이터 공유](share-data.md) | 이 문서에서는 UWP 앱에서 공유 계약을 지원하는 방법을 설명합니다. 공유 계약은 텍스트, 링크, 사진과 같은 데이터를 앱 간에 신속하게 공유할 수 있는 편리한 방법입니다. 예를 들어 사용자가 소셜 네트워킹 앱을 사용하여 친구와 웹 페이지를 공유하거나 링크를 나중에 참조하기 위해 노트 기록 앱에 저장할 수 있습니다. |
-| [데이터 받기](receive-data.md) | 이 문서에서는 공유 계약을 사용하여 다른 앱에서 공유된 콘텐츠를 UWP 앱에서 받는 방법을 설명합니다. 이 공유 계약에서는 사용자가 공유를 호출할 때 앱이 옵션으로 제공될 수 있습니다. |
+| [데이터 수신](receive-data.md) | 이 문서에서는 공유 계약을 사용하여 다른 앱에서 공유된 콘텐츠를 UWP 앱에서 받는 방법을 설명합니다. 이 공유 계약에서는 사용자가 공유를 호출할 때 앱이 옵션으로 제공될 수 있습니다. |
 | [복사 및 붙여넣기](copy-and-paste.md) | 이 문서에서는 UWP 앱에서 클립보드를 사용하여 복사 및 붙여넣기를 수행하는 방법을 설명합니다. 복사 및 붙여넣기는 앱 간에 또는 앱 내에서 데이터를 교환하는 기본적인 방법으로, 거의 모든 앱이 클립보드 작업을 어느 정도 지원할 수 있습니다. |
 | [끌어서 놓기](../design/input/drag-and-drop.md) | 이 문서에서는 UWP 앱에 끌어서 놓기를 추가하는 방법을 설명합니다. 끌어서 놓기는 이미지 및 파일과 같은 콘텐츠를 조작하는 전형적이고 자연스러운 방법입니다. 구현되면 끌어서 놓기가 앱에서 앱, 앱에서 데스크톱, 데스크톱에서 앱을 비롯한 모든 방향으로 원활하게 작동합니다. |
 | [앱 서비스 만들기 및 사용](../launch-resume/how-to-create-and-consume-an-app-service.md) | 이 문서에서는 다른 UWP 앱에 서비스를 제공하는 UWP 앱에서 앱 서비스를 만드는 방법을 설명합니다.  |
 
 ## <a name="see-also"></a>참고 항목
 
-- [UWP 앱 개발](https://docs.microsoft.com/windows/uwp/develop/)
+- [UWP 앱 개발](../develop/index.md)
