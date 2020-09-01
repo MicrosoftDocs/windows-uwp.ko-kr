@@ -6,21 +6,21 @@ ms.date: 06/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 78faef0d6a6e02c43221d1d525adedd364dd6e34
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: ff40b506ef305ac4bc651864da34fe746f6229a3
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493158"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164857"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>URI에 대한 기본 앱 실행
 
 
 **중요 API**
 
-- [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)
-- [**PreferredApplicationPackageFamilyName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)
-- [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview)
+- [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync)
+- [**PreferredApplicationPackageFamilyName**](/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)
+- [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview)
 
 URI (Uniform Resource Identifier)에 대 한 기본 앱을 시작 하는 방법을 알아봅니다. Uri를 사용 하 여 특정 작업을 수행 하는 다른 앱을 시작할 수 있습니다. 또한이 항목에서는 Windows에 기본 제공 되는 다양 한 URI 체계에 대 한 개요를 제공 합니다. 사용자 지정 Uri를 시작할 수도 있습니다. 사용자 지정 URI 체계를 등록 하 고 URI 활성화를 처리 하는 방법에 대 한 자세한 내용은 [uri 활성화 처리](handle-uri-activation.md)를 참조 하세요.
 
@@ -30,7 +30,7 @@ URI 체계를 사용 하면 하이퍼링크를 클릭 하 여 앱을 열 수 있
 
 | URI 체계 | 됩니다 |
 | ----------:|----------|
-|[bingmaps:, ms-to: 및 ms 연습:](#maps-app-uri-schemes) | Maps 앱 |
+|[bingmaps:, ms-to: 및 ms 연습: ](#maps-app-uri-schemes) | Maps 앱 |
 |[http](#http-uri-scheme) | 기본 웹 브라우저 |
 |[mailto](#email-uri-scheme) | 기본 메일 앱 |
 |[ms 호출:](#call-app-uri-scheme) |  앱 호출 |
@@ -54,9 +54,9 @@ URI 체계를 사용 하면 하이퍼링크를 클릭 하 여 앱을 열 수 있
 
 ### <a name="call-launchuriasync-to-launch-a-uri"></a>LaunchUriAsync를 호출 하 여 URI를 시작 합니다.
 
-[**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 메서드를 사용 하 여 URI를 시작 합니다. 이 메서드를 호출할 때 앱은 전경 앱 이어야 합니다. 즉, 사용자에 게 표시 되어야 합니다. 이 요구 사항은 사용자가 컨트롤에 유지 되도록 하는 데 도움이 됩니다. 이 요구 사항을 충족 하려면 모든 URI 시작을 앱의 UI에 직접 연결 해야 합니다. 사용자는 항상 URI 시작을 시작 하기 위해 몇 가지 작업을 수행 해야 합니다. URI를 시작 하려고 하지만 응용 프로그램이 전경에 있지 않으면 시작이 실패 하 고 오류 콜백이 호출 됩니다.
+[**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) 메서드를 사용 하 여 URI를 시작 합니다. 이 메서드를 호출할 때 앱은 전경 앱 이어야 합니다. 즉, 사용자에 게 표시 되어야 합니다. 이 요구 사항은 사용자가 컨트롤에 유지 되도록 하는 데 도움이 됩니다. 이 요구 사항을 충족 하려면 모든 URI 시작을 앱의 UI에 직접 연결 해야 합니다. 사용자는 항상 URI 시작을 시작 하기 위해 몇 가지 작업을 수행 해야 합니다. URI를 시작 하려고 하지만 응용 프로그램이 전경에 있지 않으면 시작이 실패 하 고 오류 콜백이 호출 됩니다.
 
-먼저 URI를 나타내는 system.uri 개체를 만든 다음 [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 메서드에 [**전달 합니다.**](https://docs.microsoft.com/dotnet/api/system.uri) 다음 예제와 같이 반환 결과를 사용 하 여 호출이 성공 했는지 확인 합니다.
+먼저 URI를 나타내는 system.uri 개체를 만든 다음 [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) 메서드에 [**전달 합니다.**](https://docs.microsoft.com/dotnet/api/system.uri) 다음 예제와 같이 반환 결과를 사용 하 여 호출이 성공 했는지 확인 합니다.
 
 ```cs
 private async void launchURI_Click(object sender, RoutedEventArgs e)
@@ -117,9 +117,9 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="set-remaining-view-preference"></a>남은 보기 기본 설정 지정
 
-[**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 를 호출 하는 소스 앱은 URI 시작 후 화면에 유지 되도록 요청할 수 있습니다. 기본적으로 Windows는 소스 앱과 URI를 처리 하는 대상 앱 간에 사용 가능한 모든 공간을 동일 하 게 공유 하려고 시도 합니다. 원본 앱은 [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview) 속성을 사용 하 여 사용 가능한 공간을 늘리거나 줄일 수 있도록 응용 프로그램 창을 선호 하는 운영 체제를 나타낼 수 있습니다. **DesiredRemainingView** 를 사용 하 여 URI가 시작 된 후 소스 앱이 화면에 남아 있을 필요가 없으며 대상 앱으로 완전히 바뀔 수도 있음을 나타낼 수도 있습니다. 이 속성은 호출 하는 앱의 기본 창 크기만 지정 합니다. 동시에 화면에 있을 수도 있는 다른 앱의 동작을 지정 하지 않습니다.
+[**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) 를 호출 하는 소스 앱은 URI 시작 후 화면에 유지 되도록 요청할 수 있습니다. 기본적으로 Windows는 소스 앱과 URI를 처리 하는 대상 앱 간에 사용 가능한 모든 공간을 동일 하 게 공유 하려고 시도 합니다. 원본 앱은 [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview) 속성을 사용 하 여 사용 가능한 공간을 늘리거나 줄일 수 있도록 응용 프로그램 창을 선호 하는 운영 체제를 나타낼 수 있습니다. **DesiredRemainingView** 를 사용 하 여 URI가 시작 된 후 소스 앱이 화면에 남아 있을 필요가 없으며 대상 앱으로 완전히 바뀔 수도 있음을 나타낼 수도 있습니다. 이 속성은 호출 하는 앱의 기본 창 크기만 지정 합니다. 동시에 화면에 있을 수도 있는 다른 앱의 동작을 지정 하지 않습니다.
 
-**참고**    Windows는 원본 앱의 최종 창 크기 (예: 원본 앱의 기본 설정, 화면에 있는 앱의 수, 화면 방향 등)를 결정할 때 여러 가지 요인을 고려 합니다. [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview)를 설정 하 여 원본 앱에 대 한 특정 창 지정 동작을 보장할 수 없습니다.
+**참고**    Windows는 원본 앱의 최종 창 크기 (예: 원본 앱의 기본 설정, 화면에 있는 앱의 수, 화면 방향 등)를 결정할 때 여러 가지 요인을 고려 합니다. [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview)를 설정 하 여 원본 앱에 대 한 특정 창 지정 동작을 보장할 수 없습니다.
 
 ```cs
 // Set the desired remaining view.
@@ -167,7 +167,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ![Windows 지도 앱의 예](images/mapnyc.png)
 
-자세한 내용은 [Windows 지도 앱 실행](launch-maps-app.md)을 참조하세요. 사용자 고유의 앱에서 지도 컨트롤을 사용 하려면 [2d, 3d 및 Streetside 뷰가 포함 된 지도 표시](https://docs.microsoft.com/windows/uwp/maps-and-location/display-maps)를 참조 하세요.
+자세한 내용은 [Windows 지도 앱 실행](launch-maps-app.md)을 참조하세요. 사용자 고유의 앱에서 지도 컨트롤을 사용 하려면 [2d, 3d 및 Streetside 뷰가 포함 된 지도 표시](../maps-and-location/display-maps.md)를 참조 하세요.
 
 ### <a name="messaging-app-uri-scheme"></a>메시징 앱 URI 체계
 
@@ -189,7 +189,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 |------------|---------|
 | ms-tonepicker: | 벨 소리, 경보 및 시스템 톤을 선택 합니다. |
 
-매개 변수는 [Valueset](https://docs.microsoft.com/uwp/api/windows.foundation.collections.valueset) 를 통해 LAUNCHURI API로 전달 됩니다. 자세한 내용은 [TONEPICKER URI 체계를 사용 하 여 톤 선택 및 저장](launch-ringtone-picker.md) 을 참조 하세요.
+매개 변수는 [Valueset](/uwp/api/windows.foundation.collections.valueset) 를 통해 LAUNCHURI API로 전달 됩니다. 자세한 내용은 [TONEPICKER URI 체계를 사용 하 여 톤 선택 및 저장](launch-ringtone-picker.md) 을 참조 하세요.
 
 ### <a name="nearby-numbers-app-uri-scheme"></a>가까운 숫자 앱 URI 체계
 
@@ -197,7 +197,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 | URI 체계 | 결과 |
 |------------|---------|
-| yellowpage:? input = \[ keyword \]&method = \[ String 또는 T9\] | 가까운 숫자 앱을 시작 합니다.<br>`input`검색 하려는 키워드를 참조 합니다.<br>`method`검색 형식 (문자열 또는 T9 검색)을 참조 합니다.<br>`method`가 `T9` (키보드 유형) 인 경우는 `keyword` 검색할 T9 키보드 문자에 매핑되는 숫자 문자열 이어야 합니다.<br>`method`가 이면 `String` 는 `keyword` 검색할 키워드입니다. |
+| yellowpage:? input = \[ keyword \]&method = \[ String 또는 T9\] | 가까운 숫자 앱을 시작 합니다.<br>`input` 검색 하려는 키워드를 참조 합니다.<br>`method` 검색 형식 (문자열 또는 T9 검색)을 참조 합니다.<br>`method`가 `T9` (키보드 유형) 인 경우는 `keyword` 검색할 T9 키보드 문자에 매핑되는 숫자 문자열 이어야 합니다.<br>`method`가 이면 `String` 는 `keyword` 검색할 키워드입니다. |
 
 ### <a name="people-app-uri-scheme"></a>피플 앱 URI 체계
 
@@ -206,9 +206,9 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="photos-app-uri-scheme"></a>사진 앱 URI 체계
 
-**Ms 사진:** URI 체계를 사용 하 여 사진 앱을 시작 하 고 이미지를 보거나 비디오를 편집 합니다. 예를 들면 다음과 같습니다.  
-이미지를 보려면 다음을 수행 합니다.`ms-photos:viewer?fileName=c:\users\userName\Pictures\image.jpg`  
-비디오를 편집 하려면 다음을 수행 합니다.`ms-photos:videoedit?InputToken=123abc&Action=Trim&StartTime=01:02:03`  
+**Ms 사진:** URI 체계를 사용 하 여 사진 앱을 시작 하 고 이미지를 보거나 비디오를 편집 합니다. 예:  
+이미지를 보려면 다음을 수행 합니다. `ms-photos:viewer?fileName=c:\users\userName\Pictures\image.jpg`  
+비디오를 편집 하려면 다음을 수행 합니다. `ms-photos:videoedit?InputToken=123abc&Action=Trim&StartTime=01:02:03`  
 
 > [!NOTE]
 > 비디오를 편집 하거나 이미지를 표시 하는 Uri는 바탕 화면 에서만 사용할 수 있습니다.
@@ -216,9 +216,9 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 | URI 체계 |결과 |
 |------------|--------|
 | ms-사진: 뷰어? 파일 이름 = {filename} | 지정 된 이미지를 보려면 사진 앱을 시작 합니다. 여기서 {filename}은 정규화 된 경로 이름입니다. 예: `c:\users\userName\Pictures\ImageToView.jpg` |
-| ms-사진: videoedit? InputToken = {입력 토큰} | 파일 토큰으로 표시 되는 파일에 대 한 비디오 편집 모드로 사진 앱을 시작 합니다. **Inputtoken** 이 필요 합니다. [SharedStorageAccessManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager) 를 사용 하 여 파일에 대 한 토큰을 가져옵니다. |
+| ms-사진: videoedit? InputToken = {입력 토큰} | 파일 토큰으로 표시 되는 파일에 대 한 비디오 편집 모드로 사진 앱을 시작 합니다. **Inputtoken** 이 필요 합니다. [SharedStorageAccessManager](/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager) 를 사용 하 여 파일에 대 한 토큰을 가져옵니다. |
 | ms-사진: videoedit? Action = {action} | 사진 앱을 여는 데 사용할 비디오 편집 모드를 나타내는 매개 변수입니다. 여기서 {action}은 **SlowMotion**, **프레임 추출을**, **Trim**, **View**, **Ink**중 하나입니다. **조치가** 필요 합니다. |
-| ms-사진: videoedit? StartTime = {timespan} | 비디오 재생을 시작할 위치를 지정 하는 선택적 매개 변수입니다. `{timespan}`형식 이어야 합니다 `"hh:mm:ss.ffff"` . 지정 하지 않으면 기본값은입니다.`00:00:00.0000` |
+| ms-사진: videoedit? StartTime = {timespan} | 비디오 재생을 시작할 위치를 지정 하는 선택적 매개 변수입니다. `{timespan}` 형식 이어야 합니다 `"hh:mm:ss.ffff"` . 지정 하지 않으면 기본값은입니다. `00:00:00.0000` |
 
 ### <a name="settings-app-uri-scheme"></a>설정 앱 URI 체계
 
@@ -244,4 +244,4 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 | URI 체계 | 결과 |
 |------------|---------|
-| msnweather://예측? la = \[ 위도 \]&하 = \[ 경도\] | 위치 지리 좌표를 기준으로 예측 페이지에서 날씨 앱을 시작 합니다.<br>`latitude`위치의 위도를 참조 합니다.<br> `longitude`위치의 경도를 참조 합니다.<br> |
+| msnweather://예측? la = \[ 위도 \]&하 = \[ 경도\] | 위치 지리 좌표를 기준으로 예측 페이지에서 날씨 앱을 시작 합니다.<br>`latitude` 위치의 위도를 참조 합니다.<br> `longitude` 위치의 경도를 참조 합니다.<br> |

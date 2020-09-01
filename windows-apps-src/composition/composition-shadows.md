@@ -1,24 +1,24 @@
 ---
 title: 컴퍼지션 그림자
-description: 그림자 Api를 통해 UI 콘텐츠를 사용자 지정할 수 있는 동적 그림자를 추가할 수 있습니다.
+description: 섀도 Api를 사용 하면 UI 콘텐츠에 동적으로 사용자 지정 가능한 그림자를 추가할 수 있습니다.
 ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a47a5f8ffca1d9ca2ddab05fe0baf2f85977d7f
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 29ca04ac3faf3a2884bcc2346177f49222cf786e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318187"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166427"
 ---
-# <a name="shadows-in-windows-ui"></a>Windows UI에 그림자
+# <a name="shadows-in-windows-ui"></a>Windows UI의 그림자
 
-합니다 [DropShadow](/uwp/api/Windows.UI.Composition.DropShadow) 클래스에 적용할 수 있는 구성 가능한 그림자를 만드는 방법을 제공을 [SpriteVisual](/uwp/api/windows.ui.composition.spritevisual) 하거나 [LayerVisual](/uwp/api/windows.ui.composition.layervisual) (시각적 개체의 하위 트리). 시각적 계층에서 개체에 대 한 일반적인 경우는 DropShadow의 모든 속성 애니메이션을 적용할 수 CompositionAnimations를 사용 하 여 합니다.
+[Dropshadow](/uwp/api/Windows.UI.Composition.DropShadow) 클래스는 [SpriteVisual](/uwp/api/windows.ui.composition.spritevisual) 또는 [LayerVisual](/uwp/api/windows.ui.composition.layervisual) (시각적 개체의 하위 트리)에 적용할 수 있는 구성 가능한 그림자를 만드는 방법을 제공 합니다. 시각적 계층의 개체에 대 한 일반적인 경우와 마찬가지로 CompositionAnimations를 사용 하 여 DropShadow의 모든 속성에 애니메이션 효과를 적용할 수 있습니다.
 
 ## <a name="basic-drop-shadow"></a>기본 그림자
 
-기본 섀도 만들려면 간단히 새 DropShadow 만들고 시각적 개체에 연결 합니다. 그림자는 기본적으로 사각형입니다. 표준 속성 집합을 조정 하 여 그림자의 모양과 느낌에 사용할 수 있습니다.
+기본 그림자를 만들려면 새 DropShadow를 만들어 시각적 개체에 연결 하기만 하면 됩니다. 그림자는 기본적으로 사각형입니다. 표준 속성 집합을 사용 하 여 그림자의 모양과 느낌을 조정할 수 있습니다.
 
 ```cs
 var basicRectVisual = _compositor.CreateSpriteVisual();
@@ -33,19 +33,19 @@ basicShadow.Offset = new Vector3(20, 20, 20);
 basicRectVisual.Shadow = basicShadow;
 ```
 
-![기본 DropShadow 함께 사각형 시각적 개체](images/rectangular-dropshadow.png)
+![기본 DropShadow를 사용 하는 사각형 시각적 개체](images/rectangular-dropshadow.png)
 
-## <a name="shaping-the-shadow"></a>그림자를 형성합니다.
+## <a name="shaping-the-shadow"></a>그림자 모양 지정
 
-DropShadow 프로그램에 대 한 모양을 정의 하는 방법은 몇 가지가 있습니다.
+DropShadow 셰이프를 정의 하는 몇 가지 방법이 있습니다.
 
-- **기본값을 사용 하 여** -기본적으로 DropShadow 셰이프 CompositionDropShadowSourcePolicy에 '기본' 모드에 의해 정의 됩니다. SpriteVisual, 기본값은 사각형 마스크는 제공 되지 않는 경우. LayerVisual에 대 한 기본 시각적 개체의 브러시의 알파를 사용 하는 마스크를 상속 하는 것입니다.
-- **마스크를 설정** – 설정할 수 있습니다 합니다 [마스크](/uwp/api/windows.ui.composition.dropshadow.mask) 그림자에 대 한 불투명 마스크를 정의 하는 속성입니다.
-- **상속 된 항목 마스크를 사용 하도록 지정** – 설정 된 [SourcePolicy](/uwp/api/windows.ui.composition.dropshadow.sourcepolicy) 속성을 사용 하 여 [CompositionDropShadowSourcePolicy](/uwp/api/windows.ui.composition.compositiondropshadowsourcepolicy)합니다. InheritFromVisualContent 시각적 개체의 브러시의 알파에서 생성 된 마스크를 사용 합니다.
+- **기본값 사용** -기본적으로 dropshadow 셰이프는 CompositionDropShadowSourcePolicy의 ' 기본 ' 모드로 정의 됩니다. SpriteVisual의 경우 마스크가 제공 되지 않으면 기본값은 사각형입니다. LayerVisual의 경우 기본값은 시각적 개체 브러시의 알파를 사용 하 여 마스크를 상속 하는 것입니다.
+- **마스크 설정** – [마스크](/uwp/api/windows.ui.composition.dropshadow.mask) 속성을 설정 하 여 그림자에 대 한 불투명 마스크를 정의할 수 있습니다.
+- **상속 된 마스크를 사용 하도록 지정** – [CompositionDropShadowSourcePolicy](/uwp/api/windows.ui.composition.compositiondropshadowsourcepolicy)를 사용 하도록 [SourcePolicy](/uwp/api/windows.ui.composition.dropshadow.sourcepolicy) 속성을 설정 합니다. InheritFromVisualContent는 시각적 개체의 브러시 알파에서 생성 된 마스크를 사용 합니다.
 
-## <a name="masking-to-match-your-content"></a>콘텐츠 일치 하는 마스킹
+## <a name="masking-to-match-your-content"></a>콘텐츠와 일치 하도록 마스킹
 
-시각적 개체의 콘텐츠와 일치 시킬에 그림자를 하려는 경우에 섀도 마스크 속성에 대 한 시각적 개체의 브러시를 사용 하거나 자동으로 내용에서 마스크를 상속 하도록 그림자를 설정 합니다. LayerVisual를 사용 하는 경우 그림자는 기본적으로 마스크를 상속 합니다.
+그림자를 시각적 개체의 콘텐츠와 일치 시키려는 경우에는 그림자 마스크 속성에 대해 시각적 개체의 브러시를 사용 하거나 콘텐츠에서 마스크를 자동으로 상속 하도록 그림자를 설정할 수 있습니다. LayerVisual를 사용 하는 경우 섀도는 기본적으로 마스크를 상속 합니다.
 
 ```cs
 var imageSurface = LoadedImageSurface.StartLoadFromUri(new Uri("ms-appx:///Assets/myImage.png"));
@@ -65,13 +65,13 @@ shadow.Offset = new Vector3(20, 20, 20);
 imageSpriteVisual.Shadow = shadow;
 ```
 
-![마스킹된 그림자를 사용 하 여 연결 된 웹 이미지](images/ms-brand-web-dropshadow.png)
+![마스킹된 그림자를 사용 하는 연결 된 웹 이미지](images/ms-brand-web-dropshadow.png)
 
-## <a name="using-an-alternative-mask"></a>대체 마스크를 사용 하 여
+## <a name="using-an-alternative-mask"></a>대체 마스크 사용
 
-일부 경우에는 시각적 개체의 콘텐츠가 일치 하지 않는 그림자를 구체화 하는 것이 좋습니다. 이 위해서는 브러시를 사용 하 여 알파를 사용 하 여 마스크 속성을 명시적으로 설정 해야 합니다.
+경우에 따라 시각적 개체의 콘텐츠와 일치 하지 않도록 그림자 모양을 지정할 수 있습니다. 이러한 효과를 얻으려면 알파를 사용 하는 브러시를 사용 하 여 Mask 속성을 명시적으로 설정 해야 합니다.
 
-에 아래 예제에서는 두 화면-섀도 마스크에 대 한 하나 및 시각적 콘텐츠를 로드 합니다.
+아래 예제에서는 시각적 콘텐츠에 대 한 화면과 그림자 마스크에 대 한 두 개의 표면을 로드 합니다.
 
 ```cs
 var imageSurface = LoadedImageSurface.StartLoadFromUri(new Uri("ms-appx:///Assets/myImage.png"));
@@ -93,11 +93,11 @@ shadow.Offset = new Vector3(20, 20, 20);
 imageSpriteVisual.Shadow = shadow;
 ```
 
-![마스킹 원 그림자를 사용 하 여 연결 된 웹 이미지](images/ms-brand-web-masked-dropshadow.png)
+![원 마스킹된 그림자가 있는 연결 된 웹 이미지](images/ms-brand-web-masked-dropshadow.png)
 
-## <a name="animating"></a>애니메이션 적용
+## <a name="animating"></a>주기
 
-시각적 계층에서 표준 이므로 DropShadow 속성 애니메이션을 적용할 수 컴퍼지션 애니메이션을 사용 합니다. 아래에서는 그림자 흐림 효과 반지름에 애니메이션 효과를 위의 혼합할 샘플에서 코드를 수정 합니다.
+시각적 계층에서 표준 그대로 사용 하 여 DropShadow 속성은 컴퍼지션 애니메이션을 사용 하 여 애니메이션을 적용할 수 있습니다. 아래에서는 위의 sprinkles 샘플에서 코드를 수정 하 여 그림자에 대 한 흐리게 반경을 애니메이션 합니다.
 
 ```cs
 ScalarKeyFrameAnimation blurAnimation = _compositor.CreateScalarKeyFrameAnimation();
@@ -111,25 +111,25 @@ shadow.StartAnimation("BlurRadius", blurAnimation);
 
 ## <a name="shadows-in-xaml"></a>XAML의 그림자
 
-더 복잡 한 프레임 워크 요소에 그림자를 추가 하려는 경우에 XAML 컴퍼지션 사이의 그림자와의 상호 운용성에 몇 가지가 있습니다.
+더 복잡 한 프레임 워크 요소에 그림자를 추가 하려는 경우에는 XAML과 컴퍼지션 사이에 그림자를 사용 하는 몇 가지 방법이 있습니다.
 
-1. 사용 된 [DropShadowPanel](https://github.com/windows-toolkit/WindowsCommunityToolkit/blob/master/Microsoft.Toolkit.Uwp.UI.Controls/DropShadowPanel/DropShadowPanel.Properties.cs) Windows 커뮤니티 도구 키트에서 사용할 수 있습니다. 참조 된 [DropShadowPanel 설명서](https://docs.microsoft.com/windows/uwpcommunitytoolkit/controls/DropShadowPanel) 사용 방법에 대 한 자세한 내용은 합니다.
-1. 시각적 개체를 섀도 호스트로 사용 및 XAML 유인물 시각적 개체에 연결을 만듭니다.
-1. 컴퍼지션 샘플 갤러리를 사용 하 여 [SamplesCommon](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SamplesCommon/SamplesCommon) CompositionShadow 컨트롤 사용자 지정 합니다. 사용량에 대 한 다음 예제를 참조 하세요.
+1. Windows 커뮤니티 도구 키트에서 제공 되는 [DropShadowPanel](https://github.com/windows-toolkit/WindowsCommunityToolkit/blob/master/Microsoft.Toolkit.Uwp.UI.Controls/DropShadowPanel/DropShadowPanel.Properties.cs) 을 사용 합니다. 사용 방법에 대 한 자세한 내용은 [DropShadowPanel 설명서](/windows/uwpcommunitytoolkit/controls/DropShadowPanel) 를 참조 하세요.
+1. XAML 유인물 시각적 개체에 연결 & 그림자 호스트로 사용할 시각적 개체를 만듭니다.
+1. 컴퍼지션 샘플 갤러리의 [SamplesCommon](https://github.com/microsoft/WindowsCompositionSamples/tree/master/SamplesCommon/SamplesCommon) custom CompositionShadow 컨트롤을 사용 합니다. 사용법은 여기에서 예제를 참조 하세요.
 
 ## <a name="performance"></a>성능
 
-시각적 계층에 여러 가지 최적화가 효율적이 고 사용할 수 있는 효과에 그림자를 생성할 설정한 옵션에 따라 비교적 비용이 많이 드는 작업을 수 있습니다. 다음은 다양 한 유형의 그림자에 대 한 높은 수준의 '비용'입니다. 특정 그림자 비용이 많이 들 수 있지만 이러한 계속 될 있습니다 특정 시나리오에서 제한적으로 사용 하기에 적합 합니다.
+시각적 계층에는 효과를 효율적으로 사용할 수 있도록 최적화 된 많은 최적화가 있지만, 그림자 생성은 설정 하는 옵션에 따라 상대적으로 비용이 많이 드는 작업이 될 수 있습니다. 다음은 다양 한 유형의 섀도에 대 한 높은 수준의 ' 비용 '입니다. 특정 그림자는 비용이 많이 들 수 있지만 특정 시나리오에서 사용 하는 것이 적합할 수도 있습니다.
 
-섀도 특성| 비용
+그림자 특징| 비용
 ------------- | -------------
 사각형    | 낮음
-Shadow.Mask      | 높음
+그림자. Mask      | 높음
 CompositionDropShadowSourcePolicy.InheritFromVisualContent | 높음
-정적 흐리게 반경이 | 낮음
-흐리게 반경이 애니메이션 적용 | 높음
+정적 흐림 반경 | 낮음
+흐림 효과 반경 애니메이션 | 높음
 
 ## <a name="additional-resources"></a>추가 리소스
 
-- [Composition DropShadow API](/uwp/api/Windows.UI.Composition.DropShadow)
-- [WindowsUIDevLabs GitHub Repo](https://github.com/microsoft/WindowsCompositionSamples)
+- [컴퍼지션 DropShadow API](/uwp/api/Windows.UI.Composition.DropShadow)
+- [WindowsUIDevLabs GitHub 리포지토리](https://github.com/microsoft/WindowsCompositionSamples)

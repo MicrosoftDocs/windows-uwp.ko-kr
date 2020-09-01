@@ -5,12 +5,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 91e3ae5b23b7429633053f4d4d876f02127d26e3
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: 57d2f3729430faefc7db31cad6a0ac91ddaa2e02
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89054423"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166367"
 ---
 # <a name="relation-based-animations"></a>관계 기반 애니메이션
 
@@ -46,9 +46,9 @@ ExpressionAnimations 함께 작업 하는 경우 앞으로 설명할 수 있는 
 
 - Parameters – 상수 값 또는 다른 컴퍼지션 개체에 대 한 참조를 나타내는 값입니다.
 - 수치 연산자 – 매개 변수를 결합 하 여 방정식을 형성 하는 일반적인 수치 연산자 더하기 (+), 빼기 (-), 곱하기 (*), 나누기 (/) 또한 보다 큼 (>), 같음 (= =), 삼항 연산자 (조건) 등의 조건부 연산자도 포함 되어 있습니다. ifTrue: ifFalse) 등
-- 수치 연산 함수 – system.string을 기반으로 하는 수치 연산 함수/바로 가기입니다. 지원 되는 함수의 전체 목록은 [Expressionanimation](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ExpressionAnimation)을 참조 하세요.
+- 수치 연산 함수 – system.string을 기반으로 하는 수치 연산 함수/바로 가기입니다. 지원 되는 함수의 전체 목록은 [Expressionanimation](/uwp/api/Windows.UI.Composition.ExpressionAnimation)을 참조 하세요.
 
-식은 ExpressionAnimation 시스템 내 에서만 의미가 있는 특수 구와 키워드 집합을 지원 합니다. 이러한 목록은 [Expressionanimation](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.ExpressionAnimation) 설명서의 전체 수학 함수 목록과 함께 나열 됩니다.
+식은 ExpressionAnimation 시스템 내 에서만 의미가 있는 특수 구와 키워드 집합을 지원 합니다. 이러한 목록은 [Expressionanimation](/uwp/api/Windows.UI.Composition.ExpressionAnimation) 설명서의 전체 수학 함수 목록과 함께 나열 됩니다.
 
 ### <a name="creating-expressions-with-expressionbuilder"></a>ExpressionBuilder를 사용 하 여 식 만들기
 

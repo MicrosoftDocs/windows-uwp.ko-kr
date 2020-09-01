@@ -6,32 +6,32 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 15feb86677cd70774a99fe4046d817c71fc71f90
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 67419be613c3bd3da4aa9b2b2cb3d265ae5b7c4f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372586"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167227"
 ---
 # <a name="data-protection"></a>데이터 보호
 
 
 
-이 문서에서는 [**Windows.Security.Cryptography.DataProtection**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection) 네임스페이스의 [**DataProtectionProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection.DataProtectionProvider) 클래스를 사용하여 UWP 앱에서 디지털 데이터를 암호화 및 해독하는 방법을 설명합니다.
+이 문서에서는 DataProtectionProvider 네임 스페이스에서 [**DataProtectionProvider**](/uwp/api/Windows.Security.Cryptography.DataProtection.DataProtectionProvider) 클래스를 사용 하 여 UWP 앱에서 디지털 데이터를 암호화 하 고 해독 하는 방법을 설명 [**합니다.**](/uwp/api/Windows.Security.Cryptography.DataProtection)
 
-여러 가지 방법으로 데이터 보호 API를 사용할 수 있습니다.
+데이터 보호 Api는 다음과 같은 여러 가지 방법으로 사용할 수 있습니다.
 
--   AD 그룹과 같은 AD(Active Directory) 보안 주체에 대한 데이터를 보호할 수 있습니다. 그룹의 모든 멤버가 데이터 암호를 해독할 수 있습니다.
--   X.509 인증서에 포함된 공개 키로 데이터를 보호할 수 있습니다. 프라이빗 키의 소유자는 데이터를 암호 해독할 수 있습니다.
--   대칭 키를 사용하여 데이터를 보호할 수 있습니다. 대칭 키는 예를 들면, Live ID 같은 비 AD 보안 주체로 데이터를 보호하도록 작동합니다.
--   웹 사이트에 로그인할 때 사용되는 자격 증명(암호)에 대한 데이터를 보호할 수 있습니다.
+-   AD 그룹 등의 AD (Active Directory) 보안 주체로 데이터를 보호 하기 위한 것입니다. 그룹의 모든 멤버는 데이터의 암호를 해독할 수 있습니다.
+-   X.509 인증서에 포함 된 공개 키에 대 한 데이터를 보호 하기 위한 것입니다. 개인 키의 소유자는 데이터의 암호를 해독할 수 있습니다.
+-   대칭 키를 사용 하 여 데이터를 보호 합니다. 예를 들어 Live ID와 같은 비 AD 보안 주체로 데이터를 보호 하는 데 사용할 수 있습니다.
+-   웹 사이트에 로그온 하는 동안 사용 되는 자격 증명 (암호)에 대 한 데이터를 보호 합니다.
 
-데이터를 보호하려면 [**DataProtectionProvider**](https://docs.microsoft.com/uwp/api/Windows.Security.Cryptography.DataProtection.DataProtectionProvider) 개체를 만들 때 [**ProtectAsync**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.protectasync) 또는 [**ProtectStreamAsync**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.protectstreamasync)를 호출하기 전에 보호 설명자를 지정해야 합니다. 다음 예제에서는 가능한 예제 보호 설명자를 보여 줍니다.
+데이터를 보호 하려면 [**DataProtectionProvider**](/uwp/api/Windows.Security.Cryptography.DataProtection.DataProtectionProvider) 개체를 만들 때 [**ProtectAsync**](/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.protectasync) 또는 [**ProtectStreamAsync**](/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.protectstreamasync)를 호출 하기 전에 보호 설명자를 지정 해야 합니다. 다음 예제에서는 가능한 샘플 보호 설명자를 보여 줍니다.
 
 ## <a name="protecting-static-data"></a>정적 데이터 보호
 
 
-다음 예제에서는 [**ProtectAsync**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.protectasync) 및 [**UnprotectAsync**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.unprotectasync) 메서드를 사용하여 현재 사용자 SID에 대한 정적 데이터를 비동기적으로 보호하는 방법을 보여 줍니다.
+다음 예제에서는 [**ProtectAsync**](/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.protectasync) 및 [**UnprotectAsync**](/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.unprotectasync) 메서드를 사용 하 여 정적 데이터를 현재 사용자의 SID로 비동기적으로 보호 하는 방법을 보여 줍니다.
 
 ```cs
 using Windows.Security.Cryptography;
@@ -116,7 +116,7 @@ namespace SampleProtectAsync
 ## <a name="protecting-stream-data"></a>스트림 데이터 보호
 
 
-다음 예제에서는 [**ProtectStreamAsync**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.protectstreamasync) 및 [**UnprotectStreamAsync**](https://docs.microsoft.com/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.unprotectstreamasync) 메서드를 사용하여 현재 사용자 SID에 대한 스트림 데이터를 비동기적으로 보호하는 방법을 보여 줍니다.
+다음 예제에서는 [**ProtectStreamAsync**](/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.protectstreamasync) 및 [**UnprotectStreamAsync**](/uwp/api/windows.security.cryptography.dataprotection.dataprotectionprovider.unprotectstreamasync) 메서드를 사용 하 여 스트림 데이터를 현재 사용자의 SID로 비동기적으로 보호 하는 방법을 보여 줍니다.
 
 ```cs
 using Windows.Security.Cryptography;

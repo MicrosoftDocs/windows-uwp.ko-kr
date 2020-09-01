@@ -1,6 +1,6 @@
 ---
 Description: 터치 패드에 최적화 되어 있지만 입력 장치에서 기능적으로 일관 된 직관적인 직관적인 사용자 조작 환경을 사용 하 여 Windows 앱을 만듭니다.
-title: 터치 패드 상호 작용
+title: 터치 패드 조작
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
@@ -8,12 +8,12 @@ keywords: 터치 패드, PTP, 터치, 포인터, 입력, 사용자 상호 작용
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ffc3ce96c7e8c2ad4a34aecd1ca85ff644bdef97
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 9e83cb1ceca96e5c7b51e71cb419b86b0395ea99
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234481"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165867"
 ---
 # <a name="touchpad-design-guidelines"></a>터치 패드 디자인 지침
 
@@ -42,7 +42,7 @@ ms.locfileid: "83234481"
 
 터치 패드는 간접 다중 터치 입력을 마우스와 같은 포인팅 장치의 전체 자릿수 입력과 결합 합니다. 이 조합은 터치 최적화 된 UI와 일반적으로 더 작은 생산성 앱 및 데스크톱 환경 대상에 모두 적합 합니다. 터치 입력을 위한 Windows 앱 디자인을 최적화 하 고 기본적으로 터치 패드 지원을 받습니다.
 
-터치 패드에서 지 원하는 상호 작용 환경의 수렴 때문에, [**Pointerentered**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered) 이벤트를 사용 하 여 터치 입력에 대 한 기본 제공 지원과 함께 마우스 스타일의 UI 명령을 제공 하는 것이 좋습니다. 예를 들어 이전 및 다음 단추를 사용 하 여 사용자가 콘텐츠 페이지에서 대칭 이동 뿐만 아니라 콘텐츠를 이동할 수 있습니다.
+터치 패드에서 지 원하는 상호 작용 환경의 수렴 때문에, [**Pointerentered**](/uwp/api/windows.ui.xaml.uielement.pointerentered) 이벤트를 사용 하 여 터치 입력에 대 한 기본 제공 지원과 함께 마우스 스타일의 UI 명령을 제공 하는 것이 좋습니다. 예를 들어 이전 및 다음 단추를 사용 하 여 사용자가 콘텐츠 페이지에서 대칭 이동 뿐만 아니라 콘텐츠를 이동할 수 있습니다.
 
 이 항목에서 설명 하는 제스처와 지침은 앱이 터치 패드 입력을 원활 하 고 최소한의 코드로 지원 하는지 확인 하는 데 도움이 될 수 있습니다.
 
@@ -119,7 +119,7 @@ ms.locfileid: "83234481"
 ## <a name="hardware"></a>하드웨어
 
 
-마우스 장치 기능 ([**MouseCapabilities**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseCapabilities))을 쿼리하여 터치 패드 하드웨어에서 직접 액세스할 수 있는 앱 UI의 측면을 파악 합니다. 터치와 마우스 입력 모두에 UI를 제공 하는 것이 좋습니다.
+마우스 장치 기능 ([**MouseCapabilities**](/uwp/api/Windows.Devices.Input.MouseCapabilities))을 쿼리하여 터치 패드 하드웨어에서 직접 액세스할 수 있는 앱 UI의 측면을 파악 합니다. 터치와 마우스 입력 모두에 UI를 제공 하는 것이 좋습니다.
 
 장치 기능을 쿼리 하는 방법에 대 한 자세한 내용은 [입력 장치 식별](identify-input-devices.md)을 참조 하세요.
 
@@ -132,14 +132,14 @@ ms.locfileid: "83234481"
 -   터치 패드 상호 작용에 포커스 사각형을 사용 하지 마세요. 키보드 상호 작용을 위해 예약 합니다.
 -   동일한 입력 대상을 나타내는 모든 요소에 대해 시각적 피드백을 동시에 표시 합니다.
 
-시각적 피드백에 대 한 보다 일반적인 지침은 [시각적 피드백에 대 한 지침](https://docs.microsoft.com/windows/uwp/input-and-devices/guidelines-for-visualfeedback)을 참조 하세요.
+시각적 피드백에 대 한 보다 일반적인 지침은 [시각적 피드백에 대 한 지침](./guidelines-for-visualfeedback.md)을 참조 하세요.
 
 ## <a name="cursors"></a>커서
 
 
 터치 패드 포인터에는 표준 커서 집합을 사용할 수 있습니다. 이러한 요소는 요소의 기본 동작을 나타내는 데 사용 됩니다.
 
-각 표준 커서에는 해당 하는 기본 이미지가 연결 되어 있습니다. 사용자 또는 앱은 언제 든 지 표준 커서와 연결 된 기본 이미지를 바꿀 수 있습니다. UWP 앱은 [**Pointercursor**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.pointercursor) 함수를 통해 커서 이미지를 지정 합니다.
+각 표준 커서에는 해당 하는 기본 이미지가 연결 되어 있습니다. 사용자 또는 앱은 언제 든 지 표준 커서와 연결 된 기본 이미지를 바꿀 수 있습니다. UWP 앱은 [**Pointercursor**](/uwp/api/windows.ui.core.corewindow.pointercursor) 함수를 통해 커서 이미지를 지정 합니다.
 
 마우스 커서를 사용자 지정 해야 하는 경우:
 

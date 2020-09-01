@@ -7,12 +7,12 @@ manager: jken
 ms.topic: article
 keywords: android, windows, android studio, visual studio, c + + android 게임, windows defender, 에뮬레이터, 가상 장치, 설치, java, kotlin
 ms.date: 04/28/2020
-ms.openlocfilehash: 31cdd5124c659b5d35a7e8192db1e87821b891f4
-ms.sourcegitcommit: 24b19e7ee06e5bb11a0dae334806741212490ee9
+ms.openlocfilehash: c9c718d2cccc6a38ac75d3220a79c7b2ec757f54
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255227"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166847"
 ---
 # <a name="get-started-with-native-android-development-on-windows"></a>Windows에서 네이티브 Android 개발 시작
 
@@ -25,13 +25,13 @@ ms.locfileid: "82255227"
 Android Studio는 Google의 Android 운영 체제에 대 한 공식 통합 개발 환경입니다. [최신 버전의 Windows 용 Android Studio를 다운로드](https://developer.android.com/studio)합니다.
 
 - .Exe 파일을 다운로드 한 경우 (권장)를 두 번 클릭 하 여 시작 합니다.
-- .Zip 파일을 다운로드 한 경우 ZIP 압축을 풀고, android-studio 폴더를 Program Files 폴더에 복사한 다음, android-studio > bin 폴더를 열고 studio64 (64 비트 컴퓨터의 경우) 또는 스튜디오 (32 비트 컴퓨터용)를 시작 합니다.
+- .Zip 파일을 다운로드 한 경우 ZIP 압축을 풀고, android-studio 폴더를 Program Files 폴더에 복사한 다음, android-studio > bin 폴더를 열고 studio64.exe (64 비트 컴퓨터의 경우) 또는 studio.exe (32 비트 컴퓨터의 경우)를 시작 합니다.
 
-Android Studio 설치 마법사의 지시에 따라 권장 되는 SDK 패키지를 설치 합니다. 새 도구 및 기타 api를 사용할 수 있게 되 면 팝업을 **알려 주는 Android Studio** > 하거나**업데이트 확인**을 선택 하 여 업데이트를 확인 합니다.
+Android Studio 설치 마법사의 지시에 따라 권장 되는 SDK 패키지를 설치 합니다. 새 도구 및 기타 api를 사용할 수 있게 되 면 팝업을 **알려 주는 Android Studio**하거나  >  **업데이트 확인**을 선택 하 여 업데이트를 확인 합니다.
 
 ## <a name="create-a-new-project"></a>새 프로젝트 만들기
 
-**파일** > **New**새로 > 만들기**새 프로젝트**를 선택 합니다.
+**파일**  >  **새로**만들기  >  **새 프로젝트**를 선택 합니다.
 
 **프로젝트 선택** 창에서 다음 템플릿 중에서 선택할 수 있습니다.
 
@@ -46,7 +46,7 @@ Android Studio 설치 마법사의 지시에 따라 권장 되는 SDK 패키지�
 템플릿은 일반적으로 신규 및 기존 앱 모듈에 활동을 추가 하는 데 사용 됩니다. 예를 들어 앱 사용자에 대 한 로그인 화면을 만들려면 [로그인 활동 템플릿을](https://developer.android.com/studio/projects/templates#LoginActivity)사용 하 여 활동을 추가 합니다.
 
 > [!NOTE]
-> Android 운영 체제는 **구성 요소의** 개념을 기반으로 하며 **작업** 및 **의도** 를 사용 하 여 상호 작용을 정의 합니다. **활동** 은 사용자가 수행할 수 있는 단일의 집중 된 작업을 나타냅니다. **활동** 은 **뷰** 클래스를 기반으로 하는 클래스를 사용 하 여 사용자 인터페이스를 빌드하기 위한 창을 제공 합니다. Android 운영 체제에는 **activities** `onCreate()` `onStart()` `onResume()` `onPause()`, `onStop()`,,, 및 `onDestroy()`의 6 가지 콜백 집합으로 정의 된 활동에 대 한 수명 주기가 있습니다. 활동 구성 요소는 **의도** 개체를 사용 하 여 서로 상호 작용 합니다. 의도는 수행할 동작을 정의 하거나 수행할 동작의 유형을 설명 하는 작업을 정의 합니다 (다른 응용 프로그램에서 비롯 될 수도 있음). Android 문서에서 [활동](https://developer.android.com/reference/android/app/Activity), [활동 수명 주기](https://developer.android.com/guide/components/activities/activity-lifecycle)및 [의도](https://developer.android.com/reference/android/content/Intent.html) 에 대해 자세히 알아보세요.
+> Android 운영 체제는 **구성 요소의** 개념을 기반으로 하며 **작업** 및 **의도** 를 사용 하 여 상호 작용을 정의 합니다. **활동** 은 사용자가 수행할 수 있는 단일의 집중 된 작업을 나타냅니다. **활동** 은 **뷰** 클래스를 기반으로 하는 클래스를 사용 하 여 사용자 인터페이스를 빌드하기 위한 창을 제공 합니다. Android 운영 체제에는 **activities** ,,,, `onCreate()` `onStart()` `onResume()` `onPause()` `onStop()` 및 `onDestroy()` 의 6 가지 콜백 집합으로 정의 된 활동에 대 한 수명 주기가 있습니다. 활동 구성 요소는 **의도** 개체를 사용 하 여 서로 상호 작용 합니다. 의도는 수행할 동작을 정의 하거나 수행할 동작의 유형을 설명 하는 작업을 정의 합니다 (다른 응용 프로그램에서 비롯 될 수도 있음). Android 문서에서 [활동](https://developer.android.com/reference/android/app/Activity), [활동 수명 주기](https://developer.android.com/guide/components/activities/activity-lifecycle)및 [의도](https://developer.android.com/reference/android/content/Intent.html) 에 대해 자세히 알아보세요.
 
 ### <a name="java-or-kotlin"></a>Java 또는 Kotlin
 
@@ -85,11 +85,11 @@ Android Studio **프로젝트** 창에는 다음 파일이 포함 되어 있습�
 
 앱에 대 한 기본 활동 및 진입점입니다. 앱을 빌드 및 실행 하면 시스템에서이 작업의 인스턴스를 시작 하 고 해당 레이아웃을 로드 합니다.
 
-**앱 > res > 레이아웃 > activity_main .xml**
+**앱 > res > 레이아웃 > activity_main.xml**
 
 활동의 UI (사용자 인터페이스)에 대 한 레이아웃을 정의 하는 XML 파일입니다. 여기에는 "Hello World" 텍스트를 포함 하는 TextView 요소가 포함 됩니다.
 
-**앱 > 매니페스트 > AndroidManifest .xml**
+**앱 > 매니페스트 > AndroidManifest.xml**
 
 앱 및 각 구성 요소의 기본적인 특징을 설명 하는 매니페스트 파일입니다.
 
@@ -107,7 +107,7 @@ C/c + +를 사용 하 여 새 프로젝트를 만들려면 다음을 수행 합�
 
 - 마법사의 **c + + 지원 사용자 지정** 섹션에서 **c + + 표준** 필드를 사용 하 여 프로젝트를 사용자 지정할 수 있습니다. 드롭다운 목록을 사용 하 여 사용 하려는 c + +의 표준화를 선택 합니다. **도구 체인 default** 를 선택 하면 기본 cmake 설정이 사용 됩니다. **마침**을 선택합니다.
 
-- 새 프로젝트를 Android Studio 만들면 **프로젝트** 창에서 네이티브 소스 파일, 헤더, cmake 또는 ndk 빌드에 대 한 빌드 스크립트, 프로젝트의 일부인 미리 빌드된 라이브러리를 포함 하는 **cpp** 폴더를 찾을 수 있습니다. "Hello from c + +" 라는 문자열을 `native-lib.cpp`반환 하는 `src/main/cpp/` 간단한 `stringFromJNI()` 함수를 제공 하는 폴더에서 샘플 c + + 소스 파일를 찾을 수도 있습니다. 또한 네이티브 라이브러리를 빌드하는 데 필요한 CMake 빌드 [`CMakeLists.txt`](https://developer.android.com/studio/projects/configure-cmake.html)스크립트인 모듈의 루트 디렉터리에서 찾을 수 있습니다.
+- 새 프로젝트를 Android Studio 만들면 **프로젝트** 창에서 네이티브 소스 파일, 헤더, cmake 또는 ndk 빌드에 대 한 빌드 스크립트, 프로젝트의 일부인 미리 빌드된 라이브러리를 포함 하는 **cpp** 폴더를 찾을 수 있습니다. `native-lib.cpp` `src/main/cpp/` `stringFromJNI()` "Hello From c + +" 라는 문자열을 반환 하는 간단한 함수를 제공 하는 폴더에서 샘플 c + + 소스 파일를 찾을 수도 있습니다. 또한 네이티브 라이브러리를 빌드하는 데 필요한 CMake 빌드 스크립트인 [`CMakeLists.txt`](https://developer.android.com/studio/projects/configure-cmake.html) 모듈의 루트 디렉터리에서 찾을 수 있습니다.
 
 자세히 알아보려면 Android docs 항목: [프로젝트에 c 및 c + + 코드 추가](https://developer.android.com/studio/projects/add-native-code)를 참조 하세요. 샘플은 GitHub에서 [Android Studio c + + 통합 리포지토리를 사용 하는 ANDROID NDK 샘플](https://github.com/android/ndk-samples) 을 참조 하세요. Android에서 c + + 게임을 컴파일하고 실행 하려면 [Google Play 게임 서비스 API](https://developers.google.com/games/services/cpp/gettingStartedAndroid)를 사용 합니다.
 
@@ -133,7 +133,7 @@ Microsoft는 또한 Microsoft의 모바일 앱 전체 포트폴리오에서 원�
 
 - [Android 응용 프로그램 기본 사항](https://developer.android.com/guide/components/fundamentals)
 
-- [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](https://docs.microsoft.com/dual-screen/android/)
+- [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](/dual-screen/android/)
 
 - [Windows Defender 제외를 추가 하 여 성능 향상](defender-settings.md)
 

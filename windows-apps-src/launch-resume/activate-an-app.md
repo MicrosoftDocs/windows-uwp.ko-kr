@@ -1,6 +1,6 @@
 ---
 title: 앱 활성화 처리
-description: OnLaunched 메서드를 재정의하여 앱 활성화를 처리하는 방법을 알아봅니다.
+description: OnLaunched 메서드를 재정의 하 여 앱 활성화를 처리 하는 방법을 알아봅니다.
 ms.assetid: DA9A6A43-F09D-4512-A2AB-9B6132431007
 ms.date: 07/02/2018
 ms.topic: article
@@ -11,24 +11,24 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: 622fc4246c0ce8051135feab07295034b55a82e4
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 0c3aa86fd8eee3724e092799eea6d34f0b9d453b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370818"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164997"
 ---
 # <a name="handle-app-activation"></a>앱 활성화 처리
 
-재정의 하 여 앱 활성화를 처리 하는 방법을 알아봅니다 합니다 [ **Application.OnLaunched** ](/uwp/api/windows.ui.xaml.application.onlaunched) 메서드.
+[**응용 프로그램의 OnLaunched**](/uwp/api/windows.ui.xaml.application.onlaunched) 메서드를 재정의 하 여 앱 활성화를 처리 하는 방법을 알아봅니다.
 
-## <a name="override-the-launch-handler"></a>실행 처리기 재정의
+## <a name="override-the-launch-handler"></a>시작 처리기 재정의
 
-어떤 이유로 응용 프로그램이 활성화 될 때 시스템은 보냅니다 합니다 [ **CoreApplicationView.Activated** ](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) 이벤트입니다. 활성화 유형 목록을 보려면 [**ActivationKind**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.ActivationKind) 열거형을 참조하세요.
+앱이 활성화 되 면 어떤 이유로 든 시스템은 [**CoreApplicationView**](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) 이벤트를 보냅니다. 활성화 유형 목록은 [**ActivationKind**](/uwp/api/Windows.ApplicationModel.Activation.ActivationKind) 열거를 참조 하세요.
 
-[  **Windows.UI.Xaml.Application**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application) 클래스는 다양한 활성화 유형을 처리하기 위해 재정의할 수 있는 메서드를 정의합니다. 몇 가지 활성화 유형에는 재정의 가능한 특정 메서드가 있습니다. 기타 활성화 유형의 경우 [**OnActivated**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onactivated) 메서드를 재정의합니다.
+[**응용 프로그램**](/uwp/api/Windows.UI.Xaml.Application) 은 다양 한 활성화 형식을 처리 하기 위해 재정의할 수 있는 메서드를 정의 합니다. 몇 가지 활성화 형식에는 재정의할 수 있는 특정 메서드가 있습니다. 다른 활성화 형식의 경우 [**onactivated**](/uwp/api/windows.ui.xaml.application.onactivated) 메서드를 재정의 합니다.
 
-응용 프로그램용 클래스를 정의합니다.
+응용 프로그램에 대 한 클래스를 정의 합니다.
 
 ```xml
 <Application
@@ -37,10 +37,10 @@ ms.locfileid: "66370818"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 ```
 
-[  **OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) 메서드를 재정의합니다. 사용자가 앱을 실행하면 이 메서드가 호출됩니다. [  **LaunchActivatedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) 매개 변수는 이전 앱 상태 및 활성화 인수를 포함합니다.
+[**Onlaunched**](/uwp/api/windows.ui.xaml.application.onlaunched) 된 메서드를 재정의 합니다. 이 메서드는 사용자가 앱을 시작할 때마다 호출 됩니다. [**LaunchActivatedEventArgs**](/uwp/api/Windows.ApplicationModel.Activation.LaunchActivatedEventArgs) 매개 변수는 앱의 이전 상태와 활성화 인수를 포함 합니다.
 
 > [!NOTE]
-> Windows, 시작 타일 또는 앱 목록에서 일시 중단 된 앱을 시작 하거나이 메서드를 호출 하지 않습니다.
+> Windows에서 시작 타일 또는 앱 목록에서 일시 중단 된 앱을 시작 하면이 메서드가 호출 되지 않습니다.
 
 ```csharp
 using System;
@@ -185,9 +185,9 @@ void App::EnsurePageCreatedAndActivate()
 }
 ```
 
-## <a name="restore-application-data-if-app-was-suspended-then-terminated"></a>앱이 일시 중단된 후 종료된 경우 응용 프로그램 데이터 복원
+## <a name="restore-application-data-if-app-was-suspended-then-terminated"></a>앱이 일시 중단 되었다가 종료 된 경우 응용 프로그램 데이터 복원
 
-사용자가 종료된 앱으로 전환하면 시스템은 [**Kind**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.kind)를 **Launch**로, [**PreviousExecutionState**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.previousexecutionstate)를 **Terminated** 또는 **ClosedByUser**로 설정하여 [**Activated**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) 이벤트를 전송합니다. 앱은 저장된 응용 프로그램 데이터를 로드하고 표시 콘텐츠를 새로 고쳐야 합니다.
+사용자가 종료 된 앱으로 전환 하면 시스템은 **시작** 으로 설정 되 고 [**PreviousExecutionState**](/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.previousexecutionstate) 가 **종료** 됨 또는 **Closedbyuser**로 설정 된 [**활성화**](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) [**된 이벤트**](/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.kind) 를 보냅니다. 앱은 저장 된 응용 프로그램 데이터를 로드 하 고 표시 된 콘텐츠를 새로 고쳐야 합니다.
 
 ```csharp
 async protected override void OnLaunched(LaunchActivatedEventArgs args)
@@ -259,19 +259,19 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 }
 ```
 
-[  **PreviousExecutionState**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.previousexecutionstate)의 값이 **NotRunning**이면, 앱에서 응용 프로그램 데이터를 저장하지 못하며 마치 처음 실행하는 것처럼 앱이 다시 시작됩니다.
+[**PreviousExecutionState**](/uwp/api/windows.applicationmodel.activation.iactivatedeventargs.previousexecutionstate) 의 값이 **NotRunning**인 경우 앱은 응용 프로그램 데이터를 성공적으로 저장 하지 못했으며 앱은 처음 시작 된 것 처럼 시작 해야 합니다.
 
 ## <a name="remarks"></a>설명
 
 > [!NOTE]
-> 현재 창에 이미 설정된 콘텐츠가 있는 경우 앱에서 초기화를 건너뛸 수 있습니다. 확인할 수 있습니다 합니다 [ **LaunchActivatedEventArgs.TileId** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.tileid) 속성 있는지 여부를 앱에서 기본 또는 보조 타일이 시작 되었으며, 해당 정보를 기반으로 결정을 해야 하는지 여부를 결정 에 새로 표시 하거나 앱 환경을 다시 시작 합니다.
+> 현재 창에 이미 콘텐츠가 설정 되어 있으면 앱에서 초기화를 건너뛸 수 있습니다. [**LaunchActivatedEventArgs TileId**](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.tileid) 속성을 확인 하 여 앱이 기본 또는 보조 타일에서 시작 되었는지 여부를 확인 하 고, 해당 정보에 따라 새로 제공 하거나 앱 환경을 다시 시작할지 여부를 결정할 수 있습니다.
 
 ## <a name="important-apis"></a>중요 API
-* [Windows.ApplicationModel.Activation](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Activation)
-* [Windows.UI.Xaml.Application](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Application)
+* [Windows ApplicationModel. 활성화](/uwp/api/Windows.ApplicationModel.Activation)
+* [Windows. .Xaml. .Xaml 응용 프로그램](/uwp/api/Windows.UI.Xaml.Application)
 
 ## <a name="related-topics"></a>관련 항목
 * [앱 일시 중단 처리](suspend-an-app.md)
 * [앱 다시 시작 처리](resume-an-app.md)
-* [일시 중단 하 고 다시 시작 하는 앱에 대 한 지침](https://docs.microsoft.com/windows/uwp/launch-resume/index)
+* [앱 일시 중단 및 다시 시작에 대 한 지침](./index.md)
 * [앱 수명 주기](app-lifecycle.md)

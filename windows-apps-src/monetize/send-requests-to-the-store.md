@@ -6,24 +6,24 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, StoreRequestHelper, SendRequestAsync
 ms.localizationpriority: medium
-ms.openlocfilehash: 810c546eb0ee0263dcb50b3ce58e593ad294435c
-ms.sourcegitcommit: 577a54d36145f91c8ade8e4509d4edddd8319137
+ms.openlocfilehash: a02be93a56d6066ebd4d9547c8cc9ea1a96c9e09
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83867333"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164497"
 ---
 # <a name="send-requests-to-the-microsoft-store"></a>Microsoft Store에 요청 보내기
 
-Windows 10 버전 1607부터 Windows SDK은 [windows](https://docs.microsoft.com/uwp/api/windows.services.store) 의 스토어 관련 작업 (예: 앱에서 바로 구매)을 위한 api를 제공 합니다. 그러나 저장소를 지 원하는 서비스는 OS 릴리스 간에 지속적으로 업데이트, 확장 및 향상 되지만, 일반적으로 주요 OS 릴리스 중에만 새 Api가 Windows SDK에 추가 됩니다.
+Windows 10 버전 1607부터 Windows SDK은 [windows](/uwp/api/windows.services.store) 의 스토어 관련 작업 (예: 앱에서 바로 구매)을 위한 api를 제공 합니다. 그러나 저장소를 지 원하는 서비스는 OS 릴리스 간에 지속적으로 업데이트, 확장 및 향상 되지만, 일반적으로 주요 OS 릴리스 중에만 새 Api가 Windows SDK에 추가 됩니다.
 
-새 버전의 Windows SDK를 릴리스하기 전에 새 저장소 작업을 UWP (유니버설 Windows 플랫폼) 앱에서 사용할 수 있도록 하는 유연한 방법으로 [Sendrequestasync](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper.sendrequestasync) 메서드를 제공 합니다. 이 메서드를 사용 하 여 최신 버전의 Windows SDK에서 사용할 수 있는 해당 API가 아직 없는 새 작업의 저장소에 요청을 보낼 수 있습니다.
+새 버전의 Windows SDK를 릴리스하기 전에 새 저장소 작업을 UWP (유니버설 Windows 플랫폼) 앱에서 사용할 수 있도록 하는 유연한 방법으로 [Sendrequestasync](/uwp/api/windows.services.store.storerequesthelper.sendrequestasync) 메서드를 제공 합니다. 이 메서드를 사용 하 여 최신 버전의 Windows SDK에서 사용할 수 있는 해당 API가 아직 없는 새 작업의 저장소에 요청을 보낼 수 있습니다.
 
 > [!NOTE]
 > **Sendrequestasync** 메서드는 Windows 10, 버전 1607 이상을 대상으로 하는 앱에만 사용할 수 있습니다. 이 메서드에서 지 원하는 일부 요청은 Windows 10 버전 1607 이후의 릴리스에서만 지원 됩니다.
 
-**Sendrequestasync** 는 [StoreRequestHelper](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper) 클래스의 정적 메서드입니다. 이 메서드를 호출 하려면 메서드에 다음 정보를 전달 해야 합니다.
-* 작업을 수행 하려는 사용자에 대 한 정보를 제공 하는 [Storecontext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext) 개체입니다. 이 개체에 대 한 자세한 내용은 [StoreContext 클래스 시작](in-app-purchases-and-trials.md#get-started-with-the-storecontext-class)을 참조 하세요.
+**Sendrequestasync** 는 [StoreRequestHelper](/uwp/api/windows.services.store.storerequesthelper) 클래스의 정적 메서드입니다. 이 메서드를 호출 하려면 메서드에 다음 정보를 전달 해야 합니다.
+* 작업을 수행 하려는 사용자에 대 한 정보를 제공 하는 [Storecontext](/uwp/api/windows.services.store.storecontext) 개체입니다. 이 개체에 대 한 자세한 내용은 [StoreContext 클래스 시작](in-app-purchases-and-trials.md#get-started-with-the-storecontext-class)을 참조 하세요.
 * 저장소로 보내려는 요청을 식별 하는 정수입니다.
 * 요청에서 인수를 지 원하는 경우 요청과 함께 전달할 인수를 포함 하는 JSON 형식 문자열을 전달할 수도 있습니다.
 
@@ -86,9 +86,9 @@ public async Task<bool> AddUserToFlightGroup()
 }
 ```
 
-이 요청을 제출한 후 [StoreSendRequestResult](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult) 반환 값의 [Response](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult.Response) 속성은 다음 필드를 포함 하는 JSON 형식 문자열을 포함 합니다.
+이 요청을 제출한 후 [StoreSendRequestResult](/uwp/api/windows.services.store.storesendrequestresult) 반환 값의 [Response](/uwp/api/windows.services.store.storesendrequestresult.Response) 속성은 다음 필드를 포함 하는 JSON 형식 문자열을 포함 합니다.
 
-|  필드  |  설명  |
+|  필드  |  Description  |
 |----------------------|---------------|
 |  *익명*                   |  부울 값입니다. 여기에서 **true** 는 사용자 또는 장치 id가 요청에 없음을 나타내고, **false** 는 사용자 또는 장치 id가 요청에 표시 됨을 나타냅니다.  |
 |  *name*                   |  장치나 사용자가 속하는 가장 높은 순위의 비행 그룹의 이름을 포함 하는 문자열입니다.  |
@@ -129,7 +129,7 @@ public async Task<bool> AddUserToFlightGroup()
 }
 ```
 
-요청에 오류가 있는 경우 [StoreSendRequestResult](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult) 반환 값의 [HttpStatusCode](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult.HttpStatusCode) 속성은 응답 코드를 포함 합니다.
+요청에 오류가 있는 경우 [StoreSendRequestResult](/uwp/api/windows.services.store.storesendrequestresult) 반환 값의 [HttpStatusCode](/uwp/api/windows.services.store.storesendrequestresult.HttpStatusCode) 속성은 응답 코드를 포함 합니다.
 
 ### <a name="remove-the-current-device-or-user-from-a-flight-group"></a>비행 그룹에서 현재 장치 또는 사용자를 제거 합니다.
 
@@ -152,9 +152,9 @@ public async Task<bool> AddUserToFlightGroup()
 }
 ```
 
-요청에 오류가 있는 경우 [StoreSendRequestResult](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult) 반환 값의 [HttpStatusCode](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult.HttpStatusCode) 속성은 응답 코드를 포함 합니다.
+요청에 오류가 있는 경우 [StoreSendRequestResult](/uwp/api/windows.services.store.storesendrequestresult) 반환 값의 [HttpStatusCode](/uwp/api/windows.services.store.storesendrequestresult.HttpStatusCode) 속성은 응답 코드를 포함 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [앱에서 등급 및 검토 대화 상자 표시](request-ratings-and-reviews.md#show-a-rating-and-review-dialog-in-your-app)
-* [SendRequestAsync](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper.sendrequestasync)
+* [SendRequestAsync](/uwp/api/windows.services.store.storerequesthelper.sendrequestasync)

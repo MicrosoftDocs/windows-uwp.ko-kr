@@ -5,12 +5,12 @@ ms.date: 07/16/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 95a7355241f9ba4cc7b4bb743b78ac09169d65d9
-ms.sourcegitcommit: 2747d9266e1678fca96d3822ce47499ca91a2c70
+ms.openlocfilehash: 3d4aa82f70e9bad7a60a97b6b28f28f3dfd008c9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77213680"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166407"
 ---
 # <a name="tailoring-effects--experiences-using-windows-ui"></a>Windows UI를 사용 하 여 효과 & 환경을 조정 합니다.
 
@@ -22,7 +22,7 @@ UI를 조정 하는 것은 다음 영역과 관련 하 여 성능, 멋진 UI에 
 - 애니메이션에 대 한 사용자 설정 수용
 - 지정 된 하드웨어 기능에 대 한 UI 최적화
 
-위의 영역에서 시각적 계층을 사용 하 여 효과와 애니메이션을 조정 하는 방법을 설명 하지만, 응용 프로그램을 조정 하 여 뛰어난 최종 사용자 환경을 보장 하는 다른 여러 가지 방법이 있습니다. 다양 한 장치에 대 한 [ui](/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design) 를 조정 하 고 [응답성이 뛰어난 ui를 만드는](/windows/uwp/design/layout/responsive-design)방법에 대 한 지침 문서를 사용할 수 있습니다.
+위의 영역에서 시각적 계층을 사용 하 여 효과와 애니메이션을 조정 하는 방법을 설명 하지만, 응용 프로그램을 조정 하 여 뛰어난 최종 사용자 환경을 보장 하는 다른 여러 가지 방법이 있습니다. 다양 한 장치에 대 한 [ui](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md) 를 조정 하 고 [응답성이 뛰어난 ui를 만드는](../design/layout/responsive-design.md)방법에 대 한 지침 문서를 사용할 수 있습니다.
 
 ## <a name="user-effects-settings"></a>사용자 효과 설정
 
@@ -38,10 +38,10 @@ UI를 조정 하는 것은 다음 영역과 관련 하 여 성능, 멋진 UI에 
 
 이 기능을 해제 하면 XAML의 아크릴 브러시가 기본적으로이 이벤트를 수신 하기 때문에 아크릴 재질이 단색으로 자동 대체 됩니다. 여기에서 투명도 효과를 사용 하지 않을 때 계산기 앱이 단색으로 적절 하 게 대체 하는 것을 볼 수 있습니다.
 
-아크릴](images/tailoring-acrylic.png)
-![계산기를 사용 하 여 계산기 ![투명도 설정에 응답](images/tailoring-acrylic-fallback.png)
+![](images/tailoring-acrylic.png)
+ ![ 투명도 설정에 응답 하는 아크릴 아크릴 계산기를 사용 하는 계산기](images/tailoring-acrylic-fallback.png)
 
-그러나 사용자 지정 효과의 경우 응용 프로그램은 [AdvancedEffectsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.advancedeffectsenabled) 속성 또는 [AdvancedEffectsEnabledChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.advancedeffectsenabledchanged) 이벤트에 응답 하 고 투명도가 없는 효과를 사용 하도록 효과/효과 그래프를 전환 해야 합니다. 이에 대 한 예는 다음과 같습니다.
+그러나 사용자 지정 효과의 경우 응용 프로그램은 [AdvancedEffectsEnabled](/uwp/api/windows.ui.viewmanagement.uisettings.advancedeffectsenabled) 속성 또는 [AdvancedEffectsEnabledChanged](/uwp/api/windows.ui.viewmanagement.uisettings.advancedeffectsenabledchanged) 이벤트에 응답 하 고 투명도가 없는 효과를 사용 하도록 효과/효과 그래프를 전환 해야 합니다. 이에 대 한 예는 다음과 같습니다.
 
 ```cs
 public MainPage()
@@ -59,7 +59,7 @@ private void Uisettings_AdvancedEffectsEnabledChanged(UISettings sender, object 
 
 ## <a name="animations-settings"></a>애니메이션 설정
 
-마찬가지로 응용 프로그램은 [AnimationsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.animationsenabled) 속성에 대 한 응답을 수신 하 고 응답 하 여 설정의 사용자 설정에 따라 애니메이션을 설정 하거나 해제 하 여 > 디스플레이의 접근성을 > 합니다.
+마찬가지로 응용 프로그램은 [AnimationsEnabled](/uwp/api/windows.ui.viewmanagement.uisettings.animationsenabled) 속성에 대 한 응답을 수신 하 고 응답 하 여 설정의 사용자 설정에 따라 애니메이션을 설정 하거나 해제 하 여 > 디스플레이의 접근성을 > 합니다.
 
 ![설정의 애니메이션 옵션](images/tailoring-animations-setting.png)
 
@@ -118,11 +118,11 @@ API는 몇 가지 간단한 단계를 통해 기존 코드에 추가할 수 있�
 
 CompositionCapabilities API에서 제공 된 [AreEffectsSupported](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectssupported) 및 [AreEffectsFast](/uwp/api/windows.ui.composition.compositioncapabilities.areeffectsfast) 메서드의 피드백에 따라 응용 프로그램은 장치에 최적화 된 다른 효과를 위해 비용이 많이 들고 지원 되지 않는 효과를 교환 하도록 결정할 수 있습니다. 일부 효과는 지속적으로 다른 리소스 보다 더 많은 리소스를 사용 하는 것으로 알려져 있으며, 다른 효과는 더 자유롭게 사용할 수 있습니다. 그러나 모든 효과의 경우 일부 시나리오 또는 조합의 경우 효과 그래프의 성능 특성이 변경 될 수 있으므로 연결 하 고 애니메이션을 적용 하는 경우 주의 해야 합니다. 다음은 개별 효과의 성능 특징에 대 한 몇 가지 규칙입니다.
 
-- 높은 성능에 영향을 주는 것으로 알려진 효과는 가우시안 흐림, 그림자 마스크, BackDropBrush, HostBackDropBrush 및 레이어 시각적 개체와 같습니다. 이는 낮은 종료 장치 [(기능 수준 9.1-9.3)](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro)에는 권장 되지 않으며, 높은 최종 장치에서 신중 하 게 사용 해야 합니다.
+- 높은 성능에 영향을 주는 것으로 알려진 효과는 가우시안 흐림, 그림자 마스크, BackDropBrush, HostBackDropBrush 및 레이어 시각적 개체와 같습니다. 이는 낮은 종료 장치 [(기능 수준 9.1-9.3)](/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro)에는 권장 되지 않으며, 높은 최종 장치에서 신중 하 게 사용 해야 합니다.
 - 중간 성능 영향을 주는 효과는 색 매트릭스, 특정 Blend 효과 BlendModes (광도, 색, 채도 및 색상), 스포트라이트, SceneLightingEffect 및 (시나리오에 따라) BorderEffect입니다. 이러한 영향은 낮은 종료 장치의 특정 시나리오에서 작동할 수 있지만 연결 및 애니메이션을 적용 하는 경우 주의 해야 합니다. 두 개 이하로 사용을 제한 하 고 전환에만 애니메이션 효과를 주는 것이 좋습니다.
 - 다른 모든 효과는 성능에 영향을 주지 않으며, 애니메이션을 적용 하 고 연결 하는 경우 모든 적당 한 시나리오에서 작동 합니다.
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
-- [UWP 응답성 디자인 기술](https://docs.microsoft.com/windows/uwp/design/layout/responsive-design)
-- [UWP 장치 조정](https://docs.microsoft.com/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design)
+- [UWP 응답성 디자인 기술](../design/layout/responsive-design.md)
+- [UWP 장치 조정](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md)

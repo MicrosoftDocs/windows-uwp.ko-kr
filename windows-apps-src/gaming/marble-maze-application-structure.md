@@ -1,120 +1,120 @@
 ---
 title: Marble Maze 응용 프로그램 구조
-description: DirectX UWP(유니버설 Windows 플랫폼) 앱의 구조는 일반적인 데스크톱 응용 프로그램 구조와 다릅니다.
+description: UWP (DirectX 유니버설 Windows 플랫폼) 앱의 구조는 기존 데스크톱 응용 프로그램의 구조와 다릅니다.
 ms.assetid: 6080f0d3-478a-8bbe-d064-73fd3d432074
 ms.date: 09/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 샘플, directx, 구조
 ms.localizationpriority: medium
-ms.openlocfilehash: d248d8737f32d35cf0a25f4ad0c9138a1d334365
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: e4dd33bb40b84db79e3ac2ea43a4252b6e20d441
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74258493"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165247"
 ---
 # <a name="marble-maze-application-structure"></a>Marble Maze 응용 프로그램 구조
 
 
 
 
-DirectX UWP(유니버설 Windows 플랫폼) 앱의 구조는 일반적인 데스크톱 응용 프로그램 구조와 다릅니다. [HWND](https://docs.microsoft.com/windows/desktop/WinProg/windows-data-types)와 같은 핸들 형식과 [CreateWindow](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-createwindowa)와 같은 함수로 작업하는 대신 Windows 런타임은 보다 현대적이고 개체 지향적인 방식으로 UWP 앱을 개발할 수 있도록 [Windows::UI::Core::ICoreWindow](https://docs.microsoft.com/uwp/api/Windows.UI.Core.ICoreWindow)와 같은 인터페이스를 제공합니다. 이 설명서 섹션에서는 Marble Maze 앱 코드가 구성된 방식을 보여 줍니다.
+UWP (DirectX 유니버설 Windows 플랫폼) 앱의 구조는 기존 데스크톱 응용 프로그램의 구조와 다릅니다. [HWND](/windows/desktop/WinProg/windows-data-types) 와 같은 핸들 형식으로 작업 하는 [대신, Windows 런타임](/windows/desktop/api/winuser/nf-winuser-createwindowa)은 [Windows:: UI:: Core:: ICoreWindow](/uwp/api/Windows.UI.Core.ICoreWindow) 와 같은 인터페이스를 제공 하므로, 더 현대적인 개체 지향 방식으로 UWP 앱을 개발할 수 있습니다. 설명서의이 섹션에서는 대리석의 응용 프로그램 코드를 구성 하는 방법을 보여 줍니다.
 
 > [!NOTE]
-> 이 문서에 해당하는 샘플 코드는 [DirectX Marble Maze 게임 샘플](https://github.com/microsoft/Windows-appsample-marble-maze)에 있습니다.
+> 이 문서에 해당 하는 샘플 코드는 [DirectX 대리석 미로 game 샘플](https://github.com/microsoft/Windows-appsample-marble-maze)에서 찾을 수 있습니다.
 
  
 ## 
-이 문서에서 게임 코드를 구성하는 경우에 대해 논의하는 주요 사항은 다음과 같습니다.
+게임 코드를 구성할 때이 문서에서 설명 하는 주요 사항은 다음과 같습니다.
 
--   초기화 단계에서 게임에 사용되는 런타임 및 라이브러리 구성 요소를 설정하며 게임 관련 리소스도 로드합니다.
--   UWP 앱은 시작 후 5초 내에 이벤트 처리를 시작해야 합니다. 따라서 앱을 로드할 때 중요한 리소스만 로드합니다. 게임은 큰 리소스를 백그라운드에서 로드하고 진행률 화면을 표시해야 합니다.
--   게임 루프에서 Windows 이벤트에 응답하고, 사용자 입력을 읽고, 장면 개체를 업데이트하고, 장면을 렌더링합니다.
--   이벤트 처리기를 사용하여 창 이벤트에 응답합니다. 데스크톱 Windows 응용 프로그램의 창 메시지가 이벤트 처리기로 대체됩니다.
+-   초기화 단계에서 게임에 사용 되는 런타임 및 라이브러리 구성 요소를 설정 하 고 게임 특정 리소스를 로드 합니다.
+-   UWP 앱은 시작 후 5 초 이내에 이벤트 처리를 시작 해야 합니다. 따라서 앱을 로드할 때 필수 리소스만 로드 합니다. 게임은 백그라운드에서 많은 리소스를 로드 하 고 진행률 화면을 표시 합니다.
+-   게임 루프에서 Windows 이벤트에 응답 하 고, 사용자 입력을 읽고, 장면 개체를 업데이트 하 고, 장면을 렌더링 합니다.
+-   이벤트 처리기를 사용 하 여 창 이벤트에 응답 합니다. 이는 데스크톱 Windows 응용 프로그램에서 창 메시지를 대체 합니다.
 -   상태 시스템을 사용하여 게임 논리의 흐름과 순서를 제어합니다.
 
-##  <a name="file-organization"></a>파일 구성
+##  <a name="file-organization"></a>파일 조직
 
 
-Marble Maze의 일부 구성 요소를 거의 또는 전혀 수정하지 않고 모든 게임에 다시 사용할 수 있습니다. 이러한 파일이 제공하는 구성과 아이디어를 고유한 게임에 맞게 조정할 수 있습니다. 다음 표에서는 중요한 소스 코드 파일에 대해 간략하게 설명합니다.
+대리석의 일부 구성 요소는 약간의 수정 없이 모든 게임과 재사용할 수 있습니다. 자신의 게임을 위해 이러한 파일에서 제공 하는 조직 및 아이디어를 수정할 수 있습니다. 다음 표에서는 중요 한 소스 코드 파일에 대해 간략하게 설명 합니다.
 
-| 파일                                      | 설명                                                                                                                                                                          |
+| Files                                      | Description                                                                                                                                                                          |
 |--------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| App.h, App.cpp               | 앱의 보기(창, 스레드 및 이벤트)를 캡슐화하는 **App** 및 **DirectXApplicationSource** 클래스를 정의합니다.                                                     |
-| Audio.h, Audio.cpp                         | 오디오 리소스를 관리하는 **Audio** 클래스를 정의합니다.                                                                                                                          |
-| BasicLoader.h, BasicLoader.cpp             | 텍스처, 메시 및 셰이더를 로드하는 데 도움이 되는 유틸리티 메서드를 제공하는 **BasicLoader** 클래스를 정의합니다.                                                                  |
-| BasicMath.h                                | 벡터 및 행렬 데이터와 계산 작업에 도움이 되는 구조와 함수를 정의합니다. 이러한 함수는 대부분 HLSL 셰이더 형식과 호환됩니다.                     |
-| BasicReaderWriter.h, BasicReaderWriter.cpp | Windows 런타임을 사용하여 UWP 앱의 파일 데이터를 읽고 쓰는 **BasicReaderWriter** 클래스를 정의합니다.                                                                    |
-| BasicShapes.h, BasicShapes.cpp             | 큐브, 구 등의 기본 도형을 만들기 위한 유틸리티 메서드를 제공하는 **BasicShapes** 클래스를 정의합니다. 이러한 파일은 Marble Maze 구현에서 사용되지 않습니다. |                                                                                  |
-| Camera.h, Camera.cpp                       | 카메라의 위치와 방향을 제공하는 **Camera** 클래스를 정의합니다.                                                                                               |
-| Collision.h, Collision.cpp                 | 미로 등의 다른 개체와 구슬 간의 충돌 정보를 관리합니다.                                                                                                       |
-| DDSTextureLoader.h, DDSTextureLoader.cpp   | 메모리 버퍼에서 .dds 형식의 텍스처를 로드하는 **CreateDDSTextureFromMemory** 함수를 정의합니다.                                                              |
-| DirectXHelper.h             | 많은 DirectX UWP 앱에 유용한 DirectX 도우미 함수를 정의합니다.                                                                            |
-| LoadScreen.h, LoadScreen.cpp               | 앱을 초기화하는 동안 대기 화면을 표시하는 **LoadScreen** 클래스를 정의합니다.                                                                                         |
-| MarbleMazeMain.h, MarbleMazeMain.cpp               | 게임 관련 리소스를 관리하고 대부분의 게임 논리를 정의하는 **MarbleMazeMain** 클래스를 정의합니다.                                                                          |
-| MediaStreamer.h, MediaStreamer.cpp         | 게임에서 오디오 리소스를 관리하는 데 도움이 되도록 미디어 파운데이션을 사용하는 **MediaStreamer** 클래스를 정의합니다.                                                                            |
-| PersistentState.h, PersistentState.cpp     | 백업 저장소에서 기본 데이터 형식을 읽고 쓰는 **PersistentState** 클래스를 정의합니다.                                                                      |
-| Physics.h, Physics.cpp                     | 구슬과 미로 간의 물리학 시뮬레이션을 구현하는 **Physics** 클래스를 정의합니다.                                                                              |
-| Primitives.h                               | 게임에 사용되는 형상 유형을 정의합니다.                                                                                                                                   |
-| SampleOverlay.h, SampleOverlay.cpp         | 공용 2D 및 사용자 인터페이스 데이터와 작업을 제공하는 **SampleOverlay** 클래스를 정의합니다.                                                                               |
-| SDKMesh.h, SDKMesh.cpp                     | SDK 메시(.sdkmesh) 형식의 메시를 로드하고 렌더링하는 **SDKMesh** 클래스를 정의합니다.                                                                                |
-| StepTimer.h               | 쉽게 총 시간과 경과 시간을 구할 수 있는 방법을 제공하는 **StepTimer** 클래스를 정의합니다.
-| UserInterface.h, UserInterface.cpp         | 메뉴 시스템, 최고 점수 테이블 등의 사용자 인터페이스와 관련된 기능을 정의합니다.                                                                        |
+| App-v, App-v               | 앱의 뷰 (창, 스레드 및 이벤트)를 캡슐화 하는 **앱** 및 **Directxapplicationsource** 클래스를 정의 합니다.                                                     |
+| 오디오만, Audio .cpp                         | 오디오 리소스를 관리 하는 **오디오** 클래스를 정의 합니다.                                                                                                                          |
+| BasicLoader .h, BasicLoader .cpp             | 질감, 메시 및 셰이더를 로드 하는 데 도움이 되는 유틸리티 메서드를 제공 하는 **Basicloader** 클래스를 정의 합니다.                                                                  |
+| BasicMath .h                                | 벡터 및 행렬 데이터와 계산을 사용 하는 데 도움이 되는 구조체 및 함수를 정의 합니다. 이러한 함수 중 상당수는 HLSL 셰이더 형식과 호환 됩니다.                     |
+| BasicReaderWriter .h, BasicReaderWriter .cpp | Windows 런타임를 사용 하 여 UWP 앱에서 파일 데이터를 읽고 쓰는 **Basicreaderwriter** 클래스를 정의 합니다.                                                                    |
+| BasicShapes .h, BasicShapes .cpp             | 큐브와 구 등의 기본 셰이프를 만드는 유틸리티 메서드를 제공 하는 **Basicshapes** 클래스를 정의 합니다. 이러한 파일은 대리석 미로 구현에서 사용 되지 않습니다. |                                                                                  |
+| 카메라 .h, node.js                       | 카메라의 위치와 방향을 제공 하는 **카메라** 클래스를 정의 합니다.                                                                                               |
+| 충돌. h, 충돌 .cpp                 | 는 다른 개체 (예: 미로)와 대리석 사이의 충돌 정보를 관리 합니다.                                                                                                       |
+| DDSTextureLoader, DDSTextureLoader   | 메모리 버퍼에서 dds 형식의 질감을 로드 하는 **CreateDDSTextureFromMemory** 함수를 정의 합니다.                                                              |
+| DirectXHelper .h             | 많은 DirectX UWP 앱에 유용한 DirectX 도우미 함수를 정의 합니다.                                                                            |
+| LoadScreen, LoadScreen               | 앱 초기화 중 로드 화면을 표시 하는 **loadscreen** 클래스를 정의 합니다.                                                                                         |
+| MarbleMazeMain, MarbleMazeMain               | 게임 특정 리소스를 관리 하 고 많은 게임 논리를 정의 하는 **MarbleMazeMain** 클래스를 정의 합니다.                                                                          |
+| MediaStreamer, MediaStreamer         | 게임에서 오디오 리소스를 관리할 수 있도록 미디어 파운데이션를 사용 하는 **MediaStreamer** 클래스를 정의 합니다.                                                                            |
+| 만들면 persistentstate, 만들면 persistentstate     | 백업 저장소에서 기본 데이터 형식을 읽고 쓰는 **만들면 persistentstate** 클래스를 정의 합니다.                                                                      |
+| 물리학, 물리학                     | 대리석과 메 이즈 사이의 물리 시뮬레이션을 구현 하는 **물리학** 클래스를 정의 합니다.                                                                              |
+| 기본 .h                               | 게임에서 사용 되는 기하학적 형식을 정의 합니다.                                                                                                                                   |
+| SampleOverlay, SampleOverlay         | 공용 2D 및 사용자 인터페이스 데이터 및 작업을 제공 하는 **SampleOverlay** 클래스를 정의 합니다.                                                                               |
+| SDKMesh, SDKMesh                     | SDK 메시 (. SDKMesh) 형식의 메시를 로드 하 고 렌더링 하는 **SDKMesh** 클래스를 정의 합니다.                                                                                |
+| Sttimer .h               | 전체 및 경과 시간을 쉽게 가져오는 방법을 제공 하는 **Sttimer** 클래스를 정의 합니다.
+| UserInterface .h, UserInterface .cpp         | 메뉴 시스템 및 높은 점수 표 같은 사용자 인터페이스와 관련 된 기능을 정의 합니다.                                                                        |
 
  
 
-##  <a name="design-time-versus-run-time-resource-formats"></a>디자인 타임 및 런타임 리소스 형식
+##  <a name="design-time-versus-run-time-resource-formats"></a>디자인 타임 및 런타임 리소스 형식 비교
 
 
-가능한 경우 디자인 타임 형식 대신 런타임 형식을 사용하여 더 효율적으로 게임 리소스를 로드합니다.
+가능 하면 디자인 타임 형식 대신 런타임 형식을 사용 하 여 게임 리소스를 보다 효율적으로 로드 합니다.
 
-*디자인 타임* 형식은 리소스를 디자인할 때 사용하는 형식입니다. 일반적으로 3D 디자이너는 디자인 타임 형식으로 작업합니다. 일부 디자인 타임 형식은 텍스트 기반이므로 모든 텍스트 편집기에서 수정할 수 있습니다. 디자인 타임 형식은 자세한 정보를 표시하며, 게임에 필요한 추가 정보를 포함할 수 있습니다. *런타임* 형식은 게임에서 읽는 이진 형식입니다. 일반적으로 런타임 형식은 해당 디자인 타임 형식보다 더 간단하며 더 효율적으로 로드됩니다. 대부분의 게임이 런타임에 런타임 자산을 사용하는 것은 이런 이유 때문입니다.
+*디자인 타임* 형식은 리소스를 디자인할 때 사용 하는 형식입니다. 일반적으로 3D 디자이너는 디자인 타임 형식으로 작동 합니다. 일부 디자인 타임 형식은 텍스트 기반 편집기에서 수정할 수 있도록 텍스트 기반 이기도 합니다. 디자인 타임 형식은 자세한 정보를 표시 하 고 게임에 필요한 것 보다 많은 정보를 포함할 수 있습니다. *런타임* 형식은 게임에서 읽는 이진 형식입니다. 런타임 형식은 일반적으로 해당 디자인 타임 형식 보다 더 간결 하 고 더 효율적입니다. 이로 인해 대부분의 게임이 런타임에 런타임 자산을 사용 하 게 됩니다.
 
-게임에서 디자인 타임 형식을 직접 읽을 수도 있지만 별도의 런타임 형식을 사용할 경우 여러 가지 이점이 있습니다. 대체로 런타임 형식은 더 간단하기 때문에 필요한 디스크 공간이 더 적고 네트워크를 통해 전송하는 데 필요한 시간이 더 짧습니다. 또한 런타임 형식은 대체로 메모리 매핑된 데이터 구조로 표시됩니다. 따라서 XML 기반 텍스트 파일 등보다 훨씬 더 빠르게 메모리에 로드할 수 있습니다. 마지막으로, 별도의 런타임 형식은 대개 이진 인코딩되기 때문에 최종 사용자가 수정하기 더 어렵습니다.
+게임에서 디자인 타임 형식을 직접 읽을 수는 있지만 별도의 런타임 형식을 사용 하는 경우 몇 가지 이점이 있습니다. 런타임 형식이 더 간결 하기 때문에 디스크 공간이 절약 되 고 네트워크를 통해 전송 하는 데 시간이 더 적게 필요 합니다. 또한 런타임 형식은 종종 메모리 매핑된 데이터 구조로 표시 됩니다. 따라서 이러한 파일은 XML 기반 텍스트 파일 등의 메모리에 훨씬 더 빠르게 로드할 수 있습니다. 마지막으로 별도의 런타임 형식이 이진 인코딩 되기 때문에 최종 사용자가 수정 하기가 더 어려워집니다.
 
-HLSL 셰이더는 다른 디자인 타임 및 런타임 형식을 사용하는 리소스의 한 예입니다. Marble Maze는 .hlsl을 디자인 타임 형식으로 사용하고 .cso를 런타임 형식으로 사용합니다. .hlsl 파일에는 셰이더 소스 코드가 포함되고 .cso 파일에는 해당 셰이더 바이트 코드가 포함됩니다. 오프라인에서 .hlsl 파일을 변환하고 게임과 함께 .cso 파일을 제공하는 경우 게임이 로드될 때 HLSL 소스 파일을 바이트 코드로 변환할 필요가 없도록 합니다.
+HLSL 셰이더는 다양 한 디자인 타임 및 런타임 형식을 사용 하는 리소스의 한 예입니다. 대리석 메 이즈는 hlsl을 디자인 타임 형식으로 사용 하 고 cso를 런타임 형식으로 사용 합니다. Hlsl 파일은 셰이더에 대 한 소스 코드를 포함 합니다. 이 파일에는 해당 셰이더 바이트 코드가 포함 됩니다. Hlsl 파일을 오프 라인으로 변환 하 고 게임을 통해 .csfile 파일을 제공 하는 경우 게임 로드 시 HLSL 원본 파일을 바이트 코드로 변환 하지 않아도 됩니다.
 
-지침을 위해 Marble Maze 프로젝트에는 다양한 리소스에 대한 디자인 타임 형식 및 런타임 형식이 둘 다 포함되지만, 필요할 때 런타임 형식으로 변환할 수 있으므로 고유한 게임에 대한 원본 프로젝트에는 디자인 타임 형식만 유지하면 됩니다. 이 설명서에서는 디자인 타임 형식을 런타임 형식으로 변환하는 방법을 보여 줍니다.
+참고로,이에 대 한 설명을 위해 대리석 무늬 메 이즈 프로젝트에는 여러 리소스에 대 한 디자인 타임 형식과 런타임 형식이 모두 포함 되어 있지만 필요할 때 런타임 형식으로 변환할 수 있기 때문에 원본 프로젝트에서 디자인 타임 형식만 유지 관리 하면 됩니다. 이 설명서에서는 디자인 타임 형식을 런타임 형식으로 변환 하는 방법을 보여 줍니다.
 
 ##  <a name="application-life-cycle"></a>응용 프로그램 수명 주기
 
 
-Marble Maze는 일반적인 UWP 앱의 수명 주기를 따릅니다. UWP 앱의 수명 주기에 대한 자세한 내용은 [앱 수명 주기](https://docs.microsoft.com/windows/uwp/launch-resume/app-lifecycle)를 참조하세요.
+대리석은 일반적인 UWP 앱의 수명 주기를 따릅니다. UWP 앱의 수명 주기에 대 한 자세한 내용은 [앱 수명 주기](../launch-resume/app-lifecycle.md)를 참조 하세요.
 
-UWP 게임은 초기화될 때 일반적으로 Direct3D, Direct2D, 사용하는 모든 입력, 오디오 또는 물리학 라이브러리 등의 런타임 구성 요소를 초기화합니다. 또한 게임이 시작되기 전에 필요한 게임 관련 리소스를 로드합니다. 이 초기화는 게임 세션 중에 한 번 발생합니다.
+UWP 게임은 초기화 될 때 일반적으로 Direct3D, Direct2D 등의 런타임 구성 요소와이를 사용 하는 입력, 오디오 또는 물리학 라이브러리를 초기화 합니다. 또한 게임을 시작 하기 전에 필요한 게임 특정 리소스를 로드 합니다. 이 초기화는 게임 세션 중에 한 번 발생 합니다.
 
-초기화 후 게임은 일반적으로 *게임 루프*를 실행합니다. 이 루프에서 게임은 일반적으로 Windows 이벤트 처리, 입력 수집, 장면 개체 업데이트, 장면 렌더링의 4개 작업을 수행합니다. 게임은 장면을 업데이트할 때 장면 개체에 현재 입력 상태를 적용하고 개체 충돌 등의 물리적 이벤트를 시뮬레이션할 수 있습니다. 게임에서 소리 효과 재생, 네트워크를 통해 데이터 전송 등의 기타 작업을 수행할 수도 있습니다. 게임은 장면을 렌더링할 때 장면의 현재 상태를 캡처하고 디스플레이 장치에 그립니다. 다음 섹션에서는 이러한 작업에 대해 자세히 설명합니다.
+초기화 후 게임은 일반적으로 *게임 루프*를 실행 합니다. 이 루프에서 게임은 일반적으로 Windows 이벤트 처리, 입력 수집, 장면 개체 업데이트 및 장면 렌더링의 네 가지 작업을 수행 합니다. 게임에서 장면을 업데이트할 때 현재 입력 상태를 장면 개체에 적용 하 고 개체 충돌과 같은 실제 이벤트를 시뮬레이션할 수 있습니다. 게임에서 음향 효과를 재생 하거나 네트워크를 통해 데이터를 전송 하는 등의 다른 작업을 수행할 수도 있습니다. 게임에서 장면을 렌더링 하면 장면의 현재 상태를 캡처하여 디스플레이 장치에 그립니다. 다음 섹션에서는 이러한 작업에 대해 더 자세히 설명 합니다.
 
 ##  <a name="adding-to-the-template"></a>템플릿에 추가
 
 
-**DirectX 11 앱(유니버설 Windows)** 템플릿은 Direct3D로 렌더링할 수 있는 핵심 창을 만듭니다. 템플릿에는 UWP 앱에서 3D 콘텐츠 렌더링에 필요한 모든 Direct3D 장치 리소스를 만드는 **DeviceResources** 클래스도 포함되어 있습니다.
+**DirectX 11 앱 (유니버설 Windows)** 템플릿은 Direct3D로 렌더링할 수 있는 코어 창을 만듭니다. 템플릿에는 UWP 앱에서 3D 콘텐츠를 렌더링 하는 데 필요한 모든 Direct3D 장치 리소스를 만드는 **DeviceResources** 클래스도 포함 되어 있습니다.
 
-**App** 클래스는 **MarbleMazeMain** 클래스 개체를 만들고, 리소스의 로딩을 시작하고, 루프를 통해 타이머를 업데이트하고, 프레임별 **MarbleMazeMain::Render** 렌더 메서드를 호출합니다. **App::OnWindowSizeChanged**, **App::OnDpiChanged** 및 **App::OnOrientationChanged** 메서드는 각각 **MarbleMazeMain::CreateWindowSizeDependentResources** 메서드를 호출하고, **App::Run** 메서드는 **MarbleMazeMain::Update** 및 **MarbleMazeMain::Render** 메서드를 호출합니다.
+**App** 클래스는 **MarbleMazeMain** 클래스 개체를 만들고, 리소스 로드를 시작 하 고, 타이머를 업데이트 하는 루프를 시작 하 고, 각 프레임의 **MarbleMazeMain:: Render** 메서드를 호출 합니다. **App:: OnWindowSizeChanged**, **App:: OnDpiChanged**및 **app:: OnOrientationChanged** 메서드는 각각 **MarbleMazeMain:: CreateWindowSizeDependentResources** 메서드를 호출 하 고 **App:: Run** 메서드는 **MarbleMazeMain:: Update** 및 **MarbleMazeMain:: Render** 메서드를 호출 합니다.
 
-다음 예제는 **App::SetWindow** 메서드가 **MarbleMazeMain** 클래스 개체를 만드는 곳을 보여 줍니다. 렌더링에 Direct3D 개체를 사용할 수 있도록 **DeviceResources** 클래스가 메서드로 전달됩니다.
+다음 예제에서는 **App:: SetWindow** 메서드가 **MarbleMazeMain** 클래스 개체를 만드는 위치를 보여 줍니다. **DeviceResources** 클래스는 렌더링을 위해 Direct3D 개체를 사용할 수 있도록 메서드에 전달 됩니다.
 
 ```cpp
     m_main = std::unique_ptr<MarbleMazeMain>(new MarbleMazeMain(m_deviceResources));
 ```
 
-**App** 클래스는 또한 지연된 게임용 리소스의 로딩을 시작합니다. 자세한 내용은 다음 섹션을 참조하세요.
+또한 **App** 클래스는 게임에 대해 지연 된 리소스를 로드 하기 시작 합니다. 자세한 내용은 다음 섹션을 참조 하세요.
 
-또한 **App** 클래스는 [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow) 이벤트에 대한 이벤트 처리기를 설정합니다. 이러한 이벤트의 처리기가 호출되면 입력이 **MarbleMazeMain** 클래스로 전달됩니다.
+또한 **App** 클래스는 [CoreWindow](/uwp/api/windows.ui.core.corewindow) 이벤트에 대 한 이벤트 처리기를 설정 합니다. 이러한 이벤트에 대 한 처리기가 호출 되 면 입력을 **MarbleMazeMain** 클래스에 전달 합니다.
 
 ## <a name="loading-game-assets-in-the-background"></a>백그라운드에서 게임 자산 로드
 
 
-게임이 시작 후 5초 내에 창 이벤트에 응답할 수 있게 하려면 비동기적으로 또는 백그라운드에서 게임 자산을 로드하는 것이 좋습니다. 자산이 백그라운드에서 로드될 때 게임이 창 이벤트에 응답할 수 있습니다.
+게임이 시작 된 후 5 초 이내에 창 이벤트에 응답할 수 있도록 하려면 게임 자산을 비동기식으로 또는 백그라운드에서 로드 하는 것이 좋습니다. 자산이 백그라운드에서 로드 되 면 게임이 창 이벤트에 응답할 수 있습니다.
 
 > [!NOTE]
-> 준비된 경우 주 메뉴를 표시하고 나머지 자산이 백그라운드에서 계속 로드되도록 허용할 수도 있습니다. 모든 리소스가 로드되기 전에 사용자가 메뉴에서 옵션을 선택하는 경우 진행률 표시줄 등을 표시하여 장면 리소스가 계속 로드되고 있음을 나타낼 수 있습니다.
+> 주 메뉴가 준비 되 면 표시 하 고 나머지 자산이 백그라운드에서 계속 로드 되도록 허용할 수도 있습니다. 모든 리소스를 로드 하기 전에 사용자가 메뉴에서 옵션을 선택 하는 경우 진행률 표시줄을 표시 하 여 장면 리소스를 계속 로드 하도록 지정할 수 있습니다 (예:).
 
  
 
-게임에 비교적 적은 게임 자산이 포함된 경우 두 가지 이유 때문에 게임 자산을 비동기적으로 로드하는 것이 좋습니다. 이유 중 하나는 모든 리소스가 모든 장치와 모든 구성에서 신속하게 로드된다는 보장이 없기 때문입니다. 또한 비동기 로드를 초기에 통합하면 기능을 추가할 때 코드가 쉽게 확장됩니다.
+게임에 비교적 적은 게임 자산이 포함 된 경우에도 두 가지 이유로 비동기적으로 로드 하는 것이 좋습니다. 한 가지 이유는 모든 리소스가 모든 장치 및 모든 구성에서 신속 하 게 로드 되도록 보장 하기 어렵기 때문입니다. 또한 비동기 로드를 초기에 통합 하면 기능을 추가할 때 코드를 확장할 준비가 된 것입니다.
 
-비동기 자산 로드는 **App::Load** 메서드로 시작됩니다. 이 메서드는 [task](https://docs.microsoft.com/cpp/parallel/concrt/reference/task-class) 클래스를 사용하여 백그라운드에서 게임 자산을 로드합니다.
+비동기 자산 로드는 **App:: Load** 메서드로 시작 합니다. 이 메서드는 [작업](/cpp/parallel/concrt/reference/task-class) 클래스를 사용 하 여 백그라운드에서 게임 자산을 로드 합니다.
 
 ```cpp
     task<void>([=]()
@@ -123,23 +123,23 @@ UWP 게임은 초기화될 때 일반적으로 Direct3D, Direct2D, 사용하는 
     });
 ```
 
-**MarbleMazeMain** 클래스는 비동기 로드가 완료 되었음을 나타내는 *m\_deferredResourcesReady* 플래그를 정의 합니다. **MarbleMazeMain::LoadDeferredResources** 메서드는 게임 리소스를 로드한 다음 이 플래그를 설정합니다. 앱의 업데이트(**MarbleMazeMain::Update**) 및 렌더링(**MarbleMazeMain::Render**) 단계에서 이 플래그를 검사합니다. 이 플래그가 설정된 경우 게임이 정상적으로 계속됩니다. 플래그가 설정되지 않은 경우 게임에 대기 화면이 표시됩니다.
+**MarbleMazeMain** 클래스는 비동기 로드가 완료 되었음을 나타내는 *m \_ deferredResourcesReady* 플래그를 정의 합니다. **MarbleMazeMain:: LoadDeferredResources** 메서드는 게임 리소스를 로드 한 다음이 플래그를 설정 합니다. 앱의 업데이트 (**MarbleMazeMain:: update**) 및 렌더링 (**MarbleMazeMain:: render**) 단계는이 플래그를 확인 합니다. 이 플래그가 설정 되 면 게임이 정상적으로 계속 됩니다. 플래그가 아직 설정 되지 않은 경우 게임에서 로드 화면을 표시 합니다.
 
-UWP 앱용 비동기 프로그래밍에 대한 자세한 내용은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요.
+UWP 앱에 대 한 비동기 프로그래밍에 대 한 자세한 내용은 [c + +의 비동기 프로그래밍](../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md)을 참조 하세요.
 
 > [!TIP]
-> Windows 런타임 C++ 라이브러리(DLL)에 포함된 게임 코드를 작성하는 경우, [C++로 UWP 앱용 비동기 작업 만들기](https://docs.microsoft.com/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps)를 참조하여 앱 및 다른 라이브러리에서 사용할 수 있는 비동기 작업을 만드는 방법을 알아볼지 여부를 고려합니다.
+> Windows 런타임 c + + 라이브러리 (즉, DLL)의 일부인 게임 코드를 작성 하는 경우 [UWP 앱에 대 한 c + +에서 비동기 작업 만들기](/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps) 를 읽을 지 여부를 고려 하 여 앱 및 기타 라이브러리에서 사용할 수 있는 비동기 작업을 만드는 방법을 알아보세요.
 
  
 
 ## <a name="the-game-loop"></a>게임 루프
 
 
-**App::Run** 메서드는 기본 게임 루프를 실행합니다(**MarbleMazeMain::Update**). 프레임마다 이 메서드가 호출됩니다.
+**App:: Run** 메서드는 주 게임 루프 (**MarbleMazeMain:: Update**)를 실행 합니다. 이 메서드는 모든 프레임에서 호출 됩니다.
 
-게임 관련 코드에서 뷰 및 창 코드를 분리하기 위해 업데이트 및 렌더링 호출을 **MarbleMazeMain** 개체에 전달하는 **App::Run** 메서드를 구현했습니다.
+게임 관련 코드에서 뷰와 창 코드를 분리 하기 위해 **App:: Run** 메서드를 구현 하 여 **MarbleMazeMain** 개체에 대 한 업데이트 및 렌더링 호출을 전달 했습니다.
 
-다음 예제에서는 주 게임 루프가 포함된 **App::Run** 메서드를 보여 줍니다. 게임 루프는 총 시간 및 프레임 시간 변수를 업데이트하고, 장면을 업데이트 및 렌더링합니다. 따라서 콘텐츠는 창이 보일 때에만 렌더링됩니다.
+다음 예제에서는 주 게임 루프를 포함 하는 **App:: Run** 메서드를 보여 줍니다. 게임 루프는 총 시간 및 프레임 시간 변수를 업데이트 한 다음 장면을 업데이트 하 고 렌더링 합니다. 또한 창이 표시 될 때만 콘텐츠가 렌더링 되도록 합니다.
 
 ```cpp
 void App::Run()
@@ -178,9 +178,9 @@ void App::Run()
 ## <a name="the-state-machine"></a>상태 시스템
 
 
-일반적으로 게임에는 게임 논리의 흐름 및 순서를 제어하는 *상태 시스템*(*유한 상태 시스템* 또는 FSM이라고도 함)이 포함됩니다. 상태 시스템은 지정된 개수의 상태를 포함하며 상태 간에 전환할 수 있습니다. 일반적으로 상태 시스템은 *초기* 상태로 시작되고, 하나 이상의 *중간* 상태로 전환된 다음 *터미널* 상태로 끝납니다.
+게임은 일반적으로 게임 논리의 흐름과 순서를 제어 하는 *상태 시스템* ( *유한 상태 시스템*또는 fsm이 라고도 함)을 포함 합니다. 상태 시스템에는 지정 된 수의 상태와 이러한 상태를 전환 하는 기능이 포함 되어 있습니다. 일반적으로 상태 시스템은 *초기* 상태에서 시작 하 고 하나 이상의 *중간* 상태로 전환 되며 *터미널* 상태에서 종료 될 수 있습니다.
 
-대체로 게임 루프는 현재 게임 상태와 관련된 논리를 수행할 수 있도록 상태 시스템을 사용합니다. Marble Maze는 게임의 가능한 상태를 각각 정의하는 **GameState** 열거형을 정의합니다.
+게임 루프는 현재 게임 상태와 관련 된 논리를 수행할 수 있도록 상태 시스템을 사용 하는 경우가 많습니다. 대리석 미로는 게임의 가능한 각 상태를 정의 하는 **GameState** 열거형을 정의 합니다.
 
 ```cpp
 enum class GameState
@@ -195,9 +195,9 @@ enum class GameState
 };
 ```
 
-예를 들어 **MainMenu** 상태는 주 메뉴가 표시되고 게임이 활성화되지 않은 상태를 정의합니다. 반대로, **InGameActive** 상태는 게임이 활성화되고 메뉴가 표시되지 않는 상태를 정의합니다. **MarbleMazeMain** 클래스는 활성 게임 상태를 유지 하는 **m\_gameState** 멤버 변수를 정의 합니다.
+예를 들어 **MainMenu** 상태는 주 메뉴가 나타나고 게임이 활성화 되지 않은 것을 정의 합니다. 반대로 **Ingameactive** 상태는 게임이 활성 상태이 고 메뉴가 나타나지 않는다는 것을 정의 합니다. **MarbleMazeMain** 클래스는 활성 게임 상태를 유지 하는 **m \_ gameState** 멤버 변수를 정의 합니다.
 
-**MarbleMazeMain::Update** 및 **MarbleMazeMain::Render** 메서드는 switch 문을 사용하여 현재 상태에 대한 논리를 수행합니다. 다음 예제에서는 이 switch 문이 **MarbleMazeMain::Update** 메서드에서 어떻게 표시되는지를 보여 줍니다(구조를 설명하기 위해 세부 정보는 제거됨).
+**MarbleMazeMain:: Update** 및 **MarbleMazeMain:: Render** 메서드는 switch 문을 사용 하 여 현재 상태에 대 한 논리를 수행 합니다. 다음 예제에서는 **MarbleMazeMain:: Update** 메서드 (구조를 설명 하기 위해 세부 정보는 제거 됨)에 대 한 switch 문이 표시 되는 모양을 보여 줍니다.
 
 ```cpp
 switch (m_gameState)
@@ -220,27 +220,27 @@ case GameState::InGamePaused:
 }
 ```
 
-게임 논리 또는 렌더링이 특정 게임 상태에 따라 달라지는 경우 이 설명서에서 강조됩니다.
+게임 논리 또는 렌더링이 특정 게임 상태에 따라 달라 지는 경우이 문서에서 강조 합니다.
 
 ## <a name="handling-app-and-window-events"></a>앱 및 창 이벤트 처리
 
 
-Windows 런타임은 Windows 메시지를 더 쉽게 관리할 수 있도록 개체 지향적인 이벤트 처리 시스템을 제공합니다. 응용 프로그램에서 이벤트를 사용하려면 이벤트에 응답하는 이벤트 처리기 또는 이벤트 처리 메서드를 제공해야 합니다. 또한 이벤트 원본에 이벤트 처리기를 등록해야 합니다. 이 프로세스를 이벤트 연결이라고 합니다.
+Windows 런타임는 Windows 메시지를 보다 쉽게 관리할 수 있도록 개체 지향 이벤트 처리 시스템을 제공 합니다. 응용 프로그램에서 이벤트를 사용 하려면 이벤트에 응답 하는 이벤트 처리기 또는 이벤트 처리 메서드를 제공 해야 합니다. 또한 이벤트 처리기를 이벤트 소스에 등록 해야 합니다. 이 프로세스를 종종 이벤트 와이어링 이라고 합니다.
 
-### <a name="supporting-suspend-resume-and-restart"></a>일시 중단, 계속 및 다시 시작 지원
+### <a name="supporting-suspend-resume-and-restart"></a>일시 중단, 다시 시작 및 다시 시작 지원
 
-사용자가 잠깐 조작을 멈추거나 Windows가 전원 부족 상태가 되면 Marble Maze가 일시 중단됩니다. 사용자가 게임을 포그라운드로 이동하거나 Windows가 전원 부족 상태에서 벗어나면 게임이 다시 시작됩니다. 일반적으로 앱을 닫지 않습니다. Windows에서 앱이 일시 중단 상태이고 앱에 사용 중인 리소스(예: 메모리)가 필요한 경우 앱을 종료할 수 있습니다. Windows는 일시 중단하거나 다시 시작할 때 앱에 알리지만 종료할 때는 앱에 알리지 않습니다. 따라서 Windows가 앱을 일시 중단한다고 알릴 때 앱을 다시 시작할 경우 현재 사용자 상태를 복원하는 데 필요한 모든 데이터를 저장할 수 있어야 합니다. 앱에 저장할 중요한 사용자 상태가 많은 경우 앱이 일시 중단 알림을 수신하기 전에 정기적으로 상태를 저장해야 할 수도 있습니다. Marble Maze는 다음 두 가지 이유로 일시 중단 및 다시 시작 알림에 응답합니다.
+대리석은 사용자가 멀리 떨어져 있거나 Windows에서 절전 상태가 될 때 일시 중단 됩니다. 사용자가 전경으로 이동 하거나 Windows가 저전력 상태에서 벗어나면 게임이 다시 시작 됩니다. 일반적으로 앱을 닫지 않습니다. Windows는 일시 중단 된 상태에 있을 때 앱을 종료할 수 있으며, Windows에는 앱에서 사용 하는 것과 같은 리소스 (예: 메모리)가 필요 합니다. Windows는 응용 프로그램이 일시 중단 되거나 다시 시작 될 때 응용 프로그램에 알림을 표시 하지만 종료 될 때 앱에 알리지 않습니다. 따라서 앱이 일시 중단 되 고 있음을 응용 프로그램에 알리는 시점 (앱이 다시 시작 될 때 현재 사용자 상태를 복원 하는 데 필요한 모든 데이터)을 저장할 수 있어야 합니다. 앱이 저장 하는 데 비용이 많이 드는 많은 사용자 상태를 사용 하는 경우 앱이 일시 중단 알림을 받기 전에도 정기적으로 상태를 저장 해야 할 수도 있습니다. 대리석 미로는 다음과 같은 두 가지 이유로 일시 중단 및 다시 시작 알림에 응답 합니다.
 
-1.  앱이 일시 중단되면 게임이 현재 게임 상태를 저장하고 오디오 재생을 일시 중지합니다. 앱이 다시 시작되면 게임이 오디오 재생을 다시 시작합니다.
-2.  앱을 닫고 나중에 다시 시작하면 게임이 이전 상태에서 다시 시작됩니다.
+1.  앱이 일시 중단 되 면 게임은 현재 게임 상태를 저장 하 고 오디오 재생을 일시 중지 합니다. 앱이 다시 시작 되 면 게임에서 오디오 재생을 다시 시작 합니다.
+2.  앱을 닫고 나중에 다시 시작 하면 게임이 이전 상태에서 다시 시작 됩니다.
 
-Marble Maze는 일시 중단 및 다시 시작을 지원하기 위해 다음 작업을 수행합니다.
+대리석은 일시 중단 및 다시 시작을 지원 하기 위해 다음 작업을 수행 합니다.
 
--   사용자에 검사점에 도달하는 경우 등 게임의 주요 시점에서 상태를 영구적 저장소에 저장합니다.
--   상태를 영구적 저장소에 저장하여 일시 중단 알림에 응답합니다.
--   영구적 저장소에서 상태를 로드하여 다시 시작 알림에 응답합니다. 또한 시작 중에 이전 상태를 로드합니다.
+-   사용자가 검사점에 도달 했을 때와 같이 게임의 핵심 지점에서 상태를 영구 저장소에 저장 합니다.
+-   영구 저장소에 상태를 저장 하 여 알림을 일시 중단 하는 것에 응답 합니다.
+-   영구 저장소에서 해당 상태를 로드 하 여 다시 시작 알림에 응답 합니다. 또한 시작 하는 동안 이전 상태를 로드 합니다.
 
-일시 중단 및 다시 시작을 지원하기 위해 Marble Maze는 **PersistentState** 클래스를 정의합니다. **PersistentState.h** 및 **PersistentState.cpp**를 참조하세요. 이 클래스는 [Windows::Foundation::Collections::IPropertySet](https://docs.microsoft.com/uwp/api/Windows.Foundation.Collections.IPropertySet) 인터페이스를 사용하여 속성을 읽고 씁니다. **PersistentState** 클래스는 백업 저장소에서 기본 데이터 형식(**bool**, **int**, **float**, [XMFLOAT3](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat3) 및 [Platform::String](https://docs.microsoft.com/cpp/cppcx/platform-string-class))을 읽고 쓰는 메서드를 제공합니다.
+일시 중단 및 다시 시작을 지원 하기 위해 대리석은 **만들면 persistentstate** 클래스를 정의 합니다. **만들면 persistentstate** 및 **만들면 persistentstate**를 참조 하세요. 이 클래스는 [Windows:: Foundation:: Collections:: IPropertySet](/uwp/api/Windows.Foundation.Collections.IPropertySet) 인터페이스를 사용 하 여 속성을 읽고 씁니다. **만들면 persistentstate** 클래스는 및에서 백업 저장소에 대 한 기본 데이터 형식 (예: **bool**, **int**, **Float**, [XMFLOAT3](/windows/desktop/api/directxmath/ns-directxmath-xmfloat3)및 [Platform:: String](/cpp/cppcx/platform-string-class))을 읽고 쓰는 메서드를 제공 합니다.
 
 ```cpp
 ref class PersistentState
@@ -275,7 +275,7 @@ private:
 };
 ```
 
-**MarbleMazeMain** 클래스는 **PersistentState** 개체를 저장합니다. **MarbleMazeMain** 생성자는 이 개체를 초기화하고 로컬 응용 프로그램 데이터 저장소를 백업 데이터 저장소로 제공합니다.
+**MarbleMazeMain** 클래스에는 **만들면 persistentstate** 개체가 포함 되어 있습니다. **MarbleMazeMain** 생성자는이 개체를 초기화 하 고 로컬 응용 프로그램 데이터 저장소를 지원 데이터 저장소로 제공 합니다.
 
 ```cpp
 m_persistentState = ref new PersistentState();
@@ -285,11 +285,11 @@ m_persistentState->Initialize(
     "MarbleMaze");
 ```
 
-Marble Maze는 구슬이 검사점 또는 목표를 통과할 때(**MarbleMazeMain::Update** 메서드) 및 창이 포커스를 잃을 때(**MarbleMazeMain::OnFocusChange** 메서드) 상태를 저장합니다. 게임에 많은 상태 데이터가 있는 경우 몇 초 내에 일시 중단 알림에 응답해야 하므로 수시로 상태를 영구적 저장소에 유사한 방식으로 저장하는 것이 좋습니다. 이렇게 하면 앱이 일시 중단 알림을 수신할 때 변경된 상태 데이터만 저장하면 됩니다.
+대리석은 대리석이 검사점 또는 목표 ( **MarbleMazeMain:: Update** 메서드에서)를 통과할 때와 창이 포커스를 잃으면 ( **MarbleMazeMain:: OnFocusChange** 메서드에서) 해당 상태를 저장 합니다. 게임에서 많은 양의 상태 데이터를 보유 하는 경우 일시 중단 알림에 응답 하는 데 몇 초 밖에 안 되기 때문에 비슷한 방식으로 영구 저장소에 상태를 저장 하는 것이 좋습니다. 따라서 앱이 일시 중단 알림을 받으면 변경 된 상태 데이터만 저장 하면 됩니다.
 
-일시 중단 및 다시 시작 알림에 응답하기 위해 **MarbleMazeMain** 클래스는 일시 중단 및 다시 시작 시 호출되는 **SaveState** 및 **LoadState** 메서드를 정의합니다. **MarbleMazeMain::OnSuspending** 메서드는 일시 중단 이벤트를 처리하고 **MarbleMazeMain::OnResuming** 메서드는 다시 시작 이벤트를 처리합니다.
+일시 중단 및 다시 시작 알림에 응답 하려면 **MarbleMazeMain** 클래스는 일시 중단 및 다시 시작 시 호출 되는 **Savestate** 및 **loadstate** 메서드를 정의 합니다. **MarbleMazeMain:: onsuspending** 메서드는 suspend 이벤트를 처리 하 고 **MarbleMazeMain:: onsuspending** 메서드는 resume 이벤트를 처리 합니다.
 
-**MarbleMazeMain::OnSuspending** 메서드는 게임 상태를 저장하고 오디오를 일시 중단합니다.
+**MarbleMazeMain:: OnSuspending 중단** 메서드는 게임 상태를 저장 하 고 오디오를 일시 중단 합니다.
 
 ```cpp
 void MarbleMazeMain::OnSuspending()
@@ -299,7 +299,7 @@ void MarbleMazeMain::OnSuspending()
 }
 ```
 
-**MarbleMazeMain::SaveState** 메서드는 구슬의 현재 위치 및 속도, 최근 검사점, 최고 점수 테이블 등의 게임 상태 값을 저장합니다.
+**MarbleMazeMain:: SaveState** 메서드는 현재 위치 및 대리석 (예: 대리석의 현재 위치 및 속도), 최신 검사점 및 고득점 테이블 등의 게임 상태 값을 저장 합니다.
 
 ```cpp
 void MarbleMazeMain::SaveState()
@@ -337,11 +337,11 @@ void MarbleMazeMain::SaveState()
 }
 ```
 
-게임이 다시 시작될 때 오디오만 다시 시작하면 됩니다. 상태가 메모리에 이미 로드되어 있으므로 영구적 저장소에서 상태를 로드할 필요는 없습니다.
+게임을 다시 시작 하는 경우 오디오를 다시 시작 해야 합니다. 상태는 메모리에 이미 로드 되어 있으므로 영구 저장소에서 상태를 로드할 필요가 없습니다.
 
-게임이 오디오를 일시 중단하고 다시 시작하는 방법은 [Marble Maze 샘플에 오디오 추가](adding-audio-to-the-marble-maze-sample.md) 문서에서 설명합니다.
+게임에서 오디오를 일시 중단 하 고 다시 시작 하는 방법은 [대리석 미로 샘플에 오디오 추가](adding-audio-to-the-marble-maze-sample.md)문서에 설명 되어 있습니다.
 
-다시 시작을 지원하기 위해 시작 중에 호출되는 **MarbleMazeMain** 생성자는 **MarbleMazeMain::LoadState** 메서드를 호출합니다. **MarbleMazeMain::LoadState** 메서드는 상태를 읽고 게임 개체에 적용합니다. 또한 이 메서드는 게임이 일시 중지된 경우 현재 게임 상태를 일시 중지됨으로 설정하고, 게임이 일시 중단된 경우 활성으로 설정합니다. 사용자가 예기치 않은 작업에 놀라지 않도록 게임을 일시 중지합니다. 또한 게임을 일시 중단할 때 게임이 플레이 상태가 아닌 경우 주 메뉴로 이동됩니다.
+다시 시작을 지원 하기 위해 시작 하는 동안 호출 되는 **MarbleMazeMain** 생성자는 **MarbleMazeMain:: loadstate** 메서드를 호출 합니다. **MarbleMazeMain:: loadstate** 메서드는 게임 개체에 상태를 읽고 적용 합니다. 또한이 메서드는 일시 중지 되거나 일시 중지 되었을 때 현재 게임 상태를 일시 중지 됨으로 설정 합니다. 사용자가 예기치 않은 작업을 하지 않도록 게임을 일시 중지 합니다. 일시 중단 된 게임 플레이 상태가 아닌 경우에도 주 메뉴로 이동 합니다.
 
 ```cpp
 void MarbleMazeMain::LoadState()
@@ -412,25 +412,21 @@ void MarbleMazeMain::LoadState()
 ```
 
 > [!IMPORTANT]
-> Marble Maze는 콜드 시작(이전 일시 중단 이벤트 없이 처음부터 시작)과 일시 중단 상태에서 다시 시작을 구분하지 않습니다. 이것이 모든 UWP 앱에 대해 권장되는 디자인입니다.
+> 대리석 미로는 콜드 시작 (즉, 이전 일시 중단 이벤트 없이 처음부터 시작)을 구분 하지 않으며 일시 중단 된 상태에서 다시 시작 합니다. 모든 UWP 앱에 권장 되는 디자인입니다.
 
-응용 프로그램 데이터에 대한 자세한 내용은 [설정 및 기타 앱 데이터 저장 및 검색](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)을 참조하세요.
+응용 프로그램 데이터에 대 한 자세한 내용은 [설정 및 기타 앱 데이터 저장 및 검색](../design/app-settings/store-and-retrieve-app-data.md)을 참조 하세요.
 
 ##  <a name="next-steps"></a>다음 단계
 
 
-시각적 리소스 작업을 할 때 고려할 몇 가지 주요 사항에 대한 자세한 내용은 [Marble Maze 샘플에 시각적 콘텐츠 추가](adding-visual-content-to-the-marble-maze-sample.md)를 참조하세요.
+시각적 리소스로 작업할 때 염두에 두어야 하는 몇 가지 주요 방법에 대 한 정보를 보려면 [대리석 미로 샘플에 시각적 콘텐츠 추가](adding-visual-content-to-the-marble-maze-sample.md) 를 참조 하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [대리석에 시각적 콘텐츠 추가 미로 샘플](adding-visual-content-to-the-marble-maze-sample.md)
-* [대리석 미로 샘플 기본 사항](marble-maze-sample-fundamentals.md)
-* [및 DirectX의 C++ UWP 게임, 대리석](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
+* [Marble Maze 샘플에 시각적 콘텐츠 추가](adding-visual-content-to-the-marble-maze-sample.md)
+* [Marble Maze 샘플 기본 사항](marble-maze-sample-fundamentals.md)
+* [C + + 및 c + +의 UWP 게임, 대리석](developing-marble-maze-a-windows-store-game-in-cpp-and-directx.md)
 
  
 
  
-
-
-
-

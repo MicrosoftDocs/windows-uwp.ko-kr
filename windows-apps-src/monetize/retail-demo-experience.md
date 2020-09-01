@@ -1,23 +1,23 @@
 ---
-title: 앱에 소매 데모 (RDX) 기능 추가
+title: 앱에 소매 데모(RDX) 기능 추가
 description: 소매 데모 모드용으로 앱을 준비 하 여 소매 판매 바닥에서 앱을 소개 합니다.
 ms.assetid: f83f950f-7fdd-4f18-8127-b92a8f400061
 ms.date: 10/02/2018
 ms.topic: article
 keywords: windows 10, uwp, 소매 데모 앱
 ms.localizationpriority: medium
-ms.openlocfilehash: 5be39760ee2b8837cfb9b0809a354262e790970b
-ms.sourcegitcommit: 5dfa98a80eee41d97880dba712673168070c4ec8
+ms.openlocfilehash: 39f1cb7439c02f215824c6c632fb2e2fc6afdb39
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73051998"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164537"
 ---
-# <a name="add-retail-demo-rdx-features-to-your-app"></a>앱에 소매 데모 (RDX) 기능 추가
+# <a name="add-retail-demo-rdx-features-to-your-app"></a>앱에 소매 데모(RDX) 기능 추가
 
 매장에서 PC 및 디바이스를 사용해 보려는 고객이 바로 시작할 수 있도록 Windows 앱에 소매 데모 모드를 포함하세요.
 
-고객이 소매점에 있으면 Pc와 장치의 데모를 사용해 볼 수 있는 것으로 간주 됩니다. 자주 사용 하는 [RDX (소매 데모 환경)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience)를 통해 앱을 재생 하는 데 상당한 시간이 걸릴 수 있습니다.
+고객이 소매점에 있으면 Pc와 장치의 데모를 사용해 볼 수 있는 것으로 간주 됩니다. 자주 사용 하는 [RDX (소매 데모 환경)](/windows-hardware/customize/desktop/retail-demo-experience)를 통해 앱을 재생 하는 데 상당한 시간이 걸릴 수 있습니다.
 
 앱을 설정 하 여 _표준_ 또는 _소매점_ 모드에서 다양 한 환경을 제공할 수 있습니다. 예를 들어, 앱이 설치 프로세스로 시작 하는 경우 일반 정품 모드에서 건너뛸 수 있으며, 샘플 데이터 및 기본 설정을 사용 하 여 앱을 미리 채울 수 있습니다.
 
@@ -29,17 +29,17 @@ RDX 인식 앱은 앱에 대 한 Microsoft Store 요구 사항 외에도 RDX 설
 
 * **최고를 표시**합니다. 소매 데모 환경을 사용 하 여 앱이 암석 지는 이유를 소개 합니다. 고객은 처음으로 앱을 보게 될 것 이므로 최상의 피스를 표시 합니다.
 
-* **빠르게 표시**합니다. 고객은 참을성이 부족할 수 있습니다. 고객이 앱의 진정한 가치를 더 빨리 경험할수록 더 좋습니다.
+* **빠르게 표시**합니다. 고객은 성급 수 있습니다. 사용자가 앱의 실제 가치를 더 빨리 경험할 수 있습니다.
 
 * **스토리를 단순하게 유지**합니다. 소매 데모 환경은 앱 값의 엘리베이터 피치입니다.
 
-* **환경에 중점을 둡니다**. 사용자에게 콘텐츠를 소화할 시간을 줍니다. 최고의 부분을 빠르게 파악하도록 하는 것도 중요하지만, 적절하게 멈출 수 있는 부분을 추가하면 사용자가 충분히 즐기면서 경험할 수 있습니다.
+* **환경에 중점을 둡니다**. 사용자가 콘텐츠를 다이제스트 하도록 시간을 지정 합니다. 최적의 부분으로 신속 하 게 진행 하는 것이 중요 하지만 적절 한 일시 중지를 디자인 하면 환경을 완벽 하 게 활용할 수 있습니다.
 
-## <a name="technical-requirements"></a>기술 요구 사항
+## <a name="technical-requirements"></a>기술적인 요구 사항
 
 RDX 인식 앱은 소매 고객에 게 가장 적합 한 앱을 소개 하는 것 이므로 기술 요구 사항을 충족 하 고 모든 소매 데모 환경 앱에 대 한 Microsoft Store 개인 정보 보호 규정을 준수 해야 합니다.
 
-유효성 검사 프로세스를 준비 하 고 테스트 프로세스를 명확 하 게 제공 하는 데 도움이 되는 검사 목록으로 사용할 수 있습니다. 앱이 소매 데모 장치에서 실행되는 한, 유효성 검사 프로세스에서는 물론 소매 데모 환경 앱의 전체 수명 동안 이러한 요구 사항을 유지 관리해야 합니다.
+유효성 검사 프로세스를 준비 하 고 테스트 프로세스를 명확 하 게 제공 하는 데 도움이 되는 검사 목록으로 사용할 수 있습니다. 이러한 요구 사항은 유효성 검사 프로세스 뿐만 아니라 소매 데모 환경 앱의 전체 수명 동안 유지 해야 합니다. 앱이 소매 데모 장치에서 계속 실행 되는 경우
 
 ### <a name="critical-requirements"></a>중요 요구 사항
 
@@ -47,36 +47,36 @@ RDX 인식 앱은 소매 고객에 게 가장 적합 한 앱을 소개 하는 �
 
 * **PII (개인 식별이 가능한 정보)를 요청 하지 마세요**. 여기에는 로그인 정보, Microsoft 계정 정보 또는 연락처 정보가 포함 됩니다.
 
-* **오류-무료 환경**. 앱이 오류 없이 실행되어야 합니다. 또한 소매 데모 장치를 사용하는 고객에게 오류나 알림이 표시되어서는 안 됩니다. 오류는 앱 자체, 브랜드, 장치의 브랜드, 장치의 manufacturer's 브랜드 및 Microsoft 브랜드에 부정적인 영향을 주지 않습니다.
+* **오류-무료 환경**. 앱이 오류 없이 실행 되어야 합니다. 또한 소매 데모 장치를 사용 하는 고객에 게는 오류 팝 ups 또는 알림이 표시 되지 않습니다. 오류는 앱 자체, 브랜드, 장치의 브랜드, 장치의 manufacturer's 브랜드 및 Microsoft 브랜드에 부정적인 영향을 주지 않습니다.
 
-* **유료 앱에는 평가판 모드가 있어야**합니다. 앱은 무료 이거나 [평가판 모드](https://docs.microsoft.com/windows/uwp/monetize/exclude-or-limit-features-in-a-trial-version-of-your-app)를 포함 해야 합니다. 고객은 소매점에서 사용하는 앱에 대해 비용을 부담하려고 하지 않습니다.
+* **유료 앱에는 평가판 모드가 있어야**합니다. 앱은 무료 이거나 [평가판 모드](./exclude-or-limit-features-in-a-trial-version-of-your-app.md)를 포함 해야 합니다. 고객은 소매점에서 사용하는 앱에 대해 비용을 부담하려고 하지 않습니다.
 
 ### <a name="high-priority-requirements"></a>높은 우선 순위 요구 사항
 
-이러한 높은 우선 순위 요구 사항을 충족 하지 않는 RDX 인식 앱은 수정 사항을 즉시 조사 해야 합니다. 즉시 수정할 수 없는 경우 모든 소매 데모 장치에서 이 앱을 제거할 수 있습니다.
+이러한 높은 우선 순위 요구 사항을 충족 하지 않는 RDX 인식 앱은 수정 사항을 즉시 조사 해야 합니다. 즉시 픽스를 찾을 수 없는 경우이 앱은 모든 소매 데모 장치에서 제거 될 수 있습니다.
 
-* **기억 하기 쉬운 오프 라인 환경**. 앱은 약 50%의 장치가 일반 정품 지역에서 오프 라인 상태 이므로 매우 오프 라인 환경을 설명 해야 합니다. 이는 오프라인으로 앱을 조작하는 고객도 의미 있고 긍정적인 경험을 하도록 하려는 것입니다.
+* **기억 하기 쉬운 오프 라인 환경**. 앱은 약 50%의 장치가 일반 정품 지역에서 오프 라인 상태 이므로 매우 오프 라인 환경을 설명 해야 합니다. 이는 앱과 상호 작용 하는 고객이 여전히 의미 있고 긍정적인 환경을 제공할 수 있도록 하기 위한 것입니다.
 
 * **콘텐츠 환경이 업데이트 되었습니다**. 온라인으로 앱을 업데이트 하 라는 메시지를 표시 해서는 안 됩니다. 업데이트가 필요한 경우 자동으로 수행 해야 합니다.
 
 * **익명 통신 없음**. 소매점 데모 장치를 사용 하는 고객은 익명 사용자 이므로 장치에서 콘텐츠를 메시지 하거나 공유할 수 없습니다.
 
-* **정리 프로세스를 사용 하 여 일관 된 환경을 제공**합니다. 소매 데모 장치를 이용하는 모든 고객은 동일한 경험을 해야 합니다. 앱에서 [정리 프로세스](#cleanup-process) 를 사용 하 여 각 사용 후 동일한 기본 상태로 돌아가야 합니다. 다음 고객이 남은 최종 고객을 확인 하는 것을 원하지 않습니다. 여기에는 스코어보드, 도전 과제, 잠금 해제 등이 포함됩니다.
+* **정리 프로세스를 사용 하 여 일관 된 환경을 제공**합니다. 모든 고객은 소매 데모 장치로 이동할 때 동일한 환경을 보유 해야 합니다. 앱에서 [정리 프로세스](#cleanup-process) 를 사용 하 여 각 사용 후 동일한 기본 상태로 돌아가야 합니다. 다음 고객이 남은 최종 고객을 확인 하는 것을 원하지 않습니다. 여기에는 스코어 보드, 성과 및 잠금 해제가 포함 됩니다.
 
 * **적절 한 콘텐츠를 사용**합니다. 모든 앱 콘텐츠에 Teen 또는 낮은 등급 범주를 할당 해야 합니다. 자세히 알아보려면 IARC 및 [ESRB 등급](https://www.esrb.org/ratings/ratings_guide.aspx) [으로 등급을 매긴 앱 가져오기](https://www.globalratings.com/for-developers.aspx) 를 참조 하세요.
 
 ### <a name="medium-priority-requirements"></a>보통 우선 순위 요구 사항
 
-이 문제의 해결 방법에 대해 논의하기 위해 Windows Retail Store 팀에서 개발자에게 직접 연락할 수 있습니다.
+Windows 소매점 스토어 팀은 개발자에 게 직접 연락 하 여 이러한 문제를 해결 하는 방법에 대 한 설명을 설정할 수 있습니다.
 
-* **다양 한 장치에서 성공적으로 실행할 수**있습니다. 앱은 낮은 종료 사양이 있는 장치를 비롯 한 모든 장치에서 제대로 실행 되어야 합니다. 최소 사양을 충족 하지 않는 장치에 앱이 설치 되어 있는 경우 앱은 사용자에 게이에 대 한 정보를 명확 하 게 알려 주어 야 합니다. 앱이 항상 고성능으로 실행될 수 있도록 최소 장치 사양을 알려야 합니다.
+* **다양 한 장치에서 성공적으로 실행할 수**있습니다. 앱은 낮은 종료 사양이 있는 장치를 비롯 한 모든 장치에서 제대로 실행 되어야 합니다. 최소 사양을 충족 하지 않는 장치에 앱이 설치 되어 있는 경우 앱은 사용자에 게이에 대 한 정보를 명확 하 게 알려 주어 야 합니다. 앱이 항상 높은 성능으로 실행 될 수 있도록 최소 장치 요구 사항을 파악 해야 합니다.
 
-* **소매 스토어 앱 크기 요구 사항을 충족**합니다. 앱은 800MB 미만이어야 합니다. RDX 인식 앱이 크기 요구 사항을 충족 하지 않는 경우에는 Windows 소매점 스토어 팀에 직접 문의 하세요.
+* **소매 스토어 앱 크기 요구 사항을 충족**합니다. 앱은 800MB 보다 작아야 합니다. RDX 인식 앱이 크기 요구 사항을 충족 하지 않는 경우에는 Windows 소매점 스토어 팀에 직접 문의 하세요.
 
 ## <a name="retailinfo-api-preparing-your-code-for-demo-mode"></a>RetailInfo API: 데모 모드를 위한 코드 준비
 
 ### <a name="isdemomodeenabled"></a>IsDemoModeEnabled
-Windows 10 SDK의 [**RetailInfo**](https://docs.microsoft.com/uwp/api/Windows.System.Profile.RetailInfo) [네임 스페이스](https://docs.microsoft.com/uwp/api/windows.system.profile) 에 포함 된 [**isdemomodeenabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) 속성은 앱이 실행 되는 코드 경로를 지정 하는 부울 표시기로 사용 됩니다.모드로 _전환 합니다_ .
+[**RetailInfo**](/uwp/api/Windows.System.Profile.RetailInfo) 유틸리티 클래스의 [**Isdemomodeenabled**](/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) 속성은Windows.System의 일부입니다 [. ](/uwp/api/windows.system.profile)Windows 10 SDK의 Profile 네임 스페이스는 앱이 실행 되는 코드 경로 ( _표준_ 모드 또는 _소매_ 모드)를 지정 하는 부울 표시기로 사용 됩니다.
 
 ``` csharp
 using Windows.Storage;
@@ -129,7 +129,7 @@ if (Windows.System.Profile.retailInfo.isDemoModeEnabled) {
 
 ### <a name="retailinfoproperties"></a>RetailInfo
 
-[  **IsDemoModeEnabled**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled)가 true를 반환하면, 보다 사용자 지정 가능한 소매 데모 환경을 구축하기 위해 [**RetailInfo.Properties**](https://docs.microsoft.com/uwp/api/windows.system.profile.retailinfo.properties)를 사용하여 장치에 대한 속성 집합을 쿼리할 수 있습니다. 이러한 속성에는 [**ManufacturerName**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.manufacturername), [**Screensize**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.screensize), [**Memory**](https://docs.microsoft.com/uwp/api/windows.system.profile.knownretailinfoproperties.memory) 등이 포함됩니다.
+[**Isdemomodeenabled**](/uwp/api/windows.system.profile.retailinfo.isdemomodeenabled) 가 true를 반환 하는 경우 [**RetailInfo**](/uwp/api/windows.system.profile.retailinfo.properties) 를 사용 하 여 장치에 대 한 속성 집합을 쿼리하여 사용자 지정 소매 데모 환경을 만들 수 있습니다. 이러한 속성에는 [**ManufacturerName**](/uwp/api/windows.system.profile.knownretailinfoproperties.manufacturername), [**Screensize**](/uwp/api/windows.system.profile.knownretailinfoproperties.screensize), [**Memory**](/uwp/api/windows.system.profile.knownretailinfoproperties.memory) 등이 포함 됩니다.
 
 ```csharp
 using Windows.UI.Xaml.Controls;
@@ -233,13 +233,13 @@ namespace Windows.System.Profile
 
 1 단계: 정리
 * 모든 Win32 및 스토어 앱이 닫힙니다.
-* __사진__, __동영상__, __음악__, __문서__, __SavedPictures__, __CameraRoll__, __바탕 화면__ 및 __다운로드__와 같은 알려진 폴더의 모든 파일이 삭제됩니다.
-* 구조화되지 않은 로밍 상태 및 구조화된 로밍 상태가 삭제됩니다.
-* 구조화된 로컬 상태가 삭제됩니다.
+* __사진__, __비디오__, __음악__, __문서__, __SavedPictures__, __CameraRoll__, __데스크톱__ 및 __다운로드__ 폴더와 같은 알려진 폴더의 모든 파일이 삭제 됩니다.
+* 비구조적 및 구조화 된 로밍 상태가 삭제 됩니다.
+* 구조적 로컬 상태가 삭제 됨
 
 2 단계: 설치
-* 오프라인 장치: 폴더는 계속 비어 있습니다.
-* 온라인 장치: Microsoft Store에서 장치로 소매 데모 자산이 푸시될 수 있습니다.
+* 오프 라인 장치의 경우: 폴더가 비어 있는 상태로 유지 됩니다.
+* 온라인 장치: 소매 데모 자산은 Microsoft Store에서 장치로 푸시할 수 있습니다.
 
 ### <a name="store-data-across-user-sessions"></a>사용자 세션 간에 데이터 저장
 
@@ -359,7 +359,7 @@ namespace MyCompany.MyApp
 
 ## <a name="related-links"></a>관련 링크
 
-* [앱 데이터 저장 및 검색](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
-* [App service를 만들고 사용 하는 방법](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
-* [앱 콘텐츠 지역화](https://docs.microsoft.com/windows/uwp/globalizing/globalizing-portal)
-* [소매 데모 환경 (RDX)](https://docs.microsoft.com/windows-hardware/customize/desktop/retail-demo-experience)
+* [앱 데이터 저장 및 검색](../design/app-settings/store-and-retrieve-app-data.md)
+* [App service를 만들고 사용 하는 방법](../launch-resume/how-to-create-and-consume-an-app-service.md)
+* [앱 콘텐츠 지역화](../design/globalizing/globalizing-portal.md)
+* [소매 데모 환경 (RDX)](/windows-hardware/customize/desktop/retail-demo-experience)

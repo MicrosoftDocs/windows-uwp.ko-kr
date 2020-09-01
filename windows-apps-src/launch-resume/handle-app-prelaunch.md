@@ -1,41 +1,41 @@
 ---
 title: 앱 사전 실행 처리
-description: OnLaunched 메서드를 재정의하고 CoreApplication.EnablePrelaunch(true)를 호출하여 앱 사전 실행을 처리하는 방법을 알아봅니다.
+description: OnLaunched 메서드를 재정의 하 고 CoreApplication (true)를 호출 하 여 앱 사전 실행을 처리 하는 방법을 알아봅니다.
 ms.assetid: A4838AC2-22D7-46BA-9EB2-F3C248E22F52
 ms.date: 07/05/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4029bcdd554b05363397f6a6946b8ebc2bbdd1de
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 219ca73115d5605f1e1483f2af224a13c28791ff
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371656"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164867"
 ---
 # <a name="handle-app-prelaunch"></a>앱 사전 실행 처리
 
-[  **OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) 메서드를 재정의하여 앱 사전 실행을 처리하는 방법을 알아봅니다.
+[**Onlaunched**](/uwp/api/windows.ui.xaml.application.onlaunched) 된 메서드를 재정의 하 여 앱 사전 실행을 처리 하는 방법을 알아봅니다.
 
 ## <a name="introduction"></a>소개
 
-사용 가능한 시스템 리소스를 허용 하는 경우 사전에 사용자의 백그라운드에서 가장 자주 사용 되는 앱을 시작 하 여 데스크톱 장치 패밀리 장치에서 UWP 앱의 시작 성능을 개선 되었습니다. 사전 실행된 앱은 시작된 후 일시 중단 상태가 됩니다. 그런 다음 사용자가 앱을 호출하면 앱이 일시 중단 상태에서 실행 상태로 전환되어 다시 시작합니다. 이는 앱 콜드를 시작하는 것보다 빠릅니다. 사용자 환경은 앱이 쉽고 빠르게 시작되는 것입니다.
+사용 가능한 시스템 리소스를 허용 하는 경우 백그라운드에서 사용자의 가장 자주 사용 되는 앱을 사전에 실행 하 여 데스크톱 장치 제품군 장치에서 UWP 앱의 시작 성능이 향상 됩니다. 사전 시작 된 앱은 시작 된 직후 일시 중단 된 상태로 전환 됩니다. 그러면 사용자가 앱을 호출할 때 일시 중단 됨 상태에서 실행 중 상태로 전환 하 여 앱을 다시 시작 합니다 .이는 앱 콜드을 시작 하는 것 보다 더 빠릅니다. 사용자의 경험은 앱이 매우 빠르게 시작 되는 것입니다.
 
-Windows 10 이전 버전에서는 앱이 자동으로 사전 실행을 활용하지 않았습니다. Windows 10 버전 1511에서 모든 유니버설 Windows 플랫폼 (UWP) 앱 사전 실행 되었다는 뜻 되에 대 한 후보를 했습니다. Windows 10 버전 1607에서는 [CoreApplication.EnablePrelaunch(true)](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enableprelaunch)를 호출하여 사전 실행 동작에 옵트인(opt-in)해야 합니다. 이 호출을 배치하기 좋은 위치는 `if (e.PrelaunchActivated == false)` 확인이 수행되는 위치 근처의 `OnLaunched()` 내입니다.
+Windows 10 이전에는 앱이 사전 실행을 자동으로 사용 하지 않았습니다. Windows 10 버전 1511에서는 모든 UWP (유니버설 Windows 플랫폼) 앱이 사전에 출시 될 것입니다. Windows 10 버전 1607에서는 [CoreApplication (true)](/uwp/api/windows.applicationmodel.core.coreapplication.enableprelaunch)를 호출 하 여 사전 호출 동작을 옵트인 (opt in) 해야 합니다. 이 호출을 수행 하는 데 적합 한 `OnLaunched()` 위치는 확인 하는 위치 근처에 `if (e.PrelaunchActivated == false)` 있습니다.
 
-앱의 사전 실행 여부는 시스템 리소스에 따라 달라집니다. 시스템에 리소스가 부족하면 앱은 사전 실행되지 않습니다.
+앱이 사전에 실행 되는지 여부는 시스템 리소스에 따라 달라 집니다. 시스템에 리소스가 부족 한 경우에는 앱이 사전에 시작 되지 않습니다.
 
-일부 유형의 앱은 사전 실행이 잘 작동하려면 시작 동작을 변경해야 할 수 있습니다. 예를 들어 앱이 시작할 때 음악을 재생하는 앱, 앱이 시작할 때 사용자가 있다고 가정하여 정교한 시각 효과를 표시하는 게임, 시작하는 동안 사용자의 온라인 표시를 변경하는 메시지 앱은 앱이 사전 실행된 시점을 식별하여 아래 섹션에 설명된 대로 시작 동작을 변경할 수 있습니다.
+일부 유형의 앱은 사전 실행에서 잘 작동 하도록 시작 동작을 변경 해야 할 수 있습니다. 예를 들어, 앱이 시작 될 때 음악을 재생 하 고, 사용자가 있고 앱이 시작 될 때 정교한 시각적 개체를 표시 하는 게임, 시작 중에 사용자의 온라인 표시 여부를 변경 하는 메시징 앱은 앱이 사전에 시작 된 시기를 식별 하 고 아래 섹션에 설명 된 대로 시작 동작을 변경할 수 있습니다.
 
-XAML 프로젝트(C#, VB, C++)와 WinJS의 기본 템플릿은 Visual Studio 2015 업데이트 3에서 사전 실행을 수용합니다.
+Visual Studio 2015 업데이트 3의 XAML 프로젝트 (c #, VB, c + +) 및 WinJS에 대 한 기본 템플릿은 사전에이를 수용 합니다.
 
-## <a name="prelaunch-and-the-app-lifecycle"></a>사전 실행 및 앱 수명 주기
+## <a name="prelaunch-and-the-app-lifecycle"></a>사전 사전 및 앱 수명 주기
 
-앱이 사전 실행되면 일시 중단 상태가 됩니다. ([앱 일시 중단 처리](suspend-an-app.md)를 참조하세요.)
+앱이 사전에 시작 된 후 일시 중단 상태가 됩니다. [앱 일시 중단 처리](suspend-an-app.md)를 참조 하세요.
 
-## <a name="detect-and-handle-prelaunch"></a>사전 실행 감지 및 처리
+## <a name="detect-and-handle-prelaunch"></a>사전 검사 검색 및 처리
 
-앱이 활성화되는 동안 [**LaunchActivatedEventArgs.PrelaunchActivated**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.prelaunchactivated) 플래그를 수신합니다. 이 플래그를 사용 하 여만 실행 되는 사용자가 앱을 명시적으로 시작 하는 경우 다음의 수정에 표시 된 대로 코드를 실행할 [ **Application.OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched)합니다.
+앱은 활성화 중에 [**LaunchActivatedEventArgs 활성화**](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.prelaunchactivated) 된 플래그를 수신 합니다. 다음 [**응용 프로그램**](/uwp/api/windows.ui.xaml.application.onlaunched)수정에 표시 된 것 처럼 사용자가 명시적으로 앱을 시작할 때만 실행 해야 하는 코드를 실행 하려면이 플래그를 사용 합니다.
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -110,13 +110,13 @@ private void TryEnablePrelaunch()
 }
 ```
 
-참고는 `TryEnablePrelaunch()` 함수를 위에 있습니다. 호출 하는 이유를 `CoreApplication.EnablePrelaunch()` 되 JIT (적시에 컴파일)는 전체 메서드 컴파일을 시도 메서드를 호출 하는 경우이 함수로 제한 되므로 합니다. 앱 버전을 지원 하지 않는 Windows 10에서 실행 중인 경우 `CoreApplication.EnablePrelaunch()`, JIT 실패 합니다. 예상 되는 앱 플랫폼에서 지원 하는지 확인 하는 경우에 라고 하는 메서드를 호출 `CoreApplication.EnablePrelaunch()`, 해당 문제를 방지 하는 것입니다.
+`TryEnablePrelaunch()`위의 함수를 확인 합니다. 를 호출 하는 이유는 `CoreApplication.EnablePrelaunch()` 메서드가 호출 될 때 JIT (just-in-time 컴파일)가 전체 메서드를 컴파일하려고 시도 하기 때문입니다. 앱이를 지원 하지 않는 버전의 Windows 10에서 실행 되는 경우 `CoreApplication.EnablePrelaunch()` JIT는 실패 합니다. 응용 프로그램에서 플랫폼이 지 원하는 것으로 확인 될 때만 호출 되는 메서드로 호출을 팩터링 하 여 `CoreApplication.EnablePrelaunch()` 해당 문제를 방지 합니다.
 
-위의 예제에서 코드 또한 옵트아웃 하려면 사전 실행의 Windows 10 버전 1511 실행 하는 경우 앱에서 필요한 경우 주석 수는 있습니다. 자동으로 옵트인 되었습니다 모든 UWP 앱 버전 1511에서는에 사전 실행에 적합 하지 않을 앱에 대 한 합니다.
+위의 예제에는 앱이 Windows 10, 버전 1511에서 실행 되는 경우 실행 전 옵트아웃 (opt out) 해야 하는 경우 주석을 제거할 수 있는 코드도 있습니다. 버전 1511에서는 모든 UWP 앱이 자동으로 사전에 옵트인 (opt in) 되어 앱에 적합 하지 않을 수 있습니다.
 
 ## <a name="use-the-visibilitychanged-event"></a>VisibilityChanged 이벤트 사용
 
-사전 실행으로 활성화된 앱이 사용자에게 표시되지 않습니다. 사용자가 전환할 때 표시됩니다. 앱의 주 창이 표시될 때까지 특정 작업을 지연시킬 수 있습니다. 예를 들어 앱이 피드에서 새 항목 목록을 표시하면 앱이 사전 실행되었을 때 작성되어 사용자가 앱을 활성화하는 시점까지 상태가 오래될 수 있기 때문에 목록을 사용하는 대신 [**VisibilityChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.visibilitychanged) 이벤트가 발생하는 동안 목록을 업데이트할 수 있습니다. 다음 코드는 **MainPage**의 **VisibilityChanged** 이벤트를 처리합니다.
+사전 인증으로 활성화 된 앱은 사용자에 게 표시 되지 않습니다. 사용자가 전환할 때 표시 됩니다. 앱의 주 창이 표시 될 때까지 특정 작업을 연기할 수 있습니다. 예를 들어 앱이 피드의 새로운 항목 목록을 표시 하는 경우 앱이 실행 될 때 작성 된 목록을 사용 하는 대신 [**VisibilityChanged**](/uwp/api/windows.ui.xaml.window.visibilitychanged) 이벤트 중에 사용자가 앱을 활성화 하는 시간에 만료 될 수 있으므로 목록을 업데이트할 수 있습니다. 다음 코드는 **Mainpage**에 대 한 **VisibilityChanged** 이벤트를 처리 합니다.
 
 ```csharp
 public sealed partial class MainPage : Page
@@ -138,9 +138,9 @@ public sealed partial class MainPage : Page
 
 ## <a name="directx-games-guidance"></a>DirectX 게임 지침
 
-많은 DirectX 게임이 사전 실행을 검색하기 전에 초기화를 수행하므로 DirectX 게임은 일반적으로 사전 실행을 사용하지 않아야 합니다. Windows 1607 1주년 버전부터 게임은 기본적으로 사전 실행되지 않습니다.  게임에 사전 실행을 활용하려면 [CoreApplication.EnablePrelaunch(true)](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enableprelaunch)를 호출합니다.
+DirectX 게임은 일반적으로 사전 실행을 사용 하도록 설정 해야 합니다. Windows 1607, 기념일 버전부터 게임이 기본적으로 시작 되지 않습니다.  게임에서 사전 실행을 활용 하려면 [CoreApplication (true)](/uwp/api/windows.applicationmodel.core.coreapplication.enableprelaunch)를 호출 합니다.
 
-게임이 Windows 10의 이전 버전을 대상으로 하는 경우 사전 실행 조건을 처리하여 응용 프로그램을 종료할 수 있습니다.
+게임이 이전 버전의 Windows 10을 대상으로 하는 경우 사전 작업 조건을 처리 하 여 응용 프로그램을 종료할 수 있습니다.
 
 ```cppwinrt
 void ViewProvider::OnActivated(CoreApplicationView const& /* appView */, Windows::ApplicationModel::Activation::IActivatedEventArgs const& args)
@@ -180,7 +180,7 @@ void ViewProvider::OnActivated(CoreApplicationView^ appView,IActivatedEventArgs^
 
 ## <a name="winjs-app-guidance"></a>WinJS 앱 지침
 
-WinJS 앱이 Windows 10의 이전 버전을 대상으로 하는 경우 [onactivated](https://docs.microsoft.com/previous-versions/windows/apps/br212679(v=win.10)) 처리기에서 사전 실행 조건을 처리할 수 있습니다.
+WinJS 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 [onactivated](/previous-versions/windows/apps/br212679(v=win.10)) 된 처리기에서 사전 작업 조건을 처리할 수 있습니다.
 
 ```javascript
     app.onactivated = function (args) {
@@ -195,17 +195,17 @@ WinJS 앱이 Windows 10의 이전 버전을 대상으로 하는 경우 [onactiva
 
 ## <a name="general-guidance"></a>일반 지침
 
--   앱이 신속하게 일시 중단 상태가 되지 못하면 앱이 종료되므로 사전 실행 동안에는 장기 실행 작업을 수행하면 안 됩니다.
--   앱이 표시되지 않고 오디오 재생의 이유가 명확하지 않으므로 앱을 사전 실행할 때 앱이 [**Application.OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched)의 오디오 재생을 시작하면 안 됩니다.
--   사용자에게 표시되거나 명시적으로 사용자가 시작했다고 가정하는 앱은 시작하는 동안 어떤 작업도 수행하면 안 됩니다. 앱이 현재 명시적인 사용자 작업 없이 백그라운드에서 시작되었기 때문에 개발자는 개인 정보, 사용자 환경 및 성능 영향을 고려해야 합니다.
-    -   개인 정보가 고려되어야 하는 예는 소셜 앱이 사용자의 상태를 온라인으로 변경해야 하는 경우입니다. 앱이 사전 실행되면 상태를 변경하는 대신 사용자가 앱으로 전환할 때까지 기다려야 합니다.
-    -   사용자 환경이 고려되는 예는 시작할 때 소개 시퀀스를 표시하는 게임과 같은 앱의 경우 사용자가 앱으로 전환할 때까지 소개 시퀀스를 지연시킬 수 있는 경우입니다.
-    -   성능 영향의 예는 앱이 사전 실행될 때 현재 날씨 정보를 로드하는 대신 사용자가 앱으로 전환하여 이 정보를 검색한 다음 앱이 표시되면 다시 로드하여 해당 정보가 최신 정보인지 확인해야 하는 경우입니다.
--   앱이 시작되었을 때 라이브 타일을 지우면 VisibilityChanged 이벤트가 발생할 때까지 이를 연기합니다.
--   앱에 대한 원격 분석으로 일반적인 타일 활성화와 사전 실행된 활성화를 구별하여 문제 발생 시 시나리오의 범위를 쉽게 좁힐 수 있습니다.
--   Microsoft Visual Studio 2015 업데이트 1, 및 Windows 10 버전 1511에 있는 경우 시뮬레이션할 수 있습니다 막기 위 함 Visual Studio 2015에서 앱을 앱에 대 한 선택 하 여 **디버깅할** &gt; **기타 디버그 대상** &gt; **Windows 유니버설 앱 사전 실행 디버그**합니다.
+-   앱이 신속 하 게 일시 중단 될 수 없는 경우 종료 되기 때문에 앱이 실행 전 장기 실행 작업을 수행 하면 안 됩니다.
+-   앱은 응용 프로그램에서 오디오 재생을 시작 하면 안 [**됩니다. onlaunched**](/uwp/api/windows.ui.xaml.application.onlaunched) 앱이 표시 되지 않으므로 오디오가 재생 되는 이유는 드러나지 않습니다.
+-   앱이 시작 중에는 앱이 사용자에 게 표시 되는 것으로 가정 하거나 사용자가 앱을 명시적으로 실행 한 것으로 가정 하는 작업을 수행 하지 않아야 합니다. 이제 명시적인 사용자 작업 없이 백그라운드에서 앱을 시작할 수 있으므로 개발자는 개인 정보, 사용자 환경 및 성능 영향을 고려해 야 합니다.
+    -   개인 정보 취급 방침 고려 사항은 소셜 앱이 사용자 상태를 온라인으로 변경 해야 하는 경우입니다. 앱이 사전에 시작 될 때 상태를 변경 하는 대신 사용자가 앱으로 전환할 때까지 기다려야 합니다.
+    -   사용자 환경 고려 사항 예를 들어 게임과 같은 앱이 시작 될 때 소개 시퀀스를 표시 하는 경우 사용자가 앱으로 전환할 때까지 소개 시퀀스를 연기할 수 있습니다.
+    -   예를 들어 사용자가 앱을 시작할 때 로드 하는 대신 사용자가 앱으로 전환 하 여 현재 날씨 정보를 검색 한 다음, 해당 정보가 최신 상태 인지 확인 하기 위해 앱이 표시 될 때 다시 로드 해야 하는 경우에 발생할 수 있습니다.
+-   앱이 시작 될 때 라이브 타일을 지우면 표시 유형이 변경 된 이벤트까지이 작업을 지연 시킵니다.
+-   앱에 대 한 원격 분석은 일반적인 타일 활성화와 사전 실행 활성화를 구분 하 여 문제가 발생 하는 경우 시나리오의 범위를 쉽게 좁힐 수 있도록 해야 합니다.
+-   2015 업데이트 1 및 windows 10 버전 1511 Microsoft Visual Studio 있는 경우 **Debug** &gt; **다른 디버그 대상** 디버그 &gt; **Windows 유니버설 앱 사전 디버그 디버그**를 선택 하 여 Visual Studio 2015에서 앱 앱에 대 한 사전 로그인을 시뮬레이션할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [앱 수명 주기](app-lifecycle.md)
-* [CoreApplication.EnablePrelaunch](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.enableprelaunch)
+* [CoreApplication](/uwp/api/windows.applicationmodel.core.coreapplication.enableprelaunch)

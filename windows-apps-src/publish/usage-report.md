@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 사용량, 사용자 지정 이벤트, 보고서, 원격 분석, 사용자 세션
 ms.localizationpriority: medium
-ms.openlocfilehash: bced71620b5e52e90b104a9a50d8fb774ba14228
-ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
+ms.openlocfilehash: d2839112d36822be5eb8297b838cdc38bab5c71b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846813"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167277"
 ---
 # <a name="usage-report"></a>사용 보고서
 
@@ -73,7 +73,7 @@ ms.locfileid: "88846813"
 
 **사용자 지정 이벤트** 차트는 앱에 대해 정의한 사용자 지정 이벤트의 총 발생 횟수를 보여 줍니다. 여기에는 동일한 고객에 대 한 여러 항목이 포함 될 수 있습니다. 필터를 사용 하 여이 데이터를 보려는 특정 사용자 지정 이벤트를 선택할 수 있습니다.
 
-사용자 지정 이벤트는 [Microsoft Store SERVICES SDK](../monetize/microsoft-store-services-sdk.md)에서 [StoreServicesCustomEventLogger](https://docs.microsoft.com/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 메서드를 사용 하 여 구현 됩니다.
+사용자 지정 이벤트는 [Microsoft Store SERVICES SDK](../monetize/microsoft-store-services-sdk.md)에서 [StoreServicesCustomEventLogger](/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 메서드를 사용 하 여 구현 됩니다.
 
 자세한 내용은 [개발자 센터에 대 한 사용자 지정 이벤트 로그](../monetize/log-custom-events-for-dev-center.md)를 참조 하세요.
 

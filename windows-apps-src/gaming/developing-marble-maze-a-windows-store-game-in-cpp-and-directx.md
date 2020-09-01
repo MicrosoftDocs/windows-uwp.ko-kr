@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 샘플, directx, 3d
 ms.localizationpriority: medium
-ms.openlocfilehash: d2c0c630090c178a54a0452ab3cc430ffee4a176
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: 155bd4bce77cd976cfab11ca4c5c8f184c562912
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409502"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165337"
 ---
 # <a name="developing-marble-mazemdasha-universal-windows-platform-uwp-game-built-with-c-for-directx"></a>*Marble Maze* &mdash; C + +를 사용 하 여 c + +를 사용 하 여 만든 대리석 x a 유니버설 Windows 플랫폼 (UWP) 게임
 
@@ -21,7 +21,7 @@ ms.locfileid: "85409502"
 > *대리석* 의 소스 코드를 다운로드 하려면 [GitHub의 샘플](https://github.com/microsoft/Windows-appsample-marble-maze)을 참조 하세요.
 
 > [!IMPORTANT]
-> *대리석 미로* 는 UWP 게임을 만들기 위한 모범 사례를 고려 하는 디자인 패턴을 보여 줍니다. 사용자 고유의 사례와 개발 중인 게임의 고유한 요구 사항에 맞게 많은 구현 세부 정보를 적용할 수 있습니다. 사용자의 요구 사항에 더 적합 한 다른 기술 또는 라이브러리를 자유롭게 사용할 수 있습니다. 그러나 코드에서 항상 [Windows 앱 인증 키트](https://docs.microsoft.com/windows/uwp/debug-test-perf/windows-app-certification-kit)를 전달 하는지 확인 합니다. 성공적인 게임 개발을 위해 여기에 사용 된 구현을 고려해 야 하는 경우이 문서에서이를 강조 합니다.
+> *대리석 미로* 는 UWP 게임을 만들기 위한 모범 사례를 고려 하는 디자인 패턴을 보여 줍니다. 사용자 고유의 사례와 개발 중인 게임의 고유한 요구 사항에 맞게 많은 구현 세부 정보를 적용할 수 있습니다. 사용자의 요구 사항에 더 적합 한 다른 기술 또는 라이브러리를 자유롭게 사용할 수 있습니다. 그러나 코드에서 항상 [Windows 앱 인증 키트](../debug-test-perf/windows-app-certification-kit.md)를 전달 하는지 확인 합니다. 성공적인 게임 개발을 위해 여기에 사용 된 구현을 고려해 야 하는 경우이 문서에서이를 강조 합니다.
 
 ## <a name="introducing-marble-maze"></a>*대리석 무늬 미로* 소개
 
@@ -33,7 +33,7 @@ ms.locfileid: "85409502"
 
 ![대리석 무늬 메 이즈 게임의 스크린샷.](images/marblemaze-2.png)
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 -   Windows 10 크리에이터스 업데이트
 -   [Microsoft Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
@@ -52,9 +52,9 @@ ms.locfileid: "85409502"
 이 설명서에서는 다음 방법에 대해 설명 합니다.
 
 -   Windows 런타임 API 및 DirectX를 사용 하 여 UWP 게임을 만듭니다.
--   [Direct3D](https://docs.microsoft.com/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11) 및 [Direct2D](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal) 를 사용 하 여 모델, 질감, 꼭 짓 점 및 픽셀 셰이더, 2d 오버레이 등의 시각적 콘텐츠로 작업할 수 있습니다.
+-   [Direct3D](/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11) 및 [Direct2D](/windows/desktop/Direct2D/direct2d-portal) 를 사용 하 여 모델, 질감, 꼭 짓 점 및 픽셀 셰이더, 2d 오버레이 등의 시각적 콘텐츠로 작업할 수 있습니다.
 -   Touch,가 속도계 및 Xbox One controller와 같은 입력 메커니즘을 통합 합니다.
--   [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-apis-portal) 를 사용 하 여 음악과 음향 효과를 통합 합니다.
+-   [XAudio2](/windows/desktop/xaudio2/xaudio2-apis-portal) 를 사용 하 여 음악과 음향 효과를 통합 합니다.
 
 ## <a name="what-this-documentation-does-not-cover"></a>이 설명서에서 다루지 않는 내용
 
@@ -67,7 +67,7 @@ ms.locfileid: "85409502"
 -   전 세계의 다른 부분에서 사용 하기 위해 게임을 준비 하는 방법을 설명 합니다.
 -   게임을 인증 하 고 Microsoft Store에 게시 하는 방법입니다.
 
-또한 *대리석 메 이즈* 는 [directxmath](https://docs.microsoft.com/windows/desktop/dxmath/directxmath-portal) 라이브러리를 사용 하 여 3d 기 하 도형으로 작업 하 고 충돌과 같은 물리학 계산을 수행 합니다. DirectXMath는이 섹션에서 자세히 다루지 않습니다. *대리석* 에서 DirectXMath를 사용 하는 방법에 대 한 자세한 내용은 소스 코드를 참조 하세요.
+또한 *대리석 메 이즈* 는 [directxmath](/windows/desktop/dxmath/directxmath-portal) 라이브러리를 사용 하 여 3d 기 하 도형으로 작업 하 고 충돌과 같은 물리학 계산을 수행 합니다. DirectXMath는이 섹션에서 자세히 다루지 않습니다. *대리석* 에서 DirectXMath를 사용 하는 방법에 대 한 자세한 내용은 소스 코드를 참조 하세요.
 
 *대리석* 은 재사용 가능한 많은 구성 요소를 제공 하지만 완전 한 게임 개발 프레임 워크는 아닙니다. 게임에서 대리석을 다시 사용할 수 있도록 하는 *대리석* 을 고려 하면 설명서에서이를 강조 합니다.
 
@@ -77,7 +77,7 @@ ms.locfileid: "85409502"
 
 ## <a name="in-this-section"></a>단원 내용
 
-| 제목                                                                                                                    | 설명                                                                                                                                                                                                                                        |
+| 제목                                                                                                                    | Description                                                                                                                                                                                                                                        |
 |--------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Marble Maze 샘플 기본 사항](marble-maze-sample-fundamentals.md)                                                   | 게임 구조와 소스 코드가 따르는 코드 및 스타일 지침의 개요를 제공 합니다.                                                                                                                                 |
 | [Marble Maze 응용 프로그램 구조](marble-maze-application-structure.md)                                               | *대리석* 의 응용 프로그램 코드를 구성 하는 방법 및 DirectX UWP 앱의 구조가 기존 데스크톱 응용 프로그램의 구조와 어떻게 다른 지 설명 합니다.                                                                                    |

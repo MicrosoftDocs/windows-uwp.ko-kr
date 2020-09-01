@@ -1,29 +1,29 @@
 ---
 title: 지문 생체 인식
-description: 이 문서에서는 UWP(Universal Windows Platform) 앱에 지문 생체 인식을 추가하는 방법을 설명합니다.
+description: 이 문서에서는 유니버설 Windows 플랫폼 (UWP) 앱에 지문 생체 인식을 추가 하는 방법을 설명 합니다.
 ms.assetid: 55483729-5F8A-401A-8072-3CD611DDFED2
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: bbb40dc9fa65515a2b01d7a2c92145b27e04f075
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: bcb82280d80467157faa8aa5195ad7b9d9a7336b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66372561"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167217"
 ---
 # <a name="fingerprint-biometrics"></a>지문 생체 인식
 
 
 
 
-이 문서에서는 UWP(Universal Windows Platform) 앱에 지문 생체 인식을 추가하는 방법을 설명합니다. 사용자가 특정 작업에 동의해야 하는 경우 지문 인증 요청을 포함하면 앱의 보안이 향상됩니다. 예를 들어 제한된 리소스 액세스 또는 앱에서 바로 구매 권한을 부여하기 전에 지문 인증을 요구할 수 있습니다. 지문 인증은 [**Windows.Security.Credentials.UI**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI) 네임스페이스의 [**UserConsentVerifier**](https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI.UserConsentVerifier) 클래스를 사용하여 관리됩니다.
+이 문서에서는 유니버설 Windows 플랫폼 (UWP) 앱에 지문 생체 인식을 추가 하는 방법을 설명 합니다. 사용자가 특정 작업에 동의 해야 하는 경우 지문 인증에 대 한 요청을 포함 하 여 앱의 보안을 강화 합니다. 예를 들어 앱 내 구매에 권한을 부여 하기 전에 또는 제한 된 리소스에 액세스 하기 전에 지문 인증을 요구할 수 있습니다. 지문 인증은 [**UserConsentVerifier**](/uwp/api/Windows.Security.Credentials.UI.UserConsentVerifier) 네임 스페이스의 클래스를 사용 하 여 관리 [**됩니다.**](/uwp/api/Windows.Security.Credentials.UI)
 
-## <a name="check-the-device-for-a-fingerprint-reader"></a>장치의 지문 판독기 확인
+## <a name="check-the-device-for-a-fingerprint-reader"></a>장치에서 지문 판독기를 확인 합니다.
 
 
-장치에 지문 판독기가 있는지 확인하려면 [**UserConsentVerifier.CheckAvailabilityAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.ui.userconsentverifier.checkavailabilityasync)를 호출합니다. 장치에서 지문 인증을 지원하는 경우에도 앱에서는 지문 인증을 사용하거나 사용하지 않도록 설정하도록 사용자에게 설정 옵션을 제공해야 합니다.
+장치에 지문 판독기가 있는지 확인 하려면 [**UserConsentVerifier. CheckAvailabilityAsync**](/uwp/api/windows.security.credentials.ui.userconsentverifier.checkavailabilityasync)를 호출 합니다. 장치에서 지문 인증을 지 원하는 경우에도 앱은 사용자에 게 설정에서 옵션을 제공 하 여 사용 하거나 사용 하지 않도록 설정 해야 합니다.
 
 ```cs
 public async System.Threading.Tasks.Task<string> CheckFingerprintAvailability()
@@ -67,12 +67,12 @@ public async System.Threading.Tasks.Task<string> CheckFingerprintAvailability()
 }
 ```
 
-## <a name="request-consent-and-return-results"></a>동의 요청 및 결과 반환
+## <a name="request-consent-and-return-results"></a>요청 동의 및 반환 결과
 
 
-지문 스캔에서 사용자 동의를 요청하려면 [**UserConsentVerifier.RequestVerificationAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.ui.userconsentverifier.requestverificationasync) 메서드를 호출합니다. 지문 인증이 작동하려면 사용자가 이전에 지문 "서명"을 지문 데이터베이스에 추가한 상태여야 합니다.
+지문 검색에서 사용자 동의를 요청 하려면 [**UserConsentVerifier RequestVerificationAsync**](/uwp/api/windows.security.credentials.ui.userconsentverifier.requestverificationasync) 메서드를 호출 합니다. 지문 인증이 작동 하려면 사용자가 이전에 지문 데이터베이스에 지문 "서명"을 추가 해야 합니다.
 
-[  **UserConsentVerifier.RequestVerificationAsync**](https://docs.microsoft.com/uwp/api/windows.security.credentials.ui.userconsentverifier.requestverificationasync)를 호출하면 지문 스캔을 요청하는 모달 대화 상자가 사용자에게 표시됩니다. 다음 이미지와 같이 모달 대화 상자의 일부로 사용자에게 표시되는 메시지를 **UserConsentVerifier.RequestVerificationAsync** 메서드에 제공할 수 있습니다.
+[**UserConsentVerifier**](/uwp/api/windows.security.credentials.ui.userconsentverifier.requestverificationasync)를 호출 하면 사용자에 게 지문 검사를 요청 하는 모달 대화 상자가 표시 됩니다. 다음 그림에 표시 된 것 처럼 모달 대화 상자의 일부로 사용자에 게 표시 되는 **RequestVerificationAsync** 메서드에 메시지를 제공할 수 있습니다.
 
 ```cs
 private async System.Threading.Tasks.Task<string> RequestConsent(string userMessage)

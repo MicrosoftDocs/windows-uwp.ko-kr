@@ -8,12 +8,12 @@ keywords: 터치, 포인터, 입력, 사용자 상호 작용
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e753b5c92dc22f967e2f518e8435d3a4fb41a529
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 537d5aa08f61471c43ca8a965369bdd9dcdee7d3
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234843"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165753"
 ---
 # <a name="touch-interactions"></a>터치 조작
 
@@ -22,7 +22,7 @@ ms.locfileid: "83234843"
 
 그러나 터치에 최적화 된 UI는 기존 UI에 대해 항상 더 우수한 것은 아닙니다. 둘 다 기술 및 응용 프로그램에 고유한 장점과 단점을 제공 합니다. 터치 우선 UI로 이동에서 터치, 터치 패드, 펜/스타일러스, 마우스 및 키보드 입력 간의 핵심 차이점을 이해 하는 것이 중요 합니다.
 
-> **중요 한 api**: [**windows. .xaml. input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input), windows [**.**](https://docs.microsoft.com/uwp/api/Windows.UI.Core) [**Devices**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input)
+> **중요 한 api**: [**windows. .xaml. input**](/uwp/api/Windows.UI.Xaml.Input), windows [**.**](/uwp/api/Windows.UI.Core) [**Devices**](/uwp/api/Windows.Devices.Input)
 
 
 많은 장치에는 하나 이상의 손가락 (또는 터치 접점)을 입력으로 사용 하도록 지 원하는 다중 터치 스크린이 있습니다. 터치 접점 및 해당 움직임은 다양 한 사용자 상호 작용을 지 원하는 터치 제스처 및 조작으로 해석 됩니다.
@@ -56,7 +56,7 @@ Windows 앱에는 터치 입력 처리를 위한 다양 한 메커니즘이 포�
 다음 표에서는 터치 최적화 Windows 앱을 디자인할 때 고려해 야 하는 입력 장치 간의 몇 가지 차이점을 보여 줍니다.
 
 <table>
-<tbody><tr><th>요소</th><th>터치 조작</th><th>마우스, 키보드, 펜/스타일러스 상호 작용</th><th>터치 패드</th></tr>
+<tbody><tr><th>요인</th><th>터치 조작</th><th>마우스, 키보드, 펜/스타일러스 상호 작용</th><th>터치 패드</th></tr>
 <tr><td rowspan="3">전체 자릿수</td><td>Fingertip의 연락처 영역이 단일 x-y 좌표 보다 크므로 의도 하지 않은 명령 활성화 가능성이 높아집니다.</td><td>마우스 및 펜/스타일러스가 정확한 x-y 좌표를 제공 합니다.</td><td>마우스와 동일 합니다.</td></tr>
 <tr><td>접촉 영역의 모양은 이동 전체에서 변경 됩니다.  </td><td>마우스 움직임 및 펜/스타일러스 스트로크는 정확한 x-y 좌표를 제공 합니다. 키보드 포커스는 명시적입니다.</td><td>마우스와 동일 합니다.</td></tr>
 <tr><td>대상 지정을 지 원하는 마우스 커서가 없습니다.</td><td>마우스 커서, 펜/스타일러스 커서 및 키보드 포커스는 모두 대상 지정을 지원 합니다.</td><td>마우스와 동일 합니다.</td></tr>
@@ -163,36 +163,36 @@ Finger 및 핸드 폐색은 다음을 통해 방지할 수 있습니다.
 
 앱 보기의 이동/스크롤 및 확대/축소 설정을 통해 사용자 상호 작용 환경을 조정 합니다. 앱 뷰에서는 사용자가 앱과 해당 콘텐츠를 액세스 하 고 조작 하는 방법을 설명 합니다. 뷰는 관성, 콘텐츠 경계 바운스 및 끌기 지점과 같은 동작도 제공합니다.
 
-[**ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) 컨트롤의 이동 및 스크롤 설정은 뷰의 콘텐츠가 뷰포트 내에 들어가지 않는 경우 사용자가 단일 뷰 내에서 탐색 하는 방법을 지시 합니다. 단일 보기는 예를 들어 잡지 나 책의 페이지, 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범이 될 수 있습니다.
+[**ScrollViewer**](/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) 컨트롤의 이동 및 스크롤 설정은 뷰의 콘텐츠가 뷰포트 내에 들어가지 않는 경우 사용자가 단일 뷰 내에서 탐색 하는 방법을 지시 합니다. 단일 보기는 예를 들어 잡지 나 책의 페이지, 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범이 될 수 있습니다.
 
-확대/축소 설정은 [**ScrollViewer**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) 컨트롤에서 지 원하는 광학 확대/축소 및 [**의미 체계 확대**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom) /축소 컨트롤 모두에 적용 됩니다. 의미 체계 확대/축소는 단일 뷰 내에서 많은 관련 데이터 또는 콘텐츠를 표시 하 고 탐색 하기 위한 터치 최적화 기술입니다. 이 기능은 두 가지 고유한 분류 모드 또는 확대/축소 수준을 사용 하 여 작동 합니다. 이는 단일 뷰 내에서 패닝 및 스크롤 하는 것과 유사 합니다. 패닝 및 스크롤은 의미 체계 확대/축소와 함께 사용할 수 있습니다.
+확대/축소 설정은 [**ScrollViewer**](/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) 컨트롤에서 지 원하는 광학 확대/축소 및 [**의미 체계 확대**](/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom) /축소 컨트롤 모두에 적용 됩니다. 의미 체계 확대/축소는 단일 뷰 내에서 많은 관련 데이터 또는 콘텐츠를 표시 하 고 탐색 하기 위한 터치 최적화 기술입니다. 이 기능은 두 가지 고유한 분류 모드 또는 확대/축소 수준을 사용 하 여 작동 합니다. 이는 단일 뷰 내에서 패닝 및 스크롤 하는 것과 유사 합니다. 패닝 및 스크롤은 의미 체계 확대/축소와 함께 사용할 수 있습니다.
 
 앱 보기 및 이벤트를 사용 하 여 팬/스크롤 및 확대/축소 동작을 수정 합니다. 이는 포인터 및 제스처 이벤트를 처리 하는 것 보다 원활한 상호 작용 환경을 제공할 수 있습니다.
 
-앱 보기에 대 한 자세한 내용은 [컨트롤, 레이아웃 및 텍스트](https://docs.microsoft.com/windows/uwp/design/basics/)를 참조 하세요.
+앱 보기에 대 한 자세한 내용은 [컨트롤, 레이아웃 및 텍스트](../basics/index.md)를 참조 하세요.
 
 ## <a name="custom-touch-interactions"></a>사용자 지정 터치 상호 작용
 
 
 사용자 고유의 상호 작용 지원을 구현 하는 경우 사용자가 앱의 UI 요소와 직접 상호 작용 하는 것과 관련 된 직관적인 환경이 필요 하다는 점을 명심 해야 합니다. 일관 되 고 검색 가능한 항목을 유지 하기 위해 플랫폼 컨트롤 라이브러리에서 사용자 지정 상호 작용을 모델링 하는 것이 좋습니다. 이러한 라이브러리의 컨트롤은 표준 상호 작용, 애니메이션 된 물리학 효과, 시각적 피드백 및 내게 필요한 옵션을 비롯 한 전체 사용자 상호 작용 환경을 제공 합니다. 명확 하 고 잘 정의 된 요구 사항이 있고 기본 상호 작용이 시나리오를 지원 하지 않는 경우에만 사용자 지정 상호 작용을 만듭니다.
 
-사용자 지정 된 터치 지원을 제공 하기 위해 다양 한 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 이벤트를 처리할 수 있습니다. 이러한 이벤트는 세 가지 수준의 추상화로 그룹화 됩니다.
+사용자 지정 된 터치 지원을 제공 하기 위해 다양 한 [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) 이벤트를 처리할 수 있습니다. 이러한 이벤트는 세 가지 수준의 추상화로 그룹화 됩니다.
 
--   정적 제스처 이벤트는 상호 작용이 완료 된 후에 트리거됩니다. 제스처 이벤트에는 [**탭**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.tapped), [**DoubleTapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.doubletapped), [**righttapped**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.righttapped) [**상태 및 누르고**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.holding)있습니다.
+-   정적 제스처 이벤트는 상호 작용이 완료 된 후에 트리거됩니다. 제스처 이벤트에는 [**탭**](/uwp/api/windows.ui.xaml.uielement.tapped), [**DoubleTapped**](/uwp/api/windows.ui.xaml.uielement.doubletapped), [**righttapped**](/uwp/api/windows.ui.xaml.uielement.righttapped) [**상태 및 누르고**](/uwp/api/windows.ui.xaml.uielement.holding)있습니다.
 
-    [**Istapenabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.istapenabled), [**IsDoubleTapEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.isdoubletapenabled), [**IsRightTapEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.isrighttapenabled)및 [**isholdingenabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.isholdingenabled) 를 **false**로 설정 하 여 특정 요소에서 제스처 이벤트를 사용 하지 않도록 설정할 수 있습니다.
+    [**Istapenabled**](/uwp/api/windows.ui.xaml.uielement.istapenabled), [**IsDoubleTapEnabled**](/uwp/api/windows.ui.xaml.uielement.isdoubletapenabled), [**IsRightTapEnabled**](/uwp/api/windows.ui.xaml.uielement.isrighttapenabled)및 [**isholdingenabled**](/uwp/api/windows.ui.xaml.uielement.isholdingenabled) 를 **false**로 설정 하 여 특정 요소에서 제스처 이벤트를 사용 하지 않도록 설정할 수 있습니다.
 
--   [**Pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 및 [**pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved) 과 같은 포인터 이벤트는 포인터 동작을 포함 하 여 각 터치 연락처에 대 한 하위 수준 세부 정보를 제공 하 고, 누르기 및 릴리스 이벤트를 구분 하는 기능을 제공 합니다.
+-   [**Pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed) 및 [**pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointermoved) 과 같은 포인터 이벤트는 포인터 동작을 포함 하 여 각 터치 연락처에 대 한 하위 수준 세부 정보를 제공 하 고, 누르기 및 릴리스 이벤트를 구분 하는 기능을 제공 합니다.
 
     포인터는 통합 이벤트 메커니즘을 사용 하는 제네릭 입력 형식입니다. 터치, 터치 패드, 마우스 또는 펜으로 사용할 수 있는 활성 입력 소스에서 화면 위치와 같은 기본 정보를 노출 합니다.
 
--   [**ManipulationStarted**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted)와 같은 조작 제스처 이벤트는 진행 중인 조작을 나타냅니다. 사용자가 요소를 터치 하 고 사용자가 손가락을 뗄 때까지 또는 조작이 취소 될 때까지 계속 해 서 실행을 시작 합니다.
+-   [**ManipulationStarted**](/uwp/api/windows.ui.xaml.uielement.manipulationstarted)와 같은 조작 제스처 이벤트는 진행 중인 조작을 나타냅니다. 사용자가 요소를 터치 하 고 사용자가 손가락을 뗄 때까지 또는 조작이 취소 될 때까지 계속 해 서 실행을 시작 합니다.
 
     조작 이벤트에는 확대/축소, 패닝 또는 회전과 같은 다중 터치 상호 작용이 포함 되며, 끌기와 같은 관성 및 속도 데이터를 사용 하는 상호 작용이 포함 됩니다. 조작 이벤트에서 제공하는 정보는 수행된 조작 형식을 확인하지 않고 오히려 위치, 변환 델타 및 속도와 같은 데이터를 포함합니다. 이 터치 데이터를 사용 하 여 수행 해야 하는 상호 작용의 유형을 결정할 수 있습니다.
 
 UWP에서 지 원하는 기본 터치 제스처 집합은 다음과 같습니다.
 
-| 속성           | 유형                 | 설명                                                                            |
+| 이름           | 유형                 | Description                                                                            |
 |----------------|----------------------|----------------------------------------------------------------------------------------|
 | 탭            | 정적 제스처       | 한 손가락을 화면에 터치 하 고 리프트 합니다.                                            |
 | 길게 누르기 | 정적 제스처       | 한 손가락은 화면에 접촉 하 여 제자리에 유지 됩니다.                                      |
@@ -211,7 +211,7 @@ For more info about gestures, manipulations, and interactions, see [Custom user 
 ## <a name="gesture-events"></a>제스처 이벤트
 
 
-개별 컨트롤에 대 한 자세한 내용은 [controls list](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/)를 참조 하세요.
+개별 컨트롤에 대 한 자세한 내용은 [controls list](../controls-and-patterns/index.md)를 참조 하세요.
 
 ## <a name="pointer-events"></a>포인터 이벤트
 
@@ -222,21 +222,21 @@ For more info about gestures, manipulations, and interactions, see [Custom user 
 
 다음은 포인터 이벤트 목록과 관련 이벤트 인수입니다.
 
-| 이벤트 또는 클래스                                                       | 설명                                                   |
+| 이벤트 또는 클래스                                                       | Description                                                   |
 |----------------------------------------------------------------------|---------------------------------------------------------------|
-| [**PointerPressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed)             | 단일 손가락이 화면에 닿을 때 발생 합니다.               |
-| [**PointerReleased**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)           | 동일한 터치 접점이 리프트 될 때 발생 합니다.                |
-| [**PointerMoved 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved)                 | 포인터를 화면 위로 끌 때 발생 합니다.         |
-| [**PointerEntered 됨**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered)             | 포인터가 요소의 적중 테스트 영역에 들어가면 발생 합니다. |
-| [**PointerExited**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited)               | 포인터가 요소의 적중 테스트 영역을 벗어나면 발생 합니다.  |
-| [**PointerCanceled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled)           | 터치 접점이 비정상적으로 손실 될 때 발생 합니다.               |
-| [**PointerCaptureLost**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost)     | 포인터 캡처가 다른 요소에 의해 수행 될 때 발생 합니다.    |
-| [**PointerWheelChanged**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)   | 마우스 휠의 델타 값이 변경 될 때와 터치 패드가 pinched 때 발생 합니다.         |
-| [**PointerRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) | 모든 포인터 이벤트에 대 한 데이터를 제공 합니다.                         |
+| [**PointerPressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed)             | 단일 손가락이 화면에 닿을 때 발생 합니다.               |
+| [**PointerReleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased)           | 동일한 터치 접점이 리프트 될 때 발생 합니다.                |
+| [**PointerMoved 됨**](/uwp/api/windows.ui.xaml.uielement.pointermoved)                 | 포인터를 화면 위로 끌 때 발생 합니다.         |
+| [**PointerEntered 됨**](/uwp/api/windows.ui.xaml.uielement.pointerentered)             | 포인터가 요소의 적중 테스트 영역에 들어가면 발생 합니다. |
+| [**PointerExited**](/uwp/api/windows.ui.xaml.uielement.pointerexited)               | 포인터가 요소의 적중 테스트 영역을 벗어나면 발생 합니다.  |
+| [**PointerCanceled**](/uwp/api/windows.ui.xaml.uielement.pointercanceled)           | 터치 접점이 비정상적으로 손실 될 때 발생 합니다.               |
+| [**PointerCaptureLost**](/uwp/api/windows.ui.xaml.uielement.pointercapturelost)     | 포인터 캡처가 다른 요소에 의해 수행 될 때 발생 합니다.    |
+| [**PointerWheelChanged**](/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)   | 마우스 휠의 델타 값이 변경 될 때와 터치 패드가 pinched 때 발생 합니다.         |
+| [**PointerRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) | 모든 포인터 이벤트에 대 한 데이터를 제공 합니다.                         |
 
  
 
-다음 예제에서는 [**Pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed), [**pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)및 [**pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited) 이벤트를 사용 하 여 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 개체의 탭 상호 작용을 처리 하는 방법을 보여 줍니다.
+다음 예제에서는 [**Pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed), [**pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerreleased)및 [**pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerexited) 이벤트를 사용 하 여 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 개체의 탭 상호 작용을 처리 하는 방법을 보여 줍니다.
 
 먼저 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) `touchRectangle` Extensible Application Markup Language (XAML)에서 이라는 사각형을 만듭니다.
 
@@ -246,7 +246,7 @@ For more info about gestures, manipulations, and interactions, see [Custom user 
            Height="100" Width="200" Fill="Blue" />
 </Grid>
 ```
-다음으로 [**Pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed), [**pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased)및 [**pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited) 이벤트에 대 한 수신기가 지정 됩니다.
+다음으로 [**Pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed), [**pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerreleased)및 [**pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerexited) 이벤트에 대 한 수신기가 지정 됩니다.
 
 ```cpp
 MainPage::MainPage()
@@ -286,7 +286,7 @@ Public Sub New()
 End Sub
 ```
 
-마지막으로 [**Pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트 처리기는 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 [**높이**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 와 [**너비**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) 를 늘리고, [**Pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased) 및 [**pointerpressed**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited) 이벤트 처리기는 **높이** 와 **너비** 를 다시 시작 값으로 설정 합니다.
+마지막으로 [**Pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트 처리기는 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 [**높이**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 와 [**너비**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) 를 늘리고, [**Pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerreleased) 및 [**pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerexited) 이벤트 처리기는 **높이** 와 **너비** 를 다시 시작 값으로 설정 합니다.
 
 ```cpp
 // Handler for pointer exited event.
@@ -419,32 +419,32 @@ End Sub
 
 다음은 조작 이벤트 및 관련 이벤트 인수의 목록입니다.
 
-| 이벤트 또는 클래스                                                                                               | 설명                                                                                                                               |
+| 이벤트 또는 클래스                                                                                               | Description                                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| [**System.windows.uielement.manipulationstarting> 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting)                                   | 조작 프로세서가 처음으로 만들어지면 발생합니다.                                                                                  |
-| [**System.windows.uielement.manipulationstarted> 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted)                                     | 입력 장치가 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)에서 조작을 시작할 때 발생 합니다.                                            |
-| [**System.windows.uielement.manipulationdelta> 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta)                                         | 입력 디바이스에서 조작 중에 위치를 변경하면 발생합니다.                                                                      |
-| [**System.windows.uielement.manipulationinertiastarting> 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationinertiastartingevent)                | 조작 하는 동안 입력 장치가 [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 개체와의 연결을 잃고 관성이 시작 될 때 발생 합니다. |
-| [**System.windows.uielement.manipulationcompleted> 이벤트**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted)                                 | [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 의 조작과 관성이 완료 되 면 발생 합니다.                                          |
-| [**ManipulationStartingRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs)               | [**System.windows.uielement.manipulationstarting>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarting) 이벤트에 대 한 데이터를 제공 합니다.                                         |
-| [**ManipulationStartedRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs)                 | [**System.windows.uielement.manipulationstarted>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted) 이벤트에 대 한 데이터를 제공 합니다.                                           |
-| [**ManipulationDeltaRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs)                     | [**System.windows.uielement.manipulationdelta>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트에 대 한 데이터를 제공 합니다.                                               |
-| [**ManipulationInertiaStartingRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs) | [**System.windows.uielement.manipulationinertiastarting>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationinertiastarting) 이벤트에 대 한 데이터를 제공 합니다.                           |
-| [**ManipulationVelocities**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.ManipulationVelocities)                                              | 조작이 발생 하는 속도를 설명 합니다.                                                                                         |
-| [**ManipulationCompletedRoutedEventArgs**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs)             | [**System.windows.uielement.manipulationcompleted>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted) 이벤트에 대 한 데이터를 제공 합니다.                                       |
+| [**System.windows.uielement.manipulationstarting> 이벤트**](/uwp/api/windows.ui.xaml.uielement.manipulationstarting)                                   | 조작 프로세서가 처음으로 만들어지면 발생합니다.                                                                                  |
+| [**System.windows.uielement.manipulationstarted> 이벤트**](/uwp/api/windows.ui.xaml.uielement.manipulationstarted)                                     | 입력 장치가 [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement)에서 조작을 시작할 때 발생 합니다.                                            |
+| [**System.windows.uielement.manipulationdelta> 이벤트**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta)                                         | 입력 디바이스에서 조작 중에 위치를 변경하면 발생합니다.                                                                      |
+| [**System.windows.uielement.manipulationinertiastarting> 이벤트**](/uwp/api/windows.ui.xaml.uielement.manipulationinertiastartingevent)                | 조작 하는 동안 입력 장치가 [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) 개체와의 연결을 잃고 관성이 시작 될 때 발생 합니다. |
+| [**System.windows.uielement.manipulationcompleted> 이벤트**](/uwp/api/windows.ui.xaml.uielement.manipulationcompleted)                                 | [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) 의 조작과 관성이 완료 되 면 발생 합니다.                                          |
+| [**ManipulationStartingRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.ManipulationStartingRoutedEventArgs)               | [**System.windows.uielement.manipulationstarting>**](/uwp/api/windows.ui.xaml.uielement.manipulationstarting) 이벤트에 대 한 데이터를 제공 합니다.                                         |
+| [**ManipulationStartedRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.ManipulationStartedRoutedEventArgs)                 | [**System.windows.uielement.manipulationstarted>**](/uwp/api/windows.ui.xaml.uielement.manipulationstarted) 이벤트에 대 한 데이터를 제공 합니다.                                           |
+| [**ManipulationDeltaRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs)                     | [**System.windows.uielement.manipulationdelta>**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트에 대 한 데이터를 제공 합니다.                                               |
+| [**ManipulationInertiaStartingRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs) | [**System.windows.uielement.manipulationinertiastarting>**](/uwp/api/windows.ui.xaml.uielement.manipulationinertiastarting) 이벤트에 대 한 데이터를 제공 합니다.                           |
+| [**ManipulationVelocities**](/uwp/api/Windows.UI.Input.ManipulationVelocities)                                              | 조작이 발생 하는 속도를 설명 합니다.                                                                                         |
+| [**ManipulationCompletedRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs)             | [**System.windows.uielement.manipulationcompleted>**](/uwp/api/windows.ui.xaml.uielement.manipulationcompleted) 이벤트에 대 한 데이터를 제공 합니다.                                       |
 
  
 
-제스처는 일련의 조작 이벤트로 구성 됩니다. 각 제스처는 사용자가 화면에 접촉 하는 경우와 같은 [**system.windows.uielement.manipulationstarted>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationstarted) 이벤트로 시작 합니다.
+제스처는 일련의 조작 이벤트로 구성 됩니다. 각 제스처는 사용자가 화면에 접촉 하는 경우와 같은 [**system.windows.uielement.manipulationstarted>**](/uwp/api/windows.ui.xaml.uielement.manipulationstarted) 이벤트로 시작 합니다.
 
-그런 다음 [**system.windows.uielement.manipulationdelta>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트가 하나 이상 발생 합니다. 예를 들어 화면을 터치 한 다음 손가락을 화면에서 끌 수 있습니다. 마지막으로, 상호 작용이 완료 되 면 [**system.windows.uielement.manipulationcompleted>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationcompleted) 이벤트가 발생 합니다.
+그런 다음 [**system.windows.uielement.manipulationdelta>**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트가 하나 이상 발생 합니다. 예를 들어 화면을 터치 한 다음 손가락을 화면에서 끌 수 있습니다. 마지막으로, 상호 작용이 완료 되 면 [**system.windows.uielement.manipulationcompleted>**](/uwp/api/windows.ui.xaml.uielement.manipulationcompleted) 이벤트가 발생 합니다.
 
 > [!NOTE]
 > 터치 스크린 모니터가 없는 경우 마우스 및 마우스 휠 인터페이스를 사용 하 여 시뮬레이터에서 조작 이벤트 코드를 테스트할 수 있습니다.
 
  
 
-다음 예제에서는 [**system.windows.uielement.manipulationdelta>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트를 사용 하 여 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 의 슬라이드 상호 작용을 처리 하 고 화면에서 이동 하는 방법을 보여 줍니다.
+다음 예제에서는 [**system.windows.uielement.manipulationdelta>**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트를 사용 하 여 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 의 슬라이드 상호 작용을 처리 하 고 화면에서 이동 하는 방법을 보여 줍니다.
 
 첫째, 이라는 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 은 `touchRectangle` [**높이**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Height) 와 [**너비가**](/uwp/api/Windows.UI.Xaml.FrameworkElement.Width) 200 인 XAML로 생성 됩니다.
 
@@ -456,7 +456,7 @@ End Sub
 </Grid>
 ```
 
-그런 다음 사각형을 변환 하기 위해 라는 전역 [**system.windows.media.translatetransform.x**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) 을 `dragTranslation` 만듭니다. [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) [**System.windows.uielement.manipulationdelta>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트 수신기는 **사각형**에 지정 되며 `dragTranslation` **사각형**의 [**rendertransform**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.rendertransform) 에 추가 됩니다.
+그런 다음 사각형을 변환 하기 위해 라는 전역 [**system.windows.media.translatetransform.x**](/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) 을 `dragTranslation` 만듭니다. [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) [**System.windows.uielement.manipulationdelta>**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트 수신기는 **사각형**에 지정 되며 `dragTranslation` **사각형**의 [**rendertransform**](/uwp/api/windows.ui.xaml.uielement.rendertransform) 에 추가 됩니다.
 
 ```cpp
 // Global translation transform used for changing the position of 
@@ -527,7 +527,7 @@ Public Sub New()
 End Sub
 ```
 
-마지막으로 [**system.windows.uielement.manipulationdelta>**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트 처리기에서 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 의 위치는 [**델타**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.manipulationdeltaroutedeventargs.delta) 속성의 [**system.windows.media.translatetransform.x**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) 를 사용 하 여 업데이트 됩니다.
+마지막으로 [**system.windows.uielement.manipulationdelta>**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트 처리기에서 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 의 위치는 [**델타**](/uwp/api/windows.ui.xaml.input.manipulationdeltaroutedeventargs.delta) 속성의 [**system.windows.media.translatetransform.x**](/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) 를 사용 하 여 업데이트 됩니다.
 
 ```cpp
 // Handler for the ManipulationDelta event.
@@ -574,9 +574,9 @@ End Sub
 ## <a name="routed-events"></a>라우트된 이벤트
 
 
-여기에 언급 된 모든 포인터 이벤트, 제스처 이벤트 및 조작 이벤트는 *라우트된 이벤트*로 구현 됩니다. 즉, 이벤트를 원래 이벤트가 발생 한 개체 이외의 개체에서 처리할 수 있습니다. [**UIElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement) 의 부모 컨테이너 또는 앱의 루트 [**페이지**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) 와 같은 개체 트리의 연속 부모는 원래 요소가 아닌 경우에도 이러한 이벤트를 처리 하도록 선택할 수 있습니다. 반대로 이벤트를 처리 하는 모든 개체는 더 이상 부모 요소에 도달 하지 않도록 이벤트를 처리 된 것으로 표시할 수 있습니다. 라우트된 이벤트 개념 및 라우트된 이벤트에 대 한 처리기를 작성 하는 방법에 대 한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10))를 참조 하세요.
+여기에 언급 된 모든 포인터 이벤트, 제스처 이벤트 및 조작 이벤트는 *라우트된 이벤트*로 구현 됩니다. 즉, 이벤트를 원래 이벤트가 발생 한 개체 이외의 개체에서 처리할 수 있습니다. [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) 의 부모 컨테이너 또는 앱의 루트 [**페이지**](/uwp/api/Windows.UI.Xaml.Controls.Page) 와 같은 개체 트리의 연속 부모는 원래 요소가 아닌 경우에도 이러한 이벤트를 처리 하도록 선택할 수 있습니다. 반대로 이벤트를 처리 하는 모든 개체는 더 이상 부모 요소에 도달 하지 않도록 이벤트를 처리 된 것으로 표시할 수 있습니다. 라우트된 이벤트 개념 및 라우트된 이벤트에 대 한 처리기를 작성 하는 방법에 대 한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](/previous-versions/windows/apps/hh758286(v=win.10))를 참조 하세요.
 
-## <a name="dos-and-donts"></a>실행 사항 및 금지 사항
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 
 -   터치 상호 작용을 기본 예상 입력 방법으로 사용 하 여 응용 프로그램을 디자인 합니다.

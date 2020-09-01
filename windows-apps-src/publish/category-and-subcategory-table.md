@@ -1,37 +1,37 @@
 ---
-Description: 올바른 범주와 하위 범주에 앱을 나열하면 고객이 앱을 찾고 자세히 파악하는 데 도움이 됩니다.
+Description: 앱을 올바른 범주 및 하위 범주에 나열 하면 고객이 앱을 찾고 더 자세히 이해할 수 있습니다.
 title: 범주 및 하위 범주 테이블
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 ms.date: 03/21/2019
 ms.topic: article
-keywords: Windows 10, UWP, 범주, 하위 범주, 장르, 범주, 장르
+keywords: windows 10, uwp, 범주, 하위 범주, 장르, 범주, 장르
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d7f3d01122bf4311e8f7b3a4a166478d5ba0ea6
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 49b22ceaf0f1cdefcc7f29f0a8ca79658aa15803
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67320047"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167427"
 ---
 # <a name="category-and-subcategory-table"></a>범주 및 하위 범주 테이블
 
 
-올바른 범주와 하위 범주에 앱을 나열하면 고객이 앱을 찾고 자세히 파악하는 데 도움이 됩니다.
+앱을 올바른 범주 및 하위 범주에 나열 하면 고객이 앱을 찾고 더 자세히 이해할 수 있습니다.
 
-앱을 가장 잘 설명하는 범주를 선택해야 합니다. 원할 경우 하위 범주를 선택합니다(사용 가능한 경우). 사용할 범주 또는 하위 범주가 확실하지 않거나 정확하게 일치하는 범주 또는 하위 범주를 찾을 수 없는 경우, 고객이 개발자의 앱과 같은 앱을 찾으려고 할 때 확인할 가능성이 큰 범주 또는 하위 범주를 선택합니다.
+앱에 가장 잘 맞는 범주를 선택 해야 합니다. 필요에 따라 하위 범주를 선택할 수 있습니다. 사용할 범주 또는 하위 범주를 모르는 경우 또는 정확히 일치 하는 것으로 보이는 범주 또는 하위 범주를 찾을 수 없는 경우 고객에 게 원하는 앱을 찾으려고 할 때 고객이 볼 가능성이 가장 높은 것으로 생각 하는 범주를 선택 합니다.
 
-선택 하면 **게임** 필요한 하나 이상의 하위 범주를 선택 하 여 범주에 대 한 (호출 *장르* 게임에 대 한). 게임에 적절한 개수만큼 장르를 선택할 수 있습니다. Xbox에서 고객에게 게임을 게시하려면 [Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators)을 사용하도록 설정하거나 [개념 승인](../gaming/concept-approval.md) 프로세스를 거쳐야 합니다. 
+범주에 대 한 **게임** 을 선택 하는 경우 하나 이상의 하위 범주 (게임의 경우 *장르* 라고 함)를 선택 해야 합니다. 게임에 적절 한 수 만큼의 장르를 선택할 수 있습니다. Xbox의 고객에 게 게임을 게시 하려면 [Xbox Live 크리에이터 프로그램](/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators) 을 사용 하도록 설정 하거나 [개념 승인](../gaming/concept-approval.md) 프로세스를 진행 해야 합니다. 
 
 > [!IMPORTANT] 
-> **게임** 범주에 앱을 게시하는 경우, 새로 제출할 때 다른 범주를 선택할 수 없습니다. 계속 **게임** 범주로 게시해야 합니다(단, 새로 제출할 때 장르 선택 항목은 변경할 수 있음). 마찬가지로, 이전에 다른 범주에 게시한 앱을 업데이트할 때 **게임** 범주를 선택할 수 없습니다.
+> **게임** 범주에 앱을 게시 하는 경우 새 제출에서 다른 범주를 선택할 수 없습니다. 새 제출에서 장르 선택 항목을 변경할 수 있지만 **게임** 범주에 계속 게시 해야 합니다. 마찬가지로 이전에 다른 범주에서 게시 한 앱을 업데이트할 때 **게임** 범주를 선택할 수 없습니다.
 
-게임이 아닌 앱의 경우 하나의 범주를 선택해야 하며, 제공된 모든 하위 범주 중에서 선택할 수 있습니다(선택 사항). **게임** 범주 이외의 앱에 두 개 이상의 하위 범주를 선택할 수 없습니다. 일부 범주에만 하위 범주가 있으며, 선택한 범주에 속한 경우에만 하위 범주를 사용할 수 있습니다.
+게임이 아닌 앱의 경우 범주를 선택 하 고 필요에 따라 사용 가능한 하위 범주 중에서 선택할 수 있습니다. **게임** 범주에 없는 앱에 대해 둘 이상의 하위 범주를 선택할 수 없습니다. 일부 범주만 하위 범주를 가지 며, 선택한 범주에 속할 경우에만 하위 범주를 사용할 수 있습니다.
 
-이미 Store에 있는 앱의 범주나 하위 범주를 변경하려면(**게임** 범주를 다른 범주로 변경하거나 그 반대로 변경하는 경우는 제외) [새 제출을 만들고](app-submissions.md) 새 범주 또는 하위 범주를 선택합니다.
+스토어에 이미 있는 앱의 범주 또는 하위 범주를 변경 하려면 ( **게임** 에서 다른 범주로 또는 그 반대로 변경 하는 경우 제외) [새 제출을 만들고](app-submissions.md) 새 범주 또는 하위 범주를 선택 합니다.
 
 ## <a name="categories-and-subcategories"></a>범주 및 하위 범주
 
-Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합니다.
+Microsoft Store는 다음 범주 및 하위 범주로 앱을 구성 합니다.
 
 <table>
     <thead>
@@ -42,48 +42,48 @@ Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합
     </thead>
     <tbody>
 <tr>
-    <td>책 + 참고자료</td>
-    <td>전자 책 리더 <br> 픽션 <br> 논픽션 <br> 참조</td>
+    <td>책 + 참조</td>
+    <td>E-판독기 <br> Fiction <br> Nonfiction <br> 참조</td>
   </tr>
   <tr>
-    <td>Business</td>
-    <td>회계 + 재무 <br> 협업 <br> CRM <br> 데이터 + 분석 <br> 파일 관리 <br> 재고 + 물류 <br> 법무 + 인사 <br> 프로젝트 관리 <br> 원격 데스크톱 <br> 영업 + 마케팅 <br> 시간 + 경비</td>
+    <td>비즈니스</td>
+    <td>회계 + 재무 <br> 협업 <br> CRM <br> 데이터 + 분석 <br> 파일 관리 <br> 인벤토리 + 물류 <br> 법적 고 시간 <br> 프로젝트 관리 <br> 원격 데스크톱 <br> 판매 + 마케팅 <br> 시간 + 지출</td>
   </tr>
   <tr>
     <td>개발자 도구</td>
-    <td>데이터베이스 <br> 디자인 도구 <br> 개발자 키트 <br> 네트워킹 <br> 참고자료 + 교육 <br> 서버 <br> 유틸리티 <br> 웹 호스팅</td>
+    <td>데이터베이스 <br> 디자인 도구 <br> 개발 키트 <br> 네트워킹 <br> 참조 + 학습 <br> 서버 <br> 유틸리티 <br> 웹 호스팅</td>
   </tr>
   <tr>
     <td>교육</td>
-    <td>책 + 참고자료 <br> 조기 학습 <br> 교육용 도구 <br> 언어 <br> 학습 도우미</td>
+    <td>책 + 참조 <br> 초기 학습 <br> 지침 도구 <br> 언어 <br> 연구 지원</td>
   </tr>
   <tr>
-    <td>엔터테인먼트</td>
+    <td>Entertainment</td>
     <td>(없음)</td>
   </tr>
   <tr>
-    <td>추천 음식점</td>
+    <td>음식 + 식탁</td>
     <td>(없음)</td>
   </tr>
   <tr>
     <td>게임</td>
-    <td>액션 + 어드벤처 <br> 카드 + 보드 <br> 카지노 <br> 클래식 <br> 교육 <br> 가족 + 어린이 <br> 격투 <br> 멀티 플레이어 온라인 배틀 아레나 <br> 음악 <br> 기타 <br> 플랫포머 <br> 퍼즐 + 퀴즈 <br> 레이싱 + 비행 <br> 롤플레잉 <br> 사격 <br> Simulation <br> 스포츠 <br> 전략 <br> 도구 <br> Word</td>
+    <td>작업 + 어드벤처 <br> 카드 + 보드 <br> 카지노 <br> 클래식 <br> 교육 <br> 가족 + 어린이 <br> 우 <br> 멀티 플레이어 온라인 전투 아레나 <br> Music <br> 기타 <br> Platformer <br> 퍼즐 + 기타 정보 <br> 레이스 + 비행 <br> 역할 재생 <br> 슈팅 <br> 시뮬레이션 <br> 스포츠 <br> 전략 <br> 도구 <br> Word</td>
   </tr>
   <tr>
     <td>정부 + 정치</td>
     <td>(없음)</td>
   </tr>
   <tr>
-    <td>건강 + 피트니스</td>
+    <td>상태 + 적합성</td>
     <td>(없음)</td>
   </tr>
   <tr>
-    <td>어린이 + 가족</td>
-    <td>책 + 참고자료 <br> 엔터테인먼트 <br> 취미 + 장난감 <br> 스포츠 + 활동 <br> 여행</td>
+    <td>어린이 + 제품군</td>
+    <td>책 + 참조 <br> Entertainment <br> 취미 + 장난감 <br> 스포츠 + 활동 <br> 출장</td>
   </tr>
   <tr>
     <td>라이프스타일</td>
-    <td>자동차 <br> DIY <br> 가정 + 정원 <br> 관계 <br> 특별 관심 분야 <br> 스타일 + 패션</td>
+    <td>자동차 <br> DIY <br> 홈 + 정원 <br> 관계 <br> 특별 관심 <br> 스타일 + 방식</td>
   </tr>
   <tr>
     <td>의료</td>
@@ -91,14 +91,14 @@ Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합
   </tr>
   <tr>
     <td>멀티미디어 디자인</td>
-    <td>일러스트레이션 + 그래픽 디자인 <br> 음악 제작 <br> 사진 + 동영상 제작</td>
+    <td>그림 + 그래픽 디자인 <br> 음악 생산 <br> 사진 + 비디오 프로덕션</td>
   </tr>
   <tr>
-    <td>음악</td>
+    <td>Music</td>
     <td>(없음)</td>
   </tr>
   <tr>
-    <td>내비게이션 + 지도</td>
+    <td>탐색 + 맵</td>
     <td>(없음)</td>
   </tr>
   <tr>
@@ -106,15 +106,15 @@ Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합
     <td>뉴스 <br> 날씨</td>
   </tr>
   <tr>
-    <td>금융</td>
-    <td>금융 + 투자 <br> 예산 + 소득공제</td>
+    <td>개인 재무</td>
+    <td>은행 및 투자 <br> 예산 + 세금</td>
   </tr>
   <tr>
-    <td>Personalization</td>
-    <td>벨소리 + 사운드 <br> 테마 <br> 배경 화면 + 잠금 화면</td>
+    <td>개인 설정</td>
+    <td>벨 소리 + 소리 <br> 테마 <br> 배경 화면 + 잠금 화면</td>
   </tr>
   <tr>
-    <td>사진 + 동영상</td>
+    <td>사진 + 비디오</td>
     <td>(없음)</td>
   </tr>
   <tr>
@@ -123,7 +123,7 @@ Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합
   </tr>
   <tr>
     <td>보안</td>
-    <td>PC 보호 <br> 개인 보호</td>
+    <td>PC 보호 <br> 개인 보안</td>
   </tr>
   <tr>
     <td>쇼핑</td>
@@ -138,8 +138,8 @@ Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합
     <td>(없음)</td>
   </tr>
   <tr>
-    <td>여행</td>
-    <td>도시 안내 <br>호텔</td>
+    <td>출장</td>
+    <td>도시 가이드 <br>그리고</td>
   </tr>
   <tr>
     <td>유틸리티 + 도구</td>
@@ -149,5 +149,4 @@ Microsoft Store는 앱을 다음과 같이 범주 및 하위 범주로 구성합
 </table>
 
 > [!NOTE] 
-> Windows 8.x 및 Windows Phone 8.x 이전 버전의 고객들을 위해 Store에서 사용되는 일부 범주 및 하위 범주는 위에 나열된 범주와는 다르게 나타날 수 있습니다. 
-
+> Windows 8.x 및 Windows Phone .x 및 이전 버전의 고객용 스토어에서 사용 되는 일부 범주와 하위 범주는 위에 나열 된 범주와 다르게 나타날 수 있습니다.

@@ -1,87 +1,87 @@
 ---
-title: EGL 코드와 DXGI 및 Direct3D 비교
-description: DXGI(DirectX Graphics Interface) 및 여러 Direct3D API는 EGL과 동일한 역할을 합니다. 이 항목은 EGL의 관점에서 DXGI 및 Direct3D 11을 이해하는 데 도움을 줍니다.
+title: . C a l 코드와 DXGI 및 Direct3D 비교
+description: DXGI (DirectX Graphics Interface)와 여러 Direct3D Api는 동일한 역할을 합니다. 이 항목은 다양 한 측면에서 DXGI 및 Direct3D 11을 이해 하는 데 도움이 됩니다.
 ms.assetid: 90f5ecf1-dd5d-fea3-bed8-57a228898d2a
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, egl, dxgi, direct3d
+keywords: windows 10, uwp, 안 면, dxgi, direct3d
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a93f78cdc0d716f9b421fdc493317208f9d17b2
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: a9e521810c5220d412afb98d25a00f5ac499af1b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368371"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165217"
 ---
-# <a name="compare-egl-code-to-dxgi-and-direct3d"></a>EGL 코드와 DXGI 및 Direct3D 비교
+# <a name="compare-egl-code-to-dxgi-and-direct3d"></a>. C a l 코드와 DXGI 및 Direct3D 비교
 
 
 
 
-**중요 한 Api**
+**중요 API**
 
--   [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1)
--   [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1)
--   [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow)
+-   [**ID3D11Device1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1)
+-   [**ID3D11DeviceContext1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1)
+-   [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow)
 
-DXGI(DirectX Graphics Interface) 및 여러 Direct3D API는 EGL과 동일한 역할을 합니다. 이 항목은 EGL의 관점에서 DXGI 및 Direct3D 11을 이해하는 데 도움을 줍니다.
+DXGI (DirectX Graphics Interface)와 여러 Direct3D Api는 동일한 역할을 합니다. 이 항목은 다양 한 측면에서 DXGI 및 Direct3D 11을 이해 하는 데 도움이 됩니다.
 
-EGL과 마찬가지로, DXGI 및 Direct3D는 그래픽 리소스를 구성하고, 그리는 셰이더에 대한 렌더링 컨텍스트를 가져오고, 결과를 창에 표시할 수 있는 메서드를 제공합니다. 그러나 DXGI 및 Direct3D에는 좀 더 많은 옵션이 있으며 EGL에서 포팅할 경우 올바르게 설정하기 위해 수행해야 할 작업이 더 많습니다.
+DXGI 및 Direct3D는 리소스를 구성 하 고, 셰이더에 그릴 렌더링 컨텍스트를 가져오고, 결과를 창에 표시 하는 메서드를 제공 합니다. 그러나 DXGI와 Direct3D에는 몇 가지 추가 옵션이 포함 되어 있으며,이 경우에는 더 많은 작업이 필요 합니다.
 
-> **참고**    Khronos 그룹의 open 사양 EGL 1.4, 여기에 대 한이 설명서를 기반으로 합니다. [Khronos 네이티브 플랫폼 그래픽 인터페이스 (EGL 버전 1.4-2011 년 4 월 6 일) \[PDF\]](https://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf)합니다. 다른 플랫폼 및 개발 언어 관련 구문 차이는 이 지침에서 다루지 않습니다.
+> **참고**    이 지침은 [Khronos Native Platform Graphics Interface 1.4 (1.4-4 월 6 일, 2011) \[ PDF \] ](https://www.khronos.org/registry/egl/specs/eglspec.1.4.20110406.pdf)에 있는 Khronos 그룹의 공개 사양을 기반으로 합니다. 다른 플랫폼 및 개발 언어와 관련 된 구문의 차이점은이 지침에서 다루지 않습니다.
 
  
 
-## <a name="how-does-dxgi-and-direct3d-compare"></a>DXGI와 Direct3D는 어떻게 비교할까요?
+## <a name="how-does-dxgi-and-direct3d-compare"></a>DXGI와 Direct3D는 어떻게 비교 되나요?
 
 
-EGL이 DXGI 및 Direct3D에 대해 갖는 커다란 이점은 창 화면에 그리기를 시작하기가 비교적 간단하다는 사실입니다. 이는 OpenGL ES 2.0(및 따라서 EGL)은 여러 플랫폼 공급자에 의해 구현된 사양인 반면, DXGI 및 Direct3D는 하드웨어 공급업체 드라이버가 준수해야 하는 단일 참조이기 때문입니다. 즉, Microsoft는 특정 공급업체에서 제공하는 일부 기능에 집중하거나 공급업체별 설정 명령을 보다 단순한 API에 결합하는 대신 가능한 최고로 폭넓은 공급업체 기능 집합을 가능하게 하는 API 집합을 구현해야 하는 것입니다. 반면, Direct3D는 매우 폭넓은 범위의 그래픽 하드웨어 플랫폼 및 기능 수준을 다루고 플랫폼에 대한 경험이 풍부한 개발자에게 보다 큰 유연성을 제공하는 단일 API 집합을 제공합니다.
+DXGI와 Direct3D에서의 큰 장점은 창 화면으로 그리기를 시작 하는 것은 비교적 간단 하다는 점입니다. 이는 OpenGL ES 2.0 및 그와 같은 것이 여러 플랫폼 공급자에 의해 구현 되는 사양 이지만, DXGI 및 Direct3D는 하드웨어 공급 업체 드라이버가 준수 해야 하는 단일 참조 이기 때문입니다. 즉, Microsoft는 특정 공급 업체에서 제공 하는 기능 하위 집합에 초점을 맞춘 것이 아니라 공급 업체의 다양 한 기능을 구현 하는 Api 집합을 구현 해야 합니다. 반면, Direct3D는 매우 광범위 한 그래픽 하드웨어 플랫폼과 기능 수준을 포함 하는 단일 Api 집합을 제공 하 고, 플랫폼에서 경험 하는 개발자에 게 더 많은 유연성을 제공 합니다.
 
-EGL과 마찬가지로, DXGI 및 Direct3D는 다음과 같은 동작에 대한 API를 제공합니다.
+예를 들어, DXGI와 Direct3D는 다음과 같은 동작을 위한 Api를 제공 합니다.
 
--   프레임 버퍼(DXGI에서는 "스왑 체인"이라고 함) 가져오기와 읽기 및 프레임 버퍼에 쓰기
--   프레임 버퍼와 UI 창 연결
--   그리는 렌더링 컨텍스트 가져오기 및 구성
--   특정 렌더링 컨텍스트의 그래픽 파이프라인에 대한 명령 실행
--   셰이더 리소스 만들기 및 관리, 셰이더 리소스와 렌더링 컨텍스트 연결
--   특정 렌더링 대상(예: 텍스처)으로 렌더링
--   그래픽 리소스로 렌더링한 결과로 창의 디스플레이 화면 업데이트
+-   프레임 버퍼 (DXGI에서 "스왑 체인" 이라고 함)를 가져오고 읽고 씁니다.
+-   UI 창과 프레임 버퍼 연결
+-   그릴 렌더링 컨텍스트 가져오기 및 구성
+-   특정 렌더링 컨텍스트에 대 한 그래픽 파이프라인에 명령을 실행 합니다.
+-   셰이더 리소스를 만들고 관리 하며 렌더링 콘텐츠와 연결
+-   특정 렌더링 대상 (예: 질감)으로 렌더링
+-   그래픽 리소스로 렌더링 된 결과와 함께 창의 표시 화면을 업데이트 합니다.
 
-그래픽 파이프라인을 구성 하기 위한 기본 Direct3D 프로세스를 확인 하려면 Microsoft Visual Studio 2015에서 DirectX 11 앱 (유니버설 Windows) 템플릿을 확인 합니다. 이 템플릿의 기본 렌더링 클래스는 Direct3D 11 그래픽 인프라를 설정하고, 해당 기본 리소스를 구성하고, 화면 회전과 같은 UWP(유니버설 Windows 플랫폼) 앱 기능을 지원하기 위한 좋은 기준을 제공합니다.
+그래픽 파이프라인을 구성 하는 기본 Direct3D 프로세스를 보려면 Microsoft Visual Studio 2015에서 DirectX 11 앱 (유니버설 Windows) 템플릿을 확인 하세요. 이 클래스의 기본 렌더링 클래스는 Direct3D 11 그래픽 인프라를 설정 하 고,이에 대 한 기본 리소스를 구성 하 고, 화면 회전과 같은 UWP (유니버설 Windows 플랫폼) 앱 기능을 지원 하기 위한 좋은 기준을 제공 합니다.
 
-EGL에는 Direct3D 11에 비해 매우 적은 수의 API가 포함되어 있으므로, 해당 플랫폼에 한정된 명명 및 전문 용어에 익숙하지 않은 경우 Direct3D 11을 탐색하기가 어려울 수 있습니다. 다음은 이해를 돕기 위한 간단한 개요입니다.
+뛰어난 l은 Direct3D 11을 기준으로 하는 Api를 거의 포함 하지 않으며 플랫폼에 특정 한 명명 및 전문 용어에 익숙하지 않은 경우 후자를 탐색 하는 것이 어려울 수 있습니다. 다음은 중심을 가져오는 데 도움이 되는 간단한 개요입니다.
 
-먼저 기본적인 EGL 개체-Direct3D 인터페이스 매핑을 검토하세요.
+먼저, Direct3D 인터페이스 매핑에 대 한 기본가 나 개체를 검토 합니다.
 
-| EGL 추상화 | 유사한 Direct3D 표현                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 고 대 추상화 | 유사한 Direct3D 표시                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **EGLDisplay**  | Direct3D(UWP 앱용)에서는 [**Windows::UI::CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) API(또는 HWND를 표시하는 **ICoreWindowInterop** 인터페이스)를 통해 디스플레이 핸들을 가져옵니다. 어댑터 및 하드웨어 구성은 각각 [**IDXGIAdapter**](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgiadapter) 및 [**IDXGIDevice1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgidevice2) COM 인터페이스로 설정합니다.                                                                                                                                                                                                                                                           |
-| **EGLSurface**  | Direct3D에서 버퍼 및 기타 창 리소스(표시 또는 오프스크린)는 [**IDXGIFactory2**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgifactory2)([**IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1)(디스플레이 버퍼)과 같은 DXGI 리소스를 획득하는 데 사용되는 팩터리 패턴 구현)를 비롯한 특정 DXGI 인터페이스에 의해 만들어지고 구성됩니다. 그래픽 디바이스 및 해당 리소스를 나타내는 [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1)은 [**D3D11Device::CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice)로 획득합니다. 렌더링 대상에 대해서는 [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) 인터페이스를 사용합니다. |
-| **EGLContext**  | Direct3D에서는 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 인터페이스를 사용하여 그래픽 파이프라인을 구성하고 그래픽 파이프라인에 대한 명령을 실행합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| **EGLConfig**   | Direct3D 11에서는 [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 인터페이스의 메서드를 사용하여 버퍼, 텍스처, 스텐실 및 셰이더와 같은 그래픽 리소스를 만들고 구성합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **E글 표시**  | (UWP 앱 용) Direct3D에서 표시 핸들은 [**Windows:: UI:: CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) API (또는 HWND를 노출 하는 **ICoreWindowInterop** 인터페이스)를 통해 가져옵니다. 어댑터와 하드웨어 구성은 각각 [**Idxgid 어댑터**](/windows/desktop/api/dxgi/nn-dxgi-idxgiadapter) 및 [**IDXGIDevice1**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgidevice2) COM 인터페이스를 사용 하 여 설정 됩니다.                                                                                                                                                                                                                                                           |
+| **E글 표면**  | Direct3D에서 버퍼 및 기타 창 리소스 (표시 또는 오프 스크린)는 [**IDXGIFactory2**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgifactory2) ([**IDXGISwapChain1**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1) (표시 버퍼)와 같은 dxgi 리소스를 얻는 데 사용 되는 팩터리 패턴 구현인를 비롯 한 특정 DXGI 인터페이스에 의해 생성 및 구성 됩니다. 그래픽 장치 및 해당 리소스를 나타내는 [**ID3D11Device1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 는 [**D3D11Device:: createdevice**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice)를 사용 하 여 획득 됩니다. 렌더링 대상의 경우 [**ID3D11RenderTargetView**](/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) 인터페이스를 사용 합니다. |
+| **E글 컨텍스트**  | Direct3D에서는 [**ID3D11DeviceContext1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 인터페이스를 사용 하 여 그래픽 파이프라인에 대 한 명령을 구성 하 고 실행 합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **EGLConfig**   | Direct3D 11에서 [**ID3D11Device1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 인터페이스의 메서드를 사용 하 여 버퍼, 질감, 스텐실 및 셰이더와 같은 그래픽 리소스를 만들고 구성 합니다.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
  
 
-다음은 단순 그래픽 디스플레이와 UWP 앱용 DXGI 및 Direct3D에서 리소스 및 컨텍스트를 설정하기 위한 가장 기본적인 프로세스입니다.
+이제 다음은 UWP 앱 용으로 단순 그래픽 표시, 리소스 및 컨텍스트를 설정 하는 가장 기본적인 프로세스입니다.
 
-1.  [  **CoreWindow::GetForCurrentThread**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.getforcurrentthread)를 호출하여 앱의 핵심 UI 스레드에 대한 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 개체의 핸들을 가져옵니다.
-2.  UWP 앱의 경우 [**IDXGIFactory2::CreateSwapChainForCoreWindow**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow)를 사용하여 [**IDXGIAdapter2**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiadapter2)에서 스왑 체인을 가져온 다음 1단계에서 얻은 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 참조를 이 체인에 전달합니다. 그에 대한 대가로 [**IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1) 인스턴스를 얻게 됩니다. 렌더러 개체와 렌더링 스레드로 범위를 지정합니다.
-3.  [  **D3D11Device::CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) 메서드를 호출하여 [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 및 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 인스턴스를 가져옵니다. 이러한 인스턴스의 범위도 렌더러 개체로 지정합니다.
-4.  렌더러의 [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 개체에 대해 메서드를 사용하여 셰이더, 텍스처 및 기타 리소스를 만듭니다.
-5.  렌더러의 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 개체에 대해 메서드를 사용하여 버퍼를 정의하고 셰이더를 실행한 다음 파이프라인 단계를 관리합니다.
-6.  파이프라인을 실행했으며 백 버퍼에 프레임을 그렸으면 [**IDXGISwapChain1::Present1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1)을 사용하여 이 프레임을 화면에 표시합니다.
+1.  [**CoreWindow:: GetForCurrentThread**](/uwp/api/windows.ui.core.corewindow.getforcurrentthread)를 호출 하 여 앱의 핵심 UI 스레드에 대 한 [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 개체에 대 한 핸들을 가져옵니다.
+2.  UWP 앱의 경우 [**IDXGIAdapter2**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiadapter2) [**:: CreateSwapChainForCoreWindow**](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow)를 사용 하 여 교환 체인을 획득 하 고 1 단계에서 얻은 [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 참조를 전달 합니다. 반환 되는 [**IDXGISwapChain1**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1) 인스턴스를 가져옵니다. 렌더러 개체 및 해당 렌더링 스레드에 대해 범위를 합니다.
+3.  [**D3D11Device:: CreateDevice**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) 메서드를 호출 하 여 [**ID3D11Device1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 및 [**ID3D11DeviceContext1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 인스턴스를 가져옵니다. 렌더러 개체로도 범위를 합니다.
+4.  렌더러의 [**ID3D11Device1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 개체에서 메서드를 사용 하 여 셰이더, 질감 및 기타 리소스를 만듭니다.
+5.  렌더러의 [**ID3D11DeviceContext1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 개체에서 메서드를 사용 하 여 버퍼를 정의 하 고 셰이더를 실행 하 고 파이프라인 단계를 관리 합니다.
+6.  파이프라인이 실행 되 고 백 버퍼에 프레임을 그리면 [**IDXGISwapChain1::P resent1**](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1)를 사용 하 여 화면에 표시 합니다.
 
-이 프로세스를 좀더 자세히 살펴보려면 [DirectX 그래픽 시작](https://docs.microsoft.com/windows/desktop/getting-started-with-directx-graphics)을 참조하세요. 이 항목의 나머지 내용에서는 기본 그래픽 파이프라인 설정 및 관리에 대한 여러 일반적인 단계를 설명합니다.
-> **참고**    Windows 데스크톱 앱과 같은 Direct3D 스왑 체인을 가져오기 위한 다른 Api가 있고 [ **D3D11Device::CreateDeviceAndSwapChain**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdeviceandswapchain)합니다 를사용하지않는[ **CoreWindow** ](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 개체입니다.
+이 프로세스를 자세히 검토 하려면 [DirectX 그래픽 시작](/windows/desktop/getting-started-with-directx-graphics)을 검토 하세요. 이 문서의 나머지 부분에서는 기본 그래픽 파이프라인 설정 및 관리에 대 한 일반적인 여러 단계를 다룹니다.
+> **참고**    Windows 데스크톱 앱에는 [**D3D11Device:: CreateDeviceAndSwapChain**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdeviceandswapchain)와 같은 Direct3D 스왑 체인을 얻기 위한 다른 api가 있으며 [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 개체를 사용 하지 않습니다.
 
  
 
-## <a name="obtaining-a-window-for-display"></a>디스플레이를 위한 창 가져오기
+## <a name="obtaining-a-window-for-display"></a>표시할 창 가져오기
 
 
-이 예제에서 eglGetDisplay는 Microsoft Windows 플랫폼 관련 창 리소스를 위해 HWND로 전달됩니다. Apple의 iOS(Cocoa) 및 Google의 Android와 같은 다른 플랫폼의 경우 창 리소스에 대한 핸들이나 리소스가 다르므로 호출 구문이 서로 다를 수 있습니다. 디스플레이를 가져온 후 초기화하고, 기본 설정 구성을 설정하고, 그릴 수 있는 백 버퍼로 화면을 만듭니다.
+이 예제에서 eglGetDisplay는 Microsoft Windows 플랫폼과 관련 된 창 리소스에 대해 HWND를 전달 합니다. Apple의 iOS (Cocoa) 및 Google Android 같은 다른 플랫폼에는 창 리소스에 대 한 서로 다른 핸들이 나 참조가 있으며 호출 구문이 완전히 다를 수 있습니다. 디스플레이를 가져온 후 초기화 하 고, 기본 구성을 설정 하 고, 그릴 수 있는 백 버퍼를 사용 하 여 화면을 만듭니다.
 
-디스플레이를 가져와서 EGL로 구성합니다.
+표시 하 고, 고도를 사용 하 여 구성 합니다.
 
 ``` syntax
 // Obtain an EGL display object.
@@ -117,17 +117,17 @@ if (surface == EGL_NO_SURFACE)
 }
 ```
 
-Direct3D에서 UWP 앱의 주 창은 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 개체로 표현되며, 이 개체는 Direct3D용으로 구성한 "뷰 공급자" 초기화 프로세스의 일부로 [**CoreWindow::GetForCurrentThread**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.getforcurrentthread)를 호출하여 앱 개체에서 가져올 수 있습니다. (Direct3D XAML interop을 사용 하는 경우 사용할 XAML 프레임 워크의 보기 공급자입니다.) Direct3D 보기 공급자를 만드는 프로세스에 대해서는 [뷰를 표시 하려면 앱을 설정 하는 방법을](https://docs.microsoft.com/previous-versions/windows/apps/hh465077(v=win.10))합니다.
+Direct3D에서 UWP 앱의 주 창은 [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 개체로 표현 됩니다 .이 개체는 Direct3D에 대해 생성 하는 "뷰 공급자"의 초기화 프로세스의 일부로 [**CoreWindow:: GetForCurrentThread**](/uwp/api/windows.ui.core.corewindow.getforcurrentthread) 를 호출 하 여 앱 개체에서 가져올 수 있습니다. (Direct3D XAML interop를 사용 하는 경우 XAML 프레임 워크의 뷰 공급자를 사용 합니다.) Direct3D 보기 공급자를 만드는 프로세스는 [보기를 표시 하도록 앱을 설정](/previous-versions/windows/apps/hh465077(v=win.10))하는 방법에 설명 되어 있습니다.
 
-Direct3D에 대한 CoreWindow를 가져옵니다.
+Direct3D 용 CoreWindow 가져오기
 
 ``` syntax
 CoreWindow::GetForCurrentThread();
 ```
 
-[  **CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 참조를 가져온 후 창을 활성화해야 합니다. 그러면 주 개체의 **Run** 메서드가 실행되고 창 이벤트 처리가 시작됩니다. 그 후 만들기를 [ **ID3D11Device1** ](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 와 [ **ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1)를 사용 하 여 기본 가져오기 및 [ **IDXGIDevice1** ](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgidevice1) 하 고 [ **IDXGIAdapter** ](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgiadapter) 얻을 수 있도록는 [ **IDXGIFactory2** ](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgifactory2) 스왑 체인 리소스를 만들 개체를 기반으로 하 [ **DXGI\_스왑\_체인\_DESC1** ](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1) 구성 합니다.
+[**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 참조를 가져온 후에는 주 개체의 **Run** 메서드를 실행 하 고 창 이벤트 처리를 시작 하는 창을 활성화 해야 합니다. 그런 다음 [**ID3D11Device1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 및 [**ID3D11DeviceContext1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1)를 만든 후이를 사용 하 여 기본 [**IDXGIDevice1**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice1) 및 [**Idxgid 어댑터**](/windows/desktop/api/dxgi/nn-dxgi-idxgiadapter) 를 가져옵니다. 그러면 [**IDXGIFactory2**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgifactory2) 개체를 가져와 [**DXGI \_ 스왑 \_ 체인 \_ DESC1**](/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1) 구성에 따라 스왑 체인 리소스를 만들 수 있습니다.
 
-Direct3D에 대한 CoreWindow에서 DXGI 스왑 체인을 구성 및 설정합니다.
+Direct3D 용 CoreWindow에서 DXGI 스왑 체인 구성 및 설정
 
 ``` syntax
 // Called when the CoreWindow object is created (or re-created).
@@ -176,11 +176,11 @@ void SimpleDirect3DApp::SetWindow(CoreWindow^ window)
 }
 ```
 
-프레임을 표시하기 위해 준비한 후 [**IDXGISwapChain1::Present1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1) 메서드를 호출합니다.
+프레임을 표시 하기 위해 프레임을 준비한 후 [**IDXGISwapChain1::P resent1**](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1) 메서드를 호출 합니다.
 
-Direct3D 11에는 EGLSurface와 동일한 추상화가 없습니다. (있기 [ **IDXGISurface1**](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgisurface1), 있지만 다르게 사용 됩니다.) 가장 가까운 개념적 근사치가 합니다 [ **ID3D11RenderTargetView** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) 사용 하 여 질감에 할당할 개체 ([**ID3D11Texture2D** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d))으로 백 버퍼에 셰이더 파이프라인을 그립니다.
+Direct3D 11에서는 EGLSurface와 동일한 추상화가 없습니다. [**IDXGISurface1**](/windows/desktop/api/dxgi/nn-dxgi-idxgisurface1)있지만 다른 방식으로 사용 됩니다. 가장 가까운 개념 근사값은 셰이더 파이프라인이 그릴 백 버퍼로 텍스처 ([**ID3D11Texture2D**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d))를 할당 하는 데 사용 하는 [**ID3D11RenderTargetView**](/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) 개체입니다.
 
-Direct3D 11에서 스왑 체인의 백 버퍼를 설정합니다.
+Direct3D 11에서 스왑 체인에 대 한 백 버퍼 설정
 
 ``` syntax
 ComPtr<ID3D11RenderTargetView>    m_d3dRenderTargetViewWin; // scoped to renderer object
@@ -197,7 +197,7 @@ m_d3dDevice->CreateRenderTargetView(
     &m_d3dRenderTargetViewWin);
 ```
 
-창을 만들거나 창 크기가 변경될 때마다 이 코드를 호출하는 것이 좋습니다. 렌더링하는 동안, 꼭짓점 버퍼 또는 셰이더와 같은 다른 하위 리소스를 설정하기 전에 [**ID3D11DeviceContext1::OMSetRenderTargets**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-omsetrendertargets)로 렌더링 대상 뷰를 설정합니다.
+창이 만들어지거나 크기가 변경 될 때마다이 코드를 호출 하는 것이 좋습니다. 렌더링 하는 동안 버텍스 버퍼 또는 셰이더와 같은 다른 하위 리소스를 설정 하기 전에 [**ID3D11DeviceContext1:: OMSetRenderTargets**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-omsetrendertargets) 를 사용 하 여 렌더링 대상 뷰를 설정 합니다.
 
 ``` syntax
 // Set the render target for the draw operation.
@@ -210,20 +210,20 @@ m_d3dContext->OMSetRenderTargets(
 ## <a name="creating-a-rendering-context"></a>렌더링 컨텍스트 만들기
 
 
-EGL 1.4에서 "디스플레이"는 창 리소스 집합을 나타냅니다. 일반적으로 디스플레이 개체에 특성 집합을 제공하고 그에 따라 화면이 표시되는 방식으로 디스플레이를 위한 "화면"을 구성합니다. 컨텍스트를 만들고 화면 및 디스플레이에 바인딩하여 화면의 콘텐츠를 표시하기 위한 컨텍스트를 만듭니다.
+1.4에서 "표시"는 창 리소스 집합을 나타냅니다. 일반적으로 표시 개체에 대 한 특성 집합을 제공 하 고 반환 화면을 가져오기 때문에 디스플레이에 대 한 "surface"를 구성 합니다. 해당 컨텍스트를 만들고 화면 및 디스플레이에 바인딩하여 표면의 콘텐츠를 표시 하는 컨텍스트를 만듭니다.
 
-호출 흐름은 일반적으로는 다음과 같습니다.
+호출 흐름은 일반적으로 다음과 유사 합니다.
 
--   디스플레이 또는 창 리소스에 대한 핸들로 eglGetDisplay를 호출하여 디스플레이 개체를 가져옵니다.
--   eglInitialize로 디스플레이를 초기화합니다.
--   사용할 수 있는 디스플레이 구성을 가져오고 eglGetConfigs 및 eglChooseConfig로 하나를 선택합니다.
--   eglCreateWindowSurface로 창 화면을 만듭니다.
--   eglCreateContext로 그리기에 대한 디스플레이 컨텍스트를 만듭니다.
--   eglMakeCurrent로 디스플레이 컨텍스트를 디스플레이 및 화면에 바인딩합니다.
+-   표시 또는 창 리소스 핸들을 사용 하 여 E글 Getdisplay를 호출 하 고 표시 개체를 가져옵니다.
+-   EglInitialize를 사용 하 여 디스플레이를 초기화 합니다.
+-   사용 가능한 표시 구성을 가져오고 eglGetConfigs 및 eglChooseConfig를 사용 하 여 하나를 선택 합니다.
+-   EglCreateWindowSurface를 사용 하 여 창 화면을 만듭니다.
+-   E글 Createcontext로 그리기 위한 표시 컨텍스트를 만듭니다.
+-   표시 컨텍스트를 표시 하 고 eglMakeCurrent를 사용 하 여 화면에 바인딩합니다.
 
-이전 섹션에서 EGLDisplay 및 EGLSurface를 만들었고, 이제 EGLDisplay를 사용하여 컨텍스트를 만들고 해당 컨텍스트를 디스플레이와 연결하고, 구성된 EGLSurface를 사용하여 출력을 매개 변수화합니다.
+이전 섹션에서는 E글 표시 및 Egldisplay를 만들었으며, 이제 E글 표시를 사용 하 여 컨텍스트를 만들고, 출력을 매개 변수화 하는 구성 된 Egldisplay를 사용 하 여 해당 컨텍스트를 표시와 연결 합니다.
 
-EGL 1.4에서 렌더링 컨텍스트를 가져옵니다.
+고가와 함께 렌더링 컨텍스트 가져오기 1.4
 
 ```cpp
 // Configure your EGLDisplay and obtain an EGLSurface here ...
@@ -243,11 +243,11 @@ if (!eglMakeCurrent(display, surface, surface, context))
 }
 ```
 
-Direct3D 11에서 렌더링 컨텍스트는 [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 개체(어댑터를 나타내며, 버퍼 및 셰이더와 같은 Direct3D 리소스를 만들 수 있음) 및 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 개체(그래픽 파이프라인을 관리하고 셰이더를 실행할 수 있음)로 표현됩니다.
+Direct3D 11의 렌더링 컨텍스트는 어댑터를 나타내며 버퍼 및 셰이더와 같은 Direct3D 리소스를 만들 수 있도록 하는 [**ID3D11Device1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 개체로 표현 됩니다. [**ID3D11DeviceContext1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 개체를 사용 하 여 그래픽 파이프라인을 관리 하 고 셰이더를 실행할 수 있습니다.
 
-Direct3D 기능 수준에 유의하세요! 이러한 기능 수준은 이전 Direct3D 하드웨어 플랫폼(DirectX 9.1~DirectX 11)을 지원하는 데 사용됩니다. 태블릿과 같은 저전력 그래픽 하드웨어를 사용하는 많은 플랫폼은 DirectX 9.1 기능에만 액세스할 수 있으며, 지원되는 이전 그래픽 하드웨어는 9.1~11일 수 있습니다.
+Direct3D 기능 수준에 주의 하세요. DirectX 9.1에서 DirectX 11까지 이전 Direct3D 하드웨어 플랫폼을 지 원하는 데 사용 됩니다. 태블릿 등의 낮은 파워 그래픽 하드웨어를 사용 하는 많은 플랫폼은 DirectX 9.1 기능에만 액세스할 수 있으며, 이전에 지원 되 던 그래픽 하드웨어는 9.1에서 11 까지입니다.
 
-DXGI 및 Direct3D로 렌더링 컨텍스트를 만듭니다.
+DXGI 및 Direct3D를 사용 하 여 렌더링 컨텍스트 만들기
 
 ```cpp
 
@@ -285,12 +285,12 @@ D3D11CreateDevice(
 );
 ```
 
-## <a name="drawing-into-a-texture-or-pixmap-resource"></a>텍스처 또는 pixmap 리소스로 그리기
+## <a name="drawing-into-a-texture-or-pixmap-resource"></a>질감 또는 pixmap 리소스로 그리기
 
 
-OpenGL ES 2.0을 사용하여 텍스처로 그리려면 픽셀 버퍼 또는 PBuffer를 구성합니다. EGLSurface를 구성하고 만든 후 렌더링 컨텍스트에 제공하고 셰이더 파이프라인을 실행하여 텍스처로 그릴 수 있습니다.
+OpenGL ES 2.0를 사용 하 여 질감에 그리려면 픽셀 버퍼 또는 PBuffer를 구성 합니다. 성공적으로 구성 하 고이에 대 한 EGLSurface를 만든 후에는 렌더링 컨텍스트를 제공 하 고 셰이더 파이프라인을 실행 하 여 질감에 그릴 수 있습니다.
 
-OpenGL ES 2.0을 사용하여 픽셀 버퍼에 그립니다.
+OpenGL ES 2.0를 사용 하 여 픽셀 버퍼에 그리기
 
 ``` syntax
 // Create a pixel buffer surface to draw into
@@ -306,9 +306,9 @@ eglChooseConfig(eglDsplay, pBufConfigAttrs, &pBufConfig, 1, &totalpBufAttrs);
 EGLSurface pBuffer = eglCreatePbufferSurface(eglDisplay, pBufConfig, EGL_TEXTURE_RGBA); 
 ```
 
-Direct3D 11에서 [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) 리소스를 만들어 렌더링 대상으로 만듭니다. 사용 하 여 렌더링 대상 구성 [ **D3D11\_렌더링\_대상\_뷰\_DESC**](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_render_target_view_desc)합니다. 호출 하는 경우는 [ **ID3D11DeviceContext::Draw** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-draw) 메서드 (또는 유사한 그리기\* 장치 컨텍스트에 대 한 작업)이 렌더링 대상을 사용 하는 결과 그려지는 질감에 있습니다.
+Direct3D 11에서 [**ID3D11Texture2D**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d) 리소스를 만들고 렌더링 대상으로 만듭니다. [**D3D11 \_ 렌더링 \_ 대상 \_ 뷰 \_ DESC**](/windows/desktop/api/d3d11/ns-d3d11-d3d11_render_target_view_desc)를 사용 하 여 렌더링 대상을 구성 합니다. 이 렌더링 대상을 사용 하 여 [**ID3D11DeviceContext::D raw**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-draw) 메서드 (또는 장치 컨텍스트에서 비슷한 그리기 작업)를 호출 하면 \* 결과가 질감으로 그려집니다.
 
-Direct3D 11을 사용하여 텍스처로 그립니다.
+Direct3D 11을 사용 하 여 질감으로 그리기
 
 ``` syntax
 ComPtr<ID3D11Texture2D> renderTarget1;
@@ -330,14 +330,14 @@ m_d3dContext->OMSetRenderTargets(
         nullptr);
 ```
 
-이 텍스처가 [**ID3D11ShaderResourceView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11shaderresourceview)와 연결되어 있는 경우 이 텍스처를 셰이더로 전달할 수 있습니다.
+이 질감은 [**ID3D11ShaderResourceView**](/windows/desktop/api/d3d11/nn-d3d11-id3d11shaderresourceview)연결 된 경우 셰이더에 전달할 수 있습니다.
 
-## <a name="drawing-to-the-screen"></a>화면에 그리기
+## <a name="drawing-to-the-screen"></a>화면으로 그리기
 
 
-EGLContext를 사용하여 버퍼를 구성하고 데이터를 업데이트한 후 이 컨텍스트에 바인딩되어 있는 셰이더를 실행하고 glDrawElements를 사용하여 결과를 백 버퍼에 그립니다. eglSwapBuffers를 호출하여 백 버퍼를 표시합니다.
+E글 컨텍스트를 사용 하 여 버퍼를 구성 하 고 데이터를 업데이트 한 후에는이에 바인딩된 셰이더를 실행 하 고 결과를 배경 버퍼에 표시 합니다. E글 Swapbuffers를 호출 하 여 백 버퍼를 표시 합니다.
 
-GL ES 2.0을 엽니다. 화면 그리기입니다.
+GL ES 2.0: 그리기를 화면으로 엽니다.
 
 ``` syntax
 glDrawElements(GL_TRIANGLES, renderer->numIndices, GL_UNSIGNED_INT, 0);
@@ -345,9 +345,9 @@ glDrawElements(GL_TRIANGLES, renderer->numIndices, GL_UNSIGNED_INT, 0);
 eglSwapBuffers(drawContext->eglDisplay, drawContext->eglSurface);
 ```
 
-Direct3D 11에서는 [**IDXGISwapChain::Present1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1)을 사용하여 버퍼를 구성하고 셰이더를 바인딩합니다. 다음 중 하나를 호출 합니다 [ **ID3D11DeviceContext1::Draw** ](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-draw) \* 셰이더를를 실행 하 고 결과 렌더링 대상을 스왑 체인 백 버퍼로 구성 그릴 방법입니다. 그런 다음 **IDXGISwapChain::Present1**을 호출하여 백 버퍼를 디스플레이에 표시하기만 하면 됩니다.
+Direct3D 11에서 [**Idxgiswapchain::P resent1**](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1)를 사용 하 여 버퍼를 구성 하 고 셰이더를 바인딩합니다. 그런 다음 [**ID3D11DeviceContext1::D raw**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-draw) \* 메서드 중 하나를 호출 하 여 셰이더를 실행 하 고 스왑 체인의 백 버퍼로 구성 된 렌더링 대상에 결과를 그립니다. 그런 다음 **Idxgiswapchain::P resent1**를 호출 하 여 디스플레이에 백 버퍼를 표시 하기만 하면 됩니다.
 
-Direct3D 11: 화면 그리기입니다.
+Direct3D 11: 화면에 그리기
 
 ``` syntax
 
@@ -364,55 +364,51 @@ m_swapChainCoreWindow->Present1(1, 0, &parameters);
 ## <a name="releasing-graphics-resources"></a>그래픽 리소스 해제
 
 
-EGL에서는 EGLDisplay를 eglTerminate로 전달하여 창 리소스를 해제합니다.
+이상에서 E글 표시를 Egldisplay에 전달 하 여 창 리소스를 해제 합니다.
 
-EGL 1.4에서 디스플레이를 종료합니다.
+가 중에서 디스플레이 종료 (1.4)
 
 ```cpp
 EGLBoolean eglTerminate(eglDisplay);
 ```
 
-UWP 앱에서 [**CoreWindow::Close**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.close)를 사용하여 CoreWindow를 닫을 수 있기는 하지만 보조 UI 창에만 사용할 수 있습니다. 기본 UI 스레드 및 연결된 해당 CoreWindow는 닫을 수 없습니다. 대신, 운영 체제에 의해 만료됩니다. 그러나 보조 CoreWindow가 닫히면 [**CoreWindow::Closed**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.closed) 이벤트가 발생합니다.
+UWP 앱에서는 CoreWindow를 사용 하 여 [**CoreWindow:: close**](/uwp/api/windows.ui.core.corewindow.close)를 닫을 수 있지만이는 보조 UI 창에만 사용할 수 있습니다. 기본 UI 스레드 및 연결된 해당 CoreWindow는 닫을 수 없습니다. 대신, 운영 체제에 의해 만료됩니다. 그러나 보조 CoreWindow를 닫으면 [**CoreWindow:: closed**](/uwp/api/windows.ui.core.corewindow.closed) 이벤트가 발생 합니다.
 
-## <a name="api-reference-mapping-for-egl-to-direct3d-11"></a>EGL-Direct3D 11 API 참조 매핑
+## <a name="api-reference-mapping-for-egl-to-direct3d-11"></a>에 대 한 API 참조 매핑-Direct3D 11에 대 한
 
 
-| EGL API                          | 유사한 Direct3D 11 API 또는 동작                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| 안 면 API                          | 유사한 Direct3D 11 API 또는 동작                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | eglBindAPI                       | 해당 없음.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| eglBindTexImage                  | [  **ID3D11Device::CreateTexture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createtexture2d)를 호출하여 2D 텍스처를 설정합니다.                                                                                                                                                                                                                                                                                                                                                                                          |
-| eglChooseConfig                  | Direct3D는 기본 프레임 버퍼 구성 집합을 제공하지 않습니다. 스왑 체인의 구성입니다.                                                                                                                                                                                                                                                                                                                                                                                           |
-| eglCopyBuffers                   | 버퍼 데이터를 복사하려면 [**ID3D11DeviceContext::CopyStructureCount**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-copystructurecount)를 호출합니다. 리소스를 복사하려면 [**ID3DDeviceCOntext::CopyResource**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-copyresource)를 호출합니다.                                                                                                                                                                                                                                                      |
-| eglCreateContext                 | Direct3D 디바이스에 대한 핸들 및 기본 Direct3D 즉각적인 컨텍스트([**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 개체)를 둘 다 반환하는 [**D3D11CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice)를 호출하여 Direct3D 디바이스 컨텍스트를 만듭니다. 또한 반환된 [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 개체에 대해 [**ID3D11Device2::CreateDeferredContext**](https://docs.microsoft.com/windows/desktop/api/d3d11_2/nf-d3d11_2-id3d11device2-createdeferredcontext2)를 호출하여 Direct3D 지연된 컨텍스트를 만들 수 있습니다. |
-| eglCreatePbufferFromClientBuffer | 모든 버퍼는 Direct3D 하위 리소스(예: [**ID3D11Texture2D**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d))로 읽히고 쓰여집니다. [  **ID3D11DeviceContext1:CopyResource**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-copyresource)와 같은 메서드를 사용하여 호환되는 하위 리소스 형식 간에 복사합니다.                                                                                                                                                                                                     |
-| eglCreatePbufferSurface          | 스왑 체인 없는 Direct3D 디바이스를 만들려면 정적 [**D3D11CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) 메서드를 호출합니다. Direct3D 렌더링 대상 뷰의 경우 [**ID3D11Device::CreateRenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createrendertargetview)를 호출합니다.                                                                                                                                                                                                                               |
-| eglCreatePixmapSurface           | 스왑 체인 없는 Direct3D 디바이스를 만들려면 정적 [**D3D11CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) 메서드를 호출합니다. Direct3D 렌더링 대상 뷰의 경우 [**ID3D11Device::CreateRenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createrendertargetview)를 호출합니다.                                                                                                                                                                                                                               |
-| eglCreateWindowSurface           | [  **IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1)(디스플레이 버퍼용) 및 [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1)(그래픽 디바이스 및 해당 리소스용 가상 인터페이스)을 가져옵니다. **ID3D11Device1**을 사용하여, **IDXGISwapChain1**에 제공하는 프레임 버퍼를 만드는 데 사용할 수 있는 [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview)를 정의합니다.                                                                                         |
-| eglDestroyContext                | 해당 없음. [  **ID3D11DeviceContext::DiscardView1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nf-d3d11_1-id3d11devicecontext1-discardview1)을 사용하여 렌더링 대상 뷰를 제거합니다. 부모 [**ID3D11DeviceContext1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1)을 닫으려면 인스턴스를 null로 설정하고 플랫폼이 리소스를 회수할 때까지 기다립니다. 디바이스 컨텍스트를 직접 삭제할 수는 없습니다.                                                                                                                                                |
-| eglDestroySurface                | 해당 없음. UWP 앱의 CoreWindow가 플랫폼에 의해 닫히면 그래픽 리소스가 정리됩니다.                                                                                                                                                                                                                                                                                                                                                                                                 |
-| eglGetCurrentDisplay             | [  **CoreWindow::GetForCurrentThread**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.getforcurrentthread)를 호출하여 현재 메인 앱 창에 대한 참조를 가져옵니다.                                                                                                                                                                                                                                                                                                                                                         |
-| eglGetCurrentSurface             | 현재 [**ID3D11RenderTargetView**](https://docs.microsoft.com/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview)입니다. 일반적으로 렌더러 개체로 범위가 지정됩니다.                                                                                                                                                                                                                                                                                                                                                         |
-| eglGetError                      | 오류는 DirectX 인터페이스에 있는 대부분의 메서드에 의해 반환되는 HRESULT로 표시됩니다. 메서드가 HRESULT를 반환하지 않으면 [**GetLastError**](https://docs.microsoft.com/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)를 호출합니다. 시스템 오류를 HRESULT 값으로 변환 하려면 사용 합니다 [**HRESULT\_FROM\_WIN32**](https://docs.microsoft.com/windows/desktop/api/winerror/nf-winerror-hresult_from_win32) 매크로입니다.                                                                                                                                                                                                  |
-| eglInitialize                    | [  **CoreWindow::GetForCurrentThread**](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow.getforcurrentthread)를 호출하여 현재 메인 앱 창에 대한 참조를 가져옵니다.                                                                                                                                                                                                                                                                                                                                                         |
-| eglMakeCurrent                   | [  **ID3D11DeviceContext1::OMSetRenderTargets**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-omsetrendertargets)를 사용하여 현재 컨텍스트에서 그리기 위한 렌더링 대상을 설정합니다.                                                                                                                                                                                                                                                                                                                                  |
-| eglQueryContext                  | 해당 없음. 그러나 일부 구성 데이터 및 [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 인스턴스에서 렌더링 대상을 가져올 수 있습니다. (사용 가능한 메서드 목록은 링크를 참조하세요.)                                                                                                                                                                                                                                                                                           |
-| eglQuerySurface                  | 해당 없음. 그러나 [**ID3D11Device1**](https://docs.microsoft.com/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 인스턴스의 메서드에서 뷰포트 및 현재 그래픽 하드웨어에 대한 데이터를 가져올 수 있습니다. (사용 가능한 메서드 목록은 링크를 참조하세요.)                                                                                                                                                                                                                                                                               |
+| E글 Bindteximage                  | [**ID3D11Device:: CreateTexture2D**](/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createtexture2d) 를 호출 하 여 2d 텍스처를 설정 합니다.                                                                                                                                                                                                                                                                                                                                                                                          |
+| eglChooseConfig                  | Direct3D에서는 기본 프레임 버퍼 구성 집합을 제공 하지 않습니다. 스왑 체인의 구성                                                                                                                                                                                                                                                                                                                                                                                           |
+| E글 Copybuffers                   | 버퍼 데이터를 복사 하려면 [**ID3D11DeviceContext:: CopyStructureCount**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-copystructurecount)를 호출 합니다. 리소스를 복사 하려면 [**ID3DDeviceCOntext:: CopyResource**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-copyresource)를 호출 합니다.                                                                                                                                                                                                                                                      |
+| E글 Createcontext                 | Direct3D 장치 및 기본 Direct3D 직접 컨텍스트 ([**ID3D11DeviceContext1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1) 개체)에 대 한 핸들을 모두 반환 하는 [**D3D11CreateDevice**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice)를 호출 하 여 direct3d 장치 컨텍스트를 만듭니다. 반환 된 [**ID3D11Device1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 개체에서 [**ID3D11Device2:: CreateDeferredContext**](/windows/desktop/api/d3d11_2/nf-d3d11_2-id3d11device2-createdeferredcontext2) 를 호출 하 여 Direct3D 지연 컨텍스트를 만들 수도 있습니다. |
+| E글 Createpbufferfromclientbuffer | 모든 버퍼는 [**ID3D11Texture2D**](/windows/desktop/api/d3d11/nn-d3d11-id3d11texture2d)와 같은 Direct3D 하위 리소스로 읽고 기록 됩니다. [**ID3D11DeviceContext1: CopyResource**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-copyresource)와 같은 메서드를 사용 하 여 하나에서 다른 호환 하위 리소스 형식으로 복사 합니다.                                                                                                                                                                                                     |
+| E글 Createpbuffersurface          | 스왑 체인 없이 Direct3D 장치를 만들려면 정적 [**D3D11CreateDevice**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) 메서드를 호출 합니다. Direct3D 렌더링 대상 보기의 경우 [**ID3D11Device:: CreateRenderTargetView**](/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createrendertargetview)를 호출 합니다.                                                                                                                                                                                                                               |
+| eglCreatePixmapSurface           | 스왑 체인 없이 Direct3D 장치를 만들려면 정적 [**D3D11CreateDevice**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) 메서드를 호출 합니다. Direct3D 렌더링 대상 보기의 경우 [**ID3D11Device:: CreateRenderTargetView**](/windows/desktop/api/d3d11/nf-d3d11-id3d11device-createrendertargetview)를 호출 합니다.                                                                                                                                                                                                                               |
+| E글 Createwindowsurface           | Ontain [**IDXGISwapChain1**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1) (표시 버퍼의 경우) 및 [**ID3D11Device1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) (그래픽 장치 및 해당 리소스에 대 한 가상 인터페이스). **ID3D11Device1** 를 사용 하 여 **IDXGISwapChain1**에 제공 하는 프레임 버퍼를 만드는 데 사용할 수 있는 [**ID3D11RenderTargetView**](/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview) 를 정의 합니다.                                                                                         |
+| eglDestroyContext                | 해당 없음. [**ID3D11DeviceContext::D iscardview1**](/windows/desktop/api/d3d11_1/nf-d3d11_1-id3d11devicecontext1-discardview1) 를 사용 하 여 렌더링 대상 뷰를 제거 합니다. 부모 [**ID3D11DeviceContext1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11devicecontext1)를 닫으려면 인스턴스를 null로 설정 하 고 플랫폼에서 리소스를 회수할 때까지 기다립니다. 장치 컨텍스트는 직접 제거할 수 없습니다.                                                                                                                                                |
+| eglDestroySurface                | 해당 없음. 플랫폼에서 UWP 앱의 CoreWindow를 닫으면 그래픽 리소스가 정리 됩니다.                                                                                                                                                                                                                                                                                                                                                                                                 |
+| E글 Getcurrentdisplay             | [**CoreWindow:: GetForCurrentThread**](/uwp/api/windows.ui.core.corewindow.getforcurrentthread) 를 호출 하 여 현재 주 응용 프로그램 창에 대 한 참조를 가져옵니다.                                                                                                                                                                                                                                                                                                                                                         |
+| E글 Getcurrentsurface             | 현재 [**ID3D11RenderTargetView**](/windows/desktop/api/d3d11/nn-d3d11-id3d11rendertargetview)입니다. 일반적으로이는 렌더러 개체로 범위가 지정 됩니다.                                                                                                                                                                                                                                                                                                                                                         |
+| E글 Geterror                      | 오류는 DirectX 인터페이스에서 대부분의 메서드에 의해 반환 되는 Hresult로 얻어집니다. 메서드가 HRESULT를 반환 하지 않는 경우 [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)를 호출 합니다. 시스템 오류를 HRESULT 값으로 변환 하려면 [** \_ \_ WIN32 매크로의 hresult**](/windows/desktop/api/winerror/nf-winerror-hresult_from_win32)를 사용   합니다.                                                                                                                                                                                                  |
+| eglInitialize                    | [**CoreWindow:: GetForCurrentThread**](/uwp/api/windows.ui.core.corewindow.getforcurrentthread) 를 호출 하 여 현재 주 응용 프로그램 창에 대 한 참조를 가져옵니다.                                                                                                                                                                                                                                                                                                                                                         |
+| eglMakeCurrent                   | [**ID3D11DeviceContext1:: OMSetRenderTargets**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-omsetrendertargets)를 사용 하 여 현재 컨텍스트에서 그릴 렌더링 대상을 설정 합니다.                                                                                                                                                                                                                                                                                                                                  |
+| E글 Querycontext                  | 해당 없음. 그러나 [**ID3D11Device1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 인스턴스의 렌더링 대상과 일부 구성 데이터를 가져올 수 있습니다. 사용 가능한 메서드 목록에 대 한 링크를 참조 하세요.                                                                                                                                                                                                                                                                                           |
+| eglQuerySurface                  | 해당 없음. 그러나 [**ID3D11Device1**](/windows/desktop/api/d3d11_1/nn-d3d11_1-id3d11device1) 인스턴스의 메서드에서 뷰포트 및 현재 그래픽 하드웨어에 대 한 데이터를 가져올 수 있습니다. 사용 가능한 메서드 목록에 대 한 링크를 참조 하세요.                                                                                                                                                                                                                                                                               |
 | eglReleaseTexImage               | 해당 없음.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| eglReleaseThread                 | 일반 GPU 다중 스레딩에 대해서는 [다중 스레딩](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-render-multi-thread-intro)을 읽어 보세요.                                                                                                                                                                                                                                                                                                                                                                              |
-| eglSurfaceAttrib                 | 사용 하 여 [ **D3D11\_렌더링\_대상\_뷰\_DESC** ](https://docs.microsoft.com/windows/desktop/api/d3d11/ns-d3d11-d3d11_render_target_view_desc) Direct3D 렌더링 대상 뷰를 구성 하려면                                                                                                                                                                                                                                                                                                                                                               |
-| eglSwapBuffers                   | [  **IDXGISwapChain1::Present1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1)을 사용합니다.                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| eglSwapInterval                  | [  **IDXGISwapChain1**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1)을 참조하세요.                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| eglTerminate                     | 그래픽 파이프라인의 출력을 표시하는 데 사용되는 CoreWindow는 운영 체제에 의해 관리됩니다.                                                                                                                                                                                                                                                                                                                                                                                          |
-| eglWaitClient                    | 공유 화면의 경우 IDXGIKeyedMutex를 사용합니다. 일반 GPU 다중 스레딩에 대해서는 [다중 스레딩](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-render-multi-thread-intro)을 읽어 보세요.                                                                                                                                                                                                                                                                                                                                    |
-| eglWaitGL                        | 공유 화면의 경우 IDXGIKeyedMutex를 사용합니다. 일반 GPU 다중 스레딩에 대해서는 [다중 스레딩](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-render-multi-thread-intro)을 읽어 보세요.                                                                                                                                                                                                                                                                                                                                    |
-| eglWaitNative                    | 공유 화면의 경우 IDXGIKeyedMutex를 사용합니다. 일반 GPU 다중 스레딩에 대해서는 [다중 스레딩](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-render-multi-thread-intro)을 읽어 보세요.                                                                                                                                                                                                                                                                                                                                    |
+| E글 Releasethread                 | 일반 GPU 다중 스레딩을 보려면 [다중 스레딩](/windows/desktop/direct3d11/overviews-direct3d-11-render-multi-thread-intro)을 참조 하세요.                                                                                                                                                                                                                                                                                                                                                                              |
+| eglSurfaceAttrib                 | [**D3D11 \_ 렌더링 \_ 대상 \_ 뷰 \_ DESC**](/windows/desktop/api/d3d11/ns-d3d11-d3d11_render_target_view_desc) 를 사용 하 여 Direct3D 렌더링 대상 보기를 구성 합니다.                                                                                                                                                                                                                                                                                                                                                               |
+| E글 Swapbuffers                   | [**IDXGISwapChain1::P resent1**](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1)를 사용 합니다.                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| E글 Swapinterval                  | [**IDXGISwapChain1**](/windows/desktop/api/dxgi1_2/nn-dxgi1_2-idxgiswapchain1)를 참조 하세요.                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| E글 종결                     | 그래픽 파이프라인의 출력을 표시 하는 데 사용 되는 CoreWindow는 운영 체제에서 관리 합니다.                                                                                                                                                                                                                                                                                                                                                                                          |
+| E글 Waitclient                    | 공유 표면의 경우 IDXGIKeyedMutex를 사용 합니다. 일반 GPU 다중 스레딩을 보려면 [다중 스레딩](/windows/desktop/direct3d11/overviews-direct3d-11-render-multi-thread-intro)을 참조 하세요.                                                                                                                                                                                                                                                                                                                                    |
+| eglWaitGL                        | 공유 표면의 경우 IDXGIKeyedMutex를 사용 합니다. 일반 GPU 다중 스레딩을 보려면 [다중 스레딩](/windows/desktop/direct3d11/overviews-direct3d-11-render-multi-thread-intro)을 참조 하세요.                                                                                                                                                                                                                                                                                                                                    |
+| E글 Waitnative                    | 공유 표면의 경우 IDXGIKeyedMutex를 사용 합니다. 일반 GPU 다중 스레딩을 보려면 [다중 스레딩](/windows/desktop/direct3d11/overviews-direct3d-11-render-multi-thread-intro)을 참조 하세요.                                                                                                                                                                                                                                                                                                                                    |
 
  
 
  
 
  
-
-
-
-

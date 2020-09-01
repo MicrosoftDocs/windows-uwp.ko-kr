@@ -6,19 +6,19 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 오류 처리, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 6bbd892f47f0191455df3b235bdb5125a45ea4fc
-ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
+ms.openlocfilehash: f6567432714fb68618510923e49f2467daefdc54
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970251"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167687"
 ---
 # <a name="error-handling-in-javascript-walkthrough"></a>JavaScript에서 오류 처리 연습
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세히 알아보기](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 정보](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
-이 연습에서는 JavaScript 앱에서 광고 관련 오류를 catch 하는 방법을 보여 줍니다. 이 연습에서는 [Adcontrol](https://docs.microsoft.com/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 을 사용 하 여 배너 광고를 표시 하지만이의 일반적인 개념은 중간 광고 및 네이티브 광고에도 적용 됩니다.
+이 연습에서는 JavaScript 앱에서 광고 관련 오류를 catch 하는 방법을 보여 줍니다. 이 연습에서는 [Adcontrol](/uwp/api/microsoft.advertising.winrt.ui.adcontrol) 을 사용 하 여 배너 광고를 표시 하지만이의 일반적인 개념은 중간 광고 및 네이티브 광고에도 적용 됩니다.
 
 이러한 예제에서는 **Adcontrol**을 포함 하는 JavaScript 앱이 있다고 가정 합니다. 응용 프로그램에 **Adcontrol** 을 추가 하는 방법을 보여 주는 단계별 지침은 [HTML 5 및 Javascript의 adcontrol](adcontrol-in-html-5-and-javascript.md)을 참조 하세요. JavaScript/HTML 앱에 배너 광고를 추가 하는 방법을 보여 주는 전체 샘플 프로젝트는 [GitHub의 광고 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)을 참조 하세요.
 

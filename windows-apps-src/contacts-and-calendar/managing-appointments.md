@@ -4,24 +4,24 @@ title: 약속 관리
 ms.assetid: 292E9249-07C3-4791-B32C-6EC153C2B538
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, 약속, 일정
+keywords: windows 10, uwp, 약속, 일정
 ms.localizationpriority: medium
-ms.openlocfilehash: 52200d7896c9edea727bf31c69c04c4c1bd02bb2
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 8fc8bbaf16e1fc4b3372b9884e1b9bd6817a2f18
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74255490"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166297"
 ---
 # <a name="manage-appointments"></a>약속 관리
 
 
 
-[  **Windows.ApplicationModel.Appointments**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Appointments) 네임스페이스를 통해 사용자의 일정 앱에서 약속을 만들고 관리할 수 있습니다. 여기서는 약속을 만들고, 약속을 일정 앱에 추가하고, 일정 앱에서 약속을 바꾸고, 일정 앱에서 약속을 제거하는 방법을 설명하겠습니다. 또한 일정 앱의 시간 범위를 표시하고 약속 되풀이 개체를 만드는 방법도 설명합니다.
+[  **Windows.ApplicationModel.Appointments**](/uwp/api/Windows.ApplicationModel.Appointments) 네임스페이스를 통해 사용자의 일정 앱에서 약속을 만들고 관리할 수 있습니다. 여기서는 약속을 만들고, 약속을 일정 앱에 추가하고, 일정 앱에서 약속을 바꾸고, 일정 앱에서 약속을 제거하는 방법을 설명하겠습니다. 또한 일정 앱의 시간 범위를 표시하고 약속 되풀이 개체를 만드는 방법도 설명합니다.
 
-## <a name="create-an-appointment-and-apply-data-to-it"></a>약속을 만들어 데이터 적용
+## <a name="create-an-appointment-and-apply-data-to-it"></a>약속을 만들고 데이터를 적용 합니다.
 
-[  **Windows.ApplicationModel.Appointments.Appointment**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Appointments.Appointment) 개체를 만들고 변수에 할당합니다. 그런 다음 사용자가 UI를 통해 제공한 약속 속성을 **Appointment**에 적용합니다.
+[**Windows.**](/uwp/api/Windows.ApplicationModel.Appointments.Appointment) r e s e r e. a s o. r o s 개체를 만들어 변수에 할당 합니다. 그런 다음 사용자가 UI를 통해 제공 된 약속 속성을 **약속** 에 적용 합니다.
 
 ```cs
 private void Create-Click(object sender, RoutedEventArgs e)
@@ -253,9 +253,9 @@ private void Create-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="add-an-appointment-to-the-users-calendar"></a>사용자의 일정에 약속 추가
+## <a name="add-an-appointment-to-the-users-calendar"></a>사용자의 일정에 약속을 추가 합니다.
 
-[  **Windows.ApplicationModel.Appointments.Appointment**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Appointments.Appointment) 개체를 만들고 변수에 할당합니다. 그런 다음 [**AppointmentManager.ShowAddAppointmentAsync(Appointment, Rect, Placement)** ](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) 메서드를 호출하여 기본 약속 공급자의 약속 추가 UI를 표시함으로써 사용자가 약속을 추가할 수 있게 합니다. 사용자가 **추가**를 클릭하는 경우 샘플은 **ShowAddAppointmentAsync**에서 반환된 약속 식별자를 출력합니다.
+[**Windows.**](/uwp/api/Windows.ApplicationModel.Appointments.Appointment) r e s e r e. a s o. r o s 개체를 만들어 변수에 할당 합니다. 그런 다음 [**ShowAddAppointmentAsync (AppointmentManager (약속, Rect, Placement)**](/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) 메서드를 호출 하 여 기본 약속 공급자 추가 약속 UI를 표시 합니다. 그러면 사용자가 약속을 추가할 수 있습니다. 사용자가 **추가**를 클릭 한 경우이 샘플은 **ShowAddAppointmentAsync** 에서 반환 하는 약속 식별자를 출력 합니다.
 
 ```cs
 private async void Add-Click(object sender, RoutedEventArgs e)
@@ -282,11 +282,11 @@ private async void Add-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-Windows Phone 스토어 앱에 대 **한  약속** 을 추가 하기 위해 표시 되는 대화 상자를 편집할 수 있는 [**ShowEditNewAppointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) 와 마찬가지로 [**showaddappointment**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) 작동 합니다.
+**참고**    Windows Phone 스토어 앱의 경우 약속을 추가 하기 위해 표시 되는 대화 상자를 편집할 수 있는 [**ShowEditNewAppointment**](/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) 와 마찬가지로 [**showaddappointment**](/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) 작동 합니다.
 
 ## <a name="replace-an-appointment-in-the-users-calendar"></a>사용자의 일정에서 약속 바꾸기
 
-[  **Windows.ApplicationModel.Appointments.Appointment**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Appointments.Appointment) 개체를 만들고 변수에 할당합니다. 그런 다음 해당 [**AppointmentManager.ShowReplaceAppointmentAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showreplaceappointmentasync) 메서드를 호출하여 기본 약속 공급자의 약속 바꾸기 UI를 표시함으로써 사용자가 약속을 바꿀 수 있게 합니다. 사용자는 또한 바꾸려는 약속 식별자를 제공합니다. 이 식별자는 [**AppointmentManager.ShowAddAppointmentAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync)에서 반환된 것입니다. 사용자가 **바꾸기**를 클릭하는 경우 샘플은 약속 식별자를 업데이트했음을 출력합니다.
+[**Windows.**](/uwp/api/Windows.ApplicationModel.Appointments.Appointment) r e s e r e. a s o. r o s 개체를 만들어 변수에 할당 합니다. 그런 다음 적절 한 [**AppointmentManager ShowReplaceAppointmentAsync**](/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showreplaceappointmentasync) 메서드를 호출 하 여 사용자가 약속을 바꿀 수 있도록 하는 기본 약속 공급자 대체 약속 UI를 표시 합니다. 또한 사용자는 바꾸려는 약속 식별자를 제공 합니다. 이 식별자는 AppointmentManager에서 반환 되었습니다 [**. ShowAddAppointmentAsync**](/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync). 사용자가 **바꾸기**를 클릭 한 경우 샘플은 해당 약속 식별자를 업데이트 한 것으로 인쇄 합니다.
 
 ```cs
 private async void Replace-Click(object sender, RoutedEventArgs e)
@@ -340,7 +340,7 @@ private async void Replace-Click(object sender, RoutedEventArgs e)
 
 ## <a name="remove-an-appointment-from-the-users-calendar"></a>사용자의 일정에서 약속 제거
 
-해당 [**AppointmentManager.ShowRemoveAppointmentAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showremoveappointmentasync) 메서드를 호출하여 기본 약속 공급자의 약속 제거 UI를 표시함으로써 사용자가 약속을 제거할 수 있게 합니다. 사용자는 또한 제거하려는 약속 식별자를 제공합니다. 이 식별자는 [**AppointmentManager.ShowAddAppointmentAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync)에서 반환된 것입니다. 사용자가 **삭제**를 클릭하는 경우 샘플은 약속 식별자에서 지정된 약속을 제거했음을 출력합니다.
+사용자가 약속을 제거할 수 있도록 하려면 적절 한 ShowRemoveAppointmentAsync 메서드를 호출 하 여 기본 약속 공급자 [**APPOINTMENTMANAGER**](/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showremoveappointmentasync) UI를 표시 합니다. 또한 사용자는 제거 하고자 하는 약속 식별자를 제공 합니다. 이 식별자는 AppointmentManager에서 반환 되었습니다 [**. ShowAddAppointmentAsync**](/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync). 사용자가 **삭제**를 클릭 한 경우 샘플은 해당 약속 식별자로 지정 된 약속이 제거 되었음을 출력 합니다.
 
 ```cs
 private async void Remove-Click(object sender, RoutedEventArgs e)
@@ -388,9 +388,9 @@ private async void Remove-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="show-a-time-span-for-the-appointments-provider"></a>약속 공급자에 대한 시간 범위 표시
+## <a name="show-a-time-span-for-the-appointments-provider"></a>약속 공급자의 시간 범위 표시
 
-[  **AppointmentManager.ShowTimeFrameAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showtimeframeasync) 메서드를 호출하여 사용자가 **표시**를 클릭하는 경우 기본 약속 공급자의 기본 UI에 대한 특정 시간 범위를 표시합니다. 샘플은 기본 약속 공급자가 화면에 나타났음을 출력합니다.
+사용자가 **표시**를 클릭 한 경우 [**AppointmentManager**](/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showtimeframeasync) 메서드를 호출 하 여 기본 약속 공급자의 기본 UI에 대 한 특정 시간 범위를 표시 합니다. 이 샘플에서는 기본 약속 공급자가 화면에 표시 된 것을 인쇄 합니다.
 
 ```cs
 private async void Show-Click(object sender, RoutedEventArgs e)
@@ -402,9 +402,9 @@ private async void Show-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="create-an-appointment-recurrence-object-and-apply-data-to-it"></a>약속 되풀이 개체를 만들어 데이터 적용
+## <a name="create-an-appointment-recurrence-object-and-apply-data-to-it"></a>약속-되풀이 개체를 만들고 데이터를 적용 합니다.
 
-[  **Windows.ApplicationModel.Appointments.AppointmentRecurrence**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentrecurrence) 개체를 만들고 변수에 할당합니다. 그런 다음 사용자가 UI를 통해 제공한 되풀이 속성을 **AppointmentRecurrence**에 적용합니다.
+[**AppointmentRecurrence**](/uwp/api/windows.applicationmodel.appointments.appointmentrecurrence) 개체를 만들고이 개체를 변수에 할당 합니다. 그런 다음 사용자가 UI를 통해 제공 된 되풀이 속성을 **AppointmentRecurrence** 에 적용 합니다.
 
 ```cs
 private void Create-Click(object sender, RoutedEventArgs e)
@@ -505,9 +505,9 @@ private void Create-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="add-a-new-editable-appointment"></a>편집 가능한 새 약속 추가
+## <a name="add-a-new-editable-appointment"></a>새 편집 가능한 약속 추가
 
-[**ShowEditNewAppointmentAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) 는 사용자가 약속 데이터를 저장 하기 전에 수정할 수 있도록 약속을 추가 하는 대화 상자가 편집 가능 하다는 점을 제외 하 고는 [**ShowAddAppointmentAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) 와 똑같이 작동 합니다.
+[**ShowEditNewAppointmentAsync**](/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showeditnewappointmentasync) 는 사용자가 약속 데이터를 저장 하기 전에 수정할 수 있도록 약속을 추가 하는 대화 상자가 편집 가능 하다는 점을 제외 하 고는 [**ShowAddAppointmentAsync**](/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showaddappointmentasync) 와 똑같이 작동 합니다.
 
 ``` cs
 private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
@@ -540,9 +540,9 @@ private async void AddAndEdit-Click(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="show-appointment-details"></a>약속 세부 정보 표시
+## <a name="show-appointment-details"></a>약속 정보 표시
 
-[**ShowAppointmentDetailsAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) 를 지정 하면 시스템에서 지정 된 약속에 대 한 세부 정보를 표시 합니다. 앱 일정을 구현하는 앱을 활성화하도록 선택하여 소유한 일정에 있는 약속의 세부 정보를 표시할 수 있습니다. 그렇지 않으면 시스템에서 약속 세부 정보를 표시합니다. 되풀이되는 약속의 인스턴스에 대한 세부 정보를 표시하도록 시작 날짜 인수를 허용하는 메서드 오버로드가 제공됩니다.
+[**ShowAppointmentDetailsAsync**](/uwp/api/windows.applicationmodel.appointments.appointmentmanager.showappointmentdetailsasync) 를 지정 하면 시스템에서 지정 된 약속에 대 한 세부 정보를 표시 합니다. 앱 달력을 구현 하는 앱은 자신이 소유 하는 일정의 약속에 대 한 세부 정보를 표시 하도록 활성화 되도록 선택할 수 있습니다. 그렇지 않으면 시스템에서 약속 세부 정보를 표시 합니다. 되풀이 약속의 인스턴스에 대 한 세부 정보를 표시 하기 위해 시작 날짜 인수를 허용 하는 메서드의 오버 로드가 제공 됩니다.
 
 ```cs
 private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e)
@@ -565,7 +565,7 @@ private async void ShowAppointmentDetails-Click(object sender, RoutedEventArgs e
 
 ## <a name="summary-and-next-steps"></a>요약 및 다음 단계
 
-지금까지 약속을 관리하는 방법을 간략히 살펴보았습니다. 약속을 관리하는 방법에 대한 더 많은 예제를 보려면 GitHub에서 [유니버설 Windows 앱 샘플](https://github.com/Microsoft/Windows-universal-samples)을 다운로드합니다.
+이제 약속을 관리 하는 방법에 대해 기본적으로 이해 하 고 있습니다. GitHub에서 [유니버설 Windows 앱 샘플](https://github.com/Microsoft/Windows-universal-samples) 을 다운로드 하 여 약속을 관리 하는 방법에 대 한 더 많은 예제를 확인 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

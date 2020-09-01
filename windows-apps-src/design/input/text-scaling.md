@@ -8,12 +8,12 @@ ms.date: 08/02/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4db3af0d2ec0ce1dbd0866f569ad9bf9b0392aa8
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 386920532f4598ee2d1519d292454b47c285555b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970568"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165837"
 ---
 # <a name="text-scaling"></a>텍스트 크기 조정
 
@@ -100,7 +100,7 @@ DirectWrite, GDI 및 XAML SwapChainPanels는 기본적으로 텍스트 크기 �
 
 컨트롤의 절대 크기를 지정 하지 마세요. 가능 하면 플랫폼에서 사용자 및 장치 설정에 따라 컨트롤의 크기를 자동으로 조정 하도록 합니다.  
 
-이전 예제의이 코드 조각에서는 그리드 열 집합에 대 `Auto` 한 `*` 및 너비 값을 사용 하 고 플랫폼이 그리드 내에 포함 된 요소의 크기에 따라 앱 레이아웃을 조정 하도록 합니다.
+이전 예제의이 코드 조각에서는 `Auto` `*` 그리드 열 집합에 대 한 및 너비 값을 사용 하 고 플랫폼이 그리드 내에 포함 된 요소의 크기에 따라 앱 레이아웃을 조정 하도록 합니다.
 
 ``` xaml
 <Grid.ColumnDefinitions>
@@ -133,7 +133,7 @@ DirectWrite, GDI 및 XAML SwapChainPanels는 기본적으로 텍스트 크기 �
 > [!NOTE]
 > 텍스트를 클리핑 해야 하는 경우 시작 부분이 아니라 문자열의 끝을 자릅니다.
 
-이 예제에서는 [Texttrimming](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) 속성을 사용 하 여 TextBlock의 텍스트를 자르는 방법을 보여 줍니다.
+이 예제에서는 [Texttrimming](/uwp/api/windows.ui.xaml.controls.textblock.texttrimming) 속성을 사용 하 여 TextBlock의 텍스트를 자르는 방법을 보여 줍니다.
 
 ``` xaml
 <TextBlock TextTrimming="Clip">
@@ -163,11 +163,11 @@ DirectWrite, GDI 및 XAML SwapChainPanels는 기본적으로 텍스트 크기 �
 
 강조 또는 장식을 위한 글꼴 기반 아이콘을 사용 하는 경우 이러한 문자에 대 한 크기 조정을 사용 하지 않도록 설정 합니다.
 
-대부분의 [IsTextScaleFactorEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled) XAML 컨트롤에 `false` 대해 IsTextScaleFactorEnabled 속성을로 설정 합니다.
+대부분의 XAML 컨트롤에 대해 [IsTextScaleFactorEnabled](/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled) 속성을로 설정 `false` 합니다.
 
 ### <a name="support-text-scaling-natively"></a>기본적으로 텍스트 크기 조정 지원
 
-사용자 지정 프레임 워크 및 컨트롤에서 [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) uisettings 시스템 이벤트를 처리 합니다. 이 이벤트는 사용자가 시스템에서 텍스트 배율 인수를 설정 하는 때마다 발생 합니다.
+사용자 지정 프레임 워크 및 컨트롤에서 [TextScaleFactorChanged](/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged) uisettings 시스템 이벤트를 처리 합니다. 이 이벤트는 사용자가 시스템에서 텍스트 배율 인수를 설정 하는 때마다 발생 합니다.
 
 ## <a name="summary"></a>요약
 
@@ -177,5 +177,5 @@ DirectWrite, GDI 및 XAML SwapChainPanels는 기본적으로 텍스트 크기 �
 
 ### <a name="api-reference"></a>API 참조
 
-- [IsTextScaleFactorEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled)
-- [TextScaleFactorChanged](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged)
+- [IsTextScaleFactorEnabled](/uwp/api/windows.ui.xaml.controls.control.istextscalefactorenabled)
+- [TextScaleFactorChanged](/uwp/api/windows.ui.viewmanagement.uisettings.textscalefactorchanged)
