@@ -6,21 +6,21 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 지도 인증 키, 지도 컨트롤
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f4a76edfe5772665564cb8890ffcdf56205a2f7
-ms.sourcegitcommit: d1eba7cf79cd2885b5bf8f5501bc44a569ab9864
+ms.openlocfilehash: 195c643fe10daf45ae709962a3b675162874c77b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84172595"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89171837"
 ---
 # <a name="request-a-maps-authentication-key"></a>지도 인증 키 요청
 
 > [!WARNING]
 > 온라인 maps 서비스는 이전 버전의 Windows 10에서 사용 하지 못할 수 있습니다. 다음 버전에서는 없습니다가 더 이상 지도를 표시 하지 않을 수 있으며, Windows. Maps 네임 스페이스의 Api는 결과를 반환 하지 않을 수 있습니다.
 > - Windows 10, 버전 1607 및 이전 버전: map services는 전 세계 2020 년 10 월부터 사용할 수 없습니다.
-> - Windows 10, 버전 1703 및 이전 버전: [중국에서 판매 되는 일부 장치](https://docs.microsoft.com/windows-hardware/customize/desktop/unattend/microsoft-windows-mapcontrol-desktop-chinavariantwin10) 에서 지도 서비스를 사용할 수 없음
+> - Windows 10, 버전 1703 및 이전 버전: [중국에서 판매 되는 일부 장치](/windows-hardware/customize/desktop/unattend/microsoft-windows-mapcontrol-desktop-chinavariantwin10) 에서 지도 서비스를 사용할 수 없음
 
-[유니버설 windows 앱](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide) 은 [**없습니다**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) [**네임 스페이스**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps) 에서 서비스를 사용 하 고 매핑하기 전에 인증 되어야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 항목에서는 [Bing Maps 개발자 센터](https://www.bingmapsportal.com/) 에서 지도 인증 키를 요청 하 고 앱에 추가 하는 방법에 대해 설명 합니다.
+[유니버설 windows 앱](../get-started/universal-application-platform-guide.md) 은 [**없습니다**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) [**네임 스페이스**](/uwp/api/Windows.Services.Maps) 에서 서비스를 사용 하 고 매핑하기 전에 인증 되어야 합니다. 앱을 인증하려면 지도 인증 키를 지정해야 합니다. 이 항목에서는 [Bing Maps 개발자 센터](https://www.bingmapsportal.com/) 에서 지도 인증 키를 요청 하 고 앱에 추가 하는 방법에 대해 설명 합니다.
 
 **팁** 앱에서 지도를 사용 하는 방법에 대 한 자세한 내용은 GitHub의 [Windows 유니버설 샘플 리포지토리](https://github.com/Microsoft/Windows-universal-samples) 에서 다음 샘플을 다운로드 하세요.
 
@@ -61,11 +61,11 @@ ms.locfileid: "84172595"
 ## <a name="add-the-key-to-your-app"></a>앱에 키 추가
 
 
-유니버설 Windows 앱의 없습니다 및 map services ( [**MapControl**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) )를 사용 하려면 맵 인증 키가 필요[**합니다.**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps) 해당 하는 경우 맵 컨트롤에 추가 하 고 서비스 개체를 매핑합니다.
+유니버설 Windows 앱의 없습니다 및 map services ( [**MapControl**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) )를 사용 하려면 맵 인증 키가 필요[**합니다.**](/uwp/api/Windows.Services.Maps) 해당 하는 경우 맵 컨트롤에 추가 하 고 서비스 개체를 매핑합니다.
 
 ### <a name="to-add-the-key-to-a-map-control"></a>지도 컨트롤에 키를 추가 하려면
 
-[**없습니다**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)을 인증 하려면 [**MapServiceToken**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken) 속성을 인증 키 값으로 설정 합니다. 기본 설정에 따라 코드 또는 XAML 태그에서이 속성을 설정할 수 있습니다. **없습니다**사용에 대 한 자세한 내용은 [2d, 3d 및 Streetside 뷰가 포함 된 지도 표시](display-maps.md)를 참조 하세요.
+[**없습니다**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl)을 인증 하려면 [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken) 속성을 인증 키 값으로 설정 합니다. 기본 설정에 따라 코드 또는 XAML 태그에서이 속성을 설정할 수 있습니다. **없습니다**사용에 대 한 자세한 내용은 [2d, 3d 및 Streetside 뷰가 포함 된 지도 표시](display-maps.md)를 참조 하세요.
 
 -   이 예제에서는 **MapServiceToken** 를 코드의 인증 키 값으로 설정 합니다.
 
@@ -81,7 +81,7 @@ ms.locfileid: "84172595"
 
 ### <a name="to-add-the-key-to-map-services"></a>지도 서비스에 키를 추가 하려면
 
-ServiceToken 네임 스페이스에서 서비스를 사용 하려면 인증 키 값으로 [**ServiceToken**](https://docs.microsoft.com/uwp/api/windows.services.maps.mapservice.servicetoken) 속성을 설정 [**합니다.**](https://docs.microsoft.com/uwp/api/Windows.Services.Maps) Map services를 사용 하는 방법에 대 한 자세한 내용은 [경로 및 방향 표시](routes-and-directions.md) 및 [지 오 코딩 및 역방향 지 오 코딩 수행](geocoding.md)을 참조 하세요.
+ServiceToken 네임 스페이스에서 서비스를 사용 하려면 인증 키 값으로 [**ServiceToken**](/uwp/api/windows.services.maps.mapservice.servicetoken) 속성을 설정 [**합니다.**](/uwp/api/Windows.Services.Maps) Map services를 사용 하는 방법에 대 한 자세한 내용은 [경로 및 방향 표시](routes-and-directions.md) 및 [지 오 코딩 및 역방향 지 오 코딩 수행](geocoding.md)을 참조 하세요.
 
 -   이 예제에서는 **ServiceToken** 를 코드의 인증 키 값으로 설정 합니다.
 
@@ -93,6 +93,6 @@ ServiceToken 네임 스페이스에서 서비스를 사용 하려면 인증 키 
 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
 * [UWP 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
-* [지도에 대한 디자인 지침](https://docs.microsoft.com/windows/uwp/maps-and-location/controls-map)
+* [지도에 대한 디자인 지침](./display-maps.md)
 * [빌드 2015 비디오: Windows 앱의 휴대폰, 태블릿 및 PC에서 맵 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [UWP 교통 앱 샘플](https://github.com/Microsoft/Windows-appsample-trafficapp)

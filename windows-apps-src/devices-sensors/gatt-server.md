@@ -5,12 +5,12 @@ ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 65a4643e6a73e0eb015fc40c7354d0cd307fa0d1
-ms.sourcegitcommit: 015291bdf2e7d67076c1c85fc025f49c840ba475
+ms.openlocfilehash: b4cf26d4f4fe5fa33f9f214da32263031188c5f0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469548"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172257"
 ---
 # <a name="bluetooth-gatt-server"></a>Bluetooth GATT 서버
 
@@ -29,8 +29,8 @@ ms.locfileid: "85469548"
 
 **중요 API**
 
-- [**Windows. Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
-- [**Windows..**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile)
+- [**Windows.Devices.Bluetooth**](/uwp/api/Windows.Devices.Bluetooth)
+- [**Windows..**](/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile)
 
 ## <a name="overview"></a>개요
 
@@ -45,7 +45,7 @@ Windows는 일반적으로 클라이언트 역할에서 작동 합니다. 그럼
 각 서비스, 특징 및 설명자는 고유한 128 비트 UUID로 정의 됩니다.
 > Windows Api는 모두 용어 GUID를 사용 하지만 Bluetooth 표준은 이러한 용어를 Uuid로 정의 합니다. 이러한 두 가지 용어는 서로 바꿔 사용할 수 있으므로 UUID 라는 용어를 계속 사용할 수 있습니다. 
 
-특성이 표준 이며 Bluetooth SIG 정의에 의해 정의 된 경우 해당 하는 16 비트 짧은 ID (예: 배터리 수준 UUID가 0000**2A19**-0000-1000-8000-00805F9B34FB이 고 short ID는 0x2a19)입니다. 이러한 표준 Uuid는 [GattServiceUuids](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattserviceuuids) 및 [GattCharacteristicUuids](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattcharacteristicuuids)에서 볼 수 있습니다.
+특성이 표준 이며 Bluetooth SIG 정의에 의해 정의 된 경우 해당 하는 16 비트 짧은 ID (예: 배터리 수준 UUID가 0000**2A19**-0000-1000-8000-00805F9B34FB이 고 short ID는 0x2a19)입니다. 이러한 표준 Uuid는 [GattServiceUuids](/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattserviceuuids) 및 [GattCharacteristicUuids](/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattcharacteristicuuids)에서 볼 수 있습니다.
 
 앱에서 고유한 사용자 지정 서비스를 구현 하는 경우 사용자 지정 UUID가 생성 되어야 합니다. 이 작업은 Visual Studio에서 도구-> CreateGuid를 통해 쉽게 수행할 수 있습니다 (옵션 5를 사용 하 여 "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx-...에서 가져오기 xxxx "형식). 이제이 uuid를 사용 하 여 새 로컬 서비스, 특성 또는 설명자를 선언할 수 있습니다.
 
@@ -182,7 +182,7 @@ async void ReadCharacteristic_ReadRequested(GattLocalCharacteristic sender, Gatt
 }
 ``` 
 
-### <a name="write"></a>쓰기
+### <a name="write"></a>Write
 원격 장치에서 특성에 값을 쓰려고 하면 원격 장치에 대 한 세부 정보를 포함 하는 WriteRequested 이벤트가 호출 됩니다. 여기에는 쓸 특성 및 값 자체에 대 한 정보가 포함 됩니다. 
 
 ```csharp

@@ -10,24 +10,24 @@ ms.custom: 19H1
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 1ef32816d04516bf4c8ce8677d7f682d2d59f657
-ms.sourcegitcommit: db48036af630f33f0a2f7a908bfdfec945f3c241
+ms.openlocfilehash: 5f62fa915c7a00d2e359989e6e10718f704854ab
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84437174"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173007"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
 **중요 API**
 
--   [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync)
--   [**PreferredApplicationPackageFamilyName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)
--   [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview)
+-   [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync)
+-   [**PreferredApplicationPackageFamilyName**](/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)
+-   [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview)
 
 Windows 설정 앱을 시작 하는 방법을 알아봅니다. 이 항목에서는 **ms 설정:** URI 체계에 대해 설명 합니다. 이 URI 체계를 사용 하 여 특정 설정 페이지에서 Windows 설정 앱을 시작 합니다.
 
-설정 앱을 시작 하는 것은 개인 정보 인식 앱을 작성 하는 데 중요 한 부분입니다. 앱에서 중요 한 리소스에 액세스할 수 없는 경우 해당 리소스에 대 한 개인 정보 설정에 대 한 편리한 링크를 사용자에 게 제공 하는 것이 좋습니다. 자세한 내용은 [개인 정보 인식 앱에 대 한 지침](https://docs.microsoft.com/windows/uwp/security/index)을 참조 하세요.
+설정 앱을 시작 하는 것은 개인 정보 인식 앱을 작성 하는 데 중요 한 부분입니다. 앱에서 중요 한 리소스에 액세스할 수 없는 경우 해당 리소스에 대 한 개인 정보 설정에 대 한 편리한 링크를 사용자에 게 제공 하는 것이 좋습니다. 자세한 내용은 [개인 정보 인식 앱에 대 한 지침](../security/index.md)을 참조 하세요.
 
 ## <a name="how-to-launch-the-settings-app"></a>설정 앱을 시작 하는 방법
 
@@ -47,7 +47,7 @@ Windows 설정 앱을 시작 하는 방법을 알아봅니다. 이 항목에서�
 </TextBlock>
 ```
 
-또는 앱에서 [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출 하 여 **설정** 앱을 시작할 수 있습니다. 이 예제에서는 URI를 사용 하 여 카메라에 대 한 개인 정보 설정 페이지를 시작 하는 방법을 보여 줍니다 `ms-settings:privacy-webcam` .
+또는 앱에서 [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출 하 여 **설정** 앱을 시작할 수 있습니다. 이 예제에서는 URI를 사용 하 여 카메라에 대 한 개인 정보 설정 페이지를 시작 하는 방법을 보여 줍니다 `ms-settings:privacy-webcam` .
 
 ```cs
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-webcam"));
@@ -91,7 +91,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | Windows Hello 설치 | ms-설정: signinoptions-launchfaceenrollment<br>ms-설정: signinoptions-launchfingerprintenrollment |
 | 사용자의 정보 | ms-설정: 해당 정보 |
 
-## <a name="apps"></a>앱
+## <a name="apps"></a>의
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -144,14 +144,14 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 커서 및 포인터 크기 | ms-설정: easeofaccess-cursorandpointersize |
 | 표시 | ms-설정: easeofaccess |
 | 아이 컨트롤 | ms-설정: easeofaccess-eyecontrol |
-| Fonts | ms-설정: 글꼴 |
+| 글꼴 | ms-설정: 글꼴 |
 | 고대비 | ms-설정: easeofaccess-system.windows.forms.systeminformation.highcontrast |
 | 키보드 | ms-설정: easeofaccess |
 | 돋보기 | ms-설정: easeofaccess-돋보기 |
 | 마우스 | ms-설정: easeofaccess |
 | 내레이터 | ms-설정: easeofaccess-내레이터 |
 | 기타 옵션 | easeofaccess: otheroptions (**Windows 10 버전 1809 이상에서 사용 되지 않음**) |
-| 음성 | ms-설정: easeofaccess-speechrecognition |
+| Speech | ms-설정: easeofaccess-speechrecognition |
 
 ## <a name="extras"></a>추가 항목
 
@@ -202,13 +202,13 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 알려진 네트워크 관리 | ms-설정: 네트워크-wifisettings |
 | 모바일 핫스팟 | ms-설정: 네트워크-mobilehotspot |
 | NFC | ms-설정: nfctransactions |
-| 프록시 | ms-설정: 네트워크-프록시 |
-| 상태 | ms-설정: 네트워크-상태<br/>ms-설정: 네트워크 |
+| Proxy (프록시) | ms-설정: 네트워크-프록시 |
+| Status | ms-설정: 네트워크-상태<br/>ms-설정: 네트워크 |
 | VPN | ms-설정: 네트워크-vpn |
 | Wi-Fi | ms-설정: 네트워크-wifi (장치에 wifi 어댑터가 있는 경우에만 사용 가능) |
 | Wi-fi 호출 | wificalling: 네트워크-(Wi-fi 호출이 사용 되는 경우에만 사용 가능) |
 
-## <a name="personalization"></a>Personalization
+## <a name="personalization"></a>개인 설정
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -223,13 +223,13 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 작업 표시줄 | ms-설정: 작업 표시줄 |
 | 테마 | ms-설정: 테마 |
 
-## <a name="phone"></a>휴대 전화
+## <a name="phone"></a>전화
 
 |설정 페이지| URI |
 |-------------|-----|
 | 휴대폰 | ms-설정: 모바일-장치<br/>ms-설정: 모바일-장치-addphone<br/>ms-설정: 모바일 장치-휴대폰-직접 ( **전화 앱을** 엽니다.) |
 
-## <a name="privacy"></a>개인 정보 보호
+## <a name="privacy"></a>개인 정보 취급 방침
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -240,12 +240,12 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 앱 진단 | ms-설정: 개인 정보-appdiagnostics |
 | 자동 파일 다운로드 | ms-설정: 개인 정보-자동 file다운로드할지. |
 | 백그라운드 앱 | ms-설정: 개인 정보-backgroundapps |
-| 캘린더 | ms-설정: 개인 정보-일정 |
+| 달력 | ms-설정: 개인 정보-일정 |
 | 통화 기록 | ms-설정: 개인 정보-callhistory |
 | 카메라 | ms-설정: 개인 정보-웹캠 |
 | 연락처 | ms-설정: 개인 정보-연락처 |
 | 문서 | ms-설정: 개인 정보-문서 |
-| Email | ms-설정: 개인 정보-전자 메일 |
+| 메일 | ms-설정: 개인 정보-전자 메일 |
 | 아이 트래커 | ms-설정: 개인 정보-eyetracker (eyetracker 하드웨어 필요) |
 | 피드백 & 진단 | ms-설정: 개인 정보-피드백 |
 | 파일 시스템 | ms-설정: 개인 정보-broadfilesystemaccess |
@@ -260,7 +260,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 전화 통화 | ms-설정: 개인 정보-phonecalls |
 | 사진 | ms-설정: 개인 정보-사진 |
 | 무선 | ms-설정: 개인 정보-라디오 |
-| 음성 | ms-설정: 개인 정보-음성 |
+| Speech | ms-설정: 개인 정보-음성 |
 | 작업 | ms-설정: 개인 정보-작업 |
 | 동영상 | ms-설정: 개인 정보-비디오 |
 | 음성 활성화 | ms-설정: 개인 정보-voiceactivation |
@@ -275,7 +275,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 팀 장치 관리 | ms-설정: surfacehub-devicemanagenent |
 | 시작 화면 | ms-설정: surfacehub-시작 |
 
-## <a name="system"></a>System
+## <a name="system"></a>시스템
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -297,14 +297,14 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 메시징 | ms-설정: 메시징 |
 | 멀티태스킹 | ms-설정: 멀티태스킹 |
 | 야간 조명 설정 | ms-설정: nightlight |
-| 휴대 전화 | ms-설정: 전화-defaultapps |
+| 전화 | ms-설정: 전화-defaultapps |
 | 이 PC에 표시하는 중 | ms-설정: 프로젝트 |
 | 공유 환경 | ms-설정: 교차 장치 |
 | 태블릿 모드 | ms-설정: tabletmode |
 | 작업 표시줄 | ms-설정: 작업 표시줄 |
 | 알림 & 작업 | ms-설정: 알림 |
 | 원격 데스크톱 | ms-설정: remotedesktop |
-| 휴대 전화 | ms-chap: phone (**Windows 10 버전 1809 이상에서 사용 되지 않음**) |
+| 전화 | ms-chap: phone (**Windows 10 버전 1809 이상에서 사용 되지 않음**) |
 | 전원 & 절전 모드 | ms-설정: powersleep |
 | 소리 | ms-설정: 사운드 |
 | 스토리지 | ms-설정: storagesense |
@@ -319,7 +319,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 지역 | ms-설정: 지역 서식 |
 | 언어 | ms-설정: 키보드<br/>ms-설정: 지역 언어<br/>ms-설정: 지역 언어-bpmfime<br/>ms-설정: 지역 언어-cangjieime<br/>밀리초-설정: 지역 언어-chsime-병음-domainlexicon<br/>밀리초-설정: 지역 언어-chsime-병음-keyconfig<br/>밀리초-설정: 지역 언어-chsime-병음-udp<br/>wubi: 지역 언어-chsime-udp<br/>ms-설정: 지역 언어-quickime |
 | 병음 IME 설정 | 밀리초-설정: 지역 언어-chsime-병음 (Microsoft 병음 input 메서드 편집기가 설치 된 경우 사용 가능) |
-| 음성 | ms-설정: 음성 |
+| Speech | ms-설정: 음성 |
 | Wubi IME 설정  | wubi: 지역 언어-chsime-(Microsoft Wubi 입력 방법 편집기가 설치 된 경우 사용 가능) |
 
 ## <a name="update--security"></a>업데이트 및 보안
@@ -329,13 +329,13 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 활성화 | ms-설정: 활성화 |
 | Backup | ms-설정: 백업 |
 | 배달 최적화 | ms-설정: 배달-최적화 |
-| 내 장치 찾기 | ms-설정: findmydevice |
+| 내 디바이스 찾기 | ms-설정: findmydevice |
 | 개발자용 | ms-설정: 개발자 |
 | 복구 | ms-설정: 복구 |
 | 문제 해결 | ms-설정: 문제 해결 |
 | Windows 보안 | ms-설정: windowsdefender |
 |  Windows 참가자 프로그램 | ms-settings: windowsinsider (사용자가 WIP에 등록 된 경우에만 있음)<br/>ms-settings: windowsinsider-optin |
-| Windows Update | ms-설정: windowsupdate.log<br>ms-설정: windowsupdate.log |
+| Windows 업데이트 | ms-설정: windowsupdate.log<br>ms-설정: windowsupdate.log |
 | Windows 업데이트-고급 옵션 | ms-설정: windowsupdate.log |
 | Windows 업데이트-다시 시작 옵션 | ms-설정: windowsupdate.log-restartoptions |
 | Windows 업데이트-업데이트 기록 보기 | ms-설정: windowsupdate.log |

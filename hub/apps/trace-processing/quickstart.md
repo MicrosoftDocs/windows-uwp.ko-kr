@@ -5,12 +5,12 @@ author: maiak
 ms.author: maiak
 ms.date: 02/20/2020
 ms.topic: quickstart
-ms.openlocfilehash: 162646baff9b2d08f6fc0ea4862802216cff9619
-ms.sourcegitcommit: 4fdab7be28aca18cb3879fc205eb49edc4f9a96b
+ms.openlocfilehash: 5f8671d8a1490710837908bb4df8f4aa3c99ecdd
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629105"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172657"
 ---
 # <a name="quickstart-process-your-first-trace"></a>빠른 시작: 첫 번째 추적 처리
 
@@ -22,7 +22,7 @@ ETW(Windows용 이벤트 추적) (ETW) 추적의 데이터에 액세스 하려�
 2. TraceProcessor를 만듭니다.
 3. TraceProcessor를 사용 하 여 추적에 포함 된 프로세스 명령줄에 액세스 합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 Visual Studio 2019
 
@@ -34,7 +34,7 @@ Microsoft. Windows. EventTracing
 
 콘솔 앱에서이 패키지를 사용 하 여 ETW 추적 (.etl 파일)에 포함 된 프로세스 명령줄을 나열할 수 있습니다.
 
-1. 새 .NET Core 콘솔 앱을 만듭니다. Visual Studio에서 파일, 새로 만들기, 프로젝트 ...를 차례로 선택 하 고에 대 한 C#콘솔 앱 (.net Core) 템플릿을 선택 합니다.
+1. 새 .NET Core 콘솔 앱을 만듭니다. Visual Studio에서 파일, 새로 만들기, 프로젝트 ...를 차례로 선택 하 고 c #에 대 한 콘솔 앱 (.NET Core) 템플릿을 선택 합니다.
 
     프로젝트 이름 (예: TraceProcessorQuickstart)을 입력 하 고 만들기를 선택 합니다.
 
@@ -79,9 +79,9 @@ Microsoft. Windows. EventTracing
 
     솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 속성을 선택 합니다. 디버그 탭으로 전환 하 고 응용 프로그램 인수에 추적 (.etl 파일)의 경로를 입력 합니다.
 
-    추적 파일이 아직 없는 경우 [Windows 성능 레코더](https://docs.microsoft.com/windows-hardware/test/wpt/start-a-recording) 를 사용 하 여 만들 수 있습니다.
+    추적 파일이 아직 없는 경우 [Windows 성능 레코더](/windows-hardware/test/wpt/start-a-recording) 를 사용 하 여 만들 수 있습니다.
 
-3. 응용 프로그램을 실행합니다.
+3. 애플리케이션을 실행합니다.
 
     디버그, 디버깅 하지 않고 시작을 선택 하 여 코드를 실행 합니다.
 
@@ -121,7 +121,7 @@ Microsoft. Windows. EventTracing
     }
     ```
 
-2. 응용 프로그램을 다시 실행 합니다.
+2. 애플리케이션을 다시 실행합니다.
 
     이번에는 추적을 기록 하는 동안 실행 중 이었던 모든 프로세스의 목록 명령줄이 표시 됩니다.
 

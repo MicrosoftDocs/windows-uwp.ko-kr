@@ -8,12 +8,12 @@ ms.date: 03/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 13737e9aeb906e0430b2a18dd75ae1fce3a75956
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 8608c1ff607c76c3f121fe5ed5fded9098911c9d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234581"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172437"
 ---
 # <a name="guidelines-for-touch-targets"></a>터치 대상에 대한 지침
 
@@ -25,7 +25,7 @@ ms.locfileid: "83234581"
 
 이 항목에서는 이러한 기본 동작을 설명 하므로 플랫폼 컨트롤과 사용자 지정 컨트롤 (앱에 필요한 경우)을 모두 사용 하 여 최대의 유용성을 위해 앱을 디자인할 수 있습니다.
 
-> **중요 한 api**: [**windows**](https://docs.microsoft.com/uwp/api/Windows.UI.Core). ui&gt. [**input**](https://docs.microsoft.com/uwp/api/Windows.UI.Input), [**windows. .xaml. input**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
+> **중요 한 api**: [**windows**](/uwp/api/Windows.UI.Core). ui&gt. [**input**](/uwp/api/Windows.UI.Input), [**windows. .xaml. input**](/uwp/api/Windows.UI.Xaml.Input)
 
 ## <a name="fluent-standard-sizing"></a>Fluent 표준 크기
 
@@ -66,7 +66,7 @@ ms.locfileid: "83234581"
 
 일반적으로 터치 대상 크기를 7.5 mm 정사각형 범위로 설정 합니다 (1.0 x 크기 조정 정체 되기에서 135 PPI 픽셀 디스플레이의 40x40 픽셀). 일반적으로 UWP 컨트롤은 7.5 mm touch target에 맞게 정렬 됩니다 .이는 특정 컨트롤 및 일반적인 사용 패턴에 따라 달라질 수 있습니다. 자세한 내용은 [크기 및 밀도 제어](../style/spacing.md) 를 참조 하세요.
 
-이러한 대상 크기 권장 사항은 특정 시나리오에 필요한 대로 조정할 수 있습니다. 고려할 사항은 다음과 같습니다.
+이러한 대상 크기 권장 사항은 특정 시나리오에 필요한 대로 조정할 수 있습니다. 다음과 같은 몇 가지 사항을 고려해야 합니다.
 
 - 접촉 빈도-최소 크기 보다 반복적 이거나 자주 눌러져 있는 대상을 지정 하는 것이 좋습니다.
 - 오류 결과-오류가 발생 한 경우 심각한 결과가 포함 된 대상은 채우기가 더 크고 콘텐츠 영역의 가장자리에서 더 배치 되어야 합니다. 자주 수행 되는 대상의 경우에는 특히 그렇습니다.
@@ -95,6 +95,6 @@ ms.locfileid: "83234581"
 - [입력: 터치 적중 테스트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
 - [XAML 스크롤, 패닝 및 확대/축소 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
 - [입력: 간소화 된 잉크 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
-- [입력: Windows 8 제스처 샘플](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [입력: Windows 8 제스처 샘플](/samples/browse/?redirectedfrom=MSDN-samples)
 * [Input: 조작 및 제스처 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
 - [DirectX touch 입력 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))

@@ -1,22 +1,22 @@
 ---
 Description: Win32 c + + WRL apps에서 로컬 알림 메시지를 보내고 알림 메시지를 클릭 하 여 사용자를 처리 하는 방법을 알아봅니다.
-title: 데스크톱 c + + WRL apps에서 로컬 알림 메시지 보내기
+title: 데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
 label: Send a local toast notification from desktop C++ WRL apps
 template: detail.hbs
 ms.date: 03/07/2018
 ms.topic: article
 keywords: windows 10, uwp, win32, 데스크톱, 알림 메시지 보내기, 알림 보내기, 바탕 화면 브리지, msix, 스파스 패키지, c + +, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e103c41de7bf169629085fd259e23e17804360d
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: e1aae390cf9047c8c93b4d24084c87bc90af8d80
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234664"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172307"
 ---
-# <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>데스크톱 c + + WRL apps에서 로컬 알림 메시지 보내기
+# <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
 
-데스크톱 앱 (패키지 된 [Msix](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 얻기 위해 [스파스 패키지](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱 및 클래식 패키지 되지 않은 Win32 앱 포함)은 Windows 앱과 마찬가지로 대화형 알림 메시지를 보낼 수 있습니다. 그러나 MSIX 또는 스파스 패키지를 사용 하지 않는 경우 다양 한 활성화 체계와 패키지 id의 잠재적 부족으로 인해 데스크톱 앱에 대 한 몇 가지 특별 한 단계가 있습니다.
+데스크톱 앱 (패키지 된 [Msix](/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 얻기 위해 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱 및 클래식 패키지 되지 않은 Win32 앱 포함)은 Windows 앱과 마찬가지로 대화형 알림 메시지를 보낼 수 있습니다. 그러나 MSIX 또는 스파스 패키지를 사용 하지 않는 경우 다양 한 활성화 체계와 패키지 id의 잠재적 부족으로 인해 데스크톱 앱에 대 한 몇 가지 특별 한 단계가 있습니다.
 
 > [!IMPORTANT]
 > UWP 앱을 작성 하는 경우 [uwp 설명서](send-local-toast.md)를 참조 하세요. 다른 데스크톱 언어는 [데스크톱 c #](send-local-toast-desktop.md)을 참조 하세요.
@@ -94,7 +94,7 @@ CoCreatableClass(NotificationActivator);
 
 ### <a name="msixsparse-package"></a>MSIX/sparse 패키지
 
-[Msix](https://docs.microsoft.com/windows/msix/desktop/source-code-overview) 또는 [스파스 패키지](https://docs.microsoft.com/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 경우 (또는 둘 다를 지 원하는 경우) appxmanifest.xml에서 다음을 추가 **합니다**.
+[Msix](/windows/msix/desktop/source-code-overview) 또는 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 경우 (또는 둘 다를 지 원하는 경우) appxmanifest.xml에서 다음을 추가 **합니다**.
 
 1. **Xmlns: com** 에 대 한 선언
 2. **Xmlns: desktop** 에 대 한 선언
@@ -102,7 +102,7 @@ CoCreatableClass(NotificationActivator);
 4. **com:** #4 단계에서 GUID를 사용 하 여 com 활성기에 대 한 확장입니다. `Arguments="-ToastActivated"`알림 메시지의 시작을 알 수 있도록를 포함 해야 합니다.
 5. **desktop:** TOAST 활성기 CLSID (#4의 GUID)를 선언 하는 **windows. toastNotificationActivation** 용 확장입니다.
 
-**Appxmanifest.xml**
+**Package.appxmanifest**
 
 ```xml
 <Package
@@ -395,7 +395,7 @@ if (SUCCEEDED(hr))
 
 ## <a name="step-10-deploying-and-debugging"></a>10 단계: 배포 및 디버깅
 
-MSIX/sparse 패키지 앱을 배포 하 고 디버그 하려면 패키지 [된 데스크톱 앱 실행, 디버그 및 테스트](/windows/uwp/porting/desktop-to-uwp-debug)를 참조 하세요.
+MSIX/sparse 패키지 앱을 배포 하 고 디버그 하려면 패키지 [된 데스크톱 앱 실행, 디버그 및 테스트](/windows/msix/desktop/desktop-to-uwp-debug)를 참조 하세요.
 
 클래식 Win32 앱을 배포 하 고 디버그 하려면 AUMID 및 CLSID의 시작 바로 가기가 존재 하도록 정상적으로 디버깅 하기 전에 설치 관리자를 통해 앱을 설치 해야 합니다. 시작 바로 가기가 있는 후 Visual Studio에서 F5 키를 사용 하 여 디버그할 수 있습니다.
 
@@ -416,13 +416,13 @@ MSIX/sparse 패키지와 클래식 Win32 앱을 모두 설치한 경우 알림 �
 
 Windows 8.1를 지원 하는 경우에는 **Desktopnotificationmanagercompat** api를 호출 하거나 To generic 알림을을 보내기 전에 Windows 10에서 실행 중인지 여부를 런타임에 확인 합니다.
 
-Windows 8은 알림 메시지를 도입 했지만 ToastText01와 같은 [레거시 알림 템플릿을](https://docs.microsoft.com/previous-versions/windows/apps/hh761494(v=win.10))사용 했습니다. 알림을는 유지 되지 않는 간단한 팝업만 이므로 **Toastnotification** 클래스의 메모리 내 **활성화** 이벤트에 의해 활성화가 처리 되었습니다. Windows 10은 [대화형 To generic 알림을](adaptive-interactive-toasts.md)를 도입 했으며, 알림이 며칠 동안 지속 되는 작업 센터도 도입 했습니다. 알림 센터의 도입으로 COM 활성기를 도입 했으므로 알림을 만든 후 며칠 동안 활성화할 수 있습니다.
+Windows 8은 알림 메시지를 도입 했지만 ToastText01와 같은 [레거시 알림 템플릿을](/previous-versions/windows/apps/hh761494(v=win.10))사용 했습니다. 알림을는 유지 되지 않는 간단한 팝업만 이므로 **Toastnotification** 클래스의 메모리 내 **활성화** 이벤트에 의해 활성화가 처리 되었습니다. Windows 10은 [대화형 To generic 알림을](adaptive-interactive-toasts.md)를 도입 했으며, 알림이 며칠 동안 지속 되는 작업 센터도 도입 했습니다. 알림 센터의 도입으로 COM 활성기를 도입 했으므로 알림을 만든 후 며칠 동안 활성화할 수 있습니다.
 
 | OS | To Generic | COM 활성기 | 레거시 알림 템플릿 |
 | -- | ------------ | ------------- | ---------------------- |
 | Windows 10 | 지원됨 | 지원됨 | 지원 됨 (COM 서버를 활성화 하지 않음) |
-| Windows 8.1/8 | N/A | 해당 없음 | 지원 여부 |
-| Windows 7 및 낮음 | N/A | N/A | 해당 없음 |
+| Windows 8.1/8 | 해당 없음 | 해당 없음 | 지원됨 |
+| Windows 7 및 낮음 | 해당 없음 | 해당 없음 | 해당 없음 |
 
 Windows 10에서 실행 되 고 있는지 확인 하려면 헤더를 포함 하 `<VersionHelpers.h>` 고 **IsWindows10OrGreater** 메서드를 확인 합니다. True가 반환 되 면이 설명서에 설명 된 모든 메서드를 계속 호출 합니다. 
 

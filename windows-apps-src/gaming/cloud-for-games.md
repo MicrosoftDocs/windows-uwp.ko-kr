@@ -6,12 +6,12 @@ ms.date: 03/27/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 클라우드 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c0cfd98a37c4822d80eded7fe69e23c54bcdc89
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: ca575975b27a71798b7cad1cac0cc83ec870d756
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89054413"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173177"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>UWP 게임에 클라우드 서비스 사용
 
@@ -170,7 +170,7 @@ Windows 10의 UWP (유니버설 Windows 플랫폼)는 Microsoft 장치에서 게
 | 게임 데이터를 위한 클라우드 저장소       | 최신 게임 데이터가 클라우드에 저장 되어 클라이언트 장치에 전송 됩니다. | [Azure Blob Storage](https://azure.microsoft.com/services/storage/blobs/)| 저장할 수 있는 파일의 종류에 대 한 제한은 없습니다. 이미지, 오디오, 비디오 등의 구조화 되지 않은 대량의 데이터를 위한 개체 저장소입니다.  |
 | 임시 데이터 저장소 테이블| 게임 트랜잭션 (게임 상태 변경)은 일시적으로 테이블에 저장 됩니다. | [Azure Table Storage](https://azure.microsoft.com/services/storage/tables/)| 게임 데이터는 게임의 요구에 따라 유연한 스키마에 저장할 수 있습니다. |
 | 게임 트랜잭션/요청을 큐에 대기| 게임 트랜잭션은 큐 형식으로 처리 됩니다. | [Azure Queue Storage](https://azure.microsoft.com/services/storage/queues/)| 큐는 예기치 않은 트래픽 급증을 흡수 하며, 게임 중에 갑자기 많은 요청이 급증 하 여 서버가 부담 하지 않도록 방지할 수 있습니다.   |
-| 확장성 있는 관계형 게임 데이터베이스| 데이터베이스에 대 한 게임 내 트랜잭션과 같은 관계형 데이터의 구조적 저장소 | [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)| SQL Database as a Service ([VM에서 sql과 비교](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/))  |
+| 확장성 있는 관계형 게임 데이터베이스| 데이터베이스에 대 한 게임 내 트랜잭션과 같은 관계형 데이터의 구조적 저장소 | [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)| SQL Database as a Service ([VM에서 sql과 비교](/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview))  |
 | 확장 가능한 분산 대기 시간이 짧은 게임 데이터베이스| 스키마 유연성을 사용 하 여 게임 및 플레이어 데이터를 빠르게 읽고 쓰고 쿼리 합니다. | [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)| 짧은 대기 시간 NoSQL 문서 Database as a Service   |
 | Azure 서비스에서 자체 데이터 센터 사용 | 게임은 사용자의 데이터 센터에서 검색 되 고 클라이언트 장치로 전송 됩니다. | [Azure Stack](https://azure.microsoft.com/overview/azure-stack/) | 조직에서 사용자의 데이터 센터에서 Azure 서비스를 제공 하 여 더 많은 정보를 얻을 수 있습니다.  |
 | 대량 데이터 청크 전송| 게임 이미지, 오디오, 비디오 등의 많은 파일은를 사용 하 여 가장 가까운 CDN (Content Delivery Network) pop 위치에서 사용자에 게 보낼 수 있습니다 Azure CDN    | [Azure Content Delivery Network](https://azure.microsoft.com/services/cdn/) | 대규모 중앙 노드의 최신 네트워크 토폴로지를 기반으로 구축 된 Azure CDN 갑작스러운 트래픽 급증 및 과도 한 부하를 처리 하 여 속도와 가용성이 크게 향상 되므로 사용자 환경 기능이 크게 향상 되었습니다.  |
@@ -221,7 +221,7 @@ Sdk를 사용 하 여 모바일, PC 또는 콘솔 게임에이 솔루션을 통�
 
 ## <a name="related-links"></a>관련 링크
 
-* [Windows 10 게임 개발 가이드](https://docs.microsoft.com/windows/uwp/gaming/e2e)
+* [Windows 10 게임 개발 가이드](./e2e.md)
 * [게임용 Azure](https://azure.microsoft.com/solutions/gaming/)
 * [Playfab](https://playfab.com/)
 * [Microsoft for Startups](https://startups.microsoft.com)

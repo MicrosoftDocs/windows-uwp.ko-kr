@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cf4cfa4b87842cd7113b36220cdfdff69449a3a
-ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
+ms.openlocfilehash: 69e60d8ef919a05493f47f086ee992afe8bfeb4c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846793"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172837"
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 
-이 문서에서는 **[AccountsSettingsPane](https://docs.microsoft.com/uwp/api/Windows.UI.ApplicationSettings.AccountsSettingsPane)** 를 사용 하 여 Windows 10 웹 계정 관리자 api를 사용 하는 Microsoft 또는 Facebook과 같은 외부 id 공급자에 유니버설 WINDOWS 플랫폼 (UWP) 앱을 연결 하는 방법을 설명 합니다. 사용자의 권한을 요청 하 여 Microsoft 계정 사용 권한을 요청 하 고 액세스 토큰을 가져온 다음이를 사용 하 여 기본 작업 (예: 프로필 데이터 가져오기 또는 OneDrive 계정에 파일 업로드)을 수행 하는 방법을 알아봅니다. 이러한 단계는 웹 계정 관리자를 지 원하는 모든 id 공급자를 사용 하 여 사용자 권한 및 액세스를 가져오는 것과 비슷합니다.
+이 문서에서는 **[AccountsSettingsPane](/uwp/api/Windows.UI.ApplicationSettings.AccountsSettingsPane)** 를 사용 하 여 Windows 10 웹 계정 관리자 api를 사용 하는 Microsoft 또는 Facebook과 같은 외부 id 공급자에 유니버설 WINDOWS 플랫폼 (UWP) 앱을 연결 하는 방법을 설명 합니다. 사용자의 권한을 요청 하 여 Microsoft 계정 사용 권한을 요청 하 고 액세스 토큰을 가져온 다음이를 사용 하 여 기본 작업 (예: 프로필 데이터 가져오기 또는 OneDrive 계정에 파일 업로드)을 수행 하는 방법을 알아봅니다. 이러한 단계는 웹 계정 관리자를 지 원하는 모든 id 공급자를 사용 하 여 사용자 권한 및 액세스를 가져오는 것과 비슷합니다.
 
 > [!NOTE]
 > 전체 코드 샘플은 [GitHub의 WebAccountManagement 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/WebAccountManagement)을 참조 하세요.
@@ -76,7 +76,7 @@ private void LoginButton_Click(object sender, RoutedEventArgs e)
 시스템은 UI 셸만 제공 하므로 창이 비어 있습니다. 개발자는 프로그래밍 방식으로 id 공급자를 사용 하 여 창을 채울 수 있습니다. 
 
 > [!TIP]
-> 필요에 따라 **[Show](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)** 대신 **[ShowAddAccountAsync](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** 를 사용 하 여 **[iasyncaction](https://docs.microsoft.com/uwp/api/Windows.Foundation.IAsyncAction)** 을 반환 하는 작업의 상태를 쿼리할 수 있습니다. 
+> 필요에 따라 **[Show](/uwp/api/windows.ui.applicationsettings.accountssettingspane.show#Windows_UI_ApplicationSettings_AccountsSettingsPane_Show)** 대신 **[ShowAddAccountAsync](/uwp/api/windows.ui.applicationsettings.accountssettingspane.showaddaccountasync)** 를 사용 하 여 **[iasyncaction](/uwp/api/Windows.Foundation.IAsyncAction)** 을 반환 하는 작업의 상태를 쿼리할 수 있습니다. 
 
 ## <a name="register-for-accountcommandsrequested"></a>AccountCommandsRequested에 등록
 
@@ -133,7 +133,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 
 또한 "소비자" 문자열을 선택적 *authority* 매개 변수에 전달 합니다. Microsoft에서 "소비자"에 대 한 두 가지 인증 유형인 MSA (Microsoft 계정)를 제공 하 고 "조직"에 대해 AAD (Azure Active Directory)를 제공 하기 때문입니다. "소비자" 기관은 MSA 옵션을 원하는 것으로 표시 합니다. 엔터프라이즈 앱을 개발 하는 경우 "조직" 문자열을 대신 사용 합니다.
 
-마지막으로 다음과 같은 새 **[WebAccountProviderCommand](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.webaccountprovidercommand)** 를 만들어 **AccountsSettingsPane** 에 공급자를 추가 합니다. 
+마지막으로 다음과 같은 새 **[WebAccountProviderCommand](/uwp/api/windows.ui.applicationsettings.webaccountprovidercommand)** 를 만들어 **AccountsSettingsPane** 에 공급자를 추가 합니다. 
 
 ```csharp
 private async void BuildPaneAsync(AccountsSettingsPane s,
@@ -178,7 +178,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 * OneDrive 범위는 [onedrive 인증 및 로그인](https://dev.onedrive.com/auth/msa_oauth.htm#authentication-scopes)을 참조 하세요. 
 
 > [!TIP]
-> 필요에 따라 앱에서 로그인 힌트를 사용 하는 경우 (사용자 필드를 기본 전자 메일 주소로 채우기 위해) 또는 로그인 환경과 관련 된 다른 특별 한 속성을 사용 하는 경우 **[Webtokenrequest. AppProperties](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** 속성에 나열 합니다. 이렇게 하면 웹 계정을 캐시할 때 시스템이 속성을 무시 하므로 캐시의 계정 불일치를 방지할 수 있습니다.
+> 필요에 따라 앱에서 로그인 힌트를 사용 하는 경우 (사용자 필드를 기본 전자 메일 주소로 채우기 위해) 또는 로그인 환경과 관련 된 다른 특별 한 속성을 사용 하는 경우 **[Webtokenrequest. AppProperties](/uwp/api/windows.security.authentication.web.core.webtokenrequest.appproperties#Windows_Security_Authentication_Web_Core_WebTokenRequest_AppProperties)** 속성에 나열 합니다. 이렇게 하면 웹 계정을 캐시할 때 시스템이 속성을 무시 하므로 캐시의 계정 불일치를 방지할 수 있습니다.
 
 엔터프라이즈 앱을 개발 하는 경우 AAD (Azure Active Directory) 인스턴스에 연결 하 고 일반 MSA 서비스 대신 Microsoft Graph API를 사용 하는 것이 좋습니다. 이 시나리오에서는 다음 코드를 대신 사용 합니다. 
 
@@ -214,7 +214,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 > [!NOTE]
 > 토큰을 요청할 때 오류가 발생 하는 경우 1 단계에 설명 된 대로 스토어와 앱을 연결 했는지 확인 합니다. 이 단계를 건너뛴 경우 앱에서 토큰을 가져올 수 없습니다. 
 
-토큰이 있으면 공급자의 API를 호출 하는 데 사용할 수 있습니다. 아래 코드에서는 사용자 [정보 Microsoft LIVE API](https://docs.microsoft.com/office/) 를 호출 하 여 사용자에 대 한 기본 정보를 얻고 UI에 표시 합니다. 그러나 대부분의 경우 토큰을 가져온 후 별도의 메서드에서 사용 하는 것이 좋습니다.
+토큰이 있으면 공급자의 API를 호출 하는 데 사용할 수 있습니다. 아래 코드에서는 사용자 [정보 Microsoft LIVE API](/office/) 를 호출 하 여 사용자에 대 한 기본 정보를 얻고 UI에 표시 합니다. 그러나 대부분의 경우 토큰을 가져온 후 별도의 메서드에서 사용 하는 것이 좋습니다.
 
 ```csharp
 private async void GetMsaTokenAsync(WebAccountProviderCommand command)
@@ -250,7 +250,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 
 토큰은 사용자에 대 한 정보를 즉시 가져오는 데 유용 하지만 일반적으로 다양 한 lifespans 토큰을 갖고 있습니다. 예를 들어 몇 시간 동안만 유효 합니다. 다행히 토큰이 만료 될 때마다 **AccountsSettingsPane** 를 다시 표시할 필요가 없습니다. 사용자가 앱을 한 번 인증 한 후에는 나중에 사용할 수 있도록 사용자 계정 정보를 저장할 수 있습니다. 
 
-이렇게 하려면 **[WebAccount](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount)** 클래스를 사용 합니다. **WebAccount** 는 토큰을 요청 하는 데 사용한 것과 동일한 메서드에서 반환 됩니다.
+이렇게 하려면 **[WebAccount](/uwp/api/windows.security.credentials.webaccount)** 클래스를 사용 합니다. **WebAccount** 는 토큰을 요청 하는 데 사용한 것과 동일한 메서드에서 반환 됩니다.
 
 ```csharp
 private async void GetMsaTokenAsync(WebAccountProviderCommand command)
@@ -265,7 +265,7 @@ private async void GetMsaTokenAsync(WebAccountProviderCommand command)
 }
 ```
 
-**WebAccount** 인스턴스를 만든 후에는 쉽게 저장할 수 있습니다. 다음 예제에서는 LocalSettings를 사용 합니다. LocalSettings 및 기타 메서드를 사용 하 여 사용자 데이터를 저장 하는 방법에 대 한 자세한 내용은 [앱 설정 및 데이터 저장 및 검색](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)을 참조 하세요.
+**WebAccount** 인스턴스를 만든 후에는 쉽게 저장할 수 있습니다. 다음 예제에서는 LocalSettings를 사용 합니다. LocalSettings 및 기타 메서드를 사용 하 여 사용자 데이터를 저장 하는 방법에 대 한 자세한 내용은 [앱 설정 및 데이터 저장 및 검색](../design/app-settings/store-and-retrieve-app-data.md)을 참조 하세요.
 
 ```csharp
 private async void StoreWebAccount(WebAccount account)
@@ -338,7 +338,7 @@ private void LoginButton_Click(object sender, RoutedEventArgs e)
 
 ## <a name="remove-a-stored-account"></a>저장 된 계정 제거
 
-웹 계정을 유지 하는 경우 사용자에 게 앱과의 계정을 분리 하는 기능을 제공 하는 것이 좋습니다. 이러한 방식으로 앱의 "로그 아웃"을 효과적으로 "로그 아웃" 할 수 있습니다. 해당 계정 정보는 시작 시 자동으로 로드 되지 않습니다. 이렇게 하려면 먼저 저장 된 계정 및 공급자 정보를 저장소에서 제거 합니다. 그런 다음 **[SignOutAsync](https://docs.microsoft.com/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** 를 호출 하 여 캐시를 지우고 앱에 포함 될 수 있는 기존 토큰을 무효화 합니다. 
+웹 계정을 유지 하는 경우 사용자에 게 앱과의 계정을 분리 하는 기능을 제공 하는 것이 좋습니다. 이러한 방식으로 앱의 "로그 아웃"을 효과적으로 "로그 아웃" 할 수 있습니다. 해당 계정 정보는 시작 시 자동으로 로드 되지 않습니다. 이렇게 하려면 먼저 저장 된 계정 및 공급자 정보를 저장소에서 제거 합니다. 그런 다음 **[SignOutAsync](/uwp/api/windows.security.credentials.webaccount.SignOutAsync)** 를 호출 하 여 캐시를 지우고 앱에 포함 될 수 있는 기존 토큰을 무효화 합니다. 
 
 ```csharp
 private async Task SignOutAccountAsync(WebAccount account)
@@ -422,11 +422,11 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 
 ## <a name="see-also"></a>참고 항목
 
-[Windows... i a.](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core)
+[Windows... i a.](/uwp/api/windows.security.authentication.web.core)
 
-[Windows. 보안 자격 증명 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.security.credentials)
+[Windows. 보안 자격 증명 네임 스페이스](/uwp/api/windows.security.credentials)
 
-[AccountsSettingsPane 클래스](https://docs.microsoft.com/uwp/api/windows.ui.applicationsettings.accountssettingspane)
+[AccountsSettingsPane 클래스](/uwp/api/windows.ui.applicationsettings.accountssettingspane)
 
 [웹 인증 브로커](web-authentication-broker.md)
 

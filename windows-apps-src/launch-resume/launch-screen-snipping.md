@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, uri, 캡처, 스케치
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d9469dd6efd3598ab7abd9791a976385f4dfce49
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: 2d7471f414922eb1e4923079082ee6abfd8418bd
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75684658"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167817"
 ---
 # <a name="launch-screen-snipping"></a>화면 캡처 시작
 
@@ -23,11 +23,11 @@ ms.locfileid: "75684658"
 
 **ms screenclip:** 다음 매개 변수를 사용 합니다.
 
-| 매개 변수 | 작업 표시줄의 검색 상자에 | 필수 | 설명 |
+| 매개 변수 | 형식 | 필수 | Description |
 | --- | --- | --- | --- |
-| 소스 | string | 아니요 | URI를 시작한 원본을 나타내는 자유형 문자열입니다. |
-| delayInSeconds | Int | 아니요 | 1에서 30 사이의 정수 값입니다. URI 호출과 캡처 시작 시간 사이의 지연 (전체 초)을 지정 합니다. |
-| callbackformat | string | 아니요 | 이 매개 변수는 사용할 수 없습니다. |
+| source | 문자열 | no | URI를 시작한 원본을 나타내는 자유형 문자열입니다. |
+| delayInSeconds | int | no | 1에서 30 사이의 정수 값입니다. URI 호출과 캡처 시작 시간 사이의 지연 (전체 초)을 지정 합니다. |
+| callbackformat | 문자열 | no | 이 매개 변수는 사용할 수 없습니다. |
 
 ## <a name="launching-the-snip--sketch-app"></a>캡처 & 스케치 앱 시작
 
@@ -35,14 +35,14 @@ ms.locfileid: "75684658"
 
 **ms screensketch:** 다음 매개 변수를 사용 합니다.
 
-| 매개 변수 | 작업 표시줄의 검색 상자에 | 필수 | 설명 |
+| 매개 변수 | 형식 | 필수 | Description |
 | --- | --- | --- | --- |
-| sharedAccessToken | string | 아니요 | 캡처 & 스케치 앱에서 열 파일을 식별 하는 토큰입니다. SharedStorageAccessManager에서 검색 [되었습니다. AddFile](https://docs.microsoft.com/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile). 이 매개 변수를 생략 하면 파일이 열려 있지 않고 앱이 시작 됩니다. |
-| secondarySharedAccessToken | string | 아니요 | 캡처에 대 한 메타 데이터가 포함 된 JSON 파일을 식별 하는 문자열입니다. 메타 데이터에는 x, y 좌표 및/또는 [userActivity](https://docs.microsoft.com/uwp/api/windows.applicationmodel.useractivities.useractivity)배열이 있는 **clipPoints** 필드가 포함 될 수 있습니다. |
-| 소스 | string | 아니요 | URI를 시작한 원본을 나타내는 자유형 문자열입니다. |
-| isTemporary | 부울 | 아니요 | True로 설정 되 면 화면 스케치는 파일을 연 후에 파일을 삭제 하려고 시도 합니다. |
+| sharedAccessToken | 문자열 | no | 캡처 & 스케치 앱에서 열 파일을 식별 하는 토큰입니다. SharedStorageAccessManager에서 검색 [되었습니다. AddFile](/uwp/api/windows.applicationmodel.datatransfer.sharedstorageaccessmanager.addfile). 이 매개 변수를 생략 하면 파일이 열려 있지 않고 앱이 시작 됩니다. |
+| secondarySharedAccessToken | 문자열 | no | 캡처에 대 한 메타 데이터가 포함 된 JSON 파일을 식별 하는 문자열입니다. 메타 데이터에는 x, y 좌표 및/또는 [userActivity](/uwp/api/windows.applicationmodel.useractivities.useractivity)배열이 있는 **clipPoints** 필드가 포함 될 수 있습니다. |
+| source | 문자열 | no | URI를 시작한 원본을 나타내는 자유형 문자열입니다. |
+| isTemporary | bool | no | True로 설정 되 면 화면 스케치는 파일을 연 후에 파일을 삭제 하려고 시도 합니다. |
 
-다음 예제에서는 [LaunchUriAsync](https://docs.microsoft.com/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_) 메서드를 호출 하 여 사용자의 앱에서 캡처 & 스케치로 이미지를 보냅니다.
+다음 예제에서는 [LaunchUriAsync](/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_) 메서드를 호출 하 여 사용자의 앱에서 캡처 & 스케치로 이미지를 보냅니다.
 
 ```csharp
 

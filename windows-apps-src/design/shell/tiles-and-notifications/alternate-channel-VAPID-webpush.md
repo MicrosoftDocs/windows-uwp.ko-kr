@@ -1,16 +1,16 @@
 ---
-title: UWP에서 VAPID를 사용 하는 대체 푸시 채널
+title: UWP에서 VAPID를 사용하는 대체 푸시 채널
 description: Windows 앱에서 VAPID 프로토콜을 사용 하 여 대체 푸시 채널을 사용 하기 위한 지침
 ms.date: 01/10/2017
 ms.topic: article
 keywords: windows 10, uwp, WinRT API, WNS
 localizationpriority: medium
-ms.openlocfilehash: 382dca376e2393d83c2803043b61db76226b3995
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 4bca7e4159c0a4950c95d5d5ef2f34362175a8a7
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970868"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173307"
 ---
 # <a name="alternate-push-channels-using-vapid-in-windows"></a>Windows에서 VAPID를 사용 하는 대체 푸시 채널 
 Windows 앱은 VAPID 인증을 사용 하 여 푸시 알림을 보낼 수 있습니다.  
@@ -111,7 +111,5 @@ protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
 ## <a name="related-topics"></a>관련 항목
 - [알림 채널 유형](channel-types.md)
 - [WNS(Windows 푸시 알림 서비스)](windows-push-notification-services--wns--overview.md)
-- [PushNotificationChannel 클래스](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannel)
-- [PushNotificationChannelManager 클래스](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager)
-
-
+- [PushNotificationChannel 클래스](/uwp/api/windows.networking.pushnotifications.pushnotificationchannel)
+- [PushNotificationChannelManager 클래스](/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager)

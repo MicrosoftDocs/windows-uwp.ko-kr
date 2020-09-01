@@ -6,23 +6,23 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 685c71ca0e6ed0989932b7c9a0169088d5b83bd2
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: e5f86da29900e0ef83fb0bf41d2c8d9fe59727f2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82558834"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172517"
 ---
 # <a name="guidelines-for-cross-slide"></a>슬라이드 간 지침
 
 
 
 
-**중요 한 Api**
+**중요 API**
 
--   [**상대 슬라이딩**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.crosssliding)
--   [**CrossSlideThresholds**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.crossslidethresholds)
--   [**Windows. UI. 입력**](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
+-   [**상대 슬라이딩**](/uwp/api/windows.ui.input.gesturerecognizer.crosssliding)
+-   [**CrossSlideThresholds**](/uwp/api/windows.ui.input.gesturerecognizer.crossslidethresholds)
+-   [**Windows.UI.Input**](/uwp/api/Windows.UI.Input)
 
 밀기 제스처를 사용 하 여 선택 영역을 지원 하 고 슬라이드 제스처를 사용 하 여 상호 작용을 끄는 (이동) 할 수 있습니다.
 
@@ -54,9 +54,9 @@ ms.locfileid: "82558834"
 
 앱에 슬라이드 간 기능을 포함 하는 경우 고려해 야 할 몇 가지 지침은 다음과 같습니다.
 
-단일 방향으로 스크롤 하는 목록 또는 컬렉션에 대해 교차 슬라이드를 사용 합니다. 자세한 내용은 [ListView 컨트롤 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh465382(v=win.10))를 참조 하세요.
+단일 방향으로 스크롤 하는 목록 또는 컬렉션에 대해 교차 슬라이드를 사용 합니다. 자세한 내용은 [ListView 컨트롤 추가](/previous-versions/windows/apps/hh465382(v=win.10))를 참조 하세요.
 
-**Note**콘텐츠 영역을 두 방향 (예: 웹 브라우저 또는 e-learning)으로 따라 이동 수 있는 경우에는 이미지, 하이퍼링크 등의 개체에 대 한 상황에 맞는 메뉴를 호출 하기 위해 누르고 있는 시간 제한의 상호 작용을 사용 해야 합니다.  
+**참고**    콘텐츠 영역을 두 방향 (예: 웹 브라우저 또는 e-learning)으로 따라 이동 수 있는 경우에는 이미지 및 하이퍼링크와 같은 개체에 대 한 상황에 맞는 메뉴를 호출 하기 위해 누르고 있는 시간 제한의 상호 작용을 사용 해야 합니다.
 
  
 
@@ -123,7 +123,7 @@ ms.locfileid: "82558834"
 
 ### <span id="draganddrop"></span><span id="DRAGANDDROP"></span>
 
-**옵니다**
+**끌기**
 
 끌기를 사용 하 여 하나 이상의 개체를 한 위치에서 다른 위치로 이동 합니다.
 
@@ -145,13 +145,9 @@ ms.locfileid: "82558834"
 - [입력: 터치 적중 테스트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
 - [XAML 스크롤, 패닝 및 확대/축소 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
 - [입력: 간소화 된 잉크 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
-- [입력: Windows 8 제스처 샘플](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [입력: Windows 8 제스처 샘플](/samples/browse/?redirectedfrom=MSDN-samples)
 - [Input: 조작 및 제스처 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
 - [DirectX touch 입력 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))
  
 
  
-
-
-
-

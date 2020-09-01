@@ -11,12 +11,12 @@ dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4cfd84d54ecd1425b3b7e66c54c96fbd78c2dd46
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: c91de7eb0200780b04bad1853cb49caf41a22bc0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970128"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172507"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-windows-apps"></a>Windows 앱에서 상호 작용 및 눈 추적 응시
 
@@ -25,9 +25,9 @@ ms.locfileid: "82970128"
 눈의 위치와 움직임을 기반으로 사용자의 응시, 주의 및 현재 상태를 추적 하기 위한 지원을 제공 합니다.
 
 > [!NOTE]
-> [Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/)에서의 응시 입력은 [응시](https://docs.microsoft.com/windows/mixed-reality/gaze)를 참조 하세요.
+> [Windows Mixed Reality](/windows/mixed-reality/)에서의 응시 입력은 [응시](/windows/mixed-reality/gaze)를 참조 하세요.
 
-**중요 한 api**: [GazeDevicePreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicepreview), [GazePointPreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview) [,](https://docs.microsoft.com/uwp/api/windows.devices.input.preview) [GazeInputSourcePreview](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview)
+**중요 한 api**: [GazeDevicePreview](/uwp/api/windows.devices.input.preview.gazedevicepreview), [GazePointPreview](/uwp/api/windows.devices.input.preview.gazepointpreview) [,](/uwp/api/windows.devices.input.preview) [GazeInputSourcePreview](/uwp/api/windows.devices.input.preview.gazeinputsourcepreview)
 
 ## <a name="overview"></a>개요
 
@@ -36,13 +36,13 @@ ms.locfileid: "82970128"
 또한, 응시 입력은 게임 (대상 취득 및 추적 포함), 기존 생산성 응용 프로그램, 키오스크 및 기존 입력 장치 (키보드, 마우스, 터치)를 사용할 수 없는 기타 대화형 시나리오에 대해 동일 하 게 뛰어난 기회를 제공 하 고, 다른 작업 (예: 시장 가방 보유)을 위해 사용자의 손을 확보 하는 데 유용 하거나 유용한 기타 대화형 시나리오를 제공 합니다.
 
 > [!NOTE]
-> 아이 추적 하드웨어 지원은 눈동자를 사용 하 여 화면에 있는 포인터를 제어 하 고, 화상 키보드를 사용 하 여 입력 하 고, 텍스트를 음성으로 변환 하 여 사용자와 통신할 수 있도록 하는 기본 제공 기능인 [아이 컨트롤과](https://support.microsoft.com/help/4043921/windows-10-get-started-eye-control)함께 Windows 10으로 구성 된 **작성자 업데이트** 에 도입 되었습니다. 아이 추적 하드웨어와 상호 작용할 수 있는 응용 프로그램을 빌드하기 위한 Windows 런타임 Api (2018) 집합은 **Windows 10 4 월 업데이트 (버전 1803, 빌드 17134)** 이상에서 사용할 수[있습니다.](https://docs.microsoft.com/uwp/api/windows.devices.input.preview)
+> 아이 추적 하드웨어 지원은 눈동자를 사용 하 여 화면에 있는 포인터를 제어 하 고, 화상 키보드를 사용 하 여 입력 하 고, 텍스트를 음성으로 변환 하 여 사용자와 통신할 수 있도록 하는 기본 제공 기능인 [아이 컨트롤과](https://support.microsoft.com/help/4043921/windows-10-get-started-eye-control)함께 Windows 10으로 구성 된 **작성자 업데이트** 에 도입 되었습니다. 아이 추적 하드웨어와 상호 작용할 수 있는 응용 프로그램을 빌드하기 위한 Windows 런타임 Api (2018) 집합은 **Windows 10 4 월 업데이트 (버전 1803, 빌드 17134)** 이상에서 사용할 수[있습니다.](/uwp/api/windows.devices.input.preview)
 
 ## <a name="privacy"></a>개인 정보 취급 방침
 
 눈 추적 장치에서 수집 하는 잠재적으로 중요 한 개인 데이터로 인해 `gazeInput` 응용 프로그램의 응용 프로그램 매니페스트에 기능을 선언 해야 합니다 (다음 **설정** 섹션 참조). 선언 된 경우 Windows는 응용 프로그램을 처음 실행할 때 동의 대화 상자를 자동으로 표시 합니다. 사용자는 앱이 눈 추적 장치와 통신 하 고이 데이터에 액세스할 수 있는 권한을 부여 해야 합니다.
 
-또한 앱이 눈 추적 데이터를 수집, 저장 또는 전송 하는 경우 앱의 개인 정보 취급 방침에서이를 설명 하 고 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책의](https://docs.microsoft.com/legal/windows/agreements/store-policies) **개인 정보** 에 대 한 기타 모든 요구 사항을 준수 해야 합니다.
+또한 앱이 눈 추적 데이터를 수집, 저장 또는 전송 하는 경우 앱의 개인 정보 취급 방침에서이를 설명 하 고 [앱 개발자 계약](/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책의](/legal/windows/agreements/store-policies) **개인 정보** 에 대 한 기타 모든 요구 사항을 준수 해야 합니다.
 
 ## <a name="setup"></a>설치 프로그램
 
@@ -66,7 +66,7 @@ Windows 앱에서 응시 입력 Api를 사용 하려면 다음을 수행 해야 
 
 이 예제에서는 Windows 앱 내에서 사용자의 응시를 추적 하 고 기본적인 적중 테스트와 함께 타이밍 함수를 사용 하 여 특정 요소에 대 한 사용자의 응시 포커스를 유지 관리할 수 있는지 여부를 나타내는 방법을 보여 줍니다.
 
-작은 타원은 응시 지점이 응용 프로그램 뷰포트 내에 있는 위치를 표시 하는 데 사용 되 고, [Windows 커뮤니티 도구 키트](https://docs.microsoft.com/windows/communitytoolkit/) 의 [RadialProgressBar](https://docs.microsoft.com/windows/communitytoolkit/controls/radialprogressbar) 는 캔버스에 임의로 배치 됩니다. 진행률 표시줄에서 포커스 포커스가 검색 되 면 타이머가 시작 되 고 진행률 표시줄이 100%에 도달 하면 캔버스에서 진행률 표시줄이 무작위로 재배치 됩니다.
+작은 타원은 응시 지점이 응용 프로그램 뷰포트 내에 있는 위치를 표시 하는 데 사용 되 고, [Windows 커뮤니티 도구 키트](/windows/communitytoolkit/) 의 [RadialProgressBar](/windows/communitytoolkit/controls/radialprogressbar) 는 캔버스에 임의로 배치 됩니다. 진행률 표시줄에서 포커스 포커스가 검색 되 면 타이머가 시작 되 고 진행률 표시줄이 100%에 도달 하면 캔버스에서 진행률 표시줄이 무작위로 재배치 됩니다.
 
 ![Timer로 추적 응시 샘플](images/gaze/gaze-input-timed2.gif)
 
@@ -154,7 +154,7 @@ Windows 앱에서 응시 입력 Api를 사용 하려면 다음을 수행 해야 
 
 2. 다음으로 앱을 초기화 합니다.
 
-    이 코드 조각에서는 전역 개체를 선언 하 고 [OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) page 이벤트를 재정의 하 여 [응시 장치 감시자](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview) 를 시작 하 고 [OnNavigatedFrom](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedfrom) page 이벤트를 재정의 하 여 [응시 장치 감시자](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview)를 중지 합니다.
+    이 코드 조각에서는 전역 개체를 선언 하 고 [OnNavigatedTo](/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) page 이벤트를 재정의 하 여 [응시 장치 감시자](/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview) 를 시작 하 고 [OnNavigatedFrom](/uwp/api/windows.ui.xaml.controls.page.onnavigatedfrom) page 이벤트를 재정의 하 여 [응시 장치 감시자](/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview)를 중지 합니다.
 
     ```csharp
     using System;
@@ -233,7 +233,7 @@ Windows 앱에서 응시 입력 Api를 사용 하려면 다음을 수행 해야 
 
 3. 다음으로, 응시 장치 감시자 메서드를 추가 합니다. 
     
-    에서는 `StartGazeDeviceWatcher` [createwatcher](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview.createwatcher) 를 호출 하 고, 아이 추적 장치 이벤트 수신기 ([deviceadded](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview.added), [deviceadded](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview.updated)및 [DeviceRemoved](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview.removed))를 선언 합니다.
+    에서는 `StartGazeDeviceWatcher` [createwatcher](/uwp/api/windows.devices.input.preview.gazeinputsourcepreview.createwatcher) 를 호출 하 고, 아이 추적 장치 이벤트 수신기 ([deviceadded](/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview.added), [deviceadded](/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview.updated)및 [DeviceRemoved](/uwp/api/windows.devices.input.preview.gazedevicewatcherpreview.removed))를 선언 합니다.
 
     에서 `DeviceAdded` 눈 추적 장치의 상태를 확인 합니다. 실행 가능한 장치인 경우 장치 수를 증가 시키고 응시 추적을 사용 하도록 설정 합니다. 자세한 내용은 다음 단계를 참조 하세요.
 
@@ -330,10 +330,10 @@ Windows 앱에서 응시 입력 Api를 사용 하려면 다음을 수행 해야 
 
 4. 여기서는 장치가에서 실행 가능한 지 확인 하 `IsSupportedDevice` 고, 그럴 경우에서 응시 추적을 사용 하도록 설정 해 봅니다 `TryEnableGazeTrackingAsync` .
 
-    에서는 `TryEnableGazeTrackingAsync` 응시 이벤트 처리기를 선언 하 고 [GazeInputSourcePreview ()](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview.getforcurrentview) 를 호출 하 여 입력 소스에 대 한 참조를 가져옵니다 .이는 ui 스레드에서 호출 해야 합니다. [ui 스레드 응답성 유지](https://docs.microsoft.com/windows/uwp/debug-test-perf/keep-the-ui-thread-responsive)를 참조 하세요.
+    에서는 `TryEnableGazeTrackingAsync` 응시 이벤트 처리기를 선언 하 고 [GazeInputSourcePreview ()](/uwp/api/windows.devices.input.preview.gazeinputsourcepreview.getforcurrentview) 를 호출 하 여 입력 소스에 대 한 참조를 가져옵니다 .이는 ui 스레드에서 호출 해야 합니다. [ui 스레드 응답성 유지](../../debug-test-perf/keep-the-ui-thread-responsive.md)를 참조 하세요.
 
     > [!NOTE]
-    > 응용 프로그램에 호환 되는 눈 추적 장치가 연결 되어 필요한 경우에만 [GazeInputSourcePreview ()](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeinputsourcepreview.getforcurrentview) 를 호출 해야 합니다. 그렇지 않으면 동의 대화 상자가 필요 하지 않습니다.
+    > 응용 프로그램에 호환 되는 눈 추적 장치가 연결 되어 필요한 경우에만 [GazeInputSourcePreview ()](/uwp/api/windows.devices.input.preview.gazeinputsourcepreview.getforcurrentview) 를 호출 해야 합니다. 그렇지 않으면 동의 대화 상자가 필요 하지 않습니다.
 
 ```csharp
     /// <summary>
@@ -405,7 +405,7 @@ Windows 앱에서 응시 입력 Api를 사용 하려면 다음을 수행 해야 
 
     및의 응시 추적 타원을 각각 표시 하 고 숨깁니다 `GazeEntered` `GazeExited` .
 
-    에서는 `GazeMoved` [GazeEnteredPreviewEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs)의 [currentpoint](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs.currentpoint) 에서 제공 하는 [EyeGazePosition](https://docs.microsoft.com/uwp/api/windows.devices.input.preview.gazepointpreview.eyegazeposition) 을 기반으로 하 여 응시 추적 타원이 이동 합니다. 또한 진행률 표시줄의 위치 변경을 트리거하는 [RadialProgressBar](https://docs.microsoft.com/windows/communitytoolkit/controls/radialprogressbar)에서 응시 포커스 타이머를 관리 합니다. 자세한 내용은 다음 단계를 참조 하세요.
+    에서는 `GazeMoved` [GazeEnteredPreviewEventArgs](/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs)의 [currentpoint](/uwp/api/windows.devices.input.preview.gazeenteredprevieweventargs.currentpoint) 에서 제공 하는 [EyeGazePosition](/uwp/api/windows.devices.input.preview.gazepointpreview.eyegazeposition) 을 기반으로 하 여 응시 추적 타원이 이동 합니다. 또한 진행률 표시줄의 위치 변경을 트리거하는 [RadialProgressBar](/windows/communitytoolkit/controls/radialprogressbar)에서 응시 포커스 타이머를 관리 합니다. 자세한 내용은 다음 단계를 참조 하세요.
 
     ```csharp
     /// <summary>
@@ -499,9 +499,9 @@ Windows 앱에서 응시 입력 Api를 사용 하려면 다음을 수행 해야 
     ```
 6. 마지막으로,이 앱의 응시 포커스 타이머를 관리 하는 데 사용 되는 메서드는 다음과 같습니다.
 
-    `DoesElementContainPoint`응시 포인터가 진행률 표시줄 위에 있는지 확인 합니다. 그럴 경우에는 응시 타이머를 시작 하 고 각 응시 timer tick에서 진행률 표시줄을 증가 시킵니다.
+    `DoesElementContainPoint` 응시 포인터가 진행률 표시줄 위에 있는지 확인 합니다. 그럴 경우에는 응시 타이머를 시작 하 고 각 응시 timer tick에서 진행률 표시줄을 증가 시킵니다.
 
-    `SetGazeTargetLocation`진행률 표시줄의 초기 위치를 설정 하 고 진행률 표시줄이 완료 되 면 (응시 포커스 타이머에 따라) 진행률 표시줄을 임의의 위치로 이동 합니다.
+    `SetGazeTargetLocation` 진행률 표시줄의 초기 위치를 설정 하 고 진행률 표시줄이 완료 되 면 (응시 포커스 타이머에 따라) 진행률 표시줄을 임의의 위치로 이동 합니다.
 
     ```csharp
     /// <summary>
@@ -600,7 +600,7 @@ Windows 앱에서 응시 입력 Api를 사용 하려면 다음을 수행 해야 
 
 ### <a name="resources"></a>리소스
 
-- [Windows 커뮤니티 도구 키트 응시 라이브러리](https://docs.microsoft.com/windows/communitytoolkit/gaze/gazeinteractionlibrary)
+- [Windows 커뮤니티 도구 키트 응시 라이브러리](/windows/communitytoolkit/gaze/gazeinteractionlibrary)
 
 ### <a name="topic-samples"></a>토픽 샘플
 

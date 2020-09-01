@@ -1,48 +1,48 @@
 ---
 title: 파일에 대한 기본 앱 시작
-description: 파일에 대한 기본 앱을 시작하는 방법을 알아봅니다.
+description: Windows.System를 사용 하는 방법에 대해 알아봅니다. 응용 프로그램 자체에서 처리할 수 없는 파일에 대 한 기본 처리기를 시작 하는 시작 관리자 API.
 ms.assetid: BB45FCAF-DF93-4C99-A8B5-59B799C7BD98
 ms.date: 07/05/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 94011a50bd339b98b6bb77ff82f5863d8c89c603
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 34aee5b2e2f04b7e5d72a7bc31d2cfafc1bcb6fb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318721"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167847"
 ---
 # <a name="launch-the-default-app-for-a-file"></a>파일에 대한 기본 앱 시작
 
-**중요 한 Api**
+**중요 API**
 
--   [**Windows.System.Launcher.LaunchFileAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchfileasync)
+-   [** Tem를Windows.Sys합니다. LaunchFileAsync**](/uwp/api/windows.system.launcher.launchfileasync)
 
-파일에 대한 기본 앱을 시작하는 방법을 알아봅니다. 앱에서 처리할 수 없는 파일로 작업해야 하는 경우가 많습니다. 예를 들어 메일 앱은 다양한 파일 형식을 받게 되므로 기본 처리기에서 이러한 파일을 시작하는 방법이 필요합니다. 다음 단계에서는 [**Windows.System.Launcher**](https://docs.microsoft.com/uwp/api/Windows.System.Launcher) API를 사용하여 앱에서 처리할 수 없는 파일의 기본 처리기를 시작하는 방법을 보여 줍니다.
+파일에 대 한 기본 앱을 시작 하는 방법을 알아봅니다. 많은 앱은 스스로 처리할 수 없는 파일을 사용 해야 합니다. 예를 들어 전자 메일 앱은 다양 한 파일 형식을 받고 이러한 파일을 기본 처리기에서 시작 하는 방법이 필요 합니다. 이러한 단계에서는Windows.System를 사용 하는 방법을 보여 줍니다 [** . **](/uwp/api/Windows.System.Launcher) 응용 프로그램 자체에서 처리할 수 없는 파일에 대 한 기본 처리기를 시작 하는 시작 관리자 API.
 
 ## <a name="get-the-file-object"></a>파일 개체 가져오기
 
-먼저 파일에 대한 [**Windows.Storage.StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 개체를 가져옵니다.
+먼저 파일의 [**StorageFile**](/uwp/api/Windows.Storage.StorageFile) 개체를 가져옵니다.
 
-파일이 앱 패키지에 포함되어 있는 경우 [**Package.InstalledLocation**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.package.installedlocation) 속성을 사용하여 [**Windows.Storage.StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) 개체를 가져오고 [**Windows.Storage.StorageFolder.GetFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfileasync) 메서드를 사용하여 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 개체를 가져옵니다.
+파일이 앱에 대 한 패키지에 포함 된 경우 [**InstalledLocation**](/uwp/api/windows.applicationmodel.package.installedlocation) 속성을 사용 하 여 StorageFile [**개체를**](/uwp/api/Windows.Storage.StorageFolder) 가져오고 [**GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync) 메서드를 사용 하 여 [**StorageFile**](/uwp/api/Windows.Storage.StorageFile) 개체를 가져올 수 있습니다.
 
-알려진 폴더에 파일이 있으면 [**Windows.Storage.KnownFolders**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders) 클래스의 속성을 사용하여 [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) 개체를 가져오고 [**GetFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfileasync) 메서드를 사용하여 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 개체를 가져옵니다.
+파일이 알려진 폴더에 있는 경우에는 GetFileAsync 클래스의 속성을 사용 하 여 [**Storagefolder**](/uwp/api/Windows.Storage.StorageFolder) 를 가져오고 [**StorageFile**](/uwp/api/Windows.Storage.StorageFile) 개체를 가져오는 [**GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync) 메서드를 사용할 수 [**있습니다.**](/uwp/api/Windows.Storage.KnownFolders)
 
-## <a name="launch-the-file"></a>파일 시작
+## <a name="launch-the-file"></a>파일을 시작 합니다.
 
-Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 옵션을 제공합니다. 이러한 옵션은 이 장과 다음 섹션에서 설명합니다.
+Windows는 파일의 기본 처리기를 시작하는 여러 가지 다양한 옵션을 제공합니다. 이러한 옵션은이 차트 및 다음 섹션에서 설명 합니다.
 
-| 옵션 | 메서드 | 설명 |
+| 옵션 | 메서드 | Description |
 |--------|--------|-------------|
-| 기본 시작 | [**LaunchFileAsync(IStorageFile)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchfileasync) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. |
-| 연결 프로그램 시작 | [**LaunchFileAsync(IStorageFile, LauncherOptions)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchfileasync#Windows_System_Launcher_LaunchFileAsync_Windows_Storage_IStorageFile_Windows_System_LauncherOptions_) | 사용자가 연결 프로그램 대화 상자를 통해 처리기를 선택하여 지정된 파일을 시작합니다. |
-| 권장 앱 폴백으로 시작 | [**LaunchFileAsync(IStorageFile, LauncherOptions)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchfileasync#Windows_System_Launcher_LaunchFileAsync_Windows_Storage_IStorageFile_Windows_System_LauncherOptions_) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. 처리기가 시스템에 설치되어 있지 않으면 스토어의 앱을 사용자에게 권장합니다. |
-| 원하는 유지 보기로 시작 | [ **(IStorageFile, LauncherOptions) LaunchFileAsync** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchfileasync#Windows_System_Launcher_LaunchFileAsync_Windows_Storage_IStorageFile_Windows_System_LauncherOptions_) (Windows 전용) | 지정된 파일을 기본 처리기를 사용하여 시작합니다. 시작한 후 화면에 유지되도록 기본 설정을 지정하고 특정 창 크기를 요청합니다. [**LauncherOptions.DesiredRemainingView** ](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview) 모바일 장치 제품군에서 지원 되지 않습니다. |
+| 기본 시작 | [**LaunchFileAsync (IStorageFile)**](/uwp/api/windows.system.launcher.launchfileasync) | 기본 처리기를 사용 하 여 지정 된 파일을 시작 합니다. |
+| 시작으로 열기 | [**LaunchFileAsync (IStorageFile, LauncherOptions)**](/uwp/api/windows.system.launcher.launchfileasync#Windows_System_Launcher_LaunchFileAsync_Windows_Storage_IStorageFile_Windows_System_LauncherOptions_) | 사용자가 연결 프로그램 대화 상자를 통해 처리기를 선택할 수 있도록 지정 된 파일을 시작 합니다. |
+| 권장 앱 대체를 사용 하 여 시작 | [**LaunchFileAsync (IStorageFile, LauncherOptions)**](/uwp/api/windows.system.launcher.launchfileasync#Windows_System_Launcher_LaunchFileAsync_Windows_Storage_IStorageFile_Windows_System_LauncherOptions_) | 기본 처리기를 사용 하 여 지정 된 파일을 시작 합니다. 시스템에 처리기가 설치 되어 있지 않은 경우 사용자에 게 스토어의 앱을 권장 합니다. |
+| 원하는 나머지 뷰로 시작 | [**LaunchFileAsync (IStorageFile, LauncherOptions)**](/uwp/api/windows.system.launcher.launchfileasync#Windows_System_Launcher_LaunchFileAsync_Windows_Storage_IStorageFile_Windows_System_LauncherOptions_) (Windows 전용) | 기본 처리기를 사용 하 여 지정 된 파일을 시작 합니다. 시작 후 화면에 유지 되는 기본 설정을 지정 하 고 특정 창 크기를 요청 합니다. [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview) 은 모바일 장치 제품군에서 지원 되지 않습니다. |
 
 ### <a name="default-launch"></a>기본 시작
 
-기본 앱을 시작하려면 [**Windows.System.Launcher.LaunchFileAsync(IStorageFile)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchfileasync) 메서드를 호출합니다. 이 예제에서는 [**Windows.Storage.StorageFolder.getFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfileasync) 메서드를 사용하여 앱 패키지에 포함된 이미지 파일 test.png를 시작합니다.
+[**Windows.System를 호출 합니다. LaunchFileAsync (IStorageFile)**](/uwp/api/windows.system.launcher.launchfileasync) 메서드는 기본 앱을 시작 합니다. 이 예제에서는 [**GetFileAsync**](/uwp/api/windows.storage.storagefolder.getfileasync) 메서드를 사용 하 여 앱 패키지에 포함 된 이미지 파일 test.png를 시작 합니다.
 
 ```csharp
 async void DefaultLaunch()
@@ -153,13 +153,13 @@ void MainPage::DefaultLaunch()
 }
 ```
 
-### <a name="open-with-launch"></a>연결 프로그램 시작
+### <a name="open-with-launch"></a>시작으로 열기
 
-[**LauncherOptions.DisplayApplicationPicker**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.displayapplicationpicker)가 **true**로 설정된 [**Windows.System.Launcher.LaunchFileAsync(IStorageFile, LauncherOptions)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchfileasync#Windows_System_Launcher_LaunchFileAsync_Windows_Storage_IStorageFile_Windows_System_LauncherOptions_) 메서드를 호출하여 **연결 프로그램** 대화 상자에서 사용자가 선택하는 앱을 시작합니다.
+[**Windows.System를 호출 합니다. LaunchFileAsync (IStorageFile, LauncherOptions) 메서드 (**](/uwp/api/windows.system.launcher.launchfileasync#Windows_System_Launcher_LaunchFileAsync_Windows_Storage_IStorageFile_Windows_System_LauncherOptions_) [**launcheroptions). DisplayApplicationPicker**](/uwp/api/windows.system.launcheroptions.displayapplicationpicker) 는 **연결** 프로그램 대화 상자에서 사용자가 선택 하는 앱을 시작 하려면 **true** 로 설정 합니다.
 
-사용자가 특정 파일에 대한 기본 앱이 아닌 다른 앱을 선택하려 할 경우 **연결 프로그램** 대화 상자를 사용하는 것이 좋습니다. 예를 들어 앱에서 사용자가 이미지 파일을 시작하도록 하려는 경우 기본 처리기는 뷰어 앱이 될 수 있습니다. 경우에 따라 사용자는 이미지를 보는 대신 편집하려 할 수 있습니다. 이러한 유형의 시나리오에서 사용자가 **연결 프로그램** 대화 상자를 표시하고 편집기 앱을 선택할 수 있도록 **앱 바** 또는 상황에 맞는 메뉴의 대체 명령과 함께 **연결 프로그램** 옵션을 사용합니다.
+사용자가 특정 파일에 대해 기본값이 아닌 다른 앱을 선택할 수 있는 경우 **연결** 프로그램 대화 상자를 사용 하는 것이 좋습니다. 예를 들어 사용자가 앱에서 이미지 파일을 시작할 수 있는 경우 기본 처리기는 뷰어 앱이 될 수 있습니다. 경우에 따라 사용자가 이미지를 표시 하는 대신 편집 하려고 할 수도 있습니다. **Appbar** 또는 상황에 맞는 메뉴의 대체 명령과 함께 **열기** 옵션을 사용 하 여 사용자가 **연결 프로그램** 대화 상자를 표시 하 고 이러한 유형의 시나리오에서 편집기 앱을 선택할 수 있습니다.
 
-![.png 파일 실행을 위한 연결 대화 상자. 대화 상자에는 사용자 선택 항목을 모든 .png 파일에 사용할지 또는 이 .png 파일 하나에만 사용할지를 지정하는 확인란이 있습니다. 또한 대화 상자에는 파일을 실행하는 네 가지 앱 옵션과 '기타 옵션' 링크가 있습니다.](images/checkboxopenwithdialog.png)
+![.png 파일 시작을 위한 연결 프로그램 대화 상자. 이 대화 상자에는 사용자의 선택 항목을 모든 .png 파일에 사용할지, 아니면 하나의 .png 파일만 사용할지를 지정 하는 확인란이 포함 되어 있습니다. 이 대화 상자에는 파일을 시작 하는 네 가지 앱 옵션과 ' 기타 옵션 ' 링크가 있습니다.](images/checkboxopenwithdialog.png)
 
 ```csharp
 async void DefaultLaunch()
@@ -287,14 +287,14 @@ void MainPage::DefaultLaunch()
 }
 ```
 
-**대체 (fallback)는 권장 되는 앱 시작**
+**권장 앱 대체를 사용 하 여 시작**
 
-경우에 따라 사용자는 시작할 파일을 처리하는 앱을 설치하지 않으려 할 수 있습니다. 기본적으로 Windows는 이러한 경우 사용자에게 스토어에서 적절한 앱을 검색할 수 있는 링크를 제공합니다. 이러한 경우 사용자에게 필요한 앱에 대한 특정 권장 지침을 제공하려면 시작할 파일과 함께 이 권장 지침을 전달할 수 있습니다. 이렇게 하려면 [**LauncherOptions.PreferredApplicationPackageFamilyName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)을 스토어에서 권장하려는 앱의 패키지 패밀리 이름으로 설정하여 [**Windows.System.Launcher.launchFileAsync(IStorageFile, LauncherOptions)** ](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchfileasync#Windows_System_Launcher_LaunchFileAsync_Windows_Storage_IStorageFile_Windows_System_LauncherOptions_) 메서드를 호출합니다. 그런 다음 [**LauncherOptions.PreferredApplicationDisplayName**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationdisplayname)을 해당 앱의 이름으로 설정합니다. Windows에서는 이 정보를 사용하여 스토어에서 앱을 검색하는 일반적인 옵션을 스토어에서 권장 앱을 다운로드하는 특정 옵션으로 바꿉니다.
+사용자에 게 시작 하는 파일을 처리 하는 앱이 설치 되어 있지 않은 경우도 있습니다. 기본적으로 Windows에서는 사용자에 게 스토어에서 적절 한 앱을 검색할 수 있는 링크를 제공 하 여 이러한 사례를 처리 합니다. 사용자에 게이 시나리오에서 가져올 앱에 대 한 특정 권장 사항을 제공 하려는 경우 시작 하는 파일과 함께 권장 사항을 전달 하면 됩니다. 이렇게 하려면Windows.System를 호출 [**합니다. LaunchFileAsync (IStorageFile, LauncherOptions)**](/uwp/api/windows.system.launcher.launchfileasync#Windows_System_Launcher_LaunchFileAsync_Windows_Storage_IStorageFile_Windows_System_LauncherOptions_) 메서드를 사용 하 여 권장 하려는 스토어의 앱 패키지 패밀리 이름으로 설정 [**합니다.**](/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname) 그런 다음 PreferredApplicationDisplayName를 해당 앱의 이름으로 설정 합니다 [**.**](/uwp/api/windows.system.launcheroptions.preferredapplicationdisplayname) Windows에서는이 정보를 사용 하 여 저장소에서 권장 앱을 얻기 위한 특정 옵션을 사용 하 여 스토어에서 앱을 검색 하는 일반 옵션을 대체 합니다.
 
 > [!NOTE]
-> 앱을 권장 하는 두이 옵션 모두를 설정 해야 합니다. 하나만 설정하면 오류가 발생합니다.
+> 앱을 권장 하려면 이러한 두 옵션을 모두 설정 해야 합니다. 다른 하나를 사용 하지 않고 설정 하면 오류가 발생 합니다.
 
-![.contoso 파일 실행을 위한 연결 대화 상자. .contoso는 컴퓨터에 설치된 처리기가 없으므로 대화 상자에 스토어 아이콘과 사용자에게 스토어의 올바른 처리기를 안내하는 텍스트가 포함된 옵션이 있습니다. 또한 대화 상자에는 '기타 옵션' 링크가 있습니다.](images/howdoyouwanttoopen.png)
+![contoso 파일 시작을 위한 연결 프로그램 대화 상자. . contoso에는 컴퓨터에 설치 된 처리기가 없으므로이 대화 상자에는 저장소 아이콘과 사용자가 저장소의 올바른 처리기를 가리키는 텍스트가 포함 된 옵션이 포함 되어 있습니다. 또한이 대화 상자에는 ' 추가 옵션 ' 링크 '가 포함 되어 있습니다.](images/howdoyouwanttoopen.png)
 
 ```csharp
 async void DefaultLaunch()
@@ -432,14 +432,14 @@ void MainPage::DefaultLaunch()
 }
 ```
 
-### <a name="launch-with-a-desired-remaining-view-windows-only"></a>원하는 유지 보기로 시작(Windows만 해당)
+### <a name="launch-with-a-desired-remaining-view-windows-only"></a>원하는 나머지 뷰로 시작 (Windows 전용)
 
-[  **LaunchFileAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchfileasync)를 호출하는 원본 앱은 파일이 시작된 후 화면에 유지되도록 요청할 수 있습니다. 기본적으로 Windows는 파일을 처리하는 대상 앱과 원본 앱 사이에 모든 사용 가능한 공간을 동일하게 공유하려고 합니다. 원본 앱은 [**DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview) 속성을 사용하여 앱 창이 거의 모든 사용 가능한 공간을 사용하려고 한다는 것을 운영 체제에 나타냅니다. **DesiredRemainingView**를 사용하여 파일이 시작된 후 원본 앱이 화면에서 유지될 필요가 없고 대상 앱으로 완전히 대체될 수 있다는 것을 나타낼 수도 있습니다. 이 속성은 호출 앱의 기본 창 크기만 지정합니다. 화면에 동시에 나타날 수도 있는 다른 앱의 동작은 지정하지 않습니다.
+[**LaunchFileAsync**](/uwp/api/windows.system.launcher.launchfileasync) 를 호출 하는 원본 앱은 파일을 시작한 후 화면에 유지 되도록 요청할 수 있습니다. 기본적으로 Windows에서는 파일을 처리 하는 대상 앱과 소스 앱 간에 사용 가능한 모든 공간을 동일 하 게 공유 하려고 합니다. 원본 앱은 [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview) 속성을 사용 하 여 사용 가능한 공간을 늘리거나 줄일 수 있도록 응용 프로그램 창을 선호 하는 운영 체제를 나타낼 수 있습니다. **DesiredRemainingView** 를 사용 하 여 파일을 시작한 후 원본 앱이 화면에 남아 있어야 하 고 대상 앱에 의해 완전히 바뀔 수 있음을 나타낼 수도 있습니다. 이 속성은 호출 하는 앱의 기본 창 크기만 지정 합니다. 동시에 화면에 있을 수도 있는 다른 앱의 동작을 지정 하지 않습니다.
 
 > [!NOTE]
-> Windows는 화면, 화면 방향 및 등 앱 수가 예를 들어 원본 앱의 최종 창 크기를 결정 하는 경우 여러 가지 요인, 원본 앱의 기본 설정을 고려 합니다. [  **DesiredRemainingView**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview)를 설정해도 원본 앱에 대한 특정 창 관리 동작이 보장되지 않습니다.
+> Windows는 원본 앱의 최종 창 크기 (예: 원본 앱의 기본 설정, 화면에 있는 앱의 수, 화면 방향 등)를 결정할 때 여러 가지 요인을 고려 합니다. [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview)를 설정 하 여 원본 앱에 대 한 특정 창 지정 동작을 보장할 수 없습니다.
 
-**모바일 장치 패밀리:  **[**LauncherOptions.DesiredRemainingView** ](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.desiredremainingview) 모바일 장치 제품군에서 지원 되지 않습니다.
+**모바일 장치 제품군:  **[**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview) 은 모바일 장치 제품군에서 지원 되지 않습니다.
 
 ```csharp
 async void DefaultLaunch()
@@ -542,26 +542,26 @@ void MainPage::DefaultLaunch()
 
 ## <a name="remarks"></a>설명
 
-실행된 앱은 앱에서 선택할 수 없으므로 사용자가 어떤 앱이 실행되고 있는지 확인합니다. 사용자는 UWP(유니버설 Windows 플랫폼) 앱 또는 Windows 데스크톱 앱을 선택할 수 있습니다.
+앱에서 시작 되는 앱을 선택할 수 없습니다. 사용자는 시작 되는 앱을 결정 합니다. 사용자는 UWP (유니버설 Windows 플랫폼) 앱 또는 Windows 데스크톱 앱을 선택할 수 있습니다.
 
-파일을 시작하면 앱은 포그라운드 앱이 되어야 합니다. 즉, 사용자에게 표시되어야 합니다. 이 요구 사항은 사용자가 제어권을 갖도록 하는 데 도움이 됩니다. 이 요구 사항을 충족하려면 모든 파일 실행을 앱의 UI에 직접 연결해야 합니다. 대부분의 경우, 사용자는 항상 파일 실행을 시작하기 위해 일부 작업을 수행해야 합니다.
+파일을 시작할 때 앱은 전경 앱 이어야 합니다. 즉, 사용자에 게 표시 되어야 합니다. 이 요구 사항은 사용자가 컨트롤에 유지 되도록 하는 데 도움이 됩니다. 이 요구 사항을 충족 하려면 모든 파일 시작을 응용 프로그램의 UI에 직접 연결 해야 합니다. 일반적으로 사용자는 파일 시작을 시작 하기 위해 항상 몇 가지 작업을 수행 해야 합니다.
 
-운영 체제에 의해 자동으로 실행되는 경우 코드 또는 스크립트가 포함된 파일 형식은 시작할 수 없습니다(예: .exe, .msi 및 .js 파일). 이 제한 사항은 운영 체제를 수정할 수 있는 잠재적 악성 파일로부터 사용자를 보호합니다. 이 방법을 사용하면 스크립트를 격리하는 앱에서 실행되는 경우 스크립트가 포함될 수 있는 파일 형식을 시작할 수 있습니다(예: .docx 파일). Microsoft Word와 같은 앱은 .docx 파일의 스크립트가 운영 체제를 수정하는 것을 방지합니다.
+운영 체제에서 자동으로 실행 하는 경우 코드 또는 스크립트가 포함 된 파일 형식 (예: .exe, .msi 및 .js 파일)을 시작할 수 없습니다. 이 제한은 운영 체제를 수정할 수 있는 악의적인 파일 로부터 사용자를 보호 합니다. 이 메서드를 사용 하 여 스크립트를 격리 하는 응용 프로그램 (예: .docx 파일)에서 실행 되는 경우 스크립트를 포함할 수 있는 파일 형식을 시작할 수 있습니다. Microsoft Word와 같은 앱은 스크립트를 .docx 파일에 보관 하 여 운영 체제를 수정 하지 못하도록 합니다.
 
-제한된 파일 형식을 실행하려고 하면 실행이 실패하고 오류 콜백이 호출됩니다. 앱이 서로 다른 유형의 파일을 처리하는 경우 이러한 오류 발생이 예상되면 사용자에게 대체 환경을 제공하는 것이 좋습니다. 예를 들어, 사용자에게 파일을 바탕 화면에 저장하는 옵션을 줄 수 있고 사용자는 바탕 화면에서 파일을 열 수 있습니다.
+제한 된 파일 형식을 시작 하려고 하면 시작이 실패 하 고 오류 콜백이 호출 됩니다. 앱에서 다양 한 형식의 파일을 처리 하 고이 오류가 발생할 것으로 생각 되는 경우 사용자에 게 대체 (fallback) 환경을 제공 하는 것이 좋습니다. 예를 들어 사용자에 게 바탕 화면에 파일을 저장 하는 옵션을 제공 하 고 해당 파일을 열 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-### <a name="tasks"></a>태스크
+### <a name="tasks"></a>작업
 
 * [URI에 대한 기본 앱 실행](launch-default-app.md)
 * [파일 활성화 처리](handle-file-activation.md)
 
 ### <a name="guidelines"></a>지침
 
-* [파일 형식 및 Uri에 대 한 지침](https://docs.microsoft.com/windows/uwp/files/index)
+* [파일 형식 및 URI에 대한 지침](../files/index.md)
 
 ### <a name="reference"></a>참조
 
-* [**Windows.Storage.StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)
-* [**Windows.System.Launcher.LaunchFileAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchfileasync)
+* [**Windows.Storage.StorageFile**](/uwp/api/Windows.Storage.StorageFile)
+* [** Tem를Windows.Sys합니다. LaunchFileAsync**](/uwp/api/windows.system.launcher.launchfileasync)

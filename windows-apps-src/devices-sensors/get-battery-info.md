@@ -1,36 +1,36 @@
 ---
 ms.assetid: 90BB59FC-90FE-453E-A8DE-9315E29EB98C
 title: 배터리 정보 가져오기
-description: Windows.Devices.Power 네임스페이스에서 API를 사용하여 자세한 배터리 정보를 가져오는 방법을 알아봅니다.
+description: Windows의 Api를 사용 하 여 자세한 배터리 정보를 얻는 방법에 대해 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ea9be48da57e260cdb3d5d1c9a9a0b564c1f4386
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 383cb37e044e7e13080526d8e8270e7fc36560ff
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370041"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172237"
 ---
 # <a name="get-battery-information"></a>배터리 정보 가져오기
 
 
-** 중요 API **
+* * 중요 한 Api * *
 
--   [**Windows.Devices.Power**](https://docs.microsoft.com/uwp/api/Windows.Devices.Power)
--   [**DeviceInformation.FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync)
+-   [**Windows. 장치. 전원**](/uwp/api/Windows.Devices.Power)
+-   [**DeviceInformation. FindAllAsync**](/uwp/api/windows.devices.enumeration.deviceinformation.findallasync)
 
-[  **Windows.Devices.Power**](https://docs.microsoft.com/uwp/api/Windows.Devices.Power) 네임스페이스에서 API를 사용하여 자세한 배터리 정보를 가져오는 방법을 알아봅니다. *배터리 보고서*([**BatteryReport**](https://docs.microsoft.com/uwp/api/Windows.Devices.Power.BatteryReport))는 배터리의 충전, 용량 및 상태 또는 배터리의 집계를 설명합니다. 이 항목에서는 앱에서 배터리 보고서를 가져오고 변경 알림을 받을 수 있는 방법을 보여 줍니다. 코드 예제는 이 항목의 끝에 나열된 기본 배터리 앱에서 발췌한 것입니다.
+[**Windows**](/uwp/api/Windows.Devices.Power) 의 api를 사용 하 여 자세한 배터리 정보를 얻는 방법에 대해 알아봅니다. *배터리 보고서* ([**BatteryReport**](/uwp/api/Windows.Devices.Power.BatteryReport))는 배터리 또는 배터리 집계의 요금, 용량 및 상태를 설명 합니다. 이 항목에서는 앱이 배터리 보고서를 받고 변경 내용에 대 한 알림 메시지를 표시 하는 방법을 보여 줍니다. 코드 예제는이 항목의 끝에 나열 된 기본 배터리 앱에서 가져온 것입니다.
 
-## <a name="get-aggregate-battery-report"></a>배터리 집계 보고서 가져오기
+## <a name="get-aggregate-battery-report"></a>집계 배터리 보고서 가져오기
 
 
-일부 장치에는 둘 이상의 배터리가 있으며, 각 배터리가 장치의 전체 에너지 용량에 기여하는 정도가 명확하지 않을 수 있습니다. 이때는 [**AggregateBattery**](https://docs.microsoft.com/uwp/api/windows.devices.power.battery.aggregatebattery) 클래스가 필요합니다. *배터리 집계*는 장치에 연결된 모든 배터리 컨트롤러를 나타내며 전체 단일 [**BatteryReport**](https://docs.microsoft.com/uwp/api/Windows.Devices.Power.BatteryReport) 개체를 제공할 수 있습니다.
+일부 장치에는 두 개 이상의 배터리가 포함 되어 있으며, 각 배터리가 장치의 전체 에너지 용량에 어떻게 기여 하는 지는 항상 명확 하지는 않습니다. [**AggregateBattery**](/uwp/api/windows.devices.power.battery.aggregatebattery) 클래스가 제공 되는 위치입니다. *집계 배터리* 는 장치에 연결 된 모든 배터리 컨트롤러를 나타내며 단일 전체 [**BatteryReport**](/uwp/api/Windows.Devices.Power.BatteryReport) 개체를 제공할 수 있습니다.
 
-**참고**  A [ **배터리** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Power.Battery) 클래스는 실제로 배터리 컨트롤러에 해당 합니다. 장치에 따라 컨트롤러가 실제 배터리에 연결되거나 장치 엔클로저에 연결될 수 있습니다. 따라서 배터리가 없는 경우에도 배터리 개체를 만들 수 있습니다. 다른 경우에는 배터리 개체가 **null**일 수 있습니다.
+**참고**    [**배터리**](/uwp/api/Windows.Devices.Power.Battery) 클래스는 실제로 배터리 컨트롤러에 해당 합니다. 장치에 따라 컨트롤러는 실제 배터리에 연결 된 경우에도 장치 엔클로저에 연결 되는 경우도 있습니다. 따라서 배터리가 없을 때에도 배터리 개체를 만들 수 있습니다. 다른 경우에는 배터리 개체가 **null**일 수 있습니다.
 
-배터리 집계 개체를 만든 후에는 [**GetReport**](https://docs.microsoft.com/uwp/api/windows.devices.power.battery.getreport)를 호출하여 해당 [**BatteryReport**](https://docs.microsoft.com/uwp/api/Windows.Devices.Power.BatteryReport)를 가져옵니다.
+집계 배터리 개체가 있으면 [**Getreport**](/uwp/api/windows.devices.power.battery.getreport) 를 호출 하 여 해당 [**BatteryReport**](/uwp/api/Windows.Devices.Power.BatteryReport)를 가져옵니다.
 
 ```csharp
 private void RequestAggregateBatteryReport()
@@ -48,9 +48,9 @@ private void RequestAggregateBatteryReport()
 
 ## <a name="get-individual-battery-reports"></a>개별 배터리 보고서 가져오기
 
-개별 배터리에 대한 [**BatteryReport**](https://docs.microsoft.com/uwp/api/Windows.Devices.Power.BatteryReport) 개체를 만들 수도 있습니다. [  **FindAllAsync**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) 메서드와 함께 [**GetDeviceSelector**](https://docs.microsoft.com/uwp/api/windows.devices.power.battery.getdeviceselector)를 사용하여 장치에 연결된 모든 배터리 컨트롤러를 나타내는 [**DeviceInformation**](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체의 컬렉션을 가져옵니다. 그런 다음 원하는 **DeviceInformation** 개체의 **Id** 속성을 사용하여 [**FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.devices.power.battery.fromidasync) 메서드로 해당 [**Battery**](https://docs.microsoft.com/uwp/api/Windows.Devices.Power.Battery)를 만듭니다. 마지막으로 [**GetReport**](https://docs.microsoft.com/uwp/api/windows.devices.power.battery.getreport)를 호출하여 개별 배터리 보고서를 가져옵니다.
+개별 배터리에 대해 [**BatteryReport**](/uwp/api/Windows.Devices.Power.BatteryReport) 개체를 만들 수도 있습니다. [**FindAllAsync**](/uwp/api/windows.devices.enumeration.deviceinformation.findallasync) 메서드와 함께 [**getdeviceselector**](/uwp/api/windows.devices.power.battery.getdeviceselector) 를 사용 하 여 장치에 연결 된 모든 배터리 컨트롤러를 나타내는 [**deviceinformation**](/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 개체의 컬렉션을 가져옵니다. 그런 다음 원하는 **Deviceinformation** 개체의 **Id** 속성을 사용 하 여 [**FromIdAsync**](/uwp/api/windows.devices.power.battery.fromidasync) 메서드를 사용 하 여 해당 [**배터리**](/uwp/api/Windows.Devices.Power.Battery) 를 만듭니다. 마지막으로 [**Getreport**](/uwp/api/windows.devices.power.battery.getreport) 를 호출 하 여 개별 배터리 보고서를 가져옵니다.
 
-이 예제에서는 장치에 연결된 모든 배터리에 대한 배터리 보고서를 만드는 방법을 보여 줍니다.
+이 예제에서는 장치에 연결 된 모든 배터리에 대 한 배터리 보고서를 만드는 방법을 보여 줍니다.
 
 ```csharp
 async private void RequestIndividualBatteryReports()
@@ -77,7 +77,7 @@ async private void RequestIndividualBatteryReports()
 
 ## <a name="access-report-details"></a>보고서 세부 정보 액세스
 
-[  **BatteryReport**](https://docs.microsoft.com/uwp/api/Windows.Devices.Power.BatteryReport) 개체는 많은 배터리 정보를 제공합니다. 자세한 내용은 해당 속성에 대 한 API 참조를 참조 하십시오. **상태** (을 [ **BatteryStatus** ](https://docs.microsoft.com/previous-versions/windows/dn818458(v=win.10)) 열거형), [ **ChargeRateInMilliwatts**](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.chargerateinmilliwatts), [ **DesignCapacityInMilliwattHours**](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.designcapacityinmilliwatthours)하십시오 [ **FullChargeCapacityInMilliwattHours**](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.fullchargecapacityinmilliwatthours), 및 [  **RemainingCapacityInMilliwattHours**](https://docs.microsoft.com/uwp/api/windows.devices.power.batteryreport.remainingcapacityinmilliwatthours)합니다. 이 예제에서는 이 항목의 뒷부분에 나와 있는 기본 배터리 앱에서 사용되는 일부 배터리 보고서 속성을 보여 줍니다.
+[**BatteryReport**](/uwp/api/Windows.Devices.Power.BatteryReport) 개체는 많은 배터리 정보를 제공 합니다. 자세한 내용은 해당 속성에 대 한 API 참조, **상태** ( [**BatteryStatus**](/previous-versions/windows/dn818458(v=win.10)) 열거형), [**ChargeRateInMilliwatts**](/uwp/api/windows.devices.power.batteryreport.chargerateinmilliwatts), [**DesignCapacityInMilliwattHours**](/uwp/api/windows.devices.power.batteryreport.designcapacityinmilliwatthours), [**FullChargeCapacityInMilliwattHours**](/uwp/api/windows.devices.power.batteryreport.fullchargecapacityinmilliwatthours)및 [**RemainingCapacityInMilliwattHours**](/uwp/api/windows.devices.power.batteryreport.remainingcapacityinmilliwatthours)를 참조 하세요. 이 예제는이 항목의 뒷부분에서 제공 하는 기본 배터리 앱에서 사용 하는 일부 배터리 보고서 속성을 보여 줍니다.
 
 ```csharp
 ...
@@ -91,7 +91,7 @@ TextBlock txt6 = new TextBlock { Text = "Remaining energy capacity (mWh): " + re
 
 ## <a name="request-report-updates"></a>보고서 업데이트 요청
 
-[  **Battery**](https://docs.microsoft.com/uwp/api/Windows.Devices.Power.Battery) 개체는 배터리의 충전, 용량 또는 상태가 변경된 경우 [**ReportUpdated**](https://docs.microsoft.com/uwp/api/windows.devices.power.battery.reportupdated) 이벤트를 트리거합니다. 일반적으로 이는 상태 변경 시 즉시 발생하고, 다른 모든 변경 시 주기적으로 발생합니다. 이 예제에서는 배터리 보고서 업데이트에 등록하는 방법을 보여 줍니다.
+배터리 [**개체는**](/uwp/api/Windows.Devices.Power.Battery) 배터리 청구, 용량 또는 상태가 변경 될 때 [**reportupdated**](/uwp/api/windows.devices.power.battery.reportupdated) 이벤트를 트리거합니다. 일반적으로 상태를 변경 하 고 다른 모든 변경 내용에 대해 주기적으로 발생 합니다. 이 예제에서는 배터리 보고서 업데이트를 등록 하는 방법을 보여 줍니다.
 
 ```csharp
 ...
@@ -101,7 +101,7 @@ Battery.AggregateBattery.ReportUpdated += AggregateBattery_ReportUpdated;
 
 ## <a name="handle-report-updates"></a>보고서 업데이트 처리
 
-배터리 업데이트가 발생한 경우 [**ReportUpdated**](https://docs.microsoft.com/uwp/api/windows.devices.power.battery.reportupdated) 이벤트는 해당 [**Battery**](https://docs.microsoft.com/uwp/api/Windows.Devices.Power.Battery) 개체를 이벤트 처리기 메서드로 전달합니다. 그러나 이 이벤트 처리기는 UI 스레드에서 호출되지 않습니다. 이 예제에 표시된 대로 [**Dispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) 개체를 사용하여 UI 변경 내용을 호출해야 합니다.
+배터리 업데이트가 발생 하면 [**Reportupdated**](/uwp/api/windows.devices.power.battery.reportupdated) 이벤트는 해당 [**배터리**](/uwp/api/Windows.Devices.Power.Battery) 개체를 이벤트 처리기 메서드에 전달 합니다. 그러나이 이벤트 처리기는 UI 스레드에서 호출 되지 않습니다. 이 예제와 같이 [**디스패처**](/uwp/api/Windows.UI.Core.CoreDispatcher) 개체를 사용 하 여 UI 변경을 호출 해야 합니다.
 
 ```csharp
 async private void AggregateBattery_ReportUpdated(Battery sender, object args)
@@ -130,11 +130,11 @@ async private void AggregateBattery_ReportUpdated(Battery sender, object args)
 }
 ```
 
-## <a name="example-basic-battery-app"></a>예제: 기본 배터리 앱
+## <a name="example-basic-battery-app"></a>예: 기본 배터리 앱
 
-Microsoft Visual Studio에서 다음 기본 배터리 앱을 빌드하여 이러한 API를 테스트합니다. Visual Studio 시작 페이지에서 **새 프로젝트**를 클릭한 다음 **Visual C# &gt; Windows &gt; Universal** 템플릿에서 **빈 앱** 템플릿을 사용하여 새 앱을 만듭니다.
+Microsoft Visual Studio에서 다음과 같은 기본 배터리 앱을 빌드하여 이러한 Api를 테스트 합니다. Visual Studio 시작 페이지에서 **새 프로젝트**를 클릭 하 고 **Visual c # &gt; Windows &gt; 유니버설** 템플릿 아래에서 **비어 있는 앱** 템플릿을 사용 하 여 새 앱을 만듭니다.
 
-그런 다음 **MainPage.xaml** 파일을 열고 다음 XML을 이 파일에 복사합니다(원래 콘텐츠 바꾸기).
+다음으로, **mainpage .xaml** 파일을 열고 다음 XML을이 파일에 복사 합니다 (원래 내용 바꾸기).
 
 ```xml
 <Page
@@ -162,7 +162,7 @@ Microsoft Visual Studio에서 다음 기본 배터리 앱을 빌드하여 이러
 </Page>
 ```
 
-앱 이름이 **App1**이 아닌 경우 이전 코드 조각에서 클래스 이름의 첫 번째 부분을 앱의 네임스페이스로 바꾸어야 합니다. 예를 들어 **BasicBatteryApp**이라는 프로젝트를 만든 경우 `x:Class="App1.MainPage"`을 `x:Class="BasicBatteryApp.MainPage"`로 바꿉니다. 또한 `xmlns:local="using:App1"`을 `xmlns:local="using:BasicBatteryApp"`로 바꾸어야 합니다.
+앱 이름이 **App1**이 아닌 경우 이전 코드 조각에서 클래스 이름의 첫 번째 부분을 앱의 네임 스페이스로 바꾸어야 합니다. 예를 들어 **BasicBatteryApp**이라는 프로젝트를 만든 경우를 `x:Class="App1.MainPage"` 로 바꿉니다 `x:Class="BasicBatteryApp.MainPage"` . 또한를로 바꾸어야 `xmlns:local="using:App1"` 합니다 `xmlns:local="using:BasicBatteryApp"` .
 
 그런 다음 프로젝트의 **MainPage.xaml.cs** 파일을 열고 기존 코드를 다음 코드로 바꿉니다.
 
@@ -332,11 +332,10 @@ namespace App1
 }
 ```
 
-앱 이름이 **App1**이 아닌 경우 이전 예제의 네임스페이스 이름을 프로젝트에 지정한 이름으로 바꾸어야 합니다. 예를 들어 **BasicBatteryApp**이라는 프로젝트를 만든 경우 `App1` 네임스페이스를 `BasicBatteryApp` 네임스페이스로 바꿉니다.
+앱 이름이 **App1**이 아닌 경우에는 이전 예제에서 프로젝트에 지정한 이름으로 네임 스페이스의 이름을 변경 해야 합니다. 예를 들어 **BasicBatteryApp**이라는 프로젝트를 만든 경우 네임 스페이스를 네임 스페이스로 바꿉니다 `App1` `BasicBatteryApp` .
 
-마지막으로 이 기본 배터리 앱을 실행하려면 **디버그** 메뉴에서 **디버깅 시작**을 클릭하여 솔루션을 테스트합니다.
+마지막으로,이 기본 배터리 앱을 실행 하려면 **디버그** 메뉴에서 **디버깅 시작** 을 클릭 하 여 솔루션을 테스트 합니다.
 
-**팁**  에서 숫자 값을 받을 합니다 [ **BatteryReport** ](https://docs.microsoft.com/uwp/api/Windows.Devices.Power.BatteryReport) 개체에서 앱을 디버그 합니다 **로컬 컴퓨터** 또는 외부 **장치** (예: Windows Phone). 장치 에뮬레이터에서 디버그하는 경우 **BatteryReport** 개체는 용량 및 속도 속성에 **null**을 반환합니다.
+**팁**    [**BatteryReport**](/uwp/api/Windows.Devices.Power.BatteryReport) 개체에서 숫자 값을 수신 하려면 **로컬 컴퓨터** 또는 외부 **장치** (예: Windows Phone)에서 앱을 디버그 합니다. 장치 에뮬레이터에서 디버그할 때 **BatteryReport** 개체는 capacity 및 rate 속성에 **null** 을 반환 합니다.
 
  
-

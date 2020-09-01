@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx 9, directx 11, 포팅
 ms.localizationpriority: medium
-ms.openlocfilehash: 3470c8153cc0f6ba6d272e5ed1163c7f2c911c4c
-ms.sourcegitcommit: 7c1711d68496b781ed7d5b54e8ef5442e58661fa
+ms.openlocfilehash: 8f7bdc8cef43ffa323cae89459ac9bcb549c10f1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88578227"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172047"
 ---
 # <a name="map-directx-9-features-to-directx-11-apis"></a>Directx 11 기능을 DirectX 11 Api에 매핑
 
@@ -21,23 +21,23 @@ Direct3D 9 게임에서 사용 하는 기능이 Direct3D 11 및 유니버설 Win
 
 ## <a name="mapping-direct3d-9-to-directx-11-apis"></a>Direct3D 9를 DirectX 11 Api에 매핑
 
-[Direct3D](https://docs.microsoft.com/windows/desktop/direct3d) 는 아직 directx 그래픽의 기반 이지만 directx 9 이후에는 API가 변경 되었습니다.
+[Direct3D](/windows/desktop/direct3d) 는 아직 directx 그래픽의 기반 이지만 directx 9 이후에는 API가 변경 되었습니다.
 
--   Microsoft DXGI (DirectX Graphics Infrastructure)는 그래픽 어댑터를 설정 하는 데 사용 됩니다. [DXGI](https://docs.microsoft.com/windows/desktop/direct3ddxgi/dx-graphics-dxgi) 를 사용 하 여 버퍼 형식을 선택 하 고, 스왑 체인을 만들고, 프레임을 표시 하 고, 공유 리소스를 만듭니다. [DXGI 개요](https://docs.microsoft.com/windows/desktop/direct3ddxgi/d3d10-graphics-programming-guide-dxgi)를 참조 하세요.
--   Direct3D 장치 컨텍스트는 파이프라인 상태를 설정 하 고 렌더링 명령을 생성 하는 데 사용 됩니다. 대부분의 샘플은 직접 컨텍스트를 사용 하 여 장치에 직접 렌더링 합니다. Direct3D 11은 지연 컨텍스트가 사용 되는 다중 스레드 렌더링도 지원 합니다. [Direct3D 11의 장치 소개를](https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-intro)참조 하세요.
--   일부 기능은 더 이상 사용 되지 않습니다. 특히 고정 함수 파이프라인입니다. [사용 되지 않는 기능](https://docs.microsoft.com/windows/desktop/direct3d10/d3d10-graphics-programming-guide-api-features-deprecated)을 참조 하세요.
+-   Microsoft DXGI (DirectX Graphics Infrastructure)는 그래픽 어댑터를 설정 하는 데 사용 됩니다. [DXGI](/windows/desktop/direct3ddxgi/dx-graphics-dxgi) 를 사용 하 여 버퍼 형식을 선택 하 고, 스왑 체인을 만들고, 프레임을 표시 하 고, 공유 리소스를 만듭니다. [DXGI 개요](/windows/desktop/direct3ddxgi/d3d10-graphics-programming-guide-dxgi)를 참조 하세요.
+-   Direct3D 장치 컨텍스트는 파이프라인 상태를 설정 하 고 렌더링 명령을 생성 하는 데 사용 됩니다. 대부분의 샘플은 직접 컨텍스트를 사용 하 여 장치에 직접 렌더링 합니다. Direct3D 11은 지연 컨텍스트가 사용 되는 다중 스레드 렌더링도 지원 합니다. [Direct3D 11의 장치 소개를](/windows/desktop/direct3d11/overviews-direct3d-11-devices-intro)참조 하세요.
+-   일부 기능은 더 이상 사용 되지 않습니다. 특히 고정 함수 파이프라인입니다. [사용 되지 않는 기능](/windows/desktop/direct3d10/d3d10-graphics-programming-guide-api-features-deprecated)을 참조 하세요.
 
-Direct3D 11 기능의 전체 목록은 [direct3d 11 기능](https://docs.microsoft.com/windows/desktop/direct3d11/direct3d-11-features) 및 [direct3d 11 기능](https://docs.microsoft.com/windows/desktop/direct3d11/direct3d-11-1-features)을 참조 하세요.
+Direct3D 11 기능의 전체 목록은 [direct3d 11 기능](/windows/desktop/direct3d11/direct3d-11-features) 및 [direct3d 11 기능](/windows/desktop/direct3d11/direct3d-11-1-features)을 참조 하세요.
 
 ## <a name="moving-from-direct2d-9-to-direct2d-11"></a>Direct2D 9에서 Direct2D 11로 이동
 
-[Direct2D (Windows)](https://docs.microsoft.com/windows/desktop/Direct2D/direct2d-portal) 는 여전히 DirectX 그래픽 및 windows의 중요 한 부분입니다. 여전히 Direct2D를 사용 하 여 2D 게임을 그리고 Direct3D 위에 오버레이 (HUDs)를 그릴 수 있습니다.
+[Direct2D (Windows)](/windows/desktop/Direct2D/direct2d-portal) 는 여전히 DirectX 그래픽 및 windows의 중요 한 부분입니다. 여전히 Direct2D를 사용 하 여 2D 게임을 그리고 Direct3D 위에 오버레이 (HUDs)를 그릴 수 있습니다.
 
 Direct2D는 Direct3D 위에서 실행 됩니다. 두 API를 사용 하 여 2D 게임을 구현할 수 있습니다. 예를 들어 Direct3D를 사용 하 여 구현 된 2D 게임에서는 직교 프로젝션을 사용 하 고, Z 값을 설정 하 여 기본 형식의 그리기 순서를 제어 하 고, 픽셀 셰이더를 사용 하 여 특수 효과를 추가할 수 있습니다.
 
-Direct2D는 Direct3D를 기반으로 하므로 DXGI 및 장치 컨텍스트를 사용 하기도 합니다. [DIRECT2D API 개요](https://docs.microsoft.com/windows/desktop/Direct2D/the-direct2d-api)를 참조 하세요.
+Direct2D는 Direct3D를 기반으로 하므로 DXGI 및 장치 컨텍스트를 사용 하기도 합니다. [DIRECT2D API 개요](/windows/desktop/Direct2D/the-direct2d-api)를 참조 하세요.
 
-[DirectWrite](https://docs.microsoft.com/windows/desktop/DirectWrite/direct-write-portal) API는 Direct2D를 사용 하 여 서식 있는 텍스트에 대 한 지원을 추가 합니다. [DirectWrite 소개](https://docs.microsoft.com/windows/desktop/DirectWrite/introducing-directwrite)를 참조 하세요.
+[DirectWrite](/windows/desktop/DirectWrite/direct-write-portal) API는 Direct2D를 사용 하 여 서식 있는 텍스트에 대 한 지원을 추가 합니다. [DirectWrite 소개](/windows/desktop/DirectWrite/introducing-directwrite)를 참조 하세요.
 
 ## <a name="replace-deprecated-helper-libraries"></a>사용 되지 않는 도우미 라이브러리 바꾸기
 
@@ -49,56 +49,56 @@ D3DX 및 DXUT는 더 이상 사용 되지 않으며 UWP 게임에서 사용할 �
 
 ## <a name="move-shader-programs-from-fx-to-hlsl"></a>FX에서 HLSL로 셰이더 프로그램 이동
 
-효과를 비롯 한 D3DX 유틸리티 라이브러리 (D3DX 9, D3DX 10 및 D3DX 11)는 UWP에서 사용 되지 않습니다. UWP 용 DirectX 게임은 모두 효과 없이 [HLSL](https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl) 를 사용 하 여 그래픽 파이프라인을 구동 합니다.
+효과를 비롯 한 D3DX 유틸리티 라이브러리 (D3DX 9, D3DX 10 및 D3DX 11)는 UWP에서 사용 되지 않습니다. UWP 용 DirectX 게임은 모두 효과 없이 [HLSL](/windows/desktop/direct3dhlsl/dx-graphics-hlsl) 를 사용 하 여 그래픽 파이프라인을 구동 합니다.
 
 Visual Studio는 여전히 FXC.EXE를 사용 하 여 셰이더 개체를 컴파일합니다. UWP 게임 셰이더가 미리 컴파일됩니다. 바이트 코드는 런타임에 로드 되며, 각 셰이더 리소스는 적절 한 렌더링 패스 중에 그래픽 파이프라인에 바인딩됩니다. 셰이더는 별개의 자체로 이동 해야 합니다. HLSL 파일 및 렌더링 기술은 c + + 코드에서 구현 해야 합니다.
 
 셰이더 리소스를 로드 하는 방법에 대 한 간략 한 보기는 [Direct3D 9에서 UWP로의 단순 포트를](walkthrough--simple-port-from-direct3d-9-to-11-1.md)참조 하세요.
 
-Direct3D 11에는 Direct3D 기능 수준 11 0 이상이 필요한 셰이더 모델 5가 도입 \_ 되었습니다. [Direct3D 11에 대 한 HLSL 셰이더 모델 5 기능을](https://docs.microsoft.com/windows/desktop/direct3dhlsl/overviews-direct3d-11-hlsl)참조 하세요.
+Direct3D 11에는 Direct3D 기능 수준 11 0 이상이 필요한 셰이더 모델 5가 도입 \_ 되었습니다. [Direct3D 11에 대 한 HLSL 셰이더 모델 5 기능을](/windows/desktop/direct3dhlsl/overviews-direct3d-11-hlsl)참조 하세요.
 
 ## <a name="replace-xnamath-and-d3dxmath"></a>XNAMath 및 D3DXMath 바꾸기
 
-XNAMath (또는 D3DXMath)를 사용 하는 코드는 [Directxmath](https://docs.microsoft.com/windows/desktop/dxmath/directxmath-portal)로 마이그레이션해야 합니다. DirectXMath에는 x86, x64 및 ARM에서 이식 가능한 형식이 포함 되어 있습니다. [XNA Math Library에서 코드 마이그레이션을](https://docs.microsoft.com/windows/desktop/dxmath/pg-xnamath-migration)참조 하세요.
+XNAMath (또는 D3DXMath)를 사용 하는 코드는 [Directxmath](/windows/desktop/dxmath/directxmath-portal)로 마이그레이션해야 합니다. DirectXMath에는 x86, x64 및 ARM에서 이식 가능한 형식이 포함 되어 있습니다. [XNA Math Library에서 코드 마이그레이션을](/windows/desktop/dxmath/pg-xnamath-migration)참조 하세요.
 
-DirectXMath float 형식은 셰이더를 사용 하는 데 편리 합니다. 예를 들어 [**XMFLOAT4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4) 및 [**XMFLOAT4X4**](https://docs.microsoft.com/windows/desktop/api/directxmath/ns-directxmath-xmfloat4x4) 는 상수 버퍼에 대 한 데이터를 편리 하 게 맞춥니다.
+DirectXMath float 형식은 셰이더를 사용 하는 데 편리 합니다. 예를 들어 [**XMFLOAT4**](/windows/desktop/api/directxmath/ns-directxmath-xmfloat4) 및 [**XMFLOAT4X4**](/windows/desktop/api/directxmath/ns-directxmath-xmfloat4x4) 는 상수 버퍼에 대 한 데이터를 편리 하 게 맞춥니다.
 
 ## <a name="replace-directsound-with-xaudio2-and-background-audio"></a>DirectSound를 XAudio2 (및 배경 오디오)로 바꿉니다.
 
 UWP에 대 한 DirectSound는 지원 되지 않습니다.
 
--   [XAudio2](https://docs.microsoft.com/windows/desktop/xaudio2/xaudio2-apis-portal) 를 사용 하 여 게임에 음향 효과를 추가 합니다.
+-   [XAudio2](/windows/desktop/xaudio2/xaudio2-apis-portal) 를 사용 하 여 게임에 음향 효과를 추가 합니다.
 
 ##  <a name="replace-directinput-with-xinput-and-windows-runtime-apis"></a>DirectInput을 XInput 및 Windows 런타임 Api로 바꾸기
 
 DirectInput는 UWP에 대해 지원 되지 않습니다.
 
--   마우스, 키보드 및 터치 입력에 대해 [**CoreWindow**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow) 입력 이벤트 콜백을 사용 합니다.
--   게임 컨트롤러 지원 (및 게임 컨트롤러 헤드셋 지원)에 [XInput](https://docs.microsoft.com/windows/desktop/xinput/getting-started-with-xinput) 1.4를 사용 합니다. 데스크톱 및 UWP에 대 한 공유 코드 베이스를 사용 하는 경우 이전 버전과의 호환성에 대 한 자세한 내용은 [XInput 버전](https://docs.microsoft.com/windows/desktop/xinput/xinput-versions) 을 참조 하세요.
--   게임에서 앱 바를 사용 해야 하는 경우 [**EdgeGesture**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.EdgeGesture) 이벤트를 등록 합니다.
+-   마우스, 키보드 및 터치 입력에 대해 [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 입력 이벤트 콜백을 사용 합니다.
+-   게임 컨트롤러 지원 (및 게임 컨트롤러 헤드셋 지원)에 [XInput](/windows/desktop/xinput/getting-started-with-xinput) 1.4를 사용 합니다. 데스크톱 및 UWP에 대 한 공유 코드 베이스를 사용 하는 경우 이전 버전과의 호환성에 대 한 자세한 내용은 [XInput 버전](/windows/desktop/xinput/xinput-versions) 을 참조 하세요.
+-   게임에서 앱 바를 사용 해야 하는 경우 [**EdgeGesture**](/uwp/api/Windows.UI.Input.EdgeGesture) 이벤트를 등록 합니다.
 
 ## <a name="use-microsoft-media-foundation-instead-of-directshow"></a>DirectShow 대신 Microsoft 미디어 파운데이션 사용
 
-DirectShow는 더 이상 DirectX API (또는 Windows API)의 일부가 아닙니다. [Microsoft 미디어 파운데이션](https://docs.microsoft.com/windows/desktop/medfound/microsoft-media-foundation-sdk) 공유 화면을 사용 하 여 Direct3D에 비디오 콘텐츠를 제공 합니다. [Direct3D 11 Video api](https://docs.microsoft.com/windows/desktop/medfound/direct3d-11-video-apis)를 참조 하세요.
+DirectShow는 더 이상 DirectX API (또는 Windows API)의 일부가 아닙니다. [Microsoft 미디어 파운데이션](/windows/desktop/medfound/microsoft-media-foundation-sdk) 공유 화면을 사용 하 여 Direct3D에 비디오 콘텐츠를 제공 합니다. [Direct3D 11 Video api](/windows/desktop/medfound/direct3d-11-video-apis)를 참조 하세요.
 
 ## <a name="replace-directplay-with-networking-code"></a>DirectPlay를 네트워킹 코드로 바꾸기
 
 Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네트워크 서비스를 사용 하는 경우 UWP 요구 사항을 준수 하는 네트워킹 코드를 제공 해야 합니다. 다음 Api를 사용 합니다.
 
--   [UWP 앱 용 Win32 및 COM (네트워킹) (Windows)](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps)
--   [**Windows. 네트워킹 네임 스페이스 (Windows)**](https://docs.microsoft.com/uwp/api/Windows.Networking)
--   [**Windows. 네트워킹용 네임 스페이스 (Windows)**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets)
--   [**Windows. 연결 네임 스페이스 (Windows)**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity)
--   [**Windows ApplicationModel. Background 네임 스페이스 (Windows)**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
+-   [UWP 앱 용 Win32 및 COM (네트워킹) (Windows)](/uwp/win32-and-com/win32-and-com-for-uwp-apps)
+-   [**Windows. 네트워킹 네임 스페이스 (Windows)**](/uwp/api/Windows.Networking)
+-   [**Windows. 네트워킹용 네임 스페이스 (Windows)**](/uwp/api/Windows.Networking.Sockets)
+-   [**Windows. 연결 네임 스페이스 (Windows)**](/uwp/api/Windows.Networking.Connectivity)
+-   [**Windows ApplicationModel. Background 네임 스페이스 (Windows)**](/uwp/api/Windows.ApplicationModel.Background)
 
 다음 문서를 참조 하 여 네트워킹 기능을 추가 하 고, 앱의 패키지 매니페스트에 네트워킹 지원을 선언할 수 있습니다.
 
--   [소켓을 사용 하 여 연결 (c #/VB/C + + 및 XAML을 사용 하는 UWP 앱) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh452976(v=win.10))
--   [Websocket을 사용 하 여 연결 (c #/VB/C + + 및 XAML을 사용 하는 UWP 앱) (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh994396(v=win.10))
--   [웹 서비스 (c #/VB/C + + 및 XAML을 사용 하는 UWP 앱)에 연결 (Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
--   [네트워킹 기본 사항](https://docs.microsoft.com/windows/uwp/networking/networking-basics)
+-   [소켓을 사용 하 여 연결 (c #/VB/C + + 및 XAML을 사용 하는 UWP 앱) (Windows)](/previous-versions/windows/apps/hh452976(v=win.10))
+-   [Websocket을 사용 하 여 연결 (c #/VB/C + + 및 XAML을 사용 하는 UWP 앱) (Windows)](/previous-versions/windows/apps/hh994396(v=win.10))
+-   [웹 서비스 (c #/VB/C + + 및 XAML을 사용 하는 UWP 앱)에 연결 (Windows)](/previous-versions/windows/apps/hh761504(v=win.10))
+-   [네트워킹 기본 사항](../networking/networking-basics.md)
 
-모든 UWP 앱 (게임 포함)은 특정 유형의 백그라운드 작업을 사용 하 여 앱이 일시 중단 된 동안 연결을 유지 합니다. 일시 중단 된 동안 게임에서 연결 상태를 유지 해야 하는 경우 [네트워킹 기본 사항](https://docs.microsoft.com/windows/uwp/networking/networking-basics)을 참조 하세요.
+모든 UWP 앱 (게임 포함)은 특정 유형의 백그라운드 작업을 사용 하 여 앱이 일시 중단 된 동안 연결을 유지 합니다. 일시 중단 된 동안 게임에서 연결 상태를 유지 해야 하는 경우 [네트워킹 기본 사항](../networking/networking-basics.md)을 참조 하세요.
 
 ## <a name="function-mapping"></a>함수 매핑
 
@@ -134,7 +134,7 @@ Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네�
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-testcooperativelevel">IDirect3DDevice9::TestCooperativeLevel</a></p></td>
-<td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a> DXGI_PRESENT_TEST 플래그가 설정 된 상태에서 호출 합니다.</p></td>
+<td align="left"><p><a href="/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a> DXGI_PRESENT_TEST 플래그가 설정 된 상태에서 호출 합니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9helper/nn-d3d9helper-idirect3dbasetexture9">IDirect3DBaseTexture9</a></p>
@@ -194,7 +194,7 @@ Microsoft DirectPlay는 더 이상 사용 되지 않습니다. 게임에서 네�
 </tr>
 <tr class="even">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-reset">IDirect3DDevice9:: Reset</a></p></td>
-<td align="left"><p>분실 한 장치 및 POOL_MANAGED 더 이상 존재 하지 않습니다. <a href="https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a> 는 <a href="https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-error">DXGI_ERROR_DEVICE_REMOVED</a> 반환 값을 사용 하 여 실패할 수 있습니다.</p></td>
+<td align="left"><p>분실 한 장치 및 POOL_MANAGED 더 이상 존재 하지 않습니다. <a href="/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-present1">IDXGISwapChain1::P resent1</a> 는 <a href="https://docs.microsoft.com/windows/desktop/direct3ddxgi/dxgi-error">DXGI_ERROR_DEVICE_REMOVED</a> 반환 값을 사용 하 여 실패할 수 있습니다.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3ddevice9-drawrectpatch">IDirect3DDevice9:DrawRectPatch</a></p>

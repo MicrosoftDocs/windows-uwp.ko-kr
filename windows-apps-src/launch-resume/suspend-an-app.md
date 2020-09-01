@@ -1,6 +1,6 @@
 ---
 title: 앱 일시 중단 처리
-description: 시스템에서 앱을 일시 중단할 때 중요한 응용 프로그램 데이터를 저장하는 방법을 배웁니다.
+description: 시스템이 앱을 일시 중단 하는 경우 중요 한 응용 프로그램 데이터를 저장 하는 방법을 알아봅니다.
 ms.assetid: F84F1512-24B9-45EC-BF23-A09E0AC985B0
 ms.date: 07/06/2018
 ms.topic: article
@@ -11,24 +11,24 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: f912e6212346a4019d8421c542a81eb2318dc5d9
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: 1c75200a768efd258aa84b20493b9d296578a05c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74260405"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89171827"
 ---
 # <a name="handle-app-suspend"></a>앱 일시 중단 처리
 
 **중요 API**
 
-- [**일시**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending)
+- [**Suspending**](/uwp/api/windows.ui.xaml.application.suspending)
 
-시스템에서 앱을 일시 중단할 때 중요한 응용 프로그램 데이터를 저장하는 방법을 배웁니다. 아래의 예제에서는 [**Suspending**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending) 이벤트용 이벤트 처리기를 등록하고 문자열을 파일에 저장합니다.
+시스템이 앱을 일시 중단 하는 경우 중요 한 응용 프로그램 데이터를 저장 하는 방법을 알아봅니다. 이 예제에서는 [**일시 중단**](/uwp/api/windows.ui.xaml.application.suspending) 이벤트에 대 한 이벤트 처리기를 등록 하 고 문자열을 파일에 저장 합니다.
 
-## <a name="register-the-suspending-event-handler"></a>suspending 이벤트 처리기 등록
+## <a name="register-the-suspending-event-handler"></a>일시 중단 이벤트 처리기 등록
 
-시스템이 앱을 일시 중단하기 전에 앱에서 응용 프로그램 데이터를 저장해야 함을 나타내는 [**Suspending**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending) 이벤트를 처리하도록 등록합니다.
+응용 프로그램에서 응용 프로그램 데이터를 일시 중단 하기 전에 응용 프로그램 데이터를 저장 해야 함을 나타내는 [**일시 중단**](/uwp/api/windows.ui.xaml.application.suspending) 이벤트를 처리 하려면 등록 합니다.
 
 ```csharp
 using System;
@@ -82,7 +82,7 @@ MainPage::MainPage()
 
 ## <a name="save-application-data-before-suspension"></a>일시 중단 전에 응용 프로그램 데이터 저장
 
-앱에서 [**Suspending**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.suspending) 이벤트를 처리하면, 처리기 함수에서 중요한 응용 프로그램 데이터를 저장할 기회가 생깁니다. 간단한 응용 프로그램 데이터를 동기적으로 저장하기 위해 앱에서 [**LocalSettings**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localsettings) 저장소 API를 사용해야 합니다.
+응용 프로그램에서 [**일시 중단**](/uwp/api/windows.ui.xaml.application.suspending) 이벤트를 처리 하는 경우 처리기 함수에 중요 한 응용 프로그램 데이터를 저장할 수 있습니다. 앱은 [**LocalSettings**](/uwp/api/windows.storage.applicationdata.localsettings) storage API를 사용 하 여 간단한 응용 프로그램 데이터를 동기식으로 저장 해야 합니다.
 
 ```csharp
 partial class MainPage
@@ -125,34 +125,34 @@ void MainPage::App_Suspending(Object^ sender, SuspendingEventArgs^ e)
 }
 ```
 
-## <a name="release-resources"></a>리소스 해제
+## <a name="release-resources"></a>릴리스 리소스
 
-앱이 일시 중단된 동안 다른 앱이 액세스할 수 있도록 단독 리소스와 파일 핸들을 해제해야 합니다. 단독 리소스의 예로는 카메라, I/O 디바이스, 외부 디바이스 및 네트워크 리소스가 있습니다. 단독 리소스와 파일 핸들을 명시적으로 해제하면 앱이 일시 중단된 동안 다른 앱이 액세스하는 데 도움이 됩니다. 앱이 다시 시작되면 단독 리소스와 파일 핸들을 다시 획득해야 합니다.
+앱이 일시 중단 된 상태에서 다른 앱이 액세스할 수 있도록 배타 리소스 및 파일 핸들을 해제 해야 합니다. 전용 리소스의 예로는 카메라, i/o 장치, 외부 장치 및 네트워크 리소스가 있습니다. 배타적 리소스 및 파일 핸들을 명시적으로 해제 하면 앱이 일시 중단 된 동안 다른 앱에서 해당 리소스에 액세스할 수 있습니다. 앱이 다시 시작 되 면 단독 리소스 및 파일 핸들을 다시 가져와야 합니다.
 
 ## <a name="remarks"></a>설명
 
-사용자가 다른 앱이나 데스크톱 또는 시작 화면으로 전환할 때마다 시스템에서 앱을 일시 중단합니다. 사용자가 다시 돌아올 때마다 시스템에서 앱을 다시 시작합니다. 시스템에서 앱을 다시 시작할 때, 변수와 데이터 구조의 콘텐츠는 시스템에서 앱을 일시 중단하기 전과 동일합니다. 앱은 중단되었던 곳에서 정확히 복원되므로, 사용자에게는 앱이 배경에서 실행되고 있었던 것처럼 보입니다.
+시스템은 사용자가 다른 앱 이나 바탕 화면 또는 시작 화면으로 전환할 때마다 앱을 일시 중단 합니다. 사용자가 다시 전환할 때마다 시스템이 앱을 다시 시작 합니다. 시스템이 앱을 다시 시작할 때 변수 및 데이터 구조의 내용은 시스템이 앱을 일시 중단 하기 전과 동일 합니다. 시스템은 백그라운드에서 실행 중인 것 처럼 사용자에 게 표시 되도록, 중단 된 위치에서 앱을 복원 합니다.
 
-앱이 일시 중단된 동안 시스템은 앱과 데이터를 메모리에 유지하려고 합니다. 그러나 앱을 메모리에 유지할 리소스가 없으면 시스템은 앱을 종료합니다. 사용자가 일시 중단 후 종료된 앱으로 다시 돌아오면, 시스템은 [**Activated**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) 이벤트를 전송하며 [**OnLaunched**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.onlaunched) 메서드에서 응용 프로그램 데이터를 복원해야 합니다.
+시스템은 일시 중단 된 상태에서 앱과 해당 데이터를 메모리에 유지 하려고 합니다. 그러나 시스템에 앱을 메모리에 보관 하는 리소스가 없는 경우 시스템에서 앱이 종료 됩니다. 사용자가 종료 된 일시 중단 된 앱으로 다시 전환 되 면 시스템은 [**활성화**](/uwp/api/windows.applicationmodel.core.coreapplicationview.activated) 된 이벤트를 보내고 해당 응용 프로그램 데이터를 [**onlaunched**](/uwp/api/windows.ui.xaml.application.onlaunched) 된 메서드에서 복원 해야 합니다.
 
-시스템은 앱 종료 시 앱에 알리지 않으므로, 앱은 일시 중단될 때 응용 프로그램 데이터를 저장하고 단독 리소스와 파일 핸들을 해제하며 앱이 종료 후 활성화될 때 이 리소스와 파일 핸들을 복원해야 합니다.
+시스템은 종료 될 때 앱에 알리지 않으므로 응용 프로그램에서 응용 프로그램 데이터를 저장 하 고 일시 중단 된 경우 전용 리소스 및 파일 핸들을 해제 하 고 종료 후에 앱이 활성화 될 때 응용 프로그램을 복원 해야 합니다.
 
-처리기 내에서 비동기 호출을 수행하면 컨트롤이 해당 비동기 호출에서 즉시 반환됩니다. 즉, 비동기 호출이 아직 완료되지 않은 경우에도 실행이 이벤트 처리기에서 반환될 수 있고 앱이 다음 상태로 이동합니다. 이벤트 처리기에 전달된 [**EnteredBackgroundEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel?redirectedfrom=MSDN) 개체의 [**GetDeferral**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel?redirectedfrom=MSDN) 메서드를 사용하여 반환된 [**Windows.Foundation.Deferral**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral.complete) 개체에서 [**Complete**](https://docs.microsoft.com/uwp/api/windows.foundation.deferral) 메서드가 호출될 때까지 일시 중단을 지연할 수 있습니다.
+처리기 내에서 비동기 호출을 수행 하는 경우 해당 비동기 호출에서 제어가 즉시 반환 됩니다. 즉, 실행은 이벤트 처리기에서 반환 될 수 있으며 비동기 호출이 아직 완료 되지 않은 경우에도 앱이 다음 상태로 이동 됩니다. 반환 된 [**GetDeferral**](/uwp/api/Windows.ApplicationModel) 개체에서 [**Complete**](/uwp/api/windows.foundation.deferral.complete) 메서드를 호출할 때까지 일시 중단을 지연 시키려면 이벤트 처리기에 전달 되는 [**EnteredBackgroundEventArgs**](/uwp/api/Windows.ApplicationModel) 개체의 메서드를 사용 [**합니다.**](/uwp/api/windows.foundation.deferral)
 
-지연을 사용해도 앱이 종료되기 전에 코드를 실행할 수 있는 시간이 증가하지는 않습니다. 단지 지연의 *Complete* 메서드 호출이나 기한 경과 중 *더 빠른 시간*까지 종료가 지연됩니다. 일시 중단 상태에서 시간을 연장하려면 [**ExtendedExecutionSession**](run-minimized-with-extended-execution.md)을 사용합니다.
+지연이 발생 하면 앱이 종료 되기 전에 코드를 실행 해야 하는 양이 증가 하지 않습니다. 이는 지연의 *Complete* 메서드를 호출*하거나 최종 기한*에 도달할 때까지 종료를 지연 합니다. 일시 중단 상태의 시간을 확장 하려면 ExtendedExecutionSession을 사용 합니다. [ **ExtendedExecutionSession**](run-minimized-with-extended-execution.md)
 
 > [!NOTE]
-> Windows 8.1에서 시스템 응답성을 개선 하기 위해 앱은 일시 중단 된 후 리소스에 대 한 우선 순위가 낮은 액세스를 제공 합니다. 이 새 우선 순위를 지원하기 위해 일시 중단 작업 제한 시간이 확장되어 앱에 Windows의 일반 우선 순위에 대한 5초 제한 시간이나 Windows Phone의 1-10초 제한 시간에 해당하는 제한 시간이 부여됩니다. 이 제한 시간은 확장하거나 변경할 수 없습니다.
+> Windows 8.1에서 시스템 응답성을 개선 하기 위해 앱은 일시 중단 된 후 리소스에 대 한 우선 순위가 낮은 액세스를 제공 합니다. 이 새로운 우선 순위를 지원 하기 위해 일시 중단 작업 시간 제한은 확장 되어 앱이 Windows에서 보통 우선 순위에 대 한 5 초 시간 제한에 해당 하거나 Windows Phone에서 1 ~ 10 초 사이에 해당 합니다. 이 시간 제한 기간은 확장 하거나 변경할 수 없습니다.
 
-**Visual Studio를 사용하는 디버깅에 대한 참고 사항:** Visual Studio에서는 Windows가 디버거에 연결되어 있는 앱을 일시 중단하지 못하도록 합니다. 이렇게 하는 것은 앱이 실행되는 동안 Visual Studio 디버그 UI를 사용자가 볼 수 있도록 하기 위한 것입니다. 앱을 디버그할 때에는 Visual Studio를 사용하여 앱을 일시 중단 이벤트로 보낼 수 있습니다. **디버그 위치** 도구 모음이 표시되는지 확인한 다음 **일시 중단** 아이콘을 클릭합니다.
+**Visual Studio를 사용한 디버깅에 대 한 참고 사항:** Visual Studio는 Windows에서 디버거에 연결 된 앱을 일시 중단 하지 못하도록 합니다. 이는 앱이 실행 되는 동안 사용자가 Visual Studio 디버그 UI를 볼 수 있도록 하기 위한 것입니다. 앱을 디버깅 하는 경우 Visual Studio를 사용 하 여 일시 중단 이벤트를 보낼 수 있습니다. **디버그 위치** 도구 모음이 표시 되는지 확인 하 고 **일시 중지** 아이콘을 클릭 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [앱 수명 주기](app-lifecycle.md)
 * [앱 활성화 처리](activate-an-app.md)
 * [앱 다시 시작 처리](resume-an-app.md)
-* [시작, 일시 중단 및 다시 시작에 대 한 UX 지침](https://docs.microsoft.com/windows/uwp/launch-resume/index)
-* [확장 된 실행](run-minimized-with-extended-execution.md)
+* [시작, 일시 중단 및 다시 시작에 대 한 UX 지침](./index.md)
+* [확장 실행](run-minimized-with-extended-execution.md)
 
  
 

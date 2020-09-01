@@ -8,21 +8,21 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 08d0eb18d59c9a5c19826eb7b6e8d4b65179b6fd
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 98ba886ffd74f03b4b502e1f7351c75c76646147
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970108"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172477"
 ---
 # <a name="rotation"></a>회전
 
 
 이 문서에서는 새 Windows UI for rotation에 대해 설명 하 고 Windows 앱에서이 새로운 상호 작용 메커니즘을 사용할 때 고려해 야 하는 사용자 환경 지침을 제공 합니다.
 
-> **중요 한 api**: [**windows**](https://docs.microsoft.com/uwp/api/Windows.UI.Input). Input, [**windows. .xaml**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
+> **중요 한 api**: [**windows**](/uwp/api/Windows.UI.Input). Input, [**windows. .xaml**](/uwp/api/Windows.UI.Xaml.Input)
 
-## <a name="dos-and-donts"></a>실행 사항 및 금지 사항
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 -   사용자가 UI 요소를 직접 회전할 수 있도록 회전을 사용 합니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "82970108"
 
 ![회전에서 지 원하는 다양 한 손가락 postures을 보여 주는 다이어그램입니다.](images/ux-rotate-positions.png)
 
-**참고**    , 대부분의 경우, 사용자가 접촉 지점과 관련이 없는 회전 지점을 지정할 수 없는 경우 (예: 그리기 또는 레이아웃 응용 프로그램) 회전 지점은 두 터치 포인트 중 하나입니다. 다음 이미지는 회전 지점이 이런 방식으로 제한 되지 않는 경우 사용자 환경이 저하 될 수 있는 방법을 보여 줍니다.
+**참고**    사용자가 연결 지점 (예: 그리기 또는 레이아웃 응용 프로그램)과 관련 되지 않은 회전 지점을 지정 하지 않는 한, 대부분의 경우에는 대부분의 경우에 회전 지점은 두 터치 포인트 중 하나입니다. 다음 이미지는 회전 지점이 이런 방식으로 제한 되지 않는 경우 사용자 환경이 저하 될 수 있는 방법을 보여 줍니다.
 
 첫 번째 그림은 초기 (엄지 단추) 및 보조 (인덱스 손가락) 터치 요소를 보여 줍니다. 인덱스 손가락은 트리를 터치 하 고 엄지 단추는 로그를 터치 합니다.
 
@@ -88,7 +88,7 @@ Windows 10은 사용 가능, 제한 및 결합의 세 가지 회전 유형을 �
 <td align="left">결합 된 회전</td>
 <td align="left"><p>결합 된 회전은 제한 된 회전에 의해 적용 되는 각각의 90 방향 맞춤 지점에서 영역 (이동 <a href="guidelines-for-panning.md">에 대 한 지침</a>의 레일과 유사)으로 사용 가능한 회전을 지원 합니다. 사용자가 90도 영역 중 하나를 벗어난 개체를 해제 하는 경우 개체는 해당 위치에 유지 됩니다. 그렇지 않으면 개체가 자동으로 맞춤 지점으로 회전 합니다.</p>
 <div class="alert">
-<strong>참고</strong>  사용자 인터페이스 레일은 목표 영역에서 특정 값 또는 위치로 이동 하 여 선택에 영향을 줄 수 있는 기능입니다.
+<strong>참고</strong>    사용자 인터페이스 레일은 목표 영역에서 특정 값 이나 위치에 대 한 움직임을 제한 하 여 선택에 영향을 주는 기능입니다.
 </div>
 <div>
  
@@ -113,6 +113,6 @@ Windows 10은 사용 가능, 제한 및 결합의 세 가지 회전 유형을 �
 - [입력: 터치 적중 테스트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
 - [XAML 스크롤, 패닝 및 확대/축소 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
 - [입력: 간소화 된 잉크 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
-- [입력: GestureRecognizer를 사용한 제스처 및 조작](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [입력: GestureRecognizer를 사용한 제스처 및 조작](/samples/browse/?redirectedfrom=MSDN-samples)
 - [Input: 조작 및 제스처 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
 - [DirectX touch 입력 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))

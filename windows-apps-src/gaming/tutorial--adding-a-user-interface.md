@@ -6,12 +6,12 @@ ms.date: 10/24/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 사용자 인터페이스, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: cbe67a50cd51f17aa628ff2e02955fd90781392f
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: eca248887985fc6d33ca6d6b552a0b61a98ce428
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942823"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173107"
 ---
 # <a name="add-a-user-interface"></a>사용자 인터페이스 추가
 
@@ -21,7 +21,7 @@ ms.locfileid: "88942823"
 이제 게임에 3D 시각적 개체가 준비 되었으므로 일부 2D 요소를 추가 하는 데 집중할 수 있습니다. 그러면 게임에서 플레이어에 게임 상태에 대 한 피드백을 제공할 수 있습니다. 이 작업을 수행 하려면 3 차원 그래픽 파이프라인 출력 위에 간단한 메뉴 옵션과 준비 디스플레이 구성 요소를 추가 합니다.
 
 >[!Note]
->이 샘플에 대 한 최신 게임 코드를 다운로드 하지 않은 경우 [Direct3D sample game](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX)로 이동 합니다. 이 샘플은 여러 UWP 기능 샘플 컬렉션의 일부입니다. 샘플을 다운로드 하는 방법에 대 한 지침은 [GitHub에서 UWP 샘플 가져오기](/windows/uwp/get-started/get-uwp-app-samples)를 참조 하세요.
+>이 샘플에 대 한 최신 게임 코드를 다운로드 하지 않은 경우 [Direct3D sample game](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Simple3DGameDX)로 이동 합니다. 이 샘플은 여러 UWP 기능 샘플 컬렉션의 일부입니다. 샘플을 다운로드 하는 방법에 대 한 지침은 [GitHub에서 UWP 샘플 가져오기](../get-started/get-app-samples.md)를 참조 하세요.
 
 ## <a name="objective"></a>Objective
 

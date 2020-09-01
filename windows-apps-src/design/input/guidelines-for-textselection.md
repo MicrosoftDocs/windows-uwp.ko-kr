@@ -8,19 +8,19 @@ keywords: 키보드, 텍스트, 입력, 사용자 상호 작용
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a118a7160842154a656e0f2d29783b1b2e676755
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 7a779053f0e14317c4142158fdface4c806a02aa
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970098"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172467"
 ---
 # <a name="selecting-text-and-images"></a>텍스트 및 이미지 선택
 
 
 이 문서에서는 텍스트, 이미지 및 컨트롤을 선택 하 고 조작 하는 방법을 설명 하 고 앱에서 이러한 메커니즘을 사용할 때 고려해 야 하는 사용자 환경 지침을 제공 합니다.
 
-> **중요 한 api**: [**windows. .xaml**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input). input, [**windows**](https://docs.microsoft.com/uwp/api/Windows.UI.Input)
+> **중요 한 api**: [**windows. .xaml**](/uwp/api/Windows.UI.Xaml.Input). input, [**windows**](/uwp/api/Windows.UI.Input)
  
 
 
@@ -108,7 +108,7 @@ Windows에서는 선택 상호 작용에 대 한 두 가지 가능한 상태, �
 
 ### <a name="for-developers"></a>개발자용
 
-- [사용자 지정 사용자 조작](https://docs.microsoft.com/windows/uwp/design/layout/index)
+- [사용자 지정 사용자 조작](../layout/index.md)
 
 ### <a name="samples"></a>샘플
 
@@ -124,6 +124,6 @@ Windows에서는 선택 상호 작용에 대 한 두 가지 가능한 상태, �
 - [입력: 터치 적중 테스트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
 - [XAML 스크롤, 패닝 및 확대/축소 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
 - [입력: 간소화 된 잉크 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
-- [입력: Windows 8 제스처 샘플](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [입력: Windows 8 제스처 샘플](/samples/browse/?redirectedfrom=MSDN-samples)
 - [Input: 조작 및 제스처 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
 - [DirectX touch 입력 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))

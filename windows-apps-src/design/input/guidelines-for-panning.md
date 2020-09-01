@@ -8,22 +8,22 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b6e391354b34f00460eb5988f4e03c1ff07a9296
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: e77485bd2febe2ee032f9a0c3ceada31c2807ee0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970118"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172497"
 ---
 # <a name="guidelines-for-panning"></a>패닝에 대 한 지침
 
 
 이동 또는 스크롤을 통해 사용자는 단일 뷰 내에서 이동 하 여 뷰포트 내에 맞지 않는 뷰의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범이 있습니다.
 
-> **중요 한 api**: [**windows**](https://docs.microsoft.com/uwp/api/Windows.UI.Input). Input, [**windows. .xaml**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input)
+> **중요 한 api**: [**windows**](/uwp/api/Windows.UI.Input). Input, [**windows. .xaml**](/uwp/api/Windows.UI.Xaml.Input)
 
 
-## <a name="dos-and-donts"></a>실행 사항 및 금지 사항
+## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
 
 **표시기 및 스크롤 막대 패닝**
@@ -32,7 +32,7 @@ ms.locfileid: "82970118"
 
 -   위치 및 크기 큐를 제공 하기 위해 패닝 표시기 및 스크롤 막대를 표시 합니다. 사용자 지정 탐색 기능을 제공 하는 경우 숨깁니다.
 
-    **참고**  표준 스크롤 막대와 달리 패닝 표시기는 전적으로 정보를 제공 합니다. 이러한 장치는 입력 장치에 노출 되지 않으며 어떤 방식으로든 조작할 수 없습니다.
+    **참고**    표준 스크롤 막대와 달리 패닝 표시기는 전적으로 정보를 제공 합니다. 이러한 장치는 입력 장치에 노출 되지 않으며 어떤 방식으로든 조작할 수 없습니다.
 
      
 
@@ -115,7 +115,7 @@ Windows 8은 세 가지 유형의 이동을 지원 합니다.
 -   터치를 위한 패닝 표시기입니다.
 -   마우스, 터치 패드, 키보드 및 스타일러스를 비롯 한 다른 입력 장치의 스크롤 막대.
 
-**참고**  패닝 표시기는 pannable 지역 내에 있는 경우에만 표시 됩니다. 마찬가지로 스크롤 막대는 마우스 커서, 펜/스타일러스 커서 또는 키보드 포커스가 스크롤 가능 영역 내에 있는 경우에만 표시 됩니다.
+**참고**    패닝 표시기는 터치 접점이 pannable 지역 내에 있는 경우에만 표시 됩니다. 마찬가지로 스크롤 막대는 마우스 커서, 펜/스타일러스 커서 또는 키보드 포커스가 스크롤 가능 영역 내에 있는 경우에만 표시 됩니다.
 
  
 
@@ -125,8 +125,8 @@ Windows 8은 세 가지 유형의 이동을 지원 합니다.
 
 ![길이가 다른 두 개의 pannable 영역 및 패닝 표시기를 보여 주는 이미지입니다.](images/scrolling-indicators.png)
 
-**이동 동작**
-**끌기** 제스처를 사용 하 여 이동 하면 터치 접점이 리프트 될 때 관성 동작이 상호 작용에 도입 됩니다. 관성을 사용 하면 사용자의 직접 입력 없이도 특정 거리 임계값에 도달할 때까지 콘텐츠가 계속 이동 합니다. 맞추기 요소를 사용 하 여이 관성 동작을 수정 합니다.
+**패닝 동작** 
+ **맞춤 요소** 터치 접점이 리프트 될 때 살짝 밀기 제스처를 사용 하 여 이동 하면 관성 동작이 상호 작용에 도입 됩니다. 관성을 사용 하면 사용자의 직접 입력 없이도 특정 거리 임계값에 도달할 때까지 콘텐츠가 계속 이동 합니다. 맞추기 요소를 사용 하 여이 관성 동작을 수정 합니다.
 
 맞춤 지점은 앱 콘텐츠의 논리적 중지를 지정 합니다. Cognitively, 스냅 지점은 사용자에 대 한 페이징 메커니즘 역할을 하며 과도 한 슬라이딩 또는 피로 (large pannable) 지역에서의 최소화 합니다. 이를 통해 부정확 한 사용자 입력을 처리 하 고 특정 콘텐츠나 키 정보의 하위 집합이 뷰포트에 표시 되도록 할 수 있습니다.
 
@@ -170,9 +170,9 @@ Pannable 지역이 다른 pannable 지역 안에 중첩 된 경우 컨테이너�
 
 ## <a name="related-articles"></a>관련된 문서
 
-- [사용자 지정 사용자 조작](https://docs.microsoft.com/windows/uwp/design/layout/index)
-- [ListView 및 GridView 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)
-- [키보드 접근성](https://docs.microsoft.com/windows/uwp/accessibility/keyboard-accessibility)
+- [사용자 지정 사용자 조작](../layout/index.md)
+- [ListView 및 GridView 최적화](../../debug-test-perf/optimize-gridview-and-listview.md)
+- [키보드 접근성](../accessibility/keyboard-accessibility.md)
 
 **샘플**
 - [기본 입력 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/BasicInput)
@@ -186,6 +186,6 @@ Pannable 지역이 다른 pannable 지역 안에 중첩 된 경우 컨테이너�
 - [입력: 터치 적중 테스트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
 - [XAML 스크롤, 패닝 및 확대/축소 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
 - [입력: 간소화 된 잉크 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
-- [입력: Windows 8 제스처 샘플](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [입력: Windows 8 제스처 샘플](/samples/browse/?redirectedfrom=MSDN-samples)
 - [Input: 조작 및 제스처 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
 - [DirectX touch 입력 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))

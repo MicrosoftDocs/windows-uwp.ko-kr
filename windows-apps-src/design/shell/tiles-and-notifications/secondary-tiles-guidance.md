@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: windows 10, uwp, 보조 타일, 지침, 지침, 모범 사례
 ms.localizationpriority: medium
-ms.openlocfilehash: 400b0d48fd68c720d613325d1938c0c4a70931a7
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 83f8a095a4e15c3ec0ebb02eebc183cf4beb01ea
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971028"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172337"
 ---
 # <a name="secondary-tile-guidance"></a>보조 타일 지침
 
@@ -49,6 +49,6 @@ ms.locfileid: "82971028"
 
 * [보조 타일 개요](secondary-tiles.md)
 * [보조 타일 고정](secondary-tiles-pinning.md)
-* [타일 자산](app-assets.md)
+* [타일 자산](../../style/app-icons-and-logos.md)
 * [타일 콘텐츠 설명서](create-adaptive-tiles.md)
 * [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)

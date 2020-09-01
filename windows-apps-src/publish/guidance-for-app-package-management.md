@@ -1,19 +1,19 @@
 ---
 Description: 앱의 패키지를 고객에 게 제공 하는 방법 및 특정 패키지 시나리오를 관리 하는 방법을 알아봅니다.
-title: 앱 패키지 관리에 대 한 지침
+title: 앱 패키지 관리 지침
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4615503c41df6cef891ab8e77024d9951c489b38
-ms.sourcegitcommit: 96b7be654a0922eeb421b5fa51ebfc586abe74fe
+ms.openlocfilehash: 5ecd8cc96196c31615eac032183956de3bee9e4b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84945950"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89171057"
 ---
-# <a name="guidance-for-app-package-management"></a>앱 패키지 관리에 대 한 지침
+# <a name="guidance-for-app-package-management"></a>앱 패키지 관리 지침
 
 앱의 패키지를 고객에 게 제공 하는 방법 및 특정 패키지 시나리오를 관리 하는 방법을 알아봅니다.
 
@@ -52,7 +52,7 @@ ms.locfileid: "84945950"
 
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>이전에 지원 되는 장치 제품군에 대 한 패키지 제거
 
-앱이 이전에 지 원하는 특정 [장치 제품군](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview) 에 대 한 모든 패키지를 제거 하는 경우 **패키지** 페이지에 변경 내용을 저장 하기 전에 이것이 의도 한 것인지 확인 하는 메시지가 표시 됩니다.
+앱이 이전에 지 원하는 특정 [장치 제품군](/uwp/extension-sdks/device-families-overview) 에 대 한 모든 패키지를 제거 하는 경우 **패키지** 페이지에 변경 내용을 저장 하기 전에 이것이 의도 한 것인지 확인 하는 메시지가 표시 됩니다.
 
 앱이 이전에 지 원하는 장치 제품군에서 실행할 수 있는 모든 패키지를 제거 하는 제출을 게시할 때 새 고객이 해당 장치 제품군에서 앱을 획득할 수 없게 됩니다. 나중에 언제 든 지 다른 업데이트를 게시 하 여 해당 장치 제품군에 대 한 패키지를 다시 제공할 수 있습니다.
 

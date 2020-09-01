@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f1df2048ea54b3ffc7c62270841b2be650bb90ea
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 166ff20e792c5cf4a5969e954ed1b7d04e5c5c9f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970828"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173297"
 ---
 # <a name="choose-a-notification-delivery-method"></a>알림 전달 방법 선택
 
@@ -28,9 +28,9 @@ ms.locfileid: "82970828"
 앱에서 알림을 배달 하는 데 사용할 수 있는 메커니즘에는 다음 네 가지가 있습니다.
 
 -   **로컬**
--   **예약됨**
+-   **예약**
 -   **정기적인**
--   **푸시**
+-   **Push**
 
 다음 표에서는 알림 배달 유형을 요약 합니다.
 
@@ -45,8 +45,8 @@ ms.locfileid: "82970828"
 <tr class="header">
 <th align="left">배달 방법</th>
 <th align="left">사용 방법</th>
-<th align="left">설명</th>
-<th align="left">예제</th>
+<th align="left">Description</th>
+<th align="left">예</th>
 </tr>
 </thead>
 <tbody>
@@ -61,7 +61,7 @@ ms.locfileid: "82970828"
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left">예약됨</td>
+<td align="left">예약</td>
 <td align="left">타일, 알림</td>
 <td align="left">지정 된 시간에 업데이트 하기 위해 미리 알림을 예약 하는 API 호출 집합입니다.</td>
 <td align="left"><ul>
@@ -154,7 +154,7 @@ API 호출이 로컬 인 동안 알림은 웹 이미지를 참조할 수 있습�
 자세한 내용은 다음을 참조하세요.
 
 -   [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
--   [푸시 알림에 대 한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
+-   [푸시 알림에 대 한 지침](./windows-push-notification-services--wns--overview.md)
 -   [Windows 앱 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
 
 
@@ -163,15 +163,11 @@ API 호출이 로컬 인 동안 알림은 웹 이미지를 참조할 수 있습�
 
 * [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)
 * [로컬 알림 메시지 보내기](send-local-toast.md)
-* [푸시 알림에 대 한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)
-* [알림 메시지에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-badges-notifications)
+* [푸시 알림에 대 한 지침](./windows-push-notification-services--wns--overview.md)
+* [알림 메시지에 대한 지침](./index.md)
 * [정기 알림 개요](periodic-notification-overview.md)
 * [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
 * [GitHub의 Windows 앱 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
  
 
  
-
-
-
-

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bf17a6b835e0e594454f433770edb598ae637a0
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: e020972a8dff0b0721fd2c5726999a7896d359c4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942833"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167907"
 ---
 # <a name="launch-the-windows-maps-app"></a>Windows 지도 앱 실행
 
@@ -51,7 +51,7 @@ URI 체계에 대 한 설명은 다음과 같습니다.
 ## <a name="launch-a-uri-from-your-app"></a>앱에서 URI 시작
 
 
-앱에서 Windows Maps 앱을 시작 하려면 **bingmaps:**, LaunchUriAsync **: 또는** **ms-to:** URI를 사용 하 여 [**LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출 합니다. 다음 예제에서는 이전 예제와 동일한 URI를 실행합니다. URI를 통해 앱을 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기본 앱 시작](launch-default-app.md)을 참조 하세요.
+앱에서 Windows Maps 앱을 시작 하려면 **bingmaps:**, LaunchUriAsync **: 또는** **ms-to:** URI를 사용 하 여 [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출 합니다. 다음 예제에서는 이전 예제와 동일한 URI를 실행합니다. URI를 통해 앱을 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기본 앱 시작](launch-default-app.md)을 참조 하세요.
 
 ```cs
 // Center on New York City
@@ -63,7 +63,7 @@ launcherOptions.TargetApplicationPackageFamilyName = "Microsoft.WindowsMaps_8wek
 var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherOptions);
 ```
 
-이 예제에서는 [**Launcheroptions**](https://docs.microsoft.com/uwp/api/Windows.System.LauncherOptions) 클래스를 사용 하 여 Windows Maps 앱이 시작 되도록 합니다.
+이 예제에서는 [**Launcheroptions**](/uwp/api/Windows.System.LauncherOptions) 클래스를 사용 하 여 Windows Maps 앱이 시작 되도록 합니다.
 
 ## <a name="display-known-locations"></a>알려진 위치 표시
 
@@ -185,7 +185,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>cpval = degreeslat "~" degreeslon</p>
 <p>degreeslat = ["-"] 1*3Digit ["." 1*7digit]</p>
 <p>degreeslon = ["-"] 1*2Digit ["." 1*7digit]</p>
-<p>예:</p>
+<p>예제:</p>
 <p>cp = 40.726966 ~-74.006076</p></td>
 <td align="left"><p>두 값은 모두 10 진수 각도로 표시 되 고 물결표 ()로 구분 되어야 합니다 <b>~</b> .</p>
 <p>유효한 경도 값은-180에서 + 180 포함 사이입니다.</p>
@@ -201,7 +201,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>eastlongitude = degreeslon</p>
 <p>degreeslat = ["-"] 13DIGIT ["." 17DIGIT]</p>
 <p>degreeslon = ["-"] 12DIGIT ["." 17DIGIT]</p>
-<p>예:</p>
+<p>예제:</p>
 <p>bb = 39.719 _-74.52 ~ 41.71 _-73.5</p></td>
 <td align="left"><p>물결표 ()를 사용 하 여 오른쪽 위 모퉁이에서 왼쪽 아래 모퉁이를 분리 하 고 10 진수도로 표현 된 경계 상자를 지정 하는 사각형 영역 <b>~</b> 입니다. 각에 대 한 위도 및 경도는 밑줄 (<b>_</b>)로 구분 됩니다.</p>
 <p>유효한 경도 값은-180에서 + 180 포함 사이입니다.</p>
@@ -212,7 +212,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <td align="left"><p>위치</p></td>
 <td align="left"><p>여기서 = "where =" whereval</p>
 <p>whereval = 1 *(ALPHA/DIGIT/"-"/"."/"_"/pct 인코딩된/"!"/"$"/"'"/"("/")"/"*"/"+"/","/";"/":"/"/"/" @" / " ?")</p>
-<p>예:</p>
+<p>예제:</p>
 <p>여기서 = 1600% 20Pennsylvania% 20Ave,% 20Ave,% 20AVE</p></td>
 <td align="left"><p>특정 위치, 랜드마크 또는 장소에 대 한 용어를 검색 합니다.</p></td>
 </tr>
@@ -221,7 +221,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <td align="left"><p>쿼리 용어</p></td>
 <td align="left"><p>q = "q ="</p>
 <p>whereval</p>
-<p>예:</p>
+<p>예제:</p>
 <p>q = 멕시코% 20restaurants</p></td>
 <td align="left"><p>지역 비즈니스 또는 비즈니스 범주에 대 한 용어를 검색 합니다.</p></td>
 </tr>
@@ -229,7 +229,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <td align="left"><p><b>lvl</b></p></td>
 <td align="left"><p>확대/축소 수준</p></td>
 <td align="left"><p>lvl = "lvl =" 1<i>2Digit ["." 1</i>2digit]</p>
-<p>예:</p>
+<p>예제:</p>
 <p>lvl = 10.50</p></td>
 <td align="left"><p>지도 보기의 확대/축소 수준을 정의 합니다. 유효한 값은 1-20입니다. 여기서 1은 모든 방식으로 축소 됩니다.</p></td>
 </tr>
@@ -237,7 +237,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <td align="left"><p><b>sty</b></p></td>
 <td align="left"><p>스타일</p></td>
 <td align="left"><p>sty = "sty =" ("a"/"r"/"3d")</p>
-<p>예:</p>
+<p>예제:</p>
 <p>sty = a</p></td>
 <td align="left"><p>지도 스타일을 정의 합니다. 이 매개 변수에 유효한 값은 다음과 같습니다.</p>
 <ul>
@@ -257,7 +257,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <td align="left"><p><b>rad</b></p></td>
 <td align="left"><p>반지름</p></td>
 <td align="left"><p>rad = "rad =" 1 * 8 자리</p>
-<p>예:</p>
+<p>예제:</p>
 <p>rad = 1000</p></td>
 <td align="left"><p>원하는 지도 보기를 지정 하는 원형 영역입니다. 반지름 값은 미터 단위로 측정 됩니다.</p></td>
 </tr>
@@ -265,7 +265,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <td align="left"><p><b>pit</b></p></td>
 <td align="left"><p>피치</p></td>
 <td align="left"><p>pit = "pit =" 피치</p>
-<p>예:</p>
+<p>예제:</p>
 <p>pit = 60</p></td>
 <td align="left"><p>지도를 표시 하는 각도를 나타냅니다. 여기서 90는 가로 (최대값)를 확인 하 고 0은 아래로 (최소) 조회 합니다.</p><p>유효한 피치 값은 0과 90(포함) 사이입니다.</td>
 </tr>
@@ -273,7 +273,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <td align="left"><p><b>hdg</b></p></td>
 <td align="left"><p>제목</p></td>
 <td align="left"><p>hdg = "hdg =" 제목</p>
-<p>예:</p>
+<p>예제:</p>
 <p>hdg = 180</p></td>
 <td align="left"><p>지도의 방향 (도)을 나타냅니다 (0 또는 360 = 북부, 90 = 동부, 180 = 남부 및 270 = 서쪽).</p></td>
 </tr>
@@ -281,7 +281,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <td align="left"><p><b>ss</b></p></td>
 <td align="left"><p>Streetside</p></td>
 <td align="left"><p>ss = "ss =" 비트</p>
-<p>예:</p>
+<p>예제:</p>
 <p>ss = 1</p></td>
 <td align="left"><p>인 경우 거리 수준 이미지를 표시 함을 나타냅니다 <code>ss=1</code> . <b>Ss</b> 매개 변수를 생략 하면와 같은 결과가 생성 <code>ss=0</code> 됩니다. 을 <b>cp</b> 매개 변수와 함께 사용 하 여 주소 수준 보기의 위치를 지정 합니다.</p>
 <div class="alert">
@@ -295,7 +295,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <td align="left"><p><b>trfc</b></p></td>
 <td align="left"><p>트래픽</p></td>
 <td align="left"><p>trfc = "trfc =" BIT</p>
-<p>예:</p>
+<p>예제:</p>
 <p>trfc = 1</p></td>
 <td align="left"><p>지도에 트래픽 정보를 포함할지 여부를 지정 합니다. Trfc 매개 변수를 생략 하면와 같은 결과가 생성 <code>trfc=0</code> 됩니다.</p>
 <div class="alert">
@@ -338,7 +338,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <td align="left"><p><b>mode</b></p></td>
 <td align="left"><p>교통 모드</p></td>
 <td align="left"><p>mode = "mode =" ("d"/"t"/"w")</p>
-<p>예:</p>
+<p>예제:</p>
 <p>모드 = d</p></td>
 <td align="left"><p>교통 모드를 정의 합니다. 이 매개 변수에 유효한 값은 다음과 같습니다.</p>
 <ul>
@@ -351,7 +351,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 
 <tr class="even">
 <td align="left"><p><b>컬렉션</b></p></td>
-<td align="left"><p>컬렉션</p></td>
+<td align="left"><p>수집</p></td>
 <td align="left"><p>collection = "collection =" (name "~"/) point ["~" point]</p>
 <p>name = "name." whereval </p>
 <p>whereval = 1 (ALPHA/DIGIT/"-"/"."/"_"/pct 인코딩된/"!"/"$"/"'"/"("/")"/""/"+"/","/";"/":"/"/"/" @" / " ?") </p>
@@ -362,7 +362,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriNewYork, launcherO
 <p>제목 = whereval</p>
 
 
-<p>예:</p>
+<p>예제:</p>
 <p>collection = name. % 20Trip% 20trip _-115.176753_Las% 20Vegas ~ 37.8268 _-122.4798_Golden% 20Trip% 20Trip</p></td>
 <td align="left"><p>지도 및 목록에 추가할 점의 컬렉션입니다. Name 매개 변수를 사용 하 여 지점의 컬렉션 이름을 지정할 수 있습니다. 위도, 경도 및 선택적 제목을 사용 하 여 점을 지정 합니다.</p>
 <p>이름 및 여러 점이 물결표 ()로 구분 <b>~</b> 됩니다.</p>

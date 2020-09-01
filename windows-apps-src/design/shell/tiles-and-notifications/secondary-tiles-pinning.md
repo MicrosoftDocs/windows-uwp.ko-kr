@@ -1,20 +1,20 @@
 ---
 Description: 보조 타일을 고정 하 여 Windows 앱에서 시작 하는 방법을 알아봅니다.
-title: 보조 타일을 시작에 고정
+title: 시작에 보조 타일 고정
 label: Pin secondary tiles to Start
 template: detail.hbs
 ms.date: 05/25/2017
 ms.topic: article
 keywords: windows 10, uwp, 보조 타일, pin, 고정, 빠른 시작, 코드 샘플, 예제, secondarytile
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c535e7e2abaf68212cb0a2f6daac8741b6548a5
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 7499a9a4040850595f616a5de0badb9efeab635f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971048"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172317"
 ---
-# <a name="pin-secondary-tiles-to-start"></a>보조 타일을 시작에 고정
+# <a name="pin-secondary-tiles-to-start"></a>시작에 보조 타일 고정
 
 
 이 항목에서는 Windows 앱에 대 한 보조 타일을 만들고 시작 메뉴에 고정 하는 단계를 안내 합니다.
@@ -181,6 +181,6 @@ var tiles = await SecondaryTile.FindAllAsync();
 
 * [보조 타일 개요](secondary-tiles.md)
 * [보조 타일 지침](secondary-tiles-guidance.md)
-* [타일 자산](app-assets.md)
+* [타일 자산](../../style/app-icons-and-logos.md)
 * [타일 콘텐츠 설명서](create-adaptive-tiles.md)
 * [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)

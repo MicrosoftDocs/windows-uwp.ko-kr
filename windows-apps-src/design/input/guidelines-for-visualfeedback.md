@@ -8,26 +8,26 @@ keywords: 시각적 피드백, 포커스 피드백, 터치 피드백, 접촉 시
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fcb6945c488bc1b715c339fa39949ea62bdb2a12
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 9ced83ca771f4954f8e42dc42e0882d1a5b7c6b1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970078"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172457"
 ---
 # <a name="guidelines-for-visual-feedback"></a>시각적 피드백에 대한 지침
 
 시각적 피드백을 사용하여 조작이 감지, 해석 및 처리될 때 사용자에게 표시할 수 있습니다. 시각적 피드백은 조작 의지를 북돋아 사용자에게 도움이 될 수 있습니다. 시각적 피드백은 조작이 성공했음을 표시하여 사용자의 제어 감각을 향상합니다. 또한 시스템 상태를 전달하고 오류를 줄여 줍니다.
 
-> **중요 한 api**: [**windows. input**](https://docs.microsoft.com/uwp/api/Windows.Devices.Input) [**,**](https://docs.microsoft.com/uwp/api/Windows.UI.Core) [**windows**](https://docs.microsoft.com/uwp/api/Windows.UI.Input). ui>
+> **중요 한 api**: [**windows. input**](/uwp/api/Windows.Devices.Input) [**,**](/uwp/api/Windows.UI.Core) [**windows**](/uwp/api/Windows.UI.Input). ui>
 
 ## <a name="recommendations"></a>권장 사항
 
 - 광범위한 수정이 컨트롤과 애플리케이션의 성능 및 접근성에 영향을 미칠 수 있으므로 컨트롤 템플릿의 수정을 디자인 의도와 직접 관련된 것으로만 제한하도록 합니다. 
-    - 시각적 상태 속성을 비롯한 컨트롤 속성 사용자 지정에 대한 추가 정보는 [XAML 스타일](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-styles)을 참조하세요.
-    - 컨트롤 템플릿 변경한 대한 자세한 내용은 [UserControl 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol)를 참조하세요.
+    - 시각적 상태 속성을 비롯한 컨트롤 속성 사용자 지정에 대한 추가 정보는 [XAML 스타일](../controls-and-patterns/xaml-styles.md)을 참조하세요.
+    - 컨트롤 템플릿 변경한 대한 자세한 내용은 [UserControl 클래스](/uwp/api/windows.ui.xaml.controls.usercontrol)를 참조하세요.
     - 템플릿 컨트롤에 중요한 변경을 하려는 경우 사용자 지정 템플릿의 컨트롤을 만드는 것이 좋습니다. 사용자 지정 템플릿의 컨트롤의 예는 [사용자 지정 편집 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl)을 참조합니다.
-- 앱 사용에 방해가 될 수 있는 경우에는 터치 시각화를 사용하지 마세요. 자세한 내용은 [**ShowGestureFeedback**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.showgesturefeedback)를 참조하세요.
+- 앱 사용에 방해가 될 수 있는 경우에는 터치 시각화를 사용하지 마세요. 자세한 내용은 [**ShowGestureFeedback**](/uwp/api/windows.ui.input.gesturerecognizer.showgesturefeedback)를 참조하세요.
 - 반드시 필요한 경우가 아니면 피드백을 표시하지 마세요. 다른 곳에서 제공되지 않는 가치를 추가하는 경우가 아니면 시각적 피드백을 표시하지 않고 UI를 깔끔하고 간결하게 유지합니다.
 - 기본 제공 Windows 제스처의 시각적 피드백 동작을 과도하게 사용자 지정하지 마세요. 사용자 지정하면 일관되지 않고 혼란을 주는 사용자 환경이 생성될 수 있습니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "82970078"
 
 시각적 피드백은 일반적으로 입력 디바이스(터치, 터치 패드, 마우스, 펜/스타일러스, 키보드 등)에 따라 달라집니다. 예를 들어 마우스에 대한 기본 제공 피드백은 대체로 커서 이동 및 변경인 반면 터치와 펜에는 접촉 시각화가 필요하고 키보드 입력 및 탐색은 포커스 사각형과 강조 표시를 사용합니다.
 
-[**ShowGestureFeedback**](https://docs.microsoft.com/uwp/api/windows.ui.input.gesturerecognizer.showgesturefeedback)을 사용하여 플랫폼 제스처에 대한 피드백 동작을 설정합니다.
+[**ShowGestureFeedback**](/uwp/api/windows.ui.input.gesturerecognizer.showgesturefeedback)을 사용하여 플랫폼 제스처에 대한 피드백 동작을 설정합니다.
 
 피드백 UI를 사용자 지정하는 경우 모든 입력 모드를 지원하고 모든 입력 모드에 적합한 피드백을 제공해야 합니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "82970078"
 
 모든 Windows 앱은 애플리케이션 내의 조작 가능한 컨트롤 주위에 보다 정의된 포커스 화면 효과를 표시합니다. 이러한 새 포커스 화면 효과는 완전히 사용자 지정할 수 있으며 필요에 따라 사용하지 않도록 설정할 수도 있습니다.
 
-Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 같이 게임 패드 또는 키보드 입력을 통해 포커스할 수 있는 요소의 경계를 애니메이션화하는 조명 효과인 **포커스 표시**를 지원합니다. 자세한 내용은 [Xbox 및 TV용 디자인](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv#reveal-focus)을 참조하세요.
+Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 같이 게임 패드 또는 키보드 입력을 통해 포커스할 수 있는 요소의 경계를 애니메이션화하는 조명 효과인 **포커스 표시**를 지원합니다. 자세한 내용은 [Xbox 및 TV용 디자인](../devices/designing-for-tv.md#reveal-focus)을 참조하세요.
 
 ## <a name="color-branding--customizing"></a>색 브랜딩 및 사용자 지정
 
@@ -73,9 +73,9 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 ```
 ![높은 가시성 포커스 화면 효과 여백 두께](images/FocusMargin.png)
 
-여백은 [**Thickness**](https://docs.microsoft.com/dotnet/api/system.windows.thickness) 형식의 속성이므로 컨트롤의 특정 측면에만 표시되도록 사용자 지정할 수 있습니다. 아래를 참조 ![하세요. 높은 표시 유형 포커스 시각적 여백 두께 아래쪽만](images/FocusThicknessSide.png)
+여백은 [**Thickness**](/dotnet/api/system.windows.thickness) 형식의 속성이므로 컨트롤의 특정 측면에만 표시되도록 사용자 지정할 수 있습니다. 아래를 참조 하세요. ![ 높은 표시 유형 포커스 시각적 여백 두께 아래쪽만](images/FocusThicknessSide.png)
 
-여백은 컨트롤의 시각적 범위와 포커스 화면 효과 *보조 테두리* 시작 부분 사이의 간격입니다. 기본 여백은 컨트롤 범위에서 **1px**입니다. **FocusVisualMargin** 속성을 변경하여 컨트롤별로 이 여백을 편집할 수 있습니다.
+여백은 컨트롤의 시각적 경계와 포커스 시각적 개체 *보조 테두리*의 시작 사이에 있는 공간입니다. 기본 여백이 제어 범위에서 **1px** . **FocusVisualMargin** 속성을 변경 하 여 컨트롤 단위로이 여백을 편집할 수 있습니다.
 ```XAML
 <Slider Width="200" FocusVisualMargin="-5"/>
 ```
@@ -114,7 +114,7 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 
 ### <a name="for-developers"></a>개발자용
 
-- [사용자 지정 사용자 조작](https://docs.microsoft.com/windows/uwp/design/layout/index)
+- [사용자 지정 사용자 조작](../layout/index.md)
 
 ### <a name="samples"></a>샘플
 
@@ -130,7 +130,7 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 - [입력: 터치 적중 테스트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
 - [XAML 스크롤, 패닝 및 확대/축소 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
 - [입력: 간소화 된 잉크 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
-- [입력: Windows 8 제스처 샘플](https://docs.microsoft.com/samples/browse/?redirectedfrom=MSDN-samples)
+- [입력: Windows 8 제스처 샘플](/samples/browse/?redirectedfrom=MSDN-samples)
 - [Input: 조작 및 제스처 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
 - [DirectX touch 입력 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))
  

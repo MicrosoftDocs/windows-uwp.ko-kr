@@ -5,12 +5,12 @@ ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c17351cf964ffb05dc60dbaf5c6ced1db467f78
-ms.sourcegitcommit: 015291bdf2e7d67076c1c85fc025f49c840ba475
+ms.openlocfilehash: fd5f2b76af856dd66e2dfd0ee2b3e429199e6a19
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469538"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172287"
 ---
 # <a name="bluetooth-gatt-client"></a>Bluetooth GATT 클라이언트
 
@@ -29,12 +29,12 @@ ms.locfileid: "85469538"
 
 > **중요 API**
 >
-> - [**Windows. Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth)
-> - [**Windows..**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile)
+> - [**Windows.Devices.Bluetooth**](/uwp/api/Windows.Devices.Bluetooth)
+> - [**Windows..**](/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile)
 
 ## <a name="overview"></a>개요
 
-개발자는 [**Windows**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile) 의 api를 사용 하 여 bluetooth LE 장치에 액세스할 수 있습니다. Bluetooth LE 장치는 다음 컬렉션을 통해 해당 기능을 노출 합니다.
+개발자는 [**Windows**](/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile) 의 api를 사용 하 여 bluetooth LE 장치에 액세스할 수 있습니다. Bluetooth LE 장치는 다음 컬렉션을 통해 해당 기능을 노출 합니다.
 
 - 서비스
 - 특징
@@ -59,9 +59,9 @@ Bluetooth LE GATT Api는 원시 전송에 액세스 하는 대신 개체 및 함
 - Windows의 DeviceWatcher. 열거형
 - AdvertisementWatcher의
 
-두 번째 방법은 [광고](ble-beacon.md) 설명서의 길이에 설명 되어 있지만 여기서는 자세히 다루지 않지만 특정 [광고 필터](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.advertisementfilter)를 충족 하는 주변 장치의 Bluetooth 주소를 찾는 것이 기본 개념입니다. 주소가 있으면 [BluetoothLEDevice. FromBluetoothAddressAsync](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.bluetoothledevice.frombluetoothaddressasync) 를 호출 하 여 장치에 대 한 참조를 가져올 수 있습니다.
+두 번째 방법은 [광고](ble-beacon.md) 설명서의 길이에 설명 되어 있지만 여기서는 자세히 다루지 않지만 특정 [광고 필터](/uwp/api/windows.devices.bluetooth.advertisement.bluetoothleadvertisementwatcher.advertisementfilter)를 충족 하는 주변 장치의 Bluetooth 주소를 찾는 것이 기본 개념입니다. 주소가 있으면 [BluetoothLEDevice. FromBluetoothAddressAsync](/uwp/api/windows.devices.bluetooth.bluetoothledevice.frombluetoothaddressasync) 를 호출 하 여 장치에 대 한 참조를 가져올 수 있습니다.
 
-이제 DeviceWatcher 메서드로 돌아갑니다. Bluetooth LE 장치는 Windows의 다른 장치와 마찬가지로 [열거 api](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration)를 사용 하 여 쿼리할 수 있습니다. [Devicewatcher](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher) 클래스를 사용 하 여 찾을 장치를 지정 하는 쿼리 문자열을 전달 합니다.
+이제 DeviceWatcher 메서드로 돌아갑니다. Bluetooth LE 장치는 Windows의 다른 장치와 마찬가지로 [열거 api](/uwp/api/Windows.Devices.Enumeration)를 사용 하 여 쿼리할 수 있습니다. [Devicewatcher](/uwp/api/windows.devices.enumeration.devicewatcher) 클래스를 사용 하 여 찾을 장치를 지정 하는 쿼리 문자열을 전달 합니다.
 
 ```csharp
 // Query for extra properties you want returned
@@ -87,11 +87,11 @@ deviceWatcher.Stopped += DeviceWatcher_Stopped;
 deviceWatcher.Start();
 ```
 
-DeviceWatcher를 시작 하면 해당 장치에 대해 [추가](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher.added) 된 이벤트에 대 한 처리기의 쿼리를 충족 하는 각 장치에 대 한 [devicewatcher](https://docs.microsoft.com/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 을 받게 됩니다. DeviceWatcher에 대 한 자세한 내용은 [Github에서](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing)전체 샘플을 참조 하세요.
+DeviceWatcher를 시작 하면 해당 장치에 대해 [추가](/uwp/api/windows.devices.enumeration.devicewatcher.added) 된 이벤트에 대 한 처리기의 쿼리를 충족 하는 각 장치에 대 한 [devicewatcher](/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 을 받게 됩니다. DeviceWatcher에 대 한 자세한 내용은 [Github에서](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing)전체 샘플을 참조 하세요.
 
 ## <a name="connecting-to-the-device"></a>장치에 연결
 
-원하는 장치가 검색 되 면 [DeviceInformation.Id](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) 를 사용 하 여 해당 장치에 대 한 Bluetooth LE 장치 개체를 가져옵니다.
+원하는 장치가 검색 되 면 [DeviceInformation.Id](/uwp/api/windows.devices.enumeration.deviceinformation.id) 를 사용 하 여 해당 장치에 대 한 Bluetooth LE 장치 개체를 가져옵니다.
 
 ```csharp
 async void ConnectDevice(DeviceInformation deviceInfo)
@@ -188,7 +188,7 @@ if (result == GattCommunicationStatus.Success)
 }
 ```
 
-> **팁**: [DataReader](https://docs.microsoft.com/uwp/api/windows.storage.streams.datareader) 및 [datawriter 여부](https://docs.microsoft.com/uwp/api/windows.storage.streams.datawriter) 는 많은 Bluetooth api에서 가져온 원시 버퍼를 사용할 때 위한 됩니다.
+> **팁**: [DataReader](/uwp/api/windows.storage.streams.datareader) 및 [datawriter 여부](/uwp/api/windows.storage.streams.datawriter) 는 많은 Bluetooth api에서 가져온 원시 버퍼를 사용할 때 위한 됩니다.
 
 ## <a name="subscribing-for-notifications"></a>알림 구독
 
@@ -201,7 +201,7 @@ if (result == GattCommunicationStatus.Success)
 - 클라이언트 특성 구성 설명자 (CCCD)에 쓰기
 - ValueChanged 이벤트를 처리 합니다.
 
-CCCD에 쓰려면이 클라이언트에서 특정 특성 값이 변경 될 때마다이를 확인 하려고 하는 서버 장치에 지시 합니다. 다음을 수행합니다.
+CCCD에 쓰려면이 클라이언트에서 특정 특성 값이 변경 될 때마다이를 확인 하려고 하는 서버 장치에 지시 합니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면
 
 ```csharp
 GattCommunicationStatus status = await selectedCharacteristic.WriteClientCharacteristicConfigurationDescriptorAsync(
