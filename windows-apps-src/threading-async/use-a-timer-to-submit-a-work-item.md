@@ -6,28 +6,28 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 타이머, 스레드
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c34f50d7b5abec28b11fc67a7e0515f07206060
-ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
+ms.openlocfilehash: a93b023120957f6335c14a4d40013f51e4e7be2a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970131"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164117"
 ---
 # <a name="use-a-timer-to-submit-a-work-item"></a>타이머를 사용하여 작업 항목 제출
 
 
 <b>중요 API</b>
 
--   [**Windows 네임 스페이스**](https://docs.microsoft.com/uwp/api/Windows.UI.Core)
--   [** Tem를Windows.Sys합니다. 스레딩 네임 스페이스**](https://docs.microsoft.com/uwp/api/Windows.System.Threading)
+-   [**Windows 네임 스페이스**](/uwp/api/Windows.UI.Core)
+-   [** Tem를Windows.Sys합니다. 스레딩 네임 스페이스**](/uwp/api/Windows.System.Threading)
 
 타이머가 경과 된 후에 실행 되는 작업 항목을 만드는 방법에 대해 알아봅니다.
 
 ## <a name="create-a-single-shot-timer"></a>일회성 타이머 만들기
 
-[**Createtimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer) 메서드를 사용 하 여 작업 항목에 대 한 타이머를 만듭니다. 작업을 수행 하는 람다를 제공 하 고 *delay* 매개 변수를 사용 하 여 스레드 풀이 작업 항목을 사용 가능한 스레드에 할당할 수 있을 때까지 대기 하는 시간을 지정 합니다. 지연 시간은 [**TimeSpan**](https://docs.microsoft.com/uwp/api/Windows.Foundation.TimeSpan) 구조체를 사용 하 여 지정 합니다.
+[**Createtimer**](/uwp/api/windows.system.threading.threadpooltimer.createtimer) 메서드를 사용 하 여 작업 항목에 대 한 타이머를 만듭니다. 작업을 수행 하는 람다를 제공 하 고 *delay* 매개 변수를 사용 하 여 스레드 풀이 작업 항목을 사용 가능한 스레드에 할당할 수 있을 때까지 대기 하는 시간을 지정 합니다. 지연 시간은 [**TimeSpan**](/uwp/api/Windows.Foundation.TimeSpan) 구조체를 사용 하 여 지정 합니다.
 
-> **참고**    [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.core.coredispatcher.runasync) 를 사용 하 여 UI에 액세스 하 고 작업 항목에서 진행률을 표시할 수 있습니다.
+> **참고**    [**CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher.runasync) 를 사용 하 여 UI에 액세스 하 고 작업 항목에서 진행률을 표시할 수 있습니다.
 
 다음 예제에서는 3 분 내에 실행 되는 작업 항목을 만듭니다.
 
@@ -87,7 +87,7 @@ ms.locfileid: "88970131"
 
 ## <a name="provide-a-completion-handler"></a>완료 처리기 제공
 
-필요한 경우 [**TimerDestroyedHandler**](https://docs.microsoft.com/uwp/api/windows.system.threading.timerdestroyedhandler)를 사용 하 여 작업 항목 취소 및 완료를 처리 합니다. [**Createtimer**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.createtimer) 오버 로드를 사용 하 여 추가 람다를 제공 합니다. 타이머가 취소 되거나 작업 항목이 완료 될 때 실행 됩니다.
+필요한 경우 [**TimerDestroyedHandler**](/uwp/api/windows.system.threading.timerdestroyedhandler)를 사용 하 여 작업 항목 취소 및 완료를 처리 합니다. [**Createtimer**](/uwp/api/windows.system.threading.threadpooltimer.createtimer) 오버 로드를 사용 하 여 추가 람다를 제공 합니다. 타이머가 취소 되거나 작업 항목이 완료 될 때 실행 됩니다.
 
 다음 예제에서는 작업 항목을 전송 하는 타이머를 만들고 작업 항목이 완료 되거나 타이머가 취소 될 때 메서드를 호출 합니다.
 
@@ -207,7 +207,7 @@ ms.locfileid: "88970131"
 
 ## <a name="cancel-the-timer"></a>타이머 취소
 
-타이머가 계속 계산 되지만 작업 항목이 더 이상 필요 하지 않은 경우에는 [**Cancel**](https://docs.microsoft.com/uwp/api/windows.system.threading.threadpooltimer.cancel)을 호출 합니다. 타이머가 취소 되 고 작업 항목이 스레드 풀로 전송 되지 않습니다.
+타이머가 계속 계산 되지만 작업 항목이 더 이상 필요 하지 않은 경우에는 [**Cancel**](/uwp/api/windows.system.threading.threadpooltimer.cancel)을 호출 합니다. 타이머가 취소 되 고 작업 항목이 스레드 풀로 전송 되지 않습니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ``` csharp
@@ -219,7 +219,7 @@ ms.locfileid: "88970131"
 
 ## <a name="remarks"></a>설명
 
-UWP (유니버설 Windows 플랫폼) 앱은 UI 스레드를 차단할 수 있으므로 스레드를 사용할 수 없습니다 **.** [**Windows.system.threading.threadpooltimer**](https://docs.microsoft.com/uwp/api/Windows.System.Threading.ThreadPoolTimer) 를 사용 하 여 작업 항목을 만들 수 있습니다. 이렇게 하면 UI 스레드를 차단 하지 않고 작업 항목에서 수행 하는 작업이 지연 됩니다.
+UWP (유니버설 Windows 플랫폼) 앱은 UI 스레드를 차단할 수 있으므로 스레드를 사용할 수 없습니다 **.** [**Windows.system.threading.threadpooltimer**](/uwp/api/Windows.System.Threading.ThreadPoolTimer) 를 사용 하 여 작업 항목을 만들 수 있습니다. 이렇게 하면 UI 스레드를 차단 하지 않고 작업 항목에서 수행 하는 작업이 지연 됩니다.
 
 작업 항목, 타이머 작업 항목 및 정기적인 작업 항목을 보여 주는 전체 코드 샘플은 [스레드 풀 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Thread%20pool%20sample) 을 참조 하세요. 코드 샘플은 원래 Windows 8.1 용으로 작성 되었지만 Windows 10에서는 코드를 다시 사용할 수 있습니다.
 

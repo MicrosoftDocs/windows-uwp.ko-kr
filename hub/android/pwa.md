@@ -7,12 +7,12 @@ manager: jken
 ms.topic: article
 keywords: windows, pwa, android, cordova,가 나 ic, phonegap, 하이브리드 웹 앱의 android
 ms.date: 04/28/2020
-ms.openlocfilehash: c0ff9acf1d8e93e82f1db424d7a356c974988683
-ms.sourcegitcommit: 24b19e7ee06e5bb11a0dae334806741212490ee9
+ms.openlocfilehash: 482fd02ed7b5d978d81ec52309006034f70b7e47
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255217"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163987"
 ---
 # <a name="get-started-developing-a-pwa-or-hybrid-web-app-for-android"></a>Android 용 PWA 또는 하이브리드 웹 앱 개발 시작
 
@@ -61,7 +61,7 @@ Cordova의 인기 배포판에는 다음 두 가지가 있습니다.
 
 PhoneGap를 사용 하 여 PWA 또는 하이브리드 웹 앱 빌드를 시작 하려면 먼저 다음 도구를 설치 해야 합니다.
 
-- 에 대 한 node.js를 사용 합니다. [Windows 용 NodeJS를 다운로드](https://nodejs.org/en/) 하거나 Wsl (Linux 용 Windows 하위 시스템)을 사용 하는 [nodejs 설치 가이드](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2) 를 따르세요. 여러 프로젝트와 버전의 NodeJS로 작업할 경우 [nvm (Node Version Manager)](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2#install-nvm-nodejs-and-npm) 을 사용 하는 것을 고려할 수 있습니다.
+- 고와의 상호 작용에 대 한 Node.js입니다. [Windows 용 NodeJS를 다운로드](https://nodejs.org/en/) 하거나 Wsl (Linux 용 Windows 하위 시스템)을 사용 하는 [nodejs 설치 가이드](../nodejs/setup-on-wsl2.md) 를 따르세요. 여러 프로젝트와 버전의 NodeJS로 작업할 경우 [nvm (Node Version Manager)](../nodejs/setup-on-wsl2.md#install-nvm-nodejs-and-npm) 을 사용 하는 것을 고려할 수 있습니다.
 
 명령줄에서 다음을 입력 하 여 PhoneGap를 설치 합니다.
 
@@ -82,7 +82,7 @@ npm install -g phonegap
 
 이상 및 Ic를 사용 하 여 PWA 또는 하이브리드 웹 앱 빌드를 시작 하려면 먼저 다음 도구를 설치 해야 합니다.
 
-- 에 대 한 node.js를 사용 합니다. [Windows 용 NodeJS를 다운로드](https://nodejs.org/en/) 하거나 Wsl (Linux 용 Windows 하위 시스템)을 사용 하는 [nodejs 설치 가이드](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2) 를 따르세요. 여러 프로젝트와 버전의 NodeJS로 작업할 경우 [nvm (Node Version Manager)](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2#install-nvm-nodejs-and-npm) 을 사용 하는 것을 고려할 수 있습니다.
+- 고와의 상호 작용에 대 한 Node.js입니다. [Windows 용 NodeJS를 다운로드](https://nodejs.org/en/) 하거나 Wsl (Linux 용 Windows 하위 시스템)을 사용 하는 [nodejs 설치 가이드](../nodejs/setup-on-wsl2.md) 를 따르세요. 여러 프로젝트와 버전의 NodeJS로 작업할 경우 [nvm (Node Version Manager)](../nodejs/setup-on-wsl2.md#install-nvm-nodejs-and-npm) 을 사용 하는 것을 고려할 수 있습니다.
 
 - 코드를 작성 하는 VS Code. [Windows 용 VS Code를 다운로드](https://code.visualstudio.com/)합니다. Linux 명령줄을 사용 하 여 앱을 빌드하는 것을 선호 하는 경우 [Wsl 원격 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) 을 설치할 수도 있습니다.
 
@@ -144,7 +144,7 @@ cd photo-gallery
 npm install @ionic/pwa-elements
 ```
 
-파일에 다음을 추가 하 여 가져옵니다 @ionic/pwa-elements `src/main.ts`
+@ionic/pwa-elements파일에 다음을 추가 하 여 가져옵니다 `src/main.ts` .
 
 ```typescript
 import { defineCustomElements } from '@ionic/pwa-elements/loader';
@@ -203,7 +203,7 @@ Android 장치 에뮬레이터에서 응용 프로그램을 테스트 하려면 
 
 2. [AVD (Android 가상 장치)를 만듭니다](https://developer.android.com/studio/run/managing-avds.html).
 
-3. 응용 프로그램을 빌드하고 응용 프로그램을 에뮬레이터에 배포 하는 데 사용할 수 있는 `ionic cordova emulate [<platform>] [options]`하드 ic 명령을 입력 합니다. 이 경우 명령은 다음과 같아야 합니다.
+3. 응용 프로그램을 빌드하고 응용 프로그램을 에뮬레이터에 배포 하는 데 사용할 수 있는 하드 Ic 명령을 입력 `ionic cordova emulate [<platform>] [options]` 합니다. 이 경우 명령은 다음과 같아야 합니다.
 
 ```bash
 ionic cordova emulate android --list
@@ -213,7 +213,7 @@ ionic cordova emulate android --list
 
 ## <a name="additional-resources"></a>추가 리소스
 
-- [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](https://docs.microsoft.com/dual-screen/android/)
+- [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](/dual-screen/android/)
 
 - [Windows Defender 제외를 추가 하 여 성능 향상](defender-settings.md)
 

@@ -6,12 +6,12 @@ ms.date: 06/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 게임, 주 개체
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a6d087be6df93ee6798c29147f7fd1c820bd225
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: 497a1f0dc16308b4b9360aff958b94f04b6283ae
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409562"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162997"
 ---
 # <a name="define-the-main-game-object"></a>주 게임 개체 정의
 
@@ -249,7 +249,7 @@ void GameRenderer::Render()
 
 - **초기화**. 전역 변수의 시작 값을 설정 하 고 게임 개체를 초기화 합니다. 이 내용은 [게임 초기화 및 시작](#initialize-and-start-the-game) 섹션에서 다룹니다.
 - **Loadgame**. 새 수준을 초기화 하 고 로드를 시작 합니다.
-- **Loadlevelasync**. 수준을 초기화 하 고 렌더러에 대해 다른 코 루틴를 호출 하 여 장치별 수준 리소스를 로드 하는 코 루틴입니다. 이 메서드는 별도의 스레드에서 실행 됩니다. 따라서 [**ID3D11DeviceContext**](/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) 메서드와 달리 [**ID3D11Device**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) 메서드만이 스레드에서 호출할 수 있습니다. 모든 장치 컨텍스트 메서드는 **FinalizeLoadLevel** 메서드에서 호출 됩니다. 비동기 프로그래밍을 처음 접하는 경우에는 [c + +/WinRT를 사용한 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)을 참조 하세요.
+- **Loadlevelasync**. 수준을 초기화 하 고 렌더러에 대해 다른 코 루틴를 호출 하 여 장치별 수준 리소스를 로드 하는 코 루틴입니다. 이 메서드는 별도의 스레드에서 실행 됩니다. 따라서 [**ID3D11DeviceContext**](/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext) 메서드와 달리 [**ID3D11Device**](/windows/desktop/api/d3d11/nn-d3d11-id3d11device) 메서드만이 스레드에서 호출할 수 있습니다. 모든 장치 컨텍스트 메서드는 **FinalizeLoadLevel** 메서드에서 호출 됩니다. 비동기 프로그래밍을 처음 접하는 경우에는 [c + +/WinRT를 사용한 동시성 및 비동기 작업](../cpp-and-winrt-apis/concurrency.md)을 참조 하세요.
 - **FinalizeLoadLevel**. 주 스레드에서 수행 해야 하는 수준 로드 작업을 완료 합니다. 여기에는 Direct3D 11[**ID3D11DeviceContext**](/windows/desktop/api/d3d11/nn-d3d11-id3d11devicecontext)(장치 컨텍스트) 메서드에 대 한 호출이 포함 됩니다.
 - **Startlevel**. 새 수준의 게임 플레이를 시작 합니다.
 - **Pausegame**. 게임을 일시 중지 합니다.

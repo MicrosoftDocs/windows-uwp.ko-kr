@@ -1,62 +1,62 @@
 ---
-description: Microsoft Store 분석 API에서 이 메서드를 사용하여 Xbox Live 도전 과제 데이터를 가져옵니다.
+description: Microsoft Store analytics API에서이 방법을 사용 하 여 Xbox Live 성과 데이터를 가져옵니다.
 title: Xbox Live 도전 과제 데이터 가져오기
 ms.date: 06/04/2018
 ms.topic: article
-keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 분석 API, Xbox Live 분석, 도전 과제
+keywords: windows 10, uwp, 스토어 서비스, Microsoft Store 분석 API, Xbox Live 분석, 성과
 ms.localizationpriority: medium
-ms.openlocfilehash: 422024445be4662aab0a47b5527369c8b7091446
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 7d4c031d967c48c65f0f9be7b386c11c12b7366e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67317765"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162377"
 ---
 # <a name="get-xbox-live-achievements-data"></a>Xbox Live 도전 과제 데이터 가져오기
 
-Microsoft Store 분석 API에서 이 메서드를 사용하여 도전 과제 데이터가 사용 가능한 최근 날짜, 해당 날짜 이전 30일 및 해당 날짜까지 게임의 총 수명 동안 [Xbox Live 지원 게임](https://docs.microsoft.com/gaming/xbox-live/index.md)에 대한 각 도전 과제를 잠금 해제한 고객 수를 가져옵니다. 이 정보를 사용할 수 있습니다 합니다 [Xbox 분석 보고서](../publish/xbox-analytics-report.md) 파트너 센터에서.
+Microsoft Store analytics API에서이 메서드를 사용 하 여 가장 최근 하루 중에 성과 데이터를 사용할 수 있는 기간 동안 [Xbox Live 사용 가능 게임](/gaming/xbox-live/index.md) 에 대 한 각 성과를 잠금 해제 한 고객 수를 가져오고, 이전 30 일부터 해당 날 까지의 총 수명을 확인 하 고, 해당 날짜까지 게임의 총 수명을 가져옵니다. 이 정보는 파트너 센터의 [Xbox analytics 보고서](../publish/xbox-analytics-report.md) 에서도 사용할 수 있습니다.
 
 > [!IMPORTANT]
-> 이 방법은 Xbox용 게임 또는 Xbox Live 서비스를 사용하는 게임만 지원합니다. 이러한 게임은 [Microsoft 파트너](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#microsoft-partners)에 의해 게시된 게임 및 [ID@Xbox 프로그램](https://docs.microsoft.com/gaming/xbox-live/developer-program-overview.md#id)을 통해 제출한 게임을 포함하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 거쳐야 합니다. 이 방법은 현재 [Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시된 게임을 지원하지 않습니다.
+> 이 방법은 xbox Live 서비스를 사용 하는 Xbox 또는 게임의 게임만 지원 합니다. 이러한 게임은 [Microsoft 파트너](/gaming/xbox-live/developer-program-overview.md#microsoft-partners) 에서 게시 한 게임과 [ ID@Xbox 프로그램](/gaming/xbox-live/developer-program-overview.md#id)을 통해 제출 된 게임을 포함 하는 [개념 승인 프로세스](../gaming/concept-approval.md)를 통과 해야 합니다. 이 메서드는 현재 [Xbox Live 크리에이터 프로그램](/gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators.md)을 통해 게시 된 게임을 지원 하지 않습니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
-이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
+이 방법을 사용 하려면 먼저 다음을 수행 해야 합니다.
 
-* 아직 완료하지 않은 경우 Microsoft Store 분석 API에 대한 모든 [필수 조건](access-analytics-data-using-windows-store-services.md#prerequisites)을 완료합니다.
-* 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
+* 아직 수행 하지 않은 경우 Microsoft Store 분석 API에 대 한 모든 [필수 구성 요소](access-analytics-data-using-windows-store-services.md#prerequisites) 를 완료 합니다.
+* 이 메서드에 대 한 요청 헤더에 사용할 [AZURE AD 액세스 토큰을 가져옵니다](access-analytics-data-using-windows-store-services.md#obtain-an-azure-ad-access-token) . 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료 된 후 새 토큰을 얻을 수 있습니다.
 
 ## <a name="request"></a>요청
 
 
 ### <a name="request-syntax"></a>요청 구문
 
-| 메서드 | 요청 URI       |
+| 방법 | 요청 URI       |
 |--------|----------------------|
-| 가져오기    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics``` |
+| GET    | ```https://manage.devcenter.microsoft.com/v1.0/my/analytics/gameanalytics``` |
 
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 형식   | 설명                                                                 |
+| header        | 유형   | Description                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
+| 권한 부여 | 문자열 | 필수 요소. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
 
-| 매개 변수        | 형식   |  설명      |  필수  
+| 매개 변수        | 형식   |  Description      |  필수  
 |---------------|--------|---------------|------|
-| applicationId | string | Xbox Live 도전 과제 데이터를 검색하려는 게임의 [Store ID](in-app-purchases-and-trials.md#store-ids)입니다.  |  예  |
-| metricType | string | 검색할 Xbox Live 분석 데이터의 유형을 지정하는 문자열입니다. 이 메서드의 경우 값 **achievements**를 지정합니다.  |  예  |
-| top | ssNoversion | 요청에서 반환할 데이터의 행의 수입니다. 지정되지 않은 경우 최대값 및 기본값은 10000입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 다음 링크가 포함되어 있습니다. |  아니오  |
-| skip | ssNoversion | 쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용하여 큰 데이터 집합의 페이지를 탐색할 수 있습니다. 예를 들어 top=10000 및 skip=0이면 데이터의 처음 10000개 행을 검색하고 top=10000 및 skip=10000이면 데이터의 다음 10000개 행을 검색하는 방식입니다. |  아니오  |
+| applicationId | 문자열 | Xbox Live 성과 데이터를 검색 하려는 게임의 [상점 ID](in-app-purchases-and-trials.md#store-ids) 입니다.  |  예  |
+| metricType | 문자열 | 검색할 Xbox Live 분석 데이터의 유형을 지정 하는 문자열입니다. 이 메서드의 경우 **성과**값을 지정 합니다.  |  예  |
+| top | int | 요청에 반환할 데이터 행 수입니다. 지정 되지 않은 경우 최대값 및 기본값은 1만입니다. 쿼리에 더 많은 행이 있는 경우 응답 본문에는 다음 데이터 페이지를 요청 하는 데 사용할 수 있는 다음 링크가 포함 됩니다. |  예  |
+| skip | int | 쿼리에서 건너뛸 행의 수입니다. 이 매개 변수를 사용 하 여 많은 데이터 집합을 페이징 합니다. 예를 들어 top = 10000과 skip = 0은 처음 1만 개의 데이터 행을 검색 하 고 top = 10000 및 skip = 10000은 데이터의 다음 1만 행을 검색 하는 식입니다. |  예  |
 
 
 ### <a name="request-example"></a>요청 예제
 
-다음 예제에서는 Xbox Live 지원 게임에 대한 처음 10개의 도전 과제를 잠금 해제한 고객의 도전 과제 데이터를 가져오라는 요청에 대해 설명합니다. *applicationId* 값을 게임의 Store ID로 바꿉니다.
+다음 예에서는 Xbox Live 사용 게임에 대해 처음 10 개 업적의 잠금을 해제 한 고객에 대 한 업적 데이터를 가져오는 요청을 보여 줍니다. *ApplicationId* 값을 게임의 상점 ID로 바꿉니다.
 
 
 ```syntax
@@ -66,30 +66,30 @@ Authorization: Bearer <your access token>
 
 ## <a name="response"></a>응답
 
-| 값      | 형식   | 설명                  |
+| 값      | 형식   | Description                  |
 |------------|--------|-------------------------------------------------------|
-| 값      | 배열  | 게임의 각 도전 과제 데이터가 포함된 개체의 배열입니다. 각 개체의 데이터에 대한 자세한 내용은 다음 표를 참조하세요.                                                                                                                      |
-| @nextLink  | string | 데이터의 추가 페이지가 있는 경우 이 문자열에는 데이터의 다음 페이지를 요청하는 데 사용할 수 있는 URI가 포함됩니다. 예를 들어 요청의 **top** 매개 변수가 100으로 설정되어 있지만 쿼리에 대한 데이터의 행이 100개보다 많은 경우 이 값이 반환됩니다. |
-| TotalCount | ssNoversion    | 쿼리에 대한 데이터 결과에 있는 행의 총 수입니다.  |
+| 값      | array  | 게임의 각 성과에 대 한 데이터를 포함 하는 개체의 배열입니다. 각 개체의 데이터에 대 한 자세한 내용은 다음 표를 참조 하십시오.                                                                                                                      |
+| @nextLink  | 문자열 | 추가 데이터 페이지가 있는 경우이 문자열에는 다음 데이터 페이지를 요청 하는 데 사용할 수 있는 URI가 포함 됩니다. 예를 들어 요청의 **top** 매개 변수가 100로 설정 되어 있지만 쿼리에 대 한 데이터 행이 100 개를 초과 하는 경우이 값이 반환 됩니다. |
+| TotalCount | int    | 쿼리의 데이터 결과에 있는 총 행 수입니다.  |
 
 
-*값* 배열의 요소에는 다음 값이 포함됩니다.
+*값* 배열의 요소에는 다음 값이 포함 됩니다.
 
-| 값               | 형식   | 설명                           |
+| 값               | 형식   | Description                           |
 |---------------------|--------|-------------------------------------------|
-| applicationId       | string | 도전 과제 데이터를 검색할 게임의 Store ID입니다.     |
-| reportDateTime     | string |  도전 과제 데이터의 날짜입니다.    |
-| achievementId          | number |  도전 과제의 ID입니다. |
-| achievementName           | string | 도전 과제의 이름입니다.  |
-| gamerscore           | number |  도전 과제에 대한 게이머 점수 보상입니다.  |
-| dailyUnlocks           | number |  *reportDateTime*으로 지정된 날짜에 도전 과제를 잠금 해제한 고객 수입니다.  |
-| monthlyUnlocks              | number |  *reportDateTime*으로 지정된 날짜 이전의 30일 동안 도전 과제를 잠금 해제한 고객 수입니다.   |
-| totalUnlocks | number |  최대 *reportDateTime*으로 지정된 날짜까지인 게임 수명 동안 도전 과제를 잠금 해제한 고객 수입니다.   |
+| applicationId       | 문자열 | 성과 데이터를 검색 하는 게임의 저장소 ID입니다.     |
+| reportDateTime     | 문자열 |  성과 데이터의 날짜입니다.    |
+| achievementId          | number |  성과의 ID입니다. |
+| achievementName           | 문자열 | 성과의 이름입니다.  |
+| gamerscore           | number |  성과에 대 한 gamerscore 보상입니다.  |
+| dailyUnlocks           | number |  *Reportdatetime*으로 지정 된 날짜에 대 한 성과를 해제 한 고객 수입니다.  |
+| monthlyUnlocks 해제              | number |  *Reportdatetime*으로 지정 된 날짜 이전에 30 일 동안 성과를 해제 한 고객 수입니다.   |
+| totalUnlocks 해제 | number |  게임 수명 중에 *Reportdatetime*으로 지정 된 날짜까지 성과를 해제 한 고객 수입니다.   |
 
 
 ### <a name="response-example"></a>응답 예제
 
-다음 예제에서는 이 요청에 대한 예제 JSON 응답 본문을 보여 줍니다.
+다음 예제에서는이 요청에 대 한 예제 JSON 응답 본문을 보여 줍니다.
 
 ```json
 {
@@ -132,9 +132,9 @@ Authorization: Bearer <your access token>
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 서비스를 사용 하 여 분석 데이터에 액세스](access-analytics-data-using-windows-store-services.md)
-* [Xbox Live analytics 데이터 가져오기](get-xbox-live-analytics.md)
+* [Microsoft Store 서비스를 사용 하 여 분석 데이터 액세스](access-analytics-data-using-windows-store-services.md)
+* [Xbox Live 분석 데이터 가져오기](get-xbox-live-analytics.md)
 * [Xbox Live 상태 데이터 가져오기](get-xbox-live-health-data.md)
 * [Xbox Live 게임 허브 데이터 가져오기](get-xbox-live-game-hub-data.md)
-* [Xbox Live club 데이터 가져오기](get-xbox-live-club-data.md)
+* [Xbox Live 클럽 데이터 가져오기](get-xbox-live-club-data.md)
 * [Xbox Live 멀티 플레이 데이터 가져오기](get-xbox-live-multiplayer-data.md)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 네트워킹, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b0dd6168d932d1c131ca6bcd4530795c6ed1ba3
-ms.sourcegitcommit: b408494ebe8489b9ba84fb8bfd893d90c8524020
+ms.openlocfilehash: 6d6d9d927c60cb74f1b19de607480e0811f47cbb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88576856"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162937"
 ---
 # <a name="networking-for-games"></a>게임의 네트워킹
 
@@ -27,7 +27,7 @@ DirectX 게임에서 다양 한 네트워킹 기능을 사용할 수 있습니�
 
 단일 플레이어 게임의 경우 중앙 웹 서버 또는 서비스를 사용 하 여 사용자 이름, 게임 점수 및 기타 기타 정보를 저장 하는 경우가 많습니다. 이러한 게임에서는 게임 작업에 직접적인 영향을 주지 않으므로 네트워킹 전송 속도와 대기 시간이 그다지 중요 하지 않습니다.
 
-네트워크 상태는 언제 든 지 변경 될 수 있으므로 네트워킹 Api를 사용 하는 게임에서 발생할 수 있는 네트워크 예외를 처리 해야 합니다. 네트워크 예외 처리에 대한 자세한 내용은 [네트워킹 기본 사항](/windows/uwp/networking/networking-basics)을 참조하세요.
+네트워크 상태는 언제 든 지 변경 될 수 있으므로 네트워킹 Api를 사용 하는 게임에서 발생할 수 있는 네트워크 예외를 처리 해야 합니다. 네트워크 예외 처리에 대한 자세한 내용은 [네트워킹 기본 사항](../networking/networking-basics.md)을 참조하세요.
 
 방화벽과 웹 프록시는 일반적 이며 네트워킹 기능을 사용 하는 기능에 영향을 줄 수 있습니다. 방화벽 및 프록시를 올바르게 처리 하기 위해 네트워킹을 사용 하는 게임을 준비 해야 합니다.
 
@@ -362,7 +362,7 @@ using namespace Windows::Web::Http;
 * [스트림 소켓을 사용 하 여 네트워크 리소스에 연결](/previous-versions/windows/apps/jj150599(v=win.10))
 * [네트워크 서비스에 연결](/previous-versions/windows/apps/hh452976(v=win.10))
 * [웹 서비스에 연결](/previous-versions/windows/apps/hh761504(v=win.10))
-* [네트워킹 기본 사항](/windows/uwp/networking/networking-basics)
+* [네트워킹 기본 사항](../networking/networking-basics.md)
 * [네트워크 격리 기능을 구성 하는 방법](/previous-versions/windows/apps/hh770532(v=win.10))
 * [루프백 및 디버그 네트워크 격리를 사용 하도록 설정 하는 방법](/previous-versions/windows/apps/hh780593(v=win.10))
 

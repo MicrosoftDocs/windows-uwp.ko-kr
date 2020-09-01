@@ -4,12 +4,12 @@ description: Xbox의 UWP 앱에 음성 제어 지원을 추가 하는 방법에 
 ms.date: 10/19/2017
 ms.topic: article
 keywords: windows 10, uwp, xbox, 음성, 음성 사용 셸
-ms.openlocfilehash: f51ec2c93a904893dc337545f634d04affde10fd
-ms.sourcegitcommit: 26bb75084b9d2d2b4a76d4aa131066e8da716679
+ms.openlocfilehash: db846e906917f29781200f3c312f6dbd6e2b2dd1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75685186"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161667"
 ---
 # <a name="using-speech-to-invoke-ui-elements"></a>Speech를 사용 하 여 UI 요소 호출
 
@@ -51,16 +51,16 @@ VES는 UI 자동화 클라이언트 이며 UI 자동화 공급자를 통해 앱�
 
 모든 UWP 앱은 UI 자동화 프레임 워크에 액세스할 수 있으며, 작성 된 그래픽 프레임 워크 (XAML, DirectX/Direct3D, Xamarin 등)에 관계 없이 UI에 대 한 정보를 노출할 수 있습니다.  XAML과 같이 대부분의 많은 리프트는 프레임 워크에 의해 수행 되므로 내레이터 및 VES를 지 원하는 데 필요한 작업을 크게 줄일 수 있습니다.
 
-UI 자동화에 대 한 자세한 내용은 [Ui 자동화 기본 사항](https://msdn.microsoft.com/library/ms753107(v=vs.110).aspx "UI 자동화 기본 사항")을 참조 하세요.
+UI 자동화에 대 한 자세한 내용은 [Ui 자동화 기본 사항](/dotnet/framework/ui-automation/ui-automation-fundamentals "UI 자동화 기본 사항")을 참조 하세요.
 
 ## <a name="control-invocation-name"></a>컨트롤 호출 이름 ##
 VES는 다음 추론을 사용 하 여 음성 인식기에 컨트롤 이름으로 등록할 문구를 결정 합니다 (사용자가 컨트롤을 호출 하는 데 사용 해야 하는 항목).  이는 음성 팁 레이블에 표시 되는 문구 이기도 합니다.
 
 우선 순위에 따라 이름 원본:
 
-1. 요소에 `LabeledBy` 연결 된 속성이 있는 경우 VES는이 텍스트 레이블의 `AutomationProperties.Name`를 사용 합니다.
-2. 요소의 `AutomationProperties.Name`입니다.  XAML에서 컨트롤의 텍스트 콘텐츠가 `AutomationProperties.Name`의 기본값으로 사용 됩니다.
-3. 컨트롤이 ListItem 또는 단추인 경우 VES는 올바른 `AutomationProperties.Name`를 사용 하 여 첫 번째 자식 요소를 찾습니다.
+1. 요소에 연결 된 속성이 있는 경우 `LabeledBy` VES는 `AutomationProperties.Name` 이 텍스트 레이블의를 사용 합니다.
+2. `AutomationProperties.Name` 요소의입니다.  XAML에서 컨트롤의 텍스트 콘텐츠가의 기본값으로 사용 됩니다 `AutomationProperties.Name` .
+3. 컨트롤이 ListItem 또는 단추인 경우 VES는 유효한를 가진 첫 번째 자식 요소를 찾습니다 `AutomationProperties.Name` .
 
 ## <a name="actionable-controls"></a>실행 가능한 컨트롤 ##
 VES는 다음과 같은 자동화 컨트롤 패턴 중 하나를 구현 하는 경우 컨트롤을 실행 가능한 것으로 간주 합니다.
@@ -76,16 +76,16 @@ VES는 다음과 같은 자동화 컨트롤 패턴 중 하나를 구현 하는 �
 - **ScrollPattern** (예: List)-자식 요소 컬렉션에 대해 스크롤 가능한 컨테이너 역할을 하는 컨트롤을 나타냅니다.
 
 ## <a name="scrollable-containers"></a>스크롤 가능한 컨테이너 ##
-ScrollPattern를 지 원하는 스크롤 가능 컨테이너의 경우, VES는 "왼쪽 스크롤", "오른쪽으로 스크롤" 등과 같은 음성 명령을 수신 대기 하 고 사용자가 이러한 명령 중 하나를 트리거할 때 적절 한 매개 변수를 사용 하 여 Scroll을 호출 합니다.  스크롤 명령은 `HorizontalScrollPercent`의 값과 `VerticalScrollPercent` 속성에 따라 삽입 됩니다.  예를 들어 `HorizontalScrollPercent`이 0 보다 크면 "왼쪽 스크롤"이 추가 되 고, 100 보다 작은 경우 "오른쪽으로 스크롤"이 추가 됩니다.
+ScrollPattern를 지 원하는 스크롤 가능 컨테이너의 경우, VES는 "왼쪽 스크롤", "오른쪽으로 스크롤" 등과 같은 음성 명령을 수신 대기 하 고 사용자가 이러한 명령 중 하나를 트리거할 때 적절 한 매개 변수를 사용 하 여 Scroll을 호출 합니다.  스크롤 명령은 및 속성의 값에 따라 삽입 됩니다 `HorizontalScrollPercent` `VerticalScrollPercent` .  예를 들어 `HorizontalScrollPercent` 가 0 보다 큰 경우 "왼쪽으로 스크롤"이 추가 되 고, 100 보다 작은 경우 "오른쪽으로 스크롤"이 추가 됩니다.
 
 ## <a name="narrator-overlap"></a>내레이터가 겹칩니다. ##
-또한 내레이터 응용 프로그램은 UI 자동화 클라이언트 이며, 현재 선택 된 UI 요소에 대해 읽는 텍스트의 소스 중 하나로 `AutomationProperties.Name` 속성을 사용 합니다.  내게 필요한 옵션 경험을 향상 시키기 위해 많은 앱 개발자 들이 긴 설명 텍스트를 사용 하 여 `Name` 속성을 오버 로드 하 고 내레이터에서 읽을 때 추가 정보 및 컨텍스트를 제공 하는 목표를 달성 했습니다.  그러나이로 인해 두 가지 기능이 충돌 합니다. 즉, VES는 컨트롤의 표시 되는 텍스트와 일치 하거나 거의 일치 하는 짧은 구를 필요로 하는 반면 내레이터는 더 긴 컨텍스트를 제공 하는 더 긴 설명 문구를 활용 합니다.
+또한 내레이터 응용 프로그램은 UI 자동화 클라이언트 이며, `AutomationProperties.Name` 현재 선택 된 UI 요소에 대해 읽는 텍스트의 원본 중 하나로 속성을 사용 합니다.  더 나은 액세스 가능성 경험을 제공 하기 위해 많은 앱 개발자 들이 `Name` 긴 설명 텍스트를 사용 하 여 속성을 오버 로드 하 고 내레이터에서 읽을 때 추가 정보 및 컨텍스트를 제공 하는 목표를 달성 했습니다.  그러나이로 인해 두 가지 기능이 충돌 합니다. 즉, VES는 컨트롤의 표시 되는 텍스트와 일치 하거나 거의 일치 하는 짧은 구를 필요로 하는 반면 내레이터는 더 긴 컨텍스트를 제공 하는 더 긴 설명 문구를 활용 합니다.
 
-이 문제를 해결 하기 위해 Windows 10 크리에이터 업데이트부터 내레이터는 `AutomationProperties.HelpText` 속성을 볼 수 있도록 업데이트 되었습니다.  이 속성이 비어 있지 않으면 내레이터는 `AutomationProperties.Name`외에도 해당 내용을 말합니다.  `HelpText` 비어 있는 경우 내레이터는 이름 콘텐츠만 읽습니다.  이렇게 하면 필요한 경우 더 긴 설명 문자열을 사용할 수 있지만 `Name` 속성에 더 짧은 음성 인식 친숙 한 구가 유지 됩니다.
+이 문제를 해결 하기 위해 Windows 10 크리에이터 업데이트부터 내레이터가 속성을 볼 수 있도록 업데이트 되었습니다 `AutomationProperties.HelpText` .  이 속성이 비어 있지 않으면 내레이터는 외에도 해당 내용을 말합니다 `AutomationProperties.Name` .  `HelpText`가 비어 있으면 내레이터는 이름 내용만 읽습니다.  이렇게 하면 필요한 경우 더 긴 설명 문자열을 사용할 수 있지만 속성에 짧은 음성 인식 친숙 한 구가 유지 됩니다 `Name` .
 
 ![](images/ves_narrator.jpg)
 
-자세한 내용은 [UI의 내게 필요한 옵션 지원에 대 한 자동화 속성](https://msdn.microsoft.com/library/ff400332(vs.95).aspx "UI의 내게 필요한 옵션 지원에 대 한 자동화 속성")을 참조 하세요.
+자세한 내용은 [UI의 내게 필요한 옵션 지원에 대 한 자동화 속성](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ff400332(v=vs.95) "UI의 내게 필요한 옵션 지원에 대 한 자동화 속성")을 참조 하세요.
 
 ## <a name="active-listening-mode-alm"></a>ALM (활성 수신 모드) ##
 ### <a name="entering-alm"></a>ALM 입력 ###
@@ -113,7 +113,7 @@ ALM을 입력 하면 다음과 같은 결과가 나타납니다.
 ALM에서 사용자는 음성을 사용 하 여 UI와 상호 작용할 수 있습니다.  UI가 표시 되는 텍스트와 일치 하는 이름 속성을 사용 하 여 올바르게 구성 된 경우 음성을 사용 하 여 작업을 수행 해야 합니다.  사용자는 화면에 표시 되는 내용만 표시 하면 됩니다.
 
 ## <a name="overlay-ui-on-xbox"></a>Xbox의 오버레이 UI ##
-컨트롤에 대해 VES 파생 이름은 UI의 실제 표시 되는 텍스트와 다를 수 있습니다.  이는 컨트롤의 `Name` 속성이 나 연결 된 `LabeledBy` 요소를 명시적으로 다른 문자열로 설정 했기 때문일 수 있습니다.  또는 컨트롤에 GUI 텍스트가 없지만 아이콘 또는 이미지 요소만 포함 됩니다.
+컨트롤에 대해 VES 파생 이름은 UI의 실제 표시 되는 텍스트와 다를 수 있습니다.  이는 `Name` 컨트롤의 속성 또는 `LabeledBy` 명시적으로 다른 문자열로 설정 되는 연결 된 요소 때문일 수 있습니다.  또는 컨트롤에 GUI 텍스트가 없지만 아이콘 또는 이미지 요소만 포함 됩니다.
 
 이러한 경우 사용자는 이러한 컨트롤을 호출 하는 데 필요한 항목을 확인 하는 방법이 필요 합니다.  따라서 활성 수신 중에는 "레이블 표시"를 통해 음성 팁을 표시할 수 있습니다.  그러면 음성 팁 레이블이 실행 가능한 모든 컨트롤의 맨 위에 표시 됩니다.
 
@@ -151,7 +151,7 @@ ALM에서 사용자는 음성을 사용 하 여 UI와 상호 작용할 수 있�
 ## <a name="disambiguation"></a>명확성 ##
 여러 UI 요소의 이름이 같거나 음성 인식기가 여러 후보와 일치 하는 경우 VES는 명확성 모드로 전환 됩니다.  이 모드에서 사용자가 올바른 항목을 선택할 수 있도록 관련 된 요소에 대해 음성 팁 레이블이 표시 됩니다. 사용자는 "취소"를 말하여 명확성 모드를 취소할 수 있습니다.
 
-예를 들어 다음과 같은 가치를 제공해야 합니다.
+예:
 
 - 활성 수신 대기 모드에서의 명확성 사용자에 게 "는 모호 합니다." 라고 표시 됩니다.
 
@@ -209,16 +209,16 @@ ALM에서 사용자는 음성을 사용 하 여 UI와 상호 작용할 수 있�
 
     ![](images/ves_alm_labels.png) 
 
-`button1`의 경우 XAML은 컨트롤의 표시 되는 텍스트 콘텐츠에서 텍스트를 사용 하 여 `AutomationProperties.Name` 속성을 자동으로 채웁니다.  명시적인 `AutomationProperties.Name` 집합이 없는 경우에도 음성 팁 레이블이 있습니다.
+의 경우 XAML은 `button1` `AutomationProperties.Name` 컨트롤의 표시 되는 텍스트 콘텐츠에서 텍스트를 사용 하 여 속성을 자동으로 채웁니다.  명시적인 집합이 없더라도 음성 팁 레이블이 있는 이유입니다 `AutomationProperties.Name` .
 
-`button2`를 사용 하면 `AutomationProperties.Name`를 컨트롤의 텍스트가 아닌 다른 항목으로 명시적으로 설정 합니다.
+를 사용 하면를 `button2` `AutomationProperties.Name` 컨트롤의 텍스트 이외의 항목으로 명시적으로 설정 합니다.
 
-`comboBox`를 사용 하 여 `LabeledBy` 속성을 사용 하 여 자동화 `Name`의 소스로 `label1`를 참조 하 고 `label1`에서 화면에 렌더링 되는 것 보다 더 자연 스러운 구로 `AutomationProperties.Name`를 설정 합니다 ("요일 선택"이 아닌 "요일").
+에서는 `comboBox` 속성을 사용 하 여를 `LabeledBy` `label1` 자동화의 원본으로 참조 하 `Name` 고,에서는 `label1` `AutomationProperties.Name` 화면에 렌더링 되는 것 보다 더 자연 스러운 구로를 설정 합니다 ("요일 선택"이 아닌 "요일").
 
-마지막으로 `button3`를 사용 하면 `button3` 자체에 `AutomationProperties.Name` 집합이 없기 때문에 VES는 첫 번째 자식 요소에서 `Name`을 가져와 합니다.
+마지막으로,를 사용 하 여 `button3` VES는 `Name` 첫 번째 자식 요소에서를 가져와 합니다 .이는 자체에 집합이 없기 때문 `button3` `AutomationProperties.Name` 입니다.
 
 ## <a name="see-also"></a>참고 항목
-- [UI 자동화 기본 사항](https://msdn.microsoft.com/library/ms753107(v=vs.110).aspx "UI 자동화 기본 사항")
-- [UI의 내게 필요한 옵션 지원에 대 한 자동화 속성](https://msdn.microsoft.com/library/ff400332(vs.95).aspx "UI의 내게 필요한 옵션 지원에 대 한 자동화 속성")
-- [질문과 대답](frequently-asked-questions.md)
+- [UI 자동화 기본 사항](/dotnet/framework/ui-automation/ui-automation-fundamentals "UI 자동화 기본 사항")
+- [UI의 내게 필요한 옵션 지원에 대 한 자동화 속성](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ff400332(v=vs.95) "UI의 내게 필요한 옵션 지원에 대 한 자동화 속성")
+- [자주 묻는 질문](frequently-asked-questions.md)
 - [Xbox One의 UWP](index.md)

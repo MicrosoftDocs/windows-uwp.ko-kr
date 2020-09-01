@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4145fbc67c6788a1d742fb0db616ecbc719e4b34
-ms.sourcegitcommit: 2dbf4a3f3473c1d3a0ad988bcbae6e75dfee3640
+ms.openlocfilehash: e5ac10a1cc4e9feee609a56e5db6285284c41b98
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619317"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163697"
 ---
 # <a name="playready-encrypted-media-extension"></a>PlayReady 암호화된 미디어 확장
 
@@ -34,7 +34,7 @@ Internet Explorer의 PlayReady 미디어 요소를 사용하면 개발자가 웹
 -   영구적이 지 않은 라이선스의 사전 획득 획득을 제공 합니다.
 -   단일 메시지에서 여러 라이선스의 획득을 제공 합니다.
 
-    Windows 8.1에서와 같이 여러 키 식별자 (KeyIDs)가 포함 된 PlayReady 개체를 사용 하거나 여러 KeyIDs로 [콘텐츠 암호 해독 모델 데이터 (CDMData)](https://docs.microsoft.com/previous-versions/windows/apps/dn457361(v=ieb.10)?redirectedfrom=MSDN) 를 사용할 수 있습니다.
+    Windows 8.1에서와 같이 여러 키 식별자 (KeyIDs)가 포함 된 PlayReady 개체를 사용 하거나 여러 KeyIDs로 [콘텐츠 암호 해독 모델 데이터 (CDMData)](/previous-versions/windows/apps/dn457361(v=ieb.10)) 를 사용할 수 있습니다.
 
     > [!NOTE]
     > Windows 10에서는 &lt; CDMData의 KeyID에서 여러 키 식별자를 사용할 수 &gt; 있습니다.
@@ -72,7 +72,7 @@ PlayReady 하드웨어 DRM을 사용 하려면 JavaScript 웹 앱에서의 키 �
 일부 콘텐츠가 하드웨어 DRM에서 지원 되지 않는 경우도 있습니다. 하드웨어 DRM에서는 칵테일 콘텐츠가 지원 되지 않습니다. 칵테일 콘텐츠를 재생 하려는 경우 하드웨어 DRM을 옵트아웃 해야 합니다. 일부 하드웨어 DRM은 HEVC를 지원 하 고 일부는 지원 하지 않습니다. HEVC 콘텐츠를 재생 하려는 경우 하드웨어 DRM이이를 지원 하지 않으면 옵트아웃 (opt out) 할 수 있습니다.
 
 > [!NOTE]
-> HEVC 콘텐츠가 지원 되는지 여부를 확인 하려면 인스턴스화 후 `com.microsoft.playready` [**PlayReadyStatics 하드웨어**](https://docs.microsoft.com/uwp/api/windows.media.protection.playready.playreadystatics.checksupportedhardware) 메서드를 사용 합니다.
+> HEVC 콘텐츠가 지원 되는지 여부를 확인 하려면 인스턴스화 후 `com.microsoft.playready` [**PlayReadyStatics 하드웨어**](/uwp/api/windows.media.protection.playready.playreadystatics.checksupportedhardware) 메서드를 사용 합니다.
 
 ## <a name="add-secure-stop-to-your-web-app"></a>웹앱에 보안 중지 추가
 
@@ -300,7 +300,3 @@ function foo() {
 
 ## <a name="see-also"></a>참고 항목
 - [PlayReady DRM](playready-client-sdk.md)
-
-
-
-

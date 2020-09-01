@@ -6,39 +6,39 @@ ms.date: 02/28/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 데이터
 ms.localizationpriority: medium
-ms.openlocfilehash: cfbe8df46f51b41ccdd840f609caf2c593735e1f
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 7dfbad9d0aa2bfb69479f168ec262fe67bedb49c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79210979"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162417"
 ---
 # <a name="get-app-data"></a>앱 데이터 가져오기
 
-Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 파트너 센터 계정에서 기존 앱에 대 한 데이터를 가져옵니다. API 사용을 위한 필수 조건을 비롯하여 Microsoft Store 제출 API에 대한 자세한 내용은 [Microsoft Store 서비스를 사용하여 제출 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조하세요.
+Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 파트너 센터 계정에서 기존 앱에 대 한 데이터를 가져옵니다. API를 사용 하기 위한 필수 구성 요소를 포함 하 여 Microsoft Store 제출 API에 대 한 소개는 [Microsoft Store services를 사용 하 여 전송 만들기 및 관리](create-and-manage-submissions-using-windows-store-services.md)를 참조 하세요.
 
-이러한 방법을 사용 하려면 앱이 파트너 센터 계정에 이미 있어야 합니다. 앱에 대한 제출을 만들거나 관리하려면 [앱 제출 관리](manage-app-submissions.md)의 메서드를 참조하세요.
+이러한 방법을 사용 하려면 앱이 파트너 센터 계정에 이미 있어야 합니다. 앱에 대 한 제출을 만들거나 관리 하려면 [앱 제출 관리](manage-app-submissions.md)의 메서드를 참조 하세요.
 
 | 메서드 | URI                                                                                             | 설명                                                 |
 |------- |------------------------------------------------------------------------------------------------ |------------------------------------------------------------ |
-| 가져오기    | `https://manage.devcenter.microsoft.com/v1.0/my/applications`                                   | [모든 앱에 대 한 데이터 가져오기](get-all-apps.md)               |
-| 가져오기    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}`                   | [특정 앱에 대 한 데이터 가져오기](get-an-app.md)                |
-| 가져오기    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [앱에 대 한 추가 기능 가져오기](get-add-ons-for-an-app.md)         |
-| 가져오기    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [앱에 대 한 패키지 항공편 가져오기](get-flights-for-an-app.md) |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications`                                   | [모든 앱에 대 한 데이터 가져오기](get-all-apps.md)               |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}`                   | [특정 앱에 대 한 데이터 가져오기](get-an-app.md)                |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listinappproducts` | [앱에 대한 추가 기능 가져오기](get-add-ons-for-an-app.md)         |
+| GET    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/listflights`       | [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md) |
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
-아직 완료하지 않은 경우 이러한 메서드를 사용하기 전에 Microsoft Store 제출 API에 대한 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 모두 완료합니다.
+아직 수행 하지 않은 경우 이러한 메서드를 사용 하기 전에 Microsoft Store 제출 API에 대 한 모든 [필수 구성 요소](create-and-manage-submissions-using-windows-store-services.md#prerequisites) 를 완료 합니다.
 
 ## <a name="data-resources"></a>데이터 리소스
 
-앱 데이터를 가져오는 Microsoft Store 제출 API 메서드는 다음과 같은 JSON 데이터 리소스를 사용합니다.
+앱 데이터를 가져오는 Microsoft Store 제출 API 메서드는 다음 JSON 데이터 리소스를 사용 합니다.
 
 <span id="application_object" />
 
-### <a name="application-resource"></a>응용 프로그램 리소스
+### <a name="application-resource"></a>애플리케이션 리소스
 
-이 리소스는 계정에 등록된 앱을 나타냅니다.
+이 리소스는 계정에 등록 된 앱을 나타냅니다.
 
 ```json
 {
@@ -62,24 +62,24 @@ Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 파트너 �
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | 설명       |
+| 값           | 형식    | Description       |
 |-----------------|---------|---------------------|
-| id            | string  | 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.   |
-| primaryName   | string  | 앱의 기본 이름입니다.      |
-| packageFamilyName | string  | 앱의 패키지 패밀리 이름입니다.      |
-| packageIdentityName          | string  | 앱의 패키지 ID 이름입니다.                       |
-| publisherName       | string  | 앱과 연결된 Windows 게시자 ID입니다. 이 값은 파트너 센터의 앱에 대 한 [앱 id](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details) 페이지에 표시 되는 **패키지/id/게시자** 값에 해당 합니다.       |
-| firstPublishedDate      | string  | ISO 8601 형식으로 앱이 처음 게시된 날짜입니다.   |
-| lastPublishedApplicationSubmission       | object | 앱의 마지막 게시된 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.    |
-| pendingApplicationSubmission        | object  |  앱의 현재 보류 중인 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.   |   
-| hasAdvancedListingPermission        | boolean  |  앱 제출에서 [gamingOptions](manage-app-submissions.md#gaming-options-object)이나 [예고편](manage-app-submissions.md#trailer-object)을 구성할 수 있는지 알려줍니다 2017년 5월 이후에 만든 제출의 경우 이 값은 true입니다. |  |
+| id            | 문자열  | 앱의 저장소 ID입니다. 저장소 ID에 대 한 자세한 내용은 [앱 id 세부 정보 보기](../publish/view-app-identity-details.md)를 참조 하세요.   |
+| primaryName   | 문자열  | 응용 프로그램의 기본 이름입니다.      |
+| packageFamilyName | 문자열  | 앱의 패키지 패밀리 이름입니다.      |
+| packageIdentityName          | 문자열  | 앱의 패키지 id 이름입니다.                       |
+| publisherName       | 문자열  | 앱과 연결 된 Windows 게시자 ID입니다. 이 값은 파트너 센터의 앱에 대 한 [앱 id](../publish/view-app-identity-details.md) 페이지에 표시 되는 **패키지/id/게시자** 값에 해당 합니다.       |
+| firstPublishedDate      | 문자열  | 앱이 처음 게시 된 날짜 (ISO 8601 형식)입니다.   |
+| lastPublishedApplicationSubmission       | 개체 | 앱에 대해 마지막으로 게시 된 전송에 대 한 정보를 제공 하는 [제출 리소스](#submission_object) 입니다.    |
+| pendingApplicationSubmission        | 개체  |  앱에 대해 현재 보류 중인 전송에 대 한 정보를 제공 하는 [제출 리소스](#submission_object) 입니다.   |   
+| hasAdvancedListingPermission        | boolean  |  앱에 대 한 전송에 대해 [gamingOptions](manage-app-submissions.md#gaming-options-object) 또는 [트레일러](manage-app-submissions.md#trailer-object) 를 구성할 수 있는지 여부를 나타냅니다. 이 값은 2017 년 5 월 이후에 생성 된 전송에 대해 true입니다. |  |
 
 
 <span id="add-on-object" />
 
 ### <a name="add-on-resource"></a>추가 기능 리소스
 
-이 리소스는 추가 기능에 대한 정보를 제공합니다.
+이 리소스는 추가 기능에 대 한 정보를 제공 합니다.
 
 ```json
 {
@@ -89,16 +89,16 @@ Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 파트너 �
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | 설명         |
+| 값           | 형식    | Description         |
 |-----------------|---------|----------------------|
-| inAppProductId            | string  | 추가 기능의 스토어 ID입니다. 이 값은 스토어에서 제공됩니다. 예를 들어 스토어 ID는 9NBLGGH4TNMP입니다.   |
+| inAppProductId            | 문자열  | 추가 기능에 대 한 저장소 ID입니다. 이 값은 저장소에서 제공 됩니다. 예 매장 ID는 9NBLGGH4TNMP입니다.   |
 
 
 <span id="flight-object" />
 
-### <a name="flight-resource"></a>플라이트 리소스
+### <a name="flight-resource"></a>비행 리소스
 
-이 리소스는 앱의 패키지 플라이트에 대한 정보를 제공합니다.
+이 리소스는 앱에 대 한 패키지 비행 정보를 제공 합니다.
 
 ```json
 {
@@ -121,21 +121,21 @@ Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 파트너 �
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | 설명           |
+| 값           | 형식    | Description           |
 |-----------------|---------|------------------------|
-| flightId            | string  | 패키지 플라이트의 ID입니다. 이 값은 파트너 센터에서 제공 합니다.  |
-| FriendlyName           | string  | 개발자가 지정한 패키지 플라이트 이름입니다.   |
-| lastPublishedFlightSubmission       | object | 패키지 플라이트의 마지막 게시된 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.   |
-| pendingFlightSubmission        | object  |  패키지 플라이트의 현재 보류 중인 제출에 대한 정보를 제공하는 [제출 리소스](#submission_object)입니다.  |    
-| groupIds           | array  | 패키지 플라이트와 연결된 플라이트 그룹의 ID가 포함된 문자열의 배열입니다. 플라이트 그룹에 대한 자세한 내용은 [패키지 플라이트](https://docs.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.   |
-| rankHigherThan           | string  | 현재 패키지 플라이트보다 순위가 바로 아래인 패키지 플라이트의 식별 이름입니다. 플라이트 그룹의 순위 지정에 대한 자세한 내용은 [패키지 플라이트](https://docs.microsoft.com/windows/uwp/publish/package-flights)를 참조하세요.  |
+| flightId            | 문자열  | 비행 패키지의 ID입니다. 이 값은 파트너 센터에서 제공 합니다.  |
+| friendlyName           | 문자열  | 개발자가 지정한 패키지의 이름입니다.   |
+| lastPublishedFlightSubmission       | 개체 | 비행 패키지에 대해 마지막으로 게시 된 전송에 대 한 정보를 제공 하는 [제출 리소스](#submission_object) 입니다.   |
+| pendingFlightSubmission        | 개체  |  진행 중인 패키지에 대 한 현재 보류 중인 전송에 대 한 정보를 제공 하는 [제출 리소스](#submission_object) 입니다.  |    
+| groupIds           | array  | 항공편 패키지와 연결 된 비행 그룹의 Id를 포함 하는 문자열의 배열입니다. 비행 그룹에 대 한 자세한 내용은 [항공편 패키지](../publish/package-flights.md)를 참조 하세요.   |
+| rankHigherThan           | 문자열  | 현재 패키지 비행 보다 즉시 순위가 매겨진 패키지 비행의 이름입니다. 비행 그룹의 순위를 지정 하는 방법에 대 한 자세한 내용은 [항공편 패키지](../publish/package-flights.md)를 참조 하세요.  |
 
 
 <span id="submission_object" />
 
 ### <a name="submission-resource"></a>제출 리소스
 
-이 리소스는 제출에 대한 정보를 제공합니다. 다음 예제에서는 이 리소스의 형식을 보여 줍니다.
+이 리소스는 제출에 대 한 정보를 제공 합니다. 다음 예제에서는이 리소스의 형식을 보여 줍니다.
 
 ```json
 {
@@ -148,10 +148,10 @@ Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 파트너 �
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값              | 형식   | 설명               |
+| 값              | 형식   | Description               |
 |--------------------|--------|---------------------------|
-| id                 | string | 제출의 ID입니다. |
-| resourceLocation   | string | 기본 ```https://manage.devcenter.microsoft.com/v1.0/my/``` 요청 URI에 추가하여 제출에 대한 전체 데이터를 검색할 수 있는 상대 경로입니다. |
+| id                 | 문자열 | 제출 ID입니다. |
+| resourceLocation   | 문자열 | ```https://manage.devcenter.microsoft.com/v1.0/my/```전송에 대 한 전체 데이터를 검색 하기 위해 기본 요청 URI에 추가할 수 있는 상대 경로입니다. |
 
  
 ## <a name="related-topics"></a>관련 항목
@@ -160,5 +160,5 @@ Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 파트너 �
 * [Microsoft Store 제출 API를 사용 하 여 앱 서브 미션 관리](manage-app-submissions.md)
 * [모든 앱 가져오기](get-all-apps.md)
 * [앱 가져오기](get-an-app.md)
-* [앱에 대 한 추가 기능 가져오기](get-add-ons-for-an-app.md)
-* [앱에 대 한 패키지 항공편 가져오기](get-flights-for-an-app.md)
+* [앱에 대한 추가 기능 가져오기](get-add-ons-for-an-app.md)
+* [앱의 패키지 플라이트 가져오기](get-flights-for-an-app.md)

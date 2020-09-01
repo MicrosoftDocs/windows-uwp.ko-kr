@@ -1,19 +1,19 @@
 ---
-title: 게임의 UWP 앱 프레임 워크 정의
+title: 게임의 UWP 앱 프레임워크 정의
 description: UWP (유니버설 Windows 플랫폼) 게임을 코딩 하는 첫 번째 단계는 앱 개체가 Windows와 상호 작용할 수 있도록 하는 프레임 워크를 구축 하는 것입니다.
 ms.assetid: 7beac1eb-ba3d-e15c-44a1-da2f5a79bb3b
 ms.date: 06/24/2020
 ms.topic: article
 keywords: Windows 10, UWP, 게임, DirectX
 ms.localizationpriority: medium
-ms.openlocfilehash: 5052b4e71196950b6a8a91aaa271b5550fb448b5
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: 2d762aebeaa5c97c1b23a91f0765cb5c09a91b46
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409622"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163057"
 ---
-#  <a name="define-the-games-uwp-app-framework"></a>게임의 UWP 앱 프레임 워크 정의
+#  <a name="define-the-games-uwp-app-framework"></a>게임의 UWP 앱 프레임워크 정의
 
 > [!NOTE]
 > 이 항목은 DirectX 자습서 시리즈 [를 사용 하 여 단순 유니버설 Windows 플랫폼 (UWP) 게임 만들기](tutorial--create-your-first-uwp-directx-game.md) 의 일부입니다. 해당 링크의 항목은 계열의 컨텍스트를 설정 합니다.
@@ -124,7 +124,7 @@ void Load(winrt::hstring const& /* entryPoint */)
 
 Windows에서는 게임에서 입력 처리를 시작 하기 전에 수행할 수 있는 시간을 제한 합니다. 따라서 여기서와 같이 asyc를 사용 하면 시작 하는 작업이 백그라운드에서 계속 진행 되는 동안 **부하가** 빠르게 반환 될 수 있음을 의미 합니다. 로드 시간이 오래 걸리거나 많은 리소스가 있는 경우 사용자에 게 자주 업데이트 되는 진행률 표시줄을 제공 하는 것이 좋습니다. 
 
-비동기 프로그래밍을 처음 접하는 경우에는 [c + +/WinRT를 사용한 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)을 참조 하세요.
+비동기 프로그래밍을 처음 접하는 경우에는 [c + +/WinRT를 사용한 동시성 및 비동기 작업](../cpp-and-winrt-apis/concurrency.md)을 참조 하세요.
 
 ```cppwinrt
 GameMain::GameMain(std::shared_ptr<DX::DeviceResources> const& deviceResources) :

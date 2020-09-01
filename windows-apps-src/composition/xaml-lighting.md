@@ -1,6 +1,6 @@
 ---
 title: XAML 조명
-description: 조명 개체는 SceneLightingEffect와 함께 동적 조명 및 반사를 시뮬레이트하기 위해 사용됩니다.
+description: 광원 개체는 SceneLightingEffect와 함께 사용 되어 동적 조명 및 반사를 시뮬레이션 합니다.
 ms.date: 06/28/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -10,31 +10,31 @@ dev_langs:
 - vb
 - cppcx
 - cppwinrt
-ms.openlocfilehash: 768509b3b22eef32e26d9e5423c00e2ee65f4b81
-ms.sourcegitcommit: 6f32604876ed480e8238c86101366a8d106c7d4e
+ms.openlocfilehash: 315427d2f9212cb9ecfec01e71ed9373deb5cfba
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67318027"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163547"
 ---
 # <a name="xaml-lighting"></a>XAML 조명
 
-[**CompositionLight** ](/uwp/api/Windows.UI.Composition.CompositionLight) 개체와 함께에서 사용 됩니다 [ **SceneLightingEffect** ](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) 동적 조명 및 반사를 시뮬레이션할 수 있습니다.
+[**CompositionLight**](/uwp/api/Windows.UI.Composition.CompositionLight) 개체는 [**SceneLightingEffect**](/uwp/api/Windows.UI.Composition.Effects.SceneLightingEffect) 와 함께 동적 조명 및 반사를 시뮬레이션 하는 데 사용 됩니다.
 
-[  **시각 효과**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.Visual) 및 XAML [**UIElements**](/uwp/api/Windows.UI.Xaml.UIElement)에 조명을 적용할 수 있습니다.
+[**시각적 개체**](/uwp/api/Windows.UI.Composition.Visual) 및 XAML [**UIElements**](/uwp/api/Windows.UI.Xaml.UIElement)에 조명을 적용할 수 있습니다.
 
-## <a name="applying-lights-to-xaml-uielements"></a>XAML UIElements에 조명 적용
+## <a name="applying-lights-to-xaml-uielements"></a>XAML에 광원 적용 UIElements
 
-[**XamlLight** ](/uwp/api/windows.ui.xaml.media.xamllight) 개체를 적용 하는 데 사용 됩니다 [ **CompositionLights** ](/uwp/api/Windows.UI.Composition.CompositionLight) 동적으로 XAML Uielement를 명확 하 게 합니다. XamlLight Uielement 또는 Uielement 트리로 조명을 적용 하는 XAML 브러시를 대상으로 하는 메서드를 제공 하 고 현재 있는지 여부에 따라 리소스 사용 CompositionLight의 수명 관리를 지원 합니다.
+[**Xamllight**](/uwp/api/windows.ui.xaml.media.xamllight) 개체는 동적으로 가벼운 XAML UIElements에 [**CompositionLights**](/uwp/api/Windows.UI.Composition.CompositionLight) 를 적용 하는 데 사용 됩니다. XamlLight는 UIElements 또는 XAML 브러시를 대상으로 하 고, UIElements 트리에 조명을 적용 하 고, 현재 사용 중인지 여부에 따라 CompositionLight 리소스의 수명을 관리 하는 데 사용할 수 있는 메서드를 제공 합니다.
 
-- **브러시**를 XamlLight로 대상으로 지정하면 해당 브러시를 사용하는 모든 UIElements의 일부가 조명에 의해 켜집니다.
-- XamlLight로 **UIElement**를 대상으로 지정하는 경우 전체 UIElement 및 하위 UIElements가 모두 조명에 의해 켜집니다.
+- XamlLight를 사용 하는 **브러시** 를 대상으로 하는 경우 해당 브러시를 사용 하는 모든 UIElements 부분이 조명에서 켜 집니다.
+- XamlLight를 사용 하 여 **uielement** 를 대상으로 하는 경우 전체 UIElement 및 자식 UIElements가 모두 빛에 의해 켜 집니다.
 
 ## <a name="creating-and-using-a-xamllight"></a>XamlLight 만들기 및 사용
 
-[**XamlLight** ](/uwp/api/windows.ui.xaml.media.xamllight) 는 사용자 지정 광원을 만드는 데 사용할 수 있는 기본 클래스입니다.
+[**Xamllight**](/uwp/api/windows.ui.xaml.media.xamllight) 는 사용자 지정 조명을 만드는 데 사용할 수 있는 기본 클래스입니다.
 
-이 예제에서는 다양 한 색상된 추천을 대상으로 지정 된 UIElements 및 브러시 적용 되는 사용자 지정 XamlLight에 대 한 정의 보여 줍니다.
+이 예제에서는 대상 UIElements 및 브러시에 다중 색 스포트라이트를 적용 하는 사용자 지정 XamlLight에 대 한 정의를 보여 줍니다.
 
 ```csharp
 public sealed class OrangeSpotLight : XamlLight
@@ -457,10 +457,10 @@ Platform::String^ OrangeSpotLight::GetId()
 }
 ```
 
-다음 XAML ui 요소 또는 브러시에 명확 하 게이 빛을 적용할 수 있습니다. 이 예제에서는 다른 잠재적인 사용법을 보여 줍니다.
+그런 다음이 조명을 XAML UIElement 나 브러시에 적용 하 여 조명을 확인할 수 있습니다. 이 예제에서는 다른 잠재적 사용을 보여 줍니다.
 
 > [!Important]
-> 에 대 한 [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 두 개를 제거 `local:OrangeSpotLight.IsTarget="True"` 태그 아래에서. 연결 된 속성은 이미 코드 숨김에 설정 됩니다.
+> [C + +/Winrt](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)의 경우 아래 태그에서 두 개의 항목을 제거 `local:OrangeSpotLight.IsTarget="True"` 합니다. 연결 된 속성은 이미 코드 숨김으로 설정 되어 있습니다.
 
 ```xaml
 <StackPanel Width="100">
@@ -489,13 +489,13 @@ Platform::String^ OrangeSpotLight::GetId()
 </StackPanel>
 ```
 
-이 XAML의 결과 다음과 같습니다.
+이 XAML의 결과는 다음과 같습니다.
 
-![Xaml 밝게 빛나는 요소의 예](images/orange-spot-light.png)
+![Xaml 빛에 의해 lit 요소 예](images/orange-spot-light.png)
 
 > [!Important]
-> 위 예에서 마크업에서 UIElement.Lights 설정은 최소 Windows 10 크리에이터 업데이트 이상에 해당하는 버전의 앱에서만 지원됩니다. 이전 버전을 대상으로 하는 앱의 경우 코드 숨김에서 조명을 만들어야 합니다.
+> 위 예제에 표시 된 것 처럼 태그에서 UIElement를 설정 하는 것은 최소 버전이 Windows 10 크리에이터 스 업데이트 이상과 같은 앱에 대해서만 지원 됩니다. 이전 버전을 대상으로 하는 앱의 경우 코드 숨김으로 조명을 만들어야 합니다.
 
 ## <a name="additional-resources"></a>추가 리소스
 
-* [WindowsUIDevLabs GitHub](https://github.com/microsoft/WindowsCompositionSamples)의 고급 UI 및 Composition 샘플
+* [Windowsuidevlabs GitHub](https://github.com/microsoft/WindowsCompositionSamples)의 고급 UI 및 컴퍼지션 샘플.

@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5d2ab873774ce8b48252b82ce6cf7521165554d4
-ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
+ms.openlocfilehash: 70226b45a50e0d340c3de316902033d5563106d2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89043445"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163287"
 ---
 # <a name="obtain-and-understand-barcode-data"></a>바코드 데이터 획득 및 이해
 
-바코드 스캐너를 설정한 후에는 검색 하는 데이터를 이해 하는 방법이 필요 합니다. 바코드를 스캔 하면 [Datareceived](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.datareceived) 이벤트가 발생 합니다. [ClaimedBarcodeScanner](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner) 는이 이벤트를 구독 해야 합니다. **Datareceived** 이벤트는 바코드 데이터에 액세스 하는 데 사용할 수 있는 [BarcodeScannerDataReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs) 개체를 전달 합니다.
+바코드 스캐너를 설정한 후에는 검색 하는 데이터를 이해 하는 방법이 필요 합니다. 바코드를 스캔 하면 [Datareceived](/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.datareceived) 이벤트가 발생 합니다. [ClaimedBarcodeScanner](/uwp/api/windows.devices.pointofservice.claimedbarcodescanner) 는이 이벤트를 구독 해야 합니다. **Datareceived** 이벤트는 바코드 데이터에 액세스 하는 데 사용할 수 있는 [BarcodeScannerDataReceivedEventArgs](/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs) 개체를 전달 합니다.
 
 ## <a name="subscribe-to-the-datareceived-event"></a>DataReceived 이벤트를 구독 합니다.
 
@@ -25,7 +25,7 @@ ms.locfileid: "89043445"
 claimedBarcodeScanner.DataReceived += ClaimedBarcodeScanner_DataReceived;
 ```
 
-이벤트 처리기에 **ClaimedBarcodeScanner** 및 **BarcodeScannerDataReceivedEventArgs** 개체가 전달 됩니다. [BarcodeScannerReport](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport)형식의이 개체의 [보고서](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs.report#Windows_Devices_PointOfService_BarcodeScannerDataReceivedEventArgs_Report) 속성을 통해 바코드 데이터에 액세스할 수 있습니다.
+이벤트 처리기에 **ClaimedBarcodeScanner** 및 **BarcodeScannerDataReceivedEventArgs** 개체가 전달 됩니다. [BarcodeScannerReport](/uwp/api/windows.devices.pointofservice.barcodescannerreport)형식의이 개체의 [보고서](/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs.report#Windows_Devices_PointOfService_BarcodeScannerDataReceivedEventArgs_Report) 속성을 통해 바코드 데이터에 액세스할 수 있습니다.
 
 ```cs
 private async void ClaimedBarcodeScanner_DataReceived(ClaimedBarcodeScanner sender, BarcodeScannerDataReceivedEventArgs args)
@@ -38,11 +38,11 @@ private async void ClaimedBarcodeScanner_DataReceived(ClaimedBarcodeScanner send
 
 **BarcodeScannerReport**가 있으면 바코드 데이터에 액세스 하 고 구문 분석할 수 있습니다. **BarcodeScannerReport** 에는 다음과 같은 세 가지 속성이 있습니다.
 
-* [Scandata](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandata): 전체 원시 바코드 데이터입니다.
-* [Scandatalabel](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatalabel): 헤더, 체크섬 및 기타 기타 정보를 포함 하지 않는 디코딩된 바코드 레이블입니다.
-* [Scandatatype](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatatype): 디코딩된 바코드 레이블 유형입니다. 가능한 값은 [BarcodeSymbologies](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies) 클래스에 정의 됩니다.
+* [Scandata](/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandata): 전체 원시 바코드 데이터입니다.
+* [Scandatalabel](/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatalabel): 헤더, 체크섬 및 기타 기타 정보를 포함 하지 않는 디코딩된 바코드 레이블입니다.
+* [Scandatatype](/uwp/api/windows.devices.pointofservice.barcodescannerreport.scandatatype): 디코딩된 바코드 레이블 유형입니다. 가능한 값은 [BarcodeSymbologies](/uwp/api/windows.devices.pointofservice.barcodesymbologies) 클래스에 정의 됩니다.
 
-**Scandatalabel** 또는 **scandatalabel**에 액세스 하려는 경우 먼저 [IsDecodeDataEnabled](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdecodedataenabled#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDecodeDataEnabled) 를 **true**로 설정 해야 합니다.
+**Scandatalabel** 또는 **scandatalabel**에 액세스 하려는 경우 먼저 [IsDecodeDataEnabled](/uwp/api/windows.devices.pointofservice.claimedbarcodescanner.isdecodedataenabled#Windows_Devices_PointOfService_ClaimedBarcodeScanner_IsDecodeDataEnabled) 를 **true**로 설정 해야 합니다.
 
 ```cs
 claimedBarcodeScanner.IsDecodeDataEnabled = true;
@@ -50,7 +50,7 @@ claimedBarcodeScanner.IsDecodeDataEnabled = true;
 
 ### <a name="get-the-scan-data-type"></a>검색 데이터 형식 가져오기
 
-디코딩된 바코드 레이블 유형을 가져오는 것은 매우 간단 &mdash; 합니다 .이는 **scandatatype**에서 [GetName](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies.getname) 을 호출 하는 것입니다.
+디코딩된 바코드 레이블 유형을 가져오는 것은 매우 간단 &mdash; 합니다 .이는 **scandatatype**에서 [GetName](/uwp/api/windows.devices.pointofservice.barcodesymbologies.getname) 을 호출 하는 것입니다.
 
 ```cs
 private string GetSymbology(BarcodeScannerDataReceivedEventArgs args)
@@ -136,7 +136,7 @@ private string GetRawData(BarcodeScannerDataReceivedEventArgs args)
 
 ## <a name="see-also"></a>참고 항목
 * [바코드 스캐너](pos-barcodescanner.md)
-* [ClaimedBarcodeScanner 클래스](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies.getname)
-* [BarcodeScannerDataReceivedEventArgs 클래스](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs)
-* [BarcodeScannerReport 클래스](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescannerreport)
-* [BarcodeSymbologies 클래스](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodesymbologies)
+* [ClaimedBarcodeScanner 클래스](/uwp/api/windows.devices.pointofservice.barcodesymbologies.getname)
+* [BarcodeScannerDataReceivedEventArgs 클래스](/uwp/api/windows.devices.pointofservice.barcodescannerdatareceivedeventargs)
+* [BarcodeScannerReport 클래스](/uwp/api/windows.devices.pointofservice.barcodescannerreport)
+* [BarcodeSymbologies 클래스](/uwp/api/windows.devices.pointofservice.barcodesymbologies)

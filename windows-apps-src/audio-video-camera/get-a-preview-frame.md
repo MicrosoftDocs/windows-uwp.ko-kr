@@ -1,67 +1,63 @@
 ---
 ms.assetid: 05E418B4-5A62-42BD-BF66-A0762216D033
-description: 이 항목은 미디어 캡처 미리 보기 스트림에서 단일 미리 보기 프레임을 가져오는 방법을 보여 줍니다.
+description: 이 항목에서는 미디어 캡처 미리 보기 스트림에서 단일 미리 보기 프레임을 가져오는 방법을 보여 줍니다.
 title: 미리 보기 프레임 가져오기
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9963955649b98f226fbb81871b2ac391035ba41a
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 235a5e06a8483599b8fbf29e866e990456c1f1f1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66360893"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163947"
 ---
 # <a name="get-a-preview-frame"></a>미리 보기 프레임 가져오기
 
 
-이 항목은 미디어 캡처 미리 보기 스트림에서 단일 미리 보기 프레임을 가져오는 방법을 보여 줍니다.
+이 항목에서는 미디어 캡처 미리 보기 스트림에서 단일 미리 보기 프레임을 가져오는 방법을 보여 줍니다.
 
 > [!NOTE] 
-> 이 문서는 기본 사진 및 비디오 캡처 구현 단계를 설명하는 [MediaCapture를 사용한 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명된 개념 및 코드를 토대로 작성되었습니다. 보다 수준 높은 캡처 시나리오를 진행하기 전에 해당 문서의 기본적인 미디어 캡처 패턴을 파악하는 것이 좋습니다. 이 문서의 코드는 앱에 적절히 초기화된 MediaCapture의 인스턴스가 이미 있으며 활성 비디오 미리 보기 스트림의 [**CaptureElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CaptureElement)가 있다고 가정합니다.
+> 이 문서는 기본 사진 및 비디오 캡처를 구현 하는 단계를 설명 하는 [MediaCapture을 사용 하 여 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)에 설명 된 개념 및 코드를 기반으로 합니다. 고급 캡처 시나리오로 전환 하기 전에 해당 문서의 기본적인 미디어 캡처 패턴을 숙지 하는 것이 좋습니다. 이 문서의 코드는 앱에 이미 올바르게 초기화 된 MediaCapture 인스턴스가 있고 활성 비디오 미리 보기 스트림이 있는 [**CaptureElement**](/uwp/api/Windows.UI.Xaml.Controls.CaptureElement) 가 있다고 가정 합니다.
 
-기본 미디어 캡처에 필요한 네임스페이스 외에도, 미리 보기 프레임을 캡처하려면 다음 네임스페이스가 필요합니다.
+기본 미디어 캡처에 필요한 네임 스페이스 외에도 미리 보기 프레임을 캡처하려면 다음 네임 스페이스가 필요 합니다.
 
 [!code-cs[PreviewFrameUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPreviewFrameUsing)]
 
-미리 보기 프레임을 요청할 때 원하는 형식의 [**VideoFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.VideoFrame) 개체를 만들어 프레임을 수신할 형식을 지정할 수 있습니다. 이 예제에서는 [**VideoDeviceController.GetMediaStreamProperties**](https://docs.microsoft.com/uwp/api/windows.media.devices.videodevicecontroller.getmediastreamproperties)를 호출하고 [**MediaStreamType.VideoPreview**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType)를 지정하여 미리 보기 스트림에 대한 속성을 요청함으로써, 미리 보기 스트림과 같은 해상도인 비디오 프레임을 만듭니다. 미리 보기 스트림의 너비와 높이는 새 비디오 프레임을 만드는 데 사용됩니다.
+미리 보기 프레임을 요청할 때 원하는 형식으로 [**videoframe**](/uwp/api/Windows.Media.VideoFrame) 개체를 만들어 프레임을 받을 형식을 지정할 수 있습니다. 이 예에서는 [**VideoDeviceController**](/uwp/api/windows.media.devices.videodevicecontroller.getmediastreamproperties) 를 호출 하 고 미리 보기 스트림의 속성을 요청 하는 [**VideoPreview**](/uwp/api/Windows.Media.Capture.MediaStreamType) 를 지정 하 여 미리 보기 스트림과 동일한 해상도의 비디오 프레임을 만듭니다. 미리 보기 스트림의 너비와 높이는 새 비디오 프레임을 만드는 데 사용 됩니다.
 
 [!code-cs[CreateFormatFrame](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCreateFormatFrame)]
 
-[  **MediaCapture**](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaCapture) 개체가 초기화되고 활성 현재 미리 보기 스트림이 있는 경우 [**GetPreviewFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync)를 호출하여 미리 보기 스트림을 가져옵니다. 마지막 단계에서 만든 비디오 프레임을 전달하여 반환된 프레임의 형식을 지정합니다.
+[**MediaCapture**](/uwp/api/Windows.Media.Capture.MediaCapture) 개체가 초기화 되 고 활성 미리 보기 스트림이 있는 경우 [**GetPreviewFrameAsync**](/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync) 를 호출 하 여 미리 보기 스트림을 가져옵니다. 마지막 단계에서 만든 비디오 프레임을 전달 하 여 반환 되는 프레임의 형식을 지정 합니다.
 
 [!code-cs[GetPreviewFrameAsync](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPreviewFrameAsync)]
 
-[  **VideoFrame**](https://docs.microsoft.com/uwp/api/Windows.Media.VideoFrame) 개체의 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/windows.media.videoframe.softwarebitmap) 속성에 액세스하여 미리 보기 프레임의 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 표현을 가져옵니다. 소프트웨어 비트맵 저장, 로드 및 수정에 대한 자세한 내용은 [이미징](imaging.md)을 참조하세요.
+[**Videoframe**](/uwp/api/Windows.Media.VideoFrame) 개체의 [**\bitmap**](/uwp/api/windows.media.videoframe.softwarebitmap) 속성에 액세스 하 여 미리 보기 프레임의 지 속성 [**비트맵**](/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 표현을 가져옵니다. 소프트웨어 비트맵을 저장, 로드 및 수정 하는 방법에 대 한 자세한 내용은 [Imaging](imaging.md)을 참조 하세요.
 
 [!code-cs[GetPreviewBitmap](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPreviewBitmap)]
 
-Direct3D API에서 이미지를 사용하려면 미리 보기 프레임의 [**IDirect3DSurface**](https://docs.microsoft.com/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) 표현을 가져올 수도 있습니다.
+Direct3D Api에서 이미지를 사용 하려는 경우 미리 보기 프레임의 [**IDirect3DSurface**](/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) 표현을 가져올 수도 있습니다.
 
 [!code-cs[GetPreviewSurface](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetGetPreviewSurface)]
 
 > [!IMPORTANT]
-> 반환된 **VideoFrame**의 [**SoftwareBitmap**](https://docs.microsoft.com/uwp/api/windows.media.videoframe.softwarebitmap) 속성 또는 [**Direct3DSurface**](https://docs.microsoft.com/uwp/api/windows.media.videoframe.direct3dsurface) 속성은 **GetPreviewFrameAsync** 호출 방법 및 앱이 실행 중인 디바이스에 따라 null이 될 수 있습니다.
+> **GetPreviewFrameAsync** 를 호출 하는 방법 및 앱이 실행 되는 장치에 따라 반환 된 **Videoframe** 의 [**Direct3DSurface**](/uwp/api/windows.media.videoframe.direct3dsurface) [**속성은 null**](/uwp/api/windows.media.videoframe.softwarebitmap) 일 수 있습니다.
 
-> - **VideoFrame** 인수를 허용하는 [**GetPreviewFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync)의 오버로드를 호출하면 반환된 **VideoFrame**의 **SoftwareBitmap**은 null이 아니고 **Direct3DSurface** 속성은 null이 됩니다.
-> - 내부적으로 프레임을 표시하기 위해 Direct3D 화면을 사용하는 디바이스에서 인수가 없는 [**GetPreviewFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync)의 오버로드를 호출하면 **Direct3DSurface** 속성은 null이 아닌 값이 되고 **SoftwareBitmap** 속성은 null이 됩니다.
-> - 내부적으로 프레임을 표시하기 위해 Direct3D 화면을 사용하지 않는 디바이스에서 인수가 없는 [**GetPreviewFrameAsync**](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync)의 오버로드를 호출하면 **SoftwareBitmap** 속성은 null이 아닌 값이 되고 **Direct3DSurface** 속성은 null이 됩니다.
+> - **Videoframe** 인수를 허용 하는 [**GetPreviewFrameAsync**](/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync) 의 오버 로드를 호출 하면 반환 되는 **videoframe** 에 null이 아닌 **tbitmap** 이 포함 되 고 **Direct3DSurface** 속성은 null이 됩니다.
+> - Direct3D surface를 사용 하 여 내부적으로 프레임을 표시 하는 장치에 인수가 없는 [**GetPreviewFrameAsync**](/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync) 의 오버 로드를 호출 하는 경우 **Direct3DSurface** 속성은 Null이 아니고, **\bitmap** 속성은 null이 됩니다.
+> - Direct3D surface를 사용 하지 않고 내부적으로 프레임을 표시 하는 장치에 인수가 없는 [**GetPreviewFrameAsync**](/uwp/api/windows.media.capture.mediacapture.getpreviewframeasync) 의 오버 로드를 호출 하는 경우에는 Direct3DSurface **bitmap** 속성이 null이 아니고 **Direct3DSurface** 속성이 null이 됩니다.
 
-**SoftwareBitmap** 또는 **Direct3DSurface** 속성에서 반환하는 개체에 대해 작업하기 전에 항상 null 값을 확인해야 합니다.
+응용 **프로그램은** **Direct3DSurface** 속성에서 반환 하는 개체에 대해 작업을 수행 하기 전에 항상 null 값을 확인 해야 합니다.
 
-미리 보기 프레임 사용이 끝나면 해당 [**Close**](https://docs.microsoft.com/uwp/api/windows.media.videoframe.close)메서드(C#에서 Dispose에 프로젝션됨)를 호출하여 프레임에 사용되는 리소스를 해제해야 합니다. 또는 개체를 자동으로 해제하는 **using** 패턴을 사용하세요.
+미리 보기 프레임을 사용 하 여 작업을 완료 한 후에는 해당 [**Close**](/uwp/api/windows.media.videoframe.close) 메서드 (c #에서는 Dispose로 프로젝션)를 호출 하 여 프레임에서 사용 하는 리소스를 해제 해야 합니다. 또는 개체를 자동으로 삭제 **하는 using** 패턴을 사용 합니다.
 
 [!code-cs[CleanUpPreviewFrame](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCleanUpPreviewFrame)]
 
 ## <a name="related-topics"></a>관련 항목
 
 * [카메라](camera.md)
-* [MediaCapture 기본 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
+* [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
  
 
  
-
-
-
-

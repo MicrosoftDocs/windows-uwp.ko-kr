@@ -1,24 +1,24 @@
 ---
 ms.assetid: f54ae666-d609-49d6-90ba-e2e62ebc3652
-description: 지원되는 배너 광고 크기에 대해 알아봅니다.
+description: UWP (유니버설 Windows 플랫폼) 앱에 대해 지원 되는 배너 광고 크기에 대해 알아보고 배너 광고 크기의 예를 참조 하세요.
 title: 지원되는 배너 광고 크기
 ms.date: 02/18/2020
 ms.topic: article
-keywords: Windows 10, uwp, 광고, 광고, 크기, 배너
+keywords: windows 10, uwp, 광고, 광고, 크기, 배너
 ms.localizationpriority: medium
-ms.openlocfilehash: ec96d744f7a9d2e91b27feae1fe5f3b0c322a450
-ms.sourcegitcommit: 71f9013c41fc1038a9d6c770cea4c5e481c23fbc
+ms.openlocfilehash: 2ed20f6307b5bbf833dc321cd44354e4fe79c046
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77506857"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162407"
 ---
 # <a name="supported-banner-ad-sizes"></a>지원되는 배너 광고 크기
 
 >[!WARNING]
-> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 내용](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
+> 2020 년 6 월 1 일부 터 Windows UWP 앱 용 Microsoft Ad 수익 화 플랫폼이 종료 됩니다. [자세한 정보](https://social.msdn.microsoft.com/Forums/windowsapps/en-US/db8d44cb-1381-47f7-94d3-c6ded3fea36f/microsoft-ad-monetization-platform-shutting-down-june-1st?forum=aiamgr)
 
-다음 배너 광고 크기는 유니버설 Windows 플랫폼(UWP) 앱에 지원됩니다. 앱에서 **Adcontrol** 개체를 인스턴스화할 때 이러한 지원 되는 크기 중 하 나와 일치 하도록 width 및 height 속성을 설정 해야 합니다.
+UWP (유니버설 Windows 플랫폼) 앱에 대해 지원 되는 배너 광고 크기는 다음과 같습니다. 앱에서 **Adcontrol** 개체를 인스턴스화할 때 이러한 지원 되는 크기 중 하 나와 일치 하도록 width 및 height 속성을 설정 해야 합니다.
 
 크기는 너비 x 높이입니다.
 
@@ -31,9 +31,9 @@ ms.locfileid: "77506857"
 * 728x90
 
 > [!NOTE]
-> 최상의 환경을 위해 Windows 10 Mobile 장치에서 300x50, 320x50 및 640x100 크기를 사용하는 것이 좋습니다.
+> 최상의 환경을 위해 Windows 10 Mobile 장치에서 300x50, 320x50 및 640x100 크기를 사용 하는 것이 좋습니다.
 
-다음 표에 각 배너 광고 크기를 보여주는 예가 제공되어 있습니다.
+다음 표에서는 각 배너 광고 크기를 보여 주는 예제를 제공 합니다.
 
 <table>
 <colgroup>

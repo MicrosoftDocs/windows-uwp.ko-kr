@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 가격, 사용 가능, 검색 가능, 무료 평가판, 평가판, 평가판, 앱, 릴리스 날짜
 ms.localizationpriority: medium
-ms.openlocfilehash: e9f516aeabae142c1975de2f9df343a43e642bab
-ms.sourcegitcommit: c0a859e4b8b46dea33e381ed5ae5197437902a41
+ms.openlocfilehash: 9956463471b310835aedf517817878d526cc810d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87120117"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164107"
 ---
 # <a name="set-app-pricing-and-availability"></a>앱 가격 책정 및 가용성 설정
 
@@ -23,10 +23,10 @@ ms.locfileid: "87120117"
 
 Microsoft Store은 전 세계 240 국가의 지역에서 고객에 게 도달 합니다. 기본적으로 모든 가능한 시장에서 앱을 제공 합니다. 원한다 면 앱을 제공할 특정 시장을 선택할 수 있습니다. 
 
-자세한 내용은 [시장 선택 정의](define-pricing-and-market-selection.md)를 참조 하세요.
+자세한 내용은 [시장 선택 정의](./define-market-selection.md)를 참조 하세요.
 
 
-## <a name="visibility"></a>표시 유형
+## <a name="visibility"></a>가시 거리
 
 **표시 유형** 섹션에서 사용자가 스토어에서 앱을 찾을 수 있는지 여부를 비롯 하 여 앱을 검색 하 고 가져오는 방법에 대 한 제한을 설정할 수 있습니다.
 
@@ -90,5 +90,3 @@ Windows 10의 고객에 게 평가판을 제공 해야 하는 날짜를 설정 �
 ## <a name="publish-date"></a>게시 날짜
 
 이전에는이 페이지에 **게시 날짜** 섹션이 나타났습니다. 이제이 기능을 [제출 옵션](manage-submission-options.md) 페이지의 **게시 보류 옵션** 섹션에서 찾을 수 있습니다. 앱을 스토어에 게시 해야 하는 경우를 제어 하려면 **가격 책정 및 가용성** 페이지의 [일정](configure-precise-release-scheduling.md) 섹션을 사용 하는 것이 좋습니다.
-
-

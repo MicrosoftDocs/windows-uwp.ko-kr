@@ -5,12 +5,12 @@ ms.date: 05/03/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d4a4ab7664833308fe059e8bf07f68adea82b3e
-ms.sourcegitcommit: cc645386b996f6e59f1ee27583dcd4310f8fb2a6
+ms.openlocfilehash: 8a23758612b3c595f808fe2ffe4f38e558cf0740
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84262754"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163967"
 ---
 # <a name="enable-audio-playback-from-remote-bluetooth-connected-devices"></a>원격 Bluetooth 연결 디바이스에서 오디오 재생 사용
 
@@ -32,7 +32,7 @@ Audio [Playbackconnection](/uwp/api/windows.media.audio.audioplaybackconnection)
 
 장치 감시자를 시작할 때 연결 되는 장치 및 장치 감시자를 실행 하는 동안 연결 된 모든 장치에 대해 [Devicewatcher. 추가](/uwp/api/windows.devices.enumeration.devicewatcher.added) 된 이벤트가 발생 합니다. 이전에 연결 된 장치의 연결을 끊으면 [Devicewatcher. 제거](/uwp/api/windows.devices.enumeration.devicewatcher.removed) 된 이벤트가 발생 합니다. 
 
-[Devicewatcher를 호출 합니다.](/uwp/api/windows.devices.enumeration.devicewatcher.start) 오디오 재생 연결을 지 원하는 연결 된 장치를 감시 하기 시작 합니다. 이 예제에서는 UI의 주 **그리드** 컨트롤이 로드 될 때 장치 관리자를 시작 합니다. **Devicewatcher**를 사용 하는 방법에 대 한 자세한 내용은 [장치 열거](/windows/uwp/devices-sensors/enumerate-devices)를 참조 하세요.
+[Devicewatcher를 호출 합니다.](/uwp/api/windows.devices.enumeration.devicewatcher.start) 오디오 재생 연결을 지 원하는 연결 된 장치를 감시 하기 시작 합니다. 이 예제에서는 UI의 주 **그리드** 컨트롤이 로드 될 때 장치 관리자를 시작 합니다. **Devicewatcher**를 사용 하는 방법에 대 한 자세한 내용은 [장치 열거](../devices-sensors/enumerate-devices.md)를 참조 하세요.
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioPlaybackConnectionExample/cs/MainPage.xaml.cs" id="snippet_MainGridLoaded":::
 
@@ -87,7 +87,3 @@ Audio [Playbackconnection](/uwp/api/windows.media.audio.audioplaybackconnection)
 
 
  
-
-
-
-

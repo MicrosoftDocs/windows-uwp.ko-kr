@@ -6,12 +6,12 @@ ms.date: 03/13/2019
 ms.topic: article
 keywords: windows 10, uwp, 목록, 설명, 스토어 페이지, 릴리스 정보, 제목
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e8ba40129197f77b2bbbd3950a6bcf214bae787
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 6124ea17d8c1c348e9093882df901c829f2cd90e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493019"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164197"
 ---
 # <a name="create-app-store-listings"></a>앱 스토어 목록 만들기
 
@@ -54,7 +54,7 @@ ms.locfileid: "86493019"
 > [!NOTE]
 > 선택한 **제품 이름은** 작업 중인 언어의 스토어 목록에만 적용 됩니다. 고객이 앱을 설치할 때 표시 되는 이름에는 영향을 주지 않습니다. 이 이름은 설치 된 패키지의 매니페스트에서 가져옵니다. 혼동을 피하려면 각 언어의 패키지 및 매장 목록에서 같은 이름을 사용 하는 것이 좋습니다.
 
-## <a name="description"></a>설명
+## <a name="description"></a>Description
 
 설명 필드를 통해 고객에 게 앱의 용도를 알려줄 수 있습니다. 이 필드는 필수 이며 일반 텍스트의 최대 1만 자까지 허용 됩니다.
 
@@ -153,7 +153,7 @@ ms.locfileid: "86493019"
 
 ### <a name="additional-license-terms"></a>추가 사용 조건
 
-앱 [개발자 규약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)에서 연결 된 **표준 응용 프로그램 사용 조건** 에 따라 고객에 게 앱을 사용 하려면이 필드를 비워 둡니다.
+앱 [개발자 규약](/legal/windows/agreements/app-developer-agreement)에서 연결 된 **표준 응용 프로그램 사용 조건** 에 따라 고객에 게 앱을 사용 하려면이 필드를 비워 둡니다.
 
 사용 조건이 **표준 응용 프로그램 사용 조건과**다른 경우 여기에 입력 합니다.
 

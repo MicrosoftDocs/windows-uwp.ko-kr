@@ -5,12 +5,12 @@ ms.date: 05/22/2020
 ms.topic: article
 keywords: windows 10 s, 항상 연결 됨, ARM, ARM64, x86 에뮬레이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 679afeb1915bfcb84445ca97453a884654249a0e
-ms.sourcegitcommit: 2aa82d60d7f9edf7ae7f9a550a8d044e2040c08a
+ms.openlocfilehash: 39ff5b2aa6c72feaeaea0a7a61100196c109257c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87443350"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162297"
 ---
 # <a name="windows-10-on-arm"></a>ARM 기반 Windows 10
 원래 Windows 10 (Windows 10 Mobile과 구분 됨)은 x86 및 x64 프로세서로 구동 된 Pc 에서만 실행 될 수 있습니다. 이제 Windows 10 desktop은 ARM64 프로세서에서 구동 하는 컴퓨터에서이 컴퓨터에서 실행 될 수 있습니다. ARM CPU 아키텍처의 전력 절약 특성을 통해 이러한 Pc는 모든 배터리 수명 및 모바일 데이터 네트워크에 대 한 지원을 받을 수 있습니다. 이러한 Pc는 뛰어난 응용 프로그램 호환성을 제공 하며 기존 x86 win32 응용 프로그램을 수정 하지 않고 실행할 수 있습니다. 자세한 내용 또는 데모는 [채널 9 비디오에서 항상 연결 된 PC](https://channel9.msdn.com/Events/Build/2017/P4171)를 살펴보세요.
@@ -59,5 +59,5 @@ ARM 앱에는 Visual Studio용 원격 도구를 사용할 수 있습니다. [Vis
 ## <a name="related-topics"></a>관련 항목
 |항목 | Description |
 |-----|-----|
-|[WDK를 사용하여 ARM64 드라이버 빌드](https://docs.microsoft.com/windows-hardware/drivers/develop/building-arm64-drivers)|ARM64 드라이버를 구축 하는 방법에 대 한 지침입니다. |
-| [ARM에서 x86 앱 디버그](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugging-arm64) | ARM에서 x86 앱을 디버깅 하는 방법에 대 한 지침입니다. |
+|[WDK를 사용하여 ARM64 드라이버 빌드](/windows-hardware/drivers/develop/building-arm64-drivers)|ARM64 드라이버를 구축 하는 방법에 대 한 지침입니다. |
+| [ARM에서 x86 앱 디버그](/windows-hardware/drivers/debugger/debugging-arm64) | ARM에서 x86 앱을 디버깅 하는 방법에 대 한 지침입니다. |

@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2532683c7f5762f35640ef7e80180827404cde73
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: b6ffbbb13646fe085fa81c99f4ecf45e328a01f7
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88943033"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164267"
 ---
 # <a name="attract-customers-and-promote-your-apps"></a>고객을 유도 하 고 앱을 홍보 하세요.
 
@@ -105,21 +105,21 @@ ms.locfileid: "88943033"
 
 [대시보드에서 ad 캠페인 만들기](create-an-ad-campaign-for-your-app.md)
 
-[REST API 사용 하 여 ad 캠페인 만들기](https://docs.microsoft.com/windows/uwp/monetize/run-ad-campaigns-using-windows-store-services)
+[REST API 사용 하 여 ad 캠페인 만들기](../monetize/run-ad-campaigns-using-windows-store-services.md)
 
-[대시보드에서 캠페인 성능 데이터 검토](promote-your-app-report.md)
+[대시보드에서 캠페인 성능 데이터 검토](/windows/uwp/publish/ad-campaign-report)
 
-[REST API를 사용 하 여 캠페인 성능 데이터 가져오기](https://docs.microsoft.com/windows/uwp/monetize/)
+[REST API를 사용 하 여 캠페인 성능 데이터 가져오기](../monetize/index.md)
 
 ## <a name="promotion-analytics"></a>프로 모션 분석
 
 ![프로 모션 분석](images/ads-promotion-analytics.png)
 
-[광고 캠페인 보고서](promote-your-app-report.md)
+[광고 캠페인 보고서](/windows/uwp/publish/ad-campaign-report)
 
 [구입 보고서](acquisitions-report.md)
 
-[REST API 사용 하 여 분석 데이터 가져오기](https://docs.microsoft.com/windows/uwp/monetize/access-analytics-data-using-windows-store-services)
+[REST API 사용 하 여 분석 데이터 가져오기](../monetize/access-analytics-data-using-windows-store-services.md)
 
 ## <a name="other-ways-to-promote-your-app"></a>앱을 승격 하는 다른 방법
 

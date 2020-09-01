@@ -1,19 +1,19 @@
 ---
-title: DXGI 1.3 스왑 체인을 사용 하 여 대기 시간 단축
+title: DXGI 1.3 스왑 체인으로 대기 시간 단축
 description: 새 프레임 렌더링을 시작할 때 스왑 체인이 적절 한 시간에 신호를 보낼 때까지 대기 하 여 유효한 프레임 대기 시간을 줄이려면 DXGI 1.3를 사용 합니다.
 ms.assetid: c99b97ed-a757-879f-3d55-7ed77133f6ce
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 대기 시간, dxgi, 스왑 체인, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 27ecce9d95d3c2e852b049e3cac9579850022df9
-ms.sourcegitcommit: d2aabe027a2fff8a624111a00864d8986711cae6
+ms.openlocfilehash: 41d11865daadacf8ff90971836cab7cd941c4182
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82880863"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163047"
 ---
-# <a name="reduce-latency-with-dxgi-13-swap-chains"></a>DXGI 1.3 스왑 체인을 사용 하 여 대기 시간 단축
+# <a name="reduce-latency-with-dxgi-13-swap-chains"></a>DXGI 1.3 스왑 체인으로 대기 시간 단축
 
 새 프레임 렌더링을 시작할 때 스왑 체인이 적절 한 시간에 신호를 보낼 때까지 대기 하 여 유효한 프레임 대기 시간을 줄이려면 DXGI 1.3를 사용 합니다. 게임은 게임에서 디스플레이를 업데이트 하 여 해당 입력에 응답 하는 경우 일반적으로 플레이어 입력을 받은 시간부터 가장 낮은 대기 시간을 제공 해야 합니다. 이 항목에서는 게임에서 효과적인 프레임 대기 시간을 최소화 하는 데 사용할 수 있는 Direct3D 11.2부터 사용할 수 있는 기술을 설명 합니다.
 
@@ -23,7 +23,7 @@ ms.locfileid: "82880863"
 
 [**DXGI \_ 스왑 \_ 체인 \_ 플래그 \_ 프레임 \_ 대기 시간 \_ 대기 가능 \_ 개체**](/windows/win32/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) 플래그를 사용 하 여 대기 가능 스왑 체인을 만듭니다. 이러한 방식으로 만들어진 스왑 체인은 시스템이 실제로 새 프레임을 받아들일 준비가 되었을 때 렌더링 루프에 알릴 수 있습니다. 이렇게 하면 현재 데이터를 기반으로 게임을 렌더링 한 다음 결과를 현재 큐에 바로 배치할 수 있습니다.
 
-## <a name="step-1-create-a-waitable-swap-chain"></a>1단계: 대기 가능 스왑 체인 만들기
+## <a name="step-1-create-a-waitable-swap-chain"></a>1단계. 대기 가능 스왑 체인 만들기
 
 [**CreateSwapChainForCoreWindow**](/windows/win32/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow)를 호출할 때 [**DXGI \_ 스왑 \_ 체인 \_ 플래그 \_ 프레임 \_ 대기 시간 \_ 대기 가능 \_ 개체**](/windows/win32/api/dxgi/ne-dxgi-dxgi_swap_chain_flag) 플래그를 지정 합니다.
 
@@ -141,7 +141,7 @@ Windows의 다중 스레드 프로그래밍에 대 한 자세한 내용은 다�
 * [**IDXGISwapChain2::GetFrameLatencyWaitableObject**](/windows/win32/api/dxgi1_3/nf-dxgi1_3-idxgiswapchain2-getframelatencywaitableobject)
 * [**WaitForSingleObjectEx**](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobjectex)
 * [**Windows.System.Threading**](/uwp/api/Windows.System.Threading)
-* [C + +의 비동기 프로그래밍](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)
+* [C + +의 비동기 프로그래밍](../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md)
 * [프로세스 및 스레드](/windows/win32/procthread/processes-and-threads)
-* [Synchronization](/windows/win32/sync/synchronization)
+* [동기화](/windows/win32/sync/synchronization)
 * [이벤트 개체 사용 (Windows)](/windows/win32/sync/using-event-objects)
