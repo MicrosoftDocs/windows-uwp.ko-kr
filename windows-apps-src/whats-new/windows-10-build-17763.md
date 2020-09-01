@@ -6,12 +6,12 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 77b47866bc064baec7c0ecf556eb615f67af0554
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 8599d1f493dc37095c0cb9464aa1d14c22072413
+ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234382"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846843"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>개발자용 Windows 10 빌드 17763의 새로운 기능
 
@@ -47,7 +47,7 @@ C++/WinRT 코드 예제 | 기존 C++/CX 코드 예제와 함께 설명서의 항
 DXGI(DirectX 그래픽 인프라) | 누락된 DXGI API에 대한 새 설명서가 추가되었으며, Windows 10에서 발표할 때 모범 사례에 대한 문서가 제공되었습니다. </br> * [최상의 성능을 위해 DXGI 대칭 이동 모델 사용](https://docs.microsoft.com/windows/desktop/direct3ddxgi/for-best-performance--use-dxgi-flip-model): 최신 버전의 Windows에서 프레젠테이션 스택의 성능과 효율성을 극대화하는 방법에 대한 지침을 제공합니다. </br> * [IDXGIOutput6::CheckHardwareCompositionSupport 메서드](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/nf-dxgi1_6-idxgioutput6-checkhardwarecompositionsupport): 애플리케이션에 하드웨어 확대가 지원됨을 알립니다. </br> * [DXGI_HARDWARE_COMPOSITION_SUPPORT_FLAGS 열거형](https://docs.microsoft.com/windows/desktop/api/dxgi1_6/ne-dxgi1_6-dxgi_hardware_composition_support_flags): 지원되는 하드웨어 구성 수준을 설명합니다.
 시작 | [시작](../get-started/index.md) 콘텐츠가 새 항목으로 활성화되어 Windows 10을 처음 사용하는 개발자가 다음과 같은 일반적인 작업을 수행하는 방법에 대한 정보와 지침을 제공합니다. </br> * [양식 작성](../get-started/construct-form-learning-track.md) </br> * [목록에 고객 표시](../get-started/display-customers-in-list-learning-track.md) </br> * [설정 저장 및 로드](../get-started/settings-learning-track.md) </br> * [파일 작업](../get-started/fileio-learning-track.md)
 맵 스타일시트 편집기 | 새 [맵 스타일시트 편집기](https://www.microsoft.com/p/map-style-sheet-editor/9nbhtcjt72ft?rtc=1#activetab=pivot:overviewtab) 애플리케이션을 사용하여 애플리케이션에 추가하는 맵의 모양을 대화형으로 사용자 지정합니다.
-Microsoft Learn | 새 [Microsoft Learn 사이트](https://www.microsoft.com/learning/default.aspx)는 Microsoft 개발자에게 새 실습 학습 및 교육 기회를 제공합니다. Microsoft Learn은 현재 Microsoft 365, Microsoft Azure, Office 365 및 Windows Server에 대한 학습 및 인증을 제공합니다.
+Microsoft Learn | 새 [Microsoft Learn 사이트](https://www.microsoft.com/learning/default.aspx)는 Microsoft 개발자에게 새 실습 학습 및 교육 기회를 제공합니다. Microsoft Learn은 현재 Microsoft 365, Microsoft Azure 및 Windows Server에 대한 학습 및 인증을 제공합니다.
 메모장 | [메모장이 업데이트](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/)되어 확대/축소, 줄 바꿈 찾기/바꾸기, Unix/Linux(LF) 및 Mac(CR) 줄 끝 지원이 추가되었습니다.
 프로젝트 로마 | [프로젝트 로마](https://docs.microsoft.com/windows/project-rome/)는 이제 지원되는 플랫폼과 SDK에서 일관된 프로그래밍 환경을 제공합니다. </br>  새 [Microsoft Graph 알림](https://developer.microsoft.com/graph/docs/concepts/notifications-concept-overview)에서 프로젝트 로마를 사용하여 앱을 위한 사용자 중심의 플랫폼 간 알림 플랫폼을 제공합니다.
 화면 캡처 | 새 [URI 체계](../launch-resume/launch-screen-snipping.md)를 사용하면 앱에서 프로그래밍 방식으로 새 캡처를 열거나 주석에 대한 특정 이미지를 사용하여 캡처 및 스케치 앱을 시작할 수 있습니다.

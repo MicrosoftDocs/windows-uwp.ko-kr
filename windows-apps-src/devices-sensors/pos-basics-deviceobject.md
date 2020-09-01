@@ -5,18 +5,18 @@ ms.date: 06/19/2018
 ms.topic: article
 keywords: windows 10, uwp, 서비스 지점, pos
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c9a5008756831eed9819a3b323d167dcc4b2744
-ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
+ms.openlocfilehash: db6b47a29e302cb962e5b91cfba823eb7f89db81
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89043405"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156607"
 ---
 # <a name="pointofservice-device-objects"></a>PointOfService 장치 개체
 
 ## <a name="creating-a-device-object"></a>디바이스 개체 만들기
 
-새 열거 또는 저장 된 DeviceID에서 사용 하려는 PointOfService 장치를 식별 한 후에는 프로그래밍 방식으로 선택한[**deviceid**](https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformation.id) 로 [**FromIdAsync**](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.fromidasync) 를 호출 하거나 사용자가 새 서비스 장치 개체를 만들도록 선택 했습니다.
+새 열거 또는 저장 된 DeviceID에서 사용 하려는 PointOfService 장치를 식별 한 후에는 프로그래밍 방식으로 선택한[**deviceid**](/uwp/api/windows.devices.enumeration.deviceinformation.id) 로 [**FromIdAsync**](/uwp/api/windows.devices.pointofservice.barcodescanner.fromidasync) 를 호출 하거나 사용자가 새 서비스 장치 개체를 만들도록 선택 했습니다.
 
 이 샘플은 DeviceID를 사용 하 여 FromIdAsync를 사용 하 여 새 바코드 스캐너 개체를 만들려고 시도 합니다. 개체를 만드는 동안 오류가 발생 하는 경우 디버그 메시지가 기록 됩니다.
 

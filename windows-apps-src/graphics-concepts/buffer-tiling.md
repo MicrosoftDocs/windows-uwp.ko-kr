@@ -1,35 +1,31 @@
 ---
 title: 버퍼 타일링
-description: 버퍼 리소스는 64KB의 크기로 분할되며, 크기가 64KB의 곱이 아닌 경우 마지막 타일에 약간의 빈 공간이 포함됩니다.
+description: 버퍼 리소스는 64KB 타일로 나뉘어 크기가 64KB의 배수가 아닌 경우 마지막 타일에 몇 개의 빈 공간을 포함 합니다.
 ms.assetid: 577DC6B0-F373-4748-AD80-2784C597C366
 keywords:
 - 버퍼 타일링
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 34201c889ed984b27d50126bd2a04e9b320a17a3
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: fdb78dc2cff6ccedec58acbc946068e14511fdc2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66370651"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156357"
 ---
 # <a name="buffer-tiling"></a>버퍼 타일링
 
 
-[버퍼](introduction-to-buffers.md) 리소스는 64KB의 크기로 분할되며, 크기가 64KB의 곱이 아닌 경우 마지막 타일에 약간의 빈 공간이 포함됩니다.
+[버퍼](introduction-to-buffers.md) 리소스는 64kb 타일로 나뉘어 크기가 64kb의 배수가 아닌 경우 마지막 타일에 몇 개의 빈 공간을 포함 합니다.
 
-구조적 버퍼는 바둑판식으로 표시할 stride에 대한 제약 조건이 없어야 합니다. 그러나 먼저 stride를 바둑판식으로 표시되게 만들어 [**StructuredBuffers**](https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-structuredbuffer) 사용을 위해 하드웨어에서 가능한 성능 최적화를 희생해야 할 수 있습니다.
+구조적 버퍼에는 바둑판식으로 표시할 stride에 대 한 제약 조건이 없어야 합니다. 하지만 [**StructuredBuffers**](/windows/desktop/direct3dhlsl/sm5-object-structuredbuffer) 를 사용 하기 위한 하드웨어에서 가능한 성능 최적화는 첫 번째 장소에서 바둑판식으로 만들어 영향을 받을 수 있습니다.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
-[리소스의 영역을 바둑판식으로 스트리밍 하는 방법](how-a-streaming-resource-s-area-is-tiled.md)
-
- 
+[스트리밍 리소스 영역의 타일링 방법](how-a-streaming-resource-s-area-is-tiled.md)
 
  
 
-
-
-
+ 

@@ -10,20 +10,20 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: f660c17cd981ca830f0751819d01bf2141408ecc
-ms.sourcegitcommit: 894decaf374f22bf39d4aecc1ab50d34ac011e31
+ms.openlocfilehash: fe862bf1b23ae7969e043d2172aa1633bd633ade
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88162558"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155827"
 ---
 # <a name="handle-a-cancelled-background-task"></a>취소된 백그라운드 작업 처리
 
 **중요 API**
 
--   [**BackgroundTaskCanceledEventHandler**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskcanceledeventhandler)
--   [**IBackgroundTaskInstance**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)
--   [**ApplicationData. Current**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.current)
+-   [**BackgroundTaskCanceledEventHandler**](/uwp/api/windows.applicationmodel.background.backgroundtaskcanceledeventhandler)
+-   [**IBackgroundTaskInstance**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)
+-   [**ApplicationData. Current**](/uwp/api/windows.storage.applicationdata.current)
 
 취소 요청을 인식 하 고, 작업을 중지 하 고, 영구 저장소를 사용 하 여 앱에 취소를 보고 하는 백그라운드 작업을 만드는 방법에 대해 알아봅니다.
 
@@ -177,7 +177,7 @@ else
 ```
 
 > [!NOTE]
-> 위에 표시 된 코드 샘플에서는 [**IBackgroundTaskInstance**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)를 사용 합니다. 백그라운드 작업 진행률을 기록 하는 데 사용 되는 [**진행률**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.progress) 속성입니다. 진행률은 [**BackgroundTaskProgressEventArgs**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs) 클래스를 사용 하 여 앱에 다시 보고 됩니다.
+> 위에 표시 된 코드 샘플에서는 [**IBackgroundTaskInstance**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTaskInstance)를 사용 합니다. 백그라운드 작업 진행률을 기록 하는 데 사용 되는 [**진행률**](/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.progress) 속성입니다. 진행률은 [**BackgroundTaskProgressEventArgs**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskProgressEventArgs) 클래스를 사용 하 여 앱에 다시 보고 됩니다.
 
 작업을 중지 한 후 작업이 완료 되었는지 또는 취소 되었는지 기록 하도록 **Run** 메서드를 수정 합니다. 백그라운드 작업이 취소 될 때 프로세스 간에 통신 하는 방법이 필요 하기 때문에이 단계는 out-of-process 백그라운드 작업에 적용 됩니다. In-process 백그라운드 작업의 경우 응용 프로그램과 상태를 공유 하 여 작업이 취소 되었음을 나타낼 수 있습니다.
 
@@ -414,4 +414,4 @@ void ExampleBackgroundTask::Run(IBackgroundTaskInstance^ taskInstance)
 - [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
 - [유지 관리 트리거 사용](use-a-maintenance-trigger.md)
 - [백그라운드 작업 디버그](debug-a-background-task.md)
-- [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
+- [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](/previous-versions/hh974425(v=vs.110))

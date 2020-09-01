@@ -9,14 +9,14 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 1e06a87ce771f603721c928b984d0f57d8e45013
-ms.sourcegitcommit: 1d53d89bd3d044f4a2dc290b93c1ad15a088b361
+ms.openlocfilehash: 72b6196f0b4607f2414eb94220dd31190ef93245
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87547315"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156017"
 ---
-# <a name="create-and-register-a-winmain-com-background-task"></a>Winmain COM 백그라운드 작업 만들기 및 등록
+# <a name="create-and-register-a-winmain-com-background-task"></a>winmain COM 백그라운드 작업 만들기 및 등록
 
 > [!TIP]
 > BackgroundTaskBuilder SetTaskEntryPointClsid 메서드는 Windows 10 버전 2004부터 사용할 수 있습니다.
@@ -26,18 +26,18 @@ ms.locfileid: "87547315"
 
 **중요 API**
 
--   [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
--   [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
+-   [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
+-   [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
 
 COM 백그라운드 작업 클래스를 만들고 트리거에 대 한 응답으로 완전 신뢰 패키지 winmain 앱에서 실행 되도록 등록 합니다. 백그라운드 작업을 사용 하 여 앱이 일시 중단 되거나 실행 되지 않는 경우 기능을 제공할 수 있습니다. 이 항목에서는 포그라운드 앱 프로세스나 다른 프로세스에서 실행할 수 있는 백그라운드 작업을 만들고 등록 하는 방법을 보여 줍니다.
 
 ## <a name="create-the-background-task-class"></a>백그라운드 작업 클래스 만들기
 
-[**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) 인터페이스를 구현 하는 클래스를 작성 하 여 백그라운드에서 코드를 실행할 수 있습니다. 이 코드는 (예: [**Systemtrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 또는 [**TimeTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.TimeTrigger))를 사용 하 여 특정 이벤트를 트리거할 때 실행 됩니다.
+[**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) 인터페이스를 구현 하는 클래스를 작성 하 여 백그라운드에서 코드를 실행할 수 있습니다. 이 코드는 (예: [**Systemtrigger**](/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 또는 [**TimeTrigger**](/uwp/api/Windows.ApplicationModel.Background.TimeTrigger))를 사용 하 여 특정 이벤트를 트리거할 때 실행 됩니다.
 
-다음 단계에서는 [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) 인터페이스를 구현 하 고 기본 프로세스에 추가 하는 새 클래스를 작성 하는 방법을 보여 줍니다.
+다음 단계에서는 [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) 인터페이스를 구현 하 고 기본 프로세스에 추가 하는 새 클래스를 작성 하는 방법을 보여 줍니다.
 
-1.  패키지 된 WinMain 응용 프로그램 솔루션에서 WinRT Api를 참조 하려면 [**다음 지침을 참조**](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-enhance) 하세요. 이는 IBackgroundTask 및 관련 Api를 사용 하는 데 필요 합니다.
+1.  패키지 된 WinMain 응용 프로그램 솔루션에서 WinRT Api를 참조 하려면 [**다음 지침을 참조**](/windows/apps/desktop/modernize/desktop-to-uwp-enhance) 하세요. 이는 IBackgroundTask 및 관련 Api를 사용 하는 데 필요 합니다.
 2.  새 클래스에서 [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) 인터페이스를 구현 합니다. [**IBackgroundTask**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) 메서드는 지정 된 이벤트가 트리거될 때 호출 되는 필수 진입점입니다. 이 메서드는 모든 백그라운드 작업에 필요 합니다.
 
 > [!NOTE]
@@ -45,7 +45,7 @@ COM 백그라운드 작업 클래스를 만들고 트리거에 대 한 응답으
 
 다음 샘플 코드에서는 prime를 계산 하 고 취소가 요청 될 때까지 파일에 쓰는 기본적인 백그라운드 작업 클래스를 보여 줍니다.
 
-C + +/WinRT 예제는 백그라운드 작업 클래스를 [**COM coclass**](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/author-coclasses#implement-the-coclass-and-class-factory)로 구현 합니다.
+C + +/WinRT 예제는 백그라운드 작업 클래스를 [**COM coclass**](../cpp-and-winrt-apis/author-coclasses.md#implement-the-coclass-and-class-factory)로 구현 합니다.
 
 
 <details>
@@ -391,7 +391,7 @@ sampleTaskServer.Start();
 
 ## <a name="register-the-background-task-to-run"></a>실행할 백그라운드 작업 등록
 
-1.  [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.alltasks) 속성을 반복 하 여 백그라운드 작업을 이미 등록 했는지 여부를 확인 합니다. *이 단계는 중요*합니다. 앱에서 기존 백그라운드 작업 등록을 확인 하지 않는 경우 작업을 여러 번 등록 하 여 성능에 문제가 발생 하 고 작업을 완료할 수 있을 때까지 작업의 사용 가능한 CPU 시간을 제한 합니다. 응용 프로그램은 동일한 진입점을 사용 하 여 모든 백그라운드 작업을 처리 하 고 [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration) 에 할당 된 [**이름**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.name#Windows_ApplicationModel_Background_BackgroundTaskRegistration_Name) 또는 [**TaskId**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.taskid#Windows_ApplicationModel_Background_BackgroundTaskRegistration_TaskId) 와 같은 기타 속성을 사용 하 여 수행할 작업을 결정 합니다.
+1.  [**BackgroundTaskRegistration**](/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.alltasks) 속성을 반복 하 여 백그라운드 작업을 이미 등록 했는지 여부를 확인 합니다. *이 단계는 중요*합니다. 앱에서 기존 백그라운드 작업 등록을 확인 하지 않는 경우 작업을 여러 번 등록 하 여 성능에 문제가 발생 하 고 작업을 완료할 수 있을 때까지 작업의 사용 가능한 CPU 시간을 제한 합니다. 응용 프로그램은 동일한 진입점을 사용 하 여 모든 백그라운드 작업을 처리 하 고 [**BackgroundTaskRegistration**](/uwp/api/windows.applicationmodel.background.backgroundtaskregistration) 에 할당 된 [**이름**](/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.name#Windows_ApplicationModel_Background_BackgroundTaskRegistration_Name) 또는 [**TaskId**](/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.taskid#Windows_ApplicationModel_Background_BackgroundTaskRegistration_TaskId) 와 같은 기타 속성을 사용 하 여 수행할 작업을 결정 합니다.
 
 다음 예에서는 **Alltasks** 속성을 반복 하 고 태스크가 이미 등록 된 경우 플래그 변수를 true로 설정 합니다.
 
@@ -432,9 +432,9 @@ for (auto const& task : allTasks)
 
 ```
 
-1.  백그라운드 태스크가 아직 등록 되지 않은 경우 [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 를 사용 하 여 백그라운드 작업의 인스턴스를 만듭니다. 작업 진입점은 네임 스페이스가 접두사로 지정 된 백그라운드 작업 클래스의 이름 이어야 합니다.
+1.  백그라운드 태스크가 아직 등록 되지 않은 경우 [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 를 사용 하 여 백그라운드 작업의 인스턴스를 만듭니다. 작업 진입점은 네임 스페이스가 접두사로 지정 된 백그라운드 작업 클래스의 이름 이어야 합니다.
 
-백그라운드 작업은 백그라운드 작업이 실행 될 때 컨트롤을 트리거합니다. 가능한 트리거의 목록은 [**Windows. ApplicationModel. Background**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background) 네임 스페이스를 참조 하세요.
+백그라운드 작업은 백그라운드 작업이 실행 될 때 컨트롤을 트리거합니다. 가능한 트리거의 목록은 [**Windows. ApplicationModel. Background**](/uwp/api/windows.applicationmodel.background) 네임 스페이스를 참조 하세요.
 
 > [!NOTE]
 > 패키지 된 winmain 백그라운드 작업에는 트리거의 하위 집합만 지원 됩니다.
@@ -471,7 +471,7 @@ if (!taskRegistered)
 
 ```
 
-1.  트리거 이벤트가 발생 한 후 태스크가 실행 되는 시기를 제어 하는 조건을 추가할 수 있습니다 (옵션). 예를 들어 인터넷을 사용할 수 있을 때까지 작업을 실행 하지 않으려면 **Internetavailable**상태를 사용 합니다. 가능한 조건 목록은 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)를 참조 하세요.
+1.  트리거 이벤트가 발생 한 후 태스크가 실행 되는 시기를 제어 하는 조건을 추가할 수 있습니다 (옵션). 예를 들어 인터넷을 사용할 수 있을 때까지 작업을 실행 하지 않으려면 **Internetavailable**상태를 사용 합니다. 가능한 조건 목록은 [**SystemConditionType**](/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)를 참조 하세요.
 
 다음 샘플 코드에서는 사용자를 표시 해야 하는 조건을 할당 합니다.
 
@@ -485,7 +485,7 @@ builder.AddCondition(SystemCondition{ SystemConditionType::InternetAvailable });
 // The code in the next step goes here.
 ```
 
-4.  [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 개체에 대해 register 메서드를 호출 하 여 백그라운드 작업을 등록 합니다. [**BackgroundTaskRegistration**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration) 결과를 저장 하 여 다음 단계에서 사용할 수 있도록 합니다. Register 함수는 예외 형식으로 오류를 반환할 수 있습니다. Try catch에서 Register를 호출 해야 합니다.
+4.  [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 개체에 대해 register 메서드를 호출 하 여 백그라운드 작업을 등록 합니다. [**BackgroundTaskRegistration**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskRegistration) 결과를 저장 하 여 다음 단계에서 사용할 수 있도록 합니다. Register 함수는 예외 형식으로 오류를 반환할 수 있습니다. Try catch에서 Register를 호출 해야 합니다.
 
 다음 코드는 백그라운드 작업을 등록 하 고 결과를 저장 합니다.
 
@@ -1045,7 +1045,7 @@ int wmain(_In_ int argc, _In_reads_(argc) const wchar** argv)
 
 ## <a name="remarks"></a>설명
 
-최신 대기에서 백그라운드 작업을 실행할 수 있는 UWP 앱과 달리, WinMain 앱은 최신 대기 상태의 낮은 전원 단계에서 코드를 실행할 수 없습니다. 자세히 알아보려면 [최신 대기](https://docs.microsoft.com/windows-hardware/design/device-experiences/modern-standby) 를 참조 하세요.
+최신 대기에서 백그라운드 작업을 실행할 수 있는 UWP 앱과 달리, WinMain 앱은 최신 대기 상태의 낮은 전원 단계에서 코드를 실행할 수 없습니다. 자세히 알아보려면 [최신 대기](/windows-hardware/design/device-experiences/modern-standby) 를 참조 하세요.
 
 백그라운드 작업을 사용 하는 앱을 작성 하는 방법에 대 한 API 참조, 백그라운드 작업 개념 지침 및 자세한 지침은 다음 관련 항목을 참조 하세요.
 
@@ -1065,8 +1065,8 @@ int wmain(_In_ int argc, _In_reads_(argc) const wchar** argv)
 
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
-* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](/previous-versions/hh974425(v=vs.110))
 
 **백그라운드 작업 API 참조**
 
-* [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background)
+* [**Windows.ApplicationModel.Background**](/uwp/api/Windows.ApplicationModel.Background)

@@ -1,31 +1,31 @@
 ---
-title: 원격 장치에서 앱 시작
-description: 프로젝트 로마를 사용하여 원격 장치에서 앱을 시작하는 방법을 알아봅니다.
+title: 원격 디바이스에서 앱 시작
+description: 다른 장치에서 UWP 앱 또는 Windows 데스크톱 응용 프로그램을 원격으로 시작 하 여 사용자가 한 장치에서 작업을 시작 하 고 다른 장치에서 작업을 완료할 수 있도록 하는 방법을 알아봅니다.
 ms.date: 02/12/2018
 ms.topic: article
 keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
-ms.openlocfilehash: ac4a5783250f3bd21cb8a3b96a579715830e687d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 784403ede6b21b79dcb14d1da6dde22df68c410e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371709"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158787"
 ---
-# <a name="launch-an-app-on-a-remote-device"></a>원격 장치에서 앱 시작
+# <a name="launch-an-app-on-a-remote-device"></a>원격 디바이스에서 앱 시작
 
-이 문서에서는 원격 디바이스에서 Windows 앱을 실행하는 방법을 설명합니다.
+이 문서에서는 원격 장치에서 Windows 앱을 시작 하는 방법을 설명 합니다.
 
-Windows 10 버전 1607부터 UWP 앱은 두 디바이스가 동일한 MSA(Microsoft 계정)로 서명된 경우 Windows 10 버전 1607 이상을 실행하는 다른 디바이스에서 UWP 앱 또는 Windows 데스크톱 응용 프로그램을 원격으로 실행할 수 있습니다. 다음은 프로젝트 로마의 가장 간단한 사용 사례입니다.
+Windows 10 버전 1607부터 UWP 앱은 동일한 Microsoft 계정 (MSA)을 사용 하 여 두 장치를 모두 사용 하는 경우 Windows 10, 버전 1607 이상을 실행 하는 다른 장치에서 UWP 앱 또는 Windows 데스크톱 응용 프로그램을 원격으로 시작할 수 있습니다. 이는 Project 로마의 가장 간단한 사용 사례입니다.
 
-원격 실행 기능은 작업 지향 사용자 환경을 지원합니다. 사용자는 한 장치에서 작업을 시작한 후 다른 장치에서 완료할 수 있습니다. 예를 들어, 사용자가 자동차에서 휴대폰으로 음악을 듣고 있는 경우 집에 도착해서 재생 기능을 Xbox One으로 넘길 수 있습니다. 원격 실행을 사용하면 작업이 종료된 지점부터 시작하기 위해 앱이 실행 중인 원격 앱에 맥락 기반 데이터(contextual data)를 전달할 수 있습니다.
+원격 시작 기능을 사용 하면 작업 지향적인 사용자 환경을 사용할 수 있습니다. 사용자는 한 장치에서 작업을 시작 하 고 다른 장치에서 작업을 완료할 수 있습니다. 예를 들어 사용자가 자동차의 휴대폰에서 음악을 수신 하는 경우 집에 도착할 때 Xbox One에 재생 기능을 직접 제공할 수 있습니다. 원격 시작을 사용 하면 앱이 시작 되는 원격 앱에 컨텍스트 데이터를 전달 하 여 작업이 중단 된 위치를 선택할 수 있습니다.
 
-## <a name="preliminary-setup"></a>사전 설정
+## <a name="preliminary-setup"></a>예비 설정
 
-### <a name="add-the-remotesystem-capability"></a>remoteSystem 접근 권한 값 추가
+### <a name="add-the-remotesystem-capability"></a>RemoteSystem 기능 추가
 
-앱이 원격 디바이스에서 다른 앱을 실행하려면 앱 패키지 매니페스트에 `remoteSystem` 접근 권한 값을 추가해야 합니다. 패키지 매니페스트 디자이너의 **접근 권한 값** 탭에서 **원격 시스템**을 선택하여 접근 권한 값을 추가하거나 프로젝트의 _Package.appxmanifest_ 파일에 다음 줄을 수동으로 추가할 수 있습니다.
+앱이 원격 장치에서 앱을 시작 하도록 하려면 `remoteSystem` 앱 패키지 매니페스트에 기능을 추가 해야 합니다. 패키지 매니페스트 디자이너를 사용 하 여 **기능** 탭에서 **원격 시스템** 을 선택 하 여 추가 하거나 프로젝트의 _appxmanifest.xml_ 파일에 다음 줄을 수동으로 추가할 수 있습니다.
 
 ``` xml
 <Capabilities>
@@ -35,46 +35,46 @@ Windows 10 버전 1607부터 UWP 앱은 두 디바이스가 동일한 MSA(Micros
 
 ### <a name="enable-cross-device-sharing"></a>장치 간 공유 사용
 
-또한 클라이언트 장치를 장치 간 공유를 허용하도록 설정해야 합니다. 액세스할 수 있는이 설정은 **설정을**: **시스템** > **환경 공유할** > **장치의 공유**, 기본적으로 사용 됩니다. 
+또한 클라이언트 장치에서 장치 간 공유를 허용 하도록 설정 해야 합니다. **설정**에서 액세스 하는이 설정: 장치에서 **시스템**  >  **공유 환경**  >  **공유**는 기본적으로 사용 하도록 설정 되어 있습니다. 
 
 ![공유 환경 설정 페이지](images/shared-experiences-settings.png)
 
-## <a name="find-a-remote-device"></a>원격 디바이스 찾기
+## <a name="find-a-remote-device"></a>원격 장치 찾기
 
-먼저 연결할 디바이스를 찾아야 합니다. [원격 디바이스 검색](discover-remote-devices.md)에서 이 작업 방법에 대해 자세히 설명합니다. 여기서는 디바이스나 연결 형식별 필터링을 지원하지 않는 간단한 방법을 사용합니다. 원격 디바이스를 검색하는 원격 시스템 감시자를 만들고 디바이스가 검색 또는 제거될 때 발생하는 이벤트 처리기를 작성합니다. 이렇게 하면 원격 디바이스 컬렉션이 제공됩니다.
+먼저 연결 하려는 장치를 찾아야 합니다. [원격 장치 검색](discover-remote-devices.md) 이 작업을 수행 하는 방법에 대해 자세히 설명 합니다. 여기서는 장치 또는 연결 유형별로 필터링 하는 간단한 방법을 사용 합니다. 원격 장치를 검색 하는 원격 시스템 감시자를 만들고 장치가 검색 되거나 제거 될 때 발생 하는 이벤트에 대 한 처리기를 작성 합니다. 그러면 원격 장치 컬렉션을 제공 합니다.
 
-이 예의 코드를 사용하려면 클래스 파일에 `using Windows.System.RemoteSystems` 문이 있어야 합니다.
+이 예제의 코드를 사용 하려면 `using Windows.System.RemoteSystems` 클래스 파일에 문이 있어야 합니다.
 
 [!code-cs[Main](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetBuildDeviceList)]
 
-원격 시작 전에 제일 먼저 수행해야 할 작업은 `RemoteSystem.RequestAccessAsync()` 호출입니다. 앱에서 원격 디바이스에 액세스할 수 있도록 하려면 반환 값을 확인합니다. `remoteSystem` 접근 권한 값을 앱에 추가하지 않은 경우 이 검사가 실패할 수 있습니다.
+원격 시작을 수행 하기 전에 수행 해야 하는 첫 번째 작업은 호출 `RemoteSystem.RequestAccessAsync()` 입니다. 반환 값을 확인 하 여 앱이 원격 장치에 액세스할 수 있는지 확인 합니다. 앱에 기능을 추가 하지 않은 경우이 검사가 실패할 수 있습니다 `remoteSystem` .
 
-시스템 감시자 이벤트 처리기는 연결할 수 있는 디바이스를 찾거나 더 이상 사용할 수 없을 때 호출됩니다. 이러한 이벤트 처리기를 사용하여 연결할 수 있는 디바이스의 업데이트된 목록을 유지합니다.
+시스템 감시자 이벤트 처리기는 연결할 수 있는 장치를 검색 하거나 더 이상 사용할 수 없을 때 호출 됩니다. 이러한 이벤트 처리기를 사용 하 여 연결할 수 있는 장치의 업데이트 된 목록을 유지 합니다.
 
 [!code-cs[Main](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetEventHandlers)]
 
 
-**사전**을 사용하여 원격 시스템 ID별로 디바이스를 추적합니다. **ObservableCollection**은 열거할 수 있는 디바이스 목록을 저장하는 데 사용됩니다. **ObservableCollection**은 디바이스 목록을 UI에 쉽게 바인딩하는 용도로도 사용되지만 이 예제에서는 다루지 않습니다.
+**사전을**사용 하 여 원격 시스템 ID로 장치를 추적 합니다. **System.collections.objectmodel.observablecollection** 는 열거할 수 있는 장치 목록을 저장 하는 데 사용 됩니다. 또한 **system.collections.objectmodel.observablecollection** 를 사용 하면 장치 목록을 UI에 쉽게 바인딩할 수 있지만이 예제에서는이 작업을 수행 하지 않습니다.
 
 [!code-cs[Main](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetMembers)]
 
-원격 앱을 시작하기 전에 앱 시작 코드의 `BuildDeviceList()`에 호출을 추가합니다.
+`BuildDeviceList()`원격 앱을 시작 하기 전에 앱 시작 코드에에 대 한 호출을 추가 합니다.
 
-## <a name="launch-an-app-on-a-remote-device"></a>원격 장치에서 앱 시작
+## <a name="launch-an-app-on-a-remote-device"></a>원격 디바이스에서 앱 시작
 
-[  **RemoteLauncher.LaunchUriAsync**](https://docs.microsoft.com/uwp/api/windows.system.remotelauncher.launchuriasync) API와 연결하려는 디바이스를 전달하여 원격으로 앱을 시작합니다. 이 메서드에 대한 오버로드는 세 가지가 있습니다. 가장 간단한 오버로드는 이 예제처럼 원격 디바이스에서 앱을 활성화하는 URI를 지정합니다. 이 예제에서는 URI가 Space Needle의 3D 뷰를 사용하여 원격 컴퓨터에서 지도 앱을 엽니다.
+연결 하려는 장치를 [**RemoteLauncher LaunchUriAsync**](/uwp/api/windows.system.remotelauncher.launchuriasync) API에 전달 하 여 원격으로 앱을 시작 합니다. 이 메서드에는 세 가지 오버 로드가 있습니다. 이 예제에서 설명 하는 가장 간단한 방법은 원격 장치에서 앱을 활성화할 URI를 지정 하는 것입니다. 이 예제에서 URI는 공간 니 들의 3D 뷰를 사용 하 여 원격 컴퓨터에서 맵 앱을 엽니다.
 
-다른 **RemoteLauncher.LaunchUriAsync** 오버로드를 사용하면 적절한 앱을 원격 디바이스에서 시작할 수 없는 경우 표시할 웹 사이트의 URI 및 원격 디바이스에서 URI를 시작하는 데 사용할 수 있는 패키지 패밀리 이름의 선택적 목록과 같은 옵션을 지정할 수 있습니다. 키/값 쌍의 형식으로 데이터를 제공할 수도 있습니다. 활성화 중인 앱에 데이터를 전달하여 디바이스 간에 재생을 전달할 때 재생할 곡 이름 및 현재 재생 위치 등의 컨텍스트를 원격 앱에 제공할 수 있습니다.
+다른 **RemoteLauncher LaunchUriAsync** 오버 로드를 사용 하 여 원격 장치에서 적절 한 앱을 시작할 수 없는 경우 표시할 웹 사이트의 uri와 같은 옵션을 지정 하 고, 원격 장치에서 uri를 시작 하는 데 사용할 수 있는 패키지 패밀리 이름의 선택적 목록을 지정할 수 있습니다. 데이터를 키/값 쌍의 형식으로 제공할 수도 있습니다. 활성화 하는 앱에 데이터를 전달 하 여 재생할 노래 이름과 현재 재생 위치 (예: 한 장치에서 다른 장치로 재생을 전달할 때)와 같은 원격 앱에 컨텍스트를 제공할 수 있습니다.
 
-실제 시나리오에서는 대상 디바이스를 선택하기 위한 UI를 제공할 수도 있습니다. 하지만 이 예제에서는 간단히 목록의 첫 번째 원격 디바이스를 사용합니다.
+실용적인 시나리오에서는 대상으로 지정할 장치를 선택 하는 UI를 제공할 수 있습니다. 그러나이 예제를 간소화 하기 위해 목록의 첫 번째 원격 장치만 사용 합니다.
 
 [!code-cs[Main](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetRemoteUriLaunch)]
 
-**RemoteLauncher.LaunchUriAsync()** 에서 반환되는 [**RemoteLaunchUriStatus**](https://docs.microsoft.com/uwp/api/windows.system.remotelaunchuristatus) 개체는 원격 시작의 성공 여부와 실패한 경우 그 이유에 대한 정보를 제공합니다.
+**LaunchUriAsync ()** 에서 반환 된 [**RemoteLaunchUriStatus**](/uwp/api/windows.system.remotelaunchuristatus) 개체는 원격 시작에 성공 했는지 여부에 대 한 정보를 제공 하 고, 그렇지 않은 경우 이유를 제공 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-[원격 시스템 API 참조](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems)  
-[연결 된 앱 및 장치 (프로젝트 로마) 개요](connected-apps-and-devices.md)  
+[원격 시스템 API 참조](/uwp/api/Windows.System.RemoteSystems)  
+[연결 된 앱 및 장치 (Project 로마) 개요](connected-apps-and-devices.md)  
 [원격 디바이스 검색](discover-remote-devices.md)  
-[원격 시스템 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)은 원격 시스템을 검색하고, 원격 시스템에서 앱을 실행하고, 앱 서비스를 사용하여 두 시스템에서 실행 중인 앱 간에 메시지를 보내는 방법을 보여 줍니다.
+[원격 시스템 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems) 은 원격 시스템을 검색 하 고, 원격 시스템에서 앱을 시작 하 고, 앱 서비스를 사용 하 여 두 시스템에서 실행 되는 앱 간에 메시지를 보내는 방법을 보여 줍니다.

@@ -1,49 +1,49 @@
 ---
 title: 백그라운드 작업에서 라이브 타일 업데이트
-description: 백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다.
+description: 백그라운드 작업을 사용 하 여 최신 콘텐츠를 사용 하 여 앱의 라이브 타일을 업데이트 합니다.
 Search.SourceType: Video
 ms.assetid: 9237A5BD-F9DE-4B8C-B689-601201BA8B9A
 ms.date: 01/11/2018
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: f2700f0e5ffa8c2d1c9f0500e967096763757cd9
-ms.sourcegitcommit: 9aef3bc26a56b8d266b3089d509f79b119234b6f
+ms.openlocfilehash: 50ed0246941645824ee0705582a9efbf2b193dc9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80538186"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155777"
 ---
 # <a name="update-a-live-tile-from-a-background-task"></a>백그라운드 작업에서 라이브 타일 업데이트
 
 **중요 API**
 
--   [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
--   [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
+-   [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)
+-   [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
 
-백그라운드 작업을 사용하여 앱의 라이브 타일을 새 콘텐츠로 업데이트합니다.
+백그라운드 작업을 사용 하 여 최신 콘텐츠를 사용 하 여 앱의 라이브 타일을 업데이트 합니다.
 
-다음은 앱에 라이브 타일을 추가하는 방법을 보여 주는 동영상입니다.
+앱에 라이브 타일을 추가 하는 방법을 보여 주는 비디오는 다음과 같습니다.
 
 <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Updating-a-live-tile-from-a-background-task/player" width="720" height="405" allowFullScreen="true" frameBorder="0"></iframe>
 
 ## <a name="create-the-background-task-project"></a>백그라운드 작업 프로젝트 만들기  
 
-앱에 대 한 라이브 타일을 사용 하도록 설정 하려면 새 Windows 런타임 구성 요소 프로젝트를 솔루션에 추가 합니다. 이것은 사용자가 앱을 설치할 때 OS를 통해 로드되고 백그라운드에서 실행되는 별도 어셈블리입니다.
+앱에 대 한 라이브 타일을 사용 하도록 설정 하려면 새 Windows 런타임 구성 요소 프로젝트를 솔루션에 추가 합니다. 사용자가 앱을 설치할 때 백그라운드에서 OS가 로드 되 고 실행 되는 별도의 어셈블리입니다.
 
-1.  솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**를 클릭한 다음 **새 프로젝트**를 클릭합니다.
-2.  **새 프로젝트 추가** 대화 상자의 **설치됨**  기타 언어  **Visual C# &gt; Windows 유니버설&gt; 섹션에서 &gt;Windows 런타임 구성 요소** 템플릿을 선택합니다.
-3.  프로젝트 이름을 BackgroundTasks로 지정하고 **확인**을 클릭하거나 탭합니다. Microsoft Visual Studio에서 새 프로젝트를 솔루션에 추가합니다.
-4.  기본 프로젝트에서 BackgroundTasks 프로젝트에 대한 참조를 추가합니다.
+1.  솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**를 클릭한 후 **새 프로젝트**를 클릭합니다.
+2.  **새 프로젝트 추가** 대화 상자의 **설치 된 &gt; 다른 언어 &gt; Visual c # &gt; Windows 유니버설** 섹션에서 **Windows 런타임 구성 요소** 템플릿을 선택 합니다.
+3.  프로젝트 이름을 BackgroundTasks로, **확인**을 클릭 하거나 탭 합니다. Microsoft Visual Studio 새 프로젝트가 솔루션에 추가 됩니다.
+4.  주 프로젝트에서 BackgroundTasks 프로젝트에 대 한 참조를 추가 합니다.
 
 ## <a name="implement-the-background-task"></a>백그라운드 작업 구현
 
 
-앱의 라이브 타일을 업데이트하는 클래스를 만드는 [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) 인터페이스를 구현합니다. 백그라운드 작업은 Run 메서드에 포함됩니다. 이 경우 작업이 MSDN 블로그에 대한 배포 피드를 가져옵니다. 비동기 코드가 실행되는 동안 작업이 중간에 닫히지 않도록 하려면 지연을 가져옵니다.
+[**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) 인터페이스를 구현 하 여 앱의 라이브 타일을 업데이트 하는 클래스를 만듭니다. 백그라운드 작업은 Run 메서드에 포함됩니다. 이 경우 작업은 MSDN 블로그의 배포 피드를 가져옵니다. 비동기 코드가 실행 되는 동안 작업을 계속 닫지 않으려면 지연을 가져옵니다.
 
-1.  솔루션 탐색기에서 자동으로 생성된 파일 Class1.cs의 이름을 BlogFeedBackgroundTask.cs로 바꿉니다.
-2.  BlogFeedBackgroundTask.cs에서 자동으로 생성된 코드를 **BlogFeedBackgroundTask** 클래스의 스텁 코드로 바꿉니다.
-3.  Run 메서드 구현에서 **GetMSDNBlogFeed** 및 **UpdateTile** 메서드에 대한 코드를 추가합니다.
+1.  솔루션 탐색기에서 자동으로 생성 된 파일인 Class1.cs을 BlogFeedBackgroundTask.cs로 바꿉니다.
+2.  BlogFeedBackgroundTask.cs에서 자동으로 생성 된 코드를 **BlogFeedBackgroundTask** 클래스의 스텁 코드로 바꿉니다.
+3.  Run 메서드 구현에서 **GetMSDNBlogFeed** 및 **updatetile** 메서드에 대 한 코드를 추가 합니다.
 
 ```cs
 using System;
@@ -142,29 +142,29 @@ namespace BackgroundTasks
 ## <a name="set-up-the-package-manifest"></a>패키지 매니페스트 설정
 
 
-패키지 매니페스트를 설정하려면 패키지 매니페스트를 열고 새 백그라운드 작업 선언을 추가합니다. 작업의 진입점을 네임스페이스가 포함된 클래스 이름으로 설정합니다.
+패키지 매니페스트를 설정 하려면 해당 매니페스트를 열고 새 백그라운드 작업 선언을 추가 합니다. 해당 네임 스페이스를 포함 하 여 작업에 대 한 진입점을 클래스 이름으로 설정 합니다.
 
-1.  솔루션 탐색기에서 Package.appxmanifest를 엽니다.
-2.  **선언** 탭을 클릭하거나 탭합니다.
-3.  **사용 가능한 선언**에서 **BackgroundTasks**를 선택하고 **추가**를 클릭합니다. Visual Studio에서 **BackgroundTasks**를 **지원되는 선언** 아래에 추가합니다.
-4.  **지원되는 작업 형식**에서 **타이머**가 선택되었는지 확인합니다.
-5.  **App settings(앱 설정)** 에서 진입점을 **BackgroundTasks.BlogFeedBackgroundTask**로 설정합니다.
-6.  **응용 프로그램 UI** 탭을 클릭하거나 탭합니다.
-7.  **잠금 화면 알림**을 **배지 및 타일 텍스트**로 설정합니다.
-8.  **배지 로고** 필드에 24x24 픽셀 아이콘의 경로를 설정합니다.
-    **중요**  이 아이콘은 단색 및 투명 픽셀만 사용 해야 합니다.
-9.  **작은 로고** 필드에 30x30 픽셀 아이콘의 경로를 설정합니다.
-10. **큰 로고** 필드에 310x150 픽셀 아이콘의 경로를 설정합니다.
+1.  솔루션 탐색기에서 appxmanifest.xml을 엽니다.
+2.  **선언** 탭을 클릭 하거나 탭 합니다.
+3.  **사용 가능한 선언**에서 **BackgroundTasks** 을 선택 하 고 **추가**를 클릭 합니다. Visual Studio는 **지원 되는 선언**아래에 **BackgroundTasks** 를 추가 합니다.
+4.  지원 되는 **작업 유형**에서 **타이머** 가 선택 되어 있는지 확인 합니다.
+5.  **앱 설정**에서 진입점을 **BackgroundTasks. BlogFeedBackgroundTask**로 설정 합니다.
+6.  **응용 프로그램 UI** 탭을 클릭 하거나 탭 합니다.
+7.  **화면 잠금 알림을** **배지 및 타일 텍스트**로 설정 합니다.
+8.  **배지 로고** 필드에 24x24 픽셀 아이콘의 경로를 설정 합니다.
+    **중요**    이 아이콘은 단색 및 투명 픽셀만 사용 해야 합니다.
+9.  **작은 로고** 필드에서 경로를 30x30 픽셀 아이콘으로 설정 합니다.
+10. **와이드 로고** 필드에서 경로를 310x150 픽셀 아이콘으로 설정 합니다.
 
 ## <a name="register-the-background-task"></a>백그라운드 작업 등록
 
 
-작업을 등록할 [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)를 만듭니다.
+[**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder) 를 만들어 작업을 등록 합니다.
 
-> **참고**  Windows 8.1 부터는 등록 시 백그라운드 작업 등록 매개 변수의 유효성이 검사 됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱에서 시나리오를 처리할 수 있어야 합니다. 예를 들어 조건문을 사용하여 등록 오류를 확인한 다음 다른 매개 변수 값을 사용하여 실패한 등록을 다시 시도해야 합니다.
+> **참고**    Windows 8.1부터 백그라운드 작업 등록 매개 변수는 등록 시 유효성 검사가 수행 됩니다. 등록 매개 변수가 잘못 된 경우 오류가 반환 됩니다. 앱은 백그라운드 작업 등록이 실패 하는 시나리오를 처리할 수 있어야 합니다. 예를 들어 조건문을 사용 하 여 등록 오류를 확인 한 다음 다른 매개 변수 값을 사용 하 여 실패 한 등록을 다시 시도할 수 있습니다.
  
 
-앱의 기본 페이지에 **RegisterBackgroundTask** 메서드를 추가하고 **OnNavigatedTo** 이벤트 처리기에서 호출합니다.
+앱의 기본 페이지에서 **RegisterBackgroundTask** 메서드를 추가 하 고 **OnNavigatedTo** 이벤트 처리기에서 호출 합니다.
 
 ```cs
 using System;
@@ -241,26 +241,26 @@ namespace ContosoApp
 ## <a name="debug-the-background-task"></a>백그라운드 작업 디버그
 
 
-백그라운드 작업을 디버그하려면 작업의 Run 메서드에 중단점을 설정합니다. **디버그 위치** 도구 모음에서 백그라운드 작업을 선택합니다. 그러면 시스템에서 Run 메서드를 즉시 호출합니다.
+백그라운드 작업을 디버깅 하려면 작업의 Run 메서드에서 중단점을 설정 합니다. **디버그 위치** 도구 모음에서 백그라운드 작업을 선택 합니다. 이렇게 하면 시스템에서 Run 메서드를 즉시 호출 합니다.
 
-1.  작업의 Run 메서드에 중단점을 설정합니다.
-2.  F5 키를 누르거나 **디버그 &gt; 디버깅 시작**을 탭하여 앱을 배포 및 실행합니다.
-3.  앱이 시작되면 다시 Visual Studio로 전환합니다.
-4.  **디버그 위치** 도구 모음이 표시되는지 확인합니다. 이 도구 모음은 **보기 &gt; 도구 모음** 메뉴에 있습니다.
-5.  **디버그 위치** 도구 모음에서 **일시 중단** 드롭다운을 클릭하고 **BlogFeedBackgroundTask**를 선택합니다.
-6.  Visual Studio가 중단점에서 실행을 일시 중단합니다.
-7.  F5 키를 누르거나 **디버그 &gt; 계속**을 탭하여 계속해서 앱을 실행합니다.
-8.  Shift+F5를 누르거나 **디버그 &gt; 디버깅 중지**를 탭하여 디버깅을 중지합니다.
-9.  시작 화면의 앱 타일로 돌아갑니다. 몇 초 후에 타일 알림이 앱 타일에 표시됩니다.
+1.  작업의 실행 메서드에서 중단점을 설정 합니다.
+2.  F5 키를 누르거나 **디버그 &gt; 디버깅 시작** 을 탭 하 여 앱을 배포 하 고 실행 합니다.
+3.  앱이 시작 되 면 Visual Studio로 다시 전환 합니다.
+4.  **디버그 위치** 도구 모음이 표시 되는지 확인 합니다. ** &gt; 도구 모음 보기** 메뉴에 있습니다.
+5.  **디버그 위치** 도구 모음에서 **일시 중단** 드롭다운을 클릭 하 고 **BlogFeedBackgroundTask**를 선택 합니다.
+6.  Visual Studio는 중단점에서 실행을 일시 중단 합니다.
+7.  F5 키를 누르거나 **디버그 &gt; 계속** 을 탭 하 여 앱을 계속 실행 합니다.
+8.  Shift + F5 키를 누르거나 **디버그 &gt; 디버깅 중지** 를 탭 하 여 디버깅을 중지 합니다.
+9.  시작 화면에서 앱의 타일로 돌아갑니다. 몇 초 후에 응용 프로그램의 타일에 타일 알림이 표시 됩니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 
-* [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
-* [**TileUpdateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileUpdateManager)
-* [**TileNotification**](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.TileNotification)
-* [백그라운드 작업을 사용 하 여 앱 지원](support-your-app-with-background-tasks.md)
-* [타일 및 배지에 대 한 지침 및 검사 목록](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles)
+* [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
+* [**TileUpdateManager**](/uwp/api/Windows.UI.Notifications.TileUpdateManager)
+* [**TileNotification**](/uwp/api/Windows.UI.Notifications.TileNotification)
+* [백그라운드 작업을 사용하여 앱 지원](support-your-app-with-background-tasks.md)
+* [타일 및 배지에 대 한 지침 및 검사 목록](../design/shell/tiles-and-notifications/creating-tiles.md)
 
  
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 프로그래밍
 ms.localizationpriority: medium
-ms.openlocfilehash: a87b979dc48f8977047599cac6a32ba0d901bd63
-ms.sourcegitcommit: 2571af6bf781a464a4beb5f1aca84ae7c850f8f9
+ms.openlocfilehash: 6c1da82eaff074dfd3e925c298f9839dbb70ee3d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82606362"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156507"
 ---
 # <a name="game-programming-resources"></a>게임 프로그래밍 리소스
 
@@ -23,7 +23,7 @@ Windows의 게임 프로그래밍에 대 한 자세한 내용은 다음 리소�
 ## <a name="game-programming-reference"></a>게임 프로그래밍 참조
 
 
--   [그래픽 및 게임](https://docs.microsoft.com/windows/desktop/graphics-and-multimedia)
+-   [그래픽 및 게임](/windows/desktop/graphics-and-multimedia)
 -   [OpenGL 참조](https://www.opengl.org/sdk/docs/man4/)
 
 ## <a name="game-design-guidance"></a>게임 디자인 지침
@@ -43,7 +43,7 @@ Windows의 게임 프로그래밍에 대 한 자세한 내용은 다음 리소�
 
 -   [DirectX 도구 키트](  https://github.com/Microsoft/DirectXTK)
 -   [DirectXTex 텍스처 처리 라이브러리](  https://github.com/Microsoft/DirectXTex)
--   Microsoft Visual Studio[그래픽 진단](https://docs.microsoft.com/visualstudio/debugger/overview-of-visual-studio-graphics-diagnostics?view=vs-2015)
+-   Microsoft Visual Studio[그래픽 진단](/visualstudio/debugger/overview-of-visual-studio-graphics-diagnostics?view=vs-2015)
 -   [Win2D](https://github.com/Microsoft/Win2D) -직접 실행 모드의 경우 사용 하기 쉬운 WINDOWS 런타임 API GPU 가속을 사용한 2d 그래픽 렌더링입니다.
 -   [Microsoft Store에 대 한 각도](https://github.com/microsoft/angle/wiki) -OPENGL es api 호출을 DIRECTX 11 api 호출로 변환 하 여 Windows에서 opengl es 콘텐츠를 실행 합니다.
 
@@ -72,7 +72,7 @@ Windows의 게임 프로그래밍에 대 한 자세한 내용은 다음 리소�
 -   [ANGLE: Windows에서 OPENGL ES 2.0 그래픽 코드 실행](https://channel9.msdn.com/Events/Build/2015/3-686) – Tony Balogh
 -   [Advanced DirectX12 Graphics And Performance](https://channel9.msdn.com/Events/Build/2015/3-673) – Max McMullen
 
-## <a name="other-resources"></a>다른 리소스
+## <a name="other-resources"></a>기타 리소스
 
 
 -   [CodePlex](https://www.codeplex.com/)
@@ -81,7 +81,3 @@ Windows의 게임 프로그래밍에 대 한 자세한 내용은 다음 리소�
  
 
  
-
-
-
-

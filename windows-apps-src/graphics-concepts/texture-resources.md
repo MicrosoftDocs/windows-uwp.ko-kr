@@ -1,32 +1,32 @@
 ---
 title: 텍스처 리소스
-description: 텍스처는 렌더링에 사용되는 일종의 리소스입니다.
+description: Direct3D 텍스처 리소스를 사용 하 여 렌더링 하는 방법과 질감 단계를 사용 하 여 다중 질감 혼합을 지 원하는 방법을 알아봅니다.
 ms.assetid: 016F6CDA-D361-4E6B-BA99-49E915A19364
 keywords:
 - 텍스처 리소스
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f52a032b7fe61df67aaf35c57b2ca64ac8eef6a
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: d82a5525601c98812d6aab97f5f5d4399ceddc91
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57591388"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156187"
 ---
 # <a name="texture-resources"></a>텍스처 리소스
 
 
-텍스처는 렌더링에 사용되는 일종의 리소스입니다.
+질감은 렌더링에 사용 되는 리소스의 유형입니다.
 
-## <a name="span-idrenderingwithtextureresourcesspanspan-idrenderingwithtextureresourcesspanspan-idrenderingwithtextureresourcesspanrendering-with-texture-resources"></a><span id="Rendering_with_Texture_Resources"></span><span id="rendering_with_texture_resources"></span><span id="RENDERING_WITH_TEXTURE_RESOURCES"></span>질감 리소스를 사용 하 여 렌더링
+## <a name="span-idrendering_with_texture_resourcesspanspan-idrendering_with_texture_resourcesspanspan-idrendering_with_texture_resourcesspanrendering-with-texture-resources"></a><span id="Rendering_with_Texture_Resources"></span><span id="rendering_with_texture_resources"></span><span id="RENDERING_WITH_TEXTURE_RESOURCES"></span>질감 리소스를 사용 하 여 렌더링
 
 
-Direct3D는 텍스처 스테이지의 개념을 통해 다중 텍스처 혼합을 지원합니다. 각 텍스처 스테이지는 텍스처와 텍스처에서 실행할 수 있는 연산으로 구성됩니다. 텍스처 스테이지의 텍스처는 현재 텍스처 집합을 형성합니다. [텍스처 혼합](texture-blending.md)을 참조하세요. 텍스처 스테이지에서 각 텍스처의 상태는 캡슐화됩니다.
+Direct3D에서는 질감 단계의 개념을 통해 다중 질감 혼합을 지원 합니다. 각 질감 단계에는 질감에 대해 수행할 수 있는 질감 및 작업이 포함 됩니다. 질감 단계의 질감이 현재 질감 집합을 형성 합니다. [질감 혼합](texture-blending.md)을 참조 하세요. 각 질감의 상태는 질감 단계에서 캡슐화 됩니다.
 
-응용 프로그램 역시 텍스처 원근감과 텍스처 필터링 상태를 설정할 수 있습니다. [텍스처 필터링](texture-filtering.md)을 참조하세요.
+응용 프로그램에서 질감 큐브 뷰 및 질감 필터링 상태를 설정할 수도 있습니다. [질감 필터링](texture-filtering.md)을 참조 하세요.
 
-## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련된 항목
+## <a name="span-idrelated-topicsspanrelated-topics"></a><span id="related-topics"></span>관련 항목
 
 
 [질감](textures.md)

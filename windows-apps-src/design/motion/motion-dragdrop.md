@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 503360bc72694881c69bc3afd796f85474da5cfc
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 4d346d286b6a874ff62e63ecc59a102bcb68fa73
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970298"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156857"
 ---
 # <a name="drag-animations"></a>애니메이션 끌기
 
@@ -22,7 +22,7 @@ ms.locfileid: "82970298"
 
 사용자가 목록 내에서 항목을 이동 하거나 다른 항목의 맨 위에 있는 항목을 삭제 하는 등의 방법으로 개체를 이동 하는 경우 끌어서 놓기 애니메이션을 사용 합니다.
 
-> **중요 한 api**: [ **DragItemThemeAnimation 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation)
+> **중요 한 api**: [ **DragItemThemeAnimation 클래스**](/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
@@ -57,16 +57,12 @@ ms.locfileid: "82970298"
 ## <a name="related-articles"></a>관련된 문서
 
 **개발자용**
-* [애니메이션 개요](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)
-* [끌어서 놓기 시퀀스에 애니메이션 적용](https://docs.microsoft.com/previous-versions/windows/apps/jj649427(v=win.10))
-* [빠른 시작: 라이브러리 애니메이션을 사용 하 여 UI에 애니메이션 효과 주기](https://docs.microsoft.com/previous-versions/windows/apps/hh452703(v=win.10))
-* [**DragItemThemeAnimation 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation)
-* [**DropTargetItemThemeAnimation 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.droptargetitemthemeanimation)
-* [**DragOverThemeAnimation 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.dragoverthemeanimation)
+* [애니메이션 개요](./xaml-animation.md)
+* [끌어서 놓기 시퀀스에 애니메이션 적용](/previous-versions/windows/apps/jj649427(v=win.10))
+* [빠른 시작: 라이브러리 애니메이션을 사용 하 여 UI에 애니메이션 효과 주기](/previous-versions/windows/apps/hh452703(v=win.10))
+* [**DragItemThemeAnimation 클래스**](/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation)
+* [**DropTargetItemThemeAnimation 클래스**](/uwp/api/windows.ui.xaml.media.animation.droptargetitemthemeanimation)
+* [**DragOverThemeAnimation 클래스**](/uwp/api/windows.ui.xaml.media.animation.dragoverthemeanimation)
 
 
  
-
-
-
-

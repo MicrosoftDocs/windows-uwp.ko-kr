@@ -7,12 +7,12 @@ ms.date: 09/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ce3fe9ea96f4b4ce2f541fb5f7a9682a0dee5e0e
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 79ade0e3a823282fb970f470e1a902b1bc30c592
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234034"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157057"
 ---
 # <a name="high-contrast-themes"></a>고대비 테마  
 
@@ -39,14 +39,14 @@ Windows는 사용자가 사용 하도록 선택할 수 있는 OS 및 앱에 대�
 
 `#E6E6E6`첫 번째 예제에서 색을 인라인으로 설정 하면 그리드는 모든 테마에서 해당 배경색을 유지 합니다. 사용자가 고대비 블랙 테마로 전환 하면 앱이 검정색 배경으로 표시 될 것입니다. `#E6E6E6`는 거의 흰색 이므로 일부 사용자가 앱과 상호 작용 하지 못할 수 있습니다.
 
-두 번째 예제에서는 [**{Themeresource} 태그 확장**](../../xaml-platform/themeresource-markup-extension.md) 을 사용 하 여 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary) 요소의 전용 속성인 [**ThemeDictionaries**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries) collection의 색을 참조 합니다. **ThemeDictionaries** 를 사용 하면 XAML에서 사용자의 현재 테마에 따라 색을 자동으로 바꿀 수 있습니다.
+두 번째 예제에서는 [**{Themeresource} 태그 확장**](../../xaml-platform/themeresource-markup-extension.md) 을 사용 하 여 [**ResourceDictionary**](/uwp/api/Windows.UI.Xaml.ResourceDictionary) 요소의 전용 속성인 [**ThemeDictionaries**](/uwp/api/windows.ui.xaml.resourcedictionary.themedictionaries) collection의 색을 참조 합니다. **ThemeDictionaries** 를 사용 하면 XAML에서 사용자의 현재 테마에 따라 색을 자동으로 바꿀 수 있습니다.
 
 ## <a name="theme-dictionaries"></a>테마 사전
 
 시스템 기본값에서 색을 변경 해야 하는 경우 앱에 대 한 ThemeDictionaries 컬렉션을 만듭니다.
 
 1. 아직 존재 하지 않는 경우 적절 한 통로를 만들어 시작 합니다. App.xaml에서 **기본** 및 **system.windows.forms.systeminformation.highcontrast** 를 포함 하 여 **ThemeDictionaries** 컬렉션을 최소한으로 만듭니다.
-2. **기본적**으로 필요한 [브러시](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Brush) 유형 (일반적으로 **system.windows.media.solidcolorbrush>**)을 만듭니다. 사용 되는 것과 관련 된 *x:Key* 이름을 지정 합니다.
+2. **기본적**으로 필요한 [브러시](/uwp/api/Windows.UI.Xaml.Media.Brush) 유형 (일반적으로 **system.windows.media.solidcolorbrush>**)을 만듭니다. 사용 되는 것과 관련 된 *x:Key* 이름을 지정 합니다.
 3. 원하는 **색** 을 할당 합니다.
 4. **System.windows.forms.systeminformation.highcontrast**에 해당 **브러시** 를 복사 합니다.
 
@@ -95,7 +95,7 @@ Windows는 사용자가 사용 하도록 선택할 수 있는 OS 및 앱에 대�
 
 각 **systemcolor * 색** 리소스는 사용자가 고대비 테마를 전환할 때 색을 자동으로 업데이트 하는 변수입니다. 다음은 각 리소스를 사용 하는 위치 및 시기에 대 한 지침입니다.
 
-리소스 | 사용 |
+리소스 | 사용량 |
 |--------|-------|
 **SystemColorWindowTextColor** | 본문 복사, 머리글, 목록 상호 작용할 수 없는 모든 텍스트 |
 | **SystemColorHotlightColor** | 하이퍼링크 |
@@ -108,7 +108,7 @@ Windows는 사용자가 사용 하도록 선택할 수 있는 OS 및 앱에 대�
 
 기존 앱, 시작 또는 공용 컨트롤을 확인 하 여 다른 사용자가 자신의 자체와 유사한 고대비 디자인 문제를 해결 하는 방법을 확인 하는 것이 유용한 경우가 많습니다.
 
-**시겠습니까**
+**해야 할 일**
 
 * 가능 하면 배경/전경 쌍을 고려 합니다.
 * 앱이 실행 되는 동안 모든 4 개의 고대비 테마에서 테스트 합니다. 사용자는 테마를 전환할 때 앱을 다시 시작 하지 않아도 됩니다.
@@ -167,7 +167,7 @@ BrandedPageBackgroundBrush을 참조 하기 위해 두 번 사용 되는 것은 
 
 ## <a name="list-items"></a>항목 나열
 
-반면, [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) 의 항목은 가리킨 다음, 누르거나, 선택 하는 경우 **SystemColorHighlightColor** 로 설정 된 배경에 있습니다. 복합 목록 항목에는 일반적으로 항목을 가리킨 다음 누르거나 선택할 때 목록 항목의 내용이 색을 반전 하지 못하는 버그가 있습니다. 이렇게 하면 항목을 읽을 수 없습니다.
+반면, [ListView](/uwp/api/windows.ui.xaml.controls.listview) 의 항목은 가리킨 다음, 누르거나, 선택 하는 경우 **SystemColorHighlightColor** 로 설정 된 배경에 있습니다. 복합 목록 항목에는 일반적으로 항목을 가리킨 다음 누르거나 선택할 때 목록 항목의 내용이 색을 반전 하지 못하는 버그가 있습니다. 이렇게 하면 항목을 읽을 수 없습니다.
 
 ![밝은 테마의 간단한 목록과 고대비 검정 테마](images/high-contrast-list1.png)
 
@@ -176,7 +176,7 @@ BrandedPageBackgroundBrush을 참조 하기 위해 두 번 사용 되는 것은 
 
 ### <a name="list-items-with-colored-text"></a>색이 지정 된 텍스트가 있는 목록 항목
 
-한 가지 이유는 ListView의 [DataTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)에서 TextBlock을 설정 하는 것입니다. 일반적으로 비주얼 계층 구조를 설정 하기 위해 수행 됩니다. 전경 속성은 [ListViewItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewitem)에 대해 설정 되 고, DataTemplate의 textblock는 항목을 가리킴, 누르거나, 선택할 때 올바른 전경색을 상속 합니다. 그러나 전경을 설정 하면 상속이 중단 됩니다.
+한 가지 이유는 ListView의 [DataTemplate](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)에서 TextBlock을 설정 하는 것입니다. 일반적으로 비주얼 계층 구조를 설정 하기 위해 수행 됩니다. 전경 속성은 [ListViewItem](/uwp/api/windows.ui.xaml.controls.listviewitem)에 대해 설정 되 고, DataTemplate의 textblock는 항목을 가리킴, 누르거나, 선택할 때 올바른 전경색을 상속 합니다. 그러나 전경을 설정 하면 상속이 중단 됩니다.
 
 ![밝은 테마의 복합 목록과 고대비 검정 테마](images/high-contrast-list2.png)
 
@@ -228,14 +228,14 @@ BrandedPageBackgroundBrush을 참조 하기 위해 두 번 사용 되는 것은 
 
 ## <a name="detecting-high-contrast"></a>고대비 검색
 
-[**AccessibilitySettings**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.AccessibilitySettings) 클래스의 멤버를 사용 하 여 현재 테마가 고대비 테마 인지를 프로그래밍 방식으로 확인할 수 있습니다.
+[**AccessibilitySettings**](/uwp/api/Windows.UI.ViewManagement.AccessibilitySettings) 클래스의 멤버를 사용 하 여 현재 테마가 고대비 테마 인지를 프로그래밍 방식으로 확인할 수 있습니다.
 
 > [!NOTE]
 > 앱이 초기화 되 고 이미 콘텐츠를 표시 하는 범위에서 **AccessibilitySettings** 생성자를 호출 해야 합니다.
 
 ## <a name="related-topics"></a>관련 항목  
-* [액세스 가능성](accessibility.md)
+* [접근성](accessibility.md)
 * [UI 대비 및 설정 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20high%20contrast%20style%20sample%20(Windows%208))
 * [XAML 접근성 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)
 * [XAML 고대비 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20high%20contrast%20style%20sample%20(Windows%208))
-* [**AccessibilitySettings**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.AccessibilitySettings)
+* [**AccessibilitySettings**](/uwp/api/Windows.UI.ViewManagement.AccessibilitySettings)

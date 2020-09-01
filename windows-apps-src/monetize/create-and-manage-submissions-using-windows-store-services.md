@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API
 ms.localizationpriority: medium
-ms.openlocfilehash: 38a59db4115332a374c96c8a4400dbaccff9cd82
-ms.sourcegitcommit: 720413d2053c8d5c5b34d6873740be6e913a4857
+ms.openlocfilehash: af0d36f2fa76fe9bb5bd253436f3d434a860e7ec
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846823"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155627"
 ---
 # <a name="create-and-manage-submissions"></a>제출 만들기 및 관리
 
@@ -40,21 +40,21 @@ ms.locfileid: "88846823"
 
 Microsoft Store 제출 API를 호출 하는 코드 작성을 시작 하기 전에 다음 필수 구성 요소를 완료 했는지 확인 합니다.
 
-* 사용자(또는 조직)는 Azure AD 디렉터리가 있어야 하고 디렉터리에 대한 [전역 관리자](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles) 권한이 있어야 합니다. Microsoft에서 이미 Microsoft 365 또는 다른 비즈니스 서비스를 사용 하는 경우 Azure AD 디렉터리가 이미 있습니다. 그렇지 않으면 추가 비용 없이 [파트너 센터에서 새 AZURE AD를 만들](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
+* 사용자(또는 조직)는 Azure AD 디렉터리가 있어야 하고 디렉터리에 대한 [전역 관리자](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) 권한이 있어야 합니다. Microsoft에서 이미 Microsoft 365 또는 다른 비즈니스 서비스를 사용 하는 경우 Azure AD 디렉터리가 이미 있습니다. 그렇지 않으면 추가 비용 없이 [파트너 센터에서 새 AZURE AD를 만들](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
 
 * [Azure AD 애플리케이션을 파트너 센터 계정에 연결](#associate-an-azure-ad-application-with-your-windows-partner-center-account)하고 테넌트 ID, 클라이언트 ID 및 키를 가져와야 합니다. Microsoft Store 제출 API를 호출하는 데 사용할 Azure AD 액세스 토큰을 얻으려면 이러한 값이 필요합니다.
 
 * Microsoft Store 제출 API에서 사용할 앱을 준비 합니다.
 
-  * 파트너가 파트너 센터에 아직 없는 경우 [파트너 센터에서 해당 이름을 예약 하 여 앱을 만들어야](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name)합니다. Microsoft Store 제출 API를 사용 하 여 파트너 센터에서 앱을 만들 수 없습니다. 파트너 센터에서 작업 하 여 앱을 만든 후 API를 사용 하 여 앱에 액세스 하 고 프로그래밍 방식으로 해당 앱에 대 한 제출을 만들 수 있습니다. 그러나 API를 사용 하 여 프로그래밍 방식으로 추가 기능과 패키지를 만들 수 있습니다.
+  * 파트너가 파트너 센터에 아직 없는 경우 [파트너 센터에서 해당 이름을 예약 하 여 앱을 만들어야](../publish/create-your-app-by-reserving-a-name.md)합니다. Microsoft Store 제출 API를 사용 하 여 파트너 센터에서 앱을 만들 수 없습니다. 파트너 센터에서 작업 하 여 앱을 만든 후 API를 사용 하 여 앱에 액세스 하 고 프로그래밍 방식으로 해당 앱에 대 한 제출을 만들 수 있습니다. 그러나 API를 사용 하 여 프로그래밍 방식으로 추가 기능과 패키지를 만들 수 있습니다.
 
-  * 이 API를 사용 하 여 지정 된 앱에 대 한 제출을 만들려면 먼저 [연령 등급](https://docs.microsoft.com/windows/uwp/publish/age-ratings) 질문에 응답 하는 것을 포함 하 여 [파트너 센터에서 앱에 대 한 제출을 하나 만들어야](https://docs.microsoft.com/windows/uwp/publish/app-submissions)합니다. 이렇게 하면 API를 사용 하 여 프로그래밍 방식으로이 앱에 대 한 새 제출을 만들 수 있습니다. 이러한 유형의 제출에 API를 사용 하기 전에 추가 기능 제출 또는 패키지 비행 제출을 만들 필요가 없습니다.
+  * 이 API를 사용 하 여 지정 된 앱에 대 한 제출을 만들려면 먼저 [연령 등급](../publish/age-ratings.md) 질문에 응답 하는 것을 포함 하 여 [파트너 센터에서 앱에 대 한 제출을 하나 만들어야](../publish/app-submissions.md)합니다. 이렇게 하면 API를 사용 하 여 프로그래밍 방식으로이 앱에 대 한 새 제출을 만들 수 있습니다. 이러한 유형의 제출에 API를 사용 하기 전에 추가 기능 제출 또는 패키지 비행 제출을 만들 필요가 없습니다.
 
-  * 앱 제출을 만들거나 업데이트 하는 중 이며 앱 패키지를 포함 해야 하는 경우 [앱 패키지를 준비](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)합니다.
+  * 앱 제출을 만들거나 업데이트 하는 중 이며 앱 패키지를 포함 해야 하는 경우 [앱 패키지를 준비](../publish/app-package-requirements.md)합니다.
 
-  * 앱 제출을 만들거나 업데이트 하는 경우 매장 목록에 대 한 스크린샷 또는 이미지를 포함 해야 하는 경우 [앱 스크린샷 및 이미지를 준비](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images)합니다.
+  * 앱 제출을 만들거나 업데이트 하는 경우 매장 목록에 대 한 스크린샷 또는 이미지를 포함 해야 하는 경우 [앱 스크린샷 및 이미지를 준비](../publish/app-screenshots-and-images.md)합니다.
 
-  * 추가 기능 제출을 만들거나 업데이트 하는 중에 아이콘을 포함 해야 하는 경우 [아이콘을 준비](https://docs.microsoft.com/windows/uwp/publish/create-iap-descriptions)합니다.
+  * 추가 기능 제출을 만들거나 업데이트 하는 중에 아이콘을 포함 해야 하는 경우 [아이콘을 준비](../publish/create-add-on-store-listings.md)합니다.
 
 <span id="associate-an-azure-ad-application-with-your-windows-partner-center-account" />
 
@@ -79,7 +79,7 @@ Microsoft Store 제출 API를 사용 하려면 먼저 Azure AD 응용 프로그�
 
 Microsoft Store 제출 API에서 메서드를 호출 하기 전에 먼저 API의 각 메서드에 대 한 **인증** 헤더에 전달 하는 Azure AD 액세스 토큰을 가져와야 합니다. 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료 된 후에는 API에 대 한 추가 호출에서 토큰을 계속 사용할 수 있도록 토큰을 새로 고칠 수 있습니다.
 
-액세스 토큰을 가져오려면 [클라이언트 자격 증명을 사용 하 여 서비스 호출](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-service-to-service/) 에 대 한 지침에 따라 HTTP POST를 끝점으로 보냅니다 ```https://login.microsoftonline.com/<tenant_id>/oauth2/token``` . 샘플 요청은 다음과 같습니다.
+액세스 토큰을 가져오려면 [클라이언트 자격 증명을 사용 하 여 서비스 호출](/azure/active-directory/azuread-dev/v1-oauth2-client-creds-grant-flow) 에 대 한 지침에 따라 HTTP POST를 끝점으로 보냅니다 ```https://login.microsoftonline.com/<tenant_id>/oauth2/token``` . 샘플 요청은 다음과 같습니다.
 
 ```json
 POST https://login.microsoftonline.com/<tenant_id>/oauth2/token HTTP/1.1
@@ -94,7 +94,7 @@ grant_type=client_credentials
 
 POST URI와 클라이언트 * \_ id* 및 *클라이언트 \_ 암호* 매개 변수의 *테 넌 트 \_ Id* 값에 대해 이전 섹션의 파트너 센터에서 검색 한 응용 프로그램의 테 넌 트 id, 클라이언트 id 및 키를 지정 합니다. *리소스* 매개 변수에는 ```https://manage.devcenter.microsoft.com```을 지정해야 합니다.
 
-액세스 토큰이 만료 되 면 [여기](https://azure.microsoft.com/documentation/articles/active-directory-protocols-oauth-code/#refreshing-the-access-tokens)에 설명 된 지침에 따라 새로 고칠 수 있습니다.
+액세스 토큰이 만료 되 면 [여기](/azure/active-directory/azuread-dev/v1-protocols-oauth-code#refreshing-the-access-tokens)에 설명 된 지침에 따라 새로 고칠 수 있습니다.
 
 C #, Java 또는 Python 코드를 사용 하 여 액세스 토큰을 가져오는 방법을 보여 주는 예제는 Microsoft Store 제출 API [코드 예제](#code-examples)를 참조 하세요.
 
@@ -107,7 +107,7 @@ Azure AD 액세스 토큰을 만든 후 Microsoft Store 제출 API에서 메서�
 > [!NOTE]
 > 액세스 토큰을 가져온 후에는 토큰이 만료 되기 전에 Microsoft Store 제출 API에서 메서드를 호출 하는 데 60 분이 소요 됩니다.
 
-| 시나리오       | 설명                                                                 |
+| 시나리오       | Description                                                                 |
 |---------------|----------------------------------------------------------------------|
 | 의 |  파트너 센터 계정에 등록 된 모든 앱에 대 한 데이터를 검색 하 고 앱에 대 한 제출을 만듭니다. 이러한 메서드에 대 한 자세한 내용은 다음 문서를 참조 하세요. <ul><li>[앱 데이터 가져오기](get-app-data.md)</li><li>[앱 제출 관리](manage-app-submissions.md)</li></ul> |
 | 추가 기능 | 앱에 대 한 추가 기능을 가져오거나 만들거나 삭제 한 다음 추가 기능에 대 한 제출을 가져오거나 만들거나 삭제 합니다. 이러한 메서드에 대 한 자세한 내용은 다음 문서를 참조 하세요. <ul><li>[추가 기능 관리](manage-add-ons.md)</li><li>[추가 기능 제출 관리](manage-add-on-submissions.md)</li></ul> |
@@ -136,7 +136,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 | 문제      | 해결 방법                                          |
 |---------------|---------------------------------------------|
-| PowerShell에서 Microsoft Store 제출 API를 호출한 후 [convertfrom-csv](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertFrom-Json) cmdlet을 사용 하 여 json 형식에서 PowerShell 개체로 변환한 다음 [convertto-html](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json) cmdlet을 사용 하 여 json 형식으로 변환 하면 API에 대 한 응답 데이터가 손상 됩니다. |  기본적으로 [convertto-html](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json) cmdlet에 대 한 *-Depth* 매개 변수는 Microsoft Store 제출 API에서 반환 된 대부분의 Json 개체에 대해 너무 얕은 두 수준으로 설정 됩니다. [Convertto-html](https://docs.microsoft.com/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json) cmdlet을 호출 하는 경우 *-Depth* 매개 변수를 20 등의 더 큰 값으로 설정 합니다. |
+| PowerShell에서 Microsoft Store 제출 API를 호출한 후 [convertfrom-csv](/powershell/module/5.1/microsoft.powershell.utility/ConvertFrom-Json) cmdlet을 사용 하 여 json 형식에서 PowerShell 개체로 변환한 다음 [convertto-html](/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json) cmdlet을 사용 하 여 json 형식으로 변환 하면 API에 대 한 응답 데이터가 손상 됩니다. |  기본적으로 [convertto-html](/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json) cmdlet에 대 한 *-Depth* 매개 변수는 Microsoft Store 제출 API에서 반환 된 대부분의 Json 개체에 대해 너무 얕은 두 수준으로 설정 됩니다. [Convertto-html](/powershell/module/5.1/microsoft.powershell.utility/ConvertTo-Json) cmdlet을 호출 하는 경우 *-Depth* 매개 변수를 20 등의 더 큰 값으로 설정 합니다. |
 
 ## <a name="additional-help"></a>추가 도움말
 

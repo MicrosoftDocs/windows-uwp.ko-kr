@@ -1,6 +1,6 @@
 ---
 title: 유지 관리 트리거 사용
-description: 디바이스가 연결되어 있는 동안 MaintenanceTrigger 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다.
+description: 장치가 연결 되어 있는 동안 MaintenanceTrigger 클래스를 사용 하 여 백그라운드에서 경량 코드를 실행 하는 방법에 대해 알아봅니다.
 ms.assetid: 727D9D84-6C1D-4DF3-B3B0-2204EA4D76DD
 ms.date: 07/06/2018
 ms.topic: article
@@ -10,30 +10,30 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: c155a2b80826669693c3250282076d8a1b27ee83
-ms.sourcegitcommit: b52ddecccb9e68dbb71695af3078005a2eb78af1
+ms.openlocfilehash: c390280e084cd8557633f591b1686a0550f6a656
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74259400"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155767"
 ---
 # <a name="use-a-maintenance-trigger"></a>유지 관리 트리거 사용
 
 **중요 API**
 
-- [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger)
-- [**BackgroundTaskBuilder**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
-- [**SystemCondition**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemCondition)
+- [**MaintenanceTrigger**](/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger)
+- [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)
+- [**SystemCondition**](/uwp/api/Windows.ApplicationModel.Background.SystemCondition)
 
-장치가 연결되어 있는 동안 [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) 클래스를 사용하여 경량 코드를 실행하는 방법을 알아봅니다.
+장치가 연결 되어 있는 동안 [**MaintenanceTrigger**](/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) 클래스를 사용 하 여 백그라운드에서 경량 코드를 실행 하는 방법에 대해 알아봅니다.
 
 ## <a name="create-a-maintenance-trigger-object"></a>유지 관리 트리거 개체 만들기
 
-이 예에서는 장치가 연결되어 있는 동안 백그라운드에서 실행하여 앱의 성능을 향상시킬 수 있는 경량 코드가 있다고 가정합니다. 이 항목에서는 [**SystemTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger)와 유사한 [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType)에 중점을 둡니다.
+이 예에서는 장치가 연결 되어 있는 동안 백그라운드에서 실행 하 여 앱을 향상 시킬 수 있는 경량 코드가 있다고 가정 합니다. 이 항목에서는 [**Systemtrigger**](/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType)유사한 [**MaintenanceTrigger**](/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger)에 중점을 둘 수 있습니다.
 
-백그라운드 작업 클래스를 작성하는 방법은 [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조하세요.
+백그라운드 작업 클래스 작성에 대 한 자세한 내용은 [in-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md) 또는 [In-process 백그라운드 작업 생성 및 등록](create-and-register-a-background-task.md)에서 사용할 수 있습니다.
 
-새 [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) 개체를 만듭니다. 두 번째 매개 변수인 *OneShot*은 유지 관리 작업이 한 번만 실행되는지, 아니면 정기적으로 계속 실행되는지를 지정합니다. *OneShot*이 true로 설정된 경우 첫 번째 매개 변수(*FreshnessTime*)는 백그라운드 작업을 예약하기 전에 대기할 시간(분)을 지정합니다. *OneShot*이 false로 설정된 경우 *FreshnessTime*은 백그라운드 작업의 실행 빈도를 지정합니다.
+새 [**MaintenanceTrigger**](/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) 개체를 만듭니다. 두 번째 매개 변수인 *OneShot*는 유지 관리 작업을 한 번만 실행할지 아니면 정기적으로 실행할지를 지정 합니다. *OneShot* 가 true로 설정 된 경우 첫 번째 매개 변수 (*FreshnessTime*)는 백그라운드 작업을 예약 하기 전에 대기할 시간 (분)을 지정 합니다. *OneShot* 가 false로 설정 된 경우 *FreshnessTime* 는 백그라운드 작업을 실행할 빈도를 지정 합니다.
 
 > [!NOTE]
 > *FreshnessTime* 을 15 분 미만으로 설정 하면 백그라운드 작업을 등록 하려고 할 때 예외가 throw 됩니다.
@@ -55,13 +55,13 @@ unsigned int waitIntervalMinutes = 60;
 MaintenanceTrigger ^ taskTrigger = ref new MaintenanceTrigger(waitIntervalMinutes, false);
 ```
 
-## <a name="optional-add-a-condition"></a>(옵션) 조건 추가
+## <a name="optional-add-a-condition"></a>필드 조건 추가
 
-- 필요한 경우 작업이 실행되는 시간을 제어하는 백그라운드 작업 조건을 만듭니다. 그러면 조건이 충족되는 경우에만 백그라운드 작업이 실행됩니다. 자세한 내용은 [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)을 참조하세요.
+- 필요한 경우 백그라운드 작업 조건을 만들어 태스크가 실행 되는 시기를 제어 합니다. 조건을 충족 하면 조건이 충족 될 때까지 백그라운드 작업이 실행 되지 않습니다. 자세한 내용은 [백그라운드 작업을 실행 하기 위한 조건 설정](set-conditions-for-running-a-background-task.md) 을 참조 하세요.
 
-이 예에서는 인터넷을 사용할 수 있거나 인터넷이 사용할 수 있게 될 때 유지 관리 작업이 실행되도록 조건을 **InternetAvailable**로 설정합니다. 가능한 백그라운드 작업 조건 목록은 [**SystemConditionType**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)을 참조하세요.
+이 예제에서 조건은 인터넷을 사용할 수 있을 때 (또는 사용할 수 있게 되 면) 유지 관리가 실행 되도록 **Internetavailable** 로 설정 됩니다. 가능한 백그라운드 작업 조건 목록은 [**SystemConditionType**](/uwp/api/Windows.ApplicationModel.Background.SystemConditionType)를 참조 하세요.
 
-다음 코드는 유지 관리 작업 작성기에 조건을 추가합니다.
+다음 코드는 유지 관리 작업 빌더에 조건을 추가 합니다.
 
 ```csharp
 SystemCondition exampleCondition = new SystemCondition(SystemConditionType.InternetAvailable);
@@ -78,9 +78,9 @@ SystemCondition ^ exampleCondition = ref new SystemCondition(SystemConditionType
 
 ## <a name="register-the-background-task"></a>백그라운드 작업 등록
 
-- 백그라운드 작업 등록 함수를 호출하여 백그라운드 작업을 등록합니다. 백그라운드 작업 등록에 대한 자세한 내용은 [백그라운드 작업 등록](register-a-background-task.md)을 참조하세요.
+- 백그라운드 작업 등록 함수를 호출 하 여 백그라운드 작업을 등록 합니다. 백그라운드 작업 등록에 대 한 자세한 내용은 [백그라운드 작업 등록](register-a-background-task.md)을 참조 하세요.
 
-다음 코드는 유지 관리 작업을 등록합니다. 이 코드는 `entryPoint`를 지정하므로 백그라운드 작업이 앱과 별도의 프로세스로 실행된다고 간주됩니다. 백그라운드 작업이 앱과 동일한 프로세스에서 실행되는 경우 `entryPoint`를 지정하지 마세요.
+다음 코드는 유지 관리 작업을 등록 합니다. 백그라운드 작업은를 지정 하므로 응용 프로그램에서 별도의 프로세스를 실행 하는 것으로 가정 합니다 `entryPoint` . 백그라운드 태스크가 앱과 동일한 프로세스에서 실행 되는 경우을 지정 하지 않습니다 `entryPoint` .
 
 ```csharp
 string entryPoint = "Tasks.ExampleBackgroundTaskClass";
@@ -105,19 +105,19 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 ```
 
 > [!NOTE]
-> 데스크톱을 제외한 모든 디바이스 패밀리의 경우 장치의 메모리가 부족해지면 백그라운드 작업이 종료될 수 있습니다. 메모리 부족 예외가 표시되지 않거나 앱에서 처리하지 않는 경우 백그라운드 작업이 OnCanceled 이벤트를 발생시키지 않고 경고 없이 종료됩니다. 이는 포그라운드에서 앱의 사용자 환경을 확인하는 데 도움이 됩니다. 백그라운드 작업은 이 시나리오를 처리하도록 설계되어야 합니다.
+> 데스크톱을 제외한 모든 장치 패밀리의 경우 장치의 메모리가 부족 해지면 백그라운드 작업이 종료 될 수 있습니다. 메모리 부족 예외가 표시 되지 않거나 앱에서 처리 하지 않는 경우 백그라운드 작업은 경고 없이 종료 되 고 OnCanceled 이벤트를 발생 시 키 지 않습니다. 이를 통해 포그라운드에서 앱의 사용자 환경을 보장할 수 있습니다. 백그라운드 작업은이 시나리오를 처리 하도록 디자인 되어야 합니다.
 
 > [!NOTE]
-> 유니버설 Windows 플랫폼 앱은 백그라운드 트리거 형식을 등록 하기 전에 [**Requestaccessasync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) 를 호출 해야 합니다.
+> 유니버설 Windows 플랫폼 앱은 백그라운드 트리거 형식을 등록 하기 전에 [**Requestaccessasync**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) 를 호출 해야 합니다.
 
-앱에 대한 업데이트를 릴리스한 후 유니버설 Windows 앱이 계속해서 제대로 실행되도록 하려면 앱이 업데이트된 후 시작될 때 [**RemoveAccess**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.removeaccess) 및 [**RequestAccessAsync**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync)를 차례로 호출해야 합니다. 자세한 내용은 [백그라운드 작업에 대한 지침](guidelines-for-background-tasks.md)을 참조하세요.
+앱에 대 한 업데이트를 릴리스된 후에도 유니버설 Windows 앱이 제대로 실행 되도록 하려면 [**Removeaccess**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.removeaccess) 를 호출한 다음 앱이 업데이트 된 후에 시작 될 때 [**requestaccessasync**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) 를 호출 해야 합니다. 자세한 내용은 [백그라운드 작업에 대 한 지침](guidelines-for-background-tasks.md)을 참조 하세요.
 
 > [!NOTE]
-> 백그라운드 작업 등록 매개 변수는 등록 시 유효성이 검사됩니다. 등록 매개 변수가 하나라도 유효하지 않으면 오류가 반환됩니다. 백그라운드 작업 등록이 실패할 경우 앱이 시나리오를 적절하게 처리하도록 해야 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체를 사용하면 충돌할 수 있습니다.
+> 등록 시 백그라운드 작업 등록 매개 변수의 유효성이 검사 됩니다. 등록 매개 변수가 잘못 된 경우 오류가 반환 됩니다. 앱이 백그라운드 작업 등록에 실패 하는 시나리오를 정상적으로 처리 하는지 확인 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체가 있는 경우 충돌이 발생할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md).
+* [In-process 백그라운드 작업을 만들고 등록](create-and-register-an-inproc-background-task.md)합니다.
 * [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
 * [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
@@ -125,8 +125,8 @@ BackgroundTaskRegistration ^ task = RegisterBackgroundTask(entryPoint, taskName,
 * [백그라운드 작업 등록](register-a-background-task.md)
 * [백그라운드 작업으로 시스템 이벤트에 응답](respond-to-system-events-with-background-tasks.md)
 * [백그라운드 작업 실행 조건 설정](set-conditions-for-running-a-background-task.md)
-* [백그라운드 작업의 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
+* [백그라운드 작업에서 라이브 타일 업데이트](update-a-live-tile-from-a-background-task.md)
 * [타이머에 따라 백그라운드 작업 실행](run-a-background-task-on-a-timer-.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
 * [백그라운드 작업 디버그](debug-a-background-task.md)
-* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](https://msdn.microsoft.com/library/windows/apps/hh974425(v=vs.110).aspx)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](/previous-versions/hh974425(v=vs.110))

@@ -1,59 +1,59 @@
 ---
 ms.assetid: D34447FF-21D2-44D0-92B0-B3FF9B32D6F7
-description: 파트너 센터 계정에 등록 된 앱에 대 한 새 전송을 만들려면 Microsoft Store 제출 API 사용 하 여이 메서드를 사용 합니다.
+description: Microsoft Store 제출 API에서이 방법을 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 새 제출을 만듭니다.
 title: 앱 제출 만들기
 ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 제출 만들기
 ms.localizationpriority: medium
-ms.openlocfilehash: e899b203a21f8c29c9c95973871881cc618b5d55
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: cbaf7e13c937762716bfd0cf35fbfdfb4776b1f1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66371227"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158627"
 ---
 # <a name="create-an-app-submission"></a>앱 제출 만들기
 
-파트너 센터 계정에 등록 된 앱에 대 한 새 전송을 만들려면 Microsoft Store 제출 API 사용 하 여이 메서드를 사용 합니다. 이 메서드를 사용하여 새 제출을 성공적으로 만든 후 [제출을 업데이트](update-an-app-submission.md)하여 제출 데이터에 필요한 변경을 수행한 다음 수집 및 게시를 위해 [제출을 커밋](commit-an-app-submission.md)합니다.
+Microsoft Store 제출 API에서이 방법을 사용 하 여 파트너 센터 계정에 등록 된 앱에 대 한 새 제출을 만듭니다. 이 방법을 사용 하 여 새 제출을 성공적으로 만든 후에 제출 데이터를 변경 하 여 제출 데이터를 [변경 하 고](update-an-app-submission.md) 수집 및 게시를 위해 [제출을 커밋합니다](commit-an-app-submission.md) .
 
-이 메서드가 Microsoft Store 제출 API를 사용하여 앱 제출을 만드는 프로세스에 적용되는 방법은 [앱 제출 관리](manage-app-submissions.md)를 참조하세요.
+Microsoft Store 제출 API를 사용 하 여 앱 제출을 만드는 프로세스에이 방법을 사용 하는 방법에 대 한 자세한 내용은 [앱 제출 관리](manage-app-submissions.md)를 참조 하세요.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
-이 메서드를 사용하려면 다음을 먼저 수행해야 합니다.
+이 방법을 사용 하려면 먼저 다음을 수행 해야 합니다.
 
-* 아직 완료하지 않은 경우 Microsoft Store 제출 API에 대한 모든 [필수 조건](create-and-manage-submissions-using-windows-store-services.md#prerequisites)을 완료합니다.
-* 이 메서드에 대한 요청 헤더에 사용할 [Azure AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token). 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료된 후 새 토큰을 가져올 수 있습니다.
-* 앱에 [연령별 등급](https://docs.microsoft.com/windows/uwp/publish/age-ratings) 정보가 완료된 제출이 이미 하나 이상 있어야 합니다.
+* 아직 수행 하지 않은 경우 Microsoft Store 제출 API에 대 한 모든 [필수 구성 요소](create-and-manage-submissions-using-windows-store-services.md#prerequisites) 를 완료 합니다.
+* 이 메서드에 대 한 요청 헤더에 사용할 [AZURE AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) . 액세스 토큰을 얻은 후 만료되기 전에 60분 동안 사용할 수 있습니다. 토큰이 만료 된 후 새 토큰을 얻을 수 있습니다.
+* 앱에 [age 등급](../publish/age-ratings.md) 정보가 완료 된 제출이 이미 하나 이상 있는지 확인 합니다.
 
 ## <a name="request"></a>요청
 
-이 메서드에는 다음 구문이 있습니다. 헤더 및 요청 본문의 사용 예제와 설명은 다음 섹션을 참조하세요.
+이 메서드의 구문은 다음과 같습니다. 헤더 및 요청 본문의 사용 예제와 설명은 다음 섹션을 참조하세요.
 
-| 메서드 | 요청 URI                                                      |
+| 방법 | 요청 URI                                                      |
 |--------|------------------------------------------------------------------|
-| 올리기    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions` |
+| POST    | `https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions` |
 
 ### <a name="request-header"></a>요청 헤더
 
-| 헤더        | 형식   | 설명                                                                 |
+| header        | 유형   | Description                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| Authorization | string | 필수. 폼에서 Azure AD 액세스 토큰 **전달자** &lt; *토큰*&gt;합니다. |
+| 권한 부여 | 문자열 | 필수 요소. **Bearer** &lt;*token*&gt; 형식의 Azure AD 액세스 토큰입니다. |
 
 ### <a name="request-parameters"></a>요청 매개 변수
 
-| 이름        | 형식   | 설명                                                                 |
+| 이름        | 유형   | Description                                                                 |
 |---------------|--------|-----------------------------------------------------------------------------|
-| applicationId | string | 필수. 제출을 만들려는 앱의 스토어 ID입니다. 스토어 ID에 대한 자세한 내용은 [앱 ID 세부 정보 보기](https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details)를 참조하세요.  |
+| applicationId | 문자열 | 필수 요소. 제출을 만들려는 앱의 저장소 ID입니다. 저장소 ID에 대 한 자세한 내용은 [앱 id 세부 정보 보기](../publish/view-app-identity-details.md)를 참조 하세요.  |
 
 ### <a name="request-body"></a>요청 본문
 
-이 메서드에 대한 요청 본문을 제공하지 않습니다.
+이 메서드에 대 한 요청 본문을 제공 하지 마십시오.
 
 ### <a name="request-example"></a>요청 예제
 
-다음 예제에서는 앱에 대한 새 제출을 만드는 방법을 보여 줍니다.
+다음 예제에서는 앱에 대 한 새 제출을 만드는 방법을 보여 줍니다.
 
 ```json
 POST https://manage.devcenter.microsoft.com/v1.0/my/applications/9NBLGGH4R315/submissions HTTP/1.1
@@ -62,7 +62,7 @@ Authorization: Bearer <your access token>
 
 ## <a name="response"></a>응답
 
-다음 예제에서는 이 메서드를 성공적으로 호출하기 위한 JSON 응답 본문을 보여 줍니다. 응답 본문에 새 제출에 대한 정보가 포함되어 있습니다. 응답 본문의 값에 대한 자세한 내용은 [앱 제출 리소스](manage-app-submissions.md#app-submission-object)를 참조하세요.
+다음 예제에서는이 메서드를 성공적으로 호출 하기 위한 JSON 응답 본문을 보여 줍니다. 응답 본문에는 새 전송에 대 한 정보가 포함 됩니다. 응답 본문의 값에 대 한 자세한 내용은 [앱 제출 리소스](manage-app-submissions.md#app-submission-object)를 참조 하세요.
 
 ```json
 {
@@ -177,18 +177,18 @@ Authorization: Bearer <your access token>
 
 ## <a name="error-codes"></a>오류 코드
 
-요청을 성공적으로 완료할 수 없으면 응답에 다음 HTTP 오류 코드 중 하나가 포함됩니다.
+요청이 성공적으로 완료 될 수 없는 경우 응답은 다음 HTTP 오류 코드 중 하나를 포함 합니다.
 
-| 오류 코드 |  설명   |
+| 오류 코드 |  Description   |
 |--------|------------------|
-| 400  | 요청이 잘못되어 제출을 만들 수 없습니다. |
-| 409  | 파트너 센터 기능을 사용 하는 앱 또는 앱의 현재 상태로 인해 제출을 만들 수 없습니다 [현재 Microsoft Store 전송 API에 의해 지원 되지 않습니다](create-and-manage-submissions-using-windows-store-services.md#not_supported)합니다. |   
+| 400  | 요청이 잘못 되었으므로 제출을 만들 수 없습니다. |
+| 409  | 앱의 현재 상태로 인해 제출을 만들지 못했습니다. 또는 앱이 [Microsoft Store 제출 API에서 현재 지원 하지](create-and-manage-submissions-using-windows-store-services.md#not_supported)않는 파트너 센터 기능을 사용 합니다. |   
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 서비스를 사용 하 여 서브 미션을 만들고 설정 합니다.](create-and-manage-submissions-using-windows-store-services.md)
-* [가져오기는 앱 제출](get-an-app-submission.md)
-* [커밋에 앱 제출](commit-an-app-submission.md)
-* [업데이트는 응용 프로그램 제출](update-an-app-submission.md)
-* [삭제는 앱 제출](delete-an-app-submission.md)
-* [응용 프로그램 제출의 상태를 가져옵니다.](get-status-for-an-app-submission.md)
+* [Microsoft Store 서비스를 사용 하 여 제출 작성 및 관리](create-and-manage-submissions-using-windows-store-services.md)
+* [앱 제출 가져오기](get-an-app-submission.md)
+* [앱 제출 커밋](commit-an-app-submission.md)
+* [앱 제출 업데이트](update-an-app-submission.md)
+* [앱 제출 삭제](delete-an-app-submission.md)
+* [앱 제출의 상태를 가져오기](get-status-for-an-app-submission.md)

@@ -5,12 +5,12 @@ ms.date: 10/12/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8aaf8759b59c8ccbb5b09ba969675096700ce9e8
-ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
+ms.openlocfilehash: 01ae58b7422215a0e4f90c5b3f59819d9a24fa36
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89094460"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157777"
 ---
 # <a name="xbox-best-practices"></a>Xbox 모범 사례
 
@@ -30,7 +30,7 @@ Xbox 사용자는 자신의 컨트롤러를 선호 합니다. 컨트롤러 입�
 
 ### <a name="do-integrate-with-the-systemmediatransportcontrols-class"></a>*Do:* SystemMediaTransportControls 클래스와 통합
 
-Xbox 사용자는 Xbox Media 원격 Cortana (특히 "재생" 및 "일시 중지" 음성 명령)를 사용 하 여 미디어 앱을 제어 하 고 Xbox SmartGlass 효과를 원합니다. 이러한 기능을 무료로 이용 하려면 앱에서 Xbox 미디어 컨트롤에 자동으로 포함 되는 [SystemMediaTransportControls](https://docs.microsoft.com/uwp/api/windows.media.systemmediatransportcontrols) 클래스를 사용 해야 합니다. 앱에 사용자 지정 미디어 컨트롤이 있는 경우 **SystemMediaTransportControls** 클래스와 통합 하 여 사용자에 게 이러한 기능을 제공 해야 합니다. 배경 음악 앱을 만드는 경우 **SystemMediaTransportControls** 클래스와 통합 하 여 Xbox 멀티태스킹 탭에서 배경 음악 컨트롤이 제대로 작동 하는지 확인 합니다.
+Xbox 사용자는 Xbox Media 원격 Cortana (특히 "재생" 및 "일시 중지" 음성 명령)를 사용 하 여 미디어 앱을 제어 하 고 Xbox SmartGlass 효과를 원합니다. 이러한 기능을 무료로 이용 하려면 앱에서 Xbox 미디어 컨트롤에 자동으로 포함 되는 [SystemMediaTransportControls](/uwp/api/windows.media.systemmediatransportcontrols) 클래스를 사용 해야 합니다. 앱에 사용자 지정 미디어 컨트롤이 있는 경우 **SystemMediaTransportControls** 클래스와 통합 하 여 사용자에 게 이러한 기능을 제공 해야 합니다. 배경 음악 앱을 만드는 경우 **SystemMediaTransportControls** 클래스와 통합 하 여 Xbox 멀티태스킹 탭에서 배경 음악 컨트롤이 제대로 작동 하는지 확인 합니다.
 
 <!-- ### *Do:* Use adaptive UI to account for snapped apps
 One of the unique features of Xbox One is that users can snap apps such as Cortana next to any other app, so your app should respond gracefully when it runs in *fill mode*. Implement [adaptive UI](../get-started/universal-application-platform-guide.md#design-adaptive-ui-with-adaptive-panels) and make sure to test your app during development by snapping an app next to it. -->
@@ -74,4 +74,4 @@ UWP 앱에 적용 되는 이러한 사례를 확인 하려면이 비디오를 �
 
 - [Xbox One의 UWP](index.md)
 - [Xbox 및 TV용 디자인](../design/devices/designing-for-tv.md)
-- [Xbox One용 점진적 웹앱](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/xbox-considerations)
+- [Xbox One용 점진적 웹앱](/microsoft-edge/progressive-web-apps/xbox-considerations)

@@ -1,51 +1,51 @@
 ---
 ms.assetid: 9F0A59A1-FAD7-4AD5-B78B-C1280F215D23
-description: Microsoft Store 대상 제품 API를 사용하여 앱의 현재 사용자가 사용할 수 있는 대상 제품을 가져옵니다.
-title: 스토어 서비스를 사용하여 대상 제품 관리
+description: Microsoft Store 대상 제공 API를 사용 하 여 앱의 현재 사용자에 게 제공 되는 대상 제공 서비스를 가져옵니다.
+title: 매장 서비스를 사용 하 여 대상 제품 관리
 ms.date: 10/10/2017
 ms.topic: article
-keywords: windows 10, uwp, Microsoft Store 서비스, Microsoft Store 대상 제품 API, 대상 제품
+keywords: windows 10, uwp, 스토어 서비스 Microsoft Store 대상 제공 API, 대상 제안
 ms.localizationpriority: medium
-ms.openlocfilehash: 3ea4adac82692e80d652523d05a7ba0b901db300
-ms.sourcegitcommit: 6a7dd4da2fc31ced7d1cdc6f7cf79c2e55dc5833
+ms.openlocfilehash: 6cb429168e82419223f354bdb6548ab9a9e60dd1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58334401"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155487"
 ---
-# <a name="manage-targeted-offers-using-store-services"></a>스토어 서비스를 사용하여 대상 제품 관리
+# <a name="manage-targeted-offers-using-store-services"></a>매장 서비스를 사용 하 여 대상 제품 관리
 
-만드는 경우는 *대상된 제품* 에 **참여 > 제품을 대상으로** 파트너 센터에서 사용 하 여 앱에 대 한 페이지를 *API를 제공 하는 Microsoft Store 대상으로* 앱의 코드에서 대상된 제품에 대 한 인 앱 환경을 구현할 수 있는 정보를 검색 합니다. 대상 제품 및 대시보드에서 대상 제품을 만드는 방법에 대한 자세한 내용은 [대상 제품을 사용하여 참여 및 변환 최대화](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md)를 참조하세요.
+파트너 센터에서 앱에 대 한 **> 대상 제공 서비스** 페이지에서 *대상 제품* 을 만드는 경우 앱 코드의 *Microsoft Store 대상 제품 API* 를 사용 하 여 대상 제품의 앱 내 환경을 구현 하는 데 도움이 되는 정보를 검색 합니다. 대상 제공 서비스 및 대시보드에서 이러한 항목을 만드는 방법에 대 한 자세한 내용은 [대상 제공 서비스를 사용 하 여 참여 및 변환 최대화](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md)를 참조 하세요.
 
-대상 제품 API는 사용자가 대상 제품의 고객 세그먼트에 포함되는지 여부에 따라 현재 사용자에게 제공되는 대상 제품을 가져오는 데 사용할 수 있는 간단한 REST API입니다. 이 API를 앱 코드에 사용하려면 다음 단계를 따릅니다.
+대상 제공 API는 사용자가 대상 제품에 대 한 고객 세그먼트의 일부 인지 여부에 따라 현재 사용자에 게 제공 되는 대상 제공 서비스를 가져오는 데 사용할 수 있는 간단한 REST API입니다. 앱의 코드에서이 API를 사용 하려면 다음 단계를 수행 합니다.
 
-1.  현재 앱에 로그인한 사용자의 [Microsoft 계정 토큰을 가져옵니다](#obtain-a-microsoft-account-token).
-2.  [현재 사용자의 대상 제품을 가져옵니다](#get-targeted-offers).
-3.  대상 제품 중 하나와 연결된 추가 기능에 대한 앱에서 바로 구매 환경을 구현합니다. 앱에서 바로 구매를 구현하는 데 대한 자세한 내용은 [이 문서](enable-in-app-purchases-of-apps-and-add-ons.md)를 참조하세요.
+1.  앱의 현재 로그인 한 사용자에 대 한 [Microsoft 계정 토큰을 가져옵니다](#obtain-a-microsoft-account-token) .
+2.  [현재 사용자의 대상 제공 서비스를 가져옵니다](#get-targeted-offers).
+3.  대상 제품 중 하 나와 연결 된 추가 기능에 대 한 앱 내 구매 환경을 구현 합니다. 앱에서 바로 구매를 구현 하는 방법에 대 한 자세한 내용은 [이 문서](enable-in-app-purchases-of-apps-and-add-ons.md)를 참조 하세요.
 
-이러한 모든 단계를 보여 주는 완전한 코드 예제는 이 문서의 끝 부분에 있는 [코드 예제](#code-example)를 참조합니다. 다음 섹션에서는 이러한 각 단계에 대한 자세한 내용을 제공합니다.
+이러한 모든 단계를 보여 주는 전체 코드 예제는이 문서의 끝에 있는 [코드 예제](#code-example) 를 참조 하세요. 다음 섹션에서는 각 단계에 대 한 자세한 정보를 제공 합니다.
 
 <span id="obtain-a-microsoft-account-token" />
 
-## <a name="get-a-microsoft-account-token-for-the-current-user"></a>현재 사용자의 Microsoft 계정 토큰 가져오기
+## <a name="get-a-microsoft-account-token-for-the-current-user"></a>현재 사용자에 대 한 Microsoft 계정 토큰을 가져옵니다.
 
-앱의 코드에서 현재 로그인한 사용자의 MSA(Microsoft 계정) 토큰을 가져옵니다. Microsoft Store 대상 제품 API의 ```Authorization``` 요청 헤더에 이 토큰을 전달해야 합니다. 이 토큰은 Microsoft Store에서 현재 사용자에게 제공되는 대상 제품을 검색하는 데 사용됩니다.
+앱의 코드에서 현재 로그인 한 사용자에 대 한 MSA (Microsoft 계정) 토큰을 가져옵니다. ```Authorization```Microsoft Store 대상 제공 API에 대 한 요청 헤더에이 토큰을 전달 해야 합니다. 이 토큰은 저장소에서 현재 사용자가 사용할 수 있는 대상 제공 서비스를 검색 하는 데 사용 됩니다.
 
-MSA 토큰을 가져오려면 [WebAuthenticationCoreManager](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webauthenticationcoremanager) 클래스를 사용하여 ```devcenter_implicit.basic,wl.basic``` 범위를 사용하는 토큰을 요청합니다. 다음 예에서는 이 작업을 수행하는 방법을 보여 줍니다. [완전한 예제](#code-example)에서 발췌한 예제입니다. 완전한 예제에서 제공되는 **using** 문이 필요합니다.
+MSA 토큰을 가져오려면 [Webauthenticationcoremanager](/uwp/api/windows.security.authentication.web.core.webauthenticationcoremanager) 클래스를 사용 하 여 범위를 사용 하 여 토큰을 요청 ```devcenter_implicit.basic,wl.basic``` 합니다. 다음 예제에서는 이 작업을 수행하는 방법을 보여 줍니다. 이 예는 [전체 예제](#code-example)에서 발췌 한 것 이며 전체 예제에서 제공 되는 문을 **사용** 해야 합니다.
 
 [!code-csharp[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetMSAToken)]
 
-MSA 토큰을 가져오는 방법에 대한 자세한 내용은 [웹 계정 관리자](../security/web-account-manager.md)를 참조하세요.
+MSA 토큰을 가져오는 방법에 대 한 자세한 내용은 [웹 계정 관리자](../security/web-account-manager.md)를 참조 하세요.
 
 <span id="get-targeted-offers" />
 
-## <a name="get-the-targeted-offers-for-the-current-user"></a>현재 사용자의 대상 제품 가져오기
+## <a name="get-the-targeted-offers-for-the-current-user"></a>현재 사용자에 대 한 대상 제안 가져오기
 
-현재 사용자의 MSA 토큰을 확보한 후에는 ```https://manage.devcenter.microsoft.com/v2.0/my/storeoffers/user``` URI의 GET 메서드를 호출하여 현재 사용자에게 제공되는 대상 제품을 가져옵니다. 이 REST 메서드에 대한 자세한 내용은 [대상 제품 가져오기](get-targeted-offers.md)를 참조하세요.
+현재 사용자에 대 한 MSA 토큰을 가져온 후에는 URI의 GET 메서드를 호출 ```https://manage.devcenter.microsoft.com/v2.0/my/storeoffers/user``` 하 여 현재 사용자에 대해 사용 가능한 대상 제공 서비스를 가져옵니다. 이 REST 방법에 대 한 자세한 내용은 [대상 제안 가져오기](get-targeted-offers.md)를 참조 하세요.
 
-이 메서드는 현재 사용자에게 제공되는 대상 제품과 연결된 추가 기능의 제품 ID를 반환합니다. 이 정보를 사용하여 사용자에게 하나 이상의 대상 제품을 앱에서 바로 구매로 제공할 수 있습니다.
+이 메서드는 현재 사용자에 게 제공 되는 대상 제공 서비스와 관련 된 추가 기능의 제품 Id를 반환 합니다. 이 정보를 사용 하 여 사용자에 대 한 앱 내 구매로 하나 이상의 대상 제품을 제공할 수 있습니다.
 
-다음 예제는 현재 사용자에게 대상 제품을 제시하는 방법을 보여 줍니다. 이 예제는 [완전한 예제](#code-example)에서 발췌했습니다. Newtonsoft의 [Json.NET](https://www.newtonsoft.com/json) 라이브러리와 추가 클래스, 완전한 예제에서 제공되는 **using** 문이 필요합니다.
+다음 예에서는 현재 사용자의 대상 제공 서비스를 가져오는 방법을 보여 줍니다. 이 예제는 [전체 예제](#code-example)에서 발췌 한 것입니다. Newtonsoft.json의 [Json.NET](https://www.newtonsoft.com/json) 라이브러리와 추가 클래스 및 전체 예제에서 제공 되는 문을 **사용** 해야 합니다.
 
 [!code-csharp[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffers)]
 
@@ -53,17 +53,17 @@ MSA 토큰을 가져오는 방법에 대한 자세한 내용은 [웹 계정 관�
 
 ## <a name="complete-code-example"></a>전체 코드 예제
 
-다음 코드 예제는 다음과 같은 작업을 보여 줍니다.
+다음 코드 예제에서는 다음 작업을 보여 줍니다.
 
-* 현재 사용자의 MSA 토큰을 가져옵니다.
-* [Get targeted offers](get-targeted-offers.md) 메서드를 사용하여 현재 사용자에게 제공되는 대상 제품을 모두 가져옵니다.
-* 대상 제품과 연결된 추가 기능을 구매합니다.
+* 현재 사용자에 대 한 MSA 토큰을 가져옵니다.
+* [Get 대상 제품](get-targeted-offers.md) 메서드를 사용 하 여 현재 사용자에 대 한 대상 제품을 모두 가져옵니다.
+* 대상 제품에 연결 된 추가 기능을 구입 합니다.
 
-이 예제는 Newtonsoft의 [Json.NET](https://www.newtonsoft.com/json) 라이브러리가 필요합니다. 이 예에서는 이 라이브러리를 사용하여 JSON 형식의 데이터를 직렬화 및 역직렬화합니다.
+이 예제에는 Newtonsoft.json의 [Json.NET](https://www.newtonsoft.com/json) 라이브러리가 필요 합니다. 이 예제에서는이 라이브러리를 사용 하 여 JSON 형식 데이터를 serialize 및 deserialize 합니다.
 
 [!code-csharp[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffersSample)]
 
 ## <a name="related-topics"></a>관련 항목
 
-* [대상된 제품을 사용 하 여 engagement 및 변환 최대화](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md)
-* [대상된 제품 가져오기](get-targeted-offers.md)
+* [대상 제공 서비스를 사용 하 여 참여 및 변환 최대화](../publish/use-targeted-offers-to-maximize-engagement-and-conversions.md)
+* [대상 제품 가져오기](get-targeted-offers.md)

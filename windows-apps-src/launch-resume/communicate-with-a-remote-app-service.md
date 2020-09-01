@@ -1,26 +1,26 @@
 ---
 title: 원격 앱 서비스와 통신
-description: 프로젝트 로마를 사용하여 원격 디바이스에서 실행 중인 앱 서비스와 메시지를 교환하세요.
+description: Project 로마를 사용 하 여 원격 장치에서 실행 되는 app service를 사용 하 여 메시지를 교환 합니다.
 ms.assetid: a0261e7a-5706-4f9a-b79c-46a3c81b136f
 ms.date: 02/08/2017
 ms.topic: article
-keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마, 백그라운드 작업, 앱 서비스
+keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마, 백그라운드 작업, app service
 ms.localizationpriority: medium
-ms.openlocfilehash: 067b465feccda424dd6a8e3f44e784166afe6d48
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: ccd0de91279b4466b662a5b5e85bbab55d0f7712
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66366426"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156047"
 ---
 # <a name="communicate-with-a-remote-app-service"></a>원격 앱 서비스와 통신
 
-URI를 사용하여 원격 디바이스에서 앱을 실행하는 것은 물론 원격 디바이스에서 *앱 서비스*를 실행하고 통신할 수도 있습니다. 모든 Windows 기반 디바이스를 클라이언트 또는 호스트 디바이스로 사용할 수 있습니다. 따라서 앱을 포그라운드로 전환할 필요 없이 연결된 디바이스를 다양한 방법으로 조작할 수 있습니다.
+URI를 사용 하 여 원격 장치에서 앱을 시작 하는 것 외에도 원격 장치에서 *앱 서비스* 를 실행 하 고 통신할 수 있습니다. 모든 Windows 기반 장치를 클라이언트 또는 호스트 장치로 사용할 수 있습니다. 이렇게 하면 응용 프로그램을 포그라운드로 가져올 필요 없이 거의 무제한으로 연결 된 장치와 상호 작용할 수 있습니다.
 
-## <a name="set-up-the-app-service-on-the-host-device"></a>호스트 디바이스에서 앱 서비스 설정
-원격 디바이스에서 앱 서비스를 실행하려면 해당 디바이스에 앱 서비스 공급자가 이미 설치되어 있어야 합니다. 이 가이드에서는 CSharp 버전의 [난수 생성기 앱 서비스 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices)을 사용합니다. 이 샘플은 [Windows 유니버설 샘플 리포지토리](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices)에 있습니다. 고유한 앱 서비스를 작성하는 방법에 대한 자세한 내용은 [앱 서비스 만들기 및 사용](how-to-create-and-consume-an-app-service.md)을 참조하세요.
+## <a name="set-up-the-app-service-on-the-host-device"></a>호스트 장치에서 앱 서비스 설정
+원격 장치에서 app service를 실행 하려면 해당 장치에 해당 app service의 공급자가 이미 설치 되어 있어야 합니다. 이 가이드에서는 [Windows 유니버설 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices)리포지토리에서 사용할 수 있는 [임의의 숫자 생성기 app Service 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/AppServices)의 CSharp 버전을 사용 합니다. 사용자 고유의 app service를 작성 하는 방법에 대 한 지침은 [app Service 만들기 및 사용](how-to-create-and-consume-an-app-service.md)을 참조 하세요.
 
-이미 만들어진 앱 서비스를 사용하든, 고유한 앱 서비스를 작성하든 관계없이 서비스가 원격 시스템과 호환되도록 하려면 몇 가지 편집 작업이 필요합니다. Visual Studio에서 앱 서비스 공급자 프로젝트(샘플의 "AppServicesProvider")로 이동한 다음 해당 _Package.appxmanifest_ 파일을 선택합니다. 마우스 오른쪽 단추를 클릭하고 **코드 보기**를 선택하여 파일의 전체 내용을 표시합니다. 만들기는 **Extensions** 주 내의 요소 **응용 프로그램** 요소 (또는 이미 있는 경우에 찾을). 만든를 **확장** app service로 프로젝트를 정의 하 고 해당 부모 프로젝트를 참조 합니다.
+이미 만들어진 app service를 사용 하 든, 직접 작성 하 든 관계 없이 서비스를 원격 시스템과 호환 하려면 몇 가지 사항을 편집 해야 합니다. Visual Studio에서 app service provider의 프로젝트 (샘플의 "App서비스 공급자")로 이동 하 여 _appxmanifest.xml_ 파일을 선택 합니다. 마우스 오른쪽 단추를 클릭 하 고 **코드 보기** 를 선택 하 여 파일의 전체 내용을 확인 합니다. 주 **응용 프로그램** 요소 내에 **확장** 요소를 만들거나 이미 있는 경우이를 찾습니다. 그런 다음 **확장** 을 만들어 프로젝트를 app service로 정의 하 고 해당 부모 프로젝트를 참조 합니다.
 
 ``` xml
 ...
@@ -32,7 +32,7 @@ URI를 사용하여 원격 디바이스에서 앱을 실행하는 것은 물론 
 ...
 ```
 
-옆에 **AppService** 요소를 추가 합니다 **SupportsRemoteSystems** 특성:
+**AppService** 요소 옆에 **SupportsRemoteSystems** 특성을 추가 합니다.
 
 ``` xml
 ...
@@ -40,7 +40,7 @@ URI를 사용하여 원격 디바이스에서 앱을 실행하는 것은 물론 
 ...
 ```
 
-이 요소를 사용 하려면 **uap3** 네임 스페이스를 추가 해야 네임 스페이스 정의 매니페스트 파일의 맨 위에 있는 아직 없는 경우.
+이 **uap3** 네임 스페이스의 요소를 사용 하려면 매니페스트 파일의 맨 위에 네임 스페이스 정의를 추가 해야 합니다 (없는 경우).
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -53,41 +53,41 @@ URI를 사용하여 원격 디바이스에서 앱을 실행하는 것은 물론 
 </Package>
 ```
 
-앱 서비스 공급자 프로젝트를 빌드하고 호스트 장치에 배포 합니다.
+그런 다음 app service 공급자 프로젝트를 빌드하고 호스트 장치에 배포 합니다.
 
-## <a name="target-the-app-service-from-the-client-device"></a>클라이언트 디바이스에서 앱 서비스를 대상으로 지정
-원격 앱 서비스가 호출되는 디바이스에 원격 시스템 기능을 가진 앱이 있어야 합니다. 호스트 디바이스에서 앱 서비스를 제공하는 앱에 이 앱을 추가하거나(이 경우 두 디바이스에 동일한 앱을 설치함) 완전히 다른 앱에 구현할 수 있습니다.
+## <a name="target-the-app-service-from-the-client-device"></a>클라이언트 장치에서 app service를 대상으로 합니다.
+원격 앱 서비스를 호출할 장치에는 원격 시스템 기능을 사용 하는 앱이 필요 합니다. 호스트 장치에서 app service를 제공 하는 동일한 앱에 추가 하거나 (이 경우 두 장치에 동일한 앱을 설치) 완전히 다른 앱에서 구현 될 수 있습니다.
 
-다음 **using** 문은 이 섹션의 코드를 현재 그대로 실행하는 데 필요합니다.
+이 단원의 코드를 그대로 실행 하려면 다음 **using 문을 사용** 해야 합니다.
 
 [!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetUsings)]
 
 
-먼저 로컬에서 앱 서비스를 호출하는 것처럼 [**AppServiceConnection**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.AppService.AppServiceConnection) 개체를 인스턴스화해야 합니다. 이 프로세스는 [앱 서비스 만들기 및 사용](how-to-create-and-consume-an-app-service.md)에서 자세히 설명합니다. 이 예제에서 대상으로 지정할 앱 서비스는 난수 생성기 서비스입니다.
+앱 서비스를 로컬로 호출 하는 것 처럼 먼저 [**AppServiceConnection**](/uwp/api/Windows.ApplicationModel.AppService.AppServiceConnection) 개체를 인스턴스화해야 합니다. 이 프로세스는 [앱 서비스 만들기 및 사용](how-to-create-and-consume-an-app-service.md)에서 자세히 설명합니다. 이 예제에서 대상으로 하는 app service는 난수 생성기 서비스입니다.
 
 > [!NOTE]
-> 다음 메서드를 호출하는 코드 내에서 임의 방법으로 [RemoteSystem](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystem) 개체를 이미 얻었다고 가정합니다. 설정 방법에 대한 자세한 내용은 [원격 앱 실행](launch-a-remote-app.md)을 참조하세요.
+> [RemoteSystem](/uwp/api/Windows.System.RemoteSystems.RemoteSystem) 개체는 다음 메서드를 호출 하는 코드 내의 일부 방법으로 이미 획득 한 것으로 가정 합니다. 이를 설정 하는 방법에 대 한 지침은 [원격 앱 시작](launch-a-remote-app.md) 을 참조 하세요.
 
 [!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetAppService)]
 
-의도한 원격 디바이스에 대한 [**RemoteSystemConnectionRequest**](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems.RemoteSystemConnectionRequest) 개체가 생성됩니다. 이 개체를 사용하여 해당 디바이스에 대한 **AppServiceConnection**을 엽니다. 아래 예제에서는 간단한 설명을 위해 오류 처리와 보고가 매우 간소화되었습니다.
+다음으로, 의도 된 원격 장치에 대해 [**RemoteSystemConnectionRequest**](/uwp/api/Windows.System.RemoteSystems.RemoteSystemConnectionRequest) 개체가 생성 됩니다. 그런 다음 해당 장치에 대 한 **AppServiceConnection** 를 여는 데 사용 됩니다. 아래 예제에서 오류 처리 및 보고는 간결 하 게 하기 위해 크게 간소화 되었습니다.
 
 [!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetRemoteConnection)]
 
 이제 원격 컴퓨터의 앱 서비스에 대한 연결이 열려 있습니다.
 
-## <a name="exchange-service-specific-messages-over-the-remote-connection"></a>원격 연결을 통해 서비스 관련 메시지 교환
+## <a name="exchange-service-specific-messages-over-the-remote-connection"></a>원격 연결을 통해 서비스별 메시지 교환
 
-여기에서 [**ValueSet**](https://docs.microsoft.com/uwp/api/windows.foundation.collections.valueset) 개체의 형태로 서비스와 메시지를 주고받을 수 있습니다. 자세한 내용은 [앱 서비스 만들기 및 사용](how-to-create-and-consume-an-app-service.md)을 참조하세요. 난수 생성기 서비스는 `"minvalue"` 및 `"maxvalue"` 키를 가진 두 정수를 입력으로 사용하고 해당 범위 내의 정수를 임의로 선택하여 호출 프로세스에 `"Result"` 키로 반환합니다.
+여기에서 [**Valueset**](/uwp/api/windows.foundation.collections.valueset) 개체 형식으로 서비스와 메시지를 주고받을 수 있습니다. 자세한 내용은 [app service 만들기 및 사용](how-to-create-and-consume-an-app-service.md)을 참조 하세요. 난수 생성기 서비스는 키와 키를 사용 하 여 두 개의 정수를 사용 하 고 `"minvalue"` `"maxvalue"` 해당 범위 내에서 정수를 임의로 선택 하 고 키를 사용 하 여 호출 프로세스로 반환 합니다 `"Result"` .
 
 [!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetSendMessage)]
 
-이제 대상 호스트 디바이스의 앱 서비스에 연결되었으므로 해당 디바이스에서 작업을 실행하고 응답으로 클라이언트 디바이스에 데이터가 수신됩니다.
+이제 대상 호스트 장치에서 app service에 연결 하 고 해당 장치에서 작업을 실행 한 후 클라이언트 장치에 응답 하 여 데이터를 수신 했습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-[연결 된 앱 및 장치 (프로젝트 로마) 개요](connected-apps-and-devices.md)  
+[연결 된 앱 및 장치 (Project 로마) 개요](connected-apps-and-devices.md)  
 [원격 앱 시작](launch-a-remote-app.md)  
 [앱 서비스 만들기 및 사용](how-to-create-and-consume-an-app-service.md)  
-[원격 시스템 API 참조](https://docs.microsoft.com/uwp/api/Windows.System.RemoteSystems)  
+[원격 시스템 API 참조](/uwp/api/Windows.System.RemoteSystems)  
 [원격 시스템 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/dev/Samples/RemoteSystems)

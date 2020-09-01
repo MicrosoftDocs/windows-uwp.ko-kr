@@ -1,16 +1,16 @@
 ---
 title: 샘플 게임 확장
-description: UWP DirectX 게임에 대해 XAML 오버레이를 구현 하는 방법에 대해 알아봅니다.
+description: UWP (기본 유니버설 Windows 플랫폼) DirectX 게임에서 오버레이의 Direct2D 대신 XAML을 사용 하는 방법에 대해 알아봅니다.
 keywords: DirectX, XAML
 ms.date: 10/24/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 06b52e5b6fdba1db83c941e770cd49360085accf
-ms.sourcegitcommit: 20969781aca50738792631f4b68326f9171a3980
+ms.openlocfilehash: be2ef3b4d5c3cce4a4305a8faa1f4af5dea3e8bc
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85409552"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156377"
 ---
 # <a name="extend-the-sample-game"></a>샘플 게임 확장
 
@@ -43,7 +43,7 @@ XAML을 사용 하면 이전에 만든 Direct2D 유사 하 게 게임 인터페�
 사용자 인터페이스 요소 | XAML 사용자 인터페이스 요소는 [**windows:: ui:: xaml**](/uwp/api/Windows.UI.Xaml) 및 [**WINDOWS:: Ui:: Xaml:: 컨트롤**](/uwp/api/Windows.UI.Xaml.Controls)을 포함 하 여 Windows 런타임 xaml api의 일부인 표준화 된 요소에서 제공 됩니다. XAML 사용자 인터페이스 요소의 동작을 처리 하는 코드는 코드 숨김 파일인 .xaml에 정의 되어 있습니다. | 사각형 및 타원과 같은 간단한 셰이프를 그릴 수 있습니다.
 창 크기 조정 | 기본적으로 크기 조정 및 보기 상태 변경 이벤트를 처리 하 고 적절 하 게 오버레이를 변형 합니다. | 오버레이 구성 요소를 다시 그리는 방법을 수동으로 지정 해야 합니다.
 
-또 다른 큰 차이점에는 [스왑 체인이](/windows/uwp/graphics-concepts/swap-chains)포함 됩니다. 스왑 체인을 [**Windows:: UI:: Core:: CoreWindow**](/uwp/api/windows.ui.core.corewindow) 개체에 연결할 필요가 없습니다. 대신, XAML을 통합 하는 DirectX 앱은 새 [**SwapChainPanel**](/uwp/api/windows.ui.xaml.controls.swapchainpanel) 개체가 생성 될 때 스왑 체인을 연결 합니다. 
+또 다른 큰 차이점에는 [스왑 체인이](../graphics-concepts/swap-chains.md)포함 됩니다. 스왑 체인을 [**Windows:: UI:: Core:: CoreWindow**](/uwp/api/windows.ui.core.corewindow) 개체에 연결할 필요가 없습니다. 대신, XAML을 통합 하는 DirectX 앱은 새 [**SwapChainPanel**](/uwp/api/windows.ui.xaml.controls.swapchainpanel) 개체가 생성 될 때 스왑 체인을 연결 합니다. 
 
 다음 코드 조각에서는 [**Directxpage**](https://github.com/Microsoft/Windows-universal-samples/blob/6370138b150ca8a34ff86de376ab6408c5587f5d/Samples/Simple3DGameXaml/cpp/DirectXPage.xaml) 파일에서 **SwapChainPanel** 에 대 한 xaml을 선언 하는 방법을 보여 줍니다.
 ```xml

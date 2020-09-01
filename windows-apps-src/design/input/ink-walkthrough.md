@@ -6,16 +6,16 @@ keywords: 잉크, 잉크, tuorial
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d0df2b531510d86591c44bc69f6ed5c6ad9f200f
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 1972a266297d41e357bd2086f8485c154153d582
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234620"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157037"
 ---
 # <a name="tutorial-support-ink-in-your-windows-app"></a>자습서: Windows 앱에서 잉크 지원
 
-![화면 펜](images/ink/ink-hero-small.png)  
+![Surface 펜](images/ink/ink-hero-small.png)  
 *Surface Pen* ( [Microsoft Store](https://www.microsoft.com/p/surface-pen/8zl5c82qmg6b)에서 구매할 수 있음)
 
 이 자습서에서는 Windows Ink를 사용 하 여 작성 및 그리기를 지 원하는 기본 Windows 앱을 만드는 방법을 단계별로 설명 합니다. 각 단계에서 설명한 다양 한 기능 및 관련 Windows Ink Api ( [Windows ink 플랫폼의 구성 요소](#components-of-the-windows-ink-platform)참조)를 보여 주기 위해 GitHub에서 다운로드할 수 있는 샘플 앱에서 코드 조각을 사용 합니다 ( [샘플 코드](#sample-code)참조).
@@ -27,7 +27,7 @@ ms.locfileid: "83234620"
 * 기본 도형 인식 지원
 * 잉크 저장 및 로드
 
-이러한 기능을 구현 하는 방법에 대 한 자세한 내용은 [windows 앱의 펜 상호 작용 및 Windows Ink](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions)를 참조 하세요.
+이러한 기능을 구현 하는 방법에 대 한 자세한 내용은 [windows 앱의 펜 상호 작용 및 Windows Ink](./pen-and-stylus-interactions.md)를 참조 하세요.
 
 ## <a name="introduction"></a>소개
 
@@ -40,14 +40,14 @@ Windows 잉크를 사용 하면 신속 하 고 필기 한 노트와 주석에서
 * [Windows 10 SDK(10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * 구성에 따라 [Microsoft.netcore.universalwindowsplatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform) NuGet 패키지를 설치 하 고 시스템 설정에서 **개발자 모드** 를 사용 하도록 설정 해야 할 수 있습니다. 개발자는 개발자 기능을 사용 하 여 개발자 기능을 사용 하 여 > & 보안-> > 업데이트 합니다.
 * Visual Studio를 사용 하 여 Windows 앱을 개발 하는 경우이 자습서를 시작 하기 전에 다음 항목을 참조 하세요.  
-    * [설정](https://docs.microsoft.com/windows/uwp/get-started/get-set-up)
-    * ["Hello, 세계" 앱 만들기 (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
+    * [설정하기](../../get-started/get-set-up.md)
+    * ["Hello, 세계" 앱 만들기 (XAML)](../../get-started/create-a-hello-world-app-xaml-universal.md)
 * **[선택 사항]** 디지털 펜 및 해당 디지털 펜의 입력을 지 원하는 디스플레이를 포함 하는 컴퓨터입니다.
 
 > [!NOTE] 
 > Windows Ink는 마우스 및 터치를 사용 하 여 그리기를 지원할 수 있지만 (이 자습서의 3 단계에서이 작업을 수행 하는 방법을 보여 줍니다) 최적의 Windows Ink 환경을 위해 디지털 펜과 디지털 펜의 입력을 지 원하는 디스플레이가 있는 컴퓨터를 사용 하는 것이 좋습니다.
 
-## <a name="sample-code"></a>샘플 코드
+## <a name="sample-code"></a>예제 코드
 이 자습서 전체에서 샘플 잉크 앱을 사용 하 여 설명 된 개념과 기능을 보여 줍니다.
 
 [GitHub](https://github.com/) 에서이 Visual Studio 샘플 및 소스 코드 다운로드 [-appsample-시작-잉크 샘플](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink):
@@ -66,10 +66,10 @@ Windows 잉크를 사용 하면 신속 하 고 필기 한 노트와 주석에서
 
 | 구성 요소 | Description |
 | --- | --- |
-| [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) | 기본적으로 펜의 모든 입력을 받아 잉크 스트로크 또는 지우기 스트로크로 표시 하는 XAML UI 플랫폼 컨트롤입니다. |
-| [**InkPresenter**](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking.InkPresenter) | [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤([**InkCanvas.InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 추가 사용자 지정 및 개인 설정을 위한 포괄적인 Api 집합과 함께 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 노출 하는 모든 기본 잉크 기능을 제공 합니다. |
-| [**InkToolbar**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkToolbar) | 연결 된 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)의 잉크 관련 기능을 활성화 하는 사용자 지정 가능 하 고 확장 가능한 단추 컬렉션을 포함 하는 XAML UI 플랫폼 컨트롤입니다. |
-| [**IInkD2DRenderer**](https://docs.microsoft.com/windows/desktop/api/inkrenderer/nn-inkrenderer-iinkd2drenderer)<br/>여기서는이 기능에 대해 다루지 않습니다. 자세한 내용은 [복합 잉크 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)을 참조 하세요. | 기본 [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤이 아니라 유니버설 Windows 앱의 지정 된 Direct2D 장치 컨텍스트로 잉크 스트로크를 렌더링할 수 있습니다. |
+| [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas) | 기본적으로 펜의 모든 입력을 받아 잉크 스트로크 또는 지우기 스트로크로 표시 하는 XAML UI 플랫폼 컨트롤입니다. |
+| [**InkPresenter**](/uwp/api/Windows.UI.Input.Inking.InkPresenter) | [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤([**InkCanvas.InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 추가 사용자 지정 및 개인 설정을 위한 포괄적인 Api 집합과 함께 [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 노출 하는 모든 기본 잉크 기능을 제공 합니다. |
+| [**InkToolbar**](/uwp/api/Windows.UI.Xaml.Controls.InkToolbar) | 연결 된 [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas)의 잉크 관련 기능을 활성화 하는 사용자 지정 가능 하 고 확장 가능한 단추 컬렉션을 포함 하는 XAML UI 플랫폼 컨트롤입니다. |
+| [**IInkD2DRenderer**](/windows/desktop/api/inkrenderer/nn-inkrenderer-iinkd2drenderer)<br/>여기서는이 기능에 대해 다루지 않습니다. 자세한 내용은 [복합 잉크 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)을 참조 하세요. | 기본 [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤이 아니라 유니버설 Windows 앱의 지정 된 Direct2D 장치 컨텍스트로 잉크 스트로크를 렌더링할 수 있습니다. |
 
 ## <a name="step-1-run-the-sample"></a>1 단계: 샘플 실행
 
@@ -94,10 +94,10 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 
 이 단계에서는 약간의 단점을 해결 해 보겠습니다.
 
-기본 잉크 기능을 추가 하려면 앱의 해당 페이지에 [**InkCanvas**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤을 추가 하면 됩니다.
+기본 잉크 기능을 추가 하려면 앱의 해당 페이지에 [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤을 추가 하면 됩니다.
 
 > [!NOTE]
-> InkCanvas의 기본 [**높이**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Height) 및 [**너비**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Width) 속성은 자식 요소의 크기를 자동으로 조정 하는 요소의 자식인 경우를 제외 하 고는 0입니다. 
+> InkCanvas의 기본 [**높이**](/uwp/api/windows.ui.xaml.frameworkelement.Height) 및 [**너비**](/uwp/api/windows.ui.xaml.frameworkelement.Width) 속성은 자식 요소의 크기를 자동으로 조정 하는 요소의 자식인 경우를 제외 하 고는 0입니다. 
 
 ### <a name="in-the-sample"></a>이 샘플의 내용은 다음과 같습니다.
 1. MainPage.xaml.cs 파일을 엽니다.
@@ -112,14 +112,14 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 ```
 
 4. MainPage .xaml 파일을 엽니다.
-5. 이 단계의 제목으로 표시 된 코드를 찾습니다 (" \< !--2 단계: 기본 잉크를 사용 하 여 InkCanvas-->").
+5. 이 단계의 제목 ("")으로 표시 된 코드를 찾습니다 \<!-- Step 2: Basic inking with InkCanvas --> .
 6. 다음 줄의 주석 처리를 제거 합니다.  
 
 ``` xaml
     <InkCanvas x:Name="inkCanvas" />
 ```
 
-간단하죠. 
+이것으로 끝입니다. 
 
 이제 앱을 다시 실행합니다. 계속 해 서 자유롭게 이동 하거나 이름을 작성 하거나 (미러를 보유 하거나 매우 좋은 메모리가 있는 경우) 자체 세로를 그립니다.
 
@@ -129,14 +129,14 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 
 기본적으로 잉크는 펜 입력에 대해서만 지원 됩니다. 손가락, 마우스 또는 터치 패드를 사용 하 여 쓰거나 그리면 실망 됩니다.
 
-이 찡그린 얼굴 보내기 반대로 전환 하려면 두 번째 코드 줄을 추가 해야 합니다. 이번에는 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)를 선언한 XAML 파일에 대 한 코드 숨김이 있습니다. 
+이 찡그린 얼굴 보내기 반대로 전환 하려면 두 번째 코드 줄을 추가 해야 합니다. 이번에는 [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas)를 선언한 XAML 파일에 대 한 코드 숨김이 있습니다. 
 
-이 단계에서는 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)의 입력, 처리 및 잉크 입력의 렌더링 (표준 및 수정 됨)에 대 한 세부적인 관리를 제공 하는 [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter) 개체를 소개 합니다.
+이 단계에서는 [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas)의 입력, 처리 및 잉크 입력의 렌더링 (표준 및 수정 됨)에 대 한 세부적인 관리를 제공 하는 [**InkPresenter**](/uwp/api/windows.ui.input.inking.inkpresenter) 개체를 소개 합니다.
 
 > [!NOTE]
 > 표준 잉크 입력 (펜 팁 또는 지우개 팁/단추)은 펜 배럴 단추, 오른쪽 마우스 단추 또는 유사한 메커니즘과 같은 보조 하드웨어 affordance 수정 되지 않습니다. 
 
-마우스 및 터치 잉크를 사용 하도록 설정 하려면 [**InkPresenter**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter) 의 [**inputdevicetypes**](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter.InputDeviceTypes) 속성을 원하는 [**CoreInputDeviceTypes**](https://docs.microsoft.com/uwp/api/windows.ui.core.coreinputdevicetypes) 값의 조합으로 설정 합니다.
+마우스 및 터치 잉크를 사용 하도록 설정 하려면 [**InkPresenter**](/uwp/api/windows.ui.input.inking.inkpresenter) 의 [**inputdevicetypes**](/uwp/api/windows.ui.input.inking.inkpresenter.InputDeviceTypes) 속성을 원하는 [**CoreInputDeviceTypes**](/uwp/api/windows.ui.core.coreinputdevicetypes) 값의 조합으로 설정 합니다.
 
 ### <a name="in-the-sample"></a>이 샘플의 내용은 다음과 같습니다.
 1. MainPage.xaml.cs 파일을 엽니다.
@@ -153,19 +153,19 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 앱을 다시 실행 하면 모든 손가락 그리기-컴퓨터 화면 꿈을 실현이 참 임을 알 수 있습니다.
 
 > [!NOTE]
-> 입력 장치 유형을 지정 하는 경우이 속성을 설정 하면 기본 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) 설정을 재정의 하기 때문에 각 특정 입력 유형 (펜 포함)에 대 한 지원을 나타내야 합니다.
+> 입력 장치 유형을 지정 하는 경우이 속성을 설정 하면 기본 [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas) 설정을 재정의 하기 때문에 각 특정 입력 유형 (펜 포함)에 대 한 지원을 나타내야 합니다.
 
 ## <a name="step-4-add-an-ink-toolbar"></a>4 단계: 잉크 도구 모음 추가
 
-[**Inktoolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) 는 잉크 관련 기능을 활성화 하는 데 사용할 수 있는 사용자 지정 가능 하 고 확장 가능한 단추 컬렉션을 제공 하는 UWP 플랫폼 컨트롤입니다. 
+[**Inktoolbar**](/uwp/api/windows.ui.xaml.controls.inktoolbar) 는 잉크 관련 기능을 활성화 하는 데 사용할 수 있는 사용자 지정 가능 하 고 확장 가능한 단추 컬렉션을 제공 하는 UWP 플랫폼 컨트롤입니다. 
 
-기본적으로 [**Inktoolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) 에는 사용자가 펜, 연필, 형광펜 또는 지우개 중에서 빠르게 선택할 수 있는 기본 단추 집합이 포함 되어 있습니다 .이 단추를 스텐실 (눈금자 또는 protractor)과 함께 사용할 수 있습니다. 펜, 연필 및 형광펜 단추는 각각 잉크 색 및 스트로크 크기를 선택 하기 위한 플라이 아웃을 제공 합니다.
+기본적으로 [**Inktoolbar**](/uwp/api/windows.ui.xaml.controls.inktoolbar) 에는 사용자가 펜, 연필, 형광펜 또는 지우개 중에서 빠르게 선택할 수 있는 기본 단추 집합이 포함 되어 있습니다 .이 단추를 스텐실 (눈금자 또는 protractor)과 함께 사용할 수 있습니다. 펜, 연필 및 형광펜 단추는 각각 잉크 색 및 스트로크 크기를 선택 하기 위한 플라이 아웃을 제공 합니다.
 
-잉크 앱에 기본 [**Inktoolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) 를 추가 하려면 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) 와 동일한 페이지에 놓고 두 컨트롤을 연결 하면 됩니다.
+잉크 앱에 기본 [**Inktoolbar**](/uwp/api/windows.ui.xaml.controls.inktoolbar) 를 추가 하려면 [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas) 와 동일한 페이지에 놓고 두 컨트롤을 연결 하면 됩니다.
 
 ### <a name="in-the-sample"></a>샘플의
 1. MainPage .xaml 파일을 엽니다.
-2. 이 단계의 제목으로 표시 된 코드 (" \< !--4 단계: 잉크 도구 모음 추가-->")를 찾습니다.
+2. 이 단계의 제목 ("")으로 표시 된 코드를 찾습니다 \<!-- Step 4: Add an ink toolbar --> .
 3. 다음 줄의 주석 처리를 제거 합니다.  
 
 ``` xaml
@@ -177,9 +177,9 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 ```
 
 > [!NOTE]
-> UI와 코드를 최대한 간결 하 고 간단 하 게 유지 하기 위해 기본 그리드 레이아웃을 사용 하 고 표 형태 행의 [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) 뒤에 [**inktoolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) 를 선언 합니다. [**InkCanvas**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas)이전에 선언 하는 경우에는 [**inktoolbar**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) 가 캔버스 아래에 먼저 렌더링 되 고 사용자가 액세스할 수 없게 됩니다.  
+> UI와 코드를 최대한 간결 하 고 간단 하 게 유지 하기 위해 기본 그리드 레이아웃을 사용 하 고 표 형태 행의 [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas) 뒤에 [**inktoolbar**](/uwp/api/windows.ui.xaml.controls.inktoolbar) 를 선언 합니다. [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas)이전에 선언 하는 경우에는 [**inktoolbar**](/uwp/api/windows.ui.xaml.controls.inktoolbar) 가 캔버스 아래에 먼저 렌더링 되 고 사용자가 액세스할 수 없게 됩니다.  
 
-이제 앱을 다시 실행 하 여 [**Inktoolbar 모음**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) 을 확인 하 고 일부 도구를 사용해 보세요.
+이제 앱을 다시 실행 하 여 [**Inktoolbar 모음**](/uwp/api/windows.ui.xaml.controls.inktoolbar) 을 확인 하 고 일부 도구를 사용해 보세요.
 
 ![잉크 작업 영역을 Sketchpad 하는 InkToolbar](images/ink/ink-inktoolbar-default-small.png)
 
@@ -193,11 +193,11 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 </td>
 <td>
 
-다음은 Windows Ink 작업 영역의 Sketchpad에서 사용자 지정 **[Inktoolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)** 의 예제입니다.
+다음은 Windows Ink 작업 영역의 Sketchpad에서 사용자 지정 **[Inktoolbar](/uwp/api/windows.ui.xaml.controls.inktoolbar)** 의 예제입니다.
 
 ![잉크 작업 영역에 있는 Sketchpad의 InkToolbar](images/ink/ink-inktoolbar-sketchpad-small.png)
 
-[Inktoolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)를 사용자 지정 하는 방법에 대 한 자세한 내용은 [Windows 앱 잉크 앱에 Inktoolbar 모음 추가](ink-toolbar.md)를 참조 하세요.
+[Inktoolbar](/uwp/api/windows.ui.xaml.controls.inktoolbar)를 사용자 지정 하는 방법에 대 한 자세한 내용은 [Windows 앱 잉크 앱에 Inktoolbar 모음 추가](ink-toolbar.md)를 참조 하세요.
 
 </td>
 </tr>
@@ -219,7 +219,7 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 
 ### <a name="in-the-sample"></a>이 샘플의 내용은 다음과 같습니다.
 1. MainPage .xaml 파일을 엽니다.
-2. 이 단계의 제목으로 표시 된 코드를 찾습니다 (" \< !--5 단계: 필기 인식 지원-->").
+2. 이 단계의 제목 ("")으로 표시 된 코드를 찾습니다 \<!-- Step 5: Support handwriting recognition --> .
 3. 다음 줄의 주석 처리를 제거 합니다.  
 
 ``` xaml
@@ -335,7 +335,7 @@ Windows 잉크는 Windows에서 지 원하는 대부분의 언어에 대 한 텍
 - 평행 사변형
 - 오각형
 - 사변형
-- 사각형
+- 직사각형
 - RightTriangle
 - Square
 - 사다리꼴
@@ -347,7 +347,7 @@ Windows 잉크는 Windows에서 지 원하는 대부분의 언어에 대 한 텍
 
 ### <a name="in-the-sample"></a>이 샘플의 내용은 다음과 같습니다.
 1. MainPage .xaml 파일을 엽니다.
-2. 이 단계의 제목으로 표시 된 코드 찾기 (" \< !--6 단계: 셰이프 인식-->")
+2. 이 단계의 제목으로 표시 된 코드 찾기 (" \<!-- Step 6: Recognize shapes --> ")
 3. 이 줄의 주석 처리를 제거 합니다.  
 
 ``` xaml
@@ -402,7 +402,7 @@ ISF 파일은 잉크 스트로크 속성 및 동작을 설명 하는 추가 메�
 
 ### <a name="in-the-sample"></a>이 샘플의 내용은 다음과 같습니다.
 1. MainPage .xaml 파일을 엽니다.
-2. 이 단계의 제목으로 표시 된 코드를 찾습니다 (" \< !--7 단계: 잉크 저장 및 로드 중-->").
+2. 이 단계의 제목 ("")으로 표시 된 코드를 찾습니다 \<!-- Step 7: Saving and loading ink --> .
 3. 다음 줄의 주석 처리를 제거 합니다. 
 
 ``` xaml

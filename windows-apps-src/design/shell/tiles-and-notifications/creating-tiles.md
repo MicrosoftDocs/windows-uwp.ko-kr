@@ -1,6 +1,6 @@
 ---
 Description: 타일은 시작 메뉴에 표시되는 앱의 표시를 말합니다. 모든 앱에는 타일이 있습니다. Microsoft Visual Studio에서 새 Windows 앱 프로젝트를 만들 때 앱의 이름과 로고를 표시 하는 기본 타일이 포함 됩니다.
-title: Windows 앱의 타일
+title: Windows 앱용 타일
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
@@ -8,14 +8,14 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8823116b8fed3503ccf0dadc488956c93ae6c32b
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: f2c2dd6df44e477e34dfddfd6d2c1315b8f32ec2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234455"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156777"
 ---
-# <a name="tiles-for-windows-apps"></a>Windows 앱의 타일
+# <a name="tiles-for-windows-apps"></a>Windows 앱용 타일
 
  
 
@@ -51,15 +51,15 @@ Visual Studio에서 새 프로젝트를 만들면 앱의 이름과 로고가 표
 -   짧은 이름: 타일에 맞게 표시 이름에 대해 공간이 제한 되어 있기 때문에 앱의 이름이 잘리지 않도록 짧은 이름도 지정 하는 것이 좋습니다.
 -   로고 이미지:
 
-    이러한 이미지를 고유한 이미지로 바꾸어야 합니다. 다양 한 시각적 눈금에 대 한 이미지를 제공할 수 있지만 모두 제공 해야 하는 것은 아닙니다. 앱이 장치 범위에서 제대로 표시 되도록 하려면 각 이미지의 100%, 200% 및 400% scale 버전을 제공 하는 것이 좋습니다. 이러한 자산을 생성 하는 방법에 대해 자세히 알아보려면 [앱 아이콘 및 로고](/windows/uwp/design/style/app-icons-and-logos) 를 참조 하세요.
+    이러한 이미지를 고유한 이미지로 바꾸어야 합니다. 다양 한 시각적 눈금에 대 한 이미지를 제공할 수 있지만 모두 제공 해야 하는 것은 아닙니다. 앱이 장치 범위에서 제대로 표시 되도록 하려면 각 이미지의 100%, 200% 및 400% scale 버전을 제공 하는 것이 좋습니다. 이러한 자산을 생성 하는 방법에 대해 자세히 알아보려면 [앱 아이콘 및 로고](../../style/app-icons-and-logos.md) 를 참조 하세요.
 
     크기 조정 된 이미지는 다음과 같은 명명 규칙을 따릅니다.
     
     * &lt; 이미지 이름 &gt; *. 배율* &lt; 배율 인수 &gt; *입니다.* &lt; 이미지 파일 확장명 &gt; * 
 
-    예: SplashScreen. scale-100
+    예: SplashScreen.scale-100.png
 
-    이미지를 참조 하는 경우 이미지 * &lt; 이름 &gt; *으로 참조 합니다.* &lt; 이미지 파일 확장명 &gt; * (이 예에서는 "SplashScreen")입니다. 시스템은 사용자가 제공한 이미지에서 장치의 적절 한 크기 조정 이미지를 자동으로 선택 합니다.
+    이미지를 참조 하는 경우 이미지 * &lt; 이름 &gt; *으로 참조 합니다.* &lt; 이미지 파일 확장명 &gt; * (이 예제에서는 "SplashScreen.png"). 시스템은 사용자가 제공한 이미지에서 장치의 적절 한 크기 조정 이미지를 자동으로 선택 합니다.
 
 -   필요 하지는 않지만, 사용자가 앱의 타일 크기를 해당 크기로 조정할 수 있도록 광범위 하 고 큰 타일 크기에 로고를 제공 하는 것이 좋습니다. 이러한 추가 이미지를 제공 하려면 **Defaulttile** 요소를 만들고 **Wide310x150Logo** 및 **Square310x310Logo** 특성을 사용 하 여 추가 이미지를 지정 합니다.
 ```    XML

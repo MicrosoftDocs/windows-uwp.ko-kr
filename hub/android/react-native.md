@@ -7,12 +7,12 @@ manager: jken
 ms.topic: article
 keywords: android, windows, 기본, 에뮬레이터, azure, 번들러, metro, 터미널
 ms.date: 04/28/2020
-ms.openlocfilehash: db49e3ed12fee8e7ced7680e305a84afb89f32a2
-ms.sourcegitcommit: 24b19e7ee06e5bb11a0dae334806741212490ee9
+ms.openlocfilehash: 50c117154b103ca4e201f21bc643e7cbfa609b84
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255237"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157717"
 ---
 # <a name="get-started-developing-for-android-using-react-native"></a>네이티브 응답을 사용 하 여 Android 개발 시작
 
@@ -57,7 +57,7 @@ ms.locfileid: "82255237"
     ```
 
     > [!NOTE]
-    > 를 사용 `npx create-react-native-app`하는 데를 사용 하는 경우에도 계속 작동 하지만, 계속 해 서 o CLI init에 [몇 가지 추가 이점이](https://github.com/react-native-community/discussions-and-proposals/issues/23)있습니다.
+    > 를 사용 하는 데를 사용 하는 경우에 `npx create-react-native-app` 도 계속 작동 하지만, 계속 해 서 o CLI init에 [몇 가지 추가 이점이](https://github.com/react-native-community/discussions-and-proposals/issues/23)있습니다.
 
 3. 새 "내 새-앱" 디렉터리를 엽니다.
 
@@ -65,7 +65,7 @@ ms.locfileid: "82255237"
     cd my-new-app
     ```
 
-4. 프로젝트를 실행 하려면 다음 명령을 입력 합니다. 그러면 기본 인터넷 브라우저에서 노드 Metro 번들러을 표시 하는 localhost 창이 열립니다. 또한 명령줄 및 Metro 번들러 브라우저 창에서 QR 코드를 표시 합니다. * 명령을 `npm start` `npm run android` 사용할 수도 있습니다.
+4. 프로젝트를 실행 하려면 다음 명령을 입력 합니다. 그러면 기본 인터넷 브라우저에서 노드 Metro 번들러을 표시 하는 localhost 창이 열립니다. 또한 명령줄 및 Metro 번들러 브라우저 창에서 QR 코드를 표시 합니다. * 명령을 사용할 수도 `npm start` 있습니다. `npm run android`
 
      ```powershell
     expo start
@@ -75,11 +75,11 @@ ms.locfileid: "82255237"
 
 5. Android 장치에서 실행 되는 프로젝트를 보려면 먼저 Android 장치에 Google Play 스토어를 사용 하 여 주문형 [o 클라이언트 앱을 설치](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_US) 해야 합니다. 주문형 o 클라이언트 앱이 설치 되 면 장치에서 열고 **QR 코드 스캔**을 선택 합니다. QR 코드를 등록 한 후에는 장치 및 브라우저의 localhost에서 실행 되는 Metro 번들러 창 모두에서 패키지 빌드를 볼 수 있습니다.
 
-6. Android 에뮬레이터에서 실행 되는 프로젝트를 보려면 먼저 Android Studio를 열고 가상 장치를 만들고 시작 해야 합니다. **도구** > **avd 관리자** > **[+ 가상 장치 만들기](https://developer.android.com/studio/run/managing-avds#createavd)**... 가상 장치를 만든 후에는 Android 가상 Device Manager의 **작업** 열 아래에서 시작 단추를 선택 하 여 장치 에뮬레이트를 시작 ▷. 가상 장치가 열리면 인터넷 브라우저 창에서 실행 되는 Metro 번들러 창으로 돌아가서 왼쪽 열에서 "Android 장치/에뮬레이터에서 실행"을 선택 합니다. Metro 번들러 "시뮬레이터를 여는 중 ..." 라는 팝업이 표시 됩니다. 그런 다음 에뮬레이트된 Android 장치에서 클라이언트 앱이 열린 것을 확인 하 고 JavaScript 번들 다운로드가 완료 되 면 반응 하는 네이티브 앱이 표시 되는 것을 볼 수 있습니다. 문제가 발생 하는 경우에 [는 Android 에뮬레이터 문서를](https://docs.expo.io/workflow/android-studio-emulator/)참조 하세요.
+6. Android 에뮬레이터에서 실행 되는 프로젝트를 보려면 먼저 Android Studio를 열고 가상 장치를 만들고 시작 해야 합니다. **도구**  >  **Avd 관리자**  >  **[+ 가상 장치 만들기](https://developer.android.com/studio/run/managing-avds#createavd)**... 가상 장치를 만든 후에는 Android 가상 Device Manager의 **작업** 열 아래에서 시작 단추를 선택 하 여 장치 에뮬레이트를 시작 ▷. 가상 장치가 열리면 인터넷 브라우저 창에서 실행 되는 Metro 번들러 창으로 돌아가서 왼쪽 열에서 "Android 장치/에뮬레이터에서 실행"을 선택 합니다. Metro 번들러 "시뮬레이터를 여는 중 ..." 라는 팝업이 표시 됩니다. 그런 다음 에뮬레이트된 Android 장치에서 클라이언트 앱이 열린 것을 확인 하 고 JavaScript 번들 다운로드가 완료 되 면 반응 하는 네이티브 앱이 표시 되는 것을 볼 수 있습니다. 문제가 발생 하는 경우에 [는 Android 에뮬레이터 문서를](https://docs.expo.io/workflow/android-studio-emulator/)참조 하세요.
 
 7. 반응 하는 네이티브 프로젝트를 열어 앱에서 작업을 시작 합니다. 사용자의 장치 또는 Android Emulator에서 자동으로 실행 되는 앱에서 변경 내용이 자동으로 업데이트 되는 것을 볼 수 있습니다.
 
-8. 방문 페이지 보기 텍스트를 "Hello World!"로 변경해 보세요. 선택한 IDE에서이 작업을 수행할 수 있습니다. VS Code 또는 Android Studio 하는 것이 좋습니다. 방문 페이지 파일은 선택한 템플릿에 따라 달라 집니다. , `App.tsx`또는 `HomeScreen.js`일 `App.js`수 있습니다.
+8. 방문 페이지 보기 텍스트를 "Hello World!"로 변경해 보세요. 선택한 IDE에서이 작업을 수행할 수 있습니다. VS Code 또는 Android Studio 하는 것이 좋습니다. 방문 페이지 파일은 선택한 템플릿에 따라 달라 집니다. , 또는 일 수 있습니다 `App.js` `App.tsx` `HomeScreen.js` .
 
     ```typescript
     export default function App() {
@@ -91,7 +91,7 @@ ms.locfileid: "82255237"
     }
     ```
 
-9. 이미지를 추가 해 보세요. 먼저 앱에서 "android" 및 "ios" 폴더와 동일한 수준에서 폴더를 만들어야 합니다. "images" 라고 하겠습니다. 해당 폴더에 이미지를 저장 합니다 `your-image.png` (예:). 아래 형식을 사용 하 여 이미지를 참조 하 고 높이 및 너비를 사용 하 여 스타일을 지정 합니다.
+9. 이미지를 추가 해 보세요. 먼저 앱에서 "android" 및 "ios" 폴더와 동일한 수준에서 폴더를 만들어야 합니다. "images" 라고 하겠습니다. 해당 폴더에 이미지를 저장 `your-image.png` 합니다 (예:). 아래 형식을 사용 하 여 이미지를 참조 하 고 높이 및 너비를 사용 하 여 스타일을 지정 합니다.
 
      ```typescript
     export default function App() {
@@ -109,7 +109,7 @@ ms.locfileid: "82255237"
 
 ## <a name="additional-resources"></a>추가 리소스
 
-- [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](https://docs.microsoft.com/dual-screen/android/)
+- [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](/dual-screen/android/)
 
 - [Windows Defender 제외를 추가 하 여 성능 향상](defender-settings.md)
 

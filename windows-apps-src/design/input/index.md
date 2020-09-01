@@ -1,5 +1,5 @@
 ---
-description: 펜, Surface Dial 및 기타 입력 유형에 맞게 앱을 최적화합니다.
+description: 펜, 표면 다이얼, 음성 등 특정 입력 유형과의 상호 작용을 위해 UWP(유니버설 Windows 플랫폼) 앱을 사용자 지정하는 방법을 알아봅니다.
 title: 입력 및 조작
 keywords: 앱 입력, UWP 애플리케이션 사용자 지정
 label: Input and interactions
@@ -8,12 +8,12 @@ ms.date: 02/08/2017
 ms.topic: article
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c54101306d2382a4e0301e89410d58abfb87743
-ms.sourcegitcommit: dccba7256765116f06cf96143eb3cbaa12d7fe0b
+ms.openlocfilehash: 4fc0fa50bbf015c32934785e96b59924889d2f45
+ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523539"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89094770"
 ---
 # <a name="input-and-interactions"></a>입력 및 조작
 

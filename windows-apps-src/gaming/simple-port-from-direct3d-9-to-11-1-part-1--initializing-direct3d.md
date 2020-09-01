@@ -1,17 +1,17 @@
 ---
 title: Direct3D 11 초기화
-description: Direct3D 디바이스와 디바이스 컨텍스트로 핸들을 가져오는 방법 및 DXGI를 사용하여 스왑 체인을 설정하는 방법을 포함하여 Direct3D 11로 Direct3D 9 초기화 코드를 변환하는 방법을 보여 줍니다.
+description: Direct3d 장치 및 장치 컨텍스트에 대 한 핸들을 가져오는 방법 및 DXGI를 사용 하 여 스왑 체인을 설정 하는 방법을 비롯 하 여 direct3d 9 초기화 코드를 Direct3D 11로 변환 하는 방법을 보여 줍니다.
 ms.assetid: 1bd5e8b7-fd9d-065c-9ff3-1a9b1c90da29
 ms.date: 02/08/2017
 ms.topic: article
-keywords: Windows 10, uwp, 게임, direct3d 11, 초기화, 포팅, direct3d 9
+keywords: windows 10, uwp, 게임, direct3d 11, 초기화, 포팅, direct3d 9
 ms.localizationpriority: medium
-ms.openlocfilehash: c5a7f33ddbc6d70af5293b92165892c2098e452d
-ms.sourcegitcommit: ac7f3422f8d83618f9b6b5615a37f8e5c115b3c4
+ms.openlocfilehash: 576b065293f792732bb36f91c9c4117cf3f4a5c6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66368029"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159177"
 ---
 # <a name="initialize-direct3d-11"></a>Direct3D 11 초기화
 
@@ -19,17 +19,17 @@ ms.locfileid: "66368029"
 
 **요약**
 
--   1단계: Direct3D 11 초기화
--   [2 부: 렌더링 프레임 워크를 변환 합니다.](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)
--   [3 부: 게임 루프 포트](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
+-   1 부: Direct3D 11 초기화
+-   [2 부: 렌더링 프레임 워크 변환](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)
+-   [3 부: 게임 루프를 이식 합니다.](simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md)
 
 
-Direct3D 디바이스와 디바이스 컨텍스트로 핸들을 가져오는 방법 및 DXGI를 사용하여 스왑 체인을 설정하는 방법을 포함하여 Direct3D 11로 Direct3D 9 초기화 코드를 변환하는 방법을 보여 줍니다. [간단한 Direct3D 9 앱을 DirectX 11 및 UWP(유니버설 Windows 플랫폼)으로 포팅](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 연습의 1부.
+Direct3d 장치 및 장치 컨텍스트에 대 한 핸들을 가져오는 방법 및 DXGI를 사용 하 여 스왑 체인을 설정 하는 방법을 비롯 하 여 direct3d 9 초기화 코드를 Direct3D 11로 변환 하는 방법을 보여 줍니다. 포트의 1 부에서는 [간단한 Direct3D 9 앱에서 DirectX 11 및 유니버설 Windows 플랫폼 (UWP) 연습을](walkthrough--simple-port-from-direct3d-9-to-11-1.md) 안내 합니다.
 
-## <a name="initialize-the-direct3d-device"></a>Direct3D 디바이스 초기화
+## <a name="initialize-the-direct3d-device"></a>Direct3D 장치 초기화
 
 
-Direct3D 9에서 [**IDirect3D9::CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-createdevice)를 호출하여 Direct3D 디바이스에 대한 핸들을 만들었습니다. [  **IDirect3D9 interface**](https://docs.microsoft.com/windows/desktop/api/d3d9helper/nn-d3d9helper-idirect3d9)로 포인터를 가져오는 것으로 시작했으며 Direct3D 디바이스 및 스왑 체인의 구성을 제어하기 위한 여러 가지 매개 변수를 지정했습니다. 이렇게 하여 [**GetDeviceCaps**](https://docs.microsoft.com/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps)를 호출하여 디바이스가 수행할 수 없는 작업을 디바이스에 요청하지 않았는지 확인했습니다.
+Direct3D 9에서는 [**IDirect3D9:: CreateDevice**](/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-createdevice)를 호출 하 여 direct3d 장치에 대 한 핸들을 만들었습니다. [**IDirect3D9 인터페이스**](/windows/desktop/api/d3d9helper/nn-d3d9helper-idirect3d9) 에 대 한 포인터를 가져오고 Direct3D 장치 및 스왑 체인의 구성을 제어 하기 위해 여러 매개 변수를 지정 했습니다. 이렇게 하여 [**GetDeviceCaps**](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps)를 호출하여 디바이스가 수행할 수 없는 작업을 디바이스에 요청하지 않았는지 확인했습니다.
 
 Direct3D 9
 
@@ -67,13 +67,13 @@ m_pD3D->CreateDevice(
     );
 ```
 
-Direct3D 11에서 디바이스 컨텍스트 및 그래픽 인프라는 장치 자체에서 별도로 간주됩니다. 초기화는 여러 단계로 나뉩니다.
+Direct3D 11에서 장치 컨텍스트와 그래픽 인프라는 장치 자체와는 별개의 것으로 간주 됩니다. 초기화는 여러 단계로 구분 됩니다.
 
-먼저 장치를 만듭니다. 기능 수준 및 장치 지원 목록을 가져옵니다. 이 목록은 GPU에 대해 알아야 하는 대부분을 알려줍니다. 또한 Direct3D에 액세스하기 위해 인터페이스를 만들 필요가 없습니다. 대신 [**D3D11CreateDevice**](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) 핵심 API를 사용합니다. 이렇게 하면 장치와 장치의 즉각적인 컨텍스트에 대한 핸들이 제공됩니다. 디바이스 컨텍스트는 파이프라인 상태를 설정하고 렌더링 명령을 생성하는 데 사용됩니다.
+먼저 장치를 만듭니다. 장치에서 지 원하는 기능 수준 목록이 제공 됩니다 .이는 GPU에 대해 알아야 하는 사항 대부분을 알려 줍니다. 또한 Direct3D에 액세스 하기 위해 인터페이스를 만들 필요가 없습니다. 대신 [**D3D11CreateDevice**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) core API를 사용 합니다. 그러면 장치에 대 한 핸들 및 장치의 즉각적인 컨텍스트가 제공 됩니다. 장치 컨텍스트는 파이프라인 상태를 설정 하 고 렌더링 명령을 생성 하는 데 사용 됩니다.
 
-Direct3D 11 디바이스 및 컨텍스트를 만든 후 COM 포인터 기능을 활용하여 최신 버전의 인터페이스를 가져옵니다. 이 인터페이스는 추가 기능을 포함하며 항상 권장됩니다.
+Direct3D 11 장치 및 컨텍스트를 만든 후에는 COM 포인터 기능을 활용 하 여 추가 기능을 포함 하는 인터페이스의 최신 버전을 얻을 수 있으며 항상 권장 됩니다.
 
-> **참고**    D3D\_기능\_수준\_9\_1 (-2.0 셰이더 모델에 해당)은 Microsoft Store 게임은 지 원하는 데 필요한 최소 수준입니다. (9를 지원 하지 않는 경우 게임의 ARM 패키지 인증 하지 못합니다\_1.) 게임에는 또한 셰이더 모델 3 기능에 대 한 렌더링 패스 경우 D3D 포함할지\_기능\_수준\_9\_배열에는 3입니다.
+> **참고**    D3D \_ 기능 \_ 수준 \_ 9 \_ 1 (셰이더 모델 2.0에 해당)은 Microsoft Store 게임에서 지원 해야 하는 최소 수준입니다. (9 \_ 를 지원 하지 않는 경우 게임의 ARM 패키지가 인증에 실패 합니다. 1.)에 셰이더 모델 3 기능에 대 한 렌더링 경로를 포함 하는 경우 \_ \_ 배열에 D3D 기능 수준 \_ 9 \_ 3을 포함 해야 합니다.
 
  
 
@@ -121,11 +121,11 @@ context.As(&m_d3dContext);
 ## <a name="create-a-swap-chain"></a>스왑 체인 만들기
 
 
-Direct3D 11에는 DXGI(DirectX 그래픽 인프라)를 호출하는 장치 API가 포함되어 있습니다. DXGI 인터페이스에서는 예를 들어 스왑 체인을 구성하고 공유 장치를 설정하는 방법을 제어할 수 있습니다. Direct3D 초기화의 이 단계에서 DXGI를 사용하여 스왑 체인을 만들도록 하겠습니다. 장치를 만들었기 때문에, DXGI 어댑터에 대한 인터페이스 체인을 다시 수행할 수 있습니다.
+Direct3D 11에는 DXGI (DirectX graphics infrastructure) 라는 장치 API가 포함 되어 있습니다. DXGI 인터페이스를 사용 하 여 교환 체인을 구성 하 고 공유 장치를 설정 하는 방법을 제어할 수 있습니다 (예:). Direct3D 초기화의이 단계에서는 DXGI를 사용 하 여 스왑 체인을 만듭니다. 장치를 만들었으므로 DXGI 어댑터에 대 한 인터페이스 체인을 따라갈 수 있습니다.
 
-Direct3D 장치는 DXGI에 대한 COM 인터페이스를 구현합니다. 먼저 해당 인터페이스를 가져오고 이 인터테이스를 사용하여 장치를 호스트하는 DXGI 어댑터를 요청합니다. 그런 다음 DXGI 어댑터를 사용하여 DXGI 팩터리를 만듭니다.
+Direct3D 장치는 DXGI에 대해 COM 인터페이스를 구현 합니다. 먼저 해당 인터페이스를 가져와서 장치를 호스트 하는 DXGI 어댑터를 요청 하는 데 사용 해야 합니다. 그런 다음 DXGI 어댑터를 사용 하 여 DXGI 팩터리를 만듭니다.
 
-> **참고**    COM 인터페이스를 사용 하 여 첫 번째 응답 될 수 이들은 [ **QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))합니다. 대신 [**Microsoft::WRL::ComPtr**](https://docs.microsoft.com/cpp/windows/comptr-class) 포인터 스마트를 사용해야 합니다. 그런 다음 [**As()** ](https://docs.microsoft.com/previous-versions/br230426(v=vs.140)) 메서드를 호출하고 올바른 인터페이스 유형의 빈 COM 포인터를 제공합니다.
+> **참고**    이러한 인터페이스는 COM 인터페이스 이므로 첫 번째 응답은 [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))를 사용 하는 것일 수 있습니다. [**Microsoft:: WRL:: ComPtr**](/cpp/windows/comptr-class) 스마트 포인터를 대신 사용 해야 합니다. 그런 다음 [**As ()**](/previous-versions/br230426(v=vs.140)) 메서드를 호출 하 여 올바른 인터페이스 형식의 빈 COM 포인터를 제공 합니다.
 
  
 
@@ -147,9 +147,9 @@ dxgiAdapter->GetParent(
     );
 ```
 
-이제 DXGI 팩터리가 있으므로 이 팩터리를 사용하여 스왑 체인을 만들 수 있습니다. 스왑 체인 매개 변수를 정의하도록 하겠습니다. 노출 된 형식으로 지정 해야 선택 [ **DXGI\_형식\_B8G8R8A8\_UNORM** ](https://docs.microsoft.com/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) Direct2D를 사용 하 여 호환 되므로 합니다. 이 예제에서 사용되지 않기 때문에 디스플레이 배율, 다중 샘플링 및 스테레오 렌더링을 끄겠습니다. CoreWindow에서 직접 실행 중이기 때문에 너비와 높이가 0으로 설정된 상태로 두고 전체 화면 값을 자동으로 가져올 수 있습니다.
+이제 DXGI 팩터리가 있으므로이를 사용 하 여 스왑 체인을 만들 수 있습니다. 스왑 체인 매개 변수를 정의 해 보겠습니다. Surface 형식을 지정 해야 합니다. Direct2D와 호환 되므로 [**DXGI \_ 형식 \_ B8G8R8A8 \_ unorm**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) 을 선택 합니다. 이 예제에서는 사용 되지 않으므로 표시 크기 조정, 다중 샘플링 및 스테레오 렌더링을 해제 합니다. CoreWindow에서 직접 실행 되므로 너비와 높이를 0으로 설정 하 고 전체 화면 값을 자동으로 가져올 수 있습니다.
 
-> **참고**    항상 설정 된 *SDKVersion* D3D11 매개 변수\_SDK\_UWP 앱에 대 한 버전입니다.
+> **참고**    항상 *SDKVersion* 매개 변수를 \_ \_ UWP 앱에 대 한 D3D11 SDK 버전으로 설정 합니다.
 
  
 
@@ -167,9 +167,9 @@ dxgiFactory->CreateSwapChainForCoreWindow(
 swapChain.As(&m_swapChain);
 ```
 
-화면 실제로 표시할 수 있는 보다 더 자주 렌더링 되지 것을 보장 하려면 1을 사용 하 여 프레임 대기 시간 설정 [ **DXGI\_교환\_효과\_대칭 이동\_순차** ](https://docs.microsoft.com/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_effect). 이는 전원을 절약하며 스토어 인증 요구 사항입니다. 이 연습의 2부에서는 화면에 표시하는 것에 대한 자세한 내용은 알아봅니다.
+화면이 실제로 표시 될 수 있는 것 보다 더 자주 렌더링 되지 않도록 하려면 프레임 대기 시간을 1로 설정 하 고 [**DXGI 스왑 효과를 사용 하 여 \_ \_ \_ \_ 순차적으로 전환**](/windows/desktop/api/dxgi/ne-dxgi-dxgi_swap_effect)합니다. 이렇게 하면 전원이 절약 되며 매장 인증 요구 사항이 적용 됩니다. 이 연습의 2 부에서 화면에 표시 하는 방법에 대해 자세히 알아보세요.
 
-> **참고**    따르면 다중 스레딩 (예를 들어 [ **ThreadPool** ](https://docs.microsoft.com/uwp/api/Windows.System.Threading) 작업 항목) 렌더링 스레드가 차단 된 동안 다른 작업을 계속 하려면.
+> **참고**    렌더링 스레드가 차단 되는 동안 다른 작업을 계속 하기 위해 다중 스레딩 (예: [**ThreadPool**](/uwp/api/Windows.System.Threading) 작업 항목)을 사용할 수 있습니다.
 
  
 
@@ -179,12 +179,12 @@ swapChain.As(&m_swapChain);
 dxgiDevice->SetMaximumFrameLatency(1);
 ```
 
-이제 렌더링을 위한 백 버퍼를 설정할 수 있습니다.
+이제 렌더링을 위해 백 버퍼를 설정할 수 있습니다.
 
 ## <a name="configure-the-back-buffer-as-a-render-target"></a>백 버퍼를 렌더링 대상으로 구성
 
 
-먼저 백 버퍼에 대한 핸들을 가져와야 합니다. (Note DXGI 스왑 체인 백 버퍼가 소유는 Direct3D 장치에서 소유 된 DirectX 9에서 반면.) 렌더링 대상을 만들어 렌더링 대상으로 사용 하도록 Direct3D 장치를 지정할 것 *보기* 백 버퍼를 사용 하 여 합니다.
+먼저 백 버퍼에 대 한 핸들을 가져와야 합니다. 백 버퍼는 DXGI 스왑 체인이 소유 하는 반면, DirectX 9에서는 Direct3D 장치에서 소유 했습니다. 그런 다음 백 버퍼를 사용 하 여 렌더링 대상 *뷰* 를 만들어 렌더링 대상으로 사용 하도록 Direct3D 장치에 지시 합니다.
 
 **Direct3D 11**
 
@@ -204,7 +204,7 @@ m_d3dDevice->CreateRenderTargetView(
     );
 ```
 
-이제 디바이스 컨텍스트가 기능을 합니다. 디바이스 컨텍스트 인터페이스를 사용하여 Direct3D에서 새로 만든 렌더링 대상 보기를 사용하도록 지시합니다. 뷰포트로 전체 창을 대상으로 지정할 수 있도록 백 버퍼의 너비와 높이를 검색할 것입니다. 백 버퍼는 스왑 체인에 연결되어 있으므로 창 크기가 변경되는 경우(예: 사용자가 게임 창을 다른 모니터로 끄는 경우) 백 버퍼의 크기를 조정해야 하고 일부 설정을 다시 실행해야 합니다.
+이제 장치 컨텍스트가 재생 됩니다. 장치 컨텍스트 인터페이스를 사용 하 여 새로 만든 렌더링 대상 뷰를 사용 하도록 Direct3D에 지시 합니다. 뷰포트로 전체 창을 대상으로 지정할 수 있도록 백 버퍼의 너비와 높이를 검색 합니다. 백 버퍼는 스왑 체인에 연결 되어 있기 때문에 창 크기가 변경 되 면 (예: 사용자가 게임 창을 다른 모니터로 끌 때) 백 버퍼의 크기를 조정 해야 하 고 일부 설치를 다시 실행 해야 합니다.
 
 **Direct3D 11**
 
@@ -222,12 +222,8 @@ CD3D11_VIEWPORT viewport(
 m_d3dContext->RSSetViewports(1, &viewport);
 ```
 
-이제 장치 핸들과 전체 화면 렌더링 대상이 있으므로 기하 도형을 로드하고 그릴 수 있습니다. 계속 해 서 [2 부: 렌더링](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)합니다.
+이제 장치 핸들 및 전체 화면 렌더링 대상이 있으므로 geometry를 로드 하 고 그릴 준비가 되었습니다. [2 부: 렌더링](simple-port-from-direct3d-9-to-11-1-part-2--rendering.md)으로 계속 진행 합니다.
 
  
 
  
-
-
-
-

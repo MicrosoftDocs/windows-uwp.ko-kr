@@ -7,12 +7,12 @@ manager: jken
 ms.topic: article
 keywords: windows의 android, xamarin android, 네이티브, cordova, phonegap, c + + android 게임, windows defender, 에뮬레이터에 반응
 ms.date: 04/28/2020
-ms.openlocfilehash: d43420f442fd5dfcb2b885fb0369964a113e9bac
-ms.sourcegitcommit: 24b19e7ee06e5bb11a0dae334806741212490ee9
+ms.openlocfilehash: e215d9e08fcef7ddb1caae40bd8f3a83e183d197
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255247"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157707"
 ---
 # <a name="overview-of-android-development-on-windows"></a>Windows 기반 Android 개발 개요
 
@@ -29,7 +29,7 @@ Windows 운영 체제를 사용 하 여 Android 장치 앱을 개발 하기 위�
 
 - [Android 장치 또는 에뮬레이터에서 테스트](emulator.md)
 - [성능 향상을 위한 Windows Defender 설정 업데이트](defender-settings.md)
-- [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](https://docs.microsoft.com/dual-screen/android/)
+- [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](/dual-screen/android/)
 
 ## <a name="native-android"></a>네이티브 Android
 
@@ -80,9 +80,9 @@ Windows 운영 체제를 사용 하 여 Android 장치 앱을 개발 하기 위�
 
 ## <a name="game-development"></a>게임 개발
 
-일반적으로 게임은 일반적으로 OpenGL 또는 Vulkan로 작성 된 사용자 지정 렌더링 논리를 사용 하기 때문에 Android 용 게임 개발은 표준 Android 앱 개발에서 고유 합니다. 이러한 이유로, 게임 개발을 지 원하는 여러 C 라이브러리를 사용할 수 있기 때문에 개발자는 android 용 게임을 만들기 위해 Android [네이티브 개발 키트 (NDK)](https://docs.microsoft.com/cpp/cross-platform/create-an-android-native-activity-app?view=vs-2019)와 함께 [Visual Studio에서 c/c + +](https://docs.microsoft.com/cpp/cross-platform/?view=vs-2019)를 사용 하는 것이 일반적입니다. [게임 개발에 대 한 c/c + + 시작](native-android.md#use-c-or-c-for-android-game-development)
+일반적으로 게임은 일반적으로 OpenGL 또는 Vulkan로 작성 된 사용자 지정 렌더링 논리를 사용 하기 때문에 Android 용 게임 개발은 표준 Android 앱 개발에서 고유 합니다. 이러한 이유로, 게임 개발을 지 원하는 여러 C 라이브러리를 사용할 수 있기 때문에 개발자는 android 용 게임을 만들기 위해 Android [네이티브 개발 키트 (NDK)](/cpp/cross-platform/create-an-android-native-activity-app?view=vs-2019)와 함께 [Visual Studio에서 c/c + +](/cpp/cross-platform/?view=vs-2019)를 사용 하는 것이 일반적입니다. [게임 개발에 대 한 c/c + + 시작](native-android.md#use-c-or-c-for-android-game-development)
 
-Android 용 게임 개발을 위한 또 다른 일반적인 경로는 게임 엔진을 사용 하는 것입니다. [Visual Studio를 사용](https://docs.microsoft.com/visualstudio/cross-platform/visual-studio-tools-for-unity?view=vs-2019)하는 Unity, [unreal Engine](https://docs.unrealengine.com/en-US/Platforms/Mobile/Android/GettingStarted/index.html), xamarin with xamarin, [urhosharp](https://docs.microsoft.com/xamarin/graphics-games/urhosharp/introduction)with xamarin, [SkiaSharp](https://docs.microsoft.com/xamarin/xamarin-forms/user-interface/graphics/skiasharp/) 의 [MonoGame](https://docs.microsoft.com/xamarin/graphics-games/monogame/introduction/)Cocoonjs, App Game Kit, Fusion, 코로나 SDK, 코코스 및 기타와 같은 다양 한 무료 오픈 소스 엔진을 사용할 수 있습니다.
+Android 용 게임 개발을 위한 또 다른 일반적인 경로는 게임 엔진을 사용 하는 것입니다. [Visual Studio를 사용](/visualstudio/cross-platform/visual-studio-tools-for-unity?view=vs-2019)하는 Unity, [unreal Engine](https://docs.unrealengine.com/en-US/Platforms/Mobile/Android/GettingStarted/index.html), xamarin with xamarin, [urhosharp](/xamarin/graphics-games/urhosharp/introduction)with xamarin, [SkiaSharp](/xamarin/xamarin-forms/user-interface/graphics/skiasharp/) 의 [MonoGame](/xamarin/graphics-games/monogame/introduction/)Cocoonjs, App Game Kit, Fusion, 코로나 SDK, 코코스 및 기타와 같은 다양 한 무료 오픈 소스 엔진을 사용할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -91,6 +91,6 @@ Android 용 게임 개발을 위한 또 다른 일반적인 경로는 게임 엔
 - [Xamarin.ios를 사용 하 여 Android 용 개발 시작](xamarin-forms.md)
 - [네이티브 응답을 사용 하 여 Android 개발 시작](react-native.md)
 - [Android 용 PWA 개발 시작](pwa.md)
-- [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](https://docs.microsoft.com/dual-screen/android/)
+- [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](/dual-screen/android/)
 - [Windows Defender 제외를 추가 하 여 성능 향상](defender-settings.md)
 - [에뮬레이터 성능을 향상 시키기 위해 가상화 지원 사용](emulator.md#enable-virtualization-support)

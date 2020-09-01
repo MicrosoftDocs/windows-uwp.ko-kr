@@ -6,18 +6,18 @@ ms.date: 06/02/2020
 ms.localizationpriority: medium
 ms.author: quradic
 author: QuinnRadich
-ms.openlocfilehash: 3ba14e33c098d3515522a9a5907065751fafba87
-ms.sourcegitcommit: 13bda6040988461a61b1b5561fde2f7a54835ccd
+ms.openlocfilehash: f321815658a1b59d941f8b2c0e1fa5aa0142b4f7
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84318239"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157677"
 ---
 # <a name="windows-10x-developer-faq"></a>Windows 10 배 개발자 FAQ
 
 > [!IMPORTANT]
-> 최근 Windows 10 및 Windows 10 배의 우선 순위에 대 한 일부 변경 내용을 발표 했습니다.
-> 이러한 공지에는 Windows 10 배 폼 팩터 우선 순위에 대 한 변경 내용이 포함 됩니다. [자세한 내용은 여기를 참조 하세요.](https://blogs.windows.com/windowsexperience/2020/05/04/accelerating-innovation-in-windows-10-to-meet-customers-where-they-are/)
+> 최근 Windows 10 및 Windows 10X의 우선 순위가 일부 변경되었음을 발표했습니다.
+> 이러한 알림에는 Windows 10X 폼 팩터 우선 순위에 대한 변경도 포함됩니다. [여기서 자세히 알아보세요.](https://blogs.windows.com/windowsexperience/2020/05/04/accelerating-innovation-in-windows-10-to-meet-customers-where-they-are/)
 
 Windows 10 배은 이중 화면 장치에서 사용 하도록 최적화 된 Windows 제품군의 제품 라인입니다. 개발자는 Windows 10 배 응용 프로그램을 최적화 하 고, 모바일 및 이중 화면 대상 그룹에 대 한 새로운 기능을 활용 하 고, 동일한 범위의 Windows 10 기능 및 풍부한 데스크톱 지원을 계속 제공 하 여 더 광범위 한 대상 그룹에 연결할 수 있습니다. Microsoft는 [2019 년 말에 Windows 10 배을 발표](https://blogs.windows.com/windowsexperience/2019/10/02/introducing-windows-10x-enabling-dual-screen-pcs-in-2020/#6qxkItE2XMPu24uw.97)했으며, 년 2020 말에 출시 하려고 노력 하 고 있습니다.
 
@@ -25,7 +25,7 @@ Windows 10 배은 이중 화면 장치에서 사용 하도록 최적화 된 Wind
  
 *[시험판 제품이 표시 되 고, 시뮬레이션 된 화면이 변경 될 수 있습니다.]*
 
-이중 화면 환경 및 Windows 10 배를 구축 하는 방법에 대 한 자세한 내용은 [Microsoft 365 개발 일](https://developer.microsoft.com/microsoft-365/virtual-events)또는 [이중 화면 개발자 문서](https://docs.microsoft.com/dual-screen/)에서 가상 세션을 확인 하세요. 요약 정보는 다음과 같은 몇 가지 질문에 대 한 답을 얻을 수 있습니다.
+이중 화면 환경 및 Windows 10 배를 구축 하는 방법에 대 한 자세한 내용은 [Microsoft 365 개발 일](https://developer.microsoft.com/microsoft-365/virtual-events)또는 [이중 화면 개발자 문서](/dual-screen/)에서 가상 세션을 확인 하세요. 요약 정보는 다음과 같은 몇 가지 질문에 대 한 답을 얻을 수 있습니다.
 
 ### <a name="how-is-this-different-from-developing-for-windows-10"></a>이는 Windows 10에 대 한 개발과 어떻게 다른 가요?
 
@@ -41,7 +41,7 @@ Windows 10 배는 Surface Neo 및 기타 타사 이중 화면 장치와 함께 �
 
 ### <a name="when-can-i-start-development-for-windows-10x"></a>Windows 10 배 개발을 시작할 수 있는 시기는 언제 인가요?
 
-지금 [Microsoft 에뮬레이터 및 Windows 10 배 에뮬레이터 이미지](https://docs.microsoft.com/dual-screen/windows/get-dev-tools) 를 다운로드할 수 있습니다. Microsoft는이 에뮬레이터를 계속 개선 하 고 다른 Windows 10 배 사용 장치를 지 원하는 기능을 보완 합니다. Windows SDK 시험판 버전과 결합 된 이러한 에뮬레이터를 사용 하면 첫 번째 이중 화면 장치를 공개적으로 출시 하기 전에 Windows 10 배을 개발할 수 있습니다.
+지금 [Microsoft 에뮬레이터 및 Windows 10 배 에뮬레이터 이미지](/dual-screen/windows/get-dev-tools) 를 다운로드할 수 있습니다. Microsoft는이 에뮬레이터를 계속 개선 하 고 다른 Windows 10 배 사용 장치를 지 원하는 기능을 보완 합니다. Windows SDK 시험판 버전과 결합 된 이러한 에뮬레이터를 사용 하면 첫 번째 이중 화면 장치를 공개적으로 출시 하기 전에 Windows 10 배을 개발할 수 있습니다.
 
 ### <a name="will-my-universal-windows-platform-uwp-apps-run-on-windows-10x"></a>UWP (내 유니버설 Windows 플랫폼) 앱이 Windows 10 배에서 실행 되나요?
 
@@ -57,4 +57,4 @@ Windows 10 배 시험판 개발을 계속 진행 하면서 특정 제한 사항�
 
 ### <a name="if-i-enhance-my-app-with-windows-10x-features-will-it-still-run-on-devices-running-desktop-windows-10"></a>Windows 10 배 기능을 사용 하 여 앱을 개선 하는 경우 데스크톱 Windows 10을 실행 하는 장치에서 계속 실행 되나요?
 
-Windows 10 배 용으로 설계 된 앱은 데스크톱 버전의 Windows 10을 실행 하는 장치에서 계속 작동 하지만 이러한 새 Windows Api는 다음 주 버전 업데이트까지 Windows 10의 데스크톱 버전에 추가 되지 않습니다. 여러 버전의 데스크톱 Windows 10에서 지원 되는 앱을 개발 하는 것 처럼, [적응 코딩 모범 사례](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code) 에 따라 앱이 10 배 및 desktop windows 10 모두에서 정상적으로 작동 하는지 확인 합니다. 
+Windows 10 배 용으로 설계 된 앱은 데스크톱 버전의 Windows 10을 실행 하는 장치에서 계속 작동 하지만 이러한 새 Windows Api는 다음 주 버전 업데이트까지 Windows 10의 데스크톱 버전에 추가 되지 않습니다. 여러 버전의 데스크톱 Windows 10에서 지원 되는 앱을 개발 하는 것 처럼, [적응 코딩 모범 사례](/windows/uwp/debug-test-perf/version-adaptive-code) 에 따라 앱이 10 배 및 desktop windows 10 모두에서 정상적으로 작동 하는지 확인 합니다.

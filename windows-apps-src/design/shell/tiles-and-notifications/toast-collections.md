@@ -7,18 +7,18 @@ ms.date: 05/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 알림, 컬렉션, 컬렉션, 그룹 알림, 그룹화 알림, 그룹, 구성, 동작 센터, 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: aff6b933e04611013761c10ad7a76824f7347855
-ms.sourcegitcommit: eb725a47c700131f5975d737bd9d8a809e04943b
+ms.openlocfilehash: 7cd99519f7213f85c50a14db0597daa4e10f8360
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88970071"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156757"
 ---
 # <a name="grouping-toast-notifications-with-collections"></a>컬렉션을 사용 하 여 알림 메시지 그룹화
 컬렉션을 사용 하 여 앱의 알림을을 Action Center에서 구성 합니다. 컬렉션을 통해 사용자는 더 쉽게 작업 센터 내에서 정보를 찾고 개발자가 알림을 보다 효율적으로 관리할 수 있습니다.  아래 Api를 사용 하 여 알림 컬렉션을 제거, 생성 및 업데이트할 수 있습니다.
 
 > [!IMPORTANT]
-> **작성자 업데이트 필요**: 알림 수집을 사용 하려면 SDK 15063을 대상으로 하 고 빌드 15063 이상을 실행 해야 합니다. 관련 Api에는 Windows [..](https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastcollectionmanager) s t a t e. [s t a](https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastcollection)t e.
+> **작성자 업데이트 필요**: 알림 수집을 사용 하려면 SDK 15063을 대상으로 하 고 빌드 15063 이상을 실행 해야 합니다. 관련 Api에는 Windows [..](/uwp/api/windows.ui.notifications.toastcollectionmanager) s t a t e. [s t a](/uwp/api/windows.ui.notifications.toastcollection)t e.
 
 채팅 그룹에 따라 알림을 분리 하는 메시징 앱을 사용 하 여 아래 예제를 볼 수 있습니다. 각 제목 (Comp 좋아하는 160A 프로젝트 채팅, 직접 메시지, Lacrosse 팀 채팅)은 별도의 컬렉션입니다.  알림이 동일한 앱의 모든 알림 인 경우에도 별도의 앱에서와 같이 개별적으로 그룹화 되는 방법을 확인 합니다.  알림을 구성 하는 더 미묘한 방법을 찾고 있는 경우 알림 [헤더](toast-headers.md)를 참조 하세요.  
 ![서로 다른 두 개의 알림 그룹을 사용 하는 컬렉션 예제](images/toast-collection-example.png)
