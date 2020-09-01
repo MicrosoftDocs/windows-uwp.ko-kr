@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bb65acf606ffa44f075016720ebcd055ba5febc8
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 06cff7247dff4f370d9e20a736c4383a9c09c25a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234460"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174617"
 ---
 # <a name="tiles-badges-and-notifications-for-windows-apps"></a>Windows 앱에 대한 타일, 배지 및 알림
  
@@ -37,7 +37,7 @@ ms.locfileid: "83234460"
 | 문서 | 설명 |
 | --- | --- |
 | [타일 만들기](creating-tiles.md) | 앱의 기본 타일을 사용자 지정하고 다양한 화면 크기에 대한 자산을 제공합니다. |
-| [앱 아이콘 자산](app-assets.md) | Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘 자산은 Windows 앱에 대한 호출 카드입니다. 다음 지침에서는 시스템에서 앱 아이콘 자산을 표시하는 위치에 대해 자세히 설명하고 가장 완성도 높은 아이콘을 만드는 방법에 대한 자세한 디자인 팁을 제공합니다. |
+| [앱 아이콘 자산](../../style/app-icons-and-logos.md) | Windows 10 운영 체제에서 다양한 형식으로 나타나는 앱 아이콘 자산은 Windows 앱에 대한 호출 카드입니다. 다음 지침에서는 시스템에서 앱 아이콘 자산을 표시하는 위치에 대해 자세히 설명하고 가장 완성도 높은 아이콘을 만드는 방법에 대한 자세한 디자인 팁을 제공합니다. |
 | [기본 타일 API](primary-tile-apis.md) | 앱의 기본 타일을 고정하도록 요청하고, 기본 타일이 현재 고정되어 있는지 확인합니다. |
 | [타일 콘텐츠](create-adaptive-tiles.md) | 타일 알림 콘텐츠는 Windows 10의 새로운 적응형 기능을 사용하도록 지정되어 다양한 화면 밀도에 맞게 조정되는 간단하고 유연한 표시(markup) 언어를 사용하여 고유한 타일 알림 콘텐츠를 디자인할 수 있습니다. 이 문서에서는 Windows 앱의 적응형 라이브 타일을 만드는 방법을 설명합니다. |
 | [타일 콘텐츠 스키마](../tiles-and-notifications/tile-schema.md) | 다음은 적응형 타일을 만드는 데 사용되는 요소 및 특성입니다. |

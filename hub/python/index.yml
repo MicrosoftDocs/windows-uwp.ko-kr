@@ -10,12 +10,12 @@ metadata:
   ms.prod: dev-environment
   ms.technology: windows-python
   ms.topic: landing-page
-  ms.openlocfilehash: 5c19f6fba69ede76c6a29a1fd3dda7637d40373f
-  ms.sourcegitcommit: b6138f9565252460ace6fa0acdc2a902e591681a
+  ms.openlocfilehash: 4f7d016a58f49efa28dae10f3f8d76e452522465
+  ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/15/2020
-  ms.locfileid: "88243255"
+  ms.lasthandoff: 08/31/2020
+  ms.locfileid: "89174117"
 landingContent:
 - title: 초보자를 위한 시작
   linkLists:
@@ -60,7 +60,7 @@ landingContent:
   - linkListType: quickstart
     links:
     - text: MySQL, PostgreSQL, SQLite, Microsoft SQL Server, MongoDB 또는 Redis 설치 및 실행
-      url: https://docs.microsoft.com/windows/wsl/tutorials/wsl-database
+      url: /windows/wsl/tutorials/wsl-database
 - title: 추가 리소스
   linkLists:
   - linkListType: reference
@@ -70,7 +70,7 @@ landingContent:
   - linkListType: learn
     links:
     - text: 이 소개 과정의 Python 사용해보기(아무것도 설치할 필요 없음)
-      url: https://docs.microsoft.com/learn/modules/intro-to-python/
+      url: /learn/modules/intro-to-python/
     - text: 맞춤 링크
       url: resources.md
     - text: 맞춤 온라인 과정

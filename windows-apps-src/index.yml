@@ -11,12 +11,12 @@ metadata:
   ms.date: 09/24/2019
   ms.technology: uwp-conceptual-docs
   keywords: windows uwp, universal windows platform, Windows Runtime APIs, windows api, windows api ref, winrt api, windows api reference, uwp api, uwp api reference, develop uwp, design uwp, publish uwp
-  ms.openlocfilehash: 688f34e3e2316133713e71c99763d86255914aee
-  ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+  ms.openlocfilehash: 48e373be728745f4b0c0e65de3d02e689a330159
+  ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/29/2020
-  ms.locfileid: "77544993"
+  ms.lasthandoff: 08/31/2020
+  ms.locfileid: "89171857"
 landingContent:
 - title: UWP를 처음 사용하는 경우
   linkLists:
@@ -29,27 +29,27 @@ landingContent:
   - linkListType: concept
     links:
     - text: UWP 대 기타 Windows 앱 플랫폼
-      url: https://docs.microsoft.com/windows/apps/desktop/choose-your-platform
+      url: /windows/apps/desktop/choose-your-platform
   - linkListType: learn
     links:
     - text: Microsoft Learn에서 Windows 과정 찾아보기
-      url: https://docs.microsoft.com/learn/browse/?products=windows&resource_type=module
-    - text: UWP 앱이란 무엇인가요?
+      url: /learn/browse/?products=windows&resource_type=module
+    - text: UWP 앱이란?
       url: get-started/universal-application-platform-guide.md
 - title: 최신 기능
   linkLists:
   - linkListType: whats-new
     links:
     - text: 최신 UWP 기능에 대해 알아보기
-      url: https://docs.microsoft.com/windows/uwp/whats-new/windows-10-version-latest
+      url: ./whats-new/windows-10-build-19041.md
     - text: Windows 10의 주요 기능 살펴보기
       url: https://developer.microsoft.com/windows/windows-10-for-developers
   - linkListType: concept
     links:
     - text: C# 언어의 최신 정보 확인
-      url: https://docs.microsoft.com/dotnet/csharp/index
+      url: /dotnet/csharp/index
     - text: Visual Studio의 새로운 기능 살펴보기
-      url: https://docs.microsoft.com/visualstudio/ide/
+      url: /visualstudio/ide/
 - title: 개발
   linkLists:
   - linkListType: overview
@@ -61,7 +61,7 @@ landingContent:
   - linkListType: reference
     links:
     - text: UWP용 API 참조 문서 찾아보기
-      url: https://docs.microsoft.com/uwp/
+      url: /uwp/
     - text: Windows 코드 샘플 살펴보기
       url: https://developer.microsoft.com/windows/samples
   - linkListType: download
@@ -77,8 +77,8 @@ landingContent:
   - linkListType: reference
     links:
     - text: Windows UI 라이브러리를 사용하여 UI 컨트롤 추가
-      url: https://docs.microsoft.com/uwp/toolkits/winui/
-- title: 게시하기
+      url: /uwp/toolkits/winui/
+- title: 게시
   linkLists:
   - linkListType: overview
     links:

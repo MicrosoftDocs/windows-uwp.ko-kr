@@ -3,12 +3,12 @@ title: WinUI 릴리스 정보
 description: WinUI 릴리스 정보 색인입니다.
 ms.date: 07/15/2020
 ms.topic: reference
-ms.openlocfilehash: 4161b8d8a74ffc493c44bba5104c54cb911861c6
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 33d4b9dfb497017f446549d4f3daf737a8fa5ebb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86492878"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166697"
 ---
 # <a name="windows-ui-library-2x-release-notes"></a>Windows UI 라이브러리 2.x 릴리스 정보
 
@@ -22,7 +22,7 @@ WinUI에는 다음 두 가지 NuGet 패키지가 포함되어 있습니다.
 
 * [Microsoft.UI.Xaml.Core.Direct](https://www.nuget.org/packages/Microsoft.UI.Xaml.Core.Direct): 미들웨어 구성 요소에 사용되는 하위 수준 API입니다.
 
-앱에서 NuGet 패키지 관리자를 사용하여 WinUI 패키지를 다운로드하고 사용할 수 있습니다. 자세한 내용은 [Windows UI 라이브러리 시작](https://docs.microsoft.com/uwp/toolkits/winui/getting-started)을 참조하세요.
+앱에서 NuGet 패키지 관리자를 사용하여 WinUI 패키지를 다운로드하고 사용할 수 있습니다. 자세한 내용은 [Windows UI 라이브러리 시작](/uwp/toolkits/winui/getting-started)을 참조하세요.
 
 ## <a name="examples"></a>예
 

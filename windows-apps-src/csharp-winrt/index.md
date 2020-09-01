@@ -5,12 +5,12 @@ ms.date: 05/19/2020
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C#, WinRT, cswinrt, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: e52763d78937405b308c4c4fe06f6d231fa3abcf
-ms.sourcegitcommit: d0f479f1955881afb62c2af249db5d0b053b63e5
+ms.openlocfilehash: 8fb098cb247890dc1b3919f6123b76b54366d60f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83580280"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154327"
 ---
 # <a name="cwinrt"></a>C#/WinRT
 
@@ -23,9 +23,9 @@ C#/WinRT는 현재 WinRT 형식을 사용할 수 있도록 지원하며, 현재 
 
 ## <a name="motivation-for-cwinrt"></a>C#/WinRT에 대한 동기 부여
 
-[.NET Core](https://docs.microsoft.com/dotnet/core/)는 .NET 플랫폼의 중심이고 .NET 5는 다음 주요 릴리스입니다. 디바이스, 클라우드 및 IoT 애플리케이션을 구축하는 데 사용할 수 있는 오픈 소스 플랫폼 간 런타임입니다.
+[.NET Core](/dotnet/core/)는 .NET 플랫폼의 중심이고 .NET 5는 다음 주요 릴리스입니다. 디바이스, 클라우드 및 IoT 애플리케이션을 구축하는 데 사용할 수 있는 오픈 소스 플랫폼 간 런타임입니다.
 
-이전 버전의 .NET Framework 및 .NET Core에는 Windows 고유의 기술인 WinRT에 대한 지식이 기본적으로 제공되었습니다. .NET 5의 이식성 및 효율성 목표를 지원하기 위해 .NET 컴파일러 및 런타임에서 WinRT 프로젝션 지원을 제거하고 C#/WinRT 도구 키트로 이동했습니다. C#/WinRT의 목표는 이전 버전의 C# 컴파일러 및 .NET 런타임에서 제공하는 기본 제공 WinRT 지원을 패리티에 제공하는 것입니다. 자세한 내용은 [Windows 런타임 형식의 .NET 매핑](https://docs.microsoft.com/windows/uwp/winrt-components/net-framework-mappings-of-windows-runtime-types)을 참조하세요.
+이전 버전의 .NET Framework 및 .NET Core에는 Windows 고유의 기술인 WinRT에 대한 지식이 기본적으로 제공되었습니다. .NET 5의 이식성 및 효율성 목표를 지원하기 위해 .NET 컴파일러 및 런타임에서 WinRT 프로젝션 지원을 제거하고 C#/WinRT 도구 키트로 이동했습니다. C#/WinRT의 목표는 이전 버전의 C# 컴파일러 및 .NET 런타임에서 제공하는 기본 제공 WinRT 지원을 패리티에 제공하는 것입니다. 자세한 내용은 [Windows 런타임 형식의 .NET 매핑](../winrt-components/net-framework-mappings-of-windows-runtime-types.md)을 참조하세요.
 
 C#/WinRT는 WinUI 3.0도 지원합니다. 이 릴리스의 WinUI는 운영 체제에서 네이티브 Microsoft UI 컨트롤 및 기능을 제거합니다. 이를 통해 앱 개발자는 Windows 10 버전 1803 이상 릴리스에서 최신 컨트롤과 시각적 개체를 사용할 수 있습니다.
 
@@ -124,7 +124,7 @@ C#/WinRT는 위에서 설명한 대로 Windows에서 형식을 활성화하지 �
 2. Contoso.Controls.dll
 3. Contoso.dll
 
-C#/WinRT는 [LoadLibrary 대체 검색 순서](https://docs.microsoft.com/windows/win32/dlls/dynamic-link-library-search-order?#alternate-search-order-for-desktop-applications)를 사용하여 구현 DLL을 찾습니다. 이 대체 동작을 사용하는 앱은 구현 DLL을 앱 모듈과 함께 패키지해야 합니다.
+C#/WinRT는 [LoadLibrary 대체 검색 순서](/windows/win32/dlls/dynamic-link-library-search-order#alternate-search-order-for-desktop-applications)를 사용하여 구현 DLL을 찾습니다. 이 대체 동작을 사용하는 앱은 구현 DLL을 앱 모듈과 함께 패키지해야 합니다.
 
 ## <a name="known-issues"></a>알려진 문제
 

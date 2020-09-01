@@ -8,12 +8,12 @@ keywords: 디바이스, 입력, 조작
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 37b77e62f14418611047a3af49bd15ed4f8094b4
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 8a4d34db2b6782f3b660bb88e3b3a07f6e2d01b5
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234870"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157047"
 ---
 #  <a name="ui-considerations-for-windows-devices"></a>Windows 디바이스에 대한 UI 고려 사항
 
@@ -131,7 +131,7 @@ UI 고려 사항
 
 모든 컴퓨팅 디바이스에서 가장 널리 사용되는 휴대폰은 제한된 화면 공간 및 기본 입력만으로 많은 작업을 수행할 수 있습니다. 휴대폰의 크기는 다양하며 큰 휴대폰을 패블릿이라고 합니다. 패블릿의 앱 환경은 휴대폰과 유사하지만 패블릿의 화면 공간 확대로 콘텐츠 사용에서 몇 가지 주요 사항이 변경되었습니다.
 
-Windows 10 Mobile 디바이스와 호환 가능한 새로운 환경인 휴대폰용 Continuum을 사용하여 사용자는 휴대폰을 모니터에 연결할 수 있을 뿐만 아니라 마우스와 키보드까지 사용하여 휴대폰을 노트북처럼 사용할 수 있습니다. (자세한 내용은 [휴대폰용 Continuum 문서](https://docs.microsoft.com/windows-hardware/design/device-experiences/continuum-phone?redirectedfrom=MSDN)를 참조하세요.)
+Windows 10 Mobile 디바이스와 호환 가능한 새로운 환경인 휴대폰용 Continuum을 사용하여 사용자는 휴대폰을 모니터에 연결할 수 있을 뿐만 아니라 마우스와 키보드까지 사용하여 휴대폰을 노트북처럼 사용할 수 있습니다. (자세한 내용은 [휴대폰용 Continuum 문서](/windows-hardware/design/device-experiences/continuum-phone)를 참조하세요.)
 
 화면 크기
 -   휴대폰의 경우 4~5인치

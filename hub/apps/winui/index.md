@@ -4,12 +4,12 @@ description: Windows 앱 개발을 위한 WinUI 라이브러리입니다.
 ms.topic: article
 ms.date: 07/15/2020
 keywords: windows 10, uwp, 도구 키트 sdk, winui, Windows UI 라이브러리
-ms.openlocfilehash: 54b2d44dab1c311e6d1b75d0be35ed419056a953
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: eb87744ed5d3eb5882b4ebae75b8dcf295d89f10
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86492978"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166757"
 ---
 # <a name="windows-ui-library-winui"></a>Windows UI 라이브러리(WinUI)
 
@@ -26,7 +26,7 @@ WinUI는 [Fluent Design System](https://www.microsoft.com/design/fluent/#/)을 �
 
 ## <a name="windows-ui-2x-library"></a>Windows UI 2.x 라이브러리
 
-WinUI 2.x는 UWP 애플리케이션에서 사용할 수 있으며 [XAML Islands](/windows/apps/desktop/modernize/xaml-islands)를 통해 신규 또는 기존 데스크톱 애플리케이션에 통합할 수 있습니다.
+WinUI 2.x는 UWP 애플리케이션에서 사용할 수 있으며 [XAML Islands](../desktop/modernize/xaml-islands.md)를 통해 신규 또는 기존 데스크톱 애플리케이션에 통합할 수 있습니다.
 
 > [!NOTE]
 > WinUI 2.4는 최신 WinUI 2.x 릴리스입니다. 다음 릴리스에 예정된 작업 목록은 [WinUI 2.5 마일스톤](https://github.com/microsoft/microsoft-ui-xaml/milestone/10)을 참조하세요.
@@ -42,7 +42,7 @@ Windows 10의 이전 버전과 하위 수준 호환성을 유지하므로, 사�
 ### <a name="related-links-for-winui-2x"></a>WinUI 2.x에 대한 관련 링크
 
 - [WinUI 2.x 라이브러리 개요](winui2/index.md)
-- [API 문서](https://docs.microsoft.com/uwp/api/overview/winui/)
+- [API 문서](/uwp/api/overview/winui/)
 - [소스 코드](https://aka.ms/winui)
 - [XAML 컨트롤 갤러리 앱](https://www.microsoft.com/p/xaml-controls-gallery/9msvh128x2zt)
 
@@ -59,7 +59,7 @@ WinUI 3은 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/wi
 
 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk/)에서 XAML, 컴퍼지션 및 입력 API를 완전히 분리하여 WinUI 3의 범위에는 전체 Windows 10 네이티브 UI 플랫폼이 포함됩니다.
 
-WinUI는 모든 Windows 앱으로 진행하는 경로입니다. 네이티브 UWP 또는 Win32 앱에서 UI 계층으로 사용하거나, [XAML Islands](https://docs.microsoft.com/windows/apps/desktop/modernize/xaml-islands)를 사용하여 데스크톱 앱을 하나씩 점진적으로 현대화할 수 있습니다.
+WinUI는 모든 Windows 앱으로 진행하는 경로입니다. 네이티브 UWP 또는 Win32 앱에서 UI 계층으로 사용하거나, [XAML Islands](../desktop/modernize/xaml-islands.md)를 사용하여 데스크톱 앱을 하나씩 점진적으로 현대화할 수 있습니다.
 
 새로운 모든 XAML 기능은 궁극적으로 WinUI의 일부로 제공됩니다. OS의 일부로 제공되는 기존 UWP XAML API는 더 이상 새로운 기능 업데이트를 받지 않습니다. 그러나 Windows 10 지원 주기에 따라 보안 업데이트 및 중요 수정 사항은 계속 받게 됩니다.
 

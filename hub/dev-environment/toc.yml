@@ -60,21 +60,21 @@
             - name: 디바이스 또는 에뮬레이터에서 테스트
               href: ../android/emulator.md
         - name: C 및 C++ 시작
-          href: 'https://docs.microsoft.com/cpp/'
+          href: /cpp/
         - name: C# 시작
-          href: 'https://docs.microsoft.com/dotnet/csharp/'
+          href: /dotnet/csharp/
         - name: Azure에서 Java 시작
-          href: 'https://docs.microsoft.com/azure/developer/java/'
+          href: /azure/developer/java/
         - name: PowerShell 시작
-          href: 'https://docs.microsoft.com/powershell/'
+          href: /powershell/
         - name: WSL에서 데이터베이스 시작
-          href: 'https://docs.microsoft.com/windows/wsl/tutorials/wsl-database'
+          href: /windows/wsl/tutorials/wsl-database
     - name: 도구 및 플랫폼
       items:
         - name: Linux용 Windows 하위 시스템
-          href: 'https://docs.microsoft.com/windows/wsl/'
+          href: /windows/wsl/
         - name: Windows 터미널
-          href: 'https://docs.microsoft.com/windows/terminal/'
+          href: /windows/terminal/
         - name: Windows 패키지 관리자
           items:
             - name: 개요
@@ -110,8 +110,8 @@
         - name: VS 코드
           href: 'https://code.visualstudio.com/docs'
         - name: Visual Studio
-          href: 'https://docs.microsoft.com/visualstudio/windows/?view=vs-2019'
+          href: /visualstudio/windows/?view=vs-2019
         - name: Azure
-          href: 'https://docs.microsoft.com/azure/?product=featured'
+          href: /azure/?product=featured
         - name: .NET
-          href: 'https://docs.microsoft.com/dotnet/'
+          href: /dotnet/

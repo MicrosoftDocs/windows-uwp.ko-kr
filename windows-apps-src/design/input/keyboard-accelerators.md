@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 785047b3ee5f18fa4f6ea8fd78f6d8ab7a92e8e6
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8a3231f608984c9d1f67df71de9cab4cfecd9a13
+ms.sourcegitcommit: deb2867924ce16efcabfa011892157b7aa4fa2d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173427"
+ms.locfileid: "89187898"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 
@@ -386,7 +386,7 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 
 *도구 설명의 액셀러레이터 키 콤보*
 
-[단추](/uwp/api/windows.ui.xaml.controls.button), [App바 단추](/uwp/api/windows.ui.xaml.controls.appbarbutton)및 [app togglebutton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton) 개체의 경우 키보드 액셀러레이터 키가 컨트롤의 기본 도구 설명에 추가 됩니다. [MenuFlyoutItem](/uwp/api/windows.ui.xaml.controls.appbarbutton) 및 [ToggleMenuFlyoutItem](/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem)) 개체의 경우 플라이 아웃 텍스트와 함께 키보드 액셀러레이터를 표시 합니다.
+[단추](/uwp/api/windows.ui.xaml.controls.button), [App바 단추](/uwp/api/windows.ui.xaml.controls.appbarbutton)및 [app togglebutton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton) 개체의 경우 키보드 액셀러레이터 키가 컨트롤의 기본 도구 설명에 추가 됩니다. [MenuFlyoutItem](/uwp/api/windows.ui.xaml.controls.appbarbutton) 및 [ToggleMenuFlyoutItem](/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem) 개체의 경우 플라이 아웃 텍스트와 함께 키보드 액셀러레이터를 표시 합니다.
 
 > [!NOTE]
 > 도구 설명 지정 (다음 예제의 Button1 참조)은이 동작을 재정의 합니다.

@@ -11,12 +11,12 @@ metadata:
   ms.date: 11/08/2019
   ms.localizationpriority: medium
   uhfHeaderId: MSDocsHeader-WinDevCenter
-  ms.openlocfilehash: bbd56295c7a44c4d2c7d212f9e824dea6d5be64a
-  ms.sourcegitcommit: ad5a03ea01a3d825931a1abc40f472e88a41c04f
+  ms.openlocfilehash: bf966b78a2e1762778941ade5e1a1e1d684bb6b9
+  ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 06/02/2020
-  ms.locfileid: "84303886"
+  ms.lasthandoff: 08/31/2020
+  ms.locfileid: "89170577"
 highlightedContent:
   items:
   - title: Visual Studio 및 Windows SDK 받기
@@ -24,30 +24,30 @@ highlightedContent:
     url: https://developer.microsoft.com/windows/downloads
   - title: 최신 릴리스의 개발자를 위한 새로운 기능
     itemType: overview
-    url: https://docs.microsoft.com/windows/uwp/whats-new/windows-10-build-19041
+    url: /windows/uwp/whats-new/windows-10-build-19041
   - title: 참가자 프로그램에 참여하세요.
     itemType: overview
-    url: https://docs.microsoft.com/windows-insider
+    url: /windows-insider
   - title: Windows 앱 개발자를 위한 온라인 교육
     itemType: learn
-    url: https://docs.microsoft.com/learn/browse/?products=windows
+    url: /learn/browse/?products=windows
 productDirectory:
   title: Windows용 개발
   items:
   - title: Windows용 데스크톱 앱
     imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
     links:
-    - url: /windows/apps/desktop/
+    - url: ./desktop/index.md
       text: 시작
   - title: Windows UI 라이브러리(WinUI)
     imageSrc: images/logo-winui.svg
     links:
-    - url: /windows/apps/winui/
+    - url: ./winui/index.md
       text: 시작
   - title: Linux용 Windows 하위 시스템, Windows Terminal, Python 및 기타 도구
     imageSrc: https://docs.microsoft.com/media/logos/logo_linux-color.svg
     links:
-    - url: /windows/dev-environment/
+    - url: ../dev-environment/index.yml
       text: 시작
 conceptualContent:
   title: 앱 플랫폼 및 프레임워크
@@ -61,10 +61,10 @@ conceptualContent:
       url: /windows/uwp/get-started/
       itemType: get-started
     - text: API 참조, 스키마 등
-      url: https://docs.microsoft.com/uwp/
+      url: /uwp/
       itemType: reference
     - text: API 네임스페이스
-      url: https://docs.microsoft.com/uwp/api/
+      url: /uwp/api/
       itemType: reference
     - text: 샘플
       url: https://github.com/Microsoft/Windows-universal-samples
@@ -72,16 +72,16 @@ conceptualContent:
   - title: Win32
     links:
     - text: 개요
-      url: https://docs.microsoft.com/windows/win32/
+      url: /windows/win32/
       itemType: overview
     - text: 시작
-      url: https://docs.microsoft.com/windows/win32/desktop-programming/
+      url: /windows/win32/desktop-programming/
       itemType: get-started
     - text: API 참조(헤더별)
-      url: https://docs.microsoft.com/windows/win32/api/
+      url: /windows/win32/api/
       itemType: reference
     - text: API 참조(기능별)
-      url: https://docs.microsoft.com/windows/win32/apiindex/windows-api-list
+      url: /windows/win32/apiindex/windows-api-list
       itemType: reference
     - text: 샘플
       url: https://github.com/Microsoft/Windows-classic-samples
@@ -89,16 +89,16 @@ conceptualContent:
   - title: WPF
     links:
     - text: 개요
-      url: https://docs.microsoft.com/dotnet/desktop-wpf/overview/?view=vs-2019
+      url: /dotnet/desktop-wpf/overview/?view=vs-2019
       itemType: overview
     - text: 시작
-      url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json&view=vs-2019
+      url: /visualstudio/get-started/csharp/tutorial-wpf?bc=%252fdotnet%252fbreadcrumb%252ftoc.json&toc=%252fdotnet%252fdesktop-wpf%252ftoc.json&view=vs-2019
       itemType: get-started
     - text: API 참조(.NET Core)
-      url: https://docs.microsoft.com/dotnet/api/index?view=netcore-3.1
+      url: /dotnet/api/index?view=netcore-3.1
       itemType: reference
     - text: API 참조(.NET Framework)
-      url: https://docs.microsoft.com/dotnet/api/index?view=netframework-4.8
+      url: /dotnet/api/index?view=netframework-4.8
       itemType: reference
     - text: 샘플
       url: https://github.com/Microsoft/WPF-Samples
@@ -106,29 +106,29 @@ conceptualContent:
   - title: Windows Forms
     links:
     - text: 개요
-      url: https://docs.microsoft.com/dotnet/framework/winforms/
+      url: /dotnet/framework/winforms/
       itemType: overview
     - text: 시작
-      url: https://docs.microsoft.com/dotnet/framework/winforms/getting-started-with-windows-forms
+      url: /dotnet/framework/winforms/getting-started-with-windows-forms
       itemType: get-started
     - text: API 참조(.NET Core)
-      url: https://docs.microsoft.com/dotnet/api/index?view=netcore-3.1
+      url: /dotnet/api/index?view=netcore-3.1
       itemType: reference
     - text: API 참조(.NET Framework)
-      url: https://docs.microsoft.com/dotnet/api/index?view=netframework-4.8
+      url: /dotnet/api/index?view=netframework-4.8
       itemType: reference
 tools:
   title: 디바이스 플랫폼
   items:
   - title: Windows PC
     imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
-    url: /windows/apps/desktop/
+    url: ./desktop/index.md
   - title: 혼합 현실 및 HoloLens
     imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
-    url: https://docs.microsoft.com/windows/mixed-reality/
+    url: /windows/mixed-reality/
   - title: IoT용 Windows
     imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
-    url: https://docs.microsoft.com/windows/iot-core/windows-iot-core
+    url: /windows/iot-core/windows-iot-core
   - title: Xbox One
     imageSrc: https://docs.microsoft.com/media/logos/logo_windows.svg
     url: https://www.xbox.com/developers
@@ -138,26 +138,26 @@ additionalContent:
     items:
     - title: 개발자를 위한 Windows 기능
       summary: 여러 앱 플랫폼에서 Windows 기능이 어떻게 지원되는지 알아봅니다.
-      url: /windows/apps/features-and-technologies/
+      url: ./features-and-technologies.md
     - title: 데스크톱 앱에 Windows 10 기능 추가
       summary: Windows 10의 최신 기능을 사용하도록 기존 데스크톱 앱을 개선하고 현대화합니다.
-      url: /windows/apps/desktop/modernize
+      url: ./desktop/modernize/index.md
     - title: MSIX
       summary: 모든 Windows 앱을 최신 및 범용 패키징 형식으로 패키징 및 배포합니다.
-      url: https://docs.microsoft.com/windows/msix/
+      url: /windows/msix/
     - title: 모바일용으로 개발
       summary: 안전하고 신뢰할 수 있는 클라우드 기반 모바일 애플리케이션을 빌드할 수 있는 Microsoft 서비스를 살펴보세요.
-      url: https://docs.microsoft.com/azure/mobile-apps/
+      url: /azure/mobile-apps/
     - title: Microsoft Store에 게시
       summary: 파트너 센터를 사용하여 Windows 앱 및 게임을 Microsoft Store에 게시합니다.
       url: /windows/uwp/publish/
     - title: 앱에 액세스할 수 있게 만들기
       summary: 사용자가 모든 기능을 사용할 수 있도록 애플리케이션에 내게 필요한 옵션을 빌드하세요.
-      url: /windows/apps/accessibility/
+      url: ./accessibility.md
     - title: Windows AI
       summary: Windows AI를 사용하여 앱의 복잡한 문제에 대한 인텔리전트 솔루션을 빌드합니다.
-      url: https://docs.microsoft.com/windows/ai/
+      url: /windows/ai/
     - title: Windows의 컨테이너
       summary: 애플리케이션을 신속하고 완전히 격리된 Windows 환경에서 종속성과 함께 패키지합니다.
-      url: https://docs.microsoft.com/virtualization/windowscontainers/
+      url: /virtualization/windowscontainers/
   footer: '[@WindowsDocs Twitter 페이지](https://twitter.com/WindowsDocs) - [OneDevMinute YouTube 채널](https://aka.ms/OneDevMinute) - [Windows 개발자 지원](https://developer.microsoft.com/windows/support) - [Stack Overflow](https://stackoverflow.com/questions/tagged/windows)'

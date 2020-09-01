@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: cb82c137bf2aa0d1cd4e03025d3babace07549b5
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 151abd02b34263cdd92b917127f306c25ebc5e0d
+ms.sourcegitcommit: deb2867924ce16efcabfa011892157b7aa4fa2d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173417"
+ms.locfileid: "89187840"
 ---
 # <a name="keyboard-events"></a>키보드 이벤트
 
@@ -107,15 +107,16 @@ void MyProject::MainPage::Grid_KeyUp(
 
 보조키는 사용자가 일반적으로 다른 키와 함께 누르는 Ctrl 또는 Shift와 같은 키입니다. 앱은 이러한 조합을 바로 가기 키로 사용 하 여 앱 명령을 호출할 수 있습니다.
 
-[**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) 및 [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트 처리기에서 코드를 사용 하 여 바로 가기 키 조합을 검색 합니다. 그런 다음 관심 있는 보조 키의 누름 상태를 추적할 수 있습니다. 보조키가 아닌 키에 대해 키보드 이벤트가 발생 하는 경우 보조키가 동시에 눌린 상태에 있는지 확인할 수 있습니다.
+[**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) 및 [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트 처리기에서 바로 가기 키 조합을 검색할 수 있습니다. 보조키가 아닌 키에 대해 키보드 이벤트가 발생 하는 경우 보조키가 눌린 상태 인지 여부를 확인할 수 있습니다.
+
+또는 [**CoreWindow**](/uwp/api/windows.ui.core.corewindow) ( [**CoreWindow**](/uwp/api/windows.ui.core.corewindow.getforcurrentthread))를 통해 얻은 [**getkeystate ()**](/uwp/api/windows.ui.core.corewindow.getkeystate) 함수를 사용 하 여 보조키가 아닌 키를 누를 때 한정자 상태를 확인할 수도 있습니다.
+
+다음 예제에서는 첫 번째 구현에 대 한 스텁 코드도 포함 하는 동시에이 두 번째 메서드를 구현 합니다.
 
 > [!NOTE]
 > Alt 키는 **Virtualkey. 메뉴** 값으로 표시 됩니다.
 
- 
-
 ### <a name="shortcut-keys-example"></a>바로 가기 키 예제
-
 
 다음 예제에서는 바로 가기 키를 구현 하는 방법을 보여 줍니다. 이 예제에서 사용자는 재생, 일시 중지, 중지 단추 또는 Ctrl + P, Ctrl + A 및 Ctrl + S 바로 가기 키를 사용 하 여 미디어 재생을 제어할 수 있습니다. 단추 XAML은 단추 레이블에 도구 설명 및 [**Automationproperties**](/uwp/api/Windows.UI.Xaml.Automation.AutomationProperties) 속성을 사용 하 여 바로 가기를 표시 합니다. 이 자체 설명서는 앱의 유용성 및 접근성을 높이는 데 중요 합니다. 자세한 내용은 [키보드 접근성](../accessibility/keyboard-accessibility.md)을 참조 하세요.
 

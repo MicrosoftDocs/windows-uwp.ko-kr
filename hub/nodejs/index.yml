@@ -10,12 +10,12 @@ metadata:
   ms.prod: dev-environment
   ms.technology: windows-node
   ms.topic: landing-page
-  ms.openlocfilehash: 6af50395c4ffd8e9ea0b2e0eb9543be3e47367f7
-  ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+  ms.openlocfilehash: 8b7e1a333dadce535338d302e3592842dddc90e7
+  ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 07/20/2020
-  ms.locfileid: "86493458"
+  ms.lasthandoff: 08/31/2020
+  ms.locfileid: "89166537"
 landingContent:
 - title: Node.js 개발 환경 설정
   linkLists:
@@ -56,7 +56,7 @@ landingContent:
   - linkListType: quickstart
     links:
     - text: MySQL, PostgreSQL, SQLite, Microsoft SQL Server, MongoDB 또는 Redis 설치 및 실행
-      url: https://docs.microsoft.com/windows/wsl/tutorials/wsl-database
+      url: /windows/wsl/tutorials/wsl-database
 - title: 컨테이너 시작
   linkLists:
   - linkListType: concept

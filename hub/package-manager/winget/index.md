@@ -4,12 +4,12 @@ description: winget 명령줄 도구를 사용하면 개발자가 Windows 10 컴
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b3f108de117fb937a7a670497a4a1a1d5810aca
-ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
+ms.openlocfilehash: 4c918dccb2873f47a16669c195c47180e2129476
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334538"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168747"
 ---
 # <a name="use-the-winget-tool-to-install-and-manage-applications"></a>winget 도구를 사용하여 애플리케이션 설치 및 관리
 
@@ -38,7 +38,7 @@ ms.locfileid: "85334538"
 
 * 관리자 권한 없이 **winget**을 실행하는 경우 일부 애플리케이션을 설치하려면 [권한 상승](https://docs.microsoft.com/windows/security/identity-protection/user-account-control/)이 필요할 수 있습니다. 설치 관리자가 실행되면 Windows에서 [권한 상승](https://docs.microsoft.com/windows/security/identity-protection/user-account-control)을 요구하는 메시지가 표시됩니다. 권한 상승을 선택하지 않으면 애플리케이션이 설치되지 않습니다.  
 
-* 관리자 명령 프롬프트에서 **winget**을 실행할 때 애플리케이션에서 요구하는 경우 [권한 상승 메시지](https://docs.microsoft.com/windows/security/identity-protection/user-account-control/how-user-account-control-works)가 표시되지 않습니다. 관리자 권한으로 명령 프롬프트를 실행할 때는 항상 주의해야 하며 신뢰할 수 있는 애플리케이션만 설치합니다.
+* 관리자 명령 프롬프트에서 **winget**을 실행할 때 애플리케이션에서 요구하는 경우 [권한 상승 메시지](/windows/security/identity-protection/user-account-control/how-user-account-control-works)가 표시되지 않습니다. 관리자 권한으로 명령 프롬프트를 실행할 때는 항상 주의해야 하며 신뢰할 수 있는 애플리케이션만 설치합니다.
 
 ## <a name="use-winget"></a>winget 사용
 

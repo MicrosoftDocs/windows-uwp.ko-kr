@@ -285,7 +285,7 @@
         - name: UWP의 파일 속성에 빠르게 액세스
           href: ../files/fast-file-properties.md
     - name: Machine Learning
-      href: 'https://docs.microsoft.com/windows/ai/'
+      href: /windows/ai/
 - name: 배포
   items:
     - name: UWP 버전 선택
@@ -727,7 +727,7 @@
         - name: 소매 데모(RDX) 기능 추가
           href: ../monetize/retail-demo-experience.md
         - name: 결제 요청 API를 사용하여 결제 간소화
-          href: ../monetize/payment-request.md
+          href: ../monetize/index.md
     - name: 앱 패키징
       items:
         - name: 개요
@@ -1276,7 +1276,7 @@
         - name: '사례 연구: Bookstore2'
           href: ../porting/wpsl-to-uwp-case-study-bookstore2.md
     - name: Windows 10에서 웹앱을 PWA로 변환
-      href: 'https://docs.microsoft.com/microsoft-edge/progressive-web-apps'
+      href: /microsoft-edge/progressive-web-apps
       items:
         - name: Windows 7 앱을 PWA로 패키징
           href: 'https://docs.pwabuilder.com/jekyll/update/2018/02/03/how-to-package-windows7.html'
