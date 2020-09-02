@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 71743459227b05fff23524a81d8d192c382d4973
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 626a80b1c3962f5bf12d7a906a61f2f600da5eed
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157437"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362536"
 ---
 # <a name="import-media-from-a-device"></a>디바이스에서 미디어 가져오기
 
@@ -29,22 +29,22 @@ ms.locfileid: "89157437"
 * 선택한 소스에서 가져온 항목 삭제를 시작 하는 **단추** 입니다.
 * 비동기 미디어 가져오기 작업을 취소 하는 **단추** 입니다.
 
-[!code-xml[ImportXAML](./code/PhotoImport_Win10/cs/MainPage.xaml#SnippetImportXAML)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/PhotoImport_Win10/cs/MainPage.xaml" id="SnippetImportXAML":::
 
 ## <a name="set-up-your-code-behind-file"></a>코드 숨김이 파일 설정
 *Using* 지시문을 추가 하 여이 예제에서 사용 하는 네임 스페이스 중 기본 프로젝트 템플릿에 포함 되지 않은 네임 스페이스를 포함 합니다.
 
-[!code-cs[Using](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetUsing)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/PhotoImport_Win10/cs/MainPage.xaml.cs" id="SnippetUsing":::
 
 ## <a name="set-up-task-cancellation-for-media-import-operations"></a>미디어 가져오기 작업을 위한 작업 취소 설정
 
 미디어 가져오기 작업은 시간이 오래 걸릴 수 있으므로 [**IAsyncOperationWithProgress**](/uwp/api/Windows.Foundation.IAsyncOperationWithProgress_TResult_TProgress_)를 사용 하 여 비동기적으로 수행 됩니다. 사용자가 취소 단추를 클릭 하는 경우 진행 중인 작업을 취소 하는 데 사용 되는 [**CancellationTokenSource**](/dotnet/api/system.threading.cancellationtokensource) 형식의 클래스 멤버 변수를 선언 합니다.
 
-[!code-cs[DeclareCts](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeclareCts)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/PhotoImport_Win10/cs/MainPage.xaml.cs" id="SnippetDeclareCts":::
 
 취소 단추에 대 한 처리기를 구현 합니다. 이 문서의 뒷부분에 있는 예제에서는 작업이 시작될 때 **CancellationTokenSource**를 초기화하고, 작업이 완료되면 null로 설정합니다. 취소 단추 처리기에서 토큰이 null 인지 확인 하 고, 그렇지 않은 경우 [**취소**](/dotnet/api/system.threading.cancellationtokensource.cancel#System_Threading_CancellationTokenSource_Cancel) 를 호출 하 여 작업을 취소 합니다.
 
-[!code-cs[OnCancel](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetOnCancel)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/PhotoImport_Win10/cs/MainPage.xaml.cs" id="SnippetOnCancel":::
 
 ## <a name="data-binding-helper-classes"></a>데이터 바인딩 도우미 클래스
 
@@ -56,28 +56,28 @@ ms.locfileid: "89157437"
 
 이러한 클래스는 [**Mediaimport 샘플**](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MediaImport) 에서 제공 되며 수정 하지 않고 프로젝트에 추가할 수 있습니다. 도우미 클래스를 프로젝트에 추가한 후이 예제의 뒷부분에서 사용할 **GeneratorIncrementalLoadingClass** 형식의 클래스 멤버 변수를 선언 합니다.
 
-[!code-cs[GeneratorIncrementalLoadingClass](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetGeneratorIncrementalLoadingClass)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/PhotoImport_Win10/cs/MainPage.xaml.cs" id="SnippetGeneratorIncrementalLoadingClass":::
 
 
 ## <a name="find-available-sources-from-which-media-can-be-imported"></a>미디어를 가져올 수 있는 사용 가능한 원본 찾기
 
 소스 찾기 단추에 대 한 클릭 처리기에서 정적 메서드 [**FindAllSourcesAsync**](/uwp/api/windows.media.import.photoimportmanager.findallsourcesasync) 를 호출 하 여 미디어를 가져올 수 있는 장치에 대 한 시스템 검색을 시작 합니다. 작업이 완료 될 때까지 대기 하 고 나 서 반환 된 목록에서 각 [**사진 Importsource**](/uwp/api/Windows.Media.Import.PhotoImportSource) 개체를 반복 하 고 **콤보 상자**에 항목을 추가 합니다. **Tag** 속성을 원본 개체 자체에 설정 하 여 사용자가 선택할 때 쉽게 검색할 수 있습니다.
 
-[!code-cs[FindSourcesClick](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetFindSourcesClick)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/PhotoImport_Win10/cs/MainPage.xaml.cs" id="SnippetFindSourcesClick":::
 
 사용자가 선택한 가져오기 소스를 저장 하도록 클래스 멤버 변수를 선언 합니다.
 
-[!code-cs[DeclareImportSource](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeclareImportSource)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/PhotoImport_Win10/cs/MainPage.xaml.cs" id="SnippetDeclareImportSource":::
 
 가져오기 원본 **콤보 상자의** [**selectionchanged**](/uwp/api/windows.ui.xaml.controls.primitives.selector.selectionchanged) 처리기에서 클래스 멤버 변수를 선택한 원본으로 설정한 다음이 문서의 뒷부분에 표시 되는 **finditems** 도우미 메서드를 호출 합니다. 
 
-[!code-cs[SourcesSelectionChanged](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetSourcesSelectionChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/PhotoImport_Win10/cs/MainPage.xaml.cs" id="SnippetSourcesSelectionChanged":::
 
 ## <a name="find-items-to-import"></a>가져올 항목 찾기
 
 다음 단계에서 사용 되는 [**사진 Importsession**](/uwp/api/Windows.Media.Import.PhotoImportSession) 및 [**사진 Importfindvariables 결과**](/uwp/api/Windows.Media.Import.PhotoImportFindItemsResult) 형식의 클래스 멤버 변수를 추가 합니다.
 
-[!code-cs[DeclareImport](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeclareImport)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/PhotoImport_Win10/cs/MainPage.xaml.cs" id="SnippetDeclareImport":::
 
 **Finditems** 메서드에서 필요한 경우 찾기 작업을 취소 하는 데 사용할 수 있도록 **CancellationTokenSource** 변수를 초기화 합니다. **Try** 블록 내에서 사용자가 선택한 [**사진 importsource**](/uwp/api/Windows.Media.Import.PhotoImportSource) 개체에 대해 [**createimportsession**](/uwp/api/windows.media.import.photoimportsource.createimportsession) 을 호출 하 여 새 가져오기 세션을 만듭니다. 새 [**진행률**](/dotnet/api/system.progress-1) 개체를 만들어 찾기 작업의 진행률을 표시 하는 콜백을 제공 합니다. 그런 다음, **[Findnode.js async](/uwp/api/windows.media.import.photoimportsession.finditemsasync)** 를 호출 하 여 찾기 작업을 시작 합니다. 사진, 비디오 또는 둘 다를 반환할지를 지정 하는 [**PhotoImportContentTypeFilter**](/uwp/api/Windows.Media.Import.PhotoImportContentTypeFilter) 값을 제공 합니다. [**IsSelected**](/uwp/api/windows.media.import.photoimportitem.isselected) 속성이 true로 설정 된 상태에서 새 미디어 항목만 반환 되는지 여부를 지정 하려면 [**PhotoImportItemSelectionMode**](/uwp/api/Windows.Media.Import.PhotoImportItemSelectionMode) 값을 제공 합니다. 이 속성은 ListBox 항목 템플릿의 각 미디어 항목에 대 한 확인란에 바인딩됩니다.
 
@@ -87,13 +87,13 @@ ms.locfileid: "89157437"
 
 그런 다음 찾기 작업의 상태 정보가 출력 됩니다. 일반적인 앱은 UI에서이 정보를 사용자에 게 표시 하지만이 예제에서는 단순히 정보를 디버그 콘솔로 출력 합니다. 마지막으로 작업이 완료 되었으므로 취소 토큰을 null로 설정 합니다.
 
-[!code-cs[FindItems](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetFindItems)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/PhotoImport_Win10/cs/MainPage.xaml.cs" id="SnippetFindItems":::
 
 ## <a name="import-media-items"></a>미디어 항목 가져오기
 
 가져오기 작업을 구현 하기 전에 [**PhotoImportImportItemsResult**](/uwp/api/Windows.Media.Import.PhotoImportImportItemsResult) 개체를 선언 하 여 가져오기 작업의 결과를 저장 합니다. 이는 나중에 원본에서 성공적으로 가져온 미디어 항목을 삭제 하는 데 사용 됩니다.
 
-[!code-cs[DeclareImportResult](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeclareImportResult)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/PhotoImport_Win10/cs/MainPage.xaml.cs" id="SnippetDeclareImportResult":::
 
 미디어 가져오기 작업을 시작 하기 전에 **CancellationTokenSource** 변수를 초기화 하 고 [**ProgressBar**](/uwp/api/Windows.UI.Xaml.Controls.ProgressBar) 컨트롤의 값을 0으로 설정 합니다.
 
@@ -103,12 +103,12 @@ ms.locfileid: "89157437"
 
 가져오기 작업이 완료 되 면 [**ImportItemsAsync**](/uwp/api/windows.media.import.photoimportfinditemsresult.importitemsasync)에서 반환 된 [**PhotoImportImportItemsResult**](/uwp/api/Windows.Media.Import.PhotoImportImportItemsResult) 개체에서 작업 상태를 가져올 수 있습니다. 이 예제에서는 상태 정보를 디버그 콘솔에 출력 한 다음, 취소 토큰을 null로 설정 합니다.
 
-[!code-cs[ImportClick](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetImportClick)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/PhotoImport_Win10/cs/MainPage.xaml.cs" id="SnippetImportClick":::
 
 ## <a name="delete-imported-items"></a>가져온 항목 삭제
 성공적으로 가져온 항목을 가져온 원본에서 삭제 하려면 먼저 취소 토큰을 초기화 하 여 삭제 작업을 취소할 수 있도록 하 고 진행률 표시줄 값을 0으로 설정 합니다. [**ImportItemsAsync**](/uwp/api/windows.media.import.photoimportfinditemsresult.importitemsasync) 에서 반환 된 [**PhotoImportImportItemsResult**](/uwp/api/Windows.Media.Import.PhotoImportImportItemsResult) 가 null이 아닌지 확인 합니다. 그렇지 않으면 다시 한 번 [**진행률**](/dotnet/api/system.progress-1) 개체를 만들어 삭제 작업에 대 한 진행률 콜백을 제공 합니다. [**DeleteImportedItemsFromSourceAsync**](/uwp/api/windows.media.import.photoimportimportitemsresult.deleteimporteditemsfromsourceasync) 를 호출 하 여 가져온 항목 삭제를 시작 합니다. 결과를 진행률 및 취소 기능을 포함 하는 대기 가능 작업으로 변환 하도록 **요청** 합니다. 대기 후 반환 된 [**PhotoImportDeleteImportedItemsFromSourceResult**](/uwp/api/Windows.Media.Import.PhotoImportDeleteImportedItemsFromSourceResult) 개체를 사용 하 여 삭제 작업에 대 한 상태 정보를 가져오고 표시할 수 있습니다.
 
-[!code-cs[DeleteClick](./code/PhotoImport_Win10/cs/MainPage.xaml.cs#SnippetDeleteClick)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/PhotoImport_Win10/cs/MainPage.xaml.cs" id="SnippetDeleteClick":::
 
 
 

@@ -5,12 +5,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, 낮은 밝은 fusion, 비트맵, 이미지 처리
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c1ae98b12d9ddb83f5109212d91ae2aa804e32a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4e82eb780efe83125a09417f349f84ee9451c1f0
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163647"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363836"
 ---
 # <a name="process-bitmaps-with-the-lowlightfusion-api"></a>LowLightFusion API로 비트맵 처리
 
@@ -26,26 +26,26 @@ ms.locfileid: "89163647"
 
 먼저 알고리즘이 수락 하는 이미지 (프레임) 수를 확인 하 고 이러한 프레임을 저장할 목록을 만듭니다.
 
-[!code-cs[SnippetGetMaxLLFFrames](./code/LowLightFusionSample/cs/MainPage.xaml.cs#SnippetGetMaxLLFFrames)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/LowLightFusionSample/cs/MainPage.xaml.cs" id="SnippetGetMaxLLFFrames":::
 
 저 라이트 Fusion 알고리즘이 허용 하는 프레임 수를 결정 한 후에는 [Fileopenpicker](/uwp/api/Windows.Storage.Pickers.FileOpenPicker) 를 사용 하 여 사용자가 알고리즘에 사용할 이미지를 선택할 수 있습니다.
 
-[!code-cs[SnippetGetFrames](./code/LowLightFusionSample/cs/MainPage.xaml.cs#SnippetGetFrames)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/LowLightFusionSample/cs/MainPage.xaml.cs" id="SnippetGetFrames":::
 
 올바른 개수의 프레임을 선택 했으므로 프레임을이 [비트맵](/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 으로 디코드 하 고 LowLightFusion에 대 한 올바른 형식 인지 확인 해야 합니다.
 
-[!code-cs[SnippetDecodeFrames](./code/LowLightFusionSample/cs/MainPage.xaml.cs#SnippetDecodeFrames)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/LowLightFusionSample/cs/MainPage.xaml.cs" id="SnippetDecodeFrames":::
 
 
 ## <a name="fuse-the-bitmaps-into-a-single-bitmap"></a>비트맵을 단일 비트맵으로 퓨즈
 
 적절 한 형식으로 올바른 프레임 수를 만들었으므로 **[FuseAsync](/uwp/api/windows.media.core.lowlightfusion.fuseasync)** 메서드를 사용 하 여 낮은 밝은 Fusion 알고리즘을 적용할 수 있습니다. 결과는 명확 하 게 이해 하기 쉽게 해 주는 처리 된 이미지입니다. 
 
-[!code-cs[SnippetFuseFrames](./code/LowLightFusionSample/cs/MainPage.xaml.cs#SnippetFuseFrames)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/LowLightFusionSample/cs/MainPage.xaml.cs" id="SnippetFuseFrames":::
 
 마지막으로, 사용자가 시작한 입력 이미지와 비슷한 방식으로 사용자에 게 친숙 한 "일반" 이미지로 인코딩 및 저장 하 여 결과를 제거 합니다.
 
-[!code-cs[SnippetEncodeFrame](./code/LowLightFusionSample/cs/MainPage.xaml.cs#SnippetEncodeFrame)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/LowLightFusionSample/cs/MainPage.xaml.cs" id="SnippetEncodeFrame":::
 
 
 ## <a name="before-and-after"></a>이전 및 이후

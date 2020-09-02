@@ -6,12 +6,12 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 비디오, scheduler, javascript
 ms.localizationpriority: medium
-ms.openlocfilehash: 6baf26b083cce08557a9b09f2ba95d5ad889f4a4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9d1a5c08d9965422d6fcd543ee38d3e628be8432
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175107"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364066"
 ---
 # <a name="show-ads-in-video-content"></a>비디오 콘텐츠에 광고 표시
 
@@ -27,7 +27,7 @@ ms.locfileid: "89175107"
 
 비디오 콘텐츠에 대 한 광고는 프로그램이 10 분 (약식) 인지 또는 10 분 이상 (긴 형식) 인지에 따라 달라 집니다. 후자는 서비스에 설정 하는 것이 더 복잡 하지만 실제로는 클라이언트 쪽 코드를 작성 하는 방법에는 차이가 없습니다. **Adscheduler** 는 매니페스트가 아닌 단일 광고를 사용 하 여 방대한 페이로드를 수신 하는 경우 단일 프리 롤오버 ad (00:00 시간에 한 번)에 대해 매니페스트가 호출 된 것 처럼 처리 됩니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 * Visual Studio 2015 이상 릴리스를 사용 하 여 [MICROSOFT ADVERTISING SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) 를 설치 합니다.
 
@@ -44,7 +44,7 @@ ms.locfileid: "89175107"
 
   다음 예제에서는 JavaScript 코드에서 [MediaPlayer](https://github.com/Microsoft/TVHelpers/wiki/MediaPlayer-Overview) 를 설정 하는 방법을 보여 줍니다.
 
-  [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet1)]
+  :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdSchedulerSamples/js/js/main.js" id="Snippet1":::
 
 ## <a name="how-to-use-the-adscheduler-class-in-your-code"></a>코드에서 AdScheduler 클래스를 사용 하는 방법
 
@@ -75,7 +75,7 @@ ms.locfileid: "89175107"
 
 6.  프로젝트의 main.js 파일에서 새 **Adscheduler** 개체를 만드는 코드를 추가 합니다. 비디오 콘텐츠를 호스트 하는 **MediaPlayer** 를 전달 합니다. [WinJS](/previous-versions/windows/apps/hh440975)후에 실행 되도록 코드를 배치 해야 합니다.
 
-    [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet2)]
+    :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdSchedulerSamples/js/js/main.js" id="Snippet2":::
 
 7.  **Adscheduler** 개체의 **Requestschedule** 또는 **requestScheduleByUrl** 메서드를 사용 하 여 서버에서 ad 일정을 요청 하 고이를 **MediaPlayer** 타임 라인에 삽입 한 다음 비디오 미디어를 재생 합니다.
 
@@ -83,18 +83,18 @@ ms.locfileid: "89175107"
 
         이 [메서드는 두](../threading-async/asynchronous-programming-universal-windows-platform-apps.md#asynchronous-patterns-in-uwp-using-javascript)개의 함수 포인터가 전달 되는 비동기 구문으로, 약속이 성공적으로 완료 될 때 호출할 **onComplete** 함수에 대 한 포인터와 오류가 발생 한 경우 호출 하는 **onError** 함수에 대 한 포인터를 사용 합니다. **OnComplete** 함수에서 비디오 콘텐츠 재생을 시작 합니다. 예약 된 시간에 ad가 재생을 시작 합니다. **OnError** 함수에서 오류를 처리 한 다음 비디오 재생을 시작 합니다. 비디오 콘텐츠는 광고 없이 재생 됩니다. **OnError** 함수의 인수는 다음 멤버를 포함 하는 개체입니다.
 
-        [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet3)]
+        :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdSchedulerSamples/js/js/main.js" id="Snippet3":::
 
     * 타사 ad 서버에서 ad 일정을 요청 하려면 **requestScheduleByUrl**를 사용 하 고 서버 URI를 전달 합니다. 또한이 메서드는 **onComplete** 및 **onError** 함수에 대 한 포인터를 허용 하는 **약속** 의 형태를 사용 합니다. 서버에서 반환 되는 ad 페이로드는 비디오 광고 서비스 템플릿 (방대한) 또는 비디오 다중 Ad 재생 목록 (VMAP) 페이로드 형식을 준수 해야 합니다.
 
-        [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet4)]
+        :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdSchedulerSamples/js/js/main.js" id="Snippet4":::
 
     > [!NOTE]
     > **MediaPlayer**에서 기본 비디오 콘텐츠 재생을 시작 하기 전에 **Requestschedule** 또는 **requestScheduleByUrl** 가 반환 될 때까지 기다려야 합니다. 이전 롤오버 광고의 경우 **Requestschedule** 가 반환 되기 전에 미디어를 재생 하기 시작 하면 기본 비디오 콘텐츠가 미리 롤오버 됩니다. **Adscheduler** 는이 ad를 건너뛰고 바로 콘텐츠로 이동 하도록 **MediaPlayer** 에 지시 하기 때문에 함수가 실패 하더라도 **play** 를 호출 해야 합니다. 광고를 원격으로 가져올 수 없는 경우 기본 제공 광고를 삽입 하는 것과 같은 다른 비즈니스 요구 사항이 있을 수 있습니다.
 
 8.  재생 하는 동안 앱에서 초기 ad 일치 프로세스 후 발생할 수 있는 진행률 및/또는 오류를 추적할 수 있는 추가 이벤트를 처리할 수 있습니다. 다음 코드에서는 **onPodStart**, **onPodEnd**, **onPodCountdown**, **Onadprogress**, **onAllComplete**및 **onadprogress**를 비롯 하 여 이러한 이벤트 중 일부를 보여 줍니다.
 
-    [!code-javascript[TrialVersion](./code/AdvertisingSamples/AdSchedulerSamples/js/js/main.js#Snippet5)]
+    :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdSchedulerSamples/js/js/main.js" id="Snippet5":::
 
 ## <a name="adscheduler-members"></a>AdScheduler 멤버
 

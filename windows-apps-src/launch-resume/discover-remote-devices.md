@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.localizationpriority: medium
-ms.openlocfilehash: 01c13a30c8869643badc69c546b0a5212308956f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a479cb20943b9c4b2df53b22751c9de2f5a8402c
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155927"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363736"
 ---
 # <a name="discover-remote-devices"></a>원격 디바이스 검색
 앱은 무선 네트워크, Bluetooth 및 클라우드 연결을 사용 하 여 검색 중인 장치와 동일한 Microsoft 계정로 로그온 한 Windows 장치를 검색할 수 있습니다. 원격 장치는 검색 하기 위해 특별 한 소프트웨어를 설치 하지 않아도 됩니다.
@@ -27,7 +27,7 @@ Filter 개체는 생성자에 매개 변수로 전달 되기 때문에 **RemoteS
 > [!NOTE]
 > 이 예제의 코드를 사용 하려면 `using Windows.System.RemoteSystems` 파일에 문이 있어야 합니다.
 
-[!code-cs[Main](./code/DiscoverDevices/MainPage.xaml.cs#SnippetMakeFilterList)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/DiscoverDevices/cs/MainPage.xaml.cs" id="SnippetMakeFilterList":::
 
 > [!NOTE]
 > "Proximal" 필터 값은 물리적인 근접 정도를 보장 하지 않습니다. 안정적인 물리적 근접이 필요한 시나리오의 경우 필터에 SpatiallyProximal 값을 사용 [**RemoteSystemDiscoveryType.**](/uwp/api/windows.system.remotesystems.remotesystemdiscoverytype) 현재이 필터는 Bluetooth에서 검색 된 장치만 허용 합니다. 실제 근접성을 보장 하는 새로운 검색 메커니즘과 프로토콜이 지원 되므로 여기에도 포함 됩니다.  
@@ -38,7 +38,7 @@ Filter 개체는 생성자에 매개 변수로 전달 되기 때문에 **RemoteS
 
 [**IRemoteSystemFilter**](/uwp/api/Windows.System.RemoteSystems.IRemoteSystemFilter) 개체 목록을 만든 후에는 **RemoteSystemWatcher**의 생성자에 전달할 수 있습니다.
 
-[!code-cs[Main](./code/DiscoverDevices/MainPage.xaml.cs#SnippetCreateWatcher)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/DiscoverDevices/cs/MainPage.xaml.cs" id="SnippetCreateWatcher":::
 
 이 감시자의 [**시작**](/uwp/api/windows.system.remotesystems.remotesystemwatcher.start) 메서드를 호출 하면 다음 조건을 모두 충족 하는 장치가 검색 된 경우에만 [**RemoteSystemAdded**](/uwp/api/windows.system.remotesystems.remotesystemwatcher.remotesystemadded) 이벤트가 발생 합니다.
 * Proximal 연결에서 검색할 수 있습니다.
@@ -52,7 +52,7 @@ Filter 개체는 생성자에 매개 변수로 전달 되기 때문에 **RemoteS
 
 유효한 **HostName** 개체가 제공 되 면 **RemoteSystem** 개체가 검색 됩니다. 주소 데이터가 유효 하지 않으면 `null` 개체 참조가 반환 됩니다.
 
-[!code-cs[Main](./code/DiscoverDevices/MainPage.xaml.cs#SnippetFindByHostName)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/DiscoverDevices/cs/MainPage.xaml.cs" id="SnippetFindByHostName":::
 
 ## <a name="querying-a-capability-on-a-remote-system"></a>원격 시스템에서 기능 쿼리
 

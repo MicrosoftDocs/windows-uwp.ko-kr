@@ -6,12 +6,12 @@ keywords: windows 10, uwp, 사용할 기능, 추가 기능, 앱 내 구매, IAPs
 ms.date: 05/09/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4f09b9a5c1f53c6a33f830c72514e061dc893348
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 01f1646c05b66d354a403e2621e3b032c22734d3
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171587"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363656"
 ---
 # <a name="enable-consumable-add-on-purchases"></a>소모성 추가 기능 구매 사용
 
@@ -41,7 +41,7 @@ ms.locfileid: "89171587"
 
 언제 든 지 저장소 관리 사용할 수 있도록 [남은 잔액을 얻을](enable-consumable-add-on-purchases.md#get_balance) 수도 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이러한 예제에는 다음과 같은 필수 구성 요소가 있습니다.
 * **Windows 10 기념일 Edition (10.0;)을 대상으로 하는 UWP (유니버설 Windows 플랫폼) 앱 용 Visual Studio 프로젝트입니다. 빌드 14393)** 이상 릴리스
@@ -73,7 +73,7 @@ ms.locfileid: "89171587"
 이 예제에서는 처리 된 것으로 저장소 관리 된 사용할 수를 보고 하는 방법을 보여 줍니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/ConsumeAddOnPage.xaml.cs#ConsumeAddOn)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses_RS1/cs/ConsumeAddOnPage.xaml.cs" id="ConsumeAddOn":::
 
 <span id="get_balance" />
 
@@ -82,7 +82,7 @@ ms.locfileid: "89171587"
 이 예제에서는 [Storecontext](/uwp/api/windows.services.store.storecontext) 클래스의 [GetConsumableBalanceRemainingAsync](/uwp/api/windows.services.store.storecontext.getconsumablebalanceremainingasync) 메서드를 사용 하 여 저장소 관리 사용 가능 추가 기능에 대 한 잔여 잔액을 가져오는 방법을 보여 줍니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[EnableConsumables](./code/InAppPurchasesAndLicenses_RS1/cs/GetRemainingAddOnBalancePage.xaml.cs#GetRemainingAddOnBalance)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses_RS1/cs/GetRemainingAddOnBalancePage.xaml.cs" id="GetRemainingAddOnBalance":::
 
 ## <a name="related-topics"></a>관련 항목
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 피드백 허브, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: efdc4a4b39f71b26658e3fbaf57287098b23e4be
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 71ecb104f1864eefcf1e38f793a4af53a977f693
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158497"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363106"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>앱에서 피드백 허브 시작
 
@@ -48,13 +48,13 @@ ms.locfileid: "89158497"
 
     이 속성이 **true**를 반환 하는 경우 컨트롤을 표시 합니다. 다음 코드에서는 [단추](/uwp/api/windows.ui.xaml.controls.button)에 대해이 작업을 수행 하는 방법을 보여 줍니다.
 
-    [!code-csharp[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#ToggleFeedbackVisibility)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/FeedbackPage.xaml.cs" id="ToggleFeedbackVisibility":::
       > [!NOTE]
       > 현재는 Xbox 장치에서 피드백 허브가 지원 되지 않지만, **Issupported** 속성은 현재 Windows 10 버전 10.0.14271 이상을 실행 하는 xbox 장치에서 **true** 를 반환 합니다. 이 문제는 알려진 문제 이며 Microsoft Store Services SDK의 이후 릴리스에서 수정 될 예정입니다.  
 
 8. 사용자가 컨트롤을 클릭할 때 실행 되는 이벤트 처리기에서 [StoreServicesFeedbackLauncher](/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) 개체를 가져오고 [LaunchAsync](/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher.launchasync) 메서드를 호출 하 여 피드백 허브 앱을 시작 합니다. 이 메서드에는 두 개의 오버 로드가 있습니다. 하나는 매개 변수가 없는 것이 고, 다른 하나는 사용자 의견에 연결할 메타 데이터를 포함 하는 키 및 값 쌍의 사전을 허용 합니다. 다음 예제에서는 [단추](/uwp/api/Windows.UI.Xaml.Controls.Button)에 대 한 [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 처리기에서 피드백 허브를 시작 하는 방법을 보여 줍니다.
 
-    [!code-csharp[LaunchFeedback](./code/StoreSDKSamples/cs/FeedbackPage.xaml.cs#FeedbackButtonClick)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/FeedbackPage.xaml.cs" id="FeedbackButtonClick":::
 
 ## <a name="design-recommendations-for-your-feedback-ui"></a>피드백 UI에 대 한 디자인 권장 사항
 

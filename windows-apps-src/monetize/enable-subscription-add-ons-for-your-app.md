@@ -5,12 +5,12 @@ keywords: windows 10, uwp, 구독, 추가 기능, 앱 내 구매, IAPs, Windows.
 ms.date: 12/06/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 39f319d272e4dde465af68d4c5b7af7fb7a17799
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 844af95545e34dab8adb6698624fcd0dccb2ab30
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89167717"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362806"
 ---
 # <a name="enable-subscription-add-ons-for-your-app"></a>앱에 구독 추가 기능을 사용하도록 설정
 
@@ -88,14 +88,14 @@ UWP 앱에 대 한 구독 추가 기능은 다음 기능을 지원 합니다.
 4. 마지막으로,이 코드는 [**RequestPurchaseAsync**](/uwp/api/windows.services.store.storeproduct.RequestPurchaseAsync) 메서드를 호출 하 여 구독의 구매를 요청 합니다. 구독에 대 한 평가판을 사용할 수 있는 경우 평가판은 고객에 게 구매를 위해 제공 됩니다. 그렇지 않으면 전체 구독이 구매를 위해 제공 됩니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[Subscriptions](./code/InAppPurchasesAndLicenses_RS1/cs/PurchaseSubscriptionAddOnTrialPage.xaml.cs#PurchaseTrialSubscription)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses_RS1/cs/PurchaseSubscriptionAddOnTrialPage.xaml.cs" id="PurchaseTrialSubscription":::
 
 ### <a name="get-info-about-subscription-add-ons-for-the-current-app"></a>현재 앱에 대 한 구독 추가 기능에 대 한 정보 가져오기
 
 이 코드 예제에서는 앱에서 사용할 수 있는 모든 구독 추가 기능에 대 한 정보를 가져오는 방법을 보여 줍니다. 이 정보를 얻으려면 먼저 [**GetAssociatedStoreProductsAsync**](/uwp/api/Windows.Services.Store.StoreContext.GetAssociatedStoreProductsAsync) 메서드를 사용 하 여 앱에 사용할 수 있는 각 추가 기능을 나타내는 복사본 [**제품**](/uwp/api/Windows.Services.Store.StoreProduct) 개체의 컬렉션을 가져옵니다. 그런 다음 각 제품에 대 한 [**StoreSku**](/uwp/api/windows.services.store.storesku) 을 가져오고 [**Issubscription**](/uwp/api/windows.services.store.storesku.IsSubscription) 및 [**subscriptioninfo**](/uwp/api/windows.services.store.storesku.SubscriptionInfo) 속성을 사용 하 여 구독 정보에 액세스 합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[Subscriptions](./code/InAppPurchasesAndLicenses_RS1/cs/GetSubscriptionAddOnsPage.xaml.cs#GetSubscriptions)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses_RS1/cs/GetSubscriptionAddOnsPage.xaml.cs" id="GetSubscriptions":::
 
 <span id="manage-subscriptions" />
 

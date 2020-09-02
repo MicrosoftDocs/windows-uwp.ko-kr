@@ -6,12 +6,12 @@ keywords: windows 10, uwp, 추가 기능, 앱 내 구매, IAPs, Windows. Service
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 36140b18c2358bf0b7ed497138ca7f9059900736
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3064a651715329a3602c0c3539394d2ce72f90a7
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171567"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362816"
 ---
 # <a name="enable-in-app-purchases-of-apps-and-add-ons"></a>앱에서 바로 앱 및 추가 기능 구매 사용
 
@@ -26,7 +26,7 @@ ms.locfileid: "89171567"
 > [!NOTE]
 > Windows 10, 버전 1607에 **는 windows 10** **기념일 10.0 버전을 대상으로 하는 프로젝트에만 사용 될 수 있습니다. 빌드 14393)** 또는 Visual Studio의 이후 릴리스. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우에는 windows. **store** 네임 스페이스 대신 [windows](/uwp/api/windows.applicationmodel.store) 를 사용 해야 합니다. 자세한 내용은 [이 문서](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 예제에는 다음과 같은 필수 구성 요소가 있습니다.
 * **Windows 10 기념일 Edition (10.0;)을 대상으로 하는 UWP (유니버설 Windows 플랫폼) 앱 용 Visual Studio 프로젝트입니다. 빌드 14393)** 이상 릴리스
@@ -46,7 +46,7 @@ ms.locfileid: "89171567"
 이 예제에서는 [Storecontext](/uwp/api/windows.services.store.storecontext) 클래스의 [RequestPurchaseAsync](/uwp/api/windows.services.store.storecontext.requestpurchaseasync) 메서드를 사용 하 여 알려진 [저장소 ID](in-app-purchases-and-trials.md#store-ids)를 사용 하 여 앱 또는 추가 기능을 구입 하는 방법을 보여 줍니다. 전체 샘플 응용 프로그램은 [Store 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)을 참조 하세요.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[EnablePurchases](./code/InAppPurchasesAndLicenses_RS1/cs/PurchaseAddOnPage.xaml.cs#PurchaseAddOn)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses_RS1/cs/PurchaseAddOnPage.xaml.cs" id="PurchaseAddOn":::
 
 ## <a name="video"></a>동영상
 

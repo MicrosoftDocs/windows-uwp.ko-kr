@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b52cd60e14370970ddb3c85a2a5e4c91107bed45
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ffb379110a42579cd5bb2427f9c851637ff191be
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160877"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362676"
 ---
 # <a name="effects-for-video-capture"></a>비디오 캡처에 대 한 효과
 
@@ -29,17 +29,17 @@ ms.locfileid: "89160877"
 
 다음 예에서는 카메라 미리 보기 및 레코드 스트림에 효과를 추가 합니다. 이 예에서는 레코드와 미리 보기 스트림이 동일한 지 여부를 확인 하는 방법을 보여 줍니다.
 
-[!code-cs[BasicAddEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetBasicAddEffect)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs" id="SnippetBasicAddEffect":::
 
 **AddVideoEffectAsync** 는 추가 된 비디오 효과를 나타내는 [**imediaextension**](/uwp/api/Windows.Media.IMediaExtension) 을 구현 하는 개체를 반환 합니다. 일부 효과를 사용 하면 [**SetProperties**](/uwp/api/windows.media.imediaextension.setproperties) 메서드에 [**PropertySet**](/uwp/api/Windows.Foundation.Collections.PropertySet) 를 전달 하 여 효과 설정을 변경할 수 있습니다.
 
 Windows 10 버전 1607부터 **AddVideoEffectAsync** 에서 반환 된 개체를 사용 하 여 비디오 파이프라인에서 효과를 [**RemoveEffectAsync**](/uwp/api/windows.media.capture.mediacapture.removeeffectasync)에 전달 하 여 제거할 수도 있습니다. **RemoveEffectAsync** 는 효과 개체 매개 변수가 미리 보기 또는 record 스트림에 추가 되었는지 여부를 자동으로 확인 하므로 호출할 때 스트림 유형을 지정할 필요가 없습니다.
 
-[!code-cs[RemoveOneEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetRemoveOneEffect)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs" id="SnippetRemoveOneEffect":::
 
 [**ClearEffectsAsync**](/uwp/api/windows.media.capture.mediacapture.cleareffectsasync) 를 호출 하 고 모든 효과를 제거 해야 하는 스트림을 지정 하 여 미리 보기 또는 캡처 스트림에서 모든 효과를 제거할 수도 있습니다.
 
-[!code-cs[ClearAllEffects](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetClearAllEffects)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs" id="SnippetClearAllEffects":::
 
 ## <a name="video-stabilization-effect"></a>비디오 안정화 효과
 
@@ -51,15 +51,15 @@ Windows 10 버전 1607부터 **AddVideoEffectAsync** 에서 반환 된 개체를
 
 기본 미디어 캡처에 필요한 네임 스페이스 외에도 비디오 안정화 효과를 사용 하려면 다음 네임 스페이스가 필요 합니다.
 
-[!code-cs[VideoStabilizationEffectUsing](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetVideoStabilizationEffectUsing)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs" id="SnippetVideoStabilizationEffectUsing":::
 
 [**VideoStabilizationEffect**](/uwp/api/Windows.Media.Core.VideoStabilizationEffect) 개체를 저장 하는 멤버 변수를 선언 합니다. 효과 구현의 일부로 캡처된 비디오를 인코딩하는 데 사용 하는 인코딩 속성을 수정 합니다. 두 변수를 선언 하 여 초기 입력 및 출력 인코딩 속성의 백업 복사본을 저장 하 고 나중에 효과를 해제할 때 복원할 수 있도록 합니다. 마지막으로,이 개체는 코드 내의 여러 위치에서 액세스 되기 때문에 [**MediaEncodingProfile**](/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile) 형식의 멤버 변수를 선언 합니다.
 
-[!code-cs[DeclareVideoStabilizationEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetDeclareVideoStabilizationEffect)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs" id="SnippetDeclareVideoStabilizationEffect":::
 
 이 시나리오에서는 나중에 액세스할 수 있도록 미디어 인코딩 프로필 개체를 멤버 변수에 할당 해야 합니다.
 
-[!code-cs[EncodingProfileMember](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetEncodingProfileMember)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs" id="SnippetEncodingProfileMember":::
 
 ### <a name="initialize-the-video-stabilization-effect"></a>비디오 안정화 효과를 초기화 합니다.
 
@@ -67,7 +67,7 @@ Windows 10 버전 1607부터 **AddVideoEffectAsync** 에서 반환 된 개체를
 
 [**EnabledChanged**](/uwp/api/windows.media.core.videostabilizationeffect.enabledchanged) 이벤트에 대 한 이벤트 처리기를 등록 하 고 도우미 메서드 **SetUpVideoStabilizationRecommendationAsync**를 호출 합니다 .이 두 가지 방법에 대해서는이 문서의 뒷부분에서 설명 합니다. 마지막으로 효과를 사용 하도록 설정 하려면 효과의 [**Enabled**](/uwp/api/windows.media.core.videostabilizationeffect.enabled) 속성을 true로 설정 합니다.
 
-[!code-cs[CreateVideoStabilizationEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetCreateVideoStabilizationEffect)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs" id="SnippetCreateVideoStabilizationEffect":::
 
 ### <a name="use-recommended-encoding-properties"></a>권장 인코딩 속성 사용
 
@@ -83,7 +83,7 @@ Windows 10 버전 1607부터 **AddVideoEffectAsync** 에서 반환 된 개체를
 
 **MediaEncodingProfile** 개체의 [**Video**](/uwp/api/windows.media.mediaproperties.mediaencodingprofile.video) 속성을 설정 합니다. 새 속성을 설정 하기 전에 멤버 변수를 사용 하 여 초기 인코딩 속성을 저장 합니다. 그러면 효과를 해제할 때 설정을 다시 변경할 수 있습니다.
 
-[!code-cs[SetUpVideoStabilizationRecommendationAsync](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetSetUpVideoStabilizationRecommendationAsync)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs" id="SnippetSetUpVideoStabilizationRecommendationAsync":::
 
 ### <a name="handle-the-video-stabilization-effect-being-disabled"></a>사용 하지 않도록 설정 된 비디오 안정화 효과를 처리 합니다.
 
@@ -91,13 +91,13 @@ Windows 10 버전 1607부터 **AddVideoEffectAsync** 에서 반환 된 개체를
 
 일반적으로이 이벤트를 사용 하 여 앱의 UI를 조정 하 여 비디오 안정화의 현재 상태를 표시 합니다.
 
-[!code-cs[VideoStabilizationEnabledChanged](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetVideoStabilizationEnabledChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs" id="SnippetVideoStabilizationEnabledChanged":::
 
 ### <a name="clean-up-the-video-stabilization-effect"></a>비디오 안정화 효과 정리
 
 비디오 안정화 효과를 정리 하려면 [**RemoveEffectAsync**](/uwp/api/windows.media.capture.mediacapture.removeeffectasync) 을 호출 하 여 비디오 파이프라인에서 효과를 제거 합니다. 초기 인코딩 속성을 포함 하는 멤버 변수가 null이 아닌 경우이를 사용 하 여 인코딩 속성을 복원 합니다. 마지막으로 **EnabledChanged** 이벤트 처리기를 제거 하 고 효과를 null로 설정 합니다.
 
-[!code-cs[CleanUpVisualStabilizationEffect](./code/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs#SnippetCleanUpVisualStabilizationEffect)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SimpleCameraPreview_Win10/cs/MainPage.Effects.xaml.cs" id="SnippetCleanUpVisualStabilizationEffect":::
 
 ## <a name="related-topics"></a>관련 항목
 

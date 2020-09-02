@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp, 스토어 서비스 Microsoft Store 대상 제공 API, 대상 제안
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cb429168e82419223f354bdb6548ab9a9e60dd1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 836ef99f827eba52699663d4a24ea58598fe3400
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155487"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363846"
 ---
 # <a name="manage-targeted-offers-using-store-services"></a>매장 서비스를 사용 하 여 대상 제품 관리
 
@@ -33,7 +33,7 @@ ms.locfileid: "89155487"
 
 MSA 토큰을 가져오려면 [Webauthenticationcoremanager](/uwp/api/windows.security.authentication.web.core.webauthenticationcoremanager) 클래스를 사용 하 여 범위를 사용 하 여 토큰을 요청 ```devcenter_implicit.basic,wl.basic``` 합니다. 다음 예제에서는 이 작업을 수행하는 방법을 보여 줍니다. 이 예는 [전체 예제](#code-example)에서 발췌 한 것 이며 전체 예제에서 제공 되는 문을 **사용** 해야 합니다.
 
-[!code-csharp[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetMSAToken)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs" id="GetMSAToken":::
 
 MSA 토큰을 가져오는 방법에 대 한 자세한 내용은 [웹 계정 관리자](../security/web-account-manager.md)를 참조 하세요.
 
@@ -47,7 +47,7 @@ MSA 토큰을 가져오는 방법에 대 한 자세한 내용은 [웹 계정 관
 
 다음 예에서는 현재 사용자의 대상 제공 서비스를 가져오는 방법을 보여 줍니다. 이 예제는 [전체 예제](#code-example)에서 발췌 한 것입니다. Newtonsoft.json의 [Json.NET](https://www.newtonsoft.com/json) 라이브러리와 추가 클래스 및 전체 예제에서 제공 되는 문을 **사용** 해야 합니다.
 
-[!code-csharp[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffers)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs" id="GetTargetedOffers":::
 
 <span id="code-example" />
 
@@ -61,7 +61,7 @@ MSA 토큰을 가져오는 방법에 대 한 자세한 내용은 [웹 계정 관
 
 이 예제에는 Newtonsoft.json의 [Json.NET](https://www.newtonsoft.com/json) 라이브러리가 필요 합니다. 이 예제에서는이 라이브러리를 사용 하 여 JSON 형식 데이터를 serialize 및 deserialize 합니다.
 
-[!code-csharp[TargetedOffers](./code/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs#GetTargetedOffersSample)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreServicesExamples_TargetedOffers/cs/TargetedOffers.cs" id="GetTargetedOffersSample":::
 
 ## <a name="related-topics"></a>관련 항목
 

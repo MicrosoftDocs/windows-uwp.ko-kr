@@ -6,12 +6,12 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: 'windows 10, uwp, 광고, 광고, AdControl, 문제 해결, XAML, c #'
 ms.localizationpriority: medium
-ms.openlocfilehash: 719e05d67d68627fcd631edfd6c688b17f8507bd
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: db1f1b7c3a60aa651cce5ada4200ddf3e249c72f
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164387"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363026"
 ---
 # <a name="xaml-and-c-troubleshooting-guide"></a>XAML과 C# 문제 해결 가이드
 
@@ -174,7 +174,7 @@ ms.locfileid: "89164387"
 2.  **Adcontrol** 이 인스턴스화되어 있는지 확인 합니다. **Adcontrol** 이 인스턴스화되지 않은 경우에는 사용할 수 없습니다.
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-csharp[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet1)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs" id="Snippet1":::
 
 3.  응용 프로그램 ID 및 ad 단위 ID를 확인 합니다. 이러한 Id는 파트너 센터에서 가져온 응용 프로그램 ID 및 ad 단위 ID와 일치 해야 합니다. 자세한 내용은 [앱에서 ad 단위 설정](set-up-ad-units-in-your-app.md#live-ad-units)을 참조 하세요.
 
@@ -239,7 +239,7 @@ ms.locfileid: "89164387"
     이 c # 코드는 오류 메시지를 검색 하 여 **TextBlock**에 표시 합니다.
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-csharp[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet2)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs" id="Snippet2":::
 
     블랙 박스를 발생 시키는 가장 일반적인 오류는 "ad를 사용할 수 없습니다."입니다. 이 오류는 요청에서 반환할 수 있는 광고가 없음을 의미 합니다.
 
@@ -256,7 +256,7 @@ ms.locfileid: "89164387"
     다음 예제에서는 **Refresh** 메서드를 호출 하는 방법을 보여 줍니다.
 
     > [!div class="tabbedCodeSnippets"]
-    [!code-csharp[AdControl](./code/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs#Snippet3)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdControlSamples/cs/MiscellaneousSnippets.cs" id="Snippet3":::
 
 3.  **Adcontrol** 은 정상적으로 동작 합니다. 경우에 따라 광고가 새로 고쳐지지 않는 모양을 제공 하는 동일한 광고가 한 행에 두 번 이상 표시 됩니다.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 449c8b445e70ffb68d0bc95f96e2b33c57e3b38f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1e443c87e9bc20de5c5ce9bc8486f760df6b312c
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163937"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362636"
 ---
 # <a name="integrate-with-the-system-media-transport-controls"></a>시스템 미디어 전송 컨트롤과 통합
 
@@ -36,9 +36,9 @@ Windows 10 버전 1607부터 [**MediaPlayer**](/uwp/api/Windows.Media.Playback.M
 ## <a name="add-metadata-to-be-displayed-by-the-smtc"></a>SMTC에서 표시할 메타 데이터를 추가 합니다.
 SMTC의 미디어 항목에 대해 표시 되는 메타 데이터 (예: 비디오 또는 노래 제목)를 추가 하거나 수정 하려면 미디어 항목을 나타내는 **Mediaplaybackitem** 의 표시 속성을 업데이트 해야 합니다. 먼저 [**Getdisplayproperties**](/uwp/api/windows.media.playback.mediaplaybackitem.getdisplayproperties)를 호출 하 여 [**mediaitemdisplayproperties**](/uwp/api/Windows.Media.Playback.MediaItemDisplayProperties) 개체에 대 한 참조를 가져옵니다. 그런 다음 [**유형**](/uwp/api/windows.media.playback.mediaitemdisplayproperties.type) 속성을 사용 하 여 항목의 미디어, 음악 또는 비디오 유형을 설정 합니다. 그런 다음 지정한 미디어 유형에 따라 [**MusicProperties**](/uwp/api/windows.media.playback.mediaitemdisplayproperties.musicproperties) 또는 [**videoproperties**](/uwp/api/windows.media.playback.mediaitemdisplayproperties.videoproperties)의 필드를 채울 수 있습니다. 마지막으로 [**Applydisplayproperties**](/uwp/api/windows.media.playback.mediaplaybackitem.applydisplayproperties)를 호출 하 여 미디어 항목에 대 한 메타 데이터를 업데이트 합니다.
 
-[!code-cs[SetVideoProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetVideoProperties)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetSetVideoProperties":::
 
-[!code-cs[SetMusicProperties](./code/MediaSource_RS1/cs/MainPage.xaml.cs#SnippetSetMusicProperties)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaSource_RS1/cs/MainPage.xaml.cs" id="SnippetSetMusicProperties":::
 
 
 > [!Note]
@@ -52,25 +52,25 @@ SMTC의 미디어 항목에 대해 표시 되는 메타 데이터 (예: 비디�
 
 다음 예제에서는 **Nextreceived** 이벤트에 대해 처리기를 등록 하 고 **Nextreceived**의 [**IsEnabledChanged**](/uwp/api/windows.media.playback.mediaplaybackcommandmanagercommandbehavior.isenabledchanged) 이벤트에 대 한 처리기를 등록 합니다.
 
-[!code-cs[AddNextHandler](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetAddNextHandler)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTC_RS1/cs/MainPage.xaml.cs" id="SnippetAddNextHandler":::
 
 다음 예제에서는 사용자가 재생 목록에서 5 개 항목을 클릭 한 후 *다음* 명령을 사용 하지 않도록 설정 하 여 콘텐츠 재생을 계속 하기 전에 사용자 조작이 필요한 시나리오를 보여 줍니다. 각 # # **Nextreceived** 이벤트가 발생 하 고 카운터가 증가 합니다. 카운터가 목표 수에 도달 하면 *다음* 명령의 [**EnablingRule**](/uwp/api/windows.media.playback.mediaplaybackcommandmanagercommandbehavior.enablingrule) 는 [**Never**](/uwp/api/Windows.Media.Playback.MediaCommandEnablingRule)로 설정 되며이는 명령을 사용 하지 않도록 설정 합니다. 
 
-[!code-cs[NextReceived](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetNextReceived)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTC_RS1/cs/MainPage.xaml.cs" id="SnippetNextReceived":::
 
 명령을 **항상**로 설정할 수도 있습니다. 즉, *다음* 명령 예제에서는 재생 목록에 항목이 더 이상 없는 경우에도 명령이 항상 사용 되도록 설정 됩니다. 또는 명령을 **자동**으로 설정할 수 있습니다. 여기서 시스템은 재생 중인 현재 콘텐츠를 기준으로 명령을 사용 하도록 설정할지 여부를 결정 합니다.
 
 위에서 설명한 시나리오에서 특정 시점에 앱은 *다음* 명령을 다시 사용할 수 있도록 하 고 **EnablingRule** 를 **Auto**로 설정 하 여이를 수행 합니다.
 
-[!code-cs[EnableNextButton](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetEnableNextButton)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTC_RS1/cs/MainPage.xaml.cs" id="SnippetEnableNextButton":::
 
 응용 프로그램에는 전경에 있는 동안 재생을 제어 하는 자체 UI가 있을 수 있으므로 [**IsEnabledChanged**](/uwp/api/windows.media.playback.mediaplaybackcommandmanagercommandbehavior.isenabledchanged) 이벤트를 사용 하 여 처리기에 전달 된 [**MediaPlaybackCommandManagerCommandBehavior**](/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior) 의 [**IsEnabled**](/uwp/api/windows.media.playback.mediaplaybackcommandmanagercommandbehavior.isenabled) 에 액세스 하 여 명령을 사용 하거나 사용 하지 않도록 설정할 수 있습니다.
 
-[!code-cs[IsEnabledChanged](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetIsEnabledChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTC_RS1/cs/MainPage.xaml.cs" id="SnippetIsEnabledChanged":::
 
 SMTC 명령의 동작을 완전히 무시 하는 경우도 있습니다. 아래 예제에서는 앱에서 현재 재생 목록의 트랙 간을 건너뛰지 않고 *다음* 및 *이전* 명령을 사용 하 여 인터넷 라디오 방송국 간을 전환 하는 시나리오를 보여 줍니다. 이전 예제와 같이 명령이 수신 될 때 처리기가 등록 됩니다 .이 경우에는 [**PreviousReceived**](/uwp/api/windows.media.playback.mediaplaybackcommandmanager.previousreceived) 이벤트입니다.
 
-[!code-cs[AddPreviousHandler](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetAddPreviousHandler)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTC_RS1/cs/MainPage.xaml.cs" id="SnippetAddPreviousHandler":::
 
 **PreviousReceived** 처리기에서 먼저 처리기로 전달 된 [**MediaPlaybackCommandManagerPreviousReceivedEventArgs**](/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs) 의 [**GetDeferral**](/uwp/api/windows.media.playback.mediaplaybackcommandmanagerpreviousreceivedeventargs.getdeferral) 를 호출 하 여 [**지연을**](/uwp/api/Windows.Foundation.Deferral) 가져옵니다. 이는 명령을 실행 하기 전에 deferall 완료 될 때까지 대기 하도록 시스템에 지시 합니다. 이는 처리기에서 비동기 호출을 수행 하는 경우 매우 중요 합니다. 이 시점에서 예제는 이전 라디오 방송국을 나타내는 **Mediaplaybackitem** 을 반환 하는 사용자 지정 메서드를 호출 합니다.
 
@@ -78,7 +78,7 @@ SMTC 명령의 동작을 완전히 무시 하는 경우도 있습니다. 아래 
 
 마지막으로, 지연 개체에서 [**Complete**](/uwp/api/windows.foundation.deferral.complete) 를 호출 하 여 사용자가 명령 처리를 완료 하는 것을 시스템에 알릴 수 있습니다.
 
-[!code-cs[PreviousReceived](./code/SMTC_RS1/cs/MainPage.xaml.cs#SnippetPreviousReceived)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTC_RS1/cs/MainPage.xaml.cs" id="SnippetPreviousReceived":::
                  
 ## <a name="manual-control-of-the-smtc"></a>SMTC의 수동 제어
 이 문서 앞부분에서 설명한 것 처럼 SMTC는 앱이 만드는 모든 **MediaPlayer** 인스턴스에 대 한 정보를 자동으로 검색 하 고 표시 합니다. **MediaPlayer** 의 여러 인스턴스를 사용 하지만 smtc에서 앱에 대 한 단일 항목을 제공 하려는 경우 자동 통합에 의존 하는 대신 smtc의 동작을 수동으로 제어 해야 합니다. 또한 [**MediaTimelineController**](/uwp/api/Windows.Media.MediaTimelineController) 를 사용 하 여 미디어 플레이어를 하나 이상 제어 하려면 수동 smtc 통합을 사용 해야 합니다. 또한 앱에서 **MediaPlayer**이외의 API (예: [**오디오 그래프**](/uwp/api/Windows.Media.Audio.AudioGraph) 클래스)를 사용 하 여 미디어를 재생 하는 경우에는 사용자가 smtc를 사용 하 여 앱을 제어 하도록 수동으로 smtc 통합을 구현 해야 합니다. SMTC를 수동으로 제어 하는 방법에 대 한 자세한 내용은 [시스템 미디어 전송 컨트롤의 수동 제어](system-media-transport-controls.md)를 참조 하세요.

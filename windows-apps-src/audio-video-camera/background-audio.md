@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 72687db5bed8303b672ed8ed009108708cb126be
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a0c816470f4a6caf79cb3370a39bc76abb7ef878
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161187"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364036"
 ---
 # <a name="play-media-in-the-background"></a>백그라운드에서 미디어 재생
 이 문서에서는 앱이 포그라운드에서 백그라운드에서 이동할 때 미디어가 계속 재생 되도록 앱을 구성 하는 방법을 보여 줍니다. 즉, 사용자가 앱을 최소화 하거나, 홈 화면으로 반환 하거나, 다른 방식으로 앱에서 벗어난 경우에도 앱에서 오디오를 계속 재생할 수 있습니다. 
@@ -68,19 +68,19 @@ Windows 10 버전 1607에서는 백그라운드 오디오를 사용 하도록 �
 ## <a name="handle-transitioning-between-foreground-and-background"></a>포그라운드 및 백그라운드 간 전환 처리
 앱이 포그라운드에서 배경으로 이동 하면, 사용자의 [**배경**](/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground) 이벤트가 발생 합니다. 앱이 포그라운드로 반환 될 때 [**Leavingbackground**](/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground) 이벤트가 발생 합니다. 앱 수명 주기 이벤트 이므로 앱을 만들 때 이러한 이벤트에 대 한 처리기를 등록 해야 합니다. 기본 프로젝트 템플릿에서이는 App.xaml.cs의 **App** class 생성자에 추가 하는 것을 의미 합니다. 
 
-[!code-cs[RegisterEvents](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetRegisterEvents)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BackgroundAudio_RS1/cs/App.xaml.cs" id="SnippetRegisterEvents":::
 
 현재 백그라운드에서 실행 중인지 여부를 추적 하는 변수를 만듭니다.
 
-[!code-cs[DeclareBackgroundMode](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetDeclareBackgroundMode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BackgroundAudio_RS1/cs/App.xaml.cs" id="SnippetDeclareBackgroundMode":::
 
 지정 된 [**background**](/uwp/api/windows.applicationmodel.core.coreapplication.enteredbackground) 이벤트를 발생 시키면 현재 백그라운드에서 실행 중임을 나타내기 위해 추적 변수를 설정 합니다. 이로 인해 백그라운드로 전환 하면 사용자에 게 느리게 표시 될 수 있으므로이 작업을 수행 하면 오래 실행 **되는 작업** 을 수행 하지 않아도 됩니다.
 
-[!code-cs[EnteredBackground](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetEnteredBackground)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BackgroundAudio_RS1/cs/App.xaml.cs" id="SnippetEnteredBackground":::
 
 [**Leavingbackground**](/uwp/api/windows.applicationmodel.core.coreapplication.leavingbackground) 이벤트 처리기에서 앱이 백그라운드에서 더 이상 실행 되지 않음을 나타내도록 추적 변수를 설정 해야 합니다.
 
-[!code-cs[LeavingBackground](./code/BackgroundAudio_RS1/cs/App.xaml.cs#SnippetLeavingBackground)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BackgroundAudio_RS1/cs/App.xaml.cs" id="SnippetLeavingBackground":::
 
 ### <a name="memory-management-requirements"></a>메모리 관리 요구 사항
 포그라운드 및 백그라운드 간의 전환을 처리 하는 가장 중요 한 부분은 앱에서 사용 하는 메모리를 관리 하는 것입니다. 백그라운드에서 실행 하면 응용 프로그램이 시스템에서 유지할 수 있도록 허용 하는 메모리 리소스를 줄일 수 있기 때문에 [**AppMemoryUsageIncreased**](/uwp/api/windows.system.memorymanager.appmemoryusageincreased) 및 [**AppMemoryUsageLimitChanging**](/uwp/api/windows.system.memorymanager.appmemoryusagelimitchanging) 이벤트도 등록 해야 합니다. 이러한 이벤트가 발생 하면 응용 프로그램의 현재 메모리 사용량과 현재 제한을 확인 하 고 필요한 경우 메모리 사용량을 줄여야 합니다. 백그라운드에서 실행 하는 동안 메모리 사용량을 줄이는 방법에 대 한 자세한 내용은 [앱이 백그라운드로 이동할 때 사용 가능한 메모리](../launch-resume/reduce-memory-usage.md)를 참조 하세요.

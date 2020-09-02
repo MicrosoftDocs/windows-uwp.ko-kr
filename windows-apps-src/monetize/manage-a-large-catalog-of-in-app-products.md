@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 내 구매, IAPs, 추가 기능, 카탈로그, Windows ApplicationModel. 스토어
 ms.localizationpriority: medium
-ms.openlocfilehash: a6bd4d95365e33ee30df87247b3aec72f70fc5b1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e3eb35e2fccede9dc6f0412a3762d3d6245847c0
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158427"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364096"
 ---
 # <a name="manage-a-large-catalog-of-in-app-products"></a>앱에서 바로 구매 제품의 큰 카탈로그 관리
 
@@ -24,7 +24,7 @@ ms.locfileid: "89158427"
 
 이 저장소는 결과 [PurchaseResults](/uwp/api/Windows.ApplicationModel.Store.PurchaseResults)의 구매 요청에서 *offerId* 만 사용 합니다. 이 프로세스는 [스토어에 앱 내 제품을 나열할](../publish/add-on-submissions.md)때 원래 제공 된 정보를 직접 수정 하지 않습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 -   이 항목에서는 스토어에 나열 된 단일 앱 내 제품을 사용 하 여 여러 앱에서 제공 하는 표현에 대 한 저장소 지원을 다룹니다. 앱에서 바로 구매를 잘 모르는 경우 [앱에서 제품 구매 사용](enable-in-app-product-purchases.md) 을 검토 하 여 라이선스 정보에 대해 알아보고 스토어에서 앱 내 구매를 적절 하 게 나열 하는 방법을 검토 하세요.
 -   새 앱 내 제품을 처음으로 코딩 하 고 테스트 하는 경우 [Currentapp](/uwp/api/Windows.ApplicationModel.Store.CurrentApp) 개체 대신 [currentappsimulator](/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator) 개체를 사용 해야 합니다. 이러한 방식으로 라이브 서버를 호출 하는 대신 라이선스 서버에 대 한 시뮬레이션 된 호출을 사용 하 여 라이선스 논리를 확인할 수 있습니다. 이렇게 하려면% userprofile% \\ AppData \\ 로컬 \\ 패키지 \\ &lt; 패키지 이름 &gt; \\ localstate \\ Microsoft \\ Windows 스토어 \\ apidata에서 이름이 WindowsStoreProxy.xml 인 파일을 사용자 지정 해야 합니다. Microsoft Visual Studio 시뮬레이터는 앱을 처음 실행할 때이 파일을 만들거나 런타임에 사용자 지정 항목을 로드할 수도 있습니다. 자세한 내용은 [CurrentAppSimulator에서 WindowsStoreProxy.xml 파일 사용](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md#proxy)을 참조 하세요.
@@ -35,7 +35,7 @@ ms.locfileid: "89158427"
 큰 카탈로그 내의 특정 제품에 대 한 구매 요청은 앱 내에서 다른 구매 요청과 거의 동일한 방식으로 처리 됩니다. 앱에서 새 [RequestProductPurchaseAsync](/uwp/api/windows.applicationmodel.store.currentapp.requestproductpurchaseasync) 메서드 오버 로드를 호출 하면 앱에서 *OfferId* 및 [ProductPurchaseDisplayProperties](/uwp/api/windows.applicationmodel.store.productpurchasedisplayproperties) 개체를 모두 제공 하 여 앱 내 제품의 이름으로 채웁니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#MakePurchaseRequest)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/ManageCatalog.cs" id="MakePurchaseRequest":::
 
 ## <a name="report-fulfillment-of-the-in-app-offer"></a>앱 내 제품의 보고서 처리
 
@@ -46,7 +46,7 @@ ms.locfileid: "89158427"
 다음 코드에서는 특정 제안 정보를 삽입 하는 UI 메시징 패턴 및 처리 호출을 보여 줍니다. 특정 제품 정보가 없을 경우이 예에서는 product [Listinginformation](/uwp/api/Windows.ApplicationModel.Store.ListingInformation)의 정보를 사용 합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[ManageCatalog](./code/InAppPurchasesAndLicenses/cs/ManageCatalog.cs#ReportFulfillment)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/ManageCatalog.cs" id="ReportFulfillment":::
 
 ## <a name="related-topics"></a>관련 항목
 

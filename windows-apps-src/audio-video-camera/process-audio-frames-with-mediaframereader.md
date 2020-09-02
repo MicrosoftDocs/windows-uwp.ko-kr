@@ -6,12 +6,12 @@ ms.date: 04/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d1d4f7e24caf50db41851e237a832301df75cd0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 18ef0ee1efb7a69a8b305c9b95e84938fe6fde32
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163657"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363896"
 ---
 # <a name="process-audio-frames-with-mediaframereader"></a>MediaFrameReader를 사용하여 오디오 프레임 처리
 
@@ -43,7 +43,7 @@ ms.locfileid: "89163657"
 
 쿼리가 하나 이상의 프레임 원본을 반환 하는 경우 [**Currentformat**](/uwp/api/windows.media.capture.frames.mediaframesource.currentformat) 속성을 확인 하 여 원본에서 원하는 오디오 형식 (이 예제에서는 부동 오디오 데이터)을 지원 하는지 확인할 수 있습니다. [**AudioEncodingProperties**](/uwp/api/windows.media.capture.frames.mediaframeformat.audioencodingproperties) 를 확인 하 여 원하는 오디오 인코딩이 원본에서 지원 되는지 확인 합니다.
 
-[!code-cs[InitAudioFrameSource](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetInitAudioFrameSource)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetInitAudioFrameSource":::
 
 ## <a name="create-and-start-the-mediaframereader"></a>MediaFrameReader 만들기 및 시작
 
@@ -51,7 +51,7 @@ ms.locfileid: "89163657"
 
 [**MediaFrameReader FrameArrived**](/uwp/api/windows.media.capture.frames.mediaframereader.framearrived) 이벤트에 대 한 처리기를 등록 합니다 .이 이벤트는 시스템에서 오디오 데이터의 새 프레임을 사용할 수 있을 때 발생 합니다. [**StartAsync**](/uwp/api/windows.media.capture.frames.mediaframereader.startasync) 를 호출 하 여 오디오 프레임 획득을 시작 합니다. 프레임 판독기를 시작 하지 못한 경우 호출에서 반환 된 상태 값의 값은 [**Success**](/uwp/api/windows.media.capture.frames.mediaframereaderstartstatus)가 아닙니다.
 
-[!code-cs[CreateAudioFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetCreateAudioFrameReader)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetCreateAudioFrameReader":::
 
 **FrameArrived** 이벤트 처리기에서 최신 미디어 프레임에 대 한 참조를 검색 하기 위해 처리기에 보낸 사람으로 전달 된 **MediaFrameReader** 개체의 [**TryAcquireLatestFrame**](/uwp/api/windows.media.capture.frames.mediaframereader.tryacquirelatestframe) 를 호출 합니다. 이 개체는 null 일 수 있으므로 항상 개체를 사용 하기 전에 확인 해야 합니다. **TryAcquireLatestFrame** 에서 반환 된 **MediaFrameReference** 에 래핑된 미디어 프레임의 입력은 프레임 판독기에서 획득 하도록 구성한 프레임 소스 또는 소스 유형에 따라 달라 집니다. 이 예제의 프레임 판독기는 오디오 프레임을 가져오기 위해 설정 되었으므로 [**AudioMediaFrame**](/uwp/api/windows.media.capture.frames.mediaframereference.audiomediaframe) 속성을 사용 하 여 기본 프레임을 가져옵니다. 
 
@@ -59,18 +59,18 @@ ms.locfileid: "89163657"
 
 데이터의 형식은 프레임 원본에 따라 달라 집니다. 이 예에서 미디어 프레임 원본을 선택 하는 경우 선택한 프레임 원본이 float 데이터의 단일 채널을 사용 했는지 명확 하 게 결정 합니다. 예제 코드의 나머지 부분에서는 프레임에 있는 오디오 데이터의 기간 및 샘플 수를 확인 하는 방법을 보여 줍니다.  
 
-[!code-cs[ProcessAudioFrame](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetProcessAudioFrame)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetProcessAudioFrame":::
 
 > [!NOTE] 
 > 오디오 데이터에 대해 작업을 수행 하려면 네이티브 메모리 버퍼에 액세스 해야 합니다. 이렇게 하려면 아래 코드 목록을 포함 하 여 **IMemoryBufferByteAccess** COM 인터페이스를 사용 해야 합니다. 네이티브 버퍼에 대 한 작업은 **unsafe** 키워드를 사용 하는 메서드에서 수행 해야 합니다. 또한 **프로젝트-> 속성** 대화 상자의 **빌드** 탭에서 안전 하지 않은 코드를 허용 하는 확인란을 선택 해야 합니다.
 
-[!code-cs[IMemoryBufferByteAccess](./code/Frames_Win10/Frames_Win10/FrameRenderer.cs#SnippetIMemoryBufferByteAccess)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/FrameRenderer.cs" id="SnippetIMemoryBufferByteAccess":::
 
 ## <a name="additional-information-on-using-mediaframereader-with-audio-data"></a>오디오 데이터에 MediaFrameReader 사용에 대 한 추가 정보
 
 [**MediafAudioDeviceController**](/uwp/api/windows.media.capture.frames.mediaframesource.controller) 속성에 액세스 하 여 오디오 프레임 원본과 연결 된 [**AudioDeviceController**](/uwp/api/Windows.Media.Devices.AudioDeviceController) 를 검색할 수 있습니다. 이 개체는 캡처 장치의 스트림 속성을 가져오거나 설정 하거나 캡처 수준을 제어 하는 데 사용할 수 있습니다. 다음 예제에서는 프레임 판독기에서 프레임을 계속 얻을 수 있도록 오디오 장치를 mutes 모든 샘플 값은 0입니다.
 
-[!code-cs[AudioDeviceControllerMute](./code/Frames_Win10/Frames_Win10/MainPage.xaml.cs#SnippetAudioDeviceControllerMute)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.xaml.cs" id="SnippetAudioDeviceControllerMute":::
 
 오디오 [**프레임**](/uwp/api/windows.media.audioframe) 개체를 사용 하 여 미디어 프레임 소스에서 캡처된 오디오 데이터를 오디오 [**그래프**](/uwp/api/windows.media.audio.audiograph)에 전달할 수 있습니다. 프레임을 [**오디오**](/uwp/api/windows.media.audio.audioframeinputnode)프레임의 [**addframe**](/uwp/api/windows.media.audio.audioframeinputnode.addframe) 메서드에 전달 합니다. 오디오 그래프를 사용 하 여 오디오 신호를 캡처, 처리 및 혼합 하는 방법에 대 한 자세한 내용은 [오디오 그래프](audio-graphs.md)를 참조 하세요.
 

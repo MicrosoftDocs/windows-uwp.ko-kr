@@ -6,12 +6,12 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, ad 컨트롤, 중간
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ada6ad04150d6a0f20e9286122ce02933091236
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: eedb3f12bfc9da51afb2d5205122cbd42d7b31bf
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174977"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363096"
 ---
 # <a name="interstitial-ads"></a>중간 광고
 
@@ -37,7 +37,7 @@ ms.locfileid: "89174977"
 > [!NOTE]
 > 중간 광고 용 API는 비디오 재생 시를 제외 하 고 사용자 인터페이스를 처리 하지 않습니다. 앱에서 중간 광고를 통합 하는 방법을 고려 하 여 수행할 작업에 대 한 지침과 사용 하지 않도록 설정 하는 [중간 모범 사례](ui-and-user-experience-guidelines.md#interstitialbestpractices10) 를 참조 하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 * Visual studio 2015 이상 버전의 Visual Studio를 사용 하 여 [MICROSOFT ADVERTISING SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) 를 설치 합니다. 설치 지침은 [이 문서](install-the-microsoft-advertising-libraries.md)를 참조 하세요.
 
@@ -69,22 +69,22 @@ ms.locfileid: "89174977"
 
 3.  앱의 적절 한 코드 파일 (예: MainPage.xaml.cs 또는 다른 페이지의 코드 파일)에서 다음 네임 스페이스 참조를 추가 합니다.
 
-    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet1)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs" id="Snippet1":::
 
 4.  앱의 적절 한 위치 (예: ```MainPage``` 또는 다른 페이지)에서 [Interstitialad](/uwp/api/microsoft.advertising.winrt.ui.interstitialad) 개체와 중간 광고의 응용 프로그램 id 및 ad 단위 id를 나타내는 여러 문자열 필드를 선언 합니다. 다음 코드 예제에서는 `myAppId` 및 필드를 `myAdUnitId` 중간 광고에 대 한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units) 에 할당 합니다.
 
     > [!NOTE]
     > 모든 **Interstalad** 에는 서비스에서 컨트롤에 대 한 광고를 제공 하는 데 사용 하는 해당 하는 *ad 단위가* 있으며 모든 ad 단위는 *ad 단위 id* 와 *응용 프로그램 id*로 구성 됩니다. 이러한 단계에서는 테스트 ad 단위 ID 및 응용 프로그램 ID 값을 컨트롤에 할당 합니다. 이러한 테스트 값은 응용 프로그램의 테스트 버전 에서만 사용할 수 있습니다. 스토어에 앱을 게시 하기 전에 이러한 테스트 값을 파트너 센터의 [라이브 값으로 바꾸어야](#release) 합니다.
 
-    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet2)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs" id="Snippet2":::
 
 5.  시작 시 실행 되는 코드 (예: 페이지에 대 한 생성자)에서 **Interstitialad** 개체를 인스턴스화하고 개체의 이벤트에 대 한 이벤트 처리기를 연결 합니다.
 
-    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet3)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs" id="Snippet3":::
 
 6.  *중간 비디오* 광고를 표시 하려면: ad가 필요 하기 전까지 약 30-60 초 전에 [requestad](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용 하 여 ad를 미리 인출 합니다. 이렇게 하면 표시 되기 전에 광고를 요청 하 고 준비 하는 데 충분 한 시간이 소요 됩니다. Ad 형식에 대해 **Adtype. Video** 를 지정 해야 합니다.
 
-    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet4)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs" id="Snippet4":::
 
     *중간 배너* 광고를 표시 하려면: ad가 필요 하기 전까지 약 5-8 초 전에 [requestad](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용 하 여 ad를 미리 인출 합니다. 이렇게 하면 표시 되기 전에 광고를 요청 하 고 준비 하는 데 충분 한 시간이 소요 됩니다. Ad 형식에 대해 **Adtype. Display** 를 지정 해야 합니다.
 
@@ -94,11 +94,11 @@ ms.locfileid: "89174977"
 
 6.  중간 비디오 또는 중간 배너 광고를 표시 하려는 코드의 시점에서 **Interstitialad** 가 표시 될 준비가 되었는지 확인 한 다음 [show](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) 메서드를 사용 하 여 표시 합니다.
 
-    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet5)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs" id="Snippet5":::
 
 7.  **Interstitialad** 개체에 대 한 이벤트 처리기를 정의 합니다.
 
-    [!code-csharp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs#Snippet6)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cs/MainPage.xaml.cs" id="Snippet6":::
 
 8.  응용 프로그램을 빌드 및 테스트 하 여 테스트 광고가 표시 되는지 확인 합니다.
 
@@ -129,15 +129,15 @@ ms.locfileid: "89174977"
     > [!NOTE]
     > 모든 **Interstalad** 에는 서비스에서 컨트롤에 대 한 광고를 제공 하는 데 사용 하는 해당 하는 *ad 단위가* 있으며 모든 ad 단위는 *ad 단위 id* 와 *응용 프로그램 id*로 구성 됩니다. 이러한 단계에서는 테스트 ad 단위 ID 및 응용 프로그램 ID 값을 컨트롤에 할당 합니다. 이러한 테스트 값은 응용 프로그램의 테스트 버전 에서만 사용할 수 있습니다. 스토어에 앱을 게시 하기 전에 이러한 테스트 값을 파트너 센터의 [라이브 값으로 바꾸어야](#release) 합니다.
 
-    [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet1)]
+    :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/js/script.js" id="Snippet1":::
 
 5.  시작 시 실행 되는 코드 (예: 페이지에 대 한 생성자)에서 **Interstitialad** 개체를 인스턴스화하고 개체에 대 한 이벤트 처리기를 연결 합니다.
 
-    [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet2)]
+    :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/js/script.js" id="Snippet2":::
 
 5. *중간 비디오* 광고를 표시 하려면: ad가 필요 하기 전까지 약 30-60 초 전에 [requestad](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용 하 여 ad를 미리 인출 합니다. 이렇게 하면 표시 되기 전에 광고를 요청 하 고 준비 하는 데 충분 한 시간이 소요 됩니다. Ad 형식에 대해 **Interstitialadtype. video** 를 지정 해야 합니다.
 
-    [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/script.js#Snippet3)]
+    :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/js/script.js" id="Snippet3":::
 
     *중간 배너* 광고를 표시 하려면: ad가 필요 하기 전까지 약 5-8 초 전에 [requestad](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용 하 여 ad를 미리 인출 합니다. 이렇게 하면 표시 되기 전에 광고를 요청 하 고 준비 하는 데 충분 한 시간이 소요 됩니다. Ad 형식에 대해 **Interstitialadtype** 을 지정 해야 합니다.
 
@@ -149,11 +149,11 @@ ms.locfileid: "89174977"
 
 6.  광고를 표시 하려는 코드의 지점에서 **Interstitialad** 가 표시 될 준비가 되었는지 확인 한 다음 [show](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) 메서드를 사용 하 여 표시 합니다.
 
-    [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/samples.js#Snippet4)]
+    :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/js/samples.js" id="Snippet4":::
 
 7.  **Interstitialad** 개체에 대 한 이벤트 처리기를 정의 합니다.
 
-    [!code-javascript[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/js/samples.js#Snippet5)]
+    :::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/js/samples.js" id="Snippet5":::
 
 9.  응용 프로그램을 빌드 및 테스트 하 여 테스트 광고가 표시 되는지 확인 합니다.
 
@@ -173,26 +173,26 @@ ms.locfileid: "89174977"
 
 2.  응용 프로그램의 적절 한 헤더 파일 (예: DirectXPage)에서 [Interstitialad](/uwp/api/microsoft.advertising.winrt.ui.interstitialad) 개체 및 관련 이벤트 처리기 메서드를 선언 합니다.  
 
-    [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h#Snippet1)]
+    :::code language="cpp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h" id="Snippet1":::
 
 3.  동일한 헤더 파일에서 중간 광고의 응용 프로그램 ID 및 ad 단위 ID를 나타내는 여러 문자열 필드를 선언 합니다. 다음 코드 예제에서는 `myAppId` 및 필드를 `myAdUnitId` 중간 광고에 대 한 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units) 에 할당 합니다.
 
     > [!NOTE]
     > 모든 **Interstalad** 에는 서비스에서 컨트롤에 대 한 광고를 제공 하는 데 사용 하는 해당 하는 *ad 단위가* 있으며 모든 ad 단위는 *ad 단위 id* 와 *응용 프로그램 id*로 구성 됩니다. 이러한 단계에서는 테스트 ad 단위 ID 및 응용 프로그램 ID 값을 컨트롤에 할당 합니다. 이러한 테스트 값은 응용 프로그램의 테스트 버전 에서만 사용할 수 있습니다. 스토어에 앱을 게시 하기 전에 이러한 테스트 값을 파트너 센터의 [라이브 값으로 바꾸어야](#release) 합니다.
 
-    [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h#Snippet2)]
+    :::code language="cpp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.h" id="Snippet2":::
 
 4.  중간 광고를 표시 하는 코드를 추가 하려는 .cpp 파일에서 다음 네임 스페이스 참조를 추가 합니다. 다음 예제에서는 응용 프로그램의 DirectXPage 파일에 코드를 추가 한다고 가정 합니다.
 
-    [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet3)]
+    :::code language="cpp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp" id="Snippet3":::
 
 6.  시작 시 실행 되는 코드 (예: 페이지에 대 한 생성자)에서 **Interstitialad** 개체를 인스턴스화하고 개체의 이벤트에 대 한 이벤트 처리기를 연결 합니다. 다음 예제에서 ```InterstitialAdSamplesCpp``` 는 프로젝트에 대 한 네임 스페이스입니다. 코드에 필요에 따라이 이름을 변경 합니다.
 
-    [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet4)]
+    :::code language="cpp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp" id="Snippet4":::
 
 7. 중간 *비디오* 광고를 표시 하려는 경우: 중간 광고를 요구 하기 전까지 약 30-60 초 전에 [requestad](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용 하 여 ad를 미리 인출 합니다. 이렇게 하면 표시 되기 전에 광고를 요청 하 고 준비 하는 데 충분 한 시간이 소요 됩니다. Ad 형식에 대해 **Adtype:: Video** 를 지정 해야 합니다.
 
-    [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet5)]
+    :::code language="cpp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp" id="Snippet5":::
 
     *중간 배너* 광고를 표시 하려면: ad가 필요 하기 전까지 약 5-8 초 전에 [requestad](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.requestad) 메서드를 사용 하 여 ad를 미리 인출 합니다. 이렇게 하면 표시 되기 전에 광고를 요청 하 고 준비 하는 데 충분 한 시간이 소요 됩니다. Ad 형식에 대해 **Adtype::D isplay** 를 지정 해야 합니다.
 
@@ -202,11 +202,11 @@ ms.locfileid: "89174977"
 
 7.  광고를 표시 하려는 코드의 지점에서 **Interstitialad** 가 표시 될 준비가 되었는지 확인 한 다음 [show](/uwp/api/microsoft.advertising.winrt.ui.interstitialad.show) 메서드를 사용 하 여 표시 합니다.
 
-    [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet6)]
+    :::code language="cpp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp" id="Snippet6":::
 
 8.  **Interstitialad** 개체에 대 한 이벤트 처리기를 정의 합니다.
 
-    [!code-cpp[InterstitialAd](./code/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp#Snippet7)]
+    :::code language="cpp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/InterstitialAdSamples/cpp/DirectXPage.xaml.cpp" id="Snippet7":::
 
 9. 응용 프로그램을 빌드 및 테스트 하 여 테스트 광고가 표시 되는지 확인 합니다.
 

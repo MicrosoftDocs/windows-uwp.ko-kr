@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마
 ms.assetid: 54f6a33d-a3b5-4169-8664-653dbab09175
 ms.localizationpriority: medium
-ms.openlocfilehash: 784403ede6b21b79dcb14d1da6dde22df68c410e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4163106c5439ec8881c1b5042f63fb7abf4fd668
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158787"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362506"
 ---
 # <a name="launch-an-app-on-a-remote-device"></a>원격 디바이스에서 앱 시작
 
@@ -45,18 +45,18 @@ Windows 10 버전 1607부터 UWP 앱은 동일한 Microsoft 계정 (MSA)을 사�
 
 이 예제의 코드를 사용 하려면 `using Windows.System.RemoteSystems` 클래스 파일에 문이 있어야 합니다.
 
-[!code-cs[Main](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetBuildDeviceList)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/RemoteLaunchScenario/cs/MainPage.xaml.cs" id="SnippetBuildDeviceList":::
 
 원격 시작을 수행 하기 전에 수행 해야 하는 첫 번째 작업은 호출 `RemoteSystem.RequestAccessAsync()` 입니다. 반환 값을 확인 하 여 앱이 원격 장치에 액세스할 수 있는지 확인 합니다. 앱에 기능을 추가 하지 않은 경우이 검사가 실패할 수 있습니다 `remoteSystem` .
 
 시스템 감시자 이벤트 처리기는 연결할 수 있는 장치를 검색 하거나 더 이상 사용할 수 없을 때 호출 됩니다. 이러한 이벤트 처리기를 사용 하 여 연결할 수 있는 장치의 업데이트 된 목록을 유지 합니다.
 
-[!code-cs[Main](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetEventHandlers)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/RemoteLaunchScenario/cs/MainPage.xaml.cs" id="SnippetEventHandlers":::
 
 
 **사전을**사용 하 여 원격 시스템 ID로 장치를 추적 합니다. **System.collections.objectmodel.observablecollection** 는 열거할 수 있는 장치 목록을 저장 하는 데 사용 됩니다. 또한 **system.collections.objectmodel.observablecollection** 를 사용 하면 장치 목록을 UI에 쉽게 바인딩할 수 있지만이 예제에서는이 작업을 수행 하지 않습니다.
 
-[!code-cs[Main](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetMembers)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/RemoteLaunchScenario/cs/MainPage.xaml.cs" id="SnippetMembers":::
 
 `BuildDeviceList()`원격 앱을 시작 하기 전에 앱 시작 코드에에 대 한 호출을 추가 합니다.
 
@@ -68,7 +68,7 @@ Windows 10 버전 1607부터 UWP 앱은 동일한 Microsoft 계정 (MSA)을 사�
 
 실용적인 시나리오에서는 대상으로 지정할 장치를 선택 하는 UI를 제공할 수 있습니다. 그러나이 예제를 간소화 하기 위해 목록의 첫 번째 원격 장치만 사용 합니다.
 
-[!code-cs[Main](./code/RemoteLaunchScenario/MainPage.xaml.cs#SnippetRemoteUriLaunch)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/RemoteLaunchScenario/cs/MainPage.xaml.cs" id="SnippetRemoteUriLaunch":::
 
 **LaunchUriAsync ()** 에서 반환 된 [**RemoteLaunchUriStatus**](/uwp/api/windows.system.remotelaunchuristatus) 개체는 원격 시작에 성공 했는지 여부에 대 한 정보를 제공 하 고, 그렇지 않은 경우 이유를 제공 합니다.
 

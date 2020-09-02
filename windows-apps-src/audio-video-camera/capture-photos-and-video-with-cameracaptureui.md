@@ -1,7 +1,7 @@
 ---
 ms.assetid: CC0D6E9B-128D-488B-912F-318F5EE2B8D3
 description: 이 문서에서는 Windows에 기본 제공 되는 카메라 UI를 사용 하 여 사진이 나 비디오를 캡처하는 [**CameraCaptureUI**](/uwp/api/windows.media.capture.cameracaptureui) 클래스를 사용 하는 방법을 설명 합니다.
-title: Windows 기본 제공 카메라 UI를 사용 하 여 사진 및 비디오 캡처
+title: Windows 기본 카메라 UI를 사용하여 사진 및 비디오 캡처
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
@@ -9,14 +9,14 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: a512f72c01f2082dd067fc867f7434c92d2aa0c8
-ms.sourcegitcommit: 79e4b3a9c53060b64513e2e240f0a4f073cc5dab
+ms.openlocfilehash: 5b5e1369e37fc683a3a09c8f404b1998ee06bdab
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84978938"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364006"
 ---
-# <a name="capture-photos-and-video-with-the-windows-built-in-camera-ui"></a>Windows 기본 제공 카메라 UI를 사용 하 여 사진 및 비디오 캡처
+# <a name="capture-photos-and-video-with-the-windows-built-in-camera-ui"></a>Windows 기본 카메라 UI를 사용하여 사진 및 비디오 캡처
 
 이 문서에서는 Windows에 기본 제공 되는 카메라 UI를 사용 하 여 사진이 나 비디오를 캡처하는 [**CameraCaptureUI**](/uwp/api/windows.media.capture.cameracaptureui) 클래스를 사용 하는 방법을 설명 합니다. 이 기능을 사용 하는 것이 쉽습니다. 이를 통해 앱은 코드를 몇 줄만 사용 하 여 사용자가 캡처한 사진 또는 비디오를 가져올 수 있습니다.
 
@@ -62,8 +62,8 @@ ms.locfileid: "84978938"
 
 UI에 이미지를 표시 하려면 XAML 페이지에서 [**이미지**](/uwp/api/Windows.UI.Xaml.Controls.Image) 컨트롤을 선언 합니다.
 
-:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/CameraCaptureUIWin10/cs/MainPage.xaml.cs" id="SnippetImageControl":::
-:::code language="cppwinrt" source="~/../snippets-windows/windows-uwp/audio-video-camera/CameraCaptureUIWin10/cppwinrt/MainPage.cpp" id="SnippetImageControl":::
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/CameraCaptureUIWin10/cs/MainPage.xaml" id="SnippetImageControl":::
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/CameraCaptureUIWin10/cppwinrt/MainPage.xaml" id="SnippetImageControl":::
 
 XAML 페이지에서 소프트웨어 비트맵을 사용 하려면 프로젝트에 사용 하는 [**Windows.**](/uwp/api/Windows.UI.Xaml.Media.Imaging) x m l. x m l. x m l 네임 스페이스를 포함 합니다.
 

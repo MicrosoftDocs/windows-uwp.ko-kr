@@ -7,12 +7,12 @@ ms.topic: article
 ms.custom: 19H1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5924ad4b969fbf29021b2b48440ce071a516fe09
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c0e94e0ddaba027b38ecc76b1c97126204990f1a
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175727"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363986"
 ---
 # <a name="connect-to-remote-cameras"></a>원격 카메라에 연결
 
@@ -43,7 +43,7 @@ ms.locfileid: "89175727"
 
 또한이 예제에서는 **추가** 및 **제거** 된 이벤트 외에도 [**devicewatcher. Updated**](/uwp/api/windows.devices.enumeration.devicewatcher.updated) 이벤트를 처리 합니다. **업데이트** 된 처리기에서 연결 된 원격 카메라 장치가에서 제거 된 다음 컬렉션에 다시 추가 됩니다.
 
-[!code-cs[SnippetRemoteCameraPairingHelper](./code/Frames_Win10/Frames_Win10/RemoteCameraPairingHelper.cs#SnippetRemoteCameraPairingHelper)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/RemoteCameraPairingHelper.cs" id="SnippetRemoteCameraPairingHelper":::
 
 
 ## <a name="related-topics"></a>관련 항목

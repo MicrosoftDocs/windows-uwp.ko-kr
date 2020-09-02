@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 388d1bc2af9d39d08087c7ec5b9dcbc710e74bba
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2b847b7162de19b81c83be2f3769042a5acc8a3a
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163577"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363796"
 ---
 # <a name="set-format-resolution-and-frame-rate-for-mediacapture"></a>MediaCapture용 형식, 해상도 및 프레임 속도 선택
 
@@ -36,15 +36,15 @@ ms.locfileid: "89163577"
 
 도우미 클래스의 소스 파일에는 [**Windows. MediaProperties**](/uwp/api/Windows.Media.MediaProperties) 네임 스페이스를 포함 해야 합니다.
 
-[!code-cs[MediaEncodingPropertiesUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetMediaEncodingPropertiesUsing)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetMediaEncodingPropertiesUsing":::
 
-[!code-cs[StreamPropertiesHelper](./code/BasicMediaCaptureWin10/cs/StreamPropertiesHelper.cs#SnippetStreamPropertiesHelper)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/StreamPropertiesHelper.cs" id="SnippetStreamPropertiesHelper":::
 
 ## <a name="determine-if-the-preview-and-capture-streams-are-independent"></a>미리 보기 및 캡처 스트림이 독립적인 지 확인
 
 일부 장치에서는 미리 보기 스트림과 캡처 스트림 모두에 동일한 하드웨어 pin이 사용 됩니다. 이러한 장치에서 한 인코딩 속성을 설정 하는 것도 다른 장치를 설정 합니다. 캡처 및 미리 보기에 대해 다른 하드웨어 pin을 사용 하는 장치에서는 각 스트림에 대해 독립적으로 속성을 설정할 수 있습니다. 미리 보기 및 캡처 스트림이 독립적인 지 확인 하려면 다음 코드를 사용 합니다. 이 테스트의 결과에 따라 독립적으로 스트림 설정을 사용 하거나 사용 하지 않도록 UI를 조정 해야 합니다.
 
-[!code-cs[CheckIfStreamsAreIdentical](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCheckIfStreamsAreIdentical)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetCheckIfStreamsAreIdentical":::
 
 ## <a name="get-a-list-of-available-stream-properties"></a>사용 가능한 스트림 속성 목록 가져오기
 
@@ -52,17 +52,17 @@ ms.locfileid: "89163577"
 
 앱에 특정 해상도 또는 프레임 요금 요구 사항이 있는 경우 프로그래밍 방식으로 미디어 인코딩 속성 집합을 선택할 수 있습니다. 표준 카메라 앱은 대신 UI에서 사용 가능한 속성 목록을 표시 하 고 사용자가 원하는 설정을 선택할 수 있습니다. 목록에서 **StreamComboBoxItem helper** 개체 목록의 각 항목에 대 한 **ComboBoxItem** 생성 됩니다. 콘텐츠는 도우미 클래스에서 반환 되는 이름으로 설정 되 고 태그는 도우미 클래스 자체로 설정 되므로 나중에 연결 된 인코딩 속성을 검색 하는 데 사용할 수 있습니다. 그런 다음 메서드에 전달 된 **ComboBox** 에 각 **ComboBoxItem** 추가 됩니다.
 
-[!code-cs[PopulateStreamPropertiesUI](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPopulateStreamPropertiesUI)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetPopulateStreamPropertiesUI":::
 
 ## <a name="set-the-desired-stream-properties"></a>원하는 스트림 속성 설정
 
 [**SetMediaStreamPropertiesAsync**](/uwp/api/windows.media.devices.videodevicecontroller.setmediastreampropertiesasync)를 호출 하 여 원하는 인코딩 속성을 사용 하도록 비디오 장치 컨트롤러에 지시 하 고 photo, video 또는 preview 속성을 설정 해야 하는지 여부를 나타내는 **mediastreamtype** 값을 전달 합니다. 이 예제에서는 사용자가 **PopulateStreamPropertiesUI** helper 메서드로 채워진 **ComboBox** 개체 중 하나에서 항목을 선택할 때 요청 된 인코딩 속성을 설정 합니다.
 
-[!code-cs[PreviewSettingsChanged](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPreviewSettingsChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetPreviewSettingsChanged":::
 
-[!code-cs[PhotoSettingsChanged](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPhotoSettingsChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetPhotoSettingsChanged":::
 
-[!code-cs[VideoSettingsChanged](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetVideoSettingsChanged)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetVideoSettingsChanged":::
 
 ## <a name="match-the-aspect-ratio-of-the-preview-and-capture-streams"></a>미리 보기 및 캡처 스트림의 가로 세로 비율과 일치
 
@@ -79,7 +79,7 @@ ms.locfileid: "89163577"
 
 사진 또는 비디오 캡처 스트림이 미리 보기 스트림의 가로 세로 비율과 일치 하는지 확인 하기 위해이 예제에서는 [**VideoDeviceController**](/uwp/api/windows.media.devices.videodevicecontroller.getmediastreamproperties) 를 호출 하 고 **VideoPreview** 열거형 값을 전달 하 여 미리 보기 스트림에 대 한 현재 스트림 속성을 요청 합니다. 다음에는 작은 가로 비율 허용 오차 창이 정의 되어 있으므로 미리 보기 스트림과 정확히 일치 하지 않는 가로 세로 비율을 포함할 수 있습니다. 그런 다음, Linq 확장 메서드는 가로 세로 비율이 미리 보기 스트림의 정의 된 허용 범위 내에 있는 **Streamobjects 도우미** 개체만 선택 하는 데 사용 됩니다.
 
-[!code-cs[MatchPreviewAspectRatio](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetMatchPreviewAspectRatio)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetMatchPreviewAspectRatio":::
 
  
 

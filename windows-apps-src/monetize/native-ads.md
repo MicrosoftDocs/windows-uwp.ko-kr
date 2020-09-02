@@ -5,12 +5,12 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, ad 컨트롤, 기본 ad
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d3f26049350ce2cc2fc2c16f85989e9ebd5633c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 417560c9099937324b39a8cdfafb7d62ec7e64e6
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171377"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364086"
 ---
 # <a name="native-ads"></a>기본 광고
 
@@ -24,7 +24,7 @@ ms.locfileid: "89171377"
 > [!NOTE]
 > 네이티브 광고는 현재 Windows 10 용 XAML 기반 UWP 앱에 대해서만 지원 됩니다. HTML 및 JavaScript를 사용 하 여 작성 된 UWP 앱에 대 한 지원은 향후 Microsoft Advertising SDK 릴리스를 위해 예정 되어 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 * Visual studio 2015 이상 버전의 Visual Studio를 사용 하 여 [MICROSOFT ADVERTISING SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) 를 설치 합니다. 설치 지침은 [이 문서](install-the-microsoft-advertising-libraries.md)를 참조 하세요.
 
@@ -46,21 +46,21 @@ ms.locfileid: "89171377"
 
 4. 앱의 적절 한 코드 파일 (예: MainPage.xaml.cs 또는 다른 페이지의 코드 파일)에서 다음 네임 스페이스 참조를 추가 합니다.
 
-    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Namespaces)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs" id="Namespaces":::
 
 5.  응용 프로그램의 적절 한 위치 (예: ```MainPage``` 또는 다른 페이지)에서 [NativeAdsManagerV2](/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2) 개체와 기본 광고의 응용 프로그램 id 및 ad 단위 id를 나타내는 여러 개의 문자열 필드를 선언 합니다. 다음 코드 예제에서는 `myAppId` 및 필드를 `myAdUnitId` 네이티브 광고의 [테스트 값](set-up-ad-units-in-your-app.md#test-ad-units) 에 할당 합니다.
     > [!NOTE]
     > 모든 **NativeAdsManagerV2** 에는 서비스에서 네이티브 ad 컨트롤에 대 한 광고를 제공 하는 데 사용 하는 해당 하는 *ad 단위가* 있으며 모든 ad 단위는 *ad 단위 id* 와 *응용 프로그램 id*로 구성 됩니다. 이러한 단계에서는 테스트 ad 단위 ID 및 응용 프로그램 ID 값을 컨트롤에 할당 합니다. 이러한 테스트 값은 응용 프로그램의 테스트 버전 에서만 사용할 수 있습니다. 스토어에 앱을 게시 하기 전에 이러한 테스트 값을 파트너 센터의 [라이브 값으로 바꾸어야](#release) 합니다.
 
-    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#Variables)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs" id="Variables":::
 
 6.  시작 시 실행 되는 코드 (예: 페이지에 대 한 생성자)에서 **NativeAdsManagerV2** 개체를 인스턴스화하고 개체의 **Adready** 및 **erroroccurred** 이벤트에 대 한 이벤트 처리기를 연결 합니다.
 
-    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#ConfigureNativeAd)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs" id="ConfigureNativeAd":::
 
 7.  네이티브 광고를 표시할 준비가 되 면 **requestad** 메서드를 호출 하 여 광고를 인출 합니다.
 
-    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#RequestAd)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs" id="RequestAd":::
 
 8.  네이티브 ad가 앱에 대해 준비 되 면 [Adready](/uwp/api/microsoft.advertising.winrt.ui.nativeadsmanagerv2.adready) 이벤트 처리기가 호출 되 고, 기본 광고를 나타내는 [NativeAdV2](/uwp/api/microsoft.advertising.winrt.ui.nativeadv2) 개체가 *e* 매개 변수로 전달 됩니다. **NativeAdV2** 속성을 사용 하 여 네이티브 광고의 각 요소를 가져오고 이러한 요소를 페이지에 표시 합니다. 또한 **Registeradcontainer** 메서드를 호출 하 여 네이티브 광고의 컨테이너 역할을 하는 UI 요소를 등록 해야 합니다. 광고 노출 및 클릭을 적절히 추적 하는 데 필요 합니다.
     > [!NOTE]
@@ -96,11 +96,11 @@ ms.locfileid: "89171377"
 
     다음 코드 예제에서는 **stackpanel** 의 컨트롤에 있는 네이티브 광고의 각 요소를 표시 한 다음 **registeradcontainer** 메서드를 호출 하 여 **Stackpanel**을 등록 하는 **adready** 이벤트 처리기를 보여 줍니다. 이 코드에서는 **StackPanel**을 포함 하는 페이지에 대 한 코드 숨겨진 파일에서 실행 된다고 가정 합니다.
 
-    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#AdReady)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs" id="AdReady":::
 
 9.  네이티브 ad와 관련 된 오류를 처리 하기 위해 **erroroccurred** 이벤트에 대 한 이벤트 처리기를 정의 합니다. 다음 예제에서는 테스트 하는 동안 Visual Studio **출력** 창에 오류 정보를 기록 합니다.
 
-    [!code-csharp[NativeAd](./code/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs#ErrorOccurred)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/NativeAdSamples/cs/MainPage.xaml.cs" id="ErrorOccurred":::
 
 10.  응용 프로그램을 컴파일하고 실행 하 여 테스트 광고를 확인 합니다.
 

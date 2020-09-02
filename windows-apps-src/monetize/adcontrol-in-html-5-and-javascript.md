@@ -6,12 +6,12 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, AdControl, ad 컨트롤, javascript, HTML
 ms.localizationpriority: medium
-ms.openlocfilehash: d770e8a9a15835d7fab52e7383acca3a3df6c6cd
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b99432c40bf2b4633e8902a5bb7b7eedab3119dc
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155677"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364056"
 ---
 # <a name="adcontrol-in-html-5-and-javascript"></a>HTML 5 및 JavaScript의 AdControl
 
@@ -22,7 +22,7 @@ ms.locfileid: "89155677"
 
 JavaScript/HTML 앱에 배너 광고를 추가 하는 방법을 보여 주는 전체 샘플 프로젝트는 [GitHub의 광고 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)을 참조 하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 * Visual studio 2015 이상 버전의 Visual Studio를 사용 하 여 [MICROSOFT ADVERTISING SDK](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK) 를 설치 합니다. 설치 지침은 [이 문서](install-the-microsoft-advertising-libraries.md)를 참조 하세요.
 
@@ -103,7 +103,7 @@ JavaScript/HTML 앱에 배너 광고를 추가 하는 방법을 보여 주는 �
 이전 단계에서는 HTML 태그에서 **Adcontrol** 을 선언 하는 방법을 보여 줍니다. 또는 JavaScript를 사용 하 여 프로그래밍 방식으로 **Adcontrol** 을 만들 수 있습니다. 이 예에서는 ID가 **Myad**인 HTML에서 기존 **div** 를 사용 하 고 있다고 가정 합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-javascript[AdControl](./code/AdvertisingSamples/AdControlSamples/js/main.js#DeclareAdControl)]
+:::code language="javascript" source="~/../snippets-windows/windows-uwp/monetize/AdvertisingSamples/AdControlSamples/js/main.js" id="DeclareAdControl":::
 
 이 예에서는 **Myaderror**, **Myaderror**및 **myAdEngagedChanged**라는 이벤트 처리기 메서드를 이미 선언 했다고 가정 합니다.
 

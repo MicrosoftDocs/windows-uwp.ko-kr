@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b1ae11d8f065cf72202365c36a9d69164fc2daa3
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 91b0418555e4d46c15bd43816ec6b01ebbd27d8b
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163877"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363876"
 ---
 # <a name="media-compositions-and-editing"></a>미디어 컴퍼지션 및 편집
 
@@ -23,22 +23,22 @@ ms.locfileid: "89163877"
 
 [**Mediacomposition**](/uwp/api/Windows.Media.Editing.MediaComposition) 클래스는 컴퍼지션을 구성 하는 모든 미디어 클립의 컨테이너 이며 최종 컴퍼지션을 렌더링 하 고, 디스크에 컴퍼지션을 로드 및 저장 하 고, 사용자가 UI에서 볼 수 있도록 컴포지션의 미리 보기 스트림을 제공 합니다. 앱에서 **Mediacomposition** 을 사용 하려면 필요에 따라 관련 api를 제공 하는 windows [**. media. 네임 스페이스와**](/uwp/api/Windows.Media.Editing) [**windows**](/uwp/api/Windows.Media.Core) 네임 스페이스를 포함 합니다.
 
-[!code-cs[Namespace1](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetNamespace1)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetNamespace1":::
 
 
 **Mediacomposition** 개체는 코드의 여러 지점에서 액세스할 수 있으므로 일반적으로이 개체를 저장할 멤버 변수를 선언 합니다.
 
-[!code-cs[DeclareMediaComposition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetDeclareMediaComposition)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetDeclareMediaComposition":::
 
 **Mediacomposition** 의 생성자는 인수를 사용 하지 않습니다.
 
-[!code-cs[MediaCompositionConstructor](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetMediaCompositionConstructor)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetMediaCompositionConstructor":::
 
 ## <a name="add-media-clips-to-a-composition"></a>컴포지션에 미디어 클립 추가
 
 미디어 컴포지션에는 일반적으로 하나 이상의 비디오 클립이 포함 됩니다. [**Fileopenpicker**](/uwp/schemas/appxpackage/appxmanifestschema/element-fileopenpicker) 를 사용 하 여 사용자가 비디오 파일을 선택할 수 있습니다. 파일이 선택 되 면 [**Mediaclip**](/uwp/api/windows.media.editing.mediaclip.createfromfileasync)를 호출 하 여 비디오 클립을 포함 하는 새 [**mediaclip**](/uwp/api/Windows.Media.Editing.MediaClip) 개체를 만듭니다. 그런 다음 클립을 **Mediacomposition** 개체의 [**클립**](/uwp/api/windows.media.editing.mediacomposition.clips) 목록에 추가 합니다.
 
-[!code-cs[PickFileAndAddClip](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetPickFileAndAddClip)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetPickFileAndAddClip":::
 
 -   미디어 클립은 [**클립**](/uwp/api/windows.media.editing.mediacomposition.clips) 목록에 표시 되는 것과 동일한 순서로 **Mediacomposition** 에 표시 됩니다.
 
@@ -60,17 +60,17 @@ ms.locfileid: "89163877"
 
 사용자가 미디어 컴퍼지션을 볼 수 있도록 하려면 UI를 정의 하는 XAML 파일에 [**MediaPlayerElement**](/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement) 를 추가 합니다.
 
-[!code-xml[MediaElement](./code/MediaEditing/cs/MainPage.xaml#SnippetMediaElement)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml" id="SnippetMediaElement":::
 
 [**Mediastreamsource**](/uwp/api/Windows.Media.Core.MediaStreamSource)형식의 멤버 변수를 선언 합니다.
 
 
-[!code-cs[DeclareMediaStreamSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetDeclareMediaStreamSource)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetDeclareMediaStreamSource":::
 
 **Mediacomposition** 개체의 [**GeneratePreviewMediaStreamSource**](/uwp/api/windows.media.editing.mediacomposition.generatepreviewmediastreamsource) 메서드를 호출 하 여 컴포지션의 **mediastreamsource** 를 만듭니다. 팩터리 메서드 [**Createfrommediastreamsource**](/uwp/api/windows.media.core.mediasource.createfrommediastreamsource) 를 호출 하 여 [**MediaSource**](/uwp/api/Windows.Media.Core.MediaSource) 개체를 만들고 **MediaPlayerElement**의 [**Source**](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) 속성에 할당 합니다. 이제 UI에서 컴퍼지션을 볼 수 있습니다.
 
 
-[!code-cs[UpdateMediaElementSource](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetUpdateMediaElementSource)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetUpdateMediaElementSource":::
 
 -   **Mediacomposition** 은 [**GeneratePreviewMediaStreamSource**](/uwp/api/windows.media.editing.mediacomposition.generatepreviewmediastreamsource)를 호출 하기 전에 미디어 클립을 하나 이상 포함 해야 합니다. 그렇지 않으면 반환 된 개체가 null이 됩니다.
 
@@ -78,17 +78,17 @@ ms.locfileid: "89163877"
 
 사용자가 연결 된 리소스를 해제 하기 위해 페이지에서 벗어날 때 **Mediastreamsource** 개체와 **MediaPlayerElement** 의 [**source**](/uwp/api/windows.ui.xaml.controls.mediaelement.source) 속성을 null로 설정 하는 것이 좋습니다.
 
-[!code-cs[OnNavigatedFrom](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetOnNavigatedFrom)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetOnNavigatedFrom":::
 
 ## <a name="render-the-composition-to-a-video-file"></a>비디오 파일에 컴퍼지션 렌더링
 
 미디어 컴퍼지션을 다른 장치에서 공유 하 고 볼 수 있도록 미디어 컴퍼지션을 플랫 비디오 파일에 렌더링 하려면 Windows. d a. [**트랜스 코딩**](/uwp/api/Windows.Media.Transcoding) 네임 스페이스에서 api를 사용 해야 합니다. 비동기 작업의 진행률에 대 한 UI를 업데이트 하려면 [**Windows**](/uwp/api/Windows.UI.Core) 네임 스페이스의 api도 필요 합니다.
 
-[!code-cs[Namespace2](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetNamespace2)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetNamespace2":::
 
 사용자가 [**FileSavePicker**](/uwp/api/Windows.Storage.Pickers.FileSavePicker)를 사용 하 여 출력 파일을 선택할 수 있게 한 후에는 **Mediacomposition** 개체의 [**RenderToFileAsync**](/uwp/api/windows.media.editing.mediacomposition.rendertofileasync)를 호출 하 여 컴퍼지션을 선택 된 파일로 렌더링 합니다. 다음 예제의 나머지 코드는 단순히 [**AsyncOperationWithProgress**](/previous-versions/br205807(v=vs.85))를 처리 하는 패턴을 따릅니다.
 
-[!code-cs[RenderCompositionToFile](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetRenderCompositionToFile)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetRenderCompositionToFile":::
 
 -   [**MediaTrimmingPreference**](/uwp/api/Windows.Media.Editing.MediaTrimmingPreference) 를 사용 하면 트랜스 코딩 작업의 속도와 인접 한 미디어 클립의 트리밍 전체 자릿수를 우선 순위를 정할 수 있습니다. **빠른** 코드 변환이 낮은 정밀도 트리밍을 사용 하 여 더 빠르게 작동 하 고, **정확** 하 게 트랜스 코딩 속도가 느려지고, 보다 정확한 트리밍을 사용 합니다.
 
@@ -96,7 +96,7 @@ ms.locfileid: "89163877"
 
 [**Mediaclip**](/uwp/api/Windows.Media.Editing.MediaClip) 개체 [**TrimTimeFromStart**](/uwp/api/windows.media.editing.mediaclip.trimtimefromstart) 속성, [**TrimTimeFromEnd**](/uwp/api/windows.media.editing.mediaclip.trimtimefromend) 속성 또는 둘 다를 설정 하 여 컴포지션의 비디오 클립 기간을 자릅니다.
 
-[!code-cs[TrimClipBeforeCurrentPosition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetTrimClipBeforeCurrentPosition)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetTrimClipBeforeCurrentPosition":::
 
 -   사용자가 시작 및 종료 트리밍 값을 지정할 수 있도록 하려는 모든 UI를 사용할 수 있습니다. 위의 예제에서는 **MediaPlayerElement** 와 연결 된 [**Mediaplaybacksession**](/uwp/api/Windows.Media.Playback.MediaPlaybackSession) 의 [**Position**](/uwp/api/windows.media.playback.mediaplaybacksession.position) 속성을 사용 하 여 [**Starttimeincomposition**](/uwp/api/windows.media.editing.mediaclip.starttimeincomposition) 및 [**endtimeincomposition**](/uwp/api/windows.media.editing.mediaclip.endtimeincomposition)확인 하 여 컴포지션의 현재 위치에서 재생 중인 **mediaclip** 를 먼저 확인 합니다. 그런 다음 **Position** 및 **Starttimeincomposition** 속성을 다시 사용 하 여 클립 시작 부분에서 잘라내는 시간을 계산 합니다. **FirstOrDefault** 메서드는 목록에서 항목을 선택 하는 코드를 간소화 하는 **system.string 네임 스페이스의 확장** 메서드입니다.
 -   **Mediaclip** 개체의 [**originalduration**](/uwp/api/windows.media.editing.mediaclip.originalduration) 속성을 사용 하면 클리핑을 적용 하지 않고 미디어 클립의 기간을 알 수 있습니다.
@@ -107,7 +107,7 @@ ms.locfileid: "89163877"
 
 컴포지션에 배경 트랙을 추가 하려면 오디오 파일을 로드 한 다음 [**BackgroundAudioTrack**](/uwp/api/windows.media.editing.backgroundaudiotrack.createfromfileasync)팩터리 메서드를 호출 하 여 [**BackgroundAudioTrack**](/uwp/api/Windows.Media.Editing.BackgroundAudioTrack) 개체를 만듭니다. 그런 다음 **BackgroundAudioTrack** 를 컴포지션의 [**BackgroundAudioTracks**](/uwp/api/windows.media.editing.mediacomposition.backgroundaudiotracks) 속성에 추가 합니다.
 
-[!code-cs[AddBackgroundAudioTrack](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetAddBackgroundAudioTrack)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetAddBackgroundAudioTrack":::
 
 -   **Mediacomposition** 은 MP3, WAV, FLAC 형식의 배경 오디오 트랙을 지원 합니다.
 
@@ -123,7 +123,7 @@ ms.locfileid: "89163877"
 
 오버레이를 사용 하면 여러 계층의 비디오를 컴퍼지션에서 서로 위에 쌓을 수 있습니다. 컴포지션에는 여러 오버레이 계층이 포함 될 수 있으며, 각 계층에는 여러 오버레이가 포함 될 수 있습니다. **Mediaclip** 를 해당 생성자에 전달 하 여 [**mediaoverlay**](/uwp/api/Windows.Media.Editing.MediaOverlay) 개체를 만듭니다. 오버레이의 위치와 불투명도를 설정 하 고 새 [**MediaOverlayLayer**](/uwp/api/Windows.Media.Editing.MediaOverlayLayer) 를 만든 후 해당 [**층**](/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgioutput2-supportsoverlays) **을 오버레이 목록에 추가** 합니다. 마지막으로 컴퍼지션의 [**OverlayLayers**](/uwp/api/windows.media.editing.mediacomposition.overlaylayers) 목록에 **MediaOverlayLayer** 를 추가 합니다.
 
-[!code-cs[AddOverlay](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetAddOverlay)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetAddOverlay":::
 
 -   계층 내 오버레이는 포함 하는 레이어의 **오버레이** 목록에서 순서에 따라 z 순서로 정렬 됩니다. 목록 내에서 더 높은 인덱스는 하위 인덱스 위에 렌더링 됩니다. 컴퍼지션 내 오버레이 계층의 경우에도 마찬가지입니다. 컴퍼지션의 **OverlayLayers** 목록에서 인덱스가 더 높은 계층이 더 낮은 인덱스 위에 렌더링됩니다.
 
@@ -133,19 +133,19 @@ ms.locfileid: "89163877"
 
 컴포지션의 각 **Mediaclip** 에는 여러 효과를 추가할 수 있는 오디오 및 비디오 효과 목록이 있습니다. 효과는 각각 [**IAudioEffectDefinition**](/uwp/api/Windows.Media.Effects.IAudioEffectDefinition) 및 [**IVideoEffectDefinition**](/uwp/api/Windows.Media.Effects.IVideoEffectDefinition) 를 구현 해야 합니다. 다음 예제에서는 현재 **MediaPlayerElement** 위치를 사용 하 여 현재 표시 된 **mediaclip** 를 선택한 다음 [**VideoStabilizationEffectDefinition**](/uwp/api/Windows.Media.Core.VideoStabilizationEffectDefinition) 의 새 인스턴스를 만들어 미디어 클립의 [**VideoEffectDefinitions**](/uwp/api/windows.media.editing.mediaclip.videoeffectdefinitions) 목록에 추가 합니다.
 
-[!code-cs[AddVideoEffect](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetAddVideoEffect)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetAddVideoEffect":::
 
 ## <a name="save-a-composition-to-a-file"></a>파일에 컴퍼지션 저장
 
 나중에 수정할 파일에 미디어 컴포지션을 직렬화 할 수 있습니다. 출력 파일을 선택한 다음 [**Mediacomposition**](/uwp/api/Windows.Media.Editing.MediaComposition) 메서드 [**SaveAsync**](/uwp/api/windows.media.editing.mediacomposition.saveasync) 를 호출 하 여 컴퍼지션을 저장 합니다.
 
-[!code-cs[SaveComposition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetSaveComposition)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetSaveComposition":::
 
 ## <a name="load-a-composition-from-a-file"></a>파일에서 컴퍼지션 로드
 
 사용자가 컴퍼지션을 보거나 수정할 수 있도록 파일에서 미디어 컴퍼지션을 deserialize 할 수 있습니다. 컴퍼지션 파일을 선택한 다음 [**Mediacomposition**](/uwp/api/Windows.Media.Editing.MediaComposition) 메서드 [**LoadAsync**](/uwp/api/windows.media.editing.mediacomposition.loadasync) 를 호출 하 여 컴퍼지션을 로드 합니다.
 
-[!code-cs[OpenComposition](./code/MediaEditing/cs/MainPage.xaml.cs#SnippetOpenComposition)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaEditing/cs/MainPage.xaml.cs" id="SnippetOpenComposition":::
 
 -   컴퍼지션의 미디어 파일이 앱에서 액세스할 수 있는 위치에 있지 않고 앱에 대 한 [**Storageapplicationpermissions**](/uwp/api/Windows.Storage.AccessCache.StorageApplicationPermissions) 클래스의 [**FutureAccessList**](/uwp/api/windows.storage.accesscache.storageapplicationpermissions.futureaccesslist) 속성에 없는 경우 컴퍼지션을 로드 하면 오류가 throw 됩니다.
 

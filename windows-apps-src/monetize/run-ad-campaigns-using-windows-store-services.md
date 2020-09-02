@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로 모션 API, ad 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b9cb30d2a87d93df1790fb42ad3b4b243f0f713
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 74afbda1cc93aa0602618d6d94efe6baadf59ecb
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164557"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363706"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>스토어 서비스를 사용 하 여 ad 캠페인 실행
 
@@ -86,7 +86,7 @@ Microsoft Store 프로 모션 API의 컨텍스트에서 ad 캠페인은 캠페�
 이러한 개체 및 관련 메서드에 대 한 자세한 내용은 다음 표를 참조 하십시오.
 
 
-| 개체       | Description   |
+| Object       | Description   |
 |---------------|-----------------|
 | 캠페인 |  이 개체는 ad 캠페인을 나타내며, 광고 캠페인의 개체 모델 계층 구조 맨 위에 있습니다. 이 개체는 실행 중인 캠페인 유형 (유료, 집 또는 커뮤니티), 캠페인 목표, 캠페인의 배달 선 및 기타 세부 정보를 식별 합니다. 각 캠페인은 하나의 앱에만 연결할 수 있습니다.<br/><br/>이 개체와 관련 된 메서드에 대 한 자세한 내용은 [ad 캠페인 관리](manage-ad-campaigns.md)를 참조 하세요.<br/><br/>**Note** &nbsp; 참고 &nbsp; 광고 캠페인을 만든 후 [Microsoft Store 분석 API](access-analytics-data-using-windows-store-services.md)에서 [ad 캠페인 성능 데이터 가져오기](get-ad-campaign-performance-data.md) 방법을 사용 하 여 캠페인에 대 한 성능 데이터를 검색할 수 있습니다.  |
 | 배달 라인 | 모든 캠페인에는 재고를 구입 하 고 광고를 배달 하는 데 사용 되는 하나 이상의 배달 회선이 있습니다. 각 배달 라인에 대해 대상을 설정 하 고, 입찰 가격을 설정 하 고, 사용 하려는 creatives에 대 한 예산 및 링크를 설정 하 여 비용을 결정 하는 데 사용할 수 있습니다.<br/><br/>이 개체와 관련 된 메서드에 대 한 자세한 내용은 [ad 캠페인의 배달 선 관리](manage-delivery-lines-for-ad-campaigns.md)를 참조 하세요. |
@@ -102,7 +102,7 @@ Microsoft Store 프로 모션 API의 컨텍스트에서 ad 캠페인은 캠페�
 
 다음 코드 예제에서는 Azure AD 액세스 토큰을 가져오고 c # 콘솔 앱에서 Microsoft Store 프로 모션 API를 호출 하는 방법을 보여 줍니다. 이 코드 예제를 사용 하려면 사용자의 시나리오에 맞게 *tenantId*, *clientId*, *clientSecret*및 *appID* 변수를 적절 한 값에 할당 합니다. 이 예에서는 Newtonsoft.json의 [Json.NET 패키지가](https://www.newtonsoft.com/json) Microsoft Store 프로 모션 API에서 반환 된 Json 데이터를 deserialize 해야 합니다.
 
-[!code-csharp[PromotionsApi](./code/StoreServicesExamples_Promotions/cs/Program.cs#PromotionsApiExample)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreServicesExamples_Promotions/cs/Program.cs" id="PromotionsApiExample":::
 
 ## <a name="related-topics"></a>관련 항목
 

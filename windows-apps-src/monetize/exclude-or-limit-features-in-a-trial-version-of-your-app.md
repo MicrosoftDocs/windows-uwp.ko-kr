@@ -6,12 +6,12 @@ keywords: windows 10, uwp, 평가판, 앱 내 구매, IAP, Windows. ApplicationM
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 73ab8c2a525e741695051025f46da9a98c765a84
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a0ecc6a6d219262513508114cee226d72d91e386
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162487"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362746"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>평가판의 기능 제외 또는 제한
 
@@ -20,7 +20,7 @@ ms.locfileid: "89162487"
 > [!IMPORTANT]
 > 이 문서에서는 [Windows. ApplicationModel. Store](/uwp/api/windows.applicationmodel.store) 네임 스페이스의 멤버를 사용 하 여 평가판 기능을 구현 하는 방법을 보여 줍니다. 이 네임 스페이스는 더 이상 새 기능으로 업데이트 되지 않으므로 대신 [Windows. Store](/uwp/api/windows.services.store) 네임 스페이스를 사용 하는 것이 좋습니다. **Windows. store** 네임 스페이스는 스토어 관리 사용 가능 추가 기능 및 구독과 같은 최신 추가 기능을 지원 하며, 파트너 센터 및 스토어에서 지원 되는 이후 유형의 제품과 기능과 호환 되도록 설계 되었습니다. Windows 10, 버전 1607에 **는 windows 10** **기념일 10.0 버전을 대상으로 하는 프로젝트에만 사용 될 수 있습니다. 빌드 14393)** 또는 Visual Studio의 이후 릴리스. **Windows. Store** 네임 스페이스를 사용 하 여 평가판 기능을 구현 하는 방법에 대 한 자세한 내용은 [이 문서](implement-a-trial-version-of-your-app.md)를 참조 하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 고객이 구매할 기능을 추가할 수 있는 Windows 앱입니다.
 
@@ -66,12 +66,12 @@ ms.locfileid: "89162487"
 지금은 [Currentapp](/uwp/api/Windows.ApplicationModel.Store.CurrentApp)대신 [currentappsimulator](/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator) 를 사용 하 여 시뮬레이트된 라이선스 정보를 얻게 됩니다. 앱의 릴리스 버전을 **스토어**에 제출 하기 전에 코드의 모든 **currentappsimulator** 참조를 **currentapp**으로 바꾸어야 합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTest)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/TrialVersion.cs" id="InitializeLicenseTest":::
 
 다음으로, 앱이 실행 되는 동안 라이선스가 변경 될 때 알림을 수신 하는 이벤트 처리기를 추가 합니다. 평가판 기간이 만료 되거나 고객이 스토어를 통해 앱을 구매 하는 경우 (예:) 앱의 라이선스가 변경 될 수 있습니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseTestWithEvent)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/TrialVersion.cs" id="InitializeLicenseTestWithEvent":::
 
 ## <a name="step-3-code-the-features-in-conditional-blocks"></a>3 단계: 조건부 블록의 기능 코딩
 
@@ -80,7 +80,7 @@ ms.locfileid: "89162487"
 이 예제에서는 응용 프로그램의 기능을 적절 하 게 사용 하거나 사용 하지 않도록 설정할 수 있도록 앱의 라이선스 상태를 평가 하는 방법을 보여 줍니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#ReloadLicense)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/TrialVersion.cs" id="ReloadLicense":::
 
 ## <a name="step-4-get-an-apps-trial-expiration-date"></a>4 단계: 앱 평가판 만료 날짜 가져오기
 
@@ -89,7 +89,7 @@ ms.locfileid: "89162487"
 이 예제의 코드는 앱 평가판 라이선스의 만료 날짜를 가져오는 함수를 정의 합니다. 라이선스가 여전히 유효한 경우 평가판이 만료 될 때까지 남은 일 수를 사용 하 여 만료 날짜를 표시 합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#DisplayTrialVersionExpirationTime)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/TrialVersion.cs" id="DisplayTrialVersionExpirationTime":::
 
 ## <a name="step-5-test-the-features-using-simulated-calls-to-the-license-api"></a>5단계: 라이선스 API 호출을 시뮬레이트하여 기능 테스트
 
@@ -105,7 +105,7 @@ ms.locfileid: "89162487"
 > 앱을 스토어에 제출할 때 앱이 **currentapp** 개체를 사용 해야 하며, 그렇지 않으면 인증에 실패 합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[TrialVersion](./code/InAppPurchasesAndLicenses/cs/TrialVersion.cs#InitializeLicenseRetailWithEvent)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/TrialVersion.cs" id="InitializeLicenseRetailWithEvent":::
 
 ## <a name="step-7-describe-how-the-free-trial-works-to-your-customers"></a>7 단계: 고객에 게 무료 평가판이 어떻게 작동 하는지 설명
 

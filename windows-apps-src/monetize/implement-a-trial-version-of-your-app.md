@@ -6,12 +6,12 @@ keywords: windows 10, uwp, 평가판, 앱에서 바로 구매, Windows. 서비�
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cac33f36e66c1a5f22fc246daab192298e9f876
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c07be51de312ab5a8483cb67537e809d3a55e14a
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89167557"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363645"
 ---
 # <a name="implement-a-trial-version-of-your-app"></a>앱의 평가판 구현
 
@@ -57,7 +57,7 @@ ms.locfileid: "89167557"
 
 무료 평가 기간 동안 및 후에 앱이 어떻게 동작 하는지 설명 해야 합니다. 그러면 고객이 앱의 동작에 영향을 주지 않습니다. 앱을 설명 하는 방법에 대 한 자세한 내용은 [앱 설명 만들기](../publish/create-app-store-listings.md)를 참조 하세요.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 예제에는 다음과 같은 필수 구성 요소가 있습니다.
 * **Windows 10 기념일 Edition (10.0;)을 대상으로 하는 UWP (유니버설 Windows 플랫폼) 앱 용 Visual Studio 프로젝트입니다. 빌드 14393)** 이상 릴리스
@@ -78,7 +78,7 @@ ms.locfileid: "89167557"
 이 시점에서 사용자가 앱을 구매한 경우 라이선스 상태가 변경 되었음을 사용자에 게 피드백을 제공 하는 것이 좋습니다. 앱이 코딩 된 방법 인 경우 사용자에 게 앱을 다시 시작 하도록 요청 해야 할 수도 있습니다. 하지만 가능한 한 원활 하 고 간편 하 게 전환 합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[ImplementTrial](./code/InAppPurchasesAndLicenses_RS1/cs/ImplementTrialPage.xaml.cs#ImplementTrial)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses_RS1/cs/ImplementTrialPage.xaml.cs" id="ImplementTrial":::
 
 전체 샘플 응용 프로그램은 [Store 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Store)을 참조 하세요.
 

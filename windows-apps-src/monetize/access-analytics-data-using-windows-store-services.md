@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp, 스토어 서비스, Microsoft Store analytics API
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8becf9149d0afa888d0024619df06f2103c7bf8b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bf83105dc3b5a49746e0fb6e1d01db4accdb5c41
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158647"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363626"
 ---
 # <a name="access-analytics-data-using-store-services"></a>저장소 서비스를 사용 하 여 분석 데이터 액세스
 
@@ -123,7 +123,7 @@ Azure AD 액세스 토큰이 있으면 Microsoft Store analytics API를 호출�
 다음 코드 예제에서는 Azure AD 액세스 토큰을 가져오고 c # 콘솔 앱에서 Microsoft Store analytics API를 호출 하는 방법을 보여 줍니다. 이 코드 예제를 사용 하려면 사용자의 시나리오에 맞게 *tenantId*, *clientId*, *clientSecret*및 *appID* 변수를 적절 한 값에 할당 합니다. 이 예에서는 Newtonsoft.json의 [Json.NET 패키지가](https://www.newtonsoft.com/json) MICROSOFT STORE analytics API에서 반환 된 Json 데이터를 deserialize 해야 합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[AnalyticsApi](./code/StoreServicesExamples_Analytics/cs/Program.cs#AnalyticsApiExample)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreServicesExamples_Analytics/cs/Program.cs" id="AnalyticsApiExample":::
 
 ## <a name="error-responses"></a>오류 응답
 

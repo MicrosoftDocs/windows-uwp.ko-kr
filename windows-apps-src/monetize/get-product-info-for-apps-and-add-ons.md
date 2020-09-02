@@ -6,12 +6,12 @@ ms.date: 02/08/2018
 ms.topic: article
 keywords: windows 10, uwp, 앱 내 구매, IAPs, 추가 기능, Windows. 서비스 저장소
 ms.localizationpriority: medium
-ms.openlocfilehash: a46d9b0049e0dc9456a36c726a611cbaf00e9616
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 63072c243e4528d4625fe300697b1edbff64383a
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164607"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363136"
 ---
 # <a name="get-product-info-for-apps-and-add-ons"></a>앱 및 추가 기능에 대한 제품 정보 가져오기
 
@@ -22,7 +22,7 @@ ms.locfileid: "89164607"
 > [!NOTE]
 > Windows 10, 버전 1607에 **는 windows 10** **기념일 10.0 버전을 대상으로 하는 프로젝트에만 사용 될 수 있습니다. 빌드 14393)** 또는 Visual Studio의 이후 릴리스. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우에는 windows. **store** 네임 스페이스 대신 [windows](/uwp/api/windows.applicationmodel.store) 를 사용 해야 합니다. 자세한 내용은 [이 문서](in-app-purchases-and-trials-using-the-windows-applicationmodel-store-namespace.md)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이러한 예제에는 다음과 같은 필수 구성 요소가 있습니다.
 * **Windows 10 기념일 Edition (10.0;)을 대상으로 하는 UWP (유니버설 Windows 플랫폼) 앱 용 Visual Studio 프로젝트입니다. 빌드 14393)** 이상 릴리스
@@ -42,7 +42,7 @@ ms.locfileid: "89164607"
 현재 앱에 대 한 제품 정보를 저장 하려면 [getareproduct Forcurrentappasync](/uwp/api/windows.services.store.storecontext.getstoreproductforcurrentappasync) 메서드를 사용 합니다. 가격과 같은 정보를 얻는 데 사용할 수 있는 사용자 [제품](/uwp/api/windows.services.store.storeproduct) 개체를 반환 하는 비동기 메서드입니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[GetProductInfo](./code/InAppPurchasesAndLicenses_RS1/cs/GetAppInfoPage.xaml.cs#GetAppInfo)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses_RS1/cs/GetAppInfoPage.xaml.cs" id="GetAppInfo":::
 
 ## <a name="get-info-for-add-ons-with-known-store-ids-that-are-associated-with-the-current-app"></a>현재 앱과 연결 된 알려진 저장소 Id를 사용 하 여 추가 기능에 대 한 정보를 가져옵니다.
 
@@ -54,7 +54,7 @@ ms.locfileid: "89164607"
 이 예제에서는 현재 앱과 연결 된 지정 된 저장소 Id를 사용 하 여 내구성이 있는 추가 기능에 대 한 정보를 검색 합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[GetProductInfo](./code/InAppPurchasesAndLicenses_RS1/cs/GetProductInfoPage.xaml.cs#GetProductInfo)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses_RS1/cs/GetProductInfoPage.xaml.cs" id="GetProductInfo":::
 
 ## <a name="get-info-for-add-ons-that-are-available-for-purchase-from-the-current-app"></a>현재 앱에서 구매할 수 있는 추가 기능에 대 한 정보를 가져옵니다.
 
@@ -66,7 +66,7 @@ ms.locfileid: "89164607"
 다음 예제에서는 현재 앱에서 구매할 수 있는 모든 내구성이 있는 추가 기능, 저장소 관리 사용 가능 추가 기능 및 개발자가 관리 하는 사용 가능 추가 기능에 대 한 정보를 검색 합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[GetProductInfo](./code/InAppPurchasesAndLicenses_RS1/cs/GetAddOnInfoPage.xaml.cs#GetAddOnInfo)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses_RS1/cs/GetAddOnInfoPage.xaml.cs" id="GetAddOnInfo":::
 
 
 ## <a name="get-info-for-add-ons-for-the-current-app-that-the-user-has-purchased"></a>사용자가 구매한 현재 앱의 추가 기능에 대 한 정보를 가져옵니다.
@@ -79,7 +79,7 @@ ms.locfileid: "89164607"
 다음 예에서는 지정 된 [저장소 id](in-app-purchases-and-trials.md#store_ids)를 사용 하 여 내구성이 있는 추가 기능에 대 한 정보를 검색 합니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[GetProductInfo](./code/InAppPurchasesAndLicenses_RS1/cs/GetUserCollectionPage.xaml.cs#GetUserCollection)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses_RS1/cs/GetUserCollectionPage.xaml.cs" id="GetUserCollection":::
 
 ## <a name="related-topics"></a>관련 항목
 

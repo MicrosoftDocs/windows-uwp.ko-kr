@@ -6,12 +6,12 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp, opencv, 고 비트맵
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b1808c6940cbfc03c2572bd72ecf0c57cfd5010
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a917c4efc8da8fbdabbdc753aacf23724ae17055
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173677"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363806"
 ---
 # <a name="process-bitmaps-with-opencv"></a>OpenCV로 비트맵 처리
 
@@ -51,21 +51,21 @@ ms.locfileid: "89173677"
 
 OpenCVHelper 헤더 파일에 다음 코드를 붙여 넣습니다. 이 코드에는 설치한 *Core* 및 *이미지 프로시저* 패키지에 대 한 OpenCV 헤더 파일이 포함 되어 있으며, 다음 단계에 표시 되는 세 가지 메서드를 선언 합니다.
 
-[!code-cpp[OpenCVHelperHeader](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.h#SnippetOpenCVHelperHeader)]
+:::code language="cpp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.h" id="SnippetOpenCVHelperHeader":::
 
 OpenCVHelper 파일의 기존 내용을 삭제 한 후 다음 include 지시문을 추가 합니다. 
 
-[!code-cpp[OpenCVHelperInclude](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp#SnippetOpenCVHelperInclude)]
+:::code language="cpp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp" id="SnippetOpenCVHelperInclude":::
 
 Include 지시문 뒤에 다음 **using** 지시문을 추가 합니다. 
 
-[!code-cpp[OpenCVHelperUsing](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp#SnippetOpenCVHelperUsing)]
+:::code language="cpp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp" id="SnippetOpenCVHelperUsing":::
 
 그런 다음 **GetPointerToPixelData** 메서드를 OpenCVHelper에 추가 합니다. 이 메서드는 데이터 **[비트맵](/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap)** 을 사용 하 고 일련의 변환을 통해 기본 데이터 버퍼에 대 한 포인터를 **char** 배열로 가져올 수 있는 픽셀 데이터의 COM 인터페이스 표현을 가져옵니다. 
 
 먼저,이 픽셀 데이터를 포함 하는 **[BitmapBuffer](/uwp/api/windows.graphics.imaging.bitmapbuffer)** 는, OpenCV 라이브러리에서 해당 픽셀 데이터를 수정할 수 있도록 읽기/쓰기 버퍼를 요청 하는 **[lockbuffer](/uwp/api/windows.graphics.imaging.softwarebitmap.lockbuffer)** 를 호출 하 여 가져옵니다.  **[CreateReference](/uwp/api/windows.graphics.imaging.bitmapbuffer.CreateReference)** 는 **[IMemoryBufferReference](/uwp/api/windows.foundation.imemorybufferreference)** 개체를 가져오기 위해 호출 됩니다. 그런 다음 **IMemoryBufferByteAccess** 인터페이스는 **IInspectable**로 캐스팅 되 고, 모든 Windows 런타임 클래스의 기본 인터페이스 이며, **[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))** 는 **char** 배열로 픽셀 데이터 버퍼를 가져올 수 있도록 하는 **[IMemoryBufferByteAccess](/previous-versions/mt297505(v=vs.85))** COM 인터페이스를 가져오기 위해 호출 됩니다. 마지막으로 **[IMemoryBufferByteAccess:: GetBuffer](/windows/desktop/WinRT/imemorybufferbyteaccess-getbuffer)** 를 호출 하 여 **char** 배열을 채웁니다. 이 메서드의 변환 단계가 실패 하는 경우이 메서드는 **false**를 반환 하 여 추가 처리를 계속할 수 없음을 나타냅니다.
 
-[!code-cpp[OpenCVHelperGetPointerToPixelData](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp#SnippetOpenCVHelperGetPointerToPixelData)]
+:::code language="cpp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp" id="SnippetOpenCVHelperGetPointerToPixelData":::
 
 다음으로, 아래에 표시 된 **Trconvert** 메서드 메서드를 추가 합니다. 이 메서드는 데이터 버퍼를 나타내는 데 사용 되는 행렬 개체 인 데이터 **비트맵** 을 사용 하 여에 **지 개체로 변환** 하려고 시도 합니다. 이 메서드는 위에 정의 된 **GetPointerToPixelData** 메서드를 호출 하 여 픽셀 데이터 버퍼의 **char** 배열 표현을 가져옵니다. 이 작업이 성공 하면 **이 클래스의** 생성자가 호출 **되어 소스 개체** 의 픽셀 너비와 높이를 전달 합니다. 
 
@@ -74,11 +74,11 @@ Include 지시문 뒤에 다음 **using** 지시문을 추가 합니다.
 
 추가 처리가이 버퍼의 복사본이 **아니라,이** 버퍼에서 참조 하는 동일한 데이터 픽셀 데이터 버퍼에서 작동 **하도록 생성 된** 서 수 개체의 단순 복사본이 메서드에서 반환 됩니다.
 
-[!code-cpp[OpenCVHelperTryConvert](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp#SnippetOpenCVHelperTryConvert)]
+:::code language="cpp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp" id="SnippetOpenCVHelperTryConvert":::
 
 마지막으로,이 예제 도우미 클래스는 위에서 정의한 **Trconvert** 메서드를 사용 하 여 흐림 작업을 위한 원본 비트맵과 대상 비트맵을 나타내는 대 **만 개체를** 검색 한 다음, OpenCV 이미지 프로시저 라이브러리에서 **흐리게** 메서드를 호출 하는 단일 이미지 처리 메서드인 **흐림을**구현 합니다. **흐림** 효과에 대 한 다른 매개 변수는 X 및 Y 방향의 흐림 효과의 크기를 지정 합니다.
 
-[!code-cpp[OpenCVHelperBlur](./code/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp#SnippetOpenCVHelperBlur)]
+:::code language="cpp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/OpenCVBridge/OpenCVHelper.cpp" id="SnippetOpenCVHelperBlur":::
 
 
 ## <a name="a-simple-softwarebitmap-opencv-example-using-the-helper-component"></a>도우미 구성 요소를 사용 하는 간단한 고 비트맵 OpenCV 예
@@ -94,9 +94,9 @@ Include 지시문 뒤에 다음 **using** 지시문을 추가 합니다.
 
 이 샘플 코드는 기본 프로젝트 템플릿에 포함 된 네임 스페이스 외에도 다음 네임 스페이스의 Api를 사용 합니다.
 
-[!code-cs[OpenCVMainPageUsing](./code/ImagingWin10/cs/MainPage.OpenCV.xaml.cs#SnippetOpenCVMainPageUsing)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.OpenCV.xaml.cs" id="SnippetOpenCVMainPageUsing":::
 
-[!code-cs[OpenCVBlur](./code/ImagingWin10/cs/MainPage.OpenCV.xaml.cs#SnippetOpenCVBlur)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.OpenCV.xaml.cs" id="SnippetOpenCVBlur":::
 
 ## <a name="related-topics"></a>관련 항목
 

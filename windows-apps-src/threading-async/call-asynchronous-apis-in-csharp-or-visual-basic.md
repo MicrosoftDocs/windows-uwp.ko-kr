@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: 'windows 10, uwp, c #, Visual Basic, 비동기'
 ms.localizationpriority: medium
-ms.openlocfilehash: 67037395e0505c0fce22da5ed8f5fe62a39340e2
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 07813404abb4765b3e1d15bd76082a90da0f40de
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155277"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362526"
 ---
 # <a name="call-asynchronous-apis-in-c-or-visual-basic"></a>C# 또는Visual Basic에서 비동기식 API 호출
 
@@ -33,8 +33,8 @@ UWP의 대부분의 비동기 Api에는 동기 대응 항목이 없으므로 UWP
 이 예제에서는 비동기 메서드인 [**SyndicationClient RetrieveFeedAsync**](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)를 호출 하 고 결과를 대기 하 여 블로그의 블로그 게시물 목록을 가져옵니다.
 
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
-[!code-csharp[Main](./AsyncSnippets/csharp/MainPage.xaml.cs#SnippetDownloadRSS)]
-[!code-vb[Main](./AsyncSnippets/vbnet/MainPage.xaml.vb#SnippetDownloadRSS)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/threading-async/AsyncSnippets/cs/MainPage.xaml.cs" id="SnippetDownloadRSS":::
+:::code language="vb" source="~/../snippets-windows/windows-uwp/threading-async/AsyncSnippets/vb/MainPage.xaml.vb" id="SnippetDownloadRSS":::
 
 이 예에 대 한 몇 가지 중요 한 사항이 있습니다. 첫 번째 줄에서는 `SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri)` [**RetrieveFeedAsync**](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)비동기 메서드를 호출 하는 **wait** 연산자를 사용 합니다. **Wait** 연산자는 컴파일러에 비동기 메서드를 호출 하는 것으로 간주할 수 있습니다. 이렇게 하면 컴파일러가 추가 작업을 수행 하 게 됩니다. 그런 다음 이벤트 처리기의 선언에 **async**키워드가 포함 됩니다. **Wait** 연산자를 사용 하는 메서드의 메서드 선언에이 키워드를 포함 해야 합니다.
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, openCV
 ms.localizationpriority: medium
-ms.openlocfilehash: 2128313c48f8d279a23cf63278b3e853c00348e4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f78197b6108a81f3335dc202585127105bd94339
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175657"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363725"
 ---
 # <a name="use-the-open-source-computer-vision-library-opencv-with-mediaframereader"></a>MediaFrameReader에서 OpenCV (Open Source Computer Vision Library) 사용
 
@@ -37,7 +37,7 @@ ms.locfileid: "89175657"
 ## <a name="find-available-frame-source-groups"></a>사용 가능한 프레임 소스 그룹 찾기
 먼저 미디어 프레임을 가져올 미디어 프레임 원본 그룹을 찾아야 합니다. **[MediafFindAllAsync](/uwp/api/windows.media.capture.frames.mediaframesourcegroup.FindAllAsync)** 를 호출 하 여 현재 장치에서 사용 가능한 원본 그룹 목록을 가져옵니다. 그런 다음 앱 시나리오에 필요한 센서 유형을 제공 하는 원본 그룹을 선택 합니다. 이 예에서는 RGB 카메라의 프레임을 제공 하는 소스 그룹만 있으면 됩니다.
 
-[!code-cs[OpenCVFrameSourceGroups](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameSourceGroups)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.OpenCV.xaml.cs" id="SnippetOpenCVFrameSourceGroups":::
 
 ## <a name="initialize-the-mediacapture-object"></a>MediaCapture 개체를 초기화 합니다.
 다음으로, **MediaCaptureInitializationSettings**의 **[sourcegroup](/uwp/api/windows.media.capture.mediacaptureinitializationsettings.SourceGroup)** 속성을 설정 하 여 이전 단계에서 선택한 프레임 원본 그룹을 사용 하도록 **MediaCapture** 개체를 초기화 해야 합니다.
@@ -47,20 +47,20 @@ ms.locfileid: "89175657"
 
 **MediaCapture** 개체가가 초기화 된 후 **[FrameSources](/uwp/api/windows.media.capture.mediacapture.FrameSources)** 속성에 액세스 하 여 RGB 프레임 소스에 대 한 참조를 가져옵니다.
 
-[!code-cs[OpenCVInitMediaCapture](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVInitMediaCapture)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.OpenCV.xaml.cs" id="SnippetOpenCVInitMediaCapture":::
 
 ## <a name="initialize-the-mediaframereader"></a>MediaFrameReader 초기화
 다음으로, 이전 단계에서 검색 한 RGB 프레임 소스에 대 한 [**MediaFrameReader**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameReader) 를 만듭니다. 적절 한 프레임 속도로 유지 하기 위해 센서 해상도 보다 해상도가 낮은 프레임을 처리할 수 있습니다. 이 예제에서는 **[MediaCapture CreateFrameReaderAsync](/uwp/api/windows.media.capture.mediacapture.createframereaderasync)** 메서드에 선택적 **[BitmapSize](/uwp/api/windows.graphics.imaging.bitmapsize)** 인수를 제공 하 여 프레임 판독기에서 제공 하는 프레임의 크기를 640 x 480 픽셀로 조정 하도록 요청 합니다.
 
 프레임 판독기를 만든 후 **[FrameArrived](/uwp/api/windows.media.capture.frames.mediaframereader.FrameArrived)** 이벤트에 대 한 처리기를 등록 합니다. 그런 다음 **FrameRenderer** helper 클래스에서 처리 된 이미지를 표시 하는 데 사용 하는 새 **[SoftwareBitmapSource](/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource)** 개체를 만듭니다. 그런 다음 **FrameRenderer**에 대 한 생성자를 호출 합니다. OpenCVBridge Windows 런타임 구성 요소에 정의 된 **OpenCVHelper** 클래스의 인스턴스를 초기화 합니다. 이 도우미 클래스는 **FrameArrived** 처리기에서 각 프레임을 처리 하는 데 사용 됩니다. 마지막으로 **[StartAsync](/uwp/api/windows.media.capture.frames.mediaframereader.StartAsync)** 를 호출 하 여 프레임 판독기를 시작 합니다.
 
-[!code-cs[OpenCVFrameReader](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameReader)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.OpenCV.xaml.cs" id="SnippetOpenCVFrameReader":::
 
 
 ## <a name="handle-the-framearrived-event"></a>FrameArrived 이벤트를 처리 합니다.
 **FrameArrived** 이벤트는 프레임 판독기에서 새 프레임을 사용할 수 있을 때마다 발생 합니다. **[TryAcquireLatestFrame](/uwp/api/windows.media.capture.frames.mediaframereader.TryAcquireLatestFrame)** 를 호출 하 여 프레임 (있는 경우)을 가져옵니다. **[MediaFrameReference](/uwp/api/windows.media.capture.frames.mediaframereference)** 에서이 **비트맵** 을 가져옵니다. 이 예제에서 사용 된 **CVHelper** 클래스는 미리 증가 된 알파를 사용 하 여 BRGA8 픽셀 형식을 사용 해야 합니다. 이벤트로 전달 되는 프레임의 형식이 다른 경우에는 잘못 된 **형식으로 변환** 합니다. 다음으로, 흐림 작업의 대상으로 사용할는이 **비트맵** 을 만듭니다. 소스 이미지 속성은 형식이 일치 하는 비트맵을 만들기 위해 생성자에 대 한 인수로 사용 됩니다. 도우미 클래스 **흐림** 메서드를 호출 하 여 프레임을 처리 합니다. 마지막으로, 흐림 작업의 출력 이미지를 **PresentSoftwareBitmap**에 전달 합니다. **FrameRenderer** helper 클래스의 메서드는 초기화 된 XAML **이미지** 컨트롤의 이미지를 표시 합니다.
 
-[!code-cs[OpenCVFrameArrived](./code/Frames_Win10/Frames_Win10/MainPage.OpenCV.xaml.cs#SnippetOpenCVFrameArrived)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/MainPage.OpenCV.xaml.cs" id="SnippetOpenCVFrameArrived":::
 
 ## <a name="related-topics"></a>관련 항목
 

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ca2a5abe5c0a7f60246322dd81fad9af8f0def77
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c020a2ca66c81bee81813402e546fc01ce77c7f3
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157497"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362566"
 ---
 # <a name="image-metadata"></a>이미지 메타데이터
 
@@ -23,11 +23,11 @@ ms.locfileid: "89157497"
 
 [**StorageFile**](/uwp/api/windows.storage.storagefile.properties) 속성은 파일에 대 한 내용 관련 정보에 대 한 액세스를 제공 하는 [**Storageitemcontentproperties**](/uwp/api/Windows.Storage.FileProperties.StorageItemContentProperties) 개체를 반환 합니다. [**GetImagePropertiesAsync**](/uwp/api/windows.storage.fileproperties.storageitemcontentproperties.getimagepropertiesasync)를 호출 하 여 이미지 관련 속성을 가져옵니다. 반환 된 [**Imageproperties**](/uwp/api/Windows.Storage.FileProperties.ImageProperties) 개체는 이미지 제목 및 캡처 날짜와 같은 기본 이미지 메타 데이터 필드를 포함 하는 멤버를 노출 합니다.
 
-[!code-cs[GetImageProperties](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetGetImageProperties)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetGetImageProperties":::
 
 더 큰 파일 메타 데이터 집합에 액세스 하려면 고유한 문자열 식별자를 사용 하 여 검색할 수 있는 파일 메타 데이터 속성 집합인 Windows 속성 시스템을 사용 합니다. 문자열 목록을 만들고 검색 하려는 각 속성에 대 한 식별자를 추가 합니다. [**RetrievePropertiesAsync**](/uwp/api/windows.storage.fileproperties.imageproperties.retrievepropertiesasync) 메서드는이 문자열 목록을 사용 하 고 키/값 쌍의 사전을 반환 합니다. 여기서 키는 속성 식별자이 고 값은 속성 값입니다.
 
-[!code-cs[GetWindowsProperties](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetGetWindowsProperties)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetGetWindowsProperties":::
 
 -   각 속성에 대 한 식별자 및 형식을 포함 하 여 Windows 속성의 전체 목록은 [Windows 속성](/windows/desktop/properties/props)을 참조 하세요.
 
@@ -41,11 +41,11 @@ GeotagHelper는 메타 데이터 형식을 수동으로 구문 분석 하거나 
 
 이전에 지리적 위치 Api 또는 다른 소스를 사용 하 여 이미지에 태그를 지정할 위치를 나타내는 [**Geopoint**](/uwp/api/Windows.Devices.Geolocation.Geopoint) 개체가 이미 있는 경우 geotag 데이터를 설정 하 여 [**GeStorageFile**](/uwp/api/Windows.Storage.StorageFile) 와 **geopoint**를 전달할 [**GeotagHelper.SetGeotagAsync**](/uwp/api/windows.storage.fileproperties.geotaghelper.setgeotagasync) 수 있습니다 (영문).
 
-[!code-cs[SetGeoDataFromPoint](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetSetGeoDataFromPoint)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetSetGeoDataFromPoint":::
 
 장치의 현재 위치를 사용 하 여 geotag 데이터를 설정 하려면 새 [**geolocator**](/uwp/api/Windows.Devices.Geolocation.Geolocator) 개체를 만들고, **geolocator** 및 태그를 지정할 파일에를 전달 하 여 [**Ge\agerfromgeolocagasync**](/uwp/api/windows.storage.fileproperties.geotaghelper.setgeotagfromgeolocatorasync) 를 호출 합니다.
 
-[!code-cs[SetGeoDataFromGeolocator](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetSetGeoDataFromGeolocator)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetSetGeoDataFromGeolocator":::
 
 -   [**Setgeotagfromgeolocatorasync**](/uwp/api/windows.storage.fileproperties.geotaghelper.setgeotagfromgeolocatorasync) API를 사용 하려면 앱 매니페스트에 **위치** 장치 기능을 포함 해야 합니다.
 
@@ -55,7 +55,7 @@ GeotagHelper는 메타 데이터 형식을 수동으로 구문 분석 하거나 
 
 이미지 파일의 geotagged 위치를 나타내는 GeoPoint를 가져오려면 [**Getgeotagasync**](/uwp/api/windows.storage.fileproperties.geotaghelper.getgeotagasync)를 호출 합니다.
 
-[!code-cs[GetGeoData](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetGetGeoData)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetGetGeoData":::
 
 ## <a name="decode-and-encode-image-metadata"></a>이미지 메타 데이터 디코딩 및 인코딩
 
@@ -65,7 +65,7 @@ GeotagHelper는 메타 데이터 형식을 수동으로 구문 분석 하거나 
 
 디코더가 있으면 Windows 속성 식별자 문자열 또는 WIC 메타 데이터 쿼리를 사용 하 여 문자열 목록을 만들고 검색 하려는 각 메타 데이터 속성에 대 한 새 항목을 추가 합니다. 지정 된 속성을 요청 하려면 디코더의 [**BitmapProperties**](/uwp/api/Windows.Graphics.Imaging.BitmapProperties) 멤버에 대해 GetPropertiesAsync 메서드를 호출 [**BitmapPropertiesView.**](/uwp/api/windows.graphics.imaging.bitmappropertiesview.getpropertiesasync) 속성은 속성 이름 또는 경로와 속성 값을 포함 하는 키/값 쌍의 사전에 반환 됩니다.
 
-[!code-cs[ReadImageMetadata](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetReadImageMetadata)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetReadImageMetadata":::
 
 -   WIC 메타 데이터 쿼리 언어 및 지원 되는 속성에 대 한 자세한 내용은 [wic 이미지 형식 네이티브 메타 데이터 쿼리](/windows/desktop/wic/-wic-native-image-format-metadata-queries)를 참조 하세요.
 
@@ -76,7 +76,7 @@ GeotagHelper는 메타 데이터 형식을 수동으로 구문 분석 하거나 
 
 설정 하려는 속성 값을 포함 하는 [**BitmapPropertySet**](/uwp/api/Windows.Graphics.Imaging.BitmapPropertySet) 개체를 만듭니다. 속성 값을 나타내는 [**BitmapTypedValue**](/uwp/api/Windows.Graphics.Imaging.BitmapTypedValue) 개체를 만듭니다. 이 개체는 **개체** 를 값의 형식을 정의 하는 [**PropertyType**](/uwp/api/Windows.Foundation.PropertyType) 열거형의 멤버 및 값으로 사용 합니다. **BitmapPropertySet** 에 **BitmapTypedValue** 를 추가 하 고 BitmapProperties를 호출 하 여 인코더가 속성을 스트림에 쓰도록 합니다 [**.**](/uwp/api/windows.graphics.imaging.bitmapproperties.setpropertiesasync)
 
-[!code-cs[WriteImageMetadata](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetWriteImageMetadata)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetWriteImageMetadata":::
 
 -   이미지 파일 형식에 대해 지원 되는 속성에 대 한 자세한 내용은 [Windows 속성](/windows/desktop/properties/props), [사진 메타 데이터 정책](/windows/desktop/wic/photo-metadata-policies)및 [WIC 이미지 형식 네이티브 메타 데이터 쿼리](/windows/desktop/wic/-wic-native-image-format-metadata-queries)를 참조 하세요.
 

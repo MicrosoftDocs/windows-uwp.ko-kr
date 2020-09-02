@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 927ff8ceb8dc29400f5a7d0ede42b3ee8b703efb
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 28ed15ab49f3ec33e382d28c14ffd43bb5c8779d
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175667"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363746"
 ---
 # <a name="transcode-media-files"></a>미디어 파일 코드 변환
 
@@ -25,13 +25,13 @@ ms.locfileid: "89175667"
 
 기본 프로젝트 템플릿에서 참조 하는 네임 스페이스 외에도이 문서의 코드를 사용 하 여 미디어 파일을 트랜스 코딩 하기 위해 이러한 네임 스페이스를 참조 해야 합니다.
 
-[!code-cs[Using](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetUsing)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/TranscodeWin10/cs/MainPage.xaml.cs" id="SnippetUsing":::
 
 ## <a name="select-source-and-destination-files"></a>원본 및 대상 파일 선택
 
 앱이 코드를 변환 하는 소스 및 대상 파일을 결정 하는 방식은 구현에 따라 달라 집니다. 이 예제에서는 [**Fileopenpicker**](/uwp/api/Windows.Storage.Pickers.FileOpenPicker) 와 [**FileSavePicker**](/uwp/api/Windows.Storage.Pickers.FileSavePicker) 를 사용 하 여 사용자가 원본과 대상 파일을 선택할 수 있도록 합니다.
 
-[!code-cs[TranscodeGetFile](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetTranscodeGetFile)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/TranscodeWin10/cs/MainPage.xaml.cs" id="SnippetTranscodeGetFile":::
 
 ## <a name="create-a-media-encoding-profile"></a>미디어 인코딩 프로필 만들기
 
@@ -62,7 +62,7 @@ ms.locfileid: "89175667"
 
 다음 코드에서는 MP4 비디오에 대 한 프로필을 만듭니다.
 
-[!code-cs[TranscodeMediaProfile](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetTranscodeMediaProfile)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/TranscodeWin10/cs/MainPage.xaml.cs" id="SnippetTranscodeMediaProfile":::
 
 Static [**CreateMp4**](/uwp/api/windows.media.mediaproperties.mediaencodingprofile.createmp4) 메서드는 MP4 인코딩 프로필을 만듭니다. 이 메서드에 대 한 매개 변수는 비디오에 대 한 대상 해상도를 제공 합니다. 이 경우 [**VideoEncodingQuality hd720p**](/uwp/api/Windows.Media.MediaProperties.VideoEncodingQuality) 는 초당 30 개 프레임에서 1280 x 720 픽셀을 의미 합니다. ("720p"는 프레임 당 프로그레시브 스캔 라인 720을 나타냅니다.) 미리 정의 된 프로필을 만드는 다른 방법은 모두이 패턴을 따릅니다.
 
@@ -72,10 +72,10 @@ Static [**CreateMp4**](/uwp/api/windows.media.mediaproperties.mediaencodingprofi
 
 파일을 트랜스 코딩 하려면 새 [**MediaTranscoder**](/uwp/api/Windows.Media.Transcoding.MediaTranscoder) 개체를 만들고 [**PrepareFileTranscodeAsync**](/uwp/api/windows.media.transcoding.mediatranscoder.preparefiletranscodeasync) 메서드를 호출 합니다. 원본 파일, 대상 파일 및 인코딩 프로필을 전달 합니다. 그런 다음 비동기 코드 변환 작업에서 반환 된 [**PrepareTranscodeResult**](/uwp/api/Windows.Media.Transcoding.PrepareTranscodeResult) 개체에 대해 [**TranscodeAsync**](/uwp/api/windows.media.transcoding.preparetranscoderesult.transcodeasync) 메서드를 호출 합니다.
 
-[!code-cs[TranscodeTranscodeFile](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetTranscodeTranscodeFile)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/TranscodeWin10/cs/MainPage.xaml.cs" id="SnippetTranscodeTranscodeFile":::
 
 ## <a name="respond-to-transcoding-progress"></a>트랜스 코딩 진행률에 응답
 
 비동기 [**TranscodeAsync**](/uwp/api/windows.media.transcoding.preparetranscoderesult.transcodeasync) 의 진행률이 변경 될 때 응답 하도록 이벤트를 등록할 수 있습니다. 이러한 이벤트는 UWP (비동기 프로그래밍 프레임 유니버설 Windows 플랫폼 워크) 앱의 일부 이며 트랜스 코딩 API에 국한 되지 않습니다.
 
-[!code-cs[TranscodeCallbacks](./code/TranscodeWin10/cs/MainPage.xaml.cs#SnippetTranscodeCallbacks)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/TranscodeWin10/cs/MainPage.xaml.cs" id="SnippetTranscodeCallbacks":::

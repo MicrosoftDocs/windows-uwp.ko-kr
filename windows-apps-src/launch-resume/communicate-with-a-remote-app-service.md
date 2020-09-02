@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 연결 된 장치, 원격 시스템, 로마, 프로젝트 로마, 백그라운드 작업, app service
 ms.localizationpriority: medium
-ms.openlocfilehash: ccd0de91279b4466b662a5b5e85bbab55d0f7712
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 779205a47b85cf9f9a0aec9db910b97995dc2cd8
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156047"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363916"
 ---
 # <a name="communicate-with-a-remote-app-service"></a>원격 앱 서비스와 통신
 
@@ -60,7 +60,7 @@ URI를 사용 하 여 원격 장치에서 앱을 시작 하는 것 외에도 원
 
 이 단원의 코드를 그대로 실행 하려면 다음 **using 문을 사용** 해야 합니다.
 
-[!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetUsings)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/RemoteAppService/cs/MainPage.xaml.cs" id="SnippetUsings":::
 
 
 앱 서비스를 로컬로 호출 하는 것 처럼 먼저 [**AppServiceConnection**](/uwp/api/Windows.ApplicationModel.AppService.AppServiceConnection) 개체를 인스턴스화해야 합니다. 이 프로세스는 [앱 서비스 만들기 및 사용](how-to-create-and-consume-an-app-service.md)에서 자세히 설명합니다. 이 예제에서 대상으로 하는 app service는 난수 생성기 서비스입니다.
@@ -68,11 +68,11 @@ URI를 사용 하 여 원격 장치에서 앱을 시작 하는 것 외에도 원
 > [!NOTE]
 > [RemoteSystem](/uwp/api/Windows.System.RemoteSystems.RemoteSystem) 개체는 다음 메서드를 호출 하는 코드 내의 일부 방법으로 이미 획득 한 것으로 가정 합니다. 이를 설정 하는 방법에 대 한 지침은 [원격 앱 시작](launch-a-remote-app.md) 을 참조 하세요.
 
-[!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetAppService)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/RemoteAppService/cs/MainPage.xaml.cs" id="SnippetAppService":::
 
 다음으로, 의도 된 원격 장치에 대해 [**RemoteSystemConnectionRequest**](/uwp/api/Windows.System.RemoteSystems.RemoteSystemConnectionRequest) 개체가 생성 됩니다. 그런 다음 해당 장치에 대 한 **AppServiceConnection** 를 여는 데 사용 됩니다. 아래 예제에서 오류 처리 및 보고는 간결 하 게 하기 위해 크게 간소화 되었습니다.
 
-[!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetRemoteConnection)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/RemoteAppService/cs/MainPage.xaml.cs" id="SnippetRemoteConnection":::
 
 이제 원격 컴퓨터의 앱 서비스에 대한 연결이 열려 있습니다.
 
@@ -80,7 +80,7 @@ URI를 사용 하 여 원격 장치에서 앱을 시작 하는 것 외에도 원
 
 여기에서 [**Valueset**](/uwp/api/windows.foundation.collections.valueset) 개체 형식으로 서비스와 메시지를 주고받을 수 있습니다. 자세한 내용은 [app service 만들기 및 사용](how-to-create-and-consume-an-app-service.md)을 참조 하세요. 난수 생성기 서비스는 키와 키를 사용 하 여 두 개의 정수를 사용 하 고 `"minvalue"` `"maxvalue"` 해당 범위 내에서 정수를 임의로 선택 하 고 키를 사용 하 여 호출 프로세스로 반환 합니다 `"Result"` .
 
-[!code-cs[Main](./code/RemoteAppService/MainPage.xaml.cs#SnippetSendMessage)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/launch-resume/RemoteAppService/cs/MainPage.xaml.cs" id="SnippetSendMessage":::
 
 이제 대상 호스트 장치에서 app service에 연결 하 고 해당 장치에서 작업을 실행 한 후 클라이언트 장치에 응답 하 여 데이터를 수신 했습니다.
 

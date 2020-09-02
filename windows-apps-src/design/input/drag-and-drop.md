@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9958aab20c13f0104ca1a52c6fccda33c00f6281
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 0e661eb0859e9720e31fabb6e5a7b33857de28b7
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159967"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363676"
 ---
 # <a name="drag-and-drop"></a>끌어서 놓기
 
@@ -43,7 +43,7 @@ ms.locfileid: "89159967"
 
 [**Candrag**](/uwp/api/windows.ui.xaml.uielement.candrag)를 설정 하는 방법은 다음과 같습니다.
 
-[!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDragArea)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/design/input/drag_drop/cs/MainPage.xaml" id="SnippetDragArea":::
 
 UI를 사용자 지정 하려는 경우 (이 문서의 뒷부분에서 설명)에는 다른 작업을 수행 하 여 끌기를 허용할 필요가 없습니다. 삭제 하려면 몇 가지 추가 단계가 필요 합니다.
 
@@ -59,14 +59,14 @@ UI를 사용자 지정 하려는 경우 (이 문서의 뒷부분에서 설명)�
 
 다음 태그는 XAML에서 [**Allowdrop**](/uwp/api/windows.ui.xaml.uielement.allowdrop) 을 사용 하 여 앱의 특정 영역을 삭제 하는 데 유효한 것으로 설정 하는 방법을 보여 줍니다. 사용자가 다른 위치를 삭제 하려고 하면 시스템에서이를 허용 하지 않습니다. 사용자가 앱의 모든 위치에서 항목을 삭제할 수 있도록 하려면 전체 배경을 놓기 대상으로 설정 합니다.
 
-[!code-xml[Main](./code/drag_drop/cs/MainPage.xaml#SnippetDropArea)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/design/input/drag_drop/cs/MainPage.xaml" id="SnippetDropArea":::
 
 
 ## <a name="handle-the-dragover-event"></a>DragOver 이벤트 처리
 
 [**System.windows.uielement.dragover>**](/uwp/api/windows.ui.xaml.uielement.dragover) 이벤트는 사용자가 앱 위로 항목을 끌 때 발생 하지만 아직 삭제 하지 않은 경우에 발생 합니다. 이 처리기에서는 [**AcceptedOperation**](/uwp/api/windows.ui.xaml.drageventargs.acceptedoperation) 속성을 사용 하 여 앱이 지 원하는 작업의 종류를 지정 해야 합니다. Copy는 가장 일반적입니다.
 
-[!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOver)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/design/input/drag_drop/cs/MainPage.xaml.cs" id="SnippetGrid_DragOver":::
 
 ## <a name="process-the-drop-event"></a>Drop 이벤트 처리
 
@@ -74,13 +74,13 @@ UI를 사용자 지정 하려는 경우 (이 문서의 뒷부분에서 설명)�
 
 아래 예제에서는 간단한 설명을 위해 사용자가 단일 사진을 삭제 하 고 직접 액세스 한다고 가정 합니다. 실제로 사용자는 다양 한 형식의 여러 항목을 동시에 삭제할 수 있습니다. 응용 프로그램은 어떤 형식의 파일이 삭제 되었는지 확인 하 고 각각에 대해 적절 하 게 처리 하 여 이러한 가능성을 처리 해야 합니다. 또한 앱에서 지원 하지 않는 작업을 수행 하려고 하는 경우 사용자에 게 알리는 것이 좋습니다.
 
-[!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_Drop)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/design/input/drag_drop/cs/MainPage.xaml.cs" id="SnippetGrid_Drop":::
 
 ## <a name="customize-the-ui"></a>UI 사용자 지정
 
 시스템에서는 끌어서 놓기를 위한 기본 UI를 제공 합니다. 그러나 사용자 지정 캡션과 문자 모양을 설정 하거나 UI를 전혀 표시 하지 않도록 선택 하 여 UI의 여러 부분을 사용자 지정할 수도 있습니다. UI를 사용자 지정 하려면 [**Drageventargs. DragUIOverride**](/uwp/api/windows.ui.xaml.drageventargs.draguioverride) 속성을 사용 합니다.
 
-[!code-cs[Main](./code/drag_drop/cs/MainPage.xaml.cs#SnippetGrid_DragOverCustom)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/design/input/drag_drop/cs/MainPage.xaml.cs" id="SnippetGrid_DragOverCustom":::
 
 ## <a name="open-a-context-menu-on-an-item-you-can-drag-with-touch"></a>터치를 사용 하 여 끌 수 있는 항목에 대 한 상황에 맞는 메뉴 열기
 
@@ -109,7 +109,7 @@ UI를 사용자 지정 하려는 경우 (이 문서의 뒷부분에서 설명)�
 
 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 * [앱 간 통신](index.md)
 * [System.windows.uielement.allowdrop](/uwp/api/windows.ui.xaml.uielement.allowdrop)

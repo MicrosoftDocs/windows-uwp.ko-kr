@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c11c4b630e6b38dd567fece782686743925e214
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4ed74149552e6582bf133550d4db1a45625e8c39
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161327"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364046"
 ---
 # <a name="share-data"></a>데이터 공유
 
 
-이 문서에서는 UWP (유니버설 Windows 플랫폼) 앱에서 공유 계약을 지 원하는 방법을 설명 합니다. 공유 계약은 앱 간에 텍스트, 링크, 사진 및 비디오와 같은 데이터를 빠르게 공유 하는 쉬운 방법입니다. 예를 들어 사용자는 소셜 네트워킹 앱을 사용 하 여 웹 페이지를 동료와 공유 하거나 나중에 참조할 수 있도록 notes 앱에 링크를 저장할 수 있습니다.
+이 문서에서는 UWP (유니버설 Windows 플랫폼) 앱에서 공유 계약을 지 원하는 방법을 설명 합니다. 공유 계약은 텍스트, 링크, 사진과 같은 데이터를 앱 간에 신속하게 공유할 수 있는 편리한 방법입니다. 예를 들어 사용자가 소셜 네트워킹 앱을 사용하여 친구와 웹 페이지를 공유하거나 링크를 나중에 참조하기 위해 노트 기록 앱에 저장할 수 있습니다.
 
 > [!NOTE]
 > 이 문서의 코드 예제는 UWP 앱 용으로 작성 되었습니다. WPF, Windows Forms 및 c + +/Win32 데스크톱 앱은 [IDataTransferManagerInterop](/windows/win32/api/shobjidl_core/nn-shobjidl_core-idatatransfermanagerinterop) 인터페이스를 사용 하 여 특정 창에 대 한 [DataTransferManager](/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager) 개체를 가져와야 합니다. 자세한 내용은 [ShareSource](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/ShareSource) 샘플을 참조 하세요.
@@ -25,11 +25,11 @@ ms.locfileid: "89161327"
 
 사용자가 공유를 호출할 때마다 호출 되는 [**datarequested**](/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.datarequested) 이벤트 처리기를 추가 합니다. 사용자가 앱의 컨트롤을 탭 하거나 (예: 단추 또는 앱 바 명령) 특정 시나리오에서 자동으로 (예: 사용자가 수준을 마치고 높은 점수를 가져오는 경우) 발생할 수 있습니다.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetPrepareToShare)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/app-to-app/share_data/cs/MainPage.xaml.cs" id="SnippetPrepareToShare":::
 
 [**Datarequested**](/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.datarequested) 된 이벤트가 발생 하면 앱은 [**DataRequest**](/uwp/api/Windows.ApplicationModel.DataTransfer.DataRequest) 개체를 수신 합니다. 여기에는 사용자가 공유 하려는 콘텐츠를 제공 하는 데 사용할 수 있는 [**DataPackage**](/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage) 포함 됩니다. 공유할 제목과 데이터를 제공 해야 합니다. 설명은 선택 사항 이지만 권장 됩니다.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetCreateRequest)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/app-to-app/share_data/cs/MainPage.xaml.cs" id="SnippetCreateRequest":::
 
 ## <a name="choose-data"></a>데이터 선택
 
@@ -45,7 +45,7 @@ ms.locfileid: "89161327"
 
 [**DataPackage**](/uwp/api/Windows.ApplicationModel.DataTransfer.DataPackage) 개체는 이러한 형식 중 하나 이상을 조합 하 여 포함할 수 있습니다. 다음 예제에서는 텍스트를 공유 하는 방법을 보여 줍니다.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetContent)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/app-to-app/share_data/cs/MainPage.xaml.cs" id="SnippetSetContent":::
 
 ## <a name="set-properties"></a>속성 설정
 
@@ -53,13 +53,13 @@ ms.locfileid: "89161327"
 
 제목을 제외한 모든 속성은 선택 사항입니다. Title 속성은 필수 이며 설정 해야 합니다.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetSetProperties)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/app-to-app/share_data/cs/MainPage.xaml.cs" id="SnippetSetProperties":::
 
 ## <a name="launch-the-share-ui"></a>공유 UI 시작
 
 공유에 대 한 UI는 시스템에서 제공 됩니다. 이를 시작 하려면 [**Showshareui**](/uwp/api/windows.applicationmodel.datatransfer.datatransfermanager.showshareui) 메서드를 호출 합니다.
 
-[!code-cs[Main](./code/share_data/cs/MainPage.xaml.cs#SnippetShowUI)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/app-to-app/share_data/cs/MainPage.xaml.cs" id="SnippetShowUI":::
 
 ## <a name="handle-errors"></a>오류 처리
 
@@ -96,7 +96,7 @@ async void OnDeferredImageRequestedHandler(DataProviderRequest request)
 }
 ```
 
-## <a name="see-also"></a>참고 항목 
+## <a name="see-also"></a>추가 정보 
 
 * [앱 간 통신](index.md)
 * [데이터 수신](receive-data.md)

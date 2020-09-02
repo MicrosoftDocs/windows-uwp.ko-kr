@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, 대상 푸시 알림, 파트너 센터
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
-ms.openlocfilehash: d6a420befac980574cf64e8a599d122df4c99ef4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: abb901c1b067dcf3609cbfb5c4cf3f81c9dc465c
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155657"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364136"
 ---
 # <a name="configure-your-app-for-targeted-push-notifications"></a>앱에 대상 푸시 알림 구성
 
@@ -36,19 +36,19 @@ ms.locfileid: "89155657"
 1. 프로젝트에서 시작 중에 실행 되는 코드 섹션을 찾아 앱을 등록 하 여 알림을 수신 합니다.
 2. 코드 파일의 맨 위에 다음 문을 추가 합니다.
 
-    [!code-csharp[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#EngagementNamespace)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/DevCenterNotifications.cs" id="EngagementNamespace":::
 
 3. [StoreServicesEngagementManager](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager) 개체를 가져오고 앞에서 확인 한 시작 코드에서 [Registernotificationchannelasync](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) 오버 로드 중 하나를 호출 합니다. 앱이 시작 될 때마다이 메서드를 호출 해야 합니다.
 
   * 파트너 센터가 알림에 대 한 자체 채널 URI를 만들도록 하려면 [Registernotificationchannelasync ()](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) 오버 로드를 호출 합니다.
 
-      [!code-csharp[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#RegisterNotificationChannelAsync1)]
+      :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/DevCenterNotifications.cs" id="RegisterNotificationChannelAsync1":::
       > [!IMPORTANT]
       > 앱이 [CreatePushNotificationChannelForApplicationAsync](/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync) 를 호출 하 여 WNS에 대 한 알림 채널을 만드는 경우 코드에서 [CreatePushNotificationChannelForApplicationAsync](/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanager.createpushnotificationchannelforapplicationasync) 및 [registernotificationchannelasync ()](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) 오버 로드를 동시에 호출 하지 않도록 해야 합니다. 이러한 두 메서드를 모두 호출 해야 하는 경우에는 메서드를 순차적으로 호출 하 고 다른 메서드를 호출 하기 전에 메서드 반환을 대기 해야 합니다.
 
   * 파트너 센터의 대상 푸시 알림에 사용할 채널 URI를 지정 하려면 [Registernotificationchannelasync (StoreServicesNotificationChannelParameters)](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.registernotificationchannelasync) 오버 로드를 호출 합니다. 예를 들어 앱이 이미 WNS (Windows Push Notification Services)를 사용 하 고 동일한 채널 URI를 사용 하려는 경우이 작업을 수행할 수 있습니다. 먼저 [StoreServicesNotificationChannelParameters](/uwp/api/microsoft.services.store.engagement.storeservicesnotificationchannelparameters) 개체를 만들고 [customnotificationchanneluri](/uwp/api/microsoft.services.store.engagement.storeservicesnotificationchannelparameters.customnotificationchanneluri) 속성을 채널 URI에 할당 해야 합니다.
 
-      [!code-csharp[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#RegisterNotificationChannelAsync2)]
+      :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/DevCenterNotifications.cs" id="RegisterNotificationChannelAsync2":::
 
 > [!NOTE]
 > **Registernotificationchannelasync** 메서드를 호출 하면 앱에 대 한 로컬 앱 데이터 저장소 ( [Applicationdata. localfolder](/uwp/api/Windows.Storage.ApplicationData.LocalFolder) 속성에 의해 반환 되는 폴더)에 MicrosoftStoreEngagementSDKId.txt 라는 파일이 만들어집니다. 이 파일에는 대상 푸시 알림 인프라에서 사용 하는 ID가 포함 되어 있습니다. 앱이이 파일을 수정 하거나 삭제 하지 않는지 확인 합니다. 그렇지 않으면 사용자가 알림 인스턴스를 여러 개 받거나 알림이 다른 방법으로 제대로 동작 하지 않을 수 있습니다.
@@ -81,11 +81,11 @@ ms.locfileid: "89155657"
 
 * 푸시 알림이 포그라운드 활성화 유형인 경우 앱의 [OnActivated](/uwp/api/windows.ui.xaml.application.onactivated) 메서드 재정의에서 이 메서드를 호출하고, 이 메서드에 전달된 [ToastNotificationActivatedEventArgs](/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs) 개체에서 사용할 수 있는 인수를 전달합니다. 다음 코드 예제에서는 코드 파일이 **Microsoft.** . r **using** o **w** e r. r e s.
 
-  [!code-csharp[DevCenterNotifications](./code/StoreSDKSamples/cs/App.xaml.cs#OnActivated)]
+  :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/App.xaml.cs" id="OnActivated":::
 
 * 푸시 알림에 백그라운드 활성화 형식이 있는 경우 [백그라운드 작업](../launch-resume/support-your-app-with-background-tasks.md) 에 대해 [Run](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) 메서드에서이 메서드를 호출 하 고이 메서드에 전달 된 [todetail notificationactiontriggerdetail](/uwp/api/Windows.UI.Notifications.ToastNotificationActionTriggerDetail) 개체에서 사용할 수 있는 인수를 전달 합니다. 다음 코드 예제에서는 코드 파일이 **Microsoft.**. r **using** e s e r. l i s e. p r o **w**e. **Windows.UI.Notifications**
 
-  [!code-csharp[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#Run)]
+  :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/DevCenterNotifications.cs" id="Run":::
 
 <span id="unregister" />
 
@@ -93,7 +93,7 @@ ms.locfileid: "89155657"
 
 앱이 파트너 센터에서 대상 푸시 알림 받기를 중지 하려면 [Unregisternotificationchannelasync](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync) 메서드를 호출 합니다.
 
-[!code-csharp[DevCenterNotifications](./code/StoreSDKSamples/cs/DevCenterNotifications.cs#UnregisterNotificationChannelAsync)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/DevCenterNotifications.cs" id="UnregisterNotificationChannelAsync":::
 
 이 메서드는 알림에 사용 되는 채널을 무효화 하므로 앱이 더 이상 *모든* 서비스에서 푸시 알림을 받을 수 없습니다. 이를 닫은 후에는 파트너 센터의 대상 푸시 알림과 WNS를 사용 하는 기타 알림을 비롯 한 모든 서비스에 대해 채널을 다시 사용할 수 없습니다. 이 앱에 푸시 알림 보내기를 다시 시작 하려면 앱에서 새 채널을 요청 해야 합니다.
 

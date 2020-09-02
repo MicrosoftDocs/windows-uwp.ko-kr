@@ -6,12 +6,12 @@ ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d503e6849a1a7b17678f856649f6b8194dc16722
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 22053ebe8940053094f704d52b19be2ed3f7bb97
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157447"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362616"
 ---
 # <a name="create-edit-and-save-bitmap-images"></a>비트맵 이미지 만들기, 편집 및 저장
 
@@ -29,23 +29,23 @@ ms.locfileid: "89157447"
 
 이 문서의 샘플 코드에서는 다음 네임 스페이스의 Api를 사용 합니다.
 
-[!code-cs[Namespaces](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetNamespaces)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetNamespaces":::
 
 ## <a name="create-a-softwarebitmap-from-an-image-file-with-bitmapdecoder"></a>Bitmapdecoder에서를 사용 하 여 이미지 파일에서 \비트맵 만들기
 
 파일에서 [**\Bitmap 비트맵**](/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 을 만들려면 이미지 데이터를 포함 하는 [**StorageFile**](/uwp/api/Windows.Storage.StorageFile) 의 인스턴스를 가져옵니다. 이 예제에서는 [**Fileopenpicker**](/uwp/api/Windows.Storage.Pickers.FileOpenPicker) 를 사용 하 여 사용자가 이미지 파일을 선택할 수 있도록 합니다.
 
-[!code-cs[PickInputFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetPickInputFile)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetPickInputFile":::
 
 **StorageFile** 개체의 [**openasync**](/uwp/api/windows.storage.istoragefile.openasync) 메서드를 호출 하 여 이미지 데이터를 포함 하는 임의 액세스 스트림을 가져옵니다. 정적 메서드 [**bitmapdecoder에서**](/uwp/api/windows.graphics.imaging.bitmapdecoder.createasync) 를 호출 하 여 지정 된 스트림에 대 한 [**bitmapdecoder에서**](/uwp/api/Windows.Graphics.Imaging.BitmapDecoder) 클래스의 인스턴스를 가져옵니다. [**GetSoftwareBitmapAsync**](/uwp/api/windows.graphics.imaging.bitmapdecoder.getsoftwarebitmapasync) 를 호출 하 여 이미지를 포함 하는 [**\bitmap**](/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 개체를 가져옵니다.
 
-[!code-cs[CreateSoftwareBitmapFromFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCreateSoftwareBitmapFromFile)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetCreateSoftwareBitmapFromFile":::
 
 ## <a name="save-a-softwarebitmap-to-a-file-with-bitmapencoder"></a>BitmapEncoder를 사용 하 여 파일에 \Bitmap 저장
 
 파일에 저장 **비트맵** 을 저장 하려면 이미지가 저장 될 **StorageFile** 의 인스턴스를 가져옵니다. 이 예제에서는 [**FileSavePicker**](/uwp/api/Windows.Storage.Pickers.FileSavePicker) 를 사용 하 여 사용자가 출력 파일을 선택할 수 있도록 합니다.
 
-[!code-cs[PickOutputFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetPickOutputFile)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetPickOutputFile":::
 
 **StorageFile** 개체의 [**openasync**](/uwp/api/windows.storage.istoragefile.openasync) 메서드를 호출 하 여 이미지가 기록 될 임의 액세스 스트림을 가져옵니다. 정적 메서드 [**BitmapEncoder**](/uwp/api/windows.graphics.imaging.bitmapencoder.createasync) 를 호출 하 여 지정 된 스트림에 대 한 [**BitmapEncoder**](/uwp/api/Windows.Graphics.Imaging.BitmapEncoder) 클래스의 인스턴스를 가져옵니다. **Createasync** 에 대 한 첫 번째 매개 변수는 이미지를 인코딩하는 데 사용 해야 하는 코덱을 나타내는 GUID입니다. **BitmapEncoder** 클래스는 인코더가 지 원하는 각 코덱 (예: [**JpegEncoderId**](/uwp/api/windows.graphics.imaging.bitmapencoder.jpegencoderid))에 대 한 ID를 포함 하는 속성을 노출 합니다.
 
@@ -53,23 +53,23 @@ ms.locfileid: "89157447"
 
 [**FlushAsync**](/uwp/api/windows.graphics.imaging.bitmapencoder.flushasync) 를 호출 하 여 인코더가 이미지 데이터를 지정 된 파일에 쓰도록 합니다.
 
-[!code-cs[SaveSoftwareBitmapToFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetSaveSoftwareBitmapToFile)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetSaveSoftwareBitmapToFile":::
 
 새 [**BitmapPropertySet**](/uwp/api/Windows.Graphics.Imaging.BitmapPropertySet) 개체를 만들고 인코더 설정을 나타내는 하나 이상의 [**BitmapTypedValue**](/uwp/api/Windows.Graphics.Imaging.BitmapTypedValue) 개체로 채워서 **BitmapEncoder** 를 만들 때 추가 인코딩 옵션을 지정할 수 있습니다. 지원 되는 인코더 옵션 목록은 [BitmapEncoder options 참조](bitmapencoder-options-reference.md)를 참조 하세요.
 
-[!code-cs[UseEncodingOptions](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetUseEncodingOptions)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetUseEncodingOptions":::
 
 ## <a name="use-softwarebitmap-with-a-xaml-image-control"></a>XAML 이미지 컨트롤과 함께 사용 비트맵 사용
 
 [**이미지**](/uwp/api/Windows.UI.Xaml.Controls.Image) 컨트롤을 사용 하 여 xaml 페이지 내에 이미지를 표시 하려면 먼저 xaml 페이지에서 **이미지** 컨트롤을 정의 합니다.
 
-[!code-xml[ImageControl](./code/ImagingWin10/cs/MainPage.xaml#SnippetImageControl)]
+:::code language="xml" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml" id="SnippetImageControl":::
 
 현재 **이미지** 컨트롤은 BGRA8 encoding 및 미리 곱하기 또는 알파 채널을 사용 하지 않는 이미지만 지원 합니다. 이미지를 표시 하기 전에 테스트 하 여 올바른 형식이 있는지 확인 하 고, 그렇지 않은 경우에 **는 해당 이미지** 를 지원 되는 [**Convert**](/uwp/api/windows.graphics.imaging.softwarebitmap.convert) 형식으로 변환 합니다.
 
 새 [**SoftwareBitmapSource**](/uwp/api/Windows.UI.Xaml.Media.Imaging.SoftwareBitmapSource) 개체를 만듭니다. [**SetBitmapAsync**](/uwp/api/windows.ui.xaml.media.imaging.softwarebitmapsource.setbitmapasync)를 호출하고 **SoftwareBitmap**을 전달하여 원본 개체의 콘텐츠를 설정합니다. 그런 다음 **이미지** 컨트롤의 [**Source**](/uwp/api/windows.ui.xaml.controls.image.source) 속성을 새로 만든 **SoftwareBitmapSource**로 설정할 수 있습니다.
 
-[!code-cs[SoftwareBitmapToWriteableBitmap](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetSoftwareBitmapToWriteableBitmap)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetSoftwareBitmapToWriteableBitmap":::
 
 **SoftwareBitmapSource** 를 사용 하 여 ImageBrush에 대 한 [**ImageSource**](/uwp/api/windows.ui.xaml.media.imagebrush.imagesource) 로는 [**ImageBrush**](/uwp/api/Windows.UI.Xaml.Media.ImageBrush) **비트맵** 을 설정할 수도 있습니다.
 
@@ -77,7 +77,7 @@ ms.locfileid: "89157447"
 
 [**CreateCopyFromBuffer**](/uwp/api/windows.graphics.imaging.softwarebitmap.createcopyfrombuffer) 를 호출 하 고 **WriteableBitmap** 의 **PixelBuffer** 속성을 제공 하 여 픽셀 데이터를 설정 하면 기존 **WriteableBitmap** 에서 데이터 **비트맵** 을 만들 수 있습니다. 두 번째 인수를 사용 하 여 새로 만든 **WriteableBitmap**에 대 한 픽셀 형식을 요청할 수 있습니다. **WriteableBitmap** 의 [**PixelWidth**](/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.pixelwidth) 및 [**PixelHeight**](/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.pixelheight) 속성을 사용 하 여 새 이미지의 크기를 지정할 수 있습니다.
 
-[!code-cs[WriteableBitmapToSoftwareBitmap](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetWriteableBitmapToSoftwareBitmap)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetWriteableBitmapToSoftwareBitmap":::
 
 ## <a name="create-or-edit-a-softwarebitmap-programmatically"></a>프로그래밍 방식으로 \Bitmap 비트맵 만들기 또는 편집
 
@@ -87,15 +87,15 @@ ms.locfileid: "89157447"
 
 COM interop를 사용 하려면 프로젝트에 **t e m** 네임 스페이스에 대 한 참조를 포함 해야 합니다.
 
-[!code-cs[InteropNamespace](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetInteropNamespace)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetInteropNamespace":::
 
 네임 스페이스 내에 다음 코드를 추가 하 여 [**IMemoryBufferByteAccess**](/previous-versions/mt297505(v=vs.85)) COM 인터페이스를 초기화 합니다.
 
-[!code-cs[COMImport](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCOMImport)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetCOMImport":::
 
 원하는 픽셀 형식 및 크기를 사용 하 여 새 고가 **비트맵** 을 만듭니다. 또는 픽셀 데이터를 편집 하려는 기존 데이터 **비트맵** 을 사용 합니다. 데이터 버퍼를 나타내는 [**BitmapBuffer**](/uwp/api/Windows.Graphics.Imaging.BitmapBuffer) 클래스의 인스턴스를 가져오려면 [**\Bitmap. lockbuffer**](/uwp/api/windows.graphics.imaging.softwarebitmap.lockbuffer) 를 호출 합니다. **BitmapBuffer** 을 **IMemoryBufferByteAccess** COM 인터페이스로 캐스팅 한 다음 [**IMemoryBufferByteAccess**](/windows/desktop/WinRT/imemorybufferbyteaccess-getbuffer) 를 호출 하 여 바이트 배열을 데이터로 채웁니다. [**BitmapBuffer**](/uwp/api/windows.graphics.imaging.bitmapbuffer.getplanedescription) 메서드를 사용 하 여 각 픽셀에 대 한 버퍼의 오프셋을 계산 하는 데 도움이 되는 [**BitmapPlaneDescription**](/uwp/api/Windows.Graphics.Imaging.BitmapPlaneDescription) 개체를 가져옵니다.
 
-[!code-cs[CreateNewSoftwareBitmap](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCreateNewSoftwareBitmap)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetCreateNewSoftwareBitmap":::
 
 이 메서드는 Windows 런타임 형식을 기반으로 하는 원시 버퍼에 액세스 하므로 **unsafe** 키워드를 사용 하 여 선언 해야 합니다. 또한 프로젝트의 **속성** 페이지를 열고, **빌드** 속성 페이지를 클릭 하 고, **안전 하지 않은 코드 허용** 확인란을 선택 하 여 안전 하지 않은 코드를 컴파일할 수 있도록 Microsoft Visual Studio에서 프로젝트를 구성 해야 합니다.
 
@@ -103,23 +103,23 @@ COM interop를 사용 하려면 프로젝트에 **t e m** 네임 스페이스에
 
 Direct3D surface에서 **개체를 만들려면 프로젝트** 에 [**Direct3D11**](/uwp/api/Windows.Graphics.DirectX.Direct3D11) 네임 스페이스를 포함 해야 합니다.
 
-[!code-cs[Direct3DNamespace](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetDirect3DNamespace)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetDirect3DNamespace":::
 
 [**CreateCopyFromSurfaceAsync**](/uwp/api/windows.graphics.imaging.softwarebitmap.createcopyfromsurfaceasync) 를 호출 하 여 화면에서 새 고가 **비트맵** 을 만듭니다. 이름이 나타내는 것 처럼 새 데이터 **비트맵** 에는 이미지 데이터의 개별 복사본이 있습니다. **이 경우에는 Direct3D** 화면에 영향을 주지 않습니다.
 
-[!code-cs[CreateSoftwareBitmapFromSurface](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetCreateSoftwareBitmapFromSurface)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetCreateSoftwareBitmapFromSurface":::
 
 ## <a name="convert-a-softwarebitmap-to-a-different-pixel-format"></a>다른 픽셀 형식으로 \Bitmap 비트맵 변환
 
 **\Bitmap** 클래스는 정적 메서드인 [**Convert**](/uwp/api/windows.graphics.imaging.softwarebitmap.convert)를 제공 합니다 .이를 통해 기존 모델 **비트맵**에서 지정 **하는 픽셀** 형식 및 알파 모드를 사용 하는 새 모델을 쉽게 만들 수 있습니다. 새로 만든 비트맵에는 이미지 데이터의 개별 복사본이 있습니다. 새 비트맵을 수정 해도 원본 비트맵에는 영향을 주지 않습니다.
 
-[!code-cs[Convert](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetConvert)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetConvert":::
 
 ## <a name="transcode-an-image-file"></a>이미지 파일 트랜스 코딩
 
 이미지 파일을 [**bitmapdecoder에서**](/uwp/api/Windows.Graphics.Imaging.BitmapDecoder) 에서 [**BitmapEncoder**](/uwp/api/Windows.Graphics.Imaging.BitmapEncoder)로 직접 변환할 수 있습니다. 트랜스 코딩 될 파일에서 [**IRandomAccessStream**](/uwp/api/Windows.Storage.Streams.IRandomAccessStream) 를 만듭니다. 입력 스트림에서 새 **bitmapdecoder에서** 을 만듭니다. 인코더에서 쓸 새 [**InMemoryRandomAccessStream**](/uwp/api/Windows.Storage.Streams.InMemoryRandomAccessStream) 을 만들고 [**BitmapEncoder**](/uwp/api/windows.graphics.imaging.bitmapencoder.createfortranscodingasync)를 호출 하 여 메모리 내 스트림과 디코더 개체를 전달 합니다. 트랜스 코딩 시에는 인코딩 옵션이 지원 되지 않습니다. 대신 [**Createasync**](/uwp/api/windows.graphics.imaging.bitmapencoder.createasync)를 사용 해야 합니다. 인코더에서 특별히 설정 하지 않은 입력 이미지 파일의 모든 속성은 변경 되지 않은 상태로 출력 파일에 기록 됩니다. [**FlushAsync**](/uwp/api/windows.graphics.imaging.bitmapencoder.flushasync) 를 호출 하 여 인코더가 메모리 내 스트림으로 인코딩합니다. 마지막으로 파일 스트림과 메모리 내 스트림을 검색 하 여 시작 부분으로 이동 하 고 [**Copyasync**](/uwp/api/windows.storage.streams.randomaccessstream.copyasync) 를 호출 하 여 메모리 내 스트림을 파일 스트림에 씁니다.
 
-[!code-cs[TranscodeImageFile](./code/ImagingWin10/cs/MainPage.xaml.cs#SnippetTranscodeImageFile)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ImagingWin10/cs/MainPage.xaml.cs" id="SnippetTranscodeImageFile":::
 
 ## <a name="related-topics"></a>관련 항목
 

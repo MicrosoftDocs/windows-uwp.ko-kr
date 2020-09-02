@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, 로그 이벤트
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
-ms.openlocfilehash: ec4bee888d055b5331252e91bfd979d81b976f3c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 5a1df08b62199bf1249af8bfbbb00921874a671c
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158437"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89364106"
 ---
 # <a name="log-custom-events-for-partner-center"></a>파트너 센터의 사용자 지정 이벤트 로깅
 
@@ -22,7 +22,7 @@ ms.locfileid: "89158437"
 > [!NOTE]
 > 파트너 센터에 로그인 하는 사용자 지정 이벤트는 [Windows 이벤트](/windows/desktop/Events/windows-events)와 관련이 없으며 **이벤트 뷰어**에 표시 되지 않습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 파트너 센터에서 앱에 대 한 **사용 현황 보고서** 의 사용자 지정 로깅 이벤트를 검토 하려면 먼저 스토어에 앱을 게시 해야 합니다.
 
@@ -39,10 +39,10 @@ ms.locfileid: "89158437"
 5. Sdk 목록에서 **Microsoft Engagement 프레임 워크** 옆의 확인란을 클릭 하 고 **확인**을 클릭 합니다.
 
 6. 사용자 지정 이벤트를 기록 하려는 각 코드 파일의 맨 위에 다음 문을 추가 합니다.
-    [!code-csharp[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#EngagementNamespace)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/LogEvents.cs" id="EngagementNamespace":::
 
 7. 사용자 지정 이벤트를 기록 하려는 코드의 각 섹션에서 [StoreServicesCustomEventLogger](/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 개체를 가져온 다음 [log](/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 메서드를 호출 합니다. 사용자 지정 이벤트 문자열을 메서드에 전달 합니다.
-    [!code-csharp[EventLogger](./code/StoreSDKSamples/cs/LogEvents.cs#Log)]
+    :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/LogEvents.cs" id="Log":::
 
     > [!NOTE]
     > 앱에서 긴 이름으로 많은 사용자 지정 이벤트를 기록 하는 경우 [사용량 보고서](../publish/usage-report.md) 를 로드 하는 데 시간이 오래 걸릴 수 있습니다. 사용자 지정 이벤트에 대해 간단한 이름을 사용 하는 것이 좋습니다. 

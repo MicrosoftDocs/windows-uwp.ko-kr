@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eaee05ebc1d65a4d2f920daa43c7a012a02f4ef0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4e1076c0632299ff79a8ca2fc226865d0ff3ebef
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161037"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89362896"
 ---
 # <a name="camera-ui-features-for-mobile-devices"></a>모바일 디바이스용 카메라 UI 기능
 
@@ -33,27 +33,27 @@ ms.locfileid: "89161037"
 
 모바일 장치에는 장치에 대 한 상태 정보를 사용자에 게 제공 하는 [**StatusBar**](/uwp/api/Windows.UI.ViewManagement.StatusBar) 컨트롤이 있습니다. 이 컨트롤은 미디어 캡처 UI를 방해할 수 있는 화면 공간을 차지 합니다. [**HideAsync**](/uwp/api/windows.ui.viewmanagement.statusbar.hideasync)를 호출 하 여 상태 표시줄을 숨길 수 있지만 [**IsTypePresent**](/uwp/api/windows.foundation.metadata.apiinformation.istypepresent) 메서드를 사용 하 여 API를 사용할 수 있는지 여부를 확인 하는 조건부 블록 내에서이 호출을 수행 해야 합니다. 이 메서드는 상태 표시줄을 지 원하는 모바일 장치 에서만 true를 반환 합니다. 앱이 시작 되거나 카메라에서 미리 보기를 시작할 때 상태 표시줄을 숨겨야 합니다.
 
-[!code-cs[HideStatusBar](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetHideStatusBar)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetHideStatusBar":::
 
 앱이 종료 되거나 사용자가 앱의 미디어 캡처 페이지에서 벗어날 때 컨트롤이 다시 표시 되도록 설정할 수 있습니다.
 
-[!code-cs[ShowStatusBar](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetShowStatusBar)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetShowStatusBar":::
 
 ## <a name="use-the-hardware-camera-button"></a>하드웨어 카메라 단추 사용
 
 일부 모바일 장치에는 일부 사용자가 화면 제어에서 선호 하는 전용 하드웨어 카메라 단추가 있습니다. 하드웨어 카메라 단추를 누를 때 알리도록 하려면 [**HardwareButtons. CameraPressed**](/uwp/api/windows.phone.ui.input.hardwarebuttons.camerapressed) 이벤트에 대 한 처리기를 등록 합니다. 이 API는 모바일 장치 에서만 사용할 수 있기 때문에 **IsTypePresent** 를 다시 사용 하 여 액세스를 시도 하기 전에 api가 현재 장치에서 지원 되는지 확인 해야 합니다.
 
-[!code-cs[PhoneUsing](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetPhoneUsing)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetPhoneUsing":::
 
-[!code-cs[RegisterCameraButtonHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetRegisterCameraButtonHandler)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetRegisterCameraButtonHandler":::
 
 **CameraPressed** 이벤트에 대 한 처리기에서 사진 캡처를 시작할 수 있습니다.
 
-[!code-cs[CameraPressed](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetCameraPressed)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetCameraPressed":::
 
 앱을 종료 하거나 사용자가 앱의 미디어 캡처 페이지에서 다른 위치로 이동 하는 경우 하드웨어 단추 처리기를 등록 취소 합니다.
 
-[!code-cs[UnregisterCameraButtonHandler](./code/BasicMediaCaptureWin10/cs/MainPage.xaml.cs#SnippetUnregisterCameraButtonHandler)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/BasicMediaCaptureWin10/cs/MainPage.xaml.cs" id="SnippetUnregisterCameraButtonHandler":::
 
 ## <a name="related-topics"></a>관련 항목
 

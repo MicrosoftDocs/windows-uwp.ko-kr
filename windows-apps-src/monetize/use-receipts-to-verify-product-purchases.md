@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 앱 내 구매, IAPs, 수신, Windows. ApplicationModel 스토어
 ms.localizationpriority: medium
-ms.openlocfilehash: 0bbdaa8164e5d3a7e660fc4667b7cfe3c090bc10
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ba818ffbe748a20491557f7404e3f06e10fd628a
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171327"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363036"
 ---
 # <a name="use-receipts-to-verify-product-purchases"></a>확인 메일을 사용하여 제품 구매 검증
 
@@ -92,7 +92,7 @@ ms.locfileid: "89171327"
 다음은 유효성 검사 프로세스의 예입니다. 이 코드는 **System. 보안** 어셈블리에 대 한 참조를 포함 하는 .NET Framework 콘솔 응용 프로그램에서 실행 됩니다.
 
 > [!div class="tabbedCodeSnippets"]
-[!code-csharp[ReceiptVerificationSample](./code/ReceiptVerificationSample/cs/Program.cs#ReceiptVerificationSample)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/ReceiptVerificationSample/cs/Program.cs" id="ReceiptVerificationSample":::
 
 <span id="receipt-descriptions" />
 

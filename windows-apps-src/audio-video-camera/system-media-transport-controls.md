@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8650ed0d7dc5caceca5d58de61f48f254a571914
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d592b516db32c2602c8b51d82f3ea56c037e5164
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175687"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363786"
 ---
 # <a name="manual-control-of-the-system-media-transport-controls"></a>시스템 미디어 전송 컨트롤의 수동 컨트롤
 
@@ -26,19 +26,19 @@ SMTC의 수동 제어를 구현 해야 하는 몇 가지 시나리오가 있습�
 > [!NOTE] 
 > [**IsEnabled**](/uwp/api/windows.media.playback.mediaplaybackcommandmanager.isenabled) 를 false로 설정 하 여 [**Mediaplayer**](/uwp/api/Windows.Media.Playback.MediaPlayer) 의 [**mediaplaybackcommandmanager**](/uwp/api/Windows.Media.Playback.MediaPlaybackCommandManager) 를 사용 하지 않도록 설정 하는 경우 **MediaPlayerElement**에서 제공 하는 **mediaplayer** [**컨트롤**](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.transportcontrols) 사이의 연결을 중단 하므로 기본 제공 전송 컨트롤은 플레이어의 재생을 더 이상 자동으로 제어 하지 않습니다. 대신 사용자 고유의 컨트롤을 구현 하 여 **MediaPlayer**를 제어 해야 합니다.
 
-[!code-cs[InitSMTCMediaPlayer](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetInitSMTCMediaPlayer)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTCWin10/cs/MainPage.xaml.cs" id="SnippetInitSMTCMediaPlayer":::
 
 [**GetForCurrentView**](/uwp/api/windows.media.systemmediatransportcontrols.getforcurrentview)를 호출 하 여 [**SystemMediaTransportControls**](/uwp/api/Windows.Media.SystemMediaTransportControls) 인스턴스를 가져올 수도 있습니다. **MediaElement** 를 사용 하 여 미디어를 재생 하는 경우이 메서드를 사용 하 여 개체를 가져와야 합니다.
 
-[!code-cs[InitSMTCMediaElement](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetInitSMTCMediaElement)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTCWin10/cs/MainPage.xaml.cs" id="SnippetInitSMTCMediaElement":::
 
 [**Isplayenabled**](/uwp/api/windows.media.systemmediatransportcontrols.isplayenabled), [**IsPauseEnabled**](/uwp/api/windows.media.systemmediatransportcontrols.ispauseenabled), [**Isplayenabled**](/uwp/api/windows.media.systemmediatransportcontrols.isnextenabled)및 [**IsPreviousEnabled**](/uwp/api/windows.media.systemmediatransportcontrols.ispreviousenabled)와 같은 **SystemMediaTransportControls** 개체의 해당 "is enabled" 속성을 설정 하 여 앱에서 사용 하는 단추를 사용 하도록 설정 합니다. 사용 가능한 컨트롤의 전체 목록은 **SystemMediaTransportControls** 참조 설명서를 참조 하세요.
 
-[!code-cs[EnableContols](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetEnableContols)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTCWin10/cs/MainPage.xaml.cs" id="SnippetEnableContols":::
 
 사용자가 단추를 누를 때 알림을 받도록 [**Buttonpressed**](/uwp/api/windows.media.systemmediatransportcontrols.buttonpressed) 이벤트에 대 한 처리기를 등록 합니다.
 
-[!code-cs[RegisterButtonPressed](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetRegisterButtonPressed)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTCWin10/cs/MainPage.xaml.cs" id="SnippetRegisterButtonPressed":::
 
 ## <a name="handle-system-media-transport-controls-button-presses"></a>시스템 미디어 전송 컨트롤 단추 누름 처리
 
@@ -46,13 +46,13 @@ SMTC의 수동 제어를 구현 해야 하는 몇 가지 시나리오가 있습�
 
 [**MediaElement**](/uwp/api/Windows.UI.Xaml.Controls.MediaElement) 개체와 같은 [**buttonpressed**](/uwp/api/windows.media.systemmediatransportcontrols.buttonpressed) 이벤트 처리기에서 UI 스레드의 개체를 업데이트 하려면 [**CoreDispatcher**](/uwp/api/Windows.UI.Core.CoreDispatcher)를 통해 호출을 마샬링해야 합니다. 이는 **Buttonpressed** 이벤트 처리기가 ui 스레드에서 호출 되지 않기 때문 이며, 따라서 ui를 직접 수정 하려고 하면 예외가 throw 됩니다.
 
-[!code-cs[SystemMediaTransportControlsButtonPressed](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetSystemMediaTransportControlsButtonPressed)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTCWin10/cs/MainPage.xaml.cs" id="SnippetSystemMediaTransportControlsButtonPressed":::
 
 ## <a name="update-the-system-media-transport-controls-with-the-current-media-status"></a>현재 미디어 상태를 사용 하 여 시스템 미디어 전송 컨트롤 업데이트
 
 시스템이 현재 상태를 반영 하도록 컨트롤을 업데이트할 수 있도록 미디어의 상태가 변경 되 면 [**SystemMediaTransportControls**](/uwp/api/Windows.Media.SystemMediaTransportControls) 에 게 알려야 합니다. 이렇게 하려면 [**Playbackstatus**](/uwp/api/windows.media.systemmediatransportcontrols.playbackstatus) 속성을 [**MediaElement**](/uwp/api/Windows.UI.Xaml.Controls.MediaElement)의 [**CurrentStateChanged**](/uwp/api/windows.ui.xaml.controls.mediaelement.currentstatechanged) 이벤트 내에서 적절 한 [**mediaplaybackstatus**](/uwp/api/Windows.Media.MediaPlaybackStatus) 값으로 설정 합니다 .이 값은 미디어 상태가 변경 될 때 발생 합니다.
 
-[!code-cs[SystemMediaTransportControlsStateChange](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetSystemMediaTransportControlsStateChange)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTCWin10/cs/MainPage.xaml.cs" id="SnippetSystemMediaTransportControlsStateChange":::
 
 ## <a name="update-the-system-media-transport-controls-with-media-info-and-thumbnails"></a>미디어 정보 및 미리 보기를 사용 하 여 시스템 미디어 전송 컨트롤 업데이트
 
@@ -60,11 +60,11 @@ SMTC의 수동 제어를 구현 해야 하는 몇 가지 시나리오가 있습�
 
 [**업데이트**](/uwp/api/windows.media.systemmediatransportcontrolsdisplayupdater.update) 를 호출 하 여 시스템 미디어 전송 컨트롤이 새 메타 데이터 및 미리 보기를 사용 하 여 UI를 업데이트 하도록 합니다.
 
-[!code-cs[SystemMediaTransportControlsUpdater](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetSystemMediaTransportControlsUpdater)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTCWin10/cs/MainPage.xaml.cs" id="SnippetSystemMediaTransportControlsUpdater":::
 
 시나리오에 필요한 경우 [**displayupdater**](/uwp/api/windows.media.systemmediatransportcontrols.displayupdater) 클래스에서 노출 하는 [**MusicProperties**](/uwp/api/windows.media.systemmediatransportcontrolsdisplayupdater.musicproperties), [**imageproperties**](/uwp/api/windows.media.systemmediatransportcontrolsdisplayupdater.imageproperties)또는 [**videoproperties**](/uwp/api/windows.media.systemmediatransportcontrolsdisplayupdater.videoproperties) 개체의 값을 설정 하 여 시스템 미디어 전송 컨트롤에 의해 표시 되는 메타 데이터를 수동으로 업데이트할 수 있습니다.
 
-[!code-cs[SystemMediaTransportControlsUpdaterManual](./code/SMTCWin10/cs/MainPage.xaml.cs#SystemMediaTransportControlsUpdaterManual)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTCWin10/cs/MainPage.xaml.cs" id="SystemMediaTransportControlsUpdaterManual":::
 
 > [!Note]
 > 앱은 시스템 미디어 전송 컨트롤에 의해 표시 되는 다른 미디어 메타 데이터를 제공 하지 않는 경우에도 [SystemMediaTransportControlsDisplayUpdater](/uwp/api/windows.media.systemmediatransportcontrolsdisplayupdater.type#Windows_Media_SystemMediaTransportControlsDisplayUpdater_Type
@@ -75,7 +75,7 @@ SMTC의 수동 제어를 구현 해야 하는 몇 가지 시나리오가 있습�
 
 시스템 전송 컨트롤은 현재 재생 위치, 시작 시간 및 미디어 항목의 종료 시간을 포함 하 여 현재 재생 중인 미디어 항목의 타임 라인에 대 한 정보를 표시 합니다. 시스템 전송 컨트롤 타임 라인 속성을 업데이트 하려면 새 [**SystemMediaTransportControlsTimelineProperties**](/uwp/api/Windows.Media.SystemMediaTransportControlsTimelineProperties) 개체를 만듭니다. 재생 중인 미디어 항목의 현재 상태를 반영 하도록 개체의 속성을 설정 합니다. SystemMediaTransportControls를 호출 하 여 컨트롤이 타임 라인을 업데이트 하도록 합니다 [**.**](/uwp/api/windows.media.systemmediatransportcontrols.updatetimelineproperties)
 
-[!code-cs[UpdateTimelineProperties](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetUpdateTimelineProperties)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTCWin10/cs/MainPage.xaml.cs" id="SnippetUpdateTimelineProperties":::
 
 -   시스템 컨트롤이 재생 항목에 대 한 타임 라인을 표시 하려면 [**StartTime**](/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.starttime), [**EndTime**](/uwp/api/windows.media.systemmediatransportcontrolstimelineproperties.endtime) 및 [**Position**](/uwp/api/windows.media.systemmediatransportcontrols.playbackpositionchangerequested) 의 값을 제공 해야 합니다.
 
@@ -98,11 +98,11 @@ SMTC의 수동 제어를 구현 해야 하는 몇 가지 시나리오가 있습�
  
 이러한 컨트롤 중 하나를 사용 하 여 사용자 상호 작용을 처리 하려면 먼저 연결 된 이벤트에 대 한 처리기를 등록 합니다.
 
-[!code-cs[RegisterPlaybackChangedHandler](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetRegisterPlaybackChangedHandler)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTCWin10/cs/MainPage.xaml.cs" id="SnippetRegisterPlaybackChangedHandler":::
 
 이벤트 처리기에서 먼저 요청 된 값이 유효 하 고 예상 범위 내에 있는지 확인 합니다. 인 경우 [**MediaElement**](/uwp/api/Windows.UI.Xaml.Controls.MediaElement) 에서 해당 속성을 설정 하 고 [**SystemMediaTransportControls**](/uwp/api/Windows.Media.SystemMediaTransportControls) 개체에서 해당 속성을 설정 합니다.
 
-[!code-cs[PlaybackChangedHandler](./code/SMTCWin10/cs/MainPage.xaml.cs#SnippetPlaybackChangedHandler)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/SMTCWin10/cs/MainPage.xaml.cs" id="SnippetPlaybackChangedHandler":::
 
 -   이러한 플레이어 속성 이벤트 중 하나가 발생 하려면 속성의 초기 값을 설정 해야 합니다. 예를 들어 [**Playbackrate**](/uwp/api/windows.media.systemmediatransportcontrols.playbackrate) 속성의 값을 한 번 이상 설정한 후에 야 [**PlaybackRateChangeRequested**](/uwp/api/windows.media.systemmediatransportcontrols.playbackratechangerequested) 이 발생 합니다.
 

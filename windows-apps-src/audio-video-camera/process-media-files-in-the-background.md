@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 38261e8f6a03e17ba94a064b8e475503414e91d6
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b7f726365a2e476e650f4b66d484840c0efabda5
+ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174637"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89363826"
 ---
 # <a name="process-media-files-in-the-background"></a>백그라운드에서 미디어 파일 처리
 
@@ -40,11 +40,11 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 이름이 바뀐 클래스 파일에서 다음 **using** 지시문을 추가 하 여이 네임 스페이스를 프로젝트에 포함 합니다.
                                   
-[!code-cs[BackgroundUsing](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundUsing)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs" id="SnippetBackgroundUsing":::
 
 클래스가 [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask)에서 상속 하도록 클래스 선언을 업데이트 합니다.
 
-[!code-cs[BackgroundClass](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundClass)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs" id="SnippetBackgroundClass":::
 
 클래스에 다음 멤버 변수를 추가 합니다.
 
@@ -53,7 +53,7 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 -   비동기 코드 변환 작업을 취소 하는 데 사용할 수 있는 **CancellationTokenSource** 개체입니다.
 -   미디어 파일을 트랜스 코딩 하는 데 사용 되는 [**MediaTranscoder**](/uwp/api/Windows.Media.Transcoding.MediaTranscoder) 개체입니다.
 
-[!code-cs[BackgroundMembers](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetBackgroundMembers)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs" id="SnippetBackgroundMembers":::
 
 작업을 시작할 때 시스템에서 백그라운드 작업의 [**Run**](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) 메서드를 호출 합니다. 메서드에 전달 된 [**IBackgroundTask**](/uwp/api/Windows.ApplicationModel.Background.IBackgroundTask) 개체를 해당 멤버 변수로 설정 합니다. 시스템이 백그라운드 작업을 종료 해야 하는 경우 발생 하는 [**취소**](/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.canceled) 된 이벤트에 대 한 처리기를 등록 합니다. 그런 다음 [**Progress**](/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.progress) 속성을 0으로 설정 합니다.
 
@@ -63,7 +63,7 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 **Run** 메서드가 끝날 때 지연 개체에서 [**complete**](/uwp/api/windows.applicationmodel.background.backgroundtaskdeferral.complete) 를 호출 하 여 백그라운드 작업이 완료 되 고 종료 될 수 있음을 시스템에 알립니다.
 
-[!code-cs[Run](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetRun)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs" id="SnippetRun":::
 
 **TranscodeFileAsync** helper 메서드에서, 코드 변환 작업의 입력 및 출력 파일에 대 한 파일 이름은 앱에 대 한 [**LocalSettings**](/uwp/api/windows.storage.applicationdata.localsettings) 에서 검색 됩니다. 이러한 값은 포그라운드 앱에 의해 설정 됩니다. 입력 및 출력 파일에 대 한 [**StorageFile**](/uwp/api/Windows.Storage.StorageFile) 개체를 만든 다음 트랜스 코딩에 사용할 인코딩 프로필을 만듭니다.
 
@@ -71,19 +71,19 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 **Ask ask** 메서드를 사용 하 여 비동기 작업의 진행률을 추적 하거나 취소할 수 있습니다. 원하는 진행률 단위와 작업의 현재 진행 상태를 알리기 위해 호출 되는 메서드 이름을 지정 하 여 새 **진행률** 개체를 만듭니다. 작업을 취소할 수 있도록 하는 취소 토큰과 함께 **진행률** 개체를 **표시 합니다.**
 
-[!code-cs[TranscodeFileAsync](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetTranscodeFileAsync)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs" id="SnippetTranscodeFileAsync":::
 
 이전 단계에서 progress 개체를 만드는 데 사용한 방법의 진행률에서 백그라운드 작업 인스턴스의 **진행률을 설정**합니다. 이렇게 하면 실행 중인 포그라운드 앱에 진행률이 전달 됩니다.
 
-[!code-cs[Progress](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetProgress)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs" id="SnippetProgress":::
 
 **Sendto notification** 도우미 메서드는 텍스트 콘텐츠만 있는 알림 메시지에 대 한 템플릿 XML 문서를 가져와 새 알림 메시지를 만듭니다. Toast XML의 text 요소가 설정 된 다음 XML 문서에서 새 [**To notification**](/uwp/api/Windows.UI.Notifications.ToastNotification) 개체가 만들어집니다. 마지막으로, 알림은 사용자에 게 표시 됩니다. [**표시**](/uwp/api/windows.ui.notifications.toastnotifier.show)를 호출 합니다.
 
-[!code-cs[SendToastNotification](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetSendToastNotification)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs" id="SnippetSendToastNotification":::
 
 시스템에서 백그라운드 작업을 취소할 때 호출 되는 [**취소**](/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance.canceled) 된 이벤트에 대 한 처리기에서 원격 분석을 위해 오류를 기록할 수 있습니다.
 
-[!code-cs[OnCanceled](./code/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs#SnippetOnCanceled)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingBackgroundTask/MediaProcessingTask.cs" id="SnippetOnCanceled":::
 
 ## <a name="register-and-launch-the-background-task"></a>백그라운드 작업 등록 및 시작
 
@@ -104,17 +104,17 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 이 예제의 나머지 코드는 전경 앱에 추가 해야 합니다. 먼저 프로젝트에 다음 네임 스페이스를 추가 해야 합니다.
 
-[!code-cs[ForegroundUsing](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetForegroundUsing)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs" id="SnippetForegroundUsing":::
 
 그런 다음 백그라운드 작업을 등록 하는 데 필요한 다음 멤버 변수를 추가 합니다.
 
-[!code-cs[ForegroundMembers](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetForegroundMembers)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs" id="SnippetForegroundMembers":::
 
 **PickFilesToTranscode** 도우미 메서드는 [**fileopenpicker**](/uwp/api/Windows.Storage.Pickers.FileOpenPicker) 와 [**FileSavePicker**](/uwp/api/Windows.Storage.Pickers.FileSavePicker) 를 사용 하 여 트랜스 코딩을 위한 입력 및 출력 파일을 엽니다. 사용자가 앱에 액세스할 수 없는 위치에서 파일을 선택할 수 있습니다. 백그라운드 작업이 파일을 열 수 있도록 하려면 앱에 대 한 [**FutureAccessList**](/uwp/api/windows.storage.accesscache.storageapplicationpermissions.futureaccesslist) 에 추가 합니다.
 
 마지막으로 앱에 대 한 [**LocalSettings**](/uwp/api/windows.storage.applicationdata.localsettings) 의 입력 및 출력 파일 이름에 대 한 항목을 설정 합니다. 백그라운드 작업은이 위치에서 파일 이름을 검색 합니다.
 
-[!code-cs[PickFilesToTranscode](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetPickFilesToTranscode)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs" id="SnippetPickFilesToTranscode":::
 
 백그라운드 작업을 등록 하려면 새 [**MediaProcessingTrigger**](/uwp/api/Windows.ApplicationModel.Background.MediaProcessingTrigger) 및 새 [**BackgroundTaskBuilder**](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskBuilder)를 만듭니다. 나중에 식별할 수 있도록 백그라운드 작업 빌더의 이름을 설정 합니다. [**Taskentrypoint**](/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.taskentrypoint) 를 매니페스트 파일에서 사용한 것과 같은 네임 스페이스 및 클래스 이름 문자열로 설정 합니다. [**트리거**](/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.trigger) 속성을 **MediaProcessingTrigger** 인스턴스로 설정 합니다.
 
@@ -122,23 +122,23 @@ Microsoft Visual Studio에서 기존 솔루션에 백그라운드 작업을 추�
 
 [**Register**](/uwp/api/windows.applicationmodel.background.backgroundtaskbuilder.register)를 호출 하 여 백그라운드 작업을 등록 합니다. [**완료**](/uwp/api/windows.applicationmodel.background.backgroundtaskregistration.completed) 된 이벤트와 [**진행 중인**](/uwp/api/windows.applicationmodel.background.ibackgroundtaskregistration.progress) 이벤트에 대 한 처리기를 등록 합니다.
 
-[!code-cs[RegisterBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetRegisterBackgroundTask)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs" id="SnippetRegisterBackgroundTask":::
 
 일반적인 앱은 **OnNavigatedTo** 이벤트와 같이 앱이 처음 시작 될 때 백그라운드 작업을 등록 합니다.
 
 **MediaProcessingTrigger** 개체의 [**requestasync**](/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger.requestasync) 메서드를 호출 하 여 백그라운드 작업을 시작 합니다. 이 메서드에서 반환 된 [**MediaProcessingTriggerResult**](/uwp/api/Windows.ApplicationModel.Background.MediaProcessingTriggerResult) 개체를 사용 하면 백그라운드 작업이 성공적으로 시작 되었는지 여부를 알 수 있으며, 그렇지 않으면 백그라운드 작업이 시작 되지 않은 이유를 알 수 있습니다. 
 
-[!code-cs[LaunchBackgroundTask](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetLaunchBackgroundTask)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs" id="SnippetLaunchBackgroundTask":::
 
 일반적인 앱은 UI 컨트롤의 **Click** 이벤트와 같이 사용자 상호 작용에 대 한 응답으로 백그라운드 작업을 시작 합니다.
 
 **OnProgress** 이벤트 처리기는 백그라운드 태스크가 작업 진행률을 업데이트할 때 호출 됩니다. 이 기회를 사용 하 여 진행률 정보로 UI를 업데이트할 수 있습니다.
 
-[!code-cs[OnProgress](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetOnProgress)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs" id="SnippetOnProgress":::
 
 **Oncompleted** 이벤트 처리기는 백그라운드 작업의 실행이 완료 될 때 호출 됩니다. 이는 UI를 업데이트 하 여 사용자에 게 상태 정보를 제공 하는 또 다른 기회입니다.
 
-[!code-cs[OnCompleted](./code/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs#SnippetOnCompleted)]
+:::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/MediaProcessingTriggerWin10/cs/MediaProcessingTriggerWin10/MainPage.xaml.cs" id="SnippetOnCompleted":::
 
 
  
