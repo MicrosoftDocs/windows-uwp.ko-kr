@@ -6,17 +6,17 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: fb585b46399d7b24eaafa531b2aae34f397dbeb2
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 00717a64135ef32a99b06c61b31e2ff59a587878
+ms.sourcegitcommit: b66796c73f14da63794efa66c8ded2caa25da0f7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155847"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89285454"
 ---
 # <a name="guidelines-for-background-tasks"></a>백그라운드 작업 지침
 
 
-앱이 백그라운드 작업을 실행 하기 위한 요구 사항을 충족 하는지 확인 합니다.
+앱이 백그라운드 작업 실행을 위한 요구 사항을 충족하는지 확인합니다.
 
 ## <a name="background-task-guidance"></a>백그라운드 작업 지침
 
@@ -61,7 +61,7 @@ In-process **및 out-of-process 백그라운드 작업:** Windows 10 버전 1607
 
 > **중요**    Windows 10부터 백그라운드 작업을 실행 하기 위한 필수 조건으로 앱이 더 이상 잠금 화면에 있을 필요가 없습니다.
 
-UWP (유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정 되지 않고 지원 되는 모든 작업 유형을 실행할 수 있습니다. 그러나 앱은 [**Getaccessstate**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.getaccessstatus) 를 호출 하 고 앱이 백그라운드에서 실행 되지 못하도록 거부 되지 않았는지 확인 해야 합니다. [**Getaccessstatus**]가 거부 된 [**BackgroundAccessStatus**](/uwp/api/windows.applicationmodel.background.backgroundaccessstatus) 열거 중 하나를 반환 하지 않는지 확인 하십시오. 예를 들어 https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.BackgroundAccessStatus) 사용자가 장치 설정에서 앱에 대 한 백그라운드 작업 권한을 명시적으로 거부 한 경우이 메서드는를 반환 합니다.
+UWP (유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정 되지 않고 지원 되는 모든 작업 유형을 실행할 수 있습니다. 그러나 앱은 [**Getaccessstate**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.getaccessstatus) 를 호출 하 고 앱이 백그라운드에서 실행 되지 못하도록 거부 되지 않았는지 확인 해야 합니다. **Getaccessstatus** 가 거부 된 [**BackgroundAccessStatus**](/uwp/api/windows.applicationmodel.background.backgroundaccessstatus) 열거형 중 하나를 반환 하지 않는지 확인 합니다. 예를 들어 사용자가 장치 설정에서 앱에 대 한 백그라운드 작업 권한을 명시적으로 거부 한 경우이 메서드는 **DeniedByUser** 를 반환 합니다.
 
 앱이 백그라운드에서 실행 되지 못하도록 거부 되 면 앱은 [**Requestaccessasync**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.getaccessstatus) 를 호출 하 고 백그라운드 작업을 등록 하기 전에 응답이 거부 되지 않았는지 확인 해야 합니다.
 
