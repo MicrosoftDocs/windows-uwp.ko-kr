@@ -9,12 +9,12 @@ dev_langs:
 - vb
 keywords: windows 10, uwp, 화면 캡처
 ms.localizationpriority: medium
-ms.openlocfilehash: 829b99932c8035c2e9d493ed7319f640386f88ed
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b57be844e5ee10d384046aac651ab4f198f37d9e
+ms.sourcegitcommit: 14c0b1ea2447a81ddf31982b40e19a74ecc6d59e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163627"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89310074"
 ---
 # <a name="screen-capture"></a>화면 캡처
 
@@ -24,6 +24,8 @@ Windows 10 버전 1803부터, [Windows Graphics. Capture](/uwp/api/windows.graph
 
 > [!NOTE]
 > 화면 캡처 Api는 데스크톱 및 Windows Mixed Reality 몰입 형 헤드셋 에서만 지원 됩니다.
+
+이 문서에서는 표시 또는 응용 프로그램 창에서 단일 이미지를 캡처하는 방법을 설명 합니다. 화면에서 비디오 파일로 캡처된 프레임을 인코딩하는 방법에 대 한 자세한 내용은 [비디오에 대 한 화면 캡처](screen-capture-video.md) 를 참조 하세요.
 
 ## <a name="add-the-screen-capture-capability"></a>화면 캡처 기능 추가
 
@@ -686,8 +688,9 @@ End Class
 
 ## <a name="record-a-video"></a>비디오 기록
 
-응용 프로그램의 비디오를 기록 하려는 경우에는 [Windows.](/uwp/api/windows.media.apprecording)p a d. 데스크톱 확장 SDK의 일부 이므로 데스크톱 에서만 작동 하므로 프로젝트에서이에 대 한 참조를 추가 해야 합니다. 자세한 내용은 [장치 패밀리 개요](/uwp/extension-sdks/device-families-overview) 를 참조 하세요.
+응용 프로그램의 비디오를 기록 하려는 경우 [비디오에 대 한 화면 캡처](screen-capture-video.md)문서에 나와 있는 연습을 수행할 수 있습니다. 또는 Windows. a p a. p. a p a [네임 스페이스](/uwp/api/windows.media.apprecording)를 사용할 수 있습니다. 데스크톱 확장 SDK의 일부 이므로 데스크톱 에서만 작동 하므로 프로젝트에서이에 대 한 참조를 추가 해야 합니다. 자세한 내용은 [장치 패밀리 개요](/uwp/extension-sdks/device-families-overview) 를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
-* [Windows. Graphics. Capture 네임 스페이스](/uwp/api/windows.graphics.capture)
+* [Windows. Graphics. Capture 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.graphics.capture)
+* [비디오에 화면 캡처](screen-capture-video.md)
