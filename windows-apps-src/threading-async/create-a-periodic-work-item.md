@@ -1,17 +1,17 @@
 ---
 ms.assetid: 1B077801-0A58-4A34-887C-F1E85E9A37B0
 title: 정기 작업 항목 만들기
-description: 정기적으로 반복 되는 작업 항목을 만드는 방법에 대해 알아봅니다.
+description: 유니버설 Windows 플랫폼 (UWP) Windows.system.threading.threadpooltimer API의 CreatePeriodicTimer 메서드를 사용 하 여 주기적으로 반복 되는 작업 항목을 만드는 방법에 대해 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 정기 작업 항목, 스레딩, 타이머
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a69ddc9afd051808a047af0e34b4e33d4250dc1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e1b50858b2c7e3ce4cd60f9401cedb75eb950c7d
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155237"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304445"
 ---
 # <a name="create-a-periodic-work-item"></a>정기 작업 항목 만들기
 

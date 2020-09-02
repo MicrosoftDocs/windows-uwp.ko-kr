@@ -1,17 +1,17 @@
 ---
 ms.assetid: 5B30E32F-27E0-4656-A834-391A559AC8BC
 title: 나침반 사용
-description: 나침반을 사용 하 여 현재 머리글을 확인 하는 방법을 알아봅니다.
+description: UWP (유니버설 Windows 플랫폼) 나침반 API를 사용 하 여 탐색 앱에서 현재 제목을 확인 하는 방법에 대해 알아봅니다.
 ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 143d83a0c1257cf662fb686a5e0620db5cc6fb68
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bc0365ced06e85a99fa063c86cad0946526b3f26
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159527"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304665"
 ---
 # <a name="use-the-compass"></a>나침반 사용
 
@@ -29,7 +29,7 @@ ms.locfileid: "89159527"
 
 앱은 자북 또는 실제 북쪽을 기준으로 현재 전면부를 검색할 수 있습니다. 탐색 앱은 나침반을 사용 하 여 장치가 향하는 방향을 결정 하 고 그에 따라 지도의 방향을 지정 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 Extensible Application Markup Language (XAML), Microsoft Visual c # 및 이벤트에 대해 잘 알고 있어야 합니다.
 

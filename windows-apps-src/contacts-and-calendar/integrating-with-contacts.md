@@ -1,5 +1,5 @@
 ---
-description: 연락처 카드의 작업 옆에 앱을 추가 하는 방법을 보여 줍니다.
+description: 사용자가 앱을 선택 하 여 프로필 페이지를 열거나 통화를 설정 하거나 메시지를 보낼 수 있도록 연락처 카드의 작업에 앱을 연결 하는 방법에 대해 알아봅니다.
 MSHAttr: PreferredLib:/library/windows/apps
 title: 연락처 카드의 작업에 앱 연결
 ms.date: 02/08/2017
@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp, 연락처, 연락처 카드, 주석
 ms.assetid: 0edabd9c-ecfb-4525-bc38-53f219d744ff
 ms.localizationpriority: medium
-ms.openlocfilehash: 246a74ca008e1b8c89460aabb652accf35c842b1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 92c8517bca9bdfda9e8f8d01e07e4ca3918d03a1
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154717"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304755"
 ---
 # <a name="connect-your-app-to-actions-on-a-contact-card"></a>연락처 카드의 작업에 앱 연결
 

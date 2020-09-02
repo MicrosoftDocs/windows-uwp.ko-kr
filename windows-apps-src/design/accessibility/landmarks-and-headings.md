@@ -1,5 +1,5 @@
 ---
-description: 내게 필요한 옵션의 랜드마크 및 제목 기능을 설명 합니다.
+description: UI 자동화의 랜드마크 및 제목 기능을 사용 하 여 앱에서 콘텐츠 섹션을 정의 하 고, 내게 필요한 옵션을 개선 하 고, 보조 기술의 사용자가 UI를 탐색 하는 데 도움이 되는 방법을 알아봅니다.
 ms.assetid: 019CC63D-D915-4EBD-9442-DE899AB973C9
 title: 랜드마크 및 머리글
 label: Landmarks and Headings
@@ -8,12 +8,12 @@ ms.date: 01/24/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c05f39c0497a2e2ef369abd04ed437f8387e60f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 65af556180e39ea66bbeb553a50c0746f952a08c
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173997"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304745"
 ---
 # <a name="landmarks-and-headings"></a>랜드마크 및 머리글
 
@@ -39,7 +39,7 @@ Windows 설정 앱의 **접근성** 페이지를 참조 하세요.
 
 [HeadingLevel](/uwp/api/windows.ui.xaml.automation.automationproperties.headinglevelproperty) 를 사용 하 여 UI 요소를 *Level1* 에서 *Level9*까지 특정 수준의 머리글로 설정 합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 Windows 데스크톱 앱에서 일반적인 프로그래밍 가능성 문제를 해결 하는 방법을 보여 주는 다양 한 코드 샘플은 [windows 데스크톱 앱에서 일반적인 프로그래밍 가능성 문제를 해결 하기 위한 코드 샘플](/accessibility-tools-docs/)을 참조 하세요.
 

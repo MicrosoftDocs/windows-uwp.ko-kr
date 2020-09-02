@@ -1,6 +1,6 @@
 ---
 title: Windows 설정 앱 실행
-description: 앱에서 Windows 설정 앱을 시작 하는 방법을 알아봅니다. 이 항목에서는 ms 설정 URI 체계에 대해 설명 합니다. 이 URI 체계를 사용 하 여 특정 설정 페이지에서 Windows 설정 앱을 시작 합니다.
+description: 앱에서 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 ms-settings URI 체계에 대해 설명합니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
 ms.date: 04/19/2019
 ms.topic: article
@@ -10,12 +10,12 @@ ms.custom: 19H1
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 5f62fa915c7a00d2e359989e6e10718f704854ab
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d90669e03ae15acdc826d9e0b227f12d4ecf3cbc
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173007"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304715"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
@@ -25,7 +25,7 @@ ms.locfileid: "89173007"
 -   [**PreferredApplicationPackageFamilyName**](/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)
 -   [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview)
 
-Windows 설정 앱을 시작 하는 방법을 알아봅니다. 이 항목에서는 **ms 설정:** URI 체계에 대해 설명 합니다. 이 URI 체계를 사용 하 여 특정 설정 페이지에서 Windows 설정 앱을 시작 합니다.
+Windows 설정 앱을 시작 하는 방법을 알아봅니다. 이 항목에서는 **ms 설정:** URI 체계에 대해 설명 합니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
 
 설정 앱을 시작 하는 것은 개인 정보 인식 앱을 작성 하는 데 중요 한 부분입니다. 앱에서 중요 한 리소스에 액세스할 수 없는 경우 해당 리소스에 대 한 개인 정보 설정에 대 한 편리한 링크를 사용자에 게 제공 하는 것이 좋습니다. 자세한 내용은 [개인 정보 인식 앱에 대 한 지침](../security/index.md)을 참조 하세요.
 
@@ -146,7 +146,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 아이 컨트롤 | ms-설정: easeofaccess-eyecontrol |
 | 글꼴 | ms-설정: 글꼴 |
 | 고대비 | ms-설정: easeofaccess-system.windows.forms.systeminformation.highcontrast |
-| 키보드 | ms-설정: easeofaccess |
+| Keyboard | ms-설정: easeofaccess |
 | 돋보기 | ms-설정: easeofaccess-돋보기 |
 | 마우스 | ms-설정: easeofaccess |
 | 내레이터 | ms-설정: easeofaccess-내레이터 |
@@ -168,7 +168,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 게임 DVR | ms-설정: 게임-gamedvr |
 | 게임 모드 | ms-설정: 게임-gamemode |
 | 게임 전체 화면 재생 | ms-설정: quietmomentsgame |
-| TruePlay | trueplay (**Windows 10, 버전 1809 이상에서 사용 되지 않음**) |
+| TruePlay | trueplay (**Windows 10, 버전 1809 (10.0;)을 (를) 기반으로 합니다. 빌드 17763),이 기능은 Windows에서 제거 되었습니다**. |
 | Xbox 네트워킹 | ms-설정: 게임-xboxnetworking |
 
 ## <a name="home-page"></a>홈 페이지
@@ -203,7 +203,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 모바일 핫스팟 | ms-설정: 네트워크-mobilehotspot |
 | NFC | ms-설정: nfctransactions |
 | Proxy (프록시) | ms-설정: 네트워크-프록시 |
-| Status | ms-설정: 네트워크-상태<br/>ms-설정: 네트워크 |
+| 상태 | ms-설정: 네트워크-상태<br/>ms-설정: 네트워크 |
 | VPN | ms-설정: 네트워크-vpn |
 | Wi-Fi | ms-설정: 네트워크-wifi (장치에 wifi 어댑터가 있는 경우에만 사용 가능) |
 | Wi-fi 호출 | wificalling: 네트워크-(Wi-fi 호출이 사용 되는 경우에만 사용 가능) |
@@ -317,7 +317,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 날짜 및 시간 | ms-설정: dateandtime |
 | 일본 IME 설정 | 밀리초-설정: 지역 언어-jpnime (Microsoft 일본 입력 방법 편집기가 설치 된 경우 사용 가능) |
 | 지역 | ms-설정: 지역 서식 |
-| 언어 | ms-설정: 키보드<br/>ms-설정: 지역 언어<br/>ms-설정: 지역 언어-bpmfime<br/>ms-설정: 지역 언어-cangjieime<br/>밀리초-설정: 지역 언어-chsime-병음-domainlexicon<br/>밀리초-설정: 지역 언어-chsime-병음-keyconfig<br/>밀리초-설정: 지역 언어-chsime-병음-udp<br/>wubi: 지역 언어-chsime-udp<br/>ms-설정: 지역 언어-quickime |
+| Language | ms-설정: 키보드<br/>ms-설정: 지역 언어<br/>ms-설정: 지역 언어-bpmfime<br/>ms-설정: 지역 언어-cangjieime<br/>밀리초-설정: 지역 언어-chsime-병음-domainlexicon<br/>밀리초-설정: 지역 언어-chsime-병음-keyconfig<br/>밀리초-설정: 지역 언어-chsime-병음-udp<br/>wubi: 지역 언어-chsime-udp<br/>ms-설정: 지역 언어-quickime |
 | 병음 IME 설정 | 밀리초-설정: 지역 언어-chsime-병음 (Microsoft 병음 input 메서드 편집기가 설치 된 경우 사용 가능) |
 | Speech | ms-설정: 음성 |
 | Wubi IME 설정  | wubi: 지역 언어-chsime-(Microsoft Wubi 입력 방법 편집기가 설치 된 경우 사용 가능) |
@@ -329,7 +329,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 활성화 | ms-설정: 활성화 |
 | Backup | ms-설정: 백업 |
 | 배달 최적화 | ms-설정: 배달-최적화 |
-| 내 디바이스 찾기 | ms-설정: findmydevice |
+| 내 장치 찾기 | ms-설정: findmydevice |
 | 개발자용 | ms-설정: 개발자 |
 | 복구 | ms-설정: 복구 |
 | 문제 해결 | ms-설정: 문제 해결 |

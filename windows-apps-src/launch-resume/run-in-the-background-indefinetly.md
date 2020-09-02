@@ -6,12 +6,12 @@ keywords: 백그라운드 작업, 확장 된 실행, 리소스, 제한, 백그�
 ms.date: 10/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ec77b0f4777f12d20ec13bcfbac864993afd441
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 33b41c432edde42bc31daa1d5631f60fb38d8397
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175117"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304505"
 ---
 # <a name="run-in-the-background-indefinitely"></a>백그라운드에서 무기한 실행
 
@@ -27,9 +27,14 @@ Microsoft Store에 제출 하기에 적합 하지 않은 앱을 개발 하는 �
 
 `extendedExecutionUnconstrained`기능은 앱의 매니페스트에 제한 된 기능으로 추가 됩니다. 제한 된 기능에 대 한 자세한 내용은 [앱 기능 선언](../packaging/app-capability-declarations.md) 을 참조 하세요.
 
-> **참고:** *Xmlns: rescap* XML 네임 스페이스 선언을 추가 하 고 *rescap* 접두사를 사용 하 여 기능을 선언 합니다.
+> [!NOTE]
+> *Xmlns: rescap* XML 네임 스페이스 선언을 추가 하 고 *rescap* 접두사를 사용 하 여 기능을 선언 합니다.
+>
+> 자세한 내용은 [앱 기능 선언의](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)제한 된 기능 섹션을 참조 하세요.
+>
 
 _Package.appxmanifest_
+
 ```xml
 <Package
     ...
@@ -71,9 +76,14 @@ switch (result)
 
 유니버설 Windows 플랫폼에서 백그라운드 작업은 사용자 인터페이스의 폼 없이 백그라운드에서 실행 되는 프로세스입니다. 백그라운드 작업은 일반적으로 최대 25 초 동안 실행 될 수 있으며 취소 됩니다. 또한 오래 실행 되는 작업 중 일부에는 백그라운드 작업이 유휴 상태가 아니거나 메모리를 사용 하 고 있지 않은지 확인 해야 합니다. Windows 크리에이터 업데이트 (버전 1703)에서는 이러한 한도를 제거 하기 위해 [extendedBackgroundTaskTime](../packaging/app-capability-declarations.md) 제한 된 기능이 도입 되었습니다. **ExtendedBackgroundTaskTime** 기능은 앱의 매니페스트 파일에 제한 된 기능으로 추가 됩니다.
 
-> **참고:** *Xmlns: rescap* XML 네임 스페이스 선언을 추가 하 고 *rescap* 접두사를 사용 하 여 기능을 선언 합니다.
+> [!NOTE]
+> *Xmlns: rescap* XML 네임 스페이스 선언을 추가 하 고 *rescap* 접두사를 사용 하 여 기능을 선언 합니다.
+>
+> 자세한 내용은 [앱 기능 선언의](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)제한 된 기능 섹션을 참조 하세요.
+>
 
 _Package.appxmanifest_
+
 ```xml
 <Package
     ... 

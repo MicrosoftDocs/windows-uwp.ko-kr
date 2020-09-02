@@ -1,16 +1,16 @@
 ---
-Description: 데스크톱 애플리케이션 및 UWP 앱 간의 코드 공유
 title: 데스크톱 애플리케이션 및 UWP 앱 간의 코드 공유
+description: 데스크톱 응용 프로그램을 .NET Framework (WPF 및 Windows Forms) 또는 c + + Win32 Api를 유니버설 Windows 플랫폼 (UWP) 및 Windows 10으로 이동 하는 방법에 대해 알아봅니다.
 ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e13c656f02531d500a72aa74b2d3c5d6cc29aa4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ed23f77936378f2348abf868a67041be84978123
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174937"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304685"
 ---
 # <a name="move-from-a-desktop-application-to-uwp"></a>데스크톱 응용 프로그램에서 UWP로 이동
 

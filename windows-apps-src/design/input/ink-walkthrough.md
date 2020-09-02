@@ -1,17 +1,17 @@
 ---
 ms.assetid: ''
 title: Windows 앱에서 잉크 지원
-description: Windows 앱에 잉크 지원을 추가 하는 방법에 대 한 단계별 자습서입니다.
-keywords: 잉크, 잉크, tuorial
+description: 이 단계별 자습서를 수행 하 여 UWP (기본 유니버설 Windows 플랫폼) 앱에서 Windows Ink 작성 및 그리기를 지 원하는 방법에 대해 알아봅니다.
+keywords: 잉크, 잉크, 자습서
 ms.date: 01/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1972a266297d41e357bd2086f8485c154153d582
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 0ed230fc9beb158df050f314a0142f250c2a8691
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157037"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304605"
 ---
 # <a name="tutorial-support-ink-in-your-windows-app"></a>자습서: Windows 앱에서 잉크 지원
 
@@ -33,7 +33,7 @@ ms.locfileid: "89157037"
 
 Windows 잉크를 사용 하면 신속 하 고 필기 한 노트와 주석에서 화이트 보드 데모로, 아키텍처 및 엔지니어링 드로잉부터 개인 masterpieces에 이르기까지 거의 모든 펜 및 종이 환경 에서도을 고객에 게 제공할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 * 현재 버전의 Windows 10을 실행 하는 컴퓨터 (또는 가상 컴퓨터)
 * [Visual Studio 2019 및 RS2 SDK](https://developer.microsoft.com/windows/downloads)
@@ -64,7 +64,7 @@ Windows 잉크를 사용 하면 신속 하 고 필기 한 노트와 주석에서
 
 이러한 개체는 Windows 앱에 대 한 대부분의 잉크를 제공 합니다.
 
-| 구성 요소 | Description |
+| 구성 요소 | 설명 |
 | --- | --- |
 | [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas) | 기본적으로 펜의 모든 입력을 받아 잉크 스트로크 또는 지우기 스트로크로 표시 하는 XAML UI 플랫폼 컨트롤입니다. |
 | [**InkPresenter**](/uwp/api/Windows.UI.Input.Inking.InkPresenter) | [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤([**InkCanvas.InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 추가 사용자 지정 및 개인 설정을 위한 포괄적인 Api 집합과 함께 [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 노출 하는 모든 기본 잉크 기능을 제공 합니다. |
@@ -119,7 +119,7 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
     <InkCanvas x:Name="inkCanvas" />
 ```
 
-이것으로 끝입니다. 
+간단하죠. 
 
 이제 앱을 다시 실행합니다. 계속 해 서 자유롭게 이동 하거나 이름을 작성 하거나 (미러를 보유 하거나 매우 좋은 메모리가 있는 경우) 자체 세로를 그립니다.
 

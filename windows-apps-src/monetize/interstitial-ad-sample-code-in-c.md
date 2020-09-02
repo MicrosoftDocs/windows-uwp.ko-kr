@@ -1,17 +1,17 @@
 ---
 ms.assetid: 7a16b0ca-6b8e-4ade-9853-85690e06bda6
-description: 'C #을 사용 하 여 중간 광고를 시작 하는 방법을 알아봅니다.'
+description: 'C # 및 XAML을 사용 하 여 UWP (유니버설 Windows 플랫폼) 앱에서 중간 광고를 표시 하 고 시작 하는 방법을 알아봅니다.'
 title: C#의 중간 광고 샘플 코드
 ms.date: 02/18/2020
 ms.topic: article
 keywords: 'windows 10, uwp, 광고, 광고, 중간, c #, 샘플 코드'
 ms.localizationpriority: medium
-ms.openlocfilehash: 18e38e9b672b5e96733131c33b3a632cd7a95aeb
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 63804fea6fc1657ead6c658814dfc7e0694f114f
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164597"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304735"
 ---
 # <a name="interstitial-ad-sample-code-in-c"></a>C의 중간 광고 샘플 코드\# #  
 

@@ -1,15 +1,15 @@
 ---
 title: Xbox의 VES (Voice Enabled Shell)
-description: Xbox의 UWP 앱에 음성 제어 지원을 추가 하는 방법에 대해 알아봅니다.
+description: VES (Voice Enabled Shell)를 사용 하 여 Xbox에서 유니버설 Windows 플랫폼 (UWP) 앱에 음성 제어 지원을 추가 하는 방법에 대해 알아봅니다.
 ms.date: 10/19/2017
 ms.topic: article
 keywords: windows 10, uwp, xbox, 음성, 음성 사용 셸
-ms.openlocfilehash: db846e906917f29781200f3c312f6dbd6e2b2dd1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 38afa2473dd74ab580cf38cc21d1f2b192f9b72a
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161667"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304655"
 ---
 # <a name="using-speech-to-invoke-ui-elements"></a>Speech를 사용 하 여 UI 요소 호출
 
@@ -151,7 +151,7 @@ ALM에서 사용자는 음성을 사용 하 여 UI와 상호 작용할 수 있�
 ## <a name="disambiguation"></a>명확성 ##
 여러 UI 요소의 이름이 같거나 음성 인식기가 여러 후보와 일치 하는 경우 VES는 명확성 모드로 전환 됩니다.  이 모드에서 사용자가 올바른 항목을 선택할 수 있도록 관련 된 요소에 대해 음성 팁 레이블이 표시 됩니다. 사용자는 "취소"를 말하여 명확성 모드를 취소할 수 있습니다.
 
-예:
+예를 들면 다음과 같습니다.
 
 - 활성 수신 대기 모드에서의 명확성 사용자에 게 "는 모호 합니다." 라고 표시 됩니다.
 

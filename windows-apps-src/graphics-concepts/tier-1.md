@@ -1,18 +1,18 @@
 ---
 title: 계층 1
-description: 이 섹션에서는 계층 1 지원에 대해 설명 합니다.
+description: Direct3D의 스트리밍 리소스 기능에 대 한 계층 1 지원에 영향을 주는 일반적인 제한 사항에 대해 알아봅니다.
 ms.assetid: 153DA429-0C99-4691-AEB4-124FD9B17BE2
 keywords:
 - 계층 1
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fcd5debb367b73ad23492cf63d3acdd1797c23a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2ff90c75e3f4aefa28ddad5528d39d2f2d541bb0
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162707"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304645"
 ---
 # <a name="tier-1"></a>계층 1
 
