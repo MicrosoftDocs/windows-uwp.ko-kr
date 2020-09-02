@@ -1,18 +1,18 @@
 ---
 title: Direct3D 그래픽 용어
-description: Microsoft Direct3D에서 사용하는 그래픽 용어를 정의합니다.
+description: Direct3D 게임 및 앱 개발에 사용되는 일반적인 3D 컴퓨터 그래픽 용어를 개괄적으로 정의한 용어집을 참조하세요.
 ms.assetid: c3850a92-4d05-4f72-bf0f-6a0c79e841eb
 keywords:
 - Direct3D 그래픽 용어
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3cb6a2466ea201c9b5047f7eb159477a0d584429
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 3359b81c6932bfc63c3939d2f857aaef9248e52f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63805637"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173077"
 ---
 # <a name="direct3d-graphics-glossary"></a>Direct3D 그래픽 용어
 
@@ -63,11 +63,11 @@ Microsoft Direct3D 그래픽 용어를 정의합니다. 여기서는 Direct3D �
 <td align="left"><p>Direct3D 그래픽 파이프라인은 실시간 게임 애플리케이션용 그래픽을 생성하도록 설계되었습니다. 데이터는 각각의 구성 가능하거나 프로그래밍 가능한 각 단계를 통해 입력에서 출력으로 흐릅니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="views.md">보기</a></p></td>
+<td align="left"><p><a href="views.md">Views</a></p></td>
 <td align="left"><p>&quot;보기&quot;라는 용어는 &quot;필요한 형식의 데이터&quot;를 의미합니다. 예를 들어 CBV(상수 버퍼 보기)는 올바른 형식의 상수 버퍼 데이터입니다. 이 섹션에서는 가장 일반적이고 유용한 보기에 대해 설명합니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="compute-pipeline.md">컴퓨팅 파이프라인</a></p></td>
+<td align="left"><p><a href="compute-pipeline.md">계산 파이프라인</a></p></td>
 <td align="left"><p>Direct3D 컴퓨팅 파이프라인은 그래픽 파이프라인과 거의 동시에 수행할 수 있는 계산을 처리하도록 설계되었습니다.</p></td>
 </tr>
 <tr class="even">

@@ -1,21 +1,21 @@
 ---
-Description: Windows 앱을 Microsoft Store에 게시하는 방법을 살펴봅니다.
+description: 파트너 센터에 가입하고 사용하여 Windows 앱과 게임을 Microsoft Store에 게시하는 방법을 알아보세요.
 title: Windows 앱 게시
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, UWP, 게시, 판매, 배포, Store, 대시보드
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d30eb37e9633496e510a2e05ec48cc819bd51c9
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 19607823ce98aa71a8e3abecb94b82ff06a08352
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80614972"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89164127"
 ---
 # <a name="publish-windows-apps-and-games"></a>Windows 앱 및 게임 게시  
 
-[파트너 센터](https://partner.microsoft.com/dashboard)를 사용하여 앱 및 게임을 Microsoft Store에 게시할 수 있습니다. [지금 등록하세요!](https://developer.microsoft.com/store/register)
+[파트너 센터](https://partner.microsoft.com/dashboard)를 사용하여 앱 및 게임을 Microsoft Store에 게시할 수 있습니다. [지금 등록하세요.](https://developer.microsoft.com/store/register)
 
 <br/>
 
