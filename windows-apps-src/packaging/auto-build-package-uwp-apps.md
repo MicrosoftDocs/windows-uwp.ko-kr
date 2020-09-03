@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 70415c9f3d58625cfdc651ec67c8a9f37c23cffa
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 32054a30e56102b9c0642392d78ac75b78fb99e9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77089499"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158227"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -19,9 +19,9 @@ Azure Pipelines를 사용하여 UWP 프로젝트에 사용할 자동화된 빌�
 
 ## <a name="create-a-new-azure-pipeline"></a>새 Azure Pipelines 만들기
 
-아직 [Azure Pipelines에 가입](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-sign-up)하지 않은 경우 먼저 이 작업을 시작합니다.
+아직 [Azure Pipelines에 가입](/azure/devops/pipelines/get-started/pipelines-sign-up)하지 않은 경우 먼저 이 작업을 시작합니다.
 
-다음으로 소스 코드를 빌드하는 데 사용할 수 있는 파이프라인을 만듭니다. GitHub 리포지토리를 빌드하기 위한 파이프라인을 빌드하는 방법에 대한 자습서는 [첫 번째 파이프라인 만들기](https://docs.microsoft.com/azure/devops/pipelines/get-started-yaml)를 참조하세요. Azure Pipelines는 [이 문서](https://docs.microsoft.com/azure/devops/pipelines/repos)에 나열된 리포지토리 유형을 지원합니다.
+다음으로 소스 코드를 빌드하는 데 사용할 수 있는 파이프라인을 만듭니다. GitHub 리포지토리를 빌드하기 위한 파이프라인을 빌드하는 방법에 대한 자습서는 [첫 번째 파이프라인 만들기](/azure/devops/pipelines/get-started-yaml)를 참조하세요. Azure Pipelines는 [이 문서](/azure/devops/pipelines/repos)에 나열된 리포지토리 유형을 지원합니다.
 
 ## <a name="set-up-an-automated-build"></a>자동화된 빌드 설정
 
@@ -66,7 +66,7 @@ steps:
 
 ## <a name="add-your-project-certificate-to-the-secure-files-library"></a>보안 파일 라이브러리에 프로젝트 인증서 추가
 
-가능한 경우 인증서를 리포지토리에 제출하지 않도록 해야 하며, Git에서는 기본적으로 이를 무시합니다. 인증서와 같은 중요한 파일을 안전하게 처리하도록 관리하기 위해 Azure DevOps는 [보안 파일](https://docs.microsoft.com/azure/devops/pipelines/library/secure-files?view=azure-devops) 기능을 지원합니다.
+가능한 경우 인증서를 리포지토리에 제출하지 않도록 해야 하며, Git에서는 기본적으로 이를 무시합니다. 인증서와 같은 중요한 파일을 안전하게 처리하도록 관리하기 위해 Azure DevOps는 [보안 파일](/azure/devops/pipelines/library/secure-files?view=azure-devops) 기능을 지원합니다.
 
 자동화된 빌드에 대한 인증서를 업로드하려면 다음을 수행합니다.
 
@@ -80,7 +80,7 @@ steps:
 
     ![보안 파일을 업로드하는 방법](images/secure-file2.png)
 
-5. 인증서의 프라이빗 키에 암호가 있는 경우 해당 암호를 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates)에 저장한 다음, [변수 그룹](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups)에 연결하는 것이 좋습니다. 그러면 이 변수를 사용하여 파이프라인에서 암호에 액세스할 수 있습니다. 암호는 프라이빗 키에 대해서만 지원되므로 자체적으로 암호로 보호된 인증서 파일을 사용하는 것은 현재 지원되지 않습니다.
+5. 인증서의 프라이빗 키에 암호가 있는 경우 해당 암호를 [Azure Key Vault](/azure/key-vault/about-keys-secrets-and-certificates)에 저장한 다음, [변수 그룹](/azure/devops/pipelines/library/variable-groups)에 연결하는 것이 좋습니다. 그러면 이 변수를 사용하여 파이프라인에서 암호에 액세스할 수 있습니다. 암호는 프라이빗 키에 대해서만 지원되므로 자체적으로 암호로 보호된 인증서 파일을 사용하는 것은 현재 지원되지 않습니다.
 
 > [!NOTE]
 > Visual Studio 2019부터 임시 인증서는 더 이상 UWP 프로젝트에서 생성되지 않습니다. 인증서를 만들거나 내보내려면 [이 문서](/windows/msix/package/create-certificate-package-signing)에 설명된 PowerShell cmdlet을 사용하세요.
@@ -100,7 +100,7 @@ steps:
 | AppxPackageSigningEnabled | true | 패키지 서명을 사용하도록 설정합니다. |
 | PackageCertificateThumbprint | 인증서 지문 | 이 값은 **서명 인증서의 지문과 일치하거나 빈 문자열이어야** 합니다. |
 | PackageCertificateKeyFile | 경로 | 사용할 인증서의 경로입니다. 보안 파일 메타데이터에서 검색됩니다. |
-| PackageCertificatePassword | 암호 | 인증서의 프라이빗 키용 암호입니다. 암호를 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/about-keys-secrets-and-certificates)에 저장하고 이 암호를 [변수 그룹](https://docs.microsoft.com/azure/devops/pipelines/library/variable-groups)에 연결하는 것이 좋습니다. 변수를 이 인수에 전달할 수 있습니다. |
+| PackageCertificatePassword | 암호 | 인증서의 프라이빗 키용 암호입니다. 암호를 [Azure Key Vault](/azure/key-vault/about-keys-secrets-and-certificates)에 저장하고 이 암호를 [변수 그룹](/azure/devops/pipelines/library/variable-groups)에 연결하는 것이 좋습니다. 변수를 이 인수에 전달할 수 있습니다. |
 
 ### <a name="configure-the-build"></a>빌드 구성
 
@@ -152,7 +152,7 @@ MSIX(또는 .appx) 패키지에 서명하려면 파이프라인에서 서명 인
 
 ![기본 변수](images/building-screen5.png)
 
-미리 정의된 변수를 모두 보려면 [미리 정의된 빌드 변수](https://docs.microsoft.com/azure/devops/pipelines/build/variables)를 참조하세요.
+미리 정의된 변수를 모두 보려면 [미리 정의된 빌드 변수](/azure/devops/pipelines/build/variables)를 참조하세요.
 
 ## <a name="configure-the-publish-build-artifacts-task"></a>빌드 아티팩트 게시 작업 구성
 
@@ -195,7 +195,7 @@ MSIX(또는 .appx) 패키지에 서명하려면 파이프라인에서 서명 인
 
 ## <a name="related-topics"></a>관련 항목
 
-- [Windows용 .NET 앱 빌드](https://docs.microsoft.com/vsts/build-release/get-started/dot-net)
+- [Windows용 .NET 앱 빌드](/vsts/build-release/get-started/dot-net)
 - [UWP 앱 패키징](/windows/msix/package/packaging-uwp-apps)
-- [Windows 10에서 LOB 앱을 테스트용으로 로드 ](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10)
+- [Windows 10에서 LOB 앱을 테스트용으로 로드 ](/windows/deploy/sideload-apps-in-windows-10)
 - [패키지 서명용 인증서 만들기](/windows/msix/package/create-certificate-package-signing)

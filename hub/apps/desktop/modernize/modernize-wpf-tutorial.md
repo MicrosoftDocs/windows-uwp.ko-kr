@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 21049c995d467209b22fe8ea5c40d303911f2c2c
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: aa8991e7fd0bbb825ff5280f01693f092125f573
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77521292"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161377"
 ---
 # <a name="tutorial-modernize-a-wpf-app"></a>자습서: WPF 앱 현대화 
 
@@ -111,13 +111,13 @@ Windows 10 버전 1903부터 *XAML Island*라는 기능을 사용하여 UWP 이�
 
 자세한 내용은 [데스크톱 애플리케이션의 UWP 컨트롤(XAML Islands)](/windows/uwp/xaml-platform/xaml-host-controls)을 참조하세요. 이 자습서에서는 다음과 같은 두 가지 형식의 XAML Island 컨트롤을 사용하는 과정을 안내합니다.
 
-* Windows 커뮤니티 도구 키트의 [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [MapControl](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/mapcontrol). 이러한 WPF 컨트롤은 해당 UWP 컨트롤의 인터페이스 및 기능을 래핑하며 Visual Studio 디자이너의 다른 WPF 컨트롤과 마찬가지 방법으로 사용할 수 있습니다.
+* Windows 커뮤니티 도구 키트의 [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [MapControl](/windows/communitytoolkit/controls/wpf-winforms/mapcontrol). 이러한 WPF 컨트롤은 해당 UWP 컨트롤의 인터페이스 및 기능을 래핑하며 Visual Studio 디자이너의 다른 WPF 컨트롤과 마찬가지 방법으로 사용할 수 있습니다.
 
-* UWP [달력 보기](/windows/uwp/design/controls-and-patterns/calendar-view) 컨트롤. Windows 커뮤니티 도구 키트의 [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 호스트하게 될 표준 UWP 컨트롤입니다.
+* UWP [달력 보기](/windows/uwp/design/controls-and-patterns/calendar-view) 컨트롤. Windows 커뮤니티 도구 키트의 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 호스트하게 될 표준 UWP 컨트롤입니다.
 
 ### <a name="net-core-3"></a>.NET Core 3
 
-[.NET Core](https://docs.microsoft.com/dotnet/core/)는 가볍고 쉽게 확장할 수 있는 전체 .NET Framework의 플랫폼 간 버전을 구현하는 오픈 소스 프레임워크입니다. 전체 .NET Framework에 비해 .NET Core 시작 시간이 훨씬 빠르고 여러 API가 최적화되었습니다.
+[.NET Core](/dotnet/core/)는 가볍고 쉽게 확장할 수 있는 전체 .NET Framework의 플랫폼 간 버전을 구현하는 오픈 소스 프레임워크입니다. 전체 .NET Framework에 비해 .NET Core 시작 시간이 훨씬 빠르고 여러 API가 최적화되었습니다.
 
 초기에 출시된 여러 릴리스에서 .NET Core는 웹 또는 백 엔드 앱을 지원하는 데 중점을 두었습니다. .NET Core를 사용하면 Windows, Linux 또는 Docker 컨테이너 같은 마이크로서비스 아키텍처에서 호스팅할 수 있는 확장 가능한 웹앱 또는 API를 쉽게 빌드할 수 있습니다.
 
@@ -126,4 +126,4 @@ Windows 10 버전 1903부터 *XAML Island*라는 기능을 사용하여 UWP 이�
 > [!NOTE]
 > WPF 및 Windows Forms는 여러 플랫폼에서 사용할 수 없으며, Linux 및 MacOS에서 WPF 또는 Windows Forms를 실행할 수 없습니다. WPF 및 Windows Forms의 UI 구성 요소는 여전히 Windows 렌더링 시스템에 종속되어 있습니다.
 
-자세한 내용은 [.NET Core 3.0의 새로운 기능](https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0)을 참조하세요.
+자세한 내용은 [.NET Core 3.0의 새로운 기능](/dotnet/core/whats-new/dotnet-core-3-0)을 참조하세요.

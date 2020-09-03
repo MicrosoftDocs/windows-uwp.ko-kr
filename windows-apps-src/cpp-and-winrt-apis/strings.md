@@ -5,16 +5,16 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문자열
 ms.localizationpriority: medium
-ms.openlocfilehash: 1771c3754e8e9580514f646ae8589b1982911fc7
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 56b75710c2d259e59dac476bcb860a5e4c6938d6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79448568"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154397"
 ---
 # <a name="string-handling-in-cwinrt"></a>C++/WinRT의 문자열 처리
 
-[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)에서는 **std::wstring** 같은 C++ 표준 라이브러리 전각 문자열 형식을 사용해 Windows 런타임 API를 호출할 수 있습니다(참고: **std::string** 같은 반각 문자열 형식은 사용할 수 없음). C++/WinRT에는 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)이라고 불리는 사용자 지정 문자열 형식이 없습니다(C++/WinRT 기본 라이브러리인 `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`에 정의됨). 또한 Windows 런타임 생성자, 함수 및 속성이 실제로 가져와 반환하는 문자열 형식이기도 합니다. 하지만 대부분 경우 **hstring**의 변환 생성자와 변환 연산자 덕분에 클라이언트 코드의 **hstring** 인식 여부를 선택할 수 있습니다. API를 직접 ‘작성’하는 경우에는 **hstring**에 대해 알아둘 필요가 더욱 많습니다. 
+[C++/WinRT](./intro-to-using-cpp-with-winrt.md)에서는 **std::wstring** 같은 C++ 표준 라이브러리 전각 문자열 형식을 사용해 Windows 런타임 API를 호출할 수 있습니다(참고: **std::string** 같은 반각 문자열 형식은 사용할 수 없음). C++/WinRT에는 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)이라고 불리는 사용자 지정 문자열 형식이 없습니다(C++/WinRT 기본 라이브러리인 `%WindowsSdkDir%Include\<WindowsTargetPlatformVersion>\cppwinrt\winrt\base.h`에 정의됨). 또한 Windows 런타임 생성자, 함수 및 속성이 실제로 가져와 반환하는 문자열 형식이기도 합니다. 하지만 대부분 경우 **hstring**의 변환 생성자와 변환 연산자 덕분에 클라이언트 코드의 **hstring** 인식 여부를 선택할 수 있습니다. API를 직접 ‘작성’하는 경우에는 **hstring**에 대해 알아둘 필요가 더욱 많습니다. 
 
 C++에는 문자열 형식이 많습니다. 또한 C++ 표준 라이브러리의 **std::basic_string** 외에도 변형된 형식이 여러 라이브러리에 존재합니다. C++17에는 다양한 문자열 변환 유틸리티를 비롯해 **std::basic_string_view**도 있기 때문에 모든 문자열 형식의 차이를 좁힐 수 있습니다.  [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)은 **std::basic_string_view**가 디자인된 목적인 상호 운용성을 제공하기 위해 **std::wstring_view**와의 상호 운용성을 제공합니다.
 
@@ -53,7 +53,7 @@ int main()
 }
 ```
 
-속성 접근자인 [**Uri::Domain**](https://docs.microsoft.com/uwp/api/windows.foundation.uri.Domain)은 **hstring** 형식입니다.
+속성 접근자인 [**Uri::Domain**](/uwp/api/windows.foundation.uri.Domain)은 **hstring** 형식입니다.
 
 ```cppwinrt
 public:
@@ -72,14 +72,14 @@ hstring domainHstring{ contosoUri.Domain() }; // L"contoso.com"
 domainHstring = awUri.Domain(); // L"adventure-works.com"
 ```
 
-마찬가지로 [**IStringable::ToString**](https://docs.microsoft.com/windows/desktop/api/windows.foundation/nf-windows-foundation-istringable-tostring) 역시 hstring을 반환합니다.
+마찬가지로 [**IStringable::ToString**](/windows/desktop/api/windows.foundation/nf-windows-foundation-istringable-tostring) 역시 hstring을 반환합니다.
 
 ```cppwinrt
 public:
     hstring ToString() const;
 ```
 
-**Uri**는 [**IStringable**](https://docs.microsoft.com/windows/desktop/api/windows.foundation/nn-windows-foundation-istringable) 인터페이스를 구현합니다.
+**Uri**는 [**IStringable**](/windows/desktop/api/windows.foundation/nn-windows-foundation-istringable) 인터페이스를 구현합니다.
 
 ```cppwinrt
 // Access hstring's IStringable::ToString, via a conversion operator to a standard type.
@@ -152,9 +152,9 @@ WINRT_ASSERT(w == L"Hello, World!");
 **hstring** 함수 및 연산자에 대한 자세한 예제와 내용은 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) API 참조 항목을 참조하세요.
 
 ## <a name="the-rationale-for-winrthstring-and-winrtparamhstring"></a>**winrt::hstring** 및 **winrt::param::hstring**의 이론적 근거
-Windows 런타임은 **wchar_t** 문자와 관련하여 구현되지만 Windows 런타임의 ABI(Application Binary Interface)는 **std::wstring** 또는 **std::wstring_view**가 제공하는 것의 하위 세트가 아닙니다. 따라서 이 둘을 사용하면 상당한 비효율성으로 이어질 수 있습니다. 대신 C++/WinRT는 **winrt::hstring**을 제공합니다. 이는 기본 [HSTRING](https://docs.microsoft.com/windows/desktop/WinRT/hstring)을 따를 뿐만 아니라 **std::wstring** 인터페이스와 비슷한 인터페이스 뒤에서 구현되기 때문에 문자열을 변경할 수 없다는 것을 의미합니다. 
+Windows 런타임은 **wchar_t** 문자와 관련하여 구현되지만 Windows 런타임의 ABI(Application Binary Interface)는 **std::wstring** 또는 **std::wstring_view**가 제공하는 것의 하위 세트가 아닙니다. 따라서 이 둘을 사용하면 상당한 비효율성으로 이어질 수 있습니다. 대신 C++/WinRT는 **winrt::hstring**을 제공합니다. 이는 기본 [HSTRING](/windows/desktop/WinRT/hstring)을 따를 뿐만 아니라 **std::wstring** 인터페이스와 비슷한 인터페이스 뒤에서 구현되기 때문에 문자열을 변경할 수 없다는 것을 의미합니다. 
 
-**winrt::hstring**을 논리적으로 허용해야 하는 C++/WinRT 입력 매개 변수에 실제로 **winrt::param::hstring**이 필요하다는 사실을 확인할 수 있습니다. **param** 네임스페이스에는 C++ 표준 라이브러리 형식에 자연스럽게 바인딩하여 복사본과 기타 비효율성을 회피할 수 있도록 입력 매개 변수를 최적화하는 데만 사용되는 형식 세트만 포함됩니다. 이 형식을 직접 사용해서는 안 됩니다. 사용자 고유의 함수에 최적화를 사용하려면 **std::wstring_view**를 사용하세요. [매개 변수를 ABI 경계로 전달](/windows/uwp/cpp-and-winrt-apis/pass-parms-to-abi)도 참조하세요.
+**winrt::hstring**을 논리적으로 허용해야 하는 C++/WinRT 입력 매개 변수에 실제로 **winrt::param::hstring**이 필요하다는 사실을 확인할 수 있습니다. **param** 네임스페이스에는 C++ 표준 라이브러리 형식에 자연스럽게 바인딩하여 복사본과 기타 비효율성을 회피할 수 있도록 입력 매개 변수를 최적화하는 데만 사용되는 형식 세트만 포함됩니다. 이 형식을 직접 사용해서는 안 됩니다. 사용자 고유의 함수에 최적화를 사용하려면 **std::wstring_view**를 사용하세요. [매개 변수를 ABI 경계로 전달](./pass-parms-to-abi.md)도 참조하세요.
 
 결론적으로 Windows 런타임 문자열 관리를 위한 고유 정보는 대부분 무시하고 알고 있는 정보만으로도 효율적으로 작업할 수 있습니다. 문자열이 Windows 런타임에서 얼마나 많이 사용되는지 생각해보면 이는 매우 중요합니다.
 

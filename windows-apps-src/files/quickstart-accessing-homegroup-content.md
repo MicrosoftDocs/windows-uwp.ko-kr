@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 07d94f5b11acfe14bf55392c5cbf2c1b7bcfbeef
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: ab20d350372ec9dd0a755e76393a97a680949979
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66369392"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156568"
 ---
 # <a name="accessing-homegroup-content"></a>홈 그룹 콘텐츠 액세스
 
@@ -19,7 +19,7 @@ ms.locfileid: "66369392"
 
 **중요 API**
 
--   [**Windows.Storage.KnownFolders 클래스**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders)
+-   [**Windows.Storage.KnownFolders 클래스**](/uwp/api/Windows.Storage.KnownFolders)
 
 사진, 음악, 동영상 등 사용자의 홈 그룹 폴더에 저장된 콘텐츠에 액세스합니다.
 
@@ -27,7 +27,7 @@ ms.locfileid: "66369392"
 
 -   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
-    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요.
+    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](../threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.md)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md)을 참조하세요.
 
 -   **앱 접근 권한 값 선언**
 
@@ -50,7 +50,7 @@ ms.locfileid: "66369392"
 
 1.  **파일 선택기 만들기 및 사용자 지정**
 
-    [  **FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker)를 사용하여 파일 선택기를 만든 다음 선택기의 [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation)을 [**PickerLocationId.HomeGroup**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerLocationId)으로 설정합니다. 또는 사용자 및 앱과 관련된 다른 속성을 설정합니다. 파일 선택기 사용자 지정 방법을 결정하는 데 도움이 되는 지침은 [파일 선택기에 대한 지침 및 검사 목록](https://docs.microsoft.com/windows/uwp/files/quickstart-using-file-and-folder-pickers)을 참조하세요.
+    [  **FileOpenPicker**](/uwp/api/Windows.Storage.Pickers.FileOpenPicker)를 사용하여 파일 선택기를 만든 다음 선택기의 [**SuggestedStartLocation**](/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation)을 [**PickerLocationId.HomeGroup**](/uwp/api/Windows.Storage.Pickers.PickerLocationId)으로 설정합니다. 또는 사용자 및 앱과 관련된 다른 속성을 설정합니다. 파일 선택기 사용자 지정 방법을 결정하는 데 도움이 되는 지침은 [파일 선택기에 대한 지침 및 검사 목록](./quickstart-using-file-and-folder-pickers.md)을 참조하세요.
 
     다음 예에서는 홈 그룹에서 열리는 파일 선택기를 만들고 모든 형식의 파일을 포함하며 파일을 미리 보기 이미지로 표시합니다.
     ```cs
@@ -63,7 +63,7 @@ ms.locfileid: "66369392"
 
 2.  **파일 선택기를 표시하고 선택된 파일을 처리합니다.**
 
-    파일 선택기를 만들어 사용자 지정한 후 [**FileOpenPicker.PickSingleFileAsync**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync)를 호출하여 사용자가 파일 하나를 선택하거나 [**FileOpenPicker.PickMultipleFilesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.pickmultiplefilesasync)를 호출하여 여러 파일을 선택하도록 할 수 있습니다.
+    파일 선택기를 만들어 사용자 지정한 후 [**FileOpenPicker.PickSingleFileAsync**](/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync)를 호출하여 사용자가 파일 하나를 선택하거나 [**FileOpenPicker.PickMultipleFilesAsync**](/uwp/api/windows.storage.pickers.fileopenpicker.pickmultiplefilesasync)를 호출하여 여러 파일을 선택하도록 할 수 있습니다.
 
     다음 예에서는 사용자가 파일 하나를 선택하도록 하는 파일 선택기를 표시합니다.
     ```cs
@@ -85,7 +85,7 @@ ms.locfileid: "66369392"
 
 1.  **사용자의 쿼리 용어를 가져옵니다.**
 
-    여기서는 사용자가 `searchQueryTextBox`라는 [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 컨트롤에 입력한 쿼리 용어를 가져옵니다.
+    여기서는 사용자가 `searchQueryTextBox`라는 [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) 컨트롤에 입력한 쿼리 용어를 가져옵니다.
     ```cs
     string queryTerm = this.searchQueryTextBox.Text;    
     ```
@@ -128,7 +128,7 @@ ms.locfileid: "66369392"
 
 1.  **홈 그룹 사용자 컬렉션을 가져옵니다.**
 
-    홈 그룹에 있는 각각의 첫 번째 수준 폴더는 개별 홈 그룹 사용자를 나타냅니다. 따라서 홈 그룹 사용자 컬렉션을 가져오려면 [**GetFoldersAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfoldersasync)를 호출하여 최상위 수준의 홈 그룹 폴더를 검색합니다.
+    홈 그룹에 있는 각각의 첫 번째 수준 폴더는 개별 홈 그룹 사용자를 나타냅니다. 따라서 홈 그룹 사용자 컬렉션을 가져오려면 [**GetFoldersAsync**](/uwp/api/windows.storage.storagefolder.getfoldersasync)를 호출하여 최상위 수준의 홈 그룹 폴더를 검색합니다.
     ```cs
     System.Collections.Generic.IReadOnlyList<Windows.Storage.StorageFolder> hgFolders =
         await Windows.Storage.KnownFolders.HomeGroup.GetFoldersAsync();    
@@ -173,7 +173,7 @@ ms.locfileid: "66369392"
 
 1.  **MediaElement를 앱에 포함합니다.**
 
-    [  **MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement)를 사용하면 앱에서 오디오 및 비디오 콘텐츠를 재생할 수 있습니다. 오디오 및 비디오 재생에 대한 자세한 내용은 [사용자 지정 전송 컨트롤 만들기](https://docs.microsoft.com/windows/uwp/controls-and-patterns/custom-transport-controls) 및 [오디오, 비디오 및 카메라](https://docs.microsoft.com/windows/uwp/audio-video-camera/index)를 참조하세요.
+    [  **MediaElement**](/uwp/api/Windows.UI.Xaml.Controls.MediaElement)를 사용하면 앱에서 오디오 및 비디오 콘텐츠를 재생할 수 있습니다. 오디오 및 비디오 재생에 대한 자세한 내용은 [사용자 지정 전송 컨트롤 만들기](../design/controls-and-patterns/custom-transport-controls.md) 및 [오디오, 비디오 및 카메라](../audio-video-camera/index.md)를 참조하세요.
     ```HTML
     <Grid x:Name="Output" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1">
         <MediaElement x:Name="VideoBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0" Width="400" Height="300"/>
@@ -193,7 +193,7 @@ ms.locfileid: "66369392"
     Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();   
     ```
 
-3.  **사용자가 선택한 파일을 읽을 수 있도록 열고, 파일 스트림을**  [**MediaElement**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MediaElement)의 원본으로 설정한 다음, 파일을 재생합니다.
+3.  **사용자가 선택한 파일을 읽을 수 있도록 열고, 파일 스트림을**  [**MediaElement**](/uwp/api/Windows.UI.Xaml.Controls.MediaElement)의 원본으로 설정한 다음, 파일을 재생합니다.
     ```cs
     if (file != null)
     {

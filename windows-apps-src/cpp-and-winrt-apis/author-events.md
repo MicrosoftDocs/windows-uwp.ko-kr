@@ -5,30 +5,30 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: 980f39f20de369bce226c4d8c1070bda851480c2
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: f1500ab9999d4689385a9f7edce33253c385c0d0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493658"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154567"
 ---
 # <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 
-이 토픽은 Windows 런타임 구성 요소 및 사용 중인 애플리케이션을 기반으로 하며, [C++/WinRT를 사용한 Windows 런타임 구성 요소](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt) 토픽에서는 빌드 방법을 보여줍니다.
+이 토픽은 Windows 런타임 구성 요소 및 사용 중인 애플리케이션을 기반으로 하며, [C++/WinRT를 사용한 Windows 런타임 구성 요소](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md) 토픽에서는 빌드 방법을 보여줍니다.
 
 다음은 이 토픽에서 추가하는 새 기능입니다.
 - 잔액을 차변으로 이동할 때 이벤트를 발생시키도록 은행 계좌 런타임 클래스를 업데이트합니다.
 - 해당 이벤트를 처리하도록 은행 계좌 런타임 클래스를 사용하는 코어 앱을 업데이트합니다.
 
 > [!NOTE]
-> 프로젝트 템플릿 및 빌드 지원을 함께 제공하는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
+> 프로젝트 템플릿 및 빌드 지원을 함께 제공하는 [C++/WinRT](./intro-to-using-cpp-with-winrt.md) Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
 
 > [!IMPORTANT]
 > C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
 ## <a name="create-bankaccountwrc-and-bankaccountcoreapp"></a>**BankAccountWRC** 및 **BankAccountCoreApp** 만들기
 
-코드를 빌드하고 실행할 수 있도록 이 토픽에서 설명하는 업데이트를 따라 하려면 가장 먼저 [C++/WinRT를 사용한 Windows 런타임 구성 요소](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt) 토픽의 연습을 수행해야 합니다. 이렇게 하면 **BankAccountWRC** Windows 런타임 구성 요소와 이 런타임을 사용하는 **BankAccountCoreApp** 코어 앱을 갖게 됩니다.
+코드를 빌드하고 실행할 수 있도록 이 토픽에서 설명하는 업데이트를 따라 하려면 가장 먼저 [C++/WinRT를 사용한 Windows 런타임 구성 요소](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md) 토픽의 연습을 수행해야 합니다. 이렇게 하면 **BankAccountWRC** Windows 런타임 구성 요소와 이 런타임을 사용하는 **BankAccountCoreApp** 코어 앱을 갖게 됩니다.
 
 ## <a name="update-bankaccountwrc-to-raise-an-event"></a>이벤트를 발생시키도록 **BankAccountWRC**를 업데이트합니다.
 
@@ -390,4 +390,4 @@ logCallback(L"Hello, World!");
 * [C++/WinRT를 통한 API 작성](author-apis.md)
 * [C++/WinRT를 통한 API 사용](consume-apis.md)
 * [C++/WinRT의 대리자를 사용한 이벤트 처리](handle-events.md)
-* [C++/WinRT를 사용한 Windows 런타임 구성 요소](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt)
+* [C++/WinRT를 사용한 Windows 런타임 구성 요소](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md)

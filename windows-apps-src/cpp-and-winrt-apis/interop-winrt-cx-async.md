@@ -1,30 +1,30 @@
 ---
-description: '[C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)에서 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)로 점진적으로 이식하는 방법을 설명하는 고급 항목입니다. PPL(병렬 패턴 라이브러리) 작업 및 코루틴이 동일한 프로젝트에 나란히 존재할 수 있는 방법을 보여줍니다.'
+description: '[C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)에서 [C++/WinRT](./intro-to-using-cpp-with-winrt.md)로 점진적으로 이식하는 방법을 설명하는 고급 항목입니다. PPL(병렬 패턴 라이브러리) 작업 및 코루틴이 동일한 프로젝트에 나란히 존재할 수 있는 방법을 보여줍니다.'
 title: 비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성
 ms.date: 08/06/2020
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, Interop, C++/CX, PPL, 작업, 코루틴
 ms.localizationpriority: medium
-ms.openlocfilehash: d80fedcadaee96dcd4fae4081dcc117b55a1e498
-ms.sourcegitcommit: 2a90b41e455ba0a2b7aff6f771638fb3a2228db4
+ms.openlocfilehash: 1beff7fe5595a2601d56d65b52ca51eacedee47f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88513430"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157397"
 ---
 # <a name="asynchrony-and-interop-between-cwinrt-and-ccx"></a>비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성
 
 > [!TIP]
 > 이 항목을 처음부터 읽는 것이 좋지만, [C++/CX 비동기를 C++/WinRT로 이식하는 방법에 대한 개요](#overview-of-porting-ccx-async-to-cwinrt) 섹션의 interop 기술 요약으로 바로 이동할 수 있습니다.
 
-[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)에서 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)로 점진적으로 이식하는 방법을 설명하는 고급 항목입니다. 이 항목은 [C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx) 항목이 중단된 부분에서 다시 시작됩니다.
+[C++/WinRT](./intro-to-using-cpp-with-winrt.md)에서 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)로 점진적으로 이식하는 방법을 설명하는 고급 항목입니다. 이 항목은 [C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx.md) 항목이 중단된 부분에서 다시 시작됩니다.
 
 코드베이스의 크기나 복잡성으로 인해 프로젝트를 점진적으로 이식해야 하는 경우에는 C++/CX와 C++/WinRT 코드가 동일한 프로젝트에 한동안 나란히 존재하는 이식 프로세스가 필요합니다. 비동기 코드가 있는 경우에는 소스 코드를 점진적으로 이식할 때 프로젝트에 PPL(병렬 패턴 라이브러리) 작업 체인과 코루틴이 나란히 존재해야 할 수 있습니다. 이 항목에서는 비동기 C++/CX 코드와 비동기 C++/WinRT 코드 간의 상호 운용을 위한 기법을 중점적으로 다룹니다. 이러한 기법을 개별적으로 사용하거나 함께 사용할 수 있습니다. 이 기법을 사용하면 각 변경 내용이 프로젝트 도처에 제어할 수 없게 쏟아지는 상황을 겪지 않고 전체 프로젝트를 이식하는 경로를 따라 점진적이고 제어된 방식으로 로컬 변경을 수행할 수 있습니다.
 
-이 항목을 읽기 전에 [C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx)을 참조하는 것이 좋습니다. 점진적 이식을 위해 프로젝트를 준비하는 방법을 보여주는 항목입니다. 또한, C++/CX 개체를 C++/WinRT 개체로(또는 그 반대로) 변환하는 데 사용할 수 있는 두 가지 도우미 함수도 보여줍니다. 비동시성에 대한 이 항목은 해당 정보를 기반으로 하며 해당 도우미 함수를 사용합니다.
+이 항목을 읽기 전에 [C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx.md)을 참조하는 것이 좋습니다. 점진적 이식을 위해 프로젝트를 준비하는 방법을 보여주는 항목입니다. 또한, C++/CX 개체를 C++/WinRT 개체로(또는 그 반대로) 변환하는 데 사용할 수 있는 두 가지 도우미 함수도 보여줍니다. 비동시성에 대한 이 항목은 해당 정보를 기반으로 하며 해당 도우미 함수를 사용합니다.
 
 > [!NOTE]
-> C++/CX에서 C++/WinRT로 점진적으로 이식하는 데는 몇 가지 제한 사항이 있습니다. [Windows 런타임 구성 요소](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt) 프로젝트가 있는 경우에는 점진적으로 이식하는 것이 불가능하며 프로젝트를 한 번에 이식해야 합니다. XAML 프로젝트의 경우, 언제든지, XAML 페이지 형식이 모두 C++/WinRT 또는 모두 C++/CX 중 하나여야 합니다.  자세한 내용은 [C++/CX에서 C++/WinRT로 이동](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-cx) 항목을 참조하세요.
+> C++/CX에서 C++/WinRT로 점진적으로 이식하는 데는 몇 가지 제한 사항이 있습니다. [Windows 런타임 구성 요소](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md) 프로젝트가 있는 경우에는 점진적으로 이식하는 것이 불가능하며 프로젝트를 한 번에 이식해야 합니다. XAML 프로젝트의 경우, 언제든지, XAML 페이지 형식이 모두 C++/WinRT 또는 모두 C++/CX 중 하나여야 합니다.  자세한 내용은 [C++/CX에서 C++/WinRT로 이동](./move-to-winrt-from-cx.md) 항목을 참조하세요.
 
 ## <a name="the-reason-an-entire-topic-is-dedicated-to-asynchronous-code-interop"></a>전체 항목에서 비동기 코드 interop에 주력하는 이유
 
@@ -83,7 +83,7 @@ C++/WinRT 코루틴의 반환 형식은 **winrt::IAsyncXxx** 또는 [**winrt::fi
 
 메서드에 `co_await` 문이 하나 이상(또는 `co_return`이나 `co_yield`가 하나 이상) 포함되어 있으면, 메서드는 이러한 이유로 코루틴입니다.
 
-자세한 내용과 코드 예제는 [C++/WinRT로 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)을 참조하세요.
+자세한 내용과 코드 예제는 [C++/WinRT로 동시성 및 비동기 작업](./concurrency.md)을 참조하세요.
 
 ## <a name="the-direct3d-game-sample-simple3dgamedx"></a>Direct3D 게임 샘플(**Simple3DGameDX**)
 
@@ -91,7 +91,7 @@ C++/WinRT 코루틴의 반환 형식은 **winrt::IAsyncXxx** 또는 [**winrt::fi
 
 - 위 링크에서 ZIP을 다운로드하고 압축을 풉니다.
 - Visual Studio에서 C++/CX 프로젝트(`cpp` 폴더에 있음)를 엽니다.
-- 그런 다음, C++/WinRT 지원을 프로젝트에 추가해야 합니다. 그렇게 하기 위해 수행하는 단계는 [C++/CX 프로젝트를 가져와서 C++/WinRT 지원 추가](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx#taking-a-ccx-project-and-adding-cwinrt-support)에 설명되어 있습니다. 이 섹션에서 `interop_helpers.h` 헤더 파일을 프로젝트에 추가하는 단계는 특히 중요합니다. 이 항목에서는 해당 도우미 함수에 의존하기 때문입니다.
+- 그런 다음, C++/WinRT 지원을 프로젝트에 추가해야 합니다. 그렇게 하기 위해 수행하는 단계는 [C++/CX 프로젝트를 가져와서 C++/WinRT 지원 추가](./interop-winrt-cx.md#taking-a-ccx-project-and-adding-cwinrt-support)에 설명되어 있습니다. 이 섹션에서 `interop_helpers.h` 헤더 파일을 프로젝트에 추가하는 단계는 특히 중요합니다. 이 항목에서는 해당 도우미 함수에 의존하기 때문입니다.
 - 마지막으로 `#include <pplawait.h>`를 `pch.h`에 추가합니다. 그러면 PPL에 대한 코루틴 지원이 제공됩니다(지원에 대한 자세한 내용은 다음 섹션에 있음).
 
 아직 빌드하지 마십시오. 그렇지 않으면 **바이트**가 모호하다는 오류가 발생합니다. 이것을 해결하는 방법은 다음과 같습니다.
@@ -390,7 +390,7 @@ winrt::fire_and_forget GameMain::ConstructInBackground()
 
 이 내용은 지금까지 변경한 모든 메서드에 적용됩니다. fire-and-forget 뿐만 아니라 모든 코루틴에 적용됩니다. `co_await`를 메서드에 도입하면 일시 중단 지점이 도입됩니다. 그래서 클래스 멤버에 액세스할 때마다 일시 중단 지점 *후에* 사용하는 *this* 포인터에 주의해야 합니다.
 
-간단히 말해 솔루션은 [**implements::get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)을 호출하는 것입니다. 하지만, 이 문제와 솔루션에 대한 자세한 내용은 [class-member 코루틴에서 *this* 포인터에 안전하게 액세스](/windows/uwp/cpp-and-winrt-apis/weak-references#safely-accessing-the-this-pointer-in-a-class-member-coroutine)를 참조하세요.
+간단히 말해 솔루션은 [**implements::get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)을 호출하는 것입니다. 하지만, 이 문제와 솔루션에 대한 자세한 내용은 [class-member 코루틴에서 *this* 포인터에 안전하게 액세스](./weak-references.md#safely-accessing-the-this-pointer-in-a-class-member-coroutine)를 참조하세요.
 
 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements)에서 파생된 클래스에서만 **implements::get_strong**을 호출할 수 있습니다.
 
@@ -423,7 +423,7 @@ void App::Load(Platform::String^)
 }
 ```
 
-하지만 이제 **GameMain**이 **winrt::implements**에서 파생되기 때문에 다른 방식으로 구성해야 합니다. 이런 경우 [**winrt::make_self**](/uwp/cpp-ref-for-winrt/make-self) 함수 템플릿을 사용합니다. 자세한 내용은 [구현 형식과 인터페이스의 인스턴스화 및 반환](/windows/uwp/cpp-and-winrt-apis/author-apis#instantiating-and-returning-implementation-types-and-interfaces)을 참조하세요.
+하지만 이제 **GameMain**이 **winrt::implements**에서 파생되기 때문에 다른 방식으로 구성해야 합니다. 이런 경우 [**winrt::make_self**](/uwp/cpp-ref-for-winrt/make-self) 함수 템플릿을 사용합니다. 자세한 내용은 [구현 형식과 인터페이스의 인스턴스화 및 반환](./author-apis.md#instantiating-and-returning-implementation-types-and-interfaces)을 참조하세요.
 
 해당 코드 줄을 아래 코드 줄로 바꿉니다.
 
@@ -938,8 +938,8 @@ winrt::Windows::Foundation::IAsyncAction BasicLoader::LoadTextureAsync(...)
 
 ## <a name="related-topics"></a>관련 항목
 
-* [C++/CX에서 C++/WinRT로 이동](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-cx)
-* [C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx)
-* [C++/WinRT를 통한 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)
-* [C++/WinRT의 강력하고 약한 참조](/windows/uwp/cpp-and-winrt-apis/weak-references)
-* [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)
+* [C++/CX에서 C++/WinRT로 이동](./move-to-winrt-from-cx.md)
+* [C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx.md)
+* [C++/WinRT를 통한 동시성 및 비동기 작업](./concurrency.md)
+* [C++/WinRT의 강력하고 약한 참조](./weak-references.md)
+* [C++/WinRT를 통한 API 작성](./author-apis.md)

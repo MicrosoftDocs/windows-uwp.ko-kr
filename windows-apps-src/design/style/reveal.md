@@ -10,12 +10,12 @@ design-contact: conrwi
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 26e756b52d4faf18eff2fc684c7db94bca058642
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 24ac07b8caacd4369bcbadf2a4019bbcbde59c6b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971078"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159977"
 ---
 # <a name="reveal-highlight"></a>강조 표시
 
@@ -23,7 +23,7 @@ ms.locfileid: "82971078"
 
 강조 표시는 사용자가 포인터 명령 모음과 같은 대화형 요소로 움직였을 때 이를 강조 표시하는 조명 효과입니다. 
 
-> **중요 API**: [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState)
+> **중요 API**: [RevealBrush 클래스](/uwp/api/windows.ui.xaml.media.revealbrush), [RevealBackgroundBrush 클래스](/uwp/api/windows.ui.xaml.media.revealbackgroundbrush), [RevealBorderBrush 클래스](/uwp/api/windows.ui.xaml.media.revealborderbrush), [RevealBrushHelper 클래스](/uwp/api/windows.ui.xaml.media.revealbrushhelper), [VisualState 클래스](/uwp/api/Windows.UI.Xaml.VisualState)
 
 ## <a name="how-it-works"></a>작동 방식
 강조 표시는 이 그림에 나타난 것처럼 포인터가 근처에 있을 때 요소의 컨테이너를 표시하여 대화형 요소를 더욱 잘 보이게 합니다.
@@ -142,7 +142,7 @@ ms.locfileid: "82971078"
 ### <a name="when-to-add-reveal"></a>표시를 추가하는 경우
 사용자 지정 컨트롤에 표시를 추가할 수 있습니다. 하지만 추가하기 전에 컨트롤의 유형과 작동 방식을 고려해야 합니다. 
 * 사용자 지정 컨트롤이 단일 대화형 요소이며 공간을 공유하는 유사한 컨트롤이 없는 경우(예: 메뉴에 있는 메뉴 항목), 사용자 지정 컨트롤에 표시가 필요하지 않을 가능성이 높습니다.  
-* 관련 대화형 콘텐츠 또는 요소의 그룹화가 있는 경우 앱의 해당 영역에 표시가 필요할 가능성이 높습니다. 이 영역을 일반적으로 [명령](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/collection-commanding) 표면이라고 합니다.
+* 관련 대화형 콘텐츠 또는 요소의 그룹화가 있는 경우 앱의 해당 영역에 표시가 필요할 가능성이 높습니다. 이 영역을 일반적으로 [명령](../controls-and-patterns/collection-commanding.md) 표면이라고 합니다.
 
 예를 들어 단추 자체는 표시를 사용하면 안 되지만, 명령 표시줄에 있는 단추 세트는 표시를 사용해야 합니다.
 
@@ -286,9 +286,9 @@ ms.locfileid: "82971078"
 
 ## <a name="related-articles"></a>관련된 문서
 
-- [RevealBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.revealbrush)
+- [RevealBrush 클래스](/uwp/api/windows.ui.xaml.media.revealbrush)
 - [아크릴](acrylic.md)
-- [컴퍼지션 효과](https://docs.microsoft.com/windows/uwp/graphics/composition-effects)
+- [컴퍼지션 효과](../../composition/composition-effects.md)
 - [UWP용 흐름 디자인](/windows/apps/fluent-design-system)
 - [시스템의 과학: 흐름 디자인 및 깊이](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
 - [시스템의 과학: 흐름 디자인 및 조명](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

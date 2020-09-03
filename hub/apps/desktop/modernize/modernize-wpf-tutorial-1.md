@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 9d08dd0f43f1c505124203028c69326e10eea26c
-ms.sourcegitcommit: 6cdba316bdbd85a2429259ebfb59ff94440e234a
+ms.openlocfilehash: c11f1cab37e79fc320f1fb38f5b909d2cecd1ad4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882877"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161587"
 ---
 # <a name="part-1-migrate-the-contoso-expenses-app-to-net-core-3"></a>1부: Contoso Expenses 앱을 .NET Core 3으로 마이그레이션
 
@@ -134,7 +134,7 @@ Contoso 지출이라는 샘플 WPF 데스크톱 앱을 현대화하는 방법을
     ```
 
     > [!NOTE]
-    > 이 .NET Core 3 프로젝트에 대해 .NET Framework 4.7.2 프로젝트에서 사용한 것과 동일한 패키지를 설치하는 것도 확인할 수 있습니다. NuGet 패키지는 멀티 타기팅을 지원합니다. 라이브러리 작성자는 각기 다른 아키텍처와 플랫폼에 대해 컴파일된 여러 버전의 라이브러리를 동일한 패키지에 포함할 수 있습니다. 해당 패키지는 .NET Core 3 프로젝트와 호환되는 전체 .NET Framework와 .NET Standard 2.0을 지원합니다. .NET Framework, .NET Core 및 .NET Standard의 차이점에 대한 자세한 내용은 [.NET Standard](https://docs.microsoft.com/dotnet/standard/net-standard)을 참조하세요.
+    > 이 .NET Core 3 프로젝트에 대해 .NET Framework 4.7.2 프로젝트에서 사용한 것과 동일한 패키지를 설치하는 것도 확인할 수 있습니다. NuGet 패키지는 멀티 타기팅을 지원합니다. 라이브러리 작성자는 각기 다른 아키텍처와 플랫폼에 대해 컴파일된 여러 버전의 라이브러리를 동일한 패키지에 포함할 수 있습니다. 해당 패키지는 .NET Core 3 프로젝트와 호환되는 전체 .NET Framework와 .NET Standard 2.0을 지원합니다. .NET Framework, .NET Core 및 .NET Standard의 차이점에 대한 자세한 내용은 [.NET Standard](/dotnet/standard/net-standard)을 참조하세요.
 
 **ContosoExpenses.Core** 프로젝트의 NuGet 패키지를 구성하려면 다음을 수행합니다.
 

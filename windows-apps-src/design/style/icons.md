@@ -11,12 +11,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 7c44baee7d3201e2e554604405afe337007dd510
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: e35041cce7e43f6eebed06b39f3ae2dbda55a4ae
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970958"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156797"
 ---
 # <a name="icons-for-windows-apps"></a>Windows 앱용 아이콘
 
@@ -39,7 +39,7 @@ ms.locfileid: "82970958"
     :::column-end:::
 :::row-end:::
 
-이 문서에서는 앱 내부 아이콘을 설명합니다. 앱 외부 아이콘(앱 아이콘)에 대한 자세한 내용은 [앱 및 타일 아이콘 문서](/windows/uwp/design/shell/tiles-and-notifications/app-assets)를 참조하세요.
+이 문서에서는 앱 내부 아이콘을 설명합니다. 앱 외부 아이콘(앱 아이콘)에 대한 자세한 내용은 [앱 및 타일 아이콘 문서](./app-icons-and-logos.md)를 참조하세요.
 
 ## <a name="when-to-use-icons"></a>아이콘을 사용하는 경우
 
@@ -100,7 +100,7 @@ Segoe MDL2 자산 글꼴을 사용하지 않아도 됩니다. Wingdings 또는 W
 ### <a name="use-a-scalable-vector-graphics-svg-file"></a>SVG(확장 가능한 벡터 그래픽) 파일을 사용합니다.
 :::row:::
     :::column:::
-SVG 리소스는 모든 크기 또는 해상도에서 항상 선명하게 보이므로 아이콘에 적합합니다. 대부분의 그리기 애플리케이션은 SVG로 내보낼 수 있습니다. 자세한 내용은 [SVGImageSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.svgimagesource)를 참조하세요.
+SVG 리소스는 모든 크기 또는 해상도에서 항상 선명하게 보이므로 아이콘에 적합합니다. 대부분의 그리기 애플리케이션은 SVG로 내보낼 수 있습니다. 자세한 내용은 [SVGImageSource](/uwp/api/windows.ui.xaml.media.imaging.svgimagesource)를 참조하세요.
     :::column-end:::
     :::column:::
         ![SVG 이미지](images/icons/icon-scale.gif)
@@ -156,7 +156,7 @@ SVG 파일과 같이 기하 도형은 벡터 기반 리소스이므로 항상 �
 :::row:::
     :::column span="2":::
         <b>2단계</b><br>
-아이콘 요소 개체 [BitmapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.bitmapicon), [FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon), [PathIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon) 또는 [SymbolIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbolicon) 중 하나를 사용할 수 있습니다. 이를 통해 더 많은 유형의 아이콘을 선택할 수 있으며 원하는 경우 텍스트 등의 다른 유형의 콘텐츠와 아이콘을 결합할 수 있습니다.
+아이콘 요소 개체 [BitmapIcon](/uwp/api/windows.ui.xaml.controls.bitmapicon), [FontIcon](/uwp/api/windows.ui.xaml.controls.fonticon), [PathIcon](/uwp/api/windows.ui.xaml.controls.pathicon) 또는 [SymbolIcon](/uwp/api/windows.ui.xaml.controls.symbolicon) 중 하나를 사용할 수 있습니다. 이를 통해 더 많은 유형의 아이콘을 선택할 수 있으며 원하는 경우 텍스트 등의 다른 유형의 콘텐츠와 아이콘을 결합할 수 있습니다.
     :::column-end:::
     :::column:::
         ![아이콘 단추 만들기 2단계](images/icons/icon-text-step-2.svg)
@@ -176,7 +176,7 @@ SVG 파일과 같이 기하 도형은 벡터 기반 리소스이므로 항상 �
 
 :::row:::
     :::column span:::
-잘라내기/복사/붙여넣기 또는 사진 편집 프로그램에 대한 그리기 명령 세트와 같이 함께 사용하는 일련의 명령이 있을 때 [명령 모음](../controls-and-patterns/app-bars.md)에 함께 배치합니다. 명령 모음에는 각각 작업을 나타내는 하나 이상의 앱 바 단추 또는 앱 바 토글 단추가 있습니다. 각 단추에는 표시하는 아이콘을 제어하는 데 사용하는 [Icon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon) 속성이 있습니다. 아이콘을 지정하는 다양한 방법이 있습니다. 
+잘라내기/복사/붙여넣기 또는 사진 편집 프로그램에 대한 그리기 명령 세트와 같이 함께 사용하는 일련의 명령이 있을 때 [명령 모음](../controls-and-patterns/app-bars.md)에 함께 배치합니다. 명령 모음에는 각각 작업을 나타내는 하나 이상의 앱 바 단추 또는 앱 바 토글 단추가 있습니다. 각 단추에는 표시하는 아이콘을 제어하는 데 사용하는 [Icon](/uwp/api/windows.ui.xaml.controls.appbarbutton#Windows_UI_Xaml_Controls_AppBarButton_Icon) 속성이 있습니다. 아이콘을 지정하는 다양한 방법이 있습니다. 
     :::column-end:::
     :::column:::
         ![아이콘이 있는 명령 모음의 예](images/icons/create-icon-command-bar.svg)
@@ -197,13 +197,13 @@ SVG 파일과 같이 기하 도형은 벡터 기반 리소스이므로 항상 �
 </CommandBar>
 
 ```
-아이콘 이름의 전체 목록은 [기호 열거](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol)를 참조하세요. 
+아이콘 이름의 전체 목록은 [기호 열거](/uwp/api/windows.ui.xaml.controls.symbol)를 참조하세요. 
 
 명령 모음에 있는 단추의 아이콘을 제공하는 다른 방법은 다음과 같습니다.
 
-+ [FontIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon) - 아이콘은 지정된 글꼴 패밀리의 문자 모양을 기반으로 합니다.
-+ [BitmapIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.bitmapicon) - 아이콘은 지정된 **Uri**가 포함된 비트맵 이미지 파일을 기반으로 합니다.
-+ [PathIcon](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon) - 아이콘은 [경로](/uwp/api/windows.ui.xaml.shapes.path) 데이터를 기반으로 합니다.
++ [FontIcon](/uwp/api/windows.ui.xaml.controls.fonticon) - 아이콘은 지정된 글꼴 패밀리의 문자 모양을 기반으로 합니다.
++ [BitmapIcon](/uwp/api/windows.ui.xaml.controls.bitmapicon) - 아이콘은 지정된 **Uri**가 포함된 비트맵 이미지 파일을 기반으로 합니다.
++ [PathIcon](/uwp/api/windows.ui.xaml.controls.pathicon) - 아이콘은 [경로](/uwp/api/windows.ui.xaml.shapes.path) 데이터를 기반으로 합니다.
 
 명령 모음에 대한 자세한 내용은 [명령 모음 문서](../controls-and-patterns/app-bars.md)를 참조하세요. 
 

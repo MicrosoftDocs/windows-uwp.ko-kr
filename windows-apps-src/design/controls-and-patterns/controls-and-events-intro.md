@@ -11,18 +11,18 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: addb4e7d929fb0222deda63494546d731f01cecd
-ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
+ms.openlocfilehash: ae53810dee72638eb89467098000988c3baaf047
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83775801"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160537"
 ---
 # <a name="intro-to-controls-and-patterns"></a>컨트롤 및 패턴 소개
 
 Windows 앱 개발에서 *컨트롤*은 콘텐츠를 표시하거나 조작을 가능하게 하는 UI 요소입니다. 단추, 입력란, 콤보 상자 등의 컨트롤을 사용하여 데이터를 표시하고 사용자 입력을 받기 위한 앱의 UI를 만듭니다.
 
-> **중요 API**: [Windows.UI.Xaml.Controls 네임스페이스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
+> **중요 API**: [Windows.UI.Xaml.Controls 네임스페이스](/uwp/api/windows.ui.xaml.controls)
 
 *패턴*은 컨트롤을 수정하거나 새로운 것을 만들기 위해 여러 컨트롤을 조합하는 방법입니다. 예를 들어 [마스터/세부 정보](master-details.md) 패턴은 앱 탐색에 [SplitView](split-view.md) 컨트롤을 사용할 수 있는 방법입니다. 마찬가지로, [NavigationView](navigationview.md) 컨트롤의 템플릿을 사용자 지정하여 탭 패턴을 구현할 수 있습니다.
 
@@ -169,7 +169,7 @@ Button1().Click({ this, &MainPage::Button1_Click });
 ## <a name="related-topics"></a>관련 항목
 
 -   [기능별 컨트롤 인덱스](controls-by-function.md)
--   [Windows.UI.Xaml.Controls 네임스페이스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls)
+-   [Windows.UI.Xaml.Controls 네임스페이스](/uwp/api/windows.ui.xaml.controls)
 -   [레이아웃](../layout/index.md)
 -   [스타일](../style/index.md)
 -   [유용성](../usability/index.md)

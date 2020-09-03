@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: beb6dde4036019e004d94e5f60e8f3583c78d775
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 86c6f9398a61865b014400bbf4a96c8a7ce8a231
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "72980022"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154357"
 ---
 # <a name="optimize-your-xaml-markup"></a>XAML 태그 최적화
 
@@ -36,7 +36,7 @@ UI 컨트롤의 레이아웃을 만들기 위해 하는 선택은 앱이 시작�
 
 XAML 태그에 지금 바로 표시되지 않는 요소가 포함되어 있다면, 표시할 때까지 이러한 요소의 로드를 연기할 수 있습니다. 예를 들어, 탭 형식 UI에서 보조 탭과 같은 표시되지 않는 콘텐츠를 연기할 수 있습니다. 또는 기본적으로 그리드 보기로 항목을 표시하고, 사용자가 목록으로 볼 수 있는 옵션을 제공할 수 있습니다. 필요할 때까지 목록의 로드를 연기할 수 있습니다.
 
-요소의 표시를 제어하는 데 [Visibility](../xaml-platform/x-load-attribute.md) 대신 [x:Load 특성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.Visibility)을 사용합니다. 요소의 가시성이 **Collapsed**일 경우, 렌더링 전달 동안 건너뛸 수 있지만 여전히 메모리의 개체 인스턴스 비용을 지불해야 합니다. 대신 x:Load를 사용하면 프레임워크가 필요할 때까지 개체를 생성하지 않으므로 메모리 비용이 더욱 저렴합니다. 단점은 UI가 로드되지 않을 때 작은 메모리 오버헤드(약 600바이트)를 지불하는 것입니다.
+요소의 표시를 제어하는 데 [Visibility](../xaml-platform/x-load-attribute.md) 대신 [x:Load 특성](/uwp/api/windows.ui.xaml.uielement.Visibility)을 사용합니다. 요소의 가시성이 **Collapsed**일 경우, 렌더링 전달 동안 건너뛸 수 있지만 여전히 메모리의 개체 인스턴스 비용을 지불해야 합니다. 대신 x:Load를 사용하면 프레임워크가 필요할 때까지 개체를 생성하지 않으므로 메모리 비용이 더욱 저렴합니다. 단점은 UI가 로드되지 않을 때 작은 메모리 오버헤드(약 600바이트)를 지불하는 것입니다.
 
 > [!NOTE]
 > [x:Load](../xaml-platform/x-load-attribute.md) 또는 [x:DeferLoadStrategy](../xaml-platform/x-deferloadstrategy-attribute.md) 특성을 사용하여 요소 로드를 지연시킬 수 있습니다. x:Load 특성은 Windows 10 크리에이터스 업데이트(버전 1703, SDK 빌드 15063)부터 사용할 수 있습니다. Visual Studio 프로젝트가 대상으로 하는 최소 버전이 *Windows 10 크리에이터스 업데이트(10.0, Build 15063)* 는 되어야 x:Load를 사용할 수 있습니다. 이전 버전을 대상으로 하는 경우 x:DeferLoadStrategy를 사용합니다.
@@ -124,7 +124,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 
 ### <a name="use-layout-panel-properties"></a>레이아웃 패널 속성 사용
 
-레이아웃 패널에는 [Background](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.panel.background) 속성이 있으므로 색을 지정하기 위해 패널 앞에 [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)을 둘 필요가 없습니다.
+레이아웃 패널에는 [Background](/uwp/api/windows.ui.xaml.controls.panel.background) 속성이 있으므로 색을 지정하기 위해 패널 앞에 [Rectangle](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)을 둘 필요가 없습니다.
 
 **비효율적인 경우**
 
@@ -141,17 +141,17 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 <Grid Background="Black"/>
 ```
 
-레이아웃 패널에는 기본 제공 테두리 속성도 있으므로, 레이아웃 패널 주변에 [Border](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border)를 배치할 필요가 없습니다. 더 많은 정보와 예는 [XAML 레이아웃 최적화](optimize-your-xaml-layout.md)를 참조하세요.
+레이아웃 패널에는 기본 제공 테두리 속성도 있으므로, 레이아웃 패널 주변에 [Border](/uwp/api/windows.ui.xaml.controls.border)를 배치할 필요가 없습니다. 더 많은 정보와 예는 [XAML 레이아웃 최적화](optimize-your-xaml-layout.md)를 참조하세요.
 
 ### <a name="use-images-in-place-of-vector-based-elements"></a>벡터 기반 요소 대신 이미지 사용
 
-동일한 벡터 기반 요소를 다시 사용할 시간이 충분한 경우 [Image](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image) 요소를 대신 사용하는 것이 보다 효율적입니다. 벡터 기반 요소는 CPU에서 각 개별 요소를 별도로 만들어야 하므로 비용이 더 많이 소요될 수 있습니다. 이미지 파일을 한 번만 디코딩해야 합니다.
+동일한 벡터 기반 요소를 다시 사용할 시간이 충분한 경우 [Image](/uwp/api/windows.ui.xaml.controls.image) 요소를 대신 사용하는 것이 보다 효율적입니다. 벡터 기반 요소는 CPU에서 각 개별 요소를 별도로 만들어야 하므로 비용이 더 많이 소요될 수 있습니다. 이미지 파일을 한 번만 디코딩해야 합니다.
 
 ## <a name="optimize-resources-and-resource-dictionaries"></a>리소스와 리소스 사전 최적화
 
 일반적으로 [리소스 사전](../design/controls-and-patterns/resourcedictionary-and-xaml-resource-references.md)을 사용하여 앱의 여러 곳에서 참조하려는 리소스를 전체 수준 위치에 저장합니다. 예를 들어 스타일, 브러시, 템플릿 등이 포함됩니다.
 
-일반적으로 요청되지 않은 경우 리소스를 인스턴스화하지 않도록 [ResourceDictionary](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)를 최적화했습니다. 하지만 리소스가 불필요하게 인스턴스화되지 않도록 방지해야 하는 경우가 있습니다.
+일반적으로 요청되지 않은 경우 리소스를 인스턴스화하지 않도록 [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary)를 최적화했습니다. 하지만 리소스가 불필요하게 인스턴스화되지 않도록 방지해야 하는 경우가 있습니다.
 
 ### <a name="resources-with-xname"></a>x:Name이 포함된 리소스
 
@@ -159,7 +159,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 
 ### <a name="resourcedictionary-in-a-usercontrol"></a>UserControl의 ResourceDictionary
 
-[UserControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.usercontrol) 내부에서 정의된 ResourceDictionary는 성능 저하를 동반합니다. 플랫폼이 UserControl의 모든 인스턴스에 대해 이러한 ResourceDictionary의 복사본을 만듭니다. 많이 사용되는 UserControl이 있는 경우에는 ResourceDictionary를 UserControl 외부로 이동하여 페이지 수준에 배치합니다.
+[UserControl](/uwp/api/windows.ui.xaml.controls.usercontrol) 내부에서 정의된 ResourceDictionary는 성능 저하를 동반합니다. 플랫폼이 UserControl의 모든 인스턴스에 대해 이러한 ResourceDictionary의 복사본을 만듭니다. 많이 사용되는 UserControl이 있는 경우에는 ResourceDictionary를 UserControl 외부로 이동하여 페이지 수준에 배치합니다.
 
 ### <a name="resource-and-resourcedictionary-scope"></a>리소스 및 ResourceDictionary 범위
 
@@ -238,7 +238,7 @@ ListView와 하위 요소가 메모리에 로드되지 않습니다.
 
 ### <a name="consolidate-multiple-brushes-that-look-the-same-into-one-resource"></a>같은 모양의 여러 브러시를 하나의 리소스에 통합
 
-XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시 사용할 수 있도록 캐시하려고 합니다. 그러나 XAML은 하나의 태그 조각에 선언된 브러시가 다른 태그 조각에 선언된 브러시와 동일한지 쉽게 구별할 수 없습니다. 다음 예제에서는 보여 주기 위해 [SolidColorBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush)를 사용하지만 [GradientBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.GradientBrush)를 사용하는 것이 더 중요하고 더 일반적입니다. 미리 정의된 색을 사용하는 브러시를 확인합니다. 예를 들어 `"Orange"`와 `"#FFFFA500"`은 같은 색입니다.
+XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시 사용할 수 있도록 캐시하려고 합니다. 그러나 XAML은 하나의 태그 조각에 선언된 브러시가 다른 태그 조각에 선언된 브러시와 동일한지 쉽게 구별할 수 없습니다. 다음 예제에서는 보여 주기 위해 [SolidColorBrush](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush)를 사용하지만 [GradientBrush](/uwp/api/Windows.UI.Xaml.Media.GradientBrush)를 사용하는 것이 더 중요하고 더 일반적입니다. 미리 정의된 색을 사용하는 브러시를 확인합니다. 예를 들어 `"Orange"`와 `"#FFFFA500"`은 같은 색입니다.
 
 **비효율적인 경우.**
 
@@ -281,15 +281,15 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 
 과도한 그리기는 둘 이상의 개체가 동일한 화면 픽셀에 그려지는 경우에 발생합니다. 이 지침과 요소 수 최소화 간에는 간혹 상충 관계가 있습니다.
 
-[  **DebugSettings.IsOverdrawHeatMapEnabled**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.debugsettings.isoverdrawheatmapenabled)를 시각적 진단으로 사용합니다. 장면에서 있는지 모르는 개체가 그려지는 경우가 있을 수 있습니다.
+[  **DebugSettings.IsOverdrawHeatMapEnabled**](/uwp/api/windows.ui.xaml.debugsettings.isoverdrawheatmapenabled)를 시각적 진단으로 사용합니다. 장면에서 있는지 모르는 개체가 그려지는 경우가 있을 수 있습니다.
 
 ### <a name="transparent-or-hidden-elements"></a>투명 또는 숨겨진 요소
 
-요소가 투명하거나 다른 요소 뒤에 숨겨져 있어 보이지 않고 레이아웃에 참여하지 않는 경우 해당 요소를 삭제합니다. 요소가 초기 시각적 상태에서는 보이지 않지만 다른 시각적 상태에서는 보이는 경우 x:Load를 사용하여 상태를 제어하거나 요소 자체에 대한 [Visibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.visibility)를 **Collapsed**로 설정하고 적절한 상태에서 값을 **Visible**로 변경합니다. 이 추론에 대한 예외가 있습니다. 일반적으로 대부분의 시각적 상태에서는 속성 값을 요소에서 로컬로 설정하는 것이 가장 좋습니다.
+요소가 투명하거나 다른 요소 뒤에 숨겨져 있어 보이지 않고 레이아웃에 참여하지 않는 경우 해당 요소를 삭제합니다. 요소가 초기 시각적 상태에서는 보이지 않지만 다른 시각적 상태에서는 보이는 경우 x:Load를 사용하여 상태를 제어하거나 요소 자체에 대한 [Visibility](/uwp/api/windows.ui.xaml.uielement.visibility)를 **Collapsed**로 설정하고 적절한 상태에서 값을 **Visible**로 변경합니다. 이 추론에 대한 예외가 있습니다. 일반적으로 대부분의 시각적 상태에서는 속성 값을 요소에서 로컬로 설정하는 것이 가장 좋습니다.
 
 ### <a name="composite-elements"></a>복합 요소
 
-여러 요소를 계층화하는 대신 복합 요소를 사용하여 효과를 만듭니다. 이 예제에서는 위쪽 절반은 검은색([Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)의 배경에서)이고 아래쪽 절반은 회색([Grid](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 검은색 배경 위에 알파 혼합된 반투명 흰색의 **Rectangle**에서)인 두 가지 색조의 모양이 만들어집니다. 여기에서는 결과를 달성하는 데 필요한 픽셀의 150%가 채워집니다.
+여러 요소를 계층화하는 대신 복합 요소를 사용하여 효과를 만듭니다. 이 예제에서는 위쪽 절반은 검은색([Grid](/uwp/api/Windows.UI.Xaml.Controls.Grid)의 배경에서)이고 아래쪽 절반은 회색([Grid](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)의 검은색 배경 위에 알파 혼합된 반투명 흰색의 **Rectangle**에서)인 두 가지 색조의 모양이 만들어집니다. 여기에서는 결과를 달성하는 데 필요한 픽셀의 150%가 채워집니다.
 
 **비효율적인 경우.**
 
@@ -346,11 +346,11 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 </GridView>
 ```
 
-[Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)가 적중 횟수를 테스트할 수 있어야 하는 경우 그 위에 투명한 배경색을 설정합니다.
+[Grid](/uwp/api/Windows.UI.Xaml.Controls.Grid)가 적중 횟수를 테스트할 수 있어야 하는 경우 그 위에 투명한 배경색을 설정합니다.
 
 ### <a name="borders"></a>테두리
 
-[Border](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.border) 요소를 사용하여 개체 주위의 테두리를 그립니다. 이 예제에서는 [Grid](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)를 [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 주위의 임시 테두리로 사용합니다. 그러나 가운데 셀에 있는 모든 픽셀은 과도하게 그려집니다.
+[Border](/uwp/api/windows.ui.xaml.controls.border) 요소를 사용하여 개체 주위의 테두리를 그립니다. 이 예제에서는 [Grid](/uwp/api/Windows.UI.Xaml.Controls.Grid)를 [TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox) 주위의 임시 테두리로 사용합니다. 그러나 가운데 셀에 있는 모든 픽셀은 과도하게 그려집니다.
 
 **비효율적인 경우.**
 
@@ -385,7 +385,7 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 
 ### <a name="cache-static-content"></a>정적 콘텐츠 캐시
 
-과도한 그리기의 또 다른 원인은 하나의 모양이 겹쳐진 여러 요소에서 만들어지는 경우입니다. 복합 모양이 포함된 [UIElement](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.CacheMode)에서 **CacheMode**를 [BitmapCache](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement)로 설정한 경우 플랫폼은 요소를 비트맵으로 렌더링한 다음 각 프레임에서 과도한 그리기 대신 해당 비트맵을 사용합니다.
+과도한 그리기의 또 다른 원인은 하나의 모양이 겹쳐진 여러 요소에서 만들어지는 경우입니다. 복합 모양이 포함된 [UIElement](/uwp/api/Windows.UI.Xaml.Media.CacheMode)에서 **CacheMode**를 [BitmapCache](/uwp/api/Windows.UI.Xaml.UIElement)로 설정한 경우 플랫폼은 요소를 비트맵으로 렌더링한 다음 각 프레임에서 과도한 그리기 대신 해당 비트맵을 사용합니다.
 
 **비효율적인 경우.**
 
@@ -413,7 +413,7 @@ XAML 플랫폼은 공통적으로 사용되는 개체를 가능한 자주 다시
 </Canvas>
 ```
 
-[CacheMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.CacheMode)의 사용에 주의합니다. 하위 모양을 애니메이션하는 경우 모든 프레임에서 비트맵 캐시를 다시 생성해야 할 수 있으므로 이 기술을 사용해서는 안 됩니다.
+[CacheMode](/uwp/api/Windows.UI.Xaml.Media.CacheMode)의 사용에 주의합니다. 하위 모양을 애니메이션하는 경우 모든 프레임에서 비트맵 캐시를 다시 생성해야 할 수 있으므로 이 기술을 사용해서는 안 됩니다.
 
 ## <a name="use-xbf2"></a>XBF2 사용
 

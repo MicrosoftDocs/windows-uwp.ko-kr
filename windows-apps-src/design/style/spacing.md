@@ -6,12 +6,12 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 634393e700538dc5db43b2d4065c6742fd7673f1
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 37bc5688321249428405e730d366eb987a81bd66
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234331"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159847"
 ---
 # <a name="control-size-and-density"></a>컨트롤 크기 및 밀도
 
@@ -72,7 +72,7 @@ Windows 10 2018년 10월 업데이트(버전 1809)의 경우 모든 사용 시�
 
 ### <a name="examples"></a>예
 
-컴팩트 크기는 페이지 수준에서 또는 특정 레이아웃에서 애플리케이션을 사용하여 지정할 수 있는 특수 리소스 사전을 통해 구현됩니다. 리소스 사전은 [WinUI](https://docs.microsoft.com/uwp/toolkits/winui/) Nuget 패키지에서 사용할 수 있습니다.
+컴팩트 크기는 페이지 수준에서 또는 특정 레이아웃에서 애플리케이션을 사용하여 지정할 수 있는 특수 리소스 사전을 통해 구현됩니다. 리소스 사전은 [WinUI](/uwp/toolkits/winui/) Nuget 패키지에서 사용할 수 있습니다.
 
 다음 예제에서는 페이지 및 개별 그리드 컨트롤에 `Compact` 스타일을 적용하는 방법을 보여줍니다.
 
@@ -101,6 +101,6 @@ Windows 10 2018년 10월 업데이트(버전 1809)의 경우 모든 사용 시�
 ## <a name="related-articles"></a>관련된 문서
 
 - [터치 대상에 대한 지침](../input/guidelines-for-targeting.md)
-- [ResourceDictionary 및 XAML 리소스 참조](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)
-- [리소스 사전](https://docs.microsoft.com/uwp/api/windows.ui.xaml.resourcedictionary)
-- [XAML 스타일](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-styles) 
+- [ResourceDictionary 및 XAML 리소스 참조](../controls-and-patterns/resourcedictionary-and-xaml-resource-references.md)
+- [리소스 사전](/uwp/api/windows.ui.xaml.resourcedictionary)
+- [XAML 스타일](../controls-and-patterns/xaml-styles.md)

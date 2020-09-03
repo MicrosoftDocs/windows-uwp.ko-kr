@@ -6,20 +6,20 @@ ms.date: 06/03/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 42913aae69e5d049530d649c031351f4f3ab9ace
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 6ccf994e273c683ec458b9a2eded0b13cb58c41c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684970"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158217"
 ---
 # <a name="sockets"></a>소켓
 소켓은 많은 네트워킹 프로토콜이 구현되는 하위 수준 데이터 전송 기술입니다. UWP는 연결이 오래되었거나 설정된 연결이 필요하지 않은지 여부에 관계없이 클라이언트-서버 또는 피어 투 피어 애플리케이션에 대한 TCP 및 UDP 소켓 클래스를 제공합니다.
 
-이 항목에서는 [**Windows.Networking.Sockets**](/uwp/api/Windows.Networking.Sockets) 네임스페이스에 있는 UWP(유니버설 Windows 플랫폼) 소켓 클래스를 사용하는 방법을 다룹니다. 하지만 UWP 앱에서 [Windows 소켓 2(Winsock)](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2)도 사용할 수 있습니다.
+이 항목에서는 [**Windows.Networking.Sockets**](/uwp/api/Windows.Networking.Sockets) 네임스페이스에 있는 UWP(유니버설 Windows 플랫폼) 소켓 클래스를 사용하는 방법을 다룹니다. 하지만 UWP 앱에서 [Windows 소켓 2(Winsock)](/windows/desktop/WinSock/windows-sockets-start-page-2)도 사용할 수 있습니다.
 
 > [!NOTE]
-> [네트워크 격리](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))의 결과로 Windows는 로컬 루프백 주소(127.0.0.0)를 통해서나 로컬 IP 주소를 명시적으로 지정하여 동일한 머신에서 실행 중인 UWP 앱 두 개 사이의 소켓 연결(소켓 또는 WinSock) 설정을 허용하지 않습니다. UWP 앱이 서로 통신할 수 있도록 하는 메커니즘에 대한 자세한 내용은 [앱 간 통신](/windows/uwp/app-to-app/index)을 참조하세요.
+> [네트워크 격리](/previous-versions/windows/apps/hh770532(v=win.10))의 결과로 Windows는 로컬 루프백 주소(127.0.0.0)를 통해서나 로컬 IP 주소를 명시적으로 지정하여 동일한 머신에서 실행 중인 UWP 앱 두 개 사이의 소켓 연결(소켓 또는 WinSock) 설정을 허용하지 않습니다. UWP 앱이 서로 통신할 수 있도록 하는 메커니즘에 대한 자세한 내용은 [앱 간 통신](../app-to-app/index.md)을 참조하세요.
 
 ## <a name="build-a-basic-tcp-socket-client-and-server"></a>기본 TCP 소켓 클라이언트 및 서버 빌드
 TCP(Transmission Control Protocol) 소켓은 지속 시간이 긴 연결에 대해 각 방향으로 하위 수준 네트워크 데이터 전송을 제공합니다. TCP 소켓은 인터넷에서 사용되는 대부분의 네트워크 프로토콜에서 사용하는 기본 기능입니다. 기본 TCP 작업을 설명하기 위해 아래의 예제 코드는 에코 클라이언트 및 서버를 형성하기 위해 TCP를 통해 데이터를 주고 받는 [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) 및 [**StreamSocketListener**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener)를 보여줍니다.
@@ -503,7 +503,7 @@ private:
 
 ## <a name="references-to-streamsockets-in-c-ppl-continuations-applies-to-ccx-primarily"></a>C++ PPL 연속에서 StreamSockets 참조(주로 C++/CX에 적용)
 > [!NOTE]
-> C++/WinRT 코루틴을 사용하는 경우, 값으로 매개 변수를 전달하며 이 문제는 적용되지 않습니다. 매개 변수-전달 권장 사항은 [C++/WinRT로 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency#parameter-passing)을 참조하세요.
+> C++/WinRT 코루틴을 사용하는 경우, 값으로 매개 변수를 전달하며 이 문제는 적용되지 않습니다. 매개 변수-전달 권장 사항은 [C++/WinRT로 동시성 및 비동기 작업](../cpp-and-winrt-apis/concurrency.md#parameter-passing)을 참조하세요.
 
 [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket?branch=live)은 해당 입력/출력 스트림에 활성 읽기/쓰기가 있는 한 지속됩니다(예: [**StreamSocketListener.ConnectionReceived**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener.ConnectionReceived) 이벤트 처리기에서 액세스할 수 있는 [**StreamSocketListenerConnectionReceivedEventArgs.Socket**](/uwp/api/windows.networking.sockets.streamsocketlistenerconnectionreceivedeventargs.Socket)). [**DataReader.LoadAsync**](/uwp/api/windows.storage.streams.datareader.loadasync)(또는 `ReadAsync/WriteAsync/StoreAsync`)를 호출하면 **LoadAsync**의 **완료됨** 완료 처리기(있는 경우) 실행이 완료될 때까지 소켓의 입력 스트림을 통해 소켓에 대한 참조를 가집니다.
 
@@ -1277,7 +1277,7 @@ private:
 -   비동기 쓰기가 완료될 때까지 작성 중인 **IBuffer** 인스턴스의 내용을 수정할 수 없습니다.
 -   **FlushAsync** 패턴은 **StreamSocket.OutputStream** 및 **DatagramSocket.OutputStream**에서만 작동합니다.
 -   **FlushAsync** 패턴은 Windows 10 이상에서만 작동합니다.
--   그 밖의 경우에는 **FlushAsync** 패턴 대신 [**Task.WaitAll**](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___)을 사용합니다.
+-   그 밖의 경우에는 **FlushAsync** 패턴 대신 [**Task.WaitAll**](/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___)을 사용합니다.
 
 ## <a name="port-sharing-for-datagramsocket"></a>DatagramSocket에 대한 포트 공유
 [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket)을 구성하여 동일한 주소/포트에 바인딩된 다른 Win32 또는 UWP 멀티캐스트 소켓과 함께 사용할 수 있습니다. 소켓을 바인딩 또는 연결하기 전에 [**DatagramSocketControl.MulticastOnly**](/uwp/api/Windows.Networking.Sockets.DatagramSocketControl.MulticastOnly)`true`로 설정하여 이 작업을 수행할 수 있습니다. 이 [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.datagramsocket.Control) 속성을 통해 **DatagramSocket** 개체 자체에서 **DatagramSocketControl**의 인스턴스에 액세스할 수 있습니다.
@@ -1378,10 +1378,10 @@ Concurrency::create_task(Windows::Security::Cryptography::Certificates::Certific
 * [Windows.Networking.Sockets](/uwp/api/Windows.Networking.Sockets)
 
 ## <a name="related-topics"></a>관련 항목
-* [앱 간 통신](/windows/uwp/app-to-app/index)
-* [C++/WinRT를 통한 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)
-* [네트워크 접근 권한 값을 설정하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
-* [Windows 소켓 2(Winsock)](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2)
+* [앱 간 통신](../app-to-app/index.md)
+* [C++/WinRT를 통한 동시성 및 비동기 작업](../cpp-and-winrt-apis/concurrency.md)
+* [네트워크 접근 권한 값을 설정하는 방법](/previous-versions/windows/apps/hh770532(v=win.10))
+* [Windows 소켓 2(Winsock)](/windows/desktop/WinSock/windows-sockets-start-page-2)
 
 ## <a name="samples"></a>샘플
 * [StreamSocket 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/StreamSocket)

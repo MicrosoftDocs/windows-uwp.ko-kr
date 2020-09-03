@@ -3,12 +3,12 @@ title: WinUI 2.3 릴리스 정보
 description: 새로운 기능 및 버그 수정이 포함된 WinUI 2.3 릴리스에 대한 정보입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: 9540f5314e6df02e95943279647d643bdbbef3c5
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 63091f927f63a708c5a5e4d41e9d81fd9f528cb1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493488"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154787"
 ---
 # <a name="windows-ui-library-23"></a>Windows UI 라이브러리 2.3
 
@@ -40,9 +40,9 @@ NuGet 패키지 다운로드: [Microsoft.UI.Xaml](https://www.nuget.org/packages
 
 ![활성화 상태 진행률 표시줄](../images/DeterminateProgressBar.gif)
 
-[문서 링크](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/progress-controls)
+[문서 링크](/windows/uwp/design/controls-and-patterns/progress-controls)
 
-[샘플 링크](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/progress-controls#examples)
+[샘플 링크](/windows/uwp/design/controls-and-patterns/progress-controls#examples)
 
 ### <a name="numberbox"></a>NumberBox
 
@@ -50,7 +50,7 @@ NuGet 패키지 다운로드: [Microsoft.UI.Xaml](https://www.nuget.org/packages
 
 ![NumberBox](../images/NumberBoxGif.gif)
 
-[문서 및 샘플 링크](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/number-box)
+[문서 및 샘플 링크](/windows/uwp/design/controls-and-patterns/number-box)
 
 ### <a name="radiobuttons"></a>RadioButtons
 

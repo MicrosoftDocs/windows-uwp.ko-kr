@@ -6,19 +6,19 @@ ms.topic: article
 keywords: Windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 사용자 지정, 템플릿 기반, 컨트롤
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2bd71e5ec78f3e0d1317c4e69ecd234985b2d8ab
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 805e9db834e4428f8db5815b54b8d1d669310611
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86492848"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154227"
 ---
 # <a name="xaml-custom-templated-controls-with-cwinrt"></a>C++/WinRT를 사용한 XAML 사용자 지정(템플릿 기반) 컨트롤
 
 > [!IMPORTANT]
-> [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
+> [C++/WinRT](./intro-to-using-cpp-with-winrt.md)를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
-UWP(유니버설 Windows 플랫폼)의 가장 강력한 기능 중 하나는 XAML [**컨트롤**](/uwp/api/windows.ui.xaml.controls.control) 형식을 기반으로 사용자 지정 컨트롤을 만들기 위해 UI(사용자 인터페이스) 스택이 제공하는 유연성입니다. XAML UI 프레임워크는 [사용자 지정 종속성 속성](/windows/uwp/xaml-platform/custom-dependency-properties) 및 [연결 속성](/windows/uwp/xaml-platform/custom-attached-properties)과 같은 기능뿐 아니라, 기능이 풍부하고 사용자 지정 가능한 컨트롤을 쉽게 작성할 수 있는 [컨트롤 템플릿](/windows/uwp/design/controls-and-patterns/control-templates)을 제공합니다. 이 항목에서는 C++/WinRT를 사용하여 사용자 지정(템플릿 기반) 컨트롤을 만드는 단계를 안내합니다.
+UWP(유니버설 Windows 플랫폼)의 가장 강력한 기능 중 하나는 XAML [**컨트롤**](/uwp/api/windows.ui.xaml.controls.control) 형식을 기반으로 사용자 지정 컨트롤을 만들기 위해 UI(사용자 인터페이스) 스택이 제공하는 유연성입니다. XAML UI 프레임워크는 [사용자 지정 종속성 속성](../xaml-platform/custom-dependency-properties.md) 및 [연결 속성](../xaml-platform/custom-attached-properties.md)과 같은 기능뿐 아니라, 기능이 풍부하고 사용자 지정 가능한 컨트롤을 쉽게 작성할 수 있는 [컨트롤 템플릿](../design/controls-and-patterns/control-templates.md)을 제공합니다. 이 항목에서는 C++/WinRT를 사용하여 사용자 지정(템플릿 기반) 컨트롤을 만드는 단계를 안내합니다.
 
 ## <a name="create-a-blank-app-bglabelcontrolapp"></a>비어 있는 앱(BgLabelControlApp) 만들기
 
@@ -46,7 +46,7 @@ namespace BgLabelControlApp
 }
 ```
 
-위 목록에서는 DP(종속성 속성)를 선언할 때 따라야 하는 패턴을 보여 줍니다. 각 DP에는 두 개의 조각이 있습니다. 먼저 [**DependencyProperty**](/uwp/api/windows.ui.xaml.dependencyproperty) 형식의 읽기 전용 정적 속성을 선언합니다. 여기에는 DP 및 ‘속성’의 이름이 포함됩니다. 구현에서 이 정적 속성을 사용합니다. 두 번째로, DP의 형식 및 이름으로 읽기-쓰기 인스턴스 속성을 선언합니다. DP 대신 ‘연결된 속성’을 작성하려면 [사용자 지정 연결 속성](/windows/uwp/xaml-platform/custom-attached-properties)에서 코드 예제를 참조하세요.
+위 목록에서는 DP(종속성 속성)를 선언할 때 따라야 하는 패턴을 보여 줍니다. 각 DP에는 두 개의 조각이 있습니다. 먼저 [**DependencyProperty**](/uwp/api/windows.ui.xaml.dependencyproperty) 형식의 읽기 전용 정적 속성을 선언합니다. 여기에는 DP 및 ‘속성’의 이름이 포함됩니다. 구현에서 이 정적 속성을 사용합니다. 두 번째로, DP의 형식 및 이름으로 읽기-쓰기 인스턴스 속성을 선언합니다. DP 대신 ‘연결된 속성’을 작성하려면 [사용자 지정 연결 속성](../xaml-platform/custom-attached-properties.md)에서 코드 예제를 참조하세요.
 
 > [!NOTE]
 > DP를 부동 소수점 형식과 함께 사용하려면 DP를 `double`([MIDL 3.0](/uwp/midl-3/)의 `Double`)로 설정합니다. `float`(MIDL의 `Single`) 형식의 DP를 선언하고 구현한 후 XAML 태그에서 해당 DP의 값을 설정하면 ‘텍스트 ‘<NUMBER>’에서 ‘Windows.Foundation.Single’을 만들지 못했습니다.’ 오류가 발생합니다..
@@ -217,5 +217,5 @@ struct BgLabelControl : BgLabelControlT<BgLabelControl>
 * [UIElement 클래스](/uwp/api/windows.ui.xaml.uielement)
 
 ## <a name="related-topics"></a>관련 항목
-* [컨트롤 템플릿](/windows/uwp/design/controls-and-patterns/control-templates)
-* [사용자 지정 종속성 속성](/windows/uwp/xaml-platform/custom-dependency-properties)
+* [컨트롤 템플릿](../design/controls-and-patterns/control-templates.md)
+* [사용자 지정 종속성 속성](../xaml-platform/custom-dependency-properties.md)

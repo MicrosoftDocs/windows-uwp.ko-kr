@@ -5,16 +5,16 @@ ms.date: 07/10/2019
 ms.topic: article
 keywords: windows 10, uwp, standard, c++, cpp, winrt, 프로젝션, 전달, 매개 변수, ABI
 ms.localizationpriority: medium
-ms.openlocfilehash: 51cde2332d3d9df9d1f488aa7f8246f9e1e2ed36
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: 05a627349ad2c4fda890a4f5280f5d33454ea910
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997980"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154457"
 ---
 # <a name="passing-parameters-into-the-abi-boundary"></a>매개 변수를 ABI 경계로 전달
 
-**winrt::param** 네임스페이스의 형식을 사용하여 C++/WinRT는 일반적인 경우에 대한 자동 변환을 제공하여 매개 변수를 ABI 경계에 전달하는 것을 단순화합니다. [문자열 처리](/windows/uwp/cpp-and-winrt-apis/strings) 및 [표준 C++ 데이터 형식 및 C++/WinRT](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types)에서 자세한 내용과 코드 예제를 볼 수 있습니다.
+**winrt::param** 네임스페이스의 형식을 사용하여 C++/WinRT는 일반적인 경우에 대한 자동 변환을 제공하여 매개 변수를 ABI 경계에 전달하는 것을 단순화합니다. [문자열 처리](./strings.md) 및 [표준 C++ 데이터 형식 및 C++/WinRT](./std-cpp-data-types.md)에서 자세한 내용과 코드 예제를 볼 수 있습니다.
 
 > [!IMPORTANT]
 > **winrt::param** 네임스페이스에서 형식을 직접 사용하지 않도록 해야 합니다. 이는 프로젝션의 이점을 위한 것입니다.

@@ -6,12 +6,12 @@ ms.date: 06/18/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c75bd62fb5548cc03247772427fb5aabac4fb5a
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: da3e5e74ae1e4e72b47cf80c3a5dfac4d2c6d3ef
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74735078"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89156527"
 ---
 # <a name="files-and-folders-in-the-music-pictures-and-videos-libraries"></a>음악, 사진 및 비디오 라이브러리의 파일 및 폴더
 
@@ -24,7 +24,7 @@ ms.locfileid: "74735078"
 
 -   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
-    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요.
+    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](../threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.md)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md)을 참조하세요.
 
 -   **위치에 대한 액세스 권한**
 
@@ -39,14 +39,14 @@ ms.locfileid: "74735078"
 ## <a name="get-a-reference-to-a-library"></a>라이브러리에 대한 참조 가져오기
 
 > [!NOTE]
-> 적절한 기능을 선언하는 것을 잊지 마세요. 자세한 내용은 [앱 기능 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.
+> 적절한 기능을 선언하는 것을 잊지 마세요. 자세한 내용은 [앱 기능 선언](../packaging/app-capability-declarations.md)을 참조하세요.
  
 
-사용자의 음악, 사진 또는 비디오 라이브러리에 대한 참조를 가져오려면 [**StorageLibrary.GetLibraryAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.getlibraryasync) 메서드를 호출합니다. [  **KnownLibraryId**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownLibraryId) 열거형에서 해당 값을 제공합니다.
+사용자의 음악, 사진 또는 비디오 라이브러리에 대한 참조를 가져오려면 [**StorageLibrary.GetLibraryAsync**](/uwp/api/windows.storage.storagelibrary.getlibraryasync) 메서드를 호출합니다. [  **KnownLibraryId**](/uwp/api/Windows.Storage.KnownLibraryId) 열거형에서 해당 값을 제공합니다.
 
--   [**KnownLibraryId.Music**](https://docs.microsoft.com/uwp/api/windows.storage.knownfolders.musiclibrary)
--   [**KnownLibraryId.Pictures**](https://docs.microsoft.com/uwp/api/windows.storage.knownfolders.pictureslibrary)
--   [**KnownLibraryId.Videos**](https://docs.microsoft.com/uwp/api/windows.storage.knownfolders.videoslibrary)
+-   [**KnownLibraryId.Music**](/uwp/api/windows.storage.knownfolders.musiclibrary)
+-   [**KnownLibraryId.Pictures**](/uwp/api/windows.storage.knownfolders.pictureslibrary)
+-   [**KnownLibraryId.Videos**](/uwp/api/windows.storage.knownfolders.videoslibrary)
 
 ```cs
 var myPictures = await Windows.Storage.StorageLibrary.GetLibraryAsync(Windows.Storage.KnownLibraryId.Pictures);
@@ -55,7 +55,7 @@ var myPictures = await Windows.Storage.StorageLibrary.GetLibraryAsync(Windows.St
 ## <a name="get-the-list-of-folders-in-a-library"></a>라이브러리에 폴더 목록 가져오기
 
 
-라이브러리에 폴더 목록을 가져오려면 [**StorageLibrary.Folders**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders) 속성의 값을 가져옵니다.
+라이브러리에 폴더 목록을 가져오려면 [**StorageLibrary.Folders**](/uwp/api/windows.storage.storagelibrary.folders) 속성의 값을 가져옵니다.
 
 ```cs
 using Windows.Foundation.Collections;
@@ -65,7 +65,7 @@ IObservableVector<Windows.Storage.StorageFolder> myPictureFolders = myPictures.F
 ## <a name="get-the-folder-in-a-library-where-new-files-are-saved-by-default"></a>기본적으로 새 파일이 저장되는 폴더를 라이브러리에 가져오기
 
 
-기본적으로 새 파일이 저장되는 폴더를 라이브러리에 가져오려면 [**StorageLibrary.SaveFolder**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.savefolder) 속성의 값을 가져옵니다.
+기본적으로 새 파일이 저장되는 폴더를 라이브러리에 가져오려면 [**StorageLibrary.SaveFolder**](/uwp/api/windows.storage.storagelibrary.savefolder) 속성의 값을 가져옵니다.
 
 ```cs
 Windows.Storage.StorageFolder savePicturesFolder = myPictures.SaveFolder;
@@ -73,7 +73,7 @@ Windows.Storage.StorageFolder savePicturesFolder = myPictures.SaveFolder;
 
 ## <a name="add-an-existing-folder-to-a-library"></a>라이브러리에 기존 폴더 추가
 
-라이브러리에 폴더를 추가하려면 [**StorageLibrary.RequestAddFolderAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.requestaddfolderasync)를 호출합니다. 예를 들어 사진 라이브러리의 경우 이 메서드를 호출하면 **사진에 이 폴더 추가** 단추가 포함된 폴더 선택기가 표시됩니다. 사용자가 폴더를 선택한 경우 폴더는 디스크의 원래 위치에 유지되고 [**StorageLibrary.Folders**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders) 속성(및 기본 제공 사진 앱)의 항목이 되지만 파일 탐색기의 사진 폴더 항목으로 표시되지는 않습니다.
+라이브러리에 폴더를 추가하려면 [**StorageLibrary.RequestAddFolderAsync**](/uwp/api/windows.storage.storagelibrary.requestaddfolderasync)를 호출합니다. 예를 들어 사진 라이브러리의 경우 이 메서드를 호출하면 **사진에 이 폴더 추가** 단추가 포함된 폴더 선택기가 표시됩니다. 사용자가 폴더를 선택한 경우 폴더는 디스크의 원래 위치에 유지되고 [**StorageLibrary.Folders**](/uwp/api/windows.storage.storagelibrary.folders) 속성(및 기본 제공 사진 앱)의 항목이 되지만 파일 탐색기의 사진 폴더 항목으로 표시되지는 않습니다.
 
 
 ```cs
@@ -82,11 +82,11 @@ Windows.Storage.StorageFolder newFolder = await myPictures.RequestAddFolderAsync
 
 ## <a name="remove-a-folder-from-a-library"></a>라이브러리에서 폴더 제거
 
-라이브러리에서 폴더를 제거하려면 [**StorageLibrary.RequestRemoveFolderAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.requestremovefolderasync) 메서드를 호출하고 제거할 폴더를 지정합니다. [  **StorageLibrary.Folders**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders) 및 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 컨트롤(또는 유사한 컨트롤)을 사용하여 사용자가 제거할 폴더를 선택하도록 할 수 있습니다.
+라이브러리에서 폴더를 제거하려면 [**StorageLibrary.RequestRemoveFolderAsync**](/uwp/api/windows.storage.storagelibrary.requestremovefolderasync) 메서드를 호출하고 제거할 폴더를 지정합니다. [  **StorageLibrary.Folders**](/uwp/api/windows.storage.storagelibrary.folders) 및 [**ListView**](/uwp/api/Windows.UI.Xaml.Controls.ListView) 컨트롤(또는 유사한 컨트롤)을 사용하여 사용자가 제거할 폴더를 선택하도록 할 수 있습니다.
 
-[  **StorageLibrary.RequestRemoveFolderAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.requestremovefolderasync)를 호출한 경우 폴더가 “더 이상 사진에 표시되지 않지만 삭제되지 않음”을 나타내는 확인 대화 상자가 나타납니다. 이는 폴더가 디스크의 원래 위치에 유지되며, [**StorageLibrary.Folders**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.folders) 속성에서 제거되고 더 이상 기본 제공 사진 앱에 포함되지 않음을 의미합니다.
+[  **StorageLibrary.RequestRemoveFolderAsync**](/uwp/api/windows.storage.storagelibrary.requestremovefolderasync)를 호출한 경우 폴더가 “더 이상 사진에 표시되지 않지만 삭제되지 않음”을 나타내는 확인 대화 상자가 나타납니다. 이는 폴더가 디스크의 원래 위치에 유지되며, [**StorageLibrary.Folders**](/uwp/api/windows.storage.storagelibrary.folders) 속성에서 제거되고 더 이상 기본 제공 사진 앱에 포함되지 않음을 의미합니다.
 
-다음 예제에서는 사용자가 **lvPictureFolders**라는 [**ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 컨트롤에서 제거할 폴더를 선택한 것으로 가정합니다.
+다음 예제에서는 사용자가 **lvPictureFolders**라는 [**ListView**](/uwp/api/Windows.UI.Xaml.Controls.ListView) 컨트롤에서 제거할 폴더를 선택한 것으로 가정합니다.
 
 
 ```cs
@@ -96,7 +96,7 @@ bool result = await myPictures.RequestRemoveFolderAsync(folder);
 ## <a name="get-notified-of-changes-to-the-list-of-folders-in-a-library"></a>라이브러리의 폴더 목록 변경에 대한 알림 받기
 
 
-라이브러리의 폴더 목록 변경에 대한 알림을 받으려면 라이브러리의 [**StorageLibrary.DefinitionChanged**](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrary.definitionchanged) 이벤트에 대한 처리기를 등록합니다.
+라이브러리의 폴더 목록 변경에 대한 알림을 받으려면 라이브러리의 [**StorageLibrary.DefinitionChanged**](/uwp/api/windows.storage.storagelibrary.definitionchanged) 이벤트에 대한 처리기를 등록합니다.
 
 
 ```cs
@@ -158,7 +158,7 @@ private async void getSongs()
 
 사용자는 기본적으로 옵션 SD 카드에 파일을 저장하도록 선택할 수 있습니다. 하지만 앱에서 SD 카드에 파일이 저장되는 것을 허용하지 않도록 선택할 수 있습니다. 결과적으로, 미디어 라이브러리를 장치 내부 스토리지와 SD 카드로 분할할 수 있습니다.
 
-이 옵션을 처리하기 위해 추가 코드를 작성할 필요가 없습니다. 알려진 폴더를 쿼리하는 [**Windows.Storage**](https://docs.microsoft.com/uwp/api/Windows.Storage) 네임스페이스의 메서드가 두 위치 모두의 쿼리 결과를 투명하게 결합합니다. 이와 같이 결합된 결과를 얻기 위해 앱 매니페스트 파일에 **removableStorage** 접근 권한 값을 지정할 필요가 없습니다.
+이 옵션을 처리하기 위해 추가 코드를 작성할 필요가 없습니다. 알려진 폴더를 쿼리하는 [**Windows.Storage**](/uwp/api/Windows.Storage) 네임스페이스의 메서드가 두 위치 모두의 쿼리 결과를 투명하게 결합합니다. 이와 같이 결합된 결과를 얻기 위해 앱 매니페스트 파일에 **removableStorage** 접근 권한 값을 지정할 필요가 없습니다.
 
 디바이스 스토리지의 상태가 다음 이미지에 나온 것과 같다고 가정합니다.
 
@@ -175,7 +175,7 @@ private async void getSongs()
 
 **사진을 캡처한 앱으로 사진 열기**
 
-나중에 사용자가 사진을 캡처한 앱으로 사진을 다시 열 수 있도록 하려면 다음 예제와 비슷한 코드를 사용하여 사진의 메타데이터로 **CreatorAppId**을(를) 저장할 수 있습니다. 이 예제에서 **testPhoto**는 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)입니다.
+나중에 사용자가 사진을 캡처한 앱으로 사진을 다시 열 수 있도록 하려면 다음 예제와 비슷한 코드를 사용하여 사진의 메타데이터로 **CreatorAppId**을(를) 저장할 수 있습니다. 이 예제에서 **testPhoto**는 [**StorageFile**](/uwp/api/Windows.Storage.StorageFile)입니다.
 
 ```cs
 IDictionary<string, object> propertiesToSave = new Dictionary<string, object>();

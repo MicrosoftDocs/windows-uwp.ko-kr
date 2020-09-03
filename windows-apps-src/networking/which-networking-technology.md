@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c4b1a0dab6bf1eb3301ba9fb97abd95fd896c53e
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 05aec42d4a8eef1d78ddd425f1e90e06cb610c0a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74259170"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89158167"
 ---
 # <a name="which-networking-technology"></a>네트워킹 기술 선택
 
@@ -22,7 +22,7 @@ UWP 개발자가 사용할 수 있는 네트워킹 기술에 대한 빠른 개�
 
 다른 장치와 통신할 때 사용자 고유의 프로토콜을 사용하려는 경우 [소켓](sockets.md)을 사용합니다.
 
-UWP(유니버설 Windows 플랫폼) 개발자는 두 가지 소켓 구현 [**Windows.Networking.Sockets**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets) 및 [Winsock](https://docs.microsoft.com/windows/desktop/WinSock/windows-sockets-start-page-2)을 사용할 수 있습니다. 새 코드를 작성하는 경우 Windows.Networking.Socket은 UWP 개발자용으로 디자인된 최신 API를 활용합니다. 플랫폼 간 네트워킹 라이브러리나 기존의 다른 Winsock 코드를 사용하려는 경우 또는 기본적으로 Winsock API를 사용하려는 경우에 사용합니다.
+UWP(유니버설 Windows 플랫폼) 개발자는 두 가지 소켓 구현 [**Windows.Networking.Sockets**](/uwp/api/Windows.Networking.Sockets) 및 [Winsock](/windows/desktop/WinSock/windows-sockets-start-page-2)을 사용할 수 있습니다. 새 코드를 작성하는 경우 Windows.Networking.Socket은 UWP 개발자용으로 디자인된 최신 API를 활용합니다. 플랫폼 간 네트워킹 라이브러리나 기존의 다른 Winsock 코드를 사용하려는 경우 또는 기본적으로 Winsock API를 사용하려는 경우에 사용합니다.
 
 ### <a name="when-to-use-sockets"></a>소켓을 사용하는 경우
 
@@ -32,12 +32,12 @@ UWP(유니버설 Windows 플랫폼) 개발자는 두 가지 소켓 구현 [**Win
 
 ### <a name="when-not-to-use-sockets"></a>소켓을 사용하지 않는 경우
 
--   소켓을 사용하여 사용자 고유의 HTTP(S) 스택을 구현하지 마세요. 대신 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient)를 사용합니다.
--   WebSocket([**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) 및 [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 클래스)이 통신 요구 사항(웹 서버와의 TCP)을 충족하는 경우 소켓으로 유사한 기능을 구현하는 데 시간과 리소스를 소비하는 대신 이를 사용하는 것이 좋습니다.
+-   소켓을 사용하여 사용자 고유의 HTTP(S) 스택을 구현하지 마세요. 대신 [**HttpClient**](/uwp/api/Windows.Web.Http.HttpClient)를 사용합니다.
+-   WebSocket([**StreamWebSocket**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket) 및 [**MessageWebSocket**](/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 클래스)이 통신 요구 사항(웹 서버와의 TCP)을 충족하는 경우 소켓으로 유사한 기능을 구현하는 데 시간과 리소스를 소비하는 대신 이를 사용하는 것이 좋습니다.
 
 ## <a name="websockets"></a>WebSocket
 
-[WebSocket](websockets.md) 프로토콜은 웹을 통해 클라이언트와 서버 간의 신속하고 보안이 유지된 양방향 통신을 위한 메커니즘을 정의합니다. 데이터가 전이중 단일 소켓 연결을 통해 즉시 전송되므로 두 엔드포인트에서 실시간으로 메시지를 보내고 받을 수 있습니다. WebSocket은 즉각적인 소셜 네트워크 알림WebSocket은 즉각적인 소셜 네트워크 알림 및 최신 정보(예: 게임 통계)의 표시에 보안 및 고속 데이터 전송이 필요한 실시간 게임에 적합합니다. UWP 개발자는 [**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) 및 [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 클래스를 사용하여 Websocket 프로토콜을 지원하는 서버와 연결할 수 있습니다.
+[WebSocket](websockets.md) 프로토콜은 웹을 통해 클라이언트와 서버 간의 신속하고 보안이 유지된 양방향 통신을 위한 메커니즘을 정의합니다. 데이터가 전이중 단일 소켓 연결을 통해 즉시 전송되므로 두 엔드포인트에서 실시간으로 메시지를 보내고 받을 수 있습니다. WebSocket은 즉각적인 소셜 네트워크 알림WebSocket은 즉각적인 소셜 네트워크 알림 및 최신 정보(예: 게임 통계)의 표시에 보안 및 고속 데이터 전송이 필요한 실시간 게임에 적합합니다. UWP 개발자는 [**StreamWebSocket**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket) 및 [**MessageWebSocket**](/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 클래스를 사용하여 Websocket 프로토콜을 지원하는 서버와 연결할 수 있습니다.
 
 ### <a name="when-to-use-websockets"></a>WebSocket을 사용하는 경우
 
@@ -50,13 +50,13 @@ UWP(유니버설 Windows 플랫폼) 개발자는 두 가지 소켓 구현 [**Win
 
 ## <a name="httpclient"></a>HttpClient
 
-HTTP(S)를 사용하여 웹 서비스 또는 웹 서버와 통신하는 경우 [HttpClient](httpclient.md)(및 나머지 [**Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) 네임스페이스 API)를 사용하는 것이 좋습니다.
+HTTP(S)를 사용하여 웹 서비스 또는 웹 서버와 통신하는 경우 [HttpClient](httpclient.md)(및 나머지 [**Windows.Web.Http**](/uwp/api/Windows.Web.Http) 네임스페이스 API)를 사용하는 것이 좋습니다.
 
 ### <a name="when-to-use-httpclient"></a>HttpClient를 사용하는 경우
 
 -   HTTP(S)를 사용하여 웹 서비스와 통신하는 경우
 -   용량이 작은 소수의 파일을 업로드하거나 다운로드하는 경우
--   WebSocket([**StreamWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.StreamWebSocket) 및 [**MessageWebSocket**](https://docs.microsoft.com/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 클래스)이 통신 요구 사항(웹 서버와의 TCP)을 충족하고 해당 웹 서버가 WebSocket을 지원하는 경우 HttpClient로 유사한 기능을 구현하는 데 시간과 리소스를 소비하는 대신 이를 사용하는 것이 좋습니다.
+-   WebSocket([**StreamWebSocket**](/uwp/api/Windows.Networking.Sockets.StreamWebSocket) 및 [**MessageWebSocket**](/uwp/api/Windows.Networking.Sockets.MessageWebSocket) 클래스)이 통신 요구 사항(웹 서버와의 TCP)을 충족하고 해당 웹 서버가 WebSocket을 지원하는 경우 HttpClient로 유사한 기능을 구현하는 데 시간과 리소스를 소비하는 대신 이를 사용하는 것이 좋습니다.
 -   네트워크를 통해 콘텐츠를 스트리밍하는 경우
 
 ### <a name="when-not-to-use-httpclient"></a>HttpClient를 사용하지 않는 경우
@@ -80,50 +80,50 @@ Windows 10의 새로운 백그라운드 전송 기능은 로컬 카탈로그를 
 
 ### <a name="when-not-to-use-background-transfers"></a>백그라운드 전송을 사용하지 않는 경우
 
--   용량이 작은 소수의 파일을 전송할 때 전송이 완료된 후 사후 처리가 필요 없는 경우에는 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) PUT 또는 POST 메서드를 사용하는 것이 좋습니다.
--   데이터를 스트림하고 데이터가 도착하면 로컬에서 사용하려는 경우 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient)를 사용합니다.
+-   용량이 작은 소수의 파일을 전송할 때 전송이 완료된 후 사후 처리가 필요 없는 경우에는 [**HttpClient**](/uwp/api/Windows.Web.Http.HttpClient) PUT 또는 POST 메서드를 사용하는 것이 좋습니다.
+-   데이터를 스트림하고 데이터가 도착하면 로컬에서 사용하려는 경우 [**HttpClient**](/uwp/api/Windows.Web.Http.HttpClient)를 사용합니다.
 
 ## <a name="additional-network-related-technologies"></a>추가 네트워크 관련 기술
 
 ### <a name="connection-quality"></a>연결 품질
 
-[  **Windows.Networking.Connectivity**](https://docs.microsoft.com/uwp/api/Windows.Networking.Connectivity) API는 네트워크 연결, 비용 및 사용 정보에 액세스할 수 있도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [네트워크 연결 상태 액세스 및 네트워크 비용 관리](https://docs.microsoft.com/previous-versions/windows/apps/hh452983(v=win.10))를 참조하세요.
+[  **Windows.Networking.Connectivity**](/uwp/api/Windows.Networking.Connectivity) API는 네트워크 연결, 비용 및 사용 정보에 액세스할 수 있도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [네트워크 연결 상태 액세스 및 네트워크 비용 관리](/previous-versions/windows/apps/hh452983(v=win.10))를 참조하세요.
 
 ### <a name="dns-service-discovery"></a>DNS 서비스 검색
 
-[  **Windows.Networking.ServiceDiscovery.Dnssd**](https://docs.microsoft.com/uwp/api/Windows.Networking.ServiceDiscovery.Dnssd) API는 IETF [RFC 2782](https://www.rfc-archive.org/getrfc.php?rfc=2782)에 설명된 DNS-SD 프로토콜을 사용하여 네트워크의 다른 장치에 네트워크 서비스를 보급하도록 지원합니다.
+[  **Windows.Networking.ServiceDiscovery.Dnssd**](/uwp/api/Windows.Networking.ServiceDiscovery.Dnssd) API는 IETF [RFC 2782](https://www.rfc-archive.org/getrfc.php?rfc=2782)에 설명된 DNS-SD 프로토콜을 사용하여 네트워크의 다른 장치에 네트워크 서비스를 보급하도록 지원합니다.
 
 ### <a name="communicating-over-bluetooth"></a>Bluetooth를 통한 통신
 
-[  **Windows.Devices.Bluetooth**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth) API는 특히 Bluetooth를 사용하여 다른 디바이스에 연결하고 데이터를 전송하도록 지원합니다. 자세한 내용은 [RFCOMM을 사용하여 파일 보내기 및 받기](https://docs.microsoft.com/windows/uwp/devices-sensors/send-or-receive-files-with-rfcomm)를 참조하세요.
+[  **Windows.Devices.Bluetooth**](/uwp/api/Windows.Devices.Bluetooth) API는 특히 Bluetooth를 사용하여 다른 디바이스에 연결하고 데이터를 전송하도록 지원합니다. 자세한 내용은 [RFCOMM을 사용하여 파일 보내기 및 받기](../devices-sensors/send-or-receive-files-with-rfcomm.md)를 참조하세요.
 
 ### <a name="push-notifications-wns"></a>푸시 알림(WNS)
 
-[  **Windows.Networking.PushNotifications**](https://docs.microsoft.com/uwp/api/Windows.Networking.PushNotifications) API는 WNS(Windows 알림 서비스)를 사용하여 네트워크를 통해 푸시 알림을 받을 수 있도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [WNS(Windows 푸시 알림 서비스) 개요](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-windows-push-notification-services--wns--overview)를 참조하세요.
+[  **Windows.Networking.PushNotifications**](/uwp/api/Windows.Networking.PushNotifications) API는 WNS(Windows 알림 서비스)를 사용하여 네트워크를 통해 푸시 알림을 받을 수 있도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [WNS(Windows 푸시 알림 서비스) 개요](../design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md)를 참조하세요.
 
 ### <a name="near-field-communications"></a>근거리 통신
 
-[  **Windows.Networking.Proximity**](https://docs.microsoft.com/uwp/api/Windows.Networking.Proximity) API는 디바이스와의 근접 연결 또는 탭 연결을 사용하여 손쉬운 데이터 전송을 지원하는 앱에 근거리 통신을 사용하도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [근접 연결 및 탭 지원](https://docs.microsoft.com/previous-versions/windows/apps/hh465229(v=win.10))을 참조하세요.
+[  **Windows.Networking.Proximity**](/uwp/api/Windows.Networking.Proximity) API는 디바이스와의 근접 연결 또는 탭 연결을 사용하여 손쉬운 데이터 전송을 지원하는 앱에 근거리 통신을 사용하도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [근접 연결 및 탭 지원](/previous-versions/windows/apps/hh465229(v=win.10))을 참조하세요.
 
 ### <a name="rssatom-feeds"></a>RSS/Atom 피드
 
-[  **Windows.Web.Syndication**](https://docs.microsoft.com/uwp/api/Windows.Web.Syndication) API는 RSS 및 Atom 형식을 사용하여 배포 피드를 관리하도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [RSS/Atom 피드](web-feeds.md)를 참조하세요.
+[  **Windows.Web.Syndication**](/uwp/api/Windows.Web.Syndication) API는 RSS 및 Atom 형식을 사용하여 배포 피드를 관리하도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [RSS/Atom 피드](web-feeds.md)를 참조하세요.
 
 ### <a name="wi-fi-enumeration-and-connection-control"></a>Wi-Fi 열거형 및 연결 제어
 
-[  **Windows.Devices.WiFi**](https://docs.microsoft.com/uwp/api/Windows.Devices.WiFi) API는 Wi-Fi 어댑터를 열거하고, 사용 가능한 Wi-Fi 네트워크를 검색하고, 어댑터를 네트워크에 연결하도록 지원합니다.
+[  **Windows.Devices.WiFi**](/uwp/api/Windows.Devices.WiFi) API는 Wi-Fi 어댑터를 열거하고, 사용 가능한 Wi-Fi 네트워크를 검색하고, 어댑터를 네트워크에 연결하도록 지원합니다.
 
 ### <a name="radio-control"></a>무선 제어
 
-[  **Windows.Devices.Radios**](https://docs.microsoft.com/uwp/api/Windows.Devices.Radios) API는 로컬 장치에서 Wi-Fi, Bluetooth 등의 무선을 찾고 제어하도록 지원합니다.
+[  **Windows.Devices.Radios**](/uwp/api/Windows.Devices.Radios) API는 로컬 장치에서 Wi-Fi, Bluetooth 등의 무선을 찾고 제어하도록 지원합니다.
 
 ### <a name="wi-fi-direct"></a>Wi-Fi Direct
 
-[  **Windows.Devices.WiFiDirect**](https://docs.microsoft.com/uwp/api/Windows.Devices.WiFiDirect) API는 Wi-Fi Direct를 사용하여 애드혹 로컬 무선 네트워크를 만드는 방식으로 다른 로컬 장치와 연결하고 통신하도록 지원합니다.
+[  **Windows.Devices.WiFiDirect**](/uwp/api/Windows.Devices.WiFiDirect) API는 Wi-Fi Direct를 사용하여 애드혹 로컬 무선 네트워크를 만드는 방식으로 다른 로컬 장치와 연결하고 통신하도록 지원합니다.
 
 ### <a name="wi-fi-direct-services"></a>Wi-Fi Direct 서비스
 
-[  **Windows.Devices.WiFiDirect.Services**](https://docs.microsoft.com/uwp/api/Windows.Devices.WiFiDirect.Services) API는 Wi-Fi Direct 서비스를 제공하고 연결하도록 지원합니다. Wi-Fi Direct 서비스는 Wi-Fi Direct 애드혹 네트워크의 장치(Service Advertiser)에서 Wi-Fi Direct 연결을 통해 다른 장치(Service Seeker)에 접근 권한 값을 제공하는 방식입니다.
+[  **Windows.Devices.WiFiDirect.Services**](/uwp/api/Windows.Devices.WiFiDirect.Services) API는 Wi-Fi Direct 서비스를 제공하고 연결하도록 지원합니다. Wi-Fi Direct 서비스는 Wi-Fi Direct 애드혹 네트워크의 장치(Service Advertiser)에서 Wi-Fi Direct 연결을 통해 다른 장치(Service Seeker)에 접근 권한 값을 제공하는 방식입니다.
 
 ### <a name="mobile-operators"></a>통신사
 
@@ -131,9 +131,8 @@ Windows 10에서는 이전에 디바이스 제조업체 및 통신사에만 노�
 
 ### <a name="network-operations"></a>네트워크 운영
 
-[  **Windows.Networking.NetworkOperators**](https://docs.microsoft.com/uwp/api/Windows.Networking.NetworkOperators) API는 휴대폰의 구성 및 프로비저닝을 주로 처리합니다. 따라서 이를 제어하는 접근 권한 값의 사용 권한은 디바이스 제조업체 및 통신사로 제한됩니다.
+[  **Windows.Networking.NetworkOperators**](/uwp/api/Windows.Networking.NetworkOperators) API는 휴대폰의 구성 및 프로비저닝을 주로 처리합니다. 따라서 이를 제어하는 접근 권한 값의 사용 권한은 디바이스 제조업체 및 통신사로 제한됩니다.
 
 ### <a name="sms"></a>SMS
 
-[  **Windows.Devices.Sms**](https://docs.microsoft.com/uwp/api/Windows.Devices.Sms) 네임스페이스는 SMS 및 관련 메시지를 하위 수준 엔터티로 처리합니다. 이는 통신사에서 앱 지정 SMS에 사용하도록 제공되며, 대부분의 앱 개발자용으로 승인되지 않는 접근 권한 값으로 제어됩니다. 메시지를 처리할 앱을 작성하는 경우 대신 [**Windows.ApplicationModel.Chat**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Chat) API를 사용해야 합니다. 이 API는 SMS 메시지뿐만 아니라 실시간 채팅 앱과 같은 다른 소스의 메시지도 처리하도록 디자인되었으므로 훨씬 풍부한 채팅/메시징 환경을 지원합니다.
-
+[  **Windows.Devices.Sms**](/uwp/api/Windows.Devices.Sms) 네임스페이스는 SMS 및 관련 메시지를 하위 수준 엔터티로 처리합니다. 이는 통신사에서 앱 지정 SMS에 사용하도록 제공되며, 대부분의 앱 개발자용으로 승인되지 않는 접근 권한 값으로 제어됩니다. 메시지를 처리할 앱을 작성하는 경우 대신 [**Windows.ApplicationModel.Chat**](/uwp/api/Windows.ApplicationModel.Chat) API를 사용해야 합니다. 이 API는 SMS 메시지뿐만 아니라 실시간 채팅 앱과 같은 다른 소스의 메시지도 처리하도록 디자인되었으므로 훨씬 풍부한 채팅/메시징 환경을 지원합니다.

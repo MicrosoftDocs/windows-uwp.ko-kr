@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 85e41a26343c9e4c6eb239cbfdd74dc946d5b657
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d15cd0289b3de0c086a3ddc974e1b121447188c5
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74258809"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155227"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>2018년 9월 Windows 개발자 문서의 새로운 내용
 
@@ -22,9 +22,9 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 
 ### <a name="windows-machine-learning"></a>Windows Machine Learning
 
-[Windows Machine Learning 문서](https://docs.microsoft.com/windows/ai/)는 이제 해당 사이트에 존재하고 최신 Windows 참가자 SDK에 대해 업데이트됩니다. C++ 및 C#에는 애플리케이션에 WinML을 추가하도록 돕는 데스크톱 및 UWP 자습서가 있습니다.
+[Windows Machine Learning 문서](/windows/ai/)는 이제 해당 사이트에 존재하고 최신 Windows 참가자 SDK에 대해 업데이트됩니다. C++ 및 C#에는 애플리케이션에 WinML을 추가하도록 돕는 데스크톱 및 UWP 자습서가 있습니다.
 
-[Windows.AI.MachineLearning API 참조](https://docs.microsoft.com/uwp/api/windows.ai.machinelearning)가 최신 Windows 참가자 SDK에 대해 업데이트되었습니다.
+[Windows.AI.MachineLearning API 참조](/uwp/api/windows.ai.machinelearning)가 최신 Windows 참가자 SDK에 대해 업데이트되었습니다.
 
 최신 SDK를 사용하는 새 샘플이 있는 [Windows-Machine-Learning GitHub 리포지토리](https://github.com/Microsoft/Windows-Machine-Learning)가 업데이트되었습니다.
 
@@ -32,9 +32,9 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 
 ### <a name="windows-ui-library"></a>Windows UI Library
 
-[Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/)는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. 또한 이러한 패키지는 이전 버전의 Windows 10과도 호환되므로 사용자에게 최신 OS 버전이 없는 경우에도 앱이 작동합니다.
+[Windows UI Library](/uwp/toolkits/winui/)는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. 또한 이러한 패키지는 이전 버전의 Windows 10과도 호환되므로 사용자에게 최신 OS 버전이 없는 경우에도 앱이 작동합니다.
 
-Windows UI 라이브러리에 대한 자세한 내용은 [NuGet 패키지에 포함된 API 네임스페이스 목록](https://docs.microsoft.com/uwp/api/overview/winui/)을 참조하세요.
+Windows UI 라이브러리에 대한 자세한 내용은 [NuGet 패키지에 포함된 API 네임스페이스 목록](/uwp/api/overview/winui/)을 참조하세요.
 
 ## <a name="developer-guidance"></a>개발자 지침
 

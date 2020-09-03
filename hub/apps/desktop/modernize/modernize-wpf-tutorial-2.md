@@ -8,18 +8,18 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 6bb90fb9cbe7c9f54f60fd1920f0e73e174a3772
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0b5250f1e01aece4f73d83dc7327f193a58f53cf
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80482578"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161497"
 ---
 # <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>2부: XAML Islands를 사용하여 UWP InkCanvas 컨트롤 추가
 
 Contoso 지출이라는 샘플 WPF 데스크톱 앱을 현대화하는 방법을 보여주는 자습서의 두 번째 파트입니다. 자습서의 개요, 필수 구성 요소 및 샘플 앱 다운로드 지침은 [자습서: WPF 앱 현대화](modernize-wpf-tutorial.md)를 참조하세요. 이 문서에서는 [1부](modernize-wpf-tutorial-1.md)를 이미 완료했다고 가정합니다.
 
-이 자습서의 가상 시나리오에서 Contoso 개발 팀은 Contoso 지출 앱에 디지털 서명 지원을 추가하려고 합니다. UWP **InkCanvas** 컨트롤은 디지털 잉크 및 AI 기반 기능(예: 텍스트와 모양을 인식하는 기능)을 지원하기 때문에 이 시나리오에 유용한 옵션입니다. 이렇게 하려면 Windows 커뮤니티 도구 키트에 제공되는 [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 래핑된 UWP 컨트롤을 사용합니다. 이 컨트롤은 WPF 앱에서 사용할 UWP **InkCanvas** 컨트롤의 인터페이스 및 기능을 래핑합니다. 래핑된 UWP 컨트롤에 대한 자세한 내용은 [데스크톱 앱에서 UWP XAML 컨트롤 호스트(XAML Islands)](xaml-islands.md)를 참조하세요.
+이 자습서의 가상 시나리오에서 Contoso 개발 팀은 Contoso 지출 앱에 디지털 서명 지원을 추가하려고 합니다. UWP **InkCanvas** 컨트롤은 디지털 잉크 및 AI 기반 기능(예: 텍스트와 모양을 인식하는 기능)을 지원하기 때문에 이 시나리오에 유용한 옵션입니다. 이렇게 하려면 Windows 커뮤니티 도구 키트에 제공되는 [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 래핑된 UWP 컨트롤을 사용합니다. 이 컨트롤은 WPF 앱에서 사용할 UWP **InkCanvas** 컨트롤의 인터페이스 및 기능을 래핑합니다. 래핑된 UWP 컨트롤에 대한 자세한 내용은 [데스크톱 앱에서 UWP XAML 컨트롤 호스트(XAML Islands)](xaml-islands.md)를 참조하세요.
 
 ## <a name="configure-the-project-to-use-xaml-islands"></a>XAML Islands를 사용하도록 프로젝트 구성
 
@@ -36,7 +36,7 @@ Contoso 지출 앱에 **InkCanvas** 컨트롤을 추가하려면 먼저 UWP XAML
 
 3. **솔루션 탐색기**에서 **ContosoExpenses.Core** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 -> 새 항목**을 선택합니다.
 
-4. **애플리케이션 매니페스트 파일**을 선택하고, 이름을 **app.manifest**로 지정하고, **추가**를 클릭합니다. 애플리케이션 매니페스트에 대한 자세한 내용은 [이 문서](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests)를 참조하세요.
+4. **애플리케이션 매니페스트 파일**을 선택하고, 이름을 **app.manifest**로 지정하고, **추가**를 클릭합니다. 애플리케이션 매니페스트에 대한 자세한 내용은 [이 문서](/windows/desktop/SbsCs/application-manifests)를 참조하세요.
 
 5. 매니페스트 파일에서 Windows 10에 대한 다음 `<supportedOS>` 요소의 주석을 제거합니다.
 
@@ -80,11 +80,11 @@ Contoso 지출 앱에 **InkCanvas** 컨트롤을 추가하려면 먼저 UWP XAML
 
 ## <a name="add-an-inkcanvas-control-to-the-app"></a>앱에 InkCanvas 컨트롤 추가
 
-UWP XAML Islands를 사용하도록 프로젝트를 구성했으므로, 이제 [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 래핑된 UWP 컨트롤을 앱에 추가할 준비가 되었습니다.
+UWP XAML Islands를 사용하도록 프로젝트를 구성했으므로, 이제 [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 래핑된 UWP 컨트롤을 앱에 추가할 준비가 되었습니다.
 
 1. **솔루션 탐색기**에서 **ContosoExpenses.Core** 프로젝트의 **Views** 폴더를 펼치고, **ExpenseDetail.xaml** 파일을 두 번 클릭합니다.
 
-2. XAML 파일의 위쪽에 있는 **Window** 요소에 다음 특성을 추가합니다. 이 특성은 [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 래핑된 UWP 컨트롤에 대한 XAML 네임스페이스를 참조합니다.
+2. XAML 파일의 위쪽에 있는 **Window** 요소에 다음 특성을 추가합니다. 이 특성은 [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 래핑된 UWP 컨트롤에 대한 XAML 네임스페이스를 참조합니다.
 
     ```xml
     xmlns:toolkit="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls"

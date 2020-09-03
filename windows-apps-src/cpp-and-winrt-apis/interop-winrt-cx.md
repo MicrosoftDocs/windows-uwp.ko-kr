@@ -1,20 +1,20 @@
 ---
-description: 이 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 개체와 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 개체 간에 변환하는 데 사용할 수 있는 두 가지 도우미 함수를 보여 줍니다.
+description: 이 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 개체와 [C++/WinRT](./intro-to-using-cpp-with-winrt.md) 개체 간에 변환하는 데 사용할 수 있는 두 가지 도우미 함수를 보여 줍니다.
 title: C++/WinRT와 C++/CX 간의 Interop
 ms.date: 10/09/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, Interop, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: d3fa04f0aabe001dc87ce4292dff7557432583a6
-ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
+ms.openlocfilehash: 8ef3b45222b5e9324dc76d7a81a8d096a569595d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88502288"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157377"
 ---
 # <a name="interop-between-cwinrt-and-ccx"></a>C++/WinRT와 C++/CX 간의 Interop
 
-이 항목을 읽기 전에 [C++/CX에서 C++/WinRT로 이동](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-cx) 항목의 정보가 필요합니다. 이 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트를 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)로 이식하기 위한 두 가지 주요 전략 옵션을 소개합니다.
+이 항목을 읽기 전에 [C++/CX에서 C++/WinRT로 이동](./move-to-winrt-from-cx.md) 항목의 정보가 필요합니다. 이 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트를 [C++/WinRT](./intro-to-using-cpp-with-winrt.md)로 이식하기 위한 두 가지 주요 전략 옵션을 소개합니다.
 
 - 전체 프로젝트를 한 번에 이식합니다. 너무 크지 않은 프로젝트를 위한 가장 간단한 옵션입니다. Windows 런타임 구성 요소 프로젝트가 있으면 이 전략이 유일한 옵션입니다.
 - 프로젝트를 점진적으로 이식합니다(코드베이스의 크기 또는 복잡성으로 인해 필요할 수 있음). 하지만 이 전략은 C++/CX와 C++/WinRT 코드가 동일한 프로젝트에 한동안 나란히 존재하는 이식 프로세스를 따라야 합니다. XAML 프로젝트의 경우, 언제라도, XAML 페이지 유형이 모두 C++/WinRT 또는 모두 C++/CX 중 하나여야 합니다. 
@@ -23,7 +23,7 @@ ms.locfileid: "88502288"
 
 이러한 도우미 함수는 코드를 C++/CX에서 C++/WinRT로 점진적으로 이식할 때 매우 유용합니다. 또는 이식 여부에 관계없이 동일한 프로젝트에서 C++/WinRT 및 C++/CX 언어 프로젝션을 모두 사용하도록 선택하고 도우미 함수를 사용하여 둘 사이를 상호 운용할 수 있습니다.
 
-이 항목을 읽은 후 동일한 프로젝트에서 PPL 작업과 코루틴을 나란히 지원(예: 작업 체인에서 코루틴 호출)하는 방법을 보여주는 정보 및 코드 예제를 참고하려면 고급 항목 [비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx-async)을 참조하세요.
+이 항목을 읽은 후 동일한 프로젝트에서 PPL 작업과 코루틴을 나란히 지원(예: 작업 체인에서 코루틴 호출)하는 방법을 보여주는 정보 및 코드 예제를 참고하려면 고급 항목 [비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx-async.md)을 참조하세요.
 
 ## <a name="the-from_cx-and-to_cx-functions"></a>**from_cx** 및 **to_cx** 함수
 
@@ -80,7 +80,7 @@ T^ to_cx(winrt::Windows::Foundation::IUnknown const& from)
 
 ## <a name="taking-a-ccx-project-and-adding-cwinrt-support"></a>C++/CX 프로젝트를 가져와서 C++/WinRT 지원 추가
 
-이 섹션에서는 기존 C++/CX 프로젝트를 가져와서 C++/WinRT 지원을 추가한 다음, 이식 작업을 수행하기로 결정한 경우 수행할 작업을 설명합니다. 또한, [Visual Studio의 C++/WinRT 지원](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
+이 섹션에서는 기존 C++/CX 프로젝트를 가져와서 C++/WinRT 지원을 추가한 다음, 이식 작업을 수행하기로 결정한 경우 수행할 작업을 설명합니다. 또한, [Visual Studio의 C++/WinRT 지원](./intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
 
 C++/CX 프로젝트에서 C++/CX와 C++/WinRT를 혼합하려면&mdash;프로젝트에서 **from_cx** 및 **to_cx** 도우미 함수 사용 포함&mdash; 프로젝트에 C++/WinRT 지원을 수동으로 추가해야 합니다.
 
@@ -143,7 +143,7 @@ C++/CX 프로젝트에서 C++/CX와 C++/WinRT를 혼합하려면&mdash;프로젝
 
 C++/WinRT 프로젝트에서 C++/WinRT와 C++/CX를 혼합하려면&mdash;프로젝트에서 **from_cx** 및 **to_cx** 도우미 함수 사용 포함&mdash; 프로젝트에 C++/CX 지원을 수동으로 추가해야 합니다.
 
-- C++/WinRT 프로젝트 템플릿 중 하나를 사용하여 Visual Studio에서 새 C++/WinRT 프로젝트를 만듭니다([Visual Studio의 C++/WinRT 지원](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조).
+- C++/WinRT 프로젝트 템플릿 중 하나를 사용하여 Visual Studio에서 새 C++/WinRT 프로젝트를 만듭니다([Visual Studio의 C++/WinRT 지원](./intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조).
 - C++/CX에 대한 프로젝트 지원을 켭니다. 프로젝트 속성에서 **C/C++** \> **일반** \> **Windows 런타임 확장 사용** \> **예(/ZW)** 를 선택합니다.
 
 ### <a name="an-example-cwinrt-project-showing-the-two-helper-functions-in-use"></a>사용 중인 두 개의 도우미 함수를 보여 주는 예제 C++/WinRT 프로젝트
@@ -344,5 +344,5 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
-* [C++/CX에서 C++/WinRT로 이동](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-cx)
-* [비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx-async)
+* [C++/CX에서 C++/WinRT로 이동](./move-to-winrt-from-cx.md)
+* [비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx-async.md)

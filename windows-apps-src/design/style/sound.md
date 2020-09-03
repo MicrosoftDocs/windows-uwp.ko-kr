@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ed1344b5ee49244a6c1afcbb873b54fcc28624f
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 6c479a47a53c5f52bab1febf490957355264bfc4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684881"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159879"
 ---
 # <a name="sound"></a>소리
 
@@ -45,7 +45,7 @@ ms.locfileid: "75684881"
 
 UWP는 단순히 "스위치를 플리핑"하여 전체 앱에서 몰입형 오디오 환경을 얻을 수 있는, 쉽게 액세스할 수 있는 사운드 시스템을 제공합니다.
 
-[**ElementSoundPlayer**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.elementsoundplayer)는 XAML 내의 통합 사운드 시스템이며, 켤 경우 모든 기본 컨트롤이 자동으로 소리를 재생합니다.
+[**ElementSoundPlayer**](/uwp/api/windows.ui.xaml.elementsoundplayer)는 XAML 내의 통합 사운드 시스템이며, 켤 경우 모든 기본 컨트롤이 자동으로 소리를 재생합니다.
 ```C#
 ElementSoundPlayer.State = ElementSoundPlayerState.On;
 ```
@@ -64,12 +64,12 @@ ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.Off
 - **꺼짐**: 소리가 켜져 있더라도 공간 오디오를 항상 끕니다.
 - **켜짐**: 공간 오디오를 항상 재생합니다.
 
-공간 오디오 및 XAML 처리 방법에 대한 자세한 내용은 [AudioGraph - 공간 오디오](/windows/uwp/audio-video-camera/audio-graphs#spatial-audio)를 참조하세요.
+공간 오디오 및 XAML 처리 방법에 대한 자세한 내용은 [AudioGraph - 공간 오디오](../../audio-video-camera/audio-graphs.md#spatial-audio)를 참조하세요.
 
 ### <a name="sound-for-tv-and-xbox"></a>TV 및 Xbox의 소리
 
 소리는 10피트 환경의 주요 부분이며, **ElementSoundPlayer**의 상태는 기본적으로 **자동**이므로 Xbox에서 앱을 실행하는 경우에만 소리가 재생됩니다.
-Xbox 및 TV용 디자인 방식에 대한 자세한 내용은 [Xbox 및 TV용 디자인](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN)을 참조하세요.
+Xbox 및 TV용 디자인 방식에 대한 자세한 내용은 [Xbox 및 TV용 디자인](../devices/designing-for-tv.md)을 참조하세요.
 
 ## <a name="sound-volume-override"></a>소리 볼륨 재정의
 
@@ -173,5 +173,5 @@ ElementSoundPlayer.Play(ElementSoundKind.Focus);
 
 ## <a name="related-articles"></a>관련된 문서
 
-* [Xbox 및 TV용 디자인](/windows/uwp/design/devices/designing-for-tv)
+* [Xbox 및 TV용 디자인](../devices/designing-for-tv.md)
 * [ElementSoundPlayer 클래스 설명서](/uwp/api/windows.ui.xaml.elementsoundplayer)

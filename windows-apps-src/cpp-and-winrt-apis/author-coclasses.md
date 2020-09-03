@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, COM, 구성 요소
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5ff3677c3624974759d1f6ff21d6e53cf9d33144
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 83ea8b5cea95f034b5cdfe4f1750a0ffd0166f49
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71344514"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154577"
 ---
 # <a name="author-com-components-with-cwinrt"></a>C++/WinRT를 통한 COM 구성 요소 작성
 
-[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)는 Windows 런타임 클래스를 작성하는 데 도움이 되는 것처럼 클래식 COM(구성 요소 개체 모델) 구성 요소를 작성하는 데도 도움이 됩니다. 이 항목에서는 다음 방법을 보여 줍니다.
+[C++/WinRT](./intro-to-using-cpp-with-winrt.md)는 Windows 런타임 클래스를 작성하는 데 도움이 되는 것처럼 클래식 COM(구성 요소 개체 모델) 구성 요소를 작성하는 데도 도움이 됩니다. 이 항목에서는 다음 방법을 보여 줍니다.
 
 ## <a name="how-cwinrt-behaves-by-default-with-respect-to-com-interfaces"></a>기본적으로 COM 인터페이스와 관련하여 C++/WinRT가 동작하는 방법
 
@@ -118,7 +118,7 @@ int main()
 
 이 항목의 나머지 부분에서는 C++/WinRT를 사용하여 기본 coclass(COM 구성 요소 또는 COM 클래스) 및 클래스 팩터리를 구현하는 최소한의 콘솔 애플리케이션 프로젝트를 만드는 방법을 안내합니다. 예제 애플리케이션은 콜백 단추를 사용하여 알림을 전달하는 방법을 보여 주며, **INotificationActivationCallback** COM 인터페이스를 구현하는 coclass를 사용하면 사용자가 알림에서 해당 단추를 클릭할 때 애플리케이션을 시작하고 콜백할 수 있습니다.
 
-알림 기능 영역에 대한 더 많은 배경은 [로컬 알림 보내기](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)에서 확인할 수 있습니다. 문서의 해당 섹션에 있는 코드 예제는 C++/WinRT를 사용하지 않으므로 이 항목에 표시된 코드를 사용하는 것이 좋습니다.
+알림 기능 영역에 대한 더 많은 배경은 [로컬 알림 보내기](../design/shell/tiles-and-notifications/send-local-toast.md)에서 확인할 수 있습니다. 문서의 해당 섹션에 있는 코드 예제는 C++/WinRT를 사용하지 않으므로 이 항목에 표시된 코드를 사용하는 것이 좋습니다.
 
 ## <a name="create-a-windows-console-application-project-toastandcallback"></a>Windows 콘솔 애플리케이션 프로젝트(ToastAndCallback) 만들기
 
@@ -220,7 +220,7 @@ struct callback_factory : implements<callback_factory, IClassFactory>
 };
 ```
 
-위의 coclass 구현은 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class)에 설명된 동일한 패턴을 따릅니다. 따라서 동일한 기술을 사용하여 Windows 런타임 인터페이스뿐만 아니라 COM 인터페이스도 구현할 수 있습니다. COM 구성 요소 및 Windows 런타임 클래스는 인터페이스를 통해 해당 기능을 공개합니다. 모든 COM 인터페이스는 기본적으로 [**IUnknown 인터페이스**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown) 인터페이스에서 파생됩니다. Windows 런타임은 COM을 기반으로 합니다. 한 가지 예외는 Windows 런타임 인터페이스는 기본적으로 [**IInspectable 인터페이스**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)에서 파생되고 **IInspectable**은 **IUnknown**에서 파생된다는 것입니다.
+위의 coclass 구현은 [C++/WinRT를 통한 API 작성](./author-apis.md#if-youre-not-authoring-a-runtime-class)에 설명된 동일한 패턴을 따릅니다. 따라서 동일한 기술을 사용하여 Windows 런타임 인터페이스뿐만 아니라 COM 인터페이스도 구현할 수 있습니다. COM 구성 요소 및 Windows 런타임 클래스는 인터페이스를 통해 해당 기능을 공개합니다. 모든 COM 인터페이스는 기본적으로 [**IUnknown 인터페이스**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) 인터페이스에서 파생됩니다. Windows 런타임은 COM을 기반으로 합니다. 한 가지 예외는 Windows 런타임 인터페이스는 기본적으로 [**IInspectable 인터페이스**](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)에서 파생되고 **IInspectable**은 **IUnknown**에서 파생된다는 것입니다.
 
 위 코드의 coclass에서는 사용자가 알림에서 콜백 단추를 클릭할 때 호출되는 함수인 **INotificationActivationCallback::Activate** 메서드를 구현합니다. 그러나 이 함수를 호출하기 전에 **IClassFactory::CreateInstance** 함수를 사용하여 coclass의 인스턴스를 만들어야 합니다.
 
@@ -481,7 +481,7 @@ void LaunchedFromNotification(HANDLE consoleHandle, INPUT_RECORD & buffer, DWORD
 
 Microsoft Visual Studio에서 새 프로젝트를 만들어 In-process COM 서버를 만드는 작업을 시작할 수 있습니다. **Visual C++**  > **Windows 데스크톱** > **DLL(동적 연결 라이브러리)** 프로젝트를 만듭니다.
 
-새 프로젝트에 C++/WinRT 지원을 추가하려면 [Windows 데스크톱 애플리케이션 프로젝트를 수정하여 C++/WinRT 지원 추가](/windows/uwp/cpp-and-winrt-apis/get-started#modify-a-windows-desktop-application-project-to-add-cwinrt-support)에 설명된 단계를 따릅니다.
+새 프로젝트에 C++/WinRT 지원을 추가하려면 [Windows 데스크톱 애플리케이션 프로젝트를 수정하여 C++/WinRT 지원 추가](./get-started.md#modify-a-windows-desktop-application-project-to-add-cwinrt-support)에 설명된 단계를 따릅니다.
 
 ### <a name="implement-the-coclass-class-factory-and-in-proc-server-exports"></a>coclass, 클래스 팩터리 및 in-proc 서버 내보내기 구현
 
@@ -586,10 +586,10 @@ struct MyCoclass : winrt::implements<MyCoclass, IMyComInterface, winrt::Windows:
 
 ## <a name="important-apis"></a>중요 API
 * [IInspectable 인터페이스](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)
-* [IUnknown 인터페이스](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)
+* [IUnknown 인터페이스](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 * [winrt::implements 구조체 템플릿](/uwp/cpp-ref-for-winrt/implements)
 
 ## <a name="related-topics"></a>관련 항목
-* [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)
+* [C++/WinRT를 통한 API 작성](./author-apis.md)
 * [C++/WinRT를 통한 COM 구성 요소 사용](consume-com.md)
-* [로컬 알림 메시지 보내기](/windows/uwp/design/shell/tiles-and-notifications/send-local-toast)
+* [로컬 알림 메시지 보내기](../design/shell/tiles-and-notifications/send-local-toast.md)

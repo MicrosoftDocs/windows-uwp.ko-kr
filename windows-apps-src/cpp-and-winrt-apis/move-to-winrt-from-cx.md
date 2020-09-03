@@ -1,45 +1,45 @@
 ---
-description: 이 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트의 소스 코드를 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 해당하는 소스 코드로 포팅하는 데 관련된 기술 세부 정보에 대해 설명합니다.
+description: 이 항목에서는 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트의 소스 코드를 [C++/WinRT](./intro-to-using-cpp-with-winrt.md)의 해당하는 소스 코드로 포팅하는 데 관련된 기술 세부 정보에 대해 설명합니다.
 title: C++/CX에서 C++/WinRT로 이동
 ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: fd0fb73000472390111632d0800a5ad4653f2258
-ms.sourcegitcommit: a9f44bbb23f0bc3ceade3af7781d012b9d6e5c9a
+ms.openlocfilehash: 94ffa80700cea640d63f63344991144a2ac00ab6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180808"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157317"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>C++/CX에서 C++/WinRT로 이동
 
-이 항목은 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트의 소스 코드를 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 해당 항목으로 이식하는 방법을 설명하는 시리즈의 첫 번째 항목입니다.
+이 항목은 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 프로젝트의 소스 코드를 [C++/WinRT](./intro-to-using-cpp-with-winrt.md)의 해당 항목으로 이식하는 방법을 설명하는 시리즈의 첫 번째 항목입니다.
 
 프로젝트가 [Windows 런타임 C++ 템플릿 라이브러리(WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 형식도 사용하는 경우 [WRL에서 C++/WinRT로 이동](move-to-winrt-from-wrl.md)을 참조하세요.
 
 ## <a name="strategies-for-porting"></a>이식 전략
 
-C++/CX에서 C++/WinRT로 이식하는 작업은 [PPL(병렬 패턴 라이브러리)](/cpp/parallel/concrt/parallel-patterns-library-ppl) 작업에서 코루틴으로 이동하는 한 가지를 제외하고 일반적으로 간단합니다. 모델이 서로 다릅니다. PPL 작업에서 코루틴으로 자연스러운 일대일 매핑은 없으며 모든 경우에 작동하는 코드를 기계적으로 이식하는 간단한 방법도 없습니다. 이식의 특정 측면 및 두 모델 간의 상호 운용성 옵션에 대한 도움말은 [비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx-async)을 참조하세요.
+C++/CX에서 C++/WinRT로 이식하는 작업은 [PPL(병렬 패턴 라이브러리)](/cpp/parallel/concrt/parallel-patterns-library-ppl) 작업에서 코루틴으로 이동하는 한 가지를 제외하고 일반적으로 간단합니다. 모델이 서로 다릅니다. PPL 작업에서 코루틴으로 자연스러운 일대일 매핑은 없으며 모든 경우에 작동하는 코드를 기계적으로 이식하는 간단한 방법도 없습니다. 이식의 특정 측면 및 두 모델 간의 상호 운용성 옵션에 대한 도움말은 [비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx-async.md)을 참조하세요.
 
 개발 팀이 비동기식 코드 이식의 어려움을 극복하고 나면 이식 작업의 나머지는 대체로 기계적인 부분이라고 보고하는 경우가 많습니다.
 
 ### <a name="porting-in-one-pass"></a>한 번에 이식
 
-전체 프로젝트를 한 번에 이식할 수 있는 위치에 있는 경우 필요한 정보에 대해서는 이 항목만 필요합니다. (이 다음에 나오는 *interop* 항목은 필요하지 않습니다.) C++/WinRT 프로젝트 템플릿 중 하나를 사용하여 Visual Studio에서 새 프로젝트를 생성하여 시작하는 것이 좋습니다([Visual Studio의 C++/WinRT 지원](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 그런 다음, 소스 코드 파일을 새 프로젝트로 이동하고 모든 C++/CX 소스 코드를 C++/WinRT로 이식합니다.
+전체 프로젝트를 한 번에 이식할 수 있는 위치에 있는 경우 필요한 정보에 대해서는 이 항목만 필요합니다. (이 다음에 나오는 *interop* 항목은 필요하지 않습니다.) C++/WinRT 프로젝트 템플릿 중 하나를 사용하여 Visual Studio에서 새 프로젝트를 생성하여 시작하는 것이 좋습니다([Visual Studio의 C++/WinRT 지원](./intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 그런 다음, 소스 코드 파일을 새 프로젝트로 이동하고 모든 C++/CX 소스 코드를 C++/WinRT로 이식합니다.
 
-아니면, 기존 C++/CX 프로젝트에서 이식 작업을 수행하려는 경우에는 기존 프로젝트에 C++/WinRT 지원을 추가해야 합니다. 그렇게 하기 위해 수행하는 단계는 [C++/CX 프로젝트를 가져와서 C++/WinRT 지원 추가](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx#taking-a-ccx-project-and-adding-cwinrt-support)에 설명되어 있습니다. 이식이 완료되면 순수 C++/CX 프로젝트가 순수 C++/WinRT 프로젝트로 전환됩니다.
+아니면, 기존 C++/CX 프로젝트에서 이식 작업을 수행하려는 경우에는 기존 프로젝트에 C++/WinRT 지원을 추가해야 합니다. 그렇게 하기 위해 수행하는 단계는 [C++/CX 프로젝트를 가져와서 C++/WinRT 지원 추가](./interop-winrt-cx.md#taking-a-ccx-project-and-adding-cwinrt-support)에 설명되어 있습니다. 이식이 완료되면 순수 C++/CX 프로젝트가 순수 C++/WinRT 프로젝트로 전환됩니다.
 
 > [!NOTE]
 > Windows 런타임 구성 요소 프로젝트가 있으면 한 번에 이식이 유일한 옵션입니다. C++로 작성된 Windows 런타임 구성 요소 프로젝트에는 모든 C++/CX 소스 코드 또는 모든 C++/WinRT 소스 코드가 포함되어야 합니다. 이 프로젝트 유형에서는 공존할 수 없습니다.
 
 ### <a name="porting-a-project-gradually"></a>점진적으로 프로젝트 이식
 
-Windows 런타임 구성 요소 프로젝트를 제외하고, 이전 섹션에서 언급했듯이, 코드베이스의 크기나 복잡성으로 인해 프로젝트를 점진적으로 이식해야 하는 경우에는 C++/CX와 C++/WinRT 코드가 동일한 프로젝트에 한동안 나란히 존재하는 이식 프로세스가 필요합니다. 이 항목을 참조하는 것 외에도 [C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx) 및 [비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx-async)을 참조하세요. 이러한 항목은 두 언어 프로젝션 간의 상호 운용 방법을 보여주는 코드 예제와 정보를 제공합니다.
+Windows 런타임 구성 요소 프로젝트를 제외하고, 이전 섹션에서 언급했듯이, 코드베이스의 크기나 복잡성으로 인해 프로젝트를 점진적으로 이식해야 하는 경우에는 C++/CX와 C++/WinRT 코드가 동일한 프로젝트에 한동안 나란히 존재하는 이식 프로세스가 필요합니다. 이 항목을 참조하는 것 외에도 [C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx.md) 및 [비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx-async.md)을 참조하세요. 이러한 항목은 두 언어 프로젝션 간의 상호 운용 방법을 보여주는 코드 예제와 정보를 제공합니다.
 
-점진적 이식 프로세스에 맞게 프로젝트를 준비하는 한 가지 옵션은 C++/CX 프로젝트에 C++/WinRT 지원을 추가하는 것입니다. 그렇게 하기 위해 수행하는 단계는 [C++/CX 프로젝트를 가져와서 C++/WinRT 지원 추가](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx#taking-a-ccx-project-and-adding-cwinrt-support)에 설명되어 있습니다. 이 단계를 수행한 다음, 점진적으로 이식할 수 있습니다.
+점진적 이식 프로세스에 맞게 프로젝트를 준비하는 한 가지 옵션은 C++/CX 프로젝트에 C++/WinRT 지원을 추가하는 것입니다. 그렇게 하기 위해 수행하는 단계는 [C++/CX 프로젝트를 가져와서 C++/WinRT 지원 추가](./interop-winrt-cx.md#taking-a-ccx-project-and-adding-cwinrt-support)에 설명되어 있습니다. 이 단계를 수행한 다음, 점진적으로 이식할 수 있습니다.
 
-또 다른 옵션은 C++/WinRT 프로젝트 템플릿 중 하나를 사용하여 Visual Studio에서 새 프로젝트를 만드는 것입니다([Visual Studio의 C++/WinRT 지원](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 그런 다음, 프로젝트에 C++/CX 지원을 추가합니다. 이렇게 하기 위해 수행하는 단계는 [C++/WinRT 프로젝트를 가져와서 C++/CX 지원 추가](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx#taking-a-cwinrt-project-and-adding-cx-support)에 설명되어 있습니다. 그런 다음, 소스 코드를 여기로 옮기고 C++/CX 소스 코드의 일부를 C++/WinRT로 이식할 수 있습니다.
+또 다른 옵션은 C++/WinRT 프로젝트 템플릿 중 하나를 사용하여 Visual Studio에서 새 프로젝트를 만드는 것입니다([Visual Studio의 C++/WinRT 지원](./intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 그런 다음, 프로젝트에 C++/CX 지원을 추가합니다. 이렇게 하기 위해 수행하는 단계는 [C++/WinRT 프로젝트를 가져와서 C++/CX 지원 추가](./interop-winrt-cx.md#taking-a-cwinrt-project-and-adding-cx-support)에 설명되어 있습니다. 그런 다음, 소스 코드를 여기로 옮기고 C++/CX 소스 코드의 일부를 C++/WinRT로 이식할 수 있습니다.
 
 두 경우 모두 C++/WinRT 코드와 아직 이식하지 않은 C++/CX 코드 간에 상호 운용(양 방향)됩니다.
 
@@ -57,17 +57,17 @@ Windows 런타임 구성 요소 프로젝트를 제외하고, 이전 섹션에�
 
 - 새 C++/CX WRC 프로젝트를 만들고, C++/CX 코드를 이 프로젝트로 최대한 많이 옮긴 다음, XAML 프로젝트를 C++/WinRT로 변경합니다.
 - 또는 새 C++/WinRT WRC 프로젝트를 만들고, XAML 프로젝트를 C++/CX로 두고, C++/CX를 C++/WinRT로 이식을 시작하여 결과 코드를 XAML 프로젝트에서 구성 요소 프로젝트로 옮길 수 있습니다.
-- 또한 동일한 솔루션 내에 C++/WinRT 구성 요소 프로젝트와 함께 C++/CX 구성 요소 프로젝트를 포함하고, 애플리케이션 프로젝트에서 두 프로젝트를 모두 참조하고, 점진적으로 서로 이식할 수 있습니다. 이 경우도, 동일한 프로젝트에서 두 언어 프로젝션을 사용하는 방법에 대한 자세한 내용은 [C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx)을 참조하세요.
+- 또한 동일한 솔루션 내에 C++/WinRT 구성 요소 프로젝트와 함께 C++/CX 구성 요소 프로젝트를 포함하고, 애플리케이션 프로젝트에서 두 프로젝트를 모두 참조하고, 점진적으로 서로 이식할 수 있습니다. 이 경우도, 동일한 프로젝트에서 두 언어 프로젝션을 사용하는 방법에 대한 자세한 내용은 [C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx.md)을 참조하세요.
 
 ## <a name="first-steps-in-porting-a-ccx-project-to-cwinrt"></a>C++/CX 프로젝트를 C++/WinRT로 이식하는 첫 번째 단계
 
 이식 전략이 무엇이든(한 번에 이식 또는 점진적으로 이식), 첫 번째 단계는 이식에 맞게 프로젝트를 준비하는 것입니다. 다음은 시작하는 데 사용할 프로젝트 종류에 대한 [이식 전략](#strategies-for-porting) 및 설정 방법에 대해 설명한 내용을 요약한 것입니다.
 
 - **한 번에 이식**. C++/WinRT 프로젝트 템플릿 중 하나를 사용하여 Visual Studio에서 새 프로젝트를 만듭니다. C++/CX 프로젝트의 파일을 새 프로젝트로 옮기고 C++/CX 소스 코드를 이식합니다.
-- **점진적으로 비XAML 프로젝트 이식**. C++/WinRT 지원을 C++/CX 프로젝트에 추가하고([C++/CX 프로젝트를 가져와서 C++/WinRT 지원 추가](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx#taking-a-ccx-project-and-adding-cwinrt-support) 참조) 점진적으로 이식하도록 선택할 수 있습니다. 또는 새 C++/WinRT 프로젝트를 만들고 여기에 C++/CX 지원을 추가([C++/WinRT 프로젝트를 가져와서 C++/CX 지원 추가](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx#taking-a-cwinrt-project-and-adding-cx-support) 참조)한 다음, 파일을 옮기고 점진적으로 이식하는 방법을 선택할 수 있습니다.
+- **점진적으로 비XAML 프로젝트 이식**. C++/WinRT 지원을 C++/CX 프로젝트에 추가하고([C++/CX 프로젝트를 가져와서 C++/WinRT 지원 추가](./interop-winrt-cx.md#taking-a-ccx-project-and-adding-cwinrt-support) 참조) 점진적으로 이식하도록 선택할 수 있습니다. 또는 새 C++/WinRT 프로젝트를 만들고 여기에 C++/CX 지원을 추가([C++/WinRT 프로젝트를 가져와서 C++/CX 지원 추가](./interop-winrt-cx.md#taking-a-cwinrt-project-and-adding-cx-support) 참조)한 다음, 파일을 옮기고 점진적으로 이식하는 방법을 선택할 수 있습니다.
 - **점진적으로 XAML 프로젝트 이식**. 새 C++/WinRT 프로젝트를 만들고, 파일을 옮기고, 점진적으로 이식합니다. 언제든지, XAML 페이지 형식은 모두 C++/WinRT 또는 모두 C++/CX 중 하나여야 합니다. 
 
-이 항목의 나머지 부분은 어떤 이식 전략을 선택하든 적용됩니다. C++/CX에서 C++/WinRT로 소스 코드를 이식하는 것과 관련된 기술 세부 정보 카탈로그를 포함합니다. 점진적으로 이식하는 경우에는 [C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx) 및 [비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx-async)도 참조하는 것이 좋습니다.
+이 항목의 나머지 부분은 어떤 이식 전략을 선택하든 적용됩니다. C++/CX에서 C++/WinRT로 소스 코드를 이식하는 것과 관련된 기술 세부 정보 카탈로그를 포함합니다. 점진적으로 이식하는 경우에는 [C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx.md) 및 [비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx-async.md)도 참조하는 것이 좋습니다.
 
 ## <a name="file-naming-conventions"></a>파일 명명 규칙
 
@@ -80,9 +80,9 @@ Windows 런타임 구성 요소 프로젝트를 제외하고, 이전 섹션에�
 
 C++/WinRT는 `*.h` 및 `*.cpp` 파일 이름에서 `.xaml`을 제거합니다.
 
-C++/WinRT는 추가 개발자 파일인 **Midl 파일(.idl)** 을 추가합니다. C++/CX는 이 파일을 내부적으로 자동 생성하여 모든 public 및 protected 멤버를 추가합니다. C++/WinRT에서는 파일을 직접 추가하고 작성합니다. IDL 작성에 대한 자세한 내용, 코드 예제 및 연습은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](/windows/uwp/cpp-and-winrt-apis/binding-property)을 참조하세요.
+C++/WinRT는 추가 개발자 파일인 **Midl 파일(.idl)** 을 추가합니다. C++/CX는 이 파일을 내부적으로 자동 생성하여 모든 public 및 protected 멤버를 추가합니다. C++/WinRT에서는 파일을 직접 추가하고 작성합니다. IDL 작성에 대한 자세한 내용, 코드 예제 및 연습은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](./binding-property.md)을 참조하세요.
 
-또한 [런타임 클래스를 Midl 파일(.idl)로 팩터링](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl)도 참조하세요.
+또한 [런타임 클래스를 Midl 파일(.idl)로 팩터링](./author-apis.md#factoring-runtime-classes-into-midl-files-idl)도 참조하세요.
 
 ### <a name="runtime-classes"></a>런타임 클래스
 
@@ -251,7 +251,7 @@ record.UserState(newValue);
 
 ## <a name="creating-an-instance-of-a-class"></a>클래스 인스턴스 만들기
 
-일반적으로 hat(\^) 참조로 알려진 이에 대한 핸들을 통해 C++/CX 개체를 작업합니다. `ref new` 키워드를 통해 새로운 개체를 만들면 [**RoActivateInstance**](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roactivateinstance)를 호출하여 런타임 클래스의 새로운 인스턴스를 활성화합니다.
+일반적으로 hat(\^) 참조로 알려진 이에 대한 핸들을 통해 C++/CX 개체를 작업합니다. `ref new` 키워드를 통해 새로운 개체를 만들면 [**RoActivateInstance**](/windows/desktop/api/roapi/nf-roapi-roactivateinstance)를 호출하여 런타임 클래스의 새로운 인스턴스를 활성화합니다.
 
 ```cppcx
 using namespace Windows::Storage::Streams;
@@ -350,7 +350,7 @@ boxes.resize(10, nullptr); // 10 empty references.
 
 ## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>기본 런타임 클래스에서 파생된 항목 클래스로 변환
 
-파생된 형식의 개체를 참조하는 기본에 대한 참조를 포함하는 것이 일반적입니다. C++/CX에서는 `dynamic_cast`를 사용하여 기본에 대한 참조를 파생에 대한 참조로 ‘캐스팅’합니다. `dynamic_cast`는 실제로 [**QueryInterface**](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))에 대한 숨겨진 호출입니다. 다음은 종속성 속성 변경 이벤트를 처리하며 **DependencyObject**에서 다시 종속성 속성을 소유하는 실제 형식으로 캐스팅하려는 일반적인 예제입니다.
+파생된 형식의 개체를 참조하는 기본에 대한 참조를 포함하는 것이 일반적입니다. C++/CX에서는 `dynamic_cast`를 사용하여 기본에 대한 참조를 파생에 대한 참조로 ‘캐스팅’합니다. `dynamic_cast`는 실제로 [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))에 대한 숨겨진 호출입니다. 다음은 종속성 속성 변경 이벤트를 처리하며 **DependencyObject**에서 다시 종속성 속성을 소유하는 실제 형식으로 캐스팅하려는 일반적인 예제입니다.
 
 ```cppcx
 void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject^ d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs^ e)
@@ -461,7 +461,7 @@ myButton().Click(token);
 
 ## <a name="boxing-and-unboxing"></a>boxing 및 unboxing
 
-C++/CX는 자동으로 스칼라를 개체에 boxing합니다. C++/WinRT에서는 [**winrt::box_value**](/uwp/cpp-ref-for-winrt/box-value) 함수를 명시적으로 호출해야 합니다. 두 언어에서 모두 명시적으로 unboxing해야 합니다. [C++/WinRT를 사용하여 boxing 및 unboxing](/windows/uwp/cpp-and-winrt-apis/boxing)을 참조하세요.
+C++/CX는 자동으로 스칼라를 개체에 boxing합니다. C++/WinRT에서는 [**winrt::box_value**](/uwp/cpp-ref-for-winrt/box-value) 함수를 명시적으로 호출해야 합니다. 두 언어에서 모두 명시적으로 unboxing해야 합니다. [C++/WinRT를 사용하여 boxing 및 unboxing](./boxing.md)을 참조하세요.
 
 다음 표에서는 이러한 정의를 사용합니다.
 
@@ -518,15 +518,15 @@ C++/CX는 Windows 런타임 문자열을 참조 형식으로 나타내는 반면
 
 PPL(병렬 패턴 라이브러리)(예: [**concurrency::task**](/cpp/parallel/concrt/reference/task-class))이 C++/CX hat 참조를 지원하도록 업데이트되었습니다.
 
-C++/WinRT의 경우 코루틴과 `co_await`를 대신 사용해야 합니다. 자세한 내용과 코드 예제는 [C++/WinRT로 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)을 참조하세요.
+C++/WinRT의 경우 코루틴과 `co_await`를 대신 사용해야 합니다. 자세한 내용과 코드 예제는 [C++/WinRT로 동시성 및 비동기 작업](./concurrency.md)을 참조하세요.
 
 ## <a name="consuming-objects-from-xaml-markup"></a>XAML 태그에서 개체 사용
 
-C++/CX 프로젝트에서는 XAML 태그에서 프라이빗 멤버 및 명명된 요소를 사용할 수 있습니다. 그러나 C++/WinRT에서 XAML [ **{x:Bind} 태그 확장**](/windows/uwp/xaml-platform/x-bind-markup-extension)을 통해 사용되는 모든 엔터티는 IDL에 공개적으로 노출되어야 합니다.
+C++/CX 프로젝트에서는 XAML 태그에서 프라이빗 멤버 및 명명된 요소를 사용할 수 있습니다. 그러나 C++/WinRT에서 XAML [ **{x:Bind} 태그 확장**](../xaml-platform/x-bind-markup-extension.md)을 통해 사용되는 모든 엔터티는 IDL에 공개적으로 노출되어야 합니다.
 
 또한 부울에 바인딩하면 C++/CX에서 `true` 또는 `false`가 표시되지만, C++/WinRT에서는 **Windows.Foundation.IReference`1\<Boolean\>** 이 표시됩니다.
 
-자세한 내용과 코드 예제는 [태그에서 개체 사용](/windows/uwp/cpp-and-winrt-apis/binding-property#consuming-objects-from-xaml-markup)을 참조하세요.
+자세한 내용과 코드 예제는 [태그에서 개체 사용](./binding-property.md#consuming-objects-from-xaml-markup)을 참조하세요.
 
 ## <a name="mapping-ccx-platform-types-to-cwinrt-types"></a>C++/WinRT 형식에 C++/CX **Platform** 형식 매핑
 
@@ -561,7 +561,7 @@ winrt::agile_ref<Windows::UI::Core::CoreWindow> m_window;
 
 C++/CX에서 배열을 사용해야 하는 경우 C++/WinRT를 사용하면 연속 컨테이너를 사용할 수 있습니다. **std:vector**를 선택하는 것이 적합한 이유에 대해서는 [기본 생성자가 컬렉션에 미치는 영향](#how-the-default-constructor-affects-collections)을 참조하세요.
 
-따라서 C++/CX에서 **Platform::Array\^** 를 사용할 때마다 이식 옵션에는 이니셜라이저 목록, **std::array** 또는 **std::vector**를 사용하는 것이 포함됩니다. 자세한 내용과 코드 예제는 [표준 이니셜라이저 목록](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-initializer-lists) 및 [표준 배열 및 벡터](/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types#standard-arrays-and-vectors)를 참조하세요.
+따라서 C++/CX에서 **Platform::Array\^** 를 사용할 때마다 이식 옵션에는 이니셜라이저 목록, **std::array** 또는 **std::vector**를 사용하는 것이 포함됩니다. 자세한 내용과 코드 예제는 [표준 이니셜라이저 목록](./std-cpp-data-types.md#standard-initializer-lists) 및 [표준 배열 및 벡터](./std-cpp-data-types.md#standard-arrays-and-vectors)를 참조하세요.
 
 ### <a name="port-platformexception-to-winrthresult_error"></a>**Platform::Exception\^** 을 **winrt::hresult_error**로 이식
 
@@ -625,7 +625,7 @@ winrt::Windows::Foundation::IInspectable var{ nullptr };
 
 **Platform::String\^** 은 Windows 런타임 HSTRING ABI 형식에 해당합니다. C++/WinRT의 해당 항목은 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)입니다. 그러나 C++/WinRT에서는 **std::wstring** 같은 C++ 표준 라이브러리 와이드 문자열 형식 및/또는 와이드 문자열 리터럴을 사용해 Windows 런타임 API를 호출할 수 있습니다. 자세한 내용과 코드 예제는 [C++/WinRT의 문자열 처리](strings.md)를 참조하세요.
 
-C++/CX에서 [**Platform::String::Data**](https://docs.microsoft.com/cpp/cppcx/platform-string-class?view=vs-2019#data) 속성에 액세스하여 문자열을 C 스타일 **const wchar_t\*** 배열로 검색할 수 있습니다(예를 들면 이를 **std::wcout**에 전달).
+C++/CX에서 [**Platform::String::Data**](/cpp/cppcx/platform-string-class?view=vs-2019#data) 속성에 액세스하여 문자열을 C 스타일 **const wchar_t\*** 배열로 검색할 수 있습니다(예를 들면 이를 **std::wcout**에 전달).
 
 ```cppcx
 auto var{ titleRecord->TitleName->Data() };
@@ -746,12 +746,12 @@ C++/CX 및 C++/WinRT는 문자열 작성을 위해 표준 **std::wstringstream**
 ## <a name="related-topics"></a>관련 항목
 
 * [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)
-* [C++/WinRT의 이벤트 작성](/windows/uwp/cpp-and-winrt-apis/author-events)
-* [C++/WinRT를 통한 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)
-* [C++/WinRT를 통한 API 사용](/windows/uwp/cpp-and-winrt-apis/consume-apis)
-* [C++/WinRT의 대리자를 사용한 이벤트 처리](/windows/uwp/cpp-and-winrt-apis/handle-events)
-* [C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx)
-* [비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성](/windows/uwp/cpp-and-winrt-apis/interop-winrt-cx-async)
+* [C++/WinRT의 이벤트 작성](./author-events.md)
+* [C++/WinRT를 통한 동시성 및 비동기 작업](./concurrency.md)
+* [C++/WinRT를 통한 API 사용](./consume-apis.md)
+* [C++/WinRT의 대리자를 사용한 이벤트 처리](./handle-events.md)
+* [C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx.md)
+* [비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx-async.md)
 * [Microsoft 인터페이스 정의 언어 3.0 참조](/uwp/midl-3)
-* [WRL에서 C++/WinRT로 이동](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-wrl)
-* [C++/WinRT의 문자열 처리](/windows/uwp/cpp-and-winrt-apis/strings)
+* [WRL에서 C++/WinRT로 이동](./move-to-winrt-from-wrl.md)
+* [C++/WinRT의 문자열 처리](./strings.md)

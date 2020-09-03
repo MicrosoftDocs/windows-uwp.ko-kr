@@ -6,26 +6,26 @@ ms.date: 06/05/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a222037600ad90d63421ed2037e6706686688f71
-ms.sourcegitcommit: 9c2b21081158e712a856158d25dce76b3e213a9c
+ms.openlocfilehash: bb97e58e914da1982066d9cf150f5c8b18ef884a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88129760"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89155447"
 ---
 # <a name="httpclient"></a>HttpClient
 
 **중요 API**
 
--   [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient)
--   [**Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http)
--   [**Windows.Web.Http.HttpResponseMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpResponseMessage)
+-   [**HttpClient**](/uwp/api/Windows.Web.Http.HttpClient)
+-   [**Windows.Web.Http**](/uwp/api/Windows.Web.Http)
+-   [**Windows.Web.Http.HttpResponseMessage**](/uwp/api/Windows.Web.Http.HttpResponseMessage)
 
-[  **HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient)와 [**Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) 네임스페이스 API의 나머지를 사용하여 HTTP 2.0 및 HTTP 1.1 프로토콜을 통해 정보를 보내고 받습니다.
+[  **HttpClient**](/uwp/api/Windows.Web.Http.HttpClient)와 [**Windows.Web.Http**](/uwp/api/Windows.Web.Http) 네임스페이스 API의 나머지를 사용하여 HTTP 2.0 및 HTTP 1.1 프로토콜을 통해 정보를 보내고 받습니다.
 
 ## <a name="overview-of-httpclient-and-the-windowswebhttp-namespace"></a>HttpClient 및 Windows.Web.Http 네임스페이스 개요
 
-[  **Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) 네임스페이스와 관련 [**Windows.Web.Http.Headers**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.Headers) 및 [**Windows.Web.Http.Filters**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.Filters) 네임스페이스의 클래스는 HTTP 클라이언트 역할을 수행하여 기본 GET 요청을 수행하거나 아래에 나열된 고급 HTTP 기능을 구현하는 UWP(유니버설 Windows 플랫폼) 앱의 프로그래밍 인터페이스를 제공합니다.
+[  **Windows.Web.Http**](/uwp/api/Windows.Web.Http) 네임스페이스와 관련 [**Windows.Web.Http.Headers**](/uwp/api/Windows.Web.Http.Headers) 및 [**Windows.Web.Http.Filters**](/uwp/api/Windows.Web.Http.Filters) 네임스페이스의 클래스는 HTTP 클라이언트 역할을 수행하여 기본 GET 요청을 수행하거나 아래에 나열된 고급 HTTP 기능을 구현하는 UWP(유니버설 Windows 플랫폼) 앱의 프로그래밍 인터페이스를 제공합니다.
 
 -   일반적인 동사에 대한 메서드(**DELETE**, **GET**, **PUT** 및 **POST**) 이러한 각 요청은 비동기 작업으로 전송됩니다.
 
@@ -39,25 +39,25 @@ ms.locfileid: "88129760"
 
 -   비동기 메서드에서 사용할 수 있는 HTTP 요청 진행 정보
 
-[  **Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpRequestMessage) 클래스는 [**Windows.Web.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient)에서 전송된 HTTP 요청 메시지를 나타냅니다. [  **Windows.Web.Http.HttpResponseMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpResponseMessage) 클래스는 HTTP 요청에서 받은 HTTP 응답 메시지를 나타냅니다. HTTP 메시지는 IETF에 의해 [RFC 2616](https://tools.ietf.org/html/rfc2616)에서 정의됩니다.
+[  **Windows.Web.Http.HttpRequestMessage**](/uwp/api/Windows.Web.Http.HttpRequestMessage) 클래스는 [**Windows.Web.Http.HttpClient**](/uwp/api/Windows.Web.Http.HttpClient)에서 전송된 HTTP 요청 메시지를 나타냅니다. [  **Windows.Web.Http.HttpResponseMessage**](/uwp/api/Windows.Web.Http.HttpResponseMessage) 클래스는 HTTP 요청에서 받은 HTTP 응답 메시지를 나타냅니다. HTTP 메시지는 IETF에 의해 [RFC 2616](https://tools.ietf.org/html/rfc2616)에서 정의됩니다.
 
-[  **Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) 네임스페이스는 HTTP 콘텐츠를 쿠키가 포함된 HTTP 엔터티 본문 및 헤더로 나타냅니다. HTTP 콘텐츠를 HTTP 요청 또는 HTTP 응답에 연결할 수 있습니다. **Windows.Web.Http** 네임스페이스는 HTTP 컨텐츠를 나타내는 여러 클래스를 제공합니다.
+[  **Windows.Web.Http**](/uwp/api/Windows.Web.Http) 네임스페이스는 HTTP 콘텐츠를 쿠키가 포함된 HTTP 엔터티 본문 및 헤더로 나타냅니다. HTTP 콘텐츠를 HTTP 요청 또는 HTTP 응답에 연결할 수 있습니다. **Windows.Web.Http** 네임스페이스는 HTTP 컨텐츠를 나타내는 여러 클래스를 제공합니다.
 
--   [**HttpBufferContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpBufferContent). 콘텐츠를 버퍼로
--   [**HttpFormUrlEncodedContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpFormUrlEncodedContent). 콘텐츠를 **application/x-www-form-urlencoded** MIME 형식으로 인코드된 이름/값 튜플로
--   [**HttpMultipartContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpMultipartContent). **multipart/\*** MIME 형식의 콘텐츠
--   [**HttpMultipartFormDataContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpMultipartFormDataContent). **multipart/form-data** MIME 형식으로 인코딩된 콘텐츠
--   [**HttpStreamContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpStreamContent). 콘텐츠를 스트림으로(내부 형식은 HTTP GET 메서드가 데이터를 받고 HTTP POST 메서드가 데이터를 업로드하는 데 사용됨)
--   [**HttpStringContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpStringContent). 콘텐츠를 문자열로
--   [**IHttpContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.IHttpContent) - 개발자가 해당 콘텐츠 개체를 만들 수 있는 기본 인터페이스
+-   [**HttpBufferContent**](/uwp/api/Windows.Web.Http.HttpBufferContent). 콘텐츠를 버퍼로
+-   [**HttpFormUrlEncodedContent**](/uwp/api/Windows.Web.Http.HttpFormUrlEncodedContent). 콘텐츠를 **application/x-www-form-urlencoded** MIME 형식으로 인코드된 이름/값 튜플로
+-   [**HttpMultipartContent**](/uwp/api/Windows.Web.Http.HttpMultipartContent). **multipart/\*** MIME 형식의 콘텐츠
+-   [**HttpMultipartFormDataContent**](/uwp/api/Windows.Web.Http.HttpMultipartFormDataContent). **multipart/form-data** MIME 형식으로 인코딩된 콘텐츠
+-   [**HttpStreamContent**](/uwp/api/Windows.Web.Http.HttpStreamContent). 콘텐츠를 스트림으로(내부 형식은 HTTP GET 메서드가 데이터를 받고 HTTP POST 메서드가 데이터를 업로드하는 데 사용됨)
+-   [**HttpStringContent**](/uwp/api/Windows.Web.Http.HttpStringContent). 콘텐츠를 문자열로
+-   [**IHttpContent**](/uwp/api/Windows.Web.Http.IHttpContent) - 개발자가 해당 콘텐츠 개체를 만들 수 있는 기본 인터페이스
 
-"HTTP를 통해 간단한 GET 요청 보내기" 섹션의 코드 조각에서는 [**HttpStringContent**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpStringContent) 클래스를 사용하여 HTTP GET 요청의 HTTP 응답을 문자열로 나타냅니다.
+"HTTP를 통해 간단한 GET 요청 보내기" 섹션의 코드 조각에서는 [**HttpStringContent**](/uwp/api/Windows.Web.Http.HttpStringContent) 클래스를 사용하여 HTTP GET 요청의 HTTP 응답을 문자열로 나타냅니다.
 
-[  **Windows.Web.Http.Headers**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.Headers) 네임스페이스에서는 HTTP 머리글 및 쿠키 만들기를 지원하며 이러한 항목이 이후 속성으로 [**HttpRequestMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpRequestMessage) 및 [**HttpResponseMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpResponseMessage) 개체와 연결됩니다.
+[  **Windows.Web.Http.Headers**](/uwp/api/Windows.Web.Http.Headers) 네임스페이스에서는 HTTP 머리글 및 쿠키 만들기를 지원하며 이러한 항목이 이후 속성으로 [**HttpRequestMessage**](/uwp/api/Windows.Web.Http.HttpRequestMessage) 및 [**HttpResponseMessage**](/uwp/api/Windows.Web.Http.HttpResponseMessage) 개체와 연결됩니다.
 
 ## <a name="send-a-simple-get-request-over-http"></a>HTTP를 통해 간단한 GET 요청 보내기
 
-이 문서의 앞부분에서 설명한 것처럼 [**Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http) 네임스페이스는 UWP 앱에서 GET 요청을 보낼 수 있도록 합니다. 다음 코드 조각은 [**Windows.Web.Http.HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 클래스 및 [**Windows.Web.Http.HttpResponseMessage**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpResponseMessage) 클래스를 사용하여 GET 요청에서 응답을 읽을 수 있도록 http:\//www.contoso.com으로 GET 요청을 전송하는 방법을 보여 줍니다.
+이 문서의 앞부분에서 설명한 것처럼 [**Windows.Web.Http**](/uwp/api/Windows.Web.Http) 네임스페이스는 UWP 앱에서 GET 요청을 보낼 수 있도록 합니다. 다음 코드 조각은 [**Windows.Web.Http.HttpClient**](/uwp/api/Windows.Web.Http.HttpClient) 클래스 및 [**Windows.Web.Http.HttpResponseMessage**](/uwp/api/Windows.Web.Http.HttpResponseMessage) 클래스를 사용하여 GET 요청에서 응답을 읽을 수 있도록 http:\//www.contoso.com으로 GET 요청을 전송하는 방법을 보여 줍니다.
 
 ```csharp
 //Create an HTTP client object
@@ -158,10 +158,10 @@ int main()
 
 ## <a name="post-binary-data-over-http"></a>HTTP를 통해 이진 데이터 게시
 
-아래의 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis) 코드 예제에서는 양식 데이터 및 POST 요청을 사용하여 웹 서버에 적은 양의 이진 데이터 파일을 업로드하는 방법을 보여 줍니다. 이 코드는 [**HttpBufferContent**](/uwp/api/windows.web.http.httpbuffercontent) 클래스를 사용하여 이진 데이터를 나타내고 [**HttpMultipartFormDataContent**](/uwp/api/windows.web.http.httpmultipartformdatacontent) 클래스를 사용하여 다중 파트 양식 데이터를 나타냅니다.
+아래의 [C++/WinRT](../cpp-and-winrt-apis/index.md) 코드 예제에서는 양식 데이터 및 POST 요청을 사용하여 웹 서버에 적은 양의 이진 데이터 파일을 업로드하는 방법을 보여 줍니다. 이 코드는 [**HttpBufferContent**](/uwp/api/windows.web.http.httpbuffercontent) 클래스를 사용하여 이진 데이터를 나타내고 [**HttpMultipartFormDataContent**](/uwp/api/windows.web.http.httpmultipartformdatacontent) 클래스를 사용하여 다중 파트 양식 데이터를 나타냅니다.
 
 > [!NOTE]
-> **get** 호출(아래 코드 예제에 표시)은 UI 스레드에는 적절하지 없습니다. 이 경우에 사용할 수 있는 올바른 방법에 대해서는 [C++/WinRT로 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)을 참조하세요.
+> **get** 호출(아래 코드 예제에 표시)은 UI 스레드에는 적절하지 없습니다. 이 경우에 사용할 수 있는 올바른 방법에 대해서는 [C++/WinRT로 동시성 및 비동기 작업](../cpp-and-winrt-apis/concurrency.md)을 참조하세요.
 
 ```cppwinrt
 // pch.h
@@ -327,19 +327,18 @@ int main()
 
 ## <a name="exceptions-in-windowswebhttp"></a>Windows.Web.Http의 예외
 
-잘못된 URI(Uniform Resource Identifier) 문자열이 [**Windows.Foundation.Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri) 개체에 대한 생성자에 전달되면 예외가 발생합니다.
+잘못된 URI(Uniform Resource Identifier) 문자열이 [**Windows.Foundation.Uri**](/uwp/api/Windows.Foundation.Uri) 개체에 대한 생성자에 전달되면 예외가 발생합니다.
 
-**.NET:**   [**Windows.Foundation.Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri) 형식은 C# 및 VB에서 [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri)로 표시됩니다.
+**.NET:**   [**Windows.Foundation.Uri**](/uwp/api/Windows.Foundation.Uri) 형식은 C# 및 VB에서 [**System.Uri**](/dotnet/api/system.uri)로 표시됩니다.
 
-C# 및 Visual Basic에서는 .NET 4.5의 [**System.Uri**](https://docs.microsoft.com/dotnet/api/system.uri) 클래스와 [**System.Uri.TryCreate**](https://docs.microsoft.com/dotnet/api/system.uri.trycreate#overloads) 메서드 중 하나를 통해 URI가 생성되기 전에 사용자로부터 받은 문자열을 테스트하여 이 오류를 방지할 수 있습니다.
+C# 및 Visual Basic에서는 .NET 4.5의 [**System.Uri**](/dotnet/api/system.uri) 클래스와 [**System.Uri.TryCreate**](/dotnet/api/system.uri.trycreate#overloads) 메서드 중 하나를 통해 URI가 생성되기 전에 사용자로부터 받은 문자열을 테스트하여 이 오류를 방지할 수 있습니다.
 
-C++에는 URI에 대한 문자열을 시도 및 구문 분석할 메서드가 없습니다. 앱이 [**Windows.Foundation.Uri**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Uri)에 대해 사용자 입력을 받으면 생성자는 try/catch 블록에 있게 됩니다. 예외가 발생하면 앱에서 사용자에게 알리고 새 호스트 이름을 요청할 수 있습니다.
+C++에는 URI에 대한 문자열을 시도 및 구문 분석할 메서드가 없습니다. 앱이 [**Windows.Foundation.Uri**](/uwp/api/Windows.Foundation.Uri)에 대해 사용자 입력을 받으면 생성자는 try/catch 블록에 있게 됩니다. 예외가 발생하면 앱에서 사용자에게 알리고 새 호스트 이름을 요청할 수 있습니다.
 
-[  **Windows.Web.Http**](https://docs.microsoft.com/uwp/api/Windows.Web.Http)에는 편의 기능이 부족합니다. 따라서 이 네임스페이스에서 [**HttpClient**](https://docs.microsoft.com/uwp/api/Windows.Web.Http.HttpClient) 및 다른 클래스를 사용하는 앱은 **HRESULT** 값을 사용해야 합니다.
+[  **Windows.Web.Http**](/uwp/api/Windows.Web.Http)에는 편의 기능이 부족합니다. 따라서 이 네임스페이스에서 [**HttpClient**](/uwp/api/Windows.Web.Http.HttpClient) 및 다른 클래스를 사용하는 앱은 **HRESULT** 값을 사용해야 합니다.
 
-C#, VB.NET에서 .NET Framework 4.5를 사용하는 앱에서 [System.Exception](https://docs.microsoft.com/dotnet/api/system.exception)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [System.Exception.HResult](https://docs.microsoft.com/dotnet/api/system.exception.hresult#System_Exception_HResult) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [System.Exception.Message](https://docs.microsoft.com/dotnet/api/system.exception.message#System_Exception_Message) 속성은 예외를 설명하는 메시지를 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
+C#, VB.NET에서 .NET Framework 4.5를 사용하는 앱에서 [System.Exception](/dotnet/api/system.exception)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [System.Exception.HResult](/dotnet/api/system.exception.hresult#System_Exception_HResult) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [System.Exception.Message](/dotnet/api/system.exception.message#System_Exception_Message) 속성은 예외를 설명하는 메시지를 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
-관리되는 C++을 사용하는 앱에서 [Platform::Exception](https://docs.microsoft.com/cpp/cppcx/platform-exception-class)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [Platform::Exception::HResult](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#hresult) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [Platform::Exception::Message](https://docs.microsoft.com/cpp/cppcx/platform-exception-class#message) 속성은 **HRESULT** 값과 연결된 시스템 제공 문자열을 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
+관리되는 C++을 사용하는 앱에서 [Platform::Exception](/cpp/cppcx/platform-exception-class)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [Platform::Exception::HResult](/cpp/cppcx/platform-exception-class#hresult) 속성은 특정 예외에 할당된 **HRESULT**를 반환합니다. [Platform::Exception::Message](/cpp/cppcx/platform-exception-class#message) 속성은 **HRESULT** 값과 연결된 시스템 제공 문자열을 반환합니다. 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E\_INVALIDARG**입니다. 일부 잘못된 메서드 호출의 경우 반환되는 **HRESULT**는 **E\_ILLEGAL\_METHOD\_CALL**입니다.
-

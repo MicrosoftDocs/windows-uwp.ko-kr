@@ -7,12 +7,12 @@ ms.date: 10/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: anawish
-ms.openlocfilehash: d388e1f4b3f1b1be4e265185934a02b6ccd20064
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 382e28b38347a4901e781a12637423260c4bd3e3
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "76123855"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160387"
 ---
 # <a name="data-template-selection-styling-items-based-on-their-properties"></a>데이터 템플릿 선택: 속성을 기준으로 항목 스타일 지정
 
@@ -128,7 +128,7 @@ public class MyDataTemplateSelector : DataTemplateSelector
 
 ## <a name="datatemplateselector-performance-considerations"></a>DataTemplateSelector 성능 고려 사항
 
-대규모 데이터 컬렉션과 함께 ListView 또는 GridView를 사용하는 경우 스크롤 및 패닝 성능이 문제가 될 수 있습니다. 대규모 컬렉션의 성능을 잘 유지하기 위해 데이터 템플릿의 성능을 향상시키는 몇 가지 단계를 수행할 수 있습니다. 이러한 내용은 [ListView 및 GridView UI 최적화](/windows/uwp/debug-test-perf/optimize-gridview-and-listview)에 자세히 설명되어 있습니다.
+대규모 데이터 컬렉션과 함께 ListView 또는 GridView를 사용하는 경우 스크롤 및 패닝 성능이 문제가 될 수 있습니다. 대규모 컬렉션의 성능을 잘 유지하기 위해 데이터 템플릿의 성능을 향상시키는 몇 가지 단계를 수행할 수 있습니다. 이러한 내용은 [ListView 및 GridView UI 최적화](../../debug-test-perf/optimize-gridview-and-listview.md)에 자세히 설명되어 있습니다.
 
 - _항목당 요소 감소_ - 데이터 템플릿의 UI 요소 수를 적절한 최솟값으로 유지합니다.
 - 다른 유형의 컬렉션에서 컨테이너 재생

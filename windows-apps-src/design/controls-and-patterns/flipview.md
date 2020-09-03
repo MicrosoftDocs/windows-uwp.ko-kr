@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 51c43efc859e20606679b385051684730eee1922
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 7e498caa51aa0820b8fb8709f8da178bcee1de9b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493388"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160237"
 ---
 # <a name="flip-view"></a>보기 대칭 이동
 
@@ -27,7 +27,7 @@ ms.locfileid: "86493388"
 <img src="images/winui-logo-64x64.png" alt="WinUI logo"
      style="float: left; margin-right: 15px;" />
 
-Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요.
+Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](../style/rounded-corner.md)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요.
 
 > **플랫폼 API:** [FlipView 클래스](/uwp/api/windows.ui.xaml.controls.flipview), [ItemsSource 속성](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource), [ItemTemplate 속성](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate)
 
@@ -61,13 +61,13 @@ Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이
 
 ## <a name="create-a-flip-view"></a>대칭 이동 뷰 만들기
 
-FlipView는 [ItemsControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol)이므로 모든 유형의 항목 컬렉션을 포함할 수 있습니다. 뷰를 채우려면 [**Items**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) 컬렉션에 항목을 추가하거나 [**ItemsSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성을 데이터 원본에 설정합니다.
+FlipView는 [ItemsControl](/uwp/api/windows.ui.xaml.controls.itemscontrol)이므로 모든 유형의 항목 컬렉션을 포함할 수 있습니다. 뷰를 채우려면 [**Items**](/uwp/api/windows.ui.xaml.controls.itemscontrol.items) 컬렉션에 항목을 추가하거나 [**ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성을 데이터 원본에 설정합니다.
 
-기본적으로, 데이터 항목은 바운딩된 데이터 개체의 문자열 표현으로 대칭 이동 보기에 표시됩니다. 대칭 이동 뷰에서 항목 표시 방법을 정확히 지정하려면 [**DataTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.datatemplate)을 만들어 개별 항목을 표시하는 데 사용되는 컨트롤의 레이아웃을 정의합니다. 레이아웃의 컨트롤은 데이터 개체의 속성에 바운딩되거나 콘텐츠가 정의된 인라인을 가질 수 있습니다. FlipView의 [**ItemTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) 속성에 DataTemplate를 할당합니다.
+기본적으로, 데이터 항목은 바운딩된 데이터 개체의 문자열 표현으로 대칭 이동 보기에 표시됩니다. 대칭 이동 뷰에서 항목 표시 방법을 정확히 지정하려면 [**DataTemplate**](/uwp/api/windows.ui.xaml.datatemplate)을 만들어 개별 항목을 표시하는 데 사용되는 컨트롤의 레이아웃을 정의합니다. 레이아웃의 컨트롤은 데이터 개체의 속성에 바운딩되거나 콘텐츠가 정의된 인라인을 가질 수 있습니다. FlipView의 [**ItemTemplate**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) 속성에 DataTemplate를 할당합니다.
 
 ### <a name="add-items-to-the-items-collection"></a>Items 컬렉션에 항목 추가
 
-XAML 또는 코드를 사용하여 [**Items**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) 컬렉션에 항목을 추가할 수 있습니다. 일반적으로 XAML로 쉽게 정의되며 변경되지 않는 항목 수가 적은 경우 또는 런타임 시 코드에서 항목을 생성하는 경우 이 방식으로 항목을 추가합니다. 다음은 인라인으로 정의된 항목이 있는 대칭 이동 뷰입니다.
+XAML 또는 코드를 사용하여 [**Items**](/uwp/api/windows.ui.xaml.controls.itemscontrol.items) 컬렉션에 항목을 추가할 수 있습니다. 일반적으로 XAML로 쉽게 정의되며 변경되지 않는 항목 수가 적은 경우 또는 런타임 시 코드에서 항목을 생성하는 경우 이 방식으로 항목을 추가합니다. 다음은 인라인으로 정의된 항목이 있는 대칭 이동 뷰입니다.
 
 ```xaml
 <FlipView x:Name="flipView1">
@@ -88,13 +88,13 @@ flipView1.Items.Add("Item 2");
 stackPanel1.Children.Add(flipView1);
 ```
 
-항목을 대칭 이동 보기에 추가하는 경우 항목이 자동으로 [**FlipViewItem**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipViewItem) 컨테이너에 추가됩니다. 항목이 표시되는 방법을 변경하려면 [**ItemContainerStyle**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle) 속성을 설정하여 항목 컨테이너에 스타일을 적용할 수 있습니다. 
+항목을 대칭 이동 보기에 추가하는 경우 항목이 자동으로 [**FlipViewItem**](/uwp/api/Windows.UI.Xaml.Controls.FlipViewItem) 컨테이너에 추가됩니다. 항목이 표시되는 방법을 변경하려면 [**ItemContainerStyle**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle) 속성을 설정하여 항목 컨테이너에 스타일을 적용할 수 있습니다. 
 
 항목이 XAML로 정의된 경우에는 Items 컬렉션에도 자동으로 추가됩니다.
 
 ### <a name="set-the-items-source"></a>항목 원본 설정
 
-일반적으로 대칭 이동 보기를 사용하여 데이터베이스나 인터넷과 같은 원본의 데이터를 표시합니다. 데이터 원본에서 대칭 이동 보기를 채우려면 [**ItemsSource**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성을 데이터 항목의 컬렉션으로 설정합니다.
+일반적으로 대칭 이동 보기를 사용하여 데이터베이스나 인터넷과 같은 원본의 데이터를 표시합니다. 데이터 원본에서 대칭 이동 보기를 채우려면 [**ItemsSource**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성을 데이터 항목의 컬렉션으로 설정합니다.
 
 여기서 대칭 이동 보기의 ItemsSource는 코드에서 컬렉션의 인스턴스로 직접 설정됩니다.
 
@@ -116,7 +116,7 @@ stackPanel1.Children.Add(flipView1);
 
 또한 XAML에서 ItemsSource 속성을 컬렉션에 바인딩할 수도 있습니다. 자세한 내용은 [XAML을 사용하는 데이터 바인딩](../../data-binding/data-binding-quickstart.md)을 참조하세요.
 
-여기서는 ItemsSource가 `itemsViewSource`로 명명된 [**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)에 바인딩됩니다. 
+여기서는 ItemsSource가 `itemsViewSource`로 명명된 [**CollectionViewSource**](/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)에 바인딩됩니다. 
 
 ```xaml
 <Page.Resources>
@@ -134,7 +134,7 @@ stackPanel1.Children.Add(flipView1);
 
 ### <a name="specify-the-look-of-the-items"></a>항목의 모양 지정
 
-기본적으로, 데이터 항목은 바운딩된 데이터 개체의 문자열 표현으로 대칭 이동 보기에 표시됩니다. 일반적으로 데이터를 보다 다양하게 표시하려는 경우가 많습니다. 대칭 이동 보기에서 항목이 표시되는 방법을 정확히 지정하려면 [**DataTemplate**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)을 만듭니다. DataTemplate의 XAML은 개별 항목을 표시하는 데 사용되는 컨트롤의 레이아웃 및 모양을 정의합니다. 레이아웃의 컨트롤은 데이터 개체의 속성에 바운딩되거나 콘텐츠가 정의된 인라인을 가질 수 있습니다. DataTemplate은 FlipView 컨트롤의 [**ItemTemplate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) 속성에 할당됩니다.
+기본적으로, 데이터 항목은 바운딩된 데이터 개체의 문자열 표현으로 대칭 이동 보기에 표시됩니다. 일반적으로 데이터를 보다 다양하게 표시하려는 경우가 많습니다. 대칭 이동 보기에서 항목이 표시되는 방법을 정확히 지정하려면 [**DataTemplate**](/uwp/api/Windows.UI.Xaml.DataTemplate)을 만듭니다. DataTemplate의 XAML은 개별 항목을 표시하는 데 사용되는 컨트롤의 레이아웃 및 모양을 정의합니다. 레이아웃의 컨트롤은 데이터 개체의 속성에 바운딩되거나 콘텐츠가 정의된 인라인을 가질 수 있습니다. DataTemplate은 FlipView 컨트롤의 [**ItemTemplate**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) 속성에 할당됩니다.
 
 다음 예제에서는 FlipView의 ItemTemplate이 인라인으로 정의됩니다. 이미지 이름을 표시하는 오버레이가 이미지에 추가됩니다. 
 
@@ -163,7 +163,7 @@ stackPanel1.Children.Add(flipView1);
 
 ### <a name="set-the-orientation-of-the-flip-view"></a>대칭 이동 뷰 방향 설정
 
-기본적으로 대칭 이동 보기는 가로로 전환됩니다. 세로로 전환되도록 하려면 세로 방향의 스택 패널을 대칭 이동 보기의 [**ItemsPanel**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel)로 사용합니다.
+기본적으로 대칭 이동 보기는 가로로 전환됩니다. 세로로 전환되도록 하려면 세로 방향의 스택 패널을 대칭 이동 보기의 [**ItemsPanel**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel)로 사용합니다.
 
 이 예제에서는 세로 방향의 스택 패널을 FlipView의 ItemsPanel로 지정하는 방법을 보여 줍니다.
 
@@ -236,4 +236,4 @@ FlipView에 상황 표시기를 추가하는 방법을 보여 주는 예제 코�
 ## <a name="related-articles"></a>관련된 문서
 
 - [목록에 대한 지침](lists.md)
-- [**FlipView 클래스**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.FlipView)
+- [**FlipView 클래스**](/uwp/api/Windows.UI.Xaml.Controls.FlipView)

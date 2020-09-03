@@ -6,12 +6,12 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: Windows 10, uwp, 디버그, 테스트, 성능
 ms.localizationpriority: medium
-ms.openlocfilehash: d948af1ce10b3752ba9f20454d8dea72916de692
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0f1ff6a98182f4832a2a1b82bf8ceca4aa176c36
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75683856"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157267"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>UWP 앱 배포 및 디버그
 
@@ -92,13 +92,13 @@ C++ 또는 JavaScript UWP 앱에 대한 원격 머신 대상을 지정하는 방
 
 이렇게 하려면 **시작** 메뉴에서 **원격 디버거**를 검색하여 열고 메시지가 나타나면 디버거에서 방화벽 설정을 구성하도록 허용합니다. 기본적으로 디버거는 Windows 인증을 사용하여 실행됩니다. 따라서 로그인된 사용자가 두 PC에서 동일하지 않으면 사용자 자격 증명이 필요합니다.
 
-**인증 없음**으로 변경하려면 **원격 디버거**에서 **도구** -&gt; **옵션**으로 이동한 다음, **인증 없음**으로 설정합니다. 원격 디버거를 설정한 후 호스트 디바이스를 [개발자 모드](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development)로 설정했는지도 확인해야 합니다. 그런 다음 개발 컴퓨터에서 배포할 수 있습니다.
+**인증 없음**으로 변경하려면 **원격 디버거**에서 **도구** -&gt; **옵션**으로 이동한 다음, **인증 없음**으로 설정합니다. 원격 디버거를 설정한 후 호스트 디바이스를 [개발자 모드](../get-started/enable-your-device-for-development.md)로 설정했는지도 확인해야 합니다. 그런 다음 개발 컴퓨터에서 배포할 수 있습니다.
 
 자세한 내용은 [Visual Studio 다운로드 센터](https://visualstudio.microsoft.com/downloads/)를 참조하세요.
 
 ## <a name="passing-command-line-debug-arguments"></a>명령줄 디버그 인수 전달
 
-Visual Studio 2019에서는 디버깅 UWP 애플리케이션을 시작할 때 명령줄 디버그 인수를 전달할 수 있습니다. [**Application**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application) 클래스의 **OnLaunched** 메서드에 있는 *args* 매개 변수에서 명령줄 디버그 인수에 액세스할 수 있습니다. 명령줄 디버그 인수를 지정하려면 프로젝트 속성을 열고 **디버그** 탭으로 이동합니다.
+Visual Studio 2019에서는 디버깅 UWP 애플리케이션을 시작할 때 명령줄 디버그 인수를 전달할 수 있습니다. [**Application**](/uwp/api/windows.ui.xaml.application) 클래스의 **OnLaunched** 메서드에 있는 *args* 매개 변수에서 명령줄 디버그 인수에 액세스할 수 있습니다. 명령줄 디버그 인수를 지정하려면 프로젝트 속성을 열고 **디버그** 탭으로 이동합니다.
 
 > [!NOTE]
 > 이 기능은 C#, VB, C++용 Visual Studio 2017(버전 15.1)에 사용할 수 있습니다. JavaScript는 이후 버전에서 제공됩니다. 명령줄 디버그 인수는 시뮬레이터를 제외한 모든 배포 형식에 사용할 수 있습니다.
@@ -111,7 +111,7 @@ C++ 및 JS UWP 프로젝트의 경우 **디버깅 속성**에 **명령줄 인수
 
 ![명령줄 인수 C++ 및 JS](images/command-line-arguments-cpp.png)
 
-명령줄 인수를 지정하면 앱의 **OnLaunched** 메서드에서 인수 값에 액세스할 수 있습니다. [**LaunchActivatedEventArgs**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) 개체 *args*는 **인수** 속성을 가지며 값이 **명령줄 인수** 필드에서 문자로 설정됩니다.
+명령줄 인수를 지정하면 앱의 **OnLaunched** 메서드에서 인수 값에 액세스할 수 있습니다. [**LaunchActivatedEventArgs**](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) 개체 *args*는 **인수** 속성을 가지며 값이 **명령줄 인수** 필드에서 문자로 설정됩니다.
 
 ![명령줄 인수 C++ 및 JS](images/command-line-arguments-debugging.png)
 
@@ -189,7 +189,7 @@ C++ UWP 앱의 경우 속성 페이지는 다음과 같이 표시됩니다.
 
 ## <a name="debugging-options"></a>디버깅 옵션
 
-Windows 10에서는 [사전 실행](https://docs.microsoft.com/windows/uwp/launch-resume/handle-app-prelaunch)이라고 하는 기술을 통해 앱을 사전에 실행하고 일시 중단함으로써 UWP의 시작 성능이 개선되었습니다. 대부분의 앱은 이 모드에서 작동되기 위해 특별히 수행해야 할 작업은 없지만 일부 앱에서는 동작을 조정해야 할 수 있습니다. 코드 경로의 문제를 디버깅하기 위해 Visual Studio에서 앱 디버깅을 사전 실행 모드로 시작할 수 있습니다.
+Windows 10에서는 [사전 실행](../launch-resume/handle-app-prelaunch.md)이라고 하는 기술을 통해 앱을 사전에 실행하고 일시 중단함으로써 UWP의 시작 성능이 개선되었습니다. 대부분의 앱은 이 모드에서 작동되기 위해 특별히 수행해야 할 작업은 없지만 일부 앱에서는 동작을 조정해야 할 수 있습니다. 코드 경로의 문제를 디버깅하기 위해 Visual Studio에서 앱 디버깅을 사전 실행 모드로 시작할 수 있습니다.
 
 디버깅은 Visual Studio 프로젝트(**디버그** -&gt; **기타 디버그 대상** -&gt; **유니버설 Windows 앱 사전 실행 디버그**)와 머신에 이미 설치된 앱(**사전 실행으로 앱 활성화** 확인란 선택을 선택하여 **디버그** -&gt; **기타 디버그 대상** -&gt; **설치된 앱 패키지 디버그**) 둘 다에서 지원됩니다. 자세한 내용은 [UWP 사전 실행 디버그](https://blogs.msdn.com/b/visualstudioalm/archive/2015/11/30/debug-uwp-prelaunch-with-vs2015.aspx)를 참조하세요.
 
@@ -213,7 +213,7 @@ Windows 10에서는 [사전 실행](https://docs.microsoft.com/windows/uwp/launc
 
 ## <a name="symbols"></a>기호
 
-기호 파일에는 변수, 함수 이름, 진입점 주소 등 코드를 디버그할 때 유용한 여러 데이터가 포함되어 있으므로 예외 및 호출 스택 실행 순서를 이해하는 데 도움이 됩니다. 대부분의 Windows 변형에 대한 기호는 [Microsoft 기호 서버](https://msdl.microsoft.com/download/symbols)를 통해 사용할 수 있거나, 더 빨리 오프라인에서 조회하기 위해 [Windows 기호 패키지 다운로드](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-symbols)에서 다운로드할 수 있습니다.
+기호 파일에는 변수, 함수 이름, 진입점 주소 등 코드를 디버그할 때 유용한 여러 데이터가 포함되어 있으므로 예외 및 호출 스택 실행 순서를 이해하는 데 도움이 됩니다. 대부분의 Windows 변형에 대한 기호는 [Microsoft 기호 서버](https://msdl.microsoft.com/download/symbols)를 통해 사용할 수 있거나, 더 빨리 오프라인에서 조회하기 위해 [Windows 기호 패키지 다운로드](/windows-hardware/drivers/debugger/debugger-download-symbols)에서 다운로드할 수 있습니다.
 
 Visual Studio에 대한 기호 옵션을 설정하려면 **도구 &gt; 옵션**을 선택한 다음 대화 창에서 **디버깅 &gt; 기호**로 이동합니다.
 
@@ -226,7 +226,7 @@ Visual Studio에 대한 기호 옵션을 설정하려면 **도구 &gt; 옵션**�
 .reload
 ```
 
-`‘;’` 구분 기호를 사용하여 경로를 더 추가하거나 `.sympath+` 명령을 사용할 수 있습니다. WinDbg를 사용하는 고급 기호 작업의 경우 [공용 및 프라이빗 기호](https://docs.microsoft.com/windows-hardware/drivers/debugger/public-and-private-symbols)를 참조하세요.
+`‘;’` 구분 기호를 사용하여 경로를 더 추가하거나 `.sympath+` 명령을 사용할 수 있습니다. WinDbg를 사용하는 고급 기호 작업의 경우 [공용 및 프라이빗 기호](/windows-hardware/drivers/debugger/public-and-private-symbols)를 참조하세요.
 
 ## <a name="windbg"></a>WinDbg
 
@@ -246,7 +246,7 @@ WinDbg에서 자주 사용하는 명령 중 하나는 다음을 포함하여 현
 - EXCEPTION_RECORD: 현재 예외의 주소, 코드 및 플래그
 - STACK_TEXT: 예외 전의 스택 추적
 
-모든 WinDbg 명령의 전체 목록은 [디버거 명령](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-commands)을 참조하세요.
+모든 WinDbg 명령의 전체 목록은 [디버거 명령](/windows-hardware/drivers/debugger/debugger-commands)을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 

@@ -5,16 +5,16 @@ ms.date: 06/21/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, XAML, 컨트롤, 바인딩, 속성
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ba06ece905e6a91a2279f0fe78e867a8f943bb3
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: b6e663ec77c66d4a018d388da350794771312b77
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86492938"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154387"
 ---
 # <a name="xaml-controls-bind-to-a-cwinrt-property"></a>XAML 컨트롤, C++/WinRT 속성에 바인딩
 
-XAML 컨트롤에 효과적으로 바인딩할 수 있는 속성은 *식별할 수 있는*(observable) 속성이라고 합니다. 이 아이디어는 ‘관찰자 패턴’이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다. 이 항목에서는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)에서 관찰 가능한 속성을 구현하는 방법과 XAML 컨트롤을 이 속성에 바인딩하는 방법을 보여줍니다(배경 정보는 [데이터 바인딩](/windows/uwp/data-binding) 참조).
+XAML 컨트롤에 효과적으로 바인딩할 수 있는 속성은 *식별할 수 있는*(observable) 속성이라고 합니다. 이 아이디어는 ‘관찰자 패턴’이라고 알려진 소프트웨어 디자인 패턴에 바탕을 두고 있습니다. 이 항목에서는 [C++/WinRT](./intro-to-using-cpp-with-winrt.md)에서 관찰 가능한 속성을 구현하는 방법과 XAML 컨트롤을 이 속성에 바인딩하는 방법을 보여줍니다(배경 정보는 [데이터 바인딩](../data-binding/index.md) 참조).
 
 > [!IMPORTANT]
 > C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
@@ -136,7 +136,7 @@ namespace winrt::Bookstore::implementation
 ## <a name="declare-and-implement-bookstoreviewmodel"></a>**BookstoreViewModel** 선언 및 구현
 이제 기본 XAML 페이지가 주요 보기 모델에 바인딩됩니다. 이 보기 모델은 **BookSku** 형식 중 하나를 포함해 여러 속성을 갖게 됩니다. 이번 단계에서는 주요 보기 모델 런타임 클래스를 선언하고 구현합니다.
 
-`BookstoreViewModel.idl`이라는 이름의 새 **Midl 파일(.idl)** 항목을 추가합니다. 또한 [런타임 클래스를 Midl 파일(.idl)로 팩터링](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl)도 참조하세요.
+`BookstoreViewModel.idl`이라는 이름의 새 **Midl 파일(.idl)** 항목을 추가합니다. 또한 [런타임 클래스를 Midl 파일(.idl)로 팩터링](./author-apis.md#factoring-runtime-classes-into-midl-files-idl)도 참조하세요.
 
 ```idl
 // BookstoreViewModel.idl
@@ -306,11 +306,11 @@ runtimeclass MainPage : Windows.UI.Xaml.Controls.Page
 }
 ```
 
-이렇게 해야 하는 이유는 다음과 같습니다. XAML 컴파일러에서 유효성을 검사해야 하는 모든 형식([{x:Bind}](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)에서 사용되는 형식 포함)을 Windows 메타 데이터(WinMD)에서 읽어옵니다. 사용자는 Midl 파일에 읽기 전용 속성을 추가하기만 하면 됩니다. 구현하지 않도록 합니다. 자동 생성된 XAML 코드 숨김에서 자동으로 구현을 제공하기 때문입니다.
+이렇게 해야 하는 이유는 다음과 같습니다. XAML 컴파일러에서 유효성을 검사해야 하는 모든 형식([{x:Bind}](../xaml-platform/x-bind-markup-extension.md)에서 사용되는 형식 포함)을 Windows 메타 데이터(WinMD)에서 읽어옵니다. 사용자는 Midl 파일에 읽기 전용 속성을 추가하기만 하면 됩니다. 구현하지 않도록 합니다. 자동 생성된 XAML 코드 숨김에서 자동으로 구현을 제공하기 때문입니다.
 
 ## <a name="consuming-objects-from-xaml-markup"></a>XAML 태그에서 개체 사용
 
-XAML [ **{x:Bind} 태그 확장**](/windows/uwp/xaml-platform/x-bind-markup-extension)을 통해 사용되는 모든 엔터티는 IDL에 공개적으로 노출되어야 합니다. 또한 XAML 태그에 또 다른 요소에 대한 참조도 포함되어 있는 경우 해당 태그에 대한 getter가 IDL에 있어야 합니다.
+XAML [ **{x:Bind} 태그 확장**](../xaml-platform/x-bind-markup-extension.md)을 통해 사용되는 모든 엔터티는 IDL에 공개적으로 노출되어야 합니다. 또한 XAML 태그에 또 다른 요소에 대한 참조도 포함되어 있는 경우 해당 태그에 대한 getter가 IDL에 있어야 합니다.
 
 ```xaml
 <Page x:Name="MyPage">

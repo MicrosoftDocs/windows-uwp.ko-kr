@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 8443ac25ba678986046b967a90a8899eaffb76aa
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 30b41cf0d22d8f8c2c4ce7f774eab9d2aa479d78
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "67420119"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161467"
 ---
 # <a name="part-4-add-windows-10-user-activities-and-notifications"></a>4부: Windows 10 사용자 작업 및 알림 추가
 
@@ -33,11 +33,11 @@ Windows 10에서 앱은 파일을 열거나 특정 페이지를 표시하는 등
 
 ### <a name="introduction-to-adaptive-cards"></a>적응형 카드 소개
 
-이 섹션에서는 [적응형 카드](https://docs.microsoft.com/adaptive-cards/)에 대해 간략하게 설명합니다. 이 정보가 필요하지 않은 경우 건너뛰고 [적응형 카드 추가](#add-an-adaptive-card) 지침으로 바로 넘어가도 됩니다.
+이 섹션에서는 [적응형 카드](/adaptive-cards/)에 대해 간략하게 설명합니다. 이 정보가 필요하지 않은 경우 건너뛰고 [적응형 카드 추가](#add-an-adaptive-card) 지침으로 바로 넘어가도 됩니다.
 
 적응형 카드를 통해 개발자는 카드 콘텐츠를 공통적이고 일관된 방식으로 교환할 수 있습니다. 적응형 카드는 텍스트, 이미지, 작업 등을 포함할 수 있는 콘텐츠를 정의하는 JSON 페이로드로 설명됩니다.
 
-적응형 카드는 콘텐츠만 정의하고 콘텐츠의 시각적 표시는 정의하지 않습니다. 적응형 카드가 수신된 플랫폼은 가장 적합한 스타일을 사용하여 콘텐츠를 렌더링할 수 있습니다. 적응형 카드는 [렌더러](https://docs.microsoft.com/adaptive-cards/rendering-cards/getting-started)를 통해 디자인되며, 렌더러는 JSON 페이로드를 받아서 네이티브 UI로 변환할 수 있습니다. 예를 들어 UI는 WPF 또는 UWP 앱용 XAML, Android 앱용 AXML 또는 웹 사이트나 봇 채팅용 HTML일 수 있습니다.
+적응형 카드는 콘텐츠만 정의하고 콘텐츠의 시각적 표시는 정의하지 않습니다. 적응형 카드가 수신된 플랫폼은 가장 적합한 스타일을 사용하여 콘텐츠를 렌더링할 수 있습니다. 적응형 카드는 [렌더러](/adaptive-cards/rendering-cards/getting-started)를 통해 디자인되며, 렌더러는 JSON 페이로드를 받아서 네이티브 UI로 변환할 수 있습니다. 예를 들어 UI는 WPF 또는 UWP 앱용 XAML, Android 앱용 AXML 또는 웹 사이트나 봇 채팅용 HTML일 수 있습니다.
 
 간단한 적응형 카드 페이로드의 예는 다음과 같습니다.
 
@@ -391,7 +391,7 @@ Contoso 개발 팀이 추가하려는 두 번째 기능은 새 경비를 데이�
     }
     ```
 
-    알림 메시지는 텍스트, 이미지, 작업 등을 포함할 수 있는 XML 페이로드로 표시됩니다. 지원되는 모든 요소는 [여기](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/toast-schema)에서 확인할 수 있습니다. 이 코드는 제목과 본문이라는 두 줄의 텍스트를 포함하는 매우 간단한 스키마를 사용합니다. 코드는 XML 페이로드를 정의하고 **XmlDocument** 개체에 로드한 후 XML을 **ToastNotification** 개체에 래핑하고 **ToastNotificationManager** 클래스를 사용하여 표시합니다.
+    알림 메시지는 텍스트, 이미지, 작업 등을 포함할 수 있는 XML 페이로드로 표시됩니다. 지원되는 모든 요소는 [여기](/windows/uwp/design/shell/tiles-and-notifications/toast-schema)에서 확인할 수 있습니다. 이 코드는 제목과 본문이라는 두 줄의 텍스트를 포함하는 매우 간단한 스키마를 사용합니다. 코드는 XML 페이로드를 정의하고 **XmlDocument** 개체에 로드한 후 XML을 **ToastNotification** 개체에 래핑하고 **ToastNotificationManager** 클래스를 사용하여 표시합니다.
 
 5. **ContosoExpenses.Core** 프로젝트에서 **ViewModels** 폴더를 펼치고 **AddNewExpenseViewModel.cs** 파일을 엽니다. 
 

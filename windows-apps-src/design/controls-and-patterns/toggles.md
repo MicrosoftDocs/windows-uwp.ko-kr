@@ -12,20 +12,20 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d9cb44c91bcd556a10059005a8f19a75f90d3d9
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5c8df28335bf67c00f0429d6967e9013c73ec351
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081470"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154197"
 ---
 # <a name="toggle-switches"></a>토글 스위치
 
 토글 스위치는 전등 스위치처럼 사용자가 켜거나 끌 수 있는 물리적 스위치를 나타냅니다. 토글 스위치 컨트롤을 사용하여 사용자에게 서로 배타적인 두 옵션(예: 켜짐/꺼짐)을 제공합니다. 이러한 옵션은 선택하는 즉시 결과가 제공됩니다.
 
-토글 스위치 컨트롤을 [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)를 사용합니다.
+토글 스위치 컨트롤을 [ToggleSwitch 클래스](/uwp/api/windows.ui.xaml.controls.toggleswitch)를 사용합니다.
 
-> **플랫폼 API**: [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch), [IsOn 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [Toggled 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
+> **플랫폼 API**: [ToggleSwitch 클래스](/uwp/api/windows.ui.xaml.controls.toggleswitch), [IsOn 속성](/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [Toggled 이벤트](/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -97,7 +97,7 @@ stackPanel1.Children.Add(lightToggle);
 
 ### <a name="ison"></a>IsOn
 
-스위치는 켜짐 또는 꺼짐일 수 있습니다. [IsOn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.ison) 속성을 사용하여 스위치의 상태를 확인합니다. 스위치를 사용하여 다른 이진 속성의 상태를 제어하는 경우 다음과 같이 바인딩을 사용할 수 있습니다.
+스위치는 켜짐 또는 꺼짐일 수 있습니다. [IsOn](/uwp/api/windows.ui.xaml.controls.toggleswitch.ison) 속성을 사용하여 스위치의 상태를 확인합니다. 스위치를 사용하여 다른 이진 속성의 상태를 제어하는 경우 다음과 같이 바인딩을 사용할 수 있습니다.
 
 ```xaml
 <StackPanel Orientation="Horizontal">
@@ -108,7 +108,7 @@ stackPanel1.Children.Add(lightToggle);
 
 ### <a name="toggled"></a>Toggled
 
-다른 경우에서는 [Toggled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled) 이벤트를 처리하여 상태 변경에 응답할 수 있습니다.
+다른 경우에서는 [Toggled](/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled) 이벤트를 처리하여 상태 변경에 응답할 수 있습니다.
 
 이 예제에서는 XAML 및 코드에서 Toggled 이벤트 처리기를 추가하는 방법을 보여 줍니다. Toggled 이벤트를 처리하여 진행률 링을 켜거나 끄고 표시 여부를 변경합니다.
 
@@ -152,7 +152,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 
 ### <a name="onoff-labels"></a>켜짐/꺼짐 레이블
 
-기본적으로 토글 스위치에는 자동으로 지역화되는 리터럴 켜짐 및 꺼짐 레이블이 포함됩니다. [OnContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontent) 및 [OffContent](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontent) 속성을 설정하여 이러한 레이블을 바꿀 수 있습니다.
+기본적으로 토글 스위치에는 자동으로 지역화되는 리터럴 켜짐 및 꺼짐 레이블이 포함됩니다. [OnContent](/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontent) 및 [OffContent](/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontent) 속성을 설정하여 이러한 레이블을 바꿀 수 있습니다.
 
 이 예제에서는 켜짐/꺼짐 레이블을 표시/숨기기 레이블로 바꿉니다.
 
@@ -162,7 +162,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
               Toggled="ToggleSwitch_Toggled"/>
 ```
 
-[OnContentTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontenttemplate) 및 [OffContentTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontenttemplate) 속성을 설정하여 더 복잡한 콘텐츠를 사용할 수도 있습니다.
+[OnContentTemplate](/uwp/api/windows.ui.xaml.controls.toggleswitch.oncontenttemplate) 및 [OffContentTemplate](/uwp/api/windows.ui.xaml.controls.toggleswitch.offcontenttemplate) 속성을 설정하여 더 복잡한 콘텐츠를 사용할 수도 있습니다.
 
 ## <a name="recommendations"></a>권장 사항
 
@@ -175,7 +175,7 @@ private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
 
 ## <a name="related-articles"></a>관련된 문서
 
-- [ToggleSwitch 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch)
+- [ToggleSwitch 클래스](/uwp/api/windows.ui.xaml.controls.toggleswitch)
 - [라디오 단추](radio-button.md)
 - [토글 스위치](toggles.md)
 - [확인란](checkbox.md)

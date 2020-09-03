@@ -8,18 +8,18 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1930d879177bc9282a3b55d019aa2bef7eb8f120
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: d1ce2e7dc434558ac1efd52f6def99d63b38c57e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730088"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161517"
 ---
 # <a name="features-that-require-package-identity"></a>패키지 ID가 필요한 기능
 
-[최신 Windows 10 환경](index.md)으로 데스크톱 앱을 업데이트하려는 경우 [패키지 ID](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-identity)가 있는 데스크톱 앱에서만 많은 기능을 사용할 수 있습니다. 데스크톱 앱에 패키지 ID를 부여하는 방법에는 여러 가지가 있습니다.
+[최신 Windows 10 환경](index.md)으로 데스크톱 앱을 업데이트하려는 경우 [패키지 ID](/uwp/schemas/appxpackage/uapmanifestschema/element-identity)가 있는 데스크톱 앱에서만 많은 기능을 사용할 수 있습니다. 데스크톱 앱에 패키지 ID를 부여하는 방법에는 여러 가지가 있습니다.
 
-* [MSIX 패키지](/windows/msix/desktop/desktop-to-uwp-root)에 패키지합니다. MSIX는 모든 Windows 앱, WPF, Windows Forms 및 Win32 앱에 유니버설 패키징 환경을 제공하는 최신 앱 패키지 형식입니다. 강력한 설치 및 업데이트 환경, 유연한 기능 시스템을 갖춘 관리형 보안 모듈, Microsoft Store, 엔터프라이즈 관리 및 여러 사용자 지정 모델에 대한 지원 기능을 제공합니다. 자세한 내용은 MSIX 설명서의 [데스크톱 애플리케이션 패키지](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root)를 참조하세요.
+* [MSIX 패키지](/windows/msix/desktop/desktop-to-uwp-root)에 패키지합니다. MSIX는 모든 Windows 앱, WPF, Windows Forms 및 Win32 앱에 유니버설 패키징 환경을 제공하는 최신 앱 패키지 형식입니다. 강력한 설치 및 업데이트 환경, 유연한 기능 시스템을 갖춘 관리형 보안 모듈, Microsoft Store, 엔터프라이즈 관리 및 여러 사용자 지정 모델에 대한 지원 기능을 제공합니다. 자세한 내용은 MSIX 설명서의 [데스크톱 애플리케이션 패키지](/windows/msix/desktop/desktop-to-uwp-root)를 참조하세요.
 * 데스크톱 앱을 배포하기 위해 MSIX 패키지를 채택할 수 없는 경우 Windows 10 버전 2004부터 패키지 매니페스트만 포함된 *스파스 MSIX 패키지*를 만들어 패키지 ID를 부여할 수 있습니다. 자세한 내용은 [패키지되지 않은 데스크톱 앱에 ID 부여](grant-identity-to-nonpackaged-apps.md)를 참조하세요.
 
 데스크톱 앱에 패키지 ID가 있는 경우 앱에서 다음 기능을 사용할 수 있습니다.

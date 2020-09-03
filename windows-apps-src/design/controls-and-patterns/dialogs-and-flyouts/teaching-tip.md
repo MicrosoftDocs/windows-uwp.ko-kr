@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: 479a289ff15ab6a3db7a51d52f4bf3b075e8a64b
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 31ced6c31b126986171c81e03b68a0a1cccc44f2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968784"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160357"
 ---
 # <a name="teaching-tip"></a>교육 팁
 
@@ -27,12 +27,12 @@ ms.locfileid: "82968784"
 
 |  |  |
 | - | - |
-| ![WinUI 로고](../images/winui-logo-64x64.png) | **TeachingTip** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리가 필요합니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](../images/winui-logo-64x64.png) | **TeachingTip** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리가 필요합니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
 
 > **Windows UI 라이브러리 API:** [TeachingTip 클래스](/uwp/api/microsoft.ui.xaml.controls.teachingtip)
 
 > [!TIP]
-> 이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이를 [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page) 요소(`xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`)에 추가했습니다.
+> 이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이를 [Page](/uwp/api/windows.ui.xaml.controls.page) 요소(`xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`)에 추가했습니다.
 >
 >코드 숨김에서는 C#의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이 **using** 문(`using muxc = Microsoft.UI.Xaml.Controls;`)을 파일 맨 위에 추가했습니다.
 
@@ -125,9 +125,9 @@ public MainPage()
 
 ### <a name="preferred-placement"></a>기본 설정 배치
 
-교육 팁은 TeachingTipPlacementMode 속성을 사용하여 플라이아웃의 [FlyoutPlacementMode](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode) 배치 동작을 복제합니다. 기본 배치 모드는 대상 있는 교육 팁을 대상 위에 배치하고, 대상 없는 교육 팁을 xaml 루트의 아래쪽에 배치하려고 합니다. 플라이아웃을 사용할 때와 마찬가지로, 기본 설정 배치 모드에서 교육 팁을 표시할 공간이 없으면 다른 배치 모드가 자동으로 선택됩니다.
+교육 팁은 TeachingTipPlacementMode 속성을 사용하여 플라이아웃의 [FlyoutPlacementMode](/uwp/api/Windows.UI.Xaml.Controls.Primitives.FlyoutPlacementMode) 배치 동작을 복제합니다. 기본 배치 모드는 대상 있는 교육 팁을 대상 위에 배치하고, 대상 없는 교육 팁을 xaml 루트의 아래쪽에 배치하려고 합니다. 플라이아웃을 사용할 때와 마찬가지로, 기본 설정 배치 모드에서 교육 팁을 표시할 공간이 없으면 다른 배치 모드가 자동으로 선택됩니다.
 
-게임 패드 입력을 예측하는 애플리케이션의 경우 [게임 패드 및 리모컨 조작]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction)을 참조하세요. 앱 UI의 가능한 모든 구성을 사용하여 각 교육 팁의 게임 패드 액세스 가능성을 테스트하는 것이 좋습니다.
+게임 패드 입력을 예측하는 애플리케이션의 경우 [게임 패드 및 리모컨 조작]( ../../input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction)을 참조하세요. 앱 UI의 가능한 모든 구성을 사용하여 각 교육 팁의 게임 패드 액세스 가능성을 테스트하는 것이 좋습니다.
 
 PreferredPlacement가 "BottomLeft"로 설정된 대상 있는 교육 팁은 교육 팁 본문이 왼쪽으로 이동된 상태로 꼬리가 대상 맨 아래의 중앙에 표시됩니다.
 
@@ -168,7 +168,7 @@ PreferredPlacement가 "BottomLeft"로 설정된 대상 있는 교육 팁은 교�
 
 ### <a name="add-a-placement-margin"></a>배치 여백 추가
 
-PlacementMargin 속성을 사용하여 대상 있는 교육 팁이 해당 대상에서 얼마나 멀리 떨어져 있는지와 대상 없는 교육 팁이 xaml 루트의 가장자리에서 얼마나 멀리 떨어져 있는지를 제어할 수 있습니다. [Margin](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.margin)과 같이, PlacementMargin에는 4가지 값인 left, right, top, bottom이 있으며 해당하는 값만 사용됩니다. 예를 들어, PlacementMargin.Left는 팁이 대상의 왼쪽 또는 xaml 루트의 왼쪽 가장자리에 있을 때 적용됩니다.
+PlacementMargin 속성을 사용하여 대상 있는 교육 팁이 해당 대상에서 얼마나 멀리 떨어져 있는지와 대상 없는 교육 팁이 xaml 루트의 가장자리에서 얼마나 멀리 떨어져 있는지를 제어할 수 있습니다. [Margin](/uwp/api/windows.ui.xaml.frameworkelement.margin)과 같이, PlacementMargin에는 4가지 값인 left, right, top, bottom이 있으며 해당하는 값만 사용됩니다. 예를 들어, PlacementMargin.Left는 팁이 대상의 왼쪽 또는 xaml 루트의 왼쪽 가장자리에 있을 때 적용됩니다.
 
 다음 예제에서는 PlacementMargin의 Left/Top/Right/Bottom이 모두 80으로 설정된 대상 없는 팁을 보여 줍니다.
 
@@ -357,7 +357,7 @@ private void OnTipClosing(muxc.TeachingTip sender, muxc.TeachingTipClosingEventA
 * 팁은 영구적이지 않으며 애플리케이션 환경에 중요한 정보 또는 옵션을 포함하지 않아야 합니다.
 * 교육 팁을 너무 자주 표시하지 않도록 합니다. 교육 팁의 긴 세션 전체에서 또는 여러 세션 간에 시차를 적용하면 각 팁이 따로 집중될 수 있습니다.
 * 팁을 간결하게 유지하고 주제를 명확히 드러냅니다. 연구에 따르면 사용자는 팁과 상호 작용할지 결정하기 전에 평균적으로 3 ~ 5개 단어만 읽으며 2-3개 단어만 이해한다고 합니다.
-* 교육 팁의 게임 패드 액세스 가능성은 보장되지 않습니다. 게임 패드 입력을 예측하는 애플리케이션의 경우 [게임 패드 및 리모컨 조작]( https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions#xy-focus-navigation-and-interaction)을 참조하세요. 앱 UI의 가능한 모든 구성을 사용하여 각 교육 팁의 게임 패드 액세스 가능성을 테스트하는 것이 좋습니다.
+* 교육 팁의 게임 패드 액세스 가능성은 보장되지 않습니다. 게임 패드 입력을 예측하는 애플리케이션의 경우 [게임 패드 및 리모컨 조작]( ../../input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction)을 참조하세요. 앱 UI의 가능한 모든 구성을 사용하여 각 교육 팁의 게임 패드 액세스 가능성을 테스트하는 것이 좋습니다.
 * 교육 팁이 xaml 루트를 이스케이프하도록 설정하는 경우 IsLightDismissEnabled 속성도 사용하도록 설정하고 PreferredPlacement 모드를 xaml 루트의 중심에 가장 가깝게 설정하는 것이 좋습니다.
 
 ## <a name="reconfiguring-an-open-teaching-tip"></a>열린 교육 팁 다시 구성
@@ -366,4 +366,4 @@ private void OnTipClosing(muxc.TeachingTip sender, muxc.TeachingTipClosingEventA
 
 ## <a name="related-articles"></a>관련된 문서
 
-* [대화 상자 및 플라이아웃](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/index)
+* [대화 상자 및 플라이아웃](./index.md)

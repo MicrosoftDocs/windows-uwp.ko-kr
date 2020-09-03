@@ -8,18 +8,18 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 27906d9d389c065ab1fdf7124151cd1915f850eb
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 18b89caa0de947d2b95b46c3deb11378912b6012
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "76726016"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89161427"
 ---
 # <a name="part-5-package-and-deploy-with-msix"></a>5부: MSIX로 패키징 및 배포
 
 Contoso 지출이라는 샘플 WPF 데스크톱 앱을 현대화하는 방법을 보여주는 자습서의 마지막 부분입니다. 자습서의 개요, 필수 구성 요소 및 샘플 앱 다운로드 지침은 [자습서: WPF 앱 현대화](modernize-wpf-tutorial.md)를 참조하세요. 이 문서에서는 [4부](modernize-wpf-tutorial-4.md)를 이미 완료했다고 가정합니다.
 
-[4부](modernize-wpf-tutorial-4.md)에서는 알림 API를 포함한 일부 WinRT API가 앱에서 사용되기 전에 패키지 ID가 필요하다는 것을 배웠습니다. 패키지 ID는 Windows 애플리케이션을 패키지하고 배포하기 위해 Windows 10에 도입된 패키징 형식인 [MSIX](https://docs.microsoft.com/windows/msix)를 사용하여 가져올 수 있습니다. MSIX는 개발자와 IT 전문가에게 다음과 같은 이점을 제공합니다.
+[4부](modernize-wpf-tutorial-4.md)에서는 알림 API를 포함한 일부 WinRT API가 앱에서 사용되기 전에 패키지 ID가 필요하다는 것을 배웠습니다. 패키지 ID는 Windows 애플리케이션을 패키지하고 배포하기 위해 Windows 10에 도입된 패키징 형식인 [MSIX](/windows/msix)를 사용하여 가져올 수 있습니다. MSIX는 개발자와 IT 전문가에게 다음과 같은 이점을 제공합니다.
 
 - 네트워크 사용량 및 스토리지 공간을 최적화합니다.
 - 앱이 경량 컨테이너에서 실행되므로 앱을 완전히 제거할 수 있습니다. 레지스트리 키와 임시 파일이 시스템에 남지 않습니다.
@@ -44,7 +44,7 @@ Visual Studio 2019에서는 Windows 애플리케이션 패키징 프로젝트를
 
 5. **대상 버전**과 **최소 버전**을 모두**Windows 10 버전 1903(10.0; 빌드 18362)** 으로 선택하고 **확인**을 클릭합니다.
 
-    **ContosoExpenses.Package** 프로젝트가 **ContosoExpenses** 솔루션에 추가됩니다. 이 프로젝트에는 애플리케이션을 설명하는 [패키지 매니페스트](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root), 그리고 [프로그램] 메뉴의 아이콘 및 [시작] 화면의 타일과 같은 항목에 사용되는 몇 가지 기본 자산이 포함되어 있습니다. 그러나 UWP 프로젝트와 달리, 패키징 프로젝트에는 코드가 포함되지 않습니다. 패키징 프로젝트의 목적은 기존 데스크톱 앱을 패키징하는 것입니다.
+    **ContosoExpenses.Package** 프로젝트가 **ContosoExpenses** 솔루션에 추가됩니다. 이 프로젝트에는 애플리케이션을 설명하는 [패키지 매니페스트](/uwp/schemas/appxpackage/uapmanifestschema/schema-root), 그리고 [프로그램] 메뉴의 아이콘 및 [시작] 화면의 타일과 같은 항목에 사용되는 몇 가지 기본 자산이 포함되어 있습니다. 그러나 UWP 프로젝트와 달리, 패키징 프로젝트에는 코드가 포함되지 않습니다. 패키징 프로젝트의 목적은 기존 데스크톱 앱을 패키징하는 것입니다.
 
 6. **ContosoExpenses.Package** 프로젝트에서 **애플리케이션** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다. 이 노드는 솔루션의 애플리케이션 중에서 패키지에 포함할 애플리케이션을 지정합니다.
 

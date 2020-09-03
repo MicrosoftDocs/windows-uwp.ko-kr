@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 7393d4d1bae227bf3b586a54fba5d43ca2dcb53e
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 2b946047602013704b27fb5c5565155d38dbb7f8
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493408"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154827"
 ---
 # <a name="get-started-with-winui-3-for-desktop-apps"></a>데스크톱 앱용 WinUI 3 시작
 
@@ -45,7 +45,7 @@ WinUI 3 Preview 2에는 완전한 WinUI 기반 사용자 인터페이스를 사�
 
         ![앱 프로젝트](images/WinUI-csharp-appproject.png)
 
-    * ***프로젝트 이름*(패키지)** : 앱을 [MSIX 패키지](https://docs.microsoft.com/windows/msix/overview)로 빌드하도록 구성된 [Windows 애플리케이션 패키징 프로젝트](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)입니다. 이는 최신 배포 환경, 패키지 확장을 통해 Windows 10 기능과 통합하는 기능 등을 제공합니다. 이 프로젝트는 앱의 [패키지 매니페스트](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root)를 포함하고 있으며, 기본적으로 솔루션의 시작 프로젝트입니다.
+    * ***프로젝트 이름*(패키지)** : 앱을 [MSIX 패키지](/windows/msix/overview)로 빌드하도록 구성된 [Windows 애플리케이션 패키징 프로젝트](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)입니다. 이는 최신 배포 환경, 패키지 확장을 통해 Windows 10 기능과 통합하는 기능 등을 제공합니다. 이 프로젝트는 앱의 [패키지 매니페스트](/uwp/schemas/appxpackage/uapmanifestschema/schema-root)를 포함하고 있으며, 기본적으로 솔루션의 시작 프로젝트입니다.
 
         ![앱 프로젝트](images/WinUI-csharp-packageproject.png)
 
@@ -77,7 +77,7 @@ WinUI 3 Preview 2에는 완전한 WinUI 기반 사용자 인터페이스를 사�
 
         ![앱 프로젝트](images/WinUI-cpp-appproject.png)
 
-    * ***프로젝트 이름*(패키지)** : 앱을 [MSIX 패키지](https://docs.microsoft.com/windows/msix/overview)로 빌드하도록 구성된 [Windows 애플리케이션 패키징 프로젝트](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)입니다. 이는 최신 배포 환경, 패키지 확장을 통해 Windows 10 기능과 통합하는 기능 등을 제공합니다. 이 프로젝트는 앱의 [패키지 매니페스트](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root)를 포함하고 있으며, 기본적으로 솔루션의 시작 프로젝트입니다.
+    * ***프로젝트 이름*(패키지)** : 앱을 [MSIX 패키지](/windows/msix/overview)로 빌드하도록 구성된 [Windows 애플리케이션 패키징 프로젝트](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)입니다. 이는 최신 배포 환경, 패키지 확장을 통해 Windows 10 기능과 통합하는 기능 등을 제공합니다. 이 프로젝트는 앱의 [패키지 매니페스트](/uwp/schemas/appxpackage/uapmanifestschema/schema-root)를 포함하고 있으며, 기본적으로 솔루션의 시작 프로젝트입니다.
 
         ![패키지 프로젝트](images/WinUI-cpp-packageproject.png)
 

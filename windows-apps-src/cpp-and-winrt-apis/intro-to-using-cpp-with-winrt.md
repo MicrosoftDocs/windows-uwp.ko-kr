@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
-ms.openlocfilehash: 41ded061a1111c55eb2c71b80cba34c0ce0fc50e
-ms.sourcegitcommit: 7c6cc0d972213bb3abab600423c27db50a7c702b
+ms.openlocfilehash: 980194d396bb6fa20b1d11456edee221d224b011
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477495"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157357"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -30,7 +30,7 @@ C++/WinRT는 Microsoft에서 추천하는 [C++/CX](/cpp/cppcx/visual-c-language-
 Windows 런타임은 COM(구성 요소 개체 모델) API를 기반으로 하며, ‘언어 프로젝션’을 통해 액세스하도록 설계되었습니다.  프로젝션은 COM 세부 정보를 숨기며, 지정된 언어에 더욱 자연스러운 프로그래밍 환경을 제공합니다.
 
 ### <a name="the-cwinrt-language-projection-in-the-windows-runtime-api-reference-content"></a>Windows 런타임 API 참조 콘텐츠의 C++/WinRT 언어 프로젝션
-[Windows 런타임 API](https://docs.microsoft.com/uwp/api/)를 검색할 때는 오른쪽 위에 있는 **언어** 콤보 상자를 클릭하고 **C++/WinRT**를 선택하여 C++/WinRT 언어 프로젝션에 표시되는 API 구문 블록을 확인합니다.
+[Windows 런타임 API](/uwp/api/)를 검색할 때는 오른쪽 위에 있는 **언어** 콤보 상자를 클릭하고 **C++/WinRT**를 선택하여 C++/WinRT 언어 프로젝션에 표시되는 API 구문 블록을 확인합니다.
 
 ## <a name="visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package"></a>C++/WinRT, XAML, VSIX 확장 및 NuGet 패키지에 대한 Visual Studio 지원
 Visual Studio 지원의 경우 Visual Studio 2019 또는 Visual Studio 2017(최소 15.6 버전, 15.7 이상 권장)이 필요합니다. Visual Studio Installer 내에서 **유니버설 Windows 플랫폼 개발** 워크로드를 설치합니다. **설치 세부 정보** > **유니버설 Windows 플랫폼 개발**에서 **C++(v14x) 유니버설 Windows 플랫폼 도구** 옵션을 확인합니다(아직 확인하지 않은 경우). 또한 Windows **설정** > **업데이트 \& 보안** > **개발자용**에서 **사이드로드 앱** 옵션 대신에 **개발자 모드** 옵션을 선택합니다.
@@ -71,7 +71,7 @@ VSIX 확장에서 제공되는 Visual Studio 프로젝트 템플릿은 다음과
 ### <a name="blank-app-cwinrt"></a>비어 있는 앱(C++/WinRT)
 XAML 사용자 인터페이스가 있는 UWP(유니버설 Windows 플랫폼) 앱용 프로젝트 템플릿입니다.
 
-Visual Studio는 각 XAML 태그 파일 뒤에 있는 IDL(Interface Definition Language)(`.idl`) 파일에서 구현과 헤더 스텁을 생성할 목적으로 XAML 컴파일러를 지원합니다. 먼저 IDL 파일에서 앱의 XAML 페이지에서 참조할 로컬 런타임 클래스를 모두 정의한 후 프로젝트를 한 번 빌드하여 구현 템플릿을 `Generated Files`에서 생성하고 스텁 형식 정의를 `Generated Files\sources`에서 생성합니다. 그런 다음, 이러한 스텁 형식 정의를 참조에 사용하여 로컬 런타임 클래스를 구현합니다. [런타임 클래스를 Midl 파일(.idl)로 팩터링](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl)을 참조하세요.
+Visual Studio는 각 XAML 태그 파일 뒤에 있는 IDL(Interface Definition Language)(`.idl`) 파일에서 구현과 헤더 스텁을 생성할 목적으로 XAML 컴파일러를 지원합니다. 먼저 IDL 파일에서 앱의 XAML 페이지에서 참조할 로컬 런타임 클래스를 모두 정의한 후 프로젝트를 한 번 빌드하여 구현 템플릿을 `Generated Files`에서 생성하고 스텁 형식 정의를 `Generated Files\sources`에서 생성합니다. 그런 다음, 이러한 스텁 형식 정의를 참조에 사용하여 로컬 런타임 클래스를 구현합니다. [런타임 클래스를 Midl 파일(.idl)로 팩터링](./author-apis.md#factoring-runtime-classes-into-midl-files-idl)을 참조하세요.
 
 C++/WinRT에 대한 Visual Studio 2019의 XAML 디자인 화면은 C#의 패리티에 가깝습니다. Visual Studio 2019에서 **속성** 창의 **이벤트** 탭을 사용하여 C++/WinRT 프로젝트에 이벤트 처리기를 추가할 수 있습니다. 수동으로 코드에 이벤트 처리기를 추가할 수도 있습니다. 자세한 내용은 [C++/WinRT에서 대리자를 사용하여 이벤트 처리](handle-events.md)를 참조하세요.
 
@@ -91,7 +91,7 @@ Windows 데스크톱의 C++/WinRT 클라이언트 애플리케이션용 프로�
 
 이 템플릿은 `midl.exe` > `cppwinrt.exe` 도구 체인을 나타냅니다. 이 경우 Windows 런타임 메타데이터(`.winmd`)가 IDL에서 생성된 다음, 구현과 헤더 스텁이 Windows 런타임 메타데이터에서 생성됩니다.
 
-IDL 파일에서 구성 요소의 런타임 클래스와 기본 인터페이스, 그리고 그 밖에 구현되는 인터페이스를 정의합니다. 프로젝트를 1회 빌드하여 `module.g.cpp`, `module.h.cpp`, `Generated Files`의 구현 템플릿 및 `Generated Files\sources`의 스텁 형식 정의를 생성합니다. 그런 다음, 생성된 스텁 형식 정의를 참조에 사용하여 구성 요소의 런타임 클래스를 구현합니다. [런타임 클래스를 Midl 파일(.idl)로 팩터링](/windows/uwp/cpp-and-winrt-apis/author-apis#factoring-runtime-classes-into-midl-files-idl)을 참조하세요.
+IDL 파일에서 구성 요소의 런타임 클래스와 기본 인터페이스, 그리고 그 밖에 구현되는 인터페이스를 정의합니다. 프로젝트를 1회 빌드하여 `module.g.cpp`, `module.h.cpp`, `Generated Files`의 구현 템플릿 및 `Generated Files\sources`의 스텁 형식 정의를 생성합니다. 그런 다음, 생성된 스텁 형식 정의를 참조에 사용하여 구성 요소의 런타임 클래스를 구현합니다. [런타임 클래스를 Midl 파일(.idl)로 팩터링](./author-apis.md#factoring-runtime-classes-into-midl-files-idl)을 참조하세요.
 
 빌드된 Windows 런타임 구성 요소 이진 파일 및 이진 파일의 `.winmd`와 함께 이 두 항목을 사용하는 UWP 앱을 번들로 제공합니다.
 
@@ -139,7 +139,7 @@ C++/WinRT 프로그래밍에서 일부 C++ 표준 라이브러리 데이터 형�
 > [!WARNING]
 > 그 밖에 C++/WinRT Windows 네임스페이스 헤더에 대해서 자세히 공부할 경우 마주칠 수 있는 형식들도 있습니다. 예제로는 **winrt::param::hstring**이 있지만 컬렉션 예제도 있습니다. 이는 오로지 입력 매개 변수의 바인딩을 최적화하기 위해서만 존재하며 크게 성능을 향상하고 관련 표준 C++ 형식 및 컨테이너를 위해 “단지 작동”하는 호출 패턴을 최대한 활용합니다. 이 형식은 대부분의 값을 추가하는 경우에 프로젝션에 의해서만 사용됩니다. 우수하게 최적화되었으며 일반적인 용도로 사용되지 않습니다. 직접 사용하려고 하지 마세요. 이 형식은 구현 형식이며 변경되기 쉬우므로 `winrt::impl` 네임스페이스에서 어떤 것도 사용해서는 안 됩니다. 표준 형식이나 [winrt 네임스페이스](/uwp/cpp-ref-for-winrt/winrt)의 형식을 계속 사용해야 합니다.
 >
-> [매개 변수를 ABI 경계로 전달](/windows/uwp/cpp-and-winrt-apis/pass-parms-to-abi)도 참조하세요.
+> [매개 변수를 ABI 경계로 전달](./pass-parms-to-abi.md)도 참조하세요.
 
 ## <a name="important-apis"></a>중요 API
 * [winrt::hstring 구조체](/uwp/cpp-ref-for-winrt/hstring)
@@ -151,4 +151,4 @@ C++/WinRT 프로그래밍에서 일부 C++ 표준 라이브러리 데이터 형�
 * [C++/WinRT 시작](get-started.md)
 * [표준 C++ 데이터 형식 및 C++/WinRT](std-cpp-data-types.md)
 * [C++/WinRT의 문자열 처리](strings.md)
-* [Windows 런타임 API](https://docs.microsoft.com/uwp/api/)
+* [Windows 런타임 API](/uwp/api/)
