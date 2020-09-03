@@ -2,7 +2,8 @@
     "build": {
         "content": [ {
             "files": ["**/*.md", "**/**.yml"],
-            "exclude": ["**/obj/**", "whats-new/whats-new-future.md"]
+            "exclude": ["**/obj/**", "whats-new/whats-new-future.md"],
+	    "exclude": ["**/includes/**"]
         } ],
         "resource": [ {
             "files": ["**/images/**"],
@@ -11,12 +12,12 @@
     "globalMetadata": {
       "ROBOTS": "INDEX, FOLLOW",
       "ms.prod": "uwp",
-		"ms.technology": "uwp-conceptual-docs",
-		"author": "GrantMeStrength",
-		"ms.author": "jken",
+      "ms.technology": "uwp-conceptual-docs",
+      "author": "GrantMeStrength",
+      "ms.author": "jken",
       "Search.Product": "eADQiWindows 10XVcnh",
       "uhfHeaderId": "MSDocsHeader-WinDevCenter",
-        "titleSuffix": "UWP applications",
+      "titleSuffix": "UWP applications",
       "breadcrumb_path": "/windows/uwp/breadcrumbs/toc.json",
       "feedback_system": "None",
       "extendBreadcrumb": false,
