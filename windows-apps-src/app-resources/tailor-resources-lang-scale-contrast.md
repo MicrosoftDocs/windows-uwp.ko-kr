@@ -1,17 +1,17 @@
 ---
-Description: 이 항목에서는 한정자의 일반적인 개념, 사용 방법 및 각 한정자 이름의 용도에 대해 설명 합니다.
+description: 이 항목에서는 한정자의 일반적인 개념, 사용 방법 및 각 한정자 이름의 용도에 대해 설명 합니다.
 title: 언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정
 template: detail.hbs
 ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 3678d525fa00df07408b9d85af34a3dd825b4fcf
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 59f0b636384ba133e985f0704e2033c1acc5f15e
+ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161337"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89412017"
 ---
 # <a name="tailor-your-resources-for-language-scale-high-contrast-and-other-qualifiers"></a>언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정
 
@@ -286,7 +286,7 @@ Windows는 DPI (인치당 도트 수)와 장치의 보기 거리를 기준으로
 * [리소스 관리 시스템](resource-management-system.md)
 * [지역화 준비 방법](/previous-versions/windows/apps/hh967762(v=win.10))
 * [앱이 실행 되 고 있는 플랫폼 검색](../porting/wpsl-to-uwp-input-and-sensors.md#detecting-the-platform-your-app-is-running-on)
-* [디바이스 패밀리 개요](/uwp/extension-sdks/device-families-overview)
+* [확장 Sdk를 사용한 프로그래밍](/uwp/extension-sdks/device-families-overview)
 * [UI 문자열 지역화](localize-strings-ui-manifest.md)
 * [BCP-47](https://tools.ietf.org/html/bcp47)
 * [국가 통계 나누기 M49 지역 코드 컴퍼지션](https://unstats.un.org/unsd/methods/m49/m49regin.htm)

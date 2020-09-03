@@ -6,20 +6,20 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: a7b82570-1f99-4bc3-ac78-412f6360e936
 ms.localizationpriority: medium
-ms.openlocfilehash: 52421d17de5f26fe29060c39d33b51cc85fa197a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 7867b26849019c517c0e3d2e3ad9aa0cf86158fc
+ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174557"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89411997"
 ---
 # <a name="known-issues-with-uwp-on-xbox-developer-program"></a>Xbox 개발자 프로그램에서 UWP에 대해 알려진 문제
 
 이 항목에서는 Xbox One Developer Program의 UWP에서 알려진 문제에 대해 설명 합니다. 이 프로그램에 대 한 자세한 내용은 [Xbox의 UWP](index.md)를 참조 하세요. 
 
-\[API 참조 항목의 링크에서 여기를 제공 하 고 범용 장치 패밀리 API 정보를 찾고 있는 경우 [Xbox에서 아직 지원 되지 않는 UWP 기능](/uwp/extension-sdks/uwp-limitations-on-xbox)을 참조 하세요.\]
+\[API 참조 항목의 링크에서 여기를 제공 하 고 범용 장치 패밀리 API 정보를 찾고 있는 경우, [Xbox에서 지원 되지 않는 UWP 기능](/uwp/extension-sdks/uwp-limitations-on-xbox)을 참조 하세요.\]
 
-다음 목록에서는 발생할 수 있는 몇 가지 알려진 문제를 중점적으로 설명 하지만이 목록은 완전 하지 않습니다. 
+다음 목록에서는 발생할 수 있는 몇 가지 알려진 문제를 중점적으로 설명 하지만이 목록은 완전 하지 않습니다.
 
 사용자 **의견**을 보내 주시기 바랍니다. [유니버설 Windows 플랫폼 apps 개발](https://social.msdn.microsoft.com/forums/windowsapps/home?forum=wpdevelop) 포럼에서 발견 한 문제를 보고 하세요. 
 
@@ -60,8 +60,7 @@ System.UnauthorizedAccessException: Access is denied. (Excep_FromHResult 0x80070
 
 ## <a name="windows-runtime-api-coverage"></a>Windows 런타임 API 범위
 
-모든 Windows 런타임 Api가 Xbox에서 지원 되는 것은 아닙니다. 작동 하지 않는 Api 목록은 [Xbox에서 아직 지원 되지 않는 UWP 기능](/uwp/extension-sdks/uwp-limitations-on-xbox)을 참조 하세요. 다른 Api와 관련 된 문제를 발견 한 경우 포럼에 보고 해 주세요. 
-
+모든 Windows 런타임 Api가 Xbox에서 지원 되는 것은 아닙니다. 작동 하지 않는 Api 목록은 [Xbox에서 지원 되지 않는 UWP 기능](/uwp/extension-sdks/uwp-limitations-on-xbox)을 참조 하세요. 다른 Api와 관련 된 문제를 발견 한 경우 포럼에 보고 해 주세요.
 
 ## <a name="navigating-to-wdp-causes-a-certificate-warning"></a>WDP로 이동 하면 인증서 경고가 발생 합니다.
 
@@ -115,6 +114,6 @@ namespace TestDNLA {
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 - [자주 묻는 질문](frequently-asked-questions.md)
 - [Xbox One의 UWP](index.md)

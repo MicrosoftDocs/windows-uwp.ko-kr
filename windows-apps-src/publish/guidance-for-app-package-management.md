@@ -1,17 +1,17 @@
 ---
-Description: 앱의 패키지를 고객에 게 제공 하는 방법 및 특정 패키지 시나리오를 관리 하는 방법을 알아봅니다.
+description: 앱의 패키지를 고객에 게 제공 하는 방법 및 특정 패키지 시나리오를 관리 하는 방법을 알아봅니다.
 title: 앱 패키지 관리 지침
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ecd8cc96196c31615eac032183956de3bee9e4b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 6035f5f21cd1b704415193c393ae0637d3e5dc37
+ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171057"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89411977"
 ---
 # <a name="guidance-for-app-package-management"></a>앱 패키지 관리 지침
 
@@ -49,15 +49,13 @@ ms.locfileid: "89171057"
 > [!NOTE]
 > 앱을 계속 사용할 수 있지만 특정 OS 버전의 신규 고객에 게 제공 하지 않으려는 경우 새 제출을 만들고 새 합병을 방지 하려는 OS 버전에 대 한 모든 패키지를 제거할 수 있습니다. 예를 들어 이전에 Windows Phone 8.1 및 Windows 10 용 패키지가 있고 Windows Phone 8.1에서 새로운 고객에 게 앱을 제공 하지 않으려는 경우, 제출에서 모든 Windows Phone 8.1 패키지를 제거 합니다. 업데이트를 게시 한 후에는 Windows Phone 8.1에 대 한 새 고객이 해당 앱을 계속 사용할 수 있지만 앱을 가져올 수 없습니다. 그러나 Windows 10의 새 고객은 앱을 계속 사용할 수 있습니다.
 
-
 ## <a name="removing-packages-for-a-previously-supported-device-family"></a>이전에 지원 되는 장치 제품군에 대 한 패키지 제거
 
-앱이 이전에 지 원하는 특정 [장치 제품군](/uwp/extension-sdks/device-families-overview) 에 대 한 모든 패키지를 제거 하는 경우 **패키지** 페이지에 변경 내용을 저장 하기 전에 이것이 의도 한 것인지 확인 하는 메시지가 표시 됩니다.
+앱이 이전에 지 원하는 특정 장치 제품군 ( [확장 sdk를 사용한 프로그래밍](/uwp/extension-sdks/device-families-overview)참조)에 대 한 모든 패키지를 제거 하는 경우 **패키지** 페이지에 변경 내용을 저장 하기 전에 사용자의 의도를 확인 하 라는 메시지가 표시 됩니다.
 
 앱이 이전에 지 원하는 장치 제품군에서 실행할 수 있는 모든 패키지를 제거 하는 제출을 게시할 때 새 고객이 해당 장치 제품군에서 앱을 획득할 수 없게 됩니다. 나중에 언제 든 지 다른 업데이트를 게시 하 여 해당 장치 제품군에 대 한 패키지를 다시 제공할 수 있습니다.
 
 특정 장치 제품군을 지 원하는 모든 패키지를 제거 하는 경우에도 해당 장치 유형에 앱을 이미 설치한 기존 고객은 해당 장치를 계속 사용할 수 있으며 나중에 제공 하는 모든 업데이트를 받게 됩니다.
-
 
 <a name="adding-packages-for-windows-10-to-a-previously-published-app"></a>
 

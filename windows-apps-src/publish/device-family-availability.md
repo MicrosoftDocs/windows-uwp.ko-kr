@@ -1,16 +1,16 @@
 ---
-Description: 패키지를 성공적으로 업로드 한 후에는 특정 Windows 10 장치 제품군 (해당 하는 경우 이전 OS 버전)에 제공 되는 패키지를 순위에 따라 나타내는 표가 표시 됩니다.
+description: 패키지를 성공적으로 업로드 한 후에는 특정 Windows 10 장치 제품군 (해당 하는 경우 이전 OS 버전)에 제공 되는 패키지를 순위에 따라 나타내는 표가 표시 됩니다.
 title: 디바이스 패밀리 가용성
 ms.date: 03/21/2019
 ms.topic: article
 keywords: windows 10, uwp, 패키지, 업로드, 장치 패밀리 가용성
 ms.localizationpriority: medium
-ms.openlocfilehash: f0b30b5805ffaf0cd591147bcfed9744b64afdb7
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 48cbb0fd9ecf27c9926d55e22abc17d039d3674b
+ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161977"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89411967"
 ---
 # <a name="device-family-availability"></a>디바이스 패밀리 가용성
 
@@ -55,7 +55,7 @@ Windows 10 IoT Core 용 UWP 앱을 제출 하는 경우 패키지를 업로드 �
 
 **장치 제품군 가용성** 섹션에서 선택 하는 항목은 새로운 합병에만 적용 된다는 점을 명심 해야 합니다. 앱이 이미 있는 모든 사용자는이를 계속 사용할 수 있으며 여기에서 장치 제품군을 제거 하는 경우에도 제출 하는 모든 업데이트를 받게 됩니다. 이는 Windows 10으로 업그레이드 하기 전에 앱을 구입한 고객에도 적용 됩니다. 예를 들어 Windows Phone 8.1 패키지를 포함 하는 게시 된 응용 프로그램이 있고 windows 10 Mobile을 대상으로 하는 windows 10 (UWP) 패키지를 추가 하는 경우, windows 10 **mobile**에 대 한 확인란의 선택을 취소 한 경우에도 Windows Phone 8.1 패키지를 사용 하는 windows 10 mobile 고객에 게이 windows 10 (uwp) 패키지에 대 한 업데이트가 제공 됩니다.
 
-장치 제품군에 대 한 자세한 내용은 [**장치 패밀리 개요**](/uwp/extension-sdks/device-families-overview)를 참조 하세요.
+장치 제품군에 대 한 자세한 내용은 [확장 sdk를 사용한 프로그래밍](/uwp/extension-sdks/device-families-overview)을 참조 하세요.
 
 
 ## <a name="understanding-ranking"></a>순위 이해
