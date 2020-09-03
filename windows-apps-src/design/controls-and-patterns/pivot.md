@@ -10,16 +10,16 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: bb3d8fc251a357f4251552ba80e4c922878fe805
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: a927e7fa81499ef9eb5a8b798679f13b6d838d17
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970818"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174457"
 ---
 # <a name="pivot"></a>Pivot
 
-[Pivot](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot) 컨트롤을 통해 작은 콘텐츠 섹션 세트에서 터치하여 살짝 밀기를 사용할 수 있습니다.
+[Pivot](/uwp/api/Windows.UI.Xaml.Controls.Pivot) 컨트롤을 통해 작은 콘텐츠 섹션 세트에서 터치하여 살짝 밀기를 사용할 수 있습니다.
 
 ![기본 포커스는 선택된 헤더에 밑줄로 표시됩니다.](images/pivot_focus_selectedHeader.png)
 
@@ -27,9 +27,9 @@ ms.locfileid: "82970818"
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](../style/rounded-corner.md)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
 
-> **플랫폼 API**: [Pivot 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot), [NavigationView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
+> **플랫폼 API**: [Pivot 클래스](/uwp/api/Windows.UI.Xaml.Controls.Pivot), [NavigationView 클래스](/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
 ## <a name="examples"></a>예
 
@@ -145,15 +145,15 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 
 ### <a name="pivot-items"></a>피벗 항목
 
-피벗은 [ItemsControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ItemsControl)이므로 모든 유형의 항목 컬렉션을 포함할 수 있습니다. 피벗에 추가한 항목 중 명시적으로 [PivotItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PivotItem)이 아닌 항목은 모두 PivotItem에 암시적으로 래핑됩니다. 피벗은 콘텐츠 페이지 간 탐색에 사용되는 경우가 많기 때문에 [Items](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.items) 컬렉션에 XAML UI 요소를 직접 채우는 것이 일반적입니다. 또는 데이터 원본에 [ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성을 설정할 수 있습니다. ItemsSource에 바인딩된 항목은 임의 유형일 수 있지만 명시적으로 PivotItems가 아닌 경우 [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) 및 [HeaderTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.headertemplate)을 정의하여 항목의 표시 방법을 지정해야 합니다.
+피벗은 [ItemsControl](/uwp/api/Windows.UI.Xaml.Controls.ItemsControl)이므로 모든 유형의 항목 컬렉션을 포함할 수 있습니다. 피벗에 추가한 항목 중 명시적으로 [PivotItem](/uwp/api/Windows.UI.Xaml.Controls.PivotItem)이 아닌 항목은 모두 PivotItem에 암시적으로 래핑됩니다. 피벗은 콘텐츠 페이지 간 탐색에 사용되는 경우가 많기 때문에 [Items](/uwp/api/windows.ui.xaml.controls.itemscontrol.items) 컬렉션에 XAML UI 요소를 직접 채우는 것이 일반적입니다. 또는 데이터 원본에 [ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource) 속성을 설정할 수 있습니다. ItemsSource에 바인딩된 항목은 임의 유형일 수 있지만 명시적으로 PivotItems가 아닌 경우 [ItemTemplate](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) 및 [HeaderTemplate](/uwp/api/windows.ui.xaml.controls.pivot.headertemplate)을 정의하여 항목의 표시 방법을 지정해야 합니다.
 
-[SelectedItem](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.selecteditem) 속성을 사용하여 피벗의 활성 항목을 가져오거나 설정할 수 있습니다. 활성 항목의 인덱스를 설정하려면 [SelectedIndex](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.selectedindex) 속성을 사용합니다.
+[SelectedItem](/uwp/api/windows.ui.xaml.controls.pivot.selecteditem) 속성을 사용하여 피벗의 활성 항목을 가져오거나 설정할 수 있습니다. 활성 항목의 인덱스를 설정하려면 [SelectedIndex](/uwp/api/windows.ui.xaml.controls.pivot.selectedindex) 속성을 사용합니다.
 
 ### <a name="pivot-headers"></a>피벗 헤더
 
-[LeftHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.leftheader) 및 [RightHeader](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot.rightheader) 속성을 사용하여 피벗 헤더에 다른 컨트롤을 추가할 수 있습니다.
+[LeftHeader](/uwp/api/windows.ui.xaml.controls.pivot.leftheader) 및 [RightHeader](/uwp/api/windows.ui.xaml.controls.pivot.rightheader) 속성을 사용하여 피벗 헤더에 다른 컨트롤을 추가할 수 있습니다.
 
-예를 들어 피벗의 RightHeader에 [CommandBar](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/app-bars)를 추가할 수 있습니다.
+예를 들어 피벗의 RightHeader에 [CommandBar](./app-bars.md)를 추가할 수 있습니다.
 
 ```xaml
 <Pivot>
@@ -191,7 +191,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 - 피벗 레이블을 탭하면 해당 페이지로 이동하며 활성 피벗 레이블이 첫 번째 위치로 회전합니다.
 - 회전 모드에서 피벗 항목은 마지막에서부터 첫 번째 피벗 섹션까지 루핑합니다.
 
-> **참고**[3m 환경](../devices/designing-for-tv.md)에서는 Pivot 헤더가 회전하면 안 됩니다. 앱이 Xbox에서 실행되는 경우 [IsHeaderItemsCarouselEnabled](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot.IsHeaderItemsCarouselEnabled) 속성을 **false**로 설정합니다.
+> **참고**[3m 환경](../devices/designing-for-tv.md)에서는 Pivot 헤더가 회전하면 안 됩니다. 앱이 Xbox에서 실행되는 경우 [IsHeaderItemsCarouselEnabled](/uwp/api/Windows.UI.Xaml.Controls.Pivot.IsHeaderItemsCarouselEnabled) 속성을 **false**로 설정합니다.
 
 ## <a name="recommendations"></a>권장 사항
 
@@ -203,5 +203,5 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 
 ## <a name="related-topics"></a>관련 항목
 
-- [Pivot 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Pivot)
+- [Pivot 클래스](/uwp/api/Windows.UI.Xaml.Controls.Pivot)
 - [탐색 디자인 기본 사항](../basics/navigation-basics.md)

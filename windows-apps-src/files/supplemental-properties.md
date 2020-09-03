@@ -5,12 +5,12 @@ ms.date: 01/10/2017
 ms.topic: article
 keywords: windows 10, uwp, WinRT API, 인덱서, 검색
 localizationpriority: medium
-ms.openlocfilehash: 2a77bfc37d853efd28bde9bc3043d072888822f2
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 3103074e7d691897e9a8982a254ba36ee331a2b6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66369261"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175397"
 ---
 # <a name="using-supplemental-properties"></a>추가 속성 사용  
 
@@ -27,7 +27,7 @@ ms.locfileid: "66369261"
 지난 수십 년 동안 Windows에서 빠르게 검색하기 위한 솔루션은 인덱서였으며, 크리에이터스 업데이트가 출시되면서 이러한 새 시나리오를 지원하도록 업데이트되었습니다. 이제 앱에서는 시스템이 추출한 속성 이외의 추가 속성을 사용하여 파일에 태그를 지정할 수 있습니다. 이러한 속성은 일급 개체로 취급됩니다.  
 
 ## <a name="windows-properties"></a>Windows 속성 
-[Windows 속성 시스템](https://docs.microsoft.com/windows/desktop/properties/windows-properties-system)은 오랫동안 파일과의 상호 작용에서 핵심적인 역할을 담당했습니다. 이 시스템 덕분에 앱은 다른 모든 파일 형식 또는 가능한 파일 언어의 내부 구조를 이해하지 않고도 파일의 속성을 읽을 수 있습니다. 모든 것이 자동으로 추출되므로 개발자는 목록을 요청하고 오름차순 또는 내림차순으로 지정하지만 하면 됩니다.  
+[Windows 속성 시스템](/windows/desktop/properties/windows-properties-system)은 오랫동안 파일과의 상호 작용에서 핵심적인 역할을 담당했습니다. 이 시스템 덕분에 앱은 다른 모든 파일 형식 또는 가능한 파일 언어의 내부 구조를 이해하지 않고도 파일의 속성을 읽을 수 있습니다. 모든 것이 자동으로 추출되므로 개발자는 목록을 요청하고 오름차순 또는 내림차순으로 지정하지만 하면 됩니다.  
 
 속성 시스템은 Windows 인덱서와 밀접하게 관련되어 있으며, 범위 내에 있는 파일의 모든 속성을 읽고 저장합니다. 나중에 앱에서 폴더의 모든 .docx 파일을 수정 날짜 기준으로 정렬한 목록을 요청할 때 John Smith가 작성한 파일을 제외하면 인덱서가 즉시 목록을 반환할 수 있습니다.  
 
@@ -158,4 +158,4 @@ UWP 변경 알림 및 변경 내용 추적은 표준 속성과 동일한 방식�
 ## <a name="conclusions"></a>결론 
 추가 속성은 시스템에 더 많은 파일 속성을 저장하는 간편한 방법입니다. 추가 속성을 사용하는 것은 당연히 선택 사항이지만, 데이터를 신속하게 정렬하고 검색할 수 없는 다른 앱보다 우위에 설 수 있습니다. 
 
-앱에 이러한 속성이 사용되는 모습을 볼 수 있기를 기대합니다. 헤더 사용 방법에 대한 질문이 있으면 아래에 댓글로 남겨주시기 바랍니다. 
+앱에 이러한 속성이 사용되는 모습을 볼 수 있기를 기대합니다. 헤더 사용 방법에 대한 질문이 있으면 아래에 댓글로 남겨주시기 바랍니다.

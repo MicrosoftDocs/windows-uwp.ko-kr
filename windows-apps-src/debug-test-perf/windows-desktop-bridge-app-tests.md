@@ -6,16 +6,16 @@ ms.date: 12/18/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: 37c382fb81a4527b730840142643ff72b9020127
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: bdc9c3ee51523120f1e50ba9d2a2aba2b828be48
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730289"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169877"
 ---
 # <a name="windows-desktop-bridge-app-tests"></a>Windows 데스크톱 브리지 앱 테스트
 
-[데스크톱 브리지 앱](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root)은 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하여 UWP(유니버설 Windows 플랫폼) 앱으로 변환된 Windows 데스크톱 애플리케이션입니다. 변환 후에는 Windows 데스크톱 애플리케이션이 Windows 10 데스크톱을 대상으로 하는 UWP 앱 패키지(.appx 또는 .appxbundle)의 형태로 패키징되고, 서비스되고, 배포됩니다.
+[데스크톱 브리지 앱](/windows/msix/desktop/desktop-to-uwp-root)은 [데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용하여 UWP(유니버설 Windows 플랫폼) 앱으로 변환된 Windows 데스크톱 애플리케이션입니다. 변환 후에는 Windows 데스크톱 애플리케이션이 Windows 10 데스크톱을 대상으로 하는 UWP 앱 패키지(.appx 또는 .appxbundle)의 형태로 패키징되고, 서비스되고, 배포됩니다.
 
 ## <a name="required-versus-optional-tests"></a>필수 테스트와 선택적 테스트
 Windows 데스크톱 브리지 앱의 선택적 테스트는 정보만을 제공하며 Microsoft Store 온보딩 시 앱을 평가하는 데 사용되지 않습니다. 보다 우수한 품질의 앱을 만들 수 있도록 이러한 테스트 결과를 조사하는 것이 좋습니다. 스토어 온보딩에 대한 전반적인 성공/실패는 이러한 선택적 테스트가 아닌 필수 테스트에 의해 결정됩니다.
@@ -30,7 +30,7 @@ Windows 데스크톱 브리지 앱의 선택적 테스트는 정보만을 제공
 이 테스트는 패키지의 모든 PE 파일을 검색하고 서명에 대한 파일의 헤더를 검사합니다. 모든 PE 파일을 디지털로 서명하는 것이 좋습니다. PE 파일이 서명되지 않으면 경고가 생성됩니다.
  
 **수정 작업**  
-항상 파일을 디지털로 서명하는 것이 좋습니다. 자세한 내용은 [코드 서명 소개](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))를 참조하세요.
+항상 파일을 디지털로 서명하는 것이 좋습니다. 자세한 내용은 [코드 서명 소개](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))를 참조하세요.
 
 ### <a name="2-file-association-verbs"></a>2. 파일 연결 동사 
 **배경**  
@@ -40,7 +40,7 @@ Windows 데스크톱 브리지 앱의 선택적 테스트는 정보만을 제공
 광범위한 Windows 런타임 API를 사용하여 변환된 데스크톱 앱을 향상시킬 수 있습니다. 이 테스트는 앱의 UWP 바이너리에서 비-Windows 런타임 API를 호출하지 않는지 검사합니다. UWP 바이너리에는 **AppContainer** 플래그 설정이 있습니다.
 
 **수정 작업**  
-[데스크톱-UWP 브리지: 앱 확장](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-extensions)에서 이러한 확장에 대한 설명 및 적절히 사용하는 방법을 확인할 수 있습니다. 
+[데스크톱-UWP 브리지: 앱 확장](/windows/apps/desktop/modernize/desktop-to-uwp-extensions)에서 이러한 확장에 대한 설명 및 적절히 사용하는 방법을 확인할 수 있습니다. 
 
 ### <a name="3-debug-configuration-test"></a>3. 디버그 구성 테스트
 이 테스트는 .msix 또는 .appx가 디버그 빌드가 아닌지 확인합니다.
@@ -118,14 +118,14 @@ Microsoft Store용으로 인증을 받으려면 앱이 디버그용으로 컴파
 {image name} 이미지가 유효한 이미지 파일이 아닙니다.  | 모든 앱 이미지가 적절한 파일 형식 유형 제한을 준수하는지 확인하세요. 실제 메시지에서는 {image name}에 유효하지 않은 이미지 이름이 포함됩니다. 
 "BadgeLogo" 이미지의 (x, y) 위치에 유효하지 않은 ABGR 값 {value}이(가) 있습니다. 픽셀은 흰색(##FFFFFF) 또는 투명(00######)이어야 합니다.  | 배지 로고는 잠금 화면에서 앱을 식별하기 위해 배지 알림 옆에 표시되는 이미지입니다. 이 이미지는 단색이어야 합니다. 즉, 흰색 및 투명 픽셀만 포함할 수 있습니다. 실제 메시지에서는 {value}에 유효하지 않은 이미지 색 값이 포함됩니다. 
 "BadgeLogo" 이미지의 (x, y) 위치에 고대비 흰색 이미지에 유효하지 않은 ABGR 값 {value}이(가) 있습니다. 픽셀은 (##2A2A2A)보다 어둡거나 투명(00######)이어야 합니다.  | 배지 로고는 잠금 화면에서 앱을 식별하기 위해 배지 알림 옆에 표시되는 이미지입니다. 배지 로고는 흰색 배경에 표시되므로 고대비 흰색일 경우 일반적인 배지 로고의 어두운 버전이어야 합니다. 고대비 흰색에서 배지 로고에는 (##2A2A2A)보다 어둡거나 투명인 픽셀만 포함될 수 있습니다. 실제 메시지에서는 {value}에 유효하지 않은 이미지 색 값이 포함됩니다. 
-이미지에서 TargetSize 한정자를 사용하지 않고 둘 이상의 변형을 정의해야 합니다. 이미지에서 Scale 한정자를 정의하거나 Scale 및 TargetSize를 지정하지 않은 상태로 유지하여 기본값 Scale-100으로 설정해야 합니다.  | 자세한 정보는 [반응형 디자인](https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design) 및 [앱 리소스](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data)에 대한 가이드를 참조하세요. 
+이미지에서 TargetSize 한정자를 사용하지 않고 둘 이상의 변형을 정의해야 합니다. 이미지에서 Scale 한정자를 정의하거나 Scale 및 TargetSize를 지정하지 않은 상태로 유지하여 기본값 Scale-100으로 설정해야 합니다.  | 자세한 정보는 [반응형 디자인](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md) 및 [앱 리소스](../design/app-settings/store-and-retrieve-app-data.md)에 대한 가이드를 참조하세요. 
 패키지에 "resources.pri" 파일이 없습니다.  | 앱 매니페스트에 지역화 가능한 콘텐츠가 있는 경우 앱 패키지에 유효한 resources.pri 파일이 있는지 확인하세요. 
 "resources.pri" 파일에는 패키지 이름 {package full name}과(와) 일치하는 이름을 사용하는 리소스 맵이 있어야 합니다.  | 매니페스트가 변경되어 resources.pri의 리소스 맵 이름이 매니페스트의 패키지 이름과 더 이상 일치하지 않는 경우 이 오류가 발생할 수 있습니다. 실제 메시지에서는 resources.pri에 포함되어야 하는 패키지 이름이 {package full name}에 포함됩니다. 이 오류를 해결하려면 resources.pri를 다시 빌드해야 하며 앱 패키지를 다시 빌드하면 이 작업을 가장 간단하게 수행할 수 있습니다. 
 "resources.pri" 파일에서 자동 병합을 사용할 수 있도록 설정해서는 안 됩니다.  | MakePRI.exe는 AutoMerge라는 옵션을 지원합니다. AutoMerge는 기본적으로 사용되지 않습니다. 이 옵션을 사용하면 AutoMerge에서 런타임에 앱의 언어 팩 리소스를 단일 resources.pri에 병합합니다. Microsoft Store를 통해 배포하려는 앱에는 이 옵션을 권장하지 않습니다. Microsoft Store를 통해 배포되는 앱의 resources.pri는 앱 패키지의 루트에 있어야 하며 앱에서 지원하는 모든 언어 참조를 포함해야 합니다. 
-{string} 문자열에서 {number}자의 최대 길이 제한을 준수하지 못했습니다.  | [앱 패키지 요구 사항](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)을 참조하세요. 실제 메시지에서는 {string}이(가) 오류가 있는 문자열로 대체되고 {number}에는 최대 길이가 포함됩니다. 
+{string} 문자열에서 {number}자의 최대 길이 제한을 준수하지 못했습니다.  | [앱 패키지 요구 사항](../publish/app-package-requirements.md)을 참조하세요. 실제 메시지에서는 {string}이(가) 오류가 있는 문자열로 대체되고 {number}에는 최대 길이가 포함됩니다. 
 {string} 문자열에는 선행/후행 공백이 없어야 합니다.  | 앱 매니페스트에 있는 요소에 대한 스키마에서는 선행 또는 후행 공백 문자를 허용하지 않습니다. 실제 메시지에서는 {string}이(가) 오류가 있는 문자열로 대체됩니다. resources.pri에 있는 매니페스트 필드의 지역화된 값에 선행 또는 후행 공백 문자가 없는지 확인하세요. 
-문자열은 비어 있으면 안 되며 길이가 0보다 커야 합니다.  | 자세한 내용은 [앱 패키지 요구 사항](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)을 참조하세요. 
-"resources.pri" 파일에 지정된 기본 리소스가 없습니다.  | 자세한 내용은 [앱 리소스](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data)에 대한 가이드를 참조하세요. 기본 빌드 구성에서 Visual Studio는 번들을 생성할 때 앱 패키지에 scale-200 이미지 리소스만 포함하고 다른 리소스는 리소스 패키지에 배치합니다. scale-200 이미지 리소스를 포함하거나 갖고 있는 리소스를 포함하도록 프로젝트를 구성해야 합니다. 
+문자열은 비어 있으면 안 되며 길이가 0보다 커야 합니다.  | 자세한 내용은 [앱 패키지 요구 사항](../publish/app-package-requirements.md)을 참조하세요. 
+"resources.pri" 파일에 지정된 기본 리소스가 없습니다.  | 자세한 내용은 [앱 리소스](../design/app-settings/store-and-retrieve-app-data.md)에 대한 가이드를 참조하세요. 기본 빌드 구성에서 Visual Studio는 번들을 생성할 때 앱 패키지에 scale-200 이미지 리소스만 포함하고 다른 리소스는 리소스 패키지에 배치합니다. scale-200 이미지 리소스를 포함하거나 갖고 있는 리소스를 포함하도록 프로젝트를 구성해야 합니다. 
 "resources.pri" 파일에 지정된 리소스 값이 없습니다.  | 앱 매니페스트의 resources.pri에 유효한 리소스가 정의되어 있는지 확인하세요. 
 {filename} 이미지 파일은 204800바이트보다 작아야 합니다.  | 표시된 이미지의 크기를 줄이세요. 
 {filename} 파일에는 리버스 맵 섹션이 없어야 합니다.  | Visual Studio 'F5 디버깅' 중 makepri.exe를 호출할 때 리버스 맵이 생성된 경우에는 pri 파일을 생성할 때 /m 매개 변수 없이 makepri.exe를 실행하여 제거할 수 있습니다. 
@@ -150,16 +150,16 @@ Microsoft Store용으로 인증을 받으려면 앱이 디버그용으로 컴파
 앱의 매니페스트가 형식이 올발라야 합니다.
 
 **테스트 정보**  
-앱 매니페스트를 검사하여 [앱 패키지 요구 사항](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)에 설명된 대로 내용이 올바른지 확인합니다. 이 테스트에서 다음 검사가 수행됩니다.
+앱 매니페스트를 검사하여 [앱 패키지 요구 사항](../publish/app-package-requirements.md)에 설명된 대로 내용이 올바른지 확인합니다. 이 테스트에서 다음 검사가 수행됩니다.
 * **파일 확장명 및 프로토콜**  
 앱에서 연결 가능한 파일 형식을 선언할 수 있습니다. 일반적이지 않은 파일 형식을 많이 선언하면 사용자 환경의 편의성이 저하됩니다. 이 테스트에서는 앱을 연결할 수 있는 파일 확장명 수를 제한합니다.
 * **프레임워크 종속성 규칙**  
 이 테스트에서는 앱이 UWP에 대한 적절한 종속성을 선언하는 요구 사항을 적용합니다. 부적절한 종속성이 있으면 이 테스트가 실패합니다. 앱의 대상인 OS 버전과 프레임워크 종속성 간에 불일치가 있으면 테스트가 실패합니다. 또한 앱이 프레임워크 dll의 "미리 보기" 버전을 참조하는 경우에도 테스트가 실패합니다.
 * **IPC(프로세스 간 통신) 확인**  
-이 테스트에서는 데스크톱 브리지 앱이 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신하지 않는 요구 사항을 적용합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. `DesktopApplicationPath`와 동일한 이름으로 [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute)를 지정하는 앱은 이 테스트에 실패합니다.  
+이 테스트에서는 데스크톱 브리지 앱이 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신하지 않는 요구 사항을 적용합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. `DesktopApplicationPath`와 동일한 이름으로 [**ActivatableClassAttribute**](/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute)를 지정하는 앱은 이 테스트에 실패합니다.  
 
 **수정 작업**  
-앱의 매니페스트가 [앱 패키지 요구 사항](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)에 설명된 요구 사항에 맞는지 검토합니다.
+앱의 매니페스트가 [앱 패키지 요구 사항](../publish/app-package-requirements.md)에 설명된 요구 사항에 맞는지 검토합니다.
 
 
 #### <a name="32-application-count"></a>3.2 애플리케이션 수
@@ -217,10 +217,10 @@ Microsoft Store용으로 인증을 받으려면 앱이 디버그용으로 컴파
 앱이 디버그 빌드가 아닌 릴리스 빌드로 컴파일된 것을 확인하여 수정할 수 있습니다. 
 
 > [!NOTE]
-> 앱에서 [UWP 앱용 API](https://docs.microsoft.com/uwp/)만 사용하더라도 앱의 디버그 빌드는 이 테스트에 실패합니다. 오류 메시지를 검토하여 현재 API가 허용되는 UWP 앱용 API가 아닌지 확인하세요. 
+> 앱에서 [UWP 앱용 API](/uwp/)만 사용하더라도 앱의 디버그 빌드는 이 테스트에 실패합니다. 오류 메시지를 검토하여 현재 API가 허용되는 UWP 앱용 API가 아닌지 확인하세요. 
 
 > [!NOTE]
-> 구성에 UWP 앱용 Windows SDK의 API만 사용하는 경우에도 디버그 구성에서 빌드된 C++ 앱은 이 테스트에 실패합니다. 자세한 내용은 [UWP 앱의 Windows API 대안](https://docs.microsoft.com/uwp/win32-and-com/win32-and-com-for-uwp-apps)을 참조하세요.
+> 구성에 UWP 앱용 Windows SDK의 API만 사용하는 경우에도 디버그 구성에서 빌드된 C++ 앱은 이 테스트에 실패합니다. 자세한 내용은 [UWP 앱의 Windows API 대안](/uwp/win32-and-com/win32-and-com-for-uwp-apps)을 참조하세요.
 
 ### <a name="6-user-account-control-uac-test"></a>6. UAC(사용자 계정 컨트롤) 테스트  
 
@@ -231,7 +231,7 @@ Microsoft Store용으로 인증을 받으려면 앱이 디버그용으로 컴파
 Microsoft Store 정책에 따라 앱에서 관리자 권한 상승 또는 UIAccess를 요청할 수 없습니다. 승격된 보안 권한이 지원되지 않습니다. 
 
 **수정 작업**  
-앱이 대화형 사용자로 실행되어야 합니다. 자세한 내용은 [UI 자동화 보안 개요](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-security-overview?redirectedfrom=MSDN)를 참조하세요.
+앱이 대화형 사용자로 실행되어야 합니다. 자세한 내용은 [UI 자동화 보안 개요](/dotnet/framework/ui-automation/ui-automation-security-overview)를 참조하세요.
 
  
 ### <a name="7-windows-runtime-metadata-validation"></a>7. Windows 런타임 메타데이터 유효성 검사
@@ -286,4 +286,4 @@ Windows 앱 인증 키트에서 금지된 파일 검사는 현재 다음 파일�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)
+* [Microsoft Store 정책](/legal/windows/agreements/store-policies)

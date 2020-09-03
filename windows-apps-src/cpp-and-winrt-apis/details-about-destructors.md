@@ -5,16 +5,16 @@ ms.date: 09/26/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, 프로젝션, 지연된 소멸, 안전한 쿼리
 ms.localizationpriority: medium
-ms.openlocfilehash: 76068ffc655c20aa13b50cce9ac49af9afd50805
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 6b15c32bb35bec1f6a8e8d59e6aefe17ebf74b5d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "71329562"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170330"
 ---
 # <a name="extension-points-for-your-implementation-types"></a>구현 형식에 대한 확장 지점
 
-[winrt::implements](/uwp/cpp-ref-for-winrt/implements)는 사용자 고유의 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 구현(런타임 클래스 및 활성화 팩터리)에서 직접 또는 간접적으로 파생시키는 기본 구조체 템플릿입니다.
+[winrt::implements](/uwp/cpp-ref-for-winrt/implements)는 사용자 고유의 [C++/WinRT](./intro-to-using-cpp-with-winrt.md) 구현(런타임 클래스 및 활성화 팩터리)에서 직접 또는 간접적으로 파생시키는 기본 구조체 템플릿입니다.
 
 이 항목에서는 C++/WinRT 2.0의 **winrt::implements** 확장 지점에 대해 설명합니다. 검사 가능한 개체의 기본 동작([IInspectable](/windows/win32/api/inspectable/nn-inspectable-iinspectable) 인터페이스의 의미에서 *검사 가능*)을 사용자 지정하기 위해 이러한 확장 지점을 구현 형식에 구현하도록 선택할 수 있습니다.
 
@@ -22,7 +22,7 @@ ms.locfileid: "71329562"
 
 ## <a name="deferred-destruction"></a>지연된 소멸
 
-[직접 할당 진단](/windows/uwp/cpp-and-winrt-apis/diag-direct-alloc) 항목에서 구현 형식에 프라이빗 소멸자가 있을 수 없다고 언급했습니다.
+[직접 할당 진단](./diag-direct-alloc.md) 항목에서 구현 형식에 프라이빗 소멸자가 있을 수 없다고 언급했습니다.
 
 퍼블릭 소멸자를 사용하면 개체에 대한 최종 [**IUnknown::Release**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 호출을 검색한 다음, 해당 개체의 소유권을 가져와서 소멸을 무기한 연기하는 기능인 지연된 소멸을 가능하게 한다는 이점이 있습니다.
 

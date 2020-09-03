@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 489215c0289695832cb895d8566063a93ae2336c
-ms.sourcegitcommit: 577a54d36145f91c8ade8e4509d4edddd8319137
+ms.openlocfilehash: f59bb821b65eda89aa1fbc88e9c38d5789f61f6e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83867353"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163427"
 ---
 # <a name="tabview"></a>TabView
 
@@ -24,12 +24,12 @@ TabView 컨트롤을 사용하여 탭 세트와 각 탭의 콘텐츠를 표시�
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **TabView** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리가 필요합니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **TabView** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리가 필요합니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
 
 > **Windows UI 라이브러리 API**: [TabView 클래스](/uwp/api/microsoft.ui.xaml.controls.tabview), [TabViewItem 클래스](/uwp/api/microsoft.ui.xaml.controls.tabviewitem)
 
 > [!TIP]
-> 이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이를 [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page) 요소(`xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`)에 추가했습니다.
+> 이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이를 [Page](/uwp/api/windows.ui.xaml.controls.page) 요소(`xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`)에 추가했습니다.
 >
 >코드 숨김에서는 C#의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이 **using** 문(`using muxc = Microsoft.UI.Xaml.Controls;`)을 파일 맨 위에 추가했습니다.
 
@@ -44,7 +44,7 @@ TabView 컨트롤을 사용하여 탭 세트와 각 탭의 콘텐츠를 표시�
 - 사용자가 문서나 웹 페이지를 탭에서 직접 열 수 있습니다.
 - 사용자가 창 간에 탭을 끌어서 놓을 수 있습니다.
 
-TabView가 앱에 적합하지 않은 경우 [Pivot](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/pivot) 또는 [NavigationView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview) 같은 컨트롤을 고려해 보세요.
+TabView가 앱에 적합하지 않은 경우 [Pivot](./pivot.md) 또는 [NavigationView](./navigationview.md) 같은 컨트롤을 고려해 보세요.
 
 ## <a name="anatomy"></a>구조
 
@@ -104,7 +104,7 @@ private void TabView_TabCloseRequested(muxc.TabView sender, muxc.TabViewTabClose
 
 사용자가 제목 표시줄을 통해 창을 끌어 창의 위치를 변경할 수 있으므로, 제목 표시줄을 탭으로 꽉 채우면 안 됩니다. 따라서 제목 표시줄에 탭을 표시할 때 제목 표시줄의 일부를 끌기 가능 영역으로 예약해 두어야 합니다. 끌기 가능 영역을 지정하지 않으면 제목 표시줄 전체가 끌기 가능 영역으로 되며, 이렇게 되면 탭이 입력 이벤트를 받을 수 없습니다. TabView가 창의 제목 표시줄에 표시되는 경우 항상 [TabStripFooter](/uwp/api/microsoft.ui.xaml.controls.tabview.tabstripfooter)를 [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview)에 포함하고 끌기 가능 영역으로 표시해야 합니다.
 
-자세한 내용은 [제목 표시줄 사용자 지정](https://docs.microsoft.com/windows/uwp/design/shell/title-bar)을 참조하세요.
+자세한 내용은 [제목 표시줄 사용자 지정](../shell/title-bar.md)을 참조하세요.
 
 ![제목 표시줄의 탭](images/tabview/tab-extend-to-title.png)
 
@@ -329,6 +329,6 @@ private void NavigateToNumberedTabKeyboardAccelerator_Invoked(KeyboardAccelerato
 
 ## <a name="related-articles"></a>관련된 문서
 
-- [MasterDetails](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/master-details)
-- [NavigationView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview)
-- [피벗](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/pivot)
+- [MasterDetails](./master-details.md)
+- [NavigationView](./navigationview.md)
+- [피벗](./pivot.md)

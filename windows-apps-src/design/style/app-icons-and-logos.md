@@ -9,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0ad8b78538a2b047501361072a017658ba152e73
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 5c39ded4157181581412f01e54772db2bf9a1732
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82971008"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174627"
 ---
 # <a name="app-icons-and-logos"></a>앱 아이콘 및 로고 
 
@@ -52,7 +52,7 @@ ms.locfileid: "82971008"
 | 배지 로고 | 앱의 타일 | BadgeLogo.png  |
 | 패키지 로고/Microsoft Store 로고 | 앱 설치 관리자, 파트너 센터, Microsoft Store의 "앱 보고" 옵션, Microsoft Store의 "리뷰 작성" 옵션 | StoreLogo.png  |
 
-\*[업로드된 이미지만 Microsoft Store에 표시](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store)하도록 선택하지 않는 이상 이러한 아이콘이 사용됩니다. 
+\*[업로드된 이미지만 Microsoft Store에 표시](../../publish/app-screenshots-and-images.md#display-only-uploaded-logo-images-in-the-store)하도록 선택하지 않는 이상 이러한 아이콘이 사용됩니다. 
 
 이러한 아이콘이 모든 화면에서 선명하게 보이게 하려면 여러 표시 배율을 대비하여 동일한 아이콘의 여러 버전을 만들면 됩니다. 
 
@@ -75,13 +75,13 @@ ms.locfileid: "82971008"
 
 "Microsoft Store에서 앱 목록의 이미지를 지정하려면 어떻게 해야 하나요"?
 
-기본적으로 이 페이지의 맨 위에 있는 표에 설명된 것처럼 Microsoft Store의 패키지에 있는 이미지를 사용합니다([제출 프로세스 중에 사용자가 제공하는 다른 이미지](https://docs.microsoft.com/windows/uwp/publish/app-screenshots-and-images)와 함께). 하지만 Windows 10(Xbox 포함)의 고객에게 목록을 표시할 때 Microsoft Store에서 앱 패키지의 로고 이미지를 사용하지 못하도록 하고, 그 대신 사용자가 업로드한 이미지만 사용하게 할 수도 있습니다. 이렇게 하면 Microsoft Store의 다양한 디스플레이에서 앱 모양을 훨씬 정교하게 제어할 수 있습니다. (제품에서 이전 OS 버전을 지원하는 경우 이 옵션을 사용하더라도 패키지의 이미지가 계속 표시될 수 있습니다.) 이 작업은 제출 프로세스 중에 **Microsoft Store 목록** 단계의 **Microsoft Store 로고** 섹션에서 수행할 수 있습니다.
+기본적으로 이 페이지의 맨 위에 있는 표에 설명된 것처럼 Microsoft Store의 패키지에 있는 이미지를 사용합니다([제출 프로세스 중에 사용자가 제공하는 다른 이미지](../../publish/app-screenshots-and-images.md)와 함께). 하지만 Windows 10(Xbox 포함)의 고객에게 목록을 표시할 때 Microsoft Store에서 앱 패키지의 로고 이미지를 사용하지 못하도록 하고, 그 대신 사용자가 업로드한 이미지만 사용하게 할 수도 있습니다. 이렇게 하면 Microsoft Store의 다양한 디스플레이에서 앱 모양을 훨씬 정교하게 제어할 수 있습니다. (제품에서 이전 OS 버전을 지원하는 경우 이 옵션을 사용하더라도 패키지의 이미지가 계속 표시될 수 있습니다.) 이 작업은 제출 프로세스 중에 **Microsoft Store 목록** 단계의 **Microsoft Store 로고** 섹션에서 수행할 수 있습니다.
 
 ![앱 제출 프로세스 중에 Microsoft Store 로고 지정](images/app-icons/storelogodisplay.png)
 
 이 확인란을 선택하면 **Microsoft Store 디스플레이 이미지**라는 새 섹션이 나타납니다. 여기서 Microsoft Store가 앱 패키지의 로고 이미지 자리에 사용할 3가지 이미지 크기 300 x 300, 150 x 150 및 71 x 71 픽셀을 업로드할 수 있습니다. 이 중에서 300 x 300 크기만 필수이지만, 3가지 크기를 모두 제공하는 것이 좋습니다.
 
-자세한 내용은 [업로드된 로고 이미지만 Microsoft Store에 표시](/windows/uwp/publish/app-screenshots-and-images#display-only-uploaded-logo-images-in-the-store)를 참조하세요.
+자세한 내용은 [업로드된 로고 이미지만 Microsoft Store에 표시](../../publish/app-screenshots-and-images.md#display-only-uploaded-logo-images-in-the-store)를 참조하세요.
 
 <!-- ### Fallback images for the Store
 
@@ -96,7 +96,7 @@ If these images aren't provided, the Store will search all matching images of th
 
 The Store may also use your app's tile and other images that you include in your app's package. 
 
-For more information, see [App screenshots, images, and trailers in the Microsoft Store](/windows/uwp/publish/app-screenshots-and-images). -->
+For more information, see [App screenshots, images, and trailers in the Microsoft Store](../../publish/app-screenshots-and-images.md). -->
 
 
 ## <a name="managing-app-icons-with-the-visual-studio-manifest-designer"></a>Visual Studio 매니페스트 디자이너를 사용하여 앱 아이콘 관리
@@ -185,7 +185,7 @@ Visual Studio가 이미지 파일을 생성하여 프로젝트에 추가합니�
 
 Square150x150Logo-scale-100.png, Square150x150Logo-scale-200.png, Square150x150Logo-scale-400.png
 
-Visual Studio는 기본적으로 배지 로고를 생성하지 않습니다. 배지 로고는 고유하며 다른 앱 아이콘과 일치하면 안 되기 때문입니다. 자세한 내용은 [Windows 앱에 대한 배지 알림 문서](/windows/uwp/design/shell/tiles-and-notifications/badges)를 참조하세요. 
+Visual Studio는 기본적으로 배지 로고를 생성하지 않습니다. 배지 로고는 고유하며 다른 앱 아이콘과 일치하면 안 되기 때문입니다. 자세한 내용은 [Windows 앱에 대한 배지 알림 문서](../shell/tiles-and-notifications/badges.md)를 참조하세요. 
 
 
 ## <a name="more-about-app-icon-assets"></a>앱 아이콘 자산에 대한 자세한 정보
@@ -253,13 +253,13 @@ Windows 작업 표시줄의 아이콘에 나타나는 이러한 자산의 예는
 
 
 ## <a name="more-about-splash-screen-assets"></a>시작 화면 자산에 대한 자세한 정보
-시작 화면에 대한 자세한 내용은 [Windows 앱 시작 화면](/windows/uwp/launch-resume/splash-screens)을 참조하세요.
+시작 화면에 대한 자세한 내용은 [Windows 앱 시작 화면](../../launch-resume/splash-screens.md)을 참조하세요.
 
 ## <a name="more-about-badge-logo-assets"></a>배지 로고 자산에 대한 자세한 정보
 
 자산 생성기를 사용하여 필요한 모든 자산을 생성하는 경우 자산 생성기가 기본적으로 배지 로고를 생성하지 않는 이유가 있습니다. 배지 로고는 다른 앱 자산과 매우 다릅니다. 배지 로고는 알림 및 앱의 타일에 표시되는 상태 이미지입니다. 
 
-자세한 내용은 [Windows 앱에 대한 배지 알림](/windows/uwp/design/shell/tiles-and-notifications/badges)을 참조하세요.
+자세한 내용은 [Windows 앱에 대한 배지 알림](../shell/tiles-and-notifications/badges.md)을 참조하세요.
 
 
 ## <a name="customizing-asset-padding"></a>자산 안쪽 여백 사용자 지정
@@ -313,16 +313,3 @@ Windows 작업 표시줄의 아이콘에 나타나는 이러한 자산의 예는
 이 문서에서는 특정 배율에 맞는 자산을 만드는 방법을 설명했지만, 다양한 조건 및 조건 조합에 맞는 자산을 만들 수도 있습니다. 예를 들어 고대비 디스플레이나 밝은 테마 및 어두운 테마의 아이콘을 만들 수 있습니다. 심지어 특정 언어에 대한 자산도 만들 수 있습니다.
 
 자세한 지침은 [언어, 배율, 고대비 및 기타 한정자에 맞게 리소스 조정](../../app-resources/tailor-resources-lang-scale-contrast.md)을 참조하세요.
-
-
-
-
-
-
-
-
-
-
-
-
-

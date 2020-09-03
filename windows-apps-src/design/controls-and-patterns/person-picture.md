@@ -11,16 +11,16 @@ design-contact: kimsea
 dev-contact: kefodero
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a43c6592b5a9b243a19f3491ea54c05d10e7b0f7
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 0f2c9a80dbe821feb910636eb26e783ec7eb309a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970838"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169647"
 ---
 # <a name="person-picture-control"></a>인물 사진 컨트롤
 
-인물 사진 컨트롤은 사람의 아바타 이미지가 있는 경우 해당 이미지를 표시하고, 없는 경우 사람의 이니셜이나 일반 글자 모양을 표시합니다. 컨트롤을 사용하여 사람의 연락처 정보를 관리하는 개체인 [Contact 개체](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact)를 표시하거나 수동으로 표시 이름과 프로필 사진 등의 연락처 정보를 제공할 수 있습니다.
+인물 사진 컨트롤은 사람의 아바타 이미지가 있는 경우 해당 이미지를 표시하고, 없는 경우 사람의 이니셜이나 일반 글자 모양을 표시합니다. 컨트롤을 사용하여 사람의 연락처 정보를 관리하는 개체인 [Contact 개체](/uwp/api/Windows.ApplicationModel.Contacts.Contact)를 표시하거나 수동으로 표시 이름과 프로필 사진 등의 연락처 정보를 제공할 수 있습니다.
 
 ![인물 사진 컨트롤](images/person-picture/person-picture_hero.png)
 
@@ -30,9 +30,9 @@ ms.locfileid: "82970838"
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **PersonPicture** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **PersonPicture** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
 
-> **플랫폼 API**: [PersonPicture 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.personpicture), [Contact 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact), [ContactManager 클래스](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)
+> **플랫폼 API**: [PersonPicture 클래스](/uwp/api/windows.ui.xaml.controls.personpicture), [Contact 클래스](/uwp/api/Windows.ApplicationModel.Contacts.Contact), [ContactManager 클래스](/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -86,7 +86,7 @@ ms.locfileid: "82970838"
 
 ## <a name="using-the-person-picture-control-to-display-a-contact-object"></a>인물 사진 컨트롤을 사용하여 Contact 개체 표시
 
-사람 선택 컨트롤을 사용하여 [Contact](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) 개체를 표시할 수 있습니다.
+사람 선택 컨트롤을 사용하여 [Contact](/uwp/api/Windows.ApplicationModel.Contacts.Contact) 개체를 표시할 수 있습니다.
 
 ```xaml
 <Page
@@ -174,11 +174,11 @@ namespace SampleApp
 ```
 
 > [!NOTE]
-> 코드를 단순하게 유지하기 위해 이 예제에서는 새 Contact 개체를 만듭니다. 실제 앱에서는 사용자가 연락처를 선택하게 하거나 [ContactManager](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)를 사용하여 연락처 목록을 쿼리합니다. 연락처 검색 및 관리에 대한 자세한 내용은 [연락처 및 일정 문서](../../contacts-and-calendar/index.md)를 참조하세요.
+> 코드를 단순하게 유지하기 위해 이 예제에서는 새 Contact 개체를 만듭니다. 실제 앱에서는 사용자가 연락처를 선택하게 하거나 [ContactManager](/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)를 사용하여 연락처 목록을 쿼리합니다. 연락처 검색 및 관리에 대한 자세한 내용은 [연락처 및 일정 문서](../../contacts-and-calendar/index.md)를 참조하세요.
 
 ## <a name="determining-which-info-to-display"></a>표시할 정보 결정
 
-[Contact](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Contacts.Contact) 개체를 제공하면 인물 사진 컨트롤이 이를 평가하여 표시할 수 있는 정보를 결정합니다.
+[Contact](/uwp/api/Windows.ApplicationModel.Contacts.Contact) 개체를 제공하면 인물 사진 컨트롤이 이를 평가하여 표시할 수 있는 정보를 결정합니다.
 
 이미지를 사용할 수 있는 경우 컨트롤에서 찾는 첫 번째 이미지를 다음과 같은 순서로 표시합니다.
 

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Python, Windows 10, Microsoft, Windows의 Python, WSL을 사용하는 Python 웹, Linux용 Windows 하위 시스템을 사용하는 Python 웹앱, Windows에서 Python 웹 개발, Windows의 Flask 앱, Windows의 Django 앱, Python 웹, Windows에서 Flask 웹 개발, Windows에서 Django 웹 개발, Python을 사용한 Windows 웹 개발, VS Code Python 웹 개발, Remote - WSL 확장, Ubuntu, WSL, venv, pip, Microsoft Python 확장, Windows에서 Python 실행, Windows에서 Python 사용, Windows에서 Python으로 빌드
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 3ae3b04738152ff1a142e1599cc05357006456b9
-ms.sourcegitcommit: 2af814b7f94ee882f42fae8f61130b9cc9833256
+ms.openlocfilehash: fedfb42e4c1604b3570c2b4db21b12926bea3762
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83717142"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174567"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>웹 개발을 위해 Windows에서 Python 사용 시작
 
@@ -29,14 +29,14 @@ Python을 웹 개발 이외의 용도로 사용하는 경우 Microsoft Store를 
 
 WSL을 사용하면 Windows 및 자주 사용하는 도구(예: Visual Studio Code, Outlook 등)와 직접 통합된 GNU/Linux 명령줄 환경을 실행할 수 있습니다.
 
-WSL(또는 요구에 따라 WSL 2)를 사용하고 설치하려면 [WSL 설치 문서](https://docs.microsoft.com/windows/wsl/install-win10)의 단계를 따르세요. 이 단계에는 Linux 배포판(예: Ubuntu) 선택이 포함됩니다.
+WSL(또는 요구에 따라 WSL 2)를 사용하고 설치하려면 [WSL 설치 문서](/windows/wsl/install-win10)의 단계를 따르세요. 이 단계에는 Linux 배포판(예: Ubuntu) 선택이 포함됩니다.
 
 WSL과 Linux 배포판을 설치했으면 Linux 배포판(Windows 시작 메뉴에서 찾을 수 있음)을 열고 `lsb_release -dc` 명령을 사용하여 버전과 코드 이름을 확인합니다.
 
 최신 패키지를 유지하기 위해 설치 직후를 포함하여 Linux 배포를 정기적으로 업데이트하는 것이 좋습니다. 이 업데이트는 Windows에서 자동으로 처리하지 않습니다. 배포를 업데이트하려면 `sudo apt update && sudo apt upgrade` 명령을 사용합니다.  
 
 > [!TIP]
-> 여러 탭(여러 Linux 명령 프롬프트, Windows 명령 프롬프트, PowerShell, Azure CLI 간에 신속하게 전환), 사용자 지정 키 바인딩(탭 열기 또는 닫기, 복사+붙여넣기 등을 위한 바로 가기 키), 검색 기능 및 사용자 지정 테마(색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도)를 사용하려면 [Microsoft Store에서 새 Windows 터미널 설치](https://www.microsoft.com/store/apps/9n0dx20hk701)를 고려합니다. [자세한 정보를 알아보세요](https://docs.microsoft.com/windows/terminal).
+> 여러 탭(여러 Linux 명령 프롬프트, Windows 명령 프롬프트, PowerShell, Azure CLI 간에 신속하게 전환), 사용자 지정 키 바인딩(탭 열기 또는 닫기, 복사+붙여넣기 등을 위한 바로 가기 키), 검색 기능 및 사용자 지정 테마(색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도)를 사용하려면 [Microsoft Store에서 새 Windows 터미널 설치](https://www.microsoft.com/store/apps/9n0dx20hk701)를 고려합니다. [자세한 정보를 알아보세요](/windows/terminal).
 
 ## <a name="set-up-visual-studio-code"></a>Visual Studio Code 설정
 
@@ -321,5 +321,5 @@ Python은 해석된 언어이며 다양한 유형의 인터프리터(Python2, An
 
 - [VS Code를 사용하는 Python 자습서](https://code.visualstudio.com/docs/python/python-tutorial): VS Code를 Python 환경으로 소개하는 자습서이며, 주로 코드를 편집, 실행 및 디버그하는 방법을 설명합니다.
 - [VS Code의 Git 지원](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support): VS Code에서 Git 버전 제어의 기본 기능을 사용하는 방법을 알아봅니다.  
-- [WSL 2에서 곧 제공될 업데이트에 대해 자세히 알아보기](https://docs.microsoft.com/windows/wsl/wsl2-index): 이 새 버전은 Linux 배포에서 Windows와 상호 작용하는 방식을 변경하여 파일 시스템 성능을 높이고 전체 시스템 호출 호환성을 추가합니다.
-- [Windows에서 여러 Linux 배포 사용](https://docs.microsoft.com/windows/wsl/wsl-config): Windows 머신에서 여러 Linux 배포를 관리하는 방법을 알아봅니다.
+- [WSL 2에서 곧 제공될 업데이트에 대해 자세히 알아보기](/windows/wsl/wsl2-index): 이 새 버전은 Linux 배포에서 Windows와 상호 작용하는 방식을 변경하여 파일 시스템 성능을 높이고 전체 시스템 호출 호환성을 추가합니다.
+- [Windows에서 여러 Linux 배포 사용](/windows/wsl/wsl-config): Windows 머신에서 여러 Linux 배포를 관리하는 방법을 알아봅니다.

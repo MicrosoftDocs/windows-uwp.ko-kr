@@ -7,22 +7,22 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
-ms.openlocfilehash: 9848fc9e330a725f52ce2a7fae8b13f300476cf7
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: b4cd240882b920f06d06bf1143924a075e7cde53
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970198"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165547"
 ---
 # <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>자습서: Grid 및 StackPanel을 사용하여 간단한 날씨 앱 만들기
 
 XAML을 사용하여 **Grid** 및 **StackPanel** 요소로 간단한 날씨 앱의 레이아웃을 만들 수 있습니다. 이러한 도구를 사용하면 Windows 10을 실행하는 모든 디바이스에서 작동하는 근사한 앱을 만들 수 있습니다. 이 자습서는 10-20분 정도 걸립니다.
 
-> **중요 API**: [Grid 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.grid), [StackPanel 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel)
+> **중요 API**: [Grid 클래스](/uwp/api/windows.ui.xaml.controls.grid), [StackPanel 클래스](/uwp/api/windows.ui.xaml.controls.stackpanel)
 
 ## <a name="prerequisites"></a>필수 구성 요소
 - Windows 10 및 Microsoft Visual Studio 2015 이상. (현재 개발 및 보안 업데이트에 대해 최신 Visual Studio가 권장됨) [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](../../get-started/get-set-up.md).
-- XAML 및 C#을 사용하여 기본 "Hello World" 앱을 만드는 방법에 대한 지식. 아직 살펴보지 않았다면 [여기를 클릭하여 "Hellow World" 앱을 만드는 방법을 알아보세요](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
+- XAML 및 C#을 사용하여 기본 "Hello World" 앱을 만드는 방법에 대한 지식. 아직 살펴보지 않았다면 [여기를 클릭하여 "Hellow World" 앱을 만드는 방법을 알아보세요](../../get-started/create-a-hello-world-app-xaml-universal.md).
 
 ## <a name="step-1-create-a-blank-app"></a>1단계: 비어 있는 앱 만들기
 1. Visual Studio 메뉴에서 **파일** > **새 프로젝트**를 선택합니다.
@@ -51,7 +51,7 @@ XAML에서 **Grid**는 일련의 행과 열로 이루어집니다. **Grid** 내�
 
 새 **Grid**는 앱 인터페이스의 레이아웃을 정의하는 두 개의 행과 열 집합을 만듭니다. 첫 번째 열은 **Width**가 "3\*"이고, 두 번째 열은 "5\*"이므로 두 열 사이의 가로 공간이 3:5 비율로 분할됩니다. 마찬가지로, 두 행의 **Height**는 각각 "2\*" 및 "\*"이므로 **Grid**에서 두 번째 행보다 세 배의 공간이 첫 번째 행에 할당됩니다("\*"는 "1\*"과 같음). 이러한 비율은 창 크기를 조정하거나 디바이스를 변경하는 경우에도 유지됩니다.
 
-행과 열의 크기를 조정하는 다른 방법을 알아보려면 [XAML을 사용하여 레이아웃 정의](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)를 참조하세요.
+행과 열의 크기를 조정하는 다른 방법을 알아보려면 [XAML을 사용하여 레이아웃 정의](./layouts-with-xaml.md)를 참조하세요.
 
 지금 응용 프로그램을 실행하면 **Grid** 영역에 콘텐츠가 없으므로 빈 페이지만 표시됩니다. **Grid**를 표시하기 위해 색을 지정하겠습니다.
 
@@ -120,6 +120,6 @@ XAML에서 **Grid**는 일련의 행과 열로 이루어집니다. **Grid** 내�
 원하는 경우 위의 레이아웃을 실험해보고, 날씨 데이터를 표시할 수 있는 다양한 방법을 살펴보세요.
 
 ## <a name="related-articles"></a>관련된 문서
-Windows 앱 레이아웃 디자인 소개를 보려면 [Windows 앱 디자인 소개](https://docs.microsoft.com/windows/uwp/layout/design-and-ui-intro)를 참조하세요.
+Windows 앱 레이아웃 디자인 소개를 보려면 [Windows 앱 디자인 소개](../basics/design-and-ui-intro.md)를 참조하세요.
 
-다양한 화면 크기에 맞게 조정되는 반응형 레이아웃을 만드는 방법에 대한 자세한 내용은 [XAML을 사용하여 페이지 레이아웃 정의](https://docs.microsoft.com/windows/uwp/layout/layouts-with-xaml)를 참조하세요.
+다양한 화면 크기에 맞게 조정되는 반응형 레이아웃을 만드는 방법에 대한 자세한 내용은 [XAML을 사용하여 페이지 레이아웃 정의](./layouts-with-xaml.md)를 참조하세요.

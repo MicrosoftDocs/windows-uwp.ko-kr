@@ -6,18 +6,18 @@ ms.date: 07/06/2020
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: b806344fa7e0517caf4d04efaaa605371a200202
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: f66650291e2966d6a3a6ac2b5d794006382d2fbf
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493208"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170027"
 ---
 # <a name="write-a-custom-plugin-for-device-portal"></a>디바이스 포털용 사용자 지정 플러그 인 작성
 
 Windows 장치 포털을 사용하여 웹 페이지를 호스팅하고 진단 정보를 제공하는 UWP 앱을 작성하는 방법을 알아보세요.
 
-Windows 10 크리에이터스 업데이트(버전 1703, 빌드 15063)부터는 장치 포털을 사용하여 앱의 진단 인터페이스를 호스팅할 수 있습니다. 이 문서에서는 [애플리케이션 패키지 매니패스트](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest) 변경, [장치 포털 서비스](/windows/uwp/debug-test-perf/device-portal)에 대한 앱의 연결 설정, 수신 요청 처리 등 앱에 대한 DevicePortalProvider를 만들기 위해 필요한 세 가지 요소에 대해 설명합니다.
+Windows 10 크리에이터스 업데이트(버전 1703, 빌드 15063)부터는 장치 포털을 사용하여 앱의 진단 인터페이스를 호스팅할 수 있습니다. 이 문서에서는 [애플리케이션 패키지 매니패스트](/uwp/schemas/appxpackage/appx-package-manifest) 변경, [장치 포털 서비스](./device-portal.md)에 대한 앱의 연결 설정, 수신 요청 처리 등 앱에 대한 DevicePortalProvider를 만들기 위해 필요한 세 가지 요소에 대해 설명합니다.
 
 ## <a name="create-a-new-uwp-app-project"></a>새 UWP앱 프로젝트 만들기
 
@@ -75,10 +75,10 @@ Microsoft Visual Studio에서는 UWP 앱 프로젝트를 만듭니다. **파일 
 ```
 
 > [!NOTE]
-> "devicePortalProvider" 기능은 제한되어 있습니다("rescap"). 즉, 앱을 게시하기 전에 Microsoft Store에서 사전 승인을 받아야 합니다. 그러나 테스트용 로드를 통해 로컬에서 앱을 테스트할 수는 있습니다. 제한된 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 선언](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)을 참조하세요.
+> "devicePortalProvider" 기능은 제한되어 있습니다("rescap"). 즉, 앱을 게시하기 전에 Microsoft Store에서 사전 승인을 받아야 합니다. 그러나 테스트용 로드를 통해 로컬에서 앱을 테스트할 수는 있습니다. 제한된 접근 권한 값에 대한 자세한 내용은 [앱 접근 권한 선언](../packaging/app-capability-declarations.md)을 참조하세요.
 
 ## <a name="set-up-your-background-task-and-winrt-component"></a>백그라운드 작업 및 WinRT 구성 요소 설정
-장치 포털 연결을 설정하려면 앱이 앱 내에서 실행되는 장치 포털 인스턴스로 장치 포털 서비스의 앱 서비스 연결을 후크해야 합니다. 이를 위해 [**IBackgroundTask**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtask)를 구현하는 클래스를 사용하여 새 WinRT 구성 요소를 애플리케이션에 추가합니다.
+장치 포털 연결을 설정하려면 앱이 앱 내에서 실행되는 장치 포털 인스턴스로 장치 포털 서비스의 앱 서비스 연결을 후크해야 합니다. 이를 위해 [**IBackgroundTask**](/uwp/api/windows.applicationmodel.background.ibackgroundtask)를 구현하는 클래스를 사용하여 새 WinRT 구성 요소를 애플리케이션에 추가합니다.
 
 ```csharp
 namespace MySampleProvider {
@@ -88,7 +88,7 @@ namespace MySampleProvider {
     }
 ```
 
-해당 이름이 AppService EntryPoint("MySampleProvider.SampleProvider")에서 설정한 네임스페이스 및 클래스 이름과 일치하는지 확인합니다. 장치 포털 공급자에 첫 번째로 요청하면 장치 포털은 요청을 숨기고, 앱의 백그라운드 작업을 시작하고, 이를 **실행** 메서드로 명명하고, [**IBackgroundTaskInstance**](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance)에 전달합니다. 그러면 앱에서 이를 사용하여 [**DevicePortalConnection**](https://docs.microsoft.com/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnection) 인스턴스를 설정합니다.
+해당 이름이 AppService EntryPoint("MySampleProvider.SampleProvider")에서 설정한 네임스페이스 및 클래스 이름과 일치하는지 확인합니다. 장치 포털 공급자에 첫 번째로 요청하면 장치 포털은 요청을 숨기고, 앱의 백그라운드 작업을 시작하고, 이를 **실행** 메서드로 명명하고, [**IBackgroundTaskInstance**](/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance)에 전달합니다. 그러면 앱에서 이를 사용하여 [**DevicePortalConnection**](/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnection) 인스턴스를 설정합니다.
 
 ```csharp
 // Implement background task handler with a DevicePortalConnection
@@ -108,10 +108,10 @@ public void Run(IBackgroundTaskInstance taskInstance) {
 }
 ```
 
-요청 처리 루프를 완료하려면 장치 포털이 종료될 때마다 발생하는 **Closed** 이벤트와 수신 HTTP 요청을 표시하고 장치 포털 공급자의 주요 기능을 제공하는 [**RequestReceived**](https://docs.microsoft.com/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs) 이벤트를 앱에서 반드시 처리해야 합니다. 
+요청 처리 루프를 완료하려면 장치 포털이 종료될 때마다 발생하는 **Closed** 이벤트와 수신 HTTP 요청을 표시하고 장치 포털 공급자의 주요 기능을 제공하는 [**RequestReceived**](/uwp/api/windows.system.diagnostics.deviceportal.deviceportalconnectionrequestreceivedeventargs) 이벤트를 앱에서 반드시 처리해야 합니다. 
 
 ## <a name="handle-the-requestreceived-event"></a>RequestReceived 이벤트 처리
-플러그 인의 지정된 처리기 경로에서 HTTP 요청이 발생할 때마다 **RequestReceived** 이벤트가 한 번씩 발생합니다. 장치 포털 공급자에 대한 요청 처리 루프는 NodeJS Express의 요청 처리 루프와 비슷하게 요청 및 응답 개체가 이벤트와 함께 제공되고 처리기는 응답 개체를 작성하여 응답합니다. 장치 포털 공급자에서 **RequestReceived** 이벤트 및 처리기는 [**Windows.Web.Http.HttpRequestMessage**](https://docs.microsoft.com/uwp/api/windows.web.http.httprequestmessage) 및 [**HttpResponseMessage**](https://docs.microsoft.com/uwp/api/windows.web.http.httpresponsemessage) 개체를 사용합니다.   
+플러그 인의 지정된 처리기 경로에서 HTTP 요청이 발생할 때마다 **RequestReceived** 이벤트가 한 번씩 발생합니다. 장치 포털 공급자에 대한 요청 처리 루프는 NodeJS Express의 요청 처리 루프와 비슷하게 요청 및 응답 개체가 이벤트와 함께 제공되고 처리기는 응답 개체를 작성하여 응답합니다. 장치 포털 공급자에서 **RequestReceived** 이벤트 및 처리기는 [**Windows.Web.Http.HttpRequestMessage**](/uwp/api/windows.web.http.httprequestmessage) 및 [**HttpResponseMessage**](/uwp/api/windows.web.http.httpresponsemessage) 개체를 사용합니다.   
 
 ```csharp
 // Sample RequestReceived echo handler: respond with an HTML page including the query and some additional process information. 
@@ -136,7 +136,7 @@ private void DevicePortalConnection_RequestReceived(DevicePortalConnection sende
 }
 ```
 
-이 샘플 요청 처리기는 *args* 매개 변수에서 요청 및 응답 개체를 끌어온 다음, 요청 URL과 몇 가지 추가 HTML 형식으로 문자열을 만듭니다. 이 문자열은 [**HttpStringContent**](https://docs.microsoft.com/uwp/api/windows.web.http.httpstringcontent) 인스턴스로 응답 개체에 추가됩니다. "문자열", "버퍼" 등에 대한 다른 [**IHttpContent**](https://docs.microsoft.com/uwp/api/windows.web.http.ihttpcontent) 클래스도 허용됩니다.
+이 샘플 요청 처리기는 *args* 매개 변수에서 요청 및 응답 개체를 끌어온 다음, 요청 URL과 몇 가지 추가 HTML 형식으로 문자열을 만듭니다. 이 문자열은 [**HttpStringContent**](/uwp/api/windows.web.http.httpstringcontent) 인스턴스로 응답 개체에 추가됩니다. "문자열", "버퍼" 등에 대한 다른 [**IHttpContent**](/uwp/api/windows.web.http.ihttpcontent) 클래스도 허용됩니다.
 
 그러면 응답이 HTTP 응답으로 설정되며 200(OK) 상태 코드가 부여됩니다. 처음 호출한 브라우저에서 예상대로 렌더링됩니다. **RequestReceived** 이벤트 처리기가 반환될 때 응답 메시지는 자동으로 사용자 에이전트에 반환됩니다. 추가 "send" 메서드가 필요 없습니다.
 
@@ -176,7 +176,7 @@ if (req.RequestUri.LocalPath.ToLower().Contains("/www/")) {
 
 ![장치 포털 플러그 인 출력](images/device-portal/plugin-output.png)
  
-중요한 것은, webbRest에서 HttpPost/DeleteExpect200 메서드를 사용하면 [CSRF 처리](https://docs.microsoft.com/aspnet/web-api/overview/security/preventing-cross-site-request-forgery-csrf-attacks)가 자동으로 수행되며, 그러면 웹 페이지에서 상태 변경 REST API를 호출할 수 있습니다.  
+중요한 것은, webbRest에서 HttpPost/DeleteExpect200 메서드를 사용하면 [CSRF 처리](/aspnet/web-api/overview/security/preventing-cross-site-request-forgery-csrf-attacks)가 자동으로 수행되며, 그러면 웹 페이지에서 상태 변경 REST API를 호출할 수 있습니다.  
 
 > [!NOTE] 
 > 장치 포털에 포함된 정적 콘텐츠의 주요 변경 사항은 보증되지 않습니다. API는 자주 변경되지 않지만 *common.js* 및 *controls.js* 파일에서는 변경될 수 있으므로 공급자가 사용하면 안 됩니다. 
@@ -197,6 +197,4 @@ if (req.RequestUri.LocalPath.ToLower().Contains("/www/")) {
 
 ## <a name="related-topics"></a>관련 항목
 * [Windows 장치 포털 개요](device-portal.md)
-* [앱 서비스 만들기 및 사용](https://docs.microsoft.com/windows/uwp/launch-resume/how-to-create-and-consume-an-app-service)
-
-
+* [앱 서비스 만들기 및 사용](../launch-resume/how-to-create-and-consume-an-app-service.md)

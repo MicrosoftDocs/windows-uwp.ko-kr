@@ -151,6 +151,8 @@
       href: ../audio-video-camera/codec-query.md
     - name: 화면 캡처
       href: ../audio-video-camera/screen-capture.md
+    - name: 비디오로 화면 캡처
+      href: ../audio-video-camera/screen-capture-video.md
 - name: 통신
   items:
     - name: 앱 간 통신

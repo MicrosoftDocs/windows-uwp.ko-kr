@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a8b53eef3538ca637fa5b351b74125eebdfe2b3
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: e2d727c9b5e4c7e2912f0bcae8848149c8073f3b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942843"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169747"
 ---
 # <a name="nested-ui-in-list-items"></a>목록 항목의 중첩된 UI
 
@@ -26,9 +26,9 @@ ms.locfileid: "88942843"
 
 중첩된 UI를 사용하여 중요 작업 실행을 가속화하는 추가 옵션을 사용자에게 제공할 수 있습니다. 그러나 표시하는 작업이 많을수록 UI가 복잡해집니다. 이 UI 패턴을 사용할 경우 더 많은 주의가 필요합니다. 이 문서에서는 특정 UI에 가장 적합한 작업 과정을 결정하는 지침을 제공합니다.
 
-> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [GridView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview)
+> **중요 API**: [ListView 클래스](/uwp/api/windows.ui.xaml.controls.listview), [GridView 클래스](/uwp/api/windows.ui.xaml.controls.gridview)
 
-이 문서에서는 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview) 및 [GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview) 항목에서 중첩된 UI를 생성하는 방법에 대해 설명합니다. 이 섹션에서는 다른 중첩 UI 사례에 대해 다루지 않지만 이러한 개념에 대해서는 설명합니다. 시작하기 전에 UI에 있는 ListView 또는 GridView 컨트롤 사용에 대한 일반 지침을 잘 알고 있어야 합니다. 이에 대한 내용은 [목록](lists.md) 및 [ListView 및 GridView](listview-and-gridview.md) 문서를 참조하세요.
+이 문서에서는 [ListView](/uwp/api/windows.ui.xaml.controls.listview) 및 [GridView](/uwp/api/windows.ui.xaml.controls.gridview) 항목에서 중첩된 UI를 생성하는 방법에 대해 설명합니다. 이 섹션에서는 다른 중첩 UI 사례에 대해 다루지 않지만 이러한 개념에 대해서는 설명합니다. 시작하기 전에 UI에 있는 ListView 또는 GridView 컨트롤 사용에 대한 일반 지침을 잘 알고 있어야 합니다. 이에 대한 내용은 [목록](lists.md) 및 [ListView 및 GridView](listview-and-gridview.md) 문서를 참조하세요.
 
 이 문서에서 사용되는 용어인 *목록*, *목록 항목* 및 *중첩된 UI*의 정의는 다음과 같습니다.
 - *목록*은 목록 보기 또는 그리드 보기에 포함된 항목의 컬렉션을 의미합니다.
@@ -37,7 +37,7 @@ ms.locfileid: "88942843"
 
 ![중첩된 UI 부분](images/nested-ui-example-1.png)
 
-> 참고&nbsp;&nbsp; ListView와 GridView는 모두 [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록에 대한 설명은 ListView 및 GridView 컨트롤에 모두 적용됩니다.
+> 참고&nbsp;&nbsp; ListView와 GridView는 모두 [ListViewBase](/uwp/api/windows.ui.xaml.controls.listviewbase) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록에 대한 설명은 ListView 및 GridView 컨트롤에 모두 적용됩니다.
 
 ## <a name="primary-and-secondary-actions"></a>기본 및 보조 작업
 
@@ -137,7 +137,7 @@ Windows에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인
 - 목록 항목 왼쪽에 있는 UI 요소에서 Tab 키를 누르면 포커스가 **A**로 이동합니다.
 - 목록 항목 오른쪽에 있는 UI 요소에서 Shift+Tab을 누르면 포커스가 **C**로 이동합니다.
 
-이 UI를 구현하려면 목록에서 [IsItemClickEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled)를 **true**로 설정합니다. [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode)는 임의의 값으로 설정할 수 있습니다.
+이 UI를 구현하려면 목록에서 [IsItemClickEnabled](/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled)를 **true**로 설정합니다. [SelectionMode](/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode)는 임의의 값으로 설정할 수 있습니다.
 
 이를 구현하는 코드에 대해서는 이 문서의 [예제](#example) 섹션을 참조하세요.
 
@@ -151,9 +151,9 @@ Windows에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인
 
 
 이 UI를 구현하려면 목록에서 다음 속성을 설정합니다.
-- [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode)를 **None**으로 설정합니다.
-- [IsItemClickEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled)를 **false**로 설정합니다.
-- [IsFocusEngagementEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isfocusengagementenabled)를 **true**로 설정합니다.
+- [SelectionMode](/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode)를 **None**으로 설정합니다.
+- [IsItemClickEnabled](/uwp/api/windows.ui.xaml.controls.listviewbase.isitemclickenabled)를 **false**로 설정합니다.
+- [IsFocusEngagementEnabled](/uwp/api/windows.ui.xaml.controls.control.isfocusengagementenabled)를 **true**로 설정합니다.
 
 ```xaml
 <ListView SelectionMode="None" IsItemClickEnabled="False" >

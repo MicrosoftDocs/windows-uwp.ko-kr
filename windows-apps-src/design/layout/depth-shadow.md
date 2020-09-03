@@ -9,12 +9,12 @@ ms.custom: 19H1
 keywords: windows 10, uwp
 pm-contact: chigy
 ms.localizationpriority: medium
-ms.openlocfilehash: 2655abd69f0f02efada9de5bab22e463c86b5d7e
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: fc2adb295df97cf1af49608d15c135b9f56b4594
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970188"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165567"
 ---
 # <a name="z-depth-and-shadow"></a>Z-깊이 및 그림자
 
@@ -54,7 +54,7 @@ MenuFlyout에서 ThemeShadow를 구현하는 방법은 다음과 같습니다. M
 별도로 지정하지 않는 한, 다음 공용 컨트롤은 자동으로 ThemeShadow를 사용하여 32px 깊이에서 그림자를 적용합니다.
 
 - [상황에 맞는 메뉴](../controls-and-patterns/menus.md), [명령 모음](../controls-and-patterns/app-bars.md), [명령 모음 플라이아웃](../controls-and-patterns/command-bar-flyout.md), [메뉴 모음](../controls-and-patterns/menus.md#create-a-menu-bar)
-- [대화 상자 및 플라이아웃](../controls-and-patterns/dialogs.md)(64px 대화 상자)
+- [대화 상자 및 플라이아웃](../controls-and-patterns/dialogs-and-flyouts/index.md)(64px 대화 상자)
 - [NavigationView](../controls-and-patterns/navigationview.md)
 - [ComboBox](../controls-and-patterns/combo-box.md), [DropDownButton, SplitButton, ToggleSplitButton](../controls-and-patterns/buttons.md)
 - [TeachingTip](../controls-and-patterns/dialogs-and-flyouts/teaching-tip.md)
@@ -96,9 +96,9 @@ PopupRectangle.Translation += new Vector3(0, 0, 32);
 
 ### <a name="disabling-default-themeshadow-on-custom-flyout-controls"></a>사용자 지정 플라이아웃 컨트롤에서 기본 ThemeShadow 사용 안 함
 
-[Flyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.flyout), [DatePickerFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.datepickerflyout), [MenuFlyout](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.menuflyout) 또는 [TimePickerFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.timepickerflyout) 기반의 컨트롤은 자동으로 ThemeShadow를 사용하여 그림자를 적용합니다.
+[Flyout](/uwp/api/Windows.UI.Xaml.Controls.flyout), [DatePickerFlyout](/uwp/api/windows.ui.xaml.controls.datepickerflyout), [MenuFlyout](/uwp/api/Windows.UI.Xaml.Controls.menuflyout) 또는 [TimePickerFlyout](/uwp/api/windows.ui.xaml.controls.timepickerflyout) 기반의 컨트롤은 자동으로 ThemeShadow를 사용하여 그림자를 적용합니다.
 
-컨트롤 콘텐츠에 기본 그림자가 올바르게 표시되지 않는 경우, 연결된 FlyoutPresenter의 [IsDefaultShadowEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flyoutpresenter.isdefaultshadowenabled) 속성을 `false`로 설정하여 그림자를 사용하지 않도록 설정할 수 있습니다.
+컨트롤 콘텐츠에 기본 그림자가 올바르게 표시되지 않는 경우, 연결된 FlyoutPresenter의 [IsDefaultShadowEnabled](/uwp/api/windows.ui.xaml.controls.flyoutpresenter.isdefaultshadowenabled) 속성을 `false`로 설정하여 그림자를 사용하지 않도록 설정할 수 있습니다.
 
 ```xaml
 <Flyout>
@@ -154,7 +154,7 @@ Rectangle2.Translation += new Vector3(120, 0, 32);
 
 ## <a name="drop-shadow"></a>그림자
 
-DropShadow는 환경에 자동으로 반응하지 않으며 광원을 사용하지 않습니다. 예제 구현은 [DropShadow 클래스](https://docs.microsoft.com/uwp/api/windows.ui.composition.dropshadow)를 참조하세요.
+DropShadow는 환경에 자동으로 반응하지 않으며 광원을 사용하지 않습니다. 예제 구현은 [DropShadow 클래스](/uwp/api/windows.ui.composition.dropshadow)를 참조하세요.
 
 ## <a name="which-shadow-should-i-use"></a>사용해야 하는 그림자
 

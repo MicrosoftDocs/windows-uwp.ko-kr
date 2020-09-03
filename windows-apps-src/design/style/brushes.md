@@ -6,12 +6,12 @@ ms.date: 04/28/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 350b07e96d95b043116f2eb8029a2352360c50d6
-ms.sourcegitcommit: 490b563462853f10f14825f2358e4852ee1011fb
+ms.openlocfilehash: 9e70c76f3ed659a46dd9834442049849dd3b7761
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82632998"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175527"
 ---
 # <a name="using-brushes-to-paint-backgrounds-foregrounds-and-outlines"></a>브러시를 사용하여 배경, 전경 및 윤곽선 그리기
 
@@ -50,7 +50,7 @@ ms.locfileid: "82632998"
 
 *사각형에 적용된 SolidColorBrush*
 
-XAML 대신 코드를 사용하여 [**SolidColorBrush**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush)를 정의하는 경우 이름이 지정된 각 색을 [**Colors**](https://docs.microsoft.com/uwp/api/windows.ui.colors) 클래스의 정적 속성 값으로 사용할 수 있습니다. 예를 들어 **SolidColorBrush**의 [**Color**](/uwp/api/windows.ui.xaml.media.solidcolorbrush.color) 값을 선언하여 이름이 지정된 색 "Orchid"를 나타내려면 **Color** 값을 정적 값 [**Colors.Orchid**](/uwp/api/windows.ui.colors.orchid)로 설정합니다.
+XAML 대신 코드를 사용하여 [**SolidColorBrush**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush)를 정의하는 경우 이름이 지정된 각 색을 [**Colors**](/uwp/api/windows.ui.colors) 클래스의 정적 속성 값으로 사용할 수 있습니다. 예를 들어 **SolidColorBrush**의 [**Color**](/uwp/api/windows.ui.xaml.media.solidcolorbrush.color) 값을 선언하여 이름이 지정된 색 "Orchid"를 나타내려면 **Color** 값을 정적 값 [**Colors.Orchid**](/uwp/api/windows.ui.colors.orchid)로 설정합니다.
 
 ### <a name="hexadecimal-color-values"></a>16진수 색 값
 
@@ -66,7 +66,7 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](/uwp/api/Windows.UI.Xam
 
 ### <a name="property-element-syntax"></a>속성 요소 구문
 
-속성 요소 구문을 사용하여 [**SolidColorBrush**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush)를 정의할 수 있습니다. 이 구문은 이전 방법보다 더 자세하지만 [**Opacity**](/uwp/api/windows.ui.xaml.media.brush.opacity)와 같은 요소의 추가 속성 값을 지정할 수 있습니다. 속성 요소 구문을 포함하여 XAML 구문에 대한 자세한 내용은 [XAML 개요](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-overview) 및 [XAML 구문 가이드](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-syntax-guide)를 참조하세요.
+속성 요소 구문을 사용하여 [**SolidColorBrush**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush)를 정의할 수 있습니다. 이 구문은 이전 방법보다 더 자세하지만 [**Opacity**](/uwp/api/windows.ui.xaml.media.brush.opacity)와 같은 요소의 추가 속성 값을 지정할 수 있습니다. 속성 요소 구문을 포함하여 XAML 구문에 대한 자세한 내용은 [XAML 개요](../../xaml-platform/xaml-overview.md) 및 [XAML 구문 가이드](../../xaml-platform/xaml-syntax-guide.md)를 참조하세요.
 
 이전 예제에서 만드는 브러시는 가장 일반적인 경우에 UI 정의를 단순하게 유지하는 데 도움이 되는 의도적인 XAML 언어 줄임의 일부로 암시적이고 자동으로 만들어집니다. 다음 예제에서는 [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle)을 만들고 [**Rectangle.Fill**](/uwp/api/windows.ui.xaml.shapes.shape.fill) 속성의 요소 값으로 [**SolidColorBrush**](/uwp/api/Windows.UI.Xaml.Media.SolidColorBrush)를 명시적으로 만듭니다. **SolidColorBrush**의 [**Color**](/uwp/api/windows.ui.xaml.media.solidcolorbrush.color)는 [**Blue**](/uwp/api/windows.ui.colors.blue)로 설정되어 있고 [**Opacity**](/uwp/api/windows.ui.xaml.media.brush.opacity)는 0.5로 설정되어 있습니다.
 
@@ -184,7 +184,7 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](/uwp/api/Windows.UI.Xam
 
 *렌더링된 ImageBrush*
 
-[**ImageBrush**](/uwp/api/Windows.UI.Xaml.Media.ImageBrush) 및 [**Image**](/uwp/api/Windows.UI.Xaml.Controls.Image)는 모두 URI(Uniform Resource Identifier)를 사용하여 이미지 원본 파일을 참조합니다. 이 경우 이미지 원본 파일은 가능한 여러 이미지 형식을 사용합니다. 이러한 이미지 원본 파일은 URI로 지정됩니다. 이미지 원본, 사용 가능한 이미지 형식을 지정하고 앱에 패키징하는 방법에 대한 자세한 내용은 [Image 및 ImageBrush](https://docs.microsoft.com/windows/uwp/controls-and-patterns/images-imagebrushes)를 참조하세요.
+[**ImageBrush**](/uwp/api/Windows.UI.Xaml.Media.ImageBrush) 및 [**Image**](/uwp/api/Windows.UI.Xaml.Controls.Image)는 모두 URI(Uniform Resource Identifier)를 사용하여 이미지 원본 파일을 참조합니다. 이 경우 이미지 원본 파일은 가능한 여러 이미지 형식을 사용합니다. 이러한 이미지 원본 파일은 URI로 지정됩니다. 이미지 원본, 사용 가능한 이미지 형식을 지정하고 앱에 패키징하는 방법에 대한 자세한 내용은 [Image 및 ImageBrush](../controls-and-patterns/images-imagebrushes.md)를 참조하세요.
 
 ## <a name="brushes-and-text"></a>브러시 및 텍스트
 
@@ -198,9 +198,9 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](/uwp/api/Windows.UI.Xam
 
 ## <a name="xamlcompositionbrushbase"></a>XamlCompositionBrushBase
 
-[**XamlCompositionBrushBase**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)는 [**CompositionBrush**](https://docs.microsoft.com/uwp/api/Windows.UI.Composition.CompositionBrush)를 사용하여 XAML UI 요소를 그리는 사용자 지정 브러시를 만드는 데 사용되는 기본 클래스입니다.
+[**XamlCompositionBrushBase**](/uwp/api/windows.ui.xaml.media.xamlcompositionbrushbase)는 [**CompositionBrush**](/uwp/api/Windows.UI.Composition.CompositionBrush)를 사용하여 XAML UI 요소를 그리는 사용자 지정 브러시를 만드는 데 사용되는 기본 클래스입니다.
 
-이렇게 하면 [**시각적 계층 개요**](/windows/uwp/composition/visual-layer)에 설명된 대로 Windows.UI.Xaml과 Windows.UI.Composition 계층 간의 “드롭다운” 상호 운용이 가능합니다. 
+이렇게 하면 [**시각적 계층 개요**](../../composition/visual-layer.md)에 설명된 대로 Windows.UI.Xaml과 Windows.UI.Composition 계층 간의 “드롭다운” 상호 운용이 가능합니다. 
 
 사용자 지정 브러시를 만들려면 XamlCompositionBrushBase를 상속하는 새 클래스를 만들고 필요한 메서드를 구현합니다.
 
@@ -243,7 +243,3 @@ blueBrush = ref new SolidColorBrush(Windows::UI::Colors::Blue);
  
 
  
-
-
-
-

@@ -5,16 +5,16 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 오류, 처리, 예외
 ms.localizationpriority: medium
-ms.openlocfilehash: 1092427659cfbf2fb7d1b5dbfc9cb8802dcfeccd
-ms.sourcegitcommit: 1e8f51d5730fe748e9fe18827895a333d94d337f
+ms.openlocfilehash: c721c70f19533053821139429b9bbd8bcd17f68a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87296158"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170227"
 ---
 # <a name="error-handling-with-cwinrt"></a>C++/WinRT를 통한 오류 처리
 
-이 항목에서는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)로 프로그래밍하는 경우 오류를 처리하기 위한 전략을 설명합니다. 일반적인 내용과 배경은 [오류 및 예외 처리(최신 C++)](/cpp/cpp/errors-and-exception-handling-modern-cpp)를 참조하세요.
+이 항목에서는 [C++/WinRT](./intro-to-using-cpp-with-winrt.md)로 프로그래밍하는 경우 오류를 처리하기 위한 전략을 설명합니다. 일반적인 내용과 배경은 [오류 및 예외 처리(최신 C++)](/cpp/cpp/errors-and-exception-handling-modern-cpp)를 참조하세요.
 
 ## <a name="avoid-catching-and-throwing-exceptions"></a>예외 catch 및 throw 방지
 [예외로부터 안전한 코드](/cpp/cpp/how-to-design-for-exception-safety)를 계속 작성하면서, 가능한 한 예외 catch 및 throw를 방지하는 것이 좋습니다. 예외 처리기가 없는 경우, Windows에서 문제가 있는 위치를 추적하는 데 도움이 되는 오류 보고서(크래시 미니덤프 포함)를 자동으로 생성합니다.
@@ -70,7 +70,7 @@ IAsyncAction MakeThumbnailsAsync()
 HRESULT 코드를 살펴볼 때 [**winrt::hresult_error::code**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresult_errorcode-function)를 사용하는 것이 좋습니다. 반면 [**winrt::hresult_error::to_abi**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresult_errorto_abi-function) 함수는 COM 오류 개체로 변환되어 COM 스레드 로컬 스토리지에 상태를 푸시합니다.
 
 ## <a name="throwing-exceptions"></a>예외 발생
-지정된 함수 호출이 실패하면 애플리케이션을 복구할 수 없다고 결정하는 경우가 있습니다(더 이상 예상대로 작동할 것으로 신뢰할 수 없음). 아래 코드 예제는 [**winrt::handle**](/uwp/cpp-ref-for-winrt/handle) 값을 [**CreateEvent**](https://docs.microsoft.com/windows/desktop/api/synchapi/nf-synchapi-createeventa)에서 반환된 HANDLE의 래퍼로 사용합니다. 그런 다음, `bool` 값을 만들어 핸들을 [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool) 함수 템플릿에 전달합니다. **winrt::check_bool**은 `bool`이나 `false`(오류 조건) 또는 `true`(성공 조건)로 변환할 수 있는 모든 값으로 작업합니다.
+지정된 함수 호출이 실패하면 애플리케이션을 복구할 수 없다고 결정하는 경우가 있습니다(더 이상 예상대로 작동할 것으로 신뢰할 수 없음). 아래 코드 예제는 [**winrt::handle**](/uwp/cpp-ref-for-winrt/handle) 값을 [**CreateEvent**](/windows/desktop/api/synchapi/nf-synchapi-createeventa)에서 반환된 HANDLE의 래퍼로 사용합니다. 그런 다음, `bool` 값을 만들어 핸들을 [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool) 함수 템플릿에 전달합니다. **winrt::check_bool**은 `bool`이나 `false`(오류 조건) 또는 `true`(성공 조건)로 변환할 수 있는 모든 값으로 작업합니다.
 
 ```cppwinrt
 winrt::handle h{ ::CreateEvent(nullptr, false, false, nullptr) };
@@ -81,7 +81,7 @@ winrt::check_bool(::SetEvent(h.get()));
 [**winrt::check_bool**](/uwp/cpp-ref-for-winrt/error-handling/check-bool)에 전달한 값이 false이면 다음 작업 시퀀스가 발생합니다.
 
 - **winrt::check_bool**이 [**winrt::throw_last_error**](/uwp/cpp-ref-for-winrt/error-handling/throw-last-error) 함수를 호출합니다.
-- **winrt::throw_last_error**가 [**GetLastError**](https://docs.microsoft.com/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)를 호출하여 호출 스레드의 마지막 오류 코드 값을 검색한 다음, [**winrt::throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) 함수를 호출합니다.
+- **winrt::throw_last_error**가 [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)를 호출하여 호출 스레드의 마지막 오류 코드 값을 검색한 다음, [**winrt::throw_hresult**](/uwp/cpp-ref-for-winrt/error-handling/throw-hresult) 함수를 호출합니다.
 - **winrt::throw_hresult**가 오류 코드를 나타내는 [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 개체(또는 표준 개체)를 사용하여 예외를 throw합니다.
 
 Windows API는 다양한 반환 값 형식을 사용하여 런타임 오류를 보고하기 때문에 **winrt::check_bool** 외에도 값을 확인하고 예외를 throw하기 위한 다른 몇 가지 유용한 도우미 함수가 있습니다.

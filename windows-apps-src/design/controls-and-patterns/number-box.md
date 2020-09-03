@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a74d98298f2c51059d8293022817e91ba573cf45
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 5e3bcbfc338d629bbda1036ef722d75ed6df37cd
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970698"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169757"
 ---
 # <a name="number-box"></a>숫자 상자
 
@@ -22,18 +22,18 @@ ms.locfileid: "82970698"
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **NumberBox** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리가 필요합니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **NumberBox** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리가 필요합니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](/uwp/toolkits/winui/)를 참조하세요. |
 
-**Windows UI 라이브러리 API:** [NumberBox 클래스](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.NumberBox)
+**Windows UI 라이브러리 API:** [NumberBox 클래스](/uwp/api/microsoft.ui.xaml.controls.NumberBox)
 
 > [!TIP]
-> 이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이를 [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page) 요소(`xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`)에 추가했습니다.
+> 이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이를 [Page](/uwp/api/windows.ui.xaml.controls.page) 요소(`xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`)에 추가했습니다.
 >
 >코드 숨김에서는 C#의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이 **using** 문(`using muxc = Microsoft.UI.Xaml.Controls;`)을 파일 맨 위에 추가했습니다.
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-숫자 상자 컨트롤을 사용하여 수학 입력을 캡처하고 표시할 수 있습니다. 숫자 이외의 값을 허용하는 편집 가능한 입력란이 필요한 경우 [TextBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) 컨트롤을 사용합니다. 암호나 다른 중요한 입력을 허용하는 편집 가능한 텍스트 상자가 필요한 경우 [PasswordBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox)를 참조하세요. 검색어를 입력하는 입력란이 필요한 경우 [AutoSuggestBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox)를 참조하세요. 서식 있는 텍스트를 입력하거나 편집해야 하는 경우 [RichEditBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox)를 참조하세요.
+숫자 상자 컨트롤을 사용하여 수학 입력을 캡처하고 표시할 수 있습니다. 숫자 이외의 값을 허용하는 편집 가능한 입력란이 필요한 경우 [TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox) 컨트롤을 사용합니다. 암호나 다른 중요한 입력을 허용하는 편집 가능한 텍스트 상자가 필요한 경우 [PasswordBox](/uwp/api/windows.ui.xaml.controls.passwordbox)를 참조하세요. 검색어를 입력하는 입력란이 필요한 경우 [AutoSuggestBox](/uwp/api/windows.ui.xaml.controls.autosuggestbox)를 참조하세요. 서식 있는 텍스트를 입력하거나 편집해야 하는 경우 [RichEditBox](/uwp/api/windows.ui.xaml.controls.richeditbox)를 참조하세요.
 
 ## <a name="examples"></a>예
 
@@ -53,7 +53,7 @@ ms.locfileid: "82970698"
 
 ### <a name="create-a-simple-numberbox"></a>간단한 NumberBox 만들기
 
-다음은 기본 NumberBox에 대한 기본 모양을 보여 주는 XAML입니다. 사용자에게 표시되는 데이터가 앱에 저장된 데이터와 동기화 상태를 유지하도록 하려면 [x:Bind](/windows/uwp/xaml-platform/x-bind-markup-extension#property-path)를 사용합니다.
+다음은 기본 NumberBox에 대한 기본 모양을 보여 주는 XAML입니다. 사용자에게 표시되는 데이터가 앱에 저장된 데이터와 동기화 상태를 유지하도록 하려면 [x:Bind](../../xaml-platform/x-bind-markup-extension.md#property-path)를 사용합니다.
 
 ```xaml
 <muxc:NumberBox Value="{x:Bind Path=ViewModel.NumberBoxValue, Mode=TwoWay}" />

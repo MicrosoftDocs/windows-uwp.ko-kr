@@ -6,22 +6,22 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b3143247eab0bd8ed4266b78e34ec54dafa4dd7e
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8a438c5c0fa0e3dbe932c393291afe05b28b3e4a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74259564"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175427"
 ---
 # <a name="open-files-and-folders-with-a-picker"></a>선택기를 사용하여 파일 및 폴더 열기
 
 **중요 API**
 
--   [**FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker)
--   [**FolderPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FolderPicker)
--   [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile)
+-   [**FileOpenPicker**](/uwp/api/Windows.Storage.Pickers.FileOpenPicker)
+-   [**FolderPicker**](/uwp/api/Windows.Storage.Pickers.FolderPicker)
+-   [**StorageFile**](/uwp/api/Windows.Storage.StorageFile)
 
-사용자가 선택기를 조작할 수 있도록 하여 파일 및 폴더에 액세스합니다. [  **FileOpenPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) 및 [**FileSavePicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) 클래스를 사용하여 파일에 액세스하고 [**FolderPicker**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FolderPicker) 클래스를 사용하여 폴더에 액세스할 수 있습니다.
+사용자가 선택기를 조작할 수 있도록 하여 파일 및 폴더에 액세스합니다. [  **FileOpenPicker**](/uwp/api/Windows.Storage.Pickers.FileOpenPicker) 및 [**FileSavePicker**](/uwp/api/Windows.Storage.Pickers.FileSavePicker) 클래스를 사용하여 파일에 액세스하고 [**FolderPicker**](/uwp/api/Windows.Storage.Pickers.FolderPicker) 클래스를 사용하여 폴더에 액세스할 수 있습니다.
 
 > [!NOTE]
 > 전체 샘플에 대해서는 [파일 선택기 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FilePicker)을 참조하세요.
@@ -31,7 +31,7 @@ ms.locfileid: "74259564"
 
 -   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
-    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](https://docs.microsoft.com/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요.
+    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](../threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.md)을 참조하세요. C++에서 비동기 앱을 작성하는 방법은 [C++의 비동기 프로그래밍](../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md)을 참조하세요.
 
 -   **위치에 대한 액세스 권한**
 
@@ -55,9 +55,9 @@ ms.locfileid: "74259564"
 ## <a name="how-pickers-work"></a>선택기 작동 방식
 
 
-선택기를 통해 앱은 사용자 시스템의 파일 및 폴더를 액세스하고 찾아보고 저장할 수 있습니다. 앱은 사용자가 작업할 수 있도록 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 및 [**StorageFolder**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFolder) 개체로 이러한 선택을 수신합니다.
+선택기를 통해 앱은 사용자 시스템의 파일 및 폴더를 액세스하고 찾아보고 저장할 수 있습니다. 앱은 사용자가 작업할 수 있도록 [**StorageFile**](/uwp/api/Windows.Storage.StorageFile) 및 [**StorageFolder**](/uwp/api/Windows.Storage.StorageFolder) 개체로 이러한 선택을 수신합니다.
 
-선택기는 통합된 단일 인터페이스를 사용하여 사용자가 파일 시스템이나 다른 앱에서 파일 및 폴더를 선택할 수 있도록 합니다. 다른 앱에서 선택한 파일은 파일 시스템의 파일과 유사하며 [**StorageFile**](https://docs.microsoft.com/uwp/api/Windows.Storage.StorageFile) 개체로 반환됩니다. 일반적으로 앱은 다른 개체와 동일한 방식으로 해당 개체에서 작동할 수 있습니다. 다른 앱에서는 파일 선택기 계약에 참여함으로써 파일을 사용할 수 있게 합니다. 앱에서 다른 앱에 파일, 저장 위치 또는 파일 업데이트를 제공하도록 하려면 [파일 선택기 계약과 통합](https://docs.microsoft.com/previous-versions/windows/apps/hh465192(v=win.10))을 참조하세요.
+선택기는 통합된 단일 인터페이스를 사용하여 사용자가 파일 시스템이나 다른 앱에서 파일 및 폴더를 선택할 수 있도록 합니다. 다른 앱에서 선택한 파일은 파일 시스템의 파일과 유사하며 [**StorageFile**](/uwp/api/Windows.Storage.StorageFile) 개체로 반환됩니다. 일반적으로 앱은 다른 개체와 동일한 방식으로 해당 개체에서 작동할 수 있습니다. 다른 앱에서는 파일 선택기 계약에 참여함으로써 파일을 사용할 수 있게 합니다. 앱에서 다른 앱에 파일, 저장 위치 또는 파일 업데이트를 제공하도록 하려면 [파일 선택기 계약과 통합](/previous-versions/windows/apps/hh465192(v=win.10))을 참조하세요.
 
 예를 들어 사용자가 파일을 열 수 있도록 앱에서 파일 선택기를 호출할 수 있습니다. 그러면 해당 앱이 호출 앱이 됩니다. 파일 선택기는 시스템 및/또는 다른 앱과 상호 작용하여 사용자가 파일을 탐색하고 선택할 수 있도록 합니다. 사용자가 파일을 선택하면 파일 선택기는 해당 파일을 앱에 반환합니다. 사용자가 OneDrive와 같은 제공 앱에서 파일을 선택할 경우의 프로세스는 다음과 같습니다.
 
@@ -103,13 +103,13 @@ else
     ```
     사용자 및 앱과 관련된 파일 선택기 개체에서 속성을 설정합니다.
 
-    이 예제에서는 세 가지 속성을 설정하여 사용자가 선택할 수 있는 편리한 위치에 사진의 풍부한 시각적 개체를 만듭니다. [**ViewMode**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.viewmode), [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation) 및 [**FileTypeFilter**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.filetypefilter).
+    이 예제에서는 세 가지 속성을 설정하여 사용자가 선택할 수 있는 편리한 위치에 사진의 풍부한 시각적 개체를 만듭니다. [**ViewMode**](/uwp/api/windows.storage.pickers.fileopenpicker.viewmode), [**SuggestedStartLocation**](/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation) 및 [**FileTypeFilter**](/uwp/api/windows.storage.pickers.fileopenpicker.filetypefilter).
 
-    -   [**ViewMode**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.viewmode)를 [**PickerViewMode**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode) **Thumbnail** 열거형 값으로 설정하면 파일 선택기에서 파일을 나타내기 위해 사진 미리 보기를 사용하여 풍부한 시각적 표시를 만듭니다. 이렇게 하려면 사진이나 비디오와 같은 시각적 파일을 선택합니다. 그렇지 않으면 [**PickerViewMode.List**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerViewMode)를 사용합니다. **사진 또는 비디오 첨부** 및 **문서 첨부** 기능이 있는 가상 메일 앱은 파일 선택기를 표시하기 전에 기능에 적합한 **ViewMode**를 설정합니다.
+    -   [**ViewMode**](/uwp/api/windows.storage.pickers.fileopenpicker.viewmode)를 [**PickerViewMode**](/uwp/api/Windows.Storage.Pickers.PickerViewMode) **Thumbnail** 열거형 값으로 설정하면 파일 선택기에서 파일을 나타내기 위해 사진 미리 보기를 사용하여 풍부한 시각적 표시를 만듭니다. 이렇게 하려면 사진이나 비디오와 같은 시각적 파일을 선택합니다. 그렇지 않으면 [**PickerViewMode.List**](/uwp/api/Windows.Storage.Pickers.PickerViewMode)를 사용합니다. **사진 또는 비디오 첨부** 및 **문서 첨부** 기능이 있는 가상 메일 앱은 파일 선택기를 표시하기 전에 기능에 적합한 **ViewMode**를 설정합니다.
 
-    -   [  **PickerLocationId.PicturesLibrary**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation)를 사용하여 [**SuggestedStartLocation**](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.PickerLocationId)을 사진으로 설정하면 사용자가 사진을 찾을 수 있을 것 같은 위치에서 시작됩니다. **SuggestedStartLocation**을 선택하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
+    -   [  **PickerLocationId.PicturesLibrary**](/uwp/api/windows.storage.pickers.fileopenpicker.suggestedstartlocation)를 사용하여 [**SuggestedStartLocation**](/uwp/api/Windows.Storage.Pickers.PickerLocationId)을 사진으로 설정하면 사용자가 사진을 찾을 수 있을 것 같은 위치에서 시작됩니다. **SuggestedStartLocation**을 선택하려는 파일 형식(예: 음악, 사진, 동영상 또는 문서)에 적절한 위치로 설정합니다. 사용자는 시작 위치에서 다른 위치로 이동할 수 있습니다.
 
-    -   [  **FileTypeFilter**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileopenpicker.filetypefilter)를 사용하여 파일 형식을 지정하면 사용자가 관련 있는 파일을 선택하는 데 집중할 수 있습니다. **FileTypeFilter**의 이전 파일 형식을 새 항목으로 대체하려면 [**Add**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileextensionvector.replaceall) 대신 [**ReplaceAll**](https://docs.microsoft.com/uwp/api/windows.storage.pickers.fileextensionvector.append)을 사용합니다.
+    -   [  **FileTypeFilter**](/uwp/api/windows.storage.pickers.fileopenpicker.filetypefilter)를 사용하여 파일 형식을 지정하면 사용자가 관련 있는 파일을 선택하는 데 집중할 수 있습니다. **FileTypeFilter**의 이전 파일 형식을 새 항목으로 대체하려면 [**Add**](/uwp/api/windows.storage.pickers.fileextensionvector.replaceall) 대신 [**ReplaceAll**](/uwp/api/windows.storage.pickers.fileextensionvector.append)을 사용합니다.
 
 2.  **FileOpenPicker 표시**
 
@@ -173,4 +173,4 @@ else
 ```
 
 > [!TIP]
-> 앱이 선택기를 통해 파일 또는 폴더에 액세스할 경우 해당 항목을 앱의 [**FutureAccessList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.futureaccesslist) 또는 [**MostRecentlyUsedList**](https://docs.microsoft.com/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist)에 추가하여 추적합니다. 이러한 목록을 사용하는 방법에 대한 자세한 내용은 [최근에 사용한 파일 및 폴더를 추적하는 방법](how-to-track-recently-used-files-and-folders.md)을 참조하세요.
+> 앱이 선택기를 통해 파일 또는 폴더에 액세스할 경우 해당 항목을 앱의 [**FutureAccessList**](/uwp/api/windows.storage.accesscache.storageapplicationpermissions.futureaccesslist) 또는 [**MostRecentlyUsedList**](/uwp/api/windows.storage.accesscache.storageapplicationpermissions.mostrecentlyusedlist)에 추가하여 추적합니다. 이러한 목록을 사용하는 방법에 대한 자세한 내용은 [최근에 사용한 파일 및 폴더를 추적하는 방법](how-to-track-recently-used-files-and-folders.md)을 참조하세요.

@@ -6,12 +6,12 @@ ms.date: 09/12/2019
 keywords: Windows 10의 접근성, 접근성, 접근성 지원 win32 앱 빌드, 접근성 지원 UWP 앱 빌드, 접근성 지원 WPF 앱 빌드, 접근성 지원 WinForms 앱 빌드
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
-ms.openlocfilehash: 04dc3571f6b2d8ddf57a3695330070d7c5b5061e
-ms.sourcegitcommit: 9beb6cce7375b726ad90ee84b72754268ae2819a
+ms.openlocfilehash: 7cdfa91bec648ab6f3d09d0aeff0d62e2962db86
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88047790"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169047"
 ---
 # <a name="accessibility-in-windows-10"></a>Windows 10의 접근성
 
@@ -37,13 +37,13 @@ ms.locfileid: "88047790"
 
       모든 Windows 디바이스(PC, 휴대폰, Xbox One, HoloLens 등)의 Windows 10 애플리케이션 및 게임용 최신 플랫폼에서 접근성 지원 앱과 도구를 개발하여 Microsoft Store에 게시합니다.
 
-      [포괄 소프트웨어 디자인](https://docs.microsoft.com/windows/uwp/accessibility/designing-inclusive-software)
+      [포괄 소프트웨어 디자인](/windows/uwp/accessibility/designing-inclusive-software)
 
-      [포괄 Windows 앱 개발](https://docs.microsoft.com/windows/uwp/accessibility/developing-inclusive-windows-apps)
+      [포괄 Windows 앱 개발](/windows/uwp/accessibility/developing-inclusive-windows-apps)
 
-      [접근성 테스트](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-testing)
+      [접근성 테스트](/windows/uwp/accessibility/accessibility-testing)
 
-      [스토어의 접근성](https://docs.microsoft.com/windows/uwp/accessibility/accessibility-in-the-store)
+      [스토어의 접근성](/windows/uwp/accessibility/accessibility-in-the-store)
    :::column-end:::
    :::column:::
       ![Win32 플랫폼 앱](images/platform-win32.png)
@@ -52,21 +52,21 @@ ms.locfileid: "88047790"
 
       C/C++ Windows 애플리케이션용 원본 플랫폼에서 접근성 지원 앱과 도구를 개발합니다.
 
-      [Windows 접근성 및 자동화의 새로운 기능](https://docs.microsoft.com/windows/desktop/accessibility-whatsnew)
+      [Windows 접근성 및 자동화의 새로운 기능](/windows/desktop/accessibility-whatsnew)
 
-      [접근성 지원 Windows용 애플리케이션 개발](https://docs.microsoft.com/windows/desktop/accessibility-appdev)
+      [접근성 지원 Windows용 애플리케이션 개발](/windows/desktop/accessibility-appdev)
 
-      [접근성 지원 Windows용 UI 프레임워크 개발](https://docs.microsoft.com/windows/desktop/accessibility-uiframeworkdev)
+      [접근성 지원 Windows용 UI 프레임워크 개발](/windows/desktop/accessibility-uiframeworkdev)
 
-      [Windows용 보조 기술 개발](https://docs.microsoft.com/windows/desktop/accessibility-atdev)
+      [Windows용 보조 기술 개발](/windows/desktop/accessibility-atdev)
 
-      [접근성 테스트](https://docs.microsoft.com/windows/desktop/accessibility-testwithuia)
+      [접근성 테스트](/windows/desktop/accessibility-testwithuia)
 
-      [레거시 접근성 및 자동화 기술 - MSAA 및 UI 자동화](https://docs.microsoft.com/windows/desktop/accessibility-legacy)
+      [레거시 접근성 및 자동화 기술 - MSAA 및 UI 자동화](/windows/desktop/accessibility-legacy)
 
-      [Windows 접근성 기능](https://docs.microsoft.com/windows/desktop/winauto/about-windows-accessibility-features)
+      [Windows 접근성 기능](/windows/desktop/winauto/about-windows-accessibility-features)
 
-      [접근성 있는 앱 디자인을 위한 지침](https://docs.microsoft.com/windows/desktop/uxguide/inter-accessibility)
+      [접근성 있는 앱 디자인을 위한 지침](/windows/desktop/uxguide/inter-accessibility)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -77,21 +77,21 @@ ms.locfileid: "88047790"
 
       XAML UI 모델 및 .NET Framework를 사용하여 관리형 Windows 애플리케이션용으로 설정된 플랫폼에서 접근성 지원 앱과 도구를 개발합니다.
 
-      [액세스 가능성에 대한 유용한 정보](https://docs.microsoft.com/dotnet/framework/ui-automation/accessibility-best-practices)
+      [액세스 가능성에 대한 유용한 정보](/dotnet/framework/ui-automation/accessibility-best-practices)
 
-      [UI 자동화 기본 사항](https://docs.microsoft.com/dotnet/framework/ui-automation/index)
+      [UI 자동화 기본 사항](/dotnet/framework/ui-automation/index)
 
-      [관리 코드에 대한 UI 자동화 공급자](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-providers-for-managed-code)
+      [관리 코드에 대한 UI 자동화 공급자](/dotnet/framework/ui-automation/ui-automation-providers-for-managed-code)
 
-      [관리 코드에 대한 UI 자동화 클라이언트](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-clients-for-managed-code)
+      [관리 코드에 대한 UI 자동화 클라이언트](/dotnet/framework/ui-automation/ui-automation-clients-for-managed-code)
 
-      [UI 자동화 컨트롤 패턴](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-control-patterns)
+      [UI 자동화 컨트롤 패턴](/dotnet/framework/ui-automation/ui-automation-control-patterns)
 
-      [UI 자동화 텍스트 패턴](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-text-pattern)
+      [UI 자동화 텍스트 패턴](/dotnet/framework/ui-automation/ui-automation-text-pattern)
 
-      [UI 자동화 컨트롤 형식](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-control-types)
+      [UI 자동화 컨트롤 형식](/dotnet/framework/ui-automation/ui-automation-control-types)
 
-      [UI 자동화 사양 및 커뮤니티 약속](https://docs.microsoft.com/dotnet/framework/ui-automation/ui-automation-specification-and-community-promise)
+      [UI 자동화 사양 및 커뮤니티 약속](/dotnet/framework/ui-automation/ui-automation-specification-and-community-promise)
    :::column-end:::
    :::column:::
       ![Windows Forms 플랫폼 앱](images/platform-winforms.png)
@@ -100,13 +100,13 @@ ms.locfileid: "88047790"
 
       XAML UI 모델 및 .NET Framework를 사용하여 관리형 Windows 애플리케이션용 접근성 지원 앱과 도구를 개발합니다.
 
-      [Windows Forms 접근성](https://docs.microsoft.com/dotnet/framework/winforms/advanced/windows-forms-accessibility)
+      [Windows Forms 접근성](/dotnet/framework/winforms/advanced/windows-forms-accessibility)
 
-      [접근성 지원 Windows 애플리케이션 만들기](https://docs.microsoft.com/dotnet/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application)
+      [접근성 지원 Windows 애플리케이션 만들기](/dotnet/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application)
 
-      [내게 필요한 옵션 지침을 지원하는 Windows Forms 컨트롤의 속성](https://docs.microsoft.com/dotnet/framework/winforms/advanced/properties-on-windows-forms-controls-that-support-accessibility-guidelines)
+      [내게 필요한 옵션 지침을 지원하는 Windows Forms 컨트롤의 속성](/dotnet/framework/winforms/advanced/properties-on-windows-forms-controls-that-support-accessibility-guidelines)
 
-      [Windows Form의 컨트롤에 내게 필요한 옵션 정보 제공](https://docs.microsoft.com/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)
+      [Windows Form의 컨트롤에 내게 필요한 옵션 정보 제공](/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)
    :::column-end:::
 :::row-end:::
 :::row:::
@@ -118,14 +118,14 @@ ms.locfileid: "88047790"
 :::row-end:::
 :::row:::
    :::column:::
-      [웹 접근성 소개](https://docs.microsoft.com/microsoft-edge/accessibility)
+      [웹 접근성 소개](/microsoft-edge/accessibility)
 
-      [접근성 있는 웹 사이트 디자인](https://docs.microsoft.com/microsoft-edge/accessibility/design)
+      [접근성 있는 웹 사이트 디자인](/microsoft-edge/accessibility/design)
    :::column-end:::
    :::column:::
-      [접근성 있는 웹 사이트 빌드](https://docs.microsoft.com/microsoft-edge/accessibility/build)
+      [접근성 있는 웹 사이트 빌드](/microsoft-edge/accessibility/build)
 
-      [접근성 지원 웹 사이트 테스트](https://docs.microsoft.com/microsoft-edge/accessibility/test)
+      [접근성 지원 웹 사이트 테스트](/microsoft-edge/accessibility/test)
    :::column-end:::
 :::row-end:::
 
@@ -135,7 +135,7 @@ ms.locfileid: "88047790"
 
 :::row:::
    :::column:::
-      [코드 샘플 브라우저](https://docs.microsoft.com/samples/browse/)
+      [코드 샘플 브라우저](/samples/browse/)
 
       MSDN 코드 갤러리를 대체하는 새로운 샘플 브라우저입니다.
    :::column-end:::
@@ -253,7 +253,7 @@ ms.locfileid: "88047790"
       [접근성 블로그](https://blogs.microsoft.com/accessibility/)
    :::column-end:::
    :::column:::
-      [Windows UI 자동화 블로그](https://blogs.msdn.microsoft.com/winuiautomation/)
+      [Windows UI 자동화 블로그](/archive/blogs/winuiautomation/)
    :::column-end:::
 :::row-end:::
 :::row:::

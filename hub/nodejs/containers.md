@@ -8,12 +8,12 @@ ms.topic: article
 keywords: ''
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 9467224814b1e26f18031662f5e8d994a8fae1ac
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: a1bd1b0f2916ccf44cc79d83f0335f55cf3863e4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75683676"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166627"
 ---
 # <a name="get-started-using-docker-containers-with-nodejs"></a>Node.js에서 Docker 컨테이너 사용 시작
 
@@ -35,7 +35,7 @@ Node.js 앱에서 Docker 컨테이너 사용을 시작하는 데 도움이 되�
 
 Docker 컨테이너는 가상 머신과 비슷하지만 전체 가상 운영 체제를 만들지는 않습니다. 대신 Docker를 사용하면 앱이 실행 중인 시스템과 동일한 Linux 커널을 사용할 수 있습니다. 따라서 호스트 컴퓨터에 아직 없는 파트만 앱 패키지에 필요하므로 패키지 크기를 줄이고 성능을 높일 수 있습니다.
 
-컨테이너가 인기 있는 또 다른 이유는 [Kubernetes](https://docs.microsoft.com/azure/aks/) 같은 도구와 함께 Docker 컨테이너를 사용하면 지속적인 가용성을 얻을 수 있다는 점입니다. 이렇게 하면 여러 버전의 앱 컨테이너를 서로 다른 시간에 만들 수 있습니다. 업데이트 또는 유지 관리를 위해 전체 시스템을 중단하는 대신, 각 컨테이너(및 해당 마이크로서비스)를 필요할 때 바꿀 수 있습니다. 모든 업데이트가 포함된 새 컨테이너를 준비하고, 프로덕션용 컨테이너를 설정하고, 준비가 되면 새 컨테이너를 가리킬 수 있습니다. 컨테이너를 사용하여 여러 버전의 앱을 보관하고, 필요한 경우 안전 대비책으로 앱을 계속 실행할 수도 있습니다.
+컨테이너가 인기 있는 또 다른 이유는 [Kubernetes](/azure/aks/) 같은 도구와 함께 Docker 컨테이너를 사용하면 지속적인 가용성을 얻을 수 있다는 점입니다. 이렇게 하면 여러 버전의 앱 컨테이너를 서로 다른 시간에 만들 수 있습니다. 업데이트 또는 유지 관리를 위해 전체 시스템을 중단하는 대신, 각 컨테이너(및 해당 마이크로서비스)를 필요할 때 바꿀 수 있습니다. 모든 업데이트가 포함된 새 컨테이너를 준비하고, 프로덕션용 컨테이너를 설정하고, 준비가 되면 새 컨테이너를 가리킬 수 있습니다. 컨테이너를 사용하여 여러 버전의 앱을 보관하고, 필요한 경우 안전 대비책으로 앱을 계속 실행할 수도 있습니다.
 
 ## <a name="install-docker-desktop-wsl-2-tech-preview"></a>Docker Desktop WSL 2 Tech Preview 설치
 
@@ -161,21 +161,21 @@ Docker Hub에 호스팅되는 리포지토리에 새 컨테이너 이미지를 �
 
 7. 일반적으로 컨테이너를 중지하면 해당 컨테이너를 제거해야 합니다. 컨테이너를 제거하면 남아 있는 리소스가 정리됩니다. 컨테이너를 제거하면 해당 컨테이너의 이미지 파일 시스템 내에서 변경한 내용이 영구적으로 손실됩니다. 변경 내용을 나타내려면 새 이미지를 작성해야 합니다. 컨테이너를 제거하려면 `docker rm <container ID>` 명령을 사용합니다.
 
-[Docker를 사용하여 컨테이너화된 웹 애플리케이션 빌드](https://docs.microsoft.com/learn/modules/intro-to-containers/)에 대해 자세히 알아보세요.
+[Docker를 사용하여 컨테이너화된 웹 애플리케이션 빌드](/learn/modules/intro-to-containers/)에 대해 자세히 알아보세요.
 
 ## <a name="deploy-to-azure-container-registry"></a>Azure Container Registry에 배포
 
-[**ACR(Azure Container Registry**](https://azure.microsoft.com/services/container-registry/))을 사용하면 컨테이너 이미지를 인증된 프라이빗 리포지토리에 안전하게 저장, 관리 및 유지할 수 있습니다. 표준 Docker 명령과 호환되는 ACR은 컨테이너 상태 모니터링이나 유지 관리 같은 중요한 작업을 자동으로 처리하고, [Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)와 페어링하여 확장 가능한 오케스트레이션 시스템을 만들 수 있습니다. 주문형으로 빌드할 수도 있고 소스 코드 커밋, 기본 이미지 업데이트 등의 트리거를 사용하여 빌드를 완전히 자동화할 수도 있습니다. 또한 ACR은 방대한 Azure 클라우드 네트워크를 활용하여 네트워크 대기 시간 및 글로벌 배포를 관리하고, [Azure App Service](https://docs.microsoft.com/azure/app-service/)(웹 호스팅, 모바일 백 엔드, REST API의 경우) 또는 [다른 Azure 클라우드 서비스](https://azure.microsoft.com/product-categories/containers/)를 사용하는 모든 사용자를 위해 원활한 기본 환경을 만듭니다.
+[**ACR(Azure Container Registry**](https://azure.microsoft.com/services/container-registry/))을 사용하면 컨테이너 이미지를 인증된 프라이빗 리포지토리에 안전하게 저장, 관리 및 유지할 수 있습니다. 표준 Docker 명령과 호환되는 ACR은 컨테이너 상태 모니터링이나 유지 관리 같은 중요한 작업을 자동으로 처리하고, [Kubernetes](/azure/aks/intro-kubernetes)와 페어링하여 확장 가능한 오케스트레이션 시스템을 만들 수 있습니다. 주문형으로 빌드할 수도 있고 소스 코드 커밋, 기본 이미지 업데이트 등의 트리거를 사용하여 빌드를 완전히 자동화할 수도 있습니다. 또한 ACR은 방대한 Azure 클라우드 네트워크를 활용하여 네트워크 대기 시간 및 글로벌 배포를 관리하고, [Azure App Service](/azure/app-service/)(웹 호스팅, 모바일 백 엔드, REST API의 경우) 또는 [다른 Azure 클라우드 서비스](https://azure.microsoft.com/product-categories/containers/)를 사용하는 모든 사용자를 위해 원활한 기본 환경을 만듭니다.
 
 > [!IMPORTANT]
 > Azure에 자체 컨테이너를 배포하려면 고유한 Azure 구독이 필요하며, 요금이 발생할 수 있습니다. Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정을 만드세요](https://azure.microsoft.com/free/).
 
-Azure Container Registry를 만들고 앱 컨테이너 이미지를 배포하는 방법에 대한 도움말은 연습: [Azure Container Instance에 Docker 이미지 배포](https://docs.microsoft.com/learn/modules/intro-to-containers/7-exercise-deploy-docker-image-to-container-instance)를 참조하세요.
+Azure Container Registry를 만들고 앱 컨테이너 이미지를 배포하는 방법에 대한 도움말은 연습: [Azure Container Instance에 Docker 이미지 배포](/learn/modules/intro-to-containers/7-exercise-deploy-docker-image-to-container-instance)를 참조하세요.
 
 ## <a name="additional-resources"></a>추가 리소스
 
 - [Azure의 Node.js](https://azure.microsoft.com/develop/nodejs/)
-- 빠른 시작: [Azure에서 Node.js 웹앱 만들기](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-nodejs)
-- 온라인 과정: [Azure의 관리자 컨테이너](https://docs.microsoft.com/learn/paths/administer-containers-in-azure/)
+- 빠른 시작: [Azure에서 Node.js 웹앱 만들기](/azure/app-service/app-service-web-get-started-nodejs)
+- 온라인 과정: [Azure의 관리자 컨테이너](/learn/paths/administer-containers-in-azure/)
 - VS Code 사용: [Docker 작업](https://code.visualstudio.com/docs/azure/docker)
 - Docker 문서: [Docker Desktop WSL 2 Tech Preview](https://docs.docker.com/docker-for-windows/wsl-tech-preview/)

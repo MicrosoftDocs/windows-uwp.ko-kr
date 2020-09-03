@@ -9,12 +9,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c91053197cff231ec9fac85263b33306a3735ccd
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0663f9947249f54a888bf2d3f52f522ceb885604
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82034217"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175787"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2 아이콘
 
@@ -22,7 +22,7 @@ ms.locfileid: "82034217"
 
 이 문서는 Segoe MDL2 자산 글꼴에서 제공하는 아이콘을 나열합니다. 
 
-> **중요 API**: [**기호 열거형**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol), [**FontIcon 클래스**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
+> **중요 API**: [**기호 열거형**](/uwp/api/windows.ui.xaml.controls.symbol), [**FontIcon 클래스**](/uwp/api/windows.ui.xaml.controls.fonticon)
 
 ## <a name="about-segoe-mdl2-assets"></a>Segoe MDL2 자산 정보
 
@@ -43,13 +43,13 @@ Windows 10 릴리스에서 Windows 8/8.1의 Segoe UI Symbol 아이콘 글꼴이 
 또한 많은 아이콘에는 아랍어, 페르시아어 및 히브리어와 같은 오른쪽에서 왼쪽 텍스트 방향을 사용하는 언어에 사용할 수 있는 미러링된 양식이 있습니다.
 
 ## <a name="using-the-icons"></a>아이콘 사용
-C#/VB/C++ 및 XAML로 앱을 개발하는 경우 [Symbol 열거형](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.symbol)을 사용하여 Segoe MDL2 자산에서 지정된 문자 모양을 사용할 수 있습니다. 
+C#/VB/C++ 및 XAML로 앱을 개발하는 경우 [Symbol 열거형](/uwp/api/windows.ui.xaml.controls.symbol)을 사용하여 Segoe MDL2 자산에서 지정된 문자 모양을 사용할 수 있습니다. 
 
 ```xaml
 <SymbolIcon Symbol="GlobalNavigationButton"/>
 ```
 
-Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문자 모양을 사용하려면 [**FontIcon**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)을 사용합니다.
+Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문자 모양을 사용하려면 [**FontIcon**](/uwp/api/windows.ui.xaml.controls.fonticon)을 사용합니다.
 
 ```xaml
 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
@@ -5521,7 +5521,5 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 ## <a name="related-articles"></a>관련된 문서
 
 * [아이콘에 대한 지침](../style/icons.md)
-* [Symbol 열거형](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Symbol)
-* [FontIcon 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.fonticon)
-
-
+* [Symbol 열거형](/uwp/api/Windows.UI.Xaml.Controls.Symbol)
+* [FontIcon 클래스](/uwp/api/windows.ui.xaml.controls.fonticon)

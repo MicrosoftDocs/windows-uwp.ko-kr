@@ -5,16 +5,16 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
-ms.openlocfilehash: cd67ea63fc633716cabf9a293a5faeeed6d24b70
-ms.sourcegitcommit: 1e8f51d5730fe748e9fe18827895a333d94d337f
+ms.openlocfilehash: 2d2470b1aa52f8aa4be7e07bf1dfe5213054b005
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87296184"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166247"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>C++/WinRT의 대리자를 사용한 이벤트 처리
 
-본 항목에서는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 사용하여 이벤트 처리 대리자를 등록하거나 취소하는 방법을 보여 줍니다. 표준 C++ 함수와 같은 개체를 사용해 이벤트를 처리할 수 있습니다.
+본 항목에서는 [C++/WinRT](./intro-to-using-cpp-with-winrt.md)를 사용하여 이벤트 처리 대리자를 등록하거나 취소하는 방법을 보여 줍니다. 표준 C++ 함수와 같은 개체를 사용해 이벤트를 처리할 수 있습니다.
 
 > [!NOTE]
 > 프로젝트 템플릿 및 빌드 지원을 함께 제공하는 C++/WinRT Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
@@ -314,6 +314,6 @@ winrt::hstring f(ListView listview)
 * [winrt::implements::get_strong 함수](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)
 
 ## <a name="related-topics"></a>관련 항목
-* [C++/WinRT의 이벤트 작성](/windows/uwp/cpp-and-winrt-apis/author-events)
-* [C++/WinRT를 통한 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)
-* [C++/WinRT의 강력하고 약한 참조](/windows/uwp/cpp-and-winrt-apis/weak-references)
+* [C++/WinRT의 이벤트 작성](./author-events.md)
+* [C++/WinRT를 통한 동시성 및 비동기 작업](./concurrency.md)
+* [C++/WinRT의 강력하고 약한 참조](./weak-references.md)

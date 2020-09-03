@@ -9,23 +9,23 @@ pm-contact: chphilip
 design-contact: ''
 dev-contact: stevenki
 ms.localizationpriority: medium
-ms.openlocfilehash: 098c46499e65c34e3699b09e137ea94c40590ef7
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 6afed2347bb3944c8ea5bd9b43e83d429973dc15
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968009"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169167"
 ---
 # <a name="reveal-focus"></a>포커스 표시
 
 ![영웅 이미지](images/header-reveal-focus.svg)
 
-포커스 표시는 Xbox One, 텔레비전 화면 등의 [3m 환경](/windows/uwp/design/devices/designing-for-tv)에 조명 효과를 제공합니다. 사용자가 게임 패드 또는 키보드 포커스를 포커스 가능 요소(예: 단추)로 이동하면 이러한 요소의 테두리에 애니메이션 효과를 줍니다. 기본적으로 꺼져 있지만 사용하는 방법은 간단합니다. 
+포커스 표시는 Xbox One, 텔레비전 화면 등의 [3m 환경](../devices/designing-for-tv.md)에 조명 효과를 제공합니다. 사용자가 게임 패드 또는 키보드 포커스를 포커스 가능 요소(예: 단추)로 이동하면 이러한 요소의 테두리에 애니메이션 효과를 줍니다. 기본적으로 꺼져 있지만 사용하는 방법은 간단합니다. 
 
-대화형 요소를 강조 표시하는 조명 효과인 강조 표시 효과의 경우 [강조 표시 문서](/windows/uwp/design/style/reveal)를 참조하세요.
+대화형 요소를 강조 표시하는 조명 효과인 강조 표시 효과의 경우 [강조 표시 문서](./reveal.md)를 참조하세요.
 
 
-> **중요 API**: [Application.FocusVisualKind 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.FocusVisualKind), [FocusVisualKind enum](https://docs.microsoft.com/uwp/api/windows.ui.xaml.focusvisualkind), [Control.UseSystemFocusVisuals 속성](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals)
+> **중요 API**: [Application.FocusVisualKind 속성](/uwp/api/windows.ui.xaml.application.FocusVisualKind), [FocusVisualKind enum](/uwp/api/windows.ui.xaml.focusvisualkind), [Control.UseSystemFocusVisuals 속성](/uwp/api/Windows.UI.Xaml.Controls.Control.UseSystemFocusVisuals)
 
 ## <a name="how-it-works"></a>작동 방식
 포커스 표시는 요소의 테두리에 애니메이션 효과를 준 후광을 추가하여 포커스가 있는 요소를 강조 표시합니다.
@@ -70,7 +70,7 @@ ms.locfileid: "82968009"
 
 ## <a name="customizing-reveal-focus"></a>포커스 표시 사용자 지정
 
-각 컨트롤의 포커스 화면 효과 속성을 수정하여 포커스 표시 효과를 사용자 지정할 수 있습니다. [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness), [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness), [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush), [FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) 등의 시각적 속성이 있습니다. 이러한 속성을 사용하여 포커스 영역의 색과 두께를 사용자 지정할 수 있습니다. [높은 가시성 포커스 화면 효과](https://docs.microsoft.com/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals)를 만드는 데 사용하는 속성과 같습니다. 
+각 컨트롤의 포커스 화면 효과 속성을 수정하여 포커스 표시 효과를 사용자 지정할 수 있습니다. [FocusVisualPrimaryThickness](/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness), [FocusVisualSecondaryThickness](/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness), [FocusVisualPrimaryBrush](/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush), [FocusVisualSecondaryBrush](/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) 등의 시각적 속성이 있습니다. 이러한 속성을 사용하여 포커스 영역의 색과 두께를 사용자 지정할 수 있습니다. [높은 가시성 포커스 화면 효과](../input/guidelines-for-visualfeedback.md#high-visibility-focus-visuals)를 만드는 데 사용하는 속성과 같습니다. 
 
 하지만 사용자 지정을 시작하기 전에 포커스 표시를 구성하는 요소를 좀 더 자세히 알아두는 것이 도움이 됩니다.
 
@@ -86,8 +86,8 @@ ms.locfileid: "82968009"
 
 | 테두리 유형 | 속성 |
 | --- | --- |
-| 기본, 후광   | [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness)<br/> 기본 테두리를 변경하면 후광의 두께도 비례해서 늘어납니다.   |
-| 보조   | [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness)   |
+| 기본, 후광   | [FocusVisualPrimaryThickness](/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness)<br/> 기본 테두리를 변경하면 후광의 두께도 비례해서 늘어납니다.   |
+| 보조   | [FocusVisualSecondaryThickness](/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness)   |
 
 
 이 예제에서는 단추 포커스 화면 효과의 테두리 두께를 변경합니다.
@@ -98,7 +98,7 @@ ms.locfileid: "82968009"
 
 ## <a name="customize-the-margin"></a>여백 사용자 지정
 
-여백은 컨트롤의 시각적 범위와 포커스 화면 효과 보조 테두리 시작 부분 사이의 간격입니다. 기본 여백은 컨트롤 범위에서 1px입니다. [FocusVisualMargin](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualMargin) 속성을 변경하여 컨트롤별로 이 여백을 편집할 수 있습니다.
+여백은 컨트롤의 시각적 범위와 포커스 화면 효과 보조 테두리 시작 부분 사이의 간격입니다. 기본 여백은 컨트롤 범위에서 1px입니다. [FocusVisualMargin](/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualMargin) 속성을 변경하여 컨트롤별로 이 여백을 편집할 수 있습니다.
 
 ```xaml
 <Button FocusVisualPrimaryThickness="2" FocusVisualSecondaryThickness="1" FocusVisualMargin="-3"/>
@@ -108,12 +108,12 @@ ms.locfileid: "82968009"
 
 ## <a name="customize-the-color"></a>색 사용자 지정
 
-포커스 표시 화면 효과의 색을 변경하려면 [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) 및 [FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) 속성을 사용합니다.
+포커스 표시 화면 효과의 색을 변경하려면 [FocusVisualPrimaryBrush](/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) 및 [FocusVisualSecondaryBrush](/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush) 속성을 사용합니다.
 
 | 속성 | 기본 리소스 | 기본 리소스 값 |
 | ---- | ---- | --- | 
-| [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) | SystemControlRevealFocusVisualBrush  | SystemAccentColor |
-| [FocusVisualSecondaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush)  | SystemControlFocusVisualSecondaryBrush  | SystemAltMediumColor |
+| [FocusVisualPrimaryBrush](/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) | SystemControlRevealFocusVisualBrush  | SystemAccentColor |
+| [FocusVisualSecondaryBrush](/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryBrush)  | SystemControlFocusVisualSecondaryBrush  | SystemAltMediumColor |
 
 FocusPrimaryBrush 속성은 **FocusVisualKind**가 **Reveal**로 설정되어 있는 경우에만 기본적으로 **SystemControlRevealFocusVisualBrush** 리소스로 설정됩니다. 그러지 않으면 **SystemControlFocusVisualPrimaryBrush**를 사용합니다.
 
@@ -145,12 +145,12 @@ FocusPrimaryBrush 속성은 **FocusVisualKind**가 **Reveal**로 설정되어 �
 </Application.Resources>
 ```
 
-포커스 화면 효과 색을 수정하는 방법에 대한 자세한 내용은 [색 브랜딩 및 사용자 지정](https://docs.microsoft.com/windows/uwp/design/input/guidelines-for-visualfeedback#color-branding--customizing)을 참조하세요.
+포커스 화면 효과 색을 수정하는 방법에 대한 자세한 내용은 [색 브랜딩 및 사용자 지정](../input/guidelines-for-visualfeedback.md#color-branding--customizing)을 참조하세요.
 
 
 ## <a name="show-just-the-glow"></a>후광만 표시
 
-기본 또는 보조 포커스 화면 효과 없이 후광만 사용하려는 경우 컨트롤의 [FocusVisualPrimaryBrush](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) 속성을 `Transparent`로, [FocusVisualSecondaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness)를 `0`으로 설정합니다. 이 경우 후광은 테두리가 없는 느낌을 주기 위해 컨트롤 배경색을 사용합니다. [FocusVisualPrimaryThickness](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness)를 사용하여 후광의 두께를 수정할 수 있습니다.
+기본 또는 보조 포커스 화면 효과 없이 후광만 사용하려는 경우 컨트롤의 [FocusVisualPrimaryBrush](/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryBrush) 속성을 `Transparent`로, [FocusVisualSecondaryThickness](/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualSecondaryThickness)를 `0`으로 설정합니다. 이 경우 후광은 테두리가 없는 느낌을 주기 위해 컨트롤 배경색을 사용합니다. [FocusVisualPrimaryThickness](/uwp/api/windows.ui.xaml.frameworkelement.FocusVisualPrimaryThickness)를 사용하여 후광의 두께를 수정할 수 있습니다.
 
 ```xaml
 
@@ -172,10 +172,10 @@ FocusPrimaryBrush 속성은 **FocusVisualKind**가 **Reveal**로 설정되어 �
 
 ## <a name="related-articles"></a>관련된 문서
 
-- [강조 표시](https://docs.microsoft.com/windows/uwp/design/style/reveal)
-- [Xbox 및 TV용 디자인](/windows/uwp/design/devices/designing-for-tv)
-- [게임 패드 및 리모컨 조작](https://docs.microsoft.com/windows/uwp/design/input/gamepad-and-remote-interactions)
+- [강조 표시](./reveal.md)
+- [Xbox 및 TV용 디자인](../devices/designing-for-tv.md)
+- [게임 패드 및 리모컨 조작](../input/gamepad-and-remote-interactions.md)
 - [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
-- [컴퍼지션 효과](https://docs.microsoft.com/windows/uwp/graphics/composition-effects)
+- [컴퍼지션 효과](../../composition/composition-effects.md)
 - [시스템의 과학: 흐름 디자인 및 깊이](https://medium.com/microsoft-design/science-in-the-system-fluent-design-and-depth-fb6d0f23a53f)
 - [시스템의 과학: 흐름 디자인 및 조명](https://medium.com/microsoft-design/the-science-in-the-system-fluent-design-and-light-94a17e0b3a4f)

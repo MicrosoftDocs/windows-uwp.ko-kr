@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2e385f6b9977eead6aed52215080588e4f9d8c27
-ms.sourcegitcommit: cc645386b996f6e59f1ee27583dcd4310f8fb2a6
+ms.openlocfilehash: 32a66c92d4c079c99aed213d0e1aeae66b808d56
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84262774"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169407"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>화면 크기 및 중단점
 
@@ -90,7 +90,7 @@ UWP 앱은 모든 Windows 10 디바이스에서 앱을 쉽게 알아볼 수 있�
 - 열/영역은 최대 2개까지 사용합니다.
 - 검색 상자를 표시합니다.
 - 좁은 아이콘 스트립이 항상 표시되도록 [탐색 창](../controls-and-patterns/navigationview.md)을 작은 모드로 전환합니다.
-- [TV 환경](https://docs.microsoft.com/windows/uwp/design/devices/designing-for-tv?redirectedfrom=MSDN)에 맞는 추가 조정을 고려합니다.
+- [TV 환경](../devices/designing-for-tv.md)에 맞는 추가 조정을 고려합니다.
 
 ### <a name="large"></a>대
 - 왼쪽 및 오른쪽 창 여백을 24픽셀로 설정하고 앱 창의 왼쪽 및 오른쪽 가장자리 간에 시각적 구분을 만듭니다.

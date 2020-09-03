@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
-ms.openlocfilehash: b4ce91e32b14bdf81b40b24e810e0bd86bcaa99b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 4ee8eb8ea34205f2e597bf41da61f5ab63714566
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "67321085"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162837"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>three.js를 사용하여 3D JavaScript 게임 만들기
 
@@ -442,7 +442,7 @@ scene.add(controls.getObject());
 
 이제 카메라가 연결되었지만 주변을 둘러보려면 마우스와 컨트롤러가 상호 작용할 수 있어야 합니다. 
 
-이와 같은 상황에서는 [포인터 잠금 API](https://docs.microsoft.com/microsoft-edge/dev-guide/dom/pointer-lock)를 사용하여 마우스 동작을 카메라와 연결하면 됩니다. 또한 포인터 잠금 API는 좀 더 몰입도 높은 환경을 제공하기 위해 마우스를 숨깁니다. ESC 키를 눌러 마우스-카메라 연결을 종료하면 마우스가 다시 나타납니다. `getPointerLock()` 및 `lockChange()` 함수를 추가하면 이 동작을 구현하는 데 도움이 됩니다.
+이와 같은 상황에서는 [포인터 잠금 API](/microsoft-edge/dev-guide/dom/pointer-lock)를 사용하여 마우스 동작을 카메라와 연결하면 됩니다. 또한 포인터 잠금 API는 좀 더 몰입도 높은 환경을 제공하기 위해 마우스를 숨깁니다. ESC 키를 눌러 마우스-카메라 연결을 종료하면 마우스가 다시 나타납니다. `getPointerLock()` 및 `lockChange()` 함수를 추가하면 이 동작을 구현하는 데 도움이 됩니다.
 
 `getPointerLock()` 함수는 마우스 클릭이 발생하는 시기를 수신합니다. 클릭이 발생하면 렌더링된 게임(`container` 요소의)이 마우스 제어권을 확보하려고 시도합니다. 또한 플레이어가 잠금을 활성화 또는 비활성화하는 시기를 감지하여 `lockChange()` 함수를 호출하는 이벤트 수신기도 추가합니다. 
 
@@ -1084,7 +1084,6 @@ function lockChange() {
 UWP 앱을 만들었으니 이제 Microsoft Store에 게시할 수 있습니다. 물론 그 전에 앱을 좀 더 다듬으면 좋을 것입니다. 몇 가지 단계를 처리해야 합니다.
 
 1.  Windows 개발자로 [등록](https://developer.microsoft.com/store/register)해야 합니다.
-2.  앱 제출 [검사 목록](https://docs.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
-3.  앱을 제출하여 [인증](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
-자세한 내용은 [UWP 앱 게시](https://docs.microsoft.com/windows/uwp/publish/)를 참조하세요.
-
+2.  앱 제출 [검사 목록](../publish/app-submissions.md)을 사용해야 합니다.
+3.  앱을 제출하여 [인증](../publish/the-app-certification-process.md)을 받아야 합니다.
+자세한 내용은 [UWP 앱 게시](../publish/index.md)를 참조하세요.

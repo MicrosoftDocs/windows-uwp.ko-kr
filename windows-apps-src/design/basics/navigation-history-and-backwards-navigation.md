@@ -7,16 +7,16 @@ ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 705b0ecb474c0bb821c3a21f4b8b66073984827f
-ms.sourcegitcommit: 015291bdf2e7d67076c1c85fc025f49c840ba475
+ms.openlocfilehash: fe9cbb9fdc9d73a38642a4f5894b1ef0f8182e69
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469578"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174517"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-windows-apps"></a>Windows 앱을 위한 탐색 기록 및 뒤로 탐색
 
-> **중요 API**: [BackRequested 이벤트](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager.BackRequested), [SystemNavigationManager 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Core.SystemNavigationManager), [OnNavigatedTo](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)
+> **중요 API**: [BackRequested 이벤트](/uwp/api/Windows.UI.Core.SystemNavigationManager.BackRequested), [SystemNavigationManager 클래스](/uwp/api/Windows.UI.Core.SystemNavigationManager), [OnNavigatedTo](/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)
 
 Windows 앱은 앱 내에서 그리고 디바이스에 따라 앱 간에 사용자의 탐색 기록을 탐색할 수 있도록 일관적인 뒤로 탐색 시스템을 제공합니다.
 
@@ -74,7 +74,7 @@ Windows 앱은 앱 내에서 그리고 디바이스에 따라 앱 간에 사용�
 
 ## <a name="code-example"></a>코드 예제
 
-다음 코드 예제에서는 뒤로 단추로 뒤로 탐색 동작을 구현하는 방법을 설명합니다. 이 코드는 단추 [**Click**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.Click) 이벤트에 응답하고, 새 페이지 탐색 시 호출되는 [**OnNavigatedTo**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)의 단추 표시를 활성화/비활성화합니다. 또한 이 코드 예제는 [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) 이벤트에 대한 수신기를 등록하여 하드웨어 및 소프트웨어 시스템 뒤로 키의 입력을 처리합니다.
+다음 코드 예제에서는 뒤로 단추로 뒤로 탐색 동작을 구현하는 방법을 설명합니다. 이 코드는 단추 [**Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.Click) 이벤트에 응답하고, 새 페이지 탐색 시 호출되는 [**OnNavigatedTo**](/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)의 단추 표시를 활성화/비활성화합니다. 또한 이 코드 예제는 [**BackRequested**](/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) 이벤트에 대한 수신기를 등록하여 하드웨어 및 소프트웨어 시스템 뒤로 키의 입력을 처리합니다.
 
 ```xaml
 <!-- MainPage.xaml -->
@@ -194,7 +194,7 @@ namespace winrt::PageNavTest::implementation
 
 위에서는 단일 페이지의 뒤로 탐색을 처리했습니다. 뒤로 탐색에서 특정 페이지를 제외하려는 경우 또는 페이지를 표시하기 전에 페이지 수준 코드를 실행하려는 경우에는 각 페이지에서 탐색을 처리하면 됩니다.
 
-전체 앱의 뒤로 탐색을 처리하려면 `App.xaml` 코드 숨김 파일에서 [**BackRequested**](https://docs.microsoft.com/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) 이벤트에 대한 글로벌 수신기를 등록합니다.
+전체 앱의 뒤로 탐색을 처리하려면 `App.xaml` 코드 숨김 파일에서 [**BackRequested**](/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) 이벤트에 대한 글로벌 수신기를 등록합니다.
 
 App.xaml 코드 숨김:
 
@@ -307,9 +307,9 @@ bool App::On_BackRequested()
 
 ## <a name="system-back-behavior-for-backward-compatibilities"></a>이전 버전과의 호환성을 위한 시스템 뒤로 동작
 
-이전에는 UWP 앱이 뒤로 탐색을 지원하기 위해 [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 사용했습니다. 이전 버전과의 호환성을 위해 API는 계속 지원되지만, [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 사용하는 것은 더 이상 권장하지 않습니다. 대신 앱에서 자체적인 인-앱 뒤로 단추를 구현해야 합니다.
+이전에는 UWP 앱이 뒤로 탐색을 지원하기 위해 [AppViewBackButtonVisibility](/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 사용했습니다. 이전 버전과의 호환성을 위해 API는 계속 지원되지만, [AppViewBackButtonVisibility](/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 사용하는 것은 더 이상 권장하지 않습니다. 대신 앱에서 자체적인 인-앱 뒤로 단추를 구현해야 합니다.
 
-앱에서 [AppViewBackButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 계속 사용하는 경우 시스템 UI는 제목 표시줄 내부에 시스템 뒤로 단추를 렌더링합니다. (뒤로 단추의 모양과 사용자 상호 작용은 이전 빌드와 달라진 것이 없습니다.)
+앱에서 [AppViewBackButtonVisibility](/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 계속 사용하는 경우 시스템 UI는 제목 표시줄 내부에 시스템 뒤로 단추를 렌더링합니다. (뒤로 단추의 모양과 사용자 상호 작용은 이전 빌드와 달라진 것이 없습니다.)
 
 ![제목 표시줄 뒤로 단추](images/nav-back-pc.png)
 

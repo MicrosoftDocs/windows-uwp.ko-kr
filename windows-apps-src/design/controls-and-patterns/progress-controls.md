@@ -12,12 +12,12 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 25ca05dc6c604d40092cdc28d186de4b835774b2
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: d5756c4cfff05b666eae245de76c1813f9a834df
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86998000"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169677"
 ---
 # <a name="progress-controls"></a>진행률 컨트롤
 
@@ -27,15 +27,15 @@ ms.locfileid: "86998000"
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **ProgressBar** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **ProgressBar** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
 
-> **Windows UI 라이브러리 API:** [ProgressBar 클래스](https://docs.microsoft.com/uwp/api/Microsoft.UI.Xaml.Controls.ProgressBar), [IsIndeterminate 속성](https://docs.microsoft.com/uwp/api/Microsoft.ui.xaml.controls.progressbar.isindeterminate), [ProgressRing 클래스](https://docs.microsoft.com/uwp/api/Microsoft.UI.Xaml.Controls.ProgressRing), [IsActive 속성](https://docs.microsoft.com/uwp/api/Microsoft.ui.xaml.controls.progressring.isactive)
+> **Windows UI 라이브러리 API:** [ProgressBar 클래스](/uwp/api/Microsoft.UI.Xaml.Controls.ProgressBar), [IsIndeterminate 속성](/uwp/api/Microsoft.ui.xaml.controls.progressbar.isindeterminate), [ProgressRing 클래스](/uwp/api/Microsoft.UI.Xaml.Controls.ProgressRing), [IsActive 속성](/uwp/api/Microsoft.ui.xaml.controls.progressring.isactive)
 >
-> **플랫폼 API:** [ProgressBar 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar), [IsIndeterminate 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate), [ProgressRing 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [IsActive 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.progressring.isactive)
+> **플랫폼 API:** [ProgressBar 클래스](/uwp/api/Windows.UI.Xaml.Controls.ProgressBar), [IsIndeterminate 속성](/uwp/api/windows.ui.xaml.controls.progressbar.isindeterminate), [ProgressRing 클래스](/uwp/api/Windows.UI.Xaml.Controls.ProgressRing), [IsActive 속성](/uwp/api/windows.ui.xaml.controls.progressring.isactive)
 
 > [!NOTE]
 > ProgressBar 및 ProgressRing 컨트롤에는 두 가지 버전이 있습니다. 하나는 Windows.UI.Xaml 네임스페이스로 표현되는 플랫폼에 있고, 다른 하나는 Microsoft.UI.Xaml 네임스페이스로 표현되는 Windows UI 라이브러리에 있습니다. ProgressRing 및 ProgressBar용 API는 동일하지만 두 버전 간 컨트롤의 모양은 다릅니다. 이 문서에서는 최신 Windows UI 라이브러리 버전의 이미지가 나옵니다.
-이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 다음을 [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page) 요소에 추가했습니다.
+이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 다음을 [Page](/uwp/api/windows.ui.xaml.controls.page) 요소에 추가했습니다.
 
 ```xaml
 xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
@@ -211,5 +211,5 @@ Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows
 
 ## <a name="related-articles"></a>관련된 문서
 
-- [ProgressBar 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressBar)
-- [ProgressRing 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ProgressRing)
+- [ProgressBar 클래스](/uwp/api/Windows.UI.Xaml.Controls.ProgressBar)
+- [ProgressRing 클래스](/uwp/api/Windows.UI.Xaml.Controls.ProgressRing)

@@ -6,12 +6,12 @@ ms.date: 04/04/2018
 ms.topic: article
 keywords: windows 10, uwp, 등록, 개발자 계정
 ms.localizationpriority: medium
-ms.openlocfilehash: 6249de5bd039545073fdd8af6be3291e7e0136c4
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: e40f10d258c345edd9baeae623c2aaff994f36c8
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74260547"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168147"
 ---
 # <a name="create-a-developer-account"></a>개발자 계정 만들기
 
@@ -25,5 +25,4 @@ ms.locfileid: "74260547"
 
 ## <a name="have-a-name-for-your-app"></a>앱 이름 만들기
 
-개발자 계정을 여는 즉시 [이름을 예약하여 앱을](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name) 만들 수 있습니다.
-
+개발자 계정을 여는 즉시 [이름을 예약하여 앱을](../publish/create-your-app-by-reserving-a-name.md) 만들 수 있습니다.

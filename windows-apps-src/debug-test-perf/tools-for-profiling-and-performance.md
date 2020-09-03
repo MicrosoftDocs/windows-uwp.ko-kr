@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ae0fc2eca3d32a0e491ef0d8ca00ef22c05eb27f
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 4754af24bb7755cfa70a4f3b1f460e823985c90c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68935769"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166017"
 ---
 # <a name="tools-for-profiling-and-performance"></a>프로파일링 및 성능 도구
 
@@ -24,6 +24,6 @@ Microsoft에서는 UWP(유니버설 Windows 플랫폼) 앱의 성능을 향상�
 
 |           |             |
 |-----------|-------------|
-| [Visual Studio 진단 도구를 사용하여 UWP 앱의 성능 분석](https://docs.microsoft.com/visualstudio/profiling/profiling-tools) | 프로그램이 실행될 때 앱의 코드가 시간을 소비하는 곳을 보여 줌으로써 Visual Studio 프로파일러는 앱, 기능 및 알고리즘의 성능 병목 현상을 찾을 수 있도록 도와줍니다. |
+| [Visual Studio 진단 도구를 사용하여 UWP 앱의 성능 분석](/visualstudio/profiling/profiling-tools) | 프로그램이 실행될 때 앱의 코드가 시간을 소비하는 곳을 보여 줌으로써 Visual Studio 프로파일러는 앱, 기능 및 알고리즘의 성능 병목 현상을 찾을 수 있도록 도와줍니다. |
 | [XAML 성능: XAML로 빌드된 유니버설 Windows 앱 환경을 최대화하는 기술](https://channel9.msdn.com/Events/Build/2015/3-698) | 이 //빌드 세션에서는 XAML 기반 유니버설 Windows 앱의 성능을 획기적으로 개선하는 새로운 플랫폼 기능, 새로운 도구 기능 및 새로운 기술에 대해 알아봅니다. |
 | [Visual Studio의 새로운 XAML 도구](https://channel9.msdn.com/Events/Build/2015/2-697) | 이 //빌드 세션에서는 새롭게 디자인된 Blend 환경, UI 디버깅 도구, 향상된 XAML 편집기 기능 등 Visual Studio 2015의 새로운 기능에 대해 알아봅니다. 이 도구는 Visual Studio 2019에서도 사용할 수 있습니다. |

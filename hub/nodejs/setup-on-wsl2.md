@@ -8,12 +8,12 @@ ms.topic: article
 keywords: NodeJS, Node.js, windows 10, microsoft, nodejs 학습, windows의 노드, wsl의 노드, windows 기반 linux의 노드, windows에 노드 설치, vs code를 사용하는 nodejs, windows에서 노드를 사용하여 개발, windows에서 nodejs를 사용하여 개발, WSL에 노드 설치, Linux용 Windows 하위 시스템의 NodeJS
 ms.localizationpriority: medium
 ms.date: 07/28/2020
-ms.openlocfilehash: ce4e736751d5586c6ab4489e976fc397b1be0301
-ms.sourcegitcommit: 6b83f1854a113490dcd4f52425ecade9e66e0b44
+ms.openlocfilehash: 1b44cc51ecbb83e52a16ab7e5c577578c8765cb9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87333797"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166558"
 ---
 # <a name="set-up-your-nodejs-development-environment-with-wsl-2"></a>WSL 2를 사용하여 Node.js 개발 환경 설치
 
@@ -26,7 +26,7 @@ ms.locfileid: "87333797"
 
 ## <a name="install-wsl-2"></a>WSL 2 설치
 
-WSL 2를 사용하고 설치하려면 [WSL 설치 문서](https://docs.microsoft.com/windows/wsl/install-win10)의 단계를 따르세요. 이 단계에는 Linux 배포판(예: Ubuntu) 선택이 포함됩니다.
+WSL 2를 사용하고 설치하려면 [WSL 설치 문서](/windows/wsl/install-win10)의 단계를 따르세요. 이 단계에는 Linux 배포판(예: Ubuntu) 선택이 포함됩니다.
 
 WSL 2와 Linux 배포판을 설치했으면 Linux 배포판(Windows 시작 메뉴에서 찾을 수 있음)을 열고 `lsb_release -dc` 명령을 사용하여 버전과 코드 이름을 확인합니다.
 
@@ -34,7 +34,7 @@ WSL 2와 Linux 배포판을 설치했으면 Linux 배포판(Windows 시작 메�
 
 ## <a name="install-windows-terminal-optional"></a>Windows 터미널 설치(선택 사항)
 
-새 Windows 터미널을 사용하면 여러 탭(여러 Linux 명령 프롬프트, Windows 명령 프롬프트, PowerShell, Azure CLI 간에 신속하게 전환), 사용자 지정 키 바인딩(탭 열기 또는 닫기, 복사+붙여넣기 등을 위한 바로 가기 키), 검색 기능 및 사용자 지정 테마(색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도)를 사용할 수 있습니다. [자세한 정보를 알아보세요](https://docs.microsoft.com/windows/terminal).
+새 Windows 터미널을 사용하면 여러 탭(여러 Linux 명령 프롬프트, Windows 명령 프롬프트, PowerShell, Azure CLI 간에 신속하게 전환), 사용자 지정 키 바인딩(탭 열기 또는 닫기, 복사+붙여넣기 등을 위한 바로 가기 키), 검색 기능 및 사용자 지정 테마(색 구성표, 글꼴 스타일 및 크기, 배경 이미지/흐림/투명도)를 사용할 수 있습니다. [자세한 정보를 알아보세요](/windows/terminal).
 
 1. 다음과 같이 [Microsoft Store에서 Windows 터미널](https://www.microsoft.com/store/apps/9n0dx20hk701)을 받습니다. Microsoft Store를 통해 설치하면 업데이트가 자동으로 처리됩니다.
 
@@ -78,7 +78,7 @@ NVM을 사용하여 Node.js 및 NPM을 설치하는 경우 SUDO 명령을 사용
 현재 노드에 가장 많이 사용되는 버전 관리자는 nvm이지만, 고려해 볼 수 있는 다음과 같은 다른 버전 관리자도 있습니다.
 
 - 오래전부터 `nvm` 대용으로 사용된 [n](https://www.npmjs.com/package/n#installation)은 약간 다른 명령으로 동일한 작업을 수행하며, bash 스크립트 대신 `npm`을 통해 설치됩니다.
-- [fnm](https://github.com/Schniz/fnm#using-a-script)은 최신 버전의 관리자이며 `nvm`보다 훨씬 빠르다고 합니다. (마찬가지로 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops)를 사용합니다.)
+- [fnm](https://github.com/Schniz/fnm#using-a-script)은 최신 버전의 관리자이며 `nvm`보다 훨씬 빠르다고 합니다. (마찬가지로 [Azure Pipelines](/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops)를 사용합니다.)
 - [Volta](https://github.com/volta-cli/volta#installing-volta)는 LinkedIn 팀의 새로운 버전 관리자로, 속도 및 플랫폼 간 지원이 향상되었다고 합니다.
 - [asdf-vm](https://asdf-vm.com/#/core-manage-asdf-vm)은 gvm, nvm, rbenv 및 pyenv 등의 여러 언어를 모두 관리할 수 있는 단일 CLI입니다.
 - [nvs](https://github.com/jasongin/nvs)(노드 버전 전환기)는 플랫폼 간 `nvm` 대안으로, [VS Code와 통합](https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md)할 수 있는 기능을 제공합니다.
@@ -135,7 +135,7 @@ Node.js 확장 팩을 설치하는 방법은 다음과 같습니다.
 
 ## <a name="set-up-git-optional"></a>Git 설치(선택 사항)
 
-WSL에서 NodeJS 프로젝트용 Git을 설정하려면 WSL 설명서의 [Linux용 Windows 하위 시스템에서 Git 사용 시작](https://docs.microsoft.com/windows/wsl/tutorials/wsl-git) 문서를 참조하세요.
+WSL에서 NodeJS 프로젝트용 Git을 설정하려면 WSL 설명서의 [Linux용 Windows 하위 시스템에서 Git 사용 시작](/windows/wsl/tutorials/wsl-git) 문서를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -143,5 +143,5 @@ Node.js 개발 환경 설정이 완료되었습니다. Node.js 환경 사용을 
 
 - [초보자용 Node.js 시작](./beginners.md)
 - [Windows에서 Node.js 웹 프레임워크 시작](./web-frameworks.md)
-- [Node.js 앱을 데이터베이스에 연결](https://docs.microsoft.com/windows/wsl/tutorials/wsl-database)
+- [Node.js 앱을 데이터베이스에 연결](/windows/wsl/tutorials/wsl-database)
 - [Node.js에서 Docker 컨테이너 사용 시작](./containers.md)

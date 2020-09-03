@@ -5,16 +5,16 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 시작하기, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e17e3f8107e82547ec0d367099f621e5b2e590a
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: 412f34d21ddb24f637450fdfc71214c360445841
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997850"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170197"
 ---
 # <a name="get-started-with-cwinrt"></a>C++/WinRT 시작
 
-[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 빠르게 사용할 수 있도록, 이 항목에서는 새 **Windows 콘솔 애플리케이션(C++/WinRT)** 프로젝트를 기반으로 하는 간단한 코드 예제를 살펴보겠습니다. 이 항목에서는 [Windows 데스크톱 애플리케이션 프로젝트에 C++/WinRT 지원을 추가](#modify-a-windows-desktop-application-project-to-add-cwinrt-support)하는 방법도 보여 줍니다.
+[C++/WinRT](./intro-to-using-cpp-with-winrt.md)를 빠르게 사용할 수 있도록, 이 항목에서는 새 **Windows 콘솔 애플리케이션(C++/WinRT)** 프로젝트를 기반으로 하는 간단한 코드 예제를 살펴보겠습니다. 이 항목에서는 [Windows 데스크톱 애플리케이션 프로젝트에 C++/WinRT 지원을 추가](#modify-a-windows-desktop-application-project-to-add-cwinrt-support)하는 방법도 보여 줍니다.
 
 > [!NOTE]
 > Visual Studio 및 Windows SDK의 최신 버전을 사용하여 개발하는 것이 좋지만, Visual Studio 2017(버전 15.8.0 이상)을 사용 중이고 Windows SDK 버전 10.0.17134.0(Windows 10 버전, 1803)을 대상으로 하는 경우 새로 만든 C++/WinRT 프로젝트가 컴파일되지 않고 “오류 C3861: ‘from_abi’: 식별자를 찾을 수 없음” 오류와 *base.h*에서 발생하는 기타 오류가 표시될 수 있습니다. 해결 방법으로, 보다 규칙에 맞는 Windows SDK 최신 버전을 대상으로 지정하거나, 프로젝트 속성 **C/C++**  > **언어** > **적합성 모드: 아니요**를 설정합니다. 또는 **추가 옵션** 아래의 프로젝트 속성 **C/C++**  > **언어** > **명령줄**에 **/permissive-** 가 표시되는 경우 삭제합니다.
@@ -22,7 +22,7 @@ ms.locfileid: "86997850"
 ## <a name="a-cwinrt-quick-start"></a>C++/WinRT 빠른 시작
 
 > [!NOTE]
-> &mdash;프로젝트 템플릿 및 빌드 지원을 함께 제공하는 C++/WinRT Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법을 포함&mdash;하는 C++/WinRT용 Visual Studio 개발 설정에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
+> &mdash;프로젝트 템플릿 및 빌드 지원을 함께 제공하는 C++/WinRT Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법을 포함&mdash;하는 C++/WinRT용 Visual Studio 개발 설정에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](./intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
 
 새 **Windows 콘솔 애플리케이션(C++/WinRT)** 프로젝트를 만듭니다.
 
@@ -129,7 +129,7 @@ HRESULT 반환 코드를 처리할 필요도 없습니다. C++/WinRT는 자연�
 
 **일반** \> **Windows SDK 버전** 프로젝트 속성으로 차례로 이동한 다음, **모든 구성** 및 **모든 플랫폼**을 선택합니다. **Windows SDK 버전**이 10.0.17134.0(Windows 10, 버전 1803) 이상으로 설정되어 있는지 확인합니다.
 
-[새 프로젝트가 컴파일되지 않는 이유는 무엇인가요?](/windows/uwp/cpp-and-winrt-apis/faq)의 영향을 받지 않는지 확인합니다.
+[새 프로젝트가 컴파일되지 않는 이유는 무엇인가요?](./faq.md)의 영향을 받지 않는지 확인합니다.
 
 C++/WinRT는 C++17 표준의 기능을 사용하기 때문에 프로젝트 속성 **C/C++**  > **언어** > **C++ 언어 표준**을 ‘ISO C++17 표준(/std:c++17)’으로 설정합니다.
 
@@ -167,19 +167,19 @@ C++/WinRT를 사용하여 익숙해지고 이 설명서의 나머지 부분을 �
 
 ### <a name="consuming-windows-runtime-apis-and-types"></a>Windows 런타임 API 및 형식 사용
 
-즉 API를 *사용*하거나 *호출*합니다. 예를 들어 Bluetooth를 통한 통신, 비디오 스트리밍 및 표시, Windows 셸과의 통합 등을 수행하는 API를 호출합니다. C++/WinRT는 이 시나리오 범주를 완벽하고 단호하게 지원합니다. 자세한 내용은 [C++/WinRT를 통한 API 사용](/windows/uwp/cpp-and-winrt-apis/consume-apis)을 참조하세요.
+즉 API를 *사용*하거나 *호출*합니다. 예를 들어 Bluetooth를 통한 통신, 비디오 스트리밍 및 표시, Windows 셸과의 통합 등을 수행하는 API를 호출합니다. C++/WinRT는 이 시나리오 범주를 완벽하고 단호하게 지원합니다. 자세한 내용은 [C++/WinRT를 통한 API 사용](./consume-apis.md)을 참조하세요.
 
 ### <a name="authoring-windows-runtime-apis-and-types"></a>Windows 런타임 API 및 형식 작성
 
-즉 API 및 형식을 *생성*합니다. 예를 들어 위의 섹션에서 설명하는 종류의 API, 그래픽 API, 스토리지 및 파일 시스템 API, 네트워킹 API 등을 생성합니다. 자세한 내용은 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)을 참조하세요.
+즉 API 및 형식을 *생성*합니다. 예를 들어 위의 섹션에서 설명하는 종류의 API, 그래픽 API, 스토리지 및 파일 시스템 API, 네트워킹 API 등을 생성합니다. 자세한 내용은 [C++/WinRT를 통한 API 작성](./author-apis.md)을 참조하세요.
 
-API를 구현하려면 먼저 IDL을 사용하여 해당 API의 모양을 정의해야 하므로 C++/WinRT를 사용하여 API를 작성하는 것이 이러한 API를 사용하는 것보다 더 중요합니다. 이러한 작업은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](/windows/uwp/cpp-and-winrt-apis/binding-property)에서 연습할 수 있습니다.
+API를 구현하려면 먼저 IDL을 사용하여 해당 API의 모양을 정의해야 하므로 C++/WinRT를 사용하여 API를 작성하는 것이 이러한 API를 사용하는 것보다 더 중요합니다. 이러한 작업은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](./binding-property.md)에서 연습할 수 있습니다.
 
 ### <a name="xaml-applications"></a>XAML 애플리케이션
 
 이 시나리오는 애플리케이션 및 컨트롤을 XAML UI 프레임워크에 구축하는 것입니다. XAML 애플리케이션에서 작업하는 것은 사용과 작성의 조합에 해당합니다. 그러나 XAML은 현재 Windows에서 가장 많이 사용되는 UI 프레임워크이며 Windows 런타임에 대한 영향력은 이에 비례하므로 고유한 시나리오 범주가 있습니다.
 
-XAML은 리플렉션을 제공하는 프로그래밍 언어에서 가장 효율적으로 작동합니다. C++/WinRT에서는 XAML 프레임워크와 상호 운용하기 위해 약간의 추가 작업을 수행해야 하는 경우도 있습니다. 이러한 모든 사례는 설명서에서 다룹니다. 적절한 시작 지점은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](/windows/uwp/cpp-and-winrt-apis/binding-property) 및 [C++/WinRT를 통한 XAML 사용자 지정(템플릿 기반) 컨트롤](/windows/uwp/cpp-and-winrt-apis/xaml-cust-ctrl)입니다.
+XAML은 리플렉션을 제공하는 프로그래밍 언어에서 가장 효율적으로 작동합니다. C++/WinRT에서는 XAML 프레임워크와 상호 운용하기 위해 약간의 추가 작업을 수행해야 하는 경우도 있습니다. 이러한 모든 사례는 설명서에서 다룹니다. 적절한 시작 지점은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](./binding-property.md) 및 [C++/WinRT를 통한 XAML 사용자 지정(템플릿 기반) 컨트롤](./xaml-cust-ctrl.md)입니다.
 
 ## <a name="important-apis"></a>중요 API
 * [SyndicationClient::RetrieveFeedAsync 메서드](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)

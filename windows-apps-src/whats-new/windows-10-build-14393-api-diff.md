@@ -6,12 +6,12 @@ ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: 40335c70-46cc-40fd-9fe0-3cc8e6200482
 ms.localizationpriority: medium
-ms.openlocfilehash: e634ad41e974a78d02383deb3cb1868f36252702
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: e22f3e8ecce80cc65837289fe2c3d29ff2fb5cb2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234779"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89167137"
 ---
 # <a name="new-apis-in-windows-10-build-14393"></a>Windows 10 빌드 14393의 새로운 API
 
@@ -20,7 +20,7 @@ ms.locfileid: "83234779"
 
 **항목**
 
-[Windows.ApplicationModel.SocialInfo.SocialFeedChildItem](https://docs.microsoft.com/uwp/api/windows.applicationmodel.socialinfo.socialfeedchilditem)
+[Windows.ApplicationModel.SocialInfo.SocialFeedChildItem](/uwp/api/windows.applicationmodel.socialinfo.socialfeedchilditem)
 
 **속성**
 
@@ -30,7 +30,7 @@ Windows.ApplicationModel.SocialInfo.SocialFeedChildItem <br /> Windows.Applicati
 
 **항목**
 
-[Windows.ApplicationModel.SocialInfo.SocialFeedContent](https://docs.microsoft.com/uwp/api/windows.applicationmodel.socialinfo.socialfeedcontent)
+[Windows.ApplicationModel.SocialInfo.SocialFeedContent](/uwp/api/windows.applicationmodel.socialinfo.socialfeedcontent)
 
 **속성**
 
@@ -40,7 +40,7 @@ Windows.ApplicationModel.SocialInfo.SocialFeedContent <br /> Windows.Application
 
 **항목**
 
-[Windows.ApplicationModel.SocialInfo.SocialFeedItem](https://docs.microsoft.com/uwp/api/windows.applicationmodel.socialinfo.socialfeeditem)
+[Windows.ApplicationModel.SocialInfo.SocialFeedItem](/uwp/api/windows.applicationmodel.socialinfo.socialfeeditem)
 
 **속성**
 
@@ -50,7 +50,7 @@ Windows.ApplicationModel.SocialInfo.SocialFeedItem <br /> Windows.ApplicationMod
 
 **항목**
 
-[Windows.ApplicationModel.SocialInfo.SocialFeedItemStyle](https://docs.microsoft.com/uwp/api/windows.applicationmodel.socialinfo.socialfeeditemstyle)
+[Windows.ApplicationModel.SocialInfo.SocialFeedItemStyle](/uwp/api/windows.applicationmodel.socialinfo.socialfeeditemstyle)
 
 **속성**
 
@@ -60,7 +60,7 @@ Windows.ApplicationModel.SocialInfo.SocialFeedItemStyle <br /> Windows.Applicati
 
 **항목**
 
-[Windows.ApplicationModel.SocialInfo.SocialFeedKind](https://docs.microsoft.com/uwp/api/windows.applicationmodel.socialinfo.socialfeedkind)
+[Windows.ApplicationModel.SocialInfo.SocialFeedKind](/uwp/api/windows.applicationmodel.socialinfo.socialfeedkind)
 
 **속성**
 
@@ -70,7 +70,7 @@ Windows.ApplicationModel.SocialInfo.SocialFeedKind <br /> Windows.ApplicationMod
 
 **항목**
 
-[Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem](https://docs.microsoft.com/uwp/api/windows.applicationmodel.socialinfo.socialfeedshareditem)
+[Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem](/uwp/api/windows.applicationmodel.socialinfo.socialfeedshareditem)
 
 **속성**
 
@@ -80,7 +80,7 @@ Windows.ApplicationModel.SocialInfo.SocialFeedSharedItem <br /> Windows.Applicat
 
 **항목**
 
-[Windows.ApplicationModel.SocialInfo.SocialFeedUpdateMode](https://docs.microsoft.com/uwp/api/windows.applicationmodel.socialinfo.socialfeedupdatemode)
+[Windows.ApplicationModel.SocialInfo.SocialFeedUpdateMode](/uwp/api/windows.applicationmodel.socialinfo.socialfeedupdatemode)
 
 **속성**
 
@@ -90,7 +90,7 @@ Windows.ApplicationModel.SocialInfo.SocialFeedUpdateMode <br /> Windows.Applicat
 
 **항목**
 
-[Windows.ApplicationModel.SocialInfo.SocialItemBadgeStyle](https://docs.microsoft.com/uwp/api/windows.applicationmodel.socialinfo.socialitembadgestyle)
+[Windows.ApplicationModel.SocialInfo.SocialItemBadgeStyle](/uwp/api/windows.applicationmodel.socialinfo.socialitembadgestyle)
 
 **속성**
 
@@ -100,7 +100,7 @@ Windows.ApplicationModel.SocialInfo.SocialItemBadgeStyle <br /> Windows.Applicat
 
 **항목**
 
-[Windows.ApplicationModel.SocialInfo.SocialItemThumbnail](https://docs.microsoft.com/uwp/api/windows.applicationmodel.socialinfo.socialitemthumbnail)
+[Windows.ApplicationModel.SocialInfo.SocialItemThumbnail](/uwp/api/windows.applicationmodel.socialinfo.socialitemthumbnail)
 
 **속성**
 
@@ -110,7 +110,7 @@ Windows.ApplicationModel.SocialInfo.SocialItemThumbnail <br /> Windows.Applicati
 
 **항목**
 
-[Windows.ApplicationModel.SocialInfo.SocialUserInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.socialinfo.socialuserinfo)
+[Windows.ApplicationModel.SocialInfo.SocialUserInfo](/uwp/api/windows.applicationmodel.socialinfo.socialuserinfo)
 
 **속성**
 
@@ -120,7 +120,7 @@ Windows.ApplicationModel.SocialInfo.SocialUserInfo <br /> Windows.ApplicationMod
 
 **항목**
 
-[Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater](https://docs.microsoft.com/uwp/api/windows.applicationmodel.socialinfo.provider.socialdashboarditemupdater)
+[Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater](/uwp/api/windows.applicationmodel.socialinfo.provider.socialdashboarditemupdater)
 
 **속성**
 
@@ -130,7 +130,7 @@ Windows.ApplicationModel.SocialInfo.Provider.SocialDashboardItemUpdater <br /> W
 
 **항목**
 
-[Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater](https://docs.microsoft.com/uwp/api/windows.applicationmodel.socialinfo.provider.socialfeedupdater)
+[Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater](/uwp/api/windows.applicationmodel.socialinfo.provider.socialfeedupdater)
 
 **속성**
 
@@ -140,7 +140,7 @@ Windows.ApplicationModel.SocialInfo.Provider.SocialFeedUpdater <br /> Windows.Ap
 
 **항목**
 
-[Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.socialinfo.provider.socialinfoprovidermanager)
+[Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager](/uwp/api/windows.applicationmodel.socialinfo.provider.socialinfoprovidermanager)
 
 **속성**
 
@@ -150,7 +150,7 @@ Windows.ApplicationModel.SocialInfo.Provider.SocialInfoProviderManager <br /> Wi
 
 **항목**
 
-[Windows.ApplicationModel.StartupTask](https://docs.microsoft.com/uwp/api/windows.applicationmodel.startuptask)
+[Windows.ApplicationModel.StartupTask](/uwp/api/windows.applicationmodel.startuptask)
 
 **속성**
 
@@ -160,7 +160,7 @@ Windows.ApplicationModel.StartupTask <br /> Windows.ApplicationModel.StartupTask
 
 **항목**
 
-[Windows.ApplicationModel.StartupTaskState](https://docs.microsoft.com/uwp/api/windows.applicationmodel.startuptaskstate)
+[Windows.ApplicationModel.StartupTaskState](/uwp/api/windows.applicationmodel.startuptaskstate)
 
 **속성**
 
@@ -170,7 +170,7 @@ Windows.ApplicationModel.StartupTaskState <br /> Windows.ApplicationModel.Startu
 
 **항목**
 
-[Windows.ApplicationModel.EnteredBackgroundEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.enteredbackgroundeventargs)
+[Windows.ApplicationModel.EnteredBackgroundEventArgs](/uwp/api/windows.applicationmodel.enteredbackgroundeventargs)
 
 **속성**
 
@@ -180,7 +180,7 @@ Windows.ApplicationModel.EnteredBackgroundEventArgs <br /> Windows.ApplicationMo
 
 **항목**
 
-[Windows.ApplicationModel.IEnteredBackgroundEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.ienteredbackgroundeventargs)
+[Windows.ApplicationModel.IEnteredBackgroundEventArgs](/uwp/api/windows.applicationmodel.ienteredbackgroundeventargs)
 
 **속성**
 
@@ -190,7 +190,7 @@ Windows.ApplicationModel.IEnteredBackgroundEventArgs <br /> Windows.ApplicationM
 
 **항목**
 
-[Windows.ApplicationModel.ILeavingBackgroundEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.ileavingbackgroundeventargs)
+[Windows.ApplicationModel.ILeavingBackgroundEventArgs](/uwp/api/windows.applicationmodel.ileavingbackgroundeventargs)
 
 **속성**
 
@@ -200,7 +200,7 @@ Windows.ApplicationModel.ILeavingBackgroundEventArgs <br /> Windows.ApplicationM
 
 **항목**
 
-[Windows.ApplicationModel.LeavingBackgroundEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.leavingbackgroundeventargs)
+[Windows.ApplicationModel.LeavingBackgroundEventArgs](/uwp/api/windows.applicationmodel.leavingbackgroundeventargs)
 
 **속성**
 
@@ -210,7 +210,7 @@ Windows.ApplicationModel.LeavingBackgroundEventArgs <br /> Windows.ApplicationMo
 
 **항목**
 
-[Windows.ApplicationModel.PackageCatalog](https://docs.microsoft.com/uwp/api/windows.applicationmodel.packagecatalog)
+[Windows.ApplicationModel.PackageCatalog](/uwp/api/windows.applicationmodel.packagecatalog)
 
 **속성**
 
@@ -220,7 +220,7 @@ Windows.ApplicationModel.PackageCatalog <br /> Windows.ApplicationModel.PackageC
 
 **항목**
 
-[Windows.ApplicationModel.ackageInstallingEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.packageinstallingeventargs)
+[Windows.ApplicationModel.ackageInstallingEventArgs](/uwp/api/windows.applicationmodel.packageinstallingeventargs)
 
 **속성**
 
@@ -230,7 +230,7 @@ Windows.ApplicationModel.PackageInstallingEventArgs <br /> Windows.ApplicationMo
 
 **항목**
 
-[Windows.ApplicationModel.PackageSignatureKind](https://docs.microsoft.com/uwp/api/windows.applicationmodel.packagesignaturekind)
+[Windows.ApplicationModel.PackageSignatureKind](/uwp/api/windows.applicationmodel.packagesignaturekind)
 
 **속성**
 
@@ -240,7 +240,7 @@ Windows.ApplicationModel.PackageSignatureKind <br /> Windows.ApplicationModel.Pa
 
 **항목**
 
-[Windows.ApplicationModel.PackageStagingEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.packagestagingeventargs)
+[Windows.ApplicationModel.PackageStagingEventArgs](/uwp/api/windows.applicationmodel.packagestagingeventargs)
 
 **속성**
 
@@ -250,7 +250,7 @@ Windows.ApplicationModel.PackageStagingEventArgs <br /> Windows.ApplicationModel
 
 **항목**
 
-[Windows.ApplicationModel.PackageStatusChangedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.packagestatuschangedeventargs)
+[Windows.ApplicationModel.PackageStatusChangedEventArgs](/uwp/api/windows.applicationmodel.packagestatuschangedeventargs)
 
 **속성**
 
@@ -260,7 +260,7 @@ Windows.ApplicationModel.PackageStatusChangedEventArgs <br /> Windows.Applicatio
 
 **항목**
 
-[Windows.ApplicationModel.PackageUninstallingEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.packageuninstallingeventargs)
+[Windows.ApplicationModel.PackageUninstallingEventArgs](/uwp/api/windows.applicationmodel.packageuninstallingeventargs)
 
 **속성**
 
@@ -270,7 +270,7 @@ Windows.ApplicationModel.PackageUninstallingEventArgs <br /> Windows.Application
 
 **항목**
 
-[Windows.ApplicationModel.PackageUpdatingEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.packageupdatingeventargs)
+[Windows.ApplicationModel.PackageUpdatingEventArgs](/uwp/api/windows.applicationmodel.packageupdatingeventargs)
 
 **속성**
 
@@ -280,7 +280,7 @@ Windows.ApplicationModel.PackageUpdatingEventArgs <br /> Windows.ApplicationMode
 
 **항목**
 
-[Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.backgroundactivatedeventargs)
+[Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.backgroundactivatedeventargs)
 
 **속성**
 
@@ -290,7 +290,7 @@ Windows.ApplicationModel.Activation.BackgroundActivatedEventArgs <br /> Windows.
 
 **항목**
 
-[Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iactivatedeventargswithuser)
+[Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser](/uwp/api/windows.applicationmodel.activation.iactivatedeventargswithuser)
 
 **속성**
 
@@ -300,7 +300,7 @@ Windows.ApplicationModel.Activation.IActivatedEventArgsWithUser <br /> Windows.A
 
 **항목**
 
-[Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.ibackgroundactivatedeventargs)
+[Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.ibackgroundactivatedeventargs)
 
 **속성**
 
@@ -310,7 +310,7 @@ Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs <br /> Windows
 
 **항목**
 
-[Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.ilaunchactivatedeventargs2)
+[Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2](/uwp/api/windows.applicationmodel.activation.ilaunchactivatedeventargs2)
 
 **속성**
 
@@ -320,7 +320,7 @@ Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs2 <br /> Windows.Ap
 
 **항목**
 
-[Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.iuserdataaccountprovideractivatedeventargs)
+[Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.iuserdataaccountprovideractivatedeventargs)
 
 **속성**
 
@@ -330,7 +330,7 @@ Windows.ApplicationModel.Activation.IUserDataAccountProviderActivatedEventArgs <
 
 **항목**
 
-[Windows.ApplicationModel.Activation.TileActivatedInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
+[Windows.ApplicationModel.Activation.TileActivatedInfo](/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
 
 **속성**
 
@@ -340,7 +340,7 @@ Windows.ApplicationModel.Activation.TileActivatedInfo <br /> Windows.Application
 
 **항목**
 
-[Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.userdataaccountprovideractivatedeventargs)
+[Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs](/uwp/api/windows.applicationmodel.activation.userdataaccountprovideractivatedeventargs)
 
 **속성**
 
@@ -350,7 +350,7 @@ Windows.ApplicationModel.Activation.UserDataAccountProviderActivatedEventArgs <b
 
 **항목**
 
-[Windows.ApplicationModel.AppExtensions.AppExtension](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions.appextension)
+[Windows.ApplicationModel.AppExtensions.AppExtension](/uwp/api/windows.applicationmodel.appextensions.appextension)
 
 **속성**
 
@@ -360,7 +360,7 @@ Windows.ApplicationModel.AppExtensions.AppExtension <br /> Windows.ApplicationMo
 
 **항목**
 
-[Windows.ApplicationModel.AppExtensions.AppExtensionCatalog](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions.appextensioncatalog)
+[Windows.ApplicationModel.AppExtensions.AppExtensionCatalog](/uwp/api/windows.applicationmodel.appextensions.appextensioncatalog)
 
 **속성**
 
@@ -370,7 +370,7 @@ Windows.ApplicationModel.AppExtensions.AppExtensionCatalog <br /> Windows.Applic
 
 **항목**
 
-[Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions.appextensionpackageinstalledeventargs)
+[Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs](/uwp/api/windows.applicationmodel.appextensions.appextensionpackageinstalledeventargs)
 
 **속성**
 
@@ -380,7 +380,7 @@ Windows.ApplicationModel.AppExtensions.AppExtensionPackageInstalledEventArgs <br
 
 **항목**
 
-[Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions.appextensionpackagestatuschangedeventargs)
+[Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs](/uwp/api/windows.applicationmodel.appextensions.appextensionpackagestatuschangedeventargs)
 
 **속성**
 
@@ -390,7 +390,7 @@ Windows.ApplicationModel.AppExtensions.AppExtensionPackageStatusChangedEventArgs
 
 **항목**
 
-[Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions.appextensionpackageuninstallingeventargs)
+[Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs](/uwp/api/windows.applicationmodel.appextensions.appextensionpackageuninstallingeventargs)
 
 **속성**
 
@@ -400,7 +400,7 @@ Windows.ApplicationModel.AppExtensions.AppExtensionPackageUninstallingEventArgs 
 
 **항목**
 
-[Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions.appextensionpackageupdatedeventargs)
+[Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs](/uwp/api/windows.applicationmodel.appextensions.appextensionpackageupdatedeventargs)
 
 **속성**
 
@@ -410,7 +410,7 @@ Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatedEventArgs <br /
 
 **항목**
 
-[Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appextensions.appextensionpackageupdatingeventargs)
+[Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs](/uwp/api/windows.applicationmodel.appextensions.appextensionpackageupdatingeventargs)
 
 **속성**
 
@@ -420,7 +420,7 @@ Windows.ApplicationModel.AppExtensions.AppExtensionPackageUpdatingEventArgs <br 
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.AppointmentManagerForUser](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.appointmentmanagerforuser)
+[Windows.ApplicationModel.Appointments.AppointmentManagerForUser](/uwp/api/windows.applicationmodel.appointments.appointmentmanagerforuser)
 
 **속성**
 
@@ -430,7 +430,7 @@ Windows.ApplicationModel.Appointments.AppointmentManagerForUser <br /> Windows.A
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarcancelmeetingrequest)
+[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequest](/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarcancelmeetingrequest)
 
 **속성**
 
@@ -440,7 +440,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeet
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarcancelmeetingrequesteventargs)
+[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeetingRequestEventArgs](/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarcancelmeetingrequesteventargs)
 
 **속성**
 
@@ -450,7 +450,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCancelMeet
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarcreateorupdateappointmentrequest)
+[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequest](/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarcreateorupdateappointmentrequest)
 
 **속성**
 
@@ -460,7 +460,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUp
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarcreateorupdateappointmentrequesteventargs)
+[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs](/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarcreateorupdateappointmentrequesteventargs)
 
 **속성**
 
@@ -470,7 +470,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarCreateOrUp
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarforwardmeetingrequest)
+[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequest](/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarforwardmeetingrequest)
 
 **속성**
 
@@ -480,7 +480,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMee
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarforwardmeetingrequesteventargs)
+[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMeetingRequestEventArgs](/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarforwardmeetingrequesteventargs)
 
 **속성**
 
@@ -490,7 +490,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarForwardMee
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarproposenewtimeformeetingrequest)
+[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequest](/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarproposenewtimeformeetingrequest)
 
 **속성**
 
@@ -500,7 +500,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNew
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarproposenewtimeformeetingrequesteventargs)
+[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs](/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarproposenewtimeformeetingrequesteventargs)
 
 **속성**
 
@@ -510,7 +510,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarProposeNew
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarsyncmanagersyncrequest)
+[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequest](/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarsyncmanagersyncrequest)
 
 **속성**
 
@@ -520,7 +520,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManage
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarsyncmanagersyncrequesteventargs)
+[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManagerSyncRequestEventArgs](/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarsyncmanagersyncrequesteventargs)
 
 **속성**
 
@@ -530,7 +530,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarSyncManage
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarupdatemeetingresponserequest)
+[Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeetingResponseRequest](/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarupdatemeetingresponserequest)
 
 **속성**
 
@@ -540,7 +540,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeet
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.</br>AppointmentCalendarUpdateMeetingResponseRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarupdatemeetingresponserequesteventargs)
+[Windows.ApplicationModel.Appointments.DataProvider.</br>AppointmentCalendarUpdateMeetingResponseRequestEventArgs](/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentcalendarupdatemeetingresponserequesteventargs)
 
 **속성**
 
@@ -550,7 +550,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentCalendarUpdateMeet
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentdataproviderconnection)
+[Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnection](/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentdataproviderconnection)
 
 **속성**
 
@@ -560,7 +560,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderConnec
 
 **항목**
 
-[Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderTriggerDetails](https://docs.microsoft.com/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentdataprovidertriggerdetails)
+[Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderTriggerDetails](/uwp/api/windows.applicationmodel.appointments.dataprovider.appointmentdataprovidertriggerdetails)
 
 **속성**
 
@@ -570,7 +570,7 @@ Windows.ApplicationModel.Appointments.DataProvider.AppointmentDataProviderTrigge
 
 **항목**
 
-[Windows.ApplicationModel.Background.IBackgroundTaskInstance4](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance4)
+[Windows.ApplicationModel.Background.IBackgroundTaskInstance4](/uwp/api/windows.applicationmodel.background.ibackgroundtaskinstance4)
 
 **속성**
 
@@ -580,7 +580,7 @@ Windows.ApplicationModel.Background.IBackgroundTaskInstance4 <br /> Windows.Appl
 
 **항목**
 
-[Windows.ApplicationModel.Background.SecondaryAuthenticationFactorAuthenticationTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.secondaryauthenticationfactorauthenticationtrigger)
+[Windows.ApplicationModel.Background.SecondaryAuthenticationFactorAuthenticationTrigger](/uwp/api/windows.applicationmodel.background.secondaryauthenticationfactorauthenticationtrigger)
 
 **속성**
 
@@ -590,7 +590,7 @@ Windows.ApplicationModel.Background.SecondaryAuthenticationFactorAuthenticationT
 
 **항목**
 
-[Windows.ApplicationModel.Background.UserNotificationChangedTrigger](https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.usernotificationchangedtrigger)
+[Windows.ApplicationModel.Background.UserNotificationChangedTrigger](/uwp/api/windows.applicationmodel.background.usernotificationchangedtrigger)
 
 **속성**
 
@@ -600,7 +600,7 @@ Windows.ApplicationModel.Background.UserNotificationChangedTrigger <br /> Window
 
 **항목**
 
-[Windows.ApplicationModel.Calls.PhoneCallHistoryManagerForUser](https://docs.microsoft.com/uwp/api/windows.applicationmodel.calls.phonecallhistorymanagerforuser)
+[Windows.ApplicationModel.Calls.PhoneCallHistoryManagerForUser](/uwp/api/windows.applicationmodel.calls.phonecallhistorymanagerforuser)
 
 **속성**
 
@@ -610,7 +610,7 @@ Windows.ApplicationModel.Calls.PhoneCallHistoryManagerForUser <br /> Windows.App
 
 **항목**
 
-[Windows.ApplicationModel.Chat.ChatRestoreHistorySpan](https://docs.microsoft.com/uwp/api/windows.applicationmodel.chat.chatrestorehistoryspan)
+[Windows.ApplicationModel.Chat.ChatRestoreHistorySpan](/uwp/api/windows.applicationmodel.chat.chatrestorehistoryspan)
 
 **속성**
 
@@ -620,7 +620,7 @@ Windows.ApplicationModel.Chat.ChatRestoreHistorySpan <br /> Windows.ApplicationM
 
 **항목**
 
-[Windows.ApplicationModel.Chat.ChatSyncConfiguration](https://docs.microsoft.com/uwp/api/windows.applicationmodel.chat.chatsyncconfiguration)
+[Windows.ApplicationModel.Chat.ChatSyncConfiguration](/uwp/api/windows.applicationmodel.chat.chatsyncconfiguration)
 
 **속성**
 
@@ -630,7 +630,7 @@ Windows.ApplicationModel.Chat.ChatSyncConfiguration <br /> Windows.ApplicationMo
 
 **항목**
 
-[Windows.ApplicationModel.Chat.ChatSyncManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.chat.chatsyncmanager)
+[Windows.ApplicationModel.Chat.ChatSyncManager](/uwp/api/windows.applicationmodel.chat.chatsyncmanager)
 
 **속성**
 
@@ -640,7 +640,7 @@ Windows.ApplicationModel.Chat.ChatSyncManager <br /> Windows.ApplicationModel.Ch
 
 **항목**
 
-[Windows.ApplicationModel.Contacts.ContactListSyncConstraints](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactlistsyncconstraints)
+[Windows.ApplicationModel.Contacts.ContactListSyncConstraints](/uwp/api/windows.applicationmodel.contacts.contactlistsyncconstraints)
 
 **속성**
 
@@ -650,7 +650,7 @@ Windows.ApplicationModel.Contacts.ContactListSyncConstraints <br /> Windows.Appl
 
 **항목**
 
-[Windows.ApplicationModel.Contacts.ContactManagerForUser](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactmanagerforuser)
+[Windows.ApplicationModel.Contacts.ContactManagerForUser](/uwp/api/windows.applicationmodel.contacts.contactmanagerforuser)
 
 **속성**
 
@@ -660,7 +660,7 @@ Windows.ApplicationModel.Contacts.ContactManagerForUser <br /> Windows.Applicati
 
 **항목**
 
-[Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.dataprovider.contactdataproviderconnection)
+[Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection](/uwp/api/windows.applicationmodel.contacts.dataprovider.contactdataproviderconnection)
 
 **속성**
 
@@ -670,7 +670,7 @@ Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderConnection <br
 
 **항목**
 
-[Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderTriggerDetails](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.dataprovider.contactdataprovidertriggerdetails)
+[Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderTriggerDetails](/uwp/api/windows.applicationmodel.contacts.dataprovider.contactdataprovidertriggerdetails)
 
 **속성**
 
@@ -680,7 +680,7 @@ Windows.ApplicationModel.Contacts.DataProvider.ContactDataProviderTriggerDetails
 
 **항목**
 
-[Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.dataprovider.contactlistserversearchreadbatchrequest)
+[Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequest](/uwp/api/windows.applicationmodel.contacts.dataprovider.contactlistserversearchreadbatchrequest)
 
 **속성**
 
@@ -690,7 +690,7 @@ Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchR
 
 **항목**
 
-[Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.dataprovider.contactlistserversearchreadbatchrequesteventargs)
+[Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchRequestEventArgs](/uwp/api/windows.applicationmodel.contacts.dataprovider.contactlistserversearchreadbatchrequesteventargs)
 
 **속성**
 
@@ -700,7 +700,7 @@ Windows.ApplicationModel.Contacts.DataProvider.ContactListServerSearchReadBatchR
 
 **항목**
 
-[Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.dataprovider.contactlistsyncmanagersyncrequest)
+[Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest](/uwp/api/windows.applicationmodel.contacts.dataprovider.contactlistsyncmanagersyncrequest)
 
 **속성**
 
@@ -710,7 +710,7 @@ Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest
 
 **항목**
 
-[Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.dataprovider.contactlistsyncmanagersyncrequesteventargs)
+[Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequestEventArgs](/uwp/api/windows.applicationmodel.contacts.dataprovider.contactlistsyncmanagersyncrequesteventargs)
 
 **속성**
 
@@ -720,7 +720,7 @@ Windows.ApplicationModel.Contacts.DataProvider.ContactListSyncManagerSyncRequest
 
 **항목**
 
-[Windows.ApplicationModel.Email.EmailManagerForUser](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.emailmanagerforuser)
+[Windows.ApplicationModel.Email.EmailManagerForUser](/uwp/api/windows.applicationmodel.email.emailmanagerforuser)
 
 **속성**
 
@@ -730,7 +730,7 @@ Windows.ApplicationModel.Email.EmailManagerForUser <br /> Windows.ApplicationMod
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emaildataproviderconnection)
+[Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection](/uwp/api/windows.applicationmodel.email.dataprovider.emaildataproviderconnection)
 
 **속성**
 
@@ -740,7 +740,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailDataProviderConnection <br /> W
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailDataProviderTriggerDetails](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emaildataprovidertriggerdetails)
+[Windows.ApplicationModel.Email.DataProvider.EmailDataProviderTriggerDetails](/uwp/api/windows.applicationmodel.email.dataprovider.emaildataprovidertriggerdetails)
 
 **속성**
 
@@ -750,7 +750,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailDataProviderTriggerDetails <br 
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxcreatefolderrequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxcreatefolderrequest)
 
 **속성**
 
@@ -760,7 +760,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequest <br 
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxcreatefolderrequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxcreatefolderrequesteventargs)
 
 **속성**
 
@@ -770,7 +770,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxCreateFolderRequestEvent
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxdeletefolderrequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxdeletefolderrequest)
 
 **속성**
 
@@ -780,7 +780,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequest <br 
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxdeletefolderrequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxdeletefolderrequesteventargs)
 
 **속성**
 
@@ -790,7 +790,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxDeleteFolderRequestEvent
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxdownloadattachmentrequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxdownloadattachmentrequest)
 
 **속성**
 
@@ -800,7 +800,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentReques
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxdownloadattachmentrequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxdownloadattachmentrequesteventargs)
 
 **속성**
 
@@ -810,7 +810,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadAttachmentReques
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxdownloadmessagerequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxdownloadmessagerequest)
 
 **속성**
 
@@ -820,7 +820,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequest <
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxdownloadmessagerequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxdownloadmessagerequesteventargs)
 
 **속성**
 
@@ -830,7 +830,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxDownloadMessageRequestEv
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxemptyfolderrequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxemptyfolderrequest)
 
 **속성**
 
@@ -840,7 +840,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequest <br /
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxemptyfolderrequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxemptyfolderrequesteventargs)
 
 **속성**
 
@@ -850,7 +850,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxEmptyFolderRequestEventA
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxforwardmeetingrequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxforwardmeetingrequest)
 
 **속성**
 
@@ -860,7 +860,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequest <b
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxforwardmeetingrequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxforwardmeetingrequesteventargs)
 
 **속성**
 
@@ -870,7 +870,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxForwardMeetingRequestEve
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxgetautoreplysettingsrequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxgetautoreplysettingsrequest)
 
 **속성**
 
@@ -880,7 +880,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequ
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxgetautoreplysettingsrequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxgetautoreplysettingsrequesteventargs)
 
 **속성**
 
@@ -890,7 +890,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxGetAutoReplySettingsRequ
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxmovefolderrequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxmovefolderrequest)
 
 **속성**
 
@@ -900,7 +900,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequest <br />
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxmovefolderrequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxmovefolderrequesteventargs)
 
 **속성**
 
@@ -910,7 +910,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxMoveFolderRequestEventAr
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxproposenewtimeformeetingrequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxproposenewtimeformeetingrequest)
 
 **속성**
 
@@ -920,7 +920,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeeting
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxproposenewtimeformeetingrequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxproposenewtimeformeetingrequesteventargs)
 
 **속성**
 
@@ -930,7 +930,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxProposeNewTimeForMeeting
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxresolverecipientsrequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxresolverecipientsrequest)
 
 **속성**
 
@@ -940,7 +940,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxresolverecipientsrequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxresolverecipientsrequesteventargs)
 
 **속성**
 
@@ -950,7 +950,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxResolveRecipientsRequest
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxserversearchreadbatchrequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxserversearchreadbatchrequest)
 
 **속성**
 
@@ -960,7 +960,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchReq
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxserversearchreadbatchrequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxserversearchreadbatchrequesteventargs)
 
 **속성**
 
@@ -970,7 +970,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxServerSearchReadBatchReq
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxsetautoreplysettingsrequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxsetautoreplysettingsrequest)
 
 **속성**
 
@@ -980,7 +980,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequ
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxsetautoreplysettingsrequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxsetautoreplysettingsrequesteventargs)
 
 **속성**
 
@@ -990,7 +990,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxSetAutoReplySettingsRequ
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxsyncmanagersyncrequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxsyncmanagersyncrequest)
 
 **속성**
 
@@ -1000,7 +1000,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequest <
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxsyncmanagersyncrequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxsyncmanagersyncrequesteventargs)
 
 **속성**
 
@@ -1010,7 +1010,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxSyncManagerSyncRequestEv
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxupdatemeetingresponserequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxupdatemeetingresponserequest)
 
 **속성**
 
@@ -1020,7 +1020,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseReq
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxupdatemeetingresponserequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxupdatemeetingresponserequesteventargs)
 
 **속성**
 
@@ -1030,7 +1030,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxUpdateMeetingResponseReq
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxvalidatecertificatesrequest)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequest](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxvalidatecertificatesrequest)
 
 **속성**
 
@@ -1040,7 +1040,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequ
 
 **항목**
 
-[Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxvalidatecertificatesrequesteventargs)
+[Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequestEventArgs](/uwp/api/windows.applicationmodel.email.dataprovider.emailmailboxvalidatecertificatesrequesteventargs)
 
 **속성**
 
@@ -1050,7 +1050,7 @@ Windows.ApplicationModel.Email.DataProvider.EmailMailboxValidateCertificatesRequ
 
 **항목**
 
-[Windows.ApplicationModel.Store.LicenseManagement.LicenseManager](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.licensemanagement.licensemanager)
+[Windows.ApplicationModel.Store.LicenseManagement.LicenseManager](/uwp/api/windows.applicationmodel.store.licensemanagement.licensemanager)
 
 **속성**
 
@@ -1060,7 +1060,7 @@ Windows.ApplicationModel.Store.LicenseManagement.LicenseManager <br /> Windows.A
 
 **항목**
 
-[Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.licensemanagement.licensesatisfactioninfo)
+[Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo](/uwp/api/windows.applicationmodel.store.licensemanagement.licensesatisfactioninfo)
 
 **속성**
 
@@ -1070,7 +1070,7 @@ Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionInfo <br /> 
 
 **항목**
 
-[Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.licensemanagement.licensesatisfactionresult)
+[Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult](/uwp/api/windows.applicationmodel.store.licensemanagement.licensesatisfactionresult)
 
 **속성**
 
@@ -1080,7 +1080,7 @@ Windows.ApplicationModel.Store.LicenseManagement.LicenseSatisfactionResult <br /
 
 **항목**
 
-[Windows.ApplicationModel.Store.Preview.StoreLogOptions](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.preview.storelogoptions)
+[Windows.ApplicationModel.Store.Preview.StoreLogOptions](/uwp/api/windows.applicationmodel.store.preview.storelogoptions)
 
 **속성**
 
@@ -1090,7 +1090,7 @@ Windows.ApplicationModel.Store.Preview.StoreLogOptions <br /> Windows.Applicatio
 
 **항목**
 
-[Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser](https://docs.microsoft.com/uwp/api/windows.applicationmodel.userdataaccounts.userdataaccountmanagerforuser)
+[Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser](/uwp/api/windows.applicationmodel.userdataaccounts.userdataaccountmanagerforuser)
 
 **속성**
 
@@ -1100,7 +1100,7 @@ Windows.ApplicationModel.UserDataAccounts.UserDataAccountManagerForUser <br /> W
 
 **항목**
 
-[Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs](https://docs.microsoft.com/uwp/api/windows.applicationmodel.userdataaccounts.userdataaccountstorechangedeventargs)
+[Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs](/uwp/api/windows.applicationmodel.userdataaccounts.userdataaccountstorechangedeventargs)
 
 **속성**
 
@@ -1110,7 +1110,7 @@ Windows.ApplicationModel.UserDataAccounts.UserDataAccountStoreChangedEventArgs <
 
 **항목**
 
-[Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation](https://docs.microsoft.com/uwp/api/windows.applicationmodel.userdataaccounts.provider.iuserdataaccountprovideroperation)
+[Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOperation](/uwp/api/windows.applicationmodel.userdataaccounts.provider.iuserdataaccountprovideroperation)
 
 **속성**
 
@@ -1120,7 +1120,7 @@ Windows.ApplicationModel.UserDataAccounts.Provider.IUserDataAccountProviderOpera
 
 **항목**
 
-[Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo](https://docs.microsoft.com/uwp/api/windows.applicationmodel.userdataaccounts.provider.userdataaccountpartneraccountinfo)
+[Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccountInfo](/uwp/api/windows.applicationmodel.userdataaccounts.provider.userdataaccountpartneraccountinfo)
 
 **속성**
 
@@ -1130,7 +1130,7 @@ Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountPartnerAccount
 
 **항목**
 
-[Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation](https://docs.microsoft.com/uwp/api/windows.applicationmodel.userdataaccounts.provider.userdataaccountprovideraddaccountoperation)
+[Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAccountOperation](/uwp/api/windows.applicationmodel.userdataaccounts.provider.userdataaccountprovideraddaccountoperation)
 
 **속성**
 
@@ -1140,7 +1140,7 @@ Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderAddAcc
 
 **항목**
 
-[Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind](https://docs.microsoft.com/uwp/api/windows.applicationmodel.userdataaccounts.provider.userdataaccountprovideroperationkind)
+[Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperationKind](/uwp/api/windows.applicationmodel.userdataaccounts.provider.userdataaccountprovideroperationkind)
 
 **속성**
 
@@ -1150,7 +1150,7 @@ Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderOperat
 
 **항목**
 
-[Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderPartnerAccountKind](https://docs.microsoft.com/uwp/api/windows.applicationmodel.userdataaccounts.provider.userdataaccountproviderpartneraccountkind)
+[Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderPartnerAccountKind](/uwp/api/windows.applicationmodel.userdataaccounts.provider.userdataaccountproviderpartneraccountkind)
 
 **속성**
 
@@ -1160,7 +1160,7 @@ Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderPartne
 
 **항목**
 
-[Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation](https://docs.microsoft.com/uwp/api/windows.applicationmodel.userdataaccounts.provider.userdataaccountproviderresolveerrorsoperation)
+[Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolveErrorsOperation](/uwp/api/windows.applicationmodel.userdataaccounts.provider.userdataaccountproviderresolveerrorsoperation)
 
 **속성**
 
@@ -1170,7 +1170,7 @@ Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderResolv
 
 **항목**
 
-[Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation](https://docs.microsoft.com/uwp/api/windows.applicationmodel.userdataaccounts.provider.userdataaccountprovidersettingsoperation)
+[Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettingsOperation](/uwp/api/windows.applicationmodel.userdataaccounts.provider.userdataaccountprovidersettingsoperation)
 
 **속성**
 
@@ -1180,7 +1180,7 @@ Windows.ApplicationModel.UserDataAccounts.Provider.UserDataAccountProviderSettin
 
 **항목**
 
-[Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountAuthenticationType](https://docs.microsoft.com/uwp/api/windows.applicationmodel.userdataaccounts.systemaccess.deviceaccountauthenticationtype)
+[Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountAuthenticationType](/uwp/api/windows.applicationmodel.userdataaccounts.systemaccess.deviceaccountauthenticationtype)
 
 **속성**
 
@@ -1190,7 +1190,7 @@ Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountAuthenticati
 
 **항목**
 
-[Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountIconId](https://docs.microsoft.com/uwp/api/windows.applicationmodel.userdataaccounts.systemaccess.deviceaccounticonid)
+[Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountIconId](/uwp/api/windows.applicationmodel.userdataaccounts.systemaccess.deviceaccounticonid)
 
 **속성**
 
@@ -1200,7 +1200,7 @@ Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountIconId <br /
 
 **항목**
 
-[Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountMailAgeFilter](https://docs.microsoft.com/uwp/api/windows.applicationmodel.userdataaccounts.systemaccess.deviceaccountmailagefilter)
+[Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountMailAgeFilter](/uwp/api/windows.applicationmodel.userdataaccounts.systemaccess.deviceaccountmailagefilter)
 
 **속성**
 
@@ -1210,7 +1210,7 @@ Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountMailAgeFilte
 
 **항목**
 
-[Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountSyncScheduleKind](https://docs.microsoft.com/uwp/api/windows.applicationmodel.userdataaccounts.systemaccess.deviceaccountsyncschedulekind)
+[Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountSyncScheduleKind](/uwp/api/windows.applicationmodel.userdataaccounts.systemaccess.deviceaccountsyncschedulekind)
 
 **속성**
 
@@ -1220,7 +1220,7 @@ Windows.ApplicationModel.UserDataAccounts.SystemAccess.DeviceAccountSyncSchedule
 
 **항목**
 
-[Windows.Data.Text.TextPhoneme](https://docs.microsoft.com/uwp/api/windows.data.text.textphoneme)
+[Windows.Data.Text.TextPhoneme](/uwp/api/windows.data.text.textphoneme)
 
 **속성**
 
@@ -1230,7 +1230,7 @@ Windows.Data.Text.TextPhoneme <br /> Windows.Data.Text.TextPhoneme.DisplayText <
 
 **항목**
 
-[Windows.Devices.AllJoyn.AllJoynBusObject](https://docs.microsoft.com/uwp/api/windows.devices.alljoyn.alljoynbusobject)
+[Windows.Devices.AllJoyn.AllJoynBusObject](/uwp/api/windows.devices.alljoyn.alljoynbusobject)
 
 **속성**
 
@@ -1240,7 +1240,7 @@ Windows.Devices.AllJoyn.AllJoynBusObject <br /> Windows.Devices.AllJoyn.AllJoynB
 
 **항목**
 
-[Windows.Devices.AllJoyn.AllJoynBusObjectStoppedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.alljoyn.alljoynbusobjectstoppedeventargs)
+[Windows.Devices.AllJoyn.AllJoynBusObjectStoppedEventArgs](/uwp/api/windows.devices.alljoyn.alljoynbusobjectstoppedeventargs)
 
 **속성**
 
@@ -1250,7 +1250,7 @@ Windows.Devices.AllJoyn.AllJoynBusObjectStoppedEventArgs <br /> Windows.Devices.
 
 **항목**
 
-[Windows.Devices.AllJoyn.AllJoynSession](https://docs.microsoft.com/uwp/api/windows.devices.alljoyn.alljoynsession)
+[Windows.Devices.AllJoyn.AllJoynSession](/uwp/api/windows.devices.alljoyn.alljoynsession)
 
 **속성**
 
@@ -1260,7 +1260,7 @@ Windows.Devices.AllJoyn.AllJoynSession <br /> Windows.Devices.AllJoyn.AllJoynSes
 
 **항목**
 
-[Windows.Devices.AllJoyn.AllJoynSessionJoinedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.alljoyn.alljoynsessionjoinedeventargs)
+[Windows.Devices.AllJoyn.AllJoynSessionJoinedEventArgs](/uwp/api/windows.devices.alljoyn.alljoynsessionjoinedeventargs)
 
 **속성**
 
@@ -1270,7 +1270,7 @@ Windows.Devices.AllJoyn.AllJoynSessionJoinedEventArgs <br /> Windows.Devices.All
 
 **항목**
 
-[Windows.Devices.AllJoyn.IAllJoynProducer](https://docs.microsoft.com/uwp/api/windows.devices.alljoyn.ialljoynproducer)
+[Windows.Devices.AllJoyn.IAllJoynProducer](/uwp/api/windows.devices.alljoyn.ialljoynproducer)
 
 **속성**
 
@@ -1280,7 +1280,7 @@ Windows.Devices.AllJoyn.IAllJoynProducer <br /> Windows.Devices.AllJoyn.IAllJoyn
 
 **항목**
 
-[Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult](https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservicesresult)
+[Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult](/uwp/api/windows.devices.bluetooth.rfcomm.rfcommdeviceservicesresult)
 
 **속성**
 
@@ -1290,7 +1290,7 @@ Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceServicesResult <br /> Windows.Devic
 
 **항목**
 
-[Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs](https://docs.microsoft.com/uwp/api/windows.devices.printers.extensions.print3dworkflowprinterchangedeventargs)
+[Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs](/uwp/api/windows.devices.printers.extensions.print3dworkflowprinterchangedeventargs)
 
 **속성**
 
@@ -1300,7 +1300,7 @@ Windows.Devices.Printers.Extensions.Print3DWorkflowPrinterChangedEventArgs <br /
 
 **항목**
 
-[Windows.Devices.Sensors.AccelerometerReadingType](https://docs.microsoft.com/uwp/api/windows.devices.sensors.accelerometerreadingtype)
+[Windows.Devices.Sensors.AccelerometerReadingType](/uwp/api/windows.devices.sensors.accelerometerreadingtype)
 
 **속성**
 
@@ -1310,7 +1310,7 @@ Windows.Devices.Sensors.AccelerometerReadingType <br /> Windows.Devices.Sensors.
 
 **항목**
 
-[Windows.Devices.Sensors.SensorOptimizationGoal](https://docs.microsoft.com/uwp/api/windows.devices.sensors.sensoroptimizationgoal)
+[Windows.Devices.Sensors.SensorOptimizationGoal](/uwp/api/windows.devices.sensors.sensoroptimizationgoal)
 
 **속성**
 
@@ -1320,7 +1320,7 @@ Windows.Devices.Sensors.SensorOptimizationGoal <br /> Windows.Devices.Sensors.Se
 
 **항목**
 
-[Windows.Foundation.Metadata.CreateFromStringAttribute](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.createfromstringattribute)
+[Windows.Foundation.Metadata.CreateFromStringAttribute](/uwp/api/windows.foundation.metadata.createfromstringattribute)
 
 **속성**
 
@@ -1330,7 +1330,7 @@ Windows.Foundation.Metadata.CreateFromStringAttribute <br /> Windows.Foundation.
 
 **항목**
 
-[Windows.Gaming.Input.ArcadeStick](https://docs.microsoft.com/uwp/api/windows.gaming.input.arcadestick)
+[Windows.Gaming.Input.ArcadeStick](/uwp/api/windows.gaming.input.arcadestick)
 
 **속성**
 
@@ -1340,7 +1340,7 @@ Windows.Gaming.Input.ArcadeStick <br /> Windows.Gaming.Input.ArcadeStick.ArcadeS
 
 **항목**
 
-[Windows.Gaming.Input.ArcadeStickButtons](https://docs.microsoft.com/uwp/api/windows.gaming.input.arcadestickbuttons)
+[Windows.Gaming.Input.ArcadeStickButtons](/uwp/api/windows.gaming.input.arcadestickbuttons)
 
 **속성**
 
@@ -1350,7 +1350,7 @@ Windows.Gaming.Input.ArcadeStickButtons <br /> Windows.Gaming.Input.ArcadeStickB
 
 **항목**
 
-[Windows.Gaming.Input.ArcadeStickReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.arcadestickreading)
+[Windows.Gaming.Input.ArcadeStickReading](/uwp/api/windows.gaming.input.arcadestickreading)
 
 **속성**
 
@@ -1360,7 +1360,7 @@ Windows.Gaming.Input.ArcadeStickReading <br /> Windows.Gaming.Input.ArcadeStickR
 
 **항목**
 
-[Windows.Gaming.Input.GameControllerButtonLabel](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamecontrollerbuttonlabel)
+[Windows.Gaming.Input.GameControllerButtonLabel](/uwp/api/windows.gaming.input.gamecontrollerbuttonlabel)
 
 **속성**
 
@@ -1370,7 +1370,7 @@ Windows.Gaming.Input.GameControllerButtonLabel <br /> Windows.Gaming.Input.GameC
 
 **항목**
 
-[Windows.Gaming.Input.OptionalUINavigationButtons](https://docs.microsoft.com/uwp/api/windows.gaming.input.optionaluinavigationbuttons)
+[Windows.Gaming.Input.OptionalUINavigationButtons](/uwp/api/windows.gaming.input.optionaluinavigationbuttons)
 
 **속성**
 
@@ -1380,7 +1380,7 @@ Windows.Gaming.Input.OptionalUINavigationButtons <br /> Windows.Gaming.Input.Opt
 
 **항목**
 
-[Windows.Gaming.Input.RacingWheel](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheel)
+[Windows.Gaming.Input.RacingWheel](/uwp/api/windows.gaming.input.racingwheel)
 
 **속성**
 
@@ -1390,7 +1390,7 @@ Windows.Gaming.Input.RacingWheel <br /> Windows.Gaming.Input.RacingWheel.HasClut
 
 **항목**
 
-[Windows.Gaming.Input.RacingWheelButtons](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheelbuttons)
+[Windows.Gaming.Input.RacingWheelButtons](/uwp/api/windows.gaming.input.racingwheelbuttons)
 
 **속성**
 
@@ -1400,7 +1400,7 @@ Windows.Gaming.Input.RacingWheelButtons <br /> Windows.Gaming.Input.RacingWheelB
 
 **항목**
 
-[Windows.Gaming.Input.RacingWheelReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.racingwheelreading)
+[Windows.Gaming.Input.RacingWheelReading](/uwp/api/windows.gaming.input.racingwheelreading)
 
 **속성**
 
@@ -1410,7 +1410,7 @@ Windows.Gaming.Input.RacingWheelReading <br /> Windows.Gaming.Input.RacingWheelR
 
 **항목**
 
-[Windows.Gaming.Input.RequiredUINavigationButtons](https://docs.microsoft.com/uwp/api/windows.gaming.input.requireduinavigationbuttons)
+[Windows.Gaming.Input.RequiredUINavigationButtons](/uwp/api/windows.gaming.input.requireduinavigationbuttons)
 
 **속성**
 
@@ -1420,7 +1420,7 @@ Windows.Gaming.Input.RequiredUINavigationButtons <br /> Windows.Gaming.Input.Req
 
 **항목**
 
-[Windows.Gaming.Input.UINavigationController](https://docs.microsoft.com/uwp/api/windows.gaming.input.uinavigationcontroller)
+[Windows.Gaming.Input.UINavigationController](/uwp/api/windows.gaming.input.uinavigationcontroller)
 
 **속성**
 
@@ -1430,7 +1430,7 @@ Windows.Gaming.Input.UINavigationController <br /> Windows.Gaming.Input.UINaviga
 
 **항목**
 
-[Windows.Gaming.Input.UINavigationReading](https://docs.microsoft.com/uwp/api/windows.gaming.input.uinavigationreading)
+[Windows.Gaming.Input.UINavigationReading](/uwp/api/windows.gaming.input.uinavigationreading)
 
 **속성**
 
@@ -1440,7 +1440,7 @@ Windows.Gaming.Input.UINavigationReading <br /> Windows.Gaming.Input.UINavigatio
 
 **항목**
 
-[Windows.Gaming.Input.Custom.GameControllerFactoryManager](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.gamecontrollerfactorymanager)
+[Windows.Gaming.Input.Custom.GameControllerFactoryManager](/uwp/api/windows.gaming.input.custom.gamecontrollerfactorymanager)
 
 **속성**
 
@@ -1450,7 +1450,7 @@ Windows.Gaming.Input.Custom.GameControllerFactoryManager <br /> Windows.Gaming.I
 
 **항목**
 
-[Windows.Gaming.Input.Custom.GameControllerVersionInfo](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.gamecontrollerversioninfo)
+[Windows.Gaming.Input.Custom.GameControllerVersionInfo](/uwp/api/windows.gaming.input.custom.gamecontrollerversioninfo)
 
 **속성**
 
@@ -1460,7 +1460,7 @@ Windows.Gaming.Input.Custom.GameControllerVersionInfo <br /> Windows.Gaming.Inpu
 
 **항목**
 
-[Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.gipfirmwareupdateprogress)
+[Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress](/uwp/api/windows.gaming.input.custom.gipfirmwareupdateprogress)
 
 **속성**
 
@@ -1470,7 +1470,7 @@ Windows.Gaming.Input.Custom.GipFirmwareUpdateProgress <br /> Windows.Gaming.Inpu
 
 **항목**
 
-[Windows.Gaming.Input.Custom.GipFirmwareUpdateResult](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.gipfirmwareupdateresult)
+[Windows.Gaming.Input.Custom.GipFirmwareUpdateResult](/uwp/api/windows.gaming.input.custom.gipfirmwareupdateresult)
 
 **속성**
 
@@ -1480,7 +1480,7 @@ Windows.Gaming.Input.Custom.GipFirmwareUpdateResult <br /> Windows.Gaming.Input.
 
 **항목**
 
-[Windows.Gaming.Input.Custom.GipFirmwareUpdateStatus](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.gipfirmwareupdatestatus)
+[Windows.Gaming.Input.Custom.GipFirmwareUpdateStatus](/uwp/api/windows.gaming.input.custom.gipfirmwareupdatestatus)
 
 **속성**
 
@@ -1490,7 +1490,7 @@ Windows.Gaming.Input.Custom.GipFirmwareUpdateStatus <br /> Windows.Gaming.Input.
 
 **항목**
 
-[Windows.Gaming.Input.Custom.GipGameControllerProvider](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.gipgamecontrollerprovider)
+[Windows.Gaming.Input.Custom.GipGameControllerProvider](/uwp/api/windows.gaming.input.custom.gipgamecontrollerprovider)
 
 **속성**
 
@@ -1500,7 +1500,7 @@ Windows.Gaming.Input.Custom.GipGameControllerProvider <br /> Windows.Gaming.Inpu
 
 **항목**
 
-[Windows.Gaming.Input.Custom.GipMessageClass](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.gipmessageclass)
+[Windows.Gaming.Input.Custom.GipMessageClass](/uwp/api/windows.gaming.input.custom.gipmessageclass)
 
 **속성**
 
@@ -1510,7 +1510,7 @@ Windows.Gaming.Input.Custom.GipMessageClass <br /> Windows.Gaming.Input.Custom.G
 
 **항목**
 
-[Windows.Gaming.Input.Custom.ICustomGameControllerFactory](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.icustomgamecontrollerfactory)
+[Windows.Gaming.Input.Custom.ICustomGameControllerFactory](/uwp/api/windows.gaming.input.custom.icustomgamecontrollerfactory)
 
 **속성**
 
@@ -1520,7 +1520,7 @@ Windows.Gaming.Input.Custom.ICustomGameControllerFactory <br /> Windows.Gaming.I
 
 **항목**
 
-[Windows.Gaming.Input.Custom.IGameControllerInputSink](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.igamecontrollerinputsink)
+[Windows.Gaming.Input.Custom.IGameControllerInputSink](/uwp/api/windows.gaming.input.custom.igamecontrollerinputsink)
 
 **속성**
 
@@ -1530,7 +1530,7 @@ Windows.Gaming.Input.Custom.IGameControllerInputSink <br /> Windows.Gaming.Input
 
 **항목**
 
-[Windows.Gaming.Input.Custom.IGameControllerProvider](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.igamecontrollerprovider)
+[Windows.Gaming.Input.Custom.IGameControllerProvider](/uwp/api/windows.gaming.input.custom.igamecontrollerprovider)
 
 **속성**
 
@@ -1540,7 +1540,7 @@ Windows.Gaming.Input.Custom.IGameControllerProvider <br /> Windows.Gaming.Input.
 
 **항목**
 
-[Windows.Gaming.Input.Custom.IGipGameControllerInputSink](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.igipgamecontrollerinputsink)
+[Windows.Gaming.Input.Custom.IGipGameControllerInputSink](/uwp/api/windows.gaming.input.custom.igipgamecontrollerinputsink)
 
 **속성**
 
@@ -1550,7 +1550,7 @@ Windows.Gaming.Input.Custom.IGipGameControllerInputSink <br /> Windows.Gaming.In
 
 **항목**
 
-[Windows.Gaming.Input.Custom.IXusbGameControllerInputSink](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.ixusbgamecontrollerinputsink)
+[Windows.Gaming.Input.Custom.IXusbGameControllerInputSink](/uwp/api/windows.gaming.input.custom.ixusbgamecontrollerinputsink)
 
 **속성**
 
@@ -1560,7 +1560,7 @@ Windows.Gaming.Input.Custom.IXusbGameControllerInputSink <br /> Windows.Gaming.I
 
 **항목**
 
-[Windows.Gaming.Input.Custom.XusbDeviceSubtype](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.xusbdevicesubtype)
+[Windows.Gaming.Input.Custom.XusbDeviceSubtype](/uwp/api/windows.gaming.input.custom.xusbdevicesubtype)
 
 **속성**
 
@@ -1570,7 +1570,7 @@ Windows.Gaming.Input.Custom.XusbDeviceSubtype <br /> Windows.Gaming.Input.Custom
 
 **항목**
 
-[Windows.Gaming.Input.Custom.XusbDeviceType](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.xusbdevicetype)
+[Windows.Gaming.Input.Custom.XusbDeviceType](/uwp/api/windows.gaming.input.custom.xusbdevicetype)
 
 **속성**
 
@@ -1580,7 +1580,7 @@ Windows.Gaming.Input.Custom.XusbDeviceType <br /> Windows.Gaming.Input.Custom.Xu
 
 **항목**
 
-[Windows.Gaming.Input.Custom.XusbGameControllerProvider](https://docs.microsoft.com/uwp/api/windows.gaming.input.custom.xusbgamecontrollerprovider)
+[Windows.Gaming.Input.Custom.XusbGameControllerProvider](/uwp/api/windows.gaming.input.custom.xusbgamecontrollerprovider)
 
 **속성**
 
@@ -1590,7 +1590,7 @@ Windows.Gaming.Input.Custom.XusbGameControllerProvider <br /> Windows.Gaming.Inp
 
 **항목**
 
-[Windows.Gaming.Input.ForceFeedback.ConditionForceEffect](https://docs.microsoft.com/uwp/api/windows.gaming.input.forcefeedback.conditionforceeffect)
+[Windows.Gaming.Input.ForceFeedback.ConditionForceEffect](/uwp/api/windows.gaming.input.forcefeedback.conditionforceeffect)
 
 **속성**
 
@@ -1600,7 +1600,7 @@ Windows.Gaming.Input.ForceFeedback.ConditionForceEffect <br /> Windows.Gaming.In
 
 **항목**
 
-[Windows.Gaming.Input.ForceFeedback.ConditionForceEffectKind](https://docs.microsoft.com/uwp/api/windows.gaming.input.forcefeedback.conditionforceeffectkind)
+[Windows.Gaming.Input.ForceFeedback.ConditionForceEffectKind](/uwp/api/windows.gaming.input.forcefeedback.conditionforceeffectkind)
 
 **속성**
 
@@ -1610,7 +1610,7 @@ Windows.Gaming.Input.ForceFeedback.ConditionForceEffectKind <br /> Windows.Gamin
 
 **항목**
 
-[Windows.Gaming.Input.ForceFeedback.ConstantForceEffect](https://docs.microsoft.com/uwp/api/windows.gaming.input.forcefeedback.constantforceeffect)
+[Windows.Gaming.Input.ForceFeedback.ConstantForceEffect](/uwp/api/windows.gaming.input.forcefeedback.constantforceeffect)
 
 **속성**
 
@@ -1620,7 +1620,7 @@ Windows.Gaming.Input.ForceFeedback.ConstantForceEffect <br /> Windows.Gaming.Inp
 
 **항목**
 
-[Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectAxes](https://docs.microsoft.com/uwp/api/windows.gaming.input.forcefeedback.forcefeedbackeffectaxes)
+[Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectAxes](/uwp/api/windows.gaming.input.forcefeedback.forcefeedbackeffectaxes)
 
 **속성**
 
@@ -1630,7 +1630,7 @@ Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectAxes <br /> Windows.Gaming
 
 **항목**
 
-[Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectState](https://docs.microsoft.com/uwp/api/windows.gaming.input.forcefeedback.forcefeedbackeffectstate)
+[Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectState](/uwp/api/windows.gaming.input.forcefeedback.forcefeedbackeffectstate)
 
 **속성**
 
@@ -1640,7 +1640,7 @@ Windows.Gaming.Input.ForceFeedback.ForceFeedbackEffectState <br /> Windows.Gamin
 
 **항목**
 
-[Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult](https://docs.microsoft.com/uwp/api/windows.gaming.input.forcefeedback.forcefeedbackloadeffectresult)
+[Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult](/uwp/api/windows.gaming.input.forcefeedback.forcefeedbackloadeffectresult)
 
 **속성**
 
@@ -1650,7 +1650,7 @@ Windows.Gaming.Input.ForceFeedback.ForceFeedbackLoadEffectResult <br /> Windows.
 
 **항목**
 
-[Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor](https://docs.microsoft.com/uwp/api/windows.gaming.input.forcefeedback.forcefeedbackmotor)
+[Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor](/uwp/api/windows.gaming.input.forcefeedback.forcefeedbackmotor)
 
 **속성**
 
@@ -1660,7 +1660,7 @@ Windows.Gaming.Input.ForceFeedback.ForceFeedbackMotor <br /> Windows.Gaming.Inpu
 
 **항목**
 
-[Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect](https://docs.microsoft.com/uwp/api/windows.gaming.input.forcefeedback.iforcefeedbackeffect)
+[Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect](/uwp/api/windows.gaming.input.forcefeedback.iforcefeedbackeffect)
 
 **속성**
 
@@ -1670,7 +1670,7 @@ Windows.Gaming.Input.ForceFeedback.IForceFeedbackEffect <br /> Windows.Gaming.In
 
 **항목**
 
-[Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect](https://docs.microsoft.com/uwp/api/windows.gaming.input.forcefeedback.periodicforceeffect)
+[Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect](/uwp/api/windows.gaming.input.forcefeedback.periodicforceeffect)
 
 **속성**
 
@@ -1680,7 +1680,7 @@ Windows.Gaming.Input.ForceFeedback.PeriodicForceEffect <br /> Windows.Gaming.Inp
 
 **항목**
 
-[Windows.Gaming.Input.ForceFeedback.PeriodicForceEffectKind](https://docs.microsoft.com/uwp/api/windows.gaming.input.forcefeedback.periodicforceeffectkind)
+[Windows.Gaming.Input.ForceFeedback.PeriodicForceEffectKind](/uwp/api/windows.gaming.input.forcefeedback.periodicforceeffectkind)
 
 **속성**
 
@@ -1690,7 +1690,7 @@ Windows.Gaming.Input.ForceFeedback.PeriodicForceEffectKind <br /> Windows.Gaming
 
 **항목**
 
-[Windows.Gaming.Input<br />ForceFeedback.RampForceEffect](https://docs.microsoft.com/uwp/api/windows.gaming.input.forcefeedback.rampforceeffect)
+[Windows.Gaming.Input<br />ForceFeedback.RampForceEffect](/uwp/api/windows.gaming.input.forcefeedback.rampforceeffect)
 
 **속성**
 
@@ -1700,7 +1700,7 @@ Windows.Gaming.Input.ForceFeedback.RampForceEffect <br /> Windows.Gaming.Input.F
 
 **항목**
 
-[Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormat](https://docs.microsoft.com/uwp/api/windows.globalization.phonenumberformatting.phonenumberformat)
+[Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormat](/uwp/api/windows.globalization.phonenumberformatting.phonenumberformat)
 
 **속성**
 
@@ -1710,7 +1710,7 @@ Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormat <br /> Windows.Glo
 
 **항목**
 
-[Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter](https://docs.microsoft.com/uwp/api/windows.globalization.phonenumberformatting.phonenumberformatter)
+[Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter](/uwp/api/windows.globalization.phonenumberformatting.phonenumberformatter)
 
 **속성**
 
@@ -1720,7 +1720,7 @@ Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter <br /> Windows.
 
 **항목**
 
-[Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo](https://docs.microsoft.com/uwp/api/windows.globalization.phonenumberformatting.phonenumberinfo)
+[Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo](/uwp/api/windows.globalization.phonenumberformatting.phonenumberinfo)
 
 **속성**
 
@@ -1730,7 +1730,7 @@ Windows.Globalization.PhoneNumberFormatting.PhoneNumberInfo <br /> Windows.Globa
 
 **항목**
 
-[Windows.Globalization.PhoneNumberFormatting.PhoneNumberMatchResult](https://docs.microsoft.com/uwp/api/windows.globalization.phonenumberformatting.phonenumbermatchresult)
+[Windows.Globalization.PhoneNumberFormatting.PhoneNumberMatchResult](/uwp/api/windows.globalization.phonenumberformatting.phonenumbermatchresult)
 
 **속성**
 
@@ -1740,7 +1740,7 @@ Windows.Globalization.PhoneNumberFormatting.PhoneNumberMatchResult <br /> Window
 
 **항목**
 
-[Windows.Globalization.PhoneNumberFormatting.PhoneNumberParseResult](https://docs.microsoft.com/uwp/api/windows.globalization.phonenumberformatting.phonenumberparseresult)
+[Windows.Globalization.PhoneNumberFormatting.PhoneNumberParseResult](/uwp/api/windows.globalization.phonenumberformatting.phonenumberparseresult)
 
 **속성**
 
@@ -1750,7 +1750,7 @@ Windows.Globalization.PhoneNumberFormatting.PhoneNumberParseResult <br /> Window
 
 **항목**
 
-[Windows.Globalization.PhoneNumberFormatting.PredictedPhoneNumberKind](https://docs.microsoft.com/uwp/api/windows.globalization.phonenumberformatting.predictedphonenumberkind)
+[Windows.Globalization.PhoneNumberFormatting.PredictedPhoneNumberKind](/uwp/api/windows.globalization.phonenumberformatting.predictedphonenumberkind)
 
 **속성**
 
@@ -1760,7 +1760,7 @@ Windows.Globalization.PhoneNumberFormatting.PredictedPhoneNumberKind <br /> Wind
 
 **항목**
 
-[Windows.Graphics.Printing.PrintBordering](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printbordering)
+[Windows.Graphics.Printing.PrintBordering](/uwp/api/windows.graphics.printing.printbordering)
 
 **속성**
 
@@ -1770,7 +1770,7 @@ Windows.Graphics.Printing.PrintBordering <br /> Windows.Graphics.Printing.PrintB
 
 **항목**
 
-[Windows.Graphics.Printing.PrintPageInfo](https://docs.microsoft.com/uwp/api/windows.graphics.printing.printpageinfo)
+[Windows.Graphics.Printing.PrintPageInfo](/uwp/api/windows.graphics.printing.printpageinfo)
 
 **속성**
 
@@ -1780,7 +1780,7 @@ Windows.Graphics.Printing.PrintPageInfo <br /> Windows.Graphics.Printing.PrintPa
 
 **항목**
 
-[Windows.Graphics.Printing.OptionDetails.PrintBorderingOptionDetails](https://docs.microsoft.com/uwp/api/windows.graphics.printing.optiondetails.printborderingoptiondetails)
+[Windows.Graphics.Printing.OptionDetails.PrintBorderingOptionDetails](/uwp/api/windows.graphics.printing.optiondetails.printborderingoptiondetails)
 
 **속성**
 
@@ -1790,7 +1790,7 @@ Windows.Graphics.Printing.OptionDetails.PrintBorderingOptionDetails <br /> Windo
 
 **항목**
 
-[Windows.Management.Workplace.MessagingSyncPolicy](https://docs.microsoft.com/uwp/api/windows.management.workplace.messagingsyncpolicy)
+[Windows.Management.Workplace.MessagingSyncPolicy](/uwp/api/windows.management.workplace.messagingsyncpolicy)
 
 **속성**
 
@@ -1800,7 +1800,7 @@ Windows.Management.Workplace.MessagingSyncPolicy <br /> Windows.Management.Workp
 
 **항목**
 
-[Windows.Media.MediaTimelineController](https://docs.microsoft.com/uwp/api/windows.media.mediatimelinecontroller)
+[Windows.Media.MediaTimelineController](/uwp/api/windows.media.mediatimelinecontroller)
 
 **속성**
 
@@ -1810,7 +1810,7 @@ Windows.Media.MediaTimelineController <br /> Windows.Media.MediaTimelineControll
 
 **항목**
 
-[Windows.Media.MediaTimelineControllerState](https://docs.microsoft.com/uwp/api/windows.media.mediatimelinecontrollerstate)
+[Windows.Media.MediaTimelineControllerState](/uwp/api/windows.media.mediatimelinecontrollerstate)
 
 **속성**
 
@@ -1820,7 +1820,7 @@ Windows.Media.MediaTimelineControllerState <br /> Windows.Media.MediaTimelineCon
 
 **항목**
 
-[Windows.Media.Audio.AudioGraphBatchUpdater](https://docs.microsoft.com/uwp/api/windows.media.audio.audiographbatchupdater)
+[Windows.Media.Audio.AudioGraphBatchUpdater](/uwp/api/windows.media.audio.audiographbatchupdater)
 
 **속성**
 
@@ -1830,7 +1830,7 @@ Windows.Media.Audio.AudioGraphBatchUpdater <br /> Windows.Media.Audio.AudioGraph
 
 **항목**
 
-[Windows.Media.Audio.AudioNodeEmitter](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitter)
+[Windows.Media.Audio.AudioNodeEmitter](/uwp/api/windows.media.audio.audionodeemitter)
 
 **속성**
 
@@ -1840,7 +1840,7 @@ Windows.Media.Audio.AudioNodeEmitter <br /> Windows.Media.Audio.AudioNodeEmitter
 
 **항목**
 
-[Windows.Media.Audio.AudioNodeEmitterConeProperties](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitterconeproperties)
+[Windows.Media.Audio.AudioNodeEmitterConeProperties](/uwp/api/windows.media.audio.audionodeemitterconeproperties)
 
 **속성**
 
@@ -1850,7 +1850,7 @@ Windows.Media.Audio.AudioNodeEmitterConeProperties <br /> Windows.Media.Audio.Au
 
 **항목**
 
-[Windows.Media.Audio.AudioNodeEmitterDecayKind](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitterdecaykind)
+[Windows.Media.Audio.AudioNodeEmitterDecayKind](/uwp/api/windows.media.audio.audionodeemitterdecaykind)
 
 **속성**
 
@@ -1860,7 +1860,7 @@ Windows.Media.Audio.AudioNodeEmitterDecayKind <br /> Windows.Media.Audio.AudioNo
 
 **항목**
 
-[Windows.Media.Audio.AudioNodeEmitterDecayModel](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitterdecaymodel)
+[Windows.Media.Audio.AudioNodeEmitterDecayModel](/uwp/api/windows.media.audio.audionodeemitterdecaymodel)
 
 **속성**
 
@@ -1870,7 +1870,7 @@ Windows.Media.Audio.AudioNodeEmitterDecayModel <br /> Windows.Media.Audio.AudioN
 
 **항목**
 
-[Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemitternaturaldecaymodelproperties)
+[Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties](/uwp/api/windows.media.audio.audionodeemitternaturaldecaymodelproperties)
 
 **속성**
 
@@ -1880,7 +1880,7 @@ Windows.Media.Audio.AudioNodeEmitterNaturalDecayModelProperties <br /> Windows.M
 
 **항목**
 
-[Windows.Media.Audio.AudioNodeEmitterSettings](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemittersettings)
+[Windows.Media.Audio.AudioNodeEmitterSettings](/uwp/api/windows.media.audio.audionodeemittersettings)
 
 **속성**
 
@@ -1890,7 +1890,7 @@ Windows.Media.Audio.AudioNodeEmitterSettings <br /> Windows.Media.Audio.AudioNod
 
 **항목**
 
-[Windows.Media.Audio.AudioNodeEmitterShape](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemittershape)
+[Windows.Media.Audio.AudioNodeEmitterShape](/uwp/api/windows.media.audio.audionodeemittershape)
 
 **속성**
 
@@ -1900,7 +1900,7 @@ Windows.Media.Audio.AudioNodeEmitterShape <br /> Windows.Media.Audio.AudioNodeEm
 
 **항목**
 
-[Windows.Media.Audio.AudioNodeEmitterShapeKind](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodeemittershapekind)
+[Windows.Media.Audio.AudioNodeEmitterShapeKind](/uwp/api/windows.media.audio.audionodeemittershapekind)
 
 **속성**
 
@@ -1910,7 +1910,7 @@ Windows.Media.Audio.AudioNodeEmitterShapeKind <br /> Windows.Media.Audio.AudioNo
 
 **항목**
 
-[Windows.Media.Audio.AudioNodeListener](https://docs.microsoft.com/uwp/api/windows.media.audio.audionodelistener)
+[Windows.Media.Audio.AudioNodeListener](/uwp/api/windows.media.audio.audionodelistener)
 
 **속성**
 
@@ -1920,7 +1920,7 @@ Windows.Media.Audio.AudioNodeListener <br /> Windows.Media.Audio.AudioNodeListen
 
 **항목**
 
-[Windows.Media.Audio.IAudioInputNode2](https://docs.microsoft.com/uwp/api/windows.media.audio.iaudioinputnode2)
+[Windows.Media.Audio.IAudioInputNode2](/uwp/api/windows.media.audio.iaudioinputnode2)
 
 **속성**
 
@@ -1930,7 +1930,7 @@ Windows.Media.Audio.IAudioInputNode2 <br /> Windows.Media.Audio.IAudioInputNode2
 
 **항목**
 
-[Windows.Media.Audio.IAudioNodeWithListener](https://docs.microsoft.com/uwp/api/windows.media.audio.iaudionodewithlistener)
+[Windows.Media.Audio.IAudioNodeWithListener](/uwp/api/windows.media.audio.iaudionodewithlistener)
 
 **속성**
 
@@ -1940,7 +1940,7 @@ Windows.Media.Audio.IAudioNodeWithListener <br /> Windows.Media.Audio.IAudioNode
 
 **항목**
 
-[Windows.Media.Capture.MediaCaptureMemoryPreference](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapturememorypreference)
+[Windows.Media.Capture.MediaCaptureMemoryPreference](/uwp/api/windows.media.capture.mediacapturememorypreference)
 
 **속성**
 
@@ -1950,7 +1950,7 @@ Windows.Media.Capture.MediaCaptureMemoryPreference <br /> Windows.Media.Capture.
 
 **항목**
 
-[Windows.Media.Capture.MediaCapturePauseResult](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapturepauseresult)
+[Windows.Media.Capture.MediaCapturePauseResult](/uwp/api/windows.media.capture.mediacapturepauseresult)
 
 **속성**
 
@@ -1960,7 +1960,7 @@ Windows.Media.Capture.MediaCapturePauseResult <br /> Windows.Media.Capture.Media
 
 **항목**
 
-[Windows.Media.Capture.MediaCaptureSharingMode](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapturesharingmode)
+[Windows.Media.Capture.MediaCaptureSharingMode](/uwp/api/windows.media.capture.mediacapturesharingmode)
 
 **속성**
 
@@ -1970,7 +1970,7 @@ Windows.Media.Capture.MediaCaptureSharingMode <br /> Windows.Media.Capture.Media
 
 **항목**
 
-[Windows.Media.Capture.MediaCaptureStopResult](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapturestopresult)
+[Windows.Media.Capture.MediaCaptureStopResult](/uwp/api/windows.media.capture.mediacapturestopresult)
 
 **속성**
 
@@ -1980,7 +1980,7 @@ Windows.Media.Capture.MediaCaptureStopResult <br /> Windows.Media.Capture.MediaC
 
 **항목**
 
-[Windows.Media.Capture.Frames.BufferMediaFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.buffermediaframe)
+[Windows.Media.Capture.Frames.BufferMediaFrame](/uwp/api/windows.media.capture.frames.buffermediaframe)
 
 **속성**
 
@@ -1990,7 +1990,7 @@ Windows.Media.Capture.Frames.BufferMediaFrame <br /> Windows.Media.Capture.Frame
 
 **항목**
 
-[Windows.Media.Capture.Frames.DepthMediaFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.depthmediaframe)
+[Windows.Media.Capture.Frames.DepthMediaFrame](/uwp/api/windows.media.capture.frames.depthmediaframe)
 
 **속성**
 
@@ -2000,7 +2000,7 @@ Windows.Media.Capture.Frames.DepthMediaFrame <br /> Windows.Media.Capture.Frames
 
 **항목**
 
-[Windows.Media.Capture.Frames.DepthMediaFrameFormat](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.depthmediaframeformat)
+[Windows.Media.Capture.Frames.DepthMediaFrameFormat](/uwp/api/windows.media.capture.frames.depthmediaframeformat)
 
 **속성**
 
@@ -2010,7 +2010,7 @@ Windows.Media.Capture.Frames.DepthMediaFrameFormat <br /> Windows.Media.Capture.
 
 **항목**
 
-[Windows.Media.Capture.Frames.InfraredMediaFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.infraredmediaframe)
+[Windows.Media.Capture.Frames.InfraredMediaFrame](/uwp/api/windows.media.capture.frames.infraredmediaframe)
 
 **속성**
 
@@ -2020,7 +2020,7 @@ Windows.Media.Capture.Frames.InfraredMediaFrame <br /> Windows.Media.Capture.Fra
 
 **항목**
 
-[Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframearrivedeventargs)
+[Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs](/uwp/api/windows.media.capture.frames.mediaframearrivedeventargs)
 
 **속성**
 
@@ -2030,7 +2030,7 @@ Windows.Media.Capture.Frames.MediaFrameArrivedEventArgs
 
 **항목**
 
-[Windows.Media.Capture.Frames.MediaFrameFormat](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframeformat)
+[Windows.Media.Capture.Frames.MediaFrameFormat](/uwp/api/windows.media.capture.frames.mediaframeformat)
 
 **속성**
 
@@ -2040,7 +2040,7 @@ Windows.Media.Capture.Frames.MediaFrameFormat <br /> Windows.Media.Capture.Frame
 
 **항목**
 
-[Windows.Media.Capture.Frames.MediaFrameReader](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereader)
+[Windows.Media.Capture.Frames.MediaFrameReader](/uwp/api/windows.media.capture.frames.mediaframereader)
 
 **속성**
 
@@ -2050,7 +2050,7 @@ Windows.Media.Capture.Frames.MediaFrameReader <br /> Windows.Media.Capture.Frame
 
 **항목**
 
-[Windows.Media.Capture.Frames.MediaFrameReaderStartStatus](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereaderstartstatus)
+[Windows.Media.Capture.Frames.MediaFrameReaderStartStatus](/uwp/api/windows.media.capture.frames.mediaframereaderstartstatus)
 
 **속성**
 
@@ -2060,7 +2060,7 @@ Windows.Media.Capture.Frames.MediaFrameReaderStartStatus <br /> Windows.Media.Ca
 
 **항목**
 
-[Windows.Media.Capture.Frames.MediaFrameReference](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframereference)
+[Windows.Media.Capture.Frames.MediaFrameReference](/uwp/api/windows.media.capture.frames.mediaframereference)
 
 **속성**
 
@@ -2070,7 +2070,7 @@ Windows.Media.Capture.Frames.MediaFrameReference <br /> Windows.Media.Capture.Fr
 
 **항목**
 
-[Windows.Media.Capture.Frames.MediaFrameSource](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesource)
+[Windows.Media.Capture.Frames.MediaFrameSource](/uwp/api/windows.media.capture.frames.mediaframesource)
 
 **속성**
 
@@ -2080,7 +2080,7 @@ Windows.Media.Capture.Frames.MediaFrameSource <br /> Windows.Media.Capture.Frame
 
 **항목**
 
-[Windows.Media.Capture.Frames.MediaFrameSourceController](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcecontroller)
+[Windows.Media.Capture.Frames.MediaFrameSourceController](/uwp/api/windows.media.capture.frames.mediaframesourcecontroller)
 
 **속성**
 
@@ -2090,7 +2090,7 @@ Windows.Media.Capture.Frames.MediaFrameSourceController <br /> Windows.Media.Cap
 
 **항목**
 
-[Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegetpropertyresult)
+[Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult](/uwp/api/windows.media.capture.frames.mediaframesourcegetpropertyresult)
 
 **속성**
 
@@ -2100,7 +2100,7 @@ Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyResult <br /> Windows.Me
 
 **항목**
 
-[Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyStatus](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegetpropertystatus)
+[Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyStatus](/uwp/api/windows.media.capture.frames.mediaframesourcegetpropertystatus)
 
 **속성**
 
@@ -2110,7 +2110,7 @@ Windows.Media.Capture.Frames.MediaFrameSourceGetPropertyStatus <br /> Windows.Me
 
 **항목**
 
-[Windows.Media.Capture.Frames.MediaFrameSourceGroup](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcegroup)
+[Windows.Media.Capture.Frames.MediaFrameSourceGroup](/uwp/api/windows.media.capture.frames.mediaframesourcegroup)
 
 **속성**
 
@@ -2120,7 +2120,7 @@ Windows.Media.Capture.Frames.MediaFrameSourceGroup <br /> Windows.Media.Capture.
 
 **항목**
 
-[Windows.Media.Capture.Frames.MediaFrameSourceInfo](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourceinfo)
+[Windows.Media.Capture.Frames.MediaFrameSourceInfo](/uwp/api/windows.media.capture.frames.mediaframesourceinfo)
 
 **속성**
 
@@ -2130,7 +2130,7 @@ Windows.Media.Capture.Frames.MediaFrameSourceInfo <br /> Windows.Media.Capture.F
 
 **항목**
 
-[Windows.Media.Capture.Frames.MediaFrameSourceKind](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcekind)
+[Windows.Media.Capture.Frames.MediaFrameSourceKind](/uwp/api/windows.media.capture.frames.mediaframesourcekind)
 
 **속성**
 
@@ -2140,7 +2140,7 @@ Windows.Media.Capture.Frames.MediaFrameSourceKind <br /> Windows.Media.Capture.F
 
 **항목**
 
-[Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.mediaframesourcesetpropertystatus)
+[Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus](/uwp/api/windows.media.capture.frames.mediaframesourcesetpropertystatus)
 
 **속성**
 
@@ -2150,7 +2150,7 @@ Windows.Media.Capture.Frames.MediaFrameSourceSetPropertyStatus <br /> Windows.Me
 
 **항목**
 
-[Windows.Media.Capture.Frames.VideoMediaFrame](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.videomediaframe)
+[Windows.Media.Capture.Frames.VideoMediaFrame](/uwp/api/windows.media.capture.frames.videomediaframe)
 
 **속성**
 
@@ -2160,7 +2160,7 @@ Windows.Media.Capture.Frames.VideoMediaFrame <br /> Windows.Media.Capture.Frames
 
 **항목**
 
-[Windows.Media.Capture.Frames.VideoMediaFrameFormat](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.videomediaframeformat)
+[Windows.Media.Capture.Frames.VideoMediaFrameFormat](/uwp/api/windows.media.capture.frames.videomediaframeformat)
 
 **속성**
 
@@ -2170,7 +2170,7 @@ Windows.Media.Capture.Frames.VideoMediaFrameFormat <br /> Windows.Media.Capture.
 
 **항목**
 
-[Windows.Media.Core.AudioDecoderDegradation](https://docs.microsoft.com/uwp/api/windows.media.core.audiodecoderdegradation)
+[Windows.Media.Core.AudioDecoderDegradation](/uwp/api/windows.media.core.audiodecoderdegradation)
 
 **속성**
 
@@ -2180,7 +2180,7 @@ Windows.Media.Core.AudioDecoderDegradation <br /> Windows.Media.Core.AudioDecode
 
 **항목**
 
-[Windows.Media.Core.AudioDecoderDegradationReason](https://docs.microsoft.com/uwp/api/windows.media.core.audiodecoderdegradationreason)
+[Windows.Media.Core.AudioDecoderDegradationReason](/uwp/api/windows.media.core.audiodecoderdegradationreason)
 
 **속성**
 
@@ -2190,7 +2190,7 @@ Windows.Media.Core.AudioDecoderDegradationReason <br /> Windows.Media.Core.Audio
 
 **항목**
 
-[Windows.Media.Core.AudioTrackOpenFailedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.core.audiotrackopenfailedeventargs)
+[Windows.Media.Core.AudioTrackOpenFailedEventArgs](/uwp/api/windows.media.core.audiotrackopenfailedeventargs)
 
 **속성**
 
@@ -2200,7 +2200,7 @@ Windows.Media.Core.AudioTrackOpenFailedEventArgs <br /> Windows.Media.Core.Audio
 
 **항목**
 
-[Windows.Media.Core.AudioTrackSupportInfo](https://docs.microsoft.com/uwp/api/windows.media.core.audiotracksupportinfo)
+[Windows.Media.Core.AudioTrackSupportInfo](/uwp/api/windows.media.core.audiotracksupportinfo)
 
 **속성**
 
@@ -2210,7 +2210,7 @@ Windows.Media.Core.AudioTrackSupportInfo <br /> Windows.Media.Core.AudioTrackSup
 
 **항목**
 
-[Windows.Media.Core.MediaDecoderStatus](https://docs.microsoft.com/uwp/api/windows.media.core.mediadecoderstatus)
+[Windows.Media.Core.MediaDecoderStatus](/uwp/api/windows.media.core.mediadecoderstatus)
 
 **속성**
 
@@ -2220,7 +2220,7 @@ Windows.Media.Core.MediaDecoderStatus <br /> Windows.Media.Core.MediaDecoderStat
 
 **항목**
 
-[Windows.Media.Core.MediaSourceStatus](https://docs.microsoft.com/uwp/api/windows.media.core.mediasourcestatus)
+[Windows.Media.Core.MediaSourceStatus](/uwp/api/windows.media.core.mediasourcestatus)
 
 **속성**
 
@@ -2230,7 +2230,7 @@ Windows.Media.Core.MediaSourceStatus <br /> Windows.Media.Core.MediaSourceStatus
 
 **항목**
 
-[Windows.Media.Core.MediaStreamSourceSampleRenderedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.core.mediastreamsourcesamplerenderedeventargs)
+[Windows.Media.Core.MediaStreamSourceSampleRenderedEventArgs](/uwp/api/windows.media.core.mediastreamsourcesamplerenderedeventargs)
 
 **속성**
 
@@ -2240,7 +2240,7 @@ Windows.Media.Core.MediaStreamSourceSampleRenderedEventArgs <br /> Windows.Media
 
 **항목**
 
-[Windows.Media.Core.VideoTrackOpenFailedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.core.videotrackopenfailedeventargs)
+[Windows.Media.Core.VideoTrackOpenFailedEventArgs](/uwp/api/windows.media.core.videotrackopenfailedeventargs)
 
 **속성**
 
@@ -2250,7 +2250,7 @@ Windows.Media.Core.VideoTrackOpenFailedEventArgs <br /> Windows.Media.Core.Video
 
 **항목**
 
-[Windows.Media.Core.VideoTrackSupportInfo](https://docs.microsoft.com/uwp/api/windows.media.core.videotracksupportinfo)
+[Windows.Media.Core.VideoTrackSupportInfo](/uwp/api/windows.media.core.videotracksupportinfo)
 
 **속성**
 
@@ -2260,7 +2260,7 @@ Windows.Media.Core.VideoTrackSupportInfo <br /> Windows.Media.Core.VideoTrackSup
 
 **항목**
 
-[Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper](https://docs.microsoft.com/uwp/api/windows.media.devices.core.depthcorrelatedcoordinatemapper)
+[Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper](/uwp/api/windows.media.devices.core.depthcorrelatedcoordinatemapper)
 
 **속성**
 
@@ -2270,7 +2270,7 @@ Windows.Media.Devices.Core.DepthCorrelatedCoordinateMapper <br /> Windows.Media.
 
 **항목**
 
-[Windows.Media.Import.PhotoImportSubfolderDateFormat](https://docs.microsoft.com/uwp/api/windows.media.import.photoimportsubfolderdateformat)
+[Windows.Media.Import.PhotoImportSubfolderDateFormat](/uwp/api/windows.media.import.photoimportsubfolderdateformat)
 
 **속성**
 
@@ -2280,7 +2280,7 @@ Windows.Media.Import.PhotoImportSubfolderDateFormat <br /> Windows.Media.Import.
 
 **항목**
 
-[Windows.Media.MediaProperties.StereoscopicVideoPackingMode](https://docs.microsoft.com/uwp/api/windows.media.mediaproperties.stereoscopicvideopackingmode)
+[Windows.Media.MediaProperties.StereoscopicVideoPackingMode](/uwp/api/windows.media.mediaproperties.stereoscopicvideopackingmode)
 
 **속성**
 
@@ -2290,7 +2290,7 @@ Windows.Media.MediaProperties.StereoscopicVideoPackingMode <br /> Windows.Media.
 
 **항목**
 
-[Windows.Media.Playback.MediaBreak](https://docs.microsoft.com/uwp/api/windows.media.playback.mediabreak)
+[Windows.Media.Playback.MediaBreak](/uwp/api/windows.media.playback.mediabreak)
 
 **속성**
 
@@ -2300,7 +2300,7 @@ Windows.Media.Playback.MediaBreak <br /> Windows.Media.Playback.MediaBreak.#ctor
 
 **항목**
 
-[Windows.Media.Playback.MediaBreakEndedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediabreakendedeventargs)
+[Windows.Media.Playback.MediaBreakEndedEventArgs](/uwp/api/windows.media.playback.mediabreakendedeventargs)
 
 **속성**
 
@@ -2310,7 +2310,7 @@ Windows.Media.Playback.MediaBreakEndedEventArgs <br /> Windows.Media.Playback.Me
 
 **항목**
 
-[Windows.Media.Playback.MediaBreakInsertionMethod](https://docs.microsoft.com/uwp/api/windows.media.playback.mediabreakinsertionmethod)
+[Windows.Media.Playback.MediaBreakInsertionMethod](/uwp/api/windows.media.playback.mediabreakinsertionmethod)
 
 **속성**
 
@@ -2320,7 +2320,7 @@ Windows.Media.Playback.MediaBreakInsertionMethod <br /> Windows.Media.Playback.M
 
 **항목**
 
-[Windows.Media.Playback.MediaBreakManager](https://docs.microsoft.com/uwp/api/windows.media.playback.mediabreakmanager)
+[Windows.Media.Playback.MediaBreakManager](/uwp/api/windows.media.playback.mediabreakmanager)
 
 **속성**
 
@@ -2330,7 +2330,7 @@ Windows.Media.Playback.MediaBreakManager <br /> Windows.Media.Playback.MediaBrea
 
 **항목**
 
-[Windows.Media.Playback.MediaBreakSchedule](https://docs.microsoft.com/uwp/api/windows.media.playback.mediabreakschedule)
+[Windows.Media.Playback.MediaBreakSchedule](/uwp/api/windows.media.playback.mediabreakschedule)
 
 **속성**
 
@@ -2340,7 +2340,7 @@ Windows.Media.Playback.MediaBreakSchedule <br /> Windows.Media.Playback.MediaBre
 
 **항목**
 
-[Windows.Media.Playback.MediaBreakSeekedOverEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediabreakseekedovereventargs)
+[Windows.Media.Playback.MediaBreakSeekedOverEventArgs](/uwp/api/windows.media.playback.mediabreakseekedovereventargs)
 
 **속성**
 
@@ -2350,7 +2350,7 @@ Windows.Media.Playback.MediaBreakSeekedOverEventArgs <br /> Windows.Media.Playba
 
 **항목**
 
-[Windows.Media.Playback.MediaBreakSkippedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediabreakskippedeventargs)
+[Windows.Media.Playback.MediaBreakSkippedEventArgs](/uwp/api/windows.media.playback.mediabreakskippedeventargs)
 
 **속성**
 
@@ -2360,7 +2360,7 @@ Windows.Media.Playback.MediaBreakSkippedEventArgs <br /> Windows.Media.Playback.
 
 **항목**
 
-[Windows.Media.Playback.MediaBreakStartedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediabreakstartedeventargs)
+[Windows.Media.Playback.MediaBreakStartedEventArgs](/uwp/api/windows.media.playback.mediabreakstartedeventargs)
 
 **속성**
 
@@ -2370,7 +2370,7 @@ Windows.Media.Playback.MediaBreakStartedEventArgs <br /> Windows.Media.Playback.
 
 **항목**
 
-[Windows.Media.Playback.MediaCommandEnablingRule](https://docs.microsoft.com/uwp/api/windows.media.playback.mediacommandenablingrule)
+[Windows.Media.Playback.MediaCommandEnablingRule](/uwp/api/windows.media.playback.mediacommandenablingrule)
 
 **속성**
 
@@ -2380,7 +2380,7 @@ Windows.Media.Playback.MediaCommandEnablingRule <br /> Windows.Media.Playback.Me
 
 **항목**
 
-[Windows.Media.Playback.MediaItemDisplayProperties](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaitemdisplayproperties)
+[Windows.Media.Playback.MediaItemDisplayProperties](/uwp/api/windows.media.playback.mediaitemdisplayproperties)
 
 **속성**
 
@@ -2390,7 +2390,7 @@ Windows.Media.Playback.MediaItemDisplayProperties <br /> Windows.Media.Playback.
 
 **항목**
 
-[Windows.Media.Playback.MediaPlaybackCommandManager](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanager)
+[Windows.Media.Playback.MediaPlaybackCommandManager](/uwp/api/windows.media.playback.mediaplaybackcommandmanager)
 
 **속성**
 
@@ -2400,7 +2400,7 @@ Windows.Media.Playback.MediaPlaybackCommandManager <br /> Windows.Media.Playback
 
 **항목**
 
-[Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanagerautorepeatmodereceivedeventargs)
+[Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs](/uwp/api/windows.media.playback.mediaplaybackcommandmanagerautorepeatmodereceivedeventargs)
 
 **속성**
 
@@ -2410,7 +2410,7 @@ Windows.Media.Playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArg
 
 **항목**
 
-[Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanagercommandbehavior)
+[Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior](/uwp/api/windows.media.playback.mediaplaybackcommandmanagercommandbehavior)
 
 **속성**
 
@@ -2420,7 +2420,7 @@ Windows.Media.Playback.MediaPlaybackCommandManagerCommandBehavior <br /> Windows
 
 **항목**
 
-[Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanagerfastforwardreceivedeventargs)
+[Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs](/uwp/api/windows.media.playback.mediaplaybackcommandmanagerfastforwardreceivedeventargs)
 
 **속성**
 
@@ -2430,7 +2430,7 @@ Windows.Media.Playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs <
 
 **항목**
 
-[Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanagernextreceivedeventargs)
+[Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs](/uwp/api/windows.media.playback.mediaplaybackcommandmanagernextreceivedeventargs)
 
 **속성**
 
@@ -2440,7 +2440,7 @@ Windows.Media.Playback.MediaPlaybackCommandManagerNextReceivedEventArgs <br /> W
 
 **항목**
 
-[Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanagerpausereceivedeventargs)
+[Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs](/uwp/api/windows.media.playback.mediaplaybackcommandmanagerpausereceivedeventargs)
 
 **속성**
 
@@ -2450,7 +2450,7 @@ Windows.Media.Playback.MediaPlaybackCommandManagerPauseReceivedEventArgs <br /> 
 
 **항목**
 
-[Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanagerplayreceivedeventargs)
+[Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs](/uwp/api/windows.media.playback.mediaplaybackcommandmanagerplayreceivedeventargs)
 
 **속성**
 
@@ -2460,7 +2460,7 @@ Windows.Media.Playback.MediaPlaybackCommandManagerPlayReceivedEventArgs <br /> W
 
 **항목**
 
-[Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanagerpositionreceivedeventargs)
+[Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs](/uwp/api/windows.media.playback.mediaplaybackcommandmanagerpositionreceivedeventargs)
 
 **속성**
 
@@ -2470,7 +2470,7 @@ Windows.Media.Playback.MediaPlaybackCommandManagerPositionReceivedEventArgs <br 
 
 **항목**
 
-[Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanagerpreviousreceivedeventargs)
+[Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs](/uwp/api/windows.media.playback.mediaplaybackcommandmanagerpreviousreceivedeventargs)
 
 **속성**
 
@@ -2480,7 +2480,7 @@ Windows.Media.Playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs <br 
 
 **항목**
 
-[Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanagerratereceivedeventargs)
+[Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs](/uwp/api/windows.media.playback.mediaplaybackcommandmanagerratereceivedeventargs)
 
 **속성**
 
@@ -2490,7 +2490,7 @@ Windows.Media.Playback.MediaPlaybackCommandManagerRateReceivedEventArgs <br /> W
 
 **항목**
 
-[Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanagerrewindreceivedeventargs)
+[Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs](/uwp/api/windows.media.playback.mediaplaybackcommandmanagerrewindreceivedeventargs)
 
 **속성**
 
@@ -2500,7 +2500,7 @@ Windows.Media.Playback.MediaPlaybackCommandManagerRewindReceivedEventArgs <br />
 
 **항목**
 
-[Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackcommandmanagershufflereceivedeventargs)
+[Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs](/uwp/api/windows.media.playback.mediaplaybackcommandmanagershufflereceivedeventargs)
 
 **속성**
 
@@ -2510,7 +2510,7 @@ Windows.Media.Playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs <br /
 
 **항목**
 
-[Windows.Media.Playback.MediaPlaybackSession](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybacksession)
+[Windows.Media.Playback.MediaPlaybackSession](/uwp/api/windows.media.playback.mediaplaybacksession)
 
 **속성**
 
@@ -2520,7 +2520,7 @@ Windows.Media.Playback.MediaPlaybackSession <br /> Windows.Media.Playback.MediaP
 
 **항목**
 
-[Windows.Media.Playback.MediaPlaybackState](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplaybackstate)
+[Windows.Media.Playback.MediaPlaybackState](/uwp/api/windows.media.playback.mediaplaybackstate)
 
 **속성**
 
@@ -2530,7 +2530,7 @@ Windows.Media.Playback.MediaPlaybackState <br /> Windows.Media.Playback.MediaPla
 
 **항목**
 
-[Windows.Media.Playback.MediaPlayerSurface](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayersurface)
+[Windows.Media.Playback.MediaPlayerSurface](/uwp/api/windows.media.playback.mediaplayersurface)
 
 **속성**
 
@@ -2540,7 +2540,7 @@ Windows.Media.Playback.MediaPlayerSurface <br /> Windows.Media.Playback.MediaPla
 
 **항목**
 
-[Windows.Media.Playback.StereoscopicVideoRenderMode](https://docs.microsoft.com/uwp/api/windows.media.playback.stereoscopicvideorendermode)
+[Windows.Media.Playback.StereoscopicVideoRenderMode](/uwp/api/windows.media.playback.stereoscopicvideorendermode)
 
 **속성**
 
@@ -2550,7 +2550,7 @@ Windows.Media.Playback.StereoscopicVideoRenderMode <br /> Windows.Media.Playback
 
 **항목**
 
-[Windows.Media.Protection.HdcpProtection](https://docs.microsoft.com/uwp/api/windows.media.protection.hdcpprotection)
+[Windows.Media.Protection.HdcpProtection](/uwp/api/windows.media.protection.hdcpprotection)
 
 **속성**
 
@@ -2560,7 +2560,7 @@ Windows.Media.Protection.HdcpProtection <br /> Windows.Media.Protection.HdcpProt
 
 **항목**
 
-[Windows.Media.Protection.HdcpSession](https://docs.microsoft.com/uwp/api/windows.media.protection.hdcpsession)
+[Windows.Media.Protection.HdcpSession](/uwp/api/windows.media.protection.hdcpsession)
 
 **속성**
 
@@ -2570,7 +2570,7 @@ Windows.Media.Protection.HdcpSession <br /> Windows.Media.Protection.HdcpSession
 
 **항목**
 
-[Windows.Media.Protection.HdcpSetProtectionResult](https://docs.microsoft.com/uwp/api/windows.media.protection.hdcpsetprotectionresult)
+[Windows.Media.Protection.HdcpSetProtectionResult](/uwp/api/windows.media.protection.hdcpsetprotectionresult)
 
 **속성**
 
@@ -2580,7 +2580,7 @@ Windows.Media.Protection.HdcpSetProtectionResult <br /> Windows.Media.Protection
 
 **항목**
 
-[Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser](https://docs.microsoft.com/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser)
+[Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser](/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser)
 
 **속성**
 
@@ -2590,7 +2590,7 @@ Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser <br /
 
 **항목**
 
-[Windows.Networking.Sockets.IWebSocketControl2](https://docs.microsoft.com/uwp/api/windows.networking.sockets.iwebsocketcontrol2)
+[Windows.Networking.Sockets.IWebSocketControl2](/uwp/api/windows.networking.sockets.iwebsocketcontrol2)
 
 **속성**
 
@@ -2600,7 +2600,7 @@ Windows.Networking.Sockets.IWebSocketControl2 <br /> Windows.Networking.Sockets.
 
 **항목**
 
-[Windows.Networking.Sockets.IWebSocketInformation2](https://docs.microsoft.com/uwp/api/windows.networking.sockets.iwebsocketinformation2)
+[Windows.Networking.Sockets.IWebSocketInformation2](/uwp/api/windows.networking.sockets.iwebsocketinformation2)
 
 **속성**
 
@@ -2610,7 +2610,7 @@ Windows.Networking.Sockets.IWebSocketInformation2 <br /> Windows.Networking.Sock
 
 **항목**
 
-[Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs](https://docs.microsoft.com/uwp/api/windows.networking.sockets.websocketservercustomvalidationrequestedeventargs)
+[Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs](/uwp/api/windows.networking.sockets.websocketservercustomvalidationrequestedeventargs)
 
 **속성**
 
@@ -2620,7 +2620,7 @@ Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs <br
 
 **항목**
 
-[Windows.Networking.Vpn.VpnManagementConnectionStatus](https://docs.microsoft.com/uwp/api/windows.networking.vpn.vpnmanagementconnectionstatus)
+[Windows.Networking.Vpn.VpnManagementConnectionStatus](/uwp/api/windows.networking.vpn.vpnmanagementconnectionstatus)
 
 **속성**
 
@@ -2630,7 +2630,7 @@ Windows.Networking.Vpn.VpnManagementConnectionStatus <br /> Windows.Networking.V
 
 **항목**
 
-[Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.enterprisekeycredentialregistrationinfo)
+[Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo](/uwp/api/windows.security.authentication.identity.enterprisekeycredentialregistrationinfo)
 
 **속성**
 
@@ -2640,7 +2640,7 @@ Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationInfo
 
 **항목**
 
-[Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.enterprisekeycredentialregistrationmanager)
+[Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationManager](/uwp/api/windows.security.authentication.identity.enterprisekeycredentialregistrationmanager)
 
 **속성**
 
@@ -2650,7 +2650,7 @@ Windows.Security.Authentication.Identity.EnterpriseKeyCredentialRegistrationMana
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorauthenticationmanager)
+[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager](/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorauthenticationmanager)
 
 **속성**
 
@@ -2660,7 +2660,7 @@ Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthent
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorauthenticationtype)
+[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationType](/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorauthenticationtype)
 
 **속성**
 
@@ -2670,7 +2670,7 @@ Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthent
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorgetsessionsresult)
+[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSessionsResult](/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorgetsessionsresult)
 
 **속성**
 
@@ -2680,7 +2680,7 @@ Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorGetSess
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactoronetimecodedinfo)
+[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTimeCodedInfo](/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactoronetimecodedinfo)
 
 **속성**
 
@@ -2690,7 +2690,7 @@ Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorOneTime
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorserviceresponse)
+[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorServiceResponse](/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorserviceresponse)
 
 **속성**
 
@@ -2700,7 +2700,7 @@ Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorService
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionApprovalStatus](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorsessionapprovalstatus)
+[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionApprovalStatus](/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorsessionapprovalstatus)
 
 **속성**
 
@@ -2710,7 +2710,7 @@ Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSession
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorsessionauthenticationstatus)
+[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionAuthenticationStatus](/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorsessionauthenticationstatus)
 
 **속성**
 
@@ -2720,7 +2720,7 @@ Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSession
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorsessioninfo)
+[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSessionInfo](/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorsessioninfo)
 
 **속성**
 
@@ -2730,7 +2730,7 @@ Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorSession
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorunregisteredaccountsandsessioninfo)
+[Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo](/uwp/api/windows.security.authentication.identity.core.microsoftaccountmultifactorunregisteredaccountsandsessioninfo)
 
 **속성**
 
@@ -2740,7 +2740,7 @@ Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorUnregis
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthentication)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthentication)
 
 **속성**
 
@@ -2750,7 +2750,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorA
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationMessage](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthenticationmessage)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationMessage](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthenticationmessage)
 
 **속성**
 
@@ -2760,7 +2760,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorA
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthenticationresult)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthenticationresult)
 
 **속성**
 
@@ -2770,7 +2770,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorA
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationScenario](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthenticationscenario)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationScenario](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthenticationscenario)
 
 **속성**
 
@@ -2780,7 +2780,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorA
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStage](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthenticationstage)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStage](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthenticationstage)
 
 **속성**
 
@@ -2790,7 +2790,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorA
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthenticationstagechangedeventargs)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthenticationstagechangedeventargs)
 
 **속성**
 
@@ -2800,7 +2800,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorA
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthenticationstageinfo)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthenticationstageinfo)
 
 **속성**
 
@@ -2810,7 +2810,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorA
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStatus](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthenticationstatus)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStatus](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorauthenticationstatus)
 
 **속성**
 
@@ -2820,7 +2820,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorA
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceCapabilities](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactordevicecapabilities)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceCapabilities](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactordevicecapabilities)
 
 **속성**
 
@@ -2830,7 +2830,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorD
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceFindScope](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactordevicefindscope)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceFindScope](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactordevicefindscope)
 
 **속성**
 
@@ -2840,7 +2840,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorD
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorfinishauthenticationstatus)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorfinishauthenticationstatus)
 
 **속성**
 
@@ -2850,7 +2850,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorF
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorinfo)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorinfo)
 
 **속성**
 
@@ -2860,7 +2860,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorI
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorregistration)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorregistration)
 
 **속성**
 
@@ -2870,7 +2870,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorR
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorregistrationresult)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorregistrationresult)
 
 **속성**
 
@@ -2880,7 +2880,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorR
 
 **항목**
 
-[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationStatus](https://docs.microsoft.com/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorregistrationstatus)
+[Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationStatus](/uwp/api/windows.security.authentication.identity.provider.secondaryauthenticationfactorregistrationstatus)
 
 **속성**
 
@@ -2890,7 +2890,7 @@ Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorR
 
 **항목**
 
-[Windows.Security.Authentication.Web.Core.WebAccountEventArgs](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webaccounteventargs)
+[Windows.Security.Authentication.Web.Core.WebAccountEventArgs](/uwp/api/windows.security.authentication.web.core.webaccounteventargs)
 
 **속성**
 
@@ -2900,7 +2900,7 @@ Windows.Security.Authentication.Web.Core.WebAccountEventArgs <br /> Windows.Secu
 
 **항목**
 
-[Windows.Security.Authentication.Web.Core.WebAccountMonitor](https://docs.microsoft.com/uwp/api/windows.security.authentication.web.core.webaccountmonitor)
+[Windows.Security.Authentication.Web.Core.WebAccountMonitor](/uwp/api/windows.security.authentication.web.core.webaccountmonitor)
 
 **속성**
 
@@ -2910,7 +2910,7 @@ Windows.Security.Authentication.Web.Core.WebAccountMonitor <br /> Windows.Securi
 
 **항목**
 
-[Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames](https://docs.microsoft.com/uwp/api/windows.security.cryptography.certificates.standardcertificatestorenames)
+[Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames](/uwp/api/windows.security.cryptography.certificates.standardcertificatestorenames)
 
 **속성**
 
@@ -2920,7 +2920,7 @@ Windows.Security.Cryptography.Certificates.StandardCertificateStoreNames <br /> 
 
 **항목**
 
-[Windows.Security.Cryptography.Certificates.UserCertificateStore](https://docs.microsoft.com/uwp/api/windows.security.cryptography.certificates.usercertificatestore)
+[Windows.Security.Cryptography.Certificates.UserCertificateStore](/uwp/api/windows.security.cryptography.certificates.usercertificatestore)
 
 **속성**
 
@@ -2930,7 +2930,7 @@ Windows.Security.Cryptography.Certificates.UserCertificateStore <br /> Windows.S
 
 **항목**
 
-[Windows.Services.Maps.MapLocationDesiredAccuracy](https://docs.microsoft.com/uwp/api/windows.services.maps.maplocationdesiredaccuracy)
+[Windows.Services.Maps.MapLocationDesiredAccuracy](/uwp/api/windows.services.maps.maplocationdesiredaccuracy)
 
 **속성**
 
@@ -2940,7 +2940,7 @@ Windows.Services.Maps.MapLocationDesiredAccuracy <br /> Windows.Services.Maps.Ma
 
 **항목**
 
-[Windows.Storage.StorageLibraryChange](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychange)
+[Windows.Storage.StorageLibraryChange](/uwp/api/windows.storage.storagelibrarychange)
 
 **속성**
 
@@ -2950,7 +2950,7 @@ Windows.Storage.StorageLibraryChange <br /> Windows.Storage.StorageLibraryChange
 
 **항목**
 
-[Windows.Storage.StorageLibraryChangeReader](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangereader)
+[Windows.Storage.StorageLibraryChangeReader](/uwp/api/windows.storage.storagelibrarychangereader)
 
 **속성**
 
@@ -2960,7 +2960,7 @@ Windows.Storage.StorageLibraryChangeReader <br /> Windows.Storage.StorageLibrary
 
 **항목**
 
-[Windows.Storage.StorageLibraryChangeTracker](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetracker)
+[Windows.Storage.StorageLibraryChangeTracker](/uwp/api/windows.storage.storagelibrarychangetracker)
 
 **속성**
 
@@ -2970,7 +2970,7 @@ Windows.Storage.StorageLibraryChangeTracker <br /> Windows.Storage.StorageLibrar
 
 **항목**
 
-[Windows.Storage.StorageLibraryChangeType](https://docs.microsoft.com/uwp/api/windows.storage.storagelibrarychangetype)
+[Windows.Storage.StorageLibraryChangeType](/uwp/api/windows.storage.storagelibrarychangetype)
 
 **속성**
 
@@ -2980,7 +2980,7 @@ Windows.Storage.StorageLibraryChangeType <br /> Windows.Storage.StorageLibraryCh
 
 **항목**
 
-[Windows.System.LaunchFileStatus](https://docs.microsoft.com/uwp/api/windows.system.launchfilestatus)
+[Windows.System.LaunchFileStatus](/uwp/api/windows.system.launchfilestatus)
 
 **속성**
 
@@ -2990,7 +2990,7 @@ Windows.System.LaunchFileStatus <br /> Windows.System.LaunchFileStatus.AppUnavai
 
 **항목**
 
-[Windows.System.RemoteLauncher](https://docs.microsoft.com/uwp/api/windows.system.remotelauncher)
+[Windows.System.RemoteLauncher](/uwp/api/windows.system.remotelauncher)
 
 **속성**
 
@@ -3000,7 +3000,7 @@ Windows.System.RemoteLauncher <br /> Windows.System.RemoteLauncher.LaunchUriAsyn
 
 **항목**
 
-[Windows.System.RemoteLauncherOptions](https://docs.microsoft.com/uwp/api/windows.system.remotelauncheroptions)
+[Windows.System.RemoteLauncherOptions](/uwp/api/windows.system.remotelauncheroptions)
 
 **속성**
 
@@ -3010,7 +3010,7 @@ Windows.System.RemoteLauncherOptions <br /> Windows.System.RemoteLauncherOptions
 
 **항목**
 
-[Windows.System.RemoteLaunchUriStatus](https://docs.microsoft.com/uwp/api/windows.system.remotelaunchuristatus)
+[Windows.System.RemoteLaunchUriStatus](/uwp/api/windows.system.remotelaunchuristatus)
 
 **속성**
 
@@ -3020,7 +3020,7 @@ Windows.System.RemoteLaunchUriStatus <br /> Windows.System.RemoteLaunchUriStatus
 
 **항목**
 
-[Windows.System.UserDeviceAssociation](https://docs.microsoft.com/uwp/api/windows.system.userdeviceassociation)
+[Windows.System.UserDeviceAssociation](/uwp/api/windows.system.userdeviceassociation)
 
 **속성**
 
@@ -3030,7 +3030,7 @@ Windows.System.UserDeviceAssociation <br /> Windows.System.UserDeviceAssociation
 
 **항목**
 
-[Windows.System.UserDeviceAssociationChangedEventArgs](https://docs.microsoft.com/uwp/api/windows.system.userdeviceassociationchangedeventargs)
+[Windows.System.UserDeviceAssociationChangedEventArgs](/uwp/api/windows.system.userdeviceassociationchangedeventargs)
 
 **속성**
 
@@ -3040,7 +3040,7 @@ Windows.System.UserDeviceAssociationChangedEventArgs <br /> Windows.System.UserD
 
 **항목**
 
-[Windows.System.UserPicker](https://docs.microsoft.com/uwp/api/windows.system.userpicker)
+[Windows.System.UserPicker](/uwp/api/windows.system.userpicker)
 
 **속성**
 
@@ -3050,7 +3050,7 @@ Windows.System.UserPicker <br /> Windows.System.UserPicker.#ctor <br /> Windows.
 
 **항목**
 
-[Windows.System.Profile.SystemIdentification](https://docs.microsoft.com/uwp/api/windows.system.profile.systemidentification)
+[Windows.System.Profile.SystemIdentification](/uwp/api/windows.system.profile.systemidentification)
 
 **속성**
 
@@ -3060,7 +3060,7 @@ Windows.System.Profile.SystemIdentification <br /> Windows.System.Profile.System
 
 **항목**
 
-[Windows.System.Profile.SystemIdentificationInfo](https://docs.microsoft.com/uwp/api/windows.system.profile.systemidentificationinfo)
+[Windows.System.Profile.SystemIdentificationInfo](/uwp/api/windows.system.profile.systemidentificationinfo)
 
 **속성**
 
@@ -3070,7 +3070,7 @@ Windows.System.Profile.SystemIdentificationInfo <br /> Windows.System.Profile.Sy
 
 **항목**
 
-[Windows.System.Profile.SystemIdentificationSource](https://docs.microsoft.com/uwp/api/windows.system.profile.systemidentificationsource)
+[Windows.System.Profile.SystemIdentificationSource](/uwp/api/windows.system.profile.systemidentificationsource)
 
 **속성**
 
@@ -3080,7 +3080,7 @@ Windows.System.Profile.SystemIdentificationSource <br /> Windows.System.Profile.
 
 **항목**
 
-[Windows.System.RemoteSystems.IRemoteSystemFilter](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.iremotesystemfilter)
+[Windows.System.RemoteSystems.IRemoteSystemFilter](/uwp/api/windows.system.remotesystems.iremotesystemfilter)
 
 **속성**
 
@@ -3090,7 +3090,7 @@ Windows.System.RemoteSystems.IRemoteSystemFilter
 
 **항목**
 
-[Windows.System.RemoteSystems.RemoteSystem](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystem)
+[Windows.System.RemoteSystems.RemoteSystem](/uwp/api/windows.system.remotesystems.remotesystem)
 
 **속성**
 
@@ -3100,7 +3100,7 @@ Windows.System.RemoteSystems.RemoteSystem <br /> Windows.System.RemoteSystems.Re
 
 **항목**
 
-[Windows.System.RemoteSystems.RemoteSystemAccessStatus](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemaccessstatus)
+[Windows.System.RemoteSystems.RemoteSystemAccessStatus](/uwp/api/windows.system.remotesystems.remotesystemaccessstatus)
 
 **속성**
 
@@ -3110,7 +3110,7 @@ Windows.System.RemoteSystems.RemoteSystemAccessStatus <br /> Windows.System.Remo
 
 **항목**
 
-[Windows.System.RemoteSystems.RemoteSystemAddedEventArgs](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemaddedeventargs)
+[Windows.System.RemoteSystems.RemoteSystemAddedEventArgs](/uwp/api/windows.system.remotesystems.remotesystemaddedeventargs)
 
 **속성**
 
@@ -3120,7 +3120,7 @@ Windows.System.RemoteSystems.RemoteSystemAddedEventArgs <br /> Windows.System.Re
 
 **항목**
 
-[Windows.System.RemoteSystems.RemoteSystemConnectionRequest](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemconnectionrequest)
+[Windows.System.RemoteSystems.RemoteSystemConnectionRequest](/uwp/api/windows.system.remotesystems.remotesystemconnectionrequest)
 
 **속성**
 
@@ -3130,7 +3130,7 @@ Windows.System.RemoteSystems.RemoteSystemConnectionRequest <br /> Windows.System
 
 **항목**
 
-[Windows.System.RemoteSystems.RemoteSystemDiscoveryType](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemdiscoverytype)
+[Windows.System.RemoteSystems.RemoteSystemDiscoveryType](/uwp/api/windows.system.remotesystems.remotesystemdiscoverytype)
 
 **속성**
 
@@ -3140,7 +3140,7 @@ Windows.System.RemoteSystems.RemoteSystemDiscoveryType <br /> Windows.System.Rem
 
 **항목**
 
-[Windows.System.RemoteSystems.RemoteSystemDiscoveryTypeFilter](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemdiscoverytypefilter)
+[Windows.System.RemoteSystems.RemoteSystemDiscoveryTypeFilter](/uwp/api/windows.system.remotesystems.remotesystemdiscoverytypefilter)
 
 **속성**
 
@@ -3150,7 +3150,7 @@ Windows.System.RemoteSystems.RemoteSystemDiscoveryTypeFilter <br /> Windows.Syst
 
 **항목**
 
-[Windows.System.RemoteSystems.RemoteSystemKindFilter](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemkindfilter)
+[Windows.System.RemoteSystems.RemoteSystemKindFilter](/uwp/api/windows.system.remotesystems.remotesystemkindfilter)
 
 **속성**
 
@@ -3160,7 +3160,7 @@ Windows.System.RemoteSystems.RemoteSystemKindFilter <br /> Windows.System.Remote
 
 **항목**
 
-[Windows.System.RemoteSystems.RemoteSystemKinds](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemkinds)
+[Windows.System.RemoteSystems.RemoteSystemKinds](/uwp/api/windows.system.remotesystems.remotesystemkinds)
 
 **속성**
 
@@ -3170,7 +3170,7 @@ Windows.System.RemoteSystems.RemoteSystemKinds <br /> Windows.System.RemoteSyste
 
 **항목**
 
-[Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemremovedeventargs)
+[Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs](/uwp/api/windows.system.remotesystems.remotesystemremovedeventargs)
 
 **속성**
 
@@ -3180,7 +3180,7 @@ Windows.System.RemoteSystems.RemoteSystemRemovedEventArgs <br /> Windows.System.
 
 **항목**
 
-[Windows.System.RemoteSystems.RemoteSystemStatus](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemstatus)
+[Windows.System.RemoteSystems.RemoteSystemStatus](/uwp/api/windows.system.remotesystems.remotesystemstatus)
 
 **속성**
 
@@ -3190,7 +3190,7 @@ Windows.System.RemoteSystems.RemoteSystemStatus <br /> Windows.System.RemoteSyst
 
 **항목**
 
-[Windows.System.RemoteSystems.RemoteSystemStatusType](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemstatustype)
+[Windows.System.RemoteSystems.RemoteSystemStatusType](/uwp/api/windows.system.remotesystems.remotesystemstatustype)
 
 **속성**
 
@@ -3200,7 +3200,7 @@ Windows.System.RemoteSystems.RemoteSystemStatusType <br /> Windows.System.Remote
 
 **항목**
 
-[Windows.System.RemoteSystems.RemoteSystemStatusTypeFilter](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemstatustypefilter)
+[Windows.System.RemoteSystems.RemoteSystemStatusTypeFilter](/uwp/api/windows.system.remotesystems.remotesystemstatustypefilter)
 
 **속성**
 
@@ -3210,7 +3210,7 @@ Windows.System.RemoteSystems.RemoteSystemStatusTypeFilter <br /> Windows.System.
 
 **항목**
 
-[Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemupdatedeventargs)
+[Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs](/uwp/api/windows.system.remotesystems.remotesystemupdatedeventargs)
 
 **속성**
 
@@ -3220,7 +3220,7 @@ Windows.System.RemoteSystems.RemoteSystemUpdatedEventArgs <br /> Windows.System.
 
 **항목**
 
-[Windows.System.RemoteSystems.RemoteSystemWatcher](https://docs.microsoft.com/uwp/api/windows.system.remotesystems.remotesystemwatcher)
+[Windows.System.RemoteSystems.RemoteSystemWatcher](/uwp/api/windows.system.remotesystems.remotesystemwatcher)
 
 **속성**
 
@@ -3230,7 +3230,7 @@ Windows.System.RemoteSystems.RemoteSystemWatcher <br /> Windows.System.RemoteSys
 
 **항목**
 
-[Windows.System.UserProfile.AdvertisingManagerForUser](https://docs.microsoft.com/uwp/api/windows.system.userprofile.advertisingmanagerforuser)
+[Windows.System.UserProfile.AdvertisingManagerForUser](/uwp/api/windows.system.userprofile.advertisingmanagerforuser)
 
 **속성**
 
@@ -3240,7 +3240,7 @@ Windows.System.UserProfile.AdvertisingManagerForUser <br /> Windows.System.UserP
 
 **항목**
 
-[Windows.UI.Composition.AmbientLight](https://docs.microsoft.com/uwp/api/windows.ui.composition.ambientlight)
+[Windows.UI.Composition.AmbientLight](/uwp/api/windows.ui.composition.ambientlight)
 
 **속성**
 
@@ -3250,7 +3250,7 @@ Windows.UI.Composition.AmbientLight <br /> Windows.UI.Composition.AmbientLight.C
 
 **항목**
 
-[Windows.UI.Composition.AnimationDirection](https://docs.microsoft.com/uwp/api/windows.ui.composition.animationdirection)
+[Windows.UI.Composition.AnimationDirection](/uwp/api/windows.ui.composition.animationdirection)
 
 **속성**
 
@@ -3260,7 +3260,7 @@ Windows.UI.Composition.AnimationDirection <br /> Windows.UI.Composition.Animatio
 
 **항목**
 
-[Windows.UI.Composition.CompositionAnimationGroup](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionanimationgroup)
+[Windows.UI.Composition.CompositionAnimationGroup](/uwp/api/windows.ui.composition.compositionanimationgroup)
 
 **속성**
 
@@ -3270,7 +3270,7 @@ Windows.UI.Composition.CompositionAnimationGroup <br /> Windows.UI.Composition.C
 
 **항목**
 
-[Windows.UI.Composition.CompositionBackdropBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionbackdropbrush)
+[Windows.UI.Composition.CompositionBackdropBrush](/uwp/api/windows.ui.composition.compositionbackdropbrush)
 
 **속성**
 
@@ -3280,7 +3280,7 @@ Windows.UI.Composition.CompositionBackdropBrush
 
 **항목**
 
-[Windows.UI.Composition.CompositionLight](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionlight)
+[Windows.UI.Composition.CompositionLight](/uwp/api/windows.ui.composition.compositionlight)
 
 **속성**
 
@@ -3290,7 +3290,7 @@ Windows.UI.Composition.CompositionLight <br /> Windows.UI.Composition.Compositio
 
 **항목**
 
-[Windows.UI.Composition.CompositionMaskBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionmaskbrush)
+[Windows.UI.Composition.CompositionMaskBrush](/uwp/api/windows.ui.composition.compositionmaskbrush)
 
 **속성**
 
@@ -3300,7 +3300,7 @@ Windows.UI.Composition.CompositionMaskBrush <br /> Windows.UI.Composition.Compos
 
 **항목**
 
-[Windows.UI.Composition.CompositionNineGridBrush](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionninegridbrush)
+[Windows.UI.Composition.CompositionNineGridBrush](/uwp/api/windows.ui.composition.compositionninegridbrush)
 
 **속성**
 
@@ -3310,7 +3310,7 @@ Windows.UI.Composition.CompositionNineGridBrush <br /> Windows.UI.Composition.Co
 
 **항목**
 
-[Windows.UI.Composition.CompositionShadow](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositionshadow)
+[Windows.UI.Composition.CompositionShadow](/uwp/api/windows.ui.composition.compositionshadow)
 
 **속성**
 
@@ -3320,7 +3320,7 @@ Windows.UI.Composition.CompositionShadow
 
 **항목**
 
-[Windows.UI.Composition.DistantLight](https://docs.microsoft.com/uwp/api/windows.ui.composition.distantlight)
+[Windows.UI.Composition.DistantLight](/uwp/api/windows.ui.composition.distantlight)
 
 **속성**
 
@@ -3330,7 +3330,7 @@ Windows.UI.Composition.DistantLight <br /> Windows.UI.Composition.DistantLight.C
 
 **항목**
 
-[Windows.UI.Composition.DropShadow](https://docs.microsoft.com/uwp/api/windows.ui.composition.dropshadow)
+[Windows.UI.Composition.DropShadow](/uwp/api/windows.ui.composition.dropshadow)
 
 **속성**
 
@@ -3340,7 +3340,7 @@ Windows.UI.Composition.DropShadow <br /> Windows.UI.Composition.DropShadow.BlurR
 
 **항목**
 
-[Windows.UI.Composition.ICompositionAnimationBase](https://docs.microsoft.com/uwp/api/windows.ui.composition.icompositionanimationbase)
+[Windows.UI.Composition.ICompositionAnimationBase](/uwp/api/windows.ui.composition.icompositionanimationbase)
 
 **속성**
 
@@ -3350,7 +3350,7 @@ Windows.UI.Composition.ICompositionAnimationBase
 
 **항목**
 
-[Windows.UI.Composition.ImplicitAnimationCollection](https://docs.microsoft.com/uwp/api/windows.ui.composition.implicitanimationcollection)
+[Windows.UI.Composition.ImplicitAnimationCollection](/uwp/api/windows.ui.composition.implicitanimationcollection)
 
 **속성**
 
@@ -3360,7 +3360,7 @@ Windows.UI.Composition.ImplicitAnimationCollection <br /> Windows.UI.Composition
 
 **항목**
 
-[Windows.UI.Composition.LayerVisual](https://docs.microsoft.com/uwp/api/windows.ui.composition.layervisual)
+[Windows.UI.Composition.LayerVisual](/uwp/api/windows.ui.composition.layervisual)
 
 **속성**
 
@@ -3370,7 +3370,7 @@ Windows.UI.Composition.LayerVisual <br /> Windows.UI.Composition.LayerVisual.Eff
 
 **항목**
 
-[Windows.UI.Composition.PointLight](https://docs.microsoft.com/uwp/api/windows.ui.composition.pointlight)
+[Windows.UI.Composition.PointLight](/uwp/api/windows.ui.composition.pointlight)
 
 **속성**
 
@@ -3380,7 +3380,7 @@ Windows.UI.Composition.PointLight <br /> Windows.UI.Composition.PointLight.Color
 
 **항목**
 
-[Windows.UI.Composition.SpotLight](https://docs.microsoft.com/uwp/api/windows.ui.composition.spotlight)
+[Windows.UI.Composition.SpotLight](/uwp/api/windows.ui.composition.spotlight)
 
 **속성**
 
@@ -3390,7 +3390,7 @@ Windows.UI.Composition.SpotLight <br /> Windows.UI.Composition.SpotLight.Constan
 
 **항목**
 
-[Windows.UI.Composition.StepEasingFunction](https://docs.microsoft.com/uwp/api/windows.ui.composition.stepeasingfunction)
+[Windows.UI.Composition.StepEasingFunction](/uwp/api/windows.ui.composition.stepeasingfunction)
 
 **속성**
 
@@ -3400,7 +3400,7 @@ Windows.UI.Composition.StepEasingFunction <br /> Windows.UI.Composition.StepEasi
 
 **항목**
 
-[Windows.UI.Composition.VisualUnorderedCollection](https://docs.microsoft.com/uwp/api/windows.ui.composition.visualunorderedcollection)
+[Windows.UI.Composition.VisualUnorderedCollection](/uwp/api/windows.ui.composition.visualunorderedcollection)
 
 **속성**
 
@@ -3410,7 +3410,7 @@ Windows.UI.Composition.VisualUnorderedCollection <br /> Windows.UI.Composition.V
 
 **항목**
 
-[Windows.UI.Composition.Effects.SceneLightingEffect](https://docs.microsoft.com/uwp/api/windows.ui.composition.effects.scenelightingeffect)
+[Windows.UI.Composition.Effects.SceneLightingEffect](/uwp/api/windows.ui.composition.effects.scenelightingeffect)
 
 **속성**
 
@@ -3420,7 +3420,7 @@ Windows.UI.Composition.Effects.SceneLightingEffect <br /> Windows.UI.Composition
 
 **항목**
 
-[Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.compositioninteractionsourcecollection)
+[Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection](/uwp/api/windows.ui.composition.interactions.compositioninteractionsourcecollection)
 
 **속성**
 
@@ -3430,7 +3430,7 @@ Windows.UI.Composition.Interactions.CompositionInteractionSourceCollection <br /
 
 **항목**
 
-[Windows.UI.Composition.Interactions.ICompositionInteractionSource](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.icompositioninteractionsource)
+[Windows.UI.Composition.Interactions.ICompositionInteractionSource](/uwp/api/windows.ui.composition.interactions.icompositioninteractionsource)
 
 **속성**
 
@@ -3440,7 +3440,7 @@ Windows.UI.Composition.Interactions.ICompositionInteractionSource
 
 **항목**
 
-[Windows.UI.Composition.Interactions.IInteractionTrackerOwner](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.iinteractiontrackerowner)
+[Windows.UI.Composition.Interactions.IInteractionTrackerOwner](/uwp/api/windows.ui.composition.interactions.iinteractiontrackerowner)
 
 **속성**
 
@@ -3450,7 +3450,7 @@ Windows.UI.Composition.Interactions.IInteractionTrackerOwner <br /> Windows.UI.C
 
 **항목**
 
-[Windows.UI.Composition.Interactions.InteractionChainingMode](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactionchainingmode)
+[Windows.UI.Composition.Interactions.InteractionChainingMode](/uwp/api/windows.ui.composition.interactions.interactionchainingmode)
 
 **속성**
 
@@ -3460,7 +3460,7 @@ Windows.UI.Composition.Interactions.InteractionChainingMode <br /> Windows.UI.Co
 
 **항목**
 
-[Windows.UI.Composition.Interactions.InteractionSourceMode](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactionsourcemode)
+[Windows.UI.Composition.Interactions.InteractionSourceMode](/uwp/api/windows.ui.composition.interactions.interactionsourcemode)
 
 **속성**
 
@@ -3470,7 +3470,7 @@ Windows.UI.Composition.Interactions.InteractionSourceMode <br /> Windows.UI.Comp
 
 **항목**
 
-[Windows.UI.Composition.Interactions.InteractionTracker](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontracker)
+[Windows.UI.Composition.Interactions.InteractionTracker](/uwp/api/windows.ui.composition.interactions.interactiontracker)
 
 **속성**
 
@@ -3480,7 +3480,7 @@ Windows.UI.Composition.Interactions.InteractionTracker <br /> Windows.UI.Composi
 
 **항목**
 
-[Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontrackercustomanimationstateenteredargs)
+[Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEnteredArgs](/uwp/api/windows.ui.composition.interactions.interactiontrackercustomanimationstateenteredargs)
 
 **속성**
 
@@ -3490,7 +3490,7 @@ Windows.UI.Composition.Interactions.InteractionTrackerCustomAnimationStateEntere
 
 **항목**
 
-[Windows.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontrackeridlestateenteredargs)
+[Windows.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs](/uwp/api/windows.ui.composition.interactions.interactiontrackeridlestateenteredargs)
 
 **속성**
 
@@ -3500,7 +3500,7 @@ Windows.UI.Composition.Interactions.InteractionTrackerIdleStateEnteredArgs <br /
 
 **항목**
 
-[Windows.UI.Composition.Interactions.InteractionTrackerInertiaModifier](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontrackerinertiamodifier)
+[Windows.UI.Composition.Interactions.InteractionTrackerInertiaModifier](/uwp/api/windows.ui.composition.interactions.interactiontrackerinertiamodifier)
 
 **속성**
 
@@ -3510,7 +3510,7 @@ Windows.UI.Composition.Interactions.InteractionTrackerInertiaModifier
 
 **항목**
 
-[Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontrackerinertiamotion)
+[Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion](/uwp/api/windows.ui.composition.interactions.interactiontrackerinertiamotion)
 
 **속성**
 
@@ -3520,7 +3520,7 @@ Windows.UI.Composition.Interactions.InteractionTrackerInertiaMotion <br /> Windo
 
 **항목**
 
-[Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontrackerinertiarestingvalue)
+[Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue](/uwp/api/windows.ui.composition.interactions.interactiontrackerinertiarestingvalue)
 
 **속성**
 
@@ -3530,7 +3530,7 @@ Windows.UI.Composition.Interactions.InteractionTrackerInertiaRestingValue <br />
 
 **항목**
 
-[Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontrackerinertiastateenteredargs)
+[Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs](/uwp/api/windows.ui.composition.interactions.interactiontrackerinertiastateenteredargs)
 
 **속성**
 
@@ -3540,7 +3540,7 @@ Windows.UI.Composition.Interactions.InteractionTrackerInertiaStateEnteredArgs <b
 
 **항목**
 
-[Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontrackerinteractingstateenteredargs)
+[Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArgs](/uwp/api/windows.ui.composition.interactions.interactiontrackerinteractingstateenteredargs)
 
 **속성**
 
@@ -3550,7 +3550,7 @@ Windows.UI.Composition.Interactions.InteractionTrackerInteractingStateEnteredArg
 
 **항목**
 
-[Windows.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontrackerrequestignoredargs)
+[Windows.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs](/uwp/api/windows.ui.composition.interactions.interactiontrackerrequestignoredargs)
 
 **속성**
 
@@ -3560,7 +3560,7 @@ Windows.UI.Composition.Interactions.InteractionTrackerRequestIgnoredArgs <br /> 
 
 **항목**
 
-[Windows.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.interactiontrackervalueschangedargs)
+[Windows.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs](/uwp/api/windows.ui.composition.interactions.interactiontrackervalueschangedargs)
 
 **속성**
 
@@ -3570,7 +3570,7 @@ Windows.UI.Composition.Interactions.InteractionTrackerValuesChangedArgs <br /> W
 
 **항목**
 
-[Windows.UI.Composition.Interactions.VisualInteractionSource](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.visualinteractionsource)
+[Windows.UI.Composition.Interactions.VisualInteractionSource](/uwp/api/windows.ui.composition.interactions.visualinteractionsource)
 
 **속성**
 
@@ -3580,7 +3580,7 @@ Windows.UI.Composition.Interactions.VisualInteractionSource <br /> Windows.UI.Co
 
 **항목**
 
-[Windows.UI.Composition.Interactions.VisualInteractionSourceRedirectionMode](https://docs.microsoft.com/uwp/api/windows.ui.composition.interactions.visualinteractionsourceredirectionmode)
+[Windows.UI.Composition.Interactions.VisualInteractionSourceRedirectionMode](/uwp/api/windows.ui.composition.interactions.visualinteractionsourceredirectionmode)
 
 **속성**
 
@@ -3590,7 +3590,7 @@ Windows.UI.Composition.Interactions.VisualInteractionSourceRedirectionMode <br /
 
 **항목**
 
-[Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.core.closestinteractiveboundsrequestedeventargs)
+[Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs](/uwp/api/windows.ui.core.closestinteractiveboundsrequestedeventargs)
 
 **속성**
 
@@ -3600,7 +3600,7 @@ Windows.UI.Core.ClosestInteractiveBoundsRequestedEventArgs <br /> Windows.UI.Cor
 
 **항목**
 
-[Windows.UI.Input.RadialController](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontroller)
+[Windows.UI.Input.RadialController](/uwp/api/windows.ui.input.radialcontroller)
 
 **속성**
 
@@ -3610,7 +3610,7 @@ Windows.UI.Input.RadialController <br /> Windows.UI.Input.RadialController.Menu 
 
 **항목**
 
-[Windows.UI.Input.RadialControllerButtonClickedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerbuttonclickedeventargs)
+[Windows.UI.Input.RadialControllerButtonClickedEventArgs](/uwp/api/windows.ui.input.radialcontrollerbuttonclickedeventargs)
 
 **속성**
 
@@ -3620,7 +3620,7 @@ Windows.UI.Input.RadialControllerButtonClickedEventArgs <br /> Windows.UI.Input.
 
 **항목**
 
-[Windows.UI.Input.RadialControllerConfiguration](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerconfiguration)
+[Windows.UI.Input.RadialControllerConfiguration](/uwp/api/windows.ui.input.radialcontrollerconfiguration)
 
 **속성**
 
@@ -3630,7 +3630,7 @@ Windows.UI.Input.RadialControllerConfiguration <br /> Windows.UI.Input.RadialCon
 
 **항목**
 
-[Windows.UI.Input.RadialControllerControlAcquiredEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollercontrolacquiredeventargs)
+[Windows.UI.Input.RadialControllerControlAcquiredEventArgs](/uwp/api/windows.ui.input.radialcontrollercontrolacquiredeventargs)
 
 **속성**
 
@@ -3640,7 +3640,7 @@ Windows.UI.Input.RadialControllerControlAcquiredEventArgs <br /> Windows.UI.Inpu
 
 **항목**
 
-[Windows.UI.Input.RadialControllerMenu](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollermenu)
+[Windows.UI.Input.RadialControllerMenu](/uwp/api/windows.ui.input.radialcontrollermenu)
 
 **속성**
 
@@ -3650,7 +3650,7 @@ Windows.UI.Input.RadialControllerMenu <br /> Windows.UI.Input.RadialControllerMe
 
 **항목**
 
-[Windows.UI.Input.RadialControllerMenuItem](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollermenuitem)
+[Windows.UI.Input.RadialControllerMenuItem](/uwp/api/windows.ui.input.radialcontrollermenuitem)
 
 **속성**
 
@@ -3660,7 +3660,7 @@ Windows.UI.Input.RadialControllerMenuItem <br /> Windows.UI.Input.RadialControll
 
 **항목**
 
-[Windows.UI.Input.RadialControllerMenuKnownIcon](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollermenuknownicon)
+[Windows.UI.Input.RadialControllerMenuKnownIcon](/uwp/api/windows.ui.input.radialcontrollermenuknownicon)
 
 **속성**
 
@@ -3670,7 +3670,7 @@ Windows.UI.Input.RadialControllerMenuKnownIcon <br /> Windows.UI.Input.RadialCon
 
 **항목**
 
-[Windows.UI.Input.RadialControllerRotationChangedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerrotationchangedeventargs)
+[Windows.UI.Input.RadialControllerRotationChangedEventArgs](/uwp/api/windows.ui.input.radialcontrollerrotationchangedeventargs)
 
 **속성**
 
@@ -3680,7 +3680,7 @@ Windows.UI.Input.RadialControllerRotationChangedEventArgs <br /> Windows.UI.Inpu
 
 **항목**
 
-[Windows.UI.Input.RadialControllerScreenContact](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerscreencontact)
+[Windows.UI.Input.RadialControllerScreenContact](/uwp/api/windows.ui.input.radialcontrollerscreencontact)
 
 **속성**
 
@@ -3690,7 +3690,7 @@ Windows.UI.Input.RadialControllerScreenContact <br /> Windows.UI.Input.RadialCon
 
 **항목**
 
-[Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerscreencontactcontinuedeventargs)
+[Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs](/uwp/api/windows.ui.input.radialcontrollerscreencontactcontinuedeventargs)
 
 **속성**
 
@@ -3700,7 +3700,7 @@ Windows.UI.Input.RadialControllerScreenContactContinuedEventArgs <br /> Windows.
 
 **항목**
 
-[Windows.UI.Input.RadialControllerScreenContactStartedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollerscreencontactstartedeventargs)
+[Windows.UI.Input.RadialControllerScreenContactStartedEventArgs](/uwp/api/windows.ui.input.radialcontrollerscreencontactstartedeventargs)
 
 **속성**
 
@@ -3710,7 +3710,7 @@ Windows.UI.Input.RadialControllerScreenContactStartedEventArgs <br /> Windows.UI
 
 **항목**
 
-[Windows.UI.Input.RadialControllerSystemMenuItemKind](https://docs.microsoft.com/uwp/api/windows.ui.input.radialcontrollersystemmenuitemkind)
+[Windows.UI.Input.RadialControllerSystemMenuItemKind](/uwp/api/windows.ui.input.radialcontrollersystemmenuitemkind)
 
 **속성**
 
@@ -3720,7 +3720,7 @@ Windows.UI.Input.RadialControllerSystemMenuItemKind <br /> Windows.UI.Input.Radi
 
 **항목**
 
-[Windows.UI.Input.Inking.IInkPresenterRulerFactory](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.iinkpresenterrulerfactory)
+[Windows.UI.Input.Inking.IInkPresenterRulerFactory](/uwp/api/windows.ui.input.inking.iinkpresenterrulerfactory)
 
 **속성**
 
@@ -3730,7 +3730,7 @@ Windows.UI.Input.Inking.IInkPresenterRulerFactory <br /> Windows.UI.Input.Inking
 
 **항목**
 
-[Windows.UI.Input.Inking.IInkPresenterStencil](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.iinkpresenterstencil)
+[Windows.UI.Input.Inking.IInkPresenterStencil](/uwp/api/windows.ui.input.inking.iinkpresenterstencil)
 
 **속성**
 
@@ -3740,7 +3740,7 @@ Windows.UI.Input.Inking.IInkPresenterStencil <br /> Windows.UI.Input.Inking.IInk
 
 **항목**
 
-[Windows.UI.Input.Inking.InkDrawingAttributesKind](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkdrawingattributeskind)
+[Windows.UI.Input.Inking.InkDrawingAttributesKind](/uwp/api/windows.ui.input.inking.inkdrawingattributeskind)
 
 **속성**
 
@@ -3750,7 +3750,7 @@ Windows.UI.Input.Inking.InkDrawingAttributesKind <br /> Windows.UI.Input.Inking.
 
 **항목**
 
-[Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkdrawingattributespencilproperties)
+[Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties](/uwp/api/windows.ui.input.inking.inkdrawingattributespencilproperties)
 
 **속성**
 
@@ -3760,7 +3760,7 @@ Windows.UI.Input.Inking.InkDrawingAttributesPencilProperties <br /> Windows.UI.I
 
 **항목**
 
-[Windows.UI.Input.Inking.InkPresenterRuler](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenterruler)
+[Windows.UI.Input.Inking.InkPresenterRuler](/uwp/api/windows.ui.input.inking.inkpresenterruler)
 
 **속성**
 
@@ -3770,7 +3770,7 @@ Windows.UI.Input.Inking.InkPresenterRuler <br /> Windows.UI.Input.Inking.InkPres
 
 **항목**
 
-[Windows.UI.Input.Inking.InkPresenterStencilKind](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenterstencilkind)
+[Windows.UI.Input.Inking.InkPresenterStencilKind](/uwp/api/windows.ui.input.inking.inkpresenterstencilkind)
 
 **속성**
 
@@ -3780,7 +3780,7 @@ Windows.UI.Input.Inking.InkPresenterStencilKind <br /> Windows.UI.Input.Inking.I
 
 **항목**
 
-[Windows.UI.Input.Inking.Core.CoreWetStrokeDisposition](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.core.corewetstrokedisposition)
+[Windows.UI.Input.Inking.Core.CoreWetStrokeDisposition](/uwp/api/windows.ui.input.inking.core.corewetstrokedisposition)
 
 **속성**
 
@@ -3790,7 +3790,7 @@ Windows.UI.Input.Inking.Core.CoreWetStrokeDisposition <br /> Windows.UI.Input.In
 
 **항목**
 
-[Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.core.corewetstrokeupdateeventargs)
+[Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs](/uwp/api/windows.ui.input.inking.core.corewetstrokeupdateeventargs)
 
 **속성**
 
@@ -3800,7 +3800,7 @@ Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateEventArgs <br /> Windows.UI.Inpu
 
 **항목**
 
-[Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.core.corewetstrokeupdatesource)
+[Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource](/uwp/api/windows.ui.input.inking.core.corewetstrokeupdatesource)
 
 **속성**
 
@@ -3810,7 +3810,7 @@ Windows.UI.Input.Inking.Core.CoreWetStrokeUpdateSource <br /> Windows.UI.Input.I
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputButtonChangeKind](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputbuttonchangekind)
+[Windows.UI.Input.Preview.Injection.InjectedInputButtonChangeKind](/uwp/api/windows.ui.input.preview.injection.injectedinputbuttonchangekind)
 
 **속성**
 
@@ -3820,7 +3820,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputButtonChangeKind <br /> Windows.
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputkeyboardinfo)
+[Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo](/uwp/api/windows.ui.input.preview.injection.injectedinputkeyboardinfo)
 
 **속성**
 
@@ -3830,7 +3830,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputKeyboardInfo <br /> Windows.UI.I
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputKeyOptions](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputkeyoptions)
+[Windows.UI.Input.Preview.Injection.InjectedInputKeyOptions](/uwp/api/windows.ui.input.preview.injection.injectedinputkeyoptions)
 
 **속성**
 
@@ -3840,7 +3840,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputKeyOptions <br /> Windows.UI.Inp
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputmouseinfo)
+[Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo](/uwp/api/windows.ui.input.preview.injection.injectedinputmouseinfo)
 
 **속성**
 
@@ -3850,7 +3850,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputMouseInfo <br /> Windows.UI.Inpu
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputMouseOptions](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputmouseoptions)
+[Windows.UI.Input.Preview.Injection.InjectedInputMouseOptions](/uwp/api/windows.ui.input.preview.injection.injectedinputmouseoptions)
 
 **속성**
 
@@ -3860,7 +3860,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputMouseOptions <br /> Windows.UI.I
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputPenButtons](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputpenbuttons)
+[Windows.UI.Input.Preview.Injection.InjectedInputPenButtons](/uwp/api/windows.ui.input.preview.injection.injectedinputpenbuttons)
 
 **속성**
 
@@ -3870,7 +3870,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputPenButtons <br /> Windows.UI.Inp
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputPenInfo](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputpeninfo)
+[Windows.UI.Input.Preview.Injection.InjectedInputPenInfo](/uwp/api/windows.ui.input.preview.injection.injectedinputpeninfo)
 
 **속성**
 
@@ -3880,7 +3880,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputPenInfo <br /> Windows.UI.Input.
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputPenParameters](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputpenparameters)
+[Windows.UI.Input.Preview.Injection.InjectedInputPenParameters](/uwp/api/windows.ui.input.preview.injection.injectedinputpenparameters)
 
 **속성**
 
@@ -3890,7 +3890,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputPenParameters <br /> Windows.UI.
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputPoint](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputpoint)
+[Windows.UI.Input.Preview.Injection.InjectedInputPoint](/uwp/api/windows.ui.input.preview.injection.injectedinputpoint)
 
 **속성**
 
@@ -3900,7 +3900,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputPoint <br /> Windows.UI.Input.Pr
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputPointerInfo](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputpointerinfo)
+[Windows.UI.Input.Preview.Injection.InjectedInputPointerInfo](/uwp/api/windows.ui.input.preview.injection.injectedinputpointerinfo)
 
 **속성**
 
@@ -3910,7 +3910,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputPointerInfo <br /> Windows.UI.In
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputPointerOptions](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputpointeroptions)
+[Windows.UI.Input.Preview.Injection.InjectedInputPointerOptions](/uwp/api/windows.ui.input.preview.injection.injectedinputpointeroptions)
 
 **속성**
 
@@ -3920,7 +3920,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputPointerOptions <br /> Windows.UI
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputRectangle](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputrectangle)
+[Windows.UI.Input.Preview.Injection.InjectedInputRectangle](/uwp/api/windows.ui.input.preview.injection.injectedinputrectangle)
 
 **속성**
 
@@ -3930,7 +3930,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputRectangle <br /> Windows.UI.Inpu
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputShortcut](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputshortcut)
+[Windows.UI.Input.Preview.Injection.InjectedInputShortcut](/uwp/api/windows.ui.input.preview.injection.injectedinputshortcut)
 
 **속성**
 
@@ -3940,7 +3940,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputShortcut <br /> Windows.UI.Input
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputtouchinfo)
+[Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo](/uwp/api/windows.ui.input.preview.injection.injectedinputtouchinfo)
 
 **속성**
 
@@ -3950,7 +3950,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputTouchInfo <br /> Windows.UI.Inpu
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputTouchParameters](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputtouchparameters)
+[Windows.UI.Input.Preview.Injection.InjectedInputTouchParameters](/uwp/api/windows.ui.input.preview.injection.injectedinputtouchparameters)
 
 **속성**
 
@@ -3960,7 +3960,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputTouchParameters <br /> Windows.U
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InjectedInputVisualizationMode](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.injectedinputvisualizationmode)
+[Windows.UI.Input.Preview.Injection.InjectedInputVisualizationMode](/uwp/api/windows.ui.input.preview.injection.injectedinputvisualizationmode)
 
 **속성**
 
@@ -3970,7 +3970,7 @@ Windows.UI.Input.Preview.Injection.InjectedInputVisualizationMode <br /> Windows
 
 **항목**
 
-[Windows.UI.Input.Preview.Injection.InputInjector](https://docs.microsoft.com/uwp/api/windows.ui.input.preview.injection.inputinjector)
+[Windows.UI.Input.Preview.Injection.InputInjector](/uwp/api/windows.ui.input.preview.injection.inputinjector)
 
 **속성**
 
@@ -3980,7 +3980,7 @@ Windows.UI.Input.Preview.Injection.InputInjector <br /> Windows.UI.Input.Preview
 
 **항목**
 
-[Windows.UI.Notifications.AdaptiveNotificationContentKind](https://docs.microsoft.com/uwp/api/windows.ui.notifications.adaptivenotificationcontentkind)
+[Windows.UI.Notifications.AdaptiveNotificationContentKind](/uwp/api/windows.ui.notifications.adaptivenotificationcontentkind)
 
 **속성**
 
@@ -3990,7 +3990,7 @@ Windows.UI.Notifications.AdaptiveNotificationContentKind <br /> Windows.UI.Notif
 
 **항목**
 
-[Windows.UI.Notifications.AdaptiveNotificationText](https://docs.microsoft.com/uwp/api/windows.ui.notifications.adaptivenotificationtext)
+[Windows.UI.Notifications.AdaptiveNotificationText](/uwp/api/windows.ui.notifications.adaptivenotificationtext)
 
 **속성**
 
@@ -4000,7 +4000,7 @@ Windows.UI.Notifications.AdaptiveNotificationText <br /> Windows.UI.Notification
 
 **항목**
 
-[Windows.UI.Notifications.BadgeUpdateManagerForUser](https://docs.microsoft.com/uwp/api/windows.ui.notifications.badgeupdatemanagerforuser)
+[Windows.UI.Notifications.BadgeUpdateManagerForUser](/uwp/api/windows.ui.notifications.badgeupdatemanagerforuser)
 
 **속성**
 
@@ -4010,7 +4010,7 @@ Windows.UI.Notifications.BadgeUpdateManagerForUser <br /> Windows.UI.Notificatio
 
 **항목**
 
-[Windows.UI.Notifications.IAdaptiveNotificationContent](https://docs.microsoft.com/uwp/api/windows.ui.notifications.iadaptivenotificationcontent)
+[Windows.UI.Notifications.IAdaptiveNotificationContent](/uwp/api/windows.ui.notifications.iadaptivenotificationcontent)
 
 **속성**
 
@@ -4020,7 +4020,7 @@ Windows.UI.Notifications.IAdaptiveNotificationContent <br /> Windows.UI.Notifica
 
 **항목**
 
-[Windows.UI.Notifications.KnownAdaptiveNotificationHints](https://docs.microsoft.com/uwp/api/windows.ui.notifications.knownadaptivenotificationhints)
+[Windows.UI.Notifications.KnownAdaptiveNotificationHints](/uwp/api/windows.ui.notifications.knownadaptivenotificationhints)
 
 **속성**
 
@@ -4030,7 +4030,7 @@ Windows.UI.Notifications.KnownAdaptiveNotificationHints <br /> Windows.UI.Notifi
 
 **항목**
 
-[Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles](https://docs.microsoft.com/uwp/api/windows.ui.notifications.knownadaptivenotificationtextstyles)
+[Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles](/uwp/api/windows.ui.notifications.knownadaptivenotificationtextstyles)
 
 **속성**
 
@@ -4040,7 +4040,7 @@ Windows.UI.Notifications.KnownAdaptiveNotificationTextStyles <br /> Windows.UI.N
 
 **항목**
 
-[Windows.UI.Notifications.KnownNotificationBindings](https://docs.microsoft.com/uwp/api/windows.ui.notifications.knownnotificationbindings)
+[Windows.UI.Notifications.KnownNotificationBindings](/uwp/api/windows.ui.notifications.knownnotificationbindings)
 
 **속성**
 
@@ -4050,7 +4050,7 @@ Windows.UI.Notifications.KnownNotificationBindings <br /> Windows.UI.Notificatio
 
 **항목**
 
-[Windows.UI.Notifications.Notification](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notification)
+[Windows.UI.Notifications.Notification](/uwp/api/windows.ui.notifications.notification)
 
 **속성**
 
@@ -4060,7 +4060,7 @@ Windows.UI.Notifications.Notification <br /> Windows.UI.Notifications.Notificati
 
 **항목**
 
-[Windows.UI.Notifications.NotificationBinding](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationbinding)
+[Windows.UI.Notifications.NotificationBinding](/uwp/api/windows.ui.notifications.notificationbinding)
 
 **속성**
 
@@ -4070,7 +4070,7 @@ Windows.UI.Notifications.NotificationBinding <br /> Windows.UI.Notifications.Not
 
 **항목**
 
-[Windows.UI.Notifications.NotificationKinds](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationkinds)
+[Windows.UI.Notifications.NotificationKinds](/uwp/api/windows.ui.notifications.notificationkinds)
 
 **속성**
 
@@ -4080,7 +4080,7 @@ Windows.UI.Notifications.NotificationKinds <br /> Windows.UI.Notifications.Notif
 
 **항목**
 
-[Windows.UI.Notifications.NotificationMirroring](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationmirroring)
+[Windows.UI.Notifications.NotificationMirroring](/uwp/api/windows.ui.notifications.notificationmirroring)
 
 **속성**
 
@@ -4090,7 +4090,7 @@ Windows.UI.Notifications.NotificationMirroring <br /> Windows.UI.Notifications.N
 
 **항목**
 
-[Windows.UI.Notifications.NotificationVisual](https://docs.microsoft.com/uwp/api/windows.ui.notifications.notificationvisual)
+[Windows.UI.Notifications.NotificationVisual](/uwp/api/windows.ui.notifications.notificationvisual)
 
 **속성**
 
@@ -4100,7 +4100,7 @@ Windows.UI.Notifications.NotificationVisual <br /> Windows.UI.Notifications.Noti
 
 **항목**
 
-[Windows.UI.Notifications.ShownTileNotification](https://docs.microsoft.com/uwp/api/windows.ui.notifications.showntilenotification)
+[Windows.UI.Notifications.ShownTileNotification](/uwp/api/windows.ui.notifications.showntilenotification)
 
 **속성**
 
@@ -4110,7 +4110,7 @@ Windows.UI.Notifications.ShownTileNotification <br /> Windows.UI.Notifications.S
 
 **항목**
 
-[Windows.UI.Notifications.TileUpdateManagerForUser](https://docs.microsoft.com/uwp/api/windows.ui.notifications.tileupdatemanagerforuser)
+[Windows.UI.Notifications.TileUpdateManagerForUser](/uwp/api/windows.ui.notifications.tileupdatemanagerforuser)
 
 **속성**
 
@@ -4120,7 +4120,7 @@ Windows.UI.Notifications.TileUpdateManagerForUser <br /> Windows.UI.Notification
 
 **항목**
 
-[Windows.UI.Notifications.ToastNotificationManagerForUser](https://docs.microsoft.com/uwp/api/windows.ui.notifications.toastnotificationmanagerforuser)
+[Windows.UI.Notifications.ToastNotificationManagerForUser](/uwp/api/windows.ui.notifications.toastnotificationmanagerforuser)
 
 **속성**
 
@@ -4130,7 +4130,7 @@ Windows.UI.Notifications.ToastNotificationManagerForUser <br /> Windows.UI.Notif
 
 **항목**
 
-[Windows.UI.Notifications.UserNotification](https://docs.microsoft.com/uwp/api/windows.ui.notifications.usernotification)
+[Windows.UI.Notifications.UserNotification](/uwp/api/windows.ui.notifications.usernotification)
 
 **속성**
 
@@ -4140,7 +4140,7 @@ Windows.UI.Notifications.UserNotification <br /> Windows.UI.Notifications.UserNo
 
 **항목**
 
-[Windows.UI.Notifications.UserNotificationChangedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.notifications.usernotificationchangedeventargs)
+[Windows.UI.Notifications.UserNotificationChangedEventArgs](/uwp/api/windows.ui.notifications.usernotificationchangedeventargs)
 
 **속성**
 
@@ -4150,7 +4150,7 @@ Windows.UI.Notifications.UserNotificationChangedEventArgs <br /> Windows.UI.Noti
 
 **항목**
 
-[Windows.UI.Notifications.UserNotificationChangedKind](https://docs.microsoft.com/uwp/api/windows.ui.notifications.usernotificationchangedkind)
+[Windows.UI.Notifications.UserNotificationChangedKind](/uwp/api/windows.ui.notifications.usernotificationchangedkind)
 
 **속성**
 
@@ -4160,7 +4160,7 @@ Windows.UI.Notifications.UserNotificationChangedKind <br /> Windows.UI.Notificat
 
 **항목**
 
-[Windows.UI.Notifications.Management.UserNotificationListener](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlistener)
+[Windows.UI.Notifications.Management.UserNotificationListener](/uwp/api/windows.ui.notifications.management.usernotificationlistener)
 
 **속성**
 
@@ -4170,7 +4170,7 @@ Windows.UI.Notifications.Management.UserNotificationListener <br /> Windows.UI.N
 
 **항목**
 
-[Windows.UI.Notifications.Management.UserNotificationListenerAccessStatus](https://docs.microsoft.com/uwp/api/windows.ui.notifications.management.usernotificationlisteneraccessstatus)
+[Windows.UI.Notifications.Management.UserNotificationListenerAccessStatus](/uwp/api/windows.ui.notifications.management.usernotificationlisteneraccessstatus)
 
 **속성**
 
@@ -4180,7 +4180,7 @@ Windows.UI.Notifications.Management.UserNotificationListenerAccessStatus <br /> 
 
 **항목**
 
-[Windows.UI.WebUI.EnteredBackgroundEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.webui.enteredbackgroundeventargs)
+[Windows.UI.WebUI.EnteredBackgroundEventArgs](/uwp/api/windows.ui.webui.enteredbackgroundeventargs)
 
 **속성**
 
@@ -4190,7 +4190,7 @@ Windows.UI.WebUI.EnteredBackgroundEventArgs <br /> Windows.UI.WebUI.EnteredBackg
 
 **항목**
 
-[Windows.UI.WebUI.EnteredBackgroundEventHandler](https://docs.microsoft.com/uwp/api/windows.ui.webui.enteredbackgroundeventhandler)
+[Windows.UI.WebUI.EnteredBackgroundEventHandler](/uwp/api/windows.ui.webui.enteredbackgroundeventhandler)
 
 **속성**
 
@@ -4200,7 +4200,7 @@ Windows.UI.WebUI.EnteredBackgroundEventHandler <br /> Windows.UI.WebUI.EnteredBa
 
 **항목**
 
-[Windows.UI.WebUI.LeavingBackgroundEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.webui.leavingbackgroundeventargs)
+[Windows.UI.WebUI.LeavingBackgroundEventArgs](/uwp/api/windows.ui.webui.leavingbackgroundeventargs)
 
 **속성**
 
@@ -4210,7 +4210,7 @@ Windows.UI.WebUI.LeavingBackgroundEventArgs <br /> Windows.UI.WebUI.LeavingBackg
 
 **항목**
 
-[Windows.UI.WebUI.LeavingBackgroundEventHandler](https://docs.microsoft.com/uwp/api/windows.ui.webui.leavingbackgroundeventhandler)
+[Windows.UI.WebUI.LeavingBackgroundEventHandler](/uwp/api/windows.ui.webui.leavingbackgroundeventhandler)
 
 **속성**
 
@@ -4220,7 +4220,7 @@ Windows.UI.WebUI.LeavingBackgroundEventHandler <br /> Windows.UI.WebUI.LeavingBa
 
 **항목**
 
-[Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.webui.webuiuserdataaccountprovideractivatedeventargs)
+[Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs](/uwp/api/windows.ui.webui.webuiuserdataaccountprovideractivatedeventargs)
 
 **속성**
 
@@ -4230,7 +4230,7 @@ Windows.UI.WebUI.WebUIUserDataAccountProviderActivatedEventArgs <br /> Windows.U
 
 **항목**
 
-[Windows.UI.Xaml.ApplicationRequiresPointerMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.applicationrequirespointermode)
+[Windows.UI.Xaml.ApplicationRequiresPointerMode](/uwp/api/windows.ui.xaml.applicationrequirespointermode)
 
 **속성**
 
@@ -4240,7 +4240,7 @@ Windows.UI.Xaml.ApplicationRequiresPointerMode <br /> Windows.UI.Xaml.Applicatio
 
 **항목**
 
-[Windows.UI.Xaml.ElementSoundKind](https://docs.microsoft.com/uwp/api/windows.ui.xaml.elementsoundkind)
+[Windows.UI.Xaml.ElementSoundKind](/uwp/api/windows.ui.xaml.elementsoundkind)
 
 **속성**
 
@@ -4250,7 +4250,7 @@ Windows.UI.Xaml.ElementSoundKind <br /> Windows.UI.Xaml.ElementSoundKind.Focus <
 
 **항목**
 
-[Windows.UI.Xaml.ElementSoundMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.elementsoundmode)
+[Windows.UI.Xaml.ElementSoundMode](/uwp/api/windows.ui.xaml.elementsoundmode)
 
 **속성**
 
@@ -4260,7 +4260,7 @@ Windows.UI.Xaml.ElementSoundMode <br /> Windows.UI.Xaml.ElementSoundMode.Default
 
 **항목**
 
-[Windows.UI.Xaml.ElementSoundPlayer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.elementsoundplayer)
+[Windows.UI.Xaml.ElementSoundPlayer](/uwp/api/windows.ui.xaml.elementsoundplayer)
 
 **속성**
 
@@ -4270,7 +4270,7 @@ Windows.UI.Xaml.ElementSoundPlayer <br /> Windows.UI.Xaml.ElementSoundPlayer.Sta
 
 **항목**
 
-[Windows.UI.Xaml.ElementSoundPlayerState](https://docs.microsoft.com/uwp/api/windows.ui.xaml.elementsoundplayerstate)
+[Windows.UI.Xaml.ElementSoundPlayerState](/uwp/api/windows.ui.xaml.elementsoundplayerstate)
 
 **속성**
 
@@ -4280,7 +4280,7 @@ Windows.UI.Xaml.ElementSoundPlayerState <br /> Windows.UI.Xaml.ElementSoundPlaye
 
 **항목**
 
-[Windows.UI.Xaml.EnteredBackgroundEventHandler](https://docs.microsoft.com/uwp/api/windows.ui.xaml.enteredbackgroundeventhandler)
+[Windows.UI.Xaml.EnteredBackgroundEventHandler](/uwp/api/windows.ui.xaml.enteredbackgroundeventhandler)
 
 **속성**
 
@@ -4290,7 +4290,7 @@ Windows.UI.Xaml.EnteredBackgroundEventHandler <br /> Windows.UI.Xaml.EnteredBack
 
 **항목**
 
-[Windows.UI.Xaml.FocusVisualKind](https://docs.microsoft.com/uwp/api/windows.ui.xaml.focusvisualkind)
+[Windows.UI.Xaml.FocusVisualKind](/uwp/api/windows.ui.xaml.focusvisualkind)
 
 **속성**
 
@@ -4300,7 +4300,7 @@ Windows.UI.Xaml.FocusVisualKind <br /> Windows.UI.Xaml.FocusVisualKind.DottedLin
 
 **항목**
 
-[Windows.UI.Xaml.LeavingBackgroundEventHandler](https://docs.microsoft.com/uwp/api/windows.ui.xaml.leavingbackgroundeventhandler)
+[Windows.UI.Xaml.LeavingBackgroundEventHandler](/uwp/api/windows.ui.xaml.leavingbackgroundeventhandler)
 
 **속성**
 
@@ -4310,7 +4310,7 @@ Windows.UI.Xaml.LeavingBackgroundEventHandler <br /> Windows.UI.Xaml.LeavingBack
 
 **항목**
 
-[Windows.UI.Xaml.Automation.Peers.InkToolbarAutomationPeer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.inktoolbarautomationpeer)
+[Windows.UI.Xaml.Automation.Peers.InkToolbarAutomationPeer](/uwp/api/windows.ui.xaml.automation.peers.inktoolbarautomationpeer)
 
 **속성**
 
@@ -4320,7 +4320,7 @@ Windows.UI.Xaml.Automation.Peers.InkToolbarAutomationPeer
 
 **항목**
 
-[Windows.UI.Xaml.Automation.Peers.MediaPlayerElementAutomationPeer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.mediaplayerelementautomationpeer)
+[Windows.UI.Xaml.Automation.Peers.MediaPlayerElementAutomationPeer](/uwp/api/windows.ui.xaml.automation.peers.mediaplayerelementautomationpeer)
 
 **속성**
 
@@ -4330,7 +4330,7 @@ Windows.UI.Xaml.Automation.Peers.MediaPlayerElementAutomationPeer <br /> Windows
 
 **항목**
 
-[Windows.UI.Xaml.Controls.CommandBarDefaultLabelPosition](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbardefaultlabelposition)
+[Windows.UI.Xaml.Controls.CommandBarDefaultLabelPosition](/uwp/api/windows.ui.xaml.controls.commandbardefaultlabelposition)
 
 **속성**
 
@@ -4340,7 +4340,7 @@ Windows.UI.Xaml.Controls.CommandBarDefaultLabelPosition <br /> Windows.UI.Xaml.C
 
 **항목**
 
-[Windows.UI.Xaml.Controls.CommandBarDynamicOverflowAction](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbardynamicoverflowaction)
+[Windows.UI.Xaml.Controls.CommandBarDynamicOverflowAction](/uwp/api/windows.ui.xaml.controls.commandbardynamicoverflowaction)
 
 **속성**
 
@@ -4350,7 +4350,7 @@ Windows.UI.Xaml.Controls.CommandBarDynamicOverflowAction <br /> Windows.UI.Xaml.
 
 **항목**
 
-[Windows.UI.Xaml.Controls.CommandBarLabelPosition](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbarlabelposition)
+[Windows.UI.Xaml.Controls.CommandBarLabelPosition](/uwp/api/windows.ui.xaml.controls.commandbarlabelposition)
 
 **속성**
 
@@ -4360,7 +4360,7 @@ Windows.UI.Xaml.Controls.CommandBarLabelPosition <br /> Windows.UI.Xaml.Controls
 
 **항목**
 
-[Windows.UI.Xaml.Controls.CommandBarOverflowButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbaroverflowbuttonvisibility)
+[Windows.UI.Xaml.Controls.CommandBarOverflowButtonVisibility](/uwp/api/windows.ui.xaml.controls.commandbaroverflowbuttonvisibility)
 
 **속성**
 
@@ -4370,7 +4370,7 @@ Windows.UI.Xaml.Controls.CommandBarOverflowButtonVisibility <br /> Windows.UI.Xa
 
 **항목**
 
-[Windows.UI.Xaml.Controls.DynamicOverflowItemsChangingEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.dynamicoverflowitemschangingeventargs)
+[Windows.UI.Xaml.Controls.DynamicOverflowItemsChangingEventArgs](/uwp/api/windows.ui.xaml.controls.dynamicoverflowitemschangingeventargs)
 
 **속성**
 
@@ -4380,7 +4380,7 @@ Windows.UI.Xaml.Controls.DynamicOverflowItemsChangingEventArgs <br /> Windows.UI
 
 **항목**
 
-[Windows.UI.Xaml.Controls.FocusDisengagedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.focusdisengagedeventargs)
+[Windows.UI.Xaml.Controls.FocusDisengagedEventArgs](/uwp/api/windows.ui.xaml.controls.focusdisengagedeventargs)
 
 **속성**
 
@@ -4390,7 +4390,7 @@ Windows.UI.Xaml.Controls.FocusDisengagedEventArgs
 
 **항목**
 
-[Windows.UI.Xaml.Controls.FocusEngagedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.focusengagedeventargs)
+[Windows.UI.Xaml.Controls.FocusEngagedEventArgs](/uwp/api/windows.ui.xaml.controls.focusengagedeventargs)
 
 **속성**
 
@@ -4400,7 +4400,7 @@ Windows.UI.Xaml.Controls.FocusEngagedEventArgs
 
 **항목**
 
-[Windows.UI.Xaml.Controls.ICommandBarElement2](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.icommandbarelement2)
+[Windows.UI.Xaml.Controls.ICommandBarElement2](/uwp/api/windows.ui.xaml.controls.icommandbarelement2)
 
 **속성**
 
@@ -4410,7 +4410,7 @@ Windows.UI.Xaml.Controls.ICommandBarElement2 <br /> Windows.UI.Xaml.Controls.ICo
 
 **항목**
 
-[Windows.UI.Xaml.Controls.IInsertionPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.iinsertionpanel)
+[Windows.UI.Xaml.Controls.IInsertionPanel](/uwp/api/windows.ui.xaml.controls.iinsertionpanel)
 
 **속성**
 
@@ -4420,7 +4420,7 @@ Windows.UI.Xaml.Controls.IInsertionPanel <br /> Windows.UI.Xaml.Controls.IInsert
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)
+[Windows.UI.Xaml.Controls.InkToolbar](/uwp/api/windows.ui.xaml.controls.inktoolbar)
 
 **속성**
 
@@ -4430,7 +4430,7 @@ Windows.UI.Xaml.Controls.InkToolbar <br /> Windows.UI.Xaml.Controls.InkToolbar.#
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarBallpointPenButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarballpointpenbutton)
+[Windows.UI.Xaml.Controls.InkToolbarBallpointPenButton](/uwp/api/windows.ui.xaml.controls.inktoolbarballpointpenbutton)
 
 **속성**
 
@@ -4440,7 +4440,7 @@ Windows.UI.Xaml.Controls.InkToolbarBallpointPenButton <br /> Windows.UI.Xaml.Con
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarCustomPen](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarcustompen)
+[Windows.UI.Xaml.Controls.InkToolbarCustomPen](/uwp/api/windows.ui.xaml.controls.inktoolbarcustompen)
 
 **속성**
 
@@ -4450,7 +4450,7 @@ Windows.UI.Xaml.Controls.InkToolbarCustomPen <br /> Windows.UI.Xaml.Controls.Ink
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarCustomPenButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarcustompenbutton)
+[Windows.UI.Xaml.Controls.InkToolbarCustomPenButton](/uwp/api/windows.ui.xaml.controls.inktoolbarcustompenbutton)
 
 **속성**
 
@@ -4460,7 +4460,7 @@ Windows.UI.Xaml.Controls.InkToolbarCustomPenButton <br /> Windows.UI.Xaml.Contro
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarCustomToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarcustomtogglebutton)
+[Windows.UI.Xaml.Controls.InkToolbarCustomToggleButton](/uwp/api/windows.ui.xaml.controls.inktoolbarcustomtogglebutton)
 
 **속성**
 
@@ -4470,7 +4470,7 @@ Windows.UI.Xaml.Controls.InkToolbarCustomToggleButton <br /> Windows.UI.Xaml.Con
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarCustomToolButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarcustomtoolbutton)
+[Windows.UI.Xaml.Controls.InkToolbarCustomToolButton](/uwp/api/windows.ui.xaml.controls.inktoolbarcustomtoolbutton)
 
 **속성**
 
@@ -4480,7 +4480,7 @@ Windows.UI.Xaml.Controls.InkToolbarCustomToolButton <br /> Windows.UI.Xaml.Contr
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarEraserButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbareraserbutton)
+[Windows.UI.Xaml.Controls.InkToolbarEraserButton](/uwp/api/windows.ui.xaml.controls.inktoolbareraserbutton)
 
 **속성**
 
@@ -4490,7 +4490,7 @@ Windows.UI.Xaml.Controls.InkToolbarEraserButton <br /> Windows.UI.Xaml.Controls.
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarHighlighterButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarhighlighterbutton)
+[Windows.UI.Xaml.Controls.InkToolbarHighlighterButton](/uwp/api/windows.ui.xaml.controls.inktoolbarhighlighterbutton)
 
 **속성**
 
@@ -4500,7 +4500,7 @@ Windows.UI.Xaml.Controls.InkToolbarHighlighterButton <br /> Windows.UI.Xaml.Cont
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarInitialControls](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarinitialcontrols)
+[Windows.UI.Xaml.Controls.InkToolbarInitialControls](/uwp/api/windows.ui.xaml.controls.inktoolbarinitialcontrols)
 
 **속성**
 
@@ -4510,7 +4510,7 @@ Windows.UI.Xaml.Controls.InkToolbarInitialControls <br /> Windows.UI.Xaml.Contro
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarPenButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpenbutton)
+[Windows.UI.Xaml.Controls.InkToolbarPenButton](/uwp/api/windows.ui.xaml.controls.inktoolbarpenbutton)
 
 **속성**
 
@@ -4520,7 +4520,7 @@ Windows.UI.Xaml.Controls.InkToolbarPenButton <br /> Windows.UI.Xaml.Controls.Ink
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarPencilButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton)
+[Windows.UI.Xaml.Controls.InkToolbarPencilButton](/uwp/api/windows.ui.xaml.controls.inktoolbarpencilbutton)
 
 **속성**
 
@@ -4530,7 +4530,7 @@ Windows.UI.Xaml.Controls.InkToolbarPencilButton <br /> Windows.UI.Xaml.Controls.
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarPenConfigurationControl](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarpenconfigurationcontrol)
+[Windows.UI.Xaml.Controls.InkToolbarPenConfigurationControl](/uwp/api/windows.ui.xaml.controls.inktoolbarpenconfigurationcontrol)
 
 **속성**
 
@@ -4540,7 +4540,7 @@ Windows.UI.Xaml.Controls.InkToolbarPenConfigurationControl <br /> Windows.UI.Xam
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarRulerButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbarrulerbutton)
+[Windows.UI.Xaml.Controls.InkToolbarRulerButton](/uwp/api/windows.ui.xaml.controls.inktoolbarrulerbutton)
 
 **속성**
 
@@ -4550,7 +4550,7 @@ Windows.UI.Xaml.Controls.InkToolbarRulerButton <br /> Windows.UI.Xaml.Controls.I
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarToggle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbartoggle)
+[Windows.UI.Xaml.Controls.InkToolbarToggle](/uwp/api/windows.ui.xaml.controls.inktoolbartoggle)
 
 **속성**
 
@@ -4560,7 +4560,7 @@ Windows.UI.Xaml.Controls.InkToolbarToggle <br /> Windows.UI.Xaml.Controls.InkToo
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbartogglebutton)
+[Windows.UI.Xaml.Controls.InkToolbarToggleButton](/uwp/api/windows.ui.xaml.controls.inktoolbartogglebutton)
 
 **속성**
 
@@ -4570,7 +4570,7 @@ Windows.UI.Xaml.Controls.InkToolbarToggleButton <br /> Windows.UI.Xaml.Controls.
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarTool](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbartool)
+[Windows.UI.Xaml.Controls.InkToolbarTool](/uwp/api/windows.ui.xaml.controls.inktoolbartool)
 
 **속성**
 
@@ -4580,7 +4580,7 @@ Windows.UI.Xaml.Controls.InkToolbarTool <br /> Windows.UI.Xaml.Controls.InkToolb
 
 **항목**
 
-[Windows.UI.Xaml.Controls.InkToolbarToolButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbartoolbutton)
+[Windows.UI.Xaml.Controls.InkToolbarToolButton](/uwp/api/windows.ui.xaml.controls.inktoolbartoolbutton)
 
 **속성**
 
@@ -4590,7 +4590,7 @@ Windows.UI.Xaml.Controls.InkToolbarToolButton <br /> Windows.UI.Xaml.Controls.In
 
 **항목**
 
-[Windows.UI.Xaml.Controls.LightDismissOverlayMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.lightdismissoverlaymode)
+[Windows.UI.Xaml.Controls.LightDismissOverlayMode](/uwp/api/windows.ui.xaml.controls.lightdismissoverlaymode)
 
 **속성**
 
@@ -4600,7 +4600,7 @@ Windows.UI.Xaml.Controls.LightDismissOverlayMode <br /> Windows.UI.Xaml.Controls
 
 **항목**
 
-[Windows.UI.Xaml.Controls.MediaPlayerElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerelement)
+[Windows.UI.Xaml.Controls.MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement)
 
 **속성**
 
@@ -4610,7 +4610,7 @@ Windows.UI.Xaml.Controls.MediaPlayerElement <br /> Windows.UI.Xaml.Controls.Medi
 
 **항목**
 
-[Windows.UI.Xaml.Controls.MediaPlayerPresenter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.mediaplayerpresenter)
+[Windows.UI.Xaml.Controls.MediaPlayerPresenter](/uwp/api/windows.ui.xaml.controls.mediaplayerpresenter)
 
 **속성**
 
@@ -4620,7 +4620,7 @@ Windows.UI.Xaml.Controls.MediaPlayerPresenter <br /> Windows.UI.Xaml.Controls.Me
 
 **항목**
 
-[Windows.UI.Xaml.Controls.PivotHeaderFocusVisualPlacement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivotheaderfocusvisualplacement)
+[Windows.UI.Xaml.Controls.PivotHeaderFocusVisualPlacement](/uwp/api/windows.ui.xaml.controls.pivotheaderfocusvisualplacement)
 
 **속성**
 
@@ -4630,7 +4630,7 @@ Windows.UI.Xaml.Controls.PivotHeaderFocusVisualPlacement <br /> Windows.UI.Xaml.
 
 **항목**
 
-[Windows.UI.Xaml.Controls.RequiresPointer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.requirespointer)
+[Windows.UI.Xaml.Controls.RequiresPointer](/uwp/api/windows.ui.xaml.controls.requirespointer)
 
 **속성**
 
@@ -4640,7 +4640,7 @@ Windows.UI.Xaml.Controls.RequiresPointer <br /> Windows.UI.Xaml.Controls.Require
 
 **항목**
 
-[Windows.UI.Xaml.Controls.Maps.MapVisibleRegionKind](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapvisibleregionkind)
+[Windows.UI.Xaml.Controls.Maps.MapVisibleRegionKind](/uwp/api/windows.ui.xaml.controls.maps.mapvisibleregionkind)
 
 **속성**
 
@@ -4650,7 +4650,7 @@ Windows.UI.Xaml.Controls.Maps.MapVisibleRegionKind <br /> Windows.UI.Xaml.Contro
 
 **항목**
 
-[Windows.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.flyoutbaseclosingeventargs)
+[Windows.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbaseclosingeventargs)
 
 **속성**
 
@@ -4660,7 +4660,7 @@ Windows.UI.Xaml.Controls.Primitives.FlyoutBaseClosingEventArgs <br /> Windows.UI
 
 **항목**
 
-[Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.accesskeydisplaydismissedeventargs)
+[Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs](/uwp/api/windows.ui.xaml.input.accesskeydisplaydismissedeventargs)
 
 **속성**
 
@@ -4670,7 +4670,7 @@ Windows.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs <br /> Windows.UI.Xaml.
 
 **항목**
 
-[Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.accesskeydisplayrequestedeventargs)
+[Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs](/uwp/api/windows.ui.xaml.input.accesskeydisplayrequestedeventargs)
 
 **속성**
 
@@ -4680,7 +4680,7 @@ Windows.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs <br /> Windows.UI.Xaml.
 
 **항목**
 
-[Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.accesskeyinvokedeventargs)
+[Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs](/uwp/api/windows.ui.xaml.input.accesskeyinvokedeventargs)
 
 **속성**
 
@@ -4690,7 +4690,7 @@ Windows.UI.Xaml.Input.AccessKeyInvokedEventArgs <br /> Windows.UI.Xaml.Input.Acc
 
 **항목**
 
-[Windows.UI.Xaml.Input.AccessKeyManager](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.accesskeymanager)
+[Windows.UI.Xaml.Input.AccessKeyManager](/uwp/api/windows.ui.xaml.input.accesskeymanager)
 
 **속성**
 
@@ -4700,7 +4700,7 @@ Windows.UI.Xaml.Input.AccessKeyManager <br /> Windows.UI.Xaml.Input.AccessKeyMan
 
 **항목**
 
-[Windows.UI.Xaml.Input.ContextRequestedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.contextrequestedeventargs)
+[Windows.UI.Xaml.Input.ContextRequestedEventArgs](/uwp/api/windows.ui.xaml.input.contextrequestedeventargs)
 
 **속성**
 
@@ -4710,7 +4710,7 @@ Windows.UI.Xaml.Input.ContextRequestedEventArgs <br /> Windows.UI.Xaml.Input.Con
 
 **항목**
 
-[Windows.UI.Xaml.Media.BrushCollection](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.brushcollection)
+[Windows.UI.Xaml.Media.BrushCollection](/uwp/api/windows.ui.xaml.media.brushcollection)
 
 **속성**
 
@@ -4720,7 +4720,7 @@ Windows.UI.Xaml.Media.BrushCollection <br /> Windows.UI.Xaml.Media.BrushCollecti
 
 **항목**
 
-[Windows.UI.Xaml.Media.FastPlayFallbackBehaviour](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.fastplayfallbackbehaviour)
+[Windows.UI.Xaml.Media.FastPlayFallbackBehaviour](/uwp/api/windows.ui.xaml.media.fastplayfallbackbehaviour)
 
 **속성**
 
@@ -4730,7 +4730,7 @@ Windows.UI.Xaml.Media.FastPlayFallbackBehaviour <br /> Windows.UI.Xaml.Media.Fas
 
 **항목**
 
-[Windows.UI.Xaml.Media.MediaTransportControlsThumbnailRequestedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.mediatransportcontrolsthumbnailrequestedeventargs)
+[Windows.UI.Xaml.Media.MediaTransportControlsThumbnailRequestedEventArgs](/uwp/api/windows.ui.xaml.media.mediatransportcontrolsthumbnailrequestedeventargs)
 
 **속성**
 
@@ -4740,7 +4740,7 @@ Windows.UI.Xaml.Media.MediaTransportControlsThumbnailRequestedEventArgs <br /> W
 
 **항목**
 
-[Windows.UI.Xaml.Media.Animation.ConnectedAnimation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.connectedanimation)
+[Windows.UI.Xaml.Media.Animation.ConnectedAnimation](/uwp/api/windows.ui.xaml.media.animation.connectedanimation)
 
 **속성**
 
@@ -4750,7 +4750,7 @@ Windows.UI.Xaml.Media.Animation.ConnectedAnimation <br /> Windows.UI.Xaml.Media.
 
 **항목**
 
-[Windows.UI.Xaml.Media.Animation.ConnectedAnimationService](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)
+[Windows.UI.Xaml.Media.Animation.ConnectedAnimationService](/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice)
 
 **속성**
 
@@ -4760,7 +4760,7 @@ Windows.UI.Xaml.Media.Animation.ConnectedAnimationService <br /> Windows.UI.Xaml
 
 **항목**
 
-[Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs](https://docs.microsoft.com/uwp/api/windows.web.http.filters.httpservercustomvalidationrequestedeventargs)
+[Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs](/uwp/api/windows.web.http.filters.httpservercustomvalidationrequestedeventargs)
 
 **속성**
 
@@ -4770,7 +4770,7 @@ Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs <br /> Win
 
 **항목**
 
-[Windows.Graphics.Printing3D.Printing3DFaceReductionOptions](https://docs.microsoft.com/uwp/api/windows.graphics.printing3d.printing3dfacereductionoptions)
+[Windows.Graphics.Printing3D.Printing3DFaceReductionOptions](/uwp/api/windows.graphics.printing3d.printing3dfacereductionoptions)
 
 **속성**
 
@@ -4780,7 +4780,7 @@ Windows.Graphics.Printing3D.Printing3DFaceReductionOptions <br /> Windows.Graphi
 
 **항목**
 
-[Windows.Media.Capture.AppCaptureVideoEncodingFrameRateMode](https://docs.microsoft.com/uwp/api/windows.media.capture.appcapturevideoencodingframeratemode)
+[Windows.Media.Capture.AppCaptureVideoEncodingFrameRateMode](/uwp/api/windows.media.capture.appcapturevideoencodingframeratemode)
 
 **속성**
 
@@ -4790,7 +4790,7 @@ Windows.Media.Capture.AppCaptureVideoEncodingFrameRateMode <br /> Windows.Media.
 
 **항목**
 
-[Windows.Security.EnterpriseData.ProtectionPolicyAuditAction](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicyauditaction)
+[Windows.Security.EnterpriseData.ProtectionPolicyAuditAction](/uwp/api/windows.security.enterprisedata.protectionpolicyauditaction)
 
 **속성**
 
@@ -4800,7 +4800,7 @@ Windows.Security.EnterpriseData.ProtectionPolicyAuditAction <br /> Windows.Secur
 
 **항목**
 
-[Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicyauditinfo)
+[Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo](/uwp/api/windows.security.enterprisedata.protectionpolicyauditinfo)
 
 **속성**
 
@@ -4810,7 +4810,7 @@ Windows.Security.EnterpriseData.ProtectionPolicyAuditInfo <br /> Windows.Securit
 
 **항목**
 
-[Windows.Security.EnterpriseData.ProtectionPolicyRequestAccessBehavior](https://docs.microsoft.com/uwp/api/windows.security.enterprisedata.protectionpolicyrequestaccessbehavior)
+[Windows.Security.EnterpriseData.ProtectionPolicyRequestAccessBehavior](/uwp/api/windows.security.enterprisedata.protectionpolicyrequestaccessbehavior)
 
 **속성**
 
@@ -4820,7 +4820,7 @@ Windows.Security.EnterpriseData.ProtectionPolicyRequestAccessBehavior <br /> Win
 
 **항목**
 
-[Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem](https://docs.microsoft.com/uwp/api/windows.services.maps.localsearch.locallocationhoursofoperationitem)
+[Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem](/uwp/api/windows.services.maps.localsearch.locallocationhoursofoperationitem)
 
 **속성**
 
@@ -4830,7 +4830,7 @@ Windows.Services.Maps.LocalSearch.LocalLocationHoursOfOperationItem <br /> Windo
 
 **항목**
 
-[Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo](https://docs.microsoft.com/uwp/api/windows.services.maps.localsearch.locallocationratinginfo)
+[Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo](/uwp/api/windows.services.maps.localsearch.locallocationratinginfo)
 
 **속성**
 
@@ -4840,7 +4840,7 @@ Windows.Services.Maps.LocalSearch.LocalLocationRatingInfo <br /> Windows.Service
 
 **항목**
 
-[Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrolbusinesslandmarkpointerenteredeventargs)
+[Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs](/uwp/api/windows.ui.xaml.controls.maps.mapcontrolbusinesslandmarkpointerenteredeventargs)
 
 **속성**
 
@@ -4850,7 +4850,7 @@ Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerEnteredEventArgs 
 
 **항목**
 
-[Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontrolbusinesslandmarkpointerexitedeventargs)
+[Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs](/uwp/api/windows.ui.xaml.controls.maps.mapcontrolbusinesslandmarkpointerexitedeventargs)
 
 **속성**
 
@@ -4860,7 +4860,7 @@ Windows.UI.Xaml.Controls.Maps.MapControlBusinessLandmarkPointerExitedEventArgs <
 
 **항목**
 
-[Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontroltransitfeaturepointerenteredeventargs)
+[Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs](/uwp/api/windows.ui.xaml.controls.maps.mapcontroltransitfeaturepointerenteredeventargs)
 
 **속성**
 
@@ -4870,7 +4870,7 @@ Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerEnteredEventArgs <b
 
 **항목**
 
-[Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.maps.mapcontroltransitfeaturepointerexitedeventargs)
+[Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs](/uwp/api/windows.ui.xaml.controls.maps.mapcontroltransitfeaturepointerexitedeventargs)
 
 **속성**
 
@@ -4880,7 +4880,7 @@ Windows.UI.Xaml.Controls.Maps.MapControlTransitFeaturePointerExitedEventArgs <br
 
 **항목**
 
-[Windows.Services.Store.StoreAcquireLicenseResult](https://docs.microsoft.com/uwp/api/windows.services.store.storeacquirelicenseresult)
+[Windows.Services.Store.StoreAcquireLicenseResult](/uwp/api/windows.services.store.storeacquirelicenseresult)
 
 **속성**
 
@@ -4890,7 +4890,7 @@ Windows.Services.Store.StoreAcquireLicenseResult <br /> Windows.Services.Store.S
 
 **항목**
 
-[Windows.Services.Store.StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense)
+[Windows.Services.Store.StoreAppLicense](/uwp/api/windows.services.store.storeapplicense)
 
 **속성**
 
@@ -4900,7 +4900,7 @@ Windows.Services.Store.StoreAppLicense <br /> Windows.Services.Store.StoreAppLic
 
 **항목**
 
-[Windows.Services.Store.StoreAvailability](https://docs.microsoft.com/uwp/api/windows.services.store.storeavailability)
+[Windows.Services.Store.StoreAvailability](/uwp/api/windows.services.store.storeavailability)
 
 **속성**
 
@@ -4910,7 +4910,7 @@ Windows.Services.Store.StoreAvailability <br /> Windows.Services.Store.StoreAvai
 
 **항목**
 
-[Windows.Services.Store.StoreCollectionData](https://docs.microsoft.com/uwp/api/windows.services.store.storecollectiondata)
+[Windows.Services.Store.StoreCollectionData](/uwp/api/windows.services.store.storecollectiondata)
 
 **속성**
 
@@ -4920,7 +4920,7 @@ Windows.Services.Store.StoreCollectionData <br /> Windows.Services.Store.StoreCo
 
 **항목**
 
-[Windows.Services.Store.StoreConsumableResult](https://docs.microsoft.com/uwp/api/windows.services.store.storeconsumableresult)
+[Windows.Services.Store.StoreConsumableResult](/uwp/api/windows.services.store.storeconsumableresult)
 
 **속성**
 
@@ -4930,7 +4930,7 @@ Windows.Services.Store.StoreConsumableResult <br /> Windows.Services.Store.Store
 
 **항목**
 
-[Windows.Services.Store.StoreConsumableStatus](https://docs.microsoft.com/uwp/api/windows.services.store.storeconsumablestatus)
+[Windows.Services.Store.StoreConsumableStatus](/uwp/api/windows.services.store.storeconsumablestatus)
 
 **속성**
 
@@ -4940,7 +4940,7 @@ Windows.Services.Store.StoreConsumableStatus <br /> Windows.Services.Store.Store
 
 **항목**
 
-[Windows.Services.Store.StoreContext](https://docs.microsoft.com/uwp/api/windows.services.store.storecontext)
+[Windows.Services.Store.StoreContext](/uwp/api/windows.services.store.storecontext)
 
 **속성**
 
@@ -4950,7 +4950,7 @@ Windows.Services.Store.StoreContext <br /> Windows.Services.Store.StoreContext.U
 
 **항목**
 
-[Windows.Services.Store.StoreDurationUnit](https://docs.microsoft.com/uwp/api/windows.services.store.storedurationunit)
+[Windows.Services.Store.StoreDurationUnit](/uwp/api/windows.services.store.storedurationunit)
 
 **속성**
 
@@ -4960,7 +4960,7 @@ Windows.Services.Store.StoreDurationUnit <br /> Windows.Services.Store.StoreDura
 
 **항목**
 
-[Windows.Services.Store.StoreImage](https://docs.microsoft.com/uwp/api/windows.services.store.storeimage)
+[Windows.Services.Store.StoreImage](/uwp/api/windows.services.store.storeimage)
 
 **속성**
 
@@ -4970,7 +4970,7 @@ Windows.Services.Store.StoreImage <br /> Windows.Services.Store.StoreImage.Capti
 
 **항목**
 
-[Windows.Services.Store.StoreLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storelicense)
+[Windows.Services.Store.StoreLicense](/uwp/api/windows.services.store.storelicense)
 
 **속성**
 
@@ -4980,7 +4980,7 @@ Windows.Services.Store.StoreLicense <br /> Windows.Services.Store.StoreLicense.E
 
 **항목**
 
-[Windows.Services.Store.StorePackageLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storepackagelicense)
+[Windows.Services.Store.StorePackageLicense](/uwp/api/windows.services.store.storepackagelicense)
 
 **속성**
 
@@ -4990,7 +4990,7 @@ Windows.Services.Store.StorePackageLicense <br /> Windows.Services.Store.StorePa
 
 **항목**
 
-[Windows.Services.Store.StorePackageUpdate](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdate)
+[Windows.Services.Store.StorePackageUpdate](/uwp/api/windows.services.store.storepackageupdate)
 
 **속성**
 
@@ -5000,7 +5000,7 @@ Windows.Services.Store.StorePackageUpdate <br /> Windows.Services.Store.StorePac
 
 **항목**
 
-[Windows.Services.Store.StorePackageUpdateResult](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdateresult)
+[Windows.Services.Store.StorePackageUpdateResult](/uwp/api/windows.services.store.storepackageupdateresult)
 
 **속성**
 
@@ -5010,7 +5010,7 @@ Windows.Services.Store.StorePackageUpdateResult <br /> Windows.Services.Store.St
 
 **항목**
 
-[Windows.Services.Store.StorePackageUpdateState](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdatestate)
+[Windows.Services.Store.StorePackageUpdateState](/uwp/api/windows.services.store.storepackageupdatestate)
 
 **속성**
 
@@ -5020,7 +5020,7 @@ Windows.Services.Store.StorePackageUpdateState <br /> Windows.Services.Store.Sto
 
 **항목**
 
-[Windows.Services.Store.StorePackageUpdateStatus](https://docs.microsoft.com/uwp/api/windows.services.store.storepackageupdatestatus)
+[Windows.Services.Store.StorePackageUpdateStatus](/uwp/api/windows.services.store.storepackageupdatestatus)
 
 **속성**
 
@@ -5030,7 +5030,7 @@ Windows.Services.Store.StorePackageUpdateStatus <br /> Windows.Services.Store.St
 
 **항목**
 
-[Windows.Services.Store.StorePrice](https://docs.microsoft.com/uwp/api/windows.services.store.storeprice)
+[Windows.Services.Store.StorePrice](/uwp/api/windows.services.store.storeprice)
 
 **속성**
 
@@ -5040,7 +5040,7 @@ Windows.Services.Store.StorePrice <br /> Windows.Services.Store.StorePrice.Curre
 
 **항목**
 
-[Windows.Services.Store.StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct)
+[Windows.Services.Store.StoreProduct](/uwp/api/windows.services.store.storeproduct)
 
 **속성**
 
@@ -5050,7 +5050,7 @@ Windows.Services.Store.StoreProduct <br /> Windows.Services.Store.StoreProduct.D
 
 **항목**
 
-[Windows.Services.Store.StoreProductPagedQueryResult](https://docs.microsoft.com/uwp/api/windows.services.store.storeproductpagedqueryresult)
+[Windows.Services.Store.StoreProductPagedQueryResult](/uwp/api/windows.services.store.storeproductpagedqueryresult)
 
 **속성**
 
@@ -5060,7 +5060,7 @@ Windows.Services.Store.StoreProductPagedQueryResult <br /> Windows.Services.Stor
 
 **항목**
 
-[Windows.Services.Store.StoreProductQueryResult](https://docs.microsoft.com/uwp/api/windows.services.store.storeproductqueryresult)
+[Windows.Services.Store.StoreProductQueryResult](/uwp/api/windows.services.store.storeproductqueryresult)
 
 **속성**
 
@@ -5070,7 +5070,7 @@ Windows.Services.Store.StoreProductQueryResult <br /> Windows.Services.Store.Sto
 
 **항목**
 
-[Windows.Services.Store.StoreProductResult](https://docs.microsoft.com/uwp/api/windows.services.store.storeproductresult)
+[Windows.Services.Store.StoreProductResult](/uwp/api/windows.services.store.storeproductresult)
 
 **속성**
 
@@ -5080,7 +5080,7 @@ Windows.Services.Store.StoreProductResult <br /> Windows.Services.Store.StorePro
 
 **항목**
 
-[Windows.Services.Store.StorePurchaseProperties](https://docs.microsoft.com/uwp/api/windows.services.store.storepurchaseproperties)
+[Windows.Services.Store.StorePurchaseProperties](/uwp/api/windows.services.store.storepurchaseproperties)
 
 **속성**
 
@@ -5090,7 +5090,7 @@ Windows.Services.Store.StorePurchaseProperties <br /> Windows.Services.Store.Sto
 
 **항목**
 
-[Windows.Services.Store.StorePurchaseResult](https://docs.microsoft.com/uwp/api/windows.services.store.storepurchaseresult)
+[Windows.Services.Store.StorePurchaseResult](/uwp/api/windows.services.store.storepurchaseresult)
 
 **속성**
 
@@ -5100,7 +5100,7 @@ Windows.Services.Store.StorePurchaseResult <br /> Windows.Services.Store.StorePu
 
 **항목**
 
-[Windows.Services.Store.StorePurchaseStatus](https://docs.microsoft.com/uwp/api/windows.services.store.storepurchasestatus)
+[Windows.Services.Store.StorePurchaseStatus](/uwp/api/windows.services.store.storepurchasestatus)
 
 **속성**
 
@@ -5110,7 +5110,7 @@ Windows.Services.Store.StorePurchaseStatus <br /> Windows.Services.Store.StorePu
 
 **항목**
 
-[Windows.Services.Store.StoreRequestHelper](https://docs.microsoft.com/uwp/api/windows.services.store.storerequesthelper)
+[Windows.Services.Store.StoreRequestHelper](/uwp/api/windows.services.store.storerequesthelper)
 
 **속성**
 
@@ -5120,7 +5120,7 @@ Windows.Services.Store.StoreRequestHelper <br /> Windows.Services.Store.StoreReq
 
 **항목**
 
-[Windows.Services.Store.StoreSendRequestResult](https://docs.microsoft.com/uwp/api/windows.services.store.storesendrequestresult)
+[Windows.Services.Store.StoreSendRequestResult](/uwp/api/windows.services.store.storesendrequestresult)
 
 **속성**
 
@@ -5130,7 +5130,7 @@ Windows.Services.Store.StoreSendRequestResult <br /> Windows.Services.Store.Stor
 
 **항목**
 
-[Windows.Services.Store.StoreSku](https://docs.microsoft.com/uwp/api/windows.services.store.storesku)
+[Windows.Services.Store.StoreSku](/uwp/api/windows.services.store.storesku)
 
 **속성**
 
@@ -5140,7 +5140,7 @@ Windows.Services.Store.StoreSku <br /> Windows.Services.Store.StoreSku.Availabil
 
 **항목**
 
-[Windows.Services.Store.StoreSubscriptionInfo](https://docs.microsoft.com/uwp/api/windows.services.store.storesubscriptioninfo)
+[Windows.Services.Store.StoreSubscriptionInfo](/uwp/api/windows.services.store.storesubscriptioninfo)
 
 **속성**
 
@@ -5150,11 +5150,10 @@ Windows.Services.Store.StoreSubscriptionInfo <br /> Windows.Services.Store.Store
 
 **항목**
 
-[Windows.Services.Store.StoreVideo](https://docs.microsoft.com/uwp/api/windows.services.store.storevideo)
+[Windows.Services.Store.StoreVideo](/uwp/api/windows.services.store.storevideo)
 
 **속성**
 
 
 Windows.Services.Store.StoreVideo <br /> Windows.Services.Store.StoreVideo.Caption <br /> Windows.Services.Store.StoreVideo.Height <br /> Windows.Services.Store.StoreVideo.PreviewImage <br /> Windows.Services.Store.StoreVideo.Uri <br /> Windows.Services.Store.StoreVideo.VideoPurposeTag <br /> Windows.Services.Store.StoreVideo.Width
 <hr>
-

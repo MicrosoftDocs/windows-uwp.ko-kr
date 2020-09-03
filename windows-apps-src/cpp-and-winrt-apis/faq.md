@@ -5,15 +5,15 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: 23f1733f5710d86c8481899f5865d0c190e21885
-ms.sourcegitcommit: 1e8f51d5730fe748e9fe18827895a333d94d337f
+ms.openlocfilehash: e37f5b585554f4ec214f7f72a896545d66dde3d5
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87296195"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170207"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT에 대해 자주 묻는 질문
-[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통해 Windows 런타임 API를 작성하거나 사용하는 방법과 관련된 질문과 대답입니다.
+[C++/WinRT](./intro-to-using-cpp-with-winrt.md)를 통해 Windows 런타임 API를 작성하거나 사용하는 방법과 관련된 질문과 대답입니다.
 
 > [!IMPORTANT]
 > C++/WinRT에 대한 릴리스 정보는 [C++/WinRT 2.0의 새로운 기능 및 변경 내용](news.md#news-and-changes-in-cwinrt-20)을 참조하세요.
@@ -54,7 +54,7 @@ Windows 런타임 클래스(런타임 클래스)를 ‘사용’하기만 하는
 ## <a name="why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error"></a>링커에서 “LNK2019: 확인되지 않은 외부 기호” 오류가 발생하는 이유는 무엇인가요?
 확인되지 않은 기호가 **winrt** 네임스페이스에 있는 C++/WinRT 프로젝션의 Windows 네임스페이스 헤더 API인 경우 API는 포함한 헤더에서 정방향으로 선언되지만 해당 정의는 아직 포함하지 않은 헤더에 있습니다. API 네임스페이스를 따라 명명된 헤더를 추가하고 다시 빌드합니다. 자세한 내용은 [C++/WinRT 프로젝션 헤더](consume-apis.md#cwinrt-projection-headers)를 참조하세요.
 
-확인되지 않은 기호가 [RoInitialize](https://docs.microsoft.com/windows/desktop/api/roapi/nf-roapi-roinitialize)와 같은 Windows 런타임 프리 함수인 경우 프로젝트에서 [WindowsApp.lib](/uwp/win32-and-com/win32-apis) 상위 라이브러리를 명시적으로 연결해야 합니다. C++/WinRT 프로젝션은 이러한 프리(비멤버) 함수 및 진입점에 따라 달라집니다. 애플리케이션에 [C++/WinRT VSIX(Visual Studio Extension)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) 프로젝트 템플릿 중 하나를 사용하는 경우 `WindowsApp.lib`가 자동으로 연결됩니다. 그러지 않으면 프로젝트 연결 설정을 사용하여 포함하거나, 소스 코드에서 포함할 수 있습니다.
+확인되지 않은 기호가 [RoInitialize](/windows/desktop/api/roapi/nf-roapi-roinitialize)와 같은 Windows 런타임 프리 함수인 경우 프로젝트에서 [WindowsApp.lib](/uwp/win32-and-com/win32-apis) 상위 라이브러리를 명시적으로 연결해야 합니다. C++/WinRT 프로젝션은 이러한 프리(비멤버) 함수 및 진입점에 따라 달라집니다. 애플리케이션에 [C++/WinRT VSIX(Visual Studio Extension)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) 프로젝트 템플릿 중 하나를 사용하는 경우 `WindowsApp.lib`가 자동으로 연결됩니다. 그러지 않으면 프로젝트 연결 설정을 사용하여 포함하거나, 소스 코드에서 포함할 수 있습니다.
 
 ```cppwinrt
 #pragma comment(lib, "windowsapp")
@@ -70,7 +70,7 @@ Windows 런타임 클래스(런타임 클래스)를 ‘사용’하기만 하는
 
 ### <a name="uniform-construction"></a>균일한 생성
 
-프로젝션된 형식의 생성자 중 하나(**std::nullptr_t** 생성자 제외)를 통해 로컬로 구현한 런타임 클래스를 인스턴스화하려는 경우에도 이 오류가 발생할 수 있습니다. 이 작업을 수행하려면 균일한 생성이라고 부르는 C++/WinRT 2.0 기능이 필요합니다. 해당 기능을 옵트인하려고 하고 자세한 내용과 코드 예제를 알아보려면 [균일한 생성 및 직접 구현 액세스 옵트인](/windows/uwp/cpp-and-winrt-apis/author-apis#opt-in-to-uniform-construction-and-direct-implementation-access)을 참조하세요.
+프로젝션된 형식의 생성자 중 하나(**std::nullptr_t** 생성자 제외)를 통해 로컬로 구현한 런타임 클래스를 인스턴스화하려는 경우에도 이 오류가 발생할 수 있습니다. 이 작업을 수행하려면 균일한 생성이라고 부르는 C++/WinRT 2.0 기능이 필요합니다. 해당 기능을 옵트인하려고 하고 자세한 내용과 코드 예제를 알아보려면 [균일한 생성 및 직접 구현 액세스 옵트인](./author-apis.md#opt-in-to-uniform-construction-and-direct-implementation-access)을 참조하세요.
 
 균일한 생성이 필요하지 *않은* 로컬로 구현한 런타임 클래스를 인스턴스화하는 방법은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md)을 참조하세요.
 
@@ -177,7 +177,7 @@ a.f();
 위에 표시된 권장 패턴은 C++/WinRT뿐만 아니라 모든 Windows 런타임 언어 프로젝션에 적용됩니다.
 
 ## <a name="how-do-i-turn-a-string-into-a-typemdashfor-navigation-for-example"></a>탐색 등을 위해 문자열을 형식으로 변환하려면 어떻게 하나요?
-[탐색 보기 코드 예제](/windows/uwp/design/controls-and-patterns/navigationview#code-example)(대부분 C#으로 작성됨)의 끝에 이 작업을 수행하는 방법을 보여 주는 C++/WinRT 코드 조각이 있습니다.
+[탐색 보기 코드 예제](../design/controls-and-patterns/navigationview.md#code-example)(대부분 C#으로 작성됨)의 끝에 이 작업을 수행하는 방법을 보여 주는 C++/WinRT 코드 조각이 있습니다.
 
 ## <a name="how-do-i-resolve-ambiguities-with-getcurrenttime-andor-try"></a>GetCurrentTime 및/또는 TRY를 사용하여 모호성을 해결하려면 어떻게 하나요?
 

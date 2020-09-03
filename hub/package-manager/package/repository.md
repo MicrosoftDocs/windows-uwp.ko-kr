@@ -4,12 +4,12 @@ description: 애플리케이션을 설명하는 패키지 매니페스트가 만
 ms.date: 04/29/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 19a66b2d0724eb0f4f8c3f171033e4e616751717
-ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
+ms.openlocfilehash: ef94a77d5012adcedf31ae1ecfddc036bcc3a059
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334591"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166507"
 ---
 # <a name="submit-your-manifest-to-the-repository"></a>리포지토리에 매니페스트 제출
 
@@ -122,7 +122,7 @@ Windows 패키지 관리자 리포지토리에 대한 모든 애플리케이션 
 
 * **요구 사항: 작성자 피드백**: 제출하는 동안 오류가 발생했습니다. 사용자에게 끌어오기 요청을 다시 할당합니다. 10일 이내에 문제가 해결되지 않으면 끌어오기 요청을 닫습니다.
 * **Manifest-Validation-Error**: 제출된 매니페스트에 구문 오류가 있습니다.
-* **URL-Validation-Error**: 제출에서 하나 이상의 URL이 [SmartScreen](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) 유효성 검사에 실패했습니다.
+* **URL-Validation-Error**: 제출에서 하나 이상의 URL이 [SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) 유효성 검사에 실패했습니다.
 * **Binary-Validation-Error**: 제출된 애플리케이션 설치 관리자에서 바이러스 검사 테스트에 실패했거나 해시가 일치하지 않습니다.
 * **Pull-Request-Error**: 끌어오기 요청에 문제가 있습니다. 예를 들어 폴더 구조에 [필요한 형식](#step-3-add-your-manifest-to-the-local-repository)이 없습니다.
 * **Validation-Error**: 제출된 애플리케이션에서 일반 유효성 검사 테스트에 실패했습니다.

@@ -5,18 +5,18 @@ ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 localizationpriority: medium
-ms.openlocfilehash: 3dbdf8d006472c288369fd528e89663aca5a9e10
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 551d937836f0dcf0094e54a503d2a8cd80a2f28b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970888"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169527"
 ---
 # <a name="page-layout"></a>페이지 레이아웃
 
-Windows 앱에서 각 [**페이지**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page)에는 일반적으로 탐색, 명령 및 콘텐츠 요소가 있습니다. 
+Windows 앱에서 각 [**페이지**](/uwp/api/Windows.UI.Xaml.Controls.Page)에는 일반적으로 탐색, 명령 및 콘텐츠 요소가 있습니다. 
 
-앱에 여러 페이지를 포함할 수 있습니다. 사용자가 Windows 앱을 시작하면 애플리케이션 코드는 애플리케이션의 [**창**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) 내부에 배치할 [**프레임**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)을 만듭니다. 그러면 이 프레임은 애플리케이션의 [**페이지**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) 인스턴스 간에 [탐색](../basics/navigate-between-two-pages.md)할 수 있습니다. 
+앱에 여러 페이지를 포함할 수 있습니다. 사용자가 Windows 앱을 시작하면 애플리케이션 코드는 애플리케이션의 [**창**](/uwp/api/windows.ui.xaml.window) 내부에 배치할 [**프레임**](/uwp/api/Windows.UI.Xaml.Controls.Frame)을 만듭니다. 그러면 이 프레임은 애플리케이션의 [**페이지**](/uwp/api/Windows.UI.Xaml.Controls.Page) 인스턴스 간에 [탐색](../basics/navigate-between-two-pages.md)할 수 있습니다. 
 
 대부분의 페이지는 공통 레이아웃 구조를 따르며, 이 문서에서는 필요한 UI 요소와 페이지에서 이러한 요소를 배치할 위치를 다룹니다. 
 
@@ -33,7 +33,7 @@ Windows 앱에서 각 [**페이지**](https://docs.microsoft.com/uwp/api/Windows
 - 앱 설정의 진입점
 - 계정 설정의 진입점
 
-[NavigationView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.navigationview) 컨트롤은 UWP의 왼쪽 탐색 패턴을 구현합니다.
+[NavigationView](/uwp/api/windows.ui.xaml.controls.navigationview) 컨트롤은 UWP의 왼쪽 탐색 패턴을 구현합니다.
 
 탐색 항목을 선택하면 프레임이 선택된 항목의 페이지로 이동해야 합니다.
 

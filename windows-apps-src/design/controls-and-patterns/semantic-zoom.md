@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3398be1569143e253b2b9cb9ee25133ee7fe5fd9
-ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
+ms.openlocfilehash: f2fea27bf44e2e7f199c6c04f045f2cda6663315
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88502345"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174447"
 ---
 # <a name="semantic-zoom"></a>시맨틱 줌
 
@@ -29,7 +29,7 @@ ms.locfileid: "88502345"
 
 예를 들어 주소록을 볼 때 사용자는 화면을 축소하여 "W" 문자로 신속하게 이동하거나, 화면을 확대하여 해당 문자와 연결된 이름을 확인할 수 있습니다. 
 
-> **중요 API**: [SemanticZoom 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom), [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
+> **중요 API**: [SemanticZoom 클래스](/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom), [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](/uwp/api/Windows.UI.Xaml.Controls.GridView)
 
 **기능**:
 
@@ -41,7 +41,7 @@ ms.locfileid: "88502345"
 
 **SemanticZoom** 컨트롤은 한두 페이지에 모두 표시할 수 없을 정도로 큰 그룹화된 데이터 세트 그룹을 표시해야 하는 경우에 사용합니다.
 
-시맨틱 줌을 광학 줌과 혼동하지 마세요. 두 확대 방식은 조작 방식과 기본 동작(확대 축소 비율에 따라 더 많이 또는 더 자세히 표시)은 같지만, 광학 줌은 사진처럼 개체나 콘텐츠 영역에 대해 배율을 조정하는 것을 의미합니다. 광학 줌을 수행하는 컨트롤에 대한 정보는 [ScrollViewer](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer) 컨트롤을 참조하세요.
+시맨틱 줌을 광학 줌과 혼동하지 마세요. 두 확대 방식은 조작 방식과 기본 동작(확대 축소 비율에 따라 더 많이 또는 더 자세히 표시)은 같지만, 광학 줌은 사진처럼 개체나 콘텐츠 영역에 대해 배율을 조정하는 것을 의미합니다. 광학 줌을 수행하는 컨트롤에 대한 정보는 [ScrollViewer](/uwp/api/windows.ui.xaml.controls.scrollviewer) 컨트롤을 참조하세요.
 
 ## <a name="examples"></a>예
 
@@ -73,7 +73,7 @@ ms.locfileid: "88502345"
 
 ## <a name="create-a-semantic-zoom"></a>시맨틱 줌 만들기
 
-**SemanticZoom** 컨트롤은 자체적인 시각적 표현이 없습니다. 콘텐츠 보기를 제공하는 다른 두 컨트롤(일반적으로 **ListView** 또는 **GridView** 컨트롤) 간의 전환을 관리하는 호스트 컨트롤입니다.  보기 컨트롤을 SemanticZoom의 [ZoomedInView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom.zoomedinview) 및 [ZoomedOutView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom.zoomedoutview) 속성으로 설정합니다.
+**SemanticZoom** 컨트롤은 자체적인 시각적 표현이 없습니다. 콘텐츠 보기를 제공하는 다른 두 컨트롤(일반적으로 **ListView** 또는 **GridView** 컨트롤) 간의 전환을 관리하는 호스트 컨트롤입니다.  보기 컨트롤을 SemanticZoom의 [ZoomedInView](/uwp/api/windows.ui.xaml.controls.semanticzoom.zoomedinview) 및 [ZoomedOutView](/uwp/api/windows.ui.xaml.controls.semanticzoom.zoomedoutview) 속성으로 설정합니다.
 
 시맨틱 줌에 필요한 3가지 요소는 다음과 같습니다.
 - 그룹화된 데이터 원본. (그룹은 확대 보기에서 GroupStyle 정의로 정의됩니다.)
@@ -82,7 +82,7 @@ ms.locfileid: "88502345"
 
 시맨틱 줌을 사용하기 전에 그룹화된 데이터를 사용하여 목록 보기를 사용하는 방법을 이해해야 합니다. 자세한 내용은 [목록 보기 및 그리드 보기](listview-and-gridview.md)를 참조하세요. 
 
-> **참고**&nbsp;&nbsp;SemanticZoom 컨트롤의 확대 보기와 축소 보기를 정의하려면 [ISemanticZoomInformation](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ISemanticZoomInformation) 인터페이스를 구현하는 두 개의 컨트롤을 사용할 수 있습니다. XAML 프레임워크는 이 인터페이스를 구현하는 세 가지 컨트롤(ListView, GridView, Hub)을 제공합니다.
+> **참고**&nbsp;&nbsp;SemanticZoom 컨트롤의 확대 보기와 축소 보기를 정의하려면 [ISemanticZoomInformation](/uwp/api/Windows.UI.Xaml.Controls.ISemanticZoomInformation) 인터페이스를 구현하는 두 개의 컨트롤을 사용할 수 있습니다. XAML 프레임워크는 이 인터페이스를 구현하는 세 가지 컨트롤(ListView, GridView, Hub)을 제공합니다.
  
  이 XAML은 SemanticZoom 컨트롤의 구조를 보여 줍니다. ZoomedInView 및 ZoomedOutView 속성에 다른 컨트롤을 할당합니다.
  
@@ -163,11 +163,11 @@ ms.locfileid: "88502345"
 
 **보기 동기화**
 
-확대 보기 및 축소 보기를 동기화해야 하므로 사용자가 축소 보기에서 그룹을 선택하면 동일한 그룹의 세부 정보가 확대 보기에 표시됩니다. [CollectionViewSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)를 사용하거나 코드를 추가하여 보기를 동기화할 수 있습니다.
+확대 보기 및 축소 보기를 동기화해야 하므로 사용자가 축소 보기에서 그룹을 선택하면 동일한 그룹의 세부 정보가 확대 보기에 표시됩니다. [CollectionViewSource](/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)를 사용하거나 코드를 추가하여 보기를 동기화할 수 있습니다.
 
-동일한 CollectionViewSource에 바인딩되는 모든 컨트롤은 항상 현재 항목이 동일합니다. 두 보기에서 동일한 CollectionViewSource를 데이터 원본으로 사용하는 경우 CollectionViewSource가 자동으로 보기를 동기화합니다. 자세한 내용은 [CollectionViewSource](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)를 참조하세요.
+동일한 CollectionViewSource에 바인딩되는 모든 컨트롤은 항상 현재 항목이 동일합니다. 두 보기에서 동일한 CollectionViewSource를 데이터 원본으로 사용하는 경우 CollectionViewSource가 자동으로 보기를 동기화합니다. 자세한 내용은 [CollectionViewSource](/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)를 참조하세요.
 
-CollectionViewSource를 사용하여 보기를 동기화하지 않는 경우 [ViewChangeStarted](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom.viewchangestarted) 이벤트를 처리하고 이벤트 처리기에서 다음과 같이 항목을 동기화해야 합니다.
+CollectionViewSource를 사용하여 보기를 동기화하지 않는 경우 [ViewChangeStarted](/uwp/api/windows.ui.xaml.controls.semanticzoom.viewchangestarted) 이벤트를 처리하고 이벤트 처리기에서 다음과 같이 항목을 동기화해야 합니다.
 
 ```xaml
 <SemanticZoom x:Name="semanticZoom" ViewChangeStarted="SemanticZoom_ViewChangeStarted">
@@ -203,8 +203,3 @@ private void SemanticZoom_ViewChangeStarted(object sender, SemanticZoomViewChang
 - [탐색 디자인 기본 사항](../basics/navigation-basics.md)
 - [목록 보기 및 그리드 보기](listview-and-gridview.md)
 - [항목 컨테이너 및 템플릿](item-containers-templates.md)
-
-
-
-
-

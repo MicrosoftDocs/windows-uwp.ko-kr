@@ -5,12 +5,12 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: windows 10, uwp, device portal, 앱 관리자, 배포, sdk
 ms.localizationpriority: medium
-ms.openlocfilehash: 7bf3dab97be67a3b97aca4b3132bd9fe18691d15
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0fd5bf6be691974d956de0c71f4a1d11aa1a229f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75681934"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166097"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>느슨한 파일 등록을 통해 앱 배포 
 
@@ -31,10 +31,10 @@ ms.locfileid: "75681934"
 
 ## <a name="how-to-register-a-loose-file-layout"></a>느슨한 파일 레이아웃을 등록하는 방법
 
-Windows는 로컬 및 원격 디바이스에서 느슨한 파일 레이아웃을 등록하기 위한 여러 개발자 도구를 제공합니다. `WinDeployAppCmd`(Windows SDK 도구), Windows Device Portal, PowerShell 및 [Visual Studio](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps#register-layout-from-network) 중에서 선택할 수 있습니다. 다음에서는 이러한 도구를 사용하여 느슨한 파일을 등록하는 방법을 설명합니다. 그러나 먼저 다음 설치를 수행했는지 확인합니다.
+Windows는 로컬 및 원격 디바이스에서 느슨한 파일 레이아웃을 등록하기 위한 여러 개발자 도구를 제공합니다. `WinDeployAppCmd`(Windows SDK 도구), Windows Device Portal, PowerShell 및 [Visual Studio](./deploying-and-debugging-uwp-apps.md#register-layout-from-network) 중에서 선택할 수 있습니다. 다음에서는 이러한 도구를 사용하여 느슨한 파일을 등록하는 방법을 설명합니다. 그러나 먼저 다음 설치를 수행했는지 확인합니다.
 
 - 디바이스가 Windows 10 크리에이터 업데이트(빌드 14965) 이상에 있어야 합니다.
-- 모든 디바이스에서 [개발자 모드](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) 및 [디바이스 검색](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#device-discovery)을 사용하도록 설정해야 합니다.
+- 모든 디바이스에서 [개발자 모드](../get-started/enable-your-device-for-development.md) 및 [디바이스 검색](../get-started/enable-your-device-for-development.md#device-discovery)을 사용하도록 설정해야 합니다.
 
 > [!IMPORTANT]
 > 느슨한 파일 등록은 네트워크 공유(SMB) 프로토콜을 지원하는 디바이스인 데스크톱 및 Xbox에서만 사용할 수 있습니다. 
@@ -51,7 +51,7 @@ WinAppDeployCmd.exe registerfiles -remotedeploydir <Network Path> -ip <IP Addres
 
 **IP 주소** – 대상 머신의 IP 주소
 
-**대상 머신 PIN** - 대상 디바이스에 대한 연결을 설정하는 데 필요한 PIN입니다. 인증이 필요한 경우 `-pin` 옵션을 사용하여 재시도하라는 메시지가 나타납니다. PIN을 가져오는 방법에 대한 자세한 내용은 [디바이스 검색](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#device-discovery)을 참조하세요.
+**대상 머신 PIN** - 대상 디바이스에 대한 연결을 설정하는 데 필요한 PIN입니다. 인증이 필요한 경우 `-pin` 옵션을 사용하여 재시도하라는 메시지가 나타납니다. PIN을 가져오는 방법에 대한 자세한 내용은 [디바이스 검색](../get-started/enable-your-device-for-development.md#device-discovery)을 참조하세요.
 
 ### <a name="windows-device-portal"></a>Windows Device Portal
 

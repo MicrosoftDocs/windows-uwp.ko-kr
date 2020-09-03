@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b1f3881081b22fd98e9956f3c2fe45922531677b
-ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
+ms.openlocfilehash: 7f71a11c76bc6318c9000a9468c7bd9574e0c5d0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85448413"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170037"
 ---
 # <a name="navigation-view"></a>탐색 보기
 
@@ -152,7 +152,7 @@ NavigationView 창은 다음을 포함할 수 있습니다.
 - [NavigationViewItemSeparator](/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator) 개체. 탐색 항목을 그룹화하기 위한 구분 기호입니다. 구분 기호를 공백으로 렌더링하려면 [Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) 속성을 0으로 설정합니다.
 - [NavigationViewItemHeader](/uwp/api/windows.ui.xaml.controls.navigationviewitemheader) 개체. 항목 그룹에 레이블을 지정하기 위한 헤더입니다.
 - 앱 수준 검색을 허용하기 위한 선택적 [AutoSuggestBox](auto-suggest-box.md) 컨트롤. [NavigationView.AutoSuggestBox](/uwp/api/windows.ui.xaml.controls.navigationview.autosuggestbox) 속성에 컨트롤을 할당합니다.
-- [앱 설정](../app-settings/app-settings-and-data.md)의 선택적 진입점. 설정 항목을 숨기려면 [IsSettingsVisible](/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) 속성을 **false**로 설정합니다.
+- [앱 설정](../app-settings/guidelines-for-app-settings.md)의 선택적 진입점. 설정 항목을 숨기려면 [IsSettingsVisible](/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) 속성을 **false**로 설정합니다.
 
 왼쪽 창에는 다음도 포함됩니다.
 
@@ -639,7 +639,7 @@ private void On_Navigated(object sender, NavigationEventArgs e)
 ```
 
 > [!NOTE]
-> 이 코드 예제의 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index) 버전의 경우 **Blank App(C++/WinRT)** 프로젝트 템플릿을 기반으로 새 프로젝트를 만든 다음, 목록의 코드를 표시된 소스 코드 파일에 추가합니다. 목록에 표시된 그대로 소스 코드를 사용하려면 새 프로젝트의 이름을 *NavigationViewCppWinRT*로 지정합니다.
+> 이 코드 예제의 [C++/WinRT](../../cpp-and-winrt-apis/index.md) 버전의 경우 **Blank App(C++/WinRT)** 프로젝트 템플릿을 기반으로 새 프로젝트를 만든 다음, 목록의 코드를 표시된 소스 코드 파일에 추가합니다. 목록에 표시된 그대로 소스 코드를 사용하려면 새 프로젝트의 이름을 *NavigationViewCppWinRT*로 지정합니다.
 
 ```cppwinrt
 // MainPage.idl
@@ -945,7 +945,7 @@ namespace winrt::NavigationViewCppWinRT::implementation
 
 위의 C# 및 C++/WinRT 코드는 두 버전에 동일한 XAML 태그를 사용할 수 있도록 디자인되었습니다. 그러나 이 섹션에서 설명하는 C++/WinRT 버전을 구현하는 또 다른 방법이 있습니다.
 
-아래는 **NavView_ItemInvoked** 처리기의 대체 버전입니다. 이 버전의 처리기의 기술은 먼저 탐색하려는 페이지의 전체 유형 이름을 [**NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)의 태그에 저장하는 것과 관련이 있습니다. 처리기에서는 해당 값을 unboxing하고 [**Windows::UI::Xaml::Interop::TypeName**](/uwp/api/windows.ui.xaml.interop.typename) 개체로 전환한 다음, 이 개체를 사용하여 대상 페이지로 이동합니다. 위 예제에 표시되는 `_pages`라는 매핑 변수를 사용할 필요가 없으며, 태그 내부의 값이 유효한 형식인지 확인하는 단위 테스트를 만들 수 있습니다. [C++/WinRT를 사용해 스칼라 값을 IInspectable로 boxing 및 unboxing](/windows/uwp/cpp-and-winrt-apis/boxing)을 참조하세요.
+아래는 **NavView_ItemInvoked** 처리기의 대체 버전입니다. 이 버전의 처리기의 기술은 먼저 탐색하려는 페이지의 전체 유형 이름을 [**NavigationViewItem**](/uwp/api/windows.ui.xaml.controls.navigationviewitem)의 태그에 저장하는 것과 관련이 있습니다. 처리기에서는 해당 값을 unboxing하고 [**Windows::UI::Xaml::Interop::TypeName**](/uwp/api/windows.ui.xaml.interop.typename) 개체로 전환한 다음, 이 개체를 사용하여 대상 페이지로 이동합니다. 위 예제에 표시되는 `_pages`라는 매핑 변수를 사용할 필요가 없으며, 태그 내부의 값이 유효한 형식인지 확인하는 단위 테스트를 만들 수 있습니다. [C++/WinRT를 사용해 스칼라 값을 IInspectable로 boxing 및 unboxing](../../cpp-and-winrt-apis/boxing.md)을 참조하세요.
 
 ```cppwinrt
 void MainPage::NavView_ItemInvoked(
@@ -1575,7 +1575,7 @@ MainPage::MainPage()
 
 ### <a name="keyboarding-within-hierarchical-navigationview"></a>계층적 NavigationView 내의 키보드 사용
 
-사용자는 [키보드](/windows/uwp/design/input/keyboard-interactions)를 사용하여 탐색 보기 주위에서 포커스를 이동할 수 있습니다. 화살표 키는 창 내에서 “내부 탐색”을 노출하고 [트리 보기](/windows/uwp/design/controls-and-patterns/tree-view)에서 제공하는 상호 작용을 따릅니다. 키 동작은 HierarchicalNavigationView의 위쪽 및 왼쪽 컴팩트 모드에서 표시되는 NavigationView 또는 플라이아웃 메뉴를 통해 탐색할 때 변경됩니다. 다음은 각 키가 계층적 NavigationView에서 수행할 수 있는 특정 작업입니다.
+사용자는 [키보드](../input/keyboard-interactions.md)를 사용하여 탐색 보기 주위에서 포커스를 이동할 수 있습니다. 화살표 키는 창 내에서 “내부 탐색”을 노출하고 [트리 보기](./tree-view.md)에서 제공하는 상호 작용을 따릅니다. 키 동작은 HierarchicalNavigationView의 위쪽 및 왼쪽 컴팩트 모드에서 표시되는 NavigationView 또는 플라이아웃 메뉴를 통해 탐색할 때 변경됩니다. 다음은 각 키가 계층적 NavigationView에서 수행할 수 있는 특정 작업입니다.
 
 | 키      |      왼쪽 모드에서      |  위쪽 모드에서 | 플라이아웃에서  |
 |----------|------------------------|--------------|------------|
@@ -1659,7 +1659,7 @@ MainPage::MainPage()
 
 > `IsTitleBarAutoPaddingEnabled` 속성을 사용하려면 [Windows UI 라이브러리](/uwp/toolkits/winui/) 2.2 이상이 필요합니다.
 
-일부 앱은 [해당 창의 제목 표시줄을 사용자 지정](/windows/uwp/design/shell/title-bar)하여 해당 앱 콘텐츠를 제목 표시줄 영역으로 확장하도록 선택할 수 있습니다. NavigationView가 [ExtendViewIntoTitleBar](/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.extendviewintotitlebar) API**를 사용하여 제목 표시줄** 로 확장되는 앱의 루트 요소인 경우, 컨트롤은 대화형 요소의 위치를 자동으로 조정하여 [끌기 가능 영역](/windows/uwp/design/shell/title-bar#draggable-regions)과 겹치지 않도록 합니다.
+일부 앱은 [해당 창의 제목 표시줄을 사용자 지정](../shell/title-bar.md)하여 해당 앱 콘텐츠를 제목 표시줄 영역으로 확장하도록 선택할 수 있습니다. NavigationView가 [ExtendViewIntoTitleBar](/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.extendviewintotitlebar) API**를 사용하여 제목 표시줄** 로 확장되는 앱의 루트 요소인 경우, 컨트롤은 대화형 요소의 위치를 자동으로 조정하여 [끌기 가능 영역](../shell/title-bar.md#draggable-regions)과 겹치지 않도록 합니다.
 
 ![제목 표시줄로 확장되는 앱](images/navigation-view-with-titlebar-padding.png)
 

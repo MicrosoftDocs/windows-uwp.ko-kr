@@ -6,12 +6,12 @@ ms.date: 01/22/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc080a58bc3e381fc26ddcc6a42af28e2dacaa65
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 9c2fd792b9652e38637810b4ccd0aee94075895b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970448"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174697"
 ---
 # <a name="two-pane-view"></a>2 창 보기
 
@@ -23,18 +23,18 @@ ms.locfileid: "82970448"
 TwoPaneView 컨트롤은 모든 Windows 디바이스에서 작동하는 동안 특수한 코딩 없이도 이중 화면 디바이스를 자동으로 활용할 수 있도록 설계되었습니다. 이중 화면 디바이스에서 나란히 보기는 UI(사용자 인터페이스)가 두 화면 사이의 간격을 스패닝할 때 콘텐츠가 각 화면에 표시되도록 깔끔하게 분할됩니다.
 
 > [!NOTE]
-> _이중 화면 디바이스_는 고유한 기능을 제공하는 특수한 종류의 디바이스입니다. 여러 모니터가 있는 데스크톱 디바이스와는 다릅니다. 이중 화면 디바이스에 대한 자세한 내용은 [이중 화면 디바이스 소개](/dual-screen/introduction)를 참조하세요. (여러 모니터에 맞게 앱을 최적화하는 방법에 대한 자세한 내용은 [여러 보기 표시](/windows/uwp/design/layout/show-multiple-views)를 참조하세요.)
+> _이중 화면 디바이스_는 고유한 기능을 제공하는 특수한 종류의 디바이스입니다. 여러 모니터가 있는 데스크톱 디바이스와는 다릅니다. 이중 화면 디바이스에 대한 자세한 내용은 [이중 화면 디바이스 소개](/dual-screen/introduction)를 참조하세요. (여러 모니터에 맞게 앱을 최적화하는 방법에 대한 자세한 내용은 [여러 보기 표시](../layout/show-multiple-views.md)를 참조하세요.)
 
 **Windows UI 라이브러리 가져오기**
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **TwoPaneView** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **TwoPaneView** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
 
 > **Windows UI 라이브러리 API:** [TwoPaneView 클래스](/uwp/api/microsoft.ui.xaml.controls.twopaneview)
 
 > [!TIP]
-> 이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이를 [Page](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page) 요소(`xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`)에 추가했습니다.
+> 이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이를 [Page](/uwp/api/windows.ui.xaml.controls.page) 요소(`xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`)에 추가했습니다.
 >
 >코드 숨김에서는 C#의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이 **using** 문(`using muxc = Microsoft.UI.Xaml.Controls;`)을 파일 맨 위에 추가했습니다.
 
@@ -74,7 +74,7 @@ TwoPaneView 컨트롤은 모든 Windows 디바이스에서 작동하는 동안 �
 
 1개 영역만 사용할 수 있는 공간이 있을 때 표시되는 영역을 지정하려면 [PanePriority](/uwp/api/microsoft.ui.xaml.controls.twopaneview.panepriority)를 설정하여 나란히 보기를 구성합니다. 그런 다음, `Pane1`을 톨 창의 위쪽 또는 아래쪽에 표시할지, 아니면 와이드 창의 왼쪽 또는 오른쪽에 표시할지를 지정합니다.
 
-영역의 크기와 배열은 나란히 보기에서 자동으로 처리하지만 영역 내부의 콘텐츠는 크기 및 방향 변경에 맞게 사용자가 직접 조정해야 합니다. 적응형 UI를 만드는 방법에 대한 자세한 내용은 [XAML을 사용하는 응답성이 뛰어난 레이아웃](/windows/uwp/design/layout/layouts-with-xaml) 및 [레이아웃 패널](/windows/uwp/design/layout/layout-panels)을 참조하세요.
+영역의 크기와 배열은 나란히 보기에서 자동으로 처리하지만 영역 내부의 콘텐츠는 크기 및 방향 변경에 맞게 사용자가 직접 조정해야 합니다. 적응형 UI를 만드는 방법에 대한 자세한 내용은 [XAML을 사용하는 응답성이 뛰어난 레이아웃](../layout/layouts-with-xaml.md) 및 [레이아웃 패널](../layout/layout-panels.md)을 참조하세요.
 
 [TwoPaneView](/uwp/api/microsoft.ui.xaml.controls.twopaneview)는 앱의 스패닝 상태를 기준으로 창 표시를 관리합니다.
 
@@ -92,7 +92,7 @@ TwoPaneView 컨트롤은 모든 Windows 디바이스에서 작동하는 동안 �
 
 ### <a name="add-content-to-the-panes"></a>영역에 콘텐츠 추가
 
-나란히 보기의 각 창에는 단일 XAML `UIElement`가 포함될 수 있습니다. 콘텐츠를 추가하려면 일반적으로 각 영역에 XAML 레이아웃 패널을 배치한 다음, 다른 컨트롤과 콘텐츠를 패널에 추가합니다. 영역은 크기가 변경될 수 있고 와이드 모드와 톨 모드 간에 전환될 수 있으므로 각 영역의 콘텐츠가 이러한 변경에 맞게 조정될 수 있는지 확인해야 합니다. 적응형 UI를 만드는 방법에 대한 자세한 내용은 [XAML을 사용하는 응답성이 뛰어난 레이아웃](/windows/uwp/design/layout/layouts-with-xaml) 및 [레이아웃 패널](/windows/uwp/design/layout/layout-panels)을 참조하세요.
+나란히 보기의 각 창에는 단일 XAML `UIElement`가 포함될 수 있습니다. 콘텐츠를 추가하려면 일반적으로 각 영역에 XAML 레이아웃 패널을 배치한 다음, 다른 컨트롤과 콘텐츠를 패널에 추가합니다. 영역은 크기가 변경될 수 있고 와이드 모드와 톨 모드 간에 전환될 수 있으므로 각 영역의 콘텐츠가 이러한 변경에 맞게 조정될 수 있는지 확인해야 합니다. 적응형 UI를 만드는 방법에 대한 자세한 내용은 [XAML을 사용하는 응답성이 뛰어난 레이아웃](../layout/layouts-with-xaml.md) 및 [레이아웃 패널](../layout/layout-panels.md)을 참조하세요.
 
 다음 예제에서는 이전의 _예제_ 섹션에 표시된 간단한 그림/정보 앱 UI를 만듭니다. 앱이 이중 화면에 걸쳐 있으면 사진과 정보가 별도의 화면에 표시됩니다. 단일 화면에서 콘텐츠는 사용 가능한 공간의 양에 따라 두 개의 창에 표시되거나 단일 창으로 결합될 수 있습니다. (한 영역에 맞는 공간만 있다면 Pane2의 콘텐츠를 Pane1로 이동하고 사용자가 화면을 스크롤하여 숨겨진 콘텐츠를 보도록 합니다. 이에 대한 코드는 나중에 _모드 변경에 응답_ 섹션에서 볼 수 있습니다.
 
@@ -190,7 +190,7 @@ MyTwoPaneView.PanePriority = Microsoft.UI.Xaml.Controls.TwoPaneViewPriority.Pane
 
 ### <a name="pane-sizing"></a>영역 크기 조정
 
-단일 화면에서 창의 크기는 [Pane1Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane1length) 및 [Pane2Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane2length) 속성에 따라 결정됩니다. 이는 _자동_ 및 _배율_(\*) 크기 조정을 지원하는 [GridLength](/uwp/api/windows.ui.xaml.gridlength) 값을 사용합니다. 자동 및 배율 크기 조정에 대한 설명은 [XAML을 사용하는 응답성이 뛰어난 레이아웃](/windows/uwp/design/layout/layouts-with-xaml#layout-properties)의 _레이아웃 속성_ 섹션을 참조하세요.
+단일 화면에서 창의 크기는 [Pane1Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane1length) 및 [Pane2Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane2length) 속성에 따라 결정됩니다. 이는 _자동_ 및 _배율_(\*) 크기 조정을 지원하는 [GridLength](/uwp/api/windows.ui.xaml.gridlength) 값을 사용합니다. 자동 및 배율 크기 조정에 대한 설명은 [XAML을 사용하는 응답성이 뛰어난 레이아웃](../layout/layouts-with-xaml.md#layout-properties)의 _레이아웃 속성_ 섹션을 참조하세요.
 
 기본적으로 `Pane1Length`는 `Auto`로 설정되고 해당 콘텐츠에 맞게 크기가 조정됩니다. `Pane2Length`는 `*`로 설정되며, 나머지 공간을 모두 사용합니다.
 

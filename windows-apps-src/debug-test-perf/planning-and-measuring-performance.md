@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 59397f12ec66bfa2864d830eaf80a9dcaaf06592
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 51786f907da5ddf0b4a52b8c9bea61a8756c78d9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74257878"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163507"
 ---
 # <a name="planning-for-performance"></a>성능 계획
 
@@ -82,15 +82,15 @@ ms.locfileid: "74257878"
 **UI**
 
 -   [XAML 태그를 최적화](optimize-xaml-loading.md)하여 앱 UI의 각 페이지(특히 초기 페이지)에 대한 구문 분석 및 로드 시간과 메모리 효율성을 극대화합니다. nutshell에서는 필요할 때까지 UI 및 코드 로드를 지연합니다.
--   [  **ListView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView) 및 [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)의 경우 모든 항목을 같은 크기로 설정하고 최대한 많은 [ListView 및 GridView 최적화 기술](optimize-gridview-and-listview.md)을 사용합니다.
+-   [  **ListView**](/uwp/api/Windows.UI.Xaml.Controls.ListView) 및 [**GridView**](/uwp/api/Windows.UI.Xaml.Controls.GridView)의 경우 모든 항목을 같은 크기로 설정하고 최대한 많은 [ListView 및 GridView 최적화 기술](optimize-gridview-and-listview.md)을 사용합니다.
 -   프레임워크가 코드로 작성하는 대신 청크로 로드하고 다시 사용할 수 있는 태그 형식으로 UI를 선언합니다.
 -   사용자가 필요로 할 때까지 UI 요소의 생성을 연기합니다. [**x:Load**](../xaml-platform/x-load-attribute.md) 특성을 참조하세요.
--   테마 전환 및 애니메이션이 스토리보드 애니메이션보다 좋습니다. 자세한 내용은 [애니메이션 개요](https://docs.microsoft.com/windows/uwp/graphics/animations-overview)를 참조하세요. 스토리보드 애니메이션은 화면을 지속적으로 업데이트해야 하고 CPU 및 그래픽 파이프라인을 활성 상태로 유지해야 합니다. 배터리를 절약하기 위해 사용자가 앱을 조작하지 않는 경우 애니메이션을 실행하지 마세요.
--   로드하는 이미지는 [**GetThumbnailAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.getthumbnailasync) 메서드를 사용하여 이미지를 표시할 뷰에 적합한 크기로 로드되어야 합니다.
+-   테마 전환 및 애니메이션이 스토리보드 애니메이션보다 좋습니다. 자세한 내용은 [애니메이션 개요](../design/motion/xaml-animation.md)를 참조하세요. 스토리보드 애니메이션은 화면을 지속적으로 업데이트해야 하고 CPU 및 그래픽 파이프라인을 활성 상태로 유지해야 합니다. 배터리를 절약하기 위해 사용자가 앱을 조작하지 않는 경우 애니메이션을 실행하지 마세요.
+-   로드하는 이미지는 [**GetThumbnailAsync**](/uwp/api/windows.storage.storagefile.getthumbnailasync) 메서드를 사용하여 이미지를 표시할 뷰에 적합한 크기로 로드되어야 합니다.
 
 **CPU, 메모리 및 전원**
 
--   우선 순위가 낮은 작업은 우선 순위가 낮은 스레드 및/또는 코어에서 실행되도록 예약합니다. [비동기 프로그래밍](https://docs.microsoft.com/windows/uwp/threading-async/asynchronous-programming-universal-windows-platform-apps), [**Dispatcher**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.dispatcher) 속성 및 [**CoreDispatcher**](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) 클래스를 참조하세요.
+-   우선 순위가 낮은 작업은 우선 순위가 낮은 스레드 및/또는 코어에서 실행되도록 예약합니다. [비동기 프로그래밍](../threading-async/asynchronous-programming-universal-windows-platform-apps.md), [**Dispatcher**](/uwp/api/windows.ui.xaml.window.dispatcher) 속성 및 [**CoreDispatcher**](/uwp/api/Windows.UI.Core.CoreDispatcher) 클래스를 참조하세요.
 -   일시 중단 시 비용이 많이 드는 리소스(예: 미디어)를 해제하여 앱의 메모리 공간을 최소화합니다.
 -   코드의 작업 집합을 최소화합니다.
 -   가능하면 언제나 이벤트 처리기 등록을 취소하고 UI 요소를 역참조하여 메모리 누수를 방지합니다.
@@ -98,29 +98,29 @@ ms.locfileid: "74257878"
 
 **데이터 액세스**
 
--   가능한 경우 콘텐츠를 프리페치합니다. 자동 프리페치의 경우 [**ContentPrefetcher**](https://docs.microsoft.com/uwp/api/Windows.Networking.BackgroundTransfer.ContentPrefetcher) 클래스를 참조하세요. 수동 프리페치의 경우 [**Windows.ApplicationModel.Background**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background) 네임스페이스 및 [**MaintenanceTrigger**](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) 클래스를 참조하세요.
--   가능한 경우 액세스 비용이 많이 드는 콘텐츠를 캐시합니다. [  **LocalFolder**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localfolder) 및 [**LocalSettings**](https://docs.microsoft.com/uwp/api/windows.storage.applicationdata.localsettings) 속성을 참조하세요.
+-   가능한 경우 콘텐츠를 프리페치합니다. 자동 프리페치의 경우 [**ContentPrefetcher**](/uwp/api/Windows.Networking.BackgroundTransfer.ContentPrefetcher) 클래스를 참조하세요. 수동 프리페치의 경우 [**Windows.ApplicationModel.Background**](/uwp/api/Windows.ApplicationModel.Background) 네임스페이스 및 [**MaintenanceTrigger**](/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger) 클래스를 참조하세요.
+-   가능한 경우 액세스 비용이 많이 드는 콘텐츠를 캐시합니다. [  **LocalFolder**](/uwp/api/windows.storage.applicationdata.localfolder) 및 [**LocalSettings**](/uwp/api/windows.storage.applicationdata.localsettings) 속성을 참조하세요.
 -   캐시 누락 시 앱이 여전이 콘텐츠를 로드하고 있음을 나타내는 자리 표시자 UI를 가급적 빨리 표시합니다. 사용자에게 방해가 되지 않은 방법으로 자리 표시자 콘텐츠에서 라이브 콘텐츠로 전환합니다. 예를 들어 앱이 라이브 콘텐츠를 로드할 때는 사용자 손가락 또는 마우스 포인터 아래의 콘텐츠 위치를 변경하지 않습니다.
 
 **앱 시작 및 다시 시작**
 
--   앱의 시작 화면을 지연시키고 필요한 경우에 아니면 앱의 시작 화면을 확장하지 않습니다. 자세한 내용은 [빠르고 유연한 앱 실행 환경 만들기](https://blogs.msdn.com/b/windowsappdev/archive/2012/05/21/creating-a-fast-and-fluid-app-launch-experience.aspx) 및 [오랫동안 시작 화면 표시](https://docs.microsoft.com/windows/uwp/launch-resume/create-a-customized-splash-screen)를 참조하세요.
+-   앱의 시작 화면을 지연시키고 필요한 경우에 아니면 앱의 시작 화면을 확장하지 않습니다. 자세한 내용은 [빠르고 유연한 앱 실행 환경 만들기](https://blogs.msdn.com/b/windowsappdev/archive/2012/05/21/creating-a-fast-and-fluid-app-launch-experience.aspx) 및 [오랫동안 시작 화면 표시](../launch-resume/create-a-customized-splash-screen.md)를 참조하세요.
 -   시작 화면이 해제된 직후에 발생하는 애니메이션은 앱 시작 시간이 지연되는 인상만 주기 때문에 사용하지 않도록 설정합니다.
 
 **적응 UI 및 방향**
 
--   [  **VisualStateManager**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualStateManager) 클래스를 사용합니다.
+-   [  **VisualStateManager**](/uwp/api/Windows.UI.Xaml.VisualStateManager) 클래스를 사용합니다.
 -   필수 작업만 즉시 완료하고 부하가 큰 앱 작업을 나중까지 지연합니다. 앱이 200~800밀리초 내에 작업을 완료하지 못하면 앱의 UI가 잘린 상태로 표시됩니다.
 
 성능 관련 디자인을 사용하여 앱 코딩을 시작할 수 있습니다.
 
 ## <a name="instrument-for-performance"></a>성능 계측
 
-코딩할 때 앱이 실행되는 동안 특정 지점에서 메시지 및 이벤트를 기록하는 코드를 추가합니다. 나중에 앱을 테스트할 때 Windows Performance Recorder 및 Windows Performance Analyzer(둘 다 [Windows Performance Toolkit](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh162945(v=win.10))에 포함되어 있음)와 같은 프로파일링 도구를 사용하여 앱의 성능에 대한 보고서를 만들고 볼 수 있습니다. 이 보고서에서 이러한 메시지 및 이벤트를 검색하면 보고서 결과를 보다 쉽게 분석할 수 있습니다.
+코딩할 때 앱이 실행되는 동안 특정 지점에서 메시지 및 이벤트를 기록하는 코드를 추가합니다. 나중에 앱을 테스트할 때 Windows Performance Recorder 및 Windows Performance Analyzer(둘 다 [Windows Performance Toolkit](/previous-versions/windows/it-pro/windows-8.1-and-8/hh162945(v=win.10))에 포함되어 있음)와 같은 프로파일링 도구를 사용하여 앱의 성능에 대한 보고서를 만들고 볼 수 있습니다. 이 보고서에서 이러한 메시지 및 이벤트를 검색하면 보고서 결과를 보다 쉽게 분석할 수 있습니다.
 
-UWP(유니버설 Windows 플랫폼)는 풍부한 이벤트 로깅 및 추적 솔루션을 함께 제공하는 로깅 API([ETW(Windows용 이벤트 추적)](https://docs.microsoft.com/windows/desktop/ETW/event-tracing-portal)에서 지원)를 제공합니다. [  **Windows.Foundation.Diagnostics**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics) 네임스페이스의 일부인 API에는 [**FileLoggingSession**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.FileLoggingSession), [**LoggingActivity**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingActivity), [**LoggingChannel**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel) 및 [**LoggingSession**](https://docs.microsoft.com/uwp/api/Windows.Foundation.Diagnostics.LoggingSession) 클래스가 포함됩니다.
+UWP(유니버설 Windows 플랫폼)는 풍부한 이벤트 로깅 및 추적 솔루션을 함께 제공하는 로깅 API([ETW(Windows용 이벤트 추적)](/windows/desktop/ETW/event-tracing-portal)에서 지원)를 제공합니다. [  **Windows.Foundation.Diagnostics**](/uwp/api/Windows.Foundation.Diagnostics) 네임스페이스의 일부인 API에는 [**FileLoggingSession**](/uwp/api/Windows.Foundation.Diagnostics.FileLoggingSession), [**LoggingActivity**](/uwp/api/Windows.Foundation.Diagnostics.LoggingActivity), [**LoggingChannel**](/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel) 및 [**LoggingSession**](/uwp/api/Windows.Foundation.Diagnostics.LoggingSession) 클래스가 포함됩니다.
 
-앱이 실행되는 동안 특정 지점에서 보고서에 메시지를 로깅하려면 다음과 같이 **LoggingChannel** 개체를 만든 다음 개체의 [**LogMessage**](https://docs.microsoft.com/uwp/api/windows.foundation.diagnostics.loggingchannel.logmessage) 메서드를 호출합니다.
+앱이 실행되는 동안 특정 지점에서 보고서에 메시지를 로깅하려면 다음과 같이 **LoggingChannel** 개체를 만든 다음 개체의 [**LogMessage**](/uwp/api/windows.foundation.diagnostics.loggingchannel.logmessage) 메서드를 호출합니다.
 
 ```csharp
 // using Windows.Foundation.Diagnostics;
@@ -133,7 +133,7 @@ myLoggingChannel.LogMessage(LoggingLevel.Information, "Here' s my logged message
 // ...
 ```
 
-앱이 실행되는 일정 기간 동안 보고서에 시작 및 중지 이벤트를 로깅하려면 다음과 같이 **LoggingActivity** 개체를 만든 다음 개체의 [**LoggingActivity**](https://docs.microsoft.com/uwp/api/windows.foundation.diagnostics.loggingactivity.loggingactivity) 생성자를 호출합니다.
+앱이 실행되는 일정 기간 동안 보고서에 시작 및 중지 이벤트를 로깅하려면 다음과 같이 **LoggingActivity** 개체를 만든 다음 개체의 [**LoggingActivity**](/uwp/api/windows.foundation.diagnostics.loggingactivity.loggingactivity) 생성자를 호출합니다.
 
 ```csharp
 // using Windows.Foundation.Diagnostics;
@@ -171,13 +171,13 @@ using (myLoggingActivity = new LoggingActivity("MyLoggingActivity"), myLoggingCh
     -   앱을 여러 번 실행하여 임의 테스트 변수를 제거하고 일관된 측정을 보장합니다.
 -   절전 사용 여부 테스트 사용자의 디바이스는 개발 컴퓨터보다 전원이 훨씬 적을 수 있습니다. Windows는 모바일 디바이스와 같은 절전 디바이스를 염두에 두고 설계되었습니다. 플랫폼에서 실행되는 앱은 이러한 디바이스에서 제대로 작동해야 합니다. 경험적으로 절전 디바이스는 데스크톱 컴퓨터보다 4배 정도 더 느릴 것으로 예상되므로 이에 따라 목표를 설정하세요.
 -   Microsoft Visual Studio 및 Windows Performance Analyzer와 같은 도구를 함께 사용하여 앱 성능을 측정합니다. Visual Studio는 소스 코드 링크와 같은 앱 중심 분석을 제공하도록 설계되었습니다. Windows Performance Analyzer는 시스템 정보 제공, 터치 조작 이벤트에 대한 정보, 디스크 I/O(입출력) 및 GPU(그래픽 처리 디바이스) 비용에 대한 정보 등 시스템 중심 분석을 제공하도록 설계되었습니다. 두 도구 모두 추적 캡처 및 내보내기를 제공하며 공유된 추적 및 사후 추적을 다시 열 수 있습니다.
--   인증을 위해 스토어에 앱을 제출하려면 먼저 [Windows 앱 인증 키트 테스트](windows-app-certification-kit-tests.md)의 "성능 테스트" 섹션 및 [UWP 앱 테스트 사례](https://docs.microsoft.com/previous-versions/windows/apps/dn275879(v=win.10))의 "성능 및 안정성" 섹션에 설명된 대로 테스트 계획 및 성능 관련 테스트 사례에 통합해야 합니다.
+-   인증을 위해 스토어에 앱을 제출하려면 먼저 [Windows 앱 인증 키트 테스트](windows-app-certification-kit-tests.md)의 "성능 테스트" 섹션 및 [UWP 앱 테스트 사례](/previous-versions/windows/apps/dn275879(v=win.10))의 "성능 및 안정성" 섹션에 설명된 대로 테스트 계획 및 성능 관련 테스트 사례에 통합해야 합니다.
 
 자세한 내용은 다음과 같은 리소스 및 프로파일링 도구를 참조하세요.
 
--   [Windows Performance Analyzer](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10))
--   [Windows Performance Toolkit](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh162945(v=win.10))
--   [Visual Studio 진단 도구를 사용하여 성능 분석](https://docs.microsoft.com/visualstudio/profiling/profiling-tools?view=vs-2015)
+-   [Windows Performance Analyzer](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10))
+-   [Windows Performance Toolkit](/previous-versions/windows/it-pro/windows-8.1-and-8/hh162945(v=win.10))
+-   [Visual Studio 진단 도구를 사용하여 성능 분석](/visualstudio/profiling/profiling-tools?view=vs-2015)
 -   //Build/ 세션 [XAML 성능](https://channel9.msdn.com/Events/Build/2015/3-698)
 -   //Build/ 세션 [Visual Studio 2015의 새로운 XAML 도구](https://channel9.msdn.com/Events/Build/2015/2-697)
 

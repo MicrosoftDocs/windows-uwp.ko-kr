@@ -13,18 +13,18 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: 50211600931fc67c43aa577fabe23f1277a0e897
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 99d3084827e8c5b42ee1b413639300097b82a518
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83233819"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174497"
 ---
 # <a name="implement-navigation-between-two-pages"></a>두 페이지 간의 탐색 구현
 
 앱에서 기본 피어 투 피어 탐색을 할 수 있도록 프레임과 페이지를 사용하는 방법을 알아봅니다. 
 
-> **중요 API**: [**Windows.UI.Xaml.Controls.Frame**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame) 클래스, [**Windows.UI.Xaml.Controls.Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) 클래스, [**Windows.UI.Xaml.Navigation**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Navigation) 네임스페이스
+> **중요 API**: [**Windows.UI.Xaml.Controls.Frame**](/uwp/api/Windows.UI.Xaml.Controls.Frame) 클래스, [**Windows.UI.Xaml.Controls.Page**](/uwp/api/Windows.UI.Xaml.Controls.Page) 클래스, [**Windows.UI.Xaml.Navigation**](/uwp/api/Windows.UI.Xaml.Navigation) 네임스페이스
 
 ![피어 투 피어 탐색](images/peertopeer.png)
 
@@ -82,19 +82,19 @@ ms.locfileid: "83233819"
 
 Page1.xaml에 다음 콘텐츠를 추가합니다.
 
--   `pageTitle`이라는 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 요소를 루트 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)의 자식 요소로 추가합니다. [  **Text**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text) 속성을 `Page 1`로 변경합니다.
+-   `pageTitle`이라는 [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 요소를 루트 [**Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid)의 자식 요소로 추가합니다. [  **Text**](/uwp/api/windows.ui.xaml.controls.textblock.text) 속성을 `Page 1`로 변경합니다.
 ```xaml
 <TextBlock x:Name="pageTitle" Text="Page 1" />
 ```
 
--   [**HyperlinkButton**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton) 요소를 루트 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)의 자식 요소로, `pageTitle` [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 요소 뒤에 추가합니다.
+-   [**HyperlinkButton**](/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton) 요소를 루트 [**Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid)의 자식 요소로, `pageTitle` [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 요소 뒤에 추가합니다.
 ```xaml
 <HyperlinkButton Content="Click to go to page 2"
                  Click="HyperlinkButton_Click"
                  HorizontalAlignment="Center"/>
 ```
 
-Page1.xaml 코드 숨김 파일에서 Page2.xaml 탐색을 위해 추가한 [**HyperlinkButton**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton) 의 `Click` 이벤트를 처리할 다음 코드를 추가합니다.
+Page1.xaml 코드 숨김 파일에서 Page2.xaml 탐색을 위해 추가한 [**HyperlinkButton**](/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton) 의 `Click` 이벤트를 처리할 다음 코드를 추가합니다.
 
 ```csharp
 private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
@@ -119,19 +119,19 @@ void Page1::HyperlinkButton_Click(Platform::Object^ sender, RoutedEventArgs^ e)
 
 Page2.xaml에서 다음 콘텐츠를 추가합니다.
 
--   `pageTitle`이라는 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 요소를 루트 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)의 자식 요소로 추가합니다. [  **Text**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.text) 속성의 값을 `Page 2`로 변경합니다.
+-   `pageTitle`이라는 [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 요소를 루트 [**Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid)의 자식 요소로 추가합니다. [  **Text**](/uwp/api/windows.ui.xaml.controls.textblock.text) 속성의 값을 `Page 2`로 변경합니다.
 ```xaml
 <TextBlock x:Name="pageTitle" Text="Page 2" />
 ```
 
--   [**HyperlinkButton**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton) 요소를 루트 [**Grid**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid)의 자식 요소로, `pageTitle` [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 요소 뒤에 추가합니다.
+-   [**HyperlinkButton**](/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton) 요소를 루트 [**Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid)의 자식 요소로, `pageTitle` [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 요소 뒤에 추가합니다.
 ```xaml
 <HyperlinkButton Content="Click to go to page 1" 
                  Click="HyperlinkButton_Click"
                  HorizontalAlignment="Center"/>
 ```
 
-Page2.xaml 코드 숨김 파일에서 Page1.xaml 탐색을 위해 추가한 [**HyperlinkButton**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton) 의 `Click` 이벤트를 처리할 다음 코드를 추가합니다.
+Page2.xaml 코드 숨김 파일에서 Page1.xaml 탐색을 위해 추가한 [**HyperlinkButton**](/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton) 의 `Click` 이벤트를 처리할 다음 코드를 추가합니다.
 
 ```csharp
 private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
@@ -161,7 +161,7 @@ void Page2::HyperlinkButton_Click(Platform::Object^ sender, RoutedEventArgs^ e)
 
 app.xaml 코드 숨김 파일을 열고 `OnLaunched` 처리기를 변경합니다.
 
-여기서는 `MainPage` 대신 [**Frame.Navigate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.navigate)에 대한 호출에서 `Page1`을 지정합니다.
+여기서는 `MainPage` 대신 [**Frame.Navigate**](/uwp/api/windows.ui.xaml.controls.frame.navigate)에 대한 호출에서 `Page1`을 지정합니다.
 
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -296,7 +296,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 ```
 
 > [!NOTE]
-> 여기서 코드는 앱의 초기 창 프레임에 대한 탐색이 실패할 경우 [**Navigate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.navigate)의 반환 값을 사용하여 앱 예외를 throw합니다. **Navigate**가 **true**를 반환하면 탐색이 수행됩니다.
+> 여기서 코드는 앱의 초기 창 프레임에 대한 탐색이 실패할 경우 [**Navigate**](/uwp/api/windows.ui.xaml.controls.frame.navigate)의 반환 값을 사용하여 앱 예외를 throw합니다. **Navigate**가 **true**를 반환하면 탐색이 수행됩니다.
 
 이제 앱을 빌드하고 실행합니다. "Click to go to page 2"라는 링크를 클릭합니다. 맨 위의 "Page 2"라는 두 번째 페이지가 로드되어 프레임에 표시됩니다.
 
@@ -304,21 +304,21 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 
 앱이 기능을 추가하기 전에, 지금 추가한 페이지에서 앱의 탐색을 지원하는 방법을 살펴보겠습니다.
 
-먼저 App.xaml 코드 숨김 파일의 `App.OnLaunched` 메서드에서 앱에 대해 `rootFrame`라는 [**프레임**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)이 생성됩니다. **Frame** 클래스에서는 [**Navigate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.navigate), [**GoBack**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.goback), [**GoForward**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.goforward) 등의 다양한 탐색 메서드와 [**BackStack**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.backstack), [**ForwardStack**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.forwardstack), [**BackStackDepth**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.backstackdepth) 등의 속성을 지원합니다.
+먼저 App.xaml 코드 숨김 파일의 `App.OnLaunched` 메서드에서 앱에 대해 `rootFrame`라는 [**프레임**](/uwp/api/Windows.UI.Xaml.Controls.Frame)이 생성됩니다. **Frame** 클래스에서는 [**Navigate**](/uwp/api/windows.ui.xaml.controls.frame.navigate), [**GoBack**](/uwp/api/windows.ui.xaml.controls.frame.goback), [**GoForward**](/uwp/api/windows.ui.xaml.controls.frame.goforward) 등의 다양한 탐색 메서드와 [**BackStack**](/uwp/api/windows.ui.xaml.controls.frame.backstack), [**ForwardStack**](/uwp/api/windows.ui.xaml.controls.frame.forwardstack), [**BackStackDepth**](/uwp/api/windows.ui.xaml.controls.frame.backstackdepth) 등의 속성을 지원합니다.
  
-이 **Frame**에 콘텐츠를 표시하려면 [**Navigate**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.navigate) 메서드를 사용합니다. 기본값으로 이 메서드는 MainPage.xaml을 로드합니다. 이 예제에서 `Page1`은 **Navigate** 메서드로 전달되며, 메서드는 **프레임**에 `Page1`을 로드합니다. 
+이 **Frame**에 콘텐츠를 표시하려면 [**Navigate**](/uwp/api/windows.ui.xaml.controls.frame.navigate) 메서드를 사용합니다. 기본값으로 이 메서드는 MainPage.xaml을 로드합니다. 이 예제에서 `Page1`은 **Navigate** 메서드로 전달되며, 메서드는 **프레임**에 `Page1`을 로드합니다. 
 
-`Page1`은 [**Page**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Page) 클래스의 하위 클래스입니다. **Page** 클래스에는 **Frame** 속성이 있는데, 이는 **Page**를 포함하는 **Frame**을 가져오는 읽기 전용 속성입니다. `Page1`에서 **HyperlinkButton**의 **Click** 이벤트 처리기가 `this.Frame.Navigate(typeof(Page2))`를 호출할 때, **Frame**은 Page2.xaml의 콘텐츠를 표시합니다.
+`Page1`은 [**Page**](/uwp/api/Windows.UI.Xaml.Controls.Page) 클래스의 하위 클래스입니다. **Page** 클래스에는 **Frame** 속성이 있는데, 이는 **Page**를 포함하는 **Frame**을 가져오는 읽기 전용 속성입니다. `Page1`에서 **HyperlinkButton**의 **Click** 이벤트 처리기가 `this.Frame.Navigate(typeof(Page2))`를 호출할 때, **Frame**은 Page2.xaml의 콘텐츠를 표시합니다.
 
-마지막으로 페이지가 프레임에 로드될 때마다, 이 페이지는 [**PageStackEntry**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Navigation.PageStackEntry)로 [**Frame**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.frame)의 [**BackStack**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.backstack)이나 [**ForwardStack**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.forwardstack)에 추가되어 [기록 및 뒤로 탐색](navigation-history-and-backwards-navigation.md)을 사용할 수 있습니다.
+마지막으로 페이지가 프레임에 로드될 때마다, 이 페이지는 [**PageStackEntry**](/uwp/api/Windows.UI.Xaml.Navigation.PageStackEntry)로 [**Frame**](/uwp/api/windows.ui.xaml.controls.page.frame)의 [**BackStack**](/uwp/api/windows.ui.xaml.controls.frame.backstack)이나 [**ForwardStack**](/uwp/api/windows.ui.xaml.controls.frame.forwardstack)에 추가되어 [기록 및 뒤로 탐색](navigation-history-and-backwards-navigation.md)을 사용할 수 있습니다.
 
 ## <a name="3-pass-information-between-pages"></a>3. 페이지 간 정보 전달
 
 이 앱은 두 페이지 간에 탐색하지만, 아직 흥미로운 것은 나오지 않았습니다. 앱에 여러 페이지가 있으면 정보를 공유해야 하는 경우가 많습니다. 첫 번째 페이지에서 두 번째 페이지로 정보를 전달해보겠습니다.
 
-Page1.xaml에서, 앞서 추가한 **HyperlinkButton**을 다음 [**StackPanel**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel)로 바꿉니다.
+Page1.xaml에서, 앞서 추가한 **HyperlinkButton**을 다음 [**StackPanel**](/uwp/api/Windows.UI.Xaml.Controls.StackPanel)로 바꿉니다.
 
-여기서는 텍스트 문자열을 입력하기 위한 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 레이블 및 [**TextBox**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox) `name`을 추가합니다.
+여기서는 텍스트 문자열을 입력하기 위한 [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 레이블 및 [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) `name`을 추가합니다.
 
 ```xaml
 <StackPanel>
@@ -355,7 +355,7 @@ void Page1::HyperlinkButton_Click(Platform::Object^ sender, RoutedEventArgs^ e)
 
 Page2.xaml에서, 앞서 추가한 **HyperlinkButton**을 다음 **StackPanel**로 바꿉니다.
 
-여기에 Page1에서 전달된 텍스트 문자열을 표시하기 위한 [**TextBlock**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)을 추가합니다.
+여기에 Page1에서 전달된 텍스트 문자열을 표시하기 위한 [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock)을 추가합니다.
 
 ```xaml
 <StackPanel>
@@ -422,9 +422,9 @@ void Page2::OnNavigatedTo(NavigationEventArgs^ e)
 
 페이지 콘텐츠 및 상태는 기본적으로 캐시되지 않으므로, 캐시 정보를 사용하고 싶다면 앱의 각 페이지에서 이를 사용하도록 설정해야 합니다.
 
-기본 피어 투 피어 예제에는 뒤로 단추가 없습니다([뒤로 탐색](navigation-history-and-backwards-navigation.md)에서 설명). 그러나 `Page2`의 뒤로 단추를 클릭했다면 `Page1`의 **TextBox**(다른 모든 필드)가 기본값 상태로 설정될 것입니다. 이를 해결하는 한 가지 방법은 [**NavigationCacheMode**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.navigationcachemode) 속성을 사용하여 페이지가 프레임의 페이지 캐시에 추가되도록 지정하는 것입니다. 
+기본 피어 투 피어 예제에는 뒤로 단추가 없습니다([뒤로 탐색](navigation-history-and-backwards-navigation.md)에서 설명). 그러나 `Page2`의 뒤로 단추를 클릭했다면 `Page1`의 **TextBox**(다른 모든 필드)가 기본값 상태로 설정될 것입니다. 이를 해결하는 한 가지 방법은 [**NavigationCacheMode**](/uwp/api/windows.ui.xaml.controls.page.navigationcachemode) 속성을 사용하여 페이지가 프레임의 페이지 캐시에 추가되도록 지정하는 것입니다. 
 
-`Page1` 생성자에서, **NavigationCacheMode**를 **Enabled**로 설정해 프레임 페이지 캐시가 초과하지 않는 한 페이지의 모든 콘텐츠와 상태 값을 보관할 수 있습니다. [**NavigationCacheMode**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.navigationcachemode)를 [**Required**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Navigation.NavigationCacheMode)로 설정하면, 프레임에서 캐시 저장되는 탐색 기록의 페이지 수를 지정하는 [**CacheSize**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.frame.cachesize) 제한을 무시할 수 있습니다. 그러나 캐시 크기 제한은 디바이스의 메모리 제한에 따라 중요할 수 있습니다.
+`Page1` 생성자에서, **NavigationCacheMode**를 **Enabled**로 설정해 프레임 페이지 캐시가 초과하지 않는 한 페이지의 모든 콘텐츠와 상태 값을 보관할 수 있습니다. [**NavigationCacheMode**](/uwp/api/windows.ui.xaml.controls.page.navigationcachemode)를 [**Required**](/uwp/api/Windows.UI.Xaml.Navigation.NavigationCacheMode)로 설정하면, 프레임에서 캐시 저장되는 탐색 기록의 페이지 수를 지정하는 [**CacheSize**](/uwp/api/windows.ui.xaml.controls.frame.cachesize) 제한을 무시할 수 있습니다. 그러나 캐시 크기 제한은 디바이스의 메모리 제한에 따라 중요할 수 있습니다.
 
 ```csharp
 public Page1()
@@ -451,6 +451,6 @@ Page1::Page1()
 ```
 
 ## <a name="related-articles"></a>관련된 문서
-* [Windows 앱용 탐색 디자인 기본 사항](https://docs.microsoft.com/windows/uwp/layout/navigation-basics)
+* [Windows 앱용 탐색 디자인 기본 사항](./navigation-basics.md)
 * [피벗](../controls-and-patterns/pivot.md)
 * [탐색 보기](../controls-and-patterns/navigationview.md)

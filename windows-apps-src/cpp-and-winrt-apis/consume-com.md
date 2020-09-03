@@ -5,16 +5,16 @@ ms.date: 04/24/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, COM, 구성 요소, 클래스, 인터페이스
 ms.localizationpriority: medium
-ms.openlocfilehash: d5fae09192262b63b11175bf08e7a2c522b31abd
-ms.sourcegitcommit: 82d441e3b9da920cf860fad6b59d6b848466c90f
+ms.openlocfilehash: 6ccd196b2cd571cc66523b34427ca17acd73388a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84271882"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170347"
 ---
 # <a name="consume-com-components-with-cwinrt"></a>C++/WinRT를 통한 COM 구성 요소 사용
 
-[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt) 라이브러리의 기능을 사용하여 DirectX API의 고성능 2차원 및 3차원 그래픽과 같은 COM 구성 요소를 사용할 수 있습니다. C++/WinRT는 성능 손상 없이 DirectX를 사용하는 가장 간단한 방법입니다. 이 항목에서는 Direct2D 코드 예제를 사용하여 C++/WinRT를 통해 COM 클래스 및 인터페이스를 사용하는 방법을 보여 줍니다. 동일한 C++/WinRT 프로젝트에서 COM 및 Windows 런타임 프로그래밍을 함께 사용할 수도 있습니다.
+[C++/WinRT](./intro-to-using-cpp-with-winrt.md) 라이브러리의 기능을 사용하여 DirectX API의 고성능 2차원 및 3차원 그래픽과 같은 COM 구성 요소를 사용할 수 있습니다. C++/WinRT는 성능 손상 없이 DirectX를 사용하는 가장 간단한 방법입니다. 이 항목에서는 Direct2D 코드 예제를 사용하여 C++/WinRT를 통해 COM 클래스 및 인터페이스를 사용하는 방법을 보여 줍니다. 동일한 C++/WinRT 프로젝트에서 COM 및 Windows 런타임 프로그래밍을 함께 사용할 수도 있습니다.
 
 이 항목의 끝에는 최소 Direct2D 애플리케이션의 전체 소스 코드 목록이 나와 있습니다. 해당 코드에서 발췌한 내용을 사용하여 C++/WinRT 라이브러리의 다양한 기능을 통해 C++/WinRT에서 COM 구성 요소를 사용하는 방법을 설명하겠습니다.
 
@@ -131,9 +131,9 @@ winrt::check_hresult(D2D1CreateFactory(
 
 [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) 프리 함수를 사용하여 프로젝션된 형식의 개체에 대한 기본 원시 [IUnknown 인터페이스](/windows/win32/api/unknwn/nn-unknwn-iunknown)의 주소(즉, 포인터)를 반환할 수 있습니다. 그런 다음, **IUnknown** 인터페이스 포인터를 사용하는 함수에 해당 주소를 전달할 수 있습니다.
 
-*프로젝션된 형식*에 대한 자세한 내용은 [C++/WinRT를 통한 API 사용](/windows/uwp/cpp-and-winrt-apis/consume-apis)을 참조하세요.
+*프로젝션된 형식*에 대한 자세한 내용은 [C++/WinRT를 통한 API 사용](./consume-apis.md)을 참조하세요.
 
-**get_unknown**에 대한 코드 예제는 이 항목의 [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) 또는 [최소 Direct2D 애플리케이션의 전체 소스 코드 목록](/windows/uwp/cpp-and-winrt-apis/consume-com#full-source-code-listing-of-a-minimal-direct2d-application)을 참조하세요.
+**get_unknown**에 대한 코드 예제는 이 항목의 [**winrt::get_unknown**](/uwp/cpp-ref-for-winrt/get-unknown) 또는 [최소 Direct2D 애플리케이션의 전체 소스 코드 목록](#full-source-code-listing-of-a-minimal-direct2d-application)을 참조하세요.
 
 ## <a name="passing-and-returning-com-smart-pointers"></a>COM 스마트 포인터 전달 및 반환
 

@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ed38be070263bbd619e44daf5c747a97299b3cf7
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 01ccd7a7ead6bd79b79e8beb3de7f3208b616b7c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83233854"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174537"
 ---
 # <a name="navigation-design-basics-for-windows-apps"></a>Windows 앱용 탐색 디자인 기본 사항
 
@@ -168,7 +168,7 @@ ms.locfileid: "83233854"
         ![프레임 이미지](images/nav/thumbnail-frame.svg)
     :::column-end:::
     :::column span="2":::
-        [**프레임**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Frame)
+        [**프레임**](/uwp/api/Windows.UI.Xaml.Controls.Frame)
 
 몇 가지 예외를 제외하고, 여러 페이지가 있는 모든 앱은 프레임을 사용합니다. 일반적으로 앱에는 프레임과 탐색 보기 컨트롤과 같은 기본 탐색 요소가 있는 기본 페이지를 포함합니다. 사용자가 페이지를 선택하면, 프레임을 로드하여 표시합니다.
 :::row-end:::

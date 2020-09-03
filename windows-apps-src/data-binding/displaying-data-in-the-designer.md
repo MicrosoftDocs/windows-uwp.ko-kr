@@ -6,19 +6,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c717a74824db43984794b67638dd19b51b5dacd
-ms.sourcegitcommit: 83225cd9f3ef184277fc293d09982ecd511cc088
+ms.openlocfilehash: 84e11bc2a17039b65ae1282531af4b92240f4069
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87160878"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170077"
 ---
 <a name="sample-data-on-the-design-surface-and-for-prototyping"></a>디자인 화면의 샘플 데이터 및 프로토타입 생성용 샘플 데이터
 =============================================================================================
 
 
 
-**참고**  샘플 데이터가 얼마나 필요한지 그리고 얼마나 도움이 될지는 바인딩에서 [{Binding} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/binding-markup-extension)을 사용하는지 [{x:Bind} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)을 사용하는지에 달려 있습니다. 이 항목에서 설명하는 기술은 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) 사용을 기준으로 하므로 **{Binding}** 에만 적합합니다. 그러나 **{x:Bind}** 를 사용하는 경우에는 바인딩에서 적어도 항목 컨트롤에 대한 값을 비롯해 자리 표시자 값을 디자인 화면에 표시하므로 샘플 데이터가 똑같이 필요하지는 않습니다.
+**참고**  샘플 데이터가 얼마나 필요한지 그리고 얼마나 도움이 될지는 바인딩에서 [{Binding} 태그 확장](../xaml-platform/binding-markup-extension.md)을 사용하는지 [{x:Bind} 태그 확장](../xaml-platform/x-bind-markup-extension.md)을 사용하는지에 달려 있습니다. 이 항목에서 설명하는 기술은 [**DataContext**](/uwp/api/windows.ui.xaml.frameworkelement.datacontext) 사용을 기준으로 하므로 **{Binding}** 에만 적합합니다. 그러나 **{x:Bind}** 를 사용하는 경우에는 바인딩에서 적어도 항목 컨트롤에 대한 값을 비롯해 자리 표시자 값을 디자인 화면에 표시하므로 샘플 데이터가 똑같이 필요하지는 않습니다.
 
 앱에서 Microsoft Visual Studio 또는 Blend for Visual Studio의 디자인 화면에 라이브 데이터를 표시하는 것은 불가능할 수도 있고 아마도 개인 정보 또는 성능상의 이유로 바람직하지 않을 수도 있습니다. 컨트롤에 데이터를 채워 앱의 레이아웃, 템플릿 및 기타 시각적 속성을 작업할 수 있도록 하기 위해 다양한 방법으로 디자인 타임 샘플 데이터를 사용할 수 있습니다. 스케치(또는 프로토타입) 앱을 빌드하는 경우에도 샘플 데이터를 사용하면 정말 유용하고 시간을 절약할 수 있습니다. 스케치 또는 프로토타입에서 런타임에 샘플 데이터를 사용하면 실제 라이브 데이터에 연결하지 않더라도 아이디어를 설명할 수 있습니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "87160878"
 <a name="setting-datacontext-in-markup"></a>태그에서 DataContext 설정
 -----------------------------
 
-개발자가 코드 숨김에 필수적인 코드를 사용하여 페이지 또는 사용자 컨트롤의 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext)를 뷰 모델 인스턴스로 설정하는 것은 아주 일반적인 방법입니다.
+개발자가 코드 숨김에 필수적인 코드를 사용하여 페이지 또는 사용자 컨트롤의 [**DataContext**](/uwp/api/windows.ui.xaml.frameworkelement.datacontext)를 뷰 모델 인스턴스로 설정하는 것은 아주 일반적인 방법입니다.
 
 ``` csharp
 public MainPage()
@@ -99,11 +99,11 @@ else
 </Page>
 ```
 
-다양한 xmlns 선언은 **d:** 접두사가 있는 특성이 디자인 타임에만 해석되고 런타임에는 무시됨을 의미합니다. 따라서 **d:DataContext** 특성은 디자인 타임에만 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext) 속성 값에 영향을 주고 런타임에는 적용되지 않습니다. 원하는 경우 태그에서 **d:DataContext** 및 **DataContext**를 모두 설정할 수도 있습니다. **d:DataContext**는 디자인 타임에 재정의되고 **DataContext**는 런타임에 재정의됩니다. 이와 같이 동일한 재정의 규칙이 디자인 타임 및 런타임 특성 모두에 적용됩니다.
+다양한 xmlns 선언은 **d:** 접두사가 있는 특성이 디자인 타임에만 해석되고 런타임에는 무시됨을 의미합니다. 따라서 **d:DataContext** 특성은 디자인 타임에만 [**DataContext**](/uwp/api/windows.ui.xaml.frameworkelement.datacontext) 속성 값에 영향을 주고 런타임에는 적용되지 않습니다. 원하는 경우 태그에서 **d:DataContext** 및 **DataContext**를 모두 설정할 수도 있습니다. **d:DataContext**는 디자인 타임에 재정의되고 **DataContext**는 런타임에 재정의됩니다. 이와 같이 동일한 재정의 규칙이 디자인 타임 및 런타임 특성 모두에 적용됩니다.
 
-**d:DataContext** 특성 및 다른 모든 디자인 타임 특성은 [디자인 타임 특성](https://msdn.microsoft.com/library/ff602277(v=VS.95).aspx) 항목에 설명되어 있으며, UWP(유니버설 Windows 플랫폼) 앱에 여전히 사용할 수 있습니다.
+**d:DataContext** 특성 및 다른 모든 디자인 타임 특성은 [디자인 타임 특성](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ff602277(v=vs.95)) 항목에 설명되어 있으며, UWP(유니버설 Windows 플랫폼) 앱에 여전히 사용할 수 있습니다.
 
-[**CollectionViewSource**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)에는 **DataContext** 속성이 없지만 **Source** 속성이 있습니다. 따라서 **CollectionViewSource**에 디자인 타임 전용 샘플 데이터를 설정하는 데 사용할 수 있는 **d:Source** 속성이 있습니다.
+[**CollectionViewSource**](/uwp/api/Windows.UI.Xaml.Data.CollectionViewSource)에는 **DataContext** 속성이 없지만 **Source** 속성이 있습니다. 따라서 **CollectionViewSource**에 디자인 타임 전용 샘플 데이터를 설정하는 데 사용할 수 있는 **d:Source** 속성이 있습니다.
 
 ``` xaml
     <Page.Resources>
@@ -152,6 +152,6 @@ XAML 대신 JSON 샘플 데이터 파일을 사용하는 경우에는 **Type** �
 
 클래스를 지정하는 대신 **데이터** 패널에서 바로 샘플 데이터 원본의 스키마를 실제로 디자인할 수 있습니다. 또한 **데이터** 패널에서 샘플 데이터 값을 편집할 수도 있습니다. 원하는 경우 할 수는 있지만 파일을 열고 편집할 필요가 없습니다.
 
-**새 샘플 데이터** 기능은 **d:DataContext**가 아니라 [**DataContext**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.datacontext)를 사용하므로 스케치 또는 프로토타입을 디자인할 때뿐 아니라 실행할 때도 샘플 데이터를 사용할 수 있습니다. 그리고 **데이터** 패널을 사용하면 디자인 및 바인딩 작업이 실제로 단축됩니다. 예를 들어 컬렉션 속성을 **데이터** 패널에서 디자인 화면으로 끌어다 놓기만 하면 데이터 바인딩된 항목 컨트롤과 필요한 템플릿이 생성되므로, 곧바로 빌드하고 실행할 수 있습니다.
+**새 샘플 데이터** 기능은 **d:DataContext**가 아니라 [**DataContext**](/uwp/api/windows.ui.xaml.frameworkelement.datacontext)를 사용하므로 스케치 또는 프로토타입을 디자인할 때뿐 아니라 실행할 때도 샘플 데이터를 사용할 수 있습니다. 그리고 **데이터** 패널을 사용하면 디자인 및 바인딩 작업이 실제로 단축됩니다. 예를 들어 컬렉션 속성을 **데이터** 패널에서 디자인 화면으로 끌어다 놓기만 하면 데이터 바인딩된 항목 컨트롤과 필요한 템플릿이 생성되므로, 곧바로 빌드하고 실행할 수 있습니다.
 
 ![프로토타입 생성용 샘플 데이터](images/displaying-data-in-the-designer-04.png)

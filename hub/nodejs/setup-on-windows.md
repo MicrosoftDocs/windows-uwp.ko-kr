@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Node.js, windows 10, 네이티브 windows, windows에 직접
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: fe1943da8c1de4f4fced5dec67079522d83f9a19
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8c865610ba2678c1c5ab1b25ff7a2c7410d11f15
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82173469"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166587"
 ---
 # <a name="set-up-your-nodejs-development-environment-directly-on-windows"></a>Windows에 직접 Node.js 개발 환경 설치
 
@@ -64,7 +64,7 @@ Node.js를 설치하는 여러 가지 방법이 있습니다. 버전이 매우 �
 windows-nvm 대신 Volta를 버전 관리자로 설치하려면 해당하는 [시작 가이드](https://docs.volta.sh/guide/getting-started)의 **Windows 설치** 섹션으로 이동한 다음, Windows 설치 관리자를 다운로드하여 실행합니다. 그리고 설치 지침을 따릅니다.
 
 > [!IMPORTANT]
-> Volta를 설치하기 전에 Windows 머신에서 [개발자 모드](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#accessing-settings-for-developers)를 사용하도록 설정해야 합니다.
+> Volta를 설치하기 전에 Windows 머신에서 [개발자 모드](/windows/uwp/get-started/enable-your-device-for-development#accessing-settings-for-developers)를 사용하도록 설정해야 합니다.
 
 Volta를 사용하여 Windows에 여러 버전의 Node.js를 설치하는 방법에 대한 자세한 정보는 [Volta 문서](https://docs.volta.sh/guide/understanding#managing-your-toolchain)를 참조하세요.
 
@@ -101,4 +101,4 @@ Node.js 확장 팩을 설치하는 방법은 다음과 같습니다.
 Windows에서 직접 Node.js를 사용해 보면 어떤 작업을 수행할 수 있는지 알아보고 실험할 수 있습니다. 즉시 프로덕션에 사용 가능한 웹앱(일반적으로 Linux 기반 서버에 배포됨)을 빌드할 준비가 되면 Node.js 웹앱 개발에 WSL 2(Linux용 Windows 하위 시스템 버전 2)를 사용하는 것이 좋습니다. 많은 Node.js 패키지와 프레임워크는 *nix 환경을 염두에 두고 제작되며 대부분의 Node.js 앱은 Linux에 배포되므로, WSL에서 개발하면 개발 환경과 프로덕션 환경 간에 일관성을 유지할 수 있습니다. WSL 개발 환경을 설치하려면 [WSL 2를 사용하여 Node.js 개발 환경 설치](./setup-on-wsl2.md)를 참조하세요.
 
 > [!NOTE]
-> 드물기는 하지만 Node.js 앱을 Windows 서버에 호스팅해야 하는 가장 일반적인 시나리오는 [역방향 프록시를 사용](https://medium.com/intrinsic/why-should-i-use-a-reverse-proxy-if-node-js-is-production-ready-5a079408b2ca)하는 경우입니다. 이렇게 하는 방법은 다음과 같은 두 가지가 있습니다. 1) [iisnode 사용](https://harveywilliams.net/blog/installing-iisnode) 또는 [직접](https://dev.to/petereysermans/hosting-a-node-js-application-on-windows-with-iis-as-reverse-proxy-397b). 저희는 이러한 리소스를 유지 관리하지 않으므로 [Linux 서버를 사용하여 Node.js 앱을 호스팅](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-nodejs)하는 것이 좋습니다.
+> 드물기는 하지만 Node.js 앱을 Windows 서버에 호스팅해야 하는 가장 일반적인 시나리오는 [역방향 프록시를 사용](https://medium.com/intrinsic/why-should-i-use-a-reverse-proxy-if-node-js-is-production-ready-5a079408b2ca)하는 경우입니다. 이렇게 하는 방법은 다음과 같은 두 가지가 있습니다. 1) [iisnode 사용](https://harveywilliams.net/blog/installing-iisnode) 또는 [직접](https://dev.to/petereysermans/hosting-a-node-js-application-on-windows-with-iis-as-reverse-proxy-397b). 저희는 이러한 리소스를 유지 관리하지 않으므로 [Linux 서버를 사용하여 Node.js 앱을 호스팅](/azure/app-service/app-service-web-get-started-nodejs)하는 것이 좋습니다.

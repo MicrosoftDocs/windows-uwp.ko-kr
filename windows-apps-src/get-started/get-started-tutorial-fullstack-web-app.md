@@ -5,12 +5,12 @@ keywords: 호스트된 웹앱, HWA, REST API, 단일 페이지 앱, SPA
 ms.date: 05/10/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b9a6b80034dc8272226c9563960079434dff8e41
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 3b2c8da824896b838776174cb22423181aae0e06
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684778"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168237"
 ---
 # <a name="create-a-single-page-web-app-with-rest-api-backend"></a>REST API 백 엔드를 사용하는 단일 페이지 웹앱 만들기
 
@@ -274,9 +274,9 @@ for (var i=0; i < board.length; i++){
 
 Azure 문서에서는 다음 내용을 설명합니다.
 
- - [Azure Portal에 새 *API 앱* 등록](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#createapiapp)
- - [API 앱을 위한 Git 배포 설정](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git) 및
- - [Azure에 API 앱 코드 배포](https://docs.microsoft.com/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git)
+ - [Azure Portal에 새 *API 앱* 등록](/azure/app-service/app-service-web-tutorial-rest-api#createapiapp)
+ - [API 앱을 위한 Git 배포 설정](/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git) 및
+ - [Azure에 API 앱 코드 배포](/azure/app-service/app-service-web-tutorial-rest-api#deploy-the-api-with-git)
 
 앱을 등록할 때 *앱 이름*을 차별화하세요( *http://memorygameapi.azurewebsites.net* URL에서 다른 사용자의 변형 요청으로 인해 명명 충돌이 발생하지 않도록 하기 위해).
 
@@ -290,7 +290,7 @@ Azure 문서에서는 다음 내용을 설명합니다.
 
  - [Visual Studio Code를 사용한 고급 Node.js 디버깅](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
 
- - [Azure 웹 + 모바일 문서](https://docs.microsoft.com/azure/#pivot=services&panel=web)
+ - [Azure 웹 + 모바일 문서](/azure/#pivot=services&panel=web)
 
  - [Azure DocumentDB 문서](https://azure.microsoft.com/blog/dear-documentdb-customers-welcome-to-azure-cosmos-db/)
 
@@ -635,13 +635,13 @@ memory\public\stylesheets의 style.css 파일을 Start 폴더의 style.css 파�
 Microsoft Store에 게시하는 기본 단계는 다음과 같습니다.
 
  1. [Windows 개발자](https://developer.microsoft.com/store/register) 계정을 만듭니다.
- 2. 앱 제출 [검사 목록](https://docs.microsoft.com/windows/uwp/publish/app-submissions)을 사용합니다.
- 3. [인증](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process)을 위해 앱을 제출합니다.
+ 2. 앱 제출 [검사 목록](../publish/app-submissions.md)을 사용합니다.
+ 3. [인증](../publish/the-app-certification-process.md)을 위해 앱을 제출합니다.
 
 더 발전시키기 위한 유용한 몇 가지 리소스는 다음과 같습니다.
 
- - [애플리케이션 개발 프로젝트를 Azure 웹 사이트에 배포](https://docs.microsoft.com/azure/cosmos-db/documentdb-nodejs-application#_Toc395783182)
+ - [애플리케이션 개발 프로젝트를 Azure 웹 사이트에 배포](/azure/cosmos-db/documentdb-nodejs-application#_Toc395783182)
 
- - [UWP(유니버설 Windows 플랫폼) 앱으로 웹 애플리케이션 변환](https://docs.microsoft.com/microsoft-edge/progressive-web-apps)
+ - [UWP(유니버설 Windows 플랫폼) 앱으로 웹 애플리케이션 변환](/microsoft-edge/progressive-web-apps)
 
- - [Windows 앱 게시](https://docs.microsoft.com/windows/uwp/publish/)
+ - [Windows 앱 게시](../publish/index.md)

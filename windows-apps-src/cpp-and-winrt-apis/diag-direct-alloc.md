@@ -5,16 +5,16 @@ ms.date: 07/19/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, 프로젝션, 직접, 스택, 할당, 프로젝션된, 구현
 ms.localizationpriority: medium
-ms.openlocfilehash: 7fe8ff6653b8655ee25cd9adc0c11acb22d42a11
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 199b62d96685e207e55e6dff7cd310752617d1d2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68372794"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170257"
 ---
 # <a name="diagnosing-direct-allocations"></a>직접 할당 진단
 
-[C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)에서 설명한 대로 구현 형식의 개체를 만드는 경우 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 도우미 제품군을 사용하여 이 작업을 수행해야 합니다. 이 항목에서는 구현 형식의 개체를 스택에 직접 할당하는 실수를 진단하는 데 도움이 되는 C++/WinRT 2.0 기능에 대해 자세히 설명합니다.
+[C++/WinRT를 통한 API 작성](./author-apis.md)에서 설명한 대로 구현 형식의 개체를 만드는 경우 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 도우미 제품군을 사용하여 이 작업을 수행해야 합니다. 이 항목에서는 구현 형식의 개체를 스택에 직접 할당하는 실수를 진단하는 데 도움이 되는 C++/WinRT 2.0 기능에 대해 자세히 설명합니다.
 
 이러한 실수는 디버깅하기가 어렵고 시간이 많이 걸리는 알 수 없는 크래시 또는 손상을 초래할 수 있습니다. 따라서 C++/WinRT 2.0 기능은 매우 중요하며, 이에 대한 배경 지식을 이해할 필요가 있습니다.
 
@@ -138,4 +138,4 @@ C++/WinRT 2.0을 사용하면 구현 형식을 직접 할당하려는 이러한 
 
 ## <a name="related-topics"></a>관련 항목
 * [C++/WinRT를 통한 API 사용](consume-apis.md)
-* [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)
+* [C++/WinRT를 통한 API 작성](./author-apis.md)

@@ -5,26 +5,26 @@ ms.date: 07/11/2020
 ms.topic: article
 keywords: windows 10, uwp, cppwinrt, C++/WinRT
 ms.localizationpriority: medium
-ms.openlocfilehash: e2f4e6b808d0169f4c9f8f7142f218c00f124ae3
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: bb6a76f2e8096d63907daf5ededdb6a22eb72a6c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493808"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175207"
 ---
 # <a name="create-a-hello-world-app-using-cwinrt"></a>C++/WinRT를 사용하여 "Hello, World!" 앱 만들기
 
 이 토픽에서는 C++/WinRT를 사용하여 Windows 10 UWP(유니버설 Windows 플랫폼) "Hello, World!" 앱을 만드는 과정을 안내합니다. 이 앱의 UI(사용자 인터페이스)는 XAML(Extensible Application Markup Language)을 사용하여 정의됩니다.
 
-C++/WinRT는 WinRT(Windows Runtime) API를 위한 완전한 현대식 표준 C++17 언어 프로젝션입니다. 자세한 내용과 추가 연습 및 코드 예제는 [C++ /WinRT](/windows/uwp/cpp-and-winrt-apis/) 설명서를 참조하세요. 시작하는 데 도움이 되는 토픽은 [C++/WinRT 시작](/windows/uwp/cpp-and-winrt-apis/get-started)입니다.
+C++/WinRT는 WinRT(Windows Runtime) API를 위한 완전한 현대식 표준 C++17 언어 프로젝션입니다. 자세한 내용과 추가 연습 및 코드 예제는 [C++ /WinRT](../cpp-and-winrt-apis/index.md) 설명서를 참조하세요. 시작하는 데 도움이 되는 토픽은 [C++/WinRT 시작](../cpp-and-winrt-apis/get-started.md)입니다.
 
 ## <a name="set-up-visual-studio-for-cwinrt"></a>C++/WinRT용 Visual Studio 설정
 
-&mdash;프로젝트 템플릿 및 빌드 지원을 함께 제공하는 C++/WinRT Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법을 포함&mdash;하는 C++/WinRT용 Visual Studio 개발 설정에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
+&mdash;프로젝트 템플릿 및 빌드 지원을 함께 제공하는 C++/WinRT Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법을 포함&mdash;하는 C++/WinRT용 Visual Studio 개발 설정에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
 
 Visual Studio를 다운로드하려면 [다운로드](https://visualstudio.microsoft.com/downloads/)를 참조하세요.
 
-XAML에 대한 소개는 [XAML 개요](/windows/uwp/xaml-platform/xaml-overview)를 참조하세요.
+XAML에 대한 소개는 [XAML 개요](../xaml-platform/xaml-overview.md)를 참조하세요.
 
 ## <a name="create-a-blank-app-helloworldcppwinrt"></a>비어 있는 앱(HelloWorldCppWinRT) 만들기
 
@@ -38,7 +38,7 @@ XAML에 대한 소개는 [XAML 개요](/windows/uwp/xaml-platform/xaml-overview)
 
 일반적으로 프로젝트 폴더의 각 `.xaml`(XAML 태그) 파일에는 해당 `.idl`, `.h` 및 `.cpp` 파일이 들어 있습니다. 이러한 파일은 XAML 페이지 형식으로 컴파일됩니다.
 
-XAML 태그 파일을 수정하여 UI 요소를 만들 수 있으며, 이러한 요소를 데이터 소스에 바인딩할 수 있습니다(이 작업을 [데이터 바인딩](/windows/uwp/data-binding/)이라고 함). XAML 페이지의 사용자 지정 논리(예: 이벤트 처리기)를 추가하도록 `.h` 및 `.cpp` 파일(경우에 따라 `.idl` 파일)을 수정합니다.
+XAML 태그 파일을 수정하여 UI 요소를 만들 수 있으며, 이러한 요소를 데이터 소스에 바인딩할 수 있습니다(이 작업을 [데이터 바인딩](../data-binding/index.md)이라고 함). XAML 페이지의 사용자 지정 논리(예: 이벤트 처리기)를 추가하도록 `.h` 및 `.cpp` 파일(경우에 따라 `.idl` 파일)을 수정합니다.
 
 프로젝트 파일을 살펴보겠습니다.
 
@@ -52,7 +52,7 @@ XAML 태그 파일을 수정하여 UI 요소를 만들 수 있으며, 이러한 
 
 아시다시피, C#으로 작성된 UWP(유니버설 Windows 플랫폼) 앱의 모든 클래스는 Windows 런타임 형식입니다. 그러나 C++/WinRT 애플리케이션에서 형식을 작성하는 경우 해당 형식이 Windows 런타임 형식인지, 아니면 일반 C++ 클래스/구조체/열거형인지 선택할 수 있습니다.
 
-프로젝트의 모든 XAML 페이지 형식은 Windows 런타임 형식이어야 합니다. 따라서 **MainPage**는 Windows 런타임 형식입니다. 특히 *런타임 클래스*입니다. XAML 페이지에서 사용하는 형식도 Windows 런타임 형식이어야 합니다. [Windows 런타임 구성 요소](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt)를 작성할 때 다른 앱에서 사용할 수 있는 형식을 작성하려면 Windows 런타임 형식을 작성해야 합니다. 그 외의 경우에는 일반 C++ 형식이어도 됩니다. 일반적으로 Windows 런타임 형식은 모든 Windows 런타임 언어를 통해 사용할 수 있습니다.
+프로젝트의 모든 XAML 페이지 형식은 Windows 런타임 형식이어야 합니다. 따라서 **MainPage**는 Windows 런타임 형식입니다. 특히 *런타임 클래스*입니다. XAML 페이지에서 사용하는 형식도 Windows 런타임 형식이어야 합니다. [Windows 런타임 구성 요소](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md)를 작성할 때 다른 앱에서 사용할 수 있는 형식을 작성하려면 Windows 런타임 형식을 작성해야 합니다. 그 외의 경우에는 일반 C++ 형식이어도 됩니다. 일반적으로 Windows 런타임 형식은 모든 Windows 런타임 언어를 통해 사용할 수 있습니다.
 
 형식이 Windows 런타임 형식이라는 것을 보여주는 좋은 증거 중 하나는 형식이 인터페이스 정의 언어(`.idl`) 파일 내부의 [MIDL(Microsoft Interface Definition Language)](/uwp/midl-3/)에 정의된다는 것입니다. **MainPage**를 예로 들어 살펴보겠습니다.
 
@@ -94,7 +94,7 @@ namespace winrt::HelloWorldCppWinRT::factory_implementation
 }
 ```    
 
-특정 형식의 런타임 클래스를 작성해야 하는지 여부에 대한 자세한 내용은 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis) 항목을 참조하세요. [XAML 컨트롤, C++/WinRT 속성에 바인딩](/windows/uwp/cpp-and-winrt-apis/binding-property) 토픽에서 런타임 클래스와 IDL(`.idl` 파일) 간 연결에 대한 자세한 내용을 읽고 따라 하세요. 해당 항목에서는 새로운 런타임 클래스 작성 프로세스를 진행하며, 첫 번째 단계는 새 **Midl 파일(.idl)** 항목을 프로젝트에 추가하는 것입니다.
+특정 형식의 런타임 클래스를 작성해야 하는지 여부에 대한 자세한 내용은 [C++/WinRT를 통한 API 작성](../cpp-and-winrt-apis/author-apis.md) 항목을 참조하세요. [XAML 컨트롤, C++/WinRT 속성에 바인딩](../cpp-and-winrt-apis/binding-property.md) 토픽에서 런타임 클래스와 IDL(`.idl` 파일) 간 연결에 대한 자세한 내용을 읽고 따라 하세요. 해당 항목에서는 새로운 런타임 클래스 작성 프로세스를 진행하며, 첫 번째 단계는 새 **Midl 파일(.idl)** 항목을 프로젝트에 추가하는 것입니다.
 
 이제 **HelloWorldCppWinRT** 프로젝트에 몇 가지 기능을 추가해 보겠습니다.
 
@@ -159,7 +159,7 @@ namespace winrt::HelloWorldCppWinRT::implementation
 }
 ```
 
-자세한 내용은 [대리자를 사용한 이벤트 처리](/windows/uwp/cpp-and-winrt-apis/handle-events)를 참조하세요.
+자세한 내용은 [대리자를 사용한 이벤트 처리](../cpp-and-winrt-apis/handle-events.md)를 참조하세요.
 
 구현은 텍스트 상자에서 사용자 이름을 검색하여 인사말을 만드는 데 사용한 다음, *greetingOutput* 텍스트 블록에 인사말을 표시합니다.
 

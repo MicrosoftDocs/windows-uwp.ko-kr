@@ -6,17 +6,17 @@ ms.date: 10/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 37c7f9edbaee008b6e16ef2ca202ff5cbcf39ca2
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5a10a8a6e5b4e5188d28c0f75aace50f7465e5f4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "67317504"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89163487"
 ---
 # <a name="test-surface-hub-apps-using-visual-studio"></a>Visual Studio를 사용하여 Surface Hub 앱 테스트
 Visual Studio 시뮬레이터는 Microsoft Surface Hub용으로 빌드한 앱을 포함하여 UWP(유니버설 Windows 플랫폼) 앱을 디자인, 개발, 디버그 및 테스트할 수 있는 환경을 제공합니다. 시뮬레이터는 Surface Hub와 동일한 사용자 인터페이스를 사용하지 않지만 Surface Hub의 화면 크기와 해상도로 앱의 모양과 동작을 테스트하는 데 유용합니다.
 
-시뮬레이터 도구의 일반적인 사항에 대한 자세한 내용은 [시뮬레이터에서 UWP 앱 실행 ](https://docs.microsoft.com/visualstudio/debugger/run-windows-store-apps-in-the-simulator)을 참조하세요.
+시뮬레이터 도구의 일반적인 사항에 대한 자세한 내용은 [시뮬레이터에서 UWP 앱 실행 ](/visualstudio/debugger/run-windows-store-apps-in-the-simulator)을 참조하세요.
 
 ## <a name="add-surface-hub-resolutions-to-the-simulator"></a>시뮬레이터에 Surface Hub 해상도 추가
 시뮬레이터에 Surface Hub 해상도를 추가하려면
@@ -90,7 +90,7 @@ Surface Hub에 앱을 수동으로 배포하는 작업은 간단한 프로세스
 3. **개발자 모드**를 선택하고 경고 프롬프트를 수락합니다.
 
 ### <a name="deploy-your-app-from-visual-studio"></a>Visual Studio에서 앱 배포
-배포 프로세스의 일반적인 사항에 대한 자세한 내용은 [UWP 앱 배포 및 디버깅](https://docs.microsoft.com/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps)을 참조하세요.
+배포 프로세스의 일반적인 사항에 대한 자세한 내용은 [UWP 앱 배포 및 디버깅](./deploying-and-debugging-uwp-apps.md)을 참조하세요.
 
    > [!NOTE]
    > 이 기능은 Visual Studio 2015 업데이트 1 이상에서 지원되지만, 최신 버전의 Visual Studio를 사용하는 것이 좋습니다. 최신 버전의 Visual Studio 인스턴스는 최신 개발 및 보안 업데이트를 모두 제공합니다.

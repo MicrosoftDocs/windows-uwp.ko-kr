@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3a5b6df7a5d8333e0f4834c256a38fc912f8f51e
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 555459d427eae045d3cf7eda45a97ec806717380
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970628"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89175517"
 ---
 # <a name="typography-in-windows-apps"></a>Windows 앱의 입력 체계
 
@@ -106,7 +106,7 @@ Windows 유형 램프는 페이지의 유형 스타일 간에 중요한 관계�
 
 ## <a name="alignment"></a>부합되는 내용
 
-[TextAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.textalignment) 기본값은 왼쪽이고, 대부분의 경우 이 왼쪽 맞춤 방법은 일관된 콘텐츠 고정과 균일한 레이아웃을 제공합니다. RTL 언어에 대한 내용은 [세계화를 지원하도록 레이아웃 및 글꼴 조정](../globalizing/adjust-layout-and-fonts--and-support-rtl.md)을 참조하세요.
+[TextAlignment](/uwp/api/windows.ui.xaml.textalignment) 기본값은 왼쪽이고, 대부분의 경우 이 왼쪽 맞춤 방법은 일관된 콘텐츠 고정과 균일한 레이아웃을 제공합니다. RTL 언어에 대한 내용은 [세계화를 지원하도록 레이아웃 및 글꼴 조정](../globalizing/adjust-layout-and-fonts--and-support-rtl.md)을 참조하세요.
 
 ![텍스트 왼쪽 맞춤을 표시합니다.](images/type/alignment.svg)
 
@@ -152,7 +152,7 @@ Segoe UI는 영어, 유럽 언어, 그리스어, 히브리어, 아르메니아�
 
 ### <a name="globalizinglocalizing-fonts"></a>글꼴 세계화/지역화
 
-특정 언어에 대한 권장 글꼴 패밀리, 크기, 두께 및 스타일에 프로그래밍 방식으로 액세스하려면 [LanguageFont 글꼴 매핑 API](https://docs.microsoft.com/uwp/api/Windows.Globalization.Fonts.LanguageFont)를 사용합니다. LanguageFont 개체는 UI 헤더, 알림, 본문, 사용자 편집 가능한 문서 본문 글꼴을 비롯하여 콘텐츠의 다양한 범주에 대한 올바른 글꼴 정보에 액세스합니다. 자세한 내용은 [세계화를 지원하도록 레이아웃 및 글꼴 조정](../globalizing/adjust-layout-and-fonts--and-support-rtl.md)을 참조하세요.
+특정 언어에 대한 권장 글꼴 패밀리, 크기, 두께 및 스타일에 프로그래밍 방식으로 액세스하려면 [LanguageFont 글꼴 매핑 API](/uwp/api/Windows.Globalization.Fonts.LanguageFont)를 사용합니다. LanguageFont 개체는 UI 헤더, 알림, 본문, 사용자 편집 가능한 문서 본문 글꼴을 비롯하여 콘텐츠의 다양한 범주에 대한 올바른 글꼴 정보에 액세스합니다. 자세한 내용은 [세계화를 지원하도록 레이아웃 및 글꼴 조정](../globalizing/adjust-layout-and-fonts--and-support-rtl.md)을 참조하세요.
 
 ### <a name="fonts-for-non-latin-languages"></a>라틴어가 아닌 언어용 글꼴
 
@@ -340,4 +340,4 @@ Serif 글꼴은 대량 텍스트를 표시하는 데 적합합니다.
 * [텍스트 컨트롤](../controls-and-patterns/text-controls.md)
 * [XAML 테마 리소스](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)
 * [XAML 스타일](../controls-and-patterns/xaml-styles.md)
-* [Microsoft 입력 체계](https://docs.microsoft.com/typography/)
+* [Microsoft 입력 체계](/typography/)

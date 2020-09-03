@@ -6,12 +6,12 @@ ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8d79d4f3394bcf8f7892f2c6dc3d4e0ca72972ab
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: c17d4c0aca4c59e18a13bf42bad16e6739938717
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970608"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168677"
 ---
 # <a name="writing-style"></a>쓰기 스타일
 
@@ -76,7 +76,7 @@ ms.locfileid: "82970608"
 
 ## <a name="style-conventions"></a>스타일 규칙
 
-글쓰기에 자신이 없는 경우 이 원칙과 권장 사항을 실행에 옮기려고 하면 두려울 수 있습니다. 하지만 걱정하지 마세요. 간단하고 쉬운 언어를 사용하면 우수한 사용자 환경을 잘 조성할 수 있습니다. 다음은 아직도 글을 어떻게 써야 할지 잘 모르겠다는 분들을 위해 준비한 유용한 지침입니다. 더 많은 정보를 원하는 경우 [Microsoft 스타일 가이드](https://docs.microsoft.com/style-guide/welcome/)를 참조하세요.
+글쓰기에 자신이 없는 경우 이 원칙과 권장 사항을 실행에 옮기려고 하면 두려울 수 있습니다. 하지만 걱정하지 마세요. 간단하고 쉬운 언어를 사용하면 우수한 사용자 환경을 잘 조성할 수 있습니다. 다음은 아직도 글을 어떻게 써야 할지 잘 모르겠다는 분들을 위해 준비한 유용한 지침입니다. 더 많은 정보를 원하는 경우 [Microsoft 스타일 가이드](/style-guide/welcome/)를 참조하세요.
 
 ### <a name="addressing-the-user"></a>사용자에게 말하기
 
@@ -228,7 +228,7 @@ Cortana와 같이 음성 환경에서 텍스트를 작성할 때에도 동일한
 
 ## <a name="accessibility-and-localization"></a>접근성 및 지역화
 
-글을 작성할 때 접근성과 지역화를 고려하면 앱은 더 많은 사용자에게 다가갈 수 있습니다. 쉽고 친숙한 언어로 시작하는 것이 좋지만, 텍스트만으로는 어려울 수 있습니다. 자세한 내용은 [접근성 개요](https://docs.microsoft.com/windows/uwp/design/accessibility/accessibility-overview) 및 [지역화 지침](https://docs.microsoft.com/windows/uwp/design/globalizing/globalizing-portal)을 참조하세요.
+글을 작성할 때 접근성과 지역화를 고려하면 앱은 더 많은 사용자에게 다가갈 수 있습니다. 쉽고 친숙한 언어로 시작하는 것이 좋지만, 텍스트만으로는 어려울 수 있습니다. 자세한 내용은 [접근성 개요](../accessibility/accessibility-overview.md) 및 [지역화 지침](../globalizing/globalizing-portal.md)을 참조하세요.
 
 * **언제든지 도움을 제공** - 다양한 환경을 고려합니다. 전 세계 사용자에게 적합하지 않는 어구를 사용하지 말고, 이해하지 못하는 사용자가 있을 것으로 생각되는 단어를 사용하지 않습니다.
 

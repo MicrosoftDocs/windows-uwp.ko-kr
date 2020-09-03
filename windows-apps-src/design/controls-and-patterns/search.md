@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8bb01c76879bd00e10286ef429415cf4817315b7
-ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
+ms.openlocfilehash: 61334cc4d8d91347dac7fa477cc5d508ea8ab5d1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88502422"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174487"
 ---
 # <a name="search-and-find-in-page"></a>검색 및 페이지에서 찾기
 
@@ -24,7 +24,7 @@ ms.locfileid: "88502422"
 
 검색은 사용자가 앱에서 콘텐츠를 찾을 수 있는 최상의 방법 중 하나입니다. 이 문서의 지침에서는 검색 환경의 요소, 검색 범위, 구현 및 상황별 검색 예를 설명합니다.
 
-> **중요 API**: [AutoSuggestBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)
+> **중요 API**: [AutoSuggestBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)
 
 ## <a name="elements-of-the-search-experience"></a>검색 환경의 요소
 

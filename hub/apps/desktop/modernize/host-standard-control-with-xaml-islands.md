@@ -8,20 +8,20 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 1a2b5722ab836e715bce1b4c94fab97e6a28646e
-ms.sourcegitcommit: cee2060bfc8489236e00e5951751bcc5bd632b0a
+ms.openlocfilehash: 0e8972a71feacd593edf98853ae1dcc0f88002fd
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84614905"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168897"
 ---
 # <a name="host-a-standard-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML Islands를 사용하여 WPF 앱에서 표준 UWP 컨트롤 호스트
 
 이 문서에서는 [XAML Islands](xaml-islands.md)를 사용하여 WPF 앱에서 표준 UWP 컨트롤(즉, Windows SDK에서 제공하는 자사 UWP 컨트롤)을 호스트하는 두 가지 방법을 보여 줍니다.
 
-* Windows 커뮤니티 도구 키트의 [래핑된 컨트롤](xaml-islands.md#wrapped-controls)을 사용하여 UWP [InkCanvas](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 및 [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar) 컨트롤을 호스트하는 방법을 보여 줍니다. 이러한 컨트롤은 몇 가지 유용한 UWP 컨트롤 세트의 인터페이스 및 기능을 래핑합니다. WPF 또는 Windows Forms 프로젝트의 디자인 화면에 이러한 컨트롤을 바로 추가하고 디자이너에서 다른 WPF 또는 Windows Forms 컨트롤처럼 사용할 수 있습니다.
+* Windows 커뮤니티 도구 키트의 [래핑된 컨트롤](xaml-islands.md#wrapped-controls)을 사용하여 UWP [InkCanvas](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 및 [InkToolbar](/uwp/api/windows.ui.xaml.controls.inktoolbar) 컨트롤을 호스트하는 방법을 보여 줍니다. 이러한 컨트롤은 몇 가지 유용한 UWP 컨트롤 세트의 인터페이스 및 기능을 래핑합니다. WPF 또는 Windows Forms 프로젝트의 디자인 화면에 이러한 컨트롤을 바로 추가하고 디자이너에서 다른 WPF 또는 Windows Forms 컨트롤처럼 사용할 수 있습니다.
 
-* 또한 Windows 커뮤니티 도구 키트의 [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 UWP [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView) 컨트롤을 호스트하는 방법을 보여 줍니다. 소수의 UWP 컨트롤 세트만 래핑된 컨트롤로 사용할 수 있기 때문에 [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost)를 사용하여 다른 표준 UWP 컨트롤을 호스트할 수 있습니다.
+* 또한 Windows 커뮤니티 도구 키트의 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 UWP [CalendarView](/uwp/api/Windows.UI.Xaml.Controls.CalendarView) 컨트롤을 호스트하는 방법을 보여 줍니다. 소수의 UWP 컨트롤 세트만 래핑된 컨트롤로 사용할 수 있기 때문에 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost)를 사용하여 다른 표준 UWP 컨트롤을 호스트할 수 있습니다.
 
 이 문서는 WPF 앱에서 UWP 컨트롤을 호스트하는 방법을 보여 주지만 Windows Forms 앱의 프로세스와 비슷합니다.
 
@@ -29,7 +29,7 @@ ms.locfileid: "84614905"
 
 WPF(또는 Windows Forms) 앱에서 UWP 컨트롤을 호스트하려면 솔루션에 다음 구성 요소가 필요합니다. 이 문서에서는 이러한 각 구성 요소를 만드는 방법에 대한 지침을 제공합니다.
 
-* **앱에 대한 프로젝트 및 소스 코드**. [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 표준 자사 UWP 컨트롤을 호스트하는 것은 .NET Framework 또는 .NET Core 3를 대상으로 하는 앱에서 지원됩니다.
+* **앱에 대한 프로젝트 및 소스 코드**. [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 표준 자사 UWP 컨트롤을 호스트하는 것은 .NET Framework 또는 .NET Core 3를 대상으로 하는 앱에서 지원됩니다.
 
 * **XamlApplication에서 파생되는 루트 Application 클래스를 정의하는 UWP 앱 프로젝트**. WPF 또는 Windows Forms 프로젝트는 사용자 지정 UWP XAML 컨트롤을 검색하고 로드할 수 있도록 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스의 인스턴스에 액세스할 수 있어야 합니다. 이 작업을 수행하는 권장 방법은 WPF 또는 Windows Forms 앱에 대한 솔루션의 일부인 별도의 UWP 앱 프로젝트에서 이 개체를 정의하는 것입니다. 
 
@@ -45,7 +45,7 @@ WPF(또는 Windows Forms) 앱에서 UWP 컨트롤을 호스트하려면 솔루�
 
 1. Visual Studio 2019에서 새 **WPF 앱(.NET Framework)** 또는 **WPF 앱(.NET Core)** 프로젝트를 만듭니다. **WPF 앱(.NET Core)** 프로젝트를 만들려면 먼저 최신 버전의 [.NET Core 3 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)를 설치해야 합니다.
 
-2. [패키지 참조](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files)를 사용하도록 설정했는지 확인합니다.
+2. [패키지 참조](/nuget/consume-packages/package-references-in-project-files)를 사용하도록 설정했는지 확인합니다.
 
     1. Visual Studio에서 **도구 -> NuGet 패키지 관리자 -> 패키지 관리자 설정**을 클릭합니다.
     2. **기본 패키지 관리 형식**에 대해 **PackageReference**를 선택했는지 확인합니다.
@@ -54,7 +54,7 @@ WPF(또는 Windows Forms) 앱에서 UWP 컨트롤을 호스트하려면 솔루�
 
 4. **NuGet 패키지 관리자** 창에서 **시험판 포함**이 포함되어 있는지 확인합니다.
 
-5. **찾아보기** 탭을 선택하고 [Microsoft.Toolkit.Wpf.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls) 패키지(버전 v6.0.0 이상)를 검색한 다음, 패키지를 설치합니다. 이 패키지는 WPF에 래핑된 UWP 컨트롤을 사용하는 데 필요한 모든 항목을 제공합니다([InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar)과 [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤 포함).
+5. **찾아보기** 탭을 선택하고 [Microsoft.Toolkit.Wpf.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls) 패키지(버전 v6.0.0 이상)를 검색한 다음, 패키지를 설치합니다. 이 패키지는 WPF에 래핑된 UWP 컨트롤을 사용하는 데 필요한 모든 항목을 제공합니다([InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar)과 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤 포함).
     > [!NOTE]
     > Windows Forms 앱은 [Microsoft.Toolkit.Forms.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Forms.UI.Controls) 패키지(버전 v6.0.0 이상)를 사용해야 합니다.
 
@@ -67,7 +67,7 @@ WPF(또는 Windows Forms) 앱에서 UWP 컨트롤을 호스트하려면 솔루�
 
 ## <a name="define-a-xamlapplication-class-in-a-uwp-app-project"></a>UWP 앱 프로젝트에서 XamlApplication 클래스 정의
 
-그런 다음, UWP 앱 프로젝트를 솔루션에 추가하고 이 프로젝트의 기본 `App` 클래스를 수정하여 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생하도록 합니다. 이 클래스는 [IXamlMetadaraProvider](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider) 인터페이스를 지원합니다. 이 인터페이스를 통해 앱은 런타임 시 애플리케이션의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 컨트롤에 대한 메타데이터를 검색하고 로드할 수 있습니다. 이 클래스는 또한 현재 스레드에 대한 UWP XAML 프레임워크를 초기화합니다.
+그런 다음, UWP 앱 프로젝트를 솔루션에 추가하고 이 프로젝트의 기본 `App` 클래스를 수정하여 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생하도록 합니다. 이 클래스는 [IXamlMetadaraProvider](/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider) 인터페이스를 지원합니다. 이 인터페이스를 통해 앱은 런타임 시 애플리케이션의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 컨트롤에 대한 메타데이터를 검색하고 로드할 수 있습니다. 이 클래스는 또한 현재 스레드에 대한 UWP XAML 프레임워크를 초기화합니다.
 
 > [!NOTE]
 > 이 단계가 자사 UWP 컨트롤을 호스트하는 데 필요하지는 않지만 사용자 지정 UWP 컨트롤 호스트를 포함하여 모든 범위의 XAML Island 시나리오를 지원하려면 앱에 `XamlApplication` 개체가 필요합니다. 따라서 XAML Islands를 사용하는 모든 솔루션에서 항상 `XamlApplication` 개체를 정의하는 것이 좋습니다.
@@ -143,11 +143,11 @@ WPF(또는 Windows Forms) 앱에서 UWP 컨트롤을 호스트하려면 솔루�
 
 ## <a name="host-an-inkcanvas-and-inktoolbar-by-using-wrapped-controls"></a>래핑된 컨트롤을 사용하여 InkCanvas 및 InkToolbar 호스트
 
-UWP XAML Islands를 사용하도록 프로젝트를 구성했으므로, 이제 [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) 래핑된 UWP 컨트롤을 앱에 추가할 준비가 되었습니다.
+UWP XAML Islands를 사용하도록 프로젝트를 구성했으므로, 이제 [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) 래핑된 UWP 컨트롤을 앱에 추가할 준비가 되었습니다.
 
 1. **솔루션 탐색기**에서 **MainWindow.xaml** 파일을 엽니다.
 
-2. XAML 파일의 위쪽에 있는 **Window** 요소에 다음 특성을 추가합니다. 이 특성은 [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) 래핑된 UWP 컨트롤에 대한 XAML 네임스페이스를 참조합니다.
+2. XAML 파일의 위쪽에 있는 **Window** 요소에 다음 특성을 추가합니다. 이 특성은 [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) 래핑된 UWP 컨트롤에 대한 XAML 네임스페이스를 참조합니다.
 
     ```xml
     xmlns:Controls="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls"
@@ -167,7 +167,7 @@ UWP XAML Islands를 사용하도록 프로젝트를 구성했으므로, 이제 [
             Title="MainWindow" Height="800" Width="800">
     ```
 
-3. **Mainwindow.xaml** 파일에서 기존 `<Grid>` 요소를 다음 XAML로 바꿉니다. 이 XAML은 [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) 컨트롤(이전에 네임스페이스로 정의한 **Controls** 키워드를 접두사로 지정)을 `<Grid>`에 추가합니다.
+3. **Mainwindow.xaml** 파일에서 기존 `<Grid>` 요소를 다음 XAML로 바꿉니다. 이 XAML은 [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) 컨트롤(이전에 네임스페이스로 정의한 **Controls** 키워드를 접두사로 지정)을 `<Grid>`에 추가합니다.
 
     ```xml
     <Grid Margin="10,50,10,10">
@@ -209,14 +209,14 @@ UWP XAML Islands를 사용하도록 프로젝트를 구성했으므로, 이제 [
 
 ## <a name="host-a-calendarview-by-using-the-host-control"></a>호스트 컨트롤을 사용하여 CalendarView 호스트
 
-[InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) 래핑된 UWP 컨트롤을 앱에 추가했으므로 이제 [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView)를 앱에 추가할 준비가 되었습니다.
+[InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) 래핑된 UWP 컨트롤을 앱에 추가했으므로 이제 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 [CalendarView](/uwp/api/Windows.UI.Xaml.Controls.CalendarView)를 앱에 추가할 준비가 되었습니다.
 
 > [!NOTE]
-> [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤은 [Microsoft.Toolkit.Wpf.UI.XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.XamlHost) 패키지에서 제공됩니다. 이 패키지는 이전에 설치한 [Microsoft.Toolkit.Wpf.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls) 패키지에 포함되어 있습니다.
+> [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤은 [Microsoft.Toolkit.Wpf.UI.XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.XamlHost) 패키지에서 제공됩니다. 이 패키지는 이전에 설치한 [Microsoft.Toolkit.Wpf.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls) 패키지에 포함되어 있습니다.
 
 1. **솔루션 탐색기**에서 **MainWindow.xaml** 파일을 엽니다.
 
-2. XAML 파일의 위쪽에 있는 **Window** 요소에 다음 특성을 추가합니다. 이 특성은 [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤에 대한 XAML 네임스페이스를 참조합니다.
+2. XAML 파일의 위쪽에 있는 **Window** 요소에 다음 특성을 추가합니다. 이 특성은 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤에 대한 XAML 네임스페이스를 참조합니다.
 
     ```xml
     xmlns:xamlhost="clr-namespace:Microsoft.Toolkit.Wpf.UI.XamlHost;assembly=Microsoft.Toolkit.Wpf.UI.XamlHost"
@@ -237,7 +237,7 @@ UWP XAML Islands를 사용하도록 프로젝트를 구성했으므로, 이제 [
             Title="MainWindow" Height="800" Width="800">
     ```
 
-4. **Mainwindow.xaml** 파일에서 기존 `<Grid>` 요소를 다음 XAML로 바꿉니다. 이 XAML은 그리드에 행을 추가하고 [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 개체를 마지막 행에 추가합니다. UWP [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView) 컨트롤을 호스트하기 위해 이 XAML은 `InitialTypeName` 속성을 컨트롤의 정규화된 이름으로 설정합니다. 또한 이 XAML은 호스팅된 컨트롤이 렌더링될 때 발생하는 `ChildChanged` 이벤트에 대한 이벤트 처리기를 정의합니다.
+4. **Mainwindow.xaml** 파일에서 기존 `<Grid>` 요소를 다음 XAML로 바꿉니다. 이 XAML은 그리드에 행을 추가하고 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 개체를 마지막 행에 추가합니다. UWP [CalendarView](/uwp/api/Windows.UI.Xaml.Controls.CalendarView) 컨트롤을 호스트하기 위해 이 XAML은 `InitialTypeName` 속성을 컨트롤의 정규화된 이름으로 설정합니다. 또한 이 XAML은 호스팅된 컨트롤이 렌더링될 때 발생하는 `ChildChanged` 이벤트에 대한 이벤트 처리기를 정의합니다.
 
     ```xml
     <Grid Margin="10,50,10,10">
@@ -291,14 +291,14 @@ UWP XAML Islands를 사용하도록 프로젝트를 구성했으므로, 이제 [
 
 ## <a name="package-the-app"></a>앱 패키지
 
-필요에 따라 배포를 위해 [MSIX 패키지](https://docs.microsoft.com/windows/msix)에 WPF 앱을 패키지할 수 있습니다. MSIX는 Windows용 최신 앱 패키징 기술로, MSI, .appx, App-V 및 ClickOnce 설치 기술의 조합을 기준으로 합니다.
+필요에 따라 배포를 위해 [MSIX 패키지](/windows/msix)에 WPF 앱을 패키지할 수 있습니다. MSIX는 Windows용 최신 앱 패키징 기술로, MSI, .appx, App-V 및 ClickOnce 설치 기술의 조합을 기준으로 합니다.
 
-다음 지침에서는 Visual Studio 2019의 [Windows 애플리케이션 패키징 프로젝트](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 사용하여 솔루션에 있는 모든 구성 요소를 MSIX 패키지에 패키지하는 방법을 보여 줍니다. 이러한 단계는 MSIX 패키지에서 WPF 앱을 패키지하는 경우에만 필요합니다.
+다음 지침에서는 Visual Studio 2019의 [Windows 애플리케이션 패키징 프로젝트](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 사용하여 솔루션에 있는 모든 구성 요소를 MSIX 패키지에 패키지하는 방법을 보여 줍니다. 이러한 단계는 MSIX 패키지에서 WPF 앱을 패키지하는 경우에만 필요합니다.
 
 > [!NOTE]
-> 배포를 위해 [MSIX 패키지](https://docs.microsoft.com/windows/msix)에 애플리케이션을 패키지하지 않도록 선택하는 경우 앱을 실행하는 컴퓨터에 [Visual C++ Runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)이 설치되어 있어야 합니다.
+> 배포를 위해 [MSIX 패키지](/windows/msix)에 애플리케이션을 패키지하지 않도록 선택하는 경우 앱을 실행하는 컴퓨터에 [Visual C++ Runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)이 설치되어 있어야 합니다.
 
-1. 새 [Windows 애플리케이션 패키징 프로젝트](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 솔루션에 추가합니다. 프로젝트를 만들 때 **대상 버전**과 **최소 버전**을 모두**Windows 10 버전 1903(10.0; 빌드 18362)** 으로 선택합니다.
+1. 새 [Windows 애플리케이션 패키징 프로젝트](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 솔루션에 추가합니다. 프로젝트를 만들 때 **대상 버전**과 **최소 버전**을 모두**Windows 10 버전 1903(10.0; 빌드 18362)** 으로 선택합니다.
 
 2. 패키징 프로젝트에서 **애플리케이션** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다. 프로젝트 목록에서 솔루션의 WPF 프로젝트를 선택하고 **확인**을 클릭합니다.
 
@@ -316,6 +316,6 @@ UWP XAML Islands를 사용하도록 프로젝트를 구성했으므로, 이제 [
 
 * [데스크톱 앱에서 UWP XAML 컨트롤 호스트(XAML Islands)](xaml-islands.md)
 * [XAML Islands 코드 샘플](https://github.com/microsoft/Xaml-Islands-Samples)
-* [InkCanvas](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inkcanvas)
-* [InkToolbar](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/inktoolbar)
-* [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost)
+* [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas)
+* [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar)
+* [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost)
