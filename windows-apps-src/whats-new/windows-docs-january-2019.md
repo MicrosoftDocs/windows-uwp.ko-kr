@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 01/17/2019
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 7947fb6e71a9f2ddbedcd8e3ee8bab7b720dc444
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: f1811e3b99077a3be676c57dc3420e88658f1d73
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74902467"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174367"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-january-2019"></a>2019년 1월 Windows 개발자 문서의 새로운 내용
 
@@ -64,7 +64,7 @@ Windows 10 버전 1809은 [MSIX 수정 패키지](/windows/msix/modification-pac
 
 ### <a name="japanese-era-change"></a>일본 연호 변경
 
-[일본의 시대 변경을 대비한 애플리케이션 준비](../design/globalizing/japanese-era-change.md)에서는 Windows 애플리케이션에서 2019년 5월 1일에 일본 연호 변경 세트가 적용될 준비를 수행하는 방법을 보여줍니다. [또한 이 페이지는 일본어로도 제공됩니다](/windows/uwp/design/globalizing/japanese-era-change).
+[일본의 시대 변경을 대비한 애플리케이션 준비](../design/globalizing/japanese-era-change.md)에서는 Windows 애플리케이션에서 2019년 5월 1일에 일본 연호 변경 세트가 적용될 준비를 수행하는 방법을 보여줍니다. [또한 이 페이지는 일본어로도 제공됩니다](../design/globalizing/japanese-era-change.md).
 
 ## <a name="videos"></a>비디오
 

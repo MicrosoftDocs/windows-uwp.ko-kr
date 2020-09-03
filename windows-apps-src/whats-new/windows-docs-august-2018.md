@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 723cae783ba16fe5be9bb2076f96d4a5f823d733
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: eb6900b4d5ad529ee2e94f09439dda6abcaebac8
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74258834"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174397"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>2018년 8월 Windows 개발자 문서의 새로운 내용
 
@@ -24,7 +24,7 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 
 다음 기능이 Windows Insider Preview 빌드에 추가되었으며, [Windows Insider](https://insider.windows.com/) 프로그램을 통해 사용할 수 있습니다.
 
-* [Windows UI Library](https://docs.microsoft.com/uwp/toolkits/winui/)는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. 또한 이러한 패키지는 이전 버전의 Windows 10과도 호환되므로 사용자에게 최신 OS 버전이 없는 경우에도 앱이 작동합니다.
+* [Windows UI Library](/uwp/toolkits/winui/)는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. 또한 이러한 패키지는 이전 버전의 Windows 10과도 호환되므로 사용자에게 최신 OS 버전이 없는 경우에도 앱이 작동합니다.
 
 * [DropDownButton](../design/controls-and-patterns/buttons.md#create-a-drop-down-button), [SplitButton](../design/controls-and-patterns/buttons.md#create-a-split-button) 및 [ToggleSplitButton](../design/controls-and-patterns/buttons.md#create-a-toggle-split-button)은 앱의 사용자 인터페이스를 향상시키는 특수 기능을 갖춘 단추 컨트롤을 제공합니다.
 
@@ -38,7 +38,7 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 
 패키지 지원 프레임워크는 소스 코드에 액세스할 수 없을 때 win32 애플리케이션에 수정 사항을 적용하여 MSIX 컨테이너에서 실행하는 데 유용한 오픈 소스 키트입니다.
 
-자세히 알아보려면 [패키지 지원 프레임워크를 사용하여 MSIX 패키지에 런타임 수정 적용](../porting/package-support-framework.md)을 참조하세요.
+자세히 알아보려면 [패키지 지원 프레임워크를 사용하여 MSIX 패키지에 런타임 수정 적용](/windows/msix/psf/package-support-framework)을 참조하세요.
 
 ## <a name="developer-guidance"></a>개발자 지침
 
@@ -52,7 +52,7 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 
 ### <a name="project-rome"></a>프로젝트 로마
 
-[프로젝트 로마 문서](https://docs.microsoft.com/windows/project-rome/) 사이트가 기능 우선 방식으로 재구성되었습니다. 따라서 개발자가 원하는 것을 더 쉽게 찾을 수 있고 여러 플랫폼에서 원하는 기능을 구현할 수 있습니다.
+[프로젝트 로마 문서](/windows/project-rome/) 사이트가 기능 우선 방식으로 재구성되었습니다. 따라서 개발자가 원하는 것을 더 쉽게 찾을 수 있고 여러 플랫폼에서 원하는 기능을 구현할 수 있습니다.
 
 ## <a name="videos"></a>동영상
 

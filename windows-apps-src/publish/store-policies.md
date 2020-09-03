@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
-ms.openlocfilehash: a68247637395c3f68bf1140479bc94cb8e0fcc33
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 4d7c30b49ea0e6276e1d7959a17086f7ff829915
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79209358"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170913"
 ---
 # <a name="microsoft-store-policies"></a>Microsoft Store 정책
 
@@ -113,7 +113,7 @@ Microsoft Store<sup>1</sup>용 제품 개발에 관심을 가져주셔서 감사
 
 **10.2.3**
 
-제품은 [사용자 동의 없이 설치된 악성 소프트웨어](https://docs.microsoft.com/windows/security/threat-protection/intelligence/criteria)에 대한 Microsoft 기준에 정의된 맬웨어를 포함하거나 사용하지 않아야 합니다.
+제품은 [사용자 동의 없이 설치된 악성 소프트웨어](/windows/security/threat-protection/intelligence/criteria)에 대한 Microsoft 기준에 정의된 맬웨어를 포함하거나 사용하지 않아야 합니다.
 
 **10.2.4**
 
@@ -296,7 +296,7 @@ WNS 또는 MPNS를 통해 제공되는 알림은 제품 콘텐츠로 간주되�
 
 제품에 표시되는 모든 광고 콘텐츠는 Microsoft의 [크리에이티브 수용 정책](https://about.ads.microsoft.com/solutions/ad-products/display-advertising/creative-acceptance-policies)을 준수해야 합니다.
 
-제품에서 광고를 표시하는 경우 표시되는 모든 콘텐츠는 다음 요구 사항을 포함하여 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)의 광고 요구 사항을 따라야 합니다.
+제품에서 광고를 표시하는 경우 표시되는 모든 콘텐츠는 다음 요구 사항을 포함하여 [앱 개발자 계약](/legal/windows/agreements/app-developer-agreement)의 광고 요구 사항을 따라야 합니다.
 
 **10.10.4**
 
@@ -355,7 +355,7 @@ Xbox Live를 사용하는 게임 제품은 다음을 준수해야 합니다.
 
 Xbox Live를 사용하고 다중 접속 게임 플레이, 사용자 생성 콘텐츠 또는 사용자 통신을 제공하는 게임 제품의 경우 다음을 준수해야 합니다.
 - 사용자가 Xbox Live에 로그인할 때까지 게임 플레이를 허용하지 않아야 합니다.
-- [자녀 보호 및 서비스 제어 기능](https://docs.microsoft.com/gaming/xbox-live/get-started/setup-ide/creators/unity-win10/check-user-privileges-in-unity)을 적용해야 합니다.
+- [자녀 보호 및 서비스 제어 기능](/gaming/xbox-live/get-started/setup-ide/creators/unity-win10/check-user-privileges-in-unity)을 적용해야 합니다.
 
 **10.13.7**
 
@@ -477,4 +477,4 @@ Microsoft Store에서 배포하기 위해 제공되는 콘텐츠 및 메타데�
 
 - [Microsoft Store 정책에 대한 변경 내용](store-policies-change-history.md)
 - [Microsoft Store 정책 및 준수 사항](store-policies-and-code-of-conduct.md)
-- [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)
+- [앱 개발자 계약](/legal/windows/agreements/app-developer-agreement)

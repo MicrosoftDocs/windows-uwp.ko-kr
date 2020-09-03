@@ -6,16 +6,16 @@ ms.topic: article
 keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: 2B84B877-794A-468F-A478-DA09E4694513
-ms.openlocfilehash: d81333b38908a10f88d886d766353aae455b1f47
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: 5eab37c828483cea1e8343c953d155edab422e0f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77607241"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170987"
 ---
 # <a name="developer-code-of-conduct"></a>개발자 준수 사항
 
-Microsoft Store용 응용 프로그램 개발자는 [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement) 및 Microsoft와 체결한 다른 모든 라이선스 또는 계약 조건을 준수해야 합니다. 이 준수 사항은 정보를 제공하기 위한 것이며 계약을 대체하지 않습니다.
+Microsoft Store용 응용 프로그램 개발자는 [앱 개발자 계약](/legal/windows/agreements/app-developer-agreement) 및 Microsoft와 체결한 다른 모든 라이선스 또는 계약 조건을 준수해야 합니다. 이 준수 사항은 정보를 제공하기 위한 것이며 계약을 대체하지 않습니다.
 
 
 ## <a name="1-publisher-name"></a>1. 판매자 이름
@@ -36,4 +36,4 @@ Microsoft Store 또는 파트너 센터에서 사기 또는 부정 행위에 참
 ### <a name="see-also"></a>참고 항목
 
 - [Microsoft Store 정책 및 준수 사항](store-policies-and-code-of-conduct.md)
-- [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)
+- [앱 개발자 계약](/legal/windows/agreements/app-developer-agreement)

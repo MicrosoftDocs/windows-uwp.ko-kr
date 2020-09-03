@@ -6,18 +6,18 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 컬렉션
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 4f1b15ec377b030a467dded634abe3fdde717896
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 886086dbc9e39490c87ee289623d9540910cf08d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68270151"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170407"
 ---
 # <a name="collections-with-cwinrt"></a>C++/WinRT로 작성된 컬렉션
 
-내부적으로 Windows 런타임 컬렉션에는 많은 복잡한 이동 부분이 있습니다. 그러나 Windows 런타임 함수에 컬렉션 개체를 전달하거나 자체 컬렉션 속성과 컬렉션 형식을 구현하려는 경우에는 지원을 위한 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)에 함수 및 기본 클래스가 있습니다. 이 기능을 사용하면 복잡성을 줄일 수 있고 시간 및 노력의 오버헤드가 절약됩니다.
+내부적으로 Windows 런타임 컬렉션에는 많은 복잡한 이동 부분이 있습니다. 그러나 Windows 런타임 함수에 컬렉션 개체를 전달하거나 자체 컬렉션 속성과 컬렉션 형식을 구현하려는 경우에는 지원을 위한 [C++/WinRT](./intro-to-using-cpp-with-winrt.md)에 함수 및 기본 클래스가 있습니다. 이 기능을 사용하면 복잡성을 줄일 수 있고 시간 및 노력의 오버헤드가 절약됩니다.
 
-[**IVector**](/uwp/api/windows.foundation.collections.ivector_t_)는 요소의 임의 액세스 컬렉션을 통해 구현된 Windows 런타임 인터페이스입니다. **IVector**를 직접 구현하려면 [**IIterable**](/uwp/api/windows.foundation.collections.iiterable_t_), [**IVectorView**](/uwp/api/windows.foundation.collections.ivectorview_t_) 및 [**IIterator**](/uwp/api/windows.foundation.collections.iiterator_t_)도 구현해야 합니다. 사용자 지정 컬렉션 형식이 ‘필요’한 경우에도 수행할 작업이 많습니다.  하지만 **std::vector**, **std::map** 또는 **std::unordered_map**에 데이터가 있고 이 데이터를 Windows 런타임 API에만 전달하려는 경우에는 가능하면 해당 수준의 작업을 피하려고 합니다. 또한 C++/WinRT를 사용하면 최소한의 노력으로 효율적으로 컬렉션을 만들 수 있으므로 해당 작업을 ‘피할 수 있습니다’. 
+[**IVector**](/uwp/api/windows.foundation.collections.ivector_t_)는 요소의 임의 액세스 컬렉션을 통해 구현된 Windows 런타임 인터페이스입니다. **IVector**를 직접 구현하려면 [**IIterable**](/uwp/api/windows.foundation.collections.iiterable_t_), [**IVectorView**](/uwp/api/windows.foundation.collections.ivectorview_t_) 및 [**IIterator**](/uwp/api/windows.foundation.collections.iiterator_t_)도 구현해야 합니다. 사용자 지정 컬렉션 형식이 ‘필요’한 경우에도 수행할 작업이 많습니다.** 하지만 **std::vector**, **std::map** 또는 **std::unordered_map**에 데이터가 있고 이 데이터를 Windows 런타임 API에만 전달하려는 경우에는 가능하면 해당 수준의 작업을 피하려고 합니다. 또한 C++/WinRT를 사용하면 최소한의 노력으로 효율적으로 컬렉션을 만들 수 있으므로 해당 작업을 ‘피할 수 있습니다’.**
 
 [XAML 항목 컨트롤, C++/WinRT 컬렉션에 바인딩](binding-collection.md)을 참조하세요.
 
@@ -25,7 +25,7 @@ ms.locfileid: "68270151"
 
 ### <a name="general-purpose-collection-empty"></a>범용 컬렉션, 비어 있음
 
-이 섹션에서는 처음에 비어 있는 컬렉션을 만든 ‘후’ 채우는 시나리오를 다룹니다. 
+이 섹션에서는 처음에 비어 있는 컬렉션을 만든 ‘후’ 채우는 시나리오를 다룹니다.**
 
 범용 컬렉션을 구현하는 형식의 새 개체를 검색하려면 [**winrt::single_threaded_vector**](/uwp/cpp-ref-for-winrt/single-threaded-vector) 함수 템플릿을 호출하면 됩니다. 개체는 [**IVector**](/uwp/api/windows.foundation.collections.ivector_t_)로 반환되며, 이 개체는 반환된 개체의 함수 및 속성을 호출하는 데 사용되는 인터페이스입니다.
 
@@ -95,11 +95,11 @@ std::vector<float> values{ 0.1f, 0.2f, 0.3f };
 Windows::Foundation::Collections::IVectorView<float> view{ winrt::single_threaded_vector(std::move(values)).GetView() };
 ```
 
-위의 예제에서 만든 컬렉션은 XAML 항목 컨트롤에 바인딩’할 수 있지만’ 컬렉션을 관찰할 수는 없습니다. 
+위의 예제에서 만든 컬렉션은 XAML 항목 컨트롤에 바인딩’할 수 있지만’ 컬렉션을 관찰할 수는 없습니다.**
 
 ### <a name="observable-collection"></a>Observable 컬렉션
 
-‘관찰 가능한’ 컬렉션을 구현하는 형식의 새 개체를 검색하려면 요소 형식에 상관없이 [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) 함수 템플릿을 호출합니다. 그러나 XAML 항목 컨트롤에 바인딩하는 데 적합한 관찰 가능한 컬렉션을 만들려면 **IInspectable**을 요소 형식으로 사용합니다.
+‘관찰 가능한’ 컬렉션을 구현하는 형식의 새 개체를 검색하려면 요소 형식에 상관없이 [**winrt::single_threaded_observable_vector**](/uwp/cpp-ref-for-winrt/single-threaded-observable-vector) 함수 템플릿을 호출합니다.** 그러나 XAML 항목 컨트롤에 바인딩하는 데 적합한 관찰 가능한 컬렉션을 만들려면 **IInspectable**을 요소 형식으로 사용합니다.
 
 개체는 [**IObservableVector**](/uwp/api/windows.foundation.collections.iobservablevector_t_)로 반환되며, 이 개체는 반환된 개체의 함수 및 속성을 호출하는 데 사용되는 인터페이스이거나 바인딩된 컨트롤입니다.
 
@@ -137,7 +137,7 @@ auto coll2{ winrt::single_threaded_map<winrt::hstring, int>(std::move(values)) }
 
 ## <a name="base-classes-for-collections"></a>컬렉션용 기본 클래스
 
-완벽한 유연성을 제공하기 위해 고유한 사용자 지정 컬렉션을 구현하는 경우 어려운 방법을 피하려고 할 것입니다. 예를 들어 사용자 지정 벡터 보기가 ‘C++/WinRT 기본 클래스의 지원 없이’ 표시되는 경우입니다. 
+완벽한 유연성을 제공하기 위해 고유한 사용자 지정 컬렉션을 구현하는 경우 어려운 방법을 피하려고 할 것입니다. 예를 들어 사용자 지정 벡터 보기가 ‘C++/WinRT 기본 클래스의 지원 없이’ 표시되는 경우입니다.**
 
 ```cppwinrt
 ...

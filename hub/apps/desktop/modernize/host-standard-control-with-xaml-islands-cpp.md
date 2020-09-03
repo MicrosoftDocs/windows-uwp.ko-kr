@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 08308c7bca3cd7f39b08c836e43d791a3fda048f
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0842046419402bbfacc24331d0521efa9510153a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80226277"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174197"
 ---
 # <a name="host-a-standard-uwp-control-in-a-c-win32-app"></a>C++ Win32 앱에서 표준 UWP 컨트롤 호스트
 
@@ -41,7 +41,7 @@ ms.locfileid: "80226277"
     1. **NuGet 패키지 관리자** 창에서 **시험판 포함**이 포함되어 있는지 확인합니다.
     2. **찾아보기** 탭을 선택하고 **Microsoft.Toolkit.Win32.UI.SDK** 패키지를 검색한 후 이 패키지의 버전 v6.0.0 이상 버전을 설치합니다. 이 패키지는 XAML Islands가 앱에서 작동할 수 있도록 하는 몇 가지 빌드 및 런타임 자산을 제공합니다.
 
-5. 애플리케이션이 Windows 10 버전 1903 이상과 호환되도록 지정하려면 [애플리케이션 매니페스트](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests)에서 `maxVersionTested` 값을 설정합니다.
+5. 애플리케이션이 Windows 10 버전 1903 이상과 호환되도록 지정하려면 [애플리케이션 매니페스트](/windows/desktop/SbsCs/application-manifests)에서 `maxVersionTested` 값을 설정합니다.
 
     1. 프로젝트에 애플리케이션 매니페스트가 아직 없는 경우 프로젝트에 새 XML 파일을 추가하고 이름을 **app.manifest**로 지정합니다.
     2. 애플리케이션 매니페스트에서 다음 예제에 표시된 **compatibility** 요소와 자식 요소를 포함합니다. **maxVersionTested** 요소의 **Id** 특성을 대상으로 하는 Windows 10의 버전 번호로 바꿉니다(Windows 10, 버전 1903 이상 릴리스여야 함).
@@ -63,16 +63,16 @@ ms.locfileid: "80226277"
 
 XAML 호스팅 API를 사용하여 UWP 컨트롤을 호스트하는 기본 프로세스는 다음과 같은 일반적인 단계를 따릅니다.
 
-1. 앱이 호스트할 [Windows.UI.Xaml.UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement) 개체를 만들기 전에 현재 스레드에 대한 UWP XAML 프레임워크를 초기화합니다. 이 작업을 수행하는 방법에는 여러 가지가 있으며, 컨트롤을 호스트하는 [DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) 개체를 만들려는 시기에 따라 달라집니다.
+1. 앱이 호스트할 [Windows.UI.Xaml.UIElement](/uwp/api/windows.ui.xaml.uielement) 개체를 만들기 전에 현재 스레드에 대한 UWP XAML 프레임워크를 초기화합니다. 이 작업을 수행하는 방법에는 여러 가지가 있으며, 컨트롤을 호스트하는 [DesktopWindowXamlSource](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) 개체를 만들려는 시기에 따라 달라집니다.
 
     * 애플리케이션에서 호스트할 **Windows.UI.Xaml.UIElement** 개체를 만들기 전에 **DesktopWindowXamlSource** 개체를 만드는 경우 이 프레임워크는 **DesktopWindowXamlSource** 개체를 인스턴스화할 때 초기화됩니다. 이 시나리오에서는 프레임워크를 초기화하는 사용자 고유의 코드를 추가할 필요가 없습니다.
 
-    * 그러나 애플리케이션에서 호스트할 **DesktopWindowXamlSource** 개체를 만들기 전에 **Windows.UI.Xaml.UIElement** 개체를 만드는 경우 애플리케이션에서 정적 [WindowsXamlManager.InitializeForCurrentThread](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager.initializeforcurrentthread) 메서드를 호출하여 **Windows.UI.Xaml.UIElement** 개체가 인스턴스화되기 전에 UWP XAML 프레임워크를 명시적으로 초기화해야 합니다. 애플리케이션은 일반적으로 **DesktopWindowXamlSource**를 호스트하는 부모 UI 요소가 인스턴스화될 때 이 메서드를 호출해야 합니다.
+    * 그러나 애플리케이션에서 호스트할 **DesktopWindowXamlSource** 개체를 만들기 전에 **Windows.UI.Xaml.UIElement** 개체를 만드는 경우 애플리케이션에서 정적 [WindowsXamlManager.InitializeForCurrentThread](/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager.initializeforcurrentthread) 메서드를 호출하여 **Windows.UI.Xaml.UIElement** 개체가 인스턴스화되기 전에 UWP XAML 프레임워크를 명시적으로 초기화해야 합니다. 애플리케이션은 일반적으로 **DesktopWindowXamlSource**를 호스트하는 부모 UI 요소가 인스턴스화될 때 이 메서드를 호출해야 합니다.
 
     > [!NOTE]
-    > 이 메서드는 UWP XAML 프레임워크에 대한 참조를 포함하는 [WindowsXamlManager](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) 개체를 반환합니다. 지정된 스레드에서 원하는 수만큼 **WindowsXamlManager** 개체를 만들 수 있습니다. 그러나 각 개체는 UWP XAML 프레임워크에 대한 참조를 포함하기 때문에 개체를 삭제하여 XAML 리소스가 최종적으로 해제되도록 해야 합니다.
+    > 이 메서드는 UWP XAML 프레임워크에 대한 참조를 포함하는 [WindowsXamlManager](/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) 개체를 반환합니다. 지정된 스레드에서 원하는 수만큼 **WindowsXamlManager** 개체를 만들 수 있습니다. 그러나 각 개체는 UWP XAML 프레임워크에 대한 참조를 포함하기 때문에 개체를 삭제하여 XAML 리소스가 최종적으로 해제되도록 해야 합니다.
 
-2. [DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) 개체를 만들고 창 핸들과 연결된 애플리케이션의 부모 UI 요소에 연결합니다.
+2. [DesktopWindowXamlSource](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) 개체를 만들고 창 핸들과 연결된 애플리케이션의 부모 UI 요소에 연결합니다.
 
     이렇게 하려면 다음 단계를 수행해야 합니다.
 
@@ -84,7 +84,7 @@ XAML 호스팅 API를 사용하여 UWP 컨트롤을 호스트하는 기본 프�
 
     3. **DesktopWindowXamlSource**에 포함된 내부 자식 창의 초기 크기를 설정합니다. 기본적으로 이 내부 자식 창의 너비와 높이는 0으로 설정되어 있습니다. 창의 크기를 설정하지 않으면 **DesktopWindowXamlSource**에 추가하는 UWP 컨트롤이 표시되지 않습니다. **DesktopWindowXamlSource**의 내부 자식 창에 액세스하려면 **IDesktopWindowXamlSourceNative** 또는 **IDesktopWindowXamlSourceNative2** 인터페이스의 **WindowHandle** 속성을 사용합니다.
 
-3. 마지막으로, 호스트할 **Windows.UI.Xaml.UIElement**을 **DesktopWindowXamlSource** 개체의 [콘텐츠](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.content) 속성에 할당합니다.
+3. 마지막으로, 호스트할 **Windows.UI.Xaml.UIElement**을 **DesktopWindowXamlSource** 개체의 [콘텐츠](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.content) 속성에 할당합니다.
 
 다음 단계 및 코드 예제에서는 위의 프로세스를 구현하는 방법을 보여 줍니다.
 
@@ -215,7 +215,7 @@ XAML 호스팅 API를 사용하여 UWP 컨트롤을 호스트하는 기본 프�
     }
     ```
 
-4. 이전 섹션 뒤에 다음 코드를 복사합니다. 이 코드는 창에 대한 [창 프로시저](https://docs.microsoft.com/windows/win32/learnwin32/writing-the-window-procedure)를 정의합니다.
+4. 이전 섹션 뒤에 다음 코드를 복사합니다. 이 코드는 창에 대한 [창 프로시저](/windows/win32/learnwin32/writing-the-window-procedure)를 정의합니다.
 
     ```cppwinrt
     LRESULT CALLBACK WindowProc(HWND hWnd, UINT messageCode, WPARAM wParam, LPARAM lParam)
@@ -280,14 +280,14 @@ XAML 호스팅 API를 사용하여 UWP 컨트롤을 호스트하는 기본 프�
 
 ## <a name="package-the-app"></a>앱 패키지
 
-필요에 따라 배포를 위해 [MSIX 패키지](https://docs.microsoft.com/windows/msix)에 앱을 패키지할 수 있습니다. MSIX는 Windows용 최신 앱 패키징 기술로, MSI, .appx, App-V 및 ClickOnce 설치 기술의 조합을 기준으로 합니다.
+필요에 따라 배포를 위해 [MSIX 패키지](/windows/msix)에 앱을 패키지할 수 있습니다. MSIX는 Windows용 최신 앱 패키징 기술로, MSI, .appx, App-V 및 ClickOnce 설치 기술의 조합을 기준으로 합니다.
 
-다음 지침에서는 Visual Studio 2019의 [Windows 애플리케이션 패키징 프로젝트](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 사용하여 솔루션에 있는 모든 구성 요소를 MSIX 패키지에 패키지하는 방법을 보여 줍니다. 이러한 단계는 MSIX 패키지에서 앱을 패키지하는 경우에만 필요합니다.
+다음 지침에서는 Visual Studio 2019의 [Windows 애플리케이션 패키징 프로젝트](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 사용하여 솔루션에 있는 모든 구성 요소를 MSIX 패키지에 패키지하는 방법을 보여 줍니다. 이러한 단계는 MSIX 패키지에서 앱을 패키지하는 경우에만 필요합니다.
 
 > [!NOTE]
-> 배포를 위해 [MSIX 패키지](https://docs.microsoft.com/windows/msix)에 애플리케이션을 패키지하지 않도록 선택하는 경우 앱을 실행하는 컴퓨터에 [Visual C++ Runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)이 설치되어 있어야 합니다.
+> 배포를 위해 [MSIX 패키지](/windows/msix)에 애플리케이션을 패키지하지 않도록 선택하는 경우 앱을 실행하는 컴퓨터에 [Visual C++ Runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)이 설치되어 있어야 합니다.
 
-1. 새 [Windows 애플리케이션 패키징 프로젝트](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 솔루션에 추가합니다. 프로젝트를 만들 때 **대상 버전**과 **최소 버전**을 모두**Windows 10 버전 1903(10.0; 빌드 18362)** 으로 선택합니다.
+1. 새 [Windows 애플리케이션 패키징 프로젝트](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 솔루션에 추가합니다. 프로젝트를 만들 때 **대상 버전**과 **최소 버전**을 모두**Windows 10 버전 1903(10.0; 빌드 18362)** 으로 선택합니다.
 
 2. 패키징 프로젝트에서 **애플리케이션** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다. 프로젝트 목록에서 솔루션의 C++/Win32 데스크톱 애플리케이션 프로젝트를 선택하고 **확인**을 클릭합니다.
 

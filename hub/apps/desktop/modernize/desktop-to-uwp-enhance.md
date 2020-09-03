@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: fd561096dc53f85186698c981693693a6d3b9e64
-ms.sourcegitcommit: d95ccb47c616bd32c56e491490a6baf30185c8c5
+ms.openlocfilehash: 5a7c77f6c553408d2631fb3e324e67d79318f9b4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295540"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170697"
 ---
 # <a name="call-windows-runtime-apis-in-desktop-apps"></a>데스크톱 앱에서 Windows 런타임 API 호출
 
@@ -36,7 +36,7 @@ UWP(유니버설 Windows 플랫폼) API를 사용하여 Windows 10 사용자를 
 
 #### <a name="to-use-the-nuget-option"></a>NuGet 옵션을 사용하는 방법
 
-1. [패키지 참조](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files)를 사용하도록 설정합니다.
+1. [패키지 참조](/nuget/consume-packages/package-references-in-project-files)를 사용하도록 설정합니다.
 
     1. Visual Studio에서 **도구 -> NuGet 패키지 관리자 -> 패키지 관리자 설정**을 클릭합니다.
     2. **기본 패키지 관리 형식**으로 **PackageReference**를 선택합니다.
@@ -76,7 +76,7 @@ UWP(유니버설 Windows 플랫폼) API를 사용하여 Windows 10 사용자를 
 
 ### <a name="modify-a-c-win32-project-to-use-windows-runtime-apis"></a>Windows 런타임 API를 사용하도록 C++ Win32 프로젝트 수정
 
-[C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/)를 사용하여 Windows 런타임 API를 사용합니다. C++/WinRT는 헤더 파일 기반 라이브러리로 구현된 WinRT(Windows 런타임) API용 최신의 완전한 표준 C++17 언어 프로젝션이며, 최신 Windows API에 최고 수준의 액세스를 제공하도록 설계되었습니다.
+[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)를 사용하여 Windows 런타임 API를 사용합니다. C++/WinRT는 헤더 파일 기반 라이브러리로 구현된 WinRT(Windows 런타임) API용 최신의 완전한 표준 C++17 언어 프로젝션이며, 최신 Windows API에 최고 수준의 액세스를 제공하도록 설계되었습니다.
 
 다음과 같이 C++/WinRT에 사용할 프로젝트를 구성합니다.
 
@@ -186,7 +186,7 @@ void UWP::ShowToast()
 }
 ```
 
-알림에 대한 자세한 정보는 [적응형 및 대화형 알림 메시지](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts)를 참조하세요.
+알림에 대한 자세한 정보는 [적응형 및 대화형 알림 메시지](/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts)를 참조하세요.
 
 ## <a name="support-windows-xp-windows-vista-and-windows-78-install-bases"></a>Windows XP, Windows Vista, Windows 7/8 설치 기반 지원
 
@@ -243,7 +243,7 @@ void UWP::ShowToast()
 
 실행 중인 Windows 버전에 관계 없이 모든 Windows 사용자를 위한 바이너리 세트를 컴파일 할 수 있습니다. 사용자가 애플리케이션을 Windows 10에서 패키지된 애플리케이션으로 실행하는 경우에만 애플리케이션이 Windows 런타임 API를 호출합니다.
 
-코드에 런타임 검사를 추가하는 가장 쉬운 방법은 Nuget 패키지: [데스크톱 브리지 도우미](https://www.nuget.org/packages/DesktopBridge.Helpers/)를 설치한 다음, ``IsRunningAsUWP()`` 메서드를 사용하여 Windows 런타임 API를 호출하는 모든 코드를 제어하는 것입니다. 자세한 내용은 블로그 게시물 [Desktop Bridge - Identify the application's context(데스크톱 브리지 - 애플리케이션 컨텍스트 식별)](https://blogs.msdn.microsoft.com/appconsult/2016/11/03/desktop-bridge-identify-the-applications-context/)을 참조하세요.
+코드에 런타임 검사를 추가하는 가장 쉬운 방법은 Nuget 패키지: [데스크톱 브리지 도우미](https://www.nuget.org/packages/DesktopBridge.Helpers/)를 설치한 다음, ``IsRunningAsUWP()`` 메서드를 사용하여 Windows 런타임 API를 호출하는 모든 코드를 제어하는 것입니다. 자세한 내용은 블로그 게시물 [Desktop Bridge - Identify the application's context(데스크톱 브리지 - 애플리케이션 컨텍스트 식별)](/archive/blogs/appconsult/desktop-bridge-identify-the-applications-context)을 참조하세요.
 
 ## <a name="related-samples"></a>관련 샘플
 

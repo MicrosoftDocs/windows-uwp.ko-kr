@@ -6,12 +6,12 @@ ms.date: 08/20/2020
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: dc3ca2379ae7dd704d96e383cc02314ee9423fb7
-ms.sourcegitcommit: 508fb9e763aa5967beebf7bf5e77d7ad12baa566
+ms.openlocfilehash: e485fcb5d6ca6ecf8c19124c482492ddfb2c5233
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714491"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173607"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Windows 데스크톱의 장치 포털
 
@@ -34,7 +34,7 @@ Device Portal을 사용하여 다음 작업을 수행할 수 있습니다.
 Windows 10 1607 버전부터 데스크톱의 새로운 기능 중 일부는 개발자 모드를 켜야만 사용할 수 있습니다. 개발자 모드를 켜는 방법에 대한 내용은 [디바이스를 개발에 사용하도록 설정](../get-started/enable-your-device-for-development.md)을 참조하세요.
 
 > [!IMPORTANT]
-> 경우에 따라 네트워크 또는 호환성 문제로 인해 디바이스에 개발자 모드가 제대로 설치되지 않을 수 있습니다. 이러한 문제 해결에 대한 도움말은 [디바이스를 개발에 사용하도록 설정의 관련 섹션](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development#failure-to-install-developer-mode-package)을 참조하세요.
+> 경우에 따라 네트워크 또는 호환성 문제로 인해 디바이스에 개발자 모드가 제대로 설치되지 않을 수 있습니다. 이러한 문제 해결에 대한 도움말은 [디바이스를 개발에 사용하도록 설정의 관련 섹션](../get-started/enable-your-device-for-development.md#failure-to-install-developer-mode-package)을 참조하세요.
 
 ### <a name="turn-on-device-portal"></a>장치 포털 켜기
 
@@ -117,11 +117,11 @@ Device Portal용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음
 - `-DeleteSSL` 
     - 이는 HTTPS 연결에 사용되는 SSL 인증서 캐시를 다시 설정합니다. (예상한 인증서 경고가 아닌) 무시할 수 없는 TLS 연결 오류가 발생하는 경우 이 옵션으로 문제를 해결할 수도 있습니다. 
 - `-SetCert <pfxPath> <pfxPassword>`
-    - 자세한 내용은 [사용자 지정 SSL 인증서로 장치 포털 프로비저닝](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-ssl)을 참조하세요.  
+    - 자세한 내용은 [사용자 지정 SSL 인증서로 장치 포털 프로비저닝](./device-portal-ssl.md)을 참조하세요.  
     - 이렇게 하면 개발자 고유의 SSL 인증서를 설치하여 장치 포털에서 자주 발생하는 SSL 경고 페이지를 해결할 수 있습니다. 
 - `-Debug <various options for authentication, port selection, and tracing level>`
-    - 특정 구성과 표시되는 디버그 메시지를 사용하는 독립 실행형 장치 포털 버전을 실행합니다. [패키지된 플러그인](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-plugin)을 빌드하는 데 가장 유용합니다. 
-    - 패키지된 플러그인을 테스트하기 위해 이를 실행하는 방법에 대한 자세한 내용은 [MSDN 잡지 문서](https://msdn.microsoft.com/magazine/mt826332.aspx)를 참조하세요.
+    - 특정 구성과 표시되는 디버그 메시지를 사용하는 독립 실행형 장치 포털 버전을 실행합니다. [패키지된 플러그인](./device-portal-plugin.md)을 빌드하는 데 가장 유용합니다. 
+    - 패키지된 플러그인을 테스트하기 위해 이를 실행하는 방법에 대한 자세한 내용은 [MSDN 잡지 문서](/archive/msdn-magazine/2017/october/windows-device-portal-write-a-windows-device-portal-packaged-plug-in)를 참조하세요.
 
 ## <a name="troubleshooting"></a>문제 해결
 
@@ -150,4 +150,4 @@ Windows 10 시험판 빌드에 개발자 패키지를 설치하려고 할 때 �
 ## <a name="see-also"></a>참조
 
 * [Windows 장치 포털 개요](device-portal.md)
-* [장치 포털 핵심 API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [장치 포털 핵심 API 참조](./device-portal-api-core.md)

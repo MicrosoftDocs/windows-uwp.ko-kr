@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 08/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 824cdb74a809ae3f9ae2ed202a9889535021f711
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: cbaf2726e8f3e517fd0664c3d00b9a82ca018fbc
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684722"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174417"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2017"></a>2017년 8월 Windows 개발자 문서의 새로운 내용
 
@@ -32,7 +32,7 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 
 ### <a name="game-mode"></a>게임 모드
 
-UWP(유니버설 Windows 플랫폼)을 위한 [게임 모드](https://docs.microsoft.com/previous-versions/windows/desktop/gamemode/game-mode-portal) API를 사용하여 Windows 10의 게임 모드가 제공하는 장점을 활용하여 가장 최적화된 게임 환경을 만들 수 있습니다. 이러한 API는 **&lt;expandedresources.h&gt;** 헤더에 있습니다.
+UWP(유니버설 Windows 플랫폼)을 위한 [게임 모드](/previous-versions/windows/desktop/gamemode/game-mode-portal) API를 사용하여 Windows 10의 게임 모드가 제공하는 장점을 활용하여 가장 최적화된 게임 환경을 만들 수 있습니다. 이러한 API는 **&lt;expandedresources.h&gt;** 헤더에 있습니다.
 
 ![게임 모드](images/game-mode.png)
 
@@ -45,29 +45,29 @@ UWP(유니버설 Windows 플랫폼)을 위한 [게임 모드](https://docs.micro
 
 ### <a name="data-schemas-for-store-products"></a>Microsoft Store 제품용 데이터 스키마
 
-[Store 제품용 데이터 스키마](../monetize/data-schemas-for-store-products.md) 문서가 추가되었습니다. 이 문서는 [StoreProduct](https://docs.microsoft.com/uwp/api/windows.services.store), [StoreAppLicense](https://docs.microsoft.com/uwp/api/windows.services.store.storeproduct)를 포함하여 [Windows.Services.Store](https://docs.microsoft.com/uwp/api/windows.services.store.storeapplicense) 네임스페이스의 몇 가지 개체에 사용할 수 있는 Store 관련 데이터에 대한 스키마를 제공합니다.
+[Store 제품용 데이터 스키마](../monetize/data-schemas-for-store-products.md) 문서가 추가되었습니다. 이 문서는 [StoreProduct](/uwp/api/windows.services.store), [StoreAppLicense](/uwp/api/windows.services.store.storeproduct)를 포함하여 [Windows.Services.Store](/uwp/api/windows.services.store.storeapplicense) 네임스페이스의 몇 가지 개체에 사용할 수 있는 Store 관련 데이터에 대한 스키마를 제공합니다.
 
 ### <a name="desktop-bridge"></a>데스크톱 브리지
 
 Windows 10 사용자를 위한 최신 환경을 추가하는 데 도움이 되는 두 개의 가이드를 추가했습니다.
 
-올바른 파일을 찾아 참고하고, Windows 10 사용자를 위한 UWP 환경을 돋보이게 하려면 [Windows 10용 데스크톱 애플리케이션 향상](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-enhance)을 참조하세요.  
+올바른 파일을 찾아 참고하고, Windows 10 사용자를 위한 UWP 환경을 돋보이게 하려면 [Windows 10용 데스크톱 애플리케이션 향상](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)을 참조하세요.  
 
-UWP 앱 컨테이너에서 실행해야 하는 최신 XAML UI 및 다른 UWP 환경을 통합하려면 [최신 UWP 구성 요소로 데스크톱 애플리케이션 확장](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-extend)을 참조하세요.
+UWP 앱 컨테이너에서 실행해야 하는 최신 XAML UI 및 다른 UWP 환경을 통합하려면 [최신 UWP 구성 요소로 데스크톱 애플리케이션 확장](/windows/apps/desktop/modernize/desktop-to-uwp-extend)을 참조하세요.
 
 ### <a name="getting-started-with-point-of-service"></a>서비스 지점 시작
 
-[서비스 지점 디바이스를 시작](https://docs.microsoft.com/windows/uwp/devices-sensors/pos-get-started)하는 데 도움이 되는 새 가이드를 추가했습니다. 여기에서는 디바이스 열거, 디바이스 기능 확인, 디바이스 클레임, 디바이스 공유에 대해 다룹니다. 
+[서비스 지점 디바이스를 시작](../devices-sensors/pos-get-started.md)하는 데 도움이 되는 새 가이드를 추가했습니다. 여기에서는 디바이스 열거, 디바이스 기능 확인, 디바이스 클레임, 디바이스 공유에 대해 다룹니다. 
 
 ### <a name="xbox-live"></a>Xbox Live
 
 UWP 및 XDK(Xbox 개발자 키트) 게임 모두에 대한 Xbox Live 개발자를 위한 문서를 추가했습니다.
 
-Xbox Live API를 사용하여 게임을 Xbox Live 소셜 게임 네트워크에 연결하는 방법은 [Xbox Live 개발자 가이드](https://docs.microsoft.com//gaming/xbox-live/index)를 참조하세요.
+Xbox Live API를 사용하여 게임을 Xbox Live 소셜 게임 네트워크에 연결하는 방법은 [Xbox Live 개발자 가이드](//gaming/xbox-live/index)를 참조하세요.
 
-[Xbox Live 크리에이터스 프로그램](https://docs.microsoft.com//gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators)을 사용하면 모든 UWP 게임 개발자가 PC와 Xbox One에 모두에 Xbox Live 지원 게임을 게시할 수 있습니다.
+[Xbox Live 크리에이터스 프로그램](//gaming/xbox-live/get-started-with-creators/get-started-with-xbox-live-creators)을 사용하면 모든 UWP 게임 개발자가 PC와 Xbox One에 모두에 Xbox Live 지원 게임을 게시할 수 있습니다.
 
-Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 자세한 내용은 [Xbox Live 개발자 프로그램 개요](https://docs.microsoft.com//gaming/xbox-live/developer-program-overview)를 참조하세요.
+Xbox Live 개발자가 사용할 수 있는 프로그램 및 기능에 대한 자세한 내용은 [Xbox Live 개발자 프로그램 개요](//gaming/xbox-live/developer-program-overview)를 참조하세요.
 
 ## <a name="videos"></a>비디오
 

@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 12/14/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f785ad5d7898f838435e0a05cf8dea5c778e70f3
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8d58fe1662c5ba13c2952fbd96414ab201f5ba27
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684748"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174387"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-december-2017"></a>2017년 12월 Windows 개발자 문서의 새로운 내용
 
@@ -22,7 +22,7 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 
 ### <a name="windows-mixed-reality-enthusiasts-guide"></a>Windows Mixed Reality: 마니아 가이드
 
-Mixed Reality의 세계에 대해 보다 깊이 알아보려는 기술 매니아를 대상으로 [마니아 가이드](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/)는 Windows Mixed Reality에 대해 사람들이 가지는 주요 질문에 답변합니다. 
+Mixed Reality의 세계에 대해 보다 깊이 알아보려는 기술 매니아를 대상으로 [마니아 가이드](/windows/mixed-reality/enthusiast-guide/)는 Windows Mixed Reality에 대해 사람들이 가지는 주요 질문에 답변합니다. 
 
 가이드에는 다음이 나와 있습니다. 
 - 구입하기 전 FAQ 
@@ -38,13 +38,13 @@ Mixed Reality의 세계에 대해 보다 깊이 알아보려는 기술 매니아
 
 업데이트된 [상호 작용 키보드](../design/input/keyboard-interactions.md)로 고급 사용자에게 액세스할 수 있는 환경 및 기능을 제공하기 위해 UWP 앱을 디자인하고 최적화합니다. 이러한 상호 작용에 대한 Fall Creators Update에 추가된 새로운 개선 사항을 반영하도록 권장 사항 및 지침을 업데이트했습니다.
 
-앱의 키보드 기능을 확장하려면 [키보드 가속기](../design/input/keyboard-accelerators.md) 및 [사용자 지정 키보드 상호 작용](../design/input/custom-keyboard-interactions.md)을 참조하세요.
+앱의 키보드 기능을 확장하려면 [키보드 가속기](../design/input/keyboard-accelerators.md) 및 [사용자 지정 키보드 상호 작용](../design/input/focus-navigation.md)을 참조하세요.
 
 터치 상호 작용을 지원하는 디바이스에서 [터치 키보드의 현재 상태에 응답](../design/input/respond-to-the-presence-of-the-touch-keyboard.md) 및 [입력된 범위 변경 터치 키보드를 사용하여](../design/input/use-input-scope-to-change-the-touch-keyboard.md) 문서를 참고하여 키보드 기능을 추가합니다.
 
 ### <a name="microsoft-collaborate"></a>Microsoft Collaborate
 
-Microsoft Collaborate 포털은 엔지니어링 시스템 작업 항목(버그, 기능 요청 등)의 공유와 콘텐츠(빌드, 문서, 사양)의 배포를 활성화하여 Microsoft 에코 시스템 내에서 엔지니어링 협업을 간소화하는 도구와 서비스를 제공합니다. [자세한 정보를 알아보세요](https://docs.microsoft.com/collaborate/).
+Microsoft Collaborate 포털은 엔지니어링 시스템 작업 항목(버그, 기능 요청 등)의 공유와 콘텐츠(빌드, 문서, 사양)의 배포를 활성화하여 Microsoft 에코 시스템 내에서 엔지니어링 협업을 간소화하는 도구와 서비스를 제공합니다. [자세한 정보를 알아보세요](/collaborate/).
 
 ![파트너 센터에서 Microsoft Collaborate](images/microsoft_collaborate_screenshot.PNG)
 
@@ -52,9 +52,9 @@ Microsoft Collaborate 포털은 엔지니어링 시스템 작업 항목(버그, 
 
 Visual Studio 2017 버전 15.5에서는 **Windows 애플리케이션 패키징 프로젝트** 템플릿이 업데이트되어 UWP 프로젝트를 훨씬 쉽게 포함시킬 수 있습니다. 더 이상 JavaScript 기반 패키징 프로젝트를 사용하여 패키지 매니페스트를 수동으로 조정할 필요가 없습니다.  
 
-이 새로운 템플릿을 사용하여 데스크톱 애플리케이션을 패키징하는 방법에 대한 지침은 [Visual Studio를 사용한 앱 패키징](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)을 참조하세요.
+이 새로운 템플릿을 사용하여 데스크톱 애플리케이션을 패키징하는 방법에 대한 지침은 [Visual Studio를 사용한 앱 패키징](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)을 참조하세요.
 
-패키지에 UWP 프로젝트를 추가하는 방법에 대한 지침은 [최신 UWP 구성 요소로 데스크톱 애플리케이션 확장](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-extend)을 참조하세요.
+패키지에 UWP 프로젝트를 추가하는 방법에 대한 지침은 [최신 UWP 구성 요소로 데스크톱 애플리케이션 확장](/windows/apps/desktop/modernize/desktop-to-uwp-extend)을 참조하세요.
 
 ### <a name="subscription-add-ons-are-now-available-to-developers-in-the-windows-dev-center-insider-program"></a>Windows 개발자 센터 참가자 프로그램의 개발자는 이제 구독 추가 기능을 사용할 수 있습니다.
 
@@ -97,4 +97,4 @@ UWP(유니버설 Windows 플랫폼) 디자인 지침은 세련되고 아름다�
 
 ### <a name="package-a-net-app-in-visual-studio"></a>Visual Studio에서 .NET 앱 패키징
 
-그 어느 때보다도 쉽게 데스크톱 앱을 유니버설 Windows 플랫폼으로 가져올 수 있습니다. [동영상을 시청](https://www.youtube.com/watch?v=fJkbYPyd08w)하여 배포를 위해 .NET 앱을 패키징하는 방법을 알아보고 자세한 내용은 [이 페이지를 확인](../porting/desktop-to-uwp-packaging-dot-net.md)하세요.
+그 어느 때보다도 쉽게 데스크톱 앱을 유니버설 Windows 플랫폼으로 가져올 수 있습니다. [동영상을 시청](https://www.youtube.com/watch?v=fJkbYPyd08w)하여 배포를 위해 .NET 앱을 패키징하는 방법을 알아보고 자세한 내용은 [이 페이지를 확인](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)하세요.

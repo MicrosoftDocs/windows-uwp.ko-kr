@@ -7,15 +7,15 @@ ms.date: 12/3/2019
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: anawish
-ms.openlocfilehash: 24669b81c244339509e30a43a0da8a2b27e67eeb
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: b1ffa6374753343321f34d388eb994a62614cb15
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75302657"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172607"
 ---
 # <a name="filtering-collections-and-lists-through-user-input"></a>사용자 입력을 통해 컬렉션 및 목록 필터링
-컬렉션에 많은 항목이 표시되거나 사용자 상호 작용에 크게 얽매이는 경우 필터링은 구현에 유용한 기능입니다. 이 문서에서 설명하는 메서드를 사용하는 필터링은 [ListView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview) 및 [ItemsRepeater](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)를 비롯한 대부분의 컬렉션 컨트롤에 구현될 수 있습니다. 확인란, 라디오 단추 및 슬라이더와 같은 컬렉션을 필터링하는 데 많은 유형의 사용자 입력을 사용할 수 있습니다. 하지만 이 문서에서는 텍스트 기반 사용자 입력을 수집하여 사용자의 검색에 따라 실시간으로 ListView를 업데이트하는 데 초점을 맞춥니다. 
+컬렉션에 많은 항목이 표시되거나 사용자 상호 작용에 크게 얽매이는 경우 필터링은 구현에 유용한 기능입니다. 이 문서에서 설명하는 메서드를 사용하는 필터링은 [ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView](/uwp/api/windows.ui.xaml.controls.gridview) 및 [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)를 비롯한 대부분의 컬렉션 컨트롤에 구현될 수 있습니다. 확인란, 라디오 단추 및 슬라이더와 같은 컬렉션을 필터링하는 데 많은 유형의 사용자 입력을 사용할 수 있습니다. 하지만 이 문서에서는 텍스트 기반 사용자 입력을 수집하여 사용자의 검색에 따라 실시간으로 ListView를 업데이트하는 데 초점을 맞춥니다. 
 
 > [!NOTE]
 > 이 문서에서는 ListView로 필터링하는 방법을 집중적으로 설명합니다. 또한 필터링 메서드는 GridView, ItemsRepeater 또는 TreeView와 같은 다른 컬렉션 컨트롤에도 적용할 수 있습니다.
@@ -64,7 +64,7 @@ ms.locfileid: "75302657"
 </Grid>
 ```
 ## <a name="filtering-the-data"></a>데이터 필터링
-[Linq](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries) 쿼리를 사용하면 컬렉션에서 특정 항목을 그룹화, 정렬 및 선택할 수 있습니다. 목록을 필터링하기 위해 `FilterByLName` TextBox에 입력한 사용자-입력 검색 쿼리/필터링 용어와 일치하는 용어를 선택하는 Linq 쿼리를 생성하겠습니다. 쿼리 결과는 [IEnumerable<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1) 컬렉션 개체에 할당할 수 있습니다. 이 컬렉션을 만든 후, 이를 사용하여 원래 목록과 비교하여 일치하지 않는 항목을 제거하고 백스페이스의 경우 일치하는 항목을 다시 추가할 수 있습니다.
+[Linq](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries) 쿼리를 사용하면 컬렉션에서 특정 항목을 그룹화, 정렬 및 선택할 수 있습니다. 목록을 필터링하기 위해 `FilterByLName` TextBox에 입력한 사용자-입력 검색 쿼리/필터링 용어와 일치하는 용어를 선택하는 Linq 쿼리를 생성하겠습니다. 쿼리 결과는 [IEnumerable<T>](/dotnet/api/system.collections.generic.ienumerable-1) 컬렉션 개체에 할당할 수 있습니다. 이 컬렉션을 만든 후, 이를 사용하여 원래 목록과 비교하여 일치하지 않는 항목을 제거하고 백스페이스의 경우 일치하는 항목을 다시 추가할 수 있습니다.
 
 > [!NOTE]
 > 항목을 더하거나 뺄 때 가장 직관적인 방법으로 ListView에 애니메이션 효과를 주려면 필터링된 개체의 새로운 컬렉션을 만들어서 ListView의 ItemsSource 속성에 할당하는 것이 아니라, ListView의 ItemsSource 컬렉션 자체에서 항목을 제거하거나 추가하는 것이 중요합니다.

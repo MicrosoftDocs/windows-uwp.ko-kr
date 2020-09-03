@@ -6,12 +6,12 @@ ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 2292d97166d34905bb895aa3f53f864510a21f46
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: a4fc5cc5b8bc99e830d3c31604e581f8e57c1007
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74254759"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173637"
 ---
 # <a name="windows-device-portal-overview"></a>Windows Device Portal 개요
 
@@ -45,8 +45,8 @@ Xbox | 개발자 모드 내에서 사용 설정 | 사용 안 함 | 11443 | 해�
 
 디바이스별 설치 지침은 다음을 참조하세요.
 
-- [HoloLens용 디바이스 포털](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-hololens)
-- [IoT용 디바이스 포털](https://docs.microsoft.com/windows/iot-core/manage-your-device/DevicePortal)
+- [HoloLens용 디바이스 포털](./device-portal-hololens.md)
+- [IoT용 디바이스 포털](/windows/iot-core/manage-your-device/DevicePortal)
 - [모바일용 디바이스 포털](device-portal-mobile.md)
 - [Xbox용 디바이스 포털](../xbox-apps/device-portal-xbox.md)
 - [데스크톱 디바이스 포털](device-portal-desktop.md#set-up-device-portal-on-windows-desktop)
@@ -169,7 +169,7 @@ ETW 로깅 사용에 대한 자세한 내용은 [Use Device Portal to view debug
 
 ### <a name="performance-tracing"></a>성능 추적
 
-성능 추적 페이지에서는 호스트 디바이스의 [WPR(Windows Performance Recorder)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh448205(v=win.10)) 추적을 볼 수 있습니다.
+성능 추적 페이지에서는 호스트 디바이스의 [WPR(Windows Performance Recorder)](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448205(v=win.10)) 추적을 볼 수 있습니다.
 
 ![Device Portal 성능 추적 페이지](images/device-portal/mob-device-portal-perf-tracing.png)
 
@@ -178,7 +178,7 @@ ETW 로깅 사용에 대한 자세한 내용은 [Use Device Portal to view debug
 
 추적을 중지하려면 **중지**를 클릭합니다. 추적 파일(.ETL) 다운로드가 완료될 때까지 이 페이지에 계속 있습니다.
 
-캡처된 .ETL 파일은 [Windows Performance Analyzer](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10))에서 분석을 위해 열 수 있습니다.
+캡처된 .ETL 파일은 [Windows Performance Analyzer](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10))에서 분석을 위해 열 수 있습니다.
 
 ### <a name="device-manager"></a>디바이스 관리자
 

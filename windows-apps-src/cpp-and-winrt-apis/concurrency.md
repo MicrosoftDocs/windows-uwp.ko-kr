@@ -5,32 +5,32 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: 048d6fe455f7c3e77922ef8b937a9cb1d6cbb21c
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: a10962740d3f723a855914595ea02d0688ff9707
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81266901"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170377"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT를 통한 동시성 및 비동기 작업
 
 > [!IMPORTANT]
-> 이 항목에서는 *코루틴* 및 `co_await`의 개념을 소개하며, UI 및 비 UI 애플리케이션 모두에서 사용하는 것이 좋습니다.  간단히 하기 위해 이 소개 항목의 코드 예제에서는 대부분 **Windows 콘솔 애플리케이션(C++/WinRT)** 프로젝트를 보여 줍니다. 이 항목의 뒷부분에 나오는 코드 예제에서는 코루틴을 사용하지만, 편의상 콘솔 애플리케이션 예제에서 종료 직전에 차단 **get** 함수 호출도 사용하므로 출력 인쇄를 마치기 전에 애플리케이션이 종료되지 않습니다. UI 스레드에서는 이 작업(차단 **get** 함수 호출)을 수행하지 않습니다. 대신 `co_await` 문을 사용합니다. UI 애플리케이션에서 사용하는 기술은 [고급 동시성 및 비동기](concurrency-2.md) 항목에서 설명하고 있습니다.
+> 이 항목에서는 *코루틴* 및 `co_await`의 개념을 소개하며, UI 및 비 UI 애플리케이션 모두에서 사용하는 것이 좋습니다. 간단히 하기 위해 이 소개 항목의 코드 예제에서는 대부분 **Windows 콘솔 애플리케이션(C++/WinRT)** 프로젝트를 보여 줍니다. 이 항목의 뒷부분에 나오는 코드 예제에서는 코루틴을 사용하지만, 편의상 콘솔 애플리케이션 예제에서 종료 직전에 차단 **get** 함수 호출도 사용하므로 출력 인쇄를 마치기 전에 애플리케이션이 종료되지 않습니다. UI 스레드에서는 이 작업(차단 **get** 함수 호출)을 수행하지 않습니다. 대신 `co_await` 문을 사용합니다. UI 애플리케이션에서 사용하는 기술은 [고급 동시성 및 비동기](concurrency-2.md) 항목에서 설명하고 있습니다.
 
-이 소개 항목에서는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 통해 Windows 런타임 비동기 개체를 만들고 사용할 수 있는 몇 가지 방법을 보여 줍니다. 이 항목을 읽은 후, 특히 UI 애플리케이션에서 사용하는 기술에 대해서는 [고급 동시성 및 비동기](concurrency-2.md)도 참조하세요.
+이 소개 항목에서는 [C++/WinRT](./intro-to-using-cpp-with-winrt.md)를 통해 Windows 런타임 비동기 개체를 만들고 사용할 수 있는 몇 가지 방법을 보여 줍니다. 이 항목을 읽은 후, 특히 UI 애플리케이션에서 사용하는 기술에 대해서는 [고급 동시성 및 비동기](concurrency-2.md)도 참조하세요.
 
 ## <a name="asynchronous-operations-and-windows-runtime-async-functions"></a>비동기 작업 및 Windows 런타임 “비동기” 함수
 
 완료하는 데 50밀리초 이상 걸릴 가능성이 높은 Windows 런타임 API는 비동기 함수(이름이 “Async”로 끝나는 함수)로 구현됩니다. 비동기 함수의 구현은 다른 스레드에서 작업을 시작하고, 비동기 작업을 나타내는 개체와 함께 즉시 반환합니다. 비동기 작업이 완료되면, 반환된 개체에 작업의 결과 값이 포함됩니다. **Windows::Foundation** Windows 런타임 네임스페이스에는 네 가지 유형의 비동기 작업 개체가 포함됩니다.
 
 - [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction),
-- [**IAsyncActionWithProgress&lt;TProgress&gt;** ](/uwp/api/windows.foundation.iasyncactionwithprogress-1),
-- [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation-1),
-- [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress-2).
+- [**IAsyncActionWithProgress&lt;TProgress&gt;**](/uwp/api/windows.foundation.iasyncactionwithprogress-1),
+- [**IAsyncOperation&lt;TResult&gt;**](/uwp/api/windows.foundation.iasyncoperation-1),
+- [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress-2).
 
 각 비동기 작업 유형은 **winrt::Windows::Foundation** C++/WinRT 네임스페이스의 해당 유형에 프로젝션됩니다. C++/WinRT에는 내부 await 어댑터 구조체도 포함되어 있습니다. 직접 사용하지는 않지만, 해당 구조체 덕분에 `co_await` 문을 작성하여 이러한 비동기 작업 유형 중 하나를 반환하는 함수의 결과를 협조적으로 기다릴 수 있습니다. 또한 이러한 유형을 반환하는 고유한 코루틴을 작성할 수 있습니다.
 
-비동기 Windows 함수의 예로 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress-2) 형식의 비동기 작업 개체를 반환하는 [**SyndicationClient::RetrieveFeedAsync**](https://docs.microsoft.com/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)가 있습니다.
+비동기 Windows 함수의 예로 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress-2) 형식의 비동기 작업 개체를 반환하는 [**SyndicationClient::RetrieveFeedAsync**](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)가 있습니다.
 
 C++/WinRT를 사용하여 이러한 API를 호출하는 몇 가지 방법을 차단 방법과 비차단 방법 순으로 살펴보겠습니다. 기본적인 아이디어를 설명하기 위해 다음 몇 가지 코드 예제에서는 **Windows 콘솔 애플리케이션(C++/WinRT)** 프로젝트를 사용합니다. UI 애플리케이션에 더 적합한 기술은 [고급 동시성 및 비동기](concurrency-2.md)에서 설명하고 있습니다.
 
@@ -158,7 +158,7 @@ int main()
 
 위의 예제에서 **RetrieveBlogFeedAsync**는 진행률과 반환 값이 둘 다 있는 **IAsyncOperationWithProgress**를 반환합니다. **RetrieveBlogFeedAsync**가 작업을 수행하고 피드를 검색하는 동안 다른 작업을 수행할 수 있습니다. 해당 비동기 작업 개체에서 **get**을 호출하여 차단하고 완료될 때까지 기다린 다음, 작업 결과를 가져옵니다.
 
-Windows 런타임 형식을 비동기 방식으로 반환하는 경우 [**IAsyncOperation&lt;TResult&gt;** ](/uwp/api/windows.foundation.iasyncoperation-1) 또는 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;** ](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)를 반환해야 합니다. 자사 또는 타사 런타임 클래스는 Windows 런타임 함수로 전달하거나 전달받을 수 있는 형식(예: `int` 또는 **winrt::hstring**)을 한정합니다. Windows 런타임이 아닌 형식에 이러한 비동기 작업 유형 중 하나를 사용하려고 하면 컴파일러에서 "*WinRT 형식이어야 합니다.* " 오류를 생성하여 도와줍니다.
+Windows 런타임 형식을 비동기 방식으로 반환하는 경우 [**IAsyncOperation&lt;TResult&gt;**](/uwp/api/windows.foundation.iasyncoperation-1) 또는 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)를 반환해야 합니다. 자사 또는 타사 런타임 클래스는 Windows 런타임 함수로 전달하거나 전달받을 수 있는 형식(예: `int` 또는 **winrt::hstring**)을 한정합니다. Windows 런타임이 아닌 형식에 이러한 비동기 작업 유형 중 하나를 사용하려고 하면 컴파일러에서 "*WinRT 형식이어야 합니다.*" 오류를 생성하여 도와줍니다.
 
 코루틴에 `co_await` 문이 없는 경우, 코루틴이 되려면 `co_return` 또는 `co_yield` 문이 하나 이상 있어야 합니다. 코루틴이 비동기성을 도입하지 않아 컨텍스트를 차단하거나 전환하지 않고 값을 반환할 수 있는 경우도 있습니다. 다음은 값을 캐시하여 두 번째 이상 호출 시 해당 작업을 수행하는 예제입니다.
 
@@ -177,7 +177,7 @@ IAsyncOperation<winrt::hstring> ReadAsync()
 
 ## <a name="asynchronously-return-a-non-windows-runtime-type"></a>Windows 런타임이 아닌 형식을 비동기식으로 반환
 
-Windows 런타임 형식이 ‘아닌’ 형식을 비동기 방식으로 반환하는 경우 PPL(병렬 패턴 라이브러리) [**concurrency::task**](/cpp/parallel/concrt/reference/task-class)를 반환해야 합니다.  **std::future**보다 성능이 뛰어나고 향후 호환성도 우수한 **concurrency::task**를 사용하는 것이 좋습니다.
+Windows 런타임 형식이 ‘아닌’ 형식을 비동기 방식으로 반환하는 경우 PPL(병렬 패턴 라이브러리) [**concurrency::task**](/cpp/parallel/concrt/reference/task-class)를 반환해야 합니다.** **std::future**보다 성능이 뛰어나고 향후 호환성도 우수한 **concurrency::task**를 사용하는 것이 좋습니다.
 
 > [!TIP]
 > `<pplawait.h>`를 포함하면, **concurrency::task**를 코루틴 형식으로 사용할 수 있습니다.
@@ -237,7 +237,7 @@ IASyncAction DoWorkAsync(Param const& value)
 }
 ```
 
-코루틴에서 실행은 첫 번째 일시 중단 지점까지 동기화됩니다. 이 경우 컨트롤이 호출자에 반환되고 호출하는 프레임이 범위를 벗어납니다. 코루틴이 다시 시작될 때까지 참조 매개 변수가 참조하는 소스 값이 변경되었을 수 있습니다. 코루틴의 관점에서 참조 매개 변수의 수명은 제어되지 않습니다. 따라서 위 예제에서 `co_await`까지는 ‘값’에 액세스해도 안전하지만 이후에는 안전하지 않습니다.  호출자에 의해 *값*이 소멸되는 이벤트에서 그 이후 코루틴 내의 해당 값에 액세스하려고 하면 메모리가 손상됩니다. 함수가 일시 중단되었다가 다시 시작된 후 ‘값’을 사용하려고 시도할 위험이 있는 경우 **DoOtherWorkAsync**에 ‘값’을 안전하게 전달할 수도 없습니다.  
+코루틴에서 실행은 첫 번째 일시 중단 지점까지 동기화됩니다. 이 경우 컨트롤이 호출자에 반환되고 호출하는 프레임이 범위를 벗어납니다. 코루틴이 다시 시작될 때까지 참조 매개 변수가 참조하는 소스 값이 변경되었을 수 있습니다. 코루틴의 관점에서 참조 매개 변수의 수명은 제어되지 않습니다. 따라서 위 예제에서 `co_await`까지는 ‘값’에 액세스해도 안전하지만 이후에는 안전하지 않습니다.** 호출자에 의해 *값*이 소멸되는 이벤트에서 그 이후 코루틴 내의 해당 값에 액세스하려고 하면 메모리가 손상됩니다. 함수가 일시 중단되었다가 다시 시작된 후 ‘값’을 사용하려고 시도할 위험이 있는 경우 **DoOtherWorkAsync**에 ‘값’을 안전하게 전달할 수도 없습니다.****
 
 일시 중단했다가 다시 시작한 후 매개 변수를 안전하게 사용하려면 코루틴이 기본적으로 값으로 전달을 사용하여 값으로 캡처함으로써 수명 문제를 방지해야 합니다. 이 지침을 따르지 않아도 안전하다고 확신할 수 있는 경우는 흔치 않습니다.
 
@@ -287,7 +287,7 @@ IASyncAction DoWorkAsync(Param const& value)
 
 ## <a name="safely-accessing-the-this-pointer-in-a-class-member-coroutine"></a>클래스-멤버 코루틴에서 안전하게 *this* 포인터 액세스
 
-[C++/WinRT의 강한 참조 및 약한 참조](/windows/uwp/cpp-and-winrt-apis/weak-references#safely-accessing-the-this-pointer-in-a-class-member-coroutine)를 참조하세요.
+[C++/WinRT의 강한 참조 및 약한 참조](./weak-references.md#safely-accessing-the-this-pointer-in-a-class-member-coroutine)를 참조하세요.
 
 ## <a name="important-apis"></a>중요 API
 * [concurrency::task 클래스](/cpp/parallel/concrt/reference/task-class)

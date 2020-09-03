@@ -8,23 +8,23 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: fb1daddeb743909417d6483223d5386e64ca5241
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: b18afdeecb3e70f958b3d8908027e59f8c4c1f9e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942783"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172727"
 ---
 # <a name="integrate-your-desktop-app-with-windows-10-and-uwp"></a>데스크톱 앱을 Windows 10 및 UWP와 통합
 
-데스크톱 앱에 [패키지 ID](modernize-packaged-apps.md)가 있는 경우 [패키지 매니페스트](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/schema-root)의 미리 정의된 확장을 사용하여 앱을 Windows 10과 통합할 수 있습니다.
+데스크톱 앱에 [패키지 ID](modernize-packaged-apps.md)가 있는 경우 [패키지 매니페스트](/uwp/schemas/appxpackage/uapmanifestschema/schema-root)의 미리 정의된 확장을 사용하여 앱을 Windows 10과 통합할 수 있습니다.
 
 예를 들어 확장을 사용하여 방화벽 예외를 만들거나, 앱을 파일 형식의 기본 애플리케이션으로 설정하거나, 시작 타일이 앱을 가리키도록 지정할 수 있습니다. 확장을 사용하려면 앱의 패키지 매니페스트 파일에 약간의 XML을 추가하기만 하면 됩니다. 코드는 필요 없습니다.
 
 이 문서에서는 이러한 확장과 확장을 통해 수행할 수 있는 작업을 설명합니다.
 
 > [!NOTE]
-> 이 문서에서 설명하는 기능을 사용하려면 [데스크톱 앱을 MSIX 패키지로 패키징](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root)하거나 [스파스 패키지를 사용하여 앱 ID를 부여](grant-identity-to-nonpackaged-apps.md)하는 두 가지 방법 중 하나로 데스크톱 앱의 [패키지 ID](modernize-packaged-apps.md)를 준비해야 합니다.
+> 이 문서에서 설명하는 기능을 사용하려면 [데스크톱 앱을 MSIX 패키지로 패키징](/windows/msix/desktop/desktop-to-uwp-root)하거나 [스파스 패키지를 사용하여 앱 ID를 부여](grant-identity-to-nonpackaged-apps.md)하는 두 가지 방법 중 하나로 데스크톱 앱의 [패키지 ID](modernize-packaged-apps.md)를 준비해야 합니다.
 
 ## <a name="transition-users-to-your-app"></a>사용자를 나의 앱으로 전환
 
@@ -57,7 +57,7 @@ ms.locfileid: "88942783"
 </Extension>
 ```
 
-전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-rescap3-desktopappmigration)서 찾을 수 있습니다.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-rescap3-desktopappmigration)서 찾을 수 있습니다.
 
 |이름 | 설명 |
 |-------|-------------|
@@ -98,7 +98,7 @@ ms.locfileid: "88942783"
 
 특정 파일 형식에서는 사용자가 기본적으로 데스크톱 버전의 앱 대신 새 패키지된 애플리케이션을 열도록 지정할 수 있습니다.
 
-이렇게 하려면 파일 연결을 상속하려는 각 애플리케이션의 [프로그래밍 ID(ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids)를 지정합니다.
+이렇게 하려면 파일 연결을 상속하려는 각 애플리케이션의 [프로그래밍 ID(ProgID)](/windows/desktop/shell/fa-progids)를 지정합니다.
 
 #### <a name="xml-namespaces"></a>XML 네임스페이스
 
@@ -117,13 +117,13 @@ ms.locfileid: "88942783"
 </Extension>
 ```
 
-전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
 |이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름은 파일 형식을 구성하고 그룹화하는 데 사용할 수 있습니다. 이름은 공백 없이 모두 소문자여야 합니다. |
-|MigrationProgId |파일 연결을 상속하려는 데스크톱 애플리케이션의 애플리케이션, 구성 요소 및 버전을 설명하는 [프로그래밍 ID(ProgID)](https://docs.microsoft.com/windows/desktop/shell/fa-progids)입니다.|
+|MigrationProgId |파일 연결을 상속하려는 데스크톱 애플리케이션의 애플리케이션, 구성 요소 및 버전을 설명하는 [프로그래밍 ID(ProgID)](/windows/desktop/shell/fa-progids)입니다.|
 
 #### <a name="example"></a>예제
 
@@ -176,7 +176,7 @@ ms.locfileid: "88942783"
 </Extension>
 ```
 
-전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
 |이름 |설명 |
 |-------|-------------|
@@ -237,7 +237,7 @@ ms.locfileid: "88942783"
 </Extension>
 ```
 
-전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
 |이름 |설명 |
 |-------|-------------|
@@ -301,7 +301,7 @@ ms.locfileid: "88942783"
 </Extension>
 ```
 
-전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
 |이름 |설명 |
 |-------|-------------|
@@ -367,7 +367,7 @@ ms.locfileid: "88942783"
 </Extension>
 ```
 
-전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-firewallrules)서 찾을 수 있습니다.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-firewallrules)서 찾을 수 있습니다.
 
 |이름 |설명 |
 |-------|-------------|
@@ -406,15 +406,15 @@ ms.locfileid: "88942783"
 
 ### <a name="place-your-dll-files-into-any-folder-of-the-package"></a>패키지의 원하는 폴더에 DLL 파일 배치
 
-[uap6:LoaderSearchPathOverride](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride) 확장을 사용하여 앱의 프로세스에 대한 로더 검색 경로에 사용할 앱 패키지 루트 경로를 기준으로 앱 패키지에서 최대 5개의 폴더 경로를 선언합니다.
+[uap6:LoaderSearchPathOverride](/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride) 확장을 사용하여 앱의 프로세스에 대한 로더 검색 경로에 사용할 앱 패키지 루트 경로를 기준으로 앱 패키지에서 최대 5개의 폴더 경로를 선언합니다.
 
-Windows 앱의 [DLL 검색 순서](https://docs.microsoft.com/windows/win32/dlls/dynamic-link-library-search-order)는 패키지에 실행 권한이 있는 경우 패키지 종속성 그래프에 패키지가 포함됩니다. 기본적으로 여기에는 선택적인 기본 프레임워크 패키지가 포함되지만 패키지 매니페스트의 [uap6:AllowExecution](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-allowexecution) 요소로 덮어쓸 수 있습니다.
+Windows 앱의 [DLL 검색 순서](/windows/win32/dlls/dynamic-link-library-search-order)는 패키지에 실행 권한이 있는 경우 패키지 종속성 그래프에 패키지가 포함됩니다. 기본적으로 여기에는 선택적인 기본 프레임워크 패키지가 포함되지만 패키지 매니페스트의 [uap6:AllowExecution](/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-allowexecution) 요소로 덮어쓸 수 있습니다.
 
-DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포함합니다. 유효 경로에 대한 자세한 내용은 [EffectivePath](https://docs.microsoft.com/uwp/api/windows.applicationmodel.package.effectivepath) 속성(WinRT)과 [PackagePathType](https://docs.microsoft.com/windows/win32/api/appmodel/ne-appmodel-packagepathtype) 열거형(Win32)을 참조하세요.
+DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포함합니다. 유효 경로에 대한 자세한 내용은 [EffectivePath](/uwp/api/windows.applicationmodel.package.effectivepath) 속성(WinRT)과 [PackagePathType](/windows/win32/api/appmodel/ne-appmodel-packagepathtype) 열거형(Win32)을 참조하세요.
 
-패키지가 [uap6:LoaderSearchPathOverride](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride)를 지정하는 경우에는 패키지의 유효 경로 대신 이 정보가 사용됩니다.
+패키지가 [uap6:LoaderSearchPathOverride](/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride)를 지정하는 경우에는 패키지의 유효 경로 대신 이 정보가 사용됩니다.
 
-각 패키지에는 [uap6:LoaderSearchPathOverride](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride) 확장을 하나만 포함할 수 있습니다. 따라서 이 중 하나를 주 패키지에 추가한 다음, 하나를 각 [선택적 패키지 및 관련 세트](/windows/msix/package/optional-packages)에 추가할 수 있습니다.
+각 패키지에는 [uap6:LoaderSearchPathOverride](/uwp/schemas/appxpackage/uapmanifestschema/element-uap6-loadersearchpathoverride) 확장을 하나만 포함할 수 있습니다. 따라서 이 중 하나를 주 패키지에 추가한 다음, 하나를 각 [선택적 패키지 및 관련 세트](/windows/msix/package/optional-packages)에 추가할 수 있습니다.
 
 #### <a name="xml-namespace"></a>XML 네임스페이스
 
@@ -496,7 +496,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 </Extension>
 ```
 
-전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
 |이름 |Description |
 |-------|-------------|
@@ -571,7 +571,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 </Extension>
 ```
 
-전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
 |이름 |Description |
 |-------|-------------|
@@ -633,7 +633,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 </Extension>
 ```
 
-전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
 |이름 |Description |
 |-------|-------------|
@@ -676,7 +676,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 
 파일 탐색기에서 사용자는 이 필드를 사용하여 파일을 그룹화할 수 있습니다. 또한 시스템 구성 요소는 색인 같은 다양한 용도로 이 필드를 사용합니다.
 
-**종류** 필드와 이 필드에서 사용할 수 있는 값에 대한 자세한 내용은 [종류 이름 사용하기](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names)를 참조하세요.
+**종류** 필드와 이 필드에서 사용할 수 있는 값에 대한 자세한 내용은 [종류 이름 사용하기](/windows/desktop/properties/building-property-handlers-user-friendly-kind-names)를 참조하세요.
 
 #### <a name="xml-namespaces"></a>XML 네임스페이스
 
@@ -698,14 +698,14 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 </Extension>
 ```
 
-전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
 |이름 |Description |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름은 파일 형식을 구성하고 그룹화하는 데 사용할 수 있습니다. 이름은 공백 없이 모두 소문자여야 합니다. |
 |FileType |관련 파일 확장명입니다. |
-|value |유효한 [종류 값](https://docs.microsoft.com/windows/desktop/properties/building-property-handlers-user-friendly-kind-names)입니다. |
+|value |유효한 [종류 값](/windows/desktop/properties/building-property-handlers-user-friendly-kind-names)입니다. |
 
 #### <a name="example"></a>예제
 
@@ -759,7 +759,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 </uap:Extension>
 ```
 
-전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
 |이름 |Description |
 |-------|-------------|
@@ -797,7 +797,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 
 ### <a name="specify-a-context-menu-handler-for-a-file-type"></a>파일 형식에 대한 상황에 맞는 메뉴 처리기 지정
 
-데스크톱 애플리케이션에서 [상황에 맞는 메뉴 처리기](https://docs.microsoft.com/windows/desktop/shell/context-menu-handlers)를 정의하는 경우 이 확장을 사용하여 메뉴 처리기를 등록합니다.
+데스크톱 애플리케이션에서 [상황에 맞는 메뉴 처리기](/windows/desktop/shell/context-menu-handlers)를 정의하는 경우 이 확장을 사용하여 메뉴 처리기를 등록합니다.
 
 #### <a name="xml-namespaces"></a>XML 네임스페이스
 
@@ -825,19 +825,19 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 </Extensions>
 ```
 
-[com:ComServer](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-com-comserver) 및 [desktop4:FileExplorerContextMenus](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus)에서 전체 스키마 참조를 찾아보세요.
+[com:ComServer](/uwp/schemas/appxpackage/uapmanifestschema/element-com-comserver) 및 [desktop4:FileExplorerContextMenus](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus)에서 전체 스키마 참조를 찾아보세요.
 
 #### <a name="instructions"></a>Instructions
 
 상황에 맞는 메뉴 처리기를 등록하려면 다음 지침을 따르세요.
 
-1. 데스크톱 애플리케이션에서 [IExplorerCommand](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) 또는 [IExplorerCommandState](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandstate) 인터페이스를 구현하여 [상황에 맞는 메뉴 처리기](https://docs.microsoft.com/windows/desktop/shell/context-menu-handlers)를 구현합니다. 샘플은 [ExplorerCommandVerb](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/ExplorerCommandVerb) 코드 샘플을 참조하세요. 각 구현 개체의 클래스 GUID를 정의해야 합니다. 예를 들어 다음 코드는 [IExplorerCommand](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) 구현의 클래스 ID를 정의합니다.
+1. 데스크톱 애플리케이션에서 [IExplorerCommand](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) 또는 [IExplorerCommandState](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommandstate) 인터페이스를 구현하여 [상황에 맞는 메뉴 처리기](/windows/desktop/shell/context-menu-handlers)를 구현합니다. 샘플은 [ExplorerCommandVerb](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/ExplorerCommandVerb) 코드 샘플을 참조하세요. 각 구현 개체의 클래스 GUID를 정의해야 합니다. 예를 들어 다음 코드는 [IExplorerCommand](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorercommand) 구현의 클래스 ID를 정의합니다.
 
     ```cpp
     class __declspec(uuid("d0c8bceb-28eb-49ae-bc68-454ae84d6264")) CExplorerCommandVerb;
     ```
 
-2. 패키지 매니페스트에서 상황에 맞는 메뉴 처리기 구현의 클래스 ID를 사용하여 COM 서로게이트 서버를 등록하는 [com:ComServer](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-com-comserver) 애플리케이션 확장을 지정합니다.
+2. 패키지 매니페스트에서 상황에 맞는 메뉴 처리기 구현의 클래스 ID를 사용하여 COM 서로게이트 서버를 등록하는 [com:ComServer](/uwp/schemas/appxpackage/uapmanifestschema/element-com-comserver) 애플리케이션 확장을 지정합니다.
 
     ```xml
     <com:Extension Category="windows.comServer">
@@ -849,7 +849,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
     </com:Extension>
     ```
 
-2. 패키지 매니페스트에서 상황에 맞는 메뉴 처리기 구현을 등록하는 [desktop4:FileExplorerContextMenus](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) 애플리케이션 확장을 지정합니다.
+2. 패키지 매니페스트에서 상황에 맞는 메뉴 처리기 구현을 등록하는 [desktop4:FileExplorerContextMenus](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop4-fileexplorercontextmenus) 애플리케이션 확장을 지정합니다.
 
     ```xml
     <desktop4:Extension Category="windows.fileExplorerContextMenus">
@@ -985,7 +985,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 </Extension>
 ```
 
-전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol)서 찾을 수 있습니다.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol)서 찾을 수 있습니다.
 
 |이름 |Description |
 |-------|-------------|
@@ -1069,7 +1069,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 </Package>
 ```
 
-전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
 <a id="executable"></a>
 
@@ -1106,7 +1106,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 |-------|-------------|
 |범주 |항상 ``windows.startupTask``입니다.|
 |실행 파일 |시작하려는 실행 파일의 상대 경로입니다. |
-|TaskId |작업의 고유 식별자입니다. 이 식별자를 사용하여 애플리케이션에서 [Windows.ApplicationModel.StartupTask](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.StartupTask) 클래스의 API를 호출하여 시작 작업을 프로그래밍 방식으로 사용하거나 사용하지 않을 수 있습니다. |
+|TaskId |작업의 고유 식별자입니다. 이 식별자를 사용하여 애플리케이션에서 [Windows.ApplicationModel.StartupTask](/uwp/api/Windows.ApplicationModel.StartupTask) 클래스의 API를 호출하여 시작 작업을 프로그래밍 방식으로 사용하거나 사용하지 않을 수 있습니다. |
 |사용 |작업이 처음에 활성화 또는 비활성화 상태로 시작할 것인지를 나타냅니다. 사용하는 작업은 다음번에 사용자가 로그온할 때 실행됩니다(사용자가 사용하지 않도록 설정하지 않는 한). |
 |DisplayName |작업 관리자에 표시되는 작업의 이름입니다. ```ms-resource```를 사용하여 이 문자열을 지역화할 수 있습니다. |
 
@@ -1162,13 +1162,13 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 |범주 |항상 ``windows.autoPlayHandler``입니다.
 |ActionDisplayName |사용자가 PC에 연결하는 디바이스로 수행할 수 있는 작업을 나타내는 문자열(예: "파일 가져오기" 또는 "비디오 재생")입니다. |
 |ProviderDisplayName | 애플리케이션이나 서비스를 나타내는 문자열(예: "Contoso 비디오 플레이어")입니다. |
-|ContentEvent |사용자에게 ``ActionDisplayName`` 및 ``ProviderDisplayName``을 알리는 메시지에 표시되는 콘텐츠 이벤트의 이름입니다. 콘텐츠 이벤트는 카메라 메모리 카드, 썸 드라이브(thumb drive) 또는 DVD 같은 볼륨 디바이스가 PC에 삽입될 때 발생합니다. 이러한 이벤트의 전체 목록은 [여기](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference)서 찾을 수 있습니다.  |
+|ContentEvent |사용자에게 ``ActionDisplayName`` 및 ``ProviderDisplayName``을 알리는 메시지에 표시되는 콘텐츠 이벤트의 이름입니다. 콘텐츠 이벤트는 카메라 메모리 카드, 썸 드라이브(thumb drive) 또는 DVD 같은 볼륨 디바이스가 PC에 삽입될 때 발생합니다. 이러한 이벤트의 전체 목록은 [여기](/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference)서 찾을 수 있습니다.  |
 |동사 |동사 설정은 선택한 옵션에 대해 애플리케이션에 전달된 값을 식별합니다. 자동 실행 이벤트에 대해 여러 개의 시작 작업을 지정하고 동사 설정을 사용하여 사용자가 앱에 대해 선택한 옵션을 확인할 수 있습니다. 앱에 전달된 시작 이벤트 인수의 동사 속성을 확인하여 사용자가 선택한 옵션을 알 수 있습니다. [동사] 설정에는 예약된 [open]을 제외한 모든 값을 사용할 수 있습니다. |
-|DropTargetHandler |[IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017)을 구현하는 애플리케이션의 클래스 ID입니다. 이동식 미디어의 파일은 [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 구현의 [Drop](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) 메서드에 전달됩니다.  |
-|매개 변수 |모든 콘텐츠 이벤트에 대해 [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 인터페이스를 구현할 필요가 없습니다. 모든 콘텐츠 이벤트에 대해 [IDropTarget](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 인터페이스를 구현하는 대신 명령줄 매개 변수를 제공할 수 있습니다. 이러한 이벤트의 경우 자동 실행이 해당 명령줄 매개 변수를 사용하여 애플리케이션을 시작합니다. 앱의 초기화 코드에서 매개 변수를 분석하여 이 매개 변수가 자동 실행에서 시작되었는지 확인한 다음, 사용자 지정 구현을 제공할 수 있습니다. |
-|DeviceEvent |사용자에게 ``ActionDisplayName`` 및 ``ProviderDisplayName``을 알리는 메시지에 표시되는 디바이스 이벤트의 이름입니다. 디바이스 이벤트는 디바이스가 PC에 연결될 때 발생합니다. 디바이스 이벤트는 ``WPD`` 문자열로 시작하며 [여기](https://docs.microsoft.com/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference)서 찾을 수 있습니다. |
-|HWEventHandler |[IHWEventHandler](https://docs.microsoft.com/windows/desktop/api/shobjidl/nn-shobjidl-ihweventhandler)를 구현하는 애플리케이션의 클래스 ID입니다. |
-|InitCmdLine |[IHWEventHandler](https://docs.microsoft.com/windows/desktop/api/shobjidl/nn-shobjidl-ihweventhandler) 인터페이스의 [Initialize](https://docs.microsoft.com/windows/desktop/api/shobjidl/nf-shobjidl-ihweventhandler-initialize) 메서드에 전달하려는 문자열 매개 변수입니다. |
+|DropTargetHandler |[IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017)을 구현하는 애플리케이션의 클래스 ID입니다. 이동식 미디어의 파일은 [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 구현의 [Drop](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) 메서드에 전달됩니다.  |
+|매개 변수 |모든 콘텐츠 이벤트에 대해 [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 인터페이스를 구현할 필요가 없습니다. 모든 콘텐츠 이벤트에 대해 [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 인터페이스를 구현하는 대신 명령줄 매개 변수를 제공할 수 있습니다. 이러한 이벤트의 경우 자동 실행이 해당 명령줄 매개 변수를 사용하여 애플리케이션을 시작합니다. 앱의 초기화 코드에서 매개 변수를 분석하여 이 매개 변수가 자동 실행에서 시작되었는지 확인한 다음, 사용자 지정 구현을 제공할 수 있습니다. |
+|DeviceEvent |사용자에게 ``ActionDisplayName`` 및 ``ProviderDisplayName``을 알리는 메시지에 표시되는 디바이스 이벤트의 이름입니다. 디바이스 이벤트는 디바이스가 PC에 연결될 때 발생합니다. 디바이스 이벤트는 ``WPD`` 문자열로 시작하며 [여기](/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference)서 찾을 수 있습니다. |
+|HWEventHandler |[IHWEventHandler](/windows/desktop/api/shobjidl/nn-shobjidl-ihweventhandler)를 구현하는 애플리케이션의 클래스 ID입니다. |
+|InitCmdLine |[IHWEventHandler](/windows/desktop/api/shobjidl/nn-shobjidl-ihweventhandler) 인터페이스의 [Initialize](/windows/desktop/api/shobjidl/nf-shobjidl-ihweventhandler-initialize) 메서드에 전달하려는 문자열 매개 변수입니다. |
 
 ### <a name="example"></a>예제
 
@@ -1199,14 +1199,14 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 
 사용자가 업데이트를 설치할 때 애플리케이션이 열려 있으면 애플리케이션을 닫습니다.
 
-업데이트 완료 후 애플리케이션을 다시 시작하려면 다시 시작하기를 원하는 모든 프로세스에서 [RegisterApplicationRestart](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-registerapplicationrestart) 기능을 호출합니다.
+업데이트 완료 후 애플리케이션을 다시 시작하려면 다시 시작하기를 원하는 모든 프로세스에서 [RegisterApplicationRestart](/windows/desktop/api/winbase/nf-winbase-registerapplicationrestart) 기능을 호출합니다.
 
-애플리케이션의 각 활성 창은 [WM_QUERYENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-queryendsession) 메시지를 수신합니다. 이 시점에서 애플리케이션은 필요한 경우 명령줄을 업데이트할 [RegisterApplicationRestart](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-registerapplicationrestart) 기능을 호출합니다.
+애플리케이션의 각 활성 창은 [WM_QUERYENDSESSION](/windows/desktop/Shutdown/wm-queryendsession) 메시지를 수신합니다. 이 시점에서 애플리케이션은 필요한 경우 명령줄을 업데이트할 [RegisterApplicationRestart](/windows/desktop/api/winbase/nf-winbase-registerapplicationrestart) 기능을 호출합니다.
 
-애플리케이션의 각 창에서 [WM_ENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-endsession) 메시지를 수신하면 애플리케이션은 데이터를 저장한 후 종료됩니다.
+애플리케이션의 각 창에서 [WM_ENDSESSION](/windows/desktop/Shutdown/wm-endsession) 메시지를 수신하면 애플리케이션은 데이터를 저장한 후 종료됩니다.
 
 >[!NOTE]
-> 또한 활성 창은 애플리케이션이 [WM ENDSESSION](https://docs.microsoft.com/windows/desktop/Shutdown/wm-endsession)을 처리하지 않는 경우에도 [WM_CLOSE](https://docs.microsoft.com/windows/desktop/winmsg/wm-close) 메시지를 수신합니다.
+> 또한 활성 창은 애플리케이션이 [WM ENDSESSION](/windows/desktop/Shutdown/wm-endsession)을 처리하지 않는 경우에도 [WM_CLOSE](/windows/desktop/winmsg/wm-close) 메시지를 수신합니다.
 
 이때 애플리케이션에서 30초 내에 프로세스를 종료하지 않으면 플랫폼에서 강제로 프로세스를 종료합니다.
 
@@ -1242,7 +1242,7 @@ XPS(XML Paper Specification) 형식으로 인쇄 데이터를 수신하려면 �
 </Extension>
 ```
 
-전체 스키마 참조는 [여기](https://docs.microsoft.com/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-appprinter)서 찾을 수 있습니다.
+전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-appprinter)서 찾을 수 있습니다.
 
 |이름 |Description |
 |-------|-------------|
@@ -1375,7 +1375,7 @@ XPS(XML Paper Specification) 형식으로 인쇄 데이터를 수신하려면 �
 
 이러한 확장은 모든 디바이스에서 실행되는 유니버설 Windows 플랫폼 사용자 인터페이스를 만들고 싶으면서도 Win32 애플리케이션의 구성 요소가 완전 신뢰 모드에서 계속 실행되도록 하고 싶은 경우에 유용하게 사용할 수 있습니다.
 
-Win32 앱을 위한 Windows 앱 패키지를 만든 후 UWP 앱의 패키지 파일에 이 확장을 추가하기만 하면 됩니다. 이 확장은 Windows 앱 패키지의 실행 파일을 시작하려 한다는 것을 나타냅니다.  UWP 앱과 Win32 앱 간에 통신을 원하는 경우에는 하나 이상의 [앱 서비스](/windows/uwp/launch-resume/app-services)를 설정할 수 있습니다. 이 시나리오에 대한 자세한 내용은 [여기](https://blogs.msdn.microsoft.com/appconsult/2016/12/19/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app/)를 참조하세요.
+Win32 앱을 위한 Windows 앱 패키지를 만든 후 UWP 앱의 패키지 파일에 이 확장을 추가하기만 하면 됩니다. 이 확장은 Windows 앱 패키지의 실행 파일을 시작하려 한다는 것을 나타냅니다.  UWP 앱과 Win32 앱 간에 통신을 원하는 경우에는 하나 이상의 [앱 서비스](/windows/uwp/launch-resume/app-services)를 설정할 수 있습니다. 이 시나리오에 대한 자세한 내용은 [여기](/archive/blogs/appconsult/desktop-bridge-the-migrate-phase-invoking-a-win32-process-from-a-uwp-app)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

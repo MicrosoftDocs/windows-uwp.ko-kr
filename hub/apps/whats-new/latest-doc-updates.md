@@ -6,18 +6,18 @@ ms.date: 08/3/2020
 ms.localizationpriority: medium
 ms.author: quradic
 author: QuinnRadich
-ms.openlocfilehash: 84766bb8d3fe22f947add2a3694e546738fc67a3
-ms.sourcegitcommit: dccba7256765116f06cf96143eb3cbaa12d7fe0b
+ms.openlocfilehash: 95f11f5bd9ff756611dfef96f260489a881fdd6d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523529"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173707"
 ---
 # <a name="latest-updates-to-the-windows-developer-docs"></a>Windows 개발자 문서의 최신 업데이트
 
 Windows 개발자 문서는 정기적으로 개선된 최신 정보와 콘텐츠로 업데이트됩니다. 다음은 2020년 8월 3일에 대폭 업데이트된 문서입니다.
 
-참고: Windows 10 빌드 19041(2004라고도 함)의 일부로 추가된 특정 API 목록은 [이 목록](https://docs.microsoft.com/windows/uwp/whats-new/windows-10-build-19041-api-diff)을 참조하세요.
+참고: Windows 10 빌드 19041(2004라고도 함)의 일부로 추가된 특정 API 목록은 [이 목록](/windows/uwp/whats-new/windows-10-build-19041-api-diff)을 참조하세요.
 
 ## <a name="winrt-conceptual"></a>WinRT 개념
 <ul>

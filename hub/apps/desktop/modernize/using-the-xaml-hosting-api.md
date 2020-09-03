@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 36c3aeb7a51c84e92c5bca461aee7efe50740237
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8427519dd010553eb1f4f00f951dcc747a94b0c0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80218463"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174187"
 ---
 # <a name="using-the-uwp-xaml-hosting-api-in-a-c-win32-app"></a>C++ Win32 앱에서 UWP XAML 호스팅 API 사용
 
@@ -56,11 +56,11 @@ C++ Win32 앱에서 XAML 호스팅 API를 사용하기 위한 코드 예제를 �
 
 ### <a name="wpf-and-windows-forms"></a>WPF 및 Windows Forms
 
-Windows 커뮤니티 도구 키트의 [WindowsXamlHost](https://docs.microsoft.com/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤은 WPF 및 Windows Forms 앱에서 UWP 호스팅 API를 사용하기 위한 참조 샘플로 사용됩니다. 소스 코드는 다음 위치에서 확인할 수 있습니다.
+Windows 커뮤니티 도구 키트의 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤은 WPF 및 Windows Forms 앱에서 UWP 호스팅 API를 사용하기 위한 참조 샘플로 사용됩니다. 소스 코드는 다음 위치에서 확인할 수 있습니다.
 
-* WPF 버전 컨트롤의 경우 [여기로 이동](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Wpf.UI.XamlHost)합니다. WPF 버전은 [System.Windows.Interop.HwndHost](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost)에서 파생됩니다.
+* WPF 버전 컨트롤의 경우 [여기로 이동](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Wpf.UI.XamlHost)합니다. WPF 버전은 [System.Windows.Interop.HwndHost](/dotnet/api/system.windows.interop.hwndhost)에서 파생됩니다.
 
-* Windows Forms 버전 컨트롤을 보려면 [여기로 이동](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Forms.UI.XamlHost)합니다. Windows Forms 버전은 [System.Windows.Forms.Control](https://docs.microsoft.com/dotnet/api/system.windows.forms.control)에서 파생됩니다.
+* Windows Forms 버전 컨트롤을 보려면 [여기로 이동](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Forms.UI.XamlHost)합니다. Windows Forms 버전은 [System.Windows.Forms.Control](/dotnet/api/system.windows.forms.control)에서 파생됩니다.
 
 > [!NOTE]
 > WPF 및 Windows Forms 앱에서는 UWP XAML 호스팅 API를 직접 사용하는 대신, Windows 커뮤니티 도구 키트에서 [XAML Islands .NET 컨트롤](xaml-islands.md#wpf-and-windows-forms-applications)을 사용하는 것이 좋습니다. 이 문서의 WPF 및 Windows Forms 샘플 링크는 설명을 위한 목적으로만 제공됩니다.
@@ -71,25 +71,25 @@ UWP XAML 호스팅 API는 이러한 기본 Windows 런타임 형식 및 COM 인�
 
 |  형식 또는 인터페이스 | 설명 |
 |--------------------|-------------|
-| [WindowsXamlManager](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) | 이 클래스는 UWP XAML 프레임워크를 나타냅니다. 이 클래스는 데스크톱 앱의 현재 스레드에서 UWP XAML 프레임워크를 초기화하는 단일 정적 [InitializeForCurrentThread](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager.initializeforcurrentthread) 메서드를 제공합니다. |
-| [DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) | 이 클래스는 데스크톱 앱에서 호스트하는 UWP XAML 콘텐츠의 인스턴스를 나타냅니다. 이 클래스의 가장 중요한 멤버는 [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.content) 속성입니다. 이 속성을 호스트하려는 [Windows.UI.Xaml.UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement)에 할당합니다. 이 클래스에는 키보드 포커스 탐색을 XAML Islands로/부터 라우팅하는 다른 멤버도 있습니다. |
+| [WindowsXamlManager](/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) | 이 클래스는 UWP XAML 프레임워크를 나타냅니다. 이 클래스는 데스크톱 앱의 현재 스레드에서 UWP XAML 프레임워크를 초기화하는 단일 정적 [InitializeForCurrentThread](/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager.initializeforcurrentthread) 메서드를 제공합니다. |
+| [DesktopWindowXamlSource](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) | 이 클래스는 데스크톱 앱에서 호스트하는 UWP XAML 콘텐츠의 인스턴스를 나타냅니다. 이 클래스의 가장 중요한 멤버는 [Content](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.content) 속성입니다. 이 속성을 호스트하려는 [Windows.UI.Xaml.UIElement](/uwp/api/windows.ui.xaml.uielement)에 할당합니다. 이 클래스에는 키보드 포커스 탐색을 XAML Islands로/부터 라우팅하는 다른 멤버도 있습니다. |
 | IDesktopWindowXamlSourceNative | 이 COM 인터페이스는 앱의 XAML Island를 부모 UI 요소에 연결하는 데 사용하는 **AttachToWindow** 메서드를 제공합니다. 모든 **DesktopWindowXamlSource** 개체는 이 인터페이스를 구현합니다. 이 인터페이스는 windows.ui.xaml.hosting.desktopwindowxamlsource.h에서 선언됩니다. |
 | IDesktopWindowXamlSourceNative2 | 이 COM 인터페이스는 UWP XAML 프레임워크에서 특정 Windows 메시지를 올바르게 처리할 수 있도록 하는 **PreTranslateMessage** 메서드를 제공합니다. 모든 **DesktopWindowXamlSource** 개체는 이 인터페이스를 구현합니다. 이 인터페이스는 windows.ui.xaml.hosting.desktopwindowxamlsource.h에서 선언됩니다. |
 
 다음 다이어그램은 데스크톱 앱에 호스트되는 XAML Island의 개체 계층 구조를 보여 줍니다.
 
-* 기본 수준에는 XAML Island를 호스트할 앱의 UI 요소가 있습니다. 이 UI 요소에는 창 핸들(HWND)이 있어야 합니다. C++ Win32의 [window](https://docs.microsoft.com/windows/desktop/winmsg/about-windows)를 포함하는 XAML 아일랜드를 호스팅할 수 있는 UI 요소에 대한 예로는 WPE 앱용 [System.Windows.Interop.HwndHost](https://docs.microsoft.com/dotnet/api/system.windows.interop.hwndhost) 및 Windows Forms 앱용 [System.Windows.Forms.Control](https://docs.microsoft.com/dotnet/api/system.windows.forms.control)이 있습니다.
+* 기본 수준에는 XAML Island를 호스트할 앱의 UI 요소가 있습니다. 이 UI 요소에는 창 핸들(HWND)이 있어야 합니다. C++ Win32의 [window](/windows/desktop/winmsg/about-windows)를 포함하는 XAML 아일랜드를 호스팅할 수 있는 UI 요소에 대한 예로는 WPE 앱용 [System.Windows.Interop.HwndHost](/dotnet/api/system.windows.interop.hwndhost) 및 Windows Forms 앱용 [System.Windows.Forms.Control](/dotnet/api/system.windows.forms.control)이 있습니다.
 
 * 다음 수준에는 **DesktopWindowXamlSource** 개체가 있습니다. 이 개체는 XAML Island를 호스트하기 위한 인프라를 제공합니다. 코드는 이 개체를 만들고 부모 UI 요소에 연결하는 일을 담당합니다.
 
 * **DesktopWindowXamlSource**를 만들 때 이 개체는 자동으로 네이티브 자식 창을 만들어 UWP 컨트롤을 호스트합니다. 이 네이티브 자식 창은 주로 코드에서 추상화되지만 필요한 경우 해당 핸들(HWND)에 액세스할 수 있습니다.
 
-* 마지막으로, 최상위 수준에는 데스크톱 앱에서 호스트하려는 UWP 컨트롤이 있습니다. Windows SDK에서 제공하는 UWP 컨트롤과 사용자 지정 컨트롤을 포함하여 [Windows.UI.Xaml.UIElement](https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement)에서 파생되는 UWP 개체일 수 있습니다.
+* 마지막으로, 최상위 수준에는 데스크톱 앱에서 호스트하려는 UWP 컨트롤이 있습니다. Windows SDK에서 제공하는 UWP 컨트롤과 사용자 지정 컨트롤을 포함하여 [Windows.UI.Xaml.UIElement](/uwp/api/windows.ui.xaml.uielement)에서 파생되는 UWP 개체일 수 있습니다.
 
 ![DesktopWindowXamlSource 아키텍처](images/xaml-islands/xaml-hosting-api-rev2.png)
 
 > [!NOTE]
-> 데스크톱 앱에서 XAML 아일랜드를 호스팅하는 경우 동일한 스레드에서 여러 개의 XAML 콘텐츠 트리를 동시에 실행할 수 있습니다. XAML 아일랜드에서 XAML 콘텐츠 트리의 루트 요소에 액세스하고 해당 요소가 호스팅되는 컨텍스트에 대한 관련 정보를 가져오려면 [XamlRoot](https://docs.microsoft.com/uwp/api/windows.ui.xaml.xamlroot) 클래스를 사용합니다. [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow), [ApplicationView](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview) 및 [Window](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window) API는 XAML Islands에 대한 올바른 정보를 제공하지 않습니다. 자세한 내용은 [이 섹션](xaml-islands.md#window-host-context-for-xaml-islands)을 참조하세요.
+> 데스크톱 앱에서 XAML 아일랜드를 호스팅하는 경우 동일한 스레드에서 여러 개의 XAML 콘텐츠 트리를 동시에 실행할 수 있습니다. XAML 아일랜드에서 XAML 콘텐츠 트리의 루트 요소에 액세스하고 해당 요소가 호스팅되는 컨텍스트에 대한 관련 정보를 가져오려면 [XamlRoot](/uwp/api/windows.ui.xaml.xamlroot) 클래스를 사용합니다. [CoreWindow](/uwp/api/windows.ui.core.corewindow), [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview) 및 [Window](/uwp/api/windows.ui.xaml.window) API는 XAML Islands에 대한 올바른 정보를 제공하지 않습니다. 자세한 내용은 [이 섹션](xaml-islands.md#window-host-context-for-xaml-islands)을 참조하세요.
 
 ## <a name="troubleshooting"></a>문제 해결
 
@@ -97,7 +97,7 @@ UWP XAML 호스팅 API는 이러한 기본 Windows 런타임 형식 및 COM 인�
 
 | 문제 | 해결 방법 |
 |-------|------------|
-| 앱은 다음 메시지와 함께 **COMException**을 수신합니다. "DesktopWindowXamlSource를 활성화할 수 없습니다. 이 형식은 UWP 앱에서 사용할 수 없습니다." 또는 "WindowsXamlManager를 활성화할 수 없습니다. 이 형식은 UWP 앱에서 사용할 수 없습니다." | 이 오류는 UWP 앱에서 UWP XAML 호스팅 API를 사용하려고 할 때, 특히 [DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) 또는 [WindowsXamlManager](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) 형식을 인스턴스화하려고 함을 나타냅니다. UWP XAML 호스팅 API는 WPF, Windows Forms 및 C++ Win32 애플리케이션과 같은 비 UWP 데스크톱 앱에서만 사용할 수 있습니다. |
+| 앱은 다음 메시지와 함께 **COMException**을 수신합니다. "DesktopWindowXamlSource를 활성화할 수 없습니다. 이 형식은 UWP 앱에서 사용할 수 없습니다." 또는 "WindowsXamlManager를 활성화할 수 없습니다. 이 형식은 UWP 앱에서 사용할 수 없습니다." | 이 오류는 UWP 앱에서 UWP XAML 호스팅 API를 사용하려고 할 때, 특히 [DesktopWindowXamlSource](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) 또는 [WindowsXamlManager](/uwp/api/windows.ui.xaml.hosting.windowsxamlmanager) 형식을 인스턴스화하려고 함을 나타냅니다. UWP XAML 호스팅 API는 WPF, Windows Forms 및 C++ Win32 애플리케이션과 같은 비 UWP 데스크톱 앱에서만 사용할 수 있습니다. |
 
 ### <a name="error-trying-to-use-the-windowsxamlmanager-or-desktopwindowxamlsource-types"></a>WindowsXamlManager 또는 DesktopWindowXamlSource 형식을 사용하는 동안 오류 발생
 
@@ -115,7 +115,7 @@ UWP XAML 호스팅 API는 이러한 기본 Windows 런타임 형식 및 COM 인�
 
 | 문제 | 해결 방법 |
 |-------|------------|
-| 앱은 다음 메시지와 함께 **COMException**을 수신합니다. "지정된 HWND가 이전에 동일한 스레드에서 AttachToWindow에 전달된 HWND와 다른 최상위 창의 하위 항목이므로 AttachToWindow 메서드가 실패했습니다." | 이 오류는 애플리케이션이 **IDesktopWindowXamlSourceNative::AttachToWindow** 메서드를 호출하고, 동일한 스레드에서 이 메서드에 대한 이전 호출에서 지정한 창과는 다른 최상위 창의 하위에 있는 창의 HWND로 전달되었음을 나타냅니다.</p></p>애플리케이션이 특정 스레드에서 **AttachToWindow**를 호출하면 같은 스레드의 다른 모든 [DesktopWindowXamlSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) 개체는 **AttachToWindow**에 대한 첫 번째 호출에서 전달된 것과 동일한 최상위 창의 하위에 있는 창에만 연결할 수 있습니다. 모든 **DesktopWindowXamlSource** 개체가 특정 스레드에 대해 닫히면 다음 **DesktopWindowXamlSource**를 사용하여 임의 창에 다시 연결할 수 있습니다.</p></p>이 문제를 해결하려면 이 스레드의 다른 최상위 창에 바인딩된 **DesktopWindowXamlSource** 개체를 모두 닫거나 이 **DesktopWindowXamlSource**에 대한 새 스레드를 만듭니다. |
+| 앱은 다음 메시지와 함께 **COMException**을 수신합니다. "지정된 HWND가 이전에 동일한 스레드에서 AttachToWindow에 전달된 HWND와 다른 최상위 창의 하위 항목이므로 AttachToWindow 메서드가 실패했습니다." | 이 오류는 애플리케이션이 **IDesktopWindowXamlSourceNative::AttachToWindow** 메서드를 호출하고, 동일한 스레드에서 이 메서드에 대한 이전 호출에서 지정한 창과는 다른 최상위 창의 하위에 있는 창의 HWND로 전달되었음을 나타냅니다.</p></p>애플리케이션이 특정 스레드에서 **AttachToWindow**를 호출하면 같은 스레드의 다른 모든 [DesktopWindowXamlSource](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) 개체는 **AttachToWindow**에 대한 첫 번째 호출에서 전달된 것과 동일한 최상위 창의 하위에 있는 창에만 연결할 수 있습니다. 모든 **DesktopWindowXamlSource** 개체가 특정 스레드에 대해 닫히면 다음 **DesktopWindowXamlSource**를 사용하여 임의 창에 다시 연결할 수 있습니다.</p></p>이 문제를 해결하려면 이 스레드의 다른 최상위 창에 바인딩된 **DesktopWindowXamlSource** 개체를 모두 닫거나 이 **DesktopWindowXamlSource**에 대한 새 스레드를 만듭니다. |
 
 ## <a name="related-topics"></a>관련 항목
 

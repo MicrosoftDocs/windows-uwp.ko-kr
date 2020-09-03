@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b97041e305cfaac2a5fe202212741a282dccdb54
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 8138256dbde751768e5d9a707ffc1ad23ace7494
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968878"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173527"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>컬렉션 및 목록에 대한 상황에 맞는 명령
 
@@ -25,7 +25,7 @@ ms.locfileid: "82968878"
 
 많은 앱에는 사용자가 조작할 수 있는 목록, 표 및 트리 형식의 콘텐츠 컬렉션이 있습니다. 예를 들어 사용자가 항목을 삭제하거나, 항목의 이름을 바꾸거나, 항목에 플래그를 지정하거나, 항목을 새로 고칠 수 있습니다. 이 문서에서는 상황에 맞는 명령을 사용하여 모든 입력 형식에 대한 최상의 환경을 제공하는 방식으로 이러한 종류의 작업을 구현하는 방법을 보여줍니다.  
 
-> **중요 API**: [ICommand 인터페이스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand), [UIElement.ContextFlyout 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout), [INotifyPropertyChanged 인터페이스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.inotifypropertychanged)
+> **중요 API**: [ICommand 인터페이스](/uwp/api/Windows.UI.Xaml.Input.ICommand), [UIElement.ContextFlyout 속성](/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout), [INotifyPropertyChanged 인터페이스](/uwp/api/windows.ui.xaml.data.inotifypropertychanged)
 
 ![다양한 입력을 사용하여 즐겨찾기 명령 수행](images/ContextualCommand_AddFavorites.png)
 
@@ -94,13 +94,13 @@ public class PodcastObject : INotifyPropertyChanged
 }
 ```
 
-사용자가 IsFavorite 속성을 전환할 때 속성 변경에 응답하도록 PodcastObject가 [INotifyPropertyChanged](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Data.INotifyPropertyChanged)를 구현함을 확인할 수 있습니다.
+사용자가 IsFavorite 속성을 전환할 때 속성 변경에 응답하도록 PodcastObject가 [INotifyPropertyChanged](/uwp/api/Windows.UI.Xaml.Data.INotifyPropertyChanged)를 구현함을 확인할 수 있습니다.
 
 ## <a name="defining-commands-with-the-icommand-interface"></a>ICommand 인터페이스로 명령 정의
 
-[ICommand 인터페이스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)로 여러 입력 형식에 사용 가능한 명령을 정의할 수 있습니다. 예를 들어 사용자가 Delete 키를 누르는 경우와 상황에 맞는 메뉴에서 "삭제"를 마우스 오른쪽 단추로 클릭하는 경우에 대해 각각 하나씩 총 두 가지 이벤트 처리기의 삭제 명령에 똑같은 코드를 작성하는 대신, [ICommand](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)로 삭제 논리를 한 번에 구현한 다음, 여러 입력 형식에 사용할 수 있습니다.
+[ICommand 인터페이스](/uwp/api/Windows.UI.Xaml.Input.ICommand)로 여러 입력 형식에 사용 가능한 명령을 정의할 수 있습니다. 예를 들어 사용자가 Delete 키를 누르는 경우와 상황에 맞는 메뉴에서 "삭제"를 마우스 오른쪽 단추로 클릭하는 경우에 대해 각각 하나씩 총 두 가지 이벤트 처리기의 삭제 명령에 똑같은 코드를 작성하는 대신, [ICommand](/uwp/api/Windows.UI.Xaml.Input.ICommand)로 삭제 논리를 한 번에 구현한 다음, 여러 입력 형식에 사용할 수 있습니다.
 
-"즐겨찾기에 추가" 작업을 나타내는 ICommand를 정의해야 합니다. 명령의 [Execute](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand.Execute) 메서드를 사용하여 즐겨찾기에 팟캐스트를 추가하겠습니다. CommandParameter 속성을 사용하여 바인딩할 수 있는 명령의 매개 변수를 통해 실행 명령에 특정 팟캐스트가 제공됩니다.
+"즐겨찾기에 추가" 작업을 나타내는 ICommand를 정의해야 합니다. 명령의 [Execute](/uwp/api/Windows.UI.Xaml.Input.ICommand.Execute) 메서드를 사용하여 즐겨찾기에 팟캐스트를 추가하겠습니다. CommandParameter 속성을 사용하여 바인딩할 수 있는 명령의 매개 변수를 통해 실행 명령에 특정 팟캐스트가 제공됩니다.
 
 ```csharp
 public class FavoriteCommand: ICommand
@@ -127,7 +127,7 @@ public class FavoriteCommand: ICommand
 </Application.Resources>
 ```
 
-명령을 실행하려면 해당 [Execute](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand.Execute) 메서드를 호출합니다.
+명령을 실행하려면 해당 [Execute](/uwp/api/Windows.UI.Xaml.Input.ICommand.Execute) 메서드를 호출합니다.
 
 ```csharp
 // Favorite the item using the defined command
@@ -138,7 +138,7 @@ favoriteCommand.Execute(PodcastObject);
 
 ## <a name="creating-a-usercontrol-to-respond-to-a-variety-of-inputs"></a>UserControl을 만들어 다양한 입력에 응답
 
-항목 목록이 있고 각 항목이 여러 입력에 응답해야 하는 경우 항목에 대한 [UserControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl)을 정의하고 이를 통해 항목의 상황에 맞는 메뉴와 이벤트 처리기를 정의하여 코드를 단순화할 수 있습니다. 
+항목 목록이 있고 각 항목이 여러 입력에 응답해야 하는 경우 항목에 대한 [UserControl](/uwp/api/Windows.UI.Xaml.Controls.UserControl)을 정의하고 이를 통해 항목의 상황에 맞는 메뉴와 이벤트 처리기를 정의하여 코드를 단순화할 수 있습니다. 
 
 Visual Studio에서 UserControl을 만들려면 다음을 수행합니다.
 1. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭합니다. 상황에 맞는 메뉴가 나타납니다.
@@ -151,7 +151,7 @@ Visual Studio에서 UserControl을 만들려면 다음을 수행합니다.
 - 호버 단추 표시
 - 살짝 밀기 제스처 수행
 
-이러한 동작을 캡슐화하고 FavoriteCommand를 사용하기 위해 이름이 "PodcastUserControl"인 새 [UserControl](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.UserControl)을 생성하여 목록에 팟캐스트를 표시하겠습니다.
+이러한 동작을 캡슐화하고 FavoriteCommand를 사용하기 위해 이름이 "PodcastUserControl"인 새 [UserControl](/uwp/api/Windows.UI.Xaml.Controls.UserControl)을 생성하여 목록에 팟캐스트를 표시하겠습니다.
 
 PodcastUserControl은 PodcastObject의 필드를 TextBlock으로 표시하고 다양한 사용자 상호 작용에 응답합니다. 이 문서에서는 PodcastUserControl을 참조하고 확장하겠습니다.
 
@@ -246,7 +246,7 @@ PodcastObject를 몇 개 생성한 후 ListView에 PodcastObject를 바인딩하
 
 ### <a name="contextflyout"></a>ContextFlyout
 
-UIElement 클래스에서 정의한 [ContextFlyout 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout)을 사용하면 모든 입력 형식에서 작동하는 상황에 맞는 메뉴를 쉽게 만들 수 있습니다. MenuFlyout을 사용하여 상황에 맞는 메뉴를 나타내는 플라이아웃을 제공하면 사용자가 위에 정의된 "상황에 맞는 작업"을 수행할 때 항목에 해당하는 MenuFlyout이 표시됩니다.
+UIElement 클래스에서 정의한 [ContextFlyout 속성](/uwp/api/Windows.UI.Xaml.UIElement.ContextFlyout)을 사용하면 모든 입력 형식에서 작동하는 상황에 맞는 메뉴를 쉽게 만들 수 있습니다. MenuFlyout을 사용하여 상황에 맞는 메뉴를 나타내는 플라이아웃을 제공하면 사용자가 위에 정의된 "상황에 맞는 작업"을 수행할 때 항목에 해당하는 MenuFlyout이 표시됩니다.
 
 PodcastUserControl에 ContextFlyout을 추가하겠습니다. ContextFlyout으로 지정된 MenuFlyout에는 팟캐스트를 즐겨찾기에 추가하기 위한 단일 항목이 들어 있습니다. 이 MenuFlyoutItem은 PodcastObject에 CommandParamter가 바인딩된 상태로 위에 정의된 favoriteCommand를 사용합니다.
 
@@ -265,7 +265,7 @@ PodcastUserControl에 ContextFlyout을 추가하겠습니다. ContextFlyout으�
 
 ```
 
-이제 [ContextRequested 이벤트](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.ContextRequested)를 사용하여 상황에 맞는 작업에 응답할 수도 있습니다. ContextFlyout이 지정된 경우 ContextRequested 이벤트가 실행되지 않습니다.
+이제 [ContextRequested 이벤트](/uwp/api/Windows.UI.Xaml.UIElement.ContextRequested)를 사용하여 상황에 맞는 작업에 응답할 수도 있습니다. ContextFlyout이 지정된 경우 ContextRequested 이벤트가 실행되지 않습니다.
 
 ## <a name="creating-input-accelerators"></a>입력 가속기 만들기
 
@@ -281,7 +281,7 @@ PodcastUserControl에 ContextFlyout을 추가하겠습니다. ContextFlyout으�
 
 콘텐츠 유형에 따라 작업을 수행해야 하는 특정 키 조합을 식별할 수 있습니다. 예를 들어 이메일 앱에서 DEL 키를 사용하여 선택된 이메일을 삭제할 수 있습니다. 팟캐스트 앱에서 Ctrl+S 또는 F 키는 나중에 팟캐스트를 즐겨찾기에 추가할 수 있습니다. 일부 명령은 항목을 삭제하는 DEL처럼 잘 알려진 바로 가기를 갖고 있지만, 다른 명령은 앱이나 도메인과 관련된 바로 가기를 갖고 있습니다. 가능하면 잘 알려진 바로 가기를 사용하거나 도구 설명에 미리 알림 텍스트를 제공하여 사용자에게 바로 가기 명령에 대해 알려주세요.
 
-사용자가 [KeyDown](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.KeyDownEvent) 이벤트를 사용하여 키를 누를 때 앱에서 응답할 수 있습니다. 일반적으로 사용자는 키를 놓을 때까지 기다리지 않고 키를 처음 누를 때 앱이 응답할 것으로 기대합니다.
+사용자가 [KeyDown](/uwp/api/Windows.UI.Xaml.UIElement.KeyDownEvent) 이벤트를 사용하여 키를 누를 때 앱에서 응답할 수 있습니다. 일반적으로 사용자는 키를 놓을 때까지 기다리지 않고 키를 처음 누를 때 앱이 응답할 것으로 기대합니다.
 
 이 예제에서는 PodcastUserControl에 KeyDown 처리기를 추가하여 사용자가 Ctrl+S 또는 F를 누를 때 즐겨찾기에 팟캐스트를 추가하는 방법을 안내합니다. 전과 동일한 명령이 사용됩니다.
 
@@ -343,7 +343,7 @@ protected override void OnKeyDown(KeyRoutedEventArgs e)
 </UserControl>
 ```
 
-마우스가 항목에 들어가고 나갈 때 호버 단추가 나타나고 사라져야 합니다. 마우스 이벤트에 응답하려면 PodcastUserControl에 [PointerEntered](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.PointerEnteredEvent) 및 [PointerExited](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.UIElement.PointerExitedEvent) 이벤트를 사용합니다.
+마우스가 항목에 들어가고 나갈 때 호버 단추가 나타나고 사라져야 합니다. 마우스 이벤트에 응답하려면 PodcastUserControl에 [PointerEntered](/uwp/api/Windows.UI.Xaml.UIElement.PointerEnteredEvent) 및 [PointerExited](/uwp/api/Windows.UI.Xaml.UIElement.PointerExitedEvent) 이벤트를 사용합니다.
 
 **PodcastUserControl.xaml.cs**
 ```csharp
@@ -448,10 +448,10 @@ private void SwipeItem_Invoked(SwipeItem sender, SwipeItemInvokedEventArgs args)
 * 사용자가 모든 유형의 Windows 디바이스에서 모든 명령에 액세스할 수 있게 하세요.
 * 컬렉션 항목에 사용 가능한 모든 명령에 대한 액세스를 제공하는 상황에 맞는 메뉴를 포함하세요. 
 * 자주 사용하는 명령에 대한 입력 가속기를 제공하세요. 
-* [ICommand 인터페이스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)를 사용하여 명령을 구현하세요. 
+* [ICommand 인터페이스](/uwp/api/Windows.UI.Xaml.Input.ICommand)를 사용하여 명령을 구현하세요. 
 
 ## <a name="related-topics"></a>관련 항목
-* [ICommand 인터페이스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.ICommand)
+* [ICommand 인터페이스](/uwp/api/Windows.UI.Xaml.Input.ICommand)
 * [메뉴 및 상황에 맞는 메뉴](menus.md)
 * [살짝 밀기](swipe.md)
 * [당겨서 새로 고침](pull-to-refresh.md)

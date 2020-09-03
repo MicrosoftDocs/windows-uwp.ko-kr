@@ -5,12 +5,12 @@ ms.date: 07/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: ff00264d0806e7fbdfcabd000ec68857b1485dcd
-ms.sourcegitcommit: 1e8f51d5730fe748e9fe18827895a333d94d337f
+ms.openlocfilehash: e916465d664b5658eeb155874dfa00795a772622
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87296156"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170397"
 ---
 # <a name="more-advanced-concurrency-and-asynchrony-with-cwinrt"></a>C++/WinRT를 통한 고급 동시성 및 비동기
 
@@ -24,7 +24,7 @@ ms.locfileid: "87296156"
 
 따라서 코루틴에서 컴퓨팅 바인딩된 작업을 수행하기 전에 호출자에 실행을 반환(즉, 일시 중단 지점 도입)하여 호출자가 차단되지 않도록 해야 합니다. 다른 일부 작업을 `co_await`하여 이미 수행하지 않은 경우, [**winrt::resume_background**](/uwp/cpp-ref-for-winrt/resume-background) 함수를 `co_await`할 수 있습니다. 그러면 컨트롤이 호출자에 반환되고, 스레드 풀 스레드에서 즉시 실행이 다시 시작됩니다.
 
-구현에서 사용되는 스레드 풀은 하위 수준의 [Windows 스레드 풀](https://docs.microsoft.com/windows/desktop/ProcThread/thread-pool-api)이므로 매우 효율적입니다.
+구현에서 사용되는 스레드 풀은 하위 수준의 [Windows 스레드 풀](/windows/desktop/ProcThread/thread-pool-api)이므로 매우 효율적입니다.
 
 ```cppwinrt
 IAsyncOperation<uint32_t> DoWorkOnThreadPoolAsync()
@@ -639,7 +639,7 @@ int main()
 }
 ```
 
-**winrt::fire_and_forget**은 비동기 작업을 수행해야 할 때 이벤트 처리기의 반환 형식으로도 유용합니다. 다음은 예제입니다([C++/WinRT의 강한 참조 및 약한 참조](/windows/uwp/cpp-and-winrt-apis/weak-references#safely-accessing-the-this-pointer-in-a-class-member-coroutine) 참조).
+**winrt::fire_and_forget**은 비동기 작업을 수행해야 할 때 이벤트 처리기의 반환 형식으로도 유용합니다. 다음은 예제입니다([C++/WinRT의 강한 참조 및 약한 참조](./weak-references.md#safely-accessing-the-this-pointer-in-a-class-member-coroutine) 참조).
 
 ```cppwinrt
 winrt::fire_and_forget MyClass::MyMediaBinder_OnBinding(MediaBinder const&, MediaBindingEventArgs args)

@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2bc62a70b3dc52440e88652cd2d1eec3d01f97cc
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 8e5ddaf909119830bd8c75c698396c08a7a98427
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968998"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173537"
 ---
 # <a name="calendar-date-picker"></a>달력 날짜 선택
 
@@ -27,9 +27,9 @@ ms.locfileid: "82968998"
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](../style/rounded-corner.md)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
 
-> **플랫폼 API**: [CalendarDatePicker 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarDatePicker), [Date 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.date), [DateChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.datechanged)
+> **플랫폼 API**: [CalendarDatePicker 클래스](/uwp/api/Windows.UI.Xaml.Controls.CalendarDatePicker), [Date 속성](/uwp/api/windows.ui.xaml.controls.calendardatepicker.date), [DateChanged 이벤트](/uwp/api/windows.ui.xaml.controls.calendardatepicker.datechanged)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -74,13 +74,13 @@ arrivalCalendarDatePicker.Header = "Arrival date";
 
 ![달력 날짜 선택의 예](images/calendar-date-picker-closed.png)
 
-달력 날짜 선택에는 날짜를 선택하기 위한 내부 [CalendarView](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CalendarView)가 있습니다. [IsTodayHighlighted](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.istodayhighlighted) 및 [FirstDayOfWeek](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.firstdayofweek)와 같은 CalendarView 속성의 하위 집합은 CalendarDatePicker에 있으며 수정할 수 있도록 내부 CalendarView에 전달됩니다. 
+달력 날짜 선택에는 날짜를 선택하기 위한 내부 [CalendarView](/uwp/api/Windows.UI.Xaml.Controls.CalendarView)가 있습니다. [IsTodayHighlighted](/uwp/api/windows.ui.xaml.controls.calendardatepicker.istodayhighlighted) 및 [FirstDayOfWeek](/uwp/api/windows.ui.xaml.controls.calendardatepicker.firstdayofweek)와 같은 CalendarView 속성의 하위 집합은 CalendarDatePicker에 있으며 수정할 수 있도록 내부 CalendarView에 전달됩니다. 
 
-그러나 다중 선택을 하도록 내부 CalendarView의 [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview.selectionmode)를 변경할 수 없습니다. 사용자가 여러 날짜를 선택하도록 하거나 달력이 항상 표시되도록 해야 하는 경우 달력 날짜 선택 대신 달력 보기를 사용하는 것이 좋습니다. 달력 표시를 수정할 수 있는 방법에 대한 자세한 내용은 [달력 보기](calendar-view.md) 문서를 참조하세요.
+그러나 다중 선택을 하도록 내부 CalendarView의 [SelectionMode](/uwp/api/windows.ui.xaml.controls.calendarview.selectionmode)를 변경할 수 없습니다. 사용자가 여러 날짜를 선택하도록 하거나 달력이 항상 표시되도록 해야 하는 경우 달력 날짜 선택 대신 달력 보기를 사용하는 것이 좋습니다. 달력 표시를 수정할 수 있는 방법에 대한 자세한 내용은 [달력 보기](calendar-view.md) 문서를 참조하세요.
 
 ### <a name="selecting-dates"></a>날짜 선택
 
-[Date](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.date) 속성을 사용하여 선택한 날짜를 가져오거나 설정합니다. 기본적으로 Date 속성은 **null**입니다. 사용자가 달력 보기에서 날짜를 선택할 때 이 속성이 업데이트됩니다. 선택한 날짜를 선택 취소하기 위해 달력 보기에서 클릭하여 날짜를 삭제할 수 있습니다. 
+[Date](/uwp/api/windows.ui.xaml.controls.calendardatepicker.date) 속성을 사용하여 선택한 날짜를 가져오거나 설정합니다. 기본적으로 Date 속성은 **null**입니다. 사용자가 달력 보기에서 날짜를 선택할 때 이 속성이 업데이트됩니다. 선택한 날짜를 선택 취소하기 위해 달력 보기에서 클릭하여 날짜를 삭제할 수 있습니다. 
 
 다음과 같이 코드에서 날짜를 설정할 수 있습니다.
 
@@ -88,18 +88,18 @@ arrivalCalendarDatePicker.Header = "Arrival date";
 myCalendarDatePicker.Date = new DateTime(1977, 1, 5);
 ```
 
-코드에서 날짜를 설정할 때 값은 [MinDate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.mindate) 및 [MaxDate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.maxdate) 속성에 의해 제한됩니다.
+코드에서 날짜를 설정할 때 값은 [MinDate](/uwp/api/windows.ui.xaml.controls.calendardatepicker.mindate) 및 [MaxDate](/uwp/api/windows.ui.xaml.controls.calendardatepicker.maxdate) 속성에 의해 제한됩니다.
 - **Date**가 **MinDate**보다 작으면 값이 **MinDate**로 설정됩니다.
 - **Date**가 **MaxDate**보다 크면 값이 **MaxDate**로 설정됩니다.
 
-Date 값이 변경될 때 알림을 받도록 [DateChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.datechanged) 이벤트를 처리할 수 있습니다.
+Date 값이 변경될 때 알림을 받도록 [DateChanged](/uwp/api/windows.ui.xaml.controls.calendardatepicker.datechanged) 이벤트를 처리할 수 있습니다.
 
 > [!NOTE]
 > 날짜 값에 대한 중요한 내용은 날짜 및 시간 컨트롤 문서의 [DateTime 및 Calendar 값](date-and-time.md#datetime-and-calendar-values)을 참조하세요.
 
 ### <a name="setting-a-header-and-placeholder-text"></a>헤더 및 개체 틀 텍스트 설정
 
-[헤더](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.header)(또는 레이블) 및 [PlaceholderText](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.placeholdertext)(또는 워터마크)를 달력 날짜 선택에 추가하여 사용 목적 표시를 제공할 수 있습니다. 헤더의 모양을 사용자 지정하려면 Header 대신 [HeaderTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker.headertemplate) 속성을 설정할 수 있습니다.
+[헤더](/uwp/api/windows.ui.xaml.controls.calendardatepicker.header)(또는 레이블) 및 [PlaceholderText](/uwp/api/windows.ui.xaml.controls.calendardatepicker.placeholdertext)(또는 워터마크)를 달력 날짜 선택에 추가하여 사용 목적 표시를 제공할 수 있습니다. 헤더의 모양을 사용자 지정하려면 Header 대신 [HeaderTemplate](/uwp/api/windows.ui.xaml.controls.calendardatepicker.headertemplate) 속성을 설정할 수 있습니다.
 
 기본 개체 틀 텍스트는 "날짜 선택"입니다. PlaceholderText 속성을 빈 문자열로 설정하여 이를 제거하거나 여기 표시된 대로 사용자 지정 텍스트를 제공할 수 있습니다.
 

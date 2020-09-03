@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 2d935f53-84db-4108-86dc-cb6a0749782f
 ms.localizationpriority: medium
-ms.openlocfilehash: 1fe3e4e23bc2be46d3ddb09d9ebf83b5fda5ce9d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e6c13fea8cbc9f4e8bc515219d26da98b58f32da
+ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173717"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89411947"
 ---
 # <a name="uwp-on-xbox-one"></a>Xbox One의 UWP
 
@@ -32,15 +32,15 @@ Xbox One의 UWP는 앱과 게임 개발을 둘 다 지원합니다. Xbox에서 �
 |[알려진 문제](known-issues.md)| Xbox One의 UWP에 대해 알려진 문제입니다. |
 |[FAQ](frequently-asked-questions.md)| Xbox One의 UWP와 관련된 질문과 대답입니다. |
 |[도구](introduction-to-xbox-tools.md)| Xbox One 관련 도구 _개발자 홈_, Windows Device Portal 사용 방법 및 개발을 위한 Visual Studio 설정 방법에 대해 설명합니다. 또한 이 섹션에서는 새로운 개발자에게 첫 번째 Xbox UWP 애플리케이션을 안내하고 Fiddler 도구를 사용하여 네트워크 트래픽을 보는 방법도 설명합니다. |
-| [Xbox에서 앱 개발 이벤트](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event) | Xbox에서 앱 개발 이벤트는 처음으로 Xbox에서 앱을 빌드하는 개발자를 위한 멋진 출발점입니다. 녹화된 세션을 시청하고 이벤트의 블로그 게시물을 읽어보세요. |
+|[Xbox에서 앱 개발 이벤트](https://developer.microsoft.com/windows/projects/campaigns/app-dev-on-xbox-event) | Xbox에서 앱 개발 이벤트는 처음으로 Xbox에서 앱을 빌드하는 개발자를 위한 멋진 출발점입니다. 녹화된 세션을 시청하고 이벤트의 블로그 게시물을 읽어보세요. |
 |[Xbox 및 TV용 디자인](../design/devices/designing-for-tv.md)| TV에 표시되고 컨트롤러를 입력에 사용하는 앱을 디자인하는 모범 사례를 설명합니다. |
 |[Xbox 모범 사례](tailoring-for-xbox.md)| 마우스 모드를 끄고, 화면 가장자리까지 그리고, 크기 조정을 사용하지 않도록 설정하는 방법입니다. |
 |[음성을 사용하여 UI 요소 호출](ves-on-xbox.md)| Xbox의 UWP 앱에서 음성 지원 셸을 지원하는 모범 사례를 설명합니다. |
 |[Xbox One의 UWP 앱 및 게임에 대한 시스템 리소스](system-resource-allocation.md)| Xbox One에서 실행할 때 애플리케이션에서 사용할 수 있는 리소스를 설명합니다. |
 |[다중 사용자 애플리케이션 소개](multi-user-applications.md)| Xbox One의 MUA(다중 사용자 애플리케이션)에 대해 설명합니다. |
-| [Xbox One 개발 작업 자동화](https://github.com/Microsoft/WindowsDevicePortalWrapper/tree/v0.9.4) | GitHub의 WindowsDevicePortalWrapper 프로젝트는 앱을 배포하거나 시작하는 등의 일반적인 개발 작업을 자동화할 수 있는 라이브러리를 제공합니다. 이 프로젝트에는 일반적인 작업에 API를 사용하는 방법을 보여주는 XboxWdpDriver.exe 샘플이 포함되어 있습니다. |
+|[Xbox One 개발 작업 자동화](https://github.com/Microsoft/WindowsDevicePortalWrapper/tree/v0.9.4) | GitHub의 WindowsDevicePortalWrapper 프로젝트는 앱을 배포하거나 시작하는 등의 일반적인 개발 작업을 자동화할 수 있는 라이브러리를 제공합니다. 이 프로젝트에는 일반적인 작업에 API를 사용하는 방법을 보여주는 XboxWdpDriver.exe 샘플이 포함되어 있습니다. |
 |[기존 게임을 Xbox로 가져오기](development-lanes-landing.md)|게임이 제작된 기반 기술을 바탕으로 UWP를 사용하여 게임을 Xbox로 가져오는 프로세스를 촉진할 수 있는 단계별 지침을 안내할 수 있습니다.|
-|[Xbox One에서 아직 지원되지 않는 UWP 기능](/uwp/extension-sdks/uwp-limitations-on-xbox)|  Xbox One에서 아직 완전히 작동하지 않는 UWP 기능 영역을 설명합니다.|
+|[Xbox에서 지원되지 않는 UWP 기능](/uwp/extension-sdks/uwp-limitations-on-xbox)|  Xbox One에서 아직 완전히 작동하지 않는 UWP 기능 영역을 설명합니다.|
 
 ## <a name="videos"></a>동영상
 

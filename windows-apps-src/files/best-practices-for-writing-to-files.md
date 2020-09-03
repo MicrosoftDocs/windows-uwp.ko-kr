@@ -5,27 +5,27 @@ ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dcbeffc7e3db8f3df9c197e8c388f30faf7ad03d
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 844e1da1a4108673c353e91b8624376d9b98e976
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75685245"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173257"
 ---
 # <a name="best-practices-for-writing-to-files"></a>파일 쓰기 모범 사례
 
 **중요 API**
 
-* [**FileIO 클래스**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO)
-* [**PathIO 클래스**](https://docs.microsoft.com/uwp/api/windows.storage.pathio)
+* [**FileIO 클래스**](/uwp/api/Windows.Storage.FileIO)
+* [**PathIO 클래스**](/uwp/api/windows.storage.pathio)
 
-경우에 따라 개발자는 [**FileIO**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) 및 [**PathIO**](https://docs.microsoft.com/uwp/api/windows.storage.pathio) 클래스의 **Write** 메서드를 사용하여 파일 시스템 I/O 작업을 수행할 때 몇 가지 일반적인 문제가 발생합니다. 예를 들어, 일반적인 문제는 다음과 같습니다.
+경우에 따라 개발자는 [**FileIO**](/uwp/api/Windows.Storage.FileIO) 및 [**PathIO**](/uwp/api/windows.storage.pathio) 클래스의 **Write** 메서드를 사용하여 파일 시스템 I/O 작업을 수행할 때 몇 가지 일반적인 문제가 발생합니다. 예를 들어, 일반적인 문제는 다음과 같습니다.
 
 * 파일이 부분적으로 기록됩니다.
 * 앱이 메서드 중 하나를 호출할 때 예외가 발생합니다.
 * 작업을 수행할 때 대상 파일 이름과 비슷한 이름의 .TMP 파일이 남아 있습니다.
 
-[**FileIO**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) 및 [**PathIO**](https://docs.microsoft.com/uwp/api/windows.storage.pathio) 클래스의 **Write** 메서드에는 다음이 포함됩니다.
+[**FileIO**](/uwp/api/Windows.Storage.FileIO) 및 [**PathIO**](/uwp/api/windows.storage.pathio) 클래스의 **Write** 메서드에는 다음이 포함됩니다.
 
 * **WriteBufferAsync**
 * **WriteBytesAsync**
@@ -39,31 +39,31 @@ ms.locfileid: "75685245"
 
 ## <a name="convenience-vs-control"></a>편의성 및 제어
 
-[**StorageFile**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile) 개체는 네이티브 Win32 프로그래밍 모델과 같은 파일 핸들이 아닙니다. 대신, [**StorageFile**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile)은 해당 콘텐츠를 조작하는 메서드를 포함하는 파일을 나타냅니다.
+[**StorageFile**](/uwp/api/windows.storage.storagefile) 개체는 네이티브 Win32 프로그래밍 모델과 같은 파일 핸들이 아닙니다. 대신, [**StorageFile**](/uwp/api/windows.storage.storagefile)은 해당 콘텐츠를 조작하는 메서드를 포함하는 파일을 나타냅니다.
 
 이 개념을 이해하면 **StorageFile**에서 I/O를 수행할 때 도움이 됩니다. 예를 들어 [파일에 쓰기](quickstart-reading-and-writing-files.md#writing-to-a-file) 섹션에서는 파일에 쓰는 다음과 같은 세 가지 방법을 제공합니다.
 
-* [**FileIO.WriteTextAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileio.writetextasync) 메서드 사용
-* 버퍼를 만든 후 [**FileIO.WriteBufferAsync**](https://docs.microsoft.com/uwp/api/windows.storage.fileio.writebufferasync) 메서드 호출
+* [**FileIO.WriteTextAsync**](/uwp/api/windows.storage.fileio.writetextasync) 메서드 사용
+* 버퍼를 만든 후 [**FileIO.WriteBufferAsync**](/uwp/api/windows.storage.fileio.writebufferasync) 메서드 호출
 * 스트림을 사용하는 4단계 모델:
-  1. 파일을 [열어](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.openasync) 스트림을 가져옵니다.
-  2. 출력 스트림을 [가져옵니다](https://docs.microsoft.com/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat).
-  3. [**DataWriter**](https://docs.microsoft.com/uwp/api/windows.storage.streams.datawriter) 개체를 만들고 해당 **Write** 메서드를 호출합니다.
-  4. 데이터 기록기에서 데이터를 [커밋](https://docs.microsoft.com/uwp/api/windows.storage.streams.datawriter.storeasync)하고 출력 스트림을 [플러시](https://docs.microsoft.com/uwp/api/windows.storage.streams.ioutputstream.flushasync)합니다.
+  1. 파일을 [열어](/uwp/api/windows.storage.storagefile.openasync) 스트림을 가져옵니다.
+  2. 출력 스트림을 [가져옵니다](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat).
+  3. [**DataWriter**](/uwp/api/windows.storage.streams.datawriter) 개체를 만들고 해당 **Write** 메서드를 호출합니다.
+  4. 데이터 기록기에서 데이터를 [커밋](/uwp/api/windows.storage.streams.datawriter.storeasync)하고 출력 스트림을 [플러시](/uwp/api/windows.storage.streams.ioutputstream.flushasync)합니다.
 
 처음 두 시나리오는 앱에서 가장 일반적으로 사용하는 시나리오입니다. 단일 작업으로 파일을 쓰면 코딩 및 유지 관리가 더 쉬우며 앱이 파일 I/O의 많은 복잡성을 처리할 필요도 없습니다. 그러나 이러한 편리성에는 문제점이 따릅니다. 전체 작업을 제어할 수 없게 되고 특정 지점의 오류도 잡아낼 수 없습니다.
 
 ## <a name="the-transactional-model"></a>트랜잭션 모델
 
-[**FileIO**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) 및 [**PathIO**](https://docs.microsoft.com/uwp/api/windows.storage.pathio) 클래스의 **Write** 메서드는 추가 계층을 사용하여 위에서 설명한 세 번째 쓰기 모델의 단계를 래핑합니다. 이 계층은 스토리지 트랜잭션에 캡슐화됩니다.
+[**FileIO**](/uwp/api/Windows.Storage.FileIO) 및 [**PathIO**](/uwp/api/windows.storage.pathio) 클래스의 **Write** 메서드는 추가 계층을 사용하여 위에서 설명한 세 번째 쓰기 모델의 단계를 래핑합니다. 이 계층은 스토리지 트랜잭션에 캡슐화됩니다.
 
-데이터를 작성하는 동안 문제가 발생하는 경우 원본 파일의 무결성을 보호하기 위해 **Write** 메서드는 [**OpenTransactedWriteAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefile.opentransactedwriteasync)를 통해 파일을 열어 트랜잭션 모델을 사용합니다. 이 프로세스에서는 [**StorageStreamTransaction**](https://docs.microsoft.com/uwp/api/windows.storage.storagestreamtransaction) 개체를 만듭니다. 이 트랜잭션 개체가 만들어지면 API는 [**StorageStreamTransaction**](https://docs.microsoft.com/uwp/api/windows.storage.storagestreamtransaction) 문서의 [파일 액세스](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) 샘플 또는 코드 예제와 비슷한 방식에 따라 데이터를 씁니다.
+데이터를 작성하는 동안 문제가 발생하는 경우 원본 파일의 무결성을 보호하기 위해 **Write** 메서드는 [**OpenTransactedWriteAsync**](/uwp/api/windows.storage.storagefile.opentransactedwriteasync)를 통해 파일을 열어 트랜잭션 모델을 사용합니다. 이 프로세스에서는 [**StorageStreamTransaction**](/uwp/api/windows.storage.storagestreamtransaction) 개체를 만듭니다. 이 트랜잭션 개체가 만들어지면 API는 [**StorageStreamTransaction**](/uwp/api/windows.storage.storagestreamtransaction) 문서의 [파일 액세스](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileAccess) 샘플 또는 코드 예제와 비슷한 방식에 따라 데이터를 씁니다.
 
 다음 다이어그램에서는 성공적인 쓰기 작업에서 **WriteTextAsync** 메서드가 수행하는 기본 작업을 보여줍니다. 이 그림에서는 작업의 단순화된 보기를 제공합니다. 예를 들어, 텍스트 인코딩 및 다른 스레드의 비동기 완성과 같은 단계를 건너뜁니다.
 
 ![파일에 쓰기 위한 UWP API 호출 시퀀스 다이어그램](images/file-write-call-sequence.svg)
 
-스트림을 사용하는 좀 더 복잡한 4단계 모델 대신, [**FileIO**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileIO) 및 [**PathIO**](https://docs.microsoft.com/uwp/api/windows.storage.pathio) 클래스의 **Write** 메서드를 사용할 때의 이점은 다음과 같습니다.
+스트림을 사용하는 좀 더 복잡한 4단계 모델 대신, [**FileIO**](/uwp/api/Windows.Storage.FileIO) 및 [**PathIO**](/uwp/api/windows.storage.pathio) 클래스의 **Write** 메서드를 사용할 때의 이점은 다음과 같습니다.
 
 * 오류를 비롯한 모든 중간 단계를 한 번의 API 호출로 처리합니다.
 * 문제가 있는 경우 원본 파일은 그대로 유지됩니다.
@@ -94,11 +94,11 @@ ms.locfileid: "75685245"
 
 ### <a name="readers"></a>Readers
 
-쓰고 있는 파일이 처리 완료 후 판독기에서도 사용 중인 경우(즉, [**FileAccessMode.Read**](https://docs.microsoft.com/uwp/api/Windows.Storage.FileAccessMode)를 사용하여 연 경우) 후속 읽기는 ERROR_OPLOCK_HANDLE_CLOSED(0x80070323) 오류를 나타내며 실패합니다. 경우에 따라 앱은 **쓰기** 작업이 진행 중인 동안 다시 읽기 위해 파일을 열려고 합니다. 이 경우 파일을 바꿀 수 없기 때문에 원본 파일을 덮어쓰려고 할 때 **쓰기**가 궁극적으로 실패하는 경합 상태가 발생할 수 있습니다.
+쓰고 있는 파일이 처리 완료 후 판독기에서도 사용 중인 경우(즉, [**FileAccessMode.Read**](/uwp/api/Windows.Storage.FileAccessMode)를 사용하여 연 경우) 후속 읽기는 ERROR_OPLOCK_HANDLE_CLOSED(0x80070323) 오류를 나타내며 실패합니다. 경우에 따라 앱은 **쓰기** 작업이 진행 중인 동안 다시 읽기 위해 파일을 열려고 합니다. 이 경우 파일을 바꿀 수 없기 때문에 원본 파일을 덮어쓰려고 할 때 **쓰기**가 궁극적으로 실패하는 경합 상태가 발생할 수 있습니다.
 
 ### <a name="files-from-knownfolders"></a>KnownFolders의 파일
 
-사용자의 앱 외에 [**KnownFolders**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders) 중 하나에 있는 파일에 액세스하려고 하는 앱이 또 있을 수 있습니다. 해당 작업이 성공할 경우 다음번에 파일을 읽으려고 할 때 앱이 파일에 쓴 콘텐츠가 동일하게 유지된다는 보장은 없습니다. 또한 이러한 시나리오에서는 공유 또는 액세스 거부 오류가 좀 더 일반적으로 나타날 수 있습니다.
+사용자의 앱 외에 [**KnownFolders**](/uwp/api/Windows.Storage.KnownFolders) 중 하나에 있는 파일에 액세스하려고 하는 앱이 또 있을 수 있습니다. 해당 작업이 성공할 경우 다음번에 파일을 읽으려고 할 때 앱이 파일에 쓴 콘텐츠가 동일하게 유지된다는 보장은 없습니다. 또한 이러한 시나리오에서는 공유 또는 액세스 거부 오류가 좀 더 일반적으로 나타날 수 있습니다.
 
 ### <a name="conflicting-io"></a>충돌하는 I/O
 
@@ -114,7 +114,7 @@ ms.locfileid: "75685245"
 
 * 앱의 로컬 데이터 폴더에서 사용자가 만들어 편집한 파일. 이러한 파일은 앱을 사용하는 동안에만 생성 및 편집되며, 앱 내에서만 존재합니다.
 * 앱 메타데이터. 앱은 이러한 파일을 사용하여 고유한 상태를 추적합니다.
-* 앱이 액세스하기 위한 접근 권한 값을 선언한 파일 시스템 위치에 있는 기타 파일 이러한 파일은 가장 일반적으로 [**KnownFolders**](https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders) 중 하나에 있습니다.
+* 앱이 액세스하기 위한 접근 권한 값을 선언한 파일 시스템 위치에 있는 기타 파일 이러한 파일은 가장 일반적으로 [**KnownFolders**](/uwp/api/Windows.Storage.KnownFolders) 중 하나에 있습니다.
 
 처음 두 범주의 파일은 앱 패키지 파일에 속하고 앱에서만 액세스할 수 있으므로 앱에 모든 권한이 있습니다. 마지막 범주에 속하는 파일의 경우, 다른 앱 및 OS 서비스가 파일에 동시에 액세스할 수 있다는 사실을 앱에서 인식해야 합니다.
 

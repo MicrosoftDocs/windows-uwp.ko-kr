@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, python 학습, 초보자를 위한 windows 기반 python, microsoft store에서 python 설치, vs code를 사용하는 python, windows의 pygame
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 5dee553fedc81f0b482d4b79f4d7d8be3a7bb106
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 076c62658431ba75bdbd7f385ced86f27fb2f7d0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493498"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174147"
 ---
 # <a name="get-started-using-python-on-windows-for-beginners"></a>초보자를 위한 Windows에서 Python 사용 시작
 
@@ -190,7 +190,7 @@ Windows에서 Python으로 개발하는 방법을 계속 학습할 수 있도록
 
 ### <a name="online-courses-for-learning-python"></a>Python 학습을 위한 온라인 과정
 
-- [Microsoft Learn의 Python 소개](https://docs.microsoft.com/learn/modules/intro-to-python/): 대화형 Microsoft Learn 플랫폼을 사용해 보고 기본 Python 코드를 작성하고, 변수를 선언하고, 콘솔 입력 및 출력을 작업하는 방법에 대한 기본 사항을 다루는 이 모듈을 완료하기 위한 경험을 쌓을 수 있습니다. 대화형 샌드박스 환경은 아직 Python 개발 환경을 설정하지 않은 사람들이 개발을 시작하기에 좋은 장소입니다.
+- [Microsoft Learn의 Python 소개](/learn/modules/intro-to-python/): 대화형 Microsoft Learn 플랫폼을 사용해 보고 기본 Python 코드를 작성하고, 변수를 선언하고, 콘솔 입력 및 출력을 작업하는 방법에 대한 기본 사항을 다루는 이 모듈을 완료하기 위한 경험을 쌓을 수 있습니다. 대화형 샌드박스 환경은 아직 Python 개발 환경을 설정하지 않은 사람들이 개발을 시작하기에 좋은 장소입니다.
 
 - [Pluralsight의 Python: 8개 과정, 29시간](https://app.pluralsight.com/paths/skills/python): Pluralsight의 Python 학습 경로는 학습자의 기술을 측정하고 격차를 알아볼 수 있는 도구를 포함하여 Python과 관련된 다양한 토픽을 다루는 온라인 과정을 제공합니다.
 
@@ -208,4 +208,4 @@ Windows에서 Python으로 개발하는 방법을 계속 학습할 수 있도록
 
 - [Python 디버깅](https://code.visualstudio.com/docs/python/debugging): 디버깅은 컴퓨터 프로그램의 오류를 식별하고 제거하는 프로세스입니다. 이 문서에서는 VS Code를 사용하여 Python에 대한 디버깅을 초기화하고 구성하는 방법, 중단점을 설정하고 유효성을 검사하고, 로컬 스크립트를 연결하고, 다양한 앱 형식에 대해 또는 원격 컴퓨터에서 디버깅을 수행하는 방법, 그리고 몇 가지 기본적인 문제 해결 방법을 다룹니다.
 
-- [Python 단위 테스트](https://code.visualstudio.com/docs/python/unit-testing): 단위 테스트의 의미, 예제 연습, 테스트 프레임워크 사용, 테스트 생성 및 실행, 테스트 디버깅, 테스트 구성 설정에 대해 설명하는 배경 정보를 다룹니다. 
+- [Python 단위 테스트](https://code.visualstudio.com/docs/python/unit-testing): 단위 테스트의 의미, 예제 연습, 테스트 프레임워크 사용, 테스트 생성 및 실행, 테스트 디버깅, 테스트 구성 설정에 대해 설명하는 배경 정보를 다룹니다.

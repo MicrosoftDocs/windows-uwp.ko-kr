@@ -6,16 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: 174ff4e588d75293ecb729312883f4792196c87a
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 06ac1525a91426f6d39e20c9a9416154ad3d6f3e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79110098"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174027"
 ---
 # <a name="windows-app-certification-kit"></a>Windows 앱 인증 키트
 
-앱을 [Windows 인증](/windows/win32/win_cert/windows-certification-portal) 앱으로 만들거나 [Microsoft Store에 게시](/windows/uwp/publish/app-submissions)할 준비를 하려면 먼저 로컬에서 앱의 유효성을 확인하고 테스트해야 합니다. 이 토픽에서는 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit)를 설치하고 실행하여 앱이 안전하고 효율적인지 확인하는 방법을 보여줍니다.
+앱을 [Windows 인증](/windows/win32/win_cert/windows-certification-portal) 앱으로 만들거나 [Microsoft Store에 게시](../publish/app-submissions.md)할 준비를 하려면 먼저 로컬에서 앱의 유효성을 확인하고 테스트해야 합니다. 이 토픽에서는 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/develop/app-certification-kit)를 설치하고 실행하여 앱이 안전하고 효율적인지 확인하는 방법을 보여줍니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -23,7 +23,7 @@ ms.locfileid: "79110098"
 
 - Windows 10을 설치하고 실행해야 합니다.
 - Windows 10용 Windows SDK(소프트웨어 개발 키트)에 포함된 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/downloads/app-certification-kit/)를 설치해야 합니다.
-- [개발을 위해 디바이스를 사용](/windows/uwp/get-started/enable-your-device-for-development)하도록 설정해야 합니다.
+- [개발을 위해 디바이스를 사용](../get-started/enable-your-device-for-development.md)하도록 설정해야 합니다.
 - 테스트할 Windows 앱을 컴퓨터에 배포해야 합니다.
 
 > [!NOTE]
@@ -83,11 +83,11 @@ ms.locfileid: "79110098"
 
 Windows 앱 인증 키트의 성능 테스트 임계값은 절전 컴퓨터의 성능을 기반으로 합니다.
 
-테스트를 수행하는 컴퓨터의 특성이 테스트 결과에 영향을 줄 수 있습니다. 앱 성능이 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)을 충족하는지 확인하려면 화면 해상도가 1366x768 이상인 Intel Atom 프로세서 기반 컴퓨터, 회전형 하드 드라이브(반도체 하드 드라이브 반대) 등의 절전 컴퓨터에서 앱을 테스트하는 것이 좋습니다.
+테스트를 수행하는 컴퓨터의 특성이 테스트 결과에 영향을 줄 수 있습니다. 앱 성능이 [Microsoft Store 정책](/legal/windows/agreements/store-policies)을 충족하는지 확인하려면 화면 해상도가 1366x768 이상인 Intel Atom 프로세서 기반 컴퓨터, 회전형 하드 드라이브(반도체 하드 드라이브 반대) 등의 절전 컴퓨터에서 앱을 테스트하는 것이 좋습니다.
 
-저성능 컴퓨터가 발전함에 따라 시간이 지나면 성능 특성이 변할 수도 있습니다. 최신 [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)을 참조하고 최신 버전의 Windows 앱 인증 키트로 앱을 테스트하여 앱이 최신 성능 요구 사항을 준수하는지 확인하세요.
+저성능 컴퓨터가 발전함에 따라 시간이 지나면 성능 특성이 변할 수도 있습니다. 최신 [Microsoft Store 정책](/legal/windows/agreements/store-policies)을 참조하고 최신 버전의 Windows 앱 인증 키트로 앱을 테스트하여 앱이 최신 성능 요구 사항을 준수하는지 확인하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
 - [Windows 앱 인증 키트 테스트](windows-app-certification-kit-tests.md)
-- [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)
+- [Microsoft Store 정책](/legal/windows/agreements/store-policies)

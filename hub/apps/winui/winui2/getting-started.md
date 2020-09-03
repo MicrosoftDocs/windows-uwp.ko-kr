@@ -4,12 +4,12 @@ description: Windows UI 라이브러리를 설치하고 사용하는 방법입�
 ms.topic: reference
 ms.date: 07/15/2020
 keywords: Windows 10, UWP, 도구 키트 SDK
-ms.openlocfilehash: 336439d35c74073db490772dbfdae4ca3e580625
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 94c23ab9573df576af89d9211ced70938fd5105f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86492958"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174137"
 ---
 # <a name="getting-started-with-the-windows-ui-2x-library"></a>Windows UI 2.x 라이브러리 시작
 
@@ -64,7 +64,7 @@ ms.locfileid: "86492958"
     ```
 
     > [!IMPORTANT]
-    > ResourceDictionary에 추가되는 리소스의 순서는 적용되는 순서에 영향을 줍니다. `XamlControlsResources` 사전은 많은 기본 리소스 키를 재정의하므로 앱의 다른 사용자 지정 스타일 또는 리소스를 재정의하지 않도록 먼저 `Application.Resources`에 추가해야 합니다. 리소스를 로드하는 방법에 대한 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)를 참조하세요.
+    > ResourceDictionary에 추가되는 리소스의 순서는 적용되는 순서에 영향을 줍니다. `XamlControlsResources` 사전은 많은 기본 리소스 키를 재정의하므로 앱의 다른 사용자 지정 스타일 또는 리소스를 재정의하지 않도록 먼저 `Application.Resources`에 추가해야 합니다. 리소스를 로드하는 방법에 대한 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)를 참조하세요.
 
 5. 도구 키트에 대한 참조를 XAML 페이지 및 코드 숨김 페이지에 추가합니다.
 

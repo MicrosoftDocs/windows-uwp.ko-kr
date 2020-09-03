@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 07/11/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f4e9ce391aa485e681fc198e14fe3374edb72aa1
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 375cd903a0711a1493930567f557992c0bba46b7
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684714"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174347"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2018"></a>2018년 7월 Windows 개발자 문서의 새로운 내용
 
@@ -22,15 +22,15 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 
 ### <a name="progressive-web-apps-on-windows"></a>Windows의 점진적 웹앱
 
-[PWA(점진적 웹앱)](https://developer.microsoft.com/windows/pwa)는 플랫폼 및 브라우저 엔진을 지원하는 네이티브 앱과 비슷한 기능(예: 홈 화면 시작 설치, 오프라인 지원 및 푸시 알림)으로 [점진적으로 향상되는](https://www.wikipedia.org/wiki/Progressive_enhancement) 간단한 웹앱입니다. Microsoft Edge(EdgeHTML) 엔진이 있는 Windows 10에서 PWA에는 [브라우저 창과 독립적으로 UWP 앱으로 실행](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)될 수 있다는 장점이 추가되었습니다.
+[PWA(점진적 웹앱)](https://developer.microsoft.com/windows/pwa)는 플랫폼 및 브라우저 엔진을 지원하는 네이티브 앱과 비슷한 기능(예: 홈 화면 시작 설치, 오프라인 지원 및 푸시 알림)으로 [점진적으로 향상되는](https://www.wikipedia.org/wiki/Progressive_enhancement) 간단한 웹앱입니다. Microsoft Edge(EdgeHTML) 엔진이 있는 Windows 10에서 PWA에는 [브라우저 창과 독립적으로 UWP 앱으로 실행](/microsoft-edge/progressive-web-apps/windows-features)될 수 있다는 장점이 추가되었습니다.
 
 ![실행 중인 PWA의 이미지](images/progressive-web-apps.jpg)
 
 다음 PWA 지침을 확인해 보세요.
 
-* [간단한 웹앱을 PWA로 빌드](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started)
-* [Windows 런타임으로 PWA 향상](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/windows-features)
-* [Microsoft Store에 PWA 게시](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/microsoft-store)
+* [간단한 웹앱을 PWA로 빌드](/microsoft-edge/progressive-web-apps/get-started)
+* [Windows 런타임으로 PWA 향상](/microsoft-edge/progressive-web-apps/windows-features)
+* [Microsoft Store에 PWA 게시](/microsoft-edge/progressive-web-apps/microsoft-store)
 
 ### <a name="notepad"></a>메모장
 
@@ -48,29 +48,29 @@ Adobe XD 및 Adobe Illustrator 도구 키트는 새로운 기능으로 업데이
 
 ### <a name="webvr"></a>WebVR
 
-[WebVR 설명서](https://docs.microsoft.com/microsoft-edge/webvr/)에는 다음 몇 가지 새로운 항목이 추가되었습니다.
+[WebVR 설명서](/microsoft-edge/webvr/)에는 다음 몇 가지 새로운 항목이 추가되었습니다.
 
-* [WebVR이란?](https://docs.microsoft.com/microsoft-edge/webvr/what-is-webvr) WebVR의 기본 사항, 사용해야 하는 이유 및 개발을 시작하는 방법을 설명합니다.
+* [WebVR이란?](/microsoft-edge/webvr/what-is-webvr) WebVR의 기본 사항, 사용해야 하는 이유 및 개발을 시작하는 방법을 설명합니다.
 
-* [점진적 웹앱의 WebVR](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-pwas): PWA(점진적 웹앱)에 WebVR을 추가하는 방법을 알아봅니다.
+* [점진적 웹앱의 WebVR](/microsoft-edge/webvr/webvr-in-pwas): PWA(점진적 웹앱)에 WebVR을 추가하는 방법을 알아봅니다.
 
-* [WebView의 WebVR](https://docs.microsoft.com/microsoft-edge/webvr/webvr-in-webview): Windows 10 애플리케이션에서 WebVR을 WebView 컨트롤에 추가하는 방법을 알아봅니다.
+* [WebView의 WebVR](/microsoft-edge/webvr/webvr-in-webview): Windows 10 애플리케이션에서 WebVR을 WebView 컨트롤에 추가하는 방법을 알아봅니다.
 
-* [WebVR 데모](https://docs.microsoft.com/microsoft-edge/webvr/demos): Microsoft Edge 및 Windows Mixed Reality 몰입형 헤드셋을 사용하여 일부 WebVR 데모를 확인합니다.
+* [WebVR 데모](/microsoft-edge/webvr/demos): Microsoft Edge 및 Windows Mixed Reality 몰입형 헤드셋을 사용하여 일부 WebVR 데모를 확인합니다.
 
 또한 기존 페이지가 일부 업데이트되었습니다.
 
 * 목차는 이제 **기본 사항**, **개발**, **리소스** 및 **데모**라는 별도의 네 가지 최상위 버킷으로 더 효율적으로 구성되었습니다.
 
-* [WebVR 개발자 가이드(방문 페이지)](https://docs.microsoft.com/microsoft-edge/webvr/): 더 큰 이미지와 아이콘, 새 데모를 사용하여 모양과 느낌이 새롭게 되었습니다.
+* [WebVR 개발자 가이드(방문 페이지)](/microsoft-edge/webvr/): 더 큰 이미지와 아이콘, 새 데모를 사용하여 모양과 느낌이 새롭게 되었습니다.
 
-* [Microsoft Edge에서 WebVR 사용](https://docs.microsoft.com/microsoft-edge/webvr/webvr-with-edge): Windows 10 2018년 4월 업데이트에 대한 정보를 포함하도록 업데이트되었습니다.
+* [Microsoft Edge에서 WebVR 사용](/microsoft-edge/webvr/webvr-with-edge): Windows 10 2018년 4월 업데이트에 대한 정보를 포함하도록 업데이트되었습니다.
 
 ## <a name="videos"></a>동영상
 
 ### <a name="get-started-for-devs-create-and-customize-a-form-on-windows-10"></a>개발자를 위한 시작: Windows 10에서 양식 만들기 및 사용자 지정
 
-이제 Windows 개발자를 위한 [시작 문서](../get-started/index.md)에서 기본 앱 개발 작업용 실습 환경을 제공합니다. 이 비디오에서는 이러한 항목 중 하나를 안내하고, 앱에서 양식 UI를 만드는 방법에 대한 기본 사항을 설명합니다. 이 [비디오를 시청](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be)하여 작동하는 코드를 살펴본 다음, [해당 항목을 직접 확인해 보세요.](https://docs.microsoft.com/windows/uwp/get-started/construct-form-learning-track)
+이제 Windows 개발자를 위한 [시작 문서](../get-started/index.md)에서 기본 앱 개발 작업용 실습 환경을 제공합니다. 이 비디오에서는 이러한 항목 중 하나를 안내하고, 앱에서 양식 UI를 만드는 방법에 대한 기본 사항을 설명합니다. 이 [비디오를 시청](https://www.youtube.com/watch?v=AgngKzq4hKI&feature=youtu.be)하여 작동하는 코드를 살펴본 다음, [해당 항목을 직접 확인해 보세요.](../get-started/construct-form-learning-track.md)
 
 ### <a name="enhance-your-bot-with-project-personality-chat"></a>Project Personality Chat을 사용하여 봇 향상
 

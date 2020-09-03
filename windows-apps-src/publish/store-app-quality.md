@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: B15D4F19-4E6A-4C27-AD64-F03014D11BA9
-ms.openlocfilehash: d093a7b49a8c5ac00ca927614365d1b548e2f63a
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: ae4ade3cd7bef5434c8f5c9d9c6905c039e7e806
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77607261"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172847"
 ---
 # <a name="app-quality"></a>앱 품질
 
@@ -42,7 +42,7 @@ Store 페이지의 메타데이터(아이콘, 제목, 스크린 샷, 설명 등)
 
 - 독창적인 제목을 지으십시오. 예를 들어 다른 앱의 철자를 변경해 제목을 짓는다면 혼동이 생기므로, 나만의 제목을 지어서 앱이 눈에 띄게 하십시오.
 - 정보를 담은 제목을 선택하십시오. 예를 들어 '내 첫 번째 앱'이나 '클라이언트 앱'이라는 제목은 너무 일반적입니다.
-- 제목 작성에 도움이 되는 아이디어는 [앱 이름 선택](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name#choosing-your-apps-name) 문서에서 확인할 수 있습니다.
+- 제목 작성에 도움이 되는 아이디어는 [앱 이름 선택](./create-your-app-by-reserving-a-name.md#choosing-your-apps-name) 문서에서 확인할 수 있습니다.
 
 **설명**을 통해 앱의 주요 기능에 대해 설명할 수 있습니다. 깔끔하고 명확하며 설득력 있게 작성하십시오.
 
@@ -51,7 +51,7 @@ Store 페이지의 메타데이터(아이콘, 제목, 스크린 샷, 설명 등)
 - 메타데이터 기능 섹션에 앱 기능을 나열하고 앱 설명에 핵심 기능을 요약하면 고객이 어떤 앱인지 파악할 수 있습니다. 예를 들어 천문학 관련 앱을 설명한다면 행성을 나열하는 것이 아니라 앱의 특별한 위성 추적 기능에 대해 설명하는 것입니다. Store에서 경쟁이 심한 부문의 앱이라면 해당 앱이 어떻게 다르며 더 우수한지를 고객에게 알리는 데 더 노력을 기울여야 합니다.
 - 고객에게 사실을 이야기하십시오. 앱에 실제 포함된 내용을 설명하십시오. 예를 들어 현재 앱에 없는 기능은 구현할 계획이 아닌 한 고객에게 설명해서는 안 됩니다.
 - 앱의 기능이 다른 앱의 기능에 좌우된다면 설명 초반부에 알려주십시오. 그러면 고객은 앱을 사용하는 데 어떤 소프트웨어와 앱이 필요한지 알 수 있습니다.
-- [호소력 있는 앱 설명 쓰기](https://docs.microsoft.com/windows/uwp/publish/write-a-great-app-description)에서 몇 가지 유용한 팁을 참조하십시오.
+- [호소력 있는 앱 설명 쓰기](./write-a-great-app-description.md)에서 몇 가지 유용한 팁을 참조하십시오.
 
 **스크린샷** 및 **예고편**을 통해 고객에게 앱의 우수한 기능을 미리 보여줄 수 있습니다. 스크린 샷을 기술적으로 사용하여 앱의 우수한 품질을 강조하십시오.
 
@@ -88,4 +88,4 @@ Store 페이지의 메타데이터(아이콘, 제목, 스크린 샷, 설명 등)
 ### <a name="see-also"></a>참고 항목
 
 - [Microsoft Store 정책 및 준수 사항](store-policies-and-code-of-conduct.md)
-- [앱 개발자 계약](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement)
+- [앱 개발자 계약](/legal/windows/agreements/app-developer-agreement)

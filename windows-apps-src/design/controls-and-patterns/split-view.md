@@ -12,18 +12,18 @@ design-contact: kimsea
 dev-contact: tpaine
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e5df29f4ce91bd272fd921b23b5fc05b6655d4c0
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 4c942c5748ef1d62dc86f6fa3d041bae651167f2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80081537"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173907"
 ---
 # <a name="split-view-control"></a>분할 보기 컨트롤
 
 분할 보기 컨트롤에는 확장/축소 가능한 창 및 콘텐츠 영역이 있습니다.
 
-> **중요 API**: [SplitView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.SplitView)
+> **중요 API**: [SplitView 클래스](/uwp/api/Windows.UI.Xaml.Controls.SplitView)
 
 다음은 SplitView를 사용하여 허브를 표시하는 Microsoft Edge 앱 예제입니다.
 

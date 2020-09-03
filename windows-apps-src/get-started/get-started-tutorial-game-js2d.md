@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 01af8254-b073-445e-af4c-e474528f8aa3
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ef4255c8ea1eb9db34f652e5974a4f341e5500d
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: ac9e572da995da644cab1fbc997ee79fc3a11560
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80759444"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172017"
 ---
 # <a name="create-a-uwp-game-in-javascript"></a>JavaScript로 UWP 게임 만들기
 
@@ -52,7 +52,7 @@ Microsoft Store에 앱을 게시하려면 UWP(유니버설 Windows 플랫폼) �
 
 ![리포지토리 복제](images/JS2D_2.png)
 
-프로젝트를 zip 파일로 다운로드하거나 다른 표준 방법으로 [GitHub 프로젝트](https://docs.microsoft.com/windows/uwp/get-started/get-uwp-app-samples)로 작업할 수도 있습니다.
+프로젝트를 zip 파일로 다운로드하거나 다른 표준 방법으로 [GitHub 프로젝트](./get-app-samples.md)로 작업할 수도 있습니다.
 
 솔루션이 Visual Studio에 로드되면 다음을 포함한 여러 파일이 표시됩니다.
 
@@ -261,10 +261,10 @@ UWP 앱을 만들었으니 이제 Microsoft Store에 게시할 수 있습니다.
 몇 가지 단계를 처리해야 합니다.
 
 1. Windows 개발자로 [등록](https://developer.microsoft.com/store/register)해야 합니다.
-2. 앱 제출 [검사 목록](https://docs.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
-3. 앱을 제출하여 [인증](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
+2. 앱 제출 [검사 목록](../publish/app-submissions.md)을 사용해야 합니다.
+3. 앱을 제출하여 [인증](../publish/the-app-certification-process.md)을 받아야 합니다.
 
-자세한 내용은 [UWP 앱 게시](https://docs.microsoft.com/windows/uwp/publish/)를 참조하세요.
+자세한 내용은 [UWP 앱 게시](../publish/index.md)를 참조하세요.
 
 ## <a name="suggestions-for-other-features"></a>다른 기능에 대한 제안.
 

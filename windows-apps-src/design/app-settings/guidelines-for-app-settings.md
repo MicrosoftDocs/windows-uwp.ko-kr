@@ -8,12 +8,12 @@ ms.date: 08/07/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 418c33952c4be6be08683b5e396f423f771bb997
-ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
+ms.openlocfilehash: e3fcbcaa88fa39795ac078617c9a958ff3a997ac
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88502385"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173987"
 ---
 # <a name="guidelines-for-app-settings"></a>앱 설정에 대한 지침
 
@@ -27,7 +27,7 @@ ms.locfileid: "88502385"
 - 음악, 사운드 효과 또는 색 테마와 같이 사용자의 기본 설정에 따라 달라지는 옵션
 - 자주 액세스하지 않는 앱 정보(예: 개인 정보 취급 방침, 도움말, 앱 버전 또는 저작권 정보)
 
-일반적인 앱 워크플로에 속하는 명령(예: 미술 앱에서 브러시 크기 변경)은 설정 페이지에 있으면 안 됩니다. 명령 배치에 대한 자세한 내용은 [명령 디자인 기본 사항](https://docs.microsoft.com/windows/uwp/layout/commanding-basics)을 참조하세요.
+일반적인 앱 워크플로에 속하는 명령(예: 미술 앱에서 브러시 크기 변경)은 설정 페이지에 있으면 안 됩니다. 명령 배치에 대한 자세한 내용은 [명령 디자인 기본 사항](../basics/commanding-basics.md)을 참조하세요.
 
 ## <a name="general-recommendations"></a>일반 권장 사항
 
@@ -125,17 +125,17 @@ Detailed redlines showing preferred text strings for the "Choose a mode" section
     - [하이퍼링크](../controls-and-patterns/hyperlinks.md): 사용자를 앱 내의 다른 페이지나 외부 웹 사이트로 이동합니다. 사용자가 하이퍼링크를 클릭하면 설정 플라이아웃이 해제됩니다.
     - [단추](../controls-and-patterns/buttons.md): 사용자가 현재 설정 플라이아웃을 해제하지 않고 즉각적인 작업을 시작할 수 있습니다.
 - 컨트롤 중 하나가 비활성화되면 설명 메시지를 추가합니다. 이 메시지를 비활성화된 컨트롤 위에 배치합니다.
-- 설정 플라이아웃 및 헤더에 애니메이션 효과를 준 후 단일 블록으로 콘텐츠 및 컨트롤에 애니메이션 효과를 줍니다. 100px 왼쪽 오프셋과 함께 [**enterPage**](https://docs.microsoft.com/previous-versions/windows/apps/br212672(v=win.10)) 또는 [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) 애니메이션을 사용하여 콘텐츠에 애니메이션 효과를 줍니다.
+- 설정 플라이아웃 및 헤더에 애니메이션 효과를 준 후 단일 블록으로 콘텐츠 및 컨트롤에 애니메이션 효과를 줍니다. 100px 왼쪽 오프셋과 함께 [**enterPage**](/previous-versions/windows/apps/br212672(v=win.10)) 또는 [**EntranceThemeTransition**](/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition) 애니메이션을 사용하여 콘텐츠에 애니메이션 효과를 줍니다.
 - 필요한 경우 구역 머리글, 단락 및 레이블을 사용하여 콘텐츠를 구성하고 명확하게 표시합니다.
 - 설정을 반복해야 하는 경우 추가 UI 수준이나 확장/축소 모델을 사용하되 두 수준보다 더 깊은 계층 구조는 사용하지 않습니다. 예를 들어 도시별 설정을 제공하는 날씨 앱은 도시를 나열하고 사용자가 도시를 탭하여 새 플라이아웃을 열거나 설정 옵션을 확장하여 표시하도록 할 수 있습니다.
-- 컨트롤 또는 웹 콘텐츠를 로드하는 데 시간이 걸리는 경우 확정되지 않은 진행률 컨트롤을 사용하여 정보가 로드되고 있음을 사용자에게 표시합니다. 자세한 내용은 [진행률 컨트롤에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/progress-controls)을 참조하세요.
+- 컨트롤 또는 웹 콘텐츠를 로드하는 데 시간이 걸리는 경우 확정되지 않은 진행률 컨트롤을 사용하여 정보가 로드되고 있음을 사용자에게 표시합니다. 자세한 내용은 [진행률 컨트롤에 대한 지침](../controls-and-patterns/progress-controls.md)을 참조하세요.
 - 탐색이나 변경 내용 커밋에 단추를 사용하지 마세요. 하이퍼링크를 사용하여 다른 페이지를 탐색하고, 단추를 사용하여 변경 내용을 커밋하는 대신 사용자가 설정 플라이아웃을 해제할 때 변경 내용을 앱 설정에 자동으로 저장합니다.
 
 
 
 ## <a name="related-articles"></a>관련된 문서
 
-* [명령 디자인 기본 사항](https://docs.microsoft.com/windows/uwp/layout/commanding-basics)
-* [진행률 컨트롤에 대한 지침](https://docs.microsoft.com/windows/uwp/controls-and-patterns/progress-controls)
-* [앱 데이터 저장 및 검색](https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data)
-* [**EntranceThemeTransition**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition)
+* [명령 디자인 기본 사항](../basics/commanding-basics.md)
+* [진행률 컨트롤에 대한 지침](../controls-and-patterns/progress-controls.md)
+* [앱 데이터 저장 및 검색](./store-and-retrieve-app-data.md)
+* [**EntranceThemeTransition**](/uwp/api/Windows.UI.Xaml.Media.Animation.EntranceThemeTransition)

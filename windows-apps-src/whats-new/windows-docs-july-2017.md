@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10
 ms.date: 07/05/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 65c3c2fb4b7a5a7f0b5f4b3c89773f3e21bd654d
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: acec4384b5ce04548818a512270e66d7b4500e16
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684747"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174407"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-july-2017"></a>2017년 7월 Windows 개발자 문서의 새로운 내용
 
@@ -98,21 +98,21 @@ SDK Preview 빌드의 [Windows 참가자](https://insider.windows.com/)에서 �
 
 ### <a name="media-playback"></a>미디어 재생
 
-기본 미디어 재생 문서에 새 섹션인 [MediaPlayer를 사용하여 오디오 및 비디오 재생](../audio-video-camera/play-audio-and-video-with-mediaplayer.md)이 추가되었습니다. [MediaPlayer를 사용하여 구형 비디오 재생](../audio-video-camera/play-audio-and-video-with-mediaplayer.md) 섹션은 지원되는 형식의 시야를 조정하고 방향을 볼 수 있는 기능을 포함하여 구형으로 인코딩된 비디오를 재생하는 방법을 보여 줍니다. [프레임 서버 모드에서 MediaPlayer 사용](../audio-video-camera/play-audio-and-video-with-mediaplayer.md#use-mediaplayer-in-frame-server-mode) 섹션은 [MediaPlayer](https://docs.microsoft.com/uwp/api/Windows.Media.Playback.MediaPlayer)에서 재생되는 프레임을 Direct3D 표면에 복사하는 방법을 보여 줍니다. 이를 통해 픽셀 셰이더를 사용한 실시간 효과 적용 시나리오가 가능합니다. 예제 코드는 Win2D를 사용하여 재생되는 비디오에 흐림 효과를 빠르게 구현하는 방법을 보여 줍니다.
+기본 미디어 재생 문서에 새 섹션인 [MediaPlayer를 사용하여 오디오 및 비디오 재생](../audio-video-camera/play-audio-and-video-with-mediaplayer.md)이 추가되었습니다. [MediaPlayer를 사용하여 구형 비디오 재생](../audio-video-camera/play-audio-and-video-with-mediaplayer.md) 섹션은 지원되는 형식의 시야를 조정하고 방향을 볼 수 있는 기능을 포함하여 구형으로 인코딩된 비디오를 재생하는 방법을 보여 줍니다. [프레임 서버 모드에서 MediaPlayer 사용](../audio-video-camera/play-audio-and-video-with-mediaplayer.md#use-mediaplayer-in-frame-server-mode) 섹션은 [MediaPlayer](/uwp/api/Windows.Media.Playback.MediaPlayer)에서 재생되는 프레임을 Direct3D 표면에 복사하는 방법을 보여 줍니다. 이를 통해 픽셀 셰이더를 사용한 실시간 효과 적용 시나리오가 가능합니다. 예제 코드는 Win2D를 사용하여 재생되는 비디오에 흐림 효과를 빠르게 구현하는 방법을 보여 줍니다.
 
 ### <a name="media-capture"></a>미디어 캡처
 
-[MediaFrameReader를 사용하여 미디어 프레임 처리](../audio-video-camera/process-media-frames-with-mediaframereader.md) 문서가 업데이트되어 새로운 [MultiSourceMediaFrameReader](https://docs.microsoft.com/uwp/api/windows.media.capture.frames.multisourcemediaframereader) 클래스를 사용하여 여러 미디어 원본에서 시간 연관 프레임을 가져오는 방법을 설명합니다. 이는 깊이 카메라 및 색상 카메라와 같은 여러 원본의 프레임을 처리해야 하는 경우에 유용하며 사용자는 각 원본의 프레임이 서로 가깝게 캡처되는지 확인해야 합니다. 자세한 내용은 [MultiSourceMediaFrameReader를 사용하여 여러 원본에서 시간 연관 프레임 가져오기](../audio-video-camera/process-media-frames-with-mediaframereader.md#use-multisourcemediaframereader-to-get-time-corellated-frames-from-multiple-sources)를 참조하세요.
+[MediaFrameReader를 사용하여 미디어 프레임 처리](../audio-video-camera/process-media-frames-with-mediaframereader.md) 문서가 업데이트되어 새로운 [MultiSourceMediaFrameReader](/uwp/api/windows.media.capture.frames.multisourcemediaframereader) 클래스를 사용하여 여러 미디어 원본에서 시간 연관 프레임을 가져오는 방법을 설명합니다. 이는 깊이 카메라 및 색상 카메라와 같은 여러 원본의 프레임을 처리해야 하는 경우에 유용하며 사용자는 각 원본의 프레임이 서로 가깝게 캡처되는지 확인해야 합니다. 자세한 내용은 [MultiSourceMediaFrameReader를 사용하여 여러 원본에서 시간 연관 프레임 가져오기](../audio-video-camera/process-media-frames-with-mediaframereader.md#use-multisourcemediaframereader-to-get-time-corellated-frames-from-multiple-sources)를 참조하세요.
 
 ### <a name="scoped-search"></a>범위가 지정된 검색
 
-docs.microsoft.com의 [UWP 개념](../get-started/universal-application-platform-guide.md) 및 [API 참조](https://docs.microsoft.com/uwp/api/) 문서에 "UWP" 범위가 추가되었습니다. 이 범위를 비활성화하지 않으면 이 영역 내에서 수행한 검색이 UWP 문서만 반환합니다.
+docs.microsoft.com의 [UWP 개념](../get-started/universal-application-platform-guide.md) 및 [API 참조](/uwp/api/) 문서에 "UWP" 범위가 추가되었습니다. 이 범위를 비활성화하지 않으면 이 영역 내에서 수행한 검색이 UWP 문서만 반환합니다.
 
 ![범위가 지정된 검색](images/scoped-search.png)
 
 ### <a name="test-your-windows-app-for-windows-10-s"></a>Windows 10 S용 Windows 앱 테스트
 
-Windows S를 실행하는 디바이스에서 Windows 앱이 제대로 작동하는지 테스트합니다. [이 새로운 가이드](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-test-windows-s)에서 방법을 알아보세요.
+Windows S를 실행하는 디바이스에서 Windows 앱이 제대로 작동하는지 테스트합니다. [이 새로운 가이드](/windows/msix/desktop/desktop-to-uwp-test-windows-s)에서 방법을 알아보세요.
 
 ## <a name="samples"></a>샘플
 
@@ -124,7 +124,7 @@ Windows S를 실행하는 디바이스에서 Windows 앱이 제대로 작동하�
 
 ### <a name="shopping-app-sample"></a>쇼핑 앱 샘플
 
-[사용자가 이모지를 구입할 수 있는 기본 쇼핑 환경을 나타내는 작은 앱 샘플입니다](https://github.com/Microsoft/Windows-appsample-shopping). 이 앱은 [결제 요청 API](https://docs.microsoft.com/uwp/api/windows.applicationmodel.payments)를 사용하여 체크아웃 환경을 구현합니다.
+[사용자가 이모지를 구입할 수 있는 기본 쇼핑 환경을 나타내는 작은 앱 샘플입니다](https://github.com/Microsoft/Windows-appsample-shopping). 이 앱은 [결제 요청 API](/uwp/api/windows.applicationmodel.payments)를 사용하여 체크아웃 환경을 구현합니다.
 
 ![쇼핑 앱 샘플 스크린샷](images/shoppingcart.png)  
 

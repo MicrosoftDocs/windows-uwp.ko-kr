@@ -12,24 +12,24 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d0834a905c50b92003c3aa78ff8226d35c25e5dd
-ms.sourcegitcommit: ddc65c170834bcce524b5e1d36e6755eae1e3af2
+ms.openlocfilehash: 505e03124f345b8b32c6b3454ffa4aad32a72e29
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83729894"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172757"
 ---
 # <a name="item-containers-and-templates"></a>항목 컨테이너 및 템플릿
 
  
 
-**ListView** 및 **GridView** 컨트롤은 항목 정렬 방법(가로, 세로, 줄 바꿈 등) 및 사용자가 항목을 조작하는 방법을 관리하지만 개별 항목이 화면에 표시되는 모양은 관리하지 않습니다. 항목 시각화는 항목 컨테이너에 의해 관리됩니다. 항목을 목록 보기에 추가하는 경우 항목이 자동으로 컨테이너에 추가됩니다. ListView에 대한 기본 항목 컨테이너는 [ListViewItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListViewItem)입니다. GridView의 경우 해당 [GridViewItem](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridViewItem)입니다.
+**ListView** 및 **GridView** 컨트롤은 항목 정렬 방법(가로, 세로, 줄 바꿈 등) 및 사용자가 항목을 조작하는 방법을 관리하지만 개별 항목이 화면에 표시되는 모양은 관리하지 않습니다. 항목 시각화는 항목 컨테이너에 의해 관리됩니다. 항목을 목록 보기에 추가하는 경우 항목이 자동으로 컨테이너에 추가됩니다. ListView에 대한 기본 항목 컨테이너는 [ListViewItem](/uwp/api/Windows.UI.Xaml.Controls.ListViewItem)입니다. GridView의 경우 해당 [GridViewItem](/uwp/api/Windows.UI.Xaml.Controls.GridViewItem)입니다.
 
-> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview), [GridView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview), [ListViewItem 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewitem), [GridViewItem 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridviewitem), [ItemTemplate 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate), [ItemContainerStyle 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)
+> **중요 API**: [ListView 클래스](/uwp/api/windows.ui.xaml.controls.listview), [GridView 클래스](/uwp/api/windows.ui.xaml.controls.gridview), [ListViewItem 클래스](/uwp/api/windows.ui.xaml.controls.listviewitem), [GridViewItem 클래스](/uwp/api/windows.ui.xaml.controls.gridviewitem), [ItemTemplate 속성](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate), [ItemContainerStyle 속성](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle)
 
 
 > [!NOTE]
-> ListView 및 GridView 모두 [ListViewBase](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록 보기에 대해 논의할 때 다른 언급이 없는 한, 해당 정보가 ListView 및 GridView 컨트롤 둘 다에 적용됩니다. ListView 또는 ListViewItem과 같은 클래스를 참조할 수 있지만 그리드와 관련된 동일한 항목에 대해 *List* 접두사는 *Grid*로 바꿀 수 있습니다(GridView 또는 GridViewItem). 
+> ListView 및 GridView 모두 [ListViewBase](/uwp/api/windows.ui.xaml.controls.listviewbase) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록 보기에 대해 논의할 때 다른 언급이 없는 한, 해당 정보가 ListView 및 GridView 컨트롤 둘 다에 적용됩니다. ListView 또는 ListViewItem과 같은 클래스를 참조할 수 있지만 그리드와 관련된 동일한 항목에 대해 *List* 접두사는 *Grid*로 바꿀 수 있습니다(GridView 또는 GridViewItem). 
 
 ## <a name="listview-items-and-gridview-items"></a>ListView 항목 및 GridView 항목
 위에서 설명한 대로 ListView 항목은 ListViewItem 컨테이너에 자동으로 배치되고, GridView 항목은 GridViewItem 컨테이너에 배치됩니다. 이러한 항목 컨테이너는 자체의 기본 제공 스타일 지정 및 상호 작용을 포함하지만 고도로 사용자 지정할 수 있는 컨트롤입니다. 그러나 사용자 지정하기 전에 ListViewItem 및 GridViewItem에 대한 추천 스타일 지정과 지침을 숙지해야 합니다.
@@ -40,8 +40,8 @@ ms.locfileid: "83729894"
 ## <a name="introduction-to-customization"></a>사용자 지정 소개
 컨테이너 컨트롤(예: ListViewItem 및 GridViewItem)은 항목에 대해 표시되는 최종 시각적 개체를 만들기 위해 결합되는 두 가지 중요한 부분인 *데이터 템플릿* 및 *컨트롤 템플릿*으로 구성됩니다.
 
-- **데이터 템플릿** - 목록 보기의 [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) 속성에 [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)을 할당하여 개별 데이터 항목이 표시되는 방식을 지정합니다.
-- **컨트롤 템플릿** - 컨트롤 템플릿은 시각적 상태와 같이 프레임워크에서 담당하는 항목 시각화의 일부를 제공합니다. [ItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle) 속성을 사용하여 컨트롤 템플릿을 수정할 수 있습니다. 일반적으로 사용자의 브랜드에 맞게 목록 보기 색을 수정하거나 선택한 항목이 표시되는 방법을 변경하기 위해 이 작업을 수행합니다.
+- **데이터 템플릿** - 목록 보기의 [ItemTemplate](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) 속성에 [DataTemplate](/uwp/api/Windows.UI.Xaml.DataTemplate)을 할당하여 개별 데이터 항목이 표시되는 방식을 지정합니다.
+- **컨트롤 템플릿** - 컨트롤 템플릿은 시각적 상태와 같이 프레임워크에서 담당하는 항목 시각화의 일부를 제공합니다. [ItemContainerStyle](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle) 속성을 사용하여 컨트롤 템플릿을 수정할 수 있습니다. 일반적으로 사용자의 브랜드에 맞게 목록 보기 색을 수정하거나 선택한 항목이 표시되는 방법을 변경하기 위해 이 작업을 수행합니다.
 
 이 이미지는 컨트롤 템플릿과 데이터 템플릿을 결합하여 항목의 최종 시각적 개체를 만드는 방법을 보여 줍니다.
 
@@ -92,7 +92,7 @@ ms.locfileid: "83729894"
 
 목록 보기에 데이터 항목을 표시하는 방법을 더 자세히 살펴보기 전에 표시할 데이터를 이해해야 합니다. 이 예제에서는 `NamedColor`라는 데이터 형식을 만듭니다. 3가지 속성 `Name`, `Color` 및 `Brush`로 표현되는 색 이름, 색 값 및 색의 **SolidColorBrush**를 결합합니다.
  
-그런 다음, [Colors](https://docs.microsoft.com/uwp/api/windows.ui.colors) 클래스의 각 명명된 색에 대한 `NamedColor` 개체로 **List**를 채웁니다. 목록은 목록 보기에 대한 [ItemsSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource)로 설정됩니다.
+그런 다음, [Colors](/uwp/api/windows.ui.colors) 클래스의 각 명명된 색에 대한 `NamedColor` 개체로 **List**를 채웁니다. 목록은 목록 보기에 대한 [ItemsSource](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemssource)로 설정됩니다.
 
 다음은 클래스를 정의하고 `NamedColors` 목록을 채우는 코드입니다.
 
@@ -165,7 +165,7 @@ namespace ColorsListApp
 
 ![항목의 문자열 표현을 나타내는 목록 보기](images/listview-no-template.png)
 
-[DisplayMemberPath](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.displaymemberpath)를 해당 속성으로 설정하여 데이터 항목의 특정 속성에 대한 문자열 표현을 표시할 수 있습니다. 여기서는 DisplayMemberPath를 `NamedColor` 항목의 `Name` 속성으로 설정합니다.
+[DisplayMemberPath](/uwp/api/windows.ui.xaml.controls.itemscontrol.displaymemberpath)를 해당 속성으로 설정하여 데이터 항목의 특정 속성에 대한 문자열 표현을 표시할 수 있습니다. 여기서는 DisplayMemberPath를 `NamedColor` 항목의 `Name` 속성으로 설정합니다.
 
 **XAML**
 ```xaml
@@ -176,15 +176,15 @@ namespace ColorsListApp
 
 ![항목 속성의 문자열 표현을 나타내는 목록 보기](images/listview-display-member-path.png)
 
-일반적으로 데이터를 보다 다양하게 표시하려는 경우가 많습니다. 목록 보기에서 항목이 표시되는 방법을 정확히 지정하려면 [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)을 만듭니다. DataTemplate의 XAML은 개별 항목을 표시하는 데 사용되는 컨트롤의 레이아웃 및 모양을 정의합니다. 레이아웃의 컨트롤은 데이터 개체의 속성에 바운딩되거나 정적 콘텐츠 정의 인라인을 가질 수 있습니다. 목록 컨트롤의 [ItemTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) 속성에 DataTemplate을 할당합니다.
+일반적으로 데이터를 보다 다양하게 표시하려는 경우가 많습니다. 목록 보기에서 항목이 표시되는 방법을 정확히 지정하려면 [DataTemplate](/uwp/api/Windows.UI.Xaml.DataTemplate)을 만듭니다. DataTemplate의 XAML은 개별 항목을 표시하는 데 사용되는 컨트롤의 레이아웃 및 모양을 정의합니다. 레이아웃의 컨트롤은 데이터 개체의 속성에 바운딩되거나 정적 콘텐츠 정의 인라인을 가질 수 있습니다. 목록 컨트롤의 [ItemTemplate](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemtemplate) 속성에 DataTemplate을 할당합니다.
 
 > [!IMPORTANT]
 > **ItemTemplate** 및 **DisplayMemberPath**를 동시에 사용할 수 없습니다. 두 속성을 모두 설정한 경우 예외가 발생합니다.
 
-여기서는 항목 색의 [Rectangle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.shapes.rectangle) 및 색 이름과 RGB 값을 표시하는 DataTemplate을 정의합니다. 
+여기서는 항목 색의 [Rectangle](/uwp/api/windows.ui.xaml.shapes.rectangle) 및 색 이름과 RGB 값을 표시하는 DataTemplate을 정의합니다. 
 
 > [!NOTE]
-> DataTemplate에서 [x:Bind 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)을 사용하는 경우 DataTemplate에서 DataType(`x:DataType`)을 지정해야 합니다.
+> DataTemplate에서 [x:Bind 태그 확장](../../xaml-platform/x-bind-markup-extension.md)을 사용하는 경우 DataTemplate에서 DataType(`x:DataType`)을 지정해야 합니다.
 
 **XAML**
 ```xaml
@@ -219,8 +219,8 @@ namespace ColorsListApp
 ![데이터 템플릿을 사용한 목록 보기 항목](images/listview-data-template-0.png)
 
 > [!IMPORTANT]
-> ListViewItem의 콘텐츠는 기본적으로 왼쪽에 맞추어집니다. 즉 [HorizontalContentAlignmentProperty](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.horizontalcontentalignment#Windows_UI_Xaml_Controls_Control_HorizontalContentAlignment)가 Left로 설정되어 있습니다. 가로로 쌓은 요소 또는 동일한 Grid 행에 배치된 요소와 같이 ListViewItem 내에 가로로 인접한 여러 요소가 있는 경우 모두 왼쪽에 맞추어지고 정의된 여백으로만 구분됩니다. 
-<br/><br/> 요소를 분산하여 ListItem의 전체 본문을 채우려면 ListView 내의 [Setter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.setter)를 사용하여 HorizontalContentAlignmentProperty를 [Stretch](https://docs.microsoft.com/uwp/api/windows.ui.xaml.horizontalalignment)로 설정해야 합니다.
+> ListViewItem의 콘텐츠는 기본적으로 왼쪽에 맞추어집니다. 즉 [HorizontalContentAlignmentProperty](/uwp/api/windows.ui.xaml.controls.control.horizontalcontentalignment#Windows_UI_Xaml_Controls_Control_HorizontalContentAlignment)가 Left로 설정되어 있습니다. 가로로 쌓은 요소 또는 동일한 Grid 행에 배치된 요소와 같이 ListViewItem 내에 가로로 인접한 여러 요소가 있는 경우 모두 왼쪽에 맞추어지고 정의된 여백으로만 구분됩니다. 
+<br/><br/> 요소를 분산하여 ListItem의 전체 본문을 채우려면 ListView 내의 [Setter](/uwp/api/windows.ui.xaml.setter)를 사용하여 HorizontalContentAlignmentProperty를 [Stretch](/uwp/api/windows.ui.xaml.horizontalalignment)로 설정해야 합니다.
 
 ```xaml
 <ListView.ItemContainerStyle>
@@ -285,7 +285,7 @@ GridView에 데이터를 표시할 수 있습니다. 다음은 그리드 레이�
 
 데이터 템플릿은 목록 보기의 모양을 정의하는 기본적인 방법입니다. 목록에 많은 수의 항목이 표시되는 경우 데이터 템플릿이 성능에 큰 영향을 미칠 수도 있습니다. 
 
-목록 보기에서 각 항목에 대해 데이터 템플릿의 모든 XAML 요소 인스턴스가 만들어집니다. 예를 들어 이전 예제의 그리드 템플릿에는 10개의 XAML 요소(Grid 1개, Rectangle 1개, Border 3개, TextBlock 5개)가 있습니다. 이 데이터 템플릿을 사용하여 화면에 20개의 항목을 표시하는 GridView는 최소 200개의 요소(20*10=200)를 만듭니다. 데이터 템플릿의 요소 수를 줄이면 목록 보기에 대해 만든 요소의 총 개수를 크게 줄일 수 있습니다. 자세한 내용은 [ListView 및 GridView UI 최적화: 항목당 요소 개수 감소](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)를 참조하세요.
+목록 보기에서 각 항목에 대해 데이터 템플릿의 모든 XAML 요소 인스턴스가 만들어집니다. 예를 들어 이전 예제의 그리드 템플릿에는 10개의 XAML 요소(Grid 1개, Rectangle 1개, Border 3개, TextBlock 5개)가 있습니다. 이 데이터 템플릿을 사용하여 화면에 20개의 항목을 표시하는 GridView는 최소 200개의 요소(20*10=200)를 만듭니다. 데이터 템플릿의 요소 수를 줄이면 목록 보기에 대해 만든 요소의 총 개수를 크게 줄일 수 있습니다. 자세한 내용은 [ListView 및 GridView UI 최적화: 항목당 요소 개수 감소](../../debug-test-perf/optimize-gridview-and-listview.md)를 참조하세요.
 
  이 섹션에서 그리드 데이터 템플릿을 참조하세요. 요소 수를 줄일 수 있는 몇 가지 방법을 살펴보겠습니다.
 
@@ -313,7 +313,7 @@ GridView에 데이터를 표시할 수 있습니다. 다음은 그리드 레이�
 
 - 가리키기 - 데이터 템플릿 아래에 그려지는 밝은 회색 사각형입니다.  
 - 선택 – 데이터 템플릿 아래에 그려지는 밝은 파란색 사각형입니다. 
-- 키보드 포커스 – 항목 템플릿 위에 그려진 [높은 가시성 포커스 화면 효과](/windows/uwp/design/input/guidelines-for-visualfeedback#high-visibility-focus-visuals) 입니다.
+- 키보드 포커스 – 항목 템플릿 위에 그려진 [높은 가시성 포커스 화면 효과](../input/guidelines-for-visualfeedback.md#high-visibility-focus-visuals) 입니다.
 
 ![목록 보기 상태 시각적 개체](images/listview-state-visuals.png)
 
@@ -325,12 +325,12 @@ GridView에 데이터를 표시할 수 있습니다. 다음은 그리드 레이�
 
 앞에서 데이터 템플릿에 대해 설명한 것처럼 각 항목에 대해 만들어지는 XAML 요소의 수는 목록 보기의 성능에 큰 영향을 미칠 수 있습니다. 데이터 템플릿과 컨트롤 템플릿을 결합하여 각 항목을 표시하므로 항목을 표시하는 데 필요한 실제 요소 수에는 두 템플릿의 요소가 모두 포함됩니다.
 
-ListView 및 GridView 컨트롤은 항목당 만들어지는 XAML 요소의 수를 줄이도록 최적화됩니다. **ListViewItem** 화면 효과는 많은 UIElement 오버헤드 없이 포커스, 선택 항목 및 다른 시각적 상태에 대한 복잡한 화면 효과를 표시하는 특수 XAML 요소인 [ListViewItemPresenter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter)를 통해 생성됩니다.
+ListView 및 GridView 컨트롤은 항목당 만들어지는 XAML 요소의 수를 줄이도록 최적화됩니다. **ListViewItem** 화면 효과는 많은 UIElement 오버헤드 없이 포커스, 선택 항목 및 다른 시각적 상태에 대한 복잡한 화면 효과를 표시하는 특수 XAML 요소인 [ListViewItemPresenter](/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter)를 통해 생성됩니다.
  
 > [!NOTE]
 > Windows 10용 UWP 앱에서 **ListViewItem** 및 **GridViewItem**은 모두 **ListViewItemPresenter**를 사용합니다. GridViewItemPresenter는 더 이상 사용되지 않습니다. ListViewItem 및 GridViewItem은 ListViewItemPresenter에 다양한 속성 값을 설정하여 다양한 기본 모양을 표시합니다.)
 
-항목 컨테이너의 모양을 수정하려면 [ItemContainerStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle) 속성을 사용하고, [TargetType](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style.targettype)이 **ListViewItem** 또는 **GridViewItem**으로 설정된 [Style](https://docs.microsoft.com/uwp/api/windows.ui.xaml.style)을 제공합니다.
+항목 컨테이너의 모양을 수정하려면 [ItemContainerStyle](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemcontainerstyle) 속성을 사용하고, [TargetType](/uwp/api/windows.ui.xaml.style.targettype)이 **ListViewItem** 또는 **GridViewItem**으로 설정된 [Style](/uwp/api/windows.ui.xaml.style)을 제공합니다.
 
 이 예제에서는 ListViewItem에 안쪽 여백을 추가하여 목록의 항목 사이에 일부 간격을 만듭니다.
 
@@ -352,7 +352,7 @@ ListView 및 GridView 컨트롤은 항목당 만들어지는 XAML 요소의 수�
 
 ![안쪽 여백이 적용된 목록 보기 항목](images/listview-data-template-1.png)
 
-ListViewItem 기본 스타일에서 ListViewItemPresenter **ContentMargin** 속성의 [TemplateBinding](https://docs.microsoft.com/windows/uwp/xaml-platform/templatebinding-markup-extension)은 ListViewItem **Padding** 속성(`<ListViewItemPresenter ContentMargin="{TemplateBinding Padding}"/>`)으로 설정되어 있습니다. Padding 속성을 설정할 때 해당 값은 실제로 ListViewItemPresenter ContentMargin 속성에 전달됩니다.
+ListViewItem 기본 스타일에서 ListViewItemPresenter **ContentMargin** 속성의 [TemplateBinding](../../xaml-platform/templatebinding-markup-extension.md)은 ListViewItem **Padding** 속성(`<ListViewItemPresenter ContentMargin="{TemplateBinding Padding}"/>`)으로 설정되어 있습니다. Padding 속성을 설정할 때 해당 값은 실제로 ListViewItemPresenter ContentMargin 속성에 전달됩니다.
 
 템플릿에 바인딩되지 않는 다른 ListViewItemPresenter 속성을 ListViewItems 속성으로 수정하려면 속성을 수정할 수 있는 새 ListViewItemPresenter를 사용하여 ListViewItem의 템플릿을 다시 작성해야 합니다. 
 
@@ -424,11 +424,11 @@ ListViewItem 기본 스타일에서 ListViewItemPresenter **ContentMargin** 속�
 
 #### <a name="inline-and-overlay-selection-visuals"></a>인라인 및 오버레이 선택 시각적 개체
 
-ListView 및 GridView는 컨트롤 및 [SelectionMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode)에 따라 다른 방법으로 선택된 항목을 나타냅니다. 목록 보기 선택에 대한 자세한 내용은 [ListView 및 GridView](listview-and-gridview.md)를 참조하세요. 
+ListView 및 GridView는 컨트롤 및 [SelectionMode](/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode)에 따라 다른 방법으로 선택된 항목을 나타냅니다. 목록 보기 선택에 대한 자세한 내용은 [ListView 및 GridView](listview-and-gridview.md)를 참조하세요. 
 
-**SelectionMode**가 **Multiple**로 설정된 경우 선택 확인란이 항목에 대한 컨트롤 템플릿의 일부로 표시됩니다. [SelectionCheckMarkVisualEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter.selectioncheckmarkvisualenabled) 속성을 사용하여 Multiple 선택 모드의 선택 확인란을 끌 수 있습니다. 그러나 다른 선택 모드에서는 이 속성이 무시되므로 Extended 또는 Single 선택 모드에서 확인란을 켤 수 없습니다.
+**SelectionMode**가 **Multiple**로 설정된 경우 선택 확인란이 항목에 대한 컨트롤 템플릿의 일부로 표시됩니다. [SelectionCheckMarkVisualEnabled](/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter.selectioncheckmarkvisualenabled) 속성을 사용하여 Multiple 선택 모드의 선택 확인란을 끌 수 있습니다. 그러나 다른 선택 모드에서는 이 속성이 무시되므로 Extended 또는 Single 선택 모드에서 확인란을 켤 수 없습니다.
 
-[CheckMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter.checkmode) 속성을 설정하여 확인란을 인라인 스타일 또는 오버레이 스타일을 사용하여 표시할지 여부를 지정할 수 있습니다.
+[CheckMode](/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter.checkmode) 속성을 설정하여 확인란을 인라인 스타일 또는 오버레이 스타일을 사용하여 표시할지 여부를 지정할 수 있습니다.
 
 - **Inline**: 이 스타일은 콘텐츠 왼쪽에 확인란을 표시하고 항목 컨테이너의 배경색을 통해 선택을 나타냅니다. ListView의 기본 스타일입니다.
 - **Overlay**: 이 스타일은 콘텐츠 위에 확인란을 표시하고 항목 컨테이너의 테두리 색을 통해 선택을 나타냅니다. GridView의 기본 스타일입니다.
@@ -473,7 +473,7 @@ ListViewItemPresenter에는 데이터 자리 표시자 및 끌기 상태에 대�
 앞서 언급했듯이 항목 템플릿의 UIElements 수는 목록 보기의 성능에 큰 영향을 줍니다. ListViewItemPresenter를 확장된 XAML 템플릿으로 바꾸면 요소 수가 크게 증가하므로 목록 보기에 표시되는 항목 수가 많거나 성능이 중요한 경우에는 권장되지 않습니다.
 
 > [!NOTE]
-> **ListViewItemPresenter**는 목록 보기의 [ItemsPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel)이 [ItemsWrapGrid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemswrapgrid) 또는 [ItemsStackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.itemsstackpanel)인 경우에만 지원됩니다. ItemsPanel을 [VariableSizedWrapGrid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.variablesizedwrapgrid), [WrapGrid](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.wrapgrid) 또는 [StackPanel](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel)로 변경하면 항목 템플릿이 자동으로 확장된 XAML 템플릿으로 전환됩니다. 자세한 내용은 [ListView 및 GridView UI 최적화](https://docs.microsoft.com/windows/uwp/debug-test-perf/optimize-gridview-and-listview)를 참조하세요.
+> **ListViewItemPresenter**는 목록 보기의 [ItemsPanel](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel)이 [ItemsWrapGrid](/uwp/api/windows.ui.xaml.controls.itemswrapgrid) 또는 [ItemsStackPanel](/uwp/api/windows.ui.xaml.controls.itemsstackpanel)인 경우에만 지원됩니다. ItemsPanel을 [VariableSizedWrapGrid](/uwp/api/windows.ui.xaml.controls.variablesizedwrapgrid), [WrapGrid](/uwp/api/windows.ui.xaml.controls.wrapgrid) 또는 [StackPanel](/uwp/api/windows.ui.xaml.controls.stackpanel)로 변경하면 항목 템플릿이 자동으로 확장된 XAML 템플릿으로 전환됩니다. 자세한 내용은 [ListView 및 GridView UI 최적화](../../debug-test-perf/optimize-gridview-and-listview.md)를 참조하세요.
 
 확장된 XAML 템플릿을 사용자 지정하려면 앱에서 해당 템플릿의 복사본을 만들고 **ItemContainerStyle** 속성을 복사본으로 설정해야 합니다.
 
@@ -497,4 +497,3 @@ ListViewItemPresenter에는 데이터 자리 표시자 및 끌기 상태에 대�
 
 - [목록](lists.md)
 - [ListView 및 GridView](listview-and-gridview.md)
-

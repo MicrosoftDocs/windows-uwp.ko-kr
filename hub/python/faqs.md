@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, pip, py.exe, 파일 경로, PYTHONPATH, python 배포, python 패키징
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 2541186a1dd0f205d88e1e14c146934490afff55
-ms.sourcegitcommit: b6138f9565252460ace6fa0acdc2a902e591681a
+ms.openlocfilehash: 4504e7550d19d2cc713284abebed43b6305b5dbd
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88243265"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174127"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Windows에서 Python 사용에 대한 질문과 대답입니다.
 
@@ -65,7 +65,7 @@ PowerShell에서 이 변수를 설정하려면 Python을 시작하기 직전에 
 
 [Docker](https://code.visualstudio.com/docs/azure/docker): [VSCode 확장](https://code.visualstudio.com/docs/azure/docker)을 사용하면 Dockerfile 및 docker-compose.yml 템플릿을 사용하여 신속하게 패키징하고 배포할 수 있습니다(프로젝트에 적합한 Docker 파일 생성).
 
-[AKS(Azure Kubernetes Service)](https://docs.microsoft.com/azure/aks/)를 사용하면 컨테이너화된 애플리케이션을 배포하고 관리하는 한편, 주문형 리소스를 확장할 수 있습니다.
+[AKS(Azure Kubernetes Service)](/azure/aks/)를 사용하면 컨테이너화된 애플리케이션을 배포하고 관리하는 한편, 주문형 리소스를 확장할 수 있습니다.
 
 ## <a name="what-if-i-need-to-work-across-different-machines"></a>여러 머신에서 작업해야 하는 경우에는 어떻게 하나요?
 

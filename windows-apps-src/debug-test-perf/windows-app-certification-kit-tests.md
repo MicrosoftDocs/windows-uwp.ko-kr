@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: 9de761a0b127d7218c7dc2bb4c6862626b7c60e4
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: bb647d844c32286a2d612231b3069430f11fcad0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "77089429"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174017"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
 
@@ -34,7 +34,7 @@ Windows 호환성 모드, AppHelp 메시지 또는 호환성 수정을 사용하
 
 인증 테스트 전체에서 앱 복원력 및 안정성을 테스트합니다.
 
-Windows 앱 인증 키트에서 [**IApplicationActivationManager::ActivateApplication**](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication)를 호출하여 앱을 시작합니다. **ActivateApplication**에서 앱을 시작하려면 UAC(사용자 계정 컨트롤)을 사용할 수 있어야 하며 화면 해상도가 1024 x 768 또는 768 x 1024 이상이어야 합니다. 두 조건 중 하나가 충족되지 않으면 앱이 이 테스트에 실패합니다.
+Windows 앱 인증 키트에서 [**IApplicationActivationManager::ActivateApplication**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication)를 호출하여 앱을 시작합니다. **ActivateApplication**에서 앱을 시작하려면 UAC(사용자 계정 컨트롤)을 사용할 수 있어야 하며 화면 해상도가 1024 x 768 또는 768 x 1024 이상이어야 합니다. 두 조건 중 하나가 충족되지 않으면 앱이 이 테스트에 실패합니다.
 
 ### <a name="corrective-actions"></a>수정 작업
 
@@ -42,7 +42,7 @@ Windows 앱 인증 키트에서 [**IApplicationActivationManager::ActivateApplic
 
 화면이 충분히 큰 컴퓨터에서 테스트를 실행하고 있는지 확인합니다.
 
-앱이 시작되지 않는 경우 테스트 플랫폼이 [**ActivateApplication**](https://docs.microsoft.com/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication)의 필수 조건을 충족하면 활성화 이벤트 로그를 검토하여 문제를 해결할 수 있습니다. 이벤트 로그에서 이러한 항목을 찾으려면
+앱이 시작되지 않는 경우 테스트 플랫폼이 [**ActivateApplication**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication)의 필수 조건을 충족하면 활성화 이벤트 로그를 검토하여 문제를 해결할 수 있습니다. 이벤트 로그에서 이러한 항목을 찾으려면
 
 1.  eventvwr.exe를 열고 Application and Services Log\\Microsoft\\Windows\\Immersive-Shell 폴더로 이동합니다.
 2.  보기를 필터링하여 이벤트 ID 5900-6000을 표시합니다.
@@ -64,7 +64,7 @@ Windows 앱 인증 키트는 HighVersionLie를 사용하여 OS 버전 확인 방
 
 ### <a name="corrective-action"></a>수정 작업
 
-앱은 버전 API 도우미 함수를 사용하여 이를 확인해야 합니다. 자세한 내용은 [운영 체제 버전](https://docs.microsoft.com/windows/desktop/SysInfo/operating-system-version)을 참조하세요.
+앱은 버전 API 도우미 함수를 사용하여 이를 확인해야 합니다. 자세한 내용은 [운영 체제 버전](/windows/desktop/SysInfo/operating-system-version)을 참조하세요.
 
 ## <a name="background-tasks-cancellation-handler-validation"></a>백그라운드 작업 취소 처리기 유효성 검사
 
@@ -80,7 +80,7 @@ Windows 앱 인증 키트는 HighVersionLie를 사용하여 OS 버전 확인 방
 
 ### <a name="corrective-action"></a>수정 작업
 
-앱에 취소 처리기를 추가합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](https://docs.microsoft.com/windows/uwp/launch-resume/support-your-app-with-background-tasks)을 참조하세요.
+앱에 취소 처리기를 추가합니다. 자세한 내용은 [백그라운드 작업을 사용하여 앱 지원](../launch-resume/support-your-app-with-background-tasks.md)을 참조하세요.
 
 ## <a name="app-count"></a>앱 개수
 
@@ -110,7 +110,7 @@ Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 
 
 ### <a name="test-details"></a>테스트 정보
 
-앱 매니페스트를 검사하여 [앱 패키지 요구 사항](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)에 설명된 대로 내용이 올바른지 확인합니다.
+앱 매니페스트를 검사하여 [앱 패키지 요구 사항](../publish/app-package-requirements.md)에 설명된 대로 내용이 올바른지 확인합니다.
 
 -   **파일 확장명 및 프로토콜**
 
@@ -124,11 +124,11 @@ Windows 10 앱의 경우 테스트는 번들 버전의 수정 번호가 0으로 
 
 -   **IPC(프로세스 간 통신) 확인**
 
-    이 테스트에서는 UWP 앱이 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신하지 않는 요구 사항을 적용합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. "DesktopApplicationPath"와 동일한 이름으로 [**ActivatableClassAttribute**](https://docs.microsoft.com/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute)를 지정하는 앱은 이 테스트에 실패합니다.
+    이 테스트에서는 UWP 앱이 앱 컨테이너 외부에서 데스크톱 구성 요소와 통신하지 않는 요구 사항을 적용합니다. 프로세스 간 통신은 병렬 로드된 앱만을 대상으로 합니다. "DesktopApplicationPath"와 동일한 이름으로 [**ActivatableClassAttribute**](/uwp/schemas/appxpackage/appxmanifestschema/element-activatableclassattribute)를 지정하는 앱은 이 테스트에 실패합니다.
 
 ### <a name="corrective-action"></a>수정 작업
 
-앱의 매니페스트가 [앱 패키지 요구 사항](https://docs.microsoft.com/windows/uwp/publish/app-package-requirements)에 설명된 요구 사항에 맞는지 검토합니다.
+앱의 매니페스트가 [앱 패키지 요구 사항](../publish/app-package-requirements.md)에 설명된 요구 사항에 맞는지 검토합니다.
 
 ## <a name="windows-security-features-test"></a>Windows 보안 기능 테스트
 
@@ -224,11 +224,11 @@ ASLR(Address Space Layout Randomization)은 실행 가능 이미지를 예측할
 
 **Windows 앱 인증 키트 오류 메시지:** SharedSectionsCheck 테스트 실패.
 
-공유로 표시된 쓰기 가능한 섹션이 있는 이진 파일은 보안 위협이 됩니다. 필요한 경우가 아니면 쓰기 가능한 공유 섹션을 사용하여 앱을 빌드하지 마세요. [  **CreateFileMapping**](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-createfilemappinga) 또는 [**MapViewOfFile**](https://docs.microsoft.com/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffile)을 사용하여 보안이 제대로 설정된 공유 메모리 개체를 만드세요.
+공유로 표시된 쓰기 가능한 섹션이 있는 이진 파일은 보안 위협이 됩니다. 필요한 경우가 아니면 쓰기 가능한 공유 섹션을 사용하여 앱을 빌드하지 마세요. [  **CreateFileMapping**](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) 또는 [**MapViewOfFile**](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffile)을 사용하여 보안이 제대로 설정된 공유 메모리 개체를 만드세요.
 
 **앱이 이 테스트에 실패할 경우 수행할 작업**
 
-앱에서 공유 섹션을 제거하고 적절한 보안 특성으로 [**CreateFileMapping**](https://docs.microsoft.com/windows/desktop/api/winbase/nf-winbase-createfilemappinga) 또는 [**MapViewOfFile**](https://docs.microsoft.com/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffile)을 호출하여 공유 메모리 개체를 만든 다음 앱을 다시 빌드하세요.
+앱에서 공유 섹션을 제거하고 적절한 보안 특성으로 [**CreateFileMapping**](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) 또는 [**MapViewOfFile**](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffile)을 호출하여 공유 메모리 개체를 만든 다음 앱을 다시 빌드하세요.
 
 **설명**
 
@@ -315,11 +315,11 @@ Microsoft Store용으로 인증을 받으려면 앱에서 UWP 앱용 API(Windows
 
 앱이 디버그 빌드가 아니라 릴리스 빌드로 컴파일되었는지 확인하세요.
 
-> **참고**  앱에서 [UWP 앱용 API](https://docs.microsoft.com/uwp/)만 사용하더라도 앱의 디버그 빌드는 이 테스트에 실패합니다.
+> **참고**  앱에서 [UWP 앱용 API](/uwp/)만 사용하더라도 앱의 디버그 빌드는 이 테스트에 실패합니다.
 
-오류 메시지를 검토하여 앱에서 사용하는 API가 [UWP 앱용 API](https://docs.microsoft.com/uwp/)가 아닌지 확인하세요.
+오류 메시지를 검토하여 앱에서 사용하는 API가 [UWP 앱용 API](/uwp/)가 아닌지 확인하세요.
 
-> **참고**  구성에 UWP 앱용 Windows SDK의 API만 사용하는 경우에도 디버그 구성에서 빌드된 C++ 앱은 이 테스트에 실패합니다. 자세한 내용은 [UWP 앱의 Windows API 대안](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx)을 참조하세요.
+> **참고**  구성에 UWP 앱용 Windows SDK의 API만 사용하는 경우에도 디버그 구성에서 빌드된 C++ 앱은 이 테스트에 실패합니다. 자세한 내용은 [UWP 앱의 Windows API 대안](/uwp/win32-and-com/win32-and-com-for-uwp-apps)을 참조하세요.
 
 ## <a name="performance-tests"></a>성능 테스트
 
@@ -543,7 +543,7 @@ Microsoft Store를 사용하려면 Direct3D를 사용하는 모든 애플리케�
 
 ### <a name="corrective-action"></a>수정 작업
 
-높은 기능 수준에서 앱을 실행하더라도 앱이 Direct3D 기능 수준 9\-1에서 올바르게 렌더링되는지 확인합니다. 자세한 내용은 [각 Direct3D 기능 수준에 대한 개발](https://msdn.microsoft.com/library/windows/apps/hh994923.aspx)을 참조하세요.
+높은 기능 수준에서 앱을 실행하더라도 앱이 Direct3D 기능 수준 9\-1에서 올바르게 렌더링되는지 확인합니다. 자세한 내용은 [각 Direct3D 기능 수준에 대한 개발](/previous-versions/windows/apps/hh994923(v=win.10))을 참조하세요.
 
 ### <a name="direct3d-trim-after-suspend"></a>일시 중단 후 Direct3D 자르기
 
@@ -551,15 +551,15 @@ Microsoft Store를 사용하려면 Direct3D를 사용하는 모든 애플리케�
 
 ### <a name="background"></a>배경
 
-앱이 Direct3D 디바이스에서 [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim)을 호출하지 않는 경우 앱은 이전 3D 작업에 할당된 메모리를 해제하지 않습니다. 이 경우 시스템 메모리 부족으로 인해 앱이 종료될 가능성이 커집니다.
+앱이 Direct3D 디바이스에서 [**Trim**](/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim)을 호출하지 않는 경우 앱은 이전 3D 작업에 할당된 메모리를 해제하지 않습니다. 이 경우 시스템 메모리 부족으로 인해 앱이 종료될 가능성이 커집니다.
 
 ### <a name="test-details"></a>테스트 정보
 
-앱이 d3d 요구 사항을 준수하는지 검사하고 앱이 일시 중단 콜백에서 새 [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) API를 호출하는지 확인합니다.
+앱이 d3d 요구 사항을 준수하는지 검사하고 앱이 일시 중단 콜백에서 새 [**Trim**](/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) API를 호출하는지 확인합니다.
 
 ### <a name="corrective-action"></a>수정 작업
 
-앱이 일시 중단될 때마다 해당 [**IDXGIDevice3**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgidevice3) 인터페이스에서 [**Trim**](https://docs.microsoft.com/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) API를 호출해야 합니다.
+앱이 일시 중단될 때마다 해당 [**IDXGIDevice3**](/windows/desktop/api/dxgi1_3/nn-dxgi1_3-idxgidevice3) 인터페이스에서 [**Trim**](/windows/desktop/api/dxgi1_3/nf-dxgi1_3-idxgidevice3-trim) API를 호출해야 합니다.
 
 ## <a name="app-capabilities-test"></a>앱 접근 권한 값 테스트
 
@@ -668,5 +668,5 @@ Close()를 올바르게 호출하도록 백그라운드 JavaScript 코드를 업
 ## <a name="related-topics"></a>관련 항목
 
 * [Windows 데스크톱 브리지 앱 테스트](windows-desktop-bridge-app-tests.md)
-* [Microsoft Store 정책](https://docs.microsoft.com/legal/windows/agreements/store-policies)
+* [Microsoft Store 정책](/legal/windows/agreements/store-policies)
  

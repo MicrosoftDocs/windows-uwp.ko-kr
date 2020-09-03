@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fca2695cbb57375964beff0f8a3fd9be603228c
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 5c5784490da53f15f4b7ac79d83b59391031748d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968928"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173567"
 ---
 # <a name="check-boxes"></a>확인란
 
@@ -29,7 +29,7 @@ ms.locfileid: "82968928"
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](../style/rounded-corner.md)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
 
 > **플랫폼 API:** [CheckBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.CheckBox), [Checked 이벤트](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked), [IsChecked 속성](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked)
 
@@ -71,7 +71,7 @@ ms.locfileid: "82968928"
 
 ## <a name="create-a-checkbox"></a>확인란 만들기
 
-확인란에 레이블을 할당하려면 [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 속성을 사용합니다. 이 레이블은 확인란 옆에 표시됩니다.
+확인란에 레이블을 할당하려면 [Content](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 속성을 사용합니다. 이 레이블은 확인란 옆에 표시됩니다.
 
 이 XAML은 양식이 제출되기 전 서비스 약관에 동의하는 데 사용되는 단일 확인란을 만듭니다. 
 
@@ -89,14 +89,14 @@ checkBox1.Content = "I agree to the terms of service.";
 
 ### <a name="bind-to-ischecked"></a>IsChecked에 바인딩
 
-[IsChecked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked) 속성을 사용하여 확인란을 선택하거나 선택 취소 여부를 결정할 수 있습니다. IsChecked 속성의 값을 다른 이진 값에 바인딩할 수 있습니다.
-그러나 IsChecked가 [nullable](https://docs.microsoft.com/dotnet/api/system.nullable-1) 부울 값이므로 캐스트 또는 값 변환기를 사용하여 부울 속성으로 바인딩해야 합니다. 이는 사용 중인 실제 바인딩 유형에 따라 달라지며 가능한 각 유형에 대한 예제는 아래에서 확인할 수 있습니다. 
+[IsChecked](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.ischecked) 속성을 사용하여 확인란을 선택하거나 선택 취소 여부를 결정할 수 있습니다. IsChecked 속성의 값을 다른 이진 값에 바인딩할 수 있습니다.
+그러나 IsChecked가 [nullable](/dotnet/api/system.nullable-1) 부울 값이므로 캐스트 또는 값 변환기를 사용하여 부울 속성으로 바인딩해야 합니다. 이는 사용 중인 실제 바인딩 유형에 따라 달라지며 가능한 각 유형에 대한 예제는 아래에서 확인할 수 있습니다. 
 
-이 예제에서는 서비스 약관에 동의하는 확인란의 **IsChecked** 속성을 제출 단추의 [IsEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.isenabled) 속성으로 바인딩합니다. 제출 단추는 서비스 약관에 동의하는 경우에만 사용할 수 있습니다.
+이 예제에서는 서비스 약관에 동의하는 확인란의 **IsChecked** 속성을 제출 단추의 [IsEnabled](/uwp/api/windows.ui.xaml.controls.control.isenabled) 속성으로 바인딩합니다. 제출 단추는 서비스 약관에 동의하는 경우에만 사용할 수 있습니다.
 
 #### <a name="using-xbind"></a>x:Bind 사용
 
-> 참고&nbsp;&nbsp;여기서는 관련 코드만 표시합니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)를 참조하세요. 특정 {x:Bind} 정보(예: 캐스팅)는 [여기](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)에서 자세히 설명합니다.
+> 참고&nbsp;&nbsp;여기서는 관련 코드만 표시합니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)를 참조하세요. 특정 {x:Bind} 정보(예: 캐스팅)는 [여기](../../xaml-platform/x-bind-markup-extension.md)에서 자세히 설명합니다.
 
 ```xaml
 <StackPanel Grid.Column="2" Margin="40">
@@ -106,7 +106,7 @@ checkBox1.Content = "I agree to the terms of service.";
 </StackPanel>
 ```
 
-확인란이 **확정되지 않은** 상태일 수도 있는 경우 바인딩의 [FallbackValue](https://docs.microsoft.com/uwp/api/windows.ui.xaml.data.binding.fallbackvalue) 속성을 사용하여 이 상태를 나타내는 부울 값을 지정합니다. 이 경우 제출 단추도 사용하도록 설정하고 싶지 않습니다.
+확인란이 **확정되지 않은** 상태일 수도 있는 경우 바인딩의 [FallbackValue](/uwp/api/windows.ui.xaml.data.binding.fallbackvalue) 속성을 사용하여 이 상태를 나타내는 부울 값을 지정합니다. 이 경우 제출 단추도 사용하도록 설정하고 싶지 않습니다.
 
 ```xaml
 <Button Content="Submit" 
@@ -157,7 +157,7 @@ public class NullableBooleanToBooleanConverter : IValueConverter
 
 ### <a name="handle-click-and-checked-events"></a>Click 및 Checked 이벤트 처리
 
-확인란 상태가 변경될 때 작업을 수행하려면 [Click](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 또는 [Checked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked) 및 [Unchecked](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.unchecked) 이벤트를 처리할 수 있습니다. 
+확인란 상태가 변경될 때 작업을 수행하려면 [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 또는 [Checked](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.checked) 및 [Unchecked](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.unchecked) 이벤트를 처리할 수 있습니다. 
 
 선택된 상태가 변경될 때마다 **Click** 이벤트가 발생합니다. Click 이벤트를 처리하는 경우 **IsChecked** 속성을 사용하여 확인란의 상태를 결정합니다.
 
@@ -210,7 +210,7 @@ private void toppingsCheckbox_Click(object sender, RoutedEventArgs e)
 
 ### <a name="use-the-indeterminate-state"></a>확정되지 않은 상태 사용
 
-CheckBox 컨트롤은 [ToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton)에서 상속되며 세 가지 상태를 가질 수 있습니다. 
+CheckBox 컨트롤은 [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton)에서 상속되며 세 가지 상태를 가질 수 있습니다. 
 
 State | 속성 | Value
 ------|----------|------
@@ -218,7 +218,7 @@ State | 속성 | Value
 선택되지 않음 | IsChecked | **false** 
 확정되지 않음 | IsChecked | **null** 
 
-확인란이 확정되지 않은 상태를 보고하도록 하려면 [IsThreeState](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.isthreestate) 속성을 **true**로 설정해야 합니다. 
+확인란이 확정되지 않은 상태를 보고하도록 하려면 [IsThreeState](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.isthreestate) 속성을 **true**로 설정해야 합니다. 
 
 옵션을 그룹화하는 경우 확정되지 않은 상태 확인란을 사용하여 전체 그룹을 나타낼 수 있습니다. 사용자가 그룹의 하위 항목 전부가 아닌 일부 항목을 선택하는 경우 확인란의 확정되지 않은 상태를 사용합니다.
 
@@ -331,6 +331,6 @@ private void SetCheckedState()
 
 ## <a name="related-articles"></a>관련된 문서
 
-- [CheckBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CheckBox) 
+- [CheckBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.CheckBox) 
 - [라디오 단추](radio-button.md)
 - [토글 스위치](toggles.md)

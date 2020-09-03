@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Microsoft, Windows, 개발자, 팁, 성능, WSL
 ms.localizationpriority: medium
 ms.date: 07/24/2020
-ms.openlocfilehash: 8c094e7871e9de4fdf7eca2e0e1b425af295f252
-ms.sourcegitcommit: 5ba2524d237be82d3621551e48cac938fe81d2ea
+ms.openlocfilehash: 1135be4797893a74e398e69fcbc1c43d60e9fdb9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87255044"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172667"
 ---
 # <a name="tips-for-improving-performance-and-development-workflows"></a>성능 및 개발 워크플로를 개선하기 위한 팁
 
@@ -28,7 +28,7 @@ ms.locfileid: "87255044"
 
 ## <a name="use-the-credential-manager-to-your-streamline-authentication-process"></a>자격 증명 관리자를 사용하여 인증 프로세스 간소화
 
-버전 제어 및 협업에 Git을 사용하는 경우 Windows 자격 증명 관리자에 토큰을 저장하도록 [Git 자격 증명 관리자를 설정](https://docs.microsoft.com/windows/wsl/tutorials/wsl-git#git-credential-manager-setup)하여 인증 프로세스를 간소화할 수 있습니다. 또한 프로젝트에 [.gitignore 파일을 추가](https://docs.microsoft.com/windows/wsl/tutorials/wsl-git#adding-a-git-ignore-file)하는 것이 좋습니다.
+버전 제어 및 협업에 Git을 사용하는 경우 Windows 자격 증명 관리자에 토큰을 저장하도록 [Git 자격 증명 관리자를 설정](/windows/wsl/tutorials/wsl-git#git-credential-manager-setup)하여 인증 프로세스를 간소화할 수 있습니다. 또한 프로젝트에 [.gitignore 파일을 추가](/windows/wsl/tutorials/wsl-git#adding-a-git-ignore-file)하는 것이 좋습니다.
 
 ## <a name="use-wsl-for-testing-your-production-pipeline-before-deploying-to-the-cloud"></a>클라우드에 배포하기 전에 WSL을 사용하여 프로덕션 파이프라인 테스트
 
@@ -40,17 +40,17 @@ WSL을 사용하는 더 많은 방법은 이 [WSL 2의 탭 vs 공간 에피소�
 
 ## <a name="improve-performance-speed-for-wsl-by-not-crossing-over-file-systems"></a>파일 시스템에서 교차하지 않게 하여 WSL의 성능 속도 향상
 
-Windows 및 Linux용 windows 하위 시스템을 모두 사용하는 경우 두 개의 파일 시스템 NTSF(Windows) 및 WSL(Linux 배포판)이 설치되어 있습니다. 빠른 성능을 얻을 수 있도록 프로젝트 파일을 사용 중인 도구와 동일한 시스템에 저장해야 합니다. [빠른 성능을 얻을 수 있도록 올바른 파일 시스템을 선택하는 방법](https://docs.microsoft.com/windows/wsl/compare-versions#use-the-linux-file-system-for-faster-performance)에 대해 알아보세요.
+Windows 및 Linux용 windows 하위 시스템을 모두 사용하는 경우 두 개의 파일 시스템 NTSF(Windows) 및 WSL(Linux 배포판)이 설치되어 있습니다. 빠른 성능을 얻을 수 있도록 프로젝트 파일을 사용 중인 도구와 동일한 시스템에 저장해야 합니다. [빠른 성능을 얻을 수 있도록 올바른 파일 시스템을 선택하는 방법](/windows/wsl/compare-versions#use-the-linux-file-system-for-faster-performance)에 대해 알아보세요.
 
 ## <a name="improve-build-speeds-by-adding-windows-defender-exclusions"></a>Windows Defender 제외를 추가하여 빌드 속도 향상
 
-보안 위협 검사를 생략해도 될 만큼 충분히 신뢰하는 프로젝트 폴더 또는 파일 형식에 대한 제외를 추가하도록 Windows Defender 설정을 업데이트하여 빌드 속도를 향상할 수 있습니다. [성능 향상을 위한 Windows Defender 설정 업데이트](https://docs.microsoft.com/windows/android/defender-settings) 방법에 대해 자세히 알아보세요.
+보안 위협 검사를 생략해도 될 만큼 충분히 신뢰하는 프로젝트 폴더 또는 파일 형식에 대한 제외를 추가하도록 Windows Defender 설정을 업데이트하여 빌드 속도를 향상할 수 있습니다. [성능 향상을 위한 Windows Defender 설정 업데이트](../android/defender-settings.md) 방법에 대해 자세히 알아보세요.
 
 ![Windows Defender 스크린샷](../images/windows-defender-exclusions.png)
 
 ## <a name="launch-all-your-command-lines-in-windows-terminal-at-once"></a>Windows 터미널에서 한 번에 모든 명령줄 시작
 
-* [Windows 터미널 명령줄 인수](https://docs.microsoft.com/windows/terminal/command-line-arguments?tabs=powershell#multiple-panes)를 사용하여 PowerShell, Ubuntu, Azure CLI 등의 여러 명령줄을 여러 블레이드가 있는 단일 창으로 시작할 수 있습니다. [Windows 터미널](https://docs.microsoft.com/windows/terminal/get-started), [WSL/Ubuntu](https://docs.microsoft.com/windows/wsl/install-win10) 및 [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)를 설치한 후에는 PowerShell에 다음 명령을 입력하여 세 명령줄이 모두 있는 새로운 다중 블레이드 창을 엽니다.
+* [Windows 터미널 명령줄 인수](/windows/terminal/command-line-arguments?tabs=powershell#multiple-panes)를 사용하여 PowerShell, Ubuntu, Azure CLI 등의 여러 명령줄을 여러 블레이드가 있는 단일 창으로 시작할 수 있습니다. [Windows 터미널](/windows/terminal/get-started), [WSL/Ubuntu](/windows/wsl/install-win10) 및 [Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest)를 설치한 후에는 PowerShell에 다음 명령을 입력하여 세 명령줄이 모두 있는 새로운 다중 블레이드 창을 엽니다.
 
     ```powershell
     wt -p "Command Prompt" `; split-pane -p "Windows PowerShell" `; split-pane -H wsl.exe

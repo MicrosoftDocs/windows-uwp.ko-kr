@@ -6,12 +6,12 @@ ms.date: 01/03/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 059ce14f85ebe7d955ba2da8897ab47109f74a72
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5cf8dc0912420895091815e54f6399235fca552f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79401972"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173587"
 ---
 # <a name="device-portal-for-hololens"></a>HoloLens용 디바이스 포털
 
@@ -21,8 +21,8 @@ ms.locfileid: "79401972"
 ### <a name="enable-device-portal"></a>디바이스 포털 사용
 
 1. HoloLens의 전원을 켜고 디바이스에 배치합니다.
-2. HoloLens(1세대)에 대해 [시작 제스처](https://docs.microsoft.com/hololens/hololens2-basic-usage#start-gesture) 또는 [블룸](https://developer.microsoft.com/mixed-reality#Bloom) 제스처를 수행하여 주 메뉴를 실행합니다.
-3. **설정** 타일을 응시하고 HoloLens(1세대)에서 [탭](https://developer.microsoft.com/mixed-reality#Press_and_release) 제스처를 수행하거나, HoloLens 2에서 [이 타일을 터치하거나 손 광선을 사용](https://docs.microsoft.com/hololens/hololens2-basic-usage)하여 선택합니다. [설정] 앱을 선택하면 앱이 시작됩니다.
+2. HoloLens(1세대)에 대해 [시작 제스처](/hololens/hololens2-basic-usage#start-gesture) 또는 [블룸](https://developer.microsoft.com/mixed-reality#Bloom) 제스처를 수행하여 주 메뉴를 실행합니다.
+3. **설정** 타일을 응시하고 HoloLens(1세대)에서 [탭](https://developer.microsoft.com/mixed-reality#Press_and_release) 제스처를 수행하거나, HoloLens 2에서 [이 타일을 터치하거나 손 광선을 사용](/hololens/hololens2-basic-usage)하여 선택합니다. [설정] 앱을 선택하면 앱이 시작됩니다.
 4. **업데이트** 메뉴 항목을 선택합니다.
 5. **개발자용** 메뉴 항목을 선택합니다.
 6. **개발자 모드**를 사용하도록 설정합니다.
@@ -177,5 +177,5 @@ Enable Kiosk Mode(키오스크 모드 사용)을 선택하여 HoloLens를 키오
 ## <a name="see-also"></a>참고 항목
 
 * [Windows 장치 포털 개요](device-portal.md)
-* [장치 포털 핵심 API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)(모든 Windows 10 디바이스의 API 명령)
-* [장치 포털 혼합 현실 API 참조](https://docs.microsoft.com/windows/mixed-reality/device-portal-api-reference)(HoloLens에서 사용할 수 있는 모든 REST API 확장 목록)
+* [장치 포털 핵심 API 참조](./device-portal-api-core.md)(모든 Windows 10 디바이스의 API 명령)
+* [장치 포털 혼합 현실 API 참조](/windows/mixed-reality/device-portal-api-reference)(HoloLens에서 사용할 수 있는 모든 REST API 확장 목록)

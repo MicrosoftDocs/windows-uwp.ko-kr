@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5ae8094ac3fbb1de8958b1cc138953d3e1b887cc
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: b414a1177bbfad670e3b623babce068a299a713e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970388"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172597"
 ---
 # <a name="masterdetails-pattern"></a>마스터/세부 정보 패턴
 
@@ -21,7 +21,7 @@ ms.locfileid: "82970388"
 
 마스터/세부 정보 패턴에는 마스터 창(일반적으로 [목록 보기](lists.md)와 함께) 및 콘텐츠의 세부 정보 창이 있습니다. 마스터 목록의 항목을 선택하면 세부 정보 창이 업데이트됩니다. 이 패턴은 이메일 및 주소록에 자주 사용됩니다.
 
-> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [SplitView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)
+> **중요 API**: [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView), [SplitView 클래스](/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![마스터/세부 정보 패턴의 예](images/HIGSecOne_MasterDetail.png)
 
@@ -91,7 +91,7 @@ ms.locfileid: "82970388"
 ![적응형 마스터 세부 정보 레이아웃](images/patterns_masterdetail.png)
 
 ### <a name="create-an-adaptive-masterdetails-pattern"></a>적응형 마스터/세부 정보 패턴 만들기
-적응형 레이아웃을 만들려면 UI에서 서로 다른 [**VisualStates**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.visualstate)를 정의하고 [**AdaptiveTriggers**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.AdaptiveTrigger)를 통해 서로 다른 상태에 대한 중단점을 선언합니다.
+적응형 레이아웃을 만들려면 UI에서 서로 다른 [**VisualStates**](/uwp/api/windows.ui.xaml.visualstate)를 정의하고 [**AdaptiveTriggers**](/uwp/api/Windows.UI.Xaml.AdaptiveTrigger)를 통해 서로 다른 상태에 대한 중단점을 선언합니다.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
@@ -110,5 +110,5 @@ ms.locfileid: "82970388"
 - [목록](lists.md)
 - [검색](search.md)
 - [앱 및 명령 모음](app-bars.md)
-- [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
-- [SplitView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview)
+- [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView)
+- [SplitView 클래스](/uwp/api/windows.ui.xaml.controls.splitview)

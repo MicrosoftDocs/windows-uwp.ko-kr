@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 05/07/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: cd84892f9d90a69379ac5a7f84dfa188adf1211e
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d9864c59a8bb8569861e9c239710a09602ffdcba
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74258791"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174357"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-may-2018"></a>2018년 5월 Windows 개발자 문서의 새로운 내용
 
@@ -38,7 +38,7 @@ Fluent Design System 동작의 기본적인 타이밍, 감속, 방향 및 중력
 * [맞춤, 여백, 안쪽 여백](../design/layout/alignment-margin-padding.md)
 * [색](../design/style/color.md)
 * [명령 기본 사항](../design/basics/commanding-basics.md)
-* [Windows용 Fluent Design 앱](../design/fluent-design-system/index.md)
+* [Windows용 Fluent Design 앱](/windows/apps/fluent-design-system)
 * [앱 디자인 소개](../design/basics/design-and-ui-intro.md)
 * [탐색 기본 사항](../design/basics/navigation-basics.md)
 * [반응형 디자인 기술](../design/layout/responsive-design.md)
@@ -55,13 +55,13 @@ Fluent Design System 동작의 기본적인 타이밍, 감속, 방향 및 중력
 
 ### <a name="app-installer-files-in-visual-studio"></a>Visual Studio의 앱 설치 관리자 파일
 
-이제 Visual Studio 2017, 업데이트 15.7 이상 버전을 사용하여 앱 설치 관리자 파일을 만들 수 있습니다. [Visual Studio를 사용하여 앱 설치 관리자 파일을 만들고](../packaging/create-appinstallerfile-vs.md) 앱 자동 업데이트를 사용하도록 설정하는 방법을 알아봅니다. 실행 중에 문제가 발생하는 경우 [앱 설치 관리자 파일의 설치 문제 해결](../packaging/troubleshoot-appinstaller-issues.md)을 참조하여 일반적인 문제 및 해결 방법을 확인하세요.
+이제 Visual Studio 2017, 업데이트 15.7 이상 버전을 사용하여 앱 설치 관리자 파일을 만들 수 있습니다. [Visual Studio를 사용하여 앱 설치 관리자 파일을 만들고](/windows/msix/app-installer/create-appinstallerfile-vs) 앱 자동 업데이트를 사용하도록 설정하는 방법을 알아봅니다. 실행 중에 문제가 발생하는 경우 [앱 설치 관리자 파일의 설치 문제 해결](/windows/msix/app-installer/troubleshoot-appinstaller-issues)을 참조하여 일반적인 문제 및 해결 방법을 확인하세요.
 
 ### <a name="edge-webview-control-for-windows-forms-and-wpf-applications"></a>Windows Forms 및 WPF 애플리케이션에 대한 Edge WebView 컨트롤
 
-이전에는 UWP 애플리케이션에서만 사용할 수 있던 WebView 컨트롤을 사용하여 데스크톱 애플리케이션에서 웹 콘텐츠를 표시합니다. 이 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 원격 웹 서버, 동적으로 생성된 코드 또는 콘텐츠 파일에서 서식 있는 HTML 콘텐츠를 렌더링하는 뷰를 포함합니다. [Windows 커뮤니티 도구 키트](https://docs.microsoft.com/windows/uwpcommunitytoolkit/)의 최신 버전에서 WebView 컨트롤을 찾으세요.
+이전에는 UWP 애플리케이션에서만 사용할 수 있던 WebView 컨트롤을 사용하여 데스크톱 애플리케이션에서 웹 콘텐츠를 표시합니다. 이 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 원격 웹 서버, 동적으로 생성된 코드 또는 콘텐츠 파일에서 서식 있는 HTML 콘텐츠를 렌더링하는 뷰를 포함합니다. [Windows 커뮤니티 도구 키트](/windows/uwpcommunitytoolkit/)의 최신 버전에서 WebView 컨트롤을 찾으세요.
 
-Windows 커뮤니티 도구 키트의 이후 릴리스에서 WebView와 같은 기타 컨트롤을 찾으세요. 자세한 내용은 [WPF 및 Windows Forms 애플리케이션에서 UWP 컨트롤 호스트](https://docs.microsoft.com/windows/uwp/xaml-platform/xaml-host-controls)를 참조하세요.
+Windows 커뮤니티 도구 키트의 이후 릴리스에서 WebView와 같은 기타 컨트롤을 찾으세요. 자세한 내용은 [WPF 및 Windows Forms 애플리케이션에서 UWP 컨트롤 호스트](/windows/apps/desktop/modernize/xaml-islands)를 참조하세요.
 
 ### <a name="gaze-input-and-interactions"></a>응시 입력 및 상호 작용
 
@@ -91,7 +91,7 @@ MSIX 패키징 형식은 파트너가 해당 도구 및 솔루션으로 MSIX 에
 
 ### <a name="project-rome"></a>프로젝트 로마
 
-프로젝트 로마 팀은 iOS 및 Android SDK를 철저히 점검하고, 사용자 활동과 같은 새로운 기능을 추가하고 많은 코드를 리팩터링하여 여러 다른 SDK에서 일관된 프로그래밍 환경을 제공하고 있습니다. [모든 새 API 참조 및 방법 문서](https://docs.microsoft.com/windows/project-rome/)가 Build 2018 개발자 컨퍼런스 동안 라이브로 선보일 예정입니다.
+프로젝트 로마 팀은 iOS 및 Android SDK를 철저히 점검하고, 사용자 활동과 같은 새로운 기능을 추가하고 많은 코드를 리팩터링하여 여러 다른 SDK에서 일관된 프로그래밍 환경을 제공하고 있습니다. [모든 새 API 참조 및 방법 문서](/windows/project-rome/)가 Build 2018 개발자 컨퍼런스 동안 라이브로 선보일 예정입니다.
 
 ### <a name="sets"></a>설정
 

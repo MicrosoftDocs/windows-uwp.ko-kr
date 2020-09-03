@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bdd18fea2fe563fcee835e6b61e24d6a9b03d029
-ms.sourcegitcommit: f945df77f8a19961ba053ee62e593ec8e015038f
+ms.openlocfilehash: f7f273f3eb92efd30b432691f9faa05db0d6d013
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82989815"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173507"
 ---
 # <a name="command-bar-flyout"></a>명령 모음 플라이아웃
 
@@ -36,13 +36,13 @@ ms.locfileid: "82989815"
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **CommandBarFlyout** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **CommandBarFlyout** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
 
 >**Windows UI 라이브러리 API**: [CommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
 >
 >**플랫폼 API**: [CommandBarFlyout 클래스](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [AppBarButton 클래스](/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton 클래스](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [AppBarSeparator 클래스](/uwp/api/windows.ui.xaml.controls.appbarseparator)
 >
-> CommandBarFlyout에는 Windows 10, 버전 1809([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)가 필요합니다.
+> CommandBarFlyout에는 Windows 10, 버전 1809([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](/uwp/toolkits/winui/)가 필요합니다.
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -160,7 +160,7 @@ CommandBarFlyout 컨트롤에는 명령 및 콘텐츠를 추가하는 데 사용
 
 ### <a name="app-bar-buttons"></a>앱 바 단추
 
-PrimaryCommands 및 SecondaryCommands를 [AppBarButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarButton), [AppBarToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarToggleButton) 및 [AppBarSeparator](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarSeparator) 컨트롤로 직접 채울 수 있습니다.
+PrimaryCommands 및 SecondaryCommands를 [AppBarButton](/uwp/api/Windows.UI.Xaml.Controls.AppBarButton), [AppBarToggleButton](/uwp/api/Windows.UI.Xaml.Controls.AppBarToggleButton) 및 [AppBarSeparator](/uwp/api/Windows.UI.Xaml.Controls.AppBarSeparator) 컨트롤로 직접 채울 수 있습니다.
 
 앱 바 단추 컨트롤은 아이콘 및 텍스트 레이블에 따라 구분됩니다. 이러한 컨트롤은 명령 모음에 사용하도록 최적화되었으며, 컨트롤이 명령 모음에 표시되는지 아니면 오버플로 메뉴에 표시되는지에 따라 모양이 변합니다.
 
@@ -181,7 +181,7 @@ PrimaryCommands 및 SecondaryCommands를 [AppBarButton](https://docs.microsoft.c
 > [!TIP]
 > 기본적으로 앱 캔버스용으로 설계된 요소는 명령 모음에 적합하지 않은 것처럼 보일 수 있습니다. AppBarElementContainer를 사용하여 요소를 추가할 때 요소가 다른 명령 모음 요소와 일치하도록 몇 가지 단계를 수행해야 합니다.
 >
-> - 요소의 배경과 테두리가 앱 바 단추와 일치하도록 기본 브러시를 [경량 스타일](/windows/uwp/design/controls-and-patterns/xaml-styles#lightweight-styling)로 재정의합니다.
+> - 요소의 배경과 테두리가 앱 바 단추와 일치하도록 기본 브러시를 [경량 스타일](./xaml-styles.md#lightweight-styling)로 재정의합니다.
 > - 요소의 위치와 크기를 조정합니다.
 > - 높이와 너비가 각각 16픽셀인 Viewbox에 아이콘을 래핑합니다.
 
@@ -418,4 +418,4 @@ TextCommandBarFlyout은 사용자 지정할 수 없으며, 각 텍스트 컨트�
 ## <a name="related-articles"></a>관련된 문서
 
 - [Windows 앱용 명령 디자인 기본 사항](../basics/commanding-basics.md)
-- [CommandBar 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)
+- [CommandBar 클래스](/uwp/api/Windows.UI.Xaml.Controls.CommandBar)

@@ -6,21 +6,21 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3114bc7a86f7f7f4d22c69c814735c146352efbd
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: d99c3f55848122b123de160b413138f09f48f215
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75681954"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173547"
 ---
 # <a name="optimize-file-access"></a>파일 액세스 최적화
 
 
 파일 시스템에 효율적으로 액세스하여 디스크 대기 시간 및 메모리/CPU 주기로 인한 성능 문제를 방지하는 UWP(유니버설 Windows 플랫폼) 앱을 만듭니다.
 
-대규모 파일 모음에 액세스할 때 일반적인 Name, FileType 및 Path 속성이 아닌 속성 값에 액세스하려는 경우 [**QueryOptions**](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions)를 만들고 [**SetPropertyPrefetch**](https://docs.microsoft.com/uwp/api/windows.storage.search.queryoptions.setpropertyprefetch)를 호출하여 액세스합니다. **SetPropertyPrefetch** 메서드를 사용하면 파일 시스템에서 가져온 항목의 모음(예: 이미지의 모음)을 표시하는 앱의 성능을 크게 개선할 수 있습니다. 다음 예제 집합은 여러 파일에 액세스하는 몇 가지 방법을 보여줍니다.
+대규모 파일 모음에 액세스할 때 일반적인 Name, FileType 및 Path 속성이 아닌 속성 값에 액세스하려는 경우 [**QueryOptions**](/uwp/api/Windows.Storage.Search.QueryOptions)를 만들고 [**SetPropertyPrefetch**](/uwp/api/windows.storage.search.queryoptions.setpropertyprefetch)를 호출하여 액세스합니다. **SetPropertyPrefetch** 메서드를 사용하면 파일 시스템에서 가져온 항목의 모음(예: 이미지의 모음)을 표시하는 앱의 성능을 크게 개선할 수 있습니다. 다음 예제 집합은 여러 파일에 액세스하는 몇 가지 방법을 보여줍니다.
 
-첫 번째 예제는 [**Windows.Storage.StorageFolder.GetFilesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfilesasync)를 사용하여 파일 집합의 이름 정보를 검색합니다. 그러면 name 속성만 액세스하므로 우수한 성능을 얻을 수 있습니다.
+첫 번째 예제는 [**Windows.Storage.StorageFolder.GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync)를 사용하여 파일 집합의 이름 정보를 검색합니다. 그러면 name 속성만 액세스하므로 우수한 성능을 얻을 수 있습니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -44,7 +44,7 @@ ms.locfileid: "75681954"
 > Next i
 > ```
 
-두 번째 예제는 [**Windows.Storage.StorageFolder.GetFilesAsync**](https://docs.microsoft.com/uwp/api/windows.storage.storagefolder.getfilesasync)를 사용하고 각 파일의 이미지 속성을 검색합니다. 이 방법에서는 성능이 저하됩니다.
+두 번째 예제는 [**Windows.Storage.StorageFolder.GetFilesAsync**](/uwp/api/windows.storage.storagefolder.getfilesasync)를 사용하고 각 파일의 이미지 속성을 검색합니다. 이 방법에서는 성능이 저하됩니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -70,7 +70,7 @@ ms.locfileid: "75681954"
 > Next i
 > ```
 
-세 번째 예제는 [**QueryOptions**](https://docs.microsoft.com/uwp/api/Windows.Storage.Search.QueryOptions)를 사용하여 파일 집합에 대한 정보를 얻습니다. 이전의 예제보다 훨씬 우수한 성능을 얻을 수 있습니다.
+세 번째 예제는 [**QueryOptions**](/uwp/api/Windows.Storage.Search.QueryOptions)를 사용하여 파일 집합에 대한 정보를 얻습니다. 이전의 예제보다 훨씬 우수한 성능을 얻을 수 있습니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -133,7 +133,7 @@ Windows.Storage 개체(예: `Windows.Storage.ApplicationData.Current.LocalFolder
 
 ### <a name="buffering-between-uwp-and-net-streams"></a>UWP와 .NET 스트림 간의 버퍼링
 
-UWP 스트림(예: [**Windows.Storage.Streams.IInputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IInputStream) 또는 [**IOutputStream**](https://docs.microsoft.com/uwp/api/Windows.Storage.Streams.IOutputStream))을 .NET 스트림([**System.IO.Stream**](https://docs.microsoft.com/dotnet/api/system.io.stream))으로 변환할 수 있는 여러 시나리오가 있습니다. 예를 들어 이 시나리오는 UWP 앱을 작성하고 UWP 파일 시스템의 스트림에서 작동되는 기존 .NET 코드를 사용하려는 경우에 유용합니다. 이를 지원하려면 UWP 앱용 .NET API에서 .NET 및 UWP 스트림 유형 간에 변환할 수 있는 확장 메서드를 제공해야 합니다. 자세한 내용은 [**WindowsRuntimeStreamExtensions**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions)를 참조하세요.
+UWP 스트림(예: [**Windows.Storage.Streams.IInputStream**](/uwp/api/Windows.Storage.Streams.IInputStream) 또는 [**IOutputStream**](/uwp/api/Windows.Storage.Streams.IOutputStream))을 .NET 스트림([**System.IO.Stream**](/dotnet/api/system.io.stream))으로 변환할 수 있는 여러 시나리오가 있습니다. 예를 들어 이 시나리오는 UWP 앱을 작성하고 UWP 파일 시스템의 스트림에서 작동되는 기존 .NET 코드를 사용하려는 경우에 유용합니다. 이를 지원하려면 UWP 앱용 .NET API에서 .NET 및 UWP 스트림 유형 간에 변환할 수 있는 확장 메서드를 제공해야 합니다. 자세한 내용은 [**WindowsRuntimeStreamExtensions**](/dotnet/api/system.io.windowsruntimestreamextensions)를 참조하세요.
 
 UWP 스트림을 .NET 스트림으로 변환하면 결과적으로 기본 UWP 스트림에 대한 어댑터가 만들어집니다. 경우에 따라 UWP 스트림의 메서드 호출과 관련된 런타임 부담이 있을 수 있습니다. 이는 특히 여러 작은 읽기나 쓰기 작업을 빈번히 수행하는 시나리오에서 앱 속도에 영향을 줄 수 있습니다.
 
@@ -194,7 +194,7 @@ UWP 스트림을 .NET 스트림으로 변환하면 결과적으로 기본 UWP �
 
 ### <a name="working-with-large-data-sets"></a>큰 데이터 집합 작업
 
-큰 데이터 집합을 읽거나 쓸 경우에는 [**AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), [**AsStreamForWrite**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforwrite?view=dotnet-uwp-10.0) 및 [**AsStream**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstream?view=dotnet-uwp-10.0) 확장 메서드에 큰 버퍼 크기를 제공하여 읽기 또는 쓰기 처리량을 늘릴 수 있습니다. 이렇게 하면 스트림 어댑터에 더 큰 내부 버퍼 크기가 제공됩니다. 예를 들어 큰 파일의 스트림을 XML 파서에 전달할 경우 파서는 스트림에서 여러 작은 읽기를 순서대로 수행할 수 있습니다. 버퍼가 크면 기본 UWP 스트림의 호출 수가 줄고 성능이 향상될 수 있습니다.
+큰 데이터 집합을 읽거나 쓸 경우에는 [**AsStreamForRead**](/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), [**AsStreamForWrite**](/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforwrite?view=dotnet-uwp-10.0) 및 [**AsStream**](/dotnet/api/system.io.windowsruntimestreamextensions.asstream?view=dotnet-uwp-10.0) 확장 메서드에 큰 버퍼 크기를 제공하여 읽기 또는 쓰기 처리량을 늘릴 수 있습니다. 이렇게 하면 스트림 어댑터에 더 큰 내부 버퍼 크기가 제공됩니다. 예를 들어 큰 파일의 스트림을 XML 파서에 전달할 경우 파서는 스트림에서 여러 작은 읽기를 순서대로 수행할 수 있습니다. 버퍼가 크면 기본 UWP 스트림의 호출 수가 줄고 성능이 향상될 수 있습니다.
 
 > **참고**   버퍼 크기를 약 80KB보다 크게 설정할 때는 주의해야 합니다. 이 경우 가비지 수집기 힙에서 조각화가 발생할 수 있습니다([가비지 수집 성능 향상](improve-garbage-collection-performance.md) 참조). 다음 코드 예제에서는 버퍼가 81,920바이트인 관리 스트림 어댑터를 만듭니다.
 
@@ -208,7 +208,7 @@ Stream managedStream = nativeStream.AsStreamForRead(bufferSize: 81920);
 Dim managedStream As Stream = nativeStream.AsStreamForRead(bufferSize:=81920)
 ```
 
-[  **Stream.CopyTo**](https://docs.microsoft.com/dotnet/api/system.io.stream.copyto) 및 [**CopyToAsync**](https://docs.microsoft.com/dotnet/api/system.io.stream.copytoasync) 메서드도 스트림 간에 복사하기 위한 로컬 버퍼를 할당합니다. [  **AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0) 확장 메서드와 마찬가지로 기본 버퍼 크기를 재정의하여 큰 스트림 복사본에 대한 성능을 향상할 수 있습니다. 다음 코드 예제에서는 **CopyToAsync** 호출의 기본 버퍼 크기를 변경하는 방법을 보여 줍니다.
+[  **Stream.CopyTo**](/dotnet/api/system.io.stream.copyto) 및 [**CopyToAsync**](/dotnet/api/system.io.stream.copytoasync) 메서드도 스트림 간에 복사하기 위한 로컬 버퍼를 할당합니다. [  **AsStreamForRead**](/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0) 확장 메서드와 마찬가지로 기본 버퍼 크기를 재정의하여 큰 스트림 복사본에 대한 성능을 향상할 수 있습니다. 다음 코드 예제에서는 **CopyToAsync** 호출의 기본 버퍼 크기를 변경하는 방법을 보여 줍니다.
 
 > [!div class="tabbedCodeSnippets"]
 > ```csharp
@@ -236,6 +236,4 @@ Dim managedStream As Stream = nativeStream.AsStreamForRead(bufferSize:=81920)
 
 읽기 및 쓰기의 대기 시간이 짧아야 하고 기본 UWP 스트림에서 큰 블록을 읽지 않는 경우에도 버퍼링을 방지할 수 있습니다. 예를 들어 네트워크 통신을 위해 스트림을 사용하는 경우 읽기 및 쓰기의 대기 시간이 짧아야 합니다.
 
-채팅 앱에서는 네트워크 인터페이스를 통해 스트림을 사용하여 메시지를 주고받을 수 있습니다. 이 경우 메시지를 준비되는 즉시 보내고 버퍼가 찰 때까지 기다리지 않아야 합니다. [  **AsStreamForRead**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), [**AsStreamForWrite**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforwrite?view=dotnet-uwp-10.0) 및 [**AsStream**](https://docs.microsoft.com/dotnet/api/system.io.windowsruntimestreamextensions.asstream?view=dotnet-uwp-10.0) 확장 메서드를 호출할 때 버퍼 크기를 0으로 설정하면 결과 어댑터는 버퍼를 할당하지 않고 모든 호출에서 기본 UWP 스트림을 직접 조작합니다.
-
-
+채팅 앱에서는 네트워크 인터페이스를 통해 스트림을 사용하여 메시지를 주고받을 수 있습니다. 이 경우 메시지를 준비되는 즉시 보내고 버퍼가 찰 때까지 기다리지 않아야 합니다. [  **AsStreamForRead**](/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforread?view=dotnet-uwp-10.0), [**AsStreamForWrite**](/dotnet/api/system.io.windowsruntimestreamextensions.asstreamforwrite?view=dotnet-uwp-10.0) 및 [**AsStream**](/dotnet/api/system.io.windowsruntimestreamextensions.asstream?view=dotnet-uwp-10.0) 확장 메서드를 호출할 때 버퍼 크기를 0으로 설정하면 결과 어댑터는 버퍼를 할당하지 않고 모든 호출에서 기본 UWP 스트림을 직접 조작합니다.

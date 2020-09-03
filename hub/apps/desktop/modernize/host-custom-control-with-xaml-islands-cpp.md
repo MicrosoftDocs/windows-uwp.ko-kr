@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 8c2133c4f1132b55d62149ad5aaf42e04fc5da5b
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: d61abe8b59f916ed56c1fefe0bda4b9f25b673a4
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493326"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173727"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>C++ Win32 앱에서 사용자 지정 UWP 컨트롤 호스트
 
@@ -29,7 +29,7 @@ ms.locfileid: "86493326"
 
 * Visual Studio 2019 버전 16.4.3 이상
 * Windows 10, 버전 1903 SDK(버전 10.0.18362) 이상
-* [C++/WinRT VSIX(Visual Studio Extension)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264)가 Visual Studio와 함께 설치되어 있어야 합니다. C++/WinRT는 헤더 파일 기반 라이브러리로 구현된 WinRT(Windows 런타임) API용 최신의 완전한 표준 C++17 언어 프로젝션이며, 최신 Windows API에 최고 수준의 액세스를 제공하도록 설계되었습니다. 자세한 내용은 [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/)를 참조하세요.
+* [C++/WinRT VSIX(Visual Studio Extension)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264)가 Visual Studio와 함께 설치되어 있어야 합니다. C++/WinRT는 헤더 파일 기반 라이브러리로 구현된 WinRT(Windows 런타임) API용 최신의 완전한 표준 C++17 언어 프로젝션이며, 최신 Windows API에 최고 수준의 액세스를 제공하도록 설계되었습니다. 자세한 내용은 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)를 참조하세요.
 
 ## <a name="create-a-desktop-application-project"></a>데스크톱 애플리케이션 프로젝트 만들기
 
@@ -176,7 +176,7 @@ ms.locfileid: "86493326"
 
 ### <a name="define-a-xamlapplication-class"></a>XamlApplication 클래스 정의
 
-그런 다음, **MyUWPApp** 프로젝트의 기본 **App** 클래스를 수정하여 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생하도록 합니다. 이 클래스는 [IXamlMetadaraProvider](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider) 인터페이스를 지원합니다. 이 인터페이스를 통해 앱은 런타임 시 애플리케이션의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 컨트롤에 대한 메타데이터를 검색하고 로드할 수 있습니다. 이 클래스는 또한 현재 스레드에 대한 UWP XAML 프레임워크를 초기화합니다. 이 연습 뒷부분에서는 이 클래스의 인스턴스를 만들기 위해 데스크톱 프로젝트를 업데이트합니다.
+그런 다음, **MyUWPApp** 프로젝트의 기본 **App** 클래스를 수정하여 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생하도록 합니다. 이 클래스는 [IXamlMetadaraProvider](/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider) 인터페이스를 지원합니다. 이 인터페이스를 통해 앱은 런타임 시 애플리케이션의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 컨트롤에 대한 메타데이터를 검색하고 로드할 수 있습니다. 이 클래스는 또한 현재 스레드에 대한 UWP XAML 프레임워크를 초기화합니다. 이 연습 뒷부분에서는 이 클래스의 인스턴스를 만들기 위해 데스크톱 프로젝트를 업데이트합니다.
 
   > [!NOTE]
   > XAML Islands를 사용하는 각 솔루션에는 `XamlApplication` 개체를 정의하는 프로젝트가 하나만 포함될 수 있습니다. 앱의 모든 사용자 지정 UWP XAML 컨트롤은 동일한 `XamlApplication` 개체를 공유합니다. 
@@ -307,19 +307,19 @@ ms.locfileid: "86493326"
 
 ### <a name="option-1-package-the-app-using-msix"></a>옵션 1: MSIX를 사용하여 앱 패키지
 
-배포를 위해 [MSIX 패키지](https://docs.microsoft.com/windows/msix)에 앱을 패키지할 수 있습니다. MSIX는 Windows용 최신 앱 패키징 기술로, MSI, .appx, App-V 및 ClickOnce 설치 기술의 조합을 기준으로 합니다.
+배포를 위해 [MSIX 패키지](/windows/msix)에 앱을 패키지할 수 있습니다. MSIX는 Windows용 최신 앱 패키징 기술로, MSI, .appx, App-V 및 ClickOnce 설치 기술의 조합을 기준으로 합니다.
 
-1. 새 [Windows 애플리케이션 패키징 프로젝트](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 솔루션에 추가합니다. 프로젝트를 만들 때 프로젝트 이름을 **MyDesktopWin32Project**로 지정하고, **대상 버전**과 **최소 버전** 둘 다로 **Windows 10, 버전 1903(10.0; 빌드 18362)** 을 선택합니다.
+1. 새 [Windows 애플리케이션 패키징 프로젝트](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 솔루션에 추가합니다. 프로젝트를 만들 때 프로젝트 이름을 **MyDesktopWin32Project**로 지정하고, **대상 버전**과 **최소 버전** 둘 다로 **Windows 10, 버전 1903(10.0; 빌드 18362)** 을 선택합니다.
 
 2. 패키징 프로젝트에서 **애플리케이션** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다. 프로젝트 목록에서 **MyDesktopWin32App** 프로젝트 옆의 확인란을 선택하고 **확인**을 클릭합니다.
     ![프로젝트 참조](images/xaml-islands/xaml-island-cpp-6.png)
 
 > [!NOTE]
-> 배포를 위해 [MSIX 패키지](https://docs.microsoft.com/windows/msix)에 애플리케이션을 패키지하지 않도록 선택하는 경우 앱을 실행하는 컴퓨터에 [Visual C++ Runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)이 설치되어 있어야 합니다.
+> 배포를 위해 [MSIX 패키지](/windows/msix)에 애플리케이션을 패키지하지 않도록 선택하는 경우 앱을 실행하는 컴퓨터에 [Visual C++ Runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)이 설치되어 있어야 합니다.
 
 ### <a name="option-2-create-an-application-manifest"></a>옵션 2: 애플리케이션 매니페스트 만들기
 
-앱에 [애플리케이션 매니페스트](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests)를 추가할 수 있습니다.
+앱에 [애플리케이션 매니페스트](/windows/desktop/SbsCs/application-manifests)를 추가할 수 있습니다.
 
 1. **MyDesktopWin32App** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 항목**을 선택합니다. 
 2. **새 항목 추가** 대화 상자의 왼쪽 창에서 **웹**을 클릭하고 **XML 파일(.xml)** 을 선택합니다. 
@@ -514,16 +514,16 @@ ms.locfileid: "86493326"
 
 ## <a name="add-a-control-from-the-winui-library-to-the-custom-control"></a>WinUI 라이브러리의 컨트롤을 사용자 지정 컨트롤에 추가
 
-일반적으로 UWP 컨트롤은 Windows 10 OS의 일부로 출시되었으며 개발자가 Windows SDK를 통해 사용할 수 있게 되었습니다. [WinUI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)는 Windows SDK에서 UWP 컨트롤의 업데이트된 버전이 Windows SDK 릴리스에 연결되지 않은 NuGet 패키지에 배포되는 대체 방법입니다. 이 라이브러리에는 Windows SDK 및 기본 UWP 플랫폼에 속하지 않는 새 컨트롤도 포함되어 있습니다. 자세한 내용은 [WinUI 라이브러리 로드맵](https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md)을 참조하세요.
+일반적으로 UWP 컨트롤은 Windows 10 OS의 일부로 출시되었으며 개발자가 Windows SDK를 통해 사용할 수 있게 되었습니다. [WinUI 라이브러리](/uwp/toolkits/winui/)는 Windows SDK에서 UWP 컨트롤의 업데이트된 버전이 Windows SDK 릴리스에 연결되지 않은 NuGet 패키지에 배포되는 대체 방법입니다. 이 라이브러리에는 Windows SDK 및 기본 UWP 플랫폼에 속하지 않는 새 컨트롤도 포함되어 있습니다. 자세한 내용은 [WinUI 라이브러리 로드맵](https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md)을 참조하세요.
 
 이 섹션에서는 WinUI 라이브러리의 UWP 컨트롤을 사용자 정의 컨트롤에 추가하는 방법을 보여 줍니다.
 
 1. **MyUWPApp** 프로젝트에서 최신 시험판 또는 릴리스 버전의 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지를 설치합니다.
 
     > [!NOTE]
-    > 데스크톱 앱이 [MSIX 패키지](https://docs.microsoft.com/windows/msix)에 패키지된 경우 시험판 또는 릴리스 버전의 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NugGet 패키지를 사용할 수 있습니다. 데스크톱 앱이 MSIX를 사용하여 패키지되지 않은 경우 시험판 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지를 설치해야 합니다.
+    > 데스크톱 앱이 [MSIX 패키지](/windows/msix)에 패키지된 경우 시험판 또는 릴리스 버전의 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NugGet 패키지를 사용할 수 있습니다. 데스크톱 앱이 MSIX를 사용하여 패키지되지 않은 경우 시험판 [Microsoft.UI.Xaml](https://www.nuget.org/packages/Microsoft.UI.Xaml) NuGet 패키지를 설치해야 합니다.
 
-2. 이 프로젝트의 pch.h 파일에서 다음 `#include` 문을 추가하고 변경 내용을 저장합니다. 이러한 명령문은 WinUI 라이브러리에서 프로젝트로 필요한 프로젝션 헤더 집합을 가져옵니다. 이 단계는 WinUI 라이브러리를 사용하는 C++/WinRT 프로젝트에 필요합니다. 자세한 내용은 [이 문서](https://docs.microsoft.com/uwp/toolkits/winui/getting-started#additional-steps-for-a-cwinrt-project)를 참조하세요.
+2. 이 프로젝트의 pch.h 파일에서 다음 `#include` 문을 추가하고 변경 내용을 저장합니다. 이러한 명령문은 WinUI 라이브러리에서 프로젝트로 필요한 프로젝션 헤더 집합을 가져옵니다. 이 단계는 WinUI 라이브러리를 사용하는 C++/WinRT 프로젝트에 필요합니다. 자세한 내용은 [이 문서](/uwp/toolkits/winui/getting-started#additional-steps-for-a-cwinrt-project)를 참조하세요.
 
     ```cpp
     #include "winrt/Microsoft.UI.Xaml.Automation.Peers.h"

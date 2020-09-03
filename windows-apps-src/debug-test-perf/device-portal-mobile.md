@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: fb9cd2861fe826d9e8d112f2729d2922c68194ce
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: ff94c34c61dee4de8450ed0f4f89a1dfc6537f83
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "72281895"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173597"
 ---
 # <a name="device-portal-for-mobile"></a>모바일용 디바이스 포털
 
@@ -84,4 +84,4 @@ Windows Mobile Device Portal에는 임의 프로세스를 종료하는 기능이
 ## <a name="see-also"></a>참고 항목
 
 * [Windows 장치 포털 개요](device-portal.md)
-* [장치 포털 핵심 API 참조](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [장치 포털 핵심 API 참조](./device-portal-api-core.md)

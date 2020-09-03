@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 825f2cec4723139f187da6e9ea0d4b2dbb14457c
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: e304f7b3df5ffbf00fb11554b11c0e48ddadc4b5
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970678"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173927"
 ---
 # <a name="text-box"></a>텍스트 상자
 
@@ -28,13 +28,13 @@ TextBox에는 텍스트 입력을 간소화할 수 있는 다양한 기능이 �
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](../style/rounded-corner.md)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
 
-> **플랫폼 API**: [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox), [Text 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text)
+> **플랫폼 API**: [TextBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.TextBox), [Text 속성](/uwp/api/windows.ui.xaml.controls.textbox.text)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-사용자가 양식 등에서 서식 없는 텍스트를 입력하고 편집할 수 있게 하려면 **TextBox** 컨트롤을 사용합니다. [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text) 속성을 사용하여 TextBox에 텍스트를 가져오고 설정할 수 있습니다.
+사용자가 양식 등에서 서식 없는 텍스트를 입력하고 편집할 수 있게 하려면 **TextBox** 컨트롤을 사용합니다. [Text](/uwp/api/windows.ui.xaml.controls.textbox.text) 속성을 사용하여 TextBox에 텍스트를 가져오고 설정할 수 있습니다.
 
 TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상태여야 합니다. 텍스트를 편집할 수 없는 경우 [TextBlock](text-block.md)을 대신 사용하는 것이 좋습니다.
 
@@ -87,7 +87,7 @@ rootGrid.Children.Add(textBox);
 
 ### <a name="use-a-text-box-for-data-input-in-a-form"></a>양식의 데이터 입력에 입력란 사용
 
-텍스트 상자를 사용하여 양식의 데이터 입력을 수락하고, [Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.text) 속성을 사용하여 텍스트 상자에서 전체 텍스트 문자열을 가져오는 것이 일반적입니다. 일반적으로 제출 단추 클릭과 같은 이벤트를 사용하여 Text 속성에 액세스하지만, 텍스트가 변경될 때 특정 작업을 수행해야 하는 경우 [TextChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanged) 또는 [TextChanging](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textchanging) 이벤트를 처리할 수 있습니다.
+텍스트 상자를 사용하여 양식의 데이터 입력을 수락하고, [Text](/uwp/api/windows.ui.xaml.controls.textbox.text) 속성을 사용하여 텍스트 상자에서 전체 텍스트 문자열을 가져오는 것이 일반적입니다. 일반적으로 제출 단추 클릭과 같은 이벤트를 사용하여 Text 속성에 액세스하지만, 텍스트가 변경될 때 특정 작업을 수행해야 하는 경우 [TextChanged](/uwp/api/windows.ui.xaml.controls.textbox.textchanged) 또는 [TextChanging](/uwp/api/windows.ui.xaml.controls.textbox.textchanging) 이벤트를 처리할 수 있습니다.
 
 이 예제에서는 텍스트 상자의 현재 콘텐츠를 가져오고 설정하는 방법을 보여 줍니다.
 
@@ -101,9 +101,9 @@ string sampleText = SampleTextBox.Text;
 SampleTextBox.Text = "Sample text retrieved";
 ```
 
-[Header](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.header)(또는 레이블) 및 [PlaceholderText](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.placeholdertext)(또는 워터마크)를 입력란에 추가하여 입력란의 용도를 사용자에게 표시할 수 있습니다. 헤더의 모양을 사용자 지정하려면 Header 대신 [HeaderTemplate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.headertemplate) 속성을 설정할 수 있습니다. *디자인 정보는 레이블에 대한 지침을 참조하세요*.
+[Header](/uwp/api/windows.ui.xaml.controls.textbox.header)(또는 레이블) 및 [PlaceholderText](/uwp/api/windows.ui.xaml.controls.textbox.placeholdertext)(또는 워터마크)를 입력란에 추가하여 입력란의 용도를 사용자에게 표시할 수 있습니다. 헤더의 모양을 사용자 지정하려면 Header 대신 [HeaderTemplate](/uwp/api/windows.ui.xaml.controls.textbox.headertemplate) 속성을 설정할 수 있습니다. *디자인 정보는 레이블에 대한 지침을 참조하세요*.
 
-[MaxLength](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.maxlength) 속성을 설정하여 사용자가 입력할 수 있는 문자 수를 제한할 수 있습니다. 그러나 MaxLength는 붙여넣은 텍스트의 길이는 제한하지 않습니다. 앱에 중요한 경우 붙여넣은 텍스트를 수정하려면 [Paste](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.paste) 이벤트를 사용합니다.
+[MaxLength](/uwp/api/windows.ui.xaml.controls.textbox.maxlength) 속성을 설정하여 사용자가 입력할 수 있는 문자 수를 제한할 수 있습니다. 그러나 MaxLength는 붙여넣은 텍스트의 길이는 제한하지 않습니다. 앱에 중요한 경우 붙여넣은 텍스트를 수정하려면 [Paste](/uwp/api/windows.ui.xaml.controls.textbox.paste) 이벤트를 사용합니다.
 
 입력란에는 상자에 텍스트를 입력할 때 표시되는 모두 지우기 단추("X")가 포함됩니다. 사용자가 "X"를 클릭하면 입력란의 텍스트가 지워집니다. 모양은 다음과 같습니다.
 
@@ -132,7 +132,7 @@ SampleTextBox.Text = "Sample text retrieved";
 
 ### <a name="make-a-text-box-read-only"></a>입력란을 읽기 전용으로 만들기
 
-[IsReadOnly](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.isreadonly) 속성을 **true**로 설정하여 입력란을 읽기 전용으로 만들 수 있습니다. 일반적으로 앱의 조건에 따라 앱 코드에서 이 속성을 전환합니다. 항상 읽기 전용인 텍스트가 필요한 경우 TextBlock을 대신 사용하는 것이 좋습니다.
+[IsReadOnly](/uwp/api/windows.ui.xaml.controls.textbox.isreadonly) 속성을 **true**로 설정하여 입력란을 읽기 전용으로 만들 수 있습니다. 일반적으로 앱의 조건에 따라 앱 코드에서 이 속성을 전환합니다. 항상 읽기 전용인 텍스트가 필요한 경우 TextBlock을 대신 사용하는 것이 좋습니다.
 
 IsReadOnly 속성을 true로 설정하여 TextBox를 읽기 전용으로 만들 수 있습니다. 예를 들어 사용자가 설명을 입력하는 TextBox를 특정 조건에서만 사용할 수 있게 할 수 있습니다. 조건이 충족될 때까지 TextBox를 읽기 전용으로 만들 수 있습니다. 텍스트를 표시만 해야 하는 경우 TextBlock 또는 RichTextBlock을 대신 사용하는 것이 좋습니다.
 
@@ -144,14 +144,14 @@ IsEnabled
 
 입력란에서 여러 줄에 텍스트를 표시할지 여부를 제어하는 데 사용할 수 있는 두 개의 속성이 있습니다. 일반적으로 여러 줄 입력란을 만들려면 두 속성을 모두 설정합니다.
 
-- 텍스트 상자에서 줄 바꿈 또는 리턴 문자를 허용하고 표시할 수 있게 하려면 [AcceptsReturn](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.acceptsreturn) 속성을 **true**로 설정합니다.
-- 텍스트 배치를 사용하려면 [TextWrapping](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.textwrapping) 속성을 **Wrap**으로 설정합니다. 이렇게 하면 줄 구분 기호에 관계없이 입력란의 가장자리에 도달하면 텍스트가 줄 바꿈됩니다.
+- 텍스트 상자에서 줄 바꿈 또는 리턴 문자를 허용하고 표시할 수 있게 하려면 [AcceptsReturn](/uwp/api/windows.ui.xaml.controls.textbox.acceptsreturn) 속성을 **true**로 설정합니다.
+- 텍스트 배치를 사용하려면 [TextWrapping](/uwp/api/windows.ui.xaml.controls.textbox.textwrapping) 속성을 **Wrap**으로 설정합니다. 이렇게 하면 줄 구분 기호에 관계없이 입력란의 가장자리에 도달하면 텍스트가 줄 바꿈됩니다.
 
 > **참고**&nbsp;&nbsp;TextBox와 RichEditBox는 해당 TextWrapping 속성에 대해 **WrapWholeWords** 값을 지원하지 않습니다. TextBox.TextWrapping 또는 RichEditBox.TextWrapping 값으로 WrapWholeWords를 사용하려고 하면 잘못된 인수 예외가 throw됩니다.
 
-여러 줄 텍스트 상자는 해당 [Height](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.height) 또는 [MaxHeight](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.maxheight) 속성이나 부모 컨테이너에서 제한되지 않을 경우 텍스트를 입력함에 따라 계속 세로로 증가합니다. 여러 줄 텍스트 상자가 표시 영역 이상 증가하지 않는지 테스트하고, 해당하는 경우 증가를 제한해야 합니다. 항상 여러 줄 입력란에 대해 적절한 높이를 지정하여 사용자가 입력함에 따라 높이가 증가하지 않도록 하는 것이 좋습니다.
+여러 줄 텍스트 상자는 해당 [Height](/uwp/api/windows.ui.xaml.frameworkelement.height) 또는 [MaxHeight](/uwp/api/windows.ui.xaml.frameworkelement.maxheight) 속성이나 부모 컨테이너에서 제한되지 않을 경우 텍스트를 입력함에 따라 계속 세로로 증가합니다. 여러 줄 텍스트 상자가 표시 영역 이상 증가하지 않는지 테스트하고, 해당하는 경우 증가를 제한해야 합니다. 항상 여러 줄 입력란에 대해 적절한 높이를 지정하여 사용자가 입력함에 따라 높이가 증가하지 않도록 하는 것이 좋습니다.
 
-스크롤 휠 또는 터치를 사용한 스크롤은 필요에 따라 자동으로 사용됩니다. 그러나 세로 스크롤 막대는 기본적으로 표시되지 않습니다. 다음과 같이 포함된 ScrollViewer에서 [ScrollViewer.VerticalScrollBarVisibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility)를 **Auto**로 설정하면 세로 스크롤 막대를 표시할 수 있습니다.
+스크롤 휠 또는 터치를 사용한 스크롤은 필요에 따라 자동으로 사용됩니다. 그러나 세로 스크롤 막대는 기본적으로 표시되지 않습니다. 다음과 같이 포함된 ScrollViewer에서 [ScrollViewer.VerticalScrollBarVisibility](/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility)를 **Auto**로 설정하면 세로 스크롤 막대를 표시할 수 있습니다.
 
 ```xaml
 <TextBox AcceptsReturn="True" TextWrapping="Wrap"
@@ -175,9 +175,9 @@ ScrollViewer.SetVerticalScrollBarVisibility(textBox, ScrollBarVisibility.Auto);
 
 ### <a name="format-the-text-display"></a>텍스트 표시 서식 지정
 
-입력란 내에서 텍스트를 맞추려면 [TextAlignment](/uwp/api/windows.ui.xaml.controls.textbox.textalignment) 속성을 사용합니다. 페이지 레이아웃 내에서 입력란을 맞추려면 [HorizontalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment) 및 [VerticalAlignment](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment) 속성을 사용합니다.
+입력란 내에서 텍스트를 맞추려면 [TextAlignment](/uwp/api/windows.ui.xaml.controls.textbox.textalignment) 속성을 사용합니다. 페이지 레이아웃 내에서 입력란을 맞추려면 [HorizontalAlignment](/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment) 및 [VerticalAlignment](/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment) 속성을 사용합니다.
 
-입력란은 서식 없는 텍스트만 지원하지만 입력란에서 텍스트가 표시되는 방식을 브랜딩에 맞게 사용자 지정할 수 있습니다. [FontFamily](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.fontfamily), [FontSize](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.fontsize), [FontStyle](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.fontstyle), [Background](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.background), [Foreground](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.foreground) 및 [CharacterSpacing](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.characterspacing)과 같은 표준 [컨트롤](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Control) 속성을 설정하여 텍스트의 모양을 변경할 수 있습니다. 이러한 속성은 입력란이 로컬에서 텍스트를 표시하는 방식에만 영향을 줍니다. 예를 들어 서식 있는 텍스트 컨트롤에 텍스트를 복사하여 붙여넣을 경우 서식이 적용되지 않습니다.
+입력란은 서식 없는 텍스트만 지원하지만 입력란에서 텍스트가 표시되는 방식을 브랜딩에 맞게 사용자 지정할 수 있습니다. [FontFamily](/uwp/api/windows.ui.xaml.controls.control.fontfamily), [FontSize](/uwp/api/windows.ui.xaml.controls.control.fontsize), [FontStyle](/uwp/api/windows.ui.xaml.controls.control.fontstyle), [Background](/uwp/api/windows.ui.xaml.controls.control.background), [Foreground](/uwp/api/windows.ui.xaml.controls.control.foreground) 및 [CharacterSpacing](/uwp/api/windows.ui.xaml.controls.control.characterspacing)과 같은 표준 [컨트롤](/uwp/api/Windows.UI.Xaml.Controls.Control) 속성을 설정하여 텍스트의 모양을 변경할 수 있습니다. 이러한 속성은 입력란이 로컬에서 텍스트를 표시하는 방식에만 영향을 줍니다. 예를 들어 서식 있는 텍스트 컨트롤에 텍스트를 복사하여 붙여넣을 경우 서식이 적용되지 않습니다.
 
 이 예제에서는 텍스트 모양을 사용자 지정하기 위해 여러 속성이 설정된 읽기 전용 입력란을 보여 줍니다.
 
@@ -221,15 +221,15 @@ rootGrid.Children.Add(textBox);
 모두 선택 | TextBox에 텍스트가 있는 경우
 실행 취소 | 텍스트가 변경된 경우
 
-상황에 맞는 메뉴에 표시되는 명령을 수정하려면 [ContextMenuOpening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.contextmenuopening) 이벤트를 처리합니다. 이에 대한 예제는 <a href="xamlcontrolsgallery:/item/RichEditBox">XAML 컨트롤 갤러리</a>에서 **RichEditBox의 CommandBarFlyout 사용자 지정 - '공유' 추가** 예제를 참조하세요. 디자인 정보는 [상황에 맞는 메뉴](menus.md)에 대한 지침을 참조하세요.
+상황에 맞는 메뉴에 표시되는 명령을 수정하려면 [ContextMenuOpening](/uwp/api/windows.ui.xaml.controls.textbox.contextmenuopening) 이벤트를 처리합니다. 이에 대한 예제는 <a href="xamlcontrolsgallery:/item/RichEditBox">XAML 컨트롤 갤러리</a>에서 **RichEditBox의 CommandBarFlyout 사용자 지정 - '공유' 추가** 예제를 참조하세요. 디자인 정보는 [상황에 맞는 메뉴](menus.md)에 대한 지침을 참조하세요.
 
 ### <a name="select-copy-and-paste"></a>선택, 복사 및 붙여넣기
 
-[SelectedText](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectedtext) 속성을 사용하여 입력란에서 선택한 텍스트를 가져오거나 설정할 수 있습니다. 텍스트 선택을 조작하려면 [SelectionStart](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionstart) 및 [SelectionLength](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionlength) 속성과 [Select](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.select) 및 [SelectAll](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectall) 메서드를 사용합니다. 사용자가 텍스트를 선택하거나 선택을 취소하면 [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionchanged) 이벤트를 처리하여 작업을 수행합니다. [SelectionHighlightColor](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionhighlightcolor) 속성을 설정하면 선택한 텍스트를 강조 표시하는 데 사용되는 색을 변경할 수 있습니다.
+[SelectedText](/uwp/api/windows.ui.xaml.controls.textbox.selectedtext) 속성을 사용하여 입력란에서 선택한 텍스트를 가져오거나 설정할 수 있습니다. 텍스트 선택을 조작하려면 [SelectionStart](/uwp/api/windows.ui.xaml.controls.textbox.selectionstart) 및 [SelectionLength](/uwp/api/windows.ui.xaml.controls.textbox.selectionlength) 속성과 [Select](/uwp/api/windows.ui.xaml.controls.textbox.select) 및 [SelectAll](/uwp/api/windows.ui.xaml.controls.textbox.selectall) 메서드를 사용합니다. 사용자가 텍스트를 선택하거나 선택을 취소하면 [SelectionChanged](/uwp/api/windows.ui.xaml.controls.textbox.selectionchanged) 이벤트를 처리하여 작업을 수행합니다. [SelectionHighlightColor](/uwp/api/windows.ui.xaml.controls.textbox.selectionhighlightcolor) 속성을 설정하면 선택한 텍스트를 강조 표시하는 데 사용되는 색을 변경할 수 있습니다.
 
-TextBox는 기본적으로 복사 및 붙여넣기를 지원합니다. 앱의 편집 가능한 텍스트 컨트롤에서 [Paste](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.paste) 이벤트를 사용자 지정 처리할 수 있습니다. 예를 들어 한 줄 검색 상자에 붙여넣을 때 여러 줄 주소에서 줄 바꿈을 제거할 수 있습니다. 또는 붙여넣은 텍스트의 길이를 확인하고 데이터베이스에 저장할 수 있는 최대 길이를 초과할 경우 사용자에게 경고 메시지를 표시할 수 있습니다. 자세한 내용과 예제는 [Paste](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.paste) 이벤트를 참조하세요.
+TextBox는 기본적으로 복사 및 붙여넣기를 지원합니다. 앱의 편집 가능한 텍스트 컨트롤에서 [Paste](/uwp/api/windows.ui.xaml.controls.textbox.paste) 이벤트를 사용자 지정 처리할 수 있습니다. 예를 들어 한 줄 검색 상자에 붙여넣을 때 여러 줄 주소에서 줄 바꿈을 제거할 수 있습니다. 또는 붙여넣은 텍스트의 길이를 확인하고 데이터베이스에 저장할 수 있는 최대 길이를 초과할 경우 사용자에게 경고 메시지를 표시할 수 있습니다. 자세한 내용과 예제는 [Paste](/uwp/api/windows.ui.xaml.controls.textbox.paste) 이벤트를 참조하세요.
 
-다음은 이러한 속성과 메서드의 사용 예입니다. 첫 번째 입력란에서 텍스트를 선택하면 선택한 텍스트가 읽기 전용인 두 번째 입력란에 표시됩니다. [SelectionLength](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionlength) 및 [SelectionStart](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionstart) 속성의 값이 두 개의 입력란에 표시됩니다. 이 작업은 [SelectionChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.selectionchanged) 이벤트를 사용하여 수행됩니다.
+다음은 이러한 속성과 메서드의 사용 예입니다. 첫 번째 입력란에서 텍스트를 선택하면 선택한 텍스트가 읽기 전용인 두 번째 입력란에 표시됩니다. [SelectionLength](/uwp/api/windows.ui.xaml.controls.textbox.selectionlength) 및 [SelectionStart](/uwp/api/windows.ui.xaml.controls.textbox.selectionstart) 속성의 값이 두 개의 입력란에 표시됩니다. 이 작업은 [SelectionChanged](/uwp/api/windows.ui.xaml.controls.textbox.selectionchanged) 이벤트를 사용하여 수행됩니다.
 
 ```xaml
 <StackPanel>
@@ -263,13 +263,13 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 
 터치 키보드는 앱이 터치 스크린이 있는 디바이스에서 실행될 때 텍스트 입력에 사용할 수 있습니다. 터치 키보드는 사용자가 TextBox 또는 RichEditBox와 같이 편집 가능한 입력 필드를 탭할 때 호출됩니다. 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 사용자가 앱에서 데이터를 쉽고 빠르게 입력할 수 있도록 지원할 수 있습니다. 입력 범위는 시스템에서 해당 입력 형식에 맞는 특수한 터치 키보드를 제공할 수 있도록 컨트롤에서 예상되는 텍스트 입력 형식에 대한 힌트를 시스템에 제공합니다.
 
-예를 들어 텍스트 상자가 4자리 숫자의 PIN을 입력하는 목적으로만 사용될 경우 [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성을 **Number**로 설정합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다.
+예를 들어 텍스트 상자가 4자리 숫자의 PIN을 입력하는 목적으로만 사용될 경우 [InputScope](/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성을 **Number**로 설정합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다.
 
 > **중요**&nbsp;&nbsp;입력 범위에서는 입력 유효성 검사가 수행되지 않으며, 사용자가 하드웨어 키보드 또는 다른 입력 디바이스를 사용해서 입력할 수 있습니다. 따라서 필요에 따라 입력 코드에 대한 유효성을 검사해야 합니다.
 
-터치 키보드에 영향을 주는 다른 속성은 [IsSpellCheckEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.isspellcheckenabled), [IsTextPredictionEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.istextpredictionenabled) 및 [PreventKeyboardDisplayOnProgrammaticFocus](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus)입니다. (하드웨어 키보드를 사용하는 경우 IsSpellCheckEnabled는 TextBox에도 영향을 줍니다.)
+터치 키보드에 영향을 주는 다른 속성은 [IsSpellCheckEnabled](/uwp/api/windows.ui.xaml.controls.textbox.isspellcheckenabled), [IsTextPredictionEnabled](/uwp/api/windows.ui.xaml.controls.textbox.istextpredictionenabled) 및 [PreventKeyboardDisplayOnProgrammaticFocus](/uwp/api/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus)입니다. (하드웨어 키보드를 사용하는 경우 IsSpellCheckEnabled는 TextBox에도 영향을 줍니다.)
 
-자세한 내용과 예제는 [입력 범위를 사용하여 터치 키보드 변경](https://docs.microsoft.com/windows/uwp/design/input/use-input-scope-to-change-the-touch-keyboard) 및 속성 설명서를 참조하세요.
+자세한 내용과 예제는 [입력 범위를 사용하여 터치 키보드 변경](../input/use-input-scope-to-change-the-touch-keyboard.md) 및 속성 설명서를 참조하세요.
 
 ## <a name="recommendations"></a>권장 사항
 
@@ -321,8 +321,8 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 
 - [텍스트 컨트롤](text-controls.md)
 - [맞춤법 검사에 대한 지침](text-controls.md)
-- [검색 추가](https://docs.microsoft.com/previous-versions/windows/apps/hh465231(v=win.10))
+- [검색 추가](/previous-versions/windows/apps/hh465231(v=win.10))
 - [텍스트 입력에 대한 지침](text-controls.md)
-- [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
-- [PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [String.Length 속성](https://docs.microsoft.com/dotnet/api/system.string.length)
+- [TextBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [PasswordBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+- [String.Length 속성](/dotnet/api/system.string.length)

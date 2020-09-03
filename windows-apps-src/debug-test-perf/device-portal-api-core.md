@@ -7,12 +7,12 @@ ms.date: 04/19/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e091cc7ad62f69b9e76541101555493609b8a06
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c8615620e09d6f00881c1bb229d98f876a95978c
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75955314"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173617"
 ---
 # <a name="device-portal-core-api-reference"></a>디바이스 포털 핵심 API 참조
 
@@ -73,7 +73,7 @@ ms.locfileid: "75955314"
 
 **요청**
 
-다음 요청 형식을 사용하여 [관련 세트](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/)를 설치할 수 있습니다.
+다음 요청 형식을 사용하여 [관련 세트](/windows/msix/)를 설치할 수 있습니다.
 
 | 방법      | 요청 URI |
 | :------     | :------ |
@@ -174,7 +174,7 @@ ms.locfileid: "75955314"
 
 **요청**
 
-다음 요청 형식을 사용하여 느슨한 폴더에 [관련 세트](https://blogs.msdn.microsoft.com/appinstaller/2017/05/12/tooling-to-create-a-related-set/)를 등록할 수 있습니다.
+다음 요청 형식을 사용하여 느슨한 폴더에 [관련 세트](/windows/msix/)를 등록할 수 있습니다.
 
 | 방법      | 요청 URI |
 | :------     | :----- |
@@ -1373,7 +1373,7 @@ ms.locfileid: "75955314"
 | URI 매개 변수 | 설명 |
 | :---          | :--- |
 | autoreboot   | (**선택**) True 또는 false입니다. 실패 또는 잠긴 후 시스템을 자동으로 다시 시작하는지 여부를 나타냅니다. |
-| dumptype   | (**선택**) 덤프 유형입니다. 지원되는 값은 [CrashDumpType 열거](https://docs.microsoft.com/previous-versions/azure/reference/dn802457(v=azure.100))를 참조하세요.|
+| dumptype   | (**선택**) 덤프 유형입니다. 지원되는 값은 [CrashDumpType 열거](/previous-versions/azure/reference/dn802457(v=azure.100))를 참조하세요.|
 | maxdumpcount   | (**선택**) 저장할 최대 덤프 수입니다. |
 | overwrite   | (**선택**) True 또는 false입니다. *maxdumpcount*에 의해 지정된 덤프 카운터 한도에 도달한 경우 이전 덤프를 덮어쓸지 여부를 나타냅니다. |
 
