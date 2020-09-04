@@ -7,12 +7,12 @@ ms.date: 03/13/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dc23e86f85c5db3dd10c5cec152047be387d4513
-ms.sourcegitcommit: 445320ff0ee7323d823194d4ec9cfa6e710ed85d
+ms.openlocfilehash: 9f36035bea91f39d60f44ca9e16c768eb5d75e78
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72282294"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165637"
 ---
 # <a name="attached-layouts"></a>연결된 레이아웃
 
@@ -22,12 +22,12 @@ ms.locfileid: "72282294"
 
 | **Windows UI 라이브러리 가져오기** |
 | - |
-| 이 컨트롤은 UWP 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| 이 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](/uwp/toolkits/winui/)를 참조하세요. |
 
 > **중요 API**:
 
 > * [ScrollViewer](/uwp/api/windows.ui.xaml.controls.scrollviewer)
-> * [ItemsRepeater](/windows/uwp/design/controls-and-patterns/items-repeater)
+> * [ItemsRepeater](../controls-and-patterns/items-repeater.md)
 > * [레이아웃](/uwp/api/microsoft.ui.xaml.controls.layout)
 >     * [NonVirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout)
 >     * [VirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout)
@@ -44,7 +44,7 @@ ms.locfileid: "72282294"
 
 2. 이 요소는 어느 ***위치***에 배치되나요?
 
-이러한 질문의 답변이 될 수 있는 XAML의 레이아웃 시스템은 [사용자 지정 패널](/windows/uwp/design/layout/custom-panels-overview)을 다루면서 간략히 설명됩니다.
+이러한 질문의 답변이 될 수 있는 XAML의 레이아웃 시스템은 [사용자 지정 패널](./custom-panels-overview.md)을 다루면서 간략히 설명됩니다.
 
 ### <a name="containers-and-context"></a>컨테이너 및 컨텍스트
 
@@ -55,7 +55,7 @@ ms.locfileid: "72282294"
 
 이러한 이유로 XAML의 패널은 레이아웃과 비슷하지만, 기술적으로는 레이아웃 이상의 기능을 수행합니다.
 
-[ItemsRepeater](/windows/uwp/design/controls-and-patterns/items-repeater)도 패널처럼 동작하지만, 패널과 달리 프로그래밍 방식으로 UIElement 자식을 추가 또는 제거할 수 있도록 하는 Children 속성을 노출하지 않습니다.  대신, 자식 항목의 수명은 프레임워크에 의해 자동으로 관리되어 데이터 항목의 컬렉션에 해당합니다.  패널에서 파생되지 않지만 패널처럼 동작하고 프레임워크에서 처리됩니다.
+[ItemsRepeater](../controls-and-patterns/items-repeater.md)도 패널처럼 동작하지만, 패널과 달리 프로그래밍 방식으로 UIElement 자식을 추가 또는 제거할 수 있도록 하는 Children 속성을 노출하지 않습니다.  대신, 자식 항목의 수명은 프레임워크에 의해 자동으로 관리되어 데이터 항목의 컬렉션에 해당합니다.  패널에서 파생되지 않지만 패널처럼 동작하고 프레임워크에서 처리됩니다.
 
 > [!NOTE]
 > [LayoutPanel](/uwp/api/microsoft.ui.xaml.controls.layoutpanel)은 패널에서 파생된 컨테이너로, 연결된 [Layout](/uwp/api/microsoft.ui.xaml.controls.layoutpanel.layout) 개체에 논리를 위임합니다.  LayoutPanel는 *미리 보기*로 제공되며 현재는 WinUI 패키지의 *시험판*에서만 사용할 수 있습니다.
@@ -81,7 +81,7 @@ ms.locfileid: "72282294"
 
 #### <a name="per-container-state"></a>컨테이너 단위 상태
 
-연결된 레이아웃을 사용하여 레이아웃 개체의 단일 인스턴스는 아래 코드 조각과 같은 많은 컨테이너에 * 연결될 수 있습니다. 따라서 호스트 컨테이너에 종속되거나 호스트 컨테이너를 직접 참조해서는 안 됩니다.  예:
+연결된 레이아웃을 사용하여 레이아웃 개체의 단일 인스턴스는 아래 코드 조각과 같은 많은 컨테이너에  연결될 수 있습니다. 따라서 호스트 컨테이너에 종속되거나 호스트 컨테이너를 직접 참조해서는 안 됩니다.  예:
 
 ```xaml
 <!-- ... --->
@@ -94,7 +94,7 @@ ms.locfileid: "72282294"
 <!-- ... --->
 ```
 
-이러한 상황에서 *ExampleLayout*은 레이아웃 계산에서 사용하는 상태와 한 패널의 요소 레이아웃이 다른 패널에 영향을 미치지 않도록 하기 위해 해당 상태를 저장할 위치를 신중하게 고려해야 합니다.  해당 MeasureOverride 및 ArrangeOverride 논리가 해당 정적  속성의 값에 따라 달라지는 사용자 지정 패널과 유사합니다.
+이러한 상황에서 *ExampleLayout*은 레이아웃 계산에서 사용하는 상태와 한 패널의 요소 레이아웃이 다른 패널에 영향을 미치지 않도록 하기 위해 해당 상태를 저장할 위치를 신중하게 고려해야 합니다.  해당 MeasureOverride 및 ArrangeOverride 논리가 해당 정적 속성의 값에 따라 달라지는 사용자 지정 패널과 유사합니다.
 
 #### <a name="layoutcontext"></a>LayoutContext
 
@@ -102,7 +102,7 @@ ms.locfileid: "72282294"
 
 간단한 비가상화 레이아웃은 상태를 유지 관리하지 않아도 되므로 문제가 되지 않는 경우가 많습니다. 그러나 Grid와 같은 보다 복잡한 레이아웃은 값을 다시 계산하지 않도록 측정과 정렬 호출 간에 상태를 유지하도록 선택할 수 있습니다.
 
-레이아웃을 가상화할 경우 반복적인 레이아웃 단계 간 뿐만 아니라 측정과 정렬 간에 상태를 유지 관리해야 하는 경우가 많습니다. 
+레이아웃을 가상화할 경우 반복적인 레이아웃 단계 간 뿐만 아니라 측정과 정렬 간에 상태를 유지 관리해야 하는 경우가 많습니다.
 
 #### <a name="initializing-and-uninitializing-per-container-state"></a>컨테이너 단위 상태 초기화 및 초기화 해제
 
@@ -128,7 +128,7 @@ UI 가상화는 _필요할 때까지_ UI 개체의 생성을 지연시키는 것
 **유의할 사항...**
 
 1. 비가상화 레이아웃은 제작하기가 더 쉽습니다. 항목 수가 항상 작은 경우에는 비가상화 레이아웃을 제작하는 것이 좋습니다.
-2. 플랫폼은 일반적인 요구를 해결하기 위해 [ItemsRepeater](/windows/uwp/design/controls-and-patterns/items-repeater#change-the-layout-of-items) 및 [LayoutPanel](/uwp/api/microsoft.ui.xaml.controls.layoutpanel)에서 작동하는 연결된 레이아웃 세트를 제공합니다.  사용자 지정 레이아웃을 정의해야 할지를 결정하기 전에 해당 내용을 숙지하세요.
+2. 플랫폼은 일반적인 요구를 해결하기 위해 [ItemsRepeater](../controls-and-patterns/items-repeater.md#change-the-layout-of-items) 및 [LayoutPanel](/uwp/api/microsoft.ui.xaml.controls.layoutpanel)에서 작동하는 연결된 레이아웃 세트를 제공합니다.  사용자 지정 레이아웃을 정의해야 할지를 결정하기 전에 해당 내용을 숙지하세요.
 3. 가상화 레이아웃에서는 비가상화 레이아웃에 비해 CPU와 메모리 비용/복잡성/오버헤드가 추가됩니다.  경험에 따르면 레이아웃에서 관리해야 하는 자식 항목이 뷰포트의 3배 크기 영역에 잘 맞게 되면 일반적으로 가상화 레이아웃에서 많은 이점을 얻을 수 없습니다. 3배 크기는 이 문서 뒷부분에서 더 자세히 설명하겠지만, 그 근거는 Windows에서의 스크롤 작업이 갖는 특성과 가상화에 미치는 영향에 있습니다.
 
 > [!TIP]
@@ -145,7 +145,7 @@ UI 가상화는 _필요할 때까지_ UI 개체의 생성을 지연시키는 것
 
 ## <a name="non-virtualizing-layout"></a>비가상화 레이아웃
 
-비가상화 레이아웃을 만드는 방법은 [사용자 지정 패널](/windows/uwp/design/layout/custom-panels-overview)을 만든 모든 사용자에게 친숙할 것입니다.  동일한 개념이 적용됩니다.  주요 차이점은 [NonVirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayoutcontext)를 사용하여 [Children](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayoutcontext.children) 컬렉션에 액세스하며, 레이아웃은 상태를 저장하도록 선택할 수 있다는 것입니다.
+비가상화 레이아웃을 만드는 방법은 [사용자 지정 패널](./custom-panels-overview.md)을 만든 모든 사용자에게 친숙할 것입니다.  동일한 개념이 적용됩니다.  주요 차이점은 [NonVirtualizingLayoutContext](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayoutcontext)를 사용하여 [Children](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayoutcontext.children) 컬렉션에 액세스하며, 레이아웃은 상태를 저장하도록 선택할 수 있다는 것입니다.
 
 1. 기본 형식 [NonVirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout)(Panel 대신)에서 파생됩니다.
 2. *(선택 사항)* 변경될 때 레이아웃을 무효화하는 종속성 속성을 정의합니다.
@@ -246,7 +246,7 @@ Windows 상의 스크롤은 UI 스레드에 대해 비동기적으로 수행됩�
 
 ![구현 Rect](images/xaml-attached-layout-realizationrect.png)
 
-요소를 만드는 데 비용이 많이 들기 때문에 가상화 컨테이너(예: [ItemsRepeater](/windows/uwp/design/controls-and-patterns/items-repeater))는 처음에는 뷰포트와 일치하는 [RealizationRect](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.realizationrect)를 연결된 레이아웃에 제공합니다. 유휴 시간에 컨테이너는 점점 커지는 구현 Rect를 사용하여 레이아웃을 반복적으로 호출함으로써 준비된 콘텐츠의 버퍼를 늘릴 수 있습니다. 이 동작은 빠른 시작 시간과 양호한 이동 환경 간에 균형을 맞추려고 시도하는 성능 최적화입니다. ItemsRepeater가 생성하는 최대 버퍼 크기는 [VerticalCacheLength](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.verticalcachelength) 및 [HorizontalCacheLength](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.verticalcachelength) 속성에 의해 제어됩니다.
+요소를 만드는 데 비용이 많이 들기 때문에 가상화 컨테이너(예: [ItemsRepeater](../controls-and-patterns/items-repeater.md))는 처음에는 뷰포트와 일치하는 [RealizationRect](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.realizationrect)를 연결된 레이아웃에 제공합니다. 유휴 시간에 컨테이너는 점점 커지는 구현 Rect를 사용하여 레이아웃을 반복적으로 호출함으로써 준비된 콘텐츠의 버퍼를 늘릴 수 있습니다. 이 동작은 빠른 시작 시간과 양호한 이동 환경 간에 균형을 맞추려고 시도하는 성능 최적화입니다. ItemsRepeater가 생성하는 최대 버퍼 크기는 [VerticalCacheLength](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.verticalcachelength) 및 [HorizontalCacheLength](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.verticalcachelength) 속성에 의해 제어됩니다.
 
 **요소 다시 사용(재활용)**
 
