@@ -7,31 +7,30 @@ ms.topic: article
 ms.custom: 19H1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c0e94e0ddaba027b38ecc76b1c97126204990f1a
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 1fae76aea28ffb63f6cb0ad5af8c5eb6e3fac6e4
+ms.sourcegitcommit: 8171695ade04a762f19723f0b88e46e407375800
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363986"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89494369"
 ---
 # <a name="connect-to-remote-cameras"></a>원격 카메라에 연결
 
 이 문서에서는 하나 이상의 원격 카메라에 연결 하 고 각 카메라의 프레임을 읽을 수 있는 [**Mediaframesourcegroup**](/uwp/api/Windows.Media.Capture.Frames.MediaFrameSourceGroup) 개체를 가져오는 방법을 보여 줍니다. 미디어 원본에서 프레임을 읽는 방법에 대 한 자세한 내용은 [MediaFrameReader를 사용 하 여 미디어 프레임 처리](process-media-frames-with-mediaframereader.md)를 참조 하세요. 장치와의 페어링에 대 한 자세한 내용은 [페어링 장치](../devices-sensors/pair-devices.md)를 참조 하세요.
 
 > [!NOTE] 
-> 이 문서에서 설명 하는 기능은 Windows 10 버전 1903부터 사용할 수 있습니다.
+> 이 문서에서 설명 하는 기능은 Windows 10, 버전 1903부터 사용할 수 있습니다.
 
 ## <a name="create-a-devicewatcher-class-to-watch-for-available-remote-cameras"></a>사용 가능한 원격 카메라를 감시 하는 DeviceWatcher 클래스 만들기
 
 [**Devicewatcher**](/uwp/api/windows.devices.enumeration.devicewatcher) 클래스는 앱에서 사용할 수 있는 장치를 모니터링 하 고 장치를 추가 하거나 제거할 때 앱에 알립니다. Devicewatcher을 호출 하 여 **devicewatcher** 의 인스턴스를 가져옵니다 [**. createwatcher**](/uwp/api/windows.devices.enumeration.deviceinformation.createwatcher#Windows_Devices_Enumeration_DeviceInformation_CreateWatcher_System_String_)는 모니터링 하려는 장치 유형을 식별 하는 AQS (고급 쿼리 구문) 문자열을 전달 합니다. 네트워크 카메라 장치를 지정 하는 AQS 문자열은 다음과 같습니다.
 
-```
+```syntax
 @"System.Devices.InterfaceClassGuid:=""{B8238652-B500-41EB-B4F3-4234F7F5AE99}"" AND System.Devices.InterfaceEnabled:=System.StructuredQueryType.Boolean#True"
 ```
 
 > [!NOTE] 
 > 도우미 메서드 [**MediafAQS Esourcegroup. GetDeviceSelector**](/uwp/api/windows.media.capture.frames.mediaframesourcegroup.getdeviceselector) 는 로컬로 연결 되 고 원격 네트워크 카메라를 모니터링 하는 문자열을 반환 합니다. 네트워크 카메라만 모니터링 하려면 위에 표시 된 AQS 문자열을 사용 해야 합니다.
-
 
 [**Start**](/uwp/api/windows.devices.enumeration.devicewatcher.start) 메서드를 호출 하 여 반환 된 **devicewatcher** 를 시작 하면 현재 사용할 수 있는 모든 네트워크 카메라에 대해 [**추가**](/uwp/api/windows.devices.enumeration.devicewatcher.added) 된 이벤트가 발생 합니다. [**중지**](/uwp/api/windows.devices.enumeration.devicewatcher.stop)를 호출 하 여 감시자를 중지 하기 전에는 새 네트워크 카메라 장치를 사용할 수 있게 되 면 **추가** 된 이벤트가 발생 하 고 카메라 장치를 사용할 수 없게 되 면 [**제거**](/uwp/api/windows.devices.enumeration.devicewatcher.removed) 된 이벤트가 발생 합니다.
 
@@ -45,6 +44,87 @@ ms.locfileid: "89363986"
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/Frames_Win10/cs/Frames_Win10/RemoteCameraPairingHelper.cs" id="SnippetRemoteCameraPairingHelper":::
 
+```cppwinrt
+#include <winrt/Windows.Devices.Enumeration.h>
+#include <winrt/Windows.Foundation.Collections.h>
+#include <winrt/Windows.Media.Capture.Frames.h>
+#include <winrt/Windows.UI.Core.h>
+using namespace winrt;
+using namespace winrt::Windows::Devices::Enumeration;
+using namespace winrt::Windows::Foundation::Collections;
+using namespace winrt::Windows::Media::Capture::Frames;
+using namespace winrt::Windows::UI::Core;
+
+struct RemoteCameraPairingHelper
+{
+    RemoteCameraPairingHelper(CoreDispatcher uiDispatcher) :
+        m_dispatcher(uiDispatcher)
+    {
+        m_remoteCameraCollection = winrt::single_threaded_observable_vector<MediaFrameSourceGroup>();
+        auto remoteCameraAqs =
+            LR"(System.Devices.InterfaceClassGuid:=""{B8238652-B500-41EB-B4F3-4234F7F5AE99}"")"
+            LR"(AND System.Devices.InterfaceEnabled:=System.StructuredQueryType.Boolean#True)";
+        m_watcher = DeviceInformation::CreateWatcher(remoteCameraAqs);
+        m_watcherAddedAutoRevoker = m_watcher.Added(winrt::auto_revoke, { this, &RemoteCameraPairingHelper::Watcher_Added });
+        m_watcherRemovedAutoRevoker = m_watcher.Removed(winrt::auto_revoke, { this, &RemoteCameraPairingHelper::Watcher_Removed });
+        m_watcherUpdatedAutoRevoker = m_watcher.Updated(winrt::auto_revoke, { this, &RemoteCameraPairingHelper::Watcher_Updated });
+        m_watcher.Start();
+    }
+    ~RemoteCameraPairingHelper()
+    {
+        m_watcher.Stop();
+    }
+    IObservableVector<MediaFrameSourceGroup> FrameSourceGroups()
+    {
+        return m_remoteCameraCollection;
+    }
+    winrt::fire_and_forget Watcher_Added(DeviceWatcher /* sender */, DeviceInformation args)
+    {
+        co_await AddDeviceAsync(args.Id());
+    }
+    winrt::fire_and_forget Watcher_Removed(DeviceWatcher /* sender */, DeviceInformationUpdate args)
+    {
+        co_await RemoveDevice(args.Id());
+    }
+    winrt::fire_and_forget Watcher_Updated(DeviceWatcher /* sender */, DeviceInformationUpdate args)
+    {
+        co_await RemoveDevice(args.Id());
+        co_await AddDeviceAsync(args.Id());
+    }
+    Windows::Foundation::IAsyncAction AddDeviceAsync(winrt::hstring id)
+    {
+        auto group = co_await MediaFrameSourceGroup::FromIdAsync(id);
+        if (group)
+        {
+            co_await m_dispatcher;
+            m_remoteCameraCollection.Append(group);
+        }
+    }
+    Windows::Foundation::IAsyncAction RemoveDevice(winrt::hstring id)
+    {
+        co_await m_dispatcher;
+
+        uint32_t ix{ 0 };
+        for (auto const&& item : m_remoteCameraCollection)
+        {
+            if (item.Id() == id)
+            {
+                m_remoteCameraCollection.RemoveAt(ix);
+                break;
+            }
+            ++ix;
+        }
+    }
+
+private:
+    CoreDispatcher m_dispatcher{ nullptr };
+    DeviceWatcher m_watcher{ nullptr };
+    IObservableVector<MediaFrameSourceGroup> m_remoteCameraCollection;
+    DeviceWatcher::Added_revoker m_watcherAddedAutoRevoker;
+    DeviceWatcher::Removed_revoker m_watcherRemovedAutoRevoker;
+    DeviceWatcher::Updated_revoker m_watcherUpdatedAutoRevoker;
+};
+```
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -52,6 +132,3 @@ ms.locfileid: "89363986"
 * [MediaCapture를 사용하여 기본적인 사진, 비디오 및 오디오 캡처](basic-photo-video-and-audio-capture-with-MediaCapture.md)
 * [카메라 프레임 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CameraFrames)
 * [MediaFrameReader를 사용하여 미디어 프레임 처리](process-media-frames-with-mediaframereader.md)
- 
-
- 

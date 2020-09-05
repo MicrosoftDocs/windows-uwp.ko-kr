@@ -1,5 +1,5 @@
 ---
-Description: 타사 개발자는 WNS(Windows 푸시 알림 서비스)를 사용하여 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. WNS는 에너지 효율적이며 신뢰할 수 있는 방법으로 사용자에게 새 업데이트를 전달하는 메커니즘을 제공합니다.
+description: 타사 개발자는 WNS(Windows 푸시 알림 서비스)를 사용하여 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. WNS는 에너지 효율적이며 신뢰할 수 있는 방법으로 사용자에게 새 업데이트를 전달하는 메커니즘을 제공합니다.
 title: WNS(Windows 푸시 알림 서비스) 개요
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
@@ -7,18 +7,18 @@ ms.date: 03/06/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 98248aff8f16305b9fa335d4c77ca1a03bc46686
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bd910c42743577a83491386f5c667dd09722ba9b
+ms.sourcegitcommit: 8171695ade04a762f19723f0b88e46e407375800
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156747"
+ms.lasthandoff: 09/05/2020
+ms.locfileid: "89494379"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요 
 
 WNS (Windows Push Notification Services)를 사용 하면 타사 개발자가 자신의 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. WNS는 에너지 효율적이며 신뢰할 수 있는 방법으로 사용자에게 새 업데이트를 전달하는 메커니즘을 제공합니다.
 
-## <a name="how-it-works"></a>작동 방법
+## <a name="how-it-works"></a>작동 방식
 
 다음 다이어그램은 푸시 알림을 보내기 위한 전체 데이터 흐름을 보여 줍니다. 여기에는 다음 단계가 포함 됩니다.
 
@@ -184,7 +184,6 @@ WNS는 클라우드 서비스를 인증 하 고, 성공 하면 "200 OK" 응답�
 
 ## <a name="expiration-of-tile-and-badge-notifications"></a>타일 및 배지 알림 만료
 
-
 기본적으로 타일 및 배지 알림은 다운로드 된 후 3 일 후에 만료 됩니다. 알림이 만료 되 면 타일 또는 큐에서 콘텐츠가 제거 되 고 사용자에 게 더 이상 표시 되지 않습니다. 타일 콘텐츠가 관련 된 것 보다 오래 지속 되지 않도록 모든 타일 및 배지 알림에서 만료 (앱에 맞는 시간 사용)를 설정 하는 것이 가장 좋습니다. 지정 된 수명의 콘텐츠에는 명시적 만료 시간이 필요 합니다. 이를 통해 클라우드 서비스에서 알림 전송을 중지 하거나 오랫동안 네트워크에서 연결을 끊는 경우에도 오래 된 콘텐츠가 제거 됩니다.
 
 클라우드 서비스는 수신 된 후 알림이 유효한 상태로 유지 되는 시간 (초)을 지정 하 여 각 알림에 대해 만료를 설정할 수 있습니다. 자세한 내용은 [푸시 알림 서비스 요청 및 응답 헤더](/previous-versions/windows/apps/hh465435(v=win.10))를 참조 하세요.
@@ -192,7 +191,6 @@ WNS는 클라우드 서비스를 인증 하 고, 성공 하면 "200 OK" 응답�
 예를 들어, 재고 시장의 활성 거래 시간 동안 주가 업데이트에 대 한 만료를 전송 간격의 두 배 (예: 1 시간 마다 알림을 보내는 경우 1 시간 후)로 설정할 수 있습니다. 또 다른 예로, 뉴스 앱은 일일 뉴스 타일 업데이트에 대해 하루에 적절 한 만료 시간을 결정할 수 있습니다.
 
 ## <a name="push-notifications-and-battery-saver"></a>푸시 알림 및 배터리 절약
-
 
 배터리 절약 장치에서 백그라운드 작업을 제한 하 여 배터리 수명을 연장 합니다. Windows 10에서는 배터리가 지정 된 임계값 아래로 떨어지면 사용자가 배터리 보호기를 자동으로 켤 수 있습니다. 배터리 절약이 켜져 있으면 에너지를 절약 하기 위해 푸시 알림 수신이 사용 하지 않도록 설정 됩니다. 그러나이에 대 한 몇 가지 예외가 있습니다. 다음 Windows 10 배터리 보호기 설정 ( **설정** 앱에 있음)을 사용 하면 배터리 절약 모드가 설정 된 경우에도 앱이 푸시 알림을 받을 수 있습니다.
 
@@ -206,11 +204,9 @@ WNS는 클라우드 서비스를 인증 하 고, 성공 하면 "200 OK" 응답�
 > [!TIP]
 > 사용자에 게 배터리 절약 시간 설정을 알리는 경우 나중에 메시지를 표시 하지 않도록 하는 방법을 제공 하는 것이 좋습니다. 예를 들어 `dontAskMeAgainBox` 다음 예제의 확인란은 [**LocalSettings**](/uwp/api/Windows.Storage.ApplicationData.LocalSettings)에서 사용자의 기본 설정을 유지 합니다.
 
- 
+다음은 Windows 10에서 배터리 절약이 켜져 있는지 여부를 확인 하는 방법의 예입니다. 이 예제에서는 사용자에 게 알리고 설정 앱을 **배터리 절약 설정**으로 시작 합니다. 를 `dontAskAgainSetting` 사용 하면 사용자가 메시지를 다시 표시 하지 않으려면 메시지를 표시 하지 않을 수 있습니다.
 
-Windows 10에서 배터리 절약이 켜져 있는지 확인 하는 방법의 예는 다음과 같습니다. 이 예제에서는 사용자에 게 알리고 설정 앱을 **배터리 절약 설정**으로 시작 합니다. 를 `dontAskAgainSetting` 사용 하면 사용자가 메시지를 다시 표시 하지 않으려면 메시지를 표시 하지 않을 수 있습니다.
-
-```cs
+```csharp
 using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -255,6 +251,62 @@ async public void CheckForEnergySaving()
 }
 ```
 
+```cppwinrt
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Storage.h>
+#include <winrt/Windows.System.h>
+#include <winrt/Windows.System.Power.h>
+#include <winrt/Windows.UI.Xaml.h>
+#include <winrt/Windows.UI.Xaml.Controls.h>
+#include <winrt/Windows.UI.Xaml.Navigation.h>
+using namespace winrt;
+using namespace winrt::Windows::Foundation;
+using namespace winrt::Windows::Storage;
+using namespace winrt::Windows::System;
+using namespace winrt::Windows::System::Power;
+using namespace winrt::Windows::UI::Xaml;
+using namespace winrt::Windows::UI::Xaml::Controls;
+using namespace winrt::Windows::UI::Xaml::Navigation;
+...
+winrt::fire_and_forget CheckForEnergySaving()
+{
+    // Get reminder preference from LocalSettings.
+    bool dontAskAgain{ false };
+    auto localSettings = ApplicationData::Current().LocalSettings();
+    IInspectable dontAskSetting = localSettings.Values().Lookup(L"dontAskAgainSetting");
+    if (!dontAskSetting)
+    {
+        // Setting doesn't exist.
+        dontAskAgain = false;
+    }
+    else
+    {
+        // Retrieve setting value
+        dontAskAgain = winrt::unbox_value<bool>(dontAskSetting);
+    }
+
+    // Check whether battery saver is on, and whether it's okay to raise dialog.
+    if ((PowerManager::EnergySaverStatus() == EnergySaverStatus::On) && (!dontAskAgain))
+    {
+        // Check dialog results.
+        ContentDialogResult dialogResult = co_await saveEnergyDialog().ShowAsync();
+        if (dialogResult == ContentDialogResult::Primary)
+        {
+            // Launch battery saver settings
+            // (settings are available only when a battery is present).
+            co_await Launcher::LaunchUriAsync(Uri(L"ms-settings:batterysaver-settings"));
+        }
+
+        // Save reminder preference.
+        if (dontAskAgainBox().IsChecked())
+        {
+            // Don't raise the dialog again.
+            localSettings.Values().Insert(L"dontAskAgainSetting", winrt::box_value(true));
+        }
+    }
+}
+```
+
 이 예제에서 제공 되는 [**Contentdialog**](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog) 의 XAML입니다.
 
 ```xaml
@@ -277,7 +329,6 @@ async public void CheckForEnergySaving()
 
 ## <a name="related-topics"></a>관련 항목
 
-
 * [로컬 타일 알림 보내기](sending-a-local-tile-notification.md)
 * [빠른 시작: 푸시 알림 보내기](/previous-versions/windows/apps/hh868252(v=win.10))
 * [푸시 알림을 통해 배지를 업데이트 하는 방법](/previous-versions/windows/apps/hh465450(v=win.10))
@@ -287,6 +338,3 @@ async public void CheckForEnergySaving()
 * [푸시 알림 서비스 요청 및 응답 헤더](/previous-versions/windows/apps/hh465435(v=win.10))
 * [푸시 알림에 대 한 지침 및 검사 목록]()
 * [원시 알림](/previous-versions/windows/apps/hh761488(v=win.10))
- 
-
- 
