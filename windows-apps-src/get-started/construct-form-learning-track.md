@@ -1,17 +1,17 @@
 ---
 title: 학습 트랙 - 양식 생성 및 구성
-description: 앱에서 강력한 양식을 만들기 위해 필요한 것에 대해 알아봅니다.
+description: 유니버설 Windows 플랫폼(UWP) 앱에서 상당한 양의 정보에 대한 입력을 처리하기 위해 강력한 양식을 생성하고 구성하는 방법에 대해 알아봅니다.
 ms.date: 05/07/2018
 ms.topic: article
 keywords: 시작, uwp, windows 10, 학습 트랙, 레이아웃, 양식
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 02cb15d948bf35b1c449bb430c9c31dd33d9eec6
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: a674514bfeb2acbc545e59cf1b3fc6e59d697215
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79543976"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304525"
 ---
 # <a name="create-and-customize-a-form"></a>양식 만들기 및 사용자 지정
 
@@ -51,7 +51,7 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 * [ToggleSwitch](../design/controls-and-patterns/toggles.md)는 사용자가 두 가지 옵션 중에서 선택할 수 있도록 합니다.
 * [DatePicker](../design/controls-and-patterns/date-picker.md)는 날짜 값을 선택할 수 있도록 합니다.
 * [TimePicker](../design/controls-and-patterns/time-picker.md)는 시간 값을 선택할 수 있도록 합니다.
-* [ComboBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)는 선택할 수 있는 항목의 목록을 표시하도록 확장합니다. [여기](../design/controls-and-patterns/combo-box.md)에서 자세한 내용을 알아볼 수 있습니다.
+* [ComboBox](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)는 선택할 수 있는 항목의 목록을 표시하도록 확장합니다. [여기](../design/controls-and-patterns/combo-box.md)에서 자세한 내용을 알아볼 수 있습니다.
 
 사용자가 저장하거나 취소할 수 있도록 [단추](../design/controls-and-patterns/buttons.md)를 추가하려고 할 수도 있습니다.
 
@@ -155,10 +155,10 @@ UWP는 앱에 추가하고 구성할 수 있는 명시적 양식 컨트롤이 �
 | API | 설명 |
 |------|---------------|
 | [양식에 유용한 컨트롤](../design/controls-and-patterns/forms.md#input-controls) | 양식을 만드는 데 유용한 입력 컨트롤 목록과 이 컨트롤을 어디에 사용할지에 대한 기본 지침입니다. |
-| [그리드](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Grid) | 다중 행/열 레이아웃의 요소를 배열하는 패널입니다. |
-| [RelativePanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) | 다른 요소 및 패널의 경계와 관련하여 항목을 배열하는 패널입니다. |
-| [StackPanel](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.StackPanel) | 하나의 가로줄이나 세로줄로 요소를 배열하는 패널입니다. |
-| [VisualState](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.VisualState) | 특정 상태일 때 UI 요소의 모양을 설정할 수 있습니다. |
+| [그리드](/uwp/api/Windows.UI.Xaml.Controls.Grid) | 다중 행/열 레이아웃의 요소를 배열하는 패널입니다. |
+| [RelativePanel](/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) | 다른 요소 및 패널의 경계와 관련하여 항목을 배열하는 패널입니다. |
+| [StackPanel](/uwp/api/Windows.UI.Xaml.Controls.StackPanel) | 하나의 가로줄이나 세로줄로 요소를 배열하는 패널입니다. |
+| [VisualState](/uwp/api/Windows.UI.Xaml.VisualState) | 특정 상태일 때 UI 요소의 모양을 설정할 수 있습니다. |
 
 ### <a name="useful-docs"></a>유용한 문서
 

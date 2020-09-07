@@ -1,16 +1,16 @@
 ---
 title: UWP 앱에서 SQLite 데이터베이스 사용
-description: UWP 앱에서 SQLite 데이터베이스를 사용합니다.
+description: UWP 앱에서 SQLite 데이터베이스를 사용하여 사용자 디바이스의 경량 데이터베이스에 데이터를 저장하고 검색하는 방법을 알아봅니다.
 ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp, SQLite, 데이터베이스
 ms.localizationpriority: medium
-ms.openlocfilehash: 0db89408d5bc0af8b9101768a6498e70f9be6147
-ms.sourcegitcommit: e1104689fc1db5afb85701205c2580663522ee6d
+ms.openlocfilehash: 15a6cd4313a13abfa7897de62c80024a09ad1f71
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86997940"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154537"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>UWP 앱에서 SQLite 데이터베이스 사용
 SQLite를 사용하여 사용자의 디바이스에 있는 경량 데이터베이스에 데이터를 저장하고 검색할 수 있습니다. 이 가이드에서는 그 방법을 보여줍니다.
@@ -35,11 +35,11 @@ Microsoft가 빌드한 Entity Framework Core 또는 오픈 소스인 [SQLite 라
 
 EF(Entity Framework)는 도메인별 개체를 사용하여 관계형 데이터로 작업할 수 있는 개체 관계형 매퍼입니다. 다른 .NET 앱의 데이터에 이 프레임워크를 이미 사용하고 있다면, 코드를 UWP 앱으로 마이그레이션할 수 있습니다. 그러면 연결 문자열이 적절히 변경되어 작동합니다.
 
-자세한 내용은 [UWP(유니버설 Windows 플랫폼)에서 EF Core를 새 데이터베이스로 시작하기](https://docs.microsoft.com/ef/core/get-started/uwp/getting-started)를 참조하세요.
+자세한 내용은 [UWP(유니버설 Windows 플랫폼)에서 EF Core를 새 데이터베이스로 시작하기](/ef/core/get-started/uwp/getting-started)를 참조하세요.
 
 ### <a name="sqlite-library"></a>SQLite 라이브러리
 
-[Microsoft.Data.Sqlite](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0) 라이브러리는 [System.Data.Common](https://docs.microsoft.com/dotnet/api/system.data.common) 네임스페이스에 인터페이스를 구현합니다. Microsoft는 이러한 구현 방식을 적극적으로 유지하고 있으며, 이 방식은 저수준 기본 SQLite API와 관련된 직관적인 래퍼를 제공합니다.
+[Microsoft.Data.Sqlite](/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0) 라이브러리는 [System.Data.Common](/dotnet/api/system.data.common) 네임스페이스에 인터페이스를 구현합니다. Microsoft는 이러한 구현 방식을 적극적으로 유지하고 있으며, 이 방식은 저수준 기본 SQLite API와 관련된 직관적인 래퍼를 제공합니다.
 
 이 가이드의 나머지 부분에서는 이 라이브러리의 사용 방법을 안내합니다.
 
@@ -75,7 +75,7 @@ Visual Studio 2015를 사용하고 있다면 **설치된 항목** 탭을 선택�
 
 ![SQLite 패키지](images/sqlite-package.png)
 
-이 가이드의 [SQLite 데이터베이스에서 데이터를 추가 및 검색](/windows/uwp/data-access/sqlite-databases#add-and-retrieve-data-in-a-sqlite-database)으로 이동합니다.
+이 가이드의 [SQLite 데이터베이스에서 데이터를 추가 및 검색](#add-and-retrieve-data-in-a-sqlite-database)으로 이동합니다.
 
 ### <a name="the-minimum-version-of-your-project-targets-the-fall-creators-update"></a>프로젝트 최소 버전의 대상이 Fall Creators Update인 경우
 
@@ -200,7 +200,7 @@ public async static void InitializeDatabase()
 
 이 코드는 SQLite 데이터베이스를 만들어서 애플리케이션의 로컬 데이터 저장소에 저장합니다.
 
-이 예에서는 데이터베이스 이름을 ``sqlliteSample.db``로 지정했지만, 인스턴스화하는 모든 [SqliteConnection](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqliteconnection?view=msdata-sqlite-2.0.0) 개체에서 사용하기만 한다면 어떤 이름이든 상관 없습니다.
+이 예에서는 데이터베이스 이름을 ``sqlliteSample.db``로 지정했지만, 인스턴스화하는 모든 [SqliteConnection](/dotnet/api/microsoft.data.sqlite.sqliteconnection?view=msdata-sqlite-2.0.0) 개체에서 사용하기만 한다면 어떤 이름이든 상관 없습니다.
 
 UWP 프로젝트의 **App.xaml.cs** 파일 생성자에서 **DataAccess** 클래스의 ``InitializeDatabase`` 메서드를 호출합니다.
 
@@ -277,9 +277,9 @@ public static List<String> GetData()
 }
 ```
 
-[Read](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqlitedatareader.read?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_Read) 메서드는 반환된 데이터 행을 통과합니다. 남겨진 행이 있으면 **true**를, 없으면 **false**를 반환합니다.
+[Read](/dotnet/api/microsoft.data.sqlite.sqlitedatareader.read?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_Read) 메서드는 반환된 데이터 행을 통과합니다. 남겨진 행이 있으면 **true**를, 없으면 **false**를 반환합니다.
 
-[GetString](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getstring?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetString_System_Int32_) 메서드는 특정 열의 값을 문자열로 반환합니다. 원하는 데이터의 0부터 시작하는 열 서수를 나타내는 정수 값을 수락합니다. [GetDataTime](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getdatetime?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetDateTime_System_Int32_) 및 [GetBoolean](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getboolean?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetBoolean_System_Int32_) 같이 유사한 메서드를 사용할 수도 있습니다. 열에 포함된 데이터 유형에 따라 메서드를 선택합니다.
+[GetString](/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getstring?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetString_System_Int32_) 메서드는 특정 열의 값을 문자열로 반환합니다. 원하는 데이터의 0부터 시작하는 열 서수를 나타내는 정수 값을 수락합니다. [GetDataTime](/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getdatetime?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetDateTime_System_Int32_) 및 [GetBoolean](/dotnet/api/microsoft.data.sqlite.sqlitedatareader.getboolean?view=msdata-sqlite-2.0.0#Microsoft_Data_Sqlite_SqliteDataReader_GetBoolean_System_Int32_) 같이 유사한 메서드를 사용할 수도 있습니다. 열에 포함된 데이터 유형에 따라 메서드를 선택합니다.
 
 이 예에서는 한 열에서 모든 항목을 선택하기 때문에 서수 매개 변수가 중요하지 않습니다. 하지만 여러 열이 쿼리에 사용되는 경우 데이터를 가져올 열을 획득하려면 서수 값을 사용해야 합니다.
 
@@ -316,7 +316,7 @@ private void AddData(object sender, RoutedEventArgs e)
 }
 ```
 
-이제 끝났습니다! [Microsoft.Data.Sqlite](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0)를 살펴보면서 SQLite 데이터베이스로 또 무엇을 할 수 있는지 알아보세요. 아래 링크를 통해 UWP 앱에서 데이터를 활용하는 다른 방법을 알아보세요.
+이제 끝났습니다! [Microsoft.Data.Sqlite](/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-2.0.0)를 살펴보면서 SQLite 데이터베이스로 또 무엇을 할 수 있는지 알아보세요. 아래 링크를 통해 UWP 앱에서 데이터를 활용하는 다른 방법을 알아보세요.
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -326,7 +326,7 @@ private void AddData(object sender, RoutedEventArgs e)
 
 **여러 플랫폼의 여러 앱 간에 코드 공유**
 
-[데스크톱과 UWP 간에 코드 공유](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate)를 참조하세요.
+[데스크톱과 UWP 간에 코드 공유](../porting/desktop-to-uwp-migrate.md)를 참조하세요.
 
 **Azure SQL 백 엔드로 마스터 세부 정보 페이지 추가**
 

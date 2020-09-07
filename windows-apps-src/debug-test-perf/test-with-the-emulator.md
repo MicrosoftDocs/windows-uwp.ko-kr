@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b38cf60f1f890649af33ad34f244bc348af2832
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: a837dc025023d529d9090fade401726a670c7561
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82148699"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166197"
 ---
 # <a name="test-with-the-microsoft-emulator-for-windows-10-mobile"></a>Windows 10 Mobile용 Microsoft 에뮬레이터로 테스트
 
@@ -41,7 +41,7 @@ RAM
 -   64비트
 -   Pro 버전 이상
 
-BIOS 요구 사항을 확인하려면 [Windows Phone 8용 에뮬레이터에 Hyper-V를 사용하는 방법](https://docs.microsoft.com/previous-versions/windows/apps/jj863509(v=vs.105))을 참조하세요.
+BIOS 요구 사항을 확인하려면 [Windows Phone 8용 에뮬레이터에 Hyper-V를 사용하는 방법](/previous-versions/windows/apps/jj863509(v=vs.105))을 참조하세요.
 
 RAM 및 운영 체제 요구 사항을 확인하려면 제어판에서 **시스템 및 보안**을 선택한 다음, **시스템**을 선택합니다.
 
@@ -215,7 +215,7 @@ NFC 탭은 다음의 세 가지 모드를 지원합니다.
 -   NDEF:URI
 -   NDEF:wkt.U
 
-파일에서 **페이로드** 창을 편집하거나 제공하여 이러한 메시지를 만들 수 있습니다. 이러한 유형 및 그 사용 방법에 대한 자세한 내용은 [**ProximityDevice.PublishBinaryMessage**](https://docs.microsoft.com/uwp/api/windows.networking.proximity.proximitydevice.publishbinarymessage) 참조 페이지의 설명 섹션을 참조하세요.
+파일에서 **페이로드** 창을 편집하거나 제공하여 이러한 메시지를 만들 수 있습니다. 이러한 유형 및 그 사용 방법에 대한 자세한 내용은 [**ProximityDevice.PublishBinaryMessage**](/uwp/api/windows.networking.proximity.proximitydevice.publishbinarymessage) 참조 페이지의 설명 섹션을 참조하세요.
 
 WDK(Windows 8 드라이버 키트)에는 Windows Phone 8 에뮬레이터와 동일한 프로토콜을 표시하는 드라이버 샘플이 포함되어 있습니다. Windows 8 디바이스에 DDK를 다운로드하고 해당 샘플 드라이버를 빌드하고 설치한 후 Windows 8 디바이스의 IP 주소 또는 호스트 이름을 디바이스 목록에 추가하고 다른 Windows 8 디바이스 또는 Windows Phone 8 에뮬레이터와 함께 탭해야 합니다.
 
@@ -268,7 +268,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 
 ### <a name="smart-card-reader-mode"></a>스마트 카드 판독기 모드
 
-에뮬레이터를 호스트 컴퓨터의 스마트 카드 판독기 디바이스에 연결할 수 있습니다. 이렇게 스마트 카드를 삽입하거나 탭하면 휴대폰 응용 프로그램에 표시되고 [**Windows.Devices.SmartCards.SmartCardConnection**](https://docs.microsoft.com/uwp/api/Windows.Devices.SmartCards.SmartCardConnection) 클래스를 사용하여 APDU와 통신할 수 있습니다. 이렇게 하려면 호환되는 스마트 카드 판독기 디바이스를 컴퓨터에 연결해야 합니다. USB 스마트 카드 판독기(NFC/비접촉 및 삽입/접촉)는 폭넓게 사용할 수 있습니다. 에뮬레이터가 연결된 스마트 카드 판독기를 작동하려면 먼저 **카드 판독기** 모드를 선택하여 호스트 시스템에 연결된 호환되는 모든 스마트 카드 판독기를 나열하는 드롭다운 상자를 표시한 다음 드롭다운 메뉴에서 연결할 스마트 카드 판독기 디바이스를 선택합니다.
+에뮬레이터를 호스트 컴퓨터의 스마트 카드 판독기 디바이스에 연결할 수 있습니다. 이렇게 스마트 카드를 삽입하거나 탭하면 휴대폰 응용 프로그램에 표시되고 [**Windows.Devices.SmartCards.SmartCardConnection**](/uwp/api/Windows.Devices.SmartCards.SmartCardConnection) 클래스를 사용하여 APDU와 통신할 수 있습니다. 이렇게 하려면 호환되는 스마트 카드 판독기 디바이스를 컴퓨터에 연결해야 합니다. USB 스마트 카드 판독기(NFC/비접촉 및 삽입/접촉)는 폭넓게 사용할 수 있습니다. 에뮬레이터가 연결된 스마트 카드 판독기를 작동하려면 먼저 **카드 판독기** 모드를 선택하여 호스트 시스템에 연결된 호환되는 모든 스마트 카드 판독기를 나열하는 드롭다운 상자를 표시한 다음 드롭다운 메뉴에서 연결할 스마트 카드 판독기 디바이스를 선택합니다.
 
 일부 NFC 지원 스마트 카드 판독기는 몇 가지 NFC 카드 유형을 지원하지 않으며 일부는 표준 PC/SC 스토리지 카드 APDU 명령을 지원하지 않습니다.
 
@@ -319,7 +319,7 @@ HCE 지원 및 Windows 10 Mobile K에서 HCE 앱을 개발하는 방법에 대�
 
 여러 다른 정확도 프로필을 사용하여 서로 다른 속도로 한 위치에서 다른 위치로의 이동을 시뮬레이트하는 동안 앱을 테스트할 수 있습니다. 위치 시뮬레이터를 사용하면 위치 API 사용의 변화를 알 수 있으므로 사용자 환경이 향상됩니다. 예를 들어, 이 도구를 사용하면 여러 다른 시나리오에서 성공적으로 지오펜스를 검색하기 위해 크기 또는 체류 시간과 같은 지오펜스 매개 변수를 조정해야 하는지를 알 수 있습니다.
 
-**위치** 탭은 세 가지 모드를 지원합니다. 모든 모드에서 에뮬레이터가 새 위치를 받으면 [**PositionChanged**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.positionchanged) 이벤트를 트리거하거나 위치 인식 앱에서 [**GetGeopositionAsync**](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geolocator.getgeopositionasync) 호출에 응답하는 데 이 위치를 사용할 수 있습니다.
+**위치** 탭은 세 가지 모드를 지원합니다. 모든 모드에서 에뮬레이터가 새 위치를 받으면 [**PositionChanged**](/uwp/api/windows.devices.geolocation.geolocator.positionchanged) 이벤트를 트리거하거나 위치 인식 앱에서 [**GetGeopositionAsync**](/uwp/api/windows.devices.geolocation.geolocator.getgeopositionasync) 호출에 응답하는 데 이 위치를 사용할 수 있습니다.
 
 -   **핀** 모드에서 지도에 고정핀을 둡니다. **모든 지점 재생**을 클릭하면 위치 시뮬레이터가 **핀당 초** 텍스트 상자에 지정된 간격으로 각 핀의 위치를 에뮬레이터에 차례대로 보냅니다.
 
@@ -660,7 +660,6 @@ Windows 10 도구를 사용하여 작업을 시작할 때 해답을 찾아 문�
 
 ## <a name="related-topics"></a>관련 항목
 
-* [에뮬레이터에서 Windows Phone 앱 실행](https://docs.microsoft.com/visualstudio/debugger/run-windows-phone-apps-in-the-emulator?view=vs-2015)
+* [에뮬레이터에서 Windows Phone 앱 실행](/visualstudio/debugger/run-windows-phone-apps-in-the-emulator?view=vs-2015)
 * [Windows 및 Windows Phone SDK 아카이브](https://developer.microsoft.com/windows/downloads/sdk-archive)
  
-

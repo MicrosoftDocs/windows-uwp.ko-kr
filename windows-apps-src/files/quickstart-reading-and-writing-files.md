@@ -1,7 +1,7 @@
 ---
 ms.assetid: 27914C0A-2A02-473F-BDD5-C931E3943AA0
 title: 파일 만들기, 쓰기 및 읽기
-description: StorageFile 개체를 사용하여 파일을 읽고 씁니다.
+description: UWP(유니버설 Windows 플랫폼) 개체 FileIO, StorageFolder 및 StorageFile을 사용하여 파일을 만들고, 쓰고, 읽는 방법을 알아봅니다.
 ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -11,12 +11,12 @@ dev_langs:
 - cppwinrt
 - cpp
 - vb
-ms.openlocfilehash: 0dbe5e2f1cc32a3d1b52572f71fba7547af99f17
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 89bdd0793c7af26ccd56bc2494ab6d60a6574df0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "74258571"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168387"
 ---
 # <a name="create-write-and-read-a-file"></a>파일 만들기, 쓰기 및 읽기
 
@@ -35,7 +35,7 @@ ms.locfileid: "74258571"
 
 -   **UWP(유니버설 Windows 플랫폼) 앱에 대한 비동기 프로그래밍 이해**
 
-    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](/windows/uwp/threading-async/call-asynchronous-apis-in-csharp-or-visual-basic)을 참조하세요. C++/WinRT에서 비동기 앱을 작성하는 방법을 알아보려면 [C++/WinRT로 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency)을 참조하세요. C++/CX에서 비동기 앱을 작성하는 방법은 [C++/CX의 비동기 프로그래밍](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)을 참조하세요.
+    C# 또는 Visual Basic에서 비동기 앱을 작성하는 방법에 대한 자세한 내용은 [C# 또는 Visual Basic에서 비동기식 API 호출](../threading-async/call-asynchronous-apis-in-csharp-or-visual-basic.md)을 참조하세요. C++/WinRT에서 비동기 앱을 작성하는 방법을 알아보려면 [C++/WinRT로 동시성 및 비동기 작업](../cpp-and-winrt-apis/concurrency.md)을 참조하세요. C++/CX에서 비동기 앱을 작성하는 방법은 [C++/CX의 비동기 프로그래밍](../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md)을 참조하세요.
 
 -   **읽거나, 쓰거나, 읽고 쓸 파일을 가져오는 방법에 대해 알아봅니다.**
 
@@ -254,7 +254,7 @@ Await Windows.Storage.FileIO.WriteTextAsync(sampleFile, "Swift as a shadow")
     Dim stream = Await sampleFile.OpenAsync(Windows.Storage.FileAccessMode.ReadWrite)
     ```
 
-2.  다음으로, `stream`에서 [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) 메서드를 호출하여 출력 스트림을 가져옵니다. C#을 사용하는 경우 **using** 문에 이 스트림을 묶어 출력 스트림의 수명을 관리합니다. [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)를 사용하는 경우 블록에서 묶거나 완료되면 `nullptr`로 설정하여 수명을 제어할 수 있습니다.
+2.  다음으로, `stream`에서 [**IRandomAccessStream.GetOutputStreamAt**](/uwp/api/windows.storage.streams.irandomaccessstream.getoutputstreamat) 메서드를 호출하여 출력 스트림을 가져옵니다. C#을 사용하는 경우 **using** 문에 이 스트림을 묶어 출력 스트림의 수명을 관리합니다. [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 경우 블록에서 묶거나 완료되면 `nullptr`로 설정하여 수명을 제어할 수 있습니다.
 
     ```csharp
     using (var outputStream = stream.GetOutputStreamAt(0))

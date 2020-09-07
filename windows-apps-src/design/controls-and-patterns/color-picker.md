@@ -1,5 +1,5 @@
 ---
-Description: 색 선택을 사용하면 색을 찾아보고 선택할 수 있습니다.
+description: 색 선택기를 사용하여 사용자가 색을 찾아보거나 선택하거나 RGB, HSV 또는 16진수 형식으로 색을 지정하도록 하는 방법을 알아봅니다.
 title: 색 선택
 label: Color Picker
 template: detail.hbs
@@ -11,12 +11,12 @@ design-contact: ksulliv
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6e7661beb52438640c570e1a5ec4d7f60502e119
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: c6739263917ab48040a2780a750948215d8d6361
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968908"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173517"
 ---
 # <a name="color-picker"></a>색 선택기
 
@@ -28,7 +28,7 @@ ms.locfileid: "82968908"
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **ColorPicker** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **ColorPicker** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
 
 > **Windows UI 라이브러리 API:** [ColorPicker 클래스](/uwp/api/microsoft.ui.xaml.controls.colorpicker), [Color 속성](/uwp/api/microsoft.ui.xaml.controls.colorpicker.Color), [ColorChanged 이벤트](/uwp/api/microsoft.ui.xaml.controls.colorpicker.ColorChanged)
 >
@@ -64,7 +64,7 @@ ms.locfileid: "82968908"
 <ColorPicker x:Name="myColorPicker"/>
 ```
 
-기본적으로 색 선택은 색 스펙트럼 옆의 사각형 표시줄에 선택한 색의 미리 보기를 보여줍니다. [ColorChanged](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged) 이벤트나 [Color](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.Color) 속성을 사용하여 선택한 색에 액세스하고 앱에 사용할 수 있습니다. 자세한 코드는 다음 예제를 참조하세요.
+기본적으로 색 선택은 색 스펙트럼 옆의 사각형 표시줄에 선택한 색의 미리 보기를 보여줍니다. [ColorChanged](/uwp/api/windows.ui.xaml.controls.colorpicker.ColorChanged) 이벤트나 [Color](/uwp/api/windows.ui.xaml.controls.colorpicker.Color) 속성을 사용하여 선택한 색에 액세스하고 앱에 사용할 수 있습니다. 자세한 코드는 다음 예제를 참조하세요.
 
 ### <a name="bind-to-the-chosen-color"></a>선택한 색에 바인딩
 
@@ -155,7 +155,7 @@ private void cancelColor_Click(object sender, RoutedEventArgs e)
 
 #### <a name="show-the-circle-spectrum"></a>원 스펙트럼 표시
 
-이 예제에서는 [ColorSpectrumShape](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker.ColorSpectrumShape) 속성을 사용하여 기본 사각형 대신 원 스펙트럼을 사용하도록 색 선택을 구성하는 방법을 보여줍니다.
+이 예제에서는 [ColorSpectrumShape](/uwp/api/windows.ui.xaml.controls.colorpicker.ColorSpectrumShape) 속성을 사용하여 기본 사각형 대신 원 스펙트럼을 사용하도록 색 선택을 구성하는 방법을 보여줍니다.
 
 ```xaml
 <ColorPicker x:Name="myColorPicker"

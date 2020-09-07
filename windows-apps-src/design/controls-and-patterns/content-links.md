@@ -1,6 +1,6 @@
 ---
-Description: 콘텐츠 링크를 사용하여 텍스트 컨트롤에 풍부한 데이터를 포함하세요.
 title: 텍스트 컨트롤의 콘텐츠 링크
+description: 콘텐츠 링크를 사용하여 TextBlock, RichTextBlock 및 RichEditBox 컨트롤에 다양한 데이터를 포함하는 방법을 알아봅니다.
 label: Content links
 template: detail.hbs
 ms.date: 03/07/2018
@@ -10,12 +10,12 @@ pm-contact: miguelrb
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: b72d7fced63a4c3ef4b1b233afcbb9f9874d9a3f
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 8a35e065a44eb55b84f6b70f5833c8652188a8c9
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68796721"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174647"
 ---
 # <a name="content-links-in-text-controls"></a>텍스트 컨트롤의 콘텐츠 링크
 
@@ -162,7 +162,7 @@ Uri 속성은 하이퍼링크의 NavigateUri 속성과 상당 부분 비슷하�
 - LinkContentKind가 "피플"이 아니면 **피플** 앱이 열립니다. 예를 들어 ContentLinkChanged 이벤트 처리기에서 LinkContentKind를 수정한 경우에 이런 일이 발생할 수 있습니다.
 
 > [!TIP]
-> 앱에서 다른 앱이나 웹 사이트를 여는 방법은 [URI를 사용하여 앱 실행](/windows/uwp/launch-resume/launch-app-with-uri)의 토픽을 참조하세요.
+> 앱에서 다른 앱이나 웹 사이트를 여는 방법은 [URI를 사용하여 앱 실행](../../launch-resume/launch-app-with-uri.md)의 토픽을 참조하세요.
 
 #### <a name="invoked"></a>호출됨
 
@@ -303,7 +303,7 @@ private void Button_Click(object sender, RoutedEventArgs e)
 ```
 
 > [!TIP]
-> 텍스트 컨트롤에서 XAML의 다른 텍스트 요소와 함께 ContentLink를 사용할 때는 [Span](https://docs.microsoft.com/uwp/api/windows.ui.xaml.documents.span) 컨테이너에 콘텐츠를 배치하고 `xml:space="preserve"` 속성을 Span에 적용하여 ContentLink와 기타 요소 간에 공백을 유지합니다.
+> 텍스트 컨트롤에서 XAML의 다른 텍스트 요소와 함께 ContentLink를 사용할 때는 [Span](/uwp/api/windows.ui.xaml.documents.span) 컨테이너에 콘텐츠를 배치하고 `xml:space="preserve"` 속성을 Span에 적용하여 ContentLink와 기타 요소 간에 공백을 유지합니다.
 
 ## <a name="examples"></a>예
 

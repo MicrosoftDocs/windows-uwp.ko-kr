@@ -5,12 +5,12 @@ ms.date: 05/17/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b947d0b6cc83dc6bca45efb7103a933e79972e3b
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: bb676ba5dbb92b1aa6dfb8888da90a8528e2dfa1
+ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "67317456"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89412037"
 ---
 # <a name="version-adaptive-apps-use-new-apis-while-maintaining-compatibility-with-previous-versions"></a>버전 적응 앱: 이전 버전과 호환성을 유지하면서 새로운 API 사용
 
@@ -65,7 +65,7 @@ Visual Studio에서 이미 만들어진 프로젝트에 대한 최소 및 대상
 
 ## <a name="perform-api-checks"></a>API 검사 수행
 
-버전 적응 앱의 핵심은 API 계약과 [ApiInformation](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation) 클래스의 조합입니다. 이 클래스를 사용하여 지정된 API 계약, 유형 또는 구성원이 있는지 감지할 수 있으므로, 다양한 디바이스와 OS 버전 사이에서 안전하게 API를 호출할 수 있습니다.
+버전 적응 앱의 핵심은 API 계약과 [ApiInformation](/uwp/api/windows.foundation.metadata.apiinformation) 클래스의 조합입니다. 이 클래스를 사용하여 지정된 API 계약, 유형 또는 구성원이 있는지 감지할 수 있으므로, 다양한 디바이스와 OS 버전 사이에서 안전하게 API를 호출할 수 있습니다.
 
 ### <a name="api-contracts"></a>API 계약
 
@@ -81,7 +81,7 @@ API 계약이란? 기본적으로 API 계약은 일종의 기능으로, 특정�
 
 논리적으로 관련된 유형은 API 계약으로 그룹화됩니다. 그리고 Windows 10부터 모든 Windows 런타임 API는 일부 API 계약의 멤버입니다. API 계약을 사용하여 디바이스에서 특정 기능 또는 API를 사용할 수 있는지 확인하여 특정 디바이스나 OS 대신에 디바이스 기능을 효과적으로 확인할 수 있습니다. API 계약의 API 중 하나를 구현하려면 API 계약의 모든 API를 구현하는 플랫폼이 필요합니다. 즉, 실행 중인 OS가 특정 API 계약을 지원하는지 테스트할 수 있으며, 지원한다면 각 API를 확인하지 않고 API 계약의 모든 API를 호출할 수 있습니다.
 
-가장 크고 자주 사용되는 API 계약은 **Windows.Foundation.UniversalApiContract**입니다. 여기에는 유니버설 Windows 플랫폼의 API가 대부분 포함되어 있습니다. 사용할 수 있는 다양한 API 계약은 [디바이스 패밀리 확장 SDK 및 API 계약](https://docs.microsoft.com/uwp/extension-sdks/) 문서에서 확인할 수 있습니다. 대부분의 API 계약은 기능적으로 관련된 API 세트입니다.
+가장 크고 자주 사용되는 API 계약은 **Windows.Foundation.UniversalApiContract**입니다. 여기에는 유니버설 Windows 플랫폼의 API가 대부분 포함되어 있습니다. 사용할 수 있는 다양한 API 계약은 [디바이스 패밀리 확장 SDK 및 API 계약](/uwp/extension-sdks/) 문서에서 확인할 수 있습니다. 대부분의 API 계약은 기능적으로 관련된 API 세트입니다.
 
 > [!NOTE]
 > 아직 설명서가 없는 미리 보기 버전의 Windows SDK(소프트웨어 개발 키트)가 설치되어 있다면, SDK 설치 폴더인 ‘\(Program Files (x86))\Windows Kits\10\Platforms\<platform>\<SDK version>\Platform.xml’에 있는 ‘Platform.xml’ 파일에서도 API 계약 지원 정보를 확인할 수 있습니다.
@@ -105,6 +105,6 @@ API 계약이란? 기본적으로 API 계약은 일종의 기능으로, 특정�
 
 ## <a name="related-articles"></a>관련된 문서
 
-- [UWP 앱이란?](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+- [UWP 앱이란?](../get-started/universal-application-platform-guide.md)
 - [API 계약을 사용하여 동적으로 기능 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
 - [API 계약](https://channel9.msdn.com/Events/Build/2015/3-733)(빌드 2015 비디오)

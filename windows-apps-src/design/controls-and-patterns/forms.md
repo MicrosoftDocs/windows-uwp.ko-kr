@@ -1,16 +1,16 @@
 ---
-Description: Windows 앱에서 양식에 대한 레이아웃 지침
 title: 양식
+description: UWP(유니버설 Windows 플랫폼) 앱에서 양식의 XAML 레이아웃을 디자인하고 만드는 방법에 대한 지침을 알아봅니다.
 template: detail.hbs
 ms.date: 11/07/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: 69ffaf4ff67d4ee78e78c195d759ae242a069e8e
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 0113cbf50601a3db717753ab2e12524fa281daba
+ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968514"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89304695"
 ---
 # <a name="forms"></a>양식
 양식은 사용자가 데이터를 제출할 수 있고 이를 수집할 수 있는 컨트롤 그룹입니다. 일반적으로 양식은 설정 페이지, 설문 조사, 계정 생성 등에 사용됩니다. 
@@ -45,8 +45,8 @@ ms.locfileid: "82968514"
 이 유형의 양식을 사용하면 사용자가 유연하게 응답할 수 있습니다. 일반적으로 이 유형의 양식은 자유 형식 입력 필드를 포함하므로 훨씬 더 다양한 응답을 받습니다. 제출 시 유효한 사용자 입력 및 올바른 형식의 데이터를 제공하려면 다음 권장 사항을 고려하세요.
 
 - 올바른 컨트롤을 사용하여(일정 날짜에 대해 TextBox 대신 CalendarDatePicker 사용) 잘못된 정보를 제출할 수 없도록 합니다. 나중에 입력 컨트롤 섹션의 양식에서 적절한 입력 컨트롤을 선택하는 방법을 자세히 알아보세요.
-- TextBox 컨트롤을 사용하는 경우 사용자에게 [PlaceholderText](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox.PlaceholderText) 속성을 사용하여 원하는 입력 형식의 힌트를 제공합니다.
-- [InputScope](https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.inputscope) 속성으로 컨트롤의 예상 입력을 설명하여 사용자에게 적절한 화상 키보드를 제공합니다.
+- TextBox 컨트롤을 사용하는 경우 사용자에게 [PlaceholderText](/uwp/api/Windows.UI.Xaml.Controls.TextBox.PlaceholderText) 속성을 사용하여 원하는 입력 형식의 힌트를 제공합니다.
+- [InputScope](/uwp/api/windows.ui.xaml.input.inputscope) 속성으로 컨트롤의 예상 입력을 설명하여 사용자에게 적절한 화상 키보드를 제공합니다.
 - 레이블에 별표(*)로 필수 입력을 표시합니다.
 - 모든 필수 정보가 입력될 때까지 제출 단추를 사용하지 않도록 설정합니다.
 - 제출 시 잘못된 데이터가 있는 경우 강조 표시된 필드나 테두리로 잘못된 입력이 포함된 컨트롤을 표시하고 사용자가 양식을 다시 제출하도록 합니다.
@@ -58,7 +58,7 @@ ms.locfileid: "82968514"
 사용자 환경을 지원하고 사용자가 올바른 내용을 입력하도록 하려면 다음 권장 사항을 고려하여 양식 레이아웃을 디자인하세요. 
 
 ### <a name="labels"></a>레이블
-[레이블](labels.md)은 왼쪽 맞춤으로 정렬되고 입력 컨트롤 위에 놓여야 합니다. 대부분의 컨트롤에는 레이블을 표시하기 위한 기본 제공 Header 속성이 있습니다. 컨트롤에 Header 속성이 없거나 컨트롤 그룹에 레이블을 지정하려는 경우 [TextBlock](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBlock)을 대신 사용할 수 있습니다.
+[레이블](labels.md)은 왼쪽 맞춤으로 정렬되고 입력 컨트롤 위에 놓여야 합니다. 대부분의 컨트롤에는 레이블을 표시하기 위한 기본 제공 Header 속성이 있습니다. 컨트롤에 Header 속성이 없거나 컨트롤 그룹에 레이블을 지정하려는 경우 [TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock)을 대신 사용할 수 있습니다.
 
 [접근성을 위해 디자인](../accessibility/accessibility.md)하려면 사용자와 화면 읽기 프로그램이 분명히 인식하도록 모든 개별 컨트롤과 컨트롤 그룹에 레이블을 지정하세요. 
 
@@ -128,8 +128,8 @@ ms.locfileid: "82968514"
 컨트롤 | Windows Server Update Services와 함께 | 예제
 - | - | -
 [ComboBox](combo-box.md) | 컴팩트 상태로 시작하고 확장하여 선택 가능한 항목 목록 표시 | 시/도 또는 국가와 같은 긴 항목 목록에서 선택
-[ListView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#list-views) | 항목을 분류하고 그룹 헤더 할당, 항목 끌어서 놓기, 콘텐츠 조정, 항목 순서 변경 | 옵션 순위 지정
-[GridView](https://docs.microsoft.com/windows/uwp/controls-and-patterns/lists#grid-views) | 이미지 기반 컬렉션 정렬 및 찾아보기 | 사진, 색, 디스플레이 테마 선택
+[ListView](./lists.md#list-views) | 항목을 분류하고 그룹 헤더 할당, 항목 끌어서 놓기, 콘텐츠 조정, 항목 순서 변경 | 옵션 순위 지정
+[GridView](./lists.md#grid-views) | 이미지 기반 컬렉션 정렬 및 찾아보기 | 사진, 색, 디스플레이 테마 선택
 
 ### <a name="numeric-input"></a>숫자 입력
 컨트롤 | Windows Server Update Services와 함께 | 예제

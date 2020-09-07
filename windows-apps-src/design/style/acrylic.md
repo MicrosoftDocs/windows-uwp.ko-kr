@@ -1,5 +1,5 @@
 ---
-description: 반투명 질감을 만드는 유형의 브러시입니다.
+description: 깊이를 추가하고 시각적 계층을 설정하는 데 도움이 되는 반투명 질감을 만드는 브러시 유형인 아크릴을 사용하는 방법을 알아봅니다.
 title: 아크릴 소재
 template: detail.hbs
 ms.date: 08/09/2017
@@ -10,20 +10,20 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d969c5282fa03fb11d108d2b2c8e0fe44dfde49
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 6f7d431950e17b9908d079db9247d997ef8adadb
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968458"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174587"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 
 ![영웅 이미지](images/header-acrylic.svg)
 
-아크릴은 반투명 질감을 만드는 유형의 [브러시](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Brush)입니다. 앱 표면에 아크릴을 적용하여 깊이를 추가하고 시각적 계층을 설정할 수 있습니다.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
+아크릴은 반투명 질감을 만드는 유형의 [브러시](/uwp/api/Windows.UI.Xaml.Media.Brush)입니다. 앱 표면에 아크릴을 적용하여 깊이를 추가하고 시각적 계층을 설정할 수 있습니다.  <!-- By allowing user-selected wallpaper or colors to shine through, acrylic keeps users in touch with the OS personalization they've chosen. -->
 
-> **중요 API**: [AcrylicBrush 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.acrylicbrush), [Background 속성](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.control.Background)
+> **중요 API**: [AcrylicBrush 클래스](/uwp/api/windows.ui.xaml.media.acrylicbrush), [Background 속성](/uwp/api/windows.ui.xaml.controls.control.Background)
 
 :::row:::
     :::column:::
@@ -87,7 +87,7 @@ XAML 컨트롤 갤러리 앱이 설치된 경우 <a href="xamlcontrolsgallery:/i
 
 ![정보 플라이아웃을 사용하는 메일 앱 패턴](images/Mail_TransientContextMenu.png)
 
-수많은 컨트롤이 기본적으로 아크릴을 사용합니다. [MenuFlyouts](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus), [AutoSuggestBox](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box), [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox) 및 빠른 해제 팝업이 있는 유사 컨트롤은 호출될 때 일시적인 아크릴을 사용합니다.
+수많은 컨트롤이 기본적으로 아크릴을 사용합니다. [MenuFlyouts](../controls-and-patterns/menus.md), [AutoSuggestBox](../controls-and-patterns/auto-suggest-box.md), [ComboBox](/uwp/api/windows.ui.xaml.controls.combobox) 및 빠른 해제 팝업이 있는 유사 컨트롤은 호출될 때 일시적인 아크릴을 사용합니다.
 
 > [!Note]
 > 아크릴 표면을 렌더링하는 작업은 GPU를 많이 소모하며, 이로 인해 디바이스 전력 사용량이 증가하고 배터리 사용 시간이 단축될 수 있습니다. 디바이스가 배터리 절약 모드로 전환되면 아크릴 효과가 자동으로 해제되며, 사용자는 원한다면 모든 앱의 아크릴 효과를 비활성화할 수 있습니다.
@@ -246,7 +246,7 @@ else
 
 ## <a name="extend-acrylic-into-the-title-bar"></a>아크릴을 제목 표시줄로 확장
 
-앱의 창이 끊김 없이 보이게 하려면 제목 표시줄 영역에 아크릴을 사용하면 됩니다. 다음 예제에서는 [ApplicationViewTitleBar](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar) 개체의 [ButtonBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonBackgroundColor) 및 [ButtonInactiveBackgroundColor](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonInactiveBackgroundColor) 속성을 [Colors.Transparent](https://docs.microsoft.com/uwp/api/Windows.UI.Colors.Transparent)로 설정하여 아크릴을 제목 표시줄로 확장합니다.
+앱의 창이 끊김 없이 보이게 하려면 제목 표시줄 영역에 아크릴을 사용하면 됩니다. 다음 예제에서는 [ApplicationViewTitleBar](/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar) 개체의 [ButtonBackgroundColor](/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonBackgroundColor) 및 [ButtonInactiveBackgroundColor](/uwp/api/Windows.UI.ViewManagement.ApplicationViewTitleBar.ButtonInactiveBackgroundColor) 속성을 [Colors.Transparent](/uwp/api/Windows.UI.Colors.Transparent)로 설정하여 아크릴을 제목 표시줄로 확장합니다.
 
 ```csharp
 private void ExtendAcrylicIntoTitleBar()
@@ -258,7 +258,7 @@ private void ExtendAcrylicIntoTitleBar()
 }
 ```
 
-여기서 보여드리는 것처럼, [Window.Activate](https://docs.microsoft.com/uwp/api/windows.ui.xaml.window.Activate)를 호출한 후 이 코드를 앱의 [OnLaunched](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) 메서드(_App.xaml.cs_)에 배치하거나 앱의 첫 번째 페이지에 배치할 수 있습니다.
+여기서 보여드리는 것처럼, [Window.Activate](/uwp/api/windows.ui.xaml.window.Activate)를 호출한 후 이 코드를 앱의 [OnLaunched](/uwp/api/windows.ui.xaml.application#Windows_UI_Xaml_Application_OnLaunched_Windows_ApplicationModel_Activation_LaunchActivatedEventArgs_) 메서드(_App.xaml.cs_)에 배치하거나 앱의 첫 번째 페이지에 배치할 수 있습니다.
 
 ```csharp
 // Call your extend acrylic code in the OnLaunched event, after

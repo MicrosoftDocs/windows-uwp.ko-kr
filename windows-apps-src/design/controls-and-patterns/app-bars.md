@@ -1,5 +1,5 @@
 ---
-Description: 명령 모음을 통해 앱에서 가장 많이 수행하는 작업에 쉽게 액세스할 수 있습니다.
+description: 명령 모음 컨트롤을 사용하여 사용자가 앱의 가장 일반적인 명령 및 작업에 쉽게 액세스할 수 있게 하는 방법을 알아봅니다.
 title: 명령 모음
 label: App bars/command bars
 template: detail.hbs
@@ -13,27 +13,27 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f7b2c260d20c95012297c1f78037626844f6badf
-ms.sourcegitcommit: 83225cd9f3ef184277fc293d09982ecd511cc088
+ms.openlocfilehash: 001dc4be5ec0540517602d48360c24c7e6bae32d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87160886"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160677"
 ---
 # <a name="command-bar"></a>명령 모음
 
 명령 모음을 통해 앱에서 가장 많이 수행하는 작업에 쉽게 액세스할 수 있습니다. 명령 모음은 앱 수준의 명령이나 페이지 고유의 명령에 액세스할 수 있도록 해주며, 어떠한 탐색 패턴에서도 사용이 가능합니다.
 
-> **플랫폼 API:** [CommandBar 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar), [AppBarButton 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [AppBarSeparator 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarseparator)
+> **플랫폼 API:** [CommandBar 클래스](/uwp/api/windows.ui.xaml.controls.commandbar), [AppBarButton 클래스](/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton 클래스](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [AppBarSeparator 클래스](/uwp/api/windows.ui.xaml.controls.appbarseparator)
 
 ![아이콘이 있는 명령 모음의 예](images/controls_appbar_icons.png)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-CommandBar 컨트롤은 유연하고 가벼운 범용 컨트롤로서 [AppBarButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbartogglebutton) 및 [AppBarSeparator](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarseparator) 컨트롤과 같은 간단한 명령뿐만 아니라 이미지 또는 텍스트 블록과 같은 복잡한 콘텐츠도 표시할 수 있습니다.
+CommandBar 컨트롤은 유연하고 가벼운 범용 컨트롤로서 [AppBarButton](/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton) 및 [AppBarSeparator](/uwp/api/windows.ui.xaml.controls.appbarseparator) 컨트롤과 같은 간단한 명령뿐만 아니라 이미지 또는 텍스트 블록과 같은 복잡한 콘텐츠도 표시할 수 있습니다.
 
 > [!NOTE]
-> XAML은 [AppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar) 컨트롤과 [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar) 컨트롤을 모두 제공합니다. AppBar를 사용하는 유니버설 Windows 8 앱을 업그레이드하는 경우 AppBar만 사용해야 하며 변경은 최소화해야 합니다. Windows 10의 새로운 앱의 경우 CommandBar 컨트롤을 대신 사용하는 것이 좋습니다. 이 문서에서는 CommandBar 컨트롤을 사용한다고 가정합니다.
+> XAML은 [AppBar](/uwp/api/windows.ui.xaml.controls.appbar) 컨트롤과 [CommandBar](/uwp/api/windows.ui.xaml.controls.commandbar) 컨트롤을 모두 제공합니다. AppBar를 사용하는 유니버설 Windows 8 앱을 업그레이드하는 경우 AppBar만 사용해야 하며 변경은 최소화해야 합니다. Windows 10의 새로운 앱의 경우 CommandBar 컨트롤을 대신 사용하는 것이 좋습니다. 이 문서에서는 CommandBar 컨트롤을 사용한다고 가정합니다.
 
 ## <a name="examples"></a>예
 
@@ -70,12 +70,12 @@ CommandBar 컨트롤은 유연하고 가벼운 범용 컨트롤로서 [AppBarBut
 ![닫힌 명령 모음](images/commandbar_anatomy_open.png)
 
 명령 모음은 다음 4개의 기본 영역으로 구분됩니다.
-- 콘텐츠 영역은 모음의 왼쪽에 맞춰집니다. [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 속성이 채워지면 표시됩니다.
-- 기본 명령 영역은 모음의 오른쪽에 맞춰집니다. [PrimaryCommands](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.primarycommands) 속성이 채워지면 표시됩니다.  
-- "자세히 보기" \[•••\] 단추는 모음의 오른쪽에 표시됩니다. "자세히 보기" \[•••\] 단추를 누르면 기본 명령 레이블이 표시되고 보조 명령이 있는 경우 오버플로 메뉴가 열립니다. 이 단추는 기본 명령 레이블이나 보조 레이블이 존재하지 않으면 표시되지 않습니다. 기본 작동을 변경하려면 [OverflowButtonVisibility](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility) 속성을 사용하세요.
-- 오버플로 메뉴는 명령 모음이 열리고 [SecondaryCommands](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.secondarycommands) 속성이 채워지는 경우에만 표시됩니다. 공간이 제한된 경우 기본 명령이 SecondaryCommands 영역으로 이동합니다. 기본 작동을 변경하려면 [IsDynamicOverflowEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.isdynamicoverflowenabled) 속성을 사용하세요.
+- 콘텐츠 영역은 모음의 왼쪽에 맞춰집니다. [Content](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 속성이 채워지면 표시됩니다.
+- 기본 명령 영역은 모음의 오른쪽에 맞춰집니다. [PrimaryCommands](/uwp/api/windows.ui.xaml.controls.commandbar.primarycommands) 속성이 채워지면 표시됩니다.  
+- "자세히 보기" \[•••\] 단추는 모음의 오른쪽에 표시됩니다. "자세히 보기" \[•••\] 단추를 누르면 기본 명령 레이블이 표시되고 보조 명령이 있는 경우 오버플로 메뉴가 열립니다. 이 단추는 기본 명령 레이블이나 보조 레이블이 존재하지 않으면 표시되지 않습니다. 기본 작동을 변경하려면 [OverflowButtonVisibility](/uwp/api/windows.ui.xaml.controls.commandbar.overflowbuttonvisibility) 속성을 사용하세요.
+- 오버플로 메뉴는 명령 모음이 열리고 [SecondaryCommands](/uwp/api/windows.ui.xaml.controls.commandbar.secondarycommands) 속성이 채워지는 경우에만 표시됩니다. 공간이 제한된 경우 기본 명령이 SecondaryCommands 영역으로 이동합니다. 기본 작동을 변경하려면 [IsDynamicOverflowEnabled](/uwp/api/windows.ui.xaml.controls.commandbar.isdynamicoverflowenabled) 속성을 사용하세요.
 
-레이아웃은 [FlowDirection](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.flowdirection)이 **RightToLeft**일 때 반대로 됩니다.
+레이아웃은 [FlowDirection](/uwp/api/windows.ui.xaml.frameworkelement.flowdirection)이 **RightToLeft**일 때 반대로 됩니다.
 
 ## <a name="create-a-command-bar"></a>명령 모음 만들기
 이 예제는 이전에 표시된 명령 모음을 만듭니다.
@@ -102,12 +102,12 @@ CommandBar 컨트롤은 유연하고 가벼운 범용 컨트롤로서 [AppBarBut
 ```
 
 ## <a name="commands-and-content"></a>명령 및 콘텐츠
-CommandBar 컨트롤에는 명령 및 콘텐츠를 추가하는 데 사용할 수 있는 다음과 같은 세 가지 속성이 있습니다. [PrimaryCommands](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.primarycommands), [SecondaryCommands](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.secondarycommands) 및 [Content](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 속성이 있습니다.
+CommandBar 컨트롤에는 명령 및 콘텐츠를 추가하는 데 사용할 수 있는 다음과 같은 세 가지 속성이 있습니다. [PrimaryCommands](/uwp/api/windows.ui.xaml.controls.commandbar.primarycommands), [SecondaryCommands](/uwp/api/windows.ui.xaml.controls.commandbar.secondarycommands) 및 [Content](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 속성이 있습니다.
 
 
 ### <a name="commands"></a>명령
 
-기본적으로 명령 모음 항목은 **PrimaryCommands** 컬렉션에 추가됩니다. 가장 중요한 명령이 항상 표시되도록 하려면 중요도 순서로 명령을 추가해야 합니다. 사용자가 앱 창의 크기를 조정해서 명령 모음 너비가 변경되면 기본 명령이 명령 모음과 중단점의 오버플로 메뉴 간에 동적으로 이동합니다. 이러한 기본 작동을 변경하려면 [IsDynamicOverflowEnabled](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.isdynamicoverflowenabled) 속성을 사용하세요. 
+기본적으로 명령 모음 항목은 **PrimaryCommands** 컬렉션에 추가됩니다. 가장 중요한 명령이 항상 표시되도록 하려면 중요도 순서로 명령을 추가해야 합니다. 사용자가 앱 창의 크기를 조정해서 명령 모음 너비가 변경되면 기본 명령이 명령 모음과 중단점의 오버플로 메뉴 간에 동적으로 이동합니다. 이러한 기본 작동을 변경하려면 [IsDynamicOverflowEnabled](/uwp/api/windows.ui.xaml.controls.commandbar.isdynamicoverflowenabled) 속성을 사용하세요. 
 
 가장 작은 화면(320epx 너비)에서는 최대 4개의 기본 명령이 명령 모음에 들어갑니다. 
 
@@ -122,16 +122,16 @@ CommandBar 컨트롤에는 명령 및 콘텐츠를 추가하는 데 사용할 �
 
 ### <a name="app-bar-buttons"></a>앱 바 단추
 
-PrimaryCommands와 SecondaryCommands는 모두 [AppBarButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarButton), [AppBarToggleButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarToggleButton) 및 [AppBarSeparator](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarSeparator) 명령 요소로만 채울 수 있습니다. 
+PrimaryCommands와 SecondaryCommands는 모두 [AppBarButton](/uwp/api/Windows.UI.Xaml.Controls.AppBarButton), [AppBarToggleButton](/uwp/api/Windows.UI.Xaml.Controls.AppBarToggleButton) 및 [AppBarSeparator](/uwp/api/Windows.UI.Xaml.Controls.AppBarSeparator) 명령 요소로만 채울 수 있습니다. 
 
 앱 바 단추 컨트롤은 아이콘 및 텍스트 레이블에 따라 구분됩니다. 이러한 컨트롤은 명령 모음에서의 사용에 최적화되어 있으며, 컨트롤이 명령 모음에서 사용되는지 또는 오버플로 메뉴에서 사용되는지에 따라 모양이 변경됩니다.
 
 오버플로 메뉴의 아이콘 크기는 16x16px로 기본 명령 영역의 아이콘(20x20px)보다 작습니다. SymbolIcon, FontIcon 또는 PathIcon을 사용하는 경우 명령이 보조 명령 영업에 진입할 때 화질 손실 없이 아이콘 배율이 올바른 크기로 자동 조정됩니다. 
 
 ### <a name="button-labels"></a>단추 레이블
-AppBarButton [IsCompact](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarbutton.IsCompact) 속성은 레이블의 표시 여부를 결정합니다. CommandBar 컨트롤에서 명령 모음은 열리고 닫힐 때 자동으로 단추의 IsCompact 속성을 덮어씁니다.
+AppBarButton [IsCompact](/uwp/api/windows.ui.xaml.controls.appbarbutton.IsCompact) 속성은 레이블의 표시 여부를 결정합니다. CommandBar 컨트롤에서 명령 모음은 열리고 닫힐 때 자동으로 단추의 IsCompact 속성을 덮어씁니다.
 
-앱 바 단추 레이블의 위치를 변경하려면 CommandBar의 [DefaultLabelPosition](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar.defaultlabelposition) 속성을 사용합니다.
+앱 바 단추 레이블의 위치를 변경하려면 CommandBar의 [DefaultLabelPosition](/uwp/api/windows.ui.xaml.controls.commandbar.defaultlabelposition) 속성을 사용합니다.
 
 ```xaml
 <CommandBar DefaultLabelPosition="Right">
@@ -144,7 +144,7 @@ AppBarButton [IsCompact](https://docs.microsoft.com/uwp/api/windows.ui.xaml.cont
 
 창이 더 커지면 가독성 개선을 위해 레이블을 앱 바 단추 아이콘의 오른쪽으로 이동하는 것이 좋습니다. 레이블이 아래쪽에 있으면 명령 모음을 열어야 레이블 표시되지만 레이블이 오른쪽에 있으면 명령 모음이 닫혀 있더라도 표시됩니다.
 
-오버플로 메뉴에서는 기본적으로 아이콘의 오른쪽으로 레이블 위치가 이동되고 **LabelPosition**이 무시됩니다. [CommandBarOverflowPresenterStyle](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar.CommandBarOverflowPresenterStyle) 속성을 [CommandBarOverflowPresenter](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbaroverflowpresenter)를 대상으로 하는 Style로 설정하여 스타일을 조정할 수 있습니다. 
+오버플로 메뉴에서는 기본적으로 아이콘의 오른쪽으로 레이블 위치가 이동되고 **LabelPosition**이 무시됩니다. [CommandBarOverflowPresenterStyle](/uwp/api/Windows.UI.Xaml.Controls.CommandBar.CommandBarOverflowPresenterStyle) 속성을 [CommandBarOverflowPresenter](/uwp/api/windows.ui.xaml.controls.commandbaroverflowpresenter)를 대상으로 하는 Style로 설정하여 스타일을 조정할 수 있습니다. 
 
 단추 레이블은 짧아야 하며, 가급적이면 한 단어여야 합니다. 아이콘 아래의 더 긴 레이블은 여러 줄로 줄바꿈되어 열리는 명령 모음의 전체 높이가 늘어납니다. 단어 분리가 일어나야 하는 문자 경계에서 레이블이 암시를 주도록 텍스트에 소프트 하이픈 문자(0x00AD)를 포함할 수 있습니다. XAML에서 다음과 같이 이스케이프 시퀀스를 사용하여 이를 표시합니다.
 
@@ -158,7 +158,7 @@ AppBarButton [IsCompact](https://docs.microsoft.com/uwp/api/windows.ui.xaml.cont
 
 ### <a name="command-bar-flyouts"></a>명령 모음 플라이아웃
 
-회신, 전체 회신 및 전달을 응답 메뉴에 배치하는 등 논리적 그룹을 명령에 사용합니다. 일반적으로 앱 바 단추는 단일 명령을 활성화하지만 사용자 지정 콘텐츠와 함께 [MenuFlyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.menuflyout) 또는 [Flyout](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flyout)을 표시하는 데 앱 바 단추를 사용할 수 있습니다.
+회신, 전체 회신 및 전달을 응답 메뉴에 배치하는 등 논리적 그룹을 명령에 사용합니다. 일반적으로 앱 바 단추는 단일 명령을 활성화하지만 사용자 지정 콘텐츠와 함께 [MenuFlyout](/uwp/api/windows.ui.xaml.controls.menuflyout) 또는 [Flyout](/uwp/api/windows.ui.xaml.controls.flyout)을 표시하는 데 앱 바 단추를 사용할 수 있습니다.
 
 ![명령 모음의 플라이아웃 예](images/AppbarGuidelines_Flyouts.png)
 
@@ -168,7 +168,7 @@ AppBarButton [IsCompact](https://docs.microsoft.com/uwp/api/windows.ui.xaml.cont
 
 동적 오버플로가 활성화되면 기본 명령이 오버플로 메뉴로 이동할 수 있으므로 콘텐츠가 잘리지 않게 됩니다. 그렇지 않은 경우 기본 명령이 우선 적용되어 콘텐츠 잘림이 야기될 수 있습니다.
 
-[ClosedDisplayMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.closeddisplaymode)가 **Compact**인 경우 콘텐츠가 명령 모음의 컴팩트 크기보다 크면 잘릴 수 있습니다. 표시할 [Opening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.opening) 및 [Closed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.closed) 이벤트를 처리하거나 콘텐츠 영역의 UI 부분이 잘리지 않도록 숨겨야 합니다. 자세한 내용은 [열림 및 닫힘 상태](#open-and-closed-states) 섹션을 참조하세요.
+[ClosedDisplayMode](/uwp/api/windows.ui.xaml.controls.appbar.closeddisplaymode)가 **Compact**인 경우 콘텐츠가 명령 모음의 컴팩트 크기보다 크면 잘릴 수 있습니다. 표시할 [Opening](/uwp/api/windows.ui.xaml.controls.appbar.opening) 및 [Closed](/uwp/api/windows.ui.xaml.controls.appbar.closed) 이벤트를 처리하거나 콘텐츠 영역의 UI 부분이 잘리지 않도록 숨겨야 합니다. 자세한 내용은 [열림 및 닫힘 상태](#open-and-closed-states) 섹션을 참조하세요.
 
 
 ## <a name="open-and-closed-states"></a>열림 및 닫힘 상태
@@ -176,9 +176,9 @@ AppBarButton [IsCompact](https://docs.microsoft.com/uwp/api/windows.ui.xaml.cont
 명령 모음은 열거나 닫을 수 있습니다. 열리면 텍스트 레이블이 있는 기본 명령 단추가 표시되고 오버플로 메뉴가 열립니다(보조 명령이 있는 경우).
 명령 모음은 오버플로 메뉴를 위쪽(기본 명령 위) 또는 아래쪽(기본 명령 아래)으로 엽니다. 기본 방향은 위쪽이지만 오버플로 메뉴를 위쪽으로 열 수 있는 공간이 충분하지 않으면 명령 모음이 아래쪽으로 열립니다. 
 
-사용자가 "자세히 보기" \[•••\] 단추를 눌러 이러한 상태 간을 전환할 수 있습니다. [IsOpen](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.isopen) 속성을 설정하여 프로그래밍 방식으로 이 상태 간에 전환할 수 있습니다. 
+사용자가 "자세히 보기" \[•••\] 단추를 눌러 이러한 상태 간을 전환할 수 있습니다. [IsOpen](/uwp/api/windows.ui.xaml.controls.appbar.isopen) 속성을 설정하여 프로그래밍 방식으로 이 상태 간에 전환할 수 있습니다. 
 
-[Opening](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.opening), [Opened](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.opened), [Closing](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.closing) 및 [Closed](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.closed) 이벤트를 사용하여 열리거나 닫힌 명령 모음에 응답할 수 있습니다.  
+[Opening](/uwp/api/windows.ui.xaml.controls.appbar.opening), [Opened](/uwp/api/windows.ui.xaml.controls.appbar.opened), [Closing](/uwp/api/windows.ui.xaml.controls.appbar.closing) 및 [Closed](/uwp/api/windows.ui.xaml.controls.appbar.closed) 이벤트를 사용하여 열리거나 닫힌 명령 모음에 응답할 수 있습니다.  
 - Opening 및 Closing 이벤트는 전환 애니메이션이 시작하기 전에 발생합니다.
 - Opened 및 Closed 이벤트는 전환이 완료된 후 발생합니다.
 
@@ -211,18 +211,18 @@ private void CommandBar_Closing(object sender, object e)
 
 ### <a name="issticky"></a>IsSticky
 
-명령 모음이 열린 상태에서 사용자가 앱의 다른 부분과 상호 작용을 하면 명령 모음이 자동으로 닫힙니다. 이를 *빠른 해제*라고 합니다. [IsSticky](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.issticky) 속성을 설정하여 빠른 해제 동작을 제어할 수 있습니다. `IsSticky="true"`인 경우, 사용자가 "자세히 보기" \[•••\] 단추를 누르거나 오버플로 메뉴에서 항목을 선택할 때까지 바는 열려 있습니다. 
+명령 모음이 열린 상태에서 사용자가 앱의 다른 부분과 상호 작용을 하면 명령 모음이 자동으로 닫힙니다. 이를 *빠른 해제*라고 합니다. [IsSticky](/uwp/api/windows.ui.xaml.controls.appbar.issticky) 속성을 설정하여 빠른 해제 동작을 제어할 수 있습니다. `IsSticky="true"`인 경우, 사용자가 "자세히 보기" \[•••\] 단추를 누르거나 오버플로 메뉴에서 항목을 선택할 때까지 바는 열려 있습니다. 
 
-고정 명령 모음은 [빠른 해제 및 키보드 포커스 동작](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus#light-dismiss)에 대한 사용자의 기대를 따르지 않으므로 사용하지 않는 것이 좋습니다.
+고정 명령 모음은 [빠른 해제 및 키보드 포커스 동작](./menus.md#light-dismiss)에 대한 사용자의 기대를 따르지 않으므로 사용하지 않는 것이 좋습니다.
 
 ### <a name="display-mode"></a>디스플레이 모드
 
-[ClosedDisplayMode](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbar.closeddisplaymode) 속성을 설정하여 닫힘 상태에서 명령 모음이 표시되는 방법을 제어할 수 있습니다. 3개의 닫힌 디스플레이 모드에서 선택할 수 있습니다.
+[ClosedDisplayMode](/uwp/api/windows.ui.xaml.controls.appbar.closeddisplaymode) 속성을 설정하여 닫힘 상태에서 명령 모음이 표시되는 방법을 제어할 수 있습니다. 3개의 닫힌 디스플레이 모드에서 선택할 수 있습니다.
 - **컴팩트**: 기본 모드입니다. 콘텐츠, 레이블이 없는 기본 명령 아이콘 및 "자세히 보기" \[•••\] 단추를 표시합니다.
 - **최소**: "자세히 보기" \[•••\] 단추 역할을 하는 가는 가로 막대형만 표시합니다. 모음의 아무 곳이나 눌러서 열 수 있습니다.
 - **숨김**: 명령 모음이 닫히면 표시되지 않습니다. 이 모드는 인라인 명령 모음을 사용하여 상황에 맞는 명령을 표시하는 데 유용할 수 있습니다. 이 경우 **IsOpen** 속성을 설정하거나 ClosedDisplayMode를 **Minimal** 또는 **Compact**로 변경하여 프로그래밍 방식으로 명령 모음을 열어야 합니다.
 
-여기서 명령 모음은 [RichEditBox](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)에 대한 간단한 서식 명령을 저장하는 데 사용합니다. 편집 상자에 포커스가 없으면 서식 명령이 주의가 분산될 수 있으므로 숨겨져 있습니다. 편집 상자를 사용하는 중이면 명령 모음의 ClosedDisplayMode가 Compact로 변경되어 서식 명령이 표시됩니다.
+여기서 명령 모음은 [RichEditBox](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)에 대한 간단한 서식 명령을 저장하는 데 사용합니다. 편집 상자에 포커스가 없으면 서식 명령이 주의가 분산될 수 있으므로 숨겨져 있습니다. 편집 상자를 사용하는 중이면 명령 모음의 ClosedDisplayMode가 Compact로 변경되어 서식 명령이 표시됩니다.
 
 ```xaml
 <StackPanel Width="300"
@@ -263,13 +263,13 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 -   소형 핸드헬드 디바이스의 경우 접근이 쉽도록 화면의 맨 아래쪽에 명령 모음을 배치하는 것이 좋습니다.
 -   화면이 더 큰 디바이스에서 명령 모음을 창의 위쪽에 배치하면 더 눈에 띄고 찾기가 쉽습니다.
 
-[DiagonalSizeInInches](https://docs.microsoft.com/uwp/api/windows.graphics.display.displayinformation.diagonalsizeininches) API를 사용하여 실제 화면 크기를 결정합니다.
+[DiagonalSizeInInches](/uwp/api/windows.graphics.display.displayinformation.diagonalsizeininches) API를 사용하여 실제 화면 크기를 결정합니다.
 
 단일 보기 화면(왼쪽 예) 및 여러 보기 화면(오른쪽 예)에서는 다음 화면 영역에 명령 모음을 배치할 수 있습니다. 인라인 명령 모음은 작업 공간 내 어디에나 배치할 수 있습니다.
 
 ![앱 바 배치의 예 2](images/AppbarGuidelines_Placement2.png)
 
->**터치 디바이스**: 터치 키보드 또는 SIP(Soft Input Panel)가 나타날 때 명령 모음이 사용자에게 계속 표시되어야 하는 경우 명령 모음을 페이지의 [BottomAppBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.page.bottomappbar) 속성에 할당할 수 있으며 SIP가 있는 경우 명령 모음은 계속 표시되도록 이동하게 됩니다. 그러지 않으면 명령 모음을 인라인으로 앱 콘텐츠 기준으로 배치해야 합니다.
+>**터치 디바이스**: 터치 키보드 또는 SIP(Soft Input Panel)가 나타날 때 명령 모음이 사용자에게 계속 표시되어야 하는 경우 명령 모음을 페이지의 [BottomAppBar](/uwp/api/windows.ui.xaml.controls.page.bottomappbar) 속성에 할당할 수 있으며 SIP가 있는 경우 명령 모음은 계속 표시되도록 이동하게 됩니다. 그러지 않으면 명령 모음을 인라인으로 앱 콘텐츠 기준으로 배치해야 합니다.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 
@@ -279,4 +279,4 @@ private void EditStackPanel_LostFocus(object sender, RoutedEventArgs e)
 ## <a name="related-articles"></a>관련된 문서
 
 * [Windows 앱용 명령 디자인 기본 사항](../basics/commanding-basics.md)
-* [CommandBar 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.CommandBar)
+* [CommandBar 클래스](/uwp/api/Windows.UI.Xaml.Controls.CommandBar)

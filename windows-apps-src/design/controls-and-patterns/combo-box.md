@@ -1,5 +1,5 @@
 ---
-Description: 사용자가 입력할 때 제안을 제공하는 텍스트 입력 상자입니다.
+description: 목록 상자와 콤보 상자(드롭다운 목록이라고도 함)를 사용하여 사용자가 선택할 수 있는 항목 목록을 표시하는 방법을 알아봅니다.
 title: 콤보 상자 및 목록 상자
 label: Combo box and list box
 template: detail.hbs
@@ -10,12 +10,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 65f65fc62f839e379535f4e1a3df8a188620fed9
-ms.sourcegitcommit: 99100b58a5b49d8ba78905b15b076b2c5cffbe49
+ms.openlocfilehash: 911585d4e00c5e6c6aea66a72488c48f4d6ffb6d
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88502365"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173497"
 ---
 # <a name="combo-box-and-list-box"></a>콤보 상자 및 목록 상자
 
@@ -31,7 +31,7 @@ ms.locfileid: "88502365"
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](/windows/uwp/design/style/rounded-corner)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](../style/rounded-corner.md)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
 
 > **플랫폼 API:** [ComboBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [IsEditable 속성](/uwp/api/windows.ui.xaml.controls.combobox.iseditable), [Text 속성](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [TextSubmitted 이벤트](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
 
@@ -337,6 +337,6 @@ bool IsValid(string Text)
 - [텍스트 컨트롤](text-controls.md)
 - [맞춤법 검사](text-controls.md)
 - [검색](search.md)
-- [TextBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TextBox)
-- [Windows.UI.Xaml.Controls PasswordBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
-- [String.Length 속성](https://docs.microsoft.com/dotnet/api/system.string.length)
+- [TextBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.TextBox)
+- [Windows.UI.Xaml.Controls PasswordBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+- [String.Length 속성](/dotnet/api/system.string.length)

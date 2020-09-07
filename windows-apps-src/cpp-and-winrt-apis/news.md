@@ -1,17 +1,17 @@
 ---
-description: C++/WinRT에서 새롭거나 변경된 기능입니다.
+description: C++/WinRT 2.0 및 Windows SDK 버전 10.0.17763.0에 대한 최신 추가 기능 및 향상된 기능, 뉴스 및 변경 사항을 확인하세요.
 title: C++/WinRT의 새로운 기능
 ms.date: 03/16/2020
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 새로운 기능
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3057a3d13ba1e7d368dd6bf8820710030687a04d
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 0d7c42b1346805c9c03714eb9bbb3944fe940ccf
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80662417"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89154467"
 ---
 # <a name="whats-new-in-cwinrt"></a>C++/WinRT의 새로운 기능
 
@@ -44,7 +44,7 @@ C++/WinRT 및 C++ 컴파일러 팀이 협력하여 빌드 시간을 단축하기
 
 ### <a name="more-efficient-boxing"></a>보다 효율적인 boxing
 
-이제 XAML 애플리케이션에서 [**winrt::box_value**](/uwp/cpp-ref-for-winrt/box-value)를 더 효율적으로 사용할 수 있습니다([boxing 및 unboxing](/windows/uwp/cpp-and-winrt-apis/boxing) 참조). boxing을 많이 수행하는 애플리케이션은 코드 크기도 줄어듭니다.
+이제 XAML 애플리케이션에서 [**winrt::box_value**](/uwp/cpp-ref-for-winrt/box-value)를 더 효율적으로 사용할 수 있습니다([boxing 및 unboxing](./boxing.md) 참조). boxing을 많이 수행하는 애플리케이션은 코드 크기도 줄어듭니다.
 
 ### <a name="support-for-implementing-com-interfaces-that-implement-iinspectable"></a>IInspectable을 구현하는 COM 인터페이스 구현 지원
 
@@ -205,7 +205,7 @@ xlang 메타데이터 판독기로 인해 C++/WinRT는 이제 메타데이터에
 
 이 두 가지 최적화에서는 프로젝션된 형식만 사용하는 경우에도 고유한 구현 형식에 대한 구성 요소 직접 액세스를 허용합니다. 공용 API 표면을 사용하려는 경우에는 [**make**](/uwp/cpp-ref-for-winrt/make), [**make_self**](/uwp/cpp-ref-for-winrt/make-self) 및 [**get_self**](/uwp/cpp-ref-for-winrt/get-self)를 사용할 필요가 없습니다. 호출은 호출을 구현으로 이동하도록 컴파일되며 완전히 인라인될 수도 있습니다.
 
-자세한 내용과 및 코드 예제는 [균일한 생성 및 직접 구현 액세스 옵트인](/windows/uwp/cpp-and-winrt-apis/author-apis#opt-in-to-uniform-construction-and-direct-implementation-access)을 참조하세요.
+자세한 내용과 및 코드 예제는 [균일한 생성 및 직접 구현 액세스 옵트인](./author-apis.md#opt-in-to-uniform-construction-and-direct-implementation-access)을 참조하세요.
 
 ##### <a name="type-erased-factories"></a>형식이 지워진 팩터리
 
@@ -245,7 +245,7 @@ fire_and_forget Async(DispatcherQueueController controller)
 
 프로젝션 및 구현 클래스 이름은 기본적으로 동일하고 네임스페이스로만 구별되므로 두 클래스를 혼동할 수 있고 도우미의 [**make**](/uwp/cpp-ref-for-winrt/make) 패밀리를 사용하는 대신 실수로 스택에서 구현을 만들 수도 있습니다. 해결되지 않은 참조가 진행되는 동안 개체가 소멸될 수 있으므로 경우에 따라 이 문제를 진단하기가 어려울 수 있습니다. 이제 어설션은 디버그 빌드를 위해 이 문제를 발견합니다. 어설션은 코루틴 내부에서 스택 할당을 감지하지 않지만 대부분의 해당 실수를 발견하는 데 유용합니다.
 
-자세한 내용은 [직접 할당 진단](/windows/uwp/cpp-and-winrt-apis/diag-direct-alloc)을 참조하세요.
+자세한 내용은 [직접 할당 진단](./diag-direct-alloc.md)을 참조하세요.
 
 #### <a name="improved-capture-helpers-and-variadic-delegates"></a>향상된 캡처 도우미 및 variadic 대리자
 
@@ -314,7 +314,7 @@ struct MainPage : PageT<MainPage>
 };
 ```
 
-자세한 내용은 [지연된 소멸](/windows/uwp/cpp-and-winrt-apis/details-about-destructors#deferred-destruction)을 참조하세요.
+자세한 내용은 [지연된 소멸](./details-about-destructors.md#deferred-destruction)을 참조하세요.
 
 #### <a name="improved-support-for-com-style-single-interface-inheritance"></a>COM 스타일 단일 인터페이스 상속에 대한 향상된 지원
 
@@ -341,7 +341,7 @@ struct MainPage : PageT<MainPage>
 | **주요 변경 내용**. C++/WinRT는 컴파일하기 위해 Windows SDK의 헤더를 사용하지 않습니다. | 아래 [Windows SDK 헤더 파일에서 격리](#isolation-from-windows-sdk-header-files)를 참조하세요. |
 | Visual Studio 프로젝트 시스템 형식이 변경되었습니다. | 아래 [C++/WinRT 프로젝트의 대상을 Windows SDK 최신 버전으로 다시 지정하는 방법](#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)을 참조하세요. |
 | Windows 런타임 함수에 컬렉션 개체를 전달하는 데 도움이 되거나 자체 컬렉션 속성과 컬렉션 형식을 구현하는 새로운 함수와 기본 클래스가 있습니다. | [C++/WinRT로 작성된 컬렉션](collections.md)을 참조하세요. |
-| C++/WinRT 런타임 클래스와 함께 [{바인딩}](/windows/uwp/xaml-platform/binding-markup-extension) 태그 확장을 사용할 수 있습니다. | 자세한 내용과 코드 예제는 [데이터 바인딩 개요](/windows/uwp/data-binding/data-binding-quickstart)를 참조하세요. |
+| C++/WinRT 런타임 클래스와 함께 [{바인딩}](../xaml-platform/binding-markup-extension.md) 태그 확장을 사용할 수 있습니다. | 자세한 내용과 코드 예제는 [데이터 바인딩 개요](../data-binding/data-binding-quickstart.md)를 참조하세요. |
 | 코루틴 취소 지원을 통해 취소 콜백을 등록할 수 있습니다. | 자세한 내용과 코드 예제는 [비동기 작업 취소 및 취소 콜백](concurrency-2.md#canceling-an-asynchronous-operation-and-cancellation-callbacks)을 참조하세요. |
 | 멤버 함수를 가리키는 대리자를 만들 때 처리기가 등록된 지점에서 원시 *this* 포인터 대신에 현재 개체에 대한 강력하거나 약한 참조를 설정할 수 있습니다. | 자세한 내용과 코드 예제는 [이벤트 처리 대리자를 사용하여 안전하게 *this* 포인터 액세스](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate) 섹션에서 **멤버 함수를 대리자로 사용하는 경우** 하위 섹션을 참조하세요. |
 | Visual Studio의 C++ 표준 규칙이 향상되어 처리되지 않았던 버그가 수정되었습니다. C++/WinRT의 표준 규칙의 유효성을 검사하기 위해 LLVM 및 Clang 도구 체인을 더 효율적으로 이용합니다. | [새 프로젝트가 컴파일되지 않는 이유는 무엇인가요? Visual Studio 2017(버전 15.8.0 이상) 및 SDK 버전 17134를 사용하고 있습니다.](faq.md#why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134)에 설명된 문제가 더 이상 발생하지 않습니다. |
@@ -375,7 +375,7 @@ C++/WinRT는 컴파일하기 위해 더 이상 Windows SDK의 헤더 파일을 �
 
 현재 Windows SDK 헤더 파일 격리의 유일한 예외는 내장 함수와 숫자입니다. 마지막으로 남은 이 종속성에는 알려진 문제가 없습니다.
 
-프로젝트에서 필요한 경우 Windows SDK 헤더를 통해 interop를 다시 사용하도록 설정할 수 있습니다. 예를 들어 루트가 [**IUnknown**](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)인 COM 인터페이스를 구현하려고 할 수 있습니다. 이 예제의 경우 C++/WinRT 헤더를 포함하기 전에 `unknwn.h`를 포함합니다. 이렇게 하면 C++/WinRT 기본 라이브러리가 다양한 후크를 통해 클래식 COM 인터페이스를 지원할 수 있습니다. 코드 예제는 [C++/WinRT를 통한 COM 구성 요소 작성](author-coclasses.md)을 참조하세요. 마찬가지로, 호출하려는 형식 /또는 함수를 선언하는 다른 Windows SDK 헤더를 명시적으로 포함합니다.
+프로젝트에서 필요한 경우 Windows SDK 헤더를 통해 interop를 다시 사용하도록 설정할 수 있습니다. 예를 들어 루트가 [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown)인 COM 인터페이스를 구현하려고 할 수 있습니다. 이 예제의 경우 C++/WinRT 헤더를 포함하기 전에 `unknwn.h`를 포함합니다. 이렇게 하면 C++/WinRT 기본 라이브러리가 다양한 후크를 통해 클래식 COM 인터페이스를 지원할 수 있습니다. 코드 예제는 [C++/WinRT를 통한 COM 구성 요소 작성](author-coclasses.md)을 참조하세요. 마찬가지로, 호출하려는 형식 /또는 함수를 선언하는 다른 Windows SDK 헤더를 명시적으로 포함합니다.
 
 ### <a name="how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>C++/WinRT 프로젝트의 대상을 Windows SDK 최신 버전으로 다시 지정하는 방법
 

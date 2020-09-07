@@ -1,16 +1,16 @@
 ---
-Description: 앱의 각 부분을 별도의 창으로 표시합니다.
+description: 앱의 독립적인 부분을 개별 창에서 볼 수 있도록 하면 사용자의 생산성을 높이는 데 도움이 됩니다.
 title: 앱에 대한 여러 보기 표시
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e7d6ea614a9d85eadfcb807c6e6100dbe15ed0c4
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 7b58841420c93f3fee02b0f283012fe45c468618
+ms.sourcegitcommit: b0cfbab1ed8749ef572ba6971e6b206717d12c12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970738"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89219136"
 ---
 # <a name="show-multiple-views-for-an-app"></a>앱에 대한 여러 보기 표시
 
@@ -86,6 +86,7 @@ XamlRoot 클래스는 CoreWindow, AppWindow 또는 DesktopWindowXamlSource인지
 | Window.Current.[Bounds](/uwp/api/windows.ui.xaml.window.bounds) | _uiElement_.XamlRoot.[Size](/uwp/api/windows.ui.xaml.xamlroot.size) |
 | Window.Current.[Content](/uwp/api/windows.ui.xaml.window.content) | UIElement root =  _uiElement_.XamlRoot.[Content](/uwp/api/windows.ui.xaml.xamlroot.content) |
 | Window.Current.[Compositor](/uwp/api/windows.ui.xaml.window.compositor) | 변경하지 않습니다. AppWindow 및 DesktopWindowXamlSource에서 지원됩니다. |
+| VisualTreeHelper.[FindElementsInHostCoordinates](/uwp/api/windows.ui.xaml.media.visualtreehelper.findelementsinhostcoordinates)<br>UIElement 매개 변수는 선택 사항이지만, Island에서 호스팅될 때 UIElement를 제공하지 않으면 메서드에서 예외가 발생합니다. | _uiElement_.XamlRoot를 비워 두지 말고 UIElement로 지정합니다. |
 | VisualTreeHelper.[GetOpenPopups](/uwp/api/windows.ui.xaml.media.visualtreehelper.getopenpopups)<br/>XAML Islands 앱에서는 오류가 발생합니다. AppWindow 앱에서는 주 창에 열린 팝업이 반환됩니다. | VisualTreeHelper.[GetOpenPopupsForXamlRoot](/uwp/api/windows.ui.xaml.media.visualtreehelper.getopenpopupsforxamlroot)(_uiElement_.XamlRoot) |
 | FocusManager.[GetFocusedElement](/uwp/api/windows.ui.xaml.input.focusmanager.getfocusedelement) | FocusManager.[GetFocusedElement](/uwp/api/windows.ui.xaml.input.focusmanager.getfocusedelement#Windows_UI_Xaml_Input_FocusManager_GetFocusedElement_Windows_UI_Xaml_XamlRoot_)(_uiElement_.XamlRoot) |
 | contentDialog.ShowAsync() | contentDialog.[XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) = _uiElement_.XamlRoot;<br/>contentDialog.ShowAsync(); |
@@ -108,5 +109,5 @@ XamlRoot 클래스는 CoreWindow, AppWindow 또는 DesktopWindowXamlSource인지
 
 - [AppWindow 사용](app-window.md)
 - [ApplicationView 사용](application-view.md)
-- [ApplicationViewSwitcher](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationViewSwitcher)
-- [CreateNewView](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)
+- [ApplicationViewSwitcher](/uwp/api/Windows.UI.ViewManagement.ApplicationViewSwitcher)
+- [CreateNewView](/uwp/api/windows.applicationmodel.core.coreapplication.createnewview)

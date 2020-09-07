@@ -1,6 +1,6 @@
 ---
 title: Win32에서 시각적 계층 사용
-description: 시각적 계층을 사용하여 Win32 데스크톱 앱의 UI를 향상시킵니다.
+description: 시각적 계층이라고도 하는 UWP(유니버설 Windows 플랫폼) Windows Runtime Composition API를 사용하여 Win32 C++ 앱의 UI를 향상시키는 방법을 알아봅니다.
 template: detail.hbs
 ms.date: 03/18/2019
 ms.topic: article
@@ -8,12 +8,12 @@ keywords: UWP, 렌더링, 컴퍼지션, win32
 ms.author: jimwalk
 author: jwmsft
 ms.localizationpriority: medium
-ms.openlocfilehash: c9b4ec38b0dd1f6eca3f43cfded74c6292c08100
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 98811d890aa496e05c38009dedea6978386d5e4a
+ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "66215192"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89043475"
 ---
 # <a name="using-the-visual-layer-with-win32"></a>Win32에서 시각적 계층 사용
 

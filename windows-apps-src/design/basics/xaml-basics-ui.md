@@ -1,16 +1,16 @@
 ---
 title: 사용자 인터페이스 만들기 자습서
-description: 이 문서에서는 XAML의 사용자 인터페이스 빌드 기본 사항에 대해 설명합니다.
+description: 이 자습서를 따라 Visual Studio에서 XAML 도구를 사용하여 이미지 편집 프로그램에 대한 기본 UI를 만드는 방법을 알아봅니다.
 keywords: XAML, UWP, 시작
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 22cf8dc09022f841ff1f4e149232a949e7b82d20
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: e4c2c8d52069bf074897ec09fa44f550066b28b5
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942883"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160757"
 ---
 # <a name="tutorial-create-a-user-interface"></a>자습서: 사용자 인터페이스 만들기
 
@@ -185,7 +185,7 @@ XAML 편집기를 사용하여 컨트롤을 추가하려면 다음을 수행합�
     </RelativePanel>
     ```
 
-    `RelativePanel`을 사용하는 레이아웃에 대한 자세한 내용은 [레이아웃 패널](/windows/uwp/layout/layout-panels#relativepanel)을 참조하세요.
+    `RelativePanel`을 사용하는 레이아웃에 대한 자세한 내용은 [레이아웃 패널](../layout/layout-panels.md#relativepanel)을 참조하세요.
 
 2. **ImageGridView**라는 `GridView` 컨트롤을 `TextBlock` 요소 아래에 추가합니다. `RelativePanel` _연결된 속성_을 설정하여 컨트롤을 제목 텍스트 아래에 배치하고 화면의 전체 너비에 맞게 늘립니다.
 
@@ -213,7 +213,7 @@ XAML 편집기를 사용하여 컨트롤을 추가하려면 다음을 수행합�
     </RelativePanel>
     ```
 
-    패널이 연결된 속성에 대한 자세한 내용은 [레이아웃 패널](/windows/uwp/layout/layout-panels)을 참조하세요.
+    패널이 연결된 속성에 대한 자세한 내용은 [레이아웃 패널](../layout/layout-panels.md)을 참조하세요.
 
 3. `GridView` 컨트롤에서 항목을 표시하려면 표시할 데이터 컬렉션을 제공해야 합니다. **MainPage.xaml.cs**를 열고 `GetItemsAsync` 메서드를 찾습니다. 이 메서드는 **MainPage**에 추가한 속성인 **Images**라는 컬렉션을 채웁니다.
 
@@ -232,7 +232,7 @@ XAML 편집기를 사용하여 컨트롤을 추가하려면 다음을 수행합�
 앱에 아직 이미지가 표시되지 않는 것을 알 수 있습니다. 기본적으로 앱은 컬렉션에 있는 데이터 형식의 `ToString` 값을 표시합니다. 다음으로, 데이터 템플릿을 만들어 데이터 표시 방법을 정의합니다.
 
 > [!NOTE]
-> `RelativePanel`을 사용하는 레이아웃은 [레이아웃 패널](/windows/uwp/layout/layout-panels#relativepanel) 문서에서 자세히 알아볼 수 있습니다. 이 문서를 살펴본 다음, `TextBlock` 및 `GridView`에서 `RelativePanel` 연결된 속성을 설정하여 다른 레이아웃을 실험해 보세요.
+> `RelativePanel`을 사용하는 레이아웃은 [레이아웃 패널](../layout/layout-panels.md#relativepanel) 문서에서 자세히 알아볼 수 있습니다. 이 문서를 살펴본 다음, `TextBlock` 및 `GridView`에서 `RelativePanel` 연결된 속성을 설정하여 다른 레이아웃을 실험해 보세요.
 
 ## <a name="part-3-add-a-datatemplate-object-to-display-your-data"></a>3부: 데이터를 표시하는 DataTemplate 개체 추가
 
@@ -267,7 +267,7 @@ XAML 편집기를 사용하여 컨트롤을 추가하려면 다음을 수행합�
       NavigationCacheMode="Enabled">
     ```
 
-    XAML 네임스페이스에 대한 자세한 내용은 [XAML 네임스페이스 및 네임스페이스 매핑](/windows/uwp/xaml-platform/xaml-namespaces-and-namespace-mapping)을 참조하세요.
+    XAML 네임스페이스에 대한 자세한 내용은 [XAML 네임스페이스 및 네임스페이스 매핑](../../xaml-platform/xaml-namespaces-and-namespace-mapping.md)을 참조하세요.
 
 3. 문서 개요에서 **ImageGridView**를 마우스 오른쪽 단추로 클릭합니다. 바로 가기 메뉴에서 **추가 템플릿 편집** > **생성된 항목 편집(ItemTemplate)**  > **빈 항목 만들기**를 차례로 선택합니다. **리소스 만들기** 대화 상자가 열립니다.
 
@@ -317,7 +317,7 @@ XAML 편집기를 사용하여 컨트롤을 추가하려면 다음을 수행합�
     </Grid>
     ```
 
-    `Grid` 레이아웃에 대한 자세한 내용은 [레이아웃 패널](https://docs.microsoft.com/windows/uwp/layout/layout-panels#grid)을 참조하세요.
+    `Grid` 레이아웃에 대한 자세한 내용은 [레이아웃 패널](../layout/layout-panels.md#grid)을 참조하세요.
 
 6. 컨트롤을 `Grid` 레이아웃에 추가합니다.
 
@@ -325,7 +325,7 @@ XAML 편집기를 사용하여 컨트롤을 추가하려면 다음을 수행합�
 
     b. `TextBlock` 컨트롤을 추가하여 이미지의 이름, 파일 유형 및 크기를 표시합니다. 이를 위해 `StackPanel` 컨트롤을 사용하여 텍스트 블록을 정렬합니다. `Grid.Row` 연결된 속성을 사용하여 가장 바깥쪽 `StackPanel`을 두 번째 행(1행)에 배치합니다.
 
-    `StackPanel` 레이아웃에 대한 자세한 내용은 [레이아웃 패널](https://docs.microsoft.com/windows/uwp/layout/layout-panels#stackpanel)을 참조하세요.
+    `StackPanel` 레이아웃에 대한 자세한 내용은 [레이아웃 패널](../layout/layout-panels.md#stackpanel)을 참조하세요.
 
     c. `RatingControl`을 바깥쪽(세로) `StackPanel` 컨트롤에 추가합니다. 이 컨트롤을 내부(가로) `StackPanel` 컨트롤 뒤에 배치합니다.
 

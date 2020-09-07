@@ -1,25 +1,25 @@
 ---
-Description: 그리드 보기의 항목 템플릿
+description: GridView 컨트롤과 함께 사용할 수 있는 항목 템플릿을 가져와 이미지 갤러리, 이미지 및 텍스트, 텍스트 오버레이가 있는 이미지를 표시합니다.
 title: 그리드 보기의 항목 템플릿
 template: detail.hbs
 ms.date: 11/03/2017
 ms.topic: article
 keywords: windows 10, uwp, fluent
-ms.openlocfilehash: 17c14d7147cafa17e78bd13bf6684a99d87cbdfd
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 08849436f88dd9698f349f7fde64b51324212244
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684417"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172687"
 ---
 # <a name="item-templates-for-grid-view"></a>그리드 보기의 항목 템플릿
 
-이 섹션에는 [**GridView**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView) 컨트롤로 사용할 수 있는 항목 템플릿이 포함되어 있습니다. 이 템플릿을 사용하여 일반적인 앱 유형의 모양을 확인합니다.
+이 섹션에는 [**GridView**](/uwp/api/Windows.UI.Xaml.Controls.GridView) 컨트롤로 사용할 수 있는 항목 템플릿이 포함되어 있습니다. 이 템플릿을 사용하여 일반적인 앱 유형의 모양을 확인합니다.
 
 데이터 바인딩을 보여주기 위해 이 템플릿은 [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)의 예제 Recording 클래스에 **GridViewItems**를 바인딩합니다.
 
 > [!NOTE] 
-> 현재 **DataTemplate**에 여러 컨트롤(예: 둘 이상의 단일 **TextBlock**)이 포함되어 있는 경우, 화면 판독기의 기본 액세스 가능 이름은 항목의 .ToString()에서 제공됩니다. 편의상 **DataTemplate**의 루트 요소에 있는 [**AutomationProperties.Name**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.automationproperties)을 대신 설정할 수 있습니다. 접근성에 대한 자세한 내용은 [접근성 개요](../accessibility/accessibility-overview.md)를 참조하세요.
+> 현재 **DataTemplate**에 여러 컨트롤(예: 둘 이상의 단일 **TextBlock**)이 포함되어 있는 경우, 화면 판독기의 기본 액세스 가능 이름은 항목의 .ToString()에서 제공됩니다. 편의상 **DataTemplate**의 루트 요소에 있는 [**AutomationProperties.Name**](/uwp/api/windows.ui.xaml.automation.automationproperties)을 대신 설정할 수 있습니다. 접근성에 대한 자세한 내용은 [접근성 개요](../accessibility/accessibility-overview.md)를 참조하세요.
 
 ## <a name="icon-and-text"></a>아이콘 및 텍스트
 이 템플릿을 사용하여 아이콘과 텍스트가 있는 그리드에 앱 컬렉션을 표시합니다.
@@ -156,7 +156,7 @@ ms.locfileid: "75684417"
 ```
 
 ## <a name="related-articles"></a>관련된 문서
-- [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
+- [GridView 클래스](/uwp/api/Windows.UI.Xaml.Controls.GridView)
 - [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)
 - [접근성 개요](../accessibility/accessibility-overview.md)
 - [ListView 및 GridView 샘플(Windows 10)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlListView)

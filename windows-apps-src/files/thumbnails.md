@@ -1,18 +1,18 @@
 ---
-Description: UWP 앱에서 파일을 미리 볼 수 있도록 미리 보기 이미지를 사용하는 방법입니다.
 title: UWP 앱의 미리 보기 이미지에 대한 지침
+description: 사용자가 UWP(유니버설 Windows 플랫폼) 앱에서 탐색할 때 파일을 미리 볼 수 있도록 미리 보기 이미지를 사용하는 방법을 알아봅니다.
 label: Thumbnail images
 template: detail.hbs
 ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 15984e00b036bf44d6e4a7f60cb6435ea1add291
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: df0d2364762d75793f3f00856b06e8ae506cb327
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "63808706"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89165599"
 ---
 # <a name="thumbnail-images"></a>미리 보기 이미지
 
@@ -20,7 +20,7 @@ ms.locfileid: "63808706"
 
 **중요 API**
 
--   [**ThumbnailMode**](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)
+-   [**ThumbnailMode**](/uwp/api/windows.storage.fileproperties.thumbnailmode)
 
 ## <a name="should-my-app-include-thumbnails"></a>내 앱에 미리 보기가 포함되어야 하나요?
 
@@ -36,7 +36,7 @@ ms.locfileid: "63808706"
     ![동영상 미리 보기](images/thumbnail-preview.png)
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
-- 미리 보기를 검색할 때 [미리 보기 모드](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)(PicturesView, VideosView, DocumentsView, MusicView, ListView 또는 SingleItem)를 지정하세요. 이렇게 하면 사용자가 보려는 파일 형식을 표시하기 위해 미리 보기 이미지가 최적화됩니다. 
+- 미리 보기를 검색할 때 [미리 보기 모드](/uwp/api/windows.storage.fileproperties.thumbnailmode)(PicturesView, VideosView, DocumentsView, MusicView, ListView 또는 SingleItem)를 지정하세요. 이렇게 하면 사용자가 보려는 파일 형식을 표시하기 위해 미리 보기 이미지가 최적화됩니다. 
     - SingleItem 모드를 사용하면 파일 형식에 관계 없이 SingleItem에 대한 미리 보기를 검색합니다. 다른 미리 보기 모드는 여러 파일의 미리 보기를 표시합니다. 
 
 - 미리 보기가 로드되는 동안 미리 보기의 위치에 일반 자리 표시자 이미지가 표시됩니다. 자리 표시자를 사용하면 미리 보기가 로드되기 전에 사용자가 미리 보기와 상호 작용할 수 있으므로 앱의 응답성이 높아집니다. 
@@ -55,7 +55,7 @@ ms.locfileid: "63808706"
 - 사진과 동영상 파일에 대한 추가 파일 정보는 표시하지 마세요. 대부분의 경우 미리 보기 이미지만으로 사진과 동영상을 찾아보기에 충분합니다. 
 
 ## <a name="additional-usage-guidelines"></a>추가 사용 지침
-권장 [미리 보기 모드](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode) 및 해당 기능:
+권장 [미리 보기 모드](/uwp/api/windows.storage.fileproperties.thumbnailmode) 및 해당 기능:
 
 <table>
 <tr>
@@ -163,8 +163,8 @@ ms.locfileid: "63808706"
 </div>
 
 ## <a name="related-topics"></a>관련 항목
-- [ThumbnailMode 열거형](https://docs.microsoft.com/uwp/api/windows.storage.fileproperties.thumbnailmode)
-- [StorageItemThumbnail 클래스](https://docs.microsoft.com/uwp/api/Windows.Storage.FileProperties.StorageItemThumbnail)
-- [StorageFile 클래스](https://docs.microsoft.com/uwp/api/windows.storage.storagefile)
+- [ThumbnailMode 열거형](/uwp/api/windows.storage.fileproperties.thumbnailmode)
+- [StorageItemThumbnail 클래스](/uwp/api/Windows.Storage.FileProperties.StorageItemThumbnail)
+- [StorageFile 클래스](/uwp/api/windows.storage.storagefile)
 - [파일 및 폴더 미리 보기 샘플(GitHub)](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/FileThumbnails)
 - [목록 및 그리드 보기](../design/controls-and-patterns/lists.md)

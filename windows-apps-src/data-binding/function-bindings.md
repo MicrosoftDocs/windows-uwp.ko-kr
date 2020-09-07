@@ -1,16 +1,16 @@
 ---
-description: XBind 태그 확장을 사용하면 함수를 태그에 사용할 수 있습니다.
+description: xBind 태그 확장에 데이터 바인딩 경로의 리프 단계로 함수를 사용하는 방법에 대해 알아봅니다.
 title: X:bind 함수
 ms.date: 02/06/2019
 ms.topic: article
 keywords: windows 10, uwp, xBind
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d74e99526ed5531db92ba88a1053e07a3fc993b
-ms.sourcegitcommit: c7f33dbe9516d28664df1b91e03edca3cb9fb0c8
+ms.openlocfilehash: 4d677767f7eb73bf46784b3f256b511e54013548
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87871689"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170047"
 ---
 # <a name="functions-in-xbind"></a>X:bind 함수
 
@@ -23,7 +23,7 @@ Windows 10 버전 1607부터 **{x:Bind}** 는 함수를 바인딩 경로의 리
 - 둘 이상의 매개 변수를 사용하는 바인딩 방식
 
 > [!NOTE]
-> **{x:Bind}** 와 함께 함수를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 함수를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](https://docs.microsoft.com/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
+> **{x:Bind}** 와 함께 함수를 사용하려면 앱의 최소 대상 SDK 버전이 14393 이상이어야 합니다. 앱이 이전 버전의 Windows 10을 대상으로 하는 경우 함수를 사용할 수 없습니다. 대상 버전에 대한 자세한 내용은 [버전 적응 코드](../debug-test-perf/version-adaptive-code.md)를 참조하세요.
 
 다음 예제에서는 항목의 배경과 전경이 색 매개 변수에 따라 변환을 수행하는 함수에 바인딩됩니다.
 

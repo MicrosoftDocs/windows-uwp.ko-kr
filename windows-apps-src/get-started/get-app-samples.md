@@ -1,17 +1,17 @@
 ---
 title: Windows 앱 샘플 가져오기
-description: GitHub에서 Windows 코드 샘플을 다운로드하는 방법을 알아봅니다.
+description: 대부분의 Windows 기능과 해당 API 사용 패턴을 보여주는 GitHub 코드 샘플을 찾아보고 다운로드하고 여는 방법을 알아봅니다.
 ms.date: 06/30/2020
 ms.topic: article
 keywords: windows 10, 샘플 코드, 코드 샘플
 ms.assetid: 393c5a81-ee14-45e7-acd7-495e5d916909
 ms.localizationpriority: medium
-ms.openlocfilehash: 285388c4c1b4791e1ca271a853476416b6d13c13
-ms.sourcegitcommit: 179f8098d10e338ad34fa84934f1654ec58161cd
+ms.openlocfilehash: e08a81ac6f9bca2e4fe4b7451df830e20c714893
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757626"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162947"
 ---
 # <a name="get-windows-app-samples"></a>Windows 앱 샘플 가져오기
 
@@ -19,7 +19,7 @@ ms.locfileid: "85757626"
 
 :::image type="content" source="images/github-windows-samples-page.png" alt-text="GitHub Windows 유니버설 샘플 리포지토리":::
 
-[샘플 브라우저](https://docs.microsoft.com/samples/browse/)를 통해 다양한 Microsoft 개발자 도구 및 기술에 대한 범주별 코드 샘플 컬렉션을 찾아서 검색하면 특정 샘플을 좀 더 쉽게 찾을 수 있습니다.
+[샘플 브라우저](/samples/browse/)를 통해 다양한 Microsoft 개발자 도구 및 기술에 대한 범주별 코드 샘플 컬렉션을 찾아서 검색하면 특정 샘플을 좀 더 쉽게 찾을 수 있습니다.
 
 :::image type="content" source="images/samples-browser-windows.png" alt-text="Microsoft 샘플 브라우저":::
 

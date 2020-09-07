@@ -5,16 +5,16 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ef518c9974fb4c8bc0f09f442f4b78be1c9c85d2
-ms.sourcegitcommit: 3a7f9f05f0127bc8e38139b219e30a8df584cad3
+ms.openlocfilehash: f4d2e4c2c1cfde922e46ddea189ab93447f2b323
+ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83775840"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89411957"
 ---
 # <a name="conditional-xaml"></a>조건부 XAML
 
-*조건부 XAML*은 XAML 태그에 [ApiInformation.IsApiContractPresent](https://docs.microsoft.com/uwp/api/windows.foundation.metadata.apiinformation.isapicontractpresent) 메서드를 사용하는 방법을 제공합니다. 이를 통해 코드 숨김을 사용하지 않고도 API의 존재 여부를 기반으로 태그에서 속성을 설정하고 개체를 인스턴스화할 수 있습니다. 조건부 XML은 요소나 특성을 런타임에 사용할 수 있는지 파악하기 위해 선택적으로 구문 분석합니다. 조건부 명령문은 런타임에 평가되며, **true**로 평가된 경우 조건부 XAML 태그로 자격이 부여된 요소가 구문 분석되고, 그렇지 않으면 무시됩니다.
+*조건부 XAML*은 XAML 태그에 [ApiInformation.IsApiContractPresent](/uwp/api/windows.foundation.metadata.apiinformation.isapicontractpresent) 메서드를 사용하는 방법을 제공합니다. 이를 통해 코드 숨김을 사용하지 않고도 API의 존재 여부를 기반으로 태그에서 속성을 설정하고 개체를 인스턴스화할 수 있습니다. 조건부 XML은 요소나 특성을 런타임에 사용할 수 있는지 파악하기 위해 선택적으로 구문 분석합니다. 조건부 명령문은 런타임에 평가되며, **true**로 평가된 경우 조건부 XAML 태그로 자격이 부여된 요소가 구문 분석되고, 그렇지 않으면 무시됩니다.
 
 조건부 XAML은 크리에이터스 업데이트(버전 1703 빌드 15063)부터 사용할 수 있습니다. 조건부 XAML을 사용하려면 Visual Studio 프로젝트의 최소 버전이 15063(크리에이터스 업데이트) 이상으로 설정되어야 하며, 대상 버전은 최소 버전 이상으로 설정되어야 합니다. Visual Studio 프로젝트 구성에 대한 자세한 내용은 [버전 적응 앱](version-adaptive-apps.md)을 참조하세요.
 
@@ -59,7 +59,7 @@ IsPropertyPresent(ControlType, PropertyName) | IsPropertyNotPresent(ControlType,
 
 이 예에서는 앱이 Fall Creators Update 이상에서 실행될 경우 텍스트 블록의 콘텐츠로 "Hello, Conditional XAML"을 표시하며, 기본값은 이전 버전에 실행이 되는 경우에는 콘텐츠를 표시하지 않도록 지정되어 있습니다.
 
-먼저 'contract5Present'라는 접두사를 가진 사용자 지정 네임스페이스를 정의하고, 기본 XAML 네임스페이스(https://schemas.microsoft.com/winfx/2006/xaml/presentation) 를 [TextBlock.Text](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock.Text) 속성이 포함된 스키마로 사용합니다. 이 조건부 네임스페이스를 만들려면 스키마 뒤에 '?' 구분 기호를 추가합니다.
+먼저 'contract5Present'라는 접두사를 가진 사용자 지정 네임스페이스를 정의하고, 기본 XAML 네임스페이스(https://schemas.microsoft.com/winfx/2006/xaml/presentation) 를 [TextBlock.Text](/uwp/api/windows.ui.xaml.controls.textblock.Text) 속성이 포함된 스키마로 사용합니다. 이 조건부 네임스페이스를 만들려면 스키마 뒤에 '?' 구분 기호를 추가합니다.
 
 그런 다음, Fall Creators Update 이상을 실행하는 디바이스에서 **true**를 반환하는 조건부를 정의합니다. ApiInformation 메서드 **IsApiContractPresent**를 사용하여 5번째 버전의 UniversalApiContract를 확인할 수 있습니다. UniversalApiContract 버전 5는 Fall Creators Update(SDK 16299)와 함께 출시되었습니다.
 
@@ -159,7 +159,7 @@ xmlns:contract5Present="http://schemas.microsoft.com/winfx/2006/xaml/presentatio
 
 지금까지 조건부 XAML를 사용하여 속성을 설정하는 방법을 살펴 보았습니다. 하지만 런타임에 API 계약을 따라 조건부로 컨트롤을 인스턴스할 수도 있습니다.
 
-다음 코드에서는 컨트롤을 사용할 수 있는 Fall Creators Update에서 앱이 실행될 때 [ColorPicker](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.colorpicker)가 인스턴스화됩니다. Fall Creators Update 이전 버전에서는 ColorPicker를 사용할 수 없으므로, 앱이 이전 버전에서 실행될 때는 [ComboBox](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.combobox)를 사용하여 사용자에게 간단한 색상 선택권을 제공할 수 있습니다.
+다음 코드에서는 컨트롤을 사용할 수 있는 Fall Creators Update에서 앱이 실행될 때 [ColorPicker](/uwp/api/windows.ui.xaml.controls.colorpicker)가 인스턴스화됩니다. Fall Creators Update 이전 버전에서는 ColorPicker를 사용할 수 없으므로, 앱이 이전 버전에서 실행될 때는 [ComboBox](/uwp/api/windows.ui.xaml.controls.combobox)를 사용하여 사용자에게 간단한 색상 선택권을 제공할 수 있습니다.
 
 ```xaml
 <contract5Present:ColorPicker x:Name="colorPicker"
@@ -244,7 +244,7 @@ xmlns:contract5Present="http://schemas.microsoft.com/winfx/2006/xaml/presentatio
 
 ## <a name="related-articles"></a>관련된 문서
 
-- [UWP 앱 가이드](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)
+- [UWP 앱 가이드](../get-started/universal-application-platform-guide.md)
 - [API 계약을 사용하여 동적으로 기능 검색](https://blogs.windows.com/buildingapps/2015/09/15/dynamically-detecting-features-with-api-contracts-10-by-10/)
 - [API 계약](https://channel9.msdn.com/Events/Build/2015/3-733)(빌드 2015 비디오)
-- [유니버설 디바이스 패밀리 API 계약](/uwp/extension-sdks/windows-universal-sdk)
+- [확장 SDK를 사용한 프로그래밍](/uwp/extension-sdks/device-families-overview)

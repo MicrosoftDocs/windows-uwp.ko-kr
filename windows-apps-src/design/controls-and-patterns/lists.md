@@ -1,5 +1,5 @@
 ---
-Description: 목록은 컬렉션 기반 콘텐츠를 표시하고 조작할 수 있게 합니다.
+description: 모두 함께 표시되는 여러 관련 데이터 항목의 표현인 컬렉션과 목록에 대해 알아봅니다. 
 title: 컬렉션 및 목록
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Collections and Lists
@@ -12,18 +12,18 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9896003fb1d55a2dbb57468848edd66a3d8d8d88
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: ede68414d86f333b516be81cbae83ea58dc83ba0
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970398"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169917"
 ---
 # <a name="collections-and-lists"></a>컬렉션 및 목록
 
 컬렉션과 목록은 모두 함께 표시되는 여러 관련 데이터 항목의 표현을 나타냅니다. 컬렉션은 다양한 컬렉션 컨트롤(컬렉션 보기라고도 함)에서 여러 가지 방법으로 표현할 수 있습니다. 컬렉션 컨트롤은 연락처 목록, 날짜 목록, 이미지 컬렉션 등과 같은 컬렉션 기반 콘텐츠와의 상호 작용을 표시하고 사용하도록 설정합니다.
 
-> **중요 API**: [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView), [FlipView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview), [TreeView 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.treeview), [ItemsRepeater 클래스](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)
+> **중요 API**: [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](/uwp/api/Windows.UI.Xaml.Controls.GridView), [FlipView 클래스](/uwp/api/windows.ui.xaml.controls.flipview), [TreeView 클래스](/uwp/api/windows.ui.xaml.controls.treeview), [ItemsRepeater 클래스](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)
 
 이 문서에서 설명하는 컨트롤은 다음과 같습니다.
 
@@ -35,14 +35,14 @@ ms.locfileid: "82970398"
 
 디자인 지침 - 각 컨트롤에 대한 디자인 지침, 기능 및 예제가 아래에 나와 있습니다.
 
-이러한 각 컨트롤(ItemsRepeater 제외)은 기본 제공 스타일 지정 및 상호 작용을 제공합니다. 그러나 컬렉션 보기의 시각적 모양과 내부의 항목을 추가로 사용자 지정하려면 [DataTemplate](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.DataTemplate)을 사용합니다. 데이터 템플릿에 대한 자세한 내용과 컬렉션 보기의 모양을 사용자 지정하는 방법은 [항목 컨테이너 및 템플릿](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/item-containers-templates) 페이지에서 찾을 수 있습니다.
+이러한 각 컨트롤(ItemsRepeater 제외)은 기본 제공 스타일 지정 및 상호 작용을 제공합니다. 그러나 컬렉션 보기의 시각적 모양과 내부의 항목을 추가로 사용자 지정하려면 [DataTemplate](/uwp/api/Windows.UI.Xaml.DataTemplate)을 사용합니다. 데이터 템플릿에 대한 자세한 내용과 컬렉션 보기의 모양을 사용자 지정하는 방법은 [항목 컨테이너 및 템플릿](./item-containers-templates.md) 페이지에서 찾을 수 있습니다.
 
 이러한 각 컨트롤(ItemsRepeater 제외)에는 하나 또는 여러 항목을 선택할 수 있는 기본 제공 동작도 있습니다. 자세히 알아보려면 [선택 모드 개요](selection-modes.md)를 참조하세요.
 
-이 문서에서 다루지 않는 시나리오 중 하나는 테이블 또는 여러 열에 컬렉션을 표시하는 것입니다. 컬렉션을 이 형식으로 표시하려는 경우 [Windows 커뮤니티 도구 키트](https://docs.microsoft.com/windows/communitytoolkit/)의 [DataGrid 컨트롤](https://docs.microsoft.com/windows/communitytoolkit/controls/datagrid)을 사용하는 것이 좋습니다. 
+이 문서에서 다루지 않는 시나리오 중 하나는 테이블 또는 여러 열에 컬렉션을 표시하는 것입니다. 컬렉션을 이 형식으로 표시하려는 경우 [Windows 커뮤니티 도구 키트](/windows/communitytoolkit/)의 [DataGrid 컨트롤](/windows/communitytoolkit/controls/datagrid)을 사용하는 것이 좋습니다. 
 
 > **Windows 10 Fall Creators Update - 동작 변경 사항** 이제 기본적으로 선택을 수행하는 대신 터치, 터치패드, 패시브 펜 등의 활성 펜이 Windows 앱의 목록을 스크롤/이동합니다.
-> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 재정의하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 [Scroll Viewer 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer)에 대한 API 참조 항목을 참조하세요.
+> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 재정의하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 [Scroll Viewer 클래스](/uwp/api/windows.ui.xaml.controls.scrollviewer)에 대한 API 참조 항목을 참조하세요.
 
 ## <a name="examples"></a>예
 
@@ -277,7 +277,7 @@ ms.locfileid: "82970398"
 
 ### <a name="examples"></a>예
 
-동일한 데이터 원본(숫자 컬렉션)에 바인딩된 모든 ItemsRepeater 컨트롤의 세 가지 예는 다음과 같습니다. 숫자 컬렉션은 세 가지 방법으로 표현되며, 아래의 각 ItemRepeater는 서로 다른 사용자 지정 [Layout](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.layout)과 [ItemTemplate](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate?view=winui-2.2)을 사용합니다.
+동일한 데이터 원본(숫자 컬렉션)에 바인딩된 모든 ItemsRepeater 컨트롤의 세 가지 예는 다음과 같습니다. 숫자 컬렉션은 세 가지 방법으로 표현되며, 아래의 각 ItemRepeater는 서로 다른 사용자 지정 [Layout](/uwp/api/microsoft.ui.xaml.controls.layout)과 [ItemTemplate](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate?view=winui-2.2)을 사용합니다.
 
 ![가로 막대를 사용하는 ItemsRepeater](images/itemsrepeater-1.png)
 ![세로 막대를 사용하는 ItemsRepeater](images/itemsrepeater-2.png)
@@ -332,7 +332,7 @@ ms.locfileid: "82970398"
 - [미리 보기 이미지](../../files/thumbnails.md)
 
 **API 참조**
-- [ListView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListView)
-- [GridView 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.GridView)
-- [ComboBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
-- [ListBox 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ListBox)
+- [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView)
+- [GridView 클래스](/uwp/api/Windows.UI.Xaml.Controls.GridView)
+- [ComboBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
+- [ListBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListBox)

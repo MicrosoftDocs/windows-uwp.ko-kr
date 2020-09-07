@@ -1,5 +1,5 @@
 ---
-description: Fluent 디자인 및 이를 앱에 통합하는 방법을 알아봅니다.
+description: UWP(유니버설 Windows 플랫폼)의 Fluent Design 시스템과 앱에 통합하는 방법을 알아봅니다.
 title: Windows용 Fluent 디자인 시스템
 keywords: UWP 앱 레이아웃, 유니버설 Windows 플랫폼, 앱 디자인, 인터페이스, Fluent 디자인 시스템
 ms.date: 03/07/2018
@@ -8,12 +8,12 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: 7d340b3db12aef964a65860855acc0f0722cda64
-ms.sourcegitcommit: 6cdba316bdbd85a2429259ebfb59ff94440e234a
+ms.openlocfilehash: a46aae591767ac6ded935d3b76d60bb8fbfa2746
+ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882935"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89094530"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Windows 앱 작성자용 Fluent 디자인 시스템
 

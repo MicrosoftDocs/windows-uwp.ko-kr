@@ -5,15 +5,15 @@ ms.date: 05/30/2018
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 포팅, 마이그레이션, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: 663e0dddb9823e35e2d31ba9667bd3d16bd1d5de
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: f7e7000a70a71f8ad90fd38c74d6e29882b4cbaa
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79510996"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89157260"
 ---
 # <a name="move-to-cwinrt-from-wrl"></a>WRL에서 C++/WinRT로 이동
-[Windows 런타임 C++ 템플릿 라이브러리(WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 코드를 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)의 상응하는 코드로 포팅하는 방법을 보여줍니다.
+[Windows 런타임 C++ 템플릿 라이브러리(WRL)](/cpp/windows/windows-runtime-cpp-template-library-wrl) 코드를 [C++/WinRT](./intro-to-using-cpp-with-winrt.md)의 상응하는 코드로 포팅하는 방법을 보여줍니다.
 
 C++/WinRT로 포팅하는 첫 번째 단계는 수동으로 C++/WinRT 지원을 프로젝트에 추가하는 것입니다([C++/WinRT에 대한 Visual Studio 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 이 작업을 수행하려면 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/)를 프로젝트에 설치합니다. Visual Studio에서 프로젝트를 열고, **프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기**를 차례로 클릭하고, 검색 상자에서 **Microsoft.Windows.CppWinRT**를 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치**를 클릭하여 해당 프로젝트에 대한 패키지를 설치합니다. 해당 변경의 효과 중 하나는 프로젝트에서 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx)에 대한 지원이 꺼진다는 것입니다. 프로젝트에서 C++/CX를 사용 중인 경우 지원을 끈 채로 유지하고 C++/CX 코드를 C++/WinRT에도 업데이트할 수 있습니다([C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md) 참조). 또는 지원을 다시 켜고(프로젝트 속성에서 **C/C++** \> **일반** \> **Windows 런타임 확장 사용** \> **예(/ZW)** ) 먼저 WRL 코드 포팅에 집중할 수 있습니다. C++/CX 및 C++/WinRT 코드는 같은 프로젝트에 공존할 수 있으며, XAML 컴파일러 지원 및 Windows 런타임 구성 요소의 예외가 있습니다([C++/CX에서 C++/WinRT로 이동](move-to-winrt-from-cx.md) 참조).
 
@@ -28,7 +28,7 @@ C++/WinRT로 포팅하는 첫 번째 단계는 수동으로 C++/WinRT 지원을 
 C++/WinRT 프로젝션된 Windows API 헤더를 포함하는 경우(예: `winrt/Windows.Foundation.h`) 자동으로 포함되기 때문에 명시적으로 이와 같은 `winrt/base.h`를 포함할 필요가 없습니다.
 
 ## <a name="porting-wrl-com-smart-pointers-microsoftwrlcomptr"></a>WRL COM 스마트 포인터 포팅([Microsoft: WRL::ComPtr](/cpp/windows/comptr-class))
-**Microsoft::WRL::ComPtr\<T\>** 를 사용하는 코드를 포팅하여 [**winrt::com_ptr\<T\>** ](/uwp/cpp-ref-for-winrt/com-ptr)를 사용합니다. 다음은 코드 이전과 이후의 예제입니다. *이후* 버전에서 [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrput-function) 멤버 함수는 기본 원시 포인터를 설정할 수 있도록 검색합니다.
+**Microsoft::WRL::ComPtr\<T\>** 을 사용하는 코드를 포팅하여 [**winrt::com_ptr\<T\>** ](/uwp/cpp-ref-for-winrt/com-ptr)을 사용합니다. 다음은 코드 이전과 이후의 예제입니다. *이후* 버전에서 [**com_ptr::put**](/uwp/cpp-ref-for-winrt/com-ptr#com_ptrput-function) 멤버 함수는 기본 원시 포인터를 설정할 수 있도록 검색합니다.
 
 ```cpp
 ComPtr<IDXGIAdapter1> previousDefaultAdapter;

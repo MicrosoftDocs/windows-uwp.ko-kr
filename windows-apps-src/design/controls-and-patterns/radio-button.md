@@ -1,5 +1,5 @@
 ---
-Description: 라디오 단추를 사용하면 두 가지 이상의 옵션 중 하나를 선택할 수 있습니다.
+description: 라디오 단추를 사용하여 사용자가 상호 배타적이지만 관련이 있는 두 가지 이상의 옵션 중에 하나를 선택하도록 하는 방법을 알아보세요.
 title: 라디오 단추에 대한 지침
 ms.assetid: 41E3F928-AA55-42A2-9281-EC3907C4F898
 label: Radio buttons
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: dc6f5eb32cdedf442b6866e1e53be85edfb98dcb
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 7d09eaefff193a8283fd4bad68528b8976e0b63b
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493438"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169787"
 ---
 # <a name="radio-buttons"></a>라디오 단추
 
@@ -33,7 +33,7 @@ RadioButtons 그룹의 동작은 여러 항목을 선택 및 선택 취소하거
 
 | &nbsp; | &nbsp; |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | RadioButtons 컨트롤은 Windows 앱용 최신 컨트롤과 UI 기능을 포함하고 있는 NuGet 패키지인 Windows UI 라이브러리의 일부로 제공됩니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | RadioButtons 컨트롤은 Windows 앱용 최신 컨트롤과 UI 기능을 포함하고 있는 NuGet 패키지인 Windows UI 라이브러리의 일부로 제공됩니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
 
 **Windows UI 라이브러리 API**: 
 * [RadioButtons 클래스](/uwp/api/microsoft.ui.xaml.controls.radiobuttons)
@@ -42,9 +42,9 @@ RadioButtons 그룹의 동작은 여러 항목을 선택 및 선택 취소하거
 * [SelectedIndex 속성](/uwp/api/microsoft.ui.xaml.controls.radiobuttons.selectedindex)
 
 **플랫폼 API**: 
-* [RadioButton 클래스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RadioButton)
-* [Checked 이벤트](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked)
-* [IsChecked 속성](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
+* [RadioButton 클래스](/uwp/api/Windows.UI.Xaml.Controls.RadioButton)
+* [Checked 이벤트](/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.Checked)
+* [IsChecked 속성](/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton.IsChecked)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -129,7 +129,7 @@ RadioButtons 컨트롤의 경우 옵션 목록이 세로 방향으로만 정렬�
 
 항목이 왼쪽에서 오른쪽으로, 위에서 아래로 채워지는 행 중심 배열에서는 포커스가 행의 마지막 항목에 있는 상태에서 오른쪽 화살표 키를 누르면 포커스가 그 다음 행의 첫 번째 항목으로 이동합니다. 이와 똑같은 동작이 역순으로 발생합니다. 포커스가 행의 첫 번째 항목에 있는 상태에서 왼쪽 화살표 키를 누르면 포커스가 이전 행의 마지막 항목으로 이동합니다.
 
-자세한 내용은 [키보드 조작](https://docs.microsoft.com/windows/uwp/design/input/keyboard-interactions#wrapping-homogeneous-list-and-grid-view-items)을 참조하세요.
+자세한 내용은 [키보드 조작](../input/keyboard-interactions.md#wrapping-homogeneous-list-and-grid-view-items)을 참조하세요.
 
 ##### <a name="wrapping"></a>줄 바꿈
 
@@ -377,4 +377,4 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 
 ### <a name="for-developers-xaml"></a>개발자용(XAML)
 
-- [RadioButton 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.radiobutton)
+- [RadioButton 클래스](/uwp/api/windows.ui.xaml.controls.radiobutton)

@@ -1,16 +1,16 @@
 ---
 title: 데이터 바인딩 만들기
-description: 이 문서에서는 XAML의 데이터 바인딩 기본 사항에 대해 설명합니다.
+description: 이 자습서를 따라 XAML 및 C#을 사용하여 데이터 바인딩을 만들어 UI와 데이터 간의 직접 링크를 형성하는 방법을 알아봅니다.
 keywords: XAML, UWP, 시작
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ac0603aab5abdc9aef54264c7e8d5bf9ae848889
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: 5d3363dcc47ef43fe65b3c954b213a81cc5165e1
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88943123"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89166287"
 ---
 # <a name="tutorial-create-data-bindings"></a>자습서: 데이터 바인딩 만들기
 
@@ -627,5 +627,5 @@ public string ImageTitle
 
 이 자습서에서 필요한 모든 정보를 얻을 수 있겠지만, 더 많은 지침이 필요하다면 한 번 클릭으로 데이터 바인딩 문서를 확인할 수 있습니다. 여기서 시작하세요.
 
-+ [{x:Bind} 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)
-+ [데이터 바인딩 심층 분석](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-in-depth)
++ [{x:Bind} 태그 확장](../xaml-platform/x-bind-markup-extension.md)
++ [데이터 바인딩 심층 분석](./data-binding-in-depth.md)

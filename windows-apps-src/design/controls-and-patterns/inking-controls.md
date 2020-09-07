@@ -1,5 +1,5 @@
 ---
-Description: 설명된 잉크 도구
+description: Windows 앱에서 수동 입력 및 잉크 관련 기능을 활용하는 InkCanvas 및 InkToolbar 컨트롤에 대해 알아봅니다.
 title: 수동 입력 컨트롤
 label: Inking Controls
 template: detail.hbs
@@ -8,18 +8,18 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 97eae5f3-c16b-4aa5-b4a1-dd892cf32ead
 ms.localizationpriority: medium
-ms.openlocfilehash: 56104dd5608356b47a405c37eba71e544c5ba23c
-ms.sourcegitcommit: 37e4af3ba203295c7e88448414cf7ea537ab5402
+ms.openlocfilehash: a856d0ef6864b70a2927c35205fb0addca3e4056
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84257446"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173967"
 ---
 # <a name="inking-controls"></a>수동 입력 컨트롤
 
 
 
-Windows 앱에서 수동 입력을 간편하게 하는 두 가지 컨트롤은 [InkCanvas](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas) 및 [InkToolbar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar)입니다.
+Windows 앱에서 수동 입력을 간편하게 하는 두 가지 컨트롤은 [InkCanvas](/uwp/api/windows.ui.xaml.controls.inkcanvas) 및 [InkToolbar](/uwp/api/windows.ui.xaml.controls.inktoolbar)입니다.
 
 InkCanvas 컨트롤은 펜 입력을 잉크 스트로크(색과 두께에 기본 설정 사용) 또는 지우기 스트로크로 렌더링합니다. 이 컨트롤은 기본 잉크 스트로크 속성을 변경하기 위한 기본 제공 UI를 포함하지 않는 투명 오버레이입니다.
 
@@ -35,7 +35,7 @@ InkCanvas 컨트롤은 기본 잉크 스트로크 설정 변경 지원을 포함
 
 <img src="images/ink-tools-invoked-toolbar.png" width="300" alt="InkToolbar palette flyout">
 
-> **중요 API**: [InkCanvas 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inkcanvas), [InkToolbar 클래스](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar), [InkPresenter 클래스](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter), [Windows.UI.Input.Inking](https://docs.microsoft.com/uwp/api/Windows.UI.Input.Inking)
+> **중요 API**: [InkCanvas 클래스](/uwp/api/windows.ui.xaml.controls.inkcanvas), [InkToolbar 클래스](/uwp/api/windows.ui.xaml.controls.inktoolbar), [InkPresenter 클래스](/uwp/api/windows.ui.input.inking.inkpresenter), [Windows.UI.Input.Inking](/uwp/api/Windows.UI.Input.Inking)
 
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
@@ -47,7 +47,7 @@ InkCanvas 컨트롤은 기본 잉크 스트로크 설정 변경 지원을 포함
 InkToolbar와 InkCanvas를 연결하여 잉크 기능을 활성화하고 스트로크 크기, 색, 펜 팁 모양 등의 기본적인 잉크 속성을 설정하기 위한 UI를 제공합니다.
 
 > [!NOTE] 
-> InkCanvas에서 잉크 스트로크 렌더링을 보다 광범위하게 사용자 지정하려면 기본 [InkPresenter](https://docs.microsoft.com/uwp/api/windows.ui.input.inking.inkpresenter) 개체를 사용합니다.
+> InkCanvas에서 잉크 스트로크 렌더링을 보다 광범위하게 사용자 지정하려면 기본 [InkPresenter](/uwp/api/windows.ui.input.inking.inkpresenter) 개체를 사용합니다.
 
 ## <a name="examples"></a>예
 
@@ -84,7 +84,7 @@ InkCanvas 및 InkToolbar는 **Windows Ink 작업 영역**의 **캡처 및 스케
 ```
 
 > [!NOTE]
-> InkPresenter를 사용한 InkCanvas 사용자 지정에 대한 자세한 내용은 [“Windows 앱의 펜 조작 및 Windows Ink”](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions) 문서를 참조하세요.
+> InkPresenter를 사용한 InkCanvas 사용자 지정에 대한 자세한 내용은 [“Windows 앱의 펜 조작 및 Windows Ink”](../input/pen-and-stylus-interactions.md) 문서를 참조하세요.
 
 InkToolbar 컨트롤은 InkCanvas와 함께 사용해야 합니다. InkToolbar(모든 기본 제공 도구 포함)를 앱에 통합하려면 다음과 같은 한 줄의 태그가 추가로 필요합니다.
 
@@ -170,6 +170,6 @@ InkToolbar는 최상위 항목일 수 있지만 일반적으로 "수동 입력" 
 
 ## <a name="related-articles"></a>관련된 문서
 
-- [Windows 앱의 펜 조작 및 Windows Ink](https://docs.microsoft.com/windows/uwp/design/input/pen-and-stylus-interactions)
-- [Windows Ink 스트로크를 텍스트 및 셰이프로 인식](https://docs.microsoft.com/windows/uwp/design/input/convert-ink-to-text)
-- [Windows Ink 스트로크 데이터 저장 및 검색](https://docs.microsoft.com/windows/uwp/design/input/save-and-load-ink)
+- [Windows 앱의 펜 조작 및 Windows Ink](../input/pen-and-stylus-interactions.md)
+- [Windows Ink 스트로크를 텍스트 및 셰이프로 인식](../input/convert-ink-to-text.md)
+- [Windows Ink 스트로크 데이터 저장 및 검색](../input/save-and-load-ink.md)

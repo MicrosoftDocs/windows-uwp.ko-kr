@@ -3,7 +3,7 @@ pm-contact: kisai
 design-contact: ksulliv
 dev-contact: Shmazlou
 doc-status: Published
-Description: 살짝 밀기 명령은 상황에 맞는 메뉴를 위한 터치 가속기입니다.
+description: 사용자가 여러 항목에 대해 연속적으로 동일한 작업을 수행할 수 있도록 상황에 맞는 메뉴의 터치 가속기로 살짝 밀기 명령을 사용하는 방법을 알아봅니다.
 title: 살짝 밀기
 label: Swipe
 template: detail.hbs
@@ -11,12 +11,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 315edbddccc51b7e742bf9beffad8497a104ce03
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: f81e440670ccee34269ddbe5d55d93637b8d89df
+ms.sourcegitcommit: cb5af00af05e838621c270173e7fde1c5d2168ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80614092"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89043555"
 ---
 # <a name="swipe"></a>살짝 밀기
 
@@ -34,7 +34,7 @@ ms.locfileid: "80614092"
 
 항목 그룹의 크기가 클 때는 살짝 밀기 명령을 사용해야 합니다. 각 항목에는 사용자가 정기적으로 수행하고 싶어하는 작업이 1 ~ 3개 포함되어 있습니다. 이러한 작업은 다음을 포함하지만 이에 국한되지 않습니다.
 
-- 삭제
+- 삭제 중
 - 표시 또는 보관
 - 저장 또는 다운로드
 - 회신

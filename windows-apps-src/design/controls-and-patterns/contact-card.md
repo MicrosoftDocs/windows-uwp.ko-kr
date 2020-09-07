@@ -1,5 +1,5 @@
 ---
-Description: 단추를 사용하면 즉각적인 작업을 트리거할 수 있습니다.
+description: 연락처 카드를 사용하여 사용자가 이름, 전화 번호 및 주소와 같은 연락처 정보를 표시하고 편집하는 방법을 알아봅니다.
 title: 연락처 카드
 ms.date: 03/07/2018
 ms.topic: article
@@ -9,12 +9,12 @@ design-contact: tbd
 dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
-ms.openlocfilehash: 274481b2a282b025a637f7f6cc54dc0161c3e61d
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 2817977533b63df8498faa1ecbc5cc57a4987c30
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82968758"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160597"
 ---
 # <a name="contact-card"></a>연락처 카드
 
@@ -174,12 +174,12 @@ private void onUserClickShowContactCard()
 
 ## <a name="retrieving-real-contacts"></a>"실제" 연락처 검색
 
-이 문서의 예제에서는 간단한 연락처를 만들어 보았습니다. 실제 앱에서는 아마도 기존 연락처를 검색하고 싶을 것입니다. 이에 대한 지침은 [연락처 및 일정 문서](/windows/uwp/contacts-and-calendar/)를 참조하세요.
+이 문서의 예제에서는 간단한 연락처를 만들어 보았습니다. 실제 앱에서는 아마도 기존 연락처를 검색하고 싶을 것입니다. 이에 대한 지침은 [연락처 및 일정 문서](../../contacts-and-calendar/index.md)를 참조하세요.
 
 
 
 
 ## <a name="related-articles"></a>관련된 문서
-- [연락처 및 일정](/windows/uwp/contacts-and-calendar/)
+- [연락처 및 일정](../../contacts-and-calendar/index.md)
 - [연락처 카드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ContactCards)
 - [인물 사진 컨트롤](/windows/uwp/controls-and-patterns/person-picture/)

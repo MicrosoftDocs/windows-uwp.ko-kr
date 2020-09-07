@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, 데스크톱 개발
-ms.openlocfilehash: 778c15bc511404fad9cf5713876f89c7fef56165
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: d4415bc703acf0b94f6f8a6fe8aab053620336c6
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493008"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89168907"
 ---
 # <a name="choose-your-app-platform"></a>앱 플랫폼 선택
 
@@ -51,12 +51,12 @@ WPF는 .NET Core 또는 전체 .NET Framework에 액세스할 수 있는 관리�
 
 WPF에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-* [시작(WPF)](https://docs.microsoft.com/dotnet/framework/wpf/getting-started/)
+* [시작(WPF)](/dotnet/framework/wpf/getting-started/)
 * [프로젝트 템플릿](visual-studio-templates.md#net-templates)
 * [첫 번째 앱 만들기(.NET Core)](/visualstudio/get-started/csharp/tutorial-wpf/)
 * [첫 번째 앱 만들기(.NET Framework)](/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application/)
 * [WPF 앱을 .NET Core로 마이그레이션](/dotnet/desktop-wpf/migration/convert-project-from-net-framework/)
-* [API 참조(.NET)](https://docs.microsoft.com/dotnet/api/index)
+* [API 참조(.NET)](/dotnet/api/index)
 * [샘플](https://github.com/Microsoft/WPF-Samples)
 
 ## <a name="windows-forms"></a>Windows Forms
@@ -65,11 +65,11 @@ Windows Forms는 경량 UI 모델과 .NET Core 또는 전체 .NET Framework에 �
 
 Windows Forms에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-* [Windows Forms 시작](https://docs.microsoft.com/dotnet/framework/winforms/getting-started-with-windows-forms)
+* [Windows Forms 시작](/dotnet/framework/winforms/getting-started-with-windows-forms)
 * [프로젝트 템플릿](visual-studio-templates.md#net-templates)
 * [첫 번째 Windows Forms 앱 만들기](/dotnet/framework/winforms/creating-a-new-windows-form)
 * [자습서: 사진 뷰어 만들기](/visualstudio/ide/tutorial-1-create-a-picture-viewer?view=vs-2019)
-* [API 참조(.NET)](https://docs.microsoft.com/dotnet/api/index)
+* [API 참조(.NET)](/dotnet/api/index)
 * [Windows Forms 앱 강화](/dotnet/framework/winforms/advanced/)
 
 ## <a name="win32"></a>Win32
@@ -125,8 +125,12 @@ Windows 10에서 각각의 주요 데스크톱 플랫폼은 [WinUI(Windows UI) �
 
 ### <a name="progressive-web-apps-pwas"></a>PWA(프로그레시브 웹앱)
 
-PWA를 통해 개발자는 웹 사이트 코드를 Windows 10 PC의 애플리케이션처럼 설치하고 실행할 수 있도록 패키징할 수 있습니다. 자세한 내용은 [프로그레시브 웹앱](https://docs.microsoft.com/microsoft-edge/progressive-web-apps/get-started)을 참조하세요.
+PWA를 통해 개발자는 웹 사이트 코드를 Windows 10 PC의 애플리케이션처럼 설치하고 실행할 수 있도록 패키징할 수 있습니다. 자세한 내용은 [프로그레시브 웹앱](/microsoft-edge/progressive-web-apps/get-started)을 참조하세요.
 
 ### <a name="xamarin"></a>Xamarin
 
 Xamarin을 사용하여 iOS 및 Android에서도 실행할 수 있는 Windows 10용 플랫폼 간 애플리케이션을 빌드합니다. 자세한 내용은 [Xamarin](https://docs.microsoft.com/xamarin/xamarin-forms/get-started/index)을 참조하세요.
+
+### <a name="uno-platform"></a>Uno Platform
+
+Uno Platform은 Windows UWP 기반 코드(C# 및 XAML)를 iOS, Android 및 WebAssembly에서 실행하는 데 사용됩니다. [Windows 10 2004(19041)](/windows/uwp/whats-new/windows-10-build-19041)의 UWP에 대한 전체 API 정의와 UWP API의 일부분에 대한 구현(예: [Windows.UI.Xaml](/uwp/api/windows.ui.xaml.documents?view=winrt-19041))을 제공하여 UWP 애플리케이션을 이러한 플랫폼에서 실행할 수 있도록 합니다. 자세한 내용은 [Uno Platform 문서](https://platform.uno/docs/articles/intro.html)를 참조하세요.

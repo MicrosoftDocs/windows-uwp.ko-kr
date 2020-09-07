@@ -1,16 +1,16 @@
 ---
 title: 사용자 지정 스타일 만들기
-description: 이 문서는 XAML의 UI 요소 스타일의 기본 사항에 대해 설명합니다.
+description: 이 자습서를 따라 사용자 지정 스타일 및 슬라이더 컨트롤을 만들어 XAML 앱의 UI를 사용자 지정하는 방법을 알아봅니다.
 keywords: XAML, UWP, 시작
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 60a62a80017b2c77acfc2604daf909ae1ec9fd36
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: 6d3423e9d78e2519f2d3c9ad1fc2c0b099de0349
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942963"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89160777"
 ---
 # <a name="tutorial-create-custom-styles"></a>자습서: 사용자 지정 스타일 만들기
 
@@ -76,11 +76,11 @@ F5 키를 눌러 앱을 컴파일 및 실행합니다. 첫 번째 화면에는 �
 
 1. `Polygon` 요소를 사용하여 노출 슬라이더의 배경 모양을 만듭니다.
 
-    [Windows.UI.Xaml.Shapes 네임스페이스](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Shapes)는 선택할 수 있는 7가지 셰이프를 제공합니다. 타원, 직사각형 및 유니콘처럼 어떤 형태로든 만들 수 있는 패스라고 불리는 항목이 있습니다.
+    [Windows.UI.Xaml.Shapes 네임스페이스](/uwp/api/Windows.UI.Xaml.Shapes)는 선택할 수 있는 7가지 셰이프를 제공합니다. 타원, 직사각형 및 유니콘처럼 어떤 형태로든 만들 수 있는 패스라고 불리는 항목이 있습니다.
 
     ![유니콘](../basics/images/xaml-basics/unicorn.png)
 
-    > **확인 항목:** [셰이프 그리기](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/shapes) 문서에서는 XAML 도형에 대해 알아야 할 모든 정보를 제공합니다.
+    > **확인 항목:** [셰이프 그리기](../controls-and-patterns/shapes.md) 문서에서는 XAML 도형에 대해 알아야 할 모든 정보를 제공합니다.
 
     스테레오의 볼륨 컨트롤에서 볼 수 있는 모양과 같은 삼각형 모양의 위젯을 만들려고 합니다.
 
@@ -200,7 +200,7 @@ F5 키를 눌러 앱을 컴파일 및 실행합니다. 첫 번째 화면에는 �
 
 XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대폭 줄일 수 있고 앱의 모양을 훨씬 쉽게 업데이트할 수 있다는 것입니다.
 
-스타일을 정의하려면 스타일을 지정할 컨트롤이 포함된 요소의 [Resources](https://docs.microsoft.com/uwp/api/windows.ui.xaml.frameworkelement.Resources) 속성에 [Style](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Style) 요소를 추가합니다.  `Page.Resources` 속성에 스타일을 추가하면 스타일이 전체 페이지에 액세스할 수 있습니다. App.xaml 파일의 `Application.Resources` 속성에 스타일을 추가하면 스타일이 전체 앱에 액세스할 수 있습니다.
+스타일을 정의하려면 스타일을 지정할 컨트롤이 포함된 요소의 [Resources](/uwp/api/windows.ui.xaml.frameworkelement.Resources) 속성에 [Style](/uwp/api/Windows.UI.Xaml.Style) 요소를 추가합니다.  `Page.Resources` 속성에 스타일을 추가하면 스타일이 전체 페이지에 액세스할 수 있습니다. App.xaml 파일의 `Application.Resources` 속성에 스타일을 추가하면 스타일이 전체 앱에 액세스할 수 있습니다.
 
 명명된 스타일과 일반 스타일을 만들 수 있습니다. 명명된 스타일은 특정 컨트롤에 명시적으로 적용되어야 합니다. 일반 스타일은 지정된 `TargetType`과 일치하는 모든 컨트롤에 적용됩니다.
 

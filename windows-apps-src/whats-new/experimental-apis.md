@@ -1,16 +1,16 @@
 ---
 title: 실험적 API
-description: 실험적 API에 대한 이해
+description: 개발자가 사용해 볼 수 있도록 Windows 참가자 SDK를 사용하여 외부에서 실험적 API를 플라이트하는 방법을 알아봅니다.
 ms.date: 11/13/2017
 ms.topic: article
 keywords: windows 10, uwp, 실험적, api
 ms.localizationpriority: medium
-ms.openlocfilehash: 542e007d07d490c2f18077e646f7598bfd2587c3
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 5a4813e7b4ae1e3dd16017066758aa8a35d0570a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75684908"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170807"
 ---
 # <a name="experimental-apis"></a>실험적 API
 
@@ -25,7 +25,7 @@ Intellisense를 사용하면 API가 실험적인지 여부를 알 수 있습니�
 
 기본적으로 이러한 API는 런타임 시 비활성화되므로 이를 호출하면 런타임 예외가 발생합니다. 이는 부주의하게 종속 항목을 만들거나 실험적 API를 사용하는 앱을 배포하지 못하게 하기 위한 또 다른 보호 방법입니다.
 
-이러한 API를 실험적으로 사용하려면 대상 디바이스에서 [Windows 장치 포털(WDP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal) 기능 플러그인을 사용하여 호출하려는 API에 해당하는 기능을 활성화합니다.
+이러한 API를 실험적으로 사용하려면 대상 디바이스에서 [Windows 장치 포털(WDP)](../debug-test-perf/device-portal.md) 기능 플러그인을 사용하여 호출하려는 API에 해당하는 기능을 활성화합니다.
 
 특정한 실험적 API에 대한 설명서는 API를 소유한 팀의 재량에 달려 있습니다.
 

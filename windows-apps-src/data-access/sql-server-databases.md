@@ -1,21 +1,21 @@
 ---
 title: UWP 앱에서 SQL Server 데이터베이스 사용
-description: UWP 앱에서 SQL Server 데이터베이스를 사용합니다.
+description: System.Data.SqlClient를 사용하여 UWP 앱을 SQL Server 데이터베이스에 직접 연결한 다음, 데이터를 저장하고 검색하는 방법을 알아봅니다.
 ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp, SQL Server, 데이터베이스
 ms.localizationpriority: medium
-ms.openlocfilehash: d5c5c0f107a9e9a2adb0587b544a2c74b8321886
-ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
+ms.openlocfilehash: b775f1b6f7850b1e7c0b951c0126fcb97ceec8a2
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85448343"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170187"
 ---
 # <a name="use-a-sql-server-database-in-a-uwp-app"></a>UWP 앱에서 SQL Server 데이터베이스 사용
-앱에서 [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient) 네임스페이스를 사용하여 SQL Server 데이터베이스에 직접 연결한 다음, 데이터를 저장하고 검색할 수 있습니다.
+앱에서 [System.Data.SqlClient](/dotnet/api/system.data.sqlclient) 네임스페이스를 사용하여 SQL Server 데이터베이스에 직접 연결한 다음, 데이터를 저장하고 검색할 수 있습니다.
 
-이 가이드에서 그 방법 중 하나를 살펴보겠습니다. SQL Server 인스턴스에 [Northwind](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) 샘플 데이터베이스를 설치한 후 코드 조각을 사용하면, 기본 UI가 Northwind 샘플 데이터베이스의 제품을 보여 줍니다.
+이 가이드에서 그 방법 중 하나를 살펴보겠습니다. SQL Server 인스턴스에 [Northwind](/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) 샘플 데이터베이스를 설치한 후 코드 조각을 사용하면, 기본 UI가 Northwind 샘플 데이터베이스의 제품을 보여 줍니다.
 
 ![Northwind 제품](images/products-northwind.png)
 
@@ -53,7 +53,7 @@ ms.locfileid: "85448343"
 :five: UI를 제품으로 채웁니다.
 
 >[!NOTE]
-> 이 섹션에서는 데이터 액세스 코드를 구성하는 방법 중 하나를 설명합니다. SQL Server 데이터베이스에서 데이터를 저장 및 검색하기 위해 [System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient)를 사용하는 방법에 대한 예제만 제공합니다. 애플리케이션 디자인에 가장 적합한 방식으로 코드를 구성할 수 있습니다.
+> 이 섹션에서는 데이터 액세스 코드를 구성하는 방법 중 하나를 설명합니다. SQL Server 데이터베이스에서 데이터를 저장 및 검색하기 위해 [System.Data.SqlClient](/dotnet/api/system.data.sqlclient)를 사용하는 방법에 대한 예제만 제공합니다. 애플리케이션 디자인에 가장 적합한 방식으로 코드를 구성할 수 있습니다.
 
 ### <a name="add-a-connection-string"></a>연결 문자열 추가
 
@@ -80,7 +80,7 @@ sealed partial class App : Application
 
 ### <a name="create-a-class-to-hold-product-data"></a>제품 데이터를 저장할 클래스 만들기
 
-[INotifyPropertyChanged](https://docs.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged) 이벤트를 구현하는 클래스를 만들어 XAML UI 속성을 이 클래스의 속성에 바인딩합니다.
+[INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) 이벤트를 구현하는 클래스를 만들어 XAML UI 속성을 이 클래스의 속성에 바인딩합니다.
 
 ```csharp
 public class Product : INotifyPropertyChanged
@@ -106,7 +106,7 @@ public class Product : INotifyPropertyChanged
 
 ### <a name="retrieve-products-from-the-sql-server-database"></a>SQL Server 데이터베이스에서 제품 검색
 
-Northwind 샘플 데이터베이스에서 제품을 가져오고, 이를 ``Product`` 인스턴스의 [ObservableCollection](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1) 컬렉션으로 반환하는 메서드를 만듭니다.
+Northwind 샘플 데이터베이스에서 제품을 가져오고, 이를 ``Product`` 인스턴스의 [ObservableCollection](/dotnet/api/system.collections.objectmodel.observablecollection-1) 컬렉션으로 반환하는 메서드를 만듭니다.
 
 ```csharp
 public ObservableCollection<Product> GetProducts(string connectionString)
@@ -158,7 +158,7 @@ public ObservableCollection<Product> GetProducts(string connectionString)
 
  다음 XAML을 UWP 프로젝트의 **MainPage.xaml** 파일에 추가합니다.
 
- 이 XAML은 앞서 코드 조각에서 반환한 각 제품을 표시하고, [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)에 있는 각 행의 특성을 ``Product`` 클래스에서 정의한 속성에 바인딩하는 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)를 만듭니다.
+ 이 XAML은 앞서 코드 조각에서 반환한 각 제품을 표시하고, [ListView](/uwp/api/windows.ui.xaml.controls.listview)에 있는 각 행의 특성을 ``Product`` 클래스에서 정의한 속성에 바인딩하는 [ListView](/uwp/api/windows.ui.xaml.controls.listview)를 만듭니다.
 
 ```xml
 <Grid Background="{ThemeResource SystemControlAcrylicWindowBrush}">
@@ -208,7 +208,7 @@ public ObservableCollection<Product> GetProducts(string connectionString)
 
 ### <a name="show-products-in-the-listview"></a>ListView에 제품 표시
 
-**MainPage.xaml.cs** 파일을 열고 [ListView](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview)의 **ItemSource** 속성을 ``Product`` 인스턴스의 [ObservableCollection](https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.observablecollection-1)으로 설정하는 ``MainPage`` 클래스 생성자에 코드를 추가합니다.
+**MainPage.xaml.cs** 파일을 열고 [ListView](/uwp/api/windows.ui.xaml.controls.listview)의 **ItemSource** 속성을 ``Product`` 인스턴스의 [ObservableCollection](/dotnet/api/system.collections.objectmodel.observablecollection-1)으로 설정하는 ``MainPage`` 클래스 생성자에 코드를 추가합니다.
 
 ```csharp
 public MainPage()
@@ -222,7 +222,7 @@ public MainPage()
 
 ![Northwind 제품](images/products-northwind.png)
 
-[System.Data.SqlClient](https://docs.microsoft.com/dotnet/api/system.data.sqlclient) 네임스페이스를 확인해 SQL Server 데이터베이스에서 할 수 있는 다른 작업을 확인합니다.
+[System.Data.SqlClient](/dotnet/api/system.data.sqlclient) 네임스페이스를 확인해 SQL Server 데이터베이스에서 할 수 있는 다른 작업을 확인합니다.
 
 ## <a name="trouble-connecting-to-your-database"></a>데이터베이스에 연결하는 데 문제가 있나요?
 
@@ -242,7 +242,7 @@ public MainPage()
 
 **여러 플랫폼의 여러 앱 간에 코드 공유**
 
-[데스크톱과 UWP 간에 코드 공유](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-migrate)를 참조하세요.
+[데스크톱과 UWP 간에 코드 공유](../porting/desktop-to-uwp-migrate.md)를 참조하세요.
 
 **Azure SQL 백 엔드로 마스터 세부 정보 페이지 추가**
 

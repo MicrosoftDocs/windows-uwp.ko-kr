@@ -1,17 +1,17 @@
 ---
 title: MonoGame 2D로 UWP 게임 만들기
-description: C# 및 MonoGame으로 작성된 간단한 Microsoft Store용 UWP 게임
+description: 이 자습서를 따라 C# 및 MonoGame으로 작성된 간단한 Microsoft Store용 UWP 게임을 만듭니다.
 ms.date: 03/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 5d5f7af2-41a9-4749-ad16-4503c64bb80c
 ms.localizationpriority: medium
-ms.openlocfilehash: 4300bdc0224a18874a7ff9153195f81f8bb8d101
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: b6e4b5bd75e0aff96cfc61f9b1bac380c61ae46f
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75685057"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89162877"
 ---
 # <a name="create-a-uwp-game-in-monogame-2d"></a>MonoGame 2D로 UWP 게임 만들기
 
@@ -25,9 +25,9 @@ ms.locfileid: "75685057"
 MonoGame은 경량의 게임 개발 프레임워크입니다. 이 자습서에서는 콘텐츠를 로드하는 방법, 스프라이트를 그리고 애니메이션하는 방법, 사용자 입력을 처리하는 방법을 포함하여 MonoGame으로 게임을 개발하기 위한 기본 사항을 안내합니다. 충돌 감지나 고 DPI 화면의 크기 조정 같은 일부 고급 개념도 다룹니다. 이 자습서는 30-60분 정도 걸립니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
-+   Windows 10 및 Microsoft Visual Studio 2019.  [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](https://docs.microsoft.com/windows/uwp/get-started/get-set-up).
++   Windows 10 및 Microsoft Visual Studio 2019.  [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](./get-set-up.md).
 + .NET 데스크톱 개발 프레임워크. Visual Studio가 아직 설치되지 않은 경우, Visual Studio 설치 프로그램을 다시 실행하여 Visual Studio 2019 설치를 수정할 수 있습니다.
-+   C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. [C#을 시작하는 방법을 알아보려면 여기를 클릭하세요](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
++   C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. [C#을 시작하는 방법을 알아보려면 여기를 클릭하세요](./create-a-hello-world-app-xaml-universal.md).
 +   클래스, 메서드, 변수 등 기본적인 컴퓨터 공학 개념에 대한 지식.
 
 ## <a name="why-monogame"></a>MonoGame을 사용하는 이유
@@ -694,8 +694,8 @@ if (gameOver)
 
 Windows 개발자로 [등록](https://developer.microsoft.com/store/register)해야 합니다.
 
-[앱 제출 검사 목록](https://docs.microsoft.com/windows/uwp/publish/app-submissions)을 사용해야 합니다.
+[앱 제출 검사 목록](../publish/app-submissions.md)을 사용해야 합니다.
 
-앱을 제출하여 [인증](https://docs.microsoft.com/windows/uwp/publish/the-app-certification-process)을 받아야 합니다.
+앱을 제출하여 [인증](../publish/the-app-certification-process.md)을 받아야 합니다.
 
-자세한 내용은 [UWP 앱 게시](https://docs.microsoft.com/windows/uwp/publish/)를 참조하세요.
+자세한 내용은 [UWP 앱 게시](../publish/index.md)를 참조하세요.

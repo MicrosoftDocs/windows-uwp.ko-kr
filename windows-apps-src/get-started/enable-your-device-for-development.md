@@ -1,17 +1,17 @@
 ---
 ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: 디바이스를 개발에 사용하도록 설정
-description: 개발 및 디버깅을 위해 Windows 10 디바이스를 구성합니다.
+description: Visual Studio에서 개발자 모드를 활성화하여 개발 및 디버깅을 위해 Windows 10 디바이스를 사용하는 방법을 알아봅니다.
 keywords: 개발자 라이선스 Visual Studio 시작, 개발자 라이선스 디바이스 활성화
 ms.date: 05/22/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4402200726da93bb820946c9849d8c15bd1c5d8d
-ms.sourcegitcommit: 48e047a581fcfcc9a4084d65a78b89f2c01cf4f3
+ms.openlocfilehash: 702e3aa166501c3e9974398ae5b89e832cfa7391
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85448393"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89159057"
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 
@@ -62,9 +62,9 @@ ms.locfileid: "85448393"
 디바이스 포털에 대한 자세한 내용은 [Windows Device Portal 개요](../debug-test-perf/device-portal.md)를 참조하세요.
 
 디바이스별 설치 지침은 다음을 참조하세요.
-- [데스크톱 디바이스 포털](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
-- [HoloLens용 디바이스 포털](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal)
-- [IoT용 디바이스 포털](https://developer.microsoft.com/windows/iot/docs/DevicePortal)
+- [데스크톱 디바이스 포털](../debug-test-perf/device-portal-desktop.md)
+- [HoloLens용 디바이스 포털](/windows/mixed-reality/using-the-windows-device-portal)
+- [IoT용 디바이스 포털](/windows/iot-core/manage-your-device/DevicePortal)
 - [모바일용 디바이스 포털](../debug-test-perf/device-portal-mobile.md)
 - [Xbox용 디바이스 포털](../xbox-apps/device-portal-xbox.md)
 
@@ -75,7 +75,7 @@ ms.locfileid: "85448393"
 > [!NOTE]
 > 최신 Windows 10 업데이트부터 테스트용 로드가 기본적으로 사용됩니다. 이제 특별한 구성 없이 서명된 MSIX 패키지를 디바이스에 배포할 수 있습니다. 이전 버전의 Windows 10을 사용하는 경우 기본적으로 Microsoft Store의 앱만 실행할 수 있도록 설정되며, Microsoft가 아닌 소스의 앱을 설치하려면 테스트용 로드를 사용하도록 설정해야 합니다.
 
-테스트용으로 앱 로드 설정은 일반적으로 Microsoft Store를 거치지 않고 관리 디바이스에 사용자 지정 앱을 설치해야 하는 회사나 학교에서 사용하거나 타사 소스에서 앱을 실행해야 하는 모든 사용자가 사용합니다. 이 경우 이전에 설정 페이지 이미지에 표시된 대로 조직에서 *UWP 앱* 설정을 사용하지 않는 정책을 적용하는 경우가 일반적입니다. 또한 조직에서는 필요한 인증서 및 테스트용 로드 앱의 설치 위치를 제공합니다. 자세한 내용은 TechNet 문서 [Windows 10에서 앱 사이드로드](https://docs.microsoft.com/windows/deploy/sideload-apps-in-windows-10) 및 [Microsoft Intune 기본 사항](https://docs.microsoft.com/mem/intune/fundamentals/)을 참조하세요.
+테스트용으로 앱 로드 설정은 일반적으로 Microsoft Store를 거치지 않고 관리 디바이스에 사용자 지정 앱을 설치해야 하는 회사나 학교에서 사용하거나 타사 소스에서 앱을 실행해야 하는 모든 사용자가 사용합니다. 이 경우 이전에 설정 페이지 이미지에 표시된 대로 조직에서 *UWP 앱* 설정을 사용하지 않는 정책을 적용하는 경우가 일반적입니다. 또한 조직에서는 필요한 인증서 및 테스트용 로드 앱의 설치 위치를 제공합니다. 자세한 내용은 TechNet 문서 [Windows 10에서 앱 사이드로드](/windows/deploy/sideload-apps-in-windows-10) 및 [Microsoft Intune 기본 사항](/mem/intune/fundamentals/)을 참조하세요.
 
 디바이스 패밀리 관련 정보
 
@@ -122,7 +122,7 @@ Windows 10 Mobile의 초기 버전에서 크래시 덤프 옵션은 개발자 �
 
 Windows 10 PC에서 Windows 10 디바이스로 앱을 배포할 수 있도록 해주는 몇 가지 도구가 있습니다. 두 디바이스는 유선 또는 무선으로 연결하여 동일한 네트워크 서브넷에 연결되거나 USB로 연결되어야 합니다. 나열된 두 방법 모두 앱 패키지(.appx/.appxbundle)만 설치하고 인증서는 설치하지 않습니다.
 
--   Windows 10 응용 프로그램 배포(WinAppDeployCmd) 도구를 사용합니다. 자세한 내용은 [the WinAppDeployCmd 도구](https://docs.microsoft.com/previous-versions/windows/apps/mt203806(v=vs.140))를 참조하세요.
+-   Windows 10 응용 프로그램 배포(WinAppDeployCmd) 도구를 사용합니다. 자세한 내용은 [the WinAppDeployCmd 도구](/previous-versions/windows/apps/mt203806(v=vs.140))를 참조하세요.
 -   [디바이스 포털](../debug-test-perf/device-portal.md)을 사용하면 브라우저에서 Windows 10, 버전 1511 이상을 실행하는 모바일 디바이스로 배포할 수 있습니다. Device Portal의 **[앱](../debug-test-perf/device-portal.md#apps-manager)** 페이지를 사용하여 앱 패키지(.appx)를 업로드하고 디바이스에 설치할 수 있습니다.
 
 ## <a name="failure-to-install-developer-mode-package"></a>개발자 모드 패키지 설치 실패
@@ -231,8 +231,8 @@ Windows 8.1 디바이스에서 앱을 만들거나 테스트용으로 로드할 
 ## <a name="see-also"></a>참고 항목
 
 * [첫 번째 앱](your-first-app.md)
-* [UWP 앱 게시](https://docs.microsoft.com/windows/uwp/publish/)
-* [UWP 앱 개발에 대한 방법 문서](https://docs.microsoft.com/windows/uwp/develop/)
+* [UWP 앱 게시](../publish/index.md)
+* [UWP 앱 개발에 대한 방법 문서](../develop/index.md)
 * [UWP 개발자를 위한 코드 샘플](https://developer.microsoft.com/windows/samples)
 * [UWP 앱이란?](universal-application-platform-guide.md)
 * [Windows 계정 등록](sign-up.md)

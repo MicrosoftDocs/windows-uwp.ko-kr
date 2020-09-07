@@ -7,12 +7,12 @@ ms.date: 02/01/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c66fc2b07b5ee5ce87b6c1f37657b3eec49f3105
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 20aeda53af3b4b11c1562d2ed22b099a3377d3c7
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970408"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172637"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
@@ -26,7 +26,7 @@ ms.locfileid: "82970408"
 
 |  |  |
 | - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **ItemsRepeater** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](https://docs.microsoft.com/uwp/toolkits/winui/)를 참조하세요. |
+| ![WinUI 로고](images/winui-logo-64x64.png) | **ItemsRepeater** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
 
 > **Windows UI 라이브러리 API:** [ItemsRepeater 클래스](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)
 >
@@ -95,7 +95,7 @@ ItemsRepeater itemsRepeater1 = new ItemsRepeater();
 itemsRepeater1.ItemsSource = Items;
 ```
 
-XAML에서 **ItemsSource** 속성을 컬렉션에 바인딩할 수도 있습니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](https://docs.microsoft.com/windows/uwp/data-binding/data-binding-quickstart)를 참조하세요.
+XAML에서 **ItemsSource** 속성을 컬렉션에 바인딩할 수도 있습니다. 데이터 바인딩에 대한 자세한 내용은 [데이터 바인딩 개요](../../data-binding/data-binding-quickstart.md)를 참조하세요.
 
 
 ```xaml
@@ -111,7 +111,7 @@ XAML에서 **ItemsSource** 속성을 컬렉션에 바인딩할 수도 있습니�
 이 예제의 데이터 개체는 간단한 문자열입니다. **DataTemplate**은 텍스트 왼쪽에 이미지를 포함하고 있으며, 문자열을 청록색으로 표시하도록 **TextBlock**의 스타일을 지정합니다.
 
 > [!NOTE]
-> **DataTemplate**에서 [x:Bind 태그 확장](https://docs.microsoft.com/windows/uwp/xaml-platform/x-bind-markup-extension)을 사용하는 경우 DataTemplate에서 DataType(`x:DataType`)을 지정해야 합니다.
+> **DataTemplate**에서 [x:Bind 태그 확장](../../xaml-platform/x-bind-markup-extension.md)을 사용하는 경우 DataTemplate에서 DataType(`x:DataType`)을 지정해야 합니다.
 
 ```xaml
 <DataTemplate x:DataType="x:String">
@@ -774,14 +774,14 @@ public class MyPage : Page
 
 ## <a name="enable-accessibility"></a>접근성 사용
 
-[ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)는 기본 접근성 환경을 제공하지 않습니다. [Windows 앱의 유용성](/windows/uwp/design/usability)에 대한 설명서는 앱에서 포괄적인 사용자 환경을 제공할 수 있도록 풍부한 정보를 제공합니다. ItemsRepeater를 사용하여 사용자 지정 컨트롤을 만드는 경우 [사용자 지정 자동화 피어](/windows/uwp/design/accessibility/custom-automation-peers)에 대한 설명서를 꼭 참조하세요.
+[ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)는 기본 접근성 환경을 제공하지 않습니다. [Windows 앱의 유용성](../usability/index.md)에 대한 설명서는 앱에서 포괄적인 사용자 환경을 제공할 수 있도록 풍부한 정보를 제공합니다. ItemsRepeater를 사용하여 사용자 지정 컨트롤을 만드는 경우 [사용자 지정 자동화 피어](../accessibility/custom-automation-peers.md)에 대한 설명서를 꼭 참조하세요.
 
 ### <a name="keyboarding"></a>키보드
-ItemsRepeater가 제공하는 포커스 이동의 최소 키보드 지원은 XAML의 [키보드용 2D 방향 탐색](/windows/uwp/design/input/focus-navigation#2d-directional-navigation-for-keyboard)을 기반으로 합니다.
+ItemsRepeater가 제공하는 포커스 이동의 최소 키보드 지원은 XAML의 [키보드용 2D 방향 탐색](../input/focus-navigation.md#2d-directional-navigation-for-keyboard)을 기반으로 합니다.
 
 ![방향 탐색](/windows/uwp/design/input/images/keyboard/directional-navigation.png)
 
-ItemsRepeater의 [XYFocusKeyboardNavigation 모드](/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)가 기본적으로 _사용_됩니다. 의도한 환경에 따라 Home, End, PageUp, PageDown 등의 일반적인 [키보드 조작](/windows/uwp/design/input/keyboard-interactions) 지원을 추가하는 방안을 고려해 보세요.
+ItemsRepeater의 [XYFocusKeyboardNavigation 모드](/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)가 기본적으로 _사용_됩니다. 의도한 환경에 따라 Home, End, PageUp, PageDown 등의 일반적인 [키보드 조작](../input/keyboard-interactions.md) 지원을 추가하는 방안을 고려해 보세요.
 
 ItemsRepeater는 항목(가상화 여부에 관계 없이)의 기본 탭 순서가 데이터에서 항목에 제공되는 순서와 동일하도록 자동으로 확인합니다. 기본적으로는 ItemsRepeater는 [TabFocusNavigation](/uwp/api/windows.ui.xaml.uielement.tabfocusnavigation) 속성이 일반적인 기본값인 _로컬_ 대신 [한 번](/uwp/api/windows.ui.xaml.input.keyboardnavigationmode)으로 설정됩니다.
 

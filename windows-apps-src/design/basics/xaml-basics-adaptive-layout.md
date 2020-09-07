@@ -1,16 +1,16 @@
 ---
 title: 적응형 레이아웃 만들기 자습서
-description: 이 문서는 XAML의 적응형 레이아웃의 기본 사항에 대해 설명합니다.
+description: XAML에서 적응형 레이아웃 기능을 사용하여 창 크기에 적합한 앱을 만드는 방법을 알아봅니다.
 keywords: XAML, UWP, 시작
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b172f2da7fa8953045db4eab3818df02ce43e00c
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: 8e1498836772c3c279a1b9d85d76070b29593f5e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942893"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89174477"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>자습서: 적응형 레이아웃 만들기
 
@@ -60,11 +60,11 @@ ms.locfileid: "88942893"
 
 ![작은 창: 이전](../basics/images/xaml-basics/adaptive-layout-small-before.png)
 
-앱 레이아웃에 대한 자세한 내용은 문서에서 [레이아웃](/windows/uwp/design/layout/) 섹션을 참조하세요.
+앱 레이아웃에 대한 자세한 내용은 문서에서 [레이아웃](../layout/index.md) 섹션을 참조하세요.
 
 ### <a name="add-window-breakpoints"></a>창 중단점 추가
 
-첫 번째 단계에서는 다양한 시각적 상태가 적용되는 중단점을 정의합니다. 소형, 중형 및 대형 화면의 중단점에 대한 자세한 내용은 [화면 크기 및 중단점](/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design)을 참조하세요.
+첫 번째 단계에서는 다양한 시각적 상태가 적용되는 중단점을 정의합니다. 소형, 중형 및 대형 화면의 중단점에 대한 자세한 내용은 [화면 크기 및 중단점](../layout/screen-sizes-and-breakpoints-for-responsive-design.md)을 참조하세요.
 
 솔루션 탐색기에서 App.xaml을 열고, 닫는 `</ResourceDictionary>` 태그 바로 앞에 `MergedDictionaries` 뒤에 다음 코드를 추가합니다.
 
@@ -264,12 +264,12 @@ ms.locfileid: "88942893"
 
 ## <a name="going-further"></a>더 나아가기
 
-이제 이 실습을 완료했으므로, 여러분은 혼자 더 많은 실습을 수행할 수 있는 충분한 적응형 레이아웃 지식을 얻었습니다. 더 큰 문제를 해결하려면 Surface Hub와 같은 더 큰 화면 크기에 맞게 레이아웃을 최적화해보세요. Surface Hub 레이아웃을 테스트하려면 [Visual Studio를 사용하여 Surface Hub 앱 테스트](/windows/uwp/debug-test-perf/test-surface-hub-apps-using-visual-studio)를 참조하세요.
+이제 이 실습을 완료했으므로, 여러분은 혼자 더 많은 실습을 수행할 수 있는 충분한 적응형 레이아웃 지식을 얻었습니다. 더 큰 문제를 해결하려면 Surface Hub와 같은 더 큰 화면 크기에 맞게 레이아웃을 최적화해보세요. Surface Hub 레이아웃을 테스트하려면 [Visual Studio를 사용하여 Surface Hub 앱 테스트](../../debug-test-perf/test-surface-hub-apps-using-visual-studio.md)를 참조하세요.
 
 문제가 있는 경우 [XAML을 사용하여 페이지 레이아웃 정의](../layout/layouts-with-xaml.md)의 다음 섹션에서 더 많은 지침을 찾을 수 있습니다.
 
-+ [시각적 상태 및 상태 트리거](/windows/uwp/design/layout/layouts-with-xaml#visual-states-and-state-triggers)
-+ [맞춤형 레이아웃](/windows/uwp/design/layout/layouts-with-xaml#tailored-layouts)
++ [시각적 상태 및 상태 트리거](../layout/layouts-with-xaml.md#visual-states-and-state-triggers)
++ [맞춤형 레이아웃](../layout/layouts-with-xaml.md#tailored-layouts)
 
 또는 초기 사진 편집 앱의 빌드 방법에 대해 자세히 알아보려면 XAML [사용자 인터페이스](../basics/xaml-basics-ui.md) 및 [데이터 바인딩](../../data-binding/xaml-basics-data-binding.md)의 이 자습서를 확인하세요.
 

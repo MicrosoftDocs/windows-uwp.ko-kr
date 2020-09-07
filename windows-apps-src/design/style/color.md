@@ -1,5 +1,5 @@
 ---
-description: Windows 앱에서 테마 컬러 및 테마를 사용하는 방법을 알아봅니다.
+description: UWP(유니버설 Windows 플랫폼) 앱에서 강조 색 및 테마 리소스를 조작하여 색을 효과적으로 사용하는 방법을 알아봅니다.
 title: Windows 앱의 색
 ms.date: 04/07/2019
 ms.topic: article
@@ -10,12 +10,12 @@ ms.custom: RS5
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: c87dfbdc00df36c75a5b0b865376af352edcabbb
-ms.sourcegitcommit: 577a54d36145f91c8ade8e4509d4edddd8319137
+ms.openlocfilehash: 06b566abf3fa20ca15e28a72b88e7c6e5a5cc4d5
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83867363"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89169337"
 ---
 # <a name="color"></a>색
 
@@ -190,7 +190,7 @@ Windows 셸의 테마 컬러 알고리즘은 테마 컬러의 밝은 음영과 �
 - `SystemAccentColorDark3`
 
 <!-- check this is true -->
-[**UISettings.GetColorValue**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.UISettings#Windows_UI_ViewManagement_UISettings_GetColorValue_Windows_UI_ViewManagement_UIColorType_) 메서드 및 [**UIColorType**](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.UIColorType) 열거형을 통해 테마 컬러 색상표를 프로그래밍 방식으로 액세스할 수도 있습니다.
+[**UISettings.GetColorValue**](/uwp/api/Windows.UI.ViewManagement.UISettings#Windows_UI_ViewManagement_UISettings_GetColorValue_Windows_UI_ViewManagement_UIColorType_) 메서드 및 [**UIColorType**](/uwp/api/Windows.UI.ViewManagement.UIColorType) 열거형을 통해 테마 컬러 색상표를 프로그래밍 방식으로 액세스할 수도 있습니다.
 
 앱에서 색 테마 지정을 위해 테마 컬러 색상표를 사용할 수 있습니다. 다음은 단추에 테마 컬러 색상표를 사용하는 방법을 보여 주는 예제입니다.
 
@@ -222,13 +222,13 @@ Windows 셸의 테마 컬러 알고리즘은 테마 컬러의 밝은 음영과 �
 
 ## <a name="color-api"></a>색 API
 
-애플리케이션에 색을 추가하는 데 사용할 수 있는 몇 가지 API가 있습니다. 첫째로, [**Colors**](https://docs.microsoft.com/uwp/api/windows.ui.colors) 클래스는 미리 정의된 색의 큰 목록을 구현합니다. XAML 속성을 통해 자동으로 액세스할 수 있습니다. 아래 예제에서는 단추를 만들고 배경색과 전경색 속성을 **Colors** 클래스의 멤버로 설정합니다.
+애플리케이션에 색을 추가하는 데 사용할 수 있는 몇 가지 API가 있습니다. 첫째로, [**Colors**](/uwp/api/windows.ui.colors) 클래스는 미리 정의된 색의 큰 목록을 구현합니다. XAML 속성을 통해 자동으로 액세스할 수 있습니다. 아래 예제에서는 단추를 만들고 배경색과 전경색 속성을 **Colors** 클래스의 멤버로 설정합니다.
 
 ```xaml
 <Button Background="MediumSlateBlue" Foreground="White">Button text</Button>
 ```
 
-XAML에서 [**Color**](https://docs.microsoft.com/uwp/api/windows.ui.color) 구조체를 사용하여 RGB 또는 16진수 값으로 고유한 색을 만들 수 있습니다.
+XAML에서 [**Color**](/uwp/api/windows.ui.color) 구조체를 사용하여 RGB 또는 16진수 값으로 고유한 색을 만들 수 있습니다.
 
 ```xaml
 <Color x:Key="LightBlue">#FF36C0FF</Color>
@@ -246,9 +246,9 @@ Windows::UI::Color LightBlue = Windows::UI::ColorHelper::FromArgb(255,54,192,255
 문자 “Argb”는 네 가지 색 구성 요소인 알파(불투명도), 빨간색, 녹색, 파란색을 나타냅니다. 각 인수의 범위는 0~255입니다. 기본 불투명도 255(100% 불투명)를 제공하는 첫 번째 값을 생략할 수 있습니다.
 
 > [!Note]
-> C++를 사용하는 경우 [**ColorHelper**](https://docs.microsoft.com/uwp/api/windows.ui.colorhelper) 클래스를 통해 색을 만들어야 합니다.
+> C++를 사용하는 경우 [**ColorHelper**](/uwp/api/windows.ui.colorhelper) 클래스를 통해 색을 만들어야 합니다.
 
-단색 UI 요소를 그리는 데 사용할 수 있는 [**SolidColorBrush**](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.solidcolorbrush)의 인수로 **Color**를 사용하는 경우가 가장 일반적입니다. 이 브러시는 일반적으로 [**ResourceDictionary**](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 정의되어 있으므로 여러 요소에서 재사용할 수 있습니다.
+단색 UI 요소를 그리는 데 사용할 수 있는 [**SolidColorBrush**](/uwp/api/windows.ui.xaml.media.solidcolorbrush)의 인수로 **Color**를 사용하는 경우가 가장 일반적입니다. 이 브러시는 일반적으로 [**ResourceDictionary**](/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 정의되어 있으므로 여러 요소에서 재사용할 수 있습니다.
 
 ```xaml
 <ResourceDictionary>
@@ -272,19 +272,19 @@ Windows::UI::Color LightBlue = Windows::UI::ColorHelper::FromArgb(255,54,192,255
 
 ### <a name="how-to-use-colorpaletteresources"></a>ColorPaletteResources 사용 방법
 
-ColorPaletteResources는 어디에서, 어떤 리소스로 범위가 지정되는지를 시스템에 알려 주는 API입니다. ColorPaletteResources는 [x:Key](https://docs.microsoft.com/windows/uwp/xaml-platform/x-key-attribute)를 사용해야 하며, 다음 세 가지 선택 항목 중 하나일 수 있습니다.
+ColorPaletteResources는 어디에서, 어떤 리소스로 범위가 지정되는지를 시스템에 알려 주는 API입니다. ColorPaletteResources는 [x:Key](../../xaml-platform/x-key-attribute.md)를 사용해야 하며, 다음 세 가지 선택 항목 중 하나일 수 있습니다.
 - Default
-  * [밝은](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme) 테마와 [어두운](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme) 테마에서 모두, 색 변경이 표시됩니다.
+  * [밝은](#light-theme) 테마와 [어두운](#dark-theme) 테마에서 모두, 색 변경이 표시됩니다.
 - Light
-  * [밝은 테마](https://docs.microsoft.com/windows/uwp/design/style/color#light-theme)에서만 색 변경이 표시됩니다.
+  * [밝은 테마](#light-theme)에서만 색 변경이 표시됩니다.
 - Dark
-  * [어두운 테마](https://docs.microsoft.com/windows/uwp/design/style/color#dark-theme)에서만 색 변경이 표시됩니다.
+  * [어두운 테마](#dark-theme)에서만 색 변경이 표시됩니다.
 
 테마 중 하나에서 다른 사용자 지정 모양을 원하는 경우 x:Key를 설정하면 시스템 또는 앱 테마에 맞게 색이 변경됩니다.
 
 ### <a name="how-to-apply-scoped-colors"></a>범위가 지정된 색을 적용하는 방법
 
-XAML에서 **ColorPaletteResources** API를 통해 리소스의 범위를 지정하면 [테마 리소스](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-theme-resources) 라이브러리에 있는 모든 시스템 색이나 브러시를 가져와 페이지 또는 컨테이너 범위 내에서 다시 정의할 수 있습니다.
+XAML에서 **ColorPaletteResources** API를 통해 리소스의 범위를 지정하면 [테마 리소스](../controls-and-patterns/xaml-theme-resources.md) 라이브러리에 있는 모든 시스템 색이나 브러시를 가져와 페이지 또는 컨테이너 범위 내에서 다시 정의할 수 있습니다.
 
 예를 들어 **BaseLow** 및 **BaseMediumLow**라는 두 개의 시스템 색을 그리드에 정의하고 해당 그리드 내부와 외부에 각각 하나씩, 두 개의 단추를 페이지에 배치한다고 가정합니다.
 

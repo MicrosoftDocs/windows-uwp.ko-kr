@@ -1,6 +1,6 @@
 ---
-Description: 데스크톱 브리지로 패키지된 앱 배포
 title: 패키지된 데스크톱 애플리케이션을 Microsoft Store에 게시하거나 하나 이상의 디바이스에 테스트용으로 로드합니다.
+description: 데스크톱 브리지를 사용하여 패키지된 데스크톱 애플리케이션을 Microsoft Store에 게시하거나 하나 이상의 디바이스에 테스트용으로 로드하는 방법을 알아봅니다.
 ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp
@@ -8,12 +8,12 @@ ms.assetid: edff3787-cecb-4054-9a2d-1fbefa79efc4
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 7eb57e8cea83a4d45087be4c4685ada8d108fa7a
-ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
+ms.openlocfilehash: 469ed71fcb42894b2dfd179ce21f44da3702705e
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334499"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89170647"
 ---
 # <a name="distribute-your-packaged-desktop-app"></a>패키지 데스크톱 앱 배포
 
@@ -166,4 +166,4 @@ private void RemoveDesktopApp()
 
 질문이 있으세요? Stack Overflow에서 질문하세요. 저희 팀은 이러한 [태그](https://stackoverflow.com/questions/tagged/project-centennial+or+desktop-bridge)를 모니터링합니다. [여기](https://social.msdn.microsoft.com/Forums/en-US/home?filter=alltypes&sort=relevancedesc&searchTerm=%5BDesktop%20Converter%5D)에서 문의할 수도 있습니다.
 
-Microsoft Store에 애플리케이션을 게시할 때 문제가 발생하는 경우 이 [블로그 게시물](https://blogs.msdn.microsoft.com/appconsult/2017/09/25/preparing-a-desktop-bridge-application-for-the-store-submission/)에는 몇 가지 유용한 팁을 제공합니다.
+Microsoft Store에 애플리케이션을 게시할 때 문제가 발생하는 경우 이 [블로그 게시물](/archive/blogs/appconsult/preparing-a-desktop-bridge-application-for-the-store-submission)에는 몇 가지 유용한 팁을 제공합니다.

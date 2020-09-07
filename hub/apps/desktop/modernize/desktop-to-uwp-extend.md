@@ -1,18 +1,18 @@
 ---
-Description: Windows UI와 구성 요소로 데스크톱 애플리케이션 확장
 title: Windows UI 및 구성 요소를 사용하여 앱 확장
+description: 최신 Windows 10 환경을 추가하려면 UWP 프로젝트 및 Windows 런타임 구성 요소로 데스크톱 애플리케이션을 확장합니다.
 ms.date: 06/08/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 73e867071058dfde71979318d6d711d79460f30b
-ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
+ms.openlocfilehash: 29064390e4e198d1220d40ff5ce58a63ea41e29a
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334555"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89172787"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>최신 UWP 구성 요소로 데스크톱 앱 확장
 
@@ -21,7 +21,7 @@ ms.locfileid: "85334555"
 많은 경우 데스크톱 애플리케이션에서 직접 Windows 런타임 API를 호출할 수 있기 때문에 이 가이드를 검토하기 전에 [Windows 10 향상](desktop-to-uwp-enhance.md)을 참조하세요.
 
 > [!NOTE]
-> 이 문서에서 설명하는 기능을 사용하려면 [데스크톱 앱을 MSIX 패키지로 패키징](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-root)하거나 [스파스 패키지를 사용하여 앱 ID를 부여](grant-identity-to-nonpackaged-apps.md)하는 두 가지 방법 중 하나로 데스크톱 앱의 [패키지 ID](modernize-packaged-apps.md)를 준비해야 합니다.
+> 이 문서에서 설명하는 기능을 사용하려면 [데스크톱 앱을 MSIX 패키지로 패키징](/windows/msix/desktop/desktop-to-uwp-root)하거나 [스파스 패키지를 사용하여 앱 ID를 부여](grant-identity-to-nonpackaged-apps.md)하는 두 가지 방법 중 하나로 데스크톱 앱의 [패키지 ID](modernize-packaged-apps.md)를 준비해야 합니다.
 
 준비가 되었으면 시작하겠습니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "85334555"
 
 ![시작 프로젝트 확장](images/desktop-to-uwp/extend-start-project.png)
 
-솔루션에 패키징 프로젝트가 없는 경우 [Visual Studio를 사용하여 데스크톱 애플리케이션 패키징](https://docs.microsoft.com/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)을 참조하세요.
+솔루션에 패키징 프로젝트가 없는 경우 [Visual Studio를 사용하여 데스크톱 애플리케이션 패키징](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)을 참조하세요.
 
 ### <a name="configure-the-desktop-application"></a>데스크톱 애플리케이션 구성
 
@@ -175,7 +175,7 @@ UWP 프로젝트에 XAML UI를 추가합니다. 기본 지도의 XAML은 다음�
 
 ### <a name="start-the-uwp-app"></a>UWP 앱 시작
 
-먼저 데스크톱 애플리케이션에서 UWP 앱으로 보내고 싶은 매개 변수와 프로토콜 입력이 포함된 [URI](https://docs.microsoft.com/dotnet/api/system.uri)를 생성합니다. 그런 후 [LaunchUriAsync](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출합니다.
+먼저 데스크톱 애플리케이션에서 UWP 앱으로 보내고 싶은 매개 변수와 프로토콜 입력이 포함된 [URI](/dotnet/api/system.uri)를 생성합니다. 그런 후 [LaunchUriAsync](/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출합니다.
 
 ```csharp
 
@@ -366,7 +366,7 @@ UWP 앱 프로젝트에 **UWP용 Windows 데스크톱 확장** 확장을 추가�
 Photos.Path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 ```
 
-사용자가 이미 연 데스크톱 애플리케이션 인스턴스의 경우 [FileSystemWatcher](https://docs.microsoft.com/dotnet/api/system.io.filesystemwatcher) 이벤트를 처리하고 파일 위치의 경로를 전달할 수도 있습니다. 그러면 데스크톱 애플리케이션의 열려 있는 모든 인스턴스에 공유 사진이 표시됩니다.
+사용자가 이미 연 데스크톱 애플리케이션 인스턴스의 경우 [FileSystemWatcher](/dotnet/api/system.io.filesystemwatcher) 이벤트를 처리하고 파일 위치의 경로를 전달할 수도 있습니다. 그러면 데스크톱 애플리케이션의 열려 있는 모든 인스턴스에 공유 사진이 표시됩니다.
 
 ```csharp
 ...

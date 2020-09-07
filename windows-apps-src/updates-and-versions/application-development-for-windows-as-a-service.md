@@ -1,17 +1,17 @@
 ---
 title: Windows as a Service용 앱 개발
-description: 특정 Windows 빌드에서 앱 릴리스와 지원을 분리합니다.
+description: 혁신, 개발, 제공 및 커뮤니티 중심의 Windows 참가자 테스트 프로그램에 대한 WaaS(Windows as a service) 접근법에 대해 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
-ms.openlocfilehash: 47be38c6d7a5374b06789beede02647ef9b264d8
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: c035a97b1750c8f285689f2b2f82f3766a6c06ad
+ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "75737636"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89173797"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Windows as a Service용 애플리케이션 개발
 
@@ -20,7 +20,7 @@ ms.locfileid: "75737636"
 -   Windows 10 Mobile
 -   Windows 10 IoT Core 
 
-오늘날 환경에서 사용자는 종종 디바이스 중심 환경을 기대하기 때문에 전체 제품 주기는 연 단위가 아닌 월 단위로 측정되어야 합니다. 또한 새 릴리스는 지속적으로 사용 가능하고 사용자에 대한 영향을 최소화하면서 배포할 수 있어야 합니다. Microsoft는 [WaaS(Windows as a Service)](https://docs.microsoft.com/windows/deployment/update/waas-overview)라는 새로운 혁신, 개발, 전달 접근 방식을 구현함으로써 이러한 요구 사항을 충족하도록 Windows 10을 디자인했습니다. Microsoft는 Windows 10 테스트에 대한 혁신적인 커뮤니티 중심 접근 방식을 핵심으로 하여 높은 품질 수준을 유지하면서 제품 주기를 눈에 띄게 줄일 수 있도록 했습니다. Windows 참가자라고 알려진 커뮤니티는 전세계 수백만 사용자로 이루어져 있습니다. Windows 참가자는 커뮤니티에 옵트인(opt in)할 때 제품 주기 과정에서 많은 빌드를 테스트하고 플라이팅이라는 반복적인 방법론을 통해 Microsoft에 피드백을 제공합니다.
+오늘날 환경에서 사용자는 종종 디바이스 중심 환경을 기대하기 때문에 전체 제품 주기는 연 단위가 아닌 월 단위로 측정되어야 합니다. 또한 새 릴리스는 지속적으로 사용 가능하고 사용자에 대한 영향을 최소화하면서 배포할 수 있어야 합니다. Microsoft는 [WaaS(Windows as a Service)](/windows/deployment/update/waas-overview)라는 새로운 혁신, 개발, 전달 접근 방식을 구현함으로써 이러한 요구 사항을 충족하도록 Windows 10을 디자인했습니다. Microsoft는 Windows 10 테스트에 대한 혁신적인 커뮤니티 중심 접근 방식을 핵심으로 하여 높은 품질 수준을 유지하면서 제품 주기를 눈에 띄게 줄일 수 있도록 했습니다. Windows 참가자라고 알려진 커뮤니티는 전세계 수백만 사용자로 이루어져 있습니다. Windows 참가자는 커뮤니티에 옵트인(opt in)할 때 제품 주기 과정에서 많은 빌드를 테스트하고 플라이팅이라는 반복적인 방법론을 통해 Microsoft에 피드백을 제공합니다.
 
 Insider Preview 빌드로 배포된 빌드는 Windows 엔지니어링 팀에게 빌드가 실제 사용에서 얼마나 잘 수행되는지에 대한 중요한 데이터를 제공합니다. 또한 Windows 참가자들이 포함된 플라이팅을 통해 Microsoft는 이전보다 훨씬 더 많은 다양한 하드웨어, 애플리케이션 및 네트워킹 환경에서 빌드를 테스트하고 훨씬 더 신속하게 문제점을 식별할 수 있습니다. 따라서 Microsoft는 커뮤니티에 초점을 맞춘 플라이팅이 이전보다 더 빠른 속도의 혁신 전달과 더 나은 공개 릴리스 품질을 가능하게 할 것이라고 믿습니다.
 
@@ -42,7 +42,7 @@ Windows 10 개발 과정에서 Microsoft는 전보다 훨씬 빠르게 고객�
 | 반기 채널 | Microsoft에서 처음 게시되고 약 4개월 후 | 처음 게시된 후로 18개월 | 배포하기 전에 새 기능 업그레이드를 테스트하기 위한 추가 시간을 제공함 | Pro, Education, Enterprise, Mobile Enterprise, IoT Core Pro |
 | 장기 서비스 채널(LTSC) | Microsoft에서 게시된 직후 | 10년 | 잦은 구성 변경 없이 선택한 Windows 10 릴리스의 장기 배포가 가능함 | Enterprise LTSB |
 
-자세한 내용은 [업데이트 및 업그레이드에 대한 Windows 10 서비스 옵션](https://docs.microsoft.com/windows/deployment/update/waas-overview#servicing-channels)을 참조하세요.
+자세한 내용은 [업데이트 및 업그레이드에 대한 Windows 10 서비스 옵션](/windows/deployment/update/waas-overview#servicing-channels)을 참조하세요.
 
 ## <a name="supporting-apps-in-windows-as-a-service"></a>Windows as a Service에서 앱 지원
 
@@ -90,7 +90,7 @@ Windows 10에서는 OS 버전이 증가했습니다. 즉, 내부 버전 번호�
 -   앱이 특정 API 기능에 종속된 경우 올바른 API 버전을 대상으로 지정합니다.
 -   APISet 또는 다른 공용 API를 통해 변경 내용을 검색하고 해당 버전을 일부 기능이나 수정에 대한 프록시로 사용하지 않습니다. 주요 변경 내용이 있는데 적절한 확인이 표시되지 않는 경우 버그가 있는 것입니다.
 -   앱이 레지스트리, 파일 버전, 오프셋, 커널 모드, 드라이버 또는 기타 수단 등의 특이한 방법으로 버전이 확인하지 않도록 합니다. 앱이 버전을 확인해야 하는 경우 주 버전, 부 버전 및 빌드 번호를 반환하는 GetVersion API를 사용합니다.
--   [GetVersion](https://docs.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversion?redirectedfrom=MSDN) API를 사용하는 경우 이 API의 동작이 Windows 8.1 이후 변경되었다는 것에 유의하세요.
+-   [GetVersion](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversion) API를 사용하는 경우 이 API의 동작이 Windows 8.1 이후 변경되었다는 것에 유의하세요.
 
 맬웨어 방지 앱, 방화벽 앱 등의 앱을 소유한 경우 일반적인 피드백 채널 및 Windows 참가자 프로그램을 통해 작업해야 합니다.
 
@@ -158,4 +158,4 @@ Insider Preview 빌드에서 앱의 수행 방식을 알려주세요. 테스트 
 
 
 ## <a name="related-topics"></a>관련 항목
-[업데이트 및 업그레이드에 대한 Windows 10 서비스 옵션](https://docs.microsoft.com/windows/manage/introduction-to-windows-10-servicing)
+[업데이트 및 업그레이드에 대한 Windows 10 서비스 옵션](/windows/manage/introduction-to-windows-10-servicing)
