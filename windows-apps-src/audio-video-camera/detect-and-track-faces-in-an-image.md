@@ -6,18 +6,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6232a8003140284956319728e16b3b953aff3177
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 753ac6894a8ab863255b6023636fad54b7568f4a
+ms.sourcegitcommit: bea08ea0eea53cd3f002b04a081a96400f6759ae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89362736"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89558476"
 ---
 # <a name="detect-faces-in-images-or-videos"></a>이미지 또는 동영상에서 얼굴 감지
 
 
-
-\[일부 정보는 상업적으로 출시 되기 전에 대폭 수정 될 수 있는 미리 릴리스된 제품과 관련이 있습니다. Microsoft는 여기에 제공된 정보에 대해 어떠한 명시적이거나 묵시적인 보증도 하지 않습니다.\]
 
 이 항목에서는 [**FaceDetector**](/uwp/api/Windows.Media.FaceAnalysis.FaceDetector) 를 사용 하 여 이미지에서 얼굴을 감지 하는 방법을 보여 줍니다. [**FaceTracker**](/uwp/api/Windows.Media.FaceAnalysis.FaceTracker) 는 비디오 프레임 시퀀스에서 시간 경과에 따라 얼굴을 추적 하는 데 최적화 되어 있습니다.
 
