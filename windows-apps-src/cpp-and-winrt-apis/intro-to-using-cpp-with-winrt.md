@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
-ms.openlocfilehash: 980194d396bb6fa20b1d11456edee221d224b011
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 39606a1797f56e8bb63f0afb99d7c86d78934662
+ms.sourcegitcommit: 6009896ead442b378106d82870f249dc8b55b886
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157357"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643788"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -25,6 +25,8 @@ C++/WinRT는 Microsoft에서 추천하는 [C++/CX](/cpp/cppcx/visual-c-language-
 
 > [!IMPORTANT]
 > 알아 두어야 할 가장 중요한 몇 가지 C++/WinRT 정보는 [C++/WinRT에 대한 SDK 지원](#sdk-support-for-cwinrt) 섹션과 [C++/WinRT, XAML, VSIX 확장 및 NuGet 패키지에 대한 Visual Studio 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 섹션에 설명되어 있습니다.
+
+또한 [C++/WinRT 샘플 앱은 어디에서 찾을 수 있나요?](/windows/uwp/cpp-and-winrt-apis/faq#where-can-i-find-cwinrt-sample-apps)도 참조하세요.
 
 ## <a name="language-projections"></a>언어 프로젝션
 Windows 런타임은 COM(구성 요소 개체 모델) API를 기반으로 하며, ‘언어 프로젝션’을 통해 액세스하도록 설계되었습니다.  프로젝션은 COM 세부 정보를 숨기며, 지정된 언어에 더욱 자연스러운 프로그래밍 환경을 제공합니다.

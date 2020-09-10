@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 샘플, 애플리케이션, 사진, 편집기
 ms.localizationpriority: medium
-ms.openlocfilehash: fb89deaef8c221df9a28f0350f0c860e8da3802d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9f72fc1737e697427b22f65147260bdadebc9605
+ms.sourcegitcommit: 6009896ead442b378106d82870f249dc8b55b886
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154418"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643797"
 ---
 # <a name="photo-editor-cwinrt-sample-application"></a>Photo Editor C++/WinRT 샘플 애플리케이션
 
@@ -28,3 +28,5 @@ ms.locfileid: "89154418"
 - 이미지 효과를 위한 외부 Win2D NuGet 패키지 및 [Windows::UI::Composition](/uwp/api/windows.ui.composition) 사용
 - [{x:Bind} 태그 확장](../xaml-platform/x-bind-markup-extension.md)을 포함하는 XAML 데이터 바인딩
 - [연결된 애니메이션](../design/motion/connected-animation.md)을 포함한 XAML 스타일 지정 및 UI 사용자 지정
+
+또한 [C++/WinRT 샘플 앱은 어디에서 찾을 수 있나요?](/windows/uwp/cpp-and-winrt-apis/faq#where-can-i-find-cwinrt-sample-apps)도 참조하세요.
