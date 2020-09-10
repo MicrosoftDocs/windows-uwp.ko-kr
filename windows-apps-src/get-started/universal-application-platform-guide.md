@@ -6,20 +6,23 @@ ms.date: 08/21/2020
 ms.topic: article
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
-ms.openlocfilehash: 55eacfe8b27758eb9579848d32b79446d2894bb7
-ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
+ms.openlocfilehash: e0c8a059708babf3f0224cefac156cc3c1407e61
+ms.sourcegitcommit: 696f90cc95311ee3a74ce70881c7bb277b666e46
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/03/2020
-ms.locfileid: "89412047"
+ms.locfileid: "89429124"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
+
+
 ## <a name="where-does-uwp-fit-in-the-microsoft-development-story"></a>UWP는 Microsoft 개발 스토리의 어디에 적합한가요?
 
-UWP(유니버설 Windows 플랫폼)는 Windows용 클라이언트 애플리케이션을 만드는 여러 가지 방법 중 하나입니다. UWP 앱은 WinRT(Windows 런타임) API를 사용하여 인터넷에 연결된 디바이스에 이상적인 강력한 UI와 고급 비동기 기능을 제공합니다. UWP 앱은 Win32 API와 .NET 클래스를 여전히 사용할 수 있습니다([UWP 앱의 API 집합](/previous-versions/mt186421(v=vs.85)), [UWP 앱의 DLL](/previous-versions/mt186422(v=vs.85)), [UWP 앱용 .NET](/dotnet/api/index?view=dotnet-uwp-10.0) 참조).
+UWP는 Windows용 클라이언트 애플리케이션을 만드는 여러 가지 방법 중 하나입니다. UWP 앱은 WinRT API를 사용하여 인터넷에 연결된 디바이스에 이상적인 강력한 UI와 고급 비동기 기능을 제공합니다. UWP 앱은 Win32 API와 .NET 클래스를 여전히 사용할 수 있습니다([UWP 앱의 API 집합](https://docs.microsoft.com/previous-versions/mt186421(v=vs.85)), [UWP 앱의 DLL](https://docs.microsoft.com/previous-versions/mt186422(v=vs.85)), [UWP 앱용 .NET](https://docs.microsoft.com/dotnet/api/index?view=dotnet-uwp-10.0) 참조).
 
-Microsoft 개발 스토리는 지속적으로 발전하고 있으며 [WinUI](/windows/apps/winui/), [MSIX](/windows/msix/) 및 [Project Reunion](https://github.com/microsoft/ProjectReunion)과 같은 이니셔티브와 함께 UWP는 클라이언트 앱을 만들 수 있는 강력한 도구입니다.
+Microsoft 개발 스토리는 지속적으로 발전하고 있으며 [WinUI](https://docs.microsoft.com/windows/apps/winui/), [MSIX](https://docs.microsoft.com/windows/msix/) 및 [Project Reunion](https://github.com/microsoft/ProjectReunion)과 같은 이니셔티브와 함께 UWP는 클라이언트 앱을 만들 수 있는 강력한 도구입니다.
+
 
 ## <a name="features-of-a-uwp-app"></a>UWP 앱의 기능
 
