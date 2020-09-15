@@ -1,24 +1,24 @@
 ---
 ms.assetid: 26834A51-512B-485B-84C8-ABF713787588
 title: NFC 스마트 카드 앱 만들기
-description: Windows Phone 8.1는 SIM 기반 보안 요소를 사용 하 여 지원 되는 NFC 카드 에뮬레이션 앱을 지원 하지만,이 모델은 MNO (모바일 네트워크 운영자)와 긴밀 하 게 결합 되어야 하는 안전한 지불 앱이 필요 했습니다.
+description: Windows Phone 8.1에서는 SIM 기반 보안 요소를 사용하여 NFC 카드 에뮬레이션 앱을 지원했지만, 해당 모델에서는 보안 결제 앱이 MNO(모바일 네트워크 운영자)와 밀접하게 결합되어야 합니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 80b3c4f46e595eedd2c6a259a03348822c9f51bc
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e7075f0de1ce01e9157c520f28b0b0dd70260498
+ms.sourcegitcommit: bc8add1675070506371c1881b41c3727f1b55720
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172227"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90093125"
 ---
 # <a name="create-an-nfc-smart-card-app"></a>NFC 스마트 카드 앱 만들기
 
 > [!Important]
 > 이 항목은 Windows 10 Mobile에만 적용 됩니다.
 
-Windows Phone 8.1는 SIM 기반 보안 요소를 사용 하 여 지원 되는 NFC 카드 에뮬레이션 앱을 지원 하지만,이 모델은 MNO (모바일 네트워크 운영자)와 긴밀 하 게 결합 되어야 하는 안전한 지불 앱이 필요 했습니다. 이는 MNOs와 결합 되지 않은 다른 상인 또는 개발자에의 한 가능한 지불 솔루션을 제한 했습니다. Windows 10 Mobile에는 HCE(호스트 카드 에뮬레이션)라는 새로운 카드 에뮬레이션 기술이 도입되었습니다. HCE 기술을 사용 하면 앱이 NFC 카드 판독기와 직접 통신할 수 있습니다. 이 항목에서는 HCE(호스트 카드 에뮬레이션)가 Windows 10 Mobile 디바이스에서 작동하는 방법과 MNO와 공동 작업하지 않고도 고객이 실제 카드 대신 휴대폰을 통해 서비스에 액세스할 수 있도록 HCE 앱을 개발하는 방법을 보여 줍니다.
+Windows Phone 8.1에서는 SIM 기반 보안 요소를 사용하여 NFC 카드 에뮬레이션 앱을 지원했지만, 해당 모델에서는 보안 결제 앱이 MNO(모바일 네트워크 운영자)와 밀접하게 결합되어야 합니다. 이는 MNO와 결합되어 있지 않은 다른 판매자 또는 개발자에 의해 가능한 결제 솔루션의 다양성을 제한합니다. Windows 10 Mobile에는 HCE(호스트 카드 에뮬레이션)라는 새로운 카드 에뮬레이션 기술이 도입되었습니다. HCE 기술을 통해 앱이 NFC 카드 판독기와 직접 통신할 수 있습니다. 이 항목에서는 HCE(호스트 카드 에뮬레이션)가 Windows 10 Mobile 디바이스에서 작동하는 방법과 MNO와 공동 작업하지 않고도 고객이 실제 카드 대신 휴대폰을 통해 서비스에 액세스할 수 있도록 HCE 앱을 개발하는 방법을 보여 줍니다.
 
 ## <a name="what-you-need-to-develop-an-hce-app"></a>HCE 앱을 개발 하는 데 필요한 사항
 
@@ -383,9 +383,5 @@ var appletIdGroup = new SmartCardAppletIdGroup(
                                 SmartCardEmulationType.Uicc);
 ```
 
-<<<<<<< 헤드
-> [!Important]
+> [!IMPORTANT]
 > Windows Phone 8.1의 레거시 바이너리 SMS 가로채기 지원이 제거 되어 Windows 10 Mobile에서 더 광범위 한 새로운 SMS 지원으로 대체 되었지만 새로운 Windows 10 Mobile SMS Api를 사용 하기 위해에 의존 하는 모든 레거시 Windows Phone 8.1 앱이 업데이트 되어야 합니다.
-=======
-<b>중요</b>    Windows Phone 8.1의 레거시 바이너리 SMS 가로채기 지원이 제거 되어 Windows 10 Mobile에서 더 광범위 한 새로운 SMS 지원으로 대체 되었지만 새로운 Windows 10 Mobile SMS Api를 사용 하기 위해에 의존 하는 모든 레거시 Windows Phone 8.1 앱이 업데이트 되어야 합니다.
->>>>>>> 05b1708b6 ... 링크: Windows UWP
