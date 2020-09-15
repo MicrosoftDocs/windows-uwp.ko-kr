@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: e37f5b585554f4ec214f7f72a896545d66dde3d5
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d9b402a1f140126314bc10f69880a9f01af2b2a4
+ms.sourcegitcommit: 6009896ead442b378106d82870f249dc8b55b886
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170207"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89643810"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT에 대해 자주 묻는 질문
 [C++/WinRT](./intro-to-using-cpp-with-winrt.md)를 통해 Windows 런타임 API를 작성하거나 사용하는 방법과 관련된 질문과 대답입니다.
@@ -20,6 +20,9 @@ ms.locfileid: "89170207"
 
 > [!NOTE]
 > 표시된 오류 메시지에 대한 질문이 있는 경우 [C++/WinRT 문제 해결](troubleshooting.md) 항목도 참조하세요.
+
+## <a name="where-can-i-find-cwinrt-sample-apps"></a>C++/WinRT 샘플 앱은 어디서 찾을 수 있나요?
+[C++/WinRT 샘플 앱](/samples/browse/?languages=cppwinrt)을 참조하세요.
 
 ## <a name="how-do-i-retarget-my-cwinrt-project-to-a-later-version-of-the-windows-sdk"></a>C++/WinRT 프로젝트의 대상을 Windows SDK 최신 버전으로 변경하려면 어떻게 하나요?
 [C++/WinRT 프로젝트의 대상을 Windows SDK 최신 버전으로 변경하는 방법](news.md#how-to-retarget-your-cwinrt-project-to-a-later-version-of-the-windows-sdk)을 참조하세요.

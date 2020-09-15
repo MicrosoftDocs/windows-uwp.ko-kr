@@ -1,5 +1,5 @@
 ---
-Description: Windows 런타임 API를 사용하여 Windows 10 사용자용 데스크톱 애플리케이션을 개선하세요.
+description: Windows 런타임 API를 사용하여 Windows 10 사용자용 데스크톱 애플리케이션을 개선하세요.
 title: 데스크톱 앱에서 Windows 런타임 API 호출
 ms.date: 08/20/2019
 ms.topic: article
@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 5a7c77f6c553408d2631fb3e324e67d79318f9b4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e58315ed70b889e1369e8c13a563f320c0ca1948
+ms.sourcegitcommit: a222ad0e2d97e35a60000c473808c678395376ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170697"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479083"
 ---
 # <a name="call-windows-runtime-apis-in-desktop-apps"></a>데스크톱 앱에서 Windows 런타임 API 호출
 
@@ -72,7 +72,7 @@ UWP(유니버설 Windows 플랫폼) API를 사용하여 Windows 10 사용자를 
 
 3. **속성** 창에서 각 *.winmd* 파일의 **로컬 복사** 필드를 **False**로 설정합니다.
 
-    ![copy-local-field](images/desktop-to-uwp/copy-local-field.png)
+    ![로컬 복사 필드](images/desktop-to-uwp/copy-local-field.png)
 
 ### <a name="modify-a-c-win32-project-to-use-windows-runtime-apis"></a>Windows 런타임 API를 사용하도록 C++ Win32 프로젝트 수정
 
@@ -93,7 +93,7 @@ UWP(유니버설 Windows 플랫폼) API를 사용하여 Windows 10 사용자를 
 
 선택할 수 있는 환경이 많습니다. 예를 들어 [수익 창출 API](/windows/uwp/monetize)를 사용하여 구매 주문 흐름을 간소화할 수 있습니다. 또는 다른 사용자가 추가한 새 사진처럼 공유하면 재미있는 콘텐츠가 있을 때 [애플리케이션으로 직접 관심을 유도](/windows/uwp/design/shell/tiles-and-notifications/adaptive-interactive-toasts)할 수 있습니다.
 
-![알림](images/desktop-to-uwp/toast.png)
+![알림 메시지](images/desktop-to-uwp/toast.png)
 
 사용자가 메시지를 무시 또는 해제하는 경우에도 알림 센터에서 다시 메시지를 확인한 후 메시지를 클릭하여 앱을 열 수 있습니다. 이렇게 하면 애플리케이션 참여도를 높일 수 있으며 애플리케이션이 운영 체제와 긴밀하게 통합된 것처럼 보이게 하는 부가적인 효과가 있습니다. 이 문서의 뒷부분에서 이러한 환경의 코드를 보여드리겠습니다.
 
@@ -156,7 +156,41 @@ private void ShowToast()
 }
 ```
 
-```C++
+```cppwinrt
+#include <sstream>
+#include <winrt/Windows.Data.Xml.Dom.h>
+#include <winrt/Windows.UI.Notifications.h>
+
+using namespace winrt::Windows::Foundation;
+using namespace winrt::Windows::System;
+using namespace winrt::Windows::UI::Notifications;
+using namespace winrt::Windows::Data::Xml::Dom;
+
+void UWP::ShowToast()
+{
+    std::wstring const title = L"featured picture of the day";
+    std::wstring const content = L"beautiful scenery";
+    std::wstring const image = L"https://picsum.photos/360/180?image=104";
+    std::wstring const logo = L"https://picsum.photos/64?image=883";
+
+    std::wostringstream xmlString;
+    xmlString << L"<toast><visual><binding template='ToastGeneric'>" <<
+        L"<text>" << title << L"</text>" <<
+        L"<text>" << content << L"</text>" <<
+        L"<image src='" << image << L"'/>" <<
+        L"<image src='" << logo << L"'" <<
+        L" placement='appLogoOverride' hint-crop='circle'/>" <<
+        L"</binding></visual></toast>";
+
+    XmlDocument toastXml;
+
+    toastXml.LoadXml(xmlString.str().c_str());
+
+    ToastNotificationManager::CreateToastNotifier().Show(ToastNotification(toastXml));
+}
+```
+
+```cppcx
 using namespace Windows::Foundation;
 using namespace Windows::System;
 using namespace Windows::UI::Notifications;
@@ -208,33 +242,29 @@ Windows 10 사용자만을 위한 한 가지 코드 기반을 유지하고 바�
 
 .NET 기반 프로젝트의 상수는 **Conditional Compilation Constant**입니다.
 
-![전처리기](images/desktop-to-uwp/compilation-constants.png)
+![조건부 컴파일 상수](images/desktop-to-uwp/compilation-constants.png)
 
 C++ 기반 프로젝트의 상수는 **Preprocessor Definition**입니다.
 
-![전처리기](images/desktop-to-uwp/pre-processor.png)
+![전처리기 정의 상수](images/desktop-to-uwp/pre-processor.png)
 
 UWP 코드 블록 앞에 해당 상수를 추가합니다.
 
 ```csharp
-
 [System.Diagnostics.Conditional("_UWP")]
 private void ShowToast()
 {
  ...
 }
-
 ```
 
 ```C++
-
 #if _UWP
 void UWP::ShowToast()
 {
  ...
 }
 #endif
-
 ```
 
 활성 빌드 구성에서 상수를 정의한 경우에만 컴파일러가 코드를 빌드합니다.

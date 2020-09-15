@@ -1,18 +1,18 @@
 ---
-Description: 새 앱에 적합한 앱 플랫폼을 선택하는 방법 및 Windows 10용 기존 앱을 현대화하는 방법을 비롯하여 Windows PC용 데스크톱 앱을 빌드하는 방법을 알아봅니다.
+description: 새 앱에 적합한 앱 플랫폼을 선택하는 방법 및 Windows 10용 기존 앱을 현대화하는 방법을 비롯하여 Windows PC용 데스크톱 앱을 빌드하는 방법을 알아봅니다.
 title: Windows PC용 데스크톱 앱 빌드
 ms.topic: article
-ms.date: 11/04/2019
+ms.date: 9/10/2020
 keywords: windows win32, 데스크톱 개발
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f4b790978449bd6d5c279a5405c22db51cd0724
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 6539f436e46f351efc355d361c0677b9fedee546
+ms.sourcegitcommit: 2bb975d5df38d294277f57bf8b6a06d9bf87ca9b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170727"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90046819"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Windows PC용 데스크톱 앱 빌드
 
@@ -98,10 +98,11 @@ Windows용 새 데스크톱 앱을 만드는 경우 시작에 도움이 되는 �
 
 ## <a name="related-documentation-and-technologies"></a>관련 설명서 및 기술
 
-| 리소스 | 설명 |
+| 리소스 | Description |
 |---------|-------------|
-| [.NET Core 3.0](/dotnet/core/whats-new/dotnet-core-3-0) | WPF 및 Windows Forms 앱에 대한 향상된 기능을 비롯하여 .NET Core 3.0의 최신 기능에 대해 알아봅니다. |
-| [WPF 및 .NET Core 3.0 데스크톱 가이드](/dotnet/desktop-wpf/overview/index) | 전체 .NET Framework 대신 .NET Core 3.0을 대상으로 하는 WPF 앱을 개발합니다.  |
+| [.NET Core 3.1](/dotnet/core/whats-new/dotnet-core-3-1) | WPF 및 Windows Forms 앱에 대한 향상된 기능을 비롯하여 .NET Core 3.1의 최신 기능에 대해 알아봅니다. |
+| [.NET 5](/dotnet/core/dotnet-five) | 이 문서에서는 3.1 이후 .NET Core의 다음 릴리스인 .NET 5에 포함된 내용을 자세히 설명합니다. |
+| [WPF 및 .NET Core 데스크톱 가이드](/dotnet/desktop-wpf/overview/index) | 전체 .NET Framework 대신 .NET Core를 대상으로 하는 WPF 앱을 개발합니다.  |
 | [Azure](/azure/) | Azure Cloud Services를 사용하여 앱의 범위를 확장합니다. |
 | [Visual Studio](/visualstudio/) | Visual Studio를 사용하여 앱 및 서비스를 개발하는 방법을 알아봅니다. |
 | [MSIX](/windows/msix/) | 모든 Windows 앱을 최신 및 범용 패키징 형식으로 패키징 및 배포합니다. |
