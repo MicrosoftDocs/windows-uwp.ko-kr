@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 70f71265ff763ff8a160705694476e03bf8b6667
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d85df48b4f43759013f80623595d919ac6c77337
+ms.sourcegitcommit: ef3cdca5e9b8f032f46174da4574cb5593d32d56
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166357"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90593437"
 ---
 # <a name="composition-visual"></a>컴퍼지션 시각
 
@@ -19,11 +19,15 @@ ms.locfileid: "89166357"
 
 ## <a name="visuals"></a>시각적 개체
 
-시각적 트리 구조와 시각적 개체의 콘텐츠에 영향을 주는 여러 하위 클래스가 있는 기본 브러시 클래스를 구성 하는 세 가지 시각적 형식이 있습니다.
+시각적 트리 구조와 시각적 트리 구조를 구성 하는 몇 가지 시각적 유형과 시각적 개체의 내용에 영향을 주는 여러 서브 클래스가 포함 된 기본 브러시 클래스가 있습니다.
 
 - [**시각적**](/uwp/api/Windows.UI.Composition.Visual) 개체-기본 개체, 대부분의 속성은 여기에 있으며 다른 시각적 개체에 의해 상속 됩니다.
 - [**System.windows.media.containervisual>**](/uwp/api/Windows.UI.Composition.ContainerVisual) – [**시각적 개체**](/uwp/api/Windows.UI.Composition.Visual)에서 파생 되 고 자식을 만드는 기능을 추가 합니다.
-- [**SpriteVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) – [**system.windows.media.containervisual>**](/uwp/api/Windows.UI.Composition.ContainerVisual) 에서 파생 되 고 시각적 개체에서 이미지, 효과 또는 단색을 포함 하는 픽셀을 렌더링할 수 있도록 브러시를 연결 하는 기능을 추가 합니다.
+  - [**SpriteVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) – [**system.windows.media.containervisual>**](/uwp/api/Windows.UI.Composition.ContainerVisual)에서 파생 됩니다. 에는 브러시를 연결 하 여 이미지가 이미지, 효과 또는 단색을 포함 하는 픽셀을 렌더링할 수 있는 기능이 있습니다.
+  - [**LayerVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) – [**system.windows.media.containervisual>**](/uwp/api/Windows.UI.Composition.ContainerVisual)에서 파생 됩니다. 시각적 개체의 자식은 단일 계층으로 결합 됩니다.<br/>(_Windows 10 버전 1607, SDK 14393에서 도입 되었습니다._)
+  - [**ShapeVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) – [**system.windows.media.containervisual>**](/uwp/api/Windows.UI.Composition.ContainerVisual)에서 파생 됩니다. CompositionShape의 루트인 시각적 트리 노드입니다.<br/>(_Windows 10 버전 1803, SDK 17134에서 도입 되었습니다._)
+  - [**Redirectvisual 개체**](/uwp/api/Windows.UI.Composition.SpriteVisual) – [**system.windows.media.containervisual>**](/uwp/api/Windows.UI.Composition.ContainerVisual)에서 파생 됩니다. 시각적 개체는 다른 시각적 개체에서 해당 콘텐츠를 가져옵니다.<br/>(_Windows 10 버전 1809, SDK 17763에서 도입 되었습니다._)
+  - [**SceneVisual**](/uwp/api/Windows.UI.Composition.SpriteVisual) – [**system.windows.media.containervisual>**](/uwp/api/Windows.UI.Composition.ContainerVisual)에서 파생 됩니다. 3D 장면의 노드에 대 한 컨테이너 시각적 개체입니다.<br/>(_Windows 10 버전 1903, SDK 18362에서 도입 되었습니다._)
 
 [**CompositionColorBrush**](/uwp/api/Windows.UI.Composition.CompositionColorBrush), [**CompositionSurfaceBrush**](/uwp/api/Windows.UI.Composition.CompositionSurfaceBrush) 및 [**CompositionEffectBrush**](/uwp/api/Windows.UI.Composition.CompositionEffectBrush)를 포함 하 여 [**CompositionBrush**](/uwp/api/Windows.UI.Composition.CompositionBrush) 및 해당 하위 클래스를 사용 하 여 SpriteVisuals에 콘텐츠와 효과를 적용할 수 있습니다. 브러시에 대해 자세히 알아보려면 [**CompositionBrush 개요**](./composition-brushes.md)를 참조 하세요.
 
@@ -40,7 +44,7 @@ ms.locfileid: "89166357"
 - 시각적 개체 클리핑
 - 시각적 개체 회전
 - 불투명도 설정
-- 컬렉션에서 시각적 개체의 위치 변경
+- 컬렉션에서 시각적 개체의 위치를 변경 합니다.
 
 ## <a name="creating-a-compositor"></a>Compositor 만들기
 
