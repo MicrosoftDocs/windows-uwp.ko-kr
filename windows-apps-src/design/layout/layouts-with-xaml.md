@@ -5,12 +5,15 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 20a0b4e94514ff57d3e7e6c592ca9b09547848d5
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+dev_langs:
+- csharp
+- cppwinrt
+ms.openlocfilehash: 9aee0f0e91528258b0591f2e3c7e0ea10353b5b7
+ms.sourcegitcommit: ef3cdca5e9b8f032f46174da4574cb5593d32d56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169467"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90593457"
 ---
 # <a name="responsive-layouts-with-xaml"></a>XAML을 사용한 반응형 레이아웃
 
@@ -139,7 +142,8 @@ Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeig
 
 
 ```xaml
-<Page ...>
+<Page ...
+    SizeChanged="CurrentWindow_SizeChanged">
     <Grid>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
@@ -189,6 +193,21 @@ private void CurrentWindow_SizeChanged(object sender, Windows.UI.Core.WindowSize
     else
         VisualStateManager.GoToState(this, "DefaultState", false);
 }
+```
+
+```cppwinrt
+// YourPage.h
+void CurrentWindow_SizeChanged(winrt::Windows::Foundation::IInspectable const& sender, winrt::Windows::UI::Xaml::SizeChangedEventArgs const& e);
+
+// YourPage.cpp
+void YourPage::CurrentWindow_SizeChanged(IInspectable const& sender, SizeChangedEventArgs const& e)
+{
+    if (e.NewSize.Width > 640)
+        VisualStateManager::GoToState(*this, "WideState", false);
+    else
+        VisualStateManager::GoToState(*this, "DefaultState", false);
+}
+
 ```
 
 ### <a name="set-visual-states-in-xaml-markup"></a>XAML 태그에서 시각적 상태 설정
@@ -386,6 +405,16 @@ if (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Ta
 else
 {
     rootFrame.Navigate(typeof(MainPage), e.Arguments);
+}
+```
+```cppwinrt
+if (Windows::System::Profile::AnalyticsInfo::VersionInfo().DeviceFamily() == L"Windows.Tablet")
+{
+    rootFrame.Navigate(xaml_typename<WinRT_UWP::MainPage_Tablet>(), box_value(e.Arguments()));
+}
+else
+{
+    rootFrame.Navigate(xaml_typename<WinRT_UWP::MainPage>(), box_value(e.Arguments()));
 }
 ```
 

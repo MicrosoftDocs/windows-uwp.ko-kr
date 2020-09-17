@@ -11,12 +11,15 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 128a3b7f2a26039c65923ef4c5d57035a6ca3754
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+dev_langs:
+- csharp
+- cppwinrt
+ms.openlocfilehash: deef91e817d68c235c0af266b5fa7d22842c4cfe
+ms.sourcegitcommit: ef3cdca5e9b8f032f46174da4574cb5593d32d56
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169537"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90593447"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>ResourceDictionary 및 XAML 리소스 참조
 
@@ -132,7 +135,7 @@ XAML 리소스는 태그에서 두 번 이상 참조되는 개체입니다. 이�
 </Page>
 ```
 
-```CSharp
+```csharp
     public sealed partial class MainPage : Page
     {
         public MainPage()
@@ -140,6 +143,13 @@ XAML 리소스는 태그에서 두 번 이상 참조되는 개체입니다. 이�
             this.InitializeComponent();
             Style redButtonStyle = (Style)this.Resources["redButtonStyle"];
         }
+    }
+```
+```cppwinrt
+    MainPage::MainPage()
+    {
+        InitializeComponent();
+        Windows::UI::Xaml::Style style = Resources().TryLookup(winrt::box_value(L"redButtonStyle")).as<Windows::UI::Xaml::Style>();
     }
 ```
 
@@ -160,7 +170,7 @@ XAML 리소스는 태그에서 두 번 이상 참조되는 개체입니다. 이�
 </Application>
 ```
 
-```CSharp
+```csharp
     public sealed partial class MainPage : Page
     {
         public MainPage()
@@ -168,6 +178,15 @@ XAML 리소스는 태그에서 두 번 이상 참조되는 개체입니다. 이�
             this.InitializeComponent();
             Style appButtonStyle = (Style)Application.Current.Resources["appButtonStyle"];
         }
+    }
+```
+```cppwinrt
+    MainPage::MainPage()
+    {
+        InitializeComponent();
+        Windows::UI::Xaml::Style style = Application::Current().Resources()
+                                                               .TryLookup(winrt::box_value(L"appButtonStyle"))
+                                                               .as<Windows::UI::Xaml::Style>();
     }
 ```
 
@@ -180,7 +199,7 @@ XAML 리소스는 태그에서 두 번 이상 참조되는 개체입니다. 이�
 
 이와 같이 [Application.OnLaunched](/uwp/api/windows.ui.xaml.application.onlaunched) 메서드로 리소스를 추가하면 두 문제 모두 방지할 수 있습니다.
 
-```CSharp
+```csharp
 // App.xaml.cs
     
 sealed partial class App : Application
@@ -196,6 +215,26 @@ sealed partial class App : Application
         }
     }
 }
+```
+```cppwinrt
+// App.cpp
+
+void App::OnLaunched(LaunchActivatedEventArgs const& e)
+{
+    Frame rootFrame{ nullptr };
+    auto content = Window::Current().Content();
+    if (content)
+    {
+        rootFrame = content.try_as<Frame>();
+    }
+
+    // Do not repeat app initialization when the Window already has content,
+    // just ensure that the window is active
+    if (rootFrame == nullptr)
+    {
+        Windows::UI::Xaml::Media::SolidColorBrush brush{ Windows::UI::ColorHelper::FromArgb(255, 0, 255, 0) };
+        Resources().Insert(winrt::box_value(L"brush"), winrt::box_value(brush));
+        // … Other code that VS generates for you …
 ```
 
 ## <a name="every-frameworkelement-can-have-a-resourcedictionary"></a>모든 FrameworkElement에 ResourceDictionary가 있을 수 있습니다.
@@ -234,7 +273,7 @@ sealed partial class App : Application
 
 ```
 
-```CSharp
+```csharp
     public sealed partial class MainPage : Page
     {
         public MainPage()
@@ -242,6 +281,13 @@ sealed partial class App : Application
             this.InitializeComponent();
             textBlock3.Text = (string)border.Resources["greeting"];
         }
+    }
+```
+```cppwinrt
+    MainPage::MainPage()
+    {
+        InitializeComponent();
+        textBlock3().Text(unbox_value<hstring>(border().Resources().TryLookup(winrt::box_value(L"greeting"))));
     }
 ```
 
