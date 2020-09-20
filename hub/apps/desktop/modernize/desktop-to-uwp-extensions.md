@@ -1,19 +1,19 @@
 ---
 description: 확장을 사용하여 미리 정의된 방법으로 패키지 데스크톱 앱과 Windows 10을 통합할 수 있습니다.
 title: 데스크톱 브리지를 사용하여 기존 데스크톱 앱 현대화
-ms.date: 08/25/2020
+ms.date: 09/11/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: b18afdeecb3e70f958b3d8908027e59f8c4c1f9e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e0a8a7bf38fbf44fd3544d7912729bbd42672f34
+ms.sourcegitcommit: 7c49f789f5b382b5b12efed6a81cbb4a25d44bd9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172727"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90026328"
 ---
 # <a name="integrate-your-desktop-app-with-windows-10-and-uwp"></a>데스크톱 앱을 Windows 10 및 UWP와 통합
 
@@ -1164,8 +1164,8 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 |ProviderDisplayName | 애플리케이션이나 서비스를 나타내는 문자열(예: "Contoso 비디오 플레이어")입니다. |
 |ContentEvent |사용자에게 ``ActionDisplayName`` 및 ``ProviderDisplayName``을 알리는 메시지에 표시되는 콘텐츠 이벤트의 이름입니다. 콘텐츠 이벤트는 카메라 메모리 카드, 썸 드라이브(thumb drive) 또는 DVD 같은 볼륨 디바이스가 PC에 삽입될 때 발생합니다. 이러한 이벤트의 전체 목록은 [여기](/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference)서 찾을 수 있습니다.  |
 |동사 |동사 설정은 선택한 옵션에 대해 애플리케이션에 전달된 값을 식별합니다. 자동 실행 이벤트에 대해 여러 개의 시작 작업을 지정하고 동사 설정을 사용하여 사용자가 앱에 대해 선택한 옵션을 확인할 수 있습니다. 앱에 전달된 시작 이벤트 인수의 동사 속성을 확인하여 사용자가 선택한 옵션을 알 수 있습니다. [동사] 설정에는 예약된 [open]을 제외한 모든 값을 사용할 수 있습니다. |
-|DropTargetHandler |[IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017)을 구현하는 애플리케이션의 클래스 ID입니다. 이동식 미디어의 파일은 [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 구현의 [Drop](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop?view=visualstudiosdk-2017#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) 메서드에 전달됩니다.  |
-|매개 변수 |모든 콘텐츠 이벤트에 대해 [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 인터페이스를 구현할 필요가 없습니다. 모든 콘텐츠 이벤트에 대해 [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget?view=visualstudiosdk-2017) 인터페이스를 구현하는 대신 명령줄 매개 변수를 제공할 수 있습니다. 이러한 이벤트의 경우 자동 실행이 해당 명령줄 매개 변수를 사용하여 애플리케이션을 시작합니다. 앱의 초기화 코드에서 매개 변수를 분석하여 이 매개 변수가 자동 실행에서 시작되었는지 확인한 다음, 사용자 지정 구현을 제공할 수 있습니다. |
+|DropTargetHandler |[IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget)을 구현하는 애플리케이션의 클래스 ID입니다. 이동식 미디어의 파일은 [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget) 구현의 [Drop](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget.drop#Microsoft_VisualStudio_OLE_Interop_IDropTarget_Drop_Microsoft_VisualStudio_OLE_Interop_IDataObject_System_UInt32_Microsoft_VisualStudio_OLE_Interop_POINTL_System_UInt32__) 메서드에 전달됩니다.  |
+|매개 변수 |모든 콘텐츠 이벤트에 대해 [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget) 인터페이스를 구현할 필요가 없습니다. 모든 콘텐츠 이벤트에 대해 [IDropTarget](/dotnet/api/microsoft.visualstudio.ole.interop.idroptarget) 인터페이스를 구현하는 대신 명령줄 매개 변수를 제공할 수 있습니다. 이러한 이벤트의 경우 자동 실행이 해당 명령줄 매개 변수를 사용하여 애플리케이션을 시작합니다. 앱의 초기화 코드에서 매개 변수를 분석하여 이 매개 변수가 자동 실행에서 시작되었는지 확인한 다음, 사용자 지정 구현을 제공할 수 있습니다. |
 |DeviceEvent |사용자에게 ``ActionDisplayName`` 및 ``ProviderDisplayName``을 알리는 메시지에 표시되는 디바이스 이벤트의 이름입니다. 디바이스 이벤트는 디바이스가 PC에 연결될 때 발생합니다. 디바이스 이벤트는 ``WPD`` 문자열로 시작하며 [여기](/windows/uwp/launch-resume/auto-launching-with-autoplay#autoplay-event-reference)서 찾을 수 있습니다. |
 |HWEventHandler |[IHWEventHandler](/windows/desktop/api/shobjidl/nn-shobjidl-ihweventhandler)를 구현하는 애플리케이션의 클래스 ID입니다. |
 |InitCmdLine |[IHWEventHandler](/windows/desktop/api/shobjidl/nn-shobjidl-ihweventhandler) 인터페이스의 [Initialize](/windows/desktop/api/shobjidl/nf-shobjidl-ihweventhandler-initialize) 메서드에 전달하려는 문자열 매개 변수입니다. |
@@ -1278,6 +1278,9 @@ XPS(XML Paper Specification) 형식으로 인쇄 데이터를 수신하려면 �
 
 사용자 지정 글꼴을 다른 Windows 애플리케이션과 공유할 수 있습니다.
 
+> [!NOTE]
+> 이 확장을 사용하는 앱을 스토어에 제출하려면 먼저 스토어 팀에서 승인을 받아야 합니다. 승인을 받으려면 [https://aka.ms/storesupport](https://aka.ms/storesupport)로 이동하여 **문의처**를 클릭하고 대시보드에 앱을 제출하는 것과 관련된 옵션을 선택합니다. 이 승인 프로세스는 앱에 의해 설치된 글꼴과 OS와 함께 설치된 글꼴 간에 충돌이 발생하지 않도록 하는 데 도움이 됩니다. 승인을 얻지 않으면 앱을 제출할 때 다음과 비슷한 오류가 표시됩니다. "패키지 승인 유효성 검사 오류: 이 계정으로는 확장 windows.sharedFonts를 사용할 수 없습니다. 이 확장을 사용할 수 있는 권한을 요청하려면 지원 팀에 문의하세요."
+
 #### <a name="xml-namespaces"></a>XML 네임스페이스
 
 `http://schemas.microsoft.com/appx/manifest/desktop/windows10/2`
@@ -1294,7 +1297,7 @@ XPS(XML Paper Specification) 형식으로 인쇄 데이터를 수신하려면 �
 
 전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap4-sharedfonts)서 찾을 수 있습니다.
 
-|이름 |Description |
+|이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.sharedFonts``입니다.
 |파일 |공유하려는 글꼴이 포함된 파일입니다. |
@@ -1340,7 +1343,7 @@ XPS(XML Paper Specification) 형식으로 인쇄 데이터를 수신하려면 �
 </Extension>
 ```
 
-|이름 |Description |
+|이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fullTrustProcess``입니다.
 |GroupID |실행 파일에 전달할 매개 변수 세트를 식별하는 문자열입니다. |

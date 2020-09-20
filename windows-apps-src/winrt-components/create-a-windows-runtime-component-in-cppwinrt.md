@@ -5,12 +5,12 @@ ms.date: 07/06/2020
 ms.topic: article
 keywords: windows 10, uwp, windows, 런타임, 구성 요소, 구성 요소, Windows 런타임 구성 요소, WRC, c + +/WinRT
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f84158311ef789851c268e9e21dbf5317063370
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 25286260c4abd6686939393b3bf81df818879bf9
+ms.sourcegitcommit: 21eb13a50402bf5442a5f0a4bf34800d1dc679c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174317"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90804753"
 ---
 # <a name="windows-runtime-components-with-cwinrt"></a>C++/WinRT를 사용한 Windows 런타임 구성 요소
 
@@ -140,3 +140,9 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 C + +/WinRT Windows 런타임 구성 요소에 더 많은 기능 또는 새로운 Windows 런타임 형식을 추가 하려면 위에 표시 된 것과 동일한 패턴을 따를 수 있습니다. 먼저 IDL을 사용 하 여 노출 하려는 기능을 정의 합니다. 그런 다음 Visual Studio에서 프로젝트를 빌드하여 스텁 구현을 생성 합니다. 그런 다음 구현을 적절 하 게 완료 합니다. IDL에서 정의 하는 메서드, 속성 및 이벤트는 Windows 런타임 구성 요소를 사용 하는 응용 프로그램에 표시 됩니다. IDL에 대 한 자세한 내용은 [Microsoft 인터페이스 정의 언어 3.0 소개](/uwp/midl-3/intro)를 참조 하세요.
 
 Windows 런타임 구성 요소에 이벤트를 추가 하는 방법에 대 한 예제는 [c + +/WinRT의 Author 이벤트](../cpp-and-winrt-apis/author-events.md)를 참조 하세요.
+
+## <a name="troubleshooting"></a>문제 해결
+
+| 증상 | 해결책 |
+|---------|--------|
+|C + +/WinRT 앱에서 XAML을 사용 하는 [c # Windows 런타임 구성 요소](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic) 를 사용 하는 경우 컴파일러는 *' ' MyNamespace_XamlTypeInfo '의 멤버가 아닙니다. 여기서 MyNamespace는 ' WinRT:: MyNamespace '의 멤버가 아닙니다* &mdash; . 여기서 *MyNamespace* 는 Windows 런타임 구성 요소 네임 스페이스의 이름입니다. | `pch.h`C + +/vb 앱 사용에서 MyNamespace을 적절 하 게 `#include <winrt/MyNamespace.MyNamespace_XamlTypeInfo.h>` &mdash; 대체 합니다. *MyNamespace* |

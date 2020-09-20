@@ -1,22 +1,21 @@
 ---
 ms.assetid: 2CC2E526-DACB-4008-9539-DA3D0C190290
-description: UWP 개발자가 사용할 수 있는 네트워킹 기술에 대한 빠른 개요 및 앱에 적합한 기술을 선택하는 방법에 대한 제안 사항입니다.
+description: UWP 개발자가 사용할 수 있는 네트워킹 기술에 대한 개요 및 앱에 적합한 기술을 선택하는 방법에 대한 제안 사항입니다.
 title: 네트워킹 기술 선택'
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 05aec42d4a8eef1d78ddd425f1e90e06cb610c0a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b3f14e06f5e6f7508c90df9f04265740daaccb49
+ms.sourcegitcommit: b99e2f4dffa603b68c2a8273fe6313432f91b353
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158167"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569383"
 ---
 # <a name="which-networking-technology"></a>네트워킹 기술 선택
 
-
-UWP 개발자가 사용할 수 있는 네트워킹 기술에 대한 빠른 개요 및 앱에 적합한 기술을 선택하는 방법에 대한 제안 사항입니다.
+UWP 개발자가 사용할 수 있는 네트워킹 기술에 대한 개요 및 앱에 적합한 기술을 선택하는 방법에 대한 제안 사항입니다.
 
 ## <a name="sockets"></a>소켓
 
@@ -87,7 +86,7 @@ Windows 10의 새로운 백그라운드 전송 기능은 로컬 카탈로그를 
 
 ### <a name="connection-quality"></a>연결 품질
 
-[  **Windows.Networking.Connectivity**](/uwp/api/Windows.Networking.Connectivity) API는 네트워크 연결, 비용 및 사용 정보에 액세스할 수 있도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [네트워크 연결 상태 액세스 및 네트워크 비용 관리](/previous-versions/windows/apps/hh452983(v=win.10))를 참조하세요.
+[**Windows.Networking.Connectivity**](/uwp/api/Windows.Networking.Connectivity) 네임스페이스의 API는 네트워크 연결, 비용 및 사용 정보에 액세스할 수 있도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [네트워크 연결 상태 액세스 및 네트워크 비용 관리](/previous-versions/windows/apps/hh452985(v=win.10))를 참조하세요.
 
 ### <a name="dns-service-discovery"></a>DNS 서비스 검색
 
@@ -103,7 +102,7 @@ Windows 10의 새로운 백그라운드 전송 기능은 로컬 카탈로그를 
 
 ### <a name="near-field-communications"></a>근거리 통신
 
-[  **Windows.Networking.Proximity**](/uwp/api/Windows.Networking.Proximity) API는 디바이스와의 근접 연결 또는 탭 연결을 사용하여 손쉬운 데이터 전송을 지원하는 앱에 근거리 통신을 사용하도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [근접 연결 및 탭 지원](/previous-versions/windows/apps/hh465229(v=win.10))을 참조하세요.
+[  **Windows.Networking.Proximity**](/uwp/api/Windows.Networking.Proximity) API는 디바이스와의 근접 연결 또는 탭 연결을 사용하여 손쉬운 데이터 전송을 지원하는 앱에 근거리 통신을 사용하도록 지원합니다. 이 API를 사용하는 방법에 대한 자세한 내용은 [근접 연결 및 탭 연결](/previous-versions/windows/apps/hh465221(v=win.10))을 참조하세요.
 
 ### <a name="rssatom-feeds"></a>RSS/Atom 피드
 

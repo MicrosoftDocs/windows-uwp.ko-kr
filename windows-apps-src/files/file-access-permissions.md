@@ -2,7 +2,7 @@
 ms.assetid: 3A404CC0-A997-45C8-B2E8-44745539759D
 title: 파일 액세스 권한
 description: 앱은 기본적으로 특정 파일 시스템 위치에 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다.
-ms.date: 12/19/2018
+ms.date: 09/10/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
@@ -11,18 +11,19 @@ dev_langs:
 - cppwinrt
 - cpp
 - javascript
-ms.openlocfilehash: d12ff61858d6d1434d07e00c70868697fefa1832
-ms.sourcegitcommit: b66796c73f14da63794efa66c8ded2caa25da0f7
+ms.custom: contperfq1
+ms.openlocfilehash: 6bb0e44fa5ea31d73feebdfb9ced9951cc2bc937
+ms.sourcegitcommit: 2050175043c8c175be3312f17769b4af241b3275
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89285444"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027652"
 ---
 # <a name="file-access-permissions"></a>파일 액세스 권한
 
 UWP(유니버설 Windows 플랫폼) 앱은 기본적으로 특정 파일 시스템 위치에 액세스할 수 있습니다. 또한 앱은 파일 선택기를 통해서나 접근 권한 값을 선언하여 추가 위치에 액세스할 수도 있습니다.
 
-## <a name="the-locations-that-all-apps-can-access"></a>모든 앱이 액세스할 수 있는 위치
+## <a name="locations-that-all-apps-can-access"></a>모든 앱이 액세스할 수 있는 위치
 
 새 앱을 만들면 기본적으로 다음 파일 시스템 위치에 액세스할 수 있습니다.
 

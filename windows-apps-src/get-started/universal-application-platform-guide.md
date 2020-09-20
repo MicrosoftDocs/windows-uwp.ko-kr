@@ -2,24 +2,28 @@
 title: UWP(유니버설 Windows 플랫폼) 앱이란?
 description: 이 가이드에서는 Windows 10을 실행하는 다양한 디바이스에서 실행할 수 있는 UWP(유니버설 Windows 플랫폼) 앱에 대해 알아봅니다.
 ms.assetid: 59849197-B5C7-493C-8581-ADD6F5F8800B
-ms.date: 08/21/2020
+ms.date: 09/15/2020
 ms.topic: article
+ms.custom: contperfq1
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
-ms.openlocfilehash: e0c8a059708babf3f0224cefac156cc3c1407e61
-ms.sourcegitcommit: 696f90cc95311ee3a74ce70881c7bb277b666e46
+ms.openlocfilehash: 29e5171d0c6737bdf3d8064566b8ec2731e68978
+ms.sourcegitcommit: b99e2f4dffa603b68c2a8273fe6313432f91b353
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89429124"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569390"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
+UWP는 Windows용 클라이언트 애플리케이션을 만드는 여러 가지 방법 중 하나입니다. UWP 앱은 WinRT API를 사용하여 인터넷에 연결된 디바이스에 이상적인 강력한 UI와 고급 비동기 기능을 제공합니다.
+
+UWP 앱 만들기를 시작하는 데 필요한 도구를 다운로드하려면 [설정](get-set-up.md)을 참조하여 [첫 번째 앱을 작성합니다](your-first-app.md).
 
 
 ## <a name="where-does-uwp-fit-in-the-microsoft-development-story"></a>UWP는 Microsoft 개발 스토리의 어디에 적합한가요?
 
-UWP는 Windows용 클라이언트 애플리케이션을 만드는 여러 가지 방법 중 하나입니다. UWP 앱은 WinRT API를 사용하여 인터넷에 연결된 디바이스에 이상적인 강력한 UI와 고급 비동기 기능을 제공합니다. UWP 앱은 Win32 API와 .NET 클래스를 여전히 사용할 수 있습니다([UWP 앱의 API 집합](https://docs.microsoft.com/previous-versions/mt186421(v=vs.85)), [UWP 앱의 DLL](https://docs.microsoft.com/previous-versions/mt186422(v=vs.85)), [UWP 앱용 .NET](https://docs.microsoft.com/dotnet/api/index?view=dotnet-uwp-10.0) 참조).
+UWP는 Windows 10 디바이스에서 실행되는 앱을 만드는 한 가지 선택 항목으로, 다른 플랫폼과 결합할 수 있습니다. UWP 앱은 Win32 API와 .NET 클래스를 사용할 수 있습니다([UWP 앱의 API 집합](https://docs.microsoft.com/previous-versions/mt186421(v=vs.85)), [UWP 앱의 Dll](https://docs.microsoft.com/previous-versions/mt186422(v=vs.85)), [UWP 앱용 .NET](https://docs.microsoft.com/dotnet/api/index?view=dotnet-uwp-10.0) 참조).
 
 Microsoft 개발 스토리는 지속적으로 발전하고 있으며 [WinUI](https://docs.microsoft.com/windows/apps/winui/), [MSIX](https://docs.microsoft.com/windows/msix/) 및 [Project Reunion](https://github.com/microsoft/ProjectReunion)과 같은 이니셔티브와 함께 UWP는 클라이언트 앱을 만들 수 있는 강력한 도구입니다.
 
@@ -34,21 +38,21 @@ UWP 앱은 다음과 같습니다.
 - Windows 10에서 실행되는 모든 디바이스(또는 사용자가 지정하는 항목만)의 Microsoft Store에서 사용할 수 있습니다. Microsoft Store는 앱에서 소득을 올릴 수 있는 다양한 방법을 제공합니다.
 - 시스템에 위험이 되거나 "시스템 rot"이 발생할 위험 없이 설치 및 제거를 수행할 수 있습니다.
 - 참여: 라이브 타일, 푸시 알림, Windows Timeline과 Cortana의 "중단한 위치부터 다시 시작" 기능과 상호 작용하는 사용자 활동을 활용하여 사용자의 참여를 이끌어냅니다.
-- C#, C++, Visual Basic 및 Javascript에서 프로그래밍이 가능합니다. UI에서 XAML, HTML 또는 DirectX를 사용합니다.
+- C#, C++, Visual Basic 및 Javascript에서 프로그래밍이 가능합니다. UI에서 WinUI, XAML, HTML 또는 DirectX를 사용합니다.
 
 이러한 내용을 좀 더 자세히 살펴보겠습니다.
 
-## <a name="secure"></a>보안
+### <a name="secure"></a>보안
 
 UWP 앱은 마이크, 위치, 웹캠, USB 디바이스, 파일 및 등에 대한 액세스와 같이 필요한 디바이스의 기능을 매니페스트에 선언합니다. 사용자가 이러한 액세스를 승인하고 인증해야만 앱에 이 기능에 대한 사용 권한이 부여됩니다.
 
-## <a name="a-common-api-surface-across-all-devices"></a>모든 디바이스에서 공통되는 API 화면
+### <a name="a-common-api-surface-across-all-devices"></a>모든 디바이스에서 공통되는 API 화면
 
 Windows 10에는 Windows 10을 실행하는 모든 디바이스에 공통 앱 플랫폼을 제공하는 UWP(유니버설 Windows 플랫폼)가 도입되었습니다. UWP 핵심 API는 모든 Windows 디바이스에서 같습니다. 앱이 핵심 API만 사용하는 경우에는 데스크톱 PC, Xbox 또는 혼합 현실 헤드셋 등, 다양한 대상의 Windows 10 디바이스에서 실행됩니다.
 
 C++ /WinRT 또는 C++ /CX로 작성된 UWP 앱은 UWP의 일부인 Win32 API에 액세스할 수 있습니다. 이러한 Win32 API는 모든 Windows 10 디바이스에서 구현됩니다.
 
-## <a name="extension-sdks-expose-the-unique-capabilities-of-specific-device-types"></a>확장 SDK는 특정 디바이스 유형의 고유한 기능을 노출
+### <a name="extension-sdks-expose-the-unique-capabilities-of-specific-device-types"></a>확장 SDK는 특정 디바이스 유형의 고유한 기능을 노출
 
 유니버설 API를 대상으로 하는 경우, Windows 10을 실행하는 모든 디바이스에서 앱을 실행할 수 있습니다. 그러나 UWP 앱에서 디바이스 고유의 API를 활용하도록 하려는 경우에는 그렇게 할 수도 있습니다.
 
@@ -59,7 +63,7 @@ C++ /WinRT 또는 C++ /CX로 작성된 UWP 앱은 UWP의 일부인 Win32 API에 
 다음 동영상은 디바이스 제품군과 적응형 코딩에 대해 간략하게 설명합니다.
 <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-UWP-and-Device-Families/player" width="640" height="360" allowFullScreen frameBorder="0"></iframe>
 
-## <a name="adaptive-controls-and-input"></a>적응형 컨트롤 및 입력
+### <a name="adaptive-controls-and-input"></a>적응형 컨트롤 및 입력
 
 UI 요소는 레이아웃과 배율을 조정하여 앱이 실행 중인 화면의 크기와 DPI에 응답합니다. UWP 앱은 키보드, 마우스, 터치, 펜 및 Xbox One 컨트롤러 같이 여러 유형의 입력에서 원활하게 작동합니다. 특정 화면 크기나 디바이스로 UI를 추가적으로 사용자 지정해야 하는 경우에는 앱이 실행되는 다양한 디바이스 및 폼 팩터에 맞게 UI를 디자인할 수 있는 데 새 레이아웃 패널 및 도구를 사용할 수 있습니다.
 
@@ -73,11 +77,13 @@ Windows에서는 다음과 같은 기능으로 UI를 여러 디바이스에 맞�
 
 앱 UI의 일부 측면은 디바이스 간에 자동으로 적응합니다. 그러나 앱의 사용자 환경은 앱이 실행되는 디바이스에 따라 수동으로 적응해야 할 수도 있습니다. 예를 들어 사진 앱은 소형 핸드헬드 디바이스에서 실행될 때 한손으로 사용하기에 적합하도록 UI를 조정할 수 있습니다. 사진 앱을 데스크톱 컴퓨터에서 실행할 때는 추가 화면 공간을 활용하도록 UI를 조정해야 합니다.
 
-## <a name="theres-one-store-for-all-devices"></a>모든 디바이스를 위한 하나의 Store
+### <a name="theres-one-store-for-all-devices"></a>모든 디바이스를 위한 하나의 Store
 
 통합 앱 Store에서는 PC, 태블릿, Xbox, HoloLens, Surface Hub, IoT(사물 인터넷) 같은 Windows 10 디바이스에서 앱을 사용할 수 있습니다. 앱을 Store에 제출하고 모든 유형의 디바이스에서, 또는 선택한 디바이스에서 이를 사용하도록 할 수 있습니다. 한 곳에서 모든 Windows 디바이스용 앱을 제출하고 관리합니다. UWP 기능으로 현대화하고 Microsoft Store에서 판매하고 싶은 C++ 데스크톱 앱이 있나요? 그것도 가능합니다.
 
 사용자에 대한 이해를 높이고 앱을 개선하는 데 중요한 도구인 상세 원격 분석용 [Application Insights](https://azure.microsoft.com/services/application-insights/)에 UWP 앱이 연결됩니다.
+
+UWP 앱은 [MSIX](https://docs.microsoft.com/windows/msix/)와 함께 패키지되고 Microsoft Store를 통해 또는 다른 방법으로 배포될 수 있습니다. MSIX를 사용하면 배포 방법에 관계없이 앱을 업데이트할 수 있습니다. [코드에서 스토어에 게시되지 않은 앱 패키지 업데이트](https://docs.microsoft.com/windows/msix/non-store-developer-updates)를 참조하세요.
 
 ### <a name="monetize-your-app"></a>앱으로 수익 창출
 
@@ -88,13 +94,8 @@ Windows에서는 다음과 같은 기능으로 UI를 여러 디바이스에 맞�
 - 사용자에게 인센티브를 제공하기 위한 판매 가격입니다.
 - 앱에서 바로 구매.
 
-### <a name="apps-from-the-microsoft-store-provide-a-seamless-install-uninstall-and-upgrade-experience"></a>Microsoft Store의 앱으로 설치, 제거 및 업그레이드를 원활하게 수행할 수 있는 환경 제공
 
-모든 UWP 앱은 사용자, 디바이스 및 시스템을 보호하는 패키지 시스템을 사용하여 배포됩니다. 앱에서 생성된 문서를 제외하고 뒤에 어떤 것도 남기지 않고 UWP 앱을 제거할 수 없기 때문에 사용자가 앱을 설치하고 후회할 일이 절대 없습니다.
-
-앱을 원활하게 배포 및 업데이트할 수 있습니다. 필요에 따라 콘텐츠 및 확장을 다운로드할 수 있기 때문에 앱 패키지로 수익 창출이 가능합니다.
-
-## <a name="deliver-relevant-real-time-info-to-your-users-to-keep-them-coming-back"></a>사용자의 재방문율을 높이도록 사용자에게 관련성 높은 실시간 정보를 제공
+### <a name="deliver-relevant-real-time-info-to-your-users-to-keep-them-coming-back"></a>사용자의 재방문율을 높이도록 사용자에게 관련성 높은 실시간 정보를 제공
 
 UWP 앱에서 사용자의 참여도를 높이는 방법은 여러 가지가 있습니다.
 
@@ -113,6 +114,8 @@ UWP 앱은 운영 체제에서 제공되는 네이티브 API인 Windows 런타�
 - XAML UI 및 C#, VB 또는 C++
 - DirectX UI 및 C++
 - JavaScript 및 HTML
+- WinUI
+-
 
 ## <a name="links-to-help-you-get-going"></a>실행에 도움이 되는 링크
 

@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 7a1235159b0f9d69e7fcedd334aeb9e9246d3d2b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 57d46ea1f88395624943135247a8f610112aaf90
+ms.sourcegitcommit: 21eb13a50402bf5442a5f0a4bf34800d1dc679c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174297"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90804733"
 ---
 # <a name="windows-runtime-components-with-c-and-visual-basic"></a>C# 및 Visual Basic이 포함된 Windows 런타임 구성 요소
 
@@ -280,6 +280,13 @@ Windows 런타임 구성 요소가 JavaScript 또는 C++에서 사용되는 경�
 직접 사용하기 위해 Windows 런타임 구성 요소를 만든 경우 해당 기능이 다른 개발자에게도 유용할 수 있습니다. 다른 개발자에게 배포하기 위해 구성 요소를 패키지하는 방법에는 두 가지가 있습니다. [관리되는 Windows 런타임 구성 요소 배포](/previous-versions/windows/apps/jj614475(v=vs.140))를 참조하세요.
 
 Visual Basic 및 c # 언어 기능 및 Windows 런타임에 대 한 .NET 지원에 대 한 자세한 내용은 [Visual Basic 및 c # 언어 참조](/visualstudio/welcome-to-visual-studio-2015?view=vs-2015)를 참조 하세요.
+
+
+## <a name="troubleshooting"></a>문제 해결
+
+| 증상 | 해결책 |
+|---------|--------|
+|C + +/WinRT 앱에서 XAML을 사용 하는 [c # Windows 런타임 구성 요소](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic) 를 사용 하는 경우 컴파일러는 *' ' MyNamespace_XamlTypeInfo '의 멤버가 아닙니다. 여기서 MyNamespace는 ' WinRT:: MyNamespace '의 멤버가 아닙니다* &mdash; . 여기서 *MyNamespace* 는 Windows 런타임 구성 요소 네임 스페이스의 이름입니다. | `pch.h`C + +/vb 앱 사용에서 MyNamespace을 적절 하 게 `#include <winrt/MyNamespace.MyNamespace_XamlTypeInfo.h>` &mdash; 대체 합니다. *MyNamespace* |
 
 ## <a name="related-topics"></a>관련 항목
 * [UWP 앱용 .NET](/dotnet/api/index?view=dotnet-uwp-10.0)

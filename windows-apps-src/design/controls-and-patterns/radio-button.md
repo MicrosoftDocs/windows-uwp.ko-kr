@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4953b5adc1953bac83b90271b4042e3b9f13c3f2
-ms.sourcegitcommit: 083ddf840ab42bb48b4892fc2876ecbf698e481b
+ms.openlocfilehash: ee933bd28594263e61e654b14b0541c6fa9ed41b
+ms.sourcegitcommit: 875bd348608547e7a66fa4b460efe64b3246807e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89615526"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90080845"
 ---
 # <a name="radio-buttons"></a>라디오 단추
 
@@ -125,17 +125,35 @@ RadioButtons 그룹의 단일 동작은 여러 항목을 선택 및 선택 취�
 > [!NOTE]
 > 초기 탭 탐색에서 탭 포커스를 받는 항목은 선택되지 않습니다.
 
-|탭 포커스가 없는 목록 | 초기 탭 포커스가 있는 목록|
-|:--:|:--:|
-| ![탭 포커스가 없는 목록 및 선택한 항목이 없음](images/radiobutton-no-selected-item-no-tab-focus.png) | ![초기 탭 포커스가 있는 목록 및 선택한 항목이 없음](images/radiobutton-no-selected-item-tab-focus.png)|
+:::row:::
+   :::column span="":::
+     **_탭 포커스가 없는 목록, 선택 항목 없음_**
+
+     ![탭 포커스가 없는 목록 및 선택한 항목이 없음](images/radiobutton-no-selected-item-no-tab-focus.png)
+   :::column-end:::
+   :::column span="":::
+      **_초기 탭 포커스가 있는 목록, 선택 항목 없음_**
+
+      ![초기 탭 포커스가 있는 목록 및 선택한 항목이 없음](images/radiobutton-no-selected-item-tab-focus.png)
+   :::column-end:::
+:::row-end:::
 
 ##### <a name="one-radio-button-is-selected"></a>라디오 단추 하나가 선택됨
 
 사용자가 라디오 단추가 이미 선택된 목록을 탭하면 선택된 라디오 단추에서 포커스를 갖습니다.
 
-|탭 포커스가 없는 목록 | 초기 탭 포커스가 있는 목록 |
-|:--:|:--:|
-| ![탭 포커스가 없는 목록 및 선택한 항목](images/radiobutton-selected-item-no-tab-focus.png) | ![초기 탭 포커스가 있는 목록 및 선택한 항목](images/radiobutton-selected-item-tab-focus.png)|
+:::row:::
+   :::column span="":::
+     **_탭 포커스가 없는 목록_**
+
+     ![탭 포커스가 없는 목록 및 선택한 항목](images/radiobutton-selected-item-no-tab-focus.png)
+   :::column-end:::
+   :::column span="":::
+      **_초기 탭 포커스가 있는 목록_**
+
+      ![초기 탭 포커스가 있는 목록 및 선택한 항목](images/radiobutton-selected-item-tab-focus.png)
+   :::column-end:::
+:::row-end:::
 
 #### <a name="keyboard-navigation"></a>키보드 탐색
 
@@ -147,18 +165,58 @@ RadioButtons 그룹의 단일 동작은 여러 항목을 선택 및 선택 취�
 
 단일 열 또는 단일 행 레이아웃에서 키보드 탐색을 수행하면 다음과 같은 동작이 발생합니다.
 
-|단일 열 | 단일 행|
-|:--|:--|
-| ![단일 열 RadioButtons 그룹에 대한 키보드 탐색의 예](images/radiobutton-keyboard-navigation-single-column.png)</br>위쪽 및 아래쪽 화살표 키는 항목 간에 이동합니다.</br>왼쪽 및 오른쪽 화살표 키는 아무 작업도 수행하지 않습니다. | ![단일 행 RadioButtons 그룹에 대한 키보드 탐색의 예](images/radiobutton-keyboard-navigation-single-row.png)<br/>왼쪽 및 위쪽 화살표 키는 이전 항목으로 이동하고, 오른쪽 및 아래쪽 화살표 키는 다음 항목으로 이동합니다. |
+:::row:::
+   :::column span="":::
+     **_단일 열_**
+
+     ![단일 열 RadioButtons 그룹에 대한 키보드 탐색의 예](images/radiobutton-keyboard-navigation-single-column.png)
+
+     위쪽 및 아래쪽 화살표 키는 항목 간에 이동합니다.</br>왼쪽 및 오른쪽 화살표 키는 아무 작업도 수행하지 않습니다.
+   :::column-end:::
+   :::column span="":::
+      **_단일 행_**
+
+      ![단일 행 RadioButtons 그룹에 대한 키보드 탐색의 예](images/radiobutton-keyboard-navigation-single-row.png)
+
+      왼쪽 및 위쪽 화살표 키는 이전 항목으로 이동하고, 오른쪽 및 아래쪽 화살표 키는 다음 항목으로 이동합니다.
+   :::column-end:::
+:::row-end:::
 
 ##### <a name="navigation-within-multi-column-multi-row-layouts"></a>다중 열, 다중 행 레이아웃 내 탐색
 
 다중 열, 다중 행 그리드 레이아웃에서 키보드 탐색을 수행하면 다음과 같은 동작이 발생합니다.
 
-|왼쪽/오른쪽 화살표 키| 위쪽/아래쪽 화살표 키 |
-|:--|:--|
-| ![다중 열/행 RadioButtons 그룹에 대한 가로 키보드 탐색의 예](images/radiobutton-keyboard-navigation-multi-column-row-1.png)</br>왼쪽 및 오른쪽 화살표 키는 포커스를 한 행의 항목 간에 가로로 이동합니다. | ![다중 열/행 RadioButtons 그룹에 대한 세로 키보드 탐색의 예](images/radiobutton-keyboard-navigation-multi-column-row-2.png)<br/>위쪽 및 아래쪽 화살표 키는 포커스를 열의 항목 간에 세로로 이동합니다. |
-| ![포커스가 열의 마지막 항목에 있는 가로 키보드 탐색의 예](images/radiobutton-keyboard-navigation-multi-column-row-3.png)</br> 포커스가 열의 마지막 항목에 있고 오른쪽 또는 왼쪽 화살표 키를 누르면 포커스가 다음 또는 이전 열의 마지막 항목으로 이동합니다(있는 경우). | ![포커스가 열의 마지막 항목에 있는 세로 키보드 탐색의 예](images/radiobutton-keyboard-navigation-multi-column-row-4.png)<br/>포커스가 열의 마지막 항목에 있고 아래쪽 화살표 키를 누르면 포커스가 다음 열의 첫 번째 항목으로 이동합니다(있는 경우). 포커스가 열의 첫 번째 항목에 있고 위쪽 화살표 키를 누르면 포커스가 이전 열의 마지막 항목으로 이동합니다(있는 경우). |
+**_왼쪽/오른쪽 화살표 키_**
+
+:::row:::
+   :::column span="":::
+      ![다중 열/행 RadioButtons 그룹에 대한 가로 키보드 탐색의 예](images/radiobutton-keyboard-navigation-multi-column-row-1.png)
+
+      
+
+      왼쪽 및 오른쪽 화살표 키는 포커스를 한 행의 항목 간에 가로로 이동합니다.
+   :::column-end:::
+   :::column span="":::
+     ![포커스가 열의 마지막 항목에 있는 가로 키보드 탐색의 예](images/radiobutton-keyboard-navigation-multi-column-row-3.png)
+
+      포커스가 열의 마지막 항목에 있고 오른쪽 또는 왼쪽 화살표 키를 누르면 포커스가 다음 또는 이전 열의 마지막 항목으로 이동합니다(있는 경우).
+   :::column-end:::
+:::row-end:::
+
+**_위쪽/아래쪽 화살표 키_**
+
+:::row:::
+   :::column span="":::
+      ![다중 열/행 RadioButtons 그룹에 대한 세로 키보드 탐색의 예](images/radiobutton-keyboard-navigation-multi-column-row-2.png)
+
+      위쪽 및 아래쪽 화살표 키는 포커스를 열의 항목 간에 세로로 이동합니다.
+   :::column-end:::
+   :::column span="":::
+     ![포커스가 열의 마지막 항목에 있는 세로 키보드 탐색의 예](images/radiobutton-keyboard-navigation-multi-column-row-4.png)
+
+      포커스가 열의 마지막 항목에 있고 아래쪽 화살표 키를 누르면 포커스가 다음 열의 첫 번째 항목으로 이동합니다(있는 경우). 포커스가 열의 첫 번째 항목에 있고 위쪽 화살표 키를 누르면 포커스가 이전 열의 마지막 항목으로 이동합니다(있는 경우).
+   :::column-end:::
+:::row-end:::
 
 자세한 내용은 [키보드 조작](../input/keyboard-interactions.md#wrapping-homogeneous-list-and-grid-view-items)을 참조하세요.
 
@@ -172,9 +230,22 @@ RadioButtons 그룹은 포커스를 첫 번째 행 또는 열에서 마지막 �
 
 키보드를 사용하여 `RadioButtons` 그룹의 항목 간에 탐색할 때 포커스가 한 항목에서 다음 항목으로 이동하면 포커스가 새로 있는 항목이 선택되고 이전에 포커스가 있던 항목은 지워집니다.
 
-|키보드 탐색 전 | 키보드 탐색 후|
-|:--|:--|
-| ![키보드 탐색 전의 포커스 및 선택 예제](images/radiobutton-two-selected-before-keyboard-navigation.png)</br>*키보드 탐색 전의 포커스 및 선택 예제* | ![키보드 탐색 후의 포커스 및 선택 예제](images/radiobutton-three-selected-after-keyboard-navigation.png)<br/>*키보드 탐색 후의 포커스 및 선택 항목에 대한 예 - 아래쪽 화살표 키를 통해 포커스가 라디오 단추 "3"으로 이동하여 이를 선택하고, 라디오 단추 2를 지움* |
+:::row:::
+   :::column span="":::
+      **_키보드 탐색 전_**
+
+      ![키보드 탐색 전의 포커스 및 선택 예제](images/radiobutton-two-selected-before-keyboard-navigation.png)
+
+      키보드 탐색 전의 포커스 및 선택 항목
+   :::column-end:::
+   :::column span="":::
+     **_키보드 탐색 후_**
+
+      ![키보드 탐색 후의 포커스 및 선택 예제](images/radiobutton-three-selected-after-keyboard-navigation.png)
+
+      키보드 탐색 후의 포커스 및 선택 항목 - 아래쪽 화살표 키를 통해 포커스가 라디오 단추 "3"으로 이동하여 이를 선택하고, 라디오 단추 2를 지움
+   :::column-end:::
+:::row-end:::
 
 Ctrl+화살표 키를 사용하여 선택 항목을 변경하지 않고 포커스를 이동할 수 있습니다. 포커스가 이동되면 스페이스바를 사용하여 현재 포커스가 있는 항목을 선택할 수 있습니다.
 

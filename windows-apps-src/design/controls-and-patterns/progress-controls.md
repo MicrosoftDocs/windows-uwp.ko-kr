@@ -1,5 +1,5 @@
 ---
-Description: 진행률 컨트롤은 긴 작업을 진행 중인 사용자에게 피드백을 제공합니다.
+description: 진행률 컨트롤은 긴 작업을 진행 중인 사용자에게 피드백을 제공합니다.
 title: 진행률 컨트롤에 대한 지침
 ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
 label: Progress controls
@@ -12,12 +12,12 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: d5756c4cfff05b666eae245de76c1813f9a834df
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: fbd9ed95137263f4ddad44e2272d4d77aced241f
+ms.sourcegitcommit: 234bb7c896b990f624b2b8789820b92426e52291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169677"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90013390"
 ---
 # <a name="progress-controls"></a>진행률 컨트롤
 
@@ -61,13 +61,12 @@ Imports muxc = Microsoft.UI.Xaml.Controls
 
 또한 진행률 컨트롤은 읽기 전용이므로 조작할 수 없습니다. 즉, 사용자가 이러한 컨트롤을 직접 호출하거나 사용할 수 없다는 의미입니다.
 
-![ProgressBar 상태](images/progress-bar-two-states.png)
+|제어|표시|
+|---|---|
+| 확정되지 않은 ProgressBar | ![ProgressBar 확정되지 않음](images/progressbar-indeterminate.gif) |
+| 확정된 ProgressBar | ![ProgressBar 확정됨](images/progressbar-determinate.png)|
+| 확정되지 않은 ProgressRing | ![ProgressRing 상태](images/progressring-indeterminate.gif)|
 
-*위쪽에서 아래쪽 - 미확정 ProgressBar 및 확정 ProgressBar*
-
-![ProgressRing 상태](images/ProgressRing_SingleState.png)
-
-*미확정 ProgressRing*
 
 ## <a name="examples"></a>예
 
