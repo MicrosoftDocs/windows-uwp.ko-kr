@@ -7,12 +7,12 @@ ms.date: 05/20/2019
 ms.topic: article
 keywords: windows 10, uwp, WNS, windows 알림 서비스, 알림, windows, 방화벽, 문제 해결, IP, 트래픽, 엔터프라이즈, 네트워크, IPv4, VIP, FQDN, 공용 IP 주소
 ms.localizationpriority: medium
-ms.openlocfilehash: a2eb09a0b1cc6f135a23b038207bb442eb741bf8
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4277b46728464630bf478b1f78008e92b4e3fe99
+ms.sourcegitcommit: 41dbee78d827107c224a9136c26f90be4dfe12ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169207"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90845532"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>WNS 트래픽을 지원 하기 위한 엔터프라이즈 방화벽 및 프록시 구성
 
@@ -22,9 +22,9 @@ ms.locfileid: "89169207"
 ## <a name="proxy-support"></a>프록시 지원
 
 > [!Note]
-> Windows 클라이언트는 모든 프록시를 지원 **하지 않습니다** . WNS에 대 한 연결은 직접 연결 이어야 합니다.
+> Windows의 WNS 푸시 알림은 현재 모든 프록시를 지원 하지 않습니다. 최상의 결과를 위해 WNS에 대 한 연결은 직접 연결 이어야 합니다.
 
-**개봉박두!** 다른 네트워크 구성, 프록시 및 방화벽을 적극적으로 조사 하 고 있습니다. 이 페이지는 일반적인 엔터프라이즈 시나리오 및 WNS 지원에 대 한 자세한 내용으로 업데이트할 예정입니다.
+다른 네트워크 구성, 프록시 및 방화벽을 적극적으로 조사 하 고 있습니다. 이 페이지는 일반적인 엔터프라이즈 시나리오 및 WNS 지원에 대 한 자세한 내용으로 업데이트할 예정입니다.
 
 
 ## <a name="what-information-should-be-added-to-the-allowlist"></a>Allowlist에 추가 해야 하는 정보
