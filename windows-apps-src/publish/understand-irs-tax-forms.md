@@ -1,19 +1,19 @@
 ---
 Description: Microsoft에서 제공 하는 세금 양식에 대해 알아보고이를 받는 사람 및 사용 가능 시기를 포함 합니다.
-title: Microsoft에서 발급 한 IRS 세금 양식 이해
+title: Microsoft에서 발급하는 IRS 세금 양식 이해
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 세금, irs, 내부 수익 서비스, 세금, 수입 세금, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a385c9c351dc0bb5db857fe7d1f5f267347f1f1
-ms.sourcegitcommit: 31c925736391ab166c06f34258564b00aeebd83a
+ms.openlocfilehash: 6493e20dbc0e38405a7cd30fc22acb9973098431
+ms.sourcegitcommit: 97002cc3e5942f43ab0f14f4ad70543a63db0c03
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84428912"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91128979"
 ---
-# <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Microsoft에서 발급 한 IRS 세금 양식 이해
+# <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Microsoft에서 발급하는 IRS 세금 양식 이해
 
 사용자의 위치와 수신 하는 판매량 및/또는 지불의 양에 따라 매년 Microsoft에서 하나 이상의 세금 양식을 받을 수 있습니다. Microsoft는 이러한 양식을 발급 하 고 IRS (내부 수익 서비스)를 사용 하 여 파일을 파일에 포함 해야 합니다.
 
@@ -36,17 +36,18 @@ ms.locfileid: "84428912"
 | 비즈니스 그룹         | 법적 엔터티          | 주소                                          |
 |------------------------|-----------------------|--------------------------------------------------|
 | Windows, Office, Azure | Microsoft Corporation | One Microsoft Way<br>Redmond, WA 98052 USA       |
-| 광고            | Microsoft Online Inc. | 6880 시에라리온 센터 Parkway<br>Reno, NV 98511 USA |
+| 광고            | Microsoft Online Inc. | 6880 Sierra Center Parkway<br>Reno, NV 98511 USA |
 
 **미국 이외의 시민:**
+
 | 비즈니스 그룹         | 법적 엔터티          | 주소                                          |
 |------------------------|-----------------------|--------------------------------------------------|
-| Windows, Office, Azure | Microsoft 아일랜드 운영이 제한 됨 (microsoft Corporation의 정규화 된 중개자 역할을 하는 microsoft 아일랜드를 통해 Microsoft Corporation에서 지불) | 한 Microsoft 장소<br>남부 &nbsp; 관할지 &nbsp; 비즈니스 &nbsp; 공원<br>Leopardstown, 더블린 18 아일랜드|
-| 광고\*          | Microsoft 아일랜드 작업 제한 (microsoft online Inc.의 경우 결제는 microsoft online i n c. 용 지급 agent 역할을 통해 microsoft online inc.) | 한 Microsoft 장소<br>남부 &nbsp; 관할지 &nbsp; 비즈니스 &nbsp; 공원<br>Leopardstown, 더블린 18 아일랜드 |
-| 광고            | Microsoft Online Inc. | 6880 시에라리온 센터 Parkway<br>Reno, NV 98511 USA |
+| Windows, Office, Azure | Microsoft 아일랜드 운영이 제한 됨 (microsoft Corporation의 정규화 된 중개자 역할을 하는 microsoft 아일랜드를 통해 Microsoft Corporation에서 지불) | 한 Microsoft 장소<br>남부 &nbsp; 관할지 &nbsp; 비즈니스 &nbsp; 공원<br>Leopardstown, 더블린 18, D18 P521, 아일랜드|
+| 광고\*          | Microsoft 아일랜드 작업 제한 (microsoft online Inc.의 경우 결제는 microsoft online i n c. 용 지급 agent 역할을 통해 microsoft online inc.) | 한 Microsoft 장소<br>남부 &nbsp; 관할지 &nbsp; 비즈니스 &nbsp; 공원<br>Leopardstown, 더블린 18, D18 P521, 아일랜드 |
+| 광고            | Microsoft Online Inc. | 6880 Sierra Center Parkway<br>Reno, NV 98511 USA |
 
 >[!NOTE]
-> \*다음 국가의 시민은 Microsoft 아일랜드 작업을 제한 하 여 광고 수익을 지불 합니다. 오스트리아, 벨기에, 불가리아, 크로아티아, 키프로스, Czechia, 덴마크, 에스토니아, 핀란드, 프랑스, 독일, 그리스, 헝가리, 아일랜드, 남자 섬, 이탈리아, 라트비아, 리히텐슈타인, 리투아니아, 룩셈부르크, 몰타, 모나코, 네덜란드, 노르웨이, 폴란드, 포르투갈, 루마니아, 슬로바키아, 슬로베니아, 남아프리카
+> \* 다음 국가의 시민은 Microsoft 아일랜드 작업을 제한 하 여 광고 수익을 지불 합니다. 오스트리아, 벨기에, 불가리아, 크로아티아, 키프로스, Czechia, 덴마크, 에스토니아, 핀란드, 프랑스, 독일, 그리스, 헝가리, 아일랜드, 남자 섬, 이탈리아, 라트비아, 리히텐슈타인, 리투아니아, 룩셈부르크, 몰타, 모나코, 네덜란드, 노르웨이, 폴란드, 포르투갈, 루마니아, 슬로바키아, 슬로베니아, 남아프리카
 
 ## <a name="for-developers-located-in-the-united-states"></a>미국에 거주 하는 개발자 용
 
@@ -104,8 +105,8 @@ ms.locfileid: "84428912"
   <tr>
     <td valign="top"><b>W8 양식을 완료 했을 때 지불에 세금을 보안상 이유로 이유는 무엇 인가요?</b></td>
     <td valign="top">다음 중 하나에 해당 하는 경우 세금이 보안상 이유로 됩니다.<br>
-     1.W8의 세금 협약 섹션을 제대로 완료 하지 못했습니다. 또는<br>
-     2.미국에 세금 조약이 없는 국가에 있습니다.<br><br>언제 든 지 파트너 센터를 방문 하 여 업데이트 된 W8 양식을 제출할 수 있습니다.<br><br><b>참고</b>: 일부 수입은 세금 원천 적용 되지 않습니다.</td>
+     1. W8의 세금 협약 섹션을 제대로 완료 하지 못했습니다. 또는<br>
+     2. 미국에 세금 조약이 없는 국가에 있습니다.<br><br>언제 든 지 파트너 센터를 방문 하 여 업데이트 된 W8 양식을 제출할 수 있습니다.<br><br><b>참고</b>: 일부 수입은 세금 원천 적용 되지 않습니다.</td>
   </tr>
   <tr>
     <td valign="top"><b>유효한 조약 정보를 사용 하 여 업데이트 된 W8 양식을 제출 했습니다. Microsoft에서 보안상 이유로 된 세금을 환불 받을 수 있나요?</b></td>
