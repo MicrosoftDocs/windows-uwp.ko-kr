@@ -4,14 +4,15 @@ title: Windows 데스크톱의 장치 포털
 description: Windows Device Portal이 Windows 데스크톱의 진단 및 자동화를 제공하는 방법을 알아봅니다.
 ms.date: 08/20/2020
 ms.topic: article
+ms.custom: contperfq1
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: e485fcb5d6ca6ecf8c19124c482492ddfb2c5233
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f06a3c933060a7309604ae8dec49455ac3bd02ab
+ms.sourcegitcommit: 41dbee78d827107c224a9136c26f90be4dfe12ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173607"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90845572"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Windows 데스크톱의 장치 포털
 

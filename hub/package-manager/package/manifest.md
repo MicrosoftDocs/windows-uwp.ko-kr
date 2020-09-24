@@ -4,12 +4,12 @@ description: 소프트웨어 패키지를 Windows 패키지 관리자 리포지�
 ms.date: 04/29/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b2c42fb8a9f8eb741ce253c3ea110fe4eeb10a3
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a3a1acebf2b48e767fbd16998967145976305434
+ms.sourcegitcommit: 94841d1d59703897b42b11597c28a9d966626f47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166497"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91110571"
 ---
 # <a name="create-your-package-manifest"></a>패키지 매니페스트 만들기
 
@@ -56,8 +56,8 @@ License: string # The open source license or copyright.
 InstallerType: string # Enumeration of supported installer types (exe, msi, msix, inno, wix, nullsoft, appx).
 Installers:
   - Arch: string # Enumeration of supported architectures.
-  - Url: string # Path to download installation file.
-  - Sha256: string # SHA256 calculated from installer.
+    Url: string # Path to download installation file.
+    Sha256: string # SHA256 calculated from installer.
 ManifestVersion: 0.1.0
 ```
 
@@ -100,21 +100,22 @@ FileExtensions: list # List of file extensions the package could support.
 Protocols: list # List of protocols the package provides a handler for.
 Commands: list # List of commands or aliases the user would use to run the package.
 InstallerType: string # Enumeration of supported installer types (exe, msi, msix, inno, wix, nullsoft, appx).
-Custom: string # Custom switches passed to the installer.
-Silent: string # Switches passed to the installer for silent installation.
-SilentWithProgress: string # Switches passed to the installer for non-interactive install.
-Interactive: string # Experimental.
-Language: string # Experimental.
-Log: string # Specifies log redirection switches and path.
-InstallLocation: string # Specifies alternate location to install package.
+Switches: # These can be used to change the install behavior if supported by the InstallerType.
+  Custom: string # Custom switches passed to the installer.
+  Silent: string # Switches passed to the installer for silent installation.
+  SilentWithProgress: string # Switches passed to the installer for non-interactive install.
+  Interactive: string # Experimental.
+  Language: string # Experimental.
+  Log: string # Specifies log redirection switches and path.
+  InstallLocation: string # Specifies alternate location to install package.
 Installers: # Nested map of keys for specific installer.
   - Arch: string # Enumeration of supported architectures.
-  - Url: string # Path to download installation file.
-  - Sha256: string # SHA256 calculated from installer.
-  - SignatureSha256: string # SHA256 calculated from signature file's hash of MSIX file.
-  - Switches: # Collection of entries to override root keys. The primary supported values are: Custom, Silent, SilentWithProgress, Interactive. For a complete list see the specification at https://github.com/microsoft/winget-cli/blob/master/doc/ManifestSpecv0.1.md.
-  - Scope: string # Experimental.
-  - SystemAppId: string # Experimental.
+    Url: string # Path to download installation file.
+    Sha256: string # SHA256 calculated from installer.
+    SignatureSha256: string # SHA256 calculated from signature file's hash of MSIX file.
+    Switches: # Collection of entries to override root keys. The primary supported values are: Custom, Silent, SilentWithProgress, Interactive. For a complete list see the specification at https://github.com/microsoft/winget-cli/blob/master/doc/ManifestSpecv0.1.md.
+    Scope: string # Experimental.
+    SystemAppId: string # Experimental.
 Localization: # Nested map of keys for localization.
   - Language: string # Locale for display fields and localized URLs.
 ManifestVersion: string # Version number format for manifest version.
