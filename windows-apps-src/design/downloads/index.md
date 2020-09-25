@@ -2,17 +2,17 @@
 description: Windows 앱 사용자 인터페이스 레이아웃 및 컨트롤 디자인을 위한 최신 다운로드 및 도구를 가져옵니다.
 keywords: uwp 앱 레이아웃, UI, 사용자 인터페이스 디자인, 다운로드, uwp 도구, windows 앱 레아웃, windows ui 도구
 title: Windows 앱용 디자인 도구 키트 및 샘플
-ms.date: 03/23/2020
+ms.date: 09/24/2020
 ms.topic: conceptual
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8336da43767931c439ea79fd9e3824f1a4cc3893
-ms.sourcegitcommit: 47899c30a39087bca1f058a4395cf58daacf5ae9
+ms.openlocfilehash: 36b264b203627761d2872b0f9b8dade81099b149
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345487"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216716"
 ---
 # <a name="design-toolkits-and-samples-for-windows-apps"></a>Windows 앱용 디자인 도구 키트 및 샘플
 

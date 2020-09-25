@@ -2,17 +2,17 @@
 description: Windows 10에서 앱 환경을 만들기 위한 흐름 디자인 지침 및 UI 코드 예
 keywords: UWP 스타일 가이드, 디자인 지침, 입력 체계, 동작, 소리, 동작, 앱 개발
 title: Windows 앱의 디자인 및 코드
-ms.date: 05/06/2019
+ms.date: 09/24/2020
 ms.topic: article
 ms.assetid: 4df395d2-f10e-4e0e-9bf2-660f82b8a9fa
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 01e613088bba3c1e552180f398907145c6254705
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: aa5d81a96f3f7991597e7a7c49013de475e95e23
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970348"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218406"
 ---
 # <a name="design-and-code-windows-apps"></a>Windows 앱 디자인 및 코드
 

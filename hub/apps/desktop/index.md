@@ -7,12 +7,12 @@ keywords: windows win32, 데스크톱 개발
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 6539f436e46f351efc355d361c0677b9fedee546
-ms.sourcegitcommit: 2bb975d5df38d294277f57bf8b6a06d9bf87ca9b
+ms.openlocfilehash: 34b860916b90d1adc8ae9e7ae8c8ac7950125ce7
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90046819"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216746"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Windows PC용 데스크톱 앱 빌드
 
@@ -39,24 +39,24 @@ Windows PC용 데스크톱 앱 빌드를 위한 주요 플랫폼에는 4가지�
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="https://docs.microsoft.com/windows/uwp/">UWP(유니버설 Windows 플랫폼)</a></td>
+<td><a href="/windows/uwp/">UWP(유니버설 Windows 플랫폼)</a></td>
 <td><p>Windows 10 앱 및 게임을 위한 최신 플랫폼입니다. UWP 컨트롤 및 API를 독점적으로 사용하는 UWP 앱을 빌드하거나, 다른 플랫폼 중 하나를 사용하여 빌드된 데스크톱 앱에서 UWP 컨트롤 및 API를 사용할 수 있습니다.</p></td>
 <td><a href="/windows/uwp/get-started/">시작</a><br/><a href="/uwp/">API 참조</a><br/><a href="https://github.com/Microsoft/Windows-universal-samples">샘플</a></td>
 </tr>
 <tr class="even">
-<td><a href="https://docs.microsoft.com/windows/win32/">C++/Win32</a></td>
+<td><a href="/windows/win32/">C++/Win32</a></td>
 <td><p>Windows 및 하드웨어에 직접 액세스해야 하는 네이티브 Windows 앱에 적합한 플랫폼입니다.</p></td>
 <td><a href="/windows/win32/desktop-programming/">시작</a><br/><a href="/windows/win32/apiindex/windows-api-list/">API 참조</a><br/><a href="https://github.com/Microsoft/Windows-classic-samples">샘플</a></td>
 </tr>
 <tr class="odd">
 <td><a href="/dotnet/framework/wpf/">WPF</a></td>
-<td><p>XAML UI 모델을 바탕으로 하고 그래픽이 많은 관리형 Windows 앱을 위한 설정된 NET 기반 플랫폼입니다. 이러한 앱은 <a href="https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0">.NET Core 3</a> 또는 전체 .NET Framework를 대상으로 지정할 수 있습니다.</p></td>
-<td><a href="/dotnet/framework/wpf/getting-started/">시작</a><br/><a href="https://docs.microsoft.com/dotnet/api/index">API 참조(.NET)</a><br/><a href="https://github.com/Microsoft/WPF-Samples">샘플</a></td>
+<td><p>XAML UI 모델을 바탕으로 하고 그래픽이 많은 관리형 Windows 앱을 위한 설정된 NET 기반 플랫폼입니다. 이러한 앱은 <a href="/dotnet/core/whats-new/dotnet-core-3-0">.NET Core 3</a> 또는 전체 .NET Framework를 대상으로 지정할 수 있습니다.</p></td>
+<td><a href="/dotnet/framework/wpf/getting-started/">시작</a><br/><a href="/dotnet/api/index">API 참조(.NET)</a><br/><a href="https://github.com/Microsoft/WPF-Samples">샘플</a></td>
 </tr>
 <tr class="even">
 <td><a href="/dotnet/framework/winforms/">Windows Forms</a></td>
-<td><p>경량 UI 모델을 사용하는 관리형 LOB(기간 업무) 앱용으로 설계된 .NET 기반 플랫폼입니다. 이러한 앱은 <a href="https://docs.microsoft.com/dotnet/core/whats-new/dotnet-core-3-0">.NET Core 3</a> 또는 전체 .NET Framework를 대상으로 지정할 수 있습니다.</p></td>
-<td><a href="/dotnet/framework/winforms/getting-started-with-windows-forms">시작</a><br/><a href="https://docs.microsoft.com/dotnet/api/index">API 참조(.NET)</a></td>
+<td><p>경량 UI 모델을 사용하는 관리형 LOB(기간 업무) 앱용으로 설계된 .NET 기반 플랫폼입니다. 이러한 앱은 <a href="/dotnet/core/whats-new/dotnet-core-3-0">.NET Core 3</a> 또는 전체 .NET Framework를 대상으로 지정할 수 있습니다.</p></td>
+<td><a href="/dotnet/framework/winforms/getting-started-with-windows-forms">시작</a><br/><a href="/dotnet/api/index">API 참조(.NET)</a></td>
 </tr>
 </tbody>
 </table>

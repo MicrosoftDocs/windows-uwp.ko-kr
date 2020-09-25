@@ -11,12 +11,12 @@ metadata:
   ms.date: 11/08/2019
   ms.localizationpriority: medium
   uhfHeaderId: MSDocsHeader-WinDevCenter
-  ms.openlocfilehash: bf966b78a2e1762778941ade5e1a1e1d684bb6b9
-  ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+  ms.openlocfilehash: ea38376f21aac792bb052ad83308e633d64cf465
+  ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/31/2020
-  ms.locfileid: "89170577"
+  ms.lasthandoff: 09/24/2020
+  ms.locfileid: "91217596"
 highlightedContent:
   items:
   - title: Visual Studio 및 Windows SDK 받기
@@ -47,7 +47,7 @@ productDirectory:
   - title: Linux용 Windows 하위 시스템, Windows Terminal, Python 및 기타 도구
     imageSrc: https://docs.microsoft.com/media/logos/logo_linux-color.svg
     links:
-    - url: ../dev-environment/index.yml
+    - url: ../dev-environment/overview.md
       text: 시작
 conceptualContent:
   title: 앱 플랫폼 및 프레임워크

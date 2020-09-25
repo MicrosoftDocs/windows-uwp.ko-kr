@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 3169ee9b2674112964ced83bc3a34637846eb225
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9a565c9bdec6932d0e8ca376f677c309991773d6
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89167197"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219726"
 ---
 # <a name="security"></a>보안
 
@@ -31,7 +31,7 @@ Windows 또는 UWP 개발을 처음 접하는 경우에는 [보안 Windows 앱 �
 <tr><th>항목</th><th>설명</th></tr>
 <tr><td><a href="credential-locker.md">자격 증명 보관</a></td><td>이 문서에서는 앱에서 자격 증명 보관을 사용하여 사용자 자격 증명을 안전하게 저장 및 검색하고 사용자의 Microsoft 계정을 사용하여 디바이스 간에 로밍하는 방법을 설명합니다.</td></tr>
 
-<tr><td><a href="fingerprint-biometrics.md">지문 생체 인식</a> </td><td>이 문서에서는 앱에 지문 생체 인식을 추가하는 방법을 설명합니다. 사용자가 특정 작업에 동의해야 하는 경우 지문 인증 요청을 포함하면 앱의 보안이 향상됩니다. 예를 들어 제한된 리소스 액세스 또는 앱에서 바로 구매 권한을 부여하기 전에 지문 인증을 요구할 수 있습니다. 지문 인증은 <a href="/uwp/api/Windows.Security.Credentials.UI.UserConsentVerifier">Windows.Security.Credentials.UI</a> 네임스페이스의 <a href="https://docs.microsoft.com/uwp/api/Windows.Security.Credentials.UI">UserConsentVerifier</a> 클래스를 사용하여 관리됩니다.</td></tr>
+<tr><td><a href="fingerprint-biometrics.md">지문 생체 인식</a> </td><td>이 문서에서는 앱에 지문 생체 인식을 추가하는 방법을 설명합니다. 사용자가 특정 작업에 동의해야 하는 경우 지문 인증 요청을 포함하면 앱의 보안이 향상됩니다. 예를 들어 제한된 리소스 액세스 또는 앱에서 바로 구매 권한을 부여하기 전에 지문 인증을 요구할 수 있습니다. 지문 인증은 <a href="/uwp/api/Windows.Security.Credentials.UI.UserConsentVerifier">Windows.Security.Credentials.UI</a> 네임스페이스의 <a href="/uwp/api/Windows.Security.Credentials.UI">UserConsentVerifier</a> 클래스를 사용하여 관리됩니다.</td></tr>
 <tr><td><a href="microsoft-passport.md">Microsoft Passport 및 Windows Hello</a></td><td>이 문서에서는 새로운 Windows 10 Microsoft Passport 기술에 대해 설명하고 개발자가 이 기술을 구현함으로써 해당 앱 및 백 엔드 서비스를 보호할 수 있는 방법을 살펴봅니다. 여기서는 기존 자격 증명의 위협 요소를 완화할 수 있는 이러한 기술의 특징에 대해 중점적으로 설명하고 Windows 10 롤아웃의 일부로 이러한 기술을 디자인 및 배포하는 방법에 대한 지침을 제공합니다. </td></tr>
 <tr><td><a href="microsoft-passport-login.md">Microsoft Passport 로그인 앱 만들기</a></td><td>전체 연습의 1부에는 기존의 사용자 이름 및 암호 인증 시스템에 대한 대안으로 Microsoft Passport를 사용하는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱을 만드는 방법이 포함되어 있습니다.</td></tr>
 <tr><td><a href="microsoft-passport-login-auth-service.md">Microsoft Passport 로그인 서비스 만들기</a></td><td>전체 연습의 2부에는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에서 기존의 사용자 이름 및 암호 인증 시스템에 대한 대안으로 Microsoft Passport를 사용하는 방법이 포함되어 있습니다.</td></tr>

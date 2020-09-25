@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Windows 10, UWP, 게시, 판매, 배포, Store, 대시보드
 ms.assetid: 631d1e2d-e4da-4740-ace0-4c0ad78653fe
 ms.localizationpriority: medium
-ms.openlocfilehash: 19607823ce98aa71a8e3abecb94b82ff06a08352
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a4fb353ef9c4ff5227cb1cff21b26ce3067f5dcc
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164127"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219016"
 ---
 # <a name="publish-windows-apps-and-games"></a>Windows 앱 및 게임 게시  
 
@@ -36,7 +36,7 @@ ms.locfileid: "89164127"
         <h3 style="margin-top: 10px; margin-bottom: 0px">가격 책정 및 가용성</h3>
         <p style="margin-top: 0px; margin-bottom: 50px">시장별 가격 책정, 일정 및 가시성 옵션, 할인 가격 등을 사용하여 앱의 가용성을 사용자 지정하세요.</p>
         <br>
-        <a href="define-pricing-and-market-selection.md">시장 선택</a><br/>
+        <a href="/windows/uwp/publish/define-market-selection">시장 선택</a><br/>
         <a href="set-and-schedule-app-pricing.md">가격 설정 및 예약</a><br/>
         <a href="configure-precise-release-scheduling.md">정확한 릴리스 날짜 구성</a><br/>
         <a href="set-app-pricing-and-availability.md">사용 가능한 모든 옵션 보기</a><br/>
@@ -85,7 +85,7 @@ ms.locfileid: "89164127"
     :::column:::
         <img src="https://docs.microsoft.com/media/illustrations/bcs-user-management-add-customer-1.svg" alt="Account icon" />
         <h3 style="margin-top: 10px; margin-bottom: 0px">계정 사용자 관리</h3>
-        <a href="associate-azure-ad-with-dev-center.md">Azure AD 설정</a><br/>
+        <a href="/windows/uwp/publish/associate-azure-ad-with-partner-center">Azure AD 설정</a><br/>
         <a href="add-users-groups-and-azure-ad-applications.md">계정 사용자 추가</a><br/>
         <a href="set-custom-permissions-for-account-users.md">역할 및 권한</a><br/>
     :::column-end:::

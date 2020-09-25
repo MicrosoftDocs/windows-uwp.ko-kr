@@ -4,7 +4,7 @@ title: Windows 앱의 동작
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: stmoy
@@ -12,12 +12,12 @@ design-contact: jeffarn
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 49fc31729bc8f195bacf1d743c570aa5293b33de
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: 2cb322454b08f6e3cf1a6393c8061e02176ceb83
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970338"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218166"
 ---
 # <a name="motion-for-windows-apps"></a>Windows 앱의 동작
 

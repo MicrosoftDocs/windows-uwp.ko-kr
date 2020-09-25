@@ -4,16 +4,16 @@ title: 입력 및 조작
 keywords: 앱 입력, UWP 애플리케이션 사용자 지정
 label: Input and interactions
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.assetid: b771d452-c3ac-4d97-8482-eaf81bf34306
 ms.localizationpriority: medium
-ms.openlocfilehash: 4fc0fa50bbf015c32934785e96b59924889d2f45
-ms.sourcegitcommit: 45dec3dc0f14934b8ecf1ee276070b553f48074d
+ms.openlocfilehash: afaaa13110df78ad68c2cca1200f7c4d8931c4d6
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89094770"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220616"
 ---
 # <a name="input-and-interactions"></a>입력 및 조작
 

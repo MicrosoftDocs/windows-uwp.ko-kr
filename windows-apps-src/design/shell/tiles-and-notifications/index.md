@@ -4,16 +4,16 @@ title: 타일, 배지 및 알림
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 06cff7247dff4f370d9e20a736c4383a9c09c25a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ce19fdca0ff79c430fcae7353cda595702f260c0
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174617"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218436"
 ---
 # <a name="tiles-badges-and-notifications-for-windows-apps"></a>Windows 앱에 대한 타일, 배지 및 알림
  

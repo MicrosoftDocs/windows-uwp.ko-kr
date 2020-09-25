@@ -2,18 +2,18 @@
 description: Windows Template Studio는 Windows 앱을 신속하게 만들기 위한 Visual Studio 확장입니다.
 title: Windows Template Studio
 template: detail.hbs
-ms.date: 05/10/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: clint.rutkas
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d3d78f88d1899d20eedbbb99c6cf5794ff55f35
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 181fdf1a61a4fddc168345a76cac114fc6583cd0
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234267"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220496"
 ---
 # <a name="windows-template-studio"></a>Windows Template Studio
 

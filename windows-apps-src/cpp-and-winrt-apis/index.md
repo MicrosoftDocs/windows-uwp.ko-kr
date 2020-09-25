@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, CPP, WinRT, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f05bbd1ad5ea770e96ebbbd74c3a980ae0585b7
-ms.sourcegitcommit: 6009896ead442b378106d82870f249dc8b55b886
+ms.openlocfilehash: b3ad3a204b2eb4b288e3d3c313a0832bea124de0
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89643779"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219896"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -40,7 +40,7 @@ C++/WinRT로 포팅하는 방법에 대한 자세한 내용은 다음 리소스�
 - [WRL에서 C++/WinRT로 이동](./move-to-winrt-from-wrl.md)
 - [C#에서 C++/WinRT로 이동](./move-to-winrt-from-csharp.md)
 
-또한 [C++/WinRT 샘플 앱은 어디에서 찾을 수 있나요?](/windows/uwp/cpp-and-winrt-apis/faq#where-can-i-find-cwinrt-sample-apps)도 참조하세요.
+또한 [C++/WinRT 샘플 앱은 어디에서 찾을 수 있나요?](./faq.md#where-can-i-find-cwinrt-sample-apps)도 참조하세요.
 
 ### <a name="topics-about-cwinrt"></a>C++/WinRT 관련 항목
 
