@@ -2,16 +2,16 @@
 Description: 앱이 Microsoft Advertising SDK를 사용 하 여 광고를 표시 하는 경우 파트너 센터의 앱 내 광고 페이지를 사용 하 여 광고 사용을 관리 합니다.
 title: 앱 내 광고
 ms.assetid: 09970DE3-461A-4E2A-88E3-68F2399BBCC8
-ms.date: 03/25/2019
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a1683cdad189b9e369700e25b47a6f0bf0796702
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c8d01042fec7435652c819f29e3a791a5623a947
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171027"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220266"
 ---
 # <a name="in-app-ads"></a>앱 내 광고
 
@@ -111,7 +111,7 @@ UWP ad 단위에 대 한 [중재 설정](#mediation) 또는 ad 단위가 사용 
 
 다음 표에서는 현재 각 ad 형식에 대해 지원 되는 유료 네트워크를 보여 줍니다. 일부 지역에서는 이러한 네트워크 중 일부를 [사용할 수 없습니다](#network-markets).
 
-|  Ad 네트워크  |  Description  |  지원 되는 ad 유형  |
+|  Ad 네트워크  |  설명  |  지원 되는 ad 유형  |
 |--------------|---------------|---------------------|
 | Oath 및 AppNexus |  파트너 네트워크, Oath 및 AppNexus를 통해 광고를 제공 하는 Microsoft 관리 ad 네트워크입니다.<p/>**참고**: Oath 및 appnexus는 항상 배너 광고 단위에 대 한 **유료 ad 네트워크** 목록에서 순위가 지정 되며, 이러한 유형의 광고에 대해 더 낮은 순위를 변경할 수 없습니다. | 배너, 비디오 중간 |
 | AppNexus (직접) | [Appnexus](https://www.appnexus.com)에서 광고를 제공 하려면이 옵션을 선택 합니다. | 비디오 중간, 기본  |
@@ -133,7 +133,7 @@ UWP ad 단위에 대 한 [중재 설정](#mediation) 또는 ad 단위가 사용 
 
 다음 표에서는 현재 각 ad 형식에 대해 지원 되는 다른 네트워크를 보여 줍니다.
 
-|  Ad 네트워크  |  Description  |  지원 되는 ad 유형  |
+|  Ad 네트워크  |  설명  |  지원 되는 ad 유형  |
 |--------------|---------------|---------------------|
 | Microsoft 커뮤니티 광고 |  앱 중 [하나에 대 한 판촉 광고 캠페인을 만들고](create-an-ad-campaign-for-your-app.md) 이 캠페인을 [커뮤니티 ad 캠페인](about-community-ads.md)으로 구성 하는 경우이 캠페인의 광고를 표시 하려면이 옵션을 선택 합니다. | 배너, 배너 중간 |
 | Microsoft 사내 광고 | [앱 중 하나에 대 한 판촉 광고 캠페인을 만들고](create-an-ad-campaign-for-your-app.md) 이 캠페인을 [집 광고 캠페인](about-house-ads.md)으로 구성 하는 경우이 옵션을 선택 하 여이 캠페인의 광고를 표시 합니다. | 배너, 배너 중간  |

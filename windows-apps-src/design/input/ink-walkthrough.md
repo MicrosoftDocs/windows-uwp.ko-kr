@@ -3,15 +3,15 @@ ms.assetid: ''
 title: Windows 앱에서 잉크 지원
 description: 이 단계별 자습서를 수행 하 여 UWP (기본 유니버설 Windows 플랫폼) 앱에서 Windows Ink 작성 및 그리기를 지 원하는 방법에 대해 알아봅니다.
 keywords: 잉크, 잉크, 자습서
-ms.date: 01/25/2018
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 0ed230fc9beb158df050f314a0142f250c2a8691
-ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
+ms.openlocfilehash: a0660312746a88a61ccb7b2ca9c01d720ebb2be3
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89304605"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219696"
 ---
 # <a name="tutorial-support-ink-in-your-windows-app"></a>자습서: Windows 앱에서 잉크 지원
 
@@ -119,7 +119,7 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
     <InkCanvas x:Name="inkCanvas" />
 ```
 
-간단하죠. 
+이것으로 끝입니다. 
 
 이제 앱을 다시 실행합니다. 계속 해 서 자유롭게 이동 하거나 이름을 작성 하거나 (미러를 보유 하거나 매우 좋은 메모리가 있는 경우) 자체 세로를 그립니다.
 

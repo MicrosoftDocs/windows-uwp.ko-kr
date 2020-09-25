@@ -4,16 +4,16 @@ title: Windows 앱용 타일
 ms.assetid: 09C7E1B1-F78D-4659-8086-2E428E797653
 label: Tiles
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f2c2dd6df44e477e34dfddfd6d2c1315b8f32ec2
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 19c8612188000a3d1161fa746d6e7944667a5104
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156777"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218156"
 ---
 # <a name="tiles-for-windows-apps"></a>Windows 앱용 타일
 

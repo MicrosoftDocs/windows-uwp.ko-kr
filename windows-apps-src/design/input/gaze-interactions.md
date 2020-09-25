@@ -4,19 +4,19 @@ Description: Windows 앱을 디자인 하 고 최적화 하 여 눈동자 및 �
 label: Gaze interactions
 template: detail.hbs
 keywords: 응시, 눈 추적, 헤드 추적, 응시 지점, 입력, 사용자 조작, 접근성, 유용성
-ms.date: 05/01/2018
+ms.date: 09/24/2020
 ms.topic: article
 pm-contact: Jake Cohen
 dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: c91de7eb0200780b04bad1853cb49caf41a22bc0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: fa08cb65afc46069e48263344270e1e3b1a3d5f5
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172507"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217026"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-windows-apps"></a>Windows 앱에서 상호 작용 및 눈 추적 응시
 
@@ -38,7 +38,7 @@ ms.locfileid: "89172507"
 > [!NOTE]
 > 아이 추적 하드웨어 지원은 눈동자를 사용 하 여 화면에 있는 포인터를 제어 하 고, 화상 키보드를 사용 하 여 입력 하 고, 텍스트를 음성으로 변환 하 여 사용자와 통신할 수 있도록 하는 기본 제공 기능인 [아이 컨트롤과](https://support.microsoft.com/help/4043921/windows-10-get-started-eye-control)함께 Windows 10으로 구성 된 **작성자 업데이트** 에 도입 되었습니다. 아이 추적 하드웨어와 상호 작용할 수 있는 응용 프로그램을 빌드하기 위한 Windows 런타임 Api (2018) 집합은 **Windows 10 4 월 업데이트 (버전 1803, 빌드 17134)** 이상에서 사용할 수[있습니다.](/uwp/api/windows.devices.input.preview)
 
-## <a name="privacy"></a>개인 정보 취급 방침
+## <a name="privacy"></a>개인 정보 보호
 
 눈 추적 장치에서 수집 하는 잠재적으로 중요 한 개인 데이터로 인해 `gazeInput` 응용 프로그램의 응용 프로그램 매니페스트에 기능을 선언 해야 합니다 (다음 **설정** 섹션 참조). 선언 된 경우 Windows는 응용 프로그램을 처음 실행할 때 동의 대화 상자를 자동으로 표시 합니다. 사용자는 앱이 눈 추적 장치와 통신 하 고이 데이터에 액세스할 수 있는 권한을 부여 해야 합니다.
 

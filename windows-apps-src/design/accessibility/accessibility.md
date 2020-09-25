@@ -1,21 +1,21 @@
 ---
 Description: Windows 앱과 관련 된 접근성 개념을 소개 합니다.
 ms.assetid: C89D79C2-B830-493D-B020-F3FF8EB5FFDD
-title: 액세스 가능성
+title: 접근성
 label: Accessibility
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8af42f2d2ddeecffef914339e748acf05558b8ae
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 67f98db338d201dd4ef80c7b5f265aba3f6fbfd4
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163377"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216376"
 ---
-# <a name="accessibility"></a>액세스 가능성  
+# <a name="accessibility"></a>접근성  
 
 내게 필요한 옵션은 다양 한 환경에서 기술을 사용 하는 사용자가 Windows 응용 프로그램을 사용 하 고 다양 한 요구 사항과 경험을 통해 UI에 접근 하는 환경에 대 한 것입니다. 일부 상황의 경우 접근성 요구 사항이 법으로 지정됩니다. 그러나 앱이 최대한 많은 사용자층을 확보할 수 있도록 하려면 법적 요구 사항에 관계없이 접근성 문제를 해결하는 것이 좋습니다.
 

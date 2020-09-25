@@ -4,18 +4,18 @@ title: 바로 가기 키
 label: Keyboard accelerators
 template: detail.hbs
 keywords: 키보드, 액셀러레이터 키, 액셀러레이터 키, 바로 가기 키, 접근성, 탐색, 포커스, 텍스트, 입력, 사용자 상호 작용, 게임 패드, 원격
-ms.date: 10/10/2017
+ms.date: 09/24/2020
 ms.topic: article
 pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a3231f608984c9d1f67df71de9cab4cfecd9a13
-ms.sourcegitcommit: deb2867924ce16efcabfa011892157b7aa4fa2d2
+ms.openlocfilehash: 02fba8027c5bddec5e5c501783b32dbab5642db9
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89187898"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219956"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 
@@ -331,7 +331,7 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 
 앱 간 기능의 차이로 인해 항상 불가능 한 것은 아닙니다.
 
-| **편집 중** | **일반 키보드 액셀러레이터** |
+| **편집** | **일반 키보드 액셀러레이터** |
 | ------------- | ----------------------------------- |
 | 편집 모드 시작 | Ctrl+E |
 | 포커스가 있는 컨트롤 또는 창에서 모든 항목 선택 | Ctrl + A |

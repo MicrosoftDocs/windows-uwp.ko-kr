@@ -4,16 +4,16 @@ title: 텍스트 크기 조정
 label: Text scaling
 template: detail.hbs
 keywords: UWP, 텍스트, 크기 조정, 접근성, "접근성", 표시, "텍스트 크게 만들기", 사용자 조작, 입력
-ms.date: 08/02/2018
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 386920532f4598ee2d1519d292454b47c285555b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d8f7536da045514471c1af1c2f0cfac74af91a7a
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165837"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219946"
 ---
 # <a name="text-scaling"></a>텍스트 크기 조정
 

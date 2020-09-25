@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a31c762c002e711a87e99e2f97de6c26e2c8b48
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 5d9571fa5abc07272d1b48c40274cbb952c0d754
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172987"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216356"
 ---
 # <a name="launch-the-microsoft-store-app"></a>Microsoft Store 앱 열기
 
@@ -41,7 +41,7 @@ bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-windows-s
 </tr>
 <tr>
 <td rowspan="4">제품에 대 한 PDP (제품 정보 페이지)를 시작 합니다. <p>스토어 ID는 Windows 10의 고객에 게 권장 되며 모든 OS 버전에서 작동 하지만 이전에 수행 하는 방법 (예: PFN)은 계속 지원 됩니다.</p>
-<p>이러한 값은 각 앱에 대 한 앱 관리 섹션의 <a href="https://docs.microsoft.com/windows/uwp/publish/view-app-identity-details">앱 id</a> 페이지에서 <a href="https://partner.microsoft.com/dashboard">파트너 센터</a> 에서 찾을 수 있습니다.</p>
+<p>이러한 값은 각 앱에 대 한 앱 관리 섹션의 <a href="/windows/uwp/publish/view-app-identity-details">앱 id</a> 페이지에서 <a href="https://partner.microsoft.com/dashboard">파트너 센터</a> 에서 찾을 수 있습니다.</p>
 </td>
 <td>
 저장소 ID <p>좋습니다.</p>

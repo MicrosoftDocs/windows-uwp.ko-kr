@@ -9,12 +9,12 @@ dev_langs:
 - vb
 keywords: windows 10, uwp, 화면 캡처
 ms.localizationpriority: medium
-ms.openlocfilehash: 96b8c52d8c1c6b6947b7b151df0b1b8bbfe42869
-ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
+ms.openlocfilehash: 26de7699f9f261bba6e02bc3664e335c46e4ac3d
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89411927"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218666"
 ---
 # <a name="screen-capture"></a>화면 캡처
 
@@ -690,7 +690,7 @@ End Class
 
 응용 프로그램의 비디오를 기록 하려는 경우 [비디오에 대 한 화면 캡처](screen-capture-video.md)문서에 나와 있는 연습을 수행할 수 있습니다. 또는 Windows. a p a. p. a p a [네임 스페이스](/uwp/api/windows.media.apprecording)를 사용할 수 있습니다. 데스크톱 확장 SDK의 일부 이므로 데스크톱 에서만 작동 하므로 프로젝트에서이에 대 한 참조를 추가 해야 합니다. 자세한 내용은 [확장 sdk를 사용한 프로그래밍](/uwp/extension-sdks/device-families-overview) 을 참조 하세요.
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
-* [Windows. Graphics. Capture 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.graphics.capture)
-* [비디오에 화면 캡처](screen-capture-video.md)
+* [Windows. Graphics. Capture 네임 스페이스](/uwp/api/windows.graphics.capture)
+* [비디오로 화면 캡처](screen-capture-video.md)

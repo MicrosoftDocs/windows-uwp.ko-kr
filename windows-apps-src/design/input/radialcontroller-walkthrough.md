@@ -3,15 +3,15 @@ ms.assetid: ''
 title: Windows 앱에서 Surface Dial(및 기타 휠 디바이스) 지원
 description: Windows 앱에 Surface Dial (및 기타 휠 장치)에 대 한 지원을 추가 하는 단계별 자습서입니다.
 keywords: 전화 걸기, 방사형, 자습서
-ms.date: 03/11/2019
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8edd7a9345f93d3cf0abe76f68c321a977ee2e50
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: cc1618432d35687fe1bfa619396bc2b798dd40bf
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173377"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216926"
 ---
 # <a name="tutorial-support-the-surface-dial-and-other-wheel-devices-in-your-windows-app"></a>자습서: Windows 앱의 Surface 전화 접속 및 기타 휠 장치 지원
 
@@ -38,7 +38,7 @@ Surface 다이얼은 사용자가 펜, 터치, 마우스 등의 기본 입력 �
 - 메뉴 항목을 강조 표시 하거나 (메뉴가 활성화 된 경우) 앱에서 현재 작업을 수정 하려면 (메뉴가 활성화 되지 않은 경우) 회전 합니다.
 - 강조 표시 된 메뉴 항목을 클릭 하 여 선택 하거나 (메뉴가 활성화 된 경우) 앱에서 명령을 호출 합니다 (메뉴가 활성화 되어 있지 않은 경우).
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 * Windows 10 크리에이터 스 업데이트 이상을 실행 하는 컴퓨터 또는 가상 컴퓨터
 * [Visual Studio 2019](https://developer.microsoft.com/windows/downloads)
@@ -85,7 +85,7 @@ Surface 다이얼은 사용자가 펜, 터치, 마우스 등의 기본 입력 �
 
 이러한 개체는 Windows 앱에 대 한 대부분의 휠 장치 환경을 제공 합니다.
 
-| 구성 요소 | Description |
+| 구성 요소 | 설명 |
 | --- | --- |
 | [ **RadialController** 클래스](/uwp/api/Windows.UI.Input.RadialController) 및 관련 항목 | 표면 전화 접속과 같은 휠 입력 장치 또는 액세서리를 나타냅니다. |
 | [**IRadialControllerConfigurationInterop**](/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerconfigurationinterop)  /  [ **IRadialControllerInterop**](/previous-versions/windows/desktop/api/radialcontrollerinterop/nn-radialcontrollerinterop-iradialcontrollerinterop)<br/>여기서는이 기능에 대해 다루지 않습니다. 자세한 내용은 [Windows 클래식 데스크톱 샘플](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/RadialController)을 참조 하세요. | Windows 앱과의 상호 운용성을 가능 하 게 합니다. |

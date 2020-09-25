@@ -2,16 +2,16 @@
 Description: 패키지 페이지에서는 제출 중인 앱에 대 한 모든 패키지 파일 (.appxupload, .appx, .appxbundle 및/또는 .xap)을 업로드 합니다.
 title: 앱 패키지 업로드
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
-ms.date: 10/02/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 패키지, 업로드, 패키지 업로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c3c55d351ebd3b956d57c6c7e623e88e7fa88c1
-ms.sourcegitcommit: 96b7be654a0922eeb421b5fa51ebfc586abe74fe
+ms.openlocfilehash: 0b4fc0c9dfeed1183a1653b525d0f8cc8a62a4c1
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84945942"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220216"
 ---
 # <a name="upload-app-packages"></a>앱 패키지 업로드
 
@@ -35,7 +35,7 @@ ms.locfileid: "84945942"
 유효성을 검사 하는 동안 패키지를 사용 하 여 오류를 감지 하면 무엇이 잘못 되었는지 알려 주는 메시지가 표시 됩니다. 패키지를 제거 하 고 문제를 해결 한 다음 다시 업로드 해 보십시오. 문제를 발생 시킬 수 있는 문제에 대 한 정보를 알려 주는 경고도 표시 될 수 있습니다.
 
 
-## <a name="device-family-availability"></a>장치 제품군 가용성
+## <a name="device-family-availability"></a>디바이스 패밀리 가용성
 
 패키지를 성공적으로 업로드 한 후에는 특정 Windows 10 장치 제품군 (해당 하는 경우 이전 OS 버전)에 제공 되는 패키지를 순위에 따라 표시 하는 테이블을 **장치 제품군 사용 가능** 섹션에 표시 합니다. 또한이 섹션에서는 특정 Windows 10 장치 제품군에 대 한 고객의 제출을 제공할 것인지 여부를 선택할 수 있습니다.
 
@@ -56,7 +56,7 @@ ms.locfileid: "84945942"
 중복 패키지가 있는 경우이 제출에서 중복 패키지를 모두 자동으로 제거 하는 옵션을 제공 합니다. 원하는 경우 개별적으로 제출에서 패키지를 제거할 수도 있습니다.
 
 
-## <a name="gradual-package-rollout"></a>점진적 패키지 출시
+## <a name="gradual-package-rollout"></a>점진적 패키지 배포
 
 이전에 게시 된 앱에 대 한 업데이트를 제출 하는 경우 **이 제출이 게시 된 후 점진적 업데이트 롤아웃 (Windows 10 고객만 해당)** 이라는 확인란이 표시 됩니다. 이를 통해 사용자 의견 및 분석 데이터를 모니터링 하 여 업데이트에 대 한 정보를 파악 하 여 보다 광범위 하 게 롤링 하기 전에 사용자가 제출에서 패키지를 가져올 고객의 비율을 선택할 수 있습니다. 새 제출을 만들지 않고도 언제 든 지 백분율을 늘리거나 업데이트를 중단할 수 있습니다. 
 

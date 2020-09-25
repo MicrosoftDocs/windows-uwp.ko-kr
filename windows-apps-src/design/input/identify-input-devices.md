@@ -5,15 +5,15 @@ ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
 template: detail.hbs
 keywords: 장치, 디지타이저, 입력, 상호 작용
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: afd0a855ce35ecb37eb55ac8788ec51c063e8da7
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ae1cc3132992ff13c5e599f7d5aa64a2f6fa151f
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173437"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219806"
 ---
 # <a name="identify-input-devices"></a>입력 디바이스 식별
 

@@ -3,7 +3,7 @@ title: 방향성 및 중력-Windows 앱의 애니메이션
 description: 예제를 확인 하 여 이동 방향, 탐색 방향 및 애니메이션 장면에서의 무게를 사용 하는 방법에 대해 알아봅니다.
 label: Directionality and gravity
 template: detail.hbs
-ms.date: 10/02/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: stmoy
@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a9b6fbc639ac225e68a6ae1b008537cba6f72ead
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: 649fb9e2833a425ccad78f5f0bcb69ccb4091bca
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88943113"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217806"
 ---
 # <a name="directionality-and-gravity"></a>방향 및 무게
 
@@ -116,7 +116,7 @@ ms.locfileid: "88943113"
 
 ![방향 뒤로](images/continuity-photos.gif)
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [동작 개요](index.md)
 - [타이밍 및 감속](timing-and-easing.md)

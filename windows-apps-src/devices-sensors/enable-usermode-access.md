@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: b3e04399bb7fb0d40cf42789587aa132ee20e789
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a5841a8a53c18969e8ca9171bb7b3e1af0273170
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165507"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216797"
 ---
 # <a name="enable-user-mode-access-to-gpio-i2c-and-spi"></a>GPIO, I2C 및 SPI에 대한 사용자 모드 액세스를 사용하도록 설정
 
@@ -614,7 +614,7 @@ Device(I2C1)
 - CLIENT_ConnectFunctionConfigPins- `GpioClx` 지정 된 muxing 구성을 적용 하기 위해 미니 포트 드라이버 명령을 위해에 의해 호출 됩니다.
 - CLIENT_DisconnectFunctionConfigPins – `GpioClx` 미니 포트 드라이버를 명령으로 호출 하 여 muxing 구성을 되돌립니다.
 
-이러한 루틴에 대 한 설명은 [Gpioclx 이벤트 콜백 함수](https://docs.microsoft.com/previous-versions/hh439464(v=vs.85)) 를 참조 하세요.
+이러한 루틴에 대 한 설명은 [Gpioclx 이벤트 콜백 함수](/previous-versions/hh439464(v=vs.85)) 를 참조 하세요.
 
 이러한 두 가지 새로운 DDIs 외에도 기존 DDIs는 pin muxing 호환성에 대해 감사 되어야 합니다.
 
@@ -633,11 +633,11 @@ Windows 10 빌드 14327 `SpbCx` 부터 및 `SerCx` 프레임 워크에는 `SpbCx
 
 장치 초기화 시 `SpbCx` 및 `SerCx` 프레임 워크는 `MsftFunctionConfig()` 장치에 하드웨어 리소스로 제공 된 모든 리소스를 구문 분석 합니다. SpbCx/SerCx는 주문형 pin muxing 리소스를 획득 하 고 해제 합니다.
 
-`SpbCx`클라이언트 드라이버의 [Evtspbtargetconnect ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_connect) 콜백을 호출 하기 직전에 *IRP_MJ_CREATE* 처리기에 핀 muxing 구성을 적용 합니다. Muxing 구성을 적용할 수 없는 경우 컨트롤러 드라이버의 `EvtSpbTargetConnect()` 콜백이 호출 되지 않습니다. 따라서 SPB 컨트롤러 드라이버는가 호출 될 때 핀이 SPB 함수에 muxed 것으로 간주할 수 있습니다 `EvtSpbTargetConnect()` .
+`SpbCx`클라이언트 드라이버의 [Evtspbtargetconnect ()](/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_connect) 콜백을 호출 하기 직전에 *IRP_MJ_CREATE* 처리기에 핀 muxing 구성을 적용 합니다. Muxing 구성을 적용할 수 없는 경우 컨트롤러 드라이버의 `EvtSpbTargetConnect()` 콜백이 호출 되지 않습니다. 따라서 SPB 컨트롤러 드라이버는가 호출 될 때 핀이 SPB 함수에 muxed 것으로 간주할 수 있습니다 `EvtSpbTargetConnect()` .
 
 `SpbCx`컨트롤러 드라이버의 [Evtspbtargetdisconnect ()](/windows-hardware/drivers/ddi/content/spbcx/nc-spbcx-evt_spb_target_disconnect) 콜백을 호출한 후에 *IRP_MJ_CLOSE* 처리기에서 pin muxing 구성을 되돌립니다. 결과적으로, 주변 드라이버가 SPB 컨트롤러 드라이버에 대 한 핸들을 열 때마다 핀이 SPB 함수로 muxed 주변 드라이버가 해당 핸들을 닫으면 muxed 사라집니다.
 
-`SerCx` 비슷하게 동작 합니다. `SerCx`컨트롤러 드라이버의 `MsftFunctionConfig()` [EvtSerCx2FileOpen ()](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileopen) 콜백을 호출 하기 직전에 해당 *IRP_MJ_CREATE* 처리기의 모든 리소스를 가져오고, 컨트롤러 드라이버의 [EvtSerCx2FileClose](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileclose) 콜백을 호출한 후에도 해당 IRP_MJ_CLOSE 처리기의 모든 리소스를 해제 합니다.
+`SerCx` 비슷하게 동작 합니다. `SerCx`컨트롤러 드라이버의 `MsftFunctionConfig()` [EvtSerCx2FileOpen ()](/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileopen) 콜백을 호출 하기 직전에 해당 *IRP_MJ_CREATE* 처리기의 모든 리소스를 가져오고, 컨트롤러 드라이버의 [EvtSerCx2FileClose](/windows-hardware/drivers/ddi/content/sercx/nc-sercx-evt_sercx2_fileclose) 콜백을 호출한 후에도 해당 IRP_MJ_CLOSE 처리기의 모든 리소스를 해제 합니다.
 
 및 컨트롤러 드라이버에 대 한 dynamic pin muxing의 의미는 `SerCx` `SpbCx` 특정 시간에 spb/UART 함수에서 핀을 muxed 하는 것을 허용할 수 있어야 한다는 것입니다. 컨트롤러 드라이버는 또는가 호출 될 때까지 pin이 muxed 않는 것으로 가정 해야 `EvtSpbTargetConnect()` `EvtSerCx2FileOpen()` 합니다. 다음 콜백 중에 SPB/UART 함수를 muxed 핀은 필요 하지 않습니다. 다음은 전체 목록이 아니라 컨트롤러 드라이버가 구현 하는 가장 일반적인 PNP 루틴을 나타냅니다.
 
@@ -848,7 +848,7 @@ HLK manager에서 "리소스 허브 프록시 장치"를 선택 합니다.
 - [I2cTestTool](https://github.com/microsoft/Windows-iotcore-samples/tree/6e473075bbe616e4d9ce90e67c6412fba661c337/BusTools/I2cTestTool)
 - [SpiTestTool](https://github.com/microsoft/Windows-iotcore-samples/tree/6e473075bbe616e4d9ce90e67c6412fba661c337/BusTools/SpiTestTool)
 - [MinComm (직렬)](https://github.com/microsoft/Windows-iotcore-samples/tree/6e473075bbe616e4d9ce90e67c6412fba661c337/BusTools/MinComm)
-- [하드웨어 랩 키트 (HLK)](/windows-hardware/drivers/)
+- [HLK(Hardware Lab Kit)](/windows-hardware/drivers/)
 
 ## <a name="appendix"></a>부록
 

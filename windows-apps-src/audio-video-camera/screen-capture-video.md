@@ -1,5 +1,5 @@
 ---
-title: 비디오에 화면 캡처
+title: 비디오로 화면 캡처
 description: 이 문서에서는 Windows. Graphics. Capture Api를 사용 하 여 화면에서 캡처한 프레임을 비디오 파일로 인코딩하는 방법을 설명 합니다.
 ms.date: 07/28/2020
 ms.topic: article
@@ -7,16 +7,16 @@ dev_langs:
 - csharp
 keywords: windows 10, uwp, 화면 캡처, 비디오
 ms.localizationpriority: medium
-ms.openlocfilehash: ae1eb68e480b4c9b4b4fc88452a68f39f8461a79
-ms.sourcegitcommit: 14c0b1ea2447a81ddf31982b40e19a74ecc6d59e
+ms.openlocfilehash: d8f70748d025d50d19dbf2cb184ae841cced7f8a
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89310091"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218636"
 ---
-# <a name="screen-capture-to-video"></a>비디오에 화면 캡처
+# <a name="screen-capture-to-video"></a>비디오로 화면 캡처
 
-이 문서에서는 Windows. Graphics. Capture Api를 사용 하 여 화면에서 캡처한 프레임을 비디오 파일로 인코딩하는 방법을 설명 합니다. 화면 캡처에 대 한 자세한 내용은 [Screeen 캡처](screen-capture-video)를 참조 하세요. 
+이 문서에서는 Windows. Graphics. Capture Api를 사용 하 여 화면에서 캡처한 프레임을 비디오 파일로 인코딩하는 방법을 설명 합니다. 화면 캡처에 대 한 자세한 내용은 [Screeen 캡처](./screen-capture.md)를 참조 하세요.
 
 ## <a name="overview-of-the-video-capture-process"></a>비디오 캡처 프로세스 개요
 이 문서에서는 비디오 파일에 창의 콘텐츠를 기록 하는 예제 앱의 연습을 제공 합니다. 이 시나리오를 구현 하는 데 필요한 많은 코드가 있는 것 처럼 보일 수 있지만, 화면 레코더 앱의 상위 수준 구조는 매우 간단 합니다. 화면 캡처 프로세스에서는 세 가지 기본 UWP 기능을 사용 합니다.
@@ -55,21 +55,21 @@ SharpDX Nuget 패키지를 설치 하려면 Visual Studio에서 **Nuget 패키�
 
 - **MediaEncodingProfile 및 VideoStreamDescriptor를 만듭니다.** [Mediastreamsource](/uwp/api/windows.media.core.mediastreamsource) 클래스의 인스턴스는 화면에서 캡처된 이미지를 가져와 비디오 스트림으로 인코딩합니다. 그런 다음 [MediaTranscoder](/uwp/api/windows.media.transcoding.mediatranscoder) 클래스에 의해 비디오 스트림이 비디오 파일로 트랜스 코딩 됩니다. [VideoStreamDecriptor](/uwp/api/windows.media.core.videostreamdescriptor) 는 **mediastreamsource**에 대해 해상도 및 프레임 비율과 같은 인코딩 매개 변수를 제공 합니다. **MediaTranscoder** 에 대 한 비디오 파일 인코딩 매개 변수는 [MediaEncodingProfile](/uwp/api/Windows.Media.MediaProperties.MediaEncodingProfile)로 지정 됩니다. 비디오 인코딩에 사용 되는 크기는 캡처 중인 창의 크기와 동일할 필요는 없지만,이 예제를 단순하게 유지 하기 위해 인코딩 설정은 캡처 항목의 실제 차원을 사용 하도록 하드 코딩 됩니다.
 
-- **MediaStreamSource 및 MediaTranscoder 개체를 만듭니다.** 위에서 설명한 것 처럼 **Mediastreamsource** 개체는 개별 프레임을 비디오 스트림으로 인코딩합니다. 이전 단계에서 만든 **MediaEncodingProfile** 를 전달 하 여이 클래스에 대 한 생성자를 호출 합니다. 버퍼 시간을 0으로 설정 하 고 [시작](uwp/api/windows.media.core.mediastreamsource.starting) 및 [SampleRequested](/uwp/api/windows.media.core.mediastreamsource.samplerequested) 이벤트에 대 한 처리기를 등록 합니다 .이 내용은이 문서의 뒷부분에 나와 있습니다. 그런 다음 **MediaTranscoder** 클래스의 새 인스턴스를 생성 하 고 하드웨어 가속을 사용 하도록 설정 합니다.
+- **MediaStreamSource 및 MediaTranscoder 개체를 만듭니다.** 위에서 설명한 것 처럼 **Mediastreamsource** 개체는 개별 프레임을 비디오 스트림으로 인코딩합니다. 이전 단계에서 만든 **MediaEncodingProfile** 를 전달 하 여이 클래스에 대 한 생성자를 호출 합니다. 버퍼 시간을 0으로 설정 하 고 [시작](/uwp/api/windows.media.core.mediastreamsource.starting) 및 [SampleRequested](/uwp/api/windows.media.core.mediastreamsource.samplerequested) 이벤트에 대 한 처리기를 등록 합니다 .이 내용은이 문서의 뒷부분에 나와 있습니다. 그런 다음 **MediaTranscoder** 클래스의 새 인스턴스를 생성 하 고 하드웨어 가속을 사용 하도록 설정 합니다.
 
 - **출력 파일 만들기** 이 메서드의 마지막 단계는 비디오를 트랜스 코딩 하는 파일을 만드는 것입니다. 이 예제에서는 장치의 비디오 라이브러리 폴더에 고유 하 게 명명 된 파일을 만듭니다. 이 폴더에 액세스 하기 위해 앱은 앱 매니페스트에서 "비디오 라이브러리" 기능을 지정 해야 합니다. 파일이 만들어진 후에는 읽기 및 쓰기를 위해 열고 결과 스트림을 다음에 표시 되는 **EncodeAsync** 메서드로 전달 합니다.
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ScreenRecorderExample/cs/MainPage.xaml.cs" id="snippet_SetupEncoding":::
 
 ## <a name="start-encoding"></a>인코딩 시작
-이제 주 개체가 초기화 되었으므로 캡처 작업을 시작 하도록 **EncodeAsync** 메서드가 구현 됩니다. 이 메서드는 먼저 기록 되지 않았는지 확인 하 고, 그렇지 않은 경우 도우미 메서드 **Startcapture** 를 호출 하 여 화면에서 프레임 캡처를 시작 합니다. 이 방법은이 문서의 뒷부분에 나와 있습니다. 그런 다음, [PrepareMediaStreamSourceTranscodeAsync](/uwp/api/windows.media.transcoding.mediatranscoder.preparemediastreamsourcetranscodeasync) 를 호출 **하 여 이전** 섹션에서 만든 인코딩 프로필을 사용 하 여 **mediastreamsource** 개체에 의해 생성 된 비디오 스트림을 출력 파일 스트림으로 트랜스 코딩 합니다. 코드 변환기 준비 되 면 [TranscodeAsync](/uwp/api/windows.media.transcoding.preparetranscoderesult.transcodeasync) 를 호출 하 여 트랜스 코딩을 시작 합니다. **MediaTranscoder**사용에 대 한 자세한 내용은 [미디어 파일 트랜스 코드](/windows/uwp/audio-video-camera/transcode-media-files)를 참조 하세요.
+이제 주 개체가 초기화 되었으므로 캡처 작업을 시작 하도록 **EncodeAsync** 메서드가 구현 됩니다. 이 메서드는 먼저 기록 되지 않았는지 확인 하 고, 그렇지 않은 경우 도우미 메서드 **Startcapture** 를 호출 하 여 화면에서 프레임 캡처를 시작 합니다. 이 방법은이 문서의 뒷부분에 나와 있습니다. 그런 다음, [PrepareMediaStreamSourceTranscodeAsync](/uwp/api/windows.media.transcoding.mediatranscoder.preparemediastreamsourcetranscodeasync) 를 호출 **하 여 이전** 섹션에서 만든 인코딩 프로필을 사용 하 여 **mediastreamsource** 개체에 의해 생성 된 비디오 스트림을 출력 파일 스트림으로 트랜스 코딩 합니다. 코드 변환기 준비 되 면 [TranscodeAsync](/uwp/api/windows.media.transcoding.preparetranscoderesult.transcodeasync) 를 호출 하 여 트랜스 코딩을 시작 합니다. **MediaTranscoder**사용에 대 한 자세한 내용은 [미디어 파일 트랜스 코드](./transcode-media-files.md)를 참조 하세요.
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ScreenRecorderExample/cs/MainPage.xaml.cs" id="snippet_EncodeAsync":::
 
 ## <a name="handle-mediastreamsource-events"></a>MediaStreamSource 이벤트를 처리 합니다.
 **Mediastreamsource** 개체는 화면에서 캡처한 프레임을 가져와 **MediaTranscoder**를 사용 하 여 파일에 저장할 수 있는 비디오 스트림으로 변환 합니다. 개체의 이벤트에 대 한 처리기를 통해 **Mediastreamsource** 에 프레임을 전달 합니다.
 
-[SampleRequested](/uwp/api/windows.media.core.mediastreamsource.samplerequested) 이벤트는 **mediastreamsource** 가 새 비디오 프레임을 사용할 준비가 되었을 때 발생 합니다. 현재 기록 하 고 있는지 확인 한 후 도우미 메서드 **Waitfornewframe** 을 호출 하 여 화면에서 캡처된 새 프레임을 가져옵니다. 이 문서의 뒷부분에 나오는이 메서드는 캡처된 프레임을 포함 하는 [ID3D11Surface](/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) 개체를 반환 합니다. 이 예제에서는 프레임을 캡처한 시스템 시간을 저장 하는 도우미 클래스에서 **IDirect3DSurface** 인터페이스를 래핑합니다. 프레임과 시스템 시간은 모두 [mediastreamsample. CreateFromDirect3D11Surface](/uwp/api/windows.media.core.mediastreamsample.createfromdirect3d11surface) factory 메서드에 전달 되 고 결과 [Mediastreamsample](/uwp/api/windows.media.core.mediastreamsample) 은 [MediaStreamSourceSampleRequestedEventArgs](/uwp/api/windows.media.core.mediastreamsourcesamplerequestedeventargs)의 [MediaStreamSourceSampleRequest](MediaStreamSourceSampleRequest.Sample) 속성으로 설정 됩니다. 이는 캡처된 프레임이 **Mediastreamsource**에 제공 되는 방법입니다.
+[SampleRequested](/uwp/api/windows.media.core.mediastreamsource.samplerequested) 이벤트는 **mediastreamsource** 가 새 비디오 프레임을 사용할 준비가 되었을 때 발생 합니다. 현재 기록 하 고 있는지 확인 한 후 도우미 메서드 **Waitfornewframe** 을 호출 하 여 화면에서 캡처된 새 프레임을 가져옵니다. 이 문서의 뒷부분에 나오는이 메서드는 캡처된 프레임을 포함 하는 [ID3D11Surface](/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) 개체를 반환 합니다. 이 예제에서는 프레임을 캡처한 시스템 시간을 저장 하는 도우미 클래스에서 **IDirect3DSurface** 인터페이스를 래핑합니다. 프레임과 시스템 시간은 모두 [mediastreamsample. CreateFromDirect3D11Surface](/uwp/api/windows.media.core.mediastreamsample.createfromdirect3d11surface) factory 메서드에 전달 되 고 결과 [Mediastreamsample](/uwp/api/windows.media.core.mediastreamsample) 은 [MediaStreamSourceSampleRequestedEventArgs](/uwp/api/windows.media.core.mediastreamsourcesamplerequestedeventargs)의 [MediaStreamSourceSampleRequest](/uwp/api/windows.media.core.mediastreamsourcesamplerequest.sample) 속성으로 설정 됩니다. 이는 캡처된 프레임이 **Mediastreamsource**에 제공 되는 방법입니다.
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ScreenRecorderExample/cs/MainPage.xaml.cs" id="snippet_OnMediaStreamSourceSampleRequested":::
 
@@ -150,7 +150,7 @@ Frame 이벤트가 설정 되 면 이전 단계에서 정의 된 **FrameArrived*
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/ScreenRecorderExample/cs/Direct3D11Helpers.cs" id="snippet_Direct3D11Helpers":::
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
-* [Windows. Graphics. Capture 네임 스페이스](https://docs.microsoft.com/uwp/api/windows.graphics.capture)
+* [Windows. Graphics. Capture 네임 스페이스](/uwp/api/windows.graphics.capture)
 * [화면 캡처](screen-capture.md)

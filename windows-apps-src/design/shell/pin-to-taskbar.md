@@ -2,16 +2,16 @@
 Description: 작업 표시줄에 프로그래밍 방식으로 앱을 고정 하 여 현재 고정 되어 있는지 확인할 bnd 수 있습니다.
 title: 작업 표시줄에 앱 고정
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 작업 표시줄, 작업 표시줄 관리자, 작업 표시줄에 고정, 기본 타일
 ms.localizationpriority: medium
-ms.openlocfilehash: 8c5bba4a3bd6ebf1c4cbe0ef59a21c0e6ce44c79
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c2090d038bb3999112e8d2fa3824968916e5d7dc
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173837"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219336"
 ---
 # <a name="pin-your-app-to-the-taskbar"></a>작업 표시줄에 앱 고정
 

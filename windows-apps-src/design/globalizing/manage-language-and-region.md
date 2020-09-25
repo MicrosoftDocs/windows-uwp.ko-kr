@@ -3,16 +3,16 @@ Description: 이 항목에서는 사용자 프로필 언어 목록, 앱 매니�
 title: 사용자 프로필 언어 및 앱 매니페스트 언어 이해
 ms.assetid: 22D3A937-736A-4121-8285-A55DED56E594
 template: detail.hbs
-ms.date: 11/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 지역화 가능성, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: c4f1857ba4afe5eba271f7022c64aca26eb6b6b8
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ee2ba09c9b8b307a56bd71e720a9f6db8f45a813
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156937"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220246"
 ---
 # <a name="understand-user-profile-languages-and-app-manifest-languages"></a>사용자 프로필 언어 및 앱 매니페스트 언어 이해
 Windows 사용자는 **설정**  >  **시간 & 언어**  >  **지역 & 언어** 를 사용 하 여 기본 표시 언어의 순서가 지정 된 목록 또는 단일 기본 표시 언어만 구성할 수 있습니다. 언어에는 지역 변형이 있을 수 있습니다. 예를 들어 스페인에서 스페인어로, 스페인어는 멕시코로, 스페인어는 미국의 음성으로, 스페인어는 미국에서 음성으로 선택할 수 있습니다.
@@ -126,7 +126,7 @@ Visual Studio에서 빌드된 응용 프로그램 패키지 매니페스트 파�
 
 [**GeographicRegion**](/uwp/api/windows.globalization.geographicregion?branch=live) 클래스를 사용 하 여 표시 이름, 네이티브 이름 및 사용 중인 통화와 같은 특정 영역에 대 한 세부 정보를 검사할 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 다음 표에는 다양 한 언어 및 지역 설정에서 사용자가 앱의 UI에 표시 되는 사항의 예가 포함 되어 있습니다.
 
 <table border="1">

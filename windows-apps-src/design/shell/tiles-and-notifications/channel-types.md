@@ -1,16 +1,16 @@
 ---
 Description: WNS (Windows Push Notification Services)를 사용 하면 타사 개발자가 자신의 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. 응용 프로그램의 필요에 따라 알림을 보내는 방법에는 여러 가지가 있습니다.
 title: 올바른 푸시 알림 채널 유형 선택
-ms.date: 07/07/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 166abeb792e86fc44568a5ee29263262214657cf
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 326012a38f2d4a8cd7d5c406c160db5168c9877d
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173827"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219226"
 ---
 # <a name="choosing-the-right-push-notification-channel-type"></a>올바른 푸시 알림 채널 유형 선택
 
@@ -20,7 +20,7 @@ ms.locfileid: "89173827"
 
 ## <a name="types-of-push-channels"></a>푸시 채널의 유형 
 
-Windows 앱에 알림을 보내는 데 사용할 수 있는 푸시 채널에는 세 가지 유형이 있습니다. 해당 항목은 다음과 같습니다. 
+Windows 앱에 알림을 보내는 데 사용할 수 있는 푸시 채널에는 세 가지 유형이 있습니다. 아래에 이 계정과 키의 예제가 나와 있습니다. 
 
 [기본 채널](/uwp/api/windows.networking.pushnotifications.pushnotificationchannelmanagerforuser#Methods_) -"기존" 푸시 채널입니다. 는 스토어의 모든 앱에서 알림, 타일, raw 또는 배지 알림을 보내는 데 사용할 수 있습니다. [자세한 내용은 여기를 참조](windows-push-notification-services--wns--overview.md)하세요.
 
@@ -132,9 +132,9 @@ PushNotificationChannel webChannel =
 </tr>
 <tr class="even">
 <td align="left">보조 타일</td>
-<td align="left">예</td>
+<td align="left">아니요</td>
 <td align="left">예-보조 타일에만 해당</td>
-<td align="left">예</td>
+<td align="left">아니요</td>
 <td align="left">OAuth</td>
 <td align="left">WNS REST API</td>
 <td align="left">예</td>
@@ -143,12 +143,12 @@ PushNotificationChannel webChannel =
 </tr>
 <tr class="odd">
 <td align="left">또</td>
-<td align="left">예</td>
-<td align="left">예</td>
+<td align="left">아니요</td>
+<td align="left">아니요</td>
 <td align="left">예</td>
 <td align="left">VAPID</td>
 <td align="left">WebPush W3C Standard</td>
-<td align="left">예</td>
+<td align="left">아니요</td>
 <td align="left">앱 당 1000</td>
 <td align="left">전송 중-헤더 통과를 사용 하 여 종단 간 암호화 가능 (앱 코드 필요)</td>
 </tr>

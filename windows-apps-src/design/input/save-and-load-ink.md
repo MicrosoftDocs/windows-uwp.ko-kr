@@ -5,15 +5,15 @@ ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
 template: detail.hbs
 keywords: Windows Ink, Windows Ink, DirectInk, InkPresenter, InkCanvas, ISF, 잉크 직렬화 된 형식, 사용자 조작, 입력
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 72076ffb27046a5c5e804cf30e8cb6c78b88cd69
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 66ac039774abc2322ab8b5e9a6a264af25156406
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173337"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216766"
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Windows Ink 스트로크 데이터 저장 및 검색
 
@@ -262,7 +262,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 > [!NOTE]
 > GIF는 잉크 데이터를 저장 하는 데 지원 되는 유일한 파일 형식입니다. 그러나 [**LoadAsync**](/uwp/api/windows.ui.input.inking.inkmanager.loadasync) 메서드는 이전 버전과의 호환성을 위해 다음 형식을 지원 합니다.
 
-| 서식                    | Description |
+| 서식                    | 설명 |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | InkSerializedFormat       | ISF를 사용 하 여 유지 되는 잉크를 지정 합니다. 이는 잉크의 가장 간결한 영구 표현입니다. 이진 문서 형식에 포함 하거나 클립보드에 직접 배치할 수 있습니다.                                                                                                                                                                                                         |
 | Base64InkSerializedFormat | ISF를 base64 스트림으로 인코딩하여 유지 되는 잉크를 지정 합니다. 이 형식은 잉크를 XML 또는 HTML 파일에서 직접 인코딩할 수 있도록 제공 됩니다.                                                                                                                                                                                                                                                |

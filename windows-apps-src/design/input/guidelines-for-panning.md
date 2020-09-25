@@ -4,16 +4,16 @@ title: 이동
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e77485bd2febe2ee032f9a0c3ceada31c2807ee0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3a5e26d48ef74631e732fb043e909869945a6366
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172497"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217053"
 ---
 # <a name="guidelines-for-panning"></a>패닝에 대 한 지침
 
@@ -80,7 +80,7 @@ ms.locfileid: "89172497"
 
 > <div id="main">
 > <strong>Windows 10의 작성자 업데이트-동작 변경</strong> 기본적으로 텍스트를 선택 하는 대신 활성 펜은 터치, 터치 패드, 수동 펜 등의 Windows 앱에서 스크롤/계획 됩니다.  
-> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 재정의하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 <a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer 클래스</a>의 API 참조 항목을 참조하세요.
+> 앱이 이전 동작을 사용하는 경우 펜 스크롤을 재정의하고 이전 동작으로 되돌릴 수 있습니다. 자세한 내용은 <a href="/uwp/api/windows.ui.xaml.controls.scrollviewer">ScrollViewer 클래스</a>의 API 참조 항목을 참조하세요.
 > </div>
 
 입력 장치에 따라 사용자는 다음 중 하나를 사용 하 여 pannable 지역 내에서 계획 합니다.

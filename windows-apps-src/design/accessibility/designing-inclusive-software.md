@@ -1,19 +1,19 @@
 ---
 Description: Windows 10 용 Windows 앱으로 진화 하는 포괄 디자인에 대해 알아봅니다.  내게 필요한 옵션을 염두에 두면 포함 소프트웨어를 설계 하 고 구축 합니다.
 ms.assetid: A6393A57-53F2-4F06-89AF-0D806FD76DB0
-title: Windows 10에서 포함 소프트웨어 디자인
+title: Windows 10에서 포괄 소프트웨어 디자인
 label: Designing inclusive software
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f7286394f68d6cda82581a825117f12ce98493ba
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 795344a7a03344c5f8aeea26252e1e0610d9d8c3
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234083"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219866"
 ---
 # <a name="designing-inclusive-software-for-windows-10"></a>Windows 10 용 포함 소프트웨어 디자인  
 
@@ -108,4 +108,4 @@ ADA (미국인 with 장애가 있는 Act) 및 기타 규제의 업데이트 된 
 * [내게 필요한 옵션에 대 한 엔지니어링 소프트웨어](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft 내게 필요한 옵션 개발자 허브](https://developer.microsoft.com/windows/accessible-apps)
 * [포괄 Windows 앱 개발](developing-inclusive-windows-apps.md) 
-* [액세스 가능성](accessibility.md)
+* [접근성](accessibility.md)

@@ -1,19 +1,19 @@
 ---
 Description: 키보드 탐색, 색 및 대비 설정, 보조 기술 지원 등을 포함 하는 내게 필요한 옵션 지원 Windows 앱을 개발 하는 방법을 알아봅니다.
 ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
-title: 포함 Windows 10 앱 개발
+title: 포괄 Windows 10 앱 개발
 label: Developing inclusive Windows 10 apps
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 37fb7cc81d1a86a159526af5d580a02482d13f9a
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: 856ed1222cd393ec2730226f9c4faadf7e9ad0d7
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83233971"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219816"
 ---
 # <a name="developing-inclusive-windows-apps"></a>포괄 Windows 앱 개발  
 
@@ -86,4 +86,4 @@ XAML
 * [피해야 할 접근성 사례](practices-to-avoid.md)
 * [내게 필요한 옵션에 대 한 엔지니어링 소프트웨어](https://www.microsoft.com/download/details.aspx?id=19262)
 * [Microsoft 내게 필요한 옵션 개발자 허브](https://developer.microsoft.com/windows/accessible-apps)
-* [액세스 가능성](accessibility.md)
+* [접근성](accessibility.md)

@@ -1,21 +1,21 @@
 ---
 Description: 타일, 배지 및 알림을 사용하여 앱에 대한 진입점을 제공하고 사용자를 최신 상태로 유지하는 방법에 대해 알아봅니다.
-title: Windows 앱에 대 한 배지 알림
+title: Windows 앱에 대한 배지 알림
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1d3aa9658e8a57a7993eb79d164b1e17ac23b9ac
-ms.sourcegitcommit: 0dee502484df798a0595ac1fe7fb7d0f5a982821
+ms.openlocfilehash: e8d3cf69da80b13ff334d89027f3ea366ac3accd
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82970878"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219396"
 ---
-# <a name="badge-notifications-for-windows-apps"></a>Windows 앱에 대 한 배지 알림
+# <a name="badge-notifications-for-windows-apps"></a>Windows 앱에 대한 배지 알림
 
  
 
@@ -200,6 +200,6 @@ private void clearBadge()
 
 ## <a name="related-articles"></a>관련된 문서
 
-* [적응 및 대화형 알림 메시지](adaptive-interactive-toasts.md)
+* [적응형 및 대화형 알림 메시지](adaptive-interactive-toasts.md)
 * [타일 만들기](creating-tiles.md)
-* [적응 타일 만들기](create-adaptive-tiles.md)
+* [적응형 타일 만들기](create-adaptive-tiles.md)

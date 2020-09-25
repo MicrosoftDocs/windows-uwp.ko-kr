@@ -6,19 +6,19 @@ label: Designing for Xbox and TV
 template: detail.hbs
 isNew: true
 keywords: Xbox, TV, 10 피트 환경, 게임 패드, 원격 제어, 입력, 상호 작용
-ms.date: 11/13/2018
+ms.date: 09/24/2020
 ms.topic: article
 pm-contact: chigy
 design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 491b67322c8b328c21446d50951daad61f15ad3d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b0c278599c878e807ef8b2e2564ca9add31ea4ad
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175577"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220286"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Xbox 및 TV용 디자인
 
@@ -66,7 +66,7 @@ _**스크린샷에 표시 된 모든 동영상은 Microsoft 영화 & TV에서 �
 
 이제 10 피트 환경에 적합 한 UWP 앱 디자인의 원리를 배웠으므로 앱을 최적화 하 고 뛰어난 사용자 환경을 만들 수 있는 특정 방법에 대 한 다음 개요를 참조 하세요.
 
-| 기능        | Description           |
+| 기능        | 설명           |
 | -------------------------------------------------------------- |--------------------------------|
 | [UI 요소 크기 조정](#ui-element-sizing)  | 유니버설 Windows 플랫폼는 [크기 조정 및 유효 픽셀](../basics/design-and-ui-intro.md#effective-pixels-and-scaling) 을 사용 하 여 보기 거리에 따라 UI의 크기를 조정 합니다. 크기를 이해 하 고 UI를 통해 적용 하면 10 피트 환경에 맞게 앱을 최적화 하는 데 도움이 됩니다.  |
 |  [TV 안전 영역](#tv-safe-area) | UWP는 기본적으로 TV 안전 하지 않은 영역 (화면 가장자리에 가까운 영역)의 UI를 자동으로 표시 하지 않습니다. 그러나이는 UI가 letterboxed 보이는 "boxed" 효과를 만듭니다. TV에서 진정한 몰입형 앱이 되려면 지원하는 TV에서 화면 가장자리까지 확장되도록 앱을 수정하는 것이 좋습니다. |
@@ -77,7 +77,7 @@ _**스크린샷에 표시 된 모든 동영상은 Microsoft 영화 & TV에서 �
 
 이전 디자인 및 레이아웃 고려 사항 외에도 응용 프로그램을 빌드할 때 고려해 야 할 몇 가지 [게임 패드 및 원격 제어 상호 작용](../input/gamepad-and-remote-interactions.md) 최적화가 있습니다.
 
-| 기능        | Description           |
+| 기능        | 설명           |
 | -------------------------------------------------------------- |--------------------------------|
 | [XY 포커스 탐색 및 상호 작용](../input/gamepad-and-remote-interactions.md#xy-focus-navigation-and-interaction) | **XY 포커스 탐색** 을 사용 하면 사용자가 앱의 UI를 탐색할 수 있습니다. 그러나이 경우 사용자가 위로, 아래로, 왼쪽 및 오른쪽으로 이동 하도록 제한 됩니다. 이에 대 한 권장 사항 및 기타 고려 사항은이 섹션에 설명 되어 있습니다. |
 | [마우스 모드.](../input/gamepad-and-remote-interactions.md#mouse-mode)|지도, 그리기 및 그리기와 같은 일부 유형의 응용 프로그램에서는 XY 포커스 탐색이 실용적이 지 않거나 가능 하지 않습니다. 이러한 경우 **마우스 모드** 를 사용 하면 사용자가 PC의 마우스와 마찬가지로 게임 패드 또는 원격 제어로 자유롭게 이동할 수 있습니다.|
@@ -450,7 +450,7 @@ DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 �
 
 이 속성을 설정 하면 레이블이 항상 표시 됩니다 .이는 사용자에 대 한 클릭 횟수를 최소화 하기 때문에 10 피트 환경에 적합 합니다. 이는 다른 장치 유형을 따르는 좋은 모델 이기도 합니다.
 
-### <a name="tooltip"></a>Tooltip
+### <a name="tooltip"></a>도구 설명
 
 [도구 설명](/uwp/api/Windows.UI.Xaml.Controls.ToolTip) 컨트롤은 사용자가 마우스를 위로 가져갈 때 UI에 추가 정보를 제공 하는 방법으로 도입 되었습니다. 게임 패드 및 원격의 경우 `Tooltip` 요소가 포커스를 가질 때 잠깐 후에 표시 되 고, 잠시 동안 화면을 유지 한 후 사라집니다. 너무 많은를 사용 하는 경우이 동작이 혼란을 수 있습니다 `Tooltip` . `Tooltip`TV를 설계할 때를 사용 하지 않도록 합니다.
 

@@ -2,19 +2,19 @@
 description: 연결된 애니메이션을 사용하면 두 가지 보기 간에 전환되는 동작에 애니메이션 효과를 적용하여 역동적이고 매력적인 탐색 환경을 만들 수 있습니다.
 title: 연결된 애니메이션
 template: detail.hbs
-ms.date: 10/04/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ff252faf4dd49929ec46c2ceaa02f94011e6b225
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 770f859cfb90dde4f3960492479beb6192c12c8f
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169327"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217786"
 ---
 # <a name="connected-animation-for-windows-apps"></a>Windows 앱에 대 한 연결 된 애니메이션
 
@@ -101,8 +101,8 @@ ConnectedAnimation에서 구성 속성을 설정 하 여 애니메이션 구성�
 | 구성 | DefaultDuration을 고려 하나요? | DefaultEasingFunction? |
 | - | - | - |
 | 중력 | 예 | 예* <br/> **A에서 B로의 기본 변환은이 감속/가속 함수를 사용 하지만 "중력 dip"에는 자체 감속/가속 함수가 있습니다.*  |
-| 직접 | 예 <br/> *150ms에 대 한 애니메이션을 적용 합니다.*| 예 <br/> *감속 감속/가속 함수를 사용 합니다.* |
-| 기본 | 예 | 예 |
+| 직접 | 아니요 <br/> *150ms에 대 한 애니메이션을 적용 합니다.*| 아니요 <br/> *감속 감속/가속 함수를 사용 합니다.* |
+| Basic | 예 | 예 |
 
 ## <a name="how-to-implement-connected-animation"></a>연결 된 애니메이션을 구현 하는 방법
 

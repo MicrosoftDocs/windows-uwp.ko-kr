@@ -5,15 +5,15 @@ ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
 template: detail.hbs
 keywords: 펜, 마우스, 터치 패드, 터치, 포인터, 입력, 사용자 상호 작용
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f544b73e069827f3c680db45797081605ce41b63
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 11402ae9f2ea99c583d82d1998ad238eac44576c
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173457"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219856"
 ---
 # <a name="handle-pointer-input"></a>포인터 입력 처리
 
@@ -53,12 +53,12 @@ Windows 앱은 다음과 같은 포인터 이벤트를 수신할 수 있습니�
 <thead>
 <tr class="header">
 <th align="left">이벤트</th>
-<th align="left">Description</th>
+<th align="left">설명</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercanceled"><strong>PointerCanceled</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointercanceled"><strong>PointerCanceled</strong></a></p></td>
 <td align="left"><p>플랫폼에 의해 포인터가 취소 될 때 발생 합니다. 이 문제는 다음과 같은 경우에 발생할 수 있습니다.</p>
 <ul>
 <li>입력 표면의 범위 내에서 펜이 검색 되 면 터치 포인터가 취소 됩니다.</li>
@@ -69,7 +69,7 @@ Windows 앱은 다음과 같은 포인터 이벤트를 수신할 수 있습니�
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointercapturelost"><strong>PointerCaptureLost</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointercapturelost"><strong>PointerCaptureLost</strong></a></p></td>
 <td align="left"><p>다른 UI 요소에서 포인터를 캡처하거나 포인터가 해제 되거나 프로그래밍 방식으로 다른 포인터가 캡처될 때 발생 합니다.</p>
 <div class="alert">
 <strong>참고</strong>    해당 포인터 캡처 이벤트가 없습니다.
@@ -79,43 +79,43 @@ Windows 앱은 다음과 같은 포인터 이벤트를 수신할 수 있습니�
 </div></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerentered"><strong>PointerEntered 됨</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointerentered"><strong>PointerEntered 됨</strong></a></p></td>
 <td align="left"><p>포인터가 요소의 경계 영역에 들어갈 때 발생합니다. 이는 터치, 터치 패드, 마우스 및 펜 입력에 대해 약간 다른 방법으로 발생할 수 있습니다.</p>
 <ul>
 <li>터치를 사용 하려면 요소에 대 한 직접 터치에서 또는 요소의 경계 영역으로 이동 하 여이 이벤트를 발생 시킵니다.</li>
 <li>마우스 및 터치 패드에는 항상 표시 되는 화상 커서가 있으며 마우스 또는 터치 패드 단추를 누르지 않아도이 이벤트가 발생 합니다.</li>
-<li>터치와 마찬가지로 펜은 요소에 대 한 직접 펜을 사용 하거나 요소의 경계 영역으로 이동 하 여이 이벤트를 발생 시킵니다. 그러나 펜에는 true 인 경우이 이벤트를 발생 시키는 가리키기 상태 (<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>)도 있습니다.</li>
+<li>터치와 마찬가지로 펜은 요소에 대 한 직접 펜을 사용 하거나 요소의 경계 영역으로 이동 하 여이 이벤트를 발생 시킵니다. 그러나 펜에는 true 인 경우이 이벤트를 발생 시키는 가리키기 상태 (<a href="/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>)도 있습니다.</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerexited"><strong>PointerExited</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointerexited"><strong>PointerExited</strong></a></p></td>
 <td align="left"><p>포인터가 요소의 경계 영역을 벗어나면 발생 합니다. 이는 터치, 터치 패드, 마우스 및 펜 입력에 대해 약간 다른 방법으로 발생할 수 있습니다.</p>
 <ul>
 <li>터치를 사용 하려면 손가락 연락처가 필요 하며 포인터가 요소의 경계 영역 밖으로 이동할 때이 이벤트를 발생 시킵니다.</li>
 <li>마우스 및 터치 패드에는 항상 표시 되는 화상 커서가 있으며 마우스 또는 터치 패드 단추를 누르지 않아도이 이벤트가 발생 합니다.</li>
-<li>터치와 마찬가지로 펜은 요소의 경계 영역 밖으로 이동할 때이 이벤트를 발생 시킵니다. 그러나 상태가 true에서 false로 변경 되 면이 이벤트를 발생 시키는 가리키기 상태 (<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>)도 있습니다.</li>
+<li>터치와 마찬가지로 펜은 요소의 경계 영역 밖으로 이동할 때이 이벤트를 발생 시킵니다. 그러나 상태가 true에서 false로 변경 되 면이 이벤트를 발생 시키는 가리키기 상태 (<a href="/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>)도 있습니다.</li>
 </ul></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointermoved"><strong>PointerMoved 됨</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointermoved"><strong>PointerMoved 됨</strong></a></p></td>
 <td align="left"><p>요소의 경계 영역 내에서 포인터의 좌표, 단추 상태, 압력, 기울기 또는 접촉 기 하 도형 (예: 너비 및 높이)이 변경 될 때 발생 합니다. 이는 터치, 터치 패드, 마우스 및 펜 입력에 대해 약간 다른 방법으로 발생할 수 있습니다.</p>
 <ul>
 <li>터치를 사용 하려면 손가락 연락처가 필요 하 고 요소의 경계 영역 내에 있는 연락처에 있는 경우에만이 이벤트를 발생 시킵니다.</li>
 <li>마우스 및 터치 패드에는 항상 표시 되는 화상 커서가 있으며 마우스 또는 터치 패드 단추를 누르지 않아도이 이벤트가 발생 합니다.</li>
-<li>터치와 마찬가지로 펜은 요소의 경계 영역 내에서 연락할 때이 이벤트를 발생 시킵니다. 그러나 펜에는 요소에 대 한 경계 영역 내에서 true 및이 이벤트가 발생 하는 가리키기 상태 (<a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>)도 있습니다.</li>
+<li>터치와 마찬가지로 펜은 요소의 경계 영역 내에서 연락할 때이 이벤트를 발생 시킵니다. 그러나 펜에는 요소에 대 한 경계 영역 내에서 true 및이 이벤트가 발생 하는 가리키기 상태 (<a href="/uwp/api/windows.ui.xaml.input.pointer.isinrange">IsInRange</a>)도 있습니다.</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerpressed"><strong>PointerPressed</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointerpressed"><strong>PointerPressed</strong></a></p></td>
 <td align="left"><p>요소가 요소의 경계 영역 내에서 누름 동작 (예: 터치 다운, 마우스 단추 누름, 펜 아래로 또는 터치 패드 단추 누르기)을 나타내는 경우에 발생 합니다.</p>
 <p><a href="/uwp/api/windows.ui.xaml.uielement.capturepointer">CapturePointer</a> 는이 이벤트에 대 한 처리기에서 호출 해야 합니다.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerreleased"><strong>PointerReleased</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointerreleased"><strong>PointerReleased</strong></a></p></td>
 <td align="left"><p>포인터가 요소의 경계 영역 내에서 터치, 마우스 단추 위로, 펜 위, 터치 패드 단추 등의 릴리스 작업을 나타내는 경우 또는 경계 영역 외부에서 포인터가 캡처된 경우 발생 합니다.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged"><strong>PointerWheelChanged</strong></a></p></td>
+<td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged"><strong>PointerWheelChanged</strong></a></p></td>
 <td align="left"><p>마우스 휠이 회전할 때 발생합니다.</p>
 <p>마우스 입력은 마우스 입력이 처음 감지 될 때 할당 된 단일 포인터와 연결 됩니다. 마우스 단추 (왼쪽, 휠 또는 오른쪽)를 클릭 하면 <a href="/uwp/api/windows.ui.xaml.uielement.pointermoved">Pointermoved</a> 이벤트를 통해 포인터와 해당 단추 사이에 보조 연결이 생성 됩니다.</p></td>
 </tr>

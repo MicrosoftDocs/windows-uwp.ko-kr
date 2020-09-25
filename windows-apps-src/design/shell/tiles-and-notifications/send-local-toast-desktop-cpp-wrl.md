@@ -3,16 +3,16 @@ Description: Win32 c + + WRL apps에서 로컬 알림 메시지를 보내고 알
 title: 데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
 label: Send a local toast notification from desktop C++ WRL apps
 template: detail.hbs
-ms.date: 03/07/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, win32, 데스크톱, 알림 메시지 보내기, 알림 보내기, 바탕 화면 브리지, msix, 스파스 패키지, c + +, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: e1aae390cf9047c8c93b4d24084c87bc90af8d80
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f90733cb4b549b7b8f088d6ecfa652941b0769b1
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172307"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220146"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
 
@@ -420,9 +420,9 @@ Windows 8은 알림 메시지를 도입 했지만 ToastText01와 같은 [레거�
 
 | OS | To Generic | COM 활성기 | 레거시 알림 템플릿 |
 | -- | ------------ | ------------- | ---------------------- |
-| Windows 10 | 지원됨 | 지원됨 | 지원 됨 (COM 서버를 활성화 하지 않음) |
-| Windows 8.1/8 | 해당 없음 | 해당 없음 | 지원됨 |
-| Windows 7 및 낮음 | 해당 없음 | 해당 없음 | 해당 없음 |
+| 윈도우 10 | 지원됨 | 지원됨 | 지원 됨 (COM 서버를 활성화 하지 않음) |
+| Windows 8.1/8 | N/A | 해당 없음 | 지원됨 |
+| Windows 7 및 낮음 | N/A | N/A | N/A |
 
 Windows 10에서 실행 되 고 있는지 확인 하려면 헤더를 포함 하 `<VersionHelpers.h>` 고 **IsWindows10OrGreater** 메서드를 확인 합니다. True가 반환 되 면이 설명서에 설명 된 모든 메서드를 계속 호출 합니다. 
 

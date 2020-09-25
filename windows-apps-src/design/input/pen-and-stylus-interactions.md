@@ -5,15 +5,15 @@ ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen interactions and Windows Ink in Windows apps
 template: detail.hbs
 keywords: Windows Ink, Windows Ink, DirectInk, InkPresenter, InkCanvas, 필기 인식, 사용자 조작, 입력
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3733c98c81a23fbc5b369297b45f1c1e5183c198
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 34e41ff4b6fa402e8a1857a2ea406c9e63e7c868
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173387"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216966"
 ---
 # <a name="pen-interactions-and-windows-ink-in-windows-apps"></a>Windows 앱의 펜 조작 및 Windows Ink
 
@@ -45,7 +45,7 @@ Windows Ink UX 지침은 [잉크 컨트롤](../controls-and-patterns/inking-cont
 
 ## <a name="components-of-the-windows-ink-platform"></a>Windows Ink 플랫폼의 구성 요소
 
-| 구성 요소 | Description |
+| 구성 요소 | 설명 |
 | --- | --- |
 | [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) | 기본적으로 펜의 모든 입력을 받아 잉크 스트로크 또는 지우기 스트로크로 표시 하는 XAML UI 플랫폼 컨트롤입니다.<br/>InkCanvas를 사용 하는 방법에 대 한 자세한 내용은 [Windows ink 스트로크를 텍스트로 인식](convert-ink-to-text.md) 및 [windows Ink 스트로크 데이터 저장 및 검색](save-and-load-ink.md)을 참조 하세요. |
 | [**InkPresenter**](/uwp/api/Windows.UI.Input.Inking.InkPresenter) | [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤([**InkCanvas.InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 추가 사용자 지정 및 개인 설정을 위한 포괄적인 Api 집합과 함께 **InkCanvas**에서 노출 하는 모든 기본 잉크 기능을 제공 합니다.<br/>InkPresenter를 사용 하는 방법에 대 한 자세한 내용은 [Windows ink 스트로크를 텍스트로 인식](convert-ink-to-text.md) 및 [windows Ink 스트로크 데이터 저장 및 검색](save-and-load-ink.md)을 참조 하세요. |
@@ -462,7 +462,7 @@ Windows 잉크 플랫폼에서는 스트로크 선택과 같이 수정 된 입�
 
 ## <a name="other-articles-in-this-section"></a>이 단원의 다른 문서
 
-| 항목 | Description |
+| 항목 | 설명 |
 | --- | --- |
 | [잉크 스트로크 인식](convert-ink-to-text.md) | 필기 인식을 사용 하 여 잉크 스트로크를 텍스트로 변환 하거나 사용자 지정 인식을 사용 하 여 도형으로 변환 합니다. |
 | [잉크 스트로크 저장 및 검색](save-and-load-ink.md) | 포함 된 ISF (Ink Serialize 된 형식) 메타 데이터를 사용 하 여 GIF (그래픽 교환 형식) 파일에 잉크 스트로크 데이터를 저장 합니다. |

@@ -2,16 +2,16 @@
 Description: Microsoft에서 테스트 앱을 사용 하기 위한 JavaScript API를 통해 보안 평가를 수행할 수 있습니다. 테스트를 수행 하면 테스트 중에 학생이 다른 컴퓨터나 인터넷 리소스를 사용 하지 못하도록 하는 보안 브라우저가 제공 됩니다.
 title: JavaScript API 시험 응시.
 ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
-ms.date: 08/08/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 교육
 ms.localizationpriority: medium
-ms.openlocfilehash: f5894e80c11d69c91be8492b80c3200e15a3dc31
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2eeb190fc95e46a95813affd432948d38c0328a4
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161267"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218396"
 ---
 # <a name="take-a-test-javascript-api"></a>테스트 JavaScript API를 사용 합니다.
 
@@ -30,13 +30,13 @@ ms.locfileid: "89161267"
 
 보안 네임 스페이스를 사용 하 여 장치를 잠그고, 사용자 및 시스템 프로세스 목록을 확인 하 고, MAC 및 IP 주소를 가져오고, 캐시 된 웹 리소스를 지울 수 있습니다.
 
-| 메서드 | Description   |
+| 메서드 | 설명   |
 |--------|---------------|
 |[보안](#lockDown) | 테스트를 위해 장치를 잠급니다. |
 |[Is환경 보안](#isEnvironmentSecure) | 잠금 컨텍스트가 장치에 계속 적용 되는지 여부를 결정 합니다. |
 |[getDeviceInfo](#getDeviceInfo) | 테스트 응용 프로그램이 실행 되는 플랫폼에 대 한 세부 정보를 가져옵니다. |
 |[examineProcessList](#examineProcessList)|실행 중인 사용자 및 시스템 프로세스 목록을 가져옵니다.|
-|[닫습니다](#close) | 브라우저를 닫고 장치의 잠금을 해제 합니다. |
+|[close](#close) | 브라우저를 닫고 장치의 잠금을 해제 합니다. |
 |[getPermissiveMode](#getPermissiveMode)|허용 모드가 설정 되어 있는지 여부를 확인 합니다.|
 |[setPermissiveMode](#setPermissiveMode)|허용 모드를 설정 하거나 해제 합니다.|
 |[emptyClipBoard](#emptyClipBoard)|시스템 클립보드를 지웁니다.|
@@ -58,7 +58,7 @@ ms.locfileid: "89161267"
 `void SecureBrowser.security.lockDown(Boolean enable, Function onSuccess, Function onError);`
 
 **매개 변수**  
-* `enable` - 잠금 화면 위에서 테스트 후 앱을 실행 하 고이 [문서](https://docs.microsoft.com/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)에서 설명 하는 정책을 적용 하려면 **true로 설정** 합니다. **false로 설정** 하면 잠금 화면 위에서 테스트 실행이 중지 되 고 앱이 잠기지 않은 경우 닫힙니다. 이 경우에는 아무 효과가 없습니다.  
+* `enable` - 잠금 화면 위에서 테스트 후 앱을 실행 하 고이 [문서](/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396)에서 설명 하는 정책을 적용 하려면 **true로 설정** 합니다. **false로 설정** 하면 잠금 화면 위에서 테스트 실행이 중지 되 고 앱이 잠기지 않은 경우 닫힙니다. 이 경우에는 아무 효과가 없습니다.  
 * `onSuccess` -[선택 사항] 잠금을 사용 하거나 사용 하지 않도록 설정 하 고 나면 호출할 함수입니다. 형식 이어야 합니다 `Function(Boolean currentlockdownstate)` .  
 * `onError` -[선택 사항] 잠금 작업이 실패 한 경우 호출할 함수입니다. 형식 이어야 합니다 `Function(Boolean currentlockdownstate)` .  
 

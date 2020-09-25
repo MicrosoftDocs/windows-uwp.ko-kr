@@ -4,16 +4,16 @@ title: 조작 입문
 ms.assetid: 73008F80-FE62-457D-BAEC-412ED6BAB0C8
 label: Interaction primer
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dc220d1b5489faf96653472880dc06124c10b047
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: dde0e5479533aed225dbadc68b325afede050dbb
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173447"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219676"
 ---
 # <a name="interaction-primer"></a>조작 입문
 
@@ -89,7 +89,7 @@ Windows 10에서 **Cortana** 확장성을 사용 하면 사용자의 음성 명�
 [Cortana 디자인 지침](/cortana/skills/cortana-design-guidelines)
  
 
-## <a name="speech"></a>Speech
+## <a name="speech"></a>음성
 
 음성은 사용자가 응용 프로그램과 상호 작용할 수 있는 효과적인 방법입니다. 쉽고 정확한 방법으로 응용 프로그램과 통신 하 고, 다양 한 상황에서 사용자의 생산성을 높이고 정보를 지속적으로 유지할 수 있습니다.
 

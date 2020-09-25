@@ -4,16 +4,16 @@ ms.assetid: AA053196-F331-4CBE-B032-4E9CBEAC699C
 title: 접근성 개요
 label: Accessibility overview
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a790af10f6cfc06029e269dba4c984a041932239
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 525f8d3170d94b035648841edca5f903450bf871
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163437"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216486"
 ---
 # <a name="accessibility-overview"></a>접근성 개요
 

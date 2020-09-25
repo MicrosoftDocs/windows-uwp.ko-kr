@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, 포트, direct3d 9, direct3d 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 2e194ab79b8ba0a5dc79d4ad24f808d3613a0c98
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f93b1d733efec2d52ca364f2f97a6d0f424019ad
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158997"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216566"
 ---
 # <a name="walkthrough-port-a-simple-direct3d-9-app-to-directx-11-and-universal-windows-platform-uwp"></a>연습: 간단한 Direct3D 9 앱에서 DirectX 11 및 유니버설 Windows 플랫폼 (UWP)로 이식
 
@@ -27,7 +27,7 @@ ms.locfileid: "89158997"
 <thead>
 <tr class="header">
 <th align="left">항목</th>
-<th align="left">Description</th>
+<th align="left">설명</th>
 </tr>
 </thead>
 <tbody>
@@ -41,7 +41,7 @@ ms.locfileid: "89158997"
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="simple-port-from-direct3d-9-to-11-1-part-3--viewport-and-game-loop.md">게임 루프를 이식 합니다.</a></p></td>
-<td align="left"><p>UWP 게임을 위한 창을 구현 하는 방법 및 <a href="https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.IFrameworkView"><strong>IFrameworkView</strong></a> 를 빌드하여 전체 화면 <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow"><strong>CoreWindow</strong></a>을 제어 하는 방법을 비롯 하 여 게임 루프를 가져오는 방법을 보여 줍니다.</p></td>
+<td align="left"><p>UWP 게임을 위한 창을 구현 하는 방법 및 <a href="/uwp/api/Windows.ApplicationModel.Core.IFrameworkView"><strong>IFrameworkView</strong></a> 를 빌드하여 전체 화면 <a href="/uwp/api/Windows.UI.Core.CoreWindow"><strong>CoreWindow</strong></a>을 제어 하는 방법을 비롯 하 여 게임 루프를 가져오는 방법을 보여 줍니다.</p></td>
 </tr>
 </tbody>
 </table>
@@ -65,7 +65,7 @@ ms.locfileid: "89158997"
 
 이 연습에서는 간소화를 위해 [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 를 사용 하 고 XAML interop에 대해서는 설명 하지 않습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 
 [UWP DirectX 게임 개발을 위한 개발 환경을 준비](prepare-your-dev-environment-for-windows-store-directx-game-development.md)해야 합니다. 아직 템플릿이 필요 하지 않지만이 연습에 대 한 코드 샘플을 로드 하려면 2015 Microsoft Visual Studio 필요 합니다.

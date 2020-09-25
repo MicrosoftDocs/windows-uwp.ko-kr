@@ -4,16 +4,16 @@ ms.assetid: 59FA3B87-75A6-4B30-BA7C-A0E769D68050
 title: 스토어의 접근성
 label: Accessibility in the Store
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 320d5cc4232d613a4fb437fbd11f3c83287b3030
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b554adbcc074112604b8713409ee4d05e21dcc0f
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154107"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216456"
 ---
 # <a name="accessibility-in-the-store"></a>스토어의 접근성  
 

@@ -4,16 +4,16 @@ ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
 title: 기본적인 접근성 정보 표시
 label: Expose basic accessibility information
 template: detail.hbs
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 723108b1a4e90de4cf378d8cdafcaae92bec2682
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: da0ad6c0121f81a4854728f4441e0407a6302f54
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157097"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217466"
 ---
 # <a name="expose-basic-accessibility-information"></a>기본적인 접근성 정보 표시  
 
@@ -29,7 +29,7 @@ ms.locfileid: "89157097"
 
 이 표에서는 XAML UI에서 다양 한 형식의 요소에 대해 액세스 가능한 이름을 정의 하거나 가져오는 방법을 설명 합니다.
 
-| 요소 형식 | Description |
+| 요소 형식 | 설명 |
 |--------------|-------------|
 | 정적 텍스트 | [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 및 [**RichTextBlock**](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) 요소의 경우 액세스 가능한 이름이 표시 (내부) 텍스트에서 자동으로 결정 됩니다. 해당 요소의 모든 텍스트가 이름으로 사용 됩니다. [내부 텍스트에서 이름을](#name_from_inner_text)참조 하세요. |
 | 이미지 | XAML [**이미지**](/uwp/api/Windows.UI.Xaml.Controls.Image) 요소는 **img** 및 유사한 요소의 HTML **alt** 특성에 대 한 직접적인 아날로그를 포함 하지 않습니다. [**AutomationProperties.Name**](/dotnet/api/system.windows.automation.automationproperties.name) 를 사용 하 여 이름을 제공 하거나 캡션 기술을 사용 합니다. [이미지에 액세스할 수 있는 이름을](#images)참조 하세요. |

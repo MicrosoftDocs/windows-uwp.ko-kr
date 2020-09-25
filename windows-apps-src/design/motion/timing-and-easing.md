@@ -3,7 +3,7 @@ description: UI 내에서 입력, 종료 또는 이동 하는 개체에 대 한 
 title: 타이밍 및 감속
 label: Timing and easing
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: stmoy
@@ -11,18 +11,18 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 46ec373ffb7ad141bcff36c33fa35900c888daf8
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: fe776361276341e368db1fbdf8e332a1e5dc70b5
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89054433"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220196"
 ---
 # <a name="timing-and-easing"></a>타이밍 및 감속
 
 동작은 실제 세계를 기준으로 하지만, 속도와 성능의 기대와 함께 제공 되는 디지털 매체 이기도 합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 <table>
 <tr>
@@ -217,7 +217,7 @@ CubicBezierEasingFunction standard =
  _moveAnimation.Duration = TimeSpan.FromMilliseconds(500);
 ```
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [동작 개요](index.md)
 - [방향 및 무게](directionality-and-gravity.md)

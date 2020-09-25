@@ -3,16 +3,16 @@ Description: 바탕 화면에서 알림 메시지를 보내기 위해 사용할 
 title: 데스크톱 앱의 알림 메시지
 label: Toast notifications from desktop apps
 template: detail.hbs
-ms.date: 05/01/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, win32, 데스크톱, 알림 메시지, 데스크톱 브리지, msix, 스파스 패키지, 알림을 전송 옵션, com 서버, com 활성기, com, 가짜 com, com 없음, com 없음, 알림 전송
 ms.localizationpriority: medium
-ms.openlocfilehash: e2a70ebddd649b43424222e40165b19c9d567850
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 478c478fa6892e4b61ac1a7d6e22089720e96ca7
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156717"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220075"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>데스크톱 앱의 알림 메시지
 
@@ -28,7 +28,7 @@ ms.locfileid: "89156717"
 
 다음 표에서는 데스크톱 앱 내에서 알림을을 지원 하기 위한 옵션과 해당 하는 지원 되는 기능을 보여 줍니다. 표를 사용 하 여 시나리오에 가장 적합 한 옵션을 선택할 수 있습니다.<br/><br/>
 
-| 옵션 | 시각적 개체 | Actions | 입력 | In-process 활성화 |
+| 옵션 | 시각적 개체 | 동작 | 입력 | In-process 활성화 |
 | -- | -- | -- | -- | -- |
 | [COM 활성기](#preferred-option---com-activator) | ✔️ | ✔️ | ✔️ | ✔️ |
 | [COM/스텁 CLSID 없음](#alternative-option---no-com--stub-clsid) | ✔️ | ✔️ | ❌ | ❌ |
@@ -38,7 +38,7 @@ ms.locfileid: "89156717"
 
 이 옵션은 데스크톱 앱에서 작동 하 고 모든 알림 기능을 지 원하는 기본 설정 된 옵션입니다. "COM 활성기"에는 아무런 걱정 하지 마십시오. 이전에 COM 서버를 작성 하지 않은 경우에도이를 매우 간단 하 게 만드는 c # 및 [c + + 응용 프로그램](send-local-toast-desktop-cpp-wrl.md) [에 대 한](send-local-toast-desktop.md) 라이브러리가 있습니다.<br/><br/>
 
-| 시각적 개체 | Actions | 입력 | In-process 활성화 |
+| 시각적 개체 | 동작 | 입력 | In-process 활성화 |
 | -- | -- | -- | -- |
 | ✔️ | ✔️ | ✔️ | ✔️ |
 
@@ -61,7 +61,7 @@ COM 활성기 옵션을 사용 하면 앱에서 다음과 같은 알림 템플�
 
 이는 COM 활성기를 구현할 수 없는 경우의 대체 옵션입니다. 그러나 입력 지원 (알림을의 텍스트 상자) 및 in-process 활성화와 같은 몇 가지 기능을 더 이상 사용할 수 없습니다.<br/><br/>
 
-| 시각적 개체 | Actions | 입력 | In-process 활성화 |
+| 시각적 개체 | 동작 | 입력 | In-process 활성화 |
 | -- | -- | -- | -- |
 | ✔️ | ✔️ | ❌ | ❌ |
 

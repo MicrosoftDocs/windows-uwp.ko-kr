@@ -5,16 +5,16 @@ ms.assetid: 784a08dc-2736-4bd3-bea0-08da16b1bd47
 label: Gamepad and remote interactions
 template: detail.hbs
 isNew: true
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f5efe2fe1e8a4e24df175a0d019834cd0ba90388
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 7f11cde619b783292e4880927c68b6ae8ff38323
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172557"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217187"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>게임 패드 및 리모컨 조작
 
@@ -45,7 +45,7 @@ Windows 응용 프로그램에서 Windows 응용 프로그램의 빌드 상호 �
 > [!NOTE]
 > Xbox gamepads 및 원격 컨트롤이 많은 Windows 키보드 동작 및 환경을 지원 하기 때문에 이러한 권장 사항은 두 입력 유형에 모두 적합 합니다. 자세한 키보드 정보는 [키보드 상호 작용](keyboard-interactions.md) 을 참조 하세요.
 
-| 기능        | Description           |
+| 기능        | 설명           |
 | -------------------------------------------------------------- |--------------------------------|
 | [XY 포커스 탐색 및 상호 작용](#xy-focus-navigation-and-interaction) | **XY 포커스 탐색** 을 사용 하면 사용자가 앱의 UI를 탐색할 수 있습니다. 그러나이 경우 사용자가 위로, 아래로, 왼쪽 및 오른쪽으로 이동 하도록 제한 됩니다. 이에 대 한 권장 사항 및 기타 고려 사항은이 섹션에 설명 되어 있습니다. |
 | [마우스 모드.](#mouse-mode)|지도, 그리기 및 그리기와 같은 일부 유형의 응용 프로그램에서는 XY 포커스 탐색이 실용적이 지 않거나 가능 하지 않습니다. 이러한 경우 **마우스 모드** 를 사용 하면 사용자가 PC의 마우스와 마찬가지로 게임 패드 또는 원격 제어로 자유롭게 이동할 수 있습니다.|
@@ -78,16 +78,16 @@ Windows 응용 프로그램에서 Windows 응용 프로그램의 빌드 상호 �
 | 방향 패드 (D-패드)   | 예       | 예               |
 | 메뉴 버튼               | 예       | 예               |
 | 보기 단추               | 예       | 예               |
-| X 및 Y 단추           | 예       | 예                |
-| 왼쪽 스틱                | 예       | 예                |
-| 오른쪽 스틱               | 예       | 예                |
-| 왼쪽 및 오른쪽 트리거   | 예       | 예                |
-| 왼쪽 및 오른쪽 범퍼    | 예       | 예                |
-| OneGuide 단추           | 예        | 예               |
-| 볼륨 단추             | 예        | 예               |
-| 채널 단추            | 예        | 예               |
-| 미디어 컨트롤 단추     | 예        | 예               |
-| 음소거 단추               | 예        | 예               |
+| X 및 Y 단추           | 예       | 아니요                |
+| 왼쪽 스틱                | 예       | 아니요                |
+| 오른쪽 스틱               | 예       | 아니요                |
+| 왼쪽 및 오른쪽 트리거   | 예       | 아니요                |
+| 왼쪽 및 오른쪽 범퍼    | 예       | 아니요                |
+| OneGuide 단추           | 아니요        | 예               |
+| 볼륨 단추             | 아니요        | 예               |
+| 채널 단추            | 아니요        | 예               |
+| 미디어 컨트롤 단추     | 아니요        | 예               |
+| 음소거 단추               | 아니요        | 예               |
 
 ### <a name="built-in-button-support"></a>기본 제공 단추 지원
 
@@ -514,7 +514,7 @@ HTML/JavaScript에 대 한 샘플 코드를 비롯 한 자세한 내용은 [마�
 
 [Slider](/uwp/api/Windows.UI.Xaml.Controls.Slider) 컨트롤 외에도 다음과 같이 참여를 요구 하는 다른 컨트롤이 있습니다.
 
-- [상자가](/uwp/api/Windows.UI.Xaml.Controls.ListBox)
+- [ListBox](/uwp/api/Windows.UI.Xaml.Controls.ListBox)
 - [ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView)
 - [GridView](/uwp/api/Windows.UI.Xaml.Controls.GridView)
 - [FlipView](/uwp/api/Windows.UI.Xaml.Controls.FlipView)
@@ -548,14 +548,14 @@ HTML/JavaScript에 대 한 샘플 코드를 비롯 한 자세한 내용은 [마�
 
 | 제어               | 포커스 참여 기본값  |
 |-----------------------|---------------------------|
-| CalendarDatePicker    | 켜기                        |
-| FlipView              | 끄기                       |
-| GridView              | 끄기                       |
-| ListBox               | 끄기                       |
-| ListView              | 끄기                       |
-| ScrollViewer          | 끄기                       |
-| SemanticZoom          | 끄기                       |
-| 슬라이더                | 켜기                        |
+| CalendarDatePicker    | 설정                        |
+| FlipView              | 꺼짐                       |
+| GridView              | 꺼짐                       |
+| ListBox               | 꺼짐                       |
+| ListView              | 꺼짐                       |
+| ScrollViewer          | 꺼짐                       |
+| SemanticZoom          | 꺼짐                       |
+| 슬라이더                | 설정                        |
 
 다른 모든 Windows 컨트롤을 사용할 경우에는 동작이 나 시각적 변화가 발생 하지 않습니다 `IsFocusEngagementEnabled="True"` .
 

@@ -1,17 +1,17 @@
 ---
 title: URI에 대한 기본 앱 실행
-description: URI (Uniform Resource Identifier)에 대 한 기본 앱을 시작 하는 방법을 알아봅니다. Uri를 사용 하 여 특정 작업을 수행 하는 다른 앱을 시작할 수 있습니다. 또한이 항목에서는 Windows에 기본 제공 되는 다양 한 URI 체계에 대 한 개요를 제공 합니다.
+description: URI(Uniform Resource Identifier)에 대한 기본 앱 시작 방법을 알아봅니다. URI를 사용하면 다른 앱을 실행하여 특정 작업을 수행할 수 있습니다. 이 항목에서는 Windows에 기본 제공되는 다양한 URI 스키마에 대한 개요도 제공합니다.
 ms.assetid: 7B0D0AF5-D89E-4DB0-9B79-90201D79974F
 ms.date: 06/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ff40b506ef305ac4bc651864da34fe746f6229a3
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ad25d4ba5d8dfe638d3de3e210f69ea204c48a14
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164857"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220016"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>URI에 대한 기본 앱 실행
 
@@ -22,7 +22,7 @@ ms.locfileid: "89164857"
 - [**PreferredApplicationPackageFamilyName**](/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname)
 - [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview)
 
-URI (Uniform Resource Identifier)에 대 한 기본 앱을 시작 하는 방법을 알아봅니다. Uri를 사용 하 여 특정 작업을 수행 하는 다른 앱을 시작할 수 있습니다. 또한이 항목에서는 Windows에 기본 제공 되는 다양 한 URI 체계에 대 한 개요를 제공 합니다. 사용자 지정 Uri를 시작할 수도 있습니다. 사용자 지정 URI 체계를 등록 하 고 URI 활성화를 처리 하는 방법에 대 한 자세한 내용은 [uri 활성화 처리](handle-uri-activation.md)를 참조 하세요.
+URI(Uniform Resource Identifier)에 대한 기본 앱 시작 방법을 알아봅니다. URI를 사용하면 다른 앱을 실행하여 특정 작업을 수행할 수 있습니다. 이 항목에서는 Windows에 기본 제공되는 다양한 URI 스키마에 대한 개요도 제공합니다. 사용자 지정 Uri를 시작할 수도 있습니다. 사용자 지정 URI 체계를 등록 하 고 URI 활성화를 처리 하는 방법에 대 한 자세한 내용은 [uri 활성화 처리](handle-uri-activation.md)를 참조 하세요.
 
 URI 체계를 사용 하면 하이퍼링크를 클릭 하 여 앱을 열 수 있습니다. **Mailto:** 를 사용 하 여 새 전자 메일을 시작할 수 있는 것 처럼 http를 사용 하 여 기본 웹 브라우저를 열 수 있습니다 **.**
 
@@ -56,7 +56,7 @@ URI 체계를 사용 하면 하이퍼링크를 클릭 하 여 앱을 열 수 있
 
 [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) 메서드를 사용 하 여 URI를 시작 합니다. 이 메서드를 호출할 때 앱은 전경 앱 이어야 합니다. 즉, 사용자에 게 표시 되어야 합니다. 이 요구 사항은 사용자가 컨트롤에 유지 되도록 하는 데 도움이 됩니다. 이 요구 사항을 충족 하려면 모든 URI 시작을 앱의 UI에 직접 연결 해야 합니다. 사용자는 항상 URI 시작을 시작 하기 위해 몇 가지 작업을 수행 해야 합니다. URI를 시작 하려고 하지만 응용 프로그램이 전경에 있지 않으면 시작이 실패 하 고 오류 콜백이 호출 됩니다.
 
-먼저 URI를 나타내는 system.uri 개체를 만든 다음 [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) 메서드에 [**전달 합니다.**](https://docs.microsoft.com/dotnet/api/system.uri) 다음 예제와 같이 반환 결과를 사용 하 여 호출이 성공 했는지 확인 합니다.
+먼저 URI를 나타내는 system.uri 개체를 만든 다음 [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) 메서드에 [**전달 합니다.**](/dotnet/api/system.uri) 다음 예제와 같이 반환 결과를 사용 하 여 호출이 성공 했는지 확인 합니다.
 
 ```cs
 private async void launchURI_Click(object sender, RoutedEventArgs e)
@@ -82,7 +82,7 @@ private async void launchURI_Click(object sender, RoutedEventArgs e)
 
 ![경고 대화 상자는 앱의 회색으로 표시 된 배경에 오버레이할. 사용자에 게 앱을 전환 하 고 오른쪽 아래에 ' 예 ' 및 ' 아니요 ' 단추가 있는지 여부를 묻는 대화 상자가 표시 됩니다. ' 아니요 ' 단추가 강조 표시 됩니다.](images/warningdialog.png)
 
-이 메시지가 항상 표시 되도록 하려면 [**Windows.System를 사용 합니다. TreatAsUntrusted**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.treatasuntrusted) 속성을 통해 운영 체제에 경고를 표시 하도록 지시할 수 있습니다.
+이 메시지가 항상 표시 되도록 하려면 [**Windows.System를 사용 합니다. TreatAsUntrusted**](/uwp/api/windows.system.launcheroptions.treatasuntrusted) 속성을 통해 운영 체제에 경고를 표시 하도록 지시할 수 있습니다.
 
 ```cs
 // The URI to launch
@@ -102,7 +102,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriBing, promptOption
 
 권장 사항은 URI 스키마를 처리 하기 위해 둘 이상의 앱을 등록 한 경우에도 유용 합니다. 특정 앱을 권장 하 여 Windows가 이미 설치 되어 있는 경우 해당 앱을 엽니다.
 
-권장 사항을 만들려면Windows.System를 호출 [**합니다. LaunchUriAsync (Uri, LauncherOptions) 메서드 (preferredApplicationPackageFamilyName)**](https://docs.microsoft.com/uwp/api/windows.system.launcher.launchuriasync#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_Windows_System_LauncherOptions_) 를 사용 하 여 권장 되는 스토어에 있는 앱의 패키지 패밀리 이름으로 설정 [**합니다.**](https://docs.microsoft.com/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname) 운영 체제는이 정보를 사용 하 여 저장소에서 권장 앱을 얻기 위한 특정 옵션을 사용 하 여 스토어에서 앱을 검색 하는 일반 옵션을 대체 합니다.
+권장 사항을 만들려면Windows.System를 호출 [**합니다. LaunchUriAsync (Uri, LauncherOptions) 메서드 (preferredApplicationPackageFamilyName)**](/uwp/api/windows.system.launcher.launchuriasync#Windows_System_Launcher_LaunchUriAsync_Windows_Foundation_Uri_Windows_System_LauncherOptions_) 를 사용 하 여 권장 되는 스토어에 있는 앱의 패키지 패밀리 이름으로 설정 [**합니다.**](/uwp/api/windows.system.launcheroptions.preferredapplicationpackagefamilyname) 운영 체제는이 정보를 사용 하 여 저장소에서 권장 앱을 얻기 위한 특정 옵션을 사용 하 여 스토어에서 앱을 검색 하는 일반 옵션을 대체 합니다.
 
 ```cs
 // Set the recommended app
@@ -206,7 +206,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="photos-app-uri-scheme"></a>사진 앱 URI 체계
 
-**Ms 사진:** URI 체계를 사용 하 여 사진 앱을 시작 하 고 이미지를 보거나 비디오를 편집 합니다. 예:  
+**Ms 사진:** URI 체계를 사용 하 여 사진 앱을 시작 하 고 이미지를 보거나 비디오를 편집 합니다. 예를 들어:  
 이미지를 보려면 다음을 수행 합니다. `ms-photos:viewer?fileName=c:\users\userName\Pictures\image.jpg`  
 비디오를 편집 하려면 다음을 수행 합니다. `ms-photos:videoedit?InputToken=123abc&Action=Trim&StartTime=01:02:03`  
 
@@ -228,7 +228,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ![카메라 개인 정보 설정.](images/privacyawarenesssettingsapp.png)
 
-자세한 내용은 [Windows 설정 앱 시작](launch-settings-app.md) 및 [개인 정보 인식 앱에 대 한 지침](https://docs.microsoft.com/windows/uwp/security/index)을 참조 하세요.
+자세한 내용은 [Windows 설정 앱 시작](launch-settings-app.md) 및 [개인 정보 인식 앱에 대 한 지침](../security/index.md)을 참조 하세요.
 
 ### <a name="store-app-uri-scheme"></a>스토어 응용 프로그램 URI 체계
 

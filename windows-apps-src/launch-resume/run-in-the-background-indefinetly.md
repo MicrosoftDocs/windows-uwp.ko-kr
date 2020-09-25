@@ -6,12 +6,12 @@ keywords: 백그라운드 작업, 확장 된 실행, 리소스, 제한, 백그�
 ms.date: 10/03/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 33b41c432edde42bc31daa1d5631f60fb38d8397
-ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
+ms.openlocfilehash: f843c23a4a1e0738cfc05e96009b2597f4919809
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89304505"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217656"
 ---
 # <a name="run-in-the-background-indefinitely"></a>백그라운드에서 무기한 실행
 
@@ -30,7 +30,7 @@ Microsoft Store에 제출 하기에 적합 하지 않은 앱을 개발 하는 �
 > [!NOTE]
 > *Xmlns: rescap* XML 네임 스페이스 선언을 추가 하 고 *rescap* 접두사를 사용 하 여 기능을 선언 합니다.
 >
-> 자세한 내용은 [앱 기능 선언의](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)제한 된 기능 섹션을 참조 하세요.
+> 자세한 내용은 [앱 기능 선언의](../packaging/app-capability-declarations.md)제한 된 기능 섹션을 참조 하세요.
 >
 
 _Package.appxmanifest_
@@ -79,7 +79,7 @@ switch (result)
 > [!NOTE]
 > *Xmlns: rescap* XML 네임 스페이스 선언을 추가 하 고 *rescap* 접두사를 사용 하 여 기능을 선언 합니다.
 >
-> 자세한 내용은 [앱 기능 선언의](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations)제한 된 기능 섹션을 참조 하세요.
+> 자세한 내용은 [앱 기능 선언의](../packaging/app-capability-declarations.md)제한 된 기능 섹션을 참조 하세요.
 >
 
 _Package.appxmanifest_

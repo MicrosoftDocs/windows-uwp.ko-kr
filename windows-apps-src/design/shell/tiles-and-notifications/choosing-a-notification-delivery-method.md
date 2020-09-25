@@ -4,16 +4,16 @@ title: 알림 전달 방법 선택
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 166ff20e792c5cf4a5969e954ed1b7d04e5c5c9f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a7a929cb88e20cc47562ab4920fd0fc94304fae2
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173297"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219156"
 ---
 # <a name="choose-a-notification-delivery-method"></a>알림 전달 방법 선택
 
@@ -46,7 +46,7 @@ ms.locfileid: "89173297"
 <th align="left">배달 방법</th>
 <th align="left">사용 방법</th>
 <th align="left">설명</th>
-<th align="left">예</th>
+<th align="left">예제</th>
 </tr>
 </thead>
 <tbody>
@@ -79,7 +79,7 @@ ms.locfileid: "89173297"
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left">푸시</td>
+<td align="left">밀어넣기</td>
 <td align="left">타일, 배지, 알림, Raw</td>
 <td align="left">앱이 실행 되 고 있지 않은 경우에도 클라우드 서버에서 전송 되는 알림</td>
 <td align="left"><ul>
@@ -151,7 +151,7 @@ API 호출이 로컬 인 동안 알림은 웹 이미지를 참조할 수 있습�
 
 기본적으로 푸시 알림은 장치에서 받은 시간부터 3 일 후에 만료 됩니다. 필요한 경우 명시적 만료 시간으로이 기본값을 재정의할 수 있습니다 (알림을는 최대 3 일).
 
-자세한 내용은 다음을 참조하십시오.
+자세한 내용은 다음을 참조하세요.
 
 -   [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
 -   [푸시 알림에 대 한 지침](./windows-push-notification-services--wns--overview.md)

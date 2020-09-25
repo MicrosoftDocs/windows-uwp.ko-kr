@@ -4,16 +4,16 @@ title: 알림 콘텐츠
 ms.assetid: 1FCE66AF-34B4-436A-9FC9-D0CF4BDA5A01
 label: Toast content
 template: detail.hbs
-ms.date: 11/20/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 알림 메시지, 대화형 알림을, 적응 알림을, 알림 콘텐츠, 알림 페이로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 97dd16d712dca3de69a98c608b7c8947ebbddfea
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b08b34a88533d06ac7fc2f967bfc4e50e9fd8f0f
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173367"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219448"
 ---
 # <a name="toast-content"></a>알림 콘텐츠
 
@@ -303,7 +303,7 @@ ToastContent toastContent = new ToastContent()
 진행률 표시줄을 사용 하는 방법에 대해 자세히 알아보려면 [알림 진행률 표시줄](toast-progress-bar.md)을 참조 하세요.
 
 
-## <a name="headers"></a>headers
+## <a name="headers"></a>헤더
 
 **크리에이터 업데이트의 새로운**기능: 알림 센터 내의 헤더 아래에서 알림을 그룹화 할 수 있습니다. 예를 들어 머리글 아래에 있는 그룹 채팅의 메시지 또는 머리글 아래에 있는 공통 테마의 그룹 알림을 그룹화 할 수 있습니다.
 
@@ -395,7 +395,7 @@ new ToastBindingGeneric()
 ```
 
 
-## <a name="buttons"></a>단추
+## <a name="buttons"></a>Buttons
 
 단추는 사용자가 현재 워크플로를 중단 하지 않고 알림 메시지에 대 한 빠른 작업을 수행할 수 있도록 하는 알림 메시지를 대화형으로 만듭니다. 예를 들어 사용자는 알림 내에서 직접 메시지에 회신 하거나 메일 앱을 열지 않고도 전자 메일을 삭제할 수 있습니다. 사용자 알림의 확장 된 부분에 단추가 표시 됩니다.
 

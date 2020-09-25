@@ -4,16 +4,16 @@ title: 애니메이션 끌기
 ms.assetid: 6064755F-6E24-4901-A4FF-263F05F0DFD6
 label: Motion--Drag and drop
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d346d286b6a874ff62e63ecc59a102bcb68fa73
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a51f60fdbc8d616bd4db360190c8e329e10709e8
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156857"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220166"
 ---
 # <a name="drag-animations"></a>애니메이션 끌기
 
@@ -56,7 +56,7 @@ ms.locfileid: "89156857"
 
 ## <a name="related-articles"></a>관련된 문서
 
-**개발자용**
+**개발자 용**
 * [애니메이션 개요](./xaml-animation.md)
 * [끌어서 놓기 시퀀스에 애니메이션 적용](/previous-versions/windows/apps/jj649427(v=win.10))
 * [빠른 시작: 라이브러리 애니메이션을 사용 하 여 UI에 애니메이션 효과 주기](/previous-versions/windows/apps/hh452703(v=win.10))

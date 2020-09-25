@@ -4,15 +4,15 @@ title: 입력 삽입을 통해 사용자 입력 시뮬레이트
 label: Input injection
 template: detail.hbs
 keywords: 장치, 디지타이저, 입력, 상호 작용, 주입
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f06414362b6a821233eabfb396ae59001f35c30d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e4e1497ea30400c550cb0cbb2309801ff8145fd6
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156897"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219686"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>입력 삽입을 통해 사용자 입력 시뮬레이트
 
@@ -26,7 +26,7 @@ Windows 응용 프로그램의 키보드, 마우스, 터치, 펜 및 게임 패�
 
 입력 주입은 내게 필요한 옵션, 테스트 (임시, 자동), 원격 액세스 및 지원 기능을 포함 하는 기능을 제공 해야 하는 Windows 앱 및 도구에 유용 합니다.
 
-## <a name="setup"></a>설치 프로그램
+## <a name="setup"></a>설치
 
 Windows 앱에서 입력 주입 Api를 사용 하려면 앱 매니페스트에 다음을 추가 해야 합니다.
 

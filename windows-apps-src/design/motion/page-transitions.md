@@ -2,18 +2,18 @@
 title: 페이지 전환
 description: UWP (유니버설 Windows 플랫폼) 페이지 전환을 사용 하 여 사용자에 게 앱의 페이지 간 관계에 대 한 피드백을 제공 하는 방법을 알아봅니다.
 template: detail.hbs
-ms.date: 04/08/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b1fc38f5224ae9627f4c793a800ab747cfa1c2b6
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d3e2385b1e15334b26663f6f17b3ef47ab015eec
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173857"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216638"
 ---
 # <a name="page-transitions"></a>페이지 전환
 

@@ -3,15 +3,15 @@ Description: 이름을 예약하여 앱을 만들면 앱 게시 작업을 시작
 title: 앱 제출
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 keywords: 검사 목록, windows, uwp, 제출, 제출, 게임, 앱, 제출
-ms.date: 10/31/2018
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1359fb530dec1a35b2ab2994442b65ec441cc0ac
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 99b4d7412727e5f195c32d3f3c21fe82b284e658
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158067"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219976"
 ---
 # <a name="app-submissions"></a>앱 제출
 

@@ -2,16 +2,16 @@
 Description: Microsoft Store에 제출할 수 있도록 앱 패키지를 준비 하려면 다음 지침을 따르세요.
 title: 앱 패키지 요구 사항
 ms.assetid: 651B82BA-9D0C-45AC-8997-88CD93DC903C
-ms.date: 10/31/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 패키지 요구 사항, 패키지, 패키지 형식, 지원 되는 버전, 제출
 ms.localizationpriority: medium
-ms.openlocfilehash: 851aaa28a7c42d395a16ee78a49a7e8bc5712f62
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 848adbab20765a65ef4673219c55dfbf076e47e0
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158107"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219776"
 ---
 # <a name="app-package-requirements"></a>앱 패키지 요구 사항
 

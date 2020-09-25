@@ -4,16 +4,16 @@ title: 가장자리 기반 UI 애니메이션
 ms.assetid: 5A8F73B1-F4F6-424b-9EDF-A9766C5DEAE8
 label: Motion--edge-based UI
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2fd92209e821d0d07f5cffda0850423e0496b03a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b36f609308d559f5f0cbb56c90420f2381fb8e53
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156827"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220176"
 ---
 # <a name="edge-based-ui-animations"></a>가장자리 기반 UI 애니메이션
 
@@ -44,7 +44,7 @@ ms.locfileid: "89156827"
 ## <a name="related-articles"></a>관련된 문서
 
 
-**개발자용**
+**개발자 용**
 * [애니메이션 개요](./xaml-animation.md)
 * [가장자리 기반 UI에 애니메이션 효과 적용](/previous-versions/windows/apps/jj649428(v=win.10))
 * [빠른 시작: 라이브러리 애니메이션을 사용 하 여 UI에 애니메이션 효과 주기](/previous-versions/windows/apps/hh452703(v=win.10))

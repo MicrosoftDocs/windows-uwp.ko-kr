@@ -5,18 +5,18 @@ ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
 template: detail.hbs
 keywords: 키보드, 접근성, 탐색, 포커스, 텍스트, 입력, 사용자 상호 작용, 게임 패드, 원격
-ms.date: 03/29/2017
+ms.date: 09/24/2020
 ms.topic: article
 pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: f4f2e9e13f492dd9a38d737c0c86dd3b1e632279
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ae3d4826c4468cabea318ed230da0cfbb4d5f24b
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173487"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219116"
 ---
 # <a name="keyboard-interactions"></a>키보드 조작
 
@@ -55,7 +55,7 @@ Windows 앱을 디자인 하 고 최적화 하는 방법에 대해 알아봅니�
 
 이 항목에서 설명 하는 장치 및 도구는 다음과 같습니다.
 
-| 장치/도구                       | Description     |
+| 장치/도구                       | 설명     |
 |-----------------------------------|-----------------|
 |키보드 (하드웨어 및 소프트웨어)   |표준 하드웨어 키보드 외에도 Windows 응용 프로그램은 [터치 (또는 소프트웨어) 키보드](#software-keyboard) 와 [화상 키보드](#on-screen-keyboard)라는 두 가지 소프트웨어 키보드를 지원 합니다.|
 |게임 패드 및 리모컨         |Xbox 게임 패드 및 원격 제어는 [10 피트 환경](../devices/designing-for-tv.md)에서 기본적인 입력 장치입니다. 게임 패드 및 원격 제어에 대 한 Windows 지원에 대 한 자세한 내용은 [게임 패드 및 원격 제어 상호 작용](gamepad-and-remote-interactions.md)을 참조 하세요.|
@@ -123,7 +123,7 @@ UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높�
 
 #### <a name="set-initial-focus-on-the-most-logical-element"></a>가장 논리적 요소에 초기 포커스 설정
 
-사용자가 앱을 시작 하거나 페이지를 탐색할 때 가장 많이 사용 하는 첫 번째 또는 기본 작업에 대 한 UI 요소에 초기 포커스를 설정 합니다. 일부 사례:
+사용자가 앱을 시작 하거나 페이지를 탐색할 때 가장 많이 사용 하는 첫 번째 또는 기본 작업에 대 한 UI 요소에 초기 포커스를 설정 합니다. 예를 들면 다음과 같습니다.
 -   포커스가 갤러리의 첫 번째 항목으로 설정 된 사진 앱
 -   포커스가 재생 단추로 설정 된 음악 앱
 
@@ -142,7 +142,7 @@ UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높�
 기본적으로 UWP 컨트롤은 다음과 같은 기본 키보드 동작을 따릅니다.
 -   탭 **키** 탭 순서에서 실행 가능한/활성 컨트롤 간을 이동 합니다.
 -   **Shift + tab** 을 누르면 역방향 탭 순서로 컨트롤이 이동 합니다. 사용자가 화살표 키를 사용 하 여 컨트롤 내부를 탐색 하는 경우 포커스는 컨트롤 내에서 마지막으로 알려진 값으로 설정 됩니다.
--   **화살표 키는** 사용자가 "내부 탐색"을 입력 하면 컨트롤 관련 "내부 탐색"을 노출 하 고, 화살표 키는 컨트롤에서 이동 하지 않습니다. 일부 사례:
+-   **화살표 키는** 사용자가 "내부 탐색"을 입력 하면 컨트롤 관련 "내부 탐색"을 노출 하 고, 화살표 키는 컨트롤에서 이동 하지 않습니다. 예를 들면 다음과 같습니다.
     -   위쪽/아래쪽 화살표 키를 누르면 포커스가로 이동 합니다. `ListView``MenuFlyout`
     -   현재 선택 되어 있는 값 `Slider` 을 수정 합니다. `RatingsControl`
     -   캐럿 이동 `TextBox`
@@ -320,7 +320,7 @@ UWP 컨트롤은 기본적으로 화살표 키 탐색을 지원 합니다. 사�
       <p><img src="images/keyboard/dialog.png" alt="Dialog buttons"/></p>
       <p><sup>대화 상자 단추</sup></p>
       <p><img src="images/keyboard/radiobutton.png" alt="Radio buttons"/></p>
-      <p><sup>라디오</sup></p>     
+      <p><sup>RadioButtons</sup></p>     
     </td>
     <td>
       <p><img src="images/keyboard/appbar.png" alt="AppBar buttons"/></p>
@@ -345,7 +345,7 @@ UWP 컨트롤은 기본적으로 화살표 키 탐색을 지원 합니다. 사�
 
 레이아웃이 컨트롤 그룹에 대해 잘 알려진 UI 패턴을 따르는 경우 그룹에 단일 탭 정지를 할당 하면 사용자의 탐색 효율성이 향상 될 수 있습니다.
 
-다음은 이러한 템플릿의 예입니다.
+예제는 다음과 같습니다.
 -   `RadioButtons`
 -   `ListViews`처럼 보이지만 단일 처럼 동작 합니다.`ListView`
 -   타일의 그리드와 같이 모양과 동작 하는 UI (예: 시작 메뉴 타일)
@@ -405,8 +405,8 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 | Space         | 단추                            | 선택 단추       |
 | Enter         | 단추                            | 선택 단추       |
 | 이스케이프        | B 단추                            | 뒤로 단추         |
-| 홈/끝      | 해당 없음                                 | 해당 없음                 |
-| Page Up/Down  | 세로 스크롤에 대 한 트리거 단추, 가로 스크롤에 대 한 범퍼 단추   | 해당 없음                 |
+| 홈/끝      | N/A                                 | N/A                 |
+| Page Up/Down  | 세로 스크롤에 대 한 트리거 단추, 가로 스크롤에 대 한 범퍼 단추   | N/A                 |
 
 게임 패드 및 원격 제어 사용에 사용할 UWP 앱을 디자인할 때 알아야 할 몇 가지 주요 차이점은 다음과 같습니다.
 -   텍스트 항목을 사용 하려면 사용자가를 눌러 텍스트 컨트롤을 활성화 해야 합니다.

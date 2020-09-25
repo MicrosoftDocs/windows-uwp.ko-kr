@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 고 sl, hlsl, opengl, directx, 셰이더
 ms.localizationpriority: medium
-ms.openlocfilehash: d4b49edac6a6a9c2824cfa556a2ff02eb9f36f9c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b6be3cf92162b0e871a04712754a882506767cd6
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175307"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218176"
 ---
 # <a name="glsl-to-hlsl-reference"></a>HLSL 참조
 
@@ -76,7 +76,7 @@ OpenGL ES 2.0 및 Direct3D 11은 많은 유사성을 갖습니다. 둘 다 유�
 <td align="left">입력 레이아웃 선언을 통해 상수 버퍼 및 데이터 전송</td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="#porting-glsl-types-to-hlsl">유형</a></p>
+<td align="left"><p><a href="#porting-glsl-types-to-hlsl">형식</a></p>
 <p>일반적인 벡터 형식: vec2/3/4</p>
 <p>lowp, mediump, highp</p></td>
 <td align="left"><p>일반적인 벡터 형식: float2/3/4</p>
@@ -94,7 +94,7 @@ OpenGL ES 2.0 및 Direct3D 11은 많은 유사성을 갖습니다. 둘 다 유�
 <td align="left">행-주요 행렬 (기본값)</td>
 <td align="left">열-주요 행렬 (기본값)
 <div class="alert">
-<strong>참고</strong>    <strong>Row_major</strong> 형식-한정자를 사용 하 여 하나의 변수에 대 한 레이아웃을 변경할 수 있습니다. 자세한 내용은 <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-variable-syntax">변수 구문</a>을 참조 하세요. 컴파일러 플래그 또는 pragma를 지정 하 여 전역 기본값을 변경할 수도 있습니다.
+<strong>참고</strong>    <strong>Row_major</strong> 형식-한정자를 사용 하 여 하나의 변수에 대 한 레이아웃을 변경할 수 있습니다. 자세한 내용은 <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-variable-syntax">변수 구문</a>을 참조 하세요. 컴파일러 플래그 또는 pragma를 지정 하 여 전역 기본값을 변경할 수도 있습니다.
 </div>
 <div>
  
@@ -137,7 +137,7 @@ OpenGL ES 2.0 및 Direct3D 11은 많은 유사성을 갖습니다. 둘 다 유�
 <p>응용 프로그램 코드에서 꼭 짓 점 및 조각 셰이더 중 하나 또는 둘 다로 일관 된 변수를 전달 합니다. 삼각형 메시의 그리기 전체에서 값이 동일 하 게 유지 되도록 해당 셰이더에 삼각형을 그리기 전에 모든 전체 값 형식의 값을 설정 해야 합니다. 이러한 값은 균일 합니다. 일부 전체 형식은 전체 프레임에 대해 설정 되 고 다른 하나는 특정 꼭 짓 점 픽셀 셰이더 쌍으로 고유 하 게 설정 됩니다.</p>
 <p>균일 한 변수는 polygon 단위 변수입니다.</p></td>
 <td align="left"><p>상수 버퍼를 사용 합니다.</p>
-<p><a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-constant-how-to">방법: 상수 버퍼</a> 및 <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants">셰이더 상수</a>만들기를 참조 하세요.</p></td>
+<p><a href="/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-constant-how-to">방법: 상수 버퍼</a> 및 <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-constants">셰이더 상수</a>만들기를 참조 하세요.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>변동</strong></p>
@@ -147,8 +147,8 @@ OpenGL ES 2.0 및 Direct3D 11은 많은 유사성을 갖습니다. 둘 다 유�
 <tr class="odd">
 <td align="left"><p><strong>특성도</strong></p>
 <p>특성은 앱 코드에서 꼭 짓 점 셰이더 만으로 전달 하는 꼭 짓 점에 대 한 설명의 일부입니다. 균일 한 것과 달리 각 꼭 짓 점에 대 한 각 특성 값을 설정 하 여 각 꼭 짓 점에 서로 다른 값을 지정할 수 있습니다. 특성 변수는 꼭 짓 점 별 변수입니다.</p></td>
-<td align="left"><p>Direct3D 앱 코드에서 꼭 짓 점 버퍼를 정의 하 고 꼭 짓 점 셰이더에 정의 된 꼭 짓 점 입력과 일치 시킵니다. 필요에 따라 인덱스 버퍼를 정의 합니다. <a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-vertex-how-to">방법: 꼭 짓 점 버퍼 만들기</a> 및 <a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-index-how-to">방법: 인덱스 버퍼 만들기</a>를 참조 하세요.</p>
-<p>Direct3D 앱 코드에서 입력 레이아웃을 만들고 의미 체계 값을 꼭 짓 점 입력의 값과 일치 시킵니다. <a href="https://docs.microsoft.com/windows/desktop/direct3d11/d3d10-graphics-programming-guide-input-assembler-stage-getting-started">입력 레이아웃 만들기를</a>참조 하세요.</p></td>
+<td align="left"><p>Direct3D 앱 코드에서 꼭 짓 점 버퍼를 정의 하 고 꼭 짓 점 셰이더에 정의 된 꼭 짓 점 입력과 일치 시킵니다. 필요에 따라 인덱스 버퍼를 정의 합니다. <a href="/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-vertex-how-to">방법: 꼭 짓 점 버퍼 만들기</a> 및 <a href="/windows/desktop/direct3d11/overviews-direct3d-11-resources-buffers-index-how-to">방법: 인덱스 버퍼 만들기</a>를 참조 하세요.</p>
+<p>Direct3D 앱 코드에서 입력 레이아웃을 만들고 의미 체계 값을 꼭 짓 점 입력의 값과 일치 시킵니다. <a href="/windows/desktop/direct3d11/d3d10-graphics-programming-guide-input-assembler-stage-getting-started">입력 레이아웃 만들기를</a>참조 하세요.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>const</strong></p>
@@ -185,7 +185,7 @@ OpenGL ES 2.0 및 Direct3D 11은 많은 유사성을 갖습니다. 둘 다 유�
 <td align="left">스칼라 형식: float, int, bool</td>
 <td align="left"><p>스칼라 형식: float, int, bool</p>
 <p>또한 uint, double</p>
-<p>자세한 내용은 <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar">스칼라 형식</a>을 참조 하세요.</p></td>
+<p>자세한 내용은 <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar">스칼라 형식</a>을 참조 하세요.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>벡터 형식</p>
@@ -207,8 +207,8 @@ OpenGL ES 2.0 및 Direct3D 11은 많은 유사성을 갖습니다. 둘 다 유�
 <li>min16uint</li>
 </ul></li>
 </ul>
-<p>자세한 내용은 <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-vector">벡터 형식</a> 및 <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-appendix-keywords">키워드</a>를 참조 하세요.</p>
-<p>또한 vector는 float4 (typedef vector &lt; float, 4 &gt; vector;)로 정의 됩니다. 자세한 내용은 <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-user-defined">사용자 정의 형식</a>을 참조 하세요.</p></td>
+<p>자세한 내용은 <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-vector">벡터 형식</a> 및 <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-appendix-keywords">키워드</a>를 참조 하세요.</p>
+<p>또한 vector는 float4 (typedef vector &lt; float, 4 &gt; vector;)로 정의 됩니다. 자세한 내용은 <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-user-defined">사용자 정의 형식</a>을 참조 하세요.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>행렬 형식</p>
@@ -233,7 +233,7 @@ OpenGL ES 2.0 및 Direct3D 11은 많은 유사성을 갖습니다. 둘 다 유�
 </ul>
 <p>행렬 <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-matrix">형식을</a> 사용 하 여 행렬을 정의할 수도 있습니다.</p>
 <p>예: matrix &lt; float, 2, 2 &gt; fmatrix = {0.0 f, 0.1, 2.1 f, 2.2 f};</p>
-<p>또한 행렬은 float4x4 (typedef matrix &lt; float, 4, 4 &gt; matrix;)로 정의 됩니다. 자세한 내용은 <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-user-defined">사용자 정의 형식</a>을 참조 하세요.</p></td>
+<p>또한 행렬은 float4x4 (typedef matrix &lt; float, 4, 4 &gt; matrix;)로 정의 됩니다. 자세한 내용은 <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-user-defined">사용자 정의 형식</a>을 참조 하세요.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>float, int, 샘플러에 대 한 전체 자릿수 한정자</p>
@@ -254,18 +254,18 @@ OpenGL ES 2.0 및 Direct3D 11은 많은 유사성을 갖습니다. 둘 다 유�
 <p>최소 고정 소수점 부호 있는 2.8 비트 값 (정수 2 비트 및 8 비트 소수 부분 구성 요소)입니다. 8 비트 소수 부분 구성 요소는-2에서 2 까지의 전체 포괄 범위를 제공 하기 위해 exclusive 대신 1을 사용할 수 있습니다.</p></li>
 <li>min16int: 최소 16 비트 부호 있는 정수</li>
 <li><p>min12int: 최소 12 비트 부호 있는 정수</p>
-<p>이 형식은 부동 소수점 숫자로 정수를 나타내는 10Level9 (<a href="https://docs.microsoft.com/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro">9_x 기능 수준</a>) 용입니다. 16 비트 부동 소수점 숫자로 정수를 에뮬레이트할 때 얻을 수 있는 전체 자릿수입니다.</p></li>
+<p>이 형식은 부동 소수점 숫자로 정수를 나타내는 10Level9 (<a href="/windows/desktop/direct3d11/overviews-direct3d-11-devices-downlevel-intro">9_x 기능 수준</a>) 용입니다. 16 비트 부동 소수점 숫자로 정수를 에뮬레이트할 때 얻을 수 있는 전체 자릿수입니다.</p></li>
 <li>min16uint: 최소 16 비트 부호 없는 정수</li>
 </ul>
-<p>자세한 내용은 <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar">스칼라 형식</a> 및 <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/using-hlsl-minimum-precision">HLSL 최소 전체 자릿수 사용</a>을 참조 하세요.</p></td>
+<p>자세한 내용은 <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-scalar">스칼라 형식</a> 및 <a href="/windows/desktop/direct3dhlsl/using-hlsl-minimum-precision">HLSL 최소 전체 자릿수 사용</a>을 참조 하세요.</p></td>
 </tr>
 <tr class="odd">
 <td align="left">sampler2D</td>
-<td align="left"><a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/sm5-object-texture2d">Texture2D</a></td>
+<td align="left"><a href="/windows/desktop/direct3dhlsl/sm5-object-texture2d">Texture2D</a></td>
 </tr>
 <tr class="even">
 <td align="left">samplerCube</td>
-<td align="left"><a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-type">TextureCube</a></td>
+<td align="left"><a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-type">TextureCube</a></td>
 </tr>
 </tbody>
 </table>

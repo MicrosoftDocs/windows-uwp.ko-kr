@@ -4,16 +4,16 @@ ms.assetid: AA8DA53B-FE6E-40AC-9F0A-CB09637C87B4
 title: 사용자 지정 자동화 피어
 label: Custom automation peers
 template: detail.hbs
-ms.date: 07/13/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 82d42dcc78dabc6374250b088c0d076c325d1045
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a1a592bd9eb9447783984612c61b50e03055df15
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157017"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219846"
 ---
 # <a name="custom-automation-peers"></a>사용자 지정 자동화 피어  
 
@@ -456,7 +456,7 @@ public class IndexCardAutomationPeer : FrameworkElementAutomationPeer, IExpandCo
 
 UI 자동화 이벤트는 다음 범주로 분류 됩니다.
 
-| 이벤트 | Description |
+| 이벤트 | 설명 |
 |-------|-------------|
 | 속성 변경 | UI 자동화 요소 또는 컨트롤 패턴의 속성이 변경 될 때 발생 합니다. 예를 들어 클라이언트가 응용 프로그램의 확인란 컨트롤을 모니터링 해야 하는 경우 [**ToggleState**](/uwp/api/windows.ui.xaml.automation.provider.itoggleprovider.togglestate) 속성의 속성 변경 이벤트를 수신 하도록 등록할 수 있습니다. 확인란 컨트롤을 선택 하거나 선택 취소 하면 공급자가 이벤트를 발생 시키고 클라이언트가 필요에 따라 작동할 수 있습니다. |
 | 요소 작업 | 사용자 또는 프로그래밍 방식 작업에서 UI가 변경 되 면 발생 합니다. 예를 들어 **호출** 패턴을 통해 단추를 클릭 하거나 호출할 때입니다. |

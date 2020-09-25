@@ -2,16 +2,16 @@
 description: 앱의 패키지를 고객에 게 제공 하는 방법 및 특정 패키지 시나리오를 관리 하는 방법을 알아봅니다.
 title: 앱 패키지 관리 지침
 ms.assetid: 55405D0B-5C1E-43C8-91A1-4BFDD336E6AB
-ms.date: 10/31/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6035f5f21cd1b704415193c393ae0637d3e5dc37
-ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
+ms.openlocfilehash: 497282632e9690cedd65788dcef18937d5c5cc74
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89411977"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219166"
 ---
 # <a name="guidance-for-app-package-management"></a>앱 패키지 관리 지침
 

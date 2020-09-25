@@ -4,16 +4,16 @@ ms.assetid: 272D9C9E-B179-4F5A-8493-926D007A0225
 title: 접근성 테스트
 label: Accessibility testing
 template: detail.hbs
-ms.date: 05/18/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1144f6edfab73069a8645e464a2aa8de3e5e2ed6
-ms.sourcegitcommit: e51f9489d8c977c3498afb1a75c91f96ac3a642b
+ms.openlocfilehash: 1da900732257babc0d53453fa4b9b2c9196e7e6d
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83854759"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216416"
 ---
 # <a name="accessibility-testing"></a>접근성 테스트  
 
@@ -41,11 +41,11 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK tools 폴더 (개
 
 ### <a name="ui-accessibility-checker"></a>UI 액세스 가능성 검사기
 
-**UI 접근성 검사 (accchecker)** 는 런타임에 접근성 문제를 검색 하는 데 도움이 됩니다. UI가 완료 되 고 작동 하면 **Accchecker** 를 사용 하 여 다양 한 시나리오를 테스트 하 고, 런타임 접근성 정보의 정확성을 확인 하 고, 런타임 문제를 검색 합니다. **Accchecker** 는 UI 또는 명령줄 모드에서 실행할 수 있습니다. UI 모드 도구를 실행 하려면 Windows SDK bin 디렉터리에서 **Accchecker** 디렉터리를 열고 acccheckui.exe를 실행 하 고 **도움말** 메뉴를 클릭 합니다.
+**UI 접근성 검사 (accchecker)** 는 런타임에 접근성 문제를 검색 하는 데 도움이 됩니다. UI가 완료 되 고 작동 하면 **Accchecker** 를 사용 하 여 다양 한 시나리오를 테스트 하 고, 런타임 접근성 정보의 정확성을 확인 하 고, 런타임 문제를 검색 합니다. **Accchecker** 는 UI 또는 명령줄 모드에서 실행할 수 있습니다. UI 모드 도구를 실행 하려면 Windows SDK bin 디렉터리에서 **Accchecker** 디렉터리를 열고 acccheckui.exe를 실행 한 다음 **도움말** 메뉴를 클릭 합니다.
 
 ### <a name="ui-automation-verify"></a>UI 자동화 확인
 
-Ui **Automation verify (UIA verify)** 는 ui 자동화 구현에 대 한 자동화 된 테스트 및 확인 프레임 워크입니다. **UIA Verify** 는 테스트 코드에 통합 하 고 UI 자동화 시나리오에 대 한 정기적이 고 자동화 된 테스트 또는 별색 검사를 수행할 수 있습니다. **UIA Verify**를 실행 하려면 UIAVerify 하위 디렉터리에서 VisualUIAVerifyNative를 실행 합니다.
+Ui **Automation verify (UIA verify)** 는 ui 자동화 구현에 대 한 자동화 된 테스트 및 확인 프레임 워크입니다. **UIA Verify** 는 테스트 코드에 통합 하 고 UI 자동화 시나리오에 대 한 정기적이 고 자동화 된 테스트 또는 별색 검사를 수행할 수 있습니다. **UIA Verify**를 실행 하려면 UIAVerify 하위 디렉터리에서 VisualUIAVerifyNative.exe를 실행 합니다.
 
 ### <a name="accessible-event-watcher"></a>액세스 가능한 이벤트 감시자
 
@@ -129,7 +129,7 @@ Windows 10 버전 1607부터 내레이터에서 새로운 개발자 모드를 �
 
 ## <a name="related-topics"></a>관련 항목
 
-- [액세스 가능성](accessibility.md)
+- [접근성](accessibility.md)
 - [예방 방법](practices-to-avoid.md)
 - [UI 자동화](/windows/desktop/WinAuto/entry-uiauto-win32)
 - [Windows의 내게 필요한 옵션](https://www.microsoft.com/accessibility/)

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 화면 방향, directx
 ms.localizationpriority: medium
-ms.openlocfilehash: 967fa031ad56e2c35b9e923339970787a7206f1d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bb5ed4d942484ebded50216ad84f8d1346545527
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168377"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217686"
 ---
 # <a name="supporting-screen-orientation-directx-and-c"></a>화면 방향 지원(DirectX 및 C++)
 
@@ -336,7 +336,7 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 
 -   표시의 새 방향을 결정 합니다. 디스플레이가 가로에서 세로 방향으로 대칭 이동 하거나 그 반대로 전환 된 경우 표시 범위에 대 한 높이 및 너비 값을 DIP 값에서 픽셀로 변경 합니다.
 
--   그런 다음 스왑 체인이 만들어졌는지 확인 합니다. 아직 만들지 않은 경우 [**IDXGIFactory2:: CreateSwapChainForCoreWindow**](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow)를 호출 하 여 만듭니다. 그렇지 않으면 [**Idxgiswapchain: ResizeBuffers**](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-resizebuffers)를 호출 하 여 기존 스왑 체인의 버퍼 크기를 새 표시 차원으로 조정 합니다. 회전 이벤트에 대해 스왑 체인의 크기를 조정할 필요는 없지만 렌더링 파이프라인에 의해 이미 회전 된 콘텐츠를 출력 하는 중입니다. 즉, 크기 조정 해야 하는 맞추기 및 채우기 이벤트와 같은 다른 크기 변경 이벤트가 있습니다.
+-   그런 다음 스왑 체인이 만들어졌는지 확인 합니다. 아직 만들지 않은 경우 [**IDXGIFactory2:: CreateSwapChainForCoreWindow**](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcorewindow)를 호출 하 여 만듭니다. 그렇지 않으면 [**Idxgiswapchain: ResizeBuffers**](/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-resizebuffers)를 호출 하 여 기존 스왑 체인의 버퍼 크기를 새 표시 차원으로 조정 합니다. 회전 이벤트에 대해 스왑 체인의 크기를 조정할 필요는 없지만 렌더링 파이프라인에 의해 이미 회전 된 콘텐츠를 출력 하는 중입니다. 즉, 크기 조정 해야 하는 맞추기 및 채우기 이벤트와 같은 다른 크기 변경 이벤트가 있습니다.
 
 -   그런 다음, 스왑 체인으로 렌더링 될 때 그래픽 파이프라인의 픽셀 또는 꼭 짓 점 (각각)에 적용 되도록 적절 한 2 차원 또는 3 차원 행렬 변환을 설정 합니다. 4 가지 회전 매트릭스가 있습니다.
 

@@ -4,19 +4,19 @@ title: 선택키 설계 지침
 label: Access keys design guidelines
 keywords: 키보드, 액세스 키, keytip, 키 팁, 접근성, 탐색, 포커스, 텍스트, 입력, 사용자 상호 작용
 template: detail.hbs
-ms.date: 06/08/2018
+ms.date: 09/24/2020
 ms.topic: article
 pm-contact: miguelrb
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ca8c21729f27e30e7703291c04a940301a3feb26
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 77986569ec224ba36471f60c0200dfb1825472a0
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173897"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218416"
 ---
 # <a name="access-keys"></a>액세스 키
 
@@ -259,7 +259,7 @@ _자동 키 팁 배치의 예_
 
     a.  키 팁은 액세스 키 (소유자)가 있는 요소와 **가까워야** 합니다.  
     b.  키 팁은 액세스 키가 있는 **활성화 된 요소** 를 포함 하지 않아야 합니다.   
-    c.  키 팁을 소유자에 게 가까이 배치할 수 없으면 소유자와 겹칩니다. 
+    다.  키 팁을 소유자에 게 가까이 배치할 수 없으면 소유자와 겹칩니다. 
 
 2.  검색 **기능: 사용자**는 키 팁을 사용 하 여 컨트롤을 신속 하 게 검색할 수 있습니다.
 

@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b1ba0205a837383e1c646664c0550e055227412
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 12a7c7ebd250fec8d944c4cba467a92ff67bd33d
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173067"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219796"
 ---
 # <a name="input-assembler-ia-stage"></a>입력 어셈블러 (IA) 단계
 
@@ -40,7 +40,7 @@ IA 단계는 사용자가 채운 버퍼에서 메모리의 데이터 (요소, �
 
 IA 단계는 데이터를 기본 형식으로 어셈블한 후 시스템 생성 값을 연결 하 고, [꼭 짓 점 셰이더 (VS) 단계](vertex-shader-stage--vs-.md) 와 기타 파이프라인 단계에서 사용 되는 기본 형식으로 출력 합니다.
 
-## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>섹션 항목
+## <a name="span-idin-this-sectionspanin-this-section"></a><span id="in-this-section"></span>이 섹션의 내용
 
 
 <table>
@@ -51,7 +51,7 @@ IA 단계는 데이터를 기본 형식으로 어셈블한 후 시스템 생성 
 <thead>
 <tr class="header">
 <th align="left">항목</th>
-<th align="left">Description</th>
+<th align="left">설명</th>
 </tr>
 </thead>
 <tbody>
@@ -61,7 +61,7 @@ IA 단계는 데이터를 기본 형식으로 어셈블한 후 시스템 생성 
 </tr>
 <tr class="even">
 <td align="left"><p><a href="using-system-generated-values.md">시스템에서 생성된 값 사용</a></p></td>
-<td align="left"><p>시스템에서 생성 된 값은 사용자 제공 입력 <a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics">의미 체계</a>를 기반으로 하는 입력 어셈블러 (IA) 단계에서 생성 되어 셰이더 작업에서 특정 효율성을 허용 합니다. 인스턴스 id ( <a href="vertex-shader-stage--vs-.md">꼭 짓 점 셰이더 (vs) 단계</a>에 표시 됨), 꼭 짓 점 id (vs에 표시 됨) 또는 기본 ID ( <a href="geometry-shader-stage--gs-.md">기 하 도형 셰이더 (GS) 스테이지</a>픽셀 셰이더 (v) 단계에 표시 됨)와 같은 데이터를 연결 하 여 / <a href="pixel-shader-stage--ps-.md">Pixel Shader (PS) stage</a>후속 셰이더 단계에서 이러한 시스템 값을 검색 하 여 해당 단계의 처리를 최적화할 수 있습니다.</p></td>
+<td align="left"><p>시스템에서 생성 된 값은 사용자 제공 입력 <a href="/windows/desktop/direct3dhlsl/dx-graphics-hlsl-semantics">의미 체계</a>를 기반으로 하는 입력 어셈블러 (IA) 단계에서 생성 되어 셰이더 작업에서 특정 효율성을 허용 합니다. 인스턴스 id ( <a href="vertex-shader-stage--vs-.md">꼭 짓 점 셰이더 (vs) 단계</a>에 표시 됨), 꼭 짓 점 id (vs에 표시 됨) 또는 기본 ID ( <a href="geometry-shader-stage--gs-.md">기 하 도형 셰이더 (GS) 스테이지</a>픽셀 셰이더 (v) 단계에 표시 됨)와 같은 데이터를 연결 하 여 / <a href="pixel-shader-stage--ps-.md">Pixel Shader (PS) stage</a>후속 셰이더 단계에서 이러한 시스템 값을 검색 하 여 해당 단계의 처리를 최적화할 수 있습니다.</p></td>
 </tr>
 </tbody>
 </table>

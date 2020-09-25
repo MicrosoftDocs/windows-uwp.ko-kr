@@ -4,16 +4,16 @@ title: 팝업 UI 애니메이션
 ms.assetid: 4E9025CE-FC90-4d4c-9DE6-EC6B6F2AD9DF
 label: Motion--Pop-up animations
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f21e529d519913e5b7fd2b19bd63f40c5a3d2009
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3d605378e802f28015734da4c35a22f41adfc185
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172387"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217737"
 ---
 # <a name="pop-up-ui-animations"></a>팝업 UI 애니메이션
 

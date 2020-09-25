@@ -5,15 +5,15 @@ ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
 template: detail.hbs
 keywords: 시각적 피드백, 포커스 피드백, 터치 피드백, 접촉 시각화, 입력, 조작
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ced83ca771f4954f8e42dc42e0882d1a5b7c6b1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1afc1c884a7a01ef1021f37476d1e29430c62e3c
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172457"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219836"
 ---
 # <a name="guidelines-for-visual-feedback"></a>시각적 피드백에 대한 지침
 
@@ -58,7 +58,7 @@ ms.locfileid: "89172457"
 
 모든 Windows 앱은 애플리케이션 내의 조작 가능한 컨트롤 주위에 보다 정의된 포커스 화면 효과를 표시합니다. 이러한 새 포커스 화면 효과는 완전히 사용자 지정할 수 있으며 필요에 따라 사용하지 않도록 설정할 수도 있습니다.
 
-Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 같이 게임 패드 또는 키보드 입력을 통해 포커스할 수 있는 요소의 경계를 애니메이션화하는 조명 효과인 **포커스 표시**를 지원합니다. 자세한 내용은 [Xbox 및 TV용 디자인](../devices/designing-for-tv.md#reveal-focus)을 참조하세요.
+Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 같이 게임 패드 또는 키보드 입력을 통해 포커스할 수 있는 요소의 경계를 애니메이션화하는 조명 효과인 **포커스 표시**를 지원합니다.
 
 ## <a name="color-branding--customizing"></a>색 브랜딩 및 사용자 지정
 

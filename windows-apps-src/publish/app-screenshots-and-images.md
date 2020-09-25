@@ -2,16 +2,16 @@
 Description: '앱의 스토어 목록에 포함할 스크린샷, 로고 및 기타 아트 자산 (예: 트레일러 및 판촉 이미지)을 선택할 수 있습니다.'
 title: 앱 스크린샷, 이미지 및 예고편
 ms.assetid: D216DD2B-F43D-4D26-82EE-0CD34DB929D8
-ms.date: 03/07/2019
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 트레일러, 비디오, 스크린 샷, 이미지, 아이콘, 스토어 목록, 저장소 목록 이미지
 ms.localizationpriority: medium
-ms.openlocfilehash: da9d6517a43550693596d15c735e3134c5c60a7a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: be46e33ccc97545b86321e2e520b79c5a74f7a2e
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155317"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219766"
 ---
 # <a name="app-screenshots-images-and-trailers"></a>앱 스크린샷, 이미지 및 예고편
 

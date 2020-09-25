@@ -3,16 +3,16 @@ description: 보조 타일을 만들고 유니버설 Windows 플랫폼 (UWP) 앱
 title: 시작에 보조 타일 고정
 label: Pin secondary tiles to Start
 template: detail.hbs
-ms.date: 05/25/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 보조 타일, pin, 고정, 빠른 시작, 코드 샘플, 예제, secondarytile
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e3949bd4534d32f202aaec78b91eb8c780e6db8
-ms.sourcegitcommit: e273e5901bfa6596dfef4cc741bb1c42614c25ab
+ms.openlocfilehash: 0fc83fca642ae75404180edf5fad177b92153e35
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89238288"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220386"
 ---
 # <a name="pin-secondary-tiles-to-start"></a>시작에 보조 타일 고정
 

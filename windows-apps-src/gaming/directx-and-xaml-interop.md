@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx, xaml interop
 ms.localizationpriority: medium
-ms.openlocfilehash: fc5e5323f509759754822849bd7dc93e7a45eaee
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a34510939b84c885bf90ac2b6b42ffa158decc8e
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156477"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216576"
 ---
 # <a name="directx-and-xaml-interop"></a>DirectX 및 XAML interop
 
@@ -49,11 +49,11 @@ DirectX를 사용 하려는 방법을 결정 한 후에는 다음 Windows 런타
 
 1.  [SurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) 생성자에 높이와 너비를 전달 하 여 공유 표면의 크기를 정의 합니다. 표면에 알파 (불투명도) 지원이 필요한 지 여부를 나타낼 수도 있습니다.
 
-    예:
+    예를 들어:
 
     `SurfaceImageSource^ surfaceImageSource = ref new SurfaceImageSource(400, 300);`
 
-2.  [ISurfaceImageSourceNativeWithD2D](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d)에 대 한 포인터를 가져옵니다. [SurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) 개체를 [IInspectable](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) (또는 **IUnknown**)로 캐스팅 하 고 해당 개체에 대해 **QueryInterface** 를 호출 하 여 기본 **ISurfaceImageSourceNativeWithD2D** 구현을 가져옵니다. 이 구현에 정의 된 메서드를 사용 하 여 장치를 설정 하 고 그리기 작업을 실행 합니다.
+2.  [ISurfaceImageSourceNativeWithD2D](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d)에 대 한 포인터를 가져옵니다. [SurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) 개체를 [IInspectable](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) (또는 **IUnknown**)로 캐스팅 하 고 해당 개체에 대해 **QueryInterface** 를 호출 하 여 기본 **ISurfaceImageSourceNativeWithD2D** 구현을 가져옵니다. 이 구현에 정의 된 메서드를 사용 하 여 장치를 설정 하 고 그리기 작업을 실행 합니다.
 
     ```cpp
     Microsoft::WRL::ComPtr<ISurfaceImageSourceNativeWithD2D> m_sisNativeWithD2D;
@@ -68,12 +68,12 @@ DirectX를 사용 하려는 방법을 결정 한 후에는 다음 Windows 런타
         (void **)&m_sisNativeWithD2D);
     ```
 
-3.  먼저 [D3D11CreateDevice](https://docs.microsoft.com/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) 및 [D2D1CreateDevice](https://docs.microsoft.com/windows/desktop/api/d2d1_1/nf-d2d1_1-d2d1createdevice) 를 호출 하 고 장치 및 컨텍스트를 [ISurfaceImageSourceNativeWithD2D:: SETDEVICE](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-setdevice)에 전달 하 여 DXGI 및 D2D 장치를 만듭니다. 
+3.  먼저 [D3D11CreateDevice](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) 및 [D2D1CreateDevice](/windows/desktop/api/d2d1_1/nf-d2d1_1-d2d1createdevice) 를 호출 하 고 장치 및 컨텍스트를 [ISurfaceImageSourceNativeWithD2D:: SETDEVICE](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-setdevice)에 전달 하 여 DXGI 및 D2D 장치를 만듭니다. 
 
     > [!NOTE]
     > 백그라운드 스레드에서 **SurfaceImageSource** 으로 그리면 DXGI 장치에서 다중 스레드 액세스를 사용 하도록 설정 했는지 확인 해야 합니다. 성능상의 이유로 백그라운드 스레드에서 그릴 경우에만이 작업을 수행 해야 합니다.
 
-    예:
+    예를 들어:
 
     ```cpp
     Microsoft::WRL::ComPtr<ID3D11Device> m_d3dDevice;
@@ -112,7 +112,7 @@ DirectX를 사용 하려는 방법을 결정 한 후에는 다음 Windows 런타
     m_sisNativeWithD2D->SetDevice(m_d2dDevice.Get());
     ```
 
-4.  [ID2D1DeviceContext](https://docs.microsoft.com/windows/desktop/api/dxgi/nn-dxgi-idxgisurface) 개체에 대 한 포인터를 [ISurfaceImageSourceNativeWithD2D:: begindraw](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-begindraw)에 제공 하 고, 반환 된 그리기 컨텍스트를 사용 하 여 **SurfaceImageSource**내에서 원하는 사각형의 콘텐츠를 그립니다. **ISurfaceImageSourceNativeWithD2D:: BeginDraw** 및 그리기 명령을 백그라운드 스레드에서 호출할 수 있습니다. *UpdateRect* 매개 변수에서 update에 지정 된 영역만 그려집니다.
+4.  [ID2D1DeviceContext](/windows/desktop/api/dxgi/nn-dxgi-idxgisurface) 개체에 대 한 포인터를 [ISurfaceImageSourceNativeWithD2D:: begindraw](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-begindraw)에 제공 하 고, 반환 된 그리기 컨텍스트를 사용 하 여 **SurfaceImageSource**내에서 원하는 사각형의 콘텐츠를 그립니다. **ISurfaceImageSourceNativeWithD2D:: BeginDraw** 및 그리기 명령을 백그라운드 스레드에서 호출할 수 있습니다. *UpdateRect* 매개 변수에서 update에 지정 된 영역만 그려집니다.
 
     이 메서드는 *offset* 매개 변수에 업데이트 된 대상 사각형의 점 (x, y) 오프셋을 반환 합니다. 이 오프셋을 사용 하 여 **ID2D1DeviceContext**으로 업데이트 된 콘텐츠를 그릴 위치를 결정 합니다.
 
@@ -149,7 +149,7 @@ DirectX를 사용 하려는 방법을 결정 한 후에는 다음 Windows 런타
     }
     ```
 
-5. [ISurfaceImageSourceNativeWithD2D:: EndDraw](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-enddraw) 를 호출 하 여 비트맵을 완성 합니다. 비트맵을 XAML [이미지](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image) 또는 [ImageBrush](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.ImageBrush)의 소스로 사용할 수 있습니다. **ISurfaceImageSourceNativeWithD2D:: EndDraw** 는 UI 스레드에서만 호출 해야 합니다.
+5. [ISurfaceImageSourceNativeWithD2D:: EndDraw](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d-enddraw) 를 호출 하 여 비트맵을 완성 합니다. 비트맵을 XAML [이미지](/uwp/api/windows.ui.xaml.controls.image) 또는 [ImageBrush](/uwp/api/Windows.UI.Xaml.Media.ImageBrush)의 소스로 사용할 수 있습니다. **ISurfaceImageSourceNativeWithD2D:: EndDraw** 는 UI 스레드에서만 호출 해야 합니다.
 
     ```cpp
     m_sisNative->EndDraw();
@@ -163,27 +163,27 @@ DirectX를 사용 하려는 방법을 결정 한 후에는 다음 Windows 런타
     ```
 
     > [!NOTE]
-    > [SurfaceImageSource:: SetSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsource) ( **IBitmapSource:: SetSource**에서 상속)를 호출 하면 현재 예외가 throw 됩니다. [SurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) 개체에서 호출 하지 마세요.
+    > [SurfaceImageSource:: SetSource](/uwp/api/windows.ui.xaml.media.imaging.bitmapsource.setsource) ( **IBitmapSource:: SetSource**에서 상속)를 호출 하면 현재 예외가 throw 됩니다. [SurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) 개체에서 호출 하지 마세요.
 
     > [!NOTE]
-    > 응용 프로그램은 연결 된 [창이](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) 숨겨진 상태에서 **SurfaceImageSource** 로의 그리기를 방지 해야 합니다. 그렇지 않으면 **ISurfaceImageSourceNativeWithD2D** api가 실패 합니다. 이를 수행 하려면 [VisibilityChanged](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window.VisibilityChanged) 이벤트에 대 한 이벤트 수신기로 등록 하 여 표시 여부 변경을 추적 합니다.
+    > 응용 프로그램은 연결 된 [창이](/uwp/api/Windows.UI.Xaml.Window) 숨겨진 상태에서 **SurfaceImageSource** 로의 그리기를 방지 해야 합니다. 그렇지 않으면 **ISurfaceImageSourceNativeWithD2D** api가 실패 합니다. 이를 수행 하려면 [VisibilityChanged](/uwp/api/Windows.UI.Xaml.Window.VisibilityChanged) 이벤트에 대 한 이벤트 수신기로 등록 하 여 표시 여부 변경을 추적 합니다.
 
 ## <a name="virtualsurfaceimagesource"></a>VirtualSurfaceImageSource
 
 [VirtualSurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource) 은 콘텐츠가 화면에 맞게 조정 될 수 있는 것 보다 클 수 있는 경우 [SurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) 를 확장 하므로 최적의 상태로 렌더링 하려면 콘텐츠를 가상화 해야 합니다.
 
-[VirtualSurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource) 는 화면에 표시 될 때 표면의 영역을 업데이트 하기 위해 구현 하는 [IVirtualSurfaceImageSourceCallbacksNative:: UpdatesNeeded](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceupdatescallbacknative-updatesneeded)콜백을 사용 한다는 점에서 [SurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) 와 다릅니다. XAML 프레임 워크에서이를 처리 하므로 숨겨진 영역을 지울 필요가 없습니다.
+[VirtualSurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource) 는 화면에 표시 될 때 표면의 영역을 업데이트 하기 위해 구현 하는 [IVirtualSurfaceImageSourceCallbacksNative:: UpdatesNeeded](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceupdatescallbacknative-updatesneeded)콜백을 사용 한다는 점에서 [SurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.SurfaceImageSource) 와 다릅니다. XAML 프레임 워크에서이를 처리 하므로 숨겨진 영역을 지울 필요가 없습니다.
 
 다음은 코드 숨김으로 [VirtualSurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource) 개체를 만들고 업데이트 하는 기본 프로세스입니다.
 
-1.  원하는 크기를 사용 하 여 [VirtualSurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource) 의 인스턴스를 만듭니다. 예:
+1.  원하는 크기를 사용 하 여 [VirtualSurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource) 의 인스턴스를 만듭니다. 예를 들어:
 
     ```cpp
     VirtualSurfaceImageSource^ virtualSIS = 
         ref new VirtualSurfaceImageSource(2000, 2000);
     ```
 
-2.  [IVirtualSurfaceImageSourceNative](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative) 및 [ISurfaceImageSourceNativeWithD2D](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d)에 대 한 포인터를 가져옵니다. [VirtualSurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource) 개체를 [IInspectable](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) 또는 [IUnknown](https://docs.microsoft.com/windows/desktop/api/unknwn/nn-unknwn-iunknown)으로 캐스팅 하 고 해당 개체에 대해 [QueryInterface](https://docs.microsoft.com/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) 를 호출 하 여 기본 **IVirtualSurfaceImageSourceNative** 및 **ISurfaceImageSourceNativeWithD2D** 구현을 가져옵니다. 이러한 구현에 정의 된 메서드를 사용 하 여 장치를 설정 하 고 그리기 작업을 실행 합니다.
+2.  [IVirtualSurfaceImageSourceNative](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative) 및 [ISurfaceImageSourceNativeWithD2D](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-isurfaceimagesourcenativewithd2d)에 대 한 포인터를 가져옵니다. [VirtualSurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource) 개체를 [IInspectable](/windows/desktop/api/inspectable/nn-inspectable-iinspectable) 또는 [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)으로 캐스팅 하 고 해당 개체에 대해 [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) 를 호출 하 여 기본 **IVirtualSurfaceImageSourceNative** 및 **ISurfaceImageSourceNativeWithD2D** 구현을 가져옵니다. 이러한 구현에 정의 된 메서드를 사용 하 여 장치를 설정 하 고 그리기 작업을 실행 합니다.
 
     ```cpp
     Microsoft::WRL::ComPtr<IVirtualSurfaceImageSourceNative>  m_vsisNative;
@@ -208,7 +208,7 @@ DirectX를 사용 하려는 방법을 결정 한 후에는 다음 Windows 런타
     > [!NOTE]
     > 백그라운드 스레드에서 **VirtualSurfaceImageSource** 으로 그리면 DXGI 장치에서 다중 스레드 액세스를 사용 하도록 설정 했는지 확인 해야 합니다. 성능상의 이유로 백그라운드 스레드에서 그릴 경우에만이 작업을 수행 해야 합니다.
 
-    예:
+    예를 들어:
 
     ```cpp
     Microsoft::WRL::ComPtr<ID3D11Device> m_d3dDevice;
@@ -249,7 +249,7 @@ DirectX를 사용 하려는 방법을 결정 한 후에는 다음 Windows 런타
     m_vsisNative->SetDevice(dxgiDevice.Get());
     ```
 
-4.  [IVirtualSurfaceUpdatesCallbackNative](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-ivirtualsurfaceupdatescallbacknative)의 구현에 대 한 참조를 전달 하 여 [IVirtualSurfaceImageSourceNative:: RegisterForUpdatesNeeded](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-registerforupdatesneeded)를 호출 합니다.
+4.  [IVirtualSurfaceUpdatesCallbackNative](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nn-windows-ui-xaml-media-dxinterop-ivirtualsurfaceupdatescallbacknative)의 구현에 대 한 참조를 전달 하 여 [IVirtualSurfaceImageSourceNative:: RegisterForUpdatesNeeded](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-registerforupdatesneeded)를 호출 합니다.
 
     ```cpp
     class MyContentImageSource : public IVirtualSurfaceUpdatesCallbackNative
@@ -274,11 +274,11 @@ DirectX를 사용 하려는 방법을 결정 한 후에는 다음 Windows 런타
     }
     ```
 
-    이 프레임 워크는 [VirtualSurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource) 의 영역을 업데이트 해야 할 때 [IVirtualSurfaceUpdatesCallbackNative:: UpdatesNeeded](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-registerforupdatesneeded) 의 구현을 호출 합니다.
+    이 프레임 워크는 [VirtualSurfaceImageSource](/uwp/api/Windows.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource) 의 영역을 업데이트 해야 할 때 [IVirtualSurfaceUpdatesCallbackNative:: UpdatesNeeded](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-registerforupdatesneeded) 의 구현을 호출 합니다.
 
-    이는 프레임 워크에서 그려야 하는 영역을 결정 하는 경우 (예: 사용자가 화면 보기를 계획 하거나 확대/축소 하는 경우) 또는 앱이 해당 지역에서 [IVirtualSurfaceImageSourceNative:: 무효화할](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-invalidate) 를 호출한 경우에 발생할 수 있습니다.
+    이는 프레임 워크에서 그려야 하는 영역을 결정 하는 경우 (예: 사용자가 화면 보기를 계획 하거나 확대/축소 하는 경우) 또는 앱이 해당 지역에서 [IVirtualSurfaceImageSourceNative:: 무효화할](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-invalidate) 를 호출한 경우에 발생할 수 있습니다.
 
-5.  [IVirtualSurfaceImageSourceNative:: UpdatesNeeded](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceupdatescallbacknative-updatesneeded)에서 [IVirtualSurfaceImageSourceNative:: GetUpdateRectCount](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-getupdaterectcount) 및 [IVirtualSurfaceImageSourceNative:: GetUpdateRects](https://docs.microsoft.com/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-getupdaterects) 메서드를 사용 하 여 표면의 영역을 그려야 하는지 확인 합니다.
+5.  [IVirtualSurfaceImageSourceNative:: UpdatesNeeded](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceupdatescallbacknative-updatesneeded)에서 [IVirtualSurfaceImageSourceNative:: GetUpdateRectCount](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-getupdaterectcount) 및 [IVirtualSurfaceImageSourceNative:: GetUpdateRects](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-ivirtualsurfaceimagesourcenative-getupdaterects) 메서드를 사용 하 여 표면의 영역을 그려야 하는지 확인 합니다.
 
     ```cpp
     HRESULT STDMETHODCALLTYPE MyContentImageSource::UpdatesNeeded()
@@ -355,7 +355,7 @@ DirectX를 사용 하려는 방법을 결정 한 후에는 다음 Windows 런타
     3.  **ISurfaceImageSourceNativeWithD2D:: EndDraw**를 호출 합니다. 결과는 비트맵입니다.
 
 > [!NOTE]
-> 응용 프로그램은 연결 된 [창이](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window) 숨겨진 상태에서 **SurfaceImageSource** 로의 그리기를 방지 해야 합니다. 그렇지 않으면 **ISurfaceImageSourceNativeWithD2D** api가 실패 합니다. 이를 수행 하려면 [VisibilityChanged](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window.VisibilityChanged) 이벤트에 대 한 이벤트 수신기로 등록 하 여 표시 여부 변경을 추적 합니다.
+> 응용 프로그램은 연결 된 [창이](/uwp/api/Windows.UI.Xaml.Window) 숨겨진 상태에서 **SurfaceImageSource** 로의 그리기를 방지 해야 합니다. 그렇지 않으면 **ISurfaceImageSourceNativeWithD2D** api가 실패 합니다. 이를 수행 하려면 [VisibilityChanged](/uwp/api/Windows.UI.Xaml.Window.VisibilityChanged) 이벤트에 대 한 이벤트 수신기로 등록 하 여 표시 여부 변경을 추적 합니다.
 
 ## <a name="swapchainpanel-and-gaming"></a>SwapChainPanel 및 게임
 
@@ -365,16 +365,16 @@ DirectX를 사용 하려는 방법을 결정 한 후에는 다음 Windows 런타
 성능 향상을 위해 [SwapChainPanel](/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) 유형에 대 한 특정 제한 사항이 있습니다.
 
 -   앱 당 [SwapChainPanel](/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) 인스턴스가 4 개 미만입니다.
--   DirectX 스왑 체인의 높이 및 너비 ( [DXGI \_ 스왑 \_ 체인 \_ DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1))를 스왑 체인 요소의 현재 차원으로 설정 해야 합니다. 그렇지 않은 경우 디스플레이 콘텐츠의 크기가 조정 됩니다 ( **DXGI \_ 크기 \_ 스트레치**사용).
--   DirectX 스왑 체인의 크기 조정 모드 ( [dxgi \_ 스왑 \_ 체인 \_ DESC1](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1))를 **dxgi \_ 크기 조정 \_ 스트레치**로 설정 해야 합니다.
--   [IDXGIFactory2:: CreateSwapChainForComposition](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcomposition)를 호출 하 여 DirectX 스왑 체인을 만들어야 합니다.
+-   DirectX 스왑 체인의 높이 및 너비 ( [DXGI \_ 스왑 \_ 체인 \_ DESC1](/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1))를 스왑 체인 요소의 현재 차원으로 설정 해야 합니다. 그렇지 않은 경우 디스플레이 콘텐츠의 크기가 조정 됩니다 ( **DXGI \_ 크기 \_ 스트레치**사용).
+-   DirectX 스왑 체인의 크기 조정 모드 ( [dxgi \_ 스왑 \_ 체인 \_ DESC1](/windows/desktop/api/dxgi1_2/ns-dxgi1_2-dxgi_swap_chain_desc1))를 **dxgi \_ 크기 조정 \_ 스트레치**로 설정 해야 합니다.
+-   [IDXGIFactory2:: CreateSwapChainForComposition](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgifactory2-createswapchainforcomposition)를 호출 하 여 DirectX 스왑 체인을 만들어야 합니다.
 
-XAML 프레임 워크의 업데이트는 아니라 앱의 요구 사항에 따라 [SwapChainPanel](/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) 를 업데이트 합니다. **SwapChainPanel** 의 업데이트를 XAML 프레임 워크의 업데이트와 동기화 해야 하는 경우 [WINDOWS:: UI:: XAML:: Media:: CompositionTarget:: 렌더링](https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.compositiontarget.rendering) 이벤트에 등록 합니다. 그렇지 않으면 **SwapChainPanel**를 업데이트 하는 것과 다른 스레드에서 XAML 요소를 업데이트 하려고 할 때 크로스 스레드 문제를 고려해 야 합니다.
+XAML 프레임 워크의 업데이트는 아니라 앱의 요구 사항에 따라 [SwapChainPanel](/uwp/api/Windows.UI.Xaml.Controls.SwapChainPanel) 를 업데이트 합니다. **SwapChainPanel** 의 업데이트를 XAML 프레임 워크의 업데이트와 동기화 해야 하는 경우 [WINDOWS:: UI:: XAML:: Media:: CompositionTarget:: 렌더링](/uwp/api/windows.ui.xaml.media.compositiontarget.rendering) 이벤트에 등록 합니다. 그렇지 않으면 **SwapChainPanel**를 업데이트 하는 것과 다른 스레드에서 XAML 요소를 업데이트 하려고 할 때 크로스 스레드 문제를 고려해 야 합니다.
 
-**SwapChainPanel**에 대 한 대기 시간이 짧은 포인터 입력을 수신 해야 하는 경우 [SwapChainPanel:: CreateCoreIndependentInputSource](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.swapchainpanel.createcoreindependentinputsource)를 사용 합니다. 이 메서드는 백그라운드 스레드에서 최소 대기 시간으로 입력 이벤트를 수신 하는 데 사용할 수 있는 [CoreIndependentInputSource](https://docs.microsoft.com/uwp/api/windows.ui.core.coreindependentinputsource) 개체를 반환 합니다. 이 메서드가 호출 되 면 모든 입력이 백그라운드 스레드로 리디렉션되도록 일반적인 XAML 포인터 입력 이벤트가 **SwapChainPanel**에 대해 발생 하지 않습니다.
+**SwapChainPanel**에 대 한 대기 시간이 짧은 포인터 입력을 수신 해야 하는 경우 [SwapChainPanel:: CreateCoreIndependentInputSource](/uwp/api/windows.ui.xaml.controls.swapchainpanel.createcoreindependentinputsource)를 사용 합니다. 이 메서드는 백그라운드 스레드에서 최소 대기 시간으로 입력 이벤트를 수신 하는 데 사용할 수 있는 [CoreIndependentInputSource](/uwp/api/windows.ui.core.coreindependentinputsource) 개체를 반환 합니다. 이 메서드가 호출 되 면 모든 입력이 백그라운드 스레드로 리디렉션되도록 일반적인 XAML 포인터 입력 이벤트가 **SwapChainPanel**에 대해 발생 하지 않습니다.
 
 
-> **참고**   일반적으로 DirectX 앱은 가로 방향으로 스왑 체인을 만들고 표시 창 크기 (일반적으로 대부분의 Microsoft Store 게임에서 기본 화면 해상도)와 동일 해야 합니다. 이렇게 하면 응용 프로그램에 XAML 오버레이가 표시 되지 않는 경우 최적의 스왑 체인 구현을 사용 합니다. 앱이 세로 모드로 회전 된 경우 앱은 기존 스왑 체인에서 [IDXGISwapChain1:: SetRotation](https://docs.microsoft.com/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-setrotation) 을 호출 하 고 필요한 경우 콘텐츠에 변환을 적용 한 다음 동일한 스왑 체인에서 [SetSwapChain](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-iswapchainpanelnative-setswapchain) 를 다시 호출 해야 합니다. 마찬가지로 [Idxgiswapchain:: ResizeBuffers](https://docs.microsoft.com/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-resizebuffers)를 호출 하 여 스왑 체인의 크기를 조정할 때마다 앱이 동일한 스왑 체인에서 **SetSwapChain** 를 다시 호출 해야 합니다.
+> **참고**   일반적으로 DirectX 앱은 가로 방향으로 스왑 체인을 만들고 표시 창 크기 (일반적으로 대부분의 Microsoft Store 게임에서 기본 화면 해상도)와 동일 해야 합니다. 이렇게 하면 응용 프로그램에 XAML 오버레이가 표시 되지 않는 경우 최적의 스왑 체인 구현을 사용 합니다. 앱이 세로 모드로 회전 된 경우 앱은 기존 스왑 체인에서 [IDXGISwapChain1:: SetRotation](/windows/desktop/api/dxgi1_2/nf-dxgi1_2-idxgiswapchain1-setrotation) 을 호출 하 고 필요한 경우 콘텐츠에 변환을 적용 한 다음 동일한 스왑 체인에서 [SetSwapChain](/windows/desktop/api/windows.ui.xaml.media.dxinterop/nf-windows-ui-xaml-media-dxinterop-iswapchainpanelnative-setswapchain) 를 다시 호출 해야 합니다. 마찬가지로 [Idxgiswapchain:: ResizeBuffers](/windows/desktop/api/dxgi/nf-dxgi-idxgiswapchain-resizebuffers)를 호출 하 여 스왑 체인의 크기를 조정할 때마다 앱이 동일한 스왑 체인에서 **SetSwapChain** 를 다시 호출 해야 합니다.
 
 
  

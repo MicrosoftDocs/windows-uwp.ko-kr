@@ -2,16 +2,16 @@
 ms.assetid: 0C8DEE75-FB7B-4E59-81E3-55F8D65CD982
 title: 애니메이션 개요
 description: Windows 런타임 애니메이션 라이브러리의 애니메이션을 사용 하 여 Windows 모양과 느낌을 앱에 통합할 수 있습니다.
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 546e376bc6c66c368387ddd6f67d21dc7dde582d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 40752da17591c9eca16f46fbd244d4507a38b1fb
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173847"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220006"
 ---
 # <a name="animations-in-xaml"></a>XAML의 애니메이션
 
@@ -127,7 +127,7 @@ Windows 런타임 애니메이션 시스템 및 애니메이션 라이브러리�
 |---------|-----------------------|
 | 대화 상자 | [**FadeInThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation) 및 [ **FadeOutThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation) |
 | 플라이아웃 | [**PopInThemeAnimation**](/uwp/api/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation) 및 [ **PopOutThemeAnimation**](/uwp/api/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
-| Tooltip | [**FadeInThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation) 및 [ **FadeOutThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation) |
+| 도구 설명 | [**FadeInThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation) 및 [ **FadeOutThemeAnimation**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation) |
 | 상황에 맞는 메뉴 | [**PopInThemeAnimation**](/uwp/api/windows.ui.xaml.media.animation.popinthemeanimation.popinthemeanimation) 및 [ **PopOutThemeAnimation**](/uwp/api/windows.ui.xaml.media.animation.popoutthemeanimation.popoutthemeanimation) |
 | 명령 모음 | [**EdgeUIThemeTransition**](/uwp/api/windows.ui.xaml.media.animation.edgeuithemetransition.edgeuithemetransition) |
 | 작업창 또는 가장자리 기반 패널 | [**PaneThemeTransition**](/uwp/api/windows.ui.xaml.media.animation.panethemetransition.panethemetransition) |

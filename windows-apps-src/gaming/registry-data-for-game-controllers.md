@@ -6,12 +6,12 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 게임, 입력, 레지스트리, 사용자 지정
 ms.localizationpriority: medium
-ms.openlocfilehash: ac2ca98a067fb88dfcdc86c4e4ee4047b82206bc
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1f3a49ae2c6fc283d479086759744eb51d8b33ce
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159277"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220068"
 ---
 # <a name="registry-data-for-game-controllers"></a>게임 컨트롤러의 레지스트리 데이터
 
@@ -36,9 +36,9 @@ Gamepads [네임 스페이스](/uwp/api/windows.gaming.input) 는 ihv (독립 �
         <th>정보</th>
     </tr>
     <tr>
-        <td>Disabled</td>
+        <td>사용 안 함</td>
         <td>DWORD</td>
-        <td>예</td>
+        <td>아니요</td>
         <td>
             <p>이 특정 장치를 사용 하지 않도록 설정 해야 함을 나타냅니다.</p>
             <ul>
@@ -48,13 +48,13 @@ Gamepads [네임 스페이스](/uwp/api/windows.gaming.input) 는 ihv (독립 �
         </td>
     </tr>
     <tr>
-        <td>Description</td>
-        <td>REG_SZ <td>예</td>
+        <td>설명</td>
+        <td>REG_SZ <td>아니요</td>
         <td>장치에 대 한 간단한 설명입니다.</td>
     </tr>
 </table>
 
-장치 설치 관리자는 설치 또는 [INF 파일](https://docs.microsoft.com/windows-hardware/drivers/install/inf-files)을 통해이 데이터를 레지스트리에 추가 해야 합니다.
+장치 설치 관리자는 설치 또는 [INF 파일](/windows-hardware/drivers/install/inf-files)을 통해이 데이터를 레지스트리에 추가 해야 합니다.
 
 장치 루트 위치 아래의 하위 키는 다음 섹션에 자세히 설명 되어 있습니다.
 
@@ -127,19 +127,19 @@ Gamepads [네임 스페이스](/uwp/api/windows.gaming.input) 는 ihv (독립 �
     </tr>
     <tr>
         <td>Paddle1</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Paddle2</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Paddle3</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Paddle4</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>왼쪽 트리거</td>
@@ -192,115 +192,115 @@ Gamepads [네임 스페이스](/uwp/api/windows.gaming.input) 는 ihv (독립 �
     </tr>
     <tr>
         <td>DPadUp</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>DPadDown</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>DPadLeft</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>DPadRight</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button1</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button2</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button3</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button4</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button5</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button6</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button7</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button8</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button9</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button10</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button11</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button12</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button13</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button14</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button15</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Button16</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>FirstGear</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>SecondGear</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>ThirdGear</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>FourthGear</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>FifthGear</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>SixthGear</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>SeventhGear</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>ReverseGear</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>휠</td>
@@ -317,11 +317,11 @@ Gamepads [네임 스페이스](/uwp/api/windows.gaming.input) 는 ihv (독립 �
     </tr>
     <tr>
         <td>부품</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>수동 브레이크</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>MaxWheelAngle</td>
@@ -479,73 +479,73 @@ Gamepads [네임 스페이스](/uwp/api/windows.gaming.input) 는 ihv (독립 �
     </tr>
     <tr>
         <td>컨텍스트 1</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>컨텍스트 2</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Context3</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>Context4</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>PageUp</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>PageDown</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>PageLeft</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>PageRight</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>ScrollUp</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>ScrollDown</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>ScrollLeft</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>ScrollRight</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>SecondaryUp</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>SecondaryDown</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>SecondaryLeft</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
     <tr>
         <td>SecondaryRight</td>
-        <td>예</td>
+        <td>아니요</td>
     </tr>
 </table>
 
-UI 탐색 컨트롤러와 위의 명령에 대 한 자세한 내용은 [ui 탐색 컨트롤러](https://docs.microsoft.com/windows/uwp/gaming/ui-navigation-controller)를 참조 하세요.
+UI 탐색 컨트롤러와 위의 명령에 대 한 자세한 내용은 [ui 탐색 컨트롤러](./ui-navigation-controller.md)를 참조 하세요.
 
-## <a name="keys"></a>키
+## <a name="keys"></a>구성
 
 다음 섹션에서는 **게임 패드**, **RacingWheel**, **ArcadeStick**, **FlightStick**및 **UINavigation** 키 아래의 각 하위 키 내용에 대해 설명 합니다.
 
@@ -578,7 +578,7 @@ UI 탐색 컨트롤러와 위의 명령에 대 한 자세한 내용은 [ui 탐�
     <tr>
         <td>[</td>
         <td>DWORD</td>
-        <td>예</td>
+        <td>아니요</td>
         <td><b>임계값 백분율</b> 및 <b>DebouncePercent</b> 요인이 적용 되기 전에 축 값이 반전 되어야 함을 나타냅니다.</td>
     </tr>
     <tr>
@@ -624,7 +624,7 @@ UI 탐색 컨트롤러와 위의 명령에 대 한 자세한 내용은 [ui 탐�
     <tr>
         <td>IncludeAdjacent</td>
         <td>DWORD</td>
-        <td>예</td>
+        <td>아니요</td>
         <td>인접 한 스위치 위치도 매핑된 단추가 눌러져 있음을 보고 함을 나타냅니다.</td>
     </tr>
 </table>
@@ -667,7 +667,7 @@ UI 탐색 컨트롤러와 위의 명령에 대 한 자세한 내용은 [ui 탐�
     <tr>
         <td>MinValueButtonIndex</td>
         <td>DWORD</td>
-        <td>예</td>
+        <td>아니요</td>
         <td>
             <p>매핑된 축이 양방향 임을 나타냅니다. <b>Maxbutton</b> 및 <b>minbutton</b> 의 값은 아래와 같이 단일 양방향 축으로 결합 됩니다.</p>
             <table>
@@ -709,7 +709,7 @@ UI 탐색 컨트롤러와 위의 명령에 대 한 자세한 내용은 [ui 탐�
     <tr>
         <td>[</td>
         <td>DWORD</td>
-        <td>예</td>
+        <td>아니요</td>
         <td>매핑된 축 값이 반환 되기 전에 반전 되어야 함을 나타냅니다.</td>
     </tr>
     <tr>
@@ -759,7 +759,7 @@ UI 탐색 컨트롤러와 위의 명령에 대 한 자세한 내용은 [ui 탐�
     <tr>
         <td>IncludeAdjacent</td>
         <td>DWORD</td>
-        <td>예</td>
+        <td>아니요</td>
         <td>
             <p>인접 한 스위치 위치도 매핑된 축이 1.0을 보고 하도록 함을 나타냅니다. 위의 예제에서 <b>Includeadjacent</b> 가 설정 된 경우 축 변환은 다음과 같이 수행 됩니다.</p>
             <table>
@@ -1051,7 +1051,7 @@ UI 탐색 컨트롤러와 위의 명령에 대 한 자세한 내용은 [ui 탐�
 
 ### <a name="button-labels"></a>단추 레이블
 
-**단추** 키는 **RawGameController**의 buttons 배열의 각 단추 위치를 문자열에 매핑합니다. 각 문자열은 내부적으로 해당 [GameControllerButtonLabel](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamecontrollerbuttonlabel) 열거형 값에 매핑됩니다. 예를 들어, 게임 패드에 단추가 10 개 있는 경우 **RawGameController** 가 단추를 구문 분석 하 고 단추 보고서에 표시 하는 순서는 다음과 같습니다.
+**단추** 키는 **RawGameController**의 buttons 배열의 각 단추 위치를 문자열에 매핑합니다. 각 문자열은 내부적으로 해당 [GameControllerButtonLabel](/uwp/api/windows.gaming.input.gamecontrollerbuttonlabel) 열거형 값에 매핑됩니다. 예를 들어, 게임 패드에 단추가 10 개 있는 경우 **RawGameController** 가 단추를 구문 분석 하 고 단추 보고서에 표시 하는 순서는 다음과 같습니다.
 
 ```cpp
 Menu,               // Index 0
@@ -1117,7 +1117,7 @@ RightBumper         // Index 9
 
 ### <a name="axis-labels"></a>축 레이블
 
-**축** 키는 **RawGameController**의 축 배열에 있는 각 축 위치를 단추 레이블과 마찬가지로 [GameControllerButtonLabel 열거형](https://docs.microsoft.com/uwp/api/windows.gaming.input.gamecontrollerbuttonlabel) 에 나열 된 레이블 중 하나에 매핑합니다. [단추 레이블](#button-labels)의 예제를 참조 하세요.
+**축** 키는 **RawGameController**의 축 배열에 있는 각 축 위치를 단추 레이블과 마찬가지로 [GameControllerButtonLabel 열거형](/uwp/api/windows.gaming.input.gamecontrollerbuttonlabel) 에 나열 된 레이블 중 하나에 매핑합니다. [단추 레이블](#button-labels)의 예제를 참조 하세요.
 
 ### <a name="switch-labels"></a>레이블 전환
 
