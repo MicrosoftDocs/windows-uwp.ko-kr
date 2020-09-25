@@ -5,15 +5,15 @@ ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
 template: detail.hbs
 keywords: 터치 패드, PTP, 터치, 포인터, 입력, 사용자 상호 작용
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e83cb1ceca96e5c7b51e71cb419b86b0395ea99
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 86c47a3a510f6ed0d865064e8d140c47c8dd9f78
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165867"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220436"
 ---
 # <a name="touchpad-design-guidelines"></a>터치 패드 디자인 지침
 
@@ -71,7 +71,7 @@ ms.locfileid: "89165867"
 <thead>
 <tr class="header">
 <th align="left">용어</th>
-<th align="left">Description</th>
+<th align="left">설명</th>
 </tr>
 </thead>
 <tbody>

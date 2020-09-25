@@ -2,16 +2,16 @@
 title: 지도 인증 키 요청
 description: 유니버설 Windows 앱은 없습니다 네임 스페이스에서 서비스를 사용 하 고 매핑하기 전에 인증 되어야 합니다.
 ms.assetid: 13B400D7-E13F-4F07-ACC3-9C34087F0F73
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 지도 인증 키, 지도 컨트롤
 ms.localizationpriority: medium
-ms.openlocfilehash: 195c643fe10daf45ae709962a3b675162874c77b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: da98ea9f09ef5d7804b07b7066847afbab7a2681
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171837"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220526"
 ---
 # <a name="request-a-maps-authentication-key"></a>지도 인증 키 요청
 
@@ -94,5 +94,5 @@ ServiceToken 네임 스페이스에서 서비스를 사용 하려면 인증 키 
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
 * [UWP 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [지도에 대한 디자인 지침](./display-maps.md)
-* [빌드 2015 비디오: Windows 앱의 휴대폰, 태블릿 및 PC에서 맵 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [빌드 2015 비디오: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [UWP 교통 앱 샘플](https://github.com/Microsoft/Windows-appsample-trafficapp)

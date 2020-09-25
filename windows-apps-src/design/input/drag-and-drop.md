@@ -2,16 +2,16 @@
 description: 이 문서에서는 Windows 앱에서 끌어서 놓기를 추가 하는 방법을 설명 합니다.
 title: 끌어서 놓기
 ms.assetid: A15ED2F5-1649-4601-A761-0F6C707A8B7E
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e661eb0859e9720e31fabb6e5a7b33857de28b7
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 8ab8d696ddb1a4ef9e3dc3549754cbf51fc91374
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363676"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220546"
 ---
 # <a name="drag-and-drop"></a>끌어서 놓기
 
@@ -109,7 +109,7 @@ UI를 사용자 지정 하려는 경우 (이 문서의 뒷부분에서 설명)�
 
 
 
-## <a name="see-also"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
 * [앱 간 통신](index.md)
 * [System.windows.uielement.allowdrop](/uwp/api/windows.ui.xaml.uielement.allowdrop)

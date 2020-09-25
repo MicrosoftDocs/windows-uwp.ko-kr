@@ -3,19 +3,19 @@ Description: Windows 앱에서 키보드, 게임 패드 및 내게 필요한 옵
 title: 키보드, 게임 패드 및 접근성 도구를 사용한 프로그래밍 방식 포커스 탐색
 label: Programmatic focus navigation
 keywords: 키보드, 게임 컨트롤러, 원격 제어, 탐색, 탐색 전략, 입력, 사용자 조작, 접근성, 유용성
-ms.date: 03/19/2018
+ms.date: 09/24/2020
 ms.topic: article
 pm-contact: miguelrb
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 887d8329cc95d735ba33ff8dafc5105874206eaf
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ef2e62404766d822343537cea2aca8e512482093
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172547"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220536"
 ---
 # <a name="programmatic-focus-navigation"></a>프로그래밍 방식 포커스 탐색
 

@@ -3,7 +3,7 @@ description: 앱에서 타이밍, 감속, 방향 및 무게와 같은 흐름 동
 title: 실제 동작-Windows 앱의 애니메이션
 label: Motion in practice
 template: detail.hbs
-ms.date: 10/02/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: stmoy
@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 8604d925ffefc96cd74726909afab6e2016cce76
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: cebc072a7b358aedfdd2320fa47f238712d7ee92
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89054533"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220406"
 ---
 # <a name="bringing-it-together"></a>함께 가져오기
 
@@ -68,7 +68,7 @@ Slide down 150px: 150ms; 감속/가속: 기본 <b>방향으로 뒤로</b> 이동
     :::column-end:::
 :::row-end:::
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 <table>
 <tr>
@@ -94,7 +94,7 @@ Slide down 150px: 150ms; 감속/가속: 기본 <b>방향으로 뒤로</b> 이동
 - [UIElement](/uwp/api/windows.ui.xaml.uielement)
   - **불투명도**
   - **회전**
-  - **크기 조정**
+  - **규모**
   - **변환**
 
 - [Border](/uwp/api/windows.ui.xaml.controls.border), [ContentPresenter](/uwp/api/windows.ui.xaml.controls.contentpresenter)또는 [Panel](/uwp/api/windows.ui.xaml.controls.panel)
@@ -131,7 +131,7 @@ public double OpaqueIfEnabled(bool IsEnabled)
 }
 ```
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 - [동작 개요](index.md)
 - [타이밍 및 감속](timing-and-easing.md)

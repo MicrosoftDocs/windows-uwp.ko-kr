@@ -1,19 +1,19 @@
 ---
 Description: 서로 다른 운영 체제를 대상으로 하는 패키지를 제공한 경우 다른 대상 운영 체제에 대 한 매장 목록의 일부를 사용자 지정할 수 있습니다.
-title: 플랫폼별 저장소 목록 만들기
+title: 플랫폼별 스토어 목록 만들기
 ms.assetid: 5BE66BE2-669C-49E0-8915-60F1027EF94A
-ms.date: 10/31/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 사용자 지정, 목록, 설명, 이전
 ms.localizationpriority: medium
-ms.openlocfilehash: 475526662737eaa5b95267e36016e342c6652a89
-ms.sourcegitcommit: 96b7be654a0922eeb421b5fa51ebfc586abe74fe
+ms.openlocfilehash: b0008095ac027a1ef1d17b655610a3ad50a6596b
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84945965"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220506"
 ---
-# <a name="create-platform-specific-store-listings"></a>플랫폼별 저장소 목록 만들기
+# <a name="create-platform-specific-store-listings"></a>플랫폼별 스토어 목록 만들기
 
 
 이전에 게시 된 앱에 서로 다른 운영 체제를 대상으로 하는 패키지가 있는 경우 이전 OS 버전 (Windows 8.x 또는 이전 및/또는 Windows Phone .x 이전 버전)에서 고객을 위해 스토어의 일부를 사용자 지정 하는 옵션이 있습니다. 

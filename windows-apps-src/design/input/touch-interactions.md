@@ -5,15 +5,15 @@ ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
 template: detail.hbs
 keywords: 터치, 포인터, 입력, 사용자 상호 작용
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 537d5aa08f61471c43ca8a965369bdd9dcdee7d3
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 14be47fa701742c73048e70c0842cb421c52a7e5
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165753"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220516"
 ---
 # <a name="touch-interactions"></a>터치 조작
 
@@ -192,7 +192,7 @@ Finger 및 핸드 폐색은 다음을 통해 방지할 수 있습니다.
 
 UWP에서 지 원하는 기본 터치 제스처 집합은 다음과 같습니다.
 
-| 이름           | 유형                 | Description                                                                            |
+| 이름           | Type                 | 설명                                                                            |
 |----------------|----------------------|----------------------------------------------------------------------------------------|
 | 탭            | 정적 제스처       | 한 손가락을 화면에 터치 하 고 리프트 합니다.                                            |
 | 길게 누르기 | 정적 제스처       | 한 손가락은 화면에 접촉 하 여 제자리에 유지 됩니다.                                      |
@@ -222,7 +222,7 @@ For more info about gestures, manipulations, and interactions, see [Custom user 
 
 다음은 포인터 이벤트 목록과 관련 이벤트 인수입니다.
 
-| 이벤트 또는 클래스                                                       | Description                                                   |
+| 이벤트 또는 클래스                                                       | 설명                                                   |
 |----------------------------------------------------------------------|---------------------------------------------------------------|
 | [**PointerPressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed)             | 단일 손가락이 화면에 닿을 때 발생 합니다.               |
 | [**PointerReleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased)           | 동일한 터치 접점이 리프트 될 때 발생 합니다.                |
@@ -419,7 +419,7 @@ End Sub
 
 다음은 조작 이벤트 및 관련 이벤트 인수의 목록입니다.
 
-| 이벤트 또는 클래스                                                                                               | Description                                                                                                                               |
+| 이벤트 또는 클래스                                                                                               | 설명                                                                                                                               |
 |--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | [**System.windows.uielement.manipulationstarting> 이벤트**](/uwp/api/windows.ui.xaml.uielement.manipulationstarting)                                   | 조작 프로세서가 처음으로 만들어지면 발생합니다.                                                                                  |
 | [**System.windows.uielement.manipulationstarted> 이벤트**](/uwp/api/windows.ui.xaml.uielement.manipulationstarted)                                     | 입력 장치가 [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement)에서 조작을 시작할 때 발생 합니다.                                            |

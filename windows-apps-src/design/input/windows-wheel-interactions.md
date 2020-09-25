@@ -4,16 +4,16 @@ title: Surface Dial 조작
 label: Surface Dial interactions
 template: detail.hbs
 keywords: Surface Dial, Windows 휠, RadialController, 방사형 컨트롤러, 사용자 조작, 입력
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
-ms.openlocfilehash: b79fd57ddd089542de83e04450c768654df2f78f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e9a619fc58b1b84755e33fd36ebacd99f98d6b7f
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165847"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220416"
 ---
 # <a name="surface-dial-interactions"></a>Surface Dial 조작
 

@@ -5,15 +5,15 @@ ms.assetid: 58F5F7AC-6A4B-45FC-8C2A-942730FD7B74
 label: Custom text input
 template: detail.hbs
 keywords: 키보드, 텍스트, 핵심 텍스트, 사용자 지정 텍스트, 텍스트 서비스 프레임 워크, 입력, 사용자 상호 작용
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8cde343a77c41a9bb833a7484610e1c324916f8c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8a6183dcc690a8fe3b9d13cfa0e471f41f04ff30
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160147"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220576"
 ---
 # <a name="custom-text-input"></a>사용자 지정 텍스트 입력
 

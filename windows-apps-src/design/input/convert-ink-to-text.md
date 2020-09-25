@@ -5,15 +5,15 @@ ms.assetid: C2F3F3CE-737F-4652-98B7-5278A462F9D3
 label: Recognize Windows Ink strokes as text
 template: detail.hbs
 keywords: Windows Ink, Windows Ink, DirectInk, InkPresenter, InkCanvas, 필기 인식, 사용자 조작, 입력
-ms.date: 02/08/2017
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: bcbb665b2e5920ae4a85cf374d30c3c6a005b1ab
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 66b5303d65e1fefbf3eb8a156ce4ca4c10afda96
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160107"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220566"
 ---
 # <a name="recognize-windows-ink-strokes-as-text-and-shapes"></a>Windows Ink 스트로크를 텍스트 및 셰이프로 인식
 
