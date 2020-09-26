@@ -1,17 +1,17 @@
 ---
 title: Bluetooth 개발자 FAQ
 description: 이 문서에는 UWP bluetooth Api와 관련 하 여 자주 묻는 질문에 대 한 답변이 포함 되어 있습니다.
-ms.date: 02/08/2017
+ms.date: 09/25/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: e7dee32d-3756-430d-a026-32c1ee288a85
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d41e49f599e1fe5e835443f7c8cb732e625491e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1a5ff129afcee21b0b1b41212fb900235d5b21b4
+ms.sourcegitcommit: 662fcfdc08b050947e289a57520a2f99fad1a620
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168597"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353723"
 ---
 # <a name="bluetooth-developer-faq"></a>Bluetooth 개발자 FAQ
 
@@ -76,10 +76,12 @@ Bluetooth RFCOMM (클래식)를 활용 하는 경우 장치를 사용 하기 전
 
 ## <a name="can-i-access-these-apis-from-win32"></a>Win32에서 이러한 Api에 액세스할 수 있나요?
 
-예, 이러한 모든 Api가 작동 합니다. 이 블로그에서는 [데스크톱 응용 프로그램에서 Windows api](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/)를 호출 하는 방법을 자세히 설명 합니다. 
-## <a name="is-this-functionality-supposed-to-exist-on--insert-sku-here-"></a>여기에이 기능이 *삽입 된 SKU*
+예, 이러한 모든 Api가 작동 합니다. 이 블로그에서는 [데스크톱 응용 프로그램에서 Windows api](https://blogs.windows.com/buildingapps/2017/01/25/calling-windows-10-apis-desktop-application/)를 호출 하는 방법을 자세히 설명 합니다.
 
-**BLUETOOTH le**: 예, 모든 기능을 OneCore 하 고 작동 하는 bluetooth LE 스택이 있는 최신 장치에서 사용할 수 있어야 합니다. 
-> 주의: 주변 역할은 하드웨어에 종속 되며 일부 Windows Server 버전은 Bluetooth를 지원 하지 않습니다. 
+## <a name="is-this-functionality-supposed-to-exist-on-a-specific-sku"></a>이 기능이 특정 SKU에 존재 해야 하나요?
+
+**BLUETOOTH le**: 예, 모든 기능을 OneCore 하 고 작동 하는 bluetooth LE 스택이 있는 최신 장치에서 사용할 수 있어야 합니다.
+
+> 주의: 주변 역할은 하드웨어에 종속 되며 일부 Windows Server 버전은 Bluetooth를 지원 하지 않습니다.
 
 **BLUETOOTH BR/edr (클래식)**: 일부 변형이 있지만 대부분은 프로필 수준 지원이 매우 유사 합니다. [RFCOMM](send-or-receive-files-with-rfcomm.md) 에 대 한 문서 및 [PC](https://support.microsoft.com/help/10568/windows-10-supported-bluetooth-profiles) 및 [휴대폰](https://support.microsoft.com/help/10569/windows-10-mobile-supported-bluetooth-profiles) 에 대해 지원 되는 이러한 프로필 문서를 참조 하세요.

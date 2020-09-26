@@ -5,12 +5,12 @@ ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fd5f2b76af856dd66e2dfd0ee2b3e429199e6a19
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2d4ec2c3d849833b4a1673c4a4f425f32c42d00f
+ms.sourcegitcommit: 662fcfdc08b050947e289a57520a2f99fad1a620
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172287"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353763"
 ---
 # <a name="bluetooth-gatt-client"></a>Bluetooth GATT 클라이언트
 
@@ -109,6 +109,14 @@ bluetoothLeDevice.Dispose();
 ```
 
 앱에서 다시 장치에 액세스 해야 하는 경우 장치 개체를 다시 만들고 특성에 액세스 하기만 하면 (다음 섹션에서 설명) 필요한 경우 OS가 다시 연결 됩니다. 장치가 근처에 있으면 장치에 대 한 액세스 권한을 얻게 됩니다. 그렇지 않으면 DeviceUnreachable 수 없음 오류가 반환 됩니다.  
+
+> [!NOTE]
+> 이 메서드를 호출 하 여 [BluetoothLEDevice](/uwp/api/windows.devices.bluetooth.bluetoothledevice) 개체를 만드는 경우에는 연결을 시작 하지 않아도 됩니다. 연결을 시작 하려면 [Gattsession](/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattsession.maintainconnection) 을로 설정 `true` 하거나 **BluetoothLEDevice**에서 캐시 되지 않은 service discovery 메서드를 호출 하거나 장치에 대해 읽기/쓰기 작업을 수행 합니다.
+>
+> - **MaintainConnection** 가 true로 설정 된 경우 시스템은 연결을 무기한 대기 하 고 장치를 사용할 수 있을 때 연결 됩니다. **Gattsession** 는 속성 이므로 응용 프로그램이 대기 하는 것은 없습니다.
+> - GATT의 서비스 검색 및 읽기/쓰기 작업의 경우 시스템은 유한 하지만 변수 시간을 기다립니다. 순간부터 분의 중요 한 항목입니다. 스택에서 트래픽을은 하 고 요청을 큐에 대기 하는 방법을 결정 합니다. 보류 중인 다른 요청이 없고 원격 장치에 연결할 수 없는 경우 시스템은 시간이 초과 될 때까지 7 초 동안 대기 합니다. 보류 중인 다른 요청이 있는 경우 큐의 각 요청을 처리 하는 데 7 초 정도 소요 될 수 있으므로 나중에 큐의 끝 부분을 향해 대기 시간이 길어집니다.
+>
+> 현재는 연결 프로세스를 취소할 수 없습니다.
 
 ## <a name="enumerating-supported-services-and-characteristics"></a>지원 되는 서비스 및 특성 열거
 
