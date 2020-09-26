@@ -5,14 +5,15 @@ ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
 ms.date: 03/06/2020
 ms.topic: article
+ms.custom: contperfq1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bd910c42743577a83491386f5c667dd09722ba9b
-ms.sourcegitcommit: 8171695ade04a762f19723f0b88e46e407375800
+ms.openlocfilehash: 22d891253074387223dba1ad9084a2105cf530dd
+ms.sourcegitcommit: 651a6b9769fad1736ab16e2a4e423258889b248e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2020
-ms.locfileid: "89494379"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91366889"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요 
 
@@ -33,50 +34,7 @@ WNS (Windows Push Notification Services)를 사용 하면 타사 개발자가 �
 
 ## <a name="registering-your-app-and-receiving-the-credentials-for-your-cloud-service"></a>앱 등록 및 클라우드 서비스에 대 한 자격 증명 수신
 
-WNS를 사용 하 여 알림을 보내려면 먼저 스토어 대시보드에 앱을 등록 해야 합니다. 
-
-각 앱에는 클라우드 서비스에 대 한 자체 자격 증명 집합이 있습니다. 이러한 자격 증명을 사용 하 여 다른 앱에 알림을 보낼 수는 없습니다.
-
-### <a name="step-1-register-your-app-with-the-dashboard"></a>1 단계: 대시보드에 앱 등록
-
-WNS를 통해 알림을 보내려면 앱을 파트너 센터 대시보드에 등록 해야 합니다. 그러면 클라우드 서비스에서 WNS로 인증 하는 데 사용할 앱에 대 한 자격 증명을 제공 합니다. 이러한 자격 증명은 패키지 SID (보안 식별자) 및 비밀 키로 구성 됩니다. 이 등록을 수행 하려면 [파트너 센터](https://partner.microsoft.com/dashboard)에 로그인 합니다. 앱을 만든 후 자격 증명을 검색 하는 방법에 대 한 [제품 관리-WNS/MPNS](https://apps.dev.microsoft.com/) for instrunctions을 참조 하세요 (live services 솔루션을 사용 하려는 경우이 페이지의 **live services 사이트** 링크를 따름).
-
-등록하려면 다음을 수행합니다.
-1.    파트너 센터의 Windows 스토어 앱 페이지로 이동 하 여 개인 Microsoft 계정 (예: johndoe@outlook.com ,)로 로그인 janedoe@xboxlive.com 합니다.
-2.    로그인 했으면 대시보드 링크를 클릭 합니다.
-3.    대시보드에서 새 앱 만들기를 선택 합니다.
-
-![wns 앱 등록](../images/wns-create-new-app.png)
-
-4.    앱 이름을 예약 하 여 앱을 만듭니다. 앱에 고유한 이름을 제공 합니다. 이름을 입력 하 고 제품 이름 예약 단추를 클릭 합니다. 이름을 사용할 수 있는 경우 앱 용으로 예약 되어 있습니다. 앱 이름을 성공적으로 예약한 후에는 다른 세부 정보를 수정할 수 있게 됩니다.
-
-![wns 예약 제품 이름](../images/wns-reserve-poduct-name.png)
- 
-### <a name="step-2-obtain-the-identity-values-and-credentials-for-your-app"></a>2 단계: 앱에 대 한 id 값 및 자격 증명 가져오기
-
-앱의 이름을 예약 하면 Windows 스토어에서 연결 된 자격 증명을 만들었습니다. 또한 응용 프로그램의 매니페스트 파일 (appxmanifest.xml)에 있어야 하는 연결 된 id 값 (이름 및 게시자)을 할당 했습니다. Windows 스토어에 앱을 이미 업로드 한 경우 이러한 값이 매니페스트에 자동으로 추가 됩니다. 앱을 업로드 하지 않은 경우에는 매니페스트에 id 값을 수동으로 추가 해야 합니다.
-
-1.    제품 관리 드롭다운 화살표를 선택 합니다.
-
-![wns 제품 관리](../images/wns-product-management.png)
-
-2.    제품 관리 드롭다운에서 WNS/MPNS 링크를 선택 합니다.
-
-![wns 제품 관리 continuted](../images/wns-product-management2.png)
- 
-3.    WNS/MPNS 페이지에서 Windows 푸시 Notification Services (WNS) 및 Microsoft Azure Mobile Services 섹션 아래에 있는 라이브 서비스 사이트 링크를 클릭 합니다.
-
-![wns 라이브 서비스](../images/wns-live-services-page.png)
- 
-4.    응용 프로그램 등록 포털 (이전에는 Live Services 페이지) 페이지에서 앱의 매니페스트에 포함할 identity 요소를 제공 합니다. 여기에는 앱 암호, 패키지 보안 식별자 및 응용 프로그램 Id가 포함 됩니다. 텍스트 편집기에서 매니페스트를 열고 페이지가 지시 하는 대로 해당 요소를 추가 합니다.    
-
-> [!NOTE]
-> AAD 계정으로 로그인 하는 경우 앱을 등록 한 Microsoft 계정 소유자에 게 문의 하 여 연결 된 앱 암호를 가져와야 합니다. 이 연락처를 찾는 데 도움이 필요 하면 화면의 오른쪽 위에 있는 기어를 클릭 한 다음 개발자 설정을 클릭 하면 해당 Microsoft 계정으로 앱을 만든 메일 주소가 표시 됩니다.
- 
-5.    클라우드 서버에 SID 및 클라이언트 암호를 업로드 합니다.
-
-> [!Important]
-> 클라우드 서비스에서 SID 및 클라이언트 암호를 안전 하 게 저장 하 고 액세스 해야 합니다. 이 정보를 공개 하거나 도용 하면 공격자가 권한 또는 정보 없이 사용자에 게 알림을 보낼 수 있습니다.
+WNS를 사용 하 여 알림을 보내려면 [여기](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-windows-store-dotnet-get-started-wns-push-notification)에 설명 된 대로 스토어 대시보드에 앱을 등록 해야 합니다.
 
 ## <a name="requesting-a-notification-channel"></a>알림 채널 요청
 

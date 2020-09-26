@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: 152254e5b4c0bfb8aec1e88a8d370863df88fe85
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ecb35a262f02576f0425460c8e27ce0016a08d1a
+ms.sourcegitcommit: 651a6b9769fad1736ab16e2a4e423258889b248e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170887"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91366899"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
@@ -83,8 +83,6 @@ Windows Hello는 장치에서 개별 사용자를 인식할 수 있는 강력한
 Windows Hello가 작동 하는 방식에 대 한 기본적인 내용을 이해 했으므로 응용 프로그램에서 구현 하는 방법을 살펴보겠습니다.
 
 Windows Hello를 사용 하 여 구현할 수 있는 다양 한 시나리오가 있습니다. 예를 들어 장치에서 앱에 로그온 하면 됩니다. 다른 일반적인 시나리오는 서비스에 대해 인증 하는 것입니다. 로그온 이름과 암호를 사용 하는 대신 Windows Hello를 사용 합니다. 다음 장에서는 Windows Hello를 사용 하 여 서비스에 인증 하는 방법과 기존 사용자 이름/암호 시스템에서 Windows Hello 시스템으로 변환 하는 방법을 비롯 하 여 몇 가지 시나리오를 구현 하는 방법을 설명 합니다.
-
-마지막으로, Windows Hello Api는 앱이 사용 되는 운영 체제와 일치 하는 Windows 10 SDK를 사용 해야 합니다. 즉, Windows 10에 배포 되는 앱에 10.0.10240 Windows SDK를 사용 해야 하며, Windows 10 버전 1511에 배포할 앱에 대해 10.0.10586를 사용 해야 합니다.
 
 ## <a name="3-implementing-windows-hello"></a>3 Windows Hello 구현
 
