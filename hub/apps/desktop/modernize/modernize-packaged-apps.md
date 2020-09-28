@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱 패키지에 패키징된 데스크톱 애플리케이션에서 Windows 10 사용자를 위한 최신 환경을 추가하는 방법을 알아봅니다.
+description: Windows 앱 패키지에 패키징된 데스크톱 애플리케이션에서 Windows 10 사용자를 위한 최신 환경을 추가하는 방법을 알아봅니다.
 title: 패키지된 데스크톱 앱 현대화
 ms.date: 04/22/2019
 ms.topic: article
@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d1ce2e7dc434558ac1efd52f6def99d63b38c57e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: adcf1e26ba5ebd2d4fb3b901e27e49da4b6d89dd
+ms.sourcegitcommit: 5d7168ebc9f43aa13051446aff45a46600e6aafe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161517"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90783045"
 ---
 # <a name="features-that-require-package-identity"></a>패키지 ID가 필요한 기능
 
@@ -33,6 +33,12 @@ ms.locfileid: "89161517"
 애플리케이션을 시스템에 통합해야 하는 경우(예: 방화벽 규칙 설정) 애플리케이션의 패키지 매니페스트에 설명해 두면 시스템이 나머지 과정을 알아서 처리합니다. 이런 작업 대부분에서 코드를 작성할 필요가 없습니다. 매니페스트의 몇몇 XML을 사용하여 사용자가 로그인할 때 프로세스를 시작하고, 파일 탐색기에 애플리케이션을 통합하고, 다른 앱에 표시되는 인쇄 대상 목록에 애플리케이션을 추가하는 등 다양한 작업을 수행할 수 있습니다.
 
 자세한 내용은 [데스크톱 앱을 패키지 확장과 통합](desktop-to-uwp-extensions.md)을 참조하세요.
+
+## <a name="get-activation-info-for-packaged-apps"></a>패키지된 앱에 대한 활성화 정보 가져오기
+
+Windows 10, 버전 1809부터 패키지된 데스크톱 앱은 시작 시 특정 종류의 활성화 정보를 검색할 수 있습니다. 예를 들어, 파일 열기, 대화형 알림 클릭 또는 프로토콜 사용에서 앱 활성화와 관련된 정보를 얻을 수 있습니다.
+
+자세한 내용은 [패키지된 앱에 대한 활성화 정보 가져오기](get-activation-info-for-packaged-apps.md)를 참조하세요.
 
 ## <a name="extend-with-uwp-components"></a>UWP 구성 요소를 사용하여 확장
 

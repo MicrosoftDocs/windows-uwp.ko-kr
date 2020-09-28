@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: e58315ed70b889e1369e8c13a563f320c0ca1948
-ms.sourcegitcommit: a222ad0e2d97e35a60000c473808c678395376ee
+ms.openlocfilehash: 2b0d6bb305490e05c2670f0e0a326601c51a8373
+ms.sourcegitcommit: 609441402c17d92e7bfac83a6056909bb235223c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89479083"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90837818"
 ---
 # <a name="call-windows-runtime-apis-in-desktop-apps"></a>데스크톱 앱에서 Windows 런타임 API 호출
 
@@ -23,18 +23,47 @@ UWP(유니버설 Windows 플랫폼) API를 사용하여 Windows 10 사용자를 
 
 일부 Windows 런타임 API는 [패키지 ID](modernize-packaged-apps.md)가 있는 데스크톱 앱에서만 지원됩니다. 자세한 내용은 [사용 가능한 Windows 런타임 API](desktop-to-uwp-supported-api.md)를 참조하세요.
 
-## <a name="set-up-your-project"></a>프로젝트 설정
+## <a name="modify-a-net-project-to-use-windows-runtime-apis"></a>Windows 런타임 API를 사용하도록 .NET 프로젝트 수정
 
-프로젝트에서 몇 가지를 변경해야 Windows 런타임 API를 사용할 수 있습니다.
+.NET 프로젝트에는 다음과 같은 몇 가지 옵션이 있습니다.
 
-### <a name="modify-a-net-project-to-use-windows-runtime-apis"></a>Windows 런타임 API를 사용하도록 .NET 프로젝트 수정
+* .NET 5 Preview 8부터 TFM(대상 프레임워크 모니커)을 프로젝트 파일에 추가하여 WinRT API에 액세스할 수 있습니다. 이 옵션은 Windows 10, 버전 1809 이상을 대상으로 하는 프로젝트에서 지원됩니다.
+* 이전 버전 .NET의 경우 `Microsoft.Windows.SDK.Contracts` NuGet 패키지를 설치하여 프로젝트에 필요한 모든 참조를 추가할 수 있습니다. 이 옵션은 Windows 10, 버전 1803 이상을 대상으로 하는 프로젝트에서 지원됩니다.
+* 프로젝트가 .NET 5 Preview 8 이상 버전을 다중 대상으로 하는 경우 두 옵션을 모두 사용하도록 프로젝트 파일을 구성할 수 있습니다.
 
-.NET 프로젝트에는 다음과 같은 두 가지 옵션이 있습니다.
+### <a name="net-5-preview-8-and-later-use-the-target-framework-moniker-option"></a>.NET 5 Preview 8 이상: 대상 프레임워크 모니커 옵션 사용 
 
-* 앱의 대상이 Windows 10 버전 1803 이상인 경우 필요한 모든 참조를 제공하는 NuGet 패키지를 설치할 수 있습니다.
-* 또는 참조를 수동으로 추가할 수 있습니다.
+이 옵션은 .NET 5 Preview 8(또는 이전 릴리스) 및 대상 Windows 10, 버전 1809 이상 OS 릴리스를 사용하는 프로젝트에서만 지원됩니다. 이 시나리오 대한 자세한 배경 정보는 [이 블로그 게시물](https://blogs.windows.com/windowsdeveloper/2020/09/03/calling-windows-apis-in-net5/)을 참조하세요.
 
-#### <a name="to-use-the-nuget-option"></a>NuGet 옵션을 사용하는 방법
+1. Visual Studio에서 프로젝트를 연 상태로 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **프로젝트 파일 편집**을 선택합니다. 프로젝트 파일은 다음과 유사하게 나타납니다.
+
+    ```csharp
+    <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+      <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <UseWindowsForms>true</UseWindowsForms>
+      </PropertyGroup>
+    </Project>
+    ```
+
+2. **TargetFramework** 요소의 값을 다음 문자열 중 하나로 바꿉니다.
+
+    * **net5.0-windows10.0.17763.0**: 앱이 Windows 10, 버전 1809를 대상으로 하는 경우 이 값을 사용합니다.
+    * **net5.0-windows10.0.18362.0**: 앱이 Windows 10, 버전 1903을 대상으로 하는 경우 이 값을 사용합니다.
+    * **net5.0-windows10.0.19041.0**: 앱이 Windows 10, 버전 2004를 대상으로 하는 경우 이 값을 사용합니다.
+
+    예를 들어, 다음 요소는 Windows 10, 버전 2004를 대상으로 하는 프로젝트를 위한 것입니다.
+
+    ```csharp
+    <TargetFramework>net5.0-windows10.0.19041.0</TargetFramework>
+    ```
+
+3. 변경 내용을 저장하고 프로젝트 파일을 닫습니다.
+
+### <a name="earlier-versions-of-net-install-the-microsoftwindowssdkcontracts-nuget-package"></a>이전 버전의 .NET: Microsoft.Windows.SDK.Contracts NuGet 패키지 설치
+
+앱이 .NET Core 3.x, .NET 5 Preview 7 이하 또는 .NET Framework를 사용하는 경우 이 옵션을 사용합니다. 이 옵션은 Windows 10, 버전 1803 이상 OS 릴리스를 대상으로 하는 프로젝트에서 지원됩니다.
 
 1. [패키지 참조](/nuget/consume-packages/package-references-in-project-files)를 사용하도록 설정합니다.
 
@@ -47,34 +76,74 @@ UWP(유니버설 Windows 플랫폼) API를 사용하여 Windows 10 사용자를 
 
 4. `Microsoft.Windows.SDK.Contracts` 패키지가 검색되면 **NuGet 패키지 관리자**의 오른쪽 창에서 대상으로 지정할 Windows 10 버전에 따라 설치하려는 패키지의 **버전**을 선택합니다.
 
+    * **10.0.19041.xxxx**: Windows 10, 버전 2004가 대상이면 이 버전을 선택합니다.
     * **10.0.18362.xxxx**: Windows 10 버전 1903이 대상이면 이 버전을 선택합니다.
     * **10.0.17763.xxxx**: Windows 10 버전 1809가 대상이면 이 버전을 선택합니다.
     * **10.0.17134.xxxx**: Windows 10 버전 1803이 대상이면 이 버전을 선택합니다.
 
 5. **설치**를 클릭합니다.
 
-#### <a name="to-add-the-required-references-manually"></a>필요한 참조를 수동으로 추가하는 방법
+### <a name="configure-projects-that-multi-target-different-versions-of-net"></a>여러 버전의 .NET을 다중 대상으로 하는 프로젝트 구성
 
-1. **참조 관리자** 대화 상자를 열고 **찾아보기** 단추를 선택한 다음, **모든 파일**을 선택합니다.
+프로젝트가 .NET 5 Preview 8 이상 및 이전 버전(.NET Core 3.x 및 .NET Framework 포함)을 다중 대상으로 하는 경우, .NET 5 Preview 8 이상에 대해서는 WinRT API 참조에서 자동으로 끌어오도록 대상 프레임워크 모니커를 사용하고 이전 버전에 대해서는 `Microsoft.Windows.SDK.Contracts` NuGet 패키지를 사용하도록 프로젝트 파일을 구성할 수 있습니다.
 
-    ![참조 추가 대화 상자](images/desktop-to-uwp/browse-references.png)
+1. Visual Studio에서 프로젝트를 연 상태로 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **프로젝트 파일 편집**을 선택합니다. 다음 예제에서는 .NET Core 3.1을 사용하는 앱에 대한 프로젝트 파일을 보여 줍니다.
 
-2. 다음 파일에 대한 참조를 추가합니다.
+    ```csharp
+    <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+      <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <UseWindowsForms>true</UseWindowsForms>
+      </PropertyGroup>
+    </Project>
+    ```
 
-    |파일|위치|
-    |--|--|
-    |System.Runtime.WindowsRuntime.dll|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-    |System.Runtime.WindowsRuntime.UI.Xaml.dll|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-    |System.Runtime.InteropServices.WindowsRuntime.dll|C:\Windows\Microsoft.NET\Framework\v4.0.30319|
-    |windows.winmd|C:\Program Files (x86)\Windows Kits\10\UnionMetadata\\<*sdk version*>\Facade|
-    |Windows.Foundation.UniversalApiContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\\<*sdk version*>\Windows.Foundation.UniversalApiContract\\<*version*>|
-    |Windows.Foundation.FoundationContract.winmd|C:\Program Files (x86)\Windows Kits\10\References\\<*sdk version*>\Windows.Foundation.FoundationContract\\<*version*>|
+2. 파일의 **TargetFramework** 요소를 **TargetFrameworks** 요소(복수형)로 바꿉니다. 이 요소에서 대상으로 지정할 .NET의 모든 버전에 대한 대상 프레임워크 모니커는 세미콜론으로 구분하여 지정합니다. 
 
-3. **속성** 창에서 각 *.winmd* 파일의 **로컬 복사** 필드를 **False**로 설정합니다.
+    * .NET 5 Preview 8 이상에서는 다음 대상 프레임워크 모니커 중 하나를 사용합니다.
+        * **net5.0-windows10.0.17763.0**: 앱이 Windows 10, 버전 1809를 대상으로 하는 경우 이 값을 사용합니다.
+        * **net5.0-windows10.0.18362.0**: 앱이 Windows 10, 버전 1903을 대상으로 하는 경우 이 값을 사용합니다.
+        * **net5.0-windows10.0.19041.0**: 앱이 Windows 10, 버전 2004를 대상으로 하는 경우 이 값을 사용합니다.
+    * .NET Core 3.x의 경우 **netcoreapp3.0** 또는 **netcoreapp3.1**을 사용합니다.
+    * .NET Framework의 경우 **net46**을 사용합니다.
 
-    ![로컬 복사 필드](images/desktop-to-uwp/copy-local-field.png)
+    다음 예제에서는 .NET Core 3.1 및 .NET 5 Preview 8(Windows 10, 버전 2004)을 다중 대상으로 하는 방법을 보여 줍니다.
 
-### <a name="modify-a-c-win32-project-to-use-windows-runtime-apis"></a>Windows 런타임 API를 사용하도록 C++ Win32 프로젝트 수정
+    ```csharp
+    <TargetFrameworks>netcoreapp3.1;net5.0-windows10.0.19041.0</TargetFrameworks>
+    ```
+
+3. **PropertyGroup** 요소 뒤에 모든 버전의 .NET Core 3.x 또는 앱이 대상으로 하는 .NET Framework용 `Microsoft.Windows.SDK.Contracts` NuGet 패키지를 설치하는 조건문이 포함된 **PackageReference** 요소를 추가합니다. **PackageReference** 요소는 **ItemGroup** 요소의 하위 요소여야 합니다. 다음 예제에서는 .NET Core 3.1에 대해 이 작업을 수행하는 방법을 보여 줍니다.
+
+    ```csharp
+    <ItemGroup>
+      <PackageReference Condition="'$(TargetFramework)' == 'netcoreapp3.1'"
+                        Include="Microsoft.Windows.SDK.Contracts"
+                        Version="10.0.19041.0" />
+    </ItemGroup>
+    ```
+
+    완료되면 프로젝트 파일은 다음과 유사하게 나타납니다.
+
+    ```csharp
+    <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+      <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFrameworks>netcoreapp3.1;net5.0-windows10.0.19041.0</TargetFrameworks>
+        <UseWPF>true</UseWPF>
+      </PropertyGroup>
+      <ItemGroup>
+        <PackageReference Condition="'$(TargetFramework)' == 'netcoreapp3.1'"
+                         Include="Microsoft.Windows.SDK.Contracts"
+                         Version="10.0.19041.0" />
+      </ItemGroup>
+    </Project>
+    ```
+
+4. 변경 내용을 저장하고 프로젝트 파일을 닫습니다.
+
+## <a name="modify-a-c-win32-project-to-use-windows-runtime-apis"></a>Windows 런타임 API를 사용하도록 C++ Win32 프로젝트 수정
 
 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)를 사용하여 Windows 런타임 API를 사용합니다. C++/WinRT는 헤더 파일 기반 라이브러리로 구현된 WinRT(Windows 런타임) API용 최신의 완전한 표준 C++17 언어 프로젝션이며, 최신 Windows API에 최고 수준의 액세스를 제공하도록 설계되었습니다.
 

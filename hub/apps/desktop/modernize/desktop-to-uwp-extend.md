@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 29064390e4e198d1220d40ff5ce58a63ea41e29a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d0a1d1b7685ae76c26c94fa104b6c0ff6334364d
+ms.sourcegitcommit: 609441402c17d92e7bfac83a6056909bb235223c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172787"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90837828"
 ---
 # <a name="extend-your-desktop-app-with-modern-uwp-components"></a>최신 UWP 구성 요소로 데스크톱 앱 확장
 
@@ -43,7 +43,7 @@ ms.locfileid: "89172787"
 
 데스크톱 애플리케이션에 Windows 런타임 API를 호출하는 데 필요한 파일에 대한 참조가 있는지 확인합니다.
 
-이렇게 하려면 [프로젝트 설정](desktop-to-uwp-enhance.md#set-up-your-project) 섹션을 참조하세요.
+이렇게 하려면 [데스크톱 앱에서 Windows 런타임 API 호출](desktop-to-uwp-enhance.md)을 참조하세요.
 
 ### <a name="add-a-uwp-project"></a>UWP 프로젝트 추가
 
@@ -51,15 +51,15 @@ ms.locfileid: "89172787"
 
 이는 최신 XAML UI를 빌드하거나 UWP 프로세스 내에서만 실행되는 AP를 사용할 위치입니다.
 
-![UWP 프로젝트](images/desktop-to-uwp/add-uwp-project-to-solution.png)
+![새 프로젝트 추가](images/desktop-to-uwp/add-uwp-project-to-solution.png)
 
 패키징 프로젝트에서 **애플리케이션** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다.
 
-![UWP 프로젝트 참조](images/desktop-to-uwp/add-uwp-project-reference.png)
+![추가 참조](images/desktop-to-uwp/add-uwp-project-reference.png)
 
 그 다음 UWP 프로젝트에 대한 참조를 추가합니다.
 
-![UWP 프로젝트 참조](images/desktop-to-uwp/choose-uwp-project.png)
+![UWP 프로젝트 선택](images/desktop-to-uwp/choose-uwp-project.png)
 
 솔루션은 다음과 같이 보입니다.
 
@@ -471,7 +471,7 @@ public sealed class SiteVerifier : IBackgroundTask
 
 백그라운드 작업을 구현하는 Windows 런타임 구성 요소의 정규화된 클래스 이름을 제공합니다.
 
-![Timer 속성](images/desktop-to-uwp/background-task-entry-point.png)
+![진입점 지정](images/desktop-to-uwp/background-task-entry-point.png)
 
 <a id="register-background-task"></a>
 

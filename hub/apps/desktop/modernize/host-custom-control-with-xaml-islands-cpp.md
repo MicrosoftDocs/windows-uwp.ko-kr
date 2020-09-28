@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: d61abe8b59f916ed56c1fefe0bda4b9f25b673a4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 82eaee6b29336559455a86dfdba3debc288babbb
+ms.sourcegitcommit: fd6ca4e9426a5fe46138012d1fecf56f9f621a3f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173727"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90825276"
 ---
 # <a name="host-a-custom-uwp-control-in-a-c-win32-app"></a>C++ Win32 앱에서 사용자 지정 UWP 컨트롤 호스트
 
@@ -176,7 +176,7 @@ ms.locfileid: "89173727"
 
 ### <a name="define-a-xamlapplication-class"></a>XamlApplication 클래스 정의
 
-그런 다음, **MyUWPApp** 프로젝트의 기본 **App** 클래스를 수정하여 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생하도록 합니다. 이 클래스는 [IXamlMetadaraProvider](/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider) 인터페이스를 지원합니다. 이 인터페이스를 통해 앱은 런타임 시 애플리케이션의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 컨트롤에 대한 메타데이터를 검색하고 로드할 수 있습니다. 이 클래스는 또한 현재 스레드에 대한 UWP XAML 프레임워크를 초기화합니다. 이 연습 뒷부분에서는 이 클래스의 인스턴스를 만들기 위해 데스크톱 프로젝트를 업데이트합니다.
+그런 다음, **MyUWPApp** 프로젝트의 기본 **App** 클래스를 수정하여 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생하도록 합니다. 이 클래스는 [IXamlMetadataProvider](/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider) 인터페이스를 지원합니다. 이 인터페이스를 통해 앱은 런타임 시 애플리케이션의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 컨트롤에 대한 메타데이터를 검색하고 로드할 수 있습니다. 이 클래스는 또한 현재 스레드에 대한 UWP XAML 프레임워크를 초기화합니다. 이 연습 뒷부분에서는 이 클래스의 인스턴스를 만들기 위해 데스크톱 프로젝트를 업데이트합니다.
 
   > [!NOTE]
   > XAML Islands를 사용하는 각 솔루션에는 `XamlApplication` 개체를 정의하는 프로젝트가 하나만 포함될 수 있습니다. 앱의 모든 사용자 지정 UWP XAML 컨트롤은 동일한 `XamlApplication` 개체를 공유합니다. 
@@ -284,12 +284,12 @@ ms.locfileid: "89173727"
             }
         private:
             bool _contentLoaded{ false };
-            std::shared_ptr<XamlMetaDataProvider> _appProvider;
-            std::shared_ptr<XamlMetaDataProvider> AppProvider()
+            winrt::com_ptr<XamlMetaDataProvider> _appProvider;
+            winrt::com_ptr<XamlMetaDataProvider> AppProvider()
             {
                 if (!_appProvider)
                 {
-                    _appProvider = std::make_shared<XamlMetaDataProvider>();
+                    _appProvider = winrt::make_self<XamlMetaDataProvider>();
                 }
                 return _appProvider;
             }
@@ -561,7 +561,7 @@ ms.locfileid: "89173727"
     xmlns:winui="using:Microsoft.UI.Xaml.Controls"
     ```
 
-5. 동일한 파일에서 `<winui:RatingControl />` 요소를 `<StackPanel>`의 자식으로 추가하고 변경 내용을 저장합니다. 이 요소는 [RatingControl](WinUI 라이브러리에서 https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.ratingcontrol 클래스)의 인스턴스를 추가합니다. 이 요소를 추가한 후 `<StackPanel>`은 다음과 같이 표시됩니다.
+5. 동일한 파일에서 `<winui:RatingControl />` 요소를 `<StackPanel>`의 자식으로 추가하고 변경 내용을 저장합니다. 이 요소는 WinUI 라이브러리에서 [RatingControl](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.ratingcontrol) 클래스의 인스턴스를 추가합니다. 이 요소를 추가한 후 `<StackPanel>`은 다음과 같이 표시됩니다.
 
     ```xml
     <StackPanel HorizontalAlignment="Center" Spacing="10" 
