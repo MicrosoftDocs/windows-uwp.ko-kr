@@ -3,17 +3,17 @@ description: 타사 개발자는 WNS(Windows 푸시 알림 서비스)를 사용�
 title: WNS(Windows 푸시 알림 서비스) 개요
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
-ms.date: 03/06/2020
+ms.date: 09/28/2020
 ms.topic: article
 ms.custom: contperfq1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 22d891253074387223dba1ad9084a2105cf530dd
-ms.sourcegitcommit: 651a6b9769fad1736ab16e2a4e423258889b248e
+ms.openlocfilehash: e2fc69f49308164307bc3c6c23479aae991d0ff7
+ms.sourcegitcommit: f46edb85d523a4a1f5006787d357cdc9d090aefe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91366889"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414853"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요 
 
