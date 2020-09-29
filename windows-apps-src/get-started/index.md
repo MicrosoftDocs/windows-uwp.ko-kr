@@ -5,12 +5,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: 시작, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 39f45b7604e71c4b57439f8c3e89548614758484
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: e832ac783c43058b24cb0d341d17ad52ff7dcc05
+ms.sourcegitcommit: 9940ed6431aadbd8d4e54ca23d8ae44d3a2d048d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "80614980"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91403888"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Windows 10 앱 시작
 
@@ -25,7 +25,7 @@ ms.locfileid: "80614980"
         <p style="margin-top: 0px; margin-bottom: 50px">Windows 10 및 유니버설 Windows 플랫폼에서는 모든 유형의 Windows 디바이스에서 작동하고 제대로 표시되는 앱을 빌드하거나, 최신 기능을 사용하여 기존 앱을 업데이트할 수 있습니다.</p>
         <br>
         <a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">Windows 앱이란?</a><br/>
-        <a href="//developer.microsoft.com/windows/apps/design">디자인 및 UI</a><br/>
+        <a href="https://docs.microsoft.com/windows/uwp/design/">디자인 및 UI</a><br/>
     :::column-end:::
     :::column:::
         <img src="https://docs.microsoft.com/media/illustrations/biztalk-host-integration-install-configure.svg" alt="Setup illustration" />
@@ -84,11 +84,11 @@ ms.locfileid: "80614980"
         <a href="https://github.com/Microsoft/WindowsTemplateStudio/">Windows Template Studio</a><br/>
         <a href="//docs.microsoft.com/windows/uwpcommunitytoolkit/">Windows 커뮤니티 도구 키트</a><br/>
         <a href="//developer.microsoft.com/windows/downloads/virtual-machines">가상 머신</a><br/>
-        <a href="//docs.microsoft.com/windows/wsl/about">Bash on Ubuntu on Windows</a>(Windows의 Ubuntu 기반 Bash)<br/>
+        <a href="//docs.microsoft.com/windows/wsl/about">Windows에서 Ubuntu의 Bash</a><br/>
     :::column-end:::
     :::column:::
         <h3 style="margin-top: 10px; margin-bottom: 0px">개발이 처음인가요?</h3>
-        <a href="//docs.microsoft.com/learn/browse/?products=windows&resource_type=module">Microsoft Learn의 Windows</a><br/>
+        <a href="//docs.microsoft.com/learn/browse/%3Fproducts=windows&resource_type=module">Microsoft Learn의 Windows</a><br/>
     :::column-end:::
     :::column:::
         <h3 style="margin-top: 10px; margin-bottom: 0px">관련 문서 탐색</h3>
