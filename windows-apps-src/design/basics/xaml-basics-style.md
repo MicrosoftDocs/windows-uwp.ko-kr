@@ -2,15 +2,15 @@
 title: 사용자 지정 스타일 만들기
 description: 이 자습서를 따라 사용자 지정 스타일 및 슬라이더 컨트롤을 만들어 XAML 앱의 UI를 사용자 지정하는 방법을 알아봅니다.
 keywords: XAML, UWP, 시작
-ms.date: 08/20/2020
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d3423e9d78e2519f2d3c9ad1fc2c0b099de0349
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1ff5df0d56d5be6b2cbb93814d01fed48a626797
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160777"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219096"
 ---
 # <a name="tutorial-create-custom-styles"></a>자습서: 사용자 지정 스타일 만들기
 

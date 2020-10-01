@@ -4,16 +4,16 @@ title: 사용자 지정 미디어 전송 컨트롤을 만드는 방법
 ms.assetid: 6643A108-A6EB-42BC-B800-22EABD7B731B
 label: Create custom media transport controls
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f5dd1a27cb02a33a8d760f4d902a42c6619ad796
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: fc68410a0e68d1c642057664bc9641669282bd7f
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160417"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219546"
 ---
 # <a name="create-custom-transport-controls"></a>사용자 지정 전송 컨트롤 만들기
 
@@ -217,7 +217,7 @@ MediaTransportControls를 사용자 지정하려고 할 수 있는 한 가지 �
 
 적절한 위치의 명령 모음에 추가해야 합니다. (자세한 내용은 오버플로 메뉴에 대한 작업 섹션을 참조하세요.) UI에 배치하는 방식은 태그 속의 단추 위치에 따라 결정됩니다. 예를 들어 이 단추를 기본 명령의 마지막 요소로 표시하려면 이 단추를 기본 명령 목록의 맨 끝에 추가합니다.
 
-단추 아이콘을 사용자 지정할 수도 있습니다. 자세한 내용은 <a href="https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.AppBarButton"><b>AppBarButton</b></a> 참조에서 확인할 수 있습니다.
+단추 아이콘을 사용자 지정할 수도 있습니다. 자세한 내용은 <a href="/uwp/api/Windows.UI.Xaml.Controls.AppBarButton"><b>AppBarButton</b></a> 참조에서 확인할 수 있습니다.
     
 
 2. [  **OnApplyTemplate**](/uwp/api/windows.ui.xaml.frameworkelement.onapplytemplate) 재정의에서, 템플릿의 단추를 가져와서 해당 [**Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트에 대한 처리기를 등록합니다. 이 코드는 `CustomMediaTransportControls` 클래스에 포함됩니다.

@@ -2,7 +2,7 @@
 description: 깊이를 추가하고 시각적 계층을 설정하는 데 도움이 되는 반투명 질감을 만드는 브러시 유형인 아크릴을 사용하는 방법을 알아봅니다.
 title: 아크릴 소재
 template: detail.hbs
-ms.date: 08/09/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: yulikl
@@ -10,12 +10,12 @@ design-contact: rybick
 dev-contact: jevansa
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f7d431950e17b9908d079db9247d997ef8adadb
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b6fb7d07901a1ad4ab99255357470c8b90fc7681
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174587"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220106"
 ---
 # <a name="acrylic-material"></a>아크릴 소재
 

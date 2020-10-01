@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 시작하기, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b1ec459875b909e62c1d4a615db57343d660e9b
-ms.sourcegitcommit: 41dbee78d827107c224a9136c26f90be4dfe12ad
+ms.openlocfilehash: f38269acd9f1d6e2e830b51b3fcfa3a9014f2d7e
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90845562"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219906"
 ---
 # <a name="get-started-with-cwinrt"></a>C++/WinRT 시작
 
@@ -183,7 +183,7 @@ XAML은 리플렉션을 제공하는 프로그래밍 언어에서 가장 효율�
 
 ## <a name="sample-apps-written-in-cwinrt"></a>C++/WinRT로 작성된 샘플 앱
 
-[C++/WinRT 샘플 앱은 어디서 찾을 수 있나요?](/windows/uwp/cpp-and-winrt-apis/faq#where-can-i-find-cwinrt-sample-apps)를 참조하세요.
+[C++/WinRT 샘플 앱은 어디서 찾을 수 있나요?](./faq.md#where-can-i-find-cwinrt-sample-apps)를 참조하세요.
 
 ## <a name="important-apis"></a>중요 API
 * [SyndicationClient::RetrieveFeedAsync 메서드](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)

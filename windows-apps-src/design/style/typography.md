@@ -1,17 +1,17 @@
 ---
 description: 앱에서 입력 체계를 사용하여 사용자가 콘텐츠를 쉽게 이해할 수 있도록 도와주는 방법을 알아보세요.
 title: Windows 앱의 입력 체계
-ms.date: 04/06/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 555459d427eae045d3cf7eda45a97ec806717380
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3e9e9e501f1c4277121e7694e8213ccea51c5297
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175517"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218136"
 ---
 # <a name="typography-in-windows-apps"></a>Windows 앱의 입력 체계
 

@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 83e27ef72aea195268d5163dea3b050f48547d5c
-ms.sourcegitcommit: efa5f793607481dcae24cd1b886886a549e8d6e5
+ms.openlocfilehash: aa72b01e6c567e55e36e7f182ca962367346980c
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89412027"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220426"
 ---
 # <a name="text-block"></a>텍스트 블록
 
@@ -85,7 +85,7 @@ Bold, Italic, Run, Span 및 LineBreak와 같이 Inline 클래스에서 파생된
 - [CharacterSpacing](/uwp/api/windows.ui.xaml.controls.textblock.characterspacing): 기본값 0만 빠른 경로입니다.
 - [TextTrimming](/uwp/api/windows.ui.xaml.controls.textblock.texttrimming): **None**, **CharacterEllipsis**, **WordEllipsis** 값만 빠른 경로입니다. **Clip** 값은 빠른 경로를 사용하지 않도록 설정합니다.
 
-> **참고**&nbsp;&nbsp;Windows 10, 버전 1607 이전에서는 추가 속성도 빠른 경로에 영향을 줍니다. 앱이 이전 버전의 Windows에서 실행되는 경우 이러한 조건으로 인해 텍스트가 느린 경로로 렌더링됩니다. 버전에 대한 자세한 내용은 [버전 적응 코드](/windows/uwp/debug-test-perf/version-adaptive-code)를 참조하세요.
+> **참고**&nbsp;&nbsp;Windows 10, 버전 1607 이전에서는 추가 속성도 빠른 경로에 영향을 줍니다. 앱이 이전 버전의 Windows에서 실행되는 경우 이러한 조건으로 인해 텍스트가 느린 경로로 렌더링됩니다. 버전에 대한 자세한 내용은 [버전 적응 코드](../../debug-test-perf/version-adaptive-code.md)를 참조하세요.
 - [Typography](/uwp/api/Windows.UI.Xaml.Documents.Typography): 다양한 Typography 속성의 기본값만 빠른 경로입니다.
 - [LineStackingStrategy](/uwp/api/windows.ui.xaml.controls.textblock.linestackingstrategy): [LineHeight](/uwp/api/windows.ui.xaml.controls.textblock.lineheight)가 0이 아닌 경우 **BaselineToBaseline** 및 **MaxHeight** 값이 빠른 경로를 사용하지 않도록 설정합니다.
 - [IsTextSelectionEnabled](/uwp/api/windows.ui.xaml.controls.textblock.istextselectionenabled): **false**만 빠른 경로입니다. 이 속성을 **true**로 설정하면 빠른 경로가 사용하지 않도록 설정됩니다.

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: bb647d844c32286a2d612231b3069430f11fcad0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3205ef65922cfe9cf44fbf0a24c90b4e592ca663
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174017"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216426"
 ---
 # <a name="windows-app-certification-kit-tests"></a>Windows 앱 인증 키트 테스트
 
@@ -412,7 +412,7 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 <tr><td>
 <p>이미지에서 TargetSize 한정자를 사용하지 않고 둘 이상의 변형을 정의해야 합니다. 이미지에서 Scale 한정자를 정의하거나 Scale 및 TargetSize를 지정하지 않은 상태로 유지하여 기본값 Scale-100으로 설정해야 합니다.</p>
 </td><td>
-<p>자세한 내용은 <a href="https://docs.microsoft.com/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design">UWP 앱에 대한 반응형 디자인 101</a> 및 <a href="https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data">앱 리소스에 대한 지침</a>을 참조하세요.</p>
+<p>자세한 내용은 <a href="/windows/uwp/layout/screen-sizes-and-breakpoints-for-responsive-design">UWP 앱에 대한 반응형 디자인 101</a> 및 <a href="/windows/uwp/app-settings/store-and-retrieve-app-data">앱 리소스에 대한 지침</a>을 참조하세요.</p>
 </td></tr>
 <tr><td>
 <p>패키지에 "resources.pri" 파일이 없습니다.</p>
@@ -434,7 +434,7 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 <tr><td>
 <p>{string} 문자열에서 {number}자의 최대 길이 제한을 준수하지 못했습니다.</p>
 </td><td>
-<p><a href="https://docs.microsoft.com/windows/uwp/publish/app-package-requirements">앱 패키지 요구 사항</a>을 참조하세요.</p>
+<p><a href="/windows/uwp/publish/app-package-requirements">앱 패키지 요구 사항</a>을 참조하세요.</p>
 <p>실제 메시지에서는 {string}이(가) 오류가 있는 문자열로 대체되고 {number}에는 최대 길이가 포함됩니다.</p>
 </td></tr>
 <tr><td>
@@ -447,12 +447,12 @@ WinJS.Binding.optimizeBindingReferences의 값을 확인합니다.
 <tr><td>
 <p>문자열은 비어 있으면 안 되며 길이가 0보다 커야 합니다.</p>
 </td><td>
-<p>자세한 내용은 <a href="https://docs.microsoft.com/windows/uwp/publish/app-package-requirements">앱 패키지 요구 사항</a>을 참조하세요.</p>
+<p>자세한 내용은 <a href="/windows/uwp/publish/app-package-requirements">앱 패키지 요구 사항</a>을 참조하세요.</p>
 </td></tr>
 <tr><td>
 <p>"resources.pri" 파일에 지정된 기본 리소스가 없습니다.</p>
 </td><td>
-<p>자세한 내용은 <a href="https://docs.microsoft.com/windows/uwp/app-settings/store-and-retrieve-app-data">앱 리소스에 대한 지침</a>을 참조하세요.</p>
+<p>자세한 내용은 <a href="/windows/uwp/app-settings/store-and-retrieve-app-data">앱 리소스에 대한 지침</a>을 참조하세요.</p>
 <p>기본 빌드 구성에서 Visual Studio는 번들을 생성할 때 앱 패키지에 scale-200 이미지 리소스만 포함하고 다른 리소스는 리소스 패키지에 배치합니다. scale-200 이미지 리소스를 포함하거나 갖고 있는 리소스를 포함하도록 프로젝트를 구성해야 합니다.</p>
 </td></tr>
 <tr><td>

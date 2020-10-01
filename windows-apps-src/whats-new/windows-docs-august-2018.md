@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 08/14/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: eb6900b4d5ad529ee2e94f09439dda6abcaebac8
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 92ed09940800160af8fcff6aec7dde26144cffe9
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174397"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220336"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-august-2018"></a>2018년 8월 Windows 개발자 문서의 새로운 내용
 
@@ -58,7 +58,7 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 
 ### <a name="xbox-live-unity-plugin"></a>Xbox Live Unity 플러그 인
 
-Unity용 Xbox Live 플러그 인에는 Xbox Live 서명, 통계, 친구 목록, 클라우드 스토리지 및 순위표를 제목에 추가하기 위한 지원이 포함되어 있습니다. 이 [비디오를 시청](https://youtu.be/fVQZ-YgwNpY)하여 자세히 알아본 다음, [GitHub 패키지를 다운로드](https://aka.ms/UnityPlugin)하여 시작하세요.
+Unity용 Xbox Live 플러그 인에는 Xbox Live 서명, 통계, 친구 목록, 클라우드 스토리지 및 순위표를 제목에 추가하기 위한 지원이 포함되어 있습니다. 이 [비디오를 시청](https://youtu.be/fVQZ-YgwNpY)하여 자세히 알아본 다음, [GitHub 패키지를 다운로드](/gaming/xbox-live/get-started/setup-ide/creators/unity-win10/live-cr-unity-win10-nav?WT.mc_id=windowsdocs-twi)하여 시작하세요.
 
 ### <a name="one-dev-question"></a>One Dev Question
 

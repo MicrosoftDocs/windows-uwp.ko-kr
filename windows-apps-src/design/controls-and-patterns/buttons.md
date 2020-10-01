@@ -3,7 +3,7 @@ title: 단추
 description: 사용자가 즉각적인 작업을 트리거하기 위해 단추를 사용하는 방법과 특정 작업을 위한 특수 단추에 대해 알아봅니다.
 label: Buttons
 template: detail.hbs
-ms.date: 10/02/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f04d1a3c-7dcd-4bc8-9586-3396923b312e
@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 18007214cfd54edda5b2ba23aed241b85a0e7199
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bdfc212c435469746faf1fdf94898c0dc7beb221
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157187"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219086"
 ---
 # <a name="buttons"></a>단추
 

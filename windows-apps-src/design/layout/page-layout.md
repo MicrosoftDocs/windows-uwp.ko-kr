@@ -1,16 +1,16 @@
 ---
 title: Windows 앱용 페이지 레이아웃
 description: 앱을 디자인할 때 가장 먼저 고려해야 할 사항은 레이아웃 구조입니다. 이 문서에서는 필요한 UI 요소와 페이지에서 이러한 요소를 배치할 위치를 비롯하여 기본 페이지 레이아웃의 공통 구조를 다룹니다. Windows 앱에서 각 페이지에는 일반적으로 탐색, 명령 및 콘텐츠 요소가 있습니다.
-ms.date: 03/19/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 localizationpriority: medium
-ms.openlocfilehash: 551d937836f0dcf0094e54a503d2a8cd80a2f28b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 5473542019a4f8afa3e916b914127e41a4fe05d4
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169527"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218626"
 ---
 # <a name="page-layout"></a>페이지 레이아웃
 

@@ -4,7 +4,7 @@ description: 사용자가 트랙을 따라 Thumb 컨트롤을 이동하여 값 �
 ms.assetid: 7EC7EA33-BE7E-4FD5-B205-B8FA7B729ACC
 label: Sliders
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: kisai
@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 484fb64497443708ec80f3d6ad80b40d14371af5
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: dd2fa443a8419c0ff1212beac7e139a051627be5
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173917"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220466"
 ---
 # <a name="sliders"></a>슬라이더
 

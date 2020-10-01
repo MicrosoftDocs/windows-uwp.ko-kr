@@ -4,7 +4,7 @@ title: 상황에 맞는 명령
 ms.assetid: ''
 label: Contextual commanding in collections
 template: detail.hbs
-ms.date: 10/25/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: chigy
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8138256dbde751768e5d9a707ffc1ad23ace7494
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 56c845186c9e5351abefd4a6d53175e43b11ae58
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173527"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217536"
 ---
 # <a name="contextual-commanding-for-collections-and-lists"></a>컬렉션 및 목록에 대한 상황에 맞는 명령
 

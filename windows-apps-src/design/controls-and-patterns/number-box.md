@@ -2,17 +2,17 @@
 Description: 숫자 상자는 숫자를 표시하고 편집하는 데 사용할 수 있는 컨트롤입니다.
 title: 숫자 상자
 template: detail.hbs
-ms.date: 11/27/2019
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e3bcbfc338d629bbda1036ef722d75ed6df37cd
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9e0cd1979ca1929adc35537dfd3efccc97466391
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169757"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217976"
 ---
 # <a name="number-box"></a>숫자 상자
 
@@ -174,7 +174,7 @@ private void SetNumberBoxNumberFormatter()
 
 ### <a name="input-scope"></a>입력 범위
 
-`Number`는 [입력 범위](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue)에 사용됩니다. 이 입력 범위는 0-9자리로 작업하기 위한 것입니다. 이를 덮어쓸 수 있지만 대체 InputScope 형식은 명시적으로 지원되지 않습니다.
+`Number`는 [입력 범위](/uwp/api/Windows.UI.Xaml.Input.InputScopeNameValue)에 사용됩니다. 이 입력 범위는 0-9자리로 작업하기 위한 것입니다. 이를 덮어쓸 수 있지만 대체 InputScope 형식은 명시적으로 지원되지 않습니다.
 
 ### <a name="not-a-number"></a>숫자가 아님
 

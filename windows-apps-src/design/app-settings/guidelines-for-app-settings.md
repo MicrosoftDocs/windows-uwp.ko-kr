@@ -4,16 +4,16 @@ title: 앱 설정에 대한 지침
 ms.assetid: 2D765E90-3FA0-42F5-A5CB-BEDC14C3F60A
 label: Guidelines
 template: detail.hbs
-ms.date: 08/07/2020
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e3fcbcaa88fa39795ac078617c9a958ff3a997ac
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 09db3caefccfce3ff110cb034efa27ff53c4154a
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173987"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218226"
 ---
 # <a name="guidelines-for-app-settings"></a>앱 설정에 대한 지침
 

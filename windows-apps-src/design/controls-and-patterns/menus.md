@@ -3,7 +3,7 @@ Description: 메뉴 및 상황에 맞는 메뉴는 사용자 요청에 따라 �
 title: 메뉴 및 상황에 맞는 메뉴
 label: Menus and context menus
 template: detail.hbs
-ms.date: 04/19/2019
+ms.date: 09/24/2020
 ms.topic: article
 ms.custom: RS5, 19H1
 keywords: windows 10, uwp
@@ -13,12 +13,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: fab3cf710b50d3c8d643b3036eb1589a0fc113e3
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e44da32b5eec603ed9a334b4b870ca1176047a97
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172567"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218656"
 ---
 # <a name="menus-and-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 

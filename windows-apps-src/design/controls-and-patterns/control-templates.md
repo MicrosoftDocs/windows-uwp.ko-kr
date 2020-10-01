@@ -7,16 +7,16 @@ title: 컨트롤 템플릿
 ms.assetid: 6E642626-A1D6-482F-9F7E-DBBA7A071DAD
 label: Control templates
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 04c219b02f0a4220619e082916caa058d600cf62
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 773079129b5e05e26501f78fe177f4b5367902da
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160527"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217276"
 ---
 # <a name="control-templates"></a>컨트롤 템플릿
 

@@ -3,7 +3,7 @@ title: 목록 항목의 중첩된 UI
 description: 중요한 작업을 수행할 수 있는 추가 옵션을 사용자에게 제공하기 위해 ListView 및 GridView 항목에서 중첩된 UI를 만드는 방법을 알아봅니다.
 label: Nested UI in list items
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 60a29717-56f2-4388-a9ff-0098e34d5896
@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e2d727c9b5e4c7e2912f0bcae8848149c8073f3b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 433f24ea6c4e2fd03faa652a041f3a1c1578652e
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169747"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217936"
 ---
 # <a name="nested-ui-in-list-items"></a>목록 항목의 중첩된 UI
 

@@ -6,12 +6,12 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1f211442476ed271dfe049af65e340d6889870a9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b54e0b4417dd4ba9b835622a4c064b803de7fca9
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89167017"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219707"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>개발자용 Windows 10 빌드 17763의 새로운 기능
 
@@ -109,7 +109,7 @@ Windows에서는 이제 UWP 앱의 여러 인스턴스를 각각 별도의 자�
 
 ### <a name="xbox-live-unity-plugin"></a>Xbox Live Unity 플러그 인
 
-Unity용 Xbox Live 플러그 인에는 Xbox Live 서명, 통계, 친구 목록, 클라우드 스토리지 및 순위표를 제목에 추가하기 위한 지원이 포함되어 있습니다. 이 [비디오를 시청](https://youtu.be/fVQZ-YgwNpY)하여 자세히 알아본 다음, [GitHub 패키지를 다운로드](https://aka.ms/UnityPlugin)하여 시작하세요.
+Unity용 Xbox Live 플러그 인에는 Xbox Live 서명, 통계, 친구 목록, 클라우드 스토리지 및 순위표를 제목에 추가하기 위한 지원이 포함되어 있습니다. 이 [비디오를 시청](https://youtu.be/fVQZ-YgwNpY)하여 자세히 알아본 다음, [GitHub 패키지를 다운로드](/gaming/xbox-live/get-started/setup-ide/creators/unity-win10/live-cr-unity-win10-nav?WT.mc_id=windowsdocs-twi)하여 시작하세요.
 
 ### <a name="one-dev-question"></a>One Dev Question
 

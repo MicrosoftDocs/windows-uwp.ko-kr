@@ -2,7 +2,7 @@
 Description: 교육 팁은 상황별 정보를 제공하는 풍부한 콘텐츠의 반영구적 플라이아웃입니다.
 title: 교육 팁
 template: detail.hbs
-ms.date: 04/01/2020
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: yulikl
@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: 997a0c32de9d6ee803095f5c708f6ed8cedaf141
-ms.sourcegitcommit: 6009896ead442b378106d82870f249dc8b55b886
+ms.openlocfilehash: 741b8d26c37befa4f2497474d7cc3d663001e2ad
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89643832"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219596"
 ---
 # <a name="teaching-tip"></a>교육 팁
 

@@ -1,16 +1,16 @@
 ---
 description: RelativePanel, StackPanel, Grid 및 Canvas와 같은 기본 제공 XAML 레이아웃 패널을 사용하여 앱에서 UI 요소를 정렬하고 그룹화하는 방법에 대해 알아봅니다.
 title: Windows 앱에 대한 레이아웃 패널
-ms.date: 04/02/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 22fa8ef8df6f97ed63465df0cb3e62cbb14e2ced
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4e3915fca3b459d259e83c9c9ce5ef19aa413e2e
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172447"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218676"
 ---
 # <a name="layout-panels"></a>레이아웃 패널
 

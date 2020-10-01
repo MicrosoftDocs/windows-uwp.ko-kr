@@ -3,16 +3,16 @@ Description: ItemsRepeater는 항목 컬렉션을 생성하고 표시하는 경�
 title: ItemsRepeater
 label: ItemsRepeater
 template: detail.hbs
-ms.date: 02/01/2019
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 20aeda53af3b4b11c1562d2ed22b099a3377d3c7
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: efc50a15e4f7aa45d7df63d2e53748ce9aa22c6a
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172637"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220626"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 

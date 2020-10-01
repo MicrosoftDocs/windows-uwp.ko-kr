@@ -5,17 +5,17 @@ ms.assetid: 1DB48285-07B7-4952-80EF-02B57D4469F2
 label: Command design basics
 template: detail.hbs
 op-migration-status: ready
-ms.date: 11/01/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 154f1969f18cffc485252971258ef801ca86a56e
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: dfd744bd2ab9c7909eec0c62af1939261a5a3bb7
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234020"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218276"
 ---
 # <a name="command-design-basics-for-windows-apps"></a>Windows 앱용 명령 디자인 기본 사항
 

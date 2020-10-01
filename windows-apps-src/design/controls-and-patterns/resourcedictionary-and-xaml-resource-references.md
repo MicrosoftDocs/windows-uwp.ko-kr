@@ -7,19 +7,19 @@ title: ResourceDictionary 및 XAML 리소스 참조
 ms.assetid: E3CBFA3D-6AF5-44E1-B9F9-C3D3EA8A25CE
 label: ResourceDictionary and XAML resource references
 template: detail.hbs
-ms.date: 05/19/2017
-ms.topic: article
+ms.date: 09/24/2020
+ms.topic: conceptual
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: deef91e817d68c235c0af266b5fa7d22842c4cfe
-ms.sourcegitcommit: ef3cdca5e9b8f032f46174da4574cb5593d32d56
+ms.openlocfilehash: 6c8a9a7fd335d2b250215145b88513c6254b0116
+ms.sourcegitcommit: 465306045aeefb7d34703a9ae26235c638a445e8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90593447"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91402066"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>ResourceDictionary 및 XAML 리소스 참조
 

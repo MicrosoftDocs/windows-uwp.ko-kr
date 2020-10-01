@@ -3,16 +3,16 @@ Description: Windows 앱 내에서 사용자의 탐색 기록을 살펴볼 수 �
 title: 탐색 기록 및 뒤로 탐색
 template: detail.hbs
 op-migration-status: ready
-ms.date: 04/09/2019
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: fe9cbb9fdc9d73a38642a4f5894b1ef0f8182e69
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f3eb7ff033a81e358cb74e670b3235ade17e8a87
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174517"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220046"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-windows-apps"></a>Windows 앱을 위한 탐색 기록 및 뒤로 탐색
 
@@ -336,14 +336,14 @@ bool App::On_BackRequested()
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>페이지 간, 동일한 피어 그룹, 화면 탐색 요소 없음</strong>
-<p>동일한 피어 그룹을 사용하여 페이지 간을 이동합니다. 두 페이지를 직접 탐색하는 화면 탐색 요소(예: <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>)는 없습니다.</p></td>
+<p>동일한 피어 그룹을 사용하여 페이지 간을 이동합니다. 두 페이지를 직접 탐색하는 화면 탐색 요소(예: <a href="/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>)는 없습니다.</p></td>
 <td style="vertical-align:top;"><strong>예</strong>
 <p>다음 일러스트레이션에서 사용자는 같은 피어 그룹에 있는 두 페이지 사이를 탐색하며, 탐색 기록에 탐색을 추가해야 합니다.</p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-noosnavelement.png" alt="Navigation within a peer group" /></p></td>
 </tr>
 <tr class="odd">
 <td style="vertical-align:top;"><strong>페이지 간, 동일한 피어 그룹, 화면 탐색 요소 사용</strong>
-<p>동일한 피어 그룹에서 페이지 간을 이동합니다. 두 페이지가 동일한 탐색 요소(예: <a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>)에 표시됩니다.</p></td>
+<p>동일한 피어 그룹에서 페이지 간을 이동합니다. 두 페이지가 동일한 탐색 요소(예: <a href="/windows/uwp/design/controls-and-patterns/navigationview">NavigationView</a>)에 표시됩니다.</p></td>
 <td style="vertical-align:top;"><strong>유동적</strong>
 <p>예, 탐색 기록에 추가하지만, 두 가지 주목할 만한 예외가 있습니다. 앱 사용자가 피어 그룹의 페이지 간에 자주 전환할 것으로 예상되는 경우 또는 탐색 계층을 유지하려는 경우에는 탐색 기록에 추가하지 마세요. 이 경우 사용자가 뒤로 탐색을 누르면 현재 피어 그룹으로 이동하기 전에 있던 마지막 페이지로 돌아갑니다. </p>
 <p><img src="images/back-nav/nav-pagetopage-samepeer-yesosnavelement.png" alt="Navigation across peer groups when a navigation element is present" /></p></td>

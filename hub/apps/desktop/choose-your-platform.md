@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, 데스크톱 개발
-ms.openlocfilehash: d4415bc703acf0b94f6f8a6fe8aab053620336c6
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 0aa439010138af80f91c4e02776163577658d6cc
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168907"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216736"
 ---
 # <a name="choose-your-app-platform"></a>앱 플랫폼 선택
 
@@ -129,7 +129,7 @@ PWA를 통해 개발자는 웹 사이트 코드를 Windows 10 PC의 애플리케
 
 ### <a name="xamarin"></a>Xamarin
 
-Xamarin을 사용하여 iOS 및 Android에서도 실행할 수 있는 Windows 10용 플랫폼 간 애플리케이션을 빌드합니다. 자세한 내용은 [Xamarin](https://docs.microsoft.com/xamarin/xamarin-forms/get-started/index)을 참조하세요.
+Xamarin을 사용하여 iOS 및 Android에서도 실행할 수 있는 Windows 10용 플랫폼 간 애플리케이션을 빌드합니다. 자세한 내용은 [Xamarin](/xamarin/xamarin-forms/get-started/index)을 참조하세요.
 
 ### <a name="uno-platform"></a>Uno Platform
 

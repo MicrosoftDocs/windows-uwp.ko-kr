@@ -2,16 +2,16 @@
 title: 간격 및 크기
 description: 새로운 Fluent 표준 및 컴팩트 컨트롤 스타일은 디바이스 및 입력 방법에 관계 없이 편리한 사용자 환경을 보장합니다.
 keywords: UWP, Windows 10, 컨트롤, 크기, 밀도, 표준, 컴팩트
-ms.date: 04/19/2019
+ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 37bc5688321249428405e730d366eb987a81bd66
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: aa4d1fa64f23f417957b4590bb3a846f00653869
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159847"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217756"
 ---
 # <a name="control-size-and-density"></a>컨트롤 크기 및 밀도
 

@@ -2,17 +2,17 @@
 Description: 모든 UWP 앱에 포함된 유니버설 디자인 기능을 사용하면 광범위한 디바이스에 걸쳐 효과적으로 크기가 조정되는 앱을 빌드할 수 있습니다.
 title: Windows 앱 디자인 소개(Windows 앱)
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
-ms.date: 05/05/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: add292dd5b58c3e8da1a0ce2c2371bf211b2a617
-ms.sourcegitcommit: 7704c888a28edc7ab0515a75afac93d1dda4d693
+ms.openlocfilehash: 75d8dfe44c9296fbaf1d8caf5127db0244fc1d8d
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84151952"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216516"
 ---
 # <a name="introduction-to-windows-app-design"></a>Windows 앱 디자인 소개
 

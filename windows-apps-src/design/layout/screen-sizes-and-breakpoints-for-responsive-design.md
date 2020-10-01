@@ -1,17 +1,17 @@
 ---
 title: 반응형 디자인에 대한 화면 크기 및 중단점
 description: Windows 10 에코시스템의 여러 디바이스에 맞게 UI를 최적화하기보다는 중단점이라고 불리는 몇 가지 주요 너비 카테고리에 맞게 설계하는 더욱 좋다고 권장하였습니다.
-ms.date: 08/30/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 32a66c92d4c079c99aed213d0e1aeae66b808d56
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c7d1d0069c074b95bfe93ee5894854734e3a3052
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169407"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218516"
 ---
 #  <a name="screen-sizes-and-breakpoints"></a>화면 크기 및 중단점
 

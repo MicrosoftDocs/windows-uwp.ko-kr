@@ -1,7 +1,7 @@
 ---
 description: 연락처 카드를 사용하여 사용자가 이름, 전화 번호 및 주소와 같은 연락처 정보를 표시하고 편집하는 방법을 알아봅니다.
 title: 연락처 카드
-ms.date: 03/07/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: kele
@@ -9,12 +9,12 @@ design-contact: tbd
 dev-contact: tbd
 doc-status: not-published
 ms.localizationpriority: medium
-ms.openlocfilehash: 2817977533b63df8498faa1ecbc5cc57a4987c30
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e31b698189e5dc8c59b1c10a6aa6b5bb02190e55
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160597"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217316"
 ---
 # <a name="contact-card"></a>연락처 카드
 

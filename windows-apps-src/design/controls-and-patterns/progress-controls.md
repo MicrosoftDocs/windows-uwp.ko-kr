@@ -4,7 +4,7 @@ title: 진행률 컨트롤에 대한 지침
 ms.assetid: FD53B716-C43D-408D-8B07-522BC1F3DF9D
 label: Progress controls
 template: detail.hbs
-ms.date: 11/29/2019
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: kisai
@@ -12,12 +12,12 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: fbd9ed95137263f4ddad44e2272d4d77aced241f
-ms.sourcegitcommit: 234bb7c896b990f624b2b8789820b92426e52291
+ms.openlocfilehash: afecb467931684601b949b392d35c9c84b7e2881
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90013390"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91218456"
 ---
 # <a name="progress-controls"></a>진행률 컨트롤
 

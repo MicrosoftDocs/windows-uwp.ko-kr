@@ -7,16 +7,16 @@ title: XAML 테마 리소스
 ms.assetid: 41B87DBF-E7A2-44E9-BEBA-AF6EEBABB81B
 label: XAML theme resources
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dff964fe33f0a4b1e68e12d0c300871274c28f93
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ac4f7c7705fef0a3a7a1d556635e1c80e9c04a29
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174667"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217214"
 ---
 # <a name="xaml-theme-resources"></a>XAML 테마 리소스
 

@@ -2,19 +2,19 @@
 Description: 시작 메뉴, 앱 타일, 작업 표시줄, Microsoft Store 등에서 앱을 나타내는 앱 아이콘/로고를 만드는 방법을 알아봅니다.
 title: 앱 아이콘 및 로고
 template: detail.hbs
-ms.date: 04/17/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5c39ded4157181581412f01e54772db2bf9a1732
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ee12ed108f552b8aa95549f1e9c2f3ac09a889ae
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174627"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220136"
 ---
 # <a name="app-icons-and-logos"></a>앱 아이콘 및 로고 
 

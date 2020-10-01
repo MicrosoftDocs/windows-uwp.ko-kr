@@ -4,7 +4,7 @@ title: 컬렉션 및 목록
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Collections and Lists
 template: detail.hbs
-ms.date: 10/08/2019
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: anawish
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ede68414d86f333b516be81cbae83ea58dc83ba0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 764d2d769a1455ff6a0815a6716866c055edf291
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169917"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91220026"
 ---
 # <a name="collections-and-lists"></a>컬렉션 및 목록
 

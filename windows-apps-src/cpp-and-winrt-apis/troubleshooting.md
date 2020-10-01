@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문제 해결, HRESULT, 오류
 ms.localizationpriority: medium
-ms.openlocfilehash: e517f796d1352d9373321d456d77875ebd54afbd
-ms.sourcegitcommit: 21eb13a50402bf5442a5f0a4bf34800d1dc679c4
+ms.openlocfilehash: 94cfb51d9fd832a29c71049a2255e35c4bc6f484
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90804723"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219966"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>C++/WinRT 문제 해결
 
@@ -59,7 +59,7 @@ ms.locfileid: "90804723"
 | 사용자 프로젝트에서 "*'PopulatePropertyInfoOverride' 액세스가 모호합니다.*"를 생성합니다. | 이 오류는 IDL에서 하나의 기본 클래스를 선언하고 XAML 태그에서 다른 기본 클래스를 선언하는 경우에 발생할 수 있습니다. |
 | 처음으로 C++/WinRT 솔루션을 로드하면 "*프로젝트 'MyProject.vcxproj' 구성 'Debug\|x86'에 대한 Designtime 빌드에 실패했습니다. IntelliSense를 사용하지 못할 수 있습니다.* "를 생성합니다. | 이 IntelliSense 문제는 처음 빌드한 후 해결됩니다. |
 | 대리자 등록 시 [**winrt::auto_revoke**](/uwp/cpp-ref-for-winrt/auto-revoke-t)를 지정하려고 하면 [**winrt::hresult_no_interface**](/uwp/cpp-ref-for-winrt/error-handling/hresult-no-interface) 예외를 생성합니다. | [자동 취소 대리자를 등록하지 못하는 경우](handle-events.md#if-your-auto-revoke-delegate-fails-to-register)를 참조하세요. |
-|C++/WinRT 앱에서 XAML을 사용하는 [C# Windows 런타임 구성 요소](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)를 사용할 때 컴파일러는 " *'MyNamespace_XamlTypeInfo': is not a member of 'winrt::MyNamespace'* " 형식의 오류를 발생합니다. &mdash;여기서 *MyNamespace*는 Windows 런타임 구성 요소의 네임스페이스 이름입니다. | 사용하는 C++/WinRT 앱의 `pch.h`에서 *MyNamespace*를 적절하게 대체하는 `#include <winrt/MyNamespace.MyNamespace_XamlTypeInfo.h>`&mdash;를 추가합니다. |
+|C++/WinRT 앱에서 XAML을 사용하는 [C# Windows 런타임 구성 요소](../winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic.md)를 사용할 때 컴파일러는 " *'MyNamespace_XamlTypeInfo': is not a member of 'winrt::MyNamespace'* " 형식의 오류를 발생합니다. &mdash;여기서 *MyNamespace*는 Windows 런타임 구성 요소의 네임스페이스 이름입니다. | 사용하는 C++/WinRT 앱의 `pch.h`에서 *MyNamespace*를 적절하게 대체하는 `#include <winrt/MyNamespace.MyNamespace_XamlTypeInfo.h>`&mdash;를 추가합니다. |
 
 > [!NOTE]
 > 이 항목에서 질문에 대한 답변을 찾지 못한 경우, [Visual Studio C++ 개발자 커뮤니티](https://developercommunity.visualstudio.com/spaces/62/index.html)를 방문하거나 [Stack Overflow의 `c++-winrt` 태그](https://stackoverflow.com/questions/tagged/c%2b%2b-winrt)를 사용하여 도움말을 찾을 수 있습니다.

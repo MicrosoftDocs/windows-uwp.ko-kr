@@ -2,7 +2,7 @@
 Description: Pivot 컨트롤을 통해 작은 콘텐츠 섹션 세트에서 터치하여 살짝 밀기를 사용할 수 있습니다.
 title: Pivot
 template: detail.hbs
-ms.date: 06/19/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: yulikl
@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a927e7fa81499ef9eb5a8b798679f13b6d838d17
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d4e8d86c46144531e423ed514b2865a90d78e051
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174457"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91217856"
 ---
 # <a name="pivot"></a>Pivot
 

@@ -4,7 +4,7 @@ title: 명령 모음
 label: App bars/command bars
 template: detail.hbs
 op-migration-status: ready
-ms.date: 07/23/2020
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 868b4145-319b-4a97-82bd-c98d966144db
@@ -13,12 +13,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 001dc4be5ec0540517602d48360c24c7e6bae32d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f507a325a89220e229b277a1ae08727054cc2a75
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160677"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91219106"
 ---
 # <a name="command-bar"></a>명령 모음
 

@@ -4,19 +4,19 @@ title: 아이콘
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
 template: detail.hbs
-ms.date: 05/02/2018
+ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e35041cce7e43f6eebed06b39f3ae2dbda55a4ae
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bb3eb985ab10bd4c28ca38f87aefe3d1fc7fd61e
+ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156797"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91216476"
 ---
 # <a name="icons-for-windows-apps"></a>Windows 앱용 아이콘
 
