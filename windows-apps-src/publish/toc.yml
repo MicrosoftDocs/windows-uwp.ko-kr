@@ -116,17 +116,6 @@
   items:
     - name: 홍보 코드 생성
       href: ../publish/generate-promotional-codes.md
-    - name: 앱 광고 캠페인 만들기
-      href: ../publish/create-an-ad-campaign-for-your-app.md
-      items:
-        - name: 광고 캠페인 관리
-          href: ../publish/managing-your-ad-campaign.md
-        - name: 하우스 광고 정보
-          href: ../publish/about-house-ads.md
-        - name: 커뮤니티 광고 정보
-          href: ../publish/about-community-ads.md
-        - name: 광고 캠페인에 대한 일반적인 질문
-          href: ../publish/common-questions.md
     - name: 사용자 지정 앱 홍보 캠페인 만들기
       href: ../publish/create-a-custom-app-promotion-campaign.md
     - name: 앱 및 추가 기능 판매
