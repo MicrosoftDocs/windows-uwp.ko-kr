@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fb4249b2-f93c-4993-9e4d-57a62c04be66
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ee8eb8ea34205f2e597bf41da61f5ab63714566
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e3f46e0d1837f391ffc7cc6ca361a2c92212565b
+ms.sourcegitcommit: 9940ed6431aadbd8d4e54ca23d8ae44d3a2d048d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162837"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91403928"
 ---
 # <a name="creating-a-3d-javascript-game-using-threejs"></a>three.js를 사용하여 3D JavaScript 게임 만들기
 
@@ -406,7 +406,7 @@ CodePen에서 `init()` 함수의 `createGround()`를 주석 처리하여 자유�
 
 이제 미로에 들어가서 주변을 둘러볼 시간입니다. 이렇게 하기 위해 **PointerLockControls.js** 라이브러리와 카메라를 사용하겠습니다.
 
-**PoinerLockControls.js** 라이브러리는 마우스를 사용하여 마우스가 움직이는 방향으로 카메라를 회전함으로써 플레이어가 주변을 둘러볼 수 있게 합니다. 
+**PointerLockControls.js** 라이브러리는 마우스를 사용하여 마우스가 움직이는 방향으로 카메라를 회전함으로써 플레이어가 주변을 둘러볼 수 있게 합니다. 
 
 먼저 **index.html** 파일에 몇 가지 새로운 요소를 추가하겠습니다.
 
@@ -433,7 +433,7 @@ var blocker = document.getElementById('blocker');
 ```
 
 
-이제 `init()` 함수에서 새 `PoinerLockControls` 개체를 만들어서 `camera`에 전달하고 `camera`(`controls.getObject()`를 통해 액세스)를 추가할 수 있습니다.
+이제 `init()` 함수에서 새 `PointerLockControls` 개체를 만들어서 `camera`에 전달하고 `camera`(`controls.getObject()`를 통해 액세스)를 추가할 수 있습니다.
 
 ```javascript
 controls = new THREE.PointerLockControls(camera);

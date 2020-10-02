@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d3363dcc47ef43fe65b3c954b213a81cc5165e1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 10615c3bb9a137655f32ca4b5cc174ddba1ee5ef
+ms.sourcegitcommit: 662fcfdc08b050947e289a57520a2f99fad1a620
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166287"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353773"
 ---
 # <a name="tutorial-create-data-bindings"></a>자습서: 데이터 바인딩 만들기
 
@@ -457,7 +457,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
 
 ### <a name="attach-the-detailpage"></a>DetailPage 연결
 
-1. MainPage.xaml에서 이름이 `ImageGridView`인 `GridView`를 찾은 다음, `ItemClick` 값을 추가합니다.
+1. MainPage.xaml에서 `ImageGridView`라는 `GridView`를 찾습니다. 항목을 클릭할 수 있게 만들려면 `IsItemClickEnabled`를 `True`로 설정하고 `ItemClick` 이벤트 처리기를 추가합니다.
 
     > [!TIP]
     > 복사/붙여넣기 대신 아래의 변경 내용을 입력하면 "\<New Event Handler\>"라는 IntelliSense 팝업이 표시됩니다. Tab 키를 누르면 기본 메서드 처리기 이름으로 값이 채워지고 다음 단계에 표시된 메서드가 자동으로 제거됩니다. 그런 다음, F12 키를 눌러 코드 숨김의 메서드로 이동할 수 있습니다.
@@ -465,14 +465,15 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     **이전:**
 
     ```xaml
-    <GridView x:Name="ImageGridView"
+    <GridView x:Name="ImageGridView">
     ```
 
     **이후:**
 
     ```xaml
     <GridView x:Name="ImageGridView"
-              ItemClick="ImageGridView_ItemClick"
+              IsItemClickEnabled="True"
+              ItemClick="ImageGridView_ItemClick">
     ```
 
     > [!NOTE]

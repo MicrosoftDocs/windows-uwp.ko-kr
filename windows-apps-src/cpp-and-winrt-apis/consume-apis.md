@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 구현, 런타임 클래스, 활성화
 ms.localizationpriority: medium
-ms.openlocfilehash: 81c8edc65f78de14c1c42611ea1e8d97046128ae
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1b3d9e4be7c45d4d2b9b5063087a78556497dc9b
+ms.sourcegitcommit: bcf60b6d460dc4855f207ba21da2e42644651ef6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170367"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91376251"
 ---
 # <a name="consume-apis-with-cwinrt"></a>C++/WinRT를 통한 API 사용
 
@@ -186,7 +186,7 @@ runtimeclass Gift
 }
 ```
 
-박스 안에 들어 있지 않은 **Gift**를 생성한다고 가정해 보겠습니다(초기화되지 않은 **GiftBox**를 사용하여 **Gift** 생성). 먼저 *잘못된* 방법을 살펴보겠습니다. **GiftBox**를 사용하는 **Gift** 생성자가 있는 것을 알 수 있습니다. 하지만 null **GiftBox**(아래에서처럼 균일 초기화를 통해 **Gift** 생성자 호출)를 전달하는 경우 원하는 결과를 얻지 *못하게* 됩니다.
+박스 안에 들어 있지 않은 **Gift**를 생성한다고 가정해 보겠습니다(초기화되지 않은 **GiftBox**를 사용하여 **Gift** 생성). 먼저 *잘못된* 방법을 살펴보겠습니다. **GiftBox**를 사용하는 **Gift** 생성자가 있는 것을 알 수 있습니다. 하지만 null **GiftBox**(아래와 같이 균일 초기화를 통해 **Gift** 생성자 호출)를 전달하는 경우 원하는 결과를 얻지 *못하게* 됩니다.
 
 ```cppwinrt
 // These are *not* what you intended. Doing it in one of these two ways
@@ -283,13 +283,26 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 Windows 런타임 구성 요소에서 구현된 API 사용에 대한 자세한 내용과 코드 및 연습은 [C++/WinRT를 사용한 C++/WinRT 런타임 구성 요소](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md) 및 [C++/WinRT의 이벤트 작성](./author-events.md)을 참조하세요.
 
 ## <a name="if-the-api-is-implemented-in-the-consuming-project"></a>API가 사용하는 프로젝트에 구현된 경우
-XAML UI에서 사용되는 형식은 XAML과 동일한 프로젝트에 있다고 해도 런타임 클래스이어야 합니다.
+이 섹션의 코드 예제는 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage) 토픽에서 가져온 것입니다. 사용하는 프로젝트에서 구현된 런타임 클래스의 사용에 대한 자세한 내용과 코드, 그리고 연습은 이 섹션을 참조하세요.
 
-이러한 시나리오에서는 프로젝션된 형식을 런타임 클래스의 Windows 런타임 메타데이터(`.winmd`)에서 생성합니다. 다시 말해, 헤더를 포함하지만 이번에는 **std::nullptr_t** 생성자를 통해 프로젝션된 형식을 생성합니다. 생성자는 초기화를 수행하지 않기 때문에 다음에는 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 도우미 함수를 통해 값을 인스턴스에 할당하여 필요한 생성자 인수를 전달해야 합니다. 사용하는 코드와 동일한 프로젝트에서 구현되는 런타임 클래스는 등록하거나, 혹은 Windows 런타임/COM 활성화를 통해 인스턴스화할 필요도 없습니다.
+XAML UI에서 사용되는 형식은 XAML과 동일한 프로젝트에 있다고 해도 런타임 클래스이어야 합니다. 이러한 시나리오에서는 프로젝션된 형식을 런타임 클래스의 Windows 런타임 메타데이터(`.winmd`)에서 생성합니다. 마찬가지로 헤더를 포함하지만, 런타임 클래스 인스턴스를 생성하는 방법으로 C++/WinRT 버전 1.0 또는 2.0 중에 선택할 수 있습니다. 버전 1.0 메서드는 [**winrt::make**](/uwp/cpp-ref-for-winrt/make)를 사용합니다. 버전 2.0 메서드를 *균일한 생성*이라고 합니다. 각 방법을 차례로 살펴보겠습니다.
 
-이 코드 예제에는 **비어 있는 앱(C++/WinRT)** 프로젝트가 필요합니다.
+### <a name="constructing-by-using-winrtmake"></a>**winrt::make**를 사용하여 생성
+기본(C++/WinRT 버전 1.0) 메서드부터 시작하겠습니다. 적어도 기본 패턴 정도는 알고 있는 것이 좋기 때문입니다. **std::nullptr_t** 생성자를 통해 프로젝션된 형식을 생성합니다. 생성자는 초기화를 수행하지 않기 때문에 다음에는 [**winrt::make**](/uwp/cpp-ref-for-winrt/make) 도우미 함수를 통해 값을 인스턴스에 할당하여 필요한 생성자 인수를 전달해야 합니다. 사용하는 코드와 동일한 프로젝트에서 구현되는 런타임 클래스는 등록하거나, 혹은 Windows 런타임/COM 활성화를 통해 인스턴스화할 필요도 없습니다.
+
+전체 연습은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)을 참조하세요. 이 섹션에서는 이 전체 연습에서 가져온 내용을 보여줍니다.
 
 ```cppwinrt
+// MainPage.idl
+import "BookstoreViewModel.idl";
+namespace Bookstore
+{
+    runtimeclass MainPage : Windows.UI.Xaml.Controls.Page
+    {
+        BookstoreViewModel MainViewModel{ get; };
+    }
+}
+
 // MainPage.h
 ...
 struct MainPage : MainPageT<MainPage>
@@ -297,10 +310,9 @@ struct MainPage : MainPageT<MainPage>
     ...
     private:
         Bookstore::BookstoreViewModel m_mainViewModel{ nullptr };
-        ...
-    };
-}
+};
 ...
+
 // MainPage.cpp
 ...
 #include "BookstoreViewModel.h"
@@ -312,7 +324,45 @@ MainPage::MainPage()
 }
 ```
 
-사용하는 프로젝트에서 구현된 런타임 클래스의 사용에 대한 자세한 내용과 코드, 그리고 연습은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)을 참조하세요.
+### <a name="uniform-construction"></a>균일한 생성
+C++/WinRT 버전 2.0 이상에서는 *균일한 생성*으로 알려진 최적화된 생성 형식을 사용할 수 있습니다([C++/WinRT 2.0의 새로운 기능 및 변경 내용](./news.md#news-and-changes-in-cwinrt-20) 참조).
+
+전체 연습은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md#add-a-property-of-type-bookstoreviewmodel-to-mainpage)을 참조하세요. 이 섹션에서는 이 전체 연습에서 가져온 내용을 보여줍니다.
+
+[**winrt::make**](/uwp/cpp-ref-for-winrt/make) 대신 균일한 생성을 사용하려면 활성화 팩터리가 필요합니다. 활성화 팩터리를 만드는 좋은 방법은 IDL에 생성자를 추가하는 것입니다.
+
+```idl
+// MainPage.idl
+import "BookstoreViewModel.idl";
+namespace Bookstore
+{
+    runtimeclass MainPage : Windows.UI.Xaml.Controls.Page
+    {
+        MainPage();
+        BookstoreViewModel MainViewModel{ get; };
+    }
+}
+```
+
+그런 다음, 아래와 같이 `MainPage.h`에서 한 번에 *m_mainViewModel*을 선언하고 초기화합니다.
+
+```cppwinrt
+// MainPage.h
+...
+struct MainPage : MainPageT<MainPage>
+{
+    ...
+    private:
+        Bookstore::BookstoreViewModel m_mainViewModel;
+        ...
+    };
+}
+...
+```
+
+그러면 `MainPage.cpp`의 **MainPage** 생성자에서 `m_mainViewModel = winrt::make<Bookstore::implementation::BookstoreViewModel>();`가 필요 없습니다.
+
+균일한 생성에 대한 자세한 내용과 코드 예제는 [균일한 생성 및 직접 구현 액세스 옵트인](./author-apis.md#opt-in-to-uniform-construction-and-direct-implementation-access)을 참조하세요.
 
 ## <a name="instantiating-and-returning-projected-types-and-interfaces"></a>프로젝션된 형식 및 인터페이스의 인스턴스화와 반환
 다음은 프로젝션된 형식과 인터페이스가 사용하는 프로젝트에서 어떻게 보이는지 나타낸 예제입니다. 이 예제의 프로젝션된 형식과 같은 프로젝션된 형식은 도구에서 생성되며 직접 작성하지 않는다는 점을 기억하세요.

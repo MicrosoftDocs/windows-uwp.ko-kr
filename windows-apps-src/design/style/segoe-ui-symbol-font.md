@@ -1,5 +1,5 @@
 ---
-Description: 이 문서에서는 Segoe MDL2 Assets 글꼴과 함께 제공되는 문자 모양을 나열하고 사용 지침을 제공합니다.
+description: 이 문서에서는 Segoe MDL2 Assets 글꼴과 함께 제공되는 문자 모양을 나열하고 사용 지침을 제공합니다.
 Search.Refinement.TopicID: 184
 title: Segoe MDL2 아이콘 지침
 ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
@@ -9,12 +9,13 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0663f9947249f54a888bf2d3f52f522ceb885604
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.custom: contperfq1
+ms.openlocfilehash: 5c2dc3237f2ff68ce2836fc80fa0936e13d84dd7
+ms.sourcegitcommit: f46edb85d523a4a1f5006787d357cdc9d090aefe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175787"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414895"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2 아이콘
 
@@ -66,9 +67,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 * Mac에서는 글꼴을 다운로드하여 설치해야 합니다. <a href="https://aka.ms/SegoeFonts">Segoe UI 및 MDL2 아이콘 글꼴 다운로드</a>
 
 ## <a name="icon-list"></a>아이콘 목록
-**Segoe MDL2 자산** 글꼴에는 여기에 표시할 수 있는 아이콘보다 더 많은 아이콘이 포함되어 있습니다. 대다수 아이콘은 특수 용도로 제작되었으며 다른 용도에는 잘 사용되지 않습니다.
-
-
+**Segoe MDL2 자산** 글꼴에는 여기에 표시할 수 있는 아이콘보다 더 많은 아이콘이 포함되어 있습니다. 많은 아이콘이 특수 용도로 제작되었으며 다른 용도에는 잘 사용되지 않습니다.
 
 <table style="background-color: white; color: black">
 
