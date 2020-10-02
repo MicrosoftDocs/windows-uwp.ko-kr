@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ce19fdca0ff79c430fcae7353cda595702f260c0
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 580edca578a0d518d89b5d2fdb30c9304be35cef
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218436"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636623"
 ---
 # <a name="tiles-badges-and-notifications-for-windows-apps"></a>Windows 앱에 대한 타일, 배지 및 알림
  
@@ -22,7 +22,7 @@ ms.locfileid: "91218436"
 
 > **중요 API**: [UWP 커뮤니티 도구 키트 알림 NuGet 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
-<p><img style="float: left; margin: 0px 15px 15px 0px;" src="images/tile-and-live-tile.png" />
+<p><img style="float: left; margin: 0px 15px 15px 0px;" src="images/tile-and-live-tile.png" alt="Screenshot of a static tile and a live tile displaying a notification and a badge." />
 타일은 시작 메뉴에 표시되는 앱의 표시를 말합니다. 모든 Windows 앱에는 타일이 있습니다. 다양한 타일 크기(작음, 중간, 넓음 및 큼)를 사용하도록 설정할 수 있습니다.</p>
 
 <p>뉴스 헤드라인 또는 읽지 않은 가장 최근 메시지의 제목과 같은 새 정보를 사용자에게 전달하기 위해 <em>타일 알림</em>을 사용하여 타일을 업데이트할 수 있습니다.</p>
