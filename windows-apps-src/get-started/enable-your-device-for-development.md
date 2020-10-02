@@ -3,21 +3,24 @@ ms.assetid: 54973C62-9669-4988-934E-9273FB0425FD
 title: 디바이스를 개발에 사용하도록 설정
 description: Visual Studio에서 개발자 모드를 활성화하여 개발 및 디버깅을 위해 Windows 10 디바이스를 사용하는 방법을 알아봅니다.
 keywords: 개발자 라이선스 Visual Studio 시작, 개발자 라이선스 디바이스 활성화
-ms.date: 05/22/2020
+ms.date: 09/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 702e3aa166501c3e9974398ae5b89e832cfa7391
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2a227494bb597b25c090d4ff57982e5d5c739184
+ms.sourcegitcommit: 9940ed6431aadbd8d4e54ca23d8ae44d3a2d048d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159057"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91403918"
 ---
 # <a name="enable-your-device-for-development"></a>디바이스를 개발에 사용하도록 설정
 
 ## <a name="activate-developer-mode-sideload-apps-and-access-other-developer-features"></a>앱 개발자 모드를 활성화하고, 앱을 테스트용으로 로드하고, 기타 개발자 기능에 액세스
 
 ![디바이스를 개발에 사용하도록 설정](images/developer-poster.png)
+
+> [!IMPORTANT]
+> PC에서 자신만의 고유한 애플리케이션을 만드는 것이 아닌 경우 개발자 모드를 사용할 필요가 없습니다. 컴퓨터의 문제를 해결하려는 경우[ Windows 도움말](https://support.microsoft.com/hub/4338813/windows-help?os=windows-10)을 확인하세요. 처음으로 개발하는 경우 필요한 도구를 다운로드하여 [준비](get-set-up.md)할 수 있습니다.
 
 게임, 웹 검색, 이메일, Office 앱 등의 일반적인 일상 활동에 컴퓨터를 사용하는 경우 개발자 모드를 활성화할 필요가 *없으며* 사실 활성화해서는 안 됩니다. 이 페이지의 나머지 정보를 볼 필요가 없으며, 이전에 하던 작업으로 안전하게 돌아가시면 됩니다. 들러 주셔서 감사합니다!
 

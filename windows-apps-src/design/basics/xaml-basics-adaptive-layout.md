@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e1498836772c3c279a1b9d85d76070b29593f5e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: aabad7a731bd0654468d7b9849d3b9a5bf6bead6
+ms.sourcegitcommit: 662fcfdc08b050947e289a57520a2f99fad1a620
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174477"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353733"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>자습서: 적응형 레이아웃 만들기
 
@@ -165,17 +165,17 @@ ms.locfileid: "89174477"
     ...
 
         <!-- Large window VisualState -->
-        <VisualState x:Key="LargeWindow">
+        <VisualState>
 
         </VisualState>
 
         <!-- Medium window VisualState -->
-        <VisualState x:Key="MediumWindow">
+        <VisualState>
 
         </VisualState>
 
         <!-- Small window VisualState -->
-        <VisualState x:Key="SmallWindow">
+        <VisualState>
 
         </VisualState>
 
@@ -185,7 +185,7 @@ ms.locfileid: "89174477"
 
 ### <a name="create-statetriggers-to-apply-the-visual-state"></a>시각적 상태를 적용하는 StateTrigger 생성
 
-다음으로 각 맞춤 지점에 해당하는 `StateTriggers`를 만듭니다. MainPage.xaml에서는 방금 2부에서 만든 `VisualStateManager`에 다음 코드를 추가합니다.
+다음으로 각 맞춤 지점에 해당하는 `StateTriggers`를 만듭니다. MainPage.xaml에서 각 `VisualState`에 다음 코드를 추가합니다.
 
 ```xaml
 <VisualStateManager.VisualStateGroups>
@@ -193,7 +193,7 @@ ms.locfileid: "89174477"
     ...
 
         <!-- Large window VisualState -->
-        <VisualState x:Key="LargeWindow">
+        <VisualState>
 
             <!-- Large window trigger -->
             <VisualState.StateTriggers>
@@ -203,7 +203,7 @@ ms.locfileid: "89174477"
         </VisualState>
 
         <!-- Medium window VisualState -->
-        <VisualState x:Key="MediumWindow">
+        <VisualState>
 
             <!-- Medium window trigger -->
             <VisualState.StateTriggers>
@@ -213,7 +213,7 @@ ms.locfileid: "89174477"
         </VisualState>
 
         <!-- Small window VisualState -->
-        <VisualState x:Key="SmallWindow">
+        <VisualState>
 
             <!-- Small window trigger -->
             <VisualState.StateTriggers >
@@ -266,9 +266,9 @@ ms.locfileid: "89174477"
 
 이제 이 실습을 완료했으므로, 여러분은 혼자 더 많은 실습을 수행할 수 있는 충분한 적응형 레이아웃 지식을 얻었습니다. 더 큰 문제를 해결하려면 Surface Hub와 같은 더 큰 화면 크기에 맞게 레이아웃을 최적화해보세요. Surface Hub 레이아웃을 테스트하려면 [Visual Studio를 사용하여 Surface Hub 앱 테스트](../../debug-test-perf/test-surface-hub-apps-using-visual-studio.md)를 참조하세요.
 
-문제가 있는 경우 [XAML을 사용하여 페이지 레이아웃 정의](../layout/layouts-with-xaml.md)의 다음 섹션에서 더 많은 지침을 찾을 수 있습니다.
+문제가 있는 경우 [XAML을 사용한 반응형 레이아웃](../layout/layouts-with-xaml.md) 섹션에서 더 많은 지침을 찾을 수 있습니다.
 
-+ [시각적 상태 및 상태 트리거](../layout/layouts-with-xaml.md#visual-states-and-state-triggers)
++ [시각적 상태 및 상태 트리거](../layout/layouts-with-xaml.md#adaptive-layouts-with-visual-states-and-state-triggers)
 + [맞춤형 레이아웃](../layout/layouts-with-xaml.md#tailored-layouts)
 
 또는 초기 사진 편집 앱의 빌드 방법에 대해 자세히 알아보려면 XAML [사용자 인터페이스](../basics/xaml-basics-ui.md) 및 [데이터 바인딩](../../data-binding/xaml-basics-data-binding.md)의 이 자습서를 확인하세요.
