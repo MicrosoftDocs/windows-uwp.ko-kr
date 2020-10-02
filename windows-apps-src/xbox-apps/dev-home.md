@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 permalink: en-us/docs/xdk/dev-home.html
 ms.localizationpriority: medium
-ms.openlocfilehash: 40100adb1bd9337d933b8ebd155847bde71e341a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 291b25e962aa8ac37705fd0db544f138036949d2
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172817"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636613"
 ---
 # <a name="developer-home-on-the-console-dev-home"></a>콘솔의 개발자 홈 (Dev Home)
    
@@ -30,10 +30,10 @@ Dev Home은 개발자의 생산성을 지원 하도록 설계 된 Xbox One 개�
    1. **모든 설정** 선택  
    1. 기본 **개발자** 페이지에서 **개발자 홈** (홈 아이콘)을 선택 합니다.   
 
- ![](images/dev_home_icons.png)   
+ ![설정에서 개발자 페이지의 스크린샷](images/dev_home_icons.png)   
   
 이전 복구에서 **추천 콘텐츠의** 홈 화면 오른쪽에 있는 Dev home 타일을 선택 하거나 Xbox one Manager의 응용 프로그램 목록을 보고 **개발자 홈**을 시작 합니다.   
- ![](images/dev_home_1.png) 
+ ![시작 옵션이 강조 표시 된 응용 프로그램 탭의 스크린샷](images/dev_home_1.png) 
 <a id="ID4EBC"></a>
 
    
@@ -81,10 +81,10 @@ Dev Home은 개발자의 생산성을 지원 하도록 설계 된 Xbox One 개�
    
   
 맞추기 모드에 액세스 하려면 적절 한 도구의 제목을 강조 표시 하 고 컨트롤러에서 **보기** 단추를 누른 다음 상황에 맞는 메뉴에서 **맞추기** 를 선택 합니다.  
- ![](images/dev_home_4.png)   
+ ![강조 표시 된 맞추기 옵션을 보여 주는 개발자 홈 페이지의 스크린샷](images/dev_home_4.png)   
   
 개발자 홈이 오른쪽에 맞춰집니다. 일반적인 방법으로 Nexus 단추를 두 번 눌러 컨텍스트를 전환할 수 있습니다.  
- ![](images/dev_home_5.png)  
+ ![테스트 하는 동안 사용자가 도구에 액세스할 수 있다는 것을 보여 주는 오른쪽에 맞춘 개발자 홈 페이지를 보여 주는 스크린샷](images/dev_home_5.png)  
 <a id="ID4EKF"></a>
 
    
@@ -102,7 +102,7 @@ Dev Home은 개발자의 생산성을 지원 하도록 설계 된 Xbox One 개�
    
   
 도구의 크기나 위치를 변경 하려면 제목에 포커스가 있을 때 상황에 맞는 메뉴 단추 (컨트롤러의 보기 단추)를 사용 합니다. 상황에 맞는 메뉴에서 **이동** 또는 **크기 조정**을 선택 합니다.   
- ![](images/dev_home_6.png)  
+ ![이동 옵션이 강조 표시 된 오른쪽에 맞춰진 개발자 홈 페이지의 스크린샷](images/dev_home_6.png)  
 <a id="ID4EEG"></a>
 
    
@@ -111,7 +111,7 @@ Dev Home은 개발자의 생산성을 지원 하도록 설계 된 Xbox One 개�
    
   
 주 메뉴에서 **작업 영역** 을 선택한 다음 **테마 색을 변경할**수 있습니다. 새 색을 선택 하 고 **저장** 을 선택 하 여 포커스를 강조 표시 하는 데 사용 되는 테마 색을 업데이트 합니다.   
- ![](images/dev_home_7.png)  
+ ![작업 영역을 표시 하 고 테마 색 옵션을 선택 하는 개발자 홈 페이지의 스크린샷](images/dev_home_7.png)  
 <a id="ID4EVG"></a>
 
    
@@ -120,7 +120,7 @@ Dev Home은 개발자의 생산성을 지원 하도록 설계 된 Xbox One 개�
    
   
 패키지에 여러 응용 프로그램이 포함 되어 있는 경우 개발자 홈에서 기본 응용 프로그램을 시작할 수 있도록 설정할 수 있습니다. 시작 관리자에서 패키지를 강조 표시 하 고 **A** 단추를 눌러 사용 가능한 응용 프로그램 목록을 엽니다. 기본값으로 설정 하려는 항목을 강조 표시 하 고 **보기** 단추를 누른 다음 상황에 맞는 메뉴에서 **기본값으로 설정** 을 선택 합니다.   
- ![](images/dev_home_setdefault.png)  
+ ![기본으로 설정 옵션이 강조 표시 된 개발자 홈 페이지의 스크린샷](images/dev_home_setdefault.png)  
 <a id="ID4EGH"></a>
 
    
@@ -129,13 +129,13 @@ Dev Home은 개발자의 생산성을 지원 하도록 설계 된 Xbox One 개�
    
   
 설치 된 앱 및 게임 목록의 맨 아래에 있는 시작 관리자에서 **네트워크 공유에서 게임 등록** 옵션을 선택 하 여 느슨한 파일 버전의 타이틀을 원격으로 실행할 수 있습니다.   
- ![](images/dev_home_8.png)   
+ ![네트워크 공유에서 게임 등록 옵션이 강조 표시 된 개발자 홈 페이지의 스크린샷](images/dev_home_8.png)   
   
 그런 다음 등록 하려는 제목의 appxmanifest.xml 파일에 대 한 네트워크 경로를 입력할 수 있습니다. Dev Home은 해당 공유에 대 한 기존 자격 증명을 사용 하 여 타이틀을 등록 하려고 하며, 필요한 경우 새 네트워크 자격 증명을 입력 하 라는 메시지가 표시 됩니다. 추가 공유 (예: 별도의 서버에서 연결 된 리소스에 액세스 하는 경우)에 액세스 해야 하는 경우 아래 옵션을 통해 추가 공유를 추가 해야 기호로.   
    
   
 주 메뉴의 **네트워크 자격 증명 관리** 옵션을 통해 콘솔에서 이러한 저장 된 자격 증명을 관리 하 고 다른 자격 증명을 추가할 수 있습니다.   
- ![](images/dev_home_9.png)   
+ ![네트워크 자격 증명 관리 옵션이 강조 표시 된 개발자 홈 페이지의 스크린샷](images/dev_home_9.png)   
   
 현재 콘솔에서 자격 증명을 확인 하 고, 자격 증명의 경로를 선택 하 고, 단추 **를** 클릭 하 여 자격 증명을 편집 하 고, 제거 링크를 선택 하 고 단추 **를** 클릭 하 여 자격 증명을 제거할 수 있습니다.   
    

@@ -1,20 +1,20 @@
 ---
 title: 변환 된 데스크톱 앱 및 게임에 MRT.LOG 사용
-description: .NET 또는 Win32 앱 또는 게임을 msix 또는 .appx 패키지로 패키지 하면 리소스 관리 시스템을 활용 하 여 런타임 컨텍스트에 맞는 앱 리소스를 로드할 수 있습니다. 이 문서에서는 해당 기술에 대해 자세히 설명합니다.
+description: .NET 또는 Win32 앱 또는 게임을 .msix 또는 .appx 패키지로 패키징하면 리소스 관리 시스템을 활용하여 런타임 컨텍스트에 맞는 앱 리소스를 로드할 수 있습니다. 이 문서에서는 해당 기술에 대해 자세히 설명합니다.
 ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp, mrt.log, pri. 리소스, 게임, centennial, 데스크톱 앱 변환기, mui, 위성 어셈블리
 ms.localizationpriority: medium
-ms.openlocfilehash: dafce15fa259fdbc8a0afab90b6617dc6cc37cf4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b86cbcfcc5a6c6284b993dcad1325b108b1ab353
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157617"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636493"
 ---
 # <a name="use-the-windows-10-resource-management-system-in-a-legacy-app-or-game"></a>레거시 앱 또는 게임에서 Windows 10 리소스 관리 시스템 사용
 
-.NET 및 Win32 앱과 게임은 종종 다양 한 언어로 지역화 되어 총 주소 지정 가능 시장을 확장 합니다. 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요. .NET 또는 Win32 앱 또는 게임을 msix 또는 .appx 패키지로 패키지 하면 리소스 관리 시스템을 활용 하 여 런타임 컨텍스트에 맞는 앱 리소스를 로드할 수 있습니다. 이 문서에서는 해당 기술에 대해 자세히 설명합니다.
+.NET 및 Win32 앱과 게임은 종종 다양 한 언어로 지역화 되어 총 주소 지정 가능 시장을 확장 합니다. 앱 지역화의 가치 제안에 대한 자세한 내용은 [세계화 및 지역화](../design/globalizing/globalizing-portal.md)를 참조하세요. .NET 또는 Win32 앱 또는 게임을 .msix 또는 .appx 패키지로 패키징하면 리소스 관리 시스템을 활용하여 런타임 컨텍스트에 맞는 앱 리소스를 로드할 수 있습니다. 이 문서에서는 해당 기술에 대해 자세히 설명합니다.
 
 기존 Win32 응용 프로그램을 지역화 하는 방법에는 여러 가지가 있지만 Windows 8에는 응용 프로그램 형식에 따라 여러 프로그래밍 언어에서 작동 하는 [새로운 리소스 관리 시스템이](/previous-versions/windows/apps/jj552947(v=win.10)) 도입 되었으며 간단한 지역화를 통해 기능을 제공 합니다. 이 시스템은이 항목에서 "MRT.LOG"로 지칭 됩니다. 지금 까지는 "현대 리소스 기술"을 구현 "최신" 이라는 용어는 중단 되었습니다. 리소스 관리자는 MRM (최신 리소스 관리자) 또는 PRI (패키지 리소스 인덱스) 라고도 할 수 있습니다.
 
@@ -33,7 +33,7 @@ MSIX 기반 또는 .appx 기반 배포와 함께 (예: Microsoft Store에서) MR
 <tr>
 <td>패키지 매니페스트 지역화</td>
 <td>지역화 된 콘텐츠가 Windows Shell 및 Microsoft Store에 표시 되는 데 필요한 운영 체제의 최소 작업</td>
-<td>작음</td>
+<td>소형</td>
 </tr>
 <tr>
 <td>MRT.LOG를 사용 하 여 리소스 식별 및 찾기</td>
@@ -43,12 +43,12 @@ MSIX 기반 또는 .appx 기반 배포와 함께 (예: Microsoft Store에서) MR
 <tr>
 <td>빌드 리소스 팩</td>
 <td>다운로드 및 설치 크기를 최소화 하는 마지막 단계</td>
-<td>작음</td>
+<td>소형</td>
 </tr>
 <tr>
 <td>MRT.LOG 리소스 형식 및 Api로 마이그레이션</td>
 <td>파일 크기가 훨씬 작음 (기존 리소스 기술에 따라)</td>
-<td>큼</td>
+<td>대형</td>
 </tr>
 </table>
 
@@ -62,11 +62,11 @@ MSIX 기반 또는 .appx 기반 배포와 함께 (예: Microsoft Store에서) MR
 
 다음은 두 단추 (및)에 텍스트 레이블이 있고 `openButton` `saveButton` 로고 ()에 사용 되는 PNG 파일을 포함 하는 응용 프로그램의 간단한 예입니다 `logoImage` . 텍스트 레이블은 영어와 독일어로 지역화 되며, 로고는 일반 바탕 화면 표시 (100% 배율 비율) 및 고해상도 휴대폰 (300% 배율 비율)에 최적화 되어 있습니다. 이 다이어그램은 모델의 개략적인 개념 보기를 제공 합니다. 정확히 구현에 매핑되지 않습니다.
 
-<p><img src="images\conceptual-resource-model.png"/></p>
+:::image type="content" source="images\conceptual-resource-model.png" alt-text="원본 코드 레이블, 조회 테이블 레이블 및 디스크의 파일 레이블에 대 한 스크린샷&quot;:::
 
 그래픽에서 응용 프로그램 코드는 세 가지 논리적 리소스 이름을 참조 합니다. 런타임에 `GetResource` 의사 (pseudo) 함수는 mrt.log를 사용 하 여 리소스 테이블 (PRI 파일 이라고 함)에서 이러한 리소스 이름을 확인 하 고 앰비언트 조건 (사용자 언어 및 디스플레이의 배율 요소)에 따라 가장 적합 한 후보를 찾습니다. 레이블의 경우 문자열이 직접 사용 됩니다. 로고 이미지의 경우 문자열은 파일 이름으로 해석 되 고 파일은 디스크에서 읽혀집니다. 
 
-사용자가 영어 또는 독일어 이외의 언어를 사용 하거나 100% 또는 300% 이외의 표시 배율를 사용 하는 경우에는는 대체 규칙 집합을 기준으로 일치 하는 "가장 가까운" 후보를 선택 합니다 (자세한 배경 정보는 [리소스 관리 시스템](/previous-versions/windows/apps/jj552947(v=win.10)) 참조).
+사용자가 영어 또는 독일어 이외의 언어를 사용 하거나 100% 또는 300% 이외의 표시 배율를 사용 하는 경우에는는 대체 규칙 집합을 기준으로 일치 하는 &quot;가장 가까운" 후보를 선택 합니다 (자세한 배경 정보는 [리소스 관리 시스템](/previous-versions/windows/apps/jj552947(v=win.10)) 참조).
 
 MRT.LOG는 둘 이상의 한정자에 맞게 조정 되는 리소스를 지원 합니다. 예를 들어 로고 이미지에 지역화 해야 하는 포함 된 텍스트가 포함 된 경우 로고에는 EN/Scale-100, u n/배율-100, EN/배율-300 및 DE-DE/배율-300 이라는 4 개의 후보가 있습니다.
 
@@ -198,7 +198,11 @@ Visual Studio에서 디자이너를 사용 하려면 다음을 수행 합니다.
 1. `Strings\en-us`프로젝트에서 폴더 (또는 다른 언어)를 만들고 기본 이름인를 사용 하 여 프로젝트의 루트 폴더에 **새 항목** 을 추가 합니다 `resources.resw` . 리소스 **사전이** 아닌 리소스 **파일 (. resw)** 을 선택 해야 합니다. 리소스 사전은 XAML 응용 프로그램에서 사용 되는 파일입니다.
 2. 디자이너를 사용 하 여 다음 문자열을 입력 합니다. 동일한를 사용 `Names` 하지만을 `Values` 응용 프로그램에 적합 한 텍스트로 바꿉니다.
 
-<img src="images\editing-resources-resw.png"/>
+:::image type="content" source="images\editing-resources-resw.png" alt-text="원본 코드 레이블, 조회 테이블 레이블 및 디스크의 파일 레이블에 대 한 스크린샷&quot;:::
+
+그래픽에서 응용 프로그램 코드는 세 가지 논리적 리소스 이름을 참조 합니다. 런타임에 `GetResource` 의사 (pseudo) 함수는 mrt.log를 사용 하 여 리소스 테이블 (PRI 파일 이라고 함)에서 이러한 리소스 이름을 확인 하 고 앰비언트 조건 (사용자 언어 및 디스플레이의 배율 요소)에 따라 가장 적합 한 후보를 찾습니다. 레이블의 경우 문자열이 직접 사용 됩니다. 로고 이미지의 경우 문자열은 파일 이름으로 해석 되 고 파일은 디스크에서 읽혀집니다. 
+
+사용자가 영어 또는 독일어 이외의 언어를 사용 하거나 100% 또는 300% 이외의 표시 배율를 사용 하는 경우에는는 대체 규칙 집합을 기준으로 일치 하는 &quot;가장 가까운" :::
 
 > [!NOTE]
 > Visual Studio designer를 사용 하 여 시작 하는 경우를 눌러 항상 XML을 직접 편집할 수 있습니다 `F7` . 하지만 최소한의 XML 파일로 시작 하는 경우 디자이너는 추가 메타 데이터가 너무 많기 때문에 *파일을 인식 하지 못합니다* . 디자이너에서 생성 된 파일의 상용구 XSD 정보를 직접 편집 된 XML 파일로 복사 하 여이 문제를 해결할 수 있습니다.
@@ -236,8 +240,17 @@ XML을 직접 편집 하는 경우 파일을 열고 `AppxManifest.xml` <span sty
 
 Visual Studio 매니페스트 디자이너를 사용 하는 경우 appxmanifest.xml 파일을 열고 **응용 프로그램* 탭 및 *패키징* 탭에서 <span style="background-color: lightgreen">강조 표시 된 값</span> 값을 변경 합니다.
 
-<img src="images\editing-application-info.png"/>
-<img src="images\editing-packaging-info.png"/>
+:::image type="content" source="images\editing-application-info.png" alt-text="원본 코드 레이블, 조회 테이블 레이블 및 디스크의 파일 레이블에 대 한 스크린샷&quot;:::
+
+그래픽에서 응용 프로그램 코드는 세 가지 논리적 리소스 이름을 참조 합니다. 런타임에 `GetResource` 의사 (pseudo) 함수는 mrt.log를 사용 하 여 리소스 테이블 (PRI 파일 이라고 함)에서 이러한 리소스 이름을 확인 하 고 앰비언트 조건 (사용자 언어 및 디스플레이의 배율 요소)에 따라 가장 적합 한 후보를 찾습니다. 레이블의 경우 문자열이 직접 사용 됩니다. 로고 이미지의 경우 문자열은 파일 이름으로 해석 되 고 파일은 디스크에서 읽혀집니다. 
+
+사용자가 영어 또는 독일어 이외의 언어를 사용 하거나 100% 또는 300% 이외의 표시 배율를 사용 하는 경우에는는 대체 규칙 집합을 기준으로 일치 하는 &quot;가장 가까운" :::
+
+:::image type="content" source="images\editing-packaging-info.png" alt-text="원본 코드 레이블, 조회 테이블 레이블 및 디스크의 파일 레이블에 대 한 스크린샷&quot;:::
+
+그래픽에서 응용 프로그램 코드는 세 가지 논리적 리소스 이름을 참조 합니다. 런타임에 `GetResource` 의사 (pseudo) 함수는 mrt.log를 사용 하 여 리소스 테이블 (PRI 파일 이라고 함)에서 이러한 리소스 이름을 확인 하 고 앰비언트 조건 (사용자 언어 및 디스플레이의 배율 요소)에 따라 가장 적합 한 후보를 찾습니다. 레이블의 경우 문자열이 직접 사용 됩니다. 로고 이미지의 경우 문자열은 파일 이름으로 해석 되 고 파일은 디스크에서 읽혀집니다. 
+
+사용자가 영어 또는 독일어 이외의 언어를 사용 하거나 100% 또는 300% 이외의 표시 배율를 사용 하는 경우에는는 대체 규칙 집합을 기준으로 일치 하는 &quot;가장 가까운" :::
 
 ### <a name="step-12-build-pri-file-make-an-msix-package-and-verify-its-working"></a>1.2 단계: PRI 파일을 빌드하고, MSIX 패키지를 만들고 작동 하는지 확인
 
@@ -462,7 +475,11 @@ makepri createconfig /cf ..\contoso_demo.xml /dq en-US_de-DE_fr-FR /pv 10.0 /o
 
 또한 탭을 사용 하 여 `Declarations` <span style="background-color: lightgreen">강조 표시 된 값</span>을 기록 하 고, Visual Studio 매니페스트 디자이너를 사용 하 여이 정보를 추가할 수 있습니다.
 
-<p><img src="images\editing-declarations-info.png"/></p>
+:::image type="content" source="images\editing-declarations-info.png" alt-text="원본 코드 레이블, 조회 테이블 레이블 및 디스크의 파일 레이블에 대 한 스크린샷&quot;:::
+
+그래픽에서 응용 프로그램 코드는 세 가지 논리적 리소스 이름을 참조 합니다. 런타임에 `GetResource` 의사 (pseudo) 함수는 mrt.log를 사용 하 여 리소스 테이블 (PRI 파일 이라고 함)에서 이러한 리소스 이름을 확인 하 고 앰비언트 조건 (사용자 언어 및 디스플레이의 배율 요소)에 따라 가장 적합 한 후보를 찾습니다. 레이블의 경우 문자열이 직접 사용 됩니다. 로고 이미지의 경우 문자열은 파일 이름으로 해석 되 고 파일은 디스크에서 읽혀집니다. 
+
+사용자가 영어 또는 독일어 이외의 언어를 사용 하거나 100% 또는 300% 이외의 표시 배율를 사용 하는 경우에는는 대체 규칙 집합을 기준으로 일치 하는 &quot;가장 가까운" :::
 
 이제 각 파일에 해당 리소스 이름을 추가 하 여 `.resw` <span style="background-color: yellow">강조 표시 된 텍스트</span> 를 앱에 대 한 적절 한 텍스트로 바꿉니다 ( *지원 되는 각 언어*에 대해이 작업을 수행 해야 함).
 
@@ -478,7 +495,11 @@ makepri createconfig /cf ..\contoso_demo.xml /dq en-US_de-DE_fr-FR /pv 10.0 /o
 
 그러면 파일 탐색기와 같은 Windows 셸의 일부가 표시 됩니다.
 
-<p><img src="images\file-type-tool-tip.png"/></p>
+:::image type="content" source="images\file-type-tool-tip.png" alt-text="원본 코드 레이블, 조회 테이블 레이블 및 디스크의 파일 레이블에 대 한 스크린샷&quot;:::
+
+그래픽에서 응용 프로그램 코드는 세 가지 논리적 리소스 이름을 참조 합니다. 런타임에 `GetResource` 의사 (pseudo) 함수는 mrt.log를 사용 하 여 리소스 테이블 (PRI 파일 이라고 함)에서 이러한 리소스 이름을 확인 하 고 앰비언트 조건 (사용자 언어 및 디스플레이의 배율 요소)에 따라 가장 적합 한 후보를 찾습니다. 레이블의 경우 문자열이 직접 사용 됩니다. 로고 이미지의 경우 문자열은 파일 이름으로 해석 되 고 파일은 디스크에서 읽혀집니다. 
+
+사용자가 영어 또는 독일어 이외의 언어를 사용 하거나 100% 또는 300% 이외의 표시 배율를 사용 하는 경우에는는 대체 규칙 집합을 기준으로 일치 하는 &quot;가장 가까운":::
 
 새 UI 문자열을 표시 해야 하는 새 시나리오를 실행 하기 전에 패키지를 빌드하고 테스트 합니다.
 

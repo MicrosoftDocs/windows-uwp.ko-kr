@@ -6,18 +6,18 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 작업 표시줄, 작업 표시줄 관리자, 작업 표시줄에 고정, 기본 타일
 ms.localizationpriority: medium
-ms.openlocfilehash: c2090d038bb3999112e8d2fa3824968916e5d7dc
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: e43dd7084c042b7480aa98c638f1fc5d216e64c7
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219336"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636633"
 ---
 # <a name="pin-your-app-to-the-taskbar"></a>작업 표시줄에 앱 고정
 
 [앱을 시작 메뉴에 고정](tiles-and-notifications/primary-tile-apis.md)하는 것 처럼 작업 표시줄에 프로그래밍 방식으로 자신의 앱을 고정할 수 있습니다. 앱이 현재 고정 되어 있는지 여부와 작업 표시줄에서 고정을 허용 하는지 여부를 확인할 수 있습니다. 
 
-![작업 표시줄](images/taskbar/taskbar.png)
+![여기에 고정 된 앱을 보여 주는 Windows 10 작업 표시줄의 스크린샷](images/taskbar/taskbar.png)
 
 > [!IMPORTANT]
 > **낙하 작성자 업데이트 필요**: 작업 표시줄 api를 사용 하려면 SDK 16299을 대상으로 하 고 빌드 16299 이상을 실행 해야 합니다.

@@ -4,12 +4,12 @@ description: VES (Voice Enabled Shell)를 사용 하 여 Xbox에서 유니버설
 ms.date: 10/19/2017
 ms.topic: article
 keywords: windows 10, uwp, xbox, 음성, 음성 사용 셸
-ms.openlocfilehash: 38afa2473dd74ab580cf38cc21d1f2b192f9b72a
-ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
+ms.openlocfilehash: b59b578a13145910be30c3f228305b874f9e9734
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89304655"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636483"
 ---
 # <a name="using-speech-to-invoke-ui-elements"></a>Speech를 사용 하 여 UI 요소 호출
 
@@ -83,7 +83,7 @@ ScrollPattern를 지 원하는 스크롤 가능 컨테이너의 경우, VES는 "
 
 이 문제를 해결 하기 위해 Windows 10 크리에이터 업데이트부터 내레이터가 속성을 볼 수 있도록 업데이트 되었습니다 `AutomationProperties.HelpText` .  이 속성이 비어 있지 않으면 내레이터는 외에도 해당 내용을 말합니다 `AutomationProperties.Name` .  `HelpText`가 비어 있으면 내레이터는 이름 내용만 읽습니다.  이렇게 하면 필요한 경우 더 긴 설명 문자열을 사용할 수 있지만 속성에 짧은 음성 인식 친숙 한 구가 유지 됩니다 `Name` .
 
-![](images/ves_narrator.jpg)
+![AutomationProperties.Name 및 AutomationProperties를 포함 하는 단추 뒤의 코드를 보여 주는 다이어그램입니다. HelpText은 Voice Enabled 셸이 이름 구성에 대해 수신 함을 보여 줍니다.](images/ves_narrator.jpg)
 
 자세한 내용은 [UI의 내게 필요한 옵션 지원에 대 한 자동화 속성](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ff400332(v=vs.95) "UI의 내게 필요한 옵션 지원에 대 한 자동화 속성")을 참조 하세요.
 
@@ -101,7 +101,7 @@ ALM을 입력 하면 다음과 같은 결과가 나타납니다.
 - Cortana 오버레이가 오른쪽 위에 표시 되 고 사용자에 게 표시 되는 내용을 표시 하는 메시지가 표시 됩니다.  사용자가 말하는 동안 음성 인식기에서 인식 하는 구 조각이이 위치에도 표시 됩니다.
 - VES는 UIA 트리를 구문 분석 하 고, 모든 실행 가능한 컨트롤을 찾고, 음성 인식 문법에 텍스트를 등록 하 고, 연속 수신 대기 세션을 시작 합니다.
 
-    ![](images/ves_overlay.png)
+    ![레이블 표시 옵션이 강조 표시 된 레이블이 표시 되는 스크린샷](images/ves_overlay.png)
 
 ### <a name="exiting-alm"></a>ALM 종료 ###
 사용자가 음성을 사용 하 여 UI와 상호 작용 하는 동안 시스템은 ALM에 유지 됩니다.  ALM을 종료 하는 방법에는 다음 두 가지가 있습니다.
@@ -129,24 +129,24 @@ ALM에서 사용자는 음성을 사용 하 여 UI와 상호 작용할 수 있�
 ## <a name="location-of-voice-tip-labels"></a>음성 팁 레이블 위치 ##
 음성 팁 레이블은 컨트롤의 BoundingRectangle 내에서 가로 및 세로 방향으로 가운데 맞춤 됩니다.  컨트롤이 작고 긴밀 하 게 그룹화 되 면 다른 사용자가 레이블을 겹치거나 숨길 수 있으며, VES는 이러한 레이블을 분리 하 여 표시 하 고 표시 되도록 합니다.  그러나이는 100%의 시간 동안 작동 하지 않을 수 있습니다.  매우 복잡 한 UI가 있는 경우 일부 레이블이 다른 레이블로 가려져 있을 수 있습니다. "레이블 표시"를 사용 하 여 UI를 검토 하 여 음성 팁 표시 유형을 위한 충분 한 공간이 있는지 확인 하세요.
 
-![](images/ves_labels.png)
+![컨트롤의 경계 사각형 내에서 가로 및 세로로 가운데에 있는 음성 팁 레이블의 스크린샷](images/ves_labels.png)
 
 ## <a name="combo-boxes"></a>콤보 상자 ##
 콤보 상자를 확장 하면 콤보 상자의 각 개별 항목에 고유한 음성 팁 레이블이 표시 되 고 일반적으로 드롭다운 목록 뒤에 있는 기존 컨트롤의 위쪽에 표시 됩니다.  콤보 상자 항목이 확장 될 때 콤보 상자 항목 레이블이 콤보 상자 뒤의 컨트롤 레이블과 결합 되는 muddle 복잡 하 고 복잡 한 레이블 표시를 방지 하기 위해 자식 항목의 레이블만 표시 됩니다.  다른 모든 음성 팁 레이블은 숨겨집니다.  그런 다음 사용자는 드롭다운 항목 중 하나를 선택 하거나 콤보 상자에서 "close"를 선택할 수 있습니다.
 
 - 축소 된 콤보 상자의 레이블:
 
-    ![](images/ves_combo_closed.png)
+    ![축소 된 콤보 상자에 레이블이 있는 디스플레이 및 소리 비디오 출력 창의 스크린샷](images/ves_combo_closed.png)
 
 - 확장 된 콤보 상자의 레이블:
 
-    ![](images/ves_combo_open.png)
+    ![확장 된 콤보 상자에 레이블이 있는 디스플레이 및 소리 비디오 출력 창의 스크린샷](images/ves_combo_open.png)
 
 
 ## <a name="scrollable-controls"></a>스크롤 가능 컨트롤 ##
 스크롤할 수 있는 컨트롤의 경우 스크롤 명령에 대 한 음성 팁이 컨트롤의 각 가장자리를 중심으로 합니다.  음성 팁은 실행 가능한 스크롤 방향에 대해서만 표시 됩니다. 예를 들어 세로 스크롤을 사용할 수 없는 경우 "위로 스크롤" 및 "아래로 스크롤"은 표시 되지 않습니다.  스크롤할 수 있는 여러 영역이 있는 경우 VES는 서 수를 구분 하는 데 서 수를 사용 합니다 (예: "오른쪽으로 스크롤", "오른쪽으로 스크롤" 등이 있습니다.
 
-![](images/ves_scroll.png) 
+![왼쪽 스크롤 및 오른쪽으로 스크롤 된 음성 팁을 가로로 스크롤할 때의 스크린샷](images/ves_scroll.png) 
 
 ## <a name="disambiguation"></a>명확성 ##
 여러 UI 요소의 이름이 같거나 음성 인식기가 여러 후보와 일치 하는 경우 VES는 명확성 모드로 전환 됩니다.  이 모드에서 사용자가 올바른 항목을 선택할 수 있도록 관련 된 요소에 대해 음성 팁 레이블이 표시 됩니다. 사용자는 "취소"를 말하여 명확성 모드를 취소할 수 있습니다.
@@ -155,15 +155,15 @@ ALM에서 사용자는 음성을 사용 하 여 UI와 상호 작용할 수 있�
 
 - 활성 수신 대기 모드에서의 명확성 사용자에 게 "는 모호 합니다." 라고 표시 됩니다.
 
-    ![](images/ves_disambig1.png) 
+    ![현재 수신 대기 모드의 스크린샷 이제 표시 되는 옵션을 표시 하 고 단추에 레이블을 표시 하지 않을 수 있습니다.](images/ves_disambig1.png) 
 
 - 두 단추가 일치 합니다. 명확성 시작:
 
-    ![](images/ves_disambig2.png) 
+    ![표시 하려는 옵션이 표시 되는 활성 수신 대기 모드의 스크린샷 및 단추에 항목 1과 항목 2 레이블을 표시 합니다.](images/ves_disambig2.png) 
 
 - "Select 2"가 선택 된 경우 클릭 동작 표시:
 
-    ![](images/ves_disambig3.png) 
+    ![현재 수신 대기 모드의 스크린샷 이제 표시 되는 옵션을 표시 하 고 첫 번째 단추에 모호한 레이블을 표시할 수 있습니다.](images/ves_disambig3.png) 
  
 ## <a name="sample-ui"></a>샘플 UI ##
 다음은 다양 한 방법으로 AutomationProperties.Name를 설정 하는 XAML 기반 UI의 예제입니다.
@@ -203,11 +203,11 @@ ALM에서 사용자는 음성을 사용 하 여 UI와 상호 작용할 수 있�
  
 - 활성 수신 대기 모드에서 레이블이 표시 되지 않습니다.
 
-    ![](images/ves_alm_nolabels.png) 
+    ![레이블을 볼 수 있는 활성 수신 모드의 스크린샷 (레이블 표시 옵션 표시 및 레이블이 표시 되지 않음)](images/ves_alm_nolabels.png) 
 
 - 활성 수신 대기 모드에서 사용자는 "레이블 표시"를 표시 합니다.
 
-    ![](images/ves_alm_labels.png) 
+    ![를 사용한 활성 수신 대기 모드의 스크린샷 (완료 한 경우 수신 중지 옵션 표시 및 U I 컨트롤에 표시 된 레이블).](images/ves_alm_labels.png) 
 
 의 경우 XAML은 `button1` `AutomationProperties.Name` 컨트롤의 표시 되는 텍스트 콘텐츠에서 텍스트를 사용 하 여 속성을 자동으로 채웁니다.  명시적인 집합이 없더라도 음성 팁 레이블이 있는 이유입니다 `AutomationProperties.Name` .
 
@@ -217,7 +217,7 @@ ALM에서 사용자는 음성을 사용 하 여 UI와 상호 작용할 수 있�
 
 마지막으로,를 사용 하 여 `button3` VES는 `Name` 첫 번째 자식 요소에서를 가져와 합니다 .이는 자체에 집합이 없기 때문 `button3` `AutomationProperties.Name` 입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 - [UI 자동화 기본 사항](/dotnet/framework/ui-automation/ui-automation-fundamentals "UI 자동화 기본 사항")
 - [UI의 내게 필요한 옵션 지원에 대 한 자동화 속성](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ff400332(v=vs.95) "UI의 내게 필요한 옵션 지원에 대 한 자동화 속성")
 - [자주 묻는 질문](frequently-asked-questions.md)
