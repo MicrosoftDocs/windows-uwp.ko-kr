@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b5daec3f4d0fa823341ff7590094463ef412b88
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e7d008a6956c3acd22dcb99e6bf4e1cda1442545
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156007"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750169"
 ---
 # <a name="debug-a-background-task"></a>백그라운드 작업 디버그
 
@@ -42,16 +42,16 @@ Windows 이벤트 로그에서 백그라운드 작업 활성화 및 디버그 �
 
 2.  디버거에서 응용 프로그램을 실행 한 다음 **수명 주기 이벤트** 도구 모음을 사용 하 여 백그라운드 작업을 트리거합니다. 이 드롭다운에는 Visual Studio에서 활성화할 수 있는 백그라운드 작업 이름이 표시 됩니다.
 
-> [!NOTE]
-> 수명 주기 이벤트 도구 모음 옵션은 Visual Studio에 기본적으로 표시 되지 않습니다. 이러한 옵션을 표시 하려면 Visual Studio의 현재 도구 모음을 마우스 오른쪽 단추로 클릭 하 고 **디버그 위치** 옵션을 사용 하도록 설정 했는지 확인 합니다.
+    > [!NOTE]
+    > 수명 주기 이벤트 도구 모음 옵션은 Visual Studio에 기본적으로 표시 되지 않습니다. 이러한 옵션을 표시 하려면 Visual Studio의 현재 도구 모음을 마우스 오른쪽 단추로 클릭 하 고 **디버그 위치** 옵션을 사용 하도록 설정 했는지 확인 합니다.
 
-    For this to work, the background task must already be registered and it must still be waiting for the trigger. For example, if a background task was registered with a one-shot TimeTrigger and that trigger has already fired, launching the task through Visual Studio will have no effect.
+    이 작업을 수행 하려면 백그라운드 작업을 이미 등록 해야 하며 트리거를 계속 대기 해야 합니다. 예를 들어, 한 번의 샷 TimeTrigger에 백그라운드 작업을 등록 하 고 해당 트리거가 이미 발생 한 경우 Visual Studio를 통해 작업을 시작 해도 아무런 효과가 없습니다.
 
-> [!Note]
-> 다음 트리거를 사용 하는 백그라운드 작업은 이러한 방식으로 활성화할 수 없습니다. [**응용 프로그램 트리거**](/uwp/api/windows.applicationmodel.background.applicationtrigger), [**mediaprocessing 트리거**](/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger), [**ControlChannelTrigger**](/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), [**Pushnotificationtrigger**](/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger)및 백그라운드 작업은 [**smsreceived**](/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 트리거 유형과 함께 [**systemtrigger**](/uwp/api/Windows.ApplicationModel.Background.SystemTrigger) 를 사용 합니다.  
-> **응용 프로그램 트리거와** **MediaProcessingTrigger** 는를 사용 하 여 코드에서 수동으로 신호를 받을 수 있습니다 `trigger.RequestAsync()` .
+    > [!Note]
+    > 다음 트리거를 사용 하는 백그라운드 작업은 이러한 방식으로 활성화할 수 없습니다. [**응용 프로그램 트리거**](/uwp/api/windows.applicationmodel.background.applicationtrigger), [**mediaprocessing 트리거**](/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger), [**ControlChannelTrigger**](/uwp/api/Windows.Networking.Sockets.ControlChannelTrigger), [**Pushnotificationtrigger**](/uwp/api/Windows.ApplicationModel.Background.PushNotificationTrigger)및 백그라운드 작업은 [**smsreceived**](/uwp/api/Windows.ApplicationModel.Background.SystemTriggerType) 트리거 유형과 함께 [**systemtrigger**](/uwp/api/Windows.ApplicationModel.Background.SystemTrigger) 를 사용 합니다.  
+    > **응용 프로그램 트리거와** **MediaProcessingTrigger** 는를 사용 하 여 코드에서 수동으로 신호를 받을 수 있습니다 `trigger.RequestAsync()` .
 
-![백그라운드 작업 디버깅](images/debugging-activation.png)
+    ![백그라운드 작업 디버깅](images/debugging-activation.png)
 
 3.  백그라운드 작업이 활성화 되 면 디버거가 해당 작업에 연결 되 고 VS에서 디버그 출력을 표시 합니다.
 

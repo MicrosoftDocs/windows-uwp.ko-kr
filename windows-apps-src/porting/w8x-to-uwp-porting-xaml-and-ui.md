@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a20463414f0b96ea51bdf9796c48759975bfc43e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 62085377da89d64c8ba0799dc6bab13c17675f90
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162217"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750679"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Windows 런타임 .x XAML 및 UI를 UWP로 포팅
 
@@ -187,19 +187,19 @@ Windows 10에서 변경 되거나 지원 되지 않는 [**GridView**](/uwp/api/W
 
 이 표에서는 [**ListViewItem**](/uwp/api/Windows.UI.Xaml.Controls.ListViewItem) 및 [**GridViewItem**](/uwp/api/Windows.UI.Xaml.Controls.GridViewItem) 컨트롤 템플릿의 시각적 상태 및 시각적 상태 그룹에 대 한 변경 내용을 설명 합니다.
 
-| 8.1                 |                         | Windows 10        |                     |
+| 8.1                 | 기능 상태           | 윈도우 10        | 기능 상태       |
 |---------------------|-------------------------|-------------------|---------------------|
 | CommonStates        |                         | CommonStates      |                     |
 |                     | 정상                  |                   | 정상              |
 |                     | PointerOver             |                   | PointerOver         |
 |                     | 누름                 |                   | 누름             |
 |                     | Pointer과잉 누름      |                   | 사용할 수 없습니다       |
-|                     | Disabled                |                   | 사용할 수 없습니다       |
+|                     | 사용 안 함                |                   | 사용할 수 없습니다       |
 |                     | 사용할 수 없습니다           |                   | PointerOverSelected |
-|                     | 사용할 수 없습니다           |                   | 선택됨            |
+|                     | 사용할 수 없습니다           |                   | 선택함            |
 |                     | 사용할 수 없습니다           |                   | PressedSelected     |
 | 사용할 수 없습니다       |                         | DisabledStates    |                     |
-|                     | 사용할 수 없습니다           |                   | Disabled            |
+|                     | 사용할 수 없습니다           |                   | 사용 안 함            |
 |                     | 사용할 수 없습니다           |                   | 사용             |
 | SelectionHintStates |                         | 사용할 수 없습니다     |                     |
 |                     | VerticalSelectionHint   |                   | 사용할 수 없습니다       |
@@ -214,7 +214,7 @@ Windows 10에서 변경 되거나 지원 되지 않는 [**GridView**](/uwp/api/W
 |                     | UnselectedPointerOver   |                   | 사용할 수 없습니다       |
 |                     | UnselectedSwiping 밀기       |                   | 사용할 수 없습니다       |
 |                     | 선택               |                   | 사용할 수 없습니다       |
-|                     | 선택됨                |                   | 사용할 수 없습니다       |
+|                     | 선택함                |                   | 사용할 수 없습니다       |
 |                     | SelectedSwiping 밀기         |                   | 사용할 수 없습니다       |
 |                     | SelectedUnfocused       |                   | 사용할 수 없습니다       |
 

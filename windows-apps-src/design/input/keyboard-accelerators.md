@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 02fba8027c5bddec5e5c501783b32dbab5642db9
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 8ec5791c212e2fdfbafd40131d96ace6c88fb519
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219956"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749959"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 
@@ -350,14 +350,10 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 | 굵게 | Ctrl + B |
 | 밑줄 | Ctrl + U |
 | 기울임꼴 | Ctrl+I |
-
 | **탐색** | |
-| ------------- | ----------------------------------- |
 | 포커스가 있는 컨트롤 또는 창에서 콘텐츠 찾기 | Ctrl+F |
 | 다음 검색 결과로 이동 | F3 |
-
 | **기타 작업** | |
-| ------------- | ----------------------------------- |
 | 즐겨찾기 추가 | Ctrl+D | 
 | 새로 고침 | F5 또는 Ctrl + R | 
 | 확대 | Ctrl + + | 

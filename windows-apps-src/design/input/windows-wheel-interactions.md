@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
-ms.openlocfilehash: e9a619fc58b1b84755e33fd36ebacd99f98d6b7f
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 29a054299b933e523f8594419c4e954c3a0bf1e4
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220416"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749969"
 ---
 # <a name="surface-dial-interactions"></a>Surface Dial 조작
 
@@ -27,10 +27,18 @@ Surface 전화 접속과 같은 windows 휠 장치는 Windows 및 Windows 앱에
 > [!IMPORTANT]
 > 이 항목에서는 특히 Surface Dial 상호 작용을 참조 하지만 정보는 모든 Windows 휠 장치에 적용 됩니다. 
 
-| 동영상 |   |
-| --- | --- |
-| <iframe src="https://www.youtube-nocookie.com/embed/WMklcdzcNcU" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe> | <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Programming-the-Microsoft-Surface-Dial/player" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe> |
-| *Surface Dial 앱 파트너* | *개발자에 대 한 Surface 전화 걸기* |
+:::row:::
+   :::column:::
+      <iframe src="https://www.youtube-nocookie.com/embed/WMklcdzcNcU" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe>
+
+      *Surface Dial 앱 파트너*
+   :::column-end:::
+   :::column:::
+      <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Programming-the-Microsoft-Surface-Dial/player" width="300" height="200" allowFullScreen="true" frameBorder="0"></iframe>
+
+      *개발자에 대 한 Surface 전화 걸기*
+   :::column-end:::
+:::row-end:::
 
 *회전* 작업 (제스처)을 기반으로 하는 폼 팩터를 사용 하 여 Surface 다이얼은 기본 장치에서 입력을 보완 하는 보조 다중 모달 입력 장치로 사용 됩니다. 대부분의 경우 장치는 사용자의 기반이 아닌 손으로 작업을 수행 하는 동안 (예: 펜으로 잉크를 사용 하 여) 작업을 수행 하는 동안 조작 됩니다. 이는 터치, 펜, 마우스 등의 전체 자릿수 포인터 입력을 위해 디자인 되지 않았습니다. 
 
@@ -45,9 +53,18 @@ Surface 전화 접속과 같은 windows 휠 장치는 Windows 및 Windows 앱에
 >
 >시스템에서는 Surface 전화 접속의 연결 위치와 범위를 모두 검색 하 여이 정보를 사용 하 여 장치에서 폐색를 처리 하 고, 다이얼 외부에서 래핑하는 더 큰 버전의 메뉴를 표시 합니다. 이 동일한 정보를 사용 하 여 장치 유무 및 사용자의 손 및 arm 배치와 같은 예상 사용에 대 한 UI를 조정 하는 앱 에서도 사용할 수 있습니다.
 
-| Surface 다이얼 오프 화면 메뉴 | | 화면 전화 접속 화면 메뉴 |
-| --- | --- | --- |
-| ![Surface 다이얼 오프 화면 메뉴](images/windows-wheel/surface-dial-menu-offscreen.png) | | ![화면 전화 접속 화면 메뉴](images/windows-wheel/surface-dial-menu-onscreen.png) |
+:::row:::
+   :::column:::
+      **Surface 다이얼 오프 화면 메뉴**
+
+      ![Surface 다이얼 오프 화면 메뉴](images/windows-wheel/surface-dial-menu-offscreen.png)
+   :::column-end:::
+   :::column:::
+      **화면 전화 접속 화면 메뉴**
+
+      ![화면 전화 접속 화면 메뉴](images/windows-wheel/surface-dial-menu-onscreen.png)
+   :::column-end:::
+:::row-end:::
 
 ## <a name="system-integration"></a>시스템 통합
 
@@ -113,10 +130,23 @@ Surface Dial 메뉴 항목은 사용 하지 않도록 설정 된 상태를 지�
 - 아이콘은 대부분의 이미지를 채워야 합니다.
 - 고대비 모드에서는 흰색 아이콘이 검정 윤곽선으로 표시 되어야 합니다.
 
-|   |   |   |
-| --- | --- | --- |
-| ![알파 배경을 사용 하는 아이콘](images/windows-wheel/surface-dial-menu-icon1.png) | ![기본 테마 아이콘을 사용하여 휠 메뉴에 표시되는 아이콘](images/windows-wheel/surface-dial-menu-icon2.png) | ![화면 전화 접속 화면 메뉴](images/windows-wheel/surface-dial-menu-icon3.png) |
-| *알파 배경을 사용 하는 아이콘* | *기본 테마가 있는 휠 메뉴에 표시 되는 아이콘* | *고대비 흰색 테마를 사용 하 여 휠 메뉴에 표시 되는 아이콘* |
+:::row:::
+   :::column:::
+      ![알파 배경을 사용 하는 아이콘](images/windows-wheel/surface-dial-menu-icon1.png)
+
+      *알파 배경을 사용 하는 아이콘*
+   :::column-end:::
+   :::column:::
+      ![기본 테마 아이콘을 사용하여 휠 메뉴에 표시되는 아이콘](images/windows-wheel/surface-dial-menu-icon2.png)
+
+      *기본 테마가 있는 휠 메뉴에 표시 되는 아이콘*
+   :::column-end:::
+   :::column:::
+      ![화면 전화 접속 화면 메뉴](images/windows-wheel/surface-dial-menu-icon3.png)
+
+      *고대비 흰색 테마를 사용 하 여 휠 메뉴에 표시 되는 아이콘*
+   :::column-end:::
+:::row-end:::
 
 **간결한 이름 및 설명이 포함 된 이름 사용**  
 도구 메뉴에 도구 아이콘과 함께 도구 이름이 표시 되 고 화면 판독기 에서도 사용 됩니다. 
@@ -316,10 +346,25 @@ Accomodating를 통해 고객 만족도를 극대화 하 고 로캘 및 오른�
 
 전화 걸기 메뉴의 기본 제공 도구 및 명령은 회전 기반 상호 작용에 대 한 다음 지침을 따릅니다.
 
-|   |   |   |
-| --- | --- | --- |
-| 왼쪽<br/>위로<br/>아웃 | ![Surface 전화 접속 이미지](images/windows-wheel/surface-dial-rotate.png) | 오른쪽<br/>아래로<br/>In(다음 안에) |
-|   |   |   |
+:::row:::
+   :::column:::
+      왼쪽
+
+      위로
+
+      아웃 
+   :::column-end:::
+   :::column span="2":::
+      ![Surface 전화 접속 이미지](images/windows-wheel/surface-dial-rotate.png)
+   :::column-end:::
+   :::column:::
+      오른쪽
+
+      아래로
+
+      In(다음 안에)
+   :::column-end:::
+:::row-end:::
 
 | 개념적 방향 | Surface 전화 접속에 매핑 | 시계 방향 회전 | 시계 반대 방향 회전 |
 | --- | --- | --- | --- |
@@ -366,7 +411,7 @@ private void MyController_ButtonClicked(RadialController sender,
 }
 ```
 
-### <a name="click"></a>클릭
+### <a name="click"></a>리본 메뉴에서
 
 Surface Dial을 클릭하는 것은 왼쪽 마우스 단추를 클릭하는 것과 같습니다(디바이스의 회전 상태가 이 작업에는 영향을 미치지 않음).
 

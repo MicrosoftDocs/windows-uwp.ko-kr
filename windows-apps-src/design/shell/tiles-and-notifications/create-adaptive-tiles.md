@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c60794a52c3d8a5f597d4ab2d09490405c98f85a
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 5ec8832d4e0e8c72954bf4d0582aac8240da2efe
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218376"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750689"
 ---
 # <a name="create-adaptive-tiles"></a>적응형 타일 만들기
 
@@ -412,9 +412,8 @@ new AdaptiveText()
 
 **기본 텍스트 스타일**
 
-|                                |                           |             |
-|--------------------------------|---------------------------|-------------|
 | &lt;텍스트 힌트-스타일 = " \* "/&gt; | 글꼴 높이               | 글꼴 두께 |
+|--------------------------------|---------------------------|-------------|
 | caption                        | 12 개의 유효 픽셀 (epx) | 주기적     |
 | 본문                           | 15 window.epx.codesnippet                    | 주기적     |
 | base                           | 15 window.epx.codesnippet                    | 약간 굵게    |
@@ -429,11 +428,11 @@ new AdaptiveText()
 
 이러한 변형은 줄 높이를 줄여 해당 내용이 텍스트에 훨씬 더 가깝게 배치 되도록 합니다.
 
-|                  |
-|------------------|
-| titleNumeral     |
-| subheaderNumeral |
-| headerNumeral    |
+- titleNumeral
+
+- subheaderNumeral
+
+- headerNumeral
 
  
 
@@ -441,18 +440,25 @@ new AdaptiveText()
 
 각 스타일에는 일반적으로 텍스트 색을 연한 회색으로 표시 하는 60% 불투명도를 텍스트에 제공 하는 미묘한 변형이 있습니다.
 
-|                        |
-|------------------------|
-| captionSubtle          |
-| bodySubtle             |
-| baseSubtle             |
-| subtitleSubtle         |
-| titleSubtle            |
-| titleNumeralSubtle     |
-| subheaderSubtle        |
-| subheaderNumeralSubtle |
-| headerSubtle           |
-| headerNumeralSubtle    |
+- captionSubtle
+
+- bodySubtle
+
+- baseSubtle
+
+- subtitleSubtle
+
+- titleSubtle
+
+- titleNumeralSubtle
+
+- subheaderSubtle
+
+- subheaderNumeralSubtle
+
+- headerSubtle
+
+- headerNumeralSubtle
 
  
 

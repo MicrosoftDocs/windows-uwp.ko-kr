@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.localizationpriority: medium
-ms.openlocfilehash: ecb35a262f02576f0425460c8e27ce0016a08d1a
-ms.sourcegitcommit: 651a6b9769fad1736ab16e2a4e423258889b248e
+ms.openlocfilehash: bcb43748baeeb7f68ec246cb0277fbef0944fc47
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91366899"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750359"
 ---
 # <a name="windows-hello"></a>Windows Hello
 
@@ -411,8 +411,8 @@ Windows 10에는 간단 하 게 적용할 수 있는 높은 수준의 보안이 
 
 ### <a name="62-terminology"></a>6.2 용어
 
-| | |
-|-|-|
+| 용어 | 정의 |
+| ---- | ---------- |
 | AIK | 증명 id 키는 비 마이그레이션할 수 있고 키의 속성에 서명 하 고 확인을 위해 신뢰 당사자에 속성 및 서명을 제공 하 여 이러한 암호화 증명 (TPM 키 증명)을 제공 하는 데 사용 됩니다. 결과 시그니처를 "증명 문" 이라고 합니다. 서명 개인 키를 사용 하 여 생성 됩니다 .이 키는 해당 키를 만든 TPM 에서만 사용할 수 있습니다. 신뢰 당사자는 증명 된 키가 진정한 비 마이그레이션할 수 있고을 신뢰 하 고 해당 TPM 외부에서 사용할 수 없습니다. |
 | AIK 인증서 | AIK 인증서는 TPM 내에서 AIK의 존재를 증명 하는 데 사용 됩니다. 또한 해당 특정 TPM에서 발생 한 AIK에서 인증 된 다른 키를 증명 하는 데 사용 됩니다. |
 | IDP | IDP는 id 공급자입니다. Microsoft 계정에 대 한 Microsoft의 IDP 빌드를 예로 들 수 있습니다. 응용 프로그램이 MSA를 사용 하 여 인증 해야 할 때마다 MSA IDP을 호출할 수 있습니다. |

@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d3b032b735b8985ae87ce78e100442085cce55e7
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 603cdfe0c35d559ca3f2acacbce491ce3f54c35d
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163707"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749999"
 ---
 # <a name="playready-drm"></a>PlayReady DRM
 
@@ -21,7 +21,7 @@ ms.locfileid: "89163707"
 
 PlayReady DRM을 통해 개발자는 콘텐츠 공급자가 정의한 액세스 규칙을 적용 하면서 사용자에 게 PlayReady 콘텐츠를 제공할 수 있는 UWP 앱을 만들 수 있습니다. 이 섹션에서는 Windows 10 용 Microsoft PlayReady DRM에 대 한 변경 내용 및 이전 Windows 8.1 버전에서 Windows 10 버전으로의 변경 내용을 지원 하도록 PlayReady UWP 앱을 수정 하는 방법을 설명 합니다.
  
-| 항목                                                                     | Description                                                                                                                                                                                                                                                                             |
+| 항목                                                                     | 설명                                                                                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [하드웨어 DRM](hardware-drm.md)                                           | 이 항목에서는 PlayReady 하드웨어 기반 DRM (디지털 권한 관리)을 UWP 앱에 추가 하는 방법에 대 한 개요를 제공 합니다.                                                                                                                                                                 |
 | [PlayReady를 사용한 적응 스트리밍](adaptive-streaming-with-playready.md) | 이 문서에서는 Microsoft PlayReady content protection을 사용 하는 멀티미디어 콘텐츠의 적응 스트리밍을 유니버설 Windows 플랫폼 (UWP) 앱에 추가 하는 방법을 설명 합니다. 이 기능은 현재 HLS (Http 라이브 스트리밍) 및 HTTP (대시) 콘텐츠를 통한 동적 스트리밍을 재생할 수 있도록 지원 합니다. |
@@ -87,7 +87,7 @@ PlayReady DRM의 새 기능을 사용 하는 방법을 보여 주기 위해 새 
 -   특정 한 새로운 PlayReady 3.0 기능 (하드웨어 기반 클라이언트에 대 한 SL3000, 한 라이선스 취득 메시지에서 비영구 라이선스를 여러 개 가져오기, 비영구 라이선스에 대 한 시간 기반 제한 포함)을 활용 하기 위해 PlayReady 서버는 Microsoft PlayReady Server Software Development Kit v 3.0.2769 릴리스 버전 이상 이어야 합니다.
 -   콘텐츠 라이선스에 지정 된 출력 보호 정책에 따라 연결 된 출력이 해당 요구 사항을 지원 하지 않는 경우 최종 사용자에 게 미디어 재생이 실패할 수 있습니다. 다음 표에서는 결과로 발생 하는 일반적인 오류 집합을 나열 합니다. 자세한 내용은 [PlayReady 준수 및 견고성 규칙](https://www.microsoft.com/playready/licensing/compliance/)을 참조 하세요.
 
-| 오류                                                   | 값      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 오류                                                   | 값      | 설명                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |---------------------------------------------------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 오류 \_ GRAPHICS \_ OPM \_ OUTPUT \_ 은 \_ \_ HDCP를 지원 하지 않습니다 \_ .  | 0xC0262513 | 라이선스의 출력 보호 정책에서는 모니터가 HDCP를 사용 해야 하지만 HDCP를 사용할 수 없습니다.                                                                                                                                                                                                                                                                                                                                                                                              |
 | MF \_ E \_ 정책 \_ 지원 안 됨                              | 0xC00D7159 | 라이선스의 출력 보호 정책에서는 모니터가 HDCP 유형 1에 참여 해야 하지만 HDCP 유형 1은 사용할 수 없습니다.                                                                                                                                                                                                                                                                                                                                                                                |
@@ -118,7 +118,7 @@ PlayReady DRM은 PlayReady 준수 규칙에 지정 된 대로 출력 커넥터 �
 
 다음 표에서는 PlayReady 라이선스에서 다양 한 OPLs 간의 매핑과 Windows 10 용 PlayReady DRM이 적용 되는 방식을 간략하게 설명 합니다.
 
-#### <a name="video"></a>동영상
+#### <a name="video"></a>비디오
 
 <table>
     <tr>
@@ -393,7 +393,7 @@ PlayReady DRM을 사용 하면 HDCP 2.0 이상이 참여 하는 즉시 Miracast 
 </table>
 <br/>
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 PlayReady로 보호 된 UWP 앱 만들기를 시작 하기 전에 시스템에 다음 소프트웨어를 설치 해야 합니다.
 
@@ -435,7 +435,7 @@ mediaProtectionManager.Properties["Windows.Media.Protection.MediaProtectionConta
 
 이전 버전의 PlayReady DRM에서는 비영구 라이선스를 재생 하는 동안에만 대응적를 가져올 수 있었습니다. 이 버전에서는 재생이 시작 되기 전에 비영구 라이선스를 사전에 확보할 수 있습니다.
 
-1.  비영구 라이선스를 저장할 수 있는 재생 세션을 사전에 만듭니다. 예:
+1.  비영구 라이선스를 저장할 수 있는 재생 세션을 사전에 만듭니다. 예를 들면 다음과 같습니다.
 
     ```cs
     var cpsystems = new Windows.Foundation.Collections.PropertySet();       
@@ -447,7 +447,7 @@ mediaProtectionManager.Properties["Windows.Media.Protection.MediaProtectionConta
     var pmpServer = new Windows.Media.Protection.MediaProtectionPMPServer( pmpSystemInfo );
     ```
 
-2.  해당 재생 세션을 라이선스 취득 클래스에 연결 합니다. 예:
+2.  해당 재생 세션을 라이선스 취득 클래스에 연결 합니다. 예를 들면 다음과 같습니다.
 
     ```cs
     var licenseSessionProperties = new Windows.Foundation.Collections.PropertySet();
@@ -455,14 +455,14 @@ mediaProtectionManager.Properties["Windows.Media.Protection.MediaProtectionConta
     var licenseSession = new Windows.Media.Protection.PlayReady.PlayReadyLicenseSession( licenseSessionProperties );
     ```
 
-3.  라이선스 서비스 요청을 만듭니다. 예:
+3.  라이선스 서비스 요청을 만듭니다. 예를 들면 다음과 같습니다.
 
     ```cs
     var laSR = licenseSession.CreateLAServiceRequest();
     ```
 
 4.  3 단계에서 만든 서비스 요청을 사용 하 여 라이선스 취득을 수행 합니다. 라이선스는 재생 세션에 저장 됩니다.
-5.  재생 세션을 재생을 위해 미디어 원본에 연결 합니다. 예:
+5.  재생 세션을 재생을 위해 미디어 원본에 연결 합니다. 예를 들면 다음과 같습니다.
 
     ```cs
     licenseSession.configureMediaProtectionManager( mediaProtectionManager );
@@ -472,30 +472,30 @@ mediaProtectionManager.Properties["Windows.Media.Protection.MediaProtectionConta
 ## <a name="query-for-protection-capabilities"></a>보호 기능에 대 한 쿼리
 Windows 10 버전 1703부터 코덱, 해상도 및 출력 보호 (HDCP)와 같은 HW DRM 기능을 쿼리할 수 있습니다. [**IsTypeSupported**](/uwp/api/windows.media.protection.protectioncapabilities.istypesupported) 메서드를 사용 하 여 쿼리를 수행 합니다 .이 메서드는 지원 쿼리 기능을 나타내는 문자열과 쿼리가 적용 되는 키 시스템을 지정 하는 문자열을 사용 합니다. 지원 되는 문자열 값 목록은 [**IsTypeSupported**](/uwp/api/windows.media.protection.protectioncapabilities.istypesupported)에 대 한 API 참조 페이지를 참조 하세요. 다음 코드 예제에서는이 메서드를 사용 하는 방법을 보여 줍니다.  
 
-    ```cs
-    using namespace Windows::Media::Protection;
+```cs
+using namespace Windows::Media::Protection;
 
-    ProtectionCapabilities^ sr = ref new ProtectionCapabilities();
+ProtectionCapabilities^ sr = ref new ProtectionCapabilities();
 
-    ProtectionCapabilityResult result = sr->IsTypeSupported(
-    L"video/mp4; codecs=\"avc1.640028\"; features=\"decode-bpp=10,decode-fps=29.97,decode-res-x=1920,decode-res-y=1080\"",
-    L"com.microsoft.playready");
+ProtectionCapabilityResult result = sr->IsTypeSupported(
+L"video/mp4; codecs=\"avc1.640028\"; features=\"decode-bpp=10,decode-fps=29.97,decode-res-x=1920,decode-res-y=1080\"",
+L"com.microsoft.playready");
 
-    switch (result)
-    {
-        case ProtectionCapabilityResult::Probably:
-        // Queue up UHD HW DRM video
-        break;
+switch (result)
+{
+    case ProtectionCapabilityResult::Probably:
+    // Queue up UHD HW DRM video
+    break;
 
-        case ProtectionCapabilityResult::Maybe:
-        // Check again after UI or poll for more info.
-        break;
+    case ProtectionCapabilityResult::Maybe:
+    // Check again after UI or poll for more info.
+    break;
 
-        case ProtectionCapabilityResult::NotSupported:
-        // Do not queue up UHD HW DRM video.
-        break;
-    }
-    ```
+    case ProtectionCapabilityResult::NotSupported:
+    // Do not queue up UHD HW DRM video.
+    break;
+}
+```
 ## <a name="add-secure-stop"></a>보안 중지 추가
 
 이 섹션에서는 UWP 앱에 보안 중지를 추가 하는 방법을 설명 합니다.

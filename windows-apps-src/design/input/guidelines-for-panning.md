@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3a5e26d48ef74631e732fb043e909869945a6366
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 596a9f2f3f234ba90b799eae982523c3a9de9732
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217053"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749939"
 ---
 # <a name="guidelines-for-panning"></a>패닝에 대 한 지침
 
@@ -139,12 +139,23 @@ Windows 8은 세 가지 유형의 이동을 지원 합니다.
 
 다음 다이어그램에서는 특정 지점으로 이동 하 고 해제 하는 방법을 보여 줍니다. 그러면 콘텐츠가 논리적 위치로 자동으로 이동 합니다.
 
-|                                                                |                                                                                         |                                                                                                                 |
-|----------------------------------------------------------------|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| ![pannable 영역을 표시 하는 이미지입니다.](images/ux-panning-snap1.png) | ![왼쪽으로 따라 이동 되는 pannable 영역을 보여 주는 이미지입니다.](images/ux-panning-snap2.png) | ![논리적 스냅 지점에서의 이동이 중지 된 pannable 영역을 보여 주는 이미지입니다.](images/ux-panning-snap3.png) |
-| 이동 하 여 이동 합니다.                                                  | 터치 접점을 올립니다.                                                                     | Pannable 지역은 접촉이 리프트 된 위치가 아니라 맞춤 지점에서 중지 됩니다.                                |
+:::row:::
+   :::column:::
+      ![pannable 영역을 표시 하는 이미지입니다.](images/ux-panning-snap1.png)
 
- 
+      이동 하 여 이동 합니다.
+   :::column-end:::
+   :::column:::
+      ![왼쪽으로 따라 이동 되는 pannable 영역을 보여 주는 이미지입니다.](images/ux-panning-snap2.png)
+
+      터치 접점을 올립니다.
+   :::column-end:::
+   :::column:::
+      ![논리적 스냅 지점에서의 이동이 중지 된 pannable 영역을 보여 주는 이미지입니다.](images/ux-panning-snap3.png)
+
+      Pannable 지역은 접촉이 리프트 된 위치가 아니라 맞춤 지점에서 중지 됩니다.
+   :::column-end:::
+:::row-end:::
 
 **레일** 콘텐츠는 디스플레이 장치의 크기 및 해상도 보다 넓거나 클 수 있습니다. 이러한 이유로 2 차원 패닝 (가로 및 세로)은 종종 필요 합니다. 레일 동작 축의 움직임 (세로 또는 가로)을 강조 하 여 이러한 경우 사용자 환경을 개선 합니다.
 

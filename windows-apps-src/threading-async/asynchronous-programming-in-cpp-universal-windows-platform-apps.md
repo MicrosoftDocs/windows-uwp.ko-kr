@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp, 스레드, 비동기, c + +
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e3810b25ac35cbf5e16f49a86affb4792089d1e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e08a73c7617a5b24af49d5b3665303124e28d257
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161797"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750159"
 ---
 # <a name="asynchronous-programming-in-ccx"></a>C + +/CX의 비동기 프로그래밍
 > [!NOTE]
@@ -119,9 +119,8 @@ void App::DeleteWithTasks(String^ fileName)
 
 이전 예제에서 작업은 람다가 [**IAsyncInfo**][IAsyncInfo] 개체를 반환한 경우에도 **작업 <void> ** 을 반환 합니다. 다음 표에는 람다 함수와 바깥쪽 작업 간에 발생하는 유형 변환에 대한 요약이 나와 있습니다.
 
-| | |
-|--------------------------------------------------------|---------------------|
-| 람다 반환 형식                                     | `.then` 반환 형식 |
+| 람다 반환 형식 | `.then` 반환 형식 |
+| ------------------ | ------------------- |
 | TResult                                                | 임무<TResult> |
 | Iasyncoperation<tresult><TResult>^                        | 임무<TResult> |
 | IAsyncOperationWithProgress<TResult, TProgress>^ | 임무<TResult> |

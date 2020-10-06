@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 61d794e93718bc9450c1a0f3dce2e921da7e513d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8e4573547ebffa0a58b4e2347162799035d8f898
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168077"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750009"
 ---
 # <a name="geometry-shader-gs-stage"></a>GS(기하 도형 셰이더) 단계
 
@@ -51,8 +51,8 @@ Geometry 셰이더가 활성 상태 이면 파이프라인에서 이전에 전�
 
 일반적인 꼭 짓 점 약어:
 
-|     |                 |
-|-----|-----------------|
+| 약어 | 용어 |
+| ------------ | ---- |
 | TV  | 삼각형 꼭 짓 점 |
 | LV  | 선 꼭 짓 점     |
 | AV  | 인접 한 꼭 짓 점 |

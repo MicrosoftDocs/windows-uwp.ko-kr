@@ -4,12 +4,12 @@ description: 유니버설 Windows 플랫폼 (UWP)를 사용 하 여 Xbox 용 Uni
 ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
-ms.openlocfilehash: 3e4d98892b9bd738eca788d166ef79f81ea1b047
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1c0eb9bfc6ee758b854754b0531299fb30b51d1c
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173747"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749859"
 ---
 # <a name="unity-version-control-your-uwp-project"></a>Unity: 버전 제어 UWP 프로젝트
 
@@ -31,19 +31,21 @@ UWP 디렉터리는 다음과 같습니다.
 
 ***.Gitignore 파일에 익숙하지 않나요?  [.Gitignore](https://git-scm.com/docs/gitignore)를 참조 하세요.***
 
-    ##################################################################
-    # The original .gitignore file can be found at
-    # https://github.com/github/gitignore/blob/master/Unity.gitignore
-    ##################################################################
+```console
+##################################################################
+# The original .gitignore file can be found at
+# https://github.com/github/gitignore/blob/master/Unity.gitignore
+##################################################################
 
-    # standard ignores for a Unity Project
-    ...
+# standard ignores for a Unity Project
+...
 
-    # ignore the whole UWP directory
-    /UWP/**
+# ignore the whole UWP directory
+/UWP/**
 
-    # except we want to keep... (this line will be modified and removed further down)
-    !/UWP/ScrapyardPhoenix/
+# except we want to keep... (this line will be modified and removed further down)
+!/UWP/ScrapyardPhoenix/
+```
 
 **UWP/ScrapyardPhoenix** 폴더 내에서 몇 가지 다른 파일과 폴더를 선택 하 여 버전 제어에 추가 하려고 합니다.  먼저 전체 정보를 살펴보겠습니다.
 
@@ -67,25 +69,27 @@ UWP 디렉터리는 다음과 같습니다.
 
 ## <a name="resulting-gitignore"></a>결과. .gitignore
 
-    ##################################################################
-    # The original .gitignore file can be found at
-    # https://github.com/github/gitignore/blob/master/Unity.gitignore
-    ##################################################################
+```console
+##################################################################
+# The original .gitignore file can be found at
+# https://github.com/github/gitignore/blob/master/Unity.gitignore
+##################################################################
 
-    # standard ignores for a Unity Project
-    ...
+# standard ignores for a Unity Project
+...
 
-    # ignore the whole UWP directory
-    /UWP/**
+# ignore the whole UWP directory
+/UWP/**
 
-    # except we want to keep...
-    !/UWP/ScrapyardPhoenix/Assets/*
-    !/UWP/ScrapyardPhoenix/Dependencies/*
-    !/UWP/ScrapyardPhoenix/Properties/*
-    !/UWP/ScrapyardPhoenix/App.cs
-    !/UWP/ScrapyardPhoenix/Package.appxmanifest
-    !/UWP/ScrapyardPhoenix/project.json
-    !/UWP/ScrapyardPhoenix/ScrapyardPhoenix.csproj
+# except we want to keep...
+!/UWP/ScrapyardPhoenix/Assets/*
+!/UWP/ScrapyardPhoenix/Dependencies/*
+!/UWP/ScrapyardPhoenix/Properties/*
+!/UWP/ScrapyardPhoenix/App.cs
+!/UWP/ScrapyardPhoenix/Package.appxmanifest
+!/UWP/ScrapyardPhoenix/project.json
+!/UWP/ScrapyardPhoenix/ScrapyardPhoenix.csproj
+```
 
 이제 팀 동료가 생성 한 UWP 프로젝트와 동기화 됩니다. 이제는 더 자유롭게 UWP 프로젝트에 자산, 소스 및 종속성을 더 추가할 수 있습니다.
 

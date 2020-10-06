@@ -8,12 +8,12 @@ keywords: Windows Ink, Windows Ink, DirectInk, InkPresenter, InkCanvas, 필기 �
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 34e41ff4b6fa402e8a1857a2ea406c9e63e7c868
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: a877fabfd34bcbe16afb70c012d403d489e3a6e0
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216966"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749919"
 ---
 # <a name="pen-interactions-and-windows-ink-in-windows-apps"></a>Windows 앱의 펜 조작 및 Windows Ink
 
@@ -27,10 +27,18 @@ Windows 앱에서 펜 입력을 최적화 하 여 표준 [**포인터 장치**](
 > [!NOTE]
 > 이 항목에서는 Windows Ink 플랫폼에 대해 중점적으로 설명 합니다. 마우스, 터치 및 터치 패드와 유사한 일반적인 포인터 입력 처리의 경우 [포인터 입력 처리](handle-pointer-input.md)를 참조 하세요.
 
-| 동영상 |   |
-| --- | --- |
-| <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Ink-in-Your-UWP-App/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> | <iframe src="https://channel9.msdn.com/Events/Ignite/2016/BRK2060/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe> |
-| *Windows 앱에서 잉크 사용* | *Windows 펜 및 잉크를 사용 하 여 더욱 매력적인 엔터프라이즈 앱 빌드* |
+:::row:::
+   :::column:::
+      <iframe src="https://channel9.msdn.com/Blogs/One-Dev-Minute/Using-Ink-in-Your-UWP-App/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe>
+
+      *Windows 앱에서 잉크 사용*
+   :::column-end:::
+   :::column:::
+      <iframe src="https://channel9.msdn.com/Events/Ignite/2016/BRK2060/player" width="300" height="200" allowFullScreen frameBorder="0"></iframe>
+
+      *Windows 펜 및 잉크를 사용 하 여 더욱 매력적인 엔터프라이즈 앱 빌드*
+   :::column-end:::
+:::row-end:::
 
 펜 디바이스와 더불어 Windows Ink 플랫폼을 사용하면 자연스럽게 디지털 필기 메모, 드로잉, 주석을 만들 수 있습니다. 플랫폼에서는 디지타이저 입력을 잉크 데이터로 캡처, 잉크 데이터 생성, 잉크 데이터 관리, 출력 디바이스에서 잉크 데이터를 스트로크로 렌더링 및 잉크를 필기 인식을 통해 텍스트로 변환 등을 지원합니다.
 

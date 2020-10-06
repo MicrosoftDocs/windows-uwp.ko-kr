@@ -6,12 +6,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e5f86da29900e0ef83fb0bf41d2c8d9fe59727f2
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2b16c957991889cb5f39a775397de72ff56beffc
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172517"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749980"
 ---
 # <a name="guidelines-for-cross-slide"></a>슬라이드 간 지침
 
@@ -58,14 +58,18 @@ ms.locfileid: "89172517"
 
 **참고**    콘텐츠 영역을 두 방향 (예: 웹 브라우저 또는 e-learning)으로 따라 이동 수 있는 경우에는 이미지 및 하이퍼링크와 같은 개체에 대 한 상황에 맞는 메뉴를 호출 하기 위해 누르고 있는 시간 제한의 상호 작용을 사용 해야 합니다.
 
- 
+:::row:::
+   :::column:::
+     ![가로 패닝, 2 차원 목록](images/groupedlistview1.png)
 
-|                                                                                         |                                                                                         |
-|-----------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| ![가로 패닝, 2 차원 목록](images/groupedlistview1.png)                | ![수직 패닝, 1 차원 목록](images/listviewlistlayout.png)                |
-| 2 차원 가로로 패닝 된 목록입니다. 항목을 선택 하거나 이동 하려면 세로를 끕니다. | 1 차원 목록을 세로로 패닝 합니다. 항목을 선택 하거나 이동 하려면 가로를 끕니다. |
+     2 차원 가로로 패닝 된 목록입니다. 항목을 선택 하거나 이동 하려면 세로를 끕니다. 
+   :::column-end:::
+   :::column:::
+      ![수직 패닝, 1 차원 목록](images/listviewlistlayout.png)
 
- 
+      1 차원 목록을 세로로 패닝 합니다. 항목을 선택 하거나 이동 하려면 가로를 끕니다.
+   :::column-end:::
+:::row-end:::
 
 ### <span id="selection"></span><span id="SELECTION"></span>
 
