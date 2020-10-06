@@ -8,12 +8,12 @@ ms.date: 03/23/2020
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: 08471b8a04d37c34378b549b8534979a4188d7b8
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4da50161008645374fbe95de73882da9d9f9f826
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173957"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750659"
 ---
 # <a name="controls-for-windows-apps"></a>Windows 앱용 컨트롤
 
@@ -42,9 +42,17 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 ## <a name="get-the-windows-ui-library"></a>Windows UI Library 가져오기
 
-|  |  |
-| - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | 일부 컨트롤은 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI(WinUI) 라이브러리에만 제공됩니다. 라이브러리를 가져오려면 [Windows UI Library 개요 및 설치 지침](/uwp/toolkits/winui/)을 참조하세요.<br/>WinUI 2.2부터 많은 컨트롤의 기본 스타일이 둥근 모서리를 사용하도록 업데이트되었습니다. 자세한 내용은 [모서리 반경](../style/rounded-corner.md)을 참조하세요. |
+:::row:::
+   :::column:::
+      ![WinUI 로고](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      일부 컨트롤은 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI(WinUI) 라이브러리에만 제공됩니다. 라이브러리를 가져오려면 [Windows UI Library 개요 및 설치 지침](/uwp/toolkits/winui/)을 참조하세요.<br/>WinUI 2.2부터 많은 컨트롤의 기본 스타일이 둥근 모서리를 사용하도록 업데이트되었습니다. 자세한 내용은 [모서리 반경](../style/rounded-corner.md)을 참조하세요.
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 ## <a name="alphabetical-index"></a>사전순 인덱스
 
