@@ -19,23 +19,23 @@
                   href: desktop/modernize/desktop-to-uwp-enhance.md
                 - name: 사용 가능한 Windows 런타임 API
                   href: desktop/modernize/desktop-to-uwp-supported-api.md
-            - name: 호스트 UWP XAML 컨트롤(XAML Islands)
+            - name: 호스트 WinRT XAML 컨트롤(XAML Islands)
               items:
                 - name: 개요
                   href: desktop/modernize/xaml-islands.md
                 - name: WPF 및 Windows Forms 앱의 XAML Islands
                   items:
-                    - name: 표준 UWP 컨트롤 호스트
+                    - name: 표준 WinRT XAML 컨트롤 호스트
                       href: desktop/modernize/host-standard-control-with-xaml-islands.md
-                    - name: 사용자 지정 UWP 컨트롤 호스트
+                    - name: 사용자 지정 WinRT XAML 컨트롤 호스트
                       href: desktop/modernize/host-custom-control-with-xaml-islands.md
                 - name: Win32 앱의 C++ XAML Islands
                   items:
-                    - name: UWP XAML 호스팅 API 사용
+                    - name: WinRT XAML 호스팅 API 사용
                       href: desktop/modernize/using-the-xaml-hosting-api.md
-                    - name: 표준 UWP 컨트롤 호스트
+                    - name: 표준 WinRT XAML 컨트롤 호스트
                       href: desktop/modernize/host-standard-control-with-xaml-islands-cpp.md
-                    - name: 사용자 지정 UWP 컨트롤 호스트
+                    - name: 사용자 지정 WinRT XAML 컨트롤 호스트
                       href: desktop/modernize/host-custom-control-with-xaml-islands-cpp.md
                     - name: 고급 시나리오
                       href: desktop/modernize/advanced-scenarios-xaml-islands-cpp.md
