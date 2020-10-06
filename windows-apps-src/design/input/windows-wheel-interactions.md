@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
-ms.openlocfilehash: 29a054299b933e523f8594419c4e954c3a0bf1e4
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: fd21ca0a27979a5febbc5a3a76a02a1beb2138fd
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749969"
+ms.locfileid: "91763019"
 ---
 # <a name="surface-dial-interactions"></a>Surface Dial 조작
 
@@ -57,12 +57,12 @@ Surface 전화 접속과 같은 windows 휠 장치는 Windows 및 Windows 앱에
    :::column:::
       **Surface 다이얼 오프 화면 메뉴**
 
-      ![Surface 다이얼 오프 화면 메뉴](images/windows-wheel/surface-dial-menu-offscreen.png)
+      ![Surface Dial 화면 외부 메뉴의 스크린샷](images/windows-wheel/surface-dial-menu-offscreen.png)
    :::column-end:::
    :::column:::
       **화면 전화 접속 화면 메뉴**
 
-      ![화면 전화 접속 화면 메뉴](images/windows-wheel/surface-dial-menu-onscreen.png)
+      ![화면 전화 접속 화면 메뉴의 스크린샷](images/windows-wheel/surface-dial-menu-onscreen.png)
    :::column-end:::
 :::row-end:::
 
@@ -132,17 +132,17 @@ Surface Dial 메뉴 항목은 사용 하지 않도록 설정 된 상태를 지�
 
 :::row:::
    :::column:::
-      ![알파 배경을 사용 하는 아이콘](images/windows-wheel/surface-dial-menu-icon1.png)
+      ![알파 배경을 사용 하는 아이콘의 스크린샷](images/windows-wheel/surface-dial-menu-icon1.png)
 
       *알파 배경을 사용 하는 아이콘*
    :::column-end:::
    :::column:::
-      ![기본 테마 아이콘을 사용하여 휠 메뉴에 표시되는 아이콘](images/windows-wheel/surface-dial-menu-icon2.png)
+      ![기본 테마가 있는 휠 메뉴에 표시 되는 아이콘의 스크린샷](images/windows-wheel/surface-dial-menu-icon2.png)
 
       *기본 테마가 있는 휠 메뉴에 표시 되는 아이콘*
    :::column-end:::
    :::column:::
-      ![화면 전화 접속 화면 메뉴](images/windows-wheel/surface-dial-menu-icon3.png)
+      ![고대비 흰색 테마를 사용 하 여 휠 메뉴에 표시 되는 아이콘의 스크린샷](images/windows-wheel/surface-dial-menu-icon3.png)
 
       *고대비 흰색 테마를 사용 하 여 휠 메뉴에 표시 되는 아이콘*
    :::column-end:::
@@ -171,7 +171,7 @@ Surface Dial 메뉴 항목은 사용 하지 않도록 설정 된 상태를 지�
 
 1. 먼저 XAML에서 UI (슬라이더 및 토글 단추만)를 선언 합니다.
 
-   ![샘플 앱 UI 이미지](images/windows-wheel/surface-dial-snippet-customtool1.png)  
+   ![가로 슬라이더가 왼쪽으로 설정 된 방사형 컨트롤러 샘플의 스크린샷](images/windows-wheel/surface-dial-snippet-customtool1.png)  
    *샘플 앱 UI*
 
     ```Xaml
@@ -272,7 +272,7 @@ Surface Dial 메뉴 항목은 사용 하지 않도록 설정 된 상태를 지�
 
 앱을 실행할 때 Surface 다이얼을 사용 하 여 상호 작용 합니다. 먼저를 길게 눌러 메뉴를 열고 사용자 지정 도구를 선택 합니다. 사용자 지정 도구를 활성화 한 후에는 전화를 돌려 슬라이더 컨트롤을 조정 하 고 전화 걸기를 클릭 하 여 스위치를 설정/해제할 수 있습니다.
 
-![Surface Dial 사용자 지정 도구를 사용 하 여 활성화 된 샘플 앱 UI 이미지](images/windows-wheel/surface-dial-snippet-customtool2.png)  
+![가로 슬라이더가 중간으로 설정 된 방사형 컨트롤러 샘플의 스크린샷](images/windows-wheel/surface-dial-snippet-customtool2.png)  
 *Surface Dial 사용자 지정 도구를 사용 하 여 활성화 된 샘플 앱 UI*
 
 **기본 제공 도구 지정**
@@ -480,7 +480,7 @@ Surface Studio의 디지타이저 화면에 Surface 다이얼이 배치 되 면 
 
 1. 먼저 XAML에서 UI (각각 슬라이더와 토글 단추가 있는 네 개의 섹션)를 선언 합니다.
 
-   ![샘플 앱 UI 이미지](images/windows-wheel/surface-dial-snippet-customtool3.png)  
+   ![4 개의 가로 슬라이더가 왼쪽으로 설정 된 방사형 컨트롤러 샘플의 스크린샷](images/windows-wheel/surface-dial-snippet-customtool3.png)  
    *샘플 앱 UI*
 
    ```xaml 
@@ -680,14 +680,12 @@ private void ActivateGridAtLocation(Point Location)
 
 앱을 실행할 때 Surface 다이얼을 사용 하 여 상호 작용 합니다. 먼저, 앱이 검색 하 여 오른쪽 아래 섹션과 연결 하는 Surface Studio 화면에 장치를 놓습니다 (이미지 참조). 그런 다음 Surface 다이얼을 길게 눌러 메뉴를 열고 사용자 지정 도구를 선택 합니다. 사용자 지정 도구를 활성화 한 후에는 Surface 전화를 회전 하 여 슬라이더 컨트롤을 조정할 수 있으며 Surface 전화 걸기를 클릭 하 여 스위치를 전환할 수 있습니다.
 
-![Surface Dial 사용자 지정 도구를 사용 하 여 활성화 된 샘플 앱 UI 이미지](images/windows-wheel/surface-dial-snippet-customtool4.png)  
+![4 개의 가로 슬라이더가 왼쪽으로 설정 되 고 네 번째 컨트롤러가 강조 표시 된 방사형 컨트롤러 샘플의 스크린샷](images/windows-wheel/surface-dial-snippet-customtool4.png)  
 *Surface Dial 사용자 지정 도구를 사용 하 여 활성화 된 샘플 앱 UI*
 
 ## <a name="summary"></a>요약
 
 이 항목에서는 화면 종료 시나리오에 대 한 사용자 환경을 사용자 지정 하는 방법과 Surface Studio에서 사용 하는 경우 화면 시나리오를 사용자 지정 하는 방법에 대 한 UX 및 개발자 지침을 포함 하는 Surface Dial 입력 장치에 대 한 개요를 제공 합니다.
-
-## <a name="feedback"></a>피드백
 
 질문, 제안 및 피드백을으로 보내 주시기 바랍니다 [radialcontroller@microsoft.com](mailto:radialcontroller@microsoft.com) .
 

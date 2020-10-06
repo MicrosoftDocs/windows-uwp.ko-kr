@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: fe63c527-8f06-43a5-868f-de909f5664b3
 ms.localizationpriority: medium
-ms.openlocfilehash: 937d13c8764cda2f0a4592f6ca3a78d3b35a9529
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 24c7893f18037d5585670f3e4de6a04998654e3a
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168957"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763094"
 ---
 # <a name="whats-new-for-developers-in-the-latest-update-of-uwp-on-xbox-one"></a>Xbox One에서 UWP 최신 업데이트의 개발자를 위한 새로운 기능
 
@@ -41,13 +41,9 @@ Xbox의 UWP 앱은 이제 이전 앱으로의 탐색을 지원할 수 있습니�
 ## <a name="you-can-now-switch-the-type-of-your-uwp-title-between-app-and-game"></a>이제 UWP 제목의 형식을 "App"과 "Game" 사이에서 전환할 수 있습니다.
 UWP 제목의 유형을 "App"과 "Game"으로 전환 하면 스토어에 게시 하지 않고도 게임 시나리오를 테스트할 수 있습니다. 개발자 홈의 **게임 & 앱** 창에서 앱을 선택 하 고 컨트롤러에서 보기 단추를 클릭 한 다음 **앱 정보** 를 선택 하 고 유형을 "App" 또는 "Game"으로 변경 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 - [알려진 문제](known-issues.md)
 - [Xbox One의 UWP](index.md)
  - 이제 콘솔의 스크린샷을 캡처할 수 있습니다. 스크린샷을 만드는 방법에 대 한 자세한 내용은 [/exti/스크린샷](wdp-media-capture-api.md) 참조 항목을 참조 하세요.
  - 이 도구는 앱의 느슨한 파일 빌드를 배포할 수 있습니다. 느슨한 파일 빌드에 대 한 자세한 내용은 [/api/app/packagemanager/register](wdp-loose-folder-register-api.md) 참조 항목을 참조 하세요.
  - 콘솔의 개발자 파일은 개발 PC의 파일 탐색기에서 액세스할 수 있습니다. 파일 탐색기를 통해 파일에 액세스 하는 방법에 대 한 자세한 내용은 [/ext/smb/developerfolder](wdp-smb-api.md) 참조 항목을 참조 하세요.
-
-## <a name="see-also"></a>참고 항목
-- [알려진 문제](known-issues.md)
-- [Xbox One의 UWP](index.md)

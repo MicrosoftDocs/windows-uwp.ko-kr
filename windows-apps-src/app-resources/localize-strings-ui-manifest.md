@@ -8,12 +8,12 @@ ms.date: 11/01/2017
 ms.topic: article
 keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 0cf6bc95eef416b481642d84eef8315451916604
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 411ecb63189084ba83f9971ded2bbe02d899aabd
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174107"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91762865"
 ---
 # <a name="localize-strings-in-your-ui-and-app-package-manifest"></a>UI 및 앱 패키지 매니페스트의 문자열 지역화
 
@@ -40,7 +40,7 @@ ms.locfileid: "89174107"
 
     `Strings/en-US/Resources.resw`
 
-    ![리소스 추가, 영어](images/addresource-en-us.png)
+    ![> E N U S > 리소스에 대 한 리소스 추가 테이블의 스크린샷. resw 파일.](images/addresource-en-us.png)
 
     이 예제에서 "인사말"은 표시 될 때 태그에서 참조할 수 있는 문자열 리소스 식별자입니다. 식별자 "인사"의 경우 텍스트 속성에 대 한 문자열이 제공 되 고 Width 속성에 대해 문자열이 제공 됩니다. "인사말과 Text"는 UI 요소의 속성에 해당 하므로 속성 식별자의 예입니다. 예를 들어 이름 열에 "인사말과"를 추가 하 고 해당 값을 "Red"로 설정할 수도 있습니다. "인사" 식별자는 간단한 문자열 리소스 식별자입니다. 여기에는 하위 속성이 없으며 앞에서 설명한 대로 명령적 코드에서 로드 될 수 있습니다. 주석 열은 번역기에 특별 한 지침을 제공 하는 좋은 장소입니다.
 
@@ -108,13 +108,13 @@ this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <da
 
 1. 앱 패키지 매니페스트 소스 파일 ( `Package.appxmanifest` 파일)을 엽니다 .이 파일은 기본적으로 앱의 `Display name` 이 문자열 리터럴로 표현 됩니다.
 
-   ![리소스 추가, 영어](images/display-name-before.png)
+   ![표시 이름이 놀이 Works Cycles로 설정 된 응용 프로그램 탭을 보여 주는 appxmanifest.xml 파일의 스크린샷](images/display-name-before.png)
 
 2. 이 문자열의 지역화할 수 있는 버전을 만들려면를 열고 " `Resources.resw` AppDisplayName" 이라는 이름의 새 문자열 리소스와 "어드벤처 Works Cycles" 값을 추가 합니다.
 
 3. 표시 이름 문자열 리터럴을 방금 만든 문자열 리소스 식별자 ("AppDisplayName")에 대 한 참조로 바꿉니다. `ms-resource`URI (Uniform Resource identifier) 체계를 사용 하 여이 작업을 수행 합니다.
 
-   ![리소스 추가, 영어](images/display-name-after.png)
+   ![표시 이름이 M S 리소스 앱 표시 이름으로 설정 된 응용 프로그램 탭을 보여 주는 appxmanifest.xml 파일의 스크린샷](images/display-name-after.png)
 
 4. 지역화 하려는 매니페스트의 각 문자열에 대해이 프로세스를 반복 합니다. 예를 들어 앱의 짧은 이름 (시작 시 앱 타일에 나타나도록 구성할 수 있음)이 있습니다. 지역화할 수 있는 응용 프로그램 패키지 매니페스트의 모든 항목 목록은 [지역화 가능한 매니페스트 항목](/uwp/schemas/appxpackage/uapmanifestschema/localizable-manifest-items-win10?branch=live)을 참조 하세요.
 
@@ -147,7 +147,7 @@ this.myXAMLTextBlockElement.Text = resourceLoader.GetString("Fare/Well"); // <da
 
 모든 문자열을 단일 리소스 파일 (resw)로 유지 하거나 여러 리소스 파일에 걸쳐 요소를 구분할 수 있습니다. 예를 들어 오류 메시지를 한 리소스 파일, 응용 프로그램 패키지 매니페스트 문자열 및 세 번째의 UI 문자열에 유지 하려고 할 수 있습니다. 이 경우 폴더 구조는 다음과 같습니다.
 
-![리소스 추가, 영어](images/manifest-resources.png)
+![독일어, U S 영어 및 프랑스어 로캘 폴더와 파일을 포함 하는 놀이 Works 주기 > 문자열 폴더를 보여 주는 솔루션 패널의 스크린샷](images/manifest-resources.png)
 
 특정 파일에 대 한 문자열 리소스 식별자 참조의 범위를 표시 하려면 식별자 앞에를 추가 `/<resources-file-name>/` 합니다. 아래 태그 예제에서는 `ErrorMessages.resw` 이름이 "PasswordTooWeak"이 고 해당 값이 오류를 설명 하는 리소스를 포함 하는 것으로 가정 합니다.
 

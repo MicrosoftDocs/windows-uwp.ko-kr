@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: ae3d4826c4468cabea318ed230da0cfbb4d5f24b
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 005ec4883eeb52a84e458ba917439d093ab0041f
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219116"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763076"
 ---
 # <a name="keyboard-interactions"></a>키보드 조작
 
@@ -55,7 +55,7 @@ Windows 앱을 디자인 하 고 최적화 하는 방법에 대해 알아봅니�
 
 이 항목에서 설명 하는 장치 및 도구는 다음과 같습니다.
 
-| 장치/도구                       | 설명     |
+| 장치/도구                       | 설명:     |
 |-----------------------------------|-----------------|
 |키보드 (하드웨어 및 소프트웨어)   |표준 하드웨어 키보드 외에도 Windows 응용 프로그램은 [터치 (또는 소프트웨어) 키보드](#software-keyboard) 와 [화상 키보드](#on-screen-keyboard)라는 두 가지 소프트웨어 키보드를 지원 합니다.|
 |게임 패드 및 리모컨         |Xbox 게임 패드 및 원격 제어는 [10 피트 환경](../devices/designing-for-tv.md)에서 기본적인 입력 장치입니다. 게임 패드 및 원격 제어에 대 한 Windows 지원에 대 한 자세한 내용은 [게임 패드 및 원격 제어 상호 작용](gamepad-and-remote-interactions.md)을 참조 하세요.|
@@ -507,11 +507,13 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 지원 되는 모든 입력 장치를 사용 하 여 앱을 테스트 하 여 UI 요소를 일관 되 고 직관적인 방식으로 탐색 하 고 예기치 않은 요소가 원하는 탭 순서를 방해 하지 않도록 합니다.
 
 ## <a name="related-articles"></a>관련된 문서
+
 * [키보드 이벤트](keyboard-events.md)
 * [입력 디바이스 식별](identify-input-devices.md)
 * [터치 키보드의 현재 상태에 응답](respond-to-the-presence-of-the-touch-keyboard.md)
 * [포커스 화면 효과 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlFocusVisuals)
-* [NavigationView 컨트롤 키보드 사용 특성](../controls-and-patterns/navigationview.md#hierarchical-navigation) 
+* [NavigationView 컨트롤 키보드 사용 특성](../controls-and-patterns/navigationview.md#hierarchical-navigation)
+* [키보드 접근성](../accessibility/keyboard-accessibility.md)
 
 ## <a name="appendix"></a>부록
 
@@ -576,7 +578,3 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 ***화상 키보드***
 
 화상 키보드에 대 한 자세한 내용은 화상 [키보드 페이지](https://support.microsoft.com/help/10762/windows-use-on-screen-keyboard) 를 참조 하세요.
-
-## <a name="related-articles"></a>관련된 문서
-
-- [키보드 접근성](../accessibility/keyboard-accessibility.md)
