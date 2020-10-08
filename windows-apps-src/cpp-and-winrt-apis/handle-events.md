@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
-ms.openlocfilehash: 2d2470b1aa52f8aa4be7e07bf1dfe5213054b005
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: fefc7f72fb91a61ae924ac082dcac6d3cf9c044b
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166247"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750129"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>C++/WinRT의 대리자를 사용한 이벤트 처리
 
@@ -112,12 +112,12 @@ struct RoutedEventHandler : winrt::Windows::Foundation::IUnknown
 > ```
 >
 > 위 정보는 **UIElement.KeyDown** 이벤트(현재 항목)에 대리자 형식의 **KeyEventHandler**가 있다는 것을 알려 줍니다. KeyEventHandler가 이 이벤트 유형에 대리자를 등록할 때 전달하는 형식이기 때문입니다. 따라서 이제 항목의 링크에 따라 해당 [KeyEventHandler delegate](/uwp/api/windows.ui.xaml.input.keyeventhandler) 형식으로 이동합니다. 여기서 구문 블록은 함수 호출 연산자를 포함합니다. 위에서 언급한 것처럼 대리자의 매개 변수로 무엇을 사용해야 할지 알려 줍니다.
-> 
-> ```cppwinrt
-> void operator()(
-    winrt::Windows::Foundation::IInspectable const& sender,
-    winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
-> ```
+>
+>```cppwinrt
+>void operator()(
+>   winrt::Windows::Foundation::IInspectable const& sender,
+>   winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs const& e) const;
+>```
 >
 >  살펴본 대로 대리자는 **IInspectable**을 sender로 사용하고 [KeyRoutedEventArgs 클래스](/uwp/api/windows.ui.xaml.input.keyroutedeventargs) 인스턴스를 args로 사용하도록 선언해야 합니다.
 >

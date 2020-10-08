@@ -11,12 +11,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 773079129b5e05e26501f78fe177f4b5367902da
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: c1d712e9d4a12800542184cf37fb504d6f7d20d7
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217276"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750509"
 ---
 # <a name="control-templates"></a>컨트롤 템플릿
 
@@ -170,10 +170,9 @@ XAML 프레임워크에서 컨트롤 템플릿을 만들어 컨트롤의 시각�
 
 [  **VisualState**](/uwp/api/Windows.UI.Xaml.VisualState) 개체가 작동하는 방식을 더 잘 이해하려면, [**CheckBox**](/uwp/api/Windows.UI.Xaml.Controls.CheckBox)가 `Unchecked` 상태에서 `Checked` 상태로 변할 때, `Indeterminate` 상태로 변한 후 `Unchecked` 상태로 다시 돌아올 때 어떤 현상이 일어나는지 살펴보세요. 다음은 전환에 대한 내용입니다.
 
-|                                      |                                                                                                                                                                                                                                                                                                                                                |                                                   |
-|--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------|
-| 상태 전환                     | 발생하는 동작                                                                                                                                                                                                                                                                                                                                   | 전환이 완료된 후 CheckBox 모양 |
-| `Unchecked`에서 `Checked`로       | `Checked` [**VisualState**](/uwp/api/Windows.UI.Xaml.VisualState)의 [**Setter**](/uwp/api/Windows.UI.Xaml.Setter) 값이 적용되므로 `CheckGlyph`의 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)는 1입니다.                                                                                                                                                         | X가 표시됩니다.                                |
+| 상태 전환 | 발생하는 동작 | 전환이 완료된 후 CheckBox 모양 |
+| ---------------- | ------------ | ------------------------------------------------- |
+| `Unchecked`에서 `Checked`로       | `Checked` [**VisualState**](/uwp/api/Windows.UI.Xaml.VisualState)의 [**Setter**](/uwp/api/Windows.UI.Xaml.Setter) 값이 적용되므로 `CheckGlyph`의 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)는 1입니다.                                                                                                                                                          | X가 표시됩니다.                                |
 | `Checked`에서 `Indeterminate`로   | `Indeterminate` [**VisualState**](/uwp/api/Windows.UI.Xaml.VisualState)의 [**Setter**](/uwp/api/Windows.UI.Xaml.Setter) 값이 적용되므로 `IndeterminateGlyph`의 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)는 1입니다. `Checked` **VisualState**의 **Setter** 값이 제거되므로 `CheckGlyph`의 [**Opacity**](/uwp/api/windows.ui.xaml.media.brush.opacity)는 0입니다. | 원이 표시됩니다.                            |
 | `Indeterminate`에서 `Unchecked`로 | `Indeterminate` [**VisualState**](/uwp/api/Windows.UI.Xaml.VisualState)의 [**Setter**](/uwp/api/Windows.UI.Xaml.Setter) 값이 제거되므로 `IndeterminateGlyph`의 [**Opacity**](/uwp/api/Windows.UI.Xaml.UIElement.Opacity)는 0입니다.                                                                                                                                           | 아무것도 표시되지 않습니다.                             |
 

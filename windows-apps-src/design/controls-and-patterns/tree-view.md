@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: RS5, 19H1
-ms.openlocfilehash: ceade84d60b4e2f01c51c4570bb9ce425848a2d8
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: e033c98aa9336c544219786a254cebaedfcd9f29
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217210"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750149"
 ---
 # <a name="treeview"></a>TreeView
 
@@ -36,9 +36,17 @@ XAML [TreeView](/uwp/api/windows.ui.xaml.controls.treeview) 컨트롤은 중첩�
 
 **Windows UI 라이브러리 가져오기**
 
-|  |  |
-| - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **TreeView** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
+:::row:::
+   :::column:::
+      ![WinUI 로고](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      **TreeView** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요.
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 > **Windows UI 라이브러리 API:** [TreeView 클래스](/uwp/api/microsoft.ui.xaml.controls.treeview), [TreeViewNode 클래스](/uwp/api/microsoft.ui.xaml.controls.treeviewnode), [TreeView.ItemsSource 속성](/uwp/api/microsoft.ui.xaml.controls.treeview.itemssource)
 >
@@ -134,13 +142,13 @@ XAML [TreeView](/uwp/api/windows.ui.xaml.controls.treeview) 컨트롤은 중첩�
 
 **TreeView.ItemsSource**를 사용하는 경우 다음 API를 사용하여 컨테이너에서 노드 또는 데이터 항목을 가져오거나 그 반대로 가져올 수 있습니다.
 
-| **[TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem)** | |
-| - | - |
+| [TreeViewItem](/uwp/api/windows.ui.xaml.controls.treeviewitem) | Description |
+| ------------------------------------------------------------------ | ----------- |
 | [TreeView.ItemFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.itemfromcontainer) | 지정된 **TreeViewItem** 컨테이너에 대한 데이터 항목을 가져옵니다. |
 | [TreeView.ContainerFromItem](/uwp/api/windows.ui.xaml.controls.treeview.containerfromitem) | 지정된 데이터 항목에 대한 **TreeViewItem** 컨테이너를 가져옵니다. |
 
-| **[TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode)** | |
-| - | - |
+| [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode) | Description |
+| -------------------------------------------------------------- | ----------- |
 | [TreeView.NodeFromContainer](/uwp/api/windows.ui.xaml.controls.treeview.nodefromcontainer) | 지정된 **TreeViewItem** 컨테이너에 대한 **TreeViewNode**를 가져옵니다. |
 | [TreeView.ContainerFromNode](/uwp/api/windows.ui.xaml.controls.treeview.containerfromnode) | 지정된 **TreeViewNode**에 대한 **TreeViewItem** 컨테이너를 가져옵니다. |
 
@@ -179,12 +187,12 @@ End Sub
 
 다음 API는 트리 보기의 데이터 계층을 관리하는 데 사용할 수 있습니다.
 
-| **[TreeView](/uwp/api/windows.ui.xaml.controls.treeview)** | |
-| - | - |
+| [TreeView](/uwp/api/windows.ui.xaml.controls.treeview) | Description |
+| ------------------------------------------------------ | ----------- |
 | [RootNodes](/uwp/api/windows.ui.xaml.controls.treeview.rootnodes) | 트리 보기에는 하나 이상의 루트 노드가 포함될 수 있습니다. **TreeViewNode** 개체를 **RootNodes** 컬렉션에 추가하여 루트 노드를 생성합니다. 루트 노드의 **부모**는 항상 **null**입니다. 루트 노드의 **깊이**는 0입니다. |
 
-| **[TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode)** | |
-| - | - |
+| [TreeViewNode](/uwp/api/windows.ui.xaml.controls.treeviewnode) | Description |
+| -------------------------------------------------------------- | ----------- |
 | [Children](/uwp/api/windows.ui.xaml.controls.treeviewnode.children) | **TreeViewNode** 개체를 부모 노드의 **Children** 컬렉션에 추가하여 노드 계층을 만듭니다. 한 노드는 **자식** 컬렉션에 있는 모든 노드의 **부모**가 됩니다. |
 | [HasChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.haschildren) | 노드가 자식으로 구현된 경우 이 값은 **true**입니다. **false**는 빈 폴더 또는 항목을 나타냅니다. |
 | [HasUnrealizedChildren](/uwp/api/windows.ui.xaml.controls.treeviewnode.hasunrealizedchildren) | 확장에 따라 노드를 채우고 있는 경우에는 이 속성을 사용합니다. 이 문서 뒷부분의 [확장 시 노드 채우기](#fill-a-node-when-its-expanding)를 참조하세요. |

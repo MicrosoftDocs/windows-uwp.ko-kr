@@ -12,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ea2f6975f7998acf775079a2d02e9694f790a96
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 3ba2df600e294aab959a090d8b5a5f8645a40d55
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217957"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749729"
 ---
 # <a name="password-box"></a>비밀번호 상자
 
@@ -27,9 +27,17 @@ ms.locfileid: "91217957"
 
 **Windows UI 라이브러리 가져오기**
 
-|  |  |
-| - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](../style/rounded-corner.md)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
+:::row:::
+   :::column:::
+      ![WinUI 로고](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](../style/rounded-corner.md)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요.
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 > **플랫폼 API**: [PasswordBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox), [Password 속성](/uwp/api/windows.ui.xaml.controls.passwordbox.password), [PasswordChar 속성](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchar), [PasswordRevealMode 속성](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode), [PasswordChanged 이벤트](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchanged)
 

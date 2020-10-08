@@ -5,12 +5,12 @@ ms.date: 07/15/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, 프로젝션, 이식, 마이그레이션, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: e3c6b4213ee5edf8f9a5878b4f9a1a7095220bcd
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 353ca9922bc633efa5f53b2c3a3f4d7a4cad5986
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157327"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750619"
 ---
 # <a name="move-to-cwinrt-from-c"></a>C#에서 C++/WinRT로 이동
 
@@ -33,8 +33,8 @@ UWP(유니버설 Windows 플랫폼) 앱 샘플 중 하나를 이식하는 방법
 
 ## <a name="changes-that-involve-the-language-projection"></a>언어 프로젝션과 관련된 변경 내용
 
-||C#|C++/WinRT|참고 항목|
-|-|-|-|-|
+| 범주 | C# | C++/WinRT | 참고 항목 |
+| -------- | -- | --------- | -------- |
 |형식화되지 않은 개체|`object` 또는 [**System.Object**](/dotnet/api/system.object)|[**Windows::Foundation::IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable)|[**EnableClipboardContentChangedNotifications** 메서드 이식](./clipboard-to-winrt-from-csharp.md#enableclipboardcontentchangednotifications)|
 |프로젝션 네임스페이스|`using System;`|`using namespace Windows::Foundation;`||
 ||`using System.Collections.Generic;`|`using namespace Windows::Foundation::Collections;`||
@@ -107,8 +107,8 @@ void OpenButton_Click(Object sender, Windows.UI.Xaml.RoutedEventArgs e);
 
 ## <a name="changes-that-involve-the-language-syntax"></a>언어 구문과 관련된 변경 내용
 
-||C#|C++/WinRT|참고 항목|
-|-|-|-|-|
+| 범주 | C# | C++/WinRT | 참고 항목 |
+| -------- | -- | --------- | -------- |
 |액세스 한정자|`public \<member\>`|`public:`<br>&nbsp;&nbsp;&nbsp;&nbsp;`\<member\>`|[**Button_Click** 메서드 이식](./clipboard-to-winrt-from-csharp.md#button_click)|
 |데이터 멤버 액세스|`this.variable`|`this->variable`||
 |비동기 작업|`async Task ...`|`IAsyncAction ...`||
@@ -128,10 +128,10 @@ void OpenButton_Click(Object sender, Windows.UI.Xaml.RoutedEventArgs e);
 |문자열 리터럴|`"a string literal"`|`L"a string literal"`|[생성자, **Current** 및 **FEATURE_NAME** 이식](./clipboard-to-winrt-from-csharp.md#the-constructor-current-and-feature_name)|
 |유추(또는 추론) 형식|`var`|`auto`|[**BuildClipboardFormatsOutputString** 메서드 이식](./clipboard-to-winrt-from-csharp.md#buildclipboardformatsoutputstring)|
 |using 지시문|`using A.B.C;`|`using namespace A::B::C;`|[생성자, **Current** 및 **FEATURE_NAME** 이식](./clipboard-to-winrt-from-csharp.md#the-constructor-current-and-feature_name)|
-|축자/원시 문자열 리터럴|`@"verbatim string literal"`|`LR"(raw string literal)"`|[**DisplayToast** 메서드 이식](./clipboard-to-winrt-from-csharp.md##displaytoast)|
+|축자/원시 문자열 리터럴|`@"verbatim string literal"`|`LR"(raw string literal)"`|[**DisplayToast** 메서드 이식](./clipboard-to-winrt-from-csharp.md#displaytoast)|
 
 > [!NOTE]
-> 헤더 파일에 지정된 네임스페이스에 대한 `using namespace` 지시문이 없으면 해당 네임스페이스에 대한 모든 형식 이름을 정규화하거나 적어도 컴파일러에서 찾을 수 있을 만큼 충분히 한정해야 합니다. 예제는 [**DisplayToast** 메서드 이식](./clipboard-to-winrt-from-csharp.md##displaytoast)을 참조하세요.
+> 헤더 파일에 지정된 네임스페이스에 대한 `using namespace` 지시문이 없으면 해당 네임스페이스에 대한 모든 형식 이름을 정규화하거나 적어도 컴파일러에서 찾을 수 있을 만큼 충분히 한정해야 합니다. 예제는 [**DisplayToast** 메서드 이식](./clipboard-to-winrt-from-csharp.md#displaytoast)을 참조하세요.
 
 ### <a name="porting-classes-and-members"></a>클래스 및 멤버 이식
 
@@ -151,8 +151,8 @@ C# 정적 필드는 C++/WinRT 정적 접근자 및/또는 변경자 함수가 �
 
 ## <a name="changes-that-involve-procedures-within-the-language"></a>언어 내의 프로시저와 관련된 변경 내용
 
-||C#|C++/WinRT|참고 항목|
-|-|-|-|-|
+| 범주 | C# | C++/WinRT | 참고 항목 |
+| -------- | -- | --------- | -------- |
 |비동기 메서드의 수명 관리|해당 없음|`auto lifetime{ get_strong() };` 또는<br>`auto lifetime = get_strong();`|[**CopyButton_Click** 메서드 이식](./clipboard-to-winrt-from-csharp.md#copybutton_click)|
 |삭제|`using (var t = v)`|`auto t{ v };`<br>`t.Close(); // or let wrapper destructor do the work`|[**CopyImage** 메서드 이식](./clipboard-to-winrt-from-csharp.md#copyimage)|
 |개체 생성|`new MyType(args)`|`MyType{ args }` 또는<br>`MyType(args)`|[**Scenarios** 속성 이식](./clipboard-to-winrt-from-csharp.md#scenarios)|
@@ -266,8 +266,8 @@ Most recent status is <Run Text="{x:Bind LatestOperation.Status}"/>.
 
 문자열 작성의 경우 C#에는 기본 제공 [**StringBuilder**](/dotnet/api/system.text.stringbuilder) 형식이 있습니다.
 
-| | C# | C++/WinRT |
-|-|-|-|
+| 범주 | C# | C++/WinRT |
+| -------- | -- | --------- |
 | 문자열 작성 | `StringBuilder builder;`<br>`builder.Append(...);` | `std::wostringstream builder;`<br>`builder << ...;` |
 | Windows 런타임 문자열 추가, null 유지 | `builder.Append(s);` | `builder << std::wstring_view{ s };` |
 | 줄 바꿈 추가 |`builder.Append(Environment.NewLine);` | `builder << std::endl;` |

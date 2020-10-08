@@ -6,12 +6,12 @@ ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: acdc8d5bb9a73bf5851dfd8f75f777c2a13bcdb1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: edaa15aa2e88252c328a368df1b7698a9b74f5e0
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173137"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750449"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>C++/CX에서 "Hello, World!" 앱 만들기
 
@@ -279,24 +279,24 @@ void HelloWorld::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::X
 1.  App.xaml을 엽니다.
 2.  여는 [**Application**](/uwp/api/Windows.UI.Xaml.Application) 태그에서 [**RequestedTheme**](/uwp/api/windows.ui.xaml.application.requestedtheme) 속성을 편집하고 해당 값을 **Dark**로 설정합니다.
 
-```xaml
-RequestedTheme="Dark"
-```
+    ```xaml
+    RequestedTheme="Dark"
+    ```
 
-    Here's the full [**Application**](/uwp/api/Windows.UI.Xaml.Application) tag with the dark theme :
+    어두운 테마가 있는 전체 [**Application**](/uwp/api/Windows.UI.Xaml.Application) 태그는 다음과 같습니다.
 
-```xaml
+    ```xaml
     <Application
     x:Class="HelloWorld.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:HelloWorld"
     RequestedTheme="Dark">
-```
+    ```
 
 3.  F5 키를 눌러 앱을 빌드 및 실행합니다. 해당 프로젝트에 어두운 테마가 사용됩니다.
 
-![어두운 테마를 사용하는 앱 화면](images/xaml-hw-app3.png)
+    ![어두운 테마를 사용하는 앱 화면](images/xaml-hw-app3.png)
 
 어떤 테마를 사용해야 할까요? 어느 것이든 원하는 것을 사용하면 됩니다. 주로 이미지 또는 동영상을 표시하는 앱에는 어두운 테마를 사용하는 것이 좋고, 텍스트가 많이 들어 있는 앱에는 밝은 테마를 사용하는 것이 좋습니다. 사용자 지정 색 구성표를 사용하려는 경우 앱의 모양과 느낌에 가장 잘 맞는 테마를 사용하세요. 이 자습서의 나머지 부분에서는 스크린샷에 밝은 테마를 사용합니다.
 

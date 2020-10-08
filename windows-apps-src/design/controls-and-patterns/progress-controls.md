@@ -12,12 +12,12 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: afecb467931684601b949b392d35c9c84b7e2881
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 8ccdea35b8923c756489f6b671d394fc516a960c
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218456"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91749749"
 ---
 # <a name="progress-controls"></a>진행률 컨트롤
 
@@ -25,9 +25,17 @@ ms.locfileid: "91218456"
 
 **Windows UI 라이브러리 가져오기**
 
-|  |  |
-| - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **ProgressBar** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
+:::row:::
+   :::column:::
+      ![WinUI 로고](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      **ProgressBar** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되었습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요.
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 > **Windows UI 라이브러리 API:** [ProgressBar 클래스](/uwp/api/Microsoft.UI.Xaml.Controls.ProgressBar), [IsIndeterminate 속성](/uwp/api/Microsoft.ui.xaml.controls.progressbar.isindeterminate), [ProgressRing 클래스](/uwp/api/Microsoft.UI.Xaml.Controls.ProgressRing), [IsActive 속성](/uwp/api/Microsoft.ui.xaml.controls.progressring.isactive)
 >

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f384ca56-f2b2-4793-b251-f7f5735376bb
 ms.localizationpriority: medium
-ms.openlocfilehash: c035a97b1750c8f285689f2b2f82f3766a6c06ad
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d301a2dfcc478f6d90b8aa562bfbd34cf79493c1
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173797"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750139"
 ---
 # <a name="application-development-for-windows-as-a-service"></a>Windows as a Service용 애플리케이션 개발
 
@@ -54,9 +54,9 @@ Windows as a Service 모델에서 Microsoft는 기본 OS의 호환성을 유지�
 
 이 접근 방식은 Windows 릴리스와 일치하는 앱 일정을 유지 관리해야 하는 부담을 줄여줍니다. ISV 파트너가 원하는 주기로 기능 또는 업데이트를 자유롭게 릴리스할 수 있습니다. 파트너는 Windows 릴리스와 독립적으로 최신 앱 업데이트를 사용하여 고객 기반을 업데이트된 상태로 유지할 수 있습니다. 또한 Windows 빌드가 릴리스될 때마다 고객이 명시적인 지원 설명을 찾지 않아도 됩니다. 다양한 버전의 OS에서 앱이 어떻게 지원될 수 있는지를 설명하는 지원 설명의 예는 다음과 같습니다.
 
-| 애플리케이션 수명 주기 지원 설명 예제 | |
-| --- | --- |
-| Contoso는 소프트웨어 개발 회사이며 엔터프라이즈 영역에서 많이 사용되는 인기 Mojave 앱의 소유자입니다. Contoso는 다음 주 릴리스 Mojave 14.0을 릴리스하고 릴리스 날짜로부터 3년간 일반 지원을 선언합니다. 일반 지원 중에는 모든 업데이트 및 지원이 사용 허가된 제품에 대해 무료로 제공됩니다. 또한 Contoso는 고객이 유예 기간 동안 업데이트 및 지원을 구매할 수 있는 2년 추가 지원을 선언합니다. 추가 지원 종료 날짜가 지나면 이 제품 버전은 더 이상 지원되지 않습니다. 일반 지원 기간 중에 Contoso는 릴리스된 모든 Windows 빌드에서 Mojave 14.0을 지원합니다. 또한 Contoso는 필요에 따라 Windows 제품 릴리스에 독립적으로 Mojave 업데이트를 릴리스합니다. | |
+> **애플리케이션 수명 주기 지원 설명 예제**
+>
+> Contoso는 소프트웨어 개발 회사이며 엔터프라이즈 영역에서 많이 사용되는 인기 Mojave 앱의 소유자입니다. Contoso는 다음 주 릴리스 Mojave 14.0을 릴리스하고 릴리스 날짜로부터 3년간 일반 지원을 선언합니다. 일반 지원 중에는 모든 업데이트 및 지원이 사용 허가된 제품에 대해 무료로 제공됩니다. 또한 Contoso는 고객이 유예 기간 동안 업데이트 및 지원을 구매할 수 있는 2년 추가 지원을 선언합니다. 추가 지원 종료 날짜가 지나면 이 제품 버전은 더 이상 지원되지 않습니다. 일반 지원 기간 중에 Contoso는 릴리스된 모든 Windows 빌드에서 Mojave 14.0을 지원합니다. 또한 Contoso는 필요에 따라 Windows 제품 릴리스에 독립적으로 Mojave 업데이트를 릴리스합니다.
 
 다음 섹션에서는 Microsoft가 기본 OS의 호환성을 유지하기 위해 수행하는 단계에 대한 추가 정보를 확인할 수 있습니다. 결합된 OS 및 앱 에코시스템의 호환성을 유지하기 위해 수행할 수 있는 단계에 대한 지침도 제공됩니다. Windows Insider Preview 빌드를 활용하여 Windows 빌드를 릴리스하기 전에 앱 성능 저하를 감지하는 방법에 대한 섹션이 있습니다. 마지막으로, 계측 및 원격 분석 기반 접근 방식을 사용하여 Windows 빌드의 품질을 높이는 방법을 설명합니다. ISV도 앱 포트폴리오에 이와 유사한 접근 방식을 사용하는 것이 좋습니다.
 

@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 94ffa80700cea640d63f63344991144a2ac00ab6
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 0e25f9cdb091f96b648ddc00d5f5cc96bf18d1d1
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157317"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750599"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>C++/CX에서 C++/WinRT로 이동
 
@@ -39,7 +39,7 @@ Windows 런타임 구성 요소 프로젝트를 제외하고, 이전 섹션에�
 
 점진적 이식 프로세스에 맞게 프로젝트를 준비하는 한 가지 옵션은 C++/CX 프로젝트에 C++/WinRT 지원을 추가하는 것입니다. 그렇게 하기 위해 수행하는 단계는 [C++/CX 프로젝트를 가져와서 C++/WinRT 지원 추가](./interop-winrt-cx.md#taking-a-ccx-project-and-adding-cwinrt-support)에 설명되어 있습니다. 이 단계를 수행한 다음, 점진적으로 이식할 수 있습니다.
 
-또 다른 옵션은 C++/WinRT 프로젝트 템플릿 중 하나를 사용하여 Visual Studio에서 새 프로젝트를 만드는 것입니다([Visual Studio의 C++/WinRT 지원](./intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 그런 다음, 프로젝트에 C++/CX 지원을 추가합니다. 이렇게 하기 위해 수행하는 단계는 [C++/WinRT 프로젝트를 가져와서 C++/CX 지원 추가](./interop-winrt-cx.md#taking-a-cwinrt-project-and-adding-cx-support)에 설명되어 있습니다. 그런 다음, 소스 코드를 여기로 옮기고 C++/CX 소스 코드의 일부를 C++/WinRT로 이식할 수 있습니다.
+또 다른 옵션은 C++/WinRT 프로젝트 템플릿 중 하나를 사용하여 Visual Studio에서 새 프로젝트를 만드는 것입니다([Visual Studio의 C++/WinRT 지원](./intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조). 그런 다음, 프로젝트에 C++/CX 지원을 추가합니다. 이렇게 하기 위해 수행하는 단계는 [C++/WinRT 프로젝트를 가져와서 C++/CX 지원 추가](./interop-winrt-cx.md#taking-a-cwinrt-project-and-adding-ccx-support)에 설명되어 있습니다. 그런 다음, 소스 코드를 여기로 옮기고 C++/CX 소스 코드의 일부를 C++/WinRT로 이식할 수 있습니다.
 
 두 경우 모두 C++/WinRT 코드와 아직 이식하지 않은 C++/CX 코드 간에 상호 운용(양 방향)됩니다.
 
@@ -64,7 +64,7 @@ Windows 런타임 구성 요소 프로젝트를 제외하고, 이전 섹션에�
 이식 전략이 무엇이든(한 번에 이식 또는 점진적으로 이식), 첫 번째 단계는 이식에 맞게 프로젝트를 준비하는 것입니다. 다음은 시작하는 데 사용할 프로젝트 종류에 대한 [이식 전략](#strategies-for-porting) 및 설정 방법에 대해 설명한 내용을 요약한 것입니다.
 
 - **한 번에 이식**. C++/WinRT 프로젝트 템플릿 중 하나를 사용하여 Visual Studio에서 새 프로젝트를 만듭니다. C++/CX 프로젝트의 파일을 새 프로젝트로 옮기고 C++/CX 소스 코드를 이식합니다.
-- **점진적으로 비XAML 프로젝트 이식**. C++/WinRT 지원을 C++/CX 프로젝트에 추가하고([C++/CX 프로젝트를 가져와서 C++/WinRT 지원 추가](./interop-winrt-cx.md#taking-a-ccx-project-and-adding-cwinrt-support) 참조) 점진적으로 이식하도록 선택할 수 있습니다. 또는 새 C++/WinRT 프로젝트를 만들고 여기에 C++/CX 지원을 추가([C++/WinRT 프로젝트를 가져와서 C++/CX 지원 추가](./interop-winrt-cx.md#taking-a-cwinrt-project-and-adding-cx-support) 참조)한 다음, 파일을 옮기고 점진적으로 이식하는 방법을 선택할 수 있습니다.
+- **점진적으로 비XAML 프로젝트 이식**. C++/WinRT 지원을 C++/CX 프로젝트에 추가하고([C++/CX 프로젝트를 가져와서 C++/WinRT 지원 추가](./interop-winrt-cx.md#taking-a-ccx-project-and-adding-cwinrt-support) 참조) 점진적으로 이식하도록 선택할 수 있습니다. 또는 새 C++/WinRT 프로젝트를 만들고 여기에 C++/CX 지원을 추가([C++/WinRT 프로젝트를 가져와서 C++/CX 지원 추가](./interop-winrt-cx.md#taking-a-cwinrt-project-and-adding-ccx-support) 참조)한 다음, 파일을 옮기고 점진적으로 이식하는 방법을 선택할 수 있습니다.
 - **점진적으로 XAML 프로젝트 이식**. 새 C++/WinRT 프로젝트를 만들고, 파일을 옮기고, 점진적으로 이식합니다. 언제든지, XAML 페이지 형식은 모두 C++/WinRT 또는 모두 C++/CX 중 하나여야 합니다. 
 
 이 항목의 나머지 부분은 어떤 이식 전략을 선택하든 적용됩니다. C++/CX에서 C++/WinRT로 소스 코드를 이식하는 것과 관련된 기술 세부 정보 카탈로그를 포함합니다. 점진적으로 이식하는 경우에는 [C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx.md) 및 [비동시성 및 C++/WinRT와 C++/CX 간의 상호 운용성](./interop-winrt-cx-async.md)도 참조하는 것이 좋습니다.

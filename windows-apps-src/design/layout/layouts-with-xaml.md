@@ -8,12 +8,12 @@ ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 9aee0f0e91528258b0591f2e3c7e0ea10353b5b7
-ms.sourcegitcommit: ef3cdca5e9b8f032f46174da4574cb5593d32d56
+ms.openlocfilehash: fd2f755153b29c9be766d39fb685a3f923868946
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90593457"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750420"
 ---
 # <a name="responsive-layouts-with-xaml"></a>XAML을 사용한 반응형 레이아웃
 
@@ -47,8 +47,8 @@ XAML 레이아웃 시스템은 고정 레이아웃과 가변 레이아웃을 모
 
 이 예제에서는 4개의 열을 가진 [**Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid)에서 고정, 자동, 가변 크기 조정을 조합합니다.
 
-&nbsp;|&nbsp;|&nbsp;
-------|------|------
+| 열 | 크기 조정 | Description |
+| ------ | ------ | ----------- |
 Column_1 | **자동** | 열의 크기가 내용에 맞게 조정됩니다.
 Column_2 | * | 자동 열이 계산된 후에는 해당 열에 나머지 너비의 일부가 지정됩니다. Column_2는 Column_4 너비의 절반이 됩니다.
 Column_3 | **44** | 열의 너비는 44픽셀입니다.

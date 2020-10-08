@@ -8,12 +8,12 @@ ms.topic: article
 keywords: NodeJS, Node.js, windows 10, microsoft, nodejs 학습, windows의 노드, wsl의 노드, windows 기반 linux의 노드, windows에 노드 설치, vs code를 사용하는 nodejs, windows에서 노드를 사용하여 개발, windows에서 nodejs를 사용하여 개발, WSL에 노드 설치, Linux용 Windows 하위 시스템의 NodeJS
 ms.localizationpriority: medium
 ms.date: 07/28/2020
-ms.openlocfilehash: 1b44cc51ecbb83e52a16ab7e5c577578c8765cb9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4fa1a53e3d0e5ba22cd3a261b3e2672012330bca
+ms.sourcegitcommit: 00349b7b7cad3d161485ec06fee4e4109452c36a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166558"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91814654"
 ---
 # <a name="set-up-your-nodejs-development-environment-with-wsl-2"></a>WSL 2를 사용하여 Node.js 개발 환경 설치
 
@@ -63,7 +63,7 @@ cURL을 사용하여 최신 버전의 NVM을 설치하면 이전 버전이 대�
     ![노드 버전을 표시하지 않는 NVM 목록](../images/nvm-no-node.png)
 
 6. `nvm install node`를 사용하여 Node.js 최신 릴리스를 설치합니다(최신 기능 개선 사항을 테스트하는 것이 목적이지만 이슈가 있을 가능성이 높음).
-7. `nvm install --lts` 명령을 사용하여 Node.js의 안정적인 최신 LTS 릴리스를 설치합니다(권장).
+7. `nvm install node --lts` 명령을 사용하여 Node.js의 안정적인 최신 LTS 릴리스를 설치합니다(권장).
 8. `nvm ls`를 사용하여 설치된 노드 버전을 나열합니다. 방금 설치한 두 가지 버전이 표시될 것입니다.
 
     ![LTS 및 현재 노드 버전을 보여주는 NVM 목록](../images/nvm-node-installed.png)

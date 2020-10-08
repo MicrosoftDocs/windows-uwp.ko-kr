@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e3915fca3b459d259e83c9c9ce5ef19aa413e2e
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 3fd8d57db92b8a59f32935586edfc247ec3c281f
+ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218676"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91750459"
 ---
 # <a name="layout-panels"></a>레이아웃 패널
 
@@ -186,8 +186,8 @@ Grid의 특정 셀에 개체의 위치를 지정하려면 [**Grid.Column**](/dot
 
 이 예제에서는 4개의 열을 가진 [**Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid)에서 고정, 자동, 가변 크기 조정을 조합합니다.
 
-&nbsp;|&nbsp;|&nbsp;
-------|------|------
+| 열 | 크기 조정 | Description |
+| ------ | ------ | ----------- |
 Column_1 | **자동** | 열의 크기가 내용에 맞게 조정됩니다.
 Column_2 | * | 자동 열이 계산된 후에는 해당 열에 나머지 너비의 일부가 지정됩니다. Column_2는 Column_4 너비의 절반이 됩니다.
 Column_3 | **44** | 열의 너비는 44픽셀입니다.

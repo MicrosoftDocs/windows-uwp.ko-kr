@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3eb7ff033a81e358cb74e670b3235ade17e8a87
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 50f87c02f726512f54830f8678fa8bbec5ecee4f
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220046"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763045"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-windows-apps"></a>Windows 앱을 위한 탐색 기록 및 뒤로 탐색
 
@@ -330,9 +330,9 @@ bool App::On_BackRequested()
 <td style="vertical-align:top;"><strong>페이지 간, 다른 피어 그룹</strong></td>
 <td style="vertical-align:top;"><strong>예</strong>
 <p>이 그림에서 사용자는 피어 그룹을 교차해서 앱의 수준 1에서 수준 2로 이동하므로 탐색이 탐색 기록에 추가됩니다.</p>
-<p><img src="images/back-nav/nav-pagetopage-diffpeers-imageonly1.png" alt="Navigation across peer groups" /></p>
+<p><img src="images/back-nav/nav-pagetopage-diffpeers-imageonly1.png" alt="Diagram of navigation across peer groups showing the user navigating from group one to group two and the back to group one." /></p>
 <p>다음 그림에서 사용자는 동일한 수준의 두 피어 그룹 간을 이동하고 피어 그룹을 교차하므로 탐색이 탐색 기록에 추가됩니다.</p>
-<p><img src="images/back-nav/nav-pagetopage-diffpeers-imageonly2.png" alt="Navigation across peer groups" /></p></td>
+<p><img src="images/back-nav/nav-pagetopage-diffpeers-imageonly2.png" alt="Diagram of navigation across peer groups showing the user navigating from group one to group two then on to group three and back to group two." /></p></td>
 </tr>
 <tr class="even">
 <td style="vertical-align:top;"><strong>페이지 간, 동일한 피어 그룹, 화면 탐색 요소 없음</strong>
