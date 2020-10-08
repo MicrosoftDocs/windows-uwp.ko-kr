@@ -1,5 +1,5 @@
 ---
-Description: '사용자가 포인터 장치 (예: 터치 또는 마우스) 대신 키보드를 통해 앱의 표시 되는 UI를 신속 하 게 탐색 하 고 상호 작용할 수 있는 직관적인 방법을 제공 하 여 Windows 앱의 유용성 및 내게 필요한 옵션을 개선 하는 방법에 대해 알아봅니다.'
+description: '사용자가 포인터 장치 (예: 터치 또는 마우스) 대신 키보드를 통해 앱의 표시 되는 UI를 신속 하 게 탐색 하 고 상호 작용할 수 있는 직관적인 방법을 제공 하 여 Windows 앱의 유용성 및 내게 필요한 옵션을 개선 하는 방법에 대해 알아봅니다.'
 title: 선택키 설계 지침
 label: Access keys design guidelines
 keywords: 키보드, 액세스 키, keytip, 키 팁, 접근성, 탐색, 포커스, 텍스트, 입력, 사용자 상호 작용
@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 77986569ec224ba36471f60c0200dfb1825472a0
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 48f1d3bd69b10a8d500bb2d29b64c0eb91c9900b
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218416"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829535"
 ---
 # <a name="access-keys"></a>액세스 키
 
@@ -276,7 +276,7 @@ _자동 키 팁 배치의 예_
 
 배치 모드는 위쪽, 아래쪽, 오른쪽, 왼쪽, 숨김, 가운데 및 자동입니다.
 
-![주요 팁 배치 모드](images/accesskeys/keytip-postion-modes.png)
+![주요 팁 배치 모드의 상대 위치를 보여 주는 스크린샷](images/accesskeys/keytip-postion-modes.png)
 
 _주요 팁 배치 모드_
 
@@ -299,11 +299,11 @@ _주요 팁 배치 모드_
 > [!NOTE]
 > KeyTipPlacementMode가 Auto로 설정 된 경우에는 오프셋을 설정할 수 없습니다.
 
-키 팁을 왼쪽 또는 오른쪽으로 이동 하는 정도를 나타내는 KeyTipHorizontalOffset 속성입니다. 예제에서는 단추에 대 한 키 팁 오프셋을 설정 하는 방법을 보여 줍니다.
+키 팁을 왼쪽 또는 오른쪽으로 이동 하는 정도를 나타내는 KeyTipHorizontalOffset 속성입니다.
 
-![주요 팁 배치 모드](images/accesskeys/keytip-offsets.png)
+![단추에 대 한 세로 및 가로 키 팁 오프셋의 스크린샷](images/accesskeys/keytip-offsets.png)
 
-_키 팁에 대 한 세로 및 가로 오프셋 설정_
+_단추에 대해 세로 및 가로 키 팁 오프셋 설정_
 
 ``` xaml
 <Button
@@ -318,9 +318,9 @@ _키 팁에 대 한 세로 및 가로 오프셋 설정_
 
 키 팁의 위치는 키 팁이 완전히 표시 되도록 화면 가장자리에 따라 자동으로 조정 됩니다. 이 경우 컨트롤과 키 팁 맞춤 지점 간의 거리가 가로 및 세로 오프셋에 지정 된 값과 다를 수 있습니다.
 
-![주요 팁 배치 모드](images/accesskeys/keytips-screen-edge.png)
+![키 팁 화면 가장자리 맞춤의 스크린샷](images/accesskeys/keytips-screen-edge.png)
 
-_화면 가장자리에 따라 키 팁이 자동으로 다시 배치 됩니다._
+_주요 팁이 화면 가장자리에 따라 자동으로 배치 됩니다._
 
 ## <a name="key-tip-style"></a>키 팁 스타일
 
@@ -328,7 +328,7 @@ _화면 가장자리에 따라 키 팁이 자동으로 다시 배치 됩니다._
 
 고유한 키 팁 스타일을 지정 해야 하는 경우 KeyTipFontSize (글꼴 크기), KeyTipFontFamily (글꼴 패밀리), KeyTipBackground (배경), KeyTipForeground (전경), KeyTipPadding (패딩), Keytiporderbrush (테두리 색) 및 KeyTipBorderThemeThickness (테두리 두께)와 같은 응용 프로그램 리소스를 사용 합니다.
 
-![주요 팁 배치 모드](images/accesskeys/keytip-customization.png)
+![글꼴, 순서 및 색을 포함 한 주요 팁 사용자 지정 옵션의 스크린샷](images/accesskeys/keytip-customization.png)
 
 _주요 팁 사용자 지정 옵션_
 

@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱은 windows 장치에서 지원 되는 모든 텍스트 서비스에서 텍스트 입력을 받을 수 있도록 하는 핵심 텍스트 Api를 제공 합니다.
+description: Windows 앱은 windows 장치에서 지원 되는 모든 텍스트 서비스에서 텍스트 입력을 받을 수 있도록 하는 핵심 텍스트 Api를 제공 합니다.
 title: 사용자 지정 텍스트 입력 개요
 ms.assetid: 58F5F7AC-6A4B-45FC-8C2A-942730FD7B74
 label: Custom text input
@@ -8,12 +8,12 @@ keywords: 키보드, 텍스트, 핵심 텍스트, 사용자 지정 텍스트, �
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a6183dcc690a8fe3b9d13cfa0e471f41f04ff30
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 95dbd6de78cb6670ea7e904252bbc1f9f14edb77
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220576"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829633"
 ---
 # <a name="custom-text-input"></a>사용자 지정 텍스트 입력
 
@@ -38,7 +38,7 @@ ms.locfileid: "91220576"
 -   "응용 프로그램"은 핵심 텍스트 Api를 사용 하 여 작성 된 사용자 지정 편집 컨트롤을 호스트 하는 Windows 앱을 나타냅니다.
 -   Windows [**를**](/uwp/api/Windows.UI.Text.Core) 통해 텍스트 서비스와의 통신을 용이 하 게 합니다. 텍스트 편집 컨트롤과 텍스트 서비스 간의 통신은 주로 통신을 용이 하 게 하는 메서드 및 이벤트를 제공 하는 [**Coretexteditcontext**](/uwp/api/Windows.UI.Text.Core.CoreTextEditContext) 개체를 통해 처리 됩니다.
 
-![핵심 텍스트 아키텍처 다이어그램](images/coretext/architecture.png)
+![CoreText 아키텍처 다이어그램](images/coretext/architecture.png)
 
 ## <a name="text-ranges-and-selection"></a>텍스트 범위 및 선택
 
@@ -49,7 +49,8 @@ ms.locfileid: "91220576"
 
 핵심 텍스트 Api와 함께 사용 되는 텍스트 범위는 캐럿 위치를 기준으로 표현 됩니다. "응용 프로그램 캐럿 위치 (ACP)"는 여기에 표시 된 것 처럼 캐럿 바로 앞에 있는 텍스트 스트림의 시작 부분에서 문자 수를 나타내는 0부터 시작 하는 숫자입니다.
 
-![예제 텍스트 스트림 다이어그램](images/coretext/stream-1.png)
+![응용 프로그램의 문자 수 (ACP)를 보여 주는 스크린샷](images/coretext/stream-1.png)
+
 ### <a name="text-ranges-and-selection"></a>텍스트 범위 및 선택
 
 텍스트 범위와 선택 항목은 두 필드를 포함 하는 [**CoreTextRange**](/uwp/api/Windows.UI.Text.Core.CoreTextRange) 구조로 표시 됩니다.
@@ -69,11 +70,11 @@ ms.locfileid: "91220576"
 
 ### <a name="noncontiguous-selection"></a>인접 하지 않은 선택 영역
 
-일부 편집 컨트롤은 비연속 선택을 지원 합니다. 예를 들어 Microsoft Office apps는 여러 개의 선택 항목을 지원 하 고 많은 소스 코드 편집기에서 열 선택을 지원 합니다. 그러나 핵심 텍스트 Api는 연속 선택 항목을 지원 하지 않습니다. 편집 컨트롤은 연속 된 단일 선택 항목을 보고 해야 합니다. 대부분은 연속 되지 않은 선택 항목의 활성 하위 범위입니다.
+일부 편집 컨트롤은 비연속 선택을 지원 합니다. 예를 들어 Microsoft Office apps는 여러 개의 선택 항목을 지원 하 고 많은 소스 코드 편집기에서 열 선택을 지원 합니다. 그러나 핵심 텍스트 Api는 연속 되지 않은 선택을 지원 하지 않습니다. 편집 컨트롤은 연속 된 단일 선택 항목을 보고 해야 합니다. 대부분은 연속 되지 않은 선택 항목의 활성 하위 범위입니다.
 
-예를 들어 다음 텍스트 스트림을 살펴보십시오.
+예를 들어 다음 이미지에서는 두 개의 연속 되지 않은 선택 항목이 포함 된 텍스트 스트림을 보여 줍니다. \[ 0, 1, \] \[ 6, 11 \] 은 편집 컨트롤이 하나만 보고 해야 합니다 ( \[ 0, 1 \] 또는 \[ 6, 11 \] ).
 
-![텍스트 스트림 다이어그램 예 ](images/coretext/stream-2.png) : \[ 0, 1, \] \[ 6, 11을 선택할 수 있습니다 \] . 편집 컨트롤은 그 중 하나만 보고 해야 합니다. \[0, 1 \] 또는 \[ 6, 11 중 하나 \] 입니다.
+![첫 번째 문자와 마지막 5 자가 선택 된 연속 하지 않는 텍스트 선택을 보여 주는 스크린샷](images/coretext/stream-2.png)
 
 ## <a name="working-with-text"></a>텍스트 작업
 
@@ -96,7 +97,9 @@ ms.locfileid: "91220576"
 
 예를 들어 사용자가 "d"를 입력 하기 전의 편집 컨트롤 상태입니다. 삽입 지점은 10 \[ , 10 \] 입니다.
 
-![예제 텍스트 스트림 다이어그램 ](images/coretext/stream-3.png) 사용자가 "d"를 입력 하면 다음 [**CoreTextTextUpdatingEventArgs**](/uwp/api/Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs) 데이터와 함께 [**textupdating**](/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) 이벤트가 발생 합니다.
+![삽입 지점을 \[ \] 삽입 하기 전에 10, 10에 표시 하는 텍스트 스트림 다이어그램의 스크린샷](images/coretext/stream-3.png)
+
+사용자가 "d"를 입력 하면 다음과 같은 [**CoreTextTextUpdatingEventArgs**](/uwp/api/Windows.UI.Text.Core.CoreTextTextUpdatingEventArgs) 데이터와 함께 [**textupdating**](/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) 이벤트가 발생 합니다.
 
 -   [**Range**](/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.range)  =  범위 \[ 10, 10\]
 -   [**Text**](/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.text) = "d"
@@ -104,7 +107,8 @@ ms.locfileid: "91220576"
 
 편집 컨트롤에서 지정 된 변경 내용을 적용 하 고 [**결과**](/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.result) 를 **Succeeded**로 설정 합니다. 다음은 변경 내용이 적용 된 후의 컨트롤 상태입니다.
 
-![예제 텍스트 스트림 다이어그램](images/coretext/stream-4.png)
+:::image type="content" source="images/coretext/stream-4.png" alt-text="삽입 지점을 \[ \] 삽입 한 후 11, 11에 표시 되는 텍스트 스트림 다이어그램의 스크린샷":::
+
 ### <a name="rejecting-text-updates"></a>텍스트 업데이트 거부
 
 요청 된 범위가 편집 컨트롤에서 변경 하지 않아야 하는 영역에 있기 때문에 텍스트 업데이트를 적용할 수 없는 경우도 있습니다. 이 경우 변경 내용을 적용 하면 안 됩니다. 대신 [**CoreTextTextUpdatingEventArgs**](/uwp/api/windows.ui.text.core.coretexttextupdatingeventargs.result) 를 [**CoreTextTextUpdatingResult**](/uwp/api/Windows.UI.Text.Core.CoreTextTextUpdatingResult)로 설정 하 여 업데이트가 실패 했음을 시스템에 알립니다.
@@ -117,9 +121,13 @@ ms.locfileid: "91220576"
 
 예를 들어 사용자가 "세계"를 붙여넣기 전의 편집 컨트롤 상태입니다. 삽입 지점은 6 \[ , 6 \] 입니다.
 
-![예제 텍스트 스트림 다이어그램 ](images/coretext/stream-5.png) 사용자는 붙여넣기 작업을 수행 하 고 편집 컨트롤은 다음 텍스트와 함께 종료 됩니다.
+![삽입 지점을 \[ \] 삽입 하기 전에 6, 6으로 표시 하는 텍스트 스트림 다이어그램의 스크린샷](images/coretext/stream-5.png)
 
-![예제 텍스트 스트림 다이어그램 ](images/coretext/stream-4.png) 이 경우 다음 인수를 사용 하 여 [**NotifyTextChanged**](/uwp/api/windows.ui.text.core.coretexteditcontext.notifytextchanged) 를 호출 해야 합니다.
+사용자는 변경 내용이 적용 된 후 붙여넣기 작업 및 편집 컨트롤을 수행 합니다.
+
+:::image type="content" source="images/coretext/stream-4.png" alt-text="삽입 지점을 \[ \] 삽입 한 후 11, 11에 표시 되는 텍스트 스트림 다이어그램의 스크린샷":::
+
+이 경우 다음 인수를 사용 하 여 [**NotifyTextChanged**](/uwp/api/windows.ui.text.core.coretexteditcontext.notifytextchanged) 를 호출 해야 합니다.
 
 -   *modifiedRange*  =  modifiedRange \[ 6, 6\]
 -   *새 길이* = 5
@@ -133,11 +141,17 @@ ms.locfileid: "91220576"
 
 예를 들어, 축약을 공식화 하는 수정 기능을 제공 하는 edit 컨트롤이 있다고 가정 합니다. 사용자가 수정 사항을 트리거하기 위해 space 키를 입력 하기 전의 편집 컨트롤 상태입니다. 삽입 지점은 3 \[ , 3 \] 입니다.
 
-![텍스트 스트림 다이어그램 예 ](images/coretext/stream-6.png) 사용자가 space 키를 누르고 해당 [**textupdating**](/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) 이벤트가 발생 합니다. 편집 컨트롤은 텍스트 업데이트를 허용 합니다. 수정이 완료 되기 전에 잠시 동안 편집 컨트롤의 상태입니다. 삽입 지점은 4 \[ , 4 \] 입니다.
+![삽입 지점을 \[ 3, 3 \] , 삽입 전에 표시 하는 텍스트 스트림 다이어그램의 스크린샷](images/coretext/stream-6.png)
 
-![텍스트 스트림 다이어그램 ](images/coretext/stream-7.png) [**textupdating**](/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) 이벤트 처리기 외부에서 편집 컨트롤을 사용 하면 다음과 같이 수정할 수 있습니다. 수정이 완료 된 후 편집 컨트롤의 상태입니다. 삽입 지점은 \[ 5, 5 \] 입니다.
+사용자가 space 키를 누르고 해당 [**Textupdating**](/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) 이벤트가 발생 합니다. 편집 컨트롤은 텍스트 업데이트를 허용 합니다. 수정이 완료 되기 전에 잠시 동안 편집 컨트롤의 상태입니다. 삽입 지점은 4 \[ , 4 \] 입니다.
 
-![예제 텍스트 스트림 다이어그램 ](images/coretext/stream-8.png) 이 경우 다음 인수를 사용 하 여 [**NotifyTextChanged**](/uwp/api/windows.ui.text.core.coretexteditcontext.notifytextchanged) 를 호출 해야 합니다.
+![삽입 지점을 \[ \] 삽입 한 후 4, 4에서 삽입 지점을 보여 주는 텍스트 스트림 다이어그램의 스크린샷](images/coretext/stream-7.png)
+
+[**Textupdating**](/uwp/api/windows.ui.text.core.coretexteditcontext.textupdating) 이벤트 처리기 외부에서 편집 컨트롤은 다음과 같이 수정 합니다. 수정이 완료 된 후 편집 컨트롤의 상태입니다. 삽입 지점은 \[ 5, 5 \] 입니다.
+
+![5, 5에서 삽입 지점을 보여 주는 텍스트 스트림 다이어그램의 스크린샷 \[\]](images/coretext/stream-8.png)
+
+이 경우 다음 인수를 사용 하 여 [**NotifyTextChanged**](/uwp/api/windows.ui.text.core.coretexteditcontext.notifytextchanged) 를 호출 해야 합니다.
 
 -   *modifiedRange*  =  modifiedRange \[ 1, 2\]
 -   *새 길이* = 2
