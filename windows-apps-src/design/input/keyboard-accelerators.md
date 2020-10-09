@@ -1,5 +1,5 @@
 ---
-Description: 액셀러레이터 키를 사용 하 여 Windows 앱의 유용성 및 접근성을 향상 시키는 방법에 대해 알아봅니다.
+description: 액셀러레이터 키를 사용 하 여 Windows 앱의 유용성 및 접근성을 향상 시키는 방법에 대해 알아봅니다.
 title: 바로 가기 키
 label: Keyboard accelerators
 template: detail.hbs
@@ -10,16 +10,16 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ec5791c212e2fdfbafd40131d96ace6c88fb519
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: e9cb4a52e56862f9be27c72ef46afced895633c3
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749959"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860094"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 
-![Surface 키보드](images/accelerators/accelerators_hero2.png)
+![표면 키보드의 주인공 이미지](images/accelerators/accelerators_hero2.png)
 
 액셀러레이터 키 (또는 키보드 액셀러레이터)는 사용자가 응용 프로그램 UI를 탐색 하지 않고도 일반 작업 또는 명령을 호출할 수 있는 직관적인 방법을 제공 하 여 Windows 응용 프로그램의 유용성 및 접근성을 개선 하는 바로 가기 키입니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "91749959"
 
 키보드 액셀러레이터는 모든 작업에 사용할 수 없지만 메뉴에 노출 된 명령과 연결 되는 경우가 많습니다 (메뉴 항목 내용으로 지정 해야 함).액셀러레이터는 동일한 메뉴 항목이 없는 작업과 연결 될 수도 있습니다. 그러나 사용자는 응용 프로그램 메뉴를 사용 하 여 사용 가능한 명령 집합을 검색 하 고 학습할 수 있으므로 가능한 한 빨리 액셀러레이터를 검색 해야 합니다. 레이블 또는 설정 된 패턴을 사용 하면이 작업을 쉽게 수행할 수 있습니다.
 
-![메뉴 항목 레이블에 설명 된 키보드 액셀러레이터](images/accelerators/accelerators_menuitemlabel.png)  
+![메뉴 항목 레이블에 있는 키보드 액셀러레이터의 스크린샷](images/accelerators/accelerators_menuitemlabel.png)  
 *메뉴 항목 레이블에 설명 된 키보드 액셀러레이터*
 
 ## <a name="when-to-use-keyboard-accelerators"></a>키보드 액셀러레이터를 사용 하는 경우
@@ -126,7 +126,7 @@ UI에서 적절 한 위치에 키보드 액셀러레이터 키를 지정 하 고
 </CommandBar>
 ```
 
-![도구 설명에 설명 된 키보드 액셀러레이터](images/accelerators/accelerators_tooltip.png)  
+![도구 설명에 있는 키보드 액셀러레이터의 스크린샷](images/accelerators/accelerators_tooltip.png)  
 ***도구 설명에 설명 된 키보드 액셀러레이터***
 
 [UIElement](/uwp/api/windows.ui.xaml.uielement) 개체에는 사용자 지정 KeyboardAccelerator 개체를 지정 하 고 키보드 액셀러레이터 키에 대 한 키 입력을 정의 하는 [KeyboardAccelerator](/uwp/api/windows.ui.xaml.input.keyboardaccelerator) 컬렉션인 [KeyboardAccelerators](/uwp/api/windows.ui.xaml.uielement.KeyboardAccelerators)이 있습니다.
@@ -360,7 +360,7 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 | 축소 | Ctrl +- | 
 | 기본 뷰로 확대/축소 | Ctrl + 0 | 
 | 저장 | Ctrl+S | 
-| 닫기 | Ctrl+W | 
+| 닫습니다 | Ctrl+W | 
 | 인쇄 | Ctrl+P | 
 
 지역화 된 버전의 Windows에서는 일부 조합이 유효 하지 않습니다. 예를 들어, 스페인어 버전의 Windows에서는 ctrl + N을 Ctrl + B 대신 굵게 사용 합니다. 앱이 지역화 된 경우 지역화 된 키보드 액셀러레이터를 제공 하는 것이 좋습니다.
@@ -378,7 +378,7 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 > [!NOTE] 
 > 컨트롤에 하나 이상의 액셀러레이터 키가 정의 되어 있으면 첫 번째 항목만 표시 됩니다.
 
-![액셀러레이터 키 도구 설명](images/accelerators/accelerators_tooltip_savebutton_small.png)
+![Ctrl + S 액셀러레이터 키에 대 한 지원을 나타내는 도구 설명이 있는 저장 단추의 스크린샷](images/accelerators/accelerators_tooltip_savebutton_small.png)
 
 *도구 설명의 액셀러레이터 키 콤보*
 
@@ -414,7 +414,7 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 </StackPanel>
 ```
 
-![액셀러레이터 키 도구 설명](images/accelerators/accelerators-button-small.png)
+![Windows + B 액셀러레이터 키에 대 한 지원을 나타내는 Button2 위의 도구 설명이 포함 된 Button1, Button2 및 Button3 레이블이 지정 된 세 단추의 스크린샷](images/accelerators/accelerators-button-small.png)
 
 *단추의 기본 도구 설명에 액셀러레이터 키 콤보가 추가 됨*
 
@@ -426,7 +426,7 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 </AppBarButton>
 ```
 
-![액셀러레이터 키 도구 설명](images/accelerators/accelerators-appbarbutton-small.png)
+![디스크 아이콘과 Ctrl + S 액셀러레이터 키가 괄호 안에 추가 된 기본 저장 텍스트가 포함 된 도구 설명이 있는 단추의 스크린샷](images/accelerators/accelerators-appbarbutton-small.png)
 
 *키 입력 콤보가 App바 단추의 기본 도구 설명에 추가 됨*
 
@@ -452,7 +452,7 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 </AppBarButton>
 ```
 
-![액셀러레이터 키 도구 설명](images/accelerators/accelerators-appbar-menuflyoutitem-small.png)
+![액셀러레이터 키 combos를 포함 하는 MenuFlyoutItems를 포함 하는 메뉴의 스크린샷](images/accelerators/accelerators-appbar-menuflyoutitem-small.png)
 
 *MenuFlyoutItem의 텍스트에 추가 된 액셀러레이터 키 콤보*
 
@@ -489,7 +489,7 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 
 일부 플랫폼 컨트롤은 기본적으로이 작업을 수행 합니다. 즉, [MenuFlyoutItem](/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem) 및 [ToggleMenuFlyoutItem](/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem) 개체는 기본적으로이 작업을 수행 하 고, [App 단추](/uwp/api/windows.ui.xaml.controls.appbarbutton) 와 [app togglebutton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton) 은 [CommandBar](/uwp/api/windows.ui.xaml.controls.commandbar)의 오버플로 메뉴에 표시 될 때이를 수행 합니다.
 
-![메뉴 항목 레이블에 설명 된 키보드 액셀러레이터](images/accelerators/accelerators_menuitemlabel.png)  
+![메뉴 항목 레이블에 설명 된 키보드 액셀러레이터 키입니다.](images/accelerators/accelerators_menuitemlabel.png)  
 *메뉴 항목 레이블에 설명 된 키보드 액셀러레이터*
 
 [MenuFlyoutItem](/uwp/api/Windows.UI.Xaml.Controls.MenuFlyoutItem), [ToggleMenuFlyoutItem](/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem), [App 단추](/uwp/api/windows.ui.xaml.controls.appbarbutton)및 [app togglebutton](/uwp/api/windows.ui.xaml.controls.appbartogglebutton) 컨트롤의 [KeyboardAcceleratorTextOverride](/uwp/api/windows.ui.xaml.controls.appbarbutton.KeyboardAcceleratorTextOverride) 속성을 통해 레이블의 기본 액셀러레이터 텍스트를 재정의할 수 있습니다 (텍스트 없이 단일 공백을 사용). 
@@ -527,7 +527,7 @@ XAML에서 입력 버블링 파이프라인은 하나만 있는 것 처럼 키 �
 
 
 ![키 이벤트 시퀀스 ](images/accelerators/accelerators_keyevents.png)
- ***키 이벤트 시퀀스***
+ ***키 이벤트 시퀀스*** 를 보여 주는 다이어그램
 
 이벤트 순서:
 
@@ -572,8 +572,8 @@ protected override void OnProcessKeyboardAccelerators(
 
 모든 키보드 액셀러레이터 키를 지역화 하는 것이 좋습니다. XAML 선언에서 표준 UWP 리소스 (. resw) 파일 및 x:Uid 특성을 사용 하 여이 작업을 수행할 수 있습니다. 이 예제에서 Windows 런타임는 리소스를 자동으로 로드 합니다.
 
-![UWP 리소스를 사용한 키보드 액셀러레이터 키 파일 ](images/accelerators/accelerators_localization.png)
- ***키보드 액셀러레이터 uwp 리소스 파일을 사용한*** 지역화
+![UWP 리소스를 사용한 키보드 액셀러레이터 지역화의 다이어그램 파일 ](images/accelerators/accelerators_localization.png)
+ ***키보드 가속기 uwp 리소스 파일을 사용한 지역화***
 
 ``` xaml
 <Button x:Uid="myButton" Click="OnSave">

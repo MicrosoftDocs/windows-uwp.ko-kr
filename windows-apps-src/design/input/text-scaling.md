@@ -1,5 +1,5 @@
 ---
-Description: 플랫폼 텍스트 크기 조정을 지 원하는 사용자 지정/템플릿 컨트롤 및 Windows 앱을 빌드합니다.
+description: 플랫폼 텍스트 크기 조정을 지 원하는 사용자 지정/템플릿 컨트롤 및 Windows 앱을 빌드합니다.
 title: 텍스트 크기 조정
 label: Text scaling
 template: detail.hbs
@@ -8,16 +8,16 @@ ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d8f7536da045514471c1af1c2f0cfac74af91a7a
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 0d47523ca69f8088d5e13ab944c5dd2be2d1d8ba
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219946"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860163"
 ---
 # <a name="text-scaling"></a>텍스트 크기 조정
 
-![100% ~ 225%의 텍스트 크기 조정 예제](images/coretext/text-scaling-news-hero-small.png)  
+![100%에서 225% 까지의 텍스트 크기 조정 예제를 보여 주는 주인공 이미지입니다.](images/coretext/text-scaling-news-hero-small.png)  
 *Windows 10의 텍스트 크기 조정 예 (100% ~ 225%)*
 
 ## <a name="overview"></a>개요
@@ -26,7 +26,7 @@ ms.locfileid: "91219946"
 
 가장 광범위 한 사용자가 텍스트를 최대한 이해 하기 위해 Windows는 사용자가 OS와 개별 응용 프로그램 모두에서 상대적 글꼴 크기를 변경할 수 있는 기능을 제공 합니다. 일반적으로 화면 영역 내의 모든 항목을 확대하고 자체의 유용성 문제를 제기하는 돋보기 앱을 사용하거나, 디스플레이 해상도를 변경하거나, 디스플레이 및 일반 시청 거리에 따라 모든 항목의 크기를 조정하는 DPI 배율을 사용하는 대신, 사용자가 설정에 빠르게 액세스하여 텍스트 크기만 100%(기본 크기)에서 최대 225%까지 조정할 수 있습니다.
 
-## <a name="support"></a>지원
+## <a name="support"></a>Support(지원)
 
 유니버설 Windows 응용 프로그램 (표준 및 PWA 모두)은 기본적으로 텍스트 크기 조정을 지원 합니다.
 
@@ -40,7 +40,7 @@ DirectWrite, GDI 및 XAML SwapChainPanels는 기본적으로 텍스트 크기 �
 
 사용자는 설정-내게 필요한 옵션 > 비전/디스플레이 화면 > 설정에서 텍스트 크게 만들기 슬라이더를 사용 하 여 텍스트 크기 조정을 조정할 수 있습니다.
 
-![100% ~ 225%의 텍스트 크기 조정 예제](images/coretext/text-scaling-settings-100-small.png)  
+![텍스트 크게 만들기 슬라이더를 표시 하는 액세스 편의성 비전/표시 설정 페이지의 스크린샷](images/coretext/text-scaling-settings-100-small.png)  
 *설정에서 텍스트 크기 조정 설정-> 접근성-> 비전/디스플레이 화면*
 
 ## <a name="ux-guidance"></a>UX 지침
@@ -93,7 +93,7 @@ DirectWrite, GDI 및 XAML SwapChainPanels는 기본적으로 텍스트 크기 �
 </Grid>
 ```
 
-![애니메이션 텍스트 크기 조정 100% ~ 225%](images/coretext/text-scaling.gif)  
+![100% ~ 225%의 텍스트 크기 조정 애니메이션입니다.](images/coretext/text-scaling.gif)  
 *애니메이션 텍스트 크기 조정*
 
 ### <a name="use-auto-sizing"></a>자동 크기 조정 사용
@@ -123,7 +123,7 @@ DirectWrite, GDI 및 XAML SwapChainPanels는 기본적으로 텍스트 크기 �
           AcceptsReturn="True" TextWrapping="Wrap" />
 ```
 
-![텍스트 줄 바꿈이 적용 된 텍스트 크기 조정 100% ~ 225%](images/coretext/text-scaling-textwrap.gif)  
+![텍스트 잘림 방지 100% ~ 225%의 텍스트 크기 조정 애니메이션입니다.](images/coretext/text-scaling-textwrap.gif)  
 *텍스트 줄 바꿈이 있는 애니메이션 텍스트 크기 조정*
 
 ### <a name="specify-text-trimming-behavior"></a>텍스트 트리밍 동작 지정
@@ -141,7 +141,7 @@ DirectWrite, GDI 및 XAML SwapChainPanels는 기본적으로 텍스트 크기 �
 </TextBlock>
 ```
 
-![텍스트를 오려낸 텍스트 크기 조정 100% ~ 225%](images/coretext/text-scaling-clipping-small.png)  
+![텍스트를 오려낸 텍스트 크기 조정 100% ~ 225%의 스크린샷](images/coretext/text-scaling-clipping-small.png)  
 *텍스트를 오려낸 텍스트 크기 조정*
 
 ### <a name="use-a-tooltip"></a>도구 설명 사용

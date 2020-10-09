@@ -6,16 +6,16 @@ ms.topic: article
 keywords: windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: a5841a8a53c18969e8ca9171bb7b3e1af0273170
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 76ef3c6b75a5d1a4bd8daebba3a392062c845215
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216797"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860190"
 ---
 # <a name="enable-user-mode-access-to-gpio-i2c-and-spi"></a>GPIO, I2C 및 SPI에 대한 사용자 모드 액세스를 사용하도록 설정
 
-Windows 10에는 일반 용도의 GPIO (입력/출력), I2C (통합 회로), SPI (직렬 주변 장치 인터페이스) 및 UART (범용 비동기 수신기-전송기)의 사용자 모드에서 직접 액세스 하기 위한 새 Api가 포함 되어 있습니다. Raspberry Pi 2와 같은 개발 보드는 이러한 연결의 하위 집합을 노출 하 여 특정 응용 프로그램을 처리 하기 위해 사용자 지정 회로를 사용 하 여 기본 계산 모듈을 확장할 수 있도록 합니다. 이러한 낮은 수준 버스는 일반적으로 헤더에 표시 된 GPIO 핀 및 버스의 하위 집합만 포함 하 여 다른 중요 한 온보드 함수와 공유 됩니다. 시스템 안정성을 유지 하려면 사용자 모드 응용 프로그램에서 수정 하기에 안전 하 게 사용할 핀과 버스를 지정 해야 합니다.
+Windows 10에는 일반 용도의 GPIO (입력/출력), I2C (Inter-Integrated 회로), SPI (직렬 주변 장치 인터페이스) 및 UART (universal 비동기 수신기-전송기)의 사용자 모드에서 직접 액세스 하기 위한 새 Api가 포함 되어 있습니다. Raspberry Pi 2와 같은 개발 보드는 이러한 연결의 하위 집합을 노출 하 여 특정 응용 프로그램을 처리 하기 위해 사용자 지정 회로를 사용 하 여 기본 계산 모듈을 확장할 수 있도록 합니다. 이러한 낮은 수준 버스는 일반적으로 헤더에 표시 된 GPIO 핀 및 버스의 하위 집합만 포함 하 여 다른 중요 한 온보드 함수와 공유 됩니다. 시스템 안정성을 유지 하려면 사용자 모드 응용 프로그램에서 수정 하기에 안전 하 게 사용할 핀과 버스를 지정 해야 합니다.
 
 이 문서에서는 ACPI (고급 구성 및 전원 인터페이스)에서이 구성을 지정 하는 방법에 대해 설명 하 고, 구성이 올바르게 지정 되었는지 유효성을 검사 하는 도구를 제공 합니다.
 
@@ -347,7 +347,7 @@ Pin muxing는 여러 구성 요소가 협력 하 여 수행 됩니다.
 - Pin muxing 클라이언트 – pin muxing를 사용 하는 드라이버입니다. Pin muxing 클라이언트는 ACPI 펌웨어에서 pin muxing 리소스를 수신 합니다. Pin muxing 리소스는 연결 리소스의 형식이 며 리소스 허브에 의해 관리 됩니다. Pin muxing 클라이언트는 리소스에 대 한 핸들을 열어 muxing 리소스를 예약 합니다. 하드웨어 변경을 적용 하려면 클라이언트가 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* 요청을 전송 하 여 구성을 커밋해야 합니다. 클라이언트는 핸들을 닫아 muxing 리소스를 해제 합니다. 이때 muxing 구성이 기본 상태로 되돌려집니다.
 - ACPI 펌웨어 – 리소스를 사용 하 여 muxing 구성을 지정 합니다 `MsftFunctionConfig()` . MsftFunctionConfig 리소스는 클라이언트에 필요한 muxing 구성의 핀을 표현 합니다. MsftFunctionConfig 리소스에는 함수 번호, 끌어오기 구성 및 pin 번호 목록이 포함 됩니다. MsftFunctionConfig 리소스는 muxing 클라이언트를 하드웨어 리소스로 고정 하기 위해 제공 됩니다 .이 리소스는 해당 PrepareHardware 콜백에서 GPIO 및 SPB 연결 리소스와 유사 하 게 수신 됩니다. 클라이언트는 리소스에 대 한 핸들을 여는 데 사용할 수 있는 리소스 허브 ID를 수신 합니다.
 
-> `/MsftInternal` `asl.exe` `MsftFunctionConfig()` 이러한 설명자는 현재 ACPI 작업 위원회에서 검토 하 고 있으므로 설명자를 포함 하는 asl 파일을 컴파일하려면로 명령줄 스위치를 전달 해야 합니다. 예: `asl.exe /MsftInternal dsdt.asl`
+> `/MsftInternal` `asl.exe` `MsftFunctionConfig()` 이러한 설명자는 현재 ACPI 작업 위원회에서 검토 하 고 있으므로 설명자를 포함 하는 asl 파일을 컴파일하려면로 명령줄 스위치를 전달 해야 합니다. `asl.exe /MsftInternal dsdt.asl`
 
 Pin muxing 관련 된 작업의 시퀀스는 다음과 같습니다.
 
@@ -823,11 +823,11 @@ HLK manager에서 rhproxy device 노드를 선택 하면 해당 하는 테스트
 
 HLK manager에서 "리소스 허브 프록시 장치"를 선택 합니다.
 
-![HLK manager 스크린샷](images/usermode-hlk-1.png)
+![리소스 허브 프록시 장치 옵션이 선택 된 선택 탭을 보여 주는 Windows 하드웨어 랩 키트의 스크린샷](images/usermode-hlk-1.png)
 
 그런 다음 테스트 탭을 클릭 하 고 I2C WinRT, Gpio WinRT 및 Spi WinRT 테스트를 선택 합니다.
 
-![HLK manager 스크린샷](images/usermode-hlk-2.png)
+![G P i/o Win R T 기능 및 스트레스 테스트 옵션을 선택 하 여 테스트 탭을 보여 주는 Windows 하드웨어 랩 키트의 스크린샷](images/usermode-hlk-2.png)
 
 선택한 실행을 클릭 합니다. 테스트를 마우스 오른쪽 단추로 클릭 하 고 "테스트 설명"을 클릭 하 여 각 테스트에 대 한 추가 설명서를 사용할 수 있습니다.
 

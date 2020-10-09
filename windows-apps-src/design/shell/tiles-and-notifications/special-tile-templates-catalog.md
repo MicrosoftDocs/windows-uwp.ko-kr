@@ -1,5 +1,5 @@
 ---
-Description: 특수 타일 템플릿은 애니메이션 효과가 추가되었거나 적응형 타일에서 불가능한 작업을 수행할 수 있도록 하는 고유한 템플릿입니다.
+description: 특수 타일 템플릿은 애니메이션 효과가 추가되었거나 적응형 타일에서 불가능한 작업을 수행할 수 있도록 하는 고유한 템플릿입니다.
 title: 특수 타일 템플릿
 ms.assetid: 1322C9BA-D5B2-45E2-B813-865884A467FF
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4368c3d504b01a48b05fcaffdb01a71b916d9d43
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1aac8997492eba2d591d0f80f89dbc9a8f5830ba
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169307"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860208"
 ---
 # <a name="special-tile-templates"></a>특수 타일 템플릿
  
@@ -50,9 +50,9 @@ PNG 형식 및 투명도를 사용 하 여 아이콘 자산을 저장 합니다.
 
 정사각형이 아닌 자산의 경우 컨테이너의 너비/높이에 대 한 자동 가로/세로 가운데 맞춤 및 맞추기가 발생 합니다.
 
-![비 사각형 자산 크기 조정 (배지 포함/제외)](images/assetguidance26a.png)
+![배지를 포함 하거나 포함 하지 않고 자동으로 가운데에 맞춘 가로 정사각형 자산 크기 조정을 보여 주는 스크린샷](images/assetguidance26a.png)
 
-![비 사각형 자산 크기 조정 (배지 포함/제외)](images/assetguidance26b.png)
+![배지를 포함 하거나 포함 하지 않고 자동으로 가운데에 맞춘 세로 정사각형 자산 크기 조정을 보여 주는 스크린샷](images/assetguidance26b.png)
 
 **2 단계: 기본 타일 만들기**
 

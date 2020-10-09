@@ -11,18 +11,18 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: fe776361276341e368db1fbdf8e332a1e5dc70b5
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 336b49c999d135908fb54490b7b33057d4527079
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220196"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860155"
 ---
 # <a name="timing-and-easing"></a>타이밍 및 감속
 
 동작은 실제 세계를 기준으로 하지만, 속도와 성능의 기대와 함께 제공 되는 디지털 매체 이기도 합니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 <table>
 <tr>
@@ -49,7 +49,7 @@ ms.locfileid: "91220196"
 
 흐름에서의 동작 타이밍은 사용자가 인스턴트로 인식 하는 최대 시간 이기 때문에 500ms (또는 1-2 초)를 기준으로 사용 합니다.
 
-![영웅 이미지](images/time.gif)
+![세로 방향으로 세로 방향으로 세 개의 원을 보여 주는 짧은 비디오: 150 밀리초, 300 밀리초 및 500 밀리초의 다른 속도로 왼쪽 및 오른쪽으로 이동 합니다.](images/time.gif)
 
 ### <a name="150ms-exit"></a>**150ms** (종료)
 
@@ -90,7 +90,7 @@ ms.locfileid: "91220196"
 
 감속/가속은 개체가 이동 하는 속도를 조작 하는 방법입니다. 모든 흐름 동작 환경을 연결 하는 붙이기가 있습니다. 극단적인 경우 시스템에서 사용 하는 감속은 시스템 전체에서 이동 하는 개체의 실제 느낌을 통합 하는 데 도움이 됩니다. 이 방법은 실제 환경에 포함 된 것 처럼 실제 세계를 모방 하 고 개체를 동작 느낌으로 만드는 한 가지 방법입니다.
 
-![영웅 이미지](images/easing.gif)
+![원을 보여 주는 짧은 비디오가 프레임의 오른쪽 아래 모퉁이에서 표시 되 고 프레임의 왼쪽 위 모퉁이 근처에서 멈춥니다.](images/easing.gif)
 
 ## <a name="apply-easing-to-motion"></a>동작에 감속/가속 적용
 

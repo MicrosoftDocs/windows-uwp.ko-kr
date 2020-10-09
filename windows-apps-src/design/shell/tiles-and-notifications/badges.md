@@ -1,5 +1,5 @@
 ---
-Description: 타일, 배지 및 알림을 사용하여 앱에 대한 진입점을 제공하고 사용자를 최신 상태로 유지하는 방법에 대해 알아봅니다.
+description: 타일, 배지 및 알림을 사용하여 앱에 대한 진입점을 제공하고 사용자를 최신 상태로 유지하는 방법에 대해 알아봅니다.
 title: Windows 앱에 대한 배지 알림
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e8d3cf69da80b13ff334d89027f3ea366ac3accd
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: dea3eebc253f46f5de888a0a37fea9d3ad1ac3df
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219396"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860121"
 ---
 # <a name="badge-notifications-for-windows-apps"></a>Windows 앱에 대한 배지 알림
 
@@ -66,62 +66,62 @@ ms.locfileid: "91219396"
 </tr>
 <tr>
     <td>활동</td>
-    <td><img src="images/badges/badge-activity.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-activity.png" alt="Screenshot of the activity glyph." /></td>
     <td>`<badge value="activity"/>`</td>
 </tr>
 <tr>
     <td>가진</td>
-    <td><img src="images/badges/badge-alarm.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-alarm.png" alt="Screenshot of the alarm glyph." /></td>
     <td>`<badge value="alarm"/>`</td>
 </tr>
 <tr>
     <td>경고</td>
-    <td><img src="images/badges/badge-alert.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-alert.png" alt="Screenshot of the alert glyph." /></td>
     <td>`<badge value="alert"/>`</td>
 </tr>
 <tr>
     <td>attention</td>
-    <td><img src="images/badges/badge-attention.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-attention.png" alt="Screenshot of the attention glyph." /></td>
     <td>`<badge value="attention"/>`</td>
 </tr>
 <tr>
     <td>사용 가능</td>
-    <td><img src="images/badges/badge-available.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-available.png" alt="Screenshot of the available glyph." /></td>
     <td>`<badge value="available"/>`</td>
 </tr>
 <tr>
     <td>away</td>
-    <td><img src="images/badges/badge-away.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-away.png" alt="Screenshot of the away glyph." /></td>
     <td>`<badge value="away"/>`</td>
 </tr>
 <tr>
     <td>busy</td>
-    <td><img src="images/badges/badge-busy.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-busy.png" alt="Screenshot of the busy glyph." /></td>
     <td>`<badge value="busy"/>`</td>
 </tr>
 <tr>
     <td>error</td>
-    <td><img src="images/badges/badge-error.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-error.png" alt="Screenshot of the error glyph." /></td>
     <td>`<badge value="error"/>`</td>
 </tr>
 <tr>
     <td>newMessage</td>
-    <td><img src="images/badges/badge-newMessage.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-newMessage.png" alt="Screenshot of the new message glyph." /></td>
     <td>`<badge value="newMessage"/>`</td>
 </tr>
 <tr>
     <td>paused</td>
-    <td><img src="images/badges/badge-paused.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-paused.png" alt="Screenshot of the paused glyph." /></td>
     <td>`<badge value="paused"/>`</td>
 </tr>
 <tr>
     <td>playing</td>
-    <td><img src="images/badges/badge-playing.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-playing.png" alt="Screenshot of the playing glyph." /></td>
     <td>`<badge value="playing"/>`</td>
 </tr>
 <tr>
     <td>unavailable</td>
-    <td><img src="images/badges/badge-unavailable.png" alt="Glyph" /></td>
+    <td><img src="images/badges/badge-unavailable.png" alt="Screenshot of the unavailable glyph" /></td>
     <td>`<badge value="unavailable"/>`</td>
 </tr>
 </table>

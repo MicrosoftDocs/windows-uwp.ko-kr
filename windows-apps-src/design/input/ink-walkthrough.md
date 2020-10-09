@@ -6,16 +6,16 @@ keywords: 잉크, 잉크, 자습서
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a0660312746a88a61ccb7b2ca9c01d720ebb2be3
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f726f4ab4a422cc94f00493261620ddff8b6122b
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219696"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860193"
 ---
 # <a name="tutorial-support-ink-in-your-windows-app"></a>자습서: Windows 앱에서 잉크 지원
 
-![Surface 펜](images/ink/ink-hero-small.png)  
+![표면 펜 주인공 이미지입니다.](images/ink/ink-hero-small.png)  
 *Surface Pen* ( [Microsoft Store](https://www.microsoft.com/p/surface-pen/8zl5c82qmg6b)에서 구매할 수 있음)
 
 이 자습서에서는 Windows Ink를 사용 하 여 작성 및 그리기를 지 원하는 기본 Windows 앱을 만드는 방법을 단계별로 설명 합니다. 각 단계에서 설명한 다양 한 기능 및 관련 Windows Ink Api ( [Windows ink 플랫폼의 구성 요소](#components-of-the-windows-ink-platform)참조)를 보여 주기 위해 GitHub에서 다운로드할 수 있는 샘플 앱에서 코드 조각을 사용 합니다 ( [샘플 코드](#sample-code)참조).
@@ -53,7 +53,7 @@ Windows 잉크를 사용 하면 신속 하 고 필기 한 노트와 주석에서
 [GitHub](https://github.com/) 에서이 Visual Studio 샘플 및 소스 코드 다운로드 [-appsample-시작-잉크 샘플](https://github.com/Microsoft/Windows-tutorials-inputs-and-devices/tree/master/GettingStarted-Ink):
 
 1. 녹색 **복제 또는 다운로드** 단추를 선택 합니다.  
-![리포지토리 복제](images/ink/ink-clone.png)
+![리포지토리를 복제 합니다.](images/ink/ink-clone.png)
 2. GitHub 계정이 있는 경우 **Visual Studio에서 열기** 를 선택 하 여 로컬 컴퓨터에 리포지토리를 복제할 수 있습니다. 
 3. GitHub 계정이 없거나 프로젝트의 로컬 복사본을 원하는 경우 **ZIP 다운로드** 를 선택 합니다. 최신 업데이트를 다운로드 하려면 정기적으로 다시 확인 해야 합니다.
 
@@ -80,11 +80,11 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 
    > [!NOTE]
    > 또는 **디버그**  >  **디버깅 시작** 메뉴 항목을 선택 하거나 여기에 표시 된 **로컬 컴퓨터** 실행 단추를 선택할 수 있습니다.
-   > ![Visual Studio 빌드 프로젝트 단추](images/ink/ink-vsrun-small.png)
+   > ![Visual Studio 빌드 프로젝트 단추입니다.](images/ink/ink-vsrun-small.png)
 
 앱 창이 열리고 몇 초 동안 시작 화면이 표시 되 면이 초기 화면이 표시 됩니다.
 
-![빈 앱](images/ink/ink-app-step1-empty-small.png)
+![빈 앱의 스크린샷](images/ink/ink-app-step1-empty-small.png)
 
 이제이 자습서의 나머지 부분에서 사용할 기본 Windows 앱이 있습니다. 다음 단계에서는 잉크 기능을 추가 합니다.
 
@@ -123,7 +123,7 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 
 이제 앱을 다시 실행합니다. 계속 해 서 자유롭게 이동 하거나 이름을 작성 하거나 (미러를 보유 하거나 매우 좋은 메모리가 있는 경우) 자체 세로를 그립니다.
 
-![기본 잉크](images/ink/ink-app-step1-name-small.png)
+![이 항목에서 강조 표시 된 기본 잉크 샘플 앱의 스크린샷](images/ink/ink-app-step1-name-small.png)
 
 ## <a name="step-3-support-inking-with-touch-and-mouse"></a>3 단계: 터치 및 마우스로 잉크 입력 지원
 
@@ -181,21 +181,21 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 
 이제 앱을 다시 실행 하 여 [**Inktoolbar 모음**](/uwp/api/windows.ui.xaml.controls.inktoolbar) 을 확인 하 고 일부 도구를 사용해 보세요.
 
-![잉크 작업 영역을 Sketchpad 하는 InkToolbar](images/ink/ink-inktoolbar-default-small.png)
+![기본 InkToolbar를 사용 하 여이 항목에서 강조 표시 한 기본 잉크 샘플 앱의 스크린샷](images/ink/ink-inktoolbar-default-small.png)
 
 ### <a name="challenge-add-a-custom-button"></a>챌린지: 사용자 지정 단추 추가
 <table class="wdg-noborder">
 <tr>
 <td>
 
-![잉크 작업 영역에 있는 Sketchpad의 InkToolbar](images/challenge-icon.png)
+:::image type="icon" source="images/challenge-icon.png":::
 
 </td>
 <td>
 
 다음은 Windows Ink 작업 영역의 Sketchpad에서 사용자 지정 **[Inktoolbar](/uwp/api/windows.ui.xaml.controls.inktoolbar)** 의 예제입니다.
 
-![잉크 작업 영역에 있는 Sketchpad의 InkToolbar](images/ink/ink-inktoolbar-sketchpad-small.png)
+![잉크 작업 영역에 있는 Sketchpad의 잉크 도구 모음 스크린샷](images/ink/ink-inktoolbar-sketchpad-small.png)
 
 [Inktoolbar](/uwp/api/windows.ui.xaml.controls.inktoolbar)를 사용자 지정 하는 방법에 대 한 자세한 내용은 [Windows 앱 잉크 앱에 Inktoolbar 모음 추가](ink-toolbar.md)를 참조 하세요.
 
@@ -213,9 +213,9 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 > **펜 & Windows Ink** 설정에서 필기 인식을 향상 시킬 수 있습니다.
 > 1. 시작 메뉴를 열고 **설정**을 선택 합니다.
 > 2. 설정 화면에서 **장치**  >  **펜 & Windows Ink**를 선택 합니다.
-> ![잉크 작업 영역에 있는 Sketchpad의 InkToolbar](images/ink/ink-settings-small.png)
+> ![Windows Ink 설정 페이지 & 펜의 스크린샷](images/ink/ink-settings-small.png)
 > 3. 필기 **개인 설정** 대화 상자를 열려면 **가져오기를 선택 하 여 필기를 확인** 합니다.
-> ![잉크 작업 영역에 있는 Sketchpad의 InkToolbar](images/ink/ink-settings-handwritingpersonalization-small.png)
+> ![필기 인식 개인 설정 대화 상자의 스크린샷](images/ink/ink-settings-handwritingpersonalization-small.png)
 
 ### <a name="in-the-sample"></a>이 샘플의 내용은 다음과 같습니다.
 1. MainPage .xaml 파일을 엽니다.
@@ -286,7 +286,7 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 <tr>
 <td>
 
-![잉크 작업 영역에 있는 Sketchpad의 InkToolbar](images/challenge-icon.png)
+:::image type="icon" source="images/challenge-icon.png":::
 
 </td>
 <td>
@@ -306,7 +306,7 @@ Windows 잉크는 Windows에서 지 원하는 대부분의 언어에 대 한 텍
 <tr>
 <td>
 
-![잉크 작업 영역에 있는 Sketchpad의 InkToolbar](images/challenge-icon.png)
+:::image type="icon" source="images/challenge-icon.png":::
 
 </td>
 <td>
@@ -335,7 +335,7 @@ Windows 잉크는 Windows에서 지 원하는 대부분의 언어에 대 한 텍
 - 평행 사변형
 - 오각형
 - 사변형
-- 직사각형
+- 사각형
 - RightTriangle
 - Square
 - 사다리꼴
@@ -385,11 +385,11 @@ Windows 잉크는 Windows에서 지 원하는 대부분의 언어에 대 한 텍
 
 디지털 napkin의 기초적인 순서도 예제는 다음과 같습니다.
 
-![원본 잉크 순서도](images/ink/ink-app-step6-shapereco1-small.png)
+![디지털 napkin의 기초적인 순서도 스크린샷](images/ink/ink-app-step6-shapereco1-small.png)
 
 셰이프 인식 후의 순서도는 다음과 같습니다.
 
-![원본 잉크 순서도](images/ink/ink-app-step6-shapereco2-small.png)
+![사용자가 Recognize 셰이프를 선택한 후 순서도의 스크린샷](images/ink/ink-app-step6-shapereco2-small.png)
 
 
 ## <a name="step-7-save-and-load-ink"></a>7 단계: 잉크 저장 및 로드
@@ -444,7 +444,7 @@ ISF 파일은 잉크 스트로크 속성 및 동작을 설명 하는 추가 메�
 <tr>
 <td>
 
-![잉크 작업 영역에 있는 Sketchpad의 InkToolbar](images/challenge-icon.png)
+:::image type="icon" source="images/challenge-icon.png":::
 
 </td>
 

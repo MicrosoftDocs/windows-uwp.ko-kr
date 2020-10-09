@@ -11,12 +11,12 @@ design-contact: jeffarn
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 649fb9e2833a425ccad78f5f0bcb69ccb4091bca
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 87047e20d4513c9120c79bb329c008dad104a352
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217806"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860084"
 ---
 # <a name="directionality-and-gravity"></a>방향 및 무게
 
@@ -47,7 +47,7 @@ ms.locfileid: "91217806"
 개체를 이동 하는 경우에는 자연스럽 게 충돌이 발생 하지 않습니다. 개체가 들어오고 이동 하는 위치를 염두에 두고, 스크롤 방향 또는 레이아웃 계층 구조와 같이 장면에서 사용할 수 있는 더 높은 수준의 구문을 항상 지원 합니다.
     :::column-end:::
     :::column:::
-        ![방향 뒤로](images/Direction.gif)
+        ![원을 보여 주는 짧은 비디오와 X 축, Y 축 및 Z 축이 추가 됩니다.](images/Direction.gif)
     :::column-end:::
 :::row-end:::
 
@@ -94,7 +94,7 @@ ms.locfileid: "91217806"
 **이전 버전** 이후 버전과 동일 하지만 역방향입니다.
     :::column-end:::
     :::column:::
-        ![방향 뒤로](images/backwardIN.gif)
+        ![프레임의 오른쪽에서 시작 하 여 프레임 중간에서 중지 하는 원을 보여 주는 짧은 비디오입니다.](images/backwardIN.gif)
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -114,7 +114,7 @@ ms.locfileid: "91217806"
 
 여기에서 표의 맨 위 행에 있는 요소는 중력의 영향을 받으며, 위치를 떠나 앞으로 이동할 때 약간 삭제 됩니다.
 
-![방향 뒤로](images/continuity-photos.gif)
+![모눈의 맨 위 행에 있는 사각형 요소를 보여 주는 짧은 비디오입니다.](images/continuity-photos.gif)
 
 ## <a name="related-articles"></a>관련된 문서
 

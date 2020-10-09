@@ -1,5 +1,5 @@
 ---
-Description: 자연 스러운 필기 및 그리기 환경을 위한 디지털 잉크를 비롯 하 여 펜 및 스타일러스 장치에서 사용자 지정 상호 작용을 지 원하는 Windows 앱을 빌드 하세요.
+description: 자연 스러운 필기 및 그리기 환경을 위한 디지털 잉크를 비롯 하 여 펜 및 스타일러스 장치에서 사용자 지정 상호 작용을 지 원하는 Windows 앱을 빌드 하세요.
 title: Windows 앱의 펜 조작 및 Windows Ink
 ms.assetid: 3DA4F2D2-5405-42A1-9ED9-3A87BCD84C43
 label: Pen interactions and Windows Ink in Windows apps
@@ -8,16 +8,16 @@ keywords: Windows Ink, Windows Ink, DirectInk, InkPresenter, InkCanvas, 필기 �
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a877fabfd34bcbe16afb70c012d403d489e3a6e0
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 7a29a7ed497fdcd463df0855b4aad3b65ce6408a
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749919"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860176"
 ---
 # <a name="pen-interactions-and-windows-ink-in-windows-apps"></a>Windows 앱의 펜 조작 및 Windows Ink
 
-![Surface 펜](images/ink/hero-small.png)  
+![표면 펜의 주인공 이미지입니다.](images/ink/hero-small.png)  
 *Surface Pen* ( [Microsoft Store](https://www.microsoft.com/p/surface-pen/8zl5c82qmg6b)에서 구매할 수 있음)
 
 ## <a name="overview"></a>개요
@@ -95,7 +95,7 @@ Windows Ink UX 지침은 [잉크 컨트롤](../controls-and-patterns/inking-cont
 
 이 이미지 시리즈는이 [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤에서 펜 입력을 렌더링 하는 방법을 보여 줍니다.
 
-| ![배경 이미지가 있는 빈 InkCanvas](images/ink_basic_1_small.png) | ![잉크 스트로크를 사용 하는 InkCanvas](images/ink_basic_2_small.png) | ![하나의 스트로크가 지워진 InkCanvas](images/ink_basic_3_small.png) |
+| ![배경 이미지가 있는 빈 InkCanvas의 스크린샷](images/ink_basic_1_small.png) | ![잉크 스트로크가 있는 InkCanvas의 스크린샷](images/ink_basic_2_small.png) | ![하나의 스트로크가 지워진 InkCanvas의 스크린샷](images/ink_basic_3_small.png) |
 | --- | --- | ---|
 | 배경 이미지가 있는 빈 [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) . | 잉크 스트로크를 사용 하는 [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 입니다. | 하나의 스트로크가 지워진 [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) (일부가 아니라 전체 스트로크에서 지우기가 작동 하는 방식에 유의 하세요.) |
 
@@ -206,7 +206,7 @@ private void OnPenColorChanged(object sender, SelectionChangedEventArgs e)
 
 이러한 이미지는 사용자가 [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter)에서 펜 입력을 처리 하 고 사용자 지정 하는 방법을 보여 줍니다.
 
-| ![기본 검정 잉크 스트로크를 사용 하는 inkcanvas](images/ink-basic-custom-1-small.png) | ![사용자가 빨간색 잉크 스트로크를 선택한 inkcanvas](images/ink-basic-custom-2-small.png) |
+| ![기본 검정 잉크 스트로크를 사용 하는 InkCanvas를 보여 주는 스크린샷](images/ink-basic-custom-1-small.png) | ![사용자가 빨간색 잉크 스트로크를 선택한 InkCanvas의 스크린샷](images/ink-basic-custom-2-small.png) |
 | --- | --- |
 | 기본 검정 잉크 스트로크를 사용 하는 [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 입니다. | [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 사용자가 빨간색 잉크 스트로크를 선택 했습니다. | 
 
@@ -230,7 +230,7 @@ Windows 잉크 플랫폼에서는 스트로크 선택과 같이 수정 된 입�
 
     여기에서 캔버스 ( [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)아래)를 추가 하 여 선택 스트로크를 그립니다. 별도의 계층을 사용 하 여 선택 스트로크를 그리면 **InkCanvas** 및 해당 콘텐츠가 그대로 유지 됩니다.
 
-    ![기본 선택 캔버스가 있는 빈 inkcanvas](images/ink-unprocessed-1-small.png)
+    ![기본 선택 캔버스가 있는 빈 InkCanvas의 스크린샷](images/ink-unprocessed-1-small.png)
 
       ```xaml
         <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -271,7 +271,7 @@ Windows 잉크 플랫폼에서는 스트로크 선택과 같이 수정 된 입�
 
     마지막으로, [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter)의 [**StrokeStarted**](/uwp/api/windows.ui.input.inking.inkstrokeinput.strokestarted) 및 [**StrokesErased**](/uwp/api/windows.ui.input.inking.inkpresenter.strokeserased) 이벤트에 대 한 수신기를 할당 합니다. 이 이벤트에 대 한 처리기를 사용 하 여 새 스트로크를 시작 하거나 기존 스트로크를 지울 경우 선택 UI를 정리 합니다.
 
-    ![기본 검정 잉크 스트로크를 사용 하는 inkcanvas](images/ink-unprocessed-2-small.png)
+    ![기본 검정 잉크 스트로크를 사용 하는 inkcanvas를 보여 주는 고급 잉크 사용자 지정 샘플 앱의 스크린샷](images/ink-unprocessed-2-small.png)
 
       ```csharp
         public MainPage()
@@ -320,7 +320,7 @@ Windows 잉크 플랫폼에서는 스트로크 선택과 같이 수정 된 입�
 
     모든 선택 기능은 이러한 처리기에서 올가미 스트로크와 경계 사각형을 비롯 하 여 구현 됩니다.
 
-    ![선택 올가미](images/ink-unprocessed-3-small.png)
+    ![선택 올가미의 스크린샷](images/ink-unprocessed-3-small.png)
 
       ```csharp
         // Handle unprocessed pointer events from modified input.
@@ -368,7 +368,7 @@ Windows 잉크 플랫폼에서는 스트로크 선택과 같이 수정 된 입�
 
 5.  PointerReleased 이벤트 처리기를 종료 하려면 모든 콘텐츠의 선택 계층 (올가미 스트로크)을 지운 다음 올가미 영역에 있는 잉크 스트로크 주위에 단일 경계 사각형을 그립니다.
 
-    ![선택 영역 경계 사각형](images/ink-unprocessed-4-small.png)
+    ![선택 영역 경계 rect의 스크린샷](images/ink-unprocessed-4-small.png)
 
       ```csharp
         // Draw a bounding rectangle, on the selection canvas, encompassing
