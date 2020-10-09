@@ -7,16 +7,16 @@ dev_langs:
 - csharp
 keywords: windows 10, uwp, 화면 캡처, 비디오
 ms.localizationpriority: medium
-ms.openlocfilehash: d8f70748d025d50d19dbf2cb184ae841cced7f8a
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 9f95e310fb93292db7dc348493487fada9c6d66e
+ms.sourcegitcommit: 83eb36047380501fd1e4d023d593904ad783365b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218636"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91852380"
 ---
 # <a name="screen-capture-to-video"></a>비디오로 화면 캡처
 
-이 문서에서는 Windows. Graphics. Capture Api를 사용 하 여 화면에서 캡처한 프레임을 비디오 파일로 인코딩하는 방법을 설명 합니다. 화면 캡처에 대 한 자세한 내용은 [Screeen 캡처](./screen-capture.md)를 참조 하세요.
+이 문서에서는 Windows. Graphics. Capture Api를 사용 하 여 화면에서 캡처한 프레임을 비디오 파일로 인코딩하는 방법을 설명 합니다. 화면 캡처에 대 한 자세한 내용은 [Screeen 캡처](./screen-capture.md)를 참조 하세요. 이 문서에 나와 있는 개념 및 기술을 활용 하는 간단한 종단 간 샘플 앱은 [SimpleRecorder](https://github.com/MicrosoftDocs/SimpleRecorder/)를 참조 하세요.
 
 ## <a name="overview-of-the-video-capture-process"></a>비디오 캡처 프로세스 개요
 이 문서에서는 비디오 파일에 창의 콘텐츠를 기록 하는 예제 앱의 연습을 제공 합니다. 이 시나리오를 구현 하는 데 필요한 많은 코드가 있는 것 처럼 보일 수 있지만, 화면 레코더 앱의 상위 수준 구조는 매우 간단 합니다. 화면 캡처 프로세스에서는 세 가지 기본 UWP 기능을 사용 합니다.
