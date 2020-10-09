@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: 88da6d1a-379c-4173-a56d-d8b9a4eab5da
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 36b264b203627761d2872b0f9b8dade81099b149
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: b519a2c9ea5f415ec15c368091475434c46092fb
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216716"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829674"
 ---
 # <a name="design-toolkits-and-samples-for-windows-apps"></a>Windows 앱용 디자인 도구 키트 및 샘플
 
@@ -26,19 +26,19 @@ Fluent 디자인/Windows 앱용 디자인 및 UI 관련 다운로드를 제공�
 
 :::row:::
     :::column:::
-![영웅 이미지](images/figma.png)
+:::image type="icon" source="images/figma.png":::
 <b>Figma 도구 키트</b><br>
 WinUI 2.4, 2020년 5월<br>
 <a href="https://aka.ms/figmatoolkit">다운로드</a>
     :::column-end:::
     :::column:::
-![영웅 이미지](images/sketch.png)
+:::image type="icon" source="images/sketch.png":::
 <b>Sketch 도구 키트</b><br>
 v1810, 2018년 10월<br>
 <a href="https://aka.ms/sketchtoolkit">다운로드</a>
     :::column-end:::    
     :::column:::
-![영웅 이미지](images/adobe-xd.png)
+:::image type="icon" source="images/adobe-xd.png":::
 <b>Adobe XD 도구 키트</b><br>
 v1901, 2019년 1월<br>
 <a href="https://aka.ms/adobexdtoolkit">다운로드</a>

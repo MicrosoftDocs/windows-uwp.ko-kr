@@ -3,12 +3,12 @@ title: WinUI 3 Preview 2(2020년 7월)
 description: WinUI 3 Preview 2 릴리스에 대한 개요입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: c57132ec5219ef32f2b2b69168592e07f49d904b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 11c7ff587c7c237c19ad627587f082be84e68bf8
+ms.sourcegitcommit: 337f31b3fe3ff434dbc2c232fb84c3b22ebd4be8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168777"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91804577"
 ---
 # <a name="windows-ui-library-3-preview-2-july-2020"></a>Windows UI 라이브러리 3 Preview 2(2020년 7월)
 
@@ -49,12 +49,12 @@ WinUI 3 Preview 2에는 WinUI 기반 사용자 인터페이스와 WinUI 라이�
 
 3. C#/.NET 5 및 C++/Win32 앱용 데스크톱 WinUI 프로젝트를 만들려는 경우 .NET 5 Preview 5의 x64 및 x86 버전도 모두 설치해야 합니다. **.NET 5 Preview 5는 현재 WinUI 3에 대해 유일하게 지원되는 .NET 5 미리 보기입니다**.
 
-    - x64: [https://aka.ms/dotnet/net5/preview5/Sdk/dotnet-sdk-win-x64.exe](https://aka.ms/dotnet/net5/preview5/Sdk/dotnet-sdk-win-x64.exe)
-    - x86: [https://aka.ms/dotnet/net5/preview5/Sdk/dotnet-sdk-win-x86.exe](https://aka.ms/dotnet/net5/preview5/Sdk/dotnet-sdk-win-x86.exe)
+    - [.NET 5 Preview 5용 x64 설치 관리자](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.100-preview.5-windows-x64-installer)
+    - [.NET 5 Preview 5용 x86 설치 관리자](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.100-preview.5-windows-x86-installer)
 
 4. [WinUI 3 Preview 2 VSIX 패키지](https://aka.ms/winui3/previewdownload)를 다운로드하여 설치합니다. 이 VSIX 패키지는 WinUI 3 프로젝트 템플릿 및 WinUI 3 라이브러리가 포함된 NuGet 패키지를 Visual Studio 2019에 추가합니다.
 
-    VSIX 패키지를 Visual Studio에 추가하는 방법에 대한 지침은 [Visual Studio 확장 찾기 및 사용](/visualstudio/ide/finding-and-using-visual-studio-extensions?view=vs-2019#install-without-using-the-manage-extensions-dialog-box)을 참조하세요.
+    VSIX 패키지를 Visual Studio에 추가하는 방법에 대한 지침은 [Visual Studio 확장 찾기 및 사용](/visualstudio/ide/finding-and-using-visual-studio-extensions#install-without-using-the-manage-extensions-dialog-box)을 참조하세요.
 
 
 ## <a name="create-winui-projects"></a>WinUI 프로젝트 만들기
@@ -111,10 +111,10 @@ Preview 2의 버그 수정 및 기타 업데이트에 대한 포괄적인 목록
 > [!NOTE]
 > WinUI 3 Preview 2는 WinUI 2 라이브러리 버전 2.4.2를 사용합니다. 
 
-- [INotifyCollectionChanged](/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=net-5.0) 및 [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged?view=net-5.0)는 이제 C# 데스크톱 앱에서 예상대로 작동합니다.
+- [INotifyCollectionChanged](/dotnet/api/system.collections.specialized.inotifycollectionchanged) 및 [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged)는 이제 C# 데스크톱 앱에서 예상대로 작동합니다.
   - 이를 통해 백 엔드에서 업데이트되는 동안 UI에서 업데이트되지 않는 컬렉션 컨트롤과 관련된 몇 가지 다른 문제가 해결되었습니다.
   - *GitHub에서 [비슷한 문제](https://github.com/microsoft/microsoft-ui-xaml/issues/2490)를 제출해 주신 @hshristov에게 감사드립니다.*
-- Preview 2는 이제 데스크톱 앱용 [.NET 5 Preview 5](/dotnet/api/?view=net-5.0)와 호환됩니다.
+- Preview 2는 이제 데스크톱 앱용 [.NET 5 Preview 5](/dotnet/api/?view=net-5.0&preserve-view=true)와 호환됩니다.
 - WinUI 3에는 이제 [WinUI 2.4](../winui2/release-notes/winui-2.4.md)와 관련된 패리티가 있습니다. 여기에는 [계층적 NavigationView](../winui2/release-notes/winui-2.4.md#hierarchical-navigation) 및 [ProgressRing](../winui2/release-notes/winui-2.4.md#progressring)과 같은 새로운 컨트롤과 기능이 포함되어 있습니다.
 - 작동 중단 수정됨: 터치를 통해 [TabView](/windows/uwp/design/controls-and-patterns/tab-view)를 사용합니다.
 - [XAML Controls Gallery 샘플](#xaml-controls-gallery-winui-3-preview-2-branch)의 [NavigationView](/windows/uwp/design/controls-and-patterns/navigationview)에서 이제 Left-compact 모드 대신 Left 모드를 사용합니다.

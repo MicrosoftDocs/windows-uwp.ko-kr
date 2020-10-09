@@ -8,12 +8,12 @@ ms.date: 03/23/2020
 ms.topic: article
 ms.assetid: ce2e611c-c419-4a14-9095-b88ac711d1b8
 ms.localizationpriority: medium
-ms.openlocfilehash: 4da50161008645374fbe95de73882da9d9f9f826
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: f7a06c75b37b62436c4ef0ebcb8ccae2a6153b85
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750659"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829430"
 ---
 # <a name="controls-for-windows-apps"></a>Windows 앱용 컨트롤
 
@@ -61,23 +61,23 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 :::row:::
     :::column:::
 
-- 애니메이션을 사용하는 시각적 플레이어([Lottie](/windows/communitytoolkit/animations/lottie) 참조) ![WinUI 로고](images/winui-logo-16x16.png)
+- 애니메이션된 시각적 플레이어([Lottie](/windows/communitytoolkit/animations/lottie) 참조) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [자동 제안 상자](auto-suggest-box.md)
 - [Button](buttons.md)
 - [달력 날짜 선택](calendar-date-picker.md)
 - [달력 보기](calendar-view.md)
 - [확인란](checkbox.md)
-- [색 선택](color-picker.md) ![WinUI 로고](images/winui-logo-16x16.png)
+- [색 선택기](color-picker.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [콤보 상자](combo-box.md)
 - [명령 모음](app-bars.md)
-- [명령 모음 플라이아웃](command-bar-flyout.md) ![WinUI 로고](images/winui-logo-16x16.png)
+- [명령 모음 플라이아웃](command-bar-flyout.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [연락처 카드](contact-card.md)
 - [콘텐츠 대화 상자](dialogs-and-flyouts/dialogs.md)
 - [콘텐츠 링크](content-links.md)
 - [상황에 맞는 메뉴](menus.md)
 - [날짜 선택기](date-picker.md)
 - [대화 상자 및 플라이아웃](dialogs-and-flyouts/index.md)
-- [드롭다운 단추](buttons.md#create-a-drop-down-button) ![WinUI 로고](images/winui-logo-16x16.png)
+- [드롭다운 단추](buttons.md#create-a-drop-down-button) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [대칭 이동 보기](flipview.md)
 - [플라이아웃](dialogs-and-flyouts/flyouts.md)
 - [양식](forms.md)(패턴)
@@ -90,22 +90,22 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 - [지도 컨트롤](../../maps-and-location/display-maps.md)
 - [마스터/세부 정보](master-details.md)(패턴)
 - [미디어 재생](media-playback.md)
-- [메뉴 모음](menus.md#create-a-menu-bar) ![WinUI 로고](images/winui-logo-16x16.png)
+- [메뉴 모음](menus.md#create-a-menu-bar) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [메뉴 플라이아웃](menus.md)
-- [탐색 보기](navigationview.md) ![WinUI 로고](images/winui-logo-16x16.png)
+- [탐색 보기](navigationview.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 
     :::column-end:::
     :::column:::
 
-- [숫자 상자](number-box.md) ![WinUI 로고](images/winui-logo-16x16.png)
-- [시차 보기](..\motion\parallax.md) ![WinUI 로고](images/winui-logo-16x16.png)
+- [숫자 상자](number-box.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [시차 보기](..\motion\parallax.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [암호 상자](password-box.md)
-- [인물 사진](person-picture.md) ![WinUI 로고](images/winui-logo-16x16.png)
+- [인물 사진](person-picture.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [피벗](pivot.md)
-- [진행률 표시줄](progress-controls.md) ![WinUI 로고](images/winui-logo-16x16.png)
-- [진행률 링](progress-controls.md) ![WinUI 로고](images/winui-logo-16x16.png)
-- [라디오 단추](radio-button.md) ![WinUI 로고](images/winui-logo-16x16.png)
-- [평점 컨트롤](rating.md) ![WinUI 로고](images/winui-logo-16x16.png)
+- [진행률 표시줄](progress-controls.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [진행률 링](progress-controls.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [라디오 단추](radio-button.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [평점 컨트롤](rating.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [반복 단추](buttons.md#create-a-repeat-button)
 - [서식 있는 편집 상자](rich-edit-box.md)
 - [서식 있는 텍스트 블록](rich-text-block.md)
@@ -114,11 +114,11 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 - [시맨틱 줌](semantic-zoom.md)
 - [셰이프](shapes.md)
 - [슬라이더](slider.md)
-- [분할 단추](buttons.md#create-a-split-button) ![WinUI 로고](images/winui-logo-16x16.png)
+- [분할 단추](buttons.md#create-a-split-button) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [분할 보기](split-view.md)
-- [살짝 밀기 컨트롤](swipe.md) ![WinUI 로고](images/winui-logo-16x16.png)
-- [탭 보기](tab-view.md) ![WinUI 로고](images/winui-logo-16x16.png)
-- [교육 팁](dialogs-and-flyouts/teaching-tip.md) ![WinUI 로고](images/winui-logo-16x16.png)
+- [살짝 밀기 컨트롤](swipe.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [탭 보기](tab-view.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [교육 팁](dialogs-and-flyouts/teaching-tip.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [텍스트 블록](text-block.md)
 - [입력란](text-box.md)
 - [시간 선택기](time-picker.md)
@@ -126,8 +126,8 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 - [토글 단추](buttons.md)
 - [토글 분할 단추](buttons.md#create-a-toggle-split-button)
 - [도구 설명](tooltips.md)
-- [트리 보기](tree-view.md) ![WinUI 로고](images/winui-logo-16x16.png)
-- [2창 보기](two-pane-view.md) ![WinUI 로고](images/winui-logo-16x16.png)
+- [트리 보기](tree-view.md) :::image type="icon" source="images/winui-logo-16x16.png":::
+- [2 창 보기](two-pane-view.md) :::image type="icon" source="images/winui-logo-16x16.png":::
 - [웹 뷰](web-view.md)
 
     :::column-end:::
