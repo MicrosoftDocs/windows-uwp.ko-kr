@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 사용자 역할, 사용자 권한, 사용자 지정 역할, 사용자 액세스, 사용자 지정 권한, 표준 역할
 ms.localizationpriority: medium
-ms.openlocfilehash: f8454587e31751e3653d983dbb1d45e21a2808d9
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 3cdd1904dad82e0145305fe2709360be01518a7f
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750179"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878486"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대 한 역할 또는 사용자 지정 권한 설정
 
@@ -103,16 +103,16 @@ ms.locfileid: "91750179"
     <tbody>
 <tr><td align="left">    <b>계정 설정</b>                    </td><td align="left">  <a href="/windows/uwp/publish/manage-account-settings-and-profile">연락처 정보</a>를 포함 하 여 <b>계정 설정</b> 섹션에서 모든 페이지를 볼 수 있습니다.       </td><td align="left">  <b>계정 설정</b> 섹션에서 모든 페이지를 볼 수 있습니다. <a href="/windows/uwp/publish/manage-account-settings-and-profile">연락처 정보</a> 및 다른 페이지를 변경할 수 있지만 해당 권한이 별도로 부여 되지 않는 한 지급 계정 또는 세금 프로필은 변경할 수 없습니다.            </td></tr>
 <tr><td align="left">    <b>계정 사용자</b>                       </td><td align="left">  <b>사용자</b> 섹션에서 계정에 추가 된 사용자를 볼 수 있습니다.          </td><td align="left">  계정에 사용자를 추가 하 고 <b>사용자</b> 섹션에서 기존 사용자를 변경할 수 있습니다.             </td></tr>
-<tr><td align="left">    <b>계정 수준 ad 성능 보고서</b> </td><td align="left">  계정 수준 <a href="advertising-performance-report.md">광고 성능 보고서</a>를 볼 수 있습니다.      </td><td align="left">  N/A   </td></tr>
-<tr><td align="left">    <b>광고 캠페인</b>                        </td><td align="left">  계정에서 만든 <a href="create-an-ad-campaign-for-your-app.md">ad 캠페인</a> 을 볼 수 있습니다.      </td><td align="left">  계정에 생성 된 <a href="create-an-ad-campaign-for-your-app.md">광고 캠페인</a> 을 만들고 관리 하 고 볼 수 있습니다.          </td></tr>
+<tr><td align="left">    <b>계정 수준 ad 성능 보고서</b> </td><td align="left">  계정 수준 <a href="advertising-performance-report.md">광고 성능 보고서</a>를 볼 수 있습니다.      </td><td align="left">  해당 없음   </td></tr>
+<tr><td align="left">    <b>광고 캠페인</b>                        </td><td align="left">  계정에서 만든 <a href="/windows/uwp/monetize/">ad 캠페인</a> 을 볼 수 있습니다.      </td><td align="left">  계정에 생성 된 <a href="/windows/uwp/monetize/">광고 캠페인</a> 을 만들고 관리 하 고 볼 수 있습니다.          </td></tr>
 <tr><td align="left">    <b>Ad 중재</b>                        </td><td align="left">  계정의 모든 제품에 대 한 ad 중재 구성을 볼 수 있습니다.    </td><td align="left">  계정의 모든 제품에 대 한 ad 중재 구성을 확인 하 고 변경할 수 있습니다.        </td></tr>
-<tr><td align="left">    <b>광고 중재 보고서</b>                </td><td align="left">  계정에 있는 모든 제품에 대 한 <a href="/windows/uwp/publish/advertising-performance-report">광고 중재 보고서</a> 를 볼 수 있습니다.    </td><td align="left">  N/A    </td></tr>
-<tr><td align="left">    <b>Ad 성능 보고서</b>              </td><td align="left">  계정에 있는 모든 제품에 대 한 <a href="advertising-performance-report.md">광고 성능 보고서</a> 를 볼 수 있습니다.       </td><td align="left">  N/A         </td></tr>
+<tr><td align="left">    <b>광고 중재 보고서</b>                </td><td align="left">  계정에 있는 모든 제품에 대 한 <a href="/windows/uwp/publish/advertising-performance-report">광고 중재 보고서</a> 를 볼 수 있습니다.    </td><td align="left">  해당 없음    </td></tr>
+<tr><td align="left">    <b>Ad 성능 보고서</b>              </td><td align="left">  계정에 있는 모든 제품에 대 한 <a href="advertising-performance-report.md">광고 성능 보고서</a> 를 볼 수 있습니다.       </td><td align="left">  해당 없음         </td></tr>
 <tr><td align="left">    <b>Ad 단위</b>                            </td><td align="left">  계정에 대해 만들어진 <a href="in-app-ads.md">ad 단위</a> 를 볼 수 있습니다.    </td><td align="left">  계정에 대 한 <a href="in-app-ads.md">ad 단위</a> 를 만들고 관리 하 고 볼 수 있습니다.             </td></tr>
 <tr><td align="left">    <b>관련 광고</b>                       </td><td align="left">  계정의 모든 제품에서 관련 <a href="/windows/uwp/publish/in-app-ads">ad</a> 사용량을 볼 수 있습니다.    </td><td align="left">  계정의 모든 제품에 대 한 관련 <a href="/windows/uwp/publish/in-app-ads">광고</a> 사용을 관리 하 고 볼 수 있습니다.                </td></tr>
-<tr><td align="left">    <b>계열사 성능 보고서</b>      </td><td align="left">  계정의 모든 제품에 대 한 <a href="/windows/uwp/publish/advertising-performance-report">계열사 성능 보고서</a> 를 볼 수 있습니다.   </td><td align="left">  N/A   </td></tr>
-<tr><td align="left">    <b>앱 설치 광고 보고서</b>             </td><td align="left">  <a href="/windows/uwp/publish/ad-campaign-report">광고 캠페인 보고서</a>를 볼 수 있습니다.           </td><td align="left">  N/A   </td></tr>
-<tr><td align="left">    <b>커뮤니티 광고</b>                       </td><td align="left">  계정의 모든 제품에 대 한 무료 <a href="about-community-ads.md">커뮤니티 ad</a> 사용량을 볼 수 있습니다.          </td><td align="left">  계정의 모든 제품에 대 한 무료 <a href="about-community-ads.md">커뮤니티 ad</a> 사용량을 만들고, 관리 하 고, 볼 수 있습니다.               </td></tr>
+<tr><td align="left">    <b>계열사 성능 보고서</b>      </td><td align="left">  계정의 모든 제품에 대 한 <a href="/windows/uwp/publish/advertising-performance-report">계열사 성능 보고서</a> 를 볼 수 있습니다.   </td><td align="left">  해당 없음   </td></tr>
+<tr><td align="left">    <b>앱 설치 광고 보고서</b>             </td><td align="left">  <a href="/windows/uwp/publish/ad-campaign-report">광고 캠페인 보고서</a>를 볼 수 있습니다.           </td><td align="left">  해당 없음   </td></tr>
+<tr><td align="left">    <b>커뮤니티 광고</b>                       </td><td align="left">  계정의 모든 제품에 대 한 무료 <a href="/windows/uwp/monetize/">커뮤니티 ad</a> 사용량을 볼 수 있습니다.          </td><td align="left">  계정의 모든 제품에 대 한 무료 <a href="/windows/uwp/monetize/">커뮤니티 ad</a> 사용량을 만들고, 관리 하 고, 볼 수 있습니다.               </td></tr>
 <tr><td align="left">    <b>연락처 정보</b>                        </td><td align="left">  계정 설정 섹션에서 <a href="/windows/uwp/publish/manage-account-settings-and-profile">연락처 정보</a> 를 볼 수 있습니다.        </td><td align="left">  계정 설정 섹션에서 <a href="/windows/uwp/publish/manage-account-settings-and-profile">연락처 정보</a> 를 편집 하 고 볼 수 있습니다.            </td></tr>
 <tr><td align="left">    <b>COPPA 규정 준수</b>                    </td><td align="left">  계정에 있는 모든 제품에 대해 제품이 13 세 미만의 어린이를 대상으로 하는지 여부를 나타내는 <a href="in-app-ads.md#coppa-compliance">COPPA 준수</a> 선택 항목을 볼 수 있습니다.                                            </td><td align="left">  계정에 있는 모든 제품에 대 한 <a href="in-app-ads.md#coppa-compliance">COPPA 준수</a>  선택 항목을 편집 하 고 볼 수 있습니다 (제품이 13 세 미만의 어린이를 대상으로 하는지 여부를 나타냄).         </td></tr>
 <tr><td align="left">    <b>고객 그룹</b>                     </td><td align="left">  <a href="create-customer-groups.md">고객 그룹</a> (세그먼트 및 알려진 사용자 그룹)을 볼 수 있습니다.      </td><td align="left">  <a href="create-customer-groups.md">고객 그룹</a> (세그먼트 및 알려진 사용자 그룹)을 만들고, 편집 하 고, 볼 수 있습니다.       </td></tr>
@@ -124,7 +124,7 @@ ms.locfileid: "91750179"
 <tr><td align="left">    <b>지급 요약</b>                      </td><td align="left">  <a href="payout-summary.md">지급 요약</a> 을 확인 하 여 지급 보고 정보에 액세스 하 고 다운로드할 수 있습니다.       </td><td align="left">  <a href="payout-summary.md">지급 요약</a> 을 확인 하 여 지급 보고 정보에 액세스 하 고 다운로드할 수 있습니다.   </td></tr>
 <tr><td align="left">    <b>신뢰 당사자</b>&nbsp;*                   </td><td align="left">  신뢰 당사자가 XTokens를 검색할 수 있습니다.    </td><td align="left">  는 신뢰 당사자를 관리 하 고 확인 하 여 XTokens를 검색할 수 있습니다.     </td></tr>
 <tr><td align="left">    <b>샌드박스</b>&nbsp;*                         </td><td align="left">  는 <b>샌드박스</b> 페이지에 액세스 하 고 계정 및 해당 샌드박스에 대해 적용 가능한 모든 구성에서 샌드박스를 볼 수 있습니다. 적절 한 제품 수준 사용 권한이 부여 되지 않은 경우 각 샌드박스에 대 한 제품 및 제출을 볼 수 없습니다. </td><td align="left">  <b>샌드박스 페이지에</b> 액세스 하 고, 샌드박스를 만들고 삭제 하 고 구성을 관리 하는 등 계정에서 샌드박스를 보고 관리할 수 있습니다. 적절 한 제품 수준 사용 권한이 부여 되지 않은 경우 각 샌드박스에 대 한 제품 및 제출을 볼 수 없습니다.    </td></tr>
-<tr><td align="left">    <b>매장 판매 이벤트</b>&nbsp;*                            </td><td align="left">  N/A    </td><td align="left">  매장 판매 이벤트에 제품을 자동으로 포함 하는 옵션을 구성할 수 있습니다.     </td></tr>
+<tr><td align="left">    <b>매장 판매 이벤트</b>&nbsp;*                            </td><td align="left">  해당 없음    </td><td align="left">  매장 판매 이벤트에 제품을 자동으로 포함 하는 옵션을 구성할 수 있습니다.     </td></tr>
 <tr><td align="left">    <b>세금 프로필</b>                         </td><td align="left">  <b>계정 설정</b>에서 <a href="setting-up-your-payout-account-and-tax-forms.md#tax-forms">세금 프로필 정보 및 양식을</a> 볼 수 있습니다.     </td><td align="left">  <b>계정 설정</b>에서 세금 양식을 작성 하 고 <a href="setting-up-your-payout-account-and-tax-forms.md#tax-forms">세금 프로필 정보</a> 를 업데이트할 수 있습니다.     </td></tr>
 <tr><td align="left">    <b>테스트 계정</b>&nbsp;*                     </td><td align="left">  Xbox Live 구성을 테스트 하기 위한 계정을 볼 수 있습니다.      </td><td align="left">  Xbox Live 구성을 테스트 하기 위한 계정을 만들고, 관리 하 고, 볼 수 있습니다.      </td></tr>
 <tr><td align="left">    <b>Xbox 장치</b>                        </td><td align="left">  계정 <b>설정</b> 섹션에서 계정에 대해 사용 하도록 설정 된 Xbox development 콘솔을 볼 수 있습니다.       </td><td align="left">  <b>계정 설정</b> 섹션에서 계정에 대해 사용 하도록 설정 된 Xbox development 콘솔을 추가, 제거 및 볼 수 있습니다.     </td></tr>
@@ -165,11 +165,11 @@ ms.locfileid: "91750179"
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    <b>인수</b> (거의 실시간 데이터 포함) </td><td>    제품에 대 한 획득 및 <a href="add-on-acquisitions-report.md">추가 기능 구매</a> <a href="acquisitions-report.md">보고서를 볼</a> 수 있습니다.        </td><td>    N/A    </td><td>    해당 없음 (부모 제품에 대 한 설정에 **추가 기능 추가** 보고서 포함)        </td><td>    N/A                         </td></tr>
-    <tr><td align="left">    <b>보려면</b> </td><td>    제품에 대 한 <a href="usage-report.md">사용 현황 보고서</a> 를 볼 수 있습니다.     </td><td>    N/A       </td><td>    N/A     </td><td>    N/A         </td></tr>
-    <tr><td align="left">    <b>상태</b> (거의 실시간 데이터 포함) </td><td>    제품에 대 한 <a href="health-report.md">상태 보고서</a> 를 볼 수 있습니다.    </td><td>    N/A     </td><td>    N/A     </td><td>    N/A         </td></tr>
-    <tr><td align="left">    <b>고객 의견</b>    </td><td>    제품에 대 한 <a href="reviews-report.md">검토</a> 및 <a href="feedback-report.md">피드백</a> 보고서를 볼 수 있습니다.       </td><td>    해당 없음 (사용자 의견 또는 리뷰에 응답 하려면 <b>고객 지원</b> 권한이 부여 되어야 함)   </td><td>    N/A     </td><td>    N/A         </td></tr>
-    <tr><td align="left">    <b>Xbox 분석</b> </td><td>    제품에 대 한 <a href="xbox-analytics-report.md">Xbox 분석 보고서</a> 를 볼 수 있습니다.    </td><td>    N/A   </td><td>    N/A       </td><td>    N/A          </td></tr>
+    <tr><td align="left">    <b>인수</b> (거의 실시간 데이터 포함) </td><td>    제품에 대 한 획득 및 <a href="add-on-acquisitions-report.md">추가 기능 구매</a> <a href="acquisitions-report.md">보고서를 볼</a> 수 있습니다.        </td><td>    해당 없음    </td><td>    해당 없음 (부모 제품에 대 한 설정에 **추가 기능 추가** 보고서 포함)        </td><td>    해당 없음                         </td></tr>
+    <tr><td align="left">    <b>보려면</b> </td><td>    제품에 대 한 <a href="usage-report.md">사용 현황 보고서</a> 를 볼 수 있습니다.     </td><td>    해당 없음       </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
+    <tr><td align="left">    <b>상태</b> (거의 실시간 데이터 포함) </td><td>    제품에 대 한 <a href="health-report.md">상태 보고서</a> 를 볼 수 있습니다.    </td><td>    해당 없음     </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
+    <tr><td align="left">    <b>고객 의견</b>    </td><td>    제품에 대 한 <a href="reviews-report.md">검토</a> 및 <a href="feedback-report.md">피드백</a> 보고서를 볼 수 있습니다.       </td><td>    해당 없음 (사용자 의견 또는 리뷰에 응답 하려면 <b>고객 지원</b> 권한이 부여 되어야 함)   </td><td>    해당 없음     </td><td>    해당 없음         </td></tr>
+    <tr><td align="left">    <b>Xbox 분석</b> </td><td>    제품에 대 한 <a href="xbox-analytics-report.md">Xbox 분석 보고서</a> 를 볼 수 있습니다.    </td><td>    해당 없음   </td><td>    해당 없음       </td><td>    해당 없음          </td></tr>
     </tbody>
     </table>
 
@@ -187,9 +187,9 @@ ms.locfileid: "91750179"
     </thead>
     <tbody>
     <tr><td align="left">    <b>판촉 코드</b>     </td><td>    제품 및 해당 추가 기능에 대 한 <a href="generate-promotional-codes.md">판촉 코드</a> 주문 및 사용 정보를 보고 사용 정보를 볼 수 있습니다.         </td><td>    제품 및 해당 추가 기능에 대 한 <a href="generate-promotional-codes.md">판촉 코드</a> 주문을 보고 관리 하 고 만들 수 있으며 사용 정보를 볼 수 있습니다.          </td><td>    해당 없음 (부모 제품의 설정이 모든 추가 기능에 적용 됩니다.)     </td><td>    해당 없음 (부모 제품의 설정이 모든 추가 기능에 적용 됩니다.)     </td></tr>
-    <tr><td align="left">    <b>대상 제안</b>     </td><td>    제품에 대 한 <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">대상</a> 제품을 볼 수 있습니다.         </td><td>    제품에 대 한 <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">대상</a> 제품을 보고 관리 하 고 만들 수 있습니다.          </td><td>    N/A     </td><td>    N/A      </td></tr>
-    <tr><td align="left">    <b>고객 지원</b>  </td><td>    고객 <b>피드백</b> 권한이 부여 되는 한 고객 <a href="respond-to-customer-feedback.md">의견</a> 및 고객 <a href="respond-to-customer-reviews.md">리뷰에</a>대 한 응답을 볼 수 있습니다. 제품에 대해 만들어진 <a href="send-push-notifications-to-your-apps-customers.md">대상 알림도</a> 볼 수도 있습니다.    </td><td>    <b>고객 피드백 권한이 부여</b> 된 경우에는 고객 <a href="respond-to-customer-feedback.md">피드백에 응답</a> 하 고 <a href="respond-to-customer-reviews.md">고객 리뷰에 응답할</a>수 있습니다. 또한 제품에 대 한 <a href="send-push-notifications-to-your-apps-customers.md">대상 알림을 만들고 보낼</a> 수 있습니다.                   </td><td>    N/A         </td><td>    N/A                          </td></tr>
-    <tr><td align="left">    <b>실험</b></td><td>    <a href="../monetize/run-app-experiments-with-a-b-testing.md">실험 (A/B 테스트)</a> 을 보고 제품의 실험 데이터를 볼 수 있습니다.   </td><td>    제품에 대 한 <a href="../monetize/run-app-experiments-with-a-b-testing.md">실험 (A/B 테스트)</a> 을 생성, 관리 및 확인 하 고 실험 데이터를 볼 수 있습니다.     </td><td>    N/A  </td><td>    N/A                 </td></tr>
+    <tr><td align="left">    <b>대상 제안</b>     </td><td>    제품에 대 한 <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">대상</a> 제품을 볼 수 있습니다.         </td><td>    제품에 대 한 <a href="use-targeted-offers-to-maximize-engagement-and-conversions.md">대상</a> 제품을 보고 관리 하 고 만들 수 있습니다.          </td><td>    해당 없음     </td><td>    해당 없음      </td></tr>
+    <tr><td align="left">    <b>고객 지원</b>  </td><td>    고객 <b>피드백</b> 권한이 부여 되는 한 고객 <a href="respond-to-customer-feedback.md">의견</a> 및 고객 <a href="respond-to-customer-reviews.md">리뷰에</a>대 한 응답을 볼 수 있습니다. 제품에 대해 만들어진 <a href="send-push-notifications-to-your-apps-customers.md">대상 알림도</a> 볼 수도 있습니다.    </td><td>    <b>고객 피드백 권한이 부여</b> 된 경우에는 고객 <a href="respond-to-customer-feedback.md">피드백에 응답</a> 하 고 <a href="respond-to-customer-reviews.md">고객 리뷰에 응답할</a>수 있습니다. 또한 제품에 대 한 <a href="send-push-notifications-to-your-apps-customers.md">대상 알림을 만들고 보낼</a> 수 있습니다.                   </td><td>    해당 없음         </td><td>    해당 없음                          </td></tr>
+    <tr><td align="left">    <b>실험</b></td><td>    <a href="../monetize/run-app-experiments-with-a-b-testing.md">실험 (A/B 테스트)</a> 을 보고 제품의 실험 데이터를 볼 수 있습니다.   </td><td>    제품에 대 한 <a href="../monetize/run-app-experiments-with-a-b-testing.md">실험 (A/B 테스트)</a> 을 생성, 관리 및 확인 하 고 실험 데이터를 볼 수 있습니다.     </td><td>    해당 없음  </td><td>    해당 없음                 </td></tr>
     <tr><td align="left">    <b>매장 판매 이벤트</b>&nbsp;*</td><td>    제품에 대 한 판매 이벤트 상태를 볼 수 있습니다.   </td><td>    판매 이벤트에 제품을 추가 하 고 할인을 구성할 수 있습니다.      </td><td>    제품에 대 한 판매 이벤트 상태를 볼 수 있습니다.   </td><td>    판매 이벤트에 제품을 추가 하 고 할인을 구성할 수 있습니다.      </td></tr>
     </tbody>
     </table>
@@ -215,10 +215,10 @@ ms.locfileid: "91750179"
     <tr><td align="left">    <b>저장소 목록</b>  </td><td>    제품의 <a href="create-app-store-listings.md">스토어 목록 페이지</a> 를 볼 수 있습니다.  </td><td>    제품의 <a href="create-app-store-listings.md">스토어 목록 페이지</a> 를 보고 편집할 수 있으며, 다른 언어에 대 한 새 스토어 목록을 추가할 수 있습니다.     </td><td>    추가 기능의 <a href="create-add-on-store-listings.md">스토어 목록 페이지</a> 를 볼 수 있습니다.            </td><td>    추가 기능의 <a href="create-add-on-store-listings.md">스토어 목록 페이지</a> 를 보고 편집할 수 있으며 다양 한 언어에 대 한 매장 목록을 추가할 수 있습니다.                 </td></tr>
     <tr><td align="left">    <b>스토어 제출</b>     </td><td>    이 권한이 읽기 전용으로 설정 된 경우에는 액세스 권한이 부여 되지 않습니다.           </td><td>    제품을 스토어에 제출 하 고 인증 보고서를 볼 수 있습니다. 에는 새로운 전송과 업데이트 된 제출이 모두 포함 됩니다. </td><td>이 권한이 읽기 전용으로 설정 된 경우에는 액세스 권한이 부여 되지 않습니다.     </td><td>    저장소에 추가 기능을 제출 하 고 인증 보고서를 볼 수 있습니다. 에는 새로운 전송과 업데이트 된 제출이 모두 포함 됩니다.</td></tr>
     <tr><td align="left">    <b>새 제출 만들기</b>       </td><td>    이 권한이 읽기 전용으로 설정 된 경우에는 액세스 권한이 부여 되지 않습니다.        </td><td>    제품에 대 한 새 <a href="app-submissions.md">제출을</a> 만들 수 있습니다.  </td><td>    이 권한이 읽기 전용으로 설정 된 경우에는 액세스 권한이 부여 되지 않습니다.   </td><td>    추가 기능에 대 한 새 <a href="add-on-submissions.md">제출을</a> 만들 수 있습니다.        </td></tr>
-    <tr><td align="left">    <b>새 추가 기능</b>    </td><td>    이 권한이 읽기 전용으로 설정 된 경우에는 액세스 권한이 부여 되지 않습니다. </td><td>    제품에 대 한 <a href="set-your-add-on-product-id.md">새 추가 기능을 만들</a> 수 있습니다. </td><td>    N/A    </td><td>    N/A        </td></tr>
+    <tr><td align="left">    <b>새 추가 기능</b>    </td><td>    이 권한이 읽기 전용으로 설정 된 경우에는 액세스 권한이 부여 되지 않습니다. </td><td>    제품에 대 한 <a href="set-your-add-on-product-id.md">새 추가 기능을 만들</a> 수 있습니다. </td><td>    해당 없음    </td><td>    해당 없음        </td></tr>
     <tr><td align="left">    <b>이름 예약</b>   </td><td>    제품에 대 한 <a href="manage-app-names.md">앱 이름 관리</a> 페이지를 볼 수 있습니다.</td><td>    추가 이름을 예약 하 고 예약 된 이름을 삭제 하는 등 제품에 대 한 <a href="manage-app-names.md">앱 이름 관리</a> 페이지를 보고 편집할 수 있습니다. </td><td>   추가 기능에 대 한 예약 된 이름을 볼 수 있습니다.    </td><td>   추가 기능에 대 한 예약 된 이름을 보고 편집할 수 있습니다.          </td></tr>
-    <tr><td align="left">    <b>디스크 요청</b>   </td><td>    요청 페이지에서 디스크를 볼 수 있습니다. </td><td>    디스크 요청을 만들 수 있습니다. </td><td>   N/A    </td><td>   N/A          </td></tr>
-    <tr><td align="left">    <b>디스크 로열티 </b>   </td><td>    로열티 페이지에서 디스크를 볼 수 있습니다.</td><td>    로열티 디스크를 만들 수 있습니다. </td><td>   N/A    </td><td>   N/A          </td></tr>
+    <tr><td align="left">    <b>디스크 요청</b>   </td><td>    요청 페이지에서 디스크를 볼 수 있습니다. </td><td>    디스크 요청을 만들 수 있습니다. </td><td>   해당 없음    </td><td>   해당 없음          </td></tr>
+    <tr><td align="left">    <b>디스크 로열티 </b>   </td><td>    로열티 페이지에서 디스크를 볼 수 있습니다.</td><td>    로열티 디스크를 만들 수 있습니다. </td><td>   해당 없음    </td><td>   해당 없음          </td></tr>
     </tbody>
     </table>
 
@@ -235,15 +235,15 @@ ms.locfileid: "91750179"
     </tr>
     </thead>
     <tbody>
-    <tr><td align="left">    <b>신뢰 당사자</b>&nbsp;*</td><td>    계정의 신뢰 당사자 페이지를 볼 수 있습니다.   </td><td>    계정의 신뢰 당사자 페이지를 보고 편집할 수 있습니다.    </td><td>    N/A    </td><td>    N/A                      </td></tr>
-    <tr><td align="left">    <b>파트너 서비스</b>&nbsp;*</td><td>    계정의 웹 서비스 페이지를 볼 수 있습니다.  </td><td>    계정의 웹 서비스 페이지를 보고 편집할 수 있습니다.      </td><td>    N/A    </td><td>    N/A                      </td></tr>
-    <tr><td align="left">    <b>Xbox 테스트 계정</b>&nbsp;*</td><td>    계정의 Xbox 테스트 계정 페이지를 볼 수 있습니다.  </td><td>    계정의 Xbox 테스트 계정 페이지를 보고 편집할 수 있습니다.    </td><td>    N/A    </td><td>    N/A                      </td></tr>
-    <tr><td align="left">    <b>샌드박스 당 Xbox 테스트 계정</b>&nbsp;*</td><td>    Xbox 테스트 계정 페이지에서 계정의 지정 된 샌드박스에 대해서만 볼 수 있습니다.  </td><td>    Xbox 테스트를 보고 편집할 수 있습니다.   <tr><td align="left">    <b>계정의 지정 된 샌드박스에 대 한 계정 페이지    </td><td>    N/A    </td><td>    N/A                      </td></tr>
-    <tr><td align="left">    <b>Xbox 장치</b>&nbsp;*</td><td>    계정의 Xbox one development 콘솔 페이지를 볼 수 있습니다.  </td><td>    계정의 Xbox one development 콘솔 페이지를 보고 편집할 수 있습니다.    </td><td>    N/A    </td><td>    N/A                      </td></tr>
-    <tr><td align="left">    <b>샌드박스 별 Xbox 장치</b>&nbsp;*</td><td>    Xbox one development 콘솔 페이지에서 지정 된 계정 샌드박스에 대해 볼 수 있습니다.  </td><td>    Xbox one development 콘솔 페이지를 보고 편집할 수 있습니다.    </td><td>    N/A    </td><td>    N/A                      </td></tr>
-    <tr><td align="left">    <b>앱 채널</b>&nbsp;*</td><td>    N/A  </td><td>    는 OneGuide를 통해 볼 수 있도록 비디오 채널을 Xbox 콘솔에 게시할 수 있습니다.    </td><td>    N/A    </td><td>    N/A                      </td></tr>
-    <tr><td align="left">    <b>서비스 구성</b>&nbsp;*</td><td>    제품의 Xbox Live 서비스 구성 페이지를 볼 수 있습니다.  </td><td>    제품의 Xbox Live 서비스 구성 페이지를 보고 편집할 수 있습니다.    </td><td>    N/A    </td><td>    N/A                      </td></tr>
-    <tr><td align="left">    <b>도구 액세스</b>&nbsp;*</td><td>    제품에서 Xbox Live tools를 실행 하 여 데이터만 볼 수 있습니다.  </td><td>    제품에서 Xbox Live tools를 실행 하 여 데이터를 보고 편집할 수 있습니다.    </td><td>    N/A    </td><td>    N/A                      </td></tr>
+    <tr><td align="left">    <b>신뢰 당사자</b>&nbsp;*</td><td>    계정의 신뢰 당사자 페이지를 볼 수 있습니다.   </td><td>    계정의 신뢰 당사자 페이지를 보고 편집할 수 있습니다.    </td><td>    해당 없음    </td><td>    해당 없음                      </td></tr>
+    <tr><td align="left">    <b>파트너 서비스</b>&nbsp;*</td><td>    계정의 웹 서비스 페이지를 볼 수 있습니다.  </td><td>    계정의 웹 서비스 페이지를 보고 편집할 수 있습니다.      </td><td>    해당 없음    </td><td>    해당 없음                      </td></tr>
+    <tr><td align="left">    <b>Xbox 테스트 계정</b>&nbsp;*</td><td>    계정의 Xbox 테스트 계정 페이지를 볼 수 있습니다.  </td><td>    계정의 Xbox 테스트 계정 페이지를 보고 편집할 수 있습니다.    </td><td>    해당 없음    </td><td>    해당 없음                      </td></tr>
+    <tr><td align="left">    <b>샌드박스 당 Xbox 테스트 계정</b>&nbsp;*</td><td>    Xbox 테스트 계정 페이지에서 계정의 지정 된 샌드박스에 대해서만 볼 수 있습니다.  </td><td>    Xbox 테스트를 보고 편집할 수 있습니다.   <tr><td align="left">    <b>계정의 지정 된 샌드박스에 대 한 계정 페이지    </td><td>    해당 없음    </td><td>    해당 없음                      </td></tr>
+    <tr><td align="left">    <b>Xbox 장치</b>&nbsp;*</td><td>    계정의 Xbox one development 콘솔 페이지를 볼 수 있습니다.  </td><td>    계정의 Xbox one development 콘솔 페이지를 보고 편집할 수 있습니다.    </td><td>    해당 없음    </td><td>    해당 없음                      </td></tr>
+    <tr><td align="left">    <b>샌드박스 별 Xbox 장치</b>&nbsp;*</td><td>    Xbox one development 콘솔 페이지에서 지정 된 계정 샌드박스에 대해 볼 수 있습니다.  </td><td>    Xbox one development 콘솔 페이지를 보고 편집할 수 있습니다.    </td><td>    해당 없음    </td><td>    해당 없음                      </td></tr>
+    <tr><td align="left">    <b>앱 채널</b>&nbsp;*</td><td>    해당 없음  </td><td>    는 OneGuide를 통해 볼 수 있도록 비디오 채널을 Xbox 콘솔에 게시할 수 있습니다.    </td><td>    해당 없음    </td><td>    해당 없음                      </td></tr>
+    <tr><td align="left">    <b>서비스 구성</b>&nbsp;*</td><td>    제품의 Xbox Live 서비스 구성 페이지를 볼 수 있습니다.  </td><td>    제품의 Xbox Live 서비스 구성 페이지를 보고 편집할 수 있습니다.    </td><td>    해당 없음    </td><td>    해당 없음                      </td></tr>
+    <tr><td align="left">    <b>도구 액세스</b>&nbsp;*</td><td>    제품에서 Xbox Live tools를 실행 하 여 데이터만 볼 수 있습니다.  </td><td>    제품에서 Xbox Live tools를 실행 하 여 데이터를 보고 편집할 수 있습니다.    </td><td>    해당 없음    </td><td>    해당 없음                      </td></tr>
 </tbody>
 </table>
 

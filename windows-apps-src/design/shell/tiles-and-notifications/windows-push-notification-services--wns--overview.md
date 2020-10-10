@@ -8,18 +8,18 @@ ms.topic: article
 ms.custom: contperfq1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e2fc69f49308164307bc3c6c23479aae991d0ff7
-ms.sourcegitcommit: f46edb85d523a4a1f5006787d357cdc9d090aefe
+ms.openlocfilehash: b63e88f6d83e84bbe07fc4c5cbe7befba6dc3c8a
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414853"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878506"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요 
 
 WNS (Windows Push Notification Services)를 사용 하면 타사 개발자가 자신의 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. WNS는 에너지 효율적이며 신뢰할 수 있는 방법으로 사용자에게 새 업데이트를 전달하는 메커니즘을 제공합니다.
 
-## <a name="how-it-works"></a>작동 방식
+## <a name="how-it-works"></a>작동 방법
 
 다음 다이어그램은 푸시 알림을 보내기 위한 전체 데이터 흐름을 보여 줍니다. 여기에는 다음 단계가 포함 됩니다.
 
@@ -34,7 +34,7 @@ WNS (Windows Push Notification Services)를 사용 하면 타사 개발자가 �
 
 ## <a name="registering-your-app-and-receiving-the-credentials-for-your-cloud-service"></a>앱 등록 및 클라우드 서비스에 대 한 자격 증명 수신
 
-WNS를 사용 하 여 알림을 보내려면 [여기](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-windows-store-dotnet-get-started-wns-push-notification)에 설명 된 대로 스토어 대시보드에 앱을 등록 해야 합니다.
+WNS를 사용 하 여 알림을 보내려면 [여기](/azure/notification-hubs/notification-hubs-windows-store-dotnet-get-started-wns-push-notification)에 설명 된 대로 스토어 대시보드에 앱을 등록 해야 합니다.
 
 ## <a name="requesting-a-notification-channel"></a>알림 채널 요청
 

@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b6ffbbb13646fe085fa81c99f4ecf45e328a01f7
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3b768fa4a2506004527ba38256a7ff1849570ca1
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164267"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878496"
 ---
 # <a name="attract-customers-and-promote-your-apps"></a>고객을 유도 하 고 앱을 홍보 하세요.
 
@@ -27,7 +27,7 @@ ms.locfileid: "89164267"
 
 이러한 캠페인은 앱의 장치 및 범주와 일치 하는 다른 앱에서 광고를 실행 합니다. 또한 MSN.com, Outlook.com, Skype 및 기타 Microsoft 프리미엄 속성 내에 광고를 표시 하는 범용 캠페인을 선택할 수도 있습니다.
 
-[자세히 탐색 >](create-an-ad-campaign-for-your-app.md)
+[자세히 탐색 >](../monetize/index.md)
     :::column-end:::
 :::row-end:::
 
@@ -40,7 +40,7 @@ ms.locfileid: "89164267"
 
 이러한 캠페인은 무료로 다른 앱에서 광고를 실행 합니다.
 
-[자세히 탐색 >](about-house-ads.md)
+[자세히 탐색 >](../monetize/index.md)
     :::column-end:::
 :::row-end:::
 
@@ -54,7 +54,7 @@ ms.locfileid: "89164267"
 
 이러한 캠페인은 커뮤니티 ad 캠페인에도 무료로 참여 하는 다른 개발자가 게시 한 앱에서 광고를 실행 합니다.
 
-[자세히 탐색 >](create-an-ad-campaign-for-your-app.md)
+[자세히 탐색 >](../monetize/index.md)
     :::column-end:::
 :::row-end:::
 
@@ -103,7 +103,7 @@ ms.locfileid: "89164267"
 
 ![앱 프로 모션 캠페인에 대 한 자세한 정보](images/app-promotion-campaigns.png)
 
-[대시보드에서 ad 캠페인 만들기](create-an-ad-campaign-for-your-app.md)
+[대시보드에서 ad 캠페인 만들기](../monetize/index.md)
 
 [REST API 사용 하 여 ad 캠페인 만들기](../monetize/run-ad-campaigns-using-windows-store-services.md)
 

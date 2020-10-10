@@ -6,16 +6,16 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 사용자 지정, 앱, 판촉, 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: 4015ee5372c2068d7a9ead389fe7eb07aa50a466
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c04a9705797e69543e9aec8f4e6205c815f76800
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171127"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878436"
 ---
 # <a name="create-a-custom-app-promotion-campaign"></a>사용자 지정 앱 홍보 캠페인 만들기
 
-Windows 앱에서 실행 되는 [앱에 대 한 광고 캠페인](create-an-ad-campaign-for-your-app.md) 을 만들 뿐만 아니라 다른 채널을 사용 하 여 앱을 승격할 수도 있습니다. 예를 들어 타사 앱 마케팅 공급자를 사용 하 여 앱을 홍보 하거나 소셜 미디어 사이트에서 앱에 대 한 링크를 게시할 수 있습니다. 이러한 작업을 *사용자 지정 캠페인*이라고 합니다.
+Windows 앱에서 실행 되는 [앱에 대 한 광고 캠페인](../monetize/index.md) 을 만들 뿐만 아니라 다른 채널을 사용 하 여 앱을 승격할 수도 있습니다. 예를 들어 타사 앱 마케팅 공급자를 사용 하 여 앱을 홍보 하거나 소셜 미디어 사이트에서 앱에 대 한 링크를 게시할 수 있습니다. 이러한 작업을 *사용자 지정 캠페인*이라고 합니다.
 
 앱에 대 한 사용자 지정 캠페인을 실행 하는 경우 각 URL에 다른 *캠페인 ID*가 포함 된 각 사용자 지정 캠페인에 대해 다른 url을 만들어 각 캠페인의 상대적 성능을 추적할 수 있습니다. Windows 10을 실행 하는 고객이 캠페인 ID를 포함 하는 URL을 클릭 하면 해당 사용자를 해당 사용자 지정 캠페인과 연결 하 고 [파트너 센터](https://partner.microsoft.com/dashboard)에서이 데이터를 사용할 수 있도록 합니다.
 

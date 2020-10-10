@@ -6,12 +6,12 @@ ms.date: 06/04/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 프로 모션 API, ad 캠페인
 ms.localizationpriority: medium
-ms.openlocfilehash: 74afbda1cc93aa0602618d6d94efe6baadf59ecb
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 2be721137e6c09913eafd2c58bab07f1ae6f2728
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363706"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878516"
 ---
 # <a name="run-ad-campaigns-using-store-services"></a>스토어 서비스를 사용 하 여 ad 캠페인 실행
 
@@ -23,7 +23,7 @@ ms.locfileid: "89363706"
 2.  Microsoft Store 프로 모션 API에서 메서드를 호출 하기 전에 [AZURE AD 액세스 토큰을 가져옵니다](#obtain-an-azure-ad-access-token). 토큰을 가져온 후에는 토큰이 만료 되기 전에 Microsoft Store 프로 모션 API에 대 한 호출에서이 토큰을 사용 하는 데 60 분이 소요 됩니다. 토큰이 만료 된 후 새 토큰을 생성할 수 있습니다.
 3.  [Microsoft Store 프로 모션 API를 호출](#call-the-windows-store-promotions-api)합니다.
 
-또는 파트너 센터를 사용 하 여 ad 캠페인을 만들고 관리할 수 있으며, Microsoft Store 프로 모션 API를 통해 프로그래밍 방식으로 만드는 모든 ad 캠페인은 파트너 센터 에서도 액세스할 수 있습니다. 파트너 센터에서 ad 캠페인을 관리 하는 방법에 대 한 자세한 내용은 [앱에 대 한 광고 캠페인 만들기](../publish/create-an-ad-campaign-for-your-app.md)를 참조 하세요.
+또는 파트너 센터를 사용 하 여 ad 캠페인을 만들고 관리할 수 있으며, Microsoft Store 프로 모션 API를 통해 프로그래밍 방식으로 만드는 모든 ad 캠페인은 파트너 센터 에서도 액세스할 수 있습니다. 파트너 센터에서 ad 캠페인을 관리 하는 방법에 대 한 자세한 내용은 [앱에 대 한 광고 캠페인 만들기](./index.md)를 참조 하세요.
 
 > [!NOTE]
 > 파트너 센터 계정이 있는 개발자는 Microsoft Store 프로 모션 API를 사용 하 여 앱에 대 한 광고 캠페인을 관리할 수 있습니다. 또한 미디어 기관은이 API에 대 한 액세스를 요청 하 여 광고주를 대신 하 여 ad 캠페인을 실행할 수 있습니다. 이 API에 대 한 자세한 정보를 알고자 하거나 액세스를 요청 하는 미디어 에이전시 인 경우에 요청을 보냅니다 storepromotionsapi@microsoft.com .
@@ -34,7 +34,7 @@ ms.locfileid: "89363706"
 
 Microsoft Store 프로 모션 API를 호출 하는 코드 작성을 시작 하기 전에 다음 필수 구성 요소를 완료 했는지 확인 합니다.
 
-* 이 API를 사용 하 여 ad 캠페인을 성공적으로 만들고 시작 하려면 먼저 [파트너 센터의 **ad 캠페인** 페이지를 사용 하 여 유료 ad 캠페인을 만들고](../publish/create-an-ad-campaign-for-your-app.md)이 페이지에서 결제 방법을 하나 이상 추가 해야 합니다. 이 작업을 수행한 후에는이 API를 사용 하 여 광고 캠페인에 대해 청구 가능한 배달 줄을 성공적으로 만들 수 있습니다. 이 API를 사용 하 여 만든 ad 캠페인의 배달 줄은 파트너 센터의 **ad 캠페인** 페이지에서 선택한 기본 결제 방법을 자동으로 청구 합니다.
+* 이 API를 사용 하 여 ad 캠페인을 성공적으로 만들고 시작 하려면 먼저 [파트너 센터의 **ad 캠페인** 페이지를 사용 하 여 유료 ad 캠페인을 만들고](./index.md)이 페이지에서 결제 방법을 하나 이상 추가 해야 합니다. 이 작업을 수행한 후에는이 API를 사용 하 여 광고 캠페인에 대해 청구 가능한 배달 줄을 성공적으로 만들 수 있습니다. 이 API를 사용 하 여 만든 ad 캠페인의 배달 줄은 파트너 센터의 **ad 캠페인** 페이지에서 선택한 기본 결제 방법을 자동으로 청구 합니다.
 
 * 사용자(또는 조직)는 Azure AD 디렉터리가 있어야 하고 디렉터리에 대한 [전역 관리자](/azure/active-directory/users-groups-roles/directory-assign-admin-roles) 권한이 있어야 합니다. Microsoft에서 이미 Microsoft 365 또는 다른 비즈니스 서비스를 사용 하는 경우 Azure AD 디렉터리가 이미 있습니다. 그렇지 않으면 추가 비용 없이 [파트너 센터에서 새 AZURE AD를 만들](../publish/associate-azure-ad-with-partner-center.md#create-a-brand-new-azure-ad-to-associate-with-your-partner-center-account) 수 있습니다.
 
@@ -86,7 +86,7 @@ Microsoft Store 프로 모션 API의 컨텍스트에서 ad 캠페인은 캠페�
 이러한 개체 및 관련 메서드에 대 한 자세한 내용은 다음 표를 참조 하십시오.
 
 
-| Object       | Description   |
+| Object       | 설명   |
 |---------------|-----------------|
 | 캠페인 |  이 개체는 ad 캠페인을 나타내며, 광고 캠페인의 개체 모델 계층 구조 맨 위에 있습니다. 이 개체는 실행 중인 캠페인 유형 (유료, 집 또는 커뮤니티), 캠페인 목표, 캠페인의 배달 선 및 기타 세부 정보를 식별 합니다. 각 캠페인은 하나의 앱에만 연결할 수 있습니다.<br/><br/>이 개체와 관련 된 메서드에 대 한 자세한 내용은 [ad 캠페인 관리](manage-ad-campaigns.md)를 참조 하세요.<br/><br/>**Note** &nbsp; 참고 &nbsp; 광고 캠페인을 만든 후 [Microsoft Store 분석 API](access-analytics-data-using-windows-store-services.md)에서 [ad 캠페인 성능 데이터 가져오기](get-ad-campaign-performance-data.md) 방법을 사용 하 여 캠페인에 대 한 성능 데이터를 검색할 수 있습니다.  |
 | 배달 라인 | 모든 캠페인에는 재고를 구입 하 고 광고를 배달 하는 데 사용 되는 하나 이상의 배달 회선이 있습니다. 각 배달 라인에 대해 대상을 설정 하 고, 입찰 가격을 설정 하 고, 사용 하려는 creatives에 대 한 예산 및 링크를 설정 하 여 비용을 결정 하는 데 사용할 수 있습니다.<br/><br/>이 개체와 관련 된 메서드에 대 한 자세한 내용은 [ad 캠페인의 배달 선 관리](manage-delivery-lines-for-ad-campaigns.md)를 참조 하세요. |

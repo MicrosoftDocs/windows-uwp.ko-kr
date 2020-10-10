@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bb9c6a43b9411b2297cc4cbf35dfdb2177e5dab7
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ea0fe6f29059a2b9ef8e5ce728d883d5349d0468
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155377"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878426"
 ---
 # <a name="advertising-performance-report"></a>광고 성과 보고서
 
@@ -59,8 +59,8 @@ ms.locfileid: "89155377"
 | 클릭  |  앱에서 사용자가 광고를 클릭 한 횟수입니다. |
 | CTR  |  광고를 클릭 한 횟수를 의미의 수로 나눈 값을 클릭 하 여 평가 합니다. |
 | Viewability | 앱에서 볼 수 있는 광고 광고의 백분율입니다. 이 값을 계산 하는 방법에 대 한 자세한 내용은 [ad 단위의 Viewability 최적화](../monetize/optimize-ad-unit-viewability.md)를 참조 하세요. |
-| 크레딧 획득  | [커뮤니티 ad](./about-community-ads.md) 캠페인을 실행 하는 경우 앱에 커뮤니티 광고를 표시 하 여 ad 공간 홍보를 위해 획득 한 크레딧 수를 나타냅니다.  |
-| 크레딧을 소비한 시간  | [커뮤니티 ad](./about-community-ads.md) 캠페인을 실행 하는 경우 앱에 대 한 광고에 사용한 크레딧 수를 나타냅니다.  |
+| 크레딧 획득  | [커뮤니티 ad](../monetize/index.md) 캠페인을 실행 하는 경우 앱에 커뮤니티 광고를 표시 하 여 ad 공간 홍보를 위해 획득 한 크레딧 수를 나타냅니다.  |
+| 크레딧을 소비한 시간  | [커뮤니티 ad](../monetize/index.md) 캠페인을 실행 하는 경우 앱에 대 한 광고에 사용한 크레딧 수를 나타냅니다.  |
 
 ## <a name="related-topics"></a>관련 항목
 

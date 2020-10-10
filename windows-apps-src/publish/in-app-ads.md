@@ -6,12 +6,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c8d01042fec7435652c819f29e3a791a5623a947
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 724a9b6bc34d38a5addfd0e0123f26e1d98c9caf
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220266"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878596"
 ---
 # <a name="in-app-ads"></a>앱 내 광고
 
@@ -48,7 +48,7 @@ ms.locfileid: "91220266"
 6. 필요에 따라 다음과 같은 추가 설정을 구성 합니다.
 
     * Ad 장치에 대 한 **UWP (Windows 10)** 장치 패밀리를 선택 하는 경우 필요에 따라 ad 단위에 대 한 [중재 설정을](#mediation) 구성할 수 있습니다.
-    * 배너 광고 단위에 대 한 **PC/태블릿 (Windows 8.1)** 또는 **모바일 (Windows Phone .x)** 장치 제품군을 선택 하는 경우 **앱에서 커뮤니티 광고 표시** 를 선택 하 여 [커뮤니티 광고](about-community-ads.md)를 옵트인 할 수 있습니다.
+    * 배너 광고 단위에 대 한 **PC/태블릿 (Windows 8.1)** 또는 **모바일 (Windows Phone .x)** 장치 제품군을 선택 하는 경우 **앱에서 커뮤니티 광고 표시** 를 선택 하 여 [커뮤니티 광고](../monetize/index.md)를 옵트인 할 수 있습니다.
 
 7.  선택한 앱에 대 한 COPPA 준수를 아직 설정 하지 않은 경우 [COPPA 준수](#coppa) 섹션에서 옵션을 선택 합니다.
 8.  **Ad 단위 만들기**를 클릭 합니다.
@@ -115,7 +115,7 @@ UWP ad 단위에 대 한 [중재 설정](#mediation) 또는 ad 단위가 사용 
 |--------------|---------------|---------------------|
 | Oath 및 AppNexus |  파트너 네트워크, Oath 및 AppNexus를 통해 광고를 제공 하는 Microsoft 관리 ad 네트워크입니다.<p/>**참고**: Oath 및 appnexus는 항상 배너 광고 단위에 대 한 **유료 ad 네트워크** 목록에서 순위가 지정 되며, 이러한 유형의 광고에 대해 더 낮은 순위를 변경할 수 없습니다. | 배너, 비디오 중간 |
 | AppNexus (직접) | [Appnexus](https://www.appnexus.com)에서 광고를 제공 하려면이 옵션을 선택 합니다. | 비디오 중간, 기본  |
-| Microsoft 앱 설치 광고 | 앱 [에 대 한 프로 모션 광고 캠페인을 만드는](create-an-ad-campaign-for-your-app.md)Windows 에코 시스템의 다른 개발자가 만든 앱 설치 광고 또는 앱 재 engagement 광고를 제공 하려면이 옵션을 선택 합니다.  |  배너, 배너 중간, 네이티브  |
+| Microsoft 앱 설치 광고 | 앱 [에 대 한 프로 모션 광고 캠페인을 만드는](../monetize/index.md)Windows 에코 시스템의 다른 개발자가 만든 앱 설치 광고 또는 앱 재 engagement 광고를 제공 하려면이 옵션을 선택 합니다.  |  배너, 배너 중간, 네이티브  |
 | MSN 콘텐츠 권장 사항 |  MSN 콘텐츠 권장 사항의 광고를 제공 하려면이 옵션을 선택 합니다. |  배너, 배너 중간  |
 | Outbrain |  [Outbrain](https://www.outbrain.com/)의 광고를 제공 하려면이 옵션을 선택 합니다. |  배너, 배너 중간  |
 | Revcontent |  [Revcontent](https://www.revcontent.com/)에서 광고를 제공 하려면이 옵션을 선택 합니다. |  배너, 네이티브  |
@@ -135,8 +135,8 @@ UWP ad 단위에 대 한 [중재 설정](#mediation) 또는 ad 단위가 사용 
 
 |  Ad 네트워크  |  설명  |  지원 되는 ad 유형  |
 |--------------|---------------|---------------------|
-| Microsoft 커뮤니티 광고 |  앱 중 [하나에 대 한 판촉 광고 캠페인을 만들고](create-an-ad-campaign-for-your-app.md) 이 캠페인을 [커뮤니티 ad 캠페인](about-community-ads.md)으로 구성 하는 경우이 캠페인의 광고를 표시 하려면이 옵션을 선택 합니다. | 배너, 배너 중간 |
-| Microsoft 사내 광고 | [앱 중 하나에 대 한 판촉 광고 캠페인을 만들고](create-an-ad-campaign-for-your-app.md) 이 캠페인을 [집 광고 캠페인](about-house-ads.md)으로 구성 하는 경우이 옵션을 선택 하 여이 캠페인의 광고를 표시 합니다. | 배너, 배너 중간  |
+| Microsoft 커뮤니티 광고 |  앱 중 [하나에 대 한 판촉 광고 캠페인을 만들고](../monetize/index.md) 이 캠페인을 [커뮤니티 ad 캠페인](../monetize/index.md)으로 구성 하는 경우이 캠페인의 광고를 표시 하려면이 옵션을 선택 합니다. | 배너, 배너 중간 |
+| Microsoft 사내 광고 | [앱 중 하나에 대 한 판촉 광고 캠페인을 만들고](../monetize/index.md) 이 캠페인을 [집 광고 캠페인](../monetize/index.md)으로 구성 하는 경우이 옵션을 선택 하 여이 캠페인의 광고를 표시 합니다. | 배너, 배너 중간  |
 
 
 <span id="network-markets" />

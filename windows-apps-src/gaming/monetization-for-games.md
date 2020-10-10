@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, 수익 화
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f2d5ceef5ef15ac81e43447e24e2eaf61e4a22a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c827c257947ea0f365bafe497e627841b501d40d
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159367"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878586"
 ---
 #  <a name="monetization-for-games"></a>게임의 수익 창출
 
@@ -213,15 +213,15 @@ Unity를 사용 하 여 만든 Windows 10 UWP 게임에 AdDuplex SDK를 통합 �
 
 ## <a name="maximize-your-games-potential-through-ad-campaigns"></a>광고 캠페인을 통해 게임 잠재력 극대화
 
-광고를 사용 하 여 게임을 홍보 하는 다음 단계를 수행 합니다. 게임에 대 한 [광고 캠페인을 만들](../publish/create-an-ad-campaign-for-your-app.md) 때 다른 앱 및 게임은 게임을 홍보 하는 광고를 표시 합니다.
+광고를 사용 하 여 게임을 홍보 하는 다음 단계를 수행 합니다. 게임에 대 한 [광고 캠페인을 만들](../monetize/index.md) 때 다른 앱 및 게임은 게임을 홍보 하는 광고를 표시 합니다.
 
 게이머 기반을 높이는 데 도움이 될 수 있는 여러 유형의 캠페인 중에서 선택 합니다.
 
 |캠페인 유형             | 게임의 광고가 다음에 표시 됩니다.                                                                                                                                                                   |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |유료                      |게임의 장치 또는 범주와 일치 하는 앱                                                                                                                                                   |
-|무료 커뮤니티            |커뮤니티 ad 캠페인이 옵트인 된 다른 개발자가 게시 한 앱입니다. 자세한 내용은 [커뮤니티 광고 정보](../publish/about-community-ads.md)를 참조 하세요.|
-|무료 집                |게시 한 앱만 자세한 내용은 [사내 광고 정보](../publish/about-house-ads.md)를 참조 하세요.                                                            |
+|무료 커뮤니티            |커뮤니티 ad 캠페인이 옵트인 된 다른 개발자가 게시 한 앱입니다. 자세한 내용은 [커뮤니티 광고 정보](../monetize/index.md)를 참조 하세요.|
+|무료 집                |게시 한 앱만 자세한 내용은 [사내 광고 정보](../monetize/index.md)를 참조 하세요.                                                            |
 
 ## <a name="related-links"></a>관련 링크
 

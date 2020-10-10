@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: eab81d7a2898b76ed241a985c953849ed581d804
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c095e48e24a06caf9e31066b21f9e2b023ed51cf
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156677"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878476"
 ---
 # <a name="toast-content-schema"></a>알림 콘텐츠 스키마
 
@@ -21,7 +21,7 @@ ms.locfileid: "89156677"
 
 다음은 알림 콘텐츠에 있는 모든 속성 및 요소에 대 한 설명입니다.
 
-[알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)대신 원시 xml을 사용 하는 경우 [xml 스키마](toast-xml-schema.md)를 참조 하세요.
+[알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)대신 원시 xml을 사용 하는 경우 [xml 스키마]()를 참조 하세요.
 
 [Toa 내용](#toastcontent)
 * [Toa 시각적 개체](#toastvisual)
@@ -38,9 +38,9 @@ ms.locfileid: "89156677"
 ## <a name="toastcontent"></a>Toa 내용
 To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘텐츠를 설명 하는 최상위 수준 개체입니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
-| **시작한**| 문자열 | false | 알림 메시지를 활성화할 때 응용 프로그램에 전달 되는 문자열입니다. 이 문자열의 형식과 내용은 앱에서 자체 사용을 위해 정의 됩니다. 사용자가 연결 된 앱을 시작 하는 알림 메시지를 탭 하거나 클릭 하면 시작 문자열은 앱에 컨텍스트를 제공 하 여 기본 방식으로 시작 하는 대신 알림 콘텐츠와 관련 된 보기를 사용자에 게 표시할 수 있도록 합니다. |
+| **Launch**| 문자열 | false | 알림 메시지를 활성화할 때 응용 프로그램에 전달 되는 문자열입니다. 이 문자열의 형식과 내용은 앱에서 자체 사용을 위해 정의 됩니다. 사용자가 연결 된 앱을 시작 하는 알림 메시지를 탭 하거나 클릭 하면 시작 문자열은 앱에 컨텍스트를 제공 하 여 기본 방식으로 시작 하는 대신 알림 콘텐츠와 관련 된 보기를 사용자에 게 표시할 수 있도록 합니다. |
 | **시각적 개체** | [Toa 시각적 개체](#toastvisual) | true | 알림 메시지의 시각적 부분을 설명 합니다. |
 | **actions** | [Ito Actions](#itoastactions) | false | 필요에 따라 단추 및 입력을 사용 하 여 사용자 지정 작업을 만듭니다. |
 | **오디오** | [To... 오디오](#toastaudio) | false | 알림 메시지의 오디오 부분에 대해 설명 합니다. |
@@ -48,7 +48,7 @@ To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘
 | **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | false | 작성자의 새로운 업데이트: 알림 활성화와 관련 된 추가 옵션입니다. |
 | **시나리오** | [To 시나리오](#toastscenario) | false | 경보가 나 미리 알림과 같이 알림이 사용 되는 시나리오를 선언 합니다. |
 | **DisplayTimestamp** | DateTimeOffset? | false | 작성자의 새로운 항목 업데이트: Windows 플랫폼에서 알림을 받은 시간이 아니라 알림 콘텐츠가 실제로 전달 된 시기를 나타내는 사용자 지정 타임 스탬프를 사용 하 여 기본 타임 스탬프를 재정의 합니다. |
-| **머리글** | [ToastHeader](#toastheader) | false | 작성자의 새로운 기능 업데이트: 알림에 사용자 지정 헤더를 추가 하 여 알림 센터 내에서 여러 알림을 그룹화 합니다. |
+| **Header** | [ToastHeader](#toastheader) | false | 작성자의 새로운 기능 업데이트: 알림에 사용자 지정 헤더를 추가 하 여 알림 센터 내에서 여러 알림을 그룹화 합니다. |
 
 
 ### <a name="toastscenario"></a>To 시나리오
@@ -65,7 +65,7 @@ To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘
 ## <a name="toastvisual"></a>Toa 시각적 개체
 알림을의 시각적 개체에는 텍스트, 이미지, 적응 콘텐츠 등을 포함 하는 바인딩이 포함 되어 있습니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
 | **BindingGeneric** | [To Bindinggeneric](#toastbindinggeneric) | true | 모든 장치에서 렌더링할 수 있는 일반 알림 바인딩입니다. 이 바인딩은 필수 이며 null 일 수 없습니다. |
 | **BaseUri** | URI | false | 이미지 원본 특성의 상대 Url과 결합 된 기본 URL입니다. |
@@ -76,7 +76,7 @@ To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘
 ## <a name="toastbindinggeneric"></a>To Bindinggeneric
 제네릭 바인딩은 알림을의 기본 바인딩이 며 텍스트, 이미지, 적응 콘텐츠 등을 지정 합니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
 | **Children** | IList<[Ito Bindinggenericchild](#itoastbindinggenericchild)> | false | 텍스트, 이미지 및 그룹 (기념일 업데이트에 추가)을 포함할 수 있는 알림 본문의 내용입니다. 텍스트 요소는 다른 요소 앞에와 야 하며 텍스트 요소 3 개만 지원 됩니다. 텍스트 요소가 다른 요소 뒤에 배치 되는 경우에는 맨 위에 배치 되거나 삭제 됩니다. 마지막으로 HintStyle 등의 특정 텍스트 속성은 루트 자식 텍스트 요소에서 지원 되지 않으며 AdaptiveSubgroup 내부 에서만 작동 합니다. 기념일 업데이트 없이 장치에서 AdaptiveGroup를 사용 하는 경우 그룹 콘텐츠는 삭제 됩니다. |
 | **AppLogoOverride** | [To Genericogo](#toastgenericapplogo) | false | 앱 로고를 재정의 하는 선택적 로고입니다. |
@@ -101,7 +101,7 @@ To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘
 ## <a name="adaptivetext"></a>AdaptiveText
 적응 텍스트 요소입니다. 최상위 수준에 배치 되 면 HintMaxLines만 적용 됩니다. 그러나이를 그룹/하위 그룹의 자식으로 배치 하면 전체 텍스트 스타일이 지원 됩니다.
 
-| 속성 | 유형 | 필수 |Description |
+| 속성 | 유형 | 필수 |설명 |
 |---|---|---|---|
 | **Text** | string 또는 [Bindablestring](#bindablestring) | false | 표시할 텍스트입니다. 데이터 바인딩 지원은 작성자 업데이트에 추가 되지만 최상위 텍스트 요소에 대해서만 작동 합니다. |
 | **HintStyle** | [AdaptiveTextStyle](#adaptivetextstyle) | false | 스타일은 텍스트의 글꼴 크기, 두께 및 불투명도를 제어 합니다. 그룹/하위 그룹 내의 텍스트 요소에 대해서만 작동 합니다. |
@@ -115,7 +115,7 @@ To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘
 ### <a name="bindablestring"></a>BindableString
 문자열에 대 한 바인딩 값입니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
 | **BindingName** | 문자열 | true | 바인딩 데이터 값에 매핑되는 이름을 가져오거나 설정 합니다. |
 
@@ -125,7 +125,7 @@ To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘
 
 | 값 | 의미 |
 |---|---|
-| **기본값** | 기본값. 스타일은 렌더러에 의해 결정 됩니다. |
+| **기본값** | 기본값입니다. 스타일은 렌더러에 의해 결정 됩니다. |
 | **캡션** | 단락 글꼴 크기 보다 작습니다. |
 | **CaptionSubtle** | 캡션과 동일 하지만 미세한 불투명도가 있습니다. |
 | **본문** | 단락 글꼴 크기입니다. |
@@ -140,7 +140,7 @@ To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘
 | **Subheader.aboutdocs** | H2 글꼴 크기입니다. |
 | **SubheaderSubtle** | Subheader와 동일 하지만 미묘한 불투명도가 있습니다. |
 | **SubheaderNumeral** | 하위 헤더와 동일 하지만 위쪽/아래쪽 안쪽 여백이 제거 되었습니다. |
-| **머리글** | H1 글꼴 크기입니다. |
+| **Header** | H1 글꼴 크기입니다. |
 | **HeaderSubtle** | 헤더와 동일 하지만 미묘한 불투명도가 있습니다. |
 | **HeaderNumeral** | 헤더와 동일 하지만 위쪽/아래쪽 안쪽 여백이 제거 되었습니다. |
 
@@ -150,7 +150,7 @@ To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘
 
 | 값 | 의미 |
 |---|---|
-| **기본값** | 기본값. 렌더러에 의해 맞춤이 자동으로 결정 됩니다. |
+| **기본값** | 기본값입니다. 렌더러에 의해 맞춤이 자동으로 결정 됩니다. |
 | **자동** | 현재 언어 및 문화권에 따라 결정 되는 맞춤입니다. |
 | **비어** | 텍스트를 왼쪽에 가로로 맞춥니다. |
 | **중심과** | 가운데에 텍스트를 가로로 맞춥니다. |
@@ -160,7 +160,7 @@ To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘
 ## <a name="adaptiveimage"></a>AdaptiveImage
 인라인 이미지입니다.
 
-| 속성 | 유형 | 필수 |Description |
+| 속성 | 유형 | 필수 |설명 |
 |---|---|---|---|
 | **원본** | 문자열 | true | 이미지에 대 한 URL입니다. appdata 및 http가 지원 됩니다. 가 중 작성자 업데이트를 기준으로 웹 이미지는 일반 연결의 경우 최대 3mb, 요금제 연결의 경우 1mb가 될 수 있습니다. 아직가 중 작성자 업데이트를 실행 하지 않는 장치에서는 웹 이미지가 200 KB 보다 크지 않아야 합니다. |
 | **HintCrop** | [AdaptiveImageCrop](#adaptiveimagecrop) | false | 기념일 업데이트: 원하는 이미지 자르기를 제어 합니다. |
@@ -175,7 +175,7 @@ To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘
 
 | 값 | 의미 |
 |---|---|
-| **기본값** | 기본값. 렌더러에 의해 결정 되는 자르기 동작입니다. |
+| **기본값** | 기본값입니다. 렌더러에 의해 결정 되는 자르기 동작입니다. |
 | **없음** | 이미지가 잘리지 않습니다. |
 | **Circle** | 이미지가 원 모양으로 잘립니다. |
 
@@ -185,7 +185,7 @@ To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘
 
 | 값 | 의미 |
 |---|---|
-| **기본값** | 기본값. 렌더러에 의해 결정 되는 맞춤 동작입니다. |
+| **기본값** | 기본값입니다. 렌더러에 의해 결정 되는 맞춤 동작입니다. |
 | **Stretch** | 이미지가 배치 된 위치에 따라 사용 가능한 너비를 채우도록 이미지를 확장 하 고 잠재적으로 사용 가능한 높이도 늘립니다. |
 | **비어** | 이미지를 왼쪽에 맞추고 이미지를 네이티브 해상도로 표시 합니다. |
 | **중심과** | 이미지를 가로로 가운데에 맞추고 이미지를 네이티브 해상도로 displayign 합니다. |
@@ -195,7 +195,7 @@ To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘
 ## <a name="adaptivegroup"></a>AdaptiveGroup
 기념일 업데이트: 그룹 의미 체계는 그룹의 콘텐츠가 전체로 표시 되어야 하는지 아니면 표시 되지 않을 지 여부를 확인 합니다. 그룹을 사용 하 여 여러 열을 만들 수도 있습니다.
 
-| 속성 | 유형 | 필수 |Description |
+| 속성 | 유형 | 필수 |설명 |
 |---|---|---|---|
 | **Children** | IList<[AdaptiveSubgroup](#adaptivesubgroup)> | false | 하위 그룹은 세로 열로 표시 됩니다. 하위 그룹을 사용 하 여 AdaptiveGroup 내에 콘텐츠를 제공 해야 합니다. |
 
@@ -203,7 +203,7 @@ To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘
 ## <a name="adaptivesubgroup"></a>AdaptiveSubgroup
 기념일 업데이트: 하위 그룹은 텍스트와 이미지를 포함할 수 있는 세로 세로 막대입니다.
 
-| 속성 | 유형 | 필수 |Description |
+| 속성 | 유형 | 필수 |설명 |
 |---|---|---|---|
 | **Children** | IList<[IAdaptiveSubgroupChild](#iadaptivesubgroupchild)> | false | [AdaptiveText](#adaptivetext) 및 [AdaptiveImage](#adaptiveimage) 는 하위 그룹의 유효한 하위 그룹입니다. |
 | **HintWeight** | int? | false | 다른 하위 그룹을 기준으로 가중치를 지정 하 여이 하위 그룹 열의 너비를 제어 합니다. |
@@ -224,7 +224,7 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 
 | 값 | 의미 |
 |---|---|
-| **기본값** | 기본값. 렌더러는 기본 세로 맞춤을 자동으로 선택 합니다. |
+| **기본값** | 기본값입니다. 렌더러는 기본 세로 맞춤을 자동으로 선택 합니다. |
 | **상위** | 세로를 위쪽에 맞춥니다. |
 | **중심과** | 세로를 가운데에 맞춥니다. |
 | **아래쪽** | 세로를 아래쪽에 맞춥니다. |
@@ -233,7 +233,7 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 ## <a name="adaptiveprogressbar"></a>AdaptiveProgressBar
 크리에이터 업데이트의 새로운 작업: 진행률 표시줄입니다. 데스크톱 알림을, 빌드 15063 이상 에서만 지원 됩니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
 | **제목** | string 또는 [Bindablestring](#bindablestring) | false | 선택적 제목 문자열을 가져오거나 설정 합니다. 데이터 바인딩을 지원 합니다. |
 | **값** | double 또는 [AdaptiveProgressBarValue](#adaptiveprogressbarvalue) 또는 [BindableProgressBarValue](#bindableprogressbarvalue) | false | 진행률 표시줄의 값을 가져오거나 설정 합니다. 데이터 바인딩을 지원 합니다. 기본값은 0입니다. |
@@ -244,7 +244,7 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 ### <a name="adaptiveprogressbarvalue"></a>AdaptiveProgressBarValue
 진행률 표시줄의 값을 나타내는 클래스입니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
 | **값** | double | false | 완료율을 나타내는 값 (0.0-1.0)을 가져오거나 설정 합니다. |
 | **IsIndeterminate 안 됨** | bool | false | 진행률 표시줄이 비활성화 되어 있는지 여부를 나타내는 값을 가져오거나 설정 합니다. True 이면 **값** 이 무시 됩니다. |
@@ -253,7 +253,7 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 ### <a name="bindableprogressbarvalue"></a>BindableProgressBarValue
 바인딩 가능한 진행률 표시줄 값입니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
 | **BindingName** | 문자열 | true | 바인딩 데이터 값에 매핑되는 이름을 가져오거나 설정 합니다. |
 
@@ -261,7 +261,7 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 ## <a name="toastgenericapplogo"></a>To Genericogo
 앱 로고 대신 표시 될 로고입니다.
 
-| 속성 | 유형 | 필수 |Description |
+| 속성 | 유형 | 필수 |설명 |
 |---|---|---|---|
 | **원본** | 문자열 | true | 이미지에 대 한 URL입니다. appdata 및 http가 지원 됩니다. Http 이미지는 200 KB이 하 여야 합니다. |
 | **HintCrop** | [ToastGenericAppLogoCrop](#toastgenericapplogocrop) | false | 이미지를 잘라내는 방법을 지정 합니다. |
@@ -282,7 +282,7 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 ## <a name="toastgenericheroimage"></a>ToastGenericHeroImage
 알림 및 작업 센터 내에 표시 되는 추천 "주인공" 이미지입니다.
 
-| 속성 | 유형 | 필수 |Description |
+| 속성 | 유형 | 필수 |설명 |
 |---|---|---|---|
 | **원본** | 문자열 | true | 이미지에 대 한 URL입니다. appdata 및 http가 지원 됩니다. Http 이미지는 200 KB이 하 여야 합니다. |
 | **AlternateText** | 문자열 | false | 내게 필요한 옵션을 위해 사용 되는 이미지를 설명 하는 대체 텍스트입니다. |
@@ -292,7 +292,7 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 ## <a name="toastgenericattributiontext"></a>ToastGenericAttributionText
 알림 메시지의 아래쪽에 표시 되는 특성 텍스트입니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
 | **Text** | 문자열 | true | 표시할 텍스트입니다. |
 | **언어** | 문자열 | false | 지역화 된 리소스를 사용 하는 경우 "en-us" 또는 "fr-fr"와 같은 BCP-47 언어 태그로 지정 된 시각적 페이로드의 대상 로캘입니다. 지정 하지 않으면 시스템 로캘이 대신 사용 됩니다. |
@@ -312,7 +312,7 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 
 단추, 텍스트 상자 및 선택 입력과 같은 컨트롤을 사용 하 여 사용자 지정 작업 및 입력을 만듭니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
 | **입력** | IList<[Ito input](#itoastinput)> | false | 텍스트 상자 및 선택 입력과 같은 입력 최대 5 개의 입력만 허용 됩니다. |
 | **단추** | IList<[Itoo 단추](#itoastbutton)> | false | 단추는 모든 입력 후 (또는 단추가 빠른 회신 단추로 사용 되는 경우 입력 옆에 표시 됨)에 표시 됩니다. 최대 5 개의 단추만 허용 됩니다 (또는 상황에 맞는 메뉴 항목이 있는 경우 더 적음). |
@@ -378,10 +378,10 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 
 사용자가 클릭할 수 있는 단추입니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
-| **콘텐츠** | 문자열 | true | 필수 요소. 단추에 표시할 텍스트입니다. |
-| **인수** | 문자열 | true | 필수 요소. 사용자가이 단추를 클릭 하면 나중에 앱에서 받을 수 있는 응용 프로그램 정의 인수의 문자열입니다. |
+| **콘텐츠** | 문자열 | true | 필수 사항입니다. 단추에 표시할 텍스트입니다. |
+| **인수** | 문자열 | true | 필수 사항입니다. 사용자가이 단추를 클릭 하면 나중에 앱에서 받을 수 있는 응용 프로그램 정의 인수의 문자열입니다. |
 | **ActivationType** | [ToastActivationType](#toastactivationtype) | false | 이 단추가 클릭 될 때 사용할 활성화 유형을 제어 합니다. 기본값은 전경입니다. |
 | **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | false | 작성자의 새로운 작업 업데이트: 알림 단추 활성화와 관련 된 추가 옵션을 가져오거나 설정 합니다. |
 
@@ -391,7 +391,7 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 
 | 값 | 의미 |
 |---|---|
-| **전경** | 기본값. 포그라운드 앱이 시작 됩니다. |
+| **전경** | 기본값입니다. 포그라운드 앱이 시작 됩니다. |
 | **배경** | 해당 하는 백그라운드 작업 (모든 항목을 설정 했다고 가정)이 트리거되고 사용자를 방해 하지 않고 백그라운드에서 코드를 실행할 수 있습니다 (예: 사용자의 빠른 회신 메시지 보내기). |
 | **프로토콜** | 프로토콜 활성화를 사용 하 여 다른 앱을 시작 합니다. |
 
@@ -399,7 +399,7 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 ### <a name="toastactivationoptions"></a>ToastActivationOptions
 크리에이터 업데이트의 새로운 옵션: 활성화와 관련 된 추가 옵션입니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
 | **AfterActivationBehavior** | [ToastAfterActivationBehavior](#toastafteractivationbehavior) | false | 새 사용자가 다음의 새 기능 작성자 업데이트: 사용자가이 작업을 호출할 때 toast에서 사용 해야 하는 동작을 가져오거나 설정 합니다. 이 기능은 바탕 화면, 즉 [Toa 단추](#toastbutton) 및 [To contextmenuitem](#toastcontextmenuitem)에 대해서만 작동 합니다. |
 | **ProtocolActivationTargetApplicationPfn** | 문자열 | false | *ToastActivationType*를 사용 하는 경우 대상 pfn을 선택적으로 지정할 수 있습니다. 따라서 동일한 프로토콜 uri를 처리 하도록 여러 앱을 등록 했는지 여부에 관계 없이 원하는 앱이 항상 시작 됩니다. |
@@ -419,7 +419,7 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 
 알림의 snoozing을 자동으로 처리 하는 시스템 처리 다시 알림 단추입니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
 | **CustomContent** | 문자열 | false | 지역화 된 기본 "다시 알림" 텍스트를 재정의 하는 단추에 표시 되는 선택적 사용자 지정 텍스트입니다. |
 
@@ -429,7 +429,7 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 
 클릭 하면 알림을 해제 하는 시스템 처리 해제 단추입니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
 | **CustomContent** | 문자열 | false | 지역화 된 기본 "해제" 텍스트를 재정의 하는 단추에 표시 되는 선택적 사용자 지정 텍스트입니다. |
 
@@ -439,7 +439,7 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 
 자동으로 다시 알림 간격에 대 한 선택 상자를 자동으로 생성 하 고, 자동으로 지역화 된 모든 자동으로 지역화 된 snoozing 논리를 시스템에서 자동으로 처리 합니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
 | **ContextMenuItems** | IList<[To Contextmenuitem](#toastcontextmenuitem)> | false | 기념일 업데이트: 사용자가 알림을 마우스 오른쪽 단추로 클릭 하는 경우 추가 작업을 제공 하는 사용자 지정 상황에 맞는 메뉴 항목입니다. 최대 5 개의 항목만 포함할 수 있습니다. |
 
@@ -447,10 +447,10 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 ## <a name="toastcontextmenuitem"></a>To Contextmenuitem
 상황에 맞는 메뉴 항목 항목입니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
-| **콘텐츠** | 문자열 | true | 필수 요소. 표시할 텍스트입니다. |
-| **인수** | 문자열 | true | 필수 요소. 사용자가 메뉴 항목을 클릭할 때 활성화 되 면 앱에서 나중에 검색할 수 있는 응용 프로그램 정의 인수의 문자열입니다. |
+| **콘텐츠** | 문자열 | true | 필수 사항입니다. 표시할 텍스트입니다. |
+| **인수** | 문자열 | true | 필수 사항입니다. 사용자가 메뉴 항목을 클릭할 때 활성화 되 면 앱에서 나중에 검색할 수 있는 응용 프로그램 정의 인수의 문자열입니다. |
 | **ActivationType** | [ToastActivationType](#toastactivationtype) | false | 이 메뉴 항목을 클릭할 때 사용할 활성화 유형을 제어 합니다. 기본값은 전경입니다. |
 | **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | false | 크리에이터 업데이트의 새로운 항목: 알림 상황에 맞는 메뉴 항목 활성화와 관련 된 추가 옵션입니다. |
 
@@ -458,7 +458,7 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 ## <a name="toastaudio"></a>To... 오디오
 알림 메시지를 받을 때 재생할 오디오를 지정 합니다.
 
-| 속성 | 유형 | 필수 | Description |
+| 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
 | **소스** | uri | false | 기본 사운드 대신 재생할 미디어 파일입니다. Ms-appx 및 ms appdata만 지원 됩니다. |
 | **실행** | boolean | false | 알림이 표시 되는 동안 소리가 반복 되 면 true로 설정 합니다. 한 번만 재생 하려면 false (기본값)입니다. |
