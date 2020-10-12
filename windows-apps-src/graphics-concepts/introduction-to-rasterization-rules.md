@@ -7,12 +7,12 @@ keywords:
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 38522be28280c0a08f6cb065e5dfb5c2f26642a8
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 75cb520f97f68c06f8861b90ce1068fb136bd374
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162797"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933154"
 ---
 # <a name="introduction-to-rasterization-rules"></a>래스터화 규칙 소개
 
@@ -42,11 +42,11 @@ Direct3D에서 사용 되는 삼각형 래스터화 규칙에 대 한 설명은 
 
 (0.5, 0.5)의 왼쪽 위 모퉁이와 오른쪽 아래 모퉁이 (2.5, 4.5)로 사각형을 정의 하는 경우이 사각형의 중심점은 (1.5, 2.5)입니다. Direct3D 래스터 라이저가이 사각형을 tessellates 각 픽셀의 중심은 각각 네 개의 삼각형 안에 명확 하지 않으며 왼쪽 위 채우기 규칙이 필요 하지 않습니다. 다음 그림에서는이를 보여 줍니다. 사각형의 픽셀은 Direct3D에 포함 된 삼각형에 따라 레이블이 지정 됩니다.
 
-![네 개의 삼각형으로 나뉘는 사각형을 포함 하는 번호가 매겨진 정사각형](images/noambig.png)
+![4 개의 삼각형으로 나뉘는 사각형을 포함 하는 숫자가 지정 된 사각형의 스크린샷](images/noambig.png)
 
 위의 그림에서 왼쪽 위 모퉁이가 (1.0, 1.0)에 있고 (3.0, 5.0)의 중심점 (2.0, 3.0)에 있는 중심점을 앞으로 이동 하는 경우 Direct3D는 왼쪽 위 채우기 규칙을 적용 합니다. 다음 그림에 나와 있는 것 처럼이 사각형의 픽셀 대부분은 두 개 이상의 삼각형 사이의 테두리를 걸쳐 있을 합니다.
 
-![네 개의 삼각형으로 나뉘는 사각형을 포함 하는 번호가 매겨진 정사각형](images/fillrule.png)
+![사각형이 아래로 이동 하 고 오른쪽으로 이동 하는 번호가 매겨진 사각형의 스크린샷](images/fillrule.png)
 
 두 사각형 모두에 대해 다음 그림과 같이 동일한 픽셀이 영향을 받습니다.
 

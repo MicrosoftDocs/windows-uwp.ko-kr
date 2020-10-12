@@ -1,17 +1,17 @@
 ---
-Description: 앱에서 피드백 허브를 시작 하 여 고객에 게 피드백을 남겨 두는 것이 좋습니다.
+description: 앱에서 피드백 허브를 시작 하 여 고객에 게 피드백을 남겨 두는 것이 좋습니다.
 title: 앱에서 피드백 허브 시작
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 피드백 허브, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: 71ecb104f1864eefcf1e38f793a4af53a977f693
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 511612911d180459bd7c732803d3a98e3d4580c8
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363106"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933134"
 ---
 # <a name="launch-feedback-hub-from-your-app"></a>앱에서 피드백 허브 시작
 
@@ -60,16 +60,16 @@ ms.locfileid: "89363106"
 
 피드백 허브를 시작 하려면 Segoe MDL2 자산 글꼴 및 문자 코드 E939에서 다음 표준 피드백 아이콘을 표시 하는 UI 요소를 앱에 추가 하는 것이 좋습니다 (예: 단추).
 
-![피드백 아이콘](images/feedback_icon.PNG)
+:::image type="icon" source="images/feedback_icon.PNG":::
 
 또한 앱에서 피드백 허브에 연결 하는 데 다음 배치 옵션 중 하나 이상을 사용 하는 것이 좋습니다.
 * **앱 바에서 직접**. 구현에 따라 아이콘만 사용 하거나 아래와 같이 텍스트를 추가할 수 있습니다.
 
-  ![피드백 아이콘](images/feedback_appbar_placement.png)
+  ![오른쪽 위 모서리에 피드백 아이콘이 있는 응용 프로그램의 스크린샷 옆에 레이블 피드백이 있습니다.](images/feedback_appbar_placement.png)
 
 * **앱의 설정에서**. 이 방법은 피드백 허브에 대 한 액세스를 제공 하는 보다 미묘한 방법입니다. 아래 예제에서는 피드백 링크가 앱 아래의 링크 중 하나로 표시 됩니다.
 
-  ![피드백 아이콘](images/feedback_settings_placement.png)
+  ![피드백 링크가 앱 아래에 표시 되는 설정 페이지의 스크린샷](images/feedback_settings_placement.png)
 
 * **이벤트 기반 플라이 아웃** 이는 Windows 피드백 허브로 시작 하기 전에 특정 질문에 대해 고객을 쿼리 하려는 경우에 유용 합니다. 예를 들어 앱이 특정 기능을 사용 하는 경우 해당 기능에 대 한 특정 질문을 고객에 게 표시할 수 있습니다. 고객이 응답을 선택 하는 경우 앱에서 피드백 허브를 시작 합니다.
 

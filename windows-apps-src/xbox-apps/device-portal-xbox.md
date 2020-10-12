@@ -6,12 +6,12 @@ ms.date: 04/09/2019
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: ed490b0474b919d4439e5b74b676d5974a3c6a30
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a7df29b6c1446d65c8e5224eede3030a25888364
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174787"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933174"
 ---
 # <a name="device-portal-for-xbox"></a>Xbox용 디바이스 포털
 
@@ -89,9 +89,9 @@ Xbox 장치 포털의 **네트워크** 페이지는 xbox 장치 포털에 고유
 
 보기 및/또는 편집을 위한 다양 한 설정이 포함 된 여러 섹션이 있습니다 .이에 대해서는 아래에서 설명 합니다.
 
-![설정](images/device-portal-xbox-20.png)
+![장치 정보 및 표시 설정 섹션을 보여 주는 설정 페이지의 스크린샷](images/device-portal-xbox-20.png)
 
-![설정](images/device-portal-xbox-21.png)
+![지역화 설정, 전원 설정 및 사용자 설정 섹션을 보여 주는 설정 페이지의 스크린샷 ](images/device-portal-xbox-21.png)
 
 #### <a name="device-information"></a>디바이스 정보
 

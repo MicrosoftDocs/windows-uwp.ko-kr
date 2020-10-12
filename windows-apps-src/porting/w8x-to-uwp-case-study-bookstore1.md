@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 98c74ac688707c6c80b9f3098760328fea0f852a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ff8e095fc46d2c08771f3e2e002fe2d8b602ab71
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174857"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933064"
 ---
 # <a name="windows-runtime-8x-to-uwp-case-study-bookstore1"></a>Windows 런타임 .x에서 UWP 사례 연구: Bookstore1
 
@@ -68,11 +68,11 @@ Visual Studio에서 새 프로젝트를 만들고, Bookstore1 81에서 파일에
 
 이제를 빌드하고 실행할 수 있습니다. 새 UWP 앱이 아직 Windows 10으로 이식할 수 있는 명시적인 작업을 수행 하지 않은 후에 표시 되는 방법은 다음과 같습니다.
 
-![초기 소스 코드가 변경 된 windows 10 앱](images/w8x-to-uwp-case-studies/c01-03-desk10-initial-source-code-changes.png)
+![명시적으로 변경 되지 않은 Windows 10 앱의 스크린샷](images/w8x-to-uwp-case-studies/c01-03-desk10-initial-source-code-changes.png)
 
 데스크톱 장치에서 실행 되는 초기 소스 코드 변경 내용이 포함 된 Windows 10 앱
 
-![초기 소스 코드가 변경 된 windows 10 앱](images/w8x-to-uwp-case-studies/c01-04-mob10-initial-source-code-changes.png)
+![초기 소스 코드를 변경 하는 Windows 10 앱의 스크린샷](images/w8x-to-uwp-case-studies/c01-04-mob10-initial-source-code-changes.png)
 
 모바일 장치에서 실행 되는 초기 소스 코드 변경 내용이 포함 된 Windows 10 앱
 
@@ -91,11 +91,11 @@ Bookstore1 \_ 81 앱은 두 가지 리소스 사전 (BookstoreStyles)을 사용 
 
 스타일 지정 작업의 마지막 시퀀스는 앱을 다음과 같이 그대로 둡니다.
 
-![거의 포팅 된 windows 10 앱](images/w8x-to-uwp-case-studies/c01-05-desk10-almost-ported.png)
+![스타일 지정 작업의 마지막 시퀀스를 사용 하는 앱의 스크린샷](images/w8x-to-uwp-case-studies/c01-05-desk10-almost-ported.png)
 
 데스크톱 장치에서 실행 되는 거의 포팅 된 Windows 10 앱
 
-![거의 포팅 된 windows 10 앱](images/w8x-to-uwp-case-studies/c01-06-mob10-almost-ported.png)
+![거의 포팅 된 windows 10 앱의 스크린샷](images/w8x-to-uwp-case-studies/c01-06-mob10-almost-ported.png)
 
 모바일 장치에서 실행 되는 거의 포팅 된 Windows 10 앱
 

@@ -5,12 +5,12 @@ ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ed23f77936378f2348abf868a67041be84978123
-ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
+ms.openlocfilehash: 62f1c6462e56b14396e3fdaed16221698c0333fd
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89304685"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933164"
 ---
 # <a name="move-from-a-desktop-application-to-uwp"></a>데스크톱 응용 프로그램에서 UWP로 이동
 
@@ -56,7 +56,7 @@ WPF, Windows Forms 또는 C++ Win32 데스크톱 앱에서 직접 여러 Windows
 
 데스크톱 응용 프로그램 프로젝트에서 클래스 라이브러리 프로젝트에 대 한 참조를 추가 합니다.
 
-![클래스 라이브러리 참조](images/desktop-to-uwp/class-library-reference.png)
+![Dot NET 프로젝트에 대 한 클래스 라이브러리 참조를 호출 하는 솔루션 탐색기 창의 스크린샷](images/desktop-to-uwp/class-library-reference.png)
 
 그런 다음 도구를 사용 하 여 표준에 맞는 코드의 양을 결정 합니다. 이렇게 하면 코드를 라이브러리로 이동 하기 전에 다시 사용할 수 있는 파트, 최소한의 수정이 필요한 파트 및 응용 프로그램에 관련 된 남은 부분을 결정할 수 있습니다.
 
@@ -186,7 +186,7 @@ UI 페이지를 XAML로 디자인 하 고 모든 장치 또는 플랫폼별 코�
 
 그런 다음 UWP 프로젝트에서 .NET Standard 2.0 라이브러리 프로젝트에 대 한 참조를 추가 합니다.
 
-![클래스 라이브러리 참조](images/desktop-to-uwp/class-library-reference2.png)
+![Dot NET 프로젝트의 클래스 라이브러리 참조에 대 한 참조를 호출 하는 UWP 솔루션 탐색기 창의 스크린샷](images/desktop-to-uwp/class-library-reference2.png)
 
 #### <a name="build-your-pages"></a>페이지 빌드
 
@@ -222,7 +222,7 @@ UWP를 시작 하려면 [uwp 앱 이란?](../get-started/universal-application-p
 
 Xamarin 프로젝트를 추가 하 여 Android 및 iOS 장치에 연결할 수 있습니다.  
 
-![Xamarin 앱](images/desktop-to-uwp/xamarin-apps.png)
+![Xamarin 앱을 표시 하는 Android 장치 및 i O S 장치를 표시 하는 이미지입니다.](images/desktop-to-uwp/xamarin-apps.png)
 
 이러한 프로젝트를 통해 c #을 사용 하 여 플랫폼별 및 장치별 Api에 대 한 모든 권한으로 Android 및 iOS 앱을 빌드할 수 있습니다. 이러한 앱은 플랫폼별 하드웨어 가속을 활용 하며 기본 성능에 맞게 컴파일됩니다.
 
@@ -236,14 +236,14 @@ UWPs와 마찬가지로 .NET Standard 2.0 클래스 라이브러리에서 비즈
 
 이러한 템플릿은 **새 프로젝트 추가** 대화 상자의 **Visual c #** 그룹에서 찾을 수 있습니다.
 
-![Xamarin 앱](images/desktop-to-uwp/xamarin-projects.png)
+![설치 된 Visual C를 표시 하는 새 프로젝트 추가 대화 상자의 스크린샷, Visual C + +를 선택한 > Visual C와 Android, 플랫폼 간 및 i O S 옵션 이라고 합니다.](images/desktop-to-uwp/xamarin-projects.png)
 
 >[!NOTE]
->플랫폼 간 프로젝트는 플랫폼에 한정 되지 않는 기능을 갖춘 앱에 적합 합니다. IOS, Android 및 Windows에서 실행 되는 하나의 네이티브 XAML 기반 UI를 빌드하는 데 사용할 수 있습니다. [여기](/xamarin/xamarin-forms/)에서 자세한 내용을 알아보세요.
+>플랫폼 간 프로젝트는 플랫폼에 한정 되지 않는 기능을 갖춘 앱에 적합 합니다. IOS, Android 및 Windows에서 실행 되는 하나의 네이티브 XAML 기반 UI를 빌드하는 데 사용할 수 있습니다. [여기](/xamarin/xamarin-forms/)를 참조하세요.
 
 그런 다음 Android, iOS 또는 플랫폼 간 프로젝트에서 클래스 라이브러리 프로젝트에 대 한 참조를 추가 합니다.
 
-![클래스 라이브러리 참조](images/desktop-to-uwp/class-library-reference3.png)
+![Android, i O S 또는 플랫폼 간 프로젝트에 대 한 클래스 라이브러리 참조에 대 한 참조를 호출 하는 솔루션 탐색기 창의 스크린샷](images/desktop-to-uwp/class-library-reference3.png)
 
 #### <a name="build-your-pages"></a>페이지 빌드
 

@@ -6,12 +6,12 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 배너, ad 컨트롤, 중간
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e9a67bb26d47d0bd9cc26c56df90efac5e2daa5
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c12d79b97010826b05bf42a9de46780dd2f93756
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164837"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933124"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK를 사용하여 앱에 광고 표시
 
@@ -46,7 +46,7 @@ Microsoft Advertising SDK를 사용 하 여 Windows 10 용 유니버설 Windows 
     <a href="native-ads.md">네이티브 광고</a>
     </td>
 <td align="left"><img src="images/api-reference.png" alt="API ref icon" /></td>
-<td align="left"><b>기타 리소스</b><br/><br/>
+<td align="left"><b>관련 자료</b><br/><br/>
     <a href="set-up-ad-units-in-your-app.md">앱에서 ad 단위 설정</a>
     <br/>
     <a href="best-practices-for-ads-in-apps.md">모범 사례</a>
@@ -71,7 +71,7 @@ Microsoft Advertising SDK는 앱에서 사용할 수 있는 여러 가지 유형
 
 지침 및 코드 예제는 [이 문서](adcontrol-in-xaml-and--net.md)를 참조 하세요.
 
-![addreferences](images/banner-ad.png)
+![태블릿에서 배너 광고를 보여주는 이미지입니다.](images/banner-ad.png)
 
 ### <a name="interstitial-video-and-interstitial-banner-ads"></a>중간 비디오 및 중간 배너 광고
 
@@ -79,7 +79,7 @@ Microsoft Advertising SDK는 앱에서 사용할 수 있는 여러 가지 유형
 
 지침 및 코드 예제는 [이 문서](interstitial-ads.md)를 참조 하세요.
 
-![addreferences](images/interstitial-ad.png)
+![태블릿에서 재생 중인 중간 광고를 보여주는 이미지입니다.](images/interstitial-ad.png)
 
 ### <a name="native-ads"></a>기본 광고
 
@@ -87,7 +87,7 @@ Microsoft Advertising SDK는 앱에서 사용할 수 있는 여러 가지 유형
 
 지침 및 코드 예제는 [이 문서](native-ads.md)를 참조 하세요.
 
-![addreferences](images/native-ad.png)
+![다양 한 장치에 표시 될 수 있는 기본 광고를 보여주는 이미지입니다.](images/native-ad.png)
 
 <span id="ad-mediation"/>
 

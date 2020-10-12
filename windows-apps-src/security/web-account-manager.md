@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 보안
 ms.assetid: ec9293a1-237d-47b4-bcde-18112586241a
 ms.localizationpriority: medium
-ms.openlocfilehash: 69e60d8ef919a05493f47f086ee992afe8bfeb4c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 0a67c88eb7eb70308e6dcbbd096289c0617793b1
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172837"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933074"
 ---
 # <a name="web-account-manager"></a>웹 계정 관리자
 
@@ -71,7 +71,7 @@ private void LoginButton_Click(object sender, RoutedEventArgs e)
 
 앱을 실행 하 고 "로그인" 단추를 클릭 하면 빈 창이 표시 됩니다. 
 
-![계정 설정 창](images/tb-1.png)
+![계정이 나열 되지 않은 계정 선택 창의 스크린샷](images/tb-1.png)
 
 시스템은 UI 셸만 제공 하므로 창이 비어 있습니다. 개발자는 프로그래밍 방식으로 id 공급자를 사용 하 여 창을 채울 수 있습니다. 
 
@@ -156,7 +156,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s,
 
 위의 코드를 실행 하면 창이 다음과 같이 표시 됩니다. 
 
-![계정 설정 창](images/tb-2.png)
+![계정이 나열 된 계정 선택 창의 스크린샷](images/tb-2.png)
 
 ### <a name="request-a-token"></a>토큰 요청
 
@@ -390,7 +390,7 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 }
 ```
 
-![계정 설정 창](images/tb-3.png)
+![계정이 나열 되지 않은 계정 선택 창의 스크린샷 및 로그인 하는 경우 내 놀라운 앱이 가장 잘 작동 한다는 메시지가 표시 됩니다.](images/tb-3.png)
 
 머리글 텍스트를 사용 하 여 과도 하 게 이동 하지 않습니다. 짧고 간단 하 게 유지 합니다. 로그인 프로세스가 복잡 하 고 자세한 정보를 표시 해야 하는 경우 사용자 지정 링크를 사용 하 여 별도의 페이지에 사용자를 연결 합니다. 
 
@@ -416,11 +416,11 @@ private async void BuildPaneAsync(AccountsSettingsPane s, AccountsSettingsPaneCo
 }
 ```
 
-![계정 설정 창](images/tb-4.png)
+![계정이 나열 되지 않은 계정 선택 창의 스크린샷 및 개인 정보 취급 방침에 대 한 링크입니다.](images/tb-4.png)
 
 이론적으로는 모든 항목에 대해 설정 명령을 사용할 수 있습니다. 그러나 위에서 설명한 것과 같은 직관적인 계정 관련 시나리오로 사용을 제한 하는 것이 좋습니다. 
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [Windows... i a.](/uwp/api/windows.security.authentication.web.core)
 

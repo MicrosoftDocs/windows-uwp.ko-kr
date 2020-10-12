@@ -5,12 +5,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: 시작, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: e832ac783c43058b24cb0d341d17ad52ff7dcc05
-ms.sourcegitcommit: 9940ed6431aadbd8d4e54ca23d8ae44d3a2d048d
+ms.openlocfilehash: 21eda55755682680109f0862775f2c3bf13adf2e
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91403888"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878575"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Windows 10 앱 시작
 
@@ -25,7 +25,7 @@ ms.locfileid: "91403888"
         <p style="margin-top: 0px; margin-bottom: 50px">Windows 10 및 유니버설 Windows 플랫폼에서는 모든 유형의 Windows 디바이스에서 작동하고 제대로 표시되는 앱을 빌드하거나, 최신 기능을 사용하여 기존 앱을 업데이트할 수 있습니다.</p>
         <br>
         <a href="//docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">Windows 앱이란?</a><br/>
-        <a href="https://docs.microsoft.com/windows/uwp/design/">디자인 및 UI</a><br/>
+        <a href="/windows/uwp/design/">디자인 및 UI</a><br/>
     :::column-end:::
     :::column:::
         <img src="https://docs.microsoft.com/media/illustrations/biztalk-host-integration-install-configure.svg" alt="Setup illustration" />

@@ -6,12 +6,12 @@ ms.date: 11/29/2017
 ms.topic: article
 keywords: Windows 10, uwp, 수익 창출, 참여, 프로모션, Microsoft Store 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: dd6262677cd548fa8e690fde5a90ab1f2662ea2a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f2516a1708948f0322d197bf4fdd524ede6ba0b0
+ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155647"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91878546"
 ---
 # <a name="monetization-engagement-and-store-services"></a>수익 창출, 참여 및 Microsoft Store 서비스
 
@@ -71,7 +71,7 @@ Microsoft Store에서 청구하는 수수료 및 앱으로 번 돈을 지급 받
 
 배너 광고, 중간 광고(배너 및 동영상), 선형 비디오 광고, 재생 가능한 광고, 기본 광고 등 대부분의 요구에 맞는 다양한 광고 환경을 지원합니다. 이 플랫폼은 OpenRTB, VAST 2.x, MRAID 2 및 VPAID 3 표준을 준수하며 MOAT 및 IAS와 호환됩니다.
 
-[광고 옵션 살펴보기](../publish/create-an-ad-campaign-for-your-app.md)
+[광고 옵션 살펴보기]()
 [광고 SDK 설치](https://marketplace.visualstudio.com/items?itemName=AdMediator.MicrosoftAdvertisingSDK)
     :::column-end:::
 :::row-end:::
