@@ -5,12 +5,12 @@ ms.date: 10/12/2020
 ms.topic: article
 keywords: 'windows 10, c #, winrt, cswinrt, 프로젝션'
 ms.localizationpriority: medium
-ms.openlocfilehash: 2558c37660559bb49263a5708d95ddf9086bf833
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: bc5c8e39b808fd1a8bc557fd29ba828d33d8dde4
+ms.sourcegitcommit: df4d99f9950655be725afa83f1ee7c3b73dff923
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/13/2020
-ms.locfileid: "91989171"
+ms.locfileid: "92001386"
 ---
 # <a name="walkthrough-generate-a-net-5-projection-from-a-cwinrt-component-and-distribute-the-nuget"></a>연습: c + +/WinRT 구성 요소에서 .NET 5 프로젝션을 생성 하 고 NuGet 배포
 
@@ -118,7 +118,6 @@ C + +/WinRT 구성 요소를 만들고 winmd 파일을 생성 하는 방법에 �
 
     ```xml
     <PropertyGroup>
-      <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
       <CsWinRTIncludes>SimpleMathComponent</CsWinRTIncludes>
       <CsWinRTGeneratedFilesDir>$(OutDir)</CsWinRTGeneratedFilesDir>
     </PropertyGroup>
@@ -126,7 +125,6 @@ C + +/WinRT 구성 요소를 만들고 winmd 파일을 생성 하는 방법에 �
 
     이 예의 설정에 대 한 자세한 내용은 다음과 같습니다.
 
-    - `AllowUnsafeBlocks`요소는 interop 코드를 사용할지 여부를 지정 합니다. 
     - `CsWinRTIncludes`속성은 프로젝트에 사용할 네임 스페이스를 지정 합니다.
     - `CsWinRTGeneratedFilesDir`속성은 프로젝션에서 파일이 생성 되는 출력 디렉터리를 설정 합니다 .이 디렉터리는 원본에서 빌드할 때 다음 섹션에서 설정 합니다.
 
