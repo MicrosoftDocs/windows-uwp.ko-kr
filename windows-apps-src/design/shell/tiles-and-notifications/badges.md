@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: dea3eebc253f46f5de888a0a37fea9d3ad1ac3df
-ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
+ms.openlocfilehash: a49d771b7efdbb7e787db0cbadea45c255a1120e
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860121"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984599"
 ---
 # <a name="badge-notifications-for-windows-apps"></a>Windows 앱에 대한 배지 알림
 
@@ -32,99 +32,29 @@ ms.locfileid: "91860121"
 
 ## <a name="numeric-badges"></a>숫자 배지
 
-<table>
-    <tr>
-        <th>값</th>
-        <th>배지</th>
-        <th>XML</th>
-    </tr>
-    <tr>
-        <td>1에서 99 사이의 숫자입니다. 값 0은 문자 모양 값 "none"과 같으며 배지를 지웁니다.</td>
-        <td><img src="images/badges/badge-numeric.png" alt="A numeric badge less than 100." /></td>
-        <td>`<badge value="1"/>`</td>
-    </tr>
-    <tr>
-        <td>99 보다 큰 숫자입니다.</td>
-        <td><img src="images/badges/badge-numeric-greater.png" alt="A numeric badge greater than 99." /></td></td>
-        <td>`<badge value="100"/>`</td>
-    </tr>    
-</table>
+값 | 배지 | XML
+--|--|--
+1에서 99 사이의 숫자입니다. 값 0은 문자 모양 값 "none"과 같으며 배지를 지웁니다. | <img src="images/badges/badge-numeric.png" alt="A numeric badge less than 100." /> | `<badge value="1"/>`
+99 보다 큰 숫자입니다. | <img src="images/badges/badge-numeric-greater.png" alt="A numeric badge greater than 99." /></td> | `<badge value="100"/>`
 
 ## <a name="glyph-badges"></a>문자 배지
 배지는 숫자 대신 확장 가능 하지 않은 상태 문자 집합 중 하나를 표시할 수 있습니다. 
 
-<table>
-<tr>
-    <th>상태</th>
-    <th>문자 모양</th>
-    <th>XML</th>
-</tr>
-<tr>
-    <td>없음</td>
-    <td>(배지는 표시 되지 않습니다.)</td>
-    <td>`<badge value="none"/>`</td>
-</tr>
-<tr>
-    <td>활동</td>
-    <td><img src="images/badges/badge-activity.png" alt="Screenshot of the activity glyph." /></td>
-    <td>`<badge value="activity"/>`</td>
-</tr>
-<tr>
-    <td>가진</td>
-    <td><img src="images/badges/badge-alarm.png" alt="Screenshot of the alarm glyph." /></td>
-    <td>`<badge value="alarm"/>`</td>
-</tr>
-<tr>
-    <td>경고</td>
-    <td><img src="images/badges/badge-alert.png" alt="Screenshot of the alert glyph." /></td>
-    <td>`<badge value="alert"/>`</td>
-</tr>
-<tr>
-    <td>attention</td>
-    <td><img src="images/badges/badge-attention.png" alt="Screenshot of the attention glyph." /></td>
-    <td>`<badge value="attention"/>`</td>
-</tr>
-<tr>
-    <td>사용 가능</td>
-    <td><img src="images/badges/badge-available.png" alt="Screenshot of the available glyph." /></td>
-    <td>`<badge value="available"/>`</td>
-</tr>
-<tr>
-    <td>away</td>
-    <td><img src="images/badges/badge-away.png" alt="Screenshot of the away glyph." /></td>
-    <td>`<badge value="away"/>`</td>
-</tr>
-<tr>
-    <td>busy</td>
-    <td><img src="images/badges/badge-busy.png" alt="Screenshot of the busy glyph." /></td>
-    <td>`<badge value="busy"/>`</td>
-</tr>
-<tr>
-    <td>error</td>
-    <td><img src="images/badges/badge-error.png" alt="Screenshot of the error glyph." /></td>
-    <td>`<badge value="error"/>`</td>
-</tr>
-<tr>
-    <td>newMessage</td>
-    <td><img src="images/badges/badge-newMessage.png" alt="Screenshot of the new message glyph." /></td>
-    <td>`<badge value="newMessage"/>`</td>
-</tr>
-<tr>
-    <td>paused</td>
-    <td><img src="images/badges/badge-paused.png" alt="Screenshot of the paused glyph." /></td>
-    <td>`<badge value="paused"/>`</td>
-</tr>
-<tr>
-    <td>playing</td>
-    <td><img src="images/badges/badge-playing.png" alt="Screenshot of the playing glyph." /></td>
-    <td>`<badge value="playing"/>`</td>
-</tr>
-<tr>
-    <td>unavailable</td>
-    <td><img src="images/badges/badge-unavailable.png" alt="Screenshot of the unavailable glyph" /></td>
-    <td>`<badge value="unavailable"/>`</td>
-</tr>
-</table>
+상태 | 문자 모양 | XML
+--|--|--
+없음 | (배지는 표시 되지 않습니다.) | `<badge value="none"/>`
+활동 | <img src="images/badges/badge-activity.png" alt="Glyph" /> | `<badge value="activity"/>`
+가진 | <img src="images/badges/badge-alarm.png" alt="Glyph" /> | `<badge value="alarm"/>`
+경고 | <img src="images/badges/badge-alert.png" alt="Glyph" /> | `<badge value="alert"/>`
+attention | <img src="images/badges/badge-attention.png" alt="Glyph" /> | `<badge value="attention"/>`
+사용 가능 | <img src="images/badges/badge-available.png" alt="Glyph" /> | `<badge value="available"/>`
+away | <img src="images/badges/badge-away.png" alt="Glyph" /> | `<badge value="away"/>`
+busy | <img src="images/badges/badge-busy.png" alt="Glyph" /> | `<badge value="busy"/>`
+error | <img src="images/badges/badge-error.png" alt="Glyph" /> | `<badge value="error"/>`
+newMessage | <img src="images/badges/badge-newMessage.png" alt="Glyph" /> | `<badge value="newMessage"/>`
+paused | <img src="images/badges/badge-paused.png" alt="Glyph" /> | `<badge value="paused"/>`
+playing | <img src="images/badges/badge-playing.png" alt="Glyph" /> | `<badge value="playing"/>`
+unavailable | <img src="images/badges/badge-unavailable.png" alt="Glyph" /> | `<badge value="unavailable"/>`</td>
 
 ## <a name="create-a-badge"></a>배지 만들기
 

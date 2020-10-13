@@ -7,12 +7,12 @@ ms.date: 12/07/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림, 진행률 표시줄, 알림 진행률 표시줄, 알림, 알림 데이터 바인딩
 ms.localizationpriority: medium
-ms.openlocfilehash: 4219154a3fe3241b9c1871c07a1fbbb2b63f2348
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8df76af7dd26792d8d1af0fa8641d76e007ef8e3
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174607"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984529"
 ---
 # <a name="toast-progress-bar-and-data-binding"></a>알림 진행률 표시줄 및 데이터 바인딩
 
@@ -32,7 +32,7 @@ ms.locfileid: "89174607"
 
 <img alt="Toast with progress bar properties labeled" src="images/toast-progressbar-annotated.png" width="626"/>
 
-| 속성 | 유형 | 필수 | 설명 |
+| 속성 | 유형 | 필수 | Description |
 |---|---|---|---|
 | **제목** | string 또는 [Bindablestring](toast-schema.md#bindablestring) | false | 선택적 제목 문자열을 가져오거나 설정 합니다. 데이터 바인딩을 지원 합니다. |
 | **값** | double 또는 [AdaptiveProgressBarValue](toast-schema.md#adaptiveprogressbarvalue) 또는 [BindableProgressBarValue](toast-schema.md#bindableprogressbarvalue) | false | 진행률 표시줄의 값을 가져오거나 설정 합니다. 데이터 바인딩을 지원 합니다. 기본값은 0입니다. 0.0에서 1.0, 또는 사이의 double 일 수 있습니다 `AdaptiveProgressBarValue.Indeterminate` `new BindableProgressBarValue("myProgressValue")` . |
@@ -42,32 +42,21 @@ ms.locfileid: "89174607"
 
 위에서 본 알림을 생성 하는 방법은 다음과 같습니다.
 
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
+
 ```csharp
-ToastContent content = new ToastContent()
-{
-    Visual = new ToastVisual()
+new ToastContentBuilder()
+    .AddText("Downloading your weekly playlist...")
+    .AddVisualChild(new AdaptiveProgressBar()
     {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = "Downloading your weekly playlist..."
-                },
- 
-                new AdaptiveProgressBar()
-                {
-                    Title = "Weekly playlist",
-                    Value = 0.6,
-                    ValueStringOverride = "15/26 songs",
-                    Status = "Downloading..."
-                }
-            }
-        }
-    }
-};
+        Title = "Weekly playlist",
+        Value = 0.6,
+        ValueStringOverride = "15/26 songs",
+        Status = "Downloading..."
+    });
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <toast>
@@ -83,6 +72,8 @@ ToastContent content = new ToastContent()
     </visual>
 </toast>
 ```
+
+---
 
 그러나 실제로 "라이브" 상태가 되도록 진행률 표시줄의 값을 동적으로 업데이트 해야 합니다. 데이터 바인딩을 사용 하 여 알림 메시지를 업데이트 하면이 작업을 수행할 수 있습니다.
 
@@ -110,30 +101,16 @@ public void SendUpdatableToastWithProgress()
     string group = "downloads";
  
     // Construct the toast content with data bound fields
-    var content = new ToastContent()
-    {
-        Visual = new ToastVisual()
+    var content = new ToastContentBuilder()
+        .AddText("Downloading your weekly playlist...")
+        .AddVisualChild(new AdaptiveProgressBar()
         {
-            BindingGeneric = new ToastBindingGeneric()
-            {
-                Children =
-                {
-                    new AdaptiveText()
-                    {
-                        Text = "Downloading your weekly playlist..."
-                    },
-    
-                    new AdaptiveProgressBar()
-                    {
-                        Title = "Weekly playlist",
-                        Value = new BindableProgressBarValue("progressValue"),
-                        ValueStringOverride = new BindableString("progressValueString"),
-                        Status = new BindableString("progressStatus")
-                    }
-                }
-            }
-        }
-    };
+            Title = "Weekly playlist",
+            Value = new BindableProgressBarValue("progressValue"),
+            ValueStringOverride = new BindableString("progressValueString"),
+            Status = new BindableString("progressStatus")
+        })
+        .GetToastContent();
  
     // Generate the toast notification
     var toast = new ToastNotification(content.GetXml());

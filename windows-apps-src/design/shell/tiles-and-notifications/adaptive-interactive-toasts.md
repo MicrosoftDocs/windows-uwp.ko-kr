@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 알림 메시지, 대화형 알림을, 적응 알림을, 알림 콘텐츠, 알림 페이로드
 ms.localizationpriority: medium
-ms.openlocfilehash: b08b34a88533d06ac7fc2f967bfc4e50e9fd8f0f
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: ed801d07991c4faa186bc0164dbf0d1323537a20
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219448"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984609"
 ---
 # <a name="toast-content"></a>알림 콘텐츠
 
@@ -49,21 +49,17 @@ ms.locfileid: "91219448"
 
 알림 콘텐츠는 원시 XML로 정의 되지만, [NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) 를 사용 하 여 알림 콘텐츠를 생성 하는 c # (또는 c + +) 개체 모델을 가져올 수 있습니다. 이 문서에서는 알림 콘텐츠 내에 있는 모든 것을 설명 합니다.
 
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
+
 ```csharp
-ToastContent content = new ToastContent()
-{
-    Launch = "app-defined-string",
- 
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric() { ... }
-    },
- 
-    Actions = new ToastActionsCustom() { ... },
- 
-    Audio = new ToastAudio() { ... }
-};
+new ToastContentBuilder()
+    .AddToastActivationInfo("app-defined-string", ToastActivationType.Foreground)
+    .AddText("Some text")
+    .AddButton("Archive", ToastActivationType.Background, "archive")
+    .AddAudio(new Uri("ms-appx:///Sound.mp3"));
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <toast launch="app-defined-string">
@@ -82,6 +78,8 @@ ToastContent content = new ToastContent()
 
 </toast>
 ```
+
+---
 
 다음은 알림 메시지의 시각적 표현입니다.
 
@@ -109,29 +107,16 @@ ToastContent content = new ToastContent()
 
 Windows 10 기념일 업데이트 이후에는 텍스트의 **Hintmaxlines** 속성을 사용 하 여 표시할 텍스트의 줄 수를 제어할 수 있습니다. 기본 (및 최대)은 제목에 대해 최대 2 줄의 텍스트, 두 개의 추가 설명 요소에 대 한 최대 4 줄 (결합)입니다 (두 번째 및 세 번째 **AdaptiveText**).
 
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
+
 ```csharp
-new ToastBindingGeneric()
-{
-    Children =
-    {
-        new AdaptiveText()
-        {
-            Text = "Adaptive Tiles Meeting",
-            HintMaxLines = 1
-        },
-
-        new AdaptiveText()
-        {
-            Text = "Conf Room 2001 / Building 135"
-        },
-
-        new AdaptiveText()
-        {
-            Text = "10:00 AM - 10:30 AM"
-        }
-    }
-}
+new ToastContentBuilder()
+    .AddText("Adaptive Tiles Meeting", hintMaxLines: 1)
+    .AddText("Conf Room 2001 / Building 135")
+    .AddText("10:00 AM - 10:30 AM");
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <binding template="ToastGeneric">
@@ -140,6 +125,8 @@ new ToastBindingGeneric()
     <text>10:00 AM - 10:30 AM</text>
 </binding>
 ```
+
+---
 
 
 ## <a name="app-logo-override"></a>앱 로고 재정의
@@ -150,18 +137,16 @@ new ToastBindingGeneric()
 
 **Hintcrop** 속성을 사용 하 여 이미지의 자르기를 변경할 수 있습니다. 예를 들어 **원은** 원에 잘린 이미지를 생성 합니다. 그렇지 않으면 이미지는 사각형입니다. 이미지 크기는 100% 크기 조정 시 48x48 픽셀입니다.
 
-```csharp
-new ToastBindingGeneric()
-{
-    ...
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
 
-    AppLogoOverride = new ToastGenericAppLogo()
-    {
-        Source = "https://picsum.photos/48?image=883",
-        HintCrop = ToastGenericAppLogoCrop.Circle
-    }
-}
+```csharp
+new ToastContentBuilder()
+    ...
+    
+    .AddAppLogoOverride(new Uri("https://picsum.photos/48?image=883"), NotificationAppLogoCrop.Circle);
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <binding template="ToastGeneric">
@@ -170,6 +155,9 @@ new ToastBindingGeneric()
 </binding>
 ```
 
+---
+
+
 
 ## <a name="hero-image"></a>주인공 이미지
 
@@ -177,17 +165,16 @@ new ToastBindingGeneric()
 
 <img alt="Toast with hero image" src="images/toast-heroimage.jpg" width="364"/>
 
-```csharp
-new ToastBindingGeneric()
-{
-    ...
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
 
-    HeroImage = new ToastGenericHeroImage()
-    {
-        Source = "https://picsum.photos/364/180?image=1043"
-    }
-}
+```csharp
+new ToastContentBuilder()
+    ...
+    
+    .AddHeroImage(new Uri("https://picsum.photos/364/180?image=1043"));
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <binding template="ToastGeneric">
@@ -196,6 +183,8 @@ new ToastBindingGeneric()
 </binding>
 ```
 
+---
+
 
 ## <a name="inline-image"></a>인라인 이미지
 
@@ -203,20 +192,16 @@ new ToastBindingGeneric()
 
 <img alt="Toast with additional image" src="images/toast-additionalimage.jpg" width="364"/>
 
-```csharp
-new ToastBindingGeneric()
-{
-    Children =
-    {
-        ...
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
 
-        new AdaptiveImage()
-        {
-            Source = "https://picsum.photos/360/202?image=1043"
-        }
-    }
-}
+```csharp
+new ToastContentBuilder()
+    ...
+    
+    .AddInlineImage(new Uri("https://picsum.photos/360/202?image=1043"));
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <binding template="ToastGeneric">
@@ -224,6 +209,8 @@ new ToastBindingGeneric()
     <image src="https://picsum.photos/360/202?image=1043" />
 </binding>
 ```
+
+---
 
 
 ## <a name="image-size-restrictions"></a>이미지 크기 제한
@@ -251,17 +238,16 @@ Http 및 https 원격 웹 이미지의 경우 각 개별 이미지의 파일 크
 
 <img alt="Toast with attribution text" src="images/toast-attributiontext.jpg" width="364"/>
 
-```csharp
-new ToastBindingGeneric()
-{
-    ...
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
 
-    Attribution = new ToastGenericAttributionText()
-    {
-        Text = "Via SMS"
-    }
-}
+```csharp
+new ToastContentBuilder()
+    ...
+    
+    .AddAttributionText("Via SMS");
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <binding template="ToastGeneric">
@@ -269,6 +255,8 @@ new ToastBindingGeneric()
     <text placement="attribution">Via SMS</text>
 </binding>
 ```
+
+---
 
 
 ## <a name="custom-timestamp"></a>사용자 지정 타임 스탬프
@@ -279,19 +267,24 @@ new ToastBindingGeneric()
 
 사용자 지정 타임 스탬프를 사용 하는 방법에 대 한 자세한 내용은 [알림을의 사용자 지정 타임 스탬프](custom-timestamps-on-toasts.md)를 참조 하세요.
 
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
+
 ```csharp
-ToastContent toastContent = new ToastContent()
-{
-    DisplayTimestamp = new DateTime(2017, 04, 15, 19, 45, 00, DateTimeKind.Utc),
-    ...
-};
+new ToastContentBuilder()
+    ...
+    
+    .AddCustomTimeStamp(new DateTime(2017, 04, 15, 19, 45, 00, DateTimeKind.Utc));
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <toast displayTimestamp="2017-04-15T19:45:00Z">
   ...
 </toast>
 ```
+
+---
 
 
 ## <a name="progress-bar"></a>진행률 표시줄
@@ -327,56 +320,55 @@ ToastContent toastContent = new ToastContent()
 
 <img alt="Toast with additional text" src="images/toast-additionaltext.jpg" width="364"/>
 
-```csharp
-new ToastBindingGeneric()
-{
-    Children =
-    {
-        ...
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
 
-        new AdaptiveGroup()
+```csharp
+new ToastContentBuilder()
+    ...
+    
+    .AddVisualChild(new AdaptiveGroup()
+    {
+        Children =
         {
-            Children =
+            new AdaptiveSubgroup()
             {
-                new AdaptiveSubgroup()
+                Children =
                 {
-                    Children =
+                    new AdaptiveText()
                     {
-                        new AdaptiveText()
-                        {
-                            Text = "52 attendees",
-                            HintStyle = AdaptiveTextStyle.Base
-                        },
-                        new AdaptiveText()
-                        {
-                            Text = "23 minute drive",
-                            HintStyle = AdaptiveTextStyle.CaptionSubtle
-                        }
+                        Text = "52 attendees",
+                        HintStyle = AdaptiveTextStyle.Base
+                    },
+                    new AdaptiveText()
+                    {
+                        Text = "23 minute drive",
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
                     }
-                },
-                new AdaptiveSubgroup()
+                }
+            },
+            new AdaptiveSubgroup()
+            {
+                Children =
                 {
-                    Children =
+                    new AdaptiveText()
                     {
-                        new AdaptiveText()
-                        {
-                            Text = "1 Microsoft Way",
-                            HintStyle = AdaptiveTextStyle.CaptionSubtle,
-                            HintAlign = AdaptiveTextAlign.Right
-                        },
-                        new AdaptiveText()
-                        {
-                            Text = "Bellevue, WA 98008",
-                            HintStyle = AdaptiveTextStyle.CaptionSubtle,
-                            HintAlign = AdaptiveTextAlign.Right
-                        }
+                        Text = "1 Microsoft Way",
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle,
+                        HintAlign = AdaptiveTextAlign.Right
+                    },
+                    new AdaptiveText()
+                    {
+                        Text = "Bellevue, WA 98008",
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle,
+                        HintAlign = AdaptiveTextAlign.Right
                     }
                 }
             }
         }
-    }
-}
+    });
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <binding template="ToastGeneric">
@@ -394,8 +386,10 @@ new ToastBindingGeneric()
 </binding>
 ```
 
+---
 
-## <a name="buttons"></a>Buttons
+
+## <a name="buttons"></a>단추
 
 단추는 사용자가 현재 워크플로를 중단 하지 않고 알림 메시지에 대 한 빠른 작업을 수행할 수 있도록 하는 알림 메시지를 대화형으로 만듭니다. 예를 들어 사용자는 알림 내에서 직접 메시지에 회신 하거나 메일 앱을 열지 않고도 전자 메일을 삭제할 수 있습니다. 사용자 알림의 확장 된 부분에 단추가 표시 됩니다.
 
@@ -413,28 +407,17 @@ new ToastBindingGeneric()
 
 <img alt="notification with actions, example 1" src="images/adaptivetoasts-xmlsample02.jpg" width="364"/>
 
-```csharp
-ToastContent content = new ToastContent()
-{
-    ...
- 
-    Actions = new ToastActionsCustom()
-    {
-        Buttons =
-        {
-            new ToastButton("See more details", "action=viewdetails&contentId=351")
-            {
-                ActivationType = ToastActivationType.Foreground
-            },
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
 
-            new ToastButton("Remind me later", "action=remindlater&contentId=351")
-            {
-                ActivationType = ToastActivationType.Background
-            }
-        }
-    }
-};
+```csharp
+new ToastContentBuilder()
+    ...
+    
+    .AddButton("See more details", ToastActivationType.Foreground, "action=viewdetails&contentId=351")
+    .AddButton("Remind me later", ToastActivationType.Background, "action=remindlater&contentId=351");
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <toast launch="app-defined-string">
@@ -458,6 +441,8 @@ ToastContent content = new ToastContent()
 </toast>
 ```
 
+---
+
 
 ### <a name="buttons-with-icons"></a>아이콘이 있는 단추
 
@@ -468,22 +453,29 @@ ToastContent content = new ToastContent()
 
 <img src="images\adaptivetoasts-buttonswithicons.png" width="364" alt="Toast that has buttons with icons"/>
 
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
+
 ```csharp
-new ToastButton("Dismiss", "dismiss")
-{
-    ActivationType = ToastActivationType.Background,
-    ImageUri = "Assets/ToastButtonIcons/Dismiss.png"
-}
+new ToastContentBuilder()
+    ...
+    
+    .AddButton(
+        "Dismiss",
+        ToastActivationType.Foreground,
+        "dismiss", new Uri("Assets/NotificationButtonIcons/Dismiss.png", UriKind.Relative));
 ```
 
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <action
     content="Dismiss"
-    imageUri="Assets/ToastButtonIcons/Dismiss.png"
+    imageUri="Assets/NotificationButtonIcons/Dismiss.png"
     arguments="dismiss"
     activationType="background"/>
 ```
+
+---
 
 
 ### <a name="buttons-with-pending-update-activation"></a>업데이트 활성화가 보류 중인 단추
@@ -506,6 +498,10 @@ new ToastButton("Dismiss", "dismiss")
 
 <img alt="Toast with context menu" src="images/toast-contextmenu.png" width="444"/>
 
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
+
+작성기 구문은 상황에 맞는 메뉴 작업을 지원 하지 않으므로 이니셜라이저 구문을 사용 하는 것이 좋습니다.
+
 ```csharp
 ToastContent content = new ToastContent()
 {
@@ -520,6 +516,8 @@ ToastContent content = new ToastContent()
     }
 };
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <toast>
@@ -538,6 +536,8 @@ ToastContent content = new ToastContent()
 </toast>
 ```
 
+---
+
 > [!NOTE]
 > 추가 상황에 맞는 메뉴 항목은 알림에서 5 개 단추의 총 제한에 영향을 주지 않습니다.
 
@@ -555,36 +555,23 @@ ToastContent content = new ToastContent()
 
 <img alt="notification with text input and actions" src="images/adaptivetoasts-xmlsample05.jpg" width="364"/>
 
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
+
 ```csharp
-ToastContent content = new ToastContent()
-{
+new ToastContentBuilder()
     ...
- 
-    Actions = new ToastActionsCustom()
-    {
-        Inputs =
-        {
-            new ToastTextBox("tbReply")
-            {
-                PlaceholderContent = "Type a reply"
-            }
-        },
+    
+    .AddInputTextBox("tbReply", "Type a reply")
 
-        Buttons =
-        {
-            new ToastButton("Reply", "action=reply&convId=9318")
-            {
-                ActivationType = ToastActivationType.Background,
-
-                // To place the button next to the text box,
-                // reference the text box's Id and provide an image
-                TextBoxId = "tbReply",
-                ImageUri = "Assets/Reply.png"
-            }
-        }
-    }
-};
+    .AddButton(
+        textBoxId: "tbReply", // To place button next to text box, reference text box's id
+        content: "Reply",
+        activationType: ToastActivationType.Background,
+        arguments: "action=reply&convId=9318",
+        imageUri: new Uri("Assets/Reply.png", UriKind.Relative));
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <toast launch="app-defined-string">
@@ -607,6 +594,9 @@ ToastContent content = new ToastContent()
 </toast>
 ```
 
+---
+
+
 
 ### <a name="inputs-with-buttons-bar"></a>단추 모음이 포함 된 입력
 
@@ -614,36 +604,19 @@ ToastContent content = new ToastContent()
 
 <img alt="notification with text and input actions" src="images/adaptivetoasts-xmlsample04.jpg" width="364"/>
 
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
+
 ```csharp
-ToastContent content = new ToastContent()
-{
+new ToastContentBuilder()
     ...
- 
-    Actions = new ToastActionsCustom()
-    {
-        Inputs =
-        {
-            new ToastTextBox("tbReply")
-            {
-                PlaceholderContent = "Type a reply"
-            }
-        },
+    
+    .AddInputTextBox("tbReply", "Type a reply")
 
-        Buttons =
-        {
-            new ToastButton("Reply", "action=reply&threadId=9218")
-            {
-                ActivationType = ToastActivationType.Background
-            },
-
-            new ToastButton("Video call", "action=videocall&threadId=9218")
-            {
-                ActivationType = ToastActivationType.Foreground
-            }
-        }
-    }
-};
+    .AddButton("Reply", ToastActivationType.Background, "action=reply&threadId=9218")
+    .AddButton("Video call", ToastActivationType.Foreground, "action=videocall&threadId=9218");
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <toast launch="app-defined-string">
@@ -669,6 +642,8 @@ ToastContent content = new ToastContent()
 </toast>
 ```
 
+---
+
 
 ### <a name="selection-input"></a>선택 입력
 
@@ -676,30 +651,28 @@ ToastContent content = new ToastContent()
 
 <img alt="notification with selection input and actions" src="images/adaptivetoasts-xmlsample06.jpg" width="364"/>
 
-```csharp
-ToastContent content = new ToastContent()
-{
-    ...
- 
-    Actions = new ToastActionsCustom()
-    {
-        Inputs =
-        {
-            new ToastSelectionBox("time")
-            {
-                DefaultSelectionBoxItemId = "lunch",
-                Items =
-                {
-                    new ToastSelectionBoxItem("breakfast", "Breakfast"),
-                    new ToastSelectionBoxItem("lunch", "Lunch"),
-                    new ToastSelectionBoxItem("dinner", "Dinner")
-                }
-            }
-        },
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
 
-        Buttons = { ... }
-};
+```csharp
+new ToastContentBuilder()
+    ...
+    
+    .AddToastInput(new ToastSelectionBox("time")
+    {
+        DefaultSelectionBoxItemId = "lunch",
+        Items =
+        {
+            new ToastSelectionBoxItem("breakfast", "Breakfast"),
+            new ToastSelectionBoxItem("lunch", "Lunch"),
+            new ToastSelectionBoxItem("dinner", "Dinner")
+        }
+    })
+
+    .AddButton(...)
+    .AddButton(...);
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <toast launch="app-defined-string">
@@ -721,6 +694,9 @@ ToastContent content = new ToastContent()
 </toast>
 ```
 
+---
+
+
 
 ### <a name="snoozedismiss"></a>다시 알림/해제
 
@@ -730,43 +706,32 @@ ToastContent content = new ToastContent()
 
 알림 단추에서 **Selectionboxid** 속성을 사용 하 여 선택 메뉴 입력에 다시 알림 단추를 연결 합니다.
 
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
+
 ```csharp
-ToastContent content = new ToastContent()
-{
-    Scenario = ToastScenario.Reminder,
-
+new ToastContentBuilder()
+    .SetToastScenario(ToastScenario.Reminder)
+    
     ...
- 
-    Actions = new ToastActionsCustom()
+    
+    .AddToastInput(new ToastSelectionBox("snoozeTime")
     {
-        Inputs =
+        DefaultSelectionBoxItemId = "15",
+        Items =
         {
-            new ToastSelectionBox("snoozeTime")
-            {
-                DefaultSelectionBoxItemId = "15",
-                Items =
-                {
-                    new ToastSelectionBoxItem("5", "5 minutes"),
-                    new ToastSelectionBoxItem("15", "15 minutes"),
-                    new ToastSelectionBoxItem("60", "1 hour"),
-                    new ToastSelectionBoxItem("240", "4 hours"),
-                    new ToastSelectionBoxItem("1440", "1 day")
-                }
-            }
-        },
+            new ToastSelectionBoxItem("5", "5 minutes"),
+            new ToastSelectionBoxItem("15", "15 minutes"),
+            new ToastSelectionBoxItem("60", "1 hour"),
+            new ToastSelectionBoxItem("240", "4 hours"),
+            new ToastSelectionBoxItem("1440", "1 day")
+        }
+    })
 
-        Buttons =
-        {
-            new ToastButtonSnooze()
-            {
-                SelectionBoxId = "snoozeTime"
-            },
- 
-            new ToastButtonDismiss()
-        }
-    }
-};
+    .AddButton(new ToastButtonSnooze() { SelectionBoxId = "snoozeTime" })
+    .AddButton(new ToastButtonDismiss());
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <toast scenario="reminder" launch="action=viewEvent&amp;eventId=1983">
@@ -792,6 +757,8 @@ ToastContent content = new ToastContent()
 </toast>
 ```
 
+---
+
 시스템을 다시 알림 및 해제 작업을 사용 하려면:
 
 -   **To Button다시 알림** 또는 **to buttonno** 를 지정 합니다.
@@ -815,17 +782,16 @@ ToastContent content = new ToastContent()
 
 또는 항상 두 플랫폼에서 모두 지원 되는 [winsoundevents 목록](/uwp/schemas/tiles/toastschema/element-audio#attributes-and-elements)에서 선택할 수 있습니다.
 
-```csharp
-ToastContent content = new ToastContent()
-{
-    ...
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
 
-    Audio = new ToastAudio()
-    {
-        Src = new Uri("ms-appx:///Assets/NewMessage.mp3")
-    }
-}
+```csharp
+new ToastContentBuilder()
+    ...
+    
+    .AddAudio(new Uri("ms-appx:///Assets/NewMessage.mp3"));
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <toast launch="app-defined-string">
@@ -836,6 +802,9 @@ ToastContent content = new ToastContent()
 
 </toast>
 ```
+
+---
+
 
 알림 메시지의 오디오에 대 한 정보는 [오디오 스키마 페이지](/uwp/schemas/tiles/toastschema/element-audio) 를 참조 하세요. 사용자 지정 오디오를 사용 하 여 알림 메시지를 보내는 방법을 알아보려면 [알림을의 사용자 지정 오디오](custom-audio-on-toasts.md)를 참조 하세요.
 
@@ -851,14 +820,15 @@ ToastContent content = new ToastContent()
 * **경보**: 미리 알림 동작 외에도 알람은 기본 알람 소리를 사용 하 여 오디오를 추가로 반복 합니다.
 * **IncomingCall**: 들어오는 통화 알림은 Windows Mobile 장치에 전체 화면으로 표시 됩니다. 그렇지 않은 경우에는 벨 소리를 사용 하 고 단추의 단추가 다르게 지정 되는 경우를 제외 하 고는 경보와 동일한 동작이 적용 됩니다.
 
-```csharp
-ToastContent content = new ToastContent()
-{
-    Scenario = ToastScenario.Reminder,
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
 
+```csharp
+new ToastContentBuilder()
+    .SetToastScenario(ToastScenario.Reminder)
     ...
-}
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <toast scenario="reminder" launch="app-defined-string">
@@ -867,6 +837,8 @@ ToastContent content = new ToastContent()
 
 </toast>
 ```
+
+---
 
 
 ## <a name="localization-and-accessibility"></a>지역화 및 내게 필요한 옵션

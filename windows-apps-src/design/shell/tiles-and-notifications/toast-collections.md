@@ -7,12 +7,12 @@ ms.date: 05/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 알림, 컬렉션, 컬렉션, 그룹 알림, 그룹화 알림, 그룹, 구성, 동작 센터, 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cd99519f7213f85c50a14db0597daa4e10f8360
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 7ceeec7c84e67074e17d3885167f4be02741c1ff
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156757"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984620"
 ---
 # <a name="grouping-toast-notifications-with-collections"></a>컬렉션을 사용 하 여 알림 메시지 그룹화
 컬렉션을 사용 하 여 앱의 알림을을 Action Center에서 구성 합니다. 컬렉션을 통해 사용자는 더 쉽게 작업 센터 내에서 정보를 찾고 개발자가 알림을 보다 효율적으로 관리할 수 있습니다.  아래 Api를 사용 하 여 알림 컬렉션을 제거, 생성 및 업데이트할 수 있습니다.
@@ -29,8 +29,6 @@ ms.locfileid: "89156757"
 ### <a name="create-a-collection"></a>컬렉션 만들기
 
 ``` csharp 
-public const string toastCollectionId = "ToastCollection";
-
 // Create a toast collection
 public async void CreateToastCollection()
 {
@@ -39,7 +37,8 @@ public async void CreateToastCollection()
     Uri icon = new Windows.Foundation.Uri("ms-appx:///Assets/workEmail.png");
 
     // Constructor
-    ToastCollection workEmailToastCollection = new ToastCollection(MainPage.toastCollectionId, 
+    ToastCollection workEmailToastCollection = new ToastCollection(
+        "MyToastCollection", 
         displayName,
         launchArg, 
         icon);
@@ -52,34 +51,23 @@ public async void CreateToastCollection()
 ## <a name="sending-notifications-to-a-collection"></a>컬렉션에 알림 보내기
 로컬, 예약 됨 및 푸시의 세 가지 알림 파이프라인에서 알림을 보내는 작업을 다룹니다.  이러한 각 예제에 대해 바로 아래 코드를 사용 하 여 보낼 샘플 알림을 만들고 각 파이프라인을 통해 컬렉션에 알림을 추가 하는 방법에 중점을 둡니다.
 
-알림 페이로드를 생성 합니다.
+알림 콘텐츠를 생성 합니다.
 
 ``` csharp
-public const string toastCollectionId = "MyToastCollection";
-
-public async void SendToastToToastCollection()
-{
-    // Construct the notification Content
-    string toastXmlString = 
-        $@"<toast launch=’’>
-            <visual>
-                <binding template=’ToastGeneric’>
-                    <text>Hello,</text>
-                    <text>it’s me</text>
-                </binding>
-            </visual>
-        </toast>";
-    // Convert to XML
-    XmlDocument toastXml = new XmlDocment();
-    toastXml.LoadXml(toastXmlString);
-    ToastNotification toast = new ToastNotification(toastXml);
+// Construct the content
+var content = new ToastContentBuilder()
+    .AddText("Adam sent a message to the group")
+    .GetToastContent();
 ```
 
 ### <a name="send-a-toast-to-a-collection"></a>컬렉션에 알림 보내기
 
 ```csharp
+// Create the toast
+ToastNotification toast = new ToastNotification(content.GetXml());
+
 // Get the collection notifier
-var notifier = await ToastNotificationManager.GetDefault().GetToastNotifierForToastCollectionIdAsync(MainPage.toastCollectionId);
+var notifier = await ToastNotificationManager.GetDefault().GetToastNotifierForToastCollectionIdAsync("MyToastCollection");
 
 // And show the toast
 notifier.Show(toast);
@@ -89,10 +77,10 @@ notifier.Show(toast);
 
 ``` csharp
 // Create scheduled toast from XML above
-ScheduledToastNotification scheduledToast = new ScheduledToastNotification(toastXml, DateTimeOffset.Now.AddSeconds(10));
+ScheduledToastNotification scheduledToast = new ScheduledToastNotification(content.GetXml(), DateTimeOffset.Now.AddSeconds(10));
 
 // Get notifier
-var notifier = await ToastNotificationManager.GetDefault().GetToastNotifierForToastCollectionIdAsync(MainPage.toastCollectionId);
+var notifier = await ToastNotificationManager.GetDefault().GetToastNotifierForToastCollectionIdAsync("MyToastCollection");
     
 // Add to schedule
 notifier.AddToSchedule(scheduledToast);
@@ -128,7 +116,7 @@ int toastCollectionCount = (await collectionManager.FindAllToastCollectionsAsync
 #### <a name="remove-a-collection"></a>컬렉션 제거
 
 ``` csharp
-await collectionManager.RemoveToastCollectionAsync(MainPage.toastCollectionId);
+await collectionManager.RemoveToastCollectionAsync("MyToastCollection");
 ```
 
 #### <a name="update-a-collection"></a>컬렉션 업데이트
@@ -139,10 +127,11 @@ string launchArg = "UpdatedLaunchArgs";
 Uri icon = new Windows.Foundation.Uri("ms-appx:///Assets/updatedPicture.png");
 
 // Construct a new toast collection with the same collection id
-ToastCollection updatedToastCollection = new ToastCollection(MainPage.toastCollectionId, 
-            displayName,
-            launchArg, 
-            icon);
+ToastCollection updatedToastCollection = new ToastCollection(
+    "MyToastCollection", 
+    displayName,
+    launchArg, 
+    icon);
 
 // Calls the platform to update the collection by saving the new instance
 await collectionManager.SaveToastCollectionAsync(updatedToastCollection);                               
@@ -155,7 +144,7 @@ Group 및 tag 속성은 컬렉션 내에서 알림을 고유 하 게 식별 합�
 태그 및 그룹 Id를 사용 하 여 개별 알림을을 제거 하거나 컬렉션의 모든 알림을을 지울 수 있습니다.
 ``` csharp
 // Get the history
-var collectionHistory = await ToastNotificationManager.GetDefault().GetHistoryForToastCollectionAsync(MainPage.toastCollectionId);
+var collectionHistory = await ToastNotificationManager.GetDefault().GetHistoryForToastCollectionAsync("MyToastCollection");
 
 // Remove toast
 collectionHistory.Remove(tag, group); 
@@ -164,7 +153,7 @@ collectionHistory.Remove(tag, group);
 #### <a name="clear-all-toasts-within-a-collection"></a>컬렉션 내의 모든 알림을 지우기
 ``` csharp
 // Get the history
-var collectionHistory = await ToastNotificationManager.GetDefault().GetHistoryForToastCollectionAsync(MainPage.toastCollectionId);
+var collectionHistory = await ToastNotificationManager.GetDefault().GetHistoryForToastCollectionAsync("MyToastCollection");
 
 // Remove toast
 collectionHistory.Clear();

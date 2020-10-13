@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 보조 타일, pin, 고정, 빠른 시작, 코드 샘플, 예제, secondarytile
 ms.localizationpriority: medium
-ms.openlocfilehash: 0fc83fca642ae75404180edf5fad177b92153e35
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: dc65768eb90ca51a86db51dd0add00d9542df24e
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220386"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984679"
 ---
 # <a name="pin-secondary-tiles-to-start"></a>시작에 보조 타일 고정
 
@@ -110,7 +110,7 @@ tile.VisualElements.ShowNameOnSquare310x310Logo = true;
 마지막으로 타일 고정을 요청 합니다. 이는 UI 스레드에서 호출 해야 합니다. 바탕 화면에서 사용자에 게 타일을 고정할 지 여부를 확인 하는 대화 상자가 표시 됩니다.
 
 > [!IMPORTANT]
-> 데스크톱 브리지를 사용 하는 Windows 데스크톱 응용 프로그램의 경우 [데스크톱 응용 프로그램에서 고정](secondary-tiles-desktop-pinning.md) 에 설명 된 대로 추가 단계를 먼저 수행 해야 합니다.
+> 데스크톱 브리지를 사용 하는 Win32 응용 프로그램의 경우 [win32 앱에서 고정](secondary-tiles-desktop-pinning.md) 에 설명 된 대로 추가 단계를 먼저 수행 해야 합니다.
 
 ```csharp
 // Pin the tile

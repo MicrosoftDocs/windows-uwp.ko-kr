@@ -1,25 +1,25 @@
 ---
 Description: Win32 c + + WRL apps에서 로컬 알림 메시지를 보내고 알림 메시지를 클릭 하 여 사용자를 처리 하는 방법을 알아봅니다.
-title: 데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
-label: Send a local toast notification from desktop C++ WRL apps
+title: Win32 c + + WRL apps에서 로컬 알림 메시지 보내기
+label: Send a local toast notification from Win32 C++ WRL apps
 template: detail.hbs
 ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, win32, 데스크톱, 알림 메시지 보내기, 알림 보내기, 바탕 화면 브리지, msix, 스파스 패키지, c + +, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: f90733cb4b549b7b8f088d6ecfa652941b0769b1
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: a227ccbc52aa3c1dd8c0cd9c61cdecf140375fe2
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220146"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984659"
 ---
-# <a name="send-a-local-toast-notification-from-desktop-c-wrl-apps"></a>데스크톱 C++ WRL 앱에서 로컬 알림 메시지 보내기
+# <a name="send-a-local-toast-notification-from-win32-c-wrl-apps"></a>Win32 c + + WRL apps에서 로컬 알림 메시지 보내기
 
-데스크톱 앱 (패키지 된 [Msix](/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 얻기 위해 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱 및 클래식 패키지 되지 않은 Win32 앱 포함)은 Windows 앱과 마찬가지로 대화형 알림 메시지를 보낼 수 있습니다. 그러나 MSIX 또는 스파스 패키지를 사용 하지 않는 경우 다양 한 활성화 체계와 패키지 id의 잠재적 부족으로 인해 데스크톱 앱에 대 한 몇 가지 특별 한 단계가 있습니다.
+Win32 앱 (패키지 된 [Msix](/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 가져오기 위해 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱 및 클래식 패키지 되지 않은 Win32 앱 포함)은 Windows 앱과 마찬가지로 대화형 알림 메시지를 보낼 수 있습니다. 그러나 MSIX 또는 스파스 패키지를 사용 하지 않는 경우 다양 한 활성화 체계와 패키지 id의 잠재적 부족으로 인해 Win32 앱에 대 한 몇 가지 특별 한 단계가 있습니다.
 
 > [!IMPORTANT]
-> UWP 앱을 작성 하는 경우 [uwp 설명서](send-local-toast.md)를 참조 하세요. 다른 데스크톱 언어는 [데스크톱 c #](send-local-toast-desktop.md)을 참조 하세요.
+> UWP 앱을 작성 하는 경우 [uwp 설명서](send-local-toast.md)를 참조 하세요. 다른 Win32 언어는 [Win32 c #](send-local-toast-desktop.md)을 참조 하세요.
 
 
 ## <a name="step-1-enable-the-windows-10-sdk"></a>1 단계: Windows 10 SDK 사용
@@ -372,7 +372,7 @@ int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE, _In_ LPWSTR cm
 
 
 ### <a name="foreground-vs-background-activation"></a>포그라운드 vs 백그라운드 활성화
-데스크톱 앱의 경우 포그라운드 및 백그라운드 활성화는 동일 하 게 처리 됩니다. COM 활성기가 호출 됩니다. 창 표시 여부를 결정 하는 응용 프로그램의 코드는 단순히 작업을 수행 하 고 종료 하는 방법을 결정 하는 것입니다. 따라서 알림 콘텐츠에서 배경 **activationType** 지정 **background** 하면 동작이 변경 되지 않습니다.
+Win32 앱의 경우 포그라운드 및 백그라운드 활성화는 동일 하 게 처리 됩니다. COM 활성기가 호출 됩니다. 창 표시 여부를 결정 하는 응용 프로그램의 코드는 단순히 작업을 수행 하 고 종료 하는 방법을 결정 하는 것입니다. 따라서 알림 콘텐츠에서 배경 **activationType** 지정 **background** 하면 동작이 변경 되지 않습니다.
 
 
 ## <a name="step-9-remove-and-manage-notifications"></a>9 단계: 알림 제거 및 관리
@@ -420,7 +420,7 @@ Windows 8은 알림 메시지를 도입 했지만 ToastText01와 같은 [레거�
 
 | OS | To Generic | COM 활성기 | 레거시 알림 템플릿 |
 | -- | ------------ | ------------- | ---------------------- |
-| 윈도우 10 | 지원됨 | 지원됨 | 지원 됨 (COM 서버를 활성화 하지 않음) |
+| Windows 10 | 지원됨 | 지원됨 | 지원 됨 (COM 서버를 활성화 하지 않음) |
 | Windows 8.1/8 | N/A | 해당 없음 | 지원됨 |
 | Windows 7 및 낮음 | N/A | N/A | N/A |
 
@@ -444,5 +444,5 @@ if (IsWindows10OrGreater())
 ## <a name="resources"></a>리소스
 
 * [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/desktop-toasts)
-* [데스크톱 앱의 알림 메시지](toast-desktop-apps.md)
+* [Win32 앱의 알림 메시지](toast-desktop-apps.md)
 * [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)

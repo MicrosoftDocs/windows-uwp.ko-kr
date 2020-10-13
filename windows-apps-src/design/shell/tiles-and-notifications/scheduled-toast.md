@@ -7,12 +7,12 @@ ms.date: 04/09/2020
 ms.topic: article
 keywords: windows 10, uwp, 예약 된 알림, scheduledtoastnotification, 방법, 빠른 시작, 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: bc80cf04c1e1461612401ef4ced898058e2dd4ac
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 04bbf3da388bf065b2b96684cf3f27cd7534ff51
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172357"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984739"
 ---
 # <a name="schedule-a-toast-notification"></a>알림 메시지 예약
 
@@ -21,12 +21,12 @@ ms.locfileid: "89172357"
 예약 된 알림 메시지의 배달 기간은 5 분입니다. 예약 된 배달 시간 동안 컴퓨터가 꺼져 있고 5 분 넘게 꺼진 상태를 유지 하는 경우 사용자와 더 이상 관련이 없는 것 처럼 알림이 "삭제" 됩니다. 컴퓨터가 꺼진 기간에 관계 없이 알림의 배달이 보장 되어야 하는 경우 [이 코드 샘플](https://github.com/WindowsNotifications/quickstart-snoozable-toasts-even-if-computer-is-off)에 나와 있는 것 처럼 시간 트리거와 함께 백그라운드 작업을 사용 하는 것이 좋습니다.
 
 > [!IMPORTANT]
-> 데스크톱 응용 프로그램 (MSIX/sparse 패키지 및 클래식 Win32)에는 알림을 보내고 활성화를 처리 하는 단계가 약간 다릅니다. 아래 지침을 따릅니다. 그러나를 `ToastNotificationManager` `DesktopNotificationManagerCompat` [데스크톱 앱](toast-desktop-apps.md) 설명서의 클래스로 바꿉니다.
+> Win32 응용 프로그램 (MSIX/sparse 패키지 및 클래식 Win32)에는 알림을 보내고 활성화를 처리 하는 단계가 약간 다릅니다. 그러나 아래 지침을 따릅니다. 하지만을 `ToastNotificationManager` `DesktopNotificationManagerCompat` [Win32 앱](toast-desktop-apps.md) 설명서의 클래스로 바꿉니다.
 
 > **중요 한 api**: [ScheduledToastNotification 클래스](/uwp/api/Windows.UI.Notifications.ScheduledToastNotification)
 
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 항목을 완벽 하 게 이해 하려면 다음을 수행 하는 것이 좋습니다.
 
@@ -35,77 +35,40 @@ ms.locfileid: "89172357"
 * Windows 10 UWP 앱 프로젝트
 
 
-## <a name="install-nuget-packages"></a>NuGet 패키지 설치
+## <a name="step-1-install-nuget-package"></a>1 단계: NuGet 패키지 설치
 
-두 개의 다음 NuGet 패키지를 프로젝트에 설치 하는 것이 좋습니다. 코드 샘플에서는 이러한 패키지를 사용 합니다.
-
-* [Microsoft Toolkit: 알림](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/): 원시 XML 대신 개체를 통해 알림 페이로드를 생성 합니다.
-* [QueryString.NET](https://www.nuget.org/packages/QueryString.NET/): C를 사용 하 여 쿼리 문자열 생성 및 구문 분석 #
+[Microsoft Toolkit. 알림 NuGet 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)를 설치 합니다. 코드 샘플에서는이 패키지를 사용 합니다. 문서의 끝 부분에서는 NuGet 패키지를 사용 하지 않는 "일반" 코드 조각을 제공 합니다. 이 패키지를 사용 하면 XML을 사용 하지 않고 알림 메시지를 만들 수 있습니다.
 
 
-## <a name="add-namespace-declarations"></a>네임스페이스 선언 추가
+## <a name="step-2-add-namespace-declarations"></a>2 단계: 네임 스페이스 선언 추가
 
 `Windows.UI.Notifications` 알림 Api를 포함 합니다.
 
 ```csharp
 using Windows.UI.Notifications;
 using Microsoft.Toolkit.Uwp.Notifications; // Notifications library
-using Microsoft.QueryStringDotNET; // QueryString.NET
 ```
 
 
-## <a name="construct-the-toast-content"></a>알림 콘텐츠 생성
+## <a name="step-3-schedule-the-notification"></a>3 단계: 알림 예약
 
-Windows 10에서는 알림이 표시 되는 방식을 유연 하 게 사용할 수 있는 적응 언어를 사용 하 여 알림 콘텐츠를 설명 합니다. 자세한 내용은 [알림 콘텐츠 설명서](adaptive-interactive-toasts.md) 를 참조 하세요.
-
-알림 라이브러리 덕분에 XML 콘텐츠를 생성 하는 것은 간단 합니다. NuGet에서 알림 라이브러리를 설치 하지 않는 경우에는 오류에 대 한 공간을 확보 하는 XML을 수동으로 생성 해야 합니다.
-
-사용자가 알림 메시지의 본문을 탭 하 고 앱이 시작 되 면 앱에서 표시 해야 하는 콘텐츠를 알고 있으므로 항상 **Launch** 속성을 설정 해야 합니다.
+지금까지 학생 들에 대해 학생 들에 게 알려 주는 간단한 텍스트 기반 알림을 사용 합니다. 알림 및 일정을 생성 합니다!
 
 ```csharp
-// In a real app, these would be initialized with actual data
-string title = "ASTR 170B1";
-string content = "You have 3 items due today!";
+// Construct the content
+var content = new ToastContentBuilder()
+    .AddToastActivationInfo("itemsDueToday", ToastActivationType.Foreground)
+    .AddText("ASTR 170B1")
+    .AddText("You have 3 items due today!");
+    .GetToastContent();
 
-// Now we can construct the final toast content
-ToastContent toastContent = new ToastContent()
-{
-    Visual = new ToastVisual()
-    {
-        BindingGeneric = new ToastBindingGeneric()
-        {
-            Children =
-            {
-                new AdaptiveText()
-                {
-                    Text = title
-                },
-     
-                new AdaptiveText()
-                {
-                    Text = content
-                }
-            }
-        }
-    },
- 
-    // Arguments when the user taps body of toast
-    Launch = new QueryString()
-    {
-        { "action", "viewClass" },
-        { "classId", "3910938180" }
- 
-    }.ToString()
-};
-```
-
-## <a name="create-the-scheduled-toast"></a>예약 된 알림 만들기
-
-알림 콘텐츠를 초기화 한 후에는 새 [ScheduledToastNotification](/uwp/api/Windows.UI.Notifications.ScheduledToastNotification) 을 만들고 콘텐츠의 XML을 전달 하 고 알림을 배달 하려는 시간을 전달 합니다.
-
-```csharp
+    
 // Create the scheduled notification
-var toast = new ScheduledToastNotification(toastContent.GetXml(), DateTime.Now.AddSeconds(5));
+var toast = new ScheduledToastNotification(content.GetXml(), DateTime.Now.AddSeconds(5));
+
+
+// Add your scheduled toast to the schedule
+ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast);
 ```
 
 
@@ -120,16 +83,6 @@ var toast = new ScheduledToastNotification(toastContent.GetXml(), DateTime.Now.A
 ```csharp
 toast.Tag = "18365";
 toast.Group = "ASTR 170B1";
-```
-
-
-## <a name="schedule-the-notification"></a>알림 예약
-
-마지막으로, [to ](/uwp/api/windows.ui.notifications.toastnotifier) notification을 만들고 예약 된 알림 메시지를 전달 하 여 고 간에 일정 ()을 호출 합니다.
-
-```csharp
-// And your scheduled toast to the schedule
-ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast);
 ```
 
 

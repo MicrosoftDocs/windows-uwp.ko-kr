@@ -7,12 +7,12 @@ ms.date: 12/14/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림, 보류 중인 업데이트, pendingupdate, 다단계 상호 작용, 다중 단계 상호 작용
 ms.localizationpriority: medium
-ms.openlocfilehash: 00551414fbefe5591813731337653964bd2524f3
-ms.sourcegitcommit: 5d34eb13c7b840c05e5394910a22fa394097dc36
+ms.openlocfilehash: bc77e41ad144c76af4452b2a9a87c183ae84422c
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89054543"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984579"
 ---
 # <a name="toast-with-pending-update-activation"></a>업데이트 활성화가 보류 중인 알림
 
@@ -49,25 +49,47 @@ ms.locfileid: "89054543"
 
 백그라운드 활성화 단추에서 **AfterActivationBehavior** 를 **PendingUpdate**로 설정 합니다. 이는 **배경이** **ActivationType** 된 단추에만 적용 됩니다.
 
-```csharp
-new ToastButton("Yes", "action=orderLunch")
-{
-    ActivationType = ToastActivationType.Background,
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
 
-    ActivationOptions = new ToastActivationOptions()
+```csharp
+new ToastContentBuilder()
+
+    .AddText("Would you like to order lunch today?")
+
+    .AddButton(new ToastButton("Yes", "action=orderLunch")
     {
-        AfterActivationBehavior = ToastAfterActivationBehavior.PendingUpdate
-    }
-}
+        ActivationType = ToastActivationType.Background,
+
+        ActivationOptions = new ToastActivationOptions()
+        {
+            AfterActivationBehavior = ToastAfterActivationBehavior.PendingUpdate
+        }
+    });
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
-<action
-    content='Yes'
-    arguments='action=orderLunch'
-    activationType='background'
-    afterActivationBehavior='pendingUpdate' />
+<toast>
+  
+  <visual>
+    <binding template="ToastGeneric">
+      <text>Would you like to order lunch today?</text>
+    </binding>
+  </visual>
+
+  <actions>
+    <action
+      content="Yes"
+      arguments="action=orderLunch"
+      activationType="background"
+      afterActivationBehavior="pendingUpdate"/>
+  </actions>
+  
+</toast>
 ```
+
+---
 
 
 ## <a name="use-a-tag-on-the-notification"></a>알림에 태그 사용

@@ -1,33 +1,33 @@
 ---
 Description: 'Win32 c # 앱이 로컬 알림 메시지를 보내고 알림 메시지를 클릭 하 여 사용자를 처리 하는 방법을 알아봅니다.'
-title: 데스크톱 C# 앱에서 로컬 알림 메시지 보내기
+title: 'Win32 c # 앱에서 로컬 알림 메시지 보내기'
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
-label: Send a local toast notification from desktop C# apps
+label: Send a local toast notification from Win32 C# apps
 template: detail.hbs
 ms.date: 09/24/2020
 ms.topic: article
 keywords: 'windows 10, uwp, win32, 데스크톱, 알림 메시지 보내기, 알림 보내기, 바탕 화면 브리지, msix, 스파스 패키지, c #, c #, 알림 메시지, wpf, 알림 메시지 보내기 wpf, 알림 메시지 보내기 winforms, 알림 메시지 보내기 c #, 알림 wpf, 알림 c # 보내기 #'
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f4f78d689352f0278f814a2e89db6f92df52b99
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: b13927bbd12a5cb306018ca02cd8730f580182cd
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220126"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984649"
 ---
-# <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>데스크톱 C# 앱에서 로컬 알림 메시지 보내기
+# <a name="send-a-local-toast-notification-from-win32-c-apps"></a>Win32 c # 앱에서 로컬 알림 메시지 보내기
 
-데스크톱 앱 (패키지 된 [Msix](/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 얻기 위해 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱 및 클래식 패키지 되지 않은 Win32 앱 포함)은 Windows 앱과 마찬가지로 대화형 알림 메시지를 보낼 수 있습니다. 그러나 MSIX 또는 스파스 패키지를 사용 하지 않는 경우 다양 한 활성화 체계와 패키지 id의 잠재적 부족으로 인해 데스크톱 앱에 대 한 몇 가지 특별 한 단계가 있습니다.
+Win32 앱 (패키지 된 [Msix](/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 가져오기 위해 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱 및 클래식 패키지 되지 않은 Win32 앱 포함)은 Windows 앱과 마찬가지로 대화형 알림 메시지를 보낼 수 있습니다. 그러나 MSIX 또는 스파스 패키지를 사용 하지 않는 경우 다양 한 활성화 체계와 패키지 id의 잠재적 부족으로 인해 Win32 앱에 대 한 몇 가지 특별 한 단계가 있습니다.
 
 > [!IMPORTANT]
-> UWP 앱을 작성 하는 경우 [uwp 설명서](send-local-toast.md)를 참조 하세요. 다른 데스크톱 언어는 [데스크톱 c + + WRL](send-local-toast-desktop-cpp-wrl.md)를 참조 하세요.
+> UWP 앱을 작성 하는 경우 [uwp 설명서](send-local-toast.md)를 참조 하세요. 다른 데스크톱 언어는 [Win32 c + + WRL](send-local-toast-desktop-cpp-wrl.md)를 참조 하세요.
 
 
 ## <a name="step-1-install-the-notifications-library"></a>1 단계: 알림 라이브러리 설치
 
 `Microsoft.Toolkit.Uwp.Notifications`프로젝트에 [NuGet 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) 를 설치 합니다.
 
-이 [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) 는 데스크톱 앱에서 알림 메시지를 사용 하기 위한 호환 라이브러리 코드를 추가 합니다. 또한 UWP Sdk를 참조 하 고 원시 XML 대신 c #을 사용 하 여 알림을 생성할 수 있습니다. 이 빠른 시작의 나머지 부분은 알림 라이브러리에 따라 달라 집니다.
+이 [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) 는 Win32 앱에서 알림 메시지를 사용 하기 위한 호환 라이브러리 코드를 추가 합니다. 또한 UWP Sdk를 참조 하 고 원시 XML 대신 c #을 사용 하 여 알림을 생성할 수 있습니다. 이 빠른 시작의 나머지 부분은 알림 라이브러리에 따라 달라 집니다.
 
 
 ## <a name="step-2-implement-the-activator"></a>2 단계: 활성기 구현
@@ -320,7 +320,7 @@ WPF의 경우 활성화 시퀀스는 다음과 같습니다.
 
 
 ### <a name="foreground-vs-background-activation"></a>포그라운드 vs 백그라운드 활성화
-데스크톱 앱의 경우 포그라운드 및 백그라운드 활성화는 동일 하 게 처리 됩니다. COM 활성기가 호출 됩니다. 창 표시 여부를 결정 하는 응용 프로그램의 코드는 단순히 작업을 수행 하 고 종료 하는 방법을 결정 하는 것입니다. 따라서 알림 콘텐츠에서 배경 **ActivationType** 지정 **Background** 하면 동작이 변경 되지 않습니다.
+Win32 앱의 경우 포그라운드 및 백그라운드 활성화는 동일 하 게 처리 됩니다. COM 활성기가 호출 됩니다. 창 표시 여부를 결정 하는 응용 프로그램의 코드는 단순히 작업을 수행 하 고 종료 하는 방법을 결정 하는 것입니다. 따라서 알림 콘텐츠에서 배경 **ActivationType** 지정 **Background** 하면 동작이 변경 되지 않습니다.
 
 
 ## <a name="step-7-remove-and-manage-notifications"></a>7 단계: 알림 제거 및 관리
@@ -357,5 +357,5 @@ MSIX/sparse 패키지와 클래식 Win32 앱을 모두 설치한 경우 알림 �
 ## <a name="resources"></a>리소스
 
 * [GitHub의 전체 코드 샘플](https://github.com/WindowsNotifications/desktop-toasts)
-* [데스크톱 앱의 알림 메시지](toast-desktop-apps.md)
+* [Win32 앱의 알림 메시지](toast-desktop-apps.md)
 * [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)

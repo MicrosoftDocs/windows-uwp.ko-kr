@@ -7,12 +7,12 @@ ms.date: 12/15/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림, 사용자 지정 타임 스탬프, 타임 스탬프, 알림, 동작 센터
 ms.localizationpriority: medium
-ms.openlocfilehash: 11d9064d39d4e8ecd74229afc4eee325297f246b
-ms.sourcegitcommit: e273e5901bfa6596dfef4cc741bb1c42614c25ab
+ms.openlocfilehash: 23e5337fe2ce30e1172aedc034a8b4eb3821a615
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89238308"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984429"
 ---
 # <a name="custom-timestamps-on-toasts"></a>알림을의 사용자 지정 타임 스탬프
 
@@ -27,19 +27,23 @@ ms.locfileid: "89238308"
 
 사용자 지정 타임 스탬프를 사용 하려면 **Toa 콘텐츠에서** **displaytimestamp** 속성을 할당 하면 됩니다.
 
+#### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
+
 ```csharp
-ToastContent toastContent = new ToastContent()
-{
-    DisplayTimestamp = new DateTime(2017, 04, 15, 19, 45, 00, DateTimeKind.Utc),
-    ...
-};
+var content = new ToastContent()
+    .AddCustomTimeStamp(new DateTime(2017, 04, 15, 19, 45, 00, DateTimeKind.Utc))
+    ...
 ```
+
+#### <a name="xml"></a>[XML](#tab/xml)
 
 ```xml
 <toast displayTimestamp="2017-04-15T19:45:00Z">
   ...
 </toast>
 ```
+
+---
 
 XML을 사용 하는 경우 날짜는 [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)형식 이어야 합니다.
 
