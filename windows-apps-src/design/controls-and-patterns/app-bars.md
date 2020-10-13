@@ -13,12 +13,12 @@ design-contact: ksulliv
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f507a325a89220e229b277a1ae08727054cc2a75
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 2a84dcc209fa0fcd897668293cb136a5448e7254
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219106"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829518"
 ---
 # <a name="command-bar"></a>명령 모음
 
@@ -59,15 +59,15 @@ CommandBar 컨트롤은 유연하고 가벼운 범용 컨트롤로서 [AppBarBut
 
 기본적으로 명령 모음에는 아이콘 단추 행 및 줄임표 \[•••\]로 표현되는 선택적 "자세히 보기" 단추가 표시됩니다. 다음은 나중에 표시된 예제 코드로 만든 명령 모음입니다. 닫힘 컴팩트 상태로 표시됩니다.
 
-![닫힌 명령 모음](images/command-bar-compact.png)
+![닫힌 명령 모음을 보여주는 스크린샷.](images/command-bar-compact.png)
 
 또한 명령 모음은 다음과 같이 닫힘, 최소 상태로 표시할 수 있습니다. 자세한 내용은 [열림 및 닫힘 상태](#open-and-closed-states) 섹션을 참조하세요.
 
-![닫힌 명령 모음](images/command-bar-minimal.png)
+![닫힌 최소 상태의 명령 모음을 보여주는 스크린샷.](images/command-bar-minimal.png)
 
 다음은 열림 상태의 동일한 명령 모음입니다. 레이블로 컨트롤의 주요 부분을 식별합니다.
 
-![닫힌 명령 모음](images/commandbar_anatomy_open.png)
+![열린 상태의 명령 모음을 보여주는 스크린샷.](images/commandbar_anatomy_open.png)
 
 명령 모음은 다음 4개의 기본 영역으로 구분됩니다.
 - 콘텐츠 영역은 모음의 왼쪽에 맞춰집니다. [Content](/uwp/api/windows.ui.xaml.controls.contentcontrol.content) 속성이 채워지면 표시됩니다.

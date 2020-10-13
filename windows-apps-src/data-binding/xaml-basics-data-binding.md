@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 10615c3bb9a137655f32ca4b5cc174ddba1ee5ef
-ms.sourcegitcommit: 662fcfdc08b050947e289a57520a2f99fad1a620
+ms.openlocfilehash: 3435718794cb22745e1438ef634db29076ed33c1
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353773"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636663"
 ---
 # <a name="tutorial-create-data-bindings"></a>자습서: 데이터 바인딩 만들기
 
@@ -22,11 +22,11 @@ PhotoLab 샘플의 간소화된 버전부터 시작합니다. 시작 버전에�
 
 PhotoLab 샘플 앱에는 두 가지 페이지가 있습니다. _기본 페이지_는 각 이미지 파일에 대한 일부 정보와 함께 사진 갤러리 보기를 표시합니다.
 
-![MainPage](../design/basics/images/xaml-basics/mainpage.png)
+![사진 랩 기본 페이지의 스크린샷.](../design/basics/images/xaml-basics/mainpage.png)
 
 *세부 정보 페이지*는 선택한 단일 사진을 표시합니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
 
-![DetailPage](../design/basics/images/xaml-basics/detailpage.png)
+![사진 랩 세부 정보 페이지의 스크린샷.](../design/basics/images/xaml-basics/detailpage.png)
 
 ## <a name="prerequisites"></a>필수 구성 요소
 

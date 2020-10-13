@@ -1,5 +1,5 @@
 ---
-Description: 날짜 및 시간 컨트롤을 통해 날짜 및 시간을 보고 설정할 수 있습니다. 이 문서는 디자인 지침을 제공하며, 올바른 컨트롤을 선택하는 데 도움이 됩니다.
+description: 날짜 및 시간 컨트롤을 통해 날짜 및 시간을 보고 설정할 수 있습니다. 이 문서는 디자인 지침을 제공하며, 올바른 컨트롤을 선택하는 데 도움이 됩니다.
 title: 날짜 및 시간 컨트롤에 대한 지침
 ms.assetid: 4641FFBB-8D82-4290-94C1-D87617997F61
 label: Calendar, date, and time controls
@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 45f69c2216cdfd5809a978e9199d05d0d79740ee
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a7afab6e226a86b7aa8979d5d849376cf83739c4
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160427"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829580"
 ---
 # <a name="calendar-date-and-time-controls"></a>달력, 날짜 및 시간 컨트롤
 
@@ -45,12 +45,12 @@ ms.locfileid: "89160427"
 
 시나리오에 따라 선택할 수 있는 4개의 날짜 및 시간 컨트롤이 있습니다. 이 정보를 사용하여 앱에서 사용할 올바른 컨트롤을 선택합니다.
 
-&nbsp;|&nbsp;|&nbsp;                                                                                                                      
---------------------|-------|-------------------------------------------------------------------------------------------------------------------------------
-달력 보기       |![달력 보기의 예](images/controls_calendar_monthview_small.png)|항상 표시되는 달력에서 단일 날짜 또는 날짜 범위를 선택하는 데 사용합니다.                   
-달력 날짜 선택|![달력 날짜 선택의 예](images/calendar-date-picker-closed.png)|상황별 달력에서 단일 날짜를 선택하는 데 사용합니다. 
-날짜 선택기         |![날짜 선택의 예](images/date-picker-closed.png)|상황별 정보가 중요하지 않은 알려진 단일 날짜를 선택하는 데 사용합니다.
-시간 선택기         |![시간 선택기의 예](images/time-picker-closed.png)|단일 시간 값을 선택하는 데 사용합니다.                                        
+| 컨트롤 | 예제 | Description |
+| ------- | :-----: | ----------- |
+| 달력 보기 | ![달력 보기의 예](images/controls_calendar_monthview_small.png) | 항상 표시되는 달력에서 단일 날짜 또는 날짜 범위를 선택하는 데 사용합니다. |
+| 달력 날짜 선택 | ![달력 날짜 선택의 스크린샷.](images/calendar-date-picker-closed.png) | 상황별 달력에서 단일 날짜를 선택하는 데 사용합니다. |
+| 날짜 선택기 | ![날짜 선택의 예](images/date-picker-closed.png) | 상황별 정보가 중요하지 않은 알려진 단일 날짜를 선택하는 데 사용합니다. |
+| 시간 선택기 | ![시간 선택기의 예](images/time-picker-closed.png) | 단일 시간 값을 선택하는 데 사용합니다. |
 
 <!-- This table seems redundant, not sure it's needed.-->
 
@@ -60,7 +60,7 @@ ms.locfileid: "89160427"
 
 달력 보기는 3개의 개별적인 보기(월 보기, 연도 보기 및 10년 보기)로 구성됩니다. 기본적으로 월 보기가 열리면서 시작하지만 시작 보기로 다른 보기를 지정할 수 있습니다.
 
-![달력 날짜 선택의 예](images/calendar-view-3-views.png)
+![월 보기, 연도 보기 및 10년 보기를 보여주는 세 개의 달력 보기의 스크린샷.](images/calendar-view-3-views.png)
 
 - 사용자가 여러 날짜를 선택할 수 있도록 해야 하는 경우 **CalendarView**를 사용해야 합니다.
 - 사용자가 단일 날짜만 선택하도록 하고 달력을 항상 표시할 필요가 없는 경우 **CalendarDatePicker** 또는 **DatePicker** 컨트롤을 사용하는 것이 좋습니다.
@@ -71,7 +71,7 @@ ms.locfileid: "89160427"
 
 날짜를 설정하지 않으면 진입점에 개체 틀 텍스트가 표시되며, 그러지 않으면 선택한 날짜가 표시됩니다. 사용자가 진입점을 선택하면 사용자가 날짜를 선택할 수 있도록 달력 보기가 확장됩니다. 이 달력 보기는 다른 UI에 겹쳐지며 다른 UI를 보이지 않도록 합니다.
 
-![달력 날짜 선택의 예](images/calendar-date-picker-2-views.png)
+![빈 날짜 선택 텍스트 상자를 표시한 다음, 그 아래에 달력으로 채워진 달력 날짜 선택의 스크린샷.](images/calendar-date-picker-2-views.png)
 
 - 약속 또는 출발 날짜 선택 등에 달력 날짜 선택을 사용합니다. 
 
@@ -104,7 +104,7 @@ ms.locfileid: "89160427"
 - [날짜 선택기](date-picker.md)
 - [시간 선택기](time-picker.md)
 
-### <a name="globalization"></a>세계화
+### <a name="globalization"></a>전역화
 
 XAML 날짜 컨트롤은 Windows에서 지원하는 각 일정 시스템을 지원합니다. 이러한 일정은 [Windows.Globalization.CalendarIdentifiers](/uwp/api/Windows.Globalization.CalendarIdentifiers) 클래스에서 지정됩니다. 각 컨트롤에서 앱의 기본 언어에 대한 올바른 일정 시스템이 사용되거나 **CalendarIdentifier** 속성을 설정하여 특정 일정 시스템을 사용할 수 있습니다.
 

@@ -11,12 +11,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bb3eb985ab10bd4c28ca38f87aefe3d1fc7fd61e
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 66f9d166d0e20f82f495f98b26deceff8e136cc5
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216476"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636643"
 ---
 # <a name="icons-for-windows-apps"></a>Windows 앱용 아이콘
 
@@ -47,7 +47,8 @@ ms.locfileid: "91216476"
 
 :::row:::
     :::column:::
-        ![아이콘 표준 이미지](images/icons/icons-standard.svg) ![실행](images/do.svg)<br>
+        ![잘라내기, 복사, 붙여넣기 및 저장 아이콘을 보여주는 스크린샷.](images/do.svg)
+        ![아이콘 표준 이미지](images/icons/icons-standard.svg)<br>
 
 잘라내기, 복사, 붙여 넣기 및 저장 같은 작업이나 탐색 메뉴의 탐색 항목에 아이콘을 사용합니다.
     :::column-end:::
@@ -60,12 +61,14 @@ ms.locfileid: "91216476"
 
 :::row:::
     :::column:::
-        ![쇼핑 카트 열기](images/icons/icon-shopping-cart.svg) ![실행](images/do.svg)<br>
+        ![간단하고 익숙한 쇼핑 카트 아이콘의 스크린샷.](images/do.svg)
+        ![아이콘 쇼핑 카트](images/icons/icon-shopping-cart.svg)<br>
 
 사용자가 아이콘의 의미를 쉽게 이해할 수 있고 작은 크기로 분명할 만큼 충분히 단순한 경우 아이콘을 사용합니다.
     :::column-end:::
     :::column:::
-        ![아이콘 개념 이미지](images/icons/icon-bad-example.png) ![실행 안함](images/dont.svg)<br>
+        ![복잡하고 생소한 쇼핑 카트 아이콘의 스크린샷.](images/dont.svg)
+        ![아이콘 개념 이미지](images/icons/icon-bad-example.png)<br>
 
 의미가 명확하지 않거나 분명히 표시하기 위해 복잡한 도형이 필요한 경우에는 아이콘을 사용하지 마세요.
     :::column-end:::

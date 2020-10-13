@@ -10,12 +10,12 @@ pm-contact: stmoy
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: b8a6854eb361388fc1597816d31daf08bb5fe782
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: bb903be202724927d60ee5bcd1edb9e16bc4c982
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217456"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829490"
 ---
 # <a name="combo-box-and-list-box"></a>콤보 상자 및 목록 상자
 
@@ -23,15 +23,23 @@ ms.locfileid: "91217456"
 
 콤보 상자를 닫으면 콤보 상자는 현재 선택한 항목을 표시하거나 선택된 항목이 없는 경우 비어 있습니다. 사용자가 콤보 상자를 확장하면 콤보 상자는 선택 가능한 항목 목록을 표시합니다.
 
-![압축 상태의 드롭다운 목록의 예](images/combo-box-expand.gif)
+![압축 상태 및 확장 상태의 드롭다운 목록을 보여주는 짧은 비디오입니다.](images/combo-box-expand.gif)
 
 > _헤더를 표시하는 압축 상태의 콤보 상자_
 
 **Windows UI 라이브러리 가져오기**
 
-|  |  |
-| - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](../style/rounded-corner.md)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
+:::row:::
+   :::column:::
+      ![WinUI 로고](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](../style/rounded-corner.md)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요.
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 > **플랫폼 API:** [ComboBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [IsEditable 속성](/uwp/api/windows.ui.xaml.controls.combobox.iseditable), [Text 속성](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [TextSubmitted 이벤트](/uwp/api/Windows.UI.Xaml.Controls.ComboBox)
 
@@ -60,7 +68,7 @@ ms.locfileid: "91217456"
 
 압축 상태의 콤보 상자는 헤더를 표시할 수 있습니다.
 
-![압축 상태의 드롭다운 목록의 예](images/combo_box_collapsed.png)
+![압축 상태의 드롭다운 목록을 보여주는 스크린샷.](images/combo_box_collapsed.png)
 
 콤보 상자는 더 긴 문자열 길이를 지원하도록 확장되지만 읽기 어려운 너무 긴 문자열은 피해야 합니다.
 

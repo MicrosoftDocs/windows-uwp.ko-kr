@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6fa0f8997db9a383097c7e0fece3d8a17d5875ab
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: e144d369dccac6a14a32168bd073bb501275097f
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220096"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763064"
 ---
 # <a name="navigation-design-basics-for-windows-apps"></a>Windows 앱용 탐색 디자인 기본 사항
 
@@ -67,7 +67,7 @@ ms.locfileid: "91220096"
 
 :::row:::
     :::column:::
-        ![권장 사항 예](images/nav/do.svg)
+        ![녹색 확인 표시와 할 일이 있는 녹색 막대의 첫 번째 스크린샷.](images/nav/do.svg)
 
         ![navview 양호](images/nav/navview-good.svg)
 
@@ -86,7 +86,7 @@ ms.locfileid: "91220096"
 
 명확한 경로는 사용자가 논리적으로 탐색을 할 수 있도록 해줍니다. 탐색 옵션을 명확히 만들고 페이지 간 관계를 명료하게 만들면 사용자가 헤매지 않고 탐색을 할 수 있습니다.
 
-![권장 사항 예](images/nav/clarity-image.svg)
+![사용자가 탐색할 수 있는 명확한 경로를 보여주는 애플리케이션 모형의 스크린샷.](images/nav/clarity-image.svg)
 
 > 목적지를 명확히 레이블로 표시하면 사용자가 자신이 어디에 있는지 알 수 있습니다.
 

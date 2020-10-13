@@ -6,12 +6,12 @@ ms.date: 08/10/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 86c6f9398a61865b014400bbf4a96c8a7ce8a231
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ce7344b810c3b6683050876dce38264be6f5c8b7
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154357"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91762840"
 ---
 # <a name="optimize-your-xaml-markup"></a>XAML 태그 최적화
 
@@ -81,11 +81,11 @@ ListView가 로드되지만 너비가 0이기 때문에 표시되지 않습니�
 
 ListView로 실제 시각적 트리가 로드됩니다. 페이지의 총 요소 수는 89개입니다.
 
-![목록 보기를 사용한 시각적 트리](images/visual-tree-1.png)
+![목록 보기가 있는 시각적 트리의 스크린샷.](images/visual-tree-1.png)
 
 ListView와 하위 요소가 메모리에 로드됩니다.
 
-![목록 보기를 사용한 시각적 트리](images/memory-use-1.png)
+![ListView 및 해당 자식을 보여주는 관리형 메모리 테스트 앱 1 점 E X E 테이블의 스크린샷이 메모리에 로드됩니다.](images/memory-use-1.png)
 
 #### <a name="option-2---better"></a>옵션 2 - 더 나음
 
@@ -97,11 +97,11 @@ ListView와 하위 요소가 메모리에 로드됩니다.
 
 ListView가 축소된 실제 시각적 트리입니다. 페이지의 총 요소 수는 46개입니다.
 
-![축소된 목록 보기를 사용한 시각적 트리](images/visual-tree-2.png)
+![축소된 목록 보기가 있는 시각적 트리의 스크린샷.](images/visual-tree-2.png)
 
 ListView와 하위 요소가 메모리에 로드됩니다.
 
-![목록 보기를 사용한 시각적 트리](images/memory-use-1.png)
+![ListView 및 해당 자식을 보여주는 관리형 메모리 테스트 앱 1 점 E X E 테이블의 업데이트된 스크린샷이 메모리에 로드됩니다.](images/memory-use-1.png)
 
 #### <a name="option-3---most-efficient"></a>옵션 3 - 가장 효율적
 

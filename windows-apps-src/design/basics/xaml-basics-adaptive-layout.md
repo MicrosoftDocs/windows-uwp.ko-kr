@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: aabad7a731bd0654468d7b9849d3b9a5bf6bead6
-ms.sourcegitcommit: 662fcfdc08b050947e289a57520a2f99fad1a620
+ms.openlocfilehash: 1f71eb48264570df384fce672b1ca895d98e1109
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353733"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636593"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>자습서: 적응형 레이아웃 만들기
 
@@ -18,11 +18,11 @@ ms.locfileid: "91353733"
 
 이미지 편집 프로그램에는 다음과 같은 두 페이지가 있습니다. _기본 페이지_는 각 이미지 파일에 대한 일부 정보와 함께 사진 갤러리 보기를 표시합니다.
 
-![MainPage](../basics/images/xaml-basics/mainpage.png)
+![사진 랩 기본 페이지의 스크린샷.](../basics/images/xaml-basics/mainpage.png)
 
 *세부 정보 페이지*는 선택한 단일 사진을 표시합니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
 
-![DetailPage](../basics/images/xaml-basics/detailpage.png)
+![사진 랩 세부 정보 페이지의 스크린샷.](../basics/images/xaml-basics/detailpage.png)
 
 ## <a name="prerequisites"></a>필수 구성 요소
 

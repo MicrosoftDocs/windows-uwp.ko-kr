@@ -10,12 +10,12 @@ label: XAML styles
 template: detail.hbs
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6dfb9c73eb6db0bb948714e1ce5e99a185b8dd3d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 6e4e69b87ba78134982032f9ceca826758c1a5ba
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173867"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829653"
 ---
 # <a name="xaml-styles"></a>XAML 스타일
 
@@ -29,7 +29,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 스타일을 사용하여 시각적 속성 설정을 재사용 가능한 리소스로 추출합니다. 다음은 [BorderBrush](/uwp/api/windows.ui.xaml.controls.control.borderbrush), [BorderThickness](/uwp/api/windows.ui.xaml.controls.control.borderthickness) 및 [Foreground](/uwp/api/windows.ui.xaml.controls.control.foreground) 속성을 설정하는 스타일을 사용한 3개의 단추를 보여줍니다. 스타일을 적용하면 각 컨트롤에서 이러한 속성을 별도로 설정하지 않고도 컨트롤이 동일하게 표시되도록 만들 수 있습니다.
 
-![스타일이 적용된 단추](images/styles-rainbow-buttons.png)
+![나란히 정렬된 세 가지 스타일 단추의 스크린샷.](images/styles-rainbow-buttons.png)
 
 컨트롤에 XAML로 스타일을 인라인으로 정의하거나 재사용 가능한 리소스로 정의할 수 있습니다. 개별 페이지의 XAML 파일인 App.xaml 파일 또는 별도의 리소스 사전 XAML 파일에서 리소스를 정의합니다. 앱 간에 리소스 사전 XAML 파일을 공유할 수 있으며, 여러 리소스 사전을 하나의 앱으로 병합할 수 있습니다. 리소스가 정의되는 위치에 따라 리소스를 사용할 수 있는 범위가 결정됩니다. 페이지 수준별 리소스는 해당 리소스가 정의된 페이지에서만 사용할 수 있습니다. App.xaml과 페이지에 모두 동일한 키를 사용하여 리소스가 정의되어 있는 경우 페이지의 리소스는 App.xaml의 리소스보다 우선합니다. 리소스가 별도의 리소스 사전 파일에 정의된 경우 리소스 사전이 참조된 위치에 따라 범위가 결정됩니다.
 
@@ -149,7 +149,7 @@ XAML 프레임워크를 사용하여 다양한 방법으로 앱 모양을 사용
 
 시스템 브러시를 재정의하는 작업은 일반적으로 앱 또는 페이지 수준에서 수행되며, 두 경우 모두 해당 브러시를 참조하는 모든 컨트롤에 색상 재지정이 적용됩니다. 또한 XAML에서는 여러 컨트롤이 동일한 시스템 브러시를 참조할 수 있습니다.
 
-![스타일이 적용된 단추](images/LightweightStyling_ButtonStatesExample.png)
+![두 단추의 스크린샷: 하나는 휴지 상태이고 다른 하나는 간단한 스타일링이 적용되었습니다.](images/LightweightStyling_ButtonStatesExample.png)
 
 ```XAML
 <Page.Resources>
@@ -173,7 +173,7 @@ PointerOver(단추 위로 마우스를 가져감), **PointerPressed**(단추가 
 
 특정 컨트롤의 다른 버전은 변경하지 않으면서 한 페이지에서만 특정 방식으로 보이도록 해당 컨트롤을 변경해야 하는 경우가 있을 수 있습니다.
 
-![스타일이 적용된 단추](images/LightweightStyling_CheckboxExample.png)
+![정렬된 세 개의 스타일 단추가 서로 다른 단추 위에 겹쳐져 있는 스크린샷.](images/LightweightStyling_CheckboxExample.png)
 
 ```XAML
 <CheckBox Content="Normal CheckBox" Margin="5"/>

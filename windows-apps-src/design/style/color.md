@@ -10,12 +10,12 @@ ms.custom: RS5
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: bb0f38c250d20780b301a925b24e3d1c36bda7e3
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f7035017b1b1bfe878e4bd390fcefbe2bf3a6be5
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216606"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636563"
 ---
 # <a name="color"></a>색
 
@@ -216,7 +216,7 @@ Windows 셸의 테마 컬러 알고리즘은 테마 컬러의 밝은 음영과 �
 
 아래 차트는 테마 컬러의 다양한 밝은/어두운 음영 예와 컬러 표면에 컬러 유형을 적용하는 방법을 보여 줍니다.
 
-![color-on-color](images/color/color-on-color.png)
+![위쪽의 연한 파란색에서 아래쪽의 진한 파란색으로 변하는 색 그라데이션을 보여주는 Color on Color 차트의 스크린샷.](images/color/color-on-color.png)
 
 컨트롤에 스타일을 지정하는 방법에 대한 자세한 내용은 [XAML 스타일](../controls-and-patterns/xaml-styles.md)을 참조하세요.
 

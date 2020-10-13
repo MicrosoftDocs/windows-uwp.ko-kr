@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1164113b4e4c6b64c6ee1e3d98e0bdc4c8b635ea
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: 26b9d89d5c4a329cd08283c4ebe96d4de4bdc562
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88942853"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763028"
 ---
 # <a name="pull-to-refresh"></a>당겨서 새로 고침
 
@@ -33,7 +33,7 @@ ms.locfileid: "88942853"
 
 또한 [RefreshVisualizer](/uwp/api/windows.ui.xaml.controls.refreshvisualizer)를 사용하여 새로 고침 단추 같은 다른 방법을 통해 호출이 가능하도록 일관된 새로 고침 환경을 만들 수 있습니다.
 
-## <a name="examples"></a>예
+## <a name="xaml-controls-gallery-examples"></a>XAML 컨트롤 갤러리 예제
 
 <table>
 <th align="left">XAML Controls Gallery<th>

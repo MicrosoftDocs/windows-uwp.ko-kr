@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 433f24ea6c4e2fd03faa652a041f3a1c1578652e
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 319bf762d54ed341672a99d15d9e760c91d93cff
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217936"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829454"
 ---
 # <a name="nested-ui-in-list-items"></a>목록 항목의 중첩된 UI
 
@@ -35,7 +35,7 @@ ms.locfileid: "91217936"
 - *목록 항목*은 사용자가 목록에서 작업할 수 있는 개별 항목을 의미합니다.
 - *중첩된 UI*는 목록 항목 자체에 대해 수행할 수 있는 작업과는 별개로 사용자가 작업할 수 있는 목록 항목 내의 UI 요소를 의미합니다.
 
-![중첩된 UI 부분](images/nested-ui-example-1.png)
+![중첩된 UI의 일부를 보여주는 스크린샷.](images/nested-ui-example-1.png)
 
 > 참고&nbsp;&nbsp; ListView와 GridView는 모두 [ListViewBase](/uwp/api/windows.ui.xaml.controls.listviewbase) 클래스에서 파생되므로 동일한 기능을 갖지만 데이터를 다르게 표시합니다. 이 문서에서 목록에 대한 설명은 ListView 및 GridView 컨트롤에 모두 적용됩니다.
 
@@ -107,7 +107,7 @@ Windows에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인
 
 중첩된 요소가 있는 목록 UI에서 호출, 선택(단일 또는 다중) 또는 끌어서 놓기 등의 작업을 지원하는 경우 이러한 화살표 지정 기술을 사용하여 중첩된 UI 요소를 탐색하는 것이 좋습니다.
 
-![중첩된 UI 부분](images/nested-ui-navigation.png)
+![A, B, C 및 D 문자로 레이블이 지정된 중첩된 UI 요소를 보여주는 스크린샷.](images/nested-ui-navigation.png)
 
 **게임 패드**
 
@@ -147,7 +147,7 @@ Windows에서 지원되는 모든 입력을 앱에서 지원하는 것이 확인
 
 이러한 종류의 UI는 사용자가 작업을 수행할 수 있는 것보다 더 많은 요소가 중첩되어 있으므로 이전 예제보다 훨씬 더 복잡할 수 있습니다.
 
-![중첩된 UI 부분](images/nested-ui-grouping.png)
+![사용자가 조작할 수 있는 많은 중첩 요소를 보여주는 복잡한 중첩된 UI의 스크린샷.](images/nested-ui-grouping.png)
 
 
 이 UI를 구현하려면 목록에서 다음 속성을 설정합니다.

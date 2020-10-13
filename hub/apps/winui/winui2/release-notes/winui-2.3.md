@@ -3,12 +3,12 @@ title: WinUI 2.3 릴리스 정보
 description: 새로운 기능 및 버그 수정이 포함된 WinUI 2.3 릴리스에 대한 정보입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: 63091f927f63a708c5a5e4d41e9d81fd9f528cb1
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1043ae488342fc8396902c73c2f00eb5b19f584d
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154787"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636513"
 ---
 # <a name="windows-ui-library-23"></a>Windows UI 라이브러리 2.3
 
@@ -56,7 +56,7 @@ NuGet 패키지 다운로드: [Microsoft.UI.Xaml](https://www.nuget.org/packages
 
 **RadioButtons**는 관련된 RadioButton 요소 그룹을 쉽게 만들 수 있도록 하면서 키보드 및 내레이터/스크린 판독기 기능을 올바르게 지원할 수 있는 새 컨테이너 컨트롤입니다.
 
-![RadioButtons](../images/RadioButtons.png)
+![세 번째 라디오 단추가 선택된 세 개의 라디오 단추의 스크린샷.](../images/RadioButtons.png)
 
 [문서 및 샘플 링크](https://github.com/microsoft/microsoft-ui-xaml-specs/blob/c8d3d3668af546091656dfc37436b13cd062f52d/active/radiobuttons/RadioButtons_Spec.md)
 
@@ -67,8 +67,7 @@ Xaml 컨트롤 갤러리 샘플 앱에는 WinUI 컨트롤을 사용하기 위한
 * [Microsoft Store](
 https://www.microsoft.com/p/xaml-controls-gallery/9msvh128x2zt)에서 XAML 컨트롤 갤러리 앱 설치
 
-* [GitHub에서 오픈 소스](
-https://github.com/Microsoft/Xaml-Controls-Gallery)로도 제공되는 Xaml 컨트롤 갤러리
+* [GitHub에서 오픈 소스](https://github.com/Microsoft/Xaml-Controls-Gallery)로도 제공되는 Xaml 컨트롤 갤러리
 
 ## <a name="documentation"></a>문서
 

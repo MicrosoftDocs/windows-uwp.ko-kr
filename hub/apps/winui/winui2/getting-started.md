@@ -4,12 +4,12 @@ description: Windows UI 라이브러리를 설치하고 사용하는 방법입�
 ms.topic: reference
 ms.date: 07/15/2020
 keywords: Windows 10, UWP, 도구 키트 SDK
-ms.openlocfilehash: 94c23ab9573df576af89d9211ced70938fd5105f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 7b7b248ce166368d315dce42f27075d3933c0781
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174137"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91762852"
 ---
 # <a name="getting-started-with-the-windows-ui-2x-library"></a>Windows UI 2.x 라이브러리 시작
 
@@ -33,9 +33,9 @@ ms.locfileid: "89174137"
 **Microsoft.UI.Xaml** 패키지에는 모든 앱에 적합한 Fluent 컨트롤 및 기능이 포함되어 있습니다.  
 필요에 따라 "시험판 포함"을 선택하여 새 실험적 기능이 포함된 최신 시험판 버전을 확인할 수 있습니다.
 
-    ![NuGet 패키지](images/ManageNugetPackages.png "NuGet 패키지 관리 이미지")
+    ![프로젝트를 마우스 오른쪽 단추로 클릭하고 NuGet 패키지 관리 옵션이 강조 표시된 솔루션 탐색기 패널의 스크린샷.](images/ManageNugetPackages.png "NuGet 패키지 관리 이미지")
 
-    ![NuGet 패키지](images/NugetPackages.png)
+    ![검색 필드에 winui가 있는 찾아보기 탭을 보여주는 NuGet 패키지 관리자 대화 상자의 스크린샷.](images/NugetPackages.png)
 
 4. WinUI(Windows UI) 테마 리소스를 App.xaml 리소스에 추가합니다. 추가 애플리케이션 리소스가 있는지 여부에 따라 이를 수행하는 두 가지 방법이 있습니다.
 

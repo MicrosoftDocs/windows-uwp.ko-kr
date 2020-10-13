@@ -310,7 +310,71 @@
           href: motion/key-frame-and-easing-function-animations.md
 - name: 셸
   items:
-    - name: 타일
+    - name: 알림 메시지
+      items:
+        - name: UX 지침
+          href: shell/tiles-and-notifications/toast-ux-guidance.md
+        - name: 로컬 알림 메시지 보내기
+          items:
+            - name: UWP 앱
+              href: shell/tiles-and-notifications/send-local-toast.md
+            - name: Win32 앱
+              items:
+                - name: 개요
+                  href: shell/tiles-and-notifications/toast-desktop-apps.md
+                - name: C# 앱
+                  href: shell/tiles-and-notifications/send-local-toast-desktop.md
+                - name: C++ WRL 앱
+                  href: shell/tiles-and-notifications/send-local-toast-desktop-cpp-wrl.md
+        - name: 알림 콘텐츠
+          items:
+            - name: Content
+              href: shell/tiles-and-notifications/adaptive-interactive-toasts.md
+            - name: 스키마
+              href: shell/tiles-and-notifications/toast-schema.md
+        - name: 알림 일정
+          href: shell/tiles-and-notifications/scheduled-toast.md
+        - name: 추가 기능
+          items:
+            - name: 사용자 지정 오디오
+              href: shell/tiles-and-notifications/custom-audio-on-toasts.md
+            - name: 진행률 표시줄
+              href: shell/tiles-and-notifications/toast-progress-bar.md
+            - name: 보류 중인 업데이트
+              href: shell/tiles-and-notifications/toast-pending-update.md
+            - name: 사용자 지정 타임스탬프
+              href: shell/tiles-and-notifications/custom-timestamps-on-toasts.md
+            - name: 컬렉션
+              href: shell/tiles-and-notifications/toast-collections.md
+            - name: 헤더
+              href: shell/tiles-and-notifications/toast-headers.md
+            - name: 알림 수신기
+              href: shell/tiles-and-notifications/notification-listener.md
+            - name: 사용되지 않음
+              items:
+                - name: 알림 미러링
+                  href: shell/tiles-and-notifications/notification-mirroring.md
+                - name: 유니버설 해제
+                  href: shell/tiles-and-notifications/universal-dismiss.md
+    - name: 배지 알림
+      href: shell/tiles-and-notifications/badges.md
+    - name: 푸시 알림
+      items:
+        - name: 개요
+          href: shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md
+        - name: WNS 우선 순위
+          href: shell/tiles-and-notifications/wns-notification-priorities.md
+        - name: WNS 트래픽을 허용 목록에 추가
+          href: shell/tiles-and-notifications/firewall-allowlist-config.md
+        - name: 푸시 알림 마법사에서 생성된 코드
+          href: shell/tiles-and-notifications/the-code-generated-by-the-push-notification-wizard.md
+    - name: 작업 표시줄
+      items:
+        - name: 작업 표시줄에 앱 고정
+          href: shell/pin-to-taskbar.md
+    - name: 제목 표시줄
+      href: shell/title-bar.md
+    - name: 라이브 타일
       href: shell/tiles-and-notifications/creating-tiles.md
       items:
         - name: 보조 타일
@@ -338,54 +402,8 @@
           href: shell/tiles-and-notifications/primary-tile-apis.md
         - name: '언어, 배율, 대비에 대한 타일, 알림 메시지 지원'
           href: shell/tiles-and-notifications/tile-toast-language-scale-contrast.md
-    - name: 작업 표시줄에 앱 고정
-      href: shell/pin-to-taskbar.md
-    - name: 제목 표시줄 사용자 지정
-      href: shell/title-bar.md
-    - name: 알림
+    - name: 기타
       items:
-        - name: 알림 메시지
-          items:
-            - name: UX 지침
-              href: shell/tiles-and-notifications/toast-ux-guidance.md
-            - name: 알림 콘텐츠
-              href: shell/tiles-and-notifications/adaptive-interactive-toasts.md
-            - name: 알림 콘텐츠 스키마
-              href: shell/tiles-and-notifications/toast-schema.md
-            - name: 로컬 알림 메시지 보내기
-              items:
-                - name: Windows 앱
-                  href: shell/tiles-and-notifications/send-local-toast.md
-                - name: 데스크톱 앱
-                  items:
-                    - name: 개요
-                      href: shell/tiles-and-notifications/toast-desktop-apps.md
-                    - name: C# 앱
-                      href: shell/tiles-and-notifications/send-local-toast-desktop.md
-                    - name: C++ WRL 앱
-                      href: shell/tiles-and-notifications/send-local-toast-desktop-cpp-wrl.md
-            - name: 알림 일정
-              href: shell/tiles-and-notifications/scheduled-toast.md
-            - name: 사용자 지정 오디오
-              href: shell/tiles-and-notifications/custom-audio-on-toasts.md
-            - name: 진행률 표시줄
-              href: shell/tiles-and-notifications/toast-progress-bar.md
-            - name: 보류 중인 업데이트
-              href: shell/tiles-and-notifications/toast-pending-update.md
-            - name: 사용자 지정 타임스탬프
-              href: shell/tiles-and-notifications/custom-timestamps-on-toasts.md
-            - name: 컬렉션
-              href: shell/tiles-and-notifications/toast-collections.md
-            - name: 헤더
-              href: shell/tiles-and-notifications/toast-headers.md
-            - name: 알림 수신기
-              href: shell/tiles-and-notifications/notification-listener.md
-            - name: 알림 미러링
-              href: shell/tiles-and-notifications/notification-mirroring.md
-            - name: 유니버설 해제
-              href: shell/tiles-and-notifications/universal-dismiss.md
-        - name: 배지 알림
-          href: shell/tiles-and-notifications/badges.md
         - name: 알림 시각화 도우미
           href: shell/tiles-and-notifications/notifications-visualizer.md
         - name: 알림 전달 방법
@@ -397,17 +415,6 @@
               href: shell/tiles-and-notifications/alternate-channel-vapid-webpush.md
             - name: 정기 알림
               href: shell/tiles-and-notifications/periodic-notification-overview.md
-        - name: WNS(Windows 푸시 알림 서비스)
-          href: shell/tiles-and-notifications/windows-push-notification-services--wns--overview.md
-          items:
-            - name: WNS 우선 순위
-              href: shell/tiles-and-notifications/wns-notification-priorities.md
-            - name: WNS 트래픽을 허용 목록에 추가
-              href: shell/tiles-and-notifications/firewall-allowlist-config.md
-            - name: 푸시 알림 마법사에서 생성된 코드
-              href: shell/tiles-and-notifications/the-code-generated-by-the-push-notification-wizard.md
-        - name: 원시 알림
-          href: shell/tiles-and-notifications/raw-notification-overview.md
 - name: 입력 및 조작
   items:
     - name: 개요

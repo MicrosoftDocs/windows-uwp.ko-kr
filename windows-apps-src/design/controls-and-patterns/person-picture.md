@@ -11,26 +11,34 @@ design-contact: kimsea
 dev-contact: kefodero
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c4967a63a4417f284c0735153a1b7a543e82e54c
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: ee8d78b38c05483f127571b15e1f4ebfb267c331
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217866"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829440"
 ---
 # <a name="person-picture-control"></a>인물 사진 컨트롤
 
 인물 사진 컨트롤은 사람의 아바타 이미지가 있는 경우 해당 이미지를 표시하고, 없는 경우 사람의 이니셜이나 일반 글자 모양을 표시합니다. 컨트롤을 사용하여 사람의 연락처 정보를 관리하는 개체인 [Contact 개체](/uwp/api/Windows.ApplicationModel.Contacts.Contact)를 표시하거나 수동으로 표시 이름과 프로필 사진 등의 연락처 정보를 제공할 수 있습니다.
 
-![인물 사진 컨트롤](images/person-picture/person-picture_hero.png)
+![인물 사진 컨트롤의 스크린샷.](images/person-picture/person-picture_hero.png)
 
  > 사용자 이름을 표시하는 두 개의 [텍스트 블록](text-block.md) 요소가 포함된 인물 사진 컨트롤입니다.
 
 **Windows UI 라이브러리 가져오기**
 
-|  |  |
-| - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **PersonPicture** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
+:::row:::
+   :::column:::
+      ![WinUI 로고](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      **PersonPicture** 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요.
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 > **플랫폼 API**: [PersonPicture 클래스](/uwp/api/windows.ui.xaml.controls.personpicture), [Contact 클래스](/uwp/api/Windows.ApplicationModel.Contacts.Contact), [ContactManager 클래스](/uwp/api/Windows.ApplicationModel.Contacts.ContactManager)
 
@@ -43,7 +51,7 @@ ms.locfileid: "91217866"
 * 메시지를 보낸 사람을 표시하려면
 * 소셜 미디어 연락처를 표시하려면
 
-다음 일러스트레이션은 연락처 목록의 인물 사진 컨트롤을 보여줍니다. ![인물 사진 컨트롤](images/person-picture/person-picture-control.png)
+다음 일러스트레이션은 연락처 목록의 인물 사진 컨트롤을 보여줍니다. ![연락처 목록의 인물 사진 컨트롤을 보여주는 스크린샷.](images/person-picture/person-picture-control.png)
 
 ## <a name="examples"></a>예
 

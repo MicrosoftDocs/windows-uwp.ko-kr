@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ff5df0d56d5be6b2cbb93814d01fed48a626797
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 04357cc43ed227b109d4aab20c509077261360ee
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219096"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636603"
 ---
 # <a name="tutorial-create-custom-styles"></a>자습서: 사용자 지정 스타일 만들기
 
@@ -18,11 +18,11 @@ ms.locfileid: "91219096"
 
 PhotoLab 샘플 앱에는 두 가지 페이지가 있습니다. _기본 페이지_는 각 이미지 파일에 대한 일부 정보와 함께 사진 갤러리 보기를 표시합니다.
 
-![MainPage](../basics/images/xaml-basics/mainpage.png)
+![사진 랩 기본 페이지의 스크린샷.](../basics/images/xaml-basics/mainpage.png)
 
 *세부 정보 페이지*는 선택한 단일 사진을 표시합니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
 
-![DetailPage](../basics/images/xaml-basics/detailpage.png)
+![사진 랩 세부 정보 페이지의 스크린샷.](../basics/images/xaml-basics/detailpage.png)
 
 ## <a name="prerequisites"></a>필수 구성 요소
 

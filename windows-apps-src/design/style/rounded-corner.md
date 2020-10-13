@@ -4,12 +4,12 @@ description: 둥근 모퉁이 원칙, 디자인 방법 및 사용자 지정 옵�
 ms.date: 10/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 모퉁이 반경, 둥근 모양
-ms.openlocfilehash: 134a49ac57678eea0da718e93a14e3d0cf8896d5
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: 044ae628ffe397005113f658191398e06fd245f5
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81001480"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636533"
 ---
 # <a name="corner-radius"></a>모퉁이 반경
 
@@ -115,11 +115,11 @@ WinUI 2.2 이상을 위한 NuGet 패키지를 설치하는 경우 WinUI 컨트�
 
 - 컨트롤이 ScrollViewer의 일부이기도 한 ScrollBar 컨테이너의 일부인 ScrollBar의 막대같이 다른 컨테이너 내에 있는 경우입니다.
 
-![ScrollBar](images/rounded-corner/scrollbar.png)
+![둥근 모서리가 없는 세로 스크롤 막대의 스크린샷.](images/rounded-corner/scrollbar.png)
 
 - 플라이아웃 UI 요소의 한 쪽이 플라이아웃을 호출하는 UI에 연결된 경우입니다.
 
-![AutoSuggest](images/rounded-corner/autosuggest.png)
+![일부 모서리가 둥글지 않은 AutoSuggest 플라이아웃의 스크린샷.](images/rounded-corner/autosuggest.png)
 
 ### <a name="keyboard-focus-rectangle-and-shadow"></a>키보드 포커스 사각형 및 그림자
 

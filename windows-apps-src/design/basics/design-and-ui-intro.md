@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 75d8dfe44c9296fbaf1d8caf5127db0244fc1d8d
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: d3179a553e0d30bd009765ec55640989720628c2
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216516"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763085"
 ---
 # <a name="introduction-to-windows-app-design"></a>Windows 앱 디자인 소개
 
@@ -67,7 +67,7 @@ UWP 앱은 모든 디바이스에 자동으로 조정되므로 모든 디바이�
 UWP 앱이 모든 Windows 10 디바이스에서 시작되면 [페이지](/uwp/api/windows.ui.xaml.controls.page) 인스턴스 간에 이동할 수 있는 [프레임](/uwp/api/windows.ui.xaml.controls.frame)이 있는 [창](/uwp/api/windows.ui.xaml.window)에서 시작됩니다.
     :::column-end:::
     :::column:::
-![프레임](images/frame.svg)
+![프레임이 있는 창의 스크린샷.](images/frame.svg)
     :::column-end:::
 :::row-end:::
 
@@ -78,7 +78,7 @@ UWP 앱이 모든 Windows 10 디바이스에서 시작되면 [페이지](/uwp/ap
 페이지를 구성하는 방법을 알아보려면 [탐색 기본 사항](navigation-basics.md)을 참조하세요.
     :::column-end:::
     :::column:::
-![프레임](images/collection-pages.svg)
+![컬렉션 페이지의 스크린샷.](images/collection-pages.svg)
     :::column-end:::
 :::row-end:::
 
@@ -94,7 +94,7 @@ UWP 앱이 모든 Windows 10 디바이스에서 시작되면 [페이지](/uwp/ap
 
 일반적인 UWP 앱 패턴을 구현하는 방법에 대한 자세한 내용은 [페이지 레이아웃](../layout/page-layout.md) 문서를 참조하세요.
 
-Visual Studio에서 [Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio/tree/master)를 사용하여 앱의 레이아웃을 시작할 수도 있습니다.
+Visual Studio에서 [Windows Template Studio](https://github.com/Microsoft/WindowsTemplateStudio)를 사용하여 앱의 레이아웃을 시작할 수도 있습니다.
 
 ## <a name="controls"></a>컨트롤
 
@@ -134,7 +134,7 @@ UWP 앱에는 앱의 아이콘과 ID에 따라 사용자 지정할 수 있는 4�
 UWP 앱은 스마트 상호 작용을 사용합니다. 클릭이 마우스, 스타일러스 또는 손가락 탭에서 비롯되는 것인지 여부를 알거나 정의하지 않고 클릭 상호 작용을 중심으로 디자인할 수 있습니다. 그러나 앱은 [특정 입력 모드](../input/input-primer.md)에 대해서도 디자인할 수 있습니다.
     :::column-end:::
     :::column:::
-![입력](images/inputs.svg)
+![다른 입력 모드를 지정하는 아이콘의 스크린샷.](images/inputs.svg)
     :::column-end:::
 :::row-end:::
 
@@ -146,7 +146,7 @@ UWP 앱은 스마트 상호 작용을 사용합니다. 클릭이 마우스, 스�
 
 ## <a name="usability"></a>사용 편의성
 
-<img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REYaAb?ver=727c">
+:::image type="content" source="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REYaAb" alt-text="다양한 능력을 가진 사람을 묘사하는 스틱 그림 만화의 짧은 비디오.":::
 
 마지막 핵심 요소인 유용성은 모든 사용자가 쉽게 사용할 수 있는 앱 환경을 만드는 것과 관련이 있습니다. 모든 사용자가 매우 포괄적인 사용자 환경에서 혜택을 누릴 수 있습니다. 모든 사용자가 앱을 쉽게 사용할 수 있도록 만드는 방법에 대한 자세한 내용은 [UWP 앱의 유용성](../usability/index.md)을 참조하세요.
 

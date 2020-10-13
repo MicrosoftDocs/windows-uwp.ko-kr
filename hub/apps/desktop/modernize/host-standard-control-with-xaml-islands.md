@@ -1,64 +1,62 @@
 ---
-description: 이 문서에서는 XAML Islands를 사용하여 WPF 앱에서 표준 UWP 컨트롤을 호스트하는 방법을 보여 줍니다.
-title: XAML Islands를 사용하여 WPF 앱에서 표준 UWP 컨트롤 호스트
-ms.date: 01/24/2020
+description: 이 문서에서는 XAML Islands를 사용하여 WPF 앱에서 표준 WinRT XAML 컨트롤을 호스팅하는 방법을 보여 줍니다.
+title: XAML Islands를 사용하여 WPF 앱에서 표준 WinRT XAML 컨트롤 호스팅
+ms.date: 10/02/2020
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, xaml islands, 래핑된 컨트롤, 표준 컨트롤, InkCanvas, InkToolbar
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 0e8972a71feacd593edf98853ae1dcc0f88002fd
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a8f5b141e5726d19651aeafeb9b6d432e20c2f47
+ms.sourcegitcommit: b8d0e2c6186ab28fe07eddeec372fb2814bd4a55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168897"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671532"
 ---
-# <a name="host-a-standard-uwp-control-in-a-wpf-app-using-xaml-islands"></a>XAML Islands를 사용하여 WPF 앱에서 표준 UWP 컨트롤 호스트
+# <a name="host-a-standard-winrt-xaml-control-in-a-wpf-app-using-xaml-islands"></a>XAML Islands를 사용하여 WPF 앱에서 표준 WinRT XAML 컨트롤 호스팅
 
-이 문서에서는 [XAML Islands](xaml-islands.md)를 사용하여 WPF 앱에서 표준 UWP 컨트롤(즉, Windows SDK에서 제공하는 자사 UWP 컨트롤)을 호스트하는 두 가지 방법을 보여 줍니다.
+이 문서에서는 [XAML Islands](xaml-islands.md)를 사용하여 WPF 앱에서 표준 WinRT XAML 컨트롤(즉, Windows SDK에서 제공하는 자사 WinRT XAML 컨트롤)을 호스팅하는 두 가지 방법을 보여 줍니다.
 
-* Windows 커뮤니티 도구 키트의 [래핑된 컨트롤](xaml-islands.md#wrapped-controls)을 사용하여 UWP [InkCanvas](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 및 [InkToolbar](/uwp/api/windows.ui.xaml.controls.inktoolbar) 컨트롤을 호스트하는 방법을 보여 줍니다. 이러한 컨트롤은 몇 가지 유용한 UWP 컨트롤 세트의 인터페이스 및 기능을 래핑합니다. WPF 또는 Windows Forms 프로젝트의 디자인 화면에 이러한 컨트롤을 바로 추가하고 디자이너에서 다른 WPF 또는 Windows Forms 컨트롤처럼 사용할 수 있습니다.
+* Windows 커뮤니티 도구 키트의 [래핑된 컨트롤](xaml-islands.md#wrapped-controls)을 사용하여 UWP [InkCanvas](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 및 [InkToolbar](/uwp/api/windows.ui.xaml.controls.inktoolbar) 컨트롤을 호스트하는 방법을 보여 줍니다. 이러한 컨트롤은 유용한 WinRT XAML 컨트롤에 대한 작은 세트의 인터페이스 및 기능을 래핑합니다. WPF 또는 Windows Forms 프로젝트의 디자인 화면에 이러한 컨트롤을 바로 추가하고 디자이너에서 다른 WPF 또는 Windows Forms 컨트롤처럼 사용할 수 있습니다.
 
-* 또한 Windows 커뮤니티 도구 키트의 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 UWP [CalendarView](/uwp/api/Windows.UI.Xaml.Controls.CalendarView) 컨트롤을 호스트하는 방법을 보여 줍니다. 소수의 UWP 컨트롤 세트만 래핑된 컨트롤로 사용할 수 있기 때문에 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost)를 사용하여 다른 표준 UWP 컨트롤을 호스트할 수 있습니다.
+* 또한 Windows 커뮤니티 도구 키트의 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 UWP [CalendarView](/uwp/api/Windows.UI.Xaml.Controls.CalendarView) 컨트롤을 호스트하는 방법을 보여 줍니다. 작은 WinRT XAML 컨트롤 세트만 래핑된 컨트롤로 사용할 수 있으므로 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost)를 사용하여 다른 표준 WinRT XAML 컨트롤을 호스팅할 수 있습니다.
 
-이 문서는 WPF 앱에서 UWP 컨트롤을 호스트하는 방법을 보여 주지만 Windows Forms 앱의 프로세스와 비슷합니다.
+이 문서에서는 WPF 앱에서 WinRT XAML 컨트롤을 호스팅하는 방법을 보여 주지만, 이 프로세스는 Windows Forms 앱과 비슷합니다.
 
 ## <a name="required-components"></a>필수 구성 요소
 
-WPF(또는 Windows Forms) 앱에서 UWP 컨트롤을 호스트하려면 솔루션에 다음 구성 요소가 필요합니다. 이 문서에서는 이러한 각 구성 요소를 만드는 방법에 대한 지침을 제공합니다.
+WPF(또는 Windows Forms) 앱에서 WinRT XAML 컨트롤을 호스팅하려면 솔루션에 다음 구성 요소가 필요합니다. 이 문서에서는 이러한 각 구성 요소를 만드는 방법에 대한 지침을 제공합니다.
 
-* **앱에 대한 프로젝트 및 소스 코드**. [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 표준 자사 UWP 컨트롤을 호스트하는 것은 .NET Framework 또는 .NET Core 3를 대상으로 하는 앱에서 지원됩니다.
+* **앱에 대한 프로젝트 및 소스 코드**. [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 WinRT XAML 컨트롤을 호스팅하는 것은 .NET Core 3.x를 대상으로 하는 앱에서 지원됩니다.
 
 * **XamlApplication에서 파생되는 루트 Application 클래스를 정의하는 UWP 앱 프로젝트**. WPF 또는 Windows Forms 프로젝트는 사용자 지정 UWP XAML 컨트롤을 검색하고 로드할 수 있도록 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스의 인스턴스에 액세스할 수 있어야 합니다. 이 작업을 수행하는 권장 방법은 WPF 또는 Windows Forms 앱에 대한 솔루션의 일부인 별도의 UWP 앱 프로젝트에서 이 개체를 정의하는 것입니다. 
 
     > [!NOTE]
-    > `XamlApplication` 개체가 자사 UWP 컨트롤을 호스트하는 데 필요하지는 않지만 사용자 지정 UWP 컨트롤 호스트를 포함하여 모든 범위의 XAML Island 시나리오를 지원하려면 앱에 이 개체가 필요합니다. 따라서 XAML Islands를 사용하는 모든 솔루션에서 항상 `XamlApplication` 개체를 정의하는 것이 좋습니다.
+    > `XamlApplication` 개체가 자사 WinRT XAML 컨트롤을 호스팅하는 데 필요하지는 않지만 사용자 지정 WinRT XAML 컨트롤 호스팅을 포함하여 모든 범위의 XAML Island 시나리오를 지원하려면 앱에 이 개체가 필요합니다. 따라서 XAML Islands를 사용하는 모든 솔루션에서 항상 `XamlApplication` 개체를 정의하는 것이 좋습니다.
 
     > [!NOTE]
-    > 솔루션은 `XamlApplication` 개체를 정의하는 프로젝트를 하나만 포함할 수 있습니다. 앱의 모든 사용자 지정 UWP 컨트롤은 동일한 `XamlApplication` 개체를 공유합니다. `XamlApplication` 개체를 정의하는 프로젝트에는 XAML Islands에 UWP 컨트롤을 호스트하는 데 사용되는 다른 모든 UWP 라이브러리 및 프로젝트에 대한 참조가 포함되어야 합니다.
+    > 솔루션은 `XamlApplication` 개체를 정의하는 프로젝트를 하나만 포함할 수 있습니다. `XamlApplication` 개체를 정의하는 프로젝트에는 XAML Islands에서 WinRT XAML 컨트롤을 호스팅하는 데 사용되는 다른 모든 라이브러리 및 프로젝트에 대한 참조가 포함되어야 합니다.
 
 ## <a name="create-a-wpf-project"></a>WPF 프로젝트 만들기
 
 시작하기 전에 다음 지침에 따라 WPF 프로젝트를 만들고 XAML Islands를 호스트하도록 구성합니다. 기존 WPF 프로젝트가 있는 경우 프로젝트에 대해 이러한 단계 및 코드 예제를 적용할 수 있습니다.
 
-1. Visual Studio 2019에서 새 **WPF 앱(.NET Framework)** 또는 **WPF 앱(.NET Core)** 프로젝트를 만듭니다. **WPF 앱(.NET Core)** 프로젝트를 만들려면 먼저 최신 버전의 [.NET Core 3 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)를 설치해야 합니다.
+1. Visual Studio 2019에서 새 **WPF 앱(.NET Core)** 프로젝트를 만듭니다. 아직 설치하지 않은 경우 먼저 최신 버전의 [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet/current)를 설치해야 합니다.
 
-2. [패키지 참조](/nuget/consume-packages/package-references-in-project-files)를 사용하도록 설정했는지 확인합니다.
+2. [패키지 참조](/nuget/consume-packages/package-references-in-project-files)를 사용하도록 설정합니다.
 
     1. Visual Studio에서 **도구 -> NuGet 패키지 관리자 -> 패키지 관리자 설정**을 클릭합니다.
     2. **기본 패키지 관리 형식**에 대해 **PackageReference**를 선택했는지 확인합니다.
 
 3. **솔루션 탐색기**에서 WPF 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
 
-4. **NuGet 패키지 관리자** 창에서 **시험판 포함**이 포함되어 있는지 확인합니다.
-
-5. **찾아보기** 탭을 선택하고 [Microsoft.Toolkit.Wpf.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls) 패키지(버전 v6.0.0 이상)를 검색한 다음, 패키지를 설치합니다. 이 패키지는 WPF에 래핑된 UWP 컨트롤을 사용하는 데 필요한 모든 항목을 제공합니다([InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar)과 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤 포함).
+4. **찾아보기** 탭을 선택하고, [Microsoft.Toolkit.Wpf.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls) 패키지를 검색하여 안정적인 최신 버전을 설치합니다. 이 패키지는 래핑된 WPF용 WinRT XAML 컨트롤([InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar)과 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤 포함)을 사용하는 데 필요한 모든 요소를 제공합니다.
     > [!NOTE]
-    > Windows Forms 앱은 [Microsoft.Toolkit.Forms.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Forms.UI.Controls) 패키지(버전 v6.0.0 이상)를 사용해야 합니다.
+    > Windows Forms 앱은 [Microsoft.Toolkit.Forms.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Forms.UI.Controls) 패키지를 사용해야 합니다.
 
-6. x86 또는 x64와 같은 특정 플랫폼을 대상으로 하도록 솔루션을 구성합니다. 대부분의 XAML Islands 시나리오는 **모든 CPU**를 대상으로 하는 프로젝트에서 지원되지 않습니다.
+5. x86 또는 x64와 같은 특정 플랫폼을 대상으로 하도록 솔루션을 구성합니다. 대부분의 XAML Islands 시나리오는 **모든 CPU**를 대상으로 하는 프로젝트에서 지원되지 않습니다.
 
     1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **속성** -> **구성 속성** -> **Configuration Manager**를 선택합니다. 
     2. **활성 솔루션 플랫폼**에서 **새로 만들기**를 선택합니다. 
@@ -70,11 +68,11 @@ WPF(또는 Windows Forms) 앱에서 UWP 컨트롤을 호스트하려면 솔루�
 그런 다음, UWP 앱 프로젝트를 솔루션에 추가하고 이 프로젝트의 기본 `App` 클래스를 수정하여 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스에서 파생하도록 합니다. 이 클래스는 [IXamlMetadaraProvider](/uwp/api/Windows.UI.Xaml.Markup.IXamlMetadataProvider) 인터페이스를 지원합니다. 이 인터페이스를 통해 앱은 런타임 시 애플리케이션의 현재 디렉터리에 있는 어셈블리의 사용자 지정 UWP XAML 컨트롤에 대한 메타데이터를 검색하고 로드할 수 있습니다. 이 클래스는 또한 현재 스레드에 대한 UWP XAML 프레임워크를 초기화합니다.
 
 > [!NOTE]
-> 이 단계가 자사 UWP 컨트롤을 호스트하는 데 필요하지는 않지만 사용자 지정 UWP 컨트롤 호스트를 포함하여 모든 범위의 XAML Island 시나리오를 지원하려면 앱에 `XamlApplication` 개체가 필요합니다. 따라서 XAML Islands를 사용하는 모든 솔루션에서 항상 `XamlApplication` 개체를 정의하는 것이 좋습니다.
+> 이 단계는 자사 WinRT XAML 컨트롤을 호스팅하는 데 필요하지 않지만, 사용자 지정 WinRT XAML 컨트롤을 호스팅하는 것을 포함하여 모든 범위의 XAML Island 시나리오를 지원하려면 `XamlApplication` 개체가 앱에 필요합니다. 따라서 XAML Islands를 사용하는 모든 솔루션에서 항상 `XamlApplication` 개체를 정의하는 것이 좋습니다.
 
 1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 프로젝트**를 선택합니다.
-2. 솔루션에 **빈 앱(유니버설 Windows)** 프로젝트를 추가합니다. 대상 버전 및 최소 버전이 둘 다 **Windows 10, 버전 1903** 이상으로 설정되어 있는지 확인합니다.
-3. UWP 앱 프로젝트에서 [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) NuGet 패키지(버전 v6.0.0 이상)를 설치합니다.
+2. 솔루션에 **빈 앱(유니버설 Windows)** 프로젝트를 추가합니다. 대상 버전 및 최소 버전이 모두 **Windows 10 버전 1903(빌드 18362)** 이상 릴리스로 설정되어 있는지 확인합니다.
+3. UWP 앱 프로젝트에서 [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) NuGet 패키지(안정적인 최신 버전)를 설치합니다.
 4. **App.xaml** 파일을 열고 이 파일의 내용을 다음 XAML로 바꿉니다. `MyUWPApp`을 UWP 앱 프로젝트의 네임스페이스로 바꿉니다.
 
     ```xml
@@ -104,10 +102,31 @@ WPF(또는 Windows Forms) 앱에서 UWP 컨트롤을 호스트하려면 솔루�
 
 6. UWP 앱 프로젝트에서 **MainPage.xaml** 파일을 삭제합니다.
 7. UWP 앱 프로젝트를 빌드합니다.
-8. WPF 프로젝트에서 UWP 앱 프로젝트에 대한 참조를 추가합니다. 
 
-    * WPF 프로젝트의 대상이 .NET Core인 경우 **종속성** 노드를 마우스 오른쪽 단추로 클릭하고 UWP 앱 프로젝트에 대한 참조를 추가합니다. 
-    * WPF 프로젝트의 대상이 .NET Framework인 경우 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고, **빌드 종속성** -> **프로젝트 종속성**을 선택한 다음, UWP 앱 프로젝트를 선택합니다.
+## <a name="add-a-reference-to-the-uwp-project-in-your-wpf-project"></a>WPF 프로젝트에서 UWP 프로젝트에 대한 참조 추가
+
+1. WPF 프로젝트 파일에서 호환되는 프레임워크 버전을 지정합니다. 
+
+    1. **솔루션 탐색기**에서 WPF 프로젝트 노드를 두 번 클릭하여 편집기에서 프로젝트 파일을 엽니다.
+    2. 첫 번째 **PropertyGroup** 요소에서 다음 자식 요소를 추가합니다. 필요에 따라 UWP 프로젝트의 대상 및 최소 OS 빌드와 일치하도록 값의 `19041` 부분을 변경합니다.
+
+        ```xml
+        <AssetTargetFallback>uap10.0.19041</AssetTargetFallback>
+        ```
+
+        완료되면 **PropertyGroup** 요소가 다음과 같이 표시됩니다.
+
+        ```xml
+        <PropertyGroup>
+            <OutputType>WinExe</OutputType>
+            <TargetFramework>netcoreapp3.1</TargetFramework>
+            <UseWPF>true</UseWPF>
+            <Platforms>AnyCPU;x64</Platforms>
+            <AssetTargetFallback>uap10.0.19041</AssetTargetFallback>
+        </PropertyGroup>
+        ```
+
+2. **솔루션 탐색기**의 WPF 프로젝트 아래에서 마우스 오른쪽 단추로 **종속성** 노드를 클릭하고, UWP 앱 프로젝트에 대한 참조를 추가합니다.
 
 ## <a name="instantiate-the-xamlapplication-object-in-the-entry-point-of-your-wpf-app"></a>WPF 앱의 진입점에서 XamlApplication 개체 인스턴스화
 
@@ -143,11 +162,11 @@ WPF(또는 Windows Forms) 앱에서 UWP 컨트롤을 호스트하려면 솔루�
 
 ## <a name="host-an-inkcanvas-and-inktoolbar-by-using-wrapped-controls"></a>래핑된 컨트롤을 사용하여 InkCanvas 및 InkToolbar 호스트
 
-UWP XAML Islands를 사용하도록 프로젝트를 구성했으므로, 이제 [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) 래핑된 UWP 컨트롤을 앱에 추가할 준비가 되었습니다.
+이제 UWP XAML Islands를 사용하도록 프로젝트를 구성했으므로 래핑된 [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) WinRT XAML 컨트롤을 앱에 추가할 준비가 되었습니다.
 
-1. **솔루션 탐색기**에서 **MainWindow.xaml** 파일을 엽니다.
+1. WPF 프로젝트에서 **MainWindow.xaml** 파일을 엽니다.
 
-2. XAML 파일의 위쪽에 있는 **Window** 요소에 다음 특성을 추가합니다. 이 특성은 [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) 래핑된 UWP 컨트롤에 대한 XAML 네임스페이스를 참조합니다.
+2. XAML 파일의 위쪽에 있는 **Window** 요소에 다음 특성을 추가합니다. 이 특성은 래핑된 [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) WinRT XAML 컨트롤에 대한 XAML 네임스페이스를 참조합니다.
 
     ```xml
     xmlns:Controls="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls"
@@ -209,7 +228,7 @@ UWP XAML Islands를 사용하도록 프로젝트를 구성했으므로, 이제 [
 
 ## <a name="host-a-calendarview-by-using-the-host-control"></a>호스트 컨트롤을 사용하여 CalendarView 호스트
 
-[InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) 래핑된 UWP 컨트롤을 앱에 추가했으므로 이제 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 [CalendarView](/uwp/api/Windows.UI.Xaml.Controls.CalendarView)를 앱에 추가할 준비가 되었습니다.
+이제 래핑된 [InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar) WinRT XAML 컨트롤을 앱에 추가했으므로 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 [CalendarView](/uwp/api/Windows.UI.Xaml.Controls.CalendarView)를 앱에 추가할 준비가 되었습니다.
 
 > [!NOTE]
 > [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤은 [Microsoft.Toolkit.Wpf.UI.XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.XamlHost) 패키지에서 제공됩니다. 이 패키지는 이전에 설치한 [Microsoft.Toolkit.Wpf.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls) 패키지에 포함되어 있습니다.

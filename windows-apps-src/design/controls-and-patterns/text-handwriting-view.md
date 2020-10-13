@@ -1,5 +1,5 @@
 ---
-Description: TextBox, RichEditBox(및 유사한 텍스트 입력 환경을 제공하는 AutoSuggestBox 같은 컨트롤)처럼 Windows 텍스트 컨트롤이 지원하는 잉크를 텍스트로 입력을 위한 기본 제공 필기 보기를 사용자 지정합니다.
+description: TextBox, RichEditBox(및 유사한 텍스트 입력 환경을 제공하는 AutoSuggestBox 같은 컨트롤)처럼 Windows 텍스트 컨트롤이 지원하는 잉크를 텍스트로 입력을 위한 기본 제공 필기 보기를 사용자 지정합니다.
 title: 필기 보기를 사용한 텍스트 입력
 label: Text input with the handwriting view
 template: detail.hbs
@@ -11,12 +11,12 @@ design-contact: minah.kim
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 64963128679f3bb50afe1ba4c939ec6367ad9561
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: ca87dcebcb792bea7c79d32600111ebc51600cab
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218806"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829505"
 ---
 # <a name="text-input-with-the-handwriting-view"></a>필기 보기를 사용한 텍스트 입력
 
@@ -194,11 +194,11 @@ private void SampleTextBox_TextChanged(object sender, TextChangedEventArgs e)
 
 여기서는 받아쓰기를 지원하는 TextBox를 만듭니다(StackPanel에 TextBox와 받아쓰기 단추를 배치하여 구현).
 
-![받아쓰기 기능이 있는 TextBox](images/handwritingview/textbox-with-dictation.png)
+![받아쓰기를 지원하는 텍스트 상자의 스크린샷](images/handwritingview/textbox-with-dictation.png)
 
 이제 StackPanel이 TextBox보다 크기 때문에 [HandwritingView](/uwp/api/windows.ui.xaml.controls.handwritingview)가 모든 복합 컨트롤을 가리지는 않을 것입니다.
 
-![받아쓰기 기능이 있는 TextBox](images/handwritingview/textbox-with-dictation-handwritingview.png)
+![TextBox를 부분적으로 가리는 HandwritingView 컨트롤과 TextBox를 완전히 가리도록 위치가 변경된 컨트롤의 스크린샷](images/handwritingview/textbox-with-dictation-handwritingview.png)
 
 이 문제를 해결하려면 [HandwritingView](/uwp/api/windows.ui.xaml.controls.handwritingview)의 PlacementTarget 속성을 맞춰야 하는 UI 요소로 설정합니다.
 
@@ -231,11 +231,11 @@ private void SampleTextBox_TextChanged(object sender, TextChangedEventArgs e)
 
 이전 예제와 마찬가지로, 받아쓰기를 지원하는 TextBox를 만듭니다(StackPanel에 TextBox와 받아쓰기 단추를 배치하여 구현).
 
-![받아쓰기 기능이 있는 TextBox](images/handwritingview/textbox-with-dictation.png)
+![받아쓰기를 지원하는 TextBox의 스크린샷](images/handwritingview/textbox-with-dictation.png)
 
-이 예에서는 받아쓰기 단추를 항상 표시되게 할 것입니다.
+이 경우 받아쓰기 단추가 표시되도록 HandwritingView의 크기를 조정합니다.
 
-![받아쓰기 기능이 있는 TextBox](images/handwritingview/textbox-with-dictation-handwritingview-resize.png)
+![받아쓰기 단추를 가리고 받아쓰기 단추가 보이도록 크기가 조정된 HandwritingView 컨트롤의 스크린샷](images/handwritingview/textbox-with-dictation-handwritingview-resize.png)
 
 그러기 위해 [HandwritingView](/uwp/api/windows.ui.xaml.controls.handwritingview)의 MaxWidth 속성을 가려야 하는 UI 요소의 너비로 바인딩합니다.
 

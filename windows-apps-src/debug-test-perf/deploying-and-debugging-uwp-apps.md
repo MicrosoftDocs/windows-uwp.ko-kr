@@ -6,12 +6,12 @@ ms.date: 04/08/2019
 ms.topic: article
 keywords: Windows 10, uwp, 디버그, 테스트, 성능
 ms.localizationpriority: medium
-ms.openlocfilehash: c18cb3c5b8a979e7c7c6485e6989736d818613ba
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: c21586bceef11b1a2c19900160796bf702578ffb
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220356"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763057"
 ---
 # <a name="deploying-and-debugging-uwp-apps"></a>UWP 앱 배포 및 디버그
 
@@ -109,11 +109,11 @@ C# 및 VB UWP 프로젝트의 경우 **시작 옵션** 아래에 **명령줄 인
 
 C++ 및 JS UWP 프로젝트의 경우 **디버깅 속성**에 **명령줄 인수**가 필드로 나타납니다.
 
-![명령줄 인수 C++ 및 JS](images/command-line-arguments-cpp.png)
+![테이블에 명령줄 인수 속성을 보여주는 구성 속성 > 디버깅 옵션이 선택된 앱 4 속성 페이지의 스크린샷.](images/command-line-arguments-cpp.png)
 
 명령줄 인수를 지정하면 앱의 **OnLaunched** 메서드에서 인수 값에 액세스할 수 있습니다. [**LaunchActivatedEventArgs**](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs) 개체 *args*는 **인수** 속성을 가지며 값이 **명령줄 인수** 필드에서 문자로 설정됩니다.
 
-![명령줄 인수 C++ 및 JS](images/command-line-arguments-debugging.png)
+![C++ 및 JS에 대한 명령줄 인수의 스크린샷.](images/command-line-arguments-debugging.png)
 
 ## <a name="authentication-modes"></a>인증 모드
 

@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 3e9e9e501f1c4277121e7694e8213ccea51c5297
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: bb0a6b48e9a9a01881955ae0ccb65e93b9cf2b6e
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218136"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636543"
 ---
 # <a name="typography-in-windows-apps"></a>Windows 앱의 입력 체계
 
@@ -29,7 +29,8 @@ ms.locfileid: "91218136"
 
 :::row:::
     :::column:::
-![허용](images/do.svg) UI에 사용할 하나의 글꼴을 선택합니다.
+![녹색 확인 표시와 할 일이 있는 녹색 막대의 첫 번째 스크린샷.](images/do.svg)
+UI에 사용할 하나의 글꼴을 선택합니다.
     :::column-end:::
     :::column:::
 ![금지](images/dont.svg) 여러 글꼴을 혼합하지 않습니다.
@@ -46,7 +47,8 @@ UWP 앱의 글꼴 크기는 모든 디바이스에서 자동으로 조정됩니�
 
 :::row:::
     :::column:::
-![허용](images/do.svg) Windows [유형 램프](#type-ramp) 크기 조정을 따릅니다.
+![녹색 확인 표시와 할 일이 있는 녹색 막대의 두 번째 스크린샷.](images/do.svg)
+Windows [유형 램프](#type-ramp) 크기 조정을 따릅니다.
     :::column-end:::
     :::column:::
 ![금지](images/dont.svg) 12픽셀보다 작은 글꼴 크기를 사용합니다.
@@ -93,7 +95,8 @@ Windows 유형 램프는 페이지의 유형 스타일 간에 중요한 관계�
 
 :::row:::
     :::column:::
-![허용](images/do.svg) 대부분의 텍스트에는 "Body"를 사용합니다.
+![녹색 확인 표시와 할 일이 있는 녹색 막대의 세 번째 스크린샷.](images/do.svg)
+대부분의 텍스트에 "Body"를 사용합니다.
 
 공간이 제한된 경우에는 제목에 "Base"를 사용합니다.
     :::column-end:::
@@ -118,7 +121,8 @@ Windows 유형 램프는 페이지의 유형 스타일 간에 중요한 관계�
 
 :::row:::
     :::column:::
-![허용](images/do.svg) 쉽게 읽을 수 있도록 줄당 50~60자를 유지합니다.
+![[녹색 확인 표시와 할 일이 있는 녹색 막대의 네 번째 스크린샷.](images/do.svg)
+읽기 쉽도록 줄당 50~60자를 유지합니다.
     :::column-end:::
     :::column:::
 ![금지](images/dont.svg) 줄당 20자 미만 또는 60자 이상은 쉽게 읽을 수 없습니다.
@@ -137,7 +141,8 @@ Windows 유형 램프는 페이지의 유형 스타일 간에 중요한 관계�
 
 :::row:::
     :::column:::
-![허용](images/do.svg) 여러 줄을 사용하도록 설정되면 텍스트를 잘라내고 줄 바꿈합니다.
+![[녹색 확인 표시와 할 일이 있는 녹색 막대의 다섯 번째 스크린샷.](images/do.svg)
+여러 줄을 사용하도록 설정되면 텍스트를 잘라내고 래핑합니다.
     :::column-end:::
     :::column:::
 ![금지](images/dont.svg) 생략 부호를 사용하여 시각적 혼란을 방지합니다.

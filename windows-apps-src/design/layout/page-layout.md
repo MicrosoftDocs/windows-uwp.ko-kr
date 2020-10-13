@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 localizationpriority: medium
-ms.openlocfilehash: 5473542019a4f8afa3e916b914127e41a4fe05d4
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: e4875e7d34f36104cb5ed64bb56ea289de2db92e
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218626"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636573"
 ---
 # <a name="page-layout"></a>페이지 레이아웃
 
@@ -86,7 +86,7 @@ Windows 앱에서 각 [**페이지**](/uwp/api/Windows.UI.Xaml.Controls.Page)에
 [마스터/세부 정보](../controls-and-patterns/master-details.md) 모델은 목록 보기(마스터) 및 콘텐츠 보기(세부 정보)로 구성되어 있습니다. 두 창은 고정되어 있고 세로 스크롤을 갖고 있습니다. 목록 보기의 항목을 선택하면 그에 맞게 콘텐츠 보기가 업데이트됩니다. 
 
 ## <a name="forms"></a>양식
-![양식](images/form.svg)
+![빈 텍스트 상자와 단추를 보여주는 양식의 스크린샷.](images/form.svg)
 
 [양식](../controls-and-patterns/forms.md)은 사용자의 데이터를 수집하고 제출할 수 있는 컨트롤 그룹입니다. 전부 그런 것은 아니지만 대부분의 앱은 페이지 설정과 포털 로그인, 피드백 허브, 계정 생성 등의 프로세스에 양식을 사용합니다. 
 

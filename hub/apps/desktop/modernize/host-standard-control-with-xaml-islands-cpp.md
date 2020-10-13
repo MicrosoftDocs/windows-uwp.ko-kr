@@ -1,26 +1,26 @@
 ---
-description: 이 문서에서는 XAML 호스팅 API를 사용하여 C++ Win32 앱에서 표준 UWP 컨트롤을 호스트하는 방법을 보여 줍니다.
-title: XAML Islands를 사용하여 C++ Win32 앱에서 표준 UWP 컨트롤 호스트
-ms.date: 03/23/2020
+description: 이 문서에서는 XAML 호스팅 API를 사용하여 C++ Win32 앱에서 표준 WinRT XAML 컨트롤을 호스팅하는 방법을 보여 줍니다.
+title: XAML Islands를 사용하여 C++ Win32 앱에서 표준 WinRT XAML 컨트롤 호스팅
+ms.date: 10/02/2020
 ms.topic: article
 keywords: windows 10, uwp, cpp, win32, xaml islands, 래핑된 컨트롤, 표준 컨트롤
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 0842046419402bbfacc24331d0521efa9510153a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 60cbf422b5417dc62ff261cf2e7ba02f25840032
+ms.sourcegitcommit: b8d0e2c6186ab28fe07eddeec372fb2814bd4a55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174197"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671522"
 ---
-# <a name="host-a-standard-uwp-control-in-a-c-win32-app"></a>C++ Win32 앱에서 표준 UWP 컨트롤 호스트
+# <a name="host-a-standard-winrt-xaml-control-in-a-c-win32-app"></a>C++ Win32 앱에서 표준 WinRT XAML 컨트롤 호스팅
 
-이 문서에서는 [UWP XAML 호스팅 API](using-the-xaml-hosting-api.md)를 사용하여 표준 UWP 컨트롤(즉, Windows SDK에서 제공하는 컨트롤)을 새 C++ Win32 앱에 호스트하는 방법을 설명합니다. 이 코드는 [간단한 XAML Island 샘플](https://github.com/microsoft/Xaml-Islands-Samples/tree/master/Standalone_Samples/CppWinRT_Basic_Win32App)을 기준으로 하며, 이 섹션에서는 코드의 가장 중요한 부분에 대해 설명합니다. 기존 C++ Win32 앱 프로젝트가 있는 경우 프로젝트에 대해 이러한 단계 및 코드 예제를 적용할 수 있습니다.
+이 문서에서는 [UWP XAML 호스팅 API](using-the-xaml-hosting-api.md)를 사용하여 표준 WinRT XAML 컨트롤(즉, Windows SDK에서 제공하는 컨트롤)을 새 C++ Win32 앱에 호스팅하는 방법을 설명합니다. 이 코드는 [간단한 XAML Island 샘플](https://github.com/microsoft/Xaml-Islands-Samples/tree/master/Standalone_Samples/CppWinRT_Basic_Win32App)을 기준으로 하며, 이 섹션에서는 코드의 가장 중요한 부분에 대해 설명합니다. 기존 C++ Win32 앱 프로젝트가 있는 경우 프로젝트에 대해 이러한 단계 및 코드 예제를 적용할 수 있습니다.
 
 > [!NOTE]
-> 이 문서에서 설명하는 시나리오는 앱에서 호스트되는 UWP 컨트롤의 XAML 태그를 직접 편집하는 것을 지원하지 않습니다. 이 시나리오에서는 코드를 통해 호스트된 UWP 컨트롤의 모양과 동작을 수정하는 것으로 제한됩니다. UWP 컨트롤을 호스트할 때 XAML 태그를 직접 편집하는 방법에 대한 자세한 내용은 [C++ Win32 앱에서 사용자 지정 UWP 컨트롤 호스트](host-custom-control-with-xaml-islands-cpp.md)를 참조하세요.
+> 이 문서에서 설명하는 시나리오는 앱에서 호스팅되는 WinRT XAML 컨트롤의 XAML 태그를 직접 편집하는 것을 지원하지 않습니다. 이 시나리오에서는 코드를 통해 호스팅된 컨트롤의 모양과 동작을 수정하도록 제한합니다. WinRT XAML 컨트롤을 호스팅할 때 XAML 태그를 직접 편집하는 방법에 대한 자세한 내용은 [C++ Win32 앱에서 사용자 지정 WinRT XAML 컨트롤 호스팅](host-custom-control-with-xaml-islands-cpp.md)을 참조하세요.
 
 ## <a name="create-a-desktop-application-project"></a>데스크톱 애플리케이션 프로젝트 만들기
 
@@ -39,12 +39,12 @@ ms.locfileid: "89174197"
 4. [Microsoft.Toolkit.Win32.UI.SDK](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.SDK) NuGet 패키지를 설치합니다.
 
     1. **NuGet 패키지 관리자** 창에서 **시험판 포함**이 포함되어 있는지 확인합니다.
-    2. **찾아보기** 탭을 선택하고 **Microsoft.Toolkit.Win32.UI.SDK** 패키지를 검색한 후 이 패키지의 버전 v6.0.0 이상 버전을 설치합니다. 이 패키지는 XAML Islands가 앱에서 작동할 수 있도록 하는 몇 가지 빌드 및 런타임 자산을 제공합니다.
+    2. **찾아보기** 탭을 선택하고 **Microsoft.Toolkit.Win32.UI.SDK** 패키지를 검색한 후 이 패키지의 안정적인 최신 버전을 설치합니다. 이 패키지는 XAML Islands가 앱에서 작동할 수 있도록 하는 몇 가지 빌드 및 런타임 자산을 제공합니다.
 
 5. 애플리케이션이 Windows 10 버전 1903 이상과 호환되도록 지정하려면 [애플리케이션 매니페스트](/windows/desktop/SbsCs/application-manifests)에서 `maxVersionTested` 값을 설정합니다.
 
     1. 프로젝트에 애플리케이션 매니페스트가 아직 없는 경우 프로젝트에 새 XML 파일을 추가하고 이름을 **app.manifest**로 지정합니다.
-    2. 애플리케이션 매니페스트에서 다음 예제에 표시된 **compatibility** 요소와 자식 요소를 포함합니다. **maxVersionTested** 요소의 **Id** 특성을 대상으로 하는 Windows 10의 버전 번호로 바꿉니다(Windows 10, 버전 1903 이상 릴리스여야 함).
+    2. 애플리케이션 매니페스트에서 다음 예제에 표시된 **compatibility** 요소와 자식 요소를 포함합니다. **maxVersionTested** 요소의 **ID** 특성을 대상으로 하는 Windows 10의 버전 번호로 바꿉니다(10.0.18362 이상 릴리스여야 함).
 
         ```xml
         <?xml version="1.0" encoding="UTF-8"?>
@@ -59,9 +59,9 @@ ms.locfileid: "89174197"
         </assembly>
         ```
 
-## <a name="use-the-xaml-hosting-api-to-host-a-uwp-control"></a>XAML 호스팅 API를 사용하여 UWP 컨트롤 호스트
+## <a name="use-the-xaml-hosting-api-to-host-a-winrt-xaml-control"></a>XAML 호스팅 API를 사용하여 WinRT XAML 컨트롤 호스팅
 
-XAML 호스팅 API를 사용하여 UWP 컨트롤을 호스트하는 기본 프로세스는 다음과 같은 일반적인 단계를 따릅니다.
+XAML 호스팅 API를 사용하여 WinRT XAML 컨트롤을 호스팅하는 기본 프로세스는 다음과 같은 일반적인 단계를 따릅니다.
 
 1. 앱이 호스트할 [Windows.UI.Xaml.UIElement](/uwp/api/windows.ui.xaml.uielement) 개체를 만들기 전에 현재 스레드에 대한 UWP XAML 프레임워크를 초기화합니다. 이 작업을 수행하는 방법에는 여러 가지가 있으며, 컨트롤을 호스트하는 [DesktopWindowXamlSource](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource) 개체를 만들려는 시기에 따라 달라집니다.
 
@@ -82,7 +82,7 @@ XAML 호스팅 API를 사용하여 UWP 컨트롤을 호스트하는 기본 프�
 
     2. **IDesktopWindowXamlSourceNative** 또는 **IDesktopWindowXamlSourceNative2** 인터페이스의 **AttachToWindow** 메서드를 호출하고 애플리케이션에서 부모 UI 요소의 창 핸들을 전달합니다.
 
-    3. **DesktopWindowXamlSource**에 포함된 내부 자식 창의 초기 크기를 설정합니다. 기본적으로 이 내부 자식 창의 너비와 높이는 0으로 설정되어 있습니다. 창의 크기를 설정하지 않으면 **DesktopWindowXamlSource**에 추가하는 UWP 컨트롤이 표시되지 않습니다. **DesktopWindowXamlSource**의 내부 자식 창에 액세스하려면 **IDesktopWindowXamlSourceNative** 또는 **IDesktopWindowXamlSourceNative2** 인터페이스의 **WindowHandle** 속성을 사용합니다.
+    3. **DesktopWindowXamlSource**에 포함된 내부 자식 창의 초기 크기를 설정합니다. 기본적으로 이 내부 자식 창의 너비와 높이는 0으로 설정되어 있습니다. 창의 크기를 설정하지 않으면 **DesktopWindowXamlSource**에 추가하는 WinRT XAML 컨트롤이 표시되지 않습니다. **DesktopWindowXamlSource**의 내부 자식 창에 액세스하려면 **IDesktopWindowXamlSourceNative** 또는 **IDesktopWindowXamlSourceNative2** 인터페이스의 **WindowHandle** 속성을 사용합니다.
 
 3. 마지막으로, 호스트할 **Windows.UI.Xaml.UIElement**을 **DesktopWindowXamlSource** 개체의 [콘텐츠](/uwp/api/windows.ui.xaml.hosting.desktopwindowxamlsource.content) 속성에 할당합니다.
 
@@ -166,7 +166,7 @@ XAML 호스팅 API를 사용하여 UWP 컨트롤을 호스트하는 기본 프�
         WindowsXamlManager winxamlmanager = WindowsXamlManager::InitializeForCurrentThread();
 
         // This DesktopWindowXamlSource is the object that enables a non-UWP desktop application 
-        // to host UWP controls in any UI element that is associated with a window handle (HWND).
+        // to host WinRT XAML controls in any UI element that is associated with a window handle (HWND).
         DesktopWindowXamlSource desktopSource;
 
         // Get handle to the core window.
@@ -270,7 +270,7 @@ XAML 호스팅 API를 사용하여 UWP 컨트롤을 호스트하는 기본 프�
     > [!NOTE]
     > `warning C4002:  too many arguments for function-like macro invocation 'GetCurrentTime'` 및 `manifest authoring warning 81010002: Unrecognized Element "maxversiontested" in namespace "urn:schemas-microsoft-com:compatibility.v1"`을 비롯한 몇 가지 빌드 경고가 표시될 수 있습니다. 이러한 경고는 현재 도구 및 NuGet 패키지와 관련된 알려진 문제로, 무시해도 됩니다.
 
-이러한 작업을 보여 주는 전체 예제는 다음 코드 파일을 참조하세요.
+XAML 호스팅 API를 사용하여 표준 WinRT XAML 컨트롤을 호스팅하는 방법을 보여주는 전체 예제는 다음 코드 파일을 참조하세요.
 
 * **C++ Win32:**
   * [HelloWindowsDesktop](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Standalone_Samples/CppWinRT_Basic_Win32App/Win32DesktopApp/HelloWindowsDesktop.cpp) 파일을 참조하세요.
@@ -291,17 +291,17 @@ XAML 호스팅 API를 사용하여 UWP 컨트롤을 호스트하는 기본 프�
 
 2. 패키징 프로젝트에서 **애플리케이션** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다. 프로젝트 목록에서 솔루션의 C++/Win32 데스크톱 애플리케이션 프로젝트를 선택하고 **확인**을 클릭합니다.
 
-3. 패키징 프로젝트를 빌드하고 실행합니다. 앱이 실행되고 UWP 컨트롤이 예상대로 표시되는지 확인합니다.
+3. 패키징 프로젝트를 빌드하고 실행합니다. 앱이 실행되고 WinRT XAML 컨트롤이 예상대로 표시되는지 확인합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-이 문서의 코드 예제에서는 C++ Win32 앱에서 표준 UWP 컨트롤을 호스트하는 기본적인 시나리오를 시작합니다. 다음 섹션에서는 애플리케이션에서 지원해야 하는 추가 시나리오를 소개합니다.
+이 문서의 코드 예제에서는 C++ Win32 앱에서 표준 WinRT XAML 컨트롤을 호스팅하는 기본적인 시나리오를 시작합니다. 다음 섹션에서는 애플리케이션에서 지원해야 하는 추가 시나리오를 소개합니다.
 
-### <a name="host-a-custom-uwp-control"></a>사용자 지정 UWP 컨트롤 호스트
+### <a name="host-a-custom-winrt-xaml-control"></a>사용자 지정 WinRT XAML 컨트롤 호스트
 
-여러 시나리오에서 함께 작동하는 여러 개별 컨트롤이 포함된 사용자 지정 UWP XAML 컨트롤을 호스트해야 할 수 있습니다. C++ Win32 앱에 사용자 지정 UWP 컨트롤(사용자가 직접 정의하는 컨트롤 또는 타사에서 제공하는 컨트롤)을 호스트하는 프로세스는 표준 컨트롤을 호스트하는 것보다 복잡하며 추가 코드가 필요합니다.
+여러 시나리오에서 함께 작동하는 여러 개별 컨트롤이 포함된 사용자 지정 UWP XAML 컨트롤을 호스트해야 할 수 있습니다. C++ Win32 앱에 사용자 지정 컨트롤(사용자가 직접 정의하는 컨트롤 또는 타사에서 제공하는 컨트롤)을 호스팅하는 프로세스는 표준 컨트롤을 호스팅하는 것보다 복잡하며 추가 코드가 필요합니다.
 
-전체 연습에 대해서는 [XAML 호스팅 API를 사용하여 C++ Win32 앱에서 사용자 지정 UWP 컨트롤 호스트](host-custom-control-with-xaml-islands-cpp.md)를 참조하세요.
+전체 연습에 대해서는 [XAML 호스팅 API를 사용하여 C++ Win32 앱에서 사용자 지정 WinRT XAML 컨트롤 호스팅](host-custom-control-with-xaml-islands-cpp.md)을 참조하세요.
 
 ### <a name="advanced-scenarios"></a>고급 시나리오
 
@@ -313,6 +313,6 @@ XAML Islands를 호스트하는 많은 데스크톱 애플리케이션은 원활
 
 * [데스크톱 앱에서 UWP XAML 컨트롤 호스트(XAML Islands)](xaml-islands.md)
 * [C++ Win32 앱에서 UWP XAML 호스팅 API 사용](using-the-xaml-hosting-api.md)
-* [C++ Win32 앱에서 사용자 지정 UWP 컨트롤 호스트](host-custom-control-with-xaml-islands-cpp.md)
+* [C++ Win32 앱에서 사용자 지정 WinRT XAML 컨트롤 호스팅](host-custom-control-with-xaml-islands-cpp.md)
 * [C++ Win32 앱의 XAML Islands에 대한 고급 시나리오](advanced-scenarios-xaml-islands-cpp.md)
 * [XAML Islands 코드 샘플](https://github.com/microsoft/Xaml-Islands-Samples)

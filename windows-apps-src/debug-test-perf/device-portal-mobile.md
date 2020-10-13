@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: ff94c34c61dee4de8450ed0f4f89a1dfc6537f83
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1f0a91dd0370b8eda8763b63034d7c3ffaa1acd5
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173597"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763002"
 ---
 # <a name="device-portal-for-mobile"></a>모바일용 디바이스 포털
 
@@ -19,7 +19,7 @@ Windows 10 버전 1511부터 추가적인 개발자 기능을 모바일 디바�
 
 개발자 모드를 사용하는 방법에 대한 내용은 [개발을 위해 디바이스 사용](../get-started/enable-your-device-for-development.md)을 참조하세요.
 
-![디바이스 포털 설정](images/device-portal/mob-dev-mode-options.png)
+![디바이스 검색 및 장치 포털 설정의 스크린샷.](images/device-portal/mob-dev-mode-options.png)
 
 ## <a name="set-up-device-portal-on-windows-phone"></a>Windows Phone에서 디바이스 포털 설정
 
@@ -59,7 +59,7 @@ USB, 로컬 호스트 및 로컬 네트워크(VPN 및 테더링 포함)를 통�
 
 다음은 Windows Phone 개발자 설정 페이지의 디바이스 포털 섹션입니다.
 
-![디바이스 포털 설정](images/device-portal/mob-dev-mode-portal.png)
+![Windows Phone의 장치 포털 설정 페이지 스크린샷.](images/device-portal/mob-dev-mode-portal.png)
 
 로컬 네트워크에 있는 모든 사용자를 신뢰하고, 디바이스에 개인 정보가 없고, 고유한 요구 사항이 있는 테스트 랩 같은 보호 환경에서 Device Portal을 사용하는 경우 인증을 사용하지 않도록 설정할 수 있습니다. 이렇게 하면 암호화되지 않은 통신이 가능하며 휴대폰의 IP 주소를 가진 모든 사용자가 제어할 수 있습니다.
 

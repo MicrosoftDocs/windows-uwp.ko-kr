@@ -1,5 +1,5 @@
 ---
-Description: 달력 날짜 선택은 요일이나 일정의 예약률과 같이 컨텍스트 정보가 중요한 달력 보기에서 단일 날짜를 선택하는 데 최적화된 드롭다운 컨트롤입니다.
+description: 달력 날짜 선택은 요일이나 일정의 예약률과 같이 컨텍스트 정보가 중요한 달력 보기에서 단일 날짜를 선택하는 데 최적화된 드롭다운 컨트롤입니다.
 title: 달력 날짜 선택
 ms.assetid: 9e0213e0-046a-4906-ba86-0b49be51ca99
 label: Calendar date picker
@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a12ae302f5e904db29655eacb075a9eba5f8f3e5
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: c7061de6098c77214136f3441b43abbf35a10686
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217546"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829612"
 ---
 # <a name="calendar-date-picker"></a>달력 날짜 선택
 
@@ -25,9 +25,17 @@ ms.locfileid: "91217546"
 
 **Windows UI 라이브러리 가져오기**
 
-|  |  |
-| - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](../style/rounded-corner.md)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
+:::row:::
+   :::column:::
+      ![WinUI 로고](images/winui-logo-64x64.png)
+   :::column-end:::
+   :::column span="3":::
+      Windows UI 라이브러리 2.2 이상에는 둥근 모서리를 사용하는 이 컨트롤의 새 템플릿이 포함되어 있습니다. 자세한 내용은 [모서리 반경](../style/rounded-corner.md)을 참조하세요. WinUI는 Windows 앱에 대한 새 컨트롤 및 UI 기능이 포함된 NuGet 패키지입니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요.
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 > **플랫폼 API**: [CalendarDatePicker 클래스](/uwp/api/Windows.UI.Xaml.Controls.CalendarDatePicker), [Date 속성](/uwp/api/windows.ui.xaml.controls.calendardatepicker.date), [DateChanged 이벤트](/uwp/api/windows.ui.xaml.controls.calendardatepicker.datechanged)
 
@@ -57,7 +65,7 @@ ms.locfileid: "91217546"
 
 날짜를 설정하지 않으면 진입점에 개체 틀 텍스트가 표시되며, 그러지 않으면 선택한 날짜가 표시됩니다. 사용자가 진입점을 선택하면 사용자가 날짜를 선택할 수 있도록 달력 보기가 확장됩니다. 이 달력 보기는 다른 UI에 겹쳐지며 다른 UI를 보이지 않도록 합니다.
 
-![달력 날짜 선택의 예](images/calendar-date-picker-2-views.png)
+![빈 날짜 선택 텍스트 상자를 표시한 다음, 그 아래에 달력으로 채워진 달력 날짜 선택의 스크린샷.](images/calendar-date-picker-2-views.png)
 
 ## <a name="create-a-date-picker"></a>날짜 선택 만들기
 
@@ -72,7 +80,7 @@ arrivalCalendarDatePicker.Header = "Arrival date";
 
 결과 달력 날짜 선택은 다음과 같습니다.
 
-![달력 날짜 선택의 예](images/calendar-date-picker-closed.png)
+![도착 날짜라는 레이블이 있는 채워진 달력 날짜 선택의 스크린샷.](images/calendar-date-picker-closed.png)
 
 달력 날짜 선택에는 날짜를 선택하기 위한 내부 [CalendarView](/uwp/api/Windows.UI.Xaml.Controls.CalendarView)가 있습니다. [IsTodayHighlighted](/uwp/api/windows.ui.xaml.controls.calendardatepicker.istodayhighlighted) 및 [FirstDayOfWeek](/uwp/api/windows.ui.xaml.controls.calendardatepicker.firstdayofweek)와 같은 CalendarView 속성의 하위 집합은 CalendarDatePicker에 있으며 수정할 수 있도록 내부 CalendarView에 전달됩니다. 
 

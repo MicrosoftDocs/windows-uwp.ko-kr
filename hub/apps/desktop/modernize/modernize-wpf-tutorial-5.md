@@ -1,5 +1,5 @@
 ---
-description: 이 자습서에서는 UWP XAML 사용자 인터페이스를 추가하고, MSIX 패키지를 만들고, WPF 앱에 다른 최신 구성 요소를 통합하는 방법을 보여줍니다.
+description: 이 자습서에서는 Contoso Expenses라는 샘플 WPF 데스크톱 앱을 현대화하는 방법을 보여줍니다.
 title: MSIX로 패키징 및 배포
 ms.topic: article
 ms.date: 01/23/2020
@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 18b89caa0de947d2b95b46c3deb11378912b6012
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2ab83b2c9253e8cdd9adc403909a1bd03db1ccda
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161427"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91762979"
 ---
 # <a name="part-5-package-and-deploy-with-msix"></a>5부: MSIX로 패키징 및 배포
 

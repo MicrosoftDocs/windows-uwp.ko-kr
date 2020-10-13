@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Windows 설정, 개발 환경, 개발 도구, 개발 경로, Microsoft, Windows, 개발자, 팁, 성능, WSL, 터미널, nodejs, python
 ms.localizationpriority: medium
 ms.date: 07/24/2020
-ms.openlocfilehash: b1b13635da3b5b06b43d1e6b009399da5a916094
-ms.sourcegitcommit: ef3cdca5e9b8f032f46174da4574cb5593d32d56
+ms.openlocfilehash: 0b3df6b081504b98933ae5b261c6e7aaf5464953
+ms.sourcegitcommit: b8d0e2c6186ab28fe07eddeec372fb2814bd4a55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90593467"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671662"
 ---
 # <a name="set-up-your-development-environment-on-windows-10"></a>Windows 10에서 개발 환경 설정
 
@@ -57,9 +57,9 @@ ms.locfileid: "90593467"
         C# 및 .NET Core를 사용하여 앱 빌드를 시작하세요.
     :::column-end:::
     :::column:::
-       [![Java용 Azure 아이콘](../images/java-logo.png)](/azure/developer/java/)<br>
-        **[Azure에서 Java 시작](/azure/developer/java/)**<br>
-        Java 개발자를 위한 자습서 및 도구를 사용하여 클라우드용 앱 빌드를 시작하세요.
+       [![Windows용 Docker 데스크톱 아이콘](../images/docker-logo.png)](../dev-environment/docker/overview.md)<br>
+        **[Windows용 Docker 데스크톱 시작](../dev-environment/docker/overview.md)**<br>
+        Visual Studio, VS Code, .NET, Linux용 Windows 하위 시스템 또는 다양한 Azure 서비스의 지원을 통해 원격 개발 컨테이너를 만듭니다.
     :::column-end:::
     :::column:::
        [![PowerShell 아이콘](../images/powershell.png)](/powershell/)<br>

@@ -3,12 +3,12 @@ title: WinUI 2.4 릴리스 정보
 description: 새로운 기능 및 버그 수정이 포함된 WinUI 2.4 릴리스에 대한 정보입니다.
 ms.date: 07/15/2020
 ms.topic: reference
-ms.openlocfilehash: 22fd028ba2059a092ee2f2be47a114fb2d618ce1
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: 5e2ff23b3b0ea63002ad54a367e82e81ee1cd542
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86492828"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91762914"
 ---
 # <a name="windows-ui-library-24"></a>Windows UI 라이브러리 2.4
 
@@ -28,7 +28,7 @@ NuGet 패키지 다운로드: [Microsoft.UI.Xaml](https://www.nuget.org/packages
 
 RadialGradientBrush는 Center, RadiusX 및 RadiusY 속성으로 정의된 타원 안에 그려집니다. 그라데이션의 색은 타원의 중심에서 시작하고 반지름에서 끝납니다.
 
-![방사형 그라데이션 브러시](../images/radialgradientbrush.gif)<br>
+![방사형 그라데이션 브러시의 동작을 보여주는 짧은 비디오.](../images/radialgradientbrush.gif)<br>
 *방사형 그라데이션 브러시*
 
 [사용 지침](/windows/uwp/design/style/brushes#radial-gradient-brushes)
@@ -39,7 +39,7 @@ RadialGradientBrush는 Center, RadiusX 및 RadiusY 속성으로 정의된 타원
 
 ProgressRing 컨트롤은 ProgressRing이 사라질 때까지 사용자가 차단되는 모달 상호 작용에 사용됩니다. 작업이 완료될 때까지 앱과의 대부분의 상호 작용을 일시 중단해야 하는 경우 이 컨트롤을 사용합니다.
 
-![ProgressRing 컨트롤](../images/progressring.gif)<br>
+![진행률 링 컨트롤의 동작을 보여주는 짧은 비디오.](../images/progressring.gif)<br>
 *ProgressRing 컨트롤*
 
 [사용 지침](/windows/uwp/design/controls-and-patterns/progress-controls)
@@ -70,8 +70,8 @@ TabView 컨트롤 업데이트는 탭을 렌더링하는 방법에 대한 더 �
 
 | 이전 | 이후 |
 | - | - |
-| ![TextBox 어두운 테마 업데이트(이전)](..\images\textbox-darkthemeupdates-before1.gif)<br>*TextBox 어두운 테마 업데이트(이전)* | ![TextBox 어두운 테마 업데이트(이후)](..\images\textbox-darkthemeupdates-after1.gif)<br>*TextBox 어두운 테마 업데이트(이후)* |
-| ![TextBox 어두운 테마 업데이트(이전)](..\images\textbox-darkthemeupdates-before2.gif)<br>*TextBox 어두운 테마 업데이트(이전)* | ![TextBox 어두운 테마 업데이트(이후)](..\images\textbox-darkthemeupdates-after2.gif)<br>*TextBox 어두운 테마 업데이트(이후)* |
+| ![업데이트 전 TextBox 어두운 테마 동작을 보여주는 짧은 비디오.](..\images\textbox-darkthemeupdates-before1.gif)<br>*TextBox 어두운 테마 업데이트(이전)* | ![업데이트 후 TextBox 어두운 테마 동작을 보여주는 짧은 비디오.](..\images\textbox-darkthemeupdates-after1.gif)<br>*TextBox 어두운 테마 업데이트(이후)* |
+| ![업데이트 전 TextBox 어두운 테마 동작을 보여주는 또 다른 짧은 비디오.](..\images\textbox-darkthemeupdates-before2.gif)<br>*TextBox 어두운 테마 업데이트(이전)* | ![업데이트 후 TextBox 어두운 테마 동작을 보여주는 또 다른 짧은 비디오.](..\images\textbox-darkthemeupdates-after2.gif)<br>*TextBox 어두운 테마 업데이트(이후)* |
 
 다음은 TextBox 컨트롤 제품군에 포함된 몇 가지 컨트롤입니다.
 

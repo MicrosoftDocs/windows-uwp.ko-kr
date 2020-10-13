@@ -1,5 +1,5 @@
 ---
-Description: ListView 및 GridView 컨트롤을 사용하여 이미지 갤러리 또는 메일 메시지 세트와 같은 데이터 세트를 표시하고 조작합니다.
+description: ListView 및 GridView 컨트롤을 사용하여 이미지 갤러리 또는 메일 메시지 세트와 같은 데이터 세트를 표시하고 조작합니다.
 title: 목록 보기 및 그리드 보기
 label: List view and grid view
 template: detail.hbs
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 988400ae16d19525acc1dc811c91fc5af9fd97d0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 26f7e36d09857d37da4a0b4533cc8f65d2789e20
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172627"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829642"
 ---
 # <a name="list-view-and-grid-view"></a>목록 보기 및 그리드 보기
 
@@ -53,7 +53,7 @@ ListView 및 GridView는 별도의 작업 없이도 기본 제공 UI 및 UX를 �
 -   ListView 또는 GridView로는 만들 수 없는 사용자 지정 UI가 있거나 각 항목에 전혀 다른 동작을 요구하는 데이터 원본이 있는 경우에는 ItemsRepeater를 사용해야 합니다.
 
 
-ItemsRepeater에 대한 자세한 내용은 해당 [지침](./items-repeater.md) 및 [API 설명서](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2) 페이지를 참조하세요.
+ItemsRepeater에 대한 자세한 내용은 해당 [지침](./items-repeater.md) 및 [API 설명서](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater) 페이지를 참조하세요.
 
 ## <a name="examples"></a>예
 
@@ -121,7 +121,7 @@ FruitsPanel.Children.Add(Fruits);
 ```
 위의 두 옵션 모두 아래와 같이 동일한 ListView를 생성합니다.
 
-![간단한 목록 보기](images/listview-basic-code-example2.png)
+![과일 목록을 보여주는 간단한 목록 보기의 스크린샷.](images/listview-basic-code-example2.png)
 <br/>
 <u> 방법 2: ItemsSource를 설정하여 항목 추가</u>
 
@@ -290,7 +290,7 @@ ListView에서 이 데이터 템플릿을 사용하여 표시할 경우 데이�
 ListView 또는 GridView에 항목을 추가하면 컨트롤이 항목 컨테이너의 각 항목을 자동으로 줄 바꿈한 후 모든 항목 컨테이너를 배치합니다. 이러한 항목 컨테이너가 배치되는 방식은 컨트롤의 [ItemsPanel](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel)에 따라 좌우됩니다.  
 - 기본적으로 **ListView**는 다음과 같이 세로 목록을 생성하는 [ItemsStackPanel](/uwp/api/windows.ui.xaml.controls.itemsstackpanel)을 사용합니다.
 
-![간단한 목록 보기](images/listview-simple.png)
+![항목의 목록을 보여주는 간단한 목록 보기의 스크린샷.](images/listview-simple.png)
 
 - **GridView**는 다음과 같이 항목을 가로로 추가하고 세로로 줄 바꿈 및 스크롤하는 [ItemsWrapGrid](/uwp/api/windows.ui.xaml.controls.itemswrapgrid)를 사용합니다.
 

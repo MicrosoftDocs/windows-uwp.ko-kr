@@ -6,12 +6,12 @@ ms.date: 11/16/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b02677cb6f38bc86d5123e835f658bedd83543de
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a33670f69d86a913288608ff07efb72edab8fd17
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173937"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829670"
 ---
 # <a name="draw-shapes"></a>셰이프 그리기
 
@@ -231,7 +231,7 @@ layoutRoot.Children.Add(polyline1);
 
 다음은 렌더링된 [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)입니다.
 
-![렌더링된 경로](images/shapes-path.jpg)
+![단순하게 렌더링된 경로의 스크린샷.](images/shapes-path.jpg)
 
 다음 예제에서는 이미 설명한 다른 기술 즉, [**PathGeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry)가 포함된 [**GeometryGroup**](/uwp/api/windows.ui.xaml.media.geometrygroup)의 사용법을 보여 줍니다. 이 예제에서는 **PathGeometry**: [**PathFigure**](/uwp/api/Windows.UI.Xaml.Media.PathFigure)의 일부로 사용할 수 있는 영향을 주는 기하 도형 형식 일부와 [**PathFigure.Segments**](/uwp/api/windows.ui.xaml.media.pathfigure.segments)에서 세그먼트가 될 수 있는 다양한 요소를 실행합니다.
 
@@ -316,6 +316,6 @@ layoutRoot.Children.Add(path1);
 
 다음은 렌더링된 [**Path**](/uwp/api/Windows.UI.Xaml.Shapes.Path)입니다.
 
-![렌더링된 경로](images/shapes-path-2.png)
+![복잡하게 렌더링된 경로의 스크린샷.](images/shapes-path-2.png)
 
 [  **PathGeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry)를 사용하면 [**Path.Data**](/uwp/api/windows.ui.xaml.shapes.path.data) 문자열을 채우는 것보다 읽기 쉬울 수 있습니다. 반면에 [**Path.Data**](/uwp/api/windows.ui.xaml.shapes.path.data)는 SVG(스케일러블 벡터 그래픽) 이미지 경로 정의와 호환되는 구문을 사용하므로 SVG에서 그래픽을 이식하거나 Blend와 같은 도구에서 출력으로 사용하는 데 유용할 수 있습니다.

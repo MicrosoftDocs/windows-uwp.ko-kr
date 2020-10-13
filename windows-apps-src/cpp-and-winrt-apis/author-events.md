@@ -5,20 +5,20 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: f1500ab9999d4689385a9f7edce33253c385c0d0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c70ad8efcb8bb84272a044824d8058813ed30def
+ms.sourcegitcommit: a93a309a11cdc0931e2f3bf155c5fa54c23db7c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154567"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91646236"
 ---
 # <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 
 이 토픽은 Windows 런타임 구성 요소 및 사용 중인 애플리케이션을 기반으로 하며, [C++/WinRT를 사용한 Windows 런타임 구성 요소](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md) 토픽에서는 빌드 방법을 보여줍니다.
 
 다음은 이 토픽에서 추가하는 새 기능입니다.
-- 잔액을 차변으로 이동할 때 이벤트를 발생시키도록 은행 계좌 런타임 클래스를 업데이트합니다.
-- 해당 이벤트를 처리하도록 은행 계좌 런타임 클래스를 사용하는 코어 앱을 업데이트합니다.
+- 온도가 0도 미만으로 내려가면 이벤트를 발생시키도록 온도계 런타임 클래스를 업데이트합니다.
+- 해당 이벤트를 처리하도록 온도계 런타임 클래스를 사용하는 코어 앱을 업데이트합니다.
 
 > [!NOTE]
 > 프로젝트 템플릿 및 빌드 지원을 함께 제공하는 [C++/WinRT](./intro-to-using-cpp-with-winrt.md) Visual Studio 확장(VSIX) 및 NuGet 패키지를 설치하고 사용하는 방법에 대한 자세한 내용은 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조하세요.
@@ -26,44 +26,44 @@ ms.locfileid: "89154567"
 > [!IMPORTANT]
 > C++/WinRT를 사용해 런타임 클래스를 사용하거나 작성하는 방법을 더욱 쉽게 이해할 수 있는 필수 개념과 용어에 대해서는 [C++/WinRT를 통한 API 사용](consume-apis.md)과 [C++/WinRT를 통한 API 작성](author-apis.md)을 참조하세요.
 
-## <a name="create-bankaccountwrc-and-bankaccountcoreapp"></a>**BankAccountWRC** 및 **BankAccountCoreApp** 만들기
+## <a name="create-thermometerwrc-and-thermometercoreapp"></a>**ThermometerWRC** 및 **ThermometerCoreApp** 만들기
 
-코드를 빌드하고 실행할 수 있도록 이 토픽에서 설명하는 업데이트를 따라 하려면 가장 먼저 [C++/WinRT를 사용한 Windows 런타임 구성 요소](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md) 토픽의 연습을 수행해야 합니다. 이렇게 하면 **BankAccountWRC** Windows 런타임 구성 요소와 이 런타임을 사용하는 **BankAccountCoreApp** 코어 앱을 갖게 됩니다.
+코드를 빌드하고 실행할 수 있도록 이 토픽에서 설명하는 업데이트를 따라 하려면 가장 먼저 [C++/WinRT를 사용한 Windows 런타임 구성 요소](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md) 토픽의 연습을 수행해야 합니다. 이렇게 하면 **ThermometerWRC** Windows 런타임 구성 요소와 이를 사용하는 **ThermometerCoreApp** 코어 앱이 갖추어집니다.
 
-## <a name="update-bankaccountwrc-to-raise-an-event"></a>이벤트를 발생시키도록 **BankAccountWRC**를 업데이트합니다.
+## <a name="update-thermometerwrc-to-raise-an-event"></a>이벤트를 발생시키도록 **ThermometerWRC** 업데이트
 
-아래 목록처럼 보이도록 `BankAccount.idl`을 업데이트합니다. 이와 같은 방법으로 대리자 형식이 [**EventHandler**](/uwp/api/windows.foundation.eventhandler-1)이고 단정밀도 부동 소수점 숫자의 인수를 사용하는 이벤트를 선언할 수 있습니다.
+아래 목록처럼 보이도록 `Thermometer.idl`을 업데이트합니다. 이와 같은 방법으로 대리자 형식이 [**EventHandler**](/uwp/api/windows.foundation.eventhandler-1)이고 단정밀도 부동 소수점 숫자의 인수를 사용하는 이벤트를 선언할 수 있습니다.
 
 ```idl
-// BankAccountWRC.idl
-namespace BankAccountWRC
+// Thermometer.idl
+namespace ThermometerWRC
 {
-    runtimeclass BankAccount
+    runtimeclass Thermometer
     {
-        BankAccount();
-        void AdjustBalance(Single value);
-        event Windows.Foundation.EventHandler<Single> AccountIsInDebit;
+        Thermometer();
+        void AdjustTemperature(Single deltaFahrenheit);
+        event Windows.Foundation.EventHandler<Single> TemperatureIsBelowFreezing;
     };
 }
 ```
 
-파일을 저장합니다. 현재 상태에서는 프로젝트 빌드가 완료되지 않지만, 지금 빌드하여 업데이트된 버전의 `\BankAccountWRC\BankAccountWRC\Generated Files\sources\BankAccount.h` 및 `BankAccount.cpp` 스텁 파일을 생성합니다. 이제 이러한 파일 내에서 **AccountIsInDebit** 이벤트의 스텁 구현을 볼 수 있습니다. C++/WinRT에서 IDL로 선언된 이벤트는 오버로드된 함수 세트로 구현됩니다(속성이 오버로드된 get 및 set 함수 세트로 구현되는 것과 유사한 방식). 한 오버로드는 등록할 대리자를 가지며, 토큰을 반환합니다([**winrt::event_token**](/uwp/cpp-ref-for-winrt/event-token)). 다른 오버로드는 토큰을 가지며 관련 대리자의 등록을 취소합니다.
+파일을 저장합니다. 현재 상태에서는 프로젝트 빌드가 완료되지 않지만, 지금 빌드하여 업데이트된 버전의 `\ThermometerWRC\ThermometerWRC\Generated Files\sources\Thermometer.h` 및 `Thermometer.cpp` 스텁 파일을 생성합니다. 이제 이러한 파일 내에서 **TemperatureIsBelowFreezing** 이벤트의 스텁 구현을 확인할 수 있습니다. C++/WinRT에서 IDL로 선언된 이벤트는 오버로드된 함수 세트로 구현됩니다(속성이 오버로드된 get 및 set 함수 세트로 구현되는 것과 유사한 방식). 한 오버로드는 등록할 대리자를 가지며, 토큰을 반환합니다([**winrt::event_token**](/uwp/cpp-ref-for-winrt/event-token)). 다른 오버로드는 토큰을 가지며 관련 대리자의 등록을 취소합니다.
 
-이제 `BankAccount.h` 및 `BankAccount.cpp`를 열고, **BankAccount** runtime 클래스의 구현을 업데이트합니다. `BankAccount.h`에서 오버로드된 두 **AccountIsInDebit** 함수를 추가하고, 두 함수의 구현에 사용할 프라이빗 이벤트 데이터 멤버를 추가합니다.
+이제 `Thermometer.h` 및 `Thermometer.cpp`를 열고, **Thermometer** 런타임 클래스의 구현을 업데이트합니다. `Thermometer.h`에서 오버로드된 두 개의 **TemperatureIsBelowFreezing** 함수 및 이러한 함수의 구현에 사용할 프라이빗 이벤트 데이터 멤버를 추가합니다.
 
 ```cppwinrt
-// BankAccount.h
+// Thermometer.h
 ...
-namespace winrt::BankAccountWRC::implementation
+namespace winrt::ThermometerWRC::implementation
 {
-    struct BankAccount : BankAccountT<BankAccount>
+    struct Thermometer : ThermometerT<Thermometer>
     {
         ...
-        winrt::event_token AccountIsInDebit(Windows::Foundation::EventHandler<float> const& handler);
-        void AccountIsInDebit(winrt::event_token const& token) noexcept;
+        winrt::event_token TemperatureIsBelowFreezing(Windows::Foundation::EventHandler<float> const& handler);
+        void TemperatureIsBelowFreezing(winrt::event_token const& token) noexcept;
 
     private:
-        winrt::event<Windows::Foundation::EventHandler<float>> m_accountIsInDebitEvent;
+        winrt::event<Windows::Foundation::EventHandler<float>> m_temperatureIsBelowFreezingEvent;
         ...
     };
 }
@@ -72,27 +72,27 @@ namespace winrt::BankAccountWRC::implementation
 
 위에서 볼 수 있듯이, 이벤트는 특정 대리자 형식(args 형식을 사용하여 자체를 매개 변수화 가능)에 의해 매개 변수화된 [**winrt::event**](/uwp/cpp-ref-for-winrt/event) 구조체 템플릿으로 표시됩니다.
 
-`BankAccount.cpp`에서 오버로드된 두 **AccountIsInDebit** 함수를 구현합니다.
+`Thermometer.cpp`에서 오버로드된 두 개의 **TemperatureIsBelowFreezing** 함수를 구현합니다.
 
 ```cppwinrt
-// BankAccount.cpp
+// Thermometer.cpp
 ...
-namespace winrt::BankAccountWRC::implementation
+namespace winrt::ThermometerWRC::implementation
 {
-    winrt::event_token BankAccount::AccountIsInDebit(Windows::Foundation::EventHandler<float> const& handler)
+    winrt::event_token Thermometer::TemperatureIsBelowFreezing(Windows::Foundation::EventHandler<float> const& handler)
     {
-        return m_accountIsInDebitEvent.add(handler);
+        return m_temperatureIsBelowFreezingEvent.add(handler);
     }
 
-    void BankAccount::AccountIsInDebit(winrt::event_token const& token) noexcept
+    void Thermometer::TemperatureIsBelowFreezing(winrt::event_token const& token) noexcept
     {
-        m_accountIsInDebitEvent.remove(token);
+        m_temperatureIsBelowFreezingEvent.remove(token);
     }
 
-    void BankAccount::AdjustBalance(float value)
+    void Thermometer::AdjustTemperature(float deltaFahrenheit)
     {
-        m_balance += value;
-        if (m_balance < 0.f) m_accountIsInDebitEvent(*this, m_balance);
+        m_temperatureFahrenheit += deltaFahrenheit;
+        if (m_temperatureFahrenheit < 32.f) m_temperatureIsBelowFreezingEvent(*this, m_temperatureFahrenheit);
     }
 }
 ```
@@ -102,11 +102,11 @@ namespace winrt::BankAccountWRC::implementation
 
 다른 오버로드(등록 및 수동 해지 오버로드)는 프로젝션에 반영되지 *않습니다*. 이는 시나리오에 최적으로 구현할 수 있는 유연성을 제공하기 위한 것입니다. 이러한 구현에 나온 것처럼 [**event::add**](/uwp/cpp-ref-for-winrt/event#eventadd-function) 및 [**event::remove**](/uwp/cpp-ref-for-winrt/event#eventremove-function) 호출은 효율적이며 동시성/스레드로부터 안전한 기본값입니다. 하지만 매우 많은 수의 이벤트를 처리하는 경우 각각에 대한 이벤트 필드 대신 일부 밀도가 낮은 구현을 원할 수 있습니다.
 
-잔액이 마이너스가 될 경우 **AdjustBalance** 함수의 구현은 **AccountIsInDebit** 이벤트를 발생시키도록 업데이트됩니다.
+또한 온도가 0도 미만으로 내려가면 **TemperatureIsBelowFreezing** 이벤트를 발생시키도록 **AdjustTemperature** 함수의 구현이 업데이트되었음을 위에서 확인할 수 있습니다.
 
-## <a name="update-bankaccountcoreapp-to-handle-the-event"></a>이 이벤트를 처리하도록 **BankAccountCoreApp**을 업데이트합니다.
+## <a name="update-thermometercoreapp-to-handle-the-event"></a>이벤트를 처리하도록 **ThermometerCoreApp** 업데이트
 
-**BankAccountCoreApp** 프로젝트의 `App.cpp`에서, 이벤트 처리기를 등록한 후 계정을 차변으로 이동하도록 코드를 다음과 같이 변경합니다.
+**ThermometerCoreApp** 프로젝트의 `App.cpp`에서 이벤트 처리기를 등록한 다음, 온도를 0도 미만으로 떨어뜨리도록 코드를 다음과 같이 변경합니다.
 
 `WINRT_ASSERT`는 매크로 정의이며 [_ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros)로 확장됩니다.
 
@@ -118,29 +118,29 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
     
     void Initialize(CoreApplicationView const &)
     {
-        m_eventToken = m_bankAccount.AccountIsInDebit([](const auto &, float balance)
+        m_eventToken = m_thermometer.TemperatureIsBelowFreezing([](const auto &, float temperatureFahrenheit)
         {
-            WINRT_ASSERT(balance < 0.f); // Put a breakpoint here.
+            WINRT_ASSERT(temperatureFahrenheit < 32.f); // Put a breakpoint here.
         });
     }
     ...
 
     void Uninitialize()
     {
-        m_bankAccount.AccountIsInDebit(m_eventToken);
+        m_thermometer.TemperatureIsBelowFreezing(m_eventToken);
     }
     ...
     
     void OnPointerPressed(IInspectable const &, PointerEventArgs const & args)
     {
-        m_bankAccount.AdjustBalance(-1.f);
+        m_thermometer.AdjustTemperature(-1.f);
         ...
     }
     ...
 };
 ```
 
-**OnPointerPressed** 메서드의 변경 내용에 유의하세요. 이제 창을 클릭할 때마다 은행 계좌의 잔고에서 1이 *감액*됩니다. 이제 앱은 잔액이 마이너스일 때 발생하는 이벤트를 처리합니다. 이벤트가 예상한 대로 발생하는지 확인하려면 **AccountIsInDebit** 이벤트를 처리하는 람다 식에 중단점을 입력한 후 앱을 실행하여 창 내부를 클릭합니다.
+**OnPointerPressed** 메서드의 변경 내용에 유의하세요. 이제 창을 클릭할 때마다 온도계의 온도에서 화씨 1도씩 *뺍니다*. 그리고 이제는 앱에서 온도가 0도 미만으로 내려가면 발생하는 이벤트를 처리합니다. 이벤트가 예상대로 발생하고 있음을 보여 주기 위해 **TemperatureIsBelowFreezing** 이벤트를 처리하는 람다 식 내에 중단점을 배치하고, 앱을 실행하고, 창 내부를 클릭합니다.
 
 ## <a name="parameterized-delegates-across-an-abi"></a>ABI에서 매개 변수가 있는 대리자
 
@@ -148,25 +148,25 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 
 두 대리자 형식의 형식 매개 변수는 ABI를 가로질러야 하므로 형식 매개 변수도 Windows 런타임 형식이어야 합니다. 여기에는 Windows 런타임 클래스, 타사 런타임 클래스, 숫자나 문자열 같은 기본 형식이 포함됩니다. 해당 제약 조건을 잊을 경우 컴파일러가 “WinRT 형식이어야 합니다.” 오류를 처리하는 데 도움이 될 수 있습니다.
 
-다음은 코드 목록 형식의 예제입니다. 이 토픽의 앞부분에서 만든 **BankAccountWRC** 및 **BankAccountCoreApp** 프로젝트를 시작하고, 다음 목록의 코드와 비슷하게 보이도록 해당 프로젝트의 코드를 편집합니다.
+다음은 코드 목록 형식의 예제입니다. 이 항목의 앞부분에서 만든 **ThermometerWRC** 및 **ThermometerCoreApp** 프로젝트를 시작하고, 이러한 목록의 코드와 비슷하게 해당 프로젝트의 코드를 편집합니다.
 
-첫 번째 목록은 **BankAccountWRC** 프로젝트에 대한 것입니다. 아래와 같이 `BankAccountWRC.idl`을 편집한 다음, 앞에서 `BankAccount.h` 및 `.cpp`를 복사한 것처럼 `MyEventArgs.h` 및 `.cpp`를 프로젝트에(`Generated Files` 폴더의) 복사합니다.
+첫 번째 목록은 **ThermometerWRC** 프로젝트에 대한 것입니다. 아래와 같이 `ThermometerWRC.idl`을 편집한 다음, 앞에서 `Thermometer.h` 및 `.cpp`를 복사한 것처럼 `MyEventArgs.h` 및 `.cpp`를 프로젝트에(`Generated Files` 폴더의) 복사합니다.
 
 ```cppwinrt
-// BankAccountWRC.idl
-namespace BankAccountWRC
+// ThermometerWRC.idl
+namespace ThermometerWRC
 {
     [default_interface]
     runtimeclass MyEventArgs
     {
-        Single Balance{ get; };
+        Single TemperatureFahrenheit{ get; };
     }
 
     [default_interface]
-    runtimeclass BankAccount
+    runtimeclass Thermometer
     {
         ...
-        event Windows.Foundation.EventHandler<BankAccountWRC.MyEventArgs> AccountIsInDebit;
+        event Windows.Foundation.EventHandler<ThermometerWRC.MyEventArgs> TemperatureIsBelowFreezing;
         ...
     };
 }
@@ -175,16 +175,16 @@ namespace BankAccountWRC
 #pragma once
 #include "MyEventArgs.g.h"
 
-namespace winrt::BankAccountWRC::implementation
+namespace winrt::ThermometerWRC::implementation
 {
     struct MyEventArgs : MyEventArgsT<MyEventArgs>
     {
         MyEventArgs() = default;
-        MyEventArgs(float balance);
-        float Balance();
+        MyEventArgs(float temperatureFahrenheit);
+        float TemperatureFahrenheit();
 
     private:
-        float m_balance{ 0.f };
+        float m_temperatureFahrenheit{ 0.f };
     };
 }
 
@@ -193,60 +193,60 @@ namespace winrt::BankAccountWRC::implementation
 #include "MyEventArgs.h"
 #include "MyEventArgs.g.cpp"
 
-namespace winrt::BankAccountWRC::implementation
+namespace winrt::ThermometerWRC::implementation
 {
-    MyEventArgs::MyEventArgs(float balance) : m_balance(balance)
+    MyEventArgs::MyEventArgs(float temperatureFahrenheit) : m_temperatureFahrenheit(temperatureFahrenheit)
     {
     }
 
-    float MyEventArgs::Balance()
+    float MyEventArgs::TemperatureFahrenheit()
     {
-        return m_balance;
+        return m_temperatureFahrenheit;
     }
 }
 
-// BankAccount.h
+// Thermometer.h
 ...
-struct BankAccount : BankAccountT<BankAccount>
+struct Thermometer : ThermometerT<Thermometer>
 {
 ...
-    winrt::event_token AccountIsInDebit(Windows::Foundation::EventHandler<BankAccountWRC::MyEventArgs> const& handler);
+    winrt::event_token TemperatureIsBelowFreezing(Windows::Foundation::EventHandler<ThermometerWRC::MyEventArgs> const& handler);
 ...
 private:
-    winrt::event<Windows::Foundation::EventHandler<BankAccountWRC::MyEventArgs>> m_accountIsInDebitEvent;
+    winrt::event<Windows::Foundation::EventHandler<ThermometerWRC::MyEventArgs>> m_temperatureIsBelowFreezingEvent;
 ...
 }
 ...
 
-// BankAccount.cpp
+// Thermometer.cpp
 #include "MyEventArgs.h"
 ...
-winrt::event_token BankAccount::AccountIsInDebit(Windows::Foundation::EventHandler<BankAccountWRC::MyEventArgs> const& handler) { ... }
+winrt::event_token Thermometer::TemperatureIsBelowFreezing(Windows::Foundation::EventHandler<ThermometerWRC::MyEventArgs> const& handler) { ... }
 ...
-void BankAccount::AdjustBalance(float value)
+void Thermometer::AdjustTemperature(float deltaFahrenheit)
 {
-    m_balance += value;
+    m_temperatureFahrenheit += deltaFahrenheit;
 
-    if (m_balance < 0.f)
+    if (m_temperatureFahrenheit < 32.f)
     {
-        auto args = winrt::make_self<winrt::BankAccountWRC::implementation::MyEventArgs>(m_balance);
-        m_accountIsInDebitEvent(*this, *args);
+        auto args = winrt::make_self<winrt::ThermometerWRC::implementation::MyEventArgs>(m_temperatureFahrenheit);
+        m_temperatureIsBelowFreezingEvent(*this, *args);
     }
 }
 ...
 ```
 
-이 목록은 **BankAccountCoreApp** 프로젝트에 대한 것입니다.
+이 목록은 **ThermometerCoreApp** 프로젝트에 대한 것입니다.
 
 ```cppwinrt
 // App.cpp
 ...
 void Initialize(CoreApplicationView const&)
 {
-    m_eventToken = m_bankAccount.AccountIsInDebit([](const auto&, BankAccountWRC::MyEventArgs args)
+    m_eventToken = m_thermometer.TemperatureIsBelowFreezing([](const auto&, ThermometerWRC::MyEventArgs args)
     {
-        float balance = args.Balance();
-        WINRT_ASSERT(balance < 0.f); // Put a breakpoint here.
+        float degrees = args.TemperatureFahrenheit();
+        WINRT_ASSERT(degrees < 32.f); // Put a breakpoint here.
     });
 }
 ...
@@ -254,62 +254,62 @@ void Initialize(CoreApplicationView const&)
 
 ## <a name="simple-signals-across-an-abi"></a>ABI에서 단순 신호
 
-이벤트를 통해 매개 변수나 인수를 전달할 필요가 없는 경우에는 고유한 단순 Windows 런타임 대리자 형식을 정의할 수 있습니다. 아래 예제에서는 **BankAccount** 런타임 클래스의 더 단순한 버전을 보여 줍니다. **SignalDelegate**라는 대리자 형식을 선언한 다음, 이 대리자 형식을 사용하여 매개 변수가 있는 이벤트 대신 신호 형식 이벤트를 발생시킵니다.
+이벤트를 통해 매개 변수나 인수를 전달할 필요가 없는 경우에는 고유한 단순 Windows 런타임 대리자 형식을 정의할 수 있습니다. 아래 예제에서는 **Thermometer** 런타임 클래스의 더 간단한 버전을 보여 줍니다. **SignalDelegate**라는 대리자 형식을 선언한 다음, 이 대리자 형식을 사용하여 매개 변수가 있는 이벤트 대신 신호 형식 이벤트를 발생시킵니다.
 
 ```idl
-// BankAccountWRC.idl
-namespace BankAccountWRC
+// ThermometerWRC.idl
+namespace ThermometerWRC
 {
     delegate void SignalDelegate();
 
-    runtimeclass BankAccount
+    runtimeclass Thermometer
     {
-        BankAccount();
-        event BankAccountWRC.SignalDelegate SignalAccountIsInDebit;
-        void AdjustBalance(Single value);
+        Thermometer();
+        event ThermometerWRC.SignalDelegate SignalTemperatureIsBelowFreezing;
+        void AdjustTemperature(Single value);
     };
 }
 ```
 
 ```cppwinrt
-// BankAccount.h
+// Thermometer.h
 ...
-namespace winrt::BankAccountWRC::implementation
+namespace winrt::ThermometerWRC::implementation
 {
-    struct BankAccount : BankAccountT<BankAccount>
+    struct Thermometer : ThermometerT<Thermometer>
     {
         ...
 
-        winrt::event_token SignalAccountIsInDebit(BankAccountWRC::SignalDelegate const& handler);
-        void SignalAccountIsInDebit(winrt::event_token const& token);
-        void AdjustBalance(float value);
+        winrt::event_token SignalTemperatureIsBelowFreezing(ThermometerWRC::SignalDelegate const& handler);
+        void SignalTemperatureIsBelowFreezing(winrt::event_token const& token);
+        void AdjustTemperature(float deltaFahrenheit);
 
     private:
-        winrt::event<BankAccountWRC::SignalDelegate> m_signal;
-        float m_balance{ 0.f };
+        winrt::event<ThermometerWRC::SignalDelegate> m_signal;
+        float m_temperatureFahrenheit{ 0.f };
     };
 }
 ```
 
 ```cppwinrt
-// BankAccount.cpp
+// Thermometer.cpp
 ...
-namespace winrt::BankAccountWRC::implementation
+namespace winrt::ThermometerWRC::implementation
 {
-    winrt::event_token BankAccount::SignalAccountIsInDebit(BankAccountWRC::SignalDelegate const& handler)
+    winrt::event_token Thermometer::SignalTemperatureIsBelowFreezing(ThermometerWRC::SignalDelegate const& handler)
     {
         return m_signal.add(handler);
     }
 
-    void BankAccount::SignalAccountIsInDebit(winrt::event_token const& token)
+    void Thermometer::SignalTemperatureIsBelowFreezing(winrt::event_token const& token)
     {
         m_signal.remove(token);
     }
 
-    void BankAccount::AdjustBalance(float value)
+    void Thermometer::AdjustTemperature(float deltaFahrenheit)
     {
-        m_balance += value;
-        if (m_balance < 0.f)
+        m_temperatureFahrenheit += deltaFahrenheit;
+        if (m_temperatureFahrenheit < 32.f)
         {
             m_signal();
         }
@@ -321,25 +321,25 @@ namespace winrt::BankAccountWRC::implementation
 // App.cpp
 struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 {
-    BankAccountWRC::BankAccount m_bankAccount;
+    ThermometerWRC::Thermometer m_thermometer;
     winrt::event_token m_eventToken;
     ...
     
     void Initialize(CoreApplicationView const &)
     {
-        m_eventToken = m_bankAccount.SignalAccountIsInDebit([] { /* ... */ });
+        m_eventToken = m_thermometer.SignalTemperatureIsBelowFreezing([] { /* ... */ });
     }
     ...
 
     void Uninitialize()
     {
-        m_bankAccount.SignalAccountIsInDebit(m_eventToken);
+        m_thermometer.SignalTemperatureIsBelowFreezing(m_eventToken);
     }
     ...
 
     void OnPointerPressed(IInspectable const &, PointerEventArgs const & args)
     {
-        m_bankAccount.AdjustBalance(-1.f);
+        m_thermometer.AdjustTemperature(-1.f);
         ...
     }
     ...

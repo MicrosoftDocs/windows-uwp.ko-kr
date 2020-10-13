@@ -3,12 +3,12 @@ title: WinUI 2.2 릴리스 정보
 description: 새로운 기능 및 버그 수정이 포함된 WinUI 2.2 릴리스에 대한 정보입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: 4c200701e0d845d6c9b9f8797899d88cc72d8c1c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 603c2c439e47c82695c8bdf5cd16fceebc9bc068
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154907"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91762936"
 ---
 # <a name="windows-ui-library-22"></a>Windows UI 라이브러리 2.2
 
@@ -32,7 +32,7 @@ WinUI는 GitHub에 호스팅되는 오픈 소스 프로젝트입니다. [Windows
 
 #### <a name="tabview"></a>TabView
 
-![예제](../images/tabview-gif.gif)
+![탭 보기 컨트롤의 동작을 보여주는 짧은 비디오입니다.](../images/tabview-gif.gif)
 
 #### <a name="description"></a>설명
 
@@ -46,7 +46,7 @@ https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.tabview?view=winui
 
 ##### <a name="a-navigationviews-back-button-update"></a>a) NavigationView의 뒤로 단추 업데이트
 
-![예제](../images/navigationview-back-button.gif)
+![탐색 보기 컨트롤 뒤로 단추의 업데이트된 동작을 보여주는 짧은 비디오입니다.](../images/navigationview-back-button.gif)
 
 ##### <a name="description"></a>설명
 
@@ -54,7 +54,7 @@ NavigationView의 최소 모드에서는 뒤로 단추가 더 이상 사라지�
 
 ##### <a name="b-navigationview---no-auto-padding"></a>b) NavigationView - 자동 안쪽 여백 없음
 
-![예제](../images/navigationview-no-auto-padding.png)
+![자동 패딩 없이 탐색 보기 컨트롤의 동작을 보여주는 스크린샷.](../images/navigationview-no-auto-padding.png)
 
 ##### <a name="description"></a>설명
 
@@ -68,7 +68,7 @@ https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationvi
 
 ##### <a name="a-corner-radius-update"></a>a) 모퉁이 반경 업데이트
 
-![예제](../images/corner-radius.png)
+![모퉁이 반경의 업데이트된 스타일을 보여주는 스크린샷.](../images/corner-radius.png)
 
 ##### <a name="description"></a>설명
 
@@ -80,7 +80,7 @@ https://github.com/microsoft/microsoft-ui-xaml/issues/524
 
 ##### <a name="b-border-thickness-update"></a>b) 테두리 두께 업데이트
 
-![예제](../images/border-thickness.png)
+![테두리 두께의 업데이트된 스타일을 보여주는 스크린샷.](../images/border-thickness.png)
 
 ##### <a name="description"></a>설명
 
@@ -92,7 +92,7 @@ https://github.com/microsoft/microsoft-ui-xaml/issues/835
 
 ##### <a name="c-button-visual-update"></a>c) 단추 시각적 업데이트
 
-![예제](../images/button-hover-visual-update.png)
+![단추 컨트롤의 업데이트된 스타일을 보여주는 스크린샷.](../images/button-hover-visual-update.png)
 
 ##### <a name="description"></a>설명: 
 더 깔끔한 모양을 제공하기 위해 마우스로 가리키는 동안 표시되는 윤곽선을 제거하도록 기본 단추의 시각적 개체가 업데이트되었습니다.
@@ -102,7 +102,7 @@ https://github.com/microsoft/microsoft-ui-xaml/issues/953
 
 ##### <a name="d-splitbutton-visual-update"></a>d) SplitButton 시각적 업데이트
 
-![예제](../images/splitbutton-visual-update.png)
+![분할 단추 컨트롤의 업데이트된 스타일을 보여주는 스크린샷.](../images/splitbutton-visual-update.png)
 
 ##### <a name="description"></a>설명: 
 DropDownButton과 더 명확하게 구별되도록 기본 SplitButton의 시각적 개체가 업데이트되었습니다.
@@ -112,7 +112,7 @@ https://github.com/microsoft/microsoft-ui-xaml/issues/986
 
 ##### <a name="e-toggleswitch-visual-update"></a>e) ToggleSwitch 시각적 업데이트
 
-![예제](../images/toggleswitch-update.png)
+![토글 스위치 컨트롤의 업데이트된 스타일을 보여주는 스크린샷.](../images/toggleswitch-update.png)
 
 ##### <a name="description"></a>설명: 
 유용성을 유지하면서 시각적으로 균형을 맞추기 위해 기본 ToggleSwitch의 너비를 44px에서 40px로 줄였습니다.
@@ -122,7 +122,7 @@ https://github.com/microsoft/microsoft-ui-xaml/issues/836
 
 ##### <a name="f-checkbox-and-radiobutton-visual-update"></a>f) CheckBox 및 RadioButton 시각적 업데이트
 
-![예제](../images/checkbox-radiobutton.png)
+![확인란 및 라디오 단추 컨트롤의 업데이트된 스타일을 보여주는 스크린샷](../images/checkbox-radiobutton.png)
 
 ##### <a name="description"></a>설명: 
 시각적 스타일 변경의 나머지 부분과 일치하도록 CheckBox 및 RadioButton 시각적 개체가 업데이트되었습니다.
@@ -146,7 +146,7 @@ Windows UI 라이브러리 컨트롤에 대한 방법 문서가 [유니버설 Wi
 
 API 참조 문서는 [Windows UI 라이브러리 API](/uwp/api/overview/winui/)에 있습니다.
 
-## <a name="microsoftuixaml-22-version-history"></a>Microsoft.UI.Xaml 2.2 버전 기록
+## <a name="microsoftuixaml-22-prerelease-version-history"></a>Microsoft.UI.Xaml 2.2 시험판 버전 기록
 
 ### <a name="microsoftuixaml-22190702001-prerelease"></a>Microsoft.UI.Xaml 2.2.190702001-prerelease
 

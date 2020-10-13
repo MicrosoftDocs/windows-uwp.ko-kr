@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 0b5250f1e01aece4f73d83dc7327f193a58f53cf
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 24fb2507dd8f5a83b5581ff08d44210b0f5146c3
+ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161497"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636453"
 ---
 # <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>2부: XAML Islands를 사용하여 UWP InkCanvas 컨트롤 추가
 
@@ -147,7 +147,7 @@ UWP XAML Islands를 사용하도록 프로젝트를 구성했으므로, 이제 [
 
 13. 이제 마우스를 사용하여 서명 공간에 아무 것이나 그려 보세요. 이번에는 잉크가 화면에 표시되는 것을 볼 수 있습니다.
 
-    ![서명](images/wpf-modernize-tutorial/Signature.png)
+    ![서명 공간을 보여주는 비용 세부 정보의 스크린샷.](images/wpf-modernize-tutorial/Signature.png)
 
 ## <a name="next-steps"></a>다음 단계
 

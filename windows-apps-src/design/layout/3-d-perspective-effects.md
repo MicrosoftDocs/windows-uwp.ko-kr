@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 324512b4bd99ee651539c270219a6adc988ae77b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: caeb8fff9eccccc57219b84b0162db68b622bd97
+ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165767"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91763012"
 ---
 # <a name="3-d-perspective-effects-for-xaml-ui"></a>XAML UI에 대한 3D 원근감 효과
 
@@ -172,6 +172,6 @@ ms.locfileid: "89165767"
 
 이 샘플에서는 개체가 회전할 때 개체의 경로가 변경되지 않습니다. 이는 개체가 회전과 상관없이 화면의 x-축을 따라 이동하기 때문입니다.
 
-## <a name="positioning-an-object"></a>개체 위치 지정
+## <a name="more-complex-semi-3d-scenarios"></a>더 복잡한 세미 3D 시나리오
 
 [  **Matrix3DProjection**](/uwp/api/Windows.UI.Xaml.Media.Matrix3DProjection) 및 [**Matrix3D**](/uwp/api/Windows.UI.Xaml.Media.Media3D.Matrix3D) 유형을 사용하면 [**PlaneProjection**](/uwp/api/Windows.UI.Xaml.Media.PlaneProjection)을 사용할 때보다 더 복잡한 반3D 시나리오를 구현할 수 있습니다. **Matrix3DProjection**은 임의의 모델 변환 매트릭스 및 원근 매트릭스를 요소에 적용할 수 있도록 모든 [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement)에 적용할 수 있는 전체 3D 변환 매트릭스를 제공합니다. 이러한 API는 최소한의 코드로 구성된 것이므로 이러한 API를 사용하려면 3D 변형 매트릭스를 제대로 만드는 코드를 작성해야 합니다. 따라서 간단한 3D 시나리오에는 **PlaneProjection**을 사용하는 것이 더 쉽습니다.

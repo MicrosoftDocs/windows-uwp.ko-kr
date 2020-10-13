@@ -13,12 +13,12 @@ dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bdfc212c435469746faf1fdf94898c0dc7beb221
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 38f62483d09b3ec75e9a670ddcd0c27b710d6a38
+ms.sourcegitcommit: 4f032d7bb11ea98783db937feed0fa2b6f9950ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219086"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91829623"
 ---
 # <a name="buttons"></a>단추
 
@@ -33,16 +33,24 @@ ms.locfileid: "91219086"
 [Button](/uwp/api/windows.ui.xaml.controls.button) | 즉시 작업을 시작하는 단추입니다. [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 또는 [Command](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.command) 바인딩에 사용할 수 있습니다.
 [RepeatButton](/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton) | 누르고 있는 동안 계속해서 [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트를 발생시키는 단추입니다.
 [HyperlinkButton](/uwp/api/windows.ui.xaml.controls.hyperlinkbutton) | 하이퍼링크처럼 스타일이 지정되는 단추로, 탐색에 사용됩니다. 하이퍼링크에 대한 자세한 내용은 [하이퍼링크](hyperlinks.md)를 참조하세요.
-[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | ![WinUI 로고](images/winui-logo-16x16.png) 연결된 플라이아웃을 여는 펼침 단추가 있는 단추입니다.
-[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | ![WinUI 로고](images/winui-logo-16x16.png) 두 면이 있는 단추입니다. 한 쪽은 작업을 시작하고, 다른 쪽은 메뉴를 엽니다.
-[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | ![WinUI 로고](images/winui-logo-16x16.png) 두 면이 있는 토글 단추입니다. 한쪽은 켜기/끄기를 전환하고, 다른 쪽은 메뉴를 엽니다.
+[DropDownButton](/uwp/api/windows.ui.xaml.controls.dropdownbutton) | :::image type="icon" source="images/winui-logo-16x16.png"::: 연결된 플라이아웃을 여는 펼침 단추가 있는 단추입니다.
+[SplitButton](/uwp/api/windows.ui.xaml.controls.splitbutton) | :::image type="icon" source="images/winui-logo-16x16.png"::: 두 면이 있는 단추입니다. 한 쪽은 작업을 시작하고, 다른 쪽은 메뉴를 엽니다.
+[ToggleSplitButton](/uwp/api/windows.ui.xaml.controls.togglesplitbutton) | :::image type="icon" source="images/winui-logo-16x16.png"::: 두 면이 있는 토글 단추입니다. 한쪽은 켜기/끄기를 전환하고, 다른 쪽은 메뉴를 엽니다.
 [ToggleButton](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton) | 설정하거나 해제할 수 있는 단추입니다.
 
 **Windows UI 라이브러리 가져오기**
 
-|  |  |
-| - | - |
-| ![WinUI 로고](images/winui-logo-64x64.png) | **DropDownButton**, **SplitButton** 및 **ToggleSplitButton**은 Windows 앱용 새 컨트롤과 UI 기능을 포함하고 있는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요. |
+:::row:::
+   :::column:::
+      :::image type="icon" source="images/winui-logo-64x64.png":::
+   :::column-end:::
+   :::column span="3":::
+      **DropDownButton**, **SplitButton** 및 **ToggleSplitButton**은 Windows 앱용 새 컨트롤과 UI 기능을 포함하고 있는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리](/uwp/toolkits/winui/)를 참조하세요.
+   :::column-end:::
+   :::column:::
+
+   :::column-end:::
+:::row-end:::
 
 > **Windows UI 라이브러리 API:** [DropDownButton 클래스](/uwp/api/microsoft.ui.xaml.controls.dropdownbutton), [SplitButton 클래스](/uwp/api/microsoft.ui.xaml.controls.splitbutton), [ToggleSplitButton 클래스](/uwp/api/microsoft.ui.xaml.controls.togglesplitbutton)
 >
@@ -153,15 +161,15 @@ private async void SubscribeButton_Click(object sender, RoutedEventArgs e)
 <table>
 <tr>
 <td> <b>해결할 문제:</b><br> 오버플로 텍스트가 포함된 단추 </td>
-<td> <img src="images/button-wraptext.png"/> </td>
+<td> <img src="images/button-wraptext.png" alt="Screenshot of two buttons, side by side, with labels that both say: Button with thxt that woul"/> </td>
 </tr>
 <tr>
 <td> <b>옵션 1:</b><br> 단추 너비를 늘리고, 단추를 중첩하고, 텍스트 길이가 26자 이상이면 줄바꿈 합니다. </td>
-<td> <img src="images/button-wraptext1.png"> </td>
+<td> <img src="images/button-wraptext1.png" alt="Screenshot of two buttons with increased width, one over the other, with labels that both say: Button with thxt that would wrap."> </td>
 </tr>
 <tr>
 <td> <b>옵션 2:</b><br> 단추 높이를 늘리고 텍스트를 줄바꿈 합니다. </td>
-<td> <img src="images/button-wraptext2.png"> </td>
+<td> <img src="images/button-wraptext2.png" alt="Screenshot of two buttons with increased height, side by side, with labels that both say: Button with thxt that would wrap."> </td>
 </tr>
 </table>
 
