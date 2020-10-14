@@ -2,13 +2,6 @@
   href: index.md
 - name: Windows 앱이란?
   href: ../get-started/universal-application-platform-guide.md
-- name: 설정
-  href: ../get-started/get-set-up.md
-  items:
-    - name: 디바이스를 개발에 사용하도록 설정
-      href: ../get-started/enable-your-device-for-development.md
-    - name: 개발자 계정 만들기
-      href: ../get-started/sign-up.md
 - name: 코딩 시작
   href: ../get-started/create-uwp-apps.md
   items:
@@ -29,8 +22,6 @@
           href: ../get-started/create-a-basic-windows-10-app-in-cppwinrt.md
         - name: '"Hello, World!" 앱 만들기'
           href: ../get-started/create-a-basic-windows-10-app-in-cpp.md
-        - name: '"Hello, World!" JavaScript의 앱'
-          href: ../get-started/create-a-hello-world-app-js-uwp.md
     - name: 복잡한 앱 빌드
       href: ../get-started/plan-your-app.md
 - name: Windows 앱 샘플 가져오기

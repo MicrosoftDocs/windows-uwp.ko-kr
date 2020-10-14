@@ -5,12 +5,12 @@ ms.date: 03/23/2018
 ms.topic: article
 keywords: 시작, windows 10, uwp, xaml, c#
 ms.localizationpriority: medium
-ms.openlocfilehash: 21eda55755682680109f0862775f2c3bf13adf2e
-ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
+ms.openlocfilehash: 30a73ef2744bdd325e6b245d05854be3caae1d37
+ms.sourcegitcommit: 56e9cab45d1c6e54841d61fdf23044fa01f50c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878575"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92011349"
 ---
 # <a name="get-started-with-windows-10-apps"></a>Windows 10 앱 시작
 
@@ -32,7 +32,7 @@ ms.locfileid: "91878575"
         <h3 style="margin-top: 10px; margin-bottom: 0px">설정</h3>
         <p style="margin-top: 0px; margin-bottom: 50px">Visual Studio 커뮤니티 및 Windows 10 SDK는 멋진 앱을 빌드하는 데 필요한 모든 것을 무료로 제공합니다.</p>
         <br>
-        <a href="//docs.microsoft.com/windows/uwp/get-started/get-set-up">도구 및 SDK 다운로드</a><br/>
+        <a href="//docs.microsoft.com/windows/apps/get-started/get-set-up">도구 및 SDK 다운로드</a><br/>
     :::column-end:::
     :::column:::
         <img src="https://docs.microsoft.com/media/illustrations/team-services-dev-ops-test.svg" alt="Code illustration" />
