@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c095e48e24a06caf9e31066b21f9e2b023ed51cf
-ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
+ms.openlocfilehash: 6399cb3aa6c22e188ed84941c3209632511d90e4
+ms.sourcegitcommit: 8b01b9ab7293dad1259da32d1459fdd454796e12
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878476"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92020173"
 ---
 # <a name="toast-content-schema"></a>알림 콘텐츠 스키마
 
@@ -21,7 +21,7 @@ ms.locfileid: "91878476"
 
 다음은 알림 콘텐츠에 있는 모든 속성 및 요소에 대 한 설명입니다.
 
-[알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)대신 원시 xml을 사용 하는 경우 [xml 스키마]()를 참조 하세요.
+[알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)대신 원시 xml을 사용 하는 경우 [xml 스키마](https://docs.microsoft.com/uwp/schemas/tiles/toastschema/schema-root)를 참조 하세요.
 
 [Toa 내용](#toastcontent)
 * [Toa 시각적 개체](#toastvisual)
@@ -132,7 +132,7 @@ To Content는 시각적 개체, 작업 및 오디오를 비롯 한 알림의 콘
 | **BodySubtle** | 본문과 같지만 미묘한 불투명도가 있습니다. |
 | **하단** | 단락 글꼴 크기, 굵은 두께입니다. 기본적으로 본문의 굵은 버전이 표시 됩니다. |
 | **BaseSubtle** | 밑과 같지만 미묘한 불투명도가 있습니다. |
-| **제목** | H4 글꼴 크기입니다. |
+| **부제** | H4 글꼴 크기입니다. |
 | **SubtitleSubtle** | 부제와 동일 하지만 미세한 불투명도가 있습니다. |
 | **제목** | H3 글꼴 크기입니다. |
 | **TitleSubtle** | 제목과 같지만 미묘한 불투명도가 있습니다. |
@@ -380,8 +380,8 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 
 | 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
-| **콘텐츠** | 문자열 | true | 필수 사항입니다. 단추에 표시할 텍스트입니다. |
-| **인수** | 문자열 | true | 필수 사항입니다. 사용자가이 단추를 클릭 하면 나중에 앱에서 받을 수 있는 응용 프로그램 정의 인수의 문자열입니다. |
+| **콘텐츠** | 문자열 | true | 필수 요소. 단추에 표시할 텍스트입니다. |
+| **인수** | 문자열 | true | 필수 요소. 사용자가이 단추를 클릭 하면 나중에 앱에서 받을 수 있는 응용 프로그램 정의 인수의 문자열입니다. |
 | **ActivationType** | [ToastActivationType](#toastactivationtype) | false | 이 단추가 클릭 될 때 사용할 활성화 유형을 제어 합니다. 기본값은 전경입니다. |
 | **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | false | 작성자의 새로운 작업 업데이트: 알림 단추 활성화와 관련 된 추가 옵션을 가져오거나 설정 합니다. |
 
@@ -449,8 +449,8 @@ TextStacking 콘텐츠의 세로 맞춤을 지정 합니다.
 
 | 속성 | 유형 | 필수 | 설명 |
 |---|---|---|---|
-| **콘텐츠** | 문자열 | true | 필수 사항입니다. 표시할 텍스트입니다. |
-| **인수** | 문자열 | true | 필수 사항입니다. 사용자가 메뉴 항목을 클릭할 때 활성화 되 면 앱에서 나중에 검색할 수 있는 응용 프로그램 정의 인수의 문자열입니다. |
+| **콘텐츠** | 문자열 | true | 필수 요소. 표시할 텍스트입니다. |
+| **인수** | 문자열 | true | 필수 요소. 사용자가 메뉴 항목을 클릭할 때 활성화 되 면 앱에서 나중에 검색할 수 있는 응용 프로그램 정의 인수의 문자열입니다. |
 | **ActivationType** | [ToastActivationType](#toastactivationtype) | false | 이 메뉴 항목을 클릭할 때 사용할 활성화 유형을 제어 합니다. 기본값은 전경입니다. |
 | **ActivationOptions** | [ToastActivationOptions](#toastactivationoptions) | false | 크리에이터 업데이트의 새로운 항목: 알림 상황에 맞는 메뉴 항목 활성화와 관련 된 추가 옵션입니다. |
 
