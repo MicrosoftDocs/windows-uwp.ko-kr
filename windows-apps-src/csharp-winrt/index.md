@@ -5,12 +5,12 @@ ms.date: 05/19/2020
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C#, WinRT, cswinrt, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: 8fb098cb247890dc1b3919f6123b76b54366d60f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c3cac3049dbd5d22c23716a2da38a41fb6000a71
+ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154327"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91984499"
 ---
 # <a name="cwinrt"></a>C#/WinRT
 
@@ -35,7 +35,9 @@ C#/WinRT에 대한 자세한 내용은 [C#/WinRT GitHub 리포지토리](https:/
 
 ## <a name="create-an-interop-assembly"></a>interop 어셈블리 만들기
 
-WinRT API는 Windows 메타데이터(*.winmd) 파일에 정의되어 있습니다. C#/WinRT NuGet 패키지에는 Windows 메타데이터 파일을 처리하고 .NET Standard 2.0 C# 코드를 생성하는 데 사용할 수 있는 C#/WinRT 컴파일러인 **cswinrt**가 포함되어 있습니다. [C++/WinRT](../cpp-and-winrt-apis/index.md)에서 C++ 언어 프로젝션에 대한 헤더를 생성하는 방법과 비슷하게 이러한 원본 파일을 interop 어셈블리로 컴파일할 수 있습니다. 그런 다음, C#/WinRT 런타임 어셈블리와 함께 애플리케이션에서 참조할 C#/WinRT interop 어셈블리를 배포할 수 있습니다.
+WinRT API는 Windows 메타데이터(*.winmd) 파일에 정의되어 있습니다. C#/WinRT NuGet 패키지([Microsoft.Windows.CsWinRT](https://www.nuget.org/packages/Microsoft.Windows.CsWinRT/))에는 Windows 메타데이터 파일을 처리하고 .NET 5.0 C# 코드를 생성하는 데 사용할 수 있는 C#/WinRT 컴파일러인 **cswinrt**가 포함되어 있습니다. [C++/WinRT](../cpp-and-winrt-apis/index.md)에서 C++ 언어 프로젝션에 대한 헤더를 생성하는 방법과 비슷하게 이러한 원본 파일을 interop 어셈블리로 컴파일할 수 있습니다. 그런 다음, C#/WinRT 런타임 어셈블리와 함께 애플리케이션에서 참조할 C#/WinRT interop 어셈블리를 배포할 수 있습니다.
+
+Interop 어셈블리를 만드는 방법을 보여주는 연습은 [연습: C++/WinRT 구성 요소에서 .NET 5 프로젝션 생성 및 NuGet 업데이트](net-projection-from-cppwinrt-component.md)를 참조하세요.
 
 ### <a name="invoke-cswinrtexe"></a>cswinrt.exe 호출
 

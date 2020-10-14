@@ -6,12 +6,12 @@ ms.date: 10/02/2020
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 5df07995c2e4175bc9a67010a78c353cbd9d8cfa
-ms.sourcegitcommit: b8d0e2c6186ab28fe07eddeec372fb2814bd4a55
+ms.openlocfilehash: b7c640e89f36dfcea6e0080cbbe3887e0231ddfc
+ms.sourcegitcommit: 27552ed7d3d889f50d8e01776a24b8d486a8d97c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671502"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91958726"
 ---
 # <a name="modernize-your-desktop-apps"></a>데스크톱 앱 현대화
 
@@ -82,7 +82,7 @@ Windows 10, 버전 1903부터 창 핸들(HWND)에 연결된 WPF, Windows Forms �
 
 | 컨트롤 |  설명 |
 |------ |--------------|
-| [MenuBar](/windows/uwp/design/controls-and-patterns/menus#create-a-menu-bar) | 더 많은 조직이나 그룹화가 필요할 수 있으며 **CommandBar**에서 허용되는 앱용 명령 세트를 제공하는 빠르고 간단한 방법을 제공합니다. |
+| [MenuBar](/windows/uwp/design/controls-and-patterns/menus#create-a-menu-bar) | **CommandBar**에서 허용하는 것보다 더 많은 조직 또는 그룹화가 필요할 수 있는 앱에 대한 명령 세트를 빠르고 간편하게 노출할 수 있는 방법을 제공합니다. |
 | [DropDownButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button) | 더 많은 옵션을 포함하는 연결된 플라이아웃이 있는 시각적 표시기 형태의 갈매기형 펼침 단추를 표시합니다.  |
 | [SplitButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button) | 별도로 호출할 수 있는 두 부분으로 이루어진 단추를 제공합니다. 한 부분은 표준 단추처럼 동작하며 즉각적인 작업을 호출합니다. 다른 부분은 사용자가 선택할 수 있는 추가 옵션을 포함하는 플라이아웃을 호출합니다.|
 | [ToggleSplitButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-toggle-split-button) | 별도로 호출할 수 있는 두 부분으로 이루어진 단추를 제공합니다. 한 부분은 끄거나 켤 수 있는 토글 단추처럼 동작합니다. 다른 부분은 사용자가 선택할 수 있는 추가 옵션을 포함하는 플라이아웃을 호출합니다. |

@@ -822,7 +822,11 @@
             - name: 값 범주 및 참조
               href: ../cpp-and-winrt-apis/cpp-value-categories.md
     - name: C#/WinRT
-      href: ../csharp-winrt/index.md
+      items:
+        - name: 개요
+          href: ../csharp-winrt/index.md
+        - name: '연습: C++/WinRT 구성 요소에서 .NET 5.0 프로젝션 생성'
+          href: ../csharp-winrt/net-projection-from-cppwinrt-component.md
     - name: 보안
       href: ../security/index.md
       items:
