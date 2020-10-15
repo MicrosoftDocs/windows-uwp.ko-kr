@@ -7,18 +7,18 @@ ms.topic: article
 ms.custom: contperfq1
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
-ms.openlocfilehash: 416df29fcb6ac007375ff9cf2a8f22d80a12b73e
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f435631b575a06daae9cb4d34c5419e93ba8063f
+ms.sourcegitcommit: 56e9cab45d1c6e54841d61fdf23044fa01f50c43
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219826"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92011355"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
 UWP는 Windows용 클라이언트 애플리케이션을 만드는 여러 가지 방법 중 하나입니다. UWP 앱은 WinRT API를 사용하여 인터넷에 연결된 디바이스에 이상적인 강력한 UI와 고급 비동기 기능을 제공합니다.
 
-UWP 앱 만들기를 시작하는 데 필요한 도구를 다운로드하려면 [설정](get-set-up.md)을 참조하여 [첫 번째 앱을 작성합니다](your-first-app.md).
+UWP 앱 만들기를 시작하는 데 필요한 도구를 다운로드하려면 [설정](/windows/apps/get-set-up.md)을 참조하여 [첫 번째 앱을 작성합니다](your-first-app.md).
 
 
 ## <a name="where-does-uwp-fit-in-the-microsoft-development-story"></a>UWP는 Microsoft 개발 스토리의 어디에 적합한가요?
@@ -121,7 +121,7 @@ UWP 앱은 운영 체제에서 제공되는 네이티브 API인 Windows 런타�
 
 ### <a name="get-set-up"></a>설정
 
-[시작하기](get-set-up.md)를 확인하여 앱 생성을 시작하는 데 필요한 도구를 다운로드한 다음, [첫 번째 앱을 작성합니다](your-first-app.md).
+[시작하기](/windows/apps/get-started/get-set-up.md)를 확인하여 앱 생성을 시작하는 데 필요한 도구를 다운로드한 다음, [첫 번째 앱을 작성합니다](your-first-app.md).
 
 ### <a name="design-your-app"></a>앱 디자인
 

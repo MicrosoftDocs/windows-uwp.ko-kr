@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: contperfq1
-ms.openlocfilehash: 5c2dc3237f2ff68ce2836fc80fa0936e13d84dd7
-ms.sourcegitcommit: f46edb85d523a4a1f5006787d357cdc9d090aefe
+ms.openlocfilehash: debafac51bee529ba2f78b80bed529cc571e1c6a
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414895"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91862135"
 ---
 # <a name="segoe-mdl2-icons"></a>Segoe MDL2 아이콘
 
@@ -3092,27 +3092,27 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
   <td>EBD2</td>
   <td>AdjustHologram</td>
  </tr>
-<tr><td><img src="images/segoe-mdl/EBD4.png" width="32" height="32" alt="WifiCallBars" /></td>
+<tr><td><img src="images/segoe-mdl/EBD4.png" width="32" height="32" alt="EBD4 WifiCallBars" /></td>
   <td>EBD4</td>
   <td>WifiCallBars</td>
  </tr>
-<tr><td><img src="images/segoe-mdl/EBD5.png" width="32" height="32" alt="WifiCall0" /></td>
+<tr><td><img src="images/segoe-mdl/EBD5.png" width="32" height="32" alt="EBD5 WifiCall0" /></td>
   <td>EBD5</td>
   <td>WifiCall0</td>
  </tr>
-<tr><td><img src="images/segoe-mdl/EBD6.png" width="32" height="32" alt="WifiCall1" /></td>
+<tr><td><img src="images/segoe-mdl/EBD6.png" width="32" height="32" alt="EBD6 WifiCall1" /></td>
   <td>EBD6</td>
   <td>WifiCall1</td>
  </tr>
-<tr><td><img src="images/segoe-mdl/EBD7.png" width="32" height="32" alt="WifiCall2" /></td>
+<tr><td><img src="images/segoe-mdl/EBD7.png" width="32" height="32" alt="EBD7 WifiCall2" /></td>
   <td>EBD7</td>
   <td>WifiCall2</td>
  </tr>
-<tr><td><img src="images/segoe-mdl/EBD8.png" width="32" height="32" alt="WifiCall3" /></td>
+<tr><td><img src="images/segoe-mdl/EBD8.png" width="32" height="32" alt="EBD8 WifiCall3" /></td>
   <td>EBD8</td>
   <td>WifiCall3</td>
  </tr>
-<tr><td><img src="images/segoe-mdl/EBD9.png" width="32" height="32" alt="WifiCall4" /></td>
+<tr><td><img src="images/segoe-mdl/EBD9.png" width="32" height="32" alt="EBD9 WifiCall4" /></td>
   <td>EBD9</td>
   <td>WifiCall4</td>
  </tr>
@@ -5280,27 +5280,27 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
   <td>F63C</td>
   <td>CircleShapeSolid</td>
 </tr>
-<tr><td><img src="images/segoe-mdl/F657.png" width="32" height="32" alt="WifiCallBars" /></td>
+<tr><td><img src="images/segoe-mdl/F657.png" width="32" height="32" alt="F657 WifiCallBars" /></td>
   <td>F657</td>
   <td>WifiCallBars</td>
 </tr>
-<tr><td><img src="images/segoe-mdl/F658.png" width="32" height="32" alt="WifiCall0" /></td>
+<tr><td><img src="images/segoe-mdl/F658.png" width="32" height="32" alt="F658 WifiCall0" /></td>
   <td>F658</td>
   <td>WifiCall0</td>
 </tr>
-<tr><td><img src="images/segoe-mdl/F659.png" width="32" height="32" alt="WifiCall1" /></td>
+<tr><td><img src="images/segoe-mdl/F659.png" width="32" height="32" alt="F659 WifiCall1" /></td>
   <td>F659</td>
   <td>WifiCall1</td>
 </tr>
-<tr><td><img src="images/segoe-mdl/F65A.png" width="32" height="32" alt="WifiCall2" /></td>
+<tr><td><img src="images/segoe-mdl/F65A.png" width="32" height="32" alt="F65A WifiCall2" /></td>
   <td>F65A</td>
   <td>WifiCall2</td>
 </tr>
-<tr><td><img src="images/segoe-mdl/F65B.png" width="32" height="32" alt="WifiCall3" /></td>
+<tr><td><img src="images/segoe-mdl/F65B.png" width="32" height="32" alt="F65B WifiCall3" /></td>
   <td>F65B</td>
   <td>WifiCall3</td>
 </tr>
-<tr><td><img src="images/segoe-mdl/F65C.png" width="32" height="32" alt="WifiCall4" /></td>
+<tr><td><img src="images/segoe-mdl/F65C.png" width="32" height="32" alt="F65C WifiCall4" /></td>
   <td>F65C</td>
   <td>WifiCall4</td>
 </tr>

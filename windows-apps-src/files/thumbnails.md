@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: df0d2364762d75793f3f00856b06e8ae506cb327
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3bf624373a4b9a3c99a8c4c0a8a44e2410788487
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165599"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860139"
 ---
 # <a name="thumbnail-images"></a>미리 보기 이미지
 
@@ -151,11 +151,11 @@ ms.locfileid: "89165599"
 <tr>
 <td>파일 그룹</td>
 <td>폴더에 사진 파일이 있는 경우 사진 미리 보기가 사용됩니다.<br />
-<img src="images/thumbnail-grp-picvid-modes.png" alt="File group thumbnail in picture or video mode"/> <br /> 그렇지 않은 경우 미리 보기가 검색되지 않습니다. </td>
+<img src="images/thumbnail-grp-picvid-modes.png" alt="File group thumbnail in picture or video mode."/> <br /> 그렇지 않은 경우 미리 보기가 검색되지 않습니다. </td>
 <td>그룹의 파일 중에 앨범 이미지가 있는 파일이 있으면 미리 보기는 앨범 이미지입니다. <br />
 <img src="images/thumbnail-grp-doclistmusic-modes.png" alt="File group thumbnail in documents, music or list mode"/> <br />그렇지 않은 경우 미리 보기가 검색되지 않습니다. </td>
 <td>그룹의 파일 중에 앨범 이미지가 있는 파일이 있으면 미리 보기는 앨범 이미지이고 파일의 원래 가로 세로 비율을 사용합니다. <br />
-<img src="images/thumbnail-grp1-single-mode.png" alt="File group thumbnail in picture or video mode"/> <br />그렇지 않은 경우 미리 보기는 파일 그룹을 표시하는 아이콘입니다. <br />
+<img src="images/thumbnail-grp1-single-mode.png" alt="File group thumbnail in documents, music or list mode using the original aspect ratio of the file."/> <br />그렇지 않은 경우 미리 보기는 파일 그룹을 표시하는 아이콘입니다. <br />
 <img src="images/thumbnail-grp2-single-mode.png" alt="File group icon in single mode"/> 
 </td>
 </tr>

@@ -4,12 +4,12 @@ description: Windows 패키지 관리자에서 액세스하는 리포지토리�
 ms.date: 04/28/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d383dfc4e66c75c993210d382b674508ad3cef4
-ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
+ms.openlocfilehash: 08af76389627bb8c21bf7a4ddb856d09119dc917
+ms.sourcegitcommit: 837ef4b2c2375d023ee85204f72a029f9ec8f4ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334483"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92079278"
 ---
 # <a name="source-command-winget"></a>source 명령(winget)
 
@@ -128,7 +128,7 @@ ms.locfileid: "85334483"
 
 **remove** 하위 명령은 원본을 제거합니다. 이 하위 명령에는 원본을 식별하기 위해  **--name** 옵션 및 **name 인수**가 필요합니다.
 
-사용법: `winget source add [-n, --name] \<name>`
+사용법: `winget source remove [-n, --name] \<name>`
 
 예: `winget source remove --name Contoso`
 
