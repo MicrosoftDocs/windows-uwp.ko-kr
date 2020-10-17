@@ -1,27 +1,27 @@
 ---
-Description: 로컬 알림 메시지를 보내고 알림 메시지를 클릭 하 여 사용자를 처리 하는 방법을 알아봅니다.
-title: 로컬 알림 메시지 보내기
+Description: UWP 앱에서 로컬 알림 메시지를 보내고 알림 메시지를 클릭 하 여 사용자를 처리 하는 방법을 알아봅니다.
+title: UWP 앱에서 로컬 알림 메시지 보내기
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
-label: Send a local toast notification
+label: Send a local toast notification from UWP apps
 template: detail.hbs
 ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림 메시지 보내기, 알림, 알림 보내기, 알림 메시지, 방법, 빠른 시작, 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: 566a1093fc576751bdd2428c2349428a5d2ef626
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: 7b669ad3c846fec0b60ae01134b80a6d87586c62
+ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984713"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92100291"
 ---
-# <a name="send-a-local-toast-notification"></a>로컬 알림 메시지 보내기
+# <a name="send-a-local-toast-notification-from-uwp-apps"></a>UWP 앱에서 로컬 알림 메시지 보내기
 
 
 알림 메시지는 앱이 현재 앱 내부에 있지 않은 상태에서 사용자를 생성 하 고 제공할 수 있는 메시지입니다. 이 빠른 시작에서는 새로운 적응 템플릿 및 대화형 작업을 통해 Windows 10 알림 메시지를 만들고, 제공 하 고, 표시 하는 단계를 안내 합니다. 이러한 작업은 구현 하는 가장 간단한 알림 인 로컬 알림을 통해 보여 줍니다.
 
 > [!IMPORTANT]
-> Win32 응용 프로그램 (패키지 된 [Msix](/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 가져오는 데 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱, 기본 패키지 되지 않은 win32 앱 포함)은 알림을 보내고 활성화를 처리 하는 서로 다른 단계를 포함 합니다. 알림을을 구현 하는 방법에 대 한 자세한 내용은 [Win32 앱](toast-desktop-apps.md) 설명서를 참조 하세요.
+> 데스크톱 응용 프로그램 (패키지 된 [Msix 개](/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 가져오는 데 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱 및 클래식 패키지 되지 않은 데스크톱 앱 포함)은 알림을 보내고 활성화를 처리 하는 서로 다른 단계를 포함 합니다. 알림을을 구현 하는 방법에 대 한 자세한 내용은 [데스크톱 앱](toast-desktop-apps.md) 설명서를 참조 하세요.
 
 > **중요 한 api**: [to notification 클래스](/uwp/api/Windows.UI.Notifications.ToastNotification), [ToastNotificationActivatedEventArgs 클래스](/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
 
@@ -192,7 +192,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 > 이미지는 앱의 패키지, 앱의 로컬 저장소 또는 웹에서 사용할 수 있습니다. 가 중 작성자 업데이트를 기준으로 웹 이미지는 일반 연결의 경우 최대 3mb, 요금제 연결의 경우 1mb가 될 수 있습니다. 아직가 중 작성자 업데이트를 실행 하지 않는 장치에서는 웹 이미지가 200 KB 보다 크지 않아야 합니다.
 
 > [!IMPORTANT]
-> Http 이미지는 매니페스트에 인터넷 기능이 있는 UWP/MSIX/sparse 앱 에서만 지원 됩니다. Win32 비-m 6/스파스 앱은 http 이미지를 지원 하지 않습니다. 로컬 앱 데이터에 이미지를 다운로드 하 고 로컬에서 참조 해야 합니다.
+> Http 이미지는 매니페스트에 인터넷 기능이 있는 UWP/MSIX/sparse 앱 에서만 지원 됩니다. 데스크톱 비 m 6/스파스 앱은 http 이미지를 지원 하지 않습니다. 로컬 앱 데이터에 이미지를 다운로드 하 고 로컬에서 참조 해야 합니다.
 
 <img alt="Toast with images" src="images/send-toast-02.png" width="364"/>
 

@@ -3,12 +3,12 @@ title: WinUI 3 Preview 2(2020년 7월)
 description: WinUI 3 Preview 2 릴리스에 대한 개요입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: 11c7ff587c7c237c19ad627587f082be84e68bf8
-ms.sourcegitcommit: 337f31b3fe3ff434dbc2c232fb84c3b22ebd4be8
+ms.openlocfilehash: ec4a112eceef7053244d676b6070784174291ed1
+ms.sourcegitcommit: 8b01b9ab7293dad1259da32d1459fdd454796e12
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91804577"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92020163"
 ---
 # <a name="windows-ui-library-3-preview-2-july-2020"></a>Windows UI 라이브러리 3 Preview 2(2020년 7월)
 
@@ -99,7 +99,7 @@ WinUI 프로젝트에서 사용할 수 있는 항목 템플릿은 다음과 같�
 |----------|----------|-------------|
 | 빈 페이지(WinUI) | C# 및 C++ | WinUI 라이브러리의 **Microsoft.UI.Xaml.Controls.Page** 클래스에서 파생되는 새 페이지를 정의하는 XAML 파일 및 코드 파일을 추가합니다. |
 | 빈 창(데스크톱의 WinUI) | C# 및 C++ | WinUI 라이브러리의 **Microsoft.UI.Xaml.Window** 클래스에서 파생되는 새 창을 정의하는 XAML 파일 및 코드 파일을 추가합니다. |
-| 사용자 지정 컨트롤(WinUI) | C# 및 C++ | 기본 스타일을 사용하여 템플릿 기반 컨트롤을 만드는 코드 파일을 추가합니다. 템플릿 기반 컨트롤은 WinUI 라이브러리의 **Microsoft.UI.Xaml.Controls.Control** 클래스에서 파생됩니다.<p></p>이 항목 템플릿을 사용하는 방법을 보여 주는 연습은 [C++/WinRT를 사용한 UWP 및 WinUI 3 앱용 템플릿 기반 XAML 컨트롤](xaml-templated-controls-cppwinrt-winui3.md)을 참조하세요. 템플릿 기반 컨트롤에 대한 자세한 내용은 [사용자 지정 XAML 컨트롤](/archive/msdn-magazine/2019/may/xaml-custom-xaml-controls)을 참조하세요. |
+| 사용자 지정 컨트롤(WinUI) | C# 및 C++ | 기본 스타일을 사용하여 템플릿 기반 컨트롤을 만드는 코드 파일을 추가합니다. 템플릿 기반 컨트롤은 WinUI 라이브러리의 **Microsoft.UI.Xaml.Controls.Control** 클래스에서 파생됩니다.<p></p>이 항목 템플릿을 사용하는 방법을 보여주는 연습은 [C++/WinRT를 사용한 UWP 및 WinUI 3 앱용 템플릿 XAML 컨트롤](xaml-templated-controls-cppwinrt-winui-3.md) 및 [C#을 사용한 UWP 및 WinUI 3 앱용 템플릿 XAML 컨트롤](xaml-templated-controls-csharp-winui-3.md)을 참조하세요. 템플릿 기반 컨트롤에 대한 자세한 내용은 [사용자 지정 XAML 컨트롤](/archive/msdn-magazine/2019/may/xaml-custom-xaml-controls)을 참조하세요. |
 | 리소스 사전(WinUI) | C# 및 C++ | XAML 리소스의 빈 키 컬렉션을 추가합니다. 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)를 확인하세요. |
 | 리소스 파일(WinUI) | C# 및 C++ | 앱에 대한 문자열 및 조건부 리소스를 저장하는 파일을 추가합니다. 이 항목을 사용하여 앱을 지역화할 수 있습니다. 자세한 내용은 [UI 및 앱 패키지 매니페스트의 문자열 지역화](/windows/uwp/app-resources/localize-strings-ui-manifest)를 참조하세요. |
 | 사용자 지정 컨트롤(WinUI) | C# 및 C++ | WinUI 라이브러리의 **Microsoft.UI.Xaml.Controls.UserControl** 클래스에서 파생되는 사용자 지정 컨트롤을 만드는 XAML 파일 및 코드 파일을 추가합니다. 일반적으로 사용자 지정 컨트롤은 관련된 기존 컨트롤을 캡슐화하고 자체 논리를 제공합니다.<p></p>사용자 지정 컨트롤에 대한 자세한 내용은 [사용자 지정 XAML 컨트롤](/archive/msdn-magazine/2019/may/xaml-custom-xaml-controls)을 참조하세요. |

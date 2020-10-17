@@ -8,12 +8,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: windows 10, uwp, chaseable 타일, 라이브 타일, chaseable 타일 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: 770c3f13d701de622c4f6ea8075dfef5f6b1afc8
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: 951dc891fb34ae4be7551c08ff47eabc19ae9eb6
+ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984459"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92100281"
 ---
 # <a name="chaseable-tile-notifications"></a>추적 가능한 타일 알림
 
@@ -140,14 +140,14 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 ```
 
 
-### <a name="accessing-onlaunched-from-win32-applications"></a>Win32 응용 프로그램에서 OnLaunched 액세스
+### <a name="accessing-onlaunched-from-desktop-applications"></a>데스크톱 응용 프로그램에서 OnLaunched 액세스
 
-[데스크톱 브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용 하는 Win32 앱 (예: WPF 등)은 chaseable 타일을 사용할 수 있습니다. 유일한 차이점은 OnLaunched 된 인수에 액세스 하는 것입니다. 먼저 [데스크톱 브리지를 사용](/windows/msix/desktop/source-code-overview)하 여 앱을 패키지 해야 합니다.
+데스크톱 [브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용 하는 데스크톱 응용 프로그램 (예: WPF 등)은 chaseable 타일을 사용할 수 있습니다. 유일한 차이점은 OnLaunched 된 인수에 액세스 하는 것입니다. 먼저 [데스크톱 브리지를 사용](/windows/msix/desktop/source-code-overview)하 여 앱을 패키지 해야 합니다.
 
 > [!IMPORTANT]
 > **10 월 2018 업데이트 필요**: API를 사용 하려면 `AppInstance.GetActivatedEventArgs()` SDK 17763를 대상으로 하 고 빌드 17763 이상을 실행 해야 합니다.
 
-Win32 응용 프로그램의 경우 시작 인수에 액세스 하려면 다음을 수행 합니다.
+데스크톱 응용 프로그램의 경우 시작 인수에 액세스 하려면 다음을 수행 합니다.
 
 ```csharp
 

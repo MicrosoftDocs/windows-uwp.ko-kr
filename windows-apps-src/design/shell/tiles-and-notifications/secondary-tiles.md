@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: windows 10, uwp, 보조 타일
 ms.localizationpriority: medium
-ms.openlocfilehash: a4cd65093e9969531c3de683064973aab58b1680
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: ecafd52be36b34c83d9b11757ccd733e796fd727
+ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984669"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92100341"
 ---
 # <a name="secondary-tiles"></a>보조 타일
 
@@ -33,7 +33,7 @@ ms.locfileid: "91984669"
 | --- | --- |
 | [보조 타일에 대 한 지침](secondary-tiles-guidance.md) | 보조 타일을 사용 해야 하는 시기 및 위치에 대해 알아봅니다. |
 | [보조 타일 고정](secondary-tiles-pinning.md) | 보조 타일을 고정 하는 방법을 알아봅니다. |
-| [Win32 앱에서 고정](secondary-tiles-desktop-pinning.md) | Win32 앱은 데스크톱 브리지 덕분에 보조 타일을 고정할 수 있습니다. |
+| [데스크톱 앱에서 고정](secondary-tiles-desktop-pinning.md) | 데스크톱 앱은 데스크톱 브리지 덕분에 보조 타일을 고정할 수 있습니다. |
 
 
 ## <a name="secondary-tiles-in-relation-to-primary-tiles"></a>기본 타일을 기준으로 하는 보조 타일
@@ -79,5 +79,5 @@ ms.locfileid: "91984669"
 보조 타일을 고정 하는 방법에 대 한 자세한 내용은 [보조 타일 고정](secondary-tiles-pinning.md)을 참조 하세요.
 
 
-## <a name="win32-applications-and-secondary-tiles"></a>Win32 응용 프로그램 및 보조 타일
-데스크톱 브리지를 통해 Win32 응용 프로그램에서 보조 타일을 사용 하는 방법을 알아보려면 [win32 앱에서 보조 타일 고정](secondary-tiles-desktop-pinning.md)을 참조 하세요.
+## <a name="desktop-applications-and-secondary-tiles"></a>데스크톱 응용 프로그램 및 보조 타일
+데스크톱 브리지를 통해 데스크톱 응용 프로그램에서 보조 타일을 사용 하는 방법을 알아보려면 [데스크톱 앱에서 보조 타일 고정](secondary-tiles-desktop-pinning.md)을 참조 하세요.

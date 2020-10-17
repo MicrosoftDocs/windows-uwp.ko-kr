@@ -1,17 +1,17 @@
 ---
-description: 이 포팅 가이드의 끝 부분에 대 한 읽기를 권장 하지만, 프로젝트를 빌드하고 실행 하는 단계를 계속 해 서 확인 하는 것도 이해 하 고 있습니다.
+description: Windows 런타임 4.x를 UWP로 포팅 하는 동안 발생할 수 있는 문제 해결
 title: Windows 런타임 .x에서 UWP로 포팅 문제 해결
 ms.assetid: 1882b477-bb5d-4f29-ba99-b61096f45e50
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e9d2ba97ece396cbec3c0b1f1cf9941b91f261aa
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b0e915aec7f37600ce821f1a097a8aa5ac7ca76b
+ms.sourcegitcommit: 0c4bbaf1c119a84002748cdcf02e1449835559c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162197"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92133106"
 ---
 # <a name="troubleshooting-porting-windows-runtime-8x-to-uwp"></a>4.x에서 UWP로의 포팅 Windows 런타임 문제 해결
 
@@ -22,11 +22,11 @@ ms.locfileid: "89162197"
 
 ## <a name="tracking-down-issues"></a>문제 추적
 
-XAML 구문 분석 예외는 특히 예외 내에 의미 없는 오류 메시지가 없는 경우 진단 하기 어려울 수 있습니다. 첫 번째 예외를 catch 하도록 디버거가 구성 되어 있는지 확인 합니다 (조기에 구문 분석 예외를 시도 하 고 catch 하기 위해). 디버거에서 예외 변수를 검사 하 여 HRESULT 또는 메시지에 유용한 정보가 있는지 여부를 확인할 수 있습니다. 또한 Visual Studio의 출력 창에서 XAML 파서에서 출력 하는 오류 메시지를 확인 합니다.
+XAML 구문 분석 예외는 특히 예외 내에 의미 없는 오류 메시지가 없는 경우 진단 하기 어려울 수 있습니다. 초기에 구문 분석 예외를 찾기 위해 첫째 예외를 catch하도록 디버거가 구성되어 있는지 확인하세요. 디버거에서 예외 변수를 검사하여 HRESULT 또는 메시지에 유용한 정보가 있는지 확인할 수 있습니다. XAML 파서로 오류 메시지 출력을 위한 Visual Studio 출력 창을 확인할 수도 있습니다.
 
 앱이 종료 되 고 모든 것이 XAML 태그 구문 분석 중에 처리 되지 않은 예외가 throw 된 경우에는 누락 된 리소스에 대 한 참조의 결과일 수 있습니다. 즉, 일부 시스템 **TextBlock** 스타일 키와 같은 Windows 10 앱에 대해서는 그렇지 않고 유니버설 8.1 앱에 대 한 키가 존재 하는 리소스입니다. 또는 **UserControl**, 사용자 지정 컨트롤 또는 사용자 지정 레이아웃 패널 내에서 예외가 throw 될 수 있습니다.
 
-마지막 수단은 이진 분할입니다. 페이지에서 태그의 절반을 제거 하 고 앱을 다시 실행 합니다. 그런 다음 오류가 제거 된 절반 (어떤 경우에는 어떤 경우에만 복원 해야 함) 내에 있는지 또는 제거 *하지* 않은 절반에 있는지를 확인 합니다. 오류를 포함 하는 절반을 분할 하 여 프로세스를 반복 합니다.
+마지막으로 사용할 수 있는 방법은 이진 분할입니다. 페이지에서 태그의 절반을 제거 하 고 앱을 다시 실행 합니다. 그런 다음 오류가 제거 된 절반 (어떤 경우에는 어떤 경우에만 복원 해야 함) 내에 있는지 또는 제거 *하지* 않은 절반에 있는지를 확인 합니다. 문제가 더 이상 발생하지 않을 때까지 오류가 포함된 부분을 계속해서 분할하면서 프로세스를 반복합니다.
 
 ## <a name="targetplatformversion"></a>TargetPlatformVersion
 

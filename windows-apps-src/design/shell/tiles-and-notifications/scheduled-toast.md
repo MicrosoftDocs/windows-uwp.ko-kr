@@ -7,12 +7,12 @@ ms.date: 04/09/2020
 ms.topic: article
 keywords: windows 10, uwp, 예약 된 알림, scheduledtoastnotification, 방법, 빠른 시작, 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: 04bbf3da388bf065b2b96684cf3f27cd7534ff51
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: 8ef849490df82d7677e19d1f1619d98111611be3
+ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984739"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92100311"
 ---
 # <a name="schedule-a-toast-notification"></a>알림 메시지 예약
 
@@ -21,12 +21,12 @@ ms.locfileid: "91984739"
 예약 된 알림 메시지의 배달 기간은 5 분입니다. 예약 된 배달 시간 동안 컴퓨터가 꺼져 있고 5 분 넘게 꺼진 상태를 유지 하는 경우 사용자와 더 이상 관련이 없는 것 처럼 알림이 "삭제" 됩니다. 컴퓨터가 꺼진 기간에 관계 없이 알림의 배달이 보장 되어야 하는 경우 [이 코드 샘플](https://github.com/WindowsNotifications/quickstart-snoozable-toasts-even-if-computer-is-off)에 나와 있는 것 처럼 시간 트리거와 함께 백그라운드 작업을 사용 하는 것이 좋습니다.
 
 > [!IMPORTANT]
-> Win32 응용 프로그램 (MSIX/sparse 패키지 및 클래식 Win32)에는 알림을 보내고 활성화를 처리 하는 단계가 약간 다릅니다. 그러나 아래 지침을 따릅니다. 하지만을 `ToastNotificationManager` `DesktopNotificationManagerCompat` [Win32 앱](toast-desktop-apps.md) 설명서의 클래스로 바꿉니다.
+> 데스크톱 응용 프로그램 (MSIX/sparse 패키지와 클래식 데스크톱 모두)에서는 알림을 보내고 활성화를 처리 하는 단계가 약간 다릅니다. 아래 지침을 따릅니다. 그러나를 `ToastNotificationManager` `DesktopNotificationManagerCompat` [데스크톱 앱](toast-desktop-apps.md) 설명서의 클래스로 바꿉니다.
 
 > **중요 한 api**: [ScheduledToastNotification 클래스](/uwp/api/Windows.UI.Notifications.ScheduledToastNotification)
 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 항목을 완벽 하 게 이해 하려면 다음을 수행 하는 것이 좋습니다.
 

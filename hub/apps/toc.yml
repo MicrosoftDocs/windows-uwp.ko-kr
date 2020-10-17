@@ -7,6 +7,15 @@
           href: desktop/index.md
         - name: 앱 플랫폼 선택
           href: desktop/choose-your-platform.md
+        - name: 설정
+          href: get-started/get-set-up.md
+          items:
+            - name: 디바이스를 개발에 사용하도록 설정
+              href: get-started/enable-your-device-for-development.md
+            - name: 개발자 모드 기능 및 디버깅
+              href: get-started/developer-mode-features-and-debugging.md
+            - name: 개발자 계정 만들기
+              href: get-started/sign-up.md
         - name: Windows 앱용 Visual Studio 템플릿
           href: desktop/visual-studio-templates.md
         - name: 데스크톱 앱 현대화
@@ -89,8 +98,10 @@
               href: winui/winui3/get-started-winui3-for-desktop.md
             - name: UWP 앱용 WinUI 3 시작
               href: winui/winui3/get-started-winui3-for-uwp.md
-            - name: C++/WinRT를 사용한 UWP 및 WinUI 3 앱용 템플릿 기반 XAML 컨트롤
-              href: winui/winui3/xaml-templated-controls-cppwinrt-winui3.md
+            - name: C++/WinRT를 사용한 WinUI 3 앱용 템플릿 기반 XAML 컨트롤
+              href: winui/winui3/xaml-templated-controls-cppwinrt-winui-3.md
+            - name: C#을 사용한 WinUI 3 앱용 템플릿 기반 XAML 컨트롤
+              href: winui/winui3/xaml-templated-controls-csharp-winui-3.md
         - name: Windows UI 2.x 라이브러리
           items:
             - name: 개요

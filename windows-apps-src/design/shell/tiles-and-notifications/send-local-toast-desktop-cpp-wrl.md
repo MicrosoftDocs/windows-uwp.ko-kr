@@ -7,19 +7,19 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, win32, 데스크톱, 알림 메시지 보내기, 알림 보내기, 바탕 화면 브리지, msix, 스파스 패키지, c + +, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: a227ccbc52aa3c1dd8c0cd9c61cdecf140375fe2
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: e1e8aedd867dfdcabd382ebde1dd4c96a94d1001
+ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984659"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92100321"
 ---
 # <a name="send-a-local-toast-notification-from-win32-c-wrl-apps"></a>Win32 c + + WRL apps에서 로컬 알림 메시지 보내기
 
 Win32 앱 (패키지 된 [Msix](/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 가져오기 위해 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱 및 클래식 패키지 되지 않은 Win32 앱 포함)은 Windows 앱과 마찬가지로 대화형 알림 메시지를 보낼 수 있습니다. 그러나 MSIX 또는 스파스 패키지를 사용 하지 않는 경우 다양 한 활성화 체계와 패키지 id의 잠재적 부족으로 인해 Win32 앱에 대 한 몇 가지 특별 한 단계가 있습니다.
 
 > [!IMPORTANT]
-> UWP 앱을 작성 하는 경우 [uwp 설명서](send-local-toast.md)를 참조 하세요. 다른 Win32 언어는 [Win32 c #](send-local-toast-desktop.md)을 참조 하세요.
+> UWP 앱을 작성 하는 경우 [uwp 설명서](send-local-toast.md)를 참조 하세요. 다른 데스크톱 언어는 [데스크톱 c #](send-local-toast-desktop.md)을 참조 하세요.
 
 
 ## <a name="step-1-enable-the-windows-10-sdk"></a>1 단계: Windows 10 SDK 사용

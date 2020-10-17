@@ -1,16 +1,16 @@
 ---
 title: 관계 기반 애니메이션
 description: 모션이 다른 개체의 속성에 따라 달라 지는 경우 ExpressionAnimations를 사용 하 여 관계 기반 애니메이션을 만드는 방법을 알아봅니다.
-ms.date: 10/10/2017
+ms.date: 10/16/2020
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 57d2f3729430faefc7db31cad6a0ac91ddaa2e02
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 75adcd2f762fd4314d7b852811760d523ef522aa
+ms.sourcegitcommit: fe21402578a1f434769866dd3c78aac63dbea5ea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166367"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92152415"
 ---
 # <a name="relation-based-animations"></a>관계 기반 애니메이션
 
@@ -54,8 +54,8 @@ ExpressionAnimations 함께 작업 하는 경우 앞으로 설명할 수 있는 
 
 UWP 앱에서 식을 작성 하는 두 가지 옵션은 다음과 같습니다.
 
-1. 공식 공용 API를 통해 문자열로 수식을 작성 합니다.
-1. 오픈 소스 ExpressionBuilder 도구를 통해 형식이 안전한 개체 모델에서 수식을 작성 합니다. [Github 원본 및 설명서](https://github.com/microsoft/WindowsCompositionSamples/tree/master/ExpressionBuilder)를 참조 하세요.
+1. 공식 공용 API를 통해 수식을 문자열로 작성 합니다.
+1. [Windows 커뮤니티 도구 키트](/windows/communitytoolkit/animations/expressions)에 포함 된 expressionbuilder 도구를 통해 형식이 안전한 개체 모델에서 수식을 작성 합니다.
 
 이 문서의 편의를 위해 ExpressionBuilder를 사용 하 여 식을 정의 합니다.
 
@@ -112,7 +112,9 @@ var orbitRotation = EF.Vector3(
 ```
 
 > [!NOTE]
-> `EF` 는 식 작성기. Expressionbuilder를 정의 하는 간단한 "using" 표기법입니다.
+> `EF` 는 ExpressionFunctions를 정의 하는 간단한 "using" 표기법입니다.
+>
+> `using EF = Microsoft.Toolkit.Uwp.UI.Animations.Expressions.ExpressionFunctions;`
 
 마지막으로, 이러한 구성 요소를 함께 결합 하 고 빨강 해골의 위치를 참조 하 여 수학적 관계를 정의 합니다.
 
