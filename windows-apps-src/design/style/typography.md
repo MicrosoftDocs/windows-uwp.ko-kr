@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: bb0a6b48e9a9a01881955ae0ccb65e93b9cf2b6e
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: 5f06d5e804d41b1751c72af4d07224fa346323b2
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636543"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860107"
 ---
 # <a name="typography-in-windows-apps"></a>Windows 앱의 입력 체계
 
@@ -41,7 +41,7 @@ UI에 사용할 하나의 글꼴을 선택합니다.
 
 UWP 앱의 글꼴 크기는 모든 디바이스에서 자동으로 조정됩니다. 스케일링 알고리즘은 3m 떨어져 있는 Surface Hub 10의 24픽셀 글꼴을 불과 몇 인치 떨어져 있는 5인치 휴대폰의 24픽셀 글꼴처럼 읽을 수 있게 해줍니다.
 
-![다양한 디바이스의 가시거리](images/type/scaling-chart.svg)
+![여러 디바이스에 대한 가시 거리](images/type/scaling-chart.svg)
 
 스케일링 시스템의 작동 방식 때문에 실제 픽셀이 아닌 유효 픽셀로 디자인하고 있으므로, 화면 크기나 해상도가 다른 경우에도 글꼴 크기를 변경할 필요가 없습니다.
 
@@ -62,7 +62,7 @@ Windows [유형 램프](#type-ramp) 크기 조정을 따릅니다.
 사용자는 페이지를 검색할 때 시각적 계층 구조를 사용합니다. 머리글은 콘텐츠를 요약하고, 본문 텍스트는 자세한 정보를 제공합니다. 앱에서 명확한 시각적 계층 구조를 만들려면 Windows 유형 램프를 따릅니다.
     :::column-end:::
     :::column:::
-![텍스트 블록 스타일](images/type/type-hierarchy.svg)
+![글꼴 크기가 한 줄에서 다음 줄로 작아지는 세 줄의 텍스트에 대한 스크린샷](images/type/type-hierarchy.svg)
     :::column-end:::
 :::row-end:::
 
@@ -70,18 +70,13 @@ Windows [유형 램프](#type-ramp) 크기 조정을 따릅니다.
 
 Windows 유형 램프는 페이지의 유형 스타일 간에 중요한 관계를 설정하므로 사용자가 콘텐츠를 쉽게 읽을 수 있습니다. 모든 크기는 유효 픽셀로 설정되며 모든 디바이스에서 실행되는 UWP 앱에 최적화되어 있습니다.
 
-![유형 램프](images/type/type-ramp.png)
+![Windows 유형 램프](images/type/type-ramp.png)
 
 ### <a name="using-the-type-ramp"></a>유형 램프 사용
 
 :::row:::
     :::column:::
-유형 램프 수준에 XAML [정적 리소스](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)로 액세스할 수 있습니다. 스타일은 `*TextBlockStyle` 명명 규칙을 따릅니다.
-    :::column-end:::
-    :::column:::
-![텍스트 블록 스타일](images/type/text-block-type-ramp.svg)
-    :::column-end:::
-:::row-end:::
+유형 램프 수준에 XAML [정적 리소스](../controls-and-patterns/xaml-theme-resources.md#the-xaml-type-ramp)로 액세스할 수 있습니다. 스타일은 여기에 표시된 `*TextBlockStyle` 명명 규칙을 따릅니다.
 
 ```XAML
 <TextBlock Text="Header" Style="{StaticResource HeaderTextBlockStyle}"/>
@@ -92,6 +87,13 @@ Windows 유형 램프는 페이지의 유형 스타일 간에 중요한 관계�
 <TextBlock Text="Body" Style="{StaticResource BodyTextBlockStyle}"/>
 <TextBlock Text="Caption" Style="{StaticResource CaptionTextBlockStyle}"/>
 ```
+    :::column-end:::
+    :::column:::
+![머리글, 하위 머리글, 제목, 부제목, 베이스, 본문 및 캡션 텍스트 스타일의 스크린샷](images/type/text-block-type-ramp.svg)
+    :::column-end:::
+:::row-end:::
+
+
 
 :::row:::
     :::column:::
@@ -133,7 +135,7 @@ Windows 유형 램프는 페이지의 유형 스타일 간에 중요한 관계�
 
 텍스트의 양이 사용 가능한 공간을 초과하는 경우 텍스트 클리핑을 사용할 것을 권장하며, 이는 대다수 [UWP 텍스트 컨트롤](../controls-and-patterns/text-controls.md)의 기본 동작입니다.
 
-![일부 텍스트 클리핑이 있는 디바이스 프레임을 보여 줍니다.](images/type/clipping.svg)
+![일부 텍스트가 클리핑된 디바이스 프레임 표시](images/type/clipping.svg)
 
 ```xaml
 <TextBlock TextWrapping="WrapWholeWords" TextTrimming="Clip"/>

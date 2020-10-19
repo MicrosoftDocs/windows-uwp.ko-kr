@@ -8,12 +8,12 @@ ms.topic: article
 keywords: ''
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: a1bd1b0f2916ccf44cc79d83f0335f55cf3863e4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bd9b912dfd4b733f57aaacfe6e8f246985e3b4f5
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166627"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933084"
 ---
 # <a name="get-started-using-docker-containers-with-nodejs"></a>Node.js에서 Docker 컨테이너 사용 시작
 
@@ -47,7 +47,7 @@ Docker Desktop WSL 2 Tech Preview를 설치하고 실행하는 방법은 다음�
 
 2. 방금 다운로드한 Docker 설치 관리자를 엽니다. 설치 마법사에서 "Linux 컨테이너 대신 Windows 컨테이너 사용" 여부를 묻는 메시지가 표시되면 확인란을 선택하지 말고 그냥 둡니다. 우리는 Linux 하위 시스템을 사용할 것입니다. Docker는 기본 WSL 2 배포의 관리형 디렉터리에 설치되며 Docker 디먼, CLI 및 Compose CLI를 포함할 것입니다.
 
-    ![Docker Desktop 시작](../images/install-docker-1.png)
+    ![선택된 바탕 화면에 바로 가기 추가 옵션을 보여주는 Docker Desktop 설치 마법사의 구성 페이지에 대한 스크린샷](../images/install-docker-1.png)
 
 3. Docker ID가 아직 없는 경우 [https://hub.docker.com/signup](https://hub.docker.com/signup)을 방문하여 설정해야 합니다. ID는 모두 소문자 영숫자여야 합니다.
 
@@ -55,7 +55,7 @@ Docker Desktop WSL 2 Tech Preview를 설치하고 실행하는 방법은 다음�
 
 5. Tech Preview 창이 열리면 **시작**을 선택하여 WSL 2에서 Docker 디먼(백그라운드 프로세스)을 실행합니다. WSL 2 docker 디먼이 시작되면 이에 대한 docker CLI 컨텍스트가 자동으로 만들어집니다.
 
-    ![Docker Desktop 시작](../images/start-docker.gif)
+    ![Docker 기술 미리 보기를 시작하는 방법을 보여주는 짧은 비디오](../images/start-docker.gif)
 
 6. Docker가 설치되었는지 확인하고 버전 번호를 표시하려면 명령줄(WSL 또는 PowerShell)을 열고 `docker --version`을 입력합니다.
 

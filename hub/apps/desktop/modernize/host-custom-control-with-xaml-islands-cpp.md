@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 6cdeee0730a2fe68f671a41ea77b000ab13bc0cb
-ms.sourcegitcommit: b8d0e2c6186ab28fe07eddeec372fb2814bd4a55
+ms.openlocfilehash: 3f12c3d16cabcbe834ca9bb55a437e3f932bbf78
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671562"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933054"
 ---
 # <a name="host-a-custom-winrt-xaml-control-in-a-c-win32-app"></a>C++ Win32 앱에서 사용자 지정 WinRT XAML 컨트롤 호스팅
 
@@ -377,7 +377,7 @@ ms.locfileid: "91671562"
 
 5. **MyDesktopWin32App** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 다음, 왼쪽 창에서 **매니페스트 도구** -> **입력 및 출력**을 확장합니다. **DPI 인식** 속성을 **모니터 단위 높은 DPI 인식**으로 설정합니다. 이 속성을 설정하지 않으면 특정 높은 DPI 시나리오에서 매니페스트 구성 오류가 발생할 수 있습니다.
 
-    ![C/C++ 프로젝트 설정](images/xaml-islands/xaml-island-cpp-8.png)
+    ![C/C++ 프로젝트 설정의 스크린샷](images/xaml-islands/xaml-island-cpp-8.png)
 
 6. **확인**을 클릭하여 **속성 페이지** 대화 상자를 닫습니다.
 

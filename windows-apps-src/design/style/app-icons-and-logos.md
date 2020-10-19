@@ -1,5 +1,5 @@
 ---
-Description: 시작 메뉴, 앱 타일, 작업 표시줄, Microsoft Store 등에서 앱을 나타내는 앱 아이콘/로고를 만드는 방법을 알아봅니다.
+description: 시작 메뉴, 앱 타일, 작업 표시줄, Microsoft Store 등에서 앱을 나타내는 앱 아이콘/로고를 만드는 방법을 알아봅니다.
 title: 앱 아이콘 및 로고
 template: detail.hbs
 ms.date: 09/24/2020
@@ -9,12 +9,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1e313fe0e51ed77d416f782e40aee9dee81796ae
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: 4e908cbad1fb0b70fe96af50917e8b895fdda90d
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636653"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860131"
 ---
 # <a name="app-icons-and-logos"></a>앱 아이콘 및 로고 
 
@@ -141,7 +141,7 @@ Visual Studio는 앱 아이콘을 관리할 수 있는 **매니페스트 디자�
             Visual Studio에는 매니페스트 디자이너가 표시됩니다.
     :::column-end:::
     :::column:::
-            ![시각적 자산 탭](images/icons/vs-manfiest-designer.png)
+            ![애플리케이션 탭을 보여주는 매니페스트 디자이너의 스크린샷](images/icons/vs-manfiest-designer.png)
     :::column-end:::
 :::row-end:::    
 :::row:::
@@ -149,7 +149,7 @@ Visual Studio는 앱 아이콘을 관리할 수 있는 **매니페스트 디자�
         3. **시각적 자산** 탭을 클릭합니다.
     :::column-end:::
     :::column:::
-        ![시각적 자산 탭](images/icons/vs-manfiest-designer-visual-assets.png)
+        ![시각적 자산 탭을 보여주는 매니페스트 디자이너의 스크린샷](images/icons/vs-manfiest-designer-visual-assets.png)
     :::column-end:::
 :::row-end:::        
 

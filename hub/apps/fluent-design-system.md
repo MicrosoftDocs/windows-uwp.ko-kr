@@ -8,12 +8,12 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: 8a05a0a9aeb3a31e76c0510eef70b5ee3036d2f7
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f5d1829d9fca4f5805a52ed34a1218723897c13d
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216836"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91932994"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Windows 앱 작성자용 Fluent 디자인 시스템
 
@@ -69,7 +69,7 @@ Fluent 디자인 문서에는 디자인 지침 외에도 디자인을 수행하�
 
 :::row:::
     :::column:::
-        ![fpo 이미지](images/fluent/thumbnail-size-classes.jpg)
+        ![적합한 중단점에 대한 디자인을 보여주는 이미지](images/fluent/thumbnail-size-classes.jpg)
     :::column-end:::
     :::column span="2":::
 **적합한 중단점에 따른 디자인**
@@ -82,7 +82,7 @@ Fluent 디자인 문서에는 디자인 지침 외에도 디자인을 수행하�
 
 :::row:::
     :::column:::
-        ![fpo 이미지](images/fluent/rspd-resize.gif)
+        ![반응형 레이아웃을 보여주는 짧은 동영상](images/fluent/rspd-resize.gif)
     :::column-end:::
     :::column span="2":::
 **반응형 레이아웃 만들기**
@@ -95,7 +95,7 @@ Fluent 디자인 문서에는 디자인 지침 외에도 디자인을 수행하�
 
 :::row:::
     :::column:::
-        ![fpo 이미지](images/fluent/devices.jpg)
+        ![디바이스 스펙트럼에 대한 디자인을 보여주는 이미지](images/fluent/devices.jpg)
     :::column-end:::
     :::column span="2":::
 **디바이스 스펙트럼에 대한 디자인**
@@ -107,7 +107,7 @@ UWP 앱은 광범위한 Windows 기반 디바이스에서 실행될 수 있습�
 
 :::row:::
     :::column:::
-        ![fpo 이미지](images/fluent/keyboard-shortcuts.jpg)
+        ![적절한 출력에 맞게 최적화하는 방법을 보여주는 이미지](images/fluent/keyboard-shortcuts.jpg)
     :::column-end:::
     :::column span="2":::
 **적절한 입력에 최적화**
@@ -127,7 +127,7 @@ Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하므로 사용�
 
 :::row:::
     :::column:::
-        ![fpo 이미지](images/fluent/thumbnail-navview.png)
+        ![적합한 네비게이션을 제공하는 방법을 보여주는 이미지](images/fluent/thumbnail-navview.png)
     :::column-end:::
     :::column span="2":::
 **적합한 탐색 제공**
@@ -139,7 +139,7 @@ Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하므로 사용�
 
 :::row:::
     :::column:::
-        ![fpo 이미지](images/fluent/thumbnail-commanding.png)
+        ![대화형 방식을 보여주는 이미지](images/fluent/thumbnail-commanding.png)
     :::column-end:::
     :::column span="2":::
 **대화형**
@@ -151,7 +151,7 @@ Fluent 환경은 컨트롤과 패턴을 일관적으로 사용하므로 사용�
 
 :::row:::
     :::column:::
-        ![fpo 이미지](images/fluent/thumbnail-controls-2.jpg)
+        ![작업에 적합한 컨트롤을 사용하는 방법을 보여주는 이미지](images/fluent/thumbnail-controls-2.jpg)
     :::column-end:::
     :::column span="2":::
 **적합한 작업 컨트롤 사용**
@@ -183,7 +183,7 @@ Fluent 디자인은 화려한 효과와 관련된 것이 아닙니다. 사람의
 
 :::row:::
     :::column:::
-        ![fpo 이미지](images/fluent/Nav_Reveal_Animation.gif)
+        ![강조 표시를 보여주는 짧은 동영상](images/fluent/Nav_Reveal_Animation.gif)
     :::column-end:::
     :::column span="2":::
 **강조 표시**
@@ -193,7 +193,7 @@ Fluent 디자인은 화려한 효과와 관련된 것이 아닙니다. 사람의
 
 :::row:::
     :::column:::
-        ![fpo 이미지](images/fluent/traveling-focus-fullscreen-light-rf.gif)
+        ![포커스 표시를 보여주는 짧은 동영상](images/fluent/traveling-focus-fullscreen-light-rf.gif)
     :::column-end:::
     :::column span="2":::
 **포커스 표시**
@@ -209,7 +209,7 @@ Fluent 디자인은 화려한 효과와 관련된 것이 아닙니다. 사람의
 
 :::row:::
     :::column:::
-        ![fpo 이미지](images/fluent/_parallax_v2.gif)
+        ![시차 스크롤을 보여주는 짧은 비디오](images/fluent/_parallax_v2.gif)
     :::column-end:::
     :::column span="2":::
 **시차**
@@ -241,7 +241,7 @@ Fluent 디자인은 화려한 효과와 관련된 것이 아닙니다. 사람의
 
 :::row:::
     :::column:::
-        ![fpo 이미지](images/fluent/acrylic_lighttheme_base.png)
+        ![아크릴 계층을 보여주는 이미지](images/fluent/acrylic_lighttheme_base.png)
     :::column-end:::
     :::column span="2":::
 **아크릴**
@@ -255,7 +255,7 @@ Fluent 디자인을 사용하여 나만의 앱을 만들려고 하는가요? Ado
 
 :::row:::
     :::column:::
-        ![fpo 이미지](images/fluent/thumbnail-toolkits.jpg)
+        ![디자인 도구 키트 및 샘플 페이지의 스크린샷](images/fluent/thumbnail-toolkits.jpg)
     :::column-end:::
     :::column span="2":::
 **디자인 도구 키트 및 샘플 페이지**

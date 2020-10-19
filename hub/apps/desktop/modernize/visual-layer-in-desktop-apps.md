@@ -7,12 +7,12 @@ keywords: windows 10, uwp
 ms.author: jimwalk
 author: jwmsft
 ms.localizationpriority: medium
-ms.openlocfilehash: 33a5f0bc31a8fe1421f7ab0de5f229d2feb77915
-ms.sourcegitcommit: ef723e3d6b1b67213c78da696838a920c66d5d30
+ms.openlocfilehash: 8fc9b3ea0f085a12be769e9733b3f92b2700dc16
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82730133"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91932944"
 ---
 # <a name="using-the-visual-layer-in-desktop-apps"></a>데스크톱 앱에서 시각적 계층 사용
 
@@ -22,7 +22,7 @@ ms.locfileid: "82730133"
 
 시각적 계층은 그래픽, 효과 및 애니메이션에 대한 고성능, 유지 모드 API를 제공합니다. 이 계층은 Windows 10 디바이스에서 UI의 기초가 됩니다. UWP XAML 컨트롤은 시각적 계층을 토대로 작성되었으며, 밝기, 깊이, 동작, 재질 및 크기와 같은 [흐름 디자인 시스템](/windows/uwp/design/fluent-design-system/index)의 다양한 측면을 사용할 수 있습니다.
 
-![시각적 계층으로 만든 사용자 인터페이스](images/visual-layer-interop/pull-to-animate.gif)
+![시각적 계층으로 만든 사용자 인터페이스를 보여주는 짧은 비디오입니다.](images/visual-layer-interop/pull-to-animate.gif)
 
 > _시각적 계층으로 만든 사용자 인터페이스_
 
@@ -54,7 +54,7 @@ ms.locfileid: "82730133"
 
 [컴퍼지션 애니메이션](/windows/uwp/composition/composition-animation)은 UI 스레드와는 독립적으로 Compositor 프로세스에서 직접 실행됩니다. 이렇게 하면 많은 수의 명시적인 동시 애니메이션을 실행할 수 있으므로 매끄럽게 확장 및 축소될 수 있습니다. 시간이 지남에 따라 속성 변경을 구동하기 위한 친숙한 KeyFrame 애니메이션 외에도 식을 사용하여 사용자 입력을 비롯한 다양한 속성 간의 수학적 관계를 설정할 수 있습니다. 입력 구동 애니메이션을 사용하면 동적이면서 유연하게 사용자 입력에 응답하는 UI를 만들 수 있으며, 이로 인해 사용자 참여가 더 높아질 수 있습니다.
 
-![시각적 계층으로 만든 사용자 인터페이스](images/visual-layer-interop/swipe-scroller.gif)
+![시각적 계층으로 만든 다른 사용자 인터페이스에 대한 짧은 비디오입니다.](images/visual-layer-interop/swipe-scroller.gif)
 
 > _[Windows UI 컴퍼지션 샘플 갤러리](https://github.com/Microsoft/WindowsCompositionSamples/tree/master/SampleGallery)에 표시되는 동작_
 

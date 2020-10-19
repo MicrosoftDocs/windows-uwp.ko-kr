@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Python, Windows 10, Microsoft, Windows의 Python, WSL을 사용하는 Python 웹, Linux용 Windows 하위 시스템을 사용하는 Python 웹앱, Windows에서 Python 웹 개발, Windows의 Flask 앱, Windows의 Django 앱, Python 웹, Windows에서 Flask 웹 개발, Windows에서 Django 웹 개발, Python을 사용한 Windows 웹 개발, VS Code Python 웹 개발, Remote - WSL 확장, Ubuntu, WSL, venv, pip, Microsoft Python 확장, Windows에서 Python 실행, Windows에서 Python 사용, Windows에서 Python으로 빌드
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: fedfb42e4c1604b3570c2b4db21b12926bea3762
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 187195133dd614818d3c68473cc53b71a0b32333
+ms.sourcegitcommit: 27552ed7d3d889f50d8e01776a24b8d486a8d97c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174567"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91958746"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>웹 개발을 위해 Windows에서 Python 사용 시작
 
@@ -83,7 +83,7 @@ Python 개발 프로젝트에는 가상 환경을 사용하는 것이 좋습니�
     ![가상 환경 만들기](../images/wsl-venv.png)
 
 > [!TIP]
-> 프로젝트를 만들려는 디렉터리 내에 가상 환경을 만드는 것이 좋습니다. 각 프로젝트에는 자체의 고유한 디렉터리가 있어야 하므로 각 디렉터리마다 고유한 가상 환경을 만듭니다. 이 경우 고유한 이름을 지정할 필요가 없습니다. Python 규칙에 따라 **.venv** 이름을 사용하는 것이 좋습니다. 프로젝트 디렉터리에 설치하면 pipenv와 같은 일부 도구에도 기본적으로 이 이름이 설정됩니다. **.env**는 환경 변수 정의 파일과 충돌하므로 사용하지 않으려고 합니다. 일반적으로 디렉터리가 있음을 지속적으로 알려주는 `ls`가 필요하지 않으므로 점으로 구분되지 않는 이름을 사용하지 않는 것이 좋습니다. 또한 **.venv**를 .gitignore 파일에 추가하는 것이 좋습니다. ([GitHub의 Python용 기본 gitignore 템플릿](https://github.com/github/gitignore/blob/50e42aa1064d004a5c99eaa72a2d8054a0d8de55/Python.gitignore#L99-L106)을 참조하세요.) VS Code의 가상 환경 작업에 대한 자세한 내용은 [VS Code에서 Python 환경 사용](https://code.visualstudio.com/docs/python/environments)을 참조하세요.
+> 프로젝트를 만들려는 디렉터리 내에 가상 환경을 만드는 것이 좋습니다. 각 프로젝트에는 별도의 자체 디렉터리가 있어야 하므로 각 디렉터리마다 고유한 가상 환경이 있습니다. 따라서 고유한 이름을 지정할 필요가 없습니다. Python 규칙에 따라 **.venv** 이름을 사용하는 것이 좋습니다. 프로젝트 디렉터리에 설치하면 pipenv와 같은 일부 도구에도 기본적으로 이 이름이 설정됩니다. **.env**는 환경 변수 정의 파일과 충돌하므로 사용하지 않으려고 합니다. 일반적으로 디렉터리가 있음을 지속적으로 알려주는 `ls`가 필요하지 않으므로 점으로 구분되지 않는 이름을 사용하지 않는 것이 좋습니다. 또한 **.venv**를 .gitignore 파일에 추가하는 것이 좋습니다. ([GitHub의 Python용 기본 gitignore 템플릿](https://github.com/github/gitignore/blob/50e42aa1064d004a5c99eaa72a2d8054a0d8de55/Python.gitignore#L99-L106)을 참조하세요.) VS Code의 가상 환경 작업에 대한 자세한 내용은 [VS Code에서 Python 환경 사용](https://code.visualstudio.com/docs/python/environments)을 참조하세요.
 
 ## <a name="open-a-wsl---remote-window"></a>Remote - WSL 창 열기
 

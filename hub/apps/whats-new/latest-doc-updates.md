@@ -2,16 +2,16 @@
 Description: Windows 개발자 문서에 추가된 최신 내용을 살펴보세요.
 title: Windows 개발자 문서의 최신 업데이트
 ms.topic: article
-ms.date: 10/6/2020
+ms.date: 10/8/2020
 ms.localizationpriority: medium
 ms.author: quradic
 author: QuinnRadich
-ms.openlocfilehash: e646b8ddc524a9814defbe51e64e0da3bd3eccfc
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: 584709fe3b574d29f45da5bdd230862285e36bb6
+ms.sourcegitcommit: b78edb431541b40b86860c0b707449f44feced24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91762966"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91870991"
 ---
 # <a name="latest-updates-to-the-windows-developer-docs"></a>Windows 개발자 문서의 최신 업데이트
 
@@ -27,12 +27,46 @@ Windows 개발자 문서는 정기적으로 개선된 최신 정보와 콘텐츠
 
 이번 달의 주요 내용은 다음과 같습니다.
 
-* [Surface Duo 설명서](https://docs.microsoft.com/dual-screen/introduction)가 업데이트되었습니다.
+* 업데이트된 설명서:
 
-* [Windows 터미널 설명서](/windows/terminal/)가 업데이트되었습니다.
+    * [Surface Duo 설명서](https://docs.microsoft.com/dual-screen/introduction)가 업데이트되었습니다.
 
+    * [Windows 터미널](/windows/terminal/) 설명서가 업데이트되었습니다([Docker](/windows/dev-environment/docker/overview) 관련 정보 포함).
 
-지난 달에 최근 중요 업데이트가 확인된 항목 중 일부는 다음과 같습니다.
+    * 사용 가능한 최신 NuGet 패키지 및 다양한 버전의 WinUI를 사용하는 4개의 [XAML Islands 연습](/windows/apps/desktop/modernize/xaml-islands)이 모두 업데이트되었습니다.
+
+    * [데스크톱 앱에서 Windows 런타임 API 호출](/windows/apps/desktop/modernize/desktop-to-uwp-enhance): .NET 5에 대한 새 대상 프레임워크 모니커 옵션을 사용하는 방법 및 다양한 .NET 버전을 여러 대상으로 지정하는 방법에 대한 지침이 추가되고, 다양한 라이브러리를 수동으로 참조하는 방법에 대한 기존 지침이 제거되었습니다.
+
+    * [라디오 단추](/windows/uwp/design/controls-and-patterns/radio-button)
+
+    * [WinUI RadioButtons](https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.radiobuttons?view=winui-2.4)
+
+    * [CommandBar](https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar?view=winrt-19041)
+
+    * [컴퍼지션 시각적 계층](/windows/uwp/composition/composition-visual-tree)
+
+    * [DirectML FAQ](/windows/win32/direct3d12/gpu-faq)
+
+    * [확장 SDK를 사용한 프로그래밍](https://docs.microsoft.com/uwp/extension-sdks/device-families-overview)
+
+    * [IIterator<T>.GetMany(T[]) 메서드](https://docs.microsoft.com/uwp/api/windows.foundation.collections.iiterator-1.getmany?view=winrt-19041)
+
+    * [D3D12_HEAP_PROPERTIES 구조체(d3d12.h)](/windows/win32/api/d3d12/ns-d3d12-d3d12_heap_properties)
+
+* 새 항목 
+
+    * [패키지된 앱에 대한 활성화 정보 가져오기](/windows/apps/desktop/modernize/get-activation-info-for-packaged-apps)
+    * [ID3D12Device7 인터페이스(d3d12.h)](/windows/win32/api/d3d12/nn-d3d12-id3d12device7)
+    * [ID3D12Device8 인터페이스(d3d12.h)](/windows/win32/api/d3d12/nn-d3d12-id3d12device8)
+    
+
+* 새로운 샘플
+
+    * C++/WinRT: [WNS 개요](/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview) 
+    * C++/WinRT: [원격 카메라](/windows/uwp/audio-video-camera/connect-to-remote-cameras) 
+
+지난 달에 중요한 업데이트를 확인한 API 참조 항목은 다음과 같습니다.
+
 
 ## <a name="windows-uwp"></a>Windows UWP
 <ul>

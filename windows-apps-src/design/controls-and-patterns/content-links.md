@@ -10,16 +10,19 @@ pm-contact: miguelrb
 design-contact: ''
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a35e065a44eb55b84f6b70f5833c8652188a8c9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 867ece1f3517b2b34836dc87ab4e6545ba3d3bbc
+ms.sourcegitcommit: 837ef4b2c2375d023ee85204f72a029f9ec8f4ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174647"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92079288"
 ---
 # <a name="content-links-in-text-controls"></a>텍스트 컨트롤의 콘텐츠 링크
 
 콘텐츠 링크는 텍스트 컨트롤에 풍부한 데이터를 포함시킬 수 있는 방법을 제공하기 때문에 사용자는 앱의 컨텍스트를 벗어나지 않고도 사람이나 장소에 대해 더 많은 정보를 찾아서 활용할 수 있습니다.
+
+> [!IMPORTANT]
+> 콘텐츠 링크를 사용하도록 설정하는 Windows 기능은 Windows 10 버전 1903 이후 버전에서 사용할 수 없습니다. XAML 텍스트 컨트롤에 대한 콘텐츠 링크는 버전 1903 이후의 Windows 버전에서 작동하지 않습니다.
 
 사용자가 RichEditBox에서 애트(@) 기호를 접두사로 항목 앞에 붙이면 해당 항목과 일치하는 사람 및/또는 장소 목록이 표시됩니다. 그런 다음, 예를 들어 사용자가 장소를 선택하면 해당 장소에 대한 ContentLink가 텍스트에 삽입됩니다. 사용자가 RichEditBox에서 콘텐츠 링크를 호출하면 지도 및 이 장소에 대한 추가 정보와 함께 플라이아웃이 표시됩니다.
 

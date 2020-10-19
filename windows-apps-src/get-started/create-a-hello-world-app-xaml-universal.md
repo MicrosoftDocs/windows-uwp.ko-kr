@@ -6,12 +6,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, Hello world
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b39efb7aa90499f6d238306ad079f1969907f46
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: dda1c0f9a7b61c13965ff2f71c8100a8e771bd7d
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175257"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860072"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>"Hello, World!" 앱(XAML) 만들기
 
@@ -61,11 +61,11 @@ ms.locfileid: "89175257"
 
 5.  대상 버전/최소 버전 대화 상자가 나타납니다. 이 자습서에는 기본 설정이면 충분하므로 **확인**을 선택하여 프로젝트를 만듭니다.
 
-    ![솔루션 탐색기 창](images/win10-cs-02.png)
+    ![새 유니버설 Windows 프로젝트 대화 상자의 스크린샷](images/win10-cs-02.png)
 
 6.  새 프로젝트가 열리면 해당 파일이 오른쪽의 **솔루션 탐색기** 창에 표시됩니다. 파일을 보려면 **속성** 탭 대신 **솔루션 탐색기** 탭을 선택해야 할 수 있습니다.
 
-    ![솔루션 탐색기 창](images/win10-cs-03.png)
+    ![Hello World(유니버설 Windows)가 강조 표시된 솔루션 탐색기 창의 스크린샷](images/win10-cs-03.png)
 
 **새 앱**(유니버설 Window)은 최소한의 템플릿이지만 많은 파일이 포함되어 있습니다. 이러한 파일은 C#을 사용하는 모든 UWP 앱에 필수적입니다. Visual Studio에서 만든 모든 프로젝트에는 해당 파일이 포함됩니다.
 
@@ -110,15 +110,15 @@ ms.locfileid: "89175257"
 
     화면 맨 윗부분에 그래픽 보기가 있고 아래에 XAML 코드 보기가 있습니다. 둘 중 하나를 변경할 수 있지만 현재는 그래픽 보기를 사용하겠습니다.
 
-    ![솔루션 탐색기 창](images/win10-cs-04.png)
+    ![기본 페이지 XAML 디자인 뷰를 보여주는 Visual Studio의 스크린샷](images/win10-cs-04.png)
 
 2.  왼쪽의 세로 **도구 상자** 탭을 클릭하여 UI 컨트롤 목록을 엽니다. (제목 표시줄의 고정 아이콘을 클릭하면 표시된 상태가 유지됩니다.)
 
-    ![솔루션 탐색기 창](images/win10-cs-05.png)
+    ![고정 아이콘을 가리키는 빨간색 화살표가 있는 도구 상자 창의 스크린샷](images/win10-cs-05.png)
 
 3.  **공용 XAML 컨트롤**을 확장하고 **단추**를 디자인 캔버스의 중앙으로 끌어옵니다.
 
-    ![솔루션 탐색기 창](images/win10-cs-06.png)
+    ![도구 상자 창에서 강조 표시된 단추 옵션 및 디자인 뷰의 단추를 보여주는 도구 상자 창 및 기본 페이지 XAML 디자인 뷰의 스크린샷](images/win10-cs-06.png)
 
     XAML 코드 창을 보면 여기에도 단추가 추가된 것을 볼 수 있습니다.
 
@@ -136,7 +136,7 @@ ms.locfileid: "89175257"
 
 디자인 캔버스에 표시된 단추가 새 텍스트를 표시하기 위해 어떻게 업데이트되는지 확인합니다.
 
-![솔루션 탐색기 창](images/win10-cs-07.png)
+![주변에 빨간색 상자가 있는 Hello, world 단추 및 단추에 숨겨져 있는 코드의 스크린샷](images/win10-cs-07.png)
 
 ## <a name="step-3-start-the-app"></a>3단계: 앱 시작
 

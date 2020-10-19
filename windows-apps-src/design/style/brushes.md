@@ -6,12 +6,12 @@ ms.date: 04/28/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e70c76f3ed659a46dd9834442049849dd3b7761
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1bf42e75ed8bb6d22fe8d4829aa6df32fa130230
+ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175527"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91860045"
 ---
 # <a name="using-brushes-to-paint-backgrounds-foregrounds-and-outlines"></a>브러시를 사용하여 배경, 전경 및 윤곽선 그리기
 
@@ -106,7 +106,7 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](/uwp/api/Windows.UI.Xam
 
 그라데이션 중지점 사이에 있는 각 점의 색은 두 개의 경계 그라데이션 중지점에 지정된 색의 조합으로 선형으로 보간됩니다. 다음 이미지에서는 이전 예제의 그라데이션 중지점을 강조 표시하고 있습니다. 원은 그라데이션 중지점의 위치를 나타내고 점선은 그라데이션 축을 나타냅니다.
 
-![그라데이션 중지점](images/linear-gradients-stops.png)
+![다이어그램의 왼쪽 위 모서리에서 시작하여 다이어그램의 오른쪽 아래 모서리에 도달할 때까지 오른쪽 아래로 기울어지면서 1~4의 그라데이션 중지점을 보여주는 다이어그램입니다.](images/linear-gradients-stops.png)
 
 *두 경계 그라데이션 중지점에서 지정된 색의 조합*
 
@@ -160,7 +160,7 @@ XAML 대신 코드를 사용하여 [**SolidColorBrush**](/uwp/api/Windows.UI.Xam
 
 그라데이션 중지점 사이에 있는 각 점의 색은 두 경계 그라데이션 중지점으로 지정된 색의 조합으로 방사형으로 보간됩니다. 다음 이미지에서는 이전 예제의 그라데이션 중지점을 강조 표시하고 있습니다. 
 
-![그라데이션 중지점](images/radial-gradient.png)
+![방사형 그라데이션의 스크린샷입니다.](images/radial-gradient.png)
 
 *그라데이션 중지점*
 

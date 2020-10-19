@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 32054a30e56102b9c0642392d78ac75b78fb99e9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 7f0e1d460ca52c659401bbb291deafa5746b7bb6
+ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158227"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933114"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -73,12 +73,12 @@ steps:
 1. Azure Pipelines의 탐색 창에서 **파이프라인**을 펼치고 **라이브러리**를 클릭합니다.
 2. **보안 파일** 탭을 클릭한 다음, **+ 보안 파일**을 클릭합니다.
 
-    ![보안 파일을 업로드하는 방법](images/secure-file1.png)
+    ![보안 파일 페이지를 표시하는 라이브러리 옵션이 강조 표시된 Azure의 스크린샷](images/secure-file1.png)
 
 3. 인증서 파일을 찾아서 **확인**을 클릭합니다.
 4. 인증서가 업로드되면 이를 선택하여 해당 속성을 확인합니다. **파이프라인 권한** 아래에서 **모든 파이프라인에서 사용하도록 권한 부여** 설정/해제를 사용하도록 설정합니다.
 
-    ![보안 파일을 업로드하는 방법](images/secure-file2.png)
+    ![모든 파이프라인에서 사용할 수 있는 권한 부여 옵션이 선택된 파이프라인 권한 섹션의 스크린샷](images/secure-file2.png)
 
 5. 인증서의 프라이빗 키에 암호가 있는 경우 해당 암호를 [Azure Key Vault](/azure/key-vault/about-keys-secrets-and-certificates)에 저장한 다음, [변수 그룹](/azure/devops/pipelines/library/variable-groups)에 연결하는 것이 좋습니다. 그러면 이 변수를 사용하여 파이프라인에서 암호에 액세스할 수 있습니다. 암호는 프라이빗 키에 대해서만 지원되므로 자체적으로 암호로 보호된 인증서 파일을 사용하는 것은 현재 지원되지 않습니다.
 
