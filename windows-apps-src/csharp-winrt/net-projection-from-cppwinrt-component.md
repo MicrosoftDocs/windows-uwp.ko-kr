@@ -5,12 +5,12 @@ ms.date: 10/12/2020
 ms.topic: article
 keywords: 'windows 10, c #, winrt, cswinrt, 프로젝션'
 ms.localizationpriority: medium
-ms.openlocfilehash: bc5c8e39b808fd1a8bc557fd29ba828d33d8dde4
-ms.sourcegitcommit: df4d99f9950655be725afa83f1ee7c3b73dff923
+ms.openlocfilehash: 3116e176c8f156939f075e0a23d1be2352a8ecde
+ms.sourcegitcommit: 861c381a31e4a5fd75f94ca19952b2baaa2b72df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92001386"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92171142"
 ---
 # <a name="walkthrough-generate-a-net-5-projection-from-a-cwinrt-component-and-distribute-the-nuget"></a>연습: c + +/WinRT 구성 요소에서 .NET 5 프로젝션을 생성 하 고 NuGet 배포
 
@@ -128,7 +128,16 @@ C + +/WinRT 구성 요소를 만들고 winmd 파일을 생성 하는 방법에 �
     - `CsWinRTIncludes`속성은 프로젝트에 사용할 네임 스페이스를 지정 합니다.
     - `CsWinRTGeneratedFilesDir`속성은 프로젝션에서 파일이 생성 되는 출력 디렉터리를 설정 합니다 .이 디렉터리는 원본에서 빌드할 때 다음 섹션에서 설정 합니다.
 
-4. **SimpleMathProjection** 파일을 저장 하 고 닫습니다.
+4. 이 연습에서 최신 c #/Winrt 버전은 Windows 메타 데이터를 지정 해야 할 수 있습니다. 이는 c #/Winrt. 이후 릴리스에서 수정 될 예정입니다. 다음 중 하나를 사용 하 여 제공할 수 있습니다.
+
+    - 패키지 참조 (예: Microsoft. [w i n k.]( https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts/)
+    - 명시적 값은 속성을 사용 하 여를 설정 합니다 `CsWinRTWindowsMetadata` .
+
+      ```xml
+      <CsWinRTWindowsMetadata>10.0.19041.0</CsWinRTWindowsMetadata>
+      ```
+
+5. **SimpleMathProjection** 파일을 저장 하 고 닫습니다.
 
 ## <a name="build-projects-out-of-source"></a>소스에서 프로젝트 빌드
 
