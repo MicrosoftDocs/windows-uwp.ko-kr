@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: e7d008a6956c3acd22dcb99e6bf4e1cda1442545
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 5696d3c5ffb28ee8dc6ebd51e678894ee78ae420
+ms.sourcegitcommit: e39b569626804d2ce4246353ac2c03a916dc9737
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750169"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192983"
 ---
 # <a name="debug-a-background-task"></a>백그라운드 작업 디버그
 
@@ -104,7 +104,7 @@ Visual Studio를 사용 하 여 백그라운드 작업을 사용 하는 응용 �
 -   백그라운드 작업에 잠금 화면 액세스가 필요한 경우 백그라운드 작업을 디버깅 하기 전에 잠금 화면에 앱을 배치 해야 합니다. 화면 지원 앱 잠금에 대 한 매니페스트 옵션 지정에 대 한 정보는 [응용 프로그램 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)을 참조 하세요.
 -   등록 시 백그라운드 작업 등록 매개 변수의 유효성이 검사 됩니다. 등록 매개 변수가 잘못 된 경우 오류가 반환 됩니다. 앱이 백그라운드 작업 등록에 실패 하는 시나리오를 정상적으로 처리 하는지 확인 합니다. 대신 앱이 작업 등록을 시도한 후 유효한 등록 개체가 있는 경우 충돌이 발생할 수 있습니다.
 
-VS를 사용 하 여 백그라운드 작업을 디버깅 하는 방법에 대 한 자세한 내용은 [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법](/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015)을 참조 하세요.
+VS를 사용 하 여 백그라운드 작업을 디버깅 하는 방법에 대 한 자세한 내용은 [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법](/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio)을 참조 하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -113,7 +113,7 @@ VS를 사용 하 여 백그라운드 작업을 디버깅 하는 방법에 대 �
 * [백그라운드 작업 등록](register-a-background-task.md)
 * [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [백그라운드 작업 지침](guidelines-for-background-tasks.md)
-* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법](/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015)
+* [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법](/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio)
 * [Visual Studio code 분석을 사용 하 여 UWP 앱의 코드 품질 분석](/visualstudio/test/analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis?view=vs-2015)
 
  

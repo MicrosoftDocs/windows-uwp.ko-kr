@@ -11,12 +11,12 @@ dev_langs:
 - vb
 - cppwinrt
 - cpp
-ms.openlocfilehash: 792712256e36b40cd376f0e378bb110ab33bc0fb
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c4e61cb04aaefdc0aeef05ce0c61ca549019791b
+ms.sourcegitcommit: e39b569626804d2ce4246353ac2c03a916dc9737
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173737"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192963"
 ---
 # <a name="xaml-overview"></a>XAML 개요
 
@@ -147,7 +147,7 @@ XAML은 개체 및 해당 속성에 대 한 선언적 언어 이지만 태그의
 <Button Click="showUpdatesButton_Click">Show updates</Button>
 ```
 
-컴파일하는 경우 컴파일러는 이제 `showUpdatesButton_Click` XAML 페이지의 [x:Class](x-class-attribute.md) 값에 선언 된 네임 스페이스의 코드 파일에 정의 된 라는 메서드를 사용할 것으로 예상 합니다. 또한 해당 메서드는 이벤트에 대 한 대리자 계약을 충족 해야 합니다 <xref:Windows.UI.Xaml.Controls.Primitives.ButtonBase.Click> . 예:
+컴파일하는 경우 컴파일러는 이제 `showUpdatesButton_Click` XAML 페이지의 [x:Class](x-class-attribute.md) 값에 선언 된 네임 스페이스의 코드 파일에 정의 된 라는 메서드를 사용할 것으로 예상 합니다. 또한 해당 메서드는 이벤트에 대 한 대리자 계약을 충족 해야 합니다 <xref:Windows.UI.Xaml.Controls.Primitives.ButtonBase.Click> . 예를 들면 다음과 같습니다.
 
 ```csharp
 namespace App1
@@ -256,4 +256,4 @@ XAML은 일반적으로 Visual Studio와 같은 IDE 내에서, 그리고 XAML �
 > [!NOTE]
 > 코드에 c + +/CX를 사용 하는 앱은 특정 [**Xamlparseexception**](/dotnet/api/Windows.UI.Xaml.markup.xamlparseexception?view=dotnet-uwp-10.0)을 얻지 못합니다. 그러나 예외의 메시지는 오류의 원인이 XAML 관련 임을 명확 하 게 하 고 XAML 파일의 줄 번호와 같은 컨텍스트 정보를 XAML 파일에 포함 하는 것을 명확 **하 게 합니다** .
 
-Windows 런타임 앱 디버깅에 대 한 자세한 정보는 [디버그 세션 시작](/visualstudio/debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml?view=vs-2015)을 참조 하세요.
+Windows 런타임 앱을 디버깅 하는 방법에 대 한 자세한 내용은 [디버그 세션 시작](/visualstudio/debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml)을 참조 하세요.

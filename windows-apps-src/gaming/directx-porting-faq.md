@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 게임, directx 11
 ms.localizationpriority: medium
-ms.openlocfilehash: 81fc8e9cd762c5fc0bb602e32907c40ca5c60e46
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bc6e1c2053b6ab3afe6eb42ed8b5223feb8ffb65
+ms.sourcegitcommit: e39b569626804d2ce4246353ac2c03a916dc9737
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163137"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192993"
 ---
 # <a name="directx-11-porting-faq"></a>DirectX 11 포팅 FAQ
 
@@ -54,7 +54,7 @@ Walbourn의 문서 시리즈는 [게임에 대 한 이중 사용 코딩 기술](
 
 이미지를 로드 하는 데는 두 가지 API 경로가 있습니다.
 
--   콘텐츠 파이프라인은 이미지를 Direct3D 텍스처 리소스로 사용 되는 DDS 파일로 변환 합니다. [게임 또는 앱에서 3 차원 자산 사용](/visualstudio/designers/using-3-d-assets-in-your-game-or-app?view=vs-2015)을 참조 하세요.
+-   콘텐츠 파이프라인은 이미지를 Direct3D 텍스처 리소스로 사용 되는 DDS 파일로 변환 합니다. [게임 또는 앱에서 3 차원 자산 사용](/visualstudio/designers/using-3-d-assets-in-your-game-or-app)을 참조 하세요.
 -   [Windows 이미징 구성 요소](/windows/desktop/wic/-wic-lh) 는 다양 한 형식에서 이미지를 로드 하는 데 사용할 수 있으며, Direct2D 비트맵 및 Direct3D 텍스처 리소스에도 사용할 수 있습니다.
 
 [DirectXTK](https://github.com/Microsoft/DirectXTK) 또는 [DirectXTex](https://github.com/Microsoft/DirectXTex)에서 DDSTextureLoader 및 WICTextureLoader를 사용할 수도 있습니다.
@@ -116,12 +116,12 @@ DirectX 10. x 및 11 데스크톱 게임은 UWP로 쉽게 이식할 수 있습�
 ## <a name="what-should-i-use-instead-of-the-x-file-format-for-my-models"></a>모델에 대 한 .x 파일 형식 대신 어떤 항목을 사용 해야 하나요?
 
 
-.X 파일 형식에 대 한 공식적인 대체가 없지만 대부분의 샘플에서는 SDKMesh 형식을 활용 합니다. Visual Studio에는 Visual Studio 3D 시작 키트의 코드를 사용 하 여 로드 하거나 [DirectXTK](https://github.com/Microsoft/DirectXTK)를 사용 하 여 로드할 수 있는 여러 가지 인기 형식을 CMO 파일로 컴파일하는 [콘텐츠 파이프라인](/visualstudio/designers/using-3-d-assets-in-your-game-or-app?view=vs-2015) 도 있습니다.
+.X 파일 형식에 대 한 공식적인 대체가 없지만 대부분의 샘플에서는 SDKMesh 형식을 활용 합니다. Visual Studio에는 Visual Studio 3D 시작 키트의 코드를 사용 하 여 로드 하거나 [DirectXTK](https://github.com/Microsoft/DirectXTK)를 사용 하 여 로드할 수 있는 여러 가지 인기 형식을 CMO 파일로 컴파일하는 [콘텐츠 파이프라인](/visualstudio/designers/using-3-d-assets-in-your-game-or-app) 도 있습니다.
 
 ## <a name="how-do-i-debug-my-shaders"></a>셰이더를 디버깅할 어떻게 할까요? 있나요?
 
 
-Microsoft Visual Studio 2015에는 DirectX 그래픽용 진단 도구가 포함 되어 있습니다. [DirectX 그래픽 디버그](/visualstudio/debugger/visual-studio-graphics-diagnostics?view=vs-2015)를 참조 하세요.
+Microsoft Visual Studio에는 DirectX 그래픽용 진단 도구가 포함 되어 있습니다. [DirectX 그래픽 디버그](/visualstudio/debugger/visual-studio-graphics-diagnostics)를 참조 하세요.
 
 ##  <a name="what-is-the-direct3d-11-equivalent-for-x-function"></a>*X* 함수에 해당 하는 Direct3D 11은 무엇 인가요?
 

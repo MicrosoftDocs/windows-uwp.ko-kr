@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2965eb3196f2a19f7d5351ee422013c6c22ba88a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 288795b2dc189dae7b350a30446410b40044d08f
+ms.sourcegitcommit: e39b569626804d2ce4246353ac2c03a916dc9737
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174307"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192953"
 ---
 # <a name="windows-runtime-components-with-ccx"></a>C++/CX가 포함된 Windows 런타임 구성 요소
 
@@ -24,7 +24,7 @@ C + +에서 Windows 런타임 구성 요소를 빌드하는 데는 몇 가지 �
 - 복잡하거나 많은 계산이 필요한 작업에서 C++의 성능 이점을 얻을 수 있습니다.
 - 이미 작성되고 테스트된 코드를 다시 사용할 수 있습니다.
 
-JavaScript 또는 .NET 프로젝트와 Windows 런타임 구성 요소 프로젝트가 포함된 솔루션을 빌드할 때, JavaScript 프로젝트 파일 및 컴파일된 DLL이 하나의 패키지로 병합되어 시뮬레이터에서 로컬로 또는 테더링된 디바이스에서 원격으로 디버그할 수 있습니다. 또한 구성 요소 프로젝트만 확장 SDK로 배포할 수 있습니다. 자세한 내용은 [소프트웨어 개발 키트 만들기](/visualstudio/extensibility/creating-a-software-development-kit?view=vs-2015)를 참조하세요.
+JavaScript 또는 .NET 프로젝트와 Windows 런타임 구성 요소 프로젝트가 포함된 솔루션을 빌드할 때, JavaScript 프로젝트 파일 및 컴파일된 DLL이 하나의 패키지로 병합되어 시뮬레이터에서 로컬로 또는 테더링된 디바이스에서 원격으로 디버그할 수 있습니다. 또한 구성 요소 프로젝트만 확장 SDK로 배포할 수 있습니다. 자세한 내용은 [소프트웨어 개발 키트 만들기](/visualstudio/extensibility/creating-a-software-development-kit)를 참조하세요.
 
 일반적으로 c + +/CX 구성 요소를 코딩할 때 다른 winmd 패키지의 코드에서 데이터를 전달 하는 ABI (추상 이진 인터페이스) 경계를 제외 하 고 일반 c + + 라이브러리 및 기본 제공 형식을 사용 합니다. 여기에는 Windows 런타임 형식 및 c + +/CX에서 이러한 형식을 만들고 조작 하는 데 지원 되는 특수 구문이 사용 됩니다. 또한 c + +/CX 코드에서 대리자 및 이벤트와 같은 형식을 사용 하 여 구성 요소에서 발생 하 고 JavaScript, Visual Basic, c + + 또는 c #에서 처리 될 수 있는 이벤트를 구현 합니다. C + +/CX 구문에 대 한 자세한 내용은 [Visual C++ 언어 참조 (c + +/cx)](/cpp/cppcx/visual-c-language-reference-c-cx)를 참조 하세요.
 
@@ -185,7 +185,7 @@ public:
 };
 ```
 
-그러나 다음의 차이는 구분할 수 없습니다.
+하지만 다음과 같은 차이점을 알 수는 없습니다.
 
 ```cpp
 int GetNumber(int i);

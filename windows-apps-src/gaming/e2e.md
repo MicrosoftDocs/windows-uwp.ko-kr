@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: f90e0e87119bbc3bd5d2c313c18b2c940e205469
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: c6cae9e2416eb992815f098649d6b02ee472da14
+ms.sourcegitcommit: e39b569626804d2ce4246353ac2c03a916dc9737
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220366"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192973"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows 10 게임 개발 가이드
 
@@ -96,12 +96,12 @@ Windows 또는 Xbox에서 게임을 개발 하는 데 익숙하지 않은 경우
     <tr>
         <td>믹서 대화형 설명서</td>
         <td><a href="https://dev.mixer.com/reference/interactive/index.html">게임에 대화형 작업 추가</a></td>
-    </tr>        
+    </tr>
 </table>
 
 ### <a name="partner-center"></a>파트너 센터
 
-[파트너 센터에서 개발자 계정을 등록](https://developer.microsoft.com/store/register) 하는 것은 Windows 게임을 게시 하기 위한 첫 번째 단계입니다. 개발자 계정을 사용 하 여 게임 이름을 예약 하 고 모든 Windows 장치에 대해 무료 또는 유료 게임을 Microsoft Store에 제출할 수 있습니다. 개발자 계정을 사용 하 여 게임 및 게임 중인 제품을 관리 하 고, 자세한 분석을 얻고, 전 세계의 플레이어에 게 뛰어난 환경을 만드는 서비스를 사용할 수 있습니다. 
+[파트너 센터에서 개발자 계정을 등록](https://developer.microsoft.com/store/register) 하는 것은 Windows 게임을 게시 하기 위한 첫 번째 단계입니다. 개발자 계정을 사용 하 여 게임 이름을 예약 하 고 모든 Windows 장치에 대해 무료 또는 유료 게임을 Microsoft Store에 제출할 수 있습니다. 개발자 계정을 사용 하 여 게임 및 게임 중인 제품을 관리 하 고, 자세한 분석을 얻고, 전 세계의 플레이어에 게 뛰어난 환경을 만드는 서비스를 사용할 수 있습니다.
 
 Microsoft는 Windows 게임을 개발 하 고 게시 하는 데 도움이 되는 몇 가지 개발자 프로그램도 제공 합니다. 파트너 센터 계정에 등록 하기 전에 권한이 있는지 확인 하는 것이 좋습니다. 자세한 내용은 [개발자 프로그램](#developer-programs) (영문)을 참조 하세요.
 
@@ -226,7 +226,7 @@ Windows 10 게임 기능을 이해 하 고 게임 개발을 신속 하 게 시�
     <tr>
         <td>MonoGame 2D UWP game 샘플</td>
         <td><a href="../get-started/get-started-tutorial-game-mg2d.md">MonoGame 2D로 UWP 게임 만들기</a></td>
-    </tr>      
+    </tr>
 </table>
 
 ### <a name="developer-forums"></a>개발자 포럼
@@ -462,8 +462,8 @@ HTML (하이퍼텍스트 태그 언어)은 웹 페이지, 앱 및 리치 클라�
         <td><a href="https://www.w3.org/TR/html5/">HTML5</a></td>
     </tr>
 </table>
- 
-#### 프레젠테이션 기술 결합
+
+#### <a name="combining-presentation-technologies"></a>프레젠테이션 기술 결합
 
 Microsoft의 DXGI (DirectX Graphics Infrastructure)는 여러 그래픽 기술 간의 상호 운용성과 호환성을 제공 합니다. 고성능 그래픽의 경우 XAML과 DirectX를 결합 하 고, 메뉴 및 기타 간단한 UI에 대해 XAML을 사용 하 고, 복잡 한 2D 및 3D 장면을 렌더링 하기 위한 DirectX를 사용할 수 있습니다. 또한 DXGI는 Direct2D, Direct3D, DirectWrite, DirectCompute 및 Microsoft 미디어 파운데이션 간 호환성을 제공 합니다.
 
@@ -481,8 +481,8 @@ Microsoft의 DXGI (DirectX Graphics Infrastructure)는 여러 그래픽 기술 �
         <td><a href="directx-and-xaml-interop.md">DirectX 및 XAML interop</a></td>
     </tr>
 </table>
- 
-#### C++
+
+#### <a name="c"></a>C++
 
 C + +/CX는 속도, 호환성 및 플랫폼 액세스를 강력 하 게 조합 하 여 제공 하는 고성능의 낮은 오버 헤드 언어입니다. C + +/CX를 사용 하면 DirectX 및 Xbox Live를 비롯 하 여 Windows 10의 우수한 게임 기능을 쉽게 사용할 수 있습니다. 기존 c + + 코드 및 라이브러리를 다시 사용할 수도 있습니다. C + +/CX는 가비지 수집의 오버 헤드를 초래 하지 않는 빠른 네이티브 코드를 만들기 때문에 게임을 통해 성능이 향상 되 고 전원 소비가 감소 하 여 배터리 수명이 길어질 수 있습니다. DirectX 또는 XAML을 사용 하는 c + +/CX를 사용 하거나 둘의 조합을 사용 하는 게임을 만듭니다.
 
@@ -500,10 +500,10 @@ C + +/CX는 속도, 호환성 및 플랫폼 액세스를 강력 하 게 조합 �
         <td><a href="/cpp/visual-cpp-in-visual-studio">Visual Studio 2019의 Visual C++</a></td>
     </tr>
 </table>
- 
-#### C#
 
-C # ("C 샵"으로 발음)은 간단 하 고, 강력 하며, 형식이 안전 하 고, 개체 지향적인 현대적인 혁신적인 언어입니다. C #을 사용 하면 C 스타일 언어의 친숙 한 표현을 유지 하면서 신속 하 게 개발할 수 있습니다. 쉽게 사용할 수 있지만 c #에는 다형성, 대리자, 람다, 클로저, 반복기 메서드, 공 분산 및 LINQ (통합 언어 쿼리) 식과 같은 다양 한 고급 언어 기능이 있습니다. C #은 XAML을 대상으로 하는 경우 빠른 시작을 시작 하거나 이전 c # 환경을 제공 하려는 경우에 매우 적합 합니다. C #은 주로 XAML과 함께 사용 되므로 DirectX를 사용 하려면 대신 c + +를 선택 하거나 DirectX와 상호 작용 하는 c + + 구성 요소로 게임의 일부를 작성 합니다. 또는 c # 및 c + +에 대 한 직접 모드 Direct2D 그래픽 라이브러리인 [Win2D](https://github.com/Microsoft/Win2D)을 고려 합니다.
+#### <a name="c"></a>C#
+
+C # ("C 샵"으로 발음)은 간단 하 고, 강력 하며, 형식이 안전 하 고, 개체 지향적인 현대적인 혁신적인 언어입니다. C #을 사용 하면 C 스타일 언어의 친숙 한 표현을 유지 하면서 신속 하 게 개발할 수 있습니다. 쉽게 사용할 수 있지만 c #에는 다형성, 대리자, 람다, 클로저, 반복기 메서드, 공분산 및 LINQ (Language-Integrated Query) 식과 같은 다양 한 고급 언어 기능이 있습니다. C #은 XAML을 대상으로 하는 경우 빠른 시작을 시작 하거나 이전 c # 환경을 제공 하려는 경우에 매우 적합 합니다. C #은 주로 XAML과 함께 사용 되므로 DirectX를 사용 하려면 대신 c + +를 선택 하거나 DirectX와 상호 작용 하는 c + + 구성 요소로 게임의 일부를 작성 합니다. 또는 c # 및 c + +에 대 한 직접 모드 Direct2D 그래픽 라이브러리인 [Win2D](https://github.com/Microsoft/Win2D)을 고려 합니다.
 
 <table>
     <colgroup>
@@ -515,8 +515,8 @@ C # ("C 샵"으로 발음)은 간단 하 고, 강력 하며, 형식이 안전 �
         <td><a href="/dotnet/articles/csharp/csharp">C # 언어 참조</a></td>
     </tr>
 </table>
- 
-#### JavaScript
+
+#### <a name="javascript"></a>JavaScript
 
 JavaScript는 최신 웹 및 리치 클라이언트 응용 프로그램에 널리 사용 되는 동적 스크립팅 언어입니다.
 
@@ -644,8 +644,8 @@ Direct3D 11.3은 친숙 한 Direct3D 프로그래밍 모델 및 핸들을 사용
         <td><a href="https://community.playfab.com/index.html">PlayFab 포럼</a></td>
     </tr>
 </table>
- 
-#### Unity
+
+#### <a name="unity"></a>Unity
 
 Unity는 멋진 및 매력적인 2D, 3D, VR 및 AR 게임과 앱을 만들기 위한 플랫폼을 제공 합니다. 이를 통해 독창적인 비전을 신속 하 게 실현 하 고 콘텐츠를 거의 모든 미디어 나 장치에 제공할 수 있습니다.
 
@@ -690,7 +690,7 @@ Unity 5.4부터 Unity는 Direct3D 12 개발을 지원 합니다.
     </tr>
     <tr>
         <td>.NET Api와 관련 된 누락 된 어셈블리 참조 문제 해결</td>
-        <td><a href="/windows/uwp/gaming/missing-dot-net-apis-in-unity-and-uwp">Unity 및 UWP에서 누락된 .NET API</a></td>
+        <td><a href="/windows/uwp/gaming/missing-dot-net-apis-in-unity-and-uwp">Unity 및 UWP에서 .NET Api 누락</a></td>
     </tr>
     <tr>
         <td>Unity 게임을 유니버설 Windows 플랫폼 앱으로 게시 (비디오)</td>
@@ -705,8 +705,8 @@ Unity 5.4부터 Unity는 Direct3D 12 개발을 지원 합니다.
         <td><a href="https://www.youtube.com/playlist?list=PLReL099Y5nRfseAg0k1SJOlpqdcsDs8Em">Visual Studio 2015에서 Unity 사용</a></td>
     </tr>
 </table>
- 
-#### Havok
+
+#### <a name="havok"></a>Havok
 
 Havok의 모듈식 도구 및 기술 제품군은 게임 작성자가 새로운 수준의 대화형 작업 및 집중 교육에 도달 하는 데 도움이 됩니다. Havok를 통해 매우 현실적인 물리학, 대화형 시뮬레이션 및 뛰어난 cinematics을 사용할 수 있습니다. 2015.1 이상 버전은 x86, 64 비트 및 ARM의 Visual Studio 2015에서 UWP를 공식적으로 지원 합니다.
 
@@ -728,8 +728,8 @@ Havok의 모듈식 도구 및 기술 제품군은 게임 작성자가 새로운 
         <td><a href="https://www.havok.com/">Havok</a></td>
     </tr>
 </table>
- 
-#### MonoGame
+
+#### <a name="monogame"></a>MonoGame
 
 MonoGame는 원래 Microsoft의 XNA Framework 4.0을 기반으로 하는 오픈 소스 플랫폼 간 게임 개발 프레임 워크입니다. Monogame는 현재 Windows, Windows Phone 및 Xbox 뿐만 아니라 Linux, macOS, iOS, Android 및 몇 가지 다른 플랫폼을 지원 합니다.
 
@@ -753,7 +753,7 @@ MonoGame는 원래 Microsoft의 XNA Framework 4.0을 기반으로 하는 오픈 
     <tr>
         <td>MonoGame 2D UWP game 샘플</td>
         <td><a href="../get-started/get-started-tutorial-game-mg2d.md">MonoGame 2D로 UWP 게임 만들기</a></td>
-    </tr>    
+    </tr>
 </table>
 
 #### <a name="cocos2d"></a>Cocos2d
@@ -826,7 +826,7 @@ BabylonJS는 HTML5, WebGL, WebVR 및 웹 오디오를 사용 하 여 3D 게임�
     <tr>
         <td>BabylonJS를 사용 하 여 플랫폼 간 WebGL 게임 빌드</td>
         <td><a href="https://www.smashingmagazine.com/2016/07/babylon-js-building-sponza-a-cross-platform-webgl-game/">BabylonJS를 사용 하 여 플랫폼 간 게임 개발</a></td>
-    </tr>    
+    </tr>
 </table>
 
 ### <a name="porting-your-game"></a>게임 포팅
@@ -908,8 +908,8 @@ Windows 10에는 Windows 10 장치에서 공통 API 플랫폼을 제공 하는 U
         <td><a href="/windows/uwp/get-started/universal-application-platform-guide">UWP 앱 가이드</a></td>
     </tr>
 </table>
- 
-### UWP 개발 시작 하기
+
+### <a name="getting-started-with-uwp-development"></a>UWP 개발 시작 하기
 
 유니버설 Windows 플랫폼 앱을 설정 하 고 개발 하도록 준비 하는 작업은 빠르고 간단 합니다. 다음 가이드에서는이 과정을 단계별로 안내 합니다.
 
@@ -996,8 +996,8 @@ Windows 데스크톱 게임을 UWP로 이동 하는 데 도움이 되는 몇 가
         <td><a href="/uwp/win32-and-com/alternatives-to-windows-apis-uwp">UWP (유니버설 Windows 플랫폼) 앱의 Windows Api에 대 한 대안</a></td>
     </tr>
 </table>
- 
-### 프로세스 수명 관리
+
+### <a name="process-lifetime-management"></a>프로세스 수명 관리
 
 프로세스 수명 관리 또는 앱 수명 주기는 유니버설 Windows 플랫폼 앱이 전환할 수 있는 다양 한 정품 인증 상태를 설명 합니다. 게임을 활성화, 일시 중단, 다시 시작 또는 종료할 수 있으며, 다양 한 방법으로 이러한 상태를 전환할 수 있습니다.
 
@@ -1012,11 +1012,11 @@ Windows 데스크톱 게임을 UWP로 이동 하는 데 도움이 되는 몇 가
     </tr>
     <tr>
         <td>Microsoft Visual Studio를 사용 하 여 앱 전환 트리거</td>
-        <td><a href="/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio?view=vs-2015">Visual Studio에서 UWP 앱에 대 한 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법</a></td>
+        <td><a href="/visualstudio/debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio">Visual Studio에서 UWP 앱에 대 한 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법</a></td>
     </tr>
 </table>
- 
-### 게임 UX 디자인
+
+### <a name="designing-game-ux"></a>게임 UX 디자인
 
 훌륭한 게임의 genesis 디자인에 대 한 것입니다.
 
@@ -1044,10 +1044,10 @@ UX 디자인과 별도로 수준 디자인, 속도, 전 세계 디자인 및 기
     <tr>
         <td>여러 장치 폼 팩터 대상 지정 (비디오)</td>
         <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2015/Designing-Games-for-a-Windows-Core-World">Windows Core 환경의 게임 디자인</a></td>
-    </tr>   
+    </tr>
 </table>
- 
-#### 색 안내선 및 색상표
+
+#### <a name="color-guideline-and-palette"></a>색 지침 및 색상표
 
 게임에서 일관 된 색 지침에 따라 미관를 개선 하 고, 탐색 기능을 지원 하며, 플레이어에 게 메뉴 및 HUD 기능을 알리는 강력한 도구입니다. 경고, 손상, XP, 성과 등의 게임 요소에 대 한 일관 된 색 지정은 클리너 UI를 발생 시킬 수 있으며 명시적 레이블의 필요성을 줄입니다.
 
@@ -1168,7 +1168,7 @@ DirectX 게임 개발에 대 한 가이드 및 참조입니다.
 
 #### <a name="learning-direct3d-12"></a>Direct3D 12 학습
 
-Direct3d 12에서 변경 된 내용과 Direct3D 12를 사용 하 여 프로그래밍을 시작 하는 방법을 알아봅니다. 
+Direct3d 12에서 변경 된 내용과 Direct3D 12를 사용 하 여 프로그래밍을 시작 하는 방법을 알아봅니다.
 
 <table>
     <colgroup>
@@ -1200,8 +1200,8 @@ Direct3d 12에서 변경 된 내용과 Direct3D 12를 사용 하 여 프로그�
         <td><a href="/windows/desktop/direct3d12/memory-management">Direct3D 12의 메모리 관리</a></td>
     </tr>
 </table>
- 
-#### DirectX 도구 키트 및 라이브러리
+
+#### <a name="directx-tool-kit-and-libraries"></a>DirectX 도구 키트 및 라이브러리
 
 Directx 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh geometry 처리 라이브러리, UVAtlas library 및 Directxmesh library는 DirectX 개발용 텍스처, 메시, 스프라이트 및 기타 유틸리티 기능 및 도우미 클래스를 제공 합니다. 이러한 라이브러리는 개발 시간과 노력을 절감 하는 데 도움이 됩니다.
 
@@ -1267,7 +1267,7 @@ Directx 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh geo
     </tr>
 </table>
 
-## <a name="production"></a>생산
+## <a name="production"></a>프로덕션
 
 이제 사용자의 스튜디오는 팀 전체에 걸쳐 분산 된 작업을 통해 완벽 하 게 참여 하 고 프로덕션 주기로 전환 됩니다. 개선 하 고,이를 활용 하 여 전체 게임으로 만들 수 있습니다.
 
@@ -1325,7 +1325,7 @@ Directx 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh geo
     </tr>
     <tr>
         <td>사용할 때 추가 기능</td>
-        <td><a href="/windows/uwp/monetize/enable-consumable-in-app-product-purchases">앱에서 바로 소모성 제품 구매 사용</a></td>
+        <td><a href="/windows/uwp/monetize/enable-consumable-in-app-product-purchases">앱 내 제품 구매 사용</a></td>
     </tr>
     <tr>
         <td>추가 정보 및 제출</td>
@@ -1336,12 +1336,12 @@ Directx 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh geo
         <td><a href="/windows/uwp/publish/iap-acquisitions-report">추가 기능 구입 보고서</a></td>
     </tr>
 </table>
- 
-### 디버깅, 성능 최적화 및 모니터링
+
+### <a name="debugging-performance-optimization-and-monitoring"></a>디버깅, 성능 최적화 및 모니터링
 
 성능을 최적화 하려면 Windows 10의 게임 모드를 활용 하 여 현재 하드웨어의 용량을 완전히 활용 하 여 최적의 게임 환경을 게이머에 게 제공할 수 있습니다.
 
-WPT (Windows 성능 도구 키트)는 Windows 운영 체제 및 응용 프로그램의 심층 성능 프로필을 생성 하는 성능 모니터링 도구로 구성 됩니다. 특히 메모리 사용을 모니터링 하 고 게임 성능을 향상 시키는 데 유용 합니다. Windows 성능 도구 키트는 Windows 10 SDK 및 Windows ADK에 포함 되어 있습니다. 이 도구 키트는 Windows 성능 레코더 (WPR)와 Windows 성능 분석기 (WPA)의 두 가지 독립 도구로 구성 됩니다. [Windows Sysinternals](/sysinternals/)의 일부인 PROCDUMP는 CPU 급증을 모니터링 하 고 게임 충돌 시 덤프 파일을 생성 하는 명령줄 유틸리티입니다. 
+WPT (Windows 성능 도구 키트)는 Windows 운영 체제 및 응용 프로그램의 심층 성능 프로필을 생성 하는 성능 모니터링 도구로 구성 됩니다. 특히 메모리 사용을 모니터링 하 고 게임 성능을 향상 시키는 데 유용 합니다. Windows 성능 도구 키트는 Windows 10 SDK 및 Windows ADK에 포함 되어 있습니다. 이 도구 키트는 Windows 성능 레코더 (WPR)와 Windows 성능 분석기 (WPA)의 두 가지 독립 도구로 구성 됩니다. [Windows Sysinternals](/sysinternals/)의 일부인 PROCDUMP는 CPU 급증을 모니터링 하 고 게임 충돌 시 덤프 파일을 생성 하는 명령줄 유틸리티입니다.
 
 <table>
     <colgroup>
@@ -1445,7 +1445,7 @@ HDR의 전체 색 기능을 사용 하는 게임 콘텐츠를 빌드합니다.
     <tr>
         <td>DirectX를 사용 하 여 고급 색 만들기 및 구성</td>
         <td><a href="https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/D2DAdvancedColorImages">Direct2D 고급 색 이미지 렌더링 샘플</a></td>
-    </tr>   
+    </tr>
 </table>
 
 ### <a name="globalization-and-localization"></a>전역화 및 지역화
@@ -1491,7 +1491,7 @@ Windows 플랫폼용 세계 시장 대응성 게임을 개발 하 고 Microsoft�
     <tr>
         <td>AAD (Azure Active Directory)를 사용 하 여 파트너 센터 계정에 사용자 추가</td>
         <td><a href="/windows/uwp/publish/manage-account-users">계정 사용자 관리</a></td>
-    </tr>   
+    </tr>
     <tr>
         <td>게임 등급 (블로그 게시물)</td>
         <td><a href="https://blogs.windows.com/buildingapps/2016/01/06/now-available-single-age-rating-system-to-simplify-app-submissions/">IARC 시스템을 사용 하 여 연령 등급을 할당 하는 단일 워크플로</a></td>
@@ -1536,7 +1536,7 @@ Windows 플랫폼용 세계 시장 대응성 게임을 개발 하 고 Microsoft�
     <tr>
         <td>SignTool를 사용 하 여 파일에 디지털 서명</td>
         <td><a href="/windows/desktop/SecCrypto/signtool">SignTool를 사용 하 여 파일에 서명 및 파일의 서명 확인</a></td>
-    </tr>    
+    </tr>
     <tr>
         <td>게임 업로드 및 버전 관리</td>
         <td><a href="/windows/uwp/publish/upload-app-packages">앱 패키지 업로드</a></td>
@@ -1609,8 +1609,8 @@ Windows 플랫폼용 세계 시장 대응성 게임을 개발 하 고 Microsoft�
         <td><a href="https://developer.microsoft.com/store/promote-your-apps">앱 홍보하기</a></td>
     </tr>
 </table>
- 
-### Visual Studio Application Insights
+
+### <a name="visual-studio-application-insights"></a>Visual Studio Application Insights
 
 Visual Studio Application Insights는 게시 된 게임에 대 한 성능, 원격 분석 및 사용량 분석을 제공 합니다. Application Insights는 게임 출시 후의 문제를 감지 및 해결 하 고, 사용 현황을 지속적으로 모니터링 및 개선 하 고, 플레이어가 게임과 상호 작용 하는 방식을 이해 하는 데 도움이 됩니다. Application Insights는 앱에 SDK를 추가하여 작동하며, [Azure 포털](https://portal.azure.com/)에 원격 분석을 보냅니다.
 
@@ -1647,7 +1647,7 @@ Visual Studio Application Insights는 게시 된 게임에 대 한 성능, 원�
     <tr>
         <td>Google 분석을 위해 Windows SDK를 사용 하는 방법 알아보기 (비디오)</td>
         <td><a href="https://channel9.msdn.com/Events/Windows/Windows-Developer-Day-Creators-Update/Getting-started-with-the-Windows-SDK-for-Google-Analytics">Google Analytics에 대 한 Windows SDK 시작</a></td>
-    </tr>    
+    </tr>
     <tr>
         <td>Facebook 앱을 사용 하 여 게임을 Facebook 사용자에 게 홍보</td>
         <td><a href="https://github.com/Microsoft/winsdkfb">Facebook에 대 한 Windows SDK 가져오기</a></td>
@@ -1745,7 +1745,7 @@ Xbox Live는 전 세계 수 백만 명의 게이머를 연결하는 최고의 �
     <tr>
         <td>UWP 게임에서 플랫폼 간 Xbox Live 환경을 통합 하는 방법 알아보기 (비디오)</td>
         <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2017/GDC2017-005">Xbox Live 크리에이터스 프로그램</a></td>
-    </tr>  
+    </tr>
 </table>
 
 ### <a name="for-managed-partners-and-developers-in-the-idxbox-program"></a>프로그램의 관리 되는 파트너 및 개발자 용 ID@Xbox
@@ -1778,7 +1778,7 @@ Xbox Live는 전 세계 수 백만 명의 게이머를 연결하는 최고의 �
     <tr>
         <td>샘플</td>
         <td><a href="https://github.com/Microsoft/xbox-live-samples/tree/master/Samples/ID%40XboxSDK">개발자를 위한 코드 샘플 ID@Xbox</a></td>
-    </tr>  
+    </tr>
     <tr>
         <td>Xbox Live 게임 개발 개요 (비디오)</td>
         <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2015/Developing-with-Xbox-Live-for-Windows-10">Windows 10 용 Xbox Live를 사용 하 여 개발</a></td>
@@ -1793,7 +1793,7 @@ Xbox Live는 전 세계 수 백만 명의 게이머를 연결하는 최고의 �
     </tr>
     <tr>
         <td>Xbox Live 통계 및 성과 (비디오)</td>
-        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2015/Best-Practices-for-Leveraging-Cloud-Based-User-Stats-and-Achievements-in-Xbox-Live">Xbox Live에서 클라우드 기반 사용자 통계 및 성과를 활용 하기 위한 모범 사례</a></td>
+        <td><a href="https://channel9.msdn.com/Events/GDC/GDC-2015/Best-Practices-for-Leveraging-Cloud-Based-User-Stats-and-Achievements-in-Xbox-Live">Xbox Live에서 Cloud-Based 사용자 통계 및 성과를 활용 하기 위한 모범 사례</a></td>
     </tr>
 </table>
 
