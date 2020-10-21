@@ -2,21 +2,21 @@
 title: 사용자 위치 가져오기
 description: 사용자의 위치를 찾고 위치 변경에 응답 합니다. 사용자의 위치에 대 한 액세스는 설정 앱의 개인 정보 설정에 의해 관리 됩니다. 또한이 항목에서는 앱에 사용자의 위치에 액세스할 수 있는 권한이 있는지 확인 하는 방법을 보여 줍니다.
 ms.assetid: 24DC9A41-8CC1-48B0-BC6D-24BF571AFCC8
-ms.date: 11/28/2017
+ms.date: 10/20/2020
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 위치 기능
 ms.localizationpriority: medium
-ms.openlocfilehash: 79c34af48cf1b2d860d2a170fd642ef05945c15d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8a60b5003310fdba046b624e61007761ef5e0f20
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158717"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297763"
 ---
 # <a name="get-the-users-location"></a>사용자 위치 가져오기
 
-
-
+> [!NOTE]
+> [**없습니다**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 및 map services Requite는 [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken)라는 지도 인증 키를 만듭니다. Maps 인증 키를 가져오고 설정 하는 방법에 대 한 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조 하세요.
 
 사용자의 위치를 찾고 위치 변경에 응답 합니다. 사용자의 위치에 대 한 액세스는 설정 앱의 개인 정보 설정에 의해 관리 됩니다. 또한이 항목에서는 앱에 사용자의 위치에 액세스할 수 있는 권한이 있는지 확인 하는 방법을 보여 줍니다.
 

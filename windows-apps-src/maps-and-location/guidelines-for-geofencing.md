@@ -1,22 +1,22 @@
 ---
 description: 지 오 펜싱를 사용 하 여 앱에서 지리적 컨텍스트 환경을 제공 하는 방법에 대 한 지침 및 모범 사례를 참조 하세요.
-title: 지 오 펜싱 apps에 대 한 지침
+title: 지오펜스 앱에 대한 지침
 ms.assetid: F817FA55-325F-4302-81BE-37E6C7ADC281
-ms.date: 02/08/2017
+ms.date: 10/20/2020
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 지 오 펜싱
 ms.localizationpriority: medium
-ms.openlocfilehash: 76cbedaef76ff1403e1d6718c96303da6ad2ee67
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e4d033673acbb4a8b7fd558d9e6c4f8329d79bf5
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162537"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297706"
 ---
-# <a name="guidelines-for-geofencing-apps"></a>지 오 펜싱 apps에 대 한 지침
+# <a name="guidelines-for-geofencing-apps"></a>지오펜스 앱에 대한 지침
 
-
-
+> [!NOTE]
+> [**없습니다**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 및 map services Requite는 [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken)라는 지도 인증 키를 만듭니다. Maps 인증 키를 가져오고 설정 하는 방법에 대 한 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조 하세요.
 
 **중요 API**
 
@@ -33,7 +33,7 @@ ms.locfileid: "89162537"
     -   인터넷 액세스를 사용할 수 없는 경우 지 오 펜싱 위치 확인에 필요한 기능을 사용 하지 마십시오.
 -   지 오 이벤트에서 [**입력**](/uwp/api/Windows.Devices.Geolocation.Geofencing.GeofenceState) 또는 **종료** 상태가 변경 된 것으로 표시 될 때 타임 스탬프 및 현재 위치를 확인 하 여 지 오 펜싱 알림의 관련성을 확인 합니다. 자세한 내용은 아래의 **타임 스탬프 및 현재 위치 확인** 을 참조 하세요.
 자세한 내용은 아래 (#timestamp)를 참조 하세요.
--   장치에서 위치 정보에 액세스할 수 없는 경우를 관리 하 고 필요한 경우 사용자에 게 알릴 예외를 만듭니다. 사용 권한이 꺼져 있거나, 장치에 GPS 라디오가 없거나, GPS 신호가 차단 되었거나, Wi-fi 신호가 충분히 강력 하지 않아서 위치 정보를 사용할 수 없습니다.
+-   장치에서 위치 정보에 액세스할 수 없는 경우를 관리 하 고 필요한 경우 사용자에 게 알릴 예외를 만듭니다. 사용 권한이 꺼져 있거나, 장치에 GPS 라디오가 없거나, GPS 신호가 차단 되었거나, Wi-Fi 신호가 충분히 강력 하지 않아서 위치 정보를 사용할 수 없습니다.
 -   일반적으로 포그라운드 및 백그라운드에서 동시에 발생 하는 지 오 이벤트를 수신할 필요가 없습니다. 그러나 앱이 포그라운드 및 백그라운드에서 지 오 트 이벤트를 수신 해야 하는 경우 다음을 수행 합니다.
 
     -   [**Readreports**](/uwp/api/windows.devices.geolocation.geofencing.geofencemonitor.readreports) 메서드를 호출 하 여 이벤트가 발생 했는지 확인 합니다.
@@ -120,7 +120,7 @@ function onVisibilityChanged() {
 
 ### <a name="sizing-your-geofences"></a>지역 구분 크기 조정
 
-GPS에서 가장 정확한 위치 정보를 제공할 수 있지만 지 오 펜싱는 Wi-fi 또는 다른 위치 센서를 사용 하 여 사용자의 현재 위치를 확인할 수도 있습니다. 그러나 이러한 다른 방법을 사용 하 여 만들 수 있는 지역 구분의 크기에 영향을 줄 수 있습니다. 정확도 수준이 낮으면 작은 지역 구분를 만드는 것은 유용 하지 않습니다. 일반적으로 50 미터 보다 작은 반지름이 있는 지 오를 만들지 않는 것이 좋습니다. 또한 지 오 펜스 백그라운드 작업은 Windows 에서만 정기적으로 실행 됩니다. 작은 지 오를 사용 하는 경우 [**Enter**](/uwp/api/Windows.Devices.Geolocation.Geofencing.GeofenceState) 또는 **Exit** 이벤트를 완전히 누락 시킬 수 있습니다.
+GPS에서 가장 정확한 위치 정보를 제공할 수 있는 반면, 지 오 펜싱는 Wi-Fi 또는 다른 위치 센서를 사용 하 여 사용자의 현재 위치를 확인할 수도 있습니다. 그러나 이러한 다른 방법을 사용 하 여 만들 수 있는 지역 구분의 크기에 영향을 줄 수 있습니다. 정확도 수준이 낮으면 작은 지역 구분를 만드는 것은 유용 하지 않습니다. 일반적으로 50 미터 보다 작은 반지름이 있는 지 오를 만들지 않는 것이 좋습니다. 또한 지 오 펜스 백그라운드 작업은 Windows 에서만 정기적으로 실행 됩니다. 작은 지 오를 사용 하는 경우 [**Enter**](/uwp/api/Windows.Devices.Geolocation.Geofencing.GeofenceState) 또는 **Exit** 이벤트를 완전히 누락 시킬 수 있습니다.
 
 앱이 작은 반지름이 있는 지 오를 사용 해야 하는 경우 최상의 성능을 위해 GPS 라디오가 있는 장치에서 앱을 사용 하도록 사용자에 게 알립니다.
 
