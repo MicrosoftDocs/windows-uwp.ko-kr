@@ -2,18 +2,21 @@
 title: 지도에 POI(관심 지점) 표시
 description: 압정, 이미지, 도형 및 XAML UI 요소를 사용 하 여 map에 관심 지점 (POI)을 추가 합니다.
 ms.assetid: CA00D8EB-6C1B-4536-8921-5EAEB9B04FCA
-ms.date: 08/11/2017
+ms.date: 10/20/2020
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 압정
 ms.localizationpriority: medium
-ms.openlocfilehash: c27132c0728c85238b80e710c62d2e733ee1dd5d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: feaf5edc4a25ebbc6dd3e3b7eb484ff63f8b1a23
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155807"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297770"
 ---
 # <a name="display-points-of-interest-on-a-map"></a>지도에 관심 지점이 표시 됩니다.
+
+> [!NOTE]
+> [**없습니다**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 및 map services Requite는 [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken)라는 지도 인증 키를 만듭니다. Maps 인증 키를 가져오고 설정 하는 방법에 대 한 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조 하세요.
 
 압정, 이미지, 도형 및 XAML UI 요소를 사용 하 여 map에 관심 지점 (POI)을 추가 합니다. POI는 관심 있는 항목을 나타내는 맵의 특정 점입니다. 예를 들어 비즈니스, 도시 또는 친구의 위치입니다.
 
@@ -476,7 +479,7 @@ XAML 페이지에서 계층을 반환 하는 뷰 모델 클래스의 속성에 �
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
 * [UWP 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [지도에 대한 디자인 지침](./display-maps.md)
-* [빌드 2015 비디오: Windows 앱의 휴대폰, 태블릿 및 PC에서 맵 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [빌드 2015 비디오: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [UWP 교통 앱 샘플](https://github.com/Microsoft/Windows-appsample-trafficapp)
 * [**MapIcon**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapIcon)
 * [**MapPolygon**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapPolygon)

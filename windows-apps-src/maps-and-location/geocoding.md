@@ -2,18 +2,21 @@
 title: 지오코딩 및 역방향 지오코딩 수행
 description: 이 가이드에서는 주소를 지리적 위치 (지 오 코딩)로 변환 하 고, 지 오 코딩 네임 스페이스에서 MapLocationFinder 클래스의 메서드를 호출 하 여 지리적 위치를 주소 (역방향)로 변환 하는 방법을 보여 줍니다.
 ms.assetid: B912BE80-3E1D-43BB-918F-7A43327597D2
-ms.date: 07/02/2018
+ms.date: 10/20/2020
 ms.topic: article
 keywords: windows 10, uwp, 지 오 코딩, 지도, 위치
 ms.localizationpriority: medium
-ms.openlocfilehash: 011a901e2baa9ff4b8f4a5bd8018b9b7790b1852
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 992a9902081f0655885383ef90ea02ed1e79f13a
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162567"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297699"
 ---
 # <a name="perform-geocoding-and-reverse-geocoding"></a>지오코딩 및 역방향 지오코딩 수행
+
+> [!NOTE]
+> [**없습니다**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 및 map services Requite는 [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken)라는 지도 인증 키를 만듭니다. Maps 인증 키를 가져오고 설정 하는 방법에 대 한 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조 하세요.
 
 이 가이드에서는 주소를 지리적 위치 (지 오 코딩)로 변환 하 고, [**지 오 코딩 네임 스페이스**](/uwp/api/Windows.Services.Maps) 에서 [**MapLocationFinder**](/uwp/api/Windows.Services.Maps.MapLocationFinder) 클래스의 메서드를 호출 하 여 지리적 위치를 주소 (역방향)로 변환 하는 방법을 보여 줍니다.
 

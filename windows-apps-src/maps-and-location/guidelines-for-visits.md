@@ -1,19 +1,22 @@
 ---
-Description: 더 실질적인 추적을 위해 강력한 방문 추적 기능을 사용하는 방법에 대해 알아봅니다.
+description: 더 실질적인 추적을 위해 강력한 방문 추적 기능을 사용하는 방법에 대해 알아봅니다.
 title: 방문 추적 사용에 대한 지침
 ms.assetid: 0c101684-48a9-4592-9ed5-6c20f3b830f2
-ms.date: 05/18/2017
+ms.date: 10/20/2020
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, geovisit, geovisit
 ms.localizationpriority: medium
-ms.openlocfilehash: 3b1766d0f883fa42b005908dcc63102e97ff0d4f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bdca33832b4dfadb52dca45c7a060de4f05c500c
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162517"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297737"
 ---
 # <a name="guidelines-for-using-visits-tracking"></a>방문 추적 사용에 대한 지침
+
+> [!NOTE]
+> [**없습니다**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 및 map services Requite는 [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken)라는 지도 인증 키를 만듭니다. Maps 인증 키를 가져오고 설정 하는 방법에 대 한 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조 하세요.
 
 방문 기능을 사용 하면 위치 추적 프로세스를 간소화 하 여 많은 앱의 실용적인 용도에 더 효율적으로 적용할 수 있습니다. 방문은 사용자가 입력 하 고 종료 하는 중요 한 지역으로 정의 됩니다. 방문은 사용자가 관심 있는 특정 영역을 입력 하거나 종료 하는 경우에만 앱을 알릴 수 있도록 하는 [지역 구분](guidelines-for-geofencing.md) 와 유사 하며, 배터리 수명이 방전 될 수 있는 지속적인 위치 추적이 필요 하지 않습니다. 그러나 지역 구분와 달리 방문 영역은 플랫폼 수준에서 동적으로 식별 되며 개별 앱에서 명시적으로 정의할 필요가 없습니다. 또한 앱에서 추적할 선택 항목은 개별 위치를 구독 하는 대신 단일 세분성 설정에 의해 처리 됩니다.
 

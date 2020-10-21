@@ -2,20 +2,21 @@
 title: 지도에 경로 및 방향 표시
 description: MapRouteFinder 클래스를 사용 하 여 경로 및 방향을 검색 하 고 UWP (유니버설 Windows 플랫폼) 앱의 없습니다에 표시 하는 방법에 대해 알아봅니다.
 ms.assetid: BBB4C23A-8F10-41D1-81EA-271BE01AED81
-ms.date: 09/20/2017
+ms.date: 10/20/2020
 ms.topic: article
 keywords: windows 10, uwp, 경로, 지도, 위치, 방향
 ms.localizationpriority: medium
-ms.openlocfilehash: b015393d81d736e5886793431966d0d91976e80d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4171598f47d28942adb56860452a8ec49cb5e2c2
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171757"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297607"
 ---
 # <a name="display-routes-and-directions-on-a-map"></a>지도에 경로 및 방향 표시
 
-
+> [!NOTE]
+> [**없습니다**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 및 map services Requite는 [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken)라는 지도 인증 키를 만듭니다. Maps 인증 키를 가져오고 설정 하는 방법에 대 한 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조 하세요.
 
 경로 및 길 찾기를 요청하고 앱에 표시합니다.
 
@@ -244,5 +245,5 @@ private async void ShowRouteOnMap()
 * [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)
 * [UWP 지도 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/MapControl)
 * [지도에 대한 디자인 지침](./display-maps.md)
-* [빌드 2015 비디오: Windows 앱의 휴대폰, 태블릿 및 PC에서 맵 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
+* [빌드 2015 비디오: Windows 앱에서 휴대폰, 태블릿 및 PC 간에 지도 및 위치 활용](https://channel9.msdn.com/Events/Build/2015/2-757)
 * [UWP 교통 앱 샘플](https://github.com/Microsoft/Windows-appsample-trafficapp)

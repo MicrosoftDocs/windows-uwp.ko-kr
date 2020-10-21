@@ -2,21 +2,21 @@
 title: 지오펜스 설정
 description: 앱에서 지 오를 설정 하 고, 포그라운드 및 백그라운드에서 알림을 처리 하는 방법을 알아봅니다.
 ms.assetid: A3A46E03-0751-4DBD-A2A1-2323DB09BDBA
-ms.date: 02/08/2017
+ms.date: 10/20/2020
 ms.topic: article
 keywords: windows 10, uwp, 지도, 위치, 지 오, 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b991930ba37cfaec333146bf7a95b4c9a9c8b98
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ca6dad1a96f37e3a308ad10c84293a8d49fb0329
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171707"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297594"
 ---
 # <a name="set-up-a-geofence"></a>지오펜스 설정
 
-
-
+> [!NOTE]
+> [**없습니다**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 및 map services Requite는 [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken)라는 지도 인증 키를 만듭니다. Maps 인증 키를 가져오고 설정 하는 방법에 대 한 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조 하세요.
 
 앱에서 지 [**오**](/uwp/api/Windows.Devices.Geolocation.Geofencing.Geofence) 를 설정 하 고, 포그라운드 및 백그라운드에서 알림을 처리 하는 방법을 알아봅니다.
 
