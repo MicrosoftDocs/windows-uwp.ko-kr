@@ -5,12 +5,12 @@ ms.date: 05/19/2020
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C#, WinRT, cswinrt, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: c3cac3049dbd5d22c23716a2da38a41fb6000a71
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: 844d8441777e7c95e2b562cf7dff748600a072e9
+ms.sourcegitcommit: 861c381a31e4a5fd75f94ca19952b2baaa2b72df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984499"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92171137"
 ---
 # <a name="cwinrt"></a>C#/WinRT
 
@@ -20,6 +20,8 @@ ms.locfileid: "91984499"
 C#/WinRT는 C# 언어에 대한 WinRT(Windows 런타임) 프로젝션 지원을 제공하는 NuGet 패키지 도구 키트입니다. *프로젝션*은 대상 언어에 대해 자연스럽고 친숙한 방식으로 WinRT API를 프로그래밍할 수 있는 변환 계층(예: interop 어셈블리)입니다. 예를 들어 C#/WinRT 프로젝션은 C#과 WinRT 인터페이스 간의 interop 세부 정보를 숨기고, 해당 .NET(예: 문자열, URI, 공통 값 형식 및 제네릭 컬렉션)에 대한 많은 WinRT 형식의 매핑을 제공합니다.
 
 C#/WinRT는 현재 WinRT 형식을 사용할 수 있도록 지원하며, 현재 미리 보기를 통해 WinRT Interop 어셈블리를 [만들고](#create-an-interop-assembly) [참조](#reference-an-interop-assembly)할 수 있습니다. C#/WinRT의 이후 릴리스에서는 C#에서 WinRT 형식을 작성하기 위한 지원이 추가됩니다.
+
+C#/WinRT에 대한 자세한 내용은 [C#/WinRT GitHub 리포지토리](https://aka.ms/cswinrt/repo)를 참조하세요.
 
 ## <a name="motivation-for-cwinrt"></a>C#/WinRT에 대한 동기 부여
 
@@ -31,74 +33,37 @@ C#/WinRT는 WinUI 3.0도 지원합니다. 이 릴리스의 WinUI는 운영 체�
 
 마지막으로 C#/WinRT는 일반적인 도구 키트이며, C# 컴파일러 또는 .NET 런타임에서 WinRT에 대한 기본 제공 지원을 사용할 수 없는 다른 시나리오를 지원하기 위한 것입니다. C#/WinRT는 Mono 5.4와 같이 .NET Standard 2.0까지 호환되는 .NET 런타임 버전을 지원합니다.
 
-C#/WinRT에 대한 자세한 내용은 [C#/WinRT GitHub 리포지토리](https://aka.ms/cswinrt/repo)를 참조하세요.
-
 ## <a name="create-an-interop-assembly"></a>interop 어셈블리 만들기
 
 WinRT API는 Windows 메타데이터(*.winmd) 파일에 정의되어 있습니다. C#/WinRT NuGet 패키지([Microsoft.Windows.CsWinRT](https://www.nuget.org/packages/Microsoft.Windows.CsWinRT/))에는 Windows 메타데이터 파일을 처리하고 .NET 5.0 C# 코드를 생성하는 데 사용할 수 있는 C#/WinRT 컴파일러인 **cswinrt**가 포함되어 있습니다. [C++/WinRT](../cpp-and-winrt-apis/index.md)에서 C++ 언어 프로젝션에 대한 헤더를 생성하는 방법과 비슷하게 이러한 원본 파일을 interop 어셈블리로 컴파일할 수 있습니다. 그런 다음, C#/WinRT 런타임 어셈블리와 함께 애플리케이션에서 참조할 C#/WinRT interop 어셈블리를 배포할 수 있습니다.
 
-Interop 어셈블리를 만드는 방법을 보여주는 연습은 [연습: C++/WinRT 구성 요소에서 .NET 5 프로젝션 생성 및 NuGet 업데이트](net-projection-from-cppwinrt-component.md)를 참조하세요.
+Interop 어셈블리를 NuGet 패키지로 만들어 배포하는 방법을 보여주는 연습은 [연습: C++/WinRT 구성 요소에서 .NET 5 프로젝션 생성 및 NuGet 업데이트](net-projection-from-cppwinrt-component.md)를 참조하세요.
 
 ### <a name="invoke-cswinrtexe"></a>cswinrt.exe 호출
 
-명령줄 옵션을 표시하려면 `cswinrt -?`를 실행합니다. 프로젝트에서 cswinrt.exe를 호출하려면 Directory.Build.Targets 파일을 사용하는 것이 좋습니다. 다음 프로젝트 조각에서는 **cswinrt**를 간단히 호출하여 Contoso 네임스페이스의 형식에 대한 프로젝션 원본을 생성하는 방법을 보여 줍니다. 그런 다음, 이러한 원본이 프로젝트 빌드에 포함됩니다.
+프로젝트에서 cswinrt.exe를 호출하려면 최신 [C#/WinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CsWinRT/)를 설치합니다. 그런 다음, **C# 라이브러리** 프로젝트에서 C#/WinRT 관련 프로젝트 속성을 설정하여 interop 어셈블리를 생성할 수 있습니다. 다음 프로젝트 조각에서는 **cswinrt**를 간단히 호출하여 Contoso 네임스페이스의 형식에 대한 프로젝션 원본을 생성하는 방법을 보여 줍니다. 그런 다음, 이러한 원본이 프로젝트 빌드에 포함됩니다.
 
 ```xml
-  <Target Name="GenerateProjection" BeforeTargets="Build">
-    <PropertyGroup>
-      <CsWinRTParams>
-# This sample demonstrates using a response file for cswinrt execution.
-# Run "cswinrt -h" to see all command line options.
--verbose
-# Include Windows SDK metadata to satisfy references to 
-# Windows types from project-specific metadata.
--in 10.0.18362.0
-# Don't project referenced Windows types, as these are 
-# provided by the Windows interop assembly.
--exclude Windows 
-# Reference project-specific winmd files, defined elsewhere,
-# such as from a NuGet package.
--in @(ContosoWinMDs->'"%(FullPath)"', ' ')
-# Include project-specific namespaces/types in the projection
--include Contoso 
-# Write projection sources to the "Generated Files" folder,
-# which should be excluded from checkin (e.g., .gitignored).
--out "$(ProjectDir)Generated Files"
-      </CsWinRTParams>
-    </PropertyGroup>
-    <WriteLinesToFile
-        File="$(CsWinRTResponseFile)" Lines="$(CsWinRTParams)"
-        Overwrite="true" WriteOnlyWhenDifferent="true" />
-    <Message Text="$(CsWinRTCommand)" Importance="$(CsWinRTVerbosity)" />
-    <Exec Command="$(CsWinRTCommand)" />
-  </Target>
-
-  <Target Name="IncludeProjection" BeforeTargets="CoreCompile" AfterTargets="GenerateProjection">
-    <ItemGroup>
-      <Compile Include="$(ProjectDir)Generated Files/*.cs" Exclude="@(Compile)" />
-    </ItemGroup>
-  </Target>
+<PropertyGroup>
+  <CsWinRTIncludes>Contoso</CsWinRTIncludes>
+</PropertyGroup>
 ```
+
+또한 이 프로젝트에서는 NuGet 패키지, 프로젝트 참조 또는 직접 참조를 통해 프로젝션하려는 CsWinRT NuGet 패키지 및 프로젝트별 .winmd 파일도 참조해야 합니다. 기본적으로 **Windows** 및 **Microsoft** 네임스페이스는 프로젝션되지 않습니다. CsWinRT 프로젝트 속성의 전체 목록은 [CsWinRT NuGet 설명서](https://github.com/microsoft/CsWinRT/blob/master/nuget/readme.md)를 참조하세요.
 
 ### <a name="distribute-the-interop-assembly"></a>interop 어셈블리 배포
 
-Interop 어셈블리는 일반적으로 필요한 C#/WinRT 런타임 어셈블리인 **winrt.runtime.dll**의 C#/WinRT NuGet 패키지에 대한 종속성과 함께 NuGet 패키지로 배포됩니다. C#/WinRT 런타임 어셈블리에는 각각 .NET Standard 2.0 및 .NET 5.0을 대상으로 하는 두 가지 버전이 있습니다. 애플리케이션의 대상 프레임워크에 따라 이러한 버전 중 하나만 배포됩니다. 
+Interop 어셈블리는 일반적으로 필요한 C#/WinRT 런타임 어셈블리인 **winrt.runtime.dll**의 C#/WinRT NuGet 패키지에 대한 종속성과 함께 NuGet 패키지로 배포됩니다.
 
-* .NET Standard 2.0을 대상으로 하는 버전은 Windows에서 강화된 기능을 제공하려는 하위 수준 플랫폼 간 애플리케이션에 적합합니다.
-* .NET 5.0을 대상으로 하는 버전은 XAML 앱과 같은 기본 개체 참조에서 올바른 가비지 수집이 필요한 최신 Windows 앱에 추천됩니다.
-
-interop 어셈블리는 `targetFramework` 조건을 nuspec 파일에 포함하여 앱에 대해 올바른 버전의 C#/WinRT 런타임을 배포할 수 있습니다.
+.NET 5.0 애플리케이션에 대해 올바른 버전의 C#/WinRT 런타임이 배포되었는지 확인하려면 C#/WinRT NuGet 패키지에 대한 종속성과 함께 .nuspec 파일에 `targetFramework` 조건을 포함합니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <dependencies>
-      <group targetFramework=".NETStandard2.0">
-        <dependency id="Microsoft.Windows.CsWinRT" version="0.1.0" />
-      </group>
-      <group targetFramework=".NET5.0">
-        <dependency id="Microsoft.Windows.CsWinRT" version="0.1.0" />
+      <group targetFramework="net5.0">
+        <dependency id="Microsoft.Windows.CsWinRT" version="0.9.0" />
       </group>
     </dependencies>
   </metadata>
@@ -106,7 +71,7 @@ interop 어셈블리는 `targetFramework` 조건을 nuspec 파일에 포함하�
 ```
 
 > [!NOTE]
-> .NET 5.0에 대한 대상 프레임워크 모니커가 ".NETCoreApp5.0"에서 ".NET5.0"으로 이동하고 있습니다. C#/WinRT 시험판에서는 둘 중 하나를 사용합니다.
+> .NET 5.0에 대한 대상 프레임워크 모니커가 ".NETCoreApp5.0"에서 "net5.0"으로 이동합니다. 
 
 ## <a name="reference-an-interop-assembly"></a>interop 어셈블리 참조
 
@@ -130,7 +95,7 @@ C#/WinRT는 [LoadLibrary 대체 검색 순서](/windows/win32/dlls/dynamic-link-
 
 ## <a name="known-issues"></a>알려진 문제
 
-C#/WinRT의 현재 미리 보기에는 몇 가지 알려진 interop 관련 성능 문제가 있습니다. 이러한 문제는 2020년 말 최종 릴리스 이전에 해결될 예정입니다.
+C#/WinRT의 현재 미리 보기에는 몇 가지 알려진 interop 관련 성능 문제가 있습니다. 이러한 문제는 2020년 말 최종 릴리스 이전에 해결될 예정입니다. 기타 알려진 문제 및 주요 변경 내용은 [C#/WinRT GitHub 리포지토리](https://aka.ms/cswinrt/repo)에 설명되어 있습니다.
 
 C#/WinRT NuGet 패키지, cswinrt.exe 컴파일러 또는 생성된 프로젝션 원본에서 기능 문제가 발생하는 경우 [C#/WinRT 문제 페이지](https://github.com/microsoft/CsWinRT/issues)를 통해 문제를 제출하세요.
 
