@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: e516d887f0bfc668551c0a43b135e98765f3300f
-ms.sourcegitcommit: b8d0e2c6186ab28fe07eddeec372fb2814bd4a55
+ms.openlocfilehash: cdfdf9b7396943e3ee5345249f38a35d48beb128
+ms.sourcegitcommit: c2e4bbe46c7b37be1390cdf3fa0f56670f9d34e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671542"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92253621"
 ---
 # <a name="host-a-custom-winrt-xaml-control-in-a-wpf-app-using-xaml-islands"></a>XAML Islands를 사용하여 WPF 앱에서 사용자 지정 WinRT XAML 컨트롤 호스팅
 
@@ -52,13 +52,11 @@ WPF(또는 Windows Forms) 앱에서 사용자 지정 WinRT XAML 컨트롤을 호
 
 4. **솔루션 탐색기**에서 WPF 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
 
-5. **NuGet 패키지 관리자** 창에서 **시험판 포함**이 포함되어 있는지 확인합니다.
-
-6. **찾아보기** 탭을 선택하고, [Microsoft.Toolkit.Wpf.UI.XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.XamlHost) 패키지를 검색하여 안정적인 최신 버전을 설치합니다. 이 패키지는 다른 관련 NuGet 패키지를 포함하여 **WindowsXamlHost** 컨트롤을 통해 WinRT XAML 컨트롤을 호스팅하는 데 필요한 모든 요소를 제공합니다.
+5. **찾아보기** 탭을 선택하고, [Microsoft.Toolkit.Wpf.UI.XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.XamlHost) 패키지를 검색하여 안정적인 최신 버전을 설치합니다. 이 패키지는 다른 관련 NuGet 패키지를 포함하여 **WindowsXamlHost** 컨트롤을 통해 WinRT XAML 컨트롤을 호스팅하는 데 필요한 모든 요소를 제공합니다.
     > [!NOTE]
     > Windows Forms 앱은 [Microsoft.Toolkit.Forms.UI.XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Forms.UI.XamlHost) 패키지를 사용해야 합니다.
 
-7. x86 또는 x64와 같은 특정 플랫폼을 대상으로 하도록 솔루션을 구성합니다. 사용자 지정 WinRT XAML 컨트롤은 **모든 CPU**를 대상으로 하는 프로젝트에서 지원되지 않습니다.
+6. x86 또는 x64와 같은 특정 플랫폼을 대상으로 하도록 솔루션을 구성합니다. 사용자 지정 WinRT XAML 컨트롤은 **모든 CPU**를 대상으로 하는 프로젝트에서 지원되지 않습니다.
 
     1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **속성** -> **구성 속성** -> **Configuration Manager**를 선택합니다.
     2. **활성 솔루션 플랫폼**에서 **새로 만들기**를 선택합니다. 
@@ -255,9 +253,9 @@ WPF 앱에서 사용자 지정 WinRT XAML 컨트롤을 호스팅하려면 앱을
 
 ## <a name="add-a-control-from-the-winui-2x-library-to-the-custom-control"></a>WinUI 2.x 라이브러리의 컨트롤을 사용자 지정 컨트롤에 추가
 
-일반적으로 WinRT XAML 컨트롤은 Windows 10 OS의 일부로 릴리스되었으며, 개발자가 Windows SDK를 통해 사용할 수 있게 되었습니다. [WinUI 라이브러리](/uwp/toolkits/winui/)는 Windows SDK의 업데이트된 WinRT XAML 컨트롤 버전이 Windows SDK 릴리스에 연결되지 않은 NuGet 패키지에 배포되는 대체 방법입니다. 이 라이브러리에는 Windows SDK 및 기본 UWP 플랫폼에 속하지 않는 새 컨트롤도 포함되어 있습니다. 자세한 내용은 [WinUI 라이브러리 로드맵](https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md)을 참조하세요.
+일반적으로 WinRT XAML 컨트롤은 Windows 10 OS의 일부로 릴리스되었으며 개발자가 Windows SDK를 통해 사용할 수 있게 되었습니다. [WinUI 라이브러리](/uwp/toolkits/winui/)는 Windows SDK에서 WinRT XAML 컨트롤의 업데이트된 버전이 Windows SDK 릴리스에 연결되지 않은 NuGet 패키지에 배포되는 대체 방법입니다. 이 라이브러리에는 Windows SDK 및 기본 UWP 플랫폼에 속하지 않는 새 컨트롤도 포함되어 있습니다. 자세한 내용은 [WinUI 라이브러리 로드맵](https://github.com/microsoft/microsoft-ui-xaml/blob/master/docs/roadmap.md)을 참조하세요.
 
-이 섹션에서는 WinUI 2.x 라이브러리의 WinRT XAML 컨트롤을 사용자 컨트롤에 추가하는 방법을 보여 줍니다.
+이 섹션에서는 WinUI 2.x 라이브러리의 WinRT XAML 컨트롤을 사용자 컨트롤에 추가하는 방법을 보여줍니다.
 
 > [!NOTE]
 > 현재 XAML Islands는 WinUI 2.x 라이브러리의 호스팅 컨트롤만 지원합니다. WinUI 3 라이브러리의 호스팅 컨트롤에 대한 지원은 이후 릴리스에서 제공됩니다.

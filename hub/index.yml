@@ -9,12 +9,12 @@ metadata:
   ms.author: tedhudek
   ms.topic: hub-page
   uhfHeaderId: MSDocsHeader-DocsL1
-  ms.openlocfilehash: f57585392a34cdf6bf61dce474b48efbc8ec9f58
-  ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+  ms.openlocfilehash: d38b65c9d17ab027044dca59563c5fd7a7b108e1
+  ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/31/2020
-  ms.locfileid: "89166687"
+  ms.lasthandoff: 10/21/2020
+  ms.locfileid: "92297489"
 productDirectory:
   items:
   - title: 애플리케이션 개발자
@@ -33,3 +33,11 @@ productDirectory:
     imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
     summary: Windows Server에서 연결된 애플리케이션, 네트워크 및 웹 서비스를 빌드하고 배포합니다.
     url: /windows-server/
+  - title: IoT용 Windows
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
+    summary: 보안 디바이스를 사용하여 신속하게 프로비저닝하고, 손쉽게 관리하고, 전체 클라우드 전략에 원활하게 연결할 수 있는 IoT 솔루션을 만듭니다.
+    url: https://aka.ms/winiotdocs
+  - title: " Windows 참가자 프로그램"
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Windows.svg
+    summary: Windows 10 참가자 미리 보기 빌드를 실행하여 다음 단계를 가장 먼저 확인하고 피드백을 제공하여 Windows의 미래를 만드는 데 일조하세요.
+    url: https://docs.microsoft.com/windows-insider/

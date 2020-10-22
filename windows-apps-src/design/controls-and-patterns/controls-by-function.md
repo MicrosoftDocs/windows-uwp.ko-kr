@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f3bda79b998038dd26f62eec983384f491793502
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 49a608f46c21cddfbd7fcb5e149c4b316bf9b175
+ms.sourcegitcommit: ce1a7efa01779721b4b618ae5605597152e424cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160769"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92379377"
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 
@@ -719,7 +719,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 디자인 및 방법: [텍스트 컨트롤](text-controls.md), [텍스트 블록 컨트롤 가이드](text-block.md), [서식 있는 텍스트 블록 컨트롤 가이드](rich-text-block.md)
 
-샘플 코드: [XAML 텍스트 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
+샘플 코드: [XAML 텍스트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20text%20display%20sample%20(Windows%208))
 
 ### <a name="text-box"></a>텍스트 상자
 한 줄 또는 여러 줄 일반 텍스트 필드입니다.
@@ -735,7 +735,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 디자인 및 방법: [텍스트 컨트롤](text-controls.md), [텍스트 상자 컨트롤 가이드](text-box.md) 
 
-샘플 코드: [XAML 텍스트 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-text-display-sample-2593ba0a)
+샘플 코드: [XAML 텍스트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20text%20display%20sample%20(Windows%208))
 
 ## <a name="selection-controls"></a>선택 컨트롤
 

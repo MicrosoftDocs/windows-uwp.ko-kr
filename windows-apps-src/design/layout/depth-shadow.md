@@ -1,5 +1,4 @@
 ---
-author: knicholasa
 description: Z-깊이, 즉 상대 깊이와 그림자는 앱에 깊이를 통합하여 자연스럽고 효율적으로 사용자가 집중할 수 있게 하는 두 가지 방법입니다.
 title: Windows 앱의 Z-깊이 및 그림자
 template: detail.hbs
@@ -9,12 +8,12 @@ ms.custom: 19H1
 keywords: windows 10, uwp
 pm-contact: chigy
 ms.localizationpriority: medium
-ms.openlocfilehash: ffabb494d10f802668e57ebb9cfd122ac5304d46
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 72cffc86d71b34de2c4c9292221889ee4f0bc1d5
+ms.sourcegitcommit: 5684340ad29a81939c6a93017b5a39ccbe1f6040
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219386"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92184212"
 ---
 # <a name="z-depth-and-shadow"></a>Z-깊이 및 그림자
 

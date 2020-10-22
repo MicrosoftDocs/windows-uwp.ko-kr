@@ -2,23 +2,22 @@
 title: 지도 및 위치 개요
 description: 이 섹션에서는 지도 표시, 지도 서비스 사용, 위치 찾기 및 앱에서 지오펜스 설정 등의 방법을 설명합니다. 이 섹션에서는 또한 특정 지도, 경로 또는 턴바이턴 길 찾기 세트로 Windows 지도 앱을 시작하는 방법을 보여 줍니다.
 ms.assetid: F4C1F094-CF46-4B15-9D80-C1A26A314521
-ms.date: 02/08/2017
+ms.date: 10/20/2020
 ms.topic: article
 keywords: Windows 10, UWP, 지도, 위치, 지도 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: c67312fe54492e20b6bb9a8b2d1cb07b5fc77c80
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 61b36aa8299d98544c44039abb138f4422e0a164
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171777"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297661"
 ---
 # <a name="maps-and-location-overview"></a>지도 및 위치 개요
 
-
-
-
 이 섹션에서는 지도 표시, 지도 서비스 사용, 위치 찾기 및 앱에서 지오펜스 설정 등의 방법을 설명합니다. 이 섹션에서는 또한 특정 지도, 경로 또는 턴바이턴 길 찾기 세트로 Windows 지도 앱을 시작하는 방법을 보여 줍니다.
+
+[**MapControl**](/uwp/api/Windows.UI.Xaml.Controls.Maps.MapControl) 및 지도 서비스를 사용하려면 [**MapServiceToken**](/uwp/api/windows.ui.xaml.controls.maps.mapcontrol.mapservicetoken)이라는 지도 인증 키가 필요합니다. 지도 인증 키를 얻고 설정하는 방법에 대한 자세한 내용은 [지도 인증 키 요청](authentication-key.md)을 참조하세요.
 
 > [!TIP]
 > 앱에서 지도와 위치를 사용하는 방법에 대해 자세히 알아보려면 GitHub의 [Windows-universal-samples 리포지토리](https://github.com/Microsoft/Windows-universal-samples)에서 다음 샘플을 다운로드하세요.

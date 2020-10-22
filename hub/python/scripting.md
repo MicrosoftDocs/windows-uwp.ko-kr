@@ -9,11 +9,11 @@ keywords: python, windows 10, microsoft, python 시스템 관리, python 파일 
 ms.localizationpriority: medium
 ms.date: 07/19/2019
 ms.openlocfilehash: d465d46a0524345a45dff9b1cc7c425e4cb468a4
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.sourcegitcommit: c2e4bbe46c7b37be1390cdf3fa0f56670f9d34e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "79208998"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92253670"
 ---
 # <a name="get-started-using-python-on-windows-for-scripting-and-automation"></a>스크립팅 및 자동화를 위해 Windows에서 Python 사용 시작
 
