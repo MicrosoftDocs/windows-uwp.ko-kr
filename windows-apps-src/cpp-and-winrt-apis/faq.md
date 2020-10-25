@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 자주, 묻는, 질문, faq
 ms.localizationpriority: medium
-ms.openlocfilehash: d9b402a1f140126314bc10f69880a9f01af2b2a4
-ms.sourcegitcommit: 6009896ead442b378106d82870f249dc8b55b886
+ms.openlocfilehash: b1a05dbb666b33739a083c517395359a64fee9df
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89643810"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297657"
 ---
 # <a name="frequently-asked-questions-about-cwinrt"></a>C++/WinRT에 대해 자주 묻는 질문
 [C++/WinRT](./intro-to-using-cpp-with-winrt.md)를 통해 Windows 런타임 API를 작성하거나 사용하는 방법과 관련된 질문과 대답입니다.
@@ -186,7 +186,7 @@ a.f();
 
 `winrt/Windows.UI.Xaml.Media.Animation.h` 헤더 파일에서 이름이 **GetCurrentTime**인 메서드를 선언하며 `windows.h`(`winbase.h`를 통해)에서는 **GetCurrentTime**이라는 매크로를 정의합니다. 두 개가 충돌하는 경우 C++ 컴파일러에서 "*오류 C4002: 함수 형식 매크로 호출 GetCurrentTime에 대한 인수가 너무 많습니다.* "를 생성합니다.
 
-마찬가지로 `winrt/Windows.Globalization.h`에서 **TRY**라는 이름의 메서드를 선언하며 `afx.h`에서는 **GetCurrentTime**이라는 매크로를 정의합니다. 이들이 충돌하면 C++ 컴파일러에서 "*오류 C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.* "를 생성합니다.
+마찬가지로 `winrt/Windows.Globalization.h`에서 **TRY**라는 이름의 메서드를 선언하며 `afx.h`에서는 **TRY**라는 매크로를 정의합니다. 이들이 충돌하면 C++ 컴파일러에서 "*오류 C2334: '{' 앞에 예기치 않은 토큰이 있습니다. 명백한 함수 본문을 건너뜁니다.* "를 생성합니다.
 
 두 문제 중 하나 또는 둘 모두 해결하려면 다음을 수행할 수 있습니다.
 

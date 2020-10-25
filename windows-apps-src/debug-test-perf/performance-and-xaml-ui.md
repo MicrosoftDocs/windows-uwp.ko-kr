@@ -1,17 +1,17 @@
 ---
 ms.assetid: 64F7FC51-E8AC-4098-9C5F-0172E4724B5C
 title: 성능
-description: 사용자는 앱이 응답성을 유지하고 자연스러운 느낌을 주며 배터리를 소모하지 않기를 기대합니다.
+description: 성능 워크플로를 구성하고, 애니메이션 결함 및 프레임 속도 문제를 해결하고, 시작 시간과 페이지 탐색 시간 및 메모리 사용량을 조정하는 방법을 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 23548ada603e21e9230ccc3e8c63630e81b1a8ae
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f81052336985eee866fec6ae370d2795e8001859
+ms.sourcegitcommit: 0c4bbaf1c119a84002748cdcf02e1449835559c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154147"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92133096"
 ---
 # <a name="performance"></a>성능
 

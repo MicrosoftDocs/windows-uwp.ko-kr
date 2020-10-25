@@ -5,12 +5,12 @@ ms.date: 07/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 동시성, 비동기, 비동기, 비동기성
 ms.localizationpriority: medium
-ms.openlocfilehash: a10962740d3f723a855914595ea02d0688ff9707
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8dc98176e61ea6e03b1d822e05f8e0656a34e4b3
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170377"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297750"
 ---
 # <a name="concurrency-and-asynchronous-operations-with-cwinrt"></a>C++/WinRT를 통한 동시성 및 비동기 작업
 
@@ -158,7 +158,7 @@ int main()
 
 위의 예제에서 **RetrieveBlogFeedAsync**는 진행률과 반환 값이 둘 다 있는 **IAsyncOperationWithProgress**를 반환합니다. **RetrieveBlogFeedAsync**가 작업을 수행하고 피드를 검색하는 동안 다른 작업을 수행할 수 있습니다. 해당 비동기 작업 개체에서 **get**을 호출하여 차단하고 완료될 때까지 기다린 다음, 작업 결과를 가져옵니다.
 
-Windows 런타임 형식을 비동기 방식으로 반환하는 경우 [**IAsyncOperation&lt;TResult&gt;**](/uwp/api/windows.foundation.iasyncoperation-1) 또는 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)를 반환해야 합니다. 자사 또는 타사 런타임 클래스는 Windows 런타임 함수로 전달하거나 전달받을 수 있는 형식(예: `int` 또는 **winrt::hstring**)을 한정합니다. Windows 런타임이 아닌 형식에 이러한 비동기 작업 유형 중 하나를 사용하려고 하면 컴파일러에서 "*WinRT 형식이어야 합니다.*" 오류를 생성하여 도와줍니다.
+Windows 런타임 형식을 비동기 방식으로 반환하는 경우 [**IAsyncOperation&lt;TResult&gt;**](/uwp/api/windows.foundation.iasyncoperation-1) 또는 [**IAsyncOperationWithProgress&lt;TResult, TProgress&gt;**](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)를 반환해야 합니다. 자사 또는 타사 런타임 클래스는 Windows 런타임 함수로 전달하거나 전달받을 수 있는 형식(예: `int` 또는 **winrt::hstring**)을 한정합니다. Windows 런타임이 아닌 형식에 이러한 비동기 작업 유형 중 하나를 사용하려고 하면 컴파일러가 "*T는 WinRT 형식이어야 합니다.* "라는 오류를 해결하는 데 도움이 됩니다.
 
 코루틴에 `co_await` 문이 없는 경우, 코루틴이 되려면 `co_return` 또는 `co_yield` 문이 하나 이상 있어야 합니다. 코루틴이 비동기성을 도입하지 않아 컨텍스트를 차단하거나 전환하지 않고 값을 반환할 수 있는 경우도 있습니다. 다음은 값을 캐시하여 두 번째 이상 호출 시 해당 작업을 수행하는 예제입니다.
 

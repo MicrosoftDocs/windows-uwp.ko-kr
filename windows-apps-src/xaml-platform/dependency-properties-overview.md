@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7633ff363a00c90a576ad5799ef0d2b048cd5cdd
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 769d786078edd68af2e1e57bdb869e7aa4099405
+ms.sourcegitcommit: 88f3992462c88a0c5c6e85b942705bae5e4a1aac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166857"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92499608"
 ---
 # <a name="dependency-properties-overview"></a>종속성 속성 개요
 
@@ -47,7 +47,7 @@ ms.locfileid: "89166857"
 
 종속성 속성을 설명할 때 설명서에서 사용 하는 용어의 합계는 다음과 같습니다.
 
-| 용어 | Description |
+| 용어 | 설명 |
 |------|-------------|
 | 종속성 속성 | [**DependencyProperty**](/uwp/api/Windows.UI.Xaml.DependencyProperty) 식별자에 있는 속성 (아래 참조) 일반적으로이 식별자는 **DependencyObject** 파생 클래스를 정의 하는 정적 멤버로 사용할 수 있습니다. |
 | 종속성 속성 식별자 | 속성을 식별 하는 상수 값입니다. 일반적으로 public이 고 읽기 전용입니다. |
@@ -203,11 +203,11 @@ Windows 10에서는 [**Registerpropertychangedcallback**](/uwp/api/windows.ui.xa
 ### <a name="conceptual-material"></a>개념 자료
 
 - [사용자 지정 종속성 속성](custom-dependency-properties.md)
-- [연결된 속성 개요](attached-properties-overview.md)
+- [연결 된 속성 개요](attached-properties-overview.md)
 - [데이터 바인딩 심층 분석](../data-binding/data-binding-in-depth.md)
-- [스토리보드 애니메이션](../design/motion/storyboarded-animations.md)
+- [Storyboarded 애니메이션](../design/motion/storyboarded-animations.md)
 - [Windows 런타임 구성 요소 만들기](/previous-versions/windows/apps/hh441572(v=vs.140))
-- [XAML 사용자 및 사용자 지정 컨트롤 샘플](https://code.msdn.microsoft.com/windowsapps/XAML-user-and-custom-a8a9505e)
+- [XAML 사용자 및 사용자 지정 컨트롤 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/XAML%20user%20and%20custom%20controls%20sample)
 
 ## <a name="apis-related-to-dependency-properties"></a>종속성 속성과 관련 된 Api
 

@@ -10,12 +10,12 @@ ms.custom: RS5
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: f7035017b1b1bfe878e4bd390fcefbe2bf3a6be5
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: c2f2053a02f6ddb2f955597f1a25cc58d220e115
+ms.sourcegitcommit: cbdfac0e2d8bead6c225e815e7d6dffe1f5ef864
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636563"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344978"
 ---
 # <a name="color"></a>색
 
@@ -427,7 +427,7 @@ ColorPaletteResources를 사용하면 인라인 대신 내부에서 래퍼로 �
 
 :::row:::
     :::column:::
-![대비 그림](images/color/illo-lighting.svg)
+![조명 그림](images/color/illo-lighting.svg)
     :::column-end:::
     :::column span="2":::
 **조명**
@@ -438,7 +438,7 @@ ColorPaletteResources를 사용하면 인라인 대신 내부에서 래퍼로 �
 
 :::row:::
     :::column:::
-![대비 그림](images/color/illo-colorblindness.svg)
+![색맹 그림](images/color/illo-colorblindness.svg)
     :::column-end:::
     :::column span="2":::
 **색맹**

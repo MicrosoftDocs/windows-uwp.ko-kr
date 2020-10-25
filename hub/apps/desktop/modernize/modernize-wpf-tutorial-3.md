@@ -1,5 +1,5 @@
 ---
-description: 이 자습서에서는 UWP XAML 사용자 인터페이스를 추가하고, MSIX 패키지를 만들고, 다른 최신 구성 요소를 WPF 앱에 통합하는 방법을 보여 줍니다.
+description: 이 자습서에서는 터치 지원 디바이스에서 경비 보고서의 날짜를 더 쉽게 선택하는 방법을 보여줍니다.
 title: XAML Islands를 사용하여 UWP CalendarView 컨트롤 추가
 ms.topic: article
 ms.date: 06/27/2019
@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: e7e09069e11fc14d0a47086bc2594edc975c11d9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 53a87f5803a6e4707b2dc6b86b32b7db003e59ef
+ms.sourcegitcommit: 0c4bbaf1c119a84002748cdcf02e1449835559c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161457"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92133046"
 ---
 # <a name="part-3-add-a-uwp-calendarview-control-using-xaml-islands"></a>3부: XAML Islands를 사용하여 UWP CalendarView 컨트롤 추가
 

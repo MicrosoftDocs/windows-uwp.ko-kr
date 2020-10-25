@@ -1,5 +1,5 @@
 ---
-description: 이 자습서에서는 Contoso Expenses라는 샘플 WPF 데스크톱 앱을 현대화하는 방법을 보여줍니다.
+description: 이 자습서에서는 MSIX를 사용하여 앱을 패키지하고 배포하는 방법을 보여줍니다.
 title: MSIX로 패키징 및 배포
 ms.topic: article
 ms.date: 01/23/2020
@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 2ab83b2c9253e8cdd9adc403909a1bd03db1ccda
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: d13971e62a6684bdb440bd0e0f68ddea606336cc
+ms.sourcegitcommit: 0c4bbaf1c119a84002748cdcf02e1449835559c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91762979"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92133026"
 ---
 # <a name="part-5-package-and-deploy-with-msix"></a>5부: MSIX로 패키징 및 배포
 

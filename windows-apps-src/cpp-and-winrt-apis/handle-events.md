@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션된, 프로젝션, 처리, 이벤트, 대리자
 ms.localizationpriority: medium
-ms.openlocfilehash: fefc7f72fb91a61ae924ac082dcac6d3cf9c044b
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 884f61e877b1d7ff9f5c4567dfc329d59610b773
+ms.sourcegitcommit: 14e79119aacc75382de9940fb5abaf7a618ad843
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750129"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92210607"
 ---
 # <a name="handle-events-by-using-delegates-in-cwinrt"></a>C++/WinRT의 대리자를 사용한 이벤트 처리
 
@@ -34,7 +34,7 @@ ms.locfileid: "91750129"
 
 ```xaml
 // MainPage.xaml
-<Button x:Name="Button" Click="ClickHandler">Click Me</Button>
+<Button x:Name="myButton" Click="ClickHandler">Click Me</Button>
 ```
 
 ```cppwinrt
@@ -48,9 +48,14 @@ void MainPage::ClickHandler(
     IInspectable const& /* sender */,
     RoutedEventArgs const& /* args */)
 {
-    Button().Content(box_value(L"Clicked"));
+    myButton().Content(box_value(L"Clicked"));
 }
 ```
+
+위의 코드는 Visual Studio의 **빈 앱(C++/WinRT)** 프로젝트에서 가져온 것입니다. `myButton()` 코드는 생성된 접근자 함수를 호출하며, 이 함수는 *myButton*이라는 이름의 **Button**을 반환합니다. 해당 **Button** 요소의 `x:Name`을 변경하면 생성된 접근자 함수의 이름도 변경됩니다.
+
+> [!NOTE]
+> 이 경우 이벤트 소스(이벤트를 발생시키는 개체)는 *myButton*이라는 **Button**입니다. 그리고 이벤트 수신자(이벤트를 처리하는 개체)는 **MainPage**의 인스턴스입니다. 이벤트 원본 및 이벤트 수신자의 수명 관리에 대한 자세한 정보는 이 항목의 뒷부분에 나와 있습니다.
 
 태그에서 선언적으로 등록하지 않고 멤버 함수를 명령적으로 등록하여 이벤트를 처리할 수도 있습니다. 아래 코드 예제에서는 쉽게 알기 어렵지만 [**ButtonBase::Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 호출에 대한 인수는 [**RoutedEventHandler**](/uwp/api/windows.ui.xaml.routedeventhandler) 대리자 인스턴스입니다. 이 경우에는 개체와 멤버 포인터 함수를 사용하는 **RoutedEventHandler** 생성자 오버로드를 사용합니다.
 
@@ -60,7 +65,7 @@ MainPage::MainPage()
 {
     InitializeComponent();
 
-    Button().Click({ this, &MainPage::ClickHandler });
+    myButton().Click({ this, &MainPage::ClickHandler });
 }
 ```
 
@@ -80,7 +85,7 @@ MainPage::MainPage()
 {
     InitializeComponent();
 
-    Button().Click( MainPage::ClickHandler );
+    myButton().Click( MainPage::ClickHandler );
 }
 void MainPage::ClickHandler(
     IInspectable const& /* sender */,
@@ -130,9 +135,9 @@ MainPage::MainPage()
 {
     InitializeComponent();
 
-    Button().Click([this](IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
+    myButton().Click([this](IInspectable const& /* sender */, RoutedEventArgs const& /* args */)
     {
-        Button().Content(box_value(L"Clicked"));
+        myButton().Content(box_value(L"Clicked"));
     });
 }
 ```
@@ -148,7 +153,7 @@ MainPage::MainPage()
     {
         sender.as<winrt::Windows::UI::Xaml::Controls::Button>().Content(box_value(L"Clicked"));
     };
-    Button().Click(click_handler);
+    myButton().Click(click_handler);
     AnotherButton().Click(click_handler);
 }
 ```

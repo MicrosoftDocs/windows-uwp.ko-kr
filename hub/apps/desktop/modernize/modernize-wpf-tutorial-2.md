@@ -1,5 +1,5 @@
 ---
-description: 이 자습서에서는 UWP XAML 사용자 인터페이스를 추가하고, MSIX 패키지를 만들고, WPF 앱에 다른 최신 구성 요소를 통합하는 방법을 보여줍니다.
+description: 이 자습서에서는 Contoso 지출 앱에 디지털 서명 지원을 추가하는 방법을 보여줍니다.
 title: XAML Islands를 사용하여 UWP InkCanvas 컨트롤 추가
 ms.topic: article
 ms.date: 01/24/2020
@@ -8,12 +8,12 @@ author: mcleanbyron
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.localizationpriority: medium
 ms.custom: RS5, 19H1
-ms.openlocfilehash: 24fb2507dd8f5a83b5581ff08d44210b0f5146c3
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: 34a92d9a1bd9101d059e5bd9b3cf18eabc3d619b
+ms.sourcegitcommit: 0c4bbaf1c119a84002748cdcf02e1449835559c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636453"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92133036"
 ---
 # <a name="part-2-add-a-uwp-inkcanvas-control-using-xaml-islands"></a>2부: XAML Islands를 사용하여 UWP InkCanvas 컨트롤 추가
 

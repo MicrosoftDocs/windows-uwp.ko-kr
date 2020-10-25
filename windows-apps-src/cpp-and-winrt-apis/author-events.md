@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 작성, 이벤트
 ms.localizationpriority: medium
-ms.openlocfilehash: c70ad8efcb8bb84272a044824d8058813ed30def
-ms.sourcegitcommit: a93a309a11cdc0931e2f3bf155c5fa54c23db7c3
+ms.openlocfilehash: 66691b1cd75a27e683261c12b7a3056c53160079
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91646236"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297623"
 ---
 # <a name="author-events-in-cwinrt"></a>C++/WinRT의 이벤트 작성
 
@@ -146,7 +146,7 @@ struct App : implements<App, IFrameworkViewSource, IFrameworkView>
 
 구성 요소와 해당 소비 애플리케이션 사이 같은 ABI(Application Binary Interface)를 통해 이벤트에 액세스할 수 있어야 하는 경우 이벤트에는 Windows 런타임 대리자 형식이 사용되어야 합니다. 위 예제에서는 [**Windows::Foundation::EventHandler\<T\>** ](/uwp/api/windows.foundation.eventhandler) Windows 런타임 대리자 형식을 사용합니다. [**TypedEventHandler\<TSender, TResult\>** ](/uwp/api/windows.foundation.eventhandler)는 Windows 런타임 대리자 형식의 또 다른 예입니다.
 
-두 대리자 형식의 형식 매개 변수는 ABI를 가로질러야 하므로 형식 매개 변수도 Windows 런타임 형식이어야 합니다. 여기에는 Windows 런타임 클래스, 타사 런타임 클래스, 숫자나 문자열 같은 기본 형식이 포함됩니다. 해당 제약 조건을 잊을 경우 컴파일러가 “WinRT 형식이어야 합니다.” 오류를 처리하는 데 도움이 될 수 있습니다.
+두 대리자 형식의 형식 매개 변수는 ABI를 가로질러야 하므로 형식 매개 변수도 Windows 런타임 형식이어야 합니다. 여기에는 Windows 런타임 클래스, 타사 런타임 클래스, 숫자나 문자열 같은 기본 형식이 포함됩니다. 해당 제약 조건을 잊을 경우 컴파일러가 "*T는 WinRT 형식이어야 합니다.* "라는 오류를 처리하는 데 도움이 될 수 있습니다.
 
 다음은 코드 목록 형식의 예제입니다. 이 항목의 앞부분에서 만든 **ThermometerWRC** 및 **ThermometerCoreApp** 프로젝트를 시작하고, 이러한 목록의 코드와 비슷하게 해당 프로젝트의 코드를 편집합니다.
 

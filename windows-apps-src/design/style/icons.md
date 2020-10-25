@@ -1,5 +1,5 @@
 ---
-Description: 좋은 아이콘은 입력 체계 및 나머지 디자인 언어와 조화를 이룹니다. 상징을 혼합하지 않고 필요한 사항만 가능한 빠르고 단순하게 전달합니다.
+description: 좋은 아이콘은 입력 체계 및 나머지 디자인 언어와 조화를 이룹니다. 상징을 혼합하지 않고 필요한 사항만 가능한 빠르고 단순하게 전달합니다.
 title: 아이콘
 ms.assetid: b90ac02d-5467-4304-99bd-292d6272a014
 label: Icons
@@ -11,12 +11,12 @@ design-contact: Judysa
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 66f9d166d0e20f82f495f98b26deceff8e136cc5
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: 75de051bd569981d7dca6b33e8e7389c3186a09d
+ms.sourcegitcommit: cbdfac0e2d8bead6c225e815e7d6dffe1f5ef864
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636643"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344991"
 ---
 # <a name="icons-for-windows-apps"></a>Windows 앱용 아이콘
 
@@ -47,13 +47,12 @@ ms.locfileid: "91636643"
 
 :::row:::
     :::column:::
-        ![잘라내기, 복사, 붙여넣기 및 저장 아이콘을 보여주는 스크린샷.](images/do.svg)
-        ![아이콘 표준 이미지](images/icons/icons-standard.svg)<br>
+        ![녹색 확인 표시와 Do라는 단어가 있는 녹색 막대의 첫 번째 이미지](images/do.svg) ![잘라내기, 복사, 붙여넣기 및 저장 아이콘이 표시된 스크린샷](images/icons/icons-standard.svg)<br>
 
 잘라내기, 복사, 붙여 넣기 및 저장 같은 작업이나 탐색 메뉴의 탐색 항목에 아이콘을 사용합니다.
     :::column-end:::
     :::column:::
-        ![아이콘 개념 이미지](images/icons/icons-concept.svg) ![실행 안함](images/dont.svg)<br>
+        ![빨간색 X와 Don't라는 단어가 있는 빨간색 막대의 첫 번째 이미지](images/dont.svg) ![교육, 터치 및 달력 아이콘이 표시된 스크린샷](images/icons/icons-concept.svg)<br>
 
 표시할 개념에 대한 아이콘이 이미 있는 경우에는 아이콘을 사용합니다. (아이콘이 있는지 확인하려면 Segoe 아이콘 목록을 확인합니다.)
     :::column-end:::
@@ -61,14 +60,12 @@ ms.locfileid: "91636643"
 
 :::row:::
     :::column:::
-        ![간단하고 익숙한 쇼핑 카트 아이콘의 스크린샷.](images/do.svg)
-        ![아이콘 쇼핑 카트](images/icons/icon-shopping-cart.svg)<br>
+        ![녹색 확인 표시와 Do라는 단어가 있는 녹색 막대의 두 번째 이미지](images/do.svg) ![단순하고 친숙한 장바구니 아이콘의 스크린샷](images/icons/icon-shopping-cart.svg)<br>
 
 사용자가 아이콘의 의미를 쉽게 이해할 수 있고 작은 크기로 분명할 만큼 충분히 단순한 경우 아이콘을 사용합니다.
     :::column-end:::
     :::column:::
-        ![복잡하고 생소한 쇼핑 카트 아이콘의 스크린샷.](images/dont.svg)
-        ![아이콘 개념 이미지](images/icons/icon-bad-example.png)<br>
+        ![빨간색 X와 Don't라는 단어가 있는 빨간색의 두 번째 이미지](images/dont.svg) ![복잡하고 친숙하지 않은 장바구니 아이콘의 스크린샷](images/icons/icon-bad-example.png)<br>
 
 의미가 명확하지 않거나 분명히 표시하기 위해 복잡한 도형이 필요한 경우에는 아이콘을 사용하지 마세요.
     :::column-end:::

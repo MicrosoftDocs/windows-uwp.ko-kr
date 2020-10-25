@@ -9,16 +9,24 @@ ms.technology: windows-nodejs
 keywords: Microsoft, Windows, 개발자, 팁, 성능, WSL
 ms.localizationpriority: medium
 ms.date: 07/24/2020
-ms.openlocfilehash: 1135be4797893a74e398e69fcbc1c43d60e9fdb9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 7d02e3b46d6938532bbc7024e8840b976b2715a6
+ms.sourcegitcommit: 861c381a31e4a5fd75f94ca19952b2baaa2b72df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172667"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92171156"
 ---
 # <a name="tips-for-improving-performance-and-development-workflows"></a>성능 및 개발 워크플로를 개선하기 위한 팁
 
 워크플로를 보다 효율적이고 즐겁게 만드는 데 도움이 되는 몇 가지 팁을 수집했습니다. 공유할 추가 팁이 있나요? 위의 "편집" 단추를 사용하여 끌어오기 요청을 작성하거나 아래의 "피드백" 단추를 사용하여 문제를 제출하면 저희가 해당 항목을 목록에 추가할 수 있습니다.
+
+> [!NOTE]
+> 다음과 같이 Windows 10 개발과 관련된 성능 문제가 발생하는 경우:
+> - 예상보다 Windows에서 느리게 실행되는 개발 도구(예: 컴파일러, 링커 등).
+> - 다른 플랫폼보다 Windows에서 느리게 실행되는 런타임 플랫폼(예: 노드, .NET, Python)
+> - 파일 IO/네트워킹/프로세스 생성 관련 성능 문제가 발생한 앱. 
+> 
+> [Windows 개발자(WinDev) 문제 리포지토리](https://github.com/microsoft/WinDev)에 문제를 제출하여 알려주세요.
 
 ## <a name="use-shortcuts-to-open-a-project-in-vs-code-or-windows-file-explorer"></a>바로 가기를 사용하여 VS Code 또는 Windows 파일 탐색기에서 프로젝트 열기
 

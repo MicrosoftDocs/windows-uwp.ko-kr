@@ -5,12 +5,12 @@ ms.date: 04/23/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 문제 해결, HRESULT, 오류
 ms.localizationpriority: medium
-ms.openlocfilehash: 94cfb51d9fd832a29c71049a2255e35c4bc6f484
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 268792dfe8053feca8c1e6fcb486bede4b26ee6a
+ms.sourcegitcommit: 7aaf0740a5d3a17ebf9214aa5e5d056924317673
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219966"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92297721"
 ---
 # <a name="troubleshooting-cwinrt-issues"></a>C++/WinRT 문제 해결
 
@@ -39,8 +39,9 @@ ms.locfileid: "91219966"
 | C++ 컴파일러에서 “‘const std::vector&lt;winrt::hstring,std::allocator&lt;_Ty&gt;&gt;’에서 ‘const winrt::param::async_iterable&lt;winrt::hstring&gt; &’로 변환할 수 없습니다.” 오류를 생성합니다.|이 오류는 winrt::hstring의 std::vector를 컬렉션이 필요한 비동기 Windows 런타임 API에 전달하고, 벡터를 비동기 호출 수신자로 복사하거나 이동하지 않은 경우에 발생할 수 있습니다. 자세한 내용은 [표준 C++ 데이터 형식 및 C++/WinRT](std-cpp-data-types.md)를 참조하세요.|
 | 프로젝트를 열 때 Visual Studio에서 “프로젝트에 대한 애플리케이션이 설치되어 있지 않습니다.” 오류를 생성합니다.**|**C++ 개발용 Windows 유니버설 도구**를 아직 설치하지 않은 경우 Visual Studio의 **새 프로젝트** 대화 상자에서 설치해야 합니다. 그래도 문제가 해결되지 않으면 프로젝트에서 C++/WinRT VSIX(Visual Studio Extension)를 사용할 수 있습니다([Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 참조).|
 | Windows 앱 인증 키트 테스트에서 런타임 클래스 중 하나가 “Windows 기본 클래스에서 파생되지 않았습니다. 구성 가능한 모든 클래스는 궁극적으로 Windows 네임스페이스의 형식에서 파생되어야 합니다.” 오류를 생성합니다.|기본 클래스에서 파생된 런타임 클래스(애플리케이션에서 선언)를 ‘구성 가능’ 클래스라고 합니다.** 구성 가능 클래스의 최종 기본 클래스는 Windows.* 네임스페이스에서 시작되는 형식(예: [**Windows.UI.Xaml.DependencyObject**](/uwp/api/windows.ui.xaml.dependencyobject))이어야 합니다. 자세한 내용은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](binding-property.md)을 참조하세요.|
-| C++ 컴파일러에서 EventHandler 또는 TypedEventHandler 대리자 특수화에 대해 “WinRT 형식이어야 합니다.” 오류를 생성합니다.**|**winrt::delegate&lt;...T&gt;** 를 대신 사용하세요. [C++/WinRT의 이벤트 작성](author-events.md)을 참조하세요.|
-| C++ 컴파일러에서 Windows 런타임 비동기 작업 특수화에 대해 “WinRT 형식이어야 합니다.” 오류를 생성합니다.**|PPL(병렬 패턴 라이브러리) [**작업**](/cpp/parallel/concrt/reference/task-class)을 대신 반환하세요. [동시성 및 비동기 작업](concurrency.md)을 참조하세요.|
+| C++ 컴파일러가 EventHandler 또는 TypedEventHandler 대리자 전문화에 대해 "*T는 WinRT 형식이어야 합니다.* "라는 오류 메시지를 생성합니다.|**winrt::delegate&lt;...T&gt;** 를 대신 사용하세요. [C++/WinRT의 이벤트 작성](author-events.md)을 참조하세요.|
+| C++ 컴파일러가 Windows 런타임 비동기 작업 전문화에 대해 "*T는 WinRT 형식이어야 합니다.* "라는 오류를 생성합니다.|PPL(병렬 패턴 라이브러리) [**작업**](/cpp/parallel/concrt/reference/task-class)을 대신 반환하세요. [동시성 및 비동기 작업](concurrency.md)을 참조하세요.|
+| C++ 컴파일러가 [**winrt::xaml_typename**](/uwp/cpp-ref-for-winrt/xaml-typename)을 호출할 때 "*T는 WinRT 형식이어야 합니다.* "라는 오류를 생성합니다.|**winrt::xaml_typename**의 프로젝션 형식(예: **BgLabelControlApp::BgLabelControl** 사용)을 사용하고, 구현 형식(**BgLabelControlApp::implementation::BgLabelControl**을 사용하지 않음)을 사용하지 마세요. [XAML 사용자 지정(템플릿) 컨트롤](xaml-cust-ctrl.md)을 참조하세요.|
 | C++ 컴파일러에서 “오류 C2220: 경고가 오류로 처리되어 생성된 ‘object’ 파일이 없습니다.” 오류를 생성합니다.**|경고를 수정하거나, **C/C++**  > **일반** > **경고를 오류로 처리**를 **아니요(/WX-)** 로 설정합니다.|
 | 개체 삭제 후 C++/WinRT 개체의 이벤트 처리기가 호출되어 앱 작동이 중단됩니다.|[이벤트 처리 대리자를 사용하여 안전하게 *this* 포인터 액세스](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate)를 참조하세요.|
 | C++ 컴파일러에서 “오류 C2338: 약한 참조 지원에만 사용됩니다.”를 생성합니다.|현재 **winrt::no_weak_ref** 마커 구조체를 템플릿 인수로 기본 클래스에 전달한 형식에 대해 약한 참조를 요청하고 있습니다. [약한 참조 지원 옵트아웃](weak-references.md#opting-out-of-weak-reference-support)을 참조하세요.|
