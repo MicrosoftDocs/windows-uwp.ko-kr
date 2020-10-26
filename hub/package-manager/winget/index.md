@@ -1,15 +1,15 @@
 ---
 title: winget 도구를 사용하여 애플리케이션 설치 및 관리
 description: winget 명령줄 도구를 사용하면 개발자가 Windows 10 컴퓨터에서 애플리케이션을 검색, 설치, 업그레이드, 제거 및 구성할 수 있습니다.
-ms.date: 04/28/2020
+ms.date: 10/22/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c918dccb2873f47a16669c195c47180e2129476
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 0dbd2aa76fa6a9b787e73c0bbd5ce7e56b5e6a4a
+ms.sourcegitcommit: c105eb358bf693d34dfdd7a44255af69c1d5a3cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168747"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434460"
 ---
 # <a name="use-the-winget-tool-to-install-and-manage-applications"></a>winget 도구를 사용하여 애플리케이션 설치 및 관리
 
@@ -23,7 +23,7 @@ ms.locfileid: "89168747"
 
 **winget** 도구를 설치하는 방법에는 여러 가지가 있습니다.
 
-* **winget** 도구는 [Microsoft 앱 설치 관리자](https://www.microsoft.com/p/app-installer/9nblggh4nns1?ocid=9nblggh4nns1_ORSEARCH_Bing&rtc=1&activetab=pivot:overviewtab)의 플라이트 또는 미리 보기 버전에 포함되어 있습니다. **winget**을 사용하려면 **앱 설치 관리자**의 미리 보기 버전을 설치해야 합니다. 초기 액세스 권한을 얻으려면 [Windows 패키지 관리자 참가자 프로그램](https://aka.ms/AppInstaller_InsiderProgram)에 요청을 제출합니다. 플라이트 링에 참여하면 최신 미리 보기 업데이트가 표시됩니다.
+* **winget** 도구는 [Microsoft 앱 설치 관리자](https://www.microsoft.com/p/app-installer/9nblggh4nns1?ocid=9nblggh4nns1_ORSEARCH_Bing&rtc=1&activetab=pivot:overviewtab)의 플라이트 또는 미리 보기 버전에 포함되어 있습니다. **winget** 을 사용하려면 **앱 설치 관리자** 의 미리 보기 버전을 설치해야 합니다. 초기 액세스 권한을 얻으려면 [Windows 패키지 관리자 참가자 프로그램](https://aka.ms/AppInstaller_InsiderProgram)에 요청을 제출합니다. 플라이트 링에 참여하면 최신 미리 보기 업데이트가 표시됩니다.
 
 * [Windows 참가자 플라이트 링](https://insider.windows.com)에 참여합니다.
 
@@ -34,15 +34,15 @@ ms.locfileid: "89168747"
 
 ## <a name="administrator-considerations"></a>관리자 고려 사항
 
-관리자 권한으로 **winget**을 실행하는지 여부에 따라 설치 관리자의 동작이 달라질 수 있습니다.
+관리자 권한으로 **winget** 을 실행하는지 여부에 따라 설치 관리자의 동작이 달라질 수 있습니다.
 
-* 관리자 권한 없이 **winget**을 실행하는 경우 일부 애플리케이션을 설치하려면 [권한 상승](https://docs.microsoft.com/windows/security/identity-protection/user-account-control/)이 필요할 수 있습니다. 설치 관리자가 실행되면 Windows에서 [권한 상승](https://docs.microsoft.com/windows/security/identity-protection/user-account-control)을 요구하는 메시지가 표시됩니다. 권한 상승을 선택하지 않으면 애플리케이션이 설치되지 않습니다.  
+* 관리자 권한 없이 **winget** 을 실행하는 경우 일부 애플리케이션을 설치하려면 [권한 상승](https://docs.microsoft.com/windows/security/identity-protection/user-account-control/)이 필요할 수 있습니다. 설치 관리자가 실행되면 Windows에서 [권한 상승](https://docs.microsoft.com/windows/security/identity-protection/user-account-control)을 요구하는 메시지가 표시됩니다. 권한 상승을 선택하지 않으면 애플리케이션이 설치되지 않습니다.  
 
-* 관리자 명령 프롬프트에서 **winget**을 실행할 때 애플리케이션에서 요구하는 경우 [권한 상승 메시지](/windows/security/identity-protection/user-account-control/how-user-account-control-works)가 표시되지 않습니다. 관리자 권한으로 명령 프롬프트를 실행할 때는 항상 주의해야 하며 신뢰할 수 있는 애플리케이션만 설치합니다.
+* 관리자 명령 프롬프트에서 **winget** 을 실행할 때 애플리케이션에서 요구하는 경우 [권한 상승 메시지](/windows/security/identity-protection/user-account-control/how-user-account-control-works)가 표시되지 않습니다. 관리자 권한으로 명령 프롬프트를 실행할 때는 항상 주의해야 하며 신뢰할 수 있는 애플리케이션만 설치합니다.
 
 ## <a name="use-winget"></a>winget 사용
 
-**앱 설치 관리자**가 설치되면 명령 프롬프트에서 'winget'을 입력하여 **winget**을 실행할 수 있습니다.
+**앱 설치 관리자** 가 설치되면 명령 프롬프트에서 'winget'을 입력하여 **winget** 을 실행할 수 있습니다.
 
 가장 일반적인 사용 시나리오 중 하나는 즐겨찾는 도구를 검색하여 설치하는 것입니다.
 
@@ -50,7 +50,7 @@ ms.locfileid: "89168747"
 2. 원하는 도구를 사용할 수 있다고 확인되었으면 `winget install \<appname>`을 입력하여 도구를 [설치](install.md)할 수 있습니다. **winget** 도구에서 설치 관리자를 시작하여 애플리케이션을 PC에 설치합니다.
     ![winget 명령줄](images\install.png)
 
-3. **winget**은 설치 및 검색 외에도 애플리케이션에 대한 [세부 정보 표시](show.md), [원본 변경](source.md) 및 [패키지 유효성 검사](validate.md)를 수행할 수 있는 여러 가지 다른 명령을 제공합니다. 전체 명령 목록을 가져오려면 `winget --help`를 입력합니다.
+3. **winget** 은 설치 및 검색 외에도 애플리케이션에 대한 [세부 정보 표시](show.md), [원본 변경](source.md) 및 [패키지 유효성 검사](validate.md)를 수행할 수 있는 여러 가지 다른 명령을 제공합니다. 전체 명령 목록을 가져오려면 `winget --help`를 입력합니다.
     ![winget help](images\help.png)
 
 ### <a name="commands"></a>명령
@@ -101,11 +101,15 @@ if %ERRORLEVEL% EQU 0 Echo Terminal installed successfully.   %ERRORLEVEL%
 ```
 
 > [!NOTE]
-> 스크립트가 작성되면 **winget**에서 지정된 순서대로 애플리케이션을 시작합니다. 설치 관리자에서 성공 또는 실패를 반환하면 **winget**에서 다음 설치 관리자를 시작합니다. 설치 관리자에서 다른 프로세스를 시작하면 조기에 **winget**으로 돌아갈 수 있습니다. 이 경우 이전 설치 관리자가 완료되기 전에 **winget**에서 다음 설치 관리자를 설치합니다.
+> 스크립트가 작성되면 **winget** 에서 지정된 순서대로 애플리케이션을 시작합니다. 설치 관리자에서 성공 또는 실패를 반환하면 **winget** 에서 다음 설치 관리자를 시작합니다. 설치 관리자에서 다른 프로세스를 시작하면 조기에 **winget** 으로 돌아갈 수 있습니다. 이 경우 이전 설치 관리자가 완료되기 전에 **winget** 에서 다음 설치 관리자를 설치합니다.
 
 ## <a name="missing-tools"></a>누락된 도구
 
 도구 또는 애플리케이션이 [커뮤니티 리포지토리](../package/repository.md)에 포함되어 있지 않은 경우입니다. 패키지를 [리포지토리](https://github.com/microsoft/winget-pkgs)에 제출하세요. 즐겨찾는 도구가 추가되면 본인과 다른 모든 사용자가 사용할 수 있습니다.
+
+## <a name="customize-winget-settings"></a>winget 설정 사용자 지정
+
+**settings.json** 파일을 수정하여 **winget** 명령줄 환경을 구성할 수 있습니다. 자세한 내용은 [https://aka.ms/winget-settings](https://aka.ms/winget-settings)를 참조하세요. 이 설정은 아직 실험적 상태이며 아직 미리 보기 버전의 도구용으로 완성되지 않았습니다.
 
 ## <a name="open-source-details"></a>오픈 소스 세부 정보
 
