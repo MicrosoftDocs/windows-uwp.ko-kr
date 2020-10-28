@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6f73f0aef6cf7a1abec420e48713d3d3776a1867
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a5942dfbcd2f72d456ac352785bce73e75454330
+ms.sourcegitcommit: aa88679989ef3c8b726e1bf5a0ed17c1206a414f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155047"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92687779"
 ---
 # <a name="move-and-draw-commands-syntax"></a>이동 및 그리기 명령 구문
 
@@ -33,7 +33,7 @@ Windows 런타임에는 move 및 draw 명령을 나타내는 문자열을 사용
 
 ## <a name="using-move-and-draw-commands-versus-using-a-pathgeometry"></a>이동 및 그리기 명령과 **Pathgeometry** 사용 비교
 
-Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**그림**](/uwp/api/windows.ui.xaml.media.pathgeometry.figures) 속성 값을 포함 하는 단일 [**pathgeometry**](/uwp/api/Windows.UI.Xaml.Media.PathFigure) 개체를 사용 하 여 [**pathgeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) 를 생성 합니다. 각 그리기 명령은 해당 단일 **Pathsegment**의 [**세그먼트**](/uwp/api/windows.ui.xaml.media.pathfigure.segments) 컬렉션에서 [**pathsegment**](/uwp/api/Windows.UI.Xaml.Media.PathSegment) 파생 클래스를 생성 하 고, move [**명령을 통해 시작점을 변경**](/uwp/api/windows.ui.xaml.media.pathfigure.startpoint)하 고, Close 명령 집합의 존재를 **true**로 [**IsClosed**](/uwp/api/windows.ui.xaml.media.pathfigure.isclosed) 합니다. 런타임에 **데이터** 값을 검사 하는 경우이 구조를 개체 모델로 탐색할 수 있습니다.
+Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**그림**](/uwp/api/windows.ui.xaml.media.pathgeometry.figures) 속성 값을 포함 하는 단일 [**pathgeometry**](/uwp/api/Windows.UI.Xaml.Media.PathFigure) 개체를 사용 하 여 [**pathgeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) 를 생성 합니다. 각 그리기 명령은 해당 단일 **Pathsegment** 의 [**세그먼트**](/uwp/api/windows.ui.xaml.media.pathfigure.segments) 컬렉션에서 [**pathsegment**](/uwp/api/Windows.UI.Xaml.Media.PathSegment) 파생 클래스를 생성 하 고, move [**명령을 통해 시작점을 변경**](/uwp/api/windows.ui.xaml.media.pathfigure.startpoint)하 고, Close 명령 집합의 존재를 **true** 로 [**IsClosed**](/uwp/api/windows.ui.xaml.media.pathfigure.isclosed) 합니다. 런타임에 **데이터** 값을 검사 하는 경우이 구조를 개체 모델로 탐색할 수 있습니다.
 
 ## <a name="the-basic-syntax"></a>기본 구문
 
@@ -63,7 +63,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**그림**](/uw
 
 **규칙 채우기**
 
-선택적 채우기 규칙에는 두 가지 가능한 값 ( **F0** 또는 **F1**)이 있습니다. **F** 는 항상 대문자입니다. 기본값은 **F0** 입니다. **EvenOdd** 채우기 동작을 생성 하므로 일반적으로 지정 하지 않습니다. **F1 키** 를 사용 하 여 **0이 아닌** 채우기 동작을 가져옵니다. 이러한 채우기 값은 [**Fillrule**](/uwp/api/Windows.UI.Xaml.Media.FillRule) 열거형의 값에 맞춰집니다.
+선택적 채우기 규칙에는 두 가지 가능한 값 ( **F0** 또는 **F1** )이 있습니다. **F** 는 항상 대문자입니다. 기본값은 **F0** 입니다. **EvenOdd** 채우기 동작을 생성 하므로 일반적으로 지정 하지 않습니다. **F1 키** 를 사용 하 여 **0이 아닌** 채우기 동작을 가져옵니다. 이러한 채우기 값은 [**Fillrule**](/uwp/api/Windows.UI.Xaml.Media.FillRule) 열거형의 값에 맞춰집니다.
 
 **명령 이동**
 
@@ -75,11 +75,11 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**그림**](/uw
 
 | 용어 | Description |
 |------|-------------|
-| _startPoint_ | [**Point**](/uwp/api/Windows.Foundation.Point) <br/>새 그림의 시작점입니다.|
+| _점을_ | [**Point**](/uwp/api/Windows.Foundation.Point) <br/>새 그림의 시작점입니다.|
 
 대문자 **M** *은 시작점이 절대* 좌표 임을 나타냅니다. 소문자 **m** 은 이동 점이 이전 지점에 대 한 오프셋 이거나 이전 점이 없는 경우 (0, 0 *) 임을 나타냅니다* .
 
-**참고**    Move 명령 뒤에 여러 요소를 지정할 수 있습니다. 줄은 줄 명령을 지정한 것 처럼 해당 점에 그려집니다. 그러나 권장 되는 스타일이 아닙니다. 대신 전용 줄 명령을 사용 합니다.
+**참고**  Move 명령 뒤에 여러 요소를 지정할 수 있습니다. 줄은 줄 명령을 지정한 것 처럼 해당 점에 그려집니다. 그러나 권장 되는 스타일이 아닙니다. 대신 전용 줄 명령을 사용 합니다.
 
 **그리기 명령**
 
@@ -111,7 +111,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**그림**](/uw
 
 | 용어 | Description |
 |------|-------------|
-| x | [**차례로**](/dotnet/api/system.double) <br/> 선 끝점의 x 좌표입니다. |
+| x | [**double**](/dotnet/api/system.double) <br/> 선 끝점의 x 좌표입니다. |
 
 **세로줄 명령**
 
@@ -123,11 +123,11 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**그림**](/uw
 
 | 용어 | Description |
 |------|-------------|
-| *y* | [**차례로**](/dotnet/api/system.double) <br/> 선 끝점의 y 좌표입니다. |
+| *y* | [**double**](/dotnet/api/system.double) <br/> 선 끝점의 y 좌표입니다. |
 
 **입방 형 3 차원 곡선 명령**
 
-지정 된 두 제어점 (*controlPoint1* 및 *controlPoint2*)을 사용 하 여 현재 점과 지정 된 끝점 간에 입방 형 3 차원 곡선을 만듭니다. `C 100,200 200,400 300,200`은 유효한 곡선 명령의 예입니다. [**System.windows.media.beziersegment>**](/uwp/api/Windows.UI.Xaml.Media.BezierSegment) 개체를 사용 하 여 [**pathgeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) 개체에 해당 하는를 정의 합니다.
+지정 된 두 제어점 ( *controlPoint1* 및 *controlPoint2* )을 사용 하 여 현재 점과 지정 된 끝점 간에 입방 형 3 차원 곡선을 만듭니다. `C 100,200 200,400 300,200`은 유효한 곡선 명령의 예입니다. [**System.windows.media.beziersegment>**](/uwp/api/Windows.UI.Xaml.Media.BezierSegment) 개체를 사용 하 여 [**pathgeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) 개체에 해당 하는를 정의 합니다.
 
 | 구문 |
 |--------|
@@ -137,11 +137,11 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**그림**](/uw
 |------|-------------|
 | *controlPoint1* | [**Point**](/uwp/api/Windows.Foundation.Point) <br/> 곡선의 시작 접선을 결정하는 곡선의 첫 번째 제어점입니다. |
 | *controlPoint2* | [**Point**](/uwp/api/Windows.Foundation.Point) <br/> 곡선의 끝 접선을 결정하는 곡선의 두 번째 제어점입니다. |
-| *끝점만* | [**Point**](/uwp/api/Windows.Foundation.Point) <br/> 곡선을 그릴 지점입니다. | 
+| *끝점만* | [**Point**](/uwp/api/Windows.Foundation.Point) <br/> 곡선을 그릴 지점입니다. | 
 
 **정방형 3차원 곡선 명령**
 
-지정 된 제어점 (*controlPoint*)을 사용 하 여 현재 지점과 지정 된 끝점 사이에 정방형 3 차원 곡선을 만듭니다. `q 100,200 300,200` 는 유효한 정방형 3 차원 곡선 명령의 예입니다. [**QuadraticBezierSegment**](/uwp/api/Windows.UI.Xaml.Media.QuadraticBezierSegment)를 사용 하 여 [**pathgeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) 에 해당 하는를 정의 합니다.
+지정 된 제어점 ( *controlPoint* )을 사용 하 여 현재 지점과 지정 된 끝점 사이에 정방형 3 차원 곡선을 만듭니다. `q 100,200 300,200` 는 유효한 정방형 3 차원 곡선 명령의 예입니다. [**QuadraticBezierSegment**](/uwp/api/Windows.UI.Xaml.Media.QuadraticBezierSegment)를 사용 하 여 [**pathgeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) 에 해당 하는를 정의 합니다.
 
 | 구문 |
 |--------|
@@ -154,7 +154,7 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**그림**](/uw
 
 **부드러운 입방 형 3 차원 곡선 명령**
 
-현재 지점과 지정 된 끝점 간에 입방 형 3 차원 곡선을 만듭니다. 첫 번째 제어점은 현재 점을 기준으로 이전 명령의 두 번째 제어점의 리플렉션으로 간주됩니다. 이전 명령이 없거나 이전 명령이 입방 형 3 차원 곡선 명령 또는 부드러운 입방 형 3 차원 곡선 명령이 아닌 경우 첫 번째 제어점이 현재 지점과 일치 하는 것으로 가정 합니다. 두 번째 제어점, 즉 곡선 끝에 대한 제어점은 *controlPoint2*에 의해 지정됩니다. 예를 들어 `S 100,200 200,300` 은 유효한 부드러운 입방 형 3 차원 곡선 명령입니다. 이 명령은 앞에 곡선 세그먼트가 있었던 [**system.windows.media.beziersegment>**](/uwp/api/Windows.UI.Xaml.Media.BezierSegment) 를 사용 하 여 [**pathgeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) 에 해당 하는를 정의 합니다.
+현재 지점과 지정 된 끝점 간에 입방 형 3 차원 곡선을 만듭니다. 첫 번째 제어점은 현재 점을 기준으로 이전 명령의 두 번째 제어점의 리플렉션으로 간주됩니다. 이전 명령이 없거나 이전 명령이 입방 형 3 차원 곡선 명령 또는 부드러운 입방 형 3 차원 곡선 명령이 아닌 경우 첫 번째 제어점이 현재 지점과 일치 하는 것으로 가정 합니다. 두 번째 제어점, 즉 곡선 끝에 대한 제어점은 *controlPoint2* 에 의해 지정됩니다. 예를 들어 `S 100,200 200,300` 은 유효한 부드러운 입방 형 3 차원 곡선 명령입니다. 이 명령은 앞에 곡선 세그먼트가 있었던 [**system.windows.media.beziersegment>**](/uwp/api/Windows.UI.Xaml.Media.BezierSegment) 를 사용 하 여 [**pathgeometry**](/uwp/api/Windows.UI.Xaml.Media.PathGeometry) 에 해당 하는를 정의 합니다.
 
 | 구문 |
 |--------|
@@ -184,16 +184,16 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**그림**](/uw
 
 | 구문 |
 |--------|
-| `A `*size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* <br/> -또는- <br/>`a `*sizerotationAngleisLargeArcFlagsweepDirectionFlagendPoint* |
+| `A `*size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* <br/> -또는- <br/>`a `*size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* |
 
 | 용어 | Description |
 |------|-------------|
-| *size* | [**Size**](/uwp/api/Windows.Foundation.Size)<br/>원호의 x 반지름과 y 반경입니다. |
-| *rotationAngle* | [**차례로**](/dotnet/api/system.double) <br/> 타원의 회전 각도입니다. |
+| *size* | [**크기**](/uwp/api/Windows.Foundation.Size)<br/>원호의 x 반지름과 y 반경입니다. |
+| *rotationAngle* | [**double**](/dotnet/api/system.double) <br/> 타원의 회전 각도입니다. |
 | *isLargeArcFlag* | 호의 각도가 180도보다 커야 하면 1로 설정하고, 그렇지 않으면 0으로 설정합니다. |
 | *sweepDirectionFlag* | 호가 양의 각도 방향으로 그려지면 1로 설정하고, 그렇지 않으면 0으로 설정합니다. |
-| *끝점만* | [**Point**](/uwp/api/Windows.Foundation.Point) <br/> 호를 그리는 점입니다.|
- 
+| *끝점만* | [**Point**](/uwp/api/Windows.Foundation.Point) <br/> 호를 그리는 점입니다. |
+
 **닫기 명령**
 
 현재 그림을 끝내고 현재 점을 그림의 시작 점에 연결하는 선을 만듭니다. 이 명령은 그림의 마지막 세그먼트와 첫 번째 세그먼트 사이에 선 조인(모서리)을 만듭니다.
@@ -208,20 +208,20 @@ Windows 런타임 XAML의 경우 이동 및 그리기 명령은 [**그림**](/uw
 
 | 구문 |
 |--------|
-| *x*,*y*<br/> -또는- <br/>*x* *y* |
+| *x* , *y*<br/> -또는- <br/>*x* *y* |
 
 | 용어 | Description |
 |------|-------------|
-| *x* | [**차례로**](/dotnet/api/system.double) <br/> 점의 X 좌표입니다. |
-| *y* | [**차례로**](/dotnet/api/system.double) <br/> 점의 Y 좌표입니다. |
+| *x* | [**double**](/dotnet/api/system.double) <br/> 점의 X 좌표입니다. |
+| *y* | [**double**](/dotnet/api/system.double) <br/> 점의 Y 좌표입니다. |
 
 **추가 참고 사항**
 
 표준 숫자 값 대신 다음과 같은 특수 값을 사용할 수도 있습니다. 이러한 값은 대/소문자를 구분합니다.
 
--   **Infinity**: **PositiveInfinity**를 나타냅니다.
--   ** \- Infinity**: **NegativeInfinity**를 나타냅니다.
--   **Nan**: **nan**을 나타냅니다.
+-   **Infinity** : **PositiveInfinity** 를 나타냅니다.
+-   **\- Infinity** : **NegativeInfinity** 를 나타냅니다.
+-   **Nan** : **nan** 을 나타냅니다.
 
 Decimals 또는 정수를 사용 하는 대신 과학적 표기법을 사용할 수 있습니다. 예를 들어 `+1.e17` 는 유효한 값입니다.
 
@@ -231,7 +231,7 @@ Blend의 **펜** 도구와 기타 그리기 도구를 Microsoft Visual Studio 20
 
 컨트롤의 Windows 런타임 XAML 기본 템플릿에 정의 된 컨트롤 부분 중 일부에 기존 이동 및 그리기 명령 데이터가 표시 될 수 있습니다. 예를 들어 일부 컨트롤은 데이터를 이동 및 그리기 명령으로 정의 하는 [**Pathicon**](/uwp/api/Windows.UI.Xaml.Controls.PathIcon) 을 사용 합니다.
 
-XAML 형식으로 벡터를 출력할 수 있는 일반적으로 사용 되는 다른 벡터 그래픽 디자인 도구에 대해 내보내기 또는 플러그 인을 사용할 수 있습니다. 일반적으로 [**경로 데이터**](/uwp/api/windows.ui.xaml.shapes.path.data)에 대 한 이동 및 그리기 명령을 사용 하 여 레이아웃 컨테이너에 [**경로**](/uwp/api/Windows.UI.Xaml.Shapes.Path) 개체를 만듭니다. 서로 다른 브러시를 적용할 수 있도록 XAML에 **경로** 요소가 여러 개 있을 수 있습니다. 이러한 많은 내보내기 또는 플러그 인은 원래 Windows Presentation Foundation (WPF) XAML 또는 Silverlight에 대해 작성 되었지만 XAML 경로 구문은 Windows 런타임 XAML과 동일 합니다. 일반적으로 내보내기에서 XAML 청크를 사용 하 여 Windows 런타임 XAML 페이지에 바로 붙여 넣을 수 있습니다. 그러나 Windows 런타임 XAML이 해당 브러시를 지원 하지 않기 때문에 변환 된 XAML의 일부인 경우에는 **RadialGradientBrush**을 사용할 수 없습니다.
+XAML 형식으로 벡터를 출력할 수 있는 일반적으로 사용 되는 다른 벡터 그래픽 디자인 도구에 대해 내보내기 또는 플러그 인을 사용할 수 있습니다. 일반적으로 [**경로 데이터**](/uwp/api/windows.ui.xaml.shapes.path.data)에 대 한 이동 및 그리기 명령을 사용 하 여 레이아웃 컨테이너에 [**경로**](/uwp/api/Windows.UI.Xaml.Shapes.Path) 개체를 만듭니다. 서로 다른 브러시를 적용할 수 있도록 XAML에 **경로** 요소가 여러 개 있을 수 있습니다. 이러한 많은 내보내기 또는 플러그 인은 원래 Windows Presentation Foundation (WPF) XAML 또는 Silverlight에 대해 작성 되었지만 XAML 경로 구문은 Windows 런타임 XAML과 동일 합니다. 일반적으로 내보내기에서 XAML 청크를 사용 하 여 Windows 런타임 XAML 페이지에 바로 붙여 넣을 수 있습니다. 그러나 Windows 런타임 XAML이 해당 브러시를 지원 하지 않기 때문에 변환 된 XAML의 일부인 경우에는 **RadialGradientBrush** 을 사용할 수 없습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
