@@ -6,18 +6,18 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ab8d696ddb1a4ef9e3dc3549754cbf51fc91374
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 9a0005ecf7d51cc6b08bc5cc61350489839d568f
+ms.sourcegitcommit: 047004e2bf100e319d134c18518062bf7f3efb5d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220546"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92763107"
 ---
 # <a name="drag-and-drop"></a>끌어서 놓기
 
 끌어서 놓기는 응용 프로그램 내에서 또는 Windows 데스크톱의 응용 프로그램 간에 데이터를 전송 하는 직관적인 방법입니다. 끌어서 놓기를 사용 하면 사용자가 표준 제스처를 사용 하 여 응용 프로그램이 나 응용 프로그램 간에 데이터를 전송할 수 있습니다. 즉, 손가락을 사용 하 여 누르고 있다가 마우스나 스타일러스를 사용 하 여 누르고 이동 합니다.
 
-> **중요 한 api**: [candrag 속성](/uwp/api/windows.ui.xaml.uielement.candrag), [allowdrop 속성](/uwp/api/windows.ui.xaml.uielement.allowdrop) 
+> **중요 한 api** : [candrag 속성](/uwp/api/windows.ui.xaml.uielement.candrag), [allowdrop 속성](/uwp/api/windows.ui.xaml.uielement.allowdrop) 
 
 끌기 제스처가 트리거되는 응용 프로그램이 나 영역인 끌기 소스는 텍스트, RTF, HTML, 비트맵, 저장소 항목 또는 사용자 지정 데이터 형식을 비롯 한 표준 데이터 형식을 포함할 수 있는 데이터 패키지 개체를 채워 전송할 데이터를 제공 합니다. 소스는 지원 되는 작업의 종류 (복사, 이동 또는 연결)도 나타냅니다. 포인터를 놓으면 drop이 발생 합니다. 포인터 아래에 있는 응용 프로그램 또는 영역인 놓기 대상은 데이터 패키지를 처리 하 고 수행 된 작업의 유형을 반환 합니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "91220546"
 
 ## <a name="enable-dragging"></a>끌기 사용
 
-요소에 대 한 끌기를 사용 하도록 설정 하려면 [**Candrag**](/uwp/api/windows.ui.xaml.uielement.candrag) 속성을 **true**로 설정 합니다. 이로 인해 ListView와 같은 컬렉션의 경우 요소 및이 요소에 포함 된 요소를 만듭니다.
+요소에 대 한 끌기를 사용 하도록 설정 하려면 [**Candrag**](/uwp/api/windows.ui.xaml.uielement.candrag) 속성을 **true** 로 설정 합니다. 이를 통해 요소와 여기에 포함 된 요소에 ListView와 같은 컬렉션의 경우 끌기 가능 합니다.
 
 끌 수 있는 기능에 대해 구체적으로 지정 합니다. 사용자는 응용 프로그램에서 이미지 또는 텍스트와 같은 특정 항목만 끌어 놓는 것을 원하지 않습니다. 
 
@@ -95,6 +95,12 @@ UI를 사용자 지정 하려는 경우 (이 문서의 뒷부분에서 설명)�
 [**ListViewItem**](/uwp/api/Windows.UI.Xaml.Controls.ListViewItem) 또는 [**GridViewItem**](/uwp/api/Windows.UI.Xaml.Controls.GridViewItem) 을 폴더로 지정할 수 있습니다. 이 기능은 TreeView 및 파일 탐색기 시나리오에 특히 유용 합니다. 이렇게 하려면 해당 항목에 대해 [**Allowdrop**](/uwp/api/windows.ui.xaml.uielement.allowdrop) 속성을 **True** 로 명시적으로 설정 합니다. 
 
 폴더에 폴더 이외의 항목에 대 한 적절 한 애니메이션을 자동으로 표시 합니다. 응용 프로그램 코드는 데이터 원본을 업데이트 하 고 삭제 된 항목을 대상 폴더에 추가 하기 위해 폴더 항목 뿐만 아니라 폴더 항목에 대 한 [**Drop**](/uwp/api/windows.ui.xaml.uielement.drop) 이벤트를 계속 처리 해야 합니다.
+
+## <a name="enable-drag-and-drop-reordering-within-listviews"></a>Listview 내에서 끌어서 놓기 다시 정렬 사용
+
+[**ListView**](/uwp/api/Windows.UI.Xaml.Controls.ListView)s는이 문서에 설명 된 **candrop** API와 매우 유사한 api를 사용 하 여 즉시 끌어서 기반 순서 변경을 지원 합니다. 최소한 **Allowdrop** 및 **CanReorderItems** 속성을 추가 합니다.
+
+자세한 내용은 [**ListViewBase. CanReorderItems**](/uwp/api/windows.ui.xaml.controls.listviewbase.canreorderitems) 를 참조 하세요.
 
 ## <a name="implementing-custom-drag-and-drop"></a>사용자 지정 끌어서 놓기 구현
 
