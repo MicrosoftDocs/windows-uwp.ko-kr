@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 09db3caefccfce3ff110cb034efa27ff53c4154a
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 3d4bb343f2a8535fae60e19cd417099a99ae852d
+ms.sourcegitcommit: 6c1d2dd99221242d5d09f17e99f87302143c6180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218226"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92644321"
 ---
 # <a name="guidelines-for-app-settings"></a>앱 설정에 대한 지침
 
@@ -82,7 +82,7 @@ ms.locfileid: "91218226"
 - Dark
 - Windows 기본값
 
-또한 사용자가 현재 기본 앱 모드에 액세스하여 수정할 수 있도록 Windows 설정 앱의 색 페이지에 하이퍼링크를 추가하는 것이 좋습니다. 하이퍼링크 텍스트에 “Windows 색 설정”이라는 문자열을 사용하십시오.
+또한 사용자가 현재 기본 앱 모드에 액세스하여 수정할 수 있도록 Windows 설정 앱의 색 페이지에 하이퍼링크를 추가하는 것이 좋습니다. 하이퍼링크 텍스트에 “Windows 색 설정”이라는 문자열을 사용하고, URI에는 `ms-settings:colors`를 사용하십시오.
 
 ![“모드 선택” 섹션](images/appsettings_mode.png)
 
