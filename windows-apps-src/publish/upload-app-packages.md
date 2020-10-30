@@ -1,17 +1,17 @@
 ---
-Description: 패키지 페이지에서는 제출 중인 앱에 대 한 모든 패키지 파일 (.appxupload, .appx, .appxbundle 및/또는 .xap)을 업로드 합니다.
+description: 패키지 페이지에서는 제출 중인 앱에 대 한 모든 패키지 파일 (.appxupload, .appx, .appxbundle 및/또는 .xap)을 업로드 합니다.
 title: 앱 패키지 업로드
 ms.assetid: B1BB810D-3EAA-4FB5-B03C-1F01AFB2DE36
 ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 패키지, 업로드, 패키지 업로드
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b4fc0c9dfeed1183a1653b525d0f8cc8a62a4c1
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: c2e72a767b9d50f81fba548531965d75d4ce0b56
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220216"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034956"
 ---
 # <a name="upload-app-packages"></a>앱 패키지 업로드
 
@@ -44,7 +44,7 @@ ms.locfileid: "91220216"
 
 ## <a name="package-details"></a>패키지 세부 정보
 
-업로드 된 패키지는 대상 운영 체제별로 그룹화 되어 나열 됩니다. 패키지의 이름, 버전 및 아키텍처가 표시 됩니다. 각 패키지에 대해 지원 되는 언어, 앱 기능 및 파일 크기와 같은 자세한 정보를 보려면 **자세한 정보 표시**를 클릭 합니다.
+업로드 된 패키지는 대상 운영 체제별로 그룹화 되어 나열 됩니다. 패키지의 이름, 버전 및 아키텍처가 표시 됩니다. 각 패키지에 대해 지원 되는 언어, 앱 기능 및 파일 크기와 같은 자세한 정보를 보려면 **자세한 정보 표시** 를 클릭 합니다.
 
 제출에서 패키지를 제거 해야 하는 경우 각 패키지의 **세부 정보** 섹션 아래쪽에 있는 **제거** 링크를 클릭 합니다.
 
@@ -65,11 +65,11 @@ ms.locfileid: "91220216"
 
 ## <a name="mandatory-update"></a>필수 업데이트
 
-이전에 게시 된 앱에 대 한 업데이트를 제출 하는 경우 **이 업데이트를 필수로 설정**하 라는 확인란이 표시 됩니다. 이를 통해 응용 프로그램에서 패키지 업데이트를 프로그래밍 방식으로 확인 하 고 업데이트 된 패키지를 다운로드 및 설치할 수 있도록 하는 경우 필수 업데이트에 대 한 날짜 및 시간을 설정할 수 있습니다. 이 옵션을 사용 하려면 앱이 Windows 10 버전 1607 이상을 대상으로 해야 합니다.
+이전에 게시 된 앱에 대 한 업데이트를 제출 하는 경우 **이 업데이트를 필수로 설정** 하 라는 확인란이 표시 됩니다. 이를 통해 응용 프로그램에서 패키지 업데이트를 프로그래밍 방식으로 확인 하 고 업데이트 된 패키지를 다운로드 및 설치할 수 있도록 하는 경우 필수 업데이트에 대 한 날짜 및 시간을 설정할 수 있습니다. 이 옵션을 사용 하려면 앱이 Windows 10 버전 1607 이상을 대상으로 해야 합니다.
 
 자세한 내용은 [앱에 대 한 패키지 업데이트 다운로드 및 설치](../packaging/self-install-package-updates.md)를 참조 하세요.
 
- 
+ 
 
 
 

@@ -1,17 +1,17 @@
 ---
-Description: 밀기 제스처를 사용 하 여 선택 영역을 지원 하 고 슬라이드 제스처를 사용 하 여 상호 작용을 끄는 (이동) 할 수 있습니다.
+description: 밀기 제스처를 사용 하 여 선택 영역을 지원 하 고 슬라이드 제스처를 사용 하 여 상호 작용을 끄는 (이동) 할 수 있습니다.
 title: 슬라이드 간 지침
 ms.assetid: 897555e2-c567-4bbe-b600-553daeb223d5
 ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b16c957991889cb5f39a775397de72ff56beffc
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: ad51e23e29b4fcdb3b1906054762a0e432b6612a
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749980"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035166"
 ---
 # <a name="guidelines-for-cross-slide"></a>슬라이드 간 지침
 
@@ -56,7 +56,7 @@ ms.locfileid: "91749980"
 
 단일 방향으로 스크롤 하는 목록 또는 컬렉션에 대해 교차 슬라이드를 사용 합니다. 자세한 내용은 [ListView 컨트롤 추가](/previous-versions/windows/apps/hh465382(v=win.10))를 참조 하세요.
 
-**참고**    콘텐츠 영역을 두 방향 (예: 웹 브라우저 또는 e-learning)으로 따라 이동 수 있는 경우에는 이미지 및 하이퍼링크와 같은 개체에 대 한 상황에 맞는 메뉴를 호출 하기 위해 누르고 있는 시간 제한의 상호 작용을 사용 해야 합니다.
+**참고**  콘텐츠 영역을 두 방향 (예: 웹 브라우저 또는 e-learning)으로 따라 이동 수 있는 경우에는 이미지 및 하이퍼링크와 같은 개체에 대 한 상황에 맞는 메뉴를 호출 하기 위해 누르고 있는 시간 제한의 상호 작용을 사용 해야 합니다.
 
 :::row:::
    :::column:::
@@ -152,6 +152,6 @@ ms.locfileid: "91749980"
 - [입력: Windows 8 제스처 샘플](/samples/browse/?redirectedfrom=MSDN-samples)
 - [Input: 조작 및 제스처 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
 - [DirectX touch 입력 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))
- 
+ 
 
- 
+ 

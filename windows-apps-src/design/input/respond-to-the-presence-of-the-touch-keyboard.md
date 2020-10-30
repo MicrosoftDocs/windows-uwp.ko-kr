@@ -1,5 +1,5 @@
 ---
-Description: 터치 키보드를 표시 하거나 숨길 때 응용 프로그램의 UI를 조정 하는 방법에 대해 알아봅니다.
+description: 터치 키보드를 표시 하거나 숨길 때 응용 프로그램의 UI를 조정 하는 방법에 대해 알아봅니다.
 title: 터치 키보드의 현재 상태에 응답
 ms.assetid: 70C6130E-23A2-4F9D-88E7-7060062DA988
 label: Respond to the presence of the touch keyboard
@@ -7,12 +7,12 @@ template: detail.hbs
 keywords: 키보드, 접근성, 탐색, 포커스, 텍스트, 입력, 사용자 상호 작용
 ms.date: 09/24/2020
 ms.topic: article
-ms.openlocfilehash: 4af7e7533ebd985a22eedd2e11f35d8bf5f5dc8a
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: c3431fcafb86428ce5eddb8ea7a6b0187b64a5e5
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216906"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035086"
 ---
 # <a name="respond-to-the-presence-of-the-touch-keyboard"></a>터치 키보드의 현재 상태에 응답
 
@@ -54,7 +54,7 @@ Windows 앱 개발에 익숙하지 않은 경우이 항목을 살펴보고 여�
 
 - 양식과의 전체 상호 작용 전체에서 터치 키보드를 표시 합니다.
 
-- 텍스트 입력의 컨텍스트에서 포커스가 텍스트 입력 필드에서 이동할 때 키보드를 유지 하기 위해 사용자 지정 컨트롤에 적절 한 UI 자동화 [AutomationControlType](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType) 있는지 확인 합니다. 예를 들어 텍스트 입력 시나리오의 중간에 열리는 메뉴가 있고 키보드를 유지 하려는 경우 메뉴에 **AutomationControlType** of 메뉴가 있어야 합니다.
+- 텍스트 입력 컨텍스트에 있는 동안 포커스가 텍스트 입력 필드에서 다른 위치로 이동될 때 키보드가 지속되도록 하기 위해 사용자 지정 컨트롤에 적절한 UI 자동화 [AutomationControlType](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)이 있는지 확인합니다. 예를 들어 텍스트 입력 시나리오의 중간에 열리는 메뉴가 있고 키보드를 유지 하려는 경우 메뉴에 **AutomationControlType** of 메뉴가 있어야 합니다.
 
 - 터치 키보드를 제어 하기 위해 UI 자동화 속성을 조작 하지 마세요. 다른 내게 필요한 옵션 도구는 UI 자동화 속성의 정확도를 사용 합니다.
 
@@ -66,7 +66,7 @@ Windows 앱 개발에 익숙하지 않은 경우이 항목을 살펴보고 여�
 
     ![터치 키보드를 표시 하거나 표시 하지 않는 폼](images/touch-keyboard-pan1.png)
 
-    경우에 따라 전체 시간에 화면에 유지 해야 하는 UI 요소가 있습니다. 폼 컨트롤이 패닝 영역에 포함 되 고 중요 한 UI 요소가 고정 되도록 UI를 디자인 합니다. 예를 들어:
+    경우에 따라 전체 시간에 화면에 유지 해야 하는 UI 요소가 있습니다. 폼 컨트롤이 패닝 영역에 포함 되 고 중요 한 UI 요소가 고정 되도록 UI를 디자인 합니다. 예를 들면 다음과 같습니다.
 
     ![항상 보기 상태를 유지 해야 하는 영역을 포함 하는 폼입니다.](images/touch-keyboard-pan2.png)
 

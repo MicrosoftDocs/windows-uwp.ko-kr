@@ -1,5 +1,5 @@
 ---
-Description: 이 항목에서는 터치 대상 지정을 위한 연락처 기 하 도형 사용에 대해 설명 하 고 Windows 런타임 apps에서 대상 지정을 위한 모범 사례를 제공 합니다.
+description: 이 항목에서는 터치 대상 지정을 위한 연락처 기 하 도형 사용에 대해 설명 하 고 Windows 런타임 apps에서 대상 지정을 위한 모범 사례를 제공 합니다.
 title: 대상 지정
 ms.assetid: 93ad2232-97f3-42f5-9e45-3fc2143ac4d2
 label: Targeting
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 64142b1ec35040ded890d837245ecae36e03fdc1
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: a8b6113294d3f3c0c98946f0fed407e36de8a563
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216986"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035066"
 ---
 # <a name="guidelines-for-touch-targets"></a>터치 대상에 대한 지침
 
@@ -25,11 +25,11 @@ ms.locfileid: "91216986"
 
 이 항목에서는 이러한 기본 동작을 설명 하므로 플랫폼 컨트롤과 사용자 지정 컨트롤 (앱에 필요한 경우)을 모두 사용 하 여 최대의 유용성을 위해 앱을 디자인할 수 있습니다.
 
-> **중요 한 api**: [**windows**](/uwp/api/Windows.UI.Core). ui&gt. [**input**](/uwp/api/Windows.UI.Input), [**windows. .xaml. input**](/uwp/api/Windows.UI.Xaml.Input)
+> **중요 한 api** : [**windows**](/uwp/api/Windows.UI.Core). ui&gt. [**input**](/uwp/api/Windows.UI.Input), [**windows. .xaml. input**](/uwp/api/Windows.UI.Xaml.Input)
 
 ## <a name="fluent-standard-sizing"></a>Fluent 표준 크기
 
-*Fluent 표준 크기*는 정보 밀도와 사용자 편의 간에 균형을 유지하기 위해 개발되었습니다. 화면에 있는 모든 항목을 40x40 유효 픽셀(epx) 대상에 맞추기 때문에 UI 요소를 그리드에 맞추고 시스템 수준 스케일링에 따라 적절하게 크기를 조정할 수 있습니다.
+*Fluent 표준 크기* 는 정보 밀도와 사용자 편의 간에 균형을 유지하기 위해 개발되었습니다. 화면에 있는 모든 항목을 40x40 유효 픽셀(epx) 대상에 맞추기 때문에 UI 요소를 그리드에 맞추고 시스템 수준 스케일링에 따라 적절하게 크기를 조정할 수 있습니다.
 
 > [!NOTE]
 > 유효 픽셀과 크기 조정에 대한 자세한 내용은 [Windows 앱 디자인 소개](../basics/design-and-ui-intro.md#effective-pixels-and-scaling)를 참조하세요.
@@ -38,9 +38,9 @@ ms.locfileid: "91216986"
 
 ## <a name="fluent-compact-sizing"></a>Fluent 컴팩트 크기
 
-응용 프로그램은 *흐름 Compact 크기 조정*으로 높은 수준의 정보 밀도를 표시할 수 있습니다. 압축 크기 조정은 UI 요소를 32x32 window.epx.codesnippet 대상에 맞추고,이를 통해 UI 요소를 보다 엄격한 모눈에 맞추고 시스템 수준 크기 조정에 따라 적절 하 게 확장할 수 있습니다.
+응용 프로그램은 *흐름 Compact 크기 조정* 으로 높은 수준의 정보 밀도를 표시할 수 있습니다. 압축 크기 조정은 UI 요소를 32x32 window.epx.codesnippet 대상에 맞추고,이를 통해 UI 요소를 보다 엄격한 모눈에 맞추고 시스템 수준 크기 조정에 따라 적절 하 게 확장할 수 있습니다.
 
-### <a name="examples"></a>예제
+### <a name="examples"></a>예
 
 컴팩트 크기 조정은 페이지 또는 그리드 수준에서 적용할 수 있습니다.
 

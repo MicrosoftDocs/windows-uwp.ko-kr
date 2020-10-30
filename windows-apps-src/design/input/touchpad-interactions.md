@@ -1,5 +1,5 @@
 ---
-Description: 터치 패드에 최적화 되어 있지만 입력 장치에서 기능적으로 일관 된 직관적인 직관적인 사용자 조작 환경을 사용 하 여 Windows 앱을 만듭니다.
+description: 터치 패드에 최적화 되어 있지만 입력 장치에서 기능적으로 일관 된 직관적인 직관적인 사용자 조작 환경을 사용 하 여 Windows 앱을 만듭니다.
 title: 터치 패드 조작
 ms.assetid: CEDEA30A-FE94-4553-A7FB-6C1FA44F06AB
 label: Touchpad interactions
@@ -8,19 +8,19 @@ keywords: 터치 패드, PTP, 터치, 포인터, 입력, 사용자 상호 작용
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 86c47a3a510f6ed0d865064e8d140c47c8dd9f78
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 6b0e0a7e45ee63d845a1d5b0057d00da11e01c18
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220436"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035096"
 ---
 # <a name="touchpad-design-guidelines"></a>터치 패드 디자인 지침
 
 
 사용자가 터치 패드를 통해 상호 작용할 수 있도록 앱을 디자인 합니다. 터치 패드는 간접 다중 터치 입력을 마우스와 같은 포인팅 장치의 전체 자릿수 입력과 결합 합니다. 이 조합을 사용 하면 터치가 최적화 된 UI와 생산성 앱의 더 작은 대상에 모두 적합 합니다.
 
- 
+ 
 
 ![패드](images/input-patterns/input-touchpad.jpg)
 
@@ -114,12 +114,12 @@ ms.locfileid: "91220436"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="hardware"></a>하드웨어
 
 
-마우스 장치 기능 ([**MouseCapabilities**](/uwp/api/Windows.Devices.Input.MouseCapabilities))을 쿼리하여 터치 패드 하드웨어에서 직접 액세스할 수 있는 앱 UI의 측면을 파악 합니다. 터치와 마우스 입력 모두에 UI를 제공 하는 것이 좋습니다.
+마우스 장치 기능 ( [**MouseCapabilities**](/uwp/api/Windows.Devices.Input.MouseCapabilities))을 쿼리하여 터치 패드 하드웨어에서 직접 액세스할 수 있는 앱 UI의 측면을 파악 합니다. 터치와 마우스 입력 모두에 UI를 제공 하는 것이 좋습니다.
 
 장치 기능을 쿼리 하는 방법에 대 한 자세한 내용은 [입력 장치 식별](identify-input-devices.md)을 참조 하세요.
 

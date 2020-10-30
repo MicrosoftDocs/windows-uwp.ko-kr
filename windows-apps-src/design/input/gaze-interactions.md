@@ -1,6 +1,6 @@
 ---
 title: 응시 조작
-Description: Windows 앱을 디자인 하 고 최적화 하 여 눈동자 및 헤드 추적기의 입력을 사용 하는 사용자에 게 가능한 최상의 환경을 제공 하는 방법을 알아봅니다.
+description: Windows 앱을 디자인 하 고 최적화 하 여 눈동자 및 헤드 추적기의 입력을 사용 하는 사용자에 게 가능한 최상의 환경을 제공 하는 방법을 알아봅니다.
 label: Gaze interactions
 template: detail.hbs
 keywords: 응시, 눈 추적, 헤드 추적, 응시 지점, 입력, 사용자 조작, 접근성, 유용성
@@ -11,12 +11,12 @@ dev-contact: Austin Hodges
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: fa08cb65afc46069e48263344270e1e3b1a3d5f5
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 7799c95642b412d67b69c87dba54bf5c68ab9761
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217026"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035136"
 ---
 # <a name="gaze-interactions-and-eye-tracking-in-windows-apps"></a>Windows 앱에서 상호 작용 및 눈 추적 응시
 
@@ -27,7 +27,7 @@ ms.locfileid: "91217026"
 > [!NOTE]
 > [Windows Mixed Reality](/windows/mixed-reality/)에서의 응시 입력은 [응시](/windows/mixed-reality/gaze)를 참조 하세요.
 
-**중요 한 api**: [GazeDevicePreview](/uwp/api/windows.devices.input.preview.gazedevicepreview), [GazePointPreview](/uwp/api/windows.devices.input.preview.gazepointpreview) [,](/uwp/api/windows.devices.input.preview) [GazeInputSourcePreview](/uwp/api/windows.devices.input.preview.gazeinputsourcepreview)
+**중요 한 api** : [GazeDevicePreview](/uwp/api/windows.devices.input.preview.gazedevicepreview), [GazePointPreview](/uwp/api/windows.devices.input.preview.gazepointpreview) [,](/uwp/api/windows.devices.input.preview) [GazeInputSourcePreview](/uwp/api/windows.devices.input.preview.gazeinputsourcepreview)
 
 ## <a name="overview"></a>개요
 
@@ -36,21 +36,21 @@ ms.locfileid: "91217026"
 또한, 응시 입력은 게임 (대상 취득 및 추적 포함), 기존 생산성 응용 프로그램, 키오스크 및 기존 입력 장치 (키보드, 마우스, 터치)를 사용할 수 없는 기타 대화형 시나리오에 대해 동일 하 게 뛰어난 기회를 제공 하 고, 다른 작업 (예: 시장 가방 보유)을 위해 사용자의 손을 확보 하는 데 유용 하거나 유용한 기타 대화형 시나리오를 제공 합니다.
 
 > [!NOTE]
-> 아이 추적 하드웨어 지원은 눈동자를 사용 하 여 화면에 있는 포인터를 제어 하 고, 화상 키보드를 사용 하 여 입력 하 고, 텍스트를 음성으로 변환 하 여 사용자와 통신할 수 있도록 하는 기본 제공 기능인 [아이 컨트롤과](https://support.microsoft.com/help/4043921/windows-10-get-started-eye-control)함께 Windows 10으로 구성 된 **작성자 업데이트** 에 도입 되었습니다. 아이 추적 하드웨어와 상호 작용할 수 있는 응용 프로그램을 빌드하기 위한 Windows 런타임 Api (2018) 집합은 **Windows 10 4 월 업데이트 (버전 1803, 빌드 17134)** 이상에서 사용할 수[있습니다.](/uwp/api/windows.devices.input.preview)
+> 아이 추적 하드웨어 지원은 눈동자를 사용 하 여 화면에 있는 포인터를 제어 하 고, 화상 키보드를 사용 하 여 입력 하 고, 텍스트를 음성으로 변환 하 여 사용자와 통신할 수 있도록 하는 기본 제공 기능인 [아이 컨트롤과](https://support.microsoft.com/help/4043921/windows-10-get-started-eye-control)함께 Windows 10으로 구성 된 **작성자 업데이트** 에 도입 되었습니다. 아이 추적 하드웨어와 상호 작용할 수 있는 응용 프로그램을 빌드하기 위한 Windows 런타임 Api (2018) 집합은 **Windows 10 4 월 업데이트 (버전 1803, 빌드 17134)** 이상에서 사용할 수 [있습니다.](/uwp/api/windows.devices.input.preview)
 
-## <a name="privacy"></a>개인 정보 보호
+## <a name="privacy"></a>개인 정보 취급 방침
 
 눈 추적 장치에서 수집 하는 잠재적으로 중요 한 개인 데이터로 인해 `gazeInput` 응용 프로그램의 응용 프로그램 매니페스트에 기능을 선언 해야 합니다 (다음 **설정** 섹션 참조). 선언 된 경우 Windows는 응용 프로그램을 처음 실행할 때 동의 대화 상자를 자동으로 표시 합니다. 사용자는 앱이 눈 추적 장치와 통신 하 고이 데이터에 액세스할 수 있는 권한을 부여 해야 합니다.
 
 또한 앱이 눈 추적 데이터를 수집, 저장 또는 전송 하는 경우 앱의 개인 정보 취급 방침에서이를 설명 하 고 [앱 개발자 계약](/legal/windows/agreements/app-developer-agreement) 및 [Microsoft Store 정책의](/legal/windows/agreements/store-policies) **개인 정보** 에 대 한 기타 모든 요구 사항을 준수 해야 합니다.
 
-## <a name="setup"></a>설치
+## <a name="setup"></a>설정
 
 Windows 앱에서 응시 입력 Api를 사용 하려면 다음을 수행 해야 합니다. 
 
 - `gazeInput`앱 매니페스트에서 기능을 지정 합니다.
 
-    Visual Studio 매니페스트 디자이너를 사용 하 여 **appxmanifest.xml** 파일을 열거나, **코드 보기**를 선택 하 여 기능을 수동으로 추가 하 고, 다음을 노드에 삽입 합니다 `DeviceCapability` `Capabilities` .
+    Visual Studio 매니페스트 디자이너를 사용 하 여 **appxmanifest.xml** 파일을 열거나, **코드 보기** 를 선택 하 여 기능을 수동으로 추가 하 고, 다음을 노드에 삽입 합니다 `DeviceCapability` `Capabilities` .
 
     ```xaml
     <Capabilities>

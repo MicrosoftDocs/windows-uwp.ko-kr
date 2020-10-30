@@ -1,17 +1,17 @@
 ---
-Description: Microsoft에서 제공 하는 세금 양식에 대해 알아보고이를 받는 사람 및 사용 가능 시기를 포함 합니다.
+description: Microsoft에서 제공 하는 세금 양식에 대해 알아보고이를 받는 사람 및 사용 가능 시기를 포함 합니다.
 title: Microsoft에서 발급하는 IRS 세금 양식 이해
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 세금, irs, 내부 수익 서비스, 세금, 수입 세금, 1099
 ms.assetid: 1e475b96-f953-457c-864f-b6f4cb4c309f
 ms.localizationpriority: medium
-ms.openlocfilehash: 6493e20dbc0e38405a7cd30fc22acb9973098431
-ms.sourcegitcommit: 97002cc3e5942f43ab0f14f4ad70543a63db0c03
+ms.openlocfilehash: 05d038aca0670c31f1d8ed10250e3a905e6bfe3b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91128979"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034966"
 ---
 # <a name="understand-irs-tax-forms-issued-by-microsoft"></a>Microsoft에서 발급하는 IRS 세금 양식 이해
 
@@ -23,11 +23,11 @@ ms.locfileid: "91128979"
 
 | IRS 세금 형태 | Description | 가용성 |
 |--------------|-------------|--------------|
-|1099-기타, 1099-K | Microsoft의 마켓플레이스 참여를 위해 판매 활동 및/또는 지불 관련 | 인쇄 된 양식은 **1 월 31**일 이전에 postmarked 되며, .pdf 복사본은 [파트너 센터](https://partner.microsoft.com/dashboard) ( **지급 및 세금 > 지급 및 세금 프로필**의 **파트너 센터 개발자 설정** )에서 동시에 사용할 수 있습니다. |
-|1042-S | 미국 원천 세금이 적용 되는 귀하에 대 한 지불액과 관련 | 인쇄 된 양식은 **3 월 15**일 이전에 postmarked 되며, .pdf 복사본은 파트너 센터에서 사용할 수 있습니다 ( **지급 및 세금 > 지급 및 세금 프로필**의 **파트너 센터 개발자 설정** ).  |
+|1099-기타, 1099-K | Microsoft의 마켓플레이스 참여를 위해 판매 활동 및/또는 지불 관련 | 인쇄 된 양식은 **1 월 31** 일 이전에 postmarked 되며, .pdf 복사본은 [파트너 센터](https://partner.microsoft.com/dashboard) ( **지급 및 세금 > 지급 및 세금 프로필** 의 **파트너 센터 개발자 설정** )에서 동시에 사용할 수 있습니다. |
+|1042-S | 미국 원천 세금이 적용 되는 귀하에 대 한 지불액과 관련 | 인쇄 된 양식은 **3 월 15** 일 이전에 postmarked 되며, .pdf 복사본은 파트너 센터에서 사용할 수 있습니다 ( **지급 및 세금 > 지급 및 세금 프로필** 의 **파트너 센터 개발자 설정** ).  |
 
 > [!NOTE]
-> IRS 세금 양식에서 사용 하는 주소는 [세금 프로필](setting-up-your-payout-account-and-tax-forms.md#tax-forms)의 주소에서 제공 됩니다. 주소가 변경 된 경우 **세금 프로필**의 주소를 업데이트 해야 합니다.
+> IRS 세금 양식에서 사용 하는 주소는 [세금 프로필](setting-up-your-payout-account-and-tax-forms.md#tax-forms)의 주소에서 제공 됩니다. 주소가 변경 된 경우 **세금 프로필** 의 주소를 업데이트 해야 합니다.
 
 세금 형태는 다음 주소에서 사용자에 게 전송 됩니다.
 
@@ -129,4 +129,4 @@ ms.locfileid: "91128979"
 
 
 > [!NOTE]
-> **IRS 세금 양식과**관련 된 추가 질문이 나 문제가 있는 경우 [지원 티켓](https://developer.microsoft.com/windows/support)을 만드세요. Microsoft는 특정 세금 환경과 관련 된 질문에 답변할 수 없습니다. 이러한 질문의 경우 세금 전문가에 게 조언을 문의 하세요.
+> **IRS 세금 양식과** 관련 된 추가 질문이 나 문제가 있는 경우 [지원 티켓](https://developer.microsoft.com/windows/support)을 만드세요. Microsoft는 특정 세금 환경과 관련 된 질문에 답변할 수 없습니다. 이러한 질문의 경우 세금 전문가에 게 조언을 문의 하세요.

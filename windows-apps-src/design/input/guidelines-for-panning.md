@@ -1,5 +1,5 @@
 ---
-Description: 이동 또는 스크롤을 통해 사용자는 단일 뷰 내에서 이동 하 여 뷰포트 내에 맞지 않는 뷰의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범이 있습니다.
+description: 이동 또는 스크롤을 통해 사용자는 단일 뷰 내에서 이동 하 여 뷰포트 내에 맞지 않는 뷰의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범이 있습니다.
 title: 이동
 ms.assetid: b419f538-c7fb-4e7c-9547-5fb2494c0b71
 label: Panning
@@ -8,19 +8,19 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 596a9f2f3f234ba90b799eae982523c3a9de9732
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 0a989a6a96ac42b1eb790b6ac0dd223bd55b1bb8
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749939"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035126"
 ---
 # <a name="guidelines-for-panning"></a>패닝에 대 한 지침
 
 
 이동 또는 스크롤을 통해 사용자는 단일 뷰 내에서 이동 하 여 뷰포트 내에 맞지 않는 뷰의 콘텐츠를 표시할 수 있습니다. 보기의 예로는 컴퓨터의 폴더 구조, 문서 라이브러리 또는 사진 앨범이 있습니다.
 
-> **중요 한 api**: [**windows**](/uwp/api/Windows.UI.Input). Input, [**windows. .xaml**](/uwp/api/Windows.UI.Xaml.Input)
+> **중요 한 api** : [**windows**](/uwp/api/Windows.UI.Input). Input, [**windows. .xaml**](/uwp/api/Windows.UI.Xaml.Input)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
@@ -32,9 +32,9 @@ ms.locfileid: "91749939"
 
 -   위치 및 크기 큐를 제공 하기 위해 패닝 표시기 및 스크롤 막대를 표시 합니다. 사용자 지정 탐색 기능을 제공 하는 경우 숨깁니다.
 
-    **참고**    표준 스크롤 막대와 달리 패닝 표시기는 전적으로 정보를 제공 합니다. 이러한 장치는 입력 장치에 노출 되지 않으며 어떤 방식으로든 조작할 수 없습니다.
+    **참고**  표준 스크롤 막대와 달리 패닝 표시기는 전적으로 정보를 제공 합니다. 이러한 장치는 입력 장치에 노출 되지 않으며 어떤 방식으로든 조작할 수 없습니다.
 
-     
+     
 
 **단일 축 패닝 (1 차원 오버플로)**
 
@@ -115,9 +115,9 @@ Windows 8은 세 가지 유형의 이동을 지원 합니다.
 -   터치를 위한 패닝 표시기입니다.
 -   마우스, 터치 패드, 키보드 및 스타일러스를 비롯 한 다른 입력 장치의 스크롤 막대.
 
-**참고**    패닝 표시기는 터치 접점이 pannable 지역 내에 있는 경우에만 표시 됩니다. 마찬가지로 스크롤 막대는 마우스 커서, 펜/스타일러스 커서 또는 키보드 포커스가 스크롤 가능 영역 내에 있는 경우에만 표시 됩니다.
+**참고**  패닝 표시기는 터치 접점이 pannable 지역 내에 있는 경우에만 표시 됩니다. 마찬가지로 스크롤 막대는 마우스 커서, 펜/스타일러스 커서 또는 키보드 포커스가 스크롤 가능 영역 내에 있는 경우에만 표시 됩니다.
 
- 
+ 
 
 **패닝 표시기** 패닝 표시기는 스크롤 막대의 스크롤 상자와 비슷합니다. 이는 pannable 영역에 표시 되는 콘텐츠의 비율과 pannable 영역에 표시 되는 콘텐츠의 상대적 위치를 표시 합니다.
 

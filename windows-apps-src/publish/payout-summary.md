@@ -1,23 +1,23 @@
 ---
-Description: 지급 보고서는 앱 및 추가 기능을 사용 하 여 달성 한 비용에 대 한 세부 정보를 표시 합니다. 또한 지불을 받는 시기와 유료 정도를 알 수 있습니다.
+description: 지급 보고서는 앱 및 추가 기능을 사용 하 여 달성 한 비용에 대 한 세부 정보를 표시 합니다. 또한 지불을 받는 시기와 유료 정도를 알 수 있습니다.
 title: 지급 보고서
 ms.assetid: F0D070BE-8267-4CC9-B0D2-085EBA74AC98
 ms.date: 08/02/2019
 ms.topic: article
 keywords: windows 10, uwp, 지급 요약, 문, 지불, 소득, 지급, 지불, 진행
 ms.localizationpriority: medium
-ms.openlocfilehash: 7eab86cc1856f5ad206aa8bbceb2f2e04f5410d2
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: 11d83031702a642fa21a711edfdbaff69661c853
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91763104"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035026"
 ---
 # <a name="payout-reports"></a>지급 보고서
 
 **지급 요약** 은 Microsoft에서 달성 한 비용에 대 한 세부 정보를 보여줍니다. 또한 지불을 받는 시기와 유료 정도를 알 수 있습니다.
 
-Azure Marketplace에서 제품을 판매 하는 경우 **지급 요약**에 성공 지급 대 한 정보도 표시 됩니다. Azure Marketplace 결제에 대 한 자세한 내용은 [Microsoft Azure Marketplace 참여 정책](/legal/marketplace/participation-policy) 및 [Microsoft Azure Marketplace 게시자 계약](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3ypvt)을 참조 하세요.
+Azure Marketplace에서 제품을 판매 하는 경우 **지급 요약** 에 성공 지급 대 한 정보도 표시 됩니다. Azure Marketplace 결제에 대 한 자세한 내용은 [Microsoft Azure Marketplace 참여 정책](/legal/marketplace/participation-policy) 및 [Microsoft Azure Marketplace 게시자 계약](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3ypvt)을 참조 하세요.
 
 > [!NOTE]
 > 지급을 사용할 수 있으려면 수익이 $50의 [결제 임계값](payment-thresholds-methods-and-timeframes.md)에 도달해야 합니다. 결제 임계값에 대한 자세한 내용은 이 페이지를 참조하고 앱 개발자 계약을 검토하세요.

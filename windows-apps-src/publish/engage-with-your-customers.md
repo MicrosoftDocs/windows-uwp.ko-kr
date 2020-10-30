@@ -1,31 +1,31 @@
 ---
-Description: 알림, 대상 제품, 리뷰 및 피드백 응답 같은 기능을 사용하여 고객의 참여를 유도하고 만족도를 높일 수 있습니다.
+description: 알림, 대상 제공, 리뷰 및 피드백에 대 한 응답 등의 기능을 사용 하 여 고객 참여 및 만족도를 추진 합니다.
 title: 고객과의 소통
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e03e698a7c74dc6c3a9abec30d471a0a16427650
-ms.sourcegitcommit: 2dba9b4e81151d14ca90d36341274a3b59926197
+ms.openlocfilehash: 827001cda13b6335f9aaae06d8138c5223dbbb84
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74057584"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034846"
 ---
 # <a name="engage-with-your-customers"></a>고객과의 소통
 
-푸시 알림, 맞춤형 제안, 피드백과 리뷰에 대한 응답 등의 기능으로 고객의 참여를 유도하고 만족도를 높일 수 있습니다. [파트너 센터](https://partner.microsoft.com/dashboard) 에는 고객 참여 및 만족도를 추진 하는 데 도움이 되는 이러한 기능 및 기타 기능이 포함 되어 있습니다.
+푸시 알림, 대상 제안 및 피드백과 리뷰에 대 한 응답과 같은 기능을 사용 하 여 고객 참여 및 만족도를 추진 합니다. [파트너 센터](https://partner.microsoft.com/dashboard) 에는 고객 참여 및 만족도를 추진 하는 데 도움이 되는 이러한 기능 및 기타 기능이 포함 되어 있습니다.
 
-## <a name="understand-your-audience"></a>대상 고객 이해
+## <a name="understand-your-audience"></a>대상 그룹 이해
 
 :::row:::
     :::column:::
-        ![고객층 정의](images/engage-pie-chart.png)
+        ![고객 세그먼트 정의](images/engage-pie-chart.png)
     :::column-end:::
     :::column span="2":::
-**고객층 정의**
+**고객 세그먼트 정의**
 
-대시보드를 사용하여 인구 또는 선택한 수익 조건에 따라 앱의 고객층을 정의할 수 있습니다. 
+대시보드를 사용 하 여 선택한 인구 통계 또는 수익 기준에 따라 앱 고객의 세그먼트를 정의 합니다. 
 
 [세그먼트 정의](create-customer-segments.md)
     :::column-end:::
@@ -38,7 +38,7 @@ ms.locfileid: "74057584"
     :::column span="2":::
 **대상 제안**
 
-특정 고객층을 대상으로 맞춤 설정된 매력적인 콘텐츠를 게시하는 방식으로 참여도와 고객 유지, 수익 창출을 증대할 수 있습니다.
+고객의 특정 세그먼트에 대 한 매력적인 개인 맞춤형 콘텐츠를 표시 하 여 engagement, 보존 및 수익 화를 늘립니다.
 
 [제안 수준 올리기](use-targeted-offers-to-maximize-engagement-and-conversions.md)
     :::column-end:::
@@ -51,13 +51,13 @@ ms.locfileid: "74057584"
     :::column span="2":::
 **대상 푸시 알림**
 
-대시보드를 사용해 앱 고객층을 대상으로 한 푸시 알림을 만들고 전송하며, 각 고객층에 맞추어 변경할 수 있습니다.
+대시보드를 사용 하 여 앱 고객의 세그먼트로 푸시 알림을 만들고 전송 하 여 각 대상에 대 한 각 알림을 작성 합니다.
 
 [알림 보내기](send-push-notifications-to-your-apps-customers.md)
     :::column-end:::
 :::row-end:::
 
-## <a name="run-experiments-and-connect-with-customers"></a>실험 수행 및 고객과 연결
+## <a name="run-experiments-and-connect-with-customers"></a>실험을 실행 하 고 고객과 연결
 
 :::row:::
     :::column:::
@@ -66,7 +66,7 @@ ms.locfileid: "74057584"
     :::column span="2":::
 **A/B 테스트**
 
-모든 고객에 대해 기능을 변경하기 전에 앱에서 실험을 수행해 기능 변경 효과를 측정합니다.
+모든 고객에 게 기능을 사용 하도록 설정 하기 전에 앱에서 실험을 실행 하 여 기능 변경의 효율성을 측정 합니다.
 
 [A/B 테스트 실행](../monetize/run-app-experiments-with-a-b-testing.md)
     :::column-end:::
@@ -79,7 +79,7 @@ ms.locfileid: "74057584"
     :::column span="2":::
 **앱 피드백**
 
-Windows 10 고객을 초대하고 문제, 제안 및 찬성을 제출할 수 있는 피드백 허브로 안내하여 고객들의 피드백을 들으세요. 대시보드를 통해 피드백을 검토하고 이에 답변할 수 있습니다.
+사용자가 문제, 제안 및 투표를 제출할 수 있는 피드백 허브로 이동 하 여 Windows 10 고객을 초대 합니다. 그런 다음 대시보드에서 피드백을 검토 하 고 응답 합니다.
 
 [사용자 의견 받기](respond-to-customer-feedback.md)
     :::column-end:::
@@ -92,15 +92,15 @@ Windows 10 고객을 초대하고 문제, 제안 및 찬성을 제출할 수 있
     :::column span="2":::
 **리뷰에 응답**
 
-리뷰에 공개적으로 또는 개인적으로 응답하여 고객과 연락하세요. 대시보드나 당사 REST API를 사용하여 답변할 수 있습니다.
+작업을 수행 하 고 공개적으로 또는 개인적으로 검토에 반응 하 여 고객과 연결 하세요. 대시보드 또는 REST API를 사용 하 여 응답을 제출할 수 있습니다.
 
 [리뷰에 응답](respond-to-customer-reviews.md)
     :::column-end:::
 :::row-end:::
 
-## <a name="engagement-analytics"></a>참여도 분석
+## <a name="engagement-analytics"></a>Engagement 분석
 
-![참여도 분석](images/engage-analytics.png)
+![Engagement 분석](images/engage-analytics.png)
 
 이러한 기능 및 보고서를 사용 하 여 고객 참여 활동에 대 한 탭을 유지 합니다.
 

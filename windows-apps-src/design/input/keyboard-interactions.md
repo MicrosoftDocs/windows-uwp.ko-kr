@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱을 디자인 하 고 최적화 하는 방법에 대해 알아봅니다. 그러면 키보드 전원 사용자와 장애가 있는 사용자 및 기타 접근성 요구 사항이 있는 최상의 환경을 제공할 수 있습니다.
+description: Windows 앱을 디자인 하 고 최적화 하는 방법에 대해 알아봅니다. 그러면 키보드 전원 사용자와 장애가 있는 사용자 및 기타 접근성 요구 사항이 있는 최상의 환경을 제공할 수 있습니다.
 title: 키보드 조작
 ms.assetid: FF819BAC-67C0-4EC9-8921-F087BE188138
 label: Keyboard interactions
@@ -11,12 +11,12 @@ pm-contact: chigy
 design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
-ms.openlocfilehash: 005ec4883eeb52a84e458ba917439d093ab0041f
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: 6fba6654913f481faba98c598e4c683d62b09adf
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91763076"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034806"
 ---
 # <a name="keyboard-interactions"></a>키보드 조작
 
@@ -28,13 +28,13 @@ Windows 앱을 디자인 하 고 최적화 하는 방법에 대해 알아봅니�
 
 ![키보드 및 게임 패드 이미지](images/keyboard/keyboard-gamepad.jpg)
 
-***일반적인 상호 작용 패턴은 키보드와 게임 패드 간에 공유 됩니다.***
+***일반적인 상호 작용 패턴은 키보드와 게임 패드 사이에서 공유 됩니다** .
 
 이 항목에서는 Pc의 키보드 입력을 위한 Windows 앱 디자인에 대해 집중적으로 설명 합니다. 그러나 Windows 내레이터와 같은 내게 필요한 옵션 도구를 지원 하 고, 터치 키보드 및 화상 키보드 (OSK)와 같은 [소프트웨어 키보드](#software-keyboard) 를 사용 하 고, Xbox 게임 및 원격 제어와 같은 기타 입력 장치 유형을 처리 하는 데에는 잘 디자인 된 키보드 환경이 중요 합니다.
 
 [포커스 시각적 개체](#focus-visuals), [액세스 키](#access-keys)및 [UI 탐색](#navigation)을 비롯 하 여 여기에서 설명 하는 대부분의 지침과 권장 사항은 이러한 다른 시나리오에도 적용 됩니다.
 
-**참고**  텍스트 입력에 하드웨어 및 소프트웨어 키보드가 모두 사용 되지만이 항목의 초점은 탐색 및 상호 작용입니다.
+_ *참고* * 텍스트 입력에 하드웨어 및 소프트웨어 키보드를 모두 사용 하는 동안이 항목의 초점은 탐색 및 상호 작용입니다.
 
 ## <a name="built-in-support"></a>기본 제공 지원
 
@@ -44,7 +44,7 @@ Windows 앱을 디자인 하 고 최적화 하는 방법에 대해 알아봅니�
 
 ![휴대폰 이미지를 사용 하는 키보드](images/keyboard/keyboard-phone.jpg)
 
-***UWP는 모든 장치에서 키보드 지원***
+**_UWP는 모든 장치에서 키보드 지원_* _
 
 ## <a name="basic-experiences"></a>기본 환경
 ![포커스 기반 장치](images/keyboard/focus-based-devices.jpg)
@@ -55,7 +55,7 @@ Windows 앱을 디자인 하 고 최적화 하는 방법에 대해 알아봅니�
 
 이 항목에서 설명 하는 장치 및 도구는 다음과 같습니다.
 
-| 장치/도구                       | 설명:     |
+| 장치/도구                       | 설명     |
 |-----------------------------------|-----------------|
 |키보드 (하드웨어 및 소프트웨어)   |표준 하드웨어 키보드 외에도 Windows 응용 프로그램은 [터치 (또는 소프트웨어) 키보드](#software-keyboard) 와 [화상 키보드](#on-screen-keyboard)라는 두 가지 소프트웨어 키보드를 지원 합니다.|
 |게임 패드 및 리모컨         |Xbox 게임 패드 및 원격 제어는 [10 피트 환경](../devices/designing-for-tv.md)에서 기본적인 입력 장치입니다. 게임 패드 및 원격 제어에 대 한 Windows 지원에 대 한 자세한 내용은 [게임 패드 및 원격 제어 상호 작용](gamepad-and-remote-interactions.md)을 참조 하세요.|
@@ -83,15 +83,15 @@ UWP는 모든 입력 유형과 환경에서 잘 작동 하는 단일 포커스 �
 - 사용자가 손실 없이 앱 UI를 탐색할 수 있도록 지원
 - 앱에 대해 사용자 지정할 수 있습니다 ( [시각적 시각적 표시 시각적 개체](guidelines-for-visualfeedback.md#high-visibility-focus-visuals)참조).
 
-**참고** UWP 포커스 시각적 개체는 내레이터 포커스 사각형과 동일 하지 않습니다.
+_ *참고* * UWP 포커스 시각적 개체는 내레이터 포커스 사각형과 동일 하지 않습니다.
 
 ### <a name="tab-stops"></a>탭 정지
 
 키보드를 사용 하 여 컨트롤 (탐색 요소 포함)을 사용 하려면 컨트롤에 포커스가 있어야 합니다. 컨트롤에서 키보드 포커스를 수신 하는 한 가지 방법은 응용 프로그램의 탭 순서에서 탭 정지로 식별 하 여 탭 탐색을 통해 액세스할 수 있도록 하는 것입니다.
 
-탭 순서에 컨트롤을 포함 하려면 [IsEnabled](/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_IsEnabled) 속성을 **true** 로 설정 하 고 [istabstop](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) 속성을 **true**로 설정 해야 합니다.
+탭 순서에 컨트롤을 포함 하려면 [IsEnabled](/uwp/api/windows.ui.xaml.controls.control#Windows_UI_Xaml_Controls_Control_IsEnabled) 속성을 **true** 로 설정 하 고 [istabstop](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) 속성을 **true** 로 설정 해야 합니다.
 
-탭 순서에서 컨트롤을 구체적으로 제외 하려면 [Istabstop](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) 속성을 **false**로 설정 합니다.
+탭 순서에서 컨트롤을 구체적으로 제외 하려면 [Istabstop](/uwp/api/Windows.UI.Xaml.Controls.Control#Windows_UI_Xaml_Controls_Control_IsTabStop) 속성을 **false** 로 설정 합니다.
 
 기본적으로 탭 순서는 UI 요소가 생성 되는 순서를 반영 합니다. 예를 들어에, 및가 포함 된 경우 `StackPanel` `Button` `Checkbox` `TextBox` 탭 순서는 `Button` , `Checkbox` 및 `TextBox` 입니다.
 
@@ -123,7 +123,7 @@ UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높�
 
 #### <a name="set-initial-focus-on-the-most-logical-element"></a>가장 논리적 요소에 초기 포커스 설정
 
-사용자가 앱을 시작 하거나 페이지를 탐색할 때 가장 많이 사용 하는 첫 번째 또는 기본 작업에 대 한 UI 요소에 초기 포커스를 설정 합니다. 예를 들면 다음과 같습니다.
+사용자가 앱을 시작 하거나 페이지를 탐색할 때 가장 많이 사용 하는 첫 번째 또는 기본 작업에 대 한 UI 요소에 초기 포커스를 설정 합니다. 일부 사례:
 -   포커스가 갤러리의 첫 번째 항목으로 설정 된 사진 앱
 -   포커스가 재생 단추로 설정 된 음악 앱
 
@@ -142,7 +142,7 @@ UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높�
 기본적으로 UWP 컨트롤은 다음과 같은 기본 키보드 동작을 따릅니다.
 -   탭 **키** 탭 순서에서 실행 가능한/활성 컨트롤 간을 이동 합니다.
 -   **Shift + tab** 을 누르면 역방향 탭 순서로 컨트롤이 이동 합니다. 사용자가 화살표 키를 사용 하 여 컨트롤 내부를 탐색 하는 경우 포커스는 컨트롤 내에서 마지막으로 알려진 값으로 설정 됩니다.
--   **화살표 키는** 사용자가 "내부 탐색"을 입력 하면 컨트롤 관련 "내부 탐색"을 노출 하 고, 화살표 키는 컨트롤에서 이동 하지 않습니다. 예를 들면 다음과 같습니다.
+-   **화살표 키는** 사용자가 "내부 탐색"을 입력 하면 컨트롤 관련 "내부 탐색"을 노출 하 고, 화살표 키는 컨트롤에서 이동 하지 않습니다. 일부 사례:
     -   위쪽/아래쪽 화살표 키를 누르면 포커스가로 이동 합니다. `ListView``MenuFlyout`
     -   현재 선택 되어 있는 값 `Slider` 을 수정 합니다. `RatingsControl`
     -   캐럿 이동 `TextBox`
@@ -158,7 +158,7 @@ UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높�
 
 ![대화 상자 예제](images/keyboard/dialog.png)
 
-***화살표 키 탐색을 사용 하 여 관련 단추 컬렉션과의 상호 작용을 쉽게 수행할 수 있습니다.***
+**_화살표 키 탐색을 사용 하 여 관련 단추 컬렉션과의 상호 작용을 쉽게 수행할 수 있습니다_* .
 
 항목이 단일 열에 표시 되는 경우 위쪽/아래쪽 화살표 키가 항목을 탐색 합니다. 항목이 단일 행에 표시 되는 경우 오른쪽/왼쪽 화살표 키에서 항목을 탐색 합니다. 항목이 여러 열인 경우 4 개의 화살표 키로 이동 합니다.
 
@@ -174,7 +174,7 @@ UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높�
   <td><img src="images/keyboard/arrow-only.png" alt="arrow only" /></td>
 </table>
 
-***탭 정지를 제거 하 고 화살표 키를 사용 하 여 탐색 하 여 두 개의 누적 된 ListView 컨트롤과 상호 작용할 수 있습니다.***
+_*_탭 정지를 제거 하 고 화살표 키를 사용 하 여 탐색 하 여 두 개의 누적 된 ListView 컨트롤과 상호 작용할 수 있습니다._*_
 
 응용 프로그램 UI에 최적화 예제를 적용 하는 방법을 알아보려면 [컨트롤 그룹](#control-group) 섹션을 방문 하세요.
 
@@ -184,7 +184,7 @@ UWP 앱의 경우 초기 포커스는 포커스를 받을 수 있는 가장 높�
 
 #### <a name="text-entry"></a>텍스트 항목
 
-및와 같은 텍스트 입력을 위해 특별히 디자인 된 컨트롤의 경우 `TextBox` `RichEditBox` 모든 키보드 입력은 텍스트를 입력 하거나 탐색 하는 데 사용 되며,이는 다른 키보드 명령 보다 우선적으로 적용 됩니다. 예를 들어 컨트롤의 드롭다운 메뉴는 `AutoSuggestBox` **Space** 키를 선택 명령으로 인식 하지 않습니다.
+및와 같은 텍스트 입력을 위해 특별히 디자인 된 컨트롤의 경우 `TextBox` `RichEditBox` 모든 키보드 입력은 텍스트를 입력 하거나 탐색 하는 데 사용 되며,이는 다른 키보드 명령 보다 우선적으로 적용 됩니다. 예를 들어 컨트롤의 드롭다운 메뉴에서 `AutoSuggestBox` _ *Space* * 키를 선택 명령으로 인식 하지 못합니다.
 
 ![텍스트 입력](images/keyboard/text-entry.png)
 
@@ -345,7 +345,7 @@ UWP 컨트롤은 기본적으로 화살표 키 탐색을 지원 합니다. 사�
 
 레이아웃이 컨트롤 그룹에 대해 잘 알려진 UI 패턴을 따르는 경우 그룹에 단일 탭 정지를 할당 하면 사용자의 탐색 효율성이 향상 될 수 있습니다.
 
-예제는 다음과 같습니다.
+다음은 이러한 템플릿의 예입니다.
 -   `RadioButtons`
 -   `ListViews`처럼 보이지만 단일 처럼 동작 합니다.`ListView`
 -   타일의 그리드와 같이 모양과 동작 하는 UI (예: 시작 메뉴 타일)
@@ -377,7 +377,7 @@ UWP 키보드 동작 및 내레이터가 지 원하는 몇 가지 차이점은 �
 
 ![키보드 포커스 autosuggest](images/keyboard/auto-suggest-keyboard.png)
 
-*키보드를 사용 하 여 사용자* 는 ***enter*** 키를 눌러 *검색 쿼리를 제출* 합니다.
+*키보드를 사용 하 여 사용자가*  * 검색 쿼리를 제출 하려면 _ _key를 **입력** 합니다. *
 
 <table>
   <tr>
@@ -405,8 +405,8 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 | Space         | 단추                            | 선택 단추       |
 | Enter         | 단추                            | 선택 단추       |
 | 이스케이프        | B 단추                            | 뒤로 단추         |
-| 홈/끝      | N/A                                 | N/A                 |
-| Page Up/Down  | 세로 스크롤에 대 한 트리거 단추, 가로 스크롤에 대 한 범퍼 단추   | N/A                 |
+| 홈/끝      | 해당 없음                                 | 해당 없음                 |
+| Page Up/Down  | 세로 스크롤에 대 한 트리거 단추, 가로 스크롤에 대 한 범퍼 단추   | 해당 없음                 |
 
 게임 패드 및 원격 제어 사용에 사용할 UWP 앱을 디자인할 때 알아야 할 몇 가지 주요 차이점은 다음과 같습니다.
 -   텍스트 항목을 사용 하려면 사용자가를 눌러 텍스트 컨트롤을 활성화 해야 합니다.
@@ -446,21 +446,21 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 
 ![단일 열 화살표 키 탐색](images/keyboard/single-column-arrow.png)
 
-***단일 열 화살표 키 탐색***
+**_단일 열 화살표 키 탐색_* _
 
 ![단일 행 화살표 키 탐색](images/keyboard/single-row-arrow.png)
 
-***단일 행 화살표 키 탐색***
+_*_단일 행 화살표 키 탐색_*_
 
 ![여러 열 및 행 화살표 키 탐색](images/keyboard/multiple-column-and-row-navigation.png)
 
-***여러 열/행 화살표 키 탐색***
+_*_여러 열/행 화살표 키 탐색_*_
 
 #### <a name="wrapping-homogeneous-list-and-grid-view-items"></a>같은 항목 목록 및 그리드 보기 항목 래핑
 
 방향성 탐색은 항상 목록과 GridView 항목의 여러 행과 열을 탐색 하는 가장 효율적인 방법이 아닙니다.
 
-**참고** 메뉴 항목은 일반적으로 단일 열 목록 이지만 특별 한 포커스 규칙이 적용 될 수도 있습니다 ( [팝업 UI](#popup-ui)참조).
+_ *참고* * 메뉴 항목은 일반적으로 단일 열 목록 이지만 특별 한 포커스 규칙이 적용 될 수도 있습니다 ( [팝업 UI](#popup-ui)참조).
 
 여러 행과 열을 사용 하 여 목록 및 표 개체를 만들 수 있습니다. 이러한 항목은 일반적으로 행이 중요 합니다. 여기서 항목은 다음 행을 채우기 전에 전체 행을 채우도록 하는 경우이 고, 다음 열에 채우기 전에 먼저 전체 열을 채우는 항목입니다. 행 또는 열 주 순서는 스크롤 방향에 따라 다르며, 항목 순서가이 방향과 충돌 하지 않는지 확인 해야 합니다.
 
@@ -523,13 +523,13 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 
 ![Windows 10 touch 키보드](images/keyboard/default.png)
 
-***Windows 10 Touch 키보드***
+***Windows 10 Touch 키보드** _
 
 ![Xbox one 온스크린 키보드](images/keyboard/xbox-onscreen-keyboard.png)
 
-***Xbox One 온스크린 키보드***
+_*_Xbox One 온스크린 키보드_*_
 
-장치에 따라 텍스트 필드나 기타 편집 가능한 텍스트 컨트롤이 포커스를 가져오거나 사용자가 **알림 센터**를 통해 수동으로 사용 하도록 설정 하면 소프트웨어 키보드가 나타납니다.
+장치에 따라 텍스트 필드나 기타 편집 가능한 텍스트 컨트롤에 포커스가 있거나 사용자가 _ * 알림 센터 * *를 통해 수동으로 사용 하도록 설정 하면 소프트웨어 키보드가 나타납니다.
 
 ![알림 센터의 터치 키보드 아이콘](images/keyboard/touch-keyboard-notificationcenter.png)
 
@@ -556,15 +556,15 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 
 ![기본 레이아웃 모드의 터치 키보드](images/keyboard/default.png)
 
-***기본 레이아웃 모드의 터치 키보드***
+**_기본 레이아웃 모드의 터치 키보드_* _
 
 ![확장 된 레이아웃 모드의 터치 키보드](images/keyboard/extendedview.png)
 
-***확장 된 레이아웃 모드의 터치 키보드***
+_*_확장 된 레이아웃 모드의 터치 키보드_*_
 
 키보드 상호 작용 성공으로 사용자는 키보드만 사용 하 여 기본 앱 시나리오를 수행할 수 있습니다. 즉, 사용자가 모든 대화형 요소에 연결 하 고 기본 기능을 활성화할 수 있습니다. 키보드 탐색, 내게 필요한 옵션에 대 한 액세스 키, 고급 사용자를 위한 액셀러레이터 키 (또는 바로 가기 키)를 비롯 한 다양 한 요소가 성공 수준에 영향을 줄 수 있습니다.
 
-**참고**    터치 키보드는 토글 및 대부분의 시스템 명령을 지원 하지 않습니다.
+_ *참고* * 터치 키보드는 토글 및 대부분의 시스템 명령을 지원 하지 않습니다.
 
 #### <a name="on-screen-keyboard"></a>화상 키보드
 소프트웨어 키보드와 마찬가지로 화상 키보드는 터치, 마우스, 펜/스타일러스 또는 다른 포인팅 장치를 사용 하 여 데이터를 입력 하 고 입력 하는 실제 키보드 대신 사용할 수 있는 시각적 소프트웨어 키보드입니다 (터치 화면은 필요 하지 않음). 화상 키보드는 물리적 키보드를 사용 하지 않는 시스템이 나 이동성 장애가 있는 사용자가 기존의 물리적 입력 장치를 사용 하지 못하도록 하는 데 제공 됩니다. 화상 키보드는 하드웨어 키보드의 기능을 대부분 에뮬레이션 합니다.
@@ -575,6 +575,6 @@ Xbox gamepads 및 원격 제어는 많은 UWP 키보드 동작 및 환경을 지
 
 ![화상 키보드](images/keyboard/osk.png)
 
-***화상 키보드***
+**_화상 키보드_**
 
 화상 키보드에 대 한 자세한 내용은 화상 [키보드 페이지](https://support.microsoft.com/help/10762/windows-use-on-screen-keyboard) 를 참조 하세요.

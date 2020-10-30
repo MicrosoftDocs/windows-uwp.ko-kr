@@ -1,5 +1,5 @@
 ---
-Description: 이 항목에서는 새 Windows UI for rotation에 대해 설명 하 고 Windows 앱에서이 새로운 상호 작용 메커니즘을 사용할 때 고려해 야 하는 사용자 환경 지침을 제공 합니다.
+description: 이 항목에서는 새 Windows UI for rotation에 대해 설명 하 고 Windows 앱에서이 새로운 상호 작용 메커니즘을 사용할 때 고려해 야 하는 사용자 환경 지침을 제공 합니다.
 title: 회전
 ms.assetid: f098bc05-35b3-46b2-9e9b-9ff292d067ca
 label: Rotation
@@ -8,19 +8,19 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 135f7773a94491e1e6470c84ad428265273bc79d
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 755386b8cffa5c546d20cd561693da5d21b30799
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217006"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035106"
 ---
 # <a name="rotation"></a>회전
 
 
 이 문서에서는 새 Windows UI for rotation에 대해 설명 하 고 Windows 앱에서이 새로운 상호 작용 메커니즘을 사용할 때 고려해 야 하는 사용자 환경 지침을 제공 합니다.
 
-> **중요 한 api**: [**windows**](/uwp/api/Windows.UI.Input). Input, [**windows. .xaml**](/uwp/api/Windows.UI.Xaml.Input)
+> **중요 한 api** : [**windows**](/uwp/api/Windows.UI.Input). Input, [**windows. .xaml**](/uwp/api/Windows.UI.Xaml.Input)
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
@@ -44,7 +44,8 @@ ms.locfileid: "91217006"
 
 ![회전에서 지 원하는 다양 한 손가락 postures을 보여 주는 다이어그램입니다.](images/ux-rotate-positions.png)
 
-**참고**    사용자가 연결 지점 (예: 그리기 또는 레이아웃 응용 프로그램)과 관련 되지 않은 회전 지점을 지정 하지 않는 한, 대부분의 경우에는 대부분의 경우에 회전 지점은 두 터치 포인트 중 하나입니다. 다음 이미지는 회전 지점이 이런 방식으로 제한 되지 않는 경우 사용자 환경이 저하 될 수 있는 방법을 보여 줍니다.
+**참고**  
+사용자가 연결 지점 (예: 그리기 또는 레이아웃 응용 프로그램)과 관련 되지 않은 회전 지점을 지정 하지 않는 한, 대부분의 경우에는 대부분의 경우에 회전 지점은 두 터치 포인트 중 하나입니다. 다음 이미지는 회전 지점이 이런 방식으로 제한 되지 않는 경우 사용자 환경이 저하 될 수 있는 방법을 보여 줍니다.
 
 첫 번째 그림은 초기 (엄지 단추) 및 보조 (인덱스 손가락) 터치 요소를 보여 줍니다. 인덱스 손가락은 트리를 터치 하 고 엄지 단추는 로그를 터치 합니다.
 
@@ -59,7 +60,7 @@ ms.locfileid: "91217006"
 
 ![두 초기 접촉 지점이 아닌 그림의 가장 왼쪽 중심으로 제한 되는 회전 지점을 표시 하는 이미지입니다.](images/ux-rotate-points4.png)
 
- 
+ 
 
 Windows 10은 사용 가능, 제한 및 결합의 세 가지 회전 유형을 지원 합니다.
 
@@ -88,10 +89,10 @@ Windows 10은 사용 가능, 제한 및 결합의 세 가지 회전 유형을 �
 <td align="left">결합 된 회전</td>
 <td align="left"><p>결합 된 회전은 제한 된 회전에 의해 적용 되는 각각의 90 방향 맞춤 지점에서 영역 (이동 <a href="guidelines-for-panning.md">에 대 한 지침</a>의 레일과 유사)으로 사용 가능한 회전을 지원 합니다. 사용자가 90도 영역 중 하나를 벗어난 개체를 해제 하는 경우 개체는 해당 위치에 유지 됩니다. 그렇지 않으면 개체가 자동으로 맞춤 지점으로 회전 합니다.</p>
 <div class="alert">
-<strong>참고</strong>    사용자 인터페이스 레일은 목표 영역에서 특정 값 이나 위치에 대 한 움직임을 제한 하 여 선택에 영향을 주는 기능입니다.
+<strong>참고</strong>  사용자 인터페이스 레일은 목표 영역에서 특정 값 이나 위치에 대 한 움직임을 제한 하 여 선택에 영향을 주는 기능입니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 </tbody>

@@ -1,5 +1,5 @@
 ---
-Description: 터치에 최적화 되어 있지만 입력 장치에서 기능적으로 일관 된 직관적인 고유의 사용자 상호 작용 환경을 사용 하 여 Windows 앱을 만듭니다.
+description: 터치에 최적화 되어 있지만 입력 장치에서 기능적으로 일관 된 직관적인 고유의 사용자 상호 작용 환경을 사용 하 여 Windows 앱을 만듭니다.
 title: 터치 조작
 ms.assetid: DA6EBC88-EB18-4418-A98A-457EA1DEA88A
 label: Touch interactions
@@ -8,12 +8,12 @@ keywords: 터치, 포인터, 입력, 사용자 상호 작용
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 302a1f39d85902b229642b60f483b40f51209a72
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 614d8c5340100ca5ba666493ccb23ec4d8ca8498
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750389"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035056"
 ---
 # <a name="touch-interactions"></a>터치 조작
 
@@ -22,7 +22,7 @@ ms.locfileid: "91750389"
 
 그러나 터치에 최적화 된 UI는 기존 UI에 대해 항상 더 우수한 것은 아닙니다. 둘 다 기술 및 응용 프로그램에 고유한 장점과 단점을 제공 합니다. 터치 우선 UI로 이동에서 터치, 터치 패드, 펜/스타일러스, 마우스 및 키보드 입력 간의 핵심 차이점을 이해 하는 것이 중요 합니다.
 
-> **중요 한 api**: [**windows. .xaml. input**](/uwp/api/Windows.UI.Xaml.Input), windows [**.**](/uwp/api/Windows.UI.Core) [**Devices**](/uwp/api/Windows.Devices.Input)
+> **중요 한 api** : [**windows. .xaml. input**](/uwp/api/Windows.UI.Xaml.Input), windows [**.**](/uwp/api/Windows.UI.Core) [**Devices**](/uwp/api/Windows.Devices.Input)
 
 
 많은 장치에는 하나 이상의 손가락 (또는 터치 접점)을 입력으로 사용 하도록 지 원하는 다중 터치 스크린이 있습니다. 터치 접점 및 해당 움직임은 다양 한 사용자 상호 작용을 지 원하는 터치 제스처 및 조작으로 해석 됩니다.
@@ -75,7 +75,7 @@ Windows 앱에는 터치 입력 처리를 위한 다양 한 메커니즘이 포�
 > [!NOTE]
 > 간접 입력은 25 년간의 구체화를 통해 이점을 누릴 수 있습니다. 가리키기 트리거 도구 설명 등의 기능은 터치 패드, 마우스, 펜/스타일러스 및 키보드 입력 전용 UI 탐색을 해결 하도록 설계 되었습니다. 이와 같은 UI 기능은 이러한 다른 장치에 대 한 사용자 환경을 손상 시 키 지 않고 터치식 입력을 통해 제공 되는 풍부한 환경을 위해 다시 디자인 되었습니다.
 
- 
+ 
 
 ## <a name="use-touch-feedback"></a>터치 피드백 사용
 
@@ -178,7 +178,7 @@ Finger 및 핸드 폐색은 다음을 통해 방지할 수 있습니다.
 
 -   정적 제스처 이벤트는 상호 작용이 완료 된 후에 트리거됩니다. 제스처 이벤트에는 [**탭**](/uwp/api/windows.ui.xaml.uielement.tapped), [**DoubleTapped**](/uwp/api/windows.ui.xaml.uielement.doubletapped), [**righttapped**](/uwp/api/windows.ui.xaml.uielement.righttapped) [**상태 및 누르고**](/uwp/api/windows.ui.xaml.uielement.holding)있습니다.
 
-    [**Istapenabled**](/uwp/api/windows.ui.xaml.uielement.istapenabled), [**IsDoubleTapEnabled**](/uwp/api/windows.ui.xaml.uielement.isdoubletapenabled), [**IsRightTapEnabled**](/uwp/api/windows.ui.xaml.uielement.isrighttapenabled)및 [**isholdingenabled**](/uwp/api/windows.ui.xaml.uielement.isholdingenabled) 를 **false**로 설정 하 여 특정 요소에서 제스처 이벤트를 사용 하지 않도록 설정할 수 있습니다.
+    [**Istapenabled**](/uwp/api/windows.ui.xaml.uielement.istapenabled), [**IsDoubleTapEnabled**](/uwp/api/windows.ui.xaml.uielement.isdoubletapenabled), [**IsRightTapEnabled**](/uwp/api/windows.ui.xaml.uielement.isrighttapenabled)및 [**isholdingenabled**](/uwp/api/windows.ui.xaml.uielement.isholdingenabled) 를 **false** 로 설정 하 여 특정 요소에서 제스처 이벤트를 사용 하지 않도록 설정할 수 있습니다.
 
 -   [**Pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed) 및 [**pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointermoved) 과 같은 포인터 이벤트는 포인터 동작을 포함 하 여 각 터치 연락처에 대 한 하위 수준 세부 정보를 제공 하 고, 누르기 및 릴리스 이벤트를 구분 하는 기능을 제공 합니다.
 
@@ -190,7 +190,7 @@ Finger 및 핸드 폐색은 다음을 통해 방지할 수 있습니다.
 
 UWP에서 지 원하는 기본 터치 제스처 집합은 다음과 같습니다.
 
-| Name           | Type                 | 설명                                                                            |
+| 이름           | Type                 | 설명                                                                            |
 |----------------|----------------------|----------------------------------------------------------------------------------------|
 | 탭            | 정적 제스처       | 한 손가락을 화면에 터치 하 고 리프트 합니다.                                            |
 | 길게 누르기 | 정적 제스처       | 한 손가락은 화면에 접촉 하 여 제자리에 유지 됩니다.                                      |
@@ -200,7 +200,7 @@ UWP에서 지 원하는 기본 터치 제스처 집합은 다음과 같습니다
 | 손가락 모으기          | 조작 제스처 | 두 개 이상의 손가락이 화면을 터치 하 고 서로 가깝게 이동 합니다.                         |
 | Stretch        | 조작 제스처 | 두 개 이상의 손가락이 화면을 터치 하 고 멀리 떨어져 이동 합니다.                           |
 
- 
+ 
 
 <!-- mijacobs: Removing for now. We don't have a real page to link to yet. 
 For more info about gestures, manipulations, and interactions, see [Custom user interactions](custom-user-input-portal.md).
@@ -232,7 +232,7 @@ For more info about gestures, manipulations, and interactions, see [Custom user 
 | [**PointerWheelChanged**](/uwp/api/windows.ui.xaml.uielement.pointerwheelchanged)   | 마우스 휠의 델타 값이 변경 될 때와 터치 패드가 pinched 때 발생 합니다.         |
 | [**PointerRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs) | 모든 포인터 이벤트에 대 한 데이터를 제공 합니다.                         |
 
- 
+ 
 
 다음 예제에서는 [**Pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed), [**pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerreleased)및 [**pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerexited) 이벤트를 사용 하 여 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 개체의 탭 상호 작용을 처리 하는 방법을 보여 줍니다.
 
@@ -431,7 +431,7 @@ End Sub
 | [**ManipulationVelocities**](/uwp/api/Windows.UI.Input.ManipulationVelocities)                                              | 조작이 발생 하는 속도를 설명 합니다.                                                                                         |
 | [**ManipulationCompletedRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs)             | [**System.windows.uielement.manipulationcompleted>**](/uwp/api/windows.ui.xaml.uielement.manipulationcompleted) 이벤트에 대 한 데이터를 제공 합니다.                                       |
 
- 
+ 
 
 제스처는 일련의 조작 이벤트로 구성 됩니다. 각 제스처는 사용자가 화면에 접촉 하는 경우와 같은 [**system.windows.uielement.manipulationstarted>**](/uwp/api/windows.ui.xaml.uielement.manipulationstarted) 이벤트로 시작 합니다.
 
@@ -440,7 +440,7 @@ End Sub
 > [!NOTE]
 > 터치 스크린 모니터가 없는 경우 마우스 및 마우스 휠 인터페이스를 사용 하 여 시뮬레이터에서 조작 이벤트 코드를 테스트할 수 있습니다.
 
- 
+ 
 
 다음 예제에서는 [**system.windows.uielement.manipulationdelta>**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트를 사용 하 여 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 의 슬라이드 상호 작용을 처리 하 고 화면에서 이동 하는 방법을 보여 줍니다.
 
@@ -454,7 +454,7 @@ End Sub
 </Grid>
 ```
 
-그런 다음 사각형을 변환 하기 위해 라는 전역 [**system.windows.media.translatetransform.x**](/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) 을 `dragTranslation` 만듭니다. [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) [**System.windows.uielement.manipulationdelta>**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트 수신기는 **사각형**에 지정 되며 `dragTranslation` **사각형**의 [**rendertransform**](/uwp/api/windows.ui.xaml.uielement.rendertransform) 에 추가 됩니다.
+그런 다음 사각형을 변환 하기 위해 라는 전역 [**system.windows.media.translatetransform.x**](/uwp/api/Windows.UI.Xaml.Media.TranslateTransform) 을 `dragTranslation` 만듭니다. [**Rectangle**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) [**System.windows.uielement.manipulationdelta>**](/uwp/api/windows.ui.xaml.uielement.manipulationdelta) 이벤트 수신기는 **사각형** 에 지정 되며 `dragTranslation` **사각형** 의 [**rendertransform**](/uwp/api/windows.ui.xaml.uielement.rendertransform) 에 추가 됩니다.
 
 ```cpp
 // Global translation transform used for changing the position of 
@@ -572,7 +572,7 @@ End Sub
 ## <a name="routed-events"></a>라우트된 이벤트
 
 
-여기에 언급 된 모든 포인터 이벤트, 제스처 이벤트 및 조작 이벤트는 *라우트된 이벤트*로 구현 됩니다. 즉, 이벤트를 원래 이벤트가 발생 한 개체 이외의 개체에서 처리할 수 있습니다. [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) 의 부모 컨테이너 또는 앱의 루트 [**페이지**](/uwp/api/Windows.UI.Xaml.Controls.Page) 와 같은 개체 트리의 연속 부모는 원래 요소가 아닌 경우에도 이러한 이벤트를 처리 하도록 선택할 수 있습니다. 반대로 이벤트를 처리 하는 모든 개체는 더 이상 부모 요소에 도달 하지 않도록 이벤트를 처리 된 것으로 표시할 수 있습니다. 라우트된 이벤트 개념 및 라우트된 이벤트에 대 한 처리기를 작성 하는 방법에 대 한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](/previous-versions/windows/apps/hh758286(v=win.10))를 참조 하세요.
+여기에 언급 된 모든 포인터 이벤트, 제스처 이벤트 및 조작 이벤트는 *라우트된 이벤트* 로 구현 됩니다. 즉, 이벤트를 원래 이벤트가 발생 한 개체 이외의 개체에서 처리할 수 있습니다. [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) 의 부모 컨테이너 또는 앱의 루트 [**페이지**](/uwp/api/Windows.UI.Xaml.Controls.Page) 와 같은 개체 트리의 연속 부모는 원래 요소가 아닌 경우에도 이러한 이벤트를 처리 하도록 선택할 수 있습니다. 반대로 이벤트를 처리 하는 모든 개체는 더 이상 부모 요소에 도달 하지 않도록 이벤트를 처리 된 것으로 표시할 수 있습니다. 라우트된 이벤트 개념 및 라우트된 이벤트에 대 한 처리기를 작성 하는 방법에 대 한 자세한 내용은 [이벤트 및 라우트된 이벤트 개요](/previous-versions/windows/apps/hh758286(v=win.10))를 참조 하세요.
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 

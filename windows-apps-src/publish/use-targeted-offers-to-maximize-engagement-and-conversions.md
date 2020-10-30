@@ -1,16 +1,16 @@
 ---
-Description: 고객의 특정 세그먼트를 개인 설정 된 콘텐츠로 대상으로 지정 하 여 engagement, 보존 및 수익 화를 늘립니다.
+description: 고객의 특정 세그먼트를 개인 설정 된 콘텐츠로 대상으로 지정 하 여 engagement, 보존 및 수익 화를 늘립니다.
 title: 대상 제공 서비스를 사용 하 여 참여 및 변환 최대화
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 대상 제공, 제안, 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: ff2c3049154ffcc18164b8084bc9e34a9121905d
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 744ea22f741cd3f8a0e43d3eb88b1a7c6f4ce68b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155307"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034936"
 ---
 # <a name="use-targeted-offers-to-maximize-engagement-and-conversions"></a>대상 제공 서비스를 사용 하 여 참여 및 변환 최대화
 
@@ -32,7 +32,7 @@ ms.locfileid: "89155307"
 
 ## <a name="to-create-and-send-a-targeted-offer"></a>대상 제품을 만들고 보내려면
 
-1.  [파트너 센터](https://partner.microsoft.com/dashboard)에서 왼쪽 탐색 메뉴의 **참여** 를 확장 한 다음 **대상 제품**을 선택 합니다.
+1.  [파트너 센터](https://partner.microsoft.com/dashboard)에서 왼쪽 탐색 메뉴의 **참여** 를 확장 한 다음 **대상 제품** 을 선택 합니다.
 2.  **대상 제품** 페이지에서 사용 가능한 제품을 검토 합니다. 구현 하려는 모든 제품에 대 한 **새 제품 만들기** 를 선택 합니다.
 
     > [!NOTE]
@@ -40,7 +40,7 @@ ms.locfileid: "89155307"
 
 3.  사용 가능한 제품 아래에 표시 되는 새 행에서 제품을 사용할 수 있는 제품 (앱)을 선택 합니다. 그런 다음 제품에 연결 하려는 추가 기능을 선택 합니다.
 4.  추가 제안을 만들려는 경우 2 단계와 3 단계를 반복 합니다. 각 제품에 대해 다른 추가 기능을 선택 하기만 하면 동일한 앱에 대해 동일한 제품 유형을 두 번 이상 구현할 수 있습니다. 또한 둘 이상의 제안 유형과 동일한 추가 기능을 연결할 수 있습니다.
-5.  제안 만들기를 완료 하면 **저장**을 클릭 합니다.
+5.  제안 만들기를 완료 하면 **저장** 을 클릭 합니다.
 
 제품을 구현한 후 파트너 센터의 **대상 제공** 페이지로 돌아와서 각 제품에 대 한 총 변환을 볼 수 있습니다.
 

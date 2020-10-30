@@ -1,17 +1,17 @@
 ---
-Description: Microsoft Store 버전 번호와 관련 된 특정 규칙을 적용 합니다 .이는 다른 OS 버전에서 약간 다르게 작동 합니다.
+description: Microsoft Store 버전 번호와 관련 된 특정 규칙을 적용 합니다 .이는 다른 OS 버전에서 약간 다르게 작동 합니다.
 title: 패키지 버전 번호
 ms.assetid: DD7BAE5F-C2EE-44EE-8796-055D4BCB3152
 ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b09c5688fd8a043d1a4ca1783af046398b504050
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 18b4d6b8a901e68ea1e8513b7076a951e939f028
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219736"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035036"
 ---
 # <a name="package-version-numbering"></a>패키지 버전 번호
 
@@ -21,7 +21,7 @@ ms.locfileid: "91219736"
 > 이 항목은 "패키지"를 참조 하지만, 별도로 설명 하지 않는 한 동일한 규칙이 두 파일의 버전 번호에 적용 됩니다.
 
 
-## <a name="version-numbering-for-windows10-packages"></a>Windows 10 패키지의 버전 번호 매기기
+## <a name="version-numbering-for-windows-10-packages"></a>Windows 10 패키지의 버전 번호 매기기
 
 > [!IMPORTANT]
 > UWP (Windows 10) 패키지의 경우 버전 번호의 마지막 섹션 (4 번째)은 스토어 사용을 위해 예약 되어 있으며 패키지를 빌드할 때 0으로 남겨 두어야 합니다 (스토어는이 섹션의 값을 변경할 수 있음). 다른 섹션은 0에서 65535 사이의 정수로 설정 해야 합니다. 단, 첫 번째 섹션은 0 일 수 없습니다.
@@ -47,10 +47,10 @@ Windows 10에서는 모든 곳에서 실행 되는 단일 코드 베이스를 �
 | 1          | -패키지 버전: 1.1.10.0 <br> -장치 패밀리: Windows 데스크톱, minVersion 10.0.10240.0 <br> <br> -패키지 버전: 1.1.0.0 <br> -장치 패밀리: Windows Mobile, minVersion 10.0.10240.0     | -Windows 10 Desktop build 10.0.10240.0 이상에서 장치는 1.1.10.0를 가져옵니다. <br> -Windows 10 Mobile build 10.0.10240.0 이상의 장치에서 1.1.0.0를 가져옵니다. <br> -다른 장치 제품군에서 앱을 구입 및 설치할 수 없습니다. |
 | 2          | -패키지 버전: 1.1.10.0 <br> -장치 패밀리: Windows 데스크톱, minVersion 10.0.10240.0 <br> <br> -패키지 버전: 1.1.0.0 <br> -장치 패밀리: Windows Mobile, minVersion 10.0.10240.0 <br> <br> -패키지 버전: 1.0.0.0 <br> -장치 패밀리: Windows Universal, minVersion 10.0.10240.0    | -Windows 10 Desktop build 10.0.10240.0 이상에서 장치는 1.1.10.0를 가져옵니다. <br> -Windows 10 Mobile build 10.0.10240.0 이상의 장치에서 1.1.0.0를 가져옵니다. <br> -기타 (비 데스크톱, 비모바일) 장치 제품군이 도입 되 면 1.0.0.0이 제공 됩니다. <br> -앱이 이미 설치 되어 있는 데스크톱 및 모바일 장치에는 업데이트가 표시 되지 않습니다 (1.1.10.0 및 1.1.0.0가 모두 1.0.0.0 보다 높음). |
 | 3          | -패키지 버전: 1.1.10.0 <br> -장치 패밀리: Windows 데스크톱, minVersion 10.0.10240.0 <br> <br> -패키지 버전: 1.1.5.0 <br> -장치 패밀리: Windows Universal, minVersion 10.0.10250.0 <br> <br> -패키지 버전: 1.0.0.0 <br> -장치 패밀리: Windows Universal, minVersion 10.0.10240.0    | -Windows 10 Desktop build 10.0.10240.0 이상에서 장치는 1.1.10.0를 가져옵니다. <br> -Windows 10 Mobile build 10.0.10250.0 이상의 장치에서 1.1.5.0를 가져옵니다. <br> -Windows 10 Mobile build >= 10.0.10240.0 및 < 10.010250.0의 장치에서 1.1.0.0를 가져옵니다. 
-| 4          | -패키지 버전: 2.0.0.0 <br> -장치 패밀리: Windows Universal, minVersion 10.0.10240.0   | -Windows 10 build v 10.0.10240.0 이상에서 모든 장치 패밀리의 모든 고객이 패키지 2.0.0.0을 가져옵니다. | 
+| 4          | -패키지 버전: 2.0.0.0 <br> -장치 패밀리: Windows Universal, minVersion 10.0.10240.0   | -Windows 10 build v 10.0.10240.0 이상에서 모든 장치 패밀리의 모든 고객이 패키지 2.0.0.0을 가져옵니다. | 
 
 > [!NOTE]
->  모든 경우에 고객 장치는 해당 하는 버전 번호가 가장 높은 패키지를 받게 됩니다. 예를 들어 위의 세 번째 제출물에서 모든 데스크톱 장치는 OS 버전 10.0.10250.0 이상이 있는 경우에도 v 1.1.10.0을 받게 되므로 v 1.1.5.0를 수락할 수도 있습니다. 1.1.10.0는 사용할 수 있는 가장 높은 버전 번호 이기 때문에 가져올 패키지입니다.
+>  모든 경우에 고객 장치는 해당 하는 버전 번호가 가장 높은 패키지를 받게 됩니다. 예를 들어 위의 세 번째 제출물에서 모든 데스크톱 장치는 OS 버전 10.0.10250.0 이상이 있는 경우에도 v 1.1.10.0을 받게 되므로 v 1.1.5.0를 수락할 수도 있습니다. 1.1.10.0는 사용할 수 있는 가장 높은 버전 번호 이기 때문에 가져올 패키지입니다.
 
 ### <a name="using-version-numbering-to-roll-back-to-a-previously-shipped-package-for-new-acquisitions"></a>버전 번호 매기기를 사용 하 여 이전에 제공 된 패키지로 새 인수 롤백
 
@@ -61,7 +61,7 @@ Windows 10에서는 모든 곳에서 실행 되는 단일 코드 베이스를 �
 문제가 있는 패키지를 이미 받은 고객에 대 한 문제를 해결 하기 위해 가능한 한 빨리 잘못 된 패키지 보다 더 높은 버전 번호를 가진 새 Windows 10 패키지를 제출할 수 있습니다. 인증 프로세스를 통해 전송 된 후에는 모든 고객이 더 높은 버전 번호를 갖게 되므로 새 패키지로 업데이트 됩니다.
 
 
-## <a name="version-numbering-for-windows81-and-earlier-and-windows-phone-81-packages"></a>Windows 8.1 (및 이전 버전) 및 Windows Phone 8.1 패키지의 버전 번호 매기기
+## <a name="version-numbering-for-windows-81-and-earlier-and-windows-phone-81-packages"></a>Windows 8.1 (및 이전 버전) 및 Windows Phone 8.1 패키지의 버전 번호 매기기
 
 > [!IMPORTANT]
 > Windows Phone .x SDK를 사용 하 여 빌드된 새 XAP 패키지는 더 이상 업로드할 수 없습니다. 이미 XAP 패키지를 사용 하 여 저장 된 앱은 Windows 10 Mobile 장치에서 계속 작동 합니다. 자세한 내용은이 [블로그 게시물](https://blogs.windows.com/windowsdeveloper/2018/08/20/important-dates-regarding-apps-with-windows-phone-8-x-and-earlier-and-windows-8-8-1-packages-submitted-to-microsoft-store)을 참조 하세요.
@@ -81,7 +81,7 @@ Windows 8 및 Windows 8.1를 대상으로 하는 패키지에 대해 다양 한 
 |---------------------------------------------|-----------------------------|--------------------------------------------------------------------------------------------|----------|
 | Nothing                                     | x86, v1.0.0.0               | x86 및 x64 컴퓨터의 x86, v 1.0.0.0                                                | 아무 일도 일어나지 않습니다. |
 | x86, v1.0.0.0                               | x64, v 1.0.0.0               | 고객 아키텍처용 v 1.0.0.0                                                   | 아무 일도 일어나지 않습니다. 버전 번호가 동일 합니다. |
-| x86, v1.0.0.0 <br> x64, v 1.0.0.0            | x64, v 1.0.0.1               | x86이 있는 고객을 위한 v 1.0.0.0 <br> x64를 사용 하는 고객을 위한 v 1.0.0.1                 | X86 컴퓨터에서 앱을 실행 하는 고객은 아무 것도 없습니다. <br> v 1.0.0.0은 x64 컴퓨터에서 앱을 실행 하는 고객을 위해 v 1.0.0.1로 업데이트 됩니다. <br> **참고**    X64 컴퓨터에서 x86 버전의 앱이 실행 중인 경우에는 고객이을 제거 하 고 다시 설치 하지 않으면 앱이 x64 버전으로 업데이트 되지 않습니다. |
+| x86, v1.0.0.0 <br> x64, v 1.0.0.0            | x64, v 1.0.0.1               | x86이 있는 고객을 위한 v 1.0.0.0 <br> x64를 사용 하는 고객을 위한 v 1.0.0.1                 | X86 컴퓨터에서 앱을 실행 하는 고객은 아무 것도 없습니다. <br> v 1.0.0.0은 x64 컴퓨터에서 앱을 실행 하는 고객을 위해 v 1.0.0.1로 업데이트 됩니다. <br> **참고**  X64 컴퓨터에서 x86 버전의 앱이 실행 중인 경우에는 고객이을 제거 하 고 다시 설치 하지 않으면 앱이 x64 버전으로 업데이트 되지 않습니다. |
 | Nothing                                     | 중립, v 1.0.0.1           | 모든 컴퓨터의 중립, v 1.0.0.1                                                         | 아무 일도 일어나지 않습니다. |
 | 중립, v 1.0.0.1                           | x86, v1.0.0.0 <br> x64, v 1.0.0.0 <br> ARM, v 1.0.0.0 | 고객 컴퓨터의 아키텍처에 대 한 v 1.0.0.0          | 아무 일도 일어나지 않습니다. 앱의 중립 1.0.0.1 버전이 있는 사용자는 해당 앱을 계속 사용 합니다. |
 | 중립, v 1.0.0.1 <br> x86, v1.0.0.0 <br> x64, v 1.0.0.0 <br> ARM, v 1.0.0.0 | x86, v 1.0.0.1 <br> x64, v 1.0.0.1 <br> ARM, v 1.0.0.1 | 고객 컴퓨터의 아키텍처에 대 한 v 1.0.0.1. | 중립, v 1.0.0.1 버전 앱을 실행 하는 고객은 아무 것도 없습니다. <br> 컴퓨터의 특정 아키텍처에 맞게 빌드된 앱의 v 1.0.0.0을 실행 하는 고객의 경우 v 1.0.0.0이 v 1.0.0.1로 업데이트 됩니다. |

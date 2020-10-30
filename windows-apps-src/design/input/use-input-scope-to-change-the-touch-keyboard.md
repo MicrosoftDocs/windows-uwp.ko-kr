@@ -1,5 +1,5 @@
 ---
-Description: 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 터치 키보드나 SIP(Soft Input Panel)를 사용한 데이터 입력을 도울 수 있습니다.
+description: 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 터치 키보드나 SIP(Soft Input Panel)를 사용한 데이터 입력을 도울 수 있습니다.
 MS-HAID: dev\_ctrl\_layout\_txt.use\_input\_scope\_to\_change\_the\_touch\_keyboard
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -9,12 +9,12 @@ template: detail.hbs
 keywords: 키보드, 접근성, 탐색, 포커스, 텍스트, 입력, 사용자 상호 작용
 ms.date: 02/08/2017
 ms.topic: article
-ms.openlocfilehash: e6e140a1967ca3ffe7775f427ccae7a7e07c5ca6
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9b274d7cafd179157571a51db1122153a33d846e
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165817"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035076"
 ---
 # <a name="use-input-scope-to-change-the-touch-keyboard"></a>입력 범위를 사용하여 터치 키보드 변경
 
@@ -27,7 +27,7 @@ ms.locfileid: "89165817"
 
 터치 키보드는 앱이 터치 스크린이 있는 디바이스에서 실행될 때 텍스트 입력에 사용할 수 있습니다. 터치 키보드는 **[TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox)** 또는 **[RichEditBox](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox)** 같은 편집 가능한 입력 필드를 탭 할 때 호출 됩니다. 사용자가 입력 해야 하는 데이터의 종류와 일치 하도록 텍스트 컨트롤의 *입력 범위* 를 설정 하 여 사용자가 앱에서 데이터를 훨씬 더 빠르고 쉽게 입력할 수 있습니다. 입력 범위는 시스템에서 해당 입력 형식에 맞는 특수한 터치 키보드를 제공할 수 있도록 컨트롤에서 예상되는 텍스트 입력 형식에 대한 힌트를 시스템에 제공합니다.
 
-예를 들어 텍스트 상자를 4 자리 PIN을 입력 하는 데만 사용 하는 경우 [**Inputscope**](/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성을 **Number**로 설정 합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다.
+예를 들어 텍스트 상자를 4 자리 PIN을 입력 하는 데만 사용 하는 경우 [**Inputscope**](/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성을 **Number** 로 설정 합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다.
 
 > [!IMPORTANT]
 > - 이 정보는 SIP에만 적용 됩니다. Windows의 접근성 옵션에서 사용 가능한 하드웨어 키보드나 화상 키보드에는 적용 되지 않습니다.
@@ -125,9 +125,9 @@ phoneNumberTextBox.InputScope = new InputScope()
 
 -   [**IsTextPredictionEnabled**](/uwp/api/windows.ui.xaml.controls.textbox.istextpredictionenabled)-텍스트 컨트롤에 대해 텍스트 예측을 사용 하는 경우 입력 하기 시작할 수 있는 단어 목록이 시스템에 표시 됩니다. 전체 단어를 입력할 필요가 없도록 목록에서 선택할 수 있습니다. 텍스트 예측은 기본적으로 사용 하도록 설정 되어 있습니다.
 
-    [**IsTextPredictionEnabled**](/uwp/api/windows.ui.xaml.controls.textbox.istextpredictionenabled) 속성이 **true**인 경우에도 입력 범위가 **기본값이**아닌 경우 텍스트 예측을 사용 하지 않도록 설정할 수 있습니다. 자세한 내용은이 항목의 뒷부분에 나오는 표를 참조 하십시오.
+    [**IsTextPredictionEnabled**](/uwp/api/windows.ui.xaml.controls.textbox.istextpredictionenabled) 속성이 **true** 인 경우에도 입력 범위가 **기본값이** 아닌 경우 텍스트 예측을 사용 하지 않도록 설정할 수 있습니다. 자세한 내용은이 항목의 뒷부분에 나오는 표를 참조 하십시오.
 
--   [**PreventKeyboardDisplayOnProgrammaticFocus**](/uwp/api/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus)-이 속성이 **true**이면 포커스가 텍스트 컨트롤에 프로그래밍 방식으로 설정 된 경우 시스템에서 SIP를 표시 하지 않습니다. 대신 사용자가 컨트롤과 상호 작용 하는 경우에만 키보드를 표시 합니다.
+-   [**PreventKeyboardDisplayOnProgrammaticFocus**](/uwp/api/windows.ui.xaml.controls.textbox.preventkeyboarddisplayonprogrammaticfocus)-이 속성이 **true** 이면 포커스가 텍스트 컨트롤에 프로그래밍 방식으로 설정 된 경우 시스템에서 SIP를 표시 하지 않습니다. 대신 사용자가 컨트롤과 상호 작용 하는 경우에만 키보드를 표시 합니다.
 
 ## <a name="touch-keyboard-index-for-windows"></a>Windows 용 터치 키보드 인덱스
 
@@ -143,10 +143,10 @@ phoneNumberTextBox.InputScope = new InputScope()
 기본 Windows touch 키보드입니다.
 
 ![기본 Windows touch 키보드](images/input-scopes/default.png)
-- 맞춤법 검사: **IsSpellCheckEnabled**  =  **true**이면 사용, **IsSpellCheckEnabled**  =  **false** 인 경우 사용 안 함
-- 자동 수정: true 이면 **IsSpellCheckEnabled**  =  **true**이 고, 그렇지 않으면 **IsSpellCheckEnabled**  =  **false** 이면 사용 안 함입니다.
-- 자동 대문자 표시: **IsSpellCheckEnabled**  =  **true**이면 enabled, **IsSpellCheckEnabled**  =  **false** 인 경우 사용 안 함
-- 텍스트 예측: **IsTextPredictionEnabled**true 이면 사용 하도록 설정  =  **true**하 고 **IsTextPredictionEnabled**  =  **false** 인 경우 사용 하지 않도록 설정 합니다.
+- 맞춤법 검사: **IsSpellCheckEnabled**  =  **true** 이면 사용, **IsSpellCheckEnabled**  =  **false** 인 경우 사용 안 함
+- 자동 수정: true 이면 **IsSpellCheckEnabled**  =  **true** 이 고, 그렇지 않으면 **IsSpellCheckEnabled**  =  **false** 이면 사용 안 함입니다.
+- 자동 대문자 표시: **IsSpellCheckEnabled**  =  **true** 이면 enabled, **IsSpellCheckEnabled**  =  **false** 인 경우 사용 안 함
+- 텍스트 예측: **IsTextPredictionEnabled** true 이면 사용 하도록 설정  =  **true** 하 고 **IsTextPredictionEnabled**  =  **false** 인 경우 사용 하지 않도록 설정 합니다.
 
 ### <a name="currencyamountandsymbol"></a>CurrencyAmountAndSymbol
 
@@ -168,8 +168,8 @@ phoneNumberTextBox.InputScope = new InputScope()
 
 ![Url에 대 한 Windows touch 키보드](images/input-scopes/url.png)
 
-- **.Com** 및 ![ go 키 ](images/input-scopes/kbdgokey.png) (go) 키를 포함 합니다. **.Com** 키를 길게 눌러 추가 옵션 (**org**, **.net**및 지역별 접미사)을 표시 합니다.
-- 에는 **:**, **-** 및 키가 포함 되어 있습니다. **/**
+- **.Com** 및 ![ go 키 ](images/input-scopes/kbdgokey.png) (go) 키를 포함 합니다. **.Com** 키를 길게 눌러 추가 옵션 ( **org** , **.net** 및 지역별 접미사)을 표시 합니다.
+- 에는 **:** , **-** 및 키가 포함 되어 있습니다. **/**
 - 맞춤법 검사: 기본적으로 해제 되어 있으므로 사용 하도록 설정할 수 있습니다.
 - 자동 수정: 기본적으로 해제 되어 있으므로 사용 하도록 설정할 수 있습니다.
 - 자동 대문자화: 기본적으로 해제 되어 있을 수 있습니다.
@@ -181,7 +181,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 `<TextBox InputScope="EmailSmtpAddress"/>`
 
 ![전자 메일 주소에 대 한 Windows touch 키보드](images/input-scopes/emailsmtpaddress.png)
-- **@** 및 **.com** 키를 포함 합니다. **.Com** 키를 길게 눌러 추가 옵션 (**org**, **.net**및 지역별 접미사)을 표시 합니다.
+- **@** 및 **.com** 키를 포함 합니다. **.Com** 키를 길게 눌러 추가 옵션 ( **org** , **.net** 및 지역별 접미사)을 표시 합니다.
 - **_** 및 키를 포함 합니다. **-**
 - 맞춤법 검사: 기본적으로 해제 되어 있으므로 사용 하도록 설정할 수 있습니다.
 - 자동 수정: 기본적으로 해제 되어 있으므로 사용 하도록 설정할 수 있습니다.
@@ -189,7 +189,7 @@ phoneNumberTextBox.InputScope = new InputScope()
 - 텍스트 예측: 기본적으로 해제 되어 있을 수 있습니다.
 
 
-### <a name="number"></a>Number
+### <a name="number"></a>숫자
 
 `<TextBox InputScope="Number"/>`
 
