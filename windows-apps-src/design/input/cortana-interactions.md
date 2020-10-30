@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱을 활성화 하 고 단일 작업을 실행 하는 음성 명령으로 Cortana의 기본 기능을 확장 합니다.
+description: Windows 앱을 활성화 하 고 단일 작업을 실행 하는 음성 명령으로 Cortana의 기본 기능을 확장 합니다.
 title: Cortana 조작
 ms.assetid: 4C11A7CF-DA26-4CA1-A9B9-FE52670101F5
 label: Cortana
@@ -8,12 +8,12 @@ keywords: Cortana, Cortana canvas, Cortana 디자인, 사용자 인터페이스,
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2d79f62a98e30ef67743abd6a6dd00ce24d3fa13
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 270c3e4838c6edc3ac0aedc7092a545028ceff86
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220596"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032196"
 ---
 # <a name="cortana-interactions-in-windows-apps"></a>Windows 앱에서 Cortana 상호 작용
 
@@ -37,6 +37,6 @@ Cortana [개발자 센터](https://developer.microsoft.com/cortana)를 통해 co
 
 **샘플**
 * [Cortana 음성 명령 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CortanaVoiceCommand)
- 
+ 
 
- 
+ 

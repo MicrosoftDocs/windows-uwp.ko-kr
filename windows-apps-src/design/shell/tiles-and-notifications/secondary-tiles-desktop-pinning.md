@@ -1,5 +1,5 @@
 ---
-Description: 데스크톱 응용 프로그램은 데스크톱 브리지 덕분에 보조 타일을 고정할 수 있습니다.
+description: 데스크톱 응용 프로그램은 데스크톱 브리지 덕분에 보조 타일을 고정할 수 있습니다.
 title: 데스크톱 앱에서 보조 타일 고정
 label: Pin secondary tiles from desktop apps
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: windows 10, 데스크톱 브리지, 보조 타일, pin, 고정, 빠른 시작, 코드 샘플, 예제, secondarytile, 데스크톱 응용 프로그램, win32, winforms, wpf
 ms.localizationpriority: medium
-ms.openlocfilehash: f0b1e167b0ce2e91b00b7facbdd53709efdc4887
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: 1c6451510816e36bed5574f0ae69254c9f4d34f6
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100271"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030656"
 ---
 # <a name="pin-secondary-tiles-from-desktop-apps"></a>데스크톱 앱에서 보조 타일 고정
 
@@ -22,7 +22,7 @@ ms.locfileid: "92100271"
 ![보조 타일의 스크린샷](images/secondarytiles.png)
 
 > [!IMPORTANT]
-> **낙하 작성자 업데이트 필요**: 데스크톱 브리지 앱에서 보조 타일을 고정 하려면 SDK 16299을 대상으로 하 고 빌드 16299 이상을 실행 해야 합니다.
+> **낙하 작성자 업데이트 필요** : 데스크톱 브리지 앱에서 보조 타일을 고정 하려면 SDK 16299을 대상으로 하 고 빌드 16299 이상을 실행 해야 합니다.
 
 WPF 또는 WinForms 응용 프로그램에서 보조 타일을 추가 하는 것은 순수 UWP 앱과 매우 유사 합니다. 유일한 차이점은 기본 창 핸들 (HWND)을 지정 해야 한다는 것입니다. 이는 타일을 고정 하는 경우 사용자가 타일을 고정할 지 여부를 확인 하는 모달 대화 상자를 표시 하기 때문입니다. 데스크톱 응용 프로그램에서 소유자 창을 사용 하 여 SecondaryTile 개체를 구성 하지 않는 경우 Windows에서는 대화를 그릴 위치를 알지 못하며 작업이 실패 합니다.
 
@@ -90,7 +90,7 @@ bool isPinned = await tile.RequestCreateAsync();
 ## <a name="send-tile-notifications"></a>타일 알림 보내기
 
 > [!IMPORTANT]
-> **4 월 2018 버전 17134.81 이상이 필요**합니다. 데스크톱 브리지 앱에서 보조 타일에 타일 또는 배지 알림을 보내려면 빌드 17134.81 이상을 실행 해야 합니다. 이. 81 업데이트를 설치 하기 전에 0x80070490 *요소를 찾을 수 없습니다* . 예외는 데스크톱 브리지 앱에서 보조 타일에 타일 또는 배지 알림을 보낼 때 발생 합니다.
+> **4 월 2018 버전 17134.81 이상이 필요** 합니다. 데스크톱 브리지 앱에서 보조 타일에 타일 또는 배지 알림을 보내려면 빌드 17134.81 이상을 실행 해야 합니다. 이. 81 업데이트를 설치 하기 전에 0x80070490 *요소를 찾을 수 없습니다* . 예외는 데스크톱 브리지 앱에서 보조 타일에 타일 또는 배지 알림을 보낼 때 발생 합니다.
 
 타일 또는 배지 알림은 UWP 앱과 동일 합니다. 시작 하려면 [로컬 타일 알림 보내기](sending-a-local-tile-notification.md) 를 참조 하세요.
 

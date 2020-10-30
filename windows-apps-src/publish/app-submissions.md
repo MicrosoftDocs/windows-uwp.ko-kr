@@ -1,22 +1,22 @@
 ---
-Description: 이름을 예약하여 앱을 만들면 앱 게시 작업을 시작할 수 있습니다. 첫 번째 단계는 제출을 만드는 것입니다.
+description: 이름을 예약하여 앱을 만들면 앱 게시 작업을 시작할 수 있습니다. 첫 번째 단계는 제출을 만드는 것입니다.
 title: 앱 제출
 ms.assetid: 363BB9E4-4437-4238-A80F-ABDFC70D96E4
 keywords: 검사 목록, windows, uwp, 제출, 제출, 게임, 앱, 제출
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 99b4d7412727e5f195c32d3f3c21fe82b284e658
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: d38cf2b8e134983ae73c909f7036603eadcd6289
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219976"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031296"
 ---
 # <a name="app-submissions"></a>앱 제출
 
 
-[이름을 예약 하 여 앱을 만들었으면](create-your-app-by-reserving-a-name.md)게시 작업을 시작할 수 있습니다. 첫 번째 단계는 **제출을**만드는 것입니다.
+[이름을 예약 하 여 앱을 만들었으면](create-your-app-by-reserving-a-name.md)게시 작업을 시작할 수 있습니다. 첫 번째 단계는 **제출을** 만드는 것입니다.
 
 앱이 완료 되 고 게시할 준비가 되 면 제출을 시작 하거나 한 줄의 코드를 작성 하기 전에도 정보 입력을 시작할 수 있습니다. 전송에 대 한 업데이트는 저장 되므로 준비가 되 면 언제 든 지 해당 업데이트에 대해 작업을 수행 하 여 작업할 수 있습니다.
 
@@ -45,7 +45,7 @@ ms.locfileid: "91219976"
 | **검색 기능**                | 기본값: 스토어에서이 앱을 사용 가능 하 게 설정 하 고 검색 가능 | [검색 기능](choose-visibility-options.md#discoverability) |
 | **일정**                  | 기본값: 가능한 한 빨리 릴리스        | [정확한 릴리스 예약 구성](configure-precise-release-scheduling.md) |
 | **기본 가격**                | 필수                                    | [앱 가격 설정 및 예약](set-and-schedule-app-pricing.md)              |
-| **무료 평가판**                | 기본값: 무료 평가판 없음                      | [무료 평가판](set-app-pricing-and-availability.md#free-trial)              |
+| **평가판**                | 기본값: 무료 평가판 없음                      | [평가판](set-app-pricing-and-availability.md#free-trial)              |
 | **판매 가격**              | 선택 사항                                    | [앱 및 추가 기능 판매](put-apps-and-add-ons-on-sale.md)           |
 | **조직 라이선스**    | 기본값: 조직에서 볼륨 획득 허용 | [조직 라이선스 옵션](organizational-licensing.md)        |
       |

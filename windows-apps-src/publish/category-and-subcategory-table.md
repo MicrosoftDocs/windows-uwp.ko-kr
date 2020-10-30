@@ -1,17 +1,17 @@
 ---
-Description: 앱을 올바른 범주 및 하위 범주에 나열 하면 고객이 앱을 찾고 더 자세히 이해할 수 있습니다.
+description: 앱을 올바른 범주 및 하위 범주에 나열 하면 고객이 앱을 찾고 더 자세히 이해할 수 있습니다.
 title: 범주 및 하위 범주 테이블
 ms.assetid: D451C468-DCCD-4966-AB87-8E766615A72F
 ms.date: 03/21/2019
 ms.topic: article
 keywords: windows 10, uwp, 범주, 하위 범주, 장르, 범주, 장르
 ms.localizationpriority: medium
-ms.openlocfilehash: 49b22ceaf0f1cdefcc7f29f0a8ca79658aa15803
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b1d14f0b14ea97d9825dbdd44c78f62ac8ea2bd5
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89167427"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030396"
 ---
 # <a name="category-and-subcategory-table"></a>범주 및 하위 범주 테이블
 
@@ -54,7 +54,7 @@ Microsoft Store는 다음 범주 및 하위 범주로 앱을 구성 합니다.
     <td>데이터베이스 <br> 디자인 도구 <br> 개발 키트 <br> 네트워킹 <br> 참조 + 학습 <br> 서버 <br> 유틸리티 <br> 웹 호스팅</td>
   </tr>
   <tr>
-    <td>교육</td>
+    <td>Education</td>
     <td>책 + 참조 <br> 초기 학습 <br> 지침 도구 <br> 언어 <br> 연구 지원</td>
   </tr>
   <tr>
@@ -67,7 +67,7 @@ Microsoft Store는 다음 범주 및 하위 범주로 앱을 구성 합니다.
   </tr>
   <tr>
     <td>게임</td>
-    <td>작업 + 어드벤처 <br> 카드 + 보드 <br> 카지노 <br> 클래식 <br> 교육 <br> 가족 + 어린이 <br> 우 <br> 멀티 플레이어 온라인 전투 아레나 <br> Music <br> 기타 <br> Platformer <br> 퍼즐 + 기타 정보 <br> 레이스 + 비행 <br> 역할 재생 <br> 슈팅 <br> 시뮬레이션 <br> 스포츠 <br> 전략 <br> 도구 <br> Word</td>
+    <td>작업 + 어드벤처 <br> 카드 + 보드 <br> 카지노 <br> 클래식 <br> 교육 <br> 가족 + 어린이 <br> 우 <br> 멀티 플레이어 온라인 전투 아레나 <br> 음악 <br> 기타 <br> Platformer <br> 퍼즐 + 기타 정보 <br> 레이스 + 비행 <br> 역할 재생 <br> 슈팅 <br> Simulation <br> 스포츠 <br> 전략 <br> 도구 <br> Word</td>
   </tr>
   <tr>
     <td>정부 + 정치</td>
@@ -94,7 +94,7 @@ Microsoft Store는 다음 범주 및 하위 범주로 앱을 구성 합니다.
     <td>그림 + 그래픽 디자인 <br> 음악 생산 <br> 사진 + 비디오 프로덕션</td>
   </tr>
   <tr>
-    <td>Music</td>
+    <td>음악</td>
     <td>(없음)</td>
   </tr>
   <tr>

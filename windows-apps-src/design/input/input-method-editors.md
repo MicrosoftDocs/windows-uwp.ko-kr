@@ -1,5 +1,5 @@
 ---
-Description: IME (입력기)는 사용자가 표준 QWERTY 키보드에서 쉽게 나타낼 수 없는 언어로 텍스트를 입력할 수 있도록 하는 소프트웨어 구성 요소입니다.
+description: IME (입력기)는 사용자가 표준 QWERTY 키보드에서 쉽게 나타낼 수 없는 언어로 텍스트를 입력할 수 있도록 하는 소프트웨어 구성 요소입니다.
 title: IME (입력기)
 label: Input Method Editors (IME)
 template: detail.hbs
@@ -7,12 +7,12 @@ keywords: ime, 입력 방법 편집기, 입력, 상호 작용
 ms.date: 07/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e7782dea8cd634fd9fe3bac4a3e4c870cd680e9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1f70f08e61df1b609a0ab505e35ef314a90a91fd
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159947"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030086"
 ---
 # <a name="input-method-editors-ime"></a>IME (입력기)
 

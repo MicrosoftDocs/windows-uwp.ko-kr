@@ -1,17 +1,17 @@
 ---
-Description: 스토어에 앱을 제출한 후 오류가 발생 하는 경우 인증 프로세스를 계속 하려면 문제를 해결 해야 합니다.
+description: 스토어에 앱을 제출한 후 오류가 발생 하는 경우 인증 프로세스를 계속 하려면 문제를 해결 해야 합니다.
 title: 제출 오류 해결
 ms.assetid: 68199E09-0C66-4EB4-BFE8-D2EEB139C4F3
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: cf2092291c4521a7ed9d32944e0ad4cb88f45a00
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c7ce114be55b9a53ce3a2ad0beabbbd89377f559
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174737"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029969"
 ---
 # <a name="resolve-submission-errors"></a>제출 오류 해결
 
@@ -42,18 +42,18 @@ Win32 및 UWP 이진 파일이 포함 된 패키지를 제출 하려는 경우 V
 -   **패키지에는 혼합 모드 (관리 코드 및 네이티브 코드 포함) 어셈블리가 포함 되어 있습니다.** Windows Phone에서는 혼합 모드 어셈블리가 지원 되지 않습니다. 패키지에서 혼합 모드 어셈블리를 제거 하 고 앱을 다시 전송 합니다.
 -   **Windows Phone 8.1 XAP 또는 appx/.appxbundle 어셈블리가 잘못 되었습니다.** Winmd 파일에 하나 이상의 공개 진입점이 있는지 확인 합니다. 디컴파일러 응용 프로그램을 사용 하 여 코드를 검토 하 고 필요한 경우 공용 진입점을 확인할 수 있습니다.
 
-앱을 제출한 후에 표시 될 수 있는 또 다른 오류는 **오류 1300**입니다. 이는 하나 이상의 어셈블리 (또는 전체 패키지)가 이미 미리 컴파일된 경우에 발생 합니다. 이 문제를 해결 하려면 Microsoft Visual Studio에서 앱 패키지를 다시 작성 한 다음 새로 생성 된 패키지를 제출 합니다.
+앱을 제출한 후에 표시 될 수 있는 또 다른 오류는 **오류 1300** 입니다. 이는 하나 이상의 어셈블리 (또는 전체 패키지)가 이미 미리 컴파일된 경우에 발생 합니다. 이 문제를 해결 하려면 Microsoft Visual Studio에서 앱 패키지를 다시 작성 한 다음 새로 생성 된 패키지를 제출 합니다.
 
 ## <a name="nameidentity-errors"></a>이름/id 오류
 
-**패키지에 있는 이름이 예약 된 앱 이름 중 하나가 아님을 나타내는 오류가 표시 되는 경우 앱 이름을 예약 하거나이 언어에 맞는 올바른 앱 이름으로 패키지를 업데이트 하세요**. 패키지에 잘못 된 이름을 입력 했기 때문일 수 있습니다. 파트너 센터에서 예약 하지 않은 앱 이름을 사용 하는 경우에도이 오류가 발생할 수 있습니다. 일반적으로 다음 단계를 수행 하 여이 오류를 해결할 수 있습니다.
+**패키지에 있는 이름이 예약 된 앱 이름 중 하나가 아님을 나타내는 오류가 표시 되는 경우 앱 이름을 예약 하거나이 언어에 맞는 올바른 앱 이름으로 패키지를 업데이트 하세요** . 패키지에 잘못 된 이름을 입력 했기 때문일 수 있습니다. 파트너 센터에서 예약 하지 않은 앱 이름을 사용 하는 경우에도이 오류가 발생할 수 있습니다. 일반적으로 다음 단계를 수행 하 여이 오류를 해결할 수 있습니다.
 
-- 앱 **관리**에서 앱에 대 한 [앱 id](view-app-identity-details.md) 페이지로 이동 하 여 앱에 할당 된 id가 있는지 여부를 확인 합니다. 그렇지 않으면 하나를 만드는 옵션이 표시 됩니다. Id를 만들기 위해 앱의 이름을 예약 해야 합니다. 패키지에서 사용한 이름 인지 확인 합니다.
-- 앱에 이미 id가 있는 경우 패키지에서 사용할 이름을 예약 해야 할 수 있습니다. **앱 관리**에서 [앱 이름 관리](manage-app-names.md)를 클릭 합니다. 사용할 이름을 입력 하 고 **앱 이름 예약**을 클릭 합니다.
+- 앱 **관리** 에서 앱에 대 한 [앱 id](view-app-identity-details.md) 페이지로 이동 하 여 앱에 할당 된 id가 있는지 여부를 확인 합니다. 그렇지 않으면 하나를 만드는 옵션이 표시 됩니다. Id를 만들기 위해 앱의 이름을 예약 해야 합니다. 패키지에서 사용한 이름 인지 확인 합니다.
+- 앱에 이미 id가 있는 경우 패키지에서 사용할 이름을 예약 해야 할 수 있습니다. **앱 관리** 에서 [앱 이름 관리](manage-app-names.md)를 클릭 합니다. 사용할 이름을 입력 하 고 **앱 이름 예약** 을 클릭 합니다.
 
 > [!IMPORTANT]
 >  사용 하려는 이름을 사용할 수 없는 경우 다른 앱이 해당 이름을 이미 예약한 것일 수 있습니다. 해당 이름으로 앱이 이미 게시 된 경우 또는 사용할 권한이 있다고 생각 되 면 [지원 담당자에 게 문의 하세요](https://support.microsoft.com/getsupport/hostpage.aspx?locale=EN-US&supportregion=EN-US&ccfcode=US&ln=EN-US&pesid=14654&oaspworkflow=start_1.0.0.0&tenant=store&supporttopic_L1=31762156&supporttopic_L2=31762179).  
 
- 
+ 
 
- 
+ 

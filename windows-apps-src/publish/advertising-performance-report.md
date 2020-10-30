@@ -1,24 +1,24 @@
 ---
-Description: 앱에서 ad 단위에 대 한 성능 데이터를 보려면 파트너 센터의 광고 성능 보고서를 사용 합니다.
+description: 앱에서 ad 단위에 대 한 성능 데이터를 보려면 파트너 센터의 광고 성능 보고서를 사용 합니다.
 title: 광고 성과 보고서
 ms.assetid: 32E555C3-C34D-4503-82BB-4C3F5CAE4500
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ea0fe6f29059a2b9ef8e5ce728d883d5349d0468
-ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
+ms.openlocfilehash: 2366b6828a1de379d0442f3b72366c091908ba22
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878426"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032006"
 ---
 # <a name="advertising-performance-report"></a>광고 성과 보고서
 
 
 [파트너 센터](https://partner.microsoft.com/dashboard) 의 **광고 성능 보고서** 에는 커뮤니티 광고를 비롯 하 여 [ad 단위가](in-app-ads.md) 어떻게 수행 되는지 표시 됩니다. 이 보고서에는 [ad 중재](in-app-ads.md#mediation)를 사용 하는 UWP 앱에서 여러 ad 공급자의 데이터가 포함 됩니다.
 
-이 보고서를 보려면 왼쪽 탐색 메뉴에서 **분석** 을 확장 한 다음 **Ad 성능**을 선택 합니다. 파트너 센터에서이 데이터를 보거나 페이지의 화살표 아이콘을 클릭 하 여 보고서 데이터를 다운로드 하 여 오프 라인으로 볼 수 있습니다. 또는 [분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)에서 [get ad performance data](../monetize/get-ad-performance-data.md) 메서드를 사용 하 여 프로그래밍 방식으로이 데이터를 검색할 수 있습니다.
+이 보고서를 보려면 왼쪽 탐색 메뉴에서 **분석** 을 확장 한 다음 **Ad 성능** 을 선택 합니다. 파트너 센터에서이 데이터를 보거나 페이지의 화살표 아이콘을 클릭 하 여 보고서 데이터를 다운로드 하 여 오프 라인으로 볼 수 있습니다. 또는 [분석 REST API](../monetize/access-analytics-data-using-windows-store-services.md)에서 [get ad performance data](../monetize/get-ad-performance-data.md) 메서드를 사용 하 여 프로그래밍 방식으로이 데이터를 검색할 수 있습니다.
 
 광고 성능 보고서를 볼 때 지난 3 일간의 보고 데이터는 다양 한 원본에서 새 데이터를 받고 처리할 때 변경 될 수 있습니다. 또한 데이터 다시 문은 과거에 최대 90 일까지 발생할 수 있습니다.
 
@@ -28,9 +28,9 @@ ms.locfileid: "91878426"
 
 **필터** 를 확장 하 여 ad 단위, 앱, ad 공급자 및 장치 유형별로이 페이지의 모든 데이터를 필터링 할 수도 있습니다. 다음 옵션 중에서 선택할 수 있습니다.
 
-* **집계**: 보고서 데이터를 집계 하는 방법 및 필터링 할 수 있는 방법을 선택 합니다. 기본적으로이 필터는 **모든 ad 단위**로 설정 됩니다. 필요에 따라 **모든 앱** 또는 **모든 ad 공급자**에 대해이 필터를 변경 하거나 광고를 사용 하는 특정 앱을 기준으로 집계 하도록 선택할 수 있습니다.
-* **Ad 공급자**: 특정 [Ad 공급자](in-app-ads.md#paid-networks)에 대 한 성능 데이터에 대 한 보고서를 필터링 합니다. 기본적으로 보고서는 모든 ad 공급자의 데이터를 표시 합니다. **집계** 드롭다운에서 **모든 ad 공급자** 를 선택한 경우이 옵션을 사용할 수 없습니다.
-* **장치**: 특정 장치 유형에 대 한 성능 데이터에 대 한 보고서를 필터링 합니다. 기본적으로 보고서는 모든 장치 유형에 대 한 데이터를 표시 합니다.
+* **집계** : 보고서 데이터를 집계 하는 방법 및 필터링 할 수 있는 방법을 선택 합니다. 기본적으로이 필터는 **모든 ad 단위** 로 설정 됩니다. 필요에 따라 **모든 앱** 또는 **모든 ad 공급자** 에 대해이 필터를 변경 하거나 광고를 사용 하는 특정 앱을 기준으로 집계 하도록 선택할 수 있습니다.
+* **Ad 공급자** : 특정 [Ad 공급자](in-app-ads.md#paid-networks)에 대 한 성능 데이터에 대 한 보고서를 필터링 합니다. 기본적으로 보고서는 모든 ad 공급자의 데이터를 표시 합니다. **집계** 드롭다운에서 **모든 ad 공급자** 를 선택한 경우이 옵션을 사용할 수 없습니다.
+* **장치** : 특정 장치 유형에 대 한 성능 데이터에 대 한 보고서를 필터링 합니다. 기본적으로 보고서는 모든 장치 유형에 대 한 데이터를 표시 합니다.
 
 ## <a name="overall-performance"></a>전반적인 성능
 
@@ -69,4 +69,4 @@ ms.locfileid: "91878426"
 * [광고 단위의 가시성 최적화](../monetize/optimize-ad-unit-viewability.md)
 
 
- 
+ 

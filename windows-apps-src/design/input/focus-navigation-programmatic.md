@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱에서 키보드, 게임 패드 및 내게 필요한 옵션 도구를 사용 하 여 프로그래밍 방식으로 포커스 탐색을 관리 하는 방법을 알아봅니다.
+description: Windows 앱에서 키보드, 게임 패드 및 내게 필요한 옵션 도구를 사용 하 여 프로그래밍 방식으로 포커스 탐색을 관리 하는 방법을 알아봅니다.
 title: 키보드, 게임 패드 및 접근성 도구를 사용한 프로그래밍 방식 포커스 탐색
 label: Programmatic focus navigation
 keywords: 키보드, 게임 컨트롤러, 원격 제어, 탐색, 탐색 전략, 입력, 사용자 조작, 접근성, 유용성
@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: ef2e62404766d822343537cea2aca8e512482093
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: b64eeafda6abe146d05e29d491850da3b36a1999
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220536"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032176"
 ---
 # <a name="programmatic-focus-navigation"></a>프로그래밍 방식 포커스 탐색
 

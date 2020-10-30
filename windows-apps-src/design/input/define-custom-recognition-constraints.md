@@ -1,5 +1,5 @@
 ---
-Description: 음성 인식에 대 한 사용자 지정 제약 조건을 정의 하 고 사용 하는 방법에 대해 알아봅니다.
+description: 음성 인식에 대 한 사용자 지정 제약 조건을 정의 하 고 사용 하는 방법에 대해 알아봅니다.
 title: 사용자 지정 인식 제약 조건 정의
 ms.assetid: 26289DE5-6AC9-42C3-A160-E522AE62D2FC
 label: Define custom recognition constraints
@@ -8,18 +8,18 @@ keywords: 음성, 음성, 음성 인식, 자연어, 받아쓰기, 입력, 사용
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b48564469fd77f3c670739a7095124ed7399a1fe
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 5cef63bab911f46e34d337957011556a0c420763
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160077"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032166"
 ---
 # <a name="define-custom-recognition-constraints"></a>사용자 지정 인식 제약 조건 정의
 
 음성 인식에 대 한 사용자 지정 제약 조건을 정의 하 고 사용 하는 방법에 대해 알아봅니다.
 
-> **중요 한 api**: [**SpeechRecognitionTopicConstraint**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint), [**SpeechRecognitionListConstraint**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint), [**SpeechRecognitionGrammarFileConstraint**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint)
+> **중요 한 api** : [**SpeechRecognitionTopicConstraint**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionTopicConstraint), [**SpeechRecognitionListConstraint**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint), [**SpeechRecognitionGrammarFileConstraint**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionGrammarFileConstraint)
 
 음성 인식은 인식할 수 있는 어휘를 정의 하는 하나 이상의 제약 조건이 필요 합니다. 제약 조건을 지정 하지 않으면 유니버설 Windows 앱의 미리 정의 된 받아쓰기 문법이 사용 됩니다. [음성 인식](speech-recognition.md)을 참조 하세요.
 
@@ -88,7 +88,7 @@ private async void WeatherSearch_Click(object sender, RoutedEventArgs e)
 다음 사항을 염두에 두어야 합니다.
 
 - 제약 조건 컬렉션에 여러 list 제약 조건을 추가할 수 있습니다.
-- 문자열 값으로 **iiterable<t> &lt; string &gt; ** 을 구현 하는 모든 컬렉션을 사용할 수 있습니다.
+- 문자열 값으로 **iiterable<t> &lt; string &gt;** 을 구현 하는 모든 컬렉션을 사용할 수 있습니다.
 
 여기서는 프로그래밍 방식으로 단어 배열을 목록 제약 조건으로 지정 하 고이를 음성 인식기의 제약 조건 컬렉션에 추가 합니다.
 
@@ -144,7 +144,7 @@ SRGS 요소 및 특성에 대 한 자세한 내용은 [SRGS 문법 XML 참조](/
 - 제약 조건 컬렉션에 여러 문법 파일 제약 조건을 추가할 수 있습니다.
 - SRGS 규칙을 준수 하는 XML 기반 문법 문서에는 grxml 파일 확장명을 사용 합니다.
 
-이 예제에서는 SRGS 라는 파일에 정의 된 SRGS 문법을 사용 합니다 (뒷부분에서 설명). 파일 속성에서 **패키지 작업** 은 **출력 디렉터리로 복사** 가 **항상 복사**로 설정 된 **콘텐츠로** 설정 됩니다.
+이 예제에서는 SRGS 라는 파일에 정의 된 SRGS 문법을 사용 합니다 (뒷부분에서 설명). 파일 속성에서 **패키지 작업** 은 **출력 디렉터리로 복사** 가 **항상 복사** 로 설정 된 **콘텐츠로** 설정 됩니다.
 
 ```CSharp
 private async void Colors_Click(object sender, RoutedEventArgs e)
@@ -171,7 +171,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-이 SRGS 파일 (SRGS)은 의미 체계 해석 태그를 포함 합니다. 이러한 태그는 응용 프로그램에 문법을 일치 하는 데이터를 반환 하는 메커니즘을 제공 합니다. 문법은 [SISR (음성 인식) 1.0 사양에 대해](https://www.w3.org/TR/semantic-interpretation/) W3C (World Wide Web 컨소시엄) 의미 체계 해석을 준수 해야 합니다.
+이 SRGS 파일 (SRGS)은 의미 체계 해석 태그를 포함 합니다. 이러한 태그는 응용 프로그램에 문법을 일치 하는 데이터를 반환 하는 메커니즘을 제공 합니다. 문법은 [SISR (음성 인식) 1.0 사양에 대해](https://www.w3.org/TR/semantic-interpretation/) W3C (World Wide Web 컨소시엄) 의미 체계 해석을 준수 해야 합니다.
 
 여기서는 "yes" 및 "no"의 변형을 수신 대기 합니다.
 
@@ -212,7 +212,7 @@ private async void Colors_Click(object sender, RoutedEventArgs e)
 
 ## <a name="manage-constraints"></a>제약 조건 관리
 
-인식을 위해 제약 조건 컬렉션을 로드 한 후에는 제약 조건의 [**IsEnabled**](/uwp/api/windows.media.speechrecognition.ispeechrecognitionconstraint.isenabled) 속성을 **true** 또는 **false**로 설정 하 여 인식 작업에 사용할 제약 조건을 앱에서 관리할 수 있습니다. 기본 설정은 **true**입니다.
+인식을 위해 제약 조건 컬렉션을 로드 한 후에는 제약 조건의 [**IsEnabled**](/uwp/api/windows.media.speechrecognition.ispeechrecognitionconstraint.isenabled) 속성을 **true** 또는 **false** 로 설정 하 여 인식 작업에 사용할 제약 조건을 앱에서 관리할 수 있습니다. 기본 설정은 **true** 입니다.
 
 일반적으로 제약 조건을 한 번 로드 하 고 각 인식 작업에 대 한 로드, 언로드 및 컴파일 제약 조건을 사용 하지 않고 필요에 따라 사용 하지 않도록 설정 하는 것이 더 효율적입니다. 필요에 따라 [**IsEnabled**](/uwp/api/windows.media.speechrecognition.ispeechrecognitionconstraint.isenabled) 속성을 사용 합니다.
 

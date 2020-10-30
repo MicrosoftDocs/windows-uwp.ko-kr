@@ -1,5 +1,5 @@
 ---
-Description: 사용자 지정 IME (입력기)를 개발 하 여 표준 QWERTY 키보드에서 쉽게 나타낼 수 없는 언어로 사용자 입력 텍스트를 지원할 수 있습니다.
+description: 사용자 지정 IME (입력기)를 개발 하 여 표준 QWERTY 키보드에서 쉽게 나타낼 수 없는 언어로 사용자 입력 텍스트를 지원할 수 있습니다.
 title: IME (입력기) 요구 사항
 label: Input Method Editor (IME) requirements
 template: detail.hbs
@@ -7,12 +7,12 @@ keywords: ime, 입력 방법 편집기, 입력, 상호 작용
 ms.date: 07/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a34c15826bff757b7c4277b87cc5fed53a6f109
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 74c223aefa525bb6109521c8b91a9a849e2f5586
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160007"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030136"
 ---
 # <a name="custom-input-method-editor-ime-requirements"></a>사용자 지정 IME (입력기) 요구 사항
 
@@ -22,13 +22,13 @@ Ime의 개요는 [ime (Input Method Editor)](input-method-editors.md)를 참조 
 
 ## <a name="default-ime"></a>기본 IME
 
-사용자는 원하는 언어에 대 한 기본 IME (**설정-> 시간 & 언어 > 언어 > 기본 언어-> 언어 팩**)를 선택할 수 있습니다.
+사용자는 원하는 언어에 대 한 기본 IME ( **설정-> 시간 & 언어 > 언어 > 기본 언어-> 언어 팩** )를 선택할 수 있습니다.
 
 :::image type="content" source="images/IMEs/ime-preferred-languages.png" alt-text="기본 설정 언어 설정":::
 
 기본 설정 언어에 대 한 언어 옵션 설정 화면에서 기본 키보드를 선택 합니다.
 
-:::image type="content" source="images/IMEs/ime-preferred-languages-keyboard.png" alt-text="기본 설정 언어 키보드":::
+:::image type="content" source="images/IMEs/ime-preferred-languages-keyboard.png" alt-text="기본 설정 언어 설정":::
 
 > [!Important]
 > 사용자 지정 IME에 대 한 기본 키보드를 설정 하기 위해 레지스트리에 직접 쓰지 않는 것이 좋습니다.
@@ -147,37 +147,7 @@ if (ToUnicode(VK_PACKET, 0, abKbdState, &wch, 1, 0) == 1)
 
 검색 계약 및 검색 창과의 통합을 통해 사용자에 게 검색 기능을 제공 합니다.
 
-:::image type="content" source="images/IMEs/ime-search-pane.png" alt-text="검색 창 및 IME 제안":::<br/>
-*검색 창 및 IME 제안*
-
-검색 창은 사용자가 모든 앱에서 검색을 수행할 수 있는 중앙 위치입니다. IME 사용자의 경우 Windows는 더 높은 효율성과 유용성을 위해 호환 되는 Ime를 Windows와 통합할 수 있는 고유한 검색 환경을 제공 합니다.
-
-검색에 호환 되는 IME를 입력 하는 사용자에 게는 두 가지 주요 이점이 있습니다.
-
-- IME와 검색 환경 간의 원활한 상호 작용. IME 후보는 occluding 검색 제안을 제외 하 고 검색 상자 아래에 인라인으로 표시 됩니다. 사용자는 키보드를 사용 하 여 검색 상자, IME 변환 후보 및 검색 제안 사이를 원활 하 게 탐색할 수 있습니다.
-- 응용 프로그램에서 제공 하는 관련 결과 및 제안에 더 빠르게 액세스할 수 있습니다. 앱은 더 많은 관련 제안을 제공 하기 위해 모든 현재 변환 후보에 액세스할 수 있습니다. 검색 제안의 우선 순위를 높이려면 앱에 대 한 관련성을 고려 하 여 변환 합니다. 사용자는 윗주를 입력 하는 것 만으로 변환 하지 않고 원하는 결과를 찾아 선택 합니다.
-
-IME는 다음 조건을 충족 하는 경우 통합 검색 환경과 호환 됩니다.
-
-- Windows 스타일 셸과 호환 됩니다.
-- TSF로 된 Ess 모드 Api를 구현 합니다. 자세한 내용은이 항목의 정보를 [참조 하세요.](/windows/win32/tsf/uiless-mode-overview)
-- [ITfFnSearchCandidateProvider](/windows/win32/api/ctffunc/nn-ctffunc-itffnsearchcandidateprovider) 및 [ITfIntegratableCandidateListUIElement](/windows/win32/api/ctffunc/nn-ctffunc-itfintegratablecandidatelistuielement)의 TSF 검색 통합 api를 구현 합니다.
-
-검색 창에서 활성화 되 면 호환 되는 IME가 위치에 배치 되 고 UI를 표시할 수 없습니다. 대신, 이전 스크린샷에서와 같이 인라인 후보 목록 컨트롤에 표시 하는 변환 후보를 Windows로 보냅니다.
-
-또한 IME는 현재 검색을 실행 하는 데 사용 해야 하는 후보를 보냅니다. 이러한 후보는 변환 후보와 동일 하거나 검색에 맞게 조정할 수 있습니다.
-
-좋은 검색 후보는 다음 조건을 충족 합니다.
-
-- 접두사가 겹치지 않습니다. 예를 들어 北京大学 and北京는 다른의 접두사 이므로 중복 됩니다.
-- 중복 후보가 없습니다. 모든 중복 후보는 결과를 필터링 하는 데 도움이 되지 않으므로 검색에 유용 하지 않습니다. 예를 들어 北京大学와 일치 하는 모든 결과가 北京 일치 합니다.
-- 예측 후보가 없고 변환만 있습니다. 예를 들어 사용자가 "be"를 입력 하는 경우 IME는 北를 후보로 반환할 수 있지만 北京大学는 사용할 수 없습니다. 일반적으로 예측 후보는 너무 제한적입니다.
-
-조건을 충족 하지 않는 Ime는 다른 컨트롤과 동일한 방식으로 검색 표시와 호환 되지 않으며 UI 통합 및 검색 후보를 활용할 수 없습니다. 앱은 사용자가 작성을 완료 한 후에만 쿼리를 수신 합니다.
-
-검색 계약을 지 원하는 앱이 쿼리를 받을 때 쿼리 이벤트에는 가장 관련성이 높은 (가능성이 가장 높은)에서 가장 관련성이 높은 모든 대안 (가능성이 낮은 항목)을 포함 하는 "queryTextAlternatives" 배열이 포함 됩니다.
-
-대안을 제공 하는 경우 앱은 각 대안을 쿼리로 처리 하 고 다른 대안과 일치 하는 모든 결과를 반환 해야 합니다. 앱은 사용자가 동시에 여러 쿼리를 실행 하 여 결과를 제공 하는 서비스에 "또는" 쿼리를 실행 하는 것 처럼 동작 해야 합니다. 성능 고려 사항을 위해 앱은 가장 관련성이 가장 높은 대체 항목의 5 ~ 20 개로 제한 되는 경우가 많습니다.
+:::image type="content" source="images/IMEs/ime-search-pane.png" alt-text="기본 설정 언어 설정" 쿼리를 실행 하는 것 처럼 동작 해야 합니다. 성능 고려 사항을 위해 앱은 가장 관련성이 가장 높은 대체 항목의 5 ~ 20 개로 제한 되는 경우가 많습니다.
 
 ## <a name="ui-design-guidelines"></a>UI 디자인 지침
 
@@ -206,11 +176,11 @@ IME 브랜드 아이콘은 최신 서체에서 렌더링 된 입력 문자 모�
 
 IME 모드 아이콘은 1 픽셀의 외부 스트로크를 50% 불투명도의 검정색으로 포함 하는 현대 서체에서 흰색 입력 문자 모양으로 정의 됩니다.
 
-| 아이콘 | Description |
+| 아이콘 | 설명 |
 | --- | --- |
-| :::image type="content" source="images/IMEs/ime-brand-icon-traditional-chinese.png" alt-text="중국어 번체 ChangeJie의 예제 IME 브랜드 아이콘"::: | 중국어 번체 ChangeJie의 예제 IME 브랜드 아이콘 |
-| :::image type="content" source="images/IMEs/ime-brand-icon-traditional-chinese-new.png" alt-text="중국어 번체 새 ChangeJie의 예제 IME 브랜드 아이콘."::: | 중국어 번체 ChangeJie의 예제 IME 브랜드 아이콘 |
-| :::image type="content" source="images/IMEs/ime-mode-icon-chinese.png" alt-text="중국어 모드 아이콘"::: | 예를 들어 IME 모드 아이콘이 있습니다. |
+| :::image type="content" source="images/IMEs/ime-brand-icon-traditional-chinese.png" alt-text="기본 설정 언어 설정"::: | 중국어 번체 ChangeJie의 예제 IME 브랜드 아이콘 |
+| :::image type="content" source="images/IMEs/ime-brand-icon-traditional-chinese-new.png" alt-text="기본 설정 언어 설정"::: | 중국어 번체 ChangeJie의 예제 IME 브랜드 아이콘 |
+| :::image type="content" source="images/IMEs/ime-mode-icon-chinese.png" alt-text="기본 설정 언어 설정"::: | 예를 들어 IME 모드 아이콘이 있습니다. |
 
 ### <a name="owned-window"></a>소유 창
 
@@ -257,22 +227,22 @@ Microsoft Visual Studio를 사용 하 여 IME를 빌드하는 경우에는 Insta
 
 - Visual Studio를 설치합니다.
 - Visual Studio를 시작합니다.
-- **파일** 메뉴에서 **새로 만들기** 를 가리키고 **프로젝트**를 선택 합니다. **새 프로젝트** 대화 상자가 열립니다.
-- 왼쪽 창에서 **템플릿 > 기타 프로젝트 형식 > 설정 및 배포**로 이동 하 고 **InstallShield 제한 된 버전 사용**을 클릭 한 다음 **확인**을 클릭 합니다. 설치 지침을 따릅니다.
+- **파일** 메뉴에서 **새로 만들기** 를 가리키고 **프로젝트** 를 선택 합니다. **새 프로젝트** 대화 상자가 열립니다.
+- 왼쪽 창에서 **템플릿 > 기타 프로젝트 형식 > 설정 및 배포** 로 이동 하 고 **InstallShield 제한 된 버전 사용** 을 클릭 한 다음 **확인** 을 클릭 합니다. 설치 지침을 따릅니다.
 - Visual Studio를 다시 시작합니다.
 - IME 솔루션 (.sln) 파일을 엽니다.
-- 솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **추가**를 가리킨 다음 **새 프로젝트**를 선택 합니다. **새 프로젝트 추가** 대화 상자가 열립니다.
-- 왼쪽 트리 뷰 컨트롤에서 **템플릿 > 다른 프로젝트 형식 > InstallShield 제한 된 버전**으로 이동 합니다.
-- 가운데 창에서 **InstallShield 제한 된 버전 프로젝트**를 클릭 합니다.
-- **이름** 텍스트 상자에 "setupime"를 입력 하 고 **확인**을 클릭 합니다.
-- **프로젝트 도우미** 대화 상자에서 **응용 프로그램 정보**를 클릭 합니다.
+- 솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭 하 고 **추가** 를 가리킨 다음 **새 프로젝트** 를 선택 합니다. **새 프로젝트 추가** 대화 상자가 열립니다.
+- 왼쪽 트리 뷰 컨트롤에서 **템플릿 > 다른 프로젝트 형식 > InstallShield 제한 된 버전** 으로 이동 합니다.
+- 가운데 창에서 **InstallShield 제한 된 버전 프로젝트** 를 클릭 합니다.
+- **이름** 텍스트 상자에 "setupime"를 입력 하 고 **확인** 을 클릭 합니다.
+- **프로젝트 도우미** 대화 상자에서 **응용 프로그램 정보** 를 클릭 합니다.
 - 회사 이름 및 다른 필드를 입력 합니다.
-- **응용 프로그램 파일**을 클릭 합니다.
-- 왼쪽 창에서 **[INSTALLDIR]** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **새 폴더**를 선택 합니다. 폴더 이름을 "플러그 인"으로 합니다.
-- **파일 추가**를 클릭 합니다. IME DLL로 이동 하 여 **플러그 인** 폴더에 추가 합니다. IME 사전에 대해이 단계를 반복 합니다.
-- IME DLL을 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다. **속성** 대화 상자가 열립니다.
+- **응용 프로그램 파일** 을 클릭 합니다.
+- 왼쪽 창에서 **[INSTALLDIR]** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **새 폴더** 를 선택 합니다. 폴더 이름을 "플러그 인"으로 합니다.
+- **파일 추가** 를 클릭 합니다. IME DLL로 이동 하 여 **플러그 인** 폴더에 추가 합니다. IME 사전에 대해이 단계를 반복 합니다.
+- IME DLL을 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다. **속성** 대화 상자가 열립니다.
 - **속성** 대화 상자에서 **COM & .net 설정** 탭을 클릭 합니다.
-- **등록 유형**에서 **직접 등록** 을 선택 하 고 **확인**을 클릭 합니다.
+- **등록 유형** 에서 **직접 등록** 을 선택 하 고 **확인** 을 클릭 합니다.
 - 솔루션을 빌드합니다. IME DLL이 빌드되고 InstallShield에서 사용자가 Windows에 IME를 설치할 수 있도록 하는 setup.exe 파일을 만듭니다.
 
 사용자 고유의 설치 환경을 만들려면 [ITfInputProcessorProfileMgr:: RegisterProfile](/windows/win32/api/msctf/nf-msctf-itfinputprocessorprofilemgr-registerprofile) 메서드를 호출 하 여 설치 하는 동안 IME를 등록 합니다. 레지스트리 항목을 직접 쓰지 않습니다.
@@ -286,9 +256,9 @@ Microsoft Visual Studio를 사용 하 여 IME를 빌드하는 경우에는 Insta
 Ime가 접근성 요구 사항을 준수 하 고 내레이터를 사용 하도록 하려면 다음 규칙을 구현 합니다. 후보 목록에 액세스할 수 있도록 하려면 Ime가이 규칙을 따라야 합니다.
 
 - 후보 목록에는 변환 후보 목록에 대 한 "IME_Candidate_Window"와 같은 **UIA_AutomationIdPropertyId** 또는 예측 후보 목록의 "IME_Prediction_Window"가 있어야 합니다.
-- 후보 목록이 표시 되 고 사라지면 각각 **UIA_MenuOpenedEventId** 및 **UIA_MenuClosedEventId**형식의 이벤트를 발생 시킵니다.
-- 현재 선택한 후보가 변경 되 면 후보 목록에서 **UIA_SelectionItem_ElementSelectedEventId**발생 합니다. 선택한 요소의 속성 **UIA_SelectionItemIsSelectedPropertyId** **TRUE**와 같아야 합니다.
-- 후보 목록의 각 항목에 대 한 **UIA_NamePropertyId** 는 후보 이름 이어야 합니다. 필요에 따라 **UIA_HelpTextPropertyId**를 통해 후보를 구분 하는 추가 정보를 제공할 수 있습니다.
+- 후보 목록이 표시 되 고 사라지면 각각 **UIA_MenuOpenedEventId** 및 **UIA_MenuClosedEventId** 형식의 이벤트를 발생 시킵니다.
+- 현재 선택한 후보가 변경 되 면 후보 목록에서 **UIA_SelectionItem_ElementSelectedEventId** 발생 합니다. 선택한 요소의 속성 **UIA_SelectionItemIsSelectedPropertyId** **TRUE** 와 같아야 합니다.
+- 후보 목록의 각 항목에 대 한 **UIA_NamePropertyId** 는 후보 이름 이어야 합니다. 필요에 따라 **UIA_HelpTextPropertyId** 를 통해 후보를 구분 하는 추가 정보를 제공할 수 있습니다.
 
 ## <a name="related-topics"></a>관련 항목
 

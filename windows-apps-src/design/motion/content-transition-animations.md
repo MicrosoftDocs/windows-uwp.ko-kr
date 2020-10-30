@@ -1,6 +1,6 @@
 ---
-Description: 콘텐츠 전환 애니메이션을 사용 하면 컨테이너 또는 백그라운드 상수를 유지 하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인 됩니다. 기존 콘텐츠가 바뀔 경우 해당 콘텐츠가 페이드 아웃 됩니다.
-title: 콘텐츠 전환 애니메이션에 대 한 지침
+description: 콘텐츠 전환 애니메이션을 사용 하면 컨테이너 또는 백그라운드 상수를 유지 하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인 됩니다. 기존 콘텐츠가 바뀔 경우 해당 콘텐츠가 페이드 아웃 됩니다.
+title: 콘텐츠 전환 애니메이션에 대한 지침
 ms.assetid: 0188FDB4-E183-466f-8A03-EE3FF5C474B1
 template: detail.hbs
 ms.date: 05/19/2017
@@ -10,12 +10,12 @@ pm-contact: stmoy
 design-contact: conrwi
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d498c3214effd64895c6a894802a9ccc82ff357
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ed70a100b4aec7a2c1490cfc48e4d2f6ceac950e
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169267"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029784"
 ---
 # <a name="content-transition-animations"></a>콘텐츠 전환 애니메이션
 
@@ -23,7 +23,7 @@ ms.locfileid: "89169267"
 
 콘텐츠 전환 애니메이션을 사용 하면 컨테이너 또는 백그라운드 상수를 유지 하면서 화면 영역의 콘텐츠를 변경할 수 있습니다. 새 콘텐츠가 페이드 인 됩니다. 기존 콘텐츠가 바뀔 경우 해당 콘텐츠가 페이드 아웃 됩니다.
 
-> **중요 한 api**: [ **ContentThemeTransition 클래스 (XAML)**](/uwp/api/windows.ui.xaml.media.animation.contentthemetransition)
+> **중요 한 api** : [ **ContentThemeTransition 클래스 (XAML)**](/uwp/api/windows.ui.xaml.media.animation.contentthemetransition)
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
@@ -46,6 +46,6 @@ ms.locfileid: "89169267"
 * [빠른 시작: 라이브러리 애니메이션을 사용 하 여 UI에 애니메이션 효과 주기](/previous-versions/windows/apps/hh452703(v=win.10))
 * [**ContentThemeTransition 클래스**](/uwp/api/windows.ui.xaml.media.animation.contentthemetransition)
 
- 
+ 
 
- 
+ 

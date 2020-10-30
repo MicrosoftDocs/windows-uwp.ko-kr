@@ -1,20 +1,20 @@
 ---
-Description: 앱은 디스플레이 배율 인수, 테마, 고대비 및 기타 런타임 컨텍스트에 맞게 조정된 이미지를 포함하는 이미지 리소스 파일을 로드할 수 있습니다.
+description: 앱은 디스플레이 배율 인수, 테마, 고대비 및 기타 런타임 컨텍스트에 맞게 조정된 이미지를 포함하는 이미지 리소스 파일을 로드할 수 있습니다.
 title: 배율, 테마, 고대비 등에 맞춘 이미지 및 자산 로드
 template: detail.hbs
 ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a1d6639a901385c3a33fb0ed670b9b7e4cf683e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9b0cb92c15b39a0bee10e7fe70bc8c4e1581af3c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157607"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031826"
 ---
 # <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>배율, 테마, 고대비 등에 맞춘 이미지 및 자산 로드
-앱은 [표시 배율 인수](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), 테마, 고대비 및 기타 런타임 컨텍스트에 맞게 조정 된 이미지 리소스 파일 (또는 기타 자산 파일)을 로드할 수 있습니다. 이러한 이미지는 명령 코드 또는 XAML 태그 (예: **이미지**의 **원본** 속성)에서 참조할 수 있습니다. 응용 프로그램 패키지 매니페스트 소스 파일 (파일)에 표시 될 수도 있습니다 `Package.appxmanifest` &mdash; . 예를 들어, Visual Studio 매니페스트 디자이너의 시각적 자산 탭에 있는 앱 아이콘에 대 한 값, &mdash; 타일 및 알림을 표시 될 수 있습니다. 이미지의 파일 이름에 한정자를 사용 하 고 필요에 따라 [**Resourcecontext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)를 사용 하 여 동적으로 로드 하면 표시 배율, 테마, 고대비, 언어 및 기타 컨텍스트의 사용자 런타임 설정과 가장 일치 하는 가장 적합 한 이미지 파일이 로드 될 수 있습니다.
+앱은 [표시 배율 인수](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), 테마, 고대비 및 기타 런타임 컨텍스트에 맞게 조정 된 이미지 리소스 파일 (또는 기타 자산 파일)을 로드할 수 있습니다. 이러한 이미지는 명령 코드 또는 XAML 태그 (예: **이미지** 의 **원본** 속성)에서 참조할 수 있습니다. 응용 프로그램 패키지 매니페스트 소스 파일 (파일)에 표시 될 수도 있습니다 `Package.appxmanifest` &mdash; . 예를 들어, Visual Studio 매니페스트 디자이너의 시각적 자산 탭에 있는 앱 아이콘에 대 한 값, &mdash; 타일 및 알림을 표시 될 수 있습니다. 이미지의 파일 이름에 한정자를 사용 하 고 필요에 따라 [**Resourcecontext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)를 사용 하 여 동적으로 로드 하면 표시 배율, 테마, 고대비, 언어 및 기타 컨텍스트의 사용자 런타임 설정과 가장 일치 하는 가장 적합 한 이미지 파일이 로드 될 수 있습니다.
 
 이미지 리소스는 이미지 리소스 파일에 포함 되어 있습니다. 이미지를 자산으로 간주 하 고 자산 파일로 포함 하는 파일을 볼 수도 있습니다. 프로젝트의 \Assets 폴더에서 이러한 종류의 리소스 파일을 찾을 수 있습니다. 이미지 리소스 파일의 이름에 한정자를 사용 하는 방법에 대 한 배경 지식이 있으면 [언어, 크기 조정 및 기타 한정자에 대 한 리소스를 조정](tailor-resources-lang-scale-contrast.md)합니다 .를 참조 하세요.
 
@@ -158,7 +158,7 @@ bitmapImage.SetSourceAsync(imageFileStream);
 this.myXAMLImageElement.Source = bitmapImage;
 ```
 
-전역 수준에서 동일한 효과를 위해 기본 **Resourcecontext**에서 한정자 값을 재정의할 *수* 있습니다. 그러나 대신 [**SetGlobalQualifierValue**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)를 호출 하는 것이 좋습니다. **SetGlobalQualifierValue** 에 대 한 호출을 사용 하 여 값을 한 번 설정 하면 해당 값이 조회에 사용할 때마다 기본 **resourcecontext** 에 적용 됩니다. 기본적으로 [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live) 클래스는 기본 **resourcecontext**를 사용 합니다.
+전역 수준에서 동일한 효과를 위해 기본 **Resourcecontext** 에서 한정자 값을 재정의할 *수* 있습니다. 그러나 대신 [**SetGlobalQualifierValue**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.setglobalqualifiervalue?branch=live#Windows_ApplicationModel_Resources_Core_ResourceContext_SetGlobalQualifierValue_System_String_System_String_Windows_ApplicationModel_Resources_Core_ResourceQualifierPersistence_)를 호출 하는 것이 좋습니다. **SetGlobalQualifierValue** 에 대 한 호출을 사용 하 여 값을 한 번 설정 하면 해당 값이 조회에 사용할 때마다 기본 **resourcecontext** 에 적용 됩니다. 기본적으로 [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live) 클래스는 기본 **resourcecontext** 를 사용 합니다.
 
 ```csharp
 Windows.ApplicationModel.Resources.Core.ResourceContext.SetGlobalQualifierValue("Contrast", "high");
@@ -169,7 +169,7 @@ this.myXAMLImageElement.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(n
 ## <a name="updating-images-in-response-to-qualifier-value-change-events"></a>한정자 값 변경 이벤트에 대 한 응답으로 이미지 업데이트
 실행 중인 앱은 기본 리소스 컨텍스트의 한정자 값에 영향을 주는 시스템 설정 변경에 응답할 수 있습니다. 이러한 시스템 설정은 [**QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.QualifierValues)에서 [**mapchanged**](/uwp/api/windows.foundation.collections.iobservablemap-2.mapchanged?branch=live) 이벤트를 호출 합니다.
 
-이 이벤트에 대 한 응답으로 [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live) 에서 기본적으로 사용 하는 기본 **resourcecontext**의 도움으로 이미지를 다시 로드할 수 있습니다.
+이 이벤트에 대 한 응답으로 [**ResourceManager**](/uwp/api/windows.applicationmodel.resources.core.resourcemanager?branch=live) 에서 기본적으로 사용 하는 기본 **resourcecontext** 의 도움으로 이미지를 다시 로드할 수 있습니다.
 
 ```csharp
 public MainPage()

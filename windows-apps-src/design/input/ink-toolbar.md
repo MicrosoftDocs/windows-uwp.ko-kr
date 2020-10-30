@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱 잉크 앱에 기본 InkToolbar를 추가 하 고, InkToolbar에 사용자 지정 펜 단추를 추가 하 고, 사용자 지정 펜 단추를 사용자 지정 펜 정의에 바인딩합니다.
+description: Windows 앱 잉크 앱에 기본 InkToolbar를 추가 하 고, InkToolbar에 사용자 지정 펜 단추를 추가 하 고, 사용자 지정 펜 단추를 사용자 지정 펜 정의에 바인딩합니다.
 title: Windows 앱에 InkToolbar 추가
 label: Add an InkToolbar to a Windows app
 template: detail.hbs
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 ms.assetid: d888f75f-c2a0-4134-81db-907b5e24fcc5
 ms.localizationpriority: medium
-ms.openlocfilehash: 20446af1f0d62f0c6b18a0ff675818fe41db1740
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 78585f9734131531db5cfa429770ed8351459d8f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219746"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030206"
 ---
 # <a name="add-an-inktoolbar-to-a-windows-app"></a>Windows 앱에 InkToolbar 추가
 
@@ -35,7 +35,7 @@ Windows 앱에서 잉크를 활용 하는 두 가지 컨트롤 ( [**InkCanvas**]
 
   이 항목의 InkToolbar 모음에 대해 설명 합니다.
 
-> **중요 한 api**: [**InkCanvas 클래스**](/uwp/api/windows.ui.xaml.controls.inkcanvas), [**inktoolbar 클래스**](/uwp/api/windows.ui.xaml.controls.inktoolbar), [**InkPresenter 클래스**](/uwp/api/windows.ui.input.inking.inkpresenter) [**,**](/uwp/api/Windows.UI.Input.Inking)
+> **중요 한 api** : [**InkCanvas 클래스**](/uwp/api/windows.ui.xaml.controls.inkcanvas), [**inktoolbar 클래스**](/uwp/api/windows.ui.xaml.controls.inktoolbar), [**InkPresenter 클래스**](/uwp/api/windows.ui.input.inking.inkpresenter) [**,**](/uwp/api/Windows.UI.Input.Inking)
 
 ## <a name="default-inktoolbar"></a>기본 InkToolbar
 
@@ -103,7 +103,7 @@ XAML에서 잉크 도구 모음의 위치와 방향을 명시적으로 설정 �
 
 **사용자 기본 설정 또는 장치 상태에 따라 초기화**
 
-경우에 따라 사용자 기본 설정 또는 장치 상태에 따라 잉크 도구 모음의 위치와 방향을 설정 하는 것이 좋습니다. 다음 예제에서는 **설정 > 장치 > 펜 & Windows ink > > 펜**을 통해 지정 된 왼쪽 또는 오른쪽 쓰기 기본 설정에 따라 잉크 도구 모음의 위치와 방향을 설정 하는 방법을 보여 줍니다 .이를 사용 하 여 작성할 손을 선택할 수 있습니다.
+경우에 따라 사용자 기본 설정 또는 장치 상태에 따라 잉크 도구 모음의 위치와 방향을 설정 하는 것이 좋습니다. 다음 예제에서는 **설정 > 장치 > 펜 & Windows ink > > 펜** 을 통해 지정 된 왼쪽 또는 오른쪽 쓰기 기본 설정에 따라 잉크 도구 모음의 위치와 방향을 설정 하는 방법을 보여 줍니다 .이를 사용 하 여 작성할 손을 선택할 수 있습니다.
 
 ![기준 설정](./images/ink/location-handedness-setting.png)  
 *기준 설정*
@@ -134,13 +134,13 @@ public MainPage()
 **[잉크 도구 모음 위치 및 방향 샘플 (동적)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-ink-toolbar-handedness-dynamic.zip) 에서이 샘플 다운로드**
 
 1. 먼저 ViewModel을 추가 해 보겠습니다.
-    1. 프로젝트에 새 폴더를 추가 하 고이 폴더에 **Viewmodels**를 호출 합니다.
-    1. ViewModels 폴더에 새 클래스를 추가 합니다 (이 예에서는 **InkToolbarSnippetHostViewModel.cs**이라고 함).
+    1. 프로젝트에 새 폴더를 추가 하 고이 폴더에 **Viewmodels** 를 호출 합니다.
+    1. ViewModels 폴더에 새 클래스를 추가 합니다 (이 예에서는 **InkToolbarSnippetHostViewModel.cs** 이라고 함).
         > [!NOTE] 
         > 응용 프로그램 수명 동안이 형식의 개체가 하나만 필요 하므로 [Singleton 패턴](/previous-versions/msp-n-p/ff650849(v=pandp.10)) 을 사용 했습니다.
 
     1. `using System.ComponentModel`파일에 네임 스페이스를 추가 합니다.
-    1. **Instance**라는 정적 멤버 변수 **및 명명 된**정적 읽기 전용 속성을 추가 합니다. 생성자를 private으로 설정 하 여이 클래스를 Instance 속성을 통해서만 액세스할 수 있도록 합니다.   
+    1. **Instance** 라는 정적 멤버 변수 **및 명명 된** 정적 읽기 전용 속성을 추가 합니다. 생성자를 private으로 설정 하 여이 클래스를 Instance 속성을 통해서만 액세스할 수 있도록 합니다.   
         > [!NOTE] 
         > 이 클래스는 클라이언트 (일반적으로 클라이언트 바인딩)에 속성 값이 변경 되었음을 알리는 데 사용 되는 [INotifyPropertyChanged](/uwp/api/windows.ui.xaml.data.inotifypropertychanged) 인터페이스에서 상속 됩니다. 이를 사용 하 여 장치 방향에 대 한 변경 내용을 처리 합니다 .이 코드를 확장 하 고 이후 단계에서 추가로 설명 합니다.  
 
@@ -210,8 +210,8 @@ public MainPage()
         ```
 
 1. 이제 프로젝트에 몇 가지 변환기 클래스를 추가 해 보겠습니다. 각 클래스에는 맞춤 값 ( [HorizontalAlignment](/uwp/api/windows.ui.xaml.horizontalalignment) 또는 [VerticalAlignment](/uwp/api/windows.ui.xaml.verticalalignment))을 반환 하는 Convert 개체가 포함 되어 있습니다.
-    1. 프로젝트에 새 폴더를 추가 하 고 **변환기**를 호출 합니다.
-    1. 변환기 폴더에 두 개의 새 클래스를 추가 합니다 .이 예제에서는 **HorizontalAlignmentFromHandednessConverter.cs** 및 **VerticalAlignmentFromAppViewConverter.cs**를 호출 합니다.
+    1. 프로젝트에 새 폴더를 추가 하 고 **변환기** 를 호출 합니다.
+    1. 변환기 폴더에 두 개의 새 클래스를 추가 합니다 .이 예제에서는 **HorizontalAlignmentFromHandednessConverter.cs** 및 **VerticalAlignmentFromAppViewConverter.cs** 를 호출 합니다.
     1. `using Windows.UI.Xaml`및 `using Windows.UI.Xaml.Data` 네임 스페이스를 각 파일에 추가 합니다.
     1. 각 클래스를로 변경 하 `public` 고 [ivalueconverter.convert](/uwp/api/windows.ui.xaml.data.ivalueconverter) 인터페이스를 구현 하도록 지정 합니다.
     1. 여기에 표시 된 대로 [Convert](/uwp/api/windows.ui.xaml.data.ivalueconverter.convert) 및 [convertback](/uwp/api/windows.ui.xaml.data.ivalueconverter.convertback) 메서드를 각 파일에 추가 합니다 (convertback 메서드는 구현 되지 않음).

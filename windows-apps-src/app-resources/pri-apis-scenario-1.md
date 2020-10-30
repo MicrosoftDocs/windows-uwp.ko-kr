@@ -1,17 +1,17 @@
 ---
-Description: 이 시나리오에서는 사용자 지정 빌드 시스템을 나타내는 새 앱을 만듭니다. 리소스 인덱서를 만들고 문자열 및 다른 종류의 리소스를 추가 합니다. 그런 다음, PRI 파일을 생성 하 고 덤프 합니다.
+description: 이 시나리오에서는 사용자 지정 빌드 시스템을 나타내는 새 앱을 만듭니다. 리소스 인덱서를 만들고 문자열 및 다른 종류의 리소스를 추가 합니다. 그런 다음, PRI 파일을 생성 하 고 덤프 합니다.
 title: 시나리오 1 문자열 리소스 및 자산 파일에서 PRI 파일 생성
 template: detail.hbs
 ms.date: 05/07/2018
 ms.topic: article
 keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 81ad50f5a23bbb660ba44709e0ba828cff2ae5ee
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 44f4b8297cc1a34a378af137f75babca64e4edf2
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174067"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031676"
 ---
 # <a name="scenario-1-generate-a-pri-file-from-string-resources-and-asset-files"></a>시나리오 1: 문자열 리소스 및 자산 파일에서 PRI 파일 생성
 이 시나리오에서는 [PRI (패키지 리소스 인덱싱) api](/windows/desktop/menurc/pri-indexing-reference) 를 사용 하 여 사용자 지정 빌드 시스템을 나타내는 새 앱을 만듭니다. 이 사용자 지정 빌드 시스템의 목적은 대상 UWP 앱에 대 한 PRI 파일을 만드는 것입니다. 따라서이 연습의 일부로, 대상 UWP 앱의 리소스를 나타내기 위해 일부 샘플 리소스 파일 (문자열 및 다른 종류의 리소스 포함)을 만듭니다.
@@ -30,7 +30,7 @@ PRI Api는에 설치 되는 MrmResourceIndexer 헤더 파일에 선언 됩니다
 #include <MrmResourceIndexer.h>
 ```
 
-Api는 정적 라이브러리 MrmSupport에 연결 하 여 액세스 하는 MrmSupport.dll에서 구현 됩니다. 프로젝트의 **속성**을 열고 **링커**  >  **입력**, **additionaldependencies** 편집 및 추가를 차례로 클릭 `MrmSupport.lib` 합니다.
+Api는 정적 라이브러리 MrmSupport에 연결 하 여 액세스 하는 MrmSupport.dll에서 구현 됩니다. 프로젝트의 **속성** 을 열고 **링커**  >  **입력** , **additionaldependencies** 편집 및 추가를 차례로 클릭 `MrmSupport.lib` 합니다.
 
 솔루션을 빌드한 다음 `MrmSupport.dll` 에서 `C:\Program Files (x86)\Windows Kits\10\bin\<WindowsTargetPlatformVersion>\x64\` 빌드 출력 폴더 (아마도)로 복사 `C:\Users\%USERNAME%\source\repos\CBSConsoleApp\x64\Debug\` 합니다.
 
@@ -131,7 +131,7 @@ MrmResourceIndexerHandle indexer;
     &indexer));
 ```
 
-**MrmCreateResourceIndexer**에 전달 되는 인수에 대 한 설명은 다음과 같습니다.
+**MrmCreateResourceIndexer** 에 전달 되는 인수에 대 한 설명은 다음과 같습니다.
 
 - 나중에이 리소스 인덱서에서 PRI 파일을 생성할 때 리소스 맵 이름으로 사용 되는 대상 UWP 앱의 패키지 패밀리 이름입니다.
 - 대상 UWP 앱의 프로젝트 루트입니다. 즉, 리소스 파일에 대 한 경로입니다. 동일한 리소스 인덱서에 대 한 후속 API 호출에서 해당 루트에 상대적인 경로를 지정할 수 있도록이를 지정 합니다.
@@ -148,7 +148,7 @@ MrmResourceIndexerHandle indexer;
 ::ThrowIfFailed(::MrmIndexFile(indexer, L"ms-resource:///Files/sample-image.png", L"sample-image.png", L""));
 ```
 
-**MrmIndexFile**에 대 한 호출에서 값 L "ms-resource://Hfile/sample-image.png"는 리소스 uri입니다. 첫 번째 경로 세그먼트는 "Files" 이며, 나중에이 리소스 인덱서에서 PRI 파일을 생성할 때 리소스 맵 하위 트리 이름으로 사용 됩니다.
+**MrmIndexFile** 에 대 한 호출에서 값 L "ms-resource://Hfile/sample-image.png"는 리소스 uri입니다. 첫 번째 경로 세그먼트는 "Files" 이며, 나중에이 리소스 인덱서에서 PRI 파일을 생성할 때 리소스 맵 하위 트리 이름으로 사용 됩니다.
 
 리소스 파일에 대 한 리소스 인덱서를 briefed, [**MrmCreateResourceFile**](/windows/desktop/menurc/mrmcreateresourcefile) 함수를 호출 하 여 디스크에서 PRI 파일을 생성 해야 합니다.
 
@@ -168,7 +168,7 @@ PRI 파일은 이진 파일 이므로 이진 PRI 파일을 해당 XML로 덤프�
 ::ThrowIfFailed(::MrmDumpPriFile(filePathPRI.c_str(), nullptr, MrmDumpType::MrmDumpType_Basic, filePathPRIDumpBasic.c_str()));
 ```
 
-**MrmDumpPriFile**에 전달 되는 인수에 대 한 설명은 다음과 같습니다.
+**MrmDumpPriFile** 에 전달 되는 인수에 대 한 설명은 다음과 같습니다.
 
 - 덤프할 PRI 파일의 경로입니다. 이 호출에서 리소스 인덱서를 사용 하 고 있지 않기 때문에 전체 파일 경로를 지정 해야 합니다.
 - 스키마 파일이 없습니다. 이 항목의 뒷부분에서 스키마의 용도에 대해 설명 합니다.
@@ -225,7 +225,7 @@ PRI 파일은 이진 파일 이므로 이진 PRI 파일을 해당 XML로 덤프�
 
 이 정보는 대상 UWP 앱의 패키지 패밀리 이름으로 이름이 지정 된 리소스 맵으로 시작 합니다. 리소스 맵으로 묶인 두 개의 리소스 맵 하위 트리는 인덱싱된 파일 리소스에 대 한 것이 고 다른 하나는 문자열 리소스에 대 한 것입니다. 패키지 제품군 이름이 모든 리소스 Uri에 삽입 된 방식을 확인 합니다.
 
-첫 번째 문자열 리소스는의 *Enonly 문자열이* `en-US\resources.resw` 고 *언어-en-us* 한정자와 일치 하는 후보가 하나 뿐입니다. 다음에는 및에서 *LocalizedString1* 제공 `resources.resw` `en-US\resources.resw` 됩니다. 따라서 두 가지 후보가 있습니다. 하나는 일치 하는 *언어-en-us*이 고 모든 컨텍스트와 일치 하는 대체 (fallback) 중립 후보입니다. 마찬가지로 *LocalizedString2* 에는 두 가지 후보가 있습니다. *언어 de-de*및 중립입니다. 마지막으로 *NeutralOnlyString* 는 중립 형식 으로만 존재 합니다. 이 이름을 사용 하 여 지역화할 수 없는 것으로 분명 하 게 지정 했습니다.
+첫 번째 문자열 리소스는의 *Enonly 문자열이* `en-US\resources.resw` 고 *언어-en-us* 한정자와 일치 하는 후보가 하나 뿐입니다. 다음에는 및에서 *LocalizedString1* 제공 `resources.resw` `en-US\resources.resw` 됩니다. 따라서 두 가지 후보가 있습니다. 하나는 일치 하는 *언어-en-us* 이 고 모든 컨텍스트와 일치 하는 대체 (fallback) 중립 후보입니다. 마찬가지로 *LocalizedString2* 에는 두 가지 후보가 있습니다. *언어 de-de* 및 중립입니다. 마지막으로 *NeutralOnlyString* 는 중립 형식 으로만 존재 합니다. 이 이름을 사용 하 여 지역화할 수 없는 것으로 분명 하 게 지정 했습니다.
 
 ## <a name="summary"></a>요약
 이 시나리오에서는 [PRI (패키지 리소스 인덱싱) api](/windows/desktop/menurc/pri-indexing-reference) 를 사용 하 여 리소스 인덱서를 만드는 방법을 살펴보았습니다. 리소스 인덱서에 문자열 리소스와 자산 파일을 추가 했습니다. 그런 다음 리소스 인덱서를 사용 하 여 이진 PRI 파일을 생성 했습니다. 마지막으로 XML 형식으로 이진 PRI 파일을 덤프 했으므로 예상한 정보가 포함 되어 있는지 확인할 수 있습니다.

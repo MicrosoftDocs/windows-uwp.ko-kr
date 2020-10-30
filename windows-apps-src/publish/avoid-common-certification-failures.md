@@ -1,17 +1,17 @@
 ---
-Description: 앱이 인증 되지 않도록 자주 발생 하거나 앱이 게시 된 후에도 확인 하는 동안 확인 될 수 있는 문제를 방지 하려면이 목록을 검토 하세요.
+description: 앱이 인증 되지 않도록 자주 발생 하거나 앱이 게시 된 후에도 확인 하는 동안 확인 될 수 있는 문제를 방지 하려면이 목록을 검토 하세요.
 title: 일반적인 인증 실패 방지
 ms.assetid: 9E9E3841-2F9B-42D4-B5F8-4C7C31E42E3D
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 07c814fc48e47b2bdc8980ac72732783d7ea9139
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 672da214582fb6b206d7e16e1e776be40caeec90
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158027"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031226"
 ---
 # <a name="avoid-common-certification-failures"></a>일반적인 인증 실패 방지
 
@@ -42,6 +42,6 @@ ms.locfileid: "89158027"
 -   앱이 [**Windows. ApplicationModel. Store**](/uwp/api/Windows.ApplicationModel.Store) 네임 스페이스의 상거래 api를 사용 하는 경우 앱을 테스트 하 고 일반적인 예외를 처리 하는지 확인 해야 합니다. 또한 앱이 [**Currentapp시뮬레이터**](/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator) 클래스가 아니라 [**currentapp**](/uwp/api/Windows.ApplicationModel.Store.CurrentApp) 클래스를 사용 하 고 있는지 확인 합니다 .이는 테스트 목적 으로만 사용 됩니다. 앱이 Windows 10 버전 1607 이상을 대상으로 하는 경우에는 Windows. ApplicationModel. Store 네임 스페이스 대신에 [windows. store](/uwp/api/windows.services.store) 네임 스페이스의 멤버를 사용 하는 것이 좋습니다.
 
 
- 
+ 
 
- 
+ 

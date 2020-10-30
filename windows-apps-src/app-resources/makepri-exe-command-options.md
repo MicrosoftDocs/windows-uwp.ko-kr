@@ -1,24 +1,24 @@
 ---
-Description: MakePri.exe에는 createconfig, dump, new, resourcepack 및 버전의 명령 집합이 있습니다. 이 항목에서는 사용에 대해 자세히 설명 합니다.
+description: MakePri.exe에는 createconfig, dump, new, resourcepack 및 버전의 명령 집합이 있습니다. 이 항목에서는 사용에 대해 자세히 설명 합니다.
 title: MakePri.exe 명령줄 옵션
 template: detail.hbs
 ms.date: 04/10/2018
 ms.topic: article
 keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 638de4d2795b3b248edfdcc35dc72fa21d31fc3b
-ms.sourcegitcommit: c2e4bbe46c7b37be1390cdf3fa0f56670f9d34e9
+ms.openlocfilehash: 7443efbb227bf3f9ea64db58902ebeb67b02f676
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92253784"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031736"
 ---
 # <a name="makepriexe-command-line-options"></a>MakePri.exe 명령줄 옵션
 
 [MakePri.exe](compile-resources-manually-with-makepri.md) 에는,,, 및 명령 집합이 있습니다 `createconfig` `dump` `new` `resourcepack` `versioned` . 이 항목에서는 사용을 위한 명령줄 옵션에 대해 자세히 설명 합니다.
 
 > [!NOTE]
-> MakePri.exe은 Windows 소프트웨어 개발 키트를 설치 하는 동안 **UWP 관리 앱에 대 한 Windows SDK** 옵션을 선택 하면 설치 됩니다. 경로 뿐만 아니라 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` 다른 아키텍처에 대해 이름이 지정 된 폴더에도 설치 됩니다. `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`)을 입력합니다.
+> MakePri.exe은 Windows 소프트웨어 개발 키트를 설치 하는 동안 **UWP 관리 앱에 대 한 Windows SDK** 옵션을 선택 하면 설치 됩니다. 경로 뿐만 아니라 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` 다른 아키텍처에 대해 이름이 지정 된 폴더에도 설치 됩니다. 예: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
 ## <a name="getting-help-from-the-command-line"></a>명령줄에서 도움말 보기
 
@@ -115,7 +115,7 @@ Help:
 `dump`명령은 지정 된 PRI 파일의 모든 리소스 목록을 포함 하는 덤프 된 xml 파일을 출력 합니다. `MakePri.exe dump /?`이 명령에 대 한 자세한 도움말을 보려면를 실행 합니다.
 
 > [!NOTE]
-> 스키마 없는 리소스 팩은 PRI 구성 파일에서 *omitSchemaFromResourcePacks* 스위치를 사용 하 여 만든 것입니다. 스키마 없는 리소스 팩을 덤프 하려면 스위치를 사용 `/es <main_package_PRI_file>` 합니다. 주 파일을 지정 하지 않으면 "*패키지의 리소스 pri가 손상 되었으므로 암호화에 실패 했습니다 (오류 PRI222:0xdef0000f-지정 되지 않은 오류 발생)*" 라는 오류 메시지가 표시 됩니다.
+> 스키마 없는 리소스 팩은 PRI 구성 파일에서 *omitSchemaFromResourcePacks* 스위치를 사용 하 여 만든 것입니다. 스키마 없는 리소스 팩을 덤프 하려면 스위치를 사용 `/es <main_package_PRI_file>` 합니다. 주 파일을 지정 하지 않으면 " *패키지의 리소스 pri가 손상 되었으므로 암호화에 실패 했습니다 (오류 PRI222:0xdef0000f-지정 되지 않은 오류 발생)* " 라는 오류 메시지가 표시 됩니다.
 
 ```console
 C:\>makepri dump /?

@@ -1,5 +1,5 @@
 ---
-Description: Cortana 음성 명령, 음성 인식 및 음성 합성을 사용 하 여 앱에 음성을 통합 합니다.
+description: Cortana 음성 명령, 음성 인식 및 음성 합성을 사용 하 여 앱에 음성을 통합 합니다.
 title: 음성 조작
 ms.assetid: 646DB3CE-FA81-4727-8C21-936C81079439
 label: Speech interactions
@@ -8,12 +8,12 @@ keywords: 음성, 음성, 음성 인식, 자연어, 받아쓰기, 입력, 사용
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 94a93f9b1506d2b4dfcdad260bf86bf39c15d875
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d42802f4efb131f413b192f4e5f851f630ce4e57
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173347"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029866"
 ---
 # <a name="speech-interactions"></a>음성 조작
 
@@ -24,7 +24,7 @@ ms.locfileid: "89173347"
 **TTS** TTS는 음성 합성 엔진 (음성)을 사용 하 여 텍스트 문자열을 음성 단어로 변환 합니다. 입력 문자열은 기본, 되지 않은 텍스트 또는 보다 복잡 한 SSML (음성 합성 마크업 언어) 일 수 있습니다. SSML은 음성 출력의 특징 (예: 발음, 볼륨, 피치, 속도 또는 속도, 강조)을 제어 하는 표준 방법을 제공 합니다.
 
 **기타 음성 관련 구성 요소:** 
- Windows 응용 프로그램의 **Cortana** 는 사용자 지정 음성 명령 (음성 또는 입력 된)을 사용 하 여 응용 프로그램을 포그라운드로 시작 합니다. (앱은 시작 메뉴에서 시작 된 것 처럼 포커스를 취하는 경우) 또는 백그라운드 서비스로 활성화 합니다 (**Cortana** 는 포커스를 유지 하지만 앱의 결과를 제공). **Cortana** UI에서 앱 기능을 노출 하는 경우 [cortana 음성 명령 (VCD) 지침](/cortana/voice-commands/vcd) 을 참조 하세요.
+ Windows 응용 프로그램의 **Cortana** 는 사용자 지정 음성 명령 (음성 또는 입력 된)을 사용 하 여 응용 프로그램을 포그라운드로 시작 합니다. (앱은 시작 메뉴에서 시작 된 것 처럼 포커스를 취하는 경우) 또는 백그라운드 서비스로 활성화 합니다 ( **Cortana** 는 포커스를 유지 하지만 앱의 결과를 제공). **Cortana** UI에서 앱 기능을 노출 하는 경우 [cortana 음성 명령 (VCD) 지침](/cortana/voice-commands/vcd) 을 참조 하세요.
 
 ## <a name="speech-interaction-design"></a>음성 조작 디자인
 
@@ -204,7 +204,7 @@ TTS는 일반 텍스트 또는 SSML의 음성 출력을 생성 합니다.
 
 ## <a name="other-articles-in-this-section"></a>이 단원의 다른 문서 
 
-| 항목 | Description |
+| 항목 | 설명 |
 | --- | --- |
 | [음성 인식](speech-recognition.md) | 음성 인식을 사용 하 여 입력을 제공 하 고, 작업 또는 명령을 지정 하 고, 작업을 수행할 수 있습니다. |
 | [음성 인식기 언어 지정](specify-the-speech-recognizer-language.md) | 음성 인식에 사용할 설치 된 언어를 선택 하는 방법을 알아봅니다. |
@@ -218,9 +218,9 @@ TTS는 일반 텍스트 또는 SSML의 음성 출력을 생성 합니다.
 * [음성 조작]()
 * [Cortana 조작](./cortana-interactions.md)
 
- **샘플**
+ **샘플**
 
 * [음성 인식 및 음성 합성 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
- 
+ 
 
- 
+ 

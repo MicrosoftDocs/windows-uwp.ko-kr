@@ -1,5 +1,5 @@
 ---
-Description: 키보드 탐색, 색 및 대비 설정, 보조 기술 지원 등을 포함 하는 내게 필요한 옵션 지원 Windows 앱을 개발 하는 방법을 알아봅니다.
+description: 키보드 탐색, 색 및 대비 설정, 보조 기술 지원 등을 포함 하는 내게 필요한 옵션 지원 Windows 앱을 개발 하는 방법을 알아봅니다.
 ms.assetid: 9311D23A-B340-42F0-BEFE-9261442AF108
 title: 포괄 Windows 10 앱 개발
 label: Developing inclusive Windows 10 apps
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 856ed1222cd393ec2730226f9c4faadf7e9ad0d7
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: ff42cc2ac8ffb965b5f58db081cd86106f4145ef
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219816"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029876"
 ---
 # <a name="developing-inclusive-windows-apps"></a>포괄 Windows 앱 개발  
 
@@ -47,7 +47,7 @@ ms.locfileid: "91219816"
 
 UI 요소 간의 키보드 탐색에 대해 자세히 알아보려면 [키보드 접근성](keyboard-accessibility.md)을 참조 하세요.  
 
-또한 [내게 필요한 옵션 전자책 엔지니어링 소프트웨어](https://www.microsoft.com/download/details.aspx?id=19262) 에는이 주제에 대 한 _논리적 계층 구조 디자인이_설명 되어 있습니다.
+또한 [내게 필요한 옵션 전자책 엔지니어링 소프트웨어](https://www.microsoft.com/download/details.aspx?id=19262) 에는이 주제에 대 한 _논리적 계층 구조 디자인이_ 설명 되어 있습니다.
 
 ## <a name="color-and-contrast"></a>색 및 대비  
 Windows에서 기본적으로 제공 되는 내게 필요한 옵션 기능 중 하나는 컴퓨터 화면에서 텍스트 및 이미지의 색 대비를 운영과 하는 고대비 모드입니다. 일부 사람들의 경우 색의 대비를 높이면 eyestrain 줄어들고 더 쉽게 읽을 수 있습니다. 높은 대비 수준에서 UI를 확인 하는 경우 컨트롤이 화면에 있는 모든 컨트롤을 볼 수 있는지 확인 하기 위해 (하드 코드 된 색이 아닌) 컨트롤이 일관 되 게 코딩 되었는지 확인 하는 것이 좋습니다.  

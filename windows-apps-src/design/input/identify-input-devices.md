@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱 장치에 연결 된 입력 장치를 식별 하 고 해당 기능 및 특성을 식별 합니다.
+description: Windows 앱 장치에 연결 된 입력 장치를 식별 하 고 해당 기능 및 특성을 식별 합니다.
 title: 입력 디바이스 식별
 ms.assetid: B2E93FBF-C508-44D9-BA46-ECFDAA8746F4
 label: Identify input devices
@@ -8,28 +8,28 @@ keywords: 장치, 디지타이저, 입력, 상호 작용
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ae1cc3132992ff13c5e599f7d5aa64a2f6fa151f
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 51d5ea7bf6776c2c728fd000ffea63b79a4d7464
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219806"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030426"
 ---
 # <a name="identify-input-devices"></a>입력 디바이스 식별
 
 
 Windows 앱 장치에 연결 된 입력 장치를 식별 하 고 해당 기능 및 특성을 식별 합니다.
 
-> **중요 한 api**: [**windows**](/uwp/api/Windows.Devices.Input). input, [**windows**](/uwp/api/Windows.UI.Core). uiinput, windows. [**.xaml**](/uwp/api/Windows.UI.Input)
+> **중요 한 api** : [**windows**](/uwp/api/Windows.Devices.Input). input, [**windows**](/uwp/api/Windows.UI.Core). uiinput, windows. [**.xaml**](/uwp/api/Windows.UI.Input)
 
 ## <a name="retrieve-mouse-properties"></a>마우스 속성 검색
 
 
 MouseCapabilities [**네임 스페이스**](/uwp/api/Windows.Devices.Input) 는 하나 이상의 연결 된 마우스에 의해 노출 되는 속성을 검색 하는 데 사용 되는 [**MouseCapabilities**](/uwp/api/Windows.Devices.Input.MouseCapabilities) 클래스를 포함 합니다. 새 **MouseCapabilities** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**참고**    여기서 설명 하는 속성에 의해 반환 되는 값은 검색 된 모든 마우스를 기반으로 합니다. 하나 이상의 마우스가 특정 기능을 지 원하는 경우 부울 속성은 0이 아닌 값을 반환 하 고 숫자 속성은 한 마우스에서 노출 하는 최대값을 반환 합니다.
+**참고**  여기서 설명 하는 속성에 의해 반환 되는 값은 검색 된 모든 마우스를 기반으로 합니다. 하나 이상의 마우스가 특정 기능을 지 원하는 경우 부울 속성은 0이 아닌 값을 반환 하 고 숫자 속성은 한 마우스에서 노출 하는 최대값을 반환 합니다.
 
- 
+ 
 
 다음 코드에서는 일련의 [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 요소를 사용 하 여 개별 마우스 속성 및 값을 표시 합니다.
 
@@ -65,9 +65,9 @@ private void GetKeyboardProperties()
 
 TouchCapabilities [**네임 스페이스**](/uwp/api/Windows.Devices.Input) 는 터치 디지타이저가 연결 되어 있는지 여부를 검색 하는 데 사용 되는 [**TouchCapabilities**](/uwp/api/Windows.Devices.Input.TouchCapabilities) 클래스를 포함 합니다. 새 **TouchCapabilities** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**참고**    여기서 설명 하는 속성에 의해 반환 되는 값은 검색 된 모든 터치 디지타이저를 기반으로 합니다. 하나 이상의 디지타이저가 특정 기능을 지원 하 고 숫자 속성이 단일 디지타이저에서 노출 하는 최대값을 반환 하는 경우 부울 속성은 0이 아닌 값을 반환 합니다.
+**참고**  여기서 설명 하는 속성에 의해 반환 되는 값은 검색 된 모든 터치 디지타이저를 기반으로 합니다. 하나 이상의 디지타이저가 특정 기능을 지원 하 고 숫자 속성이 단일 디지타이저에서 노출 하는 최대값을 반환 하는 경우 부울 속성은 0이 아닌 값을 반환 합니다.
 
- 
+ 
 
 다음 코드는 일련의 [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 요소를 사용 하 여 터치 속성 및 값을 표시 합니다.
 
@@ -85,7 +85,7 @@ private void GetTouchProperties()
 
 [**Windows. 입력**](/uwp/api/Windows.Devices.Input) 네임 스페이스는 검색 된 장치에서 포인터 입력 (터치, 터치 패드, 마우스 또는 펜)을 지원 하는지 여부를 검색 하는 데 사용 되는 [**pointerdevice**](/uwp/api/Windows.Devices.Input.PointerDevice) 클래스를 포함 합니다. 새 **Pointerdevice** 개체를 만들고 관심 있는 속성을 가져옵니다.
 
-**참고**    여기서 설명 하는 속성에 의해 반환 되는 값은 검색 된 모든 포인터 장치를 기반으로 합니다. 하나 이상의 장치에서 특정 기능을 지 원하는 경우 부울 속성은 0이 아닌 값을 반환 하 고, 숫자 속성은 하나의 포인터 장치에서 노출 하는 최대값을 반환 합니다.
+**참고**  여기서 설명 하는 속성에 의해 반환 되는 값은 검색 된 모든 포인터 장치를 기반으로 합니다. 하나 이상의 장치에서 특정 기능을 지 원하는 경우 부울 속성은 0이 아닌 값을 반환 하 고, 숫자 속성은 하나의 포인터 장치에서 노출 하는 최대값을 반환 합니다.
 
 다음 코드에서는 테이블을 사용 하 여 각 포인터 장치에 대 한 속성 및 값을 표시 합니다.
 

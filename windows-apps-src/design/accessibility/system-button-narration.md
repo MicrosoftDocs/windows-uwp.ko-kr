@@ -1,5 +1,5 @@
 ---
-Description: ''
+description: '자세히 알아보기: 화면 판독기 및 하드웨어 시스템 단추'
 title: 화면 판독기 및 하드웨어 단추 이벤트
 label: Screen readers and hardware button events
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 02/20/2020
 ms.topic: article
 keywords: windows 10, uwp, 접근성, 내레이터, 화면 판독기
 ms.localizationpriority: medium
-ms.openlocfilehash: 41c6ed531f21a922b407ff3ba5aae93afb8d917e
-ms.sourcegitcommit: 87fd0ec1e706a460832b67f936a3014f0877a88c
+ms.openlocfilehash: d4bf712c83b39a184247a4476db5a045f62a9482
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83234936"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029856"
 ---
 # <a name="screen-readers-and-hardware-system-buttons"></a>화면 판독기 및 하드웨어 시스템 단추
 

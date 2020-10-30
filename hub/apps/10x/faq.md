@@ -1,17 +1,17 @@
 ---
-Description: Windows 10 배에 대 한 몇 가지 기본적인 개발자 질문에 대 한 답변을 알아보세요.
+description: Windows 10 배에 대 한 몇 가지 기본적인 개발자 질문에 대 한 답변을 알아보세요.
 title: Windows 10 배 개발자 FAQ
 ms.topic: article
 ms.date: 06/02/2020
 ms.localizationpriority: medium
 ms.author: quradic
 author: QuinnRadich
-ms.openlocfilehash: f321815658a1b59d941f8b2c0e1fa5aa0142b4f7
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3cbf4570f34f464a000cc906d31456a1e5a33a29
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157677"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030526"
 ---
 # <a name="windows-10x-developer-faq"></a>Windows 10 배 개발자 FAQ
 

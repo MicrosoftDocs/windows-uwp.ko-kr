@@ -1,36 +1,36 @@
 ---
-Description: 이 항목에서는 리소스 인덱스를 생성하기 위해 MakePri.exe 도구에서 사용하는 형식별 인덱서에 대해 설명합니다.
+description: 이 항목에서는 MakePri.exe 도구에서 리소스의 인덱스를 생성 하는 데 사용 하는 형식별 인덱서를 설명 합니다.
 title: MakePri.exe 형식별 인덱서
 template: detail.hbs
 ms.date: 10/18/2017
 ms.topic: article
 keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d30a0321de872dac11070c52dd0598b2276bcab
-ms.sourcegitcommit: ca1b5c3ab905ebc6a5b597145a762e2c170a0d1c
+ms.openlocfilehash: 3794d369ae9d47cfc7aad1b24ca2768b04024581
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79200961"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031696"
 ---
 # <a name="makepriexe-format-specific-indexers"></a>MakePri.exe 형식별 인덱서
 
-이 항목에서는 리소스 인덱스를 생성하기 위해 [MakePri.exe](compile-resources-manually-with-makepri.md) 도구에 의해 사용되는 형식별 인덱서에 대해 설명합니다.
+이 항목에서는 [MakePri.exe](compile-resources-manually-with-makepri.md) 도구에서 리소스의 인덱스를 생성 하는 데 사용 하는 형식별 인덱서를 설명 합니다.
 
 > [!NOTE]
-> MakePri .exe는 Windows 소프트웨어 개발 키트를 설치 하는 동안 **UWP 관리 앱에 대 한 Windows SDK** 옵션을 선택 하면 설치 됩니다. 이 파일은 경로 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe`에 설치 되며 다른 아키텍처에 대해 이름이 지정 된 폴더에도 설치 됩니다. 예를 들면 `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`입니다.
+> MakePri.exe은 Windows 소프트웨어 개발 키트를 설치 하는 동안 **UWP 관리 앱에 대 한 Windows SDK** 옵션을 선택 하면 설치 됩니다. 경로 뿐만 아니라 `%WindowsSdkDir%bin\<WindowsTargetPlatformVersion>\x64\makepri.exe` 다른 아키텍처에 대해 이름이 지정 된 폴더에도 설치 됩니다. 예: `C:\Program Files (x86)\Windows Kits\10\bin\10.0.17713.0\x64\makepri.exe`.
 
-MakePri.exe는 일반적으로 `new`, `versioned`, 또는 `resourcepack` 명령과 함께 사용됩니다. [MakePri.exe 명령줄 옵션](makepri-exe-command-options.md)을 참조하세요. 이러한 경우 원본 파일을 인덱싱하여 리소스 인덱스를 생성합니다. MakePri.exe는 다른 소스 리소스 파일 또는 리소스 컨테이너를 읽기 위해 다양한 개별 인덱서를 사용합니다. 가장 단순한 인덱서는 폴더 인덱서이며 `.jpg`또는 `.png` 이미지 등의 폴더의 콘텐츠를 인덱싱합니다.
+MakePri.exe은 일반적으로 `new` , 또는 명령과 함께 사용 됩니다 `versioned` `resourcepack` . [MakePri.exe 명령줄 옵션](makepri-exe-command-options.md)을 참조 하세요. 이러한 경우 원본 파일을 인덱싱하고 리소스의 인덱스를 생성 합니다. MakePri.exe는 다양 한 개별 인덱서를 사용 하 여 리소스에 대 한 다른 소스 리소스 파일이 나 컨테이너를 읽습니다. 가장 간단한 인덱서는 폴더의 콘텐츠 (예: 또는 이미지)를 인덱싱하는 폴더 인덱서입니다 `.jpg` `.png` .
 
-`<indexer-config>`MakePri.exe 구성 파일`<index>`의 [요소 내에 ](makepri-exe-configuration.md) 요소를 지정하여 형식별 인덱서를 식별합니다. `type` 특성은 사용되는 형식별 인덱서를 식별합니다.
+`<indexer-config>` `<index>` [MakePri.exe 구성 파일](makepri-exe-configuration.md)의 요소 내에서 요소를 지정 하 여 형식별 인덱서를 식별 합니다. 특성은 사용 되는 `type` 형식별 인덱서를 식별 합니다.
 
-일반적으로 색인하는 동안 마주치는 리소스 컨테이너는 인덱스 자체에 추가되는 대신 콘텐츠가 인덱싱됩니다. 예를 들어 폴더 인덱서가 찾는 `.resjson` 폴더는 `.resjson` 인덱서에 의해 추가로 인덱싱될 수 있으며 이 경우 `.resjson` 파일 자체는 인덱스에 표시되지 않습니다. **참고** 이를 위해서는 해당 컨테이너와 관련된 `<indexer-config>` 요소가 구성 파일에 포함되어야 합니다.
+인덱싱 중에 발생 하는 리소스 컨테이너는 일반적으로 인덱스 자체에 추가 되는 것이 아니라 콘텐츠를 인덱싱합니다. 예를 들어 `.resjson` 폴더 인덱서가 찾은 파일은 인덱서를 통해 추가로 인덱싱될 수 있으며, `.resjson` 이 경우 `.resjson` 파일 자체는 인덱스에 표시 되지 않습니다. **Note** 이 `<indexer-config>` 를 수행 하려면 해당 컨테이너와 연결 된 인덱서의 요소가 구성 파일에 포함 되어 있어야 합니다.
 
-일반적으로 폴더 또는 파일과 같이 이를 포함하는 엔터티에서 찾을 수 있는 한정자는 해당 폴더 또는 &mdash; 파일 내에 있는 모든 리소스에 적용됩니다. 예를 들면 폴더 내의 파일, 또는 `.resw` 파일 내의 문자열입니다.
+일반적으로 폴더 또는 파일과 같은 포함 하는 엔터티에 있는 한정자 &mdash; `.resw` &mdash; 는 폴더 내의 파일 또는 파일 내의 문자열과 같은 모든 리소스에 적용 됩니다 `.resw` .
 
 ## <a name="folder"></a>폴더
 
-폴더 인덱서는 FOLDER의 `type` 특성에 의해 식별됩니다. 폴더의 콘텐츠를 인덱싱하며 폴더 및 파일 이름에서 리소스 한정자를 결정합니다. 구성 요소는 다음 스키마를 준수합니다.
+폴더 인덱서는 `type` 폴더의 특성으로 식별 됩니다. 폴더의 콘텐츠를 인덱싱하고 폴더 및 파일 이름에서 리소스 한정자를 결정 합니다. 해당 구성 요소는 다음 스키마를 따릅니다.
 
 ```xml
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -67,13 +67,13 @@ MakePri.exe는 일반적으로 `new`, `versioned`, 또는 `resourcepack` 명령�
 </xs:schema>
 ```
 
-`qualifierDelimiter` 특성은 문자를 지정하고 그 이후에 한정자는 파일 이름에 지정됩니다(확장은 무시됨). 기본값은 "."입니다.
+`qualifierDelimiter`특성은 확장명을 무시 하 고 파일 이름에 한정자가 지정 된 후의 문자를 지정 합니다. 기본값은 "."입니다.
 
 ## <a name="pri"></a>PRI
 
-PRI 인덱서는 PRI의 `type` 특성에 의해 식별됩니다. PRI 파일의 콘텐츠를 인덱싱합니다. 일반적으로 다른 어셈블리, DLL, SDK 또는 클래스 라이브러리에 포함된 리소스를 앱의 PRI에 인덱싱할 때 사용합니다.
+PRI 인덱서는 `type` pri의 특성으로 식별 됩니다. PRI 파일의 콘텐츠를 인덱싱합니다. 일반적으로 다른 어셈블리, DLL, SDK 또는 클래스 라이브러리 내에 포함 된 리소스를 앱의 PRI에 인덱싱할 때 사용 합니다.
 
-PRI 파일에 포함된 모든 리소스 이름, 한정자, 값은 새 PRI 파일에 직접 유지됩니다. 그러나 최상위 수준 리소스 맵은 최종 PRI에 유지되지 않습니다. 리소스 맵은 병합됩니다.
+PRI 파일에 포함 된 모든 리소스 이름, 한정자 및 값은 새 PRI 파일에서 직접 유지 관리 됩니다. 그러나 최상위 리소스 맵은 최종 PRI에서 유지 되지 않습니다. 리소스 맵이 병합 됩니다.
 
 ```xml
 <xs:schema id="prifile" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
@@ -90,9 +90,9 @@ PRI 파일에 포함된 모든 리소스 이름, 한정자, 값은 새 PRI 파�
 </xs:schema>
 ```
 
-## <a name="priinfo"></a>PriInfo
+## <a name="priinfo"></a>방법 정보
 
-PriInfo 인덱서는 PRIINFO의 `type` 특성에 의해 식별됩니다. 세부 덤프 파일의 콘텐츠를 인덱싱합니다. `makepri dump`를 `/dt detailed` 옵션으로 실행하여 세부 덤프 파일을 생성합니다. 인덱서에 대한 구성 요소는 다음 스키마를 준수합니다.
+' 특성 정보 ' 인덱서는 ' 특성 ' 특성으로 식별 됩니다 `type` . 자세한 덤프 파일의 콘텐츠를 인덱싱합니다. 옵션으로를 실행 하 여 자세한 덤프 파일을 생성 `makepri dump` `/dt detailed` 합니다. 인덱서의 구성 요소는 다음 스키마를 따릅니다.
 
 ```xml
 <xs:schema id="priinfo" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
@@ -111,15 +111,15 @@ PriInfo 인덱서는 PRIINFO의 `type` 특성에 의해 식별됩니다. 세부 
 </xs:schema>
 ```
 
-이 구성 요소를 사용하여 선택적 특성으로 PriInfo 인덱서의 동작을 구성할 수 있습니다. 기본값 `emitStrings` 및 `emitPaths`는 `true`입니다. `emitStrings`가 `true`인 경우 `type` 특성이 "String"으로 설정된 리소스 후보는 인덱스에 포함되고 그렇지 않으면 제외됩니다. 'emitPaths'가 `true`인 경우 `type` 특성이 "Path"로 설정된 리소스 후보는 인덱스에 포함되고 그렇지 않으면 제외됩니다.
+이 구성 요소를 사용 하면 선택적 특성을 사용 하 여 대상 정보 인덱서의 동작을 구성할 수 있습니다. 및의 기본값은 `emitStrings` `emitPaths` `true` 입니다. `emitStrings`가 이면 `true` `type` 특성이 "String"으로 설정 된 리소스 후보가 인덱스에 포함 되 고, 그렇지 않으면 제외 됩니다. ' EmitPaths ' 이면 `true` `type` 특성이 "Path"로 설정 된 리소스 후보가 인덱스에 포함 되 고, 그렇지 않으면 제외 됩니다.
 
-String 리소스 유형을 포함하지만 Path 리소스 유형은 건너뛰는 구성 예는 다음과 같습니다.
+다음은 문자열 리소스 형식을 포함 하지만 경로 리소스 형식을 건너뛰는 구성 예제입니다.
 
 ```xml
 <indexer-config type="priinfo" emitStrings="true" emitPaths="false" />
 ```
 
-인덱스되려면 덤프 파일은 `.pri.xml` 확장명으로 끝나야 하며 다음 스키마를 따라야 합니다.
+인덱스를 만들려면 덤프 파일이 확장으로 끝나야 `.pri.xml` 하며 다음 스키마를 준수 해야 합니다.
 
 ```xml
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" >
@@ -213,11 +213,11 @@ String 리소스 유형을 포함하지만 Path 리소스 유형은 건너뛰는
 </xs:schema>
 ```
 
-MakePri.exe는 '기본', '자세히', '스키마' 및 '요약' 덤프 유형을 지원합니다. MakePri.exe를 구성하여 PriInfo 인덱서가 읽을 수 있는 덤프 유형을 내보내려면 `dump` 명령을 사용할 때 "/DumpType Detailed"를 포함합니다.
+MakePri.exe는 ' Basic ', ' Detailed ', ' Schema ' 및 ' Summary ' 덤프 형식을 지원 합니다. 이 구성에서 사용할 수 있는 덤프 유형을 내보내도록 MakePri.exe 구성 하려면 명령을 사용 하는 경우 "/Dvtype Detailed"를 포함 `dump` 합니다.
 
-MakePri.exe는 `.pri.xml` 파일의 여러 요소를 건너뜁니다. 이러한 요소는 인덱싱하는 동안 계산되거나 MakePri.exe 구성 파일에서 지정됩니다. 덤프 파일에 포함된 리소스 이름, 한정자, 값은 새 PRI 파일에 직접 유지됩니다. 그러나 최상위 수준 리소스 맵은 최종 PRI에 유지되지 않습니다. 리소스 맵은 인덱싱의 일환으로 병합됩니다.
+`.pri.xml`MakePri.exe에서 파일의 여러 요소를 건너뜁니다. 이러한 요소는 인덱싱을 수행 하는 동안 계산 되거나 MakePri.exe 구성 파일에 지정 됩니다. 덤프 파일 내에 포함 된 리소스 이름, 한정자 및 값은 새 PRI 파일에서 직접 유지 관리 됩니다. 그러나 최상위 리소스 맵은 최종 PRI에서 유지 관리 되지 않습니다. 리소스 맵은 인덱싱의 일부로 병합 됩니다.
 
-다음은 덤프 파일의 유효한 문자열 유형 리소스의 예입니다.
+덤프 파일의 유효한 문자열 유형 리소스의 예입니다.
 
 ```xml
 <NamedResource name="SampleString " index="96" uri="ms-resource://SampleApp/resources/SampleString ">
@@ -235,7 +235,7 @@ MakePri.exe는 `.pri.xml` 파일의 여러 요소를 건너뜁니다. 이러한 
 </NamedResource>
 ```
 
-다음은 덤프 파일의 두 후보가 있는 유효한 경로 유형 리소스의 예입니다.
+덤프 파일의 두 후보를 사용 하는 유효한 경로 유형 리소스의 예입니다.
 
 ```xml
 <NamedResource name="Sample.png" index="77" uri="ms-resource://SampleApp/Files/Images/Sample.png">
@@ -264,7 +264,7 @@ MakePri.exe는 `.pri.xml` 파일의 여러 요소를 건너뜁니다. 이러한 
 
 ## <a name="resfiles"></a>ResFiles
 
-ResFiles 인덱서는 RESFILES의 `type` 특성에 의해 식별됩니다. `.resfiles` 파일의 콘텐츠를 인덱싱합니다. 구성 요소는 다음 스키마를 준수합니다.
+ResFiles 인덱서는 `type` resfiles 특성으로 식별 됩니다. 파일의 내용을 인덱싱합니다 `.resfiles` . 해당 구성 요소는 다음 스키마를 따릅니다.
 
 ```xml
 <xs:schema id="resx" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
@@ -282,7 +282,7 @@ ResFiles 인덱서는 RESFILES의 `type` 특성에 의해 식별됩니다. `.res
 </xs:schema>
 ```
 
-`.resfiles` 파일은 파일 경로의 단순 목록을 포함하는 텍스트 파일입니다. `.resfiles` 파일에는 "//" 설명이 포함될 수 있습니다. 예를 들면 다음과 같습니다.
+`.resfiles`파일은 단순 파일 경로 목록을 포함 하는 텍스트 파일입니다. `.resfiles`파일은 "//" 주석을 포함할 수 있습니다. 예를 들면 다음과 같습니다.
 
 <blockquote>
 <pre>
@@ -295,7 +295,7 @@ Images\logo.scale-180.png
 
 ## <a name="resjson"></a>ResJSON
 
-ResJSON 인덱서는 RESJSON의 `type` 특성에 의해 식별됩니다. 문자열 리소스 파일인 `.resjson` 파일의 콘텐츠를 인덱싱합니다. 구성 요소는 다음 스키마를 준수합니다.
+ResJSON 인덱서는 `type` resjson의 특성으로 식별 됩니다. 이 `.resjson` 파일은 문자열 리소스 파일인 파일의 콘텐츠를 인덱싱합니다. 해당 구성 요소는 다음 스키마를 따릅니다.
 
 ```xml
 <xs:schema id="resjson" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
@@ -313,17 +313,17 @@ ResJSON 인덱서는 RESJSON의 `type` 특성에 의해 식별됩니다. 문자�
 </xs:schema>
 ```
 
-`.resjson` 파일에는 JSON 텍스트가 포함됩니다([JSON(JavaScript Object Notation)에 대한 응용 프로그램/json 미디어 유형](https://www.ietf.org/rfc/rfc4627.txt) 참조). 파일에는 계층적 속성이 있는 JSON 개체가 있어야 합니다. 각 속성은 다른 JSON 개체 또는 문자열 값이어야 합니다.
+파일에는 `.resjson` json 텍스트가 포함 되어 있습니다. json 텍스트 [는 application/Json Media Type for JAVASCRIPT OBJECT NOTATION (json)](https://www.ietf.org/rfc/rfc4627.txt)을 참조 하세요. 이 파일에는 계층적 속성이 포함 된 단일 JSON 개체가 있어야 합니다. 각 속성은 다른 JSON 개체 또는 문자열 값 이어야 합니다.
 
-밑줄("_")로 시작하는 이름을 가진 JSON 속성은 최종 PRI 파일로 컴파일되지는 않지만 로그 파일에서 유지됩니다.
+이름이 밑줄 ("_")로 시작 하는 JSON 속성은 최종 PRI 파일로 컴파일되지 않지만 로그 파일에서 유지 관리 됩니다.
 
-파일에는 구문 분석을 수행하는 동안 무시되는 "//" 설명이 포함될 수도 있습니다.
+이 파일에는 구문 분석 중에 무시 되는 "//" 주석이 포함 될 수도 있습니다.
 
-`initialPath` 특성은 이 초기 경로를 리소스의 이름 앞에 추가하여 모든 리소스를 초기 경로 아래에 배치합니다. 일반적으로 클래스 라이브러리 리소스를 인덱싱할 때 사용합니다. 기본값은 blank입니다.
+`initialPath`특성은 리소스 이름 앞에 추가 하 여이 초기 경로 아래에 모든 리소스를 배치 합니다. 일반적으로 클래스 라이브러리 리소스를 인덱싱할 때이를 사용 합니다. 기본값은 없습니다.
 
-## <a name="resw"></a>ResW
+## <a name="resw"></a>Resources.resw
 
-ResW 인덱서는 RESW의 `type` 특성에 의해 식별됩니다. 문자열 리소스 파일인 `.resw` 파일의 콘텐츠를 인덱싱합니다. 구성 요소는 다음 스키마를 준수합니다.
+ResW 인덱서는 `type` resw의 특성으로 식별 됩니다. 이 `.resw` 파일은 문자열 리소스 파일인 파일의 콘텐츠를 인덱싱합니다. 해당 구성 요소는 다음 스키마를 따릅니다.
 
 ```xml
 <xs:schema id="resw" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
@@ -342,7 +342,7 @@ ResW 인덱서는 RESW의 `type` 특성에 의해 식별됩니다. 문자열 리
 </xs:schema>
 ```
 
-`.resw` 파일은 다음 스키마에 맞는 XML 파일입니다.
+`.resw`파일은 다음 스키마를 따르는 XML 파일입니다.
 
 ```xml
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
@@ -393,13 +393,13 @@ ResW 인덱서는 RESW의 `type` 특성에 의해 식별됩니다. 문자열 리
   </xsd:schema>
 ```
 
-마침표 기호가 "[" 및 "]" 사이에 오는 경우를 제외하고 `convertDotsToSlashes` 특성은 리소스 이름(데이터 요소 이름 특성)에서 찾을 수 있는 모든 마침표(".")를 슬래시("/")로 변환합니다.
+`convertDotsToSlashes`특성은 점 문자가 "[" 및 "]" 사이에 있는 경우를 제외 하 고 리소스 이름 (데이터 요소 이름 특성)에 있는 모든 점 (".") 문자를 슬래시 "/"로 변환 합니다.
 
-`initialPath` 특성은 이 초기 경로를 리소스의 이름 앞에 추가하여 모든 리소스를 초기 경로 아래에 배치합니다. 일반적으로 클래스 라이브러리 리소스를 인덱싱할 때 사용합니다. 기본값은 blank입니다.
+`initialPath`특성은 리소스 이름 앞에 추가 하 여이 초기 경로 아래에 모든 리소스를 배치 합니다. 일반적으로 클래스 라이브러리 리소스를 인덱싱할 때이를 사용 합니다. 기본값은 없습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
 * [MakePri.exe를 사용하여 수동으로 리소스 컴파일](compile-resources-manually-with-makepri.md)
-* [MakePri 명령줄 옵션](makepri-exe-command-options.md)
-* [MakePri .exe 구성 파일](makepri-exe-configuration.md)
+* [MakePri.exe 명령줄 옵션](makepri-exe-command-options.md)
+* [MakePri.exe 구성 파일](makepri-exe-configuration.md)
 * [JavaScript Object Notation에 대 한 application/json 미디어 유형 (JSON)](https://www.ietf.org/rfc/rfc4627.txt)

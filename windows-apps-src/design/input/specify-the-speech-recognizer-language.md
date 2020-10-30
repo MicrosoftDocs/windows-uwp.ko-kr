@@ -1,5 +1,5 @@
 ---
-Description: 음성 인식에 사용할 설치 된 언어를 선택 하는 방법을 알아봅니다.
+description: 음성 인식에 사용할 설치 된 언어를 선택 하는 방법을 알아봅니다.
 title: 음성 인식기 언어 지정
 ms.assetid: 4C463A1B-AF6A-46FD-A839-5D6724955B38
 label: Specify the speech recognizer language
@@ -8,19 +8,19 @@ keywords: 음성, 음성, 음성 인식, 자연어, 받아쓰기, 입력, 사용
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a19e4ec876ca5dfa313c56e5653b3a27a4155765
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: fa8137b5bf05bb8099a803fedd7e056fc14d9d70
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219936"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031326"
 ---
 # <a name="specify-the-speech-recognizer-language"></a>음성 인식기 언어 지정
 
 
 음성 인식에 사용할 설치 된 언어를 선택 하는 방법을 알아봅니다.
 
-> **중요 한 api**: [**SupportedTopicLanguages**](/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedtopiclanguages), [**SupportedGrammarLanguages**](/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedgrammarlanguages), [**Language**](/uwp/api/Windows.Globalization.Language)
+> **중요 한 api** : [**SupportedTopicLanguages**](/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedtopiclanguages), [**SupportedGrammarLanguages**](/uwp/api/windows.media.speechrecognition.speechrecognizer.supportedgrammarlanguages), [**Language**](/uwp/api/Windows.Globalization.Language)
 
 
 여기에서 시스템에 설치 된 언어를 열거 하 고, 기본 언어를 식별 하 고, 인식 하기 위해 다른 언어를 선택 합니다.
@@ -56,9 +56,9 @@ var language = SpeechRecognizer.SystemSpeechLanguage;
 
 설치 된 언어는 장치 마다 다를 수 있습니다. 특정 제약 조건에 종속 된 언어가 있는지 확인 해야 합니다.
 
-**참고**    새 언어 팩을 설치한 후에는 다시 부팅 해야 합니다. \_ \_ 지정 된 언어가 지원 되지 않거나 설치가 완료 되지 않은 경우 오류 코드 sperr을 찾을 수 없는 예외가 발생 합니다 (0x8004503a).
+**참고**  새 언어 팩을 설치한 후에는 다시 부팅 해야 합니다. \_ \_ 지정 된 언어가 지원 되지 않거나 설치가 완료 되지 않은 경우 오류 코드 sperr을 찾을 수 없는 예외가 발생 합니다 (0x8004503a).
 
- 
+ 
 
 [**SpeechRecognizer**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer) 클래스의 두 정적 속성 중 하나를 확인 하 여 장치에서 지원 되는 언어를 확인 합니다.
 
@@ -95,6 +95,6 @@ SRGS 문법은 [**SpeechRecognitionGrammarFileConstraint**](/uwp/api/Windows.Med
 **샘플**
 
 * [음성 인식 및 음성 합성 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
- 
+ 
 
- 
+ 

@@ -1,5 +1,5 @@
 ---
-Description: Tv에서 잘 작동 하 고 잘 작동 하도록 앱을 디자인 합니다.
+description: Tv에서 잘 작동 하 고 잘 작동 하도록 앱을 디자인 합니다.
 title: Xbox 및 TV용 디자인
 ms.assetid: 780209cb-3e8a-4cf7-8f80-8b8f449580bf
 label: Designing for Xbox and TV
@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: b0c278599c878e807ef8b2e2564ca9add31ea4ad
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: e2648cc9a85c538d71f87f69d8525b171d2bed98
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220286"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031516"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Xbox 및 TV용 디자인
 
@@ -32,7 +32,7 @@ Xbox One 및 텔레비전 화면에서 잘 작동 하도록 Windows 앱을 디�
 UWP 프레임 워크에서 제공 되는 대부분의 기능을 사용 하면 앱이 추가 작업 없이 이러한 장치에서 동일한 UI (사용자 인터페이스)를 사용할 수 있습니다.
 그러나 Xbox One 및 TV 화면에서 잘 작동 하도록 앱을 조정 하 고 최적화 하려면 특별 한 고려 사항이 필요 합니다.
 
-실내의 소파에 앉아 TV와 상호 작용 하는 게임 패드 또는 리모컨을 사용하여 TV를 조작하는 환경을 **10피트 환경**이라고 합니다.
+실내의 소파에 앉아 TV와 상호 작용 하는 게임 패드 또는 리모컨을 사용하여 TV를 조작하는 환경을 **10피트 환경** 이라고 합니다.
 일반적으로 사용자가 화면에서 약 3m 떨어진 곳에 앉아 있기 때문에 이렇게 이름이 지정되었습니다.
 이 경우 가령 *0.6m* 환경이나 PC 조작 시에는 존재하지 않는 고유한 과제가 발생합니다.
 Xbox One 또는 TV 화면에 출력 되는 다른 장치에 대 한 앱을 개발 하 고 있으며,이를 위해 컨트롤러를 사용 하는 경우에는 항상이 점을 명심 해야 합니다.
@@ -101,7 +101,7 @@ UI에 적절 한 콘텐츠 밀도가 있는지 확인 하 고, 사용자가 쉽�
 
 ![텍스트, 앱 및 기타 항목 크기 변경](images/designing-for-tv/ui-scaling.png)
 
-Xbox One에는 이러한 시스템 설정이 없지만 UWP UI 요소가 TV에 적절한 크기로 조정되도록 XAML 앱의 경우 **200%**, HTML 앱의 경우 **150%** 기본값으로 배율이 지정됩니다.
+Xbox One에는 이러한 시스템 설정이 없지만 UWP UI 요소가 TV에 적절한 크기로 조정되도록 XAML 앱의 경우 **200%** , HTML 앱의 경우 **150%** 기본값으로 배율이 지정됩니다.
 다른 장치에 대해 UI 요소의 크기가 적절 하 게 조정 되는 동안에는 TV에 대해 적절 하 게 크기가 조정 됩니다.
 Xbox One은 1080p (1920 x 1080 픽셀)에서 앱을 렌더링 합니다. 따라서 PC와 같은 다른 장치에서 앱을 가져올 때 [적응 기법](../layout/screen-sizes-and-breakpoints-for-responsive-design.md)을 활용 하 여 UI가 960 x 540 px 100% scale (또는 HTML 앱에 대 한 720% scale의 1280 x 100 px)에서 잘 보이는지 확인 합니다.
 
@@ -241,7 +241,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
 
 [명령 모음](/uwp/api/Windows.UI.Xaml.Controls.CommandBar) 은 일반적으로 앱의 하나 이상 가장자리 근처에 배치 되는 창의 또 다른 예입니다. TV에서는 배경이 화면 가장자리로 확장 되어야 합니다. 또한 일반적으로 "..."로 표시 되는 **더 많은** 단추를 포함 합니다. 오른쪽에는 TV 안전 영역에 남아 있어야 합니다. 다음은 원하는 상호 작용 및 시각적 효과를 얻기 위한 몇 가지 다른 전략입니다.
 
-**옵션 1**: 배경색을 `CommandBar` 페이지 배경과 동일한 색 또는 투명 한 색으로 변경 합니다.
+**옵션 1** : 배경색을 `CommandBar` 페이지 배경과 동일한 색 또는 투명 한 색으로 변경 합니다.
 
 ```xml
 <CommandBar x:Name="topbar"
@@ -252,7 +252,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
 
 이렇게 하면 `CommandBar` 페이지의 나머지 부분과 동일한 배경 위에 있는 것 처럼 보일 수 있으므로 배경은 화면 가장자리에 원활 하 게 흐릅니다.
 
-**옵션 2**: 채우기가 배경과 동일한 색 인 배경 사각형을 추가 하 `CommandBar` 고 `CommandBar` 페이지의 나머지 부분에서 및 아래에 배치 합니다.
+**옵션 2** : 채우기가 배경과 동일한 색 인 배경 사각형을 추가 하 `CommandBar` 고 `CommandBar` 페이지의 나머지 부분에서 및 아래에 배치 합니다.
 
 ```xml
 <Rectangle VerticalAlignment="Top"
@@ -333,7 +333,7 @@ UWP에는 포커스를 [VisibleBounds](/uwp/api/windows.ui.viewmanagement.applic
 > [!NOTE]
 > 이 코드 조각은 특히에 해당 합니다. `ListView` 스타일의 경우 `GridView` [ControlTemplate](/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) 와 [스타일](/uwp/api/Windows.UI.Xaml.Style) 모두에 대해 [TargetType](/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) 특성을로 설정 `GridView` 합니다.
 
-항목이 표시 되는 방식을 보다 세부적으로 제어 하기 위해 응용 프로그램이 버전 1803 이상을 대상으로 하는 경우 [BringIntoViewRequested 이벤트](/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)를 사용할 수 있습니다. [ItemsPanel](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) 다음 코드 조각과 **ListView** / 같이 내부 **ScrollViewer** 가 실행 되기 전에이를 catch 하기 위해 ListView**GridView** 의 ItemsPanel에 넣을 수 있습니다.
+항목이 표시 되는 방식을 보다 세부적으로 제어 하기 위해 응용 프로그램이 버전 1803 이상을 대상으로 하는 경우 [BringIntoViewRequested 이벤트](/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)를 사용할 수 있습니다. [ItemsPanel](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) 다음 코드 조각과 **ListView** / 같이 내부 **ScrollViewer** 가 실행 되기 전에이를 catch 하기 위해 ListView **GridView** 의 ItemsPanel에 넣을 수 있습니다.
 
 ```xaml
 <GridView x:Name="gridView">
@@ -403,7 +403,7 @@ Xbox One에서는 사용자가 PC에서 강조 색을 선택할 수 있는 것 �
 
 또한 Xbox One의 사용자 색 집합은 Pc, 휴대폰 및 기타 장치의 사용자 색 집합과 동일 하지 않습니다.
 
-앱에서 **SystemControlForegroundAccentBrush**또는 색 리소스 (**SystemAccentColor**)와 같은 브러시 리소스를 사용 하거나 대신 [UIColorType *](/uwp/api/Windows.UI.ViewManagement.UIColorType) API를 통해 악센트 색을 직접 호출 하는 경우 해당 색은 Xbox one에서 사용할 수 있는 악센트 색으로 바뀝니다. 고대비 브러시 색은 PC와 휴대폰에서와 동일한 방법으로 시스템에서 가져옵니다.
+앱에서 **SystemControlForegroundAccentBrush** 또는 색 리소스 ( **SystemAccentColor** )와 같은 브러시 리소스를 사용 하거나 대신 [UIColorType *](/uwp/api/Windows.UI.ViewManagement.UIColorType) API를 통해 악센트 색을 직접 호출 하는 경우 해당 색은 Xbox one에서 사용할 수 있는 악센트 색으로 바뀝니다. 고대비 브러시 색은 PC와 휴대폰에서와 동일한 방법으로 시스템에서 가져옵니다.
 
 일반적으로 강조 색에 대 한 자세한 내용은 [강조 색](../style/color.md#accent-color)을 참조 하세요.
 
@@ -438,7 +438,7 @@ DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 �
 
 ### <a name="navigation-pane"></a>탐색 창 <a name="navigation-pane" />
 
-탐색 창 ( *햄버거 메뉴*라고도 함)은 UWP 앱에서 일반적으로 사용 되는 탐색 컨트롤입니다. 일반적으로 사용자가 다른 페이지로 이동 하는 목록 스타일 메뉴에서 선택할 수 있는 몇 가지 옵션이 포함 된 창입니다. 일반적으로이 창은 공간 절약을 위해 축소 된 상태로 시작 되며, 사용자는 단추를 클릭 하 여 열 수 있습니다.
+탐색 창 ( *햄버거 메뉴* 라고도 함)은 UWP 앱에서 일반적으로 사용 되는 탐색 컨트롤입니다. 일반적으로 사용자가 다른 페이지로 이동 하는 목록 스타일 메뉴에서 선택할 수 있는 몇 가지 옵션이 포함 된 창입니다. 일반적으로이 창은 공간 절약을 위해 축소 된 상태로 시작 되며, 사용자는 단추를 클릭 하 여 열 수 있습니다.
 
 마우스 및 터치를 사용 하 여 탐색 창에 액세스할 수 있지만, 게임 패드/원격을 사용 하면 사용자가 창을 열기 위해 단추를 탐색 해야 하므로 액세스 가능성이 줄어듭니다. 따라서 **보기** 단추를 사용 하 여 탐색 창을 열고 사용자가 페이지의 왼쪽에 있는 모든 방법을 탐색 하 여 열 수 있도록 하는 것이 좋습니다. 이 디자인 패턴을 구현 하는 방법에 대 한 코드 샘플은 [프로그래밍 방식 포커스 탐색](../input/focus-navigation-programmatic.md#split-view-code-sample) 문서에서 찾을 수 있습니다. 이를 통해 사용자는 창의 내용에 매우 쉽게 액세스할 수 있습니다. 탐색 창이 다른 화면 크기에서 작동 하는 방법 및 게임 패드/원격 탐색의 모범 사례에 대 한 자세한 내용은 [nav pane](../controls-and-patterns/navigationview.md)을 참조 하세요.
 
@@ -468,7 +468,7 @@ DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 �
 
 ### <a name="mediatransportcontrols"></a>MediaTransportControls
 
-[MediaTransportControls](/uwp/api/Windows.UI.Xaml.Controls.MediaTransportControls) 요소를 사용 하면 사용자가 재생, 일시 중지, 폐쇄 캡션 등을 수행할 수 있는 기본 재생 환경을 제공 하 여 미디어와 상호 작용할 수 있습니다. 이 컨트롤은 [MediaPlayerElement](/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement) 의 속성 이며 두 개의 레이아웃 옵션인 *단일 행* 및 *두 행*을 지원 합니다. 단일 행 레이아웃에서 슬라이더와 재생 단추는 모두 한 행에 있으며 슬라이더 왼쪽에 있는 재생/일시 중지 단추가 있습니다. 이중 행 레이아웃에서 슬라이더는 자체 행을 차지 하며 재생 단추는 별도의 아래쪽 행에 있습니다. 10 피트 환경을 디자인 하는 경우 더 나은 게임 패드 탐색을 제공 하므로 이중 행 레이아웃을 사용 해야 합니다. 이중 행 레이아웃을 사용 하도록 설정 하려면 `IsCompact="False"` 의 요소에서를 설정 `MediaTransportControls` [TransportControls](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.transportcontrols) `MediaPlayerElement` 합니다.
+[MediaTransportControls](/uwp/api/Windows.UI.Xaml.Controls.MediaTransportControls) 요소를 사용 하면 사용자가 재생, 일시 중지, 폐쇄 캡션 등을 수행할 수 있는 기본 재생 환경을 제공 하 여 미디어와 상호 작용할 수 있습니다. 이 컨트롤은 [MediaPlayerElement](/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement) 의 속성 이며 두 개의 레이아웃 옵션인 *단일 행* 및 *두 행* 을 지원 합니다. 단일 행 레이아웃에서 슬라이더와 재생 단추는 모두 한 행에 있으며 슬라이더 왼쪽에 있는 재생/일시 중지 단추가 있습니다. 이중 행 레이아웃에서 슬라이더는 자체 행을 차지 하며 재생 단추는 별도의 아래쪽 행에 있습니다. 10 피트 환경을 디자인 하는 경우 더 나은 게임 패드 탐색을 제공 하므로 이중 행 레이아웃을 사용 해야 합니다. 이중 행 레이아웃을 사용 하도록 설정 하려면 `IsCompact="False"` 의 요소에서를 설정 `MediaTransportControls` [TransportControls](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.transportcontrols) `MediaPlayerElement` 합니다.
 
 ```xml
 <MediaPlayerElement x:Name="mediaPlayerElement1"  
@@ -499,7 +499,7 @@ DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 �
 
 ## <a name="custom-visual-state-trigger-for-xbox"></a>Xbox의 사용자 지정 시각적 상태 트리거
 
-UWP 앱을 10 피트 환경에 맞게 조정 하려면 앱이 Xbox 콘솔에서 시작 된 것을 감지할 때 레이아웃을 변경 하는 것이 좋습니다. 이 작업을 수행 하는 한 가지 방법은 사용자 지정 *시각적 상태 트리거*를 사용 하는 것입니다. 시각적 상태 트리거는 **Blend for Visual Studio**에서 편집 하려는 경우에 가장 유용 합니다. 다음 코드 조각에서는 Xbox의 시각적 상태 트리거를 만드는 방법을 보여 줍니다.
+UWP 앱을 10 피트 환경에 맞게 조정 하려면 앱이 Xbox 콘솔에서 시작 된 것을 감지할 때 레이아웃을 변경 하는 것이 좋습니다. 이 작업을 수행 하는 한 가지 방법은 사용자 지정 *시각적 상태 트리거* 를 사용 하는 것입니다. 시각적 상태 트리거는 **Blend for Visual Studio** 에서 편집 하려는 경우에 가장 유용 합니다. 다음 코드 조각에서는 Xbox의 시각적 상태 트리거를 만드는 방법을 보여 줍니다.
 
 ```xml
 <VisualStateManager.VisualStateGroups>

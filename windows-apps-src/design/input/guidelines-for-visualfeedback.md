@@ -1,5 +1,5 @@
 ---
-Description: 시각적 피드백을 사용 하 여 Windows 앱과의 상호 작용이 검색, 해석 및 처리 될 때 사용자를 표시 합니다.
+description: 시각적 피드백을 사용 하 여 Windows 앱과의 상호 작용이 검색, 해석 및 처리 될 때 사용자를 표시 합니다.
 title: 시각적 피드백
 ms.assetid: bf2f3672-95f0-4c8c-9a72-0934f2d3b767
 label: Visual feedback
@@ -8,18 +8,18 @@ keywords: 시각적 피드백, 포커스 피드백, 터치 피드백, 접촉 시
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 1afc1c884a7a01ef1021f37476d1e29430c62e3c
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: b82ff29de09766aa348a548c5bd484b7c46db31f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219836"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030516"
 ---
 # <a name="guidelines-for-visual-feedback"></a>시각적 피드백에 대한 지침
 
 시각적 피드백을 사용하여 조작이 감지, 해석 및 처리될 때 사용자에게 표시할 수 있습니다. 시각적 피드백은 조작 의지를 북돋아 사용자에게 도움이 될 수 있습니다. 시각적 피드백은 조작이 성공했음을 표시하여 사용자의 제어 감각을 향상합니다. 또한 시스템 상태를 전달하고 오류를 줄여 줍니다.
 
-> **중요 한 api**: [**windows. input**](/uwp/api/Windows.Devices.Input) [**,**](/uwp/api/Windows.UI.Core) [**windows**](/uwp/api/Windows.UI.Input). ui>
+> **중요 한 api** : [**windows. input**](/uwp/api/Windows.Devices.Input) [**,**](/uwp/api/Windows.UI.Core) [**windows**](/uwp/api/Windows.UI.Input). ui>
 
 ## <a name="recommendations"></a>권장 사항
 
@@ -58,16 +58,16 @@ ms.locfileid: "91219836"
 
 모든 Windows 앱은 애플리케이션 내의 조작 가능한 컨트롤 주위에 보다 정의된 포커스 화면 효과를 표시합니다. 이러한 새 포커스 화면 효과는 완전히 사용자 지정할 수 있으며 필요에 따라 사용하지 않도록 설정할 수도 있습니다.
 
-Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 같이 게임 패드 또는 키보드 입력을 통해 포커스할 수 있는 요소의 경계를 애니메이션화하는 조명 효과인 **포커스 표시**를 지원합니다.
+Xbox 및 TV 사용에 일반적인 **3m 환경** 의 경우 Windows는 단추와 같이 게임 패드 또는 키보드 입력을 통해 포커스할 수 있는 요소의 경계를 애니메이션화하는 조명 효과인 **포커스 표시** 를 지원합니다.
 
 ## <a name="color-branding--customizing"></a>색 브랜딩 및 사용자 지정
 
 ### <a name="border-properties"></a>테두리 속성
 
-높은 가시성 포커스 화면 효과는 기본 테두리와 보조 테두리의 두 부분으로 이루어져 있습니다. 기본 테두리는 **2px** 두께이고 보조 테두리 *외부*에서 실행됩니다. 보조 테두리는 **1px** 두께이고 기본 테두리 *내부*에서 실행됩니다.
+높은 가시성 포커스 화면 효과는 기본 테두리와 보조 테두리의 두 부분으로 이루어져 있습니다. 기본 테두리는 **2px** 두께이고 보조 테두리 *외부* 에서 실행됩니다. 보조 테두리는 **1px** 두께이고 기본 테두리 *내부* 에서 실행됩니다.
 ![높은 표시 유형 포커스 시각적 개체 레드라인](images/FocusRectRedlines.png)
 
-테두리 유형(기본 또는 보조)의 두께를 변경하려면 각각 **FocusVisualPrimaryThickness** 또는 **FocusVisualSecondaryThickness**를 사용합니다.
+테두리 유형(기본 또는 보조)의 두께를 변경하려면 각각 **FocusVisualPrimaryThickness** 또는 **FocusVisualSecondaryThickness** 를 사용합니다.
 ```XAML
 <Slider Width="200" FocusVisualPrimaryThickness="5" FocusVisualSecondaryThickness="2"/>
 ```
@@ -75,7 +75,7 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 
 여백은 [**Thickness**](/dotnet/api/system.windows.thickness) 형식의 속성이므로 컨트롤의 특정 측면에만 표시되도록 사용자 지정할 수 있습니다. 아래를 참조 하세요. ![ 높은 표시 유형 포커스 시각적 여백 두께 아래쪽만](images/FocusThicknessSide.png)
 
-여백은 컨트롤의 시각적 경계와 포커스 시각적 개체 *보조 테두리*의 시작 사이에 있는 공간입니다. 기본 여백이 제어 범위에서 **1px** . **FocusVisualMargin** 속성을 변경 하 여 컨트롤 단위로이 여백을 편집할 수 있습니다.
+여백은 컨트롤의 시각적 경계와 포커스 시각적 개체 *보조 테두리* 의 시작 사이에 있는 공간입니다. 기본 여백이 제어 범위에서 **1px** . **FocusVisualMargin** 속성을 변경 하 여 컨트롤 단위로이 여백을 편집할 수 있습니다.
 ```XAML
 <Slider Width="200" FocusVisualMargin="-5"/>
 ```
@@ -83,7 +83,7 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 
 *음수를 조정 하면 컨트롤의 중심에서 테두리가 사라지고 양수 여백이 면 테두리를 컨트롤의 가운데 가까이 이동 합니다.*
 
-컨트롤의 포커스 화면 효과를 완전히 끄려면 **UseSystemFocusVisuals**를 사용하지 않도록 설정하면 됩니다.
+컨트롤의 포커스 화면 효과를 완전히 끄려면 **UseSystemFocusVisuals** 를 사용하지 않도록 설정하면 됩니다.
 ```XAML
 <Slider Width="200" UseSystemFocusVisuals="False"/>
 ```
@@ -133,6 +133,6 @@ Xbox 및 TV 사용에 일반적인 **3m 환경**의 경우 Windows는 단추와 
 - [입력: Windows 8 제스처 샘플](/samples/browse/?redirectedfrom=MSDN-samples)
 - [Input: 조작 및 제스처 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
 - [DirectX touch 입력 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))
- 
+ 
 
- 
+ 

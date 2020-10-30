@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱의 키보드, 마우스, 터치, 펜 및 게임 패드와 같은 장치에서 입력을 시뮬레이션 하 고 자동화 합니다.
+description: Windows 앱의 키보드, 마우스, 터치, 펜 및 게임 패드와 같은 장치에서 입력을 시뮬레이션 하 고 자동화 합니다.
 title: 입력 삽입을 통해 사용자 입력 시뮬레이트
 label: Input injection
 template: detail.hbs
@@ -7,18 +7,18 @@ keywords: 장치, 디지타이저, 입력, 상호 작용, 주입
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: e4e1497ea30400c550cb0cbb2309801ff8145fd6
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 0cd1a56ca46c3e9ea401794ff5b9964545ce0c5d
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219686"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030126"
 ---
 # <a name="simulate-user-input-through-input-injection"></a>입력 삽입을 통해 사용자 입력 시뮬레이트
 
 Windows 응용 프로그램의 키보드, 마우스, 터치, 펜 및 게임 패드와 같은 장치에서 사용자 입력을 시뮬레이션 하 고 자동화 합니다.
 
-> **중요 한 api**: Windows. ui&gt. [ **삽입**](/uwp/api/windows.ui.input.preview.injection)
+> **중요 한 api** : Windows. ui&gt. [ **삽입**](/uwp/api/windows.ui.input.preview.injection)
 
 ## <a name="overview"></a>개요
 
@@ -26,11 +26,11 @@ Windows 응용 프로그램의 키보드, 마우스, 터치, 펜 및 게임 패�
 
 입력 주입은 내게 필요한 옵션, 테스트 (임시, 자동), 원격 액세스 및 지원 기능을 포함 하는 기능을 제공 해야 하는 Windows 앱 및 도구에 유용 합니다.
 
-## <a name="setup"></a>설치
+## <a name="setup"></a>설정
 
 Windows 앱에서 입력 주입 Api를 사용 하려면 앱 매니페스트에 다음을 추가 해야 합니다.
 
-1. **Appxmanifest.xml** 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 선택 합니다.
+1. **Appxmanifest.xml** 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기** 를 선택 합니다.
 1. 노드에 다음을 삽입 합니다 `Package` .
     - `xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"`
     - `IgnorableNamespaces="rescap"`

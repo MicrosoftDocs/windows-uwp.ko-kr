@@ -1,5 +1,5 @@
 ---
-Description: 음성 인식을 사용 하 여 입력을 제공 하 고, 작업 또는 명령을 지정 하 고, 작업을 수행할 수 있습니다.
+description: 음성 인식을 사용 하 여 입력을 제공 하 고, 작업 또는 명령을 지정 하 고, 작업을 수행할 수 있습니다.
 title: 음성 인식
 ms.assetid: 553C0FB7-35BC-4894-9EF1-906139E17552
 label: Speech recognition
@@ -8,19 +8,19 @@ keywords: 음성, 음성, 음성 인식, 자연어, 받아쓰기, 입력, 사용
 ms.date: 10/25/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 249af1260b261733454fa353adc695818d113afc
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ad721bc64de87fc8bb1a56f687860738bebed56c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165897"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030056"
 ---
 # <a name="speech-recognition"></a>음성 인식
 
 
 음성 인식을 사용 하 여 입력을 제공 하 고, 작업 또는 명령을 지정 하 고, 작업을 수행할 수 있습니다.
 
-> **중요 한 api**: [ **SpeechRecognition**](/uwp/api/Windows.Media.SpeechRecognition)
+> **중요 한 api** : [ **SpeechRecognition**](/uwp/api/Windows.Media.SpeechRecognition)
 
 음성 인식은 음성 인식, 받아쓰기 및 웹 검색에 대 한 바로 사용할 수 있는 문법 및 사용자가 음성 인식 기능을 검색 하 고 사용 하는 데 도움이 되는 기본 시스템 UI를 프로그래밍 하기 위한 인식 Api로 구성 됩니다.
 
@@ -221,11 +221,11 @@ var AudioCapturePermissions = WinJS.Class.define(
 받아쓰기 문법 같은 웹 검색 문법에는 사용자가 말할 수 있는 많은 수의 단어와 구가 포함 되어 있습니다. 그러나 일반적으로 웹을 검색할 때 사용자가 사용 하는 용어를 인식 하도록 최적화 되어 있습니다.
 
 > [!NOTE]
-> 미리 정의 된 받아쓰기 및 웹 검색 문법이 클 수 있으며 장치가 온라인 상태 (장치에 있지 않음) 이기 때문에 장치에 설치 된 사용자 지정 문법에 따라 성능이 빠르지 않을 수 있습니다.     
+> 미리 정의 된 받아쓰기 및 웹 검색 문법이 클 수 있으며 장치가 온라인 상태 (장치에 있지 않음) 이기 때문에 장치에 설치 된 사용자 지정 문법에 따라 성능이 빠르지 않을 수 있습니다.     
 
 이러한 미리 정의 된 문법은 최대 10 초 음성 입력을 인식 하는 데 사용 될 수 있으며 사용자의 작성 노력이 필요 하지 않습니다. 그러나 네트워크에 연결 해야 합니다.
 
-웹 서비스 제약 조건을 사용 하려면 **설정-> 개인 정보-> 음성, 잉크 및 입력**에서 "자세히 알아보기" 옵션을 설정 하 여 음성 입력 및 받아쓰기 지원을 **설정** 에서 사용 하도록 설정 해야 합니다.
+웹 서비스 제약 조건을 사용 하려면 **설정-> 개인 정보-> 음성, 잉크 및 입력** 에서 "자세히 알아보기" 옵션을 설정 하 여 음성 입력 및 받아쓰기 지원을 **설정** 에서 사용 하도록 설정 해야 합니다.
 
 여기서는 음성 입력을 사용 하도록 설정 했는지 여부를 테스트 하 고, 그렇지 않은 경우 개인 정보 > 음성, 수동 입력 및 입력 페이지를 > 하는 방법을 보여 줍니다.
 
@@ -280,7 +280,7 @@ VCD (음성 명령 정의) XML 파일을 사용 하 여 사용자가 앱을 활�
 
 [ **SpeechRecognitionVoiceCommandDefinitionConstraint** 참조](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionVoiceCommandDefinitionConstraint)/
 
-**참고**    사용할 제약 조건 형식의 유형은 만들려는 인식 환경의 복잡성에 따라 달라 집니다. 는 특정 인식 작업에 가장 적합 한 선택 이며 앱에서 모든 유형의 제약 조건에 대 한 사용을 찾을 수 있습니다.
+**참고**  사용할 제약 조건 형식의 유형은 만들려는 인식 환경의 복잡성에 따라 달라 집니다. 는 특정 인식 작업에 가장 적합 한 선택 이며 앱에서 모든 유형의 제약 조건에 대 한 사용을 찾을 수 있습니다.
 제약 조건을 시작 하려면 [사용자 지정 인식 제약 조건 정의](define-custom-recognition-constraints.md)를 참조 하세요.
 
 미리 정의 된 유니버설 Windows 앱 받아쓰기 문법을 언어로 된 대부분의 단어와 짧은 구를 인식 합니다. 사용자 지정 제약 조건 없이 음성 인식기 개체가 인스턴스화될 때 기본적으로 활성화 됩니다.

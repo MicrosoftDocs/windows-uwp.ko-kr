@@ -1,5 +1,5 @@
 ---
-Description: Windows 응용 프로그램에서 터치, 마우스, 펜/스타일러스, 터치 패드 등의 포인팅 장치에서 입력 데이터를 수신, 처리 및 관리 합니다.
+description: Windows 응용 프로그램에서 터치, 마우스, 펜/스타일러스, 터치 패드 등의 포인팅 장치에서 입력 데이터를 수신, 처리 및 관리 합니다.
 title: 포인터 입력 처리
 ms.assetid: BDBC9E33-4037-4671-9596-471DCF855C82
 label: Handle pointer input
@@ -8,12 +8,12 @@ keywords: 펜, 마우스, 터치 패드, 터치, 포인터, 입력, 사용자 �
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 11402ae9f2ea99c583d82d1998ad238eac44576c
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: bae166c1671421c13302df0d2f85e505985d3f2e
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219856"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030746"
 ---
 # <a name="handle-pointer-input"></a>포인터 입력 처리
 
@@ -72,10 +72,10 @@ Windows 앱은 다음과 같은 포인터 이벤트를 수신할 수 있습니�
 <td align="left"><p><a href="/uwp/api/windows.ui.xaml.uielement.pointercapturelost"><strong>PointerCaptureLost</strong></a></p></td>
 <td align="left"><p>다른 UI 요소에서 포인터를 캡처하거나 포인터가 해제 되거나 프로그래밍 방식으로 다른 포인터가 캡처될 때 발생 합니다.</p>
 <div class="alert">
-<strong>참고</strong>    해당 포인터 캡처 이벤트가 없습니다.
+<strong>참고</strong>  해당 포인터 캡처 이벤트가 없습니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">
@@ -120,7 +120,7 @@ Windows 앱은 다음과 같은 포인터 이벤트를 수신할 수 있습니�
 <p>마우스 입력은 마우스 입력이 처음 감지 될 때 할당 된 단일 포인터와 연결 됩니다. 마우스 단추 (왼쪽, 휠 또는 오른쪽)를 클릭 하면 <a href="/uwp/api/windows.ui.xaml.uielement.pointermoved">Pointermoved</a> 이벤트를 통해 포인터와 해당 단추 사이에 보조 연결이 생성 됩니다.</p></td>
 </tr>
 </tbody>
-</table> 
+</table> 
 
 ## <a name="pointer-event-example"></a>Pointer 이벤트 예제
 
@@ -240,7 +240,8 @@ public MainPage()
 -   이 처리기는 [**Pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트를 관리 합니다. 이벤트를 이벤트 로그에 추가 하 고, 활성 포인터 사전에 포인터를 추가 하 고, 포인터 세부 정보를 표시 합니다.
 
     > [!NOTE]
-    > [**Pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed) 및 [**pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerreleased) 이벤트는 항상 쌍으로 발생 하지 않습니다. 앱은 포인터를 종료할 수 있는 이벤트를 수신 하 고 처리 해야 합니다 (예: [**Pointerexited**](/uwp/api/windows.ui.xaml.uielement.pointerexited), [**pointerexited**](/uwp/api/windows.ui.xaml.uielement.pointercanceled)및 [**PointerCaptureLost**](/uwp/api/windows.ui.xaml.uielement.pointercapturelost)).      
+    > [**Pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed) 및 [**pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerreleased) 이벤트는 항상 쌍으로 발생 하지 않습니다. 앱은 포인터를 종료할 수 있는 이벤트를 수신 하 고 처리 해야 합니다 (예: [**Pointerexited**](/uwp/api/windows.ui.xaml.uielement.pointerexited), [**pointerexited**](/uwp/api/windows.ui.xaml.uielement.pointercanceled)및 [**PointerCaptureLost**](/uwp/api/windows.ui.xaml.uielement.pointercapturelost)).
+         
 
 ```csharp
 /// <summary>
@@ -322,7 +323,7 @@ private void Target_PointerEntered(object sender, PointerRoutedEventArgs e)
 -   이 처리기는 [**Pointermoved**](/uwp/api/windows.ui.xaml.uielement.pointermoved) 이벤트를 관리 합니다. 이벤트를 이벤트 로그에 추가 하 고 포인터 세부 정보를 업데이트 합니다.
 
     > [!Important]
-    > 마우스 입력은 마우스 입력이 처음 감지 될 때 할당 된 단일 포인터와 연결 됩니다. 마우스 단추 (왼쪽, 휠 또는 오른쪽)를 클릭 하면 [**Pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트를 통해 포인터와 해당 단추 사이에 보조 연결이 생성 됩니다. [**Pointerreleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased) 이벤트는 동일한 마우스 단추를 눌렀다 놓은 경우에만 발생 합니다 (이 이벤트가 완료 될 때까지 다른 단추는 포인터와 연결 될 수 없음). 이 배타적 연결로 인해 다른 마우스 단추 클릭은 [**Pointermoved**](/uwp/api/windows.ui.xaml.uielement.pointermoved) 이벤트를 통해 라우팅됩니다.     
+    > 마우스 입력은 마우스 입력이 처음 감지 될 때 할당 된 단일 포인터와 연결 됩니다. 마우스 단추 (왼쪽, 휠 또는 오른쪽)를 클릭 하면 [**Pointerpressed**](/uwp/api/windows.ui.xaml.uielement.pointerpressed) 이벤트를 통해 포인터와 해당 단추 사이에 보조 연결이 생성 됩니다. [**Pointerreleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased) 이벤트는 동일한 마우스 단추를 눌렀다 놓은 경우에만 발생 합니다 (이 이벤트가 완료 될 때까지 다른 단추는 포인터와 연결 될 수 없음). 이 배타적 연결로 인해 다른 마우스 단추 클릭은 [**Pointermoved**](/uwp/api/windows.ui.xaml.uielement.pointermoved) 이벤트를 통해 라우팅됩니다.     
 
 ```csharp
 /// <summary>
@@ -528,7 +529,7 @@ private void Target_PointerCanceled(object sender, PointerRoutedEventArgs e)
 -   이 처리기는 [**PointerCaptureLost**](/uwp/api/windows.ui.xaml.uielement.pointercapturelost) 이벤트를 관리 합니다. 이벤트를 이벤트 로그에 추가 하 고 포인터 배열에서 포인터를 제거 하 고 포인터 세부 정보를 업데이트 합니다.
 
     > [!NOTE]
-    > [**PointerCaptureLost**](/uwp/api/windows.ui.xaml.uielement.pointercapturelost) 는 [**pointerreleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased)대신 발생할 수 있습니다. 포인터 캡처는 사용자 상호 작용, 다른 포인터의 프로그래밍 방식 캡처, [**Pointerreleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased)호출 등 다양 한 이유로 손실 될 수 있습니다.     
+    > [**PointerCaptureLost**](/uwp/api/windows.ui.xaml.uielement.pointercapturelost) 는 [**pointerreleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased)대신 발생할 수 있습니다. 포인터 캡처는 사용자 상호 작용, 다른 포인터의 프로그래밍 방식 캡처, [**Pointerreleased**](/uwp/api/windows.ui.xaml.uielement.pointerreleased)호출 등 다양 한 이유로 손실 될 수 있습니다.     
 
 ```csharp
 /// <summary>

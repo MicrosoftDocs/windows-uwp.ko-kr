@@ -1,17 +1,17 @@
 ---
-Description: Microsoft Store Services SDK는 앱에 기능을 추가 하 여 비용을 절감 하 고 고객을 확보 하는 데 사용할 수 있는 라이브러리 및 도구를 제공 합니다.
+description: Microsoft Store Services SDK는 앱에 기능을 추가 하 여 비용을 절감 하 고 고객을 확보 하는 데 사용할 수 있는 라이브러리 및 도구를 제공 합니다.
 title: Microsoft Store Services SDK를 사용하여 고객과 소통
 ms.assetid: 518516DB-70A7-49C4-B3B6-CD8A98320B9C
 ms.date: 08/21/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 서비스 SDK
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b8544f6d4f60b2f4ca91af35ff922fcfe089380
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8356367b47242f7bda01da753cc8599aff9edd79
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155467"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030536"
 ---
 # <a name="engage-customers-with-the-microsoft-store-services-sdk"></a>Microsoft Store Services SDK를 사용하여 고객과 소통
 
@@ -26,7 +26,7 @@ Microsoft Store Services SDK는 앱에 대상 알림을 보내고 앱에서 A/B 
 
 Microsoft Store Services SDK는 현재 UWP 앱에 대해 다음과 같은 시나리오를 지원 합니다. API 참조 설명서는 [Microsoft Store SERVICES SDK API 참조](/uwp/api/overview/engagement)를 참조 하세요.
 
-|  시나리오  |  Description   |
+|  시나리오  |  설명   |
 |------------|----------------|
 |  [A/B 테스트를 사용 하 여 UWP 앱에서 실험 실행](run-app-experiments-with-a-b-testing.md)    |  모든 사용자에 게 기능을 출시 하기 전에 유니버설 Windows 플랫폼 (UWP) 앱에서 A/B 테스트를 실행 하 여 일부 고객의 기능 효과를 측정 합니다. 파트너 센터에서 실험을 정의한 후에는 [StoreServicesExperimentVariation](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) 클래스를 사용 하 여 앱에서 실험의 변형을 가져오고,이 데이터를 사용 하 여 테스트 중인 기능의 동작을 수정한 다음, [logforvariation](/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation) 메서드를 사용 하 여 보기 이벤트 및 변환 이벤트를 파트너 센터에 보냅니다. 마지막으로 파트너 센터를 사용 하 여 결과를 보고 실험을 관리 합니다.  |
 |  [UWP 앱에서 피드백 허브 시작](launch-feedback-hub-from-your-app.md)    |  UWP 앱에서 [StoreServicesFeedbackLauncher](/uwp/api/microsoft.services.store.engagement.storeservicesfeedbacklauncher) 클래스를 사용 하 여 Windows 10 고객에 게 문제, 제안 및 upvotes를 제출할 수 있는 피드백 허브로 안내 합니다. 그런 다음, 파트너 센터의 [피드백 보고서](../publish/feedback-report.md)에서 이 피드백을 관리합니다. |
@@ -35,7 +35,7 @@ Microsoft Store Services SDK는 현재 UWP 앱에 대해 다음과 같은 시나
 
 <span id="prerequisites" />
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 Microsoft Store Services SDK에는 다음이 필요 합니다.
 
@@ -72,7 +72,7 @@ MSI 설치 관리자를 통해 Microsoft Store Services SDK를 설치 하려면 
 
 4.  Visual Studio를 다시 시작합니다.
 
-5.  Microsoft Store Services SDK, Microsoft Advertising SDK, 유니버설 Ad 클라이언트 SDK 또는 Microsoft Store Engagement 및 수익 화 SDK의 이전 버전에서 라이브러리를 참조 하는 기존 프로젝트가 있는 경우 Visual Studio에서 프로젝트를 열고 프로젝트를 정리 하 고 다시 빌드해야 합니다 ( **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 프로젝트 노드를 다시 마우스 오른쪽 단추로 클릭 한 다음 다시 **빌드** **를 선택**).
+5.  Microsoft Store Services SDK, Microsoft Advertising SDK, 유니버설 Ad 클라이언트 SDK 또는 Microsoft Store Engagement 및 수익 화 SDK의 이전 버전에서 라이브러리를 참조 하는 기존 프로젝트가 있는 경우 Visual Studio에서 프로젝트를 열고 프로젝트를 정리 하 고 다시 빌드해야 합니다 ( **솔루션 탐색기** 에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 프로젝트 노드를 다시 마우스 오른쪽 단추로 클릭 한 다음 다시 **빌드** **를 선택** ).
 
   그렇지 않으면 프로젝트에서 처음으로 SDK를 사용 하는 경우 [프로젝트에 어셈블리 참조를 추가할](#references)준비가 된 것입니다.
 
@@ -95,7 +95,7 @@ NuGet을 통해 Microsoft Store Services SDK 라이브러리를 설치 하려면
     > [!NOTE]
     > 프로젝트에 이미 SDK의 이전 MSI 설치에서 라이브러리 참조가 포함 된 경우 프로젝트에서 이러한 참조를 제거 합니다. 이러한 참조는 이전 단계에서 참조 하는 라이브러리가 제거 되었으므로 옆에 경고 아이콘이 있습니다.
 
-4. Visual Studio에서 **프로젝트** 및 **NuGet 패키지 관리**를 클릭 합니다.
+4. Visual Studio에서 **프로젝트** 및 **NuGet 패키지 관리** 를 클릭 합니다.
 
 5. 검색 상자에 **microsoft** 서비스를 입력 하 고 microsoft. \engagement 패키지를 설치 합니다. 패키지 설치가 완료 되 면 솔루션을 저장 합니다.
     > [!NOTE]
@@ -103,7 +103,7 @@ NuGet을 통해 Microsoft Store Services SDK 라이브러리를 설치 하려면
 
 6. 프로젝트를 포함 하는 Visual Studio 솔루션을 닫은 다음 솔루션을 다시 엽니다.
 
-7.  프로젝트에서 NuGet을 통해 설치 된 Microsoft Store Services SDK의 이전 버전에서 라이브러리를 이미 참조 하 고 프로젝트를 최신 버전의 SDK로 업데이트 한 경우 프로젝트를 정리 하 고 다시 빌드하는 것이 좋습니다. **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **정리**를 선택한 다음 프로젝트 노드를 다시 마우스 오른쪽 단추로 클릭 하 고 다시 **빌드**를 선택 합니다.
+7.  프로젝트에서 NuGet을 통해 설치 된 Microsoft Store Services SDK의 이전 버전에서 라이브러리를 이미 참조 하 고 프로젝트를 최신 버전의 SDK로 업데이트 한 경우 프로젝트를 정리 하 고 다시 빌드하는 것이 좋습니다. **솔루션 탐색기** 에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 **정리** 를 선택한 다음 프로젝트 노드를 다시 마우스 오른쪽 단추로 클릭 하 고 다시 **빌드** 를 선택 합니다.
 
   그렇지 않으면 프로젝트에서 처음으로 SDK를 사용 하는 경우 [프로젝트에 어셈블리 참조를 추가할](#references)준비가 된 것입니다.
 
@@ -113,15 +113,15 @@ NuGet을 통해 Microsoft Store Services SDK 라이브러리를 설치 하려면
 
 MSI 설치 관리자 또는 NuGet을 통해 Microsoft Store Services SDK를 설치한 후에는 다음 지침에 따라 UWP 프로젝트에서 SDK 어셈블리를 참조 합니다.
 
-1. Visual Studio에서 프로젝트를 엽니다.
+1. Visual Studio에서 새 프로젝트를 엽니다.
     > [!NOTE]
-    > 프로젝트가 **모든 CPU**를 대상으로 하는 JavaScript 앱 인 경우 아키텍처 관련 빌드 출력 (예: **x86**)을 사용 하도록 프로젝트를 업데이트 합니다.
+    > 프로젝트가 **모든 CPU** 를 대상으로 하는 JavaScript 앱 인 경우 아키텍처 관련 빌드 출력 (예: **x86** )을 사용 하도록 프로젝트를 업데이트 합니다.
 
-2. **솔루션 탐색기**에서 **참조** 를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가** ...를 선택 합니다.
+2. **솔루션 탐색기** 에서 **참조** 를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가** ...를 선택 합니다.
 
-3. **참조 관리자**에서 **유니버설 Windows**를 확장 하 고 **확장**을 클릭 한 다음 **Microsoft Engagement 프레임 워크**옆의 확인란을 선택 합니다. 이를 통해 [Microsoft 서비스](/uwp/api/microsoft.services.store.engagement) 의 api를 사용할 수 있습니다.
+3. **참조 관리자** 에서 **유니버설 Windows** 를 확장 하 고 **확장** 을 클릭 한 다음 **Microsoft Engagement 프레임 워크** 옆의 확인란을 선택 합니다. 이를 통해 [Microsoft 서비스](/uwp/api/microsoft.services.store.engagement) 의 api를 사용할 수 있습니다.
 
-3. **확인**을 클릭합니다.
+3. **확인** 을 클릭합니다.
 
 > [!NOTE]
 > NuGet을 통해 SDK 라이브러리를 설치한 경우 프로젝트에는 **Microsoft. Store.** **Microsoft. Store Engagement** 참조는 NuGet 패키지를 나타내며,이 패키지의 라이브러리는 무시 해도 됩니다.
@@ -130,7 +130,7 @@ MSI 설치 관리자 또는 NuGet을 통해 Microsoft Store Services SDK를 설�
 
 ## <a name="understanding-framework-packages-in-the-sdk"></a>SDK의 프레임 워크 패키지 이해
 
-Microsoft Store Services SDK의 Microsoft.Services.Store.Engagement.dll 라이브러리는 *프레임 워크 패키지로*구성 됩니다. 이 라이브러리는 [Microsoft](/uwp/api/microsoft.services.store.engagement) 의 api를 포함 합니다.
+Microsoft Store Services SDK의 Microsoft.Services.Store.Engagement.dll 라이브러리는 *프레임 워크 패키지로* 구성 됩니다. 이 라이브러리는 [Microsoft](/uwp/api/microsoft.services.store.engagement) 의 api를 포함 합니다.
 
 이 라이브러리는 프레임 워크 패키지 이므로 사용자가이 라이브러리를 사용 하는 앱 버전을 설치한 후 수정 및 성능 향상으로 라이브러리의 새 버전을 게시할 때마다 Windows 업데이트를 통해 장치에서이 라이브러리가 자동으로 업데이트 됩니다. 이렇게 하면 고객이 항상 사용 가능한 최신 버전의 라이브러리를 장치에 설치 하도록 할 수 있습니다.
 

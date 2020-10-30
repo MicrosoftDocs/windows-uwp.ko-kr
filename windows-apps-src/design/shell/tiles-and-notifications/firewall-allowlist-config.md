@@ -1,18 +1,18 @@
 ---
-Description: 많은 기업에서 방화벽을 사용 하 여 원치 않는 트래픽을 차단 합니다. 이 문서에서는 WNS 트래픽이 방화벽을 통과 하도록 허용 하는 방법을 설명 합니다.
-title: 방화벽 Allowlist에 WNS 트래픽 추가
+description: 많은 기업에서 방화벽을 사용 하 여 원치 않는 트래픽을 차단 합니다. 이 문서에서는 WNS 트래픽이 방화벽을 통과 하도록 허용 하는 방법을 설명 합니다.
+title: 방화벽 허용 목록에 WNS 트래픽 추가
 ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
 ms.date: 05/20/2019
 ms.topic: article
 keywords: windows 10, uwp, WNS, windows 알림 서비스, 알림, windows, 방화벽, 문제 해결, IP, 트래픽, 엔터프라이즈, 네트워크, IPv4, VIP, FQDN, 공용 IP 주소
 ms.localizationpriority: medium
-ms.openlocfilehash: 4277b46728464630bf478b1f78008e92b4e3fe99
-ms.sourcegitcommit: 41dbee78d827107c224a9136c26f90be4dfe12ad
+ms.openlocfilehash: 6212111770ff61179eabf0f77e109d1a6d2235b3
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90845532"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032046"
 ---
 # <a name="enterprise-firewall-and-proxy-configurations-to-support-wns-traffic"></a>WNS 트래픽을 지원 하기 위한 엔터프라이즈 방화벽 및 프록시 구성
 
@@ -38,7 +38,7 @@ ms.locfileid: "90845532"
 
 
 ### <a name="fqdns-vips-ips-and-ports"></a>Fqdn, Vip, Ip 및 포트
-아래에서 선택 하는 방법에 관계 없이 **포트 443**을 통해 나열 된 대상에 대 한 네트워크 트래픽을 허용 해야 합니다. 다음 XML 문서의 각 요소는 그 다음에 나오는 표에 설명 되어 있습니다 ( [용어 및 표기법](#terms-and-notations)). Fqdn이 일정 하 게 유지 되므로 Fqdn만 사용 하는 것이 좋습니다. 그러나 다운로드 센터: [WNS (Windows 알림 서비스) VIP 및 IP 범위](https://www.microsoft.com/download/details.aspx?id=44238)에서 전체 목록이 포함 된 XML 파일을 다운로드할 수 있습니다. 새 Vip 또는 IP 범위는 **업로드 후 1 주일에 적용**됩니다.
+아래에서 선택 하는 방법에 관계 없이 **포트 443** 을 통해 나열 된 대상에 대 한 네트워크 트래픽을 허용 해야 합니다. 다음 XML 문서의 각 요소는 그 다음에 나오는 표에 설명 되어 있습니다 ( [용어 및 표기법](#terms-and-notations)). Fqdn이 일정 하 게 유지 되므로 Fqdn만 사용 하는 것이 좋습니다. 그러나 다운로드 센터: [WNS (Windows 알림 서비스) VIP 및 IP 범위](https://www.microsoft.com/download/details.aspx?id=44238)에서 전체 목록이 포함 된 XML 파일을 다운로드할 수 있습니다. 새 Vip 또는 IP 범위는 **업로드 후 1 주일에 적용** 됩니다.
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -73,9 +73,9 @@ ms.locfileid: "90845532"
 | 용어 | 설명 |
 |---|---|
 | **점-10 진수 표기법 (예: 64.4.28.0/26)** | 점-10 진수 표기법은 IP 주소의 범위를 설명 하는 방법입니다. 예를 들어 64.4.28.0/26은 64.4.28.0의 처음 26 비트가 상수이 고, 마지막 6 비트는 가변적입니다.  이 경우 IPv4 범위는 64.4.28.0-64.4.28.63입니다. |
-| **ClientDNS** | 이는 WNS에서 알림을 수신 하는 클라이언트 장치 (Windows Pc, 데스크톱)의 FQDN (정규화 된 도메인 이름) 필터입니다. 이는 WNS 클라이언트가 WNS 기능을 사용 하기 위해 방화벽을 통해 허용 되어야 합니다.  IP/VIP 범위 대신 Fqdn으로 목록을 허용 하는 것이 좋습니다 .이는 변경 되지 않기 때문입니다. |
+| **ClientDNS** | 이는 WNS에서 알림을 수신 하는 클라이언트 장치 (Windows Pc, 데스크톱)의 FQDN (Fully-Qualified 도메인 이름) 필터입니다. 이는 WNS 클라이언트가 WNS 기능을 사용 하기 위해 방화벽을 통해 허용 되어야 합니다.  IP/VIP 범위 대신 Fqdn으로 목록을 허용 하는 것이 좋습니다 .이는 변경 되지 않기 때문입니다. |
 | **ClientIPsIPv4** | 클라이언트 장치 (Windows Pc, 데스크톱)에서 WNS 로부터 알림을 수신 하 여 액세스 하는 서버의 IPv4 주소입니다. |
-| **CloudServiceDNS** | 클라우드 서비스에서 notificatios를 WNS로 보내기 위해 통신 하는 WNS 서버에 대 한 FQDN (정규화 된 도메인 이름) 필터입니다. 이는 서비스에서 WNS 알림을 보내기 위해 방화벽을 통해 허용 되어야 합니다.  IP/VIP 범위 대신 Fqdn으로 목록을 허용 하는 것이 좋습니다 .이는 변경 되지 않기 때문입니다.|
+| **CloudServiceDNS** | 클라우드 서비스에서 notificatios를 WNS로 보내기 위해 통신할 WNS 서버에 대 한 FQDN (Fully-Qualified 도메인 이름) 필터입니다. 이는 서비스에서 WNS 알림을 보내기 위해 방화벽을 통해 허용 되어야 합니다.  IP/VIP 범위 대신 Fqdn으로 목록을 허용 하는 것이 좋습니다 .이는 변경 되지 않기 때문입니다.|
 | **CloudServiceIPs** | CloudServiceIPs는 클라우드 서비스에서 WNS에 알림을 보내는 데 사용 되는 서버의 IPv4 주소입니다.  |
 
 
@@ -91,4 +91,4 @@ ms.locfileid: "90845532"
 * [WNS (Windows 푸시 알림 서비스)를 사용 하 여 인증 하는 방법](/previous-versions/windows/apps/hh465407(v=win.10))
 * [푸시 알림 서비스 요청 및 응답 헤더](/previous-versions/windows/apps/hh465435(v=win.10))
 * [푸시 알림에 대 한 지침 및 검사 목록](./windows-push-notification-services--wns--overview.md)
- 
+ 

@@ -1,5 +1,5 @@
 ---
-Description: Windows 잉크를 지 원하는 windows 앱은 잉크 스트로크를 ISF (Ink Serialize 된 형식) 파일로 serialize 및 deserialize 할 수 있습니다. ISF 파일은 모든 잉크 스트로크 속성 및 동작에 대 한 추가 메타 데이터가 포함 된 GIF 이미지입니다. 잉크를 사용할 수 없는 앱은 알파 채널 배경 투명도를 포함 하 여 정적 GIF 이미지를 볼 수 있습니다.
+description: Windows 잉크를 지 원하는 windows 앱은 잉크 스트로크를 ISF (Ink Serialize 된 형식) 파일로 serialize 및 deserialize 할 수 있습니다. ISF 파일은 모든 잉크 스트로크 속성 및 동작에 대 한 추가 메타 데이터가 포함 된 GIF 이미지입니다. 잉크를 사용할 수 없는 앱은 알파 채널 배경 투명도를 포함 하 여 정적 GIF 이미지를 볼 수 있습니다.
 title: Windows Ink 스트로크 데이터 저장 및 검색
 ms.assetid: C96C9D2F-DB69-4883-9809-4A0DF7CEC506
 label: Store and retrieve Windows Ink stroke data
@@ -8,12 +8,12 @@ keywords: Windows Ink, Windows Ink, DirectInk, InkPresenter, InkCanvas, ISF, 잉
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 66ac039774abc2322ab8b5e9a6a264af25156406
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 36318ce0049f5ec76df0b11e57d0541df780b7ed
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216766"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031366"
 ---
 # <a name="store-and-retrieve-windows-ink-stroke-data"></a>Windows Ink 스트로크 데이터 저장 및 검색
 
@@ -23,7 +23,7 @@ Windows 잉크를 지 원하는 windows 앱은 잉크 스트로크를 ISF (Ink S
 > [!NOTE]
 > ISF는 잉크의 가장 간결한 영구 표현입니다. GIF 파일 등의 이진 문서 형식에 포함 하거나 클립보드에 직접 배치할 수 있습니다.
 
-> **중요 한 api**: InkCanvas [**,**](/uwp/api/Windows.UI.Input.Inking) [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)
+> **중요 한 api** : InkCanvas [**,**](/uwp/api/Windows.UI.Input.Inking) [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas)
 
 ## <a name="save-ink-strokes-to-a-file"></a>파일에 잉크 스트로크 저장
 
@@ -63,7 +63,7 @@ Windows 잉크를 지 원하는 windows 앱은 잉크 스트로크를 ISF (Ink S
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정 합니다.
 
-    [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) 는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크 ([**inputdevicetypes**](/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes))로 해석 하 고 단추에서 클릭 이벤트에 대 한 수신기가 선언 되도록 구성 되어 있습니다.
+    [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) 는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크 ( [**inputdevicetypes**](/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes))로 해석 하 고 단추에서 클릭 이벤트에 대 한 수신기가 선언 되도록 구성 되어 있습니다.
 ```csharp
 public MainPage()
     {
@@ -195,7 +195,7 @@ public MainPage()
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정 합니다.
 
-    [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) 는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크 ([**inputdevicetypes**](/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes))로 해석 하 고 단추에서 클릭 이벤트에 대 한 수신기가 선언 되도록 구성 되어 있습니다.
+    [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) 는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크 ( [**inputdevicetypes**](/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes))로 해석 하 고 단추에서 클릭 이벤트에 대 한 수신기가 선언 되도록 구성 되어 있습니다.
 ```csharp
 public MainPage()
     {
@@ -317,7 +317,7 @@ private async void btnLoad_Click(object sender, RoutedEventArgs e)
 
 2.  그런 다음 몇 가지 기본 잉크 입력 동작을 설정 합니다.
 
-    [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) 는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크 ([**inputdevicetypes**](/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes))로 해석 하도록 구성 됩니다. 선택 기능에 대 한 포인터 및 스트로크 이벤트 뿐만 아니라 단추에서 클릭 이벤트에 대 한 수신기도 여기에서 선언 됩니다.
+    [**InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.inkpresenter) 는 펜과 마우스 모두의 입력 데이터를 잉크 스트로크 ( [**inputdevicetypes**](/uwp/api/windows.ui.input.inking.inkpresenter.inputdevicetypes))로 해석 하도록 구성 됩니다. 선택 기능에 대 한 포인터 및 스트로크 이벤트 뿐만 아니라 단추에서 클릭 이벤트에 대 한 수신기도 여기에서 선언 됩니다.
 
     스트로크 선택을 구현 하는 방법에 대 한 전체 예제는 [펜 및 스타일러스 상호 작용](pen-and-stylus-interactions.md)에서 고급 처리를 위한 통과 입력을 참조 하세요.
 ```csharp
@@ -365,7 +365,7 @@ public MainPage()
     }
 ```
 
-3.  마지막으로, 스트로크 선택 지원을 추가한 후 **잘라내기**, **복사**및 **붙여넣기** 단추의 click 이벤트 처리기에서 클립보드 기능을 구현 합니다.
+3.  마지막으로, 스트로크 선택 지원을 추가한 후 **잘라내기** , **복사** 및 **붙여넣기** 단추의 click 이벤트 처리기에서 클립보드 기능을 구현 합니다.
 
     잘라내기의 경우 먼저 [**InkPresenter**](/uwp/api/Windows.UI.Input.Inking.InkPresenter)의 [**InkStrokeContainer**](/uwp/api/Windows.UI.Input.Inking.InkStrokeContainer) 에서 [**copyselectedtoclipboard**](/uwp/api/windows.ui.input.inking.inkstrokecontainer.copyselectedtoclipboard) 를 호출 합니다.
 

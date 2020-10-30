@@ -1,5 +1,5 @@
 ---
-Description: 보조 타일을 고정 하는 것 처럼 프로그래밍 방식으로 자신의 앱 기본 타일을 고정 하 여 시작할 수 있습니다. 현재 고정 되어 있는지 여부를 확인할 수 있습니다.
+description: 보조 타일을 고정 하는 것 처럼 프로그래밍 방식으로 자신의 앱 기본 타일을 고정 하 여 시작할 수 있습니다. 현재 고정 되어 있는지 여부를 확인할 수 있습니다.
 title: 기본 타일 API
 label: Primary tile API's
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp, StartScreenManager, 고정 기본 타일, 기본 타일 api, 타일 고정 여부 확인, 라이브 타일
 ms.localizationpriority: medium
-ms.openlocfilehash: 569ef5de9298a0fb9da58e4aaa88689c35b98c72
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 83cf11d80ffcd03148cbe5e784aaad5836357796
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172347"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029696"
 ---
 # <a name="primary-tile-apis"></a>기본 타일 API
  
@@ -20,9 +20,9 @@ ms.locfileid: "89172347"
 기본 타일 Api를 사용 하면 앱이 현재 시작에 고정 되어 있는지 여부를 확인 하 고 앱의 기본 타일을 고정 하도록 요청할 수 있습니다.
 
 > [!IMPORTANT]
-> **작성자 업데이트 필요**: 기본 타일 api를 사용 하려면 SDK 15063을 대상으로 하 고 빌드 15063 이상을 실행 해야 합니다.
+> **작성자 업데이트 필요** : 기본 타일 api를 사용 하려면 SDK 15063을 대상으로 하 고 빌드 15063 이상을 실행 해야 합니다.
 
-> **중요 한 api**: [**startscreenmanager 클래스**](/uwp/api/windows.ui.startscreen.startscreenmanager), [ContainsAppListEntryAsync](/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_ContainsAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_), [requestadd사과 istentryasync](/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_)
+> **중요 한 api** : [**startscreenmanager 클래스**](/uwp/api/windows.ui.startscreen.startscreenmanager), [ContainsAppListEntryAsync](/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_ContainsAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_), [requestadd사과 istentryasync](/uwp/api/windows.ui.startscreen.startscreenmanager#Windows_UI_StartScreen_StartScreenManager_RequestAddAppListEntryAsync_Windows_ApplicationModel_Core_AppListEntry_)
 
 
 ## <a name="when-to-use-primary-tile-apis"></a>기본 타일 Api를 사용 하는 경우

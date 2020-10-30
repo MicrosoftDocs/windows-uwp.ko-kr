@@ -1,5 +1,5 @@
 ---
-Description: 이 문서에서는 IBasicVideoEffect 인터페이스를 구현 하는 Windows 런타임 구성 요소를 만들어 비디오 스트림에 대 한 사용자 지정 효과를 만들 수 있도록 하는 방법을 설명 합니다.
+description: 이 문서에서는 IBasicVideoEffect 인터페이스를 구현 하는 Windows 런타임 구성 요소를 만들어 비디오 스트림에 대 한 사용자 지정 효과를 만들 수 있도록 하는 방법을 설명 합니다.
 MS-HAID: dev\_audio\_vid\_camera.custom\_video\_effects
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 40a6bd32-a756-400f-ba34-2c5f507262c0
 ms.localizationpriority: medium
-ms.openlocfilehash: a80e00a44bbb1c401811f72eb7024aef25013f29
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 119d444f073c4f668dcdc63fc118ed408eca8e32
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363956"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030496"
 ---
 # <a name="custom-video-effects"></a>사용자 지정 비디오 효과
 
@@ -30,12 +30,12 @@ ms.locfileid: "89363956"
 
 **비디오 효과에 대 한 Windows 런타임 구성 요소 추가**
 
-1.  Microsoft Visual Studio에서 솔루션을 연 상태에서 **파일** 메뉴로 이동 하 여 **추가- &gt; 새 프로젝트**를 선택 합니다.
+1.  Microsoft Visual Studio에서 솔루션을 연 상태에서 **파일** 메뉴로 이동 하 여 **추가- &gt; 새 프로젝트** 를 선택 합니다.
 2.  **Windows 런타임 구성 요소 (유니버설 Windows)** 프로젝트 형식을 선택 합니다.
-3.  이 예에서는 프로젝트 이름을 *VideoEffectComponent*로 합니다. 이 이름은 나중에 코드에서 참조 됩니다.
-4.  **확인**을 클릭합니다.
-5.  프로젝트 템플릿은 Class1.cs 이라는 클래스를 만듭니다. **솔루션 탐색기**에서 Class1.cs의 아이콘을 마우스 오른쪽 단추로 클릭 하 고 **이름 바꾸기**를 선택 합니다.
-6.  파일의 이름을 *ExampleVideoEffect.cs*로 바꿉니다. Visual Studio에는 새 이름에 대 한 모든 참조를 업데이트할 것인지 묻는 메시지가 표시 됩니다. **예**를 클릭합니다.
+3.  이 예에서는 프로젝트 이름을 *VideoEffectComponent* 로 합니다. 이 이름은 나중에 코드에서 참조 됩니다.
+4.  **확인** 을 클릭합니다.
+5.  프로젝트 템플릿은 Class1.cs 이라는 클래스를 만듭니다. **솔루션 탐색기** 에서 Class1.cs의 아이콘을 마우스 오른쪽 단추로 클릭 하 고 **이름 바꾸기** 를 선택 합니다.
+6.  파일의 이름을 *ExampleVideoEffect.cs* 로 바꿉니다. Visual Studio에는 새 이름에 대 한 모든 참조를 업데이트할 것인지 묻는 메시지가 표시 됩니다. **예** 를 클릭합니다.
 7.  **ExampleVideoEffect.cs** 를 열고 클래스 정의를 업데이트 하 여 [**Ibasicvideoeffect**](/uwp/api/Windows.Media.Effects.IBasicVideoEffect) 인터페이스를 구현 합니다.
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs" id="SnippetImplementIBasicVideoEffect":::
@@ -72,7 +72,7 @@ ms.locfileid: "89363956"
 [**IsReadOnly**](/uwp/api/windows.media.effects.ibasicvideoeffect.isreadonly) 속성을 사용 하면 효과가 효과의 출력에 기록 되는지 여부를 시스템에서 알 수 있습니다. 앱이 비디오 프레임의 분석만 수행 하는 효과와 같이 비디오 프레임을 수정 하지 않는 경우에는이 속성을 true로 설정 해야 합니다. 이렇게 하면 시스템에서 프레임 입력을 프레임 출력에 효율적으로 복사할 수 있습니다.
 
 > [!TIP]
-> [**IsReadOnly**](/uwp/api/windows.media.effects.ibasicvideoeffect.isreadonly) 속성을 true로 설정 하면 [**processframe**](/uwp/api/windows.media.effects.ibasicvideoeffect.processframe) 이 호출 되기 전에 시스템에서 입력 프레임을 출력 프레임에 복사 합니다. **IsReadOnly** 속성을 true로 설정 하면 **processframe**의 효과 출력 프레임에 쓰지 않아도 됩니다.
+> [**IsReadOnly**](/uwp/api/windows.media.effects.ibasicvideoeffect.isreadonly) 속성을 true로 설정 하면 [**processframe**](/uwp/api/windows.media.effects.ibasicvideoeffect.processframe) 이 호출 되기 전에 시스템에서 입력 프레임을 출력 프레임에 복사 합니다. **IsReadOnly** 속성을 true로 설정 하면 **processframe** 의 효과 출력 프레임에 쓰지 않아도 됩니다.
 
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs" id="SnippetIsReadOnly":::
@@ -93,13 +93,13 @@ ms.locfileid: "89363956"
 
 
 > [!NOTE] 
-> **SupportedEncodingProperties**에서 빈 [**VideoEncodingProperties**](/uwp/api/Windows.Media.MediaProperties.VideoEncodingProperties) 개체 목록을 반환 하면 시스템은 기본적으로 ARGB32 encoding으로 표시 됩니다.
+> **SupportedEncodingProperties** 에서 빈 [**VideoEncodingProperties**](/uwp/api/Windows.Media.MediaProperties.VideoEncodingProperties) 개체 목록을 반환 하면 시스템은 기본적으로 ARGB32 encoding으로 표시 됩니다.
 
- 
+ 
 
 ### <a name="supportedmemorytypes-property"></a>SupportedMemoryTypes 속성
 
-시스템은 [**Supportedmemorytypes**](/uwp/api/windows.media.effects.ibasicvideoeffect.supportedmemorytypes) 속성을 확인 하 여 효과가 소프트웨어 메모리 또는 하드웨어 (GPU) 메모리의 비디오 프레임에 액세스 하는지 여부를 확인 합니다. [**MediaMemoryTypes**](/uwp/api/Windows.Media.Effects.MediaMemoryTypes)를 반환 하는 경우에는 영향을 받은 입력 및 출력 [**프레임에 데이터**](/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 를 포함 하 고 있습니다. **MediaMemoryTypes**를 반환 하는 경우 [**IDirect3DSurface**](/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) 개체에 이미지 데이터가 포함 된 입력 및 출력 프레임에 결과가 전달 됩니다.
+시스템은 [**Supportedmemorytypes**](/uwp/api/windows.media.effects.ibasicvideoeffect.supportedmemorytypes) 속성을 확인 하 여 효과가 소프트웨어 메모리 또는 하드웨어 (GPU) 메모리의 비디오 프레임에 액세스 하는지 여부를 확인 합니다. [**MediaMemoryTypes**](/uwp/api/Windows.Media.Effects.MediaMemoryTypes)를 반환 하는 경우에는 영향을 받은 입력 및 출력 [**프레임에 데이터**](/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 를 포함 하 고 있습니다. **MediaMemoryTypes** 를 반환 하는 경우 [**IDirect3DSurface**](/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) 개체에 이미지 데이터가 포함 된 입력 및 출력 프레임에 결과가 전달 됩니다.
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/VideoEffect_Win10/cs/VideoEffectComponent/ExampleVideoEffect.cs" id="SnippetSupportedMemoryTypes":::
 
@@ -107,7 +107,7 @@ ms.locfileid: "89363956"
 > [!NOTE]
 > [**MediaMemoryTypes. GpuAndCpu**](/uwp/api/Windows.Media.Effects.MediaMemoryTypes)를 지정 하면 시스템은 GPU 또는 시스템 메모리 중에서 파이프라인에 대해 더 효율적으로 사용 됩니다. 이 값을 사용 하는 경우 [**Processframe**](/uwp/api/windows.media.effects.ibasicvideoeffect.processframe) 메서드를 검사 하 여 메서드에 전달 된 IDirect3DSurface [**비트맵**](/uwp/api/Windows.Graphics.Imaging.SoftwareBitmap) 또는 [**IDirect3DSurface**](/uwp/api/Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface) 에 데이터가 포함 되어 있는지 확인 한 다음 그에 따라 프레임을 처리 해야 합니다.
 
- 
+ 
 
 ### <a name="timeindependent-property"></a>TimeIndependent 속성
 
@@ -146,13 +146,13 @@ T e m **비트맵** 의 데이터 버퍼에 액세스 하려면 COM interop 필�
 
 > [!NOTE]
 > 이 기술은 관리 되지 않는 네이티브 이미지 버퍼에 액세스 하므로 안전 하지 않은 코드를 허용 하도록 프로젝트를 구성 해야 합니다.
-> 1.  솔루션 탐색기에서 VideoEffectComponent 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+> 1.  솔루션 탐색기에서 VideoEffectComponent 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.
 > 2.  **빌드** 탭을 선택합니다.
 > 3.  **안전 하지 않은 코드 허용** 확인란을 선택 합니다.
 
- 
+ 
 
-이제 **Processframe** 메서드 구현을 추가할 수 있습니다. 첫째,이 메서드는 입력 및 출력 소프트웨어 비트맵에서 [**BitmapBuffer**](/uwp/api/Windows.Graphics.Imaging.BitmapBuffer) 개체를 가져옵니다. 출력 프레임은 쓰기용으로 열리고 입력은 읽기를 위해 열립니다. 그런 다음 [**CreateReference**](/uwp/api/windows.graphics.imaging.bitmapbuffer.createreference)를 호출 하 여 각 버퍼에 대해 [**IMemoryBufferReference**](/uwp/api/Windows.Foundation.IMemoryBufferReference) 를 가져옵니다. 그런 다음 **IMemoryBufferReference** 개체를 위에서 정의한 COM interop 인터페이스로 캐스팅 하 고 **IMemoryByteAccess**다음 **getbuffer**를 호출 하 여 실제 데이터 버퍼를 가져옵니다.
+이제 **Processframe** 메서드 구현을 추가할 수 있습니다. 첫째,이 메서드는 입력 및 출력 소프트웨어 비트맵에서 [**BitmapBuffer**](/uwp/api/Windows.Graphics.Imaging.BitmapBuffer) 개체를 가져옵니다. 출력 프레임은 쓰기용으로 열리고 입력은 읽기를 위해 열립니다. 그런 다음 [**CreateReference**](/uwp/api/windows.graphics.imaging.bitmapbuffer.createreference)를 호출 하 여 각 버퍼에 대해 [**IMemoryBufferReference**](/uwp/api/Windows.Foundation.IMemoryBufferReference) 를 가져옵니다. 그런 다음 **IMemoryBufferReference** 개체를 위에서 정의한 COM interop 인터페이스로 캐스팅 하 고 **IMemoryByteAccess** 다음 **getbuffer** 를 호출 하 여 실제 데이터 버퍼를 가져옵니다.
 
 이제 데이터 버퍼를 얻 었으 면 입력 버퍼에서 읽고 출력 버퍼에 쓸 수 있습니다. 버퍼의 레이아웃은 버퍼의 너비, stride 및 초기 오프셋에 대 한 정보를 제공 하는 [**Getplanedescription**](/uwp/api/windows.graphics.imaging.bitmapbuffer.getplanedescription)을 호출 하 여 가져옵니다. 픽셀당 비트 수는 [**SetEncodingProperties**](/uwp/api/windows.media.effects.ibasicvideoeffect.setencodingproperties) 메서드를 사용 하 여 이전에 설정 된 인코딩 속성에 따라 결정 됩니다. 버퍼 형식 정보는 각 픽셀에 대 한 버퍼의 인덱스를 찾는 데 사용 됩니다. 원본 버퍼의 픽셀 값이 대상 버퍼에 복사 되 고, 색 값이이 효과에 대해 정의 된 FadeValue 속성을 곱하여 지정 된 양만큼 크기가 지정 됩니다.
 
@@ -168,11 +168,11 @@ T e m **비트맵** 의 데이터 버퍼에 액세스 하려면 COM interop 필�
 
 **Win2D NuGet 패키지를 효과 프로젝트에 추가 하려면**
 
-1.  **솔루션 탐색기**에서 **VideoEffectComponent** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **NuGet 패키지 관리**를 선택 합니다.
+1.  **솔루션 탐색기** 에서 **VideoEffectComponent** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **NuGet 패키지 관리** 를 선택 합니다.
 2.  창 위쪽에서 **찾아보기** 탭을 선택 합니다.
-3.  검색 상자에 **Win2D**를 입력 합니다.
-4.  **Win2D**를 선택한 다음 오른쪽 창에서 **설치** 를 선택 합니다.
-5.  **변경 내용 검토** 대화 상자에 설치할 패키지를 표시 합니다. **확인**을 클릭합니다.
+3.  검색 상자에 **Win2D** 를 입력 합니다.
+4.  **Win2D** 를 선택한 다음 오른쪽 창에서 **설치** 를 선택 합니다.
+5.  **변경 내용 검토** 대화 상자에 설치할 패키지를 표시 합니다. **확인** 을 클릭합니다.
 6.  패키지 라이선스에 동의 합니다.
 
 기본 프로젝트 설정에 포함 된 네임 스페이스 외에도 Win2D에서 제공 하는 다음 네임 스페이스를 포함 해야 합니다.
@@ -214,9 +214,9 @@ Win2D Api를 사용 하 여 입력 프레임의 [**Direct3DSurface**](/uwp/api/w
 
 앱에서 비디오 효과를 사용 하려면 앱에 효과 프로젝트에 대 한 참조를 추가 해야 합니다.
 
-1.  솔루션 탐색기의 앱 프로젝트에서 **참조** 를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 선택 합니다.
-2.  **프로젝트** 탭을 확장 하 고 **솔루션**을 선택한 다음 효과 프로젝트 이름에 대 한 확인란을 선택 합니다. 이 예에서는 이름이 *VideoEffectComponent*입니다.
-3.  **확인**을 클릭합니다.
+1.  솔루션 탐색기의 앱 프로젝트에서 **참조** 를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가** 를 선택 합니다.
+2.  **프로젝트** 탭을 확장 하 고 **솔루션** 을 선택한 다음 효과 프로젝트 이름에 대 한 확인란을 선택 합니다. 이 예에서는 이름이 *VideoEffectComponent* 입니다.
+3.  **확인** 을 클릭합니다.
 
 ### <a name="add-your-custom-effect-to-a-camera-video-stream"></a>카메라 비디오 스트림에 사용자 지정 효과 추가
 

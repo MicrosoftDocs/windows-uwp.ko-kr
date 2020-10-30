@@ -1,21 +1,21 @@
 ---
-Description: 이 가이드는 Windows Information Protection (WIP) 정책 및 개인 데이터에 의해 관리 되는 엔터프라이즈 데이터를 처리 하도록 앱을 간소화 하는 데 도움이 됩니다.
+description: 이 가이드는 Windows Information Protection (WIP) 정책 및 개인 데이터에 의해 관리 되는 엔터프라이즈 데이터를 처리 하도록 앱을 간소화 하는 데 도움이 됩니다.
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
-title: Windows Information Protection (WIP) 개발자 가이드
+title: WIP(Windows Information Protection) 개발자 가이드
 ms.date: 06/21/2017
 ms.topic: article
 keywords: windows 10, uwp, wip, Windows Information Protection, 엔터프라이즈 데이터, 엔터프라이즈 데이터 보호, edp, 지원 apps
 ms.assetid: 913ac957-ea49-43b0-91b3-e0f6ca01ef2c
 ms.localizationpriority: medium
-ms.openlocfilehash: d6454fdf63fb757c703ec31dba46a86e2a46aec6
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a1afea58fd7fc7c7868103fc9c7a8510f9f81908
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163257"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032066"
 ---
-# <a name="windows-information-protection-wip-developer-guide"></a>Windows Information Protection (WIP) 개발자 가이드
+# <a name="windows-information-protection-wip-developer-guide"></a>WIP(Windows Information Protection) 개발자 가이드
 
 *지원* 앱은 회사와 개인 데이터를 구분 하 고 관리자가 정의한 Windows INFORMATION PROTECTION (WIP) 정책을 기반으로 보호 해야 하는 것을 알고 있습니다.
 
@@ -82,7 +82,7 @@ WIP 설정 개발자 도우미의 각 섹션에 정보를 추가 하 여 정책�
     ```xml
        <rescap:Capability Name="enterpriseDataPolicy"/>
     ```
-   >*선택적 읽기*: "rescap" 접두사는 *제한 된 기능*을 의미 합니다. [특수 기능 및 제한 된 기능](../packaging/app-capability-declarations.md)을 참조 하세요.
+   >*선택적 읽기* : "rescap" 접두사는 *제한 된 기능* 을 의미 합니다. [특수 기능 및 제한 된 기능](../packaging/app-capability-declarations.md)을 참조 하세요.
 
 4. 패키지 매니페스트 파일에이 네임 스페이스를 추가 합니다.
 
@@ -334,7 +334,7 @@ private static async Task<IBuffer> GetDataFromNetworkbyUsingHeaderHelperMethod(H
 
 웹 서버에서 트래픽을 더 최신 버전의 리소스로 리디렉션하는 경우도 있습니다.
 
-이를 처리 하려면 요청의 응답 상태 값이 **OK**가 될 때까지 요청을 수행 합니다.
+이를 처리 하려면 요청의 응답 상태 값이 **OK** 가 될 때까지 요청을 수행 합니다.
 
 그런 다음 해당 응답의 URI를 사용 하 여 끝점의 id를 가져옵니다. 이 작업을 수행 하는 한 가지 방법은 다음과 같습니다.
 
@@ -445,7 +445,7 @@ private bool IsClipboardAllowedAsync()
 
 **사용자에 게 동의 대화 상자가 표시 되지 않도록 방지**
 
-새 문서는 *개인* 또는 *엔터프라이즈*가 아닙니다. 바로 새로운 기능입니다. 사용자가 엔터프라이즈 데이터를 해당 사용자에 게 붙여 넣으면 Windows에서 정책을 적용 하 고 사용자에 게 동의 대화 상자가 표시 됩니다. 이 코드는이를 방지 합니다. 이 작업은 데이터를 보호 하는 데 도움이 되지 않습니다. 앱에서 새 항목을 만드는 경우 사용자가 동의 대화 상자를 수신 하지 못하도록 하는 것이 더 좋습니다.
+새 문서는 *개인* 또는 *엔터프라이즈* 가 아닙니다. 바로 새로운 기능입니다. 사용자가 엔터프라이즈 데이터를 해당 사용자에 게 붙여 넣으면 Windows에서 정책을 적용 하 고 사용자에 게 동의 대화 상자가 표시 됩니다. 이 코드는이를 방지 합니다. 이 작업은 데이터를 보호 하는 데 도움이 되지 않습니다. 앱에서 새 항목을 만드는 경우 사용자가 동의 대화 상자를 수신 하지 못하도록 하는 것이 더 좋습니다.
 
 ```csharp
 private async void PasteText(bool isNewEmptyDocument)
@@ -489,7 +489,7 @@ private async void PasteText(bool isNewEmptyDocument)
 
 직원 들이 자신의 정보를 공유할 앱을 선택 하면 앱이 해당 콘텐츠를 포함 하는 새 항목을 엽니다.
 
-앞서 언급 했 듯이 새 항목은 *개인* 또는 *엔터프라이즈*가 아닙니다. 바로 새로운 기능입니다. 코드에서 엔터프라이즈 콘텐츠를 항목에 추가 하는 경우 Windows는 정책을 적용 하 고 사용자에 게 동의 대화 상자를 표시 합니다. 이 코드는이를 방지 합니다.
+앞서 언급 했 듯이 새 항목은 *개인* 또는 *엔터프라이즈* 가 아닙니다. 바로 새로운 기능입니다. 코드에서 엔터프라이즈 콘텐츠를 항목에 추가 하는 경우 Windows는 정책을 적용 하 고 사용자에 게 동의 대화 상자를 표시 합니다. 이 코드는이를 방지 합니다.
 
 ```csharp
 protected override async void OnShareTargetActivated(ShareTargetActivatedEventArgs args)

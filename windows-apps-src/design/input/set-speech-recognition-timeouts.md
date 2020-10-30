@@ -1,5 +1,5 @@
 ---
-Description: 음성 인식기에서 침묵 또는 인식할 때 소리를 무시 하는 기간 (babble)을 설정 하 고 음성 입력 수신 대기를 계속 합니다.
+description: 음성 인식기에서 침묵 또는 인식할 때 소리를 무시 하는 기간 (babble)을 설정 하 고 음성 입력 수신 대기를 계속 합니다.
 title: 음성 인식 시간 제한 설정
 ms.assetid: 58F446AC-4A56-454D-8125-62A2C4DBFCC8
 label: Speech recognition timeouts
@@ -8,19 +8,19 @@ keywords: 음성, 음성, 음성 인식, 자연어, 받아쓰기, 입력, 사용
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c68b8aeb71ed4269b3a7fc52c6b616a8b0760b0b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 78c351941b1b6703c28f249afcd119cf267f3d0a
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173327"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031356"
 ---
 # <a name="set-speech-recognition-timeouts"></a>음성 인식 시간 제한 설정
 
 
 음성 인식기에서 침묵 또는 인식할 때 소리를 무시 하는 기간 (babble)을 설정 하 고 음성 입력 수신 대기를 계속 합니다.
 
-> **중요 한 api**: [**시간 제한**](/uwp/api/windows.media.speechrecognition.speechrecognizer.timeouts), [**SpeechRecognizerTimeouts**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts)
+> **중요 한 api** : [**시간 제한**](/uwp/api/windows.media.speechrecognition.speechrecognizer.timeouts), [**SpeechRecognizerTimeouts**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizerTimeouts)
 
 ## <a name="set-a-timeout"></a>시간 제한 설정
 
@@ -31,9 +31,9 @@ ms.locfileid: "89173327"
 -   BabbleTimeout-음성 입력이 종료 된 것으로 가정 하 고 인식 작업을 마무리 하기 전에 SpeechRecognizer가 인식할 수 없는 소리 (babble)를 계속 수신 대기 하는 시간입니다.
 -   EndSilenceTimeout-SpeechRecognizer에서 소리를 검색 하 고 (인식 결과가 생성 된 후) 음성 입력이 종료 된 것으로 가정 하는 시간입니다.
 
-**참고**    시간 제한은 인식기 별로 설정할 수 있습니다.
+**참고**  시간 제한은 인식기 별로 설정할 수 있습니다.
 
- 
+ 
 
 ```CSharp
 // Set timeout settings.

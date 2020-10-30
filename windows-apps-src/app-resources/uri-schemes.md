@@ -1,17 +1,17 @@
 ---
-Description: 앱의 패키지, 앱의 데이터 폴더 또는 클라우드에서 제공하는 파일을 참조하는 데 사용할 수 있는 몇 가지 URI(Uniform Resource Identifier) 체계가 있습니다. URI 체계를 사용하여 앱의 리소스 파일(.resw)에서 로드되는 문자열을 참조할 수도 있습니다.
+description: 앱의 패키지, 앱의 데이터 폴더 또는 클라우드에서 제공하는 파일을 참조하는 데 사용할 수 있는 몇 가지 URI(Uniform Resource Identifier) 체계가 있습니다. URI 체계를 사용하여 앱의 리소스 파일(.resw)에서 로드되는 문자열을 참조할 수도 있습니다.
 title: URI 체계
 template: detail.hbs
 ms.date: 10/16/2017
 ms.topic: article
 keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f5bf063c12362fe26e3810e6153b857b7c1a2e4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8806992ebb7f4335ca0a748c1b2bce4a6de39fae
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170527"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031549"
 ---
 # <a name="uri-schemes"></a>URI 체계
 
@@ -31,7 +31,7 @@ hier-part   = "//" authority path-abempty
             / path-empty
 ```
 
-즉, 기본적으로 URI에는 세 가지 구성 요소가 있습니다. URI *체계* 의 두 슬래시 바로 다음에는 *인증 기관*이라고 하는 구성 요소 (비어 있을 수 있음)가 있습니다. 그리고 바로 다음에 오는 *경로*입니다. URI를 `http://www.contoso.com/welcome.png` 예로 들어, 체계는 ""이 고, 기관은 "" 이며, `http://` `www.contoso.com` 경로는 ""입니다 `/welcome.png` . 또 다른 예는 `ms-appx:///logo.png` 인증 기관 구성 요소가 비어 있고 기본값을 사용 하는 URI입니다.
+즉, 기본적으로 URI에는 세 가지 구성 요소가 있습니다. URI *체계* 의 두 슬래시 바로 다음에는 *인증 기관* 이라고 하는 구성 요소 (비어 있을 수 있음)가 있습니다. 그리고 바로 다음에 오는 *경로* 입니다. URI를 `http://www.contoso.com/welcome.png` 예로 들어, 체계는 ""이 고, 기관은 "" 이며, `http://` `www.contoso.com` 경로는 ""입니다 `/welcome.png` . 또 다른 예는 `ms-appx:///logo.png` 인증 기관 구성 요소가 비어 있고 기본값을 사용 하는 URI입니다.
 
 이 항목에서 설명 하는 Uri의 스키마 별 처리에서는 조각 구성 요소가 무시 됩니다. 리소스를 검색 하 고 비교 하는 동안 조각 구성 요소에는 관계가 없습니다. 그러나 특정 구현 위에 있는 계층은 보조 리소스를 검색 하는 조각을 해석할 수 있습니다.
 
@@ -41,7 +41,7 @@ hier-part   = "//" authority path-abempty
 
 이 항목에서 설명 하는 모든 URI 체계는 스키마에 대 한 정규화 및 리소스 검색을 위해 일반적인 URI 규칙 (RFC 3986)을 따릅니다. 이러한 Uri의 정규화 된 형식은 대/소문자를 유지 하 고 RFC 3986 예약 되지 않은 문자를 백분율 디코딩합니다.
 
-이 항목에서 설명 하는 모든 URI 스키마 ( *스키마*, *기관*및 *경로* )는 표준에 따라 대/소문자를 구분 하지 않으며, 다른 하나는 대/소문자를 구분 하지 않는 방식으로 시스템에서 처리 됩니다. **참고** 해당 규칙에 대 한 유일한 예외는 대/소문자를 구분 하는의 *인증 기관* 입니다 `ms-resource` .
+이 항목에서 설명 하는 모든 URI 스키마 ( *스키마* , *기관* 및 *경로* )는 표준에 따라 대/소문자를 구분 하지 않으며, 다른 하나는 대/소문자를 구분 하지 않는 방식으로 시스템에서 처리 됩니다. **참고** 해당 규칙에 대 한 유일한 예외는 대/소문자를 구분 하는의 *인증 기관* 입니다 `ms-resource` .
 
 ## <a name="ms-appx-and-ms-appx-web"></a>ms-appx 및 ms-appx-웹
 

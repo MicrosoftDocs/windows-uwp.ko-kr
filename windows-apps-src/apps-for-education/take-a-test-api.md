@@ -1,17 +1,17 @@
 ---
-Description: Microsoft에서 테스트 앱을 사용 하기 위한 JavaScript API를 통해 보안 평가를 수행할 수 있습니다. 테스트를 수행 하면 테스트 중에 학생이 다른 컴퓨터나 인터넷 리소스를 사용 하지 못하도록 하는 보안 브라우저가 제공 됩니다.
+description: Microsoft에서 테스트 앱을 사용 하기 위한 JavaScript API를 통해 보안 평가를 수행할 수 있습니다. 테스트를 수행 하면 테스트 중에 학생이 다른 컴퓨터나 인터넷 리소스를 사용 하지 못하도록 하는 보안 브라우저가 제공 됩니다.
 title: JavaScript API 시험 응시.
 ms.assetid: 9bff6318-504c-4d0e-ba80-1a5ea45743da
 ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 교육
 ms.localizationpriority: medium
-ms.openlocfilehash: 2eeb190fc95e46a95813affd432948d38c0328a4
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 29a5d2749531e12ef7ce9b44cd6598c38cd089db
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218396"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031526"
 ---
 # <a name="take-a-test-javascript-api"></a>테스트 JavaScript API를 사용 합니다.
 
@@ -62,7 +62,7 @@ ms.locfileid: "91218396"
 * `onSuccess` -[선택 사항] 잠금을 사용 하거나 사용 하지 않도록 설정 하 고 나면 호출할 함수입니다. 형식 이어야 합니다 `Function(Boolean currentlockdownstate)` .  
 * `onError` -[선택 사항] 잠금 작업이 실패 한 경우 호출할 함수입니다. 형식 이어야 합니다 `Function(Boolean currentlockdownstate)` .  
 
-**요구 사항**  
+**Requirements**  
 Windows 10, 버전 1709
 
 ---
@@ -85,7 +85,7 @@ Windows 10, 버전 1709
 }
 ```
 
-**요구 사항**  
+**Requirements**  
 Windows 10, 버전 1709
 
 ---
@@ -106,7 +106,7 @@ Windows 10, 버전 1709
     * `brand` 보안 브라우저 브랜딩을 나타냅니다 (예: OAKS, CA, SmarterApp 등).
     * `model` 모바일 장치에 대 한 장치 모델만 나타냅니다. 데스크톱 브라우저의 경우 null/사용 되지 않습니다.
 
-**요구 사항**  
+**Requirements**  
 Windows 10, 버전 1709
 
 ---
@@ -125,7 +125,7 @@ Windows 10, 버전 1709
 
 **설명** 이 목록에는 시스템 프로세스가 포함 되지 않습니다.
 
-**요구 사항**  
+**Requirements**  
 Windows 10, 버전 1709
 
 ---
@@ -143,7 +143,7 @@ Windows 10, 버전 1709
 
 **설명** Windows 10 버전 1607에서 장치는 처음에 잠가야 합니다. 이후 버전에서이 메서드는 장치가 잠겨 있는지 여부에 관계 없이 브라우저를 닫습니다.
 
-**요구 사항**  
+**Requirements**  
 Windows 10, 버전 1709
 
 ---
@@ -159,7 +159,7 @@ Windows 10, 버전 1709
 **매개 변수**  
 * `callback` -이 호출이 완료 될 때 호출할 함수입니다. 형식 이어야 합니다. `Function(Boolean permissiveMode)` 여기서는 `permissiveMode` 브라우저가 현재 허용 모드 인지 여부를 나타냅니다. 정의 되지 않았거나 null 이면 가져오기 작업에서 오류가 발생 한 것입니다.
 
-**요구 사항**  
+**Requirements**  
 Windows 10, 버전 1709
 
 ---
@@ -176,7 +176,7 @@ Windows 10, 버전 1709
 * `enable` -의도 된 허용 모드 상태를 나타내는 부울 값입니다.  
 * `callback` -이 호출이 완료 될 때 호출할 함수입니다. 형식 이어야 합니다. `Function(Boolean permissiveMode)` 여기서는 `permissiveMode` 브라우저가 현재 허용 모드 인지 여부를 나타냅니다. 정의 되지 않았거나 null 이면 설정 작업에서 오류가 발생 한 것입니다.
 
-**요구 사항**  
+**Requirements**  
 Windows 10, 버전 1709
 
 ---
@@ -189,7 +189,7 @@ Windows 10, 버전 1709
 **구문**  
 `void SecureBrowser.security.emptyClipBoard();`
 
-**요구 사항**  
+**Requirements**  
 Windows 10, 버전 1709
 
 ---
@@ -208,7 +208,7 @@ Windows 10, 버전 1709
 **주의**  
 방화벽/p s/프록시가 학교에서 일반적으로 사용 되기 때문에 원본 IP 주소를 사용 하 여 테스트 서버 내에서 최종 사용자 컴퓨터를 구분 하는 것은 어렵습니다. MAC 주소를 사용 하면 응용 프로그램에서 진단 목적을 위해 최종 클라이언트 컴퓨터를 일반 방화벽 뒤에 구분할 수 있습니다.
 
-**요구 사항**  
+**Requirements**  
 Windows 10, 버전 1709
 
 ---
@@ -224,7 +224,7 @@ Windows 10, 버전 1709
 **Return**  
 테스트 앱이 시작 된 시간을 나타내는 DateTime 개체입니다.
 
-**요구 사항**  
+**Requirements**  
 Windows 10, 버전 1709
 
 ---
@@ -277,9 +277,9 @@ Windows 10, 버전 1709
 `Boolean SecureBrowser.security.isRemoteSession();`
 
 **반환 값**  
-현재 세션이 원격 이면 **true** 이 고, 그렇지 않으면 **false**입니다.
+현재 세션이 원격 이면 **true** 이 고, 그렇지 않으면 **false** 입니다.
 
-**요구 사항**  
+**Requirements**  
 Windows 10, 버전 1709
 
 ---
@@ -293,12 +293,12 @@ Windows 10, 버전 1709
 `Boolean SecureBrowser.security.isVMSession();`
 
 **반환 값**  
-현재 세션이 가상 컴퓨터에서 실행 되 고 있으면 **true** 이 고, 그렇지 않으면 **false**입니다.
+현재 세션이 가상 컴퓨터에서 실행 되 고 있으면 **true** 이 고, 그렇지 않으면 **false** 입니다.
 
 **주의**  
 이 API 검사는 적절 한 Api를 구현 하는 특정 하이퍼바이저에서 실행 중인 VM 세션만 검색할 수 있습니다.
 
-**요구 사항**  
+**Requirements**  
 Windows 10, 버전 1709
 
 ---

@@ -1,5 +1,5 @@
 ---
-Description: 액세스 가능한 Windows 앱을 만들려는 경우 방지할 수 있는 방법을 나열 합니다.
+description: 액세스 가능한 Windows 앱을 만들려는 경우 방지할 수 있는 방법을 나열 합니다.
 ms.assetid: 024A9B70-9821-45BB-93F1-61C0B2ECF53E
 title: 피해야 할 접근성 사례
 label: Accessibility practices to avoid
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b69cea6badf835fac72ebd3c2dd8977c39d2cfce
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: eeca337cb68205cafa936f45bb4d546fd901571a
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220036"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032376"
 ---
 # <a name="accessibility-practices-to-avoid"></a>피해야 할 접근성 사례
 

@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱에서 보조 타일을 사용 해야 하는 시기와 위치에 대해 알아봅니다.
+description: Windows 앱에서 보조 타일을 사용 해야 하는 시기와 위치에 대해 알아봅니다.
 title: 보조 타일 디자인 지침
 label: Secondary tiles
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 보조 타일, 지침, 지침, 모범 사례
 ms.localizationpriority: medium
-ms.openlocfilehash: 5414c9d8437ee77e2a4a584dea26f7bf1fadef4a
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f0114b4aac7dc590bb80cdfb2aef40f0e0efedcb
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220236"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030616"
 ---
 # <a name="secondary-tile-guidance"></a>보조 타일 지침
 

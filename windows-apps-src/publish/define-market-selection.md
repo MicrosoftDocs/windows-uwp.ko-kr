@@ -1,17 +1,17 @@
 ---
-Description: Microsoft Store은 전 세계 200 국가의 지역에서 고객에 게 도달 합니다.
+description: Microsoft Store은 전 세계 200 국가의 지역에서 고객에 게 도달 합니다.
 title: 시장 선택 정의
 ms.assetid: FBE7507B-DBF3-4FCB-8377-DB01660E75F8
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 시장, 국가, 지역
 ms.localizationpriority: medium
-ms.openlocfilehash: 63650ad15f4a3083b4f500bc16591bb6bd8d8185
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 075a9303d694bfe6bcb4f602bb0bad1e6105dd99
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162027"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029776"
 ---
 # <a name="define-market-selection"></a>시장 선택 정의
 
@@ -42,7 +42,7 @@ Microsoft Store은 전 세계 200 국가의 지역에서 고객에 게 도달 �
 > Windows 8 또는 Windows 8.1를 대상으로 하는 패키지를 포함 하는 이전에 게시 된 앱의 경우 일부 개별 시장의 "Rest 전 세계" 시장을 하나의 단일 시장으로 취급 합니다. 자세한 내용은 Windows 8.x의 ["Rest 세계" 시장을](#rest-of-world-markets-for-windows-8x)참조 하십시오.
 
 스토어에서 나중에 추가할 수 있는 시장에서 앱을 제공할지 여부를 지정할 수 있는 확인란도 표시 됩니다. 이 확인란을 선택 된 상태로 두고 나중에 새 시장을 추가 하는 경우 해당 시장에서 앱에 대 한 기본 가격 및 일반 사용 가능 날짜가 사용 됩니다. 이 문제가 발생 하지 않도록 하려면이 확인란의 선택을 취소 하면 됩니다 .이 경우에는 나중에 언제 든 지 앱을 추가할 수 있습니다.
- 
+ 
 
 ## <a name="microsoft-store-consumer-markets"></a>Microsoft Store 소비자 시장
 
@@ -468,11 +468,11 @@ Microsoft Store은 전 세계 200 국가의 지역에서 고객에 게 도달 �
 | 스위스          | 선물 카드       | 2.24%                         | 2016년 3월     |
 | 대만               | 선물 카드       | 2.24%                         | 2016년 3월     |
 | 터키               | 선물 카드       | 2.24%                         | 2016년 3월     |
-| 아랍에미리트연합국 | 선물 카드       | 2.24%                         | 2016년 3월     |
+| 아랍에미리트 | 선물 카드       | 2.24%                         | 2016년 3월     |
 | 영국       | 선물 카드       | 2.24%                         | 2016년 3월     |
 | 미국        | 선물 카드       | 2.24%                         | 2016년 3월     |
 
- 
+ 
 
 ## <a name="rest-of-world-markets-for-windows-8x"></a>Windows 8.x 용 "전 세계" 시장
 
@@ -738,4 +738,4 @@ Windows 8.x의 "Rest"에 포함 된 시장의는 다음과 같습니다.
 </table>
 
 > [!NOTE]
-> 개발자 계정에 등록할 수 있는 국가 및 지역 목록은 [계정 유형, 위치 및 요금](account-types-locations-and-fees.md)을 참조 하세요.
+> 개발자 계정에 등록할 수 있는 국가 및 지역 목록은 [계정 유형, 위치 및 요금](account-types-locations-and-fees.md)을 참조 하세요.

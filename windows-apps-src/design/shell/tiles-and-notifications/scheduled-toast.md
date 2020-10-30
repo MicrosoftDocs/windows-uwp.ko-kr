@@ -1,5 +1,5 @@
 ---
-Description: 나중에 표시 되도록 로컬 알림 메시지를 예약 하는 방법에 대해 알아봅니다.
+description: 나중에 표시 되도록 로컬 알림 메시지를 예약 하는 방법에 대해 알아봅니다.
 title: 알림 메시지 예약
 label: Schedule a toast notification
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 04/09/2020
 ms.topic: article
 keywords: windows 10, uwp, 예약 된 알림, scheduledtoastnotification, 방법, 빠른 시작, 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ef849490df82d7677e19d1f1619d98111611be3
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: 2a138458634f0246d7e6bed9d6d65c2479dac3c9
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100311"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030696"
 ---
 # <a name="schedule-a-toast-notification"></a>알림 메시지 예약
 
@@ -23,14 +23,14 @@ ms.locfileid: "92100311"
 > [!IMPORTANT]
 > 데스크톱 응용 프로그램 (MSIX/sparse 패키지와 클래식 데스크톱 모두)에서는 알림을 보내고 활성화를 처리 하는 단계가 약간 다릅니다. 아래 지침을 따릅니다. 그러나를 `ToastNotificationManager` `DesktopNotificationManagerCompat` [데스크톱 앱](toast-desktop-apps.md) 설명서의 클래스로 바꿉니다.
 
-> **중요 한 api**: [ScheduledToastNotification 클래스](/uwp/api/Windows.UI.Notifications.ScheduledToastNotification)
+> **중요 한 api** : [ScheduledToastNotification 클래스](/uwp/api/Windows.UI.Notifications.ScheduledToastNotification)
 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 이 항목을 완벽 하 게 이해 하려면 다음을 수행 하는 것이 좋습니다.
 
-* 알림 메시지 알림 용어 및 개념에 대 한 작업 정보입니다. 자세한 내용은 [알림 및 알림 센터 개요](/archive/blogs/tiles_and_toasts/toast-notification-and-action-center-overview-for-windows-10)를 참조 하세요.
+* 알림 메시지 알림 용어 및 개념에 대 한 작업 정보입니다. 자세한 내용은 [알림 및 알림 센터 개요](/archive/blogs/tiles_and_toasts/toast-notification-and-action-center-overview-for-windows-10)를 참조 하세요.
 * Windows 10 알림 메시지 내용에 대해 잘 알고 있어야 합니다. 자세한 내용은 [알림 콘텐츠 설명서](adaptive-interactive-toasts.md)를 참조 하세요.
 * Windows 10 UWP 앱 프로젝트
 

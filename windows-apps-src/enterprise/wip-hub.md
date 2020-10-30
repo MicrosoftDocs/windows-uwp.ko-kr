@@ -1,5 +1,5 @@
 ---
-Description: WIP(Windows Information Protection)가 파일, 버퍼, 클립보드, 네트워킹, 백그라운드 작업 및 잠금 상태의 데이터 보호와 어떤 관계가 있는지를 보여 주는 전체 개발자 그림을 나타내는 허브 항목입니다.
+description: WIP(Windows Information Protection)가 파일, 버퍼, 클립보드, 네트워킹, 백그라운드 작업 및 잠금 상태의 데이터 보호와 어떤 관계가 있는지를 보여 주는 전체 개발자 그림을 나타내는 허브 항목입니다.
 MS-HAID: dev\_enterprise.edp\_hub
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -9,12 +9,12 @@ ms.topic: article
 keywords: windows 10, uwp, Windows Information Protection, 엔터프라이즈 데이터, 엔터프라이즈 데이터 보호, edp, 지원 apps
 ms.assetid: 08f0cfad-f15d-46f7-ae7c-824a8b1c44ea
 ms.localizationpriority: medium
-ms.openlocfilehash: 69bab48836d7679d8bcec5f9132bca88d7607cdb
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: cb3006541a5e14936035bc7b9d3b6493df031823
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173247"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032016"
 ---
 # <a name="windows-information-protection-wip"></a>WIP(Windows Information Protection)
 
@@ -35,7 +35,7 @@ WIP를 MDM과 함께 사용 하면 조직에서 관리 하는 장치에서 데�
 
 사용자가 장치를 등록 하지 않아도 되는 경우 관리자는 해당 MAM 시스템을 사용 하 여 특정 앱에 적용 되는 정책을 정의 하 고 배포 합니다. 사용자가 이러한 앱을 설치 하면 연결 된 정책을 받게 됩니다.
 
-이 정책은 엔터프라이즈 데이터에 액세스할 수 있는 앱 (정책의 *허용 목록*이라고 함)을 식별 합니다. 이러한 앱은 클립보드의 엔터프라이즈 보호 된 파일, VPN (가상 사설망) 및 엔터프라이즈 데이터에 액세스할 수 있습니다. 또한이 정책은 데이터를 제어 하는 규칙을 정의 합니다. 예를 들어 enterprise 소유의 파일에서 데이터를 복사한 다음 enterprise 소유의 파일이 아닌 파일에 붙여 넣을 수 있습니다.
+이 정책은 엔터프라이즈 데이터에 액세스할 수 있는 앱 (정책의 *허용 목록* 이라고 함)을 식별 합니다. 이러한 앱은 클립보드의 엔터프라이즈 보호 된 파일, VPN (가상 사설망) 및 엔터프라이즈 데이터에 액세스할 수 있습니다. 또한이 정책은 데이터를 제어 하는 규칙을 정의 합니다. 예를 들어 enterprise 소유의 파일에서 데이터를 복사한 다음 enterprise 소유의 파일이 아닌 파일에 붙여 넣을 수 있습니다.
 
 사용자가 조직의 MDM 시스템에서 장치 등록을 취소 하거나 조직 MAM 시스템에서 식별 된 앱을 제거 하는 경우 관리자는 장치에서 엔터프라이즈 데이터를 원격으로 초기화할 수 있습니다.
 
@@ -96,4 +96,4 @@ MDM 정책에는 플래그가 필요 하지 않지만 MAM 정책은이를 수행
 
 
 
- 
+ 
