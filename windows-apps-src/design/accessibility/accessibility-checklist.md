@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱에 액세스할 수 있는지 확인 하는 데 도움이 되는 검사 목록을 제공 합니다.
+description: Windows 앱에 액세스할 수 있는지 확인 하는 데 도움이 되는 검사 목록을 제공 합니다.
 ms.assetid: BB8399E2-7013-4F77-AF2C-C1A0E5412856
 title: 접근성 검사 목록
 label: Accessibility checklist
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d6b9340f55064ff89c0b047cbb6d7407574da3d6
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: fd16c93b3914987741a486e4f40d4b60e0b274ee
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216396"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032716"
 ---
 # <a name="accessibility-checklist"></a>접근성 검사 목록
 
@@ -43,7 +43,7 @@ Windows 앱에 액세스할 수 있는지 확인 하는 데 도움이 되는 검
 
     * Windows에는 사용자가 사용할 수 있는 다양 한 내게 필요한 옵션 도구 및 설정이 포함 되며,이를 통해 사용자가 원하는 대로 텍스트를 읽을 수 있습니다. 여기에는 다음이 포함됩니다.
         * UI의 선택한 영역을 확대 하는 돋보기 도구입니다. 앱에서 텍스트의 레이아웃을 사용 하 여 편집용으로 돋보기를 사용 하는 것이 어려울 수 있도록 해야 합니다.
-        * **설정->시스템->디스플레이 >크기 조정 및 레이아웃에 대**한 전역 크기 조정 및 해상도 설정 사용 가능한 크기 옵션은 표시 장치의 기능에 따라 달라질 수 있습니다.
+        * **설정->시스템->디스플레이 >크기 조정 및 레이아웃에 대** 한 전역 크기 조정 및 해상도 설정 사용 가능한 크기 옵션은 표시 장치의 기능에 따라 달라질 수 있습니다.
         * 설정의 텍스트 크기 설정 **-접근성 >표시를 >** 합니다. **텍스트 크게 만들기** 설정을 조정 하 여 모든 응용 프로그램 및 화면에서 지원 컨트롤의 텍스트 크기만 지정 합니다. 모든 UWP 텍스트 컨트롤은 사용자 지정 또는 템플릿 없이 텍스트 크기 조정 환경을 지원 합니다.
         > [!NOTE]
         > **모든 항목을 크게** 설정 하면 사용자가 기본 화면 에서만 일반 텍스트 및 앱에 대 한 기본 설정 크기를 지정할 수 있습니다.

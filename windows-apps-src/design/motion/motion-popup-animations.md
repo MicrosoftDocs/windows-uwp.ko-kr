@@ -1,5 +1,5 @@
 ---
-Description: 팝업 애니메이션을 사용 하 여 flyouts 또는 사용자 지정 팝업 UI 요소에 대 한 팝업 UI를 표시 하 고 숨깁니다. 팝업 요소는 앱 내용 위에 표시 되 고 사용자가 팝업 요소 외부에서 탭 하거나 클릭 하는 경우 해제 되는 컨테이너입니다.
+description: 팝업 애니메이션을 사용 하 여 flyouts 또는 사용자 지정 팝업 UI 요소에 대 한 팝업 UI를 표시 하 고 숨깁니다. 팝업 요소는 앱 내용 위에 표시 되 고 사용자가 팝업 요소 외부에서 탭 하거나 클릭 하는 경우 해제 되는 컨테이너입니다.
 title: 팝업 UI 애니메이션
 ms.assetid: 4E9025CE-FC90-4d4c-9DE6-EC6B6F2AD9DF
 label: Motion--Pop-up animations
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d605378e802f28015734da4c35a22f41adfc185
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 5d09363d6ecd2eb5909c98da316c7c1395ebec03
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217737"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034126"
 ---
 # <a name="pop-up-ui-animations"></a>팝업 UI 애니메이션
 
@@ -21,7 +21,7 @@ ms.locfileid: "91217737"
 
 팝업 애니메이션을 사용 하 여 flyouts 또는 사용자 지정 팝업 UI 요소에 대 한 팝업 UI를 표시 하 고 숨깁니다. 팝업 요소는 앱 내용 위에 표시 되 고 사용자가 팝업 요소 외부에서 탭 하거나 클릭 하는 경우 해제 되는 컨테이너입니다.
 
-> **중요 한 api**: [**PopInThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.PopInThemeAnimation), [**PopupThemeTransition 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.PopupThemeTransition)
+> **중요 한 api** : [**PopInThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.PopInThemeAnimation), [**PopupThemeTransition 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.PopupThemeTransition)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
@@ -40,6 +40,6 @@ ms.locfileid: "91217737"
 * [**PopOutThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.PopOutThemeAnimation)
 * [**PopupThemeTransition 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.PopupThemeTransition)
 
- 
+ 
 
- 
+ 

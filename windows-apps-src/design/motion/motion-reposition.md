@@ -1,6 +1,6 @@
 ---
-Description: 요소 또는 요소를 새 위치로 이동 하려면 위치 변경 애니메이션을 사용 합니다.
-title: 애니메이션 위치 변경
+description: 요소 또는 요소를 새 위치로 이동 하려면 위치 변경 애니메이션을 사용 합니다.
+title: 위치 변경 애니메이션
 ms.assetid: 25D1EE31-5C25-4F21-B34C-FBD8FB1C8FFF
 label: Motion--Reposition
 template: detail.hbs
@@ -8,20 +8,20 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 95d8d69bdd289a8ff5d995995f71cfbd8688ae9b
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 1048763756c272ea9a8e94e1ae3adfe92d624a34
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217716"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034116"
 ---
-# <a name="reposition-animations"></a>애니메이션 위치 변경
+# <a name="reposition-animations"></a>위치 변경 애니메이션
 
 
 
 요소 또는 요소를 새 위치로 이동 하려면 위치 변경 애니메이션을 사용 합니다.
 
-> **중요 한 api**: [**RepositionThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation), [**RepositionThemeTransition 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeTransition)
+> **중요 한 api** : [**RepositionThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeAnimation), [**RepositionThemeTransition 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeTransition)
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
 
@@ -38,4 +38,4 @@ ms.locfileid: "91217716"
 * [**RepositionThemeTransition 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.RepositionThemeTransition)
 
 
- 
+ 

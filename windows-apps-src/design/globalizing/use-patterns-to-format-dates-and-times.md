@@ -1,5 +1,5 @@
 ---
-Description: 사용자 지정 템플릿 및 패턴으로 Windows.globalization.datetimeformatting API를 사용 하 여 원하는 형식으로 날짜 및 시간을 표시 합니다.
+description: 사용자 지정 템플릿 및 패턴으로 Windows.globalization.datetimeformatting API를 사용 하 여 원하는 형식으로 날짜 및 시간을 표시 합니다.
 title: 패턴을 사용 하 여 날짜 및 시간 형식 지정
 ms.assetid: 012028B3-9DA2-4E72-8C0E-3E06BEC3B3FE
 label: Use patterns to format dates and times
@@ -8,12 +8,12 @@ ms.date: 11/09/2017
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 지역화 가능성, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: da4d9b2c7380a085efdcb234ad210eafca40b1c3
-ms.sourcegitcommit: c1226b6b9ec5ed008a75a3d92abb0e50471bb988
+ms.openlocfilehash: dbabbcaccd88b187a03c83909bcb38d5f64b30bb
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86493608"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034316"
 ---
 # <a name="use-templates-and-patterns-to-format-dates-and-times"></a>날짜 및 시간 형식을 지정하는 템플릿 및 패턴 사용
 
@@ -25,7 +25,7 @@ ms.locfileid: "86493608"
 
 하지만 표시할 [**DateTime**](/uwp/api/windows.foundation.datetime?branch=live) 개체의 구성 요소에 대 한 순서와 형식을 더 세부적으로 제어 하려는 경우에는 형식 패턴을 생성자의 *formatTemplate* 인수에 전달할 수 있습니다. 형식 패턴은 특정 구문을 사용 합니다 .이 구문을 사용 하 여 **DateTime** 개체의 개별 구성 요소를 &mdash; 월 이름 으로만 얻거나 연도 값만을 선택 하 여 &mdash; 사용자 지정 형식으로 표시할 수 있습니다. 또한 패턴을 지역화 하 여 다른 언어 및 지역에 맞게 적용할 수 있습니다.
 
-**참고**    이는 형식 패턴의 개요에 불과합니다. 서식 템플릿 및 서식 패턴에 대 한 자세한 내용은 [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live) 클래스의 설명 섹션을 참조 하세요.
+**참고**  이는 형식 패턴의 개요에 불과합니다. 서식 템플릿 및 서식 패턴에 대 한 자세한 내용은 [**DateTimeFormatter**](/uwp/api/windows.globalization.datetimeformatting?branch=live) 클래스의 설명 섹션을 참조 하세요.
 
 ## <a name="the-difference-between-format-templates-and-format-patterns"></a>서식 템플릿과 형식 패턴의 차이점
 
@@ -90,7 +90,7 @@ Ja-JP: 1月1 (inappropriate for Japan; the day symbol 日 is missing)
 -   문화권이 적절 하지 않을 수도 있습니다.
 -   모든 구성 요소 조합은 순서에 관계 없이 지정할 수 있습니다.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 현재 월과 날짜를 현재 시간과 함께 특정 형식으로 표시 하려는 경우를 가정해 보겠습니다. 예를 들어 미국 영어 사용자에 게 다음과 같은 내용이 표시 될 수 있습니다.
 
@@ -113,7 +113,7 @@ var time = timeFormatter.Format(dateToFormat);
 string output = string.Format(resourceLoader.GetString("CustomDateTimeFormatString"), date, time);
 ```
 
-`CustomDateTimeFormatString`는 리소스 파일 (. resw)에서 지역화할 수 있는 리소스를 참조 하는 리소스 식별자입니다. 영어 (미국)의 기본 언어의 경우이 값은 "|" 값, " {0} {1} {0} "가 날짜이 고 ""가 시간 임을 나타내는 주석과 함께 설정 됩니다 {1} . 이렇게 하면 변환기에서 필요에 따라 형식 항목을 조정할 수 있습니다. 예를 들어 일부 언어 또는 지역에서 시간이 날짜 보다 앞에 오도록 하는 경우 항목의 순서를 변경할 수 있습니다. 또는 "|"를 다른 구분 문자로 바꿀 수 있습니다.
+`CustomDateTimeFormatString` 는 리소스 파일 (. resw)에서 지역화할 수 있는 리소스를 참조 하는 리소스 식별자입니다. 영어 (미국)의 기본 언어의 경우이 값은 "|" 값, " {0} {1} {0} "가 날짜이 고 ""가 시간 임을 나타내는 주석과 함께 설정 됩니다 {1} . 이렇게 하면 변환기에서 필요에 따라 형식 항목을 조정할 수 있습니다. 예를 들어 일부 언어 또는 지역에서 시간이 날짜 보다 앞에 오도록 하는 경우 항목의 순서를 변경할 수 있습니다. 또는 "|"를 다른 구분 문자로 바꿀 수 있습니다.
 
 이 예제를 구현 하는 또 다른 방법은 형식 패턴에 대해 두 포맷터를 쿼리하고 이러한 포맷터를 함께 연결 하 고 결과 형식 패턴에서 세 번째 포맷터를 생성 하는 것입니다.
 

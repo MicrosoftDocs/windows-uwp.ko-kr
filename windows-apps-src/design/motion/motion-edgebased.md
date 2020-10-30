@@ -1,5 +1,5 @@
 ---
-Description: 가장자리 기반 애니메이션은 화면 가장자리에서 시작 되는 UI를 표시 하거나 숨깁니다.
+description: 가장자리 기반 애니메이션은 화면 가장자리에서 시작 되는 UI를 표시 하거나 숨깁니다.
 title: 가장자리 기반 UI 애니메이션
 ms.assetid: 5A8F73B1-F4F6-424b-9EDF-A9766C5DEAE8
 label: Motion--edge-based UI
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b36f609308d559f5f0cbb56c90420f2381fb8e53
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: a49277a82a3bfffffb478496ab01d353c169463f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220176"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034236"
 ---
 # <a name="edge-based-ui-animations"></a>가장자리 기반 UI 애니메이션
 
@@ -23,7 +23,7 @@ ms.locfileid: "91220176"
 
 가장자리 기반 애니메이션은 화면 가장자리에서 시작 되는 UI를 표시 하거나 숨깁니다. 표시 및 숨기기 동작은 사용자 또는 앱에서 시작할 수 있습니다. UI는 앱을 오버레이 하거나 주 앱 표면의 일부가 될 수 있습니다. UI가 앱 표면의 일부인 경우 응용 프로그램의 나머지 부분을 수용할 수 있도록 크기를 조정 해야 할 수 있습니다.
 
-> **중요 한 api**: [ **EdgeUIThemeTransition 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition)
+> **중요 한 api** : [ **EdgeUIThemeTransition 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.EdgeUIThemeTransition)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
@@ -44,7 +44,7 @@ ms.locfileid: "91220176"
 ## <a name="related-articles"></a>관련된 문서
 
 
-**개발자 용**
+**개발자용**
 * [애니메이션 개요](./xaml-animation.md)
 * [가장자리 기반 UI에 애니메이션 효과 적용](/previous-versions/windows/apps/jj649428(v=win.10))
 * [빠른 시작: 라이브러리 애니메이션을 사용 하 여 UI에 애니메이션 효과 주기](/previous-versions/windows/apps/hh452703(v=win.10))
@@ -53,6 +53,6 @@ ms.locfileid: "91220176"
 * [페이드 애니메이션](/previous-versions/windows/apps/jj649429(v=win.10))
 * [위치에 애니메이션 적용](/previous-versions/windows/apps/jj649434(v=win.10))
 
- 
+ 
 
- 
+ 

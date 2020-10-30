@@ -1,6 +1,6 @@
 ---
-Description: 혼합 현실에서 잘 작동 하도록 앱을 디자인 합니다.
-title: 혼합 현실 디자인
+description: 혼합 현실에서 잘 작동 하도록 앱을 디자인 합니다.
+title: Mixed Reality 디자인
 ms.assetid: ''
 label: Designing for Mixed Reality
 template: detail.hbs
@@ -13,14 +13,14 @@ design-contact: jeffarn
 dev-contact: ''
 doc-status: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: c0b1ae069959e74239234ae5c9ba409fe7a65f23
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 225b91b20f35c974fca865cc4e94a96efceda84d
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165977"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034376"
 ---
-# <a name="designing-for-mixed-reality"></a>혼합 현실 디자인
+# <a name="designing-for-mixed-reality"></a>Mixed Reality 디자인
 
 혼합 현실에서 잘 보이도록 응용 프로그램을 디자인 하 고 새 입력 방법을 활용 하세요.
 
@@ -40,7 +40,7 @@ HoloLens 및 Windows Mixed Reality 헤드셋 모두 UWP 플랫폼에서 실행 �
 
 몰입 형 앱을 만드는 경우 자세한 내용은 [Windows Mixed Reality 개발자 센터](https://developer.microsoft.com/mixed-reality) 를 방문 해야 합니다.
 
-2D 앱은 사용자 뷰 내에서 기존 플랫 창으로 실행 됩니다. HoloLens에서이는 벽에 고정 된 보기나 사용자 소유의 실제 실내 또는 사무실의 특정 지점에 고정 된 보기를 의미 합니다. Windows Mixed Reality 헤드셋에서 앱은 [혼합 현실 홈](/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home) ( *절벽 집*이라고 함)의 벽에 고정 되어 있습니다.
+2D 앱은 사용자 뷰 내에서 기존 플랫 창으로 실행 됩니다. HoloLens에서이는 벽에 고정 된 보기나 사용자 소유의 실제 실내 또는 사무실의 특정 지점에 고정 된 보기를 의미 합니다. Windows Mixed Reality 헤드셋에서 앱은 [혼합 현실 홈](/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home) ( *절벽 집* 이라고 함)의 벽에 고정 되어 있습니다.
 
 ![혼합 현실에서 실행 되는 여러 앱](images/MR-multiple.png)
 
@@ -113,9 +113,9 @@ UWP 플랫폼에서 실행 되는 것 처럼 이러한 모든 상호 작용은 �
 
 ![혼합 현실 앱에 표시 되는 텍스트는 커야 합니다.](images/MR-text.png)
 
-* [사용자의 응시는 마우스](https://developer.microsoft.com/windows/mixed-reality/gaze_targeting)입니다. 사용자가 무언가를 살펴보면 **터치 가리키기** 이벤트로 작동 하므로 단순히 개체를 살펴보면 실수로 팝업 또는 기타 원치 않는 상호 작용을 트리거할 수 있습니다. 앱이 혼합 현실에서 현재 실행 되 고 있는지 검색 하 고이 동작을 변경 해야 할 수 있습니다. 아래의 **런타임 지원**을 참조 하세요. 
+* [사용자의 응시는 마우스](https://developer.microsoft.com/windows/mixed-reality/gaze_targeting)입니다. 사용자가 무언가를 살펴보면 **터치 가리키기** 이벤트로 작동 하므로 단순히 개체를 살펴보면 실수로 팝업 또는 기타 원치 않는 상호 작용을 트리거할 수 있습니다. 앱이 혼합 현실에서 현재 실행 되 고 있는지 검색 하 고이 동작을 변경 해야 할 수 있습니다. 아래의 **런타임 지원** 을 참조 하세요. 
 
-* 사용자가 동작 컨트롤러를 사용 하 여 요소 또는 요소를 gazes **터치 가리키기** 이벤트가 발생 합니다. 이는 **Pointerpoint** 이 **터치**이지만 **IsInContact** 가 **false**인 **pointerpoint** 로 구성 됩니다. 특정 형식의 커밋이 발생 하는 경우 (예를 들어, clicker 장치를 누르고, 이동 컨트롤러 트리거를 누르거나, 음성 인식 헤드 "선택"), **IsInContact** 가 **True**인 **pointerpoint** 를 사용 하 여 **터치 누름** 이 발생 합니다. 이러한 입력 이벤트에 대 한 자세한 내용은 [터치 조작](../input/touch-interactions.md) 을 참조 하세요.
+* 사용자가 동작 컨트롤러를 사용 하 여 요소 또는 요소를 gazes **터치 가리키기** 이벤트가 발생 합니다. 이는 **Pointerpoint** 이 **터치** 이지만 **IsInContact** 가 **false** 인 **pointerpoint** 로 구성 됩니다. 특정 형식의 커밋이 발생 하는 경우 (예를 들어, clicker 장치를 누르고, 이동 컨트롤러 트리거를 누르거나, 음성 인식 헤드 "선택"), **IsInContact** 가 **True** 인 **pointerpoint** 를 사용 하 여 **터치 누름** 이 발생 합니다. 이러한 입력 이벤트에 대 한 자세한 내용은 [터치 조작](../input/touch-interactions.md) 을 참조 하세요.
 
 * 마우스로 가리킬 때와는 정확 하지 않습니다. 마우스 대상 또는 단추가 작을수록 사용자에 게 문제가 발생할 수 있으므로 컨트롤의 크기를 적절 하 게 조정 합니다. 터치를 위해 설계 된 경우 혼합 현실에서 작동 하지만 런타임에 일부 단추를 확대 하도록 결정할 수도 있습니다. [Hololens 용 기존 유니버설 앱 업데이트](https://developer.microsoft.com/windows/mixed-reality/updating_your_existing_universal_app_for_hololens)를 참조 하세요.
 

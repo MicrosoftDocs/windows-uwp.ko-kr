@@ -1,17 +1,17 @@
 ---
-Description: 파트너 센터에서 보내는 푸시 알림을 받기 위해 UWP 앱을 등록 하는 방법에 대해 알아봅니다.
+description: 파트너 센터에서 보내는 푸시 알림을 받기 위해 UWP 앱을 등록 하는 방법에 대해 알아봅니다.
 title: 앱에 대상 푸시 알림 구성
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, 대상 푸시 알림, 파트너 센터
 ms.assetid: 30c832b7-5fbe-4852-957f-7941df8eb85a
 ms.localizationpriority: medium
-ms.openlocfilehash: abb901c1b067dcf3609cbfb5c4cf3f81c9dc465c
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 2296ae29ddcfd868e31c294f8859d4f4b925fca8
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89364136"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033536"
 ---
 # <a name="configure-your-app-for-targeted-push-notifications"></a>앱에 대상 푸시 알림 구성
 
@@ -24,10 +24,10 @@ ms.locfileid: "89364136"
 코드를 작성 하기 전에 다음 단계에 따라 프로젝트의 Microsoft Store Services SDK에 대 한 참조를 추가 합니다.
 
 1. 아직 수행 하지 않은 경우 개발 컴퓨터에 [Microsoft Store 서비스 SDK를 설치](microsoft-store-services-sdk.md#install-the-sdk) 합니다. 
-2. Visual Studio에서 프로젝트를 엽니다.
-3. 솔루션 탐색기에서 프로젝트에 대 한 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 클릭 합니다.
-4. **참조 관리자**에서 **유니버설 Windows** 를 확장 하 고 **확장**을 클릭 합니다.
-5. Sdk 목록에서 **Microsoft Engagement 프레임 워크** 옆의 확인란을 클릭 하 고 **확인**을 클릭 합니다.
+2. Visual Studio에서 새 프로젝트를 엽니다.
+3. 솔루션 탐색기에서 프로젝트에 대 한 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가** 를 클릭 합니다.
+4. **참조 관리자** 에서 **유니버설 Windows** 를 확장 하 고 **확장** 을 클릭 합니다.
+5. Sdk 목록에서 **Microsoft Engagement 프레임 워크** 옆의 확인란을 클릭 하 고 **확인** 을 클릭 합니다.
 
 ## <a name="register-for-push-notifications"></a>푸시 알림 등록
 
@@ -57,7 +57,7 @@ ms.locfileid: "89364136"
 
 ### <a name="how-targeted-push-notifications-are-routed-to-customers"></a>대상 푸시 알림이 고객에 게 라우팅되는 방법
 
-앱이 **Registernotificationchannelasync**를 호출 하면이 메서드는 현재 장치에 로그인 한 고객의 Microsoft 계정을 수집 합니다. 나중에이 고객을 포함 하는 세그먼트로 대상 푸시 알림을 보내면 파트너 센터에서이 고객의 Microsoft 계정와 연결 된 장치로 알림을 보냅니다.
+앱이 **Registernotificationchannelasync** 를 호출 하면이 메서드는 현재 장치에 로그인 한 고객의 Microsoft 계정을 수집 합니다. 나중에이 고객을 포함 하는 세그먼트로 대상 푸시 알림을 보내면 파트너 센터에서이 고객의 Microsoft 계정와 연결 된 장치로 알림을 보냅니다.
 
 앱을 시작한 고객이 자신의 장치를 해당 Microsoft 계정로 장치에 로그인 하는 동안 다른 사용자가 사용할 수 있도록 장치를 제공 하는 경우 다른 사용자는 원래 고객에 게 대상이 지정 된 알림을 볼 수 있습니다. 특히 고객이 사용 하기 위해 로그인 할 수 있는 서비스를 제공 하는 앱의 경우 의도 하지 않은 결과가 발생할 수 있습니다. 이 시나리오에서 다른 사용자가 대상 알림을 볼 수 없도록 하려면 고객이 앱에서 로그 아웃할 때 [Unregisternotificationchannelasync](/uwp/api/microsoft.services.store.engagement.storeservicesengagementmanager.unregisternotificationchannelasync) 메서드를 호출 합니다. 자세한 내용은이 문서의 뒷부분에 나오는 [푸시 알림에 대 한 등록 취소](#unregister) 를 참조 하세요.
 
@@ -83,7 +83,7 @@ ms.locfileid: "89364136"
 
   :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/App.xaml.cs" id="OnActivated":::
 
-* 푸시 알림에 백그라운드 활성화 형식이 있는 경우 [백그라운드 작업](../launch-resume/support-your-app-with-background-tasks.md) 에 대해 [Run](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) 메서드에서이 메서드를 호출 하 고이 메서드에 전달 된 [todetail notificationactiontriggerdetail](/uwp/api/Windows.UI.Notifications.ToastNotificationActionTriggerDetail) 개체에서 사용할 수 있는 인수를 전달 합니다. 다음 코드 예제에서는 코드 파일이 **Microsoft.**. r **using** e s e r. l i s e. p r o **w**e. **Windows.UI.Notifications**
+* 푸시 알림에 백그라운드 활성화 형식이 있는 경우 [백그라운드 작업](../launch-resume/support-your-app-with-background-tasks.md) 에 대해 [Run](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) 메서드에서이 메서드를 호출 하 고이 메서드에 전달 된 [todetail notificationactiontriggerdetail](/uwp/api/Windows.UI.Notifications.ToastNotificationActionTriggerDetail) 개체에서 사용할 수 있는 인수를 전달 합니다. 다음 코드 예제에서는 코드 파일이 **Microsoft.** . r **using** e s e r. l i s e. p r o **w** e. **Windows.UI.Notifications**
 
   :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/DevCenterNotifications.cs" id="Run":::
 

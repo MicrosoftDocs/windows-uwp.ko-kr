@@ -1,6 +1,6 @@
 ---
-Description: 페이드 애니메이션을 사용 하 여 항목을 뷰로 가져오거나 보기에서 항목을 가져옵니다. 두 가지 일반적인 페이드 애니메이션은 페이드 인 및 페이드 아웃입니다.
-title: 애니메이션 페이드
+description: 페이드 애니메이션을 사용 하 여 항목을 뷰로 가져오거나 보기에서 항목을 가져옵니다. 두 가지 일반적인 페이드 애니메이션은 페이드 인 및 페이드 아웃입니다.
+title: 페이드 애니메이션
 ms.assetid: 975E5EE3-EFBE-4159-8D10-3C94143DD07F
 label: Motion--fades
 template: detail.hbs
@@ -8,20 +8,20 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ae8afb291a2ba6012c55c2f22290f51b7eb76f0
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 81e632a25398003daa1e73d82c23343f57fd3cd0
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220156"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034226"
 ---
-# <a name="fade-animations"></a>애니메이션 페이드
+# <a name="fade-animations"></a>페이드 애니메이션
 
 
 
 페이드 애니메이션을 사용 하 여 항목을 뷰로 가져오거나 보기에서 항목을 가져옵니다. 두 가지 일반적인 페이드 애니메이션은 페이드 인 및 페이드 아웃입니다.
 
-> **중요 한 api**: [**FadeInThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation), [**FadeOutThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)
+> **중요 한 api** : [**FadeInThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation), [**FadeOutThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
@@ -40,6 +40,6 @@ ms.locfileid: "91220156"
 * [**FadeInThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeInThemeAnimation)
 * [**FadeOutThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.FadeOutThemeAnimation)
 
- 
+ 
 
- 
+ 

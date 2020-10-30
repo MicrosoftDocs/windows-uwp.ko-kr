@@ -1,17 +1,17 @@
 ---
-Description: 이 항목에서는 미국 영어 이외의 언어로 지역화 된 Windows 앱에 사용할 수 있는 글꼴을 나열 합니다.
+description: 이 항목에서는 미국 영어 이외의 언어로 지역화 된 Windows 앱에 사용할 수 있는 글꼴을 나열 합니다.
 title: 국가별 글꼴
 template: detail.hbs
 ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 지역화 가능성, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 1200b80347a67bb1c9a6414a18697ca9d30bc29f
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 4af2cb68f92f21750bafa8a86e5dd036d5247c4b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220606"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034356"
 ---
 # <a name="international-fonts"></a>국가별 글꼴
 

@@ -1,5 +1,5 @@
 ---
-Description: Win32 c + + WRL apps에서 로컬 알림 메시지를 보내고 알림 메시지를 클릭 하 여 사용자를 처리 하는 방법을 알아봅니다.
+description: Win32 c + + WRL apps에서 로컬 알림 메시지를 보내고 알림 메시지를 클릭 하 여 사용자를 처리 하는 방법을 알아봅니다.
 title: Win32 c + + WRL apps에서 로컬 알림 메시지 보내기
 label: Send a local toast notification from Win32 C++ WRL apps
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, win32, 데스크톱, 알림 메시지 보내기, 알림 보내기, 바탕 화면 브리지, msix, 스파스 패키지, c + +, cpp, cplusplus, WRL
 ms.localizationpriority: medium
-ms.openlocfilehash: e1e8aedd867dfdcabd382ebde1dd4c96a94d1001
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: 1913eef17ac768b8d7e1f047ac318da9aa1b2925
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100321"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034496"
 ---
 # <a name="send-a-local-toast-notification-from-win32-c-wrl-apps"></a>Win32 c + + WRL apps에서 로컬 알림 메시지 보내기
 
@@ -29,13 +29,13 @@ Win32 앱에 대해 Windows 10 SDK를 사용 하도록 설정 하지 않은 경�
 1. 추가 `runtimeobject.lib` **종속성** 에 추가
 2. Windows 10 SDK를 대상으로 합니다.
 
-프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.
 
 위의 **구성** 메뉴에서 **모든 구성** 을 선택 하 여 다음 변경 내용이 디버그와 릴리스에 모두 적용 되도록 합니다.
 
-**링커-> 입력**에서 추가 `runtimeobject.lib` **종속성**에 추가 합니다.
+**링커-> 입력** 에서 추가 `runtimeobject.lib` **종속성** 에 추가 합니다.
 
-그런 다음 **일반**에서 **Windows SDK 버전이** Windows 8.1 아닌 10.0 이상으로 설정 되어 있는지 확인 합니다.
+그런 다음 **일반** 에서 **Windows SDK 버전이** Windows 8.1 아닌 10.0 이상으로 설정 되어 있는지 확인 합니다.
 
 
 ## <a name="step-2-copy-compat-library-code"></a>2 단계: 호환 라이브러리 코드 복사
@@ -94,7 +94,7 @@ CoCreatableClass(NotificationActivator);
 
 ### <a name="msixsparse-package"></a>MSIX/sparse 패키지
 
-[Msix](/windows/msix/desktop/source-code-overview) 또는 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 경우 (또는 둘 다를 지 원하는 경우) appxmanifest.xml에서 다음을 추가 **합니다**.
+[Msix](/windows/msix/desktop/source-code-overview) 또는 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 경우 (또는 둘 다를 지 원하는 경우) appxmanifest.xml에서 다음을 추가 **합니다** .
 
 1. **Xmlns: com** 에 대 한 선언
 2. **Xmlns: desktop** 에 대 한 선언
@@ -193,7 +193,7 @@ hr = DesktopNotificationManagerCompat::RegisterActivator();
 
 ## <a name="step-7-send-a-notification"></a>7 단계: 알림 보내기
 
-Notification notification manager **호환성** 을 사용 하 여 **to **notification을 만드는 경우를 제외 하 고는 UWP 앱과 동일 합니다. 호환 라이브러리는 MSIX/sparse 패키지와 클래식 Win32의 차이를 자동으로 처리 하므로 코드를 포크 하지 않아도 됩니다. 클래식 Win32의 경우 호환성 라이브러리는 **RegisterAumidAndComServer** 를 호출할 때 제공한 AUMID를 캐시 하므로 AUMID를 제공 하거나 제공 하지 않을 시기를 걱정 하지 않아도 됩니다.
+Notification notification manager **호환성** 을 사용 하 여 **to** notification을 만드는 경우를 제외 하 고는 UWP 앱과 동일 합니다. 호환 라이브러리는 MSIX/sparse 패키지와 클래식 Win32의 차이를 자동으로 처리 하므로 코드를 포크 하지 않아도 됩니다. 클래식 Win32의 경우 호환성 라이브러리는 **RegisterAumidAndComServer** 를 호출할 때 제공한 AUMID를 캐시 하므로 AUMID를 제공 하거나 제공 하지 않을 시기를 걱정 하지 않아도 됩니다.
 
 레거시 Windows 8.1 알림 템플릿이 #4 단계에서 만든 COM 알림 활성기를 활성화 하지 않으므로 아래에 표시 된 대로 **To generic** 바인딩을 사용 해야 합니다.
 
@@ -421,8 +421,8 @@ Windows 8은 알림 메시지를 도입 했지만 ToastText01와 같은 [레거�
 | OS | To Generic | COM 활성기 | 레거시 알림 템플릿 |
 | -- | ------------ | ------------- | ---------------------- |
 | Windows 10 | 지원됨 | 지원됨 | 지원 됨 (COM 서버를 활성화 하지 않음) |
-| Windows 8.1/8 | N/A | 해당 없음 | 지원됨 |
-| Windows 7 및 낮음 | N/A | N/A | N/A |
+| Windows 8.1/8 | 해당 없음 | 해당 없음 | 지원됨 |
+| Windows 7 및 낮음 | 해당 없음 | 해당 없음 | 해당 없음 |
 
 Windows 10에서 실행 되 고 있는지 확인 하려면 헤더를 포함 하 `<VersionHelpers.h>` 고 **IsWindows10OrGreater** 메서드를 확인 합니다. True가 반환 되 면이 설명서에 설명 된 모든 메서드를 계속 호출 합니다. 
 
@@ -438,7 +438,7 @@ if (IsWindows10OrGreater())
 
 ## <a name="known-issues"></a>알려진 문제
 
-**수정 됨: 알림 클릭 후 앱이 집중 되지 않습니다**. 빌드 15063 이전 버전에서는 COM 서버를 활성화할 때 포그라운드 권한이 응용 프로그램에 전송 되지 않습니다. 따라서 앱은 포그라운드로 이동 하려고 할 때만 깜박입니다. 이 문제에 대 한 해결 방법이 없습니다. 빌드 16299 이상에서이 문제를 해결 했습니다.
+**수정 됨: 알림 클릭 후 앱이 집중 되지 않습니다** . 빌드 15063 이전 버전에서는 COM 서버를 활성화할 때 포그라운드 권한이 응용 프로그램에 전송 되지 않습니다. 따라서 앱은 포그라운드로 이동 하려고 할 때만 깜박입니다. 이 문제에 대 한 해결 방법이 없습니다. 빌드 16299 이상에서이 문제를 해결 했습니다.
 
 
 ## <a name="resources"></a>리소스

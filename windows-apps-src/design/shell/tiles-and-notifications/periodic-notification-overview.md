@@ -1,5 +1,5 @@
 ---
-Description: 정기 알림(폴링된 알림이라고도 함)은 고정된 간격에 따라 클라우드 서비스에서 콘텐츠를 다운로드하여 타일 및 배지를 업데이트합니다.
+description: 정기 알림(폴링된 알림이라고도 함)은 고정된 간격에 따라 클라우드 서비스에서 콘텐츠를 다운로드하여 타일 및 배지를 업데이트합니다.
 title: 정기 알림 개요
 ms.assetid: 1EB79BF6-4B94-451F-9FAB-0A1B45B4D01C
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9936fd6b7210298bdce042b7848a75be8e044040
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 5860c4e45a25b0d141e1b2c57421dd2640d5fbb4
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175507"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033786"
 ---
 # <a name="periodic-notification-overview"></a>정기 알림 개요
  
@@ -25,9 +25,9 @@ ms.locfileid: "89175507"
 
 정기 알림을 사용 하면 앱에서 최소 클라우드 서비스 및 클라이언트 투자로 라이브 타일 업데이트를 가져올 수 있습니다. 정기적 알림은 동일한 콘텐츠를 광범위 한 사용자에 게 배포 하는 좋은 배달 방법입니다.
 
-**참고**    Windows 8.1에 대 한 [푸시 및 정기 알림 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Push%20and%20periodic%20notifications%20client-side%20sample%20(Windows%208)) 을 다운로드 하 고 Windows 10 앱에서 소스 코드를 다시 사용 하 여 자세히 알아볼 수 있습니다.
+**참고**   Windows 8.1에 대 한 [푸시 및 정기 알림 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/Push%20and%20periodic%20notifications%20client-side%20sample%20(Windows%208)) 을 다운로드 하 고 Windows 10 앱에서 소스 코드를 다시 사용 하 여 자세히 알아볼 수 있습니다.
 
- 
+ 
 
 ## <a name="how-it-works"></a>작동 방법
 
@@ -106,4 +106,4 @@ ms.locfileid: "89175507"
 * [정기 알림에 대 한 지침]()
 * [배지에 대 한 정기 알림을 설정 하는 방법](/previous-versions/windows/apps/hh761476(v=win.10))
 * [타일에 대 한 주기적인 알림을 설정 하는 방법](/previous-versions/windows/apps/hh761476(v=win.10))
- 
+ 

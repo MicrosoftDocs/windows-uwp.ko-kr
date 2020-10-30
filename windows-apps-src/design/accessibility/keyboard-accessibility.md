@@ -1,5 +1,5 @@
 ---
-Description: 앱이 좋은 키보드 액세스를 제공 하지 않는 경우 시각 장애가 있는 사용자가 앱을 사용 하는 데 어려움을 겪을 수 있거나 전혀 사용 하지 못할 수 있습니다.
+description: 따라서 앱의 키보드 접근성이 좋지 않을 경우 시각 장애나 이동성 문제가 있는 사용자가 앱을 사용하는 데 어려움을 겪거나 아예 사용하지 못할 수 있습니다.
 ms.assetid: DDAE8C4B-7907-49FE-9645-F105F8DFAD8B
 title: 키보드 접근성
 label: Keyboard accessibility
@@ -8,18 +8,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c6fc039ad29fc7c29e609788983274c5342951c2
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 79dd977cda50d8573cfeab2628ab6227cc9309c0
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174007"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032506"
 ---
 # <a name="keyboard-accessibility"></a>키보드 접근성  
 
 
 
-앱이 좋은 키보드 액세스를 제공 하지 않는 경우 시각 장애가 있는 사용자가 앱을 사용 하는 데 어려움을 겪을 수 있거나 전혀 사용 하지 못할 수 있습니다.
+따라서 앱의 키보드 접근성이 좋지 않을 경우 시각 장애나 이동성 문제가 있는 사용자가 앱을 사용하는 데 어려움을 겪거나 아예 사용하지 못할 수 있습니다.
 
 <span id="keyboard_navigation_among_UI_elements"/>
 <span id="keyboard_navigation_among_ui_elements"/>
@@ -52,7 +52,7 @@ XAML
 </Grid>
 ```
 
-탭 순서에서 컨트롤을 제외 하려고 할 수 있습니다. 일반적으로이 작업은 [**IsEnabled**](/uwp/api/windows.ui.xaml.controls.control.isenabled) 속성을 **false**로 설정 하는 등의 방법으로 컨트롤을 비 대화형으로 만드는 경우에만 수행 합니다. 비활성화 된 컨트롤은 탭 순서에서 자동으로 제외 됩니다. 하지만 경우에 따라 탭 순서에서 컨트롤을 사용할 수 없는 경우에도 제외 하는 것이 좋습니다. 이 경우 [**Istabstop**](/uwp/api/windows.ui.xaml.controls.control.istabstop) 속성을 **false**로 설정할 수 있습니다.
+탭 순서에서 컨트롤을 제외 하려고 할 수 있습니다. 일반적으로이 작업은 [**IsEnabled**](/uwp/api/windows.ui.xaml.controls.control.isenabled) 속성을 **false** 로 설정 하는 등의 방법으로 컨트롤을 비 대화형으로 만드는 경우에만 수행 합니다. 비활성화 된 컨트롤은 탭 순서에서 자동으로 제외 됩니다. 하지만 경우에 따라 탭 순서에서 컨트롤을 사용할 수 없는 경우에도 제외 하는 것이 좋습니다. 이 경우 [**Istabstop**](/uwp/api/windows.ui.xaml.controls.control.istabstop) 속성을 **false** 로 설정할 수 있습니다.
 
 일반적으로 포커스를 가질 수 있는 모든 요소는 기본적으로 탭 순서에 있습니다. 이에 대 한 예외는 [**RichTextBlock**](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) 와 같은 특정 텍스트 표시 형식에 포커스가 있을 수 있으므로 클립보드에서 텍스트를 선택 하 여 액세스할 수 있습니다. 그러나 정적 텍스트 요소가 탭 순서에 있는 것은 아니므로 탭 순서가 아닙니다. 이러한 항목은 일반적으로 대화형이 아니지만 호출할 수 없으며 텍스트 입력이 필요 하지는 않지만 텍스트에서 선택 지점의 찾기 및 조정을 지 원하는 [텍스트 컨트롤 패턴](/windows/desktop/WinAuto/uiauto-controlpatternsoverview) 을 지원 합니다. 텍스트에 포커스를 설정 하는 connotation가 있으면 가능한 일부 작업이 가능 합니다. 텍스트 요소는 계속 해 서 보조 기술에서 검색 되 고 화면 판독기에서 소리내어 읽게 되지만 실제 탭 순서에서 이러한 요소를 찾는 것 외의 기술에 의존 합니다.
 
@@ -155,7 +155,7 @@ XAML
 <span id="IMPLEMENTING_A_KEY_EVENT_HANDLER"/>
 
 ### <a name="implementing-a-key-event-handler"></a>키 이벤트 처리기 구현  
-키 이벤트와 같은 입력 이벤트에서는 *라우트된 이벤트*라는 이벤트 개념을 사용합니다. 라우트된 이벤트는 합성 컨트롤의 자식 요소를 통해 버블링 될 수 있습니다. 따라서 공용 컨트롤 부모는 여러 자식 요소에 대 한 이벤트를 처리할 수 있습니다. 이 이벤트 모델은 디자인에 의해 포커스가 없거나 탭 순서의 일부일 수 없는 여러 복합 부분이 포함 된 컨트롤에 대 한 바로 가기 키 작업을 정의 하는 데 편리 합니다.
+키 이벤트와 같은 입력 이벤트에서는 *라우트된 이벤트* 라는 이벤트 개념을 사용합니다. 라우트된 이벤트는 합성 컨트롤의 자식 요소를 통해 버블링 될 수 있습니다. 따라서 공용 컨트롤 부모는 여러 자식 요소에 대 한 이벤트를 처리할 수 있습니다. 이 이벤트 모델은 디자인에 의해 포커스가 없거나 탭 순서의 일부일 수 없는 여러 복합 부분이 포함 된 컨트롤에 대 한 바로 가기 키 작업을 정의 하는 데 편리 합니다.
 
 Ctrl 키와 같은 한정자 확인을 포함 하는 키 이벤트 처리기를 작성 하는 방법을 보여 주는 예제 코드는 [키보드 상호 작용](../input/keyboard-interactions.md)을 참조 하세요.
 
@@ -173,7 +173,7 @@ Ctrl 키와 같은 한정자 확인을 포함 하는 키 이벤트 처리기를 
 <span id="AN_EXAMPLE_OF_A_VISUAL_STATE_FOR_A_FOCUS_INDICATOR"/>
 
 ## <a name="an-example-of-a-visual-state-for-a-focus-indicator"></a>포커스 표시기의 시각적 상태 예  
-사용자가 시각적 포커스 표시기를 사용할 수 있도록 하는 사용자 지정 컨트롤을 앞에서 언급 했습니다. 일반적으로 포커스 표시기는 컨트롤의 일반 경계 사각형 바로 위에 사각형 모양을 그리는 것 만큼 간단 합니다. 시각적 포커스의 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 은 컨트롤 템플릿에서 컨트롤의 나머지 컴퍼지션에 대 한 피어 요소 이지만, 컨트롤은 아직 포커스 되지 않으므로 [**표시 유형**](/uwp/api/windows.ui.xaml.uielement.visibility) 값이 **축소** 된 상태로 처음 설정 됩니다. 그런 다음 컨트롤이 포커스를 가져오면 시각적 상태가 호출 되어 포커스 시각적 개체의 **표시 여부** 를 **표시**합니다. 포커스를 다른 곳으로 이동 하면 다른 시각적 상태가 호출 되 고 **표시 유형이** **축소**됩니다.
+사용자가 시각적 포커스 표시기를 사용할 수 있도록 하는 사용자 지정 컨트롤을 앞에서 언급 했습니다. 일반적으로 포커스 표시기는 컨트롤의 일반 경계 사각형 바로 위에 사각형 모양을 그리는 것 만큼 간단 합니다. 시각적 포커스의 [**사각형**](/uwp/api/Windows.UI.Xaml.Shapes.Rectangle) 은 컨트롤 템플릿에서 컨트롤의 나머지 컴퍼지션에 대 한 피어 요소 이지만, 컨트롤은 아직 포커스 되지 않으므로 [**표시 유형**](/uwp/api/windows.ui.xaml.uielement.visibility) 값이 **축소** 된 상태로 처음 설정 됩니다. 그런 다음 컨트롤이 포커스를 가져오면 시각적 상태가 호출 되어 포커스 시각적 개체의 **표시 여부** 를 **표시** 합니다. 포커스를 다른 곳으로 이동 하면 다른 시각적 상태가 호출 되 고 **표시 유형이** **축소** 됩니다.
 
 포커스를 받을 수 있는 경우 모든 기본 XAML 컨트롤이 포커스를 받을 때 적절 한 시각적 포커스 표시기를 표시 합니다. 사용자가 선택한 테마에 따라 다르게 표시 될 수도 있습니다 (특히 사용자가 고대비 모드를 사용 하는 경우). UI에서 XAML 컨트롤을 사용 하 고 컨트롤 템플릿을 바꾸지 않는 경우 제대로 동작 하 고 표시 하는 컨트롤에 대 한 시각적 포커스 표시기를 얻기 위해 추가로 작업을 수행할 필요가 없습니다. 그러나 컨트롤을 retemplate 하려는 경우 또는 XAML 컨트롤이 시각적 포커스 표시기를 제공 하는 방법에 대 한 자세한 내용은이 섹션의 나머지 부분에서는 XAML 및 컨트롤 논리에서이 작업을 수행 하는 방법을 설명 합니다.
 
@@ -232,7 +232,7 @@ XAML
 </ControlTemplate>
 ```
 
-명명된 상태 중 하나만 [**Visibility**](/uwp/api/windows.ui.xaml.uielement.visibility)를 직접 조정하고 다른 상태는 비어 있는 것처럼 표시됩니다. 시각적 상태의 작동 방식은 컨트롤이 동일한 [**Visualstategroup**](/uwp/api/Windows.UI.Xaml.VisualStateGroup)의 다른 상태를 사용 하는 즉시 이전 상태에서 적용 된 애니메이션이 즉시 취소 된다는 것입니다. 컴퍼지션의 기본 **표시 유형이** **축소**되기 때문에 사각형이 표시 되지 않습니다. 제어 논리는 [**GotFocus**](/uwp/api/windows.ui.xaml.uielement.gotfocus) 와 같은 포커스 이벤트를 수신 하 고 [**GoToState**](/uwp/api/windows.ui.xaml.visualstatemanager.gotostate)를 사용 하 여 상태를 변경 하 여이를 제어 합니다. 기본 컨트롤을 사용 하거나 이미 해당 동작을 가진 컨트롤에 따라 사용자 지정 하는 경우이는 이미 처리 된 것입니다.
+명명된 상태 중 하나만 [**Visibility**](/uwp/api/windows.ui.xaml.uielement.visibility)를 직접 조정하고 다른 상태는 비어 있는 것처럼 표시됩니다. 시각적 상태의 작동 방식은 컨트롤이 동일한 [**Visualstategroup**](/uwp/api/Windows.UI.Xaml.VisualStateGroup)의 다른 상태를 사용 하는 즉시 이전 상태에서 적용 된 애니메이션이 즉시 취소 된다는 것입니다. 컴퍼지션의 기본 **표시 유형이** **축소** 되기 때문에 사각형이 표시 되지 않습니다. 제어 논리는 [**GotFocus**](/uwp/api/windows.ui.xaml.uielement.gotfocus) 와 같은 포커스 이벤트를 수신 하 고 [**GoToState**](/uwp/api/windows.ui.xaml.visualstatemanager.gotostate)를 사용 하 여 상태를 변경 하 여이를 제어 합니다. 기본 컨트롤을 사용 하거나 이미 해당 동작을 가진 컨트롤에 따라 사용자 지정 하는 경우이는 이미 처리 된 것입니다.
 
 <span id="Keyboard_accessibility_and_Windows_Phone"/>
 <span id="keyboard_accessibility_and_windows_phone"/>

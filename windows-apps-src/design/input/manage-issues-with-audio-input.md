@@ -1,6 +1,6 @@
 ---
-Description: 오디오 입력 품질로 인 한 음성 인식 정확도 문제를 관리 하는 방법에 대해 알아봅니다.
-title: 오디오 입력 문제 관리
+description: 오디오 입력 품질로 인 한 음성 인식 정확도 문제를 관리 하는 방법에 대해 알아봅니다.
+title: 오디오 입력 관련 문제 관리
 ms.assetid: 3E36C683-C96A-4FEE-AD52-FDB87E0CC299
 label: Manage audio input issues
 template: detail.hbs
@@ -8,25 +8,25 @@ keywords: 음성, 음성, 음성 인식, 자연어, 받아쓰기, 입력, 사용
 ms.date: 02/08/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: bbbe9a887afa4637aaf8e6576e14979a92aa6b8f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a5d74346aec4784cea9be2dfcef3ec2efccd8b56
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173397"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034696"
 ---
-# <a name="manage-issues-with-audio-input"></a>오디오 입력 문제 관리
+# <a name="manage-issues-with-audio-input"></a>오디오 입력 관련 문제 관리
 
 
 오디오 입력 품질로 인 한 음성 인식 정확도 문제를 관리 하는 방법에 대해 알아봅니다.
 
-> **중요 한 api**: [**SpeechRecognizer**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer), [**RecognitionQualityDegrading**](/uwp/api/windows.media.speechrecognition.speechrecognizer.recognitionqualitydegrading), [**SpeechRecognitionAudioProblem**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionAudioProblem)
+> **중요 한 api** : [**SpeechRecognizer**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognizer), [**RecognitionQualityDegrading**](/uwp/api/windows.media.speechrecognition.speechrecognizer.recognitionqualitydegrading), [**SpeechRecognitionAudioProblem**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionAudioProblem)
 
 
 ## <a name="assess-audio-input-quality"></a>오디오 입력 품질 평가
 
 
-음성 인식이 활성화 된 경우 음성 인식기의 [**RecognitionQualityDegrading**](/uwp/api/windows.media.speechrecognition.speechrecognizer.recognitionqualitydegrading) 이벤트를 사용 하 여 하나 이상의 오디오 문제로 음성 입력을 방해할 수 있는지 여부를 확인 합니다. 이벤트 인수 ([**SpeechRecognitionQualityDegradingEventArgs**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs))는 오디오 입력에서 검색 된 문제를 설명 하는 [**문제**](/uwp/api/windows.media.speechrecognition.speechrecognitionqualitydegradingeventargs.problem) 속성을 제공 합니다.
+음성 인식이 활성화 된 경우 음성 인식기의 [**RecognitionQualityDegrading**](/uwp/api/windows.media.speechrecognition.speechrecognizer.recognitionqualitydegrading) 이벤트를 사용 하 여 하나 이상의 오디오 문제로 음성 입력을 방해할 수 있는지 여부를 확인 합니다. 이벤트 인수 ( [**SpeechRecognitionQualityDegradingEventArgs**](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionQualityDegradingEventArgs))는 오디오 입력에서 검색 된 문제를 설명 하는 [**문제**](/uwp/api/windows.media.speechrecognition.speechrecognitionqualitydegradingeventargs.problem) 속성을 제공 합니다.
 
 인식은 너무 많은 배경 소음, 음소거 된 마이크 및 스피커의 볼륨 또는 속도의 영향을 받을 수 있습니다.
 
@@ -109,6 +109,6 @@ private async void speechRecognizer_RecognitionQualityDegrading(
 
 **샘플**
 * [음성 인식 및 음성 합성 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)
- 
+ 
 
- 
+ 

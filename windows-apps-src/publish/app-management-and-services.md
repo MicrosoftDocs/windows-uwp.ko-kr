@@ -1,23 +1,23 @@
 ---
-Description: 파트너 센터에서 각 앱과 관련 된 세부 정보를 관리 하 고 보고 A/B 테스트 및 맵과 같은 서비스를 구성 합니다.
+description: 파트너 센터에서 각 앱과 관련 된 세부 정보를 관리 하 고 보고 A/B 테스트 및 맵과 같은 서비스를 구성 합니다.
 title: 앱 관리 및 서비스
 ms.assetid: 99DA2BC1-9B5D-4746-8BC0-EC723D516EEF
 ms.date: 03/21/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e34a4d87ae3df23f8641a09d1558b8c8606667fa
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e973e9b3a8f3c9ba63a091f4e542e36a84c26128
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164287"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032756"
 ---
 # <a name="app-management-and-services"></a>앱 관리 및 서비스
 
 [파트너 센터](https://partner.microsoft.com/dashboard)에서 각 앱과 관련 된 세부 정보를 관리 하 고 볼 수 있으며 알림, A/B 테스트, 지도 등의 서비스를 구성할 수 있습니다.
 
-파트너 센터에서 앱을 사용 하는 경우 **서비스** 및 **앱 관리**의 왼쪽 탐색 메뉴에 섹션이 표시 됩니다. 이러한 섹션을 확장 하 여 아래에 설명 된 기능에 액세스할 수 있습니다.
+파트너 센터에서 앱을 사용 하는 경우 **서비스** 및 **앱 관리** 의 왼쪽 탐색 메뉴에 섹션이 표시 됩니다. 이러한 섹션을 확장 하 여 아래에 설명 된 기능에 액세스할 수 있습니다.
 
 ## <a name="services"></a>서비스
 
@@ -35,11 +35,11 @@ ms.locfileid: "89164287"
 
 자세한 내용은 [A/B 테스트로 앱 실험 실행](../monetize/run-app-experiments-with-a-b-testing.md)을 참조하세요.
 
-## <a name="maps"></a>Maps
+## <a name="maps"></a>지도
 
 Windows 10 또는 Windows 8.x을 대상으로 하는 앱에서 map services를 사용 하려면 [Bing 지도 개발자 센터](https://www.bingmapsportal.com/)를 방문 하세요. Bing Maps 개발자 센터에서 지도 인증 키를 요청 하 고 앱에 추가 하는 방법에 대 한 자세한 내용은 [맵 인증 키 요청](../maps-and-location/authentication-key.md) 을 참조 하세요. 
 
-이전에 게시 된 앱에 대해서만 **맵** 페이지를 사용 하 Windows Phone 8.1 이전 버전을 사용 합니다. 이러한 앱에서 map services를 사용 하려면 응용 프로그램 코드에 포함할 map service 응용 프로그램 ID와 토큰을 요청 해야 합니다. **토큰 가져오기**를 클릭 하면 앱에 대 한 맵 서비스 응용 프로그램 ID (**ApplicationID**) 및 맵 서비스 인증 토큰 (**authenticationtoken**)이 생성 됩니다. 앱을 패키지 하 고 제출 하기 전에 이러한 값을 코드에 추가 해야 합니다. 자세한 내용은 [페이지에 지도 컨트롤을 추가 하는 방법 (Windows Phone 8.1)](/previous-versions/windows/apps/jj207033(v=vs.105))을 참조 하세요.
+이전에 게시 된 앱에 대해서만 **맵** 페이지를 사용 하 Windows Phone 8.1 이전 버전을 사용 합니다. 이러한 앱에서 map services를 사용 하려면 응용 프로그램 코드에 포함할 map service 응용 프로그램 ID와 토큰을 요청 해야 합니다. **토큰 가져오기** 를 클릭 하면 앱에 대 한 맵 서비스 응용 프로그램 ID ( **ApplicationID** ) 및 맵 서비스 인증 토큰 ( **authenticationtoken** )이 생성 됩니다. 앱을 패키지 하 고 제출 하기 전에 이러한 값을 코드에 추가 해야 합니다. 자세한 내용은 [페이지에 지도 컨트롤을 추가 하는 방법 (Windows Phone 8.1)](/previous-versions/windows/apps/jj207033(v=vs.105))을 참조 하세요.
 
 ## <a name="product-collections-and-purchases"></a>제품 컬렉션 및 구매
 
@@ -94,6 +94,6 @@ OEM 권한이 있는 개발자는 **현재 패키지** 페이지에서 [사전 �
 -   **Microsoft Azure Mobile Apps** 를 사용 하 여 푸시 알림을 보내고, 앱 사용자를 인증 하 고 관리 하며, 클라우드에 앱 데이터를 저장할 수 있습니다. 자세한 내용은 [Mobile Apps 설명서](/azure/app-service-mobile/)를 참조 하세요.
 
 -   **MPNS (Microsoft 푸시 알림 서비스)** 는 Windows Phone에 대해 이전에 게시 된 xap 패키지와 함께 사용할 수 있습니다. 여기에서 구성을 수행 하지 않고 제한 된 수의 인증 되지 않은 알림을 보낼 수 있습니다. 단, 제한 제한을 방지 하려면 인증 된 알림을 사용 하는 것이 좋습니다. MPNS를 사용 하는 경우 **WNS/MPNS** 페이지에 제공 된 필드에 인증서를 업로드 해야 합니다. 자세한 내용은 [Windows Phone 8의 푸시 알림을 보내도록 인증 된 웹 서비스 설정](/previous-versions/windows/apps/ff941099(v=vs.105))을 참조 하십시오.
- 
+ 
 
- 
+ 

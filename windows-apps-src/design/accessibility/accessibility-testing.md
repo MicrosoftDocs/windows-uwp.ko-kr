@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱에 액세스할 수 있도록 절차를 테스트 합니다.
+description: Windows 앱에 액세스할 수 있도록 절차를 테스트 합니다.
 ms.assetid: 272D9C9E-B179-4F5A-8493-926D007A0225
 title: 접근성 테스트
 label: Accessibility testing
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 1da900732257babc0d53453fa4b9b2c9196e7e6d
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 1cb4807f551f79d488cc56d71513745d22c43d27
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216416"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032676"
 ---
 # <a name="accessibility-testing"></a>접근성 테스트  
 
@@ -27,13 +27,13 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK tools 폴더 (개
   
 > [!VIDEO https://www.youtube.com/embed/ce0hKQfY9B8]
   
-### <a name="accscope"></a>**계정 범위**  
+### <a name="accscope"></a>**AccScope**  
 
 개발자와 테스터는 [**Accscope**](/windows/desktop/WinAuto/accscope) 도구를 사용 하 여 응용 프로그램 개발 및 디자인 중에 응용 프로그램의 개발 및 디자인 중에 응용 프로그램의 액세스 가능성을 평가할 수 있습니다. 앱을 사용 하 여 내레이터 내게 필요한 옵션 시나리오를 테스트 하는 데 특히 적합 합니다.
 
 ### <a name="inspect"></a>**검사**  
 
-[**검사**](/windows/desktop/WinAuto/inspect-objects) 를 통해 UI 요소를 선택 하 고 해당 액세스 가능성 데이터를 볼 수 있습니다. UI 자동화 트리에서 Microsoft UI Automation 속성 및 컨트롤 패턴을 보고 자동화 요소의 탐색 구조를 테스트할 수 있습니다. Ui를 개발할 때 **조사** 를 사용 하 여 ui 자동화에서 접근성 특성이 노출 되는 방식을 확인 합니다. 경우에 따라 기본 XAML 컨트롤에 대해 이미 구현 된 UI 자동화 지원에서 특성을 가져올 수 있습니다. 다른 경우에 특성은 XAML 태그에 설정 된 특정 값에서 비롯 되 고 [**Automationproperties**](/uwp/api/windows.ui.xaml.automation.automationproperties) 는 연결 된 속성입니다.
+[**검사**](/windows/desktop/WinAuto/inspect-objects) 를 통해 UI 요소를 선택 하 고 해당 액세스 가능성 데이터를 볼 수 있습니다. 사용자는 Microsoft UI 자동화 속성 및 컨트롤 패턴을 보고 UI 자동화 트리에서 자동화 요소의 탐색 구조를 테스트할 수 있습니다. Ui를 개발할 때 **조사** 를 사용 하 여 ui 자동화에서 접근성 특성이 노출 되는 방식을 확인 합니다. 경우에 따라 기본 XAML 컨트롤에 대해 이미 구현 된 UI 자동화 지원에서 특성을 가져올 수 있습니다. 다른 경우에 특성은 XAML 태그에 설정 된 특정 값에서 비롯 되 고 [**Automationproperties**](/uwp/api/windows.ui.xaml.automation.automationproperties) 는 연결 된 속성입니다.
 
 다음 이미지는 메모장의 **편집** 메뉴 요소에 대 한 UI 자동화 속성을 쿼리 하는 [**검사**](/windows/desktop/WinAuto/inspect-objects) 도구를 보여 줍니다.
 
@@ -45,7 +45,7 @@ Microsoft Visual Studio 명령 프롬프트 또는 Windows SDK tools 폴더 (개
 
 ### <a name="ui-automation-verify"></a>UI 자동화 확인
 
-Ui **Automation verify (UIA verify)** 는 ui 자동화 구현에 대 한 자동화 된 테스트 및 확인 프레임 워크입니다. **UIA Verify** 는 테스트 코드에 통합 하 고 UI 자동화 시나리오에 대 한 정기적이 고 자동화 된 테스트 또는 별색 검사를 수행할 수 있습니다. **UIA Verify**를 실행 하려면 UIAVerify 하위 디렉터리에서 VisualUIAVerifyNative.exe를 실행 합니다.
+Ui **Automation verify (UIA verify)** 는 ui 자동화 구현에 대 한 자동화 된 테스트 및 확인 프레임 워크입니다. **UIA Verify** 는 테스트 코드에 통합 하 고 UI 자동화 시나리오에 대 한 정기적이 고 자동화 된 테스트 또는 별색 검사를 수행할 수 있습니다. **UIA Verify** 를 실행 하려면 UIAVerify 하위 디렉터리에서 VisualUIAVerifyNative.exe를 실행 합니다.
 
 ### <a name="accessible-event-watcher"></a>액세스 가능한 이벤트 감시자
 
@@ -81,16 +81,16 @@ Ui **Automation verify (UIA verify)** 는 ui 자동화 구현에 대 한 자동�
 
 **마우스 및 키보드를 사용 하 여 내레이터를 사용 하 여 앱을 테스트 하려면 다음 단계를 따르세요.**
 
-1. _Windows 로고 키 + Ctrl + Enter_를 눌러 내레이터를 시작 합니다. Windows 10 버전 1607 이전 버전에서 _windows 로고 키 + Enter_ 를 사용 하 여 내레이터를 시작 합니다.
-2. _Tab_ 키, 화살표 키, _Caps lock + 화살표 키_를 사용 하 여 키보드로 앱을 탐색 합니다.
+1. _Windows 로고 키 + Ctrl + Enter_ 를 눌러 내레이터를 시작 합니다. Windows 10 버전 1607 이전 버전에서 _windows 로고 키 + Enter_ 를 사용 하 여 내레이터를 시작 합니다.
+2. _Tab_ 키, 화살표 키, _Caps lock + 화살표 키_ 를 사용 하 여 키보드로 앱을 탐색 합니다.
 3. 앱을 탐색할 때 내레이터가 UI의 요소를 읽고 다음을 확인 하는 것으로 수신 합니다.
     - 각 컨트롤에 대해 내레이터가 표시 되는 모든 콘텐츠를 읽도록 합니다. 또한 내레이터가 각 컨트롤의 이름, 적용 가능한 상태 (선택 됨, 선택 됨 등), 컨트롤 형식 (단추, 확인란, 목록 항목 등)을 읽도록 합니다.
-    - 요소가 interactive 인 경우 _Caps lock + Enter_를 눌러 해당 작업을 호출 하는 데 내레이터를 사용할 수 있는지 확인 합니다.
+    - 요소가 interactive 인 경우 _Caps lock + Enter_ 를 눌러 해당 작업을 호출 하는 데 내레이터를 사용할 수 있는지 확인 합니다.
     - 각 테이블에 대해 내레이터가 테이블 이름, 테이블 설명 (있는 경우) 및 행 머리글과 열 머리글을 올바르게 읽도록 합니다.
 4. _Caps lock + Shift + enter_ 를 눌러 앱을 검색 하 고 모든 컨트롤이 검색 목록에 표시 되 고 컨트롤 이름이 지역화 되 고 읽을 수 있는지 확인 합니다.
-5. 모니터를 끄고 키보드와 내레이터만 사용 하 여 기본 앱 시나리오를 수행 해 보세요. 내레이터 명령 및 바로 가기의 전체 목록을 가져오려면 _Caps lock + F1_키를 누릅니다.
+5. 모니터를 끄고 키보드와 내레이터만 사용 하 여 기본 앱 시나리오를 수행 해 보세요. 내레이터 명령 및 바로 가기의 전체 목록을 가져오려면 _Caps lock + F1_ 키를 누릅니다.
 
-Windows 10 버전 1607부터 내레이터에서 새로운 개발자 모드를 도입 했습니다. _컨트롤 + Caps lock + F12_키를 눌러 내레이터가 이미 실행 중인 경우 개발자 모드를 설정 합니다. 개발자 모드를 사용 하는 경우 화면이 마스킹 되 고 액세스 가능한 개체와 내레이터에 프로그래밍 방식으로 노출 되는 관련 텍스트만 강조 표시 됩니다. 이를 통해 내레이터에 노출 되는 정보를 시각적으로 볼 수 있습니다.
+Windows 10 버전 1607부터 내레이터에서 새로운 개발자 모드를 도입 했습니다. _컨트롤 + Caps lock + F12_ 키를 눌러 내레이터가 이미 실행 중인 경우 개발자 모드를 설정 합니다. 개발자 모드를 사용 하는 경우 화면이 마스킹 되 고 액세스 가능한 개체와 내레이터에 프로그래밍 방식으로 노출 되는 관련 텍스트만 강조 표시 됩니다. 이를 통해 내레이터에 노출 되는 정보를 시각적으로 볼 수 있습니다.
 
 **다음 단계를 사용 하 여 내레이터의 터치 모드를 사용 하 여 앱을 테스트 합니다.**
 
@@ -98,10 +98,10 @@ Windows 10 버전 1607부터 내레이터에서 새로운 개발자 모드를 �
 > 내레이터가 4 + 연락처를 지 원하는 장치에서 자동으로 터치 모드로 전환 됩니다. 내레이터는 기본 화면에서 다중 모니터 시나리오 또는 멀티 터치 디지타이저를 지원 하지 않습니다.
 
 1. UI에 대해 알아보고 레이아웃을 탐색 하세요.
-    - **단일 손가락 살짝 밀기 제스처를 사용 하 여 UI를 탐색 합니다.** 왼쪽 또는 오른쪽 swipes를 사용 하 여 항목 사이를 이동 하 고 swipes를 위아래로 이동 하 여 탐색 중인 항목의 범주를 변경 합니다. 범주에는 모든 항목, 링크, 테이블, 헤더 등이 포함 됩니다. 단일 손가락 살짝 밀기 제스처를 사용 하 여 탐색 하는 것은 _Caps lock + 화살표로_이동 하는 것과 비슷합니다.
+    - **단일 손가락 살짝 밀기 제스처를 사용 하 여 UI를 탐색 합니다.** 왼쪽 또는 오른쪽 swipes를 사용 하 여 항목 사이를 이동 하 고 swipes를 위아래로 이동 하 여 탐색 중인 항목의 범주를 변경 합니다. 범주에는 모든 항목, 링크, 테이블, 헤더 등이 포함 됩니다. 단일 손가락 살짝 밀기 제스처를 사용 하 여 탐색 하는 것은 _Caps lock + 화살표로_ 이동 하는 것과 비슷합니다.
     - **탭 제스처를 사용 하 여 포커스를 받을 수 있는 요소를 탐색할 수 있습니다.** 오른쪽 또는 왼쪽으로 3 손가락으로 살짝 밀기는 키보드의 _Tab_ _키와 Shift + tab_ 을 사용 하 여 탐색 하는 것과 같습니다.
     - **단일 손가락으로 UI를 공간적으로 조사 합니다.** 한 손가락을 위아래로 끌어 놓거나 왼쪽 및 오른쪽으로 끌어 내레이터가 손가락 아래 항목을 읽도록 합니다. 마우스는 단일 손가락을 끄는 것과 동일한 적중 테스트 논리를 사용 하기 때문에 다른 방법으로 사용할 수 있습니다.
-    - **3 개의 손가락으로 살짝 밀어 전체 창 및 모든 해당 콘텐츠를 읽습니다**. 이는 _Caps lock + W_를 사용 하는 것과 같습니다.
+    - **3 개의 손가락으로 살짝 밀어 전체 창 및 모든 해당 콘텐츠를 읽습니다** . 이는 _Caps lock + W_ 를 사용 하는 것과 같습니다.
 
     연결할 수 없는 중요 한 UI가 있는 경우 접근성 문제가 있을 수 있습니다.
 

@@ -1,17 +1,17 @@
 ---
-Description: 평가판 기간 동안 고객이 앱을 무료로 사용할 수 있도록 하는 경우 평가판 기간 중 일부 기능을 제외 하거나 제한 하 여 고객이 앱의 전체 버전으로 업그레이드 하도록 유도할 수 있습니다.
+description: 평가판 기간 동안 고객이 앱을 무료로 사용할 수 있도록 하는 경우 평가판 기간 중 일부 기능을 제외 하거나 제한 하 여 고객이 앱의 전체 버전으로 업그레이드 하도록 유도할 수 있습니다.
 title: 평가판의 기능 제외 또는 제한
 ms.assetid: 1B62318F-9EF5-432A-8593-F3E095CA7056
 keywords: windows 10, uwp, 평가판, 앱 내 구매, IAP, Windows. ApplicationModel 스토어
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a0ecc6a6d219262513508114cee226d72d91e386
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 701769386f9637574cfb7f38f7458a1434796730
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89362746"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033976"
 ---
 # <a name="exclude-or-limit-features-in-a-trial-version"></a>평가판의 기능 제외 또는 제한
 
@@ -61,9 +61,9 @@ ms.locfileid: "89362746"
 
 ## <a name="step-2-initialize-the-license-info"></a>2 단계: 라이선스 정보 초기화
 
-앱을 초기화 하는 경우이 예제와 같이 앱에 대 한 [LicenseInformation](/uwp/api/Windows.ApplicationModel.Store.LicenseInformation) 개체를 가져옵니다. **LicenseInformation** 가 **licenseInformation**형식의 전역 변수 또는 필드인 것으로 가정 합니다.
+앱을 초기화 하는 경우이 예제와 같이 앱에 대 한 [LicenseInformation](/uwp/api/Windows.ApplicationModel.Store.LicenseInformation) 개체를 가져옵니다. **LicenseInformation** 가 **licenseInformation** 형식의 전역 변수 또는 필드인 것으로 가정 합니다.
 
-지금은 [Currentapp](/uwp/api/Windows.ApplicationModel.Store.CurrentApp)대신 [currentappsimulator](/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator) 를 사용 하 여 시뮬레이트된 라이선스 정보를 얻게 됩니다. 앱의 릴리스 버전을 **스토어**에 제출 하기 전에 코드의 모든 **currentappsimulator** 참조를 **currentapp**으로 바꾸어야 합니다.
+지금은 [Currentapp](/uwp/api/Windows.ApplicationModel.Store.CurrentApp)대신 [currentappsimulator](/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator) 를 사용 하 여 시뮬레이트된 라이선스 정보를 얻게 됩니다. 앱의 릴리스 버전을 **스토어** 에 제출 하기 전에 코드의 모든 **currentappsimulator** 참조를 **currentapp** 으로 바꾸어야 합니다.
 
 > [!div class="tabbedCodeSnippets"]
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/TrialVersion.cs" id="InitializeLicenseTest":::
@@ -99,7 +99,7 @@ ms.locfileid: "89362746"
 
 ## <a name="step-6-replace-the-simulated-license-api-methods-with-the-actual-api"></a>6 단계: 시뮬레이트된 라이선스 API 메서드를 실제 API로 바꾸기
 
-시뮬레이트된 라이선스 서버를 사용 하 여 앱을 테스트 한 후 인증을 위해 스토어에 앱을 제출 하기 전에 다음 코드 샘플과 같이 **Currentappsimulator** 를 **currentapp**으로 바꿉니다.
+시뮬레이트된 라이선스 서버를 사용 하 여 앱을 테스트 한 후 인증을 위해 스토어에 앱을 제출 하기 전에 다음 코드 샘플과 같이 **Currentappsimulator** 를 **currentapp** 으로 바꿉니다.
 
 > [!IMPORTANT]
 > 앱을 스토어에 제출할 때 앱이 **currentapp** 개체를 사용 해야 하며, 그렇지 않으면 인증에 실패 합니다.
@@ -119,6 +119,6 @@ ms.locfileid: "89362746"
 * [앱 가격 책정 및 가용성 설정](../publish/set-app-pricing-and-availability.md)
 * [CurrentApp](/uwp/api/Windows.ApplicationModel.Store.CurrentApp)
 * [CurrentAppSimulator](/uwp/api/Windows.ApplicationModel.Store.CurrentAppSimulator)
- 
+ 
 
- 
+ 

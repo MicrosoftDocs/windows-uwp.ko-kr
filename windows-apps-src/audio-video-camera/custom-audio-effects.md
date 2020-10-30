@@ -1,17 +1,17 @@
 ---
-Description: 이 문서에서는 Ibasic오디오 효과 인터페이스를 구현 하는 Windows 런타임 구성 요소를 만들어 오디오 스트림에 대 한 사용자 지정 효과를 만들 수 있도록 하는 방법을 설명 합니다.
+description: 이 문서에서는 Ibasic오디오 효과 인터페이스를 구현 하는 Windows 런타임 구성 요소를 만들어 오디오 스트림에 대 한 사용자 지정 효과를 만들 수 있도록 하는 방법을 설명 합니다.
 title: 사용자 지정 오디오 효과
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 360faf3f-7e73-4db4-8324-3391f801d827
 ms.localizationpriority: medium
-ms.openlocfilehash: e52aa4ebde6f988daad9c1712845e07ee553d7a2
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: b5b9613dc9d480a4193dbff0dbb236929d9ed54a
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363966"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033176"
 ---
 # <a name="custom-audio-effects"></a>사용자 지정 오디오 효과
 
@@ -24,12 +24,12 @@ ms.locfileid: "89363966"
 
 **오디오 효과에 대 한 Windows 런타임 구성 요소 추가**
 
-1.  Microsoft Visual Studio에서 솔루션을 연 상태에서 **파일** 메뉴로 이동 하 여 **추가- &gt; 새 프로젝트**를 선택 합니다.
+1.  Microsoft Visual Studio에서 솔루션을 연 상태에서 **파일** 메뉴로 이동 하 여 **추가- &gt; 새 프로젝트** 를 선택 합니다.
 2.  **Windows 런타임 구성 요소 (유니버설 Windows)** 프로젝트 형식을 선택 합니다.
-3.  이 예에서는 프로젝트 이름을 *AudioEffectComponent*로 합니다. 이 이름은 나중에 코드에서 참조 됩니다.
-4.  **확인**을 클릭합니다.
-5.  프로젝트 템플릿은 Class1.cs 이라는 클래스를 만듭니다. **솔루션 탐색기**에서 Class1.cs의 아이콘을 마우스 오른쪽 단추로 클릭 하 고 **이름 바꾸기**를 선택 합니다.
-6.  파일 이름을 *ExampleAudioEffect.cs*로 바꿉니다. Visual Studio에는 새 이름에 대 한 모든 참조를 업데이트할 것인지 묻는 메시지가 표시 됩니다. **예**를 클릭합니다.
+3.  이 예에서는 프로젝트 이름을 *AudioEffectComponent* 로 합니다. 이 이름은 나중에 코드에서 참조 됩니다.
+4.  **확인** 을 클릭합니다.
+5.  프로젝트 템플릿은 Class1.cs 이라는 클래스를 만듭니다. **솔루션 탐색기** 에서 Class1.cs의 아이콘을 마우스 오른쪽 단추로 클릭 하 고 **이름 바꾸기** 를 선택 합니다.
+6.  파일 이름을 *ExampleAudioEffect.cs* 로 바꿉니다. Visual Studio에는 새 이름에 대 한 모든 참조를 업데이트할 것인지 묻는 메시지가 표시 됩니다. **예** 를 클릭합니다.
 7.  **ExampleAudioEffect.cs** 를 열고 클래스 정의를 업데이트 하 여 [**Ibasic오디오 효과**](/uwp/api/Windows.Media.Effects.IBasicAudioEffect) 인터페이스를 구현 합니다.
 
 
@@ -63,7 +63,7 @@ ms.locfileid: "89363966"
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/AudioEffectComponent/ExampleAudioEffect.cs" id="SnippetSetProperties":::
 
-이 간단한 예제에서는 **mix** 속성의 값에 따라 현재 오디오 샘플을 지연 버퍼의 값과 혼합 합니다. 속성이 선언 되 고 TryGetValue가 호출 앱에서 설정한 값을 가져오는 데 사용 됩니다. 값이 설정 되지 않은 경우 기본값. 5가 사용 됩니다. 이 속성은 읽기 전용입니다. **SetProperties**를 사용 하 여 속성 값을 설정 해야 합니다.
+이 간단한 예제에서는 **mix** 속성의 값에 따라 현재 오디오 샘플을 지연 버퍼의 값과 혼합 합니다. 속성이 선언 되 고 TryGetValue가 호출 앱에서 설정한 값을 가져오는 데 사용 됩니다. 값이 설정 되지 않은 경우 기본값. 5가 사용 됩니다. 이 속성은 읽기 전용입니다. **SetProperties** 를 사용 하 여 속성 값을 설정 해야 합니다.
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/audio-video-camera/AudioGraph/cs/AudioEffectComponent/ExampleAudioEffect.cs" id="SnippetMixProperty":::
 
@@ -77,13 +77,13 @@ ms.locfileid: "89363966"
 
 > [!NOTE]
 > 이 기술은 관리 되지 않는 네이티브 이미지 버퍼에 액세스 하므로 안전 하지 않은 코드를 허용 하도록 프로젝트를 구성 해야 합니다.
-> 1.  솔루션 탐색기에서 AudioEffectComponent 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택 합니다.
+> 1.  솔루션 탐색기에서 AudioEffectComponent 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 합니다.
 > 2.  **빌드** 탭을 선택합니다.
 > 3.  **안전 하지 않은 코드 허용** 확인란을 선택 합니다.
 
- 
+ 
 
-이제 **Processframe** 메서드 구현을 효과에 추가할 수 있습니다. 첫째,이 메서드는 입력 및 출력 오디오 프레임에서 [**AudioBuffer**](/uwp/api/Windows.Media.AudioBuffer) 개체를 가져옵니다. 출력 프레임은 쓰기용으로 열리고 입력은 읽기를 위해 열립니다. 그런 다음 [**CreateReference**](/uwp/api/windows.graphics.imaging.bitmapbuffer.createreference)를 호출 하 여 각 버퍼에 대해 [**IMemoryBufferReference**](/uwp/api/Windows.Foundation.IMemoryBufferReference) 를 가져옵니다. 그런 다음 **IMemoryBufferReference** 개체를 위에서 정의한 COM interop 인터페이스로 캐스팅 하 고 **IMemoryByteAccess**다음 **getbuffer**를 호출 하 여 실제 데이터 버퍼를 가져옵니다.
+이제 **Processframe** 메서드 구현을 효과에 추가할 수 있습니다. 첫째,이 메서드는 입력 및 출력 오디오 프레임에서 [**AudioBuffer**](/uwp/api/Windows.Media.AudioBuffer) 개체를 가져옵니다. 출력 프레임은 쓰기용으로 열리고 입력은 읽기를 위해 열립니다. 그런 다음 [**CreateReference**](/uwp/api/windows.graphics.imaging.bitmapbuffer.createreference)를 호출 하 여 각 버퍼에 대해 [**IMemoryBufferReference**](/uwp/api/Windows.Foundation.IMemoryBufferReference) 를 가져옵니다. 그런 다음 **IMemoryBufferReference** 개체를 위에서 정의한 COM interop 인터페이스로 캐스팅 하 고 **IMemoryByteAccess** 다음 **getbuffer** 를 호출 하 여 실제 데이터 버퍼를 가져옵니다.
 
 이제 데이터 버퍼를 얻 었으 면 입력 버퍼에서 읽고 출력 버퍼에 쓸 수 있습니다. Inputbuffer의 각 샘플에 대해 값을 가져오고 1 **믹스** 를 곱하여 효과의 마른 신호 값을 설정 합니다. 다음으로 샘플은 echo 버퍼의 현재 위치에서 검색 되 고 **조합** 으로 곱하여 효과의 고 지 값을 설정 합니다. 출력 샘플은 원음 및 고 값의 합계로 설정 됩니다. 마지막으로 각 입력 샘플은 echo 버퍼에 저장 되 고 현재 샘플 인덱스가 증가 합니다.
 
@@ -121,9 +121,9 @@ TimeIndependent [**timeindependent**](/uwp/api/windows.media.effects.ibasicvideo
 
 앱에서 오디오 효과를 사용 하려면 앱에 효과 프로젝트에 대 한 참조를 추가 해야 합니다.
 
-1.  솔루션 탐색기의 앱 프로젝트에서 **참조** 를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 선택 합니다.
-2.  **프로젝트** 탭을 확장 하 고 **솔루션**을 선택한 다음 효과 프로젝트 이름에 대 한 확인란을 선택 합니다. 이 예에서는 이름이 *AudioEffectComponent*입니다.
-3.  **확인**을 클릭합니다.
+1.  솔루션 탐색기의 앱 프로젝트에서 **참조** 를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가** 를 선택 합니다.
+2.  **프로젝트** 탭을 확장 하 고 **솔루션** 을 선택한 다음 효과 프로젝트 이름에 대 한 확인란을 선택 합니다. 이 예에서는 이름이 *AudioEffectComponent* 입니다.
+3.  **확인** 을 클릭합니다.
 
 오디오 효과 클래스를 다른 네임 스페이스로 선언 하는 경우에는 해당 네임 스페이스를 코드 파일에 포함 해야 합니다.
 
@@ -150,4 +150,4 @@ TimeIndependent [**timeindependent**](/uwp/api/windows.media.effects.ibasicvideo
 * [Win2D 설명서](https://microsoft.github.io/Win2D/html/Introduction.htm)
 * [미디어 재생](media-playback.md)
 
- 
+ 

@@ -1,17 +1,17 @@
 ---
-Description: SendRequestAsync 메서드를 사용 하 여 Windows SDK에서 아직 API를 사용할 수 없는 작업에 대 한 Microsoft Store에 요청을 보낼 수 있습니다.
+description: SendRequestAsync 메서드를 사용 하 여 Windows SDK에서 아직 API를 사용할 수 없는 작업에 대 한 Microsoft Store에 요청을 보낼 수 있습니다.
 title: Microsoft Store에 요청 보내기
 ms.assetid: 070B9CA4-6D70-4116-9B18-FBF246716EF0
 ms.date: 03/22/2018
 ms.topic: article
 keywords: windows 10, uwp, StoreRequestHelper, SendRequestAsync
 ms.localizationpriority: medium
-ms.openlocfilehash: a02be93a56d6066ebd4d9547c8cc9ea1a96c9e09
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 53b525617ac72aec67349645430bc5995253460f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164497"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034666"
 ---
 # <a name="send-requests-to-the-microsoft-store"></a>Microsoft Store에 요청 보내기
 
@@ -34,7 +34,7 @@ public async Task<bool> AddUserToFlightGroup()
 {
     StoreSendRequestResult result = await StoreRequestHelper.SendRequestAsync(
         StoreContext.GetDefault(), 8,
-        "{ \"type\": \"AddToFlightGroup\", \"parameters\": { \"flightGroupId\": \"your group ID\" } }");
+        "{ \"type\": \"AddToFlightGroup\", \"parameters\": { \"flightGroupId\": \"your group ID\" } }");
 
     if (result.ExtendedError == null)
     {
@@ -58,7 +58,7 @@ public async Task<bool> AddUserToFlightGroup()
 
 **Sendrequestasync** 메서드는 항공편 그룹에 사용자 또는 장치를 추가 하는 것과 같은 비행 그룹 시나리오에 대 한 요청 집합을 지원 합니다. 이러한 요청을 제출 하려면 값 7 또는 8을 JSON 형식 문자열을 사용 하 여 *parametersAsJson* *매개 변수에 전달* 합니다 .이 매개 변수는 관련 인수와 함께 전송 하려는 요청을 나타냅니다. 이러한 *Requestkind* 값은 다음과 같은 점에서 다릅니다.
 
-|  요청 종류 값  |  Description  |
+|  요청 종류 값  |  설명  |
 |----------------------|---------------|
 |  7                   |  요청은 현재 장치의 컨텍스트에서 수행 됩니다. 이 값은 Windows 10, 버전 1703 이상 에서만 사용할 수 있습니다.  |
 |  8                   |  요청은 현재 저장소에 로그인 한 사용자의 컨텍스트에서 수행 됩니다. 이 값은 Windows 10, 버전 1607 이상에서 사용할 수 있습니다.  |
@@ -72,23 +72,23 @@ public async Task<bool> AddUserToFlightGroup()
 
 이 요청은 현재 사용자 또는 장치에 대해 순위가 가장 높은 비행 그룹의 원격 변수를 검색 합니다. 이 요청을 보내려면 **Sendrequestasync** 메서드의 *Requestkind* 및 *parametersAsJson* 매개 변수에 다음 정보를 전달 합니다.
 
-|  매개 변수  |  Description  |
+|  매개 변수  |  설명  |
 |----------------------|---------------|
 |  *requestKind*                   |  장치에 대해 가장 높은 순위의 비행 그룹을 반환 하려면 7을 지정 하 고, 현재 사용자 및 장치에 대해 순위가 가장 높은 비행 그룹을 반환 하려면 8을 지정 합니다. 이 값은 현재 사용자와 장치 모두에 대 한 멤버 자격에서 가장 높은 순위의 비행 그룹을 반환 하므로 *Requestkind* 매개 변수에 값 8을 사용 하는 것이 좋습니다.  |
 |  *parametersAsJson*                   |  아래 예제에 표시 된 데이터를 포함 하는 JSON 형식 문자열을 전달 합니다.  |
 
-다음 예제에서는 *parametersAsJson*에 전달할 JSON 데이터의 형식을 보여 줍니다. *GetRemoteVariables*문자열에 *형식* 필드를 할당 해야 합니다. 파트너 센터에서 원격 변수를 정의한 프로젝트의 ID에 *projectId* 필드를 할당 합니다.
+다음 예제에서는 *parametersAsJson* 에 전달할 JSON 데이터의 형식을 보여 줍니다. *GetRemoteVariables* 문자열에 *형식* 필드를 할당 해야 합니다. 파트너 센터에서 원격 변수를 정의한 프로젝트의 ID에 *projectId* 필드를 할당 합니다.
 
 ```json
-{ 
-    "type": "GetRemoteVariables", 
-    "parameters": "{ \"projectId\": \"your project ID\" }" 
+{ 
+    "type": "GetRemoteVariables", 
+    "parameters": "{ \"projectId\": \"your project ID\" }" 
 }
 ```
 
 이 요청을 제출한 후 [StoreSendRequestResult](/uwp/api/windows.services.store.storesendrequestresult) 반환 값의 [Response](/uwp/api/windows.services.store.storesendrequestresult.Response) 속성은 다음 필드를 포함 하는 JSON 형식 문자열을 포함 합니다.
 
-|  필드  |  Description  |
+|  필드  |  설명  |
 |----------------------|---------------|
 |  *익명*                   |  부울 값입니다. 여기에서 **true** 는 사용자 또는 장치 id가 요청에 없음을 나타내고, **false** 는 사용자 또는 장치 id가 요청에 표시 됨을 나타냅니다.  |
 |  *name*                   |  장치나 사용자가 속하는 가장 높은 순위의 비행 그룹의 이름을 포함 하는 문자열입니다.  |
@@ -97,8 +97,8 @@ public async Task<bool> AddUserToFlightGroup()
 다음 예제에서는이 요청에 대 한 반환 값을 보여 줍니다.
 
 ```json
-{ 
-  "anonymous": false, 
+{ 
+  "anonymous": false, 
   "name": "Insider Slow",
   "settings":
   {
@@ -115,17 +115,17 @@ public async Task<bool> AddUserToFlightGroup()
 
 이 요청을 보내려면 **Sendrequestasync** 메서드의 *Requestkind* 및 *parametersAsJson* 매개 변수에 다음 정보를 전달 합니다.
 
-|  매개 변수  |  Description  |
+|  매개 변수  |  설명  |
 |----------------------|---------------|
 |  *requestKind*                   |  6을 지정 하 여 비행기 그룹에 장치를 추가 하거나 8을 지정 하 여 현재 상점에 로그인 한 사용자를 비행 그룹에 추가 합니다.  |
 |  *parametersAsJson*                   |  아래 예제에 표시 된 데이터를 포함 하는 JSON 형식 문자열을 전달 합니다.  |
 
-다음 예제에서는 *parametersAsJson*에 전달할 JSON 데이터의 형식을 보여 줍니다. *AddToFlightGroup*문자열에 *형식* 필드를 할당 해야 합니다. *FlightGroupId* 필드를 장치 또는 사용자를 추가 하려는 비행 그룹의 ID에 할당 합니다.
+다음 예제에서는 *parametersAsJson* 에 전달할 JSON 데이터의 형식을 보여 줍니다. *AddToFlightGroup* 문자열에 *형식* 필드를 할당 해야 합니다. *FlightGroupId* 필드를 장치 또는 사용자를 추가 하려는 비행 그룹의 ID에 할당 합니다.
 
 ```json
-{ 
-    "type": "AddToFlightGroup", 
-    "parameters": "{ \"flightGroupId\": \"your group ID\" }" 
+{ 
+    "type": "AddToFlightGroup", 
+    "parameters": "{ \"flightGroupId\": \"your group ID\" }" 
 }
 ```
 
@@ -138,17 +138,17 @@ public async Task<bool> AddUserToFlightGroup()
 
 이 요청을 보내려면 **Sendrequestasync** 메서드의 *Requestkind* 및 *parametersAsJson* 매개 변수에 다음 정보를 전달 합니다.
 
-|  매개 변수  |  Description  |
+|  매개 변수  |  설명  |
 |----------------------|---------------|
 |  *requestKind*                   |  비행 그룹에서 장치를 제거 하려면 7을 지정 하 고, 현재 비행 그룹에서 스토어에 로그인 한 사용자를 제거 하려면 8을 지정 합니다.  |
 |  *parametersAsJson*                   |  아래 예제에 표시 된 데이터를 포함 하는 JSON 형식 문자열을 전달 합니다.  |
 
-다음 예제에서는 *parametersAsJson*에 전달할 JSON 데이터의 형식을 보여 줍니다. *RemoveFromFlightGroup*문자열에 *형식* 필드를 할당 해야 합니다. *FlightGroupId* 필드를 장치 또는 사용자를 제거 하려는 비행 그룹의 ID에 할당 합니다.
+다음 예제에서는 *parametersAsJson* 에 전달할 JSON 데이터의 형식을 보여 줍니다. *RemoveFromFlightGroup* 문자열에 *형식* 필드를 할당 해야 합니다. *FlightGroupId* 필드를 장치 또는 사용자를 제거 하려는 비행 그룹의 ID에 할당 합니다.
 
 ```json
-{ 
-    "type": "RemoveFromFlightGroup", 
-    "parameters": "{ \"flightGroupId\": \"your group ID\" }" 
+{ 
+    "type": "RemoveFromFlightGroup", 
+    "parameters": "{ \"flightGroupId\": \"your group ID\" }" 
 }
 ```
 

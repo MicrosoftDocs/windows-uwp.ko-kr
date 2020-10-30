@@ -1,5 +1,5 @@
 ---
-Description: 키보드 및 클래스 이벤트 처리기를 사용 하 여 앱의 하드웨어 또는 소프트웨어 키보드에서 키 입력 작업에 응답 합니다.
+description: 키보드 및 클래스 이벤트 처리기를 사용 하 여 앱의 하드웨어 또는 소프트웨어 키보드에서 키 입력 작업에 응답 합니다.
 title: 키보드 이벤트
 ms.assetid: ac500772-d6ed-4a3a-825b-210a9c3c8f59
 label: Keyboard events
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 151abd02b34263cdd92b917127f306c25ebc5e0d
-ms.sourcegitcommit: deb2867924ce16efcabfa011892157b7aa4fa2d2
+ms.openlocfilehash: efd8a2bb205974efdcf13d614cb6fa7848f96dc7
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89187840"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033696"
 ---
 # <a name="keyboard-events"></a>키보드 이벤트
 
@@ -25,7 +25,7 @@ ms.locfileid: "89187840"
 
 하드웨어와 터치 키보드 모두에 대해 다음과 같은 키보드 이벤트가 발생할 수 있습니다.
 
-| 이벤트                                      | Description                    |
+| 이벤트                                      | 설명                    |
 |--------------------------------------------|--------------------------------|
 | [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) | 키를 누를 때 발생합니다.  |
 | [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup)     | 키를 놓을 때 발생합니다. |
@@ -39,7 +39,7 @@ UI의 컨트롤은 입력 포커스가 있는 경우에만 키보드 이벤트�
 
 컨트롤의 [**포커스**](/uwp/api/windows.ui.xaml.controls.control.focus) 메서드를 호출 하 여 포커스를 강제할 수도 있습니다. 이는 UI가 로드 될 때 키보드 포커스가 기본적으로 설정 되지 않기 때문에 바로 가기 키를 구현할 때 필요 합니다. 자세한 내용은이 항목의 뒷부분에 나오는 **바로 가기 키 예** 를 참조 하세요.
 
-컨트롤이 입력 포커스를 받도록 하려면이 컨트롤을 사용 하도록 설정 하 고, 표시 하 고, [**Istabstop**](/uwp/api/windows.ui.xaml.controls.control.istabstop) 및 [**HitTestVisible**](/uwp/api/windows.ui.xaml.uielement.ishittestvisible) 속성 값이 **true**여야 합니다. 대부분의 컨트롤에 대 한 기본 상태입니다. 컨트롤에 입력 포커스가 있으면이 항목의 뒷부분에 설명 된 대로 키보드 입력 이벤트를 발생 시키고 응답할 수 있습니다. [**GotFocus**](/uwp/api/windows.ui.xaml.uielement.gotfocus) 및 [**LostFocus**](/uwp/api/windows.ui.xaml.uielement.lostfocus) 이벤트를 처리 하 여 포커스를 받거나 잃는 컨트롤에 응답할 수도 있습니다.
+컨트롤이 입력 포커스를 받도록 하려면이 컨트롤을 사용 하도록 설정 하 고, 표시 하 고, [**Istabstop**](/uwp/api/windows.ui.xaml.controls.control.istabstop) 및 [**HitTestVisible**](/uwp/api/windows.ui.xaml.uielement.ishittestvisible) 속성 값이 **true** 여야 합니다. 대부분의 컨트롤에 대 한 기본 상태입니다. 컨트롤에 입력 포커스가 있으면이 항목의 뒷부분에 설명 된 대로 키보드 입력 이벤트를 발생 시키고 응답할 수 있습니다. [**GotFocus**](/uwp/api/windows.ui.xaml.uielement.gotfocus) 및 [**LostFocus**](/uwp/api/windows.ui.xaml.uielement.lostfocus) 이벤트를 처리 하 여 포커스를 받거나 잃는 컨트롤에 응답할 수도 있습니다.
 
 기본적으로 컨트롤의 탭 시퀀스는 Extensible Application Markup Language (XAML)에 표시 되는 순서입니다. 그러나 [**TabIndex**](/uwp/api/windows.ui.xaml.controls.control.tabindex) 속성을 사용 하 여이 순서를 수정할 수 있습니다. 자세한 내용은 [키보드 접근성 구현](/previous-versions/windows/apps/hh868161(v=win.10))을 참조 하세요.
 
@@ -50,7 +50,7 @@ UI의 컨트롤은 입력 포커스가 있는 경우에만 키보드 이벤트�
 
 -   이벤트의 송신자입니다. 발신자는 이벤트 처리기가 연결 된 개체를 보고 합니다.
 -   이벤트 데이터입니다. 키보드 이벤트의 경우 해당 데이터는 [**KeyRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.KeyRoutedEventArgs)의 인스턴스입니다. 처리기의 대리자는 [**Keyeventhandler**](/uwp/api/windows.ui.xaml.input.keyeventhandler)입니다. 대부분의 처리기 시나리오에서 **KeyRoutedEventArgs** 의 가장 관련성이 높은 속성은 [**키**](/uwp/api/windows.ui.xaml.input.keyroutedeventargs.key) 와 [**keystatus**](/uwp/api/windows.ui.xaml.input.keyroutedeventargs.keystatus)입니다.
--   [**Originalsource**](/uwp/api/windows.ui.xaml.routedeventargs.originalsource). 키보드 이벤트는 라우트된 이벤트 이므로 이벤트 데이터는 **Originalsource**를 제공 합니다. 의도적으로 이벤트를 개체 트리를 통해 버블링 하도록 허용 하는 경우 **Originalsource** 는 때때로 보낸 사람이 아닌 중요 한 개체입니다. 그러나이는 디자인에 따라 다릅니다. 보낸 사람 대신 **Originalsource** 를 사용 하는 방법에 대 한 자세한 내용은이 항목의 "키보드 라우트된 이벤트" 섹션 또는 [이벤트 및 라우트된 이벤트 개요](../../xaml-platform/events-and-routed-events-overview.md)를 참조 하세요.
+-   [**Originalsource**](/uwp/api/windows.ui.xaml.routedeventargs.originalsource). 키보드 이벤트는 라우트된 이벤트 이므로 이벤트 데이터는 **Originalsource** 를 제공 합니다. 의도적으로 이벤트를 개체 트리를 통해 버블링 하도록 허용 하는 경우 **Originalsource** 는 때때로 보낸 사람이 아닌 중요 한 개체입니다. 그러나이는 디자인에 따라 다릅니다. 보낸 사람 대신 **Originalsource** 를 사용 하는 방법에 대 한 자세한 내용은이 항목의 "키보드 라우트된 이벤트" 섹션 또는 [이벤트 및 라우트된 이벤트 개요](../../xaml-platform/events-and-routed-events-overview.md)를 참조 하세요.
 
 ### <a name="attaching-a-keyboard-event-handler"></a>키보드 이벤트 처리기 연결
 
@@ -282,14 +282,14 @@ End Sub
 >
 > **AcceleratorKey** 또는 **automationproperties** 를 설정 하는 경우에는 해당 작업을 수행할 수 없습니다. 앱에서 바로 가기 키 동작을 실제로 구현 하기 위해 여전히 [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) 또는 [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트에 대 한 처리기를 연결 해야 합니다. 또한 액세스 키에 대 한 밑줄 텍스트 장식이 자동으로 제공 되지 않습니다. UI에 밑줄이 그어진 텍스트를 표시 하려는 경우 니모닉의 특정 키에 대 한 텍스트를 인라인 [**밑줄**](/uwp/api/Windows.UI.Xaml.Documents.Underline) 형식으로 명시적으로 지정 해야 합니다.
 
- 
+ 
 
 ## <a name="keyboard-routed-events"></a>키보드 라우트된 이벤트
 
 
 특정 이벤트는 [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) 및 [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup)를 비롯 한 라우트된 이벤트입니다. 라우트된 이벤트는 버블링 라우팅 전략을 사용 합니다. 버블링 라우팅 전략은 이벤트가 자식 개체에서 발생 한 다음 개체 트리의 연속 부모 개체로 라우팅되는 것을 의미 합니다. 이는 동일한 이벤트를 처리 하 고 동일한 이벤트 데이터와 상호 작용할 수 있는 또 다른 기회를 제공 합니다.
 
-[**Canvas**](/uwp/api/Windows.UI.Xaml.Controls.Canvas) 와 두 개의 [**단추**](/uwp/api/Windows.UI.Xaml.Controls.Button) 개체에 대 한 [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트를 처리 하는 다음 XAML 예제를 고려해 보세요. 이 경우 **Button** 개체 중 하나에 포커스가 있을 때 키를 놓으면 **KeyUp** 이벤트가 발생 합니다. 그러면 이벤트가 부모 **캔버스로**버블링 됩니다.
+[**Canvas**](/uwp/api/Windows.UI.Xaml.Controls.Canvas) 와 두 개의 [**단추**](/uwp/api/Windows.UI.Xaml.Controls.Button) 개체에 대 한 [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트를 처리 하는 다음 XAML 예제를 고려해 보세요. 이 경우 **Button** 개체 중 하나에 포커스가 있을 때 키를 놓으면 **KeyUp** 이벤트가 발생 합니다. 그러면 이벤트가 부모 **캔버스로** 버블링 됩니다.
 
 ```xaml
 <StackPanel KeyUp="StackPanel_KeyUp">
@@ -322,7 +322,7 @@ void StackPanel_KeyUp(object sender, KeyRoutedEventArgs e)
 
 이미 처리 된 것으로 표시 된 이벤트에 대 한 작업을 수행할 수 있는 처리기를 연결 하는 특수 기법을 사용할 수 있습니다. 이 기술은 C에서 + =와 같이 처리기를 추가 하는 데 XAML 특성 또는 언어별 구문을 사용 하지 않고 [**AddHandler**](/uwp/api/windows.ui.xaml.uielement.addhandler) 메서드를 사용 하 여 처리기를 등록 합니다 \# .
 
-이 기술의 일반적인 제한 사항은 **AddHandler** API가 [**2csystem.delegate**](/uwp/api/Windows.UI.Xaml.RoutedEvent) idnentifying 형식의 매개 변수를 사용 하 여 해당 라우트된 이벤트를 확인 하는 것입니다. 모든 라우트된 이벤트에서 **2csystem.delegate** 식별자를 제공 하는 것은 아닙니다. 따라서 이러한 고려 사항은 [**처리**](/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled) 된 사례에서 처리 될 수 있는 라우트된 이벤트에 영향을 줍니다. [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) 및 [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트에는 [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement)의 라우트된 이벤트 식별자 ([**KeyDownEvent**](/uwp/api/windows.ui.xaml.uielement.keydownevent) 및 [**keyupevent**](/uwp/api/windows.ui.xaml.uielement.keyupevent))가 있습니다. 그러나 [**TextChanged**](/uwp/api/windows.ui.xaml.controls.textbox.textchanged) 등의 다른 이벤트에는 라우트된 이벤트 식별자가 없으므로 **AddHandler** 기술과 함께 사용할 수 없습니다.
+이 기술의 일반적인 제한 사항은 **AddHandler** API가 [**2csystem.delegate**](/uwp/api/Windows.UI.Xaml.RoutedEvent) idnentifying 형식의 매개 변수를 사용 하 여 해당 라우트된 이벤트를 확인 하는 것입니다. 모든 라우트된 이벤트에서 **2csystem.delegate** 식별자를 제공 하는 것은 아닙니다. 따라서 이러한 고려 사항은 [**처리**](/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled) 된 사례에서 처리 될 수 있는 라우트된 이벤트에 영향을 줍니다. [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) 및 [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트에는 [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement)의 라우트된 이벤트 식별자 ( [**KeyDownEvent**](/uwp/api/windows.ui.xaml.uielement.keydownevent) 및 [**keyupevent**](/uwp/api/windows.ui.xaml.uielement.keyupevent))가 있습니다. 그러나 [**TextChanged**](/uwp/api/windows.ui.xaml.controls.textbox.textchanged) 등의 다른 이벤트에는 라우트된 이벤트 식별자가 없으므로 **AddHandler** 기술과 함께 사용할 수 없습니다.
 
 ### <a name="overriding-keyboard-events-and-behavior"></a>키보드 이벤트 및 동작 재정의
 
@@ -364,7 +364,7 @@ UI 요소에 대해 명령을 사용할 수 있는 경우 불연속 입력 이�
 
 일반적으로 텍스트 입력을 처리 하기 위해 사용 하는 모든 관련 컨트롤 또는 텍스트 [**상자**](/uwp/api/Windows.UI.Xaml.Controls.TextBox)에 [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) 및 [**KeyDown**](/uwp/api/windows.ui.xaml.uielement.keydown) 에 대 한 처리기를 추가할 수 있습니다. 그러나 의도 된 디자인의 일부로 컨트롤은 키 이벤트를 통해 전달 되는 모든 키 값에 응답 하지 않을 수 있습니다. 동작은 각 컨트롤에만 적용 됩니다.
 
-예를 들어 [**buttonbase**](/uwp/api/Windows.UI.Xaml.Controls.Primitives.ButtonBase) ( [**단추의**](/uwp/api/Windows.UI.Xaml.Controls.Button)기본 클래스)는 [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) 를 처리 하 여 스페이스바 또는 Enter 키를 확인할 수 있도록 합니다. **Buttonbase** 는 [**Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트를 발생 시키기 위해 마우스 왼쪽 단추와 동일한 **KeyUp** 을 고려 합니다. 이 이벤트 처리는 **Buttonbase** 가 가상 메서드 [**OnKeyUp**](/uwp/api/windows.ui.xaml.controls.control.onkeyup)를 재정의 하는 경우에 수행 됩니다. 구현에서는 [**처리**](/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled) 됨을 **true**로 설정 합니다. 그 결과, 스페이스바의 경우 키 이벤트를 수신 하는 단추의 부모는 자체 처리기에 대해 이미 처리 된 이벤트를 수신 하지 않습니다.
+예를 들어 [**buttonbase**](/uwp/api/Windows.UI.Xaml.Controls.Primitives.ButtonBase) ( [**단추의**](/uwp/api/Windows.UI.Xaml.Controls.Button)기본 클래스)는 [**KeyUp**](/uwp/api/windows.ui.xaml.uielement.keyup) 를 처리 하 여 스페이스바 또는 Enter 키를 확인할 수 있도록 합니다. **Buttonbase** 는 [**Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트를 발생 시키기 위해 마우스 왼쪽 단추와 동일한 **KeyUp** 을 고려 합니다. 이 이벤트 처리는 **Buttonbase** 가 가상 메서드 [**OnKeyUp**](/uwp/api/windows.ui.xaml.controls.control.onkeyup)를 재정의 하는 경우에 수행 됩니다. 구현에서는 [**처리**](/uwp/api/windows.ui.xaml.input.keyroutedeventargs.handled) 됨을 **true** 로 설정 합니다. 그 결과, 스페이스바의 경우 키 이벤트를 수신 하는 단추의 부모는 자체 처리기에 대해 이미 처리 된 이벤트를 수신 하지 않습니다.
 
 또 다른 예는 [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox)입니다. 화살표 키와 같은 일부 키는 **TextBox By TextBox** 로 간주 되지 않으며 대신 컨트롤 UI 동작에 특정 한 것으로 간주 됩니다. **텍스트 상자** 는 이러한 이벤트 사례를 처리 된 것으로 표시 합니다.
 

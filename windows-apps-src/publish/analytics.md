@@ -1,17 +1,17 @@
 ---
-Description: 파트너 센터에서 또는 다른 방법을 통해 Windows 앱에 대 한 자세한 분석을 받으세요.
+description: 파트너 센터에서 또는 다른 방법을 통해 Windows 앱에 대 한 자세한 분석을 받으세요.
 title: 앱 성능 분석
 ms.assetid: 3A3C6F10-0DB1-416D-B632-CD388EA66759
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 분석, 보고서, 대시보드, 앱, 데이터, 메트릭
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b14ee776b31e21fbb8a0ee1d66b933648549b69
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 08ee9c5ddf729ac7a9026c36bc9fbddad0af5dc5
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162087"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032986"
 ---
 # <a name="analyze-app-performance"></a>앱 성능 분석
 
@@ -21,7 +21,7 @@ ms.locfileid: "89162087"
 
 ## <a name="view-key-analytics-for-all-your-apps"></a>모든 앱에 대 한 주요 분석 보기
 
-가장 많이 다운로드 한 앱에 대 한 주요 분석을 보려면 **분석** 을 확장 하 고 **개요**를 선택 합니다. 기본적으로 개요 페이지에는 가장 많은 수명 가져오기가 있는 5 개 앱에 대 한 정보가 표시 됩니다. 표시할 다른 게시 된 앱을 선택 하려면 **필터**를 선택 합니다.
+가장 많이 다운로드 한 앱에 대 한 주요 분석을 보려면 **분석** 을 확장 하 고 **개요** 를 선택 합니다. 기본적으로 개요 페이지에는 가장 많은 수명 가져오기가 있는 5 개 앱에 대 한 정보가 표시 됩니다. 표시할 다른 게시 된 앱을 선택 하려면 **필터** 를 선택 합니다.
 
 ## <a name="view-individual-reports-for-each-app"></a>각 앱에 대 한 개별 보고서 보기
 

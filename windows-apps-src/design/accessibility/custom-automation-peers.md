@@ -1,5 +1,5 @@
 ---
-Description: Microsoft UI 자동화에 대 한 자동화 피어의 개념과 고유한 사용자 지정 UI 클래스에 대 한 자동화 지원을 제공 하는 방법을 설명 합니다.
+description: Microsoft UI 자동화의 자동화 피어 개념과 고유한 사용자 지정 UI 클래스에 대해 자동화 지원을 제공하는 방법을 설명합니다.
 ms.assetid: AA8DA53B-FE6E-40AC-9F0A-CB09637C87B4
 title: 사용자 지정 자동화 피어
 label: Custom automation peers
@@ -8,16 +8,16 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a1a592bd9eb9447783984612c61b50e03055df15
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 21f583cc529092b28aa8bc3efde9de6247a4373a
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219846"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032516"
 ---
 # <a name="custom-automation-peers"></a>사용자 지정 자동화 피어  
 
-Microsoft UI 자동화에 대 한 자동화 피어의 개념과 고유한 사용자 지정 UI 클래스에 대 한 자동화 지원을 제공 하는 방법을 설명 합니다.
+Microsoft UI 자동화의 자동화 피어 개념과 고유한 사용자 지정 UI 클래스에 대해 자동화 지원을 제공하는 방법을 설명합니다.
 
 UI 자동화는 자동화 클라이언트에서 다양 한 UI 플랫폼과 프레임 워크의 사용자 인터페이스를 검사 하거나 운영 하는 데 사용할 수 있는 프레임 워크를 제공 합니다. Windows 앱을 작성 하는 경우 UI에 사용 하는 클래스는 이미 UI 자동화를 지원 합니다. 봉인 되지 않은 기존 클래스에서 파생 하 여 새로운 종류의 UI 컨트롤이 나 지원 클래스를 정의할 수 있습니다. 이 작업을 수행 하는 동안 클래스는 접근성을 지원 해야 하지만 기본 UI 자동화 지원에서 다루지 않는 동작을 추가할 수 있습니다. 이 경우 기본 구현에서 사용 하는 [**automationpeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 클래스에서 파생 하 여 기존 UI 자동화 지원을 확장 하 고, 필요한 지원을 피어 구현에 추가 하 고, 새 피어를 만들어야 하는 Windows 앱 컨트롤 인프라에 알립니다.
 
@@ -25,8 +25,8 @@ UI 자동화를 사용 하면 화면 판독기와 같은 내게 필요한 옵션
 
 UI 자동화 프레임 워크를 사용 하는 두 가지 고유한 대상 그룹이 있습니다.
 
-* **Ui 자동화 *클라이언트* ** 는 ui 자동화 api를 호출 하 여 현재 사용자에 게 표시 되는 모든 ui에 대해 알아봅니다. 예를 들어 화면 판독기와 같은 보조 기술은 UI 자동화 클라이언트 역할을 합니다. UI는 관련 된 자동화 요소 트리로 표시 됩니다. UI 자동화 클라이언트는 한 번에 하나의 앱에만 관심이 나 전체 트리에서 관심이 있을 수 있습니다. UI 자동화 클라이언트는 UI 자동화 Api를 사용 하 여 트리를 탐색 하 고 자동화 요소의 정보를 읽거나 변경할 수 있습니다.
-* Ui **자동화 *공급자* ** 는 ui에서 해당 앱의 일부로 도입 된 요소를 노출 하는 api를 구현 하 여 ui 자동화 트리에 정보를 제공 합니다. 새 컨트롤을 만들 때 이제 UI 자동화 공급자 시나리오에서 참가자 역할을 수행 해야 합니다. 공급자는 모든 UI 자동화 클라이언트에서 UI 자동화 프레임 워크를 사용 하 여 내게 필요한 옵션 및 테스트 목적으로 컨트롤과 상호 작용할 수 있는지 확인 해야 합니다.
+* **Ui 자동화 *클라이언트*** 는 ui 자동화 api를 호출 하 여 현재 사용자에 게 표시 되는 모든 ui에 대해 알아봅니다. 예를 들어 화면 판독기와 같은 보조 기술은 UI 자동화 클라이언트 역할을 합니다. UI는 관련 된 자동화 요소 트리로 표시 됩니다. UI 자동화 클라이언트는 한 번에 하나의 앱에만 관심이 나 전체 트리에서 관심이 있을 수 있습니다. UI 자동화 클라이언트는 UI 자동화 Api를 사용 하 여 트리를 탐색 하 고 자동화 요소의 정보를 읽거나 변경할 수 있습니다.
+* Ui **자동화 *공급자*** 는 ui에서 해당 앱의 일부로 도입 된 요소를 노출 하는 api를 구현 하 여 ui 자동화 트리에 정보를 제공 합니다. 새 컨트롤을 만들 때 이제 UI 자동화 공급자 시나리오에서 참가자 역할을 수행 해야 합니다. 공급자는 모든 UI 자동화 클라이언트에서 UI 자동화 프레임 워크를 사용 하 여 내게 필요한 옵션 및 테스트 목적으로 컨트롤과 상호 작용할 수 있는지 확인 해야 합니다.
 
 일반적으로 UI 자동화 프레임워크에는 각각 UI 자동화 클라이언트용 API와 유사한 이름의 UI 자동화용 API 등 병렬 API가 있습니다. 대부분의 경우이 항목에서는 UI 자동화 공급자의 Api와 특히 해당 UI 프레임 워크에서 공급자 확장성을 사용할 수 있도록 하는 클래스 및 인터페이스에 대해 설명 합니다. UI 자동화 클라이언트에서 사용 하는 UI 자동화 Api를 언급 하거나, 일부 큐브 뷰를 제공 하거나, 클라이언트 및 공급자 Api와 상관 관계를 지정 하는 조회 테이블을 제공 하는 경우가 있습니다. 클라이언트 관점에 대 한 자세한 내용은 [UI Automation 클라이언트 프로그래머 가이드](/windows/desktop/WinAuto/uiauto-clientportal)를 참조 하세요.
 
@@ -65,7 +65,7 @@ UWP는 WPF (Windows Forms, Windows Presentation Foundation) 및 Microsoft Silver
 
 인터페이스는 COM 개체와 관련이 있으므로 컨트롤 패턴은 UI와 관련이 있습니다. COM에서 개체를 쿼리하여 개체에서 지 원하는 인터페이스를 확인 한 다음 이러한 인터페이스를 사용 하 여 기능에 액세스할 수 있습니다. Ui 자동화에서 ui 자동화 클라이언트는 UI 자동화 요소를 쿼리하여 지원 되는 컨트롤 패턴을 확인 한 다음, 지원 되는 컨트롤 패턴에 의해 노출 되는 속성, 메서드, 이벤트 및 구조를 통해 요소와 해당 피어 링 컨트롤을 조작할 수 있습니다.
 
-자동화 피어의 주요 목적 중 하나는 ui 요소가 피어를 통해 지원할 수 있는 패턴을 제어 하는 UI 자동화 클라이언트에 보고 하는 것입니다. 이렇게 하기 위해 UI 자동화 공급자는 [**GetPatternCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) 메서드를 재정의 하 여 [**getpattern**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpattern) 메서드 동작을 변경 하는 새 피어를 구현 합니다. UI 자동화 클라이언트는 UI 자동화 공급자가 호출 하는 **Getpattern**에 매핑되는 호출을 수행 합니다. UI 자동화 클라이언트는 상호 작용 하려는 각 특정 패턴에 대해 쿼리 합니다. 피어가 패턴을 지 원하는 경우 자체에 대 한 개체 참조를 반환 합니다. 그렇지 않으면 **null**을 반환 합니다. 반환이 **null**이 아닌 경우 UI 자동화 클라이언트는 해당 컨트롤 패턴과 상호 작용 하기 위해 패턴 인터페이스의 api를 클라이언트로 호출할 수 있다고 예상 합니다.
+자동화 피어의 주요 목적 중 하나는 ui 요소가 피어를 통해 지원할 수 있는 패턴을 제어 하는 UI 자동화 클라이언트에 보고 하는 것입니다. 이렇게 하기 위해 UI 자동화 공급자는 [**GetPatternCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) 메서드를 재정의 하 여 [**getpattern**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpattern) 메서드 동작을 변경 하는 새 피어를 구현 합니다. UI 자동화 클라이언트는 UI 자동화 공급자가 호출 하는 **Getpattern** 에 매핑되는 호출을 수행 합니다. UI 자동화 클라이언트는 상호 작용 하려는 각 특정 패턴에 대해 쿼리 합니다. 피어가 패턴을 지 원하는 경우 자체에 대 한 개체 참조를 반환 합니다. 그렇지 않으면 **null** 을 반환 합니다. 반환이 **null** 이 아닌 경우 UI 자동화 클라이언트는 해당 컨트롤 패턴과 상호 작용 하기 위해 패턴 인터페이스의 api를 클라이언트로 호출할 수 있다고 예상 합니다.
 
 *컨트롤 형식은* 피어에서 나타내는 컨트롤의 기능을 광범위 하 게 정의 하는 방법입니다. 패턴은 UI 자동화에서 가져올 수 있는 정보 또는 특정 인터페이스를 통해 수행할 수 있는 작업을 알려 주는 반면, 컨트롤 형식은 한 수준 위에 있습니다. 각 컨트롤 형식에는 UI 자동화의 이러한 측면에 대 한 지침이 있습니다.
 
@@ -98,7 +98,7 @@ Ui 자동화 컨트롤 [패턴을 구현](/windows/desktop/WinAuto/uiauto-implem
 <span id="BUILT-IN_AUTOMATION_PEER_CLASSES"/>
 
 ## <a name="built-in-automation-peer-classes"></a>기본 제공 자동화 피어 클래스  
-일반적으로 요소는 사용자의 UI 작업을 수락 하거나 응용 프로그램의 대화형 또는 의미 있는 UI를 나타내는 보조 기술의 사용자에 게 필요한 정보를 포함 하는 경우 자동화 피어 클래스를 구현 합니다. 일부 UWP 시각적 요소에는 자동화 피어가 없습니다. 자동화 피어를 구현 하는 클래스의 예로는 [**단추**](/uwp/api/Windows.UI.Xaml.Controls.Button) 와 [**텍스트 상자가**](/uwp/api/Windows.UI.Xaml.Controls.TextBox)있습니다. 자동화 피어를 구현 하지 않는 클래스의 예로는 [**Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid) 및 [**Canvas**](/uwp/api/Windows.UI.Xaml.Controls.Canvas)와 같은 [**패널**](/uwp/api/Windows.UI.Xaml.Controls.Panel)기반 [**테두리**](/uwp/api/Windows.UI.Xaml.Controls.Border) 및 클래스가 있습니다. **패널** 은 시각적 으로만 표시 되는 레이아웃 동작을 제공 하기 때문에 피어가 없습니다. 사용자가 **패널과**상호 작용할 수 있는 접근성 관련 방법이 없습니다. **패널** 에 포함 된 자식 요소는 모두 UI 자동화 트리에 피어 또는 요소 표현이 있는 트리에서 사용 가능한 다음 부모의 자식 요소로 보고 됩니다.
+일반적으로 요소는 사용자의 UI 작업을 수락 하거나 응용 프로그램의 대화형 또는 의미 있는 UI를 나타내는 보조 기술의 사용자에 게 필요한 정보를 포함 하는 경우 자동화 피어 클래스를 구현 합니다. 일부 UWP 시각적 요소에는 자동화 피어가 없습니다. 자동화 피어를 구현 하는 클래스의 예로는 [**단추**](/uwp/api/Windows.UI.Xaml.Controls.Button) 와 [**텍스트 상자가**](/uwp/api/Windows.UI.Xaml.Controls.TextBox)있습니다. 자동화 피어를 구현 하지 않는 클래스의 예로는 [**Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid) 및 [**Canvas**](/uwp/api/Windows.UI.Xaml.Controls.Canvas)와 같은 [**패널**](/uwp/api/Windows.UI.Xaml.Controls.Panel)기반 [**테두리**](/uwp/api/Windows.UI.Xaml.Controls.Border) 및 클래스가 있습니다. **패널** 은 시각적 으로만 표시 되는 레이아웃 동작을 제공 하기 때문에 피어가 없습니다. 사용자가 **패널과** 상호 작용할 수 있는 접근성 관련 방법이 없습니다. **패널** 에 포함 된 자식 요소는 모두 UI 자동화 트리에 피어 또는 요소 표현이 있는 트리에서 사용 가능한 다음 부모의 자식 요소로 보고 됩니다.
 
 <span id="UI_Automation_and_UWP_process_boundaries"/>
 <span id="ui_automation_and_uwp_process_boundaries"/>
@@ -195,12 +195,12 @@ protected:
 ### <a name="choosing-the-correct-peer-base-class"></a>올바른 피어 기본 클래스 선택  
 사용자가 파생 하는 컨트롤 클래스의 기존 피어 논리와 가장 일치 하는 항목을 제공 하는 기본 클래스에서 [**Automationpeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 가 파생 되는지 확인 합니다. 이전 예제의 경우가 범위 `NumericUpDown` [**기반**](/uwp/api/Windows.UI.Xaml.Controls.Primitives.RangeBase)에서 파생 되기 때문에 피어를 기반으로 하는 범위 지정 클래스 [**를**](/uwp/api/Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer) 사용할 수 있습니다. 가장 근접 하 게 일치 하는 피어 클래스를 파생 하는 방법에 대해 병렬로 사용 하 여 기본 피어 클래스가 이미 [**IRangeValueProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IRangeValueProvider) 기능을 구현 하기 때문에 최소한의 기능을 재정의 하지 않을 수 있습니다.
 
-기본 [**컨트롤**](/uwp/api/Windows.UI.Xaml.Controls.Control) 클래스에 해당 하는 피어 클래스가 없습니다. **컨트롤**에서 파생 되는 사용자 지정 컨트롤에 해당 하는 피어 클래스가 필요한 경우 [**FrameworkElementAutomationPeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer)에서 사용자 지정 피어 클래스를 파생 시킵니다.
+기본 [**컨트롤**](/uwp/api/Windows.UI.Xaml.Controls.Control) 클래스에 해당 하는 피어 클래스가 없습니다. **컨트롤** 에서 파생 되는 사용자 지정 컨트롤에 해당 하는 피어 클래스가 필요한 경우 [**FrameworkElementAutomationPeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer)에서 사용자 지정 피어 클래스를 파생 시킵니다.
 
 [**ContentControl**](/uwp/api/Windows.UI.Xaml.Controls.ContentControl) 에서 직접 파생 하는 경우 피어 클래스를 참조 하는 [**oncreateautomationpeer**](/uwp/api/windows.ui.xaml.uielement.oncreateautomationpeer) 구현이 없으므로 해당 클래스에 기본 자동화 피어 동작이 없습니다. 따라서 사용자 고유의 피어를 사용 하려면 **Oncreateautomationpeer** 를 구현 하거나, 내게 필요한 옵션 지원 수준이 컨트롤에 적절 한 경우 [**FrameworkElementAutomationPeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer) 을 피어로 사용 해야 합니다.
 
 > [!NOTE]
-> 일반적으로 [**FrameworkElementAutomationPeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer)가 아니라 [**automationpeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 파생 되지 않습니다. **Automationpeer** 에서 직접 파생 한 경우 **FrameworkElementAutomationPeer**에서 제공 되는 많은 기본 접근성 지원 기능을 복제 해야 합니다.
+> 일반적으로 [**FrameworkElementAutomationPeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer)가 아니라 [**automationpeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 파생 되지 않습니다. **Automationpeer** 에서 직접 파생 한 경우 **FrameworkElementAutomationPeer** 에서 제공 되는 많은 기본 접근성 지원 기능을 복제 해야 합니다.
 
 <span id="Initialization_of_a_custom_peer_class"/>
 <span id="initialization_of_a_custom_peer_class"/>
@@ -267,13 +267,13 @@ protected override string GetClassNameCore()
 ```
 
 > [!NOTE]
-> 문자열을 메서드 본문에 직접 저장 하는 것이 아니라 상수로 저장할 수도 있습니다. [**Getclassnamecore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getclassnamecore)의 경우이 문자열을 지역화할 필요가 없습니다. **LocalizedControlType** 속성은 **CLASSNAME**이 아닌 UI 자동화 클라이언트에서 지역화 된 문자열이 필요할 때마다 사용 됩니다.
+> 문자열을 메서드 본문에 직접 저장 하는 것이 아니라 상수로 저장할 수도 있습니다. [**Getclassnamecore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getclassnamecore)의 경우이 문자열을 지역화할 필요가 없습니다. **LocalizedControlType** 속성은 **CLASSNAME** 이 아닌 UI 자동화 클라이언트에서 지역화 된 문자열이 필요할 때마다 사용 됩니다.
 
 ### <span id="GetAutomationControlType"/>
 <span id="getautomationcontroltype"/>
 <span id="GETAUTOMATIONCONTROLTYPE"/>GetAutomationControlType
 
-일부 보조 기술에서는 ui 자동화 트리에서 항목의 특성을 보고 하는 경우 UI 자동화 **이름을**벗어나는 추가 정보로 [**GetAutomationControlType**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getautomationcontroltype) 값을 직접 사용 합니다. 컨트롤이 파생 되는 컨트롤과 크게 다른 경우 컨트롤에서 사용 하는 기본 피어 클래스가 보고 하는 것과 다른 컨트롤 형식을 보고 하려면 피어를 구현 하 고 피어 구현에서 [**system.windows.automation.peers.automationpeer.getautomationcontroltypecore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getautomationcontroltypecore) 를 재정의 해야 합니다. [**ItemsControl**](/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) 또는 [**ContentControl**](/uwp/api/Windows.UI.Xaml.Controls.ContentControl)와 같은 일반화 된 기본 클래스에서 파생 하는 경우 기본 피어에서 컨트롤 형식에 대 한 정확한 정보를 제공 하지 않는 경우에 특히 중요 합니다.
+일부 보조 기술에서는 ui 자동화 트리에서 항목의 특성을 보고 하는 경우 UI 자동화 **이름을** 벗어나는 추가 정보로 [**GetAutomationControlType**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getautomationcontroltype) 값을 직접 사용 합니다. 컨트롤이 파생 되는 컨트롤과 크게 다른 경우 컨트롤에서 사용 하는 기본 피어 클래스가 보고 하는 것과 다른 컨트롤 형식을 보고 하려면 피어를 구현 하 고 피어 구현에서 [**system.windows.automation.peers.automationpeer.getautomationcontroltypecore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getautomationcontroltypecore) 를 재정의 해야 합니다. [**ItemsControl**](/uwp/api/Windows.UI.Xaml.Controls.ItemsControl) 또는 [**ContentControl**](/uwp/api/Windows.UI.Xaml.Controls.ContentControl)와 같은 일반화 된 기본 클래스에서 파생 하는 경우 기본 피어에서 컨트롤 형식에 대 한 정확한 정보를 제공 하지 않는 경우에 특히 중요 합니다.
 
 [**System.windows.automation.peers.automationpeer.getautomationcontroltypecore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getautomationcontroltypecore) 구현에서는 [**AutomationControlType**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType) 값을 반환 하 여 컨트롤을 설명 합니다. AutomationControlType를 반환할 수 있지만 컨트롤의 주 시나리오를 정확 하 게 설명 하는 경우에는 보다 구체적인 컨트롤 형식 중 하나를 반환 해야 합니다 **.** 예를 들면 다음과 같습니다.
 
@@ -285,16 +285,16 @@ protected override AutomationControlType GetAutomationControlTypeCore()
 ```
 
 > [!NOTE]
-> [**AutomationControlType**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)를 지정 하지 않으면 [**GetLocalizedControlTypeCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getlocalizedcontroltypecore) 를 구현 하 여 클라이언트에 **LocalizedControlType** 속성 값을 제공할 필요가 없습니다. UI 자동화 common infrastructure는 **AutomationControlType**이외의 모든 가능한 **AutomationControlType** 값에 대해 번역 된 문자열을 제공 합니다.
+> [**AutomationControlType**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)를 지정 하지 않으면 [**GetLocalizedControlTypeCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getlocalizedcontroltypecore) 를 구현 하 여 클라이언트에 **LocalizedControlType** 속성 값을 제공할 필요가 없습니다. UI 자동화 common infrastructure는 **AutomationControlType** 이외의 모든 가능한 **AutomationControlType** 값에 대해 번역 된 문자열을 제공 합니다.
 
 <span id="GetPattern_and_GetPatternCore"/>
 <span id="getpattern_and_getpatterncore"/>
 <span id="GETPATTERN_AND_GETPATTERNCORE"/>
 
 ### <a name="getpattern-and-getpatterncore"></a>GetPattern 및 GetPatternCore  
-피어의 [**GetPatternCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) 구현은 입력 매개 변수에서 요청 된 패턴을 지 원하는 개체를 반환 합니다. 특히, UI 자동화 클라이언트는 공급자의 [**Getpattern**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpattern) 메서드에 전달 되는 메서드를 호출 하 고, 요청 된 패턴의 이름을 지정 하는 [**PatternInterface**](/uwp/api/Windows.UI.Xaml.Automation.Peers.PatternInterface) 열거형 값을 지정 합니다. **GetPatternCore** 의 재정의는 지정 된 패턴을 구현 하는 개체를 반환 해야 합니다. 해당 개체는 피어 자체 이며, 피어는 패턴을 지원 한다는 것을 보고할 때마다 해당 패턴 인터페이스를 구현 해야 합니다. 피어에 패턴의 사용자 지정 구현이 없지만 피어의 기반이 패턴을 구현 하는 것을 알고 있는 경우 **GetPatternCore**에서 기본 형식의 **GetPatternCore** 구현을 호출할 수 있습니다. 피어에서 패턴이 지원 되지 않는 경우 피어의 **GetPatternCore** 는 **null** 을 반환 해야 합니다. 그러나 구현에서 직접 **null** 을 반환 하는 대신 일반적으로 기본 구현에 대 한 호출을 사용 하 여 지원 되지 않는 모든 패턴에 대해 **null** 을 반환 합니다.
+피어의 [**GetPatternCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) 구현은 입력 매개 변수에서 요청 된 패턴을 지 원하는 개체를 반환 합니다. 특히, UI 자동화 클라이언트는 공급자의 [**Getpattern**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpattern) 메서드에 전달 되는 메서드를 호출 하 고, 요청 된 패턴의 이름을 지정 하는 [**PatternInterface**](/uwp/api/Windows.UI.Xaml.Automation.Peers.PatternInterface) 열거형 값을 지정 합니다. **GetPatternCore** 의 재정의는 지정 된 패턴을 구현 하는 개체를 반환 해야 합니다. 해당 개체는 피어 자체 이며, 피어는 패턴을 지원 한다는 것을 보고할 때마다 해당 패턴 인터페이스를 구현 해야 합니다. 피어에 패턴의 사용자 지정 구현이 없지만 피어의 기반이 패턴을 구현 하는 것을 알고 있는 경우 **GetPatternCore** 에서 기본 형식의 **GetPatternCore** 구현을 호출할 수 있습니다. 피어에서 패턴이 지원 되지 않는 경우 피어의 **GetPatternCore** 는 **null** 을 반환 해야 합니다. 그러나 구현에서 직접 **null** 을 반환 하는 대신 일반적으로 기본 구현에 대 한 호출을 사용 하 여 지원 되지 않는 모든 패턴에 대해 **null** 을 반환 합니다.
 
-패턴을 지 원하는 경우 [**GetPatternCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) 구현에서 **이** 또는 **Me**를 반환할 수 있습니다. UI 자동화 클라이언트는 **null**이 아닌 경우 요청 된 패턴 인터페이스로 [**getpattern**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpattern) 반환 값을 캐스팅 하는 것이 예상 됩니다.
+패턴을 지 원하는 경우 [**GetPatternCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) 구현에서 **이** 또는 **Me** 를 반환할 수 있습니다. UI 자동화 클라이언트는 **null** 이 아닌 경우 요청 된 패턴 인터페이스로 [**getpattern**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpattern) 반환 값을 캐스팅 하는 것이 예상 됩니다.
 
 피어 클래스가 다른 피어에서 상속 하 고 필요한 모든 지원 및 패턴 보고가 기본 클래스에서 이미 처리 된 경우 [**GetPatternCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) 구현은 필요 하지 않습니다. 예를 들어 범위 컨트롤을 구현 하는 경우 범위 [**기반**](/uwp/api/Windows.UI.Xaml.Controls.Primitives.RangeBase)에서 파생 되 고, 피어가 범위 [**baseautomation피어**](/uwp/api/Windows.UI.Xaml.Automation.Peers.RangeBaseAutomationPeer)에서 파생 되는 경우 해당 피어는 [**PatternInterface 값**](/uwp/api/Windows.UI.Xaml.Automation.Peers.PatternInterface) 을 반환 하 고 패턴을 지 원하는 [**IRangeValueProvider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IRangeValueProvider) 인터페이스의 작업 구현을 포함 합니다.
 
@@ -383,7 +383,7 @@ protected override object GetPatternCore(PatternInterface patternInterface)
 
 컬렉션을 지 원하는 클래스에 대 한 피어를 제공 하는 경우 함수 클래스와 이미 해당 종류의 컬렉션을 지 원하는 피어 클래스에서 파생 하는 것이 가장 좋습니다. 이렇게 할 수 없는 경우 자식 컬렉션을 유지 관리 하는 컨트롤의 피어는 부모-자식 관계를 UI 자동화 트리에 올바르게 보고 하기 위해 컬렉션 관련 피어 메서드 [**GetChildrenCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getchildrencore) 를 재정의 해야 할 수 있습니다.
 
-사용자 인터페이스 (또는 둘 다)에서 컨트롤이 데이터 콘텐츠를 포함 하거나 대화형 역할을 수행할지 여부를 나타내는 [**Iscontentelementcore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.iscontentelementcore) 및 [**iscontentelementcore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.iscontrolelementcore) 메서드를 구현 합니다. 기본적으로 두 메서드는 모두 **true**를 반환 합니다. 이러한 설정은 화면 판독기와 같은 보조 기술의 유용성을 향상 시킵니다. 이러한 메서드를 사용 하 여 자동화 트리를 필터링 할 수 있습니다. [**GetPatternCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) 메서드가 하위 요소 피어로 패턴 처리를 전송 하는 경우 하위 요소 피어의 **Iscontrolelementcore** 메서드에서 **false** 를 반환 하 여 자동화 트리에서 하위 요소 피어를 숨길 수 있습니다.
+사용자 인터페이스 (또는 둘 다)에서 컨트롤이 데이터 콘텐츠를 포함 하거나 대화형 역할을 수행할지 여부를 나타내는 [**Iscontentelementcore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.iscontentelementcore) 및 [**iscontentelementcore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.iscontrolelementcore) 메서드를 구현 합니다. 기본적으로 두 메서드는 모두 **true** 를 반환 합니다. 이러한 설정은 화면 판독기와 같은 보조 기술의 유용성을 향상 시킵니다. 이러한 메서드를 사용 하 여 자동화 트리를 필터링 할 수 있습니다. [**GetPatternCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpatterncore) 메서드가 하위 요소 피어로 패턴 처리를 전송 하는 경우 하위 요소 피어의 **Iscontrolelementcore** 메서드에서 **false** 를 반환 하 여 자동화 트리에서 하위 요소 피어를 숨길 수 있습니다.
 
 일부 컨트롤은 텍스트 레이블 파트에서 텍스트가 아닌 부분에 대 한 정보를 제공 하거나 컨트롤을 UI의 다른 컨트롤과 알려진 레이블 지정 관계로 사용 하기 위해 레이블 지정 시나리오를 지원할 수 있습니다. 유용한 클래스 기반 동작을 제공할 수 있는 경우 [**Getlabeledbycore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getlabeledbycore) 를 재정의 하 여이 동작을 제공할 수 있습니다.
 
@@ -400,18 +400,18 @@ protected override object GetPatternCore(PatternInterface patternInterface)
 ### <a name="base-implementation-in-frameworkelementautomationpeer"></a>FrameworkElementAutomationPeer의 기본 구현  
 [**FrameworkElementAutomationPeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.FrameworkElementAutomationPeer) 의 기본 구현에서는 프레임 워크 수준에서 정의 된 다양 한 레이아웃 및 동작 속성으로 해석할 수 있는 몇 가지 UI 자동화 정보를 제공 합니다.
 
-* [**GetBoundingRectangleCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getboundingrectanglecore): 알려진 레이아웃 특성을 기반으로 하는 [**Rect**](/uwp/api/Windows.Foundation.Rect) 구조체를 반환 합니다. [**IsOffscreen**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.isoffscreen) 가 **true**인 경우 0 값 **Rect** 를 반환 합니다.
-* [**GetClickablePointCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getclickablepointcore): 알 수 없는 **BoundingRectangle**이 있는 한 알려진 레이아웃 특성을 기반으로 하는 [**점**](/uwp/api/Windows.Foundation.Point) 구조를 반환 합니다.
-* [**Getnamecore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getnamecore): 여기에 요약 될 수 있는 것 보다 더 광범위 한 동작입니다. [**Getnamecore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getnamecore)를 참조 하십시오. 기본적으로 콘텐츠를 포함 하는 [**ContentControl**](/uwp/api/Windows.UI.Xaml.Controls.ContentControl) 또는 관련 클래스의 알려진 콘텐츠에서 문자열 변환을 시도 합니다. 또한 [**있으면 labeledby**](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v=vs.95))에 대 한 값이 있는 경우 해당 항목의 **이름** 값이 **이름**으로 사용 됩니다.
-* [**HasKeyboardFocusCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.haskeyboardfocuscore): 소유자의 [**FocusState**](/uwp/api/windows.ui.xaml.controls.control.focusstate) 및 [**IsEnabled**](/uwp/api/windows.ui.xaml.controls.control.isenabled) 속성을 기반으로 평가 됩니다. 컨트롤이 아닌 요소는 항상 **false**를 반환 합니다.
-* [**IsEnabledCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.isenabledcore): 소유자의 [**IsEnabled**](/uwp/api/windows.ui.xaml.controls.control.isenabled) 속성 ( [**컨트롤**](/uwp/api/Windows.UI.Xaml.Controls.Control)인 경우)을 기반으로 평가 됩니다. 컨트롤이 아닌 요소는 항상 **true**를 반환 합니다. 이는 소유자가 기존 상호 작용 센스에서 사용 하도록 설정 된 것을 의미 하지 않습니다. 이는 소유자가 **IsEnabled** 속성을 갖지 않더라도 피어를 사용할 수 있음을 의미 합니다.
-* [**IsKeyboardFocusableCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.iskeyboardfocusablecore): Owner가 [**컨트롤인**](/uwp/api/Windows.UI.Xaml.Controls.Control)경우 **true** 를 반환 합니다. 그렇지 않으면 **false**입니다.
+* [**GetBoundingRectangleCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getboundingrectanglecore): 알려진 레이아웃 특성을 기반으로 하는 [**Rect**](/uwp/api/Windows.Foundation.Rect) 구조체를 반환 합니다. [**IsOffscreen**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.isoffscreen) 가 **true** 인 경우 0 값 **Rect** 를 반환 합니다.
+* [**GetClickablePointCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getclickablepointcore): 알 수 없는 **BoundingRectangle** 이 있는 한 알려진 레이아웃 특성을 기반으로 하는 [**점**](/uwp/api/Windows.Foundation.Point) 구조를 반환 합니다.
+* [**Getnamecore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getnamecore): 여기에 요약 될 수 있는 것 보다 더 광범위 한 동작입니다. [**Getnamecore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getnamecore)를 참조 하십시오. 기본적으로 콘텐츠를 포함 하는 [**ContentControl**](/uwp/api/Windows.UI.Xaml.Controls.ContentControl) 또는 관련 클래스의 알려진 콘텐츠에서 문자열 변환을 시도 합니다. 또한 [**있으면 labeledby**](/previous-versions/windows/silverlight/dotnet-windows-silverlight/ms591292(v=vs.95))에 대 한 값이 있는 경우 해당 항목의 **이름** 값이 **이름** 으로 사용 됩니다.
+* [**HasKeyboardFocusCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.haskeyboardfocuscore): 소유자의 [**FocusState**](/uwp/api/windows.ui.xaml.controls.control.focusstate) 및 [**IsEnabled**](/uwp/api/windows.ui.xaml.controls.control.isenabled) 속성을 기반으로 평가 됩니다. 컨트롤이 아닌 요소는 항상 **false** 를 반환 합니다.
+* [**IsEnabledCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.isenabledcore): 소유자의 [**IsEnabled**](/uwp/api/windows.ui.xaml.controls.control.isenabled) 속성 ( [**컨트롤**](/uwp/api/Windows.UI.Xaml.Controls.Control)인 경우)을 기반으로 평가 됩니다. 컨트롤이 아닌 요소는 항상 **true** 를 반환 합니다. 이는 소유자가 기존 상호 작용 센스에서 사용 하도록 설정 된 것을 의미 하지 않습니다. 이는 소유자가 **IsEnabled** 속성을 갖지 않더라도 피어를 사용할 수 있음을 의미 합니다.
+* [**IsKeyboardFocusableCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.iskeyboardfocusablecore): Owner가 [**컨트롤인**](/uwp/api/Windows.UI.Xaml.Controls.Control)경우 **true** 를 반환 합니다. 그렇지 않으면 **false** 입니다.
 * [**IsOffscreenCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.isoffscreencore): owner 요소 또는 해당 부모 항목에서 [**축소**](/uwp/api/windows.ui.xaml.visibility) 된 [**표시 유형은**](/uwp/api/windows.ui.xaml.uielement.visibility) [**IsOffscreen**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.isoffscreen)에 대 한 **true** 값과 같습니다. 예외: 해당 소유자의 부모가이 아닌 경우에도 [**Popup**](/uwp/api/Windows.UI.Xaml.Controls.Primitives.Popup) 개체를 표시할 수 있습니다.
 * [**SetFocusCore**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.setfocuscore): [**포커스**](/uwp/api/windows.ui.xaml.controls.control.focus)를 호출 합니다.
 * [**Getparent**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getparent): 소유자에서 [**FrameworkElement. 부모**](/uwp/api/windows.ui.xaml.frameworkelement.parent) 를 호출 하 고 적절 한 피어를 조회 합니다. 이는 "Core" 메서드를 사용 하는 재정의 쌍이 아니므로이 동작을 변경할 수 없습니다.
 
 > [!NOTE]
-> 기본 UWP 피어는 실제 UWP 코드를 사용할 필요는 없지만 UWP를 구현 하는 내부 네이티브 코드를 사용 하 여 동작을 구현 합니다. CLR (공용 언어 런타임) 리플렉션 또는 기타 기술을 통해 구현에 대 한 코드 또는 논리를 볼 수 없습니다. 기본 피어 동작의 서브 클래스 관련 재정의에 대 한 별도의 참조 페이지도 표시 되지 않습니다. 예를 들어 [**TextBoxAutomationPeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.TextBoxAutomationPeer)에 대 한 추가 동작이 있을 수 있으며,이는 **automationpeer** 참조 [**페이지에 설명**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getnamecore) 되지 않으며, **TextBoxAutomationPeer.GetNameCore**에 대 한 참조 페이지는 없습니다. **TextBoxAutomationPeer** 참조 페이지도 없습니다. 대신, 가장 직접적인 피어 클래스에 대 한 참조 항목을 읽고 설명 섹션에서 구현 메모를 찾습니다.
+> 기본 UWP 피어는 실제 UWP 코드를 사용할 필요는 없지만 UWP를 구현 하는 내부 네이티브 코드를 사용 하 여 동작을 구현 합니다. CLR (공용 언어 런타임) 리플렉션 또는 기타 기술을 통해 구현에 대 한 코드 또는 논리를 볼 수 없습니다. 기본 피어 동작의 서브 클래스 관련 재정의에 대 한 별도의 참조 페이지도 표시 되지 않습니다. 예를 들어 [**TextBoxAutomationPeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.TextBoxAutomationPeer)에 대 한 추가 동작이 있을 수 있으며,이는 **automationpeer** 참조 [**페이지에 설명**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getnamecore) 되지 않으며, **TextBoxAutomationPeer.GetNameCore** 에 대 한 참조 페이지는 없습니다. **TextBoxAutomationPeer** 참조 페이지도 없습니다. 대신, 가장 직접적인 피어 클래스에 대 한 참조 항목을 읽고 설명 섹션에서 구현 메모를 찾습니다.
 
 <span id="Peers_and_AutomationProperties"/>
 <span id="peers_and_automationproperties"/>
@@ -429,7 +429,7 @@ protected override object GetPatternCore(PatternInterface patternInterface)
 <span id="IMPLEMENTING_PATTERNS"/>
 
 ## <a name="implementing-patterns"></a>구현 패턴  
-확장-축소를 위해 컨트롤 패턴 인터페이스를 구현 하 여 확장/축소 동작을 구현 하는 컨트롤에 대 한 피어를 작성 하는 방법을 살펴보겠습니다. [**PatternInterface ExpandCollapse**](/uwp/api/Windows.UI.Xaml.Automation.Peers.PatternInterface)값을 사용 하 여 [**getpattern**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpattern) 이 호출 될 때마다 자체를 반환 하 여 확장-축소 동작에 대 한 액세스 가능성을 피어가 사용 하도록 설정 해야 합니다. 그런 다음 피어는 해당 패턴 ([**IExpandCollapseProvider**](/uwp/api/windows.ui.xaml.automation.provider.iexpandcollapseprovider))에 대 한 공급자 인터페이스를 상속 하 고 해당 공급자 인터페이스의 각 멤버에 대 한 구현을 제공 해야 합니다. 이 경우 인터페이스에는 재정의 하는 세 가지 멤버 ( [**확장**](/uwp/api/windows.ui.xaml.automation.provider.iexpandcollapseprovider.expand), [**축소**](/uwp/api/windows.ui.xaml.automation.provider.iexpandcollapseprovider.collapse), [**ExpandCollapseState**](/uwp/api/windows.ui.xaml.automation.provider.iexpandcollapseprovider.expandcollapsestate))가 있습니다.
+확장-축소를 위해 컨트롤 패턴 인터페이스를 구현 하 여 확장/축소 동작을 구현 하는 컨트롤에 대 한 피어를 작성 하는 방법을 살펴보겠습니다. [**PatternInterface ExpandCollapse**](/uwp/api/Windows.UI.Xaml.Automation.Peers.PatternInterface)값을 사용 하 여 [**getpattern**](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpattern) 이 호출 될 때마다 자체를 반환 하 여 확장-축소 동작에 대 한 액세스 가능성을 피어가 사용 하도록 설정 해야 합니다. 그런 다음 피어는 해당 패턴 ( [**IExpandCollapseProvider**](/uwp/api/windows.ui.xaml.automation.provider.iexpandcollapseprovider))에 대 한 공급자 인터페이스를 상속 하 고 해당 공급자 인터페이스의 각 멤버에 대 한 구현을 제공 해야 합니다. 이 경우 인터페이스에는 재정의 하는 세 가지 멤버 ( [**확장**](/uwp/api/windows.ui.xaml.automation.provider.iexpandcollapseprovider.expand), [**축소**](/uwp/api/windows.ui.xaml.automation.provider.iexpandcollapseprovider.collapse), [**ExpandCollapseState**](/uwp/api/windows.ui.xaml.automation.provider.iexpandcollapseprovider.expandcollapsestate))가 있습니다.
 
 클래스 자체의 API 디자인에서 접근성에 대해 미리 계획 하는 것이 좋습니다. UI에서 작업하는 사용자의 일반적인 조작 결과로 또는 자동화 공급자 패턴을 통해 잠재적으로 요청되는 동작이 있을 때마다 UI 응답이나 자동화 패턴에서 호출할 수 있는 단일 메서드를 제공합니다. 예를 들어 컨트롤에 컨트롤을 확장 하거나 축소할 수 있는 유선 이벤트 처리기를 포함 하는 단추 파트가 있고 이러한 작업에 대해 키보드를 포함 하는 경우 이러한 이벤트 처리기는 피어의 [**IExpandCollapseProvider**](/windows/desktop/api/uiautomationcore/nn-uiautomationcore-iexpandcollapseprovider) 에 대 한 [**확장**](/uwp/api/windows.ui.xaml.automation.provider.iexpandcollapseprovider.expand) 또는 [**축소**](/uwp/api/windows.ui.xaml.automation.provider.iexpandcollapseprovider.collapse) 구현의 본문 내에서 호출 하는 것과 동일한 메서드를 호출 합니다. 또한 공통 논리 메서드를 사용 하면 컨트롤의 시각적 상태가 동작의 호출 방식에 관계 없이 일관 된 방식으로 논리적 상태를 표시 하도록 업데이트 되도록 하는 데 유용할 수 있습니다.
 
@@ -507,7 +507,7 @@ if (AutomationPeer.ListenerExists(AutomationEvents.PropertyChanged))
 <span id="NATIVE_AUTOMATION_SUPPORT_FOR_TEXT_PATTERNS"/>
 
 ## <a name="native-automation-support-for-text-patterns"></a>텍스트 패턴에 대 한 네이티브 자동화 지원  
-일부 기본 UWP 앱 자동화 피어는 텍스트 패턴 ([**PatternInterface**](/uwp/api/Windows.UI.Xaml.Automation.Peers.PatternInterface))에 대 한 컨트롤 패턴 지원을 제공 합니다. 그러나 이러한 메서드는 네이티브 메서드를 통해 이러한 지원을 제공 하며, 관련 된 피어는 관리 되는 상속의 [**Itextprovider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.ITextProvider) 인터페이스를 확인 하지 않습니다. 그러나 관리 되거나 관리 되지 않는 UI 자동화 클라이언트에서 패턴에 대 한 피어를 쿼리하면 텍스트 패턴에 대 한 지원을 보고 하 고 클라이언트 Api가 호출 될 때 패턴의 일부에 대 한 동작을 제공 합니다.
+일부 기본 UWP 앱 자동화 피어는 텍스트 패턴 ( [**PatternInterface**](/uwp/api/Windows.UI.Xaml.Automation.Peers.PatternInterface))에 대 한 컨트롤 패턴 지원을 제공 합니다. 그러나 이러한 메서드는 네이티브 메서드를 통해 이러한 지원을 제공 하며, 관련 된 피어는 관리 되는 상속의 [**Itextprovider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.ITextProvider) 인터페이스를 확인 하지 않습니다. 그러나 관리 되거나 관리 되지 않는 UI 자동화 클라이언트에서 패턴에 대 한 피어를 쿼리하면 텍스트 패턴에 대 한 지원을 보고 하 고 클라이언트 Api가 호출 될 때 패턴의 일부에 대 한 동작을 제공 합니다.
 
 UWP 앱 텍스트 컨트롤 중 하나에서 파생 시키고 텍스트 관련 피어 중 하나에서 파생 되는 사용자 지정 피어를 만들려면 피어에 대 한 설명 섹션을 확인 하 여 패턴에 대 한 기본 수준 지원에 대해 자세히 알아보세요. 관리 되는 공급자 인터페이스 구현에서 기본 구현을 호출 하는 경우 사용자 지정 피어의 기본 기본 동작에 액세스할 수 있지만, 피어와 해당 소유자 컨트롤의 네이티브 인터페이스가 노출 되지 않기 때문에 기본 구현에서 수행 하는 작업을 수정 하는 것은 어렵습니다. 일반적으로 기본 구현을 그대로 사용 하거나 (call base 전용) 기능을 자체 관리 코드로 완전히 바꾸고 기본 구현을 호출 하지 않아야 합니다. 후자는 고급 시나리오 이므로 해당 프레임 워크를 사용할 때 내게 필요한 옵션 요구 사항을 지원 하기 위해 컨트롤에서 사용 하는 텍스트 서비스 프레임 워크에 대해 잘 알고 있어야 합니다.
 
@@ -532,7 +532,7 @@ AccessibilityView를 사용 하는 주요 시나리오는 UI 자동화 뷰에서
 * API가 전달 된 원래 정보에 따라 피어의 소유자 또는 관련 피어 요소에 액세스할 수 없는 경우 [**Elementnot사용할**](/dotnet/api/system.windows.automation.elementnotavailableexception) 수 있는 예외를 Throw 합니다. 예를 들어 메서드를 실행 하려고 하지만 닫힌 모달 대화 상자와 같이 소유자가 UI에서 제거 된 후에는 피어가 있을 수 있습니다. Non-.NET client의 경우 [**UIA \_ E \_ elementnotavailable**](/windows/desktop/WinAuto/uiauto-error-codes)에 매핑됩니다.
 * 여전히 소유자 이지만 해당 소유자가 [**IsEnabled**](/uwp/api/windows.ui.xaml.controls.control.isenabled)false와 같은 모드에 있는 경우에는 피어에서 [**system.windows.automation.elementnotenabledexception**](/dotnet/api/system.windows.automation.elementnotenabledexception) 에서 `=` **false** 수행 하려고 하는 특정 프로그래밍 변경 내용의 일부를 차단 하는 경우에 Throw 됩니다. Non-.NET client의 경우 [**UIA \_ E \_ elementnotenabled**](/windows/desktop/WinAuto/uiauto-error-codes)에 매핑됩니다.
 
-이 외에 피어는 피어 지원에서 throw 되는 예외와 관련 하 여 상대적으로는 안 됩니다. 대부분의 클라이언트는 피어의 예외를 처리 하 고 클라이언트와 상호 작용할 때 사용자가 수행할 수 있는 실행 가능한 선택 항목으로 전환할 수 없습니다. 따라서 피어 구현 내에서 다시 throw 없는 경우에도 작동 하지 않고 예외를 catch 하는 것은 피어가 작동 하지 않는 항목이 발생할 때마다 예외를 throw 하는 것 보다 더 나은 전략입니다. 또한 대부분의 UI 자동화 클라이언트는 관리 코드로 작성 되지 않습니다. 대부분은 COM으로 작성 되며, 피어에 대 한 액세스를 종료 하는 UI 자동화 클라이언트 메서드를 호출할 때마다 **HRESULT** 에서 ** \_ OK** 를 확인 하는 것입니다.
+이 외에 피어는 피어 지원에서 throw 되는 예외와 관련 하 여 상대적으로는 안 됩니다. 대부분의 클라이언트는 피어의 예외를 처리 하 고 클라이언트와 상호 작용할 때 사용자가 수행할 수 있는 실행 가능한 선택 항목으로 전환할 수 없습니다. 따라서 피어 구현 내에서 다시 throw 없는 경우에도 작동 하지 않고 예외를 catch 하는 것은 피어가 작동 하지 않는 항목이 발생할 때마다 예외를 throw 하는 것 보다 더 나은 전략입니다. 또한 대부분의 UI 자동화 클라이언트는 관리 코드로 작성 되지 않습니다. 대부분은 COM으로 작성 되며, 피어에 대 한 액세스를 종료 하는 UI 자동화 클라이언트 메서드를 호출할 때마다 **HRESULT** 에서 **\_ OK** 를 확인 하는 것입니다.
 
 <span id="related_topics"/>
 

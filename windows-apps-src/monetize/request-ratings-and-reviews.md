@@ -1,16 +1,16 @@
 ---
-Description: 고객이 앱을 평가 하 고 검토 하는 데 프로그래밍 방식으로 사용할 수 있는 여러 가지 방법에 대해 알아봅니다.
+description: 고객이 앱을 평가 하 고 검토 하는 데 프로그래밍 방식으로 사용할 수 있는 여러 가지 방법에 대해 알아봅니다.
 title: 앱에 대 한 요청 등급 및 검토
 ms.date: 01/22/2019
 ms.topic: article
 keywords: windows 10, uwp, 등급, 리뷰
 ms.localizationpriority: medium
-ms.openlocfilehash: c0a668ac66f48e386a6299a64e5bcc18cec4fccc
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9dbc33eaaf3adcb05a6ad37e2f54ceec4769f530
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158377"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034406"
 ---
 # <a name="request-ratings-and-reviews-for-your-app"></a>앱에 대 한 요청 등급 및 검토
 
@@ -110,8 +110,8 @@ private async Task PromptUserToRateApp()
 다음 예에서는 고객이 등급 또는 검토를 성공적으로 제출한 후이 요청에 대 한 반환 값을 보여 줍니다.
 
 ```json
-{ 
-  "status": "success", 
+{ 
+  "status": "success", 
   "data": {
     "updated": false
   },
@@ -122,8 +122,8 @@ private async Task PromptUserToRateApp()
 다음 예에서는 고객이 등급 또는 검토를 제출 하지 않기로 선택한 후이 요청에 대 한 반환 값을 보여 줍니다.
 
 ```json
-{ 
-  "status": "aborted", 
+{ 
+  "status": "aborted", 
   "errorDetails": "Navigation was unsuccessful"
 }
 ```
@@ -132,8 +132,8 @@ private async Task PromptUserToRateApp()
 
 | 필드          | Description                                                                                                                                   |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| *status*       | 고객이 등급과 리뷰를 성공적으로 제출 했는지 여부를 나타내는 문자열입니다. 지원 되는 값은 **success** 이며 **중단**됩니다. |
-| *data*         | *업데이트*된 이라는 단일 부울 값을 포함 하는 개체입니다. 이 값은 고객이 기존 등급 또는 검토를 업데이트 했는지 여부를 나타냅니다. *데이터* 개체는 성공 응답에만 포함 됩니다. |
+| *status*       | 고객이 등급과 리뷰를 성공적으로 제출 했는지 여부를 나타내는 문자열입니다. 지원 되는 값은 **success** 이며 **중단** 됩니다. |
+| *data*         | *업데이트* 된 이라는 단일 부울 값을 포함 하는 개체입니다. 이 값은 고객이 기존 등급 또는 검토를 업데이트 했는지 여부를 나타냅니다. *데이터* 개체는 성공 응답에만 포함 됩니다. |
 | *errorDetails* | 요청에 대 한 오류 정보를 포함 하는 문자열입니다.                                                                                     |
 
 ## <a name="launch-the-rating-and-review-page-for-your-app-in-the-store"></a>스토어에서 앱에 대 한 등급 및 검토 페이지 시작

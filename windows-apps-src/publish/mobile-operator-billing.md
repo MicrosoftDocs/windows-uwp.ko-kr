@@ -1,17 +1,17 @@
 ---
-Description: Microsoft Store는이 기능을 지 원하는 모바일 운영자를 위한 지불 방법으로 모바일 운영자 요금 청구 기능을 제공 합니다.
+description: Microsoft Store는이 기능을 지 원하는 모바일 운영자를 위한 지불 방법으로 모바일 운영자 요금 청구 기능을 제공 합니다.
 title: 통신사 청구
 ms.assetid: C8A5A4BA-6B39-42FC-B8C4-ED1B7F774CC1
 ms.date: 05/29/2020
 ms.topic: article
 keywords: windows 10, uwp, 모바일 운영자, 모바일 청구, 모바일 운영자 요금 청구
 ms.localizationpriority: medium
-ms.openlocfilehash: 9dbdd2a86d33cf1392844294952eb9223676e256
-ms.sourcegitcommit: 426ccbdaa26bd16c7f0b270e8a51ac4ba87a5b60
+ms.openlocfilehash: df31cfbf113d91680f1570d37ae091e12e5a11de
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590652"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034736"
 ---
 # <a name="mobile-operator-billing"></a>통신사 청구
 
@@ -21,7 +21,7 @@ ms.locfileid: "91590652"
 Microsoft Store은 Windows 10을 실행 하는 장치, Windows 10 Mobile을 실행 하는 휴대폰 및 Xbox One 콘솔에 대 한 지불 방법으로 모바일 운영자 요금 청구를 제공 합니다. 고객의 모바일 운영자가이 기능을 지 원하는 경우 고객은 지불 방법으로 모바일 운영자 대금 청구를 추가 하 고 모바일 계정을 사용 하 여 스토어 구매를 수행 하는 데 사용할 수 있습니다.
 
 > [!TIP]
->  고객의 모바일 운영자가 모바일 운영자 요금 청구 기능을 제공 하지만 고객이 장치에서이 옵션을 찾을 수 없는 경우 다음 [단계](https://support.microsoft.com/instantanswers/b25d6dd6-fb8b-3710-1e13-4d30eb01b51f)를 검토 합니다.
+>  고객의 모바일 운영자가 모바일 운영자 요금 청구 기능을 제공 하지만 고객이 장치에서이 옵션을 찾을 수 없는 경우 다음 [단계](https://support.microsoft.com/instantanswers/b25d6dd6-fb8b-3710-1e13-4d30eb01b51f)를 검토 합니다.
 
 정기적으로 모바일 운영자와 협력 하 여이 지불 방법의 가용성을 확장 하 고 있습니다. 아래에 표시 되지 않는 모바일 운영자를 제안 하려면 모바일 운영자에 게 연락 하 여이 지불 방법을 추가 하도록 요청 하세요.
 

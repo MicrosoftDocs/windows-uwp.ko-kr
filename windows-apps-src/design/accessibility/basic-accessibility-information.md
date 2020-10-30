@@ -1,5 +1,5 @@
 ---
-Description: 기본 액세스 가능성 정보는 종종 이름, 역할 및 값으로 분류 됩니다. 이 항목에서는 앱이 보조 기술에 필요한 기본 정보를 노출 하는 데 도움이 되는 코드에 대해 설명 합니다.
+description: 경우에 따라 기본 접근성 정보는 이름, 역할 및 값으로 분류됩니다. 이 항목에서는 보조 기술이 필요로 하는 기본 정보를 앱에 표시하는 데 도움이 되는 코드에 대해 설명합니다.
 ms.assetid: 9641C926-68C9-4842-8B55-C38C39A9E5C5
 title: 기본적인 접근성 정보 표시
 label: Expose basic accessibility information
@@ -8,18 +8,18 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: da0ad6c0121f81a4854728f4441e0407a6302f54
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 09dfb92f53105d7c8718ff12f1a0d5634ba6a75d
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217466"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032566"
 ---
 # <a name="expose-basic-accessibility-information"></a>기본적인 접근성 정보 표시  
 
 
 
-기본 액세스 가능성 정보는 종종 이름, 역할 및 값으로 분류 됩니다. 이 항목에서는 앱이 보조 기술에 필요한 기본 정보를 노출 하는 데 도움이 되는 코드에 대해 설명 합니다.
+경우에 따라 기본 접근성 정보는 이름, 역할 및 값으로 분류됩니다. 이 항목에서는 보조 기술이 필요로 하는 기본 정보를 앱에 표시하는 데 도움이 되는 코드에 대해 설명합니다.
 
 <span id="accessible_name"/>
 <span id="ACCESSIBLE_NAME"/>
@@ -42,12 +42,12 @@ ms.locfileid: "91217466"
 <span id="ROLE_VALUE"/>
 
 ## <a name="role-and-value"></a>역할 및 값  
-XAML 어휘에 속하는 컨트롤 및 기타 UI 요소는 해당 정의의 일부로 보고 역할 및 값에 대 한 UI 자동화 지원을 구현 합니다. UI 자동화 도구를 사용 하 여 컨트롤에 대 한 역할 및 값 정보를 검사 하거나 각 컨트롤의 [**Automationpeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 구현에 대 한 설명서를 읽을 수 있습니다. UI 자동화 프레임 워크에서 사용 가능한 역할은 [**AutomationControlType**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType) 열거형에 정의 되어 있습니다. 보조 기술과 같은 UI 자동화 클라이언트는 UI 자동화 프레임 워크가 컨트롤의 **Automationpeer**를 사용 하 여 노출 하는 메서드를 호출 하 여 역할 정보를 얻을 수 있습니다.
+XAML 어휘에 속하는 컨트롤 및 기타 UI 요소는 해당 정의의 일부로 보고 역할 및 값에 대 한 UI 자동화 지원을 구현 합니다. UI 자동화 도구를 사용 하 여 컨트롤에 대 한 역할 및 값 정보를 검사 하거나 각 컨트롤의 [**Automationpeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationPeer) 구현에 대 한 설명서를 읽을 수 있습니다. UI 자동화 프레임 워크에서 사용 가능한 역할은 [**AutomationControlType**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType) 열거형에 정의 되어 있습니다. 보조 기술과 같은 UI 자동화 클라이언트는 UI 자동화 프레임 워크가 컨트롤의 **Automationpeer** 를 사용 하 여 노출 하는 메서드를 호출 하 여 역할 정보를 얻을 수 있습니다.
 
 일부 컨트롤에는 값이 없습니다. 값이 있는 컨트롤은이 정보를 해당 컨트롤에서 지 원하는 피어 및 패턴을 통해 UI 자동화에 보고 합니다. 예를 들어 [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) 폼 요소에는 값이 있습니다. 보조 기술은 UI 자동화 클라이언트 일 수 있으며, 값이 존재 하는 값을 모두 검색할 수 있습니다. 이 경우 **텍스트 상자** 는 [**TextBoxAutomationPeer**](/uwp/api/Windows.UI.Xaml.Automation.Peers.TextBoxAutomationPeer) 정의를 통해 [**ivalueprovider**](/uwp/api/Windows.UI.Xaml.Automation.Provider.IValueProvider) 패턴을 지원 합니다.
 
 > [!NOTE]
-> [**AutomationProperties.Name**](/dotnet/api/system.windows.automation.automationproperties.name) 또는 기타 기술을 사용 하 여 액세스 가능한 이름을 명시적으로 제공 하는 경우 컨트롤 역할에 사용 되는 것과 동일한 텍스트를 포함 하거나 액세스 가능한 이름에 정보를 입력 하지 마십시오. 예를 들어 이름에 "button" 또는 "list"와 같은 문자열은 포함 하지 않습니다. 역할 및 형식 정보는 UI 자동화에 대 한 기본 컨트롤 지원에서 제공 하는 다른 UI 자동화 속성 (**LocalizedControlType**)에서 제공 됩니다. 많은 보조 기술에서 액세스 가능한 이름에 **LocalizedControlType** 를 추가 하므로 액세스 가능한 이름의 역할을 복제 하면 불필요 하 게 반복 되는 단어가 발생할 수 있습니다. 예를 들어 "button"의 액세스 가능한 이름을 [**단추**](/uwp/api/Windows.UI.Xaml.Controls.Button) 컨트롤에 지정 하거나 이름의 마지막 부분으로 "button"을 포함 하는 경우 화면 판독기에서 "단추 단추"로 읽을 수 있습니다. 내레이터를 사용 하 여 내게 필요한 옵션 정보의이 측면을 테스트 해야 합니다.
+> [**AutomationProperties.Name**](/dotnet/api/system.windows.automation.automationproperties.name) 또는 기타 기술을 사용 하 여 액세스 가능한 이름을 명시적으로 제공 하는 경우 컨트롤 역할에 사용 되는 것과 동일한 텍스트를 포함 하거나 액세스 가능한 이름에 정보를 입력 하지 마십시오. 예를 들어 이름에 "button" 또는 "list"와 같은 문자열은 포함 하지 않습니다. 역할 및 형식 정보는 UI 자동화에 대 한 기본 컨트롤 지원에서 제공 하는 다른 UI 자동화 속성 ( **LocalizedControlType** )에서 제공 됩니다. 많은 보조 기술에서 액세스 가능한 이름에 **LocalizedControlType** 를 추가 하므로 액세스 가능한 이름의 역할을 복제 하면 불필요 하 게 반복 되는 단어가 발생할 수 있습니다. 예를 들어 "button"의 액세스 가능한 이름을 [**단추**](/uwp/api/Windows.UI.Xaml.Controls.Button) 컨트롤에 지정 하거나 이름의 마지막 부분으로 "button"을 포함 하는 경우 화면 판독기에서 "단추 단추"로 읽을 수 있습니다. 내레이터를 사용 하 여 내게 필요한 옵션 정보의이 측면을 테스트 해야 합니다.
 
 <span id="Influencing_the_UI_Automation_tree_views"/>
 <span id="influencing_the_ui_automation_tree_views"/>
@@ -134,14 +134,14 @@ XAML
 ## <a name="testing-accessibility-early-and-often"></a>조기에 자주 액세스 가능성 테스트  
 궁극적으로 화면 판독기를 지원 하기 위한 가장 좋은 방법은 화면 판독기를 사용 하 여 앱을 테스트 하는 것입니다. 그러면 화면 판독기가 동작 하는 방식과 앱에서 누락 될 수 있는 기본 접근성 정보가 표시 됩니다. 그에 맞게 UI 또는 UI 자동화 속성을 조정할 수 있습니다. 자세한 내용은 [내게 필요한 옵션 테스트](accessibility-testing.md)를 참조 하십시오.
 
-액세스 가능성 테스트에 사용할 수 있는 도구 중 하나를 **Accscope**라고 합니다. 사용자가 응용 프로그램을 자동화 트리로 볼 수 있는 방법을 나타내는 UI의 시각적 표시를 볼 수 있기 때문에 **Accscope** 도구는 특히 유용 합니다. 특히 내레이터가 앱에서 텍스트를 가져오는 방법 및 UI에서 요소를 구성 하는 방법에 대 한 보기를 제공 하는 내레이터 모드가 있습니다. AccScope는 예비 디자인 단계 에서도 사용할 수 있고 앱에 대 한 개발 주기 전체에서 유용 하 게 사용할 수 있도록 설계 되었습니다. 자세한 내용은 [Accscope](/windows/desktop/WinAuto/accscope)를 참조 하세요.
+액세스 가능성 테스트에 사용할 수 있는 도구 중 하나를 **Accscope** 라고 합니다. 사용자가 응용 프로그램을 자동화 트리로 볼 수 있는 방법을 나타내는 UI의 시각적 표시를 볼 수 있기 때문에 **Accscope** 도구는 특히 유용 합니다. 특히 내레이터가 앱에서 텍스트를 가져오는 방법 및 UI에서 요소를 구성 하는 방법에 대 한 보기를 제공 하는 내레이터 모드가 있습니다. AccScope는 예비 디자인 단계 에서도 사용할 수 있고 앱에 대 한 개발 주기 전체에서 유용 하 게 사용할 수 있도록 설계 되었습니다. 자세한 내용은 [Accscope](/windows/desktop/WinAuto/accscope)를 참조 하세요.
 
 <span id="Accessible_names_from_dynamic_data"/>
 <span id="accessible_names_from_dynamic_data"/>
 <span id="ACCESSIBLE_NAMES_FROM_DYNAMIC_DATA"/>
 
 ## <a name="accessible-names-from-dynamic-data"></a>동적 데이터에서 액세스할 수 있는 이름  
-Windows에서는 *데이터 바인딩*이라는 기능을 통해 연결 된 데이터 소스에서 가져온 값을 표시 하는 데 사용할 수 있는 많은 컨트롤을 지원 합니다. 목록을 데이터 항목으로 채우면 초기 목록이 채워진 후 데이터 바인딩된 목록 항목에 액세스할 수 있는 이름을 설정 하는 기술을 사용 해야 할 수 있습니다. 자세한 내용은 [XAML 접근성 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)에서 "Scenario 4"를 참조 하십시오.
+Windows에서는 *데이터 바인딩* 이라는 기능을 통해 연결 된 데이터 소스에서 가져온 값을 표시 하는 데 사용할 수 있는 많은 컨트롤을 지원 합니다. 목록을 데이터 항목으로 채우면 초기 목록이 채워진 후 데이터 바인딩된 목록 항목에 액세스할 수 있는 이름을 설정 하는 기술을 사용 해야 할 수 있습니다. 자세한 내용은 [XAML 접근성 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/XAML%20accessibility%20sample)에서 "Scenario 4"를 참조 하십시오.
 
 <span id="Accessible_names_and_localization"/>
 <span id="accessible_names_and_localization"/>

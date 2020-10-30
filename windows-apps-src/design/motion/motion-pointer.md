@@ -1,17 +1,17 @@
 ---
-Description: 사용자가 항목을 탭 할 때 시각적 피드백을 사용자에 게 제공 하려면 포인터 애니메이션을 사용 합니다.
+description: 사용자가 항목을 탭 할 때 시각적 피드백을 사용자에 게 제공 하려면 포인터 애니메이션을 사용 합니다.
 title: 포인터 클릭 애니메이션
 ms.assetid: EEB10A2C-629A-4705-8468-4D019D74DDFF
 ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: d429f55b6c8004ea0b5e16f842f5c7ee492d754d
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 1f2d6367ebd8e87cbb32f7a12a829dba7fa38ace
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218850"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034186"
 ---
 # <a name="pointer-click-animations"></a>포인터 클릭 애니메이션
 
@@ -20,7 +20,7 @@ ms.locfileid: "91218850"
 사용자가 항목을 탭 할 때 시각적 피드백을 사용자에 게 제공 하려면 포인터 애니메이션을 사용 합니다. 포인터 아래로 애니메이션은 눌러진 항목을 약간 축소 하 고 tilts, 항목을 처음 누를 때 재생 됩니다. 항목을 원래 위치로 복원 하는 포인터 위로 애니메이션은 사용자가 포인터를 놓을 때 재생 됩니다.
 
 
-> **중요 한 api**: [**PointerUpThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation), [**PointerDownThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation)
+> **중요 한 api** : [**PointerUpThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation), [**PointerDownThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
@@ -35,6 +35,6 @@ ms.locfileid: "91218850"
 * [**PointerUpThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.PointerUpThemeAnimation)
 * [**PointerDownThemeAnimation 클래스**](/uwp/api/Windows.UI.Xaml.Media.Animation.PointerDownThemeAnimation)
 
- 
+ 
 
- 
+ 

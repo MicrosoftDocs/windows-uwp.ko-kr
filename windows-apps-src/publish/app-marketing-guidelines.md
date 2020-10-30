@@ -1,17 +1,17 @@
 ---
-Description: Microsoft Store에서 앱과 콘텐츠를 승격 하는 방법에 대해 알아봅니다. 이러한 지침은 인쇄, TV, 소셜 미디어 및 디지털 광고에서 앱을 홍보 하기 위한 권장 사항과 함께 사용할 수 있는 자산을 사용 하는 방법을 다룹니다.
+description: Microsoft Store에서 앱과 콘텐츠를 승격 하는 방법에 대해 알아봅니다. 이러한 지침은 인쇄, TV, 소셜 미디어 및 디지털 광고에서 앱을 홍보 하기 위한 권장 사항과 함께 사용할 수 있는 자산을 사용 하는 방법을 다룹니다.
 title: 앱에 대 한 Microsoft Store 마케팅 지침
 ms.assetid: CEB81E9D-5C64-458F-AAF1-C59BBBBB272E
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 64da05c3c3caed204e33890e88222e9a75be3ae0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 753b60cf3da6400d3df695c2f390c0b47c7a9e68
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89162057"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033966"
 ---
 # <a name="microsoft-store-marketing-guidelines-for-apps"></a>앱에 대 한 Microsoft Store 마케팅 지침
 
@@ -37,7 +37,7 @@ Microsoft Store의 앱 목록에 더 많은 고객을 구동 하는 데 도움�
 
 앱을 승격 하려면 Windows 장치에서 실행 될 때 표시 되는 모양을 표시 하는 것이 좋습니다. 휴대폰, 태블릿, 랩톱 및 Pc를 포함 하 여 다양 한 장치 섀시 이미지를 선택할 수 있습니다. 이러한 이미지를 사용 하는 방법에 대 한 모범 사례 및 기술 사양은 [Microsoft Store 마케팅 지침](https://download.microsoft.com/download/0/7/D/07DF43D4-B1A8-4D38-BC02-4903BB36CEE8/Microsoft_Store_Badge_Guidelines.pdf)에서 찾을 수 있습니다.
 
- **Windows 장치 아트** [ ![ 다운로드 단추](images/downloadbutton.png)](https://download.microsoft.com/download/1/A/5/1A58A23A-1388-4097-B441-A3E8DBC14849/Windows_Store_Device_Art.zip)
+**Windows 장치 아트** [ ![ 다운로드 단추](images/downloadbutton.png)](https://download.microsoft.com/download/1/A/5/1A58A23A-1388-4097-B441-A3E8DBC14849/Windows_Store_Device_Art.zip)
 
 ## <a name="license-to-microsoft-marks"></a>Microsoft 표시에 대 한 라이선스
 
@@ -53,6 +53,6 @@ Microsoft Store의 앱 목록에 더 많은 고객을 구동 하는 데 도움�
 
 Microsoft는 microsoft 표시 및 관련 영업권의 유일한 소유자 이며 Microsoft 표시의 사용과 관련 된 영업권 수혜자. Microsoft는 언제 든 지이 라이선스를 해지할 수 있습니다.
 
- 
+ 
 
- 
+ 

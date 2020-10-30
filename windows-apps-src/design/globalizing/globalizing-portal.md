@@ -1,5 +1,5 @@
 ---
-Description: 앱을 전역화 하 고 지역화 하는 이점 및 이러한 용어의 의미에 대해 알아보세요.
+description: 앱을 전역화 하 고 지역화 하는 이점 및 이러한 용어의 의미에 대해 알아보세요.
 Search.SourceType: Video
 title: 전역화 및 지역화
 ms.assetid: c0791eec-5bb8-4a13-8977-61d7d98e35ce
@@ -9,16 +9,16 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 세계화, 지역화 가능성, 지역화
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b288a4d0ceaa97a4f6357d99f9937e21305bf3f
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 3ed8c015947b073fce258cd46ff63a8c005d1916
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218336"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033746"
 ---
 # <a name="globalization-and-localization"></a>세계화 및 지역화
 
-Windows는 전 세계에서 언어, 지역, 문화 측면에서 다양한 사용자가 사용합니다. 사용자는 다양한 국가와 지역에서 다양한 언어를 사용합니다. 일부 사용자는 둘 이상의 언어를 사용합니다. 따라서 앱은 언어, 지역 및 문화권에 대 한 시스템 설정의 많은 순열을 포함 하는 구성에서 실행 됩니다. *세계화* 및 *지역화*를 사용 하 여 쉽게 조정할 수 있도록 디자인 하 여 앱에 대 한 잠재적 시장을 높일 수 있습니다.
+Windows는 전 세계에서 언어, 지역, 문화 측면에서 다양한 사용자가 사용합니다. 사용자는 다양한 국가와 지역에서 다양한 언어를 사용합니다. 일부 사용자는 둘 이상의 언어를 사용합니다. 따라서 앱은 언어, 지역 및 문화권에 대 한 시스템 설정의 많은 순열을 포함 하는 구성에서 실행 됩니다. *세계화* 및 *지역화* 를 사용 하 여 쉽게 조정할 수 있도록 디자인 하 여 앱에 대 한 잠재적 시장을 높일 수 있습니다.
 
 이 비디오에서는 [세계화 및 지역화를 소개](https://channel9.msdn.com/Blogs/One-Dev-Minute/Introduction-to-globalization-and-localization)하는 전 세계를 위해 앱을 준비 하는 방법을 간략하게 소개 합니다.
 
@@ -69,4 +69,4 @@ Windows는 전 세계에서 언어, 지역, 문화 측면에서 다양한 사용
 | [다국어 앱 도구 키트 4.0 사용](use-mat.md) | 다국어 앱 도구 키트 (대만) 4.0는 Microsoft Visual Studio 2017 이상 버전을 통합 하 여 번역 지원, 번역 파일 관리 및 편집기 도구를 통해 Windows 앱을 제공 합니다. |
 | [다국어 앱 도구 키트 4.0 FAQ & 문제 해결](mat-faq-troubleshooting.md) | 이 항목에서는 다국어 앱 도구 키트 (대만) 4.0에 관련 된 질문과 대답을 제공 합니다. |
 | [UTF-8 코드 페이지 사용](use-utf8-code-page.md) | U t f-8은 국제화를 위한 유니버설 코드 페이지입니다. |
-| [일본의 시대 변경을 대비한 애플리케이션 준비](japanese-era-change.md) | 2019년 5월 일본의 연호 변경과 애플리케이션을 준비하는 방법에 대해 알아보세요. |
+| [일본 era 변경을 위해 응용 프로그램 준비](japanese-era-change.md) | 2019년 5월 일본의 연호 변경과 애플리케이션을 준비하는 방법에 대해 알아보세요. |

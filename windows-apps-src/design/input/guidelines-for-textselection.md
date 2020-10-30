@@ -1,5 +1,5 @@
 ---
-Description: 이 항목에서는 텍스트, 이미지 및 컨트롤을 선택 하 고 조작 하는 새로운 Windows UI에 대해 설명 하 고 Windows 앱에서 이러한 새 선택 및 조작 메커니즘을 사용할 때 고려해 야 하는 사용자 환경 지침을 제공 합니다.
+description: 이 항목에서는 텍스트, 이미지 및 컨트롤을 선택 하 고 조작 하는 새로운 Windows UI에 대해 설명 하 고 Windows 앱에서 이러한 새 선택 및 조작 메커니즘을 사용할 때 고려해 야 하는 사용자 환경 지침을 제공 합니다.
 title: 텍스트 및 이미지 선택
 ms.assetid: d973ffd8-602e-47b5-ab0b-4b2a964ec53d
 label: Selecting text and images
@@ -8,19 +8,19 @@ keywords: 키보드, 텍스트, 입력, 사용자 상호 작용
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 179eeffd014cb614fb5314826068d9690fc29807
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 0b7954ec21b2282700352b94e7a84bf6914d7f9c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216976"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032856"
 ---
 # <a name="selecting-text-and-images"></a>텍스트 및 이미지 선택
 
 
 이 문서에서는 텍스트, 이미지 및 컨트롤을 선택 하 고 조작 하는 방법을 설명 하 고 앱에서 이러한 메커니즘을 사용할 때 고려해 야 하는 사용자 환경 지침을 제공 합니다.
 
-> **중요 한 api**: [**windows. .xaml**](/uwp/api/Windows.UI.Xaml.Input). input, [**windows**](/uwp/api/Windows.UI.Input)
+> **중요 한 api** : [**windows. .xaml**](/uwp/api/Windows.UI.Xaml.Input). input, [**windows**](/uwp/api/Windows.UI.Input)
  
 
 
@@ -78,9 +78,9 @@ Windows에서는 선택 상호 작용에 대 한 두 가지 가능한 상태, �
 
 ![상황에 맞는 메뉴를 호출 하려면 선택 영역 또는 위치 조정 내에서 탭 하거나 길게 누릅니다.](images/textselection-show-context.png)
 
-**참고**    철자가 잘못 된 단어의 경우 이러한 상호 작용은 약간 다릅니다. 철자가 잘못 된 것으로 표시 된 단어를 누르면 단어 전체를 강조 표시 하 고 제안 된 맞춤법 상황에 맞는 메뉴를 호출 합니다.
+**참고**  철자가 잘못 된 단어의 경우 이러한 상호 작용은 약간 다릅니다. 철자가 잘못 된 것으로 표시 된 단어를 누르면 단어 전체를 강조 표시 하 고 제안 된 맞춤법 상황에 맞는 메뉴를 호출 합니다.
 
- 
+ 
 
 **편집할 수 없는 콘텐츠**
 

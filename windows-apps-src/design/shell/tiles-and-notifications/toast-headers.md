@@ -1,5 +1,5 @@
 ---
-Description: 헤더를 사용 하 여 알림 메시지를 중앙에서 관리 하는 방법을 알아봅니다.
+description: 헤더를 사용 하 여 알림 메시지를 중앙에서 관리 하는 방법을 알아봅니다.
 title: 알림 헤더
 label: Toast headers
 template: detail.hbs
@@ -7,19 +7,19 @@ ms.date: 12/07/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림, 헤더, 알림 헤더, 알림, 그룹 알림을, 동작 센터
 ms.localizationpriority: medium
-ms.openlocfilehash: 95cd6083cf4430f25b1514a7e163d04892097903
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: 1afc354b15b7c916426ca3c0a7130b777c21e0cf
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984479"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033076"
 ---
 # <a name="toast-headers"></a>알림 헤더
 
 알림에서 알림 헤더를 사용 하 여 관리 센터 내에서 관련 알림 집합을 시각적으로 그룹화 할 수 있습니다.
 
 > [!IMPORTANT]
-> **바탕 화면 작성자 업데이트 및 알림 라이브러리 1.4.0 필요**: 알림 헤더를 보려면 데스크톱 빌드 15063 이상을 실행 해야 합니다. 1.4.0 버전 이상의 [UWP Community Toolkit Notification NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) 를 사용 하 여 알림 콘텐츠에서 헤더를 생성 해야 합니다. 헤더는 데스크톱 에서만 지원 됩니다.
+> **바탕 화면 작성자 업데이트 및 알림 라이브러리 1.4.0 필요** : 알림 헤더를 보려면 데스크톱 빌드 15063 이상을 실행 해야 합니다. 1.4.0 버전 이상의 [UWP Community Toolkit Notification NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) 를 사용 하 여 알림 콘텐츠에서 헤더를 생성 해야 합니다. 헤더는 데스크톱 에서만 지원 됩니다.
 
 아래 표시 된 것 처럼이 그룹 대화는 단일 헤더 "캠핑!!"로 통합 됩니다. 대화의 각 개별 메시지는 동일한 알림 헤더를 공유 하는 별도의 알림 메시지입니다.
 
@@ -64,7 +64,7 @@ new ToastContentBuilder()
 요약 ...
 
 1. **Toa 내용** 에 **헤더** 추가
-2. 필요한 **Id**, **제목**및 **인수** 속성을 할당 합니다.
+2. 필요한 **Id** , **제목** 및 **인수** 속성을 할당 합니다.
 3. 알림 보내기 ([자세한 정보](send-local-toast.md))
 4. 다른 알림에서 동일한 헤더 **Id** 를 사용 하 여 헤더에서 통합 합니다. **Id** 는 알림을 그룹화 해야 하는지 여부를 결정 하는 데 사용 되는 유일한 속성입니다. 즉, **제목** 및 **인수** 는 다를 수 있습니다. 그룹 내의 가장 최근 알림의 **제목과** **인수가** 사용 됩니다. 해당 알림이 제거 되 면 **제목** 및 **인수** 는 다음으로 가장 최근의 알림으로 돌아옵니다.
 
@@ -80,11 +80,11 @@ new ToastContentBuilder()
 ```csharp
 protected override void OnActivated(IActivatedEventArgs e)
 {
-    // Handle toast activation
-    if (e is ToastNotificationActivatedEventArgs)
-    {
+    // Handle toast activation
+    if (e is ToastNotificationActivatedEventArgs)
+    {
         // Arguments specified from the header
-        string arguments = (e as ToastNotificationActivatedEventArgs).Argument;
+        string arguments = (e as ToastNotificationActivatedEventArgs).Argument;
     }
 }
 ```
@@ -96,7 +96,7 @@ protected override void OnActivated(IActivatedEventArgs e)
 
 헤더 내의 알림 순서는 다음과 같습니다. 지정 된 앱의 경우 앱에서 가장 최근의 알림과 헤더의 일부인 경우 전체 헤더 그룹이 먼저 표시 됩니다.
 
-**Id** 는 선택한 모든 문자열일 수 있습니다. **ToastHeader**의 속성에는 길이 또는 문자 제한이 없습니다. 유일한 제약 조건은 전체 XML 알림 콘텐츠가 5kb 보다 클 수 없다는 것입니다.
+**Id** 는 선택한 모든 문자열일 수 있습니다. **ToastHeader** 의 속성에는 길이 또는 문자 제한이 없습니다. 유일한 제약 조건은 전체 XML 알림 콘텐츠가 5kb 보다 클 수 없다는 것입니다.
 
 헤더를 만들면 "자세히 보기" 단추가 표시 되기 전에 작업 센터 내에 표시 되는 알림 수를 변경 하지 않습니다 .이 값은 기본적으로 3 이며 알림에 대 한 시스템 설정의 각 앱에 대해 사용자가 구성할 수 있습니다.
 

@@ -1,26 +1,26 @@
 ---
-Description: UWP 앱에서 사용자 지정 이벤트를 기록 하 고 파트너 센터의 사용량 보고서에서 해당 이벤트를 검토할 수 있습니다.
+description: UWP 앱에서 사용자 지정 이벤트를 기록 하 고 파트너 센터의 사용량 보고서에서 해당 이벤트를 검토할 수 있습니다.
 title: 파트너 센터의 사용자 지정 이벤트 로깅
 ms.date: 06/01/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, 로그 이벤트
 ms.assetid: 4aa591e0-c22a-4c90-b316-0b5d0410af19
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a1df08b62199bf1249af8bfbbb00921874a671c
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 3cc89272984ffdda47c488e7bb2f24b4f37d3a41
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89364106"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033456"
 ---
 # <a name="log-custom-events-for-partner-center"></a>파트너 센터의 사용자 지정 이벤트 로깅
 
-파트너 센터의 [사용량 보고서](../publish/usage-report.md) 를 사용 하 여 UWP (유니버설 Windows 플랫폼) 앱에서 정의한 사용자 지정 이벤트에 대 한 정보를 얻을 수 있습니다. 사용자 지정 이벤트는 앱의 이벤트 또는 활동을 나타내는 임의의 문자열입니다. 예를 들어 게임에서 사용자가 게임의 각 수준을 전달할 때 기록 되는 *Firstlevelpassed*, *secondLevelPassed*등의 사용자 지정 이벤트를 정의할 수 있습니다.
+파트너 센터의 [사용량 보고서](../publish/usage-report.md) 를 사용 하 여 UWP (유니버설 Windows 플랫폼) 앱에서 정의한 사용자 지정 이벤트에 대 한 정보를 얻을 수 있습니다. 사용자 지정 이벤트는 앱의 이벤트 또는 활동을 나타내는 임의의 문자열입니다. 예를 들어 게임에서 사용자가 게임의 각 수준을 전달할 때 기록 되는 *Firstlevelpassed* , *secondLevelPassed* 등의 사용자 지정 이벤트를 정의할 수 있습니다.
 
 앱에서 사용자 지정 이벤트를 기록 하려면 Microsoft Store Services SDK에서 제공 하는 [log](/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.log) 메서드에 사용자 지정 이벤트 문자열을 전달 합니다. 파트너 센터의 [사용량 보고서](../publish/usage-report.md) 의 **사용자 지정 이벤트** 섹션에서 사용자 지정 이벤트에 대 한 총 발생 횟수를 검토할 수 있습니다.
 
 > [!NOTE]
-> 파트너 센터에 로그인 하는 사용자 지정 이벤트는 [Windows 이벤트](/windows/desktop/Events/windows-events)와 관련이 없으며 **이벤트 뷰어**에 표시 되지 않습니다.
+> 파트너 센터에 로그인 하는 사용자 지정 이벤트는 [Windows 이벤트](/windows/desktop/Events/windows-events)와 관련이 없으며 **이벤트 뷰어** 에 표시 되지 않습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -30,13 +30,13 @@ ms.locfileid: "89364106"
 
 1. 아직 수행 하지 않은 경우 개발 컴퓨터에 [Microsoft Store 서비스 SDK를 설치](microsoft-store-services-sdk.md#install-the-sdk) 합니다.
 
-2. Visual Studio에서 프로젝트를 엽니다.
+2. Visual Studio에서 새 프로젝트를 엽니다.
 
-3. 솔루션 탐색기에서 프로젝트에 대 한 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가**를 클릭 합니다.
+3. 솔루션 탐색기에서 프로젝트에 대 한 **참조** 노드를 마우스 오른쪽 단추로 클릭 하 고 **참조 추가** 를 클릭 합니다.
 
-4. **참조 관리자**에서 **유니버설 Windows** 를 확장 하 고 **확장**을 클릭 합니다.
+4. **참조 관리자** 에서 **유니버설 Windows** 를 확장 하 고 **확장** 을 클릭 합니다.
 
-5. Sdk 목록에서 **Microsoft Engagement 프레임 워크** 옆의 확인란을 클릭 하 고 **확인**을 클릭 합니다.
+5. Sdk 목록에서 **Microsoft Engagement 프레임 워크** 옆의 확인란을 클릭 하 고 **확인** 을 클릭 합니다.
 
 6. 사용자 지정 이벤트를 기록 하려는 각 코드 파일의 맨 위에 다음 문을 추가 합니다.
     :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/LogEvents.cs" id="EngagementNamespace":::

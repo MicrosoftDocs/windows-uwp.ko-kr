@@ -1,5 +1,5 @@
 ---
-Description: '데스크톱 c # 앱이 로컬 알림 메시지를 보내고 알림 메시지를 클릭 하 여 사용자를 처리 하는 방법을 알아봅니다.'
+description: '데스크톱 c # 앱이 로컬 알림 메시지를 보내고 알림 메시지를 클릭 하 여 사용자를 처리 하는 방법을 알아봅니다.'
 title: 데스크톱 C# 앱에서 로컬 알림 메시지 보내기
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Send a local toast notification from desktop C# apps
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: 'windows 10, win32, 데스크톱, 알림 메시지, 알림 보내기, 로컬 알림 메시지 보내기, 데스크톱 브리지, msix, 스파스 패키지, c #, c sharp, 알림 메시지, wpf, 알림 메시지 보내기 wpf, 알림 메시지 보내기 winforms, 알림 메시지 보내기 c #, 알림 wpf, 알림 c # 보내기 #'
 ms.localizationpriority: medium
-ms.openlocfilehash: 1fa6b23e775beee993051b23b828c59316ac1382
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: cb91a76db38623b533a925ea1df4728bc0fead78
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100301"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034476"
 ---
 # <a name="send-a-local-toast-notification-from-desktop-c-apps"></a>데스크톱 C# 앱에서 로컬 알림 메시지 보내기
 
@@ -60,7 +60,7 @@ public class MyNotificationActivator : NotificationActivator
 
 #### <a name="msixsparse-packages"></a>[MSIX/sparse 패키지](#tab/msix-sparse)
 
-[Msix](/windows/msix/desktop/source-code-overview) 또는 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 경우 (또는 둘 다를 지 원하는 경우) appxmanifest.xml에서 다음을 추가 **합니다**.
+[Msix](/windows/msix/desktop/source-code-overview) 또는 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 경우 (또는 둘 다를 지 원하는 경우) appxmanifest.xml에서 다음을 추가 **합니다** .
 
 1. **Xmlns: com** 에 대 한 선언
 2. **Xmlns: desktop** 에 대 한 선언
@@ -162,7 +162,7 @@ DesktopNotificationManagerCompat.RegisterActivator<MyNotificationActivator>();
 
 ## <a name="step-5-send-a-notification"></a>5 단계: 알림 보내기
 
-Notification notification manager **호환** 클래스를 사용 하 여 **to **notification을 만드는 것을 제외 하 고는 UWP 앱과 동일 합니다. 호환 라이브러리는 MSIX/sparse 패키지와 클래식 데스크톱 간의 차이점을 자동으로 처리 하므로 코드를 분기할 필요가 없습니다. 클래식 데스크톱의 경우에는 **RegisterAumidAndComServer** 를 호출할 때 사용자가 제공한 AUMID를 캐시 하 여 제공 하거나 제공 하지 않을 시기를 걱정 하지 않아도 됩니다.
+Notification notification manager **호환** 클래스를 사용 하 여 **to** notification을 만드는 것을 제외 하 고는 UWP 앱과 동일 합니다. 호환 라이브러리는 MSIX/sparse 패키지와 클래식 데스크톱 간의 차이점을 자동으로 처리 하므로 코드를 분기할 필요가 없습니다. 클래식 데스크톱의 경우에는 **RegisterAumidAndComServer** 를 호출할 때 사용자가 제공한 AUMID를 캐시 하 여 제공 하거나 제공 하지 않을 시기를 걱정 하지 않아도 됩니다.
 
 > [!NOTE]
 > 원시 XML을 사용 하는 대신 아래와 같이 c #을 사용 하 여 알림을 생성할 수 있도록 [알림 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) 를 설치 합니다.
@@ -351,7 +351,7 @@ MSIX/sparse 패키지와 클래식 데스크톱 앱을 모두 설치한 경우 �
 
 ## <a name="known-issues"></a>알려진 문제
 
-**수정 됨: 알림 클릭 후 앱이 집중 되지 않습니다**. 빌드 15063 이전 버전에서는 COM 서버를 활성화할 때 포그라운드 권한이 응용 프로그램에 전송 되지 않습니다. 따라서 앱은 포그라운드로 이동 하려고 할 때만 깜박입니다. 이 문제에 대 한 해결 방법이 없습니다. 빌드 16299 이상에서이 문제를 해결 했습니다.
+**수정 됨: 알림 클릭 후 앱이 집중 되지 않습니다** . 빌드 15063 이전 버전에서는 COM 서버를 활성화할 때 포그라운드 권한이 응용 프로그램에 전송 되지 않습니다. 따라서 앱은 포그라운드로 이동 하려고 할 때만 깜박입니다. 이 문제에 대 한 해결 방법이 없습니다. 빌드 16299 이상에서이 문제를 해결 했습니다.
 
 
 ## <a name="resources"></a>리소스

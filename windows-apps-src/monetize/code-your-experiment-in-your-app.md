@@ -1,41 +1,41 @@
 ---
-Description: A/B 테스트를 사용 하 여 유니버설 Windows 플랫폼 (UWP) 앱에서 실험을 실행 하려면 앱에서 실험을 코딩 해야 합니다.
+description: A/B 테스트를 사용 하 여 유니버설 Windows 플랫폼 (UWP) 앱에서 실험을 실행 하려면 앱에서 실험을 코딩 해야 합니다.
 title: 실험용 앱 코딩
 ms.assetid: 6A5063E1-28CD-4087-A4FA-FBB511E9CED5
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
-ms.openlocfilehash: dbdd95ab0d4ecde5fbe5cfb8d84d2d328b4c5a24
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: a5229be4d0ea2ce98ec10530458fe29af10fa7f0
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363666"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033606"
 ---
 # <a name="code-your-app-for-experimentation"></a>실험용 앱 코딩
 
 [프로젝트를 만들고 파트너 센터에서 원격 변수를 정의한](create-a-project-and-define-remote-variables-in-the-dev-center-dashboard.md)후 UWP (유니버설 Windows 플랫폼) 앱에서 코드를 업데이트할 준비가 된 것입니다.
 * 파트너 센터에서 원격 변수 값을 수신 합니다.
 * 원격 변수를 사용 하 여 사용자에 대 한 앱 환경을 구성 합니다.
-* 사용자가 실험을 보고 원하는 작업 ( *변환*이 라고도 함)을 수행한 시기를 나타내는 파트너 센터에 이벤트를 기록 합니다.
+* 사용자가 실험을 보고 원하는 작업 ( *변환* 이 라고도 함)을 수행한 시기를 나타내는 파트너 센터에 이벤트를 기록 합니다.
 
 앱에이 동작을 추가 하려면 Microsoft Store Services SDK에서 제공 하는 Api를 사용 합니다.
 
 다음 섹션에서는 실험을 위한 변형과 파트너 센터에 이벤트를 기록 하는 일반적인 프로세스에 대해 설명 합니다. 실험을 위해 앱을 코딩 한 후 [파트너 센터에서 실험을 정의할](define-your-experiment-in-the-dev-center-dashboard.md)수 있습니다. 실험을 만들고 실행 하는 종단 간 프로세스를 보여 주는 연습은 [a/B 테스트를 사용 하 여 첫 번째 실험 만들기 및 실행](create-and-run-your-first-experiment-with-a-b-testing.md)을 참조 하세요.
 
 > [!NOTE]
-> Microsoft Store Services SDK의 실험 Api 중 일부는 [비동기 패턴](../threading-async/asynchronous-programming-universal-windows-platform-apps.md) 을 사용 하 여 파트너 센터에서 데이터를 검색 합니다. 즉, 메서드가 호출 된 후에 이러한 메서드 실행 부분이 수행 될 수 있으므로 작업이 완료 되는 동안에는 앱의 UI가 응답성을 유지할 수 있습니다. 비동기 패턴을 사용 하려면이 문서의 코드 예제에 나와 있는 것 처럼 Api를 호출할 때 앱에서 **async** 키워드 및 **wait** 연산자를 사용 해야 합니다. 규칙에 따라 비동기 메서드는 **Async**로 끝납니다.
+> Microsoft Store Services SDK의 실험 Api 중 일부는 [비동기 패턴](../threading-async/asynchronous-programming-universal-windows-platform-apps.md) 을 사용 하 여 파트너 센터에서 데이터를 검색 합니다. 즉, 메서드가 호출 된 후에 이러한 메서드 실행 부분이 수행 될 수 있으므로 작업이 완료 되는 동안에는 앱의 UI가 응답성을 유지할 수 있습니다. 비동기 패턴을 사용 하려면이 문서의 코드 예제에 나와 있는 것 처럼 Api를 호출할 때 앱에서 **async** 키워드 및 **wait** 연산자를 사용 해야 합니다. 규칙에 따라 비동기 메서드는 **Async** 로 끝납니다.
 
 ## <a name="configure-your-project"></a>프로젝트 구성
 
 시작 하려면 개발 컴퓨터에 Microsoft Store Services SDK를 설치 하 고 프로젝트에 필요한 참조를 추가 합니다.
 
 1. [Microsoft Store SERVICES SDK를 설치](microsoft-store-services-sdk.md#install-the-sdk)합니다.
-2. Visual Studio에서 프로젝트를 엽니다.
-3. 솔루션 탐색기에서 프로젝트 노드를 확장 하 고 **참조**를 마우스 오른쪽 단추로 클릭 한 다음 **참조 추가**를 클릭 합니다.
-3. **참조 관리자**에서 **유니버설 Windows** 를 확장 하 고 **확장**을 클릭 합니다.
-4. Sdk 목록에서 **Microsoft Engagement 프레임 워크** 옆의 확인란을 선택 하 고 **확인**을 클릭 합니다.
+2. Visual Studio에서 새 프로젝트를 엽니다.
+3. 솔루션 탐색기에서 프로젝트 노드를 확장 하 고 **참조** 를 마우스 오른쪽 단추로 클릭 한 다음 **참조 추가** 를 클릭 합니다.
+3. **참조 관리자** 에서 **유니버설 Windows** 를 확장 하 고 **확장** 을 클릭 합니다.
+4. Sdk 목록에서 **Microsoft Engagement 프레임 워크** 옆의 확인란을 선택 하 고 **확인** 을 클릭 합니다.
 
 > [!NOTE]
 > 이 문서의 코드 예제에서는 코드 파일에 **system.object** 및 **Microsoft** .. t a t 네임 스페이스에 대 한 문을 **사용 하** 는 것으로 가정 합니다.
@@ -70,7 +70,7 @@ ms.locfileid: "89363666"
 
 5. [StoreServicesExperimentVariation](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) 개체의 [getboolean](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getboolean), [Getboolean](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getdouble), [GetInt32](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getint32)또는 [GetString](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring) 메서드를 사용 하 여 변형 할당 값을 가져옵니다. 각 메서드에서 첫 번째 매개 변수는 검색 하려는 변형의 이름입니다 (파트너 센터에서 입력 하는 변형의 이름과 동일). 두 번째 매개 변수는 파트너 센터에서 지정 된 값을 검색할 수 없는 경우 (예: 네트워크 연결이 없는 경우) 메서드가 반환 해야 하는 기본값이 며, 캐시 된 버전의 변형을 사용할 수 없습니다.
 
-    다음 예에서는 [GetString](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring) 를 사용 하 여 *buttontext* 라는 변수를 가져오고 기본 변수 값인 **회색 단추**를 지정 합니다.
+    다음 예에서는 [GetString](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation.getstring) 를 사용 하 여 *buttontext* 라는 변수를 가져오고 기본 변수 값인 **회색 단추** 를 지정 합니다.
 
     :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/ExperimentExamples.cs" id="Snippet5":::
 
@@ -80,7 +80,7 @@ ms.locfileid: "89363666"
 
 7. 마지막으로, 실험을 위한 [view 이벤트](run-app-experiments-with-a-b-testing.md#terms) 를 파트너 센터의 A/B 테스트 서비스에 기록 합니다. ```logger``` [StoreServicesCustomEventLogger](/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger) 개체에 대 한 필드를 초기화 하 고 [logforvariation](/uwp/api/microsoft.services.store.engagement.storeservicescustomeventlogger.logforvariation) 메서드를 호출 합니다. 현재 변형 할당을 나타내는 [StoreServicesExperimentVariation](/uwp/api/microsoft.services.store.engagement.storeservicesexperimentvariation) 개체를 전달 합니다 .이 개체는 파트너 센터에 이벤트에 대 한 컨텍스트를 제공 합니다 .이 개체는 실험에 대 한 뷰 이벤트의 이름입니다. 파트너 센터에서 실험에 대해 입력 하는 뷰 이벤트 이름과 일치 해야 합니다. 사용자가 실험의 일부인 변형 보기를 시작할 때 코드에서 view 이벤트를 기록해 야 합니다.
 
-    다음 예에서는 **userViewedButton**라는 뷰 이벤트를 기록 하는 방법을 보여 줍니다. 이 예제에서 실험의 목표는 사용자가 앱의 단추를 클릭 하 여 응용 프로그램에서 변형 데이터 (이 경우 단추 텍스트)를 검색 하 고 단추 내용에 할당 한 후에 보기 이벤트가 기록 되도록 하는 것입니다.
+    다음 예에서는 **userViewedButton** 라는 뷰 이벤트를 기록 하는 방법을 보여 줍니다. 이 예제에서 실험의 목표는 사용자가 앱의 단추를 클릭 하 여 응용 프로그램에서 변형 데이터 (이 경우 단추 텍스트)를 검색 하 고 단추 내용에 할당 한 후에 보기 이벤트가 기록 되도록 하는 것입니다.
 
     :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/StoreSDKSamples/cs/ExperimentExamples.cs" id="Snippet7":::
 

@@ -1,5 +1,5 @@
 ---
-Description: 이 항목에서는 색 및 배경이 필요한 대비 비율을 충족 하도록 하 여 앱에서 텍스트의 접근성에 대 한 모범 사례를 설명 합니다.
+description: 이 항목에서는 색 및 배경이 필요한 명암비를 충족하도록 하여 앱 텍스트의 접근성에 대한 모범 사례를 설명합니다.
 ms.assetid: BA689C76-FE68-4B5B-9E8D-1E7697F737E6
 title: 접근성 있는 텍스트 요구 사항
 label: Accessible text requirements
@@ -8,19 +8,19 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3294daa57cc7d1eb585e41910f72f574d9ffb600
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: aefc53f6d28d2c30566680ac985a4712040ea8e0
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163387"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032615"
 ---
 # <a name="accessible-text-requirements"></a>접근성 있는 텍스트 요구 사항  
 
 
 
 
-이 항목에서는 색 및 배경이 필요한 대비 비율을 충족 하도록 하 여 앱에서 텍스트의 접근성에 대 한 모범 사례를 설명 합니다. 이 항목에서는 UWP (유니버설 Windows 플랫폼) 앱의 텍스트 요소에 포함 될 수 있는 Microsoft UI Automation 역할과 그래픽의 텍스트에 대 한 모범 사례에 대해서도 설명 합니다.
+이 항목에서는 색 및 배경이 필요한 명암비를 충족하도록 하여 앱 텍스트의 접근성에 대한 모범 사례를 설명합니다. 이 항목에서는 UWP (유니버설 Windows 플랫폼) 앱의 텍스트 요소에 포함 될 수 있는 Microsoft UI Automation 역할과 그래픽의 텍스트에 대 한 모범 사례에 대해서도 설명 합니다.
 
 <span id="contrast_rations"/>
 <span id="CONTRAST_RATIONS"/>
@@ -44,7 +44,7 @@ ms.locfileid: "89163387"
 <span id="TEXT_ELEMENT_ROLES"/>
 
 ## <a name="text-element-roles"></a>텍스트 요소 역할  
-UWP 앱은 다음과 같은 기본 요소 (일반적으로 *텍스트 요소나* *textedit과 컨트롤*이라고 함)를 사용할 수 있습니다.
+UWP 앱은 다음과 같은 기본 요소 (일반적으로 *텍스트 요소나* *textedit과 컨트롤* 이라고 함)를 사용할 수 있습니다.
 
 * [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock): Role은 [ **Text** 입니다.](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
 * [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox): 역할 [ **편집**](/uwp/api/Windows.UI.Xaml.Automation.Peers.AutomationControlType)
@@ -95,7 +95,7 @@ _기본 선택이 있는 예제_
 _기본 선택이 없는 예_
 
 ### <a name="xaml-implementation"></a>XAML 구현  
-기본 XAML [**AutosuggestBox**](/uwp/api/windows.ui.xaml.controls.autosuggestbox)를 사용 하는 경우 모든 것이 이미 후크 되어 있습니다. [**텍스트 상자**](/uwp/api/windows.ui.xaml.controls.textbox) 와 목록을 사용 하 여 자동 제안 환경을 자동으로 만들려면 **텍스트 상자**에 목록을 [**ControlledPeers**](/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) 로 설정 해야 합니다. 이 속성을 추가 또는 제거할 때마다 [**ControlledPeers**](/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) 속성에 대 한 **AutomationPropertyChanged** 이벤트를 실행 해야 하며, 시나리오의 유형에 따라 사용자 고유의 [**SelectionItemPatternOnElementSelected**](/uwp/api/windows.ui.xaml.automation.peers.automationevents) 이벤트 또는 [**LayoutInvalidated**](/uwp/api/windows.ui.xaml.automation.peers.automationevents) 이벤트를 발생 시켜야 합니다 .이 문서에서는이 문서의 앞부분에서 설명한 것입니다.
+기본 XAML [**AutosuggestBox**](/uwp/api/windows.ui.xaml.controls.autosuggestbox)를 사용 하는 경우 모든 것이 이미 후크 되어 있습니다. [**텍스트 상자**](/uwp/api/windows.ui.xaml.controls.textbox) 와 목록을 사용 하 여 자동 제안 환경을 자동으로 만들려면 **텍스트 상자** 에 목록을 [**ControlledPeers**](/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) 로 설정 해야 합니다. 이 속성을 추가 또는 제거할 때마다 [**ControlledPeers**](/uwp/api/windows.ui.xaml.automation.automationproperties.getcontrolledpeers) 속성에 대 한 **AutomationPropertyChanged** 이벤트를 실행 해야 하며, 시나리오의 유형에 따라 사용자 고유의 [**SelectionItemPatternOnElementSelected**](/uwp/api/windows.ui.xaml.automation.peers.automationevents) 이벤트 또는 [**LayoutInvalidated**](/uwp/api/windows.ui.xaml.automation.peers.automationevents) 이벤트를 발생 시켜야 합니다 .이 문서에서는이 문서의 앞부분에서 설명한 것입니다.
 
 ### <a name="html-implementation"></a>HTML 구현  
 HTML에서 내장 컨트롤을 사용 하는 경우 UIA 구현은 이미 매핑 되었습니다. 다음은 이미 후크 된 구현의 예입니다.
@@ -129,16 +129,16 @@ HTML에서 내장 컨트롤을 사용 하는 경우 UIA 구현은 이미 매핑 
 명확 하 게 완료 되 면 Windows에는 사용자가 활용할 수 있는 다양 한 내게 필요한 옵션 도구 및 설정이 포함 되며,이를 통해 사용자는 자신의 요구와 텍스트 읽기를 위한 기본 설정을 변경할 수 있습니다. 여기에는 다음이 포함됩니다.
 
 * UI의 선택한 영역을 확대 하는 돋보기 도구입니다. 앱에서 텍스트의 레이아웃을 사용 하 여 편집용으로 돋보기를 사용 하는 것이 어려울 수 있도록 해야 합니다.
-* **설정->시스템->디스플레이 >크기 조정 및 레이아웃에 대**한 전역 크기 조정 및 해상도 설정 사용 가능한 크기 옵션은 표시 장치의 기능에 따라 달라질 수 있습니다.
+* **설정->시스템->디스플레이 >크기 조정 및 레이아웃에 대** 한 전역 크기 조정 및 해상도 설정 사용 가능한 크기 옵션은 표시 장치의 기능에 따라 달라질 수 있습니다.
 * 설정의 텍스트 크기 설정 **-접근성 >표시를 >** 합니다. **텍스트 크게 만들기** 설정을 조정 하 여 모든 응용 프로그램 및 화면에서 지원 컨트롤의 텍스트 크기만 지정 합니다. 모든 UWP 텍스트 컨트롤은 사용자 지정 또는 템플릿 없이 텍스트 크기 조정 환경을 지원 합니다. 
 > [!NOTE]
 > **모든 항목을 크게** 설정 하면 사용자가 기본 화면 에서만 일반 텍스트 및 앱에 대 한 기본 설정 크기를 지정할 수 있습니다.
 
-다양 한 텍스트 요소 및 컨트롤에는 [**IsTextScaleFactorEnabled**](/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled) 속성이 있습니다. 이 속성의 기본값은 **true** 입니다. **True 이면**해당 요소의 텍스트 크기를 조정할 수 있습니다. 크기 **조정은 크기가 작은**텍스트에 영향을 주는 것 보다 작은 **fontsize** 의 텍스트에 영향을 줍니다. 요소의 **IsTextScaleFactorEnabled** 속성을 **false**로 설정 하 여 자동 크기 조정을 사용 하지 않도록 설정할 수 있습니다. 
+다양 한 텍스트 요소 및 컨트롤에는 [**IsTextScaleFactorEnabled**](/uwp/api/windows.ui.xaml.controls.textblock.istextscalefactorenabled) 속성이 있습니다. 이 속성의 기본값은 **true** 입니다. **True 이면** 해당 요소의 텍스트 크기를 조정할 수 있습니다. 크기 **조정은 크기가 작은** 텍스트에 영향을 주는 것 보다 작은 **fontsize** 의 텍스트에 영향을 줍니다. 요소의 **IsTextScaleFactorEnabled** 속성을 **false** 로 설정 하 여 자동 크기 조정을 사용 하지 않도록 설정할 수 있습니다. 
 
 자세한 내용은 [텍스트 크기 조정](../input/text-scaling.md) 을 참조 하세요.
 
-앱에 다음 태그를 추가 하 고 실행 합니다. **텍스트 크기** 설정을 조정 하 고 각 **TextBlock**에 발생 하는 결과를 확인 합니다.
+앱에 다음 태그를 추가 하 고 실행 합니다. **텍스트 크기** 설정을 조정 하 고 각 **TextBlock** 에 발생 하는 결과를 확인 합니다.
 
 XAML
 ```xml

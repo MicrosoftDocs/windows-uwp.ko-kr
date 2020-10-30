@@ -1,5 +1,5 @@
 ---
-Description: 3D 제조 형식 파일 형식의 구조와 Printing3D API를 사용 하 여이를 만들고 조작 하는 방법을 설명 합니다.
+description: 3D 제조 형식 파일 형식의 구조와 Printing3D API를 사용 하 여이를 만들고 조작 하는 방법을 설명 합니다.
 MS-HAID: dev\_devices\_sensors.generate\_3mf
 MSHAttr: PreferredLib:/library/windows/apps
 Search.Product: eADQiWindows 10XVcnh
@@ -9,12 +9,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 032117349ea20cc3f4f6a3275969ff59a05502b4
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 7beafb754ead837dd9218d4a9e0223334e12bfb1
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363946"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034656"
 ---
 # <a name="generate-a-3mf-package"></a>3MF 패키지 생성
 
@@ -78,35 +78,35 @@ Printing3DMesh 개체에 유효한 꼭지점과 삼각형 집합이 있으면 �
 
 ### <a name="base-materials"></a>기본 자료
 
-기본 재질 형식은 **색 재질** 값 (아래 설명)과 사용할 재질 *유형을* 지정 하기 위한 이름 특성을 모두 포함 하는 **기본 재질**입니다.
+기본 재질 형식은 **색 재질** 값 (아래 설명)과 사용할 재질 *유형을* 지정 하기 위한 이름 특성을 모두 포함 하는 **기본 재질** 입니다.
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/devices-sensors/3dprinthowto/cs/Generate3MFMethods.cs" id="SnippetBaseMaterialGroup":::
 
 > [!NOTE]
-> 3D 제조 장치는 3MF에 저장 된 가상 자재 요소에 대 한 사용 가능한 물리적 재질 지도를 결정 합니다. 재질 매핑은 1:1 일 필요가 없습니다. 3D 프린터가 하나의 재질만 사용 하는 경우 다른 자료에 할당 된 개체나 얼굴에 관계 없이 전체 모델을 해당 재질에 인쇄 합니다.
+> 3D 제조 장치는 3MF에 저장 된 가상 자재 요소에 대 한 사용 가능한 물리적 재질 지도를 결정 합니다. 재질 매핑은 1:1 일 필요가 없습니다. 3D 프린터가 하나의 재질만 사용 하는 경우 다른 자료에 할당 된 개체나 얼굴에 관계 없이 전체 모델을 해당 재질에 인쇄 합니다.
 
 ### <a name="color-materials"></a>색 재질
 
-**색 자료** 는 **기본 자료**와 비슷하지만 이름을 포함 하지 않습니다. 따라서 컴퓨터에서 사용 해야 하는 자료의 유형에 대 한 지침을 제공 하지 않습니다. 색 데이터만 보유 하 고, 컴퓨터에서 재질 유형을 선택 하 게 하 고, 컴퓨터에서 사용자에 게 선택 하 라는 메시지를 표시할 수 있도록 합니다. 아래 코드에서는 `colrMat` 이전 메서드의 개체를 자체적으로 사용 합니다.
+**색 자료** 는 **기본 자료** 와 비슷하지만 이름을 포함 하지 않습니다. 따라서 컴퓨터에서 사용 해야 하는 자료의 유형에 대 한 지침을 제공 하지 않습니다. 색 데이터만 보유 하 고, 컴퓨터에서 재질 유형을 선택 하 게 하 고, 컴퓨터에서 사용자에 게 선택 하 라는 메시지를 표시할 수 있도록 합니다. 아래 코드에서는 `colrMat` 이전 메서드의 개체를 자체적으로 사용 합니다.
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/devices-sensors/3dprinthowto/cs/Generate3MFMethods.cs" id="SnippetColorMaterialGroup":::
 
 ### <a name="composite-materials"></a>복합 재질
 
-**복합 자료** 는 다른 **기본 자료**를 균일 하 게 혼합 하 여 사용 하도록 제조 장치에 지시 합니다. 각 **복합 재질 그룹** 은 원료를 그릴 **기본 재질 그룹** 을 정확히 하나 참조 해야 합니다. 또한이 그룹 내에서 사용할 수 있는 **기본 자료** 는 **자료 인덱스** 목록에 나열 되어야 합니다 .이 목록에서 각 **복합 재질** 은 비율을 지정할 때 참조 됩니다. 모든 **복합 재질** 은 단순히 **기본 자료**의 비율입니다.
+**복합 자료** 는 다른 **기본 자료** 를 균일 하 게 혼합 하 여 사용 하도록 제조 장치에 지시 합니다. 각 **복합 재질 그룹** 은 원료를 그릴 **기본 재질 그룹** 을 정확히 하나 참조 해야 합니다. 또한이 그룹 내에서 사용할 수 있는 **기본 자료** 는 **자료 인덱스** 목록에 나열 되어야 합니다 .이 목록에서 각 **복합 재질** 은 비율을 지정할 때 참조 됩니다. 모든 **복합 재질** 은 단순히 **기본 자료** 의 비율입니다.
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/devices-sensors/3dprinthowto/cs/Generate3MFMethods.cs" id="SnippetCompositeMaterialGroup":::
 
 ### <a name="texture-coordinate-materials"></a>질감 좌표 재질
 
-3MF는 2D 이미지를 사용 하 여 3D 모델의 표면을 색으로 표시 하도록 지원 합니다. 이러한 방식으로 모델은 삼각형 면에서 색 값을 하나만 포함 하는 것이 아니라 삼각형 면 마다 훨씬 더 많은 색 데이터를 전달할 수 있습니다. **색 재질**처럼 질감 좌표 재질은 색 데이터만 효과적입니다. 2D 질감을 사용 하려면 먼저 질감 리소스를 선언 해야 합니다.
+3MF는 2D 이미지를 사용 하 여 3D 모델의 표면을 색으로 표시 하도록 지원 합니다. 이러한 방식으로 모델은 삼각형 면에서 색 값을 하나만 포함 하는 것이 아니라 삼각형 면 마다 훨씬 더 많은 색 데이터를 전달할 수 있습니다. **색 재질** 처럼 질감 좌표 재질은 색 데이터만 효과적입니다. 2D 질감을 사용 하려면 먼저 질감 리소스를 선언 해야 합니다.
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/devices-sensors/3dprinthowto/cs/Generate3MFMethods.cs" id="SnippetTextureResource":::
 
 > [!NOTE]
 > 텍스처 데이터는 패키지 내의 모델 부분이 아니라 3MF 패키지 자체에 속합니다.
 
-다음으로 **Texture3Coord 자료**를 작성 해야 합니다. 이러한 각는 질감 리소스를 참조 하 고 이미지의 특정 점 (UV 좌표)을 지정 합니다.
+다음으로 **Texture3Coord 자료** 를 작성 해야 합니다. 이러한 각는 질감 리소스를 참조 하 고 이미지의 특정 점 (UV 좌표)을 지정 합니다.
 
 :::code language="csharp" source="~/../snippets-windows/windows-uwp/devices-sensors/3dprinthowto/cs/Generate3MFMethods.cs" id="SnippetTexture2CoordMaterialGroup":::
 
@@ -118,7 +118,7 @@ Printing3DMesh 개체에 유효한 꼭지점과 삼각형 집합이 있으면 �
 
 ## <a name="components-and-build"></a>구성 요소 및 빌드
 
-사용자는 구성 요소 구조를 사용 하 여 두 개 이상의 메시 개체를 인쇄 가능한 3D 모델에 둘 수 있습니다. [**Printing3DComponent**](/uwp/api/windows.graphics.printing3d.printing3dcomponent) 개체에는 단일 메시와 다른 구성 요소에 대 한 참조 목록이 포함 되어 있습니다. 이는 실제로 [**Printing3DComponentWithMatrix**](/uwp/api/windows.graphics.printing3d.printing3dcomponentwithmatrix) 개체의 목록입니다. **Printing3DComponentWithMatrix** 개체에는 각각 **Printing3DComponent** 및 **Printing3DComponent**의 포함 된 구성 요소에 적용 되는 변형 매트릭스가 포함 됩니다.
+사용자는 구성 요소 구조를 사용 하 여 두 개 이상의 메시 개체를 인쇄 가능한 3D 모델에 둘 수 있습니다. [**Printing3DComponent**](/uwp/api/windows.graphics.printing3d.printing3dcomponent) 개체에는 단일 메시와 다른 구성 요소에 대 한 참조 목록이 포함 되어 있습니다. 이는 실제로 [**Printing3DComponentWithMatrix**](/uwp/api/windows.graphics.printing3d.printing3dcomponentwithmatrix) 개체의 목록입니다. **Printing3DComponentWithMatrix** 개체에는 각각 **Printing3DComponent** 및 **Printing3DComponent** 의 포함 된 구성 요소에 적용 되는 변형 매트릭스가 포함 됩니다.
 
 예를 들어 자동차의 모델은 자동차 본문의 메시를 보유 하는 "Body" **Printing3DComponent** 로 구성 될 수 있습니다. 그러면 "Body" 구성 요소에는 모두 동일한 Printing3DComponent ( **Printing3DComponentWithMatrix** )를 참조 하는 4 개의 다른 개체에 대 한 참조가 포함 될 수 있습니다 .이 개체는 모두 "휠" 메시를 사용 하 여 동일한 **Printing3DComponent** 를 참조 하 고 4 개의 서로 다른 변환 매트릭스를 포함 합니다 이 시나리오에서 최종 제품이 총 5 개의 메시를 기능 하는 경우에도 "Body" 메시 및 "휠" 메시는 각각 한 번만 저장 해야 합니다.
 
@@ -145,8 +145,8 @@ Printing3DMesh 개체에 유효한 꼭지점과 삼각형 집합이 있으면 �
 
 [앱에서 3D 인쇄](./3d-print-from-app.md)  
 [3D 인쇄 UWP 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/3DPrinting)
- 
+ 
 
- 
+ 
 
- 
+ 

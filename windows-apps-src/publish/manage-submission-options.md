@@ -1,16 +1,16 @@
 ---
-Description: 보관 옵션 게시, 인증에 대 한 정보 등의 제출 옵션을 관리 합니다.
+description: 보관 옵션 게시, 인증에 대 한 정보 등의 제출 옵션을 관리 합니다.
 title: 제출 옵션 관리
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 게시 보류, 게시 날짜, 게시로 전송 전송, 제한 된 기능 승인
 ms.localizationpriority: medium
-ms.openlocfilehash: c2548ddd35fc50f62727d986d2d934d2346eb7b5
-ms.sourcegitcommit: c2e4bbe46c7b37be1390cdf3fa0f56670f9d34e9
+ms.openlocfilehash: 0044ac362cb67d356707c7eaaf12a10c5a31ed1b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92253791"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034746"
 ---
 # <a name="manage-submission-options"></a>제출 옵션 관리
 
@@ -31,7 +31,7 @@ ms.locfileid: "92253791"
 
 ### <a name="publish-your-submission-manually"></a>수동으로 제출물 게시
 
-릴리스 날짜를 아직 설정 하지 않으려는 경우 게시 프로세스를 수동으로 시작 하도록 수동으로 결정할 때까지 제출이 게시 되지 않은 상태로 유지 되도록 하려면 **지금 게시를 선택할 때까지이 제출 게시 안 함**을 선택 하면 됩니다. 이 옵션을 선택 하면 제출이 표시 될 때까지 제출이 게시 되지 않습니다. 제출이 인증을 통과 한 후에는 인증 상태 페이지에서 **지금 게시** 를 선택 하거나 아래에 설명 된 것과 같은 방식으로 특정 날짜를 선택 하 여 게시할 수 있습니다.
+릴리스 날짜를 아직 설정 하지 않으려는 경우 게시 프로세스를 수동으로 시작 하도록 수동으로 결정할 때까지 제출이 게시 되지 않은 상태로 유지 되도록 하려면 **지금 게시를 선택할 때까지이 제출 게시 안 함** 을 선택 하면 됩니다. 이 옵션을 선택 하면 제출이 표시 될 때까지 제출이 게시 되지 않습니다. 제출이 인증을 통과 한 후에는 인증 상태 페이지에서 **지금 게시** 를 선택 하거나 아래에 설명 된 것과 같은 방식으로 특정 날짜를 선택 하 여 게시할 수 있습니다.
 
 
 ### <a name="start-publishing-your-submission-on-a-certain-date"></a>특정 날짜에 제출 게시를 시작 합니다.

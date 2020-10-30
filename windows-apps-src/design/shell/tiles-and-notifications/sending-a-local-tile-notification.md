@@ -1,5 +1,5 @@
 ---
-Description: 이 문서에서는 적응 타일 템플릿을 사용 하 여 기본 타일 및 보조 타일에 로컬 타일 알림을 보내는 방법을 설명 합니다.
+description: 이 문서에서는 적응 타일 템플릿을 사용 하 여 기본 타일 및 보조 타일에 로컬 타일 알림을 보내는 방법을 설명 합니다.
 title: 로컬 타일 알림 보내기
 ms.assetid: D34B0514-AEC6-4C41-B318-F0985B51AF8A
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a8e3bee4a32c4a66ece5f486386340e9f9122f87
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 6b93f9731fb9bf843ce9bb03bd8c6526546c4249
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156807"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034466"
 ---
 # <a name="send-a-local-tile-notification"></a>로컬 타일 알림 보내기
  
@@ -24,7 +24,7 @@ Windows 10의 기본 앱 타일은 앱 매니페스트에서 정의 되 고, 보
 > [!NOTE] 
 >[적응 타일](create-adaptive-tiles.md) 및 [타일 콘텐츠 스키마](../tiles-and-notifications/tile-schema.md)를 만드는 방법에 대해 알아봅니다.
 
- 
+ 
 
 ## <a name="install-the-nuget-package"></a>NuGet 패키지 설치
 
@@ -293,6 +293,6 @@ var notification = new TileNotification(doc);
 * [**Windows. Notification 네임 스페이스**](/uwp/api/Windows.UI.Notifications)
 * [알림 큐를 사용 하는 방법 (XAML)](/previous-versions/windows/apps/hh868234(v=win.10))
 * [알림 배달](choosing-a-notification-delivery-method.md)
- 
+ 
 
- 
+ 

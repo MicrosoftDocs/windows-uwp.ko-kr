@@ -1,5 +1,5 @@
 ---
-Description: 이 문서에서는 \# \# 타일 및 배지 업데이트 및 toast 알림 콘텐츠를 제공 하는 8212; 로컬, 예약, 정기 및 푸시&8212의 네 가지 알림&옵션을 설명 합니다.
+description: 이 문서에서는 \# \# 타일 및 배지 업데이트 및 toast 알림 콘텐츠를 제공 하는 8212; 로컬, 예약, 정기 및 푸시&8212의 네 가지 알림&옵션을 설명 합니다.
 title: 알림 전달 방법 선택
 ms.assetid: FDB43EDE-C5F2-493F-952C-55401EC5172B
 label: Choose a notification delivery method
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a7a929cb88e20cc47562ab4920fd0fc94304fae2
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f85918eb0c8f936cc5be393217cd47d66a8b7ff5
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219156"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034006"
 ---
 # <a name="choose-a-notification-delivery-method"></a>알림 전달 방법 선택
 
@@ -46,7 +46,7 @@ ms.locfileid: "91219156"
 <th align="left">배달 방법</th>
 <th align="left">사용 방법</th>
 <th align="left">설명</th>
-<th align="left">예제</th>
+<th align="left">예</th>
 </tr>
 </thead>
 <tbody>
@@ -61,7 +61,7 @@ ms.locfileid: "91219156"
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left">예약</td>
+<td align="left">예약됨</td>
 <td align="left">타일, 알림</td>
 <td align="left">지정 된 시간에 업데이트 하기 위해 미리 알림을 예약 하는 API 호출 집합입니다.</td>
 <td align="left"><ul>
@@ -79,7 +79,7 @@ ms.locfileid: "91219156"
 </ul></td>
 </tr>
 <tr class="even">
-<td align="left">밀어넣기</td>
+<td align="left">푸시</td>
 <td align="left">타일, 배지, 알림, Raw</td>
 <td align="left">앱이 실행 되 고 있지 않은 경우에도 클라우드 서버에서 전송 되는 알림</td>
 <td align="left"><ul>
@@ -92,7 +92,7 @@ ms.locfileid: "91219156"
 </tbody>
 </table>
 
- 
+ 
 
 ## <a name="local-notifications"></a>로컬 알림
 
@@ -168,6 +168,6 @@ API 호출이 로컬 인 동안 알림은 웹 이미지를 참조할 수 있습�
 * [정기 알림 개요](periodic-notification-overview.md)
 * [WNS(Windows 푸시 알림 서비스) 개요](windows-push-notification-services--wns--overview.md)
 * [GitHub의 Windows 앱 알림 코드 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)
- 
+ 
 
- 
+ 

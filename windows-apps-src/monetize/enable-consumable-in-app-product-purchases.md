@@ -1,17 +1,17 @@
 ---
-Description: '\# \# 스토어 상거래 플랫폼을 통해 고객에 게 강력 하 고 신뢰할 수 있는 구매 환경을 제공 하기 위해 스토어 상거래 플랫폼을 통해 8212 제품&8212;를&다시 구매, 사용 및 구매할 수 있는 항목을 제공 합니다.'
+description: '\# \# 스토어 상거래 플랫폼을 통해 고객에 게 강력 하 고 신뢰할 수 있는 구매 환경을 제공 하기 위해 스토어 상거래 플랫폼을 통해 8212 제품&8212;를&다시 구매, 사용 및 구매할 수 있는 항목을 제공 합니다.'
 title: 앱에서 바로 소모성 제품 구매 사용
 ms.assetid: F79EE369-ACFC-4156-AF6A-72D1C7D3BDA4
 keywords: uwp, 소비재, 추가 기능, 앱 내 구매, IAPs, Windows. ApplicationModel 스토어
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: fb4119296b11e805fa72ff027383d13e6fb43818
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: fdd09fdb0d80f7811014dc910772175e152505d0
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363696"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033546"
 ---
 # <a name="enable-consumable-in-app-product-purchases"></a>앱에서 바로 소모성 제품 구매 사용
 
@@ -37,7 +37,7 @@ ms.locfileid: "89363696"
 
 ## <a name="step-2-tracking-local-fulfillment-of-the-consumable"></a>2 단계: 소비 가능의 로컬 처리 추적
 
-사용자에 게 사용 가능한 앱 제품에 대 한 액세스 권한을 부여 하는 경우 달성 된 제품 (*productId*) 및 해당 제품이 연결 된 트랜잭션 (*transactionId*)을 추적 하는 것이 중요 합니다.
+사용자에 게 사용 가능한 앱 제품에 대 한 액세스 권한을 부여 하는 경우 달성 된 제품 ( *productId* ) 및 해당 제품이 연결 된 트랜잭션 ( *transactionId* )을 추적 하는 것이 중요 합니다.
 
 > [!IMPORTANT]
 > 앱은 저장소에 대 한 정확한 보고를 담당 합니다. 이 단계는 고객에 게 안정적이 고 안정적인 구매 환경을 유지 하는 데 필수적입니다.
@@ -79,6 +79,6 @@ ms.locfileid: "89363696"
 * [앱에서 바로 구매 제품 사용](enable-in-app-product-purchases.md)
 * [스토어 샘플 (평가판 및 앱 내 구매 설명)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
 * [Windows.ApplicationModel.Store](/uwp/api/Windows.ApplicationModel.Store)
- 
+ 
 
- 
+ 

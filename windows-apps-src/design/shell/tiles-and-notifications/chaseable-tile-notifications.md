@@ -1,5 +1,5 @@
 ---
-Description: Chaseable 타일 알림을 사용 하 여 사용자가 앱을 클릭 했을 때 라이브 타일에 표시 되는 앱을 확인 합니다.
+description: Chaseable 타일 알림을 사용 하 여 사용자가 앱을 클릭 했을 때 라이브 타일에 표시 되는 앱을 확인 합니다.
 title: 추적 가능한 타일 알림
 ms.assetid: E9AB7156-A29E-4ED7-B286-DA4A6E683638
 label: Chaseable tile notifications
@@ -8,12 +8,12 @@ ms.date: 06/13/2017
 ms.topic: article
 keywords: windows 10, uwp, chaseable 타일, 라이브 타일, chaseable 타일 알림
 ms.localizationpriority: medium
-ms.openlocfilehash: 951dc891fb34ae4be7551c08ff47eabc19ae9eb6
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: 636b0214ced9b63c7bd435ab551059faca7e810c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100281"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034026"
 ---
 # <a name="chaseable-tile-notifications"></a>추적 가능한 타일 알림
 
@@ -21,10 +21,10 @@ Chaseable 타일 알림을 사용 하면 사용자가 타일을 클릭 했을 �
 예를 들어, 뉴스 앱은이 기능을 사용 하 여 사용자가 시작할 때 해당 라이브 타일이 표시 되는 뉴스 스토리를 확인할 수 있습니다. 사용자가 찾을 수 있도록 스토리가 두드러지게 표시 되도록 할 수 있습니다. 
 
 > [!IMPORTANT]
-> **기념일 업데이트 필요**: c #, c + + 또는 VB 기반 UWP 앱에서 chaseable 타일 알림을 사용 하려면 SDK 14393를 대상으로 하 고 빌드 14393 이상을 실행 해야 합니다. JavaScript 기반 UWP 앱의 경우 SDK 17134을 대상으로 하 고 빌드 17134 이상을 실행 해야 합니다. 
+> **기념일 업데이트 필요** : c #, c + + 또는 VB 기반 UWP 앱에서 chaseable 타일 알림을 사용 하려면 SDK 14393를 대상으로 하 고 빌드 14393 이상을 실행 해야 합니다. JavaScript 기반 UWP 앱의 경우 SDK 17134을 대상으로 하 고 빌드 17134 이상을 실행 해야 합니다. 
 
 
-> **중요 한 api**: [LaunchActivatedEventArgs. TileActivatedInfo 속성](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), [TileActivatedInfo 클래스](/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
+> **중요 한 api** : [LaunchActivatedEventArgs. TileActivatedInfo 속성](/uwp/api/windows.applicationmodel.activation.launchactivatedeventargs.TileActivatedInfo), [TileActivatedInfo 클래스](/uwp/api/windows.applicationmodel.activation.tileactivatedinfo)
 
 
 ## <a name="how-it-works"></a>작동 방법
@@ -40,7 +40,7 @@ Chaseable 타일 알림은 라이브 타일에서 알림 큐를 사용 하는 �
 
 ## <a name="what-to-do-with-a-chaseable-tile-notifications"></a>Chaseable 타일 알림과 관련 하 여 수행할 작업
 
-가장 중요 한 사항은 대부분의 시나리오에서 사용자가이를 클릭 했을 때 타일에 있던 **특정 알림으로 직접 이동** 해서는 안 된다는 것입니다. 라이브 타일은 응용 프로그램에 대 한 진입점으로 사용 됩니다. 사용자가 라이브 타일을 클릭 하면 (1) 앱을 정상적으로 시작 하려고 하거나 (2) 라이브 타일에 있던 특정 알림에 대 한 자세한 정보를 확인 하려는 경우 두 가지 시나리오가 있을 수 있습니다. 사용자가 원하는 동작을 명시적으로 말할 수 있는 방법은 없으므로 **사용자가 확인 한 알림이 쉽게 검색 가능 하도록 하는 동시에 앱을 정상적으로 시작**하는 것이 좋습니다.
+가장 중요 한 사항은 대부분의 시나리오에서 사용자가이를 클릭 했을 때 타일에 있던 **특정 알림으로 직접 이동** 해서는 안 된다는 것입니다. 라이브 타일은 응용 프로그램에 대 한 진입점으로 사용 됩니다. 사용자가 라이브 타일을 클릭 하면 (1) 앱을 정상적으로 시작 하려고 하거나 (2) 라이브 타일에 있던 특정 알림에 대 한 자세한 정보를 확인 하려는 경우 두 가지 시나리오가 있을 수 있습니다. 사용자가 원하는 동작을 명시적으로 말할 수 있는 방법은 없으므로 **사용자가 확인 한 알림이 쉽게 검색 가능 하도록 하는 동시에 앱을 정상적으로 시작** 하는 것이 좋습니다.
 
 예를 들어 MSN News 앱의 라이브 타일을 클릭 하면 앱이 정상적으로 시작 됩니다. 홈 페이지 또는 사용자가 이전에 읽은 모든 문서를 표시 합니다. 그러나 홈 페이지에서 앱은 라이브 타일의 스토리를 쉽게 검색할 수 있도록 합니다. 이러한 방식으로 두 시나리오를 모두 지원 합니다. 단순히 앱을 시작/재개 하려는 시나리오와 특정 스토리를 보려는 시나리오입니다.
 
@@ -49,7 +49,7 @@ Chaseable 타일 알림은 라이브 타일에서 알림 큐를 사용 하는 �
 
 알림 페이로드의 arguments 속성을 사용 하면 앱에서 나중에 알림을 식별 하는 데 사용할 수 있는 데이터를 제공할 수 있습니다. 예를 들어 인수에 스토리 id가 포함 되어 있을 수 있으므로 시작할 때 스토리를 검색 하 고 표시할 수 있습니다. 속성은 문자열을 허용 합니다 .이 문자열은 쿼리 문자열, JSON 등으로 serialize 할 수 있지만 일반적으로는 간단 하 고 XML로 인코딩됩니다. 쿼리 문자열 형식은 일반적으로 권장 됩니다.
 
-**TileVisual** 및 **TileBinding** 요소 모두에 속성을 설정할 수 있으며이 속성은 하위로 설정 됩니다. 모든 타일 크기에서 동일한 인수를 원하는 경우 **TileVisual**에서 인수를 설정 하면 됩니다. 특정 타일 크기에 대 한 특정 인수가 필요한 경우 개별 **TileBinding** 요소에 대 한 인수를 설정할 수 있습니다.
+**TileVisual** 및 **TileBinding** 요소 모두에 속성을 설정할 수 있으며이 속성은 하위로 설정 됩니다. 모든 타일 크기에서 동일한 인수를 원하는 경우 **TileVisual** 에서 인수를 설정 하면 됩니다. 특정 타일 크기에 대 한 특정 인수가 필요한 경우 개별 **TileBinding** 요소에 대 한 인수를 설정할 수 있습니다.
 
 이 예에서는 알림을 나중에 확인할 수 있도록 arguments 속성을 사용 하는 알림 페이로드를 만듭니다. 
 
@@ -57,48 +57,48 @@ Chaseable 타일 알림은 라이브 타일에서 알림 큐를 사용 하는 �
 // Uses the following NuGet packages
 // - Microsoft.Toolkit.Uwp.Notifications
 // - QueryString.NET
- 
+ 
 TileContent content = new TileContent()
 {
-    Visual = new TileVisual()
-    {
-        // These arguments cascade down to Medium and Wide
-        Arguments = new QueryString()
-        {
-            { "action", "storyClicked" },
-            { "story", "201c9b1" }
-        }.ToString(),
- 
- 
-        // Medium tile
-        TileMedium = new TileBinding()
-        {
-            Content = new TileBindingContentAdaptive()
-            {
-                // Omitted
-            }
-        },
- 
- 
-        // Wide tile is same as Medium
-        TileWide = new TileBinding() { /* Omitted */ },
- 
- 
-        // Large tile is an aggregate of multiple stories
-        // and therefore needs different arguments
-        TileLarge = new TileBinding()
-        {
-            Arguments = new QueryString()
-            {
-                { "action", "storiesClicked" },
-                { "story", "43f939ag" },
-                { "story", "201c9b1" },
-                { "story", "d9481ca" }
-            }.ToString(),
- 
-            Content = new TileBindingContentAdaptive() { /* Omitted */ }
-        }
-    }
+    Visual = new TileVisual()
+    {
+        // These arguments cascade down to Medium and Wide
+        Arguments = new QueryString()
+        {
+            { "action", "storyClicked" },
+            { "story", "201c9b1" }
+        }.ToString(),
+ 
+ 
+        // Medium tile
+        TileMedium = new TileBinding()
+        {
+            Content = new TileBindingContentAdaptive()
+            {
+                // Omitted
+            }
+        },
+ 
+ 
+        // Wide tile is same as Medium
+        TileWide = new TileBinding() { /* Omitted */ },
+ 
+ 
+        // Large tile is an aggregate of multiple stories
+        // and therefore needs different arguments
+        TileLarge = new TileBinding()
+        {
+            Arguments = new QueryString()
+            {
+                { "action", "storiesClicked" },
+                { "story", "43f939ag" },
+                { "story", "201c9b1" },
+                { "story", "d9481ca" }
+            }.ToString(),
+ 
+            Content = new TileBindingContentAdaptive() { /* Omitted */ }
+        }
+    }
 };
 ```
 
@@ -116,26 +116,26 @@ LaunchActivatedEventArgs 개체에는 chaseable 알림을 사용 하도록 설�
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs args)
 {
-    // If the API is present (doesn't exist on 10240 and 10586)
-    if (ApiInformation.IsPropertyPresent(typeof(LaunchActivatedEventArgs).FullName, nameof(LaunchActivatedEventArgs.TileActivatedInfo)))
-    {
-        // If clicked on from tile
-        if (args.TileActivatedInfo != null)
-        {
-            // If tile notification(s) were present
-            if (args.TileActivatedInfo.RecentlyShownNotifications.Count > 0)
-            {
-                // Get arguments from the notifications that were recently displayed
-                string[] allArgs = args.TileActivatedInfo.RecentlyShownNotifications
-                .Select(i => i.Arguments)
-                .ToArray();
- 
-                // TODO: Highlight each story in the app
-            }
-        }
-    }
- 
-    // TODO: Initialize app
+    // If the API is present (doesn't exist on 10240 and 10586)
+    if (ApiInformation.IsPropertyPresent(typeof(LaunchActivatedEventArgs).FullName, nameof(LaunchActivatedEventArgs.TileActivatedInfo)))
+    {
+        // If clicked on from tile
+        if (args.TileActivatedInfo != null)
+        {
+            // If tile notification(s) were present
+            if (args.TileActivatedInfo.RecentlyShownNotifications.Count > 0)
+            {
+                // Get arguments from the notifications that were recently displayed
+                string[] allArgs = args.TileActivatedInfo.RecentlyShownNotifications
+                .Select(i => i.Arguments)
+                .ToArray();
+ 
+                // TODO: Highlight each story in the app
+            }
+        }
+    }
+ 
+    // TODO: Initialize app
 }
 ```
 
@@ -145,7 +145,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs args)
 데스크톱 [브리지](https://developer.microsoft.com/windows/bridges/desktop)를 사용 하는 데스크톱 응용 프로그램 (예: WPF 등)은 chaseable 타일을 사용할 수 있습니다. 유일한 차이점은 OnLaunched 된 인수에 액세스 하는 것입니다. 먼저 [데스크톱 브리지를 사용](/windows/msix/desktop/source-code-overview)하 여 앱을 패키지 해야 합니다.
 
 > [!IMPORTANT]
-> **10 월 2018 업데이트 필요**: API를 사용 하려면 `AppInstance.GetActivatedEventArgs()` SDK 17763를 대상으로 하 고 빌드 17763 이상을 실행 해야 합니다.
+> **10 월 2018 업데이트 필요** : API를 사용 하려면 `AppInstance.GetActivatedEventArgs()` SDK 17763를 대상으로 하 고 빌드 17763 이상을 실행 해야 합니다.
 
 데스크톱 응용 프로그램의 경우 시작 인수에 액세스 하려면 다음을 수행 합니다.
 
@@ -165,19 +165,19 @@ static void Main()
             var launchArgs = args as LaunchActivatedEventArgs;
 
             // If clicked on from tile
-            if (launchArgs.TileActivatedInfo != null)
-            {
-                // If tile notification(s) were present
-                if (launchArgs.TileActivatedInfo.RecentlyShownNotifications.Count > 0)
-                {
-                    // Get arguments from the notifications that were recently displayed
-                    string[] allTileArgs = launchArgs.TileActivatedInfo.RecentlyShownNotifications
-                    .Select(i => i.Arguments)
-                    .ToArray();
-     
-                    // TODO: Highlight each story in the app
-                }
-            }
+            if (launchArgs.TileActivatedInfo != null)
+            {
+                // If tile notification(s) were present
+                if (launchArgs.TileActivatedInfo.RecentlyShownNotifications.Count > 0)
+                {
+                    // Get arguments from the notifications that were recently displayed
+                    string[] allTileArgs = launchArgs.TileActivatedInfo.RecentlyShownNotifications
+                    .Select(i => i.Arguments)
+                    .ToArray();
+     
+                    // TODO: Highlight each story in the app
+                }
+            }
     
             break;
 ```
@@ -189,31 +189,31 @@ static void Main()
 
 ```xml
 <tile>
-  <visual arguments="action=storyClicked&amp;story=201c9b1">
- 
-    <binding template="TileMedium">
-       
-      <text>Kitten learns how to drive a car...</text>
-      ... (omitted)
-     
-    </binding>
- 
-    <binding template="TileWide">
-      ... (same as Medium)
-    </binding>
-     
-    <!--Large tile is an aggregate of multiple stories-->
-    <binding
-      template="TileLarge"
-      arguments="action=storiesClicked&amp;story=43f939ag&amp;story=201c9b1&amp;story=d9481ca">
-   
-      <text>Can your dog understand what you're saying?</text>
-      ... (another story)
-      ... (one more story)
-   
-    </binding>
- 
-  </visual>
+  <visual arguments="action=storyClicked&amp;story=201c9b1">
+ 
+    <binding template="TileMedium">
+       
+      <text>Kitten learns how to drive a car...</text>
+      ... (omitted)
+     
+    </binding>
+ 
+    <binding template="TileWide">
+      ... (same as Medium)
+    </binding>
+     
+    <!--Large tile is an aggregate of multiple stories-->
+    <binding
+      template="TileLarge"
+      arguments="action=storiesClicked&amp;story=43f939ag&amp;story=201c9b1&amp;story=d9481ca">
+   
+      <text>Can your dog understand what you're saying?</text>
+      ... (another story)
+      ... (one more story)
+   
+    </binding>
+ 
+  </visual>
 </tile>
 ```
 

@@ -1,17 +1,17 @@
 ---
-Description: 타일과 알림을는 표시 언어, 표시 배율 비율, 고대비 및 기타 런타임 컨텍스트에 맞게 조정 된 문자열과 이미지를 로드할 수 있습니다.
+description: 타일과 알림을는 표시 언어, 표시 배율 비율, 고대비 및 기타 런타임 컨텍스트에 맞게 조정 된 문자열과 이미지를 로드할 수 있습니다.
 title: 언어, 규모 및 고대비에 대 한 타일 및 알림 알림 지원
 template: detail.hbs
 ms.date: 10/12/2017
 ms.topic: article
 keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 88bcd5d6ce59d0561e76f46f6291f58ad03ddf3c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 0048da25cd1e775391c2523e37cb936243b7308c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89156737"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033116"
 ---
 # <a name="tile-and-toast-notification-support-for-language-scale-and-high-contrast"></a>언어, 규모 및 고대비에 대 한 타일 및 알림 알림 지원
 

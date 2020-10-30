@@ -1,5 +1,5 @@
 ---
-Description: 사용자는 보조 타일을 사용 하 여 앱의 특정 콘텐츠 및 딥 링크를 시작 메뉴에 고정 하 여 나중에 앱 내 콘텐츠에 쉽게 액세스할 수 있습니다.
+description: 사용자는 보조 타일을 사용 하 여 앱의 특정 콘텐츠 및 딥 링크를 시작 메뉴에 고정 하 여 나중에 앱 내 콘텐츠에 쉽게 액세스할 수 있습니다.
 title: 보조 타일
 label: Secondary tiles
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 05/25/2017
 ms.topic: article
 keywords: windows 10, uwp, 보조 타일
 ms.localizationpriority: medium
-ms.openlocfilehash: ecafd52be36b34c83d9b11757ccd733e796fd727
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: 066a6dcb3683e2e55f7452b1f09bb834157aee62
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100341"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034506"
 ---
 # <a name="secondary-tiles"></a>보조 타일
 
@@ -25,11 +25,11 @@ ms.locfileid: "92100341"
 
 앱에 보조 타일을 추가 하 여 사용자가 앱을 신속 하 고 효율적으로 다시 연결 하 여 보조 타일이 제공 하는 쉬운 액세스로 인해 더 자주 반환 되도록 할 수 있습니다.
 
-**사용자만 보조 타일을 고정할 수 있습니다. 앱은 사용자 승인 없이 프로그래밍 방식으로 보조 타일을 고정할 수 없습니다**. 사용자는 앱 내에서 "고정" 단추를 명시적으로 클릭 해야 합니다. 그런 다음 API를 사용 하 여 보조 타일을 만들도록 요청 하 고, 시스템은 사용자에 게 타일이 고정 되어 있는지 여부를 확인 하는 대화 상자를 표시 합니다.
+**사용자만 보조 타일을 고정할 수 있습니다. 앱은 사용자 승인 없이 프로그래밍 방식으로 보조 타일을 고정할 수 없습니다** . 사용자는 앱 내에서 "고정" 단추를 명시적으로 클릭 해야 합니다. 그런 다음 API를 사용 하 여 보조 타일을 만들도록 요청 하 고, 시스템은 사용자에 게 타일이 고정 되어 있는지 여부를 확인 하는 대화 상자를 표시 합니다.
 
 ## <a name="quick-links"></a>빠른 링크
 
-| 아티클 | Description |
+| 아티클 | 설명 |
 | --- | --- |
 | [보조 타일에 대 한 지침](secondary-tiles-guidance.md) | 보조 타일을 사용 해야 하는 시기 및 위치에 대해 알아봅니다. |
 | [보조 타일 고정](secondary-tiles-pinning.md) | 보조 타일을 고정 하는 방법을 알아봅니다. |

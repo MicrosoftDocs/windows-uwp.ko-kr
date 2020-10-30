@@ -1,5 +1,5 @@
 ---
-Description: 사용자의 생산성과 만족을 높여 주는 효과적이 고 사용자 중심의 알림을 만드는 방법을 알아봅니다.
+description: 사용자의 생산성과 만족을 높여 주는 효과적이 고 사용자 중심의 알림을 만드는 방법을 알아봅니다.
 title: 알림 UX 지침
 label: Toast UX Guidance
 template: detail.hbs
@@ -7,17 +7,17 @@ ms.date: 05/18/2018
 ms.topic: article
 keywords: windows 10, uwp, 알림, 수집, 그룹, ux, ux 지침, 지침, 작업, 알림, 동작 센터, noninterruptive, 유효 알림, 비 침입 알림, 실행 가능, 관리, 구성
 ms.localizationpriority: medium
-ms.openlocfilehash: 9879d052882532e4d47c27c0b636f728293311cf
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d6ad253ccfa744864caa8d0229d09ba40d066771
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169177"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033046"
 ---
 # <a name="toast-notification-ux-guidance"></a>알림 메시지 UX 지침
 알림은 최신 수명에서 필요한 부분입니다. 사용자는 앱 및 웹 사이트를 사용 하 여 생산성을 높이고 최신 업데이트를 유지 하는 데 도움이 됩니다. 그러나 알림은 사용자 중심 방식으로 설계 되지 않은 경우에는 더 유용한 방법으로 신속 하 게 전환할 수 있습니다. 알림은 마우스 오른쪽 단추를 끌 때 발생 하는 것 이며, 꺼져 있는 경우에는 다시 설정 됩니다.  따라서 사용자의 화면 공간과 시간에 대 한 알림이 respectful이 engagement 채널을 열어 둘 수 있습니다.
 
-> **중요 한 api**: [Windows Community Toolkit notification nuget 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
+> **중요 한 api** : [Windows Community Toolkit notification nuget 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 Microsoft는 Windows 원격 분석과 기타 첫 번째와 타사 사례 연구를 분석 하 여 훌륭한 알림 스토리를 만드는 방법에 대해 네 가지 규칙을 제공 합니다.  이러한 규칙은 플랫폼에 관계 없이 보편적으로 적용할 수 있으며, 알림이 사용자에 게 긍정적인 영향을 줄 수 있도록 지원 합니다.
 

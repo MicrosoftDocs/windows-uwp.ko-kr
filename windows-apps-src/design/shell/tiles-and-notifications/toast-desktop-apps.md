@@ -1,5 +1,5 @@
 ---
-Description: 데스크톱 앱에서 알림 메시지를 보내기 위해 사용할 수 있는 다양 한 옵션 검색
+description: 데스크톱 앱에서 알림 메시지를 보내기 위해 사용할 수 있는 다양 한 옵션 검색
 title: 데스크톱 앱의 알림 메시지
 label: Toast notifications from desktop apps
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, win32, 데스크톱, 알림 메시지, 데스크톱 브리지, msix, 스파스 패키지, 알림을 전송 옵션, com 서버, com 활성기, com, 가짜 com, com 없음, com 없음, 알림 전송
 ms.localizationpriority: medium
-ms.openlocfilehash: 139ab767e0cc5eb11d0116563e8e1b7e00ae5dc2
-ms.sourcegitcommit: c5df8832e9df8749d0c3eee9e85f4c2d04f8b27b
+ms.openlocfilehash: 9cdd8e57311400c8603f4eb99e9bfd1a2230f2ce
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92100331"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033096"
 ---
 # <a name="toast-notifications-from-desktop-apps"></a>데스크톱 앱의 알림 메시지
 

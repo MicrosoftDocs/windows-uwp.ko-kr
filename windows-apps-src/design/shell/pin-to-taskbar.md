@@ -1,17 +1,17 @@
 ---
-Description: 작업 표시줄에 프로그래밍 방식으로 앱을 고정 하 여 현재 고정 되어 있는지 확인할 bnd 수 있습니다.
+description: 작업 표시줄에 프로그래밍 방식으로 앱을 고정 하 여 현재 고정 되어 있는지 확인할 bnd 수 있습니다.
 title: 작업 표시줄에 앱 고정
 template: detail.hbs
 ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 작업 표시줄, 작업 표시줄 관리자, 작업 표시줄에 고정, 기본 타일
 ms.localizationpriority: medium
-ms.openlocfilehash: e43dd7084c042b7480aa98c638f1fc5d216e64c7
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: fa33725447da80b5c3295455f12a3851228a2756
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636633"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034166"
 ---
 # <a name="pin-your-app-to-the-taskbar"></a>작업 표시줄에 앱 고정
 
@@ -20,9 +20,9 @@ ms.locfileid: "91636633"
 ![여기에 고정 된 앱을 보여 주는 Windows 10 작업 표시줄의 스크린샷](images/taskbar/taskbar.png)
 
 > [!IMPORTANT]
-> **낙하 작성자 업데이트 필요**: 작업 표시줄 api를 사용 하려면 SDK 16299을 대상으로 하 고 빌드 16299 이상을 실행 해야 합니다.
+> **낙하 작성자 업데이트 필요** : 작업 표시줄 api를 사용 하려면 SDK 16299을 대상으로 하 고 빌드 16299 이상을 실행 해야 합니다.
 
-> **중요 한 api**: [task바 관리자 클래스](/uwp/api/windows.ui.shell.taskbarmanager) 
+> **중요 한 api** : [task바 관리자 클래스](/uwp/api/windows.ui.shell.taskbarmanager) 
 
 
 ## <a name="when-should-you-ask-the-user-to-pin-your-app-to-the-taskbar"></a>사용자에 게 작업 표시줄에 앱을 고정 하도록 요청 해야 하는 경우 

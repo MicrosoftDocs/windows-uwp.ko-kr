@@ -1,5 +1,5 @@
 ---
-Description: Visual Studio의 마법사를 사용하여 Azure Mobile Services와 함께 만든 모바일 서비스에서 푸시 알림을 생성할 수 있습니다.
+description: Visual Studio의 마법사를 사용하여 Azure Mobile Services와 함께 만든 모바일 서비스에서 푸시 알림을 생성할 수 있습니다.
 title: 푸시 알림 마법사에서 생성된 코드
 ms.assetid: 340F55C1-0DDF-4233-A8E4-C15EF9030785
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc6c52859b74d7cd40dd39c0ae588ad690c0138b
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: f9af0301dcf8944127ab814155466335940642f0
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220116"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034446"
 ---
 # <a name="code-generated-by-the-push-notification-wizard"></a>푸시 알림 마법사에서 생성된 코드
  
@@ -29,7 +29,7 @@ Visual Studio의 마법사를 사용하여 Azure Mobile Services와 함께 만�
 -   모바일 서비스용 데이터베이스 서버에 채널 테이블을 만듭니다. 테이블에는 앱 인스턴스에 푸시 알림을 보내는 데 필요한 정보가 포함 되어 있습니다.
 -   는 삭제, 삽입, 읽기 및 업데이트의 네 가지 함수에 대 한 스크립트를 만듭니다.
 -   모든 클라이언트에 푸시 알림을 보내는 notifyallusers.js 사용자 지정 API를 사용 하 여 스크립트를 만듭니다.
--   App.xaml.cs, app.xaml 또는 app.xaml 파일에 선언을 추가 하거나 JavaScript 프로젝트에 대 한 새 파일 service.js에 선언을 추가 합니다. 선언은 모바일 서비스에 연결 하는 데 필요한 정보를 포함 하는 MobileServiceClient 개체를 선언 합니다. 이름 App.*Myservicename*client를 사용 하 여 앱의 모든 페이지에서 *myservicename*client 라는이 MobileServiceClient 개체에 액세스할 수 있습니다.
+-   App.xaml.cs, app.xaml 또는 app.xaml 파일에 선언을 추가 하거나 JavaScript 프로젝트에 대 한 새 파일 service.js에 선언을 추가 합니다. 선언은 모바일 서비스에 연결 하는 데 필요한 정보를 포함 하는 MobileServiceClient 개체를 선언 합니다. 이름 App. *Myservicename* client를 사용 하 여 앱의 모든 페이지에서 *myservicename* client 라는이 MobileServiceClient 개체에 액세스할 수 있습니다.
 
 services.js 파일에는 다음 코드가 포함 되어 있습니다.
 
@@ -207,9 +207,9 @@ function sendNotifications(request) {
 
 SendNotifications 함수는 알림 메시지로 단일 알림을 보냅니다. 다른 형식의 푸시 알림을 사용할 수도 있습니다.
 
-**팁**    스크립트를 편집 하는 동안 도움을 받는 방법에 대 한 자세한 내용은 [서버 쪽 JavaScript에 대해 IntelliSense 사용](https://blogs.msdn.com/b/visualstudio/archive/2013/07/26/enabling-intellisense-for-mobile-services-javascript-in-visual-studio.aspx)을 참조 하세요.
+**팁**  스크립트를 편집 하는 동안 도움을 받는 방법에 대 한 자세한 내용은 [서버 쪽 JavaScript에 대해 IntelliSense 사용](https://blogs.msdn.com/b/visualstudio/archive/2013/07/26/enabling-intellisense-for-mobile-services-javascript-in-visual-studio.aspx)을 참조 하세요.
 
- 
+ 
 
 ## <a name="push-notification-types"></a>푸시 알림 유형
 
@@ -233,9 +233,9 @@ Mobile Services에서 충분 한 유연성을 제공 하지 않거나, c # 또�
 
 모바일 서비스에서 예약 된 작업을 실행 하 여 푸시 알림을 보낼 수도 있습니다. [모바일 서비스에서 되풀이 작업 예약](/azure/)을 참조하세요.
 
-**경고**    푸시 알림 마법사를 한 번 실행 한 후에는 마법사를 두 번 실행 하 여 다른 모바일 서비스의 등록 코드를 추가 하지 마세요. 프로젝트 마다 마법사를 두 번 이상 실행 하면 [**CreatePushNotificationChannelForApplicationAsync**](/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync) 메서드에 대 한 호출이 겹쳐지는 코드를 생성 하 여 런타임 예외가 발생 합니다. 둘 이상의 모바일 서비스에 대 한 푸시 알림을 등록 하려면 마법사를 한 번 실행 한 다음 **CreatePushNotificationChannelForApplicationAsync** 에 대 한 호출이 동시에 실행 되지 않도록 등록 코드를 다시 작성 합니다. 예를 들어, 마법사에서 생성 된 코드를 push. register로 이동 하 여이를 수행할 수 있습니다. \* ( **CreatePushNotificationChannelForApplicationAsync**에 대 한 호출 포함)은 onlaunched 된 이벤트 외부에 있지만이에 대 한 구체적인 내용은 앱의 아키텍처에 따라 달라 집니다.
+**경고**  푸시 알림 마법사를 한 번 실행 한 후에는 마법사를 두 번 실행 하 여 다른 모바일 서비스의 등록 코드를 추가 하지 마세요. 프로젝트 마다 마법사를 두 번 이상 실행 하면 [**CreatePushNotificationChannelForApplicationAsync**](/uwp/api/Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync) 메서드에 대 한 호출이 겹쳐지는 코드를 생성 하 여 런타임 예외가 발생 합니다. 둘 이상의 모바일 서비스에 대 한 푸시 알림을 등록 하려면 마법사를 한 번 실행 한 다음 **CreatePushNotificationChannelForApplicationAsync** 에 대 한 호출이 동시에 실행 되지 않도록 등록 코드를 다시 작성 합니다. 예를 들어, 마법사에서 생성 된 코드를 push. register로 이동 하 여이를 수행할 수 있습니다. \* ( **CreatePushNotificationChannelForApplicationAsync** 에 대 한 호출 포함)은 onlaunched 된 이벤트 외부에 있지만이에 대 한 구체적인 내용은 앱의 아키텍처에 따라 달라 집니다.
 
- 
+ 
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -245,6 +245,6 @@ Mobile Services에서 충분 한 유연성을 제공 하지 않거나, c # 또�
 * [Windows Azure Mobile Services에 연결 (JavaScript)](/previous-versions/windows/apps/dn263160(v=win.10))
 * [Windows Azure Mobile Services에 연결 (c #/C + +/VB)](/previous-versions/windows/apps/dn263175(v=win.10))
 * [빠른 시작: 모바일 서비스에 대 한 푸시 알림 추가 (JavaScript)](/previous-versions/windows/apps/dn263163(v=win.10))
- 
+ 
 
- 
+ 

@@ -1,5 +1,5 @@
 ---
-Description: 알림 시각화 도우미는 Store의 Windows 앱으로, 개발자가 Windows 10용 적응형 라이브 타일을 디자인하는 데 도움이 됩니다.
+description: 알림 시각화 도우미는 Store의 Windows 앱으로, 개발자가 Windows 10용 적응형 라이브 타일을 디자인하는 데 도움이 됩니다.
 title: 알림 시각화 도우미
 ms.assetid: FCBB7BB1-2C79-484B-8FFC-26FE1934EC1C
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b50dc41a52d478afc9ed2fc9cf94d94dedb18ef4
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 55ab7e22dc011555a8d98fd863b7dd9ff67de5fa
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219926"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033676"
 ---
 # <a name="notifications-visualizer"></a>알림 시각화 도우미
 
@@ -30,13 +30,13 @@ ms.locfileid: "91219926"
 
 ![코드 및 타일이 있는 알림 시각화 도우미 앱 편집기의 스크린샷](images/notif-visualizer-001.png)
 
- 
+ 
 
 알림 시각화 도우미를 사용 하 여 사용자 고유의 앱을 편집 하 고 배포할 필요 없이 적응 타일 및 알림 페이로드를 만들고 테스트할 수 있습니다. 이상적인 시각적 결과를 사용 하 여 페이로드를 만들었으면 앱에 통합할 수 있습니다. 자세한 내용은 [로컬 타일 알림 보내기](sending-a-local-tile-notification.md) 및 [로컬 알림 보내기](send-local-toast.md) 를 참조 하세요.
 
-**참고**    알림 시각화 도우미는 Windows 시작 메뉴의 시뮬레이션 및 알림 알림은 항상 정확 하지는 않지만 일부 고급 페이로드 속성은 지원 하지 않습니다. 원하는 타일 또는 알림이 있으면 타일을 고정 하거나 알림 메시지를 팝 하 여 원하는 대로 나타나는지 확인 합니다.
+**참고**   알림 시각화 도우미는 Windows 시작 메뉴의 시뮬레이션 및 알림 알림은 항상 정확 하지는 않지만 일부 고급 페이로드 속성은 지원 하지 않습니다. 원하는 타일 또는 알림이 있으면 타일을 고정 하거나 알림 메시지를 팝 하 여 원하는 대로 나타나는지 확인 합니다.
 
- 
+ 
 
 ## <a name="features"></a>기능
 
@@ -50,7 +50,7 @@ ms.locfileid: "91219926"
 
 ![타일을 사용 하는 알림 시각화 도우미 편집기의 스크린샷](images/notif-visualizer-004.png)
 
- 
+ 
 
 ## <a name="related-topics"></a>관련 항목
 

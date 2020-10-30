@@ -1,17 +1,17 @@
 ---
-Description: 앱의 리뷰에 직접 응답 하 여 고객에 게 피드백을 수신 하 고 있음을 알릴 수 있습니다.
+description: 앱의 리뷰에 직접 응답 하 여 고객에 게 피드백을 수신 하 고 있음을 알릴 수 있습니다.
 title: 고객 리뷰에 응답
 ms.assetid: 96AA2108-E793-4DD0-8CDA-0D115423C68D
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 응답, 응답, 검토
 ms.localizationpriority: medium
-ms.openlocfilehash: 792d78b93a66b9dd7da2b2c69480bfbd324dd045
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c47e7771f6a76cde451c88ab8e2d9ed26e003f9c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161877"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034606"
 ---
 # <a name="respond-to-customer-reviews"></a>고객 리뷰에 응답
 
@@ -32,7 +32,7 @@ ms.locfileid: "89161877"
 고객의 검토에 응답할 때 다음 지침을 따라야 합니다. 이러한 설정은 공용 인지 여부에 관계 없이 모든 응답에 적용 됩니다.
 
 > [!IMPORTANT]
-> 고객이 원래 검토를 수정 하지 않은 경우 스토어에 게시 하는 응답을 변경할 수 없으므로 응답을 신중 하 게 검토 합니다. 고객이 원래 검토를 수정 하면 앱의 스토어 목록 페이지에서 응답이 제거 됩니다. 그런 다음 **응답 업데이트**를 선택 하 여 수정 된 검토에 대 한 새 응답을 제출 하는 옵션을 사용할 수 있습니다.
+> 고객이 원래 검토를 수정 하지 않은 경우 스토어에 게시 하는 응답을 변경할 수 없으므로 응답을 신중 하 게 검토 합니다. 고객이 원래 검토를 수정 하면 앱의 스토어 목록 페이지에서 응답이 제거 됩니다. 그런 다음 **응답 업데이트** 를 선택 하 여 수정 된 검토에 대 한 새 응답을 제출 하는 옵션을 사용할 수 있습니다.
 
 -   응답은 1000 자를 초과할 수 없습니다.
 -   앱 등급을 변경 하기 위해 사용자에 게 디지털 앱 항목을 비롯 한 보정 유형을 제공 하지 않을 수 있습니다. 등급을 조작 하려는 시도는 [앱 개발자 규약](/legal/windows/agreements/app-developer-agreement)에서 허용 되지 않습니다.

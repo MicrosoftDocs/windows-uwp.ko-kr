@@ -1,5 +1,5 @@
 ---
-Description: 터치 및 펜 입력에 사용 하는 것과 동일한 기본 포인터 이벤트를 처리 하 여 앱의 마우스 입력에 응답 합니다.
+description: 터치 및 펜 입력에 사용 하는 것과 동일한 기본 포인터 이벤트를 처리 하 여 앱의 마우스 입력에 응답 합니다.
 title: 마우스 조작
 ms.assetid: C8A158EF-70A9-4BA2-A270-7D08125700AC
 label: Mouse
@@ -8,16 +8,16 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 84390e7b929412e4058c1a7e6507ff171344bd53
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: dfefda0e09159c398334ae77bc29dcd8fc3f628a
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218936"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034726"
 ---
 # <a name="mouse-interactions"></a>마우스 조작
 
-터치 입력을 위한 Windows 앱 디자인을 최적화 하 고 기본적으로 기본적인 마우스 지원을 받으세요. 
+터치 입력을 위한 Windows 앱 디자인을 최적화 하 고 기본적으로 기본적인 마우스 지원을 받으세요. 
 
 ![마우스](images/input-patterns/input-mouse.jpg)
 
@@ -59,10 +59,10 @@ ms.locfileid: "91218936"
 <td align="left"><p>마우스 오른쪽 단추를 클릭 하 여 선택 하 고 명령</p></td>
 <td align="left"><p>마우스 오른쪽 단추를 클릭 하 여 탐색 모음 (있는 경우)을 표시 하 고 전역 명령이 포함 된 앱 모음을 표시 합니다. 요소를 마우스 오른쪽 단추로 클릭 하 여 선택 하 고 선택한 요소에 대 한 상황별 명령이 포함 된 앱 표시줄을 표시 합니다.</p>
 <div class="alert">
-<strong>참고</strong>    선택 또는 앱 바 명령이 적절 한 UI 동작이 아니면 마우스 오른쪽 단추를 클릭 하 여 상황에 맞는 메뉴를 표시 합니다. 그러나 모든 명령 동작에 대해 앱 바를 사용 하는 것이 좋습니다.
+<strong>참고</strong>  선택 또는 앱 바 명령이 적절 한 UI 동작이 아니면 마우스 오른쪽 단추를 클릭 하 여 상황에 맞는 메뉴를 표시 합니다. 그러나 모든 명령 동작에 대해 앱 바를 사용 하는 것이 좋습니다.
 </div>
 <div>
- 
+ 
 </div></td>
 </tr>
 <tr class="odd">

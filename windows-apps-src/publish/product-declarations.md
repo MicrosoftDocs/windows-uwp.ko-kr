@@ -1,17 +1,17 @@
 ---
-Description: 제품 선언을 사용 하면 앱이 Microsoft Store에서 적절 하 게 표시 되 고 올바른 고객 집합에 제공 되는지 확인할 수 있습니다.
+description: 제품 선언을 사용 하면 앱이 Microsoft Store에서 적절 하 게 표시 되 고 올바른 고객 집합에 제공 되는지 확인할 수 있습니다.
 title: 제품 선언
 ms.assetid: 3AF618F3-2B47-4A57-B7E8-1DF979D4A82C
 ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9c4e8677a27128e6a33a844f5a887e921ca9ced3
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3469992a73a4e90e25ce34883319343ad6986d75
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89167367"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034616"
 ---
 # <a name="product-declarations"></a>제품 선언
 
@@ -40,7 +40,7 @@ ms.locfileid: "89167367"
 자세한 내용은 [저장소의](../design/accessibility/accessibility-in-the-store.md)접근성, [접근성 테스트](../design/accessibility/accessibility-testing.md)및 접근성 [을 참조 하십시오](../design/accessibility/accessibility.md).
 
 > [!IMPORTANT]
-> 이러한 목적을 위해 특별히 엔지니어링 하 고 테스트 한 경우를 제외 하 고 액세스할 수 있는 앱을 나열 하지 마세요. 앱이 액세스할 수 있는 것으로 선언 되었지만 실제로 액세스 가능성을 지원 하지 않는 경우 커뮤니티에서 부정적인 피드백을 받을 가능성이 높습니다.
+> 이러한 목적을 위해 특별히 엔지니어링 하 고 테스트 한 경우를 제외 하 고 액세스할 수 있는 앱을 나열 하지 마세요. 앱이 액세스할 수 있는 것으로 선언 되었지만 실제로 액세스 가능성을 지원 하지 않는 경우 커뮤니티에서 부정적인 피드백을 받을 가능성이 높습니다.
 
 ## <a name="customers-can-install-this-app-to-alternate-drives-or-removable-storage"></a>고객은 대체 드라이브나 이동식 저장소에이 앱을 설치할 수 있습니다.
 
@@ -62,8 +62,8 @@ ms.locfileid: "89167367"
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

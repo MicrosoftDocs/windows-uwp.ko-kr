@@ -1,5 +1,5 @@
 ---
-Description: 사용자가 목록 내에서 항목을 이동 하거나 다른 항목의 맨 위에 있는 항목을 삭제 하는 등의 방법으로 개체를 이동 하는 경우 끌어서 놓기 애니메이션을 사용 합니다.
+description: 사용자가 목록 내에서 항목을 이동 하거나 다른 항목의 맨 위에 있는 항목을 삭제 하는 등의 방법으로 개체를 이동 하는 경우 끌어서 놓기 애니메이션을 사용 합니다.
 title: 애니메이션 끌기
 ms.assetid: 6064755F-6E24-4901-A4FF-263F05F0DFD6
 label: Motion--Drag and drop
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a51f60fdbc8d616bd4db360190c8e329e10709e8
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: acc193f0851e2f04113e33aa470e9aa784337921
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220166"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034286"
 ---
 # <a name="drag-animations"></a>애니메이션 끌기
 
@@ -22,7 +22,7 @@ ms.locfileid: "91220166"
 
 사용자가 목록 내에서 항목을 이동 하거나 다른 항목의 맨 위에 있는 항목을 삭제 하는 등의 방법으로 개체를 이동 하는 경우 끌어서 놓기 애니메이션을 사용 합니다.
 
-> **중요 한 api**: [ **DragItemThemeAnimation 클래스**](/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation)
+> **중요 한 api** : [ **DragItemThemeAnimation 클래스**](/uwp/api/windows.ui.xaml.media.animation.dragitemthemeanimation)
 
 
 ## <a name="dos-and-donts"></a>권장 사항 및 금지 사항
@@ -56,7 +56,7 @@ ms.locfileid: "91220166"
 
 ## <a name="related-articles"></a>관련된 문서
 
-**개발자 용**
+**개발자용**
 * [애니메이션 개요](./xaml-animation.md)
 * [끌어서 놓기 시퀀스에 애니메이션 적용](/previous-versions/windows/apps/jj649427(v=win.10))
 * [빠른 시작: 라이브러리 애니메이션을 사용 하 여 UI에 애니메이션 효과 주기](/previous-versions/windows/apps/hh452703(v=win.10))
@@ -65,4 +65,4 @@ ms.locfileid: "91220166"
 * [**DragOverThemeAnimation 클래스**](/uwp/api/windows.ui.xaml.media.animation.dragoverthemeanimation)
 
 
- 
+ 

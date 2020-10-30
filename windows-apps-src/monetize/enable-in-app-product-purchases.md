@@ -1,17 +1,17 @@
 ---
-Description: '앱이 무료로 제공 되는지 여부에 관계 없이 앱 내에서 콘텐츠, 기타 앱 또는 새로운 앱 기능 (예: 게임의 다음 수준 잠금 해제)을 바로 판매할 수 있습니다. 앱에서 이러한 제품을 사용 하도록 설정 하는 방법을 보여 줍니다.'
+description: '앱이 무료로 제공 되는지 여부에 관계 없이 앱 내에서 콘텐츠, 기타 앱 또는 새로운 앱 기능 (예: 게임의 다음 수준 잠금 해제)을 바로 판매할 수 있습니다. 앱에서 이러한 제품을 사용 하도록 설정 하는 방법을 보여 줍니다.'
 title: 앱에서 바로 구매 제품 사용
 ms.assetid: D158E9EB-1907-4173-9889-66507957BD6B
 keywords: uwp, 추가 기능, 앱 내 구매, IAPs, Windows. ApplicationModel 스토어
 ms.date: 08/25/2017
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ac6fc8a6ac39c106e3d5d593a36595097c4bde45
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: b24a48034585411af5edfb0950fc4f96b189519f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89364116"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033476"
 ---
 # <a name="enable-in-app-product-purchases"></a>앱에서 바로 구매 제품 사용
 
@@ -58,7 +58,7 @@ ms.locfileid: "89364116"
 
     고객이 해당 기능을 사용할 수 있는 라이선스를 보유 하 고 있는지 테스트 하는 조건부 블록에서 앱 내 제품과 연결 된 각 기능에 대 한 코드를 입력 해야 합니다.
 
-    라이선스 관련 조건부 블록에서 **featureName** 라는 제품 기능을 코딩 하는 방법을 보여 주는 예제는 다음과 같습니다. **FeatureName**문자열은 앱 내에서이 제품을 고유 하 게 식별 하는 토큰 이며 스토어에서 식별 하는 데에도 사용 됩니다.
+    라이선스 관련 조건부 블록에서 **featureName** 라는 제품 기능을 코딩 하는 방법을 보여 주는 예제는 다음과 같습니다. **FeatureName** 문자열은 앱 내에서이 제품을 고유 하 게 식별 하는 토큰 이며 스토어에서 식별 하는 데에도 사용 됩니다.
 
     > [!div class="tabbedCodeSnippets"]
     :::code language="csharp" source="~/../snippets-windows/windows-uwp/monetize/InAppPurchasesAndLicenses/cs/EnableInAppPurchases.cs" id="CodeFeature":::
@@ -92,7 +92,7 @@ ms.locfileid: "89364116"
 ## <a name="related-topics"></a>관련 항목
 
 
-* [앱에서 바로 소모성 제품 구매 사용](enable-consumable-in-app-product-purchases.md)
+* [앱 내 제품 구매 사용](enable-consumable-in-app-product-purchases.md)
 * [앱에서 바로 구매 제품의 큰 카탈로그 관리](manage-a-large-catalog-of-in-app-products.md)
 * [확인 메일을 사용하여 제품 구매 검증](use-receipts-to-verify-product-purchases.md)
 * [스토어 샘플 (평가판 및 앱 내 구매 설명)](https://github.com/Microsoft/Windows-universal-samples/tree/win10-1507/Samples/Store)
