@@ -1,5 +1,5 @@
 ---
-Description: 타일, 배지 및 알림을 사용하여 앱에 대한 진입점을 제공하고 사용자를 최신 상태로 유지하는 방법에 대해 알아봅니다.
+description: 타일, 배지 및 알림을 사용하여 앱에 대한 진입점을 제공하고 사용자를 최신 상태로 유지하는 방법에 대해 알아봅니다.
 title: 타일, 배지 및 알림
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
@@ -8,19 +8,19 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 580edca578a0d518d89b5d2fdb30c9304be35cef
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: dbcc4138c0f09d3ad620e4d1c192dd63bb522052
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636623"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033686"
 ---
 # <a name="tiles-badges-and-notifications-for-windows-apps"></a>Windows 앱에 대한 타일, 배지 및 알림
  
 
 타일, 배지 및 알림을 사용하여 앱에 대한 진입점을 제공하고 사용자를 최신 상태로 유지하는 방법에 대해 알아봅니다.
 
-> **중요 API**: [UWP 커뮤니티 도구 키트 알림 NuGet 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
+> **중요 API** : [UWP 커뮤니티 도구 키트 알림 NuGet 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 <p><img style="float: left; margin: 0px 15px 15px 0px;" src="images/tile-and-live-tile.png" alt="Screenshot of a static tile and a live tile displaying a notification and a badge." />
 타일은 시작 메뉴에 표시되는 앱의 표시를 말합니다. 모든 Windows 앱에는 타일이 있습니다. 다양한 타일 크기(작음, 중간, 넓음 및 큼)를 사용하도록 설정할 수 있습니다.</p>
@@ -32,7 +32,7 @@ ms.locfileid: "91636623"
 <p><em>알림 메시지</em>는 앱에서 <em>알림</em>(또는 <em>배너</em>)이라는 팝업 UI 요소를 통해 사용자에게 보내는 알림입니다. 사용자가 앱에 있는지 여부에 상관없이 알림을 볼 수 있습니다.</p>
 <p><em>푸시 알림</em> 또는 <em>원시 알림</em>은 WNS(Windows 푸시 알림 서비스) 또는 백그라운드 작업을 통해 앱에 전송되는 알림입니다. 앱은 관심 가질 만한 사항이 발생했음을 사용자에게 알려(배지 업데이트, 타일 업데이트 또는 알림을 통해) 이러한 알림에 응답하거나 개발자가 선택한 방식으로 응답할 수 있습니다.</p>
 
- 
+ 
 ## <a name="tiles"></a>타일
 | 문서 | 설명 |
 | --- | --- |

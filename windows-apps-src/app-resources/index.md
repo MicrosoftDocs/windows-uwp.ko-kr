@@ -1,5 +1,5 @@
 ---
-Description: 이 섹션에서는 앱의 문자열, 이미지 및 파일 리소스를 작성, 패키징 및 사용하는 방법을 보여 줍니다.
+description: 이 섹션에서는 앱의 문자열, 이미지 및 파일 리소스를 작성, 패키징 및 사용하는 방법을 보여 줍니다.
 title: 앱 리소스 및 리소스 관리 시스템
 label: Intro
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 10/20/2017
 ms.topic: article
 keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: cb64294710ca1d28c11308161665e72e37342193
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3d6b23284c24de4b611301668c52894b57ed2500
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174097"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031806"
 ---
 # <a name="app-resources-and-the-resource-management-system"></a>앱 리소스 및 리소스 관리 시스템
 

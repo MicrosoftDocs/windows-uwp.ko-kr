@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다.
+description: Windows 앱을 지원하는 디바이스에 대해 알고 있으면 각 폼 팩터에 최상의 사용자 환경을 제공하는 데 도움이 됩니다.
 title: Windows 디바이스에 대한 UI 고려 사항
 ms.assetid: 7665044E-F007-495D-8D56-CE7C2361CDC4
 label: Device primer
@@ -8,12 +8,12 @@ keywords: 디바이스, 입력, 조작
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5d32fd2ba2ee35c19aeaa66d2c6b2c1f81be2a59
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 2267a0a704d0f637b60e38cdaa50b1afa2ec3f9a
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217836"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030546"
 ---
 #  <a name="ui-considerations-for-windows-devices"></a>Windows 디바이스에 대한 UI 고려 사항
 
@@ -94,7 +94,7 @@ UI 고려 사항
 
 ## <a name="xbox-and-tv"></a>Xbox 및 TV
 
-실내의 소파에 앉아 TV와 상호 작용 하는 게임 패드 또는 리모컨을 사용하여 TV를 조작하는 환경을 **10피트 환경**이라고 합니다. 일반적으로 사용자가 화면에서 약 3m 떨어진 곳에 앉아 있기 때문에 이렇게 이름이 지정되었습니다. 이 경우 가령 *0.6m* 환경이나 PC 조작 시에는 존재하지 않는 고유한 과제가 발생합니다. Xbox One 또는 TV 화면에 연결되고 입력에 게임 패드 또는 리모컨을 사용하는 다른 모든 디바이스용 앱을 개발하는 경우 항상 이 점에 유의해야 합니다.
+실내의 소파에 앉아 TV와 상호 작용 하는 게임 패드 또는 리모컨을 사용하여 TV를 조작하는 환경을 **10피트 환경** 이라고 합니다. 일반적으로 사용자가 화면에서 약 3m 떨어진 곳에 앉아 있기 때문에 이렇게 이름이 지정되었습니다. 이 경우 가령 *0.6m* 환경이나 PC 조작 시에는 존재하지 않는 고유한 과제가 발생합니다. Xbox One 또는 TV 화면에 연결되고 입력에 게임 패드 또는 리모컨을 사용하는 다른 모든 디바이스용 앱을 개발하는 경우 항상 이 점에 유의해야 합니다.
 
 3m 환경용으로 Windows 앱을 디자인하는 것은 여기에 나열된 다른 디바이스 범주를 디자인하는 것과 매우 다릅니다. 자세한 내용은 [Xbox 및 TV용 디자인](designing-for-tv.md)을 참조하세요.
 
@@ -164,7 +164,7 @@ UI 고려 사항
 -   동작 센서
 -   위치 센서
 
- 
+ 
 
 ## <a name="surface-hub-devices"></a>Surface Hub 디바이스
 
@@ -197,7 +197,7 @@ UI 고려 사항
 -   카메라
 -   마이크
 
- 
+ 
 
 ## <a name="windows-iot-devices"></a>Windows IoT 디바이스
 

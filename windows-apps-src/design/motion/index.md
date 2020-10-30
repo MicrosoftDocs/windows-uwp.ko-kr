@@ -1,5 +1,5 @@
 ---
-Description: 체계적으로 잘 디자인된 동작은 앱에 생명을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다.
+description: 체계적으로 잘 디자인된 동작은 앱에 생명을 불어넣고 환경을 전문적이고 돋보이게 합니다. 사용자가 컨텍스트 변경을 이해하고 시각적 전환에 맞게 작업할 수 있도록 합니다.
 title: Windows 앱의 동작
 ms.assetid: 21AA1335-765E-433A-85D8-560B340AE966
 label: Motion
@@ -12,12 +12,12 @@ design-contact: jeffarn
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2cb322454b08f6e3cf1a6393c8061e02176ceb83
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 3850adfcb545bf5f21716cccb4fcda43e9c02efb
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218166"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034326"
 ---
 # <a name="motion-for-windows-apps"></a>Windows 앱의 동작
 

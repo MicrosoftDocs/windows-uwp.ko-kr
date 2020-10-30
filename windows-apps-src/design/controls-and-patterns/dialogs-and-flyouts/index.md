@@ -1,5 +1,5 @@
 ---
-Description: 대화 상자 및 플라이아웃은 사용자가 요청할 경우나 알림 또는 승인이 필요한 문제가 발생할 경우 나타나는 임시 UI 요소를 표시합니다.
+description: 대화 상자 및 플라이아웃은 사용자가 요청할 경우나 알림 또는 승인이 필요한 문제가 발생할 경우 나타나는 임시 UI 요소를 표시합니다.
 title: 대화 상자 및 플라이아웃
 template: detail.hbs
 ms.date: 07/06/2018
@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c61d1478c38df315a3fe3c20151de8c2bfbca4e2
-ms.sourcegitcommit: f727b68e86a86c94eff00f67ed79a1c12666e7bc
+ms.openlocfilehash: bf4746a6d3a024fec31045bbf9c63d3b11315b8c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "81123583"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033846"
 ---
 # <a name="dialogs-and-flyouts"></a>대화 상자 및 플라이아웃
 
@@ -24,7 +24,7 @@ ms.locfileid: "81123583"
 
 > **플랫폼 API:** [ContentDialog 클래스](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog), [Flyout 클래스](/uwp/api/Windows.UI.Xaml.Controls.Flyout)
 
-**대화 상자**
+**다이얼로그**
 
 ![대화 상자 예제](../images/dialogs/dialog_RS2_delete_file.png)
 
@@ -48,7 +48,7 @@ ms.locfileid: "81123583"
 
    <p><b>대화 상자의 용도</b> <br/>
 <ul>
-<li>사용자가 계속하기 전에 읽고 <b>반드시</b> 승인해야 하는 중요한 정보 표시 예를 들면 다음과 같습니다.
+<li>사용자가 계속하기 전에 읽고 <b>반드시</b> 승인해야 하는 중요한 정보 표시 다음은 이러한 템플릿의 예입니다.
 <ul>
   <li>사용자의 보안이 손상될 수 있는 경우</li>
   <li>사용자가 중요한 자산을 영구적으로 변경하려는 경우</li>

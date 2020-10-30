@@ -1,17 +1,17 @@
 ---
-Description: 최신 XAML 사용자 인터페이스를 추가하고, MSIX 패키지를 만들고, 데스크톱 애플리케이션에 다른 최신 구성 요소를 통합합니다.
+description: 최신 XAML 사용자 인터페이스를 추가하고, MSIX 패키지를 만들고, 데스크톱 애플리케이션에 다른 최신 구성 요소를 통합합니다.
 title: Windows용 데스크톱 앱 현대화
 ms.topic: article
 ms.date: 10/02/2020
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: b7c640e89f36dfcea6e0080cbbe3887e0231ddfc
-ms.sourcegitcommit: 27552ed7d3d889f50d8e01776a24b8d486a8d97c
+ms.openlocfilehash: 99bb68ff7d990b0b633df0c4efa2d8eafad759cd
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91958726"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031066"
 ---
 # <a name="modernize-your-desktop-apps"></a>데스크톱 앱 현대화
 
@@ -55,7 +55,7 @@ WPF, Windows Forms 또는 C++ Win32 데스크톱 앱에서 직접 여러 Windows
 
 ## <a name="host-winrt-xaml-controls-xaml-islands"></a>호스트 WinRT XAML 컨트롤(XAML Islands)
 
-Windows 10, 버전 1903부터 창 핸들(HWND)에 연결된 WPF, Windows Forms 또는 C++ Win32 앱의 모든 UI 요소에 직접 [UWP XAML 컨트롤](/windows/uwp/design/controls-and-patterns/controls-by-function)을 추가할 수 있습니다. 즉, [Windows Ink](/windows/uwp/design/input/pen-and-stylus-interactions) 및 [Fluent Design System](/windows/uwp/design/fluent-design-system/index)을 지원하는 컨트롤을 비롯한 최신 UWP 기능을 데스크톱 앱의 창 및 기타 디스플레이 화면에 완전히 통합할 수 있습니다. 이 개발자 시나리오를 *XAML Islands*라고도 지칭합니다.
+Windows 10, 버전 1903부터 창 핸들(HWND)에 연결된 WPF, Windows Forms 또는 C++ Win32 앱의 모든 UI 요소에 직접 [UWP XAML 컨트롤](/windows/uwp/design/controls-and-patterns/controls-by-function)을 추가할 수 있습니다. 즉, [Windows Ink](/windows/uwp/design/input/pen-and-stylus-interactions) 및 [Fluent Design System](/windows/uwp/design/fluent-design-system/index)을 지원하는 컨트롤을 비롯한 최신 UWP 기능을 데스크톱 앱의 창 및 기타 디스플레이 화면에 완전히 통합할 수 있습니다. 이 개발자 시나리오를 *XAML Islands* 라고도 지칭합니다.
 
 자세한 내용은 [데스크톱 앱의 WinRT XAML 컨트롤](xaml-islands.md)을 참조하세요.
 
@@ -72,7 +72,7 @@ Windows 10, 버전 1903부터 창 핸들(HWND)에 연결된 WPF, Windows Forms �
 데스크톱 앱에 ID를 부여하는 방법에는 여러 가지가 있습니다.
 
 * [MSIX 패키지](/windows/msix/desktop/desktop-to-uwp-root)에 패키지합니다. MSIX는 모든 Windows 앱, WPF, Windows Forms 및 Win32 앱에 유니버설 패키징 환경을 제공하는 최신 앱 패키지 형식입니다. 강력한 설치 및 업데이트 환경, 유연한 기능 시스템을 갖춘 관리형 보안 모듈, Microsoft Store, 엔터프라이즈 관리 및 여러 사용자 지정 모델에 대한 지원 기능을 제공합니다. 자세한 내용은 MSIX 설명서의 [데스크톱 애플리케이션 패키지](/windows/msix/desktop/desktop-to-uwp-root)를 참조하세요.
-* 데스크톱 앱을 배포하기 위해 MSIX 패키지를 채택할 수 없는 경우 Windows 10 버전 2004부터 패키지 매니페스트만 포함된 *스파스 MSIX 패키지*를 만들어 패키지 ID를 부여할 수 있습니다. 자세한 내용은 [패키지되지 않은 데스크톱 앱에 ID 부여](grant-identity-to-nonpackaged-apps.md)를 참조하세요.
+* 데스크톱 앱을 배포하기 위해 MSIX 패키지를 채택할 수 없는 경우 Windows 10 버전 2004부터 패키지 매니페스트만 포함된 *스파스 MSIX 패키지* 를 만들어 패키지 ID를 부여할 수 있습니다. 자세한 내용은 [패키지되지 않은 데스크톱 앱에 ID 부여](grant-identity-to-nonpackaged-apps.md)를 참조하세요.
 
 <a id="desktop-uwp-controls"></a>
 
@@ -82,7 +82,7 @@ Windows 10, 버전 1903부터 창 핸들(HWND)에 연결된 WPF, Windows Forms �
 
 | 컨트롤 |  설명 |
 |------ |--------------|
-| [MenuBar](/windows/uwp/design/controls-and-patterns/menus#create-a-menu-bar) | **CommandBar**에서 허용하는 것보다 더 많은 조직 또는 그룹화가 필요할 수 있는 앱에 대한 명령 세트를 빠르고 간편하게 노출할 수 있는 방법을 제공합니다. |
+| [MenuBar](/windows/uwp/design/controls-and-patterns/menus#create-a-menu-bar) | **CommandBar** 에서 허용하는 것보다 더 많은 조직 또는 그룹화가 필요할 수 있는 앱에 대한 명령 세트를 빠르고 간편하게 노출할 수 있는 방법을 제공합니다. |
 | [DropDownButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-drop-down-button) | 더 많은 옵션을 포함하는 연결된 플라이아웃이 있는 시각적 표시기 형태의 갈매기형 펼침 단추를 표시합니다.  |
 | [SplitButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button) | 별도로 호출할 수 있는 두 부분으로 이루어진 단추를 제공합니다. 한 부분은 표준 단추처럼 동작하며 즉각적인 작업을 호출합니다. 다른 부분은 사용자가 선택할 수 있는 추가 옵션을 포함하는 플라이아웃을 호출합니다.|
 | [ToggleSplitButton](/windows/uwp/design/controls-and-patterns/buttons#create-a-toggle-split-button) | 별도로 호출할 수 있는 두 부분으로 이루어진 단추를 제공합니다. 한 부분은 끄거나 켤 수 있는 토글 단추처럼 동작합니다. 다른 부분은 사용자가 선택할 수 있는 추가 옵션을 포함하는 플라이아웃을 호출합니다. |
