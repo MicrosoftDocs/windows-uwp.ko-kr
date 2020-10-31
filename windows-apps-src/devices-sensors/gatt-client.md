@@ -5,12 +5,12 @@ ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2d4ec2c3d849833b4a1673c4a4f425f32c42d00f
-ms.sourcegitcommit: 662fcfdc08b050947e289a57520a2f99fad1a620
+ms.openlocfilehash: 339a154c3acf39c4f574d22907cf697db658552b
+ms.sourcegitcommit: 74c2c878b9dbb92785b89f126359c3f069175af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353763"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93122404"
 ---
 # <a name="bluetooth-gatt-client"></a>Bluetooth GATT 클라이언트
 
@@ -23,7 +23,7 @@ ms.locfileid: "91353763"
 - 특성 값이 변경 될 때 알림 구독
 
 > [!Important]
-> *Appxmanifest.xml*에서 "bluetooth" 기능을 선언 해야 합니다.
+> *Appxmanifest.xml* 에서 "bluetooth" 기능을 선언 해야 합니다.
 >
 > `<Capabilities> <DeviceCapability Name="bluetooth" /> </Capabilities>`
 
@@ -52,7 +52,11 @@ Bluetooth LE GATT Api는 원시 전송에 액세스 하는 대신 개체 및 함
 
 편의를 위해 Bluetooth SIG는 사용 가능한 [공개 프로필의 목록을](https://www.bluetooth.com/specifications/adopted-specifications#gattspec) 유지 관리 합니다.
 
-## <a name="query-for-nearby-devices"></a>주변 장치에 대 한 쿼리
+## <a name="examples"></a>예
+
+전체 샘플은 [Bluetooth 저 에너지 샘플](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/BluetoothLE)을 참조 하세요.
+
+### <a name="query-for-nearby-devices"></a>주변 장치에 대 한 쿼리
 
 주변 장치에 대해 쿼리 하는 데는 두 가지 주요 방법이 있습니다.
 
@@ -89,7 +93,7 @@ deviceWatcher.Start();
 
 DeviceWatcher를 시작 하면 해당 장치에 대해 [추가](/uwp/api/windows.devices.enumeration.devicewatcher.added) 된 이벤트에 대 한 처리기의 쿼리를 충족 하는 각 장치에 대 한 [devicewatcher](/uwp/api/Windows.Devices.Enumeration.DeviceInformation) 을 받게 됩니다. DeviceWatcher에 대 한 자세한 내용은 [Github에서](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/DeviceEnumerationAndPairing)전체 샘플을 참조 하세요.
 
-## <a name="connecting-to-the-device"></a>장치에 연결
+### <a name="connecting-to-the-device"></a>장치에 연결
 
 원하는 장치가 검색 되 면 [DeviceInformation.Id](/uwp/api/windows.devices.enumeration.deviceinformation.id) 를 사용 하 여 해당 장치에 대 한 Bluetooth LE 장치 개체를 가져옵니다.
 
@@ -111,14 +115,14 @@ bluetoothLeDevice.Dispose();
 앱에서 다시 장치에 액세스 해야 하는 경우 장치 개체를 다시 만들고 특성에 액세스 하기만 하면 (다음 섹션에서 설명) 필요한 경우 OS가 다시 연결 됩니다. 장치가 근처에 있으면 장치에 대 한 액세스 권한을 얻게 됩니다. 그렇지 않으면 DeviceUnreachable 수 없음 오류가 반환 됩니다.  
 
 > [!NOTE]
-> 이 메서드를 호출 하 여 [BluetoothLEDevice](/uwp/api/windows.devices.bluetooth.bluetoothledevice) 개체를 만드는 경우에는 연결을 시작 하지 않아도 됩니다. 연결을 시작 하려면 [Gattsession](/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattsession.maintainconnection) 을로 설정 `true` 하거나 **BluetoothLEDevice**에서 캐시 되지 않은 service discovery 메서드를 호출 하거나 장치에 대해 읽기/쓰기 작업을 수행 합니다.
+> 이 메서드를 호출 하 여 [BluetoothLEDevice](/uwp/api/windows.devices.bluetooth.bluetoothledevice) 개체를 만드는 경우에는 연결을 시작 하지 않아도 됩니다. 연결을 시작 하려면 [Gattsession](/uwp/api/windows.devices.bluetooth.genericattributeprofile.gattsession.maintainconnection) 을로 설정 `true` 하거나 **BluetoothLEDevice** 에서 캐시 되지 않은 service discovery 메서드를 호출 하거나 장치에 대해 읽기/쓰기 작업을 수행 합니다.
 >
 > - **MaintainConnection** 가 true로 설정 된 경우 시스템은 연결을 무기한 대기 하 고 장치를 사용할 수 있을 때 연결 됩니다. **Gattsession** 는 속성 이므로 응용 프로그램이 대기 하는 것은 없습니다.
 > - GATT의 서비스 검색 및 읽기/쓰기 작업의 경우 시스템은 유한 하지만 변수 시간을 기다립니다. 순간부터 분의 중요 한 항목입니다. 스택에서 트래픽을은 하 고 요청을 큐에 대기 하는 방법을 결정 합니다. 보류 중인 다른 요청이 없고 원격 장치에 연결할 수 없는 경우 시스템은 시간이 초과 될 때까지 7 초 동안 대기 합니다. 보류 중인 다른 요청이 있는 경우 큐의 각 요청을 처리 하는 데 7 초 정도 소요 될 수 있으므로 나중에 큐의 끝 부분을 향해 대기 시간이 길어집니다.
 >
 > 현재는 연결 프로세스를 취소할 수 없습니다.
 
-## <a name="enumerating-supported-services-and-characteristics"></a>지원 되는 서비스 및 특성 열거
+### <a name="enumerating-supported-services-and-characteristics"></a>지원 되는 서비스 및 특성 열거
 
 이제 BluetoothLEDevice 개체를 만들었으므로 다음 단계는 장치에서 노출 하는 데이터를 검색 하는 것입니다. 이 작업을 수행 하는 첫 번째 단계는 서비스를 쿼리 하는 것입니다.
 
@@ -146,7 +150,7 @@ if (result.Status == GattCommunicationStatus.Success)
 
 OS는 작업을 수행할 수 있는 GattCharacteristic 개체의 읽기 전용 목록을 반환 합니다.
 
-## <a name="perform-readwrite-operations-on-a-characteristic"></a>특성에 대 한 읽기/쓰기 작업 수행
+### <a name="perform-readwrite-operations-on-a-characteristic"></a>특성에 대 한 읽기/쓰기 작업 수행
 
 특성은 GATT 기반 통신의 기본 단위입니다. 장치에 있는 데이터의 고유 부분을 나타내는 값을 포함 합니다. 예를 들어 배터리 수준 특성에는 장치의 배터리 수준을 나타내는 값이 있습니다.
 
@@ -196,13 +200,13 @@ if (result == GattCommunicationStatus.Success)
 }
 ```
 
-> **팁**: [DataReader](/uwp/api/windows.storage.streams.datareader) 및 [datawriter 여부](/uwp/api/windows.storage.streams.datawriter) 는 많은 Bluetooth api에서 가져온 원시 버퍼를 사용할 때 위한 됩니다.
+> **팁** : [DataReader](/uwp/api/windows.storage.streams.datareader) 및 [datawriter 여부](/uwp/api/windows.storage.streams.datawriter) 는 많은 Bluetooth api에서 가져온 원시 버퍼를 사용할 때 위한 됩니다.
 
-## <a name="subscribing-for-notifications"></a>알림 구독
+### <a name="subscribing-for-notifications"></a>알림 구독
 
 특성이 표시 또는 알림을 지원 하는지 확인 합니다 (특성 속성을 확인 하 여 확인).
 
-> **제외**: 각 값 변경 이벤트는 클라이언트 장치의 승인에 연결 되므로 표시를 더 안정적으로 간주 합니다. 대부분의 GATT 트랜잭션은 매우 안정적이 지 않고 전력을 절약 하므로 알림이 더 많이 발생 합니다. 어떤 경우 든 모든는 컨트롤러 계층에서 처리 되므로 앱이 포함 되지 않습니다. 단순히 "알림" 이라고 통칭 하지만 이제 알고 있습니다.
+> **제외** : 각 값 변경 이벤트는 클라이언트 장치의 승인에 연결 되므로 표시를 더 안정적으로 간주 합니다. 대부분의 GATT 트랜잭션은 매우 안정적이 지 않고 전력을 절약 하므로 알림이 더 많이 발생 합니다. 어떤 경우 든 모든는 컨트롤러 계층에서 처리 되므로 앱이 포함 되지 않습니다. 단순히 "알림" 이라고 통칭 하지만 이제 알고 있습니다.
 
 알림을 받기 전에 다음 두 가지 작업을 수행 해야 합니다.
 
@@ -235,3 +239,4 @@ void Characteristic_ValueChanged(GattCharacteristic sender,
     // Parse the data however required.
 }
 ```
+
