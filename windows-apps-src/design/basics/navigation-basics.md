@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델을 기반으로 합니다.
+description: Windows 앱의 탐색은 탐색 구조, 탐색 요소 및 시스템 수준 기능의 유연한 모델을 기반으로 합니다.
 title: Windows 앱용 탐색 기본 사항
 ms.assetid: B65D33BA-AAFE-434D-B6D5-1A0C49F59664
 label: Navigation design basics
@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: e144d369dccac6a14a32168bd073bb501275097f
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: ae88d30988ff2c3ccb4e7b32e1fefbf4d8bb9fde
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91763064"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031126"
 ---
 # <a name="navigation-design-basics-for-windows-apps"></a>Windows 앱용 탐색 디자인 기본 사항
 

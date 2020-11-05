@@ -1,17 +1,17 @@
 ---
-Description: Windows 개발자 문서에 추가된 최신 내용을 살펴보세요.
+description: Windows 개발자 문서에 추가된 최신 내용을 살펴보세요.
 title: Windows 개발자 문서의 최신 업데이트
 ms.topic: article
 ms.date: 10/8/2020
 ms.localizationpriority: medium
 ms.author: quradic
 author: QuinnRadich
-ms.openlocfilehash: 584709fe3b574d29f45da5bdd230862285e36bb6
-ms.sourcegitcommit: b78edb431541b40b86860c0b707449f44feced24
+ms.openlocfilehash: ac7efb725dc4f687a33e875b866b56240593cdf1
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91870991"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031926"
 ---
 # <a name="latest-updates-to-the-windows-developer-docs"></a>Windows 개발자 문서의 최신 업데이트
 

@@ -1,5 +1,5 @@
 ---
-Description: 특정 디바이스에 맞게 앱을 조정하는 반응형 디자인 기술을 알아봅니다.
+description: 특정 디바이스에 맞게 앱을 조정하는 반응형 디자인 기술을 알아봅니다.
 title: 반응형 디자인 기술
 template: detail.hbs
 op-migration-status: ready
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: windows 10, uwp
 localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 58b1ce3b9342f7ca66052cf51b8abfb67d00ca44
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 249b738e3db4b266ad5bd589bfb9aff875e0b0d3
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218576"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034586"
 ---
 # <a name="responsive-design-techniques"></a>반응형 디자인 기술
 

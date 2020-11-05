@@ -1,5 +1,5 @@
 ---
-Description: RichTextBlockOverflow 요소와 함께 RichTextBlock을 사용하여 고급 텍스트 레이아웃을 만듭니다.
+description: RichTextBlockOverflow 요소와 함께 RichTextBlock을 사용하여 고급 텍스트 레이아웃을 만듭니다.
 title: RichTextBlock
 ms.assetid: E4BE4B1B-418E-4075-88F1-22C09DDF8E45
 label: Rich text block
@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a8c7f04b42adadda2eec904f7c8796289706f25
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d1e5619009bd3218dbb5b6796585296dcd873192
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89169447"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035206"
 ---
 # <a name="rich-text-block"></a>서식 있는 텍스트 블록
 
@@ -24,13 +24,13 @@ ms.locfileid: "89169447"
 
 서식 있는 텍스트 블록은 단락, 인라인 UI 요소 또는 복잡한 텍스트 레이아웃에 대한 지원이 필요한 경우 사용할 수 있는 몇 가지 고급 텍스트 레이아웃 기능을 제공합니다.
 
-> **플랫폼 API**: [RichTextBlock 클래스](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [RichTextBlockOverflow 클래스](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlockOverflow), [Paragraph 클래스](/uwp/api/Windows.UI.Xaml.Documents.Paragraph), [Typography 클래스](/uwp/api/Windows.UI.Xaml.Documents.Typography)
+> **플랫폼 API** : [RichTextBlock 클래스](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [RichTextBlockOverflow 클래스](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlockOverflow), [Paragraph 클래스](/uwp/api/Windows.UI.Xaml.Documents.Paragraph), [Typography 클래스](/uwp/api/Windows.UI.Xaml.Documents.Typography)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-여러 단락, 다중 열 또는 기타 복잡한 텍스트 레이아웃, 이미지와 같은 인라인 UI 요소에 대한 지원이 필요한 경우 **RichTextBlock**을 사용하세요.
+여러 단락, 다중 열 또는 기타 복잡한 텍스트 레이아웃, 이미지와 같은 인라인 UI 요소에 대한 지원이 필요한 경우 **RichTextBlock** 을 사용하세요.
 
-앱에서 대부분의 읽기 전용 텍스트를 표시하려면 **TextBlock**을 사용합니다. 이 컨트롤을 사용하여 한 줄 또는 여러 줄 텍스트, 인라인 하이퍼링크 및 굵게, 기울임꼴 또는 밑줄 서식이 적용된 텍스트를 표시할 수 있습니다. TextBlock은 단순한 콘텐츠 모델을 제공하므로 일반적으로 사용하기가 더 쉽고, RichTextBlock보다 뛰어난 텍스트 렌더링 성능을 제공할 수 있습니다. 대부분의 앱 UI 텍스트에 사용하는 것이 좋습니다. 텍스트에 줄 바꿈을 넣을 수는 있지만, TextBlock은 단일 단락을 표시하도록 설계되었으며 텍스트 들여쓰기를 지원하지 않습니다.
+앱에서 대부분의 읽기 전용 텍스트를 표시하려면 **TextBlock** 을 사용합니다. 이 컨트롤을 사용하여 한 줄 또는 여러 줄 텍스트, 인라인 하이퍼링크 및 굵게, 기울임꼴 또는 밑줄 서식이 적용된 텍스트를 표시할 수 있습니다. TextBlock은 단순한 콘텐츠 모델을 제공하므로 일반적으로 사용하기가 더 쉽고, RichTextBlock보다 뛰어난 텍스트 렌더링 성능을 제공할 수 있습니다. 대부분의 앱 UI 텍스트에 사용하는 것이 좋습니다. 텍스트에 줄 바꿈을 넣을 수는 있지만, TextBlock은 단일 단락을 표시하도록 설계되었으며 텍스트 들여쓰기를 지원하지 않습니다.
 
 올바른 텍스트 컨트롤을 선택하는 방법에 대한 자세한 내용은 [텍스트 컨트롤](text-controls.md) 문서를 참조하세요.
 

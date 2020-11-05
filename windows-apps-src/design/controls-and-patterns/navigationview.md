@@ -1,5 +1,5 @@
 ---
-Description: NavigationView는 앱에 대한 최상위 탐색 패턴을 구현하는 적응형 컨트롤입니다.
+description: NavigationView는 앱에 대한 최상위 탐색 패턴을 구현하는 적응형 컨트롤입니다.
 title: 탐색 보기
 template: detail.hbs
 ms.date: 09/24/2020
@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5c5a880cc7291e15e71315d4977b6a28f22b2f00
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 689f55393df5fc7af59af6ce1e51fb002f49b713
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749849"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031136"
 ---
 # <a name="navigation-view"></a>탐색 보기
 
@@ -39,11 +39,11 @@ NavigationView 컨트롤은 앱에 대한 최상위 탐색을 제공합니다. �
    :::column-end:::
 :::row-end:::
 
-> **플랫폼 API**: [Windows.UI.Xaml.Controls.NavigationView 클래스](/uwp/api/windows.ui.xaml.controls.navigationview)
+> **플랫폼 API** : [Windows.UI.Xaml.Controls.NavigationView 클래스](/uwp/api/windows.ui.xaml.controls.navigationview)
 >
-> **Windows UI 라이브러리 API**: [Microsoft.UI.Xaml.Controls.NavigationView 클래스](/uwp/api/microsoft.ui.xaml.controls.navigationview)
+> **Windows UI 라이브러리 API** : [Microsoft.UI.Xaml.Controls.NavigationView 클래스](/uwp/api/microsoft.ui.xaml.controls.navigationview)
 >
-> _위쪽_ 및 _계층적_ 탐색과 같은 NavigationView의 몇 가지 기능을 사용하려면 Windows 10 버전 1809([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상이나 [Windows UI 라이브러리](/uwp/toolkits/winui/)가 필요합니다.
+> _위쪽_ 및 _계층적_ 탐색과 같은 NavigationView의 몇 가지 기능을 사용하려면 Windows 10 버전 1809( [SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상이나 [Windows UI 라이브러리](/uwp/toolkits/winui/)가 필요합니다.
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -160,7 +160,7 @@ NavigationView 창은 다음을 포함할 수 있습니다.
 - [NavigationViewItemSeparator](/uwp/api/windows.ui.xaml.controls.navigationviewitemseparator) 개체. 탐색 항목을 그룹화하기 위한 구분 기호입니다. 구분 기호를 공백으로 렌더링하려면 [Opacity](/uwp/api/windows.ui.xaml.uielement.opacity) 속성을 0으로 설정합니다.
 - [NavigationViewItemHeader](/uwp/api/windows.ui.xaml.controls.navigationviewitemheader) 개체. 항목 그룹에 레이블을 지정하기 위한 헤더입니다.
 - 앱 수준 검색을 허용하기 위한 선택적 [AutoSuggestBox](auto-suggest-box.md) 컨트롤. [NavigationView.AutoSuggestBox](/uwp/api/windows.ui.xaml.controls.navigationview.autosuggestbox) 속성에 컨트롤을 할당합니다.
-- [앱 설정](../app-settings/guidelines-for-app-settings.md)의 선택적 진입점. 설정 항목을 숨기려면 [IsSettingsVisible](/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) 속성을 **false**로 설정합니다.
+- [앱 설정](../app-settings/guidelines-for-app-settings.md)의 선택적 진입점. 설정 항목을 숨기려면 [IsSettingsVisible](/uwp/api/windows.ui.xaml.controls.navigationview.IsSettingsVisible) 속성을 **false** 로 설정합니다.
 
 왼쪽 창에는 다음도 포함됩니다.
 
@@ -249,7 +249,7 @@ PaneTitle 및 PaneHeader를 둘 다 설정하면 콘텐츠는 메뉴 단추 옆�
 
 헤더 영역은 왼쪽 창 위치에서는 탐색 단추에 세로로 맞춰지며 위쪽 창에서는 창 아래에 배치됩니다. 헤더 영역에는 고정 높이 52px이 사용됩니다. 선택한 탐색 범주의 페이지 제목을 유지하는 것이 목적입니다. 헤더가 페이지 위쪽에 고정되고 콘텐츠 영역에 대한 스크롤 자르기 지점 역할을 합니다.
 
-NavigationView가 최소 디스플레이 모드이면 항상 헤더가 표시됩니다. 더 큰 창 너비에 사용되는 다른 모드에서는 헤더를 숨기도록 선택할 수 있습니다. 헤더를 숨기려면 [AlwaysShowHeader](/uwp/api/windows.ui.xaml.controls.navigationview.AlwaysShowHeader) 속성을 **false**로 설정합니다.
+NavigationView가 최소 디스플레이 모드이면 항상 헤더가 표시됩니다. 더 큰 창 너비에 사용되는 다른 모드에서는 헤더를 숨기도록 선택할 수 있습니다. 헤더를 숨기려면 [AlwaysShowHeader](/uwp/api/windows.ui.xaml.controls.navigationview.AlwaysShowHeader) 속성을 **false** 로 설정합니다.
 
 ### <a name="content"></a>콘텐츠
 
@@ -266,7 +266,7 @@ NavigationView가 **최소** 모드이고 여백이 24px일 경우 콘텐츠 영
 
 ### <a name="default"></a>Default
 
-PaneDisplayMode가 기본값인 **자동**으로 설정되면 적응형 동작은 다음을 표시합니다.
+PaneDisplayMode가 기본값인 **자동** 으로 설정되면 적응형 동작은 다음을 표시합니다.
 
 - 큰 창 너비(1008px 이상)의 확장된 왼쪽 창.
 - 중간 창 너비(641px-1007px)의 왼쪽, 아이콘 전용, 탐색 창(LeftCompact).
@@ -376,9 +376,9 @@ PaneDisplayMode가 LeftMinimal로 설정된 탐색 보기
 
 요청된 탐색과 관련된 작업을 수행하도록 한쪽 이벤트를 처리할 수 있습니다. 처리해야 하는 이벤트는 앱에서 필요한 동작에 따라 달라집니다. 일반적으로 요청된 페이지로 이동하여 해당 이벤트에 대한 응답으로 탐색 보기 헤더를 업데이트합니다.
 
-**ItemInvoked**는 이미 선택된 경우에도 사용자가 탐색 항목을 탭하면 항상 발생합니다. 마우스, 키보드 또는 기타 입력을 사용하여 해당 작업으로 항목을 호출할 수도 있습니다. 자세한 내용은 [입력 및 상호 작용](../input/index.md)을 참조하세요. ItemInvoked 처리기에서 탐색하는 경우 기본적으로 페이지가 다시 로드되고 중복 항목이 탐색 스택에 추가됩니다. 항목이 호출될 때 탐색하는 경우 페이지 다시 로드를 허용하지 않거나, 페이지가 다시 로드될 때 탐색 백스택에서 중복 입력이 생성되지 않는지 확인해야 합니다. 코드 예제를 참조하세요.
+**ItemInvoked** 는 이미 선택된 경우에도 사용자가 탐색 항목을 탭하면 항상 발생합니다. 마우스, 키보드 또는 기타 입력을 사용하여 해당 작업으로 항목을 호출할 수도 있습니다. 자세한 내용은 [입력 및 상호 작용](../input/index.md)을 참조하세요. ItemInvoked 처리기에서 탐색하는 경우 기본적으로 페이지가 다시 로드되고 중복 항목이 탐색 스택에 추가됩니다. 항목이 호출될 때 탐색하는 경우 페이지 다시 로드를 허용하지 않거나, 페이지가 다시 로드될 때 탐색 백스택에서 중복 입력이 생성되지 않는지 확인해야 합니다. 코드 예제를 참조하세요.
 
-**SelectionChanged**는 사용자가 현재 선택되지 않은 항목을 호출하거나 선택된 항목을 프로그래밍 방식으로 변경하여 발생할 수 있습니다. 사용자가 항목을 호출하여 선택이 변경되는 경우에는 ItemInvoked 이벤트가 먼저 발생합니다. 선택이 프로그래밍 방식으로 변경되면 ItemInvoked가 발생하지 않습니다.
+**SelectionChanged** 는 사용자가 현재 선택되지 않은 항목을 호출하거나 선택된 항목을 프로그래밍 방식으로 변경하여 발생할 수 있습니다. 사용자가 항목을 호출하여 선택이 변경되는 경우에는 ItemInvoked 이벤트가 먼저 발생합니다. 선택이 프로그래밍 방식으로 변경되면 ItemInvoked가 발생하지 않습니다.
 
 ### <a name="backwards-navigation"></a>뒤로 탐색
 
@@ -388,8 +388,8 @@ NavigationView에는 기본 제공 뒤로 단추가 있지만, 앞으로 탐색�
 
 다음 속성을 설정하여 뒤로 단추를 숨기거나 사용하지 않을 수 있습니다.
 
-- [IsBackButtonVisible](/uwp/api/windows.ui.xaml.controls.navigationview.IsBackButtonVisible): 뒤로 단추를 표시하고 숨기는 데 사용합니다. 이 속성은 [NavigationViewBackButtonVisible](/uwp/api/windows.ui.xaml.controls.navigationviewbackbuttonvisible) 열거형 값을 사용하며 기본적으로 **자동**으로 설정됩니다. 단추가 축소되면 레이아웃에서 단추 공간이 예약되지 않습니다.
-- [IsBackEnabled](/uwp/api/windows.ui.xaml.controls.navigationview.IsBackEnabled): 뒤로 단추를 사용하거나 사용하지 않도록 설정하는 데 사용합니다. 이 속성을 탐색 프레임의 [CanGoBack](/uwp/api/windows.ui.xaml.controls.frame.cangoback) 속성에 데이터 바인딩할 수 있습니다. **IsBackEnabled**가 **false**이면 **BackRequested**가 발생하지 않습니다.
+- [IsBackButtonVisible](/uwp/api/windows.ui.xaml.controls.navigationview.IsBackButtonVisible): 뒤로 단추를 표시하고 숨기는 데 사용합니다. 이 속성은 [NavigationViewBackButtonVisible](/uwp/api/windows.ui.xaml.controls.navigationviewbackbuttonvisible) 열거형 값을 사용하며 기본적으로 **자동** 으로 설정됩니다. 단추가 축소되면 레이아웃에서 단추 공간이 예약되지 않습니다.
+- [IsBackEnabled](/uwp/api/windows.ui.xaml.controls.navigationview.IsBackEnabled): 뒤로 단추를 사용하거나 사용하지 않도록 설정하는 데 사용합니다. 이 속성을 탐색 프레임의 [CanGoBack](/uwp/api/windows.ui.xaml.controls.frame.cangoback) 속성에 데이터 바인딩할 수 있습니다. **IsBackEnabled** 가 **false** 이면 **BackRequested** 가 발생하지 않습니다.
 
 :::row:::
     :::column:::
@@ -407,11 +407,11 @@ NavigationView에는 기본 제공 뒤로 단추가 있지만, 앞으로 탐색�
 > [!IMPORTANT]
 > Windows UI(WinUI) 라이브러리 도구 키트를 사용하는 프로젝트의 경우 동일한 예비 설정 단계를 수행합니다. 자세한 배경, 설정 및 지원 정보는 [Windows UI 라이브러리 시작](/uwp/toolkits/winui/getting-started)을 참조하세요.
 
-이 예제는 **NavigationView**를 큰 창 크기의 위쪽 탐색 창과 작은 창 크기의 왼쪽 탐색 창과 함께 사용하는 방법을 보여줍니다. **VisualStateManager**에서 *위쪽* 탐색 설정을 제거하여 왼쪽 전용 탐색에 맞게 조정할 수 있습니다.
+이 예제는 **NavigationView** 를 큰 창 크기의 위쪽 탐색 창과 작은 창 크기의 왼쪽 탐색 창과 함께 사용하는 방법을 보여줍니다. **VisualStateManager** 에서 *위쪽* 탐색 설정을 제거하여 왼쪽 전용 탐색에 맞게 조정할 수 있습니다.
 
-예제에서는 다양한 일반적인 시나리오에 적합한 탐색 데이터를 설정하는 권장 방법을 보여 줍니다. 또한 **NavigationView**의 뒤로 단추 및 키보드 탐색을 사용하여 뒤로 탐색을 구현하는 방법을 보여 줍니다.
+예제에서는 다양한 일반적인 시나리오에 적합한 탐색 데이터를 설정하는 권장 방법을 보여 줍니다. 또한 **NavigationView** 의 뒤로 단추 및 키보드 탐색을 사용하여 뒤로 탐색을 구현하는 방법을 보여 줍니다.
 
-이 코드에서는 앱에 포함된 이동할 페이지가 이름으로 *HomePage*, *AppsPage*, *GamesPage*, *MusicPage*, *MyContentPage* 및 *SettingsPage*를 사용한다고 가정합니다. 이와 같은 페이지에 대한 코드는 표시되지 않습니다.
+이 코드에서는 앱에 포함된 이동할 페이지가 이름으로 *HomePage* , *AppsPage* , *GamesPage* , *MusicPage* , *MyContentPage* 및 *SettingsPage* 를 사용한다고 가정합니다. 이와 같은 페이지에 대한 코드는 표시되지 않습니다.
 
 > [!IMPORTANT]
 > 앱 페이지 정보는 [ValueTuple](/dotnet/api/system.valuetuple)에 저장됩니다. 이 구조체를 사용하려면 앱 프로젝트의 최소 버전이 SDK 17763 이상이어야 합니다. NavigationView의 WinUI 버전을 사용하여 초기 버전의 Windows 10을 대상으로 하는 경우 [System.ValueTuple NuGet 패키지](https://www.nuget.org/packages/System.ValueTuple/)를 대신 사용합니다.
@@ -647,7 +647,7 @@ private void On_Navigated(object sender, NavigationEventArgs e)
 ```
 
 > [!NOTE]
-> 이 코드 예제의 [C++/WinRT](../../cpp-and-winrt-apis/index.md) 버전의 경우 **Blank App(C++/WinRT)** 프로젝트 템플릿을 기반으로 새 프로젝트를 만든 다음, 목록의 코드를 표시된 소스 코드 파일에 추가합니다. 목록에 표시된 그대로 소스 코드를 사용하려면 새 프로젝트의 이름을 *NavigationViewCppWinRT*로 지정합니다.
+> 이 코드 예제의 [C++/WinRT](../../cpp-and-winrt-apis/index.md) 버전의 경우 **Blank App(C++/WinRT)** 프로젝트 템플릿을 기반으로 새 프로젝트를 만든 다음, 목록의 코드를 표시된 소스 코드 파일에 추가합니다. 목록에 표시된 그대로 소스 코드를 사용하려면 새 프로젝트의 이름을 *NavigationViewCppWinRT* 로 지정합니다.
 
 ```cppwinrt
 // MainPage.idl
@@ -977,7 +977,7 @@ void MainPage::NavView_ItemInvoked(
 ## <a name="hierarchical-navigation"></a>계층적 탐색
 일부 앱은 단순한 탐색 항목 목록 이상을 필요로 하는 더 복잡한 계층 구조를 포함할 수 있습니다. 최상위 탐색 항목을 사용하여 특정 페이지를 표시하는 자식 항목을 포함하는 페이지 범주를 표시할 수도 있습니다. 다른 페이지로만 연결되는 허브 스타일 페이지가 있는 경우에도 유용합니다. 이러한 경우 계층적 NavigationView를 만들어야 합니다.
 
-창에서 중첩된 탐색 항목의 계층적 목록을 표시하려면 [MenuItems](/uwp/api/microsoft.ui.xaml.controls.navigationviewitem.menuitems?view=winui-2.4) 속성 또는 **NavigationViewItem**의 [MenuItemsSource](/uwp/api/microsoft.ui.xaml.controls.navigationviewitem.menuitemssource?view=winui-2.4) 속성을 사용합니다.
+창에서 중첩된 탐색 항목의 계층적 목록을 표시하려면 [MenuItems](/uwp/api/microsoft.ui.xaml.controls.navigationviewitem.menuitems?view=winui-2.4) 속성 또는 **NavigationViewItem** 의 [MenuItemsSource](/uwp/api/microsoft.ui.xaml.controls.navigationviewitem.menuitemssource?view=winui-2.4) 속성을 사용합니다.
 각 NavigationViewItem은 다른 NavigationViewItems를 포함하고 항목 헤더 및 구분 기호와 같은 요소를 구성할 수 있습니다. `MenuItemsSource`를 사용할 때 계층적 목록을 표시하려면 `ItemTemplate`을 NavigationViewItem으로 설정하고 해당 `MenuItemsSource` 속성을 계층의 다음 수준에 바인딩합니다.
 
 NavigationViewItem은 중첩된 수준을 원하는 만큼 포함할 수 있지만, 앱의 탐색 계층 구조를 단순하게 유지하는 것이 좋습니다. 두 수준이 유용성과 이해력에 이상적입니다.
@@ -1667,11 +1667,11 @@ MainPage::MainPage()
 
 > `IsTitleBarAutoPaddingEnabled` 속성을 사용하려면 [Windows UI 라이브러리](/uwp/toolkits/winui/) 2.2 이상이 필요합니다.
 
-일부 앱은 [해당 창의 제목 표시줄을 사용자 지정](../shell/title-bar.md)하여 해당 앱 콘텐츠를 제목 표시줄 영역으로 확장하도록 선택할 수 있습니다. NavigationView가 [ExtendViewIntoTitleBar](/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.extendviewintotitlebar) API**를 사용하여 제목 표시줄** 로 확장되는 앱의 루트 요소인 경우, 컨트롤은 대화형 요소의 위치를 자동으로 조정하여 [끌기 가능 영역](../shell/title-bar.md#draggable-regions)과 겹치지 않도록 합니다.
+일부 앱은 [해당 창의 제목 표시줄을 사용자 지정](../shell/title-bar.md)하여 해당 앱 콘텐츠를 제목 표시줄 영역으로 확장하도록 선택할 수 있습니다. NavigationView가 [ExtendViewIntoTitleBar](/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.extendviewintotitlebar) API **를 사용하여 제목 표시줄** 로 확장되는 앱의 루트 요소인 경우, 컨트롤은 대화형 요소의 위치를 자동으로 조정하여 [끌기 가능 영역](../shell/title-bar.md#draggable-regions)과 겹치지 않도록 합니다.
 
 ![제목 표시줄로 확장되는 앱](images/navigation-view-with-titlebar-padding.png)
 
-앱이 [Window.SetTitleBar](/uwp/api/windows.ui.xaml.window.settitlebar) 메서드를 호출하여 끌기 가능 영역을 지정할 때 [뒤로] 및 [메뉴] 단추를 앱 창의 상단에 더 가깝게 이동하려면 [IsTitleBarAutoPaddingEnabled](/uwp/api/microsoft.ui.xaml.controls.navigationview.istitlebarautopaddingenabled)를 **false**로 설정합니다.
+앱이 [Window.SetTitleBar](/uwp/api/windows.ui.xaml.window.settitlebar) 메서드를 호출하여 끌기 가능 영역을 지정할 때 [뒤로] 및 [메뉴] 단추를 앱 창의 상단에 더 가깝게 이동하려면 [IsTitleBarAutoPaddingEnabled](/uwp/api/microsoft.ui.xaml.controls.navigationview.istitlebarautopaddingenabled)를 **false** 로 설정합니다.
 
 ![추가 패딩 없이 제목 표시줄로 확장되는 앱](images/navigation-view-no-titlebar-padding.png)
 

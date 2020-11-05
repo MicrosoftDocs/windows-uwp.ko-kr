@@ -1,5 +1,5 @@
 ---
-Description: 대화 상자 및 플라이아웃은 사용자가 요청할 경우나 알림 또는 승인이 필요한 문제가 발생할 경우 나타나는 임시 UI 요소를 표시합니다.
+description: 대화 상자 및 플라이아웃은 사용자가 요청할 경우나 알림 또는 승인이 필요한 문제가 발생할 경우 나타나는 임시 UI 요소를 표시합니다.
 title: 대화 상자 컨트롤
 label: Dialogs
 template: detail.hbs
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 1c9d374a53fc28150d18ed644792d9b6b3a69983
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 05b472efe65b57359a398c6a2405b499ff062d73
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750499"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034456"
 ---
 # <a name="dialog-controls"></a>대화 상자 컨트롤
 

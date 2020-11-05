@@ -1,5 +1,5 @@
 ---
-Description: 토글 스위치는 사용자가 켜거나 끌 수 있는 물리적 스위치를 나타냅니다.
+description: 토글 스위치는 사용자가 켜거나 끌 수 있는 물리적 스위치를 나타냅니다.
 title: 토글 스위치 컨트롤에 대한 지침
 ms.assetid: 753CFEA4-80D3-474C-B4A9-555F872A3DEF
 label: Toggle switches
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c8df28335bf67c00f0429d6967e9013c73ec351
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 03714fef129ccb51bd84a73317bfda702317f313
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154197"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034716"
 ---
 # <a name="toggle-switches"></a>토글 스위치
 
@@ -25,7 +25,7 @@ ms.locfileid: "89154197"
 
 토글 스위치 컨트롤을 [ToggleSwitch 클래스](/uwp/api/windows.ui.xaml.controls.toggleswitch)를 사용합니다.
 
-> **플랫폼 API**: [ToggleSwitch 클래스](/uwp/api/windows.ui.xaml.controls.toggleswitch), [IsOn 속성](/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [Toggled 이벤트](/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
+> **플랫폼 API** : [ToggleSwitch 클래스](/uwp/api/windows.ui.xaml.controls.toggleswitch), [IsOn 속성](/uwp/api/windows.ui.xaml.controls.toggleswitch.ison), [Toggled 이벤트](/uwp/api/windows.ui.xaml.controls.toggleswitch.toggled)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 

@@ -1,5 +1,5 @@
 ---
-Description: 사용자에게 작업을 수행하도록 요청하기 전에 컨트롤에 대한 추가 정보를 보일 때 도구 설명을 사용합니다.
+description: 사용자에게 작업을 수행하도록 요청하기 전에 컨트롤에 대한 추가 정보를 보일 때 도구 설명을 사용합니다.
 title: 도구 설명
 ms.assetid: A21BB12B-301E-40C9-B84B-C055FD43D307
 label: Tooltips
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: a9a5c6deb2ad7ea2b4dad8e7db3e9513700c2c3e
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 0c9d2f26acfe431eb1be895f1021d544f78b52fb
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750629"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030806"
 ---
 # <a name="tooltips"></a>도구 설명
 
@@ -39,7 +39,7 @@ ms.locfileid: "91750629"
    :::column-end:::
 :::row-end:::
 
-> **플랫폼 API**: [ToolTip 클래스](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [ToolTipService 클래스](/uwp/api/windows.ui.xaml.controls.tooltipservice)
+> **플랫폼 API** : [ToolTip 클래스](/uwp/api/Windows.UI.Xaml.Controls.ToolTip), [ToolTipService 클래스](/uwp/api/windows.ui.xaml.controls.tooltipservice)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 

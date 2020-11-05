@@ -1,5 +1,5 @@
 ---
-Description: 모든 UWP 앱에 포함된 유니버설 디자인 기능을 사용하면 광범위한 디바이스에 걸쳐 효과적으로 크기가 조정되는 앱을 빌드할 수 있습니다.
+description: 모든 UWP 앱에 포함된 유니버설 디자인 기능을 사용하면 광범위한 디바이스에 걸쳐 효과적으로 크기가 조정되는 앱을 빌드할 수 있습니다.
 title: Windows 앱 디자인 소개(Windows 앱)
 ms.assetid: 50A5605E-3A91-41DB-800A-9180717C1E86
 ms.date: 09/24/2020
@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d3179a553e0d30bd009765ec55640989720628c2
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: 78ccbe1f18167c318ffa38f3614cfab61782d147
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91763085"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032446"
 ---
 # <a name="introduction-to-windows-app-design"></a>Windows 앱 디자인 소개
 
@@ -47,7 +47,7 @@ UWP 앱은 모든 디바이스와 화면 크기에서 쉽게 읽고 상호 작�
 
 :::row:::
     :::column span:::
-UWP 앱에서 UI 요소의 크기, 여백, 위치는 항상 **4epx의 배수**여야 합니다.
+UWP 앱에서 UI 요소의 크기, 여백, 위치는 항상 **4epx의 배수** 여야 합니다.
 
 UWP는 다양한 디바이스에서 100%, 125%, 150%, 175%, 200%, 225%, 250%, 300%, 350%, 400%의 크기 조정 안정화를 사용하여 크기 조정됩니다. 기준 단위는 정수가 아닌 숫자(예: 4*1.5 = 6)로 크기 조정할 수 있는 유일한 정수이므로 4입니다. 4의 배수를 사용하면 모든 UI 요소가 전체 픽셀에 맞춰지고, UI 요소의 선명하고 날카로운 가장자리가 보장됩니다. (텍스트에는 이 요구 사항이 없으며, 해당 크기와 위치를 지정할 수 있습니다.)
     :::column-end:::

@@ -1,5 +1,5 @@
 ---
-Description: ItemsRepeater는 항목 컬렉션을 생성하고 표시하는 경량 컨트롤입니다.
+description: ItemsRepeater는 항목 컬렉션을 생성하고 표시하는 경량 컨트롤입니다.
 title: ItemsRepeater
 label: ItemsRepeater
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 52938a03e7e0287a200cedc5b8edb98169483425
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 43434a0354a39ae37798e959a9eb919465989dba
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750669"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034576"
 ---
 # <a name="itemsrepeater"></a>ItemsRepeater
 
@@ -73,10 +73,10 @@ ItemsRepeater는 기본 항목 컬렉션을 제공하지 않습니다. 별도의
 
 [**ItemsRepeater**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)는 [**컨트롤**](/uwp/api/windows.ui.xaml.controls.control)에서 파생되지 않으므로 컨트롤 템플릿이 없습니다. 따라서 ListView 또는 다른 컬렉션 컨트롤처럼 기본 스크롤 기능을 제공하지 않습니다.
 
-**ItemsRepeater**를 사용하는 경우 [**ScrollViewer**](/uwp/api/windows.ui.xaml.controls.scrollviewer) 컨트롤에 스크롤 기능을 래핑하는 방법으로 스크롤 기능을 제공해야 합니다.
+**ItemsRepeater** 를 사용하는 경우 [**ScrollViewer**](/uwp/api/windows.ui.xaml.controls.scrollviewer) 컨트롤에 스크롤 기능을 래핑하는 방법으로 스크롤 기능을 제공해야 합니다.
 
 > [!NOTE]
-> 또한 앱이 Windows 10 버전 1809 *이전*에 출시된 Windows에서 실행되는 경우 [ **ItemsRepeaterScrollHost**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeaterscrollhost) 내부에 **ScrollViewer**를 호스트해야 합니다. 
+> 또한 앱이 Windows 10 버전 1809 *이전* 에 출시된 Windows에서 실행되는 경우 [ **ItemsRepeaterScrollHost**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeaterscrollhost) 내부에 **ScrollViewer** 를 호스트해야 합니다. 
 > ```xaml
 > <muxc:ItemsRepeaterScrollHost>
 >     <ScrollViewer>
@@ -86,7 +86,7 @@ ItemsRepeater는 기본 항목 컬렉션을 제공하지 않습니다. 별도의
 > ```
 > 앱이 Windows 10 버전 1809 이상에서만 실행되는 경우 [**ItemsRepeaterScrollHost**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeaterscrollhost)를 사용할 필요가 없습니다.
 >
-> Windows 10 버전 1809보다 낮은 버전에서는 **ScrollViewer**가 **ItemsRepeater**에 필요한 [**IScrollAnchorProvider**](/uwp/api/windows.ui.xaml.controls.iscrollanchorprovider) 인터페이스를 구현하지 않습니다.  **ItemsRepeaterScrollHost**는 이전 릴리스에서 **ItemsRepeater**가 **ScrollViewer**와 함께 작동하여 사용자가 보고 있는 항목의 시각적 위치를 유지할 수 있게 해줍니다.  그렇지 않으면 목록의 항목이 변경되거나 앱의 크기를 조정할 때 항목이 갑자기 이동하거나 사라지는 것처럼 보일 수 있습니다.
+> Windows 10 버전 1809보다 낮은 버전에서는 **ScrollViewer** 가 **ItemsRepeater** 에 필요한 [**IScrollAnchorProvider**](/uwp/api/windows.ui.xaml.controls.iscrollanchorprovider) 인터페이스를 구현하지 않습니다.  **ItemsRepeaterScrollHost** 는 이전 릴리스에서 **ItemsRepeater** 가 **ScrollViewer** 와 함께 작동하여 사용자가 보고 있는 항목의 시각적 위치를 유지할 수 있게 해줍니다.  그렇지 않으면 목록의 항목이 변경되거나 앱의 크기를 조정할 때 항목이 갑자기 이동하거나 사라지는 것처럼 보일 수 있습니다.
 
 ## <a name="create-an-itemsrepeater"></a>ItemsRepeater 만들기
 
@@ -94,7 +94,7 @@ ItemsRepeater는 기본 항목 컬렉션을 제공하지 않습니다. 별도의
 
 ### <a name="itemssource"></a>ItemsSource
 
-보기를 채우려면 [**ItemsSource**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemssource) 속성을 데이터 항목 컬렉션으로 설정합니다. 여기서는 **ItemsSource**가 코드에서 바로 컬렉션의 인스턴스로 설정됩니다.
+보기를 채우려면 [**ItemsSource**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemssource) 속성을 데이터 항목 컬렉션으로 설정합니다. 여기서는 **ItemsSource** 가 코드에서 바로 컬렉션의 인스턴스로 설정됩니다.
 
 ```csharp
 ObservableCollection<string> Items = new ObservableCollection<string>();
@@ -111,15 +111,15 @@ XAML에서 **ItemsSource** 속성을 컬렉션에 바인딩할 수도 있습니�
 ```
 
 ### <a name="itemtemplate"></a>ItemTemplate
-데이터 항목을 시각화하는 방법을 지정하려면 [**ItemTemplate**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) 속성을 이전에 정의한 [**DataTemplate**](/uwp/api/windows.ui.xaml.datatemplate) 또는 [**DataTemplateSelector**](/uwp/api/windows.ui.xaml.controls.datatemplateselector)로 설정합니다. 데이터 템플릿은 데이터를 시각화하는 방법을 정의합니다. 기본적으로 항목은 데이터 개체의 문자열 표현을 사용하는 **TextBlock**을 통해 보기에 표시됩니다.
+데이터 항목을 시각화하는 방법을 지정하려면 [**ItemTemplate**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) 속성을 이전에 정의한 [**DataTemplate**](/uwp/api/windows.ui.xaml.datatemplate) 또는 [**DataTemplateSelector**](/uwp/api/windows.ui.xaml.controls.datatemplateselector)로 설정합니다. 데이터 템플릿은 데이터를 시각화하는 방법을 정의합니다. 기본적으로 항목은 데이터 개체의 문자열 표현을 사용하는 **TextBlock** 을 통해 보기에 표시됩니다.
 
 그러나 개별 항목을 표시하는 데 사용할 하나 이상의 컨트롤의 모양과 레이아웃을 정의하는 템플릿을 사용하여 데이터를 보다 풍부하게 표시하는 것이 일반적입니다. 템플릿에 사용하는 컨트롤을 데이터 개체의 속성에 바인딩하거나 정적 콘텐츠를 인라인으로 정의할 수 있습니다.
 
 #### <a name="datatemplate"></a>DataTemplate
-이 예제의 데이터 개체는 간단한 문자열입니다. **DataTemplate**은 텍스트 왼쪽에 이미지를 포함하고 있으며, 문자열을 청록색으로 표시하도록 **TextBlock**의 스타일을 지정합니다.
+이 예제의 데이터 개체는 간단한 문자열입니다. **DataTemplate** 은 텍스트 왼쪽에 이미지를 포함하고 있으며, 문자열을 청록색으로 표시하도록 **TextBlock** 의 스타일을 지정합니다.
 
 > [!NOTE]
-> **DataTemplate**에서 [x:Bind 태그 확장](../../xaml-platform/x-bind-markup-extension.md)을 사용하는 경우 DataTemplate에서 DataType(`x:DataType`)을 지정해야 합니다.
+> **DataTemplate** 에서 [x:Bind 태그 확장](../../xaml-platform/x-bind-markup-extension.md)을 사용하는 경우 DataTemplate에서 DataType(`x:DataType`)을 지정해야 합니다.
 
 ```xaml
 <DataTemplate x:DataType="x:String">
@@ -136,14 +136,14 @@ XAML에서 **ItemsSource** 속성을 컬렉션에 바인딩할 수도 있습니�
 </DataTemplate>
 ```
 
-이 **DataTemplate**을 사용하여 항목을 표시하면 항목이 다음과 같이 나타납니다.
+이 **DataTemplate** 을 사용하여 항목을 표시하면 항목이 다음과 같이 나타납니다.
 
 ![데이터 템플릿을 사용하여 표시된 항목](images/listview-itemstemplate.png)
 
-보기에 대량의 항목이 표시되는 경우 항목의 **DataTemplate**에 사용된 요소의 수가 성능에 큰 영향을 미칠 수 있습니다. **DataTemplate**을 사용하여 목록에 있는 항목의 모양을 정의하는 자세한 방법과 예제는 [항목 컨테이너 및 템플릿](item-containers-templates.md)을 참조하세요.
+보기에 대량의 항목이 표시되는 경우 항목의 **DataTemplate** 에 사용된 요소의 수가 성능에 큰 영향을 미칠 수 있습니다. **DataTemplate** 을 사용하여 목록에 있는 항목의 모양을 정의하는 자세한 방법과 예제는 [항목 컨테이너 및 템플릿](item-containers-templates.md)을 참조하세요.
 
 > [!TIP]
-> 템플릿을 정적 리소스로 참조되는 것이 아닌 인라인으로 선언하려는 경우 사용 편의를 위해 **DataTemplate** 또는 **DataTemplateSelector**를 **ItemsRepeater**의 직계 자식으로 지정할 수 있습니다.  ItemsRepeater는 **ItemTemplate** 속성의 값으로 할당됩니다. 예를 들어 다음과 같이 사용하면 유효합니다.
+> 템플릿을 정적 리소스로 참조되는 것이 아닌 인라인으로 선언하려는 경우 사용 편의를 위해 **DataTemplate** 또는 **DataTemplateSelector** 를 **ItemsRepeater** 의 직계 자식으로 지정할 수 있습니다.  ItemsRepeater는 **ItemTemplate** 속성의 값으로 할당됩니다. 예를 들어 다음과 같이 사용하면 유효합니다.
 > ```xaml
 > <ItemsRepeater ItemsSource="{x:Bind Items}">
 >     <DataTemplate>
@@ -153,15 +153,15 @@ XAML에서 **ItemsSource** 속성을 컬렉션에 바인딩할 수도 있습니�
 > ```
 
 > [!TIP]
-> **ListView** 및 다른 컬렉션 컨트롤과는 달리, **ItemsRepeater**는 **DataTemplate**의 요소를 여백, 안쪽 여백, 선택 시각적 개체 또는 시각적 상태 위의 포인터 같은 기본 정책을 포함하고 있는 추가 항목 컨테이너로 래핑하지 않습니다. 대신 **ItemsRepeater**는 **DataTemplate**에 정의된 것만 제공합니다. 항목의 모양을 목록 보기 항목과 똑같이 만들고 싶으면 **ListViewItem** 같은 컨테이너를 데이터 템플릿에 명시적으로 포함하면 됩니다. **ItemsRepeater**는 **ListViewItem** 시각적 개체를 표시하지만, 선택 또는 다중 선택 확인란 표시 같은 다른 기능을 자동으로 사용하지는 않습니다.
+> **ListView** 및 다른 컬렉션 컨트롤과는 달리, **ItemsRepeater** 는 **DataTemplate** 의 요소를 여백, 안쪽 여백, 선택 시각적 개체 또는 시각적 상태 위의 포인터 같은 기본 정책을 포함하고 있는 추가 항목 컨테이너로 래핑하지 않습니다. 대신 **ItemsRepeater** 는 **DataTemplate** 에 정의된 것만 제공합니다. 항목의 모양을 목록 보기 항목과 똑같이 만들고 싶으면 **ListViewItem** 같은 컨테이너를 데이터 템플릿에 명시적으로 포함하면 됩니다. **ItemsRepeater** 는 **ListViewItem** 시각적 개체를 표시하지만, 선택 또는 다중 선택 확인란 표시 같은 다른 기능을 자동으로 사용하지는 않습니다.
 >
-> 마찬가지로, 데이터 컬렉션이 **단추**(`List<Button>`)같은 실제 컨트롤 컬렉션인 경우 **ContentPresenter**를 **DataTemplate**에 배치하여 컨트롤을 표시할 수 있습니다.
+> 마찬가지로, 데이터 컬렉션이 **단추** (`List<Button>`)같은 실제 컨트롤 컬렉션인 경우 **ContentPresenter** 를 **DataTemplate** 에 배치하여 컨트롤을 표시할 수 있습니다.
 
 #### <a name="datatemplateselector"></a>DataTemplateSelector
 
-보기에 표시하는 항목이 동일한 형식일 필요는 없습니다. 개발자가 지정하는 기준에 따라 다른 **DataTemplate**을 선택할 수 있도록 [**ItemTemplate**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) 속성에 [**DataTemplateSelector**](/uwp/api/windows.ui.xaml.controls.datatemplateselector)를 제공할 수 있습니다.
+보기에 표시하는 항목이 동일한 형식일 필요는 없습니다. 개발자가 지정하는 기준에 따라 다른 **DataTemplate** 을 선택할 수 있도록 [**ItemTemplate**](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate) 속성에 [**DataTemplateSelector**](/uwp/api/windows.ui.xaml.controls.datatemplateselector)를 제공할 수 있습니다.
 
-이 예제에서는 큰 항목과 작은 항목을 표현하는 두 **DataTemplate** 중에 무엇을 사용할 것인지 결정하는 **DataTemplateSelector**가 이미 정의된 것으로 가정합니다.
+이 예제에서는 큰 항목과 작은 항목을 표현하는 두 **DataTemplate** 중에 무엇을 사용할 것인지 결정하는 **DataTemplateSelector** 가 이미 정의된 것으로 가정합니다.
 
 ```xaml
 <ItemsRepeater ...>
@@ -172,14 +172,14 @@ XAML에서 **ItemsSource** 속성을 컬렉션에 바인딩할 수도 있습니�
 </ItemsRepeater>
 ```
 
-**ItemsRepeater**에 사용할 **DataTemplateSelector**를 정의할 때 [**SelectTemplateCore(Object)** ](/uwp/api/windows.ui.xaml.controls.datatemplateselector.selecttemplatecore#Windows_UI_Xaml_Controls_DataTemplateSelector_SelectTemplateCore_System_Object_) 메서드의 재정의만 구현하면 됩니다. 자세한 내용과 예제는 [**DataTemplateSelector**](/uwp/api/windows.ui.xaml.controls.datatemplateselector)를 참조하세요.
+**ItemsRepeater** 에 사용할 **DataTemplateSelector** 를 정의할 때 [**SelectTemplateCore(Object)**](/uwp/api/windows.ui.xaml.controls.datatemplateselector.selecttemplatecore#Windows_UI_Xaml_Controls_DataTemplateSelector_SelectTemplateCore_System_Object_) 메서드의 재정의만 구현하면 됩니다. 자세한 내용과 예제는 [**DataTemplateSelector**](/uwp/api/windows.ui.xaml.controls.datatemplateselector)를 참조하세요.
 
 > [!NOTE]
-> 고급 시나리오에서 요소를 만드는 방법을 관리하는 데 사용되는 **DataTemplate** 대신, **ItemTemplate**으로 사용할 [**Windows.UI.Xaml.Controls.IElementFactory**](/uwp/api/windows.ui.xaml.controls.ielementfactory)를 구현할 수 있습니다.  이 대안을 사용할 경우 요청을 받으면 콘텐츠를 생성해야 합니다.
+> 고급 시나리오에서 요소를 만드는 방법을 관리하는 데 사용되는 **DataTemplate** 대신, **ItemTemplate** 으로 사용할 [**Windows.UI.Xaml.Controls.IElementFactory**](/uwp/api/windows.ui.xaml.controls.ielementfactory)를 구현할 수 있습니다.  이 대안을 사용할 경우 요청을 받으면 콘텐츠를 생성해야 합니다.
 
 ## <a name="configure-the-data-source"></a>데이터 원본 구성
 
-항목의 콘텐츠를 생성하는 데 사용할 컬렉션을 지정하려면 [ItemsSource](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemssource) 속성을 사용합니다. **IEnumerable**을 구현하는 모든 형식으로 ItemsSource를 설정할 수 있습니다. 데이터 원본이 구현하는 추가 컬렉션 인터페이스에 따라 ItemsRepeater가 데이터와 상호 작용하는 데 사용할 수 있는 기능이 결정됩니다.
+항목의 콘텐츠를 생성하는 데 사용할 컬렉션을 지정하려면 [ItemsSource](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemssource) 속성을 사용합니다. **IEnumerable** 을 구현하는 모든 형식으로 ItemsSource를 설정할 수 있습니다. 데이터 원본이 구현하는 추가 컬렉션 인터페이스에 따라 ItemsRepeater가 데이터와 상호 작용하는 데 사용할 수 있는 기능이 결정됩니다.
 
 이 목록은 사용 가능한 인터페이스과 각 인터페이스를 언제 사용하는지 보여줍니다.
 
@@ -201,7 +201,7 @@ XAML에서 **ItemsSource** 속성을 컬렉션에 바인딩할 수도 있습니�
 
     컨트롤이 인덱스를 통해 항목에 액세스할 수 있게 해주고 중복 내부 복사를 방지합니다.
 
-    **경고**: [INotifyCollectionChanged](/dotnet/api/system.collections.specialized.inotifycollectionchanged)를 구현하지 않고 목록/벡터를 변경하면 UI에 반영되지 않습니다.
+    **경고** : [INotifyCollectionChanged](/dotnet/api/system.collections.specialized.inotifycollectionchanged)를 구현하지 않고 목록/벡터를 변경하면 UI에 반영되지 않습니다.
 
 - [INotifyCollectionChanged](/dotnet/api/system.collections.specialized.inotifycollectionchanged)(.NET)
 
@@ -215,9 +215,9 @@ XAML에서 **ItemsSource** 속성을 컬렉션에 바인딩할 수도 있습니�
 
     **INotifyCollectionChanged** 인터페이스와 마찬가지로, 컨트롤이 데이터 원본의 변경 내용을 관찰하고 그에 따라 대응할 수 있게 해줍니다.
 
-    **경고**: Windows.Foundation.IObservableVector\<T>는 '이동' 작업을 지원하지 않습니다. 이로 인해 항목의 UI가 시각적 상태를 잃게 될 수 있습니다.  예를 들어 현재 선택되고/되었거나 'Remove' 뒤에 'Add'를 사용하여 이동이 수행되는 곳에 포커스가 있는 항목은 포커스를 잃게 되고 더 이상 선택되지 않습니다.
+    **경고** : Windows.Foundation.IObservableVector\<T>는 '이동' 작업을 지원하지 않습니다. 이로 인해 항목의 UI가 시각적 상태를 잃게 될 수 있습니다.  예를 들어 현재 선택되고/되었거나 'Remove' 뒤에 'Add'를 사용하여 이동이 수행되는 곳에 포커스가 있는 항목은 포커스를 잃게 되고 더 이상 선택되지 않습니다.
 
-    Platform.Collections.Vector\<T>는 IObservableVector\<T>를 사용하며 동일한 제한이 적용됩니다. '이동' 작업을 반드시 지원해야 하는 경우 **INotifyCollectionChanged** 인터페이스를 사용합니다.  .NET ObservableCollection\<T> 클래스는 **INotifyCollectionChanged**를 사용합니다.
+    Platform.Collections.Vector\<T>는 IObservableVector\<T>를 사용하며 동일한 제한이 적용됩니다. '이동' 작업을 반드시 지원해야 하는 경우 **INotifyCollectionChanged** 인터페이스를 사용합니다.  .NET ObservableCollection\<T> 클래스는 **INotifyCollectionChanged** 를 사용합니다.
 
 - [IKeyIndexMapping](/uwp/api/microsoft.ui.xaml.controls.ikeyindexmapping)
 
@@ -293,7 +293,7 @@ private async void ScrollViewer_ViewChanged(object sender, ScrollViewerViewChang
 
 ### <a name="uniformgridlayout"></a>UniformGridLayout
 
-[UniformGridLayout](/uwp/api/microsoft.ui.xaml.controls.uniformgridlayout)은 요소를 래핑 레이아웃에 순차적으로 배치합니다. [방향](/uwp/api/microsoft.ui.xaml.controls.uniformgridlayout.orientation)이 **가로**이면 항목이 왼쪽에서 오른쪽 순서로 배치되고, 방향이 **세로**이면 위에서 아래 순서로 배치됩니다. 모든 항목의 크기가 동일하게 조정됩니다.
+[UniformGridLayout](/uwp/api/microsoft.ui.xaml.controls.uniformgridlayout)은 요소를 래핑 레이아웃에 순차적으로 배치합니다. [방향](/uwp/api/microsoft.ui.xaml.controls.uniformgridlayout.orientation)이 **가로** 이면 항목이 왼쪽에서 오른쪽 순서로 배치되고, 방향이 **세로** 이면 위에서 아래 순서로 배치됩니다. 모든 항목의 크기가 동일하게 조정됩니다.
 
 ![균일한 그리드 레이아웃 간격](images/uniform-grid-layout.png)
 
@@ -310,26 +310,26 @@ private async void ScrollViewer_ViewChanged(object sender, ScrollViewerViewChang
 
 [ItemsStretch](/uwp/api/microsoft.ui.xaml.controls.uniformgridlayout.itemsstretch) 속성을 설정하여 사용하지 않는 공간을 채우도록 항목 크기를 늘리는 방법을 지정할 수 있습니다.
 
-다음 목록은 사용 가능한 값을 보여줍니다. 정의에서는 기본 **방향**을 **가로**로 가정합니다.
+다음 목록은 사용 가능한 값을 보여줍니다. 정의에서는 기본 **방향** 을 **가로** 로 가정합니다.
 
-- **없음**: 추가 공간이 행의 끝에 사용되지 않은 상태로 남아 있습니다. 이것이 기본값입니다.
-- **Fill**: 사용 가능한 공간(세로 방향인 경우 높이)을 사용하도록 항목에 추가 너비가 제공됩니다.
-- **Uniform**: 사용 가능한 공간을 사용하도록 항목에 추가 너비가 제공되며, 가로 세로 비율을 유지하기 위해 추가 높이가 제공됩니다(세로 방향인 경우 높이와 너비가 전환됨).
+- **없음** : 추가 공간이 행의 끝에 사용되지 않은 상태로 남아 있습니다. 이것이 기본값입니다.
+- **Fill** : 사용 가능한 공간(세로 방향인 경우 높이)을 사용하도록 항목에 추가 너비가 제공됩니다.
+- **Uniform** : 사용 가능한 공간을 사용하도록 항목에 추가 너비가 제공되며, 가로 세로 비율을 유지하기 위해 추가 높이가 제공됩니다(세로 방향인 경우 높이와 너비가 전환됨).
 
 이 이미지는 가로 레이아웃에서 **ItemsStretch** 값의 효과를 보여줍니다.
 
 ![균일한 그리드 항목 확대](images/uniform-grid-item-stretch.png)
 
-**ItemsStretch**가 **없음**이면 [ItemsJustification](/uwp/api/microsoft.ui.xaml.controls.uniformgridlayout.itemsjustification) 속성을 설정하여 추가 공간을 이용해 항목에 맞추는 방법을 지정할 수 있습니다.
+**ItemsStretch** 가 **없음** 이면 [ItemsJustification](/uwp/api/microsoft.ui.xaml.controls.uniformgridlayout.itemsjustification) 속성을 설정하여 추가 공간을 이용해 항목에 맞추는 방법을 지정할 수 있습니다.
 
-다음 목록은 사용 가능한 값을 보여줍니다. 정의에서는 기본 **방향**을 **가로**로 가정합니다.
+다음 목록은 사용 가능한 값을 보여줍니다. 정의에서는 기본 **방향** 을 **가로** 로 가정합니다.
 
-- **Start**: 항목을 행의 시작 부분에 맞춥니다. 추가 공간이 행의 끝에 사용되지 않은 상태로 남아 있습니다. 이것이 기본값입니다.
-- **Center**: 항목을 행의 중심에 맞춥니다. 추가 공간이 행의 시작 부분과 끝부분에 균등하게 분배됩니다.
-- **End**: 항목을 행의 끝에 맞춥니다. 추가 공간은 행의 시작 부분에 사용되지 않은 상태로 남아 있습니다.
-- **SpaceAround**: 항목을 균일하게 분산합니다. 각 항목 앞뒤에 동일한 양의 공간이 추가됩니다.
-- **SpaceBetween**: 항목을 균일하게 분산합니다. 각 항목 사이에 동일한 양의 공간이 추가됩니다. 행의 시작과 끝에 공간이 추가되지 않습니다.
-- **SpaceEvenly**: 각 항목의 사이와 행의 시작 및 끝에 동일한 양의 공간을 두어 항목을 균일하게 분산합니다.
+- **Start** : 항목을 행의 시작 부분에 맞춥니다. 추가 공간이 행의 끝에 사용되지 않은 상태로 남아 있습니다. 이것이 기본값입니다.
+- **Center** : 항목을 행의 중심에 맞춥니다. 추가 공간이 행의 시작 부분과 끝부분에 균등하게 분배됩니다.
+- **End** : 항목을 행의 끝에 맞춥니다. 추가 공간은 행의 시작 부분에 사용되지 않은 상태로 남아 있습니다.
+- **SpaceAround** : 항목을 균일하게 분산합니다. 각 항목 앞뒤에 동일한 양의 공간이 추가됩니다.
+- **SpaceBetween** : 항목을 균일하게 분산합니다. 각 항목 사이에 동일한 양의 공간이 추가됩니다. 행의 시작과 끝에 공간이 추가되지 않습니다.
+- **SpaceEvenly** : 각 항목의 사이와 행의 시작 및 끝에 동일한 양의 공간을 두어 항목을 균일하게 분산합니다.
 
 이 이미지는 세로 레이아웃에서 **ItemsStretch** 값의 효과를 보여줍니다(행이 아닌 열에 적용됨).
 
@@ -338,7 +338,7 @@ private async void ScrollViewer_ViewChanged(object sender, ScrollViewerViewChang
 > [!TIP]
 > **ItemsStretch** 속성은 레이아웃의 _측정값_ 전달에 영향을 줍니다. **ItemsJustification** 속성은 레이아웃의 _정렬_ 전달에 영향을 줍니다.
 
-다음 예제에서는 **ItemsRepeater.Layout** 속성을 **UniformGridLayout**으로 설정하는 방법을 보여줍니다.
+다음 예제에서는 **ItemsRepeater.Layout** 속성을 **UniformGridLayout** 으로 설정하는 방법을 보여줍니다.
 
 ```xaml
 <!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
@@ -441,7 +441,7 @@ private void OnElementClearing(ItemsRepeater sender, ElementClearingEventArgs ar
 
 이렇게 하면 ItemsRepeater가 스크롤 위치 0에서 다시 시작하지 않습니다. 또한 다시 설정할 때 변경되지 않은 데이터의 UIElement를 신속하게 복원할 수 있으므로 성능이 향상됩니다.
 
-다음 예제에서는 세로 스택의 항목 목록을 표시하는 방법을 보여줍니다. 여기서 _MyItemsSource_는 기본 항목 목록을 래핑하는 사용자 지정 데이터 원본입니다. 항목 원본으로 사용할 새 목록을 다시 할당할 수 있는 _Data_ 속성을 노출한 다음, 다시 설정을 트리거합니다.
+다음 예제에서는 세로 스택의 항목 목록을 표시하는 방법을 보여줍니다. 여기서 _MyItemsSource_ 는 기본 항목 목록을 래핑하는 사용자 지정 데이터 원본입니다. 항목 원본으로 사용할 새 목록을 다시 할당할 수 있는 _Data_ 속성을 노출한 다음, 다시 설정을 트리거합니다.
 
 ```xaml
 <ScrollViewer x:Name="sv">
@@ -578,9 +578,9 @@ public class MyItemsSource : IReadOnlyList<ItemBase>, IKeyIndexMapping, INotifyC
 [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)를 사용하여 각 항목을 제공하는 자체 컨트롤 형식을 모두 갖춘 사용자 지정 컬렉션 컨트롤을 만들 수 있습니다.
 
 > [!NOTE]
-> **ItemsControl**을 사용하는 것과 비슷하지만, **ItemsControl**에서 파생되고 **ItemsPresenter**를 컨트롤 템플릿에 배치하는 대신  **컨트롤**에서 파생되고 **ItemsRepeater**를 컨트롤 템플릿에 삽입합니다. 사용자 지정 컬렉션 컨트롤에 **ItemsRepeater**가 "있는" 경우도 있고 사용자 지정 컬렉션 컨트롤이 **ItemsControl**"인" 경우도 있습니다. 즉, 상속한 속성 중 지원하지 않을 속성보다는 노출할 속성을 명시적으로 선택해야 합니다.
+> **ItemsControl** 을 사용하는 것과 비슷하지만, **ItemsControl** 에서 파생되고 **ItemsPresenter** 를 컨트롤 템플릿에 배치하는 대신  **컨트롤** 에서 파생되고 **ItemsRepeater** 를 컨트롤 템플릿에 삽입합니다. 사용자 지정 컬렉션 컨트롤에 **ItemsRepeater** 가 "있는" 경우도 있고 사용자 지정 컬렉션 컨트롤이 **ItemsControl** "인" 경우도 있습니다. 즉, 상속한 속성 중 지원하지 않을 속성보다는 노출할 속성을 명시적으로 선택해야 합니다.
 
-이 예제에서는 _MediaCollectionView_라는 사용자 지정 컨트롤에 [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)를 배치하고 속성을 노출하는 방법을 보여줍니다.
+이 예제에서는 _MediaCollectionView_ 라는 사용자 지정 컨트롤에 [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)를 배치하고 속성을 노출하는 방법을 보여줍니다.
 
 ```xaml
 <!-- xmlns:muxc="using:Microsoft.UI.Xaml.Controls" -->
@@ -789,22 +789,22 @@ ItemsRepeater가 제공하는 포커스 이동의 최소 키보드 지원은 XAM
 
 ![방향 탐색](/windows/uwp/design/input/images/keyboard/directional-navigation.png)
 
-ItemsRepeater의 [XYFocusKeyboardNavigation 모드](/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)가 기본적으로 _사용_됩니다. 의도한 환경에 따라 Home, End, PageUp, PageDown 등의 일반적인 [키보드 조작](../input/keyboard-interactions.md) 지원을 추가하는 방안을 고려해 보세요.
+ItemsRepeater의 [XYFocusKeyboardNavigation 모드](/uwp/api/windows.ui.xaml.input.xyfocuskeyboardnavigationmode)가 기본적으로 _사용_ 됩니다. 의도한 환경에 따라 Home, End, PageUp, PageDown 등의 일반적인 [키보드 조작](../input/keyboard-interactions.md) 지원을 추가하는 방안을 고려해 보세요.
 
 ItemsRepeater는 항목(가상화 여부에 관계 없이)의 기본 탭 순서가 데이터에서 항목에 제공되는 순서와 동일하도록 자동으로 확인합니다. 기본적으로는 ItemsRepeater는 [TabFocusNavigation](/uwp/api/windows.ui.xaml.uielement.tabfocusnavigation) 속성이 일반적인 기본값인 _로컬_ 대신 [한 번](/uwp/api/windows.ui.xaml.input.keyboardnavigationmode)으로 설정됩니다.
 
 > [!NOTE]
 > ItemsRepeater는 마지막으로 포커스가 있었던 항목을 자동으로 기억하지 않습니다.  즉, 사용자가 Shift+Tab을 사용할 때 마지막으로 실현된 항목으로 이동될 수 있습니다.
 
-### <a name="announcing-item-_x_-of-_y_-in-screen-readers"></a>화면 읽기 프로그램에서 "_Y_의 _X_ 항목" 발표
+### <a name="announcing-item-_x_-of-_y_-in-screen-readers"></a>화면 읽기 프로그램에서 " _Y_ 의 _X_ 항목" 발표
 
-**PositionInSet** 및 **SizeOfSet**의 값처럼 적절한 자동화 속성을 설정해야 하며, 항목이 추가, 이동, 제거될 때 최신 상태를 유지해야 합니다.
+**PositionInSet** 및 **SizeOfSet** 의 값처럼 적절한 자동화 속성을 설정해야 하며, 항목이 추가, 이동, 제거될 때 최신 상태를 유지해야 합니다.
 
 명확한 시각적 순서가 없는 사용자 지정 레이아웃도 있습니다.  사용자는 적어도 화면 읽기 프로그램에 사용되는 PositionInSet 및 SizeOfSet 속성의 값이 데이터에 항목이 나타나는 순서와 일치할 것으로 예상합니다(자연 집계와 일치하도록 1로 오프셋하거나 0부터 시작).
 
 이렇게 하는 가장 좋은 방법은 항목 컨트롤의 자동화 피어가 [GetPositionInSetCore](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getpositioninsetcore) 및 [GetSizeOfSetCore](/uwp/api/windows.ui.xaml.automation.peers.automationpeer.getsizeofsetcore) 메서드를 구현하고 컨트롤이 표현한 데이터 세트의 항목 위치를 보고하도록 만드는 것입니다. 보조 기술이 액세스할 때 런타임에만 값이 컴퓨팅되므로 최신 상태를 유지하는 것은 문제가 되지 않습니다. 이 값은 데이터 순서와 일치합니다.
 
-이 예제에서는 _CardControl_이라는 사용자 지정 컨트롤을 표시할 때 이렇게 하는 방법을 보여줍니다.
+이 예제에서는 _CardControl_ 이라는 사용자 지정 컨트롤을 표시할 때 이렇게 하는 방법을 보여줍니다.
 
 ```xaml
 <ScrollViewer >

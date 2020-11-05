@@ -1,5 +1,5 @@
 ---
-Description: 앨범의 사진이나 제품 세부 정보 페이지의 품목과 같이 한 번에 하나씩 컬렉션의 이미지를 표시합니다.
+description: 앨범의 사진이나 제품 세부 정보 페이지의 품목과 같이 한 번에 하나씩 컬렉션의 이미지를 표시합니다.
 title: 대칭 이동 보기 컨트롤에 대한 지침
 ms.assetid: A4E05D92-1A0E-4CDD-84B9-92199FF8A8A3
 label: Flip view
@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: dc55d4c74420523739caa0f696feb65f8b7e0a2c
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 1637845752d713482ad668cfb7078d5e4c138e84
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219426"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032306"
 ---
 # <a name="flip-view"></a>보기 대칭 이동
 

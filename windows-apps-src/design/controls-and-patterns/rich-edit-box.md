@@ -1,5 +1,5 @@
 ---
-Description: RichEditBox 컨트롤을 사용하면 서식 있는 텍스트, 하이퍼링크 및 이미지를 포함하는 서식 있는 텍스트 문서를 입력하고 편집할 수 있습니다. IsReadOnly 속성을 true로 설정하여 RichEditBox를 읽기 전용으로 만들 수 있습니다.
+description: RichEditBox 컨트롤을 사용하면 서식 있는 텍스트, 하이퍼링크 및 이미지를 포함하는 서식 있는 텍스트 문서를 입력하고 편집할 수 있습니다. IsReadOnly 속성을 true로 설정하여 RichEditBox를 읽기 전용으로 만들 수 있습니다.
 title: RichEditBox
 ms.assetid: 4AFC0DFA-3B89-434D-9F86-4309CCFF7839
 label: Rich edit box
@@ -11,16 +11,16 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7ff0b8cc337c8afe3d7c06ffabca4eb0fa0d5a8d
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: bb5ee48152b96c430e3b6ab8cf320b3055620865
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750329"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035216"
 ---
 # <a name="rich-edit-box"></a>서식 있는 편집 상자
 
-RichEditBox 컨트롤을 사용하면 서식 있는 텍스트, 하이퍼링크 및 이미지를 포함하는 서식 있는 텍스트 문서를 입력하고 편집할 수 있습니다. IsReadOnly 속성을 **true**로 설정하여 RichEditBox를 읽기 전용으로 만들 수 있습니다.
+RichEditBox 컨트롤을 사용하면 서식 있는 텍스트, 하이퍼링크 및 이미지를 포함하는 서식 있는 텍스트 문서를 입력하고 편집할 수 있습니다. IsReadOnly 속성을 **true** 로 설정하여 RichEditBox를 읽기 전용으로 만들 수 있습니다.
 
 **Windows UI 라이브러리 가져오기**
 
@@ -36,11 +36,11 @@ RichEditBox 컨트롤을 사용하면 서식 있는 텍스트, 하이퍼링크 �
    :::column-end:::
 :::row-end:::
 
-> **플랫폼 API**: [RichEditBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [Document 속성](/uwp/api/windows.ui.xaml.controls.richeditbox.document), [IsReadOnly 속성](/uwp/api/windows.ui.xaml.controls.richeditbox.isreadonly), [IsSpellCheckEnabled 속성](/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled)
+> **플랫폼 API** : [RichEditBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [Document 속성](/uwp/api/windows.ui.xaml.controls.richeditbox.document), [IsReadOnly 속성](/uwp/api/windows.ui.xaml.controls.richeditbox.isreadonly), [IsSpellCheckEnabled 속성](/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-텍스트 파일을 표시하고 편집하려면 **RichEditBox**를 사용합니다. 다른 표준 텍스트 입력란을 사용하는 방식으로 사용자 입력을 앱으로 가져오기 위해 RichEditBox를 사용하지 마세요. 대신, 앱과 분리된 텍스트 파일 작업에 사용합니다. 일반적으로 RichEditBox에 입력된 텍스트는 .rtf 파일에 저장합니다.
+텍스트 파일을 표시하고 편집하려면 **RichEditBox** 를 사용합니다. 다른 표준 텍스트 입력란을 사용하는 방식으로 사용자 입력을 앱으로 가져오기 위해 RichEditBox를 사용하지 마세요. 대신, 앱과 분리된 텍스트 파일 작업에 사용합니다. 일반적으로 RichEditBox에 입력된 텍스트는 .rtf 파일에 저장합니다.
 -   여러 줄 입력란의 주된 목적이 읽기 전용 문서(예: 블로그 항목 또는 이메일 메시지의 본문)를 만드는 것이고 그 문서에 서식을 지정해야 하는 경우에는 [서식 있는 텍스트 블록](./rich-text-block.md)을 사용합니다.
 -   데이터 처리에 사용 후 사용자에게 다시 표시하지는 않을 텍스트를 캡처할 때는 일반 텍스트 입력 컨트롤을 사용합니다.
 -   기타 모든 시나리오에서는 일반 텍스트 입력 컨트롤을 사용합니다.
@@ -69,7 +69,7 @@ RichEditBox 컨트롤을 사용하면 서식 있는 텍스트, 하이퍼링크 �
 
 ## <a name="create-a-rich-edit-box"></a>서식 있는 편집 상자 만들기
 
-기본적으로 RichEditBox는 맞춤법 검사를 지원합니다. 맞춤법 검사기를 사용하지 않도록 설정하려면 [IsSpellCheckEnabled](/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled) 속성을 **false**로 설정합니다. 자세한 내용은 [맞춤법 검사에 대한 지침](text-controls.md) 문서를 참조하세요.
+기본적으로 RichEditBox는 맞춤법 검사를 지원합니다. 맞춤법 검사기를 사용하지 않도록 설정하려면 [IsSpellCheckEnabled](/uwp/api/windows.ui.xaml.controls.richeditbox.isspellcheckenabled) 속성을 **false** 로 설정합니다. 자세한 내용은 [맞춤법 검사에 대한 지침](text-controls.md) 문서를 참조하세요.
 
 RichEditBox의 [Document](/uwp/api/windows.ui.xaml.controls.richeditbox.document) 속성을 사용하여 콘텐츠를 가져옵니다. [Windows.UI.Xaml.Documents.Block](/windows/desktop/api/tom/nn-tom-itextdocument) 개체를 해당 콘텐츠로 사용하는 RichTextBlock 컨트롤과 달리 RichEditBox의 콘텐츠는 [Windows.UI.Text.ITextDocument](/uwp/api/Windows.UI.Xaml.Documents.Block) 개체입니다. ITextDocument 인터페이스는 문서를 로드하여 스트림에 저장, 텍스트 범위 검색, 활성 선택 영역 가져오기, 변경 내용 실행 취소 및 다시 실행, 기본 서식 특성 설정 등을 수행하는 방법을 제공합니다.
 

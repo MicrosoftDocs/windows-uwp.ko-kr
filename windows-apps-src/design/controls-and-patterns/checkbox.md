@@ -1,5 +1,5 @@
 ---
-Description: 작업 항목을 선택하거나 선택 취소하는 데 사용합니다. 단일 목록 항목이나 여러 목록 항목에 대해 사용할 수 있습니다.
+description: 작업 항목을 선택하거나 선택 취소하는 데 사용합니다. 단일 목록 항목이나 여러 목록 항목에 대해 사용할 수 있습니다.
 title: 확인란
 ms.assetid: 6231A806-287D-43EE-BD8D-39D2FF761914
 label: Check boxes
@@ -12,12 +12,12 @@ design-contact: kimsea
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7add5ca356f5d1c41ddeb1fa19ea54c69ef9e583
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: e18f750f7a442fdfe5d5ffc0119a8a64f5571407
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750569"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030966"
 ---
 # <a name="check-boxes"></a>확인란
 
@@ -44,13 +44,13 @@ ms.locfileid: "91750569"
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-이진 예/아니요 선택 항목에 **단일 확인란**을 사용합니다. 예를 들어 "기억" 로그인 시나리오 또는 서비스 계약 조건의 경우입니다.
+이진 예/아니요 선택 항목에 **단일 확인란** 을 사용합니다. 예를 들어 "기억" 로그인 시나리오 또는 서비스 계약 조건의 경우입니다.
 
 ![개별 선택에 사용되는 단일 확인란](images/checkbox1.png)
 
-이진 선택의 경우 **확인란**과 [토글 스위치](toggles.md)의 주요 차이점은, 확인란은 상태에 대한 것이고 토글 스위치는 동작에 대한 것이라는 점입니다. 확인란 상호 작용(예: 양식 전송)의 커밋은 연기할 수 있지만 전환 스위치 상호 작용은 즉시 커밋해야 합니다. 또한 다중 선택에는 확인란만 사용할 수 있습니다.
+이진 선택의 경우 **확인란** 과 [토글 스위치](toggles.md)의 주요 차이점은, 확인란은 상태에 대한 것이고 토글 스위치는 동작에 대한 것이라는 점입니다. 확인란 상호 작용(예: 양식 전송)의 커밋은 연기할 수 있지만 전환 스위치 상호 작용은 즉시 커밋해야 합니다. 또한 다중 선택에는 확인란만 사용할 수 있습니다.
 
-사용자가 함께 사용할 수 있는 선택 항목 그룹에서 항목을 하나 이상 선택하는 다중 선택 시나리오에 **여러 확인란**을 사용합니다.
+사용자가 함께 사용할 수 있는 선택 항목 그룹에서 항목을 하나 이상 선택하는 다중 선택 시나리오에 **여러 확인란** 을 사용합니다.
 
 사용자가 옵션 조합을 선택할 수 있는 경우 확인란 그룹을 만듭니다.
 
@@ -226,11 +226,11 @@ State | 속성 | Value
 선택되지 않음 | IsChecked | **false** 
 확정되지 않음 | IsChecked | **null** 
 
-확인란이 확정되지 않은 상태를 보고하도록 하려면 [IsThreeState](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.isthreestate) 속성을 **true**로 설정해야 합니다. 
+확인란이 확정되지 않은 상태를 보고하도록 하려면 [IsThreeState](/uwp/api/windows.ui.xaml.controls.primitives.togglebutton.isthreestate) 속성을 **true** 로 설정해야 합니다. 
 
 옵션을 그룹화하는 경우 확정되지 않은 상태 확인란을 사용하여 전체 그룹을 나타낼 수 있습니다. 사용자가 그룹의 하위 항목 전부가 아닌 일부 항목을 선택하는 경우 확인란의 확정되지 않은 상태를 사용합니다.
 
-다음 예제에서는 "모두 선택" 확인란의 IsThreeState 속성이 **true**로 설정되어 있습니다. "모두 선택" 확인란은 모든 자식 요소가 선택되는 경우 선택되고 모든 자식 요소가 선택되지 않고 확정되지 않은 상태이면 선택되지 않습니다.
+다음 예제에서는 "모두 선택" 확인란의 IsThreeState 속성이 **true** 로 설정되어 있습니다. "모두 선택" 확인란은 모든 자식 요소가 선택되는 경우 선택되고 모든 자식 요소가 선택되지 않고 확정되지 않은 상태이면 선택되지 않습니다.
 
 ```xaml
 <StackPanel>

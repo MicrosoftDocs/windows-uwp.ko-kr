@@ -1,5 +1,5 @@
 ---
-Description: 레이블을 사용하여 인접한 컨트롤에 입력해야 하는 내용을 사용자에게 표시합니다. 관련 컨트롤 그룹에 레이블을 지정하거나 관련 컨트롤 그룹 근처에 지침 텍스트를 표시할 수도 있습니다.
+description: 레이블을 사용하여 인접한 컨트롤에 입력해야 하는 내용을 사용자에게 표시합니다. 관련 컨트롤 그룹에 레이블을 지정하거나 관련 컨트롤 그룹 근처에 지침 텍스트를 표시할 수도 있습니다.
 title: 레이블
 ms.assetid: CFACCCD4-749F-43FB-947E-2591AE673804
 label: Labels
@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 68b062dc4bd70c81b1b8b57808fad8e9c7498d75
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9c1dc878280b24424aa4bb20d5a1d6324838b127
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172617"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034546"
 ---
 # <a name="labels"></a>레이블
 
@@ -24,7 +24,7 @@ ms.locfileid: "89172617"
 
 레이블은 컨트롤 또는 관련 컨트롤 그룹의 이름이나 제목입니다.
 
-> **중요 API**: Header 속성, [TextBlock 클래스](/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
+> **중요 API** : Header 속성, [TextBlock 클래스](/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
 
 XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 제공 Header 속성이 있습니다. 컨트롤에 Header 속성이 없거나 컨트롤 그룹에 레이블을 지정하려는 경우 [TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock)을 대신 사용할 수 있습니다.
 
@@ -53,6 +53,6 @@ XAML에서 대부분의 컨트롤에는 레이블 표시에 사용하는 기본 
 * [RichEditBox.Header 속성](/uwp/api/windows.ui.xaml.controls.richeditbox.header)
 * [TextBlock 클래스](/uwp/api/Windows.UI.Xaml.Controls.TextBlock)
 
- 
+ 
 
- 
+ 

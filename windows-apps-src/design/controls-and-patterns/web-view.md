@@ -1,5 +1,5 @@
 ---
-Description: 웹 보기 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 웹 콘텐츠를 렌더링하는 보기를 앱에 포함합니다. 웹 보기 컨트롤에 하이퍼링크를 표시하고 사용할 수도 있습니다.
+description: 웹 보기 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 웹 콘텐츠를 렌더링하는 보기를 앱에 포함합니다. 웹 보기 컨트롤에 하이퍼링크를 표시하고 사용할 수도 있습니다.
 title: 웹 보기
 ms.assetid: D3CFD438-F9D6-4B72-AF1D-16EF2DFC1BB1
 label: Web view
@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 46fc3c0eb087891de4fe622f0770bc7f1b2955d7
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f2f3bf022210e5b5f329cb5824cb36708154b977
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163307"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034386"
 ---
 # <a name="web-view"></a>웹 보기
 
 웹 보기 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 웹 콘텐츠를 렌더링하는 보기를 앱에 포함합니다. 웹 보기 컨트롤에 하이퍼링크를 표시하고 사용할 수도 있습니다.
 
-> **중요 API**: [WebView 클래스](/uwp/api/Windows.UI.Xaml.Controls.WebView)
+> **중요 API** : [WebView 클래스](/uwp/api/Windows.UI.Xaml.Controls.WebView)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -59,7 +59,7 @@ ms.locfileid: "89163307"
 
 WebView는 Control 하위 클래스가 아니지만 키보드 입력 포커스를 받고 탭 순서에 참여합니다. [Focus](/uwp/api/windows.ui.xaml.controls.webview.focus) 메서드와 [GotFocus](/uwp/api/windows.ui.xaml.uielement.gotfocus) 및 [LostFocus](/uwp/api/windows.ui.xaml.uielement.lostfocus) 이벤트를 제공하지만 탭 관련 속성은 없습니다. 탭 순서상 해당 위치는 XAML 문서 순서상 위치와 같습니다. 탭 순서에는 입력 포커스를 받을 수 있는 웹 보기 콘텐츠의 모든 요소가 포함됩니다. 
 
-[WebView](/uwp/api/Windows.UI.Xaml.Controls.WebView) 클래스 페이지의 이벤트 테이블에 표시된 대로 웹 보기는 [UIElement](/uwp/api/Windows.UI.Xaml.UIElement)에서 상속된 사용자 입력 이벤트(예: [KeyDown](/uwp/api/windows.ui.xaml.uielement.keydown), [KeyUp](/uwp/api/windows.ui.xaml.uielement.keyup) 및 [PointerPressed](/uwp/api/windows.ui.xaml.uielement.pointerpressed))를 대부분 지원하지 않습니다. 대신, JavaScript **eval** 함수와 함께 [InvokeScriptAsync](/uwp/api/windows.ui.xaml.controls.webview.invokescriptasync)를 사용하여 HTML 이벤트 처리기를 사용하고, HTML 이벤트 처리기의 **window.external.notify**를 통해 [WebView.ScriptNotify](/uwp/api/windows.ui.xaml.controls.webview.scriptnotify)를 사용하는 애플리케이션에 알릴 수 있습니다.
+[WebView](/uwp/api/Windows.UI.Xaml.Controls.WebView) 클래스 페이지의 이벤트 테이블에 표시된 대로 웹 보기는 [UIElement](/uwp/api/Windows.UI.Xaml.UIElement)에서 상속된 사용자 입력 이벤트(예: [KeyDown](/uwp/api/windows.ui.xaml.uielement.keydown), [KeyUp](/uwp/api/windows.ui.xaml.uielement.keyup) 및 [PointerPressed](/uwp/api/windows.ui.xaml.uielement.pointerpressed))를 대부분 지원하지 않습니다. 대신, JavaScript **eval** 함수와 함께 [InvokeScriptAsync](/uwp/api/windows.ui.xaml.controls.webview.invokescriptasync)를 사용하여 HTML 이벤트 처리기를 사용하고, HTML 이벤트 처리기의 **window.external.notify** 를 통해 [WebView.ScriptNotify](/uwp/api/windows.ui.xaml.controls.webview.scriptnotify)를 사용하는 애플리케이션에 알릴 수 있습니다.
 
 ### <a name="navigating-to-content"></a>콘텐츠로 이동
 
@@ -80,7 +80,7 @@ WebView는 Control 하위 클래스가 아니지만 키보드 입력 포커스�
 
 코드에서 Source 속성을 설정할 수 있지만, 이렇게 하는 대신 일반적으로 **Navigate** 메서드 중 하나를 사용하여 코드에서 콘텐츠를 로드합니다. 
 
-웹 콘텐츠를 로드하려면 http 또는 https 체계를 사용하는 **Uri**와 함께 [Navigate](/uwp/api/windows.ui.xaml.controls.webview.navigate) 메서드를 사용합니다. 
+웹 콘텐츠를 로드하려면 http 또는 https 체계를 사용하는 **Uri** 와 함께 [Navigate](/uwp/api/windows.ui.xaml.controls.webview.navigate) 메서드를 사용합니다. 
 
 ```csharp
 webView1.Navigate("http://www.contoso.com");
@@ -88,15 +88,15 @@ webView1.Navigate("http://www.contoso.com");
 
 POST 요청과 HTTP 헤더가 포함된 URI로 이동하려면 [NavigateWithHttpRequestMessage](/uwp/api/windows.ui.xaml.controls.webview.navigatewithhttprequestmessage) 메서드를 사용합니다. 이 메서드는 [HttpRequestMessage.Method](/uwp/api/windows.web.http.httprequestmessage.method) 속성 값에 대해 [HttpMethod.Post](/uwp/api/windows.web.http.httpmethod.post) 및 [HttpMethod.Get](/uwp/api/windows.web.http.httpmethod.get)만 지원합니다. 
 
-앱의 [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder) 또는 [TemporaryFolder](/uwp/api/windows.storage.applicationdata.temporaryfolder) 데이터 저장소에서 압축 및 암호화되지 않은 콘텐츠를 로드하려면 [ms-appdata 체계](../../app-resources/uri-schemes.md)를 사용하는 **URI**와 함께 **Navigate** 메서드를 사용합니다. 웹 보기에서 이 체계를 지원하려면 로컬 또는 임시 폴더 아래의 하위 폴더에 콘텐츠를 배치해야 합니다. 이렇게 하면 ms-appdata:///local/*folder*/*file*.html 및 ms-appdata:///temp/*folder*/*file*.html과 같은 URI로 이동할 수 있습니다. (압축 또는 암호화된 파일을 로드하려면 [NavigateToLocalStreamUri](/uwp/api/windows.ui.xaml.controls.webview.navigatetolocalstreamuri)를 참조하세요.) 
+앱의 [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder) 또는 [TemporaryFolder](/uwp/api/windows.storage.applicationdata.temporaryfolder) 데이터 저장소에서 압축 및 암호화되지 않은 콘텐츠를 로드하려면 [ms-appdata 체계](../../app-resources/uri-schemes.md)를 사용하는 **URI** 와 함께 **Navigate** 메서드를 사용합니다. 웹 보기에서 이 체계를 지원하려면 로컬 또는 임시 폴더 아래의 하위 폴더에 콘텐츠를 배치해야 합니다. 이렇게 하면 ms-appdata:///local/ *folder*/*file*.html 및 ms-appdata:///temp/ *folder*/*file*.html과 같은 URI로 이동할 수 있습니다. (압축 또는 암호화된 파일을 로드하려면 [NavigateToLocalStreamUri](/uwp/api/windows.ui.xaml.controls.webview.navigatetolocalstreamuri)를 참조하세요.) 
 
-이러한 각 첫 번째 수준 하위 폴더는 다른 첫 번째 수준 하위 폴더의 콘텐츠와 분리됩니다. 예를 들어 ms-appdata:///temp/folder1/file.html로 이동할 수 있지만, 이 파일에서 ms-appdata:///temp/folder2/file.html에 대한 링크를 사용할 수는 없습니다. 그러나 **ms-appx-web scheme**을 사용하여 앱 패키지의 HTML 콘텐츠에 연결하고, **http** 및 **https** URI 체계를 사용하여 웹 콘텐츠에 연결할 수 있습니다.
+이러한 각 첫 번째 수준 하위 폴더는 다른 첫 번째 수준 하위 폴더의 콘텐츠와 분리됩니다. 예를 들어 ms-appdata:///temp/folder1/file.html로 이동할 수 있지만, 이 파일에서 ms-appdata:///temp/folder2/file.html에 대한 링크를 사용할 수는 없습니다. 그러나 **ms-appx-web scheme** 을 사용하여 앱 패키지의 HTML 콘텐츠에 연결하고, **http** 및 **https** URI 체계를 사용하여 웹 콘텐츠에 연결할 수 있습니다.
 
 ```csharp
 webView1.Navigate("ms-appdata:///local/intro/welcome.html");
 ```
 
-앱 패키지에서 콘텐츠를 로드하려면 [ms-appx-web scheme](/previous-versions/windows/apps/jj655406(v=win.10))을 사용하는 **Uri**와 함께 **Navigate** 메서드를 사용합니다. 
+앱 패키지에서 콘텐츠를 로드하려면 [ms-appx-web scheme](/previous-versions/windows/apps/jj655406(v=win.10))을 사용하는 **Uri** 와 함께 **Navigate** 메서드를 사용합니다. 
 
 ```csharp
 webView1.Navigate("ms-appx-web:///help/about.html");
@@ -171,7 +171,7 @@ private void webView1_NavigationCompleted(WebView sender, WebViewNavigationCompl
 }
 ```
 
-웹 보기 콘텐츠의 각 **iframe**에 대해 유사한 이벤트가 동일한 순서로 발생합니다. 
+웹 보기 콘텐츠의 각 **iframe** 에 대해 유사한 이벤트가 동일한 순서로 발생합니다. 
 - [FrameNavigationStarting](/uwp/api/windows.ui.xaml.controls.webview.framenavigationstarting) - 웹 보기의 프레임이 새 콘텐츠로 이동하기 전에 발생합니다. 
 - [FrameContentLoading](/uwp/api/windows.ui.xaml.controls.webview.framecontentloading) - 웹 보기의 프레임이 새 콘텐츠 로드를 시작했을 때 발생합니다. 
 - [FrameDOMContentLoaded](/uwp/api/windows.ui.xaml.controls.webview.framedomcontentloaded) - 웹 보기의 프레임이 현재 HTML 콘텐츠의 구문 분석을 완료했을 때 발생합니다. 
@@ -181,7 +181,7 @@ private void webView1_NavigationCompleted(WebView sender, WebViewNavigationCompl
 
 장기 실행 스크립트, 웹 보기에서 로드할 수 없는 콘텐츠, 안전하지 않은 콘텐츠 경고와 같은 잠재적인 콘텐츠 문제에 응답할 수 있습니다. 
 
-스크립트를 실행하는 동안 앱이 응답하지 않는 것처럼 보일 수도 있습니다. [LongRunningScriptDetected](/uwp/api/windows.ui.xaml.controls.webview.longrunningscriptdetected) 이벤트는 웹 보기에서 JavaScript를 실행하는 동안 정기적으로 발생하며 스크립트를 중단할 수 있는 기회를 제공합니다. 스크립트가 실행된 기간을 확인하려면 [WebViewLongRunningScriptDetectedEventArgs](/uwp/api/Windows.UI.Xaml.Controls.WebViewLongRunningScriptDetectedEventArgs)의 [ExecutionTime](/uwp/api/windows.ui.xaml.controls.webviewlongrunningscriptdetectedeventargs.executiontime) 속성을 확인합니다. 스크립트를 중지하려면 이벤트 인수 [StopPageScriptExecution](/uwp/api/windows.ui.xaml.controls.webviewlongrunningscriptdetectedeventargs.stoppagescriptexecution) 속성을 **true**로 설정합니다. 후속 웹 보기 탐색 중에 다시 로드하지 않을 경우 중지된 스크립트는 다시 실행되지 않습니다. 
+스크립트를 실행하는 동안 앱이 응답하지 않는 것처럼 보일 수도 있습니다. [LongRunningScriptDetected](/uwp/api/windows.ui.xaml.controls.webview.longrunningscriptdetected) 이벤트는 웹 보기에서 JavaScript를 실행하는 동안 정기적으로 발생하며 스크립트를 중단할 수 있는 기회를 제공합니다. 스크립트가 실행된 기간을 확인하려면 [WebViewLongRunningScriptDetectedEventArgs](/uwp/api/Windows.UI.Xaml.Controls.WebViewLongRunningScriptDetectedEventArgs)의 [ExecutionTime](/uwp/api/windows.ui.xaml.controls.webviewlongrunningscriptdetectedeventargs.executiontime) 속성을 확인합니다. 스크립트를 중지하려면 이벤트 인수 [StopPageScriptExecution](/uwp/api/windows.ui.xaml.controls.webviewlongrunningscriptdetectedeventargs.stoppagescriptexecution) 속성을 **true** 로 설정합니다. 후속 웹 보기 탐색 중에 다시 로드하지 않을 경우 중지된 스크립트는 다시 실행되지 않습니다. 
 
 웹 보기 컨트롤은 임의 파일 형식을 호스트할 수 없습니다. 웹 보기에서 호스트할 수 없는 콘텐츠를 로드하려고 하면 [UnviewableContentIdentified](/uwp/api/windows.ui.xaml.controls.webview.unviewablecontentidentified) 이벤트가 발생합니다. 이 이벤트를 처리하고 사용자에게 알리거나, [Launcher](/uwp/api/Windows.System.Launcher) 클래스를 사용하여 파일을 외부 브라우저 또는 다른 앱으로 리디렉션할 수 있습니다.
 
@@ -259,7 +259,7 @@ string returnValue = await webView1.InvokeScriptAsync("setDate", args);
 ```
 
 
-JavaScript **eval** 함수와 함께 **InvokeScriptAsync**를 사용하여 웹 페이지에 콘텐츠를 삽입할 수 있습니다.
+JavaScript **eval** 함수와 함께 **InvokeScriptAsync** 를 사용하여 웹 페이지에 콘텐츠를 삽입할 수 있습니다.
 
 여기서 XAML 입력란의 텍스트(`nameTextBox.Text`)는 `webView1`에 호스트된 HTML 페이지의 div에 기록됩니다. 
 
@@ -271,7 +271,7 @@ private async void Button_Click(object sender, RoutedEventArgs e)
 }
 ```
 
-웹 보기 콘텐츠의 스크립트는 문자열 매개 변수와 함께 **window.external.notify**를 사용하여 정보를 다시 앱으로 보낼 수 있습니다. 이러한 메시지를 받으려면 [ScriptNotify](/uwp/api/windows.ui.xaml.controls.webview.scriptnotify) 이벤트를 처리합니다. 
+웹 보기 콘텐츠의 스크립트는 문자열 매개 변수와 함께 **window.external.notify** 를 사용하여 정보를 다시 앱으로 보낼 수 있습니다. 이러한 메시지를 받으려면 [ScriptNotify](/uwp/api/windows.ui.xaml.controls.webview.scriptnotify) 이벤트를 처리합니다. 
 
 외부 웹 페이지에서 window.external.notify를 호출할 때 **ScriptNotify** 이벤트가 발생하게 하려면 페이지의 URI를 앱 매니페스트의 **ApplicationContentUriRules** 섹션에 포함해야 합니다. (Microsoft Visual Studio에서 제공하는 Package.appxmanifest 디자이너의 Content URI 탭에서 이렇게 할 수 있습니다.) 이 목록의 URI는 HTTPS를 사용해야 하며, 하위 도메인 와일드 카드를 포함할 수 있지만(예: `https://*.microsoft.com`) 도메인 와일드 카드는 포함할 수 없습니다(예: `https://*.com` 및 `https://*.*`). 매니페스트 요구 사항은 앱 패키지에서 시작되거나 ms-local-stream:// URI를 사용하거나 [NavigateToString](/uwp/api/windows.ui.xaml.controls.webview.navigatetostring)을 통해 로드되는 콘텐츠에 적용되지 않습니다. 
 

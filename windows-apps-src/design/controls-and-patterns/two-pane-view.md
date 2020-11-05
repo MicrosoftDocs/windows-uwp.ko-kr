@@ -1,17 +1,17 @@
 ---
-Description: TwoPaneView는 서로 다른 2개의 콘텐츠 영역이 있는 앱의 디스플레이를 관리하는 데 도움이 되는 레이아웃 컨트롤입니다.
+description: TwoPaneView는 서로 다른 2개의 콘텐츠 영역이 있는 앱의 디스플레이를 관리하는 데 도움이 되는 레이아웃 컨트롤입니다.
 title: 2 창 보기
 template: detail.hbs
 ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 681405694880024e158b4ef5798ca2862a38fde2
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 76a6264a8ce1704e9bd209a6246c81ba9665265f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750229"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034436"
 ---
 # <a name="two-pane-view"></a>2 창 보기
 
@@ -23,7 +23,7 @@ ms.locfileid: "91750229"
 TwoPaneView 컨트롤은 모든 Windows 디바이스에서 작동하는 동안 특수한 코딩 없이도 이중 화면 디바이스를 자동으로 활용할 수 있도록 설계되었습니다. 이중 화면 디바이스에서 나란히 보기는 UI(사용자 인터페이스)가 두 화면 사이의 간격을 스패닝할 때 콘텐츠가 각 화면에 표시되도록 깔끔하게 분할됩니다.
 
 > [!NOTE]
-> _이중 화면 디바이스_는 고유한 기능을 제공하는 특수한 종류의 디바이스입니다. 여러 모니터가 있는 데스크톱 디바이스와는 다릅니다. 이중 화면 디바이스에 대한 자세한 내용은 [이중 화면 디바이스 소개](/dual-screen/introduction)를 참조하세요. (여러 모니터에 맞게 앱을 최적화하는 방법에 대한 자세한 내용은 [여러 보기 표시](../layout/show-multiple-views.md)를 참조하세요.)
+> _이중 화면 디바이스_ 는 고유한 기능을 제공하는 특수한 종류의 디바이스입니다. 여러 모니터가 있는 데스크톱 디바이스와는 다릅니다. 이중 화면 디바이스에 대한 자세한 내용은 [이중 화면 디바이스 소개](/dual-screen/introduction)를 참조하세요. (여러 모니터에 맞게 앱을 최적화하는 방법에 대한 자세한 내용은 [여러 보기 표시](../layout/show-multiple-views.md)를 참조하세요.)
 
 **Windows UI 라이브러리 가져오기**
 
@@ -186,7 +186,7 @@ TwoPaneView 컨트롤은 모든 Windows 디바이스에서 작동하는 동안 �
 
 ### <a name="specify-which-pane-to-display"></a>표시할 영역 지정
 
-나란히 보기가 단일 영역만 표시할 수 있는 경우 [PanePriority](/uwp/api/microsoft.ui.xaml.controls.twopaneview.panepriority) 속성을 사용하여 표시할 영역을 결정합니다. 기본적으로 PanePriority는 **Pane1**로 설정됩니다. XAML 또는 코드에서 이 속성을 설정하는 방법은 다음과 같습니다.
+나란히 보기가 단일 영역만 표시할 수 있는 경우 [PanePriority](/uwp/api/microsoft.ui.xaml.controls.twopaneview.panepriority) 속성을 사용하여 표시할 영역을 결정합니다. 기본적으로 PanePriority는 **Pane1** 로 설정됩니다. XAML 또는 코드에서 이 속성을 설정하는 방법은 다음과 같습니다.
 
 ```xaml
 <muxc:TwoPaneView x:Name="MyTwoPaneView" PanePriority="Pane2">
@@ -198,7 +198,7 @@ MyTwoPaneView.PanePriority = Microsoft.UI.Xaml.Controls.TwoPaneViewPriority.Pane
 
 ### <a name="pane-sizing"></a>영역 크기 조정
 
-단일 화면에서 창의 크기는 [Pane1Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane1length) 및 [Pane2Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane2length) 속성에 따라 결정됩니다. 이는 _자동_ 및 _배율_(\*) 크기 조정을 지원하는 [GridLength](/uwp/api/windows.ui.xaml.gridlength) 값을 사용합니다. 자동 및 배율 크기 조정에 대한 설명은 [XAML을 사용하는 응답성이 뛰어난 레이아웃](../layout/layouts-with-xaml.md#layout-properties)의 _레이아웃 속성_ 섹션을 참조하세요.
+단일 화면에서 창의 크기는 [Pane1Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane1length) 및 [Pane2Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane2length) 속성에 따라 결정됩니다. 이는 _자동_ 및 _배율_ (\*) 크기 조정을 지원하는 [GridLength](/uwp/api/windows.ui.xaml.gridlength) 값을 사용합니다. 자동 및 배율 크기 조정에 대한 설명은 [XAML을 사용하는 응답성이 뛰어난 레이아웃](../layout/layouts-with-xaml.md#layout-properties)의 _레이아웃 속성_ 섹션을 참조하세요.
 
 기본적으로 `Pane1Length`는 `Auto`로 설정되고 해당 콘텐츠에 맞게 크기가 조정됩니다. `Pane2Length`는 `*`로 설정되며, 나머지 공간을 모두 사용합니다.
 
@@ -235,7 +235,7 @@ MyTwoPaneView.PanePriority = Microsoft.UI.Xaml.Controls.TwoPaneViewPriority.Pane
 
 
 > [!NOTE]
-> 앞에서 설명한 대로 앱이 이중 화면에 걸쳐 있으면 이러한 속성이 무시되고 표시 모드가 디바이스 _상태_에 따라 결정됩니다.
+> 앞에서 설명한 대로 앱이 이중 화면에 걸쳐 있으면 이러한 속성이 무시되고 표시 모드가 디바이스 _상태_ 에 따라 결정됩니다.
 
 #### <a name="wide-configuration-options"></a>와이드 구성 옵션
 

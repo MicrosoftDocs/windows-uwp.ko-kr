@@ -1,5 +1,5 @@
 ---
-Description: 하이퍼링크는 사용자를 앱의 다른 부분이나 다른 앱으로 이동하거나, 별도의 브라우저 앱을 사용하여 특정 URI(Uniform Resource Identifier)를 실행합니다.
+description: 하이퍼링크는 사용자를 앱의 다른 부분이나 다른 앱으로 이동하거나, 별도의 브라우저 앱을 사용하여 특정 URI(Uniform Resource Identifier)를 실행합니다.
 title: 하이퍼링크
 ms.assetid: 74302FF0-65FC-4820-B59A-718A765EF7F0
 label: Hyperlinks
@@ -12,18 +12,18 @@ design-contact: kimsea
 dev-contact: stpete
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 471e17199d6a1858625ce418ea756d79cf8600f9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 90dfaa44205ac8eebfcb21227368e2daa492d3c4
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160137"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030566"
 ---
 # <a name="hyperlinks"></a>하이퍼링크
 
-하이퍼링크는 사용자를 앱의 다른 부분이나 다른 앱으로 이동하거나, 별도의 브라우저 앱을 사용하여 특정 URI(Uniform Resource Identifier)를 실행합니다. XAML 앱에 하이퍼링크를 추가할 수 있는 두 가지 방법(**Hyperlink** 텍스트 요소 및 **HyperlinkButton** 컨트롤)이 있습니다.
+하이퍼링크는 사용자를 앱의 다른 부분이나 다른 앱으로 이동하거나, 별도의 브라우저 앱을 사용하여 특정 URI(Uniform Resource Identifier)를 실행합니다. XAML 앱에 하이퍼링크를 추가할 수 있는 두 가지 방법( **Hyperlink** 텍스트 요소 및 **HyperlinkButton** 컨트롤)이 있습니다.
 
-> **플랫폼 API**: [Hyperlink 텍스트 요소](/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [HyperlinkButton 컨트롤](/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
+> **플랫폼 API** : [Hyperlink 텍스트 요소](/uwp/api/Windows.UI.Xaml.Documents.Hyperlink), [HyperlinkButton 컨트롤](/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton)
 
 ![하이퍼링크 단추](images/controls/hyperlink-button.png)
 
@@ -35,8 +35,8 @@ ms.locfileid: "89160137"
 필요에 따라 적절한 유형의 하이퍼링크를 선택합니다.
 
 -   텍스트 컨트롤 내부에 인라인 **Hyperlink** 텍스트 요소를 사용합니다. Hyperlink 요소는 다른 텍스트 요소와 함께 제공되며 모든 InlineCollection에서 사용할 수 있습니다. 자동 텍스트 배치를 원하며 누르기 대상이 반드시 클 필요가 없는 경우에 텍스트 하이퍼링크를 사용합니다. 하이퍼링크 텍스트가 작아 터치하기 어려울 수도 있습니다.
--   **HyperlinkButton**은 독립 실행형 하이퍼링크에 사용합니다. HyperlinkButton은 특수화된 단추 컨트롤로, 단추를 사용하는 모든 위치에서 사용할 수 있습니다.
--   클릭할 수 있는 이미지를 만들려면 콘텐츠로 [이미지](/uwp/api/windows.ui.xaml.controls.image)가 있는 **HyperlinkButton**을 사용합니다.
+-   **HyperlinkButton** 은 독립 실행형 하이퍼링크에 사용합니다. HyperlinkButton은 특수화된 단추 컨트롤로, 단추를 사용하는 모든 위치에서 사용할 수 있습니다.
+-   클릭할 수 있는 이미지를 만들려면 콘텐츠로 [이미지](/uwp/api/windows.ui.xaml.controls.image)가 있는 **HyperlinkButton** 을 사용합니다.
 
 ## <a name="examples"></a>예
 

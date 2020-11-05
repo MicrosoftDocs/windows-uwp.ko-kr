@@ -1,5 +1,5 @@
 ---
-Description: 메뉴 및 상황에 맞는 메뉴는 사용자 요청에 따라 명령 또는 옵션 목록을 표시합니다.
+description: 메뉴 및 상황에 맞는 메뉴는 사용자 요청에 따라 명령 또는 옵션 목록을 표시합니다.
 title: 메뉴 및 상황에 맞는 메뉴
 label: Menus and context menus
 template: detail.hbs
@@ -13,12 +13,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 29f7f1420e8f4284f1a4ed0c835a70e15958f95f
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 1b93197288b165dbb7e8c79e90ca7a7abcf96ef2
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749929"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034516"
 ---
 # <a name="menus-and-context-menus"></a>메뉴 및 상황에 맞는 메뉴
 
@@ -220,7 +220,7 @@ private void ChangeColorItem_Click(object sender, RoutedEventArgs e)
 
 ### <a name="light-dismiss"></a>빠른 해제
 
-메뉴, 상황에 맞는 메뉴 및 기타 플라이아웃 등의 빠른 해제 컨트롤은 해제될 때까지 키보드 및 게임 패드 포커스를 임시 UI 내에 트래핑합니다. 이 동작에 대한 시각 신호를 제공하기 위해 Xbox의 빠른 해제 컨트롤은 범위를 벗어난 UI를 흐리게 표시하는 오버레이를 그립니다. 이 동작은 [LightDismissOverlayMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode) 속성으로 수정할 수 있습니다. 기본적으로 임시 UI는 Xbox(**자동**)에 빠른 해제 오버레이를 그리지만 다른 디바이스 패밀리에는 그리지 않습니다. 오버레이를 항상 **켜짐** 또는 항상 **꺼짐**으로 강제 적용할 수 있습니다.
+메뉴, 상황에 맞는 메뉴 및 기타 플라이아웃 등의 빠른 해제 컨트롤은 해제될 때까지 키보드 및 게임 패드 포커스를 임시 UI 내에 트래핑합니다. 이 동작에 대한 시각 신호를 제공하기 위해 Xbox의 빠른 해제 컨트롤은 범위를 벗어난 UI를 흐리게 표시하는 오버레이를 그립니다. 이 동작은 [LightDismissOverlayMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.lightdismissoverlaymode) 속성으로 수정할 수 있습니다. 기본적으로 임시 UI는 Xbox( **자동** )에 빠른 해제 오버레이를 그리지만 다른 디바이스 패밀리에는 그리지 않습니다. 오버레이를 항상 **켜짐** 또는 항상 **꺼짐** 으로 강제 적용할 수 있습니다.
 
 ```xaml
 <MenuFlyout LightDismissOverlayMode="Off" />

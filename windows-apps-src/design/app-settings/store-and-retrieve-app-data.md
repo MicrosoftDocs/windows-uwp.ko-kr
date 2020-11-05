@@ -1,5 +1,5 @@
 ---
-Description: 로컬, 로밍 및 임시 앱 데이터를 저장하고 검색하는 방법에 대해 알아봅니다.
+description: 로컬, 로밍 및 임시 앱 데이터를 저장하고 검색하는 방법에 대해 알아봅니다.
 title: 설정 및 기타 앱 데이터 저장 및 검색
 ms.assetid: 41676A02-325A-455E-8565-C9EC0BC3A8FE
 label: App settings and data
@@ -8,16 +8,16 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 642f49927a113a79e50dad52c1a73d32a1571fcb
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9f4736c598e18bc4f1225a7fa8e0488c3601420c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173947"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031466"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>설정 및 기타 앱 데이터 저장 및 검색
 
-*앱 데이터*는 특정 앱에서 생성되고 관리되는 변경 가능한 데이터입니다. 이 데이터에는 런타임 상태, 앱 설정, 사용자 기본 설정, 참조 콘텐츠(예: 사전 앱의 사전 정의) 및 기타 설정이 포함됩니다. 앱 데이터는 사용자가 앱을 사용할 때 만들고 관리하는 데이터인 *사용자 데이터*와 다릅니다. 사용자 데이터에는 문서 또는 미디어 파일, 메일 또는 통신 기록, 사용자가 만든 콘텐츠를 보유하는 데이터베이스 레코드 등이 포함됩니다. 사용자 데이터는 둘 이상의 앱에 유용하거나 의미가 있을 수 있습니다. 사용자가 앱 자체와 별개로 문서와 같은 엔터티로 전송하거나 조작하려는 데이터인 경우가 많습니다.
+*앱 데이터* 는 특정 앱에서 생성되고 관리되는 변경 가능한 데이터입니다. 이 데이터에는 런타임 상태, 앱 설정, 사용자 기본 설정, 참조 콘텐츠(예: 사전 앱의 사전 정의) 및 기타 설정이 포함됩니다. 앱 데이터는 사용자가 앱을 사용할 때 만들고 관리하는 데이터인 *사용자 데이터* 와 다릅니다. 사용자 데이터에는 문서 또는 미디어 파일, 메일 또는 통신 기록, 사용자가 만든 콘텐츠를 보유하는 데이터베이스 레코드 등이 포함됩니다. 사용자 데이터는 둘 이상의 앱에 유용하거나 의미가 있을 수 있습니다. 사용자가 앱 자체와 별개로 문서와 같은 엔터티로 전송하거나 조작하려는 데이터인 경우가 많습니다.
 
 **앱 데이터에 대한 중요 정보:** 앱 데이터의 수명은 앱의 수명으로 제한됩니다. 앱이 제거되면 결과적으로 앱 데이터가 모두 손실됩니다. 사용자에게 중요하거나 대체할 수 없는 사용자 데이터나 항목을 저장하는 데 앱 데이터를 사용하지 마세요. 이러한 종류의 정보는 사용자 라이브러리 및 Microsoft OneDrive를 사용하여 저장하는 것이 좋습니다. 앱 데이터는 앱 관련 사용자 기본 설정, 설정 및 즐겨찾기를 저장하는 데 적합합니다.
 
@@ -31,12 +31,12 @@ ms.locfileid: "89173947"
 
 앱 설정에 사용할 수 있는 데이터 형식은 다음과 같습니다.
 
-- **UInt8**, **Int16**, **UInt16**, **Int32**, **UInt32**, **Int64**, **UInt64**, **Single**, **Double**
+- **UInt8** , **Int16** , **UInt16** , **Int32** , **UInt32** , **Int64** , **UInt64** , **Single** , **Double**
 - **Boolean**
-- **Char16**, **String**
+- **Char16** , **String**
 - [**DateTime**](/uwp/api/Windows.Foundation.DateTime), [**TimeSpan**](/uwp/api/Windows.Foundation.TimeSpan)
     - C#/.Net의 다음을 사용합니다. [**System.DateTimeOffset**](/dotnet/api/system.datetimeoffset?view=dotnet-uwp-10.0), [**System.TimeSpan**](/dotnet/api/system.timespan?view=dotnet-uwp-10.0)
-- **GUID**, [**Point**](/uwp/api/Windows.Foundation.Point), [**Size**](/uwp/api/Windows.Foundation.Size), [**Rect**](/uwp/api/Windows.Foundation.Rect)
+- **GUID** , [**Point**](/uwp/api/Windows.Foundation.Point), [**Size**](/uwp/api/Windows.Foundation.Size), [**Rect**](/uwp/api/Windows.Foundation.Rect)
 - [**ApplicationDataCompositeValue**](/uwp/api/Windows.Storage.ApplicationDataCompositeValue): 원자 단위로 직렬화 및 역직렬화해야 하는 관련 앱 설정의 세트입니다. 상호 의존적인 설정의 원자성 업데이트를 쉽게 처리하려면 복합 설정을 사용합니다. 시스템은 동시 액세스 및 로밍 중에 복합 설정의 무결성을 보장합니다. 복합 설정은 소량의 데이터에 최적화되어 있으며 대규모 데이터 집합에 사용할 경우에는 성능이 저하됩니다.
 
 ### <a name="files"></a>파일
@@ -366,7 +366,7 @@ async void ReadTimestamp()
 ## <a name="organize-app-data-with-containers"></a>컨테이너를 사용하여 앱 데이터 구성
 
 
-앱 데이터 설정 및 파일을 정리하려면 디렉터리로 직접 작업하는 대신 컨테이너([**ApplicationDataContainer**](/uwp/api/Windows.Storage.ApplicationDataContainer) 개체로 표현됨)를 만듭니다. 로컬, 로밍 및 임시 앱 데이터 저장소에 컨테이너를 추가할 수 있습니다. 컨테이너는 최대 32개 수준까지 중첩될 수 있습니다.
+앱 데이터 설정 및 파일을 정리하려면 디렉터리로 직접 작업하는 대신 컨테이너( [**ApplicationDataContainer**](/uwp/api/Windows.Storage.ApplicationDataContainer) 개체로 표현됨)를 만듭니다. 로컬, 로밍 및 임시 앱 데이터 저장소에 컨테이너를 추가할 수 있습니다. 컨테이너는 최대 32개 수준까지 중첩될 수 있습니다.
 
 설정 컨테이너를 만들려면 [**ApplicationDataContainer.CreateContainer**](/uwp/api/windows.storage.applicationdatacontainer.createcontainer) 메서드를 호출합니다. 다음 예제에서는 `exampleContainer`라는 로컬 설정 컨테이너를 만들고 `exampleSetting`이라는 설정을 추가합니다. [  **ApplicationDataCreateDisposition**](/uwp/api/Windows.Storage.ApplicationDataCreateDisposition) 열거형의 **Always** 값은 컨테이너가 아직 없는 경우 컨테이너를 만들어야 함을 나타냅니다.
 

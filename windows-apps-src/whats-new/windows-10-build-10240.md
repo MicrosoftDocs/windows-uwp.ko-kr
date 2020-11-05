@@ -1,19 +1,19 @@
 ---
-Description: Windows 10 빌드 10240 및 개발자 도구 업데이트는 유니버설 Windows 플랫폼에서 지원하는 도구, 기능 및 환경을 계속 제공합니다.
+description: Windows 10 빌드 10240 및 개발자 도구 업데이트는 유니버설 Windows 플랫폼에서 지원하는 도구, 기능 및 환경을 계속 제공합니다.
 title: Windows 10 빌드 10240의 새로운 기능 - 2015년 7월
 keywords: Windows 10, 1507, 10240
 ms.date: 11/02/2017
 ms.topic: article
 ms.assetid: 4853e55b-2232-4589-903a-ccb60e07aeb8
 ms.localizationpriority: medium
-ms.openlocfilehash: eee6552ce26bbe3c24ae6c6647c8297ba7d7487b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 282026436355c1bcaab504d2818c2a30ff09e20d
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172807"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93029916"
 ---
-# <a name="whats-new-in-windows10-for-developers-build-10240"></a>개발자용 Windows 10 빌드 10240의 새로운 기능
+# <a name="whats-new-in-windows-10-for-developers-build-10240"></a>개발자용 Windows 10 빌드 10240의 새로운 기능
 
 Windows 10 빌드 10240 및 업데이트된 SDK는 놀라운 유니버설 Windows 플랫폼 앱을 만드는 도구, 기능 및 환경을 제공합니다. Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows/downloads#_blank)한 후 [새 유니버설 Windows 앱을 만들](../get-started/create-uwp-apps.md)거나 [Windows에서 기존 앱 코드](../porting/index.md)를 사용하는 방법을 살펴볼 수 있습니다.
 
@@ -100,7 +100,7 @@ Settings | [LaunchUriAsync](/uwp/api/windows.system.launcher.launchuriasync) 메
 기능 | 설명
  :---- | :----
 Microsoft Surface Hub | Microsoft Surface Hub는 Surface Hub 또는 연결된 디바이스에서 기본적으로 실행되는 유니버설 Windows 앱을 위한 강력한 팀 협업 디바이스 및 큰 화면 플랫폼입니다. 큰 화면, 터치 및 수동 입력, 카메라 및 센서 같은 확장 온보드 하드웨어를 활용하는, 비즈니스를 위해 특별히 설계된 고유한 앱을 빌드하세요.<br /><br />[유니버설 Windows 앱에 대한 디자인 기본 사항](../design/layout/index.md)에서 Surface Hub와 관련된 디자인 권장 사항 및 UX 지침을 살펴보세요. 이러한 문서에서는 유니버설 Windows 앱에 대한 반응형 디자인 기술을 설명합니다. <br /><br />공동 공유 앱 지원에 대한 자세한 내용은 [SharedModeSettings](/uwp/api/windows.system.profile.sharedmodesettings)를 참조하세요. 잉크 입력 및 새 [InkCanvas](/uwp/api/windows.ui.xaml.controls.inkcanvas) 컨트롤에 대한 다중 지점 잉크 입력 지원에 대한 자세한 내용은 [Windows.UI.Input.Inking](/uwp/api/windows.ui.input.inking) 및 [Windows.UI.Input.Inking.Core](/uwp/api/windows.ui.input.inking.core)를 참조하세요. 센서 입력 처리에 대해서는 [장치, 프린터 및 센서 통합](/previous-versions/windows/apps/br229563(v=win.10))을 참조하세요.
-위치 | Windows 10에서는 사용자의 위치에 대한 액세스 권한을 요청하는 새로운 메서드인 [RequestAccessAsync](/uwp/api/windows.devices.geolocation.geolocator.requestaccessasync)를 제공합니다. 사용자는 **설정** 앱의 **위치 개인 정보 설정**에서 자신의 위치 데이터 개인 정보를 설정합니다. 앱은 다음의 경우에만 사용자 위치에 액세스할 수 있습니다. **이 디바이스의 위치**가 켜져 있는 경우 *(휴대폰용 Windows 10은 해당하지 않음)* , 위치 서비스 설정 “**위치**”가 켜짐 상태인 경우 및 **사용자의 위치를 사용할 수 있는 앱 선택**에서 앱이 켜짐 상태로 설정된 경우. <br /><br />사용자의 위치에 액세스하기 전에 **RequestAccessAsync**를 호출하는 것이 중요합니다. 이때 앱이 포그라운드에 있어야 하고 **RequestAccessAsync**가 UI 스레드에서 호출되어야 합니다. 사용자가 자신의 위치에 대한 권한을 앱에 부여하기 전에는 앱이 위치 데이터에 액세스할 수 없습니다.
+위치 | Windows 10에서는 사용자의 위치에 대한 액세스 권한을 요청하는 새로운 메서드인 [RequestAccessAsync](/uwp/api/windows.devices.geolocation.geolocator.requestaccessasync)를 제공합니다. 사용자는 **설정** 앱의 **위치 개인 정보 설정** 에서 자신의 위치 데이터 개인 정보를 설정합니다. 앱은 다음의 경우에만 사용자 위치에 액세스할 수 있습니다. **이 디바이스의 위치** 가 켜져 있는 경우 *(휴대폰용 Windows 10은 해당하지 않음)* , 위치 서비스 설정 “ **위치** ”가 켜짐 상태인 경우 및 **사용자의 위치를 사용할 수 있는 앱 선택** 에서 앱이 켜짐 상태로 설정된 경우. <br /><br />사용자의 위치에 액세스하기 전에 **RequestAccessAsync** 를 호출하는 것이 중요합니다. 이때 앱이 포그라운드에 있어야 하고 **RequestAccessAsync** 가 UI 스레드에서 호출되어야 합니다. 사용자가 자신의 위치에 대한 권한을 앱에 부여하기 전에는 앱이 위치 데이터에 액세스할 수 없습니다.
 AllJoyn | [Windows.Devices.AllJoyn](/uwp/api/windows.devices.alljoyn) Windows 런타임 네임스페이스는 Microsoft에서 구현한 AllJoyn 오픈 소스 소프트웨어 프레임워크 및 서비스를 제공합니다. 이러한 API를 사용하면 유니버설 Windows 디바이스 앱이 AllJoyn 기반 IoT(사물 인터넷) 시나리오에서 다른 디바이스에 참여할 수 있습니다. AllJoyn C API에 대한 자세한 내용을 보려면 [AllSeen Alliance](https://allseenalliance.org/)에서 설명서를 다운로드하세요. 이 릴리스에 포함된 [AllJoynCodeGen](/previous-versions/windows/apps/dn913809(v=win.10)) 도구를 사용하여 디바이스 앱에서 AllJoyn 시나리오를 가능하게 하기 위해 사용할 수 있는 Windows 구성 요소를 생성할 수 있습니다. <br /><br />**참고:** 이제 새 클래스의 소형 디바이스에 Windows 10 IoT Core를 사용할 수 있으므로 Windows 및 Visual Studio를 사용하여 IoT("사물 인터넷") 디바이스를 만들 수 있습니다. [Windows 개발자 센터에서 Windows IoT](https://developer.microsoft.com/windows/iot)에 대해 자세히 알아보세요.
 모바일에서 API 인쇄(XAML) | 모바일 디바이스를 포함한 디바이스 패밀리의 XAML 기반 UWP 앱에서 인쇄할 수 있는 단일, 통합 API 집합이 있습니다. 이제 Windows.Graphics.Printing 및 Windows.UI.Xaml.Printing 네임스페이스에서 인쇄와 관련된 익숙한 API를 사용하여 모바일 앱으로 인쇄를 추가할 수 있습니다.
 배터리 | [Windows.Devices.Power](/uwp/api/windows.devices.power) 네임스페이스의 배터리 API를 사용하면 앱에서 이 앱을 실행 중인 장치에 연결된 모드 배터리에 대해 더 자세히 파악할 수 있습니다. 각각 [FromIdAsync](/uwp/api/windows.devices.power.battery.fromidasync) 또는 [AggregateBattery](/uwp/api/windows.devices.power.battery.aggregatebattery)를 사용해서 [Battery](/uwp/api/windows.devices.power.battery) 개체를 만들어 개별 배터리 컨트롤러 또는 모든 배터리 컨트롤러의 집계를 나타냅니다. [GetReport](/uwp/api/windows.devices.power.battery.getreport) 메서드를 사용하여 해당 배터리의 충전, 용량 및 상태를 나타내는 [BatteryReport](/uwp/api/windows.devices.power.batteryreport) 개체를 반환합니다.
@@ -154,7 +154,7 @@ Microsoft Passport for Work | Microsoft Passport for Work는 암호, 스마트 �
 
 기능 | 설명
  :---- | :----
-고급 | 이제 배터리 절약 모드를 시작하거나 이 모드가 해제될 때 Windows 데스크톱 애플리케이션에서 알림을 받을 수 있습니다. 애플리케이션에서 전원 상태 변화에 반응하면서 배터리 수명을 연장할 수 있게 됩니다. <br /><br />[GUID_POWER_SAVING_STATUS](/windows/desktop/Power/power-setting-guids): 배터리 절약 모드를 시작하거나 이 모드가 해제될 때 알림을 받으려면 이 새 GUID와 [PowerSettingRegisterNotification](/windows/desktop/api/powersetting/nf-powersetting-powersettingregisternotification) 함수를 함께 사용합니다. <br /><br />[SYSTEM_POWER_STATUS](/windows/desktop/api/winbase/ns-winbase-_system_power_status): 이 구조는 배터리 절약 모드를 지원하도록 업데이트되었습니다. 이제 네 번째 멤버인 *SystemStatusFlag*(이전 이름 Reserved1)는 배터리 절약 모드가 사용되는지 여부를 나타냅니다. [GetSystemPowerStatus](/windows/desktop/api/winbase/nf-winbase-getsystempowerstatus) 함수를 사용하여 이 구조에 대한 포인터를 가져올 수 있습니다.
+고급 | 이제 배터리 절약 모드를 시작하거나 이 모드가 해제될 때 Windows 데스크톱 애플리케이션에서 알림을 받을 수 있습니다. 애플리케이션에서 전원 상태 변화에 반응하면서 배터리 수명을 연장할 수 있게 됩니다. <br /><br />[GUID_POWER_SAVING_STATUS](/windows/desktop/Power/power-setting-guids): 배터리 절약 모드를 시작하거나 이 모드가 해제될 때 알림을 받으려면 이 새 GUID와 [PowerSettingRegisterNotification](/windows/desktop/api/powersetting/nf-powersetting-powersettingregisternotification) 함수를 함께 사용합니다. <br /><br />[SYSTEM_POWER_STATUS](/windows/desktop/api/winbase/ns-winbase-_system_power_status): 이 구조는 배터리 절약 모드를 지원하도록 업데이트되었습니다. 이제 네 번째 멤버인 *SystemStatusFlag* (이전 이름 Reserved1)는 배터리 절약 모드가 사용되는지 여부를 나타냅니다. [GetSystemPowerStatus](/windows/desktop/api/winbase/nf-winbase-getsystempowerstatus) 함수를 사용하여 이 구조에 대한 포인터를 가져올 수 있습니다.
 Version | [버전 도우미 함수](/windows/desktop/SysInfo/version-helper-apis)를 사용하여 운영 체제의 버전을 확인할 수 있습니다. Windows 10의 경우 이러한 도우미 함수에는 새로운 함수 [IsWindows10OrGreater](/windows/desktop/api/versionhelpers/nf-versionhelpers-iswindows10orgreater)가 포함됩니다. 시스템 버전을 확인하려는 경우 더 이상 사용되지 않는 [GetVersionEx](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getversionexa) 및 [GetVersion](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getversion)이 아닌 도우미 함수를 사용해야 합니다. 시스템 버전을 가져오는 방법에 대한 자세한 내용은 [시스템 버전 가져오기](/windows/desktop/SysInfo/getting-the-system-version)를 참조하세요. <br /><br />더 이상 사용되지 않는 [GetVersionEx](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getversionexa) 또는 [GetVersion](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getversion) 함수를 사용하여 [OSVERSIONINFOEX](/windows/desktop/api/winnt/ns-winnt-_osversioninfoexa) 또는 [OSVERSIONINFO](/windows/desktop/api/winnt/ns-winnt-_osversioninfoa) 구조의 버전 정보를 가져오는 경우 이러한 구조는 Windows 8.1 및 Windows Server 2012 R2의 6.3에서 Windows 10의 10.0으로 증가한 버전 번호를 포함한다는 점에 유의하시기 바랍니다. 운영 체제 버전 번호에 대한 자세한 내용은 [운영 체제 버전](/windows/desktop/SysInfo/operating-system-version)을 참조하세요. <br /><br />또한 [GetVersionEx](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getversionexa) 또는 [GetVersion](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getversion) 함수를 사용하여 이러한 버전에 대한 올바른 버전 정보를 가져오려면 응용 프로그램에서 Windows 8.1 또는 Windows 10을 구체적으로 대상으로 지정해야 합니다. 이러한 Windows 버전용 응용 프로그램을 대상으로 지정하는 방법에 대한 자세한 내용은 [Windows용 응용 프로그램을 대상으로 지정](/windows/desktop/SysInfo/targeting-your-application-at-windows-8-1)을 참조하세요.
 사용자 정보 | [Windows.System](/uwp/api/windows.system) 네임스페이스의 새로운 API를 통해 사용자 이름 및 계정 사진과 같은 사용자 관련 정보에 쉽게 액세스할 수 있습니다. 또한 로그인 및 로그아웃과 같은 사용자 이벤트에 응답하는 기능도 제공합니다.
 메모리 관리 및 프로파일링 | [Windows.System](/uwp/api/windows.system)의 메모리 프로파일링 API에 대한 지원이 모든 플랫폼으로 확장되었으며 전반적인 기능이 새로운 클래스 및 함수를 통해 개선되었습니다.

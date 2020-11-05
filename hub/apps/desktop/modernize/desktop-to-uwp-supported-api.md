@@ -1,5 +1,5 @@
 ---
-Description: 패키지된 데스크톱 앱은 UWP 앱으로 완전히 전환되지 않았어도 다양한 Windows 런타임 API를 사용할 수 있습니다. 이 문서는 패키지된 앱에서 사용할 수 있는 클래스를 나열합니다.
+description: 패키지된 데스크톱 앱은 UWP 앱으로 완전히 전환되지 않았어도 다양한 Windows 런타임 API를 사용할 수 있습니다. 이 문서는 패키지된 앱에서 사용할 수 있는 클래스를 나열합니다.
 title: 패키지된 데스크톱 앱에서 사용할 수 있는 Windows 런타임 API(데스크톱 브리지)
 ms.date: 04/19/2019
 ms.topic: article
@@ -9,12 +9,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 419ffb348aa57183020c324fae3835074ac556ad
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 252ce5d39f09e957abed4f2629abc4d79580fab2
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172717"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031146"
 ---
 # <a name="windows-runtime-apis-available-to-desktop-apps"></a>데스크톱 앱에서 사용할 수 있는 Windows 런타임 API
 

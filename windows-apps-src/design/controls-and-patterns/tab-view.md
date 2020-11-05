@@ -1,5 +1,5 @@
 ---
-Description: TabView를 사용하면 동적 탭에서 여러 문서를 유연하게 구성할 수 있습니다.
+description: TabView를 사용하면 동적 탭에서 여러 문서를 유연하게 구성할 수 있습니다.
 title: 탭 보기
 template: detail.hbs
 ms.date: 09/24/2020
@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3010feeb1a19f8c4d38883415cc315b8d863bb82
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: f34e2a882746ac833d2b78373a96496c1f079864
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749739"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034776"
 ---
 # <a name="tabview"></a>TabView
 
@@ -34,7 +34,7 @@ TabView 컨트롤을 사용하여 탭 세트와 각 탭의 콘텐츠를 표시�
    :::column-end:::
 :::row-end:::
 
-> **Windows UI 라이브러리 API**: [TabView 클래스](/uwp/api/microsoft.ui.xaml.controls.tabview), [TabViewItem 클래스](/uwp/api/microsoft.ui.xaml.controls.tabviewitem)
+> **Windows UI 라이브러리 API** : [TabView 클래스](/uwp/api/microsoft.ui.xaml.controls.tabview), [TabViewItem 클래스](/uwp/api/microsoft.ui.xaml.controls.tabviewitem)
 
 > [!TIP]
 > 이 문서 전체에서 XAML의 **muxc** 별칭을 사용하여 프로젝트에 포함된 Windows UI 라이브러리 API를 나타냅니다. 이를 [Page](/uwp/api/windows.ui.xaml.controls.page) 요소(`xmlns:muxc="using:Microsoft.UI.Xaml.Controls"`)에 추가했습니다.
@@ -43,8 +43,8 @@ TabView 컨트롤을 사용하여 탭 세트와 각 탭의 콘텐츠를 표시�
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
-일반적으로 여러 탭으로 구성되는 UI는 기능과 모양이 다른 다음 두 가지 고유한 스타일 중 하나로 제공됩니다. **정적 탭**은 설정 창에서 자주 볼 수 있는 형태의 탭입니다. 이 탭은 일반적으로 미리 정의된 콘텐츠가 들어 있는 여러 페이지를 고정된 순서로 포함합니다.
-**문서 탭**은 Microsoft Edge 같은 브라우저에서 볼 수 있는 형태의 탭입니다. 사용자는 탭을 만들고, 제거하고, 다시 정렬하고, 창 간에 탭을 이동하고, 탭의 내용을 변경할 수 있습니다.
+일반적으로 여러 탭으로 구성되는 UI는 기능과 모양이 다른 다음 두 가지 고유한 스타일 중 하나로 제공됩니다. **정적 탭** 은 설정 창에서 자주 볼 수 있는 형태의 탭입니다. 이 탭은 일반적으로 미리 정의된 콘텐츠가 들어 있는 여러 페이지를 고정된 순서로 포함합니다.
+**문서 탭** 은 Microsoft Edge 같은 브라우저에서 볼 수 있는 형태의 탭입니다. 사용자는 탭을 만들고, 제거하고, 다시 정렬하고, 창 간에 탭을 이동하고, 탭의 내용을 변경할 수 있습니다.
 
 [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview)는 UWP 앱에 사용할 수 있는 문서 탭을 제공합니다. 다음과 같은 경우 TabView를 사용합니다.
 

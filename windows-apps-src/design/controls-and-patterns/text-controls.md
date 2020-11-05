@@ -1,5 +1,5 @@
 ---
-Description: 우리는 일상생활에서 메일, 책, 도로 표지판, 메뉴 가격, 타이어 압력계 수치 또는 전단지 등을 수많은 읽을 거리와 마주합니다.
+description: 우리는 일상생활에서 메일, 책, 도로 표지판, 메뉴 가격, 타이어 압력계 수치 또는 전단지 등을 수많은 읽을 거리와 마주합니다.
 title: 텍스트 컨트롤
 ms.assetid: 43DC68BF-FA86-43D2-8807-70A359453048
 label: Text controls
@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b06767e5009a4d7654fa7937498319a1bbed671
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ca8facaa63f0eb4c99e518c2fafb0e87208b759d
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173887"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033006"
 ---
 # <a name="text-controls"></a>텍스트 컨트롤
 
@@ -25,7 +25,7 @@ ms.locfileid: "89173887"
 - 읽기 전용 텍스트를 표시하는 컨트롤은 [TextBlock](text-block.md) 및 [RichTextBlock](rich-text-block.md)입니다.
 - 텍스트 입력 및 편집용 컨트롤은 [TextBox](text-box.md), [RichEditBox](rich-edit-box.md), [AutoSuggestBox](auto-suggest-box.md), [PasswordBox](password-box.md)입니다.
 
-> **중요 API**: [TextBlock 클래스](/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [RichTextBlock 클래스](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [TextBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.TextBox), [RichEditBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [AutoSuggestBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox), [PasswordBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
+> **중요 API** : [TextBlock 클래스](/uwp/api/Windows.UI.Xaml.Controls.TextBlock), [RichTextBlock 클래스](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock), [TextBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.TextBox), [RichEditBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.RichEditBox), [AutoSuggestBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox), [PasswordBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -33,13 +33,13 @@ ms.locfileid: "89173887"
 
 ### <a name="render-read-only-text"></a>읽기 전용 텍스트 렌더링
 
-앱에서 대부분의 읽기 전용 텍스트를 표시하려면 **TextBlock**을 사용합니다. 이 컨트롤을 사용하여 한 줄 또는 여러 줄 텍스트, 인라인 하이퍼링크 및 굵게, 기울임꼴 또는 밑줄 서식이 적용된 텍스트를 표시할 수 있습니다.
+앱에서 대부분의 읽기 전용 텍스트를 표시하려면 **TextBlock** 을 사용합니다. 이 컨트롤을 사용하여 한 줄 또는 여러 줄 텍스트, 인라인 하이퍼링크 및 굵게, 기울임꼴 또는 밑줄 서식이 적용된 텍스트를 표시할 수 있습니다.
 
 TextBlock은 일반적으로 RichTextBlock보다 사용하기 쉬우며 더 나은 텍스트 렌더링 성능을 제공하므로 대부분의 앱 UI 텍스트에서 기본으로 설정됩니다. [Text](/uwp/api/windows.ui.xaml.controls.textblock.text) 속성의 값을 가져와 앱에서 TextBlock의 텍스트에 쉽게 액세스하고 사용할 수 있습니다.
 
 또한 텍스트가 렌더링되는 방식을 사용자 지정할 수 있도록 동일한 서식 옵션을 여러 개 제공합니다. 텍스트에 줄 바꿈을 넣을 수는 있지만, TextBlock은 단일 단락을 표시하도록 설계되었으며 텍스트 들여쓰기를 지원하지 않습니다.
 
-여러 단락, 다중 열 텍스트 또는 기타 복잡한 텍스트 레잉아웃, 이미지와 같은 인라인 UI 요소에 대한 지원이 필요한 경우 **RichTextBlock**을 사용하세요. RichTextBlock은 고급 텍스트 레이아웃에 대한 여러 기능을 제공합니다.
+여러 단락, 다중 열 텍스트 또는 기타 복잡한 텍스트 레잉아웃, 이미지와 같은 인라인 UI 요소에 대한 지원이 필요한 경우 **RichTextBlock** 을 사용하세요. RichTextBlock은 고급 텍스트 레이아웃에 대한 여러 기능을 제공합니다.
 
 RichTextBlock의 콘텐츠 속성은 [Paragraph](/uwp/api/windows.ui.xaml.controls.richtextblock.blocks) 요소를 통해 단락 기반 텍스트를 지원하는 [Blocks](/uwp/api/Windows.UI.Xaml.Documents.Paragraph) 속성입니다. 쉽게 앱에서 컨트롤의 텍스트 콘텐츠에 액세스하는 데 사용할 수 있는 **Text** 속성이 없습니다.  
 
@@ -51,11 +51,11 @@ TextBox를 읽기 전용으로 만들 수 있지만 일시적인 조건부 상�
 
 **PasswordBox** 컨트롤을 사용하여 암호 또는 주민 등록 번호 등의 기타 프라이빗 데이터를 수집합니다. 암호 상자는 개인 정보 보호를 위해 입력된 문자를 숨기는 텍스트 입력란입니다. 암호 상자는 텍스트 입력란처럼 보이지만 입력된 텍스트 대신 글머리 기호를 렌더링합니다. 글머리 기호 문자는 사용자 지정 가능합니다.
 
-입력 시 선택할 제안 목록을 사용자에게 표시하려면 **AutoSuggestBox**를 사용합니다. 자동 제안 상자는 기본 검색 제안 목록을 트리거하는 텍스트 입력란입니다. 제안된 단어는 인기 있는 검색 단어와 이전에 사용자가 입력한 단어의 조합에서 뽑을 수 있습니다.
+입력 시 선택할 제안 목록을 사용자에게 표시하려면 **AutoSuggestBox** 를 사용합니다. 자동 제안 상자는 기본 검색 제안 목록을 트리거하는 텍스트 입력란입니다. 제안된 단어는 인기 있는 검색 단어와 이전에 사용자가 입력한 단어의 조합에서 뽑을 수 있습니다.
 
 검색 상자를 구현하는 경우에도 AutoSuggestBox 컨트롤을 사용해야 합니다.
 
-텍스트 파일을 표시하고 편집하려면 **RichEditBox**를 사용합니다. 다른 표준 텍스트 입력란을 사용하는 방식으로 사용자 입력을 앱으로 가져오기 위해 RichEditBox를 사용하지 마세요. 대신, 앱과 분리된 텍스트 파일 작업에 사용합니다. 일반적으로 RichEditBox에 입력된 텍스트는 .rtf 파일에 저장합니다.
+텍스트 파일을 표시하고 편집하려면 **RichEditBox** 를 사용합니다. 다른 표준 텍스트 입력란을 사용하는 방식으로 사용자 입력을 앱으로 가져오기 위해 RichEditBox를 사용하지 마세요. 대신, 앱과 분리된 텍스트 파일 작업에 사용합니다. 일반적으로 RichEditBox에 입력된 텍스트는 .rtf 파일에 저장합니다.
 
 **텍스트 입력이 최상의 옵션인가요?**
 
@@ -135,7 +135,7 @@ Windows 10, 버전 1803부터는 XAML 텍스트 입력 상자에서 [Windows Ink
 
 터치 키보드는 앱이 터치 스크린이 있는 디바이스에서 실행될 때 텍스트 입력에 사용할 수 있습니다. 터치 키보드는 사용자가 TextBox 또는 RichEditBox와 같이 편집 가능한 입력 필드를 탭할 때 호출됩니다. 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 사용자가 앱에서 데이터를 쉽고 빠르게 입력할 수 있도록 지원할 수 있습니다. 입력 범위는 시스템에서 해당 입력 형식에 맞는 특수한 터치 키보드를 제공할 수 있도록 컨트롤에서 예상되는 텍스트 입력 형식에 대한 힌트를 시스템에 제공합니다.
 
-예를 들어 텍스트 상자가 4자리 숫자의 PIN을 입력하는 목적으로만 사용될 경우 [InputScope](/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성을 **Number**로 설정합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다.
+예를 들어 텍스트 상자가 4자리 숫자의 PIN을 입력하는 목적으로만 사용될 경우 [InputScope](/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성을 **Number** 로 설정합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다.
 
 >중요  
 >입력 범위는 입력 유효성 검사가 수행되지 않으며 사용자가 하드웨어 키보드 또는 다른 입력 디바이스를 사용해서 입력을 제공하지 못하도록 방지하지 않습니다. 따라서 필요에 따라 입력 코드에 대한 유효성을 검사해야 합니다.
@@ -148,7 +148,7 @@ Windows 10, 버전 1803부터는 XAML 텍스트 입력 상자에서 [Windows Ink
 
 Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 계층을 포함할 수 있습니다. 예를 들어 Segoe UI Emoji 글꼴은 이모티콘 및 기타 이모티콘 문자의 컬러 버전을 정의합니다.
 
-표준 및 서식 있는 텍스트 컨트롤은 컬러 글꼴 표시를 지원합니다. 기본적으로 **IsColorFontEnabled** 속성은 **true**이며 이러한 추가 계층이 있는 글꼴은 컬러로 렌더링됩니다. 시스템의 기본 컬러 글꼴은 Segoe UI Emoji이며 컨트롤은 문자 모양을 컬러로 표시하기 위해 이 글꼴로 대체됩니다.
+표준 및 서식 있는 텍스트 컨트롤은 컬러 글꼴 표시를 지원합니다. 기본적으로 **IsColorFontEnabled** 속성은 **true** 이며 이러한 추가 계층이 있는 글꼴은 컬러로 렌더링됩니다. 시스템의 기본 컬러 글꼴은 Segoe UI Emoji이며 컨트롤은 문자 모양을 컬러로 표시하기 위해 이 글꼴로 대체됩니다.
 
 ```xaml
 <TextBlock FontSize="30">Hello ☺⛄☂♨⛅</TextBlock>
@@ -196,7 +196,7 @@ Windows에서는 글꼴이 각 문자 모양에 대해 색이 지정된 여러 �
 -   단어가 사전에 없거나 사용자가 맞춤법 검사를 중요시하지 않는 경우에는 맞춤법 검사를 사용하지 마세요. 예를 들어 텍스트 상자가 전화 번호 또는 이름을 캡처하는 데 사용되는 경우 켜지 마세요.
 -   현재 맞춤법 검사 엔진에서 앱 언어를 지원하지 않는다는 이유만으로 맞춤법 검사를 사용하지 않도록 설정하지 마세요. 맞춤법 검사에서 언어를 지원하지 않는 경우 아무 작업도 하지 않으므로 옵션을 켜진 상태로 두어도 상관없습니다. IME(입력기)를 사용하여 다른 언어를 앱에 입력하는 경우도 있는데, 그 언어가 지원될 수도 있습니다. 예를 들어 일본어 앱을 빌드할 때 맞춤법 검사 엔진이 현재 해당 언어를 인식하지 못하는 경우에도 맞춤법 검사를 끄지 마세요. 사용자가 영어 IME로 전환하여 앱에 영어를 입력할 수도 있습니다. 맞춤법 검사가 활성화되면 영어 맞춤법 검사가 실행됩니다.
 
-TextBox 및 RichEditBox 컨트롤의 경우 맞춤법 검사가 기본적으로 켜져 있습니다. **IsSpellCheckEnabled** 속성을 **false**로 설정하면 기능을 끌 수 있습니다.
+TextBox 및 RichEditBox 컨트롤의 경우 맞춤법 검사가 기본적으로 켜져 있습니다. **IsSpellCheckEnabled** 속성을 **false** 로 설정하면 기능을 끌 수 있습니다.
 
 ## <a name="related-articles"></a>관련된 문서
 

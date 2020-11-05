@@ -1,16 +1,16 @@
 ---
-Description: AppWindow 클래스를 사용하여 앱의 다른 부분을 별도의 창에 표시할 수 있습니다.
+description: AppWindow 클래스를 사용하여 앱의 다른 부분을 별도의 창에 표시할 수 있습니다.
 title: AppWindow 클래스를 사용하여 앱의 보조 창 표시
 ms.date: 07/19/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b89d9100157cf40266bb983e258aa187f65dc93
-ms.sourcegitcommit: 76e8b4fb3f76cc162aab80982a441bfc18507fb4
+ms.openlocfilehash: a3f8644612954c4693ad28d3c1b41870855b37ca
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "68867459"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034886"
 ---
 # <a name="show-multiple-views-with-appwindow"></a>AppWindow를 사용하여 여러 뷰 표시
 
@@ -34,7 +34,7 @@ ms.locfileid: "68867459"
 
 > _도킹되지 않은 색 선택 및 보조 창을 사용하는 샘플 앱_
 
-> **중요 API**: [Windows.UI.WindowManagement 네임스페이스](/uwp/api/windows.ui.windowmanagement), [AppWindow 클래스](/uwp/api/windows.ui.windowmanagement.appwindow)
+> **중요 API** : [Windows.UI.WindowManagement 네임스페이스](/uwp/api/windows.ui.windowmanagement), [AppWindow 클래스](/uwp/api/windows.ui.windowmanagement.appwindow)
 
 ## <a name="api-overview"></a>API 개요
 
@@ -499,7 +499,7 @@ private async void DetachColorPickerButton_Click(object sender, RoutedEventArgs 
 
 기본적으로 콘텐츠 대화 상자는 루트 [ApplicationView](/uwp/api/windows.ui.viewmanagement.applicationview)를 기준으로 모달 형식으로 표시됩니다. [AppWindow](/uwp/api/windows.ui.windowmanagement.appwindow) 내에서 [ContentDialog](/uwp/api/windows.ui.xaml.controls.contentdialog)를 사용하는 경우, 수동으로 대화 상자의 XamlRoot를 XAML 호스트의 루트로 설정해야 합니다.
 
-ContentDialog의 [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) 속성을 AppWindow에 이미 있는 요소와 동일한 [XamlRoot](/uwp/api/windows.ui.xaml.xamlroot)로 설정하면 됩니다. 여기서 다음 코드는 단추의 [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 처리기 내부에 있으므로, _sender_(클릭한 단추)를 사용하여 XamlRoot를 가져올 수 있습니다.
+ContentDialog의 [XamlRoot](/uwp/api/windows.ui.xaml.uielement.xamlroot) 속성을 AppWindow에 이미 있는 요소와 동일한 [XamlRoot](/uwp/api/windows.ui.xaml.xamlroot)로 설정하면 됩니다. 여기서 다음 코드는 단추의 [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트 처리기 내부에 있으므로, _sender_ (클릭한 단추)를 사용하여 XamlRoot를 가져올 수 있습니다.
 
 ```csharp
 if (ApiInformation.IsApiContractPresent("Windows.Foundation.UniversalApiContract", 8))

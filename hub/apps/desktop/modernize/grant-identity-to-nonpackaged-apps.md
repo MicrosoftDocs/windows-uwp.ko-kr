@@ -1,5 +1,5 @@
 ---
-Description: 패키지되지 않은 데스크톱 앱에서 최신 Windows 10 기능을 사용할 수 있도록 ID를 부여하는 방법을 알아봅니다.
+description: 패키지되지 않은 데스크톱 앱에서 최신 Windows 10 기능을 사용할 수 있도록 ID를 부여하는 방법을 알아봅니다.
 title: 패키지되지 않은 데스크톱 앱에 ID 부여
 ms.date: 04/23/2020
 ms.topic: article
@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 6c2adc41fd33692d3cc3deb78ed8dd0659709a11
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 30fab5da3727153b8e1f33924ffcb6177843eb4e
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172707"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031166"
 ---
 # <a name="grant-identity-to-non-packaged-desktop-apps"></a>패키지되지 않은 데스크톱 앱에 ID 부여
 
@@ -21,7 +21,7 @@ ms.locfileid: "89172707"
 
 Windows 10 버전 2004 이전 OS 릴리스에서 데스크톱 앱에 ID를 부여하는 유일한 방법은 [서명된 MSIX 패키지에 앱을 패키징](/windows/msix/desktop/desktop-to-uwp-root)하는 것입니다. 이러한 앱의 ID는 패키지 매니페스트에 지정되고 ID 등록은 매니페스트의 정보에 따라 MSIX 배포 파이프라인에서 처리됩니다. 패키지 매니페스트에서 참조되는 모든 콘텐츠는 MSIX 패키지 안에 있습니다.
 
-Windows 10 버전 2004부터는 *스파스 패키지*를 앱과 함께 빌드하고 등록하여 MSIX 패키지에 패키징되지 않은 데스크톱 앱에 패키지 ID를 부여할 수 있습니다. 이러한 지원이 제공되므로 아직 배포를 위한 MSIX 패키지를 도입할 수 없는 데스크톱 앱에서도 패키지 ID가 필요한 Windows 10 확장 기능을 사용할 수 있습니다. 자세한 배경 정보는 [이 블로그 게시물](https://blogs.windows.com/windowsdeveloper/2019/10/29/identity-registration-and-activation-of-non-packaged-win32-apps/#HBMFEM843XORqOWx.97)을 참조하세요.
+Windows 10 버전 2004부터는 *스파스 패키지* 를 앱과 함께 빌드하고 등록하여 MSIX 패키지에 패키징되지 않은 데스크톱 앱에 패키지 ID를 부여할 수 있습니다. 이러한 지원이 제공되므로 아직 배포를 위한 MSIX 패키지를 도입할 수 없는 데스크톱 앱에서도 패키지 ID가 필요한 Windows 10 확장 기능을 사용할 수 있습니다. 자세한 배경 정보는 [이 블로그 게시물](https://blogs.windows.com/windowsdeveloper/2019/10/29/identity-registration-and-activation-of-non-packaged-win32-apps/#HBMFEM843XORqOWx.97)을 참조하세요.
 
 데스크톱 앱에 패키지 ID를 부여하는 스파스 패키지를 빌드하고 등록하려면 다음 단계를 수행합니다.
 
@@ -36,7 +36,7 @@ Windows 10 버전 2004부터는 *스파스 패키지*를 앱과 함께 빌드하
 
 ### <a name="sparse-packages"></a>스파스 패키지
 
-*스파스 패키지*에는 패키지 매니페스트가 포함되지만 다른 앱 이진 파일 및 콘텐츠는 포함되지 않습니다. 스파스 패키지의 매니페스트는 미리 지정된 외부 위치의 패키지 외부에 있는 파일을 참조할 수 있습니다. 따라서 아직 전체 앱에 MSIX 패키징을 도입할 수 없는 애플리케이션에서도 일부 Windows 10 확장 기능에서 요구하는 패키지 ID를 얻을 수 있습니다.
+*스파스 패키지* 에는 패키지 매니페스트가 포함되지만 다른 앱 이진 파일 및 콘텐츠는 포함되지 않습니다. 스파스 패키지의 매니페스트는 미리 지정된 외부 위치의 패키지 외부에 있는 파일을 참조할 수 있습니다. 따라서 아직 전체 앱에 MSIX 패키징을 도입할 수 없는 애플리케이션에서도 일부 Windows 10 확장 기능에서 요구하는 패키지 ID를 얻을 수 있습니다.
 
 > [!NOTE]
 > 스파스 패키지를 사용하는 데스크톱 앱은 MSIX 패키지를 통해 전체를 배포할 때 얻을 수 있는 이점을 누리지 못합니다. 이러한 이점으로는 변조 방지, 잠긴 위치에 설치, 배포/실행/제거 시 OS의 전체 관리가 있습니다.

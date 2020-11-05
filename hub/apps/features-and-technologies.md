@@ -1,17 +1,17 @@
 ---
-Description: 이 섹션에서는 주요 Windows 기능이 여러 다른 앱 플랫폼에서 지원되는 방법을 알아보고 코드에서 이러한 기능을 사용해봅니다.
+description: 이 섹션에서는 주요 Windows 기능이 여러 다른 앱 플랫폼에서 지원되는 방법을 알아보고 코드에서 이러한 기능을 사용해봅니다.
 title: 기능 및 기술
 ms.topic: article
 ms.date: 05/08/2019
 ms.localizationpriority: medium
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: eef7ffd2e84e05bb127120ea7dfa56764782bee9
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: bf8e6797339d7d14542fe310d62606ef55f3d08b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174167"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031076"
 ---
 # <a name="features-and-technologies-for-windows-apps"></a>Windows 앱의 기능 및 기술
 

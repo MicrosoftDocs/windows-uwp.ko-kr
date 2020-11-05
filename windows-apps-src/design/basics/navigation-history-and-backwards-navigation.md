@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱 내에서 사용자의 탐색 기록을 살펴볼 수 있도록 뒤로 탐색하는 기능을 구현하는 방법을 알아봅니다.
+description: Windows 앱 내에서 사용자의 탐색 기록을 살펴볼 수 있도록 뒤로 탐색하는 기능을 구현하는 방법을 알아봅니다.
 title: 탐색 기록 및 뒤로 탐색
 template: detail.hbs
 op-migration-status: ready
@@ -7,16 +7,16 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 50f87c02f726512f54830f8678fa8bbec5ecee4f
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: 17303da53e7822be2e4984e6b852664c63c0919c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91763045"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030996"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-windows-apps"></a>Windows 앱을 위한 탐색 기록 및 뒤로 탐색
 
-> **중요 API**: [BackRequested 이벤트](/uwp/api/Windows.UI.Core.SystemNavigationManager.BackRequested), [SystemNavigationManager 클래스](/uwp/api/Windows.UI.Core.SystemNavigationManager), [OnNavigatedTo](/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)
+> **중요 API** : [BackRequested 이벤트](/uwp/api/Windows.UI.Core.SystemNavigationManager.BackRequested), [SystemNavigationManager 클래스](/uwp/api/Windows.UI.Core.SystemNavigationManager), [OnNavigatedTo](/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)
 
 Windows 앱은 앱 내에서 그리고 디바이스에 따라 앱 간에 사용자의 탐색 기록을 탐색할 수 있도록 일관적인 뒤로 탐색 시스템을 제공합니다.
 
@@ -286,9 +286,9 @@ bool App::On_BackRequested()
 
 이 뒤로 탐색 디자인 지침을 모든 디바이스에 적용할 수 있지만, 디바이스와 폼 팩터를 최적화하는 것이 좋습니다. 최적화 역시 여러 셸에서 지원하는 하드웨어 뒤로 단추에 따라 달라집니다.
 
-- **휴대폰/태블릿**: 휴대폰과 태블릿에는 항상 하드웨어 또는 소프트웨어 뒤로 단추가 있지만, 확실하게 알 수 있도록 인-앱 단추를 구현하는 것이 좋습니다.
-- **데스크톱/허브**: 앱 UI 왼쪽 위 모서리에 인-앱 단추를 구현합니다.
-- **Xbox/TV**: UI가 불필요하게 복잡해지지 않도록 뒤로 단추를 구현하지 않습니다. 대신 뒤로 탐색에 게임패드의 B 버튼을 사용합니다.
+- **휴대폰/태블릿** : 휴대폰과 태블릿에는 항상 하드웨어 또는 소프트웨어 뒤로 단추가 있지만, 확실하게 알 수 있도록 인-앱 단추를 구현하는 것이 좋습니다.
+- **데스크톱/허브** : 앱 UI 왼쪽 위 모서리에 인-앱 단추를 구현합니다.
+- **Xbox/TV** : UI가 불필요하게 복잡해지지 않도록 뒤로 단추를 구현하지 않습니다. 대신 뒤로 탐색에 게임패드의 B 버튼을 사용합니다.
 
 앱이 여러 디바이스에서 실행되는 경우 단추 표시 여부를 전환하는 [사용자 지정 트리거를 Xbox](../devices/designing-for-tv.md#custom-visual-state-trigger-for-xbox)를 대상으로 만듭니다. NavigationView 컨트롤은 앱이 Xbox에서 실행되는 경우 자동으로 뒤로 단추를 토글합니다. 
 

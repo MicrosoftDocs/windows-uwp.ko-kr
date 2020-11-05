@@ -1,5 +1,5 @@
 ---
-Description: 소리는 애플리케이션의 사용자 환경을 완성하고 모든 플랫폼에서 Windows 느낌을 일치시키는 데 필요한 추가 오디오 이점을 제공합니다.
+description: 소리는 애플리케이션의 사용자 환경을 완성하고 모든 플랫폼에서 Windows 느낌을 일치시키는 데 필요한 추가 오디오 이점을 제공합니다.
 label: Sound
 title: 소리
 template: detail.hbs
@@ -12,12 +12,12 @@ design-contact: mattben
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c479a47a53c5f52bab1febf490957355264bfc4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: cd7c394f66eb1da585a605d96ed50804b8aab375
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89159879"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033186"
 ---
 # <a name="sound"></a>소리
 
@@ -49,26 +49,26 @@ UWP는 단순히 "스위치를 플리핑"하여 전체 앱에서 몰입형 오�
 ```C#
 ElementSoundPlayer.State = ElementSoundPlayerState.On;
 ```
-**ElementSoundPlayer**에는 **켜짐**, **꺼짐** 및 **자동**의 세 가지 상태가 있습니다.
+**ElementSoundPlayer** 에는 **켜짐** , **꺼짐** 및 **자동** 의 세 가지 상태가 있습니다.
 
-**꺼짐**으로 설정된 경우 앱을 실행하는 위치에 관계없이 소리가 재생되지 않습니다. **켜짐**으로 설정된 경우 앱의 소리가 모든 플랫폼에서 재생됩니다.
+**꺼짐** 으로 설정된 경우 앱을 실행하는 위치에 관계없이 소리가 재생되지 않습니다. **켜짐** 으로 설정된 경우 앱의 소리가 모든 플랫폼에서 재생됩니다.
 
-ElementSoundPlayer를 사용하도록 설정하면 공간 오디오(3D 사운드)도 자동으로 사용하도록 설정됩니다. 소리를 켜 놓은 상태에서 3D 사운드를 사용하지 않도록 설정하려면 ElementSoundPlayer의 **SpatialAudioMode**를 사용하지 않도록 설정합니다. 
+ElementSoundPlayer를 사용하도록 설정하면 공간 오디오(3D 사운드)도 자동으로 사용하도록 설정됩니다. 소리를 켜 놓은 상태에서 3D 사운드를 사용하지 않도록 설정하려면 ElementSoundPlayer의 **SpatialAudioMode** 를 사용하지 않도록 설정합니다. 
 
 ```C#
 ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.Off
 ```
 
 **SpatialAudioMode** 속성은 다음 값을 취할 수 있습니다. 
-- **자동**: 소리가 켜져 있으면 공간 오디오를 켭니다. 
-- **꺼짐**: 소리가 켜져 있더라도 공간 오디오를 항상 끕니다.
-- **켜짐**: 공간 오디오를 항상 재생합니다.
+- **자동** : 소리가 켜져 있으면 공간 오디오를 켭니다. 
+- **꺼짐** : 소리가 켜져 있더라도 공간 오디오를 항상 끕니다.
+- **켜짐** : 공간 오디오를 항상 재생합니다.
 
 공간 오디오 및 XAML 처리 방법에 대한 자세한 내용은 [AudioGraph - 공간 오디오](../../audio-video-camera/audio-graphs.md#spatial-audio)를 참조하세요.
 
 ### <a name="sound-for-tv-and-xbox"></a>TV 및 Xbox의 소리
 
-소리는 10피트 환경의 주요 부분이며, **ElementSoundPlayer**의 상태는 기본적으로 **자동**이므로 Xbox에서 앱을 실행하는 경우에만 소리가 재생됩니다.
+소리는 10피트 환경의 주요 부분이며, **ElementSoundPlayer** 의 상태는 기본적으로 **자동** 이므로 Xbox에서 앱을 실행하는 경우에만 소리가 재생됩니다.
 Xbox 및 TV용 디자인 방식에 대한 자세한 내용은 [Xbox 및 TV용 디자인](../devices/designing-for-tv.md)을 참조하세요.
 
 ## <a name="sound-volume-override"></a>소리 볼륨 재정의
@@ -83,9 +83,9 @@ ElementSoundPlayer.Volume = 0.5;
 
 ## <a name="control-level-state"></a>컨트롤 수준 상태
 
-컨트롤의 기본 소리가 부적절한 경우 사용하지 않도록 설정할 수 있습니다. 이 작업은 컨트롤의 **ElementSoundMode**를 통해 수행합니다.
+컨트롤의 기본 소리가 부적절한 경우 사용하지 않도록 설정할 수 있습니다. 이 작업은 컨트롤의 **ElementSoundMode** 를 통해 수행합니다.
 
-**ElementSoundMode**에는 **꺼짐** 및 **기본값**의 두 가지 상태가 있습니다. 설정하지 않으면 **기본값**입니다. **꺼짐**으로 설정하면 *포커스를 제외*하고 컨트롤이 재생하는 모든 소리가 음소거됩니다.
+**ElementSoundMode** 에는 **꺼짐** 및 **기본값** 의 두 가지 상태가 있습니다. 설정하지 않으면 **기본값** 입니다. **꺼짐** 으로 설정하면 *포커스를 제외* 하고 컨트롤이 재생하는 모든 소리가 음소거됩니다.
 
 ```XAML
 <Button Name="ButtonName" Content="More Info" ElementSoundMode="Off"/>
@@ -108,7 +108,7 @@ ButtonName.ElementSoundState = ElementSoundMode.Off;
 일반적으로 이 소리는 사용자가 [입력 디바이스](../input/index.md)를 통해 단순 컨트롤이나 컨트롤 부분의 대상을 명시적으로 지정하는 경우에만 재생됩니다.
 
 
-컨트롤 이벤트에서 이 소리를 재생하려면 **ElementSoundPlayer**에서 Play 메서드를 호출하고 **ElementSound.Invoke**를 전달합니다.
+컨트롤 이벤트에서 이 소리를 재생하려면 **ElementSoundPlayer** 에서 Play 메서드를 호출하고 **ElementSound.Invoke** 를 전달합니다.
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.Invoke);
 ```
@@ -133,12 +133,12 @@ ElementSoundPlayer.Play(ElementSoundKind.Hide);
 
 이 탐색 개념을 중심으로 하는 오디오 환경은 **MovePrevious** 및 **MoveNext** 소리로 나타냅니다.
 
-목록의 *다음 항목*으로 간주되는 보기/패널로 이동하는 경우 다음을 호출합니다.
+목록의 *다음 항목* 으로 간주되는 보기/패널로 이동하는 경우 다음을 호출합니다.
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.MoveNext);
 ```
-또한 목록에서 *이전 항목*으로 간주되는 이전 보기/패널로 이동하는 경우 다음을 호출합니다.
+또한 목록에서 *이전 항목* 으로 간주되는 이전 보기/패널로 이동하는 경우 다음을 호출합니다.
 
 ```C#
 ElementSoundPlayer.Play(ElementSoundKind.MovePrevious);

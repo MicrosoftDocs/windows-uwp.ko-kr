@@ -1,17 +1,17 @@
 ---
-Description: 맞춤, 여백 및 안쪽 여백 속성을 사용하여 페이지의 요소 레이아웃을 정렬합니다.
+description: 맞춤, 여백 및 안쪽 여백 속성을 사용하여 페이지의 요소 레이아웃을 정렬합니다.
 title: 레이아웃 맞춤, 여백 및 안쪽 여백
 ms.date: 03/19/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 1982bdd60ea8f14d19b9b29556b143abd8931127
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f2782118b2ed35578ac48f2996839ceefcf5b71b
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165667"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034896"
 ---
 # <a name="alignment-margin-padding"></a>맞춤, 여백, 안쪽 여백
 
@@ -36,10 +36,10 @@ UWP 앱에서는 대부분 UI(사용자 인터페이스) 요소가 [**FrameworkE
 ![맞춤을 보여주는 다이어그램](images/alignment.svg)
 
 - [**HorizontalAlignment**](/uwp/api/windows.ui.xaml.frameworkelement.horizontalalignment) 및 [**VerticalAlignment**](/uwp/api/windows.ui.xaml.frameworkelement.verticalalignment)는 해당 부모 컨테이너 내에서 요소의 위치가 결정되는 방법을 지정합니다.
-    - **HorizontalAlignment**에 대한 값은 **Left**, **Center**, **Right** 및 **Stretch**입니다.
-    - **VerticalAlignment**에 대한 값은 **Top**, **Center**, **Bottom** 및 **Stretch**입니다.
+    - **HorizontalAlignment** 에 대한 값은 **Left** , **Center** , **Right** 및 **Stretch** 입니다.
+    - **VerticalAlignment** 에 대한 값은 **Top** , **Center** , **Bottom** 및 **Stretch** 입니다.
 
-- **Stretch**는 두 속성의 기본 값이며, 요소는 부모 컨테이너에 제공된 모든 공간을 채웁니다. 실수인 Height 및 Width 값을 지정하면 Stretch 값이 취소되고, 대신 Center 값으로 작동합니다. Button과 같은 일부 컨트롤은 기본 Stretch 값을 해당하는 기본 스타일로 재정의합니다.
+- **Stretch** 는 두 속성의 기본 값이며, 요소는 부모 컨테이너에 제공된 모든 공간을 채웁니다. 실수인 Height 및 Width 값을 지정하면 Stretch 값이 취소되고, 대신 Center 값으로 작동합니다. Button과 같은 일부 컨트롤은 기본 Stretch 값을 해당하는 기본 스타일로 재정의합니다.
 
 - [**HorizontalContentAlignment**](/uwp/api/windows.ui.xaml.controls.control.horizontalcontentalignment) 및 [**VerticalContentAlignment**](/uwp/api/windows.ui.xaml.controls.control.verticalcontentalignment)는 컨테이너 내에서 자식 요소의 위치가 결정되는 방법을 지정합니다.
 
@@ -71,7 +71,7 @@ UWP 앱에서는 대부분 UI(사용자 인터페이스) 요소가 [**FrameworkE
 -   [**Control.Padding**](/uwp/api/windows.ui.xaml.controls.control.padding): 모든 [**Control**](/uwp/api/windows.ui.xaml.controls) 파생 클래스를 상속합니다. 모든 컨트롤에 콘텐츠가 있는 것은 아니므로 이러한 컨트롤은 속성을 설정해도 아무 효과가 없습니다. 컨트롤에 테두리가 있는 경우 해당 테두리 안에 안쪽 여백이 적용됩니다.
 -   [**Border.Padding**](/uwp/api/windows.ui.xaml.controls.border.padding): [**BorderThickness**](/uwp/api/windows.ui.xaml.controls.border.borderthickness)/[**BorderBrush**](/uwp/api/windows.ui.xaml.controls.border.borderbrush) 및 [**Child**](/uwp/api/windows.ui.xaml.controls.border.child) 요소로 만들어진 직사각형 선 사이의 공간을 정의합니다.
 -   [**ItemsPresenter.Padding**](/uwp/api/windows.ui.xaml.controls.itemspresenter.padding): 항목 컨트롤의 항목 모양에 영향을 주며 각 항목 주위에 지정한 안쪽 여백을 배치합니다.
--   [**TextBlock.Padding**](/uwp/api/windows.ui.xaml.controls.textblock.padding) 및 [**RichTextBlock.Padding**](/uwp/api/windows.ui.xaml.controls.richtextblock.padding): 텍스트 요소의 텍스트 주위에 경계 상자를 확장합니다. 이러한 텍스트 요소는 **배경**이 없기 때문에 육안으로 확인하기 어려울 수 있습니다. 이때는 [**Block**](/uwp/api/windows.ui.xaml.documents.block.margin) 컨테이너에서 [**여백**](/uwp/api/windows.ui.xaml.documents.block) 설정을 사용하세요.
+-   [**TextBlock.Padding**](/uwp/api/windows.ui.xaml.controls.textblock.padding) 및 [**RichTextBlock.Padding**](/uwp/api/windows.ui.xaml.controls.richtextblock.padding): 텍스트 요소의 텍스트 주위에 경계 상자를 확장합니다. 이러한 텍스트 요소는 **배경** 이 없기 때문에 육안으로 확인하기 어려울 수 있습니다. 이때는 [**Block**](/uwp/api/windows.ui.xaml.documents.block.margin) 컨테이너에서 [**여백**](/uwp/api/windows.ui.xaml.documents.block) 설정을 사용하세요.
 
 둘 중 어떤 경우든, 요소 역시 여백 속성을 갖습니다. 여백과 안쪽 여백을 모두 적용하는 경우 외부 컨테이너와 내부 콘텐츠 사이의 거리는 여백과 안쪽 여백의 합계라는 점에서 가산됩니다.
 

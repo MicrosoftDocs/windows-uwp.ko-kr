@@ -1,5 +1,5 @@
 ---
-Description: 암호 상자는 개인 정보 보호를 위해 입력된 문자를 숨기는 텍스트 입력 상자입니다.
+description: 암호 상자는 개인 정보 보호를 위해 입력된 문자를 숨기는 텍스트 입력 상자입니다.
 title: 암호 상자에 대한 지침
 ms.assetid: 332B04D6-4FFE-42A4-8B3D-ABE8266C7C18
 dev.assetid: 4BFDECC6-9BC5-4FF5-8C63-BB36F6DDF2EF
@@ -12,12 +12,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3ba2df600e294aab959a090d8b5a5f8645a40d55
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: cb5bce63243869db0f8d9ae46a4c3c2b3844086c
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749729"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030886"
 ---
 # <a name="password-box"></a>비밀번호 상자
 
@@ -39,7 +39,7 @@ ms.locfileid: "91749729"
    :::column-end:::
 :::row-end:::
 
-> **플랫폼 API**: [PasswordBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox), [Password 속성](/uwp/api/windows.ui.xaml.controls.passwordbox.password), [PasswordChar 속성](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchar), [PasswordRevealMode 속성](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode), [PasswordChanged 이벤트](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchanged)
+> **플랫폼 API** : [PasswordBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox), [Password 속성](/uwp/api/windows.ui.xaml.controls.passwordbox.password), [PasswordChar 속성](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchar), [PasswordRevealMode 속성](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode), [PasswordChanged 이벤트](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordchanged)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -151,7 +151,7 @@ PasswordBox에는 사용자가 암호 텍스트를 표시하기 위해 터치하
 
 ### <a name="hidden-and-visible-modes"></a>숨김 및 표시 모드
 
-다른 [PasswordRevealMode](/uwp/api/Windows.UI.Xaml.Controls.PasswordRevealMode) 열거형 값 **Hidden** 및 **Visible**는 암호 표시 단추를 숨기고 암호가 가려지는지 여부를 프로그래밍 방식으로 관리할 수 있도록 합니다.
+다른 [PasswordRevealMode](/uwp/api/Windows.UI.Xaml.Controls.PasswordRevealMode) 열거형 값 **Hidden** 및 **Visible** 는 암호 표시 단추를 숨기고 암호가 가려지는지 여부를 프로그래밍 방식으로 관리할 수 있도록 합니다.
 
 암호를 항상 가리려면 PasswordRevealMode를 Hidden으로 설정합니다. 암호를 항상 가릴 필요가 없으면 사용자 지정 UI를 제공하여 사용자가 Hidden 및 Visible 간에 PasswordRevealMode를 전환할 수 있도록 합니다. 예를 들어 다음 예제와 같이 확인란을 사용하여 암호를 가릴 것인지 여부를 전환할 수 있습니다. [ToggleButton](/uwp/api/Windows.UI.Xaml.Controls.Primitives.ToggleButton)과 같은 기타 컨트롤을 사용하여 사용자가 모드 간을 전환하도록 할 수도 있습니다.
 

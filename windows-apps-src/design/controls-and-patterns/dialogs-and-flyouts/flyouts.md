@@ -1,5 +1,5 @@
 ---
-Description: 대화 상자 및 플라이아웃은 사용자가 요청할 경우나 알림 또는 승인이 필요한 문제가 발생할 경우 나타나는 임시 UI 요소를 표시합니다.
+description: 대화 상자 및 플라이아웃은 사용자가 요청할 경우나 알림 또는 승인이 필요한 문제가 발생할 경우 나타나는 임시 UI 요소를 표시합니다.
 title: 플라이아웃 컨트롤
 template: detail.hbs
 ms.date: 09/24/2020
@@ -11,12 +11,12 @@ design-contact: kimsea
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: cfe7d7cb435437a4a2601db1fdf69650521001cc
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: fd725407e8b8a8972bb9d1acee2c6b699f51ce20
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750489"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034566"
 ---
 # <a name="flyouts"></a>플라이아웃
 

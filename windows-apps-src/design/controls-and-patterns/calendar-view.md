@@ -1,5 +1,5 @@
 ---
-Description: 달력 보기를 통해 월, 연도 또는 10년 단위로 이동하면서 달력을 보고 조작할 수 있습니다.
+description: 달력 보기를 통해 월, 연도 또는 10년 단위로 이동하면서 달력을 보고 조작할 수 있습니다.
 title: 달력 보기
 ms.assetid: d8ec5ba8-7a9d-405d-a1a5-5a1b502b9e64
 label: Calendar view
@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: joyate
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c326e58fa71bba5deab0f86e872651c8a5ea140
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: f26f2dce4847587869b35c7f04f0da2e45e3c0e2
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750589"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030956"
 ---
 # <a name="calendar-view"></a>달력 보기
 
@@ -82,9 +82,9 @@ ms.locfileid: "91750589"
 
 ### <a name="selecting-dates"></a>날짜 선택
 
-기본적으로 [SelectionMode](/uwp/api/windows.ui.xaml.controls.calendarview.selectionmode) 속성은 **Single**로 설정됩니다. 이렇게 하면 사용자가 달력에서 단일 날짜를 선택할 수 있습니다. SelectionMode를 **None**으로 설정하여 날짜 선택을 사용하지 않도록 설정합니다.
+기본적으로 [SelectionMode](/uwp/api/windows.ui.xaml.controls.calendarview.selectionmode) 속성은 **Single** 로 설정됩니다. 이렇게 하면 사용자가 달력에서 단일 날짜를 선택할 수 있습니다. SelectionMode를 **None** 으로 설정하여 날짜 선택을 사용하지 않도록 설정합니다.
 
-SelectionMode를 **Multiple**으로 설정하여 여러 날짜를 선택할 수 있도록 합니다. 다음과 같이 [DateTime](/dotnet/api/system.datetime)/[DateTimeOffset](/dotnet/api/system.datetimeoffset) 개체를 [SelectedDates](/uwp/api/windows.ui.xaml.controls.calendarview.selecteddates) 컬렉션에 추가하여 프로그래밍 방식으로 여러 날짜를 선택할 수 있습니다.
+SelectionMode를 **Multiple** 으로 설정하여 여러 날짜를 선택할 수 있도록 합니다. 다음과 같이 [DateTime](/dotnet/api/system.datetime)/[DateTimeOffset](/dotnet/api/system.datetimeoffset) 개체를 [SelectedDates](/uwp/api/windows.ui.xaml.controls.calendarview.selecteddates) 컬렉션에 추가하여 프로그래밍 방식으로 여러 날짜를 선택할 수 있습니다.
 
 ```csharp
 calendarView1.SelectedDates.Add(DateTimeOffset.Now);
@@ -143,7 +143,7 @@ calendarView1.MaxDate = new DateTime(2099, 12, 31);
 
 달력의 각 날짜는 [CalendarViewDayItem](/uwp/api/Windows.UI.Xaml.Controls.CalendarViewDayItem) 개체로 표시됩니다. 개별 날짜 항목에 액세스하고 속성 및 메서드를 사용하려면 [CalendarViewDayItemChanging](/uwp/api/windows.ui.xaml.controls.calendarview.calendarviewdayitemchanging) 이벤트를 처리하고 이벤트 인수의 항목 속성을 사용하여 CalendarViewDayItem에 액세스합니다.
 
-[CalendarViewDayItem.IsBlackout](/uwp/api/windows.ui.xaml.controls.calendarviewdayitem.isblackout) 속성을 **true**로 설정하여 달력 보기에서 날짜를 선택할 수 없도록 만들 수 있습니다.
+[CalendarViewDayItem.IsBlackout](/uwp/api/windows.ui.xaml.controls.calendarviewdayitem.isblackout) 속성을 **true** 로 설정하여 달력 보기에서 날짜를 선택할 수 없도록 만들 수 있습니다.
 
 [CalendarViewDayItem.SetDensityColors](/uwp/api/windows.ui.xaml.controls.calendarviewdayitem.setdensitycolors) 메서드를 호출하여 하루의 이벤트 밀도에 대한 상황별 정보를 표시할 수 있습니다. 각 날짜에 대해 0에서 10 사이 밀도 막대를 표시하고 각 막대의 색을 설정할 수 있습니다.
 

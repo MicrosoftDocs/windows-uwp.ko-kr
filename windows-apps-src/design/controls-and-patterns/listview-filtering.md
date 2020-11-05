@@ -1,5 +1,5 @@
 ---
-Description: 사용자 입력을 통해 컬렉션의 항목을 필터링합니다.
+description: 사용자 입력을 통해 컬렉션의 항목을 필터링합니다.
 title: 컬렉션 필터링
 label: Filtering collections
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 12/3/2019
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: anawish
-ms.openlocfilehash: b1ffa6374753343321f34d388eb994a62614cb15
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a62ec52fe2b8f6caac2ac27cfc4d002ec44a5b32
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89172607"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034536"
 ---
 # <a name="filtering-collections-and-lists-through-user-input"></a>사용자 입력을 통해 컬렉션 및 목록 필터링
 컬렉션에 많은 항목이 표시되거나 사용자 상호 작용에 크게 얽매이는 경우 필터링은 구현에 유용한 기능입니다. 이 문서에서 설명하는 메서드를 사용하는 필터링은 [ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView](/uwp/api/windows.ui.xaml.controls.gridview) 및 [ItemsRepeater](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)를 비롯한 대부분의 컬렉션 컨트롤에 구현될 수 있습니다. 확인란, 라디오 단추 및 슬라이더와 같은 컬렉션을 필터링하는 데 많은 유형의 사용자 입력을 사용할 수 있습니다. 하지만 이 문서에서는 텍스트 기반 사용자 입력을 수집하여 사용자의 검색에 따라 실시간으로 ListView를 업데이트하는 데 초점을 맞춥니다. 

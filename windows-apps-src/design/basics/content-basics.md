@@ -1,5 +1,5 @@
 ---
-Description: Windows 앱에 콘텐츠를 표시하는 일반적인 페이지 패턴과 UI 요소의 개요를 설명합니다.
+description: Windows 앱에 콘텐츠를 표시하는 일반적인 페이지 패턴과 UI 요소의 개요를 설명합니다.
 title: Windows 앱용 콘텐츠 디자인 기본 사항
 ms.assetid: 3102530A-E0D1-4C55-AEFF-99443D39D567
 label: Content design basics
@@ -9,12 +9,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4d46f987ef9eb74c4d0aa4585c3c0cce5e5ca4fd
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 3933910d77249476e76c4d87dfd96af66bd418a8
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220556"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031577"
 ---
 # <a name="content-design-basics-for-windows-apps"></a>Windows 앱용 콘텐츠 디자인 기본 사항
 

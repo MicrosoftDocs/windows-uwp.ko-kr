@@ -1,5 +1,5 @@
 ---
-Description: Pivot 컨트롤을 통해 작은 콘텐츠 섹션 세트에서 터치하여 살짝 밀기를 사용할 수 있습니다.
+description: Pivot 컨트롤을 통해 작은 콘텐츠 섹션 세트에서 터치하여 살짝 밀기를 사용할 수 있습니다.
 title: Pivot
 template: detail.hbs
 ms.date: 09/24/2020
@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: llongley
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 12b6662eb7bbfc08563dd9f7313aa0ea7d0a0e18
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: eaef3bb57eb8719ac4183f21b764ece98cae22fe
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749709"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93030856"
 ---
 # <a name="pivot"></a>Pivot
 
@@ -37,7 +37,7 @@ ms.locfileid: "91749709"
    :::column-end:::
 :::row-end:::
 
-> **플랫폼 API**: [Pivot 클래스](/uwp/api/Windows.UI.Xaml.Controls.Pivot), [NavigationView 클래스](/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
+> **플랫폼 API** : [Pivot 클래스](/uwp/api/Windows.UI.Xaml.Controls.Pivot), [NavigationView 클래스](/uwp/api/Windows.UI.Xaml.Controls.NavigationView)
 
 ## <a name="examples"></a>예
 
@@ -199,7 +199,7 @@ private void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvoke
 - 피벗 레이블을 탭하면 해당 페이지로 이동하며 활성 피벗 레이블이 첫 번째 위치로 회전합니다.
 - 회전 모드에서 피벗 항목은 마지막에서부터 첫 번째 피벗 섹션까지 루핑합니다.
 
-> **참고**[3m 환경](../devices/designing-for-tv.md)에서는 Pivot 헤더가 회전하면 안 됩니다. 앱이 Xbox에서 실행되는 경우 [IsHeaderItemsCarouselEnabled](/uwp/api/Windows.UI.Xaml.Controls.Pivot.IsHeaderItemsCarouselEnabled) 속성을 **false**로 설정합니다.
+> **참고**[3m 환경](../devices/designing-for-tv.md)에서는 Pivot 헤더가 회전하면 안 됩니다. 앱이 Xbox에서 실행되는 경우 [IsHeaderItemsCarouselEnabled](/uwp/api/Windows.UI.Xaml.Controls.Pivot.IsHeaderItemsCarouselEnabled) 속성을 **false** 로 설정합니다.
 
 ## <a name="recommendations"></a>권장 사항
 

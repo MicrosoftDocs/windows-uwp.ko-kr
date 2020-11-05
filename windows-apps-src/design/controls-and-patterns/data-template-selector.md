@@ -1,5 +1,5 @@
 ---
-Description: 데이터 템플릿 선택을 사용하여 항목 속성을 기준으로 항목의 스타일을 사용자 지정합니다.
+description: 데이터 템플릿 선택을 사용하여 항목 속성을 기준으로 항목의 스타일을 사용자 지정합니다.
 title: 데이터 템플릿 선택
 label: Data template selection
 template: detail.hbs
@@ -7,18 +7,18 @@ ms.date: 10/18/2019
 ms.topic: article
 keywords: windows 10, uwp
 pm-contact: anawish
-ms.openlocfilehash: 382e28b38347a4901e781a12637423260c4bd3e3
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 5b10afc03a1936c033977a53bd12effdae1c2ead
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89160387"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93032336"
 ---
 # <a name="data-template-selection-styling-items-based-on-their-properties"></a>데이터 템플릿 선택: 속성을 기준으로 항목 스타일 지정
 
 컬렉션 제어의 사용자 지정된 디자인은 [DataTemplate](/uwp/api/windows.ui.xaml.datatemplate)에서 관리됩니다. 데이터 템플릿은 각 항목의 레이아웃 및 스타일 지정 방식을 정의하며, 해당 태그는 컬렉션의 모든 항목에 적용됩니다. 이 문서에서는 [DataTemplateSelector](/uwp/api/windows.ui.xaml.controls.datatemplateselector)를 사용하여 다양한 데이터 템플릿을 컬렉션에 적용하고, 특정 항목 속성 또는 사용자가 선택한 값을 기준으로 사용할 데이터 템플릿을 선택하는 방법을 설명합니다.
 
-> **중요 API**: [DataTemplateSelector](/uwp/api/windows.ui.xaml.controls.datatemplateselector), [DataTemplate](/uwp/api/windows.ui.xaml.datatemplate)
+> **중요 API** : [DataTemplateSelector](/uwp/api/windows.ui.xaml.controls.datatemplateselector), [DataTemplate](/uwp/api/windows.ui.xaml.datatemplate)
 
 [DataTemplateSelector](/uwp/api/windows.ui.xaml.controls.datatemplateselector)는 사용자 지정 템플릿 선택 논리를 가능하게 하는 클래스입니다. 이를 통해 컬렉션의 특정 항목에 사용할 데이터 템플릿을 지정하는 규칙을 정의할 수 있습니다. 이 논리를 구현하려면 코드 숨김에서 DataTemplateSelector의 하위 클래스를 생성하고 어떤 항목의 카테고리에 어떤 데이터 템플릿을 사용할지 결정하는 논리를 정의합니다(예를 들어 특정 유형의 항목 또는 특정 속성 값을 갖는 항목 등). 사용할 데이터 템플릿의 정의와 함께 XAML 파일의 리소스 섹션에서 이 클래스의 인스턴스를 선언합니다. 이러한 리소스를 XAML에서 참조할 수 있는 `x:Key` 값으로 식별합니다.
 

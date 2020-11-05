@@ -1,17 +1,17 @@
 ---
-Description: 앱 제출 시 조직 라이선스 섹션에서 비즈니스용 Microsoft Store 및 교육용 Microsoft Store를 통해 앱을 대량 구매용으로 제공할지 여부 및 그 방법을 지정할 수 있습니다.
+description: 앱 제출 시 조직 라이선스 섹션에서 비즈니스용 Microsoft Store 및 교육용 Microsoft Store를 통해 앱을 대량 구매용으로 제공할지 여부 및 그 방법을 지정할 수 있습니다.
 title: 조직 라이선스 옵션
 ms.assetid: 1EB139B0-67E7-4F66-AAEF-491B1E52E96F
 ms.date: 10/31/2018
 ms.topic: article
 keywords: Windows 10, uwp, 비즈니스용 Store, 교육용 Store, 조직, 볼륨 라이선싱, 엔터프라이즈, 교육 Store, 비즈니스 Store, 대량 구매, 대량
 localizationpriority: high
-ms.openlocfilehash: f572a09c488cfff391fead603612148b6a85bc02
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: dbaf44409e387d15225e701ef5c64fc2cb198ece
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174747"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034626"
 ---
 # <a name="organizational-licensing-options"></a>조직 라이선스 옵션
 

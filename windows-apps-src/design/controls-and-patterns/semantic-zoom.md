@@ -1,5 +1,5 @@
 ---
-Description: 시맨틱 줌 컨트롤을 사용하여 동일한 데이터 집합의 서로 다른 두 가지 시맨틱 보기를 확대/축소할 수 있습니다.
+description: 시맨틱 줌 컨트롤을 사용하여 동일한 데이터 집합의 서로 다른 두 가지 시맨틱 보기를 확대/축소할 수 있습니다.
 title: 시맨틱 줌
 ms.assetid: B5C21FE7-BA83-4940-9CC1-96F6A2DC28C7
 label: Semantic zoom
@@ -11,12 +11,12 @@ pm-contact: predavid
 design-contact: kimsea
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: f2fea27bf44e2e7f199c6c04f045f2cda6663315
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c945fe25807dcdfa556d7dc9b971b5429b4bcfc8
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174447"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93035186"
 ---
 # <a name="semantic-zoom"></a>시맨틱 줌
 
@@ -29,9 +29,9 @@ ms.locfileid: "89174447"
 
 예를 들어 주소록을 볼 때 사용자는 화면을 축소하여 "W" 문자로 신속하게 이동하거나, 화면을 확대하여 해당 문자와 연결된 이름을 확인할 수 있습니다. 
 
-> **중요 API**: [SemanticZoom 클래스](/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom), [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](/uwp/api/Windows.UI.Xaml.Controls.GridView)
+> **중요 API** : [SemanticZoom 클래스](/uwp/api/Windows.UI.Xaml.Controls.SemanticZoom), [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](/uwp/api/Windows.UI.Xaml.Controls.GridView)
 
-**기능**:
+**기능** :
 
 -   축소 보기의 크기는 시맨틱 줌 컨트롤의 범위에 의해 제한됩니다.
 -   그룹 헤더를 탭하면 보기가 전환됩니다. 보기 간에 전환하는 방법으로 손가락 모으기를 사용할 수 있습니다.

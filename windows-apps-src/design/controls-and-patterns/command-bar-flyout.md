@@ -1,5 +1,5 @@
 ---
-Description: 명령 모음 플라이아웃을 통해 앱에서 가장 많이 수행하는 작업에 쉽게 액세스할 수 있습니다.
+description: 명령 모음 플라이아웃을 통해 앱에서 가장 많이 수행하는 작업에 쉽게 액세스할 수 있습니다.
 title: 명령 모음 플라이아웃
 label: Command bar flyout
 template: detail.hbs
@@ -12,12 +12,12 @@ dev-contact: llongley
 doc-status: Draft
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: a2f6e61373ae343d8d683d6e5f9169cc399f1594
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 3ca79795264fd0629c19877f22bdc3eb332fa69f
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750549"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93031496"
 ---
 # <a name="command-bar-flyout"></a>명령 모음 플라이아웃
 
@@ -27,7 +27,7 @@ ms.locfileid: "91750549"
 
 [CommandBar](app-bars.md)처럼 CommandBarFlyout에는 명령을 추가하는 데 사용할 수 있는 **PrimaryCommands** 및 **SecondaryCommands** 속성이 있습니다. 두 컬렉션 중 하나에 또는 둘 모두에 명령을 배치할 수 있습니다. 기본 및 보조 명령이 표시되는 시기와 방법은 디스플레이 모드에 따라 달라집니다.
 
-명령 모음 플라이아웃은 *축소* 및 *확장*의 두 가지 표시 모드를 제공합니다.
+명령 모음 플라이아웃은 *축소* 및 *확장* 의 두 가지 표시 모드를 제공합니다.
 
 - 축소 모드에서는 기본 명령만 표시됩니다. 명령 모음 플라이아웃에 기본 명령과 보조 명령이 모두 있는 경우 줄임표(\[***\])로 표시되는 "자세히 보기" 단추가 표시됩니다. 사용자는 이 단추를 통해 확장 모드로 전환하여 보조 명령에 액세스할 수 있습니다.
 - 확장 모드에서는 기본 명령과 보조 명령이 모두 표시됩니다. (컨트롤에 보조 항목만 있는 경우 보조 항목이 MenuFlyout 컨트롤과 비슷한 방식으로 표시됩니다.)
@@ -46,9 +46,9 @@ ms.locfileid: "91750549"
    :::column-end:::
 :::row-end:::
 
->**Windows UI 라이브러리 API**: [CommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
+>**Windows UI 라이브러리 API** : [CommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/microsoft.ui.xaml.controls.textcommandbarflyout)
 >
->**플랫폼 API**: [CommandBarFlyout 클래스](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [AppBarButton 클래스](/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton 클래스](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [AppBarSeparator 클래스](/uwp/api/windows.ui.xaml.controls.appbarseparator)
+>**플랫폼 API** : [CommandBarFlyout 클래스](/uwp/api/windows.ui.xaml.controls.commandbarflyout), [TextCommandBarFlyout 클래스](/uwp/api/windows.ui.xaml.controls.textcommandbarflyout), [AppBarButton 클래스](/uwp/api/windows.ui.xaml.controls.appbarbutton), [AppBarToggleButton 클래스](/uwp/api/windows.ui.xaml.controls.appbartogglebutton), [AppBarSeparator 클래스](/uwp/api/windows.ui.xaml.controls.appbarseparator)
 >
 > CommandBarFlyout에는 Windows 10, 버전 1809([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상 또는 [Windows UI 라이브러리](/uwp/toolkits/winui/)가 필요합니다.
 
@@ -84,7 +84,7 @@ TextCommandBarFlyout은 TextBox, TextBlock, RichEditBox, RichTextBlock 및 Passw
 
 ## <a name="proactive-vs-reactive-invocation"></a>사전 및 사후 호출
 
-일반적으로 UI 캔버스의 요소와 연결된 플라이아웃 또는 메뉴를 호출하는 두 가지 방법이 있는데, 하나는 _사전 호출_이고 다른 하나는 _사후 호출_입니다.
+일반적으로 UI 캔버스의 요소와 연결된 플라이아웃 또는 메뉴를 호출하는 두 가지 방법이 있는데, 하나는 _사전 호출_ 이고 다른 하나는 _사후 호출_ 입니다.
 
 사전 호출에서는 사용자가 명령이 연결되는 항목과 상호 작용할 때 명령이 자동으로 나타납니다. 예를 들어 사용자가 텍스트 상자의 텍스트를 선택할 때 텍스트 형식 지정 명령이 나타날 수 있습니다. 이 경우 명령 모음 플라이아웃이 포커스를 받지 않습니다. 대신, 사용자가 상호 작용하는 항목 근처에 관련 명령을 표시합니다. 사용자가 명령과 상호 작용하지 않는 경우 사라집니다.
 
@@ -143,7 +143,7 @@ private void Image_Tapped(object sender, TappedRoutedEventArgs e)
 
 상황에 맞는 명령을 사전에 표시할 경우 기본적으로 기본 명령만 표시해야 합니다(명령 모음 플라이아웃이 축소되어야 함). 가장 중요한 명령을 기본 명령 컬렉션에 배치하고, 이전에는 상황에 맞는 메뉴에 배치하던 추가 명령을 보조 명령 컬렉션에 배치합니다.
 
-명령을 사전에 표시하려면 일반적으로 명령 모음 플라이아웃을 표시하는 [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 또는 [Tapped](/uwp/api/windows.ui.xaml.uielement.tapped) 이벤트를 처리합니다. 플라이아웃이 포커스 없이 축소 모드에서 열리도록 플라이아웃의 [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode)를 **Transient** 또는 **TransientWithDismissOnPointerMoveAway**로 설정합니다.
+명령을 사전에 표시하려면 일반적으로 명령 모음 플라이아웃을 표시하는 [Click](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 또는 [Tapped](/uwp/api/windows.ui.xaml.uielement.tapped) 이벤트를 처리합니다. 플라이아웃이 포커스 없이 축소 모드에서 열리도록 플라이아웃의 [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode)를 **Transient** 또는 **TransientWithDismissOnPointerMoveAway** 로 설정합니다.
 
 Windows 10 Insider Preview부터 텍스트 컨트롤에는 **SelectionFlyout** 속성이 있습니다. 이 속성에 플라이아웃을 할당하면 텍스트를 선택할 때 플라이아웃이 자동으로 표시됩니다.
 
@@ -153,7 +153,7 @@ Windows 10 Insider Preview부터 텍스트 컨트롤에는 **SelectionFlyout** �
 
 상황에 맞는 메뉴에 명령을 표시하려면 일반적으로 UI 요소의 [ContextFlyout](/uwp/api/windows.ui.xaml.uielement.contextflyout) 속성에 플라이아웃을 할당합니다. 이 방식으로 요소를 사용하여 플라이아웃 열기가 처리되므로 개발자는 아무 것도 할 필요가 없습니다.
 
-플라이아웃을 표시를 직접 처리하는 경우(예: [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) 이벤트에서) 플라이아웃이 확장 모드에서 열리고 포커스를 받도록 플라이아웃의 [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode)를 **Standard**로 설정합니다.
+플라이아웃을 표시를 직접 처리하는 경우(예: [RightTapped](/uwp/api/windows.ui.xaml.uielement.righttapped) 이벤트에서) 플라이아웃이 확장 모드에서 열리고 포커스를 받도록 플라이아웃의 [ShowMode](/uwp/api/windows.ui.xaml.controls.primitives.flyoutbase.showmode)를 **Standard** 로 설정합니다.
 
 > [!TIP]
 > 플라이아웃을 배치하는 옵션과 플라이아웃 배치를 제어하는 방법에 대한 자세한 내용은 [플라이아웃](../controls-and-patterns/dialogs-and-flyouts/flyouts.md)을 참조하세요.
@@ -404,7 +404,7 @@ DropDownButton이 있는 CommandBarFlyout을 사용하여 표준 메뉴를 만�
 | 굵게 | 텍스트 컨트롤이 읽기 전용이 아닌 경우(RichEditBox만 해당) |
 | 기울임꼴 | 텍스트 컨트롤이 읽기 전용이 아닌 경우(RichEditBox만 해당) |
 | 밑줄 | 텍스트 컨트롤이 읽기 전용이 아닌 경우(RichEditBox만 해당) |
-| Proofing | IsSpellCheckEnabled가 **true**이고 철자가 잘못된 텍스트를 선택한 경우 |
+| Proofing | IsSpellCheckEnabled가 **true** 이고 철자가 잘못된 텍스트를 선택한 경우 |
 | 잘라내기 | 텍스트 컨트롤이 읽기 전용이 아니고 텍스트를 선택한 경우 |
 | 복사 | 텍스트를 선택한 경우 |
 | 붙여넣기 | 텍스트 컨트롤이 읽기 전용이 아니고 클립보드에 콘텐츠가 있는 경우 |
@@ -415,8 +415,8 @@ DropDownButton이 있는 CommandBarFlyout을 사용하여 표준 메뉴를 만�
 
 TextCommandBarFlyout은 사용자 지정할 수 없으며, 각 텍스트 컨트롤에 의해 자동으로 관리됩니다. 그러나 기본 TextCommandBarFlyout을 사용자 지정 명령으로 바꿀 수 있습니다.
 
-- 선택한 텍스트에 표시되는 기본 TextCommandBarFlyout을 바꾸려면 사용자 지정 CommandBarFlyout(또는 다른 플라이아웃 형식)을 만들어서 **SelectionFlyout** 속성에 할당하면 됩니다. SelectionFlyout을 **null**로 설정하면 선택 시 어떤 명령도 표시되지 않습니다.
-- 상황에 맞는 메뉴로 표시되는 기본 TextCommandBarFlyout을 바꾸려면 텍스트 컨트롤의 **ContextFlyout** 속성에 사용자 지정 CommandBarFlyout(또는 다른 플라이아웃 형식)을 할당합니다. ContextFlyout을 **null**로 설정하면 TextCommandBarFlyout 대신 이전 버전의 텍스트 컨트롤에 표시된 메뉴 플라이아웃이 표시됩니다.
+- 선택한 텍스트에 표시되는 기본 TextCommandBarFlyout을 바꾸려면 사용자 지정 CommandBarFlyout(또는 다른 플라이아웃 형식)을 만들어서 **SelectionFlyout** 속성에 할당하면 됩니다. SelectionFlyout을 **null** 로 설정하면 선택 시 어떤 명령도 표시되지 않습니다.
+- 상황에 맞는 메뉴로 표시되는 기본 TextCommandBarFlyout을 바꾸려면 텍스트 컨트롤의 **ContextFlyout** 속성에 사용자 지정 CommandBarFlyout(또는 다른 플라이아웃 형식)을 할당합니다. ContextFlyout을 **null** 로 설정하면 TextCommandBarFlyout 대신 이전 버전의 텍스트 컨트롤에 표시된 메뉴 플라이아웃이 표시됩니다.
 
 ## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 

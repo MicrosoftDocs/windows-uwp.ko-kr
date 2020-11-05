@@ -1,5 +1,5 @@
 ---
-Description: 교육 팁은 상황별 정보를 제공하는 풍부한 콘텐츠의 반영구적 플라이아웃입니다.
+description: 교육 팁은 상황별 정보를 제공하는 풍부한 콘텐츠의 반영구적 플라이아웃입니다.
 title: 교육 팁
 template: detail.hbs
 ms.date: 09/24/2020
@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: niallm
 ms.custom: 19H1
 ms.localizationpriority: medium
-ms.openlocfilehash: fbe23101861429f3aef9298f854a600521d20613
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 8d4322e5d5dcdfad768b9c87b555093e42becd7e
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750529"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033316"
 ---
 # <a name="teaching-tip"></a>교육 팁
 
@@ -171,10 +171,10 @@ PreferredPlacement가 "BottomLeft"로 설정된 대상 있는 교육 팁은 교�
 ![왼쪽 아래 모서리에 교육 팁이 표시되는 샘플 앱 팁 제목으로 "자동으로 저장"이 표시되고 부제로 "변경 내용을 자동으로 저장하므로 직접 저장할 필요가 없습니다."가 표시됩니다. 교육 팁의 오른쪽 위 모서리에서 닫기 단추가 있습니다.](../images/teaching-tip-non-targeted-preferred-placement.png)
 
 아래 다이어그램에서는 대상 있는 교육 팁에 대해 설정할 수 있는 13개 PreferredPlacement 모드 전체의 결과를 보여 줍니다.
-![각각이 다른 대상 지정 배치 모드를 보여 주는 13개 교육 팁을 포함하는 그림 각 교육 팁이 나타내는 모드가 레이블로 지정됩니다. 배치 모드의 첫 번째 단어는 교육 팁이 중앙에 표시되는 대상의 측면을 나타냅니다. 교육 팁의 꼬리는 항상 해당 대상 측면의 가운데에 위치하며 대상을 향합니다. 배치 모드에 두 번째 단어가 있으면 교육 팁의 본문은 가운데에 오지 않고, 대신 지정한 방향으로 이동합니다. 예를 들어, 배치 모드 "TopRight"는 교육 팁이 대상 위에 표시된 후 오른쪽으로 이동되어 꼬리가 대상 위쪽 가장자리의 가운데를 가리키게 합니다. 본문이 오른쪽으로 이동하므로 꼬리는 거의 교육 팁 본문의 맨 왼쪽 가장자리에 있으며 교육 팁은 대상의 오른쪽 가장자리를 넘어 확장됩니다. 배치 모드 "Center"에서 독특하게 교육 팁의 꼬리가 대상의 가운데를 가리키며, 교육 팁은 대상의 위쪽 절반에서 가운데에 표시됩니다.](../images/teaching-tip-targeted-preferred-placement-modes.png)
+![각각이 다른 대상 지정 배치 모드를 보여 주는 13개 교육 팁을 포함하는 그림 각 교육 팁이 나타내는 모드가 레이블로 지정됩니다.  배치 모드의 첫 번째 단어는 교육 팁이 중앙에 표시되는 대상의 측면을 나타냅니다. 교육 팁의 꼬리는 항상 해당 대상 측면의 가운데에 위치하며 대상을 향합니다. 배치 모드에 두 번째 단어가 있으면 교육 팁의 본문은 가운데에 오지 않고, 대신 지정한 방향으로 이동합니다. 예를 들어, 배치 모드 "TopRight"는 교육 팁이 대상 위에 표시된 후 오른쪽으로 이동되어 꼬리가 대상 위쪽 가장자리의 가운데를 가리키게 합니다. 본문이 오른쪽으로 이동하므로 꼬리는 거의 교육 팁 본문의 맨 왼쪽 가장자리에 있으며 교육 팁은 대상의 오른쪽 가장자리를 넘어 확장됩니다. 배치 모드 "Center"에서 독특하게 교육 팁의 꼬리가 대상의 가운데를 가리키며, 교육 팁은 대상의 위쪽 절반에서 가운데에 표시됩니다.](../images/teaching-tip-targeted-preferred-placement-modes.png)
 
 아래 다이어그램에서는 대상 없는 교육 팁에 대해 설정할 수 있는 13개 PreferredPlacement 모드 전체의 결과를 보여 줍니다.
-![각각이 다른 대상 비지정 배치 모드를 보여 주는 9개 교육 팁을 포함하는 그림 각 교육 팁이 나타내는 모드가 레이블로 지정됩니다. 배치 모드의 첫 번째 단어는 교육 팁이 중앙에 표시되는 xaml 루트의 측면을 나타냅니다. 배치 모드에 두 번째 단어가 있으면 교육 팁은 xaml 루트의 지정된 모서리 쪽으로 배치됩니다. 예를 들어, 배치 모드 "TopRight"는 교육 팁을 xaml 루트의 오른쪽 위 모서리에 표시합니다. 대상 없는 배치 모드의 경우 두 단어의 순서가 배치에 영향을 주지 않습니다. TopRight는 RightTop과 같습니다. 배치 모드 "Center"에서는 독특하게 교육 팁이 xaml 루트의 세로 및 가로 가운데에 표시됩니다.](../images/teaching-tip-non-targeted-preferred-placement-modes.png)
+![각각이 다른 대상 비지정 배치 모드를 보여 주는 9개 교육 팁을 포함하는 그림 각 교육 팁이 나타내는 모드가 레이블로 지정됩니다.  배치 모드의 첫 번째 단어는 교육 팁이 중앙에 표시되는 xaml 루트의 측면을 나타냅니다.  배치 모드에 두 번째 단어가 있으면 교육 팁은 xaml 루트의 지정된 모서리 쪽으로 배치됩니다. 예를 들어, 배치 모드 "TopRight"는 교육 팁을 xaml 루트의 오른쪽 위 모서리에 표시합니다. 대상 없는 배치 모드의 경우 두 단어의 순서가 배치에 영향을 주지 않습니다. TopRight는 RightTop과 같습니다.  배치 모드 "Center"에서는 독특하게 교육 팁이 xaml 루트의 세로 및 가로 가운데에 표시됩니다.](../images/teaching-tip-non-targeted-preferred-placement-modes.png)
 
 ### <a name="add-a-placement-margin"></a>배치 여백 추가
 

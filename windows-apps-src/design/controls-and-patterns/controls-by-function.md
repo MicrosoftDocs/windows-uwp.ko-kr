@@ -1,5 +1,5 @@
 ---
-Description: 앱에서 사용할 수 있는 몇 가지 컨트롤의 기능별 목록입니다.
+description: 앱에서 사용할 수 있는 몇 가지 컨트롤의 기능별 목록입니다.
 title: 기능별 컨트롤
 ms.assetid: 8DB4347B-91D6-4659-91F2-80ECF7BBB596
 label: Controls by function
@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 49a608f46c21cddfbd7fcb5e149c4b316bf9b175
-ms.sourcegitcommit: ce1a7efa01779721b4b618ae5605597152e424cb
+ms.openlocfilehash: 36397e64215bfe4b57aac32e9eccc94182495688
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92379377"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93033306"
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 

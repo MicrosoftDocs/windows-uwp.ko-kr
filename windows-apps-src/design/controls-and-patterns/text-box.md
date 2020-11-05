@@ -1,6 +1,6 @@
 ---
 ms.assetid: CC1BF51D-3DAC-4198-ADCB-1770B901C2FC
-Description: TextBox 컨트롤을 사용하면 사용자가 앱에 텍스트를 입력할 수 있습니다.
+description: TextBox 컨트롤을 사용하면 사용자가 앱에 텍스트를 입력할 수 있습니다.
 title: 텍스트 상자
 label: Text box
 template: detail.hbs
@@ -11,12 +11,12 @@ pm-contact: miguelrb
 design-contact: ksulliv
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 794bf6e99701dd73ee74b07c289fe9a2e5ca9744
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 542822b27f356c9471ec8a6c6f5bec0aac2144ce
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749780"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034756"
 ---
 # <a name="text-box"></a>텍스트 상자
 
@@ -38,7 +38,7 @@ TextBox에는 텍스트 입력을 간소화할 수 있는 다양한 기능이 �
    :::column-end:::
 :::row-end:::
 
-> **플랫폼 API**: [TextBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.TextBox), [Text 속성](/uwp/api/windows.ui.xaml.controls.textbox.text)
+> **플랫폼 API** : [TextBox 클래스](/uwp/api/Windows.UI.Xaml.Controls.TextBox), [Text 속성](/uwp/api/windows.ui.xaml.controls.textbox.text)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -121,9 +121,9 @@ SampleTextBox.Text = "Sample text retrieved";
 
 다음과 같은 경우에는 모두 지우기 단추가 표시되지 않습니다.
 
-- **IsReadOnly**가 **true**인 경우
-- **AcceptsReturn**이 **true**인 경우
-- **TextWrap**에 **NoWrap** 이외의 값이 있는 경우
+- **IsReadOnly** 가 **true** 인 경우
+- **AcceptsReturn** 이 **true** 인 경우
+- **TextWrap** 에 **NoWrap** 이외의 값이 있는 경우
 
 이 예제에서는 텍스트 상자의 현재 콘텐츠를 가져오고 설정하는 방법을 보여 줍니다.
 
@@ -140,7 +140,7 @@ SampleTextBox.Text = "Sample text retrieved";
 
 ### <a name="make-a-text-box-read-only"></a>입력란을 읽기 전용으로 만들기
 
-[IsReadOnly](/uwp/api/windows.ui.xaml.controls.textbox.isreadonly) 속성을 **true**로 설정하여 입력란을 읽기 전용으로 만들 수 있습니다. 일반적으로 앱의 조건에 따라 앱 코드에서 이 속성을 전환합니다. 항상 읽기 전용인 텍스트가 필요한 경우 TextBlock을 대신 사용하는 것이 좋습니다.
+[IsReadOnly](/uwp/api/windows.ui.xaml.controls.textbox.isreadonly) 속성을 **true** 로 설정하여 입력란을 읽기 전용으로 만들 수 있습니다. 일반적으로 앱의 조건에 따라 앱 코드에서 이 속성을 전환합니다. 항상 읽기 전용인 텍스트가 필요한 경우 TextBlock을 대신 사용하는 것이 좋습니다.
 
 IsReadOnly 속성을 true로 설정하여 TextBox를 읽기 전용으로 만들 수 있습니다. 예를 들어 사용자가 설명을 입력하는 TextBox를 특정 조건에서만 사용할 수 있게 할 수 있습니다. 조건이 충족될 때까지 TextBox를 읽기 전용으로 만들 수 있습니다. 텍스트를 표시만 해야 하는 경우 TextBlock 또는 RichTextBlock을 대신 사용하는 것이 좋습니다.
 
@@ -152,14 +152,14 @@ IsEnabled
 
 입력란에서 여러 줄에 텍스트를 표시할지 여부를 제어하는 데 사용할 수 있는 두 개의 속성이 있습니다. 일반적으로 여러 줄 입력란을 만들려면 두 속성을 모두 설정합니다.
 
-- 텍스트 상자에서 줄 바꿈 또는 리턴 문자를 허용하고 표시할 수 있게 하려면 [AcceptsReturn](/uwp/api/windows.ui.xaml.controls.textbox.acceptsreturn) 속성을 **true**로 설정합니다.
-- 텍스트 배치를 사용하려면 [TextWrapping](/uwp/api/windows.ui.xaml.controls.textbox.textwrapping) 속성을 **Wrap**으로 설정합니다. 이렇게 하면 줄 구분 기호에 관계없이 입력란의 가장자리에 도달하면 텍스트가 줄 바꿈됩니다.
+- 텍스트 상자에서 줄 바꿈 또는 리턴 문자를 허용하고 표시할 수 있게 하려면 [AcceptsReturn](/uwp/api/windows.ui.xaml.controls.textbox.acceptsreturn) 속성을 **true** 로 설정합니다.
+- 텍스트 배치를 사용하려면 [TextWrapping](/uwp/api/windows.ui.xaml.controls.textbox.textwrapping) 속성을 **Wrap** 으로 설정합니다. 이렇게 하면 줄 구분 기호에 관계없이 입력란의 가장자리에 도달하면 텍스트가 줄 바꿈됩니다.
 
 > **참고**&nbsp;&nbsp;TextBox와 RichEditBox는 해당 TextWrapping 속성에 대해 **WrapWholeWords** 값을 지원하지 않습니다. TextBox.TextWrapping 또는 RichEditBox.TextWrapping 값으로 WrapWholeWords를 사용하려고 하면 잘못된 인수 예외가 throw됩니다.
 
 여러 줄 텍스트 상자는 해당 [Height](/uwp/api/windows.ui.xaml.frameworkelement.height) 또는 [MaxHeight](/uwp/api/windows.ui.xaml.frameworkelement.maxheight) 속성이나 부모 컨테이너에서 제한되지 않을 경우 텍스트를 입력함에 따라 계속 세로로 증가합니다. 여러 줄 텍스트 상자가 표시 영역 이상 증가하지 않는지 테스트하고, 해당하는 경우 증가를 제한해야 합니다. 항상 여러 줄 입력란에 대해 적절한 높이를 지정하여 사용자가 입력함에 따라 높이가 증가하지 않도록 하는 것이 좋습니다.
 
-스크롤 휠 또는 터치를 사용한 스크롤은 필요에 따라 자동으로 사용됩니다. 그러나 세로 스크롤 막대는 기본적으로 표시되지 않습니다. 다음과 같이 포함된 ScrollViewer에서 [ScrollViewer.VerticalScrollBarVisibility](/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility)를 **Auto**로 설정하면 세로 스크롤 막대를 표시할 수 있습니다.
+스크롤 휠 또는 터치를 사용한 스크롤은 필요에 따라 자동으로 사용됩니다. 그러나 세로 스크롤 막대는 기본적으로 표시되지 않습니다. 다음과 같이 포함된 ScrollViewer에서 [ScrollViewer.VerticalScrollBarVisibility](/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility)를 **Auto** 로 설정하면 세로 스크롤 막대를 표시할 수 있습니다.
 
 ```xaml
 <TextBox AcceptsReturn="True" TextWrapping="Wrap"
@@ -271,7 +271,7 @@ private void TextBox1_SelectionChanged(object sender, RoutedEventArgs e)
 
 터치 키보드는 앱이 터치 스크린이 있는 디바이스에서 실행될 때 텍스트 입력에 사용할 수 있습니다. 터치 키보드는 사용자가 TextBox 또는 RichEditBox와 같이 편집 가능한 입력 필드를 탭할 때 호출됩니다. 사용자가 입력할 것으로 예상되는 데이터 종류와 일치하도록 텍스트 컨트롤의 입력 범위를 설정하여 사용자가 앱에서 데이터를 쉽고 빠르게 입력할 수 있도록 지원할 수 있습니다. 입력 범위는 시스템에서 해당 입력 형식에 맞는 특수한 터치 키보드를 제공할 수 있도록 컨트롤에서 예상되는 텍스트 입력 형식에 대한 힌트를 시스템에 제공합니다.
 
-예를 들어 텍스트 상자가 4자리 숫자의 PIN을 입력하는 목적으로만 사용될 경우 [InputScope](/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성을 **Number**로 설정합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다.
+예를 들어 텍스트 상자가 4자리 숫자의 PIN을 입력하는 목적으로만 사용될 경우 [InputScope](/uwp/api/windows.ui.xaml.controls.textbox.inputscope) 속성을 **Number** 로 설정합니다. 이렇게 하면 사용자가 PIN을 쉽게 입력할 수 있도록 시스템에서 숫자 키패드 레이아웃이 표시됩니다.
 
 > **중요**&nbsp;&nbsp;입력 범위에서는 입력 유효성 검사가 수행되지 않으며, 사용자가 하드웨어 키보드 또는 다른 입력 디바이스를 사용해서 입력할 수 있습니다. 따라서 필요에 따라 입력 코드에 대한 유효성을 검사해야 합니다.
 

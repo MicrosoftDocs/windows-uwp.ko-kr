@@ -1,5 +1,5 @@
 ---
-Description: 마스터/세부 정보 패턴은 현재 선택한 항목에 대한 마스터 목록과 세부 정보를 표시합니다. 이 패턴은 이메일 및 연락처 목록/주소록에 자주 사용됩니다.
+description: 마스터/세부 정보 패턴은 현재 선택한 항목에 대한 마스터 목록과 세부 정보를 표시합니다. 이 패턴은 이메일 및 연락처 목록/주소록에 자주 사용됩니다.
 title: 마스터 세부 정보
 ms.assetid: 45C9FE8B-ECA6-44BF-8DDE-7D12ED34A7F7
 label: Master/details
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 60cd7eaa9e5ef317641e105004f2456e82ee48ca
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 605d42417145b9f6ecc8f71a0191afe6049de9c5
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219986"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034526"
 ---
 # <a name="masterdetails-pattern"></a>마스터/세부 정보 패턴
 
@@ -21,7 +21,7 @@ ms.locfileid: "91219986"
 
 마스터/세부 정보 패턴에는 마스터 창(일반적으로 [목록 보기](lists.md)와 함께) 및 콘텐츠의 세부 정보 창이 있습니다. 마스터 목록의 항목을 선택하면 세부 정보 창이 업데이트됩니다. 이 패턴은 이메일 및 주소록에 자주 사용됩니다.
 
-> **중요 API**: [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView), [SplitView 클래스](/uwp/api/windows.ui.xaml.controls.splitview)
+> **중요 API** : [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView), [SplitView 클래스](/uwp/api/windows.ui.xaml.controls.splitview)
 
 ![마스터/세부 정보 패턴의 예](images/HIGSecOne_MasterDetail.png)
 
@@ -45,7 +45,7 @@ ms.locfileid: "91219986"
 | 320 epx-640 epx        | 누적           |
 | 641 epx 이상       | 함께 실행      |
 
- 
+ 
 ## <a name="stacked-style"></a>누적 스타일
 
 누적 스타일에서는 마스터 또는 세부 정보 창이 한 번에 하나만 표시됩니다.
