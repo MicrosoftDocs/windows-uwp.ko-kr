@@ -1,5 +1,5 @@
 ---
-description: 모두 함께 표시되는 여러 관련 데이터 항목의 표현인 컬렉션과 목록에 대해 알아봅니다. 
+description: 모두 함께 표시되는 여러 관련 데이터 항목의 표현인 컬렉션과 목록에 대해 알아봅니다.
 title: 컬렉션 및 목록
 ms.assetid: C73125E8-3768-46A5-B078-FDDF42AB1077
 label: Collections and Lists
@@ -12,18 +12,18 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 764d2d769a1455ff6a0815a6716866c055edf291
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 3fd6cfb7fb0ffd7102f32d7159aba2b4c1042b76
+ms.sourcegitcommit: da44cb95946440cd06ff36254d42ecefcdd87ce2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220026"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063025"
 ---
 # <a name="collections-and-lists"></a>컬렉션 및 목록
 
 컬렉션과 목록은 모두 함께 표시되는 여러 관련 데이터 항목의 표현을 나타냅니다. 컬렉션은 다양한 컬렉션 컨트롤(컬렉션 보기라고도 함)에서 여러 가지 방법으로 표현할 수 있습니다. 컬렉션 컨트롤은 연락처 목록, 날짜 목록, 이미지 컬렉션 등과 같은 컬렉션 기반 콘텐츠와의 상호 작용을 표시하고 사용하도록 설정합니다.
 
-> **중요 API**: [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](/uwp/api/Windows.UI.Xaml.Controls.GridView), [FlipView 클래스](/uwp/api/windows.ui.xaml.controls.flipview), [TreeView 클래스](/uwp/api/windows.ui.xaml.controls.treeview), [ItemsRepeater 클래스](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2)
+> **중요 API** : [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](/uwp/api/Windows.UI.Xaml.Controls.GridView), [FlipView 클래스](/uwp/api/windows.ui.xaml.controls.flipview), [TreeView 클래스](/uwp/api/windows.ui.xaml.controls.treeview), [ItemsRepeater 클래스](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)
 
 이 문서에서 설명하는 컨트롤은 다음과 같습니다.
 
@@ -74,7 +74,9 @@ ms.locfileid: "91220026"
     - 메시지 또는 메시지 로그의 목록을 만듭니다.
     - 연락처 목록을 만듭니다.
     - [마스터/세부 정보 패턴](master-details.md)의 마스터 창을 만듭니다. 마스터/세부 정보 패턴은 메일 앱에서 흔히 사용되는 패턴으로, 하나의 창(마스터)에는 선택 가능한 항목이 있으며 다른 창(세부 정보)에는 선택한 항목의 자세히 보기가 있습니다.
-    
+
+> [!NOTE]
+> ScrollViewer 또는 ListView와 같이 스크롤할 수 있는 보기에서 [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement)에 대한 포인터 이벤트를 처리해야 하는 경우에는 [UIElement.CancelDirectmanipulation()](/uwp/api/windows.ui.xaml.uielement.canceldirectmanipulations)을 호출하여 보기의 요소에 대한 조작 이벤트 지원을 명시적으로 해제해야 합니다. 보기에서 조작 이벤트를 다시 사용하도록 설정하려면 [UIElement.TryStartDirectManipulation()](/uwp/api/windows.ui.xaml.uielement.trystartdirectmanipulation)을 호출합니다.
 
 ### <a name="examples"></a>예
 
@@ -140,6 +142,9 @@ ms.locfileid: "91220026"
 - 다음과 같은 일반적인 사용 사례를 포함하여 다양한 사용 사례를 수용합니다.
     - 상점형 사용자 인터페이스(예: 앱, 노래, 제품 검색)
     - 대화형 사진 라이브러리
+
+> [!NOTE]
+> ScrollViewer 또는 ListView와 같이 스크롤할 수 있는 보기에서 [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement)에 대한 포인터 이벤트를 처리해야 하는 경우에는 [UIElement.CancelDirectmanipulation()](/uwp/api/windows.ui.xaml.uielement.canceldirectmanipulations)을 호출하여 보기의 요소에 대한 조작 이벤트 지원을 명시적으로 해제해야 합니다. 보기에서 조작 이벤트를 다시 사용하도록 설정하려면 [UIElement.TryStartDirectManipulation()](/uwp/api/windows.ui.xaml.uielement.trystartdirectmanipulation)을 호출합니다.
 
 ### <a name="examples"></a>예
 
@@ -277,7 +282,7 @@ ms.locfileid: "91220026"
 
 ### <a name="examples"></a>예
 
-동일한 데이터 원본(숫자 컬렉션)에 바인딩된 모든 ItemsRepeater 컨트롤의 세 가지 예는 다음과 같습니다. 숫자 컬렉션은 세 가지 방법으로 표현되며, 아래의 각 ItemRepeater는 서로 다른 사용자 지정 [Layout](/uwp/api/microsoft.ui.xaml.controls.layout)과 [ItemTemplate](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate?view=winui-2.2)을 사용합니다.
+동일한 데이터 원본(숫자 컬렉션)에 바인딩된 모든 ItemsRepeater 컨트롤의 세 가지 예는 다음과 같습니다. 숫자 컬렉션은 세 가지 방법으로 표현되며, 아래의 각 ItemRepeater는 서로 다른 사용자 지정 [Layout](/uwp/api/microsoft.ui.xaml.controls.layout)과 [ItemTemplate](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater.itemtemplate)을 사용합니다.
 
 ![가로 막대를 사용하는 ItemsRepeater](images/itemsrepeater-1.png)
 ![세로 막대를 사용하는 ItemsRepeater](images/itemsrepeater-2.png)

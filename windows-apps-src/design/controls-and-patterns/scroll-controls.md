@@ -1,5 +1,5 @@
 ---
-Description: 이동과 스크롤을 통해 사용자는 화면 경계를 벗어나 확장된 콘텐츠에 액세스할 수 있습니다.
+description: 이동과 스크롤을 통해 사용자는 화면 경계를 벗어나 확장된 콘텐츠에 액세스할 수 있습니다.
 title: 스크롤 뷰어 컨트롤
 ms.assetid: 1BFF0E81-BF9C-43F7-95F6-EFC6BDD5EC31
 label: Scrollbars
@@ -12,12 +12,12 @@ design-contact: ksulliv
 dev-contact: regisb
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f4fb37250817087bf7b8a41144bf9e4841a9048
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 60a8e8f204591e455e2ccf52b09684a878b67452
+ms.sourcegitcommit: da44cb95946440cd06ff36254d42ecefcdd87ce2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174467"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93063035"
 ---
 # <a name="scroll-viewer-controls"></a>스크롤 뷰어 컨트롤
 
@@ -25,7 +25,7 @@ ms.locfileid: "89174467"
 
 한 영역에 모두 표시할 수 없을 정도로 UI 콘텐츠가 너무 많은 경우 스크롤 뷰어 컨트롤을 사용합니다.
 
-> **중요 API**: [ScrollViewer 클래스](/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer), [ScrollBar 클래스](/uwp/api/windows.ui.xaml.controls.primitives.scrollbar)
+> **중요 API** : [ScrollViewer 클래스](/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer), [ScrollBar 클래스](/uwp/api/windows.ui.xaml.controls.primitives.scrollbar)
 
 스크롤 뷰어를 사용하면 콘텐츠가 뷰포트(표시 영역)의 경계를 넘어 확장될 수 있습니다. 사용자는 마우스 또는 펜 커서를 사용하여 스크롤 뷰어의 스크롤 막대를 조작하거나 터치, 마우스 휠, 키보드 또는 게임 패드를 통해 스크롤 뷰어 표면을 조작하여 이 콘텐츠에 도달합니다. 이 이미지는 스크롤 뷰어 컨트롤의 몇 가지 예를 보여 줍니다.
 
@@ -144,6 +144,9 @@ ScrollViewer는 다음과 같은 XAML 연결 속성을 정의합니다.
 - 사용자가 긴 텍스트 줄을 스크롤할 경우 세로로만 스크롤하도록 스크롤 뷰어를 구성합니다.
 - 스크롤 뷰어를 사용하여 개체를 하나만 포함합니다. 하나의 개체는 레이아웃 패널이 될 수 있고, 여기에는 고유한 개체가 제한 없이 포함됩니다.
 - 피벗의 스크롤 논리와 충돌하는 것을 방지하려면 스크롤 뷰어 내부에 [Pivot](pivot.md) 컨트롤을 배치하지 않습니다.
+- ScrollViewer 또는 ListView와 같이 스크롤할 수 있는 보기에서 [UIElement](/uwp/api/Windows.UI.Xaml.UIElement)에 대한 포인터 이벤트를 처리해야 하는 경우에는 [UIElement.CancelDirectmanipulation()](/uwp/api/windows.ui.xaml.uielement.canceldirectmanipulations)을 호출하여 보기의 요소에 대한 조작 이벤트 지원을 명시적으로 해제해야 합니다. 보기에서 조작 이벤트를 다시 사용하도록 설정하려면 [UIElement.TryStartDirectManipulation()](/uwp/api/windows.ui.xaml.uielement.trystartdirectmanipulation)을 호출합니다.
+
+
 
 ## <a name="get-the-sample-code"></a>샘플 코드 가져오기
 

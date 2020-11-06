@@ -1,5 +1,5 @@
 ---
-Description: 새 데스크톱 앱을 만들려는 경우 가장 먼저 결정할 사항은 Win32 및 COM API 또는 .NET을 사용할지 여부를 결정하는 것입니다.
+description: 새 데스크톱 앱을 만들려는 경우 가장 먼저 결정할 사항은 Win32 및 COM API 또는 .NET을 사용할지 여부를 결정하는 것입니다.
 ms.assetid: 82705644-F1F0-40F3-99B1-7A97BFB32831
 title: 앱 플랫폼 선택
 ms.topic: article
@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, 데스크톱 개발
-ms.openlocfilehash: 0aa439010138af80f91c4e02776163577658d6cc
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 46cf8a8e9a57384b85b3156b87697f898ff08ee8
+ms.sourcegitcommit: 37f570c7425a3fa953a0c375c19381bf9cf2b6a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216736"
+ms.lasthandoff: 11/02/2020
+ms.locfileid: "93191904"
 ---
 # <a name="choose-your-app-platform"></a>앱 플랫폼 선택
 
@@ -133,4 +133,4 @@ Xamarin을 사용하여 iOS 및 Android에서도 실행할 수 있는 Windows 10
 
 ### <a name="uno-platform"></a>Uno Platform
 
-Uno Platform은 Windows UWP 기반 코드(C# 및 XAML)를 iOS, Android 및 WebAssembly에서 실행하는 데 사용됩니다. [Windows 10 2004(19041)](/windows/uwp/whats-new/windows-10-build-19041)의 UWP에 대한 전체 API 정의와 UWP API의 일부분에 대한 구현(예: [Windows.UI.Xaml](/uwp/api/windows.ui.xaml.documents?view=winrt-19041))을 제공하여 UWP 애플리케이션을 이러한 플랫폼에서 실행할 수 있도록 합니다. 자세한 내용은 [Uno Platform 문서](https://platform.uno/docs/articles/intro.html)를 참조하세요.
+Uno Platform은 Windows UWP 기반 코드(C# 및 XAML)를 iOS, Android, macOS, Linux 및 WebAssembly에서 실행하는 데 사용됩니다. [Windows 10 2004(19041)](/windows/uwp/whats-new/windows-10-build-19041)의 UWP에 대한 전체 API 정의와 UWP API의 일부분에 대한 구현(예: [Windows.UI.Xaml](/uwp/api/windows.ui.xaml.documents?view=winrt-19041))을 제공하여 UWP 애플리케이션을 이러한 플랫폼에서 실행할 수 있도록 합니다. 자세한 내용은 [Uno Platform 문서](https://platform.uno/docs/articles/intro.html)를 참조하세요.

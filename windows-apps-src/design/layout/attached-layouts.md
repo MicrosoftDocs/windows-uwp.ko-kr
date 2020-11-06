@@ -1,5 +1,5 @@
 ---
-Description: ItemsRepeater 컨트롤과 같은 컨테이너에서 사용할 연결된 레이아웃을 정의할 수 있습니다.
+description: ItemsRepeater 컨트롤과 같은 컨테이너에서 사용할 연결된 레이아웃을 정의할 수 있습니다.
 title: AttachedLayout
 label: AttachedLayout
 template: detail.hbs
@@ -7,12 +7,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 5be16e22a30f0b366ad55f323a0f3f2aa2b7b837
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 62ecc21d3ed9835ae7360d0c0dfdfa0b09cbdced
+ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220306"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93034866"
 ---
 # <a name="attached-layouts"></a>연결된 레이아웃
 
@@ -24,7 +24,7 @@ ms.locfileid: "91220306"
 | - |
 | 이 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](/uwp/toolkits/winui/)를 참조하세요. |
 
-> **중요 API**:
+> **중요 API** :
 
 > * [ScrollViewer](/uwp/api/windows.ui.xaml.controls.scrollviewer)
 > * [ItemsRepeater](../controls-and-patterns/items-repeater.md)
@@ -40,9 +40,9 @@ ms.locfileid: "91220306"
 
 레이아웃을 수행하려면 모든 요소에 대해 다음 두 가지 질문에 답변해야 합니다.
 
-1. 이 요소의 ***크기***는 얼마나 되나요?
+1. 이 요소의 * **크기** 는 얼마나 되나요?
 
-2. 이 요소는 어느 ***위치***에 배치되나요?
+2. 이 요소는 어느 _*_위치_*_ 에 배치되나요?
 
 이러한 질문의 답변이 될 수 있는 XAML의 레이아웃 시스템은 [사용자 지정 패널](./custom-panels-overview.md)을 다루면서 간략히 설명됩니다.
 
@@ -58,7 +58,7 @@ ms.locfileid: "91220306"
 [ItemsRepeater](../controls-and-patterns/items-repeater.md)도 패널처럼 동작하지만, 패널과 달리 프로그래밍 방식으로 UIElement 자식을 추가 또는 제거할 수 있도록 하는 Children 속성을 노출하지 않습니다.  대신, 자식 항목의 수명은 프레임워크에 의해 자동으로 관리되어 데이터 항목의 컬렉션에 해당합니다.  패널에서 파생되지 않지만 패널처럼 동작하고 프레임워크에서 처리됩니다.
 
 > [!NOTE]
-> [LayoutPanel](/uwp/api/microsoft.ui.xaml.controls.layoutpanel)은 패널에서 파생된 컨테이너로, 연결된 [Layout](/uwp/api/microsoft.ui.xaml.controls.layoutpanel.layout) 개체에 논리를 위임합니다.  LayoutPanel는 *미리 보기*로 제공되며 현재는 WinUI 패키지의 *시험판*에서만 사용할 수 있습니다.
+> [LayoutPanel](/uwp/api/microsoft.ui.xaml.controls.layoutpanel)은 패널에서 파생된 컨테이너로, 연결된 [Layout](/uwp/api/microsoft.ui.xaml.controls.layoutpanel.layout) 개체에 논리를 위임합니다.  LayoutPanel은 미리 보기*로 제공되며 현재는 WinUI 패키지의 *시험판* 에서만 사용할 수 있습니다.
 
 #### <a name="containers"></a>컨테이너
 
@@ -77,7 +77,7 @@ ms.locfileid: "91220306"
 </LayoutPanel>
 ```
 
-레이아웃 프로세스 중에 컨테이너는 연결된 *UniformGridLayout*을 사용하여 해당 자식을 측정하고 정렬합니다.
+레이아웃 프로세스 중에 컨테이너는 연결된 *UniformGridLayout* 을 사용하여 해당 자식을 측정하고 정렬합니다.
 
 #### <a name="per-container-state"></a>컨테이너 단위 상태
 
@@ -94,7 +94,7 @@ ms.locfileid: "91220306"
 <!-- ... --->
 ```
 
-이러한 상황에서 *ExampleLayout*은 레이아웃 계산에서 사용하는 상태와 한 패널의 요소 레이아웃이 다른 패널에 영향을 미치지 않도록 하기 위해 해당 상태를 저장할 위치를 신중하게 고려해야 합니다.  해당 MeasureOverride 및 ArrangeOverride 논리가 해당 정적 속성의 값에 따라 달라지는 사용자 지정 패널과 유사합니다.
+이러한 상황에서 *ExampleLayout* 은 레이아웃 계산에서 사용하는 상태와 한 패널의 요소 레이아웃이 다른 패널에 영향을 미치지 않도록 하기 위해 해당 상태를 저장할 위치를 신중하게 고려해야 합니다.  해당 MeasureOverride 및 ArrangeOverride 논리가 해당 정적 속성의 값에 따라 달라지는 사용자 지정 패널과 유사합니다.
 
 #### <a name="layoutcontext"></a>LayoutContext
 
@@ -114,9 +114,9 @@ ms.locfileid: "91220306"
 
 ### <a name="ui-virtualization"></a>UI 가상화
 
-UI 가상화는 _필요할 때까지_ UI 개체의 생성을 지연시키는 것을 의미합니다.  성능 최적화를 나타냅니다.  스크롤할 수 없는 시나리오의 경우 앱과 관련된 여러 가지 요인을 기준으로_필요할 때_를 결정합니다.  이러한 경우 앱은 [x:Load](../../xaml-platform/x-load-attribute.md)를 사용하는 것이 좋습니다. 레이아웃에서 특별한 처리는 필요하지 않습니다.
+UI 가상화는 _필요할 때까지_ UI 개체의 생성을 지연시키는 것을 의미합니다.  성능 최적화를 나타냅니다.  스크롤할 수 없는 시나리오의 경우 앱과 관련된 여러 가지 요인을 기준으로 _필요할 때_ 를 결정합니다.  이러한 경우 앱은 [x:Load](../../xaml-platform/x-load-attribute.md)를 사용하는 것이 좋습니다. 레이아웃에서 특별한 처리는 필요하지 않습니다.
 
-목록과 같은 스크롤 기반 시나리오에서는 _필요할 때_를 결정할 때 레이아웃 프로세스 중 배치된 위치가 많은 영향을 미치며, 특별한 고려 사항도 적용됩니다.  이 문서에서는 이 시나리오를 중점적으로 다룹니다.
+목록과 같은 스크롤 기반 시나리오에서는 _필요할 때_ 를 결정할 때 레이아웃 프로세스 중 배치된 위치가 많은 영향을 미치며, 특별한 고려 사항도 적용됩니다.  이 문서에서는 이 시나리오를 중점적으로 다룹니다.
 
 > [!NOTE]
 > 이 문서에서는 다루지 않았지만 스크롤 시나리오에서 UI 가상화를 사용하도록 설정하는 것과 동일한 기능을 비스크롤 시나리오에도 적용할 수 있습니다.  예를 들어, 표시되는 명령의 수명을 관리하고, 표시되는 영역과 오버플로 메뉴 간에 요소를 재활용/이동하여 사용 가능한 공간 변화에 응답하는 데이터 기반 도구 모음 컨트롤이 있습니다.
@@ -149,10 +149,10 @@ UI 가상화는 _필요할 때까지_ UI 개체의 생성을 지연시키는 것
 
 1. 기본 형식 [NonVirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout)(Panel 대신)에서 파생됩니다.
 2. *(선택 사항)* 변경될 때 레이아웃을 무효화하는 종속성 속성을 정의합니다.
-3. _(**신규**/선택 사항)_ [InitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.initializeforcontextcore)의 일부로 레이아웃에 필요한 모든 상태 개체를 초기화합니다. 컨텍스트와 함께 제공되는 [LayoutState](/uwp/api/microsoft.ui.xaml.controls.layoutcontext.layoutstate)를 사용하여 호스트 컨테이너와 함께 스태시합니다.
+3. _( **신규** /선택 사항)_ [InitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.initializeforcontextcore)의 일부로 레이아웃에 필요한 모든 상태 개체를 초기화합니다. 컨텍스트와 함께 제공되는 [LayoutState](/uwp/api/microsoft.ui.xaml.controls.layoutcontext.layoutstate)를 사용하여 호스트 컨테이너와 함께 스태시합니다.
 4. [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout.measureoverride)를 재정의하고 모든 자식 항목에 대해 [Measure](/uwp/api/windows.ui.xaml.uielement.measure) 메서드를 호출합니다.
 5. [ArrangeOverride](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout.arrangeoverride)를 재정의하고 모든 자식 항목에 대해 [Arrange](/uwp/api/windows.ui.xaml.uielement.arrange) 메서드를 호출합니다.
-6. *(**신규**/선택 사항)* 저장된 모든 상태를 [UninitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.uninitializeforcontextcore)의 일부로 정리합니다.
+6. *( **신규** /선택 사항)* 저장된 모든 상태를 [UninitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.uninitializeforcontextcore)의 일부로 정리합니다.
 
 ### <a name="example-a-simple-stack-layout-varying-sized-items"></a>예제: 간단한 스택 레이아웃(다양한 크기의 항목)
 
@@ -222,7 +222,7 @@ public class MyStackLayout : NonVirtualizingLayout
 > [!TIP]
 > [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout)에서 반환되는 값은 가상화된 콘텐츠의 크기로 사용됩니다.
 
-가상화 레이아웃을 제작할 때 고려할 두 가지 일반적인 방법이 있습니다.  어떤 방법을 선택할지는 "요소의 크기를 결정하는 방법"에 따라 크게 좌우됩니다.  데이터 세트의 항목 인덱스를 아는 것만으로 충분하거나, 데이터 자체가 최종 크기를 나타내는 경우 **데이터 종속**으로 간주할 수 있습니다.  이 경우 좀 더 간단하게 만들 수 있습니다.  그러나 항목 크기를 결정하는 유일한 방법이 UI를 만들고 측정하는 것이라면 **콘텐츠 종속**이라고 말할 수 있습니다.  이러한 방법은 좀 더 복잡합니다.
+가상화 레이아웃을 제작할 때 고려할 두 가지 일반적인 방법이 있습니다.  어떤 방법을 선택할지는 "요소의 크기를 결정하는 방법"에 따라 크게 좌우됩니다.  데이터 세트의 항목 인덱스를 아는 것만으로 충분하거나, 데이터 자체가 최종 크기를 나타내는 경우 **데이터 종속** 으로 간주할 수 있습니다.  이 경우 좀 더 간단하게 만들 수 있습니다.  그러나 항목 크기를 결정하는 유일한 방법이 UI를 만들고 측정하는 것이라면 **콘텐츠 종속** 이라고 말할 수 있습니다.  이러한 방법은 좀 더 복잡합니다.
 
 ### <a name="the-layout-process"></a>레이아웃 프로세스
 
@@ -267,12 +267,12 @@ Windows 상의 스크롤은 UI 스레드에 대해 비동기적으로 수행됩�
 
 VirtualizingLayoutContext는 콘텐츠 종속 레이아웃을 만드는 레이아웃 작성자를 위해 디자인된 두 가지 추가 속성을 제공합니다. 이 속성에 대해서는 나중에 자세히 설명합니다.
 
-1. 레이아웃에 선택적 _input_을 제공하는 [RecommendedAnchorIndex](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recommendedanchorindex)입니다.
-2. 레이아웃의 선택적인 _output_인 [LayoutOrigin](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.layoutorigin)입니다.
+1. 레이아웃에 선택적 _input_ 을 제공하는 [RecommendedAnchorIndex](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.recommendedanchorindex)입니다.
+2. 레이아웃의 선택적인 _output_ 인 [LayoutOrigin](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayoutcontext.layoutorigin)입니다.
 
 ## <a name="data-dependent-virtualizing-layouts"></a>데이터 종속 가상화 레이아웃
 
-표시할 콘텐츠를 측정할 필요가 없이, 모든 항목의 크기를 알고 있으면 가상화 레이아웃을 사용하는 것이 더 쉽습니다.  이 문서에서는 일반적으로 데이터 검사와 관련이 있으므로 이 범주의 가상화 레이아웃을 간단히 **데이터 레이아웃**으로 나타냅니다.  데이터를 기준으로 하는 앱은 데이터의 일부가 이전에 디자인에 따라 결정되었으므로 알려진 크기의 시각적 표현을 선택할 수 있습니다.
+표시할 콘텐츠를 측정할 필요가 없이, 모든 항목의 크기를 알고 있으면 가상화 레이아웃을 사용하는 것이 더 쉽습니다.  이 문서에서는 일반적으로 데이터 검사와 관련이 있으므로 이 범주의 가상화 레이아웃을 간단히 **데이터 레이아웃** 으로 나타냅니다.  데이터를 기준으로 하는 앱은 데이터의 일부가 이전에 디자인에 따라 결정되었으므로 알려진 크기의 시각적 표현을 선택할 수 있습니다.
 
 일반적인 방법은 레이아웃에서 다음을 수행하는 것입니다.
 
@@ -284,7 +284,7 @@ VirtualizingLayoutContext는 콘텐츠 종속 레이아웃을 만드는 레이�
 3. [ArrangeOverride](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.arrangeoverride)의 일부로, 구현된 각 UIElement를 미리 계산된 위치로 [정렬](/uwp/api/windows.ui.xaml.uielement.arrange)합니다.
 
 > [!NOTE]
-> 데이터 레이아웃 방법은 _데이터 가상화_와 호환되지 않는 경우가 많습니다.  특히 메모리에 로드되는 유일한 데이터는 사용자에게 표시되는 콘텐츠를 채우는 데 필요한 데이터입니다.  데이터 가상화는 해당 데이터가 상주하는 위치로 스크롤할 때의 데이터에 대한 지연 또는 증분 로드를 나타내지 않습니다.  대신, 뷰 밖으로 스크롤할 때 항목이 메모리에서 해제되는 경우를 나타냅니다.  데이터 레이아웃이 데이터 레이아웃의 일부로 모든 데이터 항목을 검사하도록 하면 데이터 가상화가 예상대로 작동하지 않게 됩니다.  예외는 모든 항목의 크기가 동일하다고 가정하는 UniformGridLayout과 같은 레이아웃입니다.
+> 데이터 레이아웃 방법은 _데이터 가상화_ 와 호환되지 않는 경우가 많습니다.  특히 메모리에 로드되는 유일한 데이터는 사용자에게 표시되는 콘텐츠를 채우는 데 필요한 데이터입니다.  데이터 가상화는 해당 데이터가 상주하는 위치로 스크롤할 때의 데이터에 대한 지연 또는 증분 로드를 나타내지 않습니다.  대신, 뷰 밖으로 스크롤할 때 항목이 메모리에서 해제되는 경우를 나타냅니다.  데이터 레이아웃이 데이터 레이아웃의 일부로 모든 데이터 항목을 검사하도록 하면 데이터 가상화가 예상대로 작동하지 않게 됩니다.  예외는 모든 항목의 크기가 동일하다고 가정하는 UniformGridLayout과 같은 레이아웃입니다.
 
 > [!TIP]
 > 다양한 상황에서 다른 사용자가 사용할 수 있는 컨트롤 라이브러리에 대해 사용자 지정 컨트롤을 만드는 경우 데이터 레이아웃이 적절하지 않을 수 있습니다.
@@ -295,7 +295,7 @@ Xbox 작업 피드용 UI는 각 줄에 넓은 타일과 2개의 좁은 타일이
 
 ![Xbox 작업 피드](images/xaml-attached-layout-activityfeedscreenshot.png)
 
-아래 코드는 **데이터 레이아웃**에 대해 수행할 수 있는 일반적인 방법을 설명하는 작업 피드에 대한 사용자 지정 가상화 UI를 살펴봅니다.
+아래 코드는 **데이터 레이아웃** 에 대해 수행할 수 있는 일반적인 방법을 설명하는 작업 피드에 대한 사용자 지정 가상화 UI를 살펴봅니다.
 
 <table>
 <td>
@@ -311,13 +311,13 @@ Xbox 작업 피드용 UI는 각 줄에 넓은 타일과 2개의 좁은 타일이
 #### <a name="implementation"></a>구현
 
 ```csharp
-/// <summary>
-///  This is a custom layout that displays elements in two different sizes
-///  wide (w) and narrow (n). There are two types of rows 
-///  odd rows - narrow narrow wide
-///  even rows - wide narrow narrow
-///  This pattern repeats.
-/// </summary>
+/// <summary>
+///  This is a custom layout that displays elements in two different sizes
+///  wide (w) and narrow (n). There are two types of rows 
+///  odd rows - narrow narrow wide
+///  even rows - wide narrow narrow
+///  This pattern repeats.
+/// </summary>
 
 public class ActivityFeedLayout : VirtualizingLayout // STEP #1 Inherit from base attached layout
 {
@@ -662,7 +662,7 @@ internal class ActivityFeedLayoutState
 
 ## <a name="content-dependent-virtualizing-layouts"></a>콘텐츠 종속 가상화 레이아웃
 
-정확한 크기를 알기 위해 항목에 대한 UI 콘텐츠를 먼저 측정해야 하는 경우 **콘텐츠 종속 레이아웃**입니다.  레이아웃에 따라 항목 크기가 조정되지 않고, 각 항목이 자체적으로 크기를 조정해야 하는 레이아웃으로도 간주할 수 있습니다. 이 범주에 포함되는 가상화 레이아웃이 여기에 더 가깝습니다.
+정확한 크기를 알기 위해 항목에 대한 UI 콘텐츠를 먼저 측정해야 하는 경우 **콘텐츠 종속 레이아웃** 입니다.  레이아웃에 따라 항목 크기가 조정되지 않고, 각 항목이 자체적으로 크기를 조정해야 하는 레이아웃으로도 간주할 수 있습니다. 이 범주에 포함되는 가상화 레이아웃이 여기에 더 가깝습니다.
 
 > [!NOTE]
 > 콘텐츠 종속 레이아웃은 데이터 가상화를 중단하지 않습니다.

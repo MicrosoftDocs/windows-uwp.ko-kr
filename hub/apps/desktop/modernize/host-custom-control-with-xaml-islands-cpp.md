@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 3f12c3d16cabcbe834ca9bb55a437e3f932bbf78
-ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
+ms.openlocfilehash: 99b0c362613cd1da2050b5f96b9963ca922f75d2
+ms.sourcegitcommit: caf4dba6bdfc3c6d9685d10aa9924b170b00bed8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933054"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93049524"
 ---
 # <a name="host-a-custom-winrt-xaml-control-in-a-c-win32-app"></a>C++ Win32 앱에서 사용자 지정 WinRT XAML 컨트롤 호스팅
 
@@ -33,13 +33,13 @@ ms.locfileid: "91933054"
 
 ## <a name="create-a-desktop-application-project"></a>데스크톱 애플리케이션 프로젝트 만들기
 
-1. Visual Studio에서 **MyDesktopWin32App**이라는 새 **Windows 데스크톱 애플리케이션** 프로젝트를 만듭니다. 이 프로젝트 템플릿은 **C++** , **Windows**및 **데스크톱** 프로젝트 필터에서 사용할 수 있습니다.
+1. Visual Studio에서 **MyDesktopWin32App** 이라는 새 **Windows 데스크톱 애플리케이션** 프로젝트를 만듭니다. 이 프로젝트 템플릿은 **C++** , **Windows** 및 **데스크톱** 프로젝트 필터에서 사용할 수 있습니다.
 
-2. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고, **솔루션 대상 변경**을 클릭하고, **10.0.18362.0** 이상의 SDK 릴리스를 선택한 후 **확인**을 클릭합니다.
+2. **솔루션 탐색기** 에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고, **솔루션 대상 변경** 을 클릭하고, **10.0.18362.0** 이상의 SDK 릴리스를 선택한 후 **확인** 을 클릭합니다.
 
 3. [Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) NuGet 패키지를 설치하여 프로젝트에서 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis)에 대한 지원을 사용하도록 설정합니다.
 
-    1. **솔루션 탐색기**에서 **MyDesktopWin32App** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
+    1. **솔루션 탐색기** 에서 **MyDesktopWin32App** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리** 를 선택합니다.
     2. **찾아보기** 탭을 선택하고 [Microsoft.Windows.CppWinRT](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/) 패키지를 검색한 후 이 패키지의 최신 버전을 설치합니다.
 
 4. **NuGet 패키지 관리** 창에서 다음과 같이 추가 NuGet 패키지를 설치합니다.
@@ -48,36 +48,42 @@ ms.locfileid: "91933054"
     * [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication)(안정적인 최신 버전). 이 패키지는 이 연습 뒷부분에서 사용할 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스를 정의합니다.
     * [Microsoft.VCRTForwarders.140](https://www.nuget.org/packages/Microsoft.VCRTForwarders.140).
 
-5. 솔루션을 빌드하고 성공적으로 빌드되는지 확인합니다.
+5. 다음과 같이 Windows 런타임 메타데이터에 대한 참조를 추가합니다.
+   1. **솔루션 탐색기** 에서 프로젝트 **참조** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가** 를 선택합니다.
+   2. 페이지 맨 아래에서 **찾아보기** 단추를 클릭하고 SDK 설치 경로의 UnionMetadata 폴더로 이동합니다. 기본적으로 SDK는 `C:\Program Files (x86)\Windows Kits\10\UnionMetadata`에 설치됩니다. 
+   3. 그런 다음, 대상으로 지정하려는 Windows 버전의 이름을 딴 폴더를 선택하고(예: 10.0.18362.0), 해당 폴더 내에서 `Windows.winmd` 파일을 선택합니다.
+   4. **확인** 을 클릭하여 **참조 추가** 대화 상자를 닫습니다.
+
+6. 솔루션을 빌드하고 성공적으로 빌드되는지 확인합니다.
 
 ## <a name="create-a-uwp-app-project"></a>UWP 앱 프로젝트 만들기
 
 그런 다음, 솔루션에 **UWP(C++/WinRT)** 앱 프로젝트를 추가하고 이 프로젝트의 구성을 변경합니다. 이 연습 뒷부분에서는 이 프로젝트에 코드를 추가하여 사용자 지정 UWP XAML 컨트롤을 구현하고 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스의 인스턴스를 정의합니다. 
 
-1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 프로젝트**를 선택합니다.
+1. **솔루션 탐색기** 에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 프로젝트** 를 선택합니다.
 
-2. 솔루션에 **비어 있는 앱(C++/WinRT)** 프로젝트를 추가합니다. 프로젝트의 이름을 **MyUWPApp**으로 지정하고 대상 버전 및 최소 버전이 둘 다 **Windows 10, 버전 1903** 이상으로 설정되어 있는지 확인합니다.
+2. 솔루션에 **비어 있는 앱(C++/WinRT)** 프로젝트를 추가합니다. 프로젝트의 이름을 **MyUWPApp** 으로 지정하고 대상 버전 및 최소 버전이 둘 다 **Windows 10, 버전 1903** 이상으로 설정되어 있는지 확인합니다.
 
 3. **MyUWPApp** 프로젝트에서 [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) NuGet 패키지를 설치합니다. 이 패키지는 이 연습 뒷부분에서 사용할 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스를 정의합니다.
 
-    1. **MyUWPApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
+    1. **MyUWPApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리** 를 선택합니다.
     2. **찾아보기** 탭을 선택하고 [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) 패키지를 검색한 후 이 패키지의 안정적인 최신 버전을 설치합니다.
 
-4. **MyUWPApp** 노드를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다. **공용 속성** -> **C++/WinRT** 페이지에서 **Verbosity** 속성을 **normal**로 설정한 다음, **적용**을 클릭합니다. 완료되면 속성 페이지가 다음과 같이 표시됩니다.
+4. **MyUWPApp** 노드를 마우스 오른쪽 단추로 클릭한 다음, **속성** 을 선택합니다. **공용 속성** -> **C++/WinRT** 페이지에서 **Verbosity** 속성을 **normal** 로 설정한 다음, **적용** 을 클릭합니다. 완료되면 속성 페이지가 다음과 같이 표시됩니다.
 
     ![C++/WinRT 프로젝트 속성](images/xaml-islands/xaml-island-cpp-1.png)
 
-5. 속성 창의 **구성 속성** -> **일반** 페이지에서 **구성 유형**을 **동적 라이브러리(.dll)** 로 설정한 후 **확인**를 클릭하여 속성 창을 닫습니다.
+5. 속성 창의 **구성 속성** -> **일반** 페이지에서 **구성 유형** 을 **동적 라이브러리(.dll)** 로 설정한 후 **확인** 를 클릭하여 속성 창을 닫습니다.
 
     ![일반 프로젝트 속성](images/xaml-islands/xaml-island-cpp-2.png)
 
 6. **MyUWPApp** 프로젝트에 자리 표시자 실행 파일을 추가합니다. 이 자리 표시자 실행 파일은 Visual Studio에서 필요한 프로젝트 파일을 생성하고 프로젝트를 적절히 빌드하는 데 필요합니다.
 
-    1. **솔루션 탐색기**에서 **MyUWPApp** 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 항목**을 선택합니다.
-    2. **새 항목 추가** 대화 상자에서 왼쪽 페이지의 **유틸리티**를 선택한 다음, **텍스트 파일(.txt)** 을 선택합니다. 이름으로 **placeholder.exe**를 입력하고 **추가**를 클릭합니다.
+    1. **솔루션 탐색기** 에서 **MyUWPApp** 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 항목** 을 선택합니다.
+    2. **새 항목 추가** 대화 상자에서 왼쪽 페이지의 **유틸리티** 를 선택한 다음, **텍스트 파일(.txt)** 을 선택합니다. 이름으로 **placeholder.exe** 를 입력하고 **추가** 를 클릭합니다.
       ![텍스트 파일 추가](images/xaml-islands/xaml-island-cpp-3.png)
-    3. **솔루션 탐색기**에서 **placeholder.exe** 파일을 선택합니다. **속성** 창에서 **Content** 속성이 **True**로 설정되어 있는지 확인합니다.
-    4. **솔루션 탐색기**에서 **MyUWPApp** 프로젝트의 **Package.appxmanifest** 파일을 마우스 오른쪽 단추로 클릭하고 **연결 프로그램**을 선택하고 **XML(텍스트) 편집기**를 선택한 후 **확인**을 클릭합니다.
+    3. **솔루션 탐색기** 에서 **placeholder.exe** 파일을 선택합니다. **속성** 창에서 **Content** 속성이 **True** 로 설정되어 있는지 확인합니다.
+    4. **솔루션 탐색기** 에서 **MyUWPApp** 프로젝트의 **Package.appxmanifest** 파일을 마우스 오른쪽 단추로 클릭하고 **연결 프로그램** 을 선택하고 **XML(텍스트) 편집기** 를 선택한 후 **확인** 을 클릭합니다.
     5. **&lt;Application&gt;** 요소를 찾고 **Executable** 특성을 `placeholder.exe` 값으로 변경합니다. 작업이 완료되면 **&lt;Application&gt;** 요소가 다음과 같이 표시됩니다.
 
         ```xml
@@ -93,8 +99,8 @@ ms.locfileid: "91933054"
 
     6. **Package.appxmanifest** 파일을 저장한 후 닫습니다.
 
-7. **솔루션 탐색기**에서 **MyUWPApp** 노드를 마우스 오른쪽 단추로 클릭한 다음, **프로젝트 언로드**를 선택합니다.
-8. **MyUWPApp** 노드를 마우스 오른쪽 단추로 클릭한 다음, **MyUWPApp.vcxproj 편집**을 선택합니다.
+7. **솔루션 탐색기** 에서 **MyUWPApp** 노드를 마우스 오른쪽 단추로 클릭한 다음, **프로젝트 언로드** 를 선택합니다.
+8. **MyUWPApp** 노드를 마우스 오른쪽 단추로 클릭한 다음, **MyUWPApp.vcxproj 편집** 을 선택합니다.
 9. `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />` 요소를 찾아서 다음 XML로 바꿉니다. 이 XML은 요소 바로 앞에 여러 개의 새 속성을 추가합니다.
 
     ```xml
@@ -108,13 +114,13 @@ ms.locfileid: "91933054"
     ```
 
 10. 프로젝트 파일을 저장한 후 닫습니다.
-11. **솔루션 탐색기**에서 **MyUWPApp** 노드를 마우스 오른쪽 단추로 클릭한 다음, **프로젝트 다시 로드**를 선택합니다.
+11. **솔루션 탐색기** 에서 **MyUWPApp** 노드를 마우스 오른쪽 단추로 클릭한 다음, **프로젝트 다시 로드** 를 선택합니다.
 
 ## <a name="configure-the-solution"></a>솔루션 구성
 
 이 섹션에서는 두 프로젝트를 모두 포함하는 솔루션을 업데이트하여 프로젝트를 올바르게 빌드하는 데 필요한 프로젝트 종속성 및 빌드 속성을 구성합니다.
 
-1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **Solution.props**라는 새 XML 파일을 추가합니다.
+1. **솔루션 탐색기** 에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **Solution.props** 라는 새 XML 파일을 추가합니다.
 2. **Solution.props** 파일에 다음 XML을 추가합니다.
 
     ```xml
@@ -128,17 +134,17 @@ ms.locfileid: "91933054"
     </Project>
     ```
 
-3. **보기** 메뉴에서 **속성 관리자**를 클릭합니다. 구성에 따라 **보기** -> **다른 창**)에 있을 수 있습니다.
-4. **속성 관리자** 창에서 **MyDesktopWin32App**을 마우스 오른쪽 단추로 클릭하고 **기존 속성 시트 추가**를 선택합니다. 방금 추가한 **Solution.props** 파일로 이동하여 **열기**를 클릭합니다.
+3. **보기** 메뉴에서 **속성 관리자** 를 클릭합니다. 구성에 따라 **보기** -> **다른 창** )에 있을 수 있습니다.
+4. **속성 관리자** 창에서 **MyDesktopWin32App** 을 마우스 오른쪽 단추로 클릭하고 **기존 속성 시트 추가** 를 선택합니다. 방금 추가한 **Solution.props** 파일로 이동하여 **열기** 를 클릭합니다.
 5. 이전 단계를 반복하여 **Solution.props** 파일을 **속성 관리자** 창의 **MyUWPApp** 프로젝트에 추가합니다.
 6. **속성 관리자** 창을 닫습니다.
-7. 속성 시트 변경 내용이 제대로 저장되었는지 확인합니다. **솔루션 탐색기**에서 **MyDesktopWin32App** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **구성 속성** -> **일반**을 클릭하고 **출력 디렉터리** 및 **중간 디렉터리** 속성 값이 **Solution.props** 파일에 추가한 값인지 확인합니다. **MyUWPApp** 프로젝트에 대해 동일한 사항을 확인할 수도 있습니다.
+7. 속성 시트 변경 내용이 제대로 저장되었는지 확인합니다. **솔루션 탐색기** 에서 **MyDesktopWin32App** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다. **구성 속성** -> **일반** 을 클릭하고 **출력 디렉터리** 및 **중간 디렉터리** 속성 값이 **Solution.props** 파일에 추가한 값인지 확인합니다. **MyUWPApp** 프로젝트에 대해 동일한 사항을 확인할 수도 있습니다.
     ![프로젝트 속성](images/xaml-islands/xaml-island-cpp-4.png)
 
-8. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **프로젝트 종속성**을 선택합니다. **프로젝트** 드롭다운에서 **MyDesktopWin32App**이 선택되어 있는지 확인하고 **종속 대상** 목록에서 **MyUWPApp**을 선택합니다.
+8. **솔루션 탐색기** 에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **프로젝트 종속성** 을 선택합니다. **프로젝트** 드롭다운에서 **MyDesktopWin32App** 이 선택되어 있는지 확인하고 **종속 대상** 목록에서 **MyUWPApp** 을 선택합니다.
     ![프로젝트 종속성](images/xaml-islands/xaml-island-cpp-5.png)
 
-9. **확인**을 클릭합니다.
+9. **확인** 을 클릭합니다.
 
 ## <a name="add-code-to-the-uwp-app-project"></a>UWP 앱 프로젝트에 코드 추가
 
@@ -149,7 +155,7 @@ ms.locfileid: "91933054"
 
 ### <a name="define-a-custom-uwp-xaml-control"></a>사용자 지정 UWP XAML 컨트롤 정의
 
-1. **솔루션 탐색기**에서 **MyUWPApp**을 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 항목**을 선택합니다. 왼쪽 창에서 **Visual C++** 노드를 선택하고 **빈 사용자 정의 컨트롤(C++/WinRT)** 을 선택하고 이름을 **MyUserControl**로 지정한 다음, **추가**를 클릭합니다.
+1. **솔루션 탐색기** 에서 **MyUWPApp** 을 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 항목** 을 선택합니다. 왼쪽 창에서 **Visual C++** 노드를 선택하고 **빈 사용자 정의 컨트롤(C++/WinRT)** 을 선택하고 이름을 **MyUserControl** 로 지정한 다음, **추가** 를 클릭합니다.
 2. XAML 편집기에서 **MyUserControl.xaml** 파일의 내용을 다음 XAML로 바꾼 다음, 파일을 저장합니다.
 
     ```xml
@@ -181,11 +187,11 @@ ms.locfileid: "91933054"
   > [!NOTE]
   > XAML Islands를 사용하는 각 솔루션에는 `XamlApplication` 개체를 정의하는 프로젝트가 하나만 포함될 수 있습니다. 앱의 모든 사용자 지정 UWP XAML 컨트롤은 동일한 `XamlApplication` 개체를 공유합니다. 
 
-1. **솔루션 탐색기**에서 **MyUWPApp** 프로젝트의 **MainPage.xaml** 파일을 마우스 오른쪽 단추로 클릭합니다. **제거**를 클릭한 다음, **삭제**를 클릭하여 프로젝트에서 이 파일을 영구적으로 삭제합니다.
+1. **솔루션 탐색기** 에서 **MyUWPApp** 프로젝트의 **MainPage.xaml** 파일을 마우스 오른쪽 단추로 클릭합니다. **제거** 를 클릭한 다음, **삭제** 를 클릭하여 프로젝트에서 이 파일을 영구적으로 삭제합니다.
 2. **MyUWPApp** 프로젝트에서 **App.xaml** 파일을 확장합니다.
-3. 다음 코드를 사용하여 **App.xaml**, **App.cpp**, **App.h**, and **App.idl** 파일의 내용을 다음 코드로 바꿉니다.
+3. 다음 코드를 사용하여 **App.xaml** , **App.cpp** , **App.h** , and **App.idl** 파일의 내용을 다음 코드로 바꿉니다.
 
-    * **App.xaml**:
+    * **App.xaml** :
 
         ```xml
         <Toolkit:XamlApplication
@@ -197,7 +203,7 @@ ms.locfileid: "91933054"
         </Toolkit:XamlApplication>
         ```
 
-    * **App.idl**:
+    * **App.idl** :
 
         ```IDL
         namespace MyUWPApp
@@ -210,7 +216,7 @@ ms.locfileid: "91933054"
         }
         ```
 
-    * **App.h**:
+    * **App.h** :
 
         ```cpp
         #pragma once
@@ -233,7 +239,7 @@ ms.locfileid: "91933054"
         }
         ```
 
-    * **App.cpp**:
+    * **App.cpp** :
 
         ```cpp
         #include "pch.h"
@@ -257,9 +263,9 @@ ms.locfileid: "91933054"
         ```
 
         > [!NOTE]
-        > `#include "App.g.cpp"` 문은 프로젝트 속성의 **공용 속성** -> **C++/WinRT** 페이지에서 **Optimized** 속성이 **Yes**로 설정된 경우에 필요합니다. 새 C++/WinRT 프로젝트의 기본값입니다. **Optimized** 속성의 효과에 대한 자세한 내용은 [이 섹션](/windows/uwp/cpp-and-winrt-apis/author-apis#opt-in-to-uniform-construction-and-direct-implementation-access)을 참조하세요.
+        > `#include "App.g.cpp"` 문은 프로젝트 속성의 **공용 속성** -> **C++/WinRT** 페이지에서 **Optimized** 속성이 **Yes** 로 설정된 경우에 필요합니다. 새 C++/WinRT 프로젝트의 기본값입니다. **Optimized** 속성의 효과에 대한 자세한 내용은 [이 섹션](/windows/uwp/cpp-and-winrt-apis/author-apis#opt-in-to-uniform-construction-and-direct-implementation-access)을 참조하세요.
 
-4. **app.base.h**라는 **MyUWPApp** 프로젝트에 새 헤더 파일을 추가합니다.
+4. **app.base.h** 라는 **MyUWPApp** 프로젝트에 새 헤더 파일을 추가합니다.
 5. **app.base.h** 파일에 다음 코드를 추가하고 저장한 후 닫습니다.
 
     ```cpp
@@ -309,9 +315,9 @@ ms.locfileid: "91933054"
 
 배포를 위해 [MSIX 패키지](/windows/msix)에 앱을 패키지할 수 있습니다. MSIX는 Windows용 최신 앱 패키징 기술로, MSI, .appx, App-V 및 ClickOnce 설치 기술의 조합을 기준으로 합니다.
 
-1. 새 [Windows 애플리케이션 패키징 프로젝트](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 솔루션에 추가합니다. 프로젝트를 만들 때 프로젝트 이름을 **MyDesktopWin32Project**로 지정하고, **대상 버전**과 **최소 버전** 둘 다로 **Windows 10, 버전 1903(10.0; 빌드 18362)** 을 선택합니다.
+1. 새 [Windows 애플리케이션 패키징 프로젝트](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 솔루션에 추가합니다. 프로젝트를 만들 때 프로젝트 이름을 **MyDesktopWin32Project** 로 지정하고, **대상 버전** 과 **최소 버전** 둘 다로 **Windows 10, 버전 1903(10.0; 빌드 18362)** 을 선택합니다.
 
-2. 패키징 프로젝트에서 **애플리케이션** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다. 프로젝트 목록에서 **MyDesktopWin32App** 프로젝트 옆의 확인란을 선택하고 **확인**을 클릭합니다.
+2. 패키징 프로젝트에서 **애플리케이션** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가** 를 선택합니다. 프로젝트 목록에서 **MyDesktopWin32App** 프로젝트 옆의 확인란을 선택하고 **확인** 을 클릭합니다.
     ![프로젝트 참조](images/xaml-islands/xaml-island-cpp-6.png)
 
 > [!NOTE]
@@ -321,9 +327,9 @@ ms.locfileid: "91933054"
 
 앱에 [애플리케이션 매니페스트](/windows/desktop/SbsCs/application-manifests)를 추가할 수 있습니다.
 
-1. **MyDesktopWin32App** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 항목**을 선택합니다. 
-2. **새 항목 추가** 대화 상자의 왼쪽 창에서 **웹**을 클릭하고 **XML 파일(.xml)** 을 선택합니다. 
-3. 새 파일의 이름을 **app.manifest**로 지정하고 **추가**를 클릭합니다.
+1. **MyDesktopWin32App** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 항목** 을 선택합니다. 
+2. **새 항목 추가** 대화 상자의 왼쪽 창에서 **웹** 을 클릭하고 **XML 파일(.xml)** 을 선택합니다. 
+3. 새 파일의 이름을 **app.manifest** 로 지정하고 **추가** 를 클릭합니다.
 4. 새 파일의 내용을 다음 XML로 바꿉니다. 이 XML은 **MyUWPApp** 프로젝트에 사용자 지정 컨트롤 형식을 등록합니다.
 
     ```xml
@@ -353,9 +359,9 @@ ms.locfileid: "91933054"
 
 그런 다음, 추가 포함 디렉터리에 대한 매크로를 정의하고 추가 속성을 구성하도록 **MyDesktopWin32App** 프로젝트를 업데이트합니다.
 
-1. **솔루션 탐색기**에서 **MyDesktopWin32App** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **프로젝트 언로드**를 선택합니다.
+1. **솔루션 탐색기** 에서 **MyDesktopWin32App** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **프로젝트 언로드** 를 선택합니다.
 
-2. **MyDesktopWin32App(언로드됨)** 을 마우스 오른쪽 단추로 클릭하고 **MyDesktopWin32App.vcxproj 편집**을 선택합니다.
+2. **MyDesktopWin32App(언로드됨)** 을 마우스 오른쪽 단추로 클릭하고 **MyDesktopWin32App.vcxproj 편집** 을 선택합니다.
 
 3. 파일 끝에서 닫는 `</Project>` 태그 바로 앞에 다음 XML을 추가합니다. 파일을 저장한 후 닫습니다.
 
@@ -373,13 +379,13 @@ ms.locfileid: "91933054"
       <!-- End Section-->
     ```
 
-4. **솔루션 탐색기**에서 **MyDesktopWin32App(언로드됨)** 을 마우스 오른쪽 단추로 클릭하고 **프로젝트 다시 로드**를 선택합니다.
+4. **솔루션 탐색기** 에서 **MyDesktopWin32App(언로드됨)** 을 마우스 오른쪽 단추로 클릭하고 **프로젝트 다시 로드** 를 선택합니다.
 
-5. **MyDesktopWin32App** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 다음, 왼쪽 창에서 **매니페스트 도구** -> **입력 및 출력**을 확장합니다. **DPI 인식** 속성을 **모니터 단위 높은 DPI 인식**으로 설정합니다. 이 속성을 설정하지 않으면 특정 높은 DPI 시나리오에서 매니페스트 구성 오류가 발생할 수 있습니다.
+5. **MyDesktopWin32App** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택한 다음, 왼쪽 창에서 **매니페스트 도구** -> **입력 및 출력** 을 확장합니다. **DPI 인식** 속성을 **모니터 단위 높은 DPI 인식** 으로 설정합니다. 이 속성을 설정하지 않으면 특정 높은 DPI 시나리오에서 매니페스트 구성 오류가 발생할 수 있습니다.
 
     ![C/C++ 프로젝트 설정의 스크린샷](images/xaml-islands/xaml-island-cpp-8.png)
 
-6. **확인**을 클릭하여 **속성 페이지** 대화 상자를 닫습니다.
+6. **확인** 을 클릭하여 **속성 페이지** 대화 상자를 닫습니다.
 
 ## <a name="host-the-custom-uwp-xaml-control-in-the-desktop-project"></a>데스크톱 프로젝트에서 사용자 지정 UWP XAML 컨트롤 호스트
 
@@ -581,7 +587,7 @@ ms.locfileid: "91933054"
 
 ## <a name="test-the-app"></a>앱 테스트
 
-솔루션을 실행하고 다음 창에 **MyDesktopWin32App**이 열려 있는지 확인합니다.
+솔루션을 실행하고 다음 창에 **MyDesktopWin32App** 이 열려 있는지 확인합니다.
 
 ![MyDesktopWin32App 앱](images/xaml-islands/xaml-island-cpp-9.png)
 
