@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store Services SDK, A/B 테스트, 실험
 ms.localizationpriority: medium
-ms.openlocfilehash: c38eee9e3be7d6ea85b56fd5ad3aa3d62ae751b9
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: 7cc63c1bdf5f3357bed596e5afcf03681eeb513a
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93029777"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339742"
 ---
 # <a name="run-app-experiments-with-ab-testing"></a>A/B 테스트로 앱 실험 실행
 
@@ -36,7 +36,7 @@ A/B 테스트를 만들고 실행 하려면 다음 단계를 수행 합니다.
 
 A/B 테스트를 사용 하 여 실험을 실행 하려면 먼저 개발 컴퓨터를 설정 해야 합니다.
 
-* [여기](../get-started/get-set-up.md) 에 설명 된 지침에 따라 UWP 개발에 대 한 개발 컴퓨터를 설정 합니다.
+* [여기](/windows/apps/get-started/get-set-up) 에 설명 된 지침에 따라 UWP 개발에 대 한 개발 컴퓨터를 설정 합니다.
 * [Microsoft Store SERVICES SDK를 설치](microsoft-store-services-sdk.md#install-the-sdk)합니다. 이 SDK는 실험을 위한 API 외에도 광고를 표시 하 고 고객에 게 피드백 허브를 전달 하 여 앱에 대 한 피드백을 수집 하는 등의 기타 기능을 위한 Api를 제공 합니다.
 
 ## <a name="best-practices"></a>모범 사례

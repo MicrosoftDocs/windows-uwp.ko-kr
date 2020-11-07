@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 게임 개발
 ms.localizationpriority: medium
-ms.openlocfilehash: c6cae9e2416eb992815f098649d6b02ee472da14
-ms.sourcegitcommit: e39b569626804d2ce4246353ac2c03a916dc9737
+ms.openlocfilehash: be63c7ec1e682924e2364a2c6ea8e4d2d81dee3f
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192973"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339511"
 ---
 # <a name="windows-10-game-development-guide"></a>Windows 10 게임 개발 가이드
 
@@ -217,15 +217,15 @@ Windows 10 게임 기능을 이해 하 고 게임 개발을 신속 하 게 시�
     </tr>
     <tr>
         <td>JavaScript 2D 게임 샘플</td>
-        <td><a href="../get-started/get-started-tutorial-game-js2d.md">JavaScript로 UWP 게임 만들기</a></td>
+        <td><a href="/windows/uwp/get-started/">JavaScript로 UWP 게임 만들기</a></td>
     </tr>
     <tr>
         <td>JavaScript 3D 게임 샘플</td>
-        <td><a href="../get-started/get-started-tutorial-game-js3d.md">three.js를 사용하여 3D JavaScript 게임 만들기</a></td>
+        <td><a href="/windows/uwp/get-started/">three.js를 사용하여 3D JavaScript 게임 만들기</a></td>
     </tr>
     <tr>
         <td>MonoGame 2D UWP game 샘플</td>
-        <td><a href="../get-started/get-started-tutorial-game-mg2d.md">MonoGame 2D로 UWP 게임 만들기</a></td>
+        <td><a href="/windows/uwp/get-started/">MonoGame 2D로 UWP 게임 만들기</a></td>
     </tr>
 </table>
 
@@ -512,7 +512,7 @@ C # ("C 샵"으로 발음)은 간단 하 고, 강력 하며, 형식이 안전 �
     </colgroup>
     <tr>
         <td>C # 프로그래밍 가이드 및 참조</td>
-        <td><a href="/dotnet/articles/csharp/csharp">C # 언어 참조</a></td>
+        <td><a href="/dotnet/articles/csharp/csharp">C# 언어 참조</a></td>
     </tr>
 </table>
 
@@ -752,7 +752,7 @@ MonoGame는 원래 Microsoft의 XNA Framework 4.0을 기반으로 하는 오픈 
     </tr>
     <tr>
         <td>MonoGame 2D UWP game 샘플</td>
-        <td><a href="../get-started/get-started-tutorial-game-mg2d.md">MonoGame 2D로 UWP 게임 만들기</a></td>
+        <td><a href="/windows/uwp/get-started/">MonoGame 2D로 UWP 게임 만들기</a></td>
     </tr>
 </table>
 
@@ -970,7 +970,7 @@ UWP 프로그래밍에 대 한 "절대적인 초보자"이 고 게임에서 XAML
     </tr>
 </table>
 
-### <a name="windows-desktop-apisto-uwp"></a>Windows 데스크톱 Api-UWP
+### <a name="windows-desktop-apis-to-uwp"></a>Windows 데스크톱 Api-UWP
 
 Windows 데스크톱 게임을 UWP로 이동 하는 데 도움이 되는 몇 가지 링크를 제공 합니다.
 
@@ -1267,7 +1267,7 @@ Directx 도구 키트, DirectX 텍스처 처리 라이브러리, DirectXMesh geo
     </tr>
 </table>
 
-## <a name="production"></a>프로덕션
+## <a name="production"></a>생산
 
 이제 사용자의 스튜디오는 팀 전체에 걸쳐 분산 된 작업을 통해 완벽 하 게 참여 하 고 프로덕션 주기로 전환 됩니다. 개선 하 고,이를 활용 하 여 전체 게임으로 만들 수 있습니다.
 

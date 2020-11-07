@@ -1,17 +1,17 @@
 ---
 ms.assetid: ''
-title: Windows 앱에서 잉크 지원
+title: Windows 앱에서 필기 입력 지원
 description: 이 단계별 자습서를 수행 하 여 UWP (기본 유니버설 Windows 플랫폼) 앱에서 Windows Ink 작성 및 그리기를 지 원하는 방법에 대해 알아봅니다.
 keywords: 잉크, 잉크, 자습서
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f726f4ab4a422cc94f00493261620ddff8b6122b
-ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
+ms.openlocfilehash: fb74b5d15b731a6b08a0adcec20a801b7e133a7f
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860193"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339821"
 ---
 # <a name="tutorial-support-ink-in-your-windows-app"></a>자습서: Windows 앱에서 잉크 지원
 
@@ -40,7 +40,7 @@ Windows 잉크를 사용 하면 신속 하 고 필기 한 노트와 주석에서
 * [Windows 10 SDK(10.0.15063.0)](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 * 구성에 따라 [Microsoft.netcore.universalwindowsplatform](https://www.nuget.org/packages/Microsoft.NETCore.UniversalWindowsPlatform) NuGet 패키지를 설치 하 고 시스템 설정에서 **개발자 모드** 를 사용 하도록 설정 해야 할 수 있습니다. 개발자는 개발자 기능을 사용 하 여 개발자 기능을 사용 하 여 > & 보안-> > 업데이트 합니다.
 * Visual Studio를 사용 하 여 Windows 앱을 개발 하는 경우이 자습서를 시작 하기 전에 다음 항목을 참조 하세요.  
-    * [설정하기](../../get-started/get-set-up.md)
+    * [설정하기](/windows/apps/get-started/get-set-up)
     * ["Hello, 세계" 앱 만들기 (XAML)](../../get-started/create-a-hello-world-app-xaml-universal.md)
 * **[선택 사항]** 디지털 펜 및 해당 디지털 펜의 입력을 지 원하는 디스플레이를 포함 하는 컴퓨터입니다.
 
@@ -67,7 +67,7 @@ Windows 잉크를 사용 하면 신속 하 고 필기 한 노트와 주석에서
 | 구성 요소 | 설명 |
 | --- | --- |
 | [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas) | 기본적으로 펜의 모든 입력을 받아 잉크 스트로크 또는 지우기 스트로크로 표시 하는 XAML UI 플랫폼 컨트롤입니다. |
-| [**InkPresenter**](/uwp/api/Windows.UI.Input.Inking.InkPresenter) | [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤([**InkCanvas.InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 추가 사용자 지정 및 개인 설정을 위한 포괄적인 Api 집합과 함께 [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 노출 하는 모든 기본 잉크 기능을 제공 합니다. |
+| [**InkPresenter**](/uwp/api/Windows.UI.Input.Inking.InkPresenter) | [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤( [**InkCanvas.InkPresenter**](/uwp/api/windows.ui.xaml.controls.inkcanvas.InkPresenter) 속성을 통해 노출)과 함께 인스턴스화되는 코드 숨김 개체입니다. 이 개체는 추가 사용자 지정 및 개인 설정을 위한 포괄적인 Api 집합과 함께 [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas)에서 노출 하는 모든 기본 잉크 기능을 제공 합니다. |
 | [**InkToolbar**](/uwp/api/Windows.UI.Xaml.Controls.InkToolbar) | 연결 된 [**InkCanvas**](/uwp/api/windows.ui.xaml.controls.inkcanvas)의 잉크 관련 기능을 활성화 하는 사용자 지정 가능 하 고 확장 가능한 단추 컬렉션을 포함 하는 XAML UI 플랫폼 컨트롤입니다. |
 | [**IInkD2DRenderer**](/windows/desktop/api/inkrenderer/nn-inkrenderer-iinkd2drenderer)<br/>여기서는이 기능에 대해 다루지 않습니다. 자세한 내용은 [복합 잉크 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/ComplexInk)을 참조 하세요. | 기본 [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 컨트롤이 아니라 유니버설 Windows 앱의 지정 된 Direct2D 장치 컨텍스트로 잉크 스트로크를 렌더링할 수 있습니다. |
 
@@ -211,8 +211,8 @@ RadialController 샘플 앱을 다운로드 한 후 실행 되는지 확인 합�
 
 > [!NOTE]
 > **펜 & Windows Ink** 설정에서 필기 인식을 향상 시킬 수 있습니다.
-> 1. 시작 메뉴를 열고 **설정**을 선택 합니다.
-> 2. 설정 화면에서 **장치**  >  **펜 & Windows Ink**를 선택 합니다.
+> 1. 시작 메뉴를 열고 **설정** 을 선택 합니다.
+> 2. 설정 화면에서 **장치**  >  **펜 & Windows Ink** 를 선택 합니다.
 > ![Windows Ink 설정 페이지 & 펜의 스크린샷](images/ink/ink-settings-small.png)
 > 3. 필기 **개인 설정** 대화 상자를 열려면 **가져오기를 선택 하 여 필기를 확인** 합니다.
 > ![필기 인식 개인 설정 대화 상자의 스크린샷](images/ink/ink-settings-handwritingpersonalization-small.png)

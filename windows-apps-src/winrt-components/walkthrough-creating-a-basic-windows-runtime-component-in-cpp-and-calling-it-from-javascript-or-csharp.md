@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c7f0e1ba5c78ce41a5326d3643b5afe80f380b3c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d343b2da4bdfee73479c3b5f3c45fd56a92ada35
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155177"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339791"
 ---
 # <a name="walkthrough-of-creating-a-ccx-windows-runtime-component-and-calling-it-from-javascript-or-c"></a>C++/CX Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출하는 연습
 
@@ -26,7 +26,7 @@ ms.locfileid: "89155177"
 구성 요소의 주 클래스에는 속성 및 메서드 정의의 예제와 이벤트 선언이 포함되어 있습니다. 이러한 항목은 작업이 수행되는 방법을 보여 주기 위해 제공됩니다. 이러한 항목이 반드시 필요하지는 않지만 이 예제에서는 생성된 모든 코드를 고유한 코드로 바꿉니다.
 
 ### <a name="to-create-the-c-component-project"></a>**C++ 구성 요소 프로젝트를 만들려면**
-1. Visual Studio 메뉴 모음에서 **파일, 새로 만들기, 프로젝트**를 차례로 선택 합니다.
+1. Visual Studio 메뉴 모음에서 **파일, 새로 만들기, 프로젝트** 를 차례로 선택 합니다.
 
 2. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual C++** 을 확장 한 다음 유니버설 Windows 앱에 대 한 노드를 선택 합니다.
 
@@ -35,7 +35,7 @@ ms.locfileid: "89155177"
 4. **확인** 단추를 선택합니다.
 
 ## <a name="to-add-an-activatable-class-to-the-component"></a>**구성 요소에 활성화 가능한 클래스를 추가하려면**
-활성화할 수 있는 클래스는 클라이언트 코드에서 **새** 식을 사용 하 여 만들 수 있는 클래스입니다 (Visual Basic의**새로운** 또는 c + +의 **ref new** ). 구성 요소에서 **public ref 클래스로 sealed**로 선언 합니다. 사실 Class1.h 및 .cpp 파일에는 ref 클래스가 이미 있습니다. 이름을 변경할 수 있지만이 예제에서는 기본 이름인 Class1을 사용 합니다. ref 클래스 또는 일반 클래스가 추가로 필요한 경우 구성 요소에서 해당 클래스를 정의할 수 있습니다. Ref 클래스에 대 한 자세한 내용은 [형식 시스템 (c + +/cx)](/cpp/cppcx/type-system-c-cx)을 참조 하세요.
+활성화할 수 있는 클래스는 클라이언트 코드에서 **새** 식을 사용 하 여 만들 수 있는 클래스입니다 (Visual Basic의 **새로운** 또는 c + +의 **ref new** ). 구성 요소에서 **public ref 클래스로 sealed** 로 선언 합니다. 사실 Class1.h 및 .cpp 파일에는 ref 클래스가 이미 있습니다. 이름을 변경할 수 있지만이 예제에서는 기본 이름인 Class1을 사용 합니다. ref 클래스 또는 일반 클래스가 추가로 필요한 경우 구성 요소에서 해당 클래스를 정의할 수 있습니다. Ref 클래스에 대 한 자세한 내용은 [형식 시스템 (c + +/cx)](/cpp/cppcx/type-system-c-cx)을 참조 하세요.
 
 다음 \# include 지시문을 Class1. h에 추가 합니다.
 
@@ -275,19 +275,19 @@ C # 클라이언트를 만들려는 경우이 섹션을 건너뛸 수 있습니�
 > UWP (유니버설 Windows 플랫폼) 프로젝트는 Visual Studio 2019에서 지원 되지 않습니다. [JavaScript 및 TypeScript In Visual Studio 2019을](/visualstudio/javascript/javascript-in-vs-2019?view=vs-2019#projects)참조 하세요. 이 섹션과 함께 수행 하려면 Visual Studio 2017을 사용 하는 것이 좋습니다. [Visual Studio 2017의 JavaScript를](/visualstudio/javascript/javascript-in-vs-2017)참조 하세요.
 
 ### <a name="to-create-a-javascript-project"></a>JavaScript 프로젝트를 만들려면
-1. 솔루션 탐색기 (Visual Studio 2017의 경우 위의 **참고 사항** 참조), 솔루션 노드에 대 한 바로 가기 메뉴를 열고 **추가, 새 프로젝트를**차례로 선택 합니다.
+1. 솔루션 탐색기 (Visual Studio 2017의 경우 위의 **참고 사항** 참조), 솔루션 노드에 대 한 바로 가기 메뉴를 열고 **추가, 새 프로젝트를** 차례로 선택 합니다.
 
-2. JavaScript ( **다른 언어**아래에 중첩 될 수 있음)를 확장 하 고 **비어 있는 앱 (유니버설 Windows)** 을 선택 합니다.
+2. JavaScript ( **다른 언어** 아래에 중첩 될 수 있음)를 확장 하 고 **비어 있는 앱 (유니버설 Windows)** 을 선택 합니다.
 
 3. &mdash; &mdash; **확인** 단추를 선택 하 여 기본 이름인 App1을 적용 합니다.
 
-4. App1 프로젝트 노드에 대 한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택 합니다.
+4. App1 프로젝트 노드에 대 한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정** 을 선택 합니다.
 
 5. 프로젝트 참조를 WinRT_CPP에 추가합니다.
 
-6. 참조 노드에 대 한 바로 가기 메뉴를 열고 **참조 추가**를 선택 합니다.
+6. 참조 노드에 대 한 바로 가기 메뉴를 열고 **참조 추가** 를 선택 합니다.
 
-7. 참조 관리자 대화 상자의 왼쪽 창에서 **프로젝트** 를 선택 하 고 **솔루션**을 선택 합니다.
+7. 참조 관리자 대화 상자의 왼쪽 창에서 **프로젝트** 를 선택 하 고 **솔루션** 을 선택 합니다.
 
 8. 가운데 창에서 WinRT_CPP을 선택 하 고 **확인** 단추를 선택 합니다.
 
@@ -426,7 +426,7 @@ function ButtonClear_Click() {
 }
 ```
 
-WinJS에 대 한 기존 호출을에 대 한 기존 호출을 다음 코드로 대체 하 여 이벤트 수신기를 추가 하는 코드를 추가 합니다 default.js. 이에 대 한 자세한 설명은 ["Hello, 세계" 앱 만들기 (JS)](../get-started/create-a-hello-world-app-js-uwp.md)를 참조 하세요.
+WinJS에 대 한 기존 호출을에 대 한 기존 호출을 다음 코드로 대체 하 여 이벤트 수신기를 추가 하는 코드를 추가 합니다 default.js. 이에 대 한 자세한 설명은 ["Hello, 세계" 앱 만들기 (JS)](/windows/apps/get-started/)를 참조 하세요.
 
 ```JavaScript
 args.setPromise(WinJS.UI.processAll().then( function completed() {
@@ -446,19 +446,19 @@ F5 키를 눌러 앱을 실행합니다.
 ## <a name="creating-a-c-client-app"></a>C# 클라이언트 앱 만들기
 
 ### <a name="to-create-a-c-project"></a>C# 프로젝트를 만들려면
-1. 솔루션 탐색기에서 솔루션 노드에 대 한 바로 가기 메뉴를 열고 **추가, 새 프로젝트를**차례로 선택 합니다.
+1. 솔루션 탐색기에서 솔루션 노드에 대 한 바로 가기 메뉴를 열고 **추가, 새 프로젝트를** 차례로 선택 합니다.
 
-2. Visual c # ( **다른 언어**아래에 중첩 될 수 있음)을 확장 하 고 왼쪽 창에서 **Windows** 를 선택한 다음 **범용** 을 선택 하 고 가운데 창에서 **새 앱** 을 선택 합니다.
+2. Visual c # ( **다른 언어** 아래에 중첩 될 수 있음)을 확장 하 고 왼쪽 창에서 **Windows** 를 선택한 다음 **범용** 을 선택 하 고 가운데 창에서 **새 앱** 을 선택 합니다.
 
 3. 이 앱의 이름을 CS_Client로 지정한 다음 **확인** 단추를 선택 합니다.
 
-4. CS_Client 프로젝트 노드에 대 한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택 합니다.
+4. CS_Client 프로젝트 노드에 대 한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정** 을 선택 합니다.
 
 5. 프로젝트 참조를 WinRT_CPP에 추가합니다.
 
-   - **참조** 노드에 대 한 바로 가기 메뉴를 열고 **참조 추가**를 선택 합니다.
+   - **참조** 노드에 대 한 바로 가기 메뉴를 열고 **참조 추가** 를 선택 합니다.
 
-   - **참조 관리자** 대화 상자의 왼쪽 창에서 **프로젝트** 를 선택 하 고 **솔루션**을 선택 합니다.
+   - **참조 관리자** 대화 상자의 왼쪽 창에서 **프로젝트** 를 선택 하 고 **솔루션** 을 선택 합니다.
 
    - 가운데 창에서 WinRT_CPP을 선택한 다음 **확인** 단추를 선택 합니다.
 
@@ -584,7 +584,7 @@ private void Clear_Button_Click(object sender, RoutedEventArgs e)
 ```
 
 ## <a name="running-the-app"></a>앱 실행
-솔루션 탐색기에서 프로젝트 노드에 대 한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택 하 여 c # 프로젝트 또는 JavaScript 프로젝트를 시작 프로젝트로 선택 합니다. 그런 다음 F5 키를 눌러 디버깅이 설정된 상태로 실행하거나 Ctrl+F5를 눌러 디버깅 없이 실행합니다.
+솔루션 탐색기에서 프로젝트 노드에 대 한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정** 을 선택 하 여 c # 프로젝트 또는 JavaScript 프로젝트를 시작 프로젝트로 선택 합니다. 그런 다음 F5 키를 눌러 디버깅이 설정된 상태로 실행하거나 Ctrl+F5를 눌러 디버깅 없이 실행합니다.
 
 ## <a name="inspecting-your-component-in-object-browser-optional"></a>개체 브라우저에서 구성 요소 검사(선택 사항)
 개체 브라우저에서 winmd 파일에 정의 된 모든 Windows 런타임 유형을 검사할 수 있습니다. 여기에는 Platform 네임 스페이스 및 기본 네임 스페이스의 형식이 포함 됩니다. 그러나 Platform:: Collections 네임 스페이스의 형식은 winmd 파일이 아닌 헤더 파일 컬렉션에 정의 되어 있기 때문에 개체 브라우저에 표시 되지 않습니다.
@@ -598,15 +598,15 @@ private void Clear_Button_Click(object sender, RoutedEventArgs e)
 더 나은 디버깅 환경을 사용하려면 공용 Microsoft 기호 서버에서 디버깅 기호를 다운로드합니다.
 
 ### <a name="to-download-debugging-symbols"></a>**디버깅 기호를 다운로드 하려면**
-1. 메뉴 모음에서 **도구, 옵션**을 선택 합니다.
+1. 메뉴 모음에서 **도구, 옵션** 을 선택 합니다.
 
-2. **옵션** 대화 상자에서 **디버깅** 을 확장 하 고 **기호**를 선택 합니다.
+2. **옵션** 대화 상자에서 **디버깅** 을 확장 하 고 **기호** 를 선택 합니다.
 
 3. **Microsoft 기호 서버** 를 선택 하 고 **확인** 단추를 선택 합니다.
 
 기호를 처음 다운로드할 때는 시간이 걸릴 수도 있습니다. 다음에 F5 키를 누를 때 성능을 향상시키려면 기호를 캐시할 로컬 디렉터리를 지정합니다.
 
-구성 요소 DLL이 들어 있는 JavaScript 솔루션을 디버깅하는 경우 스크립트를 단계별로 실행하거나 구성 요소의 네이티브 코드를 단계별로 실행하도록 디버거를 설정할 수는 있지만 동시에 두 가지를 다 실행하도록 디버거를 설정할 수는 없습니다. 설정을 변경 하려면 솔루션 탐색기에서 JavaScript 프로젝트 노드에 대 한 바로 가기 메뉴를 열고 **속성, 디버깅, 디버거 형식**을 차례로 선택 합니다.
+구성 요소 DLL이 들어 있는 JavaScript 솔루션을 디버깅하는 경우 스크립트를 단계별로 실행하거나 구성 요소의 네이티브 코드를 단계별로 실행하도록 디버거를 설정할 수는 있지만 동시에 두 가지를 다 실행하도록 디버거를 설정할 수는 없습니다. 설정을 변경 하려면 솔루션 탐색기에서 JavaScript 프로젝트 노드에 대 한 바로 가기 메뉴를 열고 **속성, 디버깅, 디버거 형식** 을 차례로 선택 합니다.
 
 패키지 디자이너에서 적절한 기능을 선택해야 합니다. Appxmanifest.xml 파일을 열어 패키지 디자이너를 열 수 있습니다. 예를 들어 그림 폴더에 있는 파일에 프로그래밍 방식으로 액세스 하려는 경우 패키지 디자이너의 **기능** 창에서 **그림 라이브러리** 확인란을 선택 해야 합니다.
 

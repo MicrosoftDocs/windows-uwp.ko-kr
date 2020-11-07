@@ -5,12 +5,12 @@ ms.date: 10/12/2020
 ms.topic: article
 keywords: 'windows 10, c #, winrt, cswinrt, 프로젝션'
 ms.localizationpriority: medium
-ms.openlocfilehash: 3116e176c8f156939f075e0a23d1be2352a8ecde
-ms.sourcegitcommit: 861c381a31e4a5fd75f94ca19952b2baaa2b72df
+ms.openlocfilehash: 817c4ec364040cbe64f8ab466a5bdf059d8c2dda
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92171142"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339651"
 ---
 # <a name="walkthrough-generate-a-net-5-projection-from-a-cwinrt-component-and-distribute-the-nuget"></a>연습: c + +/WinRT 구성 요소에서 .NET 5 프로젝션을 생성 하 고 NuGet 배포
 
@@ -21,11 +21,11 @@ ms.locfileid: "92171142"
 > [!NOTE]
 > 이 연습은 c #/Winrt (RC2)의 최신 미리 보기를 위해 작성 되었습니다. 향후 1.0 릴리스가 개발자 환경에 대 한 추가 업데이트 및 개선 사항을 제공 하는 것으로 간주 됩니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습 및 해당 샘플에는 다음과 같은 도구 및 구성 요소가 필요 합니다.
 
-- 유니버설 Windows 플랫폼 개발 워크 로드가 설치 된 [Visual Studio 16.8 Preview 3](https://visualstudio.microsoft.com/vs/preview/) 이상 유니버설 Windows 플랫폼 개발에 **대 한 설치 세부 정보**에서  >  **Universal Windows Platform development** **c + + (v14x) 유니버설 Windows 플랫폼 도구** 옵션을 확인 합니다.
+- 유니버설 Windows 플랫폼 개발 워크 로드가 설치 된 [Visual Studio 16.8 Preview 3](https://visualstudio.microsoft.com/vs/preview/) 이상 유니버설 Windows 플랫폼 개발에 **대 한 설치 세부 정보** 에서  >  **Universal Windows Platform development** **c + + (v14x) 유니버설 Windows 플랫폼 도구** 옵션을 확인 합니다.
 - [.Net 5.0 RC2 SDK](https://github.com/dotnet/installer).
 - C + +/winrt 프로젝트 템플릿에 대 한 [c + +/WINRT VSIX 확장](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) .
 
@@ -51,10 +51,10 @@ namespace winrt::SimpleMathComponent::implementation
 }
 ```
 
-C + +/WinRT 구성 요소를 만들고 winmd 파일을 생성 하는 방법에 대 한 자세한 내용은 [c + +/WinRT를 사용 하는 Windows 런타임 구성 요소](https://docs.microsoft.com/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt)를 참조 하세요.
+C + +/WinRT 구성 요소를 만들고 winmd 파일을 생성 하는 방법에 대 한 자세한 내용은 [c + +/WinRT를 사용 하는 Windows 런타임 구성 요소](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md)를 참조 하세요.
 
 > [!NOTE]
-> 구성 요소에서 [IInspectable:: GetRuntimeClassName](https://docs.microsoft.com/windows/win32/api/inspectable/nf-inspectable-iinspectable-getruntimeclassname) 를 구현 하는 경우 유효한 WinRT 클래스 이름을 반환 **해야** 합니다. C #/Winrt는 interop에 클래스 이름 문자열을 사용 하므로 잘못 된 런타임 클래스 이름으로 인해 **InvalidCastException**이 발생 합니다.
+> 구성 요소에서 [IInspectable:: GetRuntimeClassName](/windows/win32/api/inspectable/nf-inspectable-iinspectable-getruntimeclassname) 를 구현 하는 경우 유효한 WinRT 클래스 이름을 반환 **해야** 합니다. C #/Winrt는 interop에 클래스 이름 문자열을 사용 하므로 잘못 된 런타임 클래스 이름으로 인해 **InvalidCastException** 이 발생 합니다.
 
 ## <a name="add-a-projection-project-to-the-component-solution"></a>구성 요소 솔루션에 프로젝션 프로젝트 추가
 
@@ -62,23 +62,23 @@ C + +/WinRT 구성 요소를 만들고 winmd 파일을 생성 하는 방법에 �
 
 1. 새 **클래스 라이브러리 (.Net Core)** 프로젝트를 솔루션에 추가 합니다.
 
-    1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 **Add**고  ->  **새 프로젝트**추가를 클릭 합니다.
-    2. **새 프로젝트 추가 대화 상자**에서 **클래스 라이브러리 (.net Core)** 프로젝트 템플릿을 검색 합니다. 템플릿을 선택 하 고 **다음**을 클릭 합니다.
-    3. 새 프로젝트의 이름을 **SimpleMathProjection** 하 고 **만들기**를 클릭 합니다.
+    1. **솔루션 탐색기** 에서 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 **Add** 고  ->  **새 프로젝트** 추가를 클릭 합니다.
+    2. **새 프로젝트 추가 대화 상자** 에서 **클래스 라이브러리 (.net Core)** 프로젝트 템플릿을 검색 합니다. 템플릿을 선택 하 고 **다음** 을 클릭 합니다.
+    3. 새 프로젝트의 이름을 **SimpleMathProjection** 하 고 **만들기** 를 클릭 합니다.
 
 2. 프로젝트에서 빈 **Class1.cs** 파일을 삭제 합니다.
 
 3. [C #/Winrt NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CsWinRT)를 설치 합니다.
 
-    1. **솔루션 탐색기**에서 **SimpleMathProjection** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **NuGet 패키지 관리**를 선택 합니다. 
+    1. **솔루션 탐색기** 에서 **SimpleMathProjection** 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 **NuGet 패키지 관리** 를 선택 합니다. 
     2. **Microsoft. CsWinRT** NuGet 패키지를 검색 하 고 최신 버전을 설치 합니다.
 
-4. **SimpleMathComponent** 프로젝트에 프로젝트 참조를 추가 합니다. **솔루션 탐색기**에서 **SimpleMathProjection** 프로젝트 아래의 **종속성** 노드를 마우스 오른쪽 단추로 클릭 하 고, **프로젝트 참조 추가**를 선택 하 고, **SimpleMathComponent** 프로젝트를 선택 합니다.
+4. **SimpleMathComponent** 프로젝트에 프로젝트 참조를 추가 합니다. **솔루션 탐색기** 에서 **SimpleMathProjection** 프로젝트 아래의 **종속성** 노드를 마우스 오른쪽 단추로 클릭 하 고, **프로젝트 참조 추가** 를 선택 하 고, **SimpleMathComponent** 프로젝트를 선택 합니다.
 
     > [!NOTE]
     > Visual Studio 16.8 Preview 4 이상을 사용 하는 경우 4 단계를 완료 한 후이 섹션을 완료 합니다. Visual Studio 16.8 Preview 3을 사용 하는 경우 5 단계도 완료 해야 합니다.
 
-5. Visual Studio 16.8 Preview 3을 사용 하는 경우: **솔루션 탐색기**에서 **SimpleMathProjection** 노드를 두 번 클릭 하 여 편집기에서 프로젝트 파일을 열고 다음 요소를 파일에 추가한 다음 파일을 저장 하 고 닫습니다.
+5. Visual Studio 16.8 Preview 3을 사용 하는 경우: **솔루션 탐색기** 에서 **SimpleMathProjection** 노드를 두 번 클릭 하 여 편집기에서 프로젝트 파일을 열고 다음 요소를 파일에 추가한 다음 파일을 저장 하 고 닫습니다.
 
     ```xml
     <ItemGroup>
@@ -103,7 +103,7 @@ C + +/WinRT 구성 요소를 만들고 winmd 파일을 생성 하는 방법에 �
 
 **cswinrt.exe** 를 호출 하 고 프로젝션 어셈블리를 생성 하기 전에 프로젝션 프로젝트에 대 한 프로젝트 파일을 편집 해야 합니다.
 
-1. **솔루션 탐색기**에서 **SimpleMathProjection** 노드를 두 번 클릭 하 여 편집기에서 프로젝트 파일을 엽니다.
+1. **솔루션 탐색기** 에서 **SimpleMathProjection** 노드를 두 번 클릭 하 여 편집기에서 프로젝트 파일을 엽니다.
 
 2. Windows SDK를 `TargetFramework` 참조 하도록 요소를 업데이트 합니다. 이렇게 하면 interop 및 프로젝션 지원에 필요한 어셈블리 종속성 추가 됩니다. 이 샘플은이 연습을 통해 최신 Windows 10 릴리스를 대상으로 합니다. **net 5.0-Windows 10.0.19041.0** (SDK 버전 2004 라고도 함).
 
@@ -161,8 +161,8 @@ Interop 어셈블리를 배포 하 고 사용 하기 위해 몇 가지 추가 �
 
 1. NuGet 사양 (. nuspec) 파일을 **SimpleMathProjection** 프로젝트에 추가 합니다.
 
-    1. **솔루션 탐색기**에서 **SimpleMathProjection** 노드를 마우스 오른쪽 단추로 클릭 하 고 **Add**,  ->  **새 폴더**추가를 선택 하 고, 폴더 이름을 **nuget**로 합니다. 
-    2. **Nuget** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **Add**  ->  **새 항목**추가를 선택한 다음 XML 파일을 선택 하 고 이름을 **SimpleMathProjection. nuspec**로 선택 합니다. 
+    1. **솔루션 탐색기** 에서 **SimpleMathProjection** 노드를 마우스 오른쪽 단추로 클릭 하 고 **Add** ,  ->  **새 폴더** 추가를 선택 하 고, 폴더 이름을 **nuget** 로 합니다. 
+    2. **Nuget** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **Add**  ->  **새 항목** 추가를 선택한 다음 XML 파일을 선택 하 고 이름을 **SimpleMathProjection. nuspec** 로 선택 합니다. 
 
 2. **SimpleMathProjection** 에 다음을 추가 하 여 패키지를 자동으로 생성 합니다. 이러한 속성은 `NuspecFile` NuGet 패키지를 생성 하는 및 디렉터리를 지정 합니다.
 
@@ -206,21 +206,21 @@ Interop 어셈블리를 배포 하 고 사용 하기 위해 몇 가지 추가 �
 
 ## <a name="build-the-solution-to-generate-the-projection-and-nuget-package"></a>프로젝션 및 NuGet 패키지를 생성 하는 솔루션 빌드
 
-이제 솔루션을 빌드할 수 있습니다. 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고 **솔루션 빌드**를 선택 합니다. 그러면 먼저 구성 요소 프로젝트와 프로젝션 프로젝트가 빌드됩니다. Interop **.cs** 파일 및 어셈블리는 구성 요소 프로젝트의 메타 데이터 파일 외에도 출력 디렉터리에 생성 됩니다. 또한 **nuget** 폴더에 생성 된 Nuget 패키지 **simplemathcomponent 0.1.0** 를 볼 수 있습니다.
+이제 솔루션을 빌드할 수 있습니다. 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고 **솔루션 빌드** 를 선택 합니다. 그러면 먼저 구성 요소 프로젝트와 프로젝션 프로젝트가 빌드됩니다. Interop **.cs** 파일 및 어셈블리는 구성 요소 프로젝트의 메타 데이터 파일 외에도 출력 디렉터리에 생성 됩니다. 또한 **nuget** 폴더에 생성 된 Nuget 패키지 **simplemathcomponent 0.1.0** 를 볼 수 있습니다.
 
 ![프로젝션 생성을 보여 주는 솔루션 탐색기](images/projection-generated-files.png)
 
-## <a name="referencethenugetpackage-inacnet50consoleapplication"></a>C # .NET 5.0 콘솔 응용 프로그램에서 NuGet 패키지 참조
+## <a name="reference-the-nuget-package-in-a-c-net-50-console-application"></a>C # .NET 5.0 콘솔 응용 프로그램에서 NuGet 패키지 참조
 
-투영 된 **SimpleMathComponent**을 사용 하기 위해 응용 프로그램에서 새로 만든 NuGet 패키지에 대 한 참조를 간단히 추가할 수 있습니다. 다음 단계에서는 별도의 솔루션에서 간단한 콘솔 앱을 만들어이 작업을 수행 하는 방법을 보여 줍니다.
+투영 된 **SimpleMathComponent** 을 사용 하기 위해 응용 프로그램에서 새로 만든 NuGet 패키지에 대 한 참조를 간단히 추가할 수 있습니다. 다음 단계에서는 별도의 솔루션에서 간단한 콘솔 앱을 만들어이 작업을 수행 하는 방법을 보여 줍니다.
 
 1. **콘솔 앱 (.Net Core)** 프로젝트를 사용 하 여 새 솔루션을 만듭니다.
 
-    1. Visual Studio에서 **파일** -> **새로 만들기** -> **프로젝트**를 선택합니다.
-    2. **새 프로젝트 추가 대화 상자**에서 **콘솔 앱 (.net Core)** 프로젝트 템플릿을 검색 합니다. 템플릿을 선택 하 고 **다음**을 클릭 합니다.
-    3. 새 프로젝트의 이름을 **SampleConsoleApp** 하 고 **만들기**를 클릭 합니다. 새 솔루션에서이 프로젝트를 만들면 **SimpleMathComponent** NuGet 패키지를 별도로 복원할 수 있습니다.
+    1. Visual Studio에서 **파일** -> **새로 만들기** -> **프로젝트** 를 선택합니다.
+    2. **새 프로젝트 추가 대화 상자** 에서 **콘솔 앱 (.net Core)** 프로젝트 템플릿을 검색 합니다. 템플릿을 선택 하 고 **다음** 을 클릭 합니다.
+    3. 새 프로젝트의 이름을 **SampleConsoleApp** 하 고 **만들기** 를 클릭 합니다. 새 솔루션에서이 프로젝트를 만들면 **SimpleMathComponent** NuGet 패키지를 별도로 복원할 수 있습니다.
 
-2. **솔루션 탐색기**에서 **SampleConsoleApp** 노드를 두 번 클릭 하 여 **SampleConsoleApp** 프로젝트 파일을 열고 다음 예제와 같이 대상 프레임 워크 모니커 및 플랫폼 구성을 업데이트 합니다.
+2. **솔루션 탐색기** 에서 **SampleConsoleApp** 노드를 두 번 클릭 하 여 **SampleConsoleApp** 프로젝트 파일을 열고 다음 예제와 같이 대상 프레임 워크 모니커 및 플랫폼 구성을 업데이트 합니다.
 
     ```xml
     <PropertyGroup>
@@ -247,10 +247,10 @@ Interop 어셈블리를 배포 하 고 사용 하기 위해 몇 가지 추가 �
 
     이 연습에서는 **SimpleMathComponent** 에 대 한 NuGet 복원 경로가 두 솔루션 파일이 동일한 디렉터리에 있다고 가정 합니다. 또는 [로컬 NuGet 패키지 피드](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-visual-studio#package-sources) 를 솔루션에 추가할 수 있습니다.
 
-4. **SimpleMathComponent**에서 제공 하는 기능을 사용 하도록 **Program.cs** 파일을 편집 합니다.
+4. **SimpleMathComponent** 에서 제공 하는 기능을 사용 하도록 **Program.cs** 파일을 편집 합니다.
 
     ```csharp
-    static void Main(string[] args)
+    static void Main(string[] args)
     {
         var x = new SimpleMathComponent.SimpleMath();
         Console.WriteLine("Adding 5.5 + 6.5 ...");

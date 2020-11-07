@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림 메시지 보내기, 알림, 알림 보내기, 알림 메시지, 방법, 빠른 시작, 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: b532e041ffbbcf4a2ecac0e3386430b65d833f2d
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: 4142fb3d036bb19eb652ca9048a70325eb64b17d
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93034486"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339811"
 ---
 # <a name="send-a-local-toast-notification-from-uwp-apps"></a>UWP 앱에서 로컬 알림 메시지 보내기
 
@@ -262,7 +262,7 @@ var content = new ToastContentBuilder()
 
 알림 (또는 알림 내부의 단추)에서 백그라운드 활성화를 지정 하면 포그라운드 앱을 활성화 하는 대신 백그라운드 작업이 실행 됩니다.
 
-백그라운드 작업에 대 한 자세한 내용은 [백그라운드 작업을 사용 하 여 앱 지원](/windows/uwp/launch-resume/support-your-app-with-background-tasks)을 참조 하세요.
+백그라운드 작업에 대 한 자세한 내용은 [백그라운드 작업을 사용 하 여 앱 지원](../../../launch-resume/support-your-app-with-background-tasks.md)을 참조 하세요.
 
 빌드 14393 이상을 대상으로 하는 경우 처리 중인 백그라운드 작업을 사용 하 여 작업을 크게 간소화할 수 있습니다. In-process 백그라운드 작업은 이전 버전의 Windows에서 실행 되지 않습니다. 이 코드 샘플에서는 in-process 백그라운드 작업을 사용 합니다.
 
@@ -348,9 +348,9 @@ ToastNotificationManager.CreateToastNotifier().Show(notif);
 
 보내는 알림을 프로그래밍 방식으로 제거 하거나 교체 하려는 경우에는 Tag 속성 (필요한 경우 그룹 속성)을 사용 하 여 알림에 대 한 기본 키를 제공 해야 합니다. 그런 다음 나중에이 기본 키를 사용 하 여 알림을 제거 하거나 바꿀 수 있습니다.
 
-이미 제공 된 알림 메시지를 교체/제거 하는 방법에 대 한 자세한 내용은 빠른 시작: 알림 메시지 [관리 센터 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10))를 참조 하세요.
+이미 제공 된 알림 메시지를 교체/제거 하는 방법에 대 한 자세한 내용은 빠른 시작: 알림 메시지 [관리 센터 (XAML)](/previous-versions/windows/apps/dn631260(v=win.10))를 참조 하세요.
 
-태그 및 그룹 결합은 복합 기본 키로 작동 합니다. Group은 보다 일반적인 식별자로, "wallPosts", "messages", "friendRequests" 등의 그룹을 할당할 수 있습니다. 그런 다음 태그는 그룹 내에서 알림 자체를 고유 하 게 식별 해야 합니다. 일반 그룹을 사용 하면 [REMOVEGROUP API](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_)를 사용 하 여 해당 그룹에서 모든 알림을 제거할 수 있습니다.
+태그 및 그룹 결합은 복합 기본 키로 작동 합니다. Group은 보다 일반적인 식별자로, "wallPosts", "messages", "friendRequests" 등의 그룹을 할당할 수 있습니다. 그런 다음 태그는 그룹 내에서 알림 자체를 고유 하 게 식별 해야 합니다. 일반 그룹을 사용 하면 [REMOVEGROUP API](/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_)를 사용 하 여 해당 그룹에서 모든 알림을 제거할 수 있습니다.
 
 ```csharp
 // Create toast content
@@ -381,10 +381,10 @@ UWP 앱은 자체 알림을 제거 하 고 제거 해야 합니다. 앱이 시�
 
 1. 사용자가 대화의 새 메시지에 대해 여러 알림을를 수신 합니다.
 2. 사용자가 이러한 알림을 중 하나를 탭 하 여 대화를 엽니다.
-3. 앱은 대화를 연 다음 해당 대화에 대해 앱에서 제공 하는 그룹에서 [Removegroup](https://docs.microsoft.com/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_) 을 사용 하 여 해당 대화에 대 한 모든 알림을를 지웁니다.
+3. 앱은 대화를 연 다음 해당 대화에 대해 앱에서 제공 하는 그룹에서 [Removegroup](/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_) 을 사용 하 여 해당 대화에 대 한 모든 알림을를 지웁니다.
 4. 이제 사용자의 작업 센터는 알림 상태를 올바르게 반영 합니다. 해당 대화에 대 한 부실 알림이 작업 센터에 남아 있기 때문입니다.
 
-모든 알림을 지우거 나 특정 알림을 제거 하는 방법에 대 한 자세한 내용은 [빠른 시작: 동작 센터에서 알림 메시지 관리 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/dn631260(v=win.10))를 참조 하세요.
+모든 알림을 지우거 나 특정 알림을 제거 하는 방법에 대 한 자세한 내용은 [빠른 시작: 동작 센터에서 알림 메시지 관리 (XAML)](/previous-versions/windows/apps/dn631260(v=win.10))를 참조 하세요.
 
 ```csharp
 ToastNotificationManager.History.Clear();

@@ -5,12 +5,12 @@ ms.date: 10/25/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e00e3de9445a8b7c63ebaead70173c29b637b54
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9fa73c6fdd0a0cac69cb485d3426ddfc327591bd
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166327"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339671"
 ---
 # <a name="my-people-notifications"></a>내 피플 알림
 
@@ -20,10 +20,10 @@ ms.locfileid: "89166327"
 
 ## <a name="requirements"></a>요구 사항
 
-+ Windows 10 및 Microsoft Visual Studio 2019. 설치에 대 한 자세한 내용은 [Visual Studio를 사용 하 여 설정 가져오기](../get-started/get-set-up.md)를 참조 하세요.
++ Windows 10 및 Microsoft Visual Studio 2019. 설치에 대 한 자세한 내용은 [Visual Studio를 사용 하 여 설정 가져오기](/windows/apps/get-started/get-set-up)를 참조 하세요.
 + C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. C #을 시작 하려면 ["Hello, 세계" 앱 만들기](../get-started/create-a-hello-world-app-xaml-universal.md)를 참조 하세요.
 
-## <a name="how-it-works"></a>작동 방법
+## <a name="how-it-works"></a>작동 방식
 
 일반적인 알림 메시지에 대 한 대 안으로, 이제 내 사용자 기능을 통해 알림을 보내 사용자에 게 보다 개인적인 환경을 제공할 수 있습니다. 이는 사용자의 작업 표시줄에 고정 된 연락처에서 내 사용자 기능과 함께 전송 되는 새로운 종류의 알림입니다. 알림이 수신 되 면 발신자의 연락처 그림이 작업 표시줄에 애니메이션 효과를 주고 알림이 시작 됨을 알리는 소리가 재생 됩니다. 페이로드에 지정 된 애니메이션이 나 이미지는 5 초 동안 표시 됩니다. 즉, 페이로드가 5 초 미만의 애니메이션 인 경우 5 초가 경과할 때까지 반복 됩니다.
 
@@ -68,11 +68,11 @@ experienceType="shoulderTap"
 또한 최상위 알림 노드에는 보내는 연락처를 지정 하기 위한 **hint** 매개 변수가 포함 되어야 합니다. 이 매개 변수는 다음 값을 가질 수 있습니다.
 
 + **메일 주소** 
-    + 예를 들어 ` mailto:johndoe@mydomain.com `
+    + 예: ` mailto:johndoe@mydomain.com `
 + **전화 번호** 
-    + 예를 들어 tel: 888-888-8888
+    + 예: tel: 888-888-8888
 + **원격 ID** 
-    + 예를 들어 remoteid: 1234
+    + 예: remoteid: 1234
 
 > [!NOTE]
 > 앱이 지 속성 [저장소 api](/uwp/api/windows.applicationmodel.contacts.contactstore) 를 사용 하 고 [StoredContact](/uwp/api/Windows.Phone.PersonalInformation.StoredContact.RemoteId) 속성을 사용 하 여 PC에 저장 된 연락처를 원격으로 저장 된 연락처와 연결 하는 경우 RemoteId 속성의 값을 안정적이 고 고유 하 게 설정 하는 것이 중요 합니다. 즉, 원격 ID는 단일 사용자 계정을 지속적으로 식별 해야 하며, 다른 앱에서 소유 하는 연락처를 비롯 하 여 PC의 다른 연락처에 대 한 원격 Id와 충돌 하지 않도록 보장 하는 고유한 태그를 포함 해야 합니다.

@@ -5,12 +5,12 @@ ms.date: 06/28/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 2eea2d228ddf5ad6dfaef227bfaeb0bafb071490
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 8c0e174613357ad9e4e45d2776f3fbc618535b30
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170497"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339461"
 ---
 # <a name="adding-my-people-support-to-an-application"></a>애플리케이션에 내 피플 지원 추가
 
@@ -23,7 +23,7 @@ ms.locfileid: "89170497"
 
 ## <a name="requirements"></a>요구 사항
 
-+ Windows 10 및 Microsoft Visual Studio 2019. 설치에 대 한 자세한 내용은 [Visual Studio를 사용 하 여 설정 가져오기](../get-started/get-set-up.md)를 참조 하세요.
++ Windows 10 및 Microsoft Visual Studio 2019. 설치에 대 한 자세한 내용은 [Visual Studio를 사용 하 여 설정 가져오기](/windows/apps/get-started/get-set-up)를 참조 하세요.
 + C# 또는 유사한 개체 중심 프로그래밍 언어에 대한 기본 지식. C #을 시작 하려면 ["Hello, 세계" 앱 만들기](../get-started/create-a-hello-world-app-xaml-universal.md)를 참조 하세요.
 
 ## <a name="overview"></a>개요
@@ -38,7 +38,7 @@ ms.locfileid: "89170497"
 
 ## <a name="declaring-support-for-the-contract"></a>계약에 대 한 지원 선언
 
-내 사용자 계약에 대 한 지원을 선언 하려면 Visual Studio에서 응용 프로그램을 엽니다. **솔루션 탐색기**에서 **appxmanifest.xml** 을 마우스 오른쪽 단추로 클릭 하 고 **연결 프로그램**을 선택 합니다. 메뉴에서 **XML (텍스트) 편집기)** 를 선택 하 고 **확인**을 클릭 합니다. 매니페스트를 다음과 같이 변경 합니다.
+내 사용자 계약에 대 한 지원을 선언 하려면 Visual Studio에서 응용 프로그램을 엽니다. **솔루션 탐색기** 에서 **appxmanifest.xml** 을 마우스 오른쪽 단추로 클릭 하 고 **연결 프로그램** 을 선택 합니다. 메뉴에서 **XML (텍스트) 편집기)** 를 선택 하 고 **확인** 을 클릭 합니다. 매니페스트를 다음과 같이 변경 합니다.
 
 **이전**
 
@@ -76,7 +76,7 @@ ms.locfileid: "89170497"
 
 ```
 
-이 외에도 이제 windows를 통해 응용 프로그램을 시작할 수 있습니다 **. ** 연락처 패널과 상호 작용할 수 있게 해 주는 연락처 패널 계약입니다.
+이 외에도 이제 windows를 통해 응용 프로그램을 시작할 수 있습니다 **.** 연락처 패널과 상호 작용할 수 있게 해 주는 연락처 패널 계약입니다.
 
 ## <a name="annotating-contacts"></a>연락처에 주석 달기
 
@@ -188,11 +188,11 @@ override protected void OnActivated(IActivatedEventArgs e)
 
 연락처를 배지 하려면 최상위 알림 노드에 전송 또는 관련 연락처를 나타내는 hint 매개 변수를 포함 해야 합니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.
 + **메일 주소** 
-    + 예를 들어 mailto:johndoe@mydomain.com
+    + 예: mailto:johndoe@mydomain.com
 + **전화 번호** 
-    + 예를 들어 tel: 888-888-8888
+    + 예: tel: 888-888-8888
 + **원격 ID** 
-    + 예를 들어 remoteid: 1234
+    + 예: remoteid: 1234
 
 다음은 특정 사용자와 관련 된 알림 메시지를 식별 하는 방법의 예입니다.
 ```XML
@@ -220,7 +220,7 @@ PinnedContactManager pinnedContactManager = PinnedContactManager.GetDefault();
 ```
 
 ## <a name="pinning-and-unpinning-contacts"></a>연락처 고정 및 고정 해제
-이제 방금 만든 PinnedContactManager를 사용 하 여 연락처를 고정 및 고정 해제할 수 있습니다. **RequestPinContactAsync** 및 **RequestUnpinContactAsync** 메서드는 사용자에 게 확인 대화 상자를 제공 하므로 응용 프로그램의 단일 스레드 아파트 (ASTA 또는 UI) 스레드에서 호출 해야 합니다.
+이제 방금 만든 PinnedContactManager를 사용 하 여 연락처를 고정 및 고정 해제할 수 있습니다. **RequestPinContactAsync** 및 **RequestUnpinContactAsync** 메서드는 사용자에 게 확인 대화 상자를 제공 하므로 응용 프로그램 Single-Threaded 아파트 (ASTA 또는 UI) 스레드에서 호출 해야 합니다.
 
 ```Csharp
 async void PinContact (Contact contact)

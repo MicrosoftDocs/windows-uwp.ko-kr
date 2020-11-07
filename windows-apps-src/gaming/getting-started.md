@@ -6,14 +6,14 @@ ms.date: 01/25/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 시작
 localizationpriority: medium
-ms.openlocfilehash: 7d3e50f5d32cd8c6a497ff3de67005972d3a0f7f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 3368186fdf860df48d7ae49e08d47e1abf667aa3
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175317"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339451"
 ---
-# <a name="getting-started"></a>시작하기
+# <a name="getting-started"></a>시작
 
 이 문서는 Windows 또는 Xbox에서 게임을 개발 하려는 작성자를 위한 시작 가이드입니다. 
 
@@ -37,7 +37,7 @@ Visual Studio와 같은 적합 한 IDE를 설치 합니다. Visual Studio Commun
 
 ### <a name="step-2-prepare-your-hardware-for-development"></a>2 단계: 개발을 위한 하드웨어 준비
 
-처음으로 개발 하는 경우 장치에서 개발자 모드를 사용 하도록 설정 해야 합니다. 자세한 내용은 [개발에 디바이스 사용](../get-started/enable-your-device-for-development.md)을 참조하세요.
+처음으로 개발 하는 경우 장치에서 개발자 모드를 사용 하도록 설정 해야 합니다. 자세한 내용은 [개발에 디바이스 사용](/windows/apps/get-started/enable-your-device-for-development)을 참조하세요.
 
 소매 Xbox 본체를 사용 하 여 Xbox 게임을 개발 하려는 사용자의 경우 개발자 모드를 활성화 하 고 활성화 해야 합니다. 자세한 내용은 xbox [One Developer 모드 정품 인증](../xbox-apps/devkit-activation.md) 및 [xbox에서 UWP 앱 개발 시작](../xbox-apps/getting-started.md)을 참조 하세요. 
 
