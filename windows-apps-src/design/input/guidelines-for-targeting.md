@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: a8b6113294d3f3c0c98946f0fed407e36de8a563
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: c0f18feed166ea775f540a28fd873d7e81083cf0
+ms.sourcegitcommit: 4fffc66fac18fc4c80281e2a4afa9c4f2e1f7551
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035066"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94513692"
 ---
 # <a name="guidelines-for-touch-targets"></a>터치 대상에 대한 지침
 
@@ -40,7 +40,7 @@ ms.locfileid: "93035066"
 
 응용 프로그램은 *흐름 Compact 크기 조정* 으로 높은 수준의 정보 밀도를 표시할 수 있습니다. 압축 크기 조정은 UI 요소를 32x32 window.epx.codesnippet 대상에 맞추고,이를 통해 UI 요소를 보다 엄격한 모눈에 맞추고 시스템 수준 크기 조정에 따라 적절 하 게 확장할 수 있습니다.
 
-### <a name="examples"></a>예
+### <a name="examples"></a>예제
 
 컴팩트 크기 조정은 페이지 또는 그리드 수준에서 적용할 수 있습니다.
 
@@ -75,7 +75,7 @@ ms.locfileid: "93035066"
 - 핑거 상태.
 - 터치 시각화.
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [Windows 앱 디자인 소개](../basics/design-and-ui-intro.md)
 - [컨트롤 크기 및 밀도](../style/spacing.md)
@@ -95,6 +95,5 @@ ms.locfileid: "93035066"
 - [입력: 터치 적중 테스트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
 - [XAML 스크롤, 패닝 및 확대/축소 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
 - [입력: 간소화 된 잉크 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
-- [입력: Windows 8 제스처 샘플](/samples/browse/?redirectedfrom=MSDN-samples)
 * [Input: 조작 및 제스처 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
 - [DirectX touch 입력 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))

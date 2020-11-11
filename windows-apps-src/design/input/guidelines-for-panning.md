@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 0a989a6a96ac42b1eb790b6ac0dd223bd55b1bb8
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: f8e1208f023a28621c3f98536f77d36a962343bb
+ms.sourcegitcommit: 4fffc66fac18fc4c80281e2a4afa9c4f2e1f7551
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93035126"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94513722"
 ---
 # <a name="guidelines-for-panning"></a>패닝에 대 한 지침
 
@@ -38,7 +38,7 @@ ms.locfileid: "93035126"
 
 **단일 축 패닝 (1 차원 오버플로)**
 
--   하나의 뷰포트 경계 (세로 또는 가로) 이상으로 확장 되는 콘텐츠 영역에 대해 1 축 이동을 사용 합니다.
+-   하나의 뷰포트 경계(세로 또는 가로)를 넘어가는 콘텐츠 영역에는 단일 축 이동을 사용합니다.
 
     -   항목의 1 차원 목록에 대해 세로 방향으로 이동 합니다.
     -   항목 그리드를 위한 가로 패닝
@@ -46,7 +46,7 @@ ms.locfileid: "93035126"
 
 **자유형 패닝 (2 차원 오버플로)**
 
--   뷰포트 경계 (세로 및 가로) 이상으로 확장 되는 콘텐츠 영역에 대해 2 축 이동을 사용 합니다.
+-   두 뷰포트 경계(세로 또는 가로)를 모두 넘어가는 콘텐츠 영역에는 2축 이동을 사용합니다.
 
     -   기본 레일 동작을 재정의 하 고 사용자가 여러 방향으로 이동할 가능성이 높은 구조화 되지 않은 콘텐츠에 대해 자유형 이동을 사용 합니다.
 -   자유형 패닝은 일반적으로 이미지나 맵 내에서 탐색 하는 데 적합 합니다.
@@ -179,7 +179,7 @@ Pannable 지역이 다른 pannable 지역 안에 중첩 된 경우 컨테이너�
 
 이 지침은 앨범 (이전 또는 다음 이미지) 또는 세부 정보 영역에서 단일 축 이동을 지 원하는 한편 개별 이미지 또는 지도 내에서 제한 되지 않은 이동을 지 원하는 사진 앨범 또는 앱 매핑과 같은 앱에도 유용 합니다. 자유형 패닝 이미지 또는 맵에 해당 하는 세부 정보 또는 옵션 영역을 제공 하는 앱에서는 이미지 또는 맵의 제한 되지 않은 이동 영역이 세부 정보 영역으로 이동 하는 것을 방해할 수 있으므로 페이지 레이아웃을 세부 정보 및 옵션 영역으로 시작 하는 것이 좋습니다.
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [사용자 지정 사용자 조작](../layout/index.md)
 - [ListView 및 GridView 최적화](../../debug-test-perf/optimize-gridview-and-listview.md)
@@ -197,6 +197,5 @@ Pannable 지역이 다른 pannable 지역 안에 중첩 된 경우 컨테이너�
 - [입력: 터치 적중 테스트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20desktop%20samples/%5BC%2B%2B%5D-Windows%208%20desktop%20samples/C%2B%2B/Windows%208%20desktop%20samples/Input%20Touch%20hit%20testing%20sample)
 - [XAML 스크롤, 패닝 및 확대/축소 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Universal%20Windows%20app%20samples/111487-Universal%20Windows%20app%20samples/XAML%20scrolling%2C%20panning%2C%20and%20zooming%20sample)
 - [입력: 간소화 된 잉크 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Simplified%20ink%20sample)
-- [입력: Windows 8 제스처 샘플](/samples/browse/?redirectedfrom=MSDN-samples)
 - [Input: 조작 및 제스처 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Input%20Gestures%20and%20manipulations%20with%20GestureRecognizer)
 - [DirectX touch 입력 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/DirectX%20touch%20input%20sample%20(Windows%208))
