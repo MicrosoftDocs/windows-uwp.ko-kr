@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 78ccbe1f18167c318ffa38f3614cfab61782d147
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: 1f6474170967986bfee555eb07d7ea41601e9e48
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93032446"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339761"
 ---
 # <a name="introduction-to-windows-app-design"></a>Windows 앱 디자인 소개
 
@@ -162,7 +162,7 @@ UWP 앱은 스마트 상호 작용을 사용합니다. 클릭이 마우스, 스�
 
 - XD, Illustrator, Photoshop, Framer, Sketch와 추가 디자인 도구 및 글꼴 다운로드는 [디자인 도구 키트 페이지](../downloads/index.md)를 참조하세요.
 
-- UWP 앱을 코딩하도록 머신을 설정하는 방법은 [시작하기 &gt; 설정하기](../../get-started/get-set-up.md) 문서를 참조하세요.
+- UWP 앱을 코딩하도록 머신을 설정하는 방법은 [시작하기 &gt; 설정하기](/windows/apps/get-started/get-set-up) 문서를 참조하세요.
 
 - UWP용 UI 구현 방법에 대한 영감을 얻으려면 엔드투엔드 [샘플 UWP 앱](https://developer.microsoft.com/windows/samples)을 살펴보세요.
 

@@ -4,12 +4,12 @@ description: 소프트웨어 패키지를 Windows 패키지 관리자 리포지�
 ms.date: 04/29/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a3a1acebf2b48e767fbd16998967145976305434
-ms.sourcegitcommit: 94841d1d59703897b42b11597c28a9d966626f47
+ms.openlocfilehash: c0c01d87dc7e02b356a4fba20b01519e3361b28a
+ms.sourcegitcommit: 36ae65013da22930c8e838fc65a63564a0bafee2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91110571"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94377799"
 ---
 # <a name="create-your-package-manifest"></a>패키지 매니페스트 만들기
 
@@ -31,7 +31,7 @@ ms.locfileid: "91110571"
 이 문서에서 사용되는 규칙은 다음과 같습니다.
 
 * `:`의 왼쪽은 매니페스트 정의에 사용되는 리터럴 키워드입니다.
-* `:`의 오른쪽은 데이터 형식입니다. 데이터 형식은 **string**과 같은 기본 형식이거나 이 문서의 다른 곳에 정의된 다양한 구조체에 대한 참조일 수 있습니다.
+* `:`의 오른쪽은 데이터 형식입니다. 데이터 형식은 **string** 과 같은 기본 형식이거나 이 문서의 다른 곳에 정의된 다양한 구조체에 대한 참조일 수 있습니다.
 * `[` *datatype* `]` 표기법은 언급된 데이터 형식의 배열을 나타냅니다. 예를 들어 `[ string ]`은 문자열 배열입니다.
 * `{` *datatype* `:` *datatype* `}` 표기법은 한 데이터 형식과 다른 데이터 형식의 매핑을 나타냅니다. 예를 들어 `{ string: string }`은 문자열에 대한 문자열의 매핑입니다.
 
@@ -166,7 +166,7 @@ ManifestVersion: 0.1.0
 
 ## <a name="installer-switches"></a>설치 관리자 스위치
 
-종종 명령줄에서 `-?`를 설치 관리자에 전달하여 설치 관리자에 사용할 수 있는 자동 `Switches`를 확인할 수 있습니다. 다음은 다양한 설치 관리자 유형에 사용할 수 있는 일반적인 자동 `Swtiches`입니다.
+종종 명령줄에서 `-?`를 설치 관리자에 전달하여 설치 관리자에 사용할 수 있는 자동 `Switches`를 확인할 수 있습니다. 다음은 다양한 설치 관리자 유형에 사용할 수 있는 일반적인 자동 `Switches`입니다.
 
 | 설치 관리자 | 명령  | 문서 |  
 | :--- | :-- | :--- |  
@@ -177,7 +177,7 @@ ManifestVersion: 0.1.0
 
 ## <a name="tips-and-best-practices"></a>팁 및 모범 사례
 
-* 소프트웨어를 찾아서 설치할 때 최상의 고객 환경을 위해 필수 스키마 이외의 선택 항목을 최대한 많이 포함하는 것이 좋습니다. 예를 들어 `AppMoniker` 필드는 선택 사항입니다. 그러나 이 필드를 포함하는 경우 [search](../winget/search.md) 명령을 수행하면 `AppMoniker` 값과 관련된 결과가 표시됩니다(예:  **Visual Studio Code**의 경우 **vscode**). 지정된 `AppMoniker` 값의 앱이 하나만 있으면 고객은 정규화된 ID가 아니라 모니커를 지정하여 애플리케이션을 설치할 수 있습니다.
+* 소프트웨어를 찾아서 설치할 때 최상의 고객 환경을 위해 필수 스키마 이외의 선택 항목을 최대한 많이 포함하는 것이 좋습니다. 예를 들어 `AppMoniker` 필드는 선택 사항입니다. 그러나 이 필드를 포함하는 경우 [search](../winget/search.md) 명령을 수행하면 `AppMoniker` 값과 관련된 결과가 표시됩니다(예:  **Visual Studio Code** 의 경우 **vscode** ). 지정된 `AppMoniker` 값의 앱이 하나만 있으면 고객은 정규화된 ID가 아니라 모니커를 지정하여 애플리케이션을 설치할 수 있습니다.
 * `Id`는 고유해야 합니다. 동일한 패키지 식별자를 사용하는 제출이 여러 개 있을 수 없습니다. 공백을 사용하지 않습니다. 이렇게 하면 [winget](../index.md) 클라이언트를 사용하는 경우 사용자가 `Id` 주위에 따옴표를 배치해야 합니다.
 * 여러 게시자 폴더를 만들지 않습니다. 예를 들어 "Contoso" 폴더가 이미 있으면 "Contoso Ltd"를 만들지 않습니다. 폴더를 만드는 경우에도 공백을 사용하지 않습니다.
 * 가능한 경우 자동 설치를 사용하여 모든 패키지를 제출해야 합니다. 자동 설치를 지원하지 않는 실행 파일이 있으면 사용자 환경이 줄어듭니다.

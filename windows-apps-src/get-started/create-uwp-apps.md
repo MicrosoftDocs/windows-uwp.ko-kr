@@ -5,12 +5,12 @@ ms.date: 05/07/2018
 ms.topic: article
 keywords: windows 10, uwp, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: a9230df47c9929ee902fc8e0b93f7de7a5ef70df
-ms.sourcegitcommit: 56e9cab45d1c6e54841d61fdf23044fa01f50c43
+ms.openlocfilehash: 143e393a72aa24f81561e792148e4cc8b39bdeb4
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92011361"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339801"
 ---
 # <a name="start-coding"></a>코딩 시작
 
@@ -57,7 +57,7 @@ Windows 10에 익숙한 경험 있는 개발자를 위해 모든 학습 트랙�
 
 | 영역 | 설명 |
 | --- | --- |
-| **새로운 기능** | Windows 10의 각 주요 업데이트와 함께 새로운 지침으로 확장된 문서를 볼 수 있습니다. 이 문서에는 각 릴리스에 대해 추가한 기능에 대한 정보 및 개발자 지침뿐만 아니라 새 API 목록이 들어 있습니다. </br>   [최신 Windows 10 릴리스의 개발자용 새로운 기능](../whats-new/windows-10-version-latest.md) |
+| **새로운 기능** | Windows 10의 각 주요 업데이트와 함께 새로운 지침으로 확장된 문서를 볼 수 있습니다. 이 문서에는 각 릴리스에 대해 추가한 기능에 대한 정보 및 개발자 지침뿐만 아니라 새 API 목록이 들어 있습니다. </br>   [최신 Windows 10 릴리스의 개발자용 새로운 기능](../whats-new/windows-10-build-19041.md) |
 | **디자인 및 UI** | 시각적 표현 및 앱의 UI에 대한 모든 정보가 이 문서 영역에 포함되어 있습니다. XAML Markup Language의 구체적인 내용이 궁금하거나 문서에 독창적인 디자인을 만들려면 여기에서 시작하세요. </br>   [UWP 앱에 대한 디자인 기본 사항](../design/basics/index.md) |
 | **앱 개발** | 특정 Windows 10 기능에 대한 자세한 정보를 싶거나 UWP 개발로 수행할 수 있는 작업에 관심 있는 경우 문서의 이 영역을 살펴보세요. </br>   [UWP 앱 기능](../develop/index.md). </br> Windows 10 앱에 대한 API 참조는 일련의 관련 문서에서 호스트되며, 여기서 확인할 수 있습니다. </br>   [Windows UWP 네임스페이스](/uwp/api/) </br>   [파일 및 XML 스키마](/uwp/schemas/) |
 | **게임 개발** | 이 문서는 Windows 또는 Xbox에서 게임을 개발하는 방법에 대한 정보를 포함합니다. 설치 지침, 개발자 프로그램 및 DirectX 또는 Xbox 기능을 사용하여 프로그래밍하는 지침을 포함합니다. </br>   [게임 개발 시작](../gaming/getting-started.md) |

@@ -7,12 +7,12 @@ ms.topic: article
 ms.custom: contperfq1
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: f06a3c933060a7309604ae8dec49455ac3bd02ab
-ms.sourcegitcommit: 41dbee78d827107c224a9136c26f90be4dfe12ad
+ms.openlocfilehash: 1618b2de1f0db96989a7aedf5b53805fd70f535e
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90845572"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339571"
 ---
 # <a name="device-portal-for-windows-desktop"></a>Windows 데스크톱의 장치 포털
 
@@ -32,14 +32,14 @@ Device Portal을 사용하여 다음 작업을 수행할 수 있습니다.
 
 ### <a name="turn-on-developer-mode"></a>개발자 모드 켜기
 
-Windows 10 1607 버전부터 데스크톱의 새로운 기능 중 일부는 개발자 모드를 켜야만 사용할 수 있습니다. 개발자 모드를 켜는 방법에 대한 내용은 [디바이스를 개발에 사용하도록 설정](../get-started/enable-your-device-for-development.md)을 참조하세요.
+Windows 10 1607 버전부터 데스크톱의 새로운 기능 중 일부는 개발자 모드를 켜야만 사용할 수 있습니다. 개발자 모드를 켜는 방법에 대한 내용은 [디바이스를 개발에 사용하도록 설정](/windows/apps/get-started/enable-your-device-for-development)을 참조하세요.
 
 > [!IMPORTANT]
-> 경우에 따라 네트워크 또는 호환성 문제로 인해 디바이스에 개발자 모드가 제대로 설치되지 않을 수 있습니다. 이러한 문제 해결에 대한 도움말은 [디바이스를 개발에 사용하도록 설정의 관련 섹션](../get-started/enable-your-device-for-development.md#failure-to-install-developer-mode-package)을 참조하세요.
+> 경우에 따라 네트워크 또는 호환성 문제로 인해 디바이스에 개발자 모드가 제대로 설치되지 않을 수 있습니다. 이러한 문제 해결에 대한 도움말은 [디바이스를 개발에 사용하도록 설정의 관련 섹션](/windows/apps/get-started/enable-your-device-for-development#failure-to-install-developer-mode-package)을 참조하세요.
 
 ### <a name="turn-on-device-portal"></a>장치 포털 켜기
 
-**설정**의 **개발자** 섹션에서 장치 포털을 사용하도록 설정할 수 있습니다. 장치 포털을 사용하도록 설정하는 경우 해당하는 사용자 이름과 암호도 만들어야 합니다. Microsoft 계정 또는 기타 Windows 자격 증명은 사용하지 마세요.
+**설정** 의 **개발자** 섹션에서 장치 포털을 사용하도록 설정할 수 있습니다. 장치 포털을 사용하도록 설정하는 경우 해당하는 사용자 이름과 암호도 만들어야 합니다. Microsoft 계정 또는 기타 Windows 자격 증명은 사용하지 마세요.
 
 ![[설정] 앱의 장치 포털 섹션](images/device-portal/device-portal-desk-settings.png)
 
@@ -52,7 +52,7 @@ Windows 10 1607 버전부터 데스크톱의 새로운 기능 중 일부는 개�
 
 ### <a name="turn-off-device-portal"></a>장치 포털 끄기
 
-**설정**의 **개발자** 섹션에서 장치 포털을 사용하지 않도록 설정할 수 있습니다.
+**설정** 의 **개발자** 섹션에서 장치 포털을 사용하지 않도록 설정할 수 있습니다.
 
 ### <a name="connect-to-device-portal"></a>장치 포털에 연결
 
@@ -132,13 +132,13 @@ Device Portal용 포트 번호(예: 80 및 443)를 선택하려는 경우 다음
 
 Windows 10 시험판 빌드에 개발자 패키지를 설치하려고 할 때 이 오류가 발생할 수 있습니다. 이러한 FoD(주문형 기능) 패키지는 Windows 업데이트에 호스팅되며, 시험판 빌드에서 이 패키지를 다운로드하려면 플라이팅을 옵트인해야 합니다. 설치를 올바른 빌드 및 링 조합에 대한 플라이팅에 옵트인하지 않으면 페이로드가 다운로드되지 않습니다. 다음 사항을 철저하게 확인하세요.
 
-1. **설정 > 업데이트 및 보안 > Windows 참가자 프로그램**으로 이동하여 **Windows 참가자 계정** 섹션의 계정 정보가 올바른지 확인합니다. 이 섹션이 보이지 않으면 **Windows 참가자 계정 연결**을 선택하고, 이메일 계정을 추가하고, 해당 계정이 **Windows 참가자 계정** 제목 아래에 표시되는지 확인합니다(새로 추가된 계정을 실제로 연결하려면 **Windows 참가자 계정 연결**을 한 번 더 선택해야 할 수도 있음).
+1. **설정 > 업데이트 및 보안 > Windows 참가자 프로그램** 으로 이동하여 **Windows 참가자 계정** 섹션의 계정 정보가 올바른지 확인합니다. 이 섹션이 보이지 않으면 **Windows 참가자 계정 연결** 을 선택하고, 이메일 계정을 추가하고, 해당 계정이 **Windows 참가자 계정** 제목 아래에 표시되는지 확인합니다(새로 추가된 계정을 실제로 연결하려면 **Windows 참가자 계정 연결** 을 한 번 더 선택해야 할 수도 있음).
  
 2. **어떤 유형의 콘텐츠를 받으시겠습니까?** 아래에서 **Active development of Windows(진행 중인 Windows 개발)** 를 선택합니다.
  
-3. **어떤 속도로 새 빌드를 받으시겠습니까?** 아래에서 **Windows 초기 참가자**를 선택합니다.
+3. **어떤 속도로 새 빌드를 받으시겠습니까?** 아래에서 **Windows 초기 참가자** 를 선택합니다.
  
-4. 이제 FoD를 설치할 수 있습니다. Windows 초기 참가자에 이름이 있는 것을 확인했지만 여전히 FoD를 설치할 수 없는 경우에는 피드백을 제출하고 **C:\Windows\Logs\CBS**의 로그 파일을 첨부해 주세요.
+4. 이제 FoD를 설치할 수 있습니다. Windows 초기 참가자에 이름이 있는 것을 확인했지만 여전히 FoD를 설치할 수 없는 경우에는 피드백을 제출하고 **C:\Windows\Logs\CBS** 의 로그 파일을 첨부해 주세요.
 
 ### <a name="sc-startservice-openservice-failed-1060-the-specified-service-does-not-exist-as-an-installed-service"></a>[SC] StartService: OpenService 실패 1060: 설치된 서비스 중에는 지정된 서비스가 없습니다.
 

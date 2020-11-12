@@ -6,18 +6,18 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f0a91dd0370b8eda8763b63034d7c3ffaa1acd5
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: 29a6f85dfb13e47617138e401c8444cb5b5f6809
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91763002"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339581"
 ---
 # <a name="device-portal-for-mobile"></a>모바일용 디바이스 포털
 
 Windows 10 버전 1511부터 추가적인 개발자 기능을 모바일 디바이스 패밀리에 사용할 수 있습니다. 이러한 기능은 개발자 모드를 디바이스에서 사용하는 경우에만 사용됩니다.
 
-개발자 모드를 사용하는 방법에 대한 내용은 [개발을 위해 디바이스 사용](../get-started/enable-your-device-for-development.md)을 참조하세요.
+개발자 모드를 사용하는 방법에 대한 내용은 [개발을 위해 디바이스 사용](/windows/apps/get-started/enable-your-device-for-development)을 참조하세요.
 
 ![디바이스 검색 및 장치 포털 설정의 스크린샷.](images/device-portal/mob-dev-mode-options.png)
 

@@ -6,12 +6,12 @@ ms.date: 10/13/2020
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, c#, c + +, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: 7a5491ef0e57399c9465697f933aa8fff92664cd
-ms.sourcegitcommit: 56e9cab45d1c6e54841d61fdf23044fa01f50c43
+ms.openlocfilehash: fe802fca1b17b49c11bf74b54f74d3b3107e6a9c
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92011372"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339771"
 ---
 # <a name="create-your-first-app"></a>첫 번째 앱 만들기
 
@@ -41,7 +41,7 @@ C++/WinRT에 대해 자세히 알아보세요.
 
 * [C++/WinRT](../cpp-and-winrt-apis/index.md)
 
-## <a name="visualc-component-extensions-ccx-and-xaml"></a>Visual C++ 구성 요소 확장(C++/CX) 및 XAML
+## <a name="visual-c-component-extensions-ccx-and-xaml"></a>Visual C++ 구성 요소 확장(C++/CX) 및 XAML
 
 C++ 프로그래밍 전문 지식을 활용하여 Visual C++ 구성 요소 확장(C++/CX) 및 XAML(Extensible Application Markup Language)로 앱을 빌드합니다.
 
@@ -57,7 +57,7 @@ C++ 프로그래밍 전문 지식을 활용하여 Visual C++ 구성 요소 확�
 "Hello, World!"보다 좀 더 재미있는 것을 시도할 준비가 되었다면 다음 자습서를 진행하세요.
 
 * [자습서: 사용자 인터페이스 만들기](../design/basics/xaml-basics-ui.md)
-* [Microsoft Learn의 Windows 앱](https://docs.microsoft.com/learn/browse/?products=windows)
+* [Microsoft Learn의 Windows 앱](/learn/browse/?products=windows)
 
 ## <a name="see-also"></a>참고 항목
 

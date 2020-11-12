@@ -7,12 +7,12 @@ ms.topic: article
 ms.custom: contperfq1
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
-ms.openlocfilehash: f435631b575a06daae9cb4d34c5419e93ba8063f
-ms.sourcegitcommit: 56e9cab45d1c6e54841d61fdf23044fa01f50c43
+ms.openlocfilehash: 3c6fd1f2ebee2e4e3a7d3ceb028f5def19e932c6
+ms.sourcegitcommit: 733d422fa1e3433cde842e2f200d3ef202767cc1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92011355"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94333288"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
@@ -115,7 +115,6 @@ UWP 앱은 운영 체제에서 제공되는 네이티브 API인 Windows 런타�
 - DirectX UI 및 C++
 - JavaScript 및 HTML
 - WinUI
--
 
 ## <a name="links-to-help-you-get-going"></a>실행에 도움이 되는 링크
 

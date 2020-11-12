@@ -6,12 +6,12 @@ ms.date: 03/06/2017
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, Hello world
 ms.localizationpriority: medium
-ms.openlocfilehash: dda1c0f9a7b61c13965ff2f71c8100a8e771bd7d
-ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
+ms.openlocfilehash: b602970b2b1f37a4511e2a87eb1be72fba7f5423
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860072"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339841"
 ---
 # <a name="create-a-hello-world-app-xaml"></a>"Hello, World!" 앱(XAML) 만들기
 
@@ -19,7 +19,7 @@ ms.locfileid: "91860072"
 
 여기에서는 다음에 대한 방법을 알아봅니다.
 
--   **Windows 10** 및 **UWP**를 대상으로 하는 새 **Visual Studio** 프로젝트를 만듭니다.
+-   **Windows 10** 및 **UWP** 를 대상으로 하는 새 **Visual Studio** 프로젝트를 만듭니다.
 -   시작 페이지에서 UI를 변경하는 XAML을 작성합니다.
 -   Visual Studio의 로컬 데스크톱에서 프로젝트를 실행합니다.
 -   SpeechSynthesizer를 사용하여 단추를 누를 때 앱이 말하게 합니다.
@@ -28,7 +28,7 @@ ms.locfileid: "91860072"
 ## <a name="before-you-start"></a>시작하기 전에...
 
 -   [유니버설 Windows 앱이란?](universal-application-platform-guide.md)
--   [Visual Studio 2017(및 Windows 10) 다운로드](https://developer.microsoft.com/windows/downloads). 도움이 필요하면 [설정](get-set-up.md) 방법을 알아보세요.
+-   [Visual Studio 2017(및 Windows 10) 다운로드](https://developer.microsoft.com/windows/downloads). 도움이 필요하면 [설정](/windows/apps/get-started/get-set-up) 방법을 알아보세요.
 -   또한, 여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃이 변경된 경우 **창** 메뉴에서 **창 레이아웃 다시 설정** 명령을 사용하여 다시 설정할 수 있습니다.
 
 > [!NOTE]
@@ -42,24 +42,24 @@ ms.locfileid: "91860072"
 
 1.  Visual Studio를 시작합니다.
 
-2.  **파일** 메뉴에서 **새로 만들기 > 프로젝트**를 선택하여 *새 프로젝트* 대화 상자를 엽니다.
+2.  **파일** 메뉴에서 **새로 만들기 > 프로젝트** 를 선택하여 *새 프로젝트* 대화 상자를 엽니다.
 
-3.  왼쪽에 있는 템플릿 목록에서 **설치됨 > Visual C# > Windows 유니버설**을 선택하여 UWP 프로젝트 템플릿 목록을 표시합니다.
+3.  왼쪽에 있는 템플릿 목록에서 **설치됨 > Visual C# > Windows 유니버설** 을 선택하여 UWP 프로젝트 템플릿 목록을 표시합니다.
 
-    (유니버설 템플릿이 보이지 않으면 UWP 앱을 만들기 위한 구성 요소가 누락된 것일 수 있습니다. 설치 과정을 다시 실행하고 *새 프로젝트* 대화 상자에서 **Visual Studio 설치 관리자 열기**를 클릭하여 UWP 지원을 추가할 수 있습니다. [설정 방법](get-set-up.md)을 참조하세요.)
+    (유니버설 템플릿이 보이지 않으면 UWP 앱을 만들기 위한 구성 요소가 누락된 것일 수 있습니다. 설치 과정을 다시 실행하고 *새 프로젝트* 대화 상자에서 **Visual Studio 설치 관리자 열기** 를 클릭하여 UWP 지원을 추가할 수 있습니다. [설정 방법](/windows/apps/get-started/get-set-up)을 참조하세요.)
 
     ![설치 과정을 다시 실행하는 방법](images/win10-cs-install.png)
 
-4.  **빈 앱(유니버설 Windows)** 템플릿을 선택하고 "HelloWorld"를 **이름**으로 입력합니다. **확인**을 선택합니다.
+4.  **빈 앱(유니버설 Windows)** 템플릿을 선택하고 "HelloWorld"를 **이름** 으로 입력합니다. **확인** 을 선택합니다.
 
     ![새 프로젝트 창](images/win10-cs-01.png)
 
 > [!NOTE]
-> Visual Studio를 처음 사용하는 경우 **개발자 모드**를 사용하도록 설정하라는 설정 대화 상자가 표시될 수 있습니다. 개발자 모드는 앱을 Store에서만 실행하는 것이 아니라 직접 실행할 수 있는 권한처럼 특정 기능을 활성화하는 특수 설정입니다. 자세한 내용은 [디바이스를 개발에 사용하도록 설정](enable-your-device-for-development.md)을 읽어보세요. 이 가이드를 계속하려면 **개발자 모드**를 선택하고 **예**를 클릭하여 대화 상자를 닫습니다.
+> Visual Studio를 처음 사용하는 경우 **개발자 모드** 를 사용하도록 설정하라는 설정 대화 상자가 표시될 수 있습니다. 개발자 모드는 앱을 Store에서만 실행하는 것이 아니라 직접 실행할 수 있는 권한처럼 특정 기능을 활성화하는 특수 설정입니다. 자세한 내용은 [디바이스를 개발에 사용하도록 설정](/windows/apps/get-started/enable-your-device-for-development)을 읽어보세요. 이 가이드를 계속하려면 **개발자 모드** 를 선택하고 **예** 를 클릭하여 대화 상자를 닫습니다.
 
  ![개발자 모드 활성화 대화 상자](images/win10-cs-00.png)
 
-5.  대상 버전/최소 버전 대화 상자가 나타납니다. 이 자습서에는 기본 설정이면 충분하므로 **확인**을 선택하여 프로젝트를 만듭니다.
+5.  대상 버전/최소 버전 대화 상자가 나타납니다. 이 자습서에는 기본 설정이면 충분하므로 **확인** 을 선택하여 프로젝트를 만듭니다.
 
     ![새 유니버설 Windows 프로젝트 대화 상자의 스크린샷](images/win10-cs-02.png)
 
@@ -67,12 +67,12 @@ ms.locfileid: "91860072"
 
     ![Hello World(유니버설 Windows)가 강조 표시된 솔루션 탐색기 창의 스크린샷](images/win10-cs-03.png)
 
-**새 앱**(유니버설 Window)은 최소한의 템플릿이지만 많은 파일이 포함되어 있습니다. 이러한 파일은 C#을 사용하는 모든 UWP 앱에 필수적입니다. Visual Studio에서 만든 모든 프로젝트에는 해당 파일이 포함됩니다.
+**새 앱** (유니버설 Window)은 최소한의 템플릿이지만 많은 파일이 포함되어 있습니다. 이러한 파일은 C#을 사용하는 모든 UWP 앱에 필수적입니다. Visual Studio에서 만든 모든 프로젝트에는 해당 파일이 포함됩니다.
 
 
 ### <a name="whats-in-the-files"></a>파일에 포함된 항목
 
-프로젝트의 파일을 보고 편집하려면 **솔루션 탐색기**에서 해당 파일을 두 번 클릭합니다. 폴더와 같이 XAML 파일을 확장하여 관련 코드 파일을 봅니다. XAML 파일은 디자인 화면과 XAML 편집기가 모두 표시되는 분할 보기로 열립니다.
+프로젝트의 파일을 보고 편집하려면 **솔루션 탐색기** 에서 해당 파일을 두 번 클릭합니다. 폴더와 같이 XAML 파일을 확장하여 관련 코드 파일을 봅니다. XAML 파일은 디자인 화면과 XAML 편집기가 모두 표시되는 분할 보기로 열립니다.
 > [!NOTE]
 > XAML이란? XAML(Extensible Application Markup Language)은 앱의 사용자 인터페이스를 정의하는 데 사용되는 언어입니다. 수동으로 입력하거나 Visual Studio 디자인 도구를 사용하여 만들 수 있습니다. .xaml 파일에는 논리가 포함된 .xaml.cs 코드 숨김 파일이 있습니다. XAML은 코드 숨김과 함께 완전한 클래스를 만듭니다. 자세한 내용은 [XAML 개요](../xaml-platform/xaml-overview.md)를 참조하세요.
 
@@ -106,7 +106,7 @@ ms.locfileid: "91860072"
 
 페이지에 단추를 추가해 보겠습니다. 이 자습서에서는 이전에 나열한 파일 중 다음만 다룹니다. App.xaml, MainPage.xaml 및 MainPage.xaml.cs
 
-1.  **MainPage.xaml**을 두 번 클릭하여 디자인 뷰에서 엽니다.
+1.  **MainPage.xaml** 을 두 번 클릭하여 디자인 뷰에서 엽니다.
 
     화면 맨 윗부분에 그래픽 보기가 있고 아래에 XAML 코드 보기가 있습니다. 둘 중 하나를 변경할 수 있지만 현재는 그래픽 보기를 사용하겠습니다.
 
@@ -116,7 +116,7 @@ ms.locfileid: "91860072"
 
     ![고정 아이콘을 가리키는 빨간색 화살표가 있는 도구 상자 창의 스크린샷](images/win10-cs-05.png)
 
-3.  **공용 XAML 컨트롤**을 확장하고 **단추**를 디자인 캔버스의 중앙으로 끌어옵니다.
+3.  **공용 XAML 컨트롤** 을 확장하고 **단추** 를 디자인 캔버스의 중앙으로 끌어옵니다.
 
     ![도구 상자 창에서 강조 표시된 단추 옵션 및 디자인 뷰의 단추를 보여주는 도구 상자 창 및 기본 페이지 XAML 디자인 뷰의 스크린샷](images/win10-cs-06.png)
 
@@ -155,12 +155,12 @@ ms.locfileid: "91860072"
 
 **로컬 머신에서 디버깅을 시작하려면**
 
-1.  **표준** 도구 모음의 대상 디바이스 메뉴(![디버깅 시작 메뉴](images/startdebug-full.png))에서 **로컬 컴퓨터**가 선택되었는지 확인합니다. 기본적으로 선택되어 있습니다.
+1.  **표준** 도구 모음의 대상 디바이스 메뉴(![디버깅 시작 메뉴](images/startdebug-full.png))에서 **로컬 컴퓨터** 가 선택되었는지 확인합니다. 기본적으로 선택되어 있습니다.
 2.  도구 모음에서 **디버깅 시작** 단추(![디버깅 시작 단추](images/startdebug-sm.png))를 클릭합니다.
 
    -또는-
 
-   **디버그** 메뉴에서 **디버깅 시작**을 클릭합니다.
+   **디버그** 메뉴에서 **디버깅 시작** 을 클릭합니다.
 
    -또는-
 
@@ -182,7 +182,7 @@ Windows 키를 눌러 **시작** 메뉴를 연 후 모든 앱을 표시합니다
 
    -또는-
 
-   **디버그** 메뉴에서 **디버깅 중지**를 클릭합니다.
+   **디버그** 메뉴에서 **디버깅 중지** 를 클릭합니다.
 
    -또는-
 
@@ -196,9 +196,9 @@ Windows 키를 눌러 **시작** 메뉴를 연 후 모든 앱을 표시합니다
 
 2.  디자인 캔버스의 단추 컨트롤을 두 번 클릭하여 Visual Studio가 단추에 대한 이벤트 처리기를 만들도록 합니다.
 
-  물론 모든 코드를 수동으로 만들 수도 있습니다. 또는 단추를 클릭하여 선택하고 오른쪽 아래의 **속성** 창을 확인할 수 있습니다. **이벤트**(작은 번개 모양)로 전환하면 이벤트 처리기의 이름을 추가할 수 있습니다.
+  물론 모든 코드를 수동으로 만들 수도 있습니다. 또는 단추를 클릭하여 선택하고 오른쪽 아래의 **속성** 창을 확인할 수 있습니다. **이벤트** (작은 번개 모양)로 전환하면 이벤트 처리기의 이름을 추가할 수 있습니다.
 
-3.  *MainPage.xaml.cs*, 코드 숨김 페이지에서 이벤트 처리기 코드를 편집합니다. 이 부분에서 점점 흥미로워집니다. 기본 이벤트 처리기는 다음과 같이 표시됩니다.
+3.  *MainPage.xaml.cs* , 코드 숨김 페이지에서 이벤트 처리기 코드를 편집합니다. 이 부분에서 점점 흥미로워집니다. 기본 이벤트 처리기는 다음과 같이 표시됩니다.
 
 ```cs
 private void Button_Click(object sender, RoutedEventArgs e)
@@ -242,4 +242,4 @@ XAML을 통해 앱에서 사용할 컨트롤을 배치하는 방법을 알아보
 * [UWP 앱 개발에 대한 방법 문서](../develop/index.md)
 * [UWP 개발자를 위한 코드 샘플](https://developer.microsoft.com/windows/samples)
 * [유니버설 Windows 앱이란?](universal-application-platform-guide.md)
-* [Windows 계정 등록](sign-up.md)
+* [Windows 계정 등록](/windows/apps/get-started/sign-up)

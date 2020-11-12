@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 9794a04d-e67f-472c-8ba8-8ebe442f6ef2
 ms.localizationpriority: medium
-ms.openlocfilehash: 03b3a4342e4f464cb61cddc495ee5693570cd28b
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: a75023629054b680ec1444f6b24328c18ffcd0b5
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93034826"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339731"
 ---
 # <a name="tutorial-use-grid-and-stackpanel-to-create-a-simple-weather-app"></a>자습서: Grid 및 StackPanel을 사용하여 간단한 날씨 앱 만들기
 
@@ -21,7 +21,7 @@ XAML을 사용하여 **Grid** 및 **StackPanel** 요소로 간단한 날씨 앱�
 > **중요 API** : [Grid 클래스](/uwp/api/windows.ui.xaml.controls.grid), [StackPanel 클래스](/uwp/api/windows.ui.xaml.controls.stackpanel)
 
 ## <a name="prerequisites"></a>필수 구성 요소
-- Windows 10 및 Microsoft Visual Studio 2015 이상. (현재 개발 및 보안 업데이트에 대해 최신 Visual Studio가 권장됨) [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](../../get-started/get-set-up.md).
+- Windows 10 및 Microsoft Visual Studio 2015 이상. (현재 개발 및 보안 업데이트에 대해 최신 Visual Studio가 권장됨) [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](/windows/apps/get-started/get-set-up).
 - XAML 및 C#을 사용하여 기본 "Hello World" 앱을 만드는 방법에 대한 지식. 아직 살펴보지 않았다면 [여기를 클릭하여 "Hellow World" 앱을 만드는 방법을 알아보세요](../../get-started/create-a-hello-world-app-xaml-universal.md).
 
 ## <a name="step-1-create-a-blank-app"></a>1단계: 비어 있는 앱 만들기

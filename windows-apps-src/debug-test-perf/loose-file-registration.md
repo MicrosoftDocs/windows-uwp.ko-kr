@@ -5,12 +5,12 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: windows 10, uwp, device portal, 앱 관리자, 배포, sdk
 ms.localizationpriority: medium
-ms.openlocfilehash: 0fd5bf6be691974d956de0c71f4a1d11aa1a229f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 7006d32777e7b3ece5c5b6ed066bd23265b0bbb7
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166097"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339621"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>느슨한 파일 등록을 통해 앱 배포 
 
@@ -34,7 +34,7 @@ ms.locfileid: "89166097"
 Windows는 로컬 및 원격 디바이스에서 느슨한 파일 레이아웃을 등록하기 위한 여러 개발자 도구를 제공합니다. `WinDeployAppCmd`(Windows SDK 도구), Windows Device Portal, PowerShell 및 [Visual Studio](./deploying-and-debugging-uwp-apps.md#register-layout-from-network) 중에서 선택할 수 있습니다. 다음에서는 이러한 도구를 사용하여 느슨한 파일을 등록하는 방법을 설명합니다. 그러나 먼저 다음 설치를 수행했는지 확인합니다.
 
 - 디바이스가 Windows 10 크리에이터 업데이트(빌드 14965) 이상에 있어야 합니다.
-- 모든 디바이스에서 [개발자 모드](../get-started/enable-your-device-for-development.md) 및 [디바이스 검색](../get-started/enable-your-device-for-development.md#device-discovery)을 사용하도록 설정해야 합니다.
+- 모든 디바이스에서 [개발자 모드](/windows/apps/get-started/enable-your-device-for-development) 및 [디바이스 검색](/windows/apps/get-started/enable-your-device-for-development#device-discovery)을 사용하도록 설정해야 합니다.
 
 > [!IMPORTANT]
 > 느슨한 파일 등록은 네트워크 공유(SMB) 프로토콜을 지원하는 디바이스인 데스크톱 및 Xbox에서만 사용할 수 있습니다. 
@@ -51,7 +51,7 @@ WinAppDeployCmd.exe registerfiles -remotedeploydir <Network Path> -ip <IP Addres
 
 **IP 주소** – 대상 머신의 IP 주소
 
-**대상 머신 PIN** - 대상 디바이스에 대한 연결을 설정하는 데 필요한 PIN입니다. 인증이 필요한 경우 `-pin` 옵션을 사용하여 재시도하라는 메시지가 나타납니다. PIN을 가져오는 방법에 대한 자세한 내용은 [디바이스 검색](../get-started/enable-your-device-for-development.md#device-discovery)을 참조하세요.
+**대상 머신 PIN** - 대상 디바이스에 대한 연결을 설정하는 데 필요한 PIN입니다. 인증이 필요한 경우 `-pin` 옵션을 사용하여 재시도하라는 메시지가 나타납니다. PIN을 가져오는 방법에 대한 자세한 내용은 [디바이스 검색](/windows/apps/get-started/enable-your-device-for-development#device-discovery)을 참조하세요.
 
 ### <a name="windows-device-portal"></a>Windows Device Portal
 
@@ -60,7 +60,7 @@ Windows Device Portal은 모든 Windows 10 디바이스에서 사용할 수 있�
 Device Portal에서 느슨한 파일 레이아웃을 등록하려면 다음 단계를 수행합니다.
 
 1. [Windows Device Portal 개요](device-portal.md)의 **설정** 섹션에 나오는 단계를 수행하여 Device Portal에 연결합니다.
-1. 앱 관리자 탭에서 **네트워크 공유에서 등록**을 선택합니다.
+1. 앱 관리자 탭에서 **네트워크 공유에서 등록** 을 선택합니다.
 1. 느슨한 파일 레이아웃의 네트워크 공유 경로를 입력합니다. 
 1. 호스트 디바이스에서 네트워크 공유에 액세스할 수 없는 경우 필요한 자격 증명을 입력하라는 메시지가 표시됩니다.
 1. 등록이 완료되면 앱을 시작할 수 있습니다.
