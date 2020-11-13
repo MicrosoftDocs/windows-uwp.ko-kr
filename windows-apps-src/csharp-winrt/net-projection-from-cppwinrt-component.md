@@ -1,16 +1,16 @@
 ---
 description: '이 연습에서는 c #/Winrt를 사용 하 여 c + +/Vb 구성 요소에 대 한 .NET 5 프로젝션을 생성 하는 방법을 보여 줍니다.'
 title: C + +/WinRT 구성 요소에서 .NET 5 프로젝션을 생성 하 고 NuGet을 배포 하는 연습
-ms.date: 10/12/2020
+ms.date: 11/12/2020
 ms.topic: article
 keywords: 'windows 10, c #, winrt, cswinrt, 프로젝션'
 ms.localizationpriority: medium
-ms.openlocfilehash: 817c4ec364040cbe64f8ab466a5bdf059d8c2dda
-ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
+ms.openlocfilehash: 552eee6ab3f6f4f875202392c9aa3e3c848dbdb6
+ms.sourcegitcommit: 23bd1ef67dcb637b9ac7833e1b6a0c0dd56bd445
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94339651"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94572809"
 ---
 # <a name="walkthrough-generate-a-net-5-projection-from-a-cwinrt-component-and-distribute-the-nuget"></a>연습: c + +/WinRT 구성 요소에서 .NET 5 프로젝션을 생성 하 고 NuGet 배포
 
@@ -18,15 +18,12 @@ ms.locfileid: "94339651"
 
 [여기](https://github.com/microsoft/CsWinRT/tree/master/Samples/Net5ProjectionSample)에서이 연습에 대 한 전체 샘플을 GitHub에서 다운로드할 수 있습니다.
 
-> [!NOTE]
-> 이 연습은 c #/Winrt (RC2)의 최신 미리 보기를 위해 작성 되었습니다. 향후 1.0 릴리스가 개발자 환경에 대 한 추가 업데이트 및 개선 사항을 제공 하는 것으로 간주 됩니다.
-
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 연습 및 해당 샘플에는 다음과 같은 도구 및 구성 요소가 필요 합니다.
 
-- 유니버설 Windows 플랫폼 개발 워크 로드가 설치 된 [Visual Studio 16.8 Preview 3](https://visualstudio.microsoft.com/vs/preview/) 이상 유니버설 Windows 플랫폼 개발에 **대 한 설치 세부 정보** 에서  >  **Universal Windows Platform development** **c + + (v14x) 유니버설 Windows 플랫폼 도구** 옵션을 확인 합니다.
-- [.Net 5.0 RC2 SDK](https://github.com/dotnet/installer).
+- 유니버설 Windows 플랫폼 개발 워크 로드가 설치 된 [Visual Studio 16.8](https://visualstudio.microsoft.com/downloads/) 이상 유니버설 Windows 플랫폼 개발에 **대 한 설치 세부 정보** 에서  >  **Universal Windows Platform development** **c + + (v14x) 유니버설 Windows 플랫폼 도구** 옵션을 확인 합니다.
+- [.Net 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0).
 - C + +/winrt 프로젝트 템플릿에 대 한 [c + +/WINRT VSIX 확장](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) .
 
 ## <a name="create-a-simple-cwinrt-runtime-component"></a>간단한 c + +/WinRT 런타임 구성 요소 만들기
@@ -75,26 +72,6 @@ C + +/WinRT 구성 요소를 만들고 winmd 파일을 생성 하는 방법에 �
 
 4. **SimpleMathComponent** 프로젝트에 프로젝트 참조를 추가 합니다. **솔루션 탐색기** 에서 **SimpleMathProjection** 프로젝트 아래의 **종속성** 노드를 마우스 오른쪽 단추로 클릭 하 고, **프로젝트 참조 추가** 를 선택 하 고, **SimpleMathComponent** 프로젝트를 선택 합니다.
 
-    > [!NOTE]
-    > Visual Studio 16.8 Preview 4 이상을 사용 하는 경우 4 단계를 완료 한 후이 섹션을 완료 합니다. Visual Studio 16.8 Preview 3을 사용 하는 경우 5 단계도 완료 해야 합니다.
-
-5. Visual Studio 16.8 Preview 3을 사용 하는 경우: **솔루션 탐색기** 에서 **SimpleMathProjection** 노드를 두 번 클릭 하 여 편집기에서 프로젝트 파일을 열고 다음 요소를 파일에 추가한 다음 파일을 저장 하 고 닫습니다.
-
-    ```xml
-    <ItemGroup>
-      <PackageReference Include="Microsoft.Net.Compilers.Toolset" Version="3.8.0-4.20472.6" />
-    </ItemGroup>
-
-    <PropertyGroup>
-      <RestoreSources>
-        https://api.nuget.org/v3/index.json;
-        https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json
-      </RestoreSources>
-    </PropertyGroup>
-    ```
-
-    이러한 요소는 최신 c # 컴파일러를 포함 하는 필수 버전의 **Microsoft.Net** NuGet 패키지를 설치 합니다. 이 연습에서는 이러한 프로젝트 파일 참조를 통해이 NuGet 패키지를 설치 합니다 .이 패키지의 필수 버전은 기본 공용 NuGet 피드에서 사용 하지 못할 수 있기 때문입니다.
-
 이러한 단계를 수행 하면 **솔루션 탐색기** 다음과 같이 표시 됩니다.
 
 ![프로젝션 프로젝트 종속성을 보여 주는 솔루션 탐색기](images/projection-dependencies.png)
@@ -128,10 +105,17 @@ C + +/WinRT 구성 요소를 만들고 winmd 파일을 생성 하는 방법에 �
     - `CsWinRTIncludes`속성은 프로젝트에 사용할 네임 스페이스를 지정 합니다.
     - `CsWinRTGeneratedFilesDir`속성은 프로젝션에서 파일이 생성 되는 출력 디렉터리를 설정 합니다 .이 디렉터리는 원본에서 빌드할 때 다음 섹션에서 설정 합니다.
 
-4. 이 연습에서 최신 c #/Winrt 버전은 Windows 메타 데이터를 지정 해야 할 수 있습니다. 이는 c #/Winrt. 이후 릴리스에서 수정 될 예정입니다. 다음 중 하나를 사용 하 여 제공할 수 있습니다.
+4. 이 연습에서 최신 c #/Winrt 버전은 Windows 메타 데이터를 지정 해야 할 수 있습니다. 다음 중 하나를 사용 하 여 제공할 수 있습니다.
 
-    - 패키지 참조 (예: Microsoft. [w i n k.]( https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts/)
-    - 명시적 값은 속성을 사용 하 여를 설정 합니다 `CsWinRTWindowsMetadata` .
+    - NuGet 패키지 참조 ( [예:).]( https://www.nuget.org/packages/Microsoft.Windows.SDK.Contracts/)
+
+      ```xml
+      <ItemGroup>
+        <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.19041.1" />
+      </ItemGroup>
+      ```
+
+    - 또 다른 옵션은 `CsWinRTWindowsMetadata` 3 단계에서의에 다음 속성을 추가 하는 것입니다 `PropertyGroup` .
 
       ```xml
       <CsWinRTWindowsMetadata>10.0.19041.0</CsWinRTWindowsMetadata>
@@ -189,7 +173,7 @@ Interop 어셈블리를 배포 하 고 사용 하기 위해 몇 가지 추가 �
           <group targetFramework="UAP10.0" />
           <group targetFramework=".NETFramework4.6" />
           <group targetFramework="net5.0">
-            <dependency id="Microsoft.Windows.CsWinRT" version="0.8.0" exclude="Build,Analyzers" />
+            <dependency id="Microsoft.Windows.CsWinRT" version="1.0.1" exclude="Build,Analyzers" />
           </group>
         </dependencies>
       </metadata>
@@ -234,14 +218,14 @@ Interop 어셈블리를 배포 하 고 사용 하기 위해 몇 가지 추가 �
     ```xml
     <PropertyGroup>
       <RestoreSources>
-          https://api.nuget.org/v3/index.json;
-          ../../CppWinRTProjectionSample/SimpleMathProjection/nuget
+        https://api.nuget.org/v3/index.json;
+        ../../CppWinRTProjectionSample/SimpleMathProjection/nuget
       </RestoreSources>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.VCRTForwarders.140" Version="1.0.6" />
-        <PackageReference Include="SimpleMathComponent" Version="0.1.0-prerelease" />
+      <PackageReference Include="Microsoft.VCRTForwarders.140" Version="1.0.6" />
+      <PackageReference Include="SimpleMathComponent" Version="0.1.0-prerelease" />
     </ItemGroup>
     ```
 
