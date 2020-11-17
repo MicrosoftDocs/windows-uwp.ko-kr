@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 앱 인증
 ms.localizationpriority: medium
-ms.openlocfilehash: 06ac1525a91426f6d39e20c9a9416154ad3d6f3e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: be02f9b049a1beb1866d21c97f11fe3efeb815f3
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174027"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339351"
 ---
 # <a name="windows-app-certification-kit"></a>Windows 앱 인증 키트
 
@@ -23,7 +23,7 @@ ms.locfileid: "89174027"
 
 - Windows 10을 설치하고 실행해야 합니다.
 - Windows 10용 Windows SDK(소프트웨어 개발 키트)에 포함된 [Windows 앱 인증 키트](https://developer.microsoft.com/windows/downloads/app-certification-kit/)를 설치해야 합니다.
-- [개발을 위해 디바이스를 사용](../get-started/enable-your-device-for-development.md)하도록 설정해야 합니다.
+- [개발을 위해 디바이스를 사용](/windows/apps/get-started/enable-your-device-for-development)하도록 설정해야 합니다.
 - 테스트할 Windows 앱을 컴퓨터에 배포해야 합니다.
 
 > [!NOTE]
@@ -31,15 +31,15 @@ ms.locfileid: "89174027"
 
 ## <a name="validate-your-windows-app-using-the-windows-app-certification-kit-interactively"></a>대화식으로 Windows 앱 인증 키트를 사용하여 Windows 앱의 유효성 검사
 
-1. **시작** 메뉴에서 **앱**을 검색하고 **Windows 키트**를 찾은 다음 **Windows 앱 인증 키트**를 클릭합니다.
+1. **시작** 메뉴에서 **앱** 을 검색하고 **Windows 키트** 를 찾은 다음 **Windows 앱 인증 키트** 를 클릭합니다.
 
-2. Windows 앱 인증 키트에서 수행할 유효성 검사 범주를 선택합니다. 예: Windows 앱의 유효성을 검사하려면 **Windows 앱 유효성 검사**를 선택합니다.
+2. Windows 앱 인증 키트에서 수행할 유효성 검사 범주를 선택합니다. 예: Windows 앱의 유효성을 검사하려면 **Windows 앱 유효성 검사** 를 선택합니다.
 
-    테스트할 앱을 직접 찾아보거나 UI의 목록에서 앱을 선택할 수 있습니다. Windows 앱 인증 키트가 처음으로 실행되면 컴퓨터에 설치된 모든 Windows 앱이 UI에 나열됩니다. 그 이후에 실행되면 UI에 유효성을 검사한 최근 Windows 앱이 표시됩니다. 테스트할 앱이 목록에 표시되지 않는 경우 **내 앱이 나열되지 않음**을 클릭하여 시스템에 설치된 모든 앱의 포괄적인 목록을 가져올 수 있습니다.
+    테스트할 앱을 직접 찾아보거나 UI의 목록에서 앱을 선택할 수 있습니다. Windows 앱 인증 키트가 처음으로 실행되면 컴퓨터에 설치된 모든 Windows 앱이 UI에 나열됩니다. 그 이후에 실행되면 UI에 유효성을 검사한 최근 Windows 앱이 표시됩니다. 테스트할 앱이 목록에 표시되지 않는 경우 **내 앱이 나열되지 않음** 을 클릭하여 시스템에 설치된 모든 앱의 포괄적인 목록을 가져올 수 있습니다.
 
-3. 테스트할 앱을 입력하거나 선택한 후 **다음**을 클릭합니다.
+3. 테스트할 앱을 입력하거나 선택한 후 **다음** 을 클릭합니다.
 
-4. 다음 화면에서 테스트할 앱 유형에 맞게 정렬된 테스트 워크플로가 표시됩니다. 테스트가 목록에서 회색으로 표시되면 테스트가 환경에 적용되지 않습니다. 예를 들어 Windows 7에서 Windows 10 앱을 테스트할 경우 정적 테스트만 워크플로에 적용됩니다. Microsoft Store에서 이 워크플로의 모든 테스트를 적용할 수 있습니다. 실행할 테스트를 선택하고 **다음**을 클릭합니다.
+4. 다음 화면에서 테스트할 앱 유형에 맞게 정렬된 테스트 워크플로가 표시됩니다. 테스트가 목록에서 회색으로 표시되면 테스트가 환경에 적용되지 않습니다. 예를 들어 Windows 7에서 Windows 10 앱을 테스트할 경우 정적 테스트만 워크플로에 적용됩니다. Microsoft Store에서 이 워크플로의 모든 테스트를 적용할 수 있습니다. 실행할 테스트를 선택하고 **다음** 을 클릭합니다.
 
     Windows 앱 인증 키트에서 앱 유효성 검사를 시작합니다.
 
@@ -59,7 +59,7 @@ ms.locfileid: "89174027"
 
 1. 명령 창에서 Windows 앱 인증 키트가 들어 있는 디렉터리로 이동합니다.
 
-    **참고**   기본 경로는 C:\\Program Files\\Windows Kits\\10\\App Certification Kit\\입니다.
+    **참고** 기본 경로는 C:\\Program Files\\Windows Kits\\10\\App Certification Kit\\입니다.
 
 2. 테스트 컴퓨터에 이미 설치한 앱을 테스트하려면 다음 명령을 순서대로 입력합니다.
 
@@ -75,9 +75,9 @@ ms.locfileid: "89174027"
 
 3. 테스트가 완료되면 `[report file name]`이라는 보고서 파일을 열고 테스트 결과를 검토합니다.
 
-**참고**  Windows 앱 인증 키트는 서비스에서 실행될 수 있지만, 서비스는 활성 사용자 세션에서 키트 프로세스를 시작해야 하며 Session0에서 실행될 수 없습니다.
+**참고** Windows 앱 인증 키트는 서비스에서 실행될 수 있지만, 서비스는 활성 사용자 세션에서 키트 프로세스를 시작해야 하며 Session0에서 실행될 수 없습니다.
 
-**참고**   Windows 앱 인증 키트 명령줄에 대한 자세한 내용을 보려면 `appcert.exe /?` 명령을 입력하세요.
+**참고** Windows 앱 인증 키트 명령줄에 대한 자세한 내용을 보려면 `appcert.exe /?` 명령을 입력하세요.
 
 ## <a name="testing-with-a-low-power-computer"></a>절전 컴퓨터를 사용하여 테스트
 

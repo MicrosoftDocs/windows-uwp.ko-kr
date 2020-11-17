@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: 2b0d6bb305490e05c2670f0e0a326601c51a8373
-ms.sourcegitcommit: 609441402c17d92e7bfac83a6056909bb235223c
+ms.openlocfilehash: bf460b8c05f1dbb274aa9015e6b892339df9f634
+ms.sourcegitcommit: 21a76fc02ae261f609a2dbb7a56c5de25844c068
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90837818"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "93381393"
 ---
 # <a name="call-windows-runtime-apis-in-desktop-apps"></a>데스크톱 앱에서 Windows 런타임 API 호출
 
@@ -33,9 +33,9 @@ UWP(유니버설 Windows 플랫폼) API를 사용하여 Windows 10 사용자를 
 
 ### <a name="net-5-preview-8-and-later-use-the-target-framework-moniker-option"></a>.NET 5 Preview 8 이상: 대상 프레임워크 모니커 옵션 사용 
 
-이 옵션은 .NET 5 Preview 8(또는 이전 릴리스) 및 대상 Windows 10, 버전 1809 이상 OS 릴리스를 사용하는 프로젝트에서만 지원됩니다. 이 시나리오 대한 자세한 배경 정보는 [이 블로그 게시물](https://blogs.windows.com/windowsdeveloper/2020/09/03/calling-windows-apis-in-net5/)을 참조하세요.
+이 옵션은 .NET 5 Preview 8 이상 릴리스 및 대상 Windows 10, 버전 1809 이상 OS 릴리스를 사용하는 프로젝트에서만 지원됩니다. 이 시나리오 대한 자세한 배경 정보는 [이 블로그 게시물](https://blogs.windows.com/windowsdeveloper/2020/09/03/calling-windows-apis-in-net5/)을 참조하세요.
 
-1. Visual Studio에서 프로젝트를 연 상태로 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **프로젝트 파일 편집**을 선택합니다. 프로젝트 파일은 다음과 유사하게 나타납니다.
+1. Visual Studio에서 프로젝트를 연 상태로 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **프로젝트 파일 편집** 을 선택합니다. 프로젝트 파일은 다음과 유사하게 나타납니다.
 
     ```csharp
     <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
@@ -63,31 +63,31 @@ UWP(유니버설 Windows 플랫폼) API를 사용하여 Windows 10 사용자를 
 
 ### <a name="earlier-versions-of-net-install-the-microsoftwindowssdkcontracts-nuget-package"></a>이전 버전의 .NET: Microsoft.Windows.SDK.Contracts NuGet 패키지 설치
 
-앱이 .NET Core 3.x, .NET 5 Preview 7 이하 또는 .NET Framework를 사용하는 경우 이 옵션을 사용합니다. 이 옵션은 Windows 10, 버전 1803 이상 OS 릴리스를 대상으로 하는 프로젝트에서 지원됩니다.
+앱에서 .NET Core 3.x, .NET 5 Preview 7 이하 또는 .NET Framework를 사용하는 경우 이 옵션을 사용합니다. 이 옵션은 Windows 10, 버전 1803 이상 OS 릴리스를 대상으로 하는 프로젝트에서 지원됩니다.
 
 1. [패키지 참조](/nuget/consume-packages/package-references-in-project-files)를 사용하도록 설정합니다.
 
-    1. Visual Studio에서 **도구 -> NuGet 패키지 관리자 -> 패키지 관리자 설정**을 클릭합니다.
-    2. **기본 패키지 관리 형식**으로 **PackageReference**를 선택합니다.
+    1. Visual Studio에서 **도구 -> NuGet 패키지 관리자 -> 패키지 관리자 설정** 을 클릭합니다.
+    2. **기본 패키지 관리 형식** 으로 **PackageReference** 를 선택합니다.
 
-2. Visual Studio에서 프로젝트를 연 상태로 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
+2. Visual Studio에서 프로젝트를 연 상태로 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리** 를 선택합니다.
 
 3. **NuGet 패키지 관리자** 창에서 **찾아보기** 탭을 선택하고 `Microsoft.Windows.SDK.Contracts`를 검색합니다.
 
-4. `Microsoft.Windows.SDK.Contracts` 패키지가 검색되면 **NuGet 패키지 관리자**의 오른쪽 창에서 대상으로 지정할 Windows 10 버전에 따라 설치하려는 패키지의 **버전**을 선택합니다.
+4. `Microsoft.Windows.SDK.Contracts` 패키지가 검색되면 **NuGet 패키지 관리자** 의 오른쪽 창에서 대상으로 지정할 Windows 10 버전에 따라 설치하려는 패키지의 **버전** 을 선택합니다.
 
     * **10.0.19041.xxxx**: Windows 10, 버전 2004가 대상이면 이 버전을 선택합니다.
     * **10.0.18362.xxxx**: Windows 10 버전 1903이 대상이면 이 버전을 선택합니다.
     * **10.0.17763.xxxx**: Windows 10 버전 1809가 대상이면 이 버전을 선택합니다.
     * **10.0.17134.xxxx**: Windows 10 버전 1803이 대상이면 이 버전을 선택합니다.
 
-5. **설치**를 클릭합니다.
+5. **설치** 를 클릭합니다.
 
 ### <a name="configure-projects-that-multi-target-different-versions-of-net"></a>여러 버전의 .NET을 다중 대상으로 하는 프로젝트 구성
 
-프로젝트가 .NET 5 Preview 8 이상 및 이전 버전(.NET Core 3.x 및 .NET Framework 포함)을 다중 대상으로 하는 경우, .NET 5 Preview 8 이상에 대해서는 WinRT API 참조에서 자동으로 끌어오도록 대상 프레임워크 모니커를 사용하고 이전 버전에 대해서는 `Microsoft.Windows.SDK.Contracts` NuGet 패키지를 사용하도록 프로젝트 파일을 구성할 수 있습니다.
+프로젝트에서 .NET 5 Preview 8 이상 및 이전 버전(.NET Core 3.x 및 .NET Framework 포함)을 다중 대상으로 하는 경우 .NET 5에는 WinRT API 참조에서 자동으로 끌어오도록 대상 프레임워크 모니커를 사용하고 이전 버전에는 `Microsoft.Windows.SDK.Contracts` NuGet 패키지를 사용하도록 프로젝트 파일을 구성할 수 있습니다.
 
-1. Visual Studio에서 프로젝트를 연 상태로 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **프로젝트 파일 편집**을 선택합니다. 다음 예제에서는 .NET Core 3.1을 사용하는 앱에 대한 프로젝트 파일을 보여 줍니다.
+1. Visual Studio에서 프로젝트를 연 상태로 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **프로젝트 파일 편집** 을 선택합니다. 다음 예제에서는 .NET Core 3.1을 사용하는 앱에 대한 프로젝트 파일을 보여 줍니다.
 
     ```csharp
     <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
@@ -105,8 +105,8 @@ UWP(유니버설 Windows 플랫폼) API를 사용하여 Windows 10 사용자를 
         * **net5.0-windows10.0.17763.0**: 앱이 Windows 10, 버전 1809를 대상으로 하는 경우 이 값을 사용합니다.
         * **net5.0-windows10.0.18362.0**: 앱이 Windows 10, 버전 1903을 대상으로 하는 경우 이 값을 사용합니다.
         * **net5.0-windows10.0.19041.0**: 앱이 Windows 10, 버전 2004를 대상으로 하는 경우 이 값을 사용합니다.
-    * .NET Core 3.x의 경우 **netcoreapp3.0** 또는 **netcoreapp3.1**을 사용합니다.
-    * .NET Framework의 경우 **net46**을 사용합니다.
+    * .NET Core 3.x의 경우 **netcoreapp3.0** 또는 **netcoreapp3.1** 을 사용합니다.
+    * .NET Framework의 경우 **net46** 을 사용합니다.
 
     다음 예제에서는 .NET Core 3.1 및 .NET 5 Preview 8(Windows 10, 버전 2004)을 다중 대상으로 하는 방법을 보여 줍니다.
 
@@ -170,14 +170,14 @@ UWP(유니버설 Windows 플랫폼) API를 사용하여 Windows 10 사용자를 
 
 : white_check_mark: **강화할 것인지 아니면 확장할 것인지 결정**
 
-저희는 *강화*와 *확장*이라는 용어를 자주 사용합니다. 각 용어의 의미를 정확히 설명하겠습니다.
+저희는 *강화* 와 *확장* 이라는 용어를 자주 사용합니다. 각 용어의 의미를 정확히 설명하겠습니다.
 
-*강화*라는 용어는 데스크톱 앱에서 직접 호출할 수 있는 Windows 런타임 API를 설명할 때 사용됩니다(애플리케이션을 MSIX 패키지에 패키징하기로 선택했는지 여부에 관계 없이). Windows 10 환경을 선택할 때 환경을 만들기 위해 필요한 API를 식별하고 해당 API가 [이 목록](desktop-to-uwp-supported-api.md)에 표시되는지 확인하세요. 이 목록은 데스크톱 앱에서 직접 호출할 수 있는 API 목록입니다. API와 연결된 기능을 UWP 프로세스에서만 실행할 수 있는 경우에는 이 목록에 API가 표시되지 않습니다. UWP 지도 컨트롤이나 Windows Hello 보안 프롬프트 같은 UWP XAML을 렌더링하는 API가 여기에 자주 포함됩니다.
+*강화* 라는 용어는 데스크톱 앱에서 직접 호출할 수 있는 Windows 런타임 API를 설명할 때 사용됩니다(애플리케이션을 MSIX 패키지에 패키징하기로 선택했는지 여부에 관계 없이). Windows 10 환경을 선택할 때 환경을 만들기 위해 필요한 API를 식별하고 해당 API가 [이 목록](desktop-to-uwp-supported-api.md)에 표시되는지 확인하세요. 이 목록은 데스크톱 앱에서 직접 호출할 수 있는 API 목록입니다. API와 연결된 기능을 UWP 프로세스에서만 실행할 수 있는 경우에는 이 목록에 API가 표시되지 않습니다. UWP 지도 컨트롤이나 Windows Hello 보안 프롬프트 같은 UWP XAML을 렌더링하는 API가 여기에 자주 포함됩니다.
 
 > [!NOTE]
 > UWP XAML을 렌더링하는 API는 일반적으로 데스크톱에서 직접 호출할 수 없지만, 다른 방법을 사용할 수 있습니다. UWP XAML 컨트롤 또는 다른 사용자 지정 시각적 환경을 호스팅하려면 [XAML Islands](xaml-islands.md)(Windows 10 버전 1903부터) 및 [시각적 레이어](visual-layer-in-desktop-apps.md)(Windows 10 버전 1803부터)를 사용할 수 있습니다. 이러한 기능은 패키징 또는 패키징되지 않은 데스크톱 앱에서 사용할 수 있습니다.
 
-데스크톱 앱을 MSIX 패키지에 패키징하기로 선택한 경우 또 다른 옵션으로 솔루션에 UWP 프로젝트를 추가하여 애플리케이션을 *확장*할 수 있습니다. 데스크톱 프로젝트는 여전히 애플리케이션의 진입점이지만, UWP 프로젝트를 통해 [이 목록](desktop-to-uwp-supported-api.md)에 표시되지 않는 모든 API에 액세스할 수 있습니다. 데스크톱 앱은 앱 서비스를 사용하여 UWP 프로세스와 통신할 수 있으며, 이렇게 설정하는 방법에 대한 여러 지침이 제공됩니다. UWP 프로젝트가 필요한 환경을 추가하려면 [UWP 구성 요소를 사용하여 확장](desktop-to-uwp-extend.md)을 참조하세요.
+데스크톱 앱을 MSIX 패키지에 패키징하기로 선택한 경우 또 다른 옵션으로 솔루션에 UWP 프로젝트를 추가하여 애플리케이션을 *확장* 할 수 있습니다. 데스크톱 프로젝트는 여전히 애플리케이션의 진입점이지만, UWP 프로젝트를 통해 [이 목록](desktop-to-uwp-supported-api.md)에 표시되지 않는 모든 API에 액세스할 수 있습니다. 데스크톱 앱은 앱 서비스를 사용하여 UWP 프로세스와 통신할 수 있으며, 이렇게 설정하는 방법에 대한 여러 지침이 제공됩니다. UWP 프로젝트가 필요한 환경을 추가하려면 [UWP 구성 요소를 사용하여 확장](desktop-to-uwp-extend.md)을 참조하세요.
 
 : white_check_mark: **참조 API 계약**
 
@@ -186,7 +186,7 @@ UWP(유니버설 Windows 플랫폼) API를 사용하여 Windows 10 사용자를 
 
 ![API 계약 표](images/desktop-to-uwp/contract-table.png)
 
-.NET 기반 데스크톱 앱을 갖고 있다면 API 계약에 참조를 추가한 다음, 해당 파일의 **로컬 복사** 속성을 **False**로 설정합니다. C++ 기반 프로젝트를 사용하는 경우 이 계약이 포함된 폴더의 경로인 **Additional Include Directories**에 추가합니다.
+.NET 기반 데스크톱 앱을 갖고 있다면 API 계약에 참조를 추가한 다음, 해당 파일의 **로컬 복사** 속성을 **False** 로 설정합니다. C++ 기반 프로젝트를 사용하는 경우 이 계약이 포함된 폴더의 경로인 **Additional Include Directories** 에 추가합니다.
 
 : white_check_mark: **API를 호출하여 환경 추가**
 
@@ -309,11 +309,11 @@ Windows 10 사용자만을 위한 한 가지 코드 기반을 유지하고 바�
 
 해당 빌드 구성에서, Windows 런타임 API를 호출하는 코드를 식별하는 상수를 만듭니다.  
 
-.NET 기반 프로젝트의 상수는 **Conditional Compilation Constant**입니다.
+.NET 기반 프로젝트의 상수는 **Conditional Compilation Constant** 입니다.
 
 ![조건부 컴파일 상수](images/desktop-to-uwp/compilation-constants.png)
 
-C++ 기반 프로젝트의 상수는 **Preprocessor Definition**입니다.
+C++ 기반 프로젝트의 상수는 **Preprocessor Definition** 입니다.
 
 ![전처리기 정의 상수](images/desktop-to-uwp/pre-processor.png)
 

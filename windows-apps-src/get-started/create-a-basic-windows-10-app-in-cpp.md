@@ -6,12 +6,12 @@ ms.date: 06/11/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: edaa15aa2e88252c328a368df1b7698a9b74f5e0
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: b1420fc5b5e74cba46b486b57be1098ac17ad1f5
+ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750449"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94339831"
 ---
 # <a name="create-a-hello-world-app-in-ccx"></a>C++/CX에서 "Hello, World!" 앱 만들기
 
@@ -27,7 +27,7 @@ Microsoft Visual Studio에서는 C++/CX를 사용하여 XAML(Extensible Applicat
 
 -   이 자습서를 완료하려면 Windows 10을 실행하는 컴퓨터에서 Visual Studio Community 또는 Visual Studio의 비 Community 버전 중 하나를 사용해야 합니다. 다운로드하려면 [도구 얻기](https://visualstudio.microsoft.com/downloads/)를 참조하세요.
 -   C++/CX, XAML 및 [XAML 개요](../xaml-platform/xaml-overview.md)에 나오는 개념을 기본적으로 이해하고 있어야 합니다.
--   여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃으로 재설정하려면 메뉴 모음에서 **창** > **창 레이아웃 다시 설정**을 선택합니다.
+-   여기에서는 Visual Studio의 기본 창 레이아웃을 사용한다고 가정합니다. 기본 레이아웃으로 재설정하려면 메뉴 모음에서 **창** > **창 레이아웃 다시 설정** 을 선택합니다.
 
 ## <a name="comparing-c-desktop-apps-to-windows-apps"></a>C++ 데스크톱 앱과 Windows 스토어 앱 비교
 
@@ -75,16 +75,16 @@ C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이
 
 1.  Visual Studio의 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...** 를 선택합니다.
 
-2.  **새 프로젝트 만들기** 대화 상자에서 **비어 있는 앱(유니버설 Windows- C++/CX)** 를 선택합니다.  이 옵션이 표시되지 않으면 유니버설 Windows 앱 개발 도구가 설치되어 있는지 확인합니다. 자세한 내용은 [설정](get-set-up.md) 항목을 참조하세요.
+2.  **새 프로젝트 만들기** 대화 상자에서 **비어 있는 앱(유니버설 Windows- C++/CX)** 를 선택합니다.  이 옵션이 표시되지 않으면 유니버설 Windows 앱 개발 도구가 설치되어 있는지 확인합니다. 자세한 내용은 [설정](/windows/apps/get-started/get-set-up) 항목을 참조하세요.
 
 ![새 프로젝트 만들기 대화 상자의 C++/CX 프로젝트 템플릿 ](images/vs2019-uwp-01.png)
 
-3.  **다음**을 선택하고 프로젝트의 이름을 입력합니다. 여기에서는 HelloWorld라고 입력합니다.
+3.  **다음** 을 선택하고 프로젝트의 이름을 입력합니다. 여기에서는 HelloWorld라고 입력합니다.
 
 4.  **만들기** 단추를 선택합니다.
 
 > [!NOTE]
-> Visual Studio를 처음 사용하는 경우 **개발자 모드**를 사용하도록 설정하라는 설정 대화 상자가 표시될 수 있습니다. 개발자 모드는 앱을 Store에서만 실행하는 것이 아니라 직접 실행할 수 있는 권한처럼 특정 기능을 활성화하는 특수 설정입니다. 자세한 내용은 [디바이스를 개발에 사용하도록 설정](enable-your-device-for-development.md)을 읽어보세요. 이 가이드를 계속 하려면 **개발자 모드**를 선택하고 **예**를 클릭하여 대화 상자를 닫습니다.
+> Visual Studio를 처음 사용하는 경우 **개발자 모드** 를 사용하도록 설정하라는 설정 대화 상자가 표시될 수 있습니다. 개발자 모드는 앱을 Store에서만 실행하는 것이 아니라 직접 실행할 수 있는 권한처럼 특정 기능을 활성화하는 특수 설정입니다. 자세한 내용은 [디바이스를 개발에 사용하도록 설정](/windows/apps/get-started/enable-your-device-for-development)을 읽어보세요. 이 가이드를 계속 하려면 **개발자 모드** 를 선택하고 **예** 를 클릭하여 대화 상자를 닫습니다.
 
    프로젝트 파일이 생성됩니다.
 
@@ -101,7 +101,7 @@ C++를 사용한 Windows 데스크톱 프로그래밍에 대한 기본 지식이
 -   **App.xaml, App.xaml.h, App.xaml.cpp:** 앱의 진입점인 애플리케이션 개체를 나타냅니다. App.xaml에는 페이지별 UI 태그가 포함되어 있지 않지만, 모든 페이지에서 액세스할 수 있도록 할 UI 스타일과 기타 요소를 추가할 수 있습니다. 코드 숨김 파일에는 **OnLaunched** 및 **OnSuspending** 이벤트에 대한 처리기가 포함되어 있습니다. 일반적으로 시작될 때 앱을 초기화하고 일시 중단되거나 종료될 때 정리를 수행하는 사용자 지정 코드를 여기에 추가할 수 있습니다.
 -   **MainPage.xaml, MainPage.xaml.h, MainPage.xaml.cpp:** 앱의 기본 "시작" 페이지에 대한 XAML 태그 및 코드 숨김이 포함되어 있습니다. 탐색 지원 또는 기본 제공 컨트롤이 없습니다.
 -   **pch.h, pch.cpp:** 미리 컴파일된 헤더 파일과 프로젝트에 해당 헤더 파일을 포함하는 파일입니다. pch.h에는 자주 변경되지 않고 솔루션의 다른 파일에 포함되어 있는 헤더를 포함할 수 있습니다.
--   **Package.appxmanifest:** 앱에 필요한 디바이스 기능과, 앱 버전 정보 및 기타 메타데이터를 설명하는 XML 파일입니다. **매니페스트 디자이너**에서 이 파일을 열려면 해당 파일을 두 번 클릭하면 됩니다.
+-   **Package.appxmanifest:** 앱에 필요한 디바이스 기능과, 앱 버전 정보 및 기타 메타데이터를 설명하는 XML 파일입니다. **매니페스트 디자이너** 에서 이 파일을 열려면 해당 파일을 두 번 클릭하면 됩니다.
 -   **HelloWorld\_TemporaryKey.pfx:** Visual Studio에서 이 머신의 앱 배포를 지원하는 키입니다.
 
 ## <a name="a-first-look-at-the-code"></a>코드 개요
@@ -110,7 +110,7 @@ App.xaml.h, 공유 프로젝트의 App.xaml.cpp에 포함된 코드를 살펴보
 
 **Ref 클래스**
 
-Windows API의 모든 형식 즉, XAML 컨트롤, 앱의 페이지, App 클래스 자체, 모든 장치 및 네트워크 개체, 모든 컨테이너 유형을 포함하는 거의 모든 Windows 런타임 클래스가 **ref class**로 선언됩니다. 일부 Windows 형식은 **value class** 또는 **value struct**입니다. ref 클래스는 모든 언어에서 사용할 수 있습니다. C++/CX에서는 이러한 형식에 대한 수명이 자동 참조 계산(가비지 수집 아님)을 통해 제어되므로 이러한 개체를 명시적으로 삭제할 필요가 없습니다. 고유의 ref 클래스를 만들 수도 있습니다.
+Windows API의 모든 형식 즉, XAML 컨트롤, 앱의 페이지, App 클래스 자체, 모든 장치 및 네트워크 개체, 모든 컨테이너 유형을 포함하는 거의 모든 Windows 런타임 클래스가 **ref class** 로 선언됩니다. 일부 Windows 형식은 **value class** 또는 **value struct** 입니다. ref 클래스는 모든 언어에서 사용할 수 있습니다. C++/CX에서는 이러한 형식에 대한 수명이 자동 참조 계산(가비지 수집 아님)을 통해 제어되므로 이러한 개체를 명시적으로 삭제할 필요가 없습니다. 고유의 ref 클래스를 만들 수도 있습니다.
 
 ```cpp
 namespace HelloWorld
@@ -204,7 +204,7 @@ MainPage::MainPage()
 
 **1단계: 시작 페이지 수정**
 
-1.  **솔루션 탐색기**에서 MainPage.xaml을 엽니다.
+1.  **솔루션 탐색기** 에서 MainPage.xaml을 엽니다.
 2.  다음 XAML을 닫는 태그 바로 앞에서 루트 [**Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid)에 추가하여 UI에 대한 컨트롤을 만듭니다. 여기에는 사용자의 이름을 묻는 [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock), 사용자의 이름을 수용하는 [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) 요소, [**Button**](/uwp/api/Windows.UI.Xaml.Controls.Button) 및 또 다른 **TextBlock** 요소가 있는 [**StackPanel**](/uwp/api/Windows.UI.Xaml.Controls.StackPanel)이 포함됩니다.
 
     ```xaml
@@ -238,7 +238,7 @@ MainPage::MainPage()
 ## <a name="step-2-create-an-event-handler"></a>2단계: 이벤트 처리기 만들기
 
 1.  MainPage.xaml의 XAML 또는 디자인 뷰에서 이전에 추가한 [**StackPanel**](/uwp/api/Windows.UI.Xaml.Controls.StackPanel)의 "Say Hello" [**단추**](/uwp/api/Windows.UI.Xaml.Controls.Button)를 선택합니다.
-2.  F4를 눌러서 **속성 창**을 열고 나서 이벤트 단추(![이벤트 단추](images/eventsbutton.png))를 선택합니다.
+2.  F4를 눌러서 **속성 창** 을 열고 나서 이벤트 단추(![이벤트 단추](images/eventsbutton.png))를 선택합니다.
 3.  [  **Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트를 찾습니다. 텍스트 상자에 **Click** 이벤트를 처리하는 함수의 이름을 입력합니다. 이 예제에서는 "Button\_Click"을 입력합니다.
 
     ![속성 창의 이벤트 보기](images/xaml-hw-event.png)
@@ -253,7 +253,7 @@ MainPage::MainPage()
 
    xaml 코드에 수동으로 추가할 수도 있습니다. 이는 디자이너가 로드되지 않은 경우에 유용할 수 있습니다. 수동으로 입력한 경우 "Click"을 입력한 다음 IntelliSense에서 새 이벤트 처리기를 추가하는 옵션을 팝업하도록 합니다. 이렇게 하면 Visual Studio에서 필요한 메서드 선언 및 스텁을 만듭니다.
 
-   렌더링 중 처리되지 않은 예외가 발생한 경우에는 디자이너가 로드되지 않습니다. 디자이너에서의 렌더링에서는 디자인 타임 버전의 페이지가 실행됩니다. 이는 사용자 코드 실행을 비활성화하는 데 유용할 수 있습니다. 이렇게 하려면 **도구, 옵션** 대화 상자에서 설정을 변경하면 됩니다. **XAML 디자이너**에서 **XAML 디자이너에서 프로젝트 실행(지원되는 경우)** 의 선택을 취소합니다.
+   렌더링 중 처리되지 않은 예외가 발생한 경우에는 디자이너가 로드되지 않습니다. 디자이너에서의 렌더링에서는 디자인 타임 버전의 페이지가 실행됩니다. 이는 사용자 코드 실행을 비활성화하는 데 유용할 수 있습니다. 이렇게 하려면 **도구, 옵션** 대화 상자에서 설정을 변경하면 됩니다. **XAML 디자이너** 에서 **XAML 디자이너에서 프로젝트 실행(지원되는 경우)** 의 선택을 취소합니다.
 
 5.  MainPage.xaml.cpp에서 방금 만든 **Button\_Click** 이벤트 처리기에 다음 코드를 추가합니다. 이 코드는 `nameInput` [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) 컨트롤에서 사용자 이름을 검색한 다음, 이 이름을 사용하여 인사말을 만듭니다. `greetingOutput` [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock)에 결과가 표시됩니다.
 
@@ -277,7 +277,7 @@ void HelloWorld::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::X
 **어두운 테마로 전환하려면**
 
 1.  App.xaml을 엽니다.
-2.  여는 [**Application**](/uwp/api/Windows.UI.Xaml.Application) 태그에서 [**RequestedTheme**](/uwp/api/windows.ui.xaml.application.requestedtheme) 속성을 편집하고 해당 값을 **Dark**로 설정합니다.
+2.  여는 [**Application**](/uwp/api/Windows.UI.Xaml.Application) 태그에서 [**RequestedTheme**](/uwp/api/windows.ui.xaml.application.requestedtheme) 속성을 편집하고 해당 값을 **Dark** 로 설정합니다.
 
     ```xaml
     RequestedTheme="Dark"
@@ -300,7 +300,7 @@ void HelloWorld::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::X
 
 어떤 테마를 사용해야 할까요? 어느 것이든 원하는 것을 사용하면 됩니다. 주로 이미지 또는 동영상을 표시하는 앱에는 어두운 테마를 사용하는 것이 좋고, 텍스트가 많이 들어 있는 앱에는 밝은 테마를 사용하는 것이 좋습니다. 사용자 지정 색 구성표를 사용하려는 경우 앱의 모양과 느낌에 가장 잘 맞는 테마를 사용하세요. 이 자습서의 나머지 부분에서는 스크린샷에 밝은 테마를 사용합니다.
 
-**참고**  테마는 앱이 시작될 때 적용되며 앱이 실행되는 동안에는 변경할 수 없습니다.
+**참고** 테마는 앱이 시작될 때 적용되며 앱이 실행되는 동안에는 변경할 수 없습니다.
 
 ### <a name="using-system-styles"></a>시스템 스타일 사용
 
@@ -313,9 +313,9 @@ void HelloWorld::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::X
 3.  **속성** 창(**F4**)의 오른쪽 위에서 속성 단추(![속성 단추](images/propertiesbutton.png))를 선택합니다.
 4.  **텍스트** 그룹을 확장하고 글꼴 크기를 18px로 설정합니다.
 5.  **기타** 그룹을 확장하고 **스타일** 속성을 찾습니다.
-6.  속성 마커(**스타일** 속성 오른쪽에 있는 녹색 상자)를 클릭한 다음 메뉴에서 **시스템 리소스** > **BaseTextBlockStyle**을 선택합니다.
+6.  속성 마커(**스타일** 속성 오른쪽에 있는 녹색 상자)를 클릭한 다음 메뉴에서 **시스템 리소스** > **BaseTextBlockStyle** 을 선택합니다.
 
-     **BaseTextBlockStyle**은 <root>\\Program Files\\Windows Kits\\10\\Include\\winrt\\xaml\\design\\generic.xaml의 [**ResourceDictionary**](/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 정의된 리소스입니다.
+     **BaseTextBlockStyle** 은 <root>\\Program Files\\Windows Kits\\10\\Include\\winrt\\xaml\\design\\generic.xaml의 [**ResourceDictionary**](/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 정의된 리소스입니다.
 
     ![속성 창의 속성 보기](images/xaml-hw-style-cpp.png)
 
@@ -325,9 +325,9 @@ void HelloWorld::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::X
 <TextBlock Text="What's your name?" Style="{ThemeResource BaseTextBlockStyle}"/>
 ```
 
-7.  프로세스를 반복하여 글꼴 크기를 설정하고 `greetingOutput`[**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 요소에 **BaseTextBlockStyle**을 할당합니다.
+7.  프로세스를 반복하여 글꼴 크기를 설정하고 `greetingOutput`[**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 요소에 **BaseTextBlockStyle** 을 할당합니다.
 
-    **팁**  이 [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock)에는 텍스트가 없지만 XAML 디자인 화면 위로 포인터를 이동하면 포인터의 위치가 파란색 윤곽선으로 표시되므로 이를 선택할 수 있습니다.  
+    **팁** 이 [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock)에는 텍스트가 없지만 XAML 디자인 화면 위로 포인터를 이동하면 포인터의 위치가 파란색 윤곽선으로 표시되므로 이를 선택할 수 있습니다.  
 
     이제 XAML은 다음과 같습니다.
 
@@ -388,7 +388,7 @@ void HelloWorld::MainPage::Button_Click(Platform::Object^ sender, Windows::UI::X
 두 번째 [**VisualState**](/uwp/api/Windows.UI.Xaml.VisualState), `narrowState`에는 해당 [**MinWindowWidth**](/uwp/api/windows.ui.xaml.adaptivetrigger.minwindowwidth) 속성이 0으로 설정된 [**AdaptiveTrigger**](/uwp/api/Windows.UI.Xaml.AdaptiveTrigger)가 있습니다. 창 너비가 0보다 크지만 641 DIP보다는 작은 경우에 이 상태가 적용됩니다. (641DIP에서 `wideState`가 적용됩니다.) 이 상태에서는 UI에 있는 컨트롤의 레이아웃 속성을 변경하도록 일부 [**Setter**](/uwp/api/Windows.UI.Xaml.Setter) 개체를 다음과 같이 정의합니다.
 
 -   `contentPanel` 요소의 왼쪽 여백을 120에서 20으로 줄입니다.
--   `inputPanel` 요소의 [**Orientation**](/uwp/api/windows.ui.xaml.controls.stackpanel.orientation)을 **Horizontal**에서 **Vertical**로 변경합니다.
+-   `inputPanel` 요소의 [**Orientation**](/uwp/api/windows.ui.xaml.controls.stackpanel.orientation)을 **Horizontal** 에서 **Vertical** 로 변경합니다.
 -   4 DIP의 상단 여백을 `inputButton` 요소에 추가합니다.
 
 ### <a name="summary"></a>요약

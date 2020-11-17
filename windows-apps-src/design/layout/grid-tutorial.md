@@ -18,7 +18,7 @@ ms.locfileid: "94339731"
 
 XAML을 사용하여 **Grid** 및 **StackPanel** 요소로 간단한 날씨 앱의 레이아웃을 만들 수 있습니다. 이러한 도구를 사용하면 Windows 10을 실행하는 모든 디바이스에서 작동하는 근사한 앱을 만들 수 있습니다. 이 자습서는 10-20분 정도 걸립니다.
 
-> **중요 API** : [Grid 클래스](/uwp/api/windows.ui.xaml.controls.grid), [StackPanel 클래스](/uwp/api/windows.ui.xaml.controls.stackpanel)
+> **중요 API**: [Grid 클래스](/uwp/api/windows.ui.xaml.controls.grid), [StackPanel 클래스](/uwp/api/windows.ui.xaml.controls.stackpanel)
 
 ## <a name="prerequisites"></a>필수 구성 요소
 - Windows 10 및 Microsoft Visual Studio 2015 이상. (현재 개발 및 보안 업데이트에 대해 최신 Visual Studio가 권장됨) [Visual Studio를 사용하여 설정하는 방법을 알아보려면 여기를 클릭하세요](/windows/apps/get-started/get-set-up).
