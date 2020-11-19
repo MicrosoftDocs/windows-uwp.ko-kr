@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림 메시지 보내기, 알림, 알림 보내기, 알림 메시지, 방법, 빠른 시작, 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: 4142fb3d036bb19eb652ca9048a70325eb64b17d
-ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
+ms.openlocfilehash: 0a2e8c25aa7efcb96166b741a073122e3c077c08
+ms.sourcegitcommit: 2a23972e9a0807256954d6da5cf21d0bbe7afb0a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94339811"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94941829"
 ---
 # <a name="send-a-local-toast-notification-from-uwp-apps"></a>UWP 앱에서 로컬 알림 메시지 보내기
 
@@ -23,7 +23,7 @@ ms.locfileid: "94339811"
 > [!IMPORTANT]
 > 데스크톱 응용 프로그램 (패키지 된 [Msix 개](/windows/msix/desktop/source-code-overview) 앱, 패키지 id를 가져오는 데 [스파스 패키지](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps) 를 사용 하는 앱 및 클래식 패키지 되지 않은 데스크톱 앱 포함)은 알림을 보내고 활성화를 처리 하는 서로 다른 단계를 포함 합니다. 알림을을 구현 하는 방법에 대 한 자세한 내용은 [데스크톱 앱](toast-desktop-apps.md) 설명서를 참조 하세요.
 
-> **중요 한 api** : [to notification 클래스](/uwp/api/Windows.UI.Notifications.ToastNotification), [ToastNotificationActivatedEventArgs 클래스](/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
+> **중요 한 api**: [to notification 클래스](/uwp/api/Windows.UI.Notifications.ToastNotification), [ToastNotificationActivatedEventArgs 클래스](/uwp/api/Windows.ApplicationModel.Activation.ToastNotificationActivatedEventArgs)
 
 
 
@@ -62,7 +62,7 @@ var content = new ToastContentBuilder()
 var notif = new ToastNotification(content.GetXml());
 
 // And show it!
-ToastNotificationManager.CreateToastNotifier().Show();
+ToastNotificationManager.CreateToastNotifier().Show(notif);
 ```
 
 ## <a name="step-4-handling-activation"></a>4 단계: 활성화 처리

@@ -1,21 +1,21 @@
 ---
 title: Windows 설정 앱 실행
-description: 앱에서 Windows 설정 앱을 시작하는 방법을 알아봅니다. 이 항목에서는 ms-settings URI 체계에 대해 설명합니다. 이 URI 스키마로 Windows 설정 앱을 실행하여 특정 설정 페이지를 표시할 수 있습니다.
+description: 응용 프로그램에서 ms 설정 URI 체계를 사용 하 여 Windows 설정 앱을 시작 하는 방법을 알아봅니다.
 ms.assetid: C84D4BEE-1FEE-4648-AD7D-8321EAC70290
-ms.date: 04/19/2019
+ms.date: 11/18/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.custom: 19H1
+ms.custom: contperfq2
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: d90669e03ae15acdc826d9e0b227f12d4ecf3cbc
-ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
+ms.openlocfilehash: 309568b80d51cc8bd6cd2394317ef3bb8266a212
+ms.sourcegitcommit: 2a23972e9a0807256954d6da5cf21d0bbe7afb0a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89304715"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94941819"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
@@ -33,6 +33,8 @@ Windows 설정 앱을 시작 하는 방법을 알아봅니다. 이 항목에서�
 
 **설정** 앱을 시작 하려면 `ms-settings:` 다음 예제와 같이 URI 체계를 사용 합니다.
 
+### <a name="xaml-hyperlink-control"></a>XAML 하이퍼링크 컨트롤
+
 이 예제에서 Hyperlink XAML 컨트롤은 URI를 사용 하 여 마이크의 개인 정보 설정 페이지를 시작 하는 데 사용 됩니다 `ms-settings:privacy-microphone` .
 
 ```xml
@@ -47,25 +49,50 @@ Windows 설정 앱을 시작 하는 방법을 알아봅니다. 이 항목에서�
 </TextBlock>
 ```
 
+### <a name="calling-launchuriasync"></a>LaunchUriAsync 호출
+
 또는 앱에서 [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) 메서드를 호출 하 여 **설정** 앱을 시작할 수 있습니다. 이 예제에서는 URI를 사용 하 여 카메라에 대 한 개인 정보 설정 페이지를 시작 하는 방법을 보여 줍니다 `ms-settings:privacy-webcam` .
 
 ```cs
 bool result = await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings:privacy-webcam"));
 ```
+
 ```cppwinrt
 bool result = co_await Windows::System::Launcher::LaunchUriAsync(Windows::Foundation::Uri(L"ms-settings:privacy-webcam"));
 ```
 
 위의 코드는 카메라에 대 한 개인 정보 설정 페이지를 시작 합니다.
 
-![카메라 개인 정보 설정.](images/privacyawarenesssettingsapp.png)
+:::image type="content" source="images/privacyawarenesssettingsapp.png" alt-text="카메라 개인 정보 설정.":::
 
 Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기본 응용 프로그램 시작](launch-default-app.md)을 참조 하세요.
 
 ## <a name="ms-settings-uri-scheme-reference"></a>ms-설정: URI 체계 참조
 
-다음 Uri를 사용 하 여 설정 앱의 다양 한 페이지를 엽니다.
+다음 섹션에서는 설정 앱의 다양 한 페이지를 여는 데 사용 되는 다양 한 종류의 ms 설정 Uri에 대해 설명 합니다.
 
+* [계정](#accounts)
+* [앱](#apps)
+* [Cortana](#cortana)
+* [디바이스](#devices)
+* [접근성](#ease-of-access)
+* [추가 항목](#extras)
+* [게임](#gaming)
+* [홈 페이지](#home-page)
+* [혼합 현실](#mixed-reality)
+* [네트워크 및 인터넷](#network-and-internet)
+* [개인 설정](#personalization)
+* [내선](#phone)
+* [개인 정보 보호](#privacy)
+* [Surface Hub](#surface-hub)
+* [시스템](#system)
+* [시간 및 언어](#time-and-language)
+* [업데이트 및 보안](#update-and-security)
+* [사용자 계정](#user-accounts)
+
+
+
+> [!NOTE]
 > 설정 페이지를 사용할 수 있는지 여부는 Windows SKU에 따라 다릅니다. 데스크톱용 Windows 10에서 사용할 수 있는 일부 설정 페이지는 Windows 10 Mobile에서 사용할 수 있으며 그 반대의 경우도 마찬가지입니다. 참고 열은 페이지를 사용할 수 있도록 하기 위해 충족 해야 하는 추가 요구 사항도 캡처합니다.
 
 <!-- TODO: 
@@ -78,7 +105,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 * ms-settings:storagecleanup
 * ms-settings:update-security -->
 
-## <a name="accounts"></a>계정
+### <a name="accounts"></a>계정
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -91,7 +118,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | Windows Hello 설치 | ms-설정: signinoptions-launchfaceenrollment<br>ms-설정: signinoptions-launchfingerprintenrollment |
 | 사용자의 정보 | ms-설정: 해당 정보 |
 
-## <a name="apps"></a>의
+### <a name="apps"></a>앱
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -104,7 +131,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 시작 앱 | ms-설정: startupapps |
 | 비디오 재생 | ms-설정: 비디오 재생 |
 
-## <a name="cortana"></a>Cortana
+### <a name="cortana"></a>Cortana
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -117,7 +144,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 > [!NOTE] 
 > PC가 현재 Cortana를 사용할 수 없거나 Cortana가 비활성화 된 지역으로 설정 된 경우 데스크톱의이 설정 섹션을 검색 이라고 합니다. Cortana 관련 페이지 (내 장치에서 Cortana 및 Cortana와 대화)는이 경우에 나열 되지 않습니다. 
 
-## <a name="devices"></a>디바이스
+### <a name="devices"></a>디바이스
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -134,7 +161,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 휠 | 밀리초-설정: 휠 (전화 접속이 페어링된 경우에만 사용 가능) |
 | 휴대폰 | ms-설정: 모바일-장치  |
 
-## <a name="ease-of-access"></a>간편한 액세스
+### <a name="ease-of-access"></a>간편한 액세스
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -144,22 +171,22 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 커서 및 포인터 크기 | ms-설정: easeofaccess-cursorandpointersize |
 | 표시 | ms-설정: easeofaccess |
 | 아이 컨트롤 | ms-설정: easeofaccess-eyecontrol |
-| 글꼴 | ms-설정: 글꼴 |
+| Fonts | ms-설정: 글꼴 |
 | 고대비 | ms-설정: easeofaccess-system.windows.forms.systeminformation.highcontrast |
-| Keyboard | ms-설정: easeofaccess |
+| 키보드 | ms-설정: easeofaccess |
 | 돋보기 | ms-설정: easeofaccess-돋보기 |
 | 마우스 | ms-설정: easeofaccess |
 | 내레이터 | ms-설정: easeofaccess-내레이터 |
 | 기타 옵션 | easeofaccess: otheroptions (**Windows 10 버전 1809 이상에서 사용 되지 않음**) |
-| Speech | ms-설정: easeofaccess-speechrecognition |
+| 음성 | ms-설정: easeofaccess-speechrecognition |
 
-## <a name="extras"></a>추가 항목
+### <a name="extras"></a>추가 항목
 
 |설정 페이지| URI |
 |-------------|-----|
 | 추가 항목 | ms-설정: 스페셜 (예: 타사에서 "설정 앱"이 설치 된 경우에만 사용 가능) |
 
-## <a name="gaming"></a>게임
+### <a name="gaming"></a>게임
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -171,13 +198,13 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | TruePlay | trueplay (**Windows 10, 버전 1809 (10.0;)을 (를) 기반으로 합니다. 빌드 17763),이 기능은 Windows에서 제거 되었습니다**. |
 | Xbox 네트워킹 | ms-설정: 게임-xboxnetworking |
 
-## <a name="home-page"></a>홈 페이지
+### <a name="home-page"></a>홈 페이지
 
 |설정 페이지| URI |
 |-------------|-----|
 | 설정 홈 페이지 | ms-설정: |
 
-## <a name="mixed-reality"></a>혼합 현실
+### <a name="mixed-reality"></a>혼합 현실
 
 > [!NOTE]
 > 이러한 설정은 혼합 현실 포털 앱이 설치 된 경우에만 사용할 수 있습니다.
@@ -189,7 +216,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 헤드셋 표시 | ms-설정: holographic-헤드셋 |
 | 제거 | ms-설정: holographic |
 
-## <a name="network--internet"></a>네트워크 & 인터넷
+### <a name="network-and-internet"></a>네트워크 및 인터넷
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -206,9 +233,9 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 상태 | ms-설정: 네트워크-상태<br/>ms-설정: 네트워크 |
 | VPN | ms-설정: 네트워크-vpn |
 | Wi-Fi | ms-설정: 네트워크-wifi (장치에 wifi 어댑터가 있는 경우에만 사용 가능) |
-| Wi-fi 호출 | wificalling: 네트워크-(Wi-fi 호출이 사용 되는 경우에만 사용 가능) |
+| Wi-Fi 호출 | wificalling: 네트워크-사용 가능 (Wi-Fi 호출을 사용 하는 경우에만 사용 가능) |
 
-## <a name="personalization"></a>개인 설정
+### <a name="personalization"></a>개인 설정
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -223,13 +250,13 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 작업 표시줄 | ms-설정: 작업 표시줄 |
 | 테마 | ms-설정: 테마 |
 
-## <a name="phone"></a>전화
+### <a name="phone"></a>전화
 
 |설정 페이지| URI |
 |-------------|-----|
 | 휴대폰 | ms-설정: 모바일-장치<br/>ms-설정: 모바일-장치-addphone<br/>ms-설정: 모바일 장치-휴대폰-직접 ( **전화 앱을** 엽니다.) |
 
-## <a name="privacy"></a>개인 정보 취급 방침
+### <a name="privacy"></a>개인 정보 취급 방침
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -255,17 +282,17 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 메시징 | ms-설정: 개인 정보-메시징 |
 | 마이크 | ms-설정: 개인 정보-마이크 |
 | 동작 | ms-설정: 개인 정보-동작 |
-| 공지 | ms-설정: 개인 정보-알림 |
+| 알림 | ms-설정: 개인 정보-알림 |
 | 기타 디바이스 | ms-설정: 개인 정보-customdevices |
 | 전화 통화 | ms-설정: 개인 정보-phonecalls |
 | 사진 | ms-설정: 개인 정보-사진 |
 | 무선 | ms-설정: 개인 정보-라디오 |
-| Speech | ms-설정: 개인 정보-음성 |
+| 음성 | ms-설정: 개인 정보-음성 |
 | 작업 | ms-설정: 개인 정보-작업 |
 | 동영상 | ms-설정: 개인 정보-비디오 |
 | 음성 활성화 | ms-설정: 개인 정보-voiceactivation |
 
-## <a name="surface-hub"></a>Surface Hub
+### <a name="surface-hub"></a>Surface Hub
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -275,7 +302,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 팀 장치 관리 | ms-설정: surfacehub-devicemanagenent |
 | 시작 화면 | ms-설정: surfacehub-시작 |
 
-## <a name="system"></a>시스템
+### <a name="system"></a>시스템
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -310,19 +337,19 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 스토리지 | ms-설정: storagesense |
 | 저장소 센스 | ms-설정: storagepolicies |
 
-## <a name="time-and-language"></a>시간 및 언어
+### <a name="time-and-language"></a>시간 및 언어
 
 |설정 페이지| URI |
 |-------------|-----|
 | 날짜 및 시간 | ms-설정: dateandtime |
 | 일본 IME 설정 | 밀리초-설정: 지역 언어-jpnime (Microsoft 일본 입력 방법 편집기가 설치 된 경우 사용 가능) |
 | 지역 | ms-설정: 지역 서식 |
-| Language | ms-설정: 키보드<br/>ms-설정: 지역 언어<br/>ms-설정: 지역 언어-bpmfime<br/>ms-설정: 지역 언어-cangjieime<br/>밀리초-설정: 지역 언어-chsime-병음-domainlexicon<br/>밀리초-설정: 지역 언어-chsime-병음-keyconfig<br/>밀리초-설정: 지역 언어-chsime-병음-udp<br/>wubi: 지역 언어-chsime-udp<br/>ms-설정: 지역 언어-quickime |
+| 언어 | ms-설정: 키보드<br/>ms-설정: 지역 언어<br/>ms-설정: 지역 언어-bpmfime<br/>ms-설정: 지역 언어-cangjieime<br/>밀리초-설정: 지역 언어-chsime-병음-domainlexicon<br/>밀리초-설정: 지역 언어-chsime-병음-keyconfig<br/>밀리초-설정: 지역 언어-chsime-병음-udp<br/>wubi: 지역 언어-chsime-udp<br/>ms-설정: 지역 언어-quickime |
 | 병음 IME 설정 | 밀리초-설정: 지역 언어-chsime-병음 (Microsoft 병음 input 메서드 편집기가 설치 된 경우 사용 가능) |
-| Speech | ms-설정: 음성 |
+| 음성 | ms-설정: 음성 |
 | Wubi IME 설정  | wubi: 지역 언어-chsime-(Microsoft Wubi 입력 방법 편집기가 설치 된 경우 사용 가능) |
 
-## <a name="update--security"></a>업데이트 및 보안
+### <a name="update-and-security"></a>업데이트 및 보안
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -336,11 +363,11 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | Windows 보안 | ms-설정: windowsdefender |
 |  Windows 참가자 프로그램 | ms-settings: windowsinsider (사용자가 WIP에 등록 된 경우에만 있음)<br/>ms-settings: windowsinsider-optin |
 | Windows 업데이트 | ms-설정: windowsupdate.log<br>ms-설정: windowsupdate.log |
-| Windows 업데이트-고급 옵션 | ms-설정: windowsupdate.log |
-| Windows 업데이트-다시 시작 옵션 | ms-설정: windowsupdate.log-restartoptions |
-| Windows 업데이트-업데이트 기록 보기 | ms-설정: windowsupdate.log |
+| Windows Update-Advanced 옵션 | ms-설정: windowsupdate.log |
+| Windows Update-Restart 옵션 | ms-설정: windowsupdate.log-restartoptions |
+| Windows Update-View 업데이트 기록 | ms-설정: windowsupdate.log |
 
-## <a name="user-accounts"></a>사용자 계정
+### <a name="user-accounts"></a>사용자 계정
 
 |설정 페이지| URI |
 |-------------|-----|
