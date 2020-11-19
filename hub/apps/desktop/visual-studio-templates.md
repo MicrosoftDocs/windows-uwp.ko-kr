@@ -1,18 +1,18 @@
 ---
 description: 이 문서에서는 Windows 앱용 Visual Studio 프로젝트 및 항목 템플릿에 대해 간략히 설명합니다.
 title: Windows 앱용 Visual Studio 프로젝트 및 항목 템플릿
-ms.date: 07/02/2020
+ms.date: 11/17/2020
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
-ms.openlocfilehash: 7e8500aab3c6eeaa1552dc61a95ea7404bf4d5d5
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f84bd251bbae9c3f1a1326ab3ac3c7cf0fce3938
+ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174207"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94691601"
 ---
 # <a name="visual-studio-project-and-item-templates-for-windows-apps"></a>Windows 앱용 Visual Studio 프로젝트 및 항목 템플릿
 
@@ -25,7 +25,7 @@ Visual Studio 2019는 C\# 또는 C++를 사용하여 Windows 10 디바이스용 
 
 [WinUI(Windows UI) 라이브러리](../winui/index.md)는 데스크톱(.NET 및 네이티브 Win32)과 UWP 앱 플랫폼에서 Windows 앱을 위한 최신 네이티브 UI(사용자 인터페이스) 플랫폼입니다. [WinUI 3](../winui/winui3/index.md)(현재 개발자 미리 보기로 제공)은 WinUI의 최신 주요 버전이며, WinUI를 완전한 데스크톱 Windows 앱용 UX 프레임워크로 전환합니다.
 
-WinUI 3에는 Visual Studio 2019용 VSIX 패키지가 포함되어 있습니다. 이 패키지는 WinUI 기반 인터페이스를 사용하여 앱 빌드를 시작하는 데 도움이 되는 프로젝트와 항목 템플릿을 제공합니다. WinUI 3 VSIX 패키지 및 이 패키지에서 제공하는 프로젝트 템플릿에 대한 자세한 내용은 [이 섹션](../winui/winui3/index.md#install-winui-3-preview-2)을 참조하세요.
+WinUI 3에는 Visual Studio 2019용 VSIX 패키지가 포함되어 있습니다. 이 패키지는 WinUI 기반 인터페이스를 사용하여 앱 빌드를 시작하는 데 도움이 되는 프로젝트와 항목 템플릿을 제공합니다. WinUI 3 VSIX 패키지 및 이 패키지에서 제공하는 프로젝트 템플릿에 대한 자세한 내용은 [이 섹션](../winui/winui3/index.md#install-winui-3-preview-3)을 참조하세요.
 
 > [!IMPORTANT]
 > 관련 Visual Studio 템플릿을 포함한 WinUI 3은 현재 개발자 커뮤니티에서 초기에 평가하고 피드백을 수집하기 위한 개발자 미리 보기로 제공됩니다. 현재 프로덕션 앱에는 사용하면 안 됩니다.
@@ -36,7 +36,7 @@ Visual Studio는 C# 또는 C++를 사용하여 UWP 앱을 빌드하기 위한 �
 
 ### <a name="project-templates-for-c-and-uwp"></a>C# 및 UWP용 프로젝트 템플릿
 
-Visual Studio에서 새 프로젝트를 만들 때 UWP C# 프로젝트 템플릿에 액세스하려면 언어를 **C#** 으로, 플랫폼을 **Windows**로, 프로젝트 형식을 **UWP**로 필터링합니다.
+Visual Studio에서 새 프로젝트를 만들 때 UWP C# 프로젝트 템플릿에 액세스하려면 언어를 **C#** 으로, 플랫폼을 **Windows** 로, 프로젝트 형식을 **UWP** 로 필터링합니다.
 
 ![UWP C# 프로젝트 템플릿](images/uwp-projects-csharp.png)
 
@@ -62,7 +62,7 @@ C++ UWP 앱을 빌드하는 데 사용할 수 있는 두 가지 기술이 있습
 * 추천 기술은 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)입니다. 이는 전적으로 헤더 파일에서만 구현되는 C++ 언어 프로젝션이며, 최신 WinRT API에 대한 최고 수준의 액세스를 제공하도록 설계되었습니다.
 * 또는 이전의 [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 확장 세트를 사용할 수 있습니다. C++/CX는 계속 지원되지만 C++/WinRT를 대신 사용하는 것이 좋습니다.
 
-Visual Studio에서 새 프로젝트를 만들 때 UWP C++ 프로젝트 템플릿에 액세스하려면 언어를 **C++** 로, 플랫폼을 **Windows**로, 프로젝트 형식을 **UWP**로 필터링합니다. 
+Visual Studio에서 새 프로젝트를 만들 때 UWP C++ 프로젝트 템플릿에 액세스하려면 언어를 **C++** 로, 플랫폼을 **Windows** 로, 프로젝트 형식을 **UWP** 로 필터링합니다. 
 
 > [!NOTE]
 > Visual Studio의 **유니버설 Windows 플랫폼 개발** 워크로드는 기본적으로 C++/CX 프로젝트 템플릿에 대한 액세스만 제공합니다. C++/WinRT 프로젝트 템플릿에 액세스하려면 [C++/WinRT VSIX](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 패키지를 설치해야 합니다.
@@ -76,7 +76,7 @@ C++ UWP 앱을 만드는 데 사용할 수 있는 프로젝트 템플릿은 다�
 | 비어 있는 앱(C++/WinRT) | XAML 사용자 인터페이스를 사용하여 C++/WinRT UWP 앱을 만듭니다. 생성되는 프로젝트에는 UI 빌드를 시작하는 데 사용할 수 있는 [Windows.UI.Xaml.Controls.Page](/uwp/api/windows.ui.xaml.controls.page) 클래스에서 파생되는 기본 페이지가 포함됩니다. |
 | 주요 앱(C++/WinRT) | XAML 사용자 인터페이스 대신 [CoreApplication](/uwp/api/Windows.ApplicationModel.Core.CoreApplication)을 사용하여 다양한 UI 프레임워크와 통합하는 C++/WinRT UWP 앱을 만듭니다. 이 프로젝트 템플릿을 사용하여 DirectX를 사용하는 간단한 게임을 만드는 방법을 보여 주는 연습은 [DirectX를 사용하여 간단한 UWP 게임 만들기](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game)를 참조하세요. |
 | 빈 앱(유니버설 Windows - C++/CX) | XAML 사용자 인터페이스를 사용하여 C++/WinRT UWP 앱을 만듭니다. 생성되는 프로젝트에는 UI 빌드를 시작하는 데 사용할 수 있는 WinUI 라이브러리의 [Windows.UI.Xaml.Controls.Page](/uwp/api/windows.ui.xaml.controls.page) 클래스에서 파생되는 기본 페이지가 포함됩니다. |
-| DirectX 11 및 XAML 앱(유니버설 Windows - C++/CX) | XAML UI 컨트롤을 사용할 수 있도록 DirectX 11 및 **SwapChainPanel**을 사용하는 UWP 앱을 만듭니다. 자세한 내용은 [DirectX 게임 프로젝트 템플릿](/windows/uwp/gaming/user-interface)을 참조하세요. |
+| DirectX 11 및 XAML 앱(유니버설 Windows - C++/CX) | XAML UI 컨트롤을 사용할 수 있도록 DirectX 11 및 **SwapChainPanel** 을 사용하는 UWP 앱을 만듭니다. 자세한 내용은 [DirectX 게임 프로젝트 템플릿](/windows/uwp/gaming/user-interface)을 참조하세요. |
 | DirectX 11 앱(유니버설 Windows - C++/CX) | DirectX 11을 사용하는 UWP 앱을 만듭니다. 자세한 내용은 [DirectX 게임 프로젝트 템플릿](/windows/uwp/gaming/user-interface)을 참조하세요. |
 | DirectX 12 앱(유니버설 Windows - C++/CX) | DirectX 12를 사용하는 UWP 앱을 만듭니다. 자세한 내용은 [DirectX 게임 프로젝트 템플릿](/windows/uwp/gaming/user-interface)을 참조하세요. |
 | 단위 테스트 앱(유니버설 Windows - C++/CX) | C++/CX에서 UWP 앱용 단위 테스트 프로젝트를 만듭니다. 자세한 내용은 [C++ UWP DLL을 테스트하는 방법](/visualstudio/test/unit-testing-a-visual-cpp-dll-for-store-apps)을 참조하세요. |
@@ -96,7 +96,7 @@ Visual Studio는 네이티브 C++를 사용하고 Win32 API에 직접 액세스�
 
 ### <a name="project-templates-for-desktop-apps"></a>데스크톱 앱용 프로젝트 템플릿
 
-Visual Studio에서 새 프로젝트를 만들 때 클래식 데스크톱 앱용 C++ 프로젝트 템플릿에 액세스하려면 언어를 **C++** 로, 플랫폼을 **Windows**로, 프로젝트 형식을 **데스크톱**으로 필터링합니다.
+Visual Studio에서 새 프로젝트를 만들 때 클래식 데스크톱 앱용 C++ 프로젝트 템플릿에 액세스하려면 언어를 **C++** 로, 플랫폼을 **Windows** 로, 프로젝트 형식을 **데스크톱** 으로 필터링합니다.
 
 ![네이티브 C++ 앱 프로젝트 템플릿](images/desktop-app-projects-cpp.png)
 
@@ -108,7 +108,7 @@ Visual Studio에서 새 프로젝트를 만들 때 클래식 데스크톱 앱용
 
 ### <a name="project-templates-for-console-apps"></a>콘솔 앱용 프로젝트 템플릿
 
-콘솔 앱용 C++ 프로젝트 템플릿에 액세스하려면 언어를 **C++** 로, 플랫폼을 **Windows**로, 프로젝트 형식을 **콘솔**로 필터링합니다.
+콘솔 앱용 C++ 프로젝트 템플릿에 액세스하려면 언어를 **C++** 로, 플랫폼을 **Windows** 로, 프로젝트 형식을 **콘솔** 로 필터링합니다.
 
 ![네이티브 C++ 콘솔 프로젝트 템플릿](images/desktop-console-projects-cpp.png)
 
@@ -120,7 +120,7 @@ Visual Studio에서 새 프로젝트를 만들 때 클래식 데스크톱 앱용
 
 ### <a name="project-templates-for-libraries"></a>라이브러리용 프로젝트 템플릿
 
-라이브러리용 C++ 프로젝트 템플릿에 액세스하려면 언어를 **C++** 로, 플랫폼을 **Windows**로, 프로젝트 형식을 **라이브러리**로 필터링합니다.
+라이브러리용 C++ 프로젝트 템플릿에 액세스하려면 언어를 **C++** 로, 플랫폼을 **Windows** 로, 프로젝트 형식을 **라이브러리** 로 필터링합니다.
 
 ![네이티브 C++ 라이브러리 프로젝트 템플릿](images/desktop-library-projects-cpp.png)
 
@@ -137,7 +137,7 @@ C++ 프로젝트 템플릿에는 새 파일과 리소스를 프로젝트에 추�
 
 Visual Studio는 .NET 및 C#을 사용하는 데스크톱 Windows 앱을 빌드하기 위한 다양한 프로젝트 템플릿을 제공합니다. 이러한 프로젝트 템플릿을 사용하려면 Visual Studio를 설치할 때 **.NET 데스크톱 개발** 워크로드를 포함해야 합니다.
 
-Visual Studio에서 새 프로젝트를 만들 때 .NET C# 프로젝트 템플릿에 액세스하려면 언어를 **C#** 으로, 플랫폼을 **Windows**로, 프로젝트 형식을 **데스크톱**으로 필터링합니다.
+Visual Studio에서 새 프로젝트를 만들 때 .NET C# 프로젝트 템플릿에 액세스하려면 언어를 **C#** 으로, 플랫폼을 **Windows** 로, 프로젝트 형식을 **데스크톱** 으로 필터링합니다.
 
 ![.NET C# 프로젝트 템플릿](images/dotnet-projects-csharp.png)
 
