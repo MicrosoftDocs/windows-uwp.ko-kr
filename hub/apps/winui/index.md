@@ -4,12 +4,12 @@ description: Windows 앱 개발을 위한 WinUI 라이브러리입니다.
 ms.topic: article
 ms.date: 07/15/2020
 keywords: windows 10, uwp, 도구 키트 sdk, winui, Windows UI 라이브러리
-ms.openlocfilehash: eb87744ed5d3eb5882b4ebae75b8dcf295d89f10
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 932b3c898737426db6d62d6699b11c8f8c1b484b
+ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166757"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94691511"
 ---
 # <a name="windows-ui-library-winui"></a>Windows UI 라이브러리(WinUI)
 
@@ -22,7 +22,7 @@ WinUI는 [Fluent Design System](https://www.microsoft.com/design/fluent/#/)을 �
 데스크톱 및 UWP 앱을 모두 지원하므로 [Windows용 React Native](https://microsoft.github.io/react-native-windows/)를 통해 C++, C#, Visual Basic 및 Javascript와 같은 친숙한 언어를 사용하여 WinUI에서 처음부터 빌드하거나 기존 MFC, WinForms 또는 WPF 앱을 점진적으로 마이그레이션할 수 있습니다.
 
 > [!Important]
-> WinUI에는 **WinUI 2.x** 및 **WinUI 3**의 두 가지 버전이 있습니다.
+> WinUI에는 **WinUI 2.x** 및 **WinUI 3** 의 두 가지 버전이 있습니다.
 
 ## <a name="windows-ui-2x-library"></a>Windows UI 2.x 라이브러리
 
@@ -46,7 +46,7 @@ Windows 10의 이전 버전과 하위 수준 호환성을 유지하므로, 사�
 - [소스 코드](https://aka.ms/winui)
 - [XAML 컨트롤 갤러리 앱](https://www.microsoft.com/p/xaml-controls-gallery/9msvh128x2zt)
 
-## <a name="windows-ui-3-library-preview-2"></a>Windows UI 3 라이브러리(Preview 2)
+## <a name="windows-ui-3-library-preview-3"></a>Windows UI 3 라이브러리(Preview 3)
 
 WinUI 3은 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk/)에서 완전히 분리된 네이티브 Windows 10 UI 플랫폼인 WinUI의 다음 버전입니다.
 
@@ -69,8 +69,8 @@ WinUI는 모든 Windows 앱으로 진행하는 경로입니다. 네이티브 UWP
 
 ### <a name="related-links-for-winui-3"></a>WinUI 3에 대한 관련 링크
 
-- [Windows UI 라이브러리 3 Preview 2(2020년 7월)](winui3/index.md)
-- [XAML Controls Gallery(WinUI 3 Preview 2) 앱](https://github.com/microsoft/Xaml-Controls-Gallery/tree/winui3preview)
+- [Windows UI 라이브러리 3 Preview 3(2020년 11월)](winui3/index.md)
+- [XAML Controls Gallery(WinUI 3 Preview 3) 앱](https://github.com/microsoft/Xaml-Controls-Gallery/tree/winui3preview)
 
 ## <a name="winui-resources"></a>WinUI 리소스
 

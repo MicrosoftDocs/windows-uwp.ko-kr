@@ -90,7 +90,7 @@
       items:
         - name: 개요
           href: winui/index.md
-        - name: Windows UI 라이브러리 3.0 Preview 2
+        - name: Windows UI 라이브러리 3 Preview 3
           items:
             - name: 개요 및 릴리스 정보
               href: winui/winui3/index.md
