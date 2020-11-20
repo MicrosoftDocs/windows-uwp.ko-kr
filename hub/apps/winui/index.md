@@ -4,12 +4,12 @@ description: Windows 앱 개발을 위한 WinUI 라이브러리입니다.
 ms.topic: article
 ms.date: 07/15/2020
 keywords: windows 10, uwp, 도구 키트 sdk, winui, Windows UI 라이브러리
-ms.openlocfilehash: 932b3c898737426db6d62d6699b11c8f8c1b484b
-ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
+ms.openlocfilehash: 3b2b18ab35f46b132ec3017bb0f3c6564b7be9ee
+ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94691511"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933128"
 ---
 # <a name="windows-ui-library-winui"></a>Windows UI 라이브러리(WinUI)
 
@@ -42,7 +42,7 @@ Windows 10의 이전 버전과 하위 수준 호환성을 유지하므로, 사�
 ### <a name="related-links-for-winui-2x"></a>WinUI 2.x에 대한 관련 링크
 
 - [WinUI 2.x 라이브러리 개요](winui2/index.md)
-- [API 문서](/uwp/api/overview/winui/)
+- [API 문서](/windows/winui/api/)
 - [소스 코드](https://aka.ms/winui)
 - [XAML 컨트롤 갤러리 앱](https://www.microsoft.com/p/xaml-controls-gallery/9msvh128x2zt)
 

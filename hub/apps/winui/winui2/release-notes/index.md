@@ -3,12 +3,12 @@ title: WinUI 릴리스 정보
 description: WinUI 릴리스 정보 색인입니다.
 ms.date: 07/15/2020
 ms.topic: reference
-ms.openlocfilehash: 2055ba69566a901ea1491a36d742455fc13b5cb3
-ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
+ms.openlocfilehash: 4c89209868c1478f34de79f8b243fbe0e3dc80a3
+ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94691541"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933108"
 ---
 # <a name="windows-ui-library-2x-release-notes"></a>Windows UI 라이브러리 2.x 릴리스 정보
 
@@ -38,7 +38,7 @@ https://github.com/Microsoft/Xaml-Controls-Gallery)로도 제공되는 Xaml 컨�
 
 Windows UI 라이브러리 컨트롤에 대한 방법 문서가 [유니버설 Windows 플랫폼 컨트롤 설명서](/windows/uwp/design/controls-and-patterns/)에 포함되어 있습니다.
 
-API 참조 문서는 [Windows UI 라이브러리 API](/uwp/api/overview/winui/)에 있습니다.
+API 참조 문서는 [Windows UI 라이브러리 API](/windows/winui/api/)에 있습니다.
 
 ## <a name="version-history"></a>버전 기록
 

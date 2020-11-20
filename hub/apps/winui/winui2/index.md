@@ -5,12 +5,12 @@ ms.topic: article
 ms.date: 07/15/2020
 keywords: windows 10, uwp, 도구 키트 sdk, winui, Windows UI 라이브러리
 ms.custom: RS5
-ms.openlocfilehash: c7baa8fe74a45d1f7ba7f829f6d9f1228c70d44f
-ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
+ms.openlocfilehash: 92a546dcd177639b8c9bc7d2fd3dd6ca1fc7d3e5
+ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94691561"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933118"
 ---
 # <a name="windows-ui-library-2x"></a>Windows UI 라이브러리 2.x
 
@@ -47,7 +47,7 @@ https://github.com/Microsoft/Xaml-Controls-Gallery)로도 제공되는 Xaml 컨�
 
 Windows UI 라이브러리 컨트롤에 대한 방법 문서가 [유니버설 Windows 플랫폼 컨트롤 설명서](/windows/uwp/design/controls-and-patterns/)에 포함되어 있습니다.
 
-API 참조 문서는 [Windows UI 라이브러리 API](/uwp/api/overview/winui/)에 있습니다.
+API 참조 문서는 [Windows UI 라이브러리 API](/windows/winui/api/)에 있습니다.
 
 ## <a name="install-and-use-the-windows-ui-library"></a>Windows UI 라이브러리 설치 및 사용
 
