@@ -4,12 +4,12 @@ description: Windows UI 라이브러리를 설치하고 사용하는 방법입�
 ms.topic: reference
 ms.date: 07/15/2020
 keywords: Windows 10, UWP, 도구 키트 SDK
-ms.openlocfilehash: 7b7b248ce166368d315dce42f27075d3933c0781
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: e3b0daae3f053daabe153f8a0058953ff76e3b90
+ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91762852"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94691571"
 ---
 # <a name="getting-started-with-the-windows-ui-2x-library"></a>Windows UI 2.x 라이브러리 시작
 
@@ -18,7 +18,7 @@ ms.locfileid: "91762852"
 라이브러리는 신규 또는 기존 Visual Studio 프로젝트에 추가할 수 있는 NuGet 패키지로 제공됩니다.
 
 > [!NOTE]
-> WinUI 3 초기 미리 보기를 사용하는 방법에 대한 자세한 내용은 [Windows UI 라이브러리 3 Preview 2(2020년 7월)](../winui3/index.md)를 참조하세요.
+> WinUI 3 초기 미리 보기를 사용하는 방법에 대한 자세한 내용은 [Windows UI 라이브러리 3 Preview 3(2020년 11월)](../winui3/index.md)을 참조하세요.
 
 ## <a name="download-and-install-the-windows-ui-library"></a>Windows UI 라이브러리 다운로드 및 설치
 
@@ -29,7 +29,7 @@ ms.locfileid: "91762852"
     > [!IMPORTANT]
     > WinUI 2.4를 사용하려면 프로젝트 속성에서 TargetPlatformVersion을 10.0.18362.0 이상으로, TargetPlatformMinVersion을 10.0.15063.0 이상으로 설정해야 합니다.
 
-3. 솔루션 탐색기 창에서 마우스 오른쪽 단추로 프로젝트 이름을 클릭하고, **NuGet 패키지 관리**를 선택합니다. **찾아보기** 탭을 선택하고, **Microsoft.UI.Xaml** 또는 **WinUI**를 검색합니다. 그런 다음, 사용하려는 [Windows UI 라이브러리 NuGet 패키지](nuget-packages.md)를 선택합니다.
+3. 솔루션 탐색기 창에서 마우스 오른쪽 단추로 프로젝트 이름을 클릭하고, **NuGet 패키지 관리** 를 선택합니다. **찾아보기** 탭을 선택하고, **Microsoft.UI.Xaml** 또는 **WinUI** 를 검색합니다. 그런 다음, 사용하려는 [Windows UI 라이브러리 NuGet 패키지](nuget-packages.md)를 선택합니다.
 **Microsoft.UI.Xaml** 패키지에는 모든 앱에 적합한 Fluent 컨트롤 및 기능이 포함되어 있습니다.  
 필요에 따라 "시험판 포함"을 선택하여 새 실험적 기능이 포함된 최신 시험판 버전을 확인할 수 있습니다.
 

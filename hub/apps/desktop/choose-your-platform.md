@@ -1,21 +1,21 @@
 ---
-description: 새 데스크톱 앱을 만들려는 경우 가장 먼저 결정할 사항은 Win32 및 COM API 또는 .NET을 사용할지 여부를 결정하는 것입니다.
+description: 새 Windows 데스크톱 앱을 만들려는 경우 가장 먼저 결정할 사항은 Win32 및 COM API 또는 .NET을 사용할지 여부를 결정하는 것입니다.
 ms.assetid: 82705644-F1F0-40F3-99B1-7A97BFB32831
-title: 앱 플랫폼 선택
+title: Windows 앱 플랫폼 선택
 ms.topic: article
 ms.date: 11/04/2019
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, 데스크톱 개발
-ms.openlocfilehash: 46cf8a8e9a57384b85b3156b87697f898ff08ee8
-ms.sourcegitcommit: 37f570c7425a3fa953a0c375c19381bf9cf2b6a2
+ms.openlocfilehash: cdd21279e987f329024c53434e47777e427b95ab
+ms.sourcegitcommit: b69edc6d73370923f31df61c7e42b53de6c928ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2020
-ms.locfileid: "93191904"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94870909"
 ---
-# <a name="choose-your-app-platform"></a>앱 플랫폼 선택
+# <a name="choose-your-windows-app-platform"></a>Windows 앱 플랫폼 선택
 
 Windows PC에 대한 새 데스크톱 애플리케이션을 만들려는 경우 가장 먼저 해야할 것은 사용할 애플리케이션 플랫폼을 결정하는 것입니다. Windows는 각각 서로 다른 강점이 있는 네 가지 주요 애플리케이션 플랫폼을 제공합니다.
 
