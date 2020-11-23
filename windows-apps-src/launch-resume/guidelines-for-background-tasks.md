@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, 백그라운드 작업
 ms.localizationpriority: medium
-ms.openlocfilehash: 00717a64135ef32a99b06c61b31e2ff59a587878
-ms.sourcegitcommit: b66796c73f14da63794efa66c8ded2caa25da0f7
+ms.openlocfilehash: b73568c5fb4bae6392051fedcd6ca3dea078a98d
+ms.sourcegitcommit: 4491da3f509b1126601990a816c6eb301d35ecc6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89285454"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95416620"
 ---
 # <a name="guidelines-for-background-tasks"></a>백그라운드 작업 지침
 
@@ -30,7 +30,7 @@ In-process **및 out-of-process 백그라운드 작업:** Windows 10 버전 1607
 |--------------|--------|
 |복원력   | 백그라운드 프로세스가 다른 프로세스에서 실행 되는 경우 백그라운드 프로세스의 작동이 중단 되 면 포그라운드 응용 프로그램이 작동 하지 않습니다. 또한 이전 실행 시간 제한을 실행 하는 경우 앱 내 에서도 백그라운드 작업을 종료할 수 있습니다. 포그라운드 앱과 분리 된 작업으로 백그라운드 작업을 분리 하는 것은 포그라운드 및 백그라운드 프로세스가 서로 통신 하는 데 필요 하지 않은 경우에 더 적합할 수 있습니다 (in-process 백그라운드 작업의 주요 이점 중 하나는 프로세스 간 통신에 대 한 필요성을 제거 하기 때문). |
 |단순함    | In-process 백그라운드 작업은 프로세스 간 통신이 필요 하지 않으며 작성 하기 복잡 합니다.  |
-|사용 가능한 트리거 | In-process 백그라운드 작업은 [DeviceUseTrigger](/uwp/api/windows.applicationmodel.background.deviceusetrigger?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](/uwp/api/windows.applicationmodel.background.deviceservicingtrigger) 및 **i startuptask**트리거를 지원 하지 않습니다. |
+|사용 가능한 트리거 | In-process 백그라운드 작업은 [DeviceUseTrigger](/uwp/api/windows.applicationmodel.background.deviceusetrigger?f=255&MSPPError=-2147217396), [DeviceServicingTrigger](/uwp/api/windows.applicationmodel.background.deviceservicingtrigger) 및 **i startuptask** 트리거를 지원 하지 않습니다. |
 |VoIP | In-process 백그라운드 작업은 응용 프로그램 내에서 VoIP 백그라운드 작업을 활성화 하는 것을 지원 하지 않습니다. |  
 
 **트리거 인스턴스 수에 대 한 제한:** 앱이 등록할 수 있는 일부 트리거의 인스턴스 수에는 제한이 있습니다. 앱은 앱 인스턴스당   [Applicationtrigger](/uwp/api/Windows.ApplicationModel.Background.ApplicationTrigger), [MediaProcessingTrigger](/uwp/api/windows.applicationmodel.background.mediaprocessingtrigger) 및 [DeviceUseTrigger](/uwp/api/windows.applicationmodel.background.deviceusetrigger?f=255&MSPPError=-2147217396) 를 한 번만 등록할 수 있습니다. 앱이이 제한을 초과 하면 등록 시 예외가 throw 됩니다.
@@ -39,7 +39,7 @@ In-process **및 out-of-process 백그라운드 작업:** Windows 10 버전 1607
 
 **백그라운드 작업 관리:** 앱은 등록 된 백그라운드 작업 목록을 가져오고, 진행률 및 완료 처리기를 등록 하 고, 해당 이벤트를 적절 하 게 처리 해야 합니다. 백그라운드 작업 클래스는 진행률, 취소 및 완료를 보고 해야 합니다. 자세한 내용은 [취소 된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)및 [백그라운드 작업 진행률 및 완료 모니터링](monitor-background-task-progress-and-completion.md)을 참조 하세요.
 
-** [BackgroundTaskDeferral](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskDeferral)사용:** 백그라운드 작업 클래스가 비동기 코드를 실행 하는 경우 지연과를 사용 해야 합니다. 그렇지 않으면 [실행](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) 메서드가 반환 될 때 백그라운드 작업이 중간에 종료 될 수 있습니다 (또는 in-process 백그라운드 작업의 경우 [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated) 메서드). 자세한 내용은 out-of-process [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조 하세요.
+**[BackgroundTaskDeferral](/uwp/api/Windows.ApplicationModel.Background.BackgroundTaskDeferral)사용:** 백그라운드 작업 클래스가 비동기 코드를 실행 하는 경우 지연과를 사용 해야 합니다. 그렇지 않으면 [실행](/uwp/api/windows.applicationmodel.background.ibackgroundtask.run) 메서드가 반환 될 때 백그라운드 작업이 중간에 종료 될 수 있습니다 (또는 in-process 백그라운드 작업의 경우 [OnBackgroundActivated](/uwp/api/windows.ui.xaml.application.onbackgroundactivated) 메서드). 자세한 내용은 out-of-process [백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)을 참조 하세요.
 
 또는 한 지연을 요청 하 고 비동기 **/** 대기를 사용 하 여 비동기 메서드 호출을 완료 합니다. **Wait** 메서드가를 호출한 후 지연을 닫습니다.
 
@@ -47,7 +47,7 @@ In-process **및 out-of-process 백그라운드 작업:** Windows 10 버전 1607
 
 백그라운드 작업이 여러 개인 경우 동일한 호스트 프로세스에서 실행 하거나 다른 호스트 프로세스로 분리 해야 하는지 여부를 고려 합니다. 한 백그라운드 작업의 오류로 인해 다른 백그라운드 작업이 중단 될 수 있는 경우 별도의 호스트 프로세스에 배치 합니다.  매니페스트 디자이너의 **리소스 그룹** 항목을 사용 하 여 백그라운드 작업을 여러 호스트 프로세스로 그룹화 할 수 있습니다. 
 
-**리소스 그룹**을 설정 하려면 appxmanifest.xml 디자이너를 열고 **선언**을 선택한 다음 **App Service** 선언을 추가 합니다.
+**리소스 그룹** 을 설정 하려면 appxmanifest.xml 디자이너를 열고 **선언** 을 선택한 다음 **App Service** 선언을 추가 합니다.
 
 ![리소스 그룹 설정](images/resourcegroup.png)
 
@@ -59,11 +59,11 @@ In-process **및 out-of-process 백그라운드 작업:** Windows 10 버전 1607
 
 **백그라운드 작업 실행 요청:**
 
-> **중요**    Windows 10부터 백그라운드 작업을 실행 하기 위한 필수 조건으로 앱이 더 이상 잠금 화면에 있을 필요가 없습니다.
+> **중요**  Windows 10부터 백그라운드 작업을 실행 하기 위한 필수 조건으로 앱이 더 이상 잠금 화면에 있을 필요가 없습니다.
 
 UWP (유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정 되지 않고 지원 되는 모든 작업 유형을 실행할 수 있습니다. 그러나 앱은 [**Getaccessstate**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.getaccessstatus) 를 호출 하 고 앱이 백그라운드에서 실행 되지 못하도록 거부 되지 않았는지 확인 해야 합니다. **Getaccessstatus** 가 거부 된 [**BackgroundAccessStatus**](/uwp/api/windows.applicationmodel.background.backgroundaccessstatus) 열거형 중 하나를 반환 하지 않는지 확인 합니다. 예를 들어 사용자가 장치 설정에서 앱에 대 한 백그라운드 작업 권한을 명시적으로 거부 한 경우이 메서드는 **DeniedByUser** 를 반환 합니다.
 
-앱이 백그라운드에서 실행 되지 못하도록 거부 되 면 앱은 [**Requestaccessasync**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.getaccessstatus) 를 호출 하 고 백그라운드 작업을 등록 하기 전에 응답이 거부 되지 않았는지 확인 해야 합니다.
+앱이 백그라운드에서 실행 되지 못하도록 거부 되 면 앱은 [**Requestaccessasync**](/uwp/api/windows.applicationmodel.background.backgroundexecutionmanager.requestaccessasync) 를 호출 하 고 백그라운드 작업을 등록 하기 전에 응답이 거부 되지 않았는지 확인 해야 합니다.
 
 백그라운드 작업 및 배터리 보호기와 관련 한 사용자 선택에 대 한 자세한 내용은 [백그라운드 작업 최적화](../debug-test-perf/optimize-background-activity.md)를 참조 하세요. 
 ## <a name="background-task-checklist"></a>백그라운드 작업 검사 목록
@@ -89,13 +89,21 @@ UWP (유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정 되지 않�
 *In-process 백그라운드 작업에만 적용 됩니다.*
 
 - 작업을 취소 하는 경우 `BackgroundActivated` 취소가 발생 하거나 전체 프로세스가 종료 되기 전에 이벤트 처리기가 종료 되는지 확인 합니다.
--   수명이 짧은 백그라운드 작업을 작성 합니다. 백그라운드 작업은 30 초에서 벽 시계 사용으로 제한 됩니다.
--   백그라운드 작업의 사용자 상호 작용에 의존 하지 마십시오.
+-   수명이 짧은 백그라운드 작업을 작성 합니다. 대부분의 백그라운드 작업은 벽 시계 사용의 30 초로 제한 됩니다.
+
+
+*피해야 할 사항*
+- COM 또는 RPC를 통한 프로세스 간 통신의 사용을 최소화 합니다.
+-   통신 하려는 프로세스가 실행 중 상태가 아닐 수 있으며,이로 인해 중단 될 수 있습니다.
+-   프로세스 간 통신을 용이 하 게 하는 데 많은 시간이 소요 될 수 있으며, 백그라운드 작업을 실행 하는 데 할당 된 시간을 계산 합니다.
+- 백그라운드 작업의 사용자 상호 작용에 의존 하지 마십시오.
+
 
 ## <a name="related-topics"></a>관련 항목
 
-* [In-process 백그라운드 작업을 만들고 등록](create-and-register-an-inproc-background-task.md)합니다.
+* [In-process 백그라운드 작업 만들기 및 등록](create-and-register-an-inproc-background-task.md)
 * [Out-of-process 백그라운드 작업 만들기 및 등록](create-and-register-a-background-task.md)
+* [winmain COM 백그라운드 작업 만들기 및 등록](create-and-register-a-winmain-background-task.md)
 * [애플리케이션 매니페스트에서 백그라운드 작업 선언](declare-background-tasks-in-the-application-manifest.md)
 * [백그라운드에서 미디어 재생](../audio-video-camera/background-audio.md)
 * [취소된 백그라운드 작업 처리](handle-a-cancelled-background-task.md)
@@ -109,6 +117,6 @@ UWP (유니버설 Windows 플랫폼) 앱은 잠금 화면에 고정 되지 않�
 * [백그라운드 작업 디버그](debug-a-background-task.md)
 * [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법 (디버깅 시)](/previous-versions/hh974425(v=vs.110))
 
- 
+ 
 
- 
+ 
