@@ -3,12 +3,12 @@ title: WinUI 3 Preview 3(2020년 11월)
 description: WinUI 3 Preview 3 릴리스에 대한 개요입니다.
 ms.date: 11/17/2020
 ms.topic: article
-ms.openlocfilehash: d2ff1646c431ef1f79455260a61027d0a84f77ca
-ms.sourcegitcommit: f723edbe3dc846c1988d721f6e8078aaec371899
+ms.openlocfilehash: d91d957434b2a39182e2c764aecf49fc43f7a601
+ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94701969"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933178"
 ---
 # <a name="windows-ui-library-3-preview-3-november-2020"></a>Windows UI 라이브러리 3 Preview 3(2020년 11월)
 
@@ -43,15 +43,19 @@ WinUI 3 Preview 3에는 WinUI 기반 사용자 인터페이스를 사용하여 �
     C++ 앱을 빌드하려면 다음 워크로드도 포함해야 합니다.
     - C++를 사용한 데스크톱 개발
     - 유니버설 Windows 플랫폼 워크로드용 선택적 *C++(v142) 유니버설 Windows 플랫폼 도구* 구성 요소(오른쪽 창에 있는 "유니버설 Windows 플랫폼 개발" 섹션의 "설치 세부 정보" 참조)
-3. **nuget.org** 에 사용하도록 설정된 NuGet 패키지 원본이 시스템에 있는지 확인합니다. 자세한 내용은 [일반적인 NuGet 구성](/nuget/consume-packages/configuring-nuget-behavior)을 참조하십시오.
+3. **nuget.org** 에 사용하도록 설정된 NuGet 패키지 원본이 시스템에 있는지 확인합니다. 자세한 내용은 [일반적인 NuGet 구성](/nuget/consume-packages/configuring-nuget-behavior)을 참조하십시오.[Windows 커뮤니티 도구 키트](#windows-community-toolkit)
 
 4. [WinUI 3 Preview 3 VSIX 패키지](https://aka.ms/winui3/preview3-download)를 다운로드하여 설치합니다. 그러면 WinUI 3 프로젝트 템플릿 및 WinUI 3 라이브러리가 포함된 NuGet 패키지가 모두 Visual Studio 2019에 추가됩니다.
 
     VSIX 패키지를 Visual Studio에 추가하는 방법에 대한 지침은 [Visual Studio 확장 찾기 및 사용](/visualstudio/ide/finding-and-using-visual-studio-extensions#install-without-using-the-manage-extensions-dialog-box)을 참조하세요.
 
-5. 앱에서 WebView2 컨트롤을 사용하는 경우 [Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/en-us/download)에서 Microsoft Edge 브라우저의 Dev 채널 버전을 설치하세요. Microsoft Edge Beta, Microsoft Edge Dev 및 Microsoft Edge WebView2 런타임의 기존 인스턴스를 모두 제거해야 합니다.
+#### <a name="webview2"></a>WebView2
 
-6. Windows 커뮤니티 도구 키트를 사용하는 경우 [최신 버전을 다운로드](https://aka.ms/wct-winui3)합니다.
+앱에서 WebView2 컨트롤을 사용하는 경우 [Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/en-us/download)에서 **Microsoft Edge 브라우저의 Dev 채널 버전** 을 설치하세요. Microsoft Edge Beta, Microsoft Edge Dev 및 Microsoft Edge WebView2 런타임의 기존 인스턴스를 모두 제거해야 합니다.
+
+#### <a name="windows-community-toolkit"></a>Windows 커뮤니티 도구 키트
+
+Windows 커뮤니티 도구 키트를 사용하는 경우 [최신 버전을 다운로드](https://aka.ms/wct-winui3)합니다.
 
 ## <a name="create-winui-projects"></a>WinUI 프로젝트 만들기
 
@@ -66,7 +70,7 @@ WinUI 프로젝트 템플릿을 시작하는 방법에 대한 자세한 내용�
 
 [제한 사항 및 알려진 문제](#preview-3-limitations-and-known-issues) 외에도 WinUI 프로젝트를 사용하여 앱을 빌드하는 것은 XAML 및 WinUI 2.x를 사용하여 UWP 앱을 빌드하는 것과 비슷합니다. 따라서 UWP 앱 및 Windows SDK의 **Windows.UI** WinRT 네임스페이스에 대한 대부분의 [지침 설명서](/windows/uwp/design/)를 적용할 수 있습니다.
 
-이 릴리스에는 WinUI 3으로 이식된 모든 WinRT API에 대해 [WinUI 3 API 참조 설명서](/uwp/api/overview/winui/)도 추가되었습니다.
+이 릴리스에는 WinUI 3으로 이식된 모든 WinRT API에 대해 [WinUI 3 API 참조 설명서](/windows/winui/api/)도 추가되었습니다.
 
 WinUI 3 Preview 2를 사용하여 프로젝트를 만든 경우 Preview 3을 사용하도록 프로젝트를 업그레이드할 수 있습니다. 자세한 지침은 [WinUI GitHub 리포지토리](https://aka.ms/winui3/upgrade-instructions)를 참조하세요.
 
