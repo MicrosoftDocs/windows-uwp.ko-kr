@@ -3,12 +3,12 @@ title: WinUI 3 Preview 3(2020년 11월)
 description: WinUI 3 Preview 3 릴리스에 대한 개요입니다.
 ms.date: 11/17/2020
 ms.topic: article
-ms.openlocfilehash: d91d957434b2a39182e2c764aecf49fc43f7a601
-ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
+ms.openlocfilehash: ac641036af8505b1e51fb81385f5206a9aa44f40
+ms.sourcegitcommit: 29c8999fb7a941fc6e26b49cf10f4cc1fcb69641
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94933178"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "95002918"
 ---
 # <a name="windows-ui-library-3-preview-3-november-2020"></a>Windows UI 라이브러리 3 Preview 3(2020년 11월)
 
@@ -177,6 +177,7 @@ WinUI 3 Preview 3은 Windows 10 2018년 4월 업데이트(버전 1803 - 빌드 1
 - 데스크톱 앱은 .NET 5 및 C# 9를 지원하며 MSIX 앱에 패키지되어야 합니다.
 - UWP 앱은 .NET 네이티브 및 C# 7.3을 지원합니다.
 - 개발자 도구와 Intellisense가 Visual Studio 버전 16.8에서 제대로 작동하지 않을 수 있습니다.
+- XAML 디자이너 지원 기능이 없음
 - 새 C++/CX 앱은 지원되지 않지만, 기존 앱은 계속 작동합니다(가능한 한 빨리 C++/WinRT로 이동).
 - 데스크톱 앱에서 여러 창 지원을 진행하고 있지만 아직 완전하고 안정적이지 않습니다.
   - 여러 창 동작으로 인한 새로운 문제 또는 재발을 발견하면 리포지토리에서 버그를 제출해 주세요.
