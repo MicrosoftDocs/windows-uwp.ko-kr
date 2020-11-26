@@ -7,10 +7,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 76a6264a8ce1704e9bd209a6246c81ba9665265f
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.sourcegitcommit: 4df27104a9e346d6b9fb43184812441fe5ea3437
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93034436"
 ---
 # <a name="two-pane-view"></a>2 창 보기
@@ -198,7 +198,7 @@ MyTwoPaneView.PanePriority = Microsoft.UI.Xaml.Controls.TwoPaneViewPriority.Pane
 
 ### <a name="pane-sizing"></a>영역 크기 조정
 
-단일 화면에서 창의 크기는 [Pane1Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane1length) 및 [Pane2Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane2length) 속성에 따라 결정됩니다. 이는 _자동_ 및 _배율_ (\*) 크기 조정을 지원하는 [GridLength](/uwp/api/windows.ui.xaml.gridlength) 값을 사용합니다. 자동 및 배율 크기 조정에 대한 설명은 [XAML을 사용하는 응답성이 뛰어난 레이아웃](../layout/layouts-with-xaml.md#layout-properties)의 _레이아웃 속성_ 섹션을 참조하세요.
+단일 화면에서 창의 크기는 [Pane1Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane1length) 및 [Pane2Length](/uwp/api/microsoft.ui.xaml.controls.twopaneview.pane2length) 속성에 따라 결정됩니다. 이는 _자동_ 및 _배율_(\*) 크기 조정을 지원하는 [GridLength](/uwp/api/windows.ui.xaml.gridlength) 값을 사용합니다. 자동 및 배율 크기 조정에 대한 설명은 [XAML을 사용하는 응답성이 뛰어난 레이아웃](../layout/layouts-with-xaml.md#layout-properties)의 _레이아웃 속성_ 섹션을 참조하세요.
 
 기본적으로 `Pane1Length`는 `Auto`로 설정되고 해당 콘텐츠에 맞게 크기가 조정됩니다. `Pane2Length`는 `*`로 설정되며, 나머지 공간을 모두 사용합니다.
 

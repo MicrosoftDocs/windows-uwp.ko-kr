@@ -3,12 +3,12 @@ title: WinUI 2.2 릴리스 정보
 description: 새로운 기능 및 버그 수정이 포함된 WinUI 2.2 릴리스에 대한 정보입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: 603c2c439e47c82695c8bdf5cd16fceebc9bc068
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: b14b96ffc03d5e3e934b72d71ae9e2a8a3f0eb1d
+ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91762936"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933148"
 ---
 # <a name="windows-ui-library-22"></a>Windows UI 라이브러리 2.2
 
@@ -40,7 +40,7 @@ TabView 컨트롤은 각각 앱의 새 페이지 또는 문서를 나타내는 �
 
 #### <a name="documentation"></a>문서
 
-https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.tabview?view=winui-2.2
+https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.tabview?view=winui-2.2&preserve-view=true
 
 #### <a name="navigationview-updates"></a>NavigationView 업데이트
 
@@ -144,7 +144,7 @@ https://github.com/Microsoft/Xaml-Controls-Gallery)로도 제공되는 Xaml 컨�
 
 Windows UI 라이브러리 컨트롤에 대한 방법 문서가 [유니버설 Windows 플랫폼 컨트롤 설명서](/windows/uwp/design/controls-and-patterns/)에 포함되어 있습니다.
 
-API 참조 문서는 [Windows UI 라이브러리 API](/uwp/api/overview/winui/)에 있습니다.
+API 참조 문서는 [Windows UI 라이브러리 API](/windows/winui/api/)에 있습니다.
 
 ## <a name="microsoftuixaml-22-prerelease-version-history"></a>Microsoft.UI.Xaml 2.2 시험판 버전 기록
 
@@ -158,7 +158,7 @@ API 참조 문서는 [Windows UI 라이브러리 API](/uwp/api/overview/winui/)�
 
 ### <a name="experimental-feature"></a>실험적 기능
 
-* [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview?view=winui-2.2)
+* [TabView](/uwp/api/microsoft.ui.xaml.controls.tabview?view=winui-2.2&preserve-view=true)
 
 ### <a name="microsoftuixaml-2220190416001-prerelease"></a>Microsoft.UI.Xaml 2.2.20190416001-prerelease
 

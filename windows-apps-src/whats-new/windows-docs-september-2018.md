@@ -5,12 +5,12 @@ keywords: 새로운 기능, 업데이트, 기능, 개발자 지침, Windows 10, 
 ms.date: 09/10/2018
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d15cd0289b3de0c086a3ddc974e1b121447188c5
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 064ffbcc8c254b50704b2e63579e424a78933b3c
+ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155227"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933168"
 ---
 # <a name="whats-new-in-the-windows-developer-docs-in-september-2018"></a>2018년 9월 Windows 개발자 문서의 새로운 내용
 
@@ -34,7 +34,7 @@ Windows 10에 [도구 및 SDK를 설치](https://developer.microsoft.com/windows
 
 [Windows UI Library](/uwp/toolkits/winui/)는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. 또한 이러한 패키지는 이전 버전의 Windows 10과도 호환되므로 사용자에게 최신 OS 버전이 없는 경우에도 앱이 작동합니다.
 
-Windows UI 라이브러리에 대한 자세한 내용은 [NuGet 패키지에 포함된 API 네임스페이스 목록](/uwp/api/overview/winui/)을 참조하세요.
+Windows UI 라이브러리에 대한 자세한 내용은 [NuGet 패키지에 포함된 API 네임스페이스 목록](/windows/winui/api/)을 참조하세요.
 
 ## <a name="developer-guidance"></a>개발자 지침
 

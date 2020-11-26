@@ -3,12 +3,12 @@ title: WinUI 2.0 릴리스 정보
 description: WinUI 2.0 릴리스에 대한 정보입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: eb1cde864427768ab1adb3b982e4acc5b58906db
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d6b362f78049cc6bb1ed6dfe341c2e5b083484a4
+ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154817"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933088"
 ---
 # <a name="windows-ui-library-20"></a>Windows UI 라이브러리 2.0
 
@@ -76,4 +76,4 @@ https://github.com/Microsoft/Xaml-Controls-Gallery)로도 제공되는 Xaml 컨�
 
 Windows UI 라이브러리 컨트롤에 대한 방법 문서가 [유니버설 Windows 플랫폼 컨트롤 설명서](/windows/uwp/design/controls-and-patterns/)에 포함되어 있습니다.
 
-API 참조 문서는 [Windows UI 라이브러리 API](/uwp/api/overview/winui/)에 있습니다.
+API 참조 문서는 [Windows UI 라이브러리 API](/windows/winui/api/)에 있습니다.

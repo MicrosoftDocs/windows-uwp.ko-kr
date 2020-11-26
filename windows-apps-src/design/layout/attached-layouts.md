@@ -8,10 +8,10 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.openlocfilehash: 62ecc21d3ed9835ae7360d0c0dfdfa0b09cbdced
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.sourcegitcommit: 4df27104a9e346d6b9fb43184812441fe5ea3437
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
+ms.lasthandoff: 11/26/2020
 ms.locfileid: "93034866"
 ---
 # <a name="attached-layouts"></a>연결된 레이아웃
@@ -24,7 +24,7 @@ ms.locfileid: "93034866"
 | - |
 | 이 컨트롤은 Windows 앱용 새 컨트롤과 UI 기능을 포함하는 NuGet 패키지인 Windows UI 라이브러리의 일부로 포함되어 있습니다. 설치 지침을 비롯한 자세한 내용은 [Windows UI 라이브러리 개요](/uwp/toolkits/winui/)를 참조하세요. |
 
-> **중요 API** :
+> **중요 API**:
 
 > * [ScrollViewer](/uwp/api/windows.ui.xaml.controls.scrollviewer)
 > * [ItemsRepeater](../controls-and-patterns/items-repeater.md)
@@ -40,7 +40,7 @@ ms.locfileid: "93034866"
 
 레이아웃을 수행하려면 모든 요소에 대해 다음 두 가지 질문에 답변해야 합니다.
 
-1. 이 요소의 * **크기** 는 얼마나 되나요?
+1. 이 요소의 ***크기** 는 얼마나 되나요?
 
 2. 이 요소는 어느 _*_위치_*_ 에 배치되나요?
 
@@ -149,10 +149,10 @@ UI 가상화는 _필요할 때까지_ UI 개체의 생성을 지연시키는 것
 
 1. 기본 형식 [NonVirtualizingLayout](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout)(Panel 대신)에서 파생됩니다.
 2. *(선택 사항)* 변경될 때 레이아웃을 무효화하는 종속성 속성을 정의합니다.
-3. _( **신규** /선택 사항)_ [InitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.initializeforcontextcore)의 일부로 레이아웃에 필요한 모든 상태 개체를 초기화합니다. 컨텍스트와 함께 제공되는 [LayoutState](/uwp/api/microsoft.ui.xaml.controls.layoutcontext.layoutstate)를 사용하여 호스트 컨테이너와 함께 스태시합니다.
+3. _(**신규**/선택 사항)_ [InitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.initializeforcontextcore)의 일부로 레이아웃에 필요한 모든 상태 개체를 초기화합니다. 컨텍스트와 함께 제공되는 [LayoutState](/uwp/api/microsoft.ui.xaml.controls.layoutcontext.layoutstate)를 사용하여 호스트 컨테이너와 함께 스태시합니다.
 4. [MeasureOverride](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout.measureoverride)를 재정의하고 모든 자식 항목에 대해 [Measure](/uwp/api/windows.ui.xaml.uielement.measure) 메서드를 호출합니다.
 5. [ArrangeOverride](/uwp/api/microsoft.ui.xaml.controls.nonvirtualizinglayout.arrangeoverride)를 재정의하고 모든 자식 항목에 대해 [Arrange](/uwp/api/windows.ui.xaml.uielement.arrange) 메서드를 호출합니다.
-6. *( **신규** /선택 사항)* 저장된 모든 상태를 [UninitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.uninitializeforcontextcore)의 일부로 정리합니다.
+6. *(**신규**/선택 사항)* 저장된 모든 상태를 [UninitializeForContextCore](/uwp/api/microsoft.ui.xaml.controls.virtualizinglayout.uninitializeforcontextcore)의 일부로 정리합니다.
 
 ### <a name="example-a-simple-stack-layout-varying-sized-items"></a>예제: 간단한 스택 레이아웃(다양한 크기의 항목)
 

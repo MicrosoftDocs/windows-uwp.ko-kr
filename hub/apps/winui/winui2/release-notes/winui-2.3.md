@@ -3,12 +3,12 @@ title: WinUI 2.3 릴리스 정보
 description: 새로운 기능 및 버그 수정이 포함된 WinUI 2.3 릴리스에 대한 정보입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: 1043ae488342fc8396902c73c2f00eb5b19f584d
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: ad589b15b5481b5b7ff402fc2043afd71c139479
+ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636513"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933068"
 ---
 # <a name="windows-ui-library-23"></a>Windows UI 라이브러리 2.3
 
@@ -26,7 +26,7 @@ NuGet 패키지 다운로드: [Microsoft.UI.Xaml](https://www.nuget.org/packages
 
 ### <a name="progress-bar-visual-refresh"></a>진행률 표시줄 시각적 새로 고침
 
-**ProgressBar**에는 두 가지 시각적 표현이 있습니다.
+**ProgressBar** 에는 두 가지 시각적 표현이 있습니다.
 
 #### <a name="indeterminate-progress-bar"></a>비활성화 상태 진행률 표시줄
 
@@ -46,7 +46,7 @@ NuGet 패키지 다운로드: [Microsoft.UI.Xaml](https://www.nuget.org/packages
 
 ### <a name="numberbox"></a>NumberBox
 
-**NumberBox**는 숫자를 표시하고 편집하는 데 사용할 수 있는 컨트롤을 나타냅니다. 이는 곱하기, 나누기, 더하기 및 빼기와 같은 기본 수식의 유효성 검사, 증가 단계별 실행 및 컴퓨팅 인라인 계산을 지원합니다.
+**NumberBox** 는 숫자를 표시하고 편집하는 데 사용할 수 있는 컨트롤을 나타냅니다. 이는 곱하기, 나누기, 더하기 및 빼기와 같은 기본 수식의 유효성 검사, 증가 단계별 실행 및 컴퓨팅 인라인 계산을 지원합니다.
 
 ![NumberBox](../images/NumberBoxGif.gif)
 
@@ -54,7 +54,7 @@ NuGet 패키지 다운로드: [Microsoft.UI.Xaml](https://www.nuget.org/packages
 
 ### <a name="radiobuttons"></a>RadioButtons
 
-**RadioButtons**는 관련된 RadioButton 요소 그룹을 쉽게 만들 수 있도록 하면서 키보드 및 내레이터/스크린 판독기 기능을 올바르게 지원할 수 있는 새 컨테이너 컨트롤입니다.
+**RadioButtons** 는 관련된 RadioButton 요소 그룹을 쉽게 만들 수 있도록 하면서 키보드 및 내레이터/스크린 판독기 기능을 올바르게 지원할 수 있는 새 컨테이너 컨트롤입니다.
 
 ![세 번째 라디오 단추가 선택된 세 개의 라디오 단추의 스크린샷.](../images/RadioButtons.png)
 
@@ -73,4 +73,4 @@ https://www.microsoft.com/p/xaml-controls-gallery/9msvh128x2zt)에서 XAML 컨�
 
 Windows UI 라이브러리 컨트롤에 대한 방법 문서가 [유니버설 Windows 플랫폼 컨트롤 설명서](/windows/uwp/design/controls-and-patterns/)에 포함되어 있습니다.
 
-API 참조 문서는 [Windows UI 라이브러리 API](/uwp/api/overview/winui/)에 있습니다.
+API 참조 문서는 [Windows UI 라이브러리 API](/windows/winui/api/)에 있습니다.

@@ -6,12 +6,12 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: b54e0b4417dd4ba9b835622a4c064b803de7fca9
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 416e3947678de0ba70687d9070c245fdfb4376df
+ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219707"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94933188"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-17763"></a>개발자용 Windows 10 빌드 17763의 새로운 기능
 
@@ -34,7 +34,7 @@ Fluent 디자인의 움직임 | Fluent 디자인 시스템에서 움직임을 �
 텍스트 크기 조정 | 새 [텍스트 크기 조정 지침](../design/input/text-scaling.md)에서는 사용자가 OS와 개별 애플리케이션 모두에서 상대 글꼴 크기를 변경할 수 있는 기능을 제공하는 새 텍스트 크기 조정 동작을 수용하도록 애플리케이션을 업데이트하는 방법을 설명합니다. 일반적으로 화면 영역 내의 모든 항목을 확대하고 자체의 유용성 문제를 제기하는 돋보기 앱을 사용하거나, 디스플레이 해상도를 변경하거나, 디스플레이 및 일반 시청 거리에 따라 모든 항목의 크기를 조정하는 DPI 배율을 사용하는 대신, 사용자가 설정에 빠르게 액세스하여 텍스트 크기만 100%(기본 크기)에서 최대 225%까지 조정할 수 있습니다.
 도구 키트 | [Adobe XD 및 Adobe Illustrator 도구 키트](../design/downloads/index.md)는 새로운 기능으로 업데이트되었습니다. 이러한 디자인 도구 키트는 UWP 앱 디자인을 위한 레이아웃 템플릿을 제공합니다.
 UI 명령 | [UWP 명령 인프라](../design/basics/commanding-basics.md)에 대한 업데이트에는 명령 개체(행동, 레이블, 아이콘, 키보드 액셀러레이터 키, 액세스 키 및 설명)와 일반적인 표준 명령 세트(잘라내기, 복사, 붙여넣기, 종료 등)의 더 효율적인 캡슐화가 포함되어 있으므로 이러한 속성을 수동으로 설정할 필요가 없습니다. </br> 새 [XamlUICommand](/uwp/api/windows.ui.xaml.input.xamluicommand) 클래스는 호출 시 작업을 수행하는 대화형 UI 요소의 명령 동작을 정의하는 기본 클래스를 제공합니다. 이 클래스는 미리 정의된 속성을 사용하여 표준 플랫폼 명령 세트를 공개하는 [StandardUICommand](/uwp/api/windows.ui.xaml.input.standarduicommand)의 부모 클래스입니다. 
-Windows UI Library | [Windows UI Library](/uwp/toolkits/winui/)는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. 또한 이러한 패키지는 이전 버전의 Windows 10과도 호환되므로 사용자에게 최신 OS 버전이 없는 경우에도 앱이 작동합니다. </br> Windows UI 라이브러리의 새로운 기능에 대한 자세한 내용은 [NuGet 패키지에 포함된 API 네임스페이스 목록](/uwp/api/overview/winui/)을 참조하세요.
+Windows UI Library | [Windows UI Library](/uwp/toolkits/winui/)는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 요소를 제공하는 NuGet 패키지 세트입니다. 또한 이러한 패키지는 이전 버전의 Windows 10과도 호환되므로 사용자에게 최신 OS 버전이 없는 경우에도 앱이 작동합니다. </br> Windows UI 라이브러리의 새로운 기능에 대한 자세한 내용은 [NuGet 패키지에 포함된 API 네임스페이스 목록](/windows/winui/api/)을 참조하세요.
 
 ## <a name="develop-windows-apps"></a>Windows 앱 개발
 
@@ -51,7 +51,7 @@ Microsoft Learn | 새 [Microsoft Learn 사이트](https://www.microsoft.com/lear
 메모장 | [메모장이 업데이트](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/)되어 확대/축소, 줄 바꿈 찾기/바꾸기, Unix/Linux(LF) 및 Mac(CR) 줄 끝 지원이 추가되었습니다.
 프로젝트 로마 | [프로젝트 로마](/windows/project-rome/)는 이제 지원되는 플랫폼과 SDK에서 일관된 프로그래밍 환경을 제공합니다. </br>  새 [Microsoft Graph 알림](/graph/notifications-concept-overview)에서 프로젝트 로마를 사용하여 앱을 위한 사용자 중심의 플랫폼 간 알림 플랫폼을 제공합니다.
 화면 캡처 | 새 [URI 체계](../launch-resume/launch-screen-snipping.md)를 사용하면 앱에서 프로그래밍 방식으로 새 캡처를 열거나 주석에 대한 특정 이미지를 사용하여 캡처 및 스케치 앱을 시작할 수 있습니다.
-데스크톱 애플리케이션의 UWP 컨트롤 | 이제 Windows 10을 사용 하면 WPF, Windows Forms 및 C++ Win32 데스크톱 애플리케이션에서 UWP 컨트롤을 사용할 수 있습니다. 즉, Windows Ink 및 Fluent 디자인 시스템을 지원하는 컨트롤과 같은 UWP 컨트롤을 통해서만 사용할 수 있는 최신 Windows 10 UI 기능을 통해 기존 데스크톱 애플리케이션의 모양, 느낌 및 기능을 향상시킬 수 있습니다. 이 기능을 *XAML 제도*라고 합니다. </br> 사용하는 애플리케이션 플랫폼에 따라 애플리케이션에서 XAML 제도를 사용할 수 있는 몇 가지 방법을 제공합니다. WPF 및 Windows Forms 애플리케이션은 디자이너 중심 개발 환경을 제공하는 [Windows 커뮤니티 도구 키트](/windows/uwpcommunitytoolkit/)의 컨트롤 세트를 사용할 수 있습니다. C++ Win32 애플리케이션은 [Windows.UI.Xaml.Hosting](/uwp/api/windows.ui.xaml.hosting) 네임스페이스의 *UWP XAML 호스팅 API*를 사용해야 합니다. 자세한 내용은 [데스크톱 애플리케이션의 UWP 컨트롤](/windows/apps/desktop/modernize/xaml-islands)을 참조하세요. </br> **참고:** XAML 제도를 사용하도록 설정하는 API 및 컨트롤은 현재 개발자 미리 보기로 사용할 수 있습니다. 사용자 고유의 프로토타입 코드에서 사용해 보도록 추천하지만, 프로덕션 코드에는 지금 사용하지 않는 것이 좋습니다.
+데스크톱 애플리케이션의 UWP 컨트롤 | 이제 Windows 10을 사용 하면 WPF, Windows Forms 및 C++ Win32 데스크톱 애플리케이션에서 UWP 컨트롤을 사용할 수 있습니다. 즉, Windows Ink 및 Fluent 디자인 시스템을 지원하는 컨트롤과 같은 UWP 컨트롤을 통해서만 사용할 수 있는 최신 Windows 10 UI 기능을 통해 기존 데스크톱 애플리케이션의 모양, 느낌 및 기능을 향상시킬 수 있습니다. 이 기능을 *XAML 제도* 라고 합니다. </br> 사용하는 애플리케이션 플랫폼에 따라 애플리케이션에서 XAML 제도를 사용할 수 있는 몇 가지 방법을 제공합니다. WPF 및 Windows Forms 애플리케이션은 디자이너 중심 개발 환경을 제공하는 [Windows 커뮤니티 도구 키트](/windows/uwpcommunitytoolkit/)의 컨트롤 세트를 사용할 수 있습니다. C++ Win32 애플리케이션은 [Windows.UI.Xaml.Hosting](/uwp/api/windows.ui.xaml.hosting) 네임스페이스의 *UWP XAML 호스팅 API* 를 사용해야 합니다. 자세한 내용은 [데스크톱 애플리케이션의 UWP 컨트롤](/windows/apps/desktop/modernize/xaml-islands)을 참조하세요. </br> **참고:** XAML 제도를 사용하도록 설정하는 API 및 컨트롤은 현재 개발자 미리 보기로 사용할 수 있습니다. 사용자 고유의 프로토타입 코드에서 사용해 보도록 추천하지만, 프로덕션 코드에는 지금 사용하지 않는 것이 좋습니다.
 Windows Machine Learning | [Windows Machine Learning](/windows/ai/)은 이제 공식적으로 시작되어 최첨단 기계 학습 모델에 대한 더 빠른 평가 및 지원과 같은 기능을 제공합니다. 애플리케이션과 통합하려는 개발자를 지원하기 위해 다음과 같은 몇 가지 새롭고 업데이트된 리소스를 사용하여 새 설명서 사이트를 만들었습니다. </br> * [자습서: Windows Machine Learning 데스크톱 애플리케이션 만들기(C++)](/windows/ai/get-started-desktop): 이 자습서에서는 간단한 데스크톱용 Windows ML 애플리케이션을 빌드하는 방법을 보여 줍니다. </br> * [자습서: Windows Machine Learning UWP 애플리케이션 만들기(C#)](/windows/ai/get-started-uwp): 이 단계별 자습서에서는 Windows ML을 사용하여 첫 번째 UWP 애플리케이션을 만듭니다. </br> * [Windows.AI.MachineLearning 네임스페이스](/uwp/api/windows.ai.machinelearning): API 참조가 Windows 10 SDK의 최신 릴리스에 맞게 업데이트되어 개발자는 이제 이 API를 Win32 및 UWP 애플리케이션 모두에 사용할 수 있습니다.
 Windows Mixed Reality | 개발자는 이제 디스플레이 하드웨어에서 지원되는 경우 하드웨어 보호 백 버퍼 텍스처를 요청할 수 있으므로 애플리케이션에서 PlayReady와 같은 원본에서 하드웨어로 보호된 콘텐츠를 사용할 수 있습니다. 하드웨어 보호 지원 및 설정은 기본 계층에서 [Windows.Graphics.Holographic.HolographicCamera](/uwp/api/windows.graphics.holographic.holographiccamera)의 새 속성을 통해 사용하고, Quad 계층에서는 [Windows.Graphics.Holographic.HolographicQuadLayerUpdateParameters](/uwp/api/windows.graphics.holographic.holographicquadlayerupdateparameters)를 통해 사용할 수 있습니다.
 
