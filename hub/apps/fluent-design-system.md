@@ -8,12 +8,12 @@ ms.localizationpriority: medium
 ms.custom: RS5
 ms.author: mcleans
 author: mcleanbyron
-ms.openlocfilehash: f5d1829d9fca4f5805a52ed34a1218723897c13d
-ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
+ms.openlocfilehash: 55dfda48feb87538abc9ae206f93cd577dc63eb8
+ms.sourcegitcommit: 4f82bc9e2096d0212f10d633899f4bc19b7fe75d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91932994"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94973299"
 ---
 # <a name="the-fluent-design-system-for-windows-app-creators"></a>Windows 앱 작성자용 Fluent 디자인 시스템
 
@@ -251,7 +251,7 @@ Fluent 디자인은 화려한 효과와 관련된 것이 아닙니다. 사람의
 
 ## <a name="design-toolkits-and-code-samples"></a>디자인 도구 키트 및 코드 샘플
 
-Fluent 디자인을 사용하여 나만의 앱을 만들려고 하는가요? Adobe XD, Adobe Illustrator, Adobe Photoshop, Framer 및 Sketch용 도구 키트는 디자인을 바로 시작하는 데 도움이 되며, 코드 샘플은 빠른 코딩에 유용합니다.
+Fluent 디자인을 사용하여 나만의 앱을 만들려고 하는가요? Figma, Adobe XD 및 Sketch용 도구 키트는 디자인을 바로 시작하는 데 도움이 되며, 샘플은 빠른 코딩에 유용합니다.
 
 :::row:::
     :::column:::
