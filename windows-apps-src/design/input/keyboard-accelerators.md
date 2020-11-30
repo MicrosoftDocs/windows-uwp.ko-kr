@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: e9cb4a52e56862f9be27c72ef46afced895633c3
-ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
+ms.openlocfilehash: ee0c92ec81f7bbabc2218afbf263000a167d2057
+ms.sourcegitcommit: e81227399ba0f286e74e4977d757237829440a2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860094"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96310211"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 
@@ -33,9 +33,9 @@ ms.locfileid: "91860094"
 액셀러레이터 키에는 일반적으로 f 12의 함수 키, 하나 이상의 보조키와 쌍을 이루는 표준 키의 일부 조합 (CTRL, Shift)이 포함 됩니다.
 
 > [!NOTE]
-> UWP 플랫폼 컨트롤에는 기본 제공 키보드 액셀러레이터 키가 있습니다. 예를 들어 ListView는 목록에 있는 모든 항목을 선택 하기 위해 Ctrl + A를 지원 하 고, RichEditBox는 텍스트 상자에 탭을 삽입 하기 위해 Ctrl + Tab을 지원 합니다. 이러한 기본 제공 키보드 액셀러레이터는 **컨트롤 액셀러레이터** 라고 하며 포커스가 요소 또는 자식 중 하나에 있는 경우에만 실행 됩니다. 여기서 설명 하는 키보드 액셀러레이터 Api를 사용 하 여 정의한 액셀러레이터를 **앱 가속기**라고 합니다.
+> UWP 플랫폼 컨트롤에는 기본 제공 키보드 액셀러레이터 키가 있습니다. 예를 들어 ListView는 목록에 있는 모든 항목을 선택 하기 위해 Ctrl + A를 지원 하 고, RichEditBox는 텍스트 상자에 탭을 삽입 하기 위해 Ctrl + Tab을 지원 합니다. 이러한 기본 제공 키보드 액셀러레이터는 **컨트롤 액셀러레이터** 라고 하며 포커스가 요소 또는 자식 중 하나에 있는 경우에만 실행 됩니다. 여기서 설명 하는 키보드 액셀러레이터 Api를 사용 하 여 정의한 액셀러레이터를 **앱 가속기** 라고 합니다.
 
-키보드 액셀러레이터는 모든 작업에 사용할 수 없지만 메뉴에 노출 된 명령과 연결 되는 경우가 많습니다 (메뉴 항목 내용으로 지정 해야 함).액셀러레이터는 동일한 메뉴 항목이 없는 작업과 연결 될 수도 있습니다. 그러나 사용자는 응용 프로그램 메뉴를 사용 하 여 사용 가능한 명령 집합을 검색 하 고 학습할 수 있으므로 가능한 한 빨리 액셀러레이터를 검색 해야 합니다. 레이블 또는 설정 된 패턴을 사용 하면이 작업을 쉽게 수행할 수 있습니다.
+키보드 액셀러레이터는 모든 작업에 사용할 수 없지만 메뉴에 노출 된 명령과 연결 되는 경우가 많습니다 (메뉴 항목 내용으로 지정 해야 함). 액셀러레이터는 동일한 메뉴 항목이 없는 작업과 연결 될 수도 있습니다. 그러나 사용자는 응용 프로그램 메뉴를 사용 하 여 사용 가능한 명령 집합을 검색 하 고 학습할 수 있으므로 가능한 한 빨리 액셀러레이터를 검색 해야 합니다. 레이블 또는 설정 된 패턴을 사용 하면이 작업을 쉽게 수행할 수 있습니다.
 
 ![메뉴 항목 레이블에 있는 키보드 액셀러레이터의 스크린샷](images/accelerators/accelerators_menuitemlabel.png)  
 *메뉴 항목 레이블에 설명 된 키보드 액셀러레이터*
@@ -127,11 +127,11 @@ UI에서 적절 한 위치에 키보드 액셀러레이터 키를 지정 하 고
 ```
 
 ![도구 설명에 있는 키보드 액셀러레이터의 스크린샷](images/accelerators/accelerators_tooltip.png)  
-***도구 설명에 설명 된 키보드 액셀러레이터***
+**_도구 설명에 설명 된 키보드 액셀러레이터_*
 
 [UIElement](/uwp/api/windows.ui.xaml.uielement) 개체에는 사용자 지정 KeyboardAccelerator 개체를 지정 하 고 키보드 액셀러레이터 키에 대 한 키 입력을 정의 하는 [KeyboardAccelerator](/uwp/api/windows.ui.xaml.input.keyboardaccelerator) 컬렉션인 [KeyboardAccelerators](/uwp/api/windows.ui.xaml.uielement.KeyboardAccelerators)이 있습니다.
 
--   **[키](/uwp/api/windows.ui.xaml.input.keyboardaccelerator.Key)** -키보드 액셀러레이터에 사용 되는 [virtualkey](/uwp/api/windows.system.virtualkey) 입니다.
+-   _ *[Key](/uwp/api/windows.ui.xaml.input.keyboardaccelerator.Key)**-키보드 액셀러레이터에 사용 되는 [virtualkey](/uwp/api/windows.system.virtualkey) 입니다.
 
 -   **[한정자](/uwp/api/windows.ui.xaml.input.keyboardaccelerator.Modifiers)** -키보드 액셀러레이터에 사용 되는 [virtualkeymodifiers](/uwp/api/windows.system.virtualkeymodifiers) 입니다. 한정자를 설정 하지 않으면 기본값은 None입니다.
 
@@ -202,7 +202,7 @@ UIA [컨트롤 패턴]은 공용 제어 기능을 노출 합니다. 예를 들�
 ``` xaml 
 <Button Content="Save" Click="OnSave">
   <Button.KeyboardAccelerators>
-    <KeyboardAccelerator Key="S" Modifiers="Control" />
+    <KeyboardAccelerator Key="S" Modifiers="Control" />
   </Button.KeyboardAccelerators>
 </Button>
 ```
@@ -211,7 +211,7 @@ UIA [컨트롤 패턴]은 공용 제어 기능을 노출 합니다. 예를 들�
 1.  Invoke (Button)
 2.  토글 (Checkbox)
 3.  선택 (ListView)
-4.  확장/축소 (ComboBox) 
+4.  확장/축소 (ComboBox) 
 
 일치 하는 항목이 없는 경우 액셀러레이터 키가 유효 하지 않고 디버그 메시지가 제공 됩니다 .이 구성 요소에 대 한 자동화 패턴을 찾을 수 없습니다. 호출 된 이벤트에서 원하는 모든 동작을 구현 합니다. 이벤트 처리기에서 처리 됨을 true로 설정 하면이 메시지가 표시 되지 않습니다. ")
 
@@ -228,8 +228,8 @@ UIA [컨트롤 패턴]은 공용 제어 기능을 노출 합니다. 예를 들�
 ``` xaml
 <ListView x:Name="MyListView">
   <ListView.KeyboardAccelerators>
-    <KeyboardAccelerator Key="A" Modifiers="Control,Shift" Invoked="SelectAllInvoked" />
-    <KeyboardAccelerator Key="F5" Invoked="RefreshInvoked"  />
+    <KeyboardAccelerator Key="A" Modifiers="Control,Shift" Invoked="SelectAllInvoked" />
+    <KeyboardAccelerator Key="F5" Invoked="RefreshInvoked"  />
   </ListView.KeyboardAccelerators>
 </ListView>
 ```
@@ -285,10 +285,10 @@ void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventA
   <TextBox>
     <TextBox.KeyboardAccelerators>
       <KeyboardAccelerator 
-        Key="A" 
-        Modifiers="Control" 
-        Invoked="CustomTextSelecAllInvoked" 
-        IsEnabled="False" />
+        Key="A" 
+        Modifiers="Control" 
+        Invoked="CustomTextSelecAllInvoked" 
+        IsEnabled="False" />
     </TextBox.KeyboardAccelerators>
   </TextBox>
 
@@ -308,18 +308,18 @@ void RefreshInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventA
   <ListView.KeyboardAccelerators>
 
     <KeyboardAccelerator 
-      Key="A" 
-      Modifiers="Control,Shift" 
-      Invoked="CustomSelectAllInvoked" />
+      Key="A" 
+      Modifiers="Control,Shift" 
+      Invoked="CustomSelectAllInvoked" />
       
     <KeyboardAccelerator 
-      Key="F5" 
-      Modifiers="None" 
-      Invoked="RefreshInvoked" />
+      Key="F5" 
+      Modifiers="None" 
+      Invoked="RefreshInvoked" />
 
   </ListView.KeyboardAccelerators>
 
-</ListView>   
+</ListView>   
 ```
 
 > [!NOTE] 
@@ -354,14 +354,14 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 | 포커스가 있는 컨트롤 또는 창에서 콘텐츠 찾기 | Ctrl+F |
 | 다음 검색 결과로 이동 | F3 |
 | **기타 작업** | |
-| 즐겨찾기 추가 | Ctrl+D | 
-| 새로 고침 | F5 또는 Ctrl + R | 
-| 확대 | Ctrl + + | 
-| 축소 | Ctrl +- | 
-| 기본 뷰로 확대/축소 | Ctrl + 0 | 
-| 저장 | Ctrl+S | 
-| 닫습니다 | Ctrl+W | 
-| 인쇄 | Ctrl+P | 
+| 즐겨찾기 추가 | Ctrl+D | 
+| 새로 고침 | F5 또는 Ctrl + R | 
+| 확대 | Ctrl + + | 
+| 축소 | Ctrl +- | 
+| 기본 뷰로 확대/축소 | Ctrl + 0 | 
+| 저장 | Ctrl+S | 
+| 닫기 | Ctrl+W | 
+| 인쇄 | Ctrl+P | 
 
 지역화 된 버전의 Windows에서는 일부 조합이 유효 하지 않습니다. 예를 들어, 스페인어 버전의 Windows에서는 ctrl + N을 Ctrl + B 대신 굵게 사용 합니다. 앱이 지역화 된 경우 지역화 된 키보드 액셀러레이터를 제공 하는 것이 좋습니다.
 
@@ -526,14 +526,24 @@ XAML에서 입력 버블링 파이프라인은 하나만 있는 것 처럼 키 �
 미리 보기 입력 이벤트는 다른 이벤트 보다 먼저 발생 합니다. 이러한 이벤트를 처리 하지 않으면 포커스가 있는 요소에 대 한 액셀러레이터 키가 실행 된 후 KeyDown 이벤트가 발생 합니다. 두 이벤트 모두 처리 될 때까지 버블링 됩니다.
 
 
-![키 이벤트 시퀀스 ](images/accelerators/accelerators_keyevents.png)
- ***키 이벤트 시퀀스*** 를 보여 주는 다이어그램
+![키 이벤트 시퀀스 ](images/accelerators/accelerators_keyevents.png) 
+* **키 이벤트 시퀀스** 를 보여 주는 다이어그램 _
 
 이벤트 순서:
 
-KeyDown 이벤트 미리 보기 ...
-앱 가속기 OnKeyDown 메서드 KeyDown 이벤트 앱 가속기를 부모에서 부모 KeyDown 이벤트의 부모 OnKeyDown 메서드에 대 한
-CharacterReceived 이벤트 PreviewKeyUp 이벤트 KeyUpEvents
+KeyDown 이벤트 미리 보기<br>
+…<br>
+앱 가속기<br>
+OnKeyDown 메서드<br>
+KeyDown 이벤트<br>
+부모의 앱 가속기<br>
+부모에 대 한 OnKeyDown 메서드<br>
+부모에 대 한 KeyDown 이벤트<br>
+(루트로 거품)<br>
+…<br>
+CharacterReceived 이벤트<br>
+PreviewKeyUp 이벤트<br>
+KeyUpEvents<br>
 
 액셀러레이터 이벤트를 처리할 때 KeyDown 이벤트도 처리 된 것으로 표시 됩니다. KeyUp 이벤트는 처리 되지 않은 상태로 유지 됩니다.
 
@@ -572,8 +582,7 @@ protected override void OnProcessKeyboardAccelerators(
 
 모든 키보드 액셀러레이터 키를 지역화 하는 것이 좋습니다. XAML 선언에서 표준 UWP 리소스 (. resw) 파일 및 x:Uid 특성을 사용 하 여이 작업을 수행할 수 있습니다. 이 예제에서 Windows 런타임는 리소스를 자동으로 로드 합니다.
 
-![UWP 리소스를 사용한 키보드 액셀러레이터 지역화의 다이어그램 파일 ](images/accelerators/accelerators_localization.png)
- ***키보드 가속기 uwp 리소스 파일을 사용한 지역화***
+![Uwp 리소스 파일을 사용한 키보드 액셀러레이터 지역화 다이어그램 ](images/accelerators/accelerators_localization.png) _ *_uwp 리소스 파일이 있는 키보드 액셀러레이터 지역화_**
 
 ``` xaml
 <Button x:Uid="myButton" Click="OnSave">
@@ -629,7 +638,7 @@ public class MyListView : ListView
 }
 ```
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [키보드 조작](keyboard-interactions.md)
 - [액세스 키](access-keys.md)

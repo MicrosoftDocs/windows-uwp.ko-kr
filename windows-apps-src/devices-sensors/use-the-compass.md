@@ -6,20 +6,20 @@ ms.date: 06/06/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bc0365ced06e85a99fa063c86cad0946526b3f26
-ms.sourcegitcommit: 5481bb34def681bc60fbfa42d9779053febec468
+ms.openlocfilehash: 4ddd5ddddb31cf93977cb0d5bd9c16e916c4126b
+ms.sourcegitcommit: e81227399ba0f286e74e4977d757237829440a2e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89304665"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96310201"
 ---
 # <a name="use-the-compass"></a>나침반 사용
 
 
 **중요 API**
 
--   [**Windows.Devices.Sensors**](/uwp/api/Windows.Devices.Sensors)
--   [**나침반**](/uwp/api/Windows.Devices.Sensors.Compass)
+-   [**Windows. 장치. 센서**](/uwp/api/Windows.Devices.Sensors)
+-   [**지구본**](/uwp/api/Windows.Devices.Sensors.Compass)
 
 **샘플**
 
@@ -29,7 +29,7 @@ ms.locfileid: "89304665"
 
 앱은 자북 또는 실제 북쪽을 기준으로 현재 전면부를 검색할 수 있습니다. 탐색 앱은 나침반을 사용 하 여 장치가 향하는 방향을 결정 하 고 그에 따라 지도의 방향을 지정 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 조건
 
 Extensible Application Markup Language (XAML), Microsoft Visual c # 및 이벤트에 대해 잘 알고 있어야 합니다.
 
@@ -39,7 +39,7 @@ Extensible Application Markup Language (XAML), Microsoft Visual c # 및 이벤�
 
 이 섹션은 두 개의 하위 섹션으로 구성 되어 있습니다. 첫 번째 하위 섹션에서는 간단한 나침반 응용 프로그램을 처음부터 만드는 데 필요한 단계를 안내 합니다. 다음 하위 섹션에서는 방금 만든 앱에 대해 설명 합니다.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>지침
 
 -   **Visual c #** 프로젝트 템플릿에서 **빈 앱 (유니버설 Windows)** 을 선택 하 여 새 프로젝트를 만듭니다.
 
@@ -106,14 +106,14 @@ Extensible Application Markup Language (XAML), Microsoft Visual c # 및 이벤�
             }
         }
     }
-    ```
+```
 
-You'll need to rename the namespace in the previous snippet with the name you gave your project. For example, if you created a project named **CompassCS**, you'd replace `namespace App1` with `namespace CompassCS`.
+이전 코드 조각에서 네임 스페이스의 이름을 프로젝트에 지정한 이름으로 바꿔야 합니다. 예를 들어 **CompassCS** 이라는 프로젝트를 만든 경우를 `namespace App1` 로 바꿉니다 `namespace CompassCS` .
 
--   Open the file MainPage.xaml and replace the original contents with the following XML.
+-   MainPage .xaml 파일을 열고 원래 내용을 다음 XML로 바꿉니다.
 
 ```xml
-        <Page
+    <Page
         x:Class="App1.MainPage"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -132,7 +132,7 @@ You'll need to rename the namespace in the previous snippet with the name you ga
     </Page>
 ```
 
-이전 코드 조각의 클래스 이름 중 첫 번째 부분을 응용 프로그램의 네임 스페이스로 바꾸어야 합니다. 예를 들어 **CompassCS**이라는 프로젝트를 만든 경우를 `x:Class="App1.MainPage"` 로 바꿉니다 `x:Class="CompassCS.MainPage"` . 또한를로 바꾸어야 `xmlns:local="using:App1"` 합니다 `xmlns:local="using:CompassCS"` .
+이전 코드 조각의 클래스 이름 중 첫 번째 부분을 응용 프로그램의 네임 스페이스로 바꾸어야 합니다. 예를 들어 **CompassCS** 이라는 프로젝트를 만든 경우를 `x:Class="App1.MainPage"` 로 바꿉니다 `x:Class="CompassCS.MainPage"` . 또한를로 바꾸어야 `xmlns:local="using:App1"` 합니다 `xmlns:local="using:CompassCS"` .
 
 -   F5 키를 누르거나 **디버그**  >  **디버깅 시작** 을 선택 하 여 앱을 빌드, 배포 및 실행 합니다.
 
@@ -173,6 +173,6 @@ CompassReadingChangedEventArgs>(ReadingChanged);
  <TextBlock x:Name="txtMagnetic" HorizontalAlignment="Left" Height="22" Margin="130,18,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="116" Foreground="#FFFBF6F6"/>
  <TextBlock x:Name="txtNorth" HorizontalAlignment="Left" Height="18" Margin="130,58,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="116" Foreground="#FFF5F1F1"/>
 ```
- 
+ 
 
- 
+ 
