@@ -51,33 +51,35 @@ RadioButtons 그룹의 단일 동작은 여러 항목을 선택 및 선택 취�
 
 사용자가 둘 이상의 상호 배타적 옵션 중에서 선택할 수 있도록 하려면 라디오 단추를 사용합니다.
 
-:::image type="content" source="images/radiobutton_basic.png" alt-text="라디오 단추가 하나 선택된 RadioButtons 그룹의 예":::
+:::image type="content" source="images/radiobutton_basic.png" alt-text="라디오 단추가 하나 선택된 RadioButtons 그룹":::
 
 사용자가 모든 옵션을 확인한 후 옵션을 선택해야 하는 경우에는 라디오 단추를 사용합니다. 라디오 단추는 모든 옵션을 똑같이 강조하므로 일부 옵션이 필요 이상으로 또는 원하는 이상으로 사용자의 주의를 끌 수도 있습니다.
 
 모든 옵션이 똑같이 사용자의 주의를 끌어야 하는 경우 외에는 다른 컨트롤을 사용하는 것이 좋습니다. 예를 들어 대부분의 사용자에게 가장 적합한 단일 옵션을 추천하려면 [콤보 상자](combo-box.md)를 사용하여 가장 적합한 옵션을 기본 옵션으로 표시합니다.
 
-:::image type="content" source="images/combo_box_collapsed.png" alt-text="라디오 단추가 하나 선택된 RadioButtons 그룹의 예" 확인란 하나만 사용합니다.
+:::image type="content" source="images/combo_box_collapsed.png" alt-text="기본 옵션을 표시하는 콤보 상자":::
+
+설정/해제 또는 예/아니요와 같이 단일 이진 선택 항목으로 명확하게 표현할 수 있는 두 가지 옵션만 있는 경우 이러한 선택 항목을 단일 [확인란](checkbox.md) 또는 [토글 스위치](toggles.md) 컨트롤로 결합합니다. 예를 들어 "동의함" 라디오 단추와 "동의 안 함" 라디오 단추를 각각 사용하는 대신 "동의함" 확인란 하나만 사용합니다.
 
 단일 이진 선택 항목에는 두 개의 라디오 단추를 사용하지 않습니다.
 
-:::image type="content" source="images/radiobutton-vs-checkbox-rb.png" alt-text="라디오 단추가 하나 선택된 RadioButtons 그룹의 예":::
+:::image type="content" source="images/radiobutton-vs-checkbox-rb.png" alt-text="이진 선택 항목을 표시하는 두 개의 라디오 단추":::
 
 대신 확인란을 사용합니다.
 
-:::image type="content" source="images/radiobutton-vs-checkbox-cb.png" alt-text="라디오 단추가 하나 선택된 RadioButtons 그룹의 예":::
+:::image type="content" source="images/radiobutton-vs-checkbox-cb.png" alt-text="확인란은 이진 선택 항목을 제공하는 좋은 대안입니다.":::
 
 사용자가 여러 옵션을 선택할 수 있는 경우에는 [확인란](checkbox.md)을 사용합니다.
 
-:::image type="content" source="images/checkbox2.png" alt-text="라디오 단추가 하나 선택된 RadioButtons 그룹의 예":::
+:::image type="content" source="images/checkbox2.png" alt-text="확인란 지원 다중 선택":::
 
 사용자 옵션이 값 범위 내에 있는 경우(예: *10, 20, 30, ... 100*) [슬라이더](slider.md) 컨트롤을 사용합니다.
 
-:::image type="content" source="images/controls/slider.png" alt-text="라디오 단추가 하나 선택된 RadioButtons 그룹의 예":::
+:::image type="content" source="images/controls/slider.png" alt-text="값 범위 내의 값 하나를 표시하는 슬라이더 컨트롤":::
 
 8개가 넘는 옵션이 있는 경우 [콤보 상자](combo-box.md)를 사용합니다.
 
-:::image type="content" source="images/combo_box_scroll.png" alt-text="라디오 단추가 하나 선택된 RadioButtons 그룹의 예":::
+:::image type="content" source="images/combo_box_scroll.png" alt-text="여러 옵션을 표시하는 목록 상자":::
 
 사용 가능한 옵션이 앱의 현재 컨텍스트에 따라 달라지거나 동적으로 변경될 수 있는 경우에는 목록 컨트롤을 사용합니다.
 
@@ -292,7 +294,7 @@ Xbox 게임 패드 또는 리모컨을 사용하여 라디오 단추 간에 이�
 
 결과는 다음과 같습니다.
 
-:::image type="content" source="images/radiobuttons-default-group.png" alt-text="라디오 단추가 하나 선택된 RadioButtons 그룹의 예":::
+:::image type="content" source="images/radiobuttons-default-group.png" alt-text="세 개의 라디오 단추로 구성된 그룹":::
 
 사용자가 옵션을 선택할 때 작업을 수행하도록 [SelectionChanged](/uwp/api/microsoft.ui.xaml.controls.radiobuttons.selectionchanged) 이벤트를 처리합니다. 여기서는 "ExampleBorder"(`<Border x:Name="ExampleBorder" Width="100" Height="100"/>`)라는 [Border](/uwp/api/windows.ui.xaml.controls.border) 요소의 배경색을 변경합니다.
 
@@ -342,7 +344,7 @@ private void BackgroundColor_SelectionChanged(object sender, SelectionChangedEve
 </muxc:RadioButtons>
 ```
 
-:::image type="content" source="images/radiobuttons-symbolicon.png" alt-text="라디오 단추가 하나 선택된 RadioButtons 그룹의 예":::
+:::image type="content" source="images/radiobuttons-symbolicon.png" alt-text="기호 아이콘이 있는 그룹 라디오 단추":::
 
 개별 [RadioButton](/uwp/api/Windows.UI.Xaml.Controls.RadioButton) 컨트롤을 사용하여 `RadioButtons` 항목을 채울 수도 있습니다. 이는 나중에 설명할 특별한 사례입니다. [RadioButtons 그룹의 RadioButton 컨트롤]()을 참조하세요.
 
@@ -441,7 +443,7 @@ public sealed partial class MainPage : Page
 </muxc:RadioButtons>
 ```
 
-:::image type="content" source="images/radiobuttons-multi-column.png" alt-text="라디오 단추가 하나 선택된 RadioButtons 그룹의 예":::
+:::image type="content" source="images/radiobuttons-multi-column.png" alt-text="두 개의 3열 그룹으로 나뉜 라디오 단추":::
 
 > [!TIP]
 > 항목이 단일 가로 행으로 정렬되도록 하려면 `MaxColumns`를 그룹의 항목 수와 동일하게 설정합니다.
@@ -550,7 +552,7 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 
 이러한 두 그룹의 `RadioButton` 컨트롤은 다음과 같습니다.
 
-:::image type="content" source="images/radio-button-groups.png" alt-text="라디오 단추가 하나 선택된 RadioButtons 그룹의 예":::
+:::image type="content" source="images/radio-button-groups.png" alt-text="두 그룹으로 나뉜 라디오 단추":::
 
 ### <a name="radio-button-states"></a>라디오 단추 상태
 
@@ -576,9 +578,9 @@ private void BorderRadioButton_Checked(object sender, RoutedEventArgs e)
 
 다음 이미지에서는 그룹에서 기본 설정된 라디오 단추 간격을 보여 줍니다.
 
-:::image type="content" source="images/radiobutton-layout.png" alt-text="라디오 단추가 하나 선택된 RadioButtons 그룹의 예":::
+:::image type="content" source="images/radiobutton-layout.png" alt-text="세로 방향으로 정렬된 라디오 단추 세트를 보여주는 이미지":::
 
-:::image type="content" source="images/radiobutton-redline.png" alt-text="라디오 단추가 하나 선택된 RadioButtons 그룹의 예":::
+:::image type="content" source="images/radiobutton-redline.png" alt-text="라디오 단추의 간격 지침을 보여주는 이미지":::
 
 > [!NOTE]
 > WinUI RadioButtons 컨트롤을 사용하는 경우 간격, 여백 및 방향이 이미 최적화되어 있습니다.
