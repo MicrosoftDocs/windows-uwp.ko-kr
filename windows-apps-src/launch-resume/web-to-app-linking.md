@@ -6,12 +6,12 @@ ms.date: 08/25/2017
 ms.topic: article
 ms.assetid: 260cf387-88be-4a3d-93bc-7e4560f90abc
 ms.localizationpriority: medium
-ms.openlocfilehash: fcffbf9fd3f333aa4aea4f155c5508d2867c2776
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 493a9936fa5d97ef2ac8d8d67bec15ce2f4df3c2
+ms.sourcegitcommit: 25063560ff0a37fb404bc50e3b6e66759ee1051d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158733"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96420372"
 ---
 # <a name="enable-apps-for-websites-using-app-uri-handlers"></a>앱 URI 처리기를 사용 하 여 웹 사이트에 앱 사용
 
@@ -59,8 +59,8 @@ ms.locfileid: "89158733"
 
 ``` JSON
 [{
-  "packageFamilyName": "Your app's package family name, e.g MyApp_9jmtgj1pbbz6e",
-  "paths": [ "*" ],
+  "packageFamilyName" : "Your app's package family name, e.g MyApp_9jmtgj1pbbz6e",
+  "paths" : [ "*" ],
   "excludePaths" : [ "/news/*", "/blog/*" ]
  }]
 ```
@@ -71,16 +71,16 @@ Windows에서 웹 사이트에 대 한 https 연결을 설정 하면 웹 서버�
 
 위의 JSON 파일 예제에서는 와일드 카드를 사용 하는 방법을 보여 줍니다. 와일드 카드를 사용 하면 코드 줄 수가 작은 다양 한 링크를 지원할 수 있습니다. 웹 앱 연결은 JSON 파일에서 두 가지 유형의 와일드 카드를 지원 합니다.
 
-| **카드인** | **설명**               |
+| **와일드카드** | **설명**               |
 |--------------|-------------------------------|
-| **\***       | 부분 문자열을 나타냅니다.      |
-| **?**        | 단일 문자를 나타냅니다. |
+| **\** _       | 부분 문자열을 나타냅니다.      |
+| _ *?**        | 단일 문자를 나타냅니다. |
 
-예를 들어 `"excludePaths" : [ "/news/*", "/blog/*" ]` 위의 예제에서 응용 프로그램은 및의 경우를 **제외** 하 고 웹 사이트의 주소 (예: msn.com)로 시작 하는 모든 경로를 지원 합니다 `/news/` `/blog/` . **msn.com/weather.html** 은 지원 되지만 **msn.com/news/topnews.html**은 지원 되지 않습니다.
+예를 들어 `"excludePaths" : [ "/news/*", "/blog/*" ]` 위의 예제에서 응용 프로그램은 및의 경우를 **제외** 하 고 웹 사이트의 주소 (예: msn.com)로 시작 하는 모든 경로를 지원 합니다 `/news/` `/blog/` . **msn.com/weather.html** 은 지원 되지만 **msn.com/news/topnews.html** 은 지원 되지 않습니다.
 
 ### <a name="multiple-apps"></a>여러 앱
 
-웹 사이트에 연결 하려는 앱이 두 개 있는 경우 **windows-앱-웹 링크** JSON 파일에 응용 프로그램 패키지 제품군 이름을 모두 나열 합니다. 두 앱 모두 지원 될 수 있습니다. 둘 다 설치 된 경우 기본 링크를 선택 하 여 사용자에 게 표시 됩니다. 나중에 기본 링크를 변경 하려는 경우에는 **웹 사이트에 대 한 설정 > 앱**에서 변경할 수 있습니다. 개발자는 언제 든 지 JSON 파일을 변경 하 고 업데이트 후 8 일 이상 지난 후에 변경 내용을 볼 수도 있습니다.
+웹 사이트에 연결 하려는 앱이 두 개 있는 경우 **windows-앱-웹 링크** JSON 파일에 응용 프로그램 패키지 제품군 이름을 모두 나열 합니다. 두 앱 모두 지원 될 수 있습니다. 둘 다 설치 된 경우 기본 링크를 선택 하 여 사용자에 게 표시 됩니다. 나중에 기본 링크를 변경 하려는 경우에는 **웹 사이트에 대 한 설정 > 앱** 에서 변경할 수 있습니다. 개발자는 언제 든 지 JSON 파일을 변경 하 고 업데이트 후 8 일 이상 지난 후에 변경 내용을 볼 수도 있습니다.
 
 ``` JSON
 [{
@@ -193,7 +193,7 @@ Keyname: `ForceValidation` 값: `1`
 - AppUriHandlers 있는 모든 테스트용으로 로드 앱은 설치 시 호스트의 유효성을 검사 한 링크를 갖게 됩니다. 기능을 테스트 하기 위해 JSON 파일을 업로드 하지 않아도 됩니다.
 - 이 기능은 앱이  [LaunchUriAsync](/uwp/api/windows.system.launcher.launchuriasync) 으로 시작 된 UWP 앱 또는  [shellexecuteex](/windows/desktop/api/shellapi/nf-shellapi-shellexecuteexa)로 시작 된 Windows 데스크톱 앱 인 경우에만 작동 합니다. URL이 등록 된 앱 URI 처리기에 해당 하는 경우 브라우저 대신 앱이 시작 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 [웹 앱 예제 프로젝트](https://github.com/project-rome/AppUriHandlers/tree/master/NarwhalFacts) 
  [windows. 프로토콜 등록](/uwp/schemas/appxpackage/appxmanifestschema/element-protocol) 
