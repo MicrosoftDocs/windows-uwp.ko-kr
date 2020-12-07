@@ -3,12 +3,12 @@ title: WinUI 릴리스 정보
 description: WinUI 릴리스 정보 색인입니다.
 ms.date: 07/15/2020
 ms.topic: reference
-ms.openlocfilehash: 4c89209868c1478f34de79f8b243fbe0e3dc80a3
-ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
+ms.openlocfilehash: 7038a61e0bf7047c49295b8c4482e92f113f647d
+ms.sourcegitcommit: 03308873eafd0f768e1c518f4d1cc4e4fe0b70b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94933108"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96606018"
 ---
 # <a name="windows-ui-library-2x-release-notes"></a>Windows UI 라이브러리 2.x 릴리스 정보
 
@@ -46,7 +46,8 @@ API 참조 문서는 [Windows UI 라이브러리 API](/windows/winui/api/)에 �
 
 | Microsoft.UI.Xaml NuGet Version | 유형 | 릴리스 날짜 | 릴리스 정보 | 주요 항목 |
 | --- | --- | --- | --- | --- |
-| [2.4](winui-2.4.md) | 안정 | 2020년 5월 | [릴리스 정보](winui-2.4.md) | [RadialGradientBrush](winui-2.4.md#radialgradientbrush), [ProgressRing](winui-2.4.md#progressring), [TabView 업데이트](winui-2.4.md#tabview-updates), [TextBox 컨트롤 제품군에 대한 어두운 테마 업데이트](winui-2.4.md#dark-theme-updates-to-textbox-family-of-controls), [계층적 탐색](winui-2.4.md#hierarchical-navigation),  |
+| [2.5](winui-2.5.md) | 안정 | 2020년 12월 | [릴리스 정보](winui-2.5.md) | [InfoBar](winui-2.5.md#infobar), [Determinate ProgressRing](winui-2.5.md#determinate-progressring), [NavigationView FooterMenuItems](winui-2.5.md#navigationview-footermenuitems) |
+| [2.4](winui-2.4.md) | 안정 | 2020년 5월 | [릴리스 정보](winui-2.4.md) | [RadialGradientBrush](winui-2.4.md#radialgradientbrush), [ProgressRing](winui-2.4.md#progressring), [TabView 업데이트](winui-2.4.md#tabview-updates), [TextBox 컨트롤 제품군에 대한 어두운 테마 업데이트](winui-2.4.md#dark-theme-updates-to-textbox-family-of-controls), [계층적 탐색](winui-2.4.md#hierarchical-navigation)  |
 | [2.3](winui-2.3.md) | 안정 | 2019년 11월 | [릴리스 정보](winui-2.3.md) | [진행률 표시줄 시각적 새로 고침](winui-2.3.md#progress-bar-visual-refresh), [NumberBox](winui-2.3.md#numberbox), [RadioButtons](winui-2.3.md#radiobuttons) |
 | [2.2](winui-2.2.md) | 안정 | 2019년 8월 | [릴리스 정보](winui-2.2.md) | [TabView](winui-2.2.md#tabview), [NavigationView 업데이트](winui-2.2.md#navigationview-updates), [비주얼 스타일 업데이트](winui-2.2.md#visual-style-updates)  |
 | [2.1](winui-2.1.md) | 안정 | 2019년 4월 | [릴리스 정보](winui-2.1.md) | [GitHub](https://github.com/microsoft/microsoft-ui-xaml)의 **첫 번째 오픈 소스 릴리스** 입니다. [ItemsRepeater](winui-2.1.md#itemsrepeater), [AnimatedVisualPlayer](winui-2.1.md#animatedvisualplayer), [TeachingTip](winui-2.1.md#teachingtip), [RadioMenuFlyoutItem](winui-2.1.md#radiomenuflyoutitem), [CompactDensity](winui-2.1.md#compactdensity), [Shadows](winui-2.1.md#shadows)를 포함합니다. |

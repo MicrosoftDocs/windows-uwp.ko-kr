@@ -4,12 +4,12 @@ description: Windows 앱 개발을 위한 WinUI 라이브러리입니다.
 ms.topic: article
 ms.date: 07/15/2020
 keywords: windows 10, uwp, 도구 키트 sdk, winui, Windows UI 라이브러리
-ms.openlocfilehash: 3b2b18ab35f46b132ec3017bb0f3c6564b7be9ee
-ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
+ms.openlocfilehash: cd96367579c61223dcaf2be2f336026244a6ed9b
+ms.sourcegitcommit: b99fe39126fbb457c3690312641f57d22ba7c8b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94933128"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96603690"
 ---
 # <a name="windows-ui-library-winui"></a>Windows UI 라이브러리(WinUI)
 
@@ -29,7 +29,7 @@ WinUI는 [Fluent Design System](https://www.microsoft.com/design/fluent/#/)을 �
 WinUI 2.x는 UWP 애플리케이션에서 사용할 수 있으며 [XAML Islands](../desktop/modernize/xaml-islands.md)를 통해 신규 또는 기존 데스크톱 애플리케이션에 통합할 수 있습니다.
 
 > [!NOTE]
-> WinUI 2.4는 최신 WinUI 2.x 릴리스입니다. 다음 릴리스에 예정된 작업 목록은 [WinUI 2.5 마일스톤](https://github.com/microsoft/microsoft-ui-xaml/milestone/10)을 참조하세요.
+> WinUI 2.5는 최신 WinUI 2.x 릴리스입니다. 다음 릴리스에 예정된 작업 목록은 [WinUI 2.6 마일스톤](https://github.com/microsoft/microsoft-ui-xaml/milestone/11)을 참조하세요.
 
 WinUI 2.x 라이브러리는 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk/)와 밀접하게 연결되어 있으며, UWP 앱용 공식 네이티브 Windows UI 컨트롤 및 기타 UI 요소를 제공합니다.
 
