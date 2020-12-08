@@ -1,17 +1,17 @@
 ---
-ms.assetid: 16ad97eb-23f1-0264-23a9-a1791b4a5b95
 title: 컴퍼지션 네이티브 상호 운용
 description: Compositor API는 콘텐츠를 직접 이동 하는 데 사용할 수 있는 기본 상호 운용 인터페이스를 제공 합니다.
-ms.date: 06/22/2018
+ms.date: 12/07/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b89e4107ea92dce241977b048d28d6a85e2fd34
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.assetid: 16ad97eb-23f1-0264-23a9-a1791b4a5b95
+ms.openlocfilehash: 4ae214f99cad9d8d2db644b184c12172a56a443b
+ms.sourcegitcommit: 7d01748e3ef084fcf04cc0e2830c8ec66e8d1252
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166437"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96849477"
 ---
 # <a name="composition-native-interoperation-with-directx-and-direct2d"></a>DirectX 및 Direct2D와의 컴퍼지션 기본 상호 운용성
 
@@ -27,23 +27,41 @@ ICompositorInterop API는 콘텐츠를 compositor으로 직접 이동할 수 있
 
 ## <a name="loading-pixels-into-a-surface"></a>표면에 픽셀 로드
 
-화면에 픽셀을 로드 하려면 응용 프로그램에서 요청 하는 내용에 따라 질감 또는 Direct2D 컨텍스트를 나타내는 DirectX 인터페이스를 반환 하는 [**Begindraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-begindraw) 메서드를 호출 해야 합니다. 그런 다음 응용 프로그램은 해당 질감에 픽셀을 렌더링 하거나 업로드 해야 합니다. 응용 프로그램이 완료 되 면 [**Enddraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-enddraw) 메서드를 호출 해야 합니다. 이 시점에는 컴포지션에 사용할 수 있는 새 픽셀만 사용할 수 있지만 다음에 시각적 트리에 대 한 모든 변경 내용이 커밋될 때까지 화면에 표시 되지 않습니다. **Enddraw** 를 호출 하기 전에 시각적 트리가 커밋되면 진행 중인 업데이트가 화면에 표시 되지 않으며 표면에는 **begindraw**이전에 있던 내용이 계속 표시 됩니다. **Enddraw** 를 호출 하면 begindraw에서 반환 된 텍스처 또는 Direct2D context 포인터가 무효화 됩니다. 응용 프로그램은 **Enddraw** 호출을 초과 하는 포인터를 캐시 하면 안 됩니다.
+화면에 픽셀을 로드 하려면 응용 프로그램에서 요청 하는 내용에 따라 질감 또는 Direct2D 컨텍스트를 나타내는 DirectX 인터페이스를 반환 하는 [**Begindraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-begindraw) 메서드를 호출 해야 합니다. 그런 다음 응용 프로그램은 해당 질감에 픽셀을 렌더링 하거나 업로드 해야 합니다. 응용 프로그램이 완료 되 면 [**Enddraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-enddraw) 메서드를 호출 해야 합니다. 이 시점에는 컴포지션에 사용할 수 있는 새 픽셀만 사용할 수 있지만 다음에 시각적 트리에 대 한 모든 변경 내용이 커밋될 때까지 화면에 표시 되지 않습니다. **Enddraw** 를 호출 하기 전에 시각적 트리가 커밋되면 진행 중인 업데이트가 화면에 표시 되지 않으며 표면에는 **begindraw** 이전에 있던 내용이 계속 표시 됩니다. **Enddraw** 를 호출 하면 begindraw에서 반환 된 텍스처 또는 Direct2D context 포인터가 무효화 됩니다. 응용 프로그램은 **Enddraw** 호출을 초과 하는 포인터를 캐시 하면 안 됩니다.
 
-응용 프로그램은 지정 된 [**CompositionGraphicsDevice**](/uwp/api/Windows.UI.Composition.CompositionGraphicsDevice)에 대해 한 번에 하나의 화면에서 begindraw만 호출할 수 있습니다. [**Begindraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-begindraw)를 호출한 후에는 다른 응용 프로그램에서 **begindraw** 를 호출 하기 전에 응용 프로그램에서 해당 화면에 [**enddraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-enddraw) 를 호출 해야 합니다. API가 민첩 하므로 응용 프로그램은 여러 작업자 스레드에서 렌더링을 수행 하려는 경우 이러한 호출을 동기화 해야 합니다. 응용 프로그램에서 한 화면 렌더링을 중단 하 고 일시적으로 다른 화면으로 전환 하려는 경우 응용 프로그램에서 [**SuspendDraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-suspenddraw) 메서드를 사용할 수 있습니다. 이렇게 하면 다른 **Begindraw** 가 성공 하지만 첫 번째 표면 업데이트를 화면 컴포지션에 사용할 수 없습니다. 이를 통해 응용 프로그램은 트랜잭션 방식으로 여러 업데이트를 수행할 수 있습니다. 표면이 일시 중단 되 면 응용 프로그램은 [**ResumeDraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-resumedraw) 메서드를 호출 하 여 업데이트를 계속 하거나 **enddraw**를 호출 하 여 업데이트를 수행 하도록 선언할 수 있습니다. 즉, 지정 된 **CompositionGraphicsDevice**한 번에 하나의 서피스만 적극적으로 업데이트 될 수 있습니다. 각 그래픽 장치는이 상태를 서로 독립적으로 유지 하므로 응용 프로그램이 서로 다른 그래픽 장치에 속한 경우 두 개의 서피스로 동시에 렌더링할 수 있습니다. 그러나 이렇게 하면 두 서피스의 비디오 메모리가 함께 풀링되지 않기 때문에 메모리 효율성이 떨어집니다.
+응용 프로그램은 지정 된 [**CompositionGraphicsDevice**](/uwp/api/Windows.UI.Composition.CompositionGraphicsDevice)에 대해 한 번에 하나의 화면에서 begindraw만 호출할 수 있습니다. [**Begindraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-begindraw)를 호출한 후에는 다른 응용 프로그램에서 **begindraw** 를 호출 하기 전에 응용 프로그램에서 해당 화면에 [**enddraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-enddraw) 를 호출 해야 합니다. API가 민첩 하므로 응용 프로그램은 여러 작업자 스레드에서 렌더링을 수행 하려는 경우 이러한 호출을 동기화 해야 합니다. 응용 프로그램에서 한 화면 렌더링을 중단 하 고 일시적으로 다른 화면으로 전환 하려는 경우 응용 프로그램에서 [**SuspendDraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-suspenddraw) 메서드를 사용할 수 있습니다. 이렇게 하면 다른 **Begindraw** 가 성공 하지만 첫 번째 표면 업데이트를 화면 컴포지션에 사용할 수 없습니다. 이를 통해 응용 프로그램은 트랜잭션 방식으로 여러 업데이트를 수행할 수 있습니다. 표면이 일시 중단 되 면 응용 프로그램은 [**ResumeDraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-resumedraw) 메서드를 호출 하 여 업데이트를 계속 하거나 **enddraw** 를 호출 하 여 업데이트를 수행 하도록 선언할 수 있습니다. 즉, 지정 된 **CompositionGraphicsDevice** 한 번에 하나의 서피스만 적극적으로 업데이트 될 수 있습니다. 각 그래픽 장치는이 상태를 서로 독립적으로 유지 하므로 응용 프로그램이 서로 다른 그래픽 장치에 속한 경우 두 개의 서피스로 동시에 렌더링할 수 있습니다. 그러나 이렇게 하면 두 서피스의 비디오 메모리가 함께 풀링되지 않기 때문에 메모리 효율성이 떨어집니다.
 
-[**Begindraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-begindraw), [**SuspendDraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-suspenddraw), [**ResumeDraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-resumedraw) 및 [**enddraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-enddraw) 메서드는 응용 프로그램이 잘못 된 작업을 수행 하는 경우 (예: 잘못 된 인수를 전달 하거나 다른 표면에서 **Enddraw** 를 호출 하기 전에 표면에서 **begindraw** 를 호출 하는 경우) 오류를 반환 합니다. 이러한 종류의 오류는 응용 프로그램 버그를 나타내며, 이러한 오류는 빠른 오류로 처리 되는 것으로 예상 됩니다. 기본 DirectX 장치를 분실 한 경우에도 **Begindraw** 에서 오류를 반환할 수 있습니다. 응용 프로그램에서 DirectX 장치를 다시 만들고 다시 시도할 수 있으므로이 오류는 치명적이 지 않습니다. 따라서 응용 프로그램은 단순히 렌더링을 생략 하 여 장치 손실을 처리할 것으로 예상 됩니다. 어떤 이유로 든 **Begindraw** 가 실패 하는 경우 첫 번째 위치가 시작 되지 않으므로 응용 프로그램에서 **enddraw**를 호출 하지 않아야 합니다.
+[**Begindraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-begindraw), [**SuspendDraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-suspenddraw), [**ResumeDraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-resumedraw) 및 [**enddraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-enddraw) 메서드는 응용 프로그램이 잘못 된 작업을 수행 하는 경우 (예: 잘못 된 인수를 전달 하거나 다른 표면에서 **Enddraw** 를 호출 하기 전에 표면에서 **begindraw** 를 호출 하는 경우) 오류를 반환 합니다. 이러한 종류의 오류는 응용 프로그램 버그를 나타내며, 이러한 오류는 빠른 오류로 처리 되는 것으로 예상 됩니다. 기본 DirectX 장치를 분실 한 경우에도 **Begindraw** 에서 오류를 반환할 수 있습니다. 응용 프로그램에서 DirectX 장치를 다시 만들고 다시 시도할 수 있으므로이 오류는 치명적이 지 않습니다. 따라서 응용 프로그램은 단순히 렌더링을 생략 하 여 장치 손실을 처리할 것으로 예상 됩니다. 어떤 이유로 든 **Begindraw** 가 실패 하는 경우 첫 번째 위치가 시작 되지 않으므로 응용 프로그램에서 **enddraw** 를 호출 하지 않아야 합니다.
 
 ## <a name="scrolling"></a>스크롤
 
 성능상의 이유로 응용 프로그램에서 [**Begindraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-begindraw) 를 호출 하면 반환 되는 질감의 내용이 표면의 이전 콘텐츠로 보장 되지 않습니다. 응용 프로그램은 콘텐츠가 무작위로 인 것으로 가정 해야 하며, 응용 프로그램은 렌더링 전에 화면을 지우거 나 업데이트 된 전체 사각형을 포함 하는 데 충분 한 불투명 내용을 그려 모든 픽셀에 대 한 작업을 수행 하도록 해야 합니다. 이는 텍스처 포인터가 **begindraw** 와 [**enddraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-enddraw) 호출 사이 에서만 유효 하다는 것과 결합 되어 응용 프로그램에서 이전 콘텐츠를 화면 밖으로 복사할 수 없게 합니다. 이러한 이유로 응용 프로그램이 동일한 표면 픽셀 복사를 수행할 수 있도록 하는 [**Scroll**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-scroll) 메서드를 제공 합니다.
 
-## <a name="usage-example"></a>사용 예
+## <a name="cwinrt-usage-example"></a>C + +/WinRT 사용 예
 
 다음 코드 예제는 상호 운용 시나리오를 보여 줍니다. 이 예제에서는 Windows 컴퍼지션의 Windows 런타임 기반 노출 영역 및 interop 헤더의 형식과 함께 형식을 결합 하 고 COM 기반 DirectWrite 및 Direct2D Api를 사용 하 여 텍스트를 렌더링 하는 코드를 사용 합니다. 이 예제에서는 [**begindraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-begindraw) 와 [**enddraw**](/windows/desktop/api/windows.ui.composition.interop/nf-windows-ui-composition-interop-icompositiondrawingsurfaceinterop-enddraw) 를 사용 하 여 이러한 기술 간의 원활한 상호 운용성을 만듭니다. 이 예제에서는 DirectWrite를 사용 하 여 텍스트를 레이아웃 한 다음 Direct2D를 사용 하 여 렌더링 합니다. 컴퍼지션 그래픽 장치는 초기화 시에 직접 Direct2D 장치를 수락 합니다. 이를 통해 **begindraw** 은 **ID2D1DeviceContext** 인터페이스 포인터를 반환할 수 있습니다 .이는 응용 프로그램이 각 그리기 작업에서 반환 된 ID3D11Texture2D 인터페이스를 래핑하는 Direct2D 컨텍스트를 만드는 것 보다 훨씬 효율적입니다.
 
-아래에는 두 가지 코드 예제가 있습니다. 첫 번째는 [c + +/Winrt](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md) 예제 (complete), c + +/cx 코드 예제 (예제에서는 DirectWrite 및 Direct2D 부분 생략)입니다.
+아래의 c + +/WinRT 코드 예제를 시험 하려면 먼저 Visual Studio에서 새 **핵심 앱 (c + +/winrt)** 프로젝트를 만듭니다. 요구 사항은 [c + +/vb에 대 한 Visual Studio 지원](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조 하세요. `pch.h`및 `App.cpp` 소스 코드 파일의 내용을 아래 코드 목록으로 바꾼 다음, 빌드 및 실행 합니다. 응용 프로그램은 "Hello, 세계!" 문자열을 렌더링 합니다. 투명 한 배경의 검정 텍스트입니다.
 
-아래 c + +/WinRT 코드 예제를 사용 하려면 먼저 Visual Studio에서 새 **핵심 앱 (c + +/winrt)** 프로젝트를 만듭니다. 요구 사항은 [c + +/vb에 대 한 Visual Studio 지원](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 참조 하세요. 프로젝트를 만드는 동안 대상 버전 **Windows 10, 버전 1803 (10.0;)로 선택 합니다. 빌드 17134)**. 이 코드는이 코드가 빌드되고 테스트 된 버전입니다. `App.cpp`소스 코드 파일의 내용을 아래 코드 목록으로 바꾼 후를 빌드하고 실행 합니다. 응용 프로그램은 "Hello, 세계!" 문자열을 렌더링 합니다. 투명 한 배경의 검정 텍스트입니다.
+```cppwinrt
+// pch.h
+#pragma once
+#include <windows.h>
+#include <D2d1_1.h>
+#include <D3d11_4.h>
+#include <Dwrite.h>
+#include <Windows.Graphics.DirectX.Direct3D11.interop.h>
+#include <Windows.ui.composition.interop.h>
+#include <unknwn.h>
+
+#include <winrt/Windows.ApplicationModel.Core.h>
+#include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Graphics.DirectX.h>
+#include <winrt/Windows.Graphics.DirectX.Direct3D11.h>
+#include <winrt/Windows.UI.Composition.h>
+#include <winrt/Windows.UI.Core.h>
+#include <winrt/Windows.UI.Input.h>
+```
 
 ```cppwinrt
 // App.cpp
@@ -62,16 +80,6 @@ ICompositorInterop API는 콘텐츠를 compositor으로 직접 이동할 수 있
 //*********************************************************
 
 #include "pch.h"
-
-#include <D2d1_1.h>
-#include <D3d11_4.h>
-#include <Dwrite.h>
-#include <Windows.Graphics.DirectX.Direct3D11.interop.h>
-#include <Windows.ui.composition.interop.h>
-#include <winrt/Windows.Foundation.h>
-#include <winrt/Windows.Graphics.DirectX.h>
-#include <winrt/Windows.Graphics.DirectX.Direct3D11.h>
-#include <winrt/Windows.UI.Composition.h>
 
 using namespace winrt;
 using namespace winrt::Windows::ApplicationModel::Core;
@@ -117,11 +125,11 @@ struct SampleText
         // own redrawing our pixels.
         m_deviceReplacedEventToken = m_compositionGraphicsDevice.RenderingDeviceReplaced(
             [this](CompositionGraphicsDevice const&, RenderingDeviceReplacedEventArgs const&)
-        {
-            // Draw the text again.
-            DrawText();
-            return S_OK;
-        });
+            {
+                // Draw the text again.
+                DrawText();
+                return S_OK;
+            });
     }
 
     ~SampleText()
@@ -312,7 +320,7 @@ struct SampleApp : implements<SampleApp, IFrameworkViewSource, IFrameworkView>
         return *this;
     }
 
-    void Initialize(CoreApplicationView const &)
+    void Initialize(CoreApplicationView const&)
     {
     }
 
@@ -527,7 +535,14 @@ int __stdcall wWinMain(HINSTANCE, HINSTANCE, PWSTR, int)
 }
 ```
 
-```cpp
+## <a name="ccx-usage-example"></a>C + +/CX 사용 예제
+
+> [!NOTE]
+> 이 코드 예제는 c + +/CX 응용 프로그램을 유지 관리 하는 데 도움이 됩니다. 하지만 새로운 응용 프로그램에 대해 [C++/WinRT](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md)를 사용하는 것이 좋습니다. C++/WinRT는 헤더 파일 기반 라이브러리로 구현된 WinRT(Windows 런타임) API용 최신의 완전한 표준 C++17 언어 프로젝션이며, 최신 Windows API에 최고 수준의 액세스를 제공하도록 설계되었습니다.
+
+아래의 c + +/CX 코드 예제에서는 예제의 DirectWrite 및 Direct2D 부분을 생략 합니다.
+
+```cppcx
 //------------------------------------------------------------------------------
 //
 // Copyright (C) Microsoft. All rights reserved.

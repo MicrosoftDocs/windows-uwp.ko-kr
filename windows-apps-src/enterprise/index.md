@@ -6,12 +6,12 @@ ms.date: 01/16/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ff96cd25c32418f518f6b1807e08eb72c3e14c6a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4bd6c92729766b99630958d4b33514ef4791d4bf
+ms.sourcegitcommit: 3153ef4838c35084a64173c7ed88719c8864f8cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89168437"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96755290"
 ---
 # <a name="enterprise"></a>Enterprise
 
@@ -19,8 +19,7 @@ ms.locfileid: "89168437"
 
 ## <a name="feature-highlights"></a>주요 기능
 
-<a id="template-studio" />
-
+<a id="template-studio"></a>
 ### <a name="windows-template-studio"></a>Windows Template Studio
 
 Windows Template Studio는 마법사 기반 환경을 사용하여 새 UWP(유니버설 Windows 플랫폼) 앱의 만들기를 가속화하는 Visual Studio 2019 확장입니다. 결과적으로 UWP 프로젝트는 뛰어난 구성으로 읽기가 가능한 코드로써 검증된 패턴 및 모범 사례를 구현하면서 최신 Windows 10 기능을 통합합니다.
@@ -29,8 +28,7 @@ Windows Template Studio는 마법사 기반 환경을 사용하여 새 UWP(유�
 
 [Windows Template Studio](https://marketplace.visualstudio.com/items?itemName=WASTeamAccount.WindowsTemplateStudio)를 참조하세요.
 
-<a id="desktop-style-UI" />
-
+<a id="desktop-style-UI"></a>
 ### <a name="controls-to-create-desktop-style-uis"></a>데스크톱 스타일 UI를 만드는 컨트롤
 
 기존 데스크톱 애플리케이션 UI와 UWP UI 간의 격차를 줄이는 새 UWP XAML 컨트롤을 출시했습니다.
@@ -39,8 +37,7 @@ Windows Template Studio는 마법사 기반 환경을 사용하여 새 UWP(유�
 
 ![MenuBar](images/menu-bar.png)
 
-<a id="enterprise" />
-
+<a id="enterprise"></a>
 ### <a name="controls-to-support-enterprise-scenarios"></a>엔터프라이즈 시나리오를 지원하는 컨트롤
 
 [DataGridView](/windows/communitytoolkit/controls/datagrid)는 행과 열에 데이터 컬렉션을 표시할 수 있는 유연한 방법을 제공합니다.
@@ -58,16 +55,14 @@ Windows UI Library는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 
 
 [Windows UI Library(미리 보기 버전)](/uwp/toolkits/winui/)를 참조하세요.
 
-<a id="xaml-islands" />
-
+<a id="xaml-islands"></a>
 ### <a name="uwp-controls-in-desktop-applications-xaml-islands"></a>데스크톱 애플리케이션의 UWP 컨트롤(XAML Islands)
 
-이제 Windows 10을 사용하면 *XAML Islands*라는 기능을 통해 WPF, Windows Forms 및 C++ Win32 데스크톱 애플리케이션에서 UWP 컨트롤을 사용할 수 있습니다. 즉, Windows Ink 및 Fluent 디자인 시스템을 지원하는 컨트롤과 같은 UWP 컨트롤을 통해서만 사용할 수 있는 최신 Windows 10 UI 기능을 통해 기존 데스크톱 애플리케이션의 모양, 느낌 및 기능을 향상시킬 수 있습니다. 이 기능을 XAML 제도라고 합니다.
+이제 Windows 10을 사용하면 *XAML Islands* 라는 기능을 통해 WPF, Windows Forms 및 C++ Win32 데스크톱 애플리케이션에서 UWP 컨트롤을 사용할 수 있습니다. 즉, Windows Ink 및 Fluent 디자인 시스템을 지원하는 컨트롤과 같은 UWP 컨트롤을 통해서만 사용할 수 있는 최신 Windows 10 UI 기능을 통해 기존 데스크톱 애플리케이션의 모양, 느낌 및 기능을 향상시킬 수 있습니다. 이 기능을 XAML 제도라고 합니다.
 
 [데스크톱 애플리케이션에서 UWP 컨트롤 호스팅](/windows/apps/desktop/modernize/xaml-islands)을 참조하세요.
 
-<a id="standard" />
-
+<a id="standard"></a>
 ### <a name="net-standard-20"></a>.NET Standard 2.0
 
 .NET Standard에는 .NET Standard 1.x보다 20,000개가 더 많은 API가 포함되어 있습니다. 따라서 기존 .NET Framework 라이브러리를 훨씬 쉽게 마이그레이션한 다음, UWP 애플리케이션을 포함한 여러 .NET 애플리케이션에서 사용할 수 있습니다.
@@ -76,16 +71,14 @@ Windows UI Library는 UWP 앱용 컨트롤 및 기타 사용자 인터페이스 
 
 [데스크톱 앱 및 UWP 앱 간의 코드 공유](../porting/desktop-to-uwp-migrate.md)를 참조하세요.
 
-<a id="sql-server" />
-
+<a id="sql-server"></a>
 ### <a name="sql-server-connectivity"></a>SQL Server 연결
 
 앱에서 [System.Data.SqlClient](/dotnet/api/system.data.sqlclient) 네임스페이스를 사용하여 SQL Server 데이터베이스에 직접 연결한 다음, 데이터를 저장하고 검색할 수 있습니다.
 
 [UWP 앱에서 SQL Server 데이터베이스 사용](../data-access/sql-server-databases.md)을 참조하세요.
 
-<a id="MSIX" />
-
+<a id="MSIX"></a>
 ### <a name="msix-deployment"></a>MSIX 배포
 
 MSIX는 MSI, .appx, App-V 및 ClickOnce의 최고의 기능을 결합하여 모든 Windows 앱에 현대적이고 안정적인 패키징 환경을 제공하는 Windows 앱 패키지 형식입니다. MSIX 패키지 형식은 Win32, WPF 및 Windows Forms 앱에 최신 패키지 및 배포 기능을 사용할 수 있도록 하며, 기존 앱 패키지와 설치 파일의 기능도 유지합니다. 
@@ -94,8 +87,7 @@ MSIX는 MSI, .appx, App-V 및 ClickOnce의 최고의 기능을 결합하여 모�
 
 [MSIX 설명서](/windows/msix/)를 참조하세요.
 
-<a id="distribution" />
-
+<a id="distribution"></a>
 ## <a name="security"></a>보안
 
 Windows 10에서는 앱 개발자가 사용자의 ID, 회사 네트워크의 보안 및 디바이스에 저장된 비즈니스 데이터를 보호할 수 있는 보안 기능 모음을 제공합니다. Windows 10의 새로운 기능인 Microsoft Passport는 엔터프라이즈급 보안을 제공하고 지문, 얼굴 및 홍채 기반 인식 기능을 지원하는 PIN 또는 Windows Hello를 사용하여 액세스할 수 있는 배포하기 쉬운 2단계 암호 대안입니다.
@@ -173,6 +165,6 @@ MSIX 패키지를 사용하여 조직의 사용자에게 앱을 배포할 수 �
 
 Prism에 대한 자세한 내용은 [GitHub 리포지토리](https://github.com/PrismLibrary/Prism)를 참조하세요.
 
- 
+ 
 
- 
+ 
