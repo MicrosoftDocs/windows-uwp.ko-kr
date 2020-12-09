@@ -4,12 +4,12 @@ description: Windows 패키지 관리자를 애플리케이션이 포함된 소�
 ms.date: 04/29/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: ae9c9039154e2a576a691a01d64abcf8c9029c1c
-ms.sourcegitcommit: 4df8c04fc6c22ec76cdb7bb26f327182f2dacafa
+ms.openlocfilehash: b2bde5a55d22d0541724cd777c315b2751cf1d36
+ms.sourcegitcommit: 3153ef4838c35084a64173c7ed88719c8864f8cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334601"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96755280"
 ---
 # <a name="submit-packages-to-windows-package-manager"></a>Windows 패키지 관리자에 패키지 제출
 
