@@ -6,12 +6,12 @@ ms.date: 3/30/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f205770f789e2530ac35317f35b545c18592b0c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e16446321ccb8dc2494f59feec88fbb0a52aed94
+ms.sourcegitcommit: a4ca8ba143862411cd1104515cfeb98f1bcdb780
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174767"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96857414"
 ---
 # <a name="opening-a-developer-account"></a>개발자 계정 열기
 
@@ -35,7 +35,7 @@ ms.locfileid: "89174767"
 5.  사용 하려는 **게시자 표시 이름** (50 자이 하)을 입력 합니다. 고객이 검색할 때이 이름을 확인 하 고이 이름으로 앱을 확인 하 게 될 것 이므로 신중 하 게 선택 합니다. 회사 계정의 경우 조직의 등록 된 비즈니스 이름 또는 거래 이름을 사용 해야 합니다. 다른 사용자가 이미 선택한 이름을 입력 하거나 다른 사용자에 게 해당 이름을 사용할 권한이 있는 경우에는 해당 이름을 사용할 수 없습니다.
 
     > [!NOTE]
-    > 여기에 입력 한 이름을 사용할 권한이 있는지 확인 하세요. 사용자가 선택한 이름을 상표 하거나 저작권을 갖고 있다면 계정이 닫힐 수 있습니다. 자세한 내용은 [앱 개발자 계약](/legal/windows/agreements/app-developer-agreement) 을 참조 하세요. 다른 사람이 상표 또는 기타 법률을 보유 하 고 있는 게시자 표시 이름을 사용 하는 경우 [Microsoft에 문의 하세요](https://www.microsoft.com/info/cpyrtInfrg.html).    
+    > 여기에 입력 한 이름을 사용할 권한이 있는지 확인 하세요. 사용자가 선택한 이름을 상표 하거나 저작권을 갖고 있다면 계정이 닫힐 수 있습니다. 자세한 내용은 [앱 개발자 계약](/legal/windows/agreements/app-developer-agreement) 을 참조 하세요. 다른 사람이 상표 또는 기타 법률을 보유 하 고 있는 게시자 표시 이름을 사용 하는 경우 [Microsoft에 문의 하세요](https://www.microsoft.com/info/cpyrtInfrg.html).    
 
 6.  개발자 계정에 사용하려는 연락처 정보를 입력합니다.
 
@@ -62,7 +62,7 @@ ms.locfileid: "89174767"
 
 여러 사용자가 계정에 추가 된 개별 사용자가 아니라 해당 계정을 연 Microsoft 계정 로그인 하 여 회사 계정에 액세스할 수 있도록 하려면 다음 지침을 참조 하세요.
 
--   사용자에 게 아직 속하지 않은 전자 메일 주소 또는와 같은 다른 개인을 사용 하 여 Microsoft 계정를 만듭니다 MyCompany_PartnerCenter@outlook.com . 회사의 도메인에서 전자 메일 주소를 사용 하지 마세요. 특히 회사에서 이미 Azure AD를 사용 하는 경우입니다. 앞에서 설명한 대로 나중에 회사의 Azure AD 서비스에서 사용자를 더 추가할 수 있습니다.
+-   이메일 소유권은 기본 연락처(기본 이메일) 주소가 유효한지 확인합니다. 기본 연락처 이메일 주소는 이메일을 보내거나 받을 수 있고 모니터링되는 회사 계정이어야 합니다. 파트너는 (1) 회사 도메인과 연결 되지 않은 개인 전자 메일 주소를 사용 하거나 (2) 전자 메일에 연결 되지 않은 테 넌 트 사용자 로그인 (예:)을 사용 **하지** 않아야 합니다. jsmith@testcompany.onmicrosoft.com
 -   이 Microsoft 계정에 대 한 액세스를 가장 적은 수의 사용자로 제한 합니다.
 -   개발자 계정에 액세스 해야 하는 모든 사용자를 포함 하는 회사 전자 메일 메일 그룹을 설정 합니다. [Microsoft 계정 연결 된 보안 정보](https://account.microsoft.com/security)에이 전자 메일 주소를 추가 합니다. 이 접근 방식을 사용 하면 목록에 있는 모든 직원이이 별칭으로 전송 되는 보안 코드를 받을 수 있습니다. 메일 그룹을 설정 하는 것이 불가능 한 경우 개인의 전자 메일 주소를 보안 정보에 추가할 수 있습니다. 그러나 해당 전자 메일 주소의 소유자는 메시지가 표시 될 때 (예: 새 보안 정보가 계정에 추가 되거나 새 장치에서 계정에 액세스 하는 경우) 보안 코드에 액세스 하 고 공유할 수 있는 유일한 사람이 됩니다.
 -   Microsoft 계정의 보안 정보에 회사 전화 번호를 추가 합니다. 확장이 필요 하지 않으며 주요 팀 멤버에 액세스할 수 있는 숫자를 사용 하십시오.
@@ -77,7 +77,7 @@ ms.locfileid: "89174767"
 
 Microsoft 계정에는 전자 메일 주소 또는 전화 번호가 2 개 이상 있어야 합니다. 가능한 한 많이 추가 하는 것이 좋습니다. 일부 보안 정보는 유효 하기 전에 확인 해야 합니다. 또한 보안 정보를 자주 검토 하 고 최신 상태 인지 확인 해야 합니다. Microsoft 계정로 이동 하 고 로그인 하 여 보안 정보를 관리할 수 있습니다 https://account.microsoft.com/security . 자세한 내용은 [계정 보안 정보 & 확인 코드](https://support.microsoft.com/help/12428/microsoft-account-security-info-verification-codes)를 참조 하세요.
 
-Microsoft 계정를 통해 파트너 센터에 로그인 하면 보안 코드를 전송 하 여 id를 확인 하 라는 메시지가 표시 될 수 있습니다. 보안 코드는 로그인 프로세스를 완료 하기 위해 입력 해야 합니다. 자주 사용 하는 Pc를 *신뢰할 수 있는 장치로*지정 하는 것이 좋습니다. 신뢰할 수 있는 장치에서 로그인 하는 경우 일반적으로 특정 상황에서 메시지를 표시 하거나 오랜 시간 동안 해당 장치에서 로그인 하지 않은 경우에는 코드를 입력 하 라는 메시지가 표시 되지 않습니다. 자세한 내용은 [Microsoft 계정에 신뢰할 수 있는 장치 추가](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device)를 참조 하세요.
+Microsoft 계정를 통해 파트너 센터에 로그인 하면 보안 코드를 전송 하 여 id를 확인 하 라는 메시지가 표시 될 수 있습니다. 보안 코드는 로그인 프로세스를 완료 하기 위해 입력 해야 합니다. 자주 사용 하는 Pc를 *신뢰할 수 있는 장치로* 지정 하는 것이 좋습니다. 신뢰할 수 있는 장치에서 로그인 하는 경우 일반적으로 특정 상황에서 메시지를 표시 하거나 오랜 시간 동안 해당 장치에서 로그인 하지 않은 경우에는 코드를 입력 하 라는 메시지가 표시 되지 않습니다. 자세한 내용은 [Microsoft 계정에 신뢰할 수 있는 장치 추가](https://support.microsoft.com/help/12369/microsoft-account-add-a-trusted-device)를 참조 하세요.
 
 
 ## <a name="closing-your-account"></a>계정 닫기
