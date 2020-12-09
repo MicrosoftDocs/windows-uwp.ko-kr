@@ -3,12 +3,12 @@ title: WinUI 3 Preview 3(2020년 11월)
 description: WinUI 3 Preview 3 릴리스에 대한 개요입니다.
 ms.date: 11/17/2020
 ms.topic: article
-ms.openlocfilehash: ac641036af8505b1e51fb81385f5206a9aa44f40
-ms.sourcegitcommit: 29c8999fb7a941fc6e26b49cf10f4cc1fcb69641
+ms.openlocfilehash: 69855aea647b608d9253e4f71b6d7d38917def61
+ms.sourcegitcommit: a4ca8ba143862411cd1104515cfeb98f1bcdb780
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "95002918"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96857424"
 ---
 # <a name="windows-ui-library-3-preview-3-november-2020"></a>Windows UI 라이브러리 3 Preview 3(2020년 11월)
 
@@ -43,7 +43,7 @@ WinUI 3 Preview 3에는 WinUI 기반 사용자 인터페이스를 사용하여 �
     C++ 앱을 빌드하려면 다음 워크로드도 포함해야 합니다.
     - C++를 사용한 데스크톱 개발
     - 유니버설 Windows 플랫폼 워크로드용 선택적 *C++(v142) 유니버설 Windows 플랫폼 도구* 구성 요소(오른쪽 창에 있는 "유니버설 Windows 플랫폼 개발" 섹션의 "설치 세부 정보" 참조)
-3. **nuget.org** 에 사용하도록 설정된 NuGet 패키지 원본이 시스템에 있는지 확인합니다. 자세한 내용은 [일반적인 NuGet 구성](/nuget/consume-packages/configuring-nuget-behavior)을 참조하십시오.[Windows 커뮤니티 도구 키트](#windows-community-toolkit)
+3. **nuget.org** 에 사용하도록 설정된 NuGet 패키지 원본이 시스템에 있는지 확인합니다. 자세한 내용은 [일반적인 NuGet 구성](/nuget/consume-packages/configuring-nuget-behavior)을 참조하십시오.
 
 4. [WinUI 3 Preview 3 VSIX 패키지](https://aka.ms/winui3/preview3-download)를 다운로드하여 설치합니다. 그러면 WinUI 3 프로젝트 템플릿 및 WinUI 3 라이브러리가 포함된 NuGet 패키지가 모두 Visual Studio 2019에 추가됩니다.
 
