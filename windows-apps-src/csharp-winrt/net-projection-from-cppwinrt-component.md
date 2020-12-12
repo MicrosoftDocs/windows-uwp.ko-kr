@@ -5,30 +5,30 @@ ms.date: 11/12/2020
 ms.topic: article
 keywords: 'windows 10, c #, winrt, cswinrt, 프로젝션'
 ms.localizationpriority: medium
-ms.openlocfilehash: 552eee6ab3f6f4f875202392c9aa3e3c848dbdb6
-ms.sourcegitcommit: 23bd1ef67dcb637b9ac7833e1b6a0c0dd56bd445
+ms.openlocfilehash: 45fa8a7858077438d9707835b548bdacd34e5d11
+ms.sourcegitcommit: cddc595969c658ce30fbc94ded92db4a8ad1bf66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94572809"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214195"
 ---
-# <a name="walkthrough-generate-a-net-5-projection-from-a-cwinrt-component-and-distribute-the-nuget"></a>연습: c + +/WinRT 구성 요소에서 .NET 5 프로젝션을 생성 하 고 NuGet 배포
+# <a name="walkthrough-generate-a-net-5-projection-from-a-cwinrt-component-and-distribute-the-nuget"></a>연습: C++/WinRT 구성 요소에서 .NET 5 프로젝션 생성 및 NuGet 배포
 
 이 연습에서는 [c #/winrt](index.md) 를 사용 하 여 c + +/winrt 구성 요소에 대 한 .net 5 프로젝션을 생성 하 고, 연결 된 NuGet 패키지를 만들고, .Net 5 c # 콘솔 응용 프로그램에서 NuGet 패키지를 참조 하는 방법을 보여 줍니다.
 
-[여기](https://github.com/microsoft/CsWinRT/tree/master/Samples/Net5ProjectionSample)에서이 연습에 대 한 전체 샘플을 GitHub에서 다운로드할 수 있습니다.
+[여기](https://github.com/microsoft/CsWinRT/tree/master/src/Samples/Net5ProjectionSample)에서이 연습에 대 한 전체 샘플을 GitHub에서 다운로드할 수 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 연습 및 해당 샘플에는 다음과 같은 도구 및 구성 요소가 필요 합니다.
 
-- 유니버설 Windows 플랫폼 개발 워크 로드가 설치 된 [Visual Studio 16.8](https://visualstudio.microsoft.com/downloads/) 이상 유니버설 Windows 플랫폼 개발에 **대 한 설치 세부 정보** 에서  >  **Universal Windows Platform development** **c + + (v14x) 유니버설 Windows 플랫폼 도구** 옵션을 확인 합니다.
+- 유니버설 Windows 플랫폼 개발 워크 로드가 설치 된 [Visual Studio 16.8](https://visualstudio.microsoft.com/downloads/) 이상 유니버설 Windows 플랫폼 개발에 **대 한 설치 세부 정보** 에서  >   **c + + (v14x) 유니버설 Windows 플랫폼 도구** 옵션을 확인 합니다.
 - [.Net 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0).
 - C + +/winrt 프로젝트 템플릿에 대 한 [c + +/WINRT VSIX 확장](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264) .
 
 ## <a name="create-a-simple-cwinrt-runtime-component"></a>간단한 c + +/WinRT 런타임 구성 요소 만들기
 
-이 연습을 수행 하려면 먼저 .NET 5 프로젝션을 만들 c + +/WinRT 구성 요소가 있어야 합니다. 이 연습 [에서는 GitHub의](https://github.com/microsoft/CsWinRT/tree/master/Samples/Net5ProjectionSample/SimpleMathComponent)관련 샘플에서 **SimpleMathComponent** 프로젝트를 사용 합니다. 이는 [c + +/WINRT VSIX 확장](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 사용 하 여 만든 **Windows 런타임 구성 요소 (c + +/winrt)** 프로젝트입니다. 개발 컴퓨터에 프로젝트를 복사한 후 Visual Studio 2019 Preview에서 솔루션을 엽니다.
+이 연습을 수행 하려면 먼저 .NET 5 프로젝션을 만들 c + +/WinRT 구성 요소가 있어야 합니다. 이 연습 [에서는 GitHub의](https://github.com/microsoft/CsWinRT/tree/master/src/Samples/Net5ProjectionSample/SimpleMathComponent)관련 샘플에서 **SimpleMathComponent** 프로젝트를 사용 합니다. 이는 [c + +/WINRT VSIX 확장](../cpp-and-winrt-apis/intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package)을 사용 하 여 만든 **Windows 런타임 구성 요소 (c + +/winrt)** 프로젝트입니다. 개발 컴퓨터에 프로젝트를 복사한 후 Visual Studio 2019 Preview에서 솔루션을 엽니다.
 
 이 프로젝트의 코드는 아래 헤더 파일에 표시 된 기본 수학 연산에 대 한 기능을 제공 합니다. 
 
@@ -59,7 +59,7 @@ C + +/WinRT 구성 요소를 만들고 winmd 파일을 생성 하는 방법에 �
 
 1. 새 **클래스 라이브러리 (.Net Core)** 프로젝트를 솔루션에 추가 합니다.
 
-    1. **솔루션 탐색기** 에서 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 **Add** 고  ->  **새 프로젝트** 추가를 클릭 합니다.
+    1. **솔루션 탐색기** 에서 솔루션 노드를 마우스 오른쪽 단추로 클릭 하 고  ->  **새 프로젝트** 추가를 클릭 합니다.
     2. **새 프로젝트 추가 대화 상자** 에서 **클래스 라이브러리 (.net Core)** 프로젝트 템플릿을 검색 합니다. 템플릿을 선택 하 고 **다음** 을 클릭 합니다.
     3. 새 프로젝트의 이름을 **SimpleMathProjection** 하 고 **만들기** 를 클릭 합니다.
 
@@ -125,7 +125,7 @@ C + +/WinRT 구성 요소를 만들고 winmd 파일을 생성 하는 방법에 �
 
 ## <a name="build-projects-out-of-source"></a>소스에서 프로젝트 빌드
 
-[관련 샘플](https://github.com/microsoft/CsWinRT/tree/master/Samples/Net5ProjectionSample)에서 빌드는 **디렉터리. build. props** 파일을 사용 하 여 구성 됩니다. **SimpleMathComponent** 및 **SimpleMathProjection** 프로젝트를 빌드할 때 생성 된 파일은 솔루션 수준의 *_build* 폴더에 표시 됩니다. 소스 외부에서 빌드하도록 프로젝트를 구성 하려면 아래에 있는 **build. props** 파일을 솔루션 파일을 포함 하는 디렉터리에 복사 합니다.
+[관련 샘플](https://github.com/microsoft/CsWinRT/tree/master/src/Samples/Net5ProjectionSample)에서 빌드는 **디렉터리. build. props** 파일을 사용 하 여 구성 됩니다. **SimpleMathComponent** 및 **SimpleMathProjection** 프로젝트를 빌드할 때 생성 된 파일은 솔루션 수준의 *_build* 폴더에 표시 됩니다. 소스 외부에서 빌드하도록 프로젝트를 구성 하려면 아래에 있는 **build. props** 파일을 솔루션 파일을 포함 하는 디렉터리에 복사 합니다.
 
 ```xml
 <Project>
@@ -145,8 +145,8 @@ Interop 어셈블리를 배포 하 고 사용 하기 위해 몇 가지 추가 �
 
 1. NuGet 사양 (. nuspec) 파일을 **SimpleMathProjection** 프로젝트에 추가 합니다.
 
-    1. **솔루션 탐색기** 에서 **SimpleMathProjection** 노드를 마우스 오른쪽 단추로 클릭 하 고 **Add** ,  ->  **새 폴더** 추가를 선택 하 고, 폴더 이름을 **nuget** 로 합니다. 
-    2. **Nuget** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **Add**  ->  **새 항목** 추가를 선택한 다음 XML 파일을 선택 하 고 이름을 **SimpleMathProjection. nuspec** 로 선택 합니다. 
+    1. **솔루션 탐색기** 에서 **SimpleMathProjection** 노드를 마우스 오른쪽 단추로 클릭 하 고 ,  ->  **새 폴더** 추가를 선택 하 고, 폴더 이름을 **nuget** 로 합니다. 
+    2. **Nuget** 폴더를 마우스 오른쪽 단추로 클릭 하 고   ->  **새 항목** 추가를 선택한 다음 XML 파일을 선택 하 고 이름을 **SimpleMathProjection. nuspec** 로 선택 합니다. 
 
 2. **SimpleMathProjection** 에 다음을 추가 하 여 패키지를 자동으로 생성 합니다. 이러한 속성은 `NuspecFile` NuGet 패키지를 생성 하는 및 디렉터리를 지정 합니다.
 
@@ -248,4 +248,4 @@ Interop 어셈블리를 배포 하 고 사용 하기 위해 몇 가지 추가 �
 
 ## <a name="resources"></a>리소스
 
-- [이 연습에 대 한 전체 코드 샘플](https://github.com/microsoft/CsWinRT/tree/master/Samples/Net5ProjectionSample)
+- [이 연습에 대 한 전체 코드 샘플](https://github.com/microsoft/CsWinRT/tree/master/src/Samples/Net5ProjectionSample)
