@@ -5,12 +5,12 @@ ms.date: 05/19/2020
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C#, WinRT, cswinrt, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: 107c85b7e2562edb9995a6bfd76e47904750536b
-ms.sourcegitcommit: a15bc17aa0640722d761d0d33f878cb2a822e8ed
+ms.openlocfilehash: ef6fad694dd45e80d462f6a0c5c73ac5539fe16a
+ms.sourcegitcommit: c063d0d130944558afa20181dd294ffe7a187a3f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96577095"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97090687"
 ---
 # <a name="cwinrt"></a>C#/WinRT
 
@@ -96,9 +96,9 @@ C#/WinRT는 [LoadLibrary 대체 검색 순서](/windows/win32/dlls/dynamic-link-
 
 | 오류 또는 경고 메시지 | 이유 |
 |--------------------------|--------|
-| System.IO.FileLoadException | 이 런타임 오류는 Windows SDK 유형을 표시하지 않는 라이브러리에서 API를 호출할 때 발생합니다. |
-| 경고 MSB3277: 해결할 수 없는 Microsoft.Windows.SDK.NET의 서로 다른 버전 간의 충돌이 발견되었습니다. | 이 빌드 오류는 API 표면에서 Windows SDK 유형을 노출하는 라이브러리를 참조할 때 발생합니다. |
-| [CS1705](/dotnet/csharp/language-reference/compiler-messages/cs1705): 어셈블리 'AssemblyName1'은 참조된 어셈블리 'AssemblyName2'보다 높은 버전의 'TypeName'을 사용합니다. | 이 빌드 컴파일러 오류는 라이브러리에서 공개된 Windows SDK 유형을 참조하고 사용할 때 발생합니다. |
+| 경고 MSB3277: 해결할 수 없는 WinRT.Runtime 또는 Microsoft.Windows.SDK.NET의 서로 다른 버전 간의 충돌이 발견되었습니다. | 이 빌드 경고는 API 표면에서 Windows SDK 유형을 노출하는 라이브러리를 참조할 때 발생합니다. |
+| [오류 CS1705](/dotnet/csharp/language-reference/compiler-messages/cs1705): 어셈블리 'AssemblyName1'은 참조된 어셈블리 'AssemblyName2'보다 높은 버전의 'TypeName'을 사용합니다. | 이 빌드 컴파일러 오류는 라이브러리에서 공개된 Windows SDK 유형을 참조하고 사용할 때 발생합니다. |
+| System.IO.FileLoadException | 이 런타임 오류는 Windows SDK 유형을 표시하지 않는 라이브러리에서 특정 API를 호출할 때 발생할 수 있습니다. |
 
 이러한 오류를 해결하려면 .NET SDK를 최신 버전으로 업데이트합니다. 이렇게 하면 애플리케이션에서 사용하는 런타임 및 Windows SDK 어셈블리 버전이 모든 종속성과 호환됩니다. 이러한 오류는 .NET 5 SDK에 대한 조기 서비스/기능 업데이트 시 발생할 수 있습니다. 런타임 수정 시 어셈블리 버전을 업데이트해야 할 수 있기 때문입니다.
 
