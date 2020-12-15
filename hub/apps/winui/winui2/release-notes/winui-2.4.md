@@ -3,16 +3,16 @@ title: WinUI 2.4 릴리스 정보
 description: 새로운 기능 및 버그 수정이 포함된 WinUI 2.4 릴리스에 대한 정보입니다.
 ms.date: 07/15/2020
 ms.topic: reference
-ms.openlocfilehash: 5e2ff23b3b0ea63002ad54a367e82e81ee1cd542
-ms.sourcegitcommit: a30808f38583f7c88fb5f54cd7b7e0b604db9ba6
+ms.openlocfilehash: d6c6f029b63ea8ad32f1b0109ed983b74f2b4c4d
+ms.sourcegitcommit: b99fe39126fbb457c3690312641f57d22ba7c8b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91762914"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96603700"
 ---
 # <a name="windows-ui-library-24"></a>Windows UI 라이브러리 2.4
 
-WinUI 2.4는 WinUI(Windows UI) 라이브러리의 최신 공식 릴리스입니다.
+WinUI 2.4는 Windows UI 라이브러리(WinUI)의 2020년 5월 릴리스입니다.
 
 WinUI는 GitHub의 [Windows UI 라이브러리 리포지토리](https://aka.ms/winui)에서 호스팅되는 오픈 소스 프로젝트입니다. 이 리포지토리에서 모든 버그 보고서, 기능 요청 및 커뮤니티 코드 기여를 등록하세요.
 
@@ -83,17 +83,17 @@ TabView 컨트롤 업데이트는 탭을 렌더링하는 방법에 대한 더 �
 
 ### <a name="hierarchical-navigation"></a>계층적 탐색
 
-[NavigationView](/uwp/api/microsoft.ui.xaml.controls.navigationview?view=winui-2.4) 컨트롤은 이제 계층적 탐색을 지원하고 Left, Top 및 LeftCompact 표시 모드를 포함합니다. 계층적 NavigationView는 페이지 범주를 표시하거나, 관련 하위 페이지가 있는 페이지를 식별하거나, 많은 다른 페이지에 연결된 허브 스타일 페이지가 있는 앱 내에서 사용하는 데 유용합니다.
+[NavigationView](/uwp/api/microsoft.ui.xaml.controls.navigationview?view=winui-2.4&preserve-view=true) 컨트롤은 이제 계층적 탐색을 지원하고 Left, Top 및 LeftCompact 표시 모드를 포함합니다. 계층적 NavigationView는 페이지 범주를 표시하거나, 관련 하위 페이지가 있는 페이지를 식별하거나, 많은 다른 페이지에 연결된 허브 스타일 페이지가 있는 앱 내에서 사용하는 데 유용합니다.
 
 ![계층적 NavigationView 컨트롤](..\images\HierarchicalNavView.gif)<br>*계층적 NavigationView 컨트롤*
 
 [사용 지침](/windows/uwp/design/controls-and-patterns/navigationview#hierarchical-navigation)
 
-[API 참조](/uwp/api/microsoft.ui.xaml.controls.navigationview)
+[API 참조](/uwp/api/microsoft.ui.xaml.controls.navigationview?view=winui-2.4&preserve-view=true)
 
 ## <a name="samples"></a>샘플
 
-설명된 각 WinUI 2.4 기능의 예는 **XAML 컨트롤 갤러리**에 있습니다.
+설명된 각 WinUI 2.4 기능의 예는 **XAML 컨트롤 갤러리** 에 있습니다.
 
 XAML 컨트롤 갤러리 앱이 설치되지 않은 경우 [Microsoft Store](https://www.microsoft.com/p/xaml-controls-gallery/9msvh128x2zt)에서 가져옵니다.
 

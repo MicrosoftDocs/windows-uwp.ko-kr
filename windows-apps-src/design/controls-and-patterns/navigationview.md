@@ -11,12 +11,12 @@ dev-contact: ''
 doc-status: Published
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 689f55393df5fc7af59af6ce1e51fb002f49b713
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: 614cfc03ade485ba7cf2e6a8d819ec2d33d2d947
+ms.sourcegitcommit: b99fe39126fbb457c3690312641f57d22ba7c8b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93031136"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96603917"
 ---
 # <a name="navigation-view"></a>탐색 보기
 
@@ -39,11 +39,11 @@ NavigationView 컨트롤은 앱에 대한 최상위 탐색을 제공합니다. �
    :::column-end:::
 :::row-end:::
 
-> **플랫폼 API** : [Windows.UI.Xaml.Controls.NavigationView 클래스](/uwp/api/windows.ui.xaml.controls.navigationview)
+> **플랫폼 API**: [Windows.UI.Xaml.Controls.NavigationView 클래스](/uwp/api/windows.ui.xaml.controls.navigationview)
 >
-> **Windows UI 라이브러리 API** : [Microsoft.UI.Xaml.Controls.NavigationView 클래스](/uwp/api/microsoft.ui.xaml.controls.navigationview)
+> **Windows UI 라이브러리 API**: [Microsoft.UI.Xaml.Controls.NavigationView 클래스](/uwp/api/microsoft.ui.xaml.controls.navigationview)
 >
-> _위쪽_ 및 _계층적_ 탐색과 같은 NavigationView의 몇 가지 기능을 사용하려면 Windows 10 버전 1809( [SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상이나 [Windows UI 라이브러리](/uwp/toolkits/winui/)가 필요합니다.
+> _위쪽_ 및 _계층적_ 탐색과 같은 NavigationView의 몇 가지 기능을 사용하려면 Windows 10 버전 1809([SDK 17763](https://developer.microsoft.com/windows/downloads/windows-10-sdk)) 이상이나 [Windows UI 라이브러리](/uwp/toolkits/winui/)가 필요합니다.
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -191,9 +191,22 @@ NavigationView 창은 다음을 포함할 수 있습니다.
 1. AutoSuggestBox(선택 사항)
 1. 설정 단추(선택 사항)
 
+#### <a name="footer-menu-items"></a>바닥글 메뉴 항목
+[FooterMenuItems](/uwp/api/microsoft.ui.xaml.controls.navigationview.FooterMenuItems)를 사용하면 창 시작 부분에 항목을 배치하는 [MenuItems](/uwp/api/microsoft.ui.xaml.controls.navigationview.MenuItems) 속성과 달리 탐색 창 끝에 탐색 항목을 배치할 수 있습니다.
+
+FooterMenuItems는 기본적으로 설정 항목 앞에 표시됩니다. [`IsSettingsVisible`](/uwp/api/microsoft.ui.xaml.controls.navigationview.IsSettingsVisible) 속성을 사용하면 설정 항목을 계속 설정/해제할 수 있습니다.
+
+탐색 항목만 FooterMenuItems에 배치되어야 합니다. 창의 바닥글에 맞춰야 하는 다른 모든 콘텐츠는 [PaneFooter](/uwp/api/microsoft.ui.xaml.controls.navigationview.PaneFooter)에 배치해야 합니다.
+
+NavigationView에 FooterMenuItems를 추가하는 방법에 대한 예는 [FooterMenuItems 클래스](/uwp/api/microsoft.ui.xaml.controls.navigationview.FooterMenuItems)를 참조하세요. 
+
+아래 이미지는 바닥글 메뉴에 계정, 카트 및 도움말 탐색 항목이 있는 NavigationView를 보여줍니다. 
+
+![FooterMenuItems가 있는 NavigationView](images/footermenu-leftmode.png)
+
 #### <a name="pane-footer"></a>창 바닥글
 
-자유 형식 콘텐츠를 [PaneFooter](/uwp/api/windows.ui.xaml.controls.navigationview.PaneFooter) 속성에 추가하여 창의 바닥글에 배치할 수 있습니다.
+자유 형식 콘텐츠를 [PaneFooter](/uwp/api/microsoft.ui.xaml.controls.navigationview.PaneFooter) 속성에 추가하여 창의 바닥글에 배치할 수 있습니다.
 
 :::row:::
     :::column:::
@@ -380,6 +393,8 @@ PaneDisplayMode가 LeftMinimal로 설정된 탐색 보기
 
 **SelectionChanged** 는 사용자가 현재 선택되지 않은 항목을 호출하거나 선택된 항목을 프로그래밍 방식으로 변경하여 발생할 수 있습니다. 사용자가 항목을 호출하여 선택이 변경되는 경우에는 ItemInvoked 이벤트가 먼저 발생합니다. 선택이 프로그래밍 방식으로 변경되면 ItemInvoked가 발생하지 않습니다.
 
+모든 탐색 항목은 [MenuItems](/uwp/api/microsoft.ui.xaml.controls.navigationview.MenuItems)의 일부이든 [FooterMenuItems](/uwp/api/microsoft.ui.xaml.controls.navigationview.FooterMenuItems)의 일부이든 동일한 선택 모델의 일부입니다. 한 번에 하나의 탐색 항목만 선택할 수 있습니다. 
+
 ### <a name="backwards-navigation"></a>뒤로 탐색
 
 NavigationView에는 기본 제공 뒤로 단추가 있지만, 앞으로 탐색처럼 뒤로 탐색이 자동으로 수행되는지 않습니다. 사용자가 뒤로 단추를 탭하면 [BackRequested](/uwp/api/windows.ui.xaml.controls.navigationview.BackRequested) 이벤트가 발생합니다. 뒤로 탐색을 수행하도록 이 이벤트를 처리합니다. 자세한 내용 및 코드 예제는 [탐색 기록 뒤로 탐색](../basics/navigation-history-and-backwards-navigation.md)을 참조하세요.
@@ -411,7 +426,7 @@ NavigationView에는 기본 제공 뒤로 단추가 있지만, 앞으로 탐색�
 
 예제에서는 다양한 일반적인 시나리오에 적합한 탐색 데이터를 설정하는 권장 방법을 보여 줍니다. 또한 **NavigationView** 의 뒤로 단추 및 키보드 탐색을 사용하여 뒤로 탐색을 구현하는 방법을 보여 줍니다.
 
-이 코드에서는 앱에 포함된 이동할 페이지가 이름으로 *HomePage* , *AppsPage* , *GamesPage* , *MusicPage* , *MyContentPage* 및 *SettingsPage* 를 사용한다고 가정합니다. 이와 같은 페이지에 대한 코드는 표시되지 않습니다.
+이 코드에서는 앱에 포함된 이동할 페이지가 이름으로 *HomePage*, *AppsPage*, *GamesPage*, *MusicPage*, *MyContentPage* 및 *SettingsPage* 를 사용한다고 가정합니다. 이와 같은 페이지에 대한 코드는 표시되지 않습니다.
 
 > [!IMPORTANT]
 > 앱 페이지 정보는 [ValueTuple](/dotnet/api/system.valuetuple)에 저장됩니다. 이 구조체를 사용하려면 앱 프로젝트의 최소 버전이 SDK 17763 이상이어야 합니다. NavigationView의 WinUI 버전을 사용하여 초기 버전의 Windows 10을 대상으로 하는 경우 [System.ValueTuple NuGet 패키지](https://www.nuget.org/packages/System.ValueTuple/)를 대신 사용합니다.
@@ -977,7 +992,7 @@ void MainPage::NavView_ItemInvoked(
 ## <a name="hierarchical-navigation"></a>계층적 탐색
 일부 앱은 단순한 탐색 항목 목록 이상을 필요로 하는 더 복잡한 계층 구조를 포함할 수 있습니다. 최상위 탐색 항목을 사용하여 특정 페이지를 표시하는 자식 항목을 포함하는 페이지 범주를 표시할 수도 있습니다. 다른 페이지로만 연결되는 허브 스타일 페이지가 있는 경우에도 유용합니다. 이러한 경우 계층적 NavigationView를 만들어야 합니다.
 
-창에서 중첩된 탐색 항목의 계층적 목록을 표시하려면 [MenuItems](/uwp/api/microsoft.ui.xaml.controls.navigationviewitem.menuitems?view=winui-2.4) 속성 또는 **NavigationViewItem** 의 [MenuItemsSource](/uwp/api/microsoft.ui.xaml.controls.navigationviewitem.menuitemssource?view=winui-2.4) 속성을 사용합니다.
+창에서 중첩된 탐색 항목의 계층적 목록을 표시하려면 [MenuItems](/uwp/api/microsoft.ui.xaml.controls.navigationviewitem.menuitems) 속성 또는 **NavigationViewItem** 의 [MenuItemsSource](/uwp/api/microsoft.ui.xaml.controls.navigationviewitem.menuitemssource) 속성을 사용합니다.
 각 NavigationViewItem은 다른 NavigationViewItems를 포함하고 항목 헤더 및 구분 기호와 같은 요소를 구성할 수 있습니다. `MenuItemsSource`를 사용할 때 계층적 목록을 표시하려면 `ItemTemplate`을 NavigationViewItem으로 설정하고 해당 `MenuItemsSource` 속성을 계층의 다음 수준에 바인딩합니다.
 
 NavigationViewItem은 중첩된 수준을 원하는 만큼 포함할 수 있지만, 앱의 탐색 계층 구조를 단순하게 유지하는 것이 좋습니다. 두 수준이 유용성과 이해력에 이상적입니다.
@@ -1010,7 +1025,7 @@ NavigationView는 위쪽, 왼쪽 및 LeftCompact 창 표시 모드의 계층 구
 * MenuItemsSource 속성을 계층적 데이터에 바인딩
 * 항목 템플릿을 NavigationViewMenuItem으로 정의하고, 해당 콘텐츠는 메뉴 항목의 레이블로 설정 및 MenuItemsSource 속성은 계층 구조의 다음 수준에 바인딩됨
 
-또한 이 예에서는 [Expanding](/uwp/api/microsoft.ui.xaml.controls.navigationview.expanding?view=winui-2.4) 및 [Collapsed](/uwp/api/microsoft.ui.xaml.controls.navigationview.collapsed?view=winui-2.4) 이벤트를 설명합니다. 이러한 이벤트는 자식 항목을 포함하는 메뉴 항목에 대해 발생합니다.
+또한 이 예에서는 [Expanding](/uwp/api/microsoft.ui.xaml.controls.navigationview.expanding) 및 [Collapsed](/uwp/api/microsoft.ui.xaml.controls.navigationview.collapsed) 이벤트를 설명합니다. 이러한 이벤트는 자식 항목을 포함하는 메뉴 항목에 대해 발생합니다.
 
 ```xaml
 <Page ... xmlns:muxc="using:Microsoft.UI.Xaml.Controls" ... >
@@ -1384,7 +1399,7 @@ namespace winrt::HierarchicalNavigationViewDataBinding::implementation
 
 위쪽과 왼쪽 모드 모두에서 NavigationViewItems의 화살표를 클릭하면 하위 트리가 확장되거나 축소됩니다. NavigationViewItem에서 _아무데나_ 클릭하거나 탭하면 `ItemInvoked` 이벤트가 트리거되고 하위 트리도 축소 또는 확장됩니다.
 
-항목이 호출될 때 선택 표시기를 표시하지 않도록 하려면 아래와 같이 [SelectsOnInvoked](/uwp/api/microsoft.ui.xaml.controls.navigationviewitem.selectsoninvoked?view=winui-2.3) 속성을 False로 설정합니다.
+항목이 호출될 때 선택 표시기를 표시하지 않도록 하려면 아래와 같이 [SelectsOnInvoked](/uwp/api/microsoft.ui.xaml.controls.navigationviewitem.selectsoninvoked) 속성을 False로 설정합니다.
 
 ```xaml
 <Page ... xmlns:muxc="using:Microsoft.UI.Xaml.Controls" ... >

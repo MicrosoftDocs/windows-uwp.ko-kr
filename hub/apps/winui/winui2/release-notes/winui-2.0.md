@@ -3,16 +3,16 @@ title: WinUI 2.0 릴리스 정보
 description: WinUI 2.0 릴리스에 대한 정보입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: d6b362f78049cc6bb1ed6dfe341c2e5b083484a4
-ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
+ms.openlocfilehash: 0e6c1bed21619d9ab12f5699c6a446754576cc29
+ms.sourcegitcommit: b99fe39126fbb457c3690312641f57d22ba7c8b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94933088"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96603820"
 ---
 # <a name="windows-ui-library-20"></a>Windows UI 라이브러리 2.0
 
-WinUI 2.0은 Windows UI 라이브러리의 첫 번째 퍼블릭 릴리스입니다.
+WinUI 2.0은 Windows UI 라이브러리의 최초 공개 릴리스(2018년 10월 릴리스)입니다.
 
 WinUI는 훌륭한 Windows용 Fluent Design 환경을 구축하는 가장 쉬운 방법입니다.
 

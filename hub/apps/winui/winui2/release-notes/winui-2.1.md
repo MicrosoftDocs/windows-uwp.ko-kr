@@ -3,16 +3,16 @@ title: WinUI 2.1 릴리스 정보
 description: 새로운 기능 및 버그 수정이 포함된 WinUI 2.1 릴리스에 대한 정보입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: d743b5653a824753706cebbfe1f1a60c419debfe
-ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
+ms.openlocfilehash: eb9d01c49dffd8017b2a70557f9408ceb758ae1e
+ms.sourcegitcommit: b99fe39126fbb457c3690312641f57d22ba7c8b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94933138"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96603860"
 ---
 # <a name="windows-ui-library-21"></a>Windows UI 라이브러리 2.1
 
-Windows UI 라이브러리의 최신 공식 버전인 WinUI 2.1은 2019년 4월 8일에 릴리스되었습니다. 
+Windows UI 라이브러리의 최초 오픈 소스인 WinUI 2.1은 2019년 4월에 릴리스되었습니다.
 
 WinUI는 최신 Fluent 컨트롤 및 스타일을 포함하여 이전 버전의 Windows 10 1주년 업데이트(14393)와 호환되는 방법으로 즉시 사용할 수 있는 다양한 최신 Windows UX 플랫폼 기능을 제공합니다. [XAML Controls Gallery](/windows/uwp/design/controls-and-patterns/#xaml-controls-gallery)는 라이브러리에 추가된 모든 새롭고 멋진 기능을 검색할 수 있는 샘플을 제공합니다.
 

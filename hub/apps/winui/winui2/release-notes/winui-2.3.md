@@ -3,16 +3,16 @@ title: WinUI 2.3 릴리스 정보
 description: 새로운 기능 및 버그 수정이 포함된 WinUI 2.3 릴리스에 대한 정보입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: ad589b15b5481b5b7ff402fc2043afd71c139479
-ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
+ms.openlocfilehash: e3f6aca344fb86725e6addc7758110aca9eaf01b
+ms.sourcegitcommit: b99fe39126fbb457c3690312641f57d22ba7c8b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94933068"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96603850"
 ---
 # <a name="windows-ui-library-23"></a>Windows UI 라이브러리 2.3
 
-WinUI 2.3은 WinUI(Windows UI) 라이브러리의 최신 공식 릴리스입니다.
+WinUI 2.3은 Windows UI 라이브러리(WinUI)의 2020년 1월 릴리스입니다.
 
 WinUI는 GitHub의 [Windows UI 라이브러리 리포지토리](https://aka.ms/winui)에서 호스팅되는 오픈 소스 프로젝트입니다. 이 리포지토리에서 모든 버그 보고서, 기능 요청 및 커뮤니티 코드 기여를 등록하세요.
 
@@ -28,11 +28,11 @@ NuGet 패키지 다운로드: [Microsoft.UI.Xaml](https://www.nuget.org/packages
 
 **ProgressBar** 에는 두 가지 시각적 표현이 있습니다.
 
-#### <a name="indeterminate-progress-bar"></a>비활성화 상태 진행률 표시줄
+#### <a name="indeterminate-progress-bar"></a>확정되지 않은 진행률 표시줄
 
 작업이 진행 중임을 보여 주지만 사용자 상호 작용을 차단하지는 않습니다.
 
-![비활성화 상태 진행률 표시줄](../images/IndeterminateProgressBar.gif)
+![확정되지 않은 진행률 표시줄](../images/IndeterminateProgressBar.gif)
 
 #### <a name="determinate-progress-bar"></a>활성화 상태 진행률 표시줄
 

@@ -6,16 +6,21 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 강한, 약한, 참조
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 2176fe1ee5893b7150b27edf4ea753ae368b41ee
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9ca3ae231a70b69f9f41bb1077b875dca798eb05
+ms.sourcegitcommit: e6a7749f9ddc0fe165b68506b0be465d4ca51ab6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154272"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96935985"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>C++/WinRT의 강한 참조 및 약한 참조
 
 Windows 런타임은 참조 계산 시스템입니다. 이러한 시스템에서는 강한 참조, 약한 참조, 강하지도 약하지도 않은 참조(예: 암시적 *this* 포인터)의 중요성 및 차이점을 아는 것이 중요합니다. 이 항목에서 확인할 수 있듯이, 이러한 참조를 올바르게 관리하는 방법을 알고 있는지 여부에 따라 원활하게 실행되는 시스템과 예기치 않게 작동이 중단되는 시스템 같이 완전히 다른 결과가 나타날 수 있습니다. 언어 프로젝션을 심층 지원하는 도우미 함수를 제공함으로써, [C++/WinRT](./intro-to-using-cpp-with-winrt.md)는 보다 복잡한 시스템을 간편하고 정확하게 빌드할 수 있도록 도와줍니다.
+
+> [!NOTE]
+> 몇 가지 예외만 제외하고 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)에서 사용하거나 작성한 Windows 런타임 유형에 대해 약한 참조 지원이 기본적으로 설정됩니다. **Windows.UI.Composition** 및 **Windows.Devices.Input.PenDevice** 는 예외의 예입니다. &mdash;즉, 이러한 유형에 대해 약한 참조 지원이 설정되지 *않은* 네임스페이스입니다. 또한 [자동 취소 대리자를 등록하지 못하는 경우](/windows/uwp/cpp-and-winrt-apis/handle-events#if-your-auto-revoke-delegate-fails-to-register)를 참조하세요.
+> 
+> 형식을 작성하는 경우 이 항목의 [C++/WinRT의 약한 참조](#weak-references-in-cwinrt) 섹션을 참조하세요.
 
 ## <a name="safely-accessing-the-this-pointer-in-a-class-member-coroutine"></a>클래스-멤버 코루틴에서 안전하게 *this* 포인터 액세스
 
@@ -59,18 +64,18 @@ int main()
 }
 ```
 
-**MyClass::RetrieveValueAsync**는 작업하는 데 시간이 걸리지만, 결국 `MyClass::m_value` 데이터 멤버의 복사본을 반환합니다. **RetrieveValueAsync**를 호출하면 비동기 개체가 생성되고, 해당 개체에 암시적 *this* 포인터가 있습니다. 이 포인터를 통해 `m_value`에 액세스합니다.
+**MyClass::RetrieveValueAsync** 는 작업하는 데 시간이 걸리지만, 결국 `MyClass::m_value` 데이터 멤버의 복사본을 반환합니다. **RetrieveValueAsync** 를 호출하면 비동기 개체가 생성되고, 해당 개체에 암시적 *this* 포인터가 있습니다. 이 포인터를 통해 `m_value`에 액세스합니다.
 
-코루틴에서는 컨트롤이 호출자에 반환되는 첫 번째 일시 중단 지점까지 동기 방식으로 실행됩니다. **RetrieveValueAsync**에서 첫 번째 `co_await`는 첫 번째 일시 중단 지점입니다. 코루틴이 다시 시작될 때까지(이 경우 약 5초 정도) `m_value`에 액세스하는 암시적 *this* 포인터가 변경되었을 수 있습니다.
+코루틴에서는 컨트롤이 호출자에 반환되는 첫 번째 일시 중단 지점까지 동기 방식으로 실행됩니다. **RetrieveValueAsync** 에서 첫 번째 `co_await`는 첫 번째 일시 중단 지점입니다. 코루틴이 다시 시작될 때까지(이 경우 약 5초 정도) `m_value`에 액세스하는 암시적 *this* 포인터가 변경되었을 수 있습니다.
 
 이벤트의 전체 시퀀스는 다음과 같습니다.
 
-1. **main**에서 **MyClass** 인스턴스가 생성됩니다(`myclass_instance`).
-2. `async` 개체가 생성되고 *this*를 통해 `myclass_instance`를 가리킵니다.
-3. **winrt::Windows::Foundation::IAsyncAction::get** 함수가 첫 번째 일시 중단 지점에 도달하고 몇 초 동안 차단된 후 **RetrieveValueAsync**의 결과를 반환합니다.
-4. **RetrieveValueAsync**가 `this->m_value` 값을 반환합니다.
+1. **main** 에서 **MyClass** 인스턴스가 생성됩니다(`myclass_instance`).
+2. `async` 개체가 생성되고 *this* 를 통해 `myclass_instance`를 가리킵니다.
+3. **winrt::Windows::Foundation::IAsyncAction::get** 함수가 첫 번째 일시 중단 지점에 도달하고 몇 초 동안 차단된 후 **RetrieveValueAsync** 의 결과를 반환합니다.
+4. **RetrieveValueAsync** 가 `this->m_value` 값을 반환합니다.
 
-4단계는 *this*가 유효한 상태로 유지되는 동안만 안전합니다.
+4단계는 *this* 가 유효한 상태로 유지되는 동안만 안전합니다.
 
 그러나 비동기 작업이 완료되기 전에 클래스 인스턴스가 삭제되면 어떻게 될까요? 비동기 메서드가 완료되기 전에 클래스 인스턴스가 다양한 방법으로 범위를 벗어날 수 있습니다. 그러나 클래스 인스턴스를 `nullptr`로 설정하여 시뮬레이트할 수 있습니다.
 
@@ -81,7 +86,7 @@ int main()
 
     auto myclass_instance{ winrt::make_self<MyClass>() };
     auto async{ myclass_instance->RetrieveValueAsync() };
-    myclass_instance = nullptr; // Simulate the class instance going out of scope.
+    myclass_instance = nullptr; // Simulate the class instance going out of scope.
 
     winrt::hstring result{ async.get() }; // Behavior is now undefined; crashing is likely.
     std::wcout << result.c_str() << std::endl;
@@ -90,7 +95,7 @@ int main()
 
 클래스 인스턴스를 삭제한 지점 이후에는 다시 직접 참조하지 않는 것 같습니다. 그러나 비동기 개체에는 해당 인스턴스를 가리키는 *this* 포인터가 있으며, 이 포인터를 사용하여 클래스 인스턴스 내에 저장된 값을 복사하려고 합니다. 코루틴은 멤버 함수이며, impunity와 함께 *this* 포인터를 사용할 수 있어야 합니다.
 
-코드를 이렇게 변경하면, 클래스 인스턴스가 삭제되고 *this*가 더 이상 유효하지 않으므로 4단계에서 문제가 발생합니다. 비동기 개체가 클래스 인스턴스 내의 변수에 액세스하는 즉시 작동이 중단되거나 전혀 정의되지 않은 작업을 수행합니다.
+코드를 이렇게 변경하면, 클래스 인스턴스가 삭제되고 *this* 가 더 이상 유효하지 않으므로 4단계에서 문제가 발생합니다. 비동기 개체가 클래스 인스턴스 내의 변수에 액세스하는 즉시 작동이 중단되거나 전혀 정의되지 않은 작업을 수행합니다.
 
 해결 방법은 비동기 작업(코루틴) 자체에 클래스 인스턴스에 대한 강한 참조를 제공하는 것입니다. 현재 작성된 코드에서는 클래스 인스턴스에 대한 원시 *this* 포인터가 코루틴에 실질적으로 포함되지만, 이것만으로는 클래스 인스턴스를 활성 상태로 유지하는 데 충분하지 않습니다.
 
@@ -105,14 +110,14 @@ IAsyncOperation<winrt::hstring> RetrieveValueAsync()
 }
 ```
 
-C++/WinRT 클래스는 직간접적으로 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) 템플릿에서 파생됩니다. 이런 이유로, C++/WinRT 개체는 해당 [**implements::get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) protected 멤버 함수를 호출하여 *this* 포인터에 대한 강한 참조를 검색할 수 있습니다. 위의 코드 예제에서는 실제로 `strong_this` 변수를 사용할 필요가 없습니다. **get_strong**을 호출하기만 하면 C++/WinRT 개체의 참조 개수가 증가하고 암시적 *this* 포인터가 유효한 상태로 유지됩니다.
+C++/WinRT 클래스는 직간접적으로 [**winrt::implements**](/uwp/cpp-ref-for-winrt/implements) 템플릿에서 파생됩니다. 이런 이유로, C++/WinRT 개체는 해당 [**implements::get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function) protected 멤버 함수를 호출하여 *this* 포인터에 대한 강한 참조를 검색할 수 있습니다. 위의 코드 예제에서는 실제로 `strong_this` 변수를 사용할 필요가 없습니다. **get_strong** 을 호출하기만 하면 C++/WinRT 개체의 참조 개수가 증가하고 암시적 *this* 포인터가 유효한 상태로 유지됩니다.
 
 > [!IMPORTANT]
-> **get_strong**은 **winrt::implements** 구조체 템플릿의 멤버 함수이므로, C++/WinRT 클래스와 같이 **winrt::implements**에서 직간접적으로 파생된 클래스에서만 호출할 수 있습니다. **winrt::implements**에서 파생하는 방법에 대한 자세한 내용과 예제는 [C++/WinRT를 통한 API 작성](./author-apis.md)을 참조하세요.
+> **get_strong** 은 **winrt::implements** 구조체 템플릿의 멤버 함수이므로, C++/WinRT 클래스와 같이 **winrt::implements** 에서 직간접적으로 파생된 클래스에서만 호출할 수 있습니다. **winrt::implements** 에서 파생하는 방법에 대한 자세한 내용과 예제는 [C++/WinRT를 통한 API 작성](./author-apis.md)을 참조하세요.
 
 이전에 4단계에서 발생했던 문제는 이 방법으로 해결됩니다. 클래스 인스턴스에 대한 다른 모든 참조가 사라지더라도 코루틴은 종속성을 안정적으로 사용할 수 있도록 예방 조치를 수행했습니다.
 
-강한 참조가 적절하지 않은 경우, 대신 [**implements::get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)를 호출하여 *this*에 대한 약한 참조를 검색할 수 있습니다. *this*에 액세스하기 전에 강한 참조를 검색할 수 있는지 확인하기만 하면 됩니다. **get_weak**도 **winrt::implements** 구조체 템플릿의 멤버 함수입니다.
+강한 참조가 적절하지 않은 경우, 대신 [**implements::get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)를 호출하여 *this* 에 대한 약한 참조를 검색할 수 있습니다. *this* 에 액세스하기 전에 강한 참조를 검색할 수 있는지 확인하기만 하면 됩니다. **get_weak** 도 **winrt::implements** 구조체 템플릿의 멤버 함수입니다.
 
 ```cppwinrt
 IAsyncOperation<winrt::hstring> RetrieveValueAsync()
@@ -199,9 +204,9 @@ int main()
 
 패턴은 이벤트 수신자에게 *this* 포인터에 대한 종속성을 가진 람다 이벤트 처리기가 있다는 것입니다. 이벤트 수신자가 이벤트 소스보다 오래 활성화되는 경우 항상, 이러한 종속성보다 오래 활성화됩니다. 이러한 일반적인 경우에는 패턴이 효과적입니다. UI 페이지가 해당 페이지에 있는 컨트롤에서 발생한 이벤트를 처리하는 경우와 같이 이러한 경우 중 일부는 쉽게 이해할 수 있습니다. 페이지가 단추보다 오래 활성화되므로 처리기도 단추보다 오래 활성화됩니다. 수신자가 소스를 데이터 멤버 등으로 소유하고 있거나, 수신자와 소스가 형제이고 다른 개체가 직접 소유하고 있는 경우에도 동일하게 적용됩니다.
 
-처리기가 종속되는 *this*보다 오래 활성화되지 않는 경우가 있다고 확신할 때, 강하거나 약한 수명을 고려하지 않고 *this*를 정상적으로 캡처할 수 있습니다.
+처리기가 종속되는 *this* 보다 오래 활성화되지 않는 경우가 있다고 확신할 때, 강하거나 약한 수명을 고려하지 않고 *this* 를 정상적으로 캡처할 수 있습니다.
 
-그러나 *this*가 처리기(비동기 작업에서 발생한 완료/진행률 이벤트의 처리기 포함)에서 사용되는 기간보다 오래 활성화되지 않는 경우도 있으며, 이러한 경우를 처리하는 방법을 알아 두어야 합니다.
+그러나 *this* 가 처리기(비동기 작업에서 발생한 완료/진행률 이벤트의 처리기 포함)에서 사용되는 기간보다 오래 활성화되지 않는 경우도 있으며, 이러한 경우를 처리하는 방법을 알아 두어야 합니다.
 
 - 이벤트 원본에서 해당 이벤트를 *동기적으로* 발생시키면 처리기를 취소하고 이벤트를 더 이상 받지 않을 것임을 확신할 수 있습니다. 그러나 비동기 이벤트의 경우 해지 후에도(특히 소멸자 내에서 해지하는 경우) 진행 중인 이벤트에서 소멸을 시작한 후 개체에 도달할 수 있습니다. 소멸하기 전에 구독을 취소할 장소를 찾으면 문제가 완화될 수 있지만 강력한 해결 방법을 계속 읽어야 합니다.
 - 코루틴을 작성하여 비동기 메서드를 구현하면 처리할 수 있습니다.
@@ -253,10 +258,10 @@ event_source.Event([this](auto&& ...)
 
 ### <a name="the-solution"></a>솔루션
 
-해결 방법은 강한 참조(또는 나중에 확인하겠지만 더 적절한 경우 약한 참조)를 캡처하는 것입니다. 강한 참조는 참조 개수를 ‘증가’시키고 현재 개체를 활성 상태로 ‘유지’합니다.**** 캡처 변수(이 예제에서 `strong_this`가 호출됨)만 선언하고 *this* 포인터에 대한 강력한 참조를 검색하는 [**implements::get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)에 대한 호출로 초기화합니다.
+해결 방법은 강한 참조(또는 나중에 확인하겠지만 더 적절한 경우 약한 참조)를 캡처하는 것입니다. 강한 참조는 참조 개수를 ‘증가’시키고 현재 개체를 활성 상태로 ‘유지’합니다. 캡처 변수(이 예제에서 `strong_this`가 호출됨)만 선언하고 *this* 포인터에 대한 강력한 참조를 검색하는 [**implements::get_strong**](/uwp/cpp-ref-for-winrt/implements#implementsget_strong-function)에 대한 호출로 초기화합니다.
 
 > [!IMPORTANT]
-> **get_strong**은 **winrt::implements** 구조체 템플릿의 멤버 함수이므로, C++/WinRT 클래스와 같이 **winrt::implements**에서 직간접적으로 파생된 클래스에서만 호출할 수 있습니다. **winrt::implements**에서 파생하는 방법에 대한 자세한 내용과 예제는 [C++/WinRT를 통한 API 작성](./author-apis.md)을 참조하세요.
+> **get_strong** 은 **winrt::implements** 구조체 템플릿의 멤버 함수이므로, C++/WinRT 클래스와 같이 **winrt::implements** 에서 직간접적으로 파생된 클래스에서만 호출할 수 있습니다. **winrt::implements** 에서 파생하는 방법에 대한 자세한 내용과 예제는 [C++/WinRT를 통한 API 작성](./author-apis.md)을 참조하세요.
 
 ```cppwinrt
 event_source.Event([this, strong_this { get_strong()}](auto&& ...)
@@ -274,7 +279,7 @@ event_source.Event([strong_this { get_strong()}](auto&& ...)
 });
 ```
 
-강한 참조가 적절하지 않은 경우, 대신 [**implements::get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)를 호출하여 *this*에 대한 약한 참조를 검색할 수 있습니다. 약한 참조는 현재 개체를 활성 상태로 유지하지 *않습니다*. 따라서 멤버에 액세스하기 전에 먼저 약한 참조에서 여전히 강한 참조를 검색할 수 있는지 확인하기만 하면 됩니다.
+강한 참조가 적절하지 않은 경우, 대신 [**implements::get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)를 호출하여 *this* 에 대한 약한 참조를 검색할 수 있습니다. 약한 참조는 현재 개체를 활성 상태로 유지하지 *않습니다*. 따라서 멤버에 액세스하기 전에 먼저 약한 참조에서 여전히 강한 참조를 검색할 수 있는지 확인하기만 하면 됩니다.
 
 ```cppwinrt
 event_source.Event([weak_this{ get_weak() }](auto&& ...)
@@ -317,7 +322,7 @@ struct EventRecipient : winrt::implements<EventRecipient, IInspectable>
 event_source.Event({ get_strong(), &EventRecipient::OnEvent });
 ```
 
-강한 참조를 캡처한다는 것은 처리기가 등록 취소되고 처리 중인 모든 콜백이 반환된 후에만 개체가 소멸될 수 있음을 의미합니다. 하지만 이 보장은 이벤트가 발생한 시점에만 유효합니다. 이벤트 처리기가 비동기인 경우 첫 번째 일시 중단 지점 앞에 클래스 인스턴스에 대한 강한 참조를 코루틴에 제공해야 합니다(자세한 내용과 코드는 이 문서의 앞부분에 있는 [클래스-멤버 코루틴에서 안전하게 *this* 포인터 액세스](#safely-accessing-the-this-pointer-in-a-class-member-coroutine) 섹션 참조). 그러나 이렇게 하면 이벤트 원본과 개체 간의 순환 참조가 만들어지므로 이벤트를 해지하여 이를 명시적으로 중단해야 합니다.
+강한 참조를 캡처한다는 것은 처리기가 등록 취소되고 처리 중인 모든 콜백이 반환된 후에만 개체가 소멸될 수 있음을 의미합니다. 하지만 이 보장은 이벤트가 발생한 시점에만 유효합니다. 이벤트 처리기가 비동기인 경우 첫 번째 일시 중단 지점 앞에 클래스 인스턴스에 대한 강한 참조를 코루틴에 제공해야 합니다(자세한 내용과 코드는 이 항목의 앞부분에 있는 [클래스-멤버 코루틴에서 안전하게 *this* 포인터 액세스](#safely-accessing-the-this-pointer-in-a-class-member-coroutine) 섹션 참조). 그러나 이렇게 하면 이벤트 원본과 개체 간의 순환 참조가 만들어지므로 이벤트를 해지하여 이를 명시적으로 중단해야 합니다.
 
 약한 참조의 경우 [**get_weak**](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)를 호출합니다. C++/WinRT에서 결과 대리자에 약한 참조가 포함되도록 합니다. 최후의 순간에 백그라운드에서 대리자가 약한 참조를 강한 참조로 확인하려고 하며, 성공하는 경우에만 멤버 함수를 호출합니다.
 
@@ -325,9 +330,9 @@ event_source.Event({ get_strong(), &EventRecipient::OnEvent });
 event_source.Event({ get_weak(), &EventRecipient::OnEvent });
 ```
 
-대리자에서 멤버 함수를 *호출*하면 C++/WinRT는 처리기가 반환될 때까지 개체를 활성 상태로 유지합니다. 그러나 처리기가 비동기인 경우 일시 중단 지점으로 반환되므로 첫 번째 일시 중단 지점 앞에 클래스 인스턴스에 대한 강한 참조를 코루틴에 제공해야 합니다. 자세한 내용은 이 문서의 앞부분에 있는 [클래스-멤버 코루틴에서 안전하게 *this* 포인터 액세스](#safely-accessing-the-this-pointer-in-a-class-member-coroutine) 섹션을 참조하세요.
+대리자에서 멤버 함수를 *호출* 하면 C++/WinRT는 처리기가 반환될 때까지 개체를 활성 상태로 유지합니다. 그러나 처리기가 비동기인 경우 일시 중단 지점으로 반환되므로 첫 번째 일시 중단 지점 앞에 클래스 인스턴스에 대한 강한 참조를 코루틴에 제공해야 합니다. 자세한 내용은 이 항목의 앞부분에 있는 [클래스-멤버 코루틴에서 안전하게 *this* 포인터 액세스](#safely-accessing-the-this-pointer-in-a-class-member-coroutine) 섹션을 참조하세요.
 
-### <a name="a-weak-reference-example-using-swapchainpanelcompositionscalechanged"></a>**SwapChainPanel::CompositionScaleChanged**를 사용하는 약한 참조 예제
+### <a name="a-weak-reference-example-using-swapchainpanelcompositionscalechanged"></a>**SwapChainPanel::CompositionScaleChanged** 를 사용하는 약한 참조 예제
 
 이 코드 예제에서는 다른 약한 참조 예를 통해 [**SwapChainPanel::CompositionScaleChanged**](/uwp/api/windows.ui.xaml.controls.swapchainpanel.compositionscalechanged) 이벤트를 사용합니다. 이 코드는 수신자에 대한 약한 참조를 캡처하는 람다 함수를 사용하여 이벤트 처리기를 등록합니다.
 
@@ -355,7 +360,7 @@ void OnCompositionScaleChanged(Windows::UI::Xaml::Controls::SwapChainPanel const
 }
 ```
 
-람다 캡처 절에서는 *this*에 대한 약한 참조를 나타내는 임시 변수가 생성됩니다. 람다의 본문에서는 *this*에 대한 강한 참조를 얻을 수 있는 경우 **OnCompositionScaleChanged** 함수가 호출됩니다. 이러한 방식으로 **OnCompositionScaleChanged** 내부에서 *this*를 안전하게 사용할 수 있습니다.
+람다 캡처 절에서는 *this* 에 대한 약한 참조를 나타내는 임시 변수가 생성됩니다. 람다의 본문에서는 *this* 에 대한 강한 참조를 얻을 수 있는 경우 **OnCompositionScaleChanged** 함수가 호출됩니다. 이러한 방식으로 **OnCompositionScaleChanged** 내부에서 *this* 를 안전하게 사용할 수 있습니다.
 
 ## <a name="weak-references-in-cwinrt"></a>C++/WinRT의 약한 참조
 
@@ -392,7 +397,7 @@ if (Class strong = weak.get())
 ### <a name="opting-out-of-weak-reference-support"></a>약한 참조 지원 옵트아웃
 약한 참조 지원은 자동입니다. 하지만 [**winrt::no_weak_ref**](/uwp/cpp-ref-for-winrt/no-weak-ref) 마커 구조체를 템플릿 인수로 기본 클래스에 전달하여 명시적으로 해당 지원을 옵트아웃할 수 있습니다.
 
-**winrt::implements**에서 직접 파생하는 경우
+**winrt::implements** 에서 직접 파생하는 경우
 
 ```cppwinrt
 struct MyImplementation: implements<MyImplementation, IStringable, no_weak_ref>
@@ -410,7 +415,7 @@ struct MyRuntimeClass: MyRuntimeClassT<MyRuntimeClass, no_weak_ref>
 }
 ```
 
-variadic 매개 변수 팩에서 마커 구조체가 표시되는 위치는 중요하지 않습니다. 옵트아웃된 형식의 약한 참조를 요청하는 경우 컴파일러에서 “약한 참조 지원에만 사용됩니다.” 오류를 도와줍니다.**
+variadic 매개 변수 팩에서 마커 구조체가 표시되는 위치는 중요하지 않습니다. 옵트아웃된 형식의 약한 참조를 요청하는 경우 컴파일러에서 “약한 참조 지원에만 사용됩니다.” 오류를 도와줍니다.
 
 ## <a name="important-apis"></a>중요 API
 * [implements::get_weak 함수](/uwp/cpp-ref-for-winrt/implements#implementsget_weak-function)

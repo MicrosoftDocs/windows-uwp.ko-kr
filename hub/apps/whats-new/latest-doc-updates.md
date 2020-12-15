@@ -2,44 +2,41 @@
 description: Windows 개발자 문서에 추가된 최신 내용을 살펴보세요.
 title: Windows 개발자 문서의 최신 업데이트
 ms.topic: article
-ms.date: 11/05/2020
+ms.date: 12/8/2020
 ms.localizationpriority: medium
 ms.author: quradic
 author: QuinnRadich
-ms.openlocfilehash: a4d05e92399fa0246add4751323439303647d531
-ms.sourcegitcommit: 98888dede3c59ee12c64ab0521a85b5fa60cb771
+ms.openlocfilehash: 4c4e37cfa65a3fa28bf97f68ba6927584c7ed81e
+ms.sourcegitcommit: 7142248655ed1f34c20c3fe156ba047f58a5acd5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93765586"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96912508"
 ---
 # <a name="latest-updates-to-the-windows-developer-docs"></a>Windows 개발자 문서의 최신 업데이트
 
-Windows 개발자 문서는 정기적으로 개선된 최신 정보와 콘텐츠로 업데이트됩니다. 2020년 11월 5일 현재의 변경 내용에 대한 요약은 다음과 같습니다.
+Windows 개발자 문서는 정기적으로 개선된 최신 정보와 콘텐츠로 업데이트됩니다. 2020년 12월 8일 현재의 변경 내용에 대한 요약은 다음과 같습니다.
 
 참고: Windows 10 빌드 19041(2004라고도 함)의 일부로 추가된 특정 API 목록은 [이 목록](/windows/uwp/whats-new/windows-10-build-19041-api-diff)을 참조하세요.
 
 
-## <a name="news"></a>뉴스
-
-이번 달에는 탐색 속도를 높이고 오프라인 읽기 환경을 향상시키기 위해 일단의 또 다른 절대 링크를 상대 링크로 변환했습니다. 끊어진 링크가 있으면 계속 알려주세요. 대부분의 페이지에서 직접 피드백을 제공하거나 Twitter에서 [@WindowsDocs](https://www.twitter.com/windowsdocs) 핸들을 사용하여 연락할 수 있습니다.
 
 이번 달의 주요 내용은 다음과 같습니다.
 
+### <a name="new-videos"></a>새 비디오
+
+* [탭 및 공간 에피소드 6](https://www.youtube.com/watch?v=XkLjxr9iQ-8)
 
 ### <a name="new-topics"></a>새 항목
 
-* [클래식 콘솔 API 및 가상 터미널 시퀀스](https://docs.microsoft.com/windows/console/classic-vs-vt)
-* [Windows 콘솔 및 터미널 에코시스템 로드맵](https://docs.microsoft.com/windows/console/ecosystem-roadmap)
-* [Windows API 세트](https://docs.microsoft.com/windows/win32/apiindex/windows-apisets)
-* [API 세트 로더 작업](https://docs.microsoft.com/windows/win32/apiindex/api-set-loader-operation)
-* [API 세트 가용성 검색](https://docs.microsoft.com/windows/win32/apiindex/detect-api-set-availability)
-* [Windows 우산 라이브러리](https://docs.microsoft.com/windows/win32/apiindex/windows-umbrella-libraries)
+* [WinUI 3 Peview 3](https://docs.microsoft.com/windows/apps/winui/winui3/)
+* [WinUI 2.5 릴리스](https://docs.microsoft.com/windows/apps/winui/winui2/release-notes/winui-2.5)
+* [Segoe MDL2 자산 아이콘 문서](https://docs.microsoft.com/windows/uwp/design/style/segoe-ui-symbol-font)
+
+* [C#/WinRT의 Agile 개체](https://docs.microsoft.com/windows/uwp/csharp-winrt/agile-objects)
 
 
-### <a name="new-and-updated-samples"></a>새 샘플 및 업데이트된 샘플
 
-* [연습: C++/WinRT 구성 요소에서 .NET 5 프로젝션 생성 및 NuGet 배포](https://docs.microsoft.com/windows/uwp/csharp-winrt/net-projection-from-cppwinrt-component)
 
 
 ### <a name="other-content-of-interest"></a>기타 내용
@@ -47,401 +44,272 @@ Windows 개발자 문서는 정기적으로 개선된 최신 정보와 콘텐츠
 * [Azure Communication Services](https://docs.microsoft.com/azure/communication-services/overview)
 * [Azure App Configuration Python 빠른 시작](https://docs.microsoft.com/azure/azure-app-configuration/quickstart-python)
 
-### <a name="deprecated-content"></a>사용되지 않는 콘텐츠
-
-* [BarcodeScanner.GetSupportedProfiles](https://docs.microsoft.com/uwp/api/windows.devices.pointofservice.barcodescanner.getsupportedprofiles?view=winrt-19041)
 
 ### <a name="updated-documentation"></a>업데이트된 설명서
 
-* [콘솔 문서](https://github.com/MicrosoftDocs/Console-Docs)
-* [MIDL 3.0 개념적 콘텐츠](https://docs.microsoft.com/uwp/midl-3/intro#parameters)
-* [Docker 시작 개요](https://docs.microsoft.com/windows/dev-environment/docker/overview)
-* [WSL 2에서 Linux 디스크 탑재 시작](https://docs.microsoft.com/windows/wsl/wsl2-mount-disk)
+* [DirectML 콘텐츠](https://docs.microsoft.com/windows/win32/direct3d12/dml-version-history)
 
-지난 달에 다음 API 참조 토픽이 대대적으로 업데이트되었습니다.
+지난 달에 다음 참조 항목이 대대적으로 업데이트되었습니다.
 
-### <a name="win32-api-reference"></a>Win32 API 참조
-<ul>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commctrl/nf-commctrl-createmappedbitmap">CreateMappedBitmap 함수(commctrl.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commctrl/nf-commctrl-createtoolbarex">CreateToolbarEx 함수(commctrl.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commctrl/nf-commctrl-getwindowsubclass">GetWindowSubclass 함수(commctrl.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commctrl/nf-commctrl-imagelist_addmasked">ImageList_AddMasked 함수(commctrl.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commctrl/nf-commctrl-imagelist_create">ImageList_Create 함수(commctrl.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commctrl/nf-commctrl-imagelist_draw">ImageList_Draw 함수(commctrl.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commctrl/nf-commctrl-imagelist_replaceicon">ImageList_ReplaceIcon 함수(commctrl.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commctrl/nf-commctrl-imagelist_setoverlayimage">ImageList_SetOverlayImage 함수(commctrl.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror">CommDlgExtendedError 함수(commdlg.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commdlg/nf-commdlg-findtexta">FindTextA 함수(commdlg.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commdlg/nf-commdlg-findtextw">FindTextW 함수(commdlg.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commdlg/nf-commdlg-getopenfilenamea">GetOpenFileNameA 함수(commdlg.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commdlg/nf-commdlg-getopenfilenamew">GetOpenFileNameW 함수(commdlg.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commdlg/nf-commdlg-getsavefilenamea">GetSaveFileNameA 함수(commdlg.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/commdlg/nf-commdlg-getsavefilenamew">GetSaveFileNameW 함수(commdlg.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dde/nf-dde-unpackddelparam">UnpackDDElParam 함수(dde.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dpa_clone">DPA_Clone 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dpa_createex">DPA_CreateEx 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dpa_destroycallback">DPA_DestroyCallback 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dpa_enumcallback">DPA_EnumCallback 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dpa_getptr">DPA_GetPtr 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dpa_getptrindex">DPA_GetPtrIndex 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dpa_grow">DPA_Grow 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dpa_insertptr">DPA_InsertPtr 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dpa_search">DPA_Search 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dpa_setptr">DPA_SetPtr 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dpa_sort">DPA_Sort 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dsa_create">DSA_Create 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dsa_deleteitem">DSA_DeleteItem 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dsa_destroycallback">DSA_DestroyCallback 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dsa_enumcallback">DSA_EnumCallback 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dsa_getitem">DSA_GetItem 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dsa_getitemptr">DSA_GetItemPtr 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dsa_insertitem">DSA_InsertItem 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/dpa_dsa/nf-dpa_dsa-dsa_setitem">DSA_SetItem 함수(dpa_dsa.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/objbase/nf-objbase-bindmoniker">BindMoniker 함수(objbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/objbase/nf-objbase-codosdatetimetofiletime">CoDosDateTimeToFileTime 함수(objbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/objbase/nf-objbase-cofiletimetodosdatetime">CoFileTimeToDosDateTime 함수(objbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/objbase/nf-objbase-cofreealllibraries">CoFreeAllLibraries 함수(objbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/objbase/nf-objbase-cofreelibrary">CoFreeLibrary 함수(objbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/objbase/nf-objbase-coinitialize">CoInitialize 함수(objbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/objbase/nf-objbase-coloadlibrary">CoLoadLibrary 함수(objbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/objbase/nf-objbase-createantimoniker">CreateAntiMoniker 함수(objbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/objbase/nf-objbase-createdataadviseholder">CreateDataAdviseHolder 함수(objbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/objbase/nf-objbase-createdatacache">CreateDataCache 함수(objbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/objbase/nf-objbase-createobjrefmoniker">CreateObjrefMoniker 함수(objbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/objbase/nf-objbase-createpointermoniker">CreatePointerMoniker 함수(objbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/objbase/nf-objbase-getrunningobjecttable">GetRunningObjectTable 함수(objbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole/nf-ole-oledraw">OleDraw 함수(ole.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole/nf-ole-oleloadfromstream">OleLoadFromStream 함수(ole.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole/nf-ole-olesavetostream">OleSaveToStream 함수(ole.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-createdataadviseholder">CreateDataAdviseHolder 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-createoleadviseholder">CreateOleAdviseHolder 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-olecreateembeddinghelper">OleCreateEmbeddingHelper 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-olecreatefromdata">OleCreateFromData 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-olecreatemenudescriptor">OleCreateMenuDescriptor 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-olegetautoconvert">OleGetAutoConvert 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-olegetclipboard">OleGetClipboard 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-olegeticonofclass">OleGetIconOfClass 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-oleinitialize">OleInitialize 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-oleiscurrentclipboard">OleIsCurrentClipboard 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-olequerycreatefromdata">OleQueryCreateFromData 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-oleregenumverbs">OleRegEnumVerbs 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-olesavetostream">OleSaveToStream 함수(ole2.h)</a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-olesetmenudescriptor">OleSetMenuDescriptor 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-oleuninitialize">OleUninitialize 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/ole2/nf-ole2-writefmtusertypestg">WriteFmtUserTypeStg 함수(ole2.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/prsht/nf-prsht-createpropertysheetpagea">CreatePropertySheetPageA 함수(prsht.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/prsht/nf-prsht-createpropertysheetpagew">CreatePropertySheetPageW 함수(prsht.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/prsht/nf-prsht-propertysheeta">PropertySheetA 함수(prsht.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/prsht/nf-prsht-propertysheetw">PropertySheetW 함수(prsht.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupcloseinffile">SetupCloseInfFile 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupdigetdevicepropertyw">SetupDiGetDevicePropertyW 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupdiopendeviceinfow">SetupDiOpenDeviceInfoW 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupfindnextline">SetupFindNextLine 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupgetfieldcount">SetupGetFieldCount 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupgetlinecounta">SetupGetLineCountA 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupgetlinecountw">SetupGetLineCountW 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupgetlinetexta">SetupGetLineTextA 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupgetlinetextw">SetupGetLineTextW 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupgetstringfielda">SetupGetStringFieldA 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupgetstringfieldw">SetupGetStringFieldW 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupgetthreadlogtoken">SetupGetThreadLogToken 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupiteratecabineta">SetupIterateCabinetA 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupiteratecabinetw">SetupIterateCabinetW 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setuplogerrora">SetupLogErrorA 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setuplogerrorw">SetupLogErrorW 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupopeninffilea">SetupOpenInfFileA 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupopenlog">SetupOpenLog 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupverifyinffilea">SetupVerifyInfFileA 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupverifyinffilew">SetupVerifyInfFileW 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/setupapi/nf-setupapi-setupwritetextlog">SetupWriteTextLog 함수(setupapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shellapi/nf-shellapi-assoccreateforclasses">AssocCreateForClasses 함수(shellapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shellapi/nf-shellapi-duplicateicon">DuplicateIcon 함수(shellapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shellapi/nf-shellapi-extracticonexa">ExtractIconExA 함수(shellapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shellapi/nf-shellapi-extracticonexw">ExtractIconExW 함수(shellapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shellapi/nf-shellapi-shell_notifyiconw">Shell_NotifyIconW 함수(shellapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shellapi/nf-shellapi-shgetimagelist">SHGetImageList 함수(shellapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shellapi/nf-shellapi-shgetstockiconinfo">SHGetStockIconInfo 함수(shellapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shellapi/nf-shellapi-shsetlocalizedname">SHSetLocalizedName 함수(shellapi.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-dad_autoscroll">DAD_AutoScroll 함수(shlobj_core) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-dad_dragenterex2">DAD_DragEnterEx2 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-dad_setdragimage">DAD_SetDragImage 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-ilcreatefrompath">ILCreateFromPath 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-ilcreatefrompatha">ILCreateFromPathA 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-ilcreatefrompathw">ILCreateFromPathW 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-ilsavetostream">ILSaveToStream 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-pickicondlg">PickIconDlg 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-restartdialog">RestartDialog 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs">SHAddToRecentDocs 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-shchangenotify">SHChangeNotify 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-shcreateshellitem">SHCreateShellItem 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-shdodragdrop">SHDoDragDrop 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-shell_getimagelists">Shell_GetImageLists 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-shgetrealidl">SHGetRealIDL 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-shgetsetsettings">SHGetSetSettings 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-shilcreatefrompath">SHILCreateFromPath 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-shlimitinputedit">SHLimitInputEdit 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/shlobj_core/nf-shlobj_core-shopenwithdialog">SHOpenWithDialog 함수(shlobj_core.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-backupeventloga">BackupEventLogA 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-backupeventlogw">BackupEventLogW 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-cleareventloga">ClearEventLogA 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-cleareventlogw">ClearEventLogW 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-closeeventlog">CloseEventLog 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-deleteumsthreadcontext">DeleteUmsThreadContext 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-encryptfilea">EncryptFileA 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-encryptfilew">EncryptFileW 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-enterumsschedulingmode">EnterUmsSchedulingMode 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-getcurrenthwprofilea">GetCurrentHwProfileA 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-getcurrenthwprofilew">GetCurrentHwProfileW 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-getnumberofeventlogrecords">GetNumberOfEventLogRecords 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-getumscompletionlistevent">GetUmsCompletionListEvent 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-openbackupeventloga">OpenBackupEventLogA 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-openbackupeventlogw">OpenBackupEventLogW 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-queryumsthreadinformation">QueryUmsThreadInformation 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-readencryptedfileraw">ReadEncryptedFileRaw 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-readeventloga">ReadEventLogA 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-readeventlogw">ReadEventLogW 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winbase/nf-winbase-umsthreadyield">UmsThreadYield 함수(winbase.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-notifyuilanguagechange">NotifyUILanguageChange 함수(winnls.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winperf/nc-winperf-pm_collect_proc">PM_COLLECT_PROC 함수(winperf.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winsafer/nf-winsafer-safercreatelevel">SaferCreateLevel 함수(winsafer.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winsafer/nf-winsafer-safergetlevelinformation">SaferGetLevelInformation 함수(winsafer.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winsafer/nf-winsafer-safergetpolicyinformation">SaferGetPolicyInformation 함수(winsafer.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winsafer/nf-winsafer-saferidentifylevel">SaferIdentifyLevel 함수(winsafer.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winsafer/nf-winsafer-saferrecordeventlogentry">SaferRecordEventLogEntry 함수(winsafer.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winsafer/nf-winsafer-safersetlevelinformation">SaferSetLevelInformation 함수(winsafer.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winsafer/nf-winsafer-safersetpolicyinformation">SaferSetPolicyInformation 함수(winsafer.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-addclipboardformatlistener">AddClipboardFormatListener 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-adjustwindowrectex">AdjustWindowRectEx 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-animatewindow">AnimateWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-appendmenua">AppendMenuA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-appendmenuw">AppendMenuW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-attachthreadinput">AttachThreadInput 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-bringwindowtotop">BringWindowToTop 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-callmsgfiltera">CallMsgFilterA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-callmsgfilterw">CallMsgFilterW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-changedisplaysettingsa">ChangeDisplaySettingsA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-changedisplaysettingsw">ChangeDisplaySettingsW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-changewindowmessagefilterex">ChangeWindowMessageFilterEx 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-checkdlgbutton">CheckDlgButton 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-checkmenuitem">CheckMenuItem 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-checkmenuradioitem">CheckMenuRadioItem 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-childwindowfrompoint">ChildWindowFromPoint 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-childwindowfrompointex">ChildWindowFromPointEx 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-closedesktop">CloseDesktop 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-closewindowstation">CloseWindowStation 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-createcaret">CreateCaret 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-createdesktopa">CreateDesktopA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-createdesktopw">CreateDesktopW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-createdialogindirectparama">CreateDialogIndirectParamA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-createdialogindirectparamw">CreateDialogIndirectParamW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-createiconindirect">CreateIconIndirect 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-defrawinputproc">DefRawInputProc 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-defwindowproca">DefWindowProcA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-defwindowprocw">DefWindowProcW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-deletemenu">DeleteMenu 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-destroycaret">DestroyCaret 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-destroywindow">DestroyWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-dialogboxindirectparama">DialogBoxIndirectParamA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-dialogboxindirectparamw">DialogBoxIndirectParamW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-dispatchmessage">DispatchMessage 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-dispatchmessagea">DispatchMessageA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-dispatchmessagew">DispatchMessageW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-drawedge">DrawEdge 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-drawicon">DrawIcon 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-drawiconex">DrawIconEx 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-drawtexta">DrawTextA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-drawtextexa">DrawTextExA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-drawtextexw">DrawTextExW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-drawtextw">DrawTextW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-enablemenuitem">EnableMenuItem 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-enablescrollbar">EnableScrollBar 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-endmenu">EndMenu 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-endpaint">EndPaint 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-enumdisplaydevicesa">EnumDisplayDevicesA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-enumdisplaydevicesw">EnumDisplayDevicesW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-fillrect">FillRect 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-findwindowa">FindWindowA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-findwindoww">FindWindowW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-flashwindowex">FlashWindowEx 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getancestor">GetAncestor 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getcapture">GetCapture 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getcaretblinktime">GetCaretBlinkTime 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getclassinfoa">GetClassInfoA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getclassinfoexa">GetClassInfoExA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getclassinfoexw">GetClassInfoExW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getclassinfow">GetClassInfoW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getclasslongptra">GetClassLongPtrA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getclasslongptrw">GetClassLongPtrW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getclassname">GetClassName 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getclassnamea">GetClassNameA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getclassnamew">GetClassNameW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getclassword">GetClassWord 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getclipboardformatnamea">GetClipboardFormatNameA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getclipboardformatnamew">GetClipboardFormatNameW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getclipboardviewer">GetClipboardViewer 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getcursorpos">GetCursorPos 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getdesktopwindow">GetDesktopWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getdlgitemint">GetDlgItemInt 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getdlgitemtexta">GetDlgItemTextA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getdlgitemtextw">GetDlgItemTextW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getdoubleclicktime">GetDoubleClickTime 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getfocus">GetFocus 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getforegroundwindow">GetForegroundWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getkeyboardstate">GetKeyboardState 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getlastactivepopup">GetLastActivePopup 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getmenudefaultitem">GetMenuDefaultItem 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getmenuinfo">GetMenuInfo 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getmenuitemcount">GetMenuItemCount 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getmenuitemid">GetMenuItemID 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getmenuiteminfoa">GetMenuItemInfoA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getmenuiteminfow">GetMenuItemInfoW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getmenustate">GetMenuState 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getmessageextrainfo">GetMessageExtraInfo 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getmessagetime">GetMessageTime 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getparent">GetParent 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getpointerdevices">GetPointerDevices 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getpointerframeinfohistory">GetPointerFrameInfoHistory 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getpointerframetouchinfo">GetPointerFrameTouchInfo 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getpointertype">GetPointerType 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getprocessdefaultlayout">GetProcessDefaultLayout 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getrawinputdevicelist">GetRawInputDeviceList 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getscrollbarinfo">GetScrollBarInfo 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getscrollinfo">GetScrollInfo 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getshellwindow">GetShellWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getsubmenu">GetSubMenu 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getsystemmetrics">GetSystemMetrics 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getsystemmetricsfordpi">GetSystemMetricsForDpi 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-gettitlebarinfo">GetTitleBarInfo 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-gettopwindow">GetTopWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-gettouchinputinfo">GetTouchInputInfo 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getwindow">GetWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getwindowtexta">GetWindowTextA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getwindowtextlengtha">GetWindowTextLengthA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getwindowtextlengthw">GetWindowTextLengthW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getwindowtextw">GetWindowTextW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid">GetWindowThreadProcessId 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-initializetouchinjection">InitializeTouchInjection 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-injecttouchinput">InjectTouchInput 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-insendmessage">InSendMessage 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-insertmenua">InsertMenuA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-insertmenuitema">InsertMenuItemA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-insertmenuitemw">InsertMenuItemW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-insertmenuw">InsertMenuW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-invalidaterect">InvalidateRect 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-invertrect">InvertRect 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-isclipboardformatavailable">IsClipboardFormatAvailable 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-isdialogmessagea">IsDialogMessageA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-isdialogmessagew">IsDialogMessageW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-isdlgbuttonchecked">IsDlgButtonChecked 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-ishungappwindow">IsHungAppWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-isiconic">IsIconic 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-ismenu">IsMenu 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-iswindowunicode">IsWindowUnicode 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-iswineventhookinstalled">IsWinEventHookInstalled 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-iszoomed">IsZoomed 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-loadicona">LoadIconA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-loadiconw">LoadIconW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-loadimagea">LoadImageA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-locksetforegroundwindow">LockSetForegroundWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-lockworkstation">LockWorkStation 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-logicaltophysicalpoint">LogicalToPhysicalPoint 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-mapwindowpoints">MapWindowPoints 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-messagebeep">MessageBeep 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-messagebox">MessageBox 함수(winuser.h)</a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-messageboxa">MessageBoxA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-messageboxindirecta">MessageBoxIndirectA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-messageboxindirectw">MessageBoxIndirectW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-messageboxw">MessageBoxW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-modifymenua">ModifyMenuA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-modifymenuw">ModifyMenuW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-monitorfrompoint">MonitorFromPoint 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-monitorfromrect">MonitorFromRect 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-monitorfromwindow">MonitorFromWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-oemtocharbuffa">OemToCharBuffA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-oemtocharbuffw">OemToCharBuffW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-openinputdesktop">OpenInputDesktop 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-peekmessagea">PeekMessageA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-peekmessagew">PeekMessageW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-physicaltologicalpoint">PhysicalToLogicalPoint 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-postmessagea">PostMessageA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-postmessagew">PostMessageW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-privateextracticonsa">PrivateExtractIconsA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-privateextracticonsw">PrivateExtractIconsW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-querydisplayconfig">QueryDisplayConfig 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-realgetwindowclassw">RealGetWindowClassW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-redrawwindow">RedrawWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-registerclipboardformata">RegisterClipboardFormatA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-registerclipboardformatw">RegisterClipboardFormatW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-registerdevicenotificationa">RegisterDeviceNotificationA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-registerdevicenotificationw">RegisterDeviceNotificationW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-removemenu">RemoveMenu 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-removepropa">RemovePropA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-removepropw">RemovePropW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-scrolldc">ScrollDC 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-scrollwindow">ScrollWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-scrollwindowex">ScrollWindowEx 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-senddlgitemmessagea">SendDlgItemMessageA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-senddlgitemmessagew">SendDlgItemMessageW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-sendmessagetimeouta">SendMessageTimeoutA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-sendmessagetimeoutw">SendMessageTimeoutW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setcaretblinktime">SetCaretBlinkTime 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setclipboarddata">SetClipboardData 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setcoalescabletimer">SetCoalescableTimer 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setcursorpos">SetCursorPos 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setdlgitemtexta">SetDlgItemTextA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setdlgitemtextw">SetDlgItemTextW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setdoubleclicktime">SetDoubleClickTime 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setfocus">SetFocus 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setforegroundwindow">SetForegroundWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes">SetLayeredWindowAttributes 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setmenuinfo">SetMenuInfo 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setmenuiteminfoa">SetMenuItemInfoA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setmenuiteminfow">SetMenuItemInfoW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setmessageextrainfo">SetMessageExtraInfo 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setparent">SetParent 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setprocesswindowstation">SetProcessWindowStation 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setpropa">SetPropA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setpropw">SetPropW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setwindowdisplayaffinity">SetWindowDisplayAffinity 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setwindowlonga">SetWindowLongA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setwindowlongptra">SetWindowLongPtrA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setwindowlongptrw">SetWindowLongPtrW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setwindowlongw">SetWindowLongW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setwindowpos">SetWindowPos 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setwindowshookexa">SetWindowsHookExA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setwindowshookexw">SetWindowsHookExW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setwindowtexta">SetWindowTextA 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-setwindowtextw">SetWindowTextW 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-showscrollbar">ShowScrollBar 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-showwindow">ShowWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-showwindowasync">ShowWindowAsync 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-shutdownblockreasoncreate">ShutdownBlockReasonCreate 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-shutdownblockreasondestroy">ShutdownBlockReasonDestroy 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-systemparametersinfoa">SystemParametersInfoA 함수(winuser.h)</a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-systemparametersinfow">SystemParametersInfoW 함수(winuser.h)</a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-trackmouseevent">TrackMouseEvent 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-updatelayeredwindow">UpdateLayeredWindow 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-waitforinputidle">WaitForInputIdle 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-waitmessage">WaitMessage 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-windowfromdc">WindowFromDC 함수(winuser.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/wtsapi32/nf-wtsapi32-wtsdisconnectsession">WTSDisconnectSession 함수(wtsapi32.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/wtsapi32/nf-wtsapi32-wtsfreememory">WTSFreeMemory 함수(wtsapi32.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/wtsapi32/nf-wtsapi32-wtsfreememoryexa">WTSFreeMemoryExA 함수(wtsapi32.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/wtsapi32/nf-wtsapi32-wtsfreememoryexw">WTSFreeMemoryExW 함수(wtsapi32.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/wtsapi32/nf-wtsapi32-wtslogoffsession">WTSLogoffSession 함수(wtsapi32.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/wtsapi32/nf-wtsapi32-wtsvirtualchannelopenex">WTSVirtualChannelOpenEx 함수(wtsapi32.h) </a></li>
-<li><a href="https://docs.microsoft.com/windows/win32/api/wtsapi32/nf-wtsapi32-wtsvirtualchannelquery">WTSVirtualChannelQuery 함수(wtsapi32.h) </a></li>
-</ul>
-
-### <a name="uwp-api-reference"></a>UWP API 참조
+## <a name="winrt-conceptual"></a>WinRT 개념
 
 <ul>
-<li><a href="https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.bluetoothcachemode">Windows.Devices.Bluetooth.BluetoothCacheMode</a></li>
-<li><a href="https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.bluetoothledevice.fromidasync">Windows.Devices.Bluetooth.BluetoothLEDevice.FromIdAsync(System.String)</a></li>
-<li><a href="https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.bluetoothledevice.gattserviceschanged">Windows.Devices.Bluetooth.BluetoothLEDevice.GattServicesChanged</a></li>
-<li><a href="https://docs.microsoft.com/uwp/api/windows.devices.bluetooth.bluetoothledevice.namechanged">Windows.Devices.Bluetooth.BluetoothLEDevice.NameChanged</a></li>
-<li><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.automation.peers.patterninterface">Windows.UI.Xaml.Automation.Peers.PatternInterface</a></li>
-<li><a href="https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listviewbase.candragitems">Windows.UI.Xaml.Controls.ListViewBase.CanDragItems</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/audio-video-camera/playready-client-sdk">PlayReady DRM</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/composition/composition-native-interop">컴퍼지션 네이티브 상호 운용</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/std-cpp-data-types">표준 C++ 데이터 형식 및 C++/WinRT</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/csharp-winrt/agile-objects">C++/WinRT의 Agile 개체</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/csharp-winrt/index">C#/WinRT</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop">Windows 데스크톱의 장치 포털</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/debug-test-perf/loose-file-registration">느슨한 파일 등록을 통해 앱 배포</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/design/basics/design-and-ui-intro">Windows 앱 디자인 소개(Windows 앱)</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/infobar">InfoBar</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview">탐색 보기</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/progress-controls">진행률 컨트롤에 대한 지침</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/design/input/ink-walkthrough">Windows 앱에서 잉크 지원</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/design/input/keyboard-accelerators">키보드 액셀러레이터</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/design/input/radialcontroller-walkthrough">Windows 앱에서 Surface Dial(및 기타 휠 디바이스) 지원</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/design/layout/grid-tutorial">Grid 및 StackPanel을 사용하여 간단한 앱을 만듭니다.</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/toast-schema">알림 콘텐츠 스키마</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/design/style/segoe-ui-symbol-font">Segoe MDL2 자산 아이콘</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/devices-sensors/host-card-emulation">NFC 스마트 카드 앱 만들기</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/devices-sensors/use-the-compass">나침반 사용</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/enterprise/index">엔터프라이즈</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/gaming/e2e">Windows 10 게임 개발 가이드</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp">C++/CX로 Hello World 앱 만들기(Windows 10)</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/get-started/create-uwp-apps">유니버설 Windows 플랫폼을 사용하여 앱 만들기</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide">UWP(유니버설 Windows 플랫폼) 앱이란?</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/launch-resume/app-lifecycle">Windows 10 UWP 앱 수명 주기</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/launch-resume/guidelines-for-background-tasks">백그라운드 작업 지침</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/launch-resume/web-to-app-linking">앱 URI 처리기를 사용하여 웹 사이트에 대해 앱 활성화</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/monetize/run-app-experiments-with-a-b-testing">A/B 테스트로 앱 실험 실행</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations">앱 기능 선언</a></li>
+<li><a href="https://docs.microsoft.com/windows/uwp/xbox-apps/devkit-activation">Xbox One 개발자 모드 활성화</a></li>
 </ul>
 
+## <a name="win32-conceptual"></a>Win32 개념
+
+<ul>
+<li><a href="https://docs.microsoft.com/windows/desktop/TermServ/win32-tslicensekeypack">Win32_TSLicenseKeyPack 클래스</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/direct3d12/direct3d-directml-constants">DirectML 상수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/direct3d12/directml/ne-directml-dml_axis_direction">DML_AXIS_DIRECTION</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/direct3d12/directml/ne-directml-dml_depth_space_order">DML_DEPTH_SPACE_ORDER</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/direct3d12/directml/ne-directml-dml_graph_edge_type">DML_GRAPH_EDGE_TYPE</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/direct3d12/directml/ne-directml-dml_graph_node_type">DML_GRAPH_NODE_TYPE</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/direct3d12/directml/nf-directml-dmlcreatedevice1">DMLCreateDevice1 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/direct3d12/directml/nn-directml-idmldevice1">IDMLDevice1</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/direct3d12/directml/ns-directml-dml_graph_desc">DML_GRAPH_DESC</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/direct3d12/directml/ns-directml-dml_graph_edge_desc">DML_GRAPH_EDGE_DESC</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/direct3d12/directml/ns-directml-dml_graph_node_desc">DML_GRAPH_NODE_DESC</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/direct3d12/directml/ns-directml-dml_scalar_union">DML_SCALAR_UNION</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/direct3d12/queries">쿼리</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/direct3dhlsl/dx-graphics-hlsl-variable-syntax">변수 구문</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/dlgbox/color-dialog-box">색 대화 상자</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/api.jetopentemptable3-method">Api.JetOpenTempTable3 메서드</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/database-parameters">데이터베이스 매개 변수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/esenterrorexception-class">EsentErrorException 클래스</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/esentioexception-class">EsentIOException 클래스</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/esentmemoryexception-class">EsentMemoryException 클래스</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/esentquotaexception-class">EsentQuotaException 클래스</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/esentresourceexception-class">EsentResourceException 클래스</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/index-parameters">인덱스 매개 변수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-columnbase-structure">JET_COLUMNBASE 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-columncreate-structure">JET_COLUMNCREATE 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-columndef-structure">JET_COLUMNDEF 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-columnlist-structure">JET_COLUMNLIST 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-dbinfomisc-structure">JET_DBINFOMISC 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-dbinfomisc2-structure">JET_DBINFOMISC2 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-dbinfomisc3-structure">JET_DBINFOMISC3 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-dbinfomisc4-structure">JET_DBINFOMISC4 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-dbinfoupgrade-structure">JET_DBINFOUPGRADE 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-enumcolumn-structure">JET_ENUMCOLUMN 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-indexcreate-structure">JET_INDEXCREATE 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-indexcreate2-structure">JET_INDEXCREATE2 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-indexlist-structure">JET_INDEXLIST 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-objectinfo-structure">JET_OBJECTINFO 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-objectlist-structure">JET_OBJECTLIST 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-retrievecolumn-structure">JET_RETRIEVECOLUMN 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-sesid">JET_SESID</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-tablecreate-structure">JET_TABLECREATE 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-tablecreate2-structure">JET_TABLECREATE2 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-tablecreate3-structure">JET_TABLECREATE3 구조체</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jet-tableid">JET_TABLEID</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetaddcolumn-function">JetAddColumn 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetattachdatabase-function">JetAttachDatabase 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetattachdatabase2-function">JetAttachDatabase2 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetbackup-function">JetBackup 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetbackupinstance-function">JetBackupInstance 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetbeginsession-function">JetBeginSession 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetbegintransaction-function">JetBeginTransaction 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetbegintransaction2-function">JetBeginTransaction2 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetbegintransaction3-function">JetBeginTransaction3 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetcommittransaction-function">JetCommitTransaction 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetcreatedatabase-function">JetCreateDatabase 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetcreatedatabase2-function">JetCreateDatabase2 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetcreateindex-function">JetCreateIndex 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetcreateindex2-function">JetCreateIndex2 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetcreateindex3-function">JetCreateIndex3 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetcreateindex4w-function">JetCreateIndex4W 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetcreateinstance-function">JetCreateInstance 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetcreateinstance2-function">JetCreateInstance2 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetcreatetable-function">JetCreateTable 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetdelete-function">JetDelete 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetdetachdatabase-function">JetDetachDatabase 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetdetachdatabase2-function">JetDetachDatabase2 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetdupcursor-function">JetDupCursor 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetendexternalbackup-function">JetEndExternalBackup 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetenumeratecolumns-function">JetEnumerateColumns 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetescrowupdate-function">JetEscrowUpdate 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetexternalrestore2-function">JetExternalRestore2 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetgetattachinfo-function">JetGetAttachInfo 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetgetcolumninfo-function">JetGetColumnInfo 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetgetdatabaseinfo-function">JetGetDatabaseInfo 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetgetindexinfo-function">JetGetIndexInfo 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetgetobjectinfo-function">JetGetObjectInfo 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetgetrecordposition-function">JetGetRecordPosition 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetgettableindexinfo-function">JetGetTableIndexInfo 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetgettableinfo-function">JetGetTableInfo 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetinit-function">JetInit 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetinit2-function">JetInit2 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetinit3-function">JetInit3 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetintersectindexes-function">JetIntersectIndexes 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetmakekey-function">JetMakeKey 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetmove-function">JetMove 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetopendatabase-function">JetOpenDatabase 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetopenfile-function">JetOpenFile 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetopenfileinstance-function">JetOpenFileInstance 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetopentable-function">JetOpenTable 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetopentemptable-function">JetOpenTempTable 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetopentemptable2-function">JetOpenTempTable2 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetopentemptable3-function">JetOpenTempTable3 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetossnapshotfreeze-function">JetOSSnapshotFreeze 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetossnapshotprepare-function">JetOSSnapshotPrepare 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetreadfileinstance-function">JetReadFileInstance 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetregistercallback-function">JetRegisterCallback 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetrestore-function">JetRestore 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetrestore2-function">JetRestore2 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetrestoreinstance-function">JetRestoreInstance 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetretrievecolumn-function">JetRetrieveColumn 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetretrievecolumns-function">JetRetrieveColumns 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetretrievekey-function">JetRetrieveKey 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetsetcolumn-function">JetSetColumn 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetsetcolumns-function">JetSetColumns 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetsetcurrentindex-function">JetSetCurrentIndex 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetsetcurrentindex2-function">JetSetCurrentIndex2 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetsetcurrentindex3-function">JetSetCurrentIndex3 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetsetcurrentindex4-function">JetSetCurrentIndex4 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetsetindexrange-function">JetSetIndexRange 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetsetls-function">JetSetLS 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetstopservice-function">JetStopService 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetterm-function">JetTerm 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetterm2-function">JetTerm2 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetupdate-function">JetUpdate 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/jetupdate2-function">JetUpdate2 함수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/transaction-log-parameters">트랜잭션 로그 매개 변수</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/extensible-storage-engine/transactions">트랜잭션(Windows 이벤트)</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/security">보안 및 ID</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/shell/handlers">셸 확장 처리기 만들기</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/shell/nf-shobjidl-istorageprovidercopyhook-copycallback">IStorageProviderCopyHook::CopyCallback</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/shell/nn-shobjidl-istorageprovidercopyhook">IStorageProviderCopyHook 인터페이스</a></li>
+<li><a href="https://docs.microsoft.com/windows/desktop/shell/shell-shellexecute">Shell.ShellExecute 메서드(Shldisp.h)</a></li>
+</ul>
+
+## <a name="win32-api-reference"></a>Win32 API 참조
+
+<ul>
+<li><a href="https://docs.microsoft.com/windows/win32/api/directml/ne-directml-dml_operator_type">DML_OPERATOR_TYPE </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/directml/ns-directml-dml_gather_operator_desc">DML_GATHER_OPERATOR_DESC </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/directml/ns-directml-dml_gru_operator_desc">DML_GRU_OPERATOR_DESC </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/directml/ns-directml-dml_join_operator_desc">DML_JOIN_OPERATOR_DESC </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/directml/ns-directml-dml_lstm_operator_desc">DML_LSTM_OPERATOR_DESC </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/directml/ns-directml-dml_one_hot_operator_desc">DML_ONE_HOT_OPERATOR_DESC </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/directml/ns-directml-dml_padding_operator_desc">DML_PADDING_OPERATOR_DESC </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/directml/ns-directml-dml_reduce_operator_desc">DML_REDUCE_OPERATOR_DESC </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/directml/ns-directml-dml_scatter_operator_desc">DML_SCATTER_OPERATOR_DESC (DML_SCATTER_ELEMENTS_OPERATOR_DESC) </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/directml/ns-directml-dml_split_operator_desc">DML_SPLIT_OPERATOR_DESC </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/directml/ns-directml-dml_top_k_operator_desc">DML_TOP_K_OPERATOR_DESC </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/fwpmtypes/ns-fwpmtypes-fwpm_net_event_header0">FWPM_NET_EVENT_HEADER0 (fwpmtypes.h) </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/fwpmtypes/ns-fwpmtypes-fwpm_net_event_header1">FWPM_NET_EVENT_HEADER1(fwpmtypes.h)</a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/fwpmtypes/ns-fwpmtypes-fwpm_net_event_header2">FWPM_NET_EVENT_HEADER2 (fwpmtypes.h) </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/fwpmtypes/ns-fwpmtypes-fwpm_net_event_header3">FWPM_NET_EVENT_HEADER3 (fwpmtypes.h) </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/fwpmtypes/ns-fwpmtypes-fwpm_provider_context1">FWPM_PROVIDER_CONTEXT1 (fwpmtypes.h) </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/fwpmtypes/ns-fwpmtypes-fwpm_provider_context2">FWPM_PROVIDER_CONTEXT2 (fwpmtypes.h) </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/fwpmu/nf-fwpmu-fwpmfilteradd0">FwpmFilterAdd0 함수(fwpmu.h) </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/fwpstypes/ns-fwpstypes-fwps_filter0">FWPS_FILTER0 (fwpstypes.h) </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/fwpstypes/ns-fwpstypes-fwps_filter1">FWPS_FILTER1 (fwpstypes.h) </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/fwpstypes/ns-fwpstypes-fwps_filter2">FWPS_FILTER2 (fwpstypes.h) </a></li>
+<li><a href="https://docs.microsoft.com/windows/win32/api/fwptypes/ns-fwptypes-fwp_condition_value0">FWP_CONDITION_VALUE0 (fwptypes.h) </a></li>
+</ul>
+
+## <a name="uwp-api-reference"></a>UWP API 참조
+
+<ul>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.applicationexecutionstate">Windows.ApplicationModel.Activation.ApplicationExecutionState</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.activation.searchactivatedeventargs">Windows.ApplicationModel.Activation.SearchActivatedEventArgs</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.background.maintenancetrigger">Windows.ApplicationModel.Background.MaintenanceTrigger</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.provider.contactpickerui">Windows.ApplicationModel.Contacts.Provider.ContactPickerUI</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contact.fields">Windows.ApplicationModel.Contacts.Contact.Fields</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contact.name">Windows.ApplicationModel.Contacts.Contact.Name</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.contacts.contactinformation">Windows.ApplicationModel.Contacts.ContactInformation</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.namedresource">Windows.ApplicationModel.Resources.Core.NamedResource</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcecandidate">Windows.ApplicationModel.Resources.Core.ResourceCandidate</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcecandidatevectorview">Windows.ApplicationModel.Resources.Core.ResourceCandidateVectorView</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcecontext">Windows.ApplicationModel.Resources.Core.ResourceContext</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcemap">Windows.ApplicationModel.Resources.Core.ResourceMap</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcequalifier">Windows.ApplicationModel.Resources.Core.ResourceQualifier</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.resources.core.resourcequalifiervectorview">Windows.ApplicationModel.Resources.Core.ResourceQualifierVectorView</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.search.searchpane.language">Windows.ApplicationModel.Search.SearchPane.Language</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.search.searchpane.querysubmitted">Windows.ApplicationModel.Search.SearchPane.QuerySubmitted</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.search.searchpane.visible">Windows.ApplicationModel.Search.SearchPane.Visible</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.search.searchpanequerylinguisticdetails">Windows.ApplicationModel.Search.SearchPaneQueryLinguisticDetails</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.search.searchpanequerysubmittedeventargs">Windows.ApplicationModel.Search.SearchPaneQuerySubmittedEventArgs</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.search.searchpanesuggestionsrequest">Windows.ApplicationModel.Search.SearchPaneSuggestionsRequest</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.search.searchsuggestioncollection">Windows.ApplicationModel.Search.SearchSuggestionCollection</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.applicationmodel.search.searchsuggestioncollection.size">Windows.ApplicationModel.Search.SearchSuggestionCollection.Size</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.devices.enumeration.deviceinformationupdate">Windows.Devices.Enumeration.DeviceInformationUpdate</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.devices.enumeration.devicewatcher">Windows.Devices.Enumeration.DeviceWatcher</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.devices.serialcommunication.serialdevice.readtimeout">Windows.Devices.SerialCommunication.SerialDevice.ReadTimeout</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.devices.serialcommunication.serialdevice.writetimeout">Windows.Devices.SerialCommunication.SerialDevice.WriteTimeout</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.display.brightnessoverride">Windows.Graphics.Display.BrightnessOverride</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.optiondetails.printbindingoptiondetails">Windows.Graphics.Printing.OptionDetails.PrintBindingOptionDetails</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.optiondetails.printborderingoptiondetails">Windows.Graphics.Printing.OptionDetails.PrintBorderingOptionDetails</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.optiondetails.printcollationoptiondetails">Windows.Graphics.Printing.OptionDetails.PrintCollationOptionDetails</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.optiondetails.printcolormodeoptiondetails">Windows.Graphics.Printing.OptionDetails.PrintColorModeOptionDetails</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.optiondetails.printcopiesoptiondetails">Windows.Graphics.Printing.OptionDetails.PrintCopiesOptionDetails</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.optiondetails.printcustomitemdetails">Windows.Graphics.Printing.OptionDetails.PrintCustomItemDetails</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.optiondetails.printduplexoptiondetails">Windows.Graphics.Printing.OptionDetails.PrintDuplexOptionDetails</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.optiondetails.printholepunchoptiondetails">Windows.Graphics.Printing.OptionDetails.PrintHolePunchOptionDetails</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.optiondetails.printmediasizeoptiondetails">Windows.Graphics.Printing.OptionDetails.PrintMediaSizeOptionDetails</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.optiondetails.printmediatypeoptiondetails">Windows.Graphics.Printing.OptionDetails.PrintMediaTypeOptionDetails</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.optiondetails.printqualityoptiondetails">Windows.Graphics.Printing.OptionDetails.PrintQualityOptionDetails</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.optiondetails.printstapleoptiondetails">Windows.Graphics.Printing.OptionDetails.PrintStapleOptionDetails</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.optiondetails.printtaskoptiondetails">Windows.Graphics.Printing.OptionDetails.PrintTaskOptionDetails</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.printmanager">Windows.Graphics.Printing.PrintManager</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtask">Windows.Graphics.Printing.PrintTask</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtaskrequest">Windows.Graphics.Printing.PrintTaskRequest</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.printtasksourcerequestedargs">Windows.Graphics.Printing.PrintTaskSourceRequestedArgs</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.graphics.printing.standardprinttaskoptions">Windows.Graphics.Printing.StandardPrintTaskOptions</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.media.playlists.playlist">Windows.Media.Playlists.Playlist</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.networking.proximity.peerwatcher.stop">Windows.Networking.Proximity.PeerWatcher.Stop</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.networking.servicediscovery.dnssd.dnssdregistrationresult">Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationResult</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.networking.servicediscovery.dnssd.dnssdregistrationstatus">Windows.Networking.ServiceDiscovery.Dnssd.DnssdRegistrationStatus</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.networking.servicediscovery.dnssd.dnssdservicewatcher">Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.networking.servicediscovery.dnssd.dnssdservicewatcherstatus">Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcherStatus</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueue.createtimer">Windows.System.DispatcherQueue.CreateTimer</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueue.getforcurrentthread">Windows.System.DispatcherQueue.GetForCurrentThread</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueue.shutdowncompleted">Windows.System.DispatcherQueue.ShutdownCompleted</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueue.shutdownstarting">Windows.System.DispatcherQueue.ShutdownStarting</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueuecontroller.dispatcherqueue">Windows.System.DispatcherQueueController.DispatcherQueue</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueuepriority">Windows.System.DispatcherQueuePriority</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueueshutdownstartingeventargs">Windows.System.DispatcherQueueShutdownStartingEventArgs</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueuetimer">Windows.System.DispatcherQueueTimer</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueuetimer.interval">Windows.System.DispatcherQueueTimer.Interval</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueuetimer.isrepeating">Windows.System.DispatcherQueueTimer.IsRepeating</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueuetimer.isrunning">Windows.System.DispatcherQueueTimer.IsRunning</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueuetimer.start">Windows.System.DispatcherQueueTimer.Start</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueuetimer.stop">Windows.System.DispatcherQueueTimer.Stop</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.system.dispatcherqueuetimer.tick">Windows.System.DispatcherQueueTimer.Tick</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.ui.core.animationmetrics.animationdescription">Windows.UI.Core.AnimationMetrics.AnimationDescription</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.ui.input.pointerpointproperties">Windows.UI.Input.PointerPointProperties</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.ui.startscreen.secondarytile">Windows.UI.StartScreen.SecondaryTile</a></li>
+<li><a href="https://docs.microsoft.com/uwp/api/windows.ui.startscreen.secondarytile.requestdeleteasync">Windows.UI.StartScreen.SecondaryTile.RequestDeleteAsync</a></li>
 

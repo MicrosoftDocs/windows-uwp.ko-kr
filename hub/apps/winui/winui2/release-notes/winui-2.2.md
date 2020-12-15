@@ -3,16 +3,16 @@ title: WinUI 2.2 릴리스 정보
 description: 새로운 기능 및 버그 수정이 포함된 WinUI 2.2 릴리스에 대한 정보입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: b14b96ffc03d5e3e934b72d71ae9e2a8a3f0eb1d
-ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
+ms.openlocfilehash: 128732f57fff892cc16e4b4b4ac6f691fe72e4a2
+ms.sourcegitcommit: b99fe39126fbb457c3690312641f57d22ba7c8b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94933148"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96603870"
 ---
 # <a name="windows-ui-library-22"></a>Windows UI 라이브러리 2.2
 
-WinUI 2.2는 Windows UI 라이브러리의 최신 공식 릴리스입니다.
+WinUI 2.2는 Windows UI 라이브러리의 2019년 8월 릴리스입니다.
 
 NuGet 패키지 관리자를 사용하여 WinUI 패키지를 앱에 추가할 수 있습니다. 자세한 내용은 [Windows UI 라이브러리 시작](../getting-started.md)을 참조하세요.
 

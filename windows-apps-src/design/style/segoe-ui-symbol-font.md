@@ -1,43 +1,45 @@
 ---
 description: 이 문서에서는 Segoe MDL2 Assets 글꼴과 함께 제공되는 문자 모양을 나열하고 사용 지침을 제공합니다.
 Search.Refinement.TopicID: 184
-title: Segoe MDL2 아이콘 지침
+title: Segoe MDL2 자산 아이콘
 ms.assetid: DFB215C2-8A61-4957-B662-3B1991AC9BE1
-label: Segoe MDL2 icons
+label: Segoe MDL2 Assets icons
 template: detail.hbs
-ms.date: 05/19/2017
+ms.date: 12/05/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.custom: contperfq1
-ms.openlocfilehash: debafac51bee529ba2f78b80bed529cc571e1c6a
-ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
+ms.custom: contperfq2
+ms.openlocfilehash: 4283e896faca3cccfdf86d1a42f81367fe7d7964
+ms.sourcegitcommit: f7535655a37cec610fbdc23c17f9c83fe68409ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862135"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96611987"
 ---
-# <a name="segoe-mdl2-icons"></a>Segoe MDL2 아이콘
+# <a name="segoe-mdl2-assets-icons"></a>Segoe MDL2 자산 아이콘
 
- 
+이 문서에서는 Segoe MDL2 자산 아이콘을 사용하기 위한 개발자 지침을 제공하고 해당 유니코드 값과 설명 이름과 함께 글꼴 문자 모양을 나열합니다. 
 
-이 문서는 Segoe MDL2 자산 글꼴에서 제공하는 아이콘을 나열합니다. 
+**중요 API**: 
 
-> **중요 API**: [**기호 열거형**](/uwp/api/windows.ui.xaml.controls.symbol), [**FontIcon 클래스**](/uwp/api/windows.ui.xaml.controls.fonticon)
+* [**기호 열거형**](/uwp/api/windows.ui.xaml.controls.symbol)
+* [**FontIcon 클래스**](/uwp/api/windows.ui.xaml.controls.fonticon)
 
 ## <a name="about-segoe-mdl2-assets"></a>Segoe MDL2 자산 정보
 
-Windows 10 릴리스에서 Windows 8/8.1의 Segoe UI Symbol 아이콘 글꼴이 Segoe MDL2 자산 글꼴로 대체되었습니다. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> (**Segoe UI Symbol**을 계속 "레거시" 리소스로 사용할 수 있지만, 새 **Segoe MDL2 자산**을 사용하도록 앱을 업데이트하는 것이 좋습니다.)
+> [!TIP]
+> Windows 10 릴리스에서 Windows 8/8.1의 Segoe UI Symbol 아이콘 글꼴이 Segoe MDL2 자산 글꼴로 대체되었습니다. <!-- It can be used in much the same manner as the older font, but many glyphs have been redrawn in the Windows 10 icon style with the font’s metrics set so that icons are aligned within the font’s em-square instead of on a typographic baseline. --> **Segoe UI Symbol** 을 계속 "레거시" 리소스로 사용할 수 있지만 새 **Segoe MDL2 자산** 을 사용하도록 앱을 업데이트하는 것이 좋습니다.
 
 **Segoe MDL2 Assets** 글꼴에 포함된 아이콘 및 UI 컨트롤은 대부분 PUA(Private Use Area of Unicode)에 매핑됩니다. PUA를 통해 글꼴 개발자는 기존 코드 점에 매핑되지 않는 문자 모양에 프라이빗 유니코드 값을 할당할 수 있습니다. 이 글꼴은 기호 글꼴을 만들 때 유용하지만 상호 운용성 문제가 발생될 수 있습니다. 글꼴을 사용할 수 없으면 문자 모양이 표시되지 않습니다. **Segoe MDL2 Assets** 글꼴을 지정할 수 있을 때만 이러한 문자 모양을 사용하세요.
 
 **Segoe MDL2 자산** 글꼴을 명시적으로 지정할 수 있을 때만 이러한 문자 모양을 사용하세요. 타일 작업을 수행하는 경우에는 타일 글꼴을 지정할 수 없고 글꼴 대체를 통해 PUA 문자 모양을 사용할 수 없기 때문에 이러한 문자 모양을 사용할 수 없습니다.
 
-**Segoe UI Symbol**과 달리 **Segoe MDL2 Assets** 글꼴의 아이콘은 텍스트와 함께 인라인으로 사용되지 않습니다. 즉, 점진적 표시 화살표와 같은 일부 이전 "힌트"가 더 이상 적용되지 않습니다. 마찬가지로, 모든 새 아이콘은 크기와 위치가 동일하게 지정되므로 너비를 0으로 만들 필요가 없습니다. 하나의 집합으로 작동하는지 확인하기만 하면 됩니다. 이상적으로, 하나의 집합으로 디자인된 두 개의 아이콘을 오버레이할 수 있습니다. 이는 코드에서 색 지정을 허용하기 위한 것입니다. 예를 들어 U+EA3A 및 U+EA3B는 시작 타일 배지 상태를 위해 만들어졌습니다. 이미 중앙에 배치되어 있기 때문에 원 채우기 색을 지정하여 다른 상태를 나타낼 수 있습니다.
+**Segoe UI Symbol** 과 달리 **Segoe MDL2 Assets** 글꼴의 아이콘은 텍스트와 함께 인라인으로 사용되지 않습니다. 즉, 점진적 표시 화살표와 같은 일부 이전 "힌트"가 더 이상 적용되지 않습니다. 마찬가지로, 모든 새 아이콘은 크기와 위치가 동일하게 지정되므로 너비를 0으로 만들 필요가 없습니다. 하나의 집합으로 작동하는지 확인하기만 하면 됩니다. 이상적으로, 하나의 집합으로 디자인된 두 개의 아이콘을 오버레이할 수 있습니다. 이는 코드에서 색 지정을 허용하기 위한 것입니다. 예를 들어 U+EA3A 및 U+EA3B는 시작 타일 배지 상태를 위해 만들어졌습니다. 이미 중앙에 배치되어 있기 때문에 원 채우기 색을 지정하여 다른 상태를 나타낼 수 있습니다.
 
 ## <a name="layering-and-mirroring"></a>계층화 및 미러링
 
-**Segoe MDL2 Assets**의 모든 문자 모양은 높이와 왼쪽 원점이 일관된 동일한 고정 너비를 가지므로 서로 위에 직접 문자 모양을 그려 계층화 및 색 지정 효과를 얻을 수 있습니다. 이 예제는 너비가 0인 빨간색 하트 위에 그려진 검은색 윤곽선을 보여 줍니다.
+**Segoe MDL2 Assets** 의 모든 문자 모양은 높이와 왼쪽 원점이 일관된 동일한 고정 너비를 가지므로 서로 위에 직접 문자 모양을 그려 계층화 및 색 지정 효과를 얻을 수 있습니다. 이 예제는 너비가 0인 빨간색 하트 위에 그려진 검은색 윤곽선을 보여 줍니다.
 
 ![너비가 0인 문자 모양 사용](images/segoe-ui-symbol-layering.png)
 
@@ -56,7 +58,7 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE700;"/>
 ```
 
-이름으로 글꼴을 지정하는 대신, 다음과 같이 정적 리소스 `SymbolThemeFontFamily`를 사용하여 **Segoe MDL2 자산**에 액세스할 수도 있습니다.
+이름으로 글꼴을 지정하는 대신, 다음과 같이 정적 리소스 `SymbolThemeFontFamily`를 사용하여 **Segoe MDL2 자산** 에 액세스할 수도 있습니다.
 ```xaml
 <FontIcon FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE700;"/>
 ```
@@ -69,10 +71,28 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 ## <a name="icon-list"></a>아이콘 목록
 **Segoe MDL2 자산** 글꼴에는 여기에 표시할 수 있는 아이콘보다 더 많은 아이콘이 포함되어 있습니다. 많은 아이콘이 특수 용도로 제작되었으며 다른 용도에는 잘 사용되지 않습니다.
 
-<table style="background-color: white; color: black">
+> [!NOTE]
+> **E0-** 에서 **E5-** (예: E001, E5B1) 범위의 접두사가 있는 문자 모양은 현재 레거시로 표시되어 있으므로 더 이상 사용되지 않습니다.
 
+다음 표는 모든 Segoe MDL2 자산 아이콘과 각각의 유니코드 값 및 설명 이름을 표시합니다. 다음 목록에서 문자 모양이 속한 PUA 범위에 따라 문자 모양을 보려면 범위를 선택합니다.
+
+* [PUA E700-E900](#pua-e700-e900)
+* [PUA EA00-EC00](#pua-ea00-ec00)
+* [PUA ED00-EF00](#pua-ed00-ef00)
+* [PUA F000-F200](#pua-f000-f200)
+* [PUA F300-F500](#pua-f300-f500)
+* [PUA F600-F800](#pua-f600-f800)
+
+### <a name="pua-e700-e900"></a>PUA E700-E900
+
+다음 문자 모양 표는 E7-에서 E9-로 시작하는 유니코드 포인트를 표시합니다.
+
+[맨 위로 이동](#icon-list)
+
+</br>
+<table style="background-color: white; color: black">
  <tr>
-  <td>기호</td>
+  <td>문자 모양</td>
   <td>유니코드 포인트</td>
   <td>설명</td>
  </tr>
@@ -2400,6 +2420,21 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
   <td>E9F9</td>
   <td>ReportDocument</td>
  </tr>
+</table>
+
+ ### <a name="pua-ea00-ec00"></a>PUA EA00-EC00
+
+다음 문자 모양 표는 EA-에서 EC-로 시작하는 유니코드 포인트를 표시합니다.
+
+[맨 위로 이동](#icon-list)
+
+</br>
+ <table style="background-color: white; color: black">
+ <tr>
+  <td>문자 모양</td>
+  <td>유니코드 포인트</td>
+  <td>설명</td>
+ </tr>
 <tr><td><img src="images/segoe-mdl/EA0C.png" width="32" height="32" alt="VideoSolid" /></td>
   <td>EA0C</td>
   <td>VideoSolid</td>
@@ -3580,6 +3615,21 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
   <td>ECF3</td>
   <td>USBSafeConnect</td>
  </tr>
+</table>
+
+ ### <a name="pua-ed00-ef00"></a>PUA ED00-EF00
+
+다음 문자 모양 표는 ED-에서 EF-로 시작하는 유니코드 포인트를 표시합니다.
+
+[맨 위로 이동](#icon-list)
+
+</br>
+<table style="background-color: white; color: black">
+ <tr>
+  <td>문자 모양</td>
+  <td>유니코드 포인트</td>
+  <td>설명</td>
+ </tr>
 <tr><td><img src="images/segoe-mdl/ED0C.png" width="32" height="32" alt="ActionCenterNotificationMirrored" /></td>
   <td>ED0C</td>
   <td>ActionCenterNotificationMirrored</td>
@@ -3892,9 +3942,13 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
   <td>EDDB</td>
   <td>CaretUpSolid8</td>
  </tr>
-<tr><td><img src="images/segoe-mdl/EDDC.png" width="32" height="32" alt="CaretDownSolid8" /></td>
+ <tr><td><img src="images/segoe-mdl/EDDC.png" width="32" height="32" alt="CaretDownSolid8" /></td>
   <td>EDDC</td>
   <td>CaretDownSolid8</td>
+ </tr>
+ <tr><td><img src="images/segoe-mdl/EDE0.png" width="32" height="32" alt="Strikethrough" /></td>
+  <td>EDE0</td>
+  <td>취소선</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EDE1.png" width="32" height="32" alt="Export" /></td>
   <td>EDE1</td>
@@ -3931,6 +3985,14 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 <tr><td><img src="images/segoe-mdl/EE40.png" width="32" height="32" alt="TaskViewSettings" /></td>
   <td>EE40</td>
   <td>TaskViewSettings</td>
+ </tr>
+ <tr><td><img src="images/segoe-mdl/EE47.png" width="32" height="32" alt="MiniExpand2Mirrored" /></td>
+  <td>EE47</td>
+  <td>MiniExpand2Mirrored</td>
+ </tr>
+ <tr><td><img src="images/segoe-mdl/EE49.png" width="32" height="32" alt="MiniContract2Mirrored" /></td>
+  <td>EE49</td>
+  <td>MiniContract2Mirrored</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/EE4A.png" width="32" height="32" alt="Play36" /></td>
   <td>EE4A</td>
@@ -4087,6 +4149,21 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 <tr><td><img src="images/segoe-mdl/EFA9.png" width="32" height="32" alt="Speech" /></td>
   <td>EFA9</td>
   <td>음성</td>
+ </tr>
+</table>
+
+ ### <a name="pua-f000-f200"></a>PUA F000-F200
+
+다음 문자 모양 표는 F0-에서 F2-로 시작하는 유니코드 포인트를 표시합니다.
+
+[맨 위로 이동](#icon-list)
+
+</br>
+<table style="background-color: white; color: black">
+ <tr>
+  <td>문자 모양</td>
+  <td>유니코드 포인트</td>
+  <td>설명</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F000.png" width="32" height="32" alt="KnowledgeArticle" /></td>
   <td>F000</td>
@@ -4279,6 +4356,10 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 <tr><td><img src="images/segoe-mdl/F0EE.png" width="32" height="32" alt="SpatialVolume3" /></td>
   <td>F0EE</td>
   <td>SpatialVolume3</td>
+ </tr>
+ <tr><td><img src="images/segoe-mdl/F0EF.png" width="32" height="32" alt="ApplicationGuard" /></td>
+  <td>F0EF</td>
+  <td>ApplicationGuard</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F0F7.png" width="32" height="32" alt="OutlineStarLeftHalf" /></td>
   <td>F0F7</td>
@@ -4600,6 +4681,14 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
   <td>F19D</td>
   <td>EyeGaze</td>
  </tr>
+ <tr><td><img src="images/segoe-mdl/F19E.png" width="32" height="32" alt="ToggleLeft" /></td>
+  <td>F19E</td>
+  <td>ToggleLeft</td>
+ </tr>
+ <tr><td><img src="images/segoe-mdl/F19F.png" width="32" height="32" alt="ToggleRight" /></td>
+  <td>F19F</td>
+  <td>ToggleRight</td>
+ </tr>
 <tr><td><img src="images/segoe-mdl/F1AD.png" width="32" height="32" alt="WindowsInsider" /></td>
   <td>F1AD</td>
   <td>WindowsInsider</td>
@@ -4692,9 +4781,28 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
   <td>F2B7</td>
   <td>LocaleLanguage</td>
 </tr>
+</table>
+
+### <a name="pua-f300-f500"></a>PUA F300-F500
+
+다음 문자 모양 표는 F3-에서 F5-로 시작하는 유니코드 포인트를 표시합니다.
+
+[맨 위로 이동](#icon-list)
+
+</br>
+<table style="background-color: white; color: black">
+ <tr>
+  <td>문자 모양</td>
+  <td>유니코드 포인트</td>
+  <td>설명</td>
+ </tr>
 <tr><td><img src="images/segoe-mdl/F32A.png" width="32" height="32" alt="PassiveAuthentication" /></td>
   <td>F32A</td>
   <td>PassiveAuthentication</td>
+ </tr>
+ <tr><td><img src="images/segoe-mdl/F354.png" width="32" height="32" alt="ColorSolid" /></td>
+  <td>F354</td>
+  <td>ColorSolid</td>
  </tr>
 <tr><td><img src="images/segoe-mdl/F384.png" width="32" height="32" alt="NetworkOffline" /></td>
   <td>F384</td>
@@ -4807,6 +4915,10 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
  <tr><td><img src="images/segoe-mdl/F49A.png" width="32" height="32" alt="Globe2" /></td>
   <td>F49A</td>
   <td>Globe2</td>
+</tr>
+ <tr><td><img src="images/segoe-mdl/F4A5.png" width="32" height="32" alt="SpecialEffectSize" /></td>
+  <td>F4A5</td>
+  <td>SpecialEffectSize</td>
 </tr>
 <tr><td><img src="images/segoe-mdl/F4A9.png" width="32" height="32" alt="GIF" /></td>
   <td>F4A9</td>
@@ -5180,6 +5292,21 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
   <td>F5FF</td>
   <td>VerticalBatteryCharging2</td>
  </tr>
+</table>
+
+ ### <a name="pua-f600-f800"></a>PUA F600-F800
+
+다음 문자 모양 표는 F6-에서 F8-로 시작하는 유니코드 포인트를 표시합니다.
+
+[맨 위로 이동](#icon-list)
+
+</br>
+<table style="background-color: white; color: black">
+ <tr>
+  <td>문자 모양</td>
+  <td>유니코드 포인트</td>
+  <td>설명</td>
+ </tr>
 <tr><td><img src="images/segoe-mdl/F600.png" width="32" height="32" alt="VerticalBatteryCharging3" /></td>
   <td>F600</td>
   <td>VerticalBatteryCharging3</td>
@@ -5307,6 +5434,14 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
 <tr><td><img src="images/segoe-mdl/F69E.png" width="32" height="32" alt="CHTLanguageBar" /></td>
   <td>F69E</td>
   <td>CHTLanguageBar</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F6A9.png" width="32" height="32" alt="ComposeMode" /></td>
+  <td>F6A9</td>
+  <td>ComposeMode</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F6B8.png" width="32" height="32" alt="ExpressiveInputEntry" /></td>
+  <td>F6B8</td>
+  <td>ExpressiveInputEntry</td>
 </tr>
 <tr><td><img src="images/segoe-mdl/F6BA.png" width="32" height="32" alt="EmojiTabMoreSymbols" /></td>
   <td>F6BA</td>
@@ -5512,7 +5647,74 @@ Symbol 열거형에 포함되지 않은 **Segoe MDL2 자산** 글꼴에서 문�
   <td>F847</td>
   <td>꺼내기</td>
 </tr>
-
+<tr><td><img src="images/segoe-mdl/F87B.png" width="32" height="32" alt="Spelling" /></td>
+  <td>F87B</td>
+  <td>맞춤법 검사</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F87C.png" width="32" height="32" alt="SpellingKorean" /></td>
+  <td>F87C</td>
+  <td>SpellingKorean</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F87D.png" width="32" height="32" alt="SpellingSerbian" /></td>
+  <td>SpellingSerbian</td>
+  <td>꺼내기</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F87E.png" width="32" height="32" alt="SpellingChinese" /></td>
+  <td>F87E</td>
+  <td>SpellingChinese</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F89A.png" width="32" height="32" alt="FolderSelect" /></td>
+  <td>F89A</td>
+  <td>FolderSelect</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F8A5.png" width="32" height="32" alt="SmartScreen" /></td>
+  <td>F8A5</td>
+  <td>SmartScreen</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F8A6.png" width="32" height="32" alt="ExploitProtection" /></td>
+  <td>F8A6</td>
+  <td>ExploitProtection</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F8AA.png" width="32" height="32" alt="AddBold" /></td>
+  <td>F8AA</td>
+  <td>AddBold</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F8AB.png" width="32" height="32" alt="SubtractBold" /></td>
+  <td>F8AB</td>
+  <td>SubtractBold</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F8AC.png" width="32" height="32" alt="BackSolidBold" /></td>
+  <td>F8AC</td>
+  <td>BackSolidBold</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F8AD.png" width="32" height="32" alt="ForwardSolidBold" /></td>
+  <td>F8AD</td>
+  <td>ForwardSolidBold</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F8AE.png" width="32" height="32" alt="PauseBold" /></td>
+  <td>F8AE</td>
+  <td>PauseBold</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F8AF.png" width="32" height="32" alt="ClickSolid" /></td>
+  <td>F8AF</td>
+  <td>ClickSolid</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F8B0.png" width="32" height="32" alt="SettingsSolid" /></td>
+  <td>F8B0</td>
+  <td>SettingsSolid</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F8B1.png" width="32" height="32" alt="MicrophoneSolidBold" /></td>
+  <td>F8B1</td>
+  <td>MicrophoneSolidBold</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F8B2.png" width="32" height="32" alt="SpeechSolidBold" /></td>
+  <td>F8B2</td>
+  <td>SpeechSolidBold</td>
+</tr>
+<tr><td><img src="images/segoe-mdl/F8B3.png" width="32" height="32" alt="ClickedOutLoudSolidBold" /></td>
+  <td>F8B3</td>
+  <td>ClickedOutLoudSolidBold</td>
+</tr>
 </table>
 
 

@@ -12,12 +12,12 @@ design-contact: jeffarn
 dev-contact: mitra
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ccdea35b8923c756489f6b671d394fc516a960c
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 24ba67dfa51c039055cc5bc4cb31d4aff4de6765
+ms.sourcegitcommit: b99fe39126fbb457c3690312641f57d22ba7c8b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91749749"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96603896"
 ---
 # <a name="progress-controls"></a>진행률 컨트롤
 
@@ -61,11 +61,12 @@ Imports muxc = Microsoft.UI.Xaml.Controls
 
 ## <a name="types-of-progress"></a>진행률 유형
 
-사용자에게 작업 진행을 표시하기 위해 ProgressBar 또는 ProgressRing 두 가지 컨트롤이 있습니다.
+사용자에게 작업 진행을 표시하기 위해 ProgressBar 또는 ProgressRing 두 가지 컨트롤이 있습니다. ProgressBar와 ProgressRing에는 사용자가 애플리케이션과 상호 작용할 수 있는지 여부를 통신하는 두 가지 상태가 있습니다. 
 
--   ProgressBar *확정* 상태는 작업의 완료율을 표시합니다. 기간이 알려진 작업 중에 사용되지만 해당 진행률이 사용자의 앱 조작을 차단하지 않아야 합니다.
--   ProgressBar *확정되지 않음* 상태는 작업이 진행 중이며 사용자의 앱 조작을 차단하지 않고 완료 시간을 알 수 없다는 의미입니다.
--   ProgressRing은 *확정되지 않음* 상태로만 설정할 수 있으며 작업이 완료될 때까지 추가 사용자 조작이 차단될 때 사용되어야 합니다.
+-   ProgressBar 및 ProgressRing의 *확정* 상태는 작업 완료율을 보여줍니다. 기간이 알려진 작업 중에 사용되지만 해당 진행률이 사용자의 앱 조작을 차단하지 않아야 합니다.
+-   ProgressBar의 *확정되지 않음* 상태는 작업이 진행 중이며 사용자의 앱 조작을 차단하지 않고 완료 시간을 알 수 없음을 보여줍니다.
+-   ProgressRing의 *확정되지 않음* 상태는 작업이 진행 중이며 사용자의 앱 조작을 차단하고 완료 시간을 알 수 없다는 것을 보여줍니다.
+
 
 또한 진행률 컨트롤은 읽기 전용이므로 조작할 수 없습니다. 즉, 사용자가 이러한 컨트롤을 직접 호출하거나 사용할 수 없다는 의미입니다.
 
@@ -73,7 +74,8 @@ Imports muxc = Microsoft.UI.Xaml.Controls
 |---|---|
 | 확정되지 않은 ProgressBar | ![ProgressBar 확정되지 않음](images/progressbar-indeterminate.gif) |
 | 확정된 ProgressBar | ![ProgressBar 확정됨](images/progressbar-determinate.png)|
-| 확정되지 않은 ProgressRing | ![ProgressRing 상태](images/progressring-indeterminate.gif)|
+| 확정되지 않은 ProgressRing | ![확정되지 않은 ProgressRing 상태](images/progressring-indeterminate.gif)|
+| 확정된 ProgressRing | ![확정된 ProgressRing 상태](images/progress_ring.jpg)|
 
 
 ## <a name="examples"></a>예
@@ -117,11 +119,15 @@ Imports muxc = Microsoft.UI.Xaml.Controls
 
 -   **작업으로 인해 사용자가 계속 대기 중인가요?**
 
-    작업이 완료될 때까지 모든(또는 상당 부분) 앱 조작을 대기해야 하는 경우 ProgressRing을 사용하는 것이 더 좋습니다. ProgressRing 컨트롤은 모달 조작에 사용되며 이는 ProgressRing이 사라질 때까지 사용자가 차단된다는 의미입니다.
+    작업이 완료될 때까지 모든(또는 상당 부분) 앱 조작을 대기해야 하는 경우 확정되지 않은 ProgressRing을 사용하는 것이 더 좋습니다.
+
+    -   **컨트롤에 기간 또는 예측 가능한 종료 시점이 정의되어 있나요?**
+
+    시각적 개체가 막대 대신 링이 되도록 하려면 확정된 ProgressRing을 사용하고 그에 따라 백분율 또는 값을 업데이트합니다. 
 
 -   **사용자 작업이 완료될 때까지 앱이 대기하나요?**
 
-    이 경우 사용자 대기 시간을 알 수 없음을 나타내므로 ProgressRing을 사용합니다.
+    이 경우 사용자에 대한 알 수 없는 대기 시간을 나타낸다는 의미이므로 확정되지 않은 ProgressRing을 사용합니다.
 
 -   **키워드**
 
@@ -154,21 +160,27 @@ Imports muxc = Microsoft.UI.Xaml.Controls
 
 첫 번째 예제는 확정 ProgressBar입니다. 작업 기간을 알고 있는 경우나 설치, 다운로드, 설정하는 경우 등에는 확정 ProgressBar가 가장 적합합니다.
 
-**ProgressBar - 미확정**
+**ProgressBar - 확정되지 않음**
 
 ![ProgressBar 확정되지 않음 예제](images/progress-bar-indeterminate-example.png)
 
-작업 기간을 알 수 없는 경우 확정되지 않음 ProgressBar를 사용합니다. 확정되지 않음 ProgressBar는 가상화된 목록을 채우고 확정되지 않음 ProgressBar에서 확정 ProgressBar로의 자연스러운 시각적 전환을 만들 때도 좋습니다.
+작업 기간을 알 수 없는 경우 확정되지 않은 ProgressBar를 사용합니다. 확정되지 않은 ProgressBar는 가상화된 목록을 채우고 확정되지 않은 ProgressBar에서 확정 ProgressBar로의 자연스러운 시각적 전환을 만들 때도 좋습니다.
 
 -   **가상화된 컬렉션에 작업이 있나요?**
 
     이 경우 각 목록 항목이 나타날 때 진행률 표시기를 배치하지 마세요. 대신 ProgressBar를 사용하고 로드 중인 항목 컬렉션 위에 배치하여 가져오는 항목을 표시합니다.
 
-**ProgressRing - 미확정**
+**ProgressRing - 확정되지 않음**
 
-![ProgressRing 확정되지 않음 예제](images/PR_IndeterminateExample.png)
+![ProgressRing 확정되지 않은 예제](images/PR_IndeterminateExample.png)
 
 확정되지 않은 ProgressRing은 사용자의 앱 조작이 중단되었거나 앱이 계속 진행되기 위해 사용자 입력을 대기 중인 경우에 사용됩니다. 위의 “로그인...” 예제는 ProgressRing의 완벽한 시나리오로, 사용자는 로그인이 완료될 때까지 앱을 사용할 수 없습니다.
+
+**ProgressRing - 확정됨**
+
+![ProgressRing 확정 예제](images/progress_ring_determinate_example.png)
+
+작업 기간을 알고 있는 경우와 링 비주얼이 필요한 경우, 설치, 다운로드, 설정 등에는 확정된 ProgressRing이 가장 좋습니다.
 
 ## <a name="customizing-a-progress-control"></a>진행률 컨트롤 사용자 지정
 
