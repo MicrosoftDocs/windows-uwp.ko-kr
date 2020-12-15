@@ -130,6 +130,14 @@
                   href: winui/winui2/release-notes/winui-2.0.md
         - name: WinUI API 참조
           href: /windows/winui/api/
+    - name: 프로젝트 리유니언을 사용하여 Windows 앱 빌드(시험판)
+      items:
+        - name: 개요
+          href: project-reunion/index.md
+        - name: MRT Core
+          href: project-reunion/mrtcore/mrtcore-overview.md
+        - name: DWriteCore
+          href: project-reunion/dwritecore.md
     - name: Windows 10X용 개발
       items:
         - name: Windows 10X Dev FAQ

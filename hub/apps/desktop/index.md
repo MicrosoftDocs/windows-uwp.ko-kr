@@ -7,12 +7,12 @@ keywords: windows win32, 데스크톱 개발
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 34b860916b90d1adc8ae9e7ae8c8ac7950125ce7
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 554869625c0db7a2a19dc7c01837e47029bd28e6
+ms.sourcegitcommit: cddc595969c658ce30fbc94ded92db4a8ad1bf66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214270"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Windows PC용 데스크톱 앱 빌드
 
@@ -20,10 +20,11 @@ ms.locfileid: "91216746"
 
 ## <a name="platforms-for-desktop-apps"></a>데스크톱 앱용 플랫폼
 
-Windows PC용 데스크톱 앱 빌드를 위한 주요 플랫폼에는 4가지가 있습니다. 각 플랫폼은 앱의 수명 주기, 완전한 UI 프레임워크 및 UI 컨트롤 세트를 정의하는 앱 모델을 제공합니다. 이를 통해 Word, Excel 및 Photoshop과 같은 데스크톱 앱을 만들고 Windows 기능을 사용하기 위한 포괄적인 관리형 또는 네이티브 API 세트에 액세스할 수 있습니다. 각 플랫폼에 대한 추가 리소스를 비롯한 이 플랫폼의 상세 비교는 [앱 플랫폼 선택](choose-your-platform.md)을 참조하세요.
+Windows PC용 데스크톱 앱 빌드를 위한 주요 플랫폼에는 4가지가 있습니다. 각 플랫폼은 앱의 수명 주기, 완전한 UI 프레임워크 및 UI 컨트롤 세트를 정의하는 앱 모델을 제공합니다. 이를 통해 Word, Excel 및 Photoshop과 같은 데스크톱 앱을 만들고 Windows 기능을 사용하기 위한 포괄적인 관리형 또는 네이티브 API 세트에 액세스할 수 있습니다. 
+
+각 플랫폼에 대한 추가 리소스를 비롯한 이 플랫폼의 상세 비교는 [앱 플랫폼 선택](choose-your-platform.md)을 참조하세요.
 
 <br/>
-
 <table>
 <colgroup>
 <col width="20%" />
@@ -61,8 +62,17 @@ Windows PC용 데스크톱 앱 빌드를 위한 주요 플랫폼에는 4가지�
 </tbody>
 </table>
 
-> [!NOTE]
-> Windows 10에서 이러한 각 플랫폼은 WinUI(Windows UI) 라이브러리를 사용하여 사용자 인터페이스를 만들 수도 있습니다. 데스크톱 앱용 WinUI에 대한 자세한 내용은 [이 섹션](choose-your-platform.md#windows-ui-library)을 참조하세요.
+### <a name="future-roadmap"></a>향후 로드맵
+
+앞으로 Windows UI(WinUI) 라이브러리 및 프로젝트 리뉴니언을 통해 Windows 앱 개발 플랫폼을 발전시킬 것입니다.
+
+* **WinUI** 는 Windows 10 앱에 대한 기본 UX(사용자 환경) 프레임워크입니다. WinUI는 하위 버전의 Windows 10을 대상으로 하는 UWP 앱을 위한 최신 버전 및 업데이트된 버전의 UWP 컨트롤을 제공하는 도구 키트로 시작되었습니다. WinUI는 대상 범위를 늘려 왔으며, WinUI 3(현재 미리 보기)부터 UWP, .NET 및 Win32에서 Windows 10 앱을 위한 최신 기본 UI(사용자 인터페이스) 플랫폼이 되었습니다. 
+
+    자세한 내용은 [Windows UI(WinUI) 라이브러리](../winui/index.md)를 참조하세요.
+
+* **프로젝트 리뉴니언**(현재 미리 보기)은 Windows 앱 개발 플랫폼의 한 단계 발전을 나타내는 광범위한 새 개발자 구성 요소 및 도구 집합의 코드 이름입니다. 프로젝트 리유니언은 광범위한 대상 Windows 10 OS 버전 세트의 모든 앱에서 일관된 방식으로 사용할 수 있는 통합 API 및 도구 집합을 제공합니다. 프로젝트 리유니언은 기존 Windows 앱 플랫폼과 UWP, 네이티브 Win32, .NET과 같은 프레임워크를 개발자가 이러한 플랫폼에서 사용할 수 있는 공통 API 및 도구 집합으로 보완합니다. 
+
+    자세한 내용은 [프로젝트 리유니언](../project-reunion/index.md)을 참조하세요.
 
 ## <a name="update-existing-desktop-apps-for-windows-10"></a>Windows 10용 기존 데스크톱 앱 업데이트
 
