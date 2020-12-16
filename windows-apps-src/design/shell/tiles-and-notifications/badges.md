@@ -1,5 +1,5 @@
 ---
-description: 타일, 배지 및 알림을 사용하여 앱에 대한 진입점을 제공하고 사용자를 최신 상태로 유지하는 방법에 대해 알아봅니다.
+description: 배지 알림을 사용 하 여 응용 프로그램에 특정 한 요약 또는 상태 정보를 전달 하는 방법을 알아봅니다.
 title: Windows 앱에 대한 배지 알림
 ms.assetid: 48ee4328-7999-40c2-9354-7ea7d488c538
 label: Tiles, badges, and notifications
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 64d5595bcc315b24228401ff23a1a59d29282eae
-ms.sourcegitcommit: cbdfac0e2d8bead6c225e815e7d6dffe1f5ef864
+ms.openlocfilehash: a1edb80db6858c7b8ccbbf443df2a0c01d3ede5d
+ms.sourcegitcommit: 40b890c7b862f333879887cc22faff560c49eae6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92344971"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97598884"
 ---
 # <a name="badge-notifications-for-windows-apps"></a>Windows 앱에 대한 배지 알림
 
@@ -50,7 +50,7 @@ attention | :::image type="icon" source="images/badges/badge-attention.png"::: |
 사용 가능 | :::image type="icon" source="images/badges/badge-available.png"::: | `<badge value="available"/>`
 away | :::image type="icon" source="images/badges/badge-away.png"::: | `<badge value="away"/>`
 busy | :::image type="icon" source="images/badges/badge-busy.png"::: | `<badge value="busy"/>`
-오류 | :::image type="icon" source="images/badges/badge-error.png"::: | `<badge value="error"/>`
+error | :::image type="icon" source="images/badges/badge-error.png"::: | `<badge value="error"/>`
 newMessage | :::image type="icon" source="images/badges/badge-newMessage.png"::: | `<badge value="newMessage"/>`
 paused | :::image type="icon" source="images/badges/badge-paused.png"::: | `<badge value="paused"/>`
 playing | :::image type="icon" source="images/badges/badge-playing.png"::: | `<badge value="playing"/>`
@@ -128,7 +128,7 @@ private void clearBadge()
 
 * [알림 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Notifications)<br/> 라이브 타일을 만들고, 배지 업데이트를 보내고, 알림 메시지를 표시 하는 방법을 보여 줍니다. 
 
-## <a name="related-articles"></a>관련 문서
+## <a name="related-articles"></a>관련된 문서
 
 * [적응형 및 대화형 알림 메시지](adaptive-interactive-toasts.md)
 * [타일 만들기](creating-tiles.md)

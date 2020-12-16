@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, acpi, gpio, i2c, spi, uefi
 ms.assetid: 2fbdfc78-3a43-4828-ae55-fd3789da7b34
 ms.localizationpriority: medium
-ms.openlocfilehash: 76ef3c6b75a5d1a4bd8daebba3a392062c845215
-ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
+ms.openlocfilehash: 0fc07cf45fc4762b202698c07b7cf2088e260e1b
+ms.sourcegitcommit: 40b890c7b862f333879887cc22faff560c49eae6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860190"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97598844"
 ---
 # <a name="enable-user-mode-access-to-gpio-i2c-and-spi"></a>GPIO, I2C 및 SPI에 대한 사용자 모드 액세스를 사용하도록 설정
 
@@ -22,7 +22,7 @@ Windows 10에는 일반 용도의 GPIO (입력/출력), I2C (Inter-Integrated �
 > [!IMPORTANT]
 > 이 문서의 대상은 UEFI (UEFI(Unified Extensible Firmware Interface)) 및 ACPI 개발자를 위한 것입니다. ACPI, ASL (ACPI 원본 언어) 제작 및 SpbCx/Gpix/Gpix를 사용 하는 것이 가장 좋습니다.
 
-Windows에서 낮은 수준의 버스에 대 한 사용자 모드 액세스는 기존 `GpioClx` 및 프레임 워크를 통해 배관 됩니다 `SpbCx` . Windows IoT Core 및 Windows Enterprise에서 사용할 수 있는 *RhProxy*라는 새 드라이버가 `GpioClx` `SpbCx` 사용자 모드에 리소스를 노출 합니다. Api를 사용 하도록 설정 하려면 사용자 모드에 노출 해야 하는 각 GPIO 및 SPB 리소스를 사용 하 여 ACPI 테이블에서 rhproxy에 대 한 장치 노드를 선언 해야 합니다. 이 문서에서는 ASL을 작성 하 고 확인 하는 과정을 안내 합니다.
+Windows에서 낮은 수준의 버스에 대 한 사용자 모드 액세스는 기존 `GpioClx` 및 프레임 워크를 통해 배관 됩니다 `SpbCx` . Windows IoT Core 및 Windows Enterprise에서 사용할 수 있는 *RhProxy* 라는 새 드라이버가 `GpioClx` `SpbCx` 사용자 모드에 리소스를 노출 합니다. Api를 사용 하도록 설정 하려면 사용자 모드에 노출 해야 하는 각 GPIO 및 SPB 리소스를 사용 하 여 ACPI 테이블에서 rhproxy에 대 한 장치 노드를 선언 해야 합니다. 이 문서에서는 ASL을 작성 하 고 확인 하는 과정을 안내 합니다.
 
 ## <a name="asl-by-example"></a>예제 별 ASL
 
@@ -46,6 +46,9 @@ Device(RHPX)
 ### <a name="spi"></a>SPI
 
 Raspberry Pi에는 두 개의 노출 된 SPI 버스가 있습니다. SPI0에는 두 개의 하드웨어 칩 선택 회선이 있으며 SPI1에는 하드웨어 칩 선택 줄이 하나 있습니다. 각 칩의 각 칩 선택 줄에는 하나의 SPISerialBus () 리소스 선언이 필요 합니다. 다음 두 가지 SPISerialBus 리소스 선언은 SPI0에서 두 개의 칩 선택 줄에 대 한 것입니다. DeviceSelection 필드에는 드라이버가 하드웨어 칩 선택 줄 식별자로 해석 하는 고유 값이 포함 되어 있습니다. DeviceSelection 필드에 입력 하는 정확한 값은 드라이버가 ACPI 연결 설명자의이 필드를 해석 하는 방법에 따라 달라 집니다.
+
+> [!NOTE]
+> 이 문서에는 Microsoft에서 더 이상 사용 하지 않는 용어 종속 용어에 대 한 참조가 포함 되어 있습니다. 소프트웨어에서 용어를 제거 하는 경우이 문서에서 제거 합니다.
 
 ```cpp
 // Index 0
@@ -358,7 +361,7 @@ Pin muxing 관련 된 작업의 시퀀스는 다음과 같습니다.
 3. 서버는 리소스 허브 도우미 함수를 사용 하 여 파일 경로에서 리소스 허브 ID를 추출 하 `RESOURCE_HUB_ID_FROM_FILE_NAME()` 고 리소스 허브를 쿼리하여 리소스 설명자를 가져옵니다.
 4. 서버는 설명자의 각 핀에 대해 중재 공유를 수행 하 고 IRP_MJ_CREATE 요청을 완료 합니다.
 5. 클라이언트에서 수신 된 핸들에 대 한 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* 요청을 발급 합니다.
-6. *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*에 대 한 응답으로 서버는 각 pin에서 지정 된 기능을 활성화 하 여 하드웨어 muxing 작업을 수행 합니다.
+6. *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* 에 대 한 응답으로 서버는 각 pin에서 지정 된 기능을 활성화 하 여 하드웨어 muxing 작업을 수행 합니다.
 7. 클라이언트는 요청 된 pin muxing 구성에 종속 된 작업을 진행 합니다.
 8. 클라이언트에서 더 이상 pin을 muxed 필요가 없으면 핸들을 닫습니다.
 9. 종결 중인 핸들에 대 한 응답으로 서버는 pin을 다시 초기 상태로 되돌립니다.
@@ -530,18 +533,18 @@ Pin 목록의 각 pin에 대해 공유 조정을 성공적으로 수행 하면 �
   - 그리고 들어오는 요청을 공유 하 고 공유 중재를 성공적으로 수행 했습니다.
   - 들어오는 요청은 배타적 이므로 공유 중재가 실패 합니다.
 
-중재 공유가 실패 하면 *STATUS_GPIO_INCOMPATIBLE_CONNECT_MODE*를 사용 하 여 요청을 완료 해야 합니다. 중재 공유가 성공 하면 *STATUS_SUCCESS*를 사용 하 여 요청을 완료 해야 합니다.
+중재 공유가 실패 하면 *STATUS_GPIO_INCOMPATIBLE_CONNECT_MODE* 를 사용 하 여 요청을 완료 해야 합니다. 중재 공유가 성공 하면 *STATUS_SUCCESS* 를 사용 하 여 요청을 완료 해야 합니다.
 
 들어오는 요청의 공유 모드는 [Irpsp >매개 변수가](/windows-hardware/drivers/ifs/irp-mj-create)아닌 MsftFunctionConfig 설명자에서 가져와야 합니다. Shareaccess를 만듭니다.
 
 #### <a name="handling-ioctl_gpio_commit_function_config_pins-requests"></a>IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS 요청 처리
 
-클라이언트는 핸들을 열어 MsftFunctionConfig 리소스를 성공적으로 예약한 후에 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* 를 전송 하 여 실제 하드웨어 muxing 작업을 수행 하도록 서버를 요청할 수 있습니다. 서버 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*수신 되 면 pin 목록의 각 핀에 대해
+클라이언트는 핸들을 열어 MsftFunctionConfig 리소스를 성공적으로 예약한 후에 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* 를 전송 하 여 실제 하드웨어 muxing 작업을 수행 하도록 서버를 요청할 수 있습니다. 서버 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* 수신 되 면 pin 목록의 각 핀에 대해
 
 - PNP_FUNCTION_CONFIG_DESCRIPTOR 구조의 PinConfiguration 구성원에 지정 된 끌어오기 모드를 하드웨어로 설정 합니다.
 - PNP_FUNCTION_CONFIG_DESCRIPTOR 구조체의 FunctionNumber 멤버로 지정 된 함수에 대 한 pin을 Mux 합니다.
 
-그러면 서버에서 *STATUS_SUCCESS*를 사용 하 여 요청을 완료 해야 합니다.
+그러면 서버에서 *STATUS_SUCCESS* 를 사용 하 여 요청을 완료 해야 합니다.
 
 FunctionNumber의 의미는 서버에서 정의 되며 서버에서이 필드를 해석 하는 방법에 대 한 정보를 사용 하 여 MsftFunctionConfig 설명자를 작성 했음을 인식 합니다.
 
@@ -549,7 +552,7 @@ FunctionNumber의 의미는 서버에서 정의 되며 서버에서이 필드를
 
 #### <a name="handling-irp_mj_close-requests"></a>IRP_MJ_CLOSE 요청 처리
 
-클라이언트에 muxing 리소스가 더 이상 필요 하지 않은 경우 해당 핸들을 닫습니다. 서버 *IRP_MJ_CLOSE* 요청을 받으면 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* 수신 되었을 때의 상태로 pin을 되돌려야 합니다. 클라이언트에서 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS*보내지 않은 경우 아무 작업도 필요 하지 않습니다. 그런 다음 서버는 조정 공유와 관련 하 여 pin을 사용 가능으로 표시 하 고 *STATUS_SUCCESS*를 사용 하 여 요청을 완료 해야 합니다. *IRP_MJ_CREATE* 처리를 사용 하 여 *IRP_MJ_CLOSE* 처리를 적절히 동기화 해야 합니다.
+클라이언트에 muxing 리소스가 더 이상 필요 하지 않은 경우 해당 핸들을 닫습니다. 서버 *IRP_MJ_CLOSE* 요청을 받으면 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* 수신 되었을 때의 상태로 pin을 되돌려야 합니다. 클라이언트에서 *IOCTL_GPIO_COMMIT_FUNCTION_CONFIG_PINS* 보내지 않은 경우 아무 작업도 필요 하지 않습니다. 그런 다음 서버는 조정 공유와 관련 하 여 pin을 사용 가능으로 표시 하 고 *STATUS_SUCCESS* 를 사용 하 여 요청을 완료 해야 합니다. *IRP_MJ_CREATE* 처리를 사용 하 여 *IRP_MJ_CLOSE* 처리를 적절히 동기화 해야 합니다.
 
 ### <a name="authoring-guidelines-for-acpi-tables"></a>ACPI 테이블에 대 한 작성 지침
 

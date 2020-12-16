@@ -1,5 +1,5 @@
 ---
-description: Cortana 음성 명령, 음성 인식 및 음성 합성을 사용 하 여 앱에 음성을 통합 합니다.
+description: Surface 전화 접속 및이를 사용 하 여 Windows 및 Windows 앱에 대 한 강력 하 고 고유한 사용자 상호 작용 환경의 호스트를 사용 하는 방법에 대해 알아봅니다.
 title: Surface Dial 조작
 label: Surface Dial interactions
 template: detail.hbs
@@ -8,12 +8,12 @@ ms.date: 09/24/2020
 ms.topic: article
 ms.assetid: e7deb1d6-feeb-471e-9a83-26386d1aaf37
 ms.localizationpriority: medium
-ms.openlocfilehash: 641ea8a7c17e87086fe2d441b67c16e41fcaf6eb
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: e5b55f35e59779d5fb8dfd01caa843be5bcfa6a3
+ms.sourcegitcommit: 40b890c7b862f333879887cc22faff560c49eae6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93033466"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97598894"
 ---
 # <a name="surface-dial-interactions"></a>Surface Dial 조작
 
@@ -74,7 +74,7 @@ Surface 다이얼은 Windows와 긴밀 하 게 통합 되며 메뉴에서 시스
 - 사용자가 Windows 바탕 화면에 있는 경우 시스템 밝기 도구
 - 미디어가 재생 중인 이전/다음 트랙 도구
 
-이러한 일반 플랫폼 지원 이외에도 Surface 전화 걸기는 Windows Ink 플랫폼 컨트롤 ( [**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 및 [**inktoolbar**](/uwp/api/Windows.UI.Xaml.Controls.InkToolbar))과 긴밀 하 게 통합 됩니다.
+이러한 일반 플랫폼 지원 이외에도 Surface 전화 걸기는 Windows Ink 플랫폼 컨트롤 ([**InkCanvas**](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 및 [**inktoolbar**](/uwp/api/Windows.UI.Xaml.Controls.InkToolbar))과 긴밀 하 게 통합 됩니다.
 
 ![Surface로 전화 접속 surface 펜](images/windows-wheel/dial-and-pen-400px.png)  
 *Surface로 전화 접속 surface 펜*
@@ -212,7 +212,7 @@ Surface Dial 메뉴 항목은 사용 하지 않도록 설정 된 상태를 지�
 
    그런 다음 해당 항목을 메뉴 항목의 컬렉션에 추가 합니다.
 
-   [**RadialController**](/uwp/api/Windows.UI.Input.RadialController) 개체에 대 한 입력 이벤트 처리기 ( [**controls.buttonclicked**](/uwp/api/windows.ui.input.radialcontroller.buttonclicked) 및 [**RotationChanged**](/uwp/api/windows.ui.input.radialcontroller.rotationchanged))를 선언 합니다.
+   [**RadialController**](/uwp/api/Windows.UI.Input.RadialController) 개체에 대 한 입력 이벤트 처리기 ([**controls.buttonclicked**](/uwp/api/windows.ui.input.radialcontroller.buttonclicked) 및 [**RotationChanged**](/uwp/api/windows.ui.input.radialcontroller.rotationchanged))를 선언 합니다.
 
    마지막으로 이벤트 처리기를 정의 합니다.
 
@@ -374,7 +374,7 @@ Accomodating를 통해 고객 만족도를 극대화 하 고 로캘 및 오른�
 
 #### <a name="developer-guidance"></a>개발자 지침
 
-사용자가 장치를 회전할 때 [**RadialController. RotationChanged**](/uwp/api/windows.ui.input.radialcontroller.rotationchanged) 이벤트는 회전 방향에 상대적인 델타 ( [**RadialControllerRotationChangedEventArgs**](/uwp/api/windows.ui.input.radialcontrollerrotationchangedeventargs.rotationdeltaindegrees))를 기반으로 발생 합니다. [**RadialController. RotationResolutionInDegrees**](/uwp/api/windows.ui.input.radialcontroller.rotationresolutionindegrees) 속성을 사용 하 여 데이터의 민감도 또는 해상도를 설정할 수 있습니다.
+사용자가 장치를 회전할 때 [**RadialController. RotationChanged**](/uwp/api/windows.ui.input.radialcontroller.rotationchanged) 이벤트는 회전 방향에 상대적인 델타 ([**RadialControllerRotationChangedEventArgs**](/uwp/api/windows.ui.input.radialcontrollerrotationchangedeventargs.rotationdeltaindegrees))를 기반으로 발생 합니다. [**RadialController. RotationResolutionInDegrees**](/uwp/api/windows.ui.input.radialcontroller.rotationresolutionindegrees) 속성을 사용 하 여 데이터의 민감도 또는 해상도를 설정할 수 있습니다.
 
 > [!NOTE]
 > 기본적으로 회전 입력 이벤트는 장치가 최소 10도 회전 된 경우에만 [**RadialController**](/uwp/api/Windows.UI.Input.RadialController) 개체로 전달 됩니다. 각 입력 이벤트로 인해 장치가 진동 됩니다.
@@ -411,7 +411,7 @@ private void MyController_ButtonClicked(RadialController sender,
 }
 ```
 
-### <a name="click"></a>클릭
+### <a name="click"></a>리본 메뉴에서
 
 Surface Dial을 클릭하는 것은 왼쪽 마우스 단추를 클릭하는 것과 같습니다(디바이스의 회전 상태가 이 작업에는 영향을 미치지 않음).
 
@@ -470,11 +470,11 @@ Surface 전화 걸기가 클릭 되 면 [**RadialController. controls.buttonclic
 
 #### <a name="developer-guidance"></a>개발자 지침
 
-Surface Studio의 디지타이저 화면에 Surface 다이얼이 배치 되 면 [**RadialController**](/uwp/api/windows.ui.input.radialcontroller.screencontactstarted) 이벤트가 발생 하 고 연락처 정보 ( [**RadialControllerScreenContactStartedEventArgs**](/uwp/api/windows.ui.input.radialcontrollerscreencontactstartedeventargs.contact))가 앱에 제공 됩니다.
+Surface Studio의 디지타이저 화면에 Surface 다이얼이 배치 되 면 [**RadialController**](/uwp/api/windows.ui.input.radialcontroller.screencontactstarted) 이벤트가 발생 하 고 연락처 정보 ([**RadialControllerScreenContactStartedEventArgs**](/uwp/api/windows.ui.input.radialcontrollerscreencontactstartedeventargs.contact))가 앱에 제공 됩니다.
 
-마찬가지로 Surface Studio의 디지타이저 화면에 연락할 때 Surface 다이얼을 클릭 하면 [**RadialController controls.buttonclicked**](/uwp/api/windows.ui.input.radialcontroller.buttonclicked) 이벤트가 발생 하 고 연락처 정보 ( [**RadialControllerButtonClickedEventArgs**](/uwp/api/windows.ui.input.radialcontrollerbuttonclickedeventargs.contact))가 앱에 제공 됩니다. 
+마찬가지로 Surface Studio의 디지타이저 화면에 연락할 때 Surface 다이얼을 클릭 하면 [**RadialController controls.buttonclicked**](/uwp/api/windows.ui.input.radialcontroller.buttonclicked) 이벤트가 발생 하 고 연락처 정보 ([**RadialControllerButtonClickedEventArgs**](/uwp/api/windows.ui.input.radialcontrollerbuttonclickedeventargs.contact))가 앱에 제공 됩니다. 
 
-연락처 정보 ( [**RadialControllerScreenContact**](/uwp/api/Windows.UI.Input.RadialControllerScreenContact))에는 앱의 좌표 공간에서 화면 전화 접속 중심의 X/Y [**좌표 (Dip**](/uwp/api/windows.ui.input.radialcontrollerscreencontact.position)(장치 독립적 픽셀)의 경계 사각형 ( [**RadialControllerScreenContact**](/uwp/api/windows.ui.input.radialcontrollerscreencontact.bounds)))가 포함 됩니다. 이 정보는 활성 도구에 컨텍스트를 제공 하 고 사용자에 게 장치 관련 시각적 피드백을 제공 하는 데 매우 유용 합니다.
+연락처 정보 ([**RadialControllerScreenContact**](/uwp/api/Windows.UI.Input.RadialControllerScreenContact))에는 앱의 좌표 공간에서 화면 전화 접속 중심의 X/Y [**좌표 (Dip**](/uwp/api/windows.ui.input.radialcontrollerscreencontact.position)(장치 독립적 픽셀)의 경계 사각형 ([**RadialControllerScreenContact**](/uwp/api/windows.ui.input.radialcontrollerscreencontact.bounds)))가 포함 됩니다. 이 정보는 활성 도구에 컨텍스트를 제공 하 고 사용자에 게 장치 관련 시각적 피드백을 제공 하는 데 매우 유용 합니다.
 
 다음 예제에서는 각각 하나의 슬라이더와 토글을 포함 하는 네 가지 섹션을 포함 하는 기본 앱을 만들었습니다. 그런 다음 surface 전화 접속의 화면 위치를 사용 하 여 Surface 다이얼에 의해 제어 되는 슬라이더 및 토글 집합을 받아쓰기 합니다.
 
