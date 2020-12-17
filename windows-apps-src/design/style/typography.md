@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 5f06d5e804d41b1751c72af4d07224fa346323b2
-ms.sourcegitcommit: d786d084dafee5da0268ebb51cead1d8acb9b13e
+ms.openlocfilehash: 3660417f6e88268dd2ad814ce4dba62354029828
+ms.sourcegitcommit: 05f9bb0c563e12daaacf7732d46f1c7f578dbe6a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91860107"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97529288"
 ---
 # <a name="typography-in-windows-apps"></a>Windows 앱의 입력 체계
 
@@ -21,7 +21,7 @@ ms.locfileid: "91860107"
 
 ## <a name="font"></a>글꼴
 
-앱의 UI 전체에서 한 가지 글꼴만 사용해야 하며 Windows 앱의 기본 글꼴인 **Segoe UI**를 계속 사용하는 것이 좋습니다. 크기와 픽셀 밀도에 따라 최적의 가독성을 유지하도록 설계되었으며, 시스템의 콘텐츠를 보완하는 깔끔하고 가볍고 개방적인 디자인을 제공합니다.
+앱의 UI 전체에서 한 가지 글꼴만 사용해야 하며 Windows 앱의 기본 글꼴인 **Segoe UI** 를 계속 사용하는 것이 좋습니다. 크기와 픽셀 밀도에 따라 최적의 가독성을 유지하도록 설계되었으며, 시스템의 콘텐츠를 보완하는 깔끔하고 가볍고 개방적인 디자인을 제공합니다.
 
 ![Segoe UI 글꼴의 샘플 텍스트](images/type/segoe-sample.svg)
 
@@ -123,7 +123,7 @@ Windows 유형 램프는 페이지의 유형 스타일 간에 중요한 관계�
 
 :::row:::
     :::column:::
-![[녹색 확인 표시와 할 일이 있는 녹색 막대의 네 번째 스크린샷.](images/do.svg)
+![녹색 확인 표시와 할 일이 있는 녹색 막대의 네 번째 스크린샷.](images/do.svg)
 읽기 쉽도록 줄당 50~60자를 유지합니다.
     :::column-end:::
     :::column:::
@@ -143,7 +143,7 @@ Windows 유형 램프는 페이지의 유형 스타일 간에 중요한 관계�
 
 :::row:::
     :::column:::
-![[녹색 확인 표시와 할 일이 있는 녹색 막대의 다섯 번째 스크린샷.](images/do.svg)
+![녹색 확인 표시와 할 일이 있는 녹색 막대의 다섯 번째 스크린샷.](images/do.svg)
 여러 줄을 사용하도록 설정되면 텍스트를 잘라내고 래핑합니다.
     :::column-end:::
     :::column:::
