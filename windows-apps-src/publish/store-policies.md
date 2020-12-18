@@ -1,17 +1,17 @@
 ---
 title: Microsoft Store 정책
 description: Microsoft Store 있는 제품은 인증 표준을 충족하고 고객에게 실로 유용하고 멋진 경험을 제공하며 Microsoft Store에 적합한 콘텐츠를 제공해야 합니다.
-ms.date: 10/01/2019
+ms.date: 12/16/2020
 ms.topic: article
 keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
-ms.openlocfilehash: 4d7c30b49ea0e6276e1d7959a17086f7ff829915
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: fc7a9ebd3ebe9ce86f4c44e7e13ea25d5a01240e
+ms.sourcegitcommit: 5dac88ad541b71ebe85b78951e6b357a3db176cc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170913"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97611461"
 ---
 # <a name="microsoft-store-policies"></a>Microsoft Store 정책
 
@@ -22,6 +22,9 @@ ms.locfileid: "89170913"
 
 > [!NOTE]
 > 본 계약의 최근 변경된 내용은 [변경 기록](store-policies-change-history.md) 섹션에 요약되어 있습니다.
+
+> [!NOTE]
+> **2020년 12월 16일 정책 업데이트 공지**: [Xbox Live Creators 프로그램](https://www.xbox.com/developers/creators-program/)을 통해 개발된 콘솔을 대상으로 하는 게임 제품의 경우 XBL 서비스와 통합하기 위한 요구 사항이 더 이상 적용되지 않습니다. 특정 정책([정책 10.13.1](https://docs.microsoft.com/windows/uwp/publish/store-policies#1013-gaming-and-xbox))은 다음에 스토어 정책 문서를 업데이트할 때 이 변경 내용을 반영하도록 업데이트되지만, 이 공지에 따라 XBL Creators 프로그램에는 정책이 더 이상 적용되지 않습니다. 
 
 Microsoft Store<sup>1</sup>용 제품 개발에 관심을 가져주셔서 감사합니다. "제품"은 앱, 게임, 제목, 제품 내에서 판매 및 제공되는 모든 추가 콘텐츠를 포함하지만 이에 국한되지 않는 제출된 모든 형식의 콘텐츠를 의미합니다. Microsoft는 전 세계 고객에게 다양한 제품 카탈로그를 제공하기 위해 노력하고 있습니다. Microsoft Store 있는 제품은 인증 표준을 충족하고 고객에게 실로 유용하고 멋진 경험을 제공하며 Microsoft Store에 적합한 콘텐츠를 제공해야 합니다.
 
@@ -310,7 +313,7 @@ WNS 또는 MPNS를 통해 제공되는 알림은 제품 콘텐츠로 간주되�
 
 제품이 13세 이하의 어린이([아동에 관한 온라인 개인 정보 보호법](https://www.ftc.gov/tips-advice/business-center/privacy-and-security/children%27s-privacy)의 정의를 따름)를 대상으로 하는 경우, Microsoft의 파트너 센터에 이 사실을 알려야 하며 제품에 표시되는 모든 광고 콘텐츠가 13세 이하의 어린이에게 적합해야 합니다.
 
-### <a name="1011-mobile-voice-plans"></a>10.11 음성 통화 요금제
+### <a name="1011-mobile-voice-plans"></a>10.11 모바일 음성 통화 요금제
 
 제품에서 음성 통화 요금제를 판매 또는 연결하거나 별도로 판촉할 수 없습니다.
 
@@ -473,7 +476,7 @@ Microsoft Store에서 배포하기 위해 제공되는 콘텐츠 및 메타데�
 ---
 <sup>1</sup>"Store" 또는 "Microsoft Store"는 어떤 이름이든 간에 고객에게 앱이 제공되거나 고객이 앱을 구매할 수 있도록 Microsoft에서 소유하거나 운영하는 플랫폼을 의미합니다. 달리 명시되지 않는 이상 Microsoft Store에는 Microsoft Store, Windows Store, Xbox Store, 비즈니스용 Microsoft Store 및 교육용 Microsoft Store가 모두 포함됩니다.
 
-### <a name="see-also"></a>참고 항목
+### <a name="see-also"></a>참조
 
 - [Microsoft Store 정책에 대한 변경 내용](store-policies-change-history.md)
 - [Microsoft Store 정책 및 준수 사항](store-policies-and-code-of-conduct.md)

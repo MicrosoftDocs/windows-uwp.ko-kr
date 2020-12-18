@@ -4,12 +4,12 @@ description: 애플리케이션을 설명하는 패키지 매니페스트가 만
 ms.date: 04/29/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ef94a77d5012adcedf31ae1ecfddc036bcc3a059
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: fef6cc96604639f84ee2c81e2de4fb28442e3f8d
+ms.sourcegitcommit: 40b890c7b862f333879887cc22faff560c49eae6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166507"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97598804"
 ---
 # <a name="submit-your-manifest-to-the-repository"></a>리포지토리에 매니페스트 제출
 
@@ -48,7 +48,7 @@ winget validate \<manifest-file>
 
 다음으로, 리포지토리의 포크를 만들고 복제합니다.
 
-1. 브라우저에서 [https://github.com/microsoft/winget-pkgs](https://github.com/microsoft/winget-pkgs)로 이동하고 **포크**를 클릭합니다.
+1. 브라우저에서 [https://github.com/microsoft/winget-pkgs](https://github.com/microsoft/winget-pkgs)로 이동하고 **포크** 를 클릭합니다.
     ![포크 그림](images\fork.png)
 
 2. Windows 명령 프롬프트 또는 PowerShell과 같은 명령줄 환경에서 다음 명령을 사용하여 포크를 복제합니다.
@@ -68,9 +68,9 @@ winget validate \<manifest-file>
 **manifests** / **publisher** / **application** / **version.yaml** 폴더 구조의 리포지토리에 추가해야 합니다.
 
 * **manifests** 폴더는 리포지토리의 모든 매니페스트에 대한 루트 폴더입니다.
-* **publisher** 폴더는 소프트웨어를 게시하는 회사의 이름입니다. 예를 들어 **Microsoft**입니다.
-* **application** 폴더는 애플리케이션 또는 도구의 이름입니다. 예를 들어 **VSCode**입니다.
-* **version.yaml**은 매니페스트의 파일 이름입니다. 파일 이름은 애플리케이션의 현재 버전으로 설정해야 합니다. 예를 들어 **1.0.0.yaml**입니다.
+* **publisher** 폴더는 소프트웨어를 게시하는 회사의 이름입니다. 예를 들어 **Microsoft** 입니다.
+* **application** 폴더는 애플리케이션 또는 도구의 이름입니다. 예를 들어 **VSCode** 입니다.
+* **version.yaml** 은 매니페스트의 파일 이름입니다. 파일 이름은 애플리케이션의 현재 버전으로 설정해야 합니다. 예를 들어 **1.0.0.yaml** 입니다.
 
 >[!IMPORTANT]
 > 매니페스트의 `Id` 값은 매니페스트 폴더 경로의 게시자 및 애플리케이션 이름과 일치해야 하며, 매니페스트의 `version` 값은 파일 이름의 버전과 일치해야 합니다. 자세한 내용은 [패키지 매니페스트 만들기](manifest.md#tips-and-best-practices)를 참조하세요.
@@ -96,7 +96,7 @@ winget validate \<manifest-file>
 
 ### <a name="step-5-create-a-pull-request"></a>5단계: 끌어오기 요청 만들기
 
-변경 내용이 푸시되면 [https://github.com/microsoft/winget-pkgs](https://github.com/microsoft/winget-pkgs)로 돌아가서 포크 또는 분기를 **마스터** 분기에 병합하는 끌어오기 요청을 만듭니다.
+변경 내용이 푸시되면 [https://github.com/microsoft/winget-pkgs](https://github.com/microsoft/winget-pkgs)로 돌아가서 포크 또는 분기를 기본 분기에 병합하는 끌어오기 요청을 만듭니다.
 
 ![끌어오기 요청 탭의 그림](images\pull-request.png)
 

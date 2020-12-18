@@ -5,22 +5,22 @@ keywords: XAML, UWP, 시작
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 04357cc43ed227b109d4aab20c509077261360ee
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: 051d7a31afac09a6372f527355efcd6b925cb71f
+ms.sourcegitcommit: 40b890c7b862f333879887cc22faff560c49eae6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636603"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97598864"
 ---
 # <a name="tutorial-create-custom-styles"></a>자습서: 사용자 지정 스타일 만들기
 
 이 자습서는 XAML 앱의 UI를 사용자 지정하는 방법을 보여 줍니다. 경고: 이 자습서에는 유니콘이 포함될 수도 있습니다. (확인해 보세요!)
 
-PhotoLab 샘플 앱에는 두 가지 페이지가 있습니다. _기본 페이지_는 각 이미지 파일에 대한 일부 정보와 함께 사진 갤러리 보기를 표시합니다.
+PhotoLab 샘플 앱에는 두 가지 페이지가 있습니다. _기본 페이지_ 는 각 이미지 파일에 대한 일부 정보와 함께 사진 갤러리 보기를 표시합니다.
 
 ![사진 랩 기본 페이지의 스크린샷.](../basics/images/xaml-basics/mainpage.png)
 
-*세부 정보 페이지*는 선택한 단일 사진을 표시합니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
+*세부 정보 페이지* 는 선택한 단일 사진을 표시합니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
 
 ![사진 랩 세부 정보 페이지의 스크린샷.](../basics/images/xaml-basics/detailpage.png)
 
@@ -40,7 +40,7 @@ PhotoLab 샘플 앱에는 두 가지 페이지가 있습니다. _기본 페이�
 
     **GitHub에 익숙하지 않은 경우:**
 
-    a. **ZIP 다운로드**를 선택하고, 파일을 로컬로 선택합니다. 그러면 필요한 프로젝트 파일이 모두 포함된 .zip 파일이 다운로드됩니다.
+    a. **ZIP 다운로드** 를 선택하고, 파일을 로컬로 선택합니다. 그러면 필요한 프로젝트 파일이 모두 포함된 .zip 파일이 다운로드됩니다.
 
     b. 파일의 압축을 풉니다. 파일 탐색기를 사용하여 방금 다운로드한 .zip 파일을 찾아 마우스 오른쪽 단추로 클릭하고, **압축 풀기...** 를 선택합니다.
 
@@ -48,7 +48,7 @@ PhotoLab 샘플 앱에는 두 가지 페이지가 있습니다. _기본 페이�
 
     **GitHub에 익숙한 경우:**
 
-    a. 리포지토리의 마스터 분기를 로컬에 복제합니다.
+    a. 리포지토리의 기본 분기를 로컬에 복제합니다.
 
     b. `Windows-appsample-photo-lab\xaml-basics-starting-points\style` 디렉터리로 이동합니다.
 
@@ -90,11 +90,11 @@ F5 키를 눌러 앱을 컴파일 및 실행합니다. 첫 번째 화면에는 �
 
     DetailPage.xaml에서 노출 슬라이더의 코드를 찾은 다음, 바로 앞에 다각형 요소를 만듭니다.
 
-    * **Grid.Row**를 “2”로 설정하여 다각형을 노출 슬라이더와 같은 행에 배치합니다.
+    * **Grid.Row** 를 “2”로 설정하여 다각형을 노출 슬라이더와 같은 행에 배치합니다.
     * **Points** 속성을 “0,20 200,20 200,0”으로 설정하여 삼각형 모양을 정의합니다.
     * **Stretch** 속성을 “Fill”로 설정하고 **HorizontalAlignment** 속성을 “Stretch”로 설정합니다.
-    * **Height**를 “20”으로 설정하고 **VerticalAlignment**를 “Center”로 설정합니다.
-    * **Polygon**에 선형 그라데이션 채우기를 적용합니다.
+    * **Height** 를 “20”으로 설정하고 **VerticalAlignment** 를 “Center”로 설정합니다.
+    * **Polygon** 에 선형 그라데이션 채우기를 적용합니다.
     * 노출 슬라이더에서 **Foreground** 속성을 “Transparent”로 설정하여 다각형을 볼 수 있게 합니다.
 
     **이전**
@@ -241,7 +241,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
 
 1. DetailsPage.xaml을 엽니다.
 
-2. **EditControlsGrid**라는 이름의 `Grid`를 찾습니다. 여기에는 슬라이더와 텍스트 상자가 있습니다. 그리드는 이미 슬라이더의 스타일을 정의한다는 점에 주목합니다.
+2. **EditControlsGrid** 라는 이름의 `Grid`를 찾습니다. 여기에는 슬라이더와 텍스트 상자가 있습니다. 그리드는 이미 슬라이더의 스타일을 정의한다는 점에 주목합니다.
 
     ```xaml
     <Grid x:Name="EditControlsGrid"
@@ -263,7 +263,7 @@ XAML 스타일의 장점 중 하나는 작성해야 하는 코드의 양을 대�
         </Grid.Resources>
     ```
 
-3. **Margin**을 “10,8,0,0”으로, **VerticalAlignment**를 “Center”로, **Padding**을 “0”으로 설정하는 **TextBlock** 스타일을 만듭니다.
+3. **Margin** 을 “10,8,0,0”으로, **VerticalAlignment** 를 “Center”로, **Padding** 을 “0”으로 설정하는 **TextBlock** 스타일을 만듭니다.
 
     **이전**
 

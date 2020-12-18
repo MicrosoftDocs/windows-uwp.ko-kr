@@ -106,7 +106,33 @@
                 - name: 리포지토리에 매니페스트 제출
                   href: ../package-manager/package/repository.md
         - name: PowerToys
-          href: 'https://github.com/microsoft/PowerToys'
+          items:
+            - name: 개요
+              items:
+                - name: PowerToys에 대한 정보
+                  href: ../powertoys/index.md
+                - name: PowerToys 설치
+                  href: ../powertoys/install.md
+                - name: 관리자 모드에서 실행
+                  href: ../powertoys/administrator.md
+            - name: Color Picker
+              href: ../powertoys/color-picker.md
+            - name: FancyZones
+              href: ../powertoys/fancyzones.md
+            - name: 파일 탐색기
+              href: ../powertoys/file-explorer.md
+            - name: Image Resizer
+              href: ../powertoys/image-resizer.md
+            - name: Keyboard Manager
+              href: ../powertoys/keyboard-manager.md
+            - name: PowerRename
+              href: ../powertoys/powerrename.md
+            - name: PowerToys Run
+              href: ../powertoys/run.md
+            - name: Shortcut Guide
+              href: ../powertoys/shortcut-guide.md
+            - name: Video Conference Mute
+              href: ../powertoys/video-conference-mute.md
         - name: VS 코드
           href: 'https://code.visualstudio.com/docs'
         - name: Visual Studio

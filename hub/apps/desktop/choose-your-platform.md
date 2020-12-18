@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, 데스크톱 개발
-ms.openlocfilehash: cdd21279e987f329024c53434e47777e427b95ab
-ms.sourcegitcommit: b69edc6d73370923f31df61c7e42b53de6c928ee
+ms.openlocfilehash: 7ed2d4100bc827dbc0db93897f534b77e1292b7e
+ms.sourcegitcommit: cddc595969c658ce30fbc94ded92db4a8ad1bf66
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214354"
 ---
 # <a name="choose-your-windows-app-platform"></a>Windows 앱 플랫폼 선택
 
@@ -68,7 +68,7 @@ Windows Forms에 대한 자세한 내용은 다음 문서를 참조하세요.
 * [Windows Forms 시작](/dotnet/framework/winforms/getting-started-with-windows-forms)
 * [프로젝트 템플릿](visual-studio-templates.md#net-templates)
 * [첫 번째 Windows Forms 앱 만들기](/dotnet/framework/winforms/creating-a-new-windows-form)
-* [자습서: 사진 뷰어 만들기](/visualstudio/ide/tutorial-1-create-a-picture-viewer?view=vs-2019)
+* [자습서: 사진 뷰어 만들기](/visualstudio/ide/tutorial-1-create-a-picture-viewer)
 * [API 참조(.NET)](/dotnet/api/index)
 * [Windows Forms 앱 강화](/dotnet/framework/winforms/advanced/)
 
@@ -103,6 +103,14 @@ Windows 10에서 각각의 주요 데스크톱 플랫폼은 [WinUI(Windows UI) �
 * [XAML Islands](modernize/xaml-islands.md)를 사용하도록 기존 WPF, Windows Forms 및 C++/Win32 앱을 업데이트하여 앱에서 WinUI 2.x 컨트롤을 호스트할 수 있습니다.
 * [WinUi 3.0](../winui/winui3/index.md)부터 [전적으로 WinUI 기반 UI를 사용하는 .NET 및 C++/Win32 앱을 만들 수 있습니다](../winui/winui3/get-started-winui3-for-desktop.md).
 
+## <a name="project-reunion-preview"></a>프로젝트 리유니언(미리 보기)
+
+프로젝트 리뉴니언은 Windows 앱 개발 플랫폼의 한 단계 발전을 나타내는 광범위한 새 개발자 구성 요소 및 도구 집합의 코드 이름입니다. 프로젝트 리유니언은 광범위한 대상 Windows 10 OS 버전 세트의 모든 앱에서 일관된 방식으로 사용할 수 있는 통합 API 및 도구 집합을 제공합니다. 프로젝트 리유니언은 기존 Windows 앱 플랫폼과 UWP, 네이티브 Win32, .NET과 같은 프레임워크를 개발자가 이러한 플랫폼에서 사용할 수 있는 공통 API 및 도구 집합으로 보완합니다.
+
+프로젝트 리유니언은 현재 조기 개발자 미리 보기를 사용할 수 있습니다. 개발 환경에서 이 릴리스를 사용해 보는 것이 좋습니다. 그러나 프로젝트 리유니언은 현재 릴리스와 최종 릴리스 사이에 여러 가지 면에서 변경될 것입니다. 프로젝트 리유니언은 프로덕션 환경에서 사용되는 앱을 지원하지 않습니다.
+
+자세한 내용은 [프로젝트 리유니언](../project-reunion/index.md) 및 [GitHub 리포지토리](https://github.com/microsoft/ProjectReunion/)를 참조하세요.
+
 ## <a name="platform-comparison-uwp-wpf-and-windows-forms"></a>플랫폼 비교: UWP, WPF 및 Windows Forms
 
 다음 표에서는 Windows Forms, WPF 및 UWP의 다양한 특성을 상세하게 비교합니다.
@@ -133,4 +141,4 @@ Xamarin을 사용하여 iOS 및 Android에서도 실행할 수 있는 Windows 10
 
 ### <a name="uno-platform"></a>Uno Platform
 
-Uno Platform은 Windows UWP 기반 코드(C# 및 XAML)를 iOS, Android, macOS, Linux 및 WebAssembly에서 실행하는 데 사용됩니다. [Windows 10 2004(19041)](/windows/uwp/whats-new/windows-10-build-19041)의 UWP에 대한 전체 API 정의와 UWP API의 일부분에 대한 구현(예: [Windows.UI.Xaml](/uwp/api/windows.ui.xaml.documents?view=winrt-19041))을 제공하여 UWP 애플리케이션을 이러한 플랫폼에서 실행할 수 있도록 합니다. 자세한 내용은 [Uno Platform 문서](https://platform.uno/docs/articles/intro.html)를 참조하세요.
+Uno Platform은 Windows UWP 기반 코드(C# 및 XAML)를 iOS, Android, macOS, Linux 및 WebAssembly에서 실행하는 데 사용됩니다. [Windows 10 2004(19041)](/windows/uwp/whats-new/windows-10-build-19041)의 UWP에 대한 전체 API 정의와 UWP API의 일부분에 대한 구현(예: [Windows.UI.Xaml](/uwp/api/windows.ui.xaml.documents))을 제공하여 UWP 애플리케이션을 이러한 플랫폼에서 실행할 수 있도록 합니다. 자세한 내용은 [Uno Platform 문서](https://platform.uno/docs/articles/intro.html)를 참조하세요.

@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3435718794cb22745e1438ef634db29076ed33c1
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: f84ba4e77369730ef9883ab7f14b52751182b773
+ms.sourcegitcommit: 40b890c7b862f333879887cc22faff560c49eae6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636663"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97598834"
 ---
 # <a name="tutorial-create-data-bindings"></a>자습서: 데이터 바인딩 만들기
 
@@ -20,11 +20,11 @@ ms.locfileid: "91636663"
 
 PhotoLab 샘플의 간소화된 버전부터 시작합니다. 시작 버전에는 전체 데이터 계층 및 기본 XAML 페이지 레이아웃이 포함되어 있으며, 코드를 탐색하기 쉽도록 많은 기능이 생략되었습니다. 이 자습서에서는 전체 앱을 빌드하지 않으므로, 사용자 지정 애니메이션 및 적응형 레이아웃 같은 기능을 살펴보려면 최종 버전을 확인하세요. 최종 버전은 [Windows-appsample-photo-lab](https://github.com/Microsoft/Windows-appsample-photo-lab) 리포지토리의 루트 폴더에서 확인할 수 있습니다.
 
-PhotoLab 샘플 앱에는 두 가지 페이지가 있습니다. _기본 페이지_는 각 이미지 파일에 대한 일부 정보와 함께 사진 갤러리 보기를 표시합니다.
+PhotoLab 샘플 앱에는 두 가지 페이지가 있습니다. _기본 페이지_ 는 각 이미지 파일에 대한 일부 정보와 함께 사진 갤러리 보기를 표시합니다.
 
 ![사진 랩 기본 페이지의 스크린샷.](../design/basics/images/xaml-basics/mainpage.png)
 
-*세부 정보 페이지*는 선택한 단일 사진을 표시합니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
+*세부 정보 페이지* 는 선택한 단일 사진을 표시합니다. 플라이아웃 편집 메뉴를 사용하면 사진을 수정하고, 이름을 변경하고, 저장할 수 있습니다.
 
 ![사진 랩 세부 정보 페이지의 스크린샷.](../design/basics/images/xaml-basics/detailpage.png)
 
@@ -44,7 +44,7 @@ PhotoLab 샘플 앱에는 두 가지 페이지가 있습니다. _기본 페이�
 
     **GitHub에 익숙하지 않은 경우:**
 
-    a. **ZIP 다운로드**를 선택하고, 파일을 로컬로 선택합니다. 그러면 필요한 프로젝트 파일이 모두 포함된 .zip 파일이 다운로드됩니다.
+    a. **ZIP 다운로드** 를 선택하고, 파일을 로컬로 선택합니다. 그러면 필요한 프로젝트 파일이 모두 포함된 .zip 파일이 다운로드됩니다.
 
     b. 파일의 압축을 풉니다. 파일 탐색기를 사용하여 방금 다운로드한 .zip 파일을 찾아 마우스 오른쪽 단추로 클릭하고, **압축 풀기...** 를 선택합니다.
 
@@ -52,7 +52,7 @@ PhotoLab 샘플 앱에는 두 가지 페이지가 있습니다. _기본 페이�
 
     **GitHub에 익숙한 경우:**
 
-    a. 리포지토리의 마스터 분기를 로컬에 복제합니다.
+    a. 리포지토리의 기본 분기를 로컬에 복제합니다.
 
     b. `Windows-appsample-photo-lab\xaml-basics-starting-points\data-binding` 디렉터리로 이동합니다.
 
@@ -68,11 +68,11 @@ PhotoLab 샘플 앱에는 두 가지 페이지가 있습니다. _기본 페이�
 
 1. `xaml-basics-starting-points\data-binding` 폴더를 열고 Visual Studio에서 `PhotoLab.sln` 파일을 시작합니다.
 
-2. **솔루션 플랫폼**이 ARM이 아닌 x86 또는 x64로 설정되었는지 확인하고 앱을 실행합니다. 바인딩을 추가하기 전에 UI 자리 표시자가 있는 앱의 상태가 표시됩니다.
+2. **솔루션 플랫폼** 이 ARM이 아닌 x86 또는 x64로 설정되었는지 확인하고 앱을 실행합니다. 바인딩을 추가하기 전에 UI 자리 표시자가 있는 앱의 상태가 표시됩니다.
 
     ![자리 표시자 이미지 및 텍스트가 있는 앱 실행](../design/basics/images/xaml-basics/gallery-with-placeholder-templates.png)
 
-3. MainPage.xaml을 열고 이름이 **ImageGridView_DefaultItemTemplate**인 `DataTemplate`을 검색합니다. 데이터 바인딩을 사용하도록 이 템플릿을 업데이트합니다.
+3. MainPage.xaml을 열고 이름이 **ImageGridView_DefaultItemTemplate** 인 `DataTemplate`을 검색합니다. 데이터 바인딩을 사용하도록 이 템플릿을 업데이트합니다.
 
     **이전:**
 
@@ -204,13 +204,13 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     = new ObservableCollection<ImageFileInfo>();
 ```
 
-`Images` 속성 값은 절대로 변경되지 않지만 속성이 `ObservableCollection<T>` 형식이기 때문에 컬렉션의 *콘텐츠*는 변경될 수 있으며, 바인딩이 자동으로 변경 내용을 확인하고 UI를 업데이트합니다.
+`Images` 속성 값은 절대로 변경되지 않지만 속성이 `ObservableCollection<T>` 형식이기 때문에 컬렉션의 *콘텐츠* 는 변경될 수 있으며, 바인딩이 자동으로 변경 내용을 확인하고 UI를 업데이트합니다.
 
 이 동작을 테스트하기 위해 현재 선택한 이미지를 삭제하는 단추를 임시로 추가하겠습니다. 이미지를 선택하면 세부 정보 페이지로 이동하게 되므로 최종 버전에는 이 단추가 없습니다. 하지만 XAML은 `InitializeComponent` 메서드 호출을 통해 페이지 생성자에서 초기화되지만 `Images` 컬렉션은 나중에 `GetItemsAsync` 메서드에서 채워지므로, 최종 PhotoLab 샘플에서 `ObservableCollection<T>`의 동작이 여전히 중요합니다.
 
 ### <a name="add-a-delete-button"></a>삭제 단추 추가
 
-1. MainPage.xaml에서 이름이 **MainCommandBar**인 `CommandBar`를 찾은 다음, 확대/축소 단추 앞에 새 단추를 추가합니다. (확대/축소 컨트롤은 아직 작동하지 않습니다. 이 컨트롤은 자습서의 다음 부분에서 연결하겠습니다.)
+1. MainPage.xaml에서 이름이 **MainCommandBar** 인 `CommandBar`를 찾은 다음, 확대/축소 단추 앞에 새 단추를 추가합니다. (확대/축소 컨트롤은 아직 작동하지 않습니다. 이 컨트롤은 자습서의 다음 부분에서 연결하겠습니다.)
 
     ```xaml
     <AppBarButton Icon="Delete"
@@ -266,7 +266,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
 
 `x:Bind` 식이 아니라 `Binding` 식인 것을 눈치채셨나요? 이전에 데이터 바인딩을 수행했던 방식으로, 이제는 거의 사용되지 않습니다. `x:Bind`는 `Binding`의 거의 모든 작업과 그 이상을 수행합니다. 하지만 데이터 템플릿에서 `x:Bind`를 사용하면 `x:DataType` 값에 선언된 유형에 바인딩됩니다. 그렇다면 템플릿의 항목을 페이지 XAML 또는 코드 숨김에 어떻게 바인딩할 수 있을까요? 기존의 `Binding` 식을 사용해야 합니다.
 
-`Binding` 식은 `x:DataType` 값을 인식하지 않지만, `Binding` 식에는 거의 동일한 방식으로 작동하는 `ElementName` 값이 있습니다. 이 값은 **Binding Value**가 페이지에서 지정된 요소(즉, 해당 `x:Name` 값을 가진 요소)의 `Value` 속성에 바인딩됨을 바인딩 엔진에 알려줍니다. 코드 숨김에 있는 속성에 바인딩하려는 경우 ```{Binding MyCodeBehindProperty, ElementName=page}```와 같이 표시됩니다. 여기서 `page`는 XAML의 `Page` 요소에 설정된 `x:Name` 값을 참조합니다.
+`Binding` 식은 `x:DataType` 값을 인식하지 않지만, `Binding` 식에는 거의 동일한 방식으로 작동하는 `ElementName` 값이 있습니다. 이 값은 **Binding Value** 가 페이지에서 지정된 요소(즉, 해당 `x:Name` 값을 가진 요소)의 `Value` 속성에 바인딩됨을 바인딩 엔진에 알려줍니다. 코드 숨김에 있는 속성에 바인딩하려는 경우 ```{Binding MyCodeBehindProperty, ElementName=page}```와 같이 표시됩니다. 여기서 `page`는 XAML의 `Page` 요소에 설정된 `x:Name` 값을 참조합니다.
 
 > [!NOTE]
 > 기본적으로 Binding`Binding` 식은 ‘단방향’이므로, 바인딩된 속성 값이 변경되면 UI가 자동으로 업데이트됩니다.
@@ -280,7 +280,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
 ![확대/축소 슬라이더가 있는 앱 실행](../design/basics/images/xaml-basics/gallery-with-zoom-control.png)
 
 > [!NOTE]
-> 연습을 위해, 다른 UI 속성을 확대/축소 슬라이더 `Value` 속성 또는 확대/축소 슬라이더 뒤에 추가한 다른 슬라이더에 바인딩해 봅니다. 예를 들어 `TitleTextBlock`의 `FontSize` 속성을 기본값 **24**로 새 슬라이더에 바인딩할 수 있습니다. 적절한 최솟값과 최댓값을 설정해야 합니다.
+> 연습을 위해, 다른 UI 속성을 확대/축소 슬라이더 `Value` 속성 또는 확대/축소 슬라이더 뒤에 추가한 다른 슬라이더에 바인딩해 봅니다. 예를 들어 `TitleTextBlock`의 `FontSize` 속성을 기본값 **24** 로 새 슬라이더에 바인딩할 수 있습니다. 적절한 최솟값과 최댓값을 설정해야 합니다.
 
 ## <a name="part-4-improve-the-zoom-experience"></a>4부: 확대/축소 환경 개선
 
@@ -488,7 +488,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
     }
     ```
 
-    이 메서드는 단순히 클릭된 항목을 전달하여 세부 정보 페이지로 이동합니다. 이 항목은 페이지 초기화를 위해 **DetailPage.OnNavigatedTo**에서 사용하는 `ImageFileInfo` 개체입니다. 이 자습서에서 해당 메서드를 구현할 필요는 없지만, 메서드가 수행하는 작업을 살펴볼 수 있습니다.
+    이 메서드는 단순히 클릭된 항목을 전달하여 세부 정보 페이지로 이동합니다. 이 항목은 페이지 초기화를 위해 **DetailPage.OnNavigatedTo** 에서 사용하는 `ImageFileInfo` 개체입니다. 이 자습서에서 해당 메서드를 구현할 필요는 없지만, 메서드가 수행하는 작업을 살펴볼 수 있습니다.
 
 3. (선택 사항) 현재 선택한 이미지로 작업하는, 이전 재생 지점에 추가한 컨트롤을 삭제하거나 주석으로 처리합니다. 그대로 유지해도 문제가 되지는 않지만, 세부 정보 페이지로 이동하지 않고 이미지를 선택하는 것이 이제 훨씬 더 어려워졌습니다.
 
@@ -500,7 +500,7 @@ private ObservableCollection<ImageFileInfo> Images { get; }
 
 ### <a name="make-the-editing-controls-interactive"></a>대화형 편집 컨트롤 만들기
 
-1. DetailPage.xaml에서 **TitleTextBlock**이라는 `TextBlock`과 그 뒤에 있는 **RatingControl** 컨트롤을 찾아서, **Mode=TwoWay**를 포함하도록 `x:Bind` 식을 업데이트합니다.
+1. DetailPage.xaml에서 **TitleTextBlock** 이라는 `TextBlock`과 그 뒤에 있는 **RatingControl** 컨트롤을 찾아서, **Mode=TwoWay** 를 포함하도록 `x:Bind` 식을 업데이트합니다.
 
     **이전:**
 

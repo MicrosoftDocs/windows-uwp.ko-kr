@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: fcad3bfeb5c31a6b3af85e5fd9a0ea72f11d65da
-ms.sourcegitcommit: caf4dba6bdfc3c6d9685d10aa9924b170b00bed8
+ms.openlocfilehash: ccd5efd5270ed12d17992f53b3c9ee50feddec4b
+ms.sourcegitcommit: 6b64741cba279ac17f23f07baaf4a92a2696e8e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049514"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97502883"
 ---
 # <a name="host-a-standard-winrt-xaml-control-in-a-c-win32-app"></a>C++ Win32 앱에서 표준 WinRT XAML 컨트롤 호스팅
 
@@ -273,11 +273,9 @@ XAML 호스팅 API를 사용하여 WinRT XAML 컨트롤을 호스팅하는 기�
     > [!NOTE]
     > `warning C4002:  too many arguments for function-like macro invocation 'GetCurrentTime'` 및 `manifest authoring warning 81010002: Unrecognized Element "maxversiontested" in namespace "urn:schemas-microsoft-com:compatibility.v1"`을 비롯한 몇 가지 빌드 경고가 표시될 수 있습니다. 이러한 경고는 현재 도구 및 NuGet 패키지와 관련된 알려진 문제로, 무시해도 됩니다.
 
-XAML 호스팅 API를 사용하여 표준 WinRT XAML 컨트롤을 호스팅하는 방법을 보여주는 전체 예제는 다음 코드 파일을 참조하세요.
+XAML 호스팅 API를 사용하여 WinRT XAML 컨트롤을 호스팅하는 방법을 보여주는 전체 예제는 다음 코드 파일을 참조하세요.
 
-* **C++ Win32:**
-  * [HelloWindowsDesktop](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Standalone_Samples/CppWinRT_Basic_Win32App/Win32DesktopApp/HelloWindowsDesktop.cpp) 파일을 참조하세요.
-  * [XamlBridge](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Samples/Win32/SampleCppApp/XamlBridge.cpp) 파일을 참조하세요.
+* **C++ Win32:** [XAML 아일랜드 코드 샘플 리포지토리](https://github.com/microsoft/Xaml-Islands-Samples)의 [XamlBridge.cpp](https://github.com/microsoft/Xaml-Islands-Samples/blob/master/Standalone_Samples/Contoso/App/XamlBridge.cpp) 파일을 참조하세요.
 * **WPF:** Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHostBase.cs) 및 [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Wpf.UI.XamlHost/WindowsXamlHost.cs) 파일을 참조하세요.  
 * **Windows Forms:** Windows 커뮤니티 도구 키트의 [WindowsXamlHostBase.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHostBase.cs) 및 [WindowsXamlHost.cs](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/blob/master/Microsoft.Toolkit.Forms.UI.XamlHost/WindowsXamlHost.cs) 파일을 참조하세요.
 
