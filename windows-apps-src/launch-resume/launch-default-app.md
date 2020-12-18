@@ -6,12 +6,12 @@ ms.date: 06/26/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ad25d4ba5d8dfe638d3de3e210f69ea204c48a14
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 2f550fc90a8035d2c7e355d70b7ddd2b9a9e17fc
+ms.sourcegitcommit: f83f2f582f8c7c3447ec62df40a8f0724f7f3bbc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220016"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97675794"
 ---
 # <a name="launch-the-default-app-for-a-uri"></a>URI에 대한 기본 앱 실행
 
@@ -42,6 +42,7 @@ URI 체계를 사용 하면 하이퍼링크를 클릭 하 여 앱을 열 수 있
 |[ms-tonepicker:](#tone-picker-uri-scheme) | 톤 선택기 |
 |[ms-yellowpage:](#nearby-numbers-app-uri-scheme) | 가까운 숫자 앱 |
 |[msnweather:](#weather-app-uri-scheme) | 날씨 앱 |
+|[microsoft edge:](#microsoft-edge-uri-scheme) | Microsoft Edge 브라우저 |
 
 <br>
 예를 들어 다음 URI는 기본 브라우저를 열고 Bing 웹 사이트를 표시합니다.
@@ -119,7 +120,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 [**LaunchUriAsync**](/uwp/api/windows.system.launcher.launchuriasync) 를 호출 하는 소스 앱은 URI 시작 후 화면에 유지 되도록 요청할 수 있습니다. 기본적으로 Windows는 소스 앱과 URI를 처리 하는 대상 앱 간에 사용 가능한 모든 공간을 동일 하 게 공유 하려고 시도 합니다. 원본 앱은 [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview) 속성을 사용 하 여 사용 가능한 공간을 늘리거나 줄일 수 있도록 응용 프로그램 창을 선호 하는 운영 체제를 나타낼 수 있습니다. **DesiredRemainingView** 를 사용 하 여 URI가 시작 된 후 소스 앱이 화면에 남아 있을 필요가 없으며 대상 앱으로 완전히 바뀔 수도 있음을 나타낼 수도 있습니다. 이 속성은 호출 하는 앱의 기본 창 크기만 지정 합니다. 동시에 화면에 있을 수도 있는 다른 앱의 동작을 지정 하지 않습니다.
 
-**참고**    Windows는 원본 앱의 최종 창 크기 (예: 원본 앱의 기본 설정, 화면에 있는 앱의 수, 화면 방향 등)를 결정할 때 여러 가지 요인을 고려 합니다. [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview)를 설정 하 여 원본 앱에 대 한 특정 창 지정 동작을 보장할 수 없습니다.
+**참고**  Windows는 원본 앱의 최종 창 크기 (예: 원본 앱의 기본 설정, 화면에 있는 앱의 수, 화면 방향 등)를 결정할 때 여러 가지 요인을 고려 합니다. [**DesiredRemainingView**](/uwp/api/windows.system.launcheroptions.desiredremainingview)를 설정 하 여 원본 앱에 대 한 특정 창 지정 동작을 보장할 수 없습니다.
 
 ```cs
 // Set the desired remaining view.
@@ -206,7 +207,7 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 ### <a name="photos-app-uri-scheme"></a>사진 앱 URI 체계
 
-**Ms 사진:** URI 체계를 사용 하 여 사진 앱을 시작 하 고 이미지를 보거나 비디오를 편집 합니다. 예를 들어:  
+**Ms 사진:** URI 체계를 사용 하 여 사진 앱을 시작 하 고 이미지를 보거나 비디오를 편집 합니다. 예를 들면 다음과 같습니다.  
 이미지를 보려면 다음을 수행 합니다. `ms-photos:viewer?fileName=c:\users\userName\Pictures\image.jpg`  
 비디오를 편집 하려면 다음을 수행 합니다. `ms-photos:videoedit?InputToken=123abc&Action=Trim&StartTime=01:02:03`  
 
@@ -215,9 +216,9 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 
 | URI 체계 |결과 |
 |------------|--------|
-| ms-사진: 뷰어? 파일 이름 = {filename} | 지정 된 이미지를 보려면 사진 앱을 시작 합니다. 여기서 {filename}은 정규화 된 경로 이름입니다. 예: `c:\users\userName\Pictures\ImageToView.jpg` |
+| ms-사진: 뷰어? 파일 이름 = {filename} | 지정 된 이미지를 보려면 사진 앱을 시작 합니다. 여기서 {filename}은 정규화 된 경로 이름입니다. `c:\users\userName\Pictures\ImageToView.jpg` |
 | ms-사진: videoedit? InputToken = {입력 토큰} | 파일 토큰으로 표시 되는 파일에 대 한 비디오 편집 모드로 사진 앱을 시작 합니다. **Inputtoken** 이 필요 합니다. [SharedStorageAccessManager](/uwp/api/Windows.ApplicationModel.DataTransfer.SharedStorageAccessManager) 를 사용 하 여 파일에 대 한 토큰을 가져옵니다. |
-| ms-사진: videoedit? Action = {action} | 사진 앱을 여는 데 사용할 비디오 편집 모드를 나타내는 매개 변수입니다. 여기서 {action}은 **SlowMotion**, **프레임 추출을**, **Trim**, **View**, **Ink**중 하나입니다. **조치가** 필요 합니다. |
+| ms-사진: videoedit? Action = {action} | 사진 앱을 여는 데 사용할 비디오 편집 모드를 나타내는 매개 변수입니다. 여기서 {action}은 **SlowMotion**, **프레임 추출을**, **Trim**, **View**, **Ink** 중 하나입니다. **조치가** 필요 합니다. |
 | ms-사진: videoedit? StartTime = {timespan} | 비디오 재생을 시작할 위치를 지정 하는 선택적 매개 변수입니다. `{timespan}` 형식 이어야 합니다 `"hh:mm:ss.ffff"` . 지정 하지 않으면 기본값은입니다. `00:00:00.0000` |
 
 ### <a name="settings-app-uri-scheme"></a>설정 앱 URI 체계
@@ -245,3 +246,11 @@ var success = await Windows.System.Launcher.LaunchUriAsync(uriContoso, options);
 | URI 체계 | 결과 |
 |------------|---------|
 | msnweather://예측? la = \[ 위도 \]&하 = \[ 경도\] | 위치 지리 좌표를 기준으로 예측 페이지에서 날씨 앱을 시작 합니다.<br>`latitude` 위치의 위도를 참조 합니다.<br> `longitude` 위치의 경도를 참조 합니다.<br> |
+
+### <a name="microsoft-edge-uri-scheme"></a>Microsoft Edge URI 체계
+
+Microsoft edge 브라우저를 지정 된 URL로 시작 하려면 **microsoft edge:** URI 체계를 사용 합니다.
+
+| URI 체계 | 결과 |
+|------------|---------|
+| microsoft edge: https://example.com/ ] | Microsoft Edge 브라우저를 열고 다음으로 이동 합니다. https://example.com/<br> |
