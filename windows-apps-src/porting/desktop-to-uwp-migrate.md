@@ -5,12 +5,12 @@ ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 62f1c6462e56b14396e3fdaed16221698c0333fd
-ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
+ms.openlocfilehash: 4e27333c87b596948afcb430eb1cf1ef4998e851
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933164"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860446"
 ---
 # <a name="move-from-a-desktop-application-to-uwp"></a>데스크톱 응용 프로그램에서 UWP로 이동
 
@@ -48,7 +48,7 @@ WPF, Windows Forms 또는 C++ Win32 데스크톱 앱에서 직접 여러 Windows
 
 솔루션에 추가 하는 라이브러리 수는 코드를 구성 하는 방법에 따라 달라 집니다.
 
-각 클래스 라이브러리가 **.NET Standard 2.0**를 대상으로 하는지 확인 합니다.
+각 클래스 라이브러리가 **.NET Standard 2.0** 를 대상으로 하는지 확인 합니다.
 
 ![대상 .NET Standard 2.0](images/desktop-to-uwp/target-standard-20.png)
 
@@ -70,7 +70,7 @@ WPF, Windows Forms 또는 C++ Win32 데스크톱 앱에서 직접 여러 Windows
 &nbsp;
 > [!VIDEO https://www.youtube-nocookie.com/embed/rzs_FGPyAlY?list=PLRAdsfhKI4OWx321A_pr-7HhRNk7wOLLY&amp;ecver=2]
 
-코드가 표준과 호환 되지 않는 경우 해당 코드를 구현할 수 있는 다른 방법을 고려 합니다. 먼저 [.NET API 브라우저](/dotnet/api/?view=netstandard-2.0)를 엽니다. 해당 브라우저를 사용 하 여 .NET Standard 2.0에서 사용할 수 있는 API를 검토할 수 있습니다. 목록의 범위를 .NET Standard 2.0으로 지정 해야 합니다.
+코드가 표준과 호환 되지 않는 경우 해당 코드를 구현할 수 있는 다른 방법을 고려 합니다. 먼저 [.NET API 브라우저](/dotnet/api/?view=netstandard-2.0&preserve-view=true)를 엽니다. 해당 브라우저를 사용 하 여 .NET Standard 2.0에서 사용할 수 있는 API를 검토할 수 있습니다. 목록의 범위를 .NET Standard 2.0으로 지정 해야 합니다.
 
 ![dot net 옵션](images/desktop-to-uwp/dot-net-option.png)
 
@@ -82,7 +82,7 @@ Northwind 샘플 데이터베이스에서 고객을 표시 하는 매우 기본�
 
 ![Windows Forms 앱](images/desktop-to-uwp/win-forms-app.png)
 
-프로젝트는 **Northwind**라는 정적 클래스가 있는 .NET Standard 2.0 클래스 라이브러리를 포함 합니다. 이 코드를 **Northwind** 클래스로 이동 하는 경우 ``SQLConnection`` , ``SqlCommand`` 및 ``SqlDataReader`` 클래스를 사용 하 고 .NET Standard 2.0에서 사용할 수 없는 클래스를 사용 하기 때문에 컴파일되지 않습니다.
+프로젝트는 **Northwind** 라는 정적 클래스가 있는 .NET Standard 2.0 클래스 라이브러리를 포함 합니다. 이 코드를 **Northwind** 클래스로 이동 하는 경우 ``SQLConnection`` , ``SqlCommand`` 및 ``SqlDataReader`` 클래스를 사용 하 고 .NET Standard 2.0에서 사용할 수 없는 클래스를 사용 하기 때문에 컴파일되지 않습니다.
 
 ```csharp
 public static ArrayList GetCustomerNames()
@@ -112,7 +112,7 @@ public static ArrayList GetCustomerNames()
 }
 
 ```
-그러나 [.NET API 브라우저](/dotnet/api/?view=netstandard-2.0) 를 사용 하 여 다른 대안을 찾을 수 있습니다. ``DbConnection``, ``DbCommand`` 및 클래스는 ``DbDataReader`` 모두 .NET Standard 2.0에서 사용할 수 있으므로 대신 사용할 수 있습니다.  
+그러나 [.NET API 브라우저](/dotnet/api/?view=netstandard-2.0&preserve-view=true) 를 사용 하 여 다른 대안을 찾을 수 있습니다. ``DbConnection``, ``DbCommand`` 및 클래스는 ``DbDataReader`` 모두 .NET Standard 2.0에서 사용할 수 있으므로 대신 사용할 수 있습니다.  
 
 이 수정 된 버전은 이러한 클래스를 사용 하 여 고객 목록을 가져오지만 클래스를 만들려면 ``DbConnection`` 클라이언트 응용 프로그램에서 만든 팩터리 개체를 전달 해야 합니다.
 
@@ -232,7 +232,7 @@ UWPs와 마찬가지로 .NET Standard 2.0 클래스 라이브러리에서 비즈
 
 #### <a name="add-a-xamarin-project"></a>Xamarin 프로젝트 추가
 
-먼저, **Android**, **IOS**또는 **플랫폼 간** 프로젝트를 솔루션에 추가 합니다.
+먼저, **Android**, **IOS** 또는 **플랫폼 간** 프로젝트를 솔루션에 추가 합니다.
 
 이러한 템플릿은 **새 프로젝트 추가** 대화 상자의 **Visual c #** 그룹에서 찾을 수 있습니다.
 

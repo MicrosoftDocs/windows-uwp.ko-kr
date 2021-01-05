@@ -6,12 +6,12 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: bdd003445bed4ad59b21e0b744281651c30bf04f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 5c5b4867d8a58779aa716245130a468374054288
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166887"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860122"
 ---
 # <a name="whats-new-in-windows-10-for-developers-build-18362"></a>개발자용 Windows 10 빌드 18362의 새로운 기능
 
@@ -40,7 +40,7 @@ AMSI(맬웨어 방지 프로그램 검사 인터페이스) | [AMSI(맬웨어 방
 C++/WinRT 2.0 | C++/WinRT 버전 2.0이 릴리스되었습니다. [C++/WinRT의 새로운 기능](../cpp-and-winrt-apis/news.md)에서 새로운 변경 내용 및 추가 내용을 전체적으로 확인하세요.
 플랫폼 선택 | 새 데스크톱 애플리케이션을 만드는 데 관심이 있나요? 개선된 [플랫폼 선택](/windows/desktop/choose-your-technology) 페이지에서 UWP, WPF 및 Windows Forms에 대한 자세한 설명과 비교 결과 및 Win32 API에 대한 자세한 내용을 확인하세요.
 대화형 에이전트 | [Windows.ApplicationModel.ConversationalAgent](/uwp/api/windows.applicationmodel.conversationalagent) 네임스페이스를 사용하여 Windows 플랫폼 AAR(에이전트 활성화 런타임)서 지원하는 모든 디지털 지원을 Windows 앱에 추가할 수 있습니다.
-클라우드 파일 API | *클라우드 파일 API*를 사용하여 [자리 표시자 파일을 지원하는 클라우드 동기화 엔진을 빌드](/windows/desktop/cfapi/build-a-cloud-file-sync-engine)할 수 있습니다.
+클라우드 파일 API | *클라우드 파일 API* 를 사용하여 [자리 표시자 파일을 지원하는 클라우드 동기화 엔진을 빌드](/windows/desktop/cfapi/build-a-cloud-file-sync-engine)할 수 있습니다.
 Direct 3D 12 | [Direct3D 12 렌더링 단계](/windows/desktop/direct3d12/direct3d-12-render-passes)는 다른 기술 중에서 TBDR(타일식 지연 렌더링)을 기준으로 하는 렌더러의 성능을 향상시킬 수 있습니다. 이 기술은 애플리케이션에서 리소스 렌더링의 순서 지정 요구 사항 및 데이터 종속성을 더 잘 파악하도록 하여 렌더러에서 GPU 효율성을 개선할 수 있습니다. 렌더러는 렌더링 단계 기능을 통해 GPU 효율성을 개선할 수 있습니다. 이를 통해 오프칩 메모리와 주고받는 메모리 트래픽이 줄어듭니다.
 DirectML(Direct Machine Learning) | [DirectML](/windows/desktop/direct3d12/dml)은 기계 학습을 위한 하위 수준의 하드웨어 가속 API입니다. 이 API에는 DirectX 12 스타일의 친숙한(기본 C++, nano-COM) 프로그래밍 인터페이스 및 워크플로가 있습니다. 기계 학습 추론 워크로드를 게임, 엔진, 미들웨어, 백 엔드 또는 기타 애플리케이션에 연결할 수 있습니다. DirectML은 모든 DirectX 12 호환 가능 하드웨어에서 지원됩니다.
 DirectX HLSL | [HLSL 셰이더 모델 6.4](/windows/desktop/direct3dhlsl/hlsl-shader-model-6-4-features-for-direct3d-12)는 DirectML에서 사용할 수 있는 새로운 기계 학습 내부 기능을 제공합니다.
@@ -53,11 +53,11 @@ Xbox용 점진적 웹앱 | [Xbox One용 점진적 웹앱](/microsoft-edge/progre
 프로젝트 로마 | 이제 Android 및 iOS용으로 제공되는 프로젝트 “로마” SDK를 사용할 수 있습니다. Graph 알림을 각 플랫폼 [Android](/windows/project-rome/notifications/how-to-guide-for-android) 및 [iOS](/windows/project-rome/notifications/how-to-guide-for-ios)에 연결하는 방법을 알아보세요.
 원격 카메라 | DeviceWatcher 클래스를 사용하여 [원격 카메라에 연결](../audio-video-camera/connect-to-remote-cameras.md)하고 해당 카메라에서 Windows 앱으로 프레임을 읽어올 수 있습니다.
 데스크톱 애플리케이션의 UWP 컨트롤(XAML island) | WPF, Windows Forms 및 C++ Win32 데스크톱 애플리케이션에 UWP 컨트롤을 호스트하는 Windows SDK의 API가 더 이상 개발자 미리 보기로 제공되지 않습니다. 자세한 내용은 [데스크톱 애플리케이션의 UWP 컨트롤](/windows/apps/desktop/modernize/xaml-islands)을 참조하세요.
-Visual Studio 2019 | 모든 개발자, 앱 또는 플랫폼을 위한 최신 도구 및 서비스를 포함하는 Visual Studio 2019가 릴리스되었습니다. [Visual Studio 2019의 새로운 기능](/visualstudio/ide/whats-new-visual-studio-2019?view=vs-2019)에서 최신 기능을 알아보고 시작하세요.
+Visual Studio 2019 | 모든 개발자, 앱 또는 플랫폼을 위한 최신 도구 및 서비스를 포함하는 Visual Studio 2019가 릴리스되었습니다. [Visual Studio 2019의 새로운 기능](/visualstudio/ide/whats-new-visual-studio-2019)에서 최신 기능을 알아보고 시작하세요.
 Win32 WebView | [질문과 대답](/windows/communitytoolkit/controls/wpf-winforms/webview#frequently-asked-questions-faqs)에서는 데스크톱 애플리케이션에서 Microsoft Edge WebView를 사용할 때 일반적으로 발생하는 질문과 대답 뿐 아니라 샘플 및 추가 리소스에 대한 링크를 제공합니다.
 Windows 명령줄 | [새 콘솔 기능](https://devblogs.microsoft.com/commandline/new-experimental-console-features/)에는 스크롤, 커서 모양 및 커서 색에 대한 설정을 포함하는 실험적 터미널 탭이 있습니다. [개발자용 Windows 명령줄 도구 블로그](https://devblogs.microsoft.com/commandline/)에서 자세한 내용을 확인하세요.
 Windows 커뮤니티 도구 키트 | Windows 커뮤니티 도구 키트 v5.1은 애니메이션, 원격 디바이스, 이미지 자르기 및 내게 필요한 옵션에 대한 흥미로운 업데이트를 제공합니다. </br> • 새 [Lottie Windows 라이브러리](/windows/communitytoolkit/animations/lottie)는 Windows.UI.Composition API를 활용하여 Windows 10(1809)에서 고품질 애니메이션 지원을 제공하고 Windows 앱에서 재생하기 위해 [Bodymovin](https://aescripts.com/bodymovin/) JSON 파일 또는 최적화된 코드 생성 클래스를 사용할 수 있도록 지원합니다. Microsoft Store에 제공되는 새로운 [Lottie Viewer 앱](https://www.microsoft.com/p/lottie-viewer/9p7x9k692tmw)을 사용하여 애니메이션을 테스트해보고 Windows 앱용으로 최적화된 코드를 생성해 보세요. </br> • 새 [원격 디바이스 선택](/windows/communitytoolkit/controls/remotedevicepicker) 기능을 사용하여 디바이스를 선택하거나(근접 방식 또는 클라우드를 통해 액세스), 해당 디바이스에서 앱을 시작하거나, 원격 디바이스에서 앱 서비스와 통신할 수 있습니다. </br> • 새 [ImageCropper 컨트롤](/windows/communitytoolkit/controls/imagecropper)은 프로필 사진을 선택하거나 사진 편집 도구를 사용하기 위해 자르기 기능을 통합합니다. </br> • 또한 컨트롤의 접근성이 개선되고, WPF 및 WinForms에 대한 [Microsoft.Toolkit.Win32](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32) 6.0 미리 보기 패키지 업데이트가 제공되고, [릴리스 정보](https://github.com/windows-toolkit/WindowsCommunityToolkit/releases/tag/v5.1.0)에서 읽을 수 있는 추가 기능도 제공되었습니다.
-Windows Machine Learning | Windows AI 문서를 새롭게 디자인하여 WinML(Windows Machine Learning), Windows Vision Skills 및 DirectML(Direct Machine Learning)의 세 영역으로 구분했습니다. 새 [방문 페이지](/windows/ai/)를 확인해 보세요. </br> • [*MLGen* 환경](/windows/ai/mlgen)이 Visual Studio에서 변경될 예정입니다. Windows 10, 버전 1903 이상에서 *mlgen*은 더 이상 Windows 10 SDK에 포함되지 않습니다. VS 2017을 사용하는 경우 대신, Visual Studio 확장, [Windows Machine Learning 코드 생성기 VS 2017](https://marketplace.visualstudio.com/items?itemName=WinML.mlgen)을 다운로드하여 설치해야 합니다. Visual Studio 2019를 사용하는 경우 [Windows Machine Learning 코드 생성기](https://marketplace.visualstudio.com/items?itemName=WinML.mlgenv2) 확장을 설치해야 합니다. </br> •  가중치 압축에 대한 새로운 지원을 공개합니다. 개발자는 이제 [WinMLTools 변환기](/windows/ai/convert-model-winmltools)를 통해 사용할 수 있는 가중치 압축이라는 기술을 사용하여 ML 모델의 디스크 공간을 줄일 수 있습니다.
+Windows Machine Learning | Windows AI 문서를 새롭게 디자인하여 WinML(Windows Machine Learning), Windows Vision Skills 및 DirectML(Direct Machine Learning)의 세 영역으로 구분했습니다. 새 [방문 페이지](/windows/ai/)를 확인해 보세요. </br> • [*MLGen* 환경](/windows/ai/mlgen)이 Visual Studio에서 변경될 예정입니다. Windows 10, 버전 1903 이상에서 *mlgen* 은 더 이상 Windows 10 SDK에 포함되지 않습니다. VS 2017을 사용하는 경우 대신, Visual Studio 확장, [Windows Machine Learning 코드 생성기 VS 2017](https://marketplace.visualstudio.com/items?itemName=WinML.mlgen)을 다운로드하여 설치해야 합니다. Visual Studio 2019를 사용하는 경우 [Windows Machine Learning 코드 생성기](https://marketplace.visualstudio.com/items?itemName=WinML.mlgenv2) 확장을 설치해야 합니다. </br> •  가중치 압축에 대한 새로운 지원을 공개합니다. 개발자는 이제 [WinMLTools 변환기](/windows/ai/convert-model-winmltools)를 통해 사용할 수 있는 가중치 압축이라는 기술을 사용하여 ML 모델의 디스크 공간을 줄일 수 있습니다.
 WinRT 통합 참조 | WinRT API 구조 정의에 대한 구체적인 심층 정보를 제공하기 위해 [WinRT 형식 시스템](/uwp/winrt-cref/winrt-type-system) 및 [WinMD 파일](/uwp/winrt-cref/winmd-files)의 전체 설명을 추가했습니다.
 WSL(Linux용 Windows 하위 시스템) | [WSL의 최신 업데이트](https://devblogs.microsoft.com/commandline/whats-new-for-wsl-in-windows-10-version-1903/)에는 파일 탐색기를 사용하여 Windows에서 Linux 파일에 액세스하는 기능과 wsl.exe 및 wslconfig.exe를 위한 일부 새 명령이 들어 있습니다.
 Windows Vision Skills | [Windows Vision Skills](/windows/ai/windows-vision-skills)는 얼굴 인식과 같은 “기술"을 만든 후 다른 앱에서 사용할 수 있는 NuGet 패키지로 패키지하여 기계 학습 모델을 포함할 필요가 없도록 하는 API 세트입니다.

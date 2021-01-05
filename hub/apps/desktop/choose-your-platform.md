@@ -8,12 +8,12 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, 데스크톱 개발
-ms.openlocfilehash: 7ed2d4100bc827dbc0db93897f534b77e1292b7e
-ms.sourcegitcommit: cddc595969c658ce30fbc94ded92db4a8ad1bf66
+ms.openlocfilehash: 51d799a4779f6d3ecee2119277b6c41485e0d377
+ms.sourcegitcommit: e1c182ea23da9b0bd9e89425f7f1a00baec81136
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97214354"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97826274"
 ---
 # <a name="choose-your-windows-app-platform"></a>Windows 앱 플랫폼 선택
 
@@ -133,7 +133,7 @@ Windows 10에서 각각의 주요 데스크톱 플랫폼은 [WinUI(Windows UI) �
 
 ### <a name="progressive-web-apps-pwas"></a>PWA(프로그레시브 웹앱)
 
-PWA를 통해 개발자는 웹 사이트 코드를 Windows 10 PC의 애플리케이션처럼 설치하고 실행할 수 있도록 패키징할 수 있습니다. 자세한 내용은 [프로그레시브 웹앱](/microsoft-edge/progressive-web-apps/get-started)을 참조하세요.
+PWA를 통해 개발자는 웹 사이트 코드를 Windows 10 PC의 애플리케이션처럼 설치하고 실행할 수 있도록 패키징할 수 있습니다. 자세한 내용은 [프로그레시브 웹앱](/microsoft-edge/progressive-web-apps-chromium/get-started)을 참조하세요.
 
 ### <a name="xamarin"></a>Xamarin
 

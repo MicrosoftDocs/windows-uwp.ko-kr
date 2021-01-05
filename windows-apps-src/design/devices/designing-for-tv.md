@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: e2648cc9a85c538d71f87f69d8525b171d2bed98
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: c7ac5b8c34f007e18e04eb8299d9ccddd583ad29
+ms.sourcegitcommit: 9378b1b2c2a5ba6e774ae76b53d755cbc5215af2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93031516"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97709652"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Xbox 및 TV용 디자인
 
@@ -101,7 +101,7 @@ UI에 적절 한 콘텐츠 밀도가 있는지 확인 하 고, 사용자가 쉽�
 
 ![텍스트, 앱 및 기타 항목 크기 변경](images/designing-for-tv/ui-scaling.png)
 
-Xbox One에는 이러한 시스템 설정이 없지만 UWP UI 요소가 TV에 적절한 크기로 조정되도록 XAML 앱의 경우 **200%** , HTML 앱의 경우 **150%** 기본값으로 배율이 지정됩니다.
+Xbox One에는 이러한 시스템 설정이 없지만 UWP UI 요소가 TV에 적절한 크기로 조정되도록 XAML 앱의 경우 **200%**, HTML 앱의 경우 **150%** 기본값으로 배율이 지정됩니다.
 다른 장치에 대해 UI 요소의 크기가 적절 하 게 조정 되는 동안에는 TV에 대해 적절 하 게 크기가 조정 됩니다.
 Xbox One은 1080p (1920 x 1080 픽셀)에서 앱을 렌더링 합니다. 따라서 PC와 같은 다른 장치에서 앱을 가져올 때 [적응 기법](../layout/screen-sizes-and-breakpoints-for-responsive-design.md)을 활용 하 여 UI가 960 x 540 px 100% scale (또는 HTML 앱에 대 한 720% scale의 1280 x 100 px)에서 잘 보이는지 확인 합니다.
 
@@ -241,7 +241,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
 
 [명령 모음](/uwp/api/Windows.UI.Xaml.Controls.CommandBar) 은 일반적으로 앱의 하나 이상 가장자리 근처에 배치 되는 창의 또 다른 예입니다. TV에서는 배경이 화면 가장자리로 확장 되어야 합니다. 또한 일반적으로 "..."로 표시 되는 **더 많은** 단추를 포함 합니다. 오른쪽에는 TV 안전 영역에 남아 있어야 합니다. 다음은 원하는 상호 작용 및 시각적 효과를 얻기 위한 몇 가지 다른 전략입니다.
 
-**옵션 1** : 배경색을 `CommandBar` 페이지 배경과 동일한 색 또는 투명 한 색으로 변경 합니다.
+**옵션 1**: 배경색을 `CommandBar` 페이지 배경과 동일한 색 또는 투명 한 색으로 변경 합니다.
 
 ```xml
 <CommandBar x:Name="topbar"
@@ -252,7 +252,7 @@ Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().SetDesiredBoundsMo
 
 이렇게 하면 `CommandBar` 페이지의 나머지 부분과 동일한 배경 위에 있는 것 처럼 보일 수 있으므로 배경은 화면 가장자리에 원활 하 게 흐릅니다.
 
-**옵션 2** : 채우기가 배경과 동일한 색 인 배경 사각형을 추가 하 `CommandBar` 고 `CommandBar` 페이지의 나머지 부분에서 및 아래에 배치 합니다.
+**옵션 2**: 채우기가 배경과 동일한 색 인 배경 사각형을 추가 하 `CommandBar` 고 `CommandBar` 페이지의 나머지 부분에서 및 아래에 배치 합니다.
 
 ```xml
 <Rectangle VerticalAlignment="Top"
@@ -333,7 +333,7 @@ UWP에는 포커스를 [VisibleBounds](/uwp/api/windows.ui.viewmanagement.applic
 > [!NOTE]
 > 이 코드 조각은 특히에 해당 합니다. `ListView` 스타일의 경우 `GridView` [ControlTemplate](/uwp/api/Windows.UI.Xaml.Controls.ControlTemplate) 와 [스타일](/uwp/api/Windows.UI.Xaml.Style) 모두에 대해 [TargetType](/uwp/api/windows.ui.xaml.controls.controltemplate.targettype) 특성을로 설정 `GridView` 합니다.
 
-항목이 표시 되는 방식을 보다 세부적으로 제어 하기 위해 응용 프로그램이 버전 1803 이상을 대상으로 하는 경우 [BringIntoViewRequested 이벤트](/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)를 사용할 수 있습니다. [ItemsPanel](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) 다음 코드 조각과 **ListView** / 같이 내부 **ScrollViewer** 가 실행 되기 전에이를 catch 하기 위해 ListView **GridView** 의 ItemsPanel에 넣을 수 있습니다.
+항목이 표시 되는 방식을 보다 세부적으로 제어 하기 위해 응용 프로그램이 버전 1803 이상을 대상으로 하는 경우 [BringIntoViewRequested 이벤트](/uwp/api/windows.ui.xaml.uielement.bringintoviewrequested)를 사용할 수 있습니다. [](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel) 다음 코드 조각과  / 같이 내부 **ScrollViewer** 가 실행 되기 전에이를 catch 하기 위해 ListView **GridView** 의 ItemsPanel에 넣을 수 있습니다.
 
 ```xaml
 <GridView x:Name="gridView">
@@ -403,7 +403,7 @@ Xbox One에서는 사용자가 PC에서 강조 색을 선택할 수 있는 것 �
 
 또한 Xbox One의 사용자 색 집합은 Pc, 휴대폰 및 기타 장치의 사용자 색 집합과 동일 하지 않습니다.
 
-앱에서 **SystemControlForegroundAccentBrush** 또는 색 리소스 ( **SystemAccentColor** )와 같은 브러시 리소스를 사용 하거나 대신 [UIColorType *](/uwp/api/Windows.UI.ViewManagement.UIColorType) API를 통해 악센트 색을 직접 호출 하는 경우 해당 색은 Xbox one에서 사용할 수 있는 악센트 색으로 바뀝니다. 고대비 브러시 색은 PC와 휴대폰에서와 동일한 방법으로 시스템에서 가져옵니다.
+앱에서 **SystemControlForegroundAccentBrush** 또는 색 리소스 (**SystemAccentColor**)와 같은 브러시 리소스를 사용 하거나 대신 [UIColorType *](/uwp/api/Windows.UI.ViewManagement.UIColorType) API를 통해 악센트 색을 직접 호출 하는 경우 해당 색은 Xbox one에서 사용할 수 있는 악센트 색으로 바뀝니다. 고대비 브러시 색은 PC와 휴대폰에서와 동일한 방법으로 시스템에서 가져옵니다.
 
 일반적으로 강조 색에 대 한 자세한 내용은 [강조 색](../style/color.md#accent-color)을 참조 하세요.
 
@@ -436,7 +436,9 @@ DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 �
 
 [IsHeaderItemsCarouselEnabled](/uwp/api/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabledproperty) 속성을로 설정 하면 `true` 선택 된 피벗 머리글이 항상 첫 번째 위치로 이동 하는 것이 아니라 피벗이 항상 동일한 위치를 유지할 수 있습니다. TV와 같은 큰 화면 표시에서는 헤더 래핑이 사용자에게 방해가 될 수 있으므로 환경이 개선됩니다. 모든 피벗 머리글이 한 번에 화면에 맞지 않는 경우 고객이 다른 헤더를 볼 수 있도록 스크롤 막대가 있습니다. 그러나 최상의 환경을 제공 하기 위해 모든 것이 화면에 적합 한지 확인 해야 합니다. 자세한 내용은 [탭 및 피벗](../controls-and-patterns/pivot.md)을 참조 하세요.
 
-### <a name="navigation-pane"></a>탐색 창 <a name="navigation-pane" />
+<a name="navigation-pane"></a>
+
+### <a name="navigation-pane"></a>탐색 창
 
 탐색 창 ( *햄버거 메뉴* 라고도 함)은 UWP 앱에서 일반적으로 사용 되는 탐색 컨트롤입니다. 일반적으로 사용자가 다른 페이지로 이동 하는 목록 스타일 메뉴에서 선택할 수 있는 몇 가지 옵션이 포함 된 창입니다. 일반적으로이 창은 공간 절약을 위해 축소 된 상태로 시작 되며, 사용자는 단추를 클릭 하 여 열 수 있습니다.
 
@@ -468,7 +470,7 @@ DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 �
 
 ### <a name="mediatransportcontrols"></a>MediaTransportControls
 
-[MediaTransportControls](/uwp/api/Windows.UI.Xaml.Controls.MediaTransportControls) 요소를 사용 하면 사용자가 재생, 일시 중지, 폐쇄 캡션 등을 수행할 수 있는 기본 재생 환경을 제공 하 여 미디어와 상호 작용할 수 있습니다. 이 컨트롤은 [MediaPlayerElement](/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement) 의 속성 이며 두 개의 레이아웃 옵션인 *단일 행* 및 *두 행* 을 지원 합니다. 단일 행 레이아웃에서 슬라이더와 재생 단추는 모두 한 행에 있으며 슬라이더 왼쪽에 있는 재생/일시 중지 단추가 있습니다. 이중 행 레이아웃에서 슬라이더는 자체 행을 차지 하며 재생 단추는 별도의 아래쪽 행에 있습니다. 10 피트 환경을 디자인 하는 경우 더 나은 게임 패드 탐색을 제공 하므로 이중 행 레이아웃을 사용 해야 합니다. 이중 행 레이아웃을 사용 하도록 설정 하려면 `IsCompact="False"` 의 요소에서를 설정 `MediaTransportControls` [TransportControls](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.transportcontrols) `MediaPlayerElement` 합니다.
+[MediaTransportControls](/uwp/api/Windows.UI.Xaml.Controls.MediaTransportControls) 요소를 사용 하면 사용자가 재생, 일시 중지, 폐쇄 캡션 등을 수행할 수 있는 기본 재생 환경을 제공 하 여 미디어와 상호 작용할 수 있습니다. 이 컨트롤은 [MediaPlayerElement](/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement) 의 속성 이며 두 개의 레이아웃 옵션인 *단일 행* 및 *두 행* 을 지원 합니다. 단일 행 레이아웃에서 슬라이더와 재생 단추는 모두 한 행에 있으며 슬라이더 왼쪽에 있는 재생/일시 중지 단추가 있습니다. 이중 행 레이아웃에서 슬라이더는 자체 행을 차지 하며 재생 단추는 별도의 아래쪽 행에 있습니다. 10 피트 환경을 디자인 하는 경우 더 나은 게임 패드 탐색을 제공 하므로 이중 행 레이아웃을 사용 해야 합니다. 이중 행 레이아웃을 사용 하도록 설정 하려면 `IsCompact="False"` 의 요소에서를 설정 `MediaTransportControls` [](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.transportcontrols) `MediaPlayerElement` 합니다.
 
 ```xml
 <MediaPlayerElement x:Name="mediaPlayerElement1"  
@@ -482,7 +484,8 @@ DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 �
 
 미디어를 앱에 추가 하는 방법에 대 한 자세한 내용을 보려면 [미디어 재생](../controls-and-patterns/media-playback.md) 을 방문 하세요.
 
-> ! [참고] `MediaPlayerElement` 는 Windows 10 버전 1607 이상 에서만 사용할 수 있습니다. 이전 버전의 Windows 10 용 응용 프로그램을 개발 하는 경우에는 [MediaElement](/uwp/api/Windows.UI.Xaml.Controls.MediaElement) 를 대신 사용 해야 합니다. 위의 권장 사항은에 `MediaElement` 도 적용 되며, 속성은 `TransportControls` 동일한 방식으로 액세스 됩니다.
+> [!NOTE]
+> `MediaPlayerElement` 는 Windows 10 버전 1607 이상 에서만 사용할 수 있습니다. 이전 버전의 Windows 10 용 응용 프로그램을 개발 하는 경우에는 [MediaElement](/uwp/api/Windows.UI.Xaml.Controls.MediaElement) 를 대신 사용 해야 합니다. 위의 권장 사항은에 `MediaElement` 도 적용 되며, 속성은 `TransportControls` 동일한 방식으로 액세스 됩니다.
 
 ### <a name="search-experience"></a>검색 환경
 
@@ -564,7 +567,7 @@ bool IsTenFoot = (Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily 
 
 10 피트 환경을 디자인 하는 경우 다른 플랫폼에 대 한 디자인과 다르게 고려 하기 위해 고려해 야 할 특별 한 고려 사항이 있습니다. UWP 앱의 직선 포트를 Xbox One으로 사용할 수는 있지만, 작동 하는 것은 아니지만, 사용자의 불편을 일으킬 수 있는 것은 아닙니다. 이 문서의 지침에 따라 앱이 TV에 있을 수 있는 것과 동일한 지 확인 합니다.
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [Windows 앱 용 장치 입문](index.md)
 - [게임 패드 및 리모컨 조작](../input/gamepad-and-remote-interactions.md)

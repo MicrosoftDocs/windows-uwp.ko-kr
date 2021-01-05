@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 새로운 기능
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 0d7c42b1346805c9c03714eb9bbb3944fe940ccf
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f5cfe5dc66df98e3dd4d4290023cac1874ae797a
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154467"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860284"
 ---
 # <a name="whats-new-in-cwinrt"></a>C++/WinRT의 새로운 기능
 
@@ -34,7 +34,7 @@ C++/WinRT 및 C++ 컴파일러 팀이 협력하여 빌드 시간을 단축하기
 
 ### <a name="improved-msbuild-support"></a>향상된 MSBuild 지원
 
-다양한 시나리오에 대한 [MSBuild](/visualstudio/msbuild/msbuild?view=vs-2019) 지원을 개선하기 위해 많은 노력을 기울였습니다.
+다양한 시나리오에 대한 [MSBuild](/visualstudio/msbuild/msbuild) 지원을 개선하기 위해 많은 노력을 기울였습니다.
 
 ### <a name="even-faster-factory-caching"></a>훨씬 더 빠른 팩터리 캐싱
 
@@ -107,9 +107,9 @@ C++/WinRT 코루틴은 이미 잘 작동하지만 이를 개선하는 방법을 
 #### <a name="fewer-dependencies"></a>종속성 감소
 
 xlang 메타데이터 판독기로 인해 `cppwinrt.exe` 도구 자체의 종속성이 감소합니다. 이 덕분에 도구는 유연성이 훨씬 더 높아지며 특히 제한된 빌드 환경과 같은 더 많은 시나리오에서 사용할 수 있습니다. 특히 이 도구는 더 이상 `RoMetadata.dll`을 사용하지 않습니다.
- 
+ 
 이 종속성은 `cppwinrt.exe` 2.0에 해당합니다.
- 
+ 
 - ADVAPI32.dll
 - KERNEL32.dll
 - SHLWAPI.dll
@@ -142,7 +142,7 @@ xlang 메타데이터 판독기로 인해 `cppwinrt.exe` 도구 자체의 종속
 - api-ms-win-core-threadpool-l1-2-0.dll
 - api-ms-win-core-com-l1-1-0.dll
 - api-ms-win-core-com-l1-1-1.dll
-- api-ms-win-core-synch-l1-2-0.dll 
+- api-ms-win-core-synch-l1-2-0.dll 
 
 #### <a name="the-windows-runtime-noexcept-attribute"></a>Windows 런타임 `noexcept` 특성
 
@@ -171,14 +171,14 @@ printf("%ls\n", projected.ToString().c_str());
 ```cpp
 int32_t Function() noexcept
 {
-    try
-    {
-        // code here constitutes unique value.
-    }
-    catch (...)
-    {
-        // code here is always duplicated.
-    }
+    try
+    {
+        // code here constitutes unique value.
+    }
+    catch (...)
+    {
+        // code here is always duplicated.
+    }
 }
 ```
 
@@ -197,7 +197,7 @@ xlang 메타데이터 판독기로 인해 C++/WinRT는 이제 메타데이터에
 
 #### <a name="component-optimizations"></a>구성 요소 최적화
 
-이 업데이트는 아래 섹션에서 설명하는 C++/WinRT에 대한 여러 추가 옵트인 최적화 지원을 추가합니다. 이 최적화는 새로운 변경 내용(지원을 위해 약간 변경해야 할 수 있음)이므로 명시적으로 켜야 합니다. Visual Studio에서 프로젝트 속성 **공용 속성** > **C++/WinRT** > **최적화됨**을 *예*로 설정합니다. 이렇게 하면 `<CppWinRTOptimized>true</CppWinRTOptimized>`를 프로젝트 파일에 추가하는 효과가 있습니다. 또한 명령줄에서 `cppwinrt.exe`를 호출할 때 `-opt[imize]` 스위치를 추가하는 것과 동일한 효과입니다.
+이 업데이트는 아래 섹션에서 설명하는 C++/WinRT에 대한 여러 추가 옵트인 최적화 지원을 추가합니다. 이 최적화는 새로운 변경 내용(지원을 위해 약간 변경해야 할 수 있음)이므로 명시적으로 켜야 합니다. Visual Studio에서 프로젝트 속성 **공용 속성** > **C++/WinRT** > **최적화됨** 을 *예* 로 설정합니다. 이렇게 하면 `<CppWinRTOptimized>true</CppWinRTOptimized>`를 프로젝트 파일에 추가하는 효과가 있습니다. 또한 명령줄에서 `cppwinrt.exe`를 호출할 때 `-opt[imize]` 스위치를 추가하는 것과 동일한 효과입니다.
 
 프로젝트 템플릿 기반 새 프로젝트는 기본적으로 `-opt`를 사용합니다.
 
@@ -213,11 +213,11 @@ xlang 메타데이터 판독기로 인해 C++/WinRT는 이제 메타데이터에
 
 #### <a name="smarter-and-more-efficient-modulegcpp-for-large-projects-with-multiple-libs"></a>여러 라이브러리가 포함된 큰 프로젝트에 더 스마트하고 더 효율적인 `module.g.cpp`
 
-이제 `module.g.cpp` 파일에는 **winrt_can_unload_now** 및 **winrt_get_activation_factory**로 명명된 두 가지 구성 가능한 도우미도 추가로 포함됩니다. 이 도우미는 각각 고유한 런타임 클래스를 포함하는 많은 라이브러리로 DLL이 구성된 더 큰 프로젝트용으로 디자인되었습니다. 이 경우 수동으로 DLL의 **DllGetActivationFactory** 및 **DllCanUnloadNow**를 함께 연결해야 합니다. 이 도우미를 사용하면 출처 위조 오류가 방지되어 이 작업을 훨씬 더 쉽게 수행할 수 있습니다. 또한 `cppwinrt.exe` 도구의 `-lib` 플래그는 개별 라이브러리에 고유한 개별적으로 프리앰블(`winrt_xxx`가 아님)을 제공하는 데 사용되므로 각 라이브러리의 함수는 개별적으로 이름이 지정되어 명시적으로 결합될 수 있습니다.
+이제 `module.g.cpp` 파일에는 **winrt_can_unload_now** 및 **winrt_get_activation_factory** 로 명명된 두 가지 구성 가능한 도우미도 추가로 포함됩니다. 이 도우미는 각각 고유한 런타임 클래스를 포함하는 많은 라이브러리로 DLL이 구성된 더 큰 프로젝트용으로 디자인되었습니다. 이 경우 수동으로 DLL의 **DllGetActivationFactory** 및 **DllCanUnloadNow** 를 함께 연결해야 합니다. 이 도우미를 사용하면 출처 위조 오류가 방지되어 이 작업을 훨씬 더 쉽게 수행할 수 있습니다. 또한 `cppwinrt.exe` 도구의 `-lib` 플래그는 개별 라이브러리에 고유한 개별적으로 프리앰블(`winrt_xxx`가 아님)을 제공하는 데 사용되므로 각 라이브러리의 함수는 개별적으로 이름이 지정되어 명시적으로 결합될 수 있습니다.
 
 #### <a name="coroutine-support"></a>코루틴 지원
 
-코루틴 지원은 자동으로 포함됩니다. 이전에는 지원이 분산되어 있어 너무 제한적이라고 생각했습니다. 또한 v2.0의 경우 일시적으로 `winrt/coroutine.h` 헤더 파일이 필요했지만 더 이상 필요하지 않습니다. 이제 Windows 런타임 비동기 인터페이스가 생성되었으므로 수동으로 작성하지 않아도 이제 `winrt/Windows.Foundation.h`에 코루틴이 있습니다. 더 효율적으로 유지 및 지원할 수 있다는 것 외에도, [**resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground)와 같은 코루틴 도우미를 더 이상 특정 네임스페이스 헤더의 끝까지 추적할 필요가 없습니다. 오히려 더 자연스럽게 종속성을 포함할 수 있습니다. 또한 이를 통해 **resume_foreground**는 지정된 [**Windows::UI::Core::CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher) 다시 시작을 지원할 뿐 아니라 지정된 [**Windows::System::DispatcherQueue**](/uwp/api/windows.system.dispatcherqueue) 다시 시작도 지원할 수 있습니다. 이전에는 하나의 네임스페이스에만 정의가 포함될 수 있었기 때문에 두 개 중 하나만 지원할 수 있었습니다.
+코루틴 지원은 자동으로 포함됩니다. 이전에는 지원이 분산되어 있어 너무 제한적이라고 생각했습니다. 또한 v2.0의 경우 일시적으로 `winrt/coroutine.h` 헤더 파일이 필요했지만 더 이상 필요하지 않습니다. 이제 Windows 런타임 비동기 인터페이스가 생성되었으므로 수동으로 작성하지 않아도 이제 `winrt/Windows.Foundation.h`에 코루틴이 있습니다. 더 효율적으로 유지 및 지원할 수 있다는 것 외에도, [**resume_foreground**](/uwp/cpp-ref-for-winrt/resume-foreground)와 같은 코루틴 도우미를 더 이상 특정 네임스페이스 헤더의 끝까지 추적할 필요가 없습니다. 오히려 더 자연스럽게 종속성을 포함할 수 있습니다. 또한 이를 통해 **resume_foreground** 는 지정된 [**Windows::UI::Core::CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher) 다시 시작을 지원할 뿐 아니라 지정된 [**Windows::System::DispatcherQueue**](/uwp/api/windows.system.dispatcherqueue) 다시 시작도 지원할 수 있습니다. 이전에는 하나의 네임스페이스에만 정의가 포함될 수 있었기 때문에 두 개 중 하나만 지원할 수 있었습니다.
 
 다음은 **DispatcherQueue** 지원 예제입니다.
 
@@ -228,14 +228,14 @@ using namespace Windows::System;
 ...
 fire_and_forget Async(DispatcherQueueController controller)
 {
-    bool queued = co_await resume_foreground(controller.DispatcherQueue());
-    assert(queued);
+    bool queued = co_await resume_foreground(controller.DispatcherQueue());
+    assert(queued);
 
-    // This is just to simulate queue failure...
-    co_await controller.ShutdownQueueAsync();
+    // This is just to simulate queue failure...
+    co_await controller.ShutdownQueueAsync();
 
-    queued = co_await resume_foreground(controller.DispatcherQueue());
-    assert(!queued);
+    queued = co_await resume_foreground(controller.DispatcherQueue());
+    assert(!queued);
 }
 ```
 
@@ -259,58 +259,58 @@ fire_and_forget Async(DispatcherQueueController controller)
 
 이 업데이트는 참조 수를 디바운스하는 지원을 추가하여 일단 0에 도달하면 다시 나타나지 않도록 하지만, 소멸 중에 필요한 QI는 일시적으로 허용합니다. 특정 XAML 애플리케이션/컨트롤에서는 이 프로시저를 피할 수 없으며 이제 C++/WinRT가 이 프로시저에 탄력적으로 대처합니다.
 
-구현 형식에서 정적 **final_release** 함수를 제공하면 소멸을 연기할 수 있습니다. **std::unique_ptr** 형식으로 개체에 대해 마지막 남은 포인터가 **final_release**로 전달됩니다. 그러면 해당 포인터의 소유권을 다른 컨텍스트로 이동하도록 선택할 수 있습니다. 이중 소멸을 트리거하지 않고 포인터에 대해 QI를 수행하는 것이 안전합니다. 하지만 참조 수에 대한 실제 변경 값은 개체 소멸 지점에서 0이어야 합니다.
+구현 형식에서 정적 **final_release** 함수를 제공하면 소멸을 연기할 수 있습니다. **std::unique_ptr** 형식으로 개체에 대해 마지막 남은 포인터가 **final_release** 로 전달됩니다. 그러면 해당 포인터의 소유권을 다른 컨텍스트로 이동하도록 선택할 수 있습니다. 이중 소멸을 트리거하지 않고 포인터에 대해 QI를 수행하는 것이 안전합니다. 하지만 참조 수에 대한 실제 변경 값은 개체 소멸 지점에서 0이어야 합니다.
 
-**final_release**의 반환 값은 `void`가 될 수 있으며, 이 값은 [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) 또는 **winrt::fire_and_forget** 등과 같은 비동기 작업 개체입니다.
+**final_release** 의 반환 값은 `void`가 될 수 있으며, 이 값은 [**IAsyncAction**](/uwp/api/windows.foundation.iasyncaction) 또는 **winrt::fire_and_forget** 등과 같은 비동기 작업 개체입니다.
 
 ```cppwinrt
 struct Sample : implements<Sample, IStringable>
 {
-    hstring ToString()
-    {
-        return L"Sample";
-    }
+    hstring ToString()
+    {
+        return L"Sample";
+    }
 
-    ~Sample()
-    {
-        // Called when the unique_ptr below is reset.
-    }
+    ~Sample()
+    {
+        // Called when the unique_ptr below is reset.
+    }
 
-    static void final_release(std::unique_ptr<Sample> self) noexcept
-    {
-        // Move 'self' as needed to delay destruction.
-    }
+    static void final_release(std::unique_ptr<Sample> self) noexcept
+    {
+        // Move 'self' as needed to delay destruction.
+    }
 };
 ```
 
-아래 예제에서 **MainPage**가 마지막으로 릴리스되면 **final_release**가 호출됩니다. 이 함수는 5초 동안 스레드 풀에서 대기한 후 QI/AddRef/Release 작동에 필요한 페이지 **Dispatcher**를 사용하여 다시 시작합니다. 그 다음, 해당 UI 스레드에서 리소스를 정리합니다. 그리고 마지막으로 **MainPage** 소멸자를 실제로 호출하는 **unique_ptr**을 지웁니다. 이 소멸자에서도 **IFrameworkElement**에 대한 QI가 필요한 **DataContext**는 호출됩니다.
+아래 예제에서 **MainPage** 가 마지막으로 릴리스되면 **final_release** 가 호출됩니다. 이 함수는 5초 동안 스레드 풀에서 대기한 후 QI/AddRef/Release 작동에 필요한 페이지 **Dispatcher** 를 사용하여 다시 시작합니다. 그 다음, 해당 UI 스레드에서 리소스를 정리합니다. 그리고 마지막으로 **MainPage** 소멸자를 실제로 호출하는 **unique_ptr** 을 지웁니다. 이 소멸자에서도 **IFrameworkElement** 에 대한 QI가 필요한 **DataContext** 는 호출됩니다.
 
-**final_release**를 코루틴으로 구현할 필요는 없습니다. 그러나 작업이 수행되면 이 예제에서처럼 소멸을 다른 스레드로 매우 쉽게 이동할 수 있습니다.
+**final_release** 를 코루틴으로 구현할 필요는 없습니다. 그러나 작업이 수행되면 이 예제에서처럼 소멸을 다른 스레드로 매우 쉽게 이동할 수 있습니다.
 
 ```cppwinrt
 struct MainPage : PageT<MainPage>
 {
-    MainPage()
-    {
-    }
+    MainPage()
+    {
+    }
 
-    ~MainPage()
-    {
-        DataContext(nullptr);
-    }
+    ~MainPage()
+    {
+        DataContext(nullptr);
+    }
 
-    static IAsyncAction final_release(std::unique_ptr<MainPage> self)
-    {
-        co_await 5s;
+    static IAsyncAction final_release(std::unique_ptr<MainPage> self)
+    {
+        co_await 5s;
 
-        co_await resume_foreground(self->Dispatcher());
-        co_await self->resource.CloseAsync();
+        co_await resume_foreground(self->Dispatcher());
+        co_await self->resource.CloseAsync();
 
-        // The object is destructed normally at the end of final_release,
+        // The object is destructed normally at the end of final_release,
         // when the std::unique_ptr<MyClass> destructs. If you want to destruct
-        // the object earlier than that, then you can set *self* to `nullptr`.
-        self = nullptr;
-    }
+        // the object earlier than that, then you can set *self* to `nullptr`.
+        self = nullptr;
+    }
 };
 ```
 
@@ -348,17 +348,17 @@ struct MainPage : PageT<MainPage>
 
 기타 변경 내용은 아래와 같습니다.
 
-- **주요 변경 내용**. [**winrt::get_abi(winrt::hstring const&)** ](/uwp/cpp-ref-for-winrt/get-abi)는 이제 `HSTRING` 대신 `void*`를 반환합니다. `static_cast<HSTRING>(get_abi(my_hstring));`을 사용하여 HSTRING을 가져올 수 있습니다. [ABI의 HSTRING과 상호 운용](interop-winrt-abi.md#interoperating-with-the-abis-hstring)을 참조하세요.
-- **주요 변경 내용**. [**winrt::put_abi(winrt::hstring&)** ](/uwp/cpp-ref-for-winrt/put-abi)는 이제 `HSTRING*` 대신 `void**`를 반환합니다. `reinterpret_cast<HSTRING*>(put_abi(my_hstring));`을 사용하여 HSTRING*를 가져올 수 있습니다. [ABI의 HSTRING과 상호 운용](interop-winrt-abi.md#interoperating-with-the-abis-hstring)을 참조하세요.
-- **주요 변경 내용**. 이제 HRESULT는 **winrt::hresult**로 프로젝션됩니다. 형식 검사를 수행하거나 형식 특성을 지원하기 위해 HRESULT가 필요한 경우 **::hresult**에 `static_cast`를 수행할 수 있습니다. 그러지 않으면 C++/WinRT 헤더를 포함하기 전에 `unknwn.h`를 포함하는 한 **winrt::hresult**가 HRESULT로 변환됩니다.
-- **주요 변경 내용**. GUID는 이제 **winrt::guid**로 프로젝션됩니다. 구현하는 API의 경우 GUID 매개 변수에 **winrt::guid**를 사용해야 합니다. 그러지 않으면 C++/WinRT 헤더를 포함하기 전에 `unknwn.h`를 포함하는 한 **winrt::guid**가 GUID로 변환됩니다. [ABI의 GUID 구조체와 상호 운용](interop-winrt-abi.md#interoperating-with-the-abis-guid-struct)을 참조하세요.
+- **주요 변경 내용**. [**winrt::get_abi(winrt::hstring const&)**](/uwp/cpp-ref-for-winrt/get-abi)는 이제 `HSTRING` 대신 `void*`를 반환합니다. `static_cast<HSTRING>(get_abi(my_hstring));`을 사용하여 HSTRING을 가져올 수 있습니다. [ABI의 HSTRING과 상호 운용](interop-winrt-abi.md#interoperating-with-the-abis-hstring)을 참조하세요.
+- **주요 변경 내용**. [**winrt::put_abi(winrt::hstring&)**](/uwp/cpp-ref-for-winrt/put-abi)는 이제 `HSTRING*` 대신 `void**`를 반환합니다. `reinterpret_cast<HSTRING*>(put_abi(my_hstring));`을 사용하여 HSTRING*를 가져올 수 있습니다. [ABI의 HSTRING과 상호 운용](interop-winrt-abi.md#interoperating-with-the-abis-hstring)을 참조하세요.
+- **주요 변경 내용**. 이제 HRESULT는 **winrt::hresult** 로 프로젝션됩니다. 형식 검사를 수행하거나 형식 특성을 지원하기 위해 HRESULT가 필요한 경우 **::hresult** 에 `static_cast`를 수행할 수 있습니다. 그러지 않으면 C++/WinRT 헤더를 포함하기 전에 `unknwn.h`를 포함하는 한 **winrt::hresult** 가 HRESULT로 변환됩니다.
+- **주요 변경 내용**. GUID는 이제 **winrt::guid** 로 프로젝션됩니다. 구현하는 API의 경우 GUID 매개 변수에 **winrt::guid** 를 사용해야 합니다. 그러지 않으면 C++/WinRT 헤더를 포함하기 전에 `unknwn.h`를 포함하는 한 **winrt::guid** 가 GUID로 변환됩니다. [ABI의 GUID 구조체와 상호 운용](interop-winrt-abi.md#interoperating-with-the-abis-guid-struct)을 참조하세요.
 - **주요 변경 내용**. [**winrt::handle_type 생성자**](/uwp/cpp-ref-for-winrt/handle-type#handle_typehandle_type-constructor)가 명시적으로 설정되어 강화되었습니다(이제 이 생성자로 잘못된 코드를 작성하기가 더 어려움). 원시 핸들 값을 할당해야 하는 경우 [**handle_type::attach 함수**](/uwp/cpp-ref-for-winrt/handle-type#handle_typeattach-function)를 대신 호출합니다.
-- **주요 변경 내용**. **WINRT_CanUnloadNow** 및 **WINRT_GetActivationFactory**의 서명이 변경되었습니다. 이 함수는 선언하면 안 됩니다. 대신 C++/WinRT Windows 네임스페이스 헤더 파일을 포함하는 경우 자동으로 포함되는 `winrt/base.h`를 포함하여 이 함수의 선언을 포함합니다.
-- [**winrt::clock 구조체**](/uwp/cpp-ref-for-winrt/clock)의 경우 **from_FILETIME/to_FILETIME**은 더 이상 사용되지 않고, 대신 **from_file_time/to_file_time**이 사용됩니다.
-- **IBuffer** 매개 변수가 필요한 API가 간소화되었습니다. 대부분의 API는 컬렉션 또는 배열을 선호합니다. 하지만 **IBuffer**를 사용하는 API를 더 쉽게 호출할 수 있어야 한다고 생각했습니다. 이 업데이트에서는 **IBuffer** 구현 뒤의 데이터에 직접 액세스할 수 있습니다. C++ 표준 라이브러리 컨테이너에서 사용하는 것과 동일한 데이터 명명 규칙을 사용합니다. 또한 이 규칙은 일반적으로 대문자로 시작하는 메타데이터 이름과 충돌하지 않도록 방지합니다.
+- **주요 변경 내용**. **WINRT_CanUnloadNow** 및 **WINRT_GetActivationFactory** 의 서명이 변경되었습니다. 이 함수는 선언하면 안 됩니다. 대신 C++/WinRT Windows 네임스페이스 헤더 파일을 포함하는 경우 자동으로 포함되는 `winrt/base.h`를 포함하여 이 함수의 선언을 포함합니다.
+- [**winrt::clock 구조체**](/uwp/cpp-ref-for-winrt/clock)의 경우 **from_FILETIME/to_FILETIME** 은 더 이상 사용되지 않고, 대신 **from_file_time/to_file_time** 이 사용됩니다.
+- **IBuffer** 매개 변수가 필요한 API가 간소화되었습니다. 대부분의 API는 컬렉션 또는 배열을 선호합니다. 하지만 **IBuffer** 를 사용하는 API를 더 쉽게 호출할 수 있어야 한다고 생각했습니다. 이 업데이트에서는 **IBuffer** 구현 뒤의 데이터에 직접 액세스할 수 있습니다. C++ 표준 라이브러리 컨테이너에서 사용하는 것과 동일한 데이터 명명 규칙을 사용합니다. 또한 이 규칙은 일반적으로 대문자로 시작하는 메타데이터 이름과 충돌하지 않도록 방지합니다.
 - 코드 생성이 향상되었습니다. 코드 크기를 줄이고, 인라인을 개선하고, 팩터리 캐싱을 최적화하기 위한 다양한 개선 사항이 있습니다.
 - 불필요한 재귀가 제거되었습니다. 명령줄이 특정 `.winmd`가 아닌 폴더를 참조하는 경우 `cppwinrt.exe` 도구는 더 이상 `.winmd` 파일을 재귀적으로 검색하지 않습니다. 또한 `cppwinrt.exe` 도구는 이제 복제본을 더 적절하게 처리하므로 사용자 오류 및 형식이 잘못된 `.winmd` 파일에 더 탄력적으로 대처할 수 있습니다.
-- 스마트 포인터가 강화되었습니다. 이전에는 새 값을 이동 할당할 때 이벤트 취소자가 호출되지 않았습니다. 이를 통해 스마트 포인터가 루트가 [**winrt::com_ptr struct template**](/uwp/cpp-ref-for-winrt/com-ptr)인 자체 할당을 안정적으로 처리하지 않는 문제를 파악할 수 있었습니다. **winrt::com_ptr**이 수정되었으며, 이벤트 취소자는 이동 의미 체계를 제대로 처리하여 할당 시 취소되도록 수정되었습니다.
+- 스마트 포인터가 강화되었습니다. 이전에는 새 값을 이동 할당할 때 이벤트 취소자가 호출되지 않았습니다. 이를 통해 스마트 포인터가 루트가 [**winrt::com_ptr struct template**](/uwp/cpp-ref-for-winrt/com-ptr)인 자체 할당을 안정적으로 처리하지 않는 문제를 파악할 수 있었습니다. **winrt::com_ptr** 이 수정되었으며, 이벤트 취소자는 이동 의미 체계를 제대로 처리하여 할당 시 취소되도록 수정되었습니다.
 
 > [!IMPORTANT]
 > 버전 1.0.181002.2 및 이후 버전 1.0.190128.4에서 모두 [C++/WinRT Visual Studio 확장(VSIX)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264)에 대한 주요 변경 내용이 있습니다. 이 변경 내용에 대한 자세한 내용과 이 변경 내용이 기존 프로젝트에 어떻게 영향을 미치는지 알아보려면 [Visual Studio의 C++/WinRT 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 및 [이전 버전의 VSIX 확장](intro-to-using-cpp-with-winrt.md#earlier-versions-of-the-vsix-extension)을 참조하세요.
@@ -383,8 +383,8 @@ C++/WinRT는 컴파일하기 위해 더 이상 Windows SDK의 헤더 파일을 �
 
 그러나 Visual Studio에서 프로젝트 대상을 다시 지정하는 두 가지 다른 방법이 있습니다.
 
-- **일반** \> **Windows SDK 버전** 프로젝트 속성으로 차례로 이동한 다음, **모든 구성** 및 **모든 플랫폼**을 선택합니다. **Windows SDK 버전**을 대상으로 지정할 버전으로 설정합니다.
-- **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고, **프로젝트 대상 다시 지정**을 클릭하고, 대상으로 지정할 버전을 선택한 다음, **확인**을 클릭합니다.
+- **일반** \> **Windows SDK 버전** 프로젝트 속성으로 차례로 이동한 다음, **모든 구성** 및 **모든 플랫폼** 을 선택합니다. **Windows SDK 버전** 을 대상으로 지정할 버전으로 설정합니다.
+- **솔루션 탐색기** 에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고, **프로젝트 대상 다시 지정** 을 클릭하고, 대상으로 지정할 버전을 선택한 다음, **확인** 을 클릭합니다.
 
 이 두 가지 방법 중 하나를 사용한 후 컴파일러 또는 링커 오류가 발생하면 다시 빌드하기 전에 솔루션을 정리할 수 있습니다(**빌드** > **솔루션 정리** 및/또는 수동으로 모든 임시 폴더와 파일 삭제).
 

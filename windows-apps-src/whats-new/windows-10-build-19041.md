@@ -5,12 +5,12 @@ keywords: 새로운 기능, 새 기능, Windows, Windows 10, 업데이트, 업�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 63a6138841a19629523b452eab2f3e7b5d125c37
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 04fba2a6fd1f7a13dae3e3509ccb3a0470396dad
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174427"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860143"
 ---
 # <a name="whats-new-for-developers-in-windows-10-build-19041"></a>Windows 10 빌드 19041의 개발자용 새로운 기능
 
@@ -31,7 +31,7 @@ Direct3D | [High Dynamic Range 디스플레이 및 고급 색으로 DirectX 사�
 Direct3D 12 | *계산 전용* 디바이스에서 사용할 수 있도록 [Direct3D 12 Core 1.0 기능 수준](/windows/win32/direct3d12/core-feature-levels)이 추가되었습니다. </br> [ID3D12Debug3 인터페이스](/windows/win32/api/d3d12sdklayers/nn-d3d12sdklayers-id3d12debug3)에 대한 새 항목이 추가되었습니다.
 직접 ML | WinML이 빌드되어 있는 하위 수준 하드웨어 가속 API인 DirectML에 18개의 연산자가 추가되었습니다. 한 예로 [DML_ACTIVATION_SHRINK_OPERATOR_DESC 구조](/windows/win32/api/directml/ns-directml-dml_activation_shrink_operator_desc)가 있습니다.
 오류 보고 | RoFailFastWithErrorContextInternal2 함수가 Win32에 추가되어 추가 오류 컨텍스트가 포함될 수 있는 예외를 발생시킵니다.
-Machine Learning | Windows Machine Learning에서 [이제 ONNX 버전 1.4 및 opset 9를 지원](/windows/ai/windows-ml/release-notes)합니다. </br>  [CloseModelOnSessionCreation](/uwp/api/windows.ai.machinelearning.learningmodelsessionoptions.closemodelonsessioncreation?view=winrt-19041) API를 사용하면 학습 모델이 더 이상 필요하지 않을 때 자동으로 닫아 메모리를 절약할 수 있습니다.
+Machine Learning | Windows Machine Learning에서 [이제 ONNX 버전 1.4 및 opset 9를 지원](/windows/ai/windows-ml/release-notes)합니다. </br>  [CloseModelOnSessionCreation](/uwp/api/windows.ai.machinelearning.learningmodelsessionoptions.closemodelonsessioncreation) API를 사용하면 학습 모델이 더 이상 필요하지 않을 때 자동으로 닫아 메모리를 절약할 수 있습니다.
 Wi-Fi | 여러 가지 새로운 기본 WiFi 함수 및 구조가 추가되었습니다(예: [WlanDeviceServiceCommand 함수](/windows/win32/api/wlanapi/nf-wlanapi-wlandeviceservicecommand)).
 Wi-Fi 핫스팟 2 | [웹 사이트를 통해 Wi-Fi 프로필 프로비저닝](/windows/win32/nativewifi/prov-wifi-profile-via-website)에서 Wi-Fi 핫스팟 2에 대한 새로운 기능을 설명합니다.
 Windows Holographic interop | [`windows.graphics.holographic.interop.h`](/windows/win32/api/windows.graphics.holographic.interop) 헤더가 17개의 Win32 API와 함께 추가되었습니다. API는 Win32와 Windows 런타임 간의 상호 운용을 위한 것입니다. API는 Windows 10 빌드 18362에 추가되었으며, 헤더는 빌드 19041에 새로 추가되었습니다.
@@ -58,7 +58,7 @@ MSIX | Windows 10 SDK의 마지막 릴리스 이후 [MSIX 패키지 형식](/win
 서비스를 사용하여 패키징 | MSIX 및 MSIX 패키징 도구가 [이제 서비스를 포함하는 앱 패키지를 지원](/windows/msix/packaging-tool/convert-an-installer-with-services)합니다.
 MSIX 패키지의 스크립트 | [PSF(패키지 지원 프레임워크)를 사용하여 MSIX 앱 패키지의 스크립트를 실행](/windows/msix/psf/run-scripts-with-package-support-framework)할 수 있습니다. 이를 통해 IT 전문가는 애플리케이션이 MSIX를 사용하여 패키징된 후 사용자 환경에 맞게 해당 애플리케이션을 동적으로 사용자 지정할 수 있습니다.
 패키지 무결성 적용 | 이제 패키지 매니페스트에서 [uap10:PackageIntegrity 요소](/uwp/schemas/appxpackage/uapmanifestschema/element-uap10-packageintegrity)를 사용하여 MSIX 패키지의 콘텐츠에 대한 패키지 무결성을 적용할 수 있습니다. MSIX 패키징 도구를 통해 MSIX 패키지를 만들 때 패키지 무결성을 적용할 수도 있습니다.
-스파스 패키지 | *스파스 패키지*를 앱과 함께 빌드하고 등록하여 [MSIX 패키지에 패키징되지 않은 데스크톱 앱에 패키지 ID를 부여](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps)할 수 있습니다. 이러한 기능이 제공되므로 아직 배포를 위한 MSIX 패키지를 도입할 수 없는 데스크톱 앱에서도 패키지 ID가 필요한 Windows 10 확장 기능을 사용할 수 있습니다.
+스파스 패키지 | *스파스 패키지* 를 앱과 함께 빌드하고 등록하여 [MSIX 패키지에 패키징되지 않은 데스크톱 앱에 패키지 ID를 부여](/windows/apps/desktop/modernize/grant-identity-to-nonpackaged-apps)할 수 있습니다. 이러한 기능이 제공되므로 아직 배포를 위한 MSIX 패키지를 도입할 수 없는 데스크톱 앱에서도 패키지 ID가 필요한 Windows 10 확장 기능을 사용할 수 있습니다.
 호스트되는 앱 | 이제 [호스트되는 앱을 만들 수 있습니다](../launch-resume/hosted-apps.md). 호스트되는 앱은 부모 호스트 앱과 동일한 실행 파일 및 정의를 공유하지만 시스템에서 별도의 앱처럼 보이며 동작합니다. 호스트되는 앱은 독립 실행형 Windows 10 앱처럼 동작하는 구성 요소(예: 실행 파일 또는 스크립트 파일)를 원하는 경우에는 유용하지만, 구성 요소를 실행하려면 호스트 프로세스가 필요합니다. 호스트되는 앱에는 자체 시작 타일, ID 및 Windows 10 기능(예: 백그라운드 작업, 알림, 타일 및 공유 대상)과의 긴밀한 통합이 있을 수 있습니다.
 
 ## <a name="windows-ui-library-winui"></a>Windows UI 라이브러리(WinUI)

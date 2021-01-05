@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 288795b2dc189dae7b350a30446410b40044d08f
-ms.sourcegitcommit: e39b569626804d2ce4246353ac2c03a916dc9737
+ms.openlocfilehash: 9cda36c6027ae74df9beb5d1de68f69f273dc5f0
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192953"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860106"
 ---
 # <a name="windows-runtime-components-with-ccx"></a>C++/CX가 포함된 Windows 런타임 구성 요소
 
@@ -80,7 +80,7 @@ Windows 런타임 구성 요소에는 여러 활성화 가능한 공용 클래�
 
 클라이언트 코드는 모든 클래스에 대해서와 마찬가지로 **new**(Visual Basic에서는 **New**) 키워드를 사용하여 구성 요소의 인스턴스를 만듭니다.
 
-활성화 가능한 클래스는 **public ref class sealed**로 선언해야 합니다. **ref class** 키워드가 컴파일러에게 Windows 런타임 호환 형식으로 클래스를 만들도록 지시하면 봉인된 키워드는 클래스가 상속될 수 없다고 지정합니다. Windows 런타임은 현재 유니버설 상속 모델을 지원하지 않고, 제한된 상속 모델이 사용자 지정 XAML 컨트롤의 생성을 지원합니다. 자세한 내용은 [Ref 클래스 및 구조(C++/CX)](/cpp/cppcx/ref-classes-and-structs-c-cx)를 참조하세요.
+활성화 가능한 클래스는 **public ref class sealed** 로 선언해야 합니다. **ref class** 키워드가 컴파일러에게 Windows 런타임 호환 형식으로 클래스를 만들도록 지시하면 봉인된 키워드는 클래스가 상속될 수 없다고 지정합니다. Windows 런타임은 현재 유니버설 상속 모델을 지원하지 않고, 제한된 상속 모델이 사용자 지정 XAML 컨트롤의 생성을 지원합니다. 자세한 내용은 [Ref 클래스 및 구조(C++/CX)](/cpp/cppcx/ref-classes-and-structs-c-cx)를 참조하세요.
 
 C + +/CX의 경우 모든 숫자 기본 형식은 기본 네임 스페이스에 정의 됩니다. [Platform](/cpp/cppcx/platform-namespace-c-cx) 네임 스페이스에는 Windows 런타임 형식 시스템에만 적용 되는 c + +/cx 클래스가 포함 되어 있습니다. 여기에는 [Platform::String](/cpp/cppcx/platform-string-class) 클래스 및 [Platform::Object](/cpp/cppcx/platform-object-class) 클래스가 포함됩니다. [Platform::Collections::Map](/cpp/cppcx/platform-collections-map-class) 클래스 및 [Platform::Collections::Vector](/cpp/cppcx/platform-collections-vector-class) 클래스와 같은 구체적인 컬렉션 형식은 [Platform::Collections](/cpp/cppcx/platform-collections-namespace) 네임스페이스에서 정의됩니다. 이러한 형식이 구현하는 공용 인터페이스는 [Windows::Foundation::Collections 네임스페이스(C++/CX)](/cpp/cppcx/windows-foundation-collections-namespace-c-cx)에서 정의됩니다. 이러한 인터페이스 형식이 JavaScript, C# 및 Visual Basic에서 사용하는 형식입니다. 자세한 내용은 [형식 시스템(C++/CX)](/cpp/cppcx/type-system-c-cx)을 참조하세요.
 
@@ -543,7 +543,7 @@ C# 및 Visual Basic 둘 다 열거에 대해 언어를 지원합니다. 이러�
 ## <a name="asynchronous-methods"></a>비동기 메서드
 다른 Windows 런타임 개체에서 제공하는 비동기 메서드를 사용하려면 [작업 클래스(동시성 런타임)](/cpp/parallel/concrt/reference/task-class)를 사용합니다. 자세한 내용은 [작업 병렬 처리(동시성 런타임)](/cpp/parallel/concrt/task-parallelism-concurrency-runtime)를 참조하세요.
 
-C + +/CX에서 비동기 메서드를 구현 하려면 ppltasks.h에 정의 된 [create \_ async](/cpp/parallel/concrt/reference/concurrency-namespace-functions?view=vs-2017) 함수를 사용 합니다. 자세한 내용은 [UWP 앱 용 c + +/cx에서 비동기 작업 만들기](/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps)를 참조 하세요. 예제는 [c + +/cx Windows 런타임 구성 요소를 만들고 JavaScript 또는 c #에서 호출](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)하는 연습을 참조 하세요. .Net 언어는 .NET에 정의 된 비동기 메서드와 마찬가지로 c + +/CX 비동기 메서드를 사용 합니다.
+C + +/CX에서 비동기 메서드를 구현 하려면 ppltasks.h에 정의 된 [create \_ async](/cpp/parallel/concrt/reference/concurrency-namespace-functions?view=vs-2017&preserve-view=true) 함수를 사용 합니다. 자세한 내용은 [UWP 앱 용 c + +/cx에서 비동기 작업 만들기](/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps)를 참조 하세요. 예제는 [c + +/cx Windows 런타임 구성 요소를 만들고 JavaScript 또는 c #에서 호출](walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp.md)하는 연습을 참조 하세요. .Net 언어는 .NET에 정의 된 비동기 메서드와 마찬가지로 c + +/CX 비동기 메서드를 사용 합니다.
 
 ## <a name="exceptions"></a>예외
 Windows 런타임에서 정의된 모든 예외 형식을 throw할 수 있습니다. 일부 Windows 런타임 예외 형식에서는 사용자 지정 형식을 파생시킬 수 없습니다. 그러나 COMException을 throw하고 예외를 catch하는 코드에서 액세스할 수 있는 사용자 지정 HRESULT를 제공할 수 있습니다. COMException에서 사용자 지정 메시지를 지정할 수 있는 방법이 없습니다.

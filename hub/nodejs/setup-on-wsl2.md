@@ -8,12 +8,12 @@ ms.topic: article
 keywords: NodeJS, Node.js, windows 10, microsoft, nodejs 학습, windows의 노드, wsl의 노드, windows 기반 linux의 노드, windows에 노드 설치, vs code를 사용하는 nodejs, windows에서 노드를 사용하여 개발, windows에서 nodejs를 사용하여 개발, WSL에 노드 설치, Linux용 Windows 하위 시스템의 NodeJS
 ms.localizationpriority: medium
 ms.date: 07/28/2020
-ms.openlocfilehash: 4fa1a53e3d0e5ba22cd3a261b3e2672012330bca
-ms.sourcegitcommit: 00349b7b7cad3d161485ec06fee4e4109452c36a
+ms.openlocfilehash: 4e0477c91470d69f9ec5fd726079a1164e2cf276
+ms.sourcegitcommit: 3fafc6b6d548a03e6191fa95ebf9384c42396a30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91814654"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97880536"
 ---
 # <a name="set-up-your-nodejs-development-environment-with-wsl-2"></a>WSL 2를 사용하여 Node.js 개발 환경 설치
 
@@ -38,7 +38,7 @@ WSL 2와 Linux 배포판을 설치했으면 Linux 배포판(Windows 시작 메�
 
 1. 다음과 같이 [Microsoft Store에서 Windows 터미널](https://www.microsoft.com/store/apps/9n0dx20hk701)을 받습니다. Microsoft Store를 통해 설치하면 업데이트가 자동으로 처리됩니다.
 
-2. 설치가 완료되면 Windows 터미널을 열고 **설정**을 선택한 다음, `settings.json` 파일을 사용하여 터미널을 사용자 지정합니다.
+2. 설치가 완료되면 Windows 터미널을 열고 **설정** 을 선택한 다음, `settings.json` 파일을 사용하여 터미널을 사용자 지정합니다.
 
     ![Windows 터미널 설정](../images/windows-terminal-settings.png)
 
@@ -63,7 +63,7 @@ cURL을 사용하여 최신 버전의 NVM을 설치하면 이전 버전이 대�
     ![노드 버전을 표시하지 않는 NVM 목록](../images/nvm-no-node.png)
 
 6. `nvm install node`를 사용하여 Node.js 최신 릴리스를 설치합니다(최신 기능 개선 사항을 테스트하는 것이 목적이지만 이슈가 있을 가능성이 높음).
-7. `nvm install node --lts` 명령을 사용하여 Node.js의 안정적인 최신 LTS 릴리스를 설치합니다(권장).
+7. `nvm install --lts` 명령을 사용하여 Node.js의 안정적인 최신 LTS 릴리스를 설치합니다(권장).
 8. `nvm ls`를 사용하여 설치된 노드 버전을 나열합니다. 방금 설치한 두 가지 버전이 표시될 것입니다.
 
     ![LTS 및 현재 노드 버전을 보여주는 NVM 목록](../images/nvm-node-installed.png)

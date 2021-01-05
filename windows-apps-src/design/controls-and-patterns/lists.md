@@ -12,18 +12,18 @@ design-contact: kimsea
 dev-contact: ranjeshj
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: 3fd6cfb7fb0ffd7102f32d7159aba2b4c1042b76
-ms.sourcegitcommit: da44cb95946440cd06ff36254d42ecefcdd87ce2
+ms.openlocfilehash: 7b1304032243c7675c4aba6cbda7e7899e8deddb
+ms.sourcegitcommit: e252ccb4a76c4883c7073083d73007957202b84d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93063025"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97657680"
 ---
 # <a name="collections-and-lists"></a>컬렉션 및 목록
 
 컬렉션과 목록은 모두 함께 표시되는 여러 관련 데이터 항목의 표현을 나타냅니다. 컬렉션은 다양한 컬렉션 컨트롤(컬렉션 보기라고도 함)에서 여러 가지 방법으로 표현할 수 있습니다. 컬렉션 컨트롤은 연락처 목록, 날짜 목록, 이미지 컬렉션 등과 같은 컬렉션 기반 콘텐츠와의 상호 작용을 표시하고 사용하도록 설정합니다.
 
-> **중요 API** : [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](/uwp/api/Windows.UI.Xaml.Controls.GridView), [FlipView 클래스](/uwp/api/windows.ui.xaml.controls.flipview), [TreeView 클래스](/uwp/api/windows.ui.xaml.controls.treeview), [ItemsRepeater 클래스](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)
+> **중요 API**: [ListView 클래스](/uwp/api/Windows.UI.Xaml.Controls.ListView), [GridView 클래스](/uwp/api/Windows.UI.Xaml.Controls.GridView), [FlipView 클래스](/uwp/api/windows.ui.xaml.controls.flipview), [TreeView 클래스](/uwp/api/windows.ui.xaml.controls.treeview), [ItemsRepeater 클래스](/uwp/api/microsoft.ui.xaml.controls.itemsrepeater)
 
 이 문서에서 설명하는 컨트롤은 다음과 같습니다.
 
@@ -333,7 +333,7 @@ ms.locfileid: "93063025"
 - [마스터/세부](master-details.md)
 - [탐색 창](navigationview.md)
 - [시맨틱 줌](semantic-zoom.md)
-- [끌어서 놓기](https://docs.microsoft.com/windows/uwp/app-to-app/drag-and-drop)
+- [끌어서 놓기](../input/drag-and-drop.md)
 - [미리 보기 이미지](../../files/thumbnails.md)
 
 **API 참조**

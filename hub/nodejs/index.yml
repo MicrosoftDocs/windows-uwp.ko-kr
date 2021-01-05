@@ -8,14 +8,14 @@ metadata:
   ms.author: mattwoj
   ms.date: 09/15/2019
   ms.prod: dev-environment
-  ms.technology: windows-node
+  ms.technology: windows-nodejs
   ms.topic: landing-page
-  ms.openlocfilehash: 8b7e1a333dadce535338d302e3592842dddc90e7
-  ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+  ms.openlocfilehash: 862a1a13e8617ed055adee403b18674f4ed2aded
+  ms.sourcegitcommit: 7aa0e1108fd1a19ebc5632acbc9f66ea9af2b321
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/31/2020
-  ms.locfileid: "89166537"
+  ms.lasthandoff: 12/18/2020
+  ms.locfileid: "97691505"
 landingContent:
 - title: Node.js 개발 환경 설정
   linkLists:

@@ -6,12 +6,12 @@ ms.date: 10/13/2020
 ms.topic: article
 keywords: Windows 10, UWP, 첫 번째 앱, c#, c + +, JavaScript
 ms.localizationpriority: medium
-ms.openlocfilehash: fe802fca1b17b49c11bf74b54f74d3b3107e6a9c
-ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
+ms.openlocfilehash: d24c5952d7432c123ff6f4d3e9b93593d08ac777
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94339771"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860280"
 ---
 # <a name="create-your-first-app"></a>첫 번째 앱 만들기
 
@@ -49,8 +49,8 @@ C++ 프로그래밍 전문 지식을 활용하여 Visual C++ 구성 요소 확�
 
 여기서 C++에 대해 자세히 알아보세요.
 
-* [UWP 앱용 C++](/cpp/cppcx/universal-windows-apps-cpp?view=vs-2019)
-* [데스크톱 앱용 C++](/cpp/windows/desktop-applications-visual-cpp?view=vs-2019)
+* [UWP 앱용 C++](/cpp/cppcx/universal-windows-apps-cpp)
+* [데스크톱 앱용 C++](/cpp/windows/desktop-applications-visual-cpp)
 
 ## <a name="next-steps"></a>다음 단계
 

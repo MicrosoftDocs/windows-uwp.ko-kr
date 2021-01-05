@@ -5,21 +5,21 @@ ms.assetid: 2125B09F-DB90-4515-9AA6-516C7E9ACCCD
 template: detail.hbs
 ms.date: 09/28/2020
 ms.topic: article
-ms.custom: contperfq1
+ms.custom: contperf-fy21q1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b63e88f6d83e84bbe07fc4c5cbe7befba6dc3c8a
-ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
+ms.openlocfilehash: 6003db167d2a36205ac02f98750295d32a03ca62
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878506"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860259"
 ---
 # <a name="windows-push-notification-services-wns-overview"></a>WNS(Windows 푸시 알림 서비스) 개요 
 
 WNS (Windows Push Notification Services)를 사용 하면 타사 개발자가 자신의 클라우드 서비스에서 알림, 타일, 배지 및 원시 업데이트를 보낼 수 있습니다. WNS는 에너지 효율적이며 신뢰할 수 있는 방법으로 사용자에게 새 업데이트를 전달하는 메커니즘을 제공합니다.
 
-## <a name="how-it-works"></a>작동 방법
+## <a name="how-it-works"></a>작동 방식
 
 다음 다이어그램은 푸시 알림을 보내기 위한 전체 데이터 흐름을 보여 줍니다. 여기에는 다음 단계가 포함 됩니다.
 
@@ -65,7 +65,7 @@ WNS 인증 체계는 [OAuth 2.0](https://tools.ietf.org/html/draft-ietf-oauth-v2
 WNS를 사용 하는 인증에서 클라우드 서비스는 SSL(Secure Sockets Layer) (SSL)을 통해 HTTP 요청을 제출 합니다. 매개 변수는 "application/x-www-form-urlencoded" 형식으로 제공 됩니다. \_다음 예제에 표시 된 것 처럼 "클라이언트 id" 필드에 패키지 SID를 제공 하 고 "클라이언트 암호" 필드에 비밀 키를 제공 \_ 합니다. 구문에 대 한 자세한 내용은 [액세스 토큰 요청](/previous-versions/windows/apps/hh465435(v=win.10)) 참조를 참조 하세요.
 
 > [!NOTE]
-> 이는 사용자의 코드에서 성공적으로 사용할 수 있는 잘라내기 및 붙여넣기 코드가 아닌 예제 일 뿐입니다. 
+> 이는 사용자의 코드에서 성공적으로 사용할 수 있는 잘라내기 및 붙여넣기 코드가 아닌 예제 일 뿐입니다. 
 
 ``` http
  POST /accesstoken.srf HTTP/1.1
@@ -157,12 +157,12 @@ WNS는 클라우드 서비스를 인증 하 고, 성공 하면 "200 OK" 응답�
 
 이러한 두 설정의 상태를 확인할 수 있는 방법은 없지만 배터리 절약 상태를 확인 하는 방법은 없습니다. Windows 10에서는 [**EnergySaverStatus**](/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatus) 속성을 사용 하 여 배터리 절약 상태를 확인 합니다. 앱은 [**EnergySaverStatusChanged**](/uwp/api/Windows.System.Power.PowerManager.EnergySaverStatusChanged) 이벤트를 사용 하 여 배터리 절약에 대 한 변경 내용을 수신할 수도 있습니다.
 
-앱이 푸시 알림에 크게 의존 하는 경우 배터리 보호기가 설정 되어 있는 동안 사용자에 게 알림을 수신 하지 못할 수 있음을 알리고 **배터리 절약 설정을**쉽게 조정할 수 있도록 하는 것이 좋습니다. Windows 10의 배터리 보호기 설정 URI 체계를 사용 하 여 `ms-settings:batterysaver-settings` 설정 앱에 대 한 편리한 링크를 제공할 수 있습니다.
+앱이 푸시 알림에 크게 의존 하는 경우 배터리 보호기가 설정 되어 있는 동안 사용자에 게 알림을 수신 하지 못할 수 있음을 알리고 **배터리 절약 설정을** 쉽게 조정할 수 있도록 하는 것이 좋습니다. Windows 10의 배터리 보호기 설정 URI 체계를 사용 하 여 `ms-settings:batterysaver-settings` 설정 앱에 대 한 편리한 링크를 제공할 수 있습니다.
 
 > [!TIP]
 > 사용자에 게 배터리 절약 시간 설정을 알리는 경우 나중에 메시지를 표시 하지 않도록 하는 방법을 제공 하는 것이 좋습니다. 예를 들어 `dontAskMeAgainBox` 다음 예제의 확인란은 [**LocalSettings**](/uwp/api/Windows.Storage.ApplicationData.LocalSettings)에서 사용자의 기본 설정을 유지 합니다.
 
-다음은 Windows 10에서 배터리 절약이 켜져 있는지 여부를 확인 하는 방법의 예입니다. 이 예제에서는 사용자에 게 알리고 설정 앱을 **배터리 절약 설정**으로 시작 합니다. 를 `dontAskAgainSetting` 사용 하면 사용자가 메시지를 다시 표시 하지 않으려면 메시지를 표시 하지 않을 수 있습니다.
+다음은 Windows 10에서 배터리 절약이 켜져 있는지 여부를 확인 하는 방법의 예입니다. 이 예제에서는 사용자에 게 알리고 설정 앱을 **배터리 절약 설정** 으로 시작 합니다. 를 `dontAskAgainSetting` 사용 하면 사용자가 메시지를 다시 표시 하지 않으려면 메시지를 표시 하지 않을 수 있습니다.
 
 ```csharp
 using System;

@@ -6,12 +6,12 @@ ms.date: 02/21/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, .net, unity
 ms.localizationpriority: medium
-ms.openlocfilehash: dcacb227205c0049cfc3467c9906784b0b55728f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b687f3ec09a99ae6ccb81e5c205eb454e0af0e04
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89165237"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860111"
 ---
 # <a name="missing-net-apis-in-unity-and-uwp"></a>Unity 및 UWP에서 누락된 .NET API
 
@@ -27,21 +27,21 @@ ms.locfileid: "89165237"
 
 각 버전의 UWP SDK는 다른 수준의 .NET Standard을 준수 합니다. 예를 들어 16299 SDK (에 지 크리에이터 업데이트)는 .NET Standard 2.0을 지원 합니다.
 
-대상으로 하는 UWP 버전에서 특정 .NET API가 지원 되는지 확인 하려는 경우 [.NET STANDARD API 참조](/dotnet/api/index?view=netstandard-2.0) 를 확인 하 고 해당 버전의 uwp에서 지원 되는 .NET Standard 버전을 선택할 수 있습니다.
+대상으로 하는 UWP 버전에서 특정 .NET API가 지원 되는지 확인 하려는 경우 [.NET STANDARD API 참조](/dotnet/api/index?view=netstandard-2.0&preserve-view=true) 를 확인 하 고 해당 버전의 uwp에서 지원 되는 .NET Standard 버전을 선택할 수 있습니다.
 
 ## <a name="scripting-backend-configuration"></a>Scripting 백엔드 구성
 
-UWP를 빌드하는 데 문제가 있는 경우 먼저 **플레이어 설정** (**파일 > 빌드 설정**, **유니버설 Windows 플랫폼**선택, **플레이어 설정**)을 확인 합니다. **기타 설정 > 구성**에서 처음 세 개의 드롭다운 (**scripting Runtime Version**, **Scripting 백 엔드**및 **Api 호환성 수준**)은 고려해 야 할 모든 중요 한 설정입니다.
+UWP를 빌드하는 데 문제가 있는 경우 먼저 **플레이어 설정** (**파일 > 빌드 설정**, **유니버설 Windows 플랫폼** 선택, **플레이어 설정**)을 확인 합니다. **기타 설정 > 구성** 에서 처음 세 개의 드롭다운 (**scripting Runtime Version**, **Scripting 백 엔드** 및 **Api 호환성 수준**)은 고려해 야 할 모든 중요 한 설정입니다.
 
 **스크립팅 런타임 버전** 은 사용자가 선택 하는 것과 동일한 .NET Framework 지원 버전을 가져올 수 있도록 하는 Unity scripting 백 엔드가 사용 하는 기능입니다. 그러나 해당 버전의 .NET Framework에 있는 모든 Api가 지원 되는 것은 아닙니다. UWP에서 대상으로 하는 .NET Standard 버전의 Api만 지원 됩니다.
 
 새 .NET 릴리스를 사용 하는 경우 독립 실행형 및 UWP에서 동일한 코드를 사용할 수 있는 .NET Standard에 더 많은 Api가 추가 됩니다. 예를 들어 네임 스페이스 [ 의System.Runtime.Serialization.Js](/dotnet/api/system.runtime.serialization.json) .NET Standard 2.0에서 도입 되었습니다. 이전 버전의 .NET Standard를 대상으로 하는 **스크립팅 런타임 버전** 을 **.net 3.5** 로 설정 하면 API를 사용 하려고 할 때 오류가 발생 합니다. .NET Standard 2.0을 지 원하는 **.net 4.6에 해당** 하는 것으로 전환 하면 API가 작동 합니다.
 
-**Scripting 백엔드** 는 **.net** 또는 **IL2CPP**일 수 있습니다. 이 항목에서는 여기서 설명 하는 문제가 발생 하는 경우 **.net**을 선택 했다고 가정 합니다. 자세한 내용은 [스크립팅 백 엔드](https://docs.unity3d.com/Manual/windowsstore-scriptingbackends.html) 를 참조 하세요.
+**Scripting 백엔드** 는 **.net** 또는 **IL2CPP** 일 수 있습니다. 이 항목에서는 여기서 설명 하는 문제가 발생 하는 경우 **.net** 을 선택 했다고 가정 합니다. 자세한 내용은 [스크립팅 백 엔드](https://docs.unity3d.com/Manual/windowsstore-scriptingbackends.html) 를 참조 하세요.
 
-마지막으로, 게임을 실행할 .NET 버전으로 **Api 호환성 수준을** 설정 해야 합니다. 이는 **스크립팅 런타임 버전과**일치 해야 합니다.
+마지막으로, 게임을 실행할 .NET 버전으로 **Api 호환성 수준을** 설정 해야 합니다. 이는 **스크립팅 런타임 버전과** 일치 해야 합니다.
 
-일반적으로 **런타임 버전** 및 **Api 호환성 수준을**스크립팅 하기 위해 사용 가능한 최신 버전을 선택 하 여 .NET Framework와의 호환성을 향상 시킬 수 있으므로 더 많은 .net api를 사용할 수 있습니다.
+일반적으로 **런타임 버전** 및 **Api 호환성 수준을** 스크립팅 하기 위해 사용 가능한 최신 버전을 선택 하 여 .NET Framework와의 호환성을 향상 시킬 수 있으므로 더 많은 .net api를 사용할 수 있습니다.
 
 ![구성: Scripting Runtime Version; 백 엔드 스크립팅 Api 호환성 수준](images/missing-dot-net-apis-in-unity-1.png)
 
@@ -115,7 +115,7 @@ private void UsingThreads()
 
 ### <a name="security"></a>보안
 
-일부 **시스템 보안입니다** . * UWP 용 Unity 게임을 빌드하는 경우 [system.security.cryptography.x509certificates.x509certificate2](/dotnet/api/system.security.cryptography.x509certificates?view=netstandard-2.0)과 같은 네임 스페이스를 사용할 수 없습니다. 이러한 경우에는 **Windows 보안** 을 사용 합니다. * Api는 동일한 기능을 대부분 포함 합니다.
+일부 **시스템 보안입니다** . [system.security.cryptography.x509certificates.x509certificate2](/dotnet/api/system.security.cryptography.x509certificates?view=netstandard-2.0&preserve-view=true)과 같은 네임 스페이스는 UWP 용 Unity 게임을 빌드할 때 사용할 수 없습니다. 이러한 경우에는 _*Windows 보안* *_ 을 사용 합니다. Api는 동일한 기능을 대부분 포함 합니다.
 
 다음 예제에서는 지정 된 이름의 인증서 저장소에서 인증서를 가져옵니다.
 
@@ -138,11 +138,11 @@ WinRT 보안 Api를 사용 하는 방법에 대 한 자세한 내용은 [보안]
 
 ### <a name="networking"></a>네트워킹
 
-**시스템 네트워크의 일부 &period; 입니다.** * UWP 용 Unity 게임을 빌드하는 경우에는 [시스템 .net. 메일](/dotnet/api/system.net.mail?view=netstandard-2.0)등의 네임 스페이스도 사용할 수 없습니다. 이러한 Api의 대부분은 해당 하는 **Windows. 네트워킹을 사용 합니다.** * 및 **Windows.** * WinRT Api를 통해 비슷한 기능을 얻을 수 있습니다. 자세한 내용은 [네트워킹 및 웹 서비스](../networking/index.md) 를 참조 하세요.
+UWP 용 Unity 게임을 빌드할 때 [시스템 .net. 메일](/dotnet/api/system.net.mail?view=netstandard-2.0&preserve-view=true)등의 일부 _*시스템 &period;* * net-library_ 도 사용할 수 없습니다. 이러한 api의 대부분은 해당 하는 _*windows. 네트워킹과.* *_ 및 _*windows 웹* *_ 을 사용 합니다. WinRT Api를 통해 비슷한 기능을 얻을 수 있습니다. 자세한 내용은 [네트워킹 및 웹 서비스](../networking/index.md) 를 참조 하세요.
 
-**시스템 .Net Mail**의 경우에는 [Windows-Applicationmodel. Email](/uwp/api/windows.applicationmodel.email) 네임 스페이스를 사용 합니다. 자세한 내용은 [전자 메일 보내기](../contacts-and-calendar/sending-email.md) 를 참조 하세요.
+_ * 시스템 .Net. 메일 * *의 경우에는 [Windows-ApplicationModel. Email](/uwp/api/windows.applicationmodel.email) 네임 스페이스를 사용 합니다. 자세한 내용은 [전자 메일 보내기](../contacts-and-calendar/sending-email.md) 를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>추가 정보
 
 * [유니버설 Windows 플랫폼: .NET Scripting 백 엔드에서 .NET 형식이 누락 되었습니다.](https://docs.unity3d.com/Manual/windowsstore-missingtypes.html)
 * [UWP 앱 용 .NET 개요](/previous-versions/windows/apps/br230302(v=vs.140))

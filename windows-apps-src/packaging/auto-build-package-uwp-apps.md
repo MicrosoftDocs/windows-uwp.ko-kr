@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: f9b0d6bd-af12-4237-bc66-0c218859d2fd
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f0e1d460ca52c659401bbb291deafa5746b7bb6
-ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
+ms.openlocfilehash: eec20ffc02263383cdbe670771143a6403177e7b
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933114"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860438"
 ---
 # <a name="set-up-automated-builds-for-your-uwp-app"></a>UWP 앱에 대한 자동화된 빌드 설정
 
@@ -47,7 +47,7 @@ variables:
   appxPackageDir: '$(build.artifactStagingDirectory)\AppxPackages\\'
 
 steps:
-- task: NuGetToolInstaller@0
+- task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
   inputs:
@@ -70,12 +70,12 @@ steps:
 
 자동화된 빌드에 대한 인증서를 업로드하려면 다음을 수행합니다.
 
-1. Azure Pipelines의 탐색 창에서 **파이프라인**을 펼치고 **라이브러리**를 클릭합니다.
-2. **보안 파일** 탭을 클릭한 다음, **+ 보안 파일**을 클릭합니다.
+1. Azure Pipelines의 탐색 창에서 **파이프라인** 을 펼치고 **라이브러리** 를 클릭합니다.
+2. **보안 파일** 탭을 클릭한 다음, **+ 보안 파일** 을 클릭합니다.
 
     ![보안 파일 페이지를 표시하는 라이브러리 옵션이 강조 표시된 Azure의 스크린샷](images/secure-file1.png)
 
-3. 인증서 파일을 찾아서 **확인**을 클릭합니다.
+3. 인증서 파일을 찾아서 **확인** 을 클릭합니다.
 4. 인증서가 업로드되면 이를 선택하여 해당 속성을 확인합니다. **파이프라인 권한** 아래에서 **모든 파이프라인에서 사용하도록 권한 부여** 설정/해제를 사용하도록 설정합니다.
 
     ![모든 파이프라인에서 사용할 수 있는 권한 부여 옵션이 선택된 파이프라인 권한 섹션의 스크린샷](images/secure-file2.png)

@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 1338b45dd5ccc7558725dd1ad1d210f3c5e7232b
-ms.sourcegitcommit: 0c4bbaf1c119a84002748cdcf02e1449835559c3
+ms.openlocfilehash: b88f65ba45a2b8a79d822eba525733550f965372
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92132996"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860172"
 ---
 # <a name="integrate-your-desktop-app-with-windows-10-and-uwp"></a>데스크톱 앱을 Windows 10 및 UWP와 통합
 
@@ -53,7 +53,7 @@ ms.locfileid: "92132996"
     <DesktopAppMigration>
         <DesktopApp AumId="[your_app_aumid]" />
         <DesktopApp ShortcutPath="[path]" />
-    </DesktopAppMigration>
+    </DesktopAppMigration>
 </Extension>
 ```
 
@@ -80,7 +80,7 @@ ms.locfileid: "92132996"
             <rescap3:DesktopApp ShortcutPath="%USERPROFILE%\Desktop\[my_app].lnk" />
             <rescap3:DesktopApp ShortcutPath="%APPDATA%\Microsoft\Windows\Start Menu\Programs\[my_app].lnk" />
             <rescap3:DesktopApp ShortcutPath="%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\[my_app_folder]\[my_app].lnk"/>
-         </rescap3:DesktopAppMigration>
+         </rescap3:DesktopAppMigration>
         </rescap3:Extension>
       </Extensions>
     </Application>
@@ -109,11 +109,11 @@ ms.locfileid: "92132996"
 
 ```XML
 <Extension Category="windows.fileTypeAssociation">
-    <FileTypeAssociation Name="[Name]">
-         <MigrationProgIds>
-            <MigrationProgId>"[ProgID]"</MigrationProgId>
-        </MigrationProgIds>
-    </FileTypeAssociation>
+    <FileTypeAssociation Name="[Name]">
+         <MigrationProgIds>
+            <MigrationProgId>"[ProgID]"</MigrationProgId>
+        </MigrationProgIds>
+    </FileTypeAssociation>
 </Extension>
 ```
 
@@ -137,11 +137,11 @@ ms.locfileid: "92132996"
       <Extensions>
         <uap:Extension Category="windows.fileTypeAssociation">
           <uap3:FileTypeAssociation Name="myfiletypes">
-            <rescap3:MigrationProgIds>
-              <rescap3:MigrationProgId>Foo.Bar.1</rescap3:MigrationProgId>
+            <rescap3:MigrationProgIds>
+              <rescap3:MigrationProgId>Foo.Bar.1</rescap3:MigrationProgId>
               <rescap3:MigrationProgId>Foo.Bar.2</rescap3:MigrationProgId>
-            </rescap3:MigrationProgIds>
-          </uap3:FileTypeAssociation>
+            </rescap3:MigrationProgIds>
+          </uap3:FileTypeAssociation>
         </uap:Extension>
       </Extensions>
     </Application>
@@ -246,7 +246,7 @@ ms.locfileid: "92132996"
 |동사 |파일 탐색기 상황에 맞는 메뉴에 표시되는 이름입니다. 이 문자열은 ```ms-resource```를 사용하여 지역화할 수 있습니다.|
 |Id |동사의 고유 ID입니다. 애플리케이션이 UWP 앱인 경우 사용자의 선택을 적절하게 처리할 수 있도록 이 ID가 활성화 이벤트 인수의 일부로 앱에 전달됩니다. 애플리케이션이 완전히 신뢰할 수 있는 패키지된 앱인 경우 앱은 이 ID 대신 매개 변수를 받습니다(다음 항목 참조). |
 |매개 변수 |동사와 연관된 인수 매개 변수 및 값의 목록입니다. 애플리케이션이 완전히 신뢰할 수 있는 패키지된 앱인 경우 애플리케이션이 활성화될 때 이러한 매개 변수가 애플리케이션에 이벤트 인수로 전달됩니다. 다양한 활성화 동사에 따라 애플리케이션의 동작을 사용자 지정할 수 있습니다. 변수가 파일 경로를 포함할 수 있는 경우에는 매개 변수 값을 따옴표로 묶습니다. 이렇게 해야 경로에 공백이 포함된 경우에 발생하는 모든 문제를 방지할 수 있습니다. 애플리케이션이 UWP 앱인 경우에는 매개 변수를 전달할 수 없습니다. 앱은 그 대신 해당 ID를 수신합니다(이전 항목 참조).|
-|확장 |사용자가 파일을 마우스 오른쪽 단추로 클릭하기 전에 **Shift** 키를 길게 눌러 상황에 맞는 메뉴를 표시하는 경우에만 동사 메뉴가 표시되도록 지정합니다. 이 특성은 선택 사항이며, 목록에 없으면 기본값은 **False**입니다(예: 항상 동사를 표시). 각 동사에 대해 개별적으로 이 동작을 지정합니다(항상 **False**인 "열기"는 예외).|
+|확장 |사용자가 파일을 마우스 오른쪽 단추로 클릭하기 전에 **Shift** 키를 길게 눌러 상황에 맞는 메뉴를 표시하는 경우에만 동사 메뉴가 표시되도록 지정합니다. 이 특성은 선택 사항이며, 목록에 없으면 기본값은 **False** 입니다(예: 항상 동사를 표시). 각 동사에 대해 개별적으로 이 동작을 지정합니다(항상 **False** 인 "열기"는 예외).|
 
 #### <a name="example"></a>예제
 
@@ -513,7 +513,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 * ``Single``: 처음 선택한 파일에 대해 애플리케이션이 한 번 활성화됩니다. 다른 파일은 무시됩니다.
 * ``Document``: 애플리케이션의 새로운 별도 인스턴스가 선택한 각 파일에 대해 활성화됩니다.
 
- 다른 파일 형식 및 작업에 대해 다른 기본 설정을 설정할 수 있습니다. 예를 들어 *Document* 모드로 *문서*를, *Player* 모드로 *이미지*를 열 수 있습니다.
+ 다른 파일 형식 및 작업에 대해 다른 기본 설정을 설정할 수 있습니다. 예를 들어 *Document* 모드로 *문서* 를, *Player* 모드로 *이미지* 를 열 수 있습니다.
 
 #### <a name="example"></a>예제
 
@@ -542,7 +542,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 </Package>
 ```
 
-사용자가 15개 이하의 파일을 열 경우 **MultiSelectModel** 특성에 대한 기본 설정은 *Player*입니다. 그렇지 않은 경우에는 *Document*가 기본 설정입니다. UWP 앱은 항상 *Player*로 시작됩니다.
+사용자가 15개 이하의 파일을 열 경우 **MultiSelectModel** 특성에 대한 기본 설정은 *Player* 입니다. 그렇지 않은 경우에는 *Document* 가 기본 설정입니다. UWP 앱은 항상 *Player* 로 시작됩니다.
 
 <a id="show"></a>
 
@@ -688,13 +688,13 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 ```XML
 <Extension Category="windows.fileTypeAssociation">
     <FileTypeAssociation Name="[Name]">
-        <SupportedFileTypes>
-            <FileType>"[FileExtension]"</FileType>
-        </SupportedFileTypes>
-        <KindMap>
-            <Kind value="[KindValue]">
-        </KindMap>
-    </FileTypeAssociation>
+        <SupportedFileTypes>
+            <FileType>"[FileExtension]"</FileType>
+        </SupportedFileTypes>
+        <KindMap>
+            <Kind value="[KindValue]">
+        </KindMap>
+    </FileTypeAssociation>
 </Extension>
 ```
 
@@ -719,16 +719,16 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
       <Extensions>
         <uap:Extension Category="windows.fileTypeAssociation">
            <uap:FileTypeAssociation Name="mediafiles">
-             <uap:SupportedFileTypes>
-               <uap:FileType>.m4a</uap:FileType>
-               <uap:FileType>.mta</uap:FileType>
-             </uap:SupportedFileTypes>
-             <rescap:KindMap>
-               <rescap:Kind value="Item">
+             <uap:SupportedFileTypes>
+               <uap:FileType>.m4a</uap:FileType>
+               <uap:FileType>.mta</uap:FileType>
+             </uap:SupportedFileTypes>
+             <rescap:KindMap>
+               <rescap:Kind value="Item">
                <rescap:Kind value="Communications">
                <rescap:Kind value="Task">
-             </rescap:KindMap>
-          </uap:FileTypeAssociation>
+             </rescap:KindMap>
+          </uap:FileTypeAssociation>
       </uap:Extension>
       </Extensions>
     </Application>
@@ -874,7 +874,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
         <com:Extension Category="windows.comServer">
           <com:ComServer>
             <com:SurrogateServer AppId="d0c8bceb-28eb-49ae-bc68-454ae84d6264" DisplayName="ContosoHandler"">
-              <com:Class Id="Id="d0c8bceb-28eb-49ae-bc68-454ae84d6264" Path="ExplorerCommandVerb.dll" ThreadingModel="STA"/>
+              <com:Class Id="d0c8bceb-28eb-49ae-bc68-454ae84d6264" Path="ExplorerCommandVerb.dll" ThreadingModel="STA"/>
             </com:SurrogateServer>
           </com:ComServer>
         </com:Extension>
@@ -1279,7 +1279,7 @@ XPS(XML Paper Specification) 형식으로 인쇄 데이터를 수신하려면 �
 사용자 지정 글꼴을 다른 Windows 애플리케이션과 공유할 수 있습니다.
 
 > [!NOTE]
-> 이 확장을 사용하는 앱을 스토어에 제출하려면 먼저 스토어 팀에서 승인을 받아야 합니다. 승인을 받으려면 [https://aka.ms/storesupport](https://aka.ms/storesupport)로 이동하여 **문의처**를 클릭하고 대시보드에 앱을 제출하는 것과 관련된 옵션을 선택합니다. 이 승인 프로세스는 앱에 의해 설치된 글꼴과 OS와 함께 설치된 글꼴 간에 충돌이 발생하지 않도록 하는 데 도움이 됩니다. 승인을 얻지 않으면 앱을 제출할 때 다음과 비슷한 오류가 표시됩니다. "패키지 승인 유효성 검사 오류: 이 계정으로는 확장 windows.sharedFonts를 사용할 수 없습니다. 이 확장을 사용할 수 있는 권한을 요청하려면 지원 팀에 문의하세요."
+> 이 확장을 사용하는 앱을 스토어에 제출하려면 먼저 스토어 팀에서 승인을 받아야 합니다. 승인을 받으려면 [https://aka.ms/storesupport](https://aka.ms/storesupport)로 이동하여 **문의처** 를 클릭하고 대시보드에 앱을 제출하는 것과 관련된 옵션을 선택합니다. 이 승인 프로세스는 앱에 의해 설치된 글꼴과 OS와 함께 설치된 글꼴 간에 충돌이 발생하지 않도록 하는 데 도움이 됩니다. 승인을 얻지 않으면 앱을 제출할 때 다음과 비슷한 오류가 표시됩니다. "패키지 승인 유효성 검사 오류: 이 계정으로는 확장 windows.sharedFonts를 사용할 수 없습니다. 이 확장을 사용할 수 있는 권한을 요청하려면 지원 팀에 문의하세요."
 
 #### <a name="xml-namespaces"></a>XML 네임스페이스
 

@@ -6,12 +6,12 @@ ms.date: 10/10/2017
 ms.topic: article
 keywords: Windows 10, UWP, 리소스, 이미지, 자산, MRT, 한정자
 ms.localizationpriority: medium
-ms.openlocfilehash: 9b0cb92c15b39a0bee10e7fe70bc8c4e1581af3c
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: 6aef8f2d7ec61ddbff9083ac19c1be866ade1ac2
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93031826"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860184"
 ---
 # <a name="load-images-and-assets-tailored-for-scale-theme-high-contrast-and-others"></a>배율, 테마, 고대비 등에 맞춘 이미지 및 자산 로드
 앱은 [표시 배율 인수](../design/layout/screen-sizes-and-breakpoints-for-responsive-design.md), 테마, 고대비 및 기타 런타임 컨텍스트에 맞게 조정 된 이미지 리소스 파일 (또는 기타 자산 파일)을 로드할 수 있습니다. 이러한 이미지는 명령 코드 또는 XAML 태그 (예: **이미지** 의 **원본** 속성)에서 참조할 수 있습니다. 응용 프로그램 패키지 매니페스트 소스 파일 (파일)에 표시 될 수도 있습니다 `Package.appxmanifest` &mdash; . 예를 들어, Visual Studio 매니페스트 디자이너의 시각적 자산 탭에 있는 앱 아이콘에 대 한 값, &mdash; 타일 및 알림을 표시 될 수 있습니다. 이미지의 파일 이름에 한정자를 사용 하 고 필요에 따라 [**Resourcecontext**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext?branch=live)를 사용 하 여 동적으로 로드 하면 표시 배율, 테마, 고대비, 언어 및 기타 컨텍스트의 사용자 런타임 설정과 가장 일치 하는 가장 적합 한 이미지 파일이 로드 될 수 있습니다.
@@ -86,7 +86,7 @@ var storagefile = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsy
 this.myXAMLWebViewElement.Source = new Uri("ms-appx-web:///Pages/default.html");
 ```
 
-이러한 예제에 표시 된 시나리오의 경우 [Urikind](/dotnet/api/system.urikind)를 유추 하는 [Uri 생성자](/dotnet/api/system.uri.-ctor?view=netcore-2.0#System_Uri__ctor_System_String_) 오버 로드를 사용 합니다. 스키마와 인증 기관을 포함 하 여 유효한 절대 URI를 지정 하거나, 위의 예제에서와 같이 권한을 기본 앱 패키지로 지정 합니다.
+이러한 예제에 표시 된 시나리오의 경우 [Urikind](/dotnet/api/system.urikind)를 유추 하는 [Uri 생성자](/dotnet/api/system.uri.-ctor?view=netcore-2.0&preserve-view=true#System_Uri__ctor_System_String_) 오버 로드를 사용 합니다. 스키마와 인증 기관을 포함 하 여 유효한 절대 URI를 지정 하거나, 위의 예제에서와 같이 권한을 기본 앱 패키지로 지정 합니다.
 
 이러한 예제 Uri에서 스키마 (" `ms-appx` " 또는 " `ms-appx-web` ") 뒤에는 절대 경로가 오는 " `://` "가 나옵니다. 절대 경로에서 ""는 경로를 `/` 패키지의 루트에서 해석 합니다.
 

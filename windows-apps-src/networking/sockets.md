@@ -6,12 +6,12 @@ ms.date: 06/03/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ccf994e273c683ec458b9a2eded0b13cb58c41c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 908754c56f9c5062f63b09cffc5cbafffbd8277a
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158217"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860365"
 ---
 # <a name="sockets"></a>소켓
 소켓은 많은 네트워킹 프로토콜이 구현되는 하위 수준 데이터 전송 기술입니다. UWP는 연결이 오래되었거나 설정된 연결이 필요하지 않은지 여부에 관계없이 클라이언트-서버 또는 피어 투 피어 애플리케이션에 대한 TCP 및 UDP 소켓 클래스를 제공합니다.
@@ -35,11 +35,11 @@ TCP(Transmission Control Protocol) 소켓은 지속 시간이 긴 연결에 대�
 인터넷을 통해 연결하는 경우 `privateNetworkClientServer` 대신 `internetClientServer`를 선언할 수 있습니다. **StreamSocket** 및 **StreamSocketListener** 둘 다 하나 또는 다른 기타 앱 접근 권한 값을 선언해야 합니다.
 
 ### <a name="an-echo-client-and-server-using-tcp-sockets"></a>TCP 소켓을 사용하는 에코 클라이언트 및 서버
-[**StreamSocketListener**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener)를 구성하고 들어오는 TCP 연결을 듣기 시작합니다. 클라이언트가 **StreamSocketListener**와 연결을 설정할 때마다 [**StreamSocketListener.ConnectionReceived**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener.ConnectionReceived) 이벤트가 발생합니다.
+[**StreamSocketListener**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener)를 구성하고 들어오는 TCP 연결을 듣기 시작합니다. 클라이언트가 **StreamSocketListener** 와 연결을 설정할 때마다 [**StreamSocketListener.ConnectionReceived**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener.ConnectionReceived) 이벤트가 발생합니다.
 
 또한 [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket)을 서버에 대한 연결을 설정하고, 요청을 보내고 응답을 받습니다.
 
-이름이 `StreamSocketAndListenerPage`인 새 **페이지**를 만듭니다. `StreamSocketAndListenerPage.xaml`에 XAML 태그를 넣고 `StreamSocketAndListenerPage` 클래스 안에 명령적 코드를 넣습니다.
+이름이 `StreamSocketAndListenerPage`인 새 **페이지** 를 만듭니다. `StreamSocketAndListenerPage.xaml`에 XAML 태그를 넣고 `StreamSocketAndListenerPage` 클래스 안에 명령적 코드를 넣습니다.
 
 ```XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -505,7 +505,7 @@ private:
 > [!NOTE]
 > C++/WinRT 코루틴을 사용하는 경우, 값으로 매개 변수를 전달하며 이 문제는 적용되지 않습니다. 매개 변수-전달 권장 사항은 [C++/WinRT로 동시성 및 비동기 작업](../cpp-and-winrt-apis/concurrency.md#parameter-passing)을 참조하세요.
 
-[**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket?branch=live)은 해당 입력/출력 스트림에 활성 읽기/쓰기가 있는 한 지속됩니다(예: [**StreamSocketListener.ConnectionReceived**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener.ConnectionReceived) 이벤트 처리기에서 액세스할 수 있는 [**StreamSocketListenerConnectionReceivedEventArgs.Socket**](/uwp/api/windows.networking.sockets.streamsocketlistenerconnectionreceivedeventargs.Socket)). [**DataReader.LoadAsync**](/uwp/api/windows.storage.streams.datareader.loadasync)(또는 `ReadAsync/WriteAsync/StoreAsync`)를 호출하면 **LoadAsync**의 **완료됨** 완료 처리기(있는 경우) 실행이 완료될 때까지 소켓의 입력 스트림을 통해 소켓에 대한 참조를 가집니다.
+[**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket?branch=live)은 해당 입력/출력 스트림에 활성 읽기/쓰기가 있는 한 지속됩니다(예: [**StreamSocketListener.ConnectionReceived**](/uwp/api/Windows.Networking.Sockets.StreamSocketListener.ConnectionReceived) 이벤트 처리기에서 액세스할 수 있는 [**StreamSocketListenerConnectionReceivedEventArgs.Socket**](/uwp/api/windows.networking.sockets.streamsocketlistenerconnectionreceivedeventargs.Socket)). [**DataReader.LoadAsync**](/uwp/api/windows.storage.streams.datareader.loadasync)(또는 `ReadAsync/WriteAsync/StoreAsync`)를 호출하면 **LoadAsync** 의 **완료됨** 완료 처리기(있는 경우) 실행이 완료될 때까지 소켓의 입력 스트림을 통해 소켓에 대한 참조를 가집니다.
 
 병렬 패턴 라이브러리(PPL)는 작업 연속 인라인을 기본적으로 예약하지 않습니다. 즉, 연속 작업 추가(`task::then()`로)는 연속 작업이 인라인을 완료 처리기로 실행하는 것을 보장하지 않습니다.
 
@@ -521,7 +521,7 @@ void StreamSocketListener_ConnectionReceived(Windows::Networking::Sockets::Strea
 }
 ```
 
-**StreamSocket**의 관점에서는 완료 처리기는 연속 본문이 실행되기 전에 실행을 완료하며 소켓은 폐기할 수 있습니다. 따라서 해당 연속 내에서 사용하고자 하는 경우 소켓이 폐기되지 않도록 하려면 람다 캡처를 통해 소켓을 직접, 또는 계속 연속 내부에서 `args->Socket`에 액세스하여 간접적으로 참조하여 사용하거나, 연속 작업을 강제로 인라인으로 적용해야 합니다. [StreamSocket 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/StreamSocket)에서 실행 중인 첫 번째 기술(람다 캡처) 볼 수 있습니다. 위 [기본 TCP 소켓 클라이언트 및 서버 빌드](#build-a-basic-tcp-socket-client-and-server) 섹션의 C++/CX 코드는 두 번째 기술을 사용하여&mdash;요청을 응답으로 다시 보내며 가장 안쪽의 연속 중 하나에서 `args->Socket`에 액세스합니다.
+**StreamSocket** 의 관점에서는 완료 처리기는 연속 본문이 실행되기 전에 실행을 완료하며 소켓은 폐기할 수 있습니다. 따라서 해당 연속 내에서 사용하고자 하는 경우 소켓이 폐기되지 않도록 하려면 람다 캡처를 통해 소켓을 직접, 또는 계속 연속 내부에서 `args->Socket`에 액세스하여 간접적으로 참조하여 사용하거나, 연속 작업을 강제로 인라인으로 적용해야 합니다. [StreamSocket 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/StreamSocket)에서 실행 중인 첫 번째 기술(람다 캡처) 볼 수 있습니다. 위 [기본 TCP 소켓 클라이언트 및 서버 빌드](#build-a-basic-tcp-socket-client-and-server) 섹션의 C++/CX 코드는 두 번째 기술을 사용하여&mdash;요청을 응답으로 다시 보내며 가장 안쪽의 연속 중 하나에서 `args->Socket`에 액세스합니다.
 
 세 번째 방법은 응답을 다시 보내지 않는 경우 적절합니다. `task_continuation_context::use_synchronous_execution()` 옵션을 사용하여 PPL이 연속 본문 인라인을 실행하도록 할 수 있습니다. 작업을 수행하는 방법을 보여주는 코드 예는 다음과 같습니다.
 
@@ -560,9 +560,9 @@ UDP(User Datagram Protocol) 소켓은 어느 방향으로든 하위 수준 네�
 ### <a name="an-echo-client-and-server-using-udp-sockets"></a>UDP 소켓을 사용하는 에코 클라이언트 및 서버
 [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket)을 구성하여 에코 서버 역할을 재생하고, 특정 포트 번호에 이를 연결하고, 수신 UDP 메시지를 듣고, 이를 다시 보냅니다. 소켓에서 메시지가 수신될 때 [**DatagramSocket.MessageReceived**](/uwp/api/Windows.Networking.Sockets.DatagramSocket.MessageReceived) 이벤트가 발생합니다.
 
-다른 **DatagramSocket**을 구성하여 에코 클라이언트 역할을 재생하고, 특정 포트 번호에 이를 연결하고, UDP 메시지를 보내고, 응답을 수신합니다.
+다른 **DatagramSocket** 을 구성하여 에코 클라이언트 역할을 재생하고, 특정 포트 번호에 이를 연결하고, UDP 메시지를 보내고, 응답을 수신합니다.
 
-이름이 `DatagramSocketPage`인 새 **페이지**를 만듭니다. `DatagramSocketPage.xaml`에 XAML 태그를 넣고 `DatagramSocketPage` 클래스 안에 명령적 코드를 넣습니다.
+이름이 `DatagramSocketPage`인 새 **페이지** 를 만듭니다. `DatagramSocketPage.xaml`에 XAML 태그를 넣고 `DatagramSocketPage` 클래스 안에 명령적 코드를 넣습니다.
 
 ```XAML
 <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -1004,7 +1004,7 @@ private:
 
 이 섹션은 [**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket) 또는 연결된 [**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket)으로 사용할 수 있는 몇 가지 일괄 처리된 전송 기술을 보여줍니다.
 
-기준을 얻기 위해 여러 버퍼를 비효율적인 방식으로 전송하는 방법을 살펴보겠습니다. **StreamSocket**을 사용하는 최소 데모는 다음과 같습니다.
+기준을 얻기 위해 여러 버퍼를 비효율적인 방식으로 전송하는 방법을 살펴보겠습니다. **StreamSocket** 을 사용하는 최소 데모는 다음과 같습니다.
 
 ```csharp
 protected override async void OnNavigatedTo(NavigationEventArgs e)
@@ -1275,15 +1275,15 @@ private:
 코드에서 일괄 처리된 전송을 사용할 경우 몇 가지 중요한 제한 사항이 있습니다.
 
 -   비동기 쓰기가 완료될 때까지 작성 중인 **IBuffer** 인스턴스의 내용을 수정할 수 없습니다.
--   **FlushAsync** 패턴은 **StreamSocket.OutputStream** 및 **DatagramSocket.OutputStream**에서만 작동합니다.
+-   **FlushAsync** 패턴은 **StreamSocket.OutputStream** 및 **DatagramSocket.OutputStream** 에서만 작동합니다.
 -   **FlushAsync** 패턴은 Windows 10 이상에서만 작동합니다.
--   그 밖의 경우에는 **FlushAsync** 패턴 대신 [**Task.WaitAll**](/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___)을 사용합니다.
+-   그 밖의 경우에는 **FlushAsync** 패턴 대신 [**Task.WaitAll**](/dotnet/api/system.threading.tasks.task.waitall?view=netcore-2.0&preserve-view=true#System_Threading_Tasks_Task_WaitAll_System_Threading_Tasks_Task___)을 사용합니다.
 
 ## <a name="port-sharing-for-datagramsocket"></a>DatagramSocket에 대한 포트 공유
-[**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket)을 구성하여 동일한 주소/포트에 바인딩된 다른 Win32 또는 UWP 멀티캐스트 소켓과 함께 사용할 수 있습니다. 소켓을 바인딩 또는 연결하기 전에 [**DatagramSocketControl.MulticastOnly**](/uwp/api/Windows.Networking.Sockets.DatagramSocketControl.MulticastOnly)`true`로 설정하여 이 작업을 수행할 수 있습니다. 이 [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.datagramsocket.Control) 속성을 통해 **DatagramSocket** 개체 자체에서 **DatagramSocketControl**의 인스턴스에 액세스할 수 있습니다.
+[**DatagramSocket**](/uwp/api/Windows.Networking.Sockets.DatagramSocket)을 구성하여 동일한 주소/포트에 바인딩된 다른 Win32 또는 UWP 멀티캐스트 소켓과 함께 사용할 수 있습니다. 소켓을 바인딩 또는 연결하기 전에 [**DatagramSocketControl.MulticastOnly**](/uwp/api/Windows.Networking.Sockets.DatagramSocketControl.MulticastOnly)`true`로 설정하여 이 작업을 수행할 수 있습니다. 이 [**DatagramSocket.Control**](/uwp/api/windows.networking.sockets.datagramsocket.Control) 속성을 통해 **DatagramSocket** 개체 자체에서 **DatagramSocketControl** 의 인스턴스에 액세스할 수 있습니다.
 
 ## <a name="providing-a-client-certificate-with-the-streamsocket-class"></a>StreamSocket 클래스를 사용하여 클라이언트 인증서 제공
-[**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket)은 클라이언트 앱에서 통신하는 서버를 인증하기 위해 SSL/TLS 사용을 지원합니다. 클라이언트 앱에서 자체적으로 SSL/TLS 클라이언트 인증서를 사용하여 서버에 인증해야 하는 경우도 있습니다. 소켓을 바인딩 또는 연결하기 전에(SSL/TLS 핸드셰이크가 시작하지 전에 설정해야 함) [**StreamSocketControl.ClientCertificate**](/uwp/api/windows.networking.sockets.streamsocketcontrol.ClientCertificate) 속성으로 클라이언트 인증서를 제공할 수 있습니다. 이 [**StreamSocket.Control**](/uwp/api/windows.networking.sockets.streamsocket.Control) 속성을 통해 **StreamSocket** 개체 자체에서 **StreamSocketControl**의 인스턴스에 액세스할 수 있습니다. 서버에서 클라이언트 인증서를 요청한 경우 Windows는 사용자가 제공한 클라이언트 인증서로 응답합니다.
+[**StreamSocket**](/uwp/api/Windows.Networking.Sockets.StreamSocket)은 클라이언트 앱에서 통신하는 서버를 인증하기 위해 SSL/TLS 사용을 지원합니다. 클라이언트 앱에서 자체적으로 SSL/TLS 클라이언트 인증서를 사용하여 서버에 인증해야 하는 경우도 있습니다. 소켓을 바인딩 또는 연결하기 전에(SSL/TLS 핸드셰이크가 시작하지 전에 설정해야 함) [**StreamSocketControl.ClientCertificate**](/uwp/api/windows.networking.sockets.streamsocketcontrol.ClientCertificate) 속성으로 클라이언트 인증서를 제공할 수 있습니다. 이 [**StreamSocket.Control**](/uwp/api/windows.networking.sockets.streamsocket.Control) 속성을 통해 **StreamSocket** 개체 자체에서 **StreamSocketControl** 의 인스턴스에 액세스할 수 있습니다. 서버에서 클라이언트 인증서를 요청한 경우 Windows는 사용자가 제공한 클라이언트 인증서로 응답합니다.
 
 이 최소 코드 예에 나타난 대로 [**SocketProtectionLevel**](/uwp/api/windows.networking.sockets.socketprotectionlevel)를 가지는 [**StreamSocket.ConnectAsync**](/uwp/api/windows.networking.sockets.streamsocket.connectasync)의 재정의를 사용합니다.
 
@@ -1346,9 +1346,9 @@ Concurrency::create_task(Windows::Security::Cryptography::Certificates::Certific
 
 대부분의 **SocketErrorStatus** 열거형 값은 기본 Windows 소켓 작업에서 반환한 오류에 해당합니다. 앱은 특정 **SocketErrorStatus** 열거형 값을 전환하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
-매개 변수 유효성 검사 오류의 경우 예외에서 **HRESULT**를 사용하여 오류에 대한 자세한 정보를 얻을 수 있습니다. 가능한 **HRESULT** 값은 `Winerror.h`에 나열되며, SDK 설치에서 확인할 수 있습니다(예를 들어 `C:\Program Files (x86)\Windows Kits\10\Include\<VERSION>\shared` 폴더에서). 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT**는 **E_INVALIDARG**입니다.
+매개 변수 유효성 검사 오류의 경우 예외에서 **HRESULT** 를 사용하여 오류에 대한 자세한 정보를 얻을 수 있습니다. 가능한 **HRESULT** 값은 `Winerror.h`에 나열되며, SDK 설치에서 확인할 수 있습니다(예를 들어 `C:\Program Files (x86)\Windows Kits\10\Include\<VERSION>\shared` 폴더에서). 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT** 는 **E_INVALIDARG** 입니다.
 
-전달된 문자열이 유효한 호스트 이름이 아닌 경우 [**HostName**](/uwp/api/Windows.Networking.HostName) 생성자는 예외를 throw할 수 있습니다. 예를 들어, 허용되지 않는 문자를 포함하며 사용자가 앱에 호스트 이름을 입력한 것 같습니다. catch/try 블록 내에 **HostName**을 구성합니다. 그러한 방식으로 예외가 발생하면 앱에서 사용자에게 알리고 새 호스트 이름을 요청할 수 있습니다.
+전달된 문자열이 유효한 호스트 이름이 아닌 경우 [**HostName**](/uwp/api/Windows.Networking.HostName) 생성자는 예외를 throw할 수 있습니다. 예를 들어, 허용되지 않는 문자를 포함하며 사용자가 앱에 호스트 이름을 입력한 것 같습니다. catch/try 블록 내에 **HostName** 을 구성합니다. 그러한 방식으로 예외가 발생하면 앱에서 사용자에게 알리고 새 호스트 이름을 요청할 수 있습니다.
 
 ## <a name="important-apis"></a>중요 API
 * [CertificateQuery](/uwp/api/windows.security.cryptography.certificates.certificatequery)

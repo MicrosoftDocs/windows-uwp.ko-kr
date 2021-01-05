@@ -169,23 +169,6 @@
       href: ../publish/advertising-performance-report.md
     - name: 분석 보고서 다운로드
       href: ../publish/download-analytic-reports.md
-- name: 지급 받기
-  href: ../publish/getting-paid-apps.md
-  items:
-    - name: 지급 계정 및 세금 양식 설정
-      href: ../publish/setting-up-your-payout-account-and-tax-forms.md
-    - name: '지급 임계값, 방법 및 기간'
-      href: ../publish/payment-thresholds-methods-and-timeframes.md
-    - name: 지급 보고서
-      href: ../publish/payout-summary.md
-    - name: 세금 세부 정보
-      href: ../publish/tax-details-for-paid-apps.md
-    - name: IRS 세금 양식 이해
-      href: ../publish/understand-irs-tax-forms.md
-    - name: 통신사 청구
-      href: ../publish/mobile-operator-billing.md
-    - name: VAT 정보
-      href: ../publish/vat-info.md
 - name: Microsoft Store 정책 및 준수 사항
   href: ../publish/store-policies-and-code-of-conduct.md
   items:

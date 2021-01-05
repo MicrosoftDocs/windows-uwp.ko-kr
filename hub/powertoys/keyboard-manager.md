@@ -4,12 +4,12 @@ description: 사용자가 키보드에서 키를 다시 정의할 수 있도록 
 ms.date: 12/02/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c2f8f146e02cf9006e4ac74ce3426ccba0d6000c
-ms.sourcegitcommit: 46a7e9db64e17a645ee6e888f62a9b04632c56af
+ms.openlocfilehash: eb17cd5a7ad76728e6b063f76369c8d194a5e12c
+ms.sourcegitcommit: 1a997d7e0100e58886150f9fba33d7b205f41df1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97618552"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865468"
 ---
 # <a name="keyboard-manager-utility"></a>키보드 관리자 유틸리티
 
@@ -26,7 +26,10 @@ Powertoy 키보드 관리자를 사용 하 여 키보드에서 키를 다시 정
 ![Powertoy 키보드 관리자 다시 매핑 바로 가기 스크린샷](../images/powertoys-keyboard-shortcuts.png)
 
 > [!NOTE]
-> 대체할 수 없는 몇 가지 [키/OS 예약 된 바로 가기가](https://github.com/microsoft/PowerToys/wiki/Keyboard-Manager-Overview#14-keys-that-cannot-be-remapped)있습니다.
+> 운영 체제용으로 예약 된 몇 가지 바로 가기 키가 있으며 교체할 수 없습니다. 다시 매핑할 수 없는 키는 다음과 같습니다.
+> - `⊞ Win`+`L`및는 `Ctrl`  +  `Alt`  +  `Del` Windows OS에서 예약 되어 있으므로 다시 매핑할 수 없습니다.
+> - `Fn`(함수) 키를 다시 매핑할 수 없는 경우 (대부분의 경우) `F1` - `F12` (및 `F13` - `F24` ) 키를 매핑할 수 있습니다.
+> - `Pause` 는 sngle keydown 이벤트만 보냅니다. 예를 들어 백스페이스 키에 대해 매핑하고 + 보유를 누르면 단일 문자만 삭제 됩니다.
 
 ## <a name="settings"></a>설정
 
@@ -122,7 +125,7 @@ Powertoy 키보드 관리자를 사용 하 여 키보드에서 키를 다시 정
 
 ### <a name="keys-that-cannot-be-remapped"></a>다시 매핑할 수 없는 키
 
-다시 매핑할 수 없는 특정 바로 가기 키가 있습니다. 여기에는 다음이 해당합니다.
+다시 매핑할 수 없는 특정 바로 가기 키가 있습니다. 이러한 위협은 다음과 같습니다.
 
 - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> +  <kbd>Del</kbd> (interupt 명령)
 - <kbd>⊞ Win</kbd> + <kbd>L</kbd> (컴퓨터 잠금)

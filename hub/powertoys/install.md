@@ -4,12 +4,12 @@ description: 실행 파일 또는 패키지 관리자 (WinGet, Chocolatey, 혜�
 ms.date: 12/02/2020
 ms.topic: quickstart
 ms.localizationpriority: medium
-ms.openlocfilehash: 0f051d44609653029a1bab40d2978eca91a4499c
-ms.sourcegitcommit: 5dac88ad541b71ebe85b78951e6b357a3db176cc
+ms.openlocfilehash: c695be3784ff2145788e4887b5f9022fcc7a6999
+ms.sourcegitcommit: ea1115b921d18c7bbddc95dba9275568ff57af02
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97612283"
+ms.lasthandoff: 12/28/2020
+ms.locfileid: "97794229"
 ---
 # <a name="install-powertoys"></a>PowerToys 설치
 
@@ -24,7 +24,7 @@ Powertoy를 설치 하는 방법에는 여러 가지가 있습니다.
 - Windows 10 1803 (빌드 17134) 이상.
 - [.Net Core 3.1 데스크톱 런타임](https://dotnet.microsoft.com/download/dotnet-core/thank-you/runtime-desktop-3.1.4-windows-x64-installer). Powertoy 설치 관리자가이 요구 사항을 처리 합니다.
 
-컴퓨터가 이러한 요구 사항을 충족 하는지 확인 하려면 **⊞ Win** *(windows 키)* D를 선택 하 여 windows 10 버전 및 빌드 번호를 확인  +  한 다음 **winver** 를 입력 하 고 **확인** 을 선택 합니다. (또는 Windows 명령 프롬프트에서 `ver` 명령을 입력합니다.) **설정** 메뉴에서 [최신 Windows 버전으로 업데이트할](ms-settings:windowsupdate) 수 있습니다.
+컴퓨터가 이러한 요구 사항을 충족 하는지 확인 하려면 **⊞ Win** *(windows 키)* R을 선택 하 여 windows 10 버전 및 빌드 번호를 확인  +  한 다음 **winver** 를 입력 하 고 **확인** 을 선택 합니다. (또는 Windows 명령 프롬프트에서 `ver` 명령을 입력합니다.) **설정** 메뉴에서 [최신 Windows 버전으로 업데이트할](ms-settings:windowsupdate) 수 있습니다.
 
 ## <a name="install-with-windows-executable-file"></a>Windows 실행 파일을 사용 하 여 설치
 

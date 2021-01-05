@@ -3,12 +3,12 @@ title: WinUI 2.5 릴리스 정보
 description: 새로운 기능 및 버그 수정이 포함된 WinUI 2.5 릴리스에 대한 정보입니다.
 ms.date: 12/01/2020
 ms.topic: reference
-ms.openlocfilehash: d1b7873e874ff38037fbf766ef16b1e924edec16
-ms.sourcegitcommit: 03308873eafd0f768e1c518f4d1cc4e4fe0b70b7
+ms.openlocfilehash: 1fe64ea547b3e8966ea0ec085e77225a3a1895df
+ms.sourcegitcommit: e252ccb4a76c4883c7073083d73007957202b84d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96606035"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97657670"
 ---
 # <a name="windows-ui-library-25"></a>Windows UI 라이브러리 2.5
 
@@ -26,7 +26,7 @@ NuGet 패키지 다운로드: [Microsoft.UI.Xaml](https://www.nuget.org/packages
 
 ### <a name="infobar"></a>InfoBar
 
-[InfoBar](/uwp/design/controls-and-patterns/infobar) 컨트롤은 사용자에게 눈에 잘 띄지만 방해가 되지 않도록 앱 전체의 상태 메시지를 표시하는 데 사용됩니다. 이 컨트롤에는 표시된 메시지 유형을 나타내는 Severity 속성과 사용자 고유의 동작 호출 또는 하이퍼링크 단추를 지정하는 옵션이 포함되어 있습니다. InfoBar는 다른 UI 콘텐츠와 인라인되므로 컨트롤이 항상 표시되는지 또는 사용자가 해제할 수 있는지 여부를 지정할 수도 있습니다.
+[InfoBar](/windows/uwp/design/controls-and-patterns/infobar) 컨트롤은 사용자에게 눈에 잘 띄지만 방해가 되지 않도록 앱 전체의 상태 메시지를 표시하는 데 사용됩니다. 이 컨트롤에는 표시된 메시지 유형을 나타내는 Severity 속성과 사용자 고유의 동작 호출 또는 하이퍼링크 단추를 지정하는 옵션이 포함되어 있습니다. InfoBar는 다른 UI 콘텐츠와 인라인되므로 컨트롤이 항상 표시되는지 또는 사용자가 해제할 수 있는지 여부를 지정할 수도 있습니다.
 
 이 예는 닫기 단추와 메시지가 있는 기본 상태의 InfoBar를 보여줍니다.
 
@@ -42,7 +42,7 @@ NuGet 패키지 다운로드: [Microsoft.UI.Xaml](https://www.nuget.org/packages
 
 ### <a name="determinate-progressring"></a>확정된 ProgressRing
 
-[ProgressRing](/uwp/design/controls-and-patterns/progress-controls)의 확정 상태는 작업의 완료율을 표시합니다. 이는 작업 기간을 알 수 있고 작업 진행률이 앱과의 사용자 상호 작용을 차단하지 않는 작업 중에 사용해야 합니다.
+[ProgressRing](/windows/uwp/design/controls-and-patterns/progress-controls)의 확정 상태는 작업의 완료율을 표시합니다. 이는 작업 기간을 알 수 있고 작업 진행률이 앱과의 사용자 상호 작용을 차단하지 않는 작업 중에 사용해야 합니다.
 
 다음 애니메이션 이미지는 확정된 ProgressRing 컨트롤을 보여줍니다.
 

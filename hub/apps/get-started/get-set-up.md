@@ -6,12 +6,12 @@ ms.date: 10/13/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: b0991e4d1173bc665e0cf14786e1901e26e4823c
-ms.sourcegitcommit: 56e9cab45d1c6e54841d61fdf23044fa01f50c43
+ms.openlocfilehash: 6c80bb9a3b9fe59550dff0603bdbe1b87e5b2982
+ms.sourcegitcommit: 3eb43ba2a6c52ad83523d63d825ac5d4d9050cd3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92011900"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97811964"
 ---
 # <a name="get-set-up"></a>설정
 
@@ -57,8 +57,8 @@ Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](htt
 
 도구를 설치하고 개발을 위해 디바이스를 활성화했으면 Windows 10 앱 만들기를 시작하는 방법에 대한 지침을 확인합니다.
 
--   [플랫폼 선택](/windows/desktop/apps/choose-your-platform.md)
--   [UWP 앱 코딩 시작](/windows/uwp/get-started/create-uwp-apps.md)
+-   [플랫폼 선택](../desktop/choose-your-platform.md)
+-   [UWP 앱 코딩 시작](/windows-apps-src/get-started/create-uwp-apps.md)
 
 ## <a name="windows-development-setup-scripts"></a>Windows 개발 설정 스크립트
 
@@ -73,5 +73,5 @@ Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](htt
 ## <a name="see-also"></a>참고 항목
 
 * [UWP 개발자를 위한 코드 샘플](https://developer.microsoft.com/windows/samples)
-* [UWP 앱이란?](/windows/uwp/get-started/universal-application-platform-guide.md)
+* [UWP 앱이란?](/windows-apps-src/get-started/universal-application-platform-guide.md)
 * [Windows 계정 등록](sign-up.md)

@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp, 비동기
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e7cdffd484c426faa9b877240f45f122ccc5ec4
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 1c0798a1d58d3a97d02e030bcd0094f8a7364d16
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161757"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860384"
 ---
 # <a name="asynchronous-programming"></a>비동기 프로그래밍
 이 항목에서는 UWP (유니버설 Windows 플랫폼)의 비동기 프로그래밍과 c #, Microsoft Visual Basic .NET, c + + 및 JavaScript의 표현에 대해 설명 합니다.
@@ -58,9 +58,9 @@ C # 또는 Visual Basic로 작성 된 일반적인 코드 세그먼트는 동기
 C + +/WinRT를 사용 하는 경우 코 루틴 및 **co_await** 연산자를 사용 합니다. 자세한 내용과 코드 예제는 [c + +/WinRT의 비동기 프로그래밍](../cpp-and-winrt-apis/concurrency.md)을 참조 하세요.
 
 ## <a name="asynchronous-patterns-in-uwp-with-ccx"></a>C + +/CX를 사용 하는 UWP의 비동기 패턴
-C + +/CX에서 비동기 프로그래밍은 [**작업 클래스**](/cpp/parallel/concrt/reference/task-class)와 그 [**뒤의 메서드**](/cpp/parallel/concrt/reference/task-class?view=vs-2017)를 기반으로 합니다. 구문은 JavaScript 약속의 구문과 유사 합니다. **작업 클래스** 및 관련 형식은 스레드 컨텍스트를 취소 하 고 관리 하는 기능도 제공 합니다. 자세한 내용은 [c + +/cx의 비동기 프로그래밍](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)을 참조 하세요.
+C + +/CX에서 비동기 프로그래밍은 [**작업 클래스**](/cpp/parallel/concrt/reference/task-class)와 그 [**뒤의 메서드**](/cpp/parallel/concrt/reference/task-class?view=vs-2017&preserve-view=true)를 기반으로 합니다. 구문은 JavaScript 약속의 구문과 유사 합니다. **작업 클래스** 및 관련 형식은 스레드 컨텍스트를 취소 하 고 관리 하는 기능도 제공 합니다. 자세한 내용은 [c + +/cx의 비동기 프로그래밍](asynchronous-programming-in-cpp-universal-windows-platform-apps.md)을 참조 하세요.
 
-[**Create \_ async 함수**](/cpp/parallel/concrt/reference/concurrency-namespace-functions?view=vs-2017) 는 JavaScript 또는 UWP를 지 원하는 다른 언어에서 사용할 수 있는 비동기 api를 생성 하는 기능을 제공 합니다. 자세한 내용은 [c + +/cx로 비동기 작업 만들기](/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps)를 참조 하세요.
+[**Create \_ async 함수**](/cpp/parallel/concrt/reference/concurrency-namespace-functions?view=vs-2017&preserve-view=true) 는 JavaScript 또는 UWP를 지 원하는 다른 언어에서 사용할 수 있는 비동기 api를 생성 하는 기능을 제공 합니다. 자세한 내용은 [c + +/cx로 비동기 작업 만들기](/cpp/parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps)를 참조 하세요.
 
 ## <a name="asynchronous-patterns-in-uwp-using-javascript"></a>JavaScript를 사용 하는 UWP의 비동기 패턴
 JavaScript에서 비동기 프로그래밍은 비동기 메서드가 약속 개체를 반환 하도록 하 여 [공용 JS 약속/](https://wiki.commonjs.org/wiki/Promises/A) 제안 된 표준을 따릅니다. 약속은 JavaScript 용 UWP 및 Windows 라이브러리 모두에서 사용 됩니다.
@@ -70,6 +70,6 @@ Promise 개체는 차후에 수행될 값을 나타냅니다. UWP에서 규칙�
 대부분의 경우 비동기 함수를 호출 하는 것은 대체로 기존 함수를 호출 하는 것 만큼 간단 합니다. 차이점은 [**then**](/previous-versions/windows/apps/br229728(v=win.10)) 또는 [**done**](/previous-versions/windows/apps/hh701079(v=win.10)) 메서드를 사용 하 여 결과 또는 오류에 대 한 처리기를 할당 하 고 작업을 시작 하는 것입니다.
 
 ## <a name="related-topics"></a>관련 항목
-* [C# 또는Visual Basic에서 비동기식 API 호출](call-asynchronous-apis-in-csharp-or-visual-basic.md)
+* [C # 또는 Visual Basic에서 비동기 Api 호출](call-asynchronous-apis-in-csharp-or-visual-basic.md)
 * [Async 및 Await를 사용한 비동기 프로그래밍(C# 및 Visual Basic)](/previous-versions/visualstudio/visual-studio-2012/hh191443(v=vs.110))
 * [Reversi 샘플 기능 시나리오: 비동기 코드](/previous-versions/windows/apps/jj712233(v=win.10))

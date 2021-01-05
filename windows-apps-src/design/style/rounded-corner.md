@@ -4,12 +4,12 @@ description: 둥근 모퉁이 원칙, 디자인 방법 및 사용자 지정 옵�
 ms.date: 10/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 모퉁이 반경, 둥근 모양
-ms.openlocfilehash: 044ae628ffe397005113f658191398e06fd245f5
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: 33432ac0083c0d6660d0669ea43805e0ae73f37e
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636533"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860195"
 ---
 # <a name="corner-radius"></a>모퉁이 반경
 
@@ -22,7 +22,7 @@ ms.locfileid: "91636533"
 WinUI 2.2 이상을 위한 NuGet 패키지를 설치하는 경우 WinUI 컨트롤 및 플랫폼 컨트롤 모두에 대해 새로운 기본 스타일이 설치됩니다. 이러한 스타일은 앱에서 WinUI 2.2를 사용할 때 자동으로 사용됩니다. 새 스타일을 사용하기 위해 수행해야 하는 추가 작업은 없습니다. 하지만 이 작업을 수행해야 하는 경우 둥근 모퉁이를 사용자 지정하는 방법이 이 문서의 뒷부분에 나와 있습니다.
 
 > [!IMPORTANT]
-> 일부 컨트롤은 플랫폼([Windows.UI.Xaml.Controls](/uwp/api/windows.ui.xaml.controls)) 및 WinUI([Microsoft.UI.Xaml.Controls](/uwp/api/microsoft.ui.xaml.controls?view=winui-2.2))에서 모두 사용할 수 있습니다(예: **TreeView** 또는 **ColorPicker**). 앱에서 WinUI를 사용하는 경우 컨트롤의 WinUI 버전을 사용해야 합니다. WinUI와 함께 사용하는 경우 모퉁이를 둥글게 조정하는 작업은 플랫폼 버전에서 일관되지 않게 적용될 수 있습니다.
+> 일부 컨트롤은 플랫폼([Windows.UI.Xaml.Controls](/uwp/api/windows.ui.xaml.controls)) 및 WinUI([Microsoft.UI.Xaml.Controls](/uwp/api/microsoft.ui.xaml.controls?view=winui-2.2&preserve-view=true))에서 모두 사용할 수 있습니다(예: **TreeView** 또는 **ColorPicker**). 앱에서 WinUI를 사용하는 경우 컨트롤의 WinUI 버전을 사용해야 합니다. WinUI와 함께 사용하는 경우 모퉁이를 둥글게 조정하는 작업은 플랫폼 버전에서 일관되지 않게 적용될 수 있습니다.
 
 > **중요 API**: [Control.CornerRadius property](/uwp/api/windows.ui.xaml.controls.control.cornerradius)
 
@@ -33,7 +33,7 @@ WinUI 2.2 이상을 위한 NuGet 패키지를 설치하는 경우 WinUI 컨트�
 ### <a name="corners-of-rectangle-ui-elements"></a>사각형 UI 요소의 모퉁이
 
 - 이러한 UI 요소에는 사용자에게 화면에서 항상 표시되는 단추와 같은 기본 컨트롤이 포함됩니다.
-- 이러한 UI 요소에 사용되는 기본 반경 값은 **2px**입니다.
+- 이러한 UI 요소에 사용되는 기본 반경 값은 **2px** 입니다.
 
 ![둥근 모퉁이가 강조 표시된 단추](images/rounded-corner/button.png)
 
@@ -60,7 +60,7 @@ WinUI 2.2 이상을 위한 NuGet 패키지를 설치하는 경우 WinUI 컨트�
 ### <a name="corners-of-flyout-and-overlay-ui-elements"></a>플라이아웃 및 오버레이 UI 요소의 모퉁이
 
 - 이러한 요소는 MenuFlyout과 같이 일시적으로 화면에 나타나는 일시적 UI 요소이거나 TabView 탭과 같은 다른 UI를 오버레이하는 요소일 수 있습니다.
-- 이러한 UI 요소에 사용되는 기본 반경 값은 **4px**입니다.
+- 이러한 UI 요소에 사용되는 기본 반경 값은 **4px** 입니다.
 
 ![플라이아웃 예제](images/rounded-corner/flyout.png)
 
@@ -87,7 +87,7 @@ WinUI 2.2 이상을 위한 NuGet 패키지를 설치하는 경우 WinUI 컨트�
 ### <a name="bar-elements"></a>막대 요소
 
 - 이러한 UI 요소는 막대나 선처럼 모양이 지정됩니다(예: ProgressBar).
-- 여기서 사용하는 기본 반경 값은 **2px**입니다.
+- 여기서 사용하는 기본 반경 값은 **2px** 입니다.
 
 ![진행률 표시줄 예제](images/rounded-corner/bars.png)
 

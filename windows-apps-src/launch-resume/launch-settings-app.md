@@ -6,16 +6,16 @@ ms.date: 11/18/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.custom: contperfq2
+ms.custom: contperf-fy21q2
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 309568b80d51cc8bd6cd2394317ef3bb8266a212
-ms.sourcegitcommit: 2a23972e9a0807256954d6da5cf21d0bbe7afb0a
+ms.openlocfilehash: 78d843ff9bdd0625b7172af0bc973581d8bd988a
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94941819"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860417"
 ---
 # <a name="launch-the-windows-settings-app"></a>Windows 설정 앱 실행
 
@@ -82,10 +82,10 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 * [혼합 현실](#mixed-reality)
 * [네트워크 및 인터넷](#network-and-internet)
 * [개인 설정](#personalization)
-* [내선](#phone)
+* [전화](#phone)
 * [개인 정보 보호](#privacy)
 * [Surface Hub](#surface-hub)
-* [시스템](#system)
+* [System](#system)
 * [시간 및 언어](#time-and-language)
 * [업데이트 및 보안](#update-and-security)
 * [사용자 계정](#user-accounts)
@@ -171,7 +171,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 커서 및 포인터 크기 | ms-설정: easeofaccess-cursorandpointersize |
 | 표시 | ms-설정: easeofaccess |
 | 아이 컨트롤 | ms-설정: easeofaccess-eyecontrol |
-| Fonts | ms-설정: 글꼴 |
+| 글꼴 | ms-설정: 글꼴 |
 | 고대비 | ms-설정: easeofaccess-system.windows.forms.systeminformation.highcontrast |
 | 키보드 | ms-설정: easeofaccess |
 | 돋보기 | ms-설정: easeofaccess-돋보기 |
@@ -230,12 +230,12 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 모바일 핫스팟 | ms-설정: 네트워크-mobilehotspot |
 | NFC | ms-설정: nfctransactions |
 | Proxy (프록시) | ms-설정: 네트워크-프록시 |
-| 상태 | ms-설정: 네트워크-상태<br/>ms-설정: 네트워크 |
+| Status | ms-설정: 네트워크-상태<br/>ms-설정: 네트워크 |
 | VPN | ms-설정: 네트워크-vpn |
 | Wi-Fi | ms-설정: 네트워크-wifi (장치에 wifi 어댑터가 있는 경우에만 사용 가능) |
 | Wi-Fi 호출 | wificalling: 네트워크-사용 가능 (Wi-Fi 호출을 사용 하는 경우에만 사용 가능) |
 
-### <a name="personalization"></a>개인 설정
+### <a name="personalization"></a>Personalization
 
 |설정 페이지| URI |
 |-------------|-----|
@@ -267,7 +267,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 앱 진단 | ms-설정: 개인 정보-appdiagnostics |
 | 자동 파일 다운로드 | ms-설정: 개인 정보-자동 file다운로드할지. |
 | 백그라운드 앱 | ms-설정: 개인 정보-backgroundapps |
-| 달력 | ms-설정: 개인 정보-일정 |
+| 캘린더 | ms-설정: 개인 정보-일정 |
 | 통화 기록 | ms-설정: 개인 정보-callhistory |
 | 카메라 | ms-설정: 개인 정보-웹캠 |
 | 연락처 | ms-설정: 개인 정보-연락처 |
@@ -343,7 +343,7 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 |-------------|-----|
 | 날짜 및 시간 | ms-설정: dateandtime |
 | 일본 IME 설정 | 밀리초-설정: 지역 언어-jpnime (Microsoft 일본 입력 방법 편집기가 설치 된 경우 사용 가능) |
-| 지역 | ms-설정: 지역 서식 |
+| Region | ms-설정: 지역 서식 |
 | 언어 | ms-설정: 키보드<br/>ms-설정: 지역 언어<br/>ms-설정: 지역 언어-bpmfime<br/>ms-설정: 지역 언어-cangjieime<br/>밀리초-설정: 지역 언어-chsime-병음-domainlexicon<br/>밀리초-설정: 지역 언어-chsime-병음-keyconfig<br/>밀리초-설정: 지역 언어-chsime-병음-udp<br/>wubi: 지역 언어-chsime-udp<br/>ms-설정: 지역 언어-quickime |
 | 병음 IME 설정 | 밀리초-설정: 지역 언어-chsime-병음 (Microsoft 병음 input 메서드 편집기가 설치 된 경우 사용 가능) |
 | 음성 | ms-설정: 음성 |
@@ -356,13 +356,13 @@ Uri를 시작 하는 방법에 대 한 자세한 내용은 [uri에 대 한 기�
 | 활성화 | ms-설정: 활성화 |
 | Backup | ms-설정: 백업 |
 | 배달 최적화 | ms-설정: 배달-최적화 |
-| 내 장치 찾기 | ms-설정: findmydevice |
+| 내 디바이스 찾기 | ms-설정: findmydevice |
 | 개발자용 | ms-설정: 개발자 |
 | 복구 | ms-설정: 복구 |
 | 문제 해결 | ms-설정: 문제 해결 |
 | Windows 보안 | ms-설정: windowsdefender |
 |  Windows 참가자 프로그램 | ms-settings: windowsinsider (사용자가 WIP에 등록 된 경우에만 있음)<br/>ms-settings: windowsinsider-optin |
-| Windows 업데이트 | ms-설정: windowsupdate.log<br>ms-설정: windowsupdate.log |
+| Windows Update | ms-설정: windowsupdate.log<br>ms-설정: windowsupdate.log |
 | Windows Update-Advanced 옵션 | ms-설정: windowsupdate.log |
 | Windows Update-Restart 옵션 | ms-설정: windowsupdate.log-restartoptions |
 | Windows Update-View 업데이트 기록 | ms-설정: windowsupdate.log |

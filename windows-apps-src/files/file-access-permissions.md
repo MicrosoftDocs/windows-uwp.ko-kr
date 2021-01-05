@@ -11,13 +11,13 @@ dev_langs:
 - cppwinrt
 - cpp
 - javascript
-ms.custom: contperfq1
-ms.openlocfilehash: 6bb0e44fa5ea31d73feebdfb9ced9951cc2bc937
-ms.sourcegitcommit: 2050175043c8c175be3312f17769b4af241b3275
+ms.custom: contperf-fy21q1
+ms.openlocfilehash: fa37bc45ae85456aff177417a3875d724b0ebd54
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027652"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860266"
 ---
 # <a name="file-access-permissions"></a>파일 액세스 권한
 
@@ -52,7 +52,7 @@ UWP(유니버설 Windows 플랫폼) 앱은 기본적으로 특정 파일 시스�
     Windows::Storage::StorageFolder^ installedLocation = Windows::ApplicationModel::Package::Current->InstalledLocation;
     ```
 
-    그런 다음 [**StorageFolder**](/uwp/api/Windows.Storage.StorageFolder) 메서드를 사용하여 디렉터리의 파일 및 폴더에 액세스할 수 있습니다. 위 예제에서 이 **StorageFolder**는 `installDirectory` 변수에 저장됩니다. 앱 패키지로 작업하고 GitHub에 있는 [앱 패키지 정보 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Package)에서 디렉토리를 설치하는 방법에 대해 자세히 학습할 수 있습니다.
+    그런 다음 [**StorageFolder**](/uwp/api/Windows.Storage.StorageFolder) 메서드를 사용하여 디렉터리의 파일 및 폴더에 액세스할 수 있습니다. 위 예제에서 이 **StorageFolder** 는 `installDirectory` 변수에 저장됩니다. 앱 패키지로 작업하고 GitHub에 있는 [앱 패키지 정보 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Package)에서 디렉토리를 설치하는 방법에 대해 자세히 학습할 수 있습니다.
 
 2. 아래와 같이 앱 URI를 사용하여 앱의 설치 디렉터리에서 직접 파일을 검색할 수 있습니다.
 
@@ -266,7 +266,7 @@ UWP(유니버설 Windows 플랫폼) 앱은 기본적으로 특정 파일 시스�
 
 | 위치 | 기능 | Windows.Storage API |
 |----------|------------|---------------------|
-| 사용자에게 액세스 권한이 있는 모든 파일입니다. 예: 문서, 그림, 사진, 다운로드, 데스크톱, OneDrive 등. | **broadFileSystemAccess**<br><br>이는 제한된 접근 권한 값입니다. 액세스는 **설정** > **개인 정보** > **파일 시스템**에서 구성할 수 있습니다. 사용자가 언제든지 **설정**에서 권한을 부여 또는 거부할 수 있으므로 앱은 이러한 변경에 탄력적으로 반응할 수 있어야 합니다. 앱에 액세스 권한이 없으면 [Windows 10 파일 시스템 액세스 및 개인 정보](https://support.microsoft.com/help/4468237/windows-10-file-system-access-and-privacy-microsoft-privacy) 문서에 대한 링크를 제공하여 사용자가 설정을 변경할지 묻도록 선택할 수 있습니다. 사용자는 앱을 닫고, 설정을 전환하고, 앱을 다시 시작해야 합니다. 이러한 앱이 실행되는 동안 사용자가 설정을 전환하면 플랫폼은 사용자가 상태를 저장한 후 새 설정 저장을 위해 앱을 강제로 종료할 수 있도록 앱을 일시 중단합니다. 2018년 4월 업데이트에서 사용 권한의 기본값은 켜짐입니다. 2018년 10월 업데이트에서 기본값은 꺼짐입니다.<br /><br />이 접근 권한 값을 선언하는 Microsoft Store에 앱을 제출하는 경우 앱에 이 접근 권한 값이 필요한 이유와 이를 사용할 방법에 대한 추가 설명을 제공해야 합니다.<br/><br/>이 접근 권한 값은 [**Windows.Storage**](/uwp/api/Windows.Storage) 네임스페이스의 API에 대해 작동합니다. 앱에서 이 접근 권한 값을 사용하도록 설정하는 방법의 예를 보려면 이 문서 끝에 나오는 **예제** 섹션을 참조하세요.<br/><br/>**참고:** 이 기능은 Xbox에서 지원되지 않습니다. | 해당 없음 |
+| 사용자에게 액세스 권한이 있는 모든 파일입니다. 예: 문서, 그림, 사진, 다운로드, 데스크톱, OneDrive 등. | **broadFileSystemAccess**<br><br>이는 제한된 접근 권한 값입니다. 액세스는 **설정** > **개인 정보** > **파일 시스템** 에서 구성할 수 있습니다. 사용자가 언제든지 **설정** 에서 권한을 부여 또는 거부할 수 있으므로 앱은 이러한 변경에 탄력적으로 반응할 수 있어야 합니다. 앱에 액세스 권한이 없으면 [Windows 10 파일 시스템 액세스 및 개인 정보](https://support.microsoft.com/help/4468237/windows-10-file-system-access-and-privacy-microsoft-privacy) 문서에 대한 링크를 제공하여 사용자가 설정을 변경할지 묻도록 선택할 수 있습니다. 사용자는 앱을 닫고, 설정을 전환하고, 앱을 다시 시작해야 합니다. 이러한 앱이 실행되는 동안 사용자가 설정을 전환하면 플랫폼은 사용자가 상태를 저장한 후 새 설정 저장을 위해 앱을 강제로 종료할 수 있도록 앱을 일시 중단합니다. 2018년 4월 업데이트에서 사용 권한의 기본값은 켜짐입니다. 2018년 10월 업데이트에서 기본값은 꺼짐입니다.<br /><br />이 접근 권한 값을 선언하는 Microsoft Store에 앱을 제출하는 경우 앱에 이 접근 권한 값이 필요한 이유와 이를 사용할 방법에 대한 추가 설명을 제공해야 합니다.<br/><br/>이 접근 권한 값은 [**Windows.Storage**](/uwp/api/Windows.Storage) 네임스페이스의 API에 대해 작동합니다. 앱에서 이 접근 권한 값을 사용하도록 설정하는 방법의 예를 보려면 이 문서 끝에 나오는 **예제** 섹션을 참조하세요.<br/><br/>**참고:** 이 기능은 Xbox에서 지원되지 않습니다. | 해당 없음 |
 | 문서 | **documentsLibrary**<br><br>참고: 앱이 이 위치에서 액세스할 수 있는 특정 파일 형식을 선언하는 파일 형식 연결을 앱 매니페스트에 추가해야 합니다. <br><br>앱에서 다음 작업을 하려는 경우 이 접근 권한 값을 사용합니다.<br>- 유효한 OneDrive URL 또는 리소스 ID를 사용하여 특정 OneDrive 콘텐츠에 대한 플랫폼 간 오프라인 액세스를 용이하게 합니다.<br>- 오프라인에 있는 동안 열려 있는 파일을 사용자의 OneDrive에 자동으로 저장합니다. | [KnownFolders.DocumentsLibrary](/uwp/api/windows.storage.knownfolders.documentslibrary) |
 | Music     | **musicLibrary** <br>[음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.MusicLibrary](/uwp/api/windows.storage.knownfolders.musiclibrary) |    
 | 사진  | **picturesLibrary**<br> [음악, 사진 및 비디오 라이브러리의 파일 및 폴더](quickstart-managing-folders-in-the-music-pictures-and-videos-libraries.md)도 참조하세요. | [KnownFolders.PicturesLibrary](/uwp/api/windows.storage.knownfolders.pictureslibrary) |  
