@@ -8,18 +8,18 @@ keywords: windows 10, uwp
 pm-contact: stmoy
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: d3e2385b1e15334b26663f6f17b3ef47ab015eec
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: b676cf274121ae991066f908b18f1be705d1c580
+ms.sourcegitcommit: 77903451ae8ab1ba854494488f79184e674707df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91216638"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97911013"
 ---
 # <a name="page-transitions"></a>페이지 전환
 
 페이지 전환은 앱의 페이지 간 사용자를 탐색 하 여 페이지 간 관계로 피드백을 제공 합니다. 페이지 전환은 사용자가 탐색 계층 구조의 맨 위에 있는지, 형제 페이지 간에 이동 하는지, 아니면 페이지 계층 구조를 심층적으로 탐색 하는지 이해 하는 데 도움이 됩니다.
 
-앱에서 페이지를 탐색 하 고, *페이지를 새로 고치고* , *드릴*하 고, [**NavigationTransitionInfo**](/uwp/api/windows.ui.xaml.media.animation.navigationtransitioninfo)의 서브 클래스로 표시 되는 두 가지 애니메이션이 제공 됩니다.
+앱에서 페이지를 탐색 하 고, *페이지를 새로 고치고* , *드릴* 하 고, [**NavigationTransitionInfo**](/uwp/api/windows.ui.xaml.media.animation.navigationtransitioninfo)의 서브 클래스로 표시 되는 두 가지 애니메이션이 제공 됩니다.
 
 ## <a name="examples"></a>예
 
@@ -104,4 +104,4 @@ myFrame.Navigate(typeof(Page2), null, new SuppressNavigationTransitionInfo());
 ## <a name="related-topics"></a>관련 항목
 
 - [두 페이지 간 이동](../basics/navigate-between-two-pages.md)
-- [UWindowsWP apps의 동작](index.md)
+- [UWP 앱에서의 동작](index.md)
