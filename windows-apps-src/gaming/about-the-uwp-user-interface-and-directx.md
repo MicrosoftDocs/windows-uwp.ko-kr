@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, directx, app 개체
 ms.localizationpriority: medium
-ms.openlocfilehash: 29eaba70a7114624474275b8f98ec77f8038b2b0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 08d2039bd7b3b8aa248acca31615d34635929aa1
+ms.sourcegitcommit: 48702934676ae366fd46b7d952396c5e2fb2cbbe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163167"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97927777"
 ---
 # <a name="the-app-object-and-directx"></a>앱 개체 및 DirectX
 
@@ -21,20 +21,20 @@ DirectX 게임을 사용 하는 UWP (유니버설 Windows 플랫폼)에서는 �
 
 ## <a name="the-important-core-user-interface-namespaces"></a>중요 한 핵심 사용자 인터페이스 네임 스페이스
 
-먼저 UWP 앱에서를 **사용**하 여 포함 해야 하는 Windows 런타임 네임 스페이스를 살펴보겠습니다. 약간의 세부 정보를 가져옵니다.
+먼저 UWP 앱에서를 **사용** 하 여 포함 해야 하는 Windows 런타임 네임 스페이스를 살펴보겠습니다. 약간의 세부 정보를 가져옵니다.
 
 -   [**Windows ApplicationModel. 핵심**](/uwp/api/Windows.ApplicationModel.Core)
 -   [**Windows ApplicationModel. 활성화**](/uwp/api/Windows.ApplicationModel.Activation)
 -   [**Windows. u i >**](/uwp/api/Windows.UI.Core)
 -   [**Windows.System**](/uwp/api/Windows.System)
--   [**Windows.Foundation**](/uwp/api/Windows.Foundation)
+-   [**Windows Foundation**](/uwp/api/Windows.Foundation)
 
 > [!NOTE]
 > UWP 앱을 개발 하 고 있지 않은 경우에는 이러한 네임 스페이스에 제공 된 형식 대신 JavaScript 또는 XAML 관련 라이브러리와 네임 스페이스에 제공 된 사용자 인터페이스 구성 요소를 사용 합니다.
 
 ## <a name="the-windows-runtime-app-object"></a>Windows 런타임 app 개체
 
-UWP 앱에서 보기를 가져오고 스왑 체인 (표시 버퍼)을 연결할 수 있는 창 및 보기 공급자를 가져오려고 합니다. 이 보기를 실행 중인 앱에 대 한 창 특정 이벤트에 연결할 수도 있습니다. [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 형식으로 정의 되는 앱 개체의 부모 창을 가져오려면 [**IFrameworkViewSource**](/uwp/api/Windows.ApplicationModel.Core.IFrameworkViewSource)를 구현 하는 형식을 만듭니다. **IFrameworkViewSource**을 구현 하는 방법을 보여 주는 [c + +/winrt](../cpp-and-winrt-apis/index.md) 코드 예제는 [DirectX 및 Direct2D를 사용한 컴퍼지션 네이티브 상호 운용성](../composition/composition-native-interop.md)을 참조 하세요.
+UWP 앱에서 보기를 가져오고 스왑 체인 (표시 버퍼)을 연결할 수 있는 창 및 보기 공급자를 가져오려고 합니다. 이 보기를 실행 중인 앱에 대 한 창 특정 이벤트에 연결할 수도 있습니다. [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 형식으로 정의 되는 앱 개체의 부모 창을 가져오려면 [**IFrameworkViewSource**](/uwp/api/Windows.ApplicationModel.Core.IFrameworkViewSource)를 구현 하는 형식을 만듭니다. **IFrameworkViewSource** 을 구현 하는 방법을 보여 주는 [c + +/winrt](../cpp-and-winrt-apis/index.md) 코드 예제는 [DirectX 및 Direct2D를 사용한 컴퍼지션 네이티브 상호 운용성](../composition/composition-native-interop.md)을 참조 하세요.
 
 핵심 사용자 인터페이스 프레임 워크를 사용 하 여 창을 가져오는 기본적인 단계는 다음과 같습니다.
 
@@ -94,17 +94,18 @@ UWP 앱에서 보기를 가져오고 스왑 체인 (표시 버퍼)을 연결할 
 
 [**CoreDispatcher**](/uwp/api/Windows.UI.Core.CoreDispatcher) 형식을 사용 하 여 창에 대 한 이벤트 디스패치의 스레딩 동작을 결정할 수 있습니다. 이 형식에는 창 이벤트 처리를 시작 하는 [**CoreDispatcher**](/uwp/api/windows.ui.core.coredispatcher.processevents) 메서드가 특히 중요 한 메서드가 있습니다. 앱에 대해 잘못 된 옵션을 사용 하 여이 메서드를 호출 하면 모든 종류의 예기치 않은 이벤트 처리 동작이 발생할 수 있습니다.
 
-| CoreProcessEventsOption 옵션                                                           | Description                                                                                                                                                                                                                                  |
-|------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**CoreProcessEventsOption 보류 중**](/uwp/api/Windows.UI.Core.CoreProcessEventsOption) | 큐에서 현재 사용할 수 있는 모든 이벤트를 디스패치합니다. 보류 중인 이벤트가 없으면 다음 새 이벤트를 기다립니다.                                                                                                                                 |
-| [**CoreProcessEventsOption를 표시 합니다.**](/uwp/api/Windows.UI.Core.CoreProcessEventsOption)     | 큐에서 보류 중인 경우 하나의 이벤트를 디스패치합니다. 보류 중인 이벤트가 없으면 새 이벤트를 발생 시킬 때까지 기다리지 않고 즉시 반환 합니다.                                                                                          |
-| [**CoreProcessEventsOption.ProcessUntilQuit**](/uwp/api/Windows.UI.Core.CoreProcessEventsOption)        | 새 이벤트를 기다리고 사용 가능한 모든 이벤트를 디스패치합니다. 창이 닫히거나 응용 프로그램이 [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 인스턴스에서 [**Close**](/uwp/api/windows.ui.core.corewindow.close) 메서드를 호출할 때까지이 동작을 계속 합니다. |
-| [**CoreProcessEventsOption.ProcessAllIfPresent**](/uwp/api/Windows.UI.Core.CoreProcessEventsOption)     | 큐에서 현재 사용할 수 있는 모든 이벤트를 디스패치합니다. 보류 중인 이벤트가 없으면 즉시 반환 합니다.                                                                                                                                          |
+| CoreProcessEventsOption 옵션 | 설명 |
+|--------------------------------|-------------|
+| [**CoreProcessEventsOption 보류 중**](/uwp/api/Windows.UI.Core.CoreProcessEventsOption) | 큐에서 현재 사용할 수 있는 모든 이벤트를 디스패치합니다. 보류 중인 이벤트가 없으면 다음 새 이벤트를 기다립니다. |
+| [**CoreProcessEventsOption를 표시 합니다.**](/uwp/api/Windows.UI.Core.CoreProcessEventsOption) | 큐에서 보류 중인 경우 하나의 이벤트를 디스패치합니다. 보류 중인 이벤트가 없으면 새 이벤트를 발생 시킬 때까지 기다리지 않고 즉시 반환 합니다. |
+| [**CoreProcessEventsOption.ProcessUntilQuit**](/uwp/api/Windows.UI.Core.CoreProcessEventsOption) | 새 이벤트를 기다리고 사용 가능한 모든 이벤트를 디스패치합니다. 창이 닫히거나 응용 프로그램이 [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 인스턴스에서 [**Close**](/uwp/api/windows.ui.core.corewindow.close) 메서드를 호출할 때까지이 동작을 계속 합니다. |
+| [**CoreProcessEventsOption.ProcessAllIfPresent**](/uwp/api/Windows.UI.Core.CoreProcessEventsOption) | 큐에서 현재 사용할 수 있는 모든 이벤트를 디스패치합니다. 보류 중인 이벤트가 없으면 즉시 반환 합니다. |
+
 DirectX를 사용 하는 UWP에서는 [**CoreProcessEventsOption. ProcessAllIfPresent**](/uwp/api/Windows.UI.Core.CoreProcessEventsOption) 옵션을 사용 하 여 그래픽 업데이트를 방해할 수 있는 차단 동작을 방지 해야 합니다.
 
 ## <a name="asta-considerations-for-directx-devs"></a>DirectX 개발자에 대 한 ASTA 고려 사항
 
-응용 프로그램의 런타임 표현을 정의 하는 app 개체는 응용 프로그램 ASTA (단일 스레드 아파트) 라는 스레딩 모델을 사용 하 여 앱의 UI 뷰를 호스팅합니다. Uwp 및 DirectX 앱을 개발 하는 경우에는 ASTA의 속성에 대해 잘 알고 있습니다. UWP 및 DirectX 앱에서 디스패치 한 스레드는 [**Windows:: System:: 스레딩**](/uwp/api/Windows.System.Threading) api를 사용 해야 합니다. 또는 [**CoreWindow:: CoreDispatcher**](/uwp/api/Windows.UI.Core.CoreDispatcher)를 사용 해야 합니다. 앱에서 [**CoreWindow:: GetForCurrentThread**](/uwp/api/windows.ui.core.corewindow.getforcurrentthread) 를 호출 하 여 ASTA에 대 한 [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 개체를 가져올 수 있습니다.
+응용 프로그램의 런타임 표현을 정의 하는 app 개체는 ASTA (Application Single-Threaded 아파트) 라는 스레딩 모델을 사용 하 여 앱의 UI 뷰를 호스팅합니다. Uwp 및 DirectX 앱을 개발 하는 경우에는 ASTA의 속성에 대해 잘 알고 있습니다. UWP 및 DirectX 앱에서 디스패치 한 스레드는 [**Windows:: System:: 스레딩**](/uwp/api/Windows.System.Threading) api를 사용 해야 합니다. 또는 [**CoreWindow:: CoreDispatcher**](/uwp/api/Windows.UI.Core.CoreDispatcher)를 사용 해야 합니다. 앱에서 [**CoreWindow:: GetForCurrentThread**](/uwp/api/windows.ui.core.corewindow.getforcurrentthread) 를 호출 하 여 ASTA에 대 한 [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 개체를 가져올 수 있습니다.
 
 UWP DirectX 앱의 개발자는 알아야 할 가장 중요 한 사항은 **main ()** 에서 **Platform:: MTAThread** 를 설정 하 여 앱 스레드가 MTA 스레드를 디스패치할 수 있도록 설정 해야 한다는 것입니다.
 
@@ -136,4 +137,4 @@ UWP DirectX 앱에 대 한 앱 개체가 활성화 되 면 UI 보기에 사용�
 
     즉, 앱의 ASTA에 대 한 관련이 없는 호출을 즉시 전달 하는 데 의존할 수 없습니다. 비동기 호출에 대 한 자세한 내용은 [c + +의 비동기 프로그래밍](../threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps.md)을 참조 하세요.
 
-전체적으로 UWP 앱을 디자인할 때 앱의 [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 및 [**CoreDispatcher::P Rocessevents**](/uwp/api/windows.ui.core.coredispatcher.processevents) 에 대해 [**COREDISPATCHER**](/uwp/api/Windows.UI.Core.CoreDispatcher) 를 사용 하 여 MTA 스레드를 직접 만들고 관리 하는 대신 모든 UI 스레드를 처리 합니다. **CoreDispatcher**를 사용 하 여 처리할 수 없는 별도의 스레드가 필요 하면 비동기 패턴을 사용 하 고 앞에서 설명한 지침에 따라 재진입 문제를 방지 합니다.
+전체적으로 UWP 앱을 디자인할 때 앱의 [**CoreWindow**](/uwp/api/Windows.UI.Core.CoreWindow) 및 [**CoreDispatcher::P Rocessevents**](/uwp/api/windows.ui.core.coredispatcher.processevents) 에 대해 [**COREDISPATCHER**](/uwp/api/Windows.UI.Core.CoreDispatcher) 를 사용 하 여 MTA 스레드를 직접 만들고 관리 하는 대신 모든 UI 스레드를 처리 합니다. **CoreDispatcher** 를 사용 하 여 처리할 수 없는 별도의 스레드가 필요 하면 비동기 패턴을 사용 하 고 앞에서 설명한 지침에 따라 재진입 문제를 방지 합니다.

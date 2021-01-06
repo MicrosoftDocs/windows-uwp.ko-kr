@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능, 앱 내 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f02e222cf495f56352a645ac3a366da39dc5e3a
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9ec2213f5a46318f3aaddbbe5d55b58f6816fcce
+ms.sourcegitcommit: 48702934676ae366fd46b7d952396c5e2fb2cbbe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89158417"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97927785"
 ---
 # <a name="manage-add-ons"></a>추가 기능 관리
 
@@ -49,7 +49,7 @@ Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 앱에 대 �
 <td align="left"><a href="create-an-add-on.md">추가 기능 만들기</a></td>
 </tr>
 <tr>
-<td align="left">Delete</td>
+<td align="left">DELETE</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{inAppProductId}</td>
 <td align="left"><a href="delete-an-add-on.md">추가 기능 삭제</a></td>
 </tr>
@@ -128,10 +128,10 @@ Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 앱에 대 �
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description        |
-|-----------------|---------|-----------|
-| 값            | object  |  다음 값을 포함 하는 개체입니다. <br/><br/> <ul><li>*id*. 앱의 저장소 id입니다. 저장소 ID에 대 한 자세한 내용은 [앱 id 세부 정보 보기](../publish/view-app-identity-details.md)를 참조 하세요.</li><li>*Resourcelocation*. ```https://manage.devcenter.microsoft.com/v1.0/my/```앱에 대 한 전체 데이터를 검색 하기 위해 기본 요청 URI에 추가할 수 있는 상대 경로입니다.</li></ul>   |
-| totalCount   | int  | *응용 프로그램* 배열의 응답 본문에 있는 앱 개체의 수입니다.                                                                                                                                                 |
+| 값 | 형식 | Description |
+|-------|------|-------------|
+| 값 | object | 다음 값을 포함 하는 개체입니다. <ul><li>*id*. 앱의 저장소 id입니다. 저장소 ID에 대 한 자세한 내용은 [앱 id 세부 정보 보기](../publish/view-app-identity-details.md)를 참조 하세요.</li><li>*Resourcelocation*. `https://manage.devcenter.microsoft.com/v1.0/my/`앱에 대 한 전체 데이터를 검색 하기 위해 기본 요청 URI에 추가할 수 있는 상대 경로입니다.</li></ul> |
+| totalCount | int | *응용 프로그램* 배열의 응답 본문에 있는 앱 개체의 수입니다. |
 
 <span id="submission-object" />
 
@@ -153,8 +153,8 @@ Microsoft Store 제출 API에서 다음 메서드를 사용 하 여 앱에 대 �
 | 값           | 형식    | Description     |
 |-----------------|---------|------------------|
 | id            | 문자열  | 제출 ID입니다.    |
-| resourceLocation   | 문자열  | ```https://manage.devcenter.microsoft.com/v1.0/my/```전송에 대 한 전체 데이터를 검색 하기 위해 기본 요청 URI에 추가할 수 있는 상대 경로입니다.     |
- 
+| resourceLocation   | 문자열  | `https://manage.devcenter.microsoft.com/v1.0/my/`전송에 대 한 전체 데이터를 검색 하기 위해 기본 요청 URI에 추가할 수 있는 상대 경로입니다.     |
+
 <span/>
 
 ## <a name="related-topics"></a>관련 항목

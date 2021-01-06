@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 사용자 역할, 사용자 권한, 사용자 지정 역할, 사용자 액세스, 사용자 지정 권한, 표준 역할
 ms.localizationpriority: medium
-ms.openlocfilehash: 3cdd1904dad82e0145305fe2709360be01518a7f
-ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
+ms.openlocfilehash: e18c7bcffe7249f6c191fc456422e0dd0c7300ef
+ms.sourcegitcommit: 48702934676ae366fd46b7d952396c5e2fb2cbbe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878486"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97927806"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대 한 역할 또는 사용자 지정 권한 설정
 
@@ -35,7 +35,7 @@ ms.locfileid: "91878486"
 
 기본적으로 파트너 센터 계정에 사용자, 그룹 또는 Azure AD 응용 프로그램을 추가할 때 선택할 수 있는 표준 역할 집합이 제공 됩니다. 각 역할에는 계정 내에서 특정 기능을 수행 하기 위해 특정 권한 집합이 있습니다. 
 
-**권한 사용자**지정을 선택 하 여 [사용자 지정 권한을](#custom) 정의 하도록 선택 하지 않은 경우 계정에 추가 하는 각 사용자, 그룹 또는 Azure AD 응용 프로그램에는 다음 표준 역할 중 하나 이상이 할당 되어야 합니다. 
+**권한 사용자** 지정을 선택 하 여 [사용자 지정 권한을](#custom) 정의 하도록 선택 하지 않은 경우 계정에 추가 하는 각 사용자, 그룹 또는 Azure AD 응용 프로그램에는 다음 표준 역할 중 하나 이상이 할당 되어야 합니다. 
 
 > [!NOTE]
 > 계정의 **소유자** 는 Azure AD를 통해 추가 된 사용자가 아닌 Microsoft 계정을 사용 하 여 처음 만든 사람입니다. 이 계정 소유자는 앱을 삭제 하 고, 모든 계정 사용자를 만들고 편집 하 고, 모든 금융 및 계정 설정을 변경 하는 기능을 포함 하 여 계정에 대 한 완전 한 액세스 권한을 가진 유일한 사람입니다. 
@@ -61,7 +61,7 @@ ms.locfileid: "91878486"
 |    **세금 프로필**                                        |    업데이트할 수 있음                    |    액세스 권한 없음                     |    액세스 권한 없음                     |    액세스 권한 없음               |    업데이트할 수 있음             |    액세스 권한 없음                     |
 |    **지급 요약**                                     |    보기 가능                      |    액세스 권한 없음                     |    액세스 권한 없음                     |    액세스 권한 없음               |    보기 가능               |    액세스 권한 없음                     |
 
-표준 역할이 적절 하지 않거나 특정 앱 및/또는 추가 기능에 대 한 액세스를 제한 하려는 경우 아래에 설명 된 대로 **권한 사용자**지정을 선택 하 여 사용자에 게 사용자 지정 권한을 부여할 수 있습니다.
+표준 역할이 적절 하지 않거나 특정 앱 및/또는 추가 기능에 대 한 액세스를 제한 하려는 경우 아래에 설명 된 대로 **권한 사용자** 지정을 선택 하 여 사용자에 게 사용자 지정 권한을 부여할 수 있습니다.
 
 
 <span id="custom" />
@@ -77,7 +77,7 @@ ms.locfileid: "91878486"
 - **액세스 권한 없음**: 사용자에 게 표시 된 권한이 없습니다.
 - **읽기 전용**: 사용자는 표시 된 영역과 관련 된 기능을 볼 수 있지만 변경할 수는 없습니다. 
 - **읽기/쓰기**: 사용자가 영역과 관련 된 변경을 수행 하 고 볼 수 있는 액세스 권한을 가집니다.
-- **혼합**:이 옵션을 직접 선택할 수는 없지만 해당 사용 권한에 대 한 액세스 조합이 허용 된 경우 **혼합** 표시기가 표시 됩니다. 예를 들어 **모든 제품**에 대 한 **가격 책정 및 가용성** 에 대 한 **읽기** 전용 액세스 권한을 부여 하 고 특정 제품의 **가격 책정 및 가용성** 에 대 한 **읽기/쓰기** 액세스 권한을 부여 하는 경우 **모든 제품** 의 **가격 책정 및 가용성** 표시기는 혼합으로 표시 됩니다. 일부 제품에 사용 권한에 대 한 **액세스** 권한이 없는 경우와 **읽기/쓰기** 및/또는 **읽기 전용** 액세스 권한이 있는 경우에도 마찬가지입니다.
+- **혼합**:이 옵션을 직접 선택할 수는 없지만 해당 사용 권한에 대 한 액세스 조합이 허용 된 경우 **혼합** 표시기가 표시 됩니다. 예를 들어 **모든 제품** 에 대 한 **가격 책정 및 가용성** 에 대 한 **읽기** 전용 액세스 권한을 부여 하 고 특정 제품의 **가격 책정 및 가용성** 에 대 한 **읽기/쓰기** 액세스 권한을 부여 하는 경우 **모든 제품** 의 **가격 책정 및 가용성** 표시기는 혼합으로 표시 됩니다. 일부 제품에 사용 권한에 대 한 **액세스** 권한이 없는 경우와 **읽기/쓰기** 및/또는 **읽기 전용** 액세스 권한이 있는 경우에도 마찬가지입니다.
 
 분석 데이터 보기와 관련 된 사용 권한의 경우 **읽기** 전용 액세스만 허용할 수 있습니다. 현재 구현에서 일부 권한은 **읽기** 전용 및 **읽기/쓰기** 액세스를 구분 하지 않습니다. 각 사용 권한에 대 한 세부 정보를 검토 하 여 **읽기 전용** 및/또는 **읽기/쓰기** 액세스로 부여 되는 특정 기능을 이해 합니다.
 
@@ -101,7 +101,7 @@ ms.locfileid: "91878486"
     </tr>
     </thead>
     <tbody>
-<tr><td align="left">    <b>계정 설정</b>                    </td><td align="left">  <a href="/windows/uwp/publish/manage-account-settings-and-profile">연락처 정보</a>를 포함 하 여 <b>계정 설정</b> 섹션에서 모든 페이지를 볼 수 있습니다.       </td><td align="left">  <b>계정 설정</b> 섹션에서 모든 페이지를 볼 수 있습니다. <a href="/windows/uwp/publish/manage-account-settings-and-profile">연락처 정보</a> 및 다른 페이지를 변경할 수 있지만 해당 권한이 별도로 부여 되지 않는 한 지급 계정 또는 세금 프로필은 변경할 수 없습니다.            </td></tr>
+<tr><td align="left">    <b>계정 설정</b>                    </td><td align="left">  <a href="/partner-center/partner-center-account-setup">연락처 정보</a>를 포함 하 여 <b>계정 설정</b> 섹션에서 모든 페이지를 볼 수 있습니다.       </td><td align="left">  <b>계정 설정</b> 섹션에서 모든 페이지를 볼 수 있습니다. <a href="/partner-center/partner-center-account-setup">연락처 정보</a> 및 다른 페이지를 변경할 수 있지만 해당 권한이 별도로 부여 되지 않는 한 지급 계정 또는 세금 프로필은 변경할 수 없습니다.            </td></tr>
 <tr><td align="left">    <b>계정 사용자</b>                       </td><td align="left">  <b>사용자</b> 섹션에서 계정에 추가 된 사용자를 볼 수 있습니다.          </td><td align="left">  계정에 사용자를 추가 하 고 <b>사용자</b> 섹션에서 기존 사용자를 변경할 수 있습니다.             </td></tr>
 <tr><td align="left">    <b>계정 수준 ad 성능 보고서</b> </td><td align="left">  계정 수준 <a href="advertising-performance-report.md">광고 성능 보고서</a>를 볼 수 있습니다.      </td><td align="left">  해당 없음   </td></tr>
 <tr><td align="left">    <b>광고 캠페인</b>                        </td><td align="left">  계정에서 만든 <a href="/windows/uwp/monetize/">ad 캠페인</a> 을 볼 수 있습니다.      </td><td align="left">  계정에 생성 된 <a href="/windows/uwp/monetize/">광고 캠페인</a> 을 만들고 관리 하 고 볼 수 있습니다.          </td></tr>
@@ -113,7 +113,7 @@ ms.locfileid: "91878486"
 <tr><td align="left">    <b>계열사 성능 보고서</b>      </td><td align="left">  계정의 모든 제품에 대 한 <a href="/windows/uwp/publish/advertising-performance-report">계열사 성능 보고서</a> 를 볼 수 있습니다.   </td><td align="left">  해당 없음   </td></tr>
 <tr><td align="left">    <b>앱 설치 광고 보고서</b>             </td><td align="left">  <a href="/windows/uwp/publish/ad-campaign-report">광고 캠페인 보고서</a>를 볼 수 있습니다.           </td><td align="left">  해당 없음   </td></tr>
 <tr><td align="left">    <b>커뮤니티 광고</b>                       </td><td align="left">  계정의 모든 제품에 대 한 무료 <a href="/windows/uwp/monetize/">커뮤니티 ad</a> 사용량을 볼 수 있습니다.          </td><td align="left">  계정의 모든 제품에 대 한 무료 <a href="/windows/uwp/monetize/">커뮤니티 ad</a> 사용량을 만들고, 관리 하 고, 볼 수 있습니다.               </td></tr>
-<tr><td align="left">    <b>연락처 정보</b>                        </td><td align="left">  계정 설정 섹션에서 <a href="/windows/uwp/publish/manage-account-settings-and-profile">연락처 정보</a> 를 볼 수 있습니다.        </td><td align="left">  계정 설정 섹션에서 <a href="/windows/uwp/publish/manage-account-settings-and-profile">연락처 정보</a> 를 편집 하 고 볼 수 있습니다.            </td></tr>
+<tr><td align="left">    <b>연락처 정보</b>                        </td><td align="left">  계정 설정 섹션에서 <a href="/partner-center/partner-center-account-setup">연락처 정보</a> 를 볼 수 있습니다.        </td><td align="left">  계정 설정 섹션에서 <a href="/partner-center/partner-center-account-setup">연락처 정보</a> 를 편집 하 고 볼 수 있습니다.            </td></tr>
 <tr><td align="left">    <b>COPPA 규정 준수</b>                    </td><td align="left">  계정에 있는 모든 제품에 대해 제품이 13 세 미만의 어린이를 대상으로 하는지 여부를 나타내는 <a href="in-app-ads.md#coppa-compliance">COPPA 준수</a> 선택 항목을 볼 수 있습니다.                                            </td><td align="left">  계정에 있는 모든 제품에 대 한 <a href="in-app-ads.md#coppa-compliance">COPPA 준수</a>  선택 항목을 편집 하 고 볼 수 있습니다 (제품이 13 세 미만의 어린이를 대상으로 하는지 여부를 나타냄).         </td></tr>
 <tr><td align="left">    <b>고객 그룹</b>                     </td><td align="left">  <a href="create-customer-groups.md">고객 그룹</a> (세그먼트 및 알려진 사용자 그룹)을 볼 수 있습니다.      </td><td align="left">  <a href="create-customer-groups.md">고객 그룹</a> (세그먼트 및 알려진 사용자 그룹)을 만들고, 편집 하 고, 볼 수 있습니다.       </td></tr>
 <tr><td align="left">    <b>제품 그룹 관리</b>&nbsp;*                            </td><td align="left">  새 제품 그룹 만들기 페이지를 볼 수 있지만 실제로 새 제품 그룹을 만들 수는 없습니다.    </td><td align="left">  제품 그룹을 만들고 편집할 수 있습니다.     </td></tr>
@@ -138,12 +138,12 @@ ms.locfileid: "91878486"
 
 이 섹션의 권한은 계정의 모든 제품에 부여 하거나, 하나 이상의 특정 제품에 대 한 사용 권한만 허용 하도록 사용자 지정할 수 있습니다. 
 
-제품 수준 권한은 **분석**, **수익 화**, **게시**및 **Xbox Live**의 네 가지 범주로 그룹화 됩니다. 이러한 각 범주를 확장 하 여 각 범주의 개별 사용 권한을 볼 수 있습니다. 또한 하나 이상의 특정 제품에 대 한 **모든 사용 권한을** 설정 하는 옵션도 있습니다.
+제품 수준 권한은 **분석**, **수익 화**, **게시** 및 **Xbox Live** 의 네 가지 범주로 그룹화 됩니다. 이러한 각 범주를 확장 하 여 각 범주의 개별 사용 권한을 볼 수 있습니다. 또한 하나 이상의 특정 제품에 대 한 **모든 사용 권한을** 설정 하는 옵션도 있습니다.
 
-계정에 있는 모든 제품에 대 한 사용 권한을 부여 하려면 **모든 제품**으로 표시 된 행에 **읽기** 전용 또는 **읽기/쓰기**를 표시 하도록 상자를 설정/해제 하 여 해당 사용 권한을 선택 합니다. 
+계정에 있는 모든 제품에 대 한 사용 권한을 부여 하려면 **모든 제품** 으로 표시 된 행에 **읽기** 전용 또는 **읽기/쓰기** 를 표시 하도록 상자를 설정/해제 하 여 해당 사용 권한을 선택 합니다. 
  
 > [!TIP]
-> **모든 제품** 에 대 한 선택 항목은 현재 계정에 있는 모든 제품 및 해당 계정에 생성 된 이후 제품에 적용 됩니다. 사용 권한이 향후 제품에 적용 되지 않도록 하려면 **모든**제품을 선택 하는 대신 개별적으로 모든 제품을 선택 합니다.
+> **모든 제품** 에 대 한 선택 항목은 현재 계정에 있는 모든 제품 및 해당 계정에 생성 된 이후 제품에 적용 됩니다. 사용 권한이 향후 제품에 적용 되지 않도록 하려면 **모든** 제품을 선택 하는 대신 개별적으로 모든 제품을 선택 합니다.
 
 **모든 제품** 행 아래에 계정에 있는 각 제품이 별도의 행에 표시 됩니다. 특정 제품에 대 한 사용 권한만 부여 하려면 해당 제품에 대 한 행에서 해당 권한을 선택 합니다.
 
