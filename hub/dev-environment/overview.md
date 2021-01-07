@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Windows 설정, 개발 환경, 개발 도구, 개발 경로, Microsoft, Windows, 개발자, 팁, 성능, WSL, 터미널, nodejs, python
 ms.localizationpriority: medium
 ms.date: 07/24/2020
-ms.openlocfilehash: 0b3df6b081504b98933ae5b261c6e7aaf5464953
-ms.sourcegitcommit: b8d0e2c6186ab28fe07eddeec372fb2814bd4a55
+ms.openlocfilehash: 578bc10b26dfe04384ca8e8174e36497c20896cb
+ms.sourcegitcommit: 48702934676ae366fd46b7d952396c5e2fb2cbbe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671662"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97927816"
 ---
 # <a name="set-up-your-development-environment-on-windows-10"></a>Windows 10에서 개발 환경 설정
 
@@ -92,9 +92,9 @@ ms.locfileid: "91671662"
     :::column-end:::
     :::column:::
        [![PowerToys 아이콘](../images/powertoys.png)](https://github.com/microsoft/PowerToys)<br>
-        **[Windows PowerToys](https://github.com/microsoft/PowerToys)**<br>
+        **[Windows PowerToys](../PowerToys/index.md)**<br>
         이 고급 사용자 유틸리티 세트로 Windows 환경을 조정하고 간소화하여 생산성을 높일 수 있습니다.<br>
-        [PowerToys(공개 미리 보기) 설치](https://github.com/microsoft/PowerToys#installing-and-running-microsoft-powertoys)
+        [PowerToys 설치](https://github.com/microsoft/PowerToys#installing-and-running-microsoft-powertoys)
     :::column-end:::
 :::row-end:::
 :::row:::
