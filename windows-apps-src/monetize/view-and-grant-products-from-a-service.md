@@ -6,12 +6,12 @@ ms.date: 08/01/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store collection API, Microsoft Store 구매 API, 제품 보기, 제품 부여
 ms.localizationpriority: medium
-ms.openlocfilehash: 769366cd45b4734987e3f558c11a6e0e105cfe21
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 700749c45c563be0bb78de557cac3550767846bd
+ms.sourcegitcommit: fc7fb82121a00e552eaebafba42e5f8e1623c58a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164457"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97978578"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>서비스에서 제품 권한 관리
 
@@ -37,8 +37,8 @@ ms.locfileid: "89164457"
 
 이 종단 간 프로세스는 다른 작업을 수행 하는 두 가지 소프트웨어 구성 요소를 포함 합니다.
 
-* **서비스**입니다. 비즈니스 환경의 컨텍스트에서 안전 하 게 실행 되는 응용 프로그램으로, 선택 하는 개발 플랫폼을 사용 하 여 구현할 수 있습니다. 서비스는 시나리오에 필요한 Azure AD 액세스 토큰을 만들고 Microsoft Store collection API 및 구매 API에 대 한 REST Uri를 호출 하는 일을 담당 합니다.
-* **클라이언트 Windows 앱**입니다. 이 앱은 고객 자격 정보 (앱에 대 한 추가 기능 포함)를 액세스 하 고 관리 하려는 앱입니다. 이 앱은 Microsoft Store collection API를 호출 하 고 서비스에서 API를 구입 하는 데 필요한 Microsoft Store ID 키를 만듭니다.
+* **서비스** 입니다. 비즈니스 환경의 컨텍스트에서 안전 하 게 실행 되는 응용 프로그램으로, 선택 하는 개발 플랫폼을 사용 하 여 구현할 수 있습니다. 서비스는 시나리오에 필요한 Azure AD 액세스 토큰을 만들고 Microsoft Store collection API 및 구매 API에 대 한 REST Uri를 호출 하는 일을 담당 합니다.
+* **클라이언트 Windows 앱** 입니다. 이 앱은 고객 자격 정보 (앱에 대 한 추가 기능 포함)를 액세스 하 고 관리 하려는 앱입니다. 이 앱은 Microsoft Store collection API를 호출 하 고 서비스에서 API를 구입 하는 데 필요한 Microsoft Store ID 키를 만듭니다.
 
 <span id="step-1"/>
 
@@ -51,19 +51,21 @@ Microsoft Store collection API 또는 구매 API를 사용 하려면 먼저 Azur
 
 1.  아직 수행 하지 않은 경우 [Azure Active Directory와 응용 프로그램 통합](/azure/active-directory/develop/active-directory-integrating-applications) 의 지침에 따라 Azure AD에 **웹 앱/** a p i 응용 프로그램을 등록 합니다.
     > [!NOTE]
-    > 응용 프로그램을 등록 하는 경우 응용 프로그램에 대 한 키 ( *클라이언트 암호*라고도 함)를 검색할 수 있도록 응용 프로그램 유형으로 **웹 앱/** a p i를 선택 해야 합니다. Microsoft Store collection API 또는 purchase API를 호출 하려면 이후 단계에서 Azure AD에서 액세스 토큰을 요청할 때 클라이언트 암호를 제공 해야 합니다.
+    > 응용 프로그램을 등록 하는 경우 응용 프로그램에 대 한 키 ( *클라이언트 암호* 라고도 함)를 검색할 수 있도록 응용 프로그램 유형으로 **웹 앱/** a p i를 선택 해야 합니다. Microsoft Store collection API 또는 purchase API를 호출 하려면 이후 단계에서 Azure AD에서 액세스 토큰을 요청할 때 클라이언트 암호를 제공 해야 합니다.
 
-2.  [Azure 관리 포털](https://portal.azure.com/)에서 **Azure Active Directory**로 이동 합니다. 디렉터리를 선택 하 고 왼쪽 탐색 창에서 **앱 등록** 을 클릭 한 다음 응용 프로그램을 선택 합니다.
+2.  [Azure 관리 포털](https://portal.azure.com/)에서 **Azure Active Directory** 로 이동 합니다. 디렉터리를 선택 하 고 왼쪽 탐색 창에서 **앱 등록** 을 클릭 한 다음 응용 프로그램을 선택 합니다.
 3.  응용 프로그램의 기본 등록 페이지로 이동 합니다. 이 페이지에서 나중에 사용 하기 위해 **응용 프로그램 ID** 값을 복사 합니다.
-4.  나중에 필요 하 게 될 키를 만듭니다 (모두 *클라이언트 비밀*이라고 함). 왼쪽 창에서 **설정** 을 클릭 한 다음 **키**를 클릭 합니다. 이 페이지에서 [키를 만드는](/azure/active-directory/develop/active-directory-integrating-applications#to-add-application-credentials-or-permissions-to-access-web-apis)단계를 완료 합니다. 나중에 사용 하기 위해이 키를 복사 합니다.
-5.  [응용 프로그램 매니페스트에](/azure/active-directory/develop/active-directory-application-manifest)필요한 대상 그룹 uri를 몇 개 추가 합니다. 왼쪽 창에서 **매니페스트**를 클릭합니다. **편집**을 클릭 하 고 `"identifierUris"` 섹션을 다음 텍스트로 바꾼 후 **저장**을 클릭 합니다.
+4.  나중에 필요 하 게 될 키를 만듭니다 (모두 *클라이언트 비밀* 이라고 함). 왼쪽 창에서 **설정** 을 클릭 한 다음 **키** 를 클릭 합니다. 이 페이지에서 [키를 만드는](/azure/active-directory/develop/active-directory-integrating-applications#to-add-application-credentials-or-permissions-to-access-web-apis)단계를 완료 합니다. 나중에 사용 하기 위해이 키를 복사 합니다.
+5.  [응용 프로그램 매니페스트에](/azure/active-directory/develop/active-directory-application-manifest)필요한 대상 그룹 uri를 몇 개 추가 합니다. 왼쪽 창에서 **매니페스트** 를 클릭합니다. **편집** 을 클릭 하 고 `"identifierUris"` 섹션을 다음 텍스트로 바꾼 후 **저장** 을 클릭 합니다.
 
     ```json
-    "identifierUris" : [                                
-            "https://onestore.microsoft.com",
-            "https://onestore.microsoft.com/b2b/keys/create/collections",
-            "https://onestore.microsoft.com/b2b/keys/create/purchase"
+    "accessTokenAcceptedVersion": 1,
+    "identifierUris": [
+        "https://onestore.microsoft.com",
+        "https://onestore.microsoft.com/b2b/keys/create/collections",
+        "https://onestore.microsoft.com/b2b/keys/create/purchase"
         ],
+    "signInAudience": "AzureADMyOrg",
     ```
 
     이러한 문자열은 응용 프로그램에서 지 원하는 대상을 나타냅니다. 이후 단계에서는 이러한 각 대상 값에 연결 된 Azure AD 액세스 토큰을 만듭니다.

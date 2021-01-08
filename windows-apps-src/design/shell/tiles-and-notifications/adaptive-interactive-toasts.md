@@ -8,18 +8,18 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 알림 메시지, 대화형 알림을, 적응 알림을, 알림 콘텐츠, 알림 페이로드
 ms.localizationpriority: medium
-ms.openlocfilehash: f148938f8c8e3bb5ac305a82d1863545005fd802
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: 92a8f53b2951d7fb3ed5bb5c0afbdf1e7e2424cc
+ms.sourcegitcommit: fc7fb82121a00e552eaebafba42e5f8e1623c58a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93034296"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97978588"
 ---
 # <a name="toast-content"></a>알림 콘텐츠
 
 적응 및 대화형 알림 메시지를 통해 텍스트, 이미지 및 단추/입력을 사용 하 여 유연한 알림을 만들 수 있습니다.
 
-> **중요 API** : [UWP 커뮤니티 도구 키트 알림 NuGet 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
+> **중요 API**: [UWP 커뮤니티 도구 키트 알림 NuGet 패키지](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/)
 
 > [!NOTE]
 > Windows 8.1 및 Windows Phone 8.1에서 레거시 템플릿을 보려면 [레거시 알림 템플릿 카탈로그](/previous-versions/windows/apps/hh761494(v=win.10))를 참조 하세요.
@@ -42,10 +42,10 @@ ms.locfileid: "93034296"
 알림 메시지는 태그/그룹 (알림을 식별 하는 데 사용 됨) 및 *알림 콘텐츠와* 같은 일부 데이터 속성의 조합입니다.
 
 알림 콘텐츠의 핵심 구성 요소는 ...
-* **시작** : 사용자가 알림을 클릭할 때 앱에 다시 전달 되는 인수를 정의 하 여 알림이 표시 되는 올바른 콘텐츠에 대 한 심층 링크를 제공 합니다. 자세히 알아보려면 [로컬 알림 보내기](send-local-toast.md)를 참조 하세요.
-* **시각적 개체** : 텍스트 및 이미지를 포함 하는 제네릭 바인딩을 포함 하는 알림 표시 부분입니다.
-* **작업** : 입력 및 작업을 포함 하 여 알림 메시지의 대화형 부분입니다.
-* **audio** : 알림이 사용자에 게 표시 될 때 재생 되는 오디오를 제어 합니다.
+* **시작**: 사용자가 알림을 클릭할 때 앱에 다시 전달 되는 인수를 정의 하 여 알림이 표시 되는 올바른 콘텐츠에 대 한 심층 링크를 제공 합니다. 자세히 알아보려면 [로컬 알림 보내기](send-local-toast.md)를 참조 하세요.
+* **시각적 개체**: 텍스트 및 이미지를 포함 하는 제네릭 바인딩을 포함 하는 알림 표시 부분입니다.
+* **작업**: 입력 및 작업을 포함 하 여 알림 메시지의 대화형 부분입니다.
+* **audio**: 알림이 사용자에 게 표시 될 때 재생 되는 오디오를 제어 합니다.
 
 알림 콘텐츠는 원시 XML로 정의 되지만, [NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) 를 사용 하 여 알림 콘텐츠를 생성 하는 c # (또는 c + +) 개체 모델을 가져올 수 있습니다. 이 문서에서는 알림 콘텐츠 내에 있는 모든 것을 설명 합니다.
 
@@ -86,7 +86,7 @@ new ToastContentBuilder()
 ![알림 메시지 구조](images/adaptivetoasts-structure.jpg)
 
 
-## <a name="visual"></a>시각 효과
+## <a name="visual"></a>시각적 개체
 
 각 알림이 텍스트, 이미지 등을 포함할 수 있는 일반 알림 바인딩을 제공 해야 하는 시각적 개체를 지정 해야 합니다. 이러한 요소는 데스크톱, 휴대폰, 태블릿 및 Xbox를 포함 한 다양 한 Windows 장치에서 렌더링 됩니다.
 
@@ -105,7 +105,7 @@ new ToastContentBuilder()
 
 <img alt="Toast with title and description" src="images/toast-title-and-description.jpg" width="364"/>
 
-Windows 10 기념일 업데이트 이후에는 텍스트의 **Hintmaxlines** 속성을 사용 하 여 표시할 텍스트의 줄 수를 제어할 수 있습니다. 기본 (및 최대)은 제목에 대해 최대 2 줄의 텍스트, 두 개의 추가 설명 요소에 대 한 최대 4 줄 (결합)입니다 (두 번째 및 세 번째 **AdaptiveText** ).
+Windows 10 기념일 업데이트 이후에는 텍스트의 **Hintmaxlines** 속성을 사용 하 여 표시할 텍스트의 줄 수를 제어할 수 있습니다. 기본 (및 최대)은 제목에 대해 최대 2 줄의 텍스트, 두 개의 추가 설명 요소에 대 한 최대 4 줄 (결합)입니다 (두 번째 및 세 번째 **AdaptiveText**).
 
 #### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
 
@@ -135,7 +135,7 @@ new ToastContentBuilder()
 
 <img alt="Toast with app logo override" src="images/toast-applogooverride.jpg" width="364"/>
 
-**Hintcrop** 속성을 사용 하 여 이미지의 자르기를 변경할 수 있습니다. 예를 들어 **원은** 원에 잘린 이미지를 생성 합니다. 그렇지 않으면 이미지는 사각형입니다. 이미지 크기는 100% 크기 조정 시 48x48 픽셀입니다.
+**Hintcrop** 속성을 사용 하 여 이미지의 자르기를 변경할 수 있습니다. 예를 들어 **원은** 원에 잘린 이미지를 생성 합니다. 그렇지 않으면 이미지는 사각형입니다. 이미지 크기는 100% 크기 조정 시 48x48 픽셀입니다. 일반적으로 각 배율 인수에 대해 100%, 125%, 150%, 200% 및 400%의 각 아이콘 자산에 버전을 제공 하는 것이 좋습니다. 
 
 #### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
 
@@ -480,7 +480,7 @@ new ToastContentBuilder()
 
 ### <a name="buttons-with-pending-update-activation"></a>업데이트 활성화가 보류 중인 단추
 
-**새 기능 작성자 업데이트** : 백그라운드 활성화 단추를 사용 하는 경우 **PendingUpdate** 의 after 활성화 동작을 사용 하 여 알림 메시지에 다중 단계 상호 작용을 만들 수 있습니다. 사용자가 단추를 클릭 하면 백그라운드 작업이 활성화 되 고 알림이 "보류 중인 업데이트" 상태로 전환 됩니다. 그러면 백그라운드 작업에서 알림이 새 알림으로 바뀔 때까지 화면에 남아 있습니다.
+**새 기능 작성자 업데이트**: 백그라운드 활성화 단추를 사용 하는 경우 **PendingUpdate** 의 after 활성화 동작을 사용 하 여 알림 메시지에 다중 단계 상호 작용을 만들 수 있습니다. 사용자가 단추를 클릭 하면 백그라운드 작업이 활성화 되 고 알림이 "보류 중인 업데이트" 상태로 전환 됩니다. 그러면 백그라운드 작업에서 알림이 새 알림으로 바뀔 때까지 화면에 남아 있습니다.
 
 이를 구현 하는 방법을 알아보려면 [알림 보류 중 업데이트](toast-pending-update.md)를 참조 하세요.
 
@@ -816,9 +816,9 @@ new ToastContentBuilder()
 > [!IMPORTANT]
 > 미리 알림 또는 경보를 사용 하는 경우 알림 메시지에 하나 이상의 단추를 제공 해야 합니다. 그렇지 않으면 알림이 일반적인 알림 메시지로 처리 됩니다.
 
-* **미리 알림** : 사용자가 작업을 해제 하거나 작업을 수행할 때까지 알림이 화면에 계속 유지 됩니다. Windows Mobile에서 알림 메시지에는 미리 확장 됨도 표시 됩니다. 미리 알림 소리가 재생 됩니다.
-* **경보** : 미리 알림 동작 외에도 알람은 기본 알람 소리를 사용 하 여 오디오를 추가로 반복 합니다.
-* **IncomingCall** : 들어오는 통화 알림은 Windows Mobile 장치에 전체 화면으로 표시 됩니다. 그렇지 않은 경우에는 벨 소리를 사용 하 고 단추의 단추가 다르게 지정 되는 경우를 제외 하 고는 경보와 동일한 동작이 적용 됩니다.
+* **미리 알림**: 사용자가 작업을 해제 하거나 작업을 수행할 때까지 알림이 화면에 계속 유지 됩니다. Windows Mobile에서 알림 메시지에는 미리 확장 됨도 표시 됩니다. 미리 알림 소리가 재생 됩니다.
+* **경보**: 미리 알림 동작 외에도 알람은 기본 알람 소리를 사용 하 여 오디오를 추가로 반복 합니다.
+* **IncomingCall**: 들어오는 통화 알림은 Windows Mobile 장치에 전체 화면으로 표시 됩니다. 그렇지 않은 경우에는 벨 소리를 사용 하 고 단추의 단추가 다르게 지정 되는 경우를 제외 하 고는 경보와 동일한 동작이 적용 됩니다.
 
 #### <a name="builder-syntax"></a>[작성기 구문](#tab/builder-syntax)
 
