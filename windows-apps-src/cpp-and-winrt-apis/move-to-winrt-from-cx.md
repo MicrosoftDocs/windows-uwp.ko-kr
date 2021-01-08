@@ -5,12 +5,12 @@ ms.date: 01/17/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C++/CX
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e25f9cdb091f96b648ddc00d5f5cc96bf18d1d1
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: 035003be1c9b8ef84d0563af6be9f5b3a01978c7
+ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750599"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97860137"
 ---
 # <a name="move-to-cwinrt-from-ccx"></a>C++/CX에서 C++/WinRT로 이동
 
@@ -44,7 +44,7 @@ Windows 런타임 구성 요소 프로젝트를 제외하고, 이전 섹션에�
 두 경우 모두 C++/WinRT 코드와 아직 이식하지 않은 C++/CX 코드 간에 상호 운용(양 방향)됩니다.
 
 > [!NOTE]
-> [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 및 Windows SDK는 둘 다 루트 네임스페이스인 **Windows**에서 형식을 선언합니다. C++/WinRT에 프로젝션된 Windows 형식은 Windows 형식과 동일한 정규화된 이름을 사용하지만 C++ **winrt** 네임스페이스에 배치됩니다. 이렇게 네임스페이스를 구별하여 원하는 대로 C++/CX에서 C++/WinRT로 이식할 수 있습니다.
+> [C++/CX](/cpp/cppcx/visual-c-language-reference-c-cx) 및 Windows SDK는 둘 다 루트 네임스페이스인 **Windows** 에서 형식을 선언합니다. C++/WinRT에 프로젝션된 Windows 형식은 Windows 형식과 동일한 정규화된 이름을 사용하지만 C++ **winrt** 네임스페이스에 배치됩니다. 이렇게 네임스페이스를 구별하여 원하는 대로 C++/CX에서 C++/WinRT로 이식할 수 있습니다.
 
 #### <a name="porting-a-xaml-project-gradually"></a>점진적으로 XAML 프로젝트 이식
 
@@ -114,7 +114,7 @@ String^ NameOfFirstVideoTrack(MediaPlaybackItem^ item)
 }
 ```
 
-`using namespace Windows::Media::Playback` 지시문을 사용하면 네임스페이스 접두사 없이 `MediaPlaybackItem`을 작성할 수 있습니다. `item->VideoTracks->GetAt(0)`에서 **Windows.Media.Core.VideoTrack**을 반환하므로 `Windows.Media.Core` 네임스페이스도 수정했습니다. 그러나 **VideoTrack**이라는 이름을 아무 곳에도 입력할 필요가 없으므로 `using Windows.Media.Core` 지시문이 필요하지 않았습니다.
+`using namespace Windows::Media::Playback` 지시문을 사용하면 네임스페이스 접두사 없이 `MediaPlaybackItem`을 작성할 수 있습니다. `item->VideoTracks->GetAt(0)`에서 **Windows.Media.Core.VideoTrack** 을 반환하므로 `Windows.Media.Core` 네임스페이스도 수정했습니다. 그러나 **VideoTrack** 이라는 이름을 아무 곳에도 입력할 필요가 없으므로 `using Windows.Media.Core` 지시문이 필요하지 않았습니다.
 
 그러나 C++/WinRT에서는 이름을 지정하지 않더라도 사용하는 각 네임스페이스에 해당하는 헤더 파일을 포함시켜야 합니다.
 
@@ -190,7 +190,7 @@ if (userList != nullptr)
     ...
 ```
 
-C++/CX hat 참조의 기본 생성자는 이 형식을 null로 초기화합니다. 다음은 올바른 형식이지만 초기화되지 않는 변수/필드를 만드는 C++/CX 코드 예제입니다. 즉, 초기에 **TextBlock**을 참조하지 않으며, 나중에 참조를 할당하려고 합니다.
+C++/CX hat 참조의 기본 생성자는 이 형식을 null로 초기화합니다. 다음은 올바른 형식이지만 초기화되지 않는 변수/필드를 만드는 C++/CX 코드 예제입니다. 즉, 초기에 **TextBlock** 을 참조하지 않으며, 나중에 참조를 할당하려고 합니다.
 
 ```cppcx
 TextBlock^ textBlock;
@@ -207,7 +207,7 @@ C++/WinRT의 해당 형식에 대해서는 [지연된 초기화](consume-apis.md
 
 C++/CX 언어 확장은 속성의 개념을 포함합니다. C++/CX 원본 코드를 작성할 때 필드처럼 속성에 액세스할 수 있습니다. 표준 C++는 속성의 개념을 가지지 않으므로 C++/WinRT에서 get 및 set 함수를 호출합니다.
 
-다음 예제에서 **XboxUserId**, **UserState**, **PresenceDeviceRecords** 및 **Size**는 모두 속성입니다.
+다음 예제에서 **XboxUserId**, **UserState**, **PresenceDeviceRecords** 및 **Size** 는 모두 속성입니다.
 
 ### <a name="retrieving-a-value-from-a-property"></a>속성에서 값 검색
 
@@ -233,7 +233,7 @@ void Sample::LogPresenceRecord(PresenceRecord const& record)
 }
 ```
 
-**PresenceDeviceRecords** 함수는 자체에 **Size** 함수를 가지는 Windows 런타임 개체를 반환합니다. 반환된 개체가 C++/WinRT 프로젝션된 형식이기도 하므로 점 연산자를 사용하여 역참조하여 **Size**를 호출합니다.
+**PresenceDeviceRecords** 함수는 자체에 **Size** 함수를 가지는 Windows 런타임 개체를 반환합니다. 반환된 개체가 C++/WinRT 프로젝션된 형식이기도 하므로 점 연산자를 사용하여 역참조하여 **Size** 를 호출합니다.
 
 ### <a name="setting-a-property-to-a-new-value"></a>속성을 새 값으로 설정
 
@@ -263,7 +263,7 @@ private:
 };
 ```
 
-C++/WinRT 개체는 값입니다. 따라서 스택에 또는 개체의 필드로 이를 할당할 수 있습니다. C++/WinRT 개체를 할당하기 위해 ‘절대’ `ref new`(또는 `new`)를 사용해서는 안 됩니다. 백그라운드에서 **RoActivateInstance**는 여전히 호출되고 있습니다.
+C++/WinRT 개체는 값입니다. 따라서 스택에 또는 개체의 필드로 이를 할당할 수 있습니다. C++/WinRT 개체를 할당하기 위해 ‘절대’ `ref new`(또는 `new`)를 사용해서는 안 됩니다. 백그라운드에서 **RoActivateInstance** 는 여전히 호출되고 있습니다.
 
 ```cppwinrt
 using namespace winrt::Windows::Storage::Streams;
@@ -328,9 +328,9 @@ C++ 컬렉션 형식은 기본 생성자를 사용하므로 의도하지 않은 
 
 ### <a name="more-about-collections-of-empty-references"></a>빈 참조 컬렉션에 대한 자세한 정보
 
-C++/CX에서 **Platform::Array\^** ([**Platform::Array\^** 이식](#port-platformarray) 참조)를 사용할 때마다 이를 배열로 남겨 두는 대신 C++/WinRT에서 **std::vector**(실제로 모든 연속 컨테이너)로 이식하도록 선택할 수 있습니다. **std::vector**를 선택하면 이점이 있습니다.
+C++/CX에서 **Platform::Array\^** ([**Platform::Array\^** 이식](#port-platformarray) 참조)를 사용할 때마다 이를 배열로 남겨 두는 대신 C++/WinRT에서 **std::vector**(실제로 모든 연속 컨테이너)로 이식하도록 선택할 수 있습니다. **std::vector** 를 선택하면 이점이 있습니다.
 
-예를 들어 빈 참조의 고정 크기 벡터를 만드는 축약형(위의 표 참조)이 있지만, 빈 참조의 *배열*을 만드는 축약형은 없습니다. 배열의 각 요소에 대해 `nullptr`을 반복해야 합니다. 너무 작으면 여분의 항목이 기본적으로 생성됩니다.
+예를 들어 빈 참조의 고정 크기 벡터를 만드는 축약형(위의 표 참조)이 있지만, 빈 참조의 *배열* 을 만드는 축약형은 없습니다. 배열의 각 요소에 대해 `nullptr`을 반복해야 합니다. 너무 작으면 여분의 항목이 기본적으로 생성됩니다.
 
 벡터의 경우 초기화할 때 빈 참조로 채우거나(위의 표에서와 같이), 초기화 후에 이와 같은 코드를 사용하여 빈 참조로 채울 수 있습니다.
 
@@ -341,16 +341,16 @@ boxes.resize(10, nullptr); // 10 empty references.
 
 ### <a name="more-about-the-stdmap-example"></a>**std::map** 예제에 대한 자세한 정보
 
-**std::map**에 대한 `[]` 첨자 연산자는 다음과 같이 작동합니다.
+**std::map** 에 대한 `[]` 첨자 연산자는 다음과 같이 작동합니다.
 
 - 맵에 키가 있는 경우 기존 값(덮어쓸 수 있음)에 대한 참조를 반환합니다.
-- 맵에 키가 없는 경우 키(이동 가능한 경우 이동됨)와 *기본 생성 값*으로 구성된 새 항목을 맵에 만들고 해당 값에 대한 참조를 반환합니다(이 경우 덮어쓸 수 있음).
+- 맵에 키가 없는 경우 키(이동 가능한 경우 이동됨)와 *기본 생성 값* 으로 구성된 새 항목을 맵에 만들고 해당 값에 대한 참조를 반환합니다(이 경우 덮어쓸 수 있음).
 
 즉 `[]` 연산자는 항상 항목을 맵에 만듭니다. 이는 C#, Java 및 JavaScript와 다릅니다.
 
 ## <a name="converting-from-a-base-runtime-class-to-a-derived-one"></a>기본 런타임 클래스에서 파생된 항목 클래스로 변환
 
-파생된 형식의 개체를 참조하는 기본에 대한 참조를 포함하는 것이 일반적입니다. C++/CX에서는 `dynamic_cast`를 사용하여 기본에 대한 참조를 파생에 대한 참조로 ‘캐스팅’합니다. `dynamic_cast`는 실제로 [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))에 대한 숨겨진 호출입니다. 다음은 종속성 속성 변경 이벤트를 처리하며 **DependencyObject**에서 다시 종속성 속성을 소유하는 실제 형식으로 캐스팅하려는 일반적인 예제입니다.
+파생된 형식의 개체를 참조하는 기본에 대한 참조를 포함하는 것이 일반적입니다. C++/CX에서는 `dynamic_cast`를 사용하여 기본에 대한 참조를 파생에 대한 참조로 ‘캐스팅’합니다. `dynamic_cast`는 실제로 [**QueryInterface**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))에 대한 숨겨진 호출입니다. 다음은 종속성 속성 변경 이벤트를 처리하며 **DependencyObject** 에서 다시 종속성 속성을 소유하는 실제 형식으로 캐스팅하려는 일반적인 예제입니다.
 
 ```cppcx
 void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject^ d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs^ e)
@@ -364,7 +364,7 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject^ d, Wind
 }
 ```
 
-해당하는 C++/WinRT 코드는 `dynamic_cast`를 [**IUnknown::try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function) 함수 호출(**QueryInterface**를 캡슐화함)로 바꿉니다. 필수 인터페이스(요청하는 형식의 기본 인터페이스)에 대한 쿼리가 반환되지 않는 경우 대신에 예외를 throw하는 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)를 호출하는 옵션도 있습니다. 다음은 C++/WinRT 코드 예제입니다.
+해당하는 C++/WinRT 코드는 `dynamic_cast`를 [**IUnknown::try_as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknowntry_as-function) 함수 호출(**QueryInterface** 를 캡슐화함)로 바꿉니다. 필수 인터페이스(요청하는 형식의 기본 인터페이스)에 대한 쿼리가 반환되지 않는 경우 대신에 예외를 throw하는 [**IUnknown::as**](/uwp/cpp-ref-for-winrt/windows-foundation-iunknown#iunknownas-function)를 호출하는 옵션도 있습니다. 다음은 C++/WinRT 코드 예제입니다.
 
 ```cppwinrt
 void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d, Windows::UI::Xaml::DependencyPropertyChangedEventArgs const& e)
@@ -388,7 +388,7 @@ void BgLabelControl::OnLabelChanged(Windows::UI::Xaml::DependencyObject const& d
 
 ## <a name="derived-classes"></a>파생 클래스
 
-런타임 클래스에서 파생하려면 기본 클래스를 *구성*할 수 있어야 합니다. C++/CX에서는 클래스를 구성할 수 있게 하는 특별한 단계를 수행할 필요가 없지만, C++/WinRT는 이를 수행합니다. [unsealed 키워드](/uwp/midl-3/intro#base-classes)를 사용하여 클래스를 기본 클래스로 사용할 수 있도록 지정합니다.
+런타임 클래스에서 파생하려면 기본 클래스를 *구성* 할 수 있어야 합니다. C++/CX에서는 클래스를 구성할 수 있게 하는 특별한 단계를 수행할 필요가 없지만, C++/WinRT는 이를 수행합니다. [unsealed 키워드](/uwp/midl-3/intro#base-classes)를 사용하여 클래스를 기본 클래스로 사용할 수 있도록 지정합니다.
 
 ```idl
 unsealed runtimeclass BasePage : Windows.UI.Xaml.Controls.Page
@@ -490,7 +490,7 @@ C++/CX 및 C#에서는 값 형식에 대한 null 포인터를 unboxing하려고 
 
 문자열은 어떤 방식에서는 값 형식이고, 다른 방식에서는 참조 형식입니다. C++/CX 및 C++/WinRT는 문자열을 다르게 처리합니다.
 
-[**HSTRING**](/windows/win32/winrt/hstring) ABI 형식은 참조 횟수가 계산되는 문자열에 대한 포인터입니다. 그러나 [**IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable)에서 파생되지 않으므로 기술적으로는 *개체*가 아닙니다. 또한 null **HSTRING**은 빈 문자열을 나타냅니다. **IInspectable**에서 파생되지 않은 것에 대한 boxing은 [**IReference\<T\>** ](/uwp/api/windows.foundation.ireference_t_) 안에 래핑하여 수행되며, Windows 런타임에서 표준 구현을 [**PropertyValue**](/uwp/api/windows.foundation.propertyvalue) 개체 형식으로 제공합니다(사용자 지정 형식은 [**PropertyType::OtherType**](/uwp/api/windows.foundation.propertytype)으로 보고됨).
+[**HSTRING**](/windows/win32/winrt/hstring) ABI 형식은 참조 횟수가 계산되는 문자열에 대한 포인터입니다. 그러나 [**IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable)에서 파생되지 않으므로 기술적으로는 *개체* 가 아닙니다. 또한 null **HSTRING** 은 빈 문자열을 나타냅니다. **IInspectable** 에서 파생되지 않은 것에 대한 boxing은 [**IReference\<T\>**](/uwp/api/windows.foundation.ireference_t_) 안에 래핑하여 수행되며, Windows 런타임에서 표준 구현을 [**PropertyValue**](/uwp/api/windows.foundation.propertyvalue) 개체 형식으로 제공합니다(사용자 지정 형식은 [**PropertyType::OtherType**](/uwp/api/windows.foundation.propertytype)으로 보고됨).
 
 C++/CX는 Windows 런타임 문자열을 참조 형식으로 나타내는 반면, C++/WinRT는 문자열을 값 형식으로 프로젝션합니다. 즉, boxing된 null 문자열은 해당 문자열을 가져온 방식에 따라 다르게 표현될 수 있습니다.
 
@@ -500,7 +500,7 @@ C++/CX는 Windows 런타임 문자열을 참조 형식으로 나타내는 반면
 |-|-|-|
 | 선언 | `Object^ o;`<br>`String^ s;` | `IInspectable o;`<br>`hstring s;` |
 | 문자열 형식 범주 | 참조 형식 | 값 유형 |
-| null **HSTRING**에서 프로젝션하는 형식 | `(String^)nullptr` | `hstring{}` |
+| null **HSTRING** 에서 프로젝션하는 형식 | `(String^)nullptr` | `hstring{}` |
 | null 및 `""`가 동일한가요? | 예 | 예 |
 | null의 유효성 | `s = nullptr;`<br>`s->Length == 0`(유효) | `s = hstring{};`<br>`s.size() == 0`(유효) |
 | 개체에 null 문자열을 할당하는 경우 | `o = (String^)nullptr;`<br>`o == nullptr` | `o = box_value(hstring{});`<br>`o != nullptr` |
@@ -541,7 +541,7 @@ C++/CX는 **Platform** 네임스페이스에서 몇 가지 데이터 형식을 �
 | **Platform::Object\^** | **winrt::Windows::Foundation::IInspectable** |
 | **Platform::String\^** | [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) |
 
-### <a name="port-platformagile-to-winrtagile_ref"></a>**Platform::Agile\^** 을 **winrt::agile_ref**로 이식
+### <a name="port-platformagile-to-winrtagile_ref"></a>**Platform::Agile\^** 을 **winrt::agile_ref** 로 이식
 
 C++/CX의 **Platform::Agile\^** 형식은 스레드에서 액세스할 수 있는 Windows 런타임 클래스를 나타냅니다. C++/WinRT의 해당 항목은 [**winrt::agile_ref**](/uwp/cpp-ref-for-winrt/agile-ref)입니다.
 
@@ -559,15 +559,15 @@ winrt::agile_ref<Windows::UI::Core::CoreWindow> m_window;
 
 ### <a name="port-platformarray"></a>**Platform::Array\^** 이식
 
-C++/CX에서 배열을 사용해야 하는 경우 C++/WinRT를 사용하면 연속 컨테이너를 사용할 수 있습니다. **std:vector**를 선택하는 것이 적합한 이유에 대해서는 [기본 생성자가 컬렉션에 미치는 영향](#how-the-default-constructor-affects-collections)을 참조하세요.
+C++/CX에서 배열을 사용해야 하는 경우 C++/WinRT를 사용하면 연속 컨테이너를 사용할 수 있습니다. **std:vector** 를 선택하는 것이 적합한 이유에 대해서는 [기본 생성자가 컬렉션에 미치는 영향](#how-the-default-constructor-affects-collections)을 참조하세요.
 
-따라서 C++/CX에서 **Platform::Array\^** 를 사용할 때마다 이식 옵션에는 이니셜라이저 목록, **std::array** 또는 **std::vector**를 사용하는 것이 포함됩니다. 자세한 내용과 코드 예제는 [표준 이니셜라이저 목록](./std-cpp-data-types.md#standard-initializer-lists) 및 [표준 배열 및 벡터](./std-cpp-data-types.md#standard-arrays-and-vectors)를 참조하세요.
+따라서 C++/CX에서 **Platform::Array\^** 를 사용할 때마다 이식 옵션에는 이니셜라이저 목록, **std::array** 또는 **std::vector** 를 사용하는 것이 포함됩니다. 자세한 내용과 코드 예제는 [표준 이니셜라이저 목록](./std-cpp-data-types.md#standard-initializer-lists) 및 [표준 배열 및 벡터](./std-cpp-data-types.md#standard-arrays-and-vectors)를 참조하세요.
 
-### <a name="port-platformexception-to-winrthresult_error"></a>**Platform::Exception\^** 을 **winrt::hresult_error**로 이식
+### <a name="port-platformexception-to-winrthresult_error"></a>**Platform::Exception\^** 을 **winrt::hresult_error** 로 이식
 
 Windows 런타임 API가 S\_OK HRESULT가 아닌 값을 반환하면 **Platform::Exception\^** 형식이 C++/CX에서 생성됩니다. C++/WinRT의 해당 항목은 [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error)입니다.
 
-C++/WinRT로 이식하려면 **Platform::Exception\^** 을 사용하는 모든 코드를 **winrt::hresult_error**를 사용하도록 변경합니다.
+C++/WinRT로 이식하려면 **Platform::Exception\^** 을 사용하는 모든 코드를 **winrt::hresult_error** 를 사용하도록 변경합니다.
 
 C++/CX에서.
 
@@ -613,31 +613,31 @@ throw ref new Platform::InvalidArgumentException(L"A valid User is required");
 throw winrt::hresult_invalid_argument{ L"A valid User is required" };
 ```
 
-### <a name="port-platformobject-to-winrtwindowsfoundationiinspectable"></a>**Platform::Object\^** 를 **winrt::Windows::Foundation::IInspectable**로 이식
+### <a name="port-platformobject-to-winrtwindowsfoundationiinspectable"></a>**Platform::Object\^** 를 **winrt::Windows::Foundation::IInspectable** 로 이식
 
-모든 C++/WinRT 형식과 마찬가지로, **winrt::Windows::Foundation::IInspectable**은 값 형식입니다. 해당 형식의 변수를 null로 초기화하는 방법은 다음과 같습니다.
+모든 C++/WinRT 형식과 마찬가지로, **winrt::Windows::Foundation::IInspectable** 은 값 형식입니다. 해당 형식의 변수를 null로 초기화하는 방법은 다음과 같습니다.
 
 ```cppwinrt
 winrt::Windows::Foundation::IInspectable var{ nullptr };
 ```
 
-### <a name="port-platformstring-to-winrthstring"></a>**Platform::String\^** 을 **winrt::hstring**으로 이식
+### <a name="port-platformstring-to-winrthstring"></a>**Platform::String\^** 을 **winrt::hstring** 으로 이식
 
 **Platform::String\^** 은 Windows 런타임 HSTRING ABI 형식에 해당합니다. C++/WinRT의 해당 항목은 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring)입니다. 그러나 C++/WinRT에서는 **std::wstring** 같은 C++ 표준 라이브러리 와이드 문자열 형식 및/또는 와이드 문자열 리터럴을 사용해 Windows 런타임 API를 호출할 수 있습니다. 자세한 내용과 코드 예제는 [C++/WinRT의 문자열 처리](strings.md)를 참조하세요.
 
-C++/CX에서 [**Platform::String::Data**](/cpp/cppcx/platform-string-class?view=vs-2019#data) 속성에 액세스하여 문자열을 C 스타일 **const wchar_t\*** 배열로 검색할 수 있습니다(예를 들면 이를 **std::wcout**에 전달).
+C++/CX를 사용하면 [**Platform::String::Data**](/cpp/cppcx/platform-string-class#data) 속성에 액세스하여 문자열을 C 스타일 **const wchar_t\* *_ 배열로 검색할 수 있습니다(예: _* std::wcout** 에 전달).
 
 ```cppcx
 auto var{ titleRecord->TitleName->Data() };
 ```
 
-C++/WinRT에서 같은 작업을 수행하려면 [**hstring::c_str**](/uwp/api/windows.foundation.uri.-ctor#Windows_Foundation_Uri__ctor_System_String_) 함수를 이용하여 **std::wstring**에서와 마찬가지로 null 종료 C 스타일 문자열 버전을 가져옵니다.
+C++/WinRT에서 같은 작업을 수행하려면 [**hstring::c_str**](/uwp/api/windows.foundation.uri.-ctor#Windows_Foundation_Uri__ctor_System_String_) 함수를 이용하여 **std::wstring** 에서와 마찬가지로 null 종료 C 스타일 문자열 버전을 가져옵니다.
 
 ```cppwinrt
 auto var{ titleRecord.TitleName().c_str() };
 ```
 
-문자열을 가져오거나 반환하는 API 구현에서는 일반적으로 **Platform::String\^** 을 사용하는 모든 C++/CX 코드를 변경하여 **winrt::hstring**을 대신 사용합니다.
+문자열을 가져오거나 반환하는 API 구현에서는 일반적으로 **Platform::String\^** 을 사용하는 모든 C++/CX 코드를 변경하여 **winrt::hstring** 을 대신 사용합니다.
 
 문자열을 가져오는 C++/CX API의 예제는 다음과 같습니다.
 
@@ -681,7 +681,7 @@ auto s{ std::to_wstring(i) }; // s is a std::wstring with value L"2".
 | C++/CX | `String^ result = "hello, " + intValue.ToString();` | `String^ result = "status: " + status.ToString();` |
 | C++/WinRT | `hstring result = L"hello, " + to_hstring(intValue);` | `// must define overload (see below)`<br>`hstring result = L"status: " + to_hstring(status);` |
 
-열거형을 문자열화하는 경우 **winrt::to_hstring**의 구현을 제공해야 합니다.
+열거형을 문자열화하는 경우 **winrt::to_hstring** 의 구현을 제공해야 합니다.
 
 ```cppwinrt
 namespace winrt
@@ -710,11 +710,11 @@ Most recent status is <Run Text="{x:Bind LatestOperation.Status}"/>.
 </TextBlock>
 ```
 
-이러한 바인딩은 bound 속성의 **winrt::to_hstring**을 수행합니다. 두 번째 예제(**StatusEnum**)의 경우 **winrt::to_hstring**에 대한 사용자 고유의 오버로드를 제공해야 합니다. 그렇지 않으면 컴파일러 오류가 발생합니다.
+이러한 바인딩은 bound 속성의 **winrt::to_hstring** 을 수행합니다. 두 번째 예제(**StatusEnum**)의 경우 **winrt::to_hstring** 에 대한 사용자 고유의 오버로드를 제공해야 합니다. 그렇지 않으면 컴파일러 오류가 발생합니다.
 
 #### <a name="string-building"></a>문자열 작성
 
-C++/CX 및 C++/WinRT는 문자열 작성을 위해 표준 **std::wstringstream**을 따릅니다.
+C++/CX 및 C++/WinRT는 문자열 작성을 위해 표준 **std::wstringstream** 을 따릅니다.
 
 | 작업 | C++/CX | C++/WinRT |
 |-|-|-|
@@ -724,15 +724,15 @@ C++/CX 및 C++/WinRT는 문자열 작성을 위해 표준 **std::wstringstream**
 
 #### <a name="more-examples"></a>추가 예제
 
-아래 예제에서 *ws*는 **std::wstring** 형식의 변수입니다. 또한 C++/CX는 8비트 문자열에서 **Platform::String**을 생성할 수 있지만, C++/WinRT는 이 작업을 수행하지 않습니다.
+아래 예제에서 *ws* 는 **std::wstring** 형식의 변수입니다. 또한 C++/CX는 8비트 문자열에서 **Platform::String** 을 생성할 수 있지만, C++/WinRT는 이 작업을 수행하지 않습니다.
 
 | 작업 | C++/CX | C++/WinRT |
 | - | - | - |
 | 리터럴에서 문자열 생성 | `String^ s = "hello";`<br>`String^ s = L"hello";` | `// winrt::hstring s{ "hello" }; // Doesn't compile`<br>`winrt::hstring s{ L"hello" };` |
-| **std::wstring**에서 변환, null 유지 | `String^ s = ref new String(ws.c_str(),`<br>&nbsp;&nbsp;`(uint32_t)ws.size());` | `winrt::hstring s{ ws };`<br>`s = winrt::hstring(ws);`<br>`// s = ws; // Doesn't compile` |
-| **std::wstring**에서 변환, 첫 번째 null에서 중지 | `String^ s = ref new String(ws.c_str());` | `winrt::hstring s{ ws.c_str() };`<br>`s = winrt::hstring(ws.c_str());`<br>`// s = ws.c_str(); // Doesn't compile` |
-| **std::wstring**으로 변환, null 유지 | `std::wstring ws{ s->Data(), s->Length };`<br>`ws = std::wstring(s>Data(), s->Length);` | `std::wstring ws{ s };`<br>`ws = s;` |
-| **std::wstring**으로 변환, 첫 번째 null에서 중지 | `std::wstring ws{ s->Data() };`<br>`ws = s->Data();` | `std::wstring ws{ s.c_str() };`<br>`ws = s.c_str();` |
+| **std::wstring** 에서 변환, null 유지 | `String^ s = ref new String(ws.c_str(),`<br>&nbsp;&nbsp;`(uint32_t)ws.size());` | `winrt::hstring s{ ws };`<br>`s = winrt::hstring(ws);`<br>`// s = ws; // Doesn't compile` |
+| **std::wstring** 에서 변환, 첫 번째 null에서 중지 | `String^ s = ref new String(ws.c_str());` | `winrt::hstring s{ ws.c_str() };`<br>`s = winrt::hstring(ws.c_str());`<br>`// s = ws.c_str(); // Doesn't compile` |
+| **std::wstring** 으로 변환, null 유지 | `std::wstring ws{ s->Data(), s->Length };`<br>`ws = std::wstring(s>Data(), s->Length);` | `std::wstring ws{ s };`<br>`ws = s;` |
+| **std::wstring** 으로 변환, 첫 번째 null에서 중지 | `std::wstring ws{ s->Data() };`<br>`ws = s->Data();` | `std::wstring ws{ s.c_str() };`<br>`ws = s.c_str();` |
 | 메서드에 리터럴 전달 | `Method("hello");`<br>`Method(L"hello");` | `// Method("hello"); // Doesn't compile`<br>`Method(L"hello");` |
 | 메서드에 **std::wstring** 전달 | `Method(ref new String(ws.c_str(),`<br>&nbsp;&nbsp;`(uint32_t)ws.size()); // Stops on first null` | `Method(ws);`<br>`// param::winrt::hstring accepts std::wstring_view` |
 

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, python 학습, 초보자를 위한 windows 기반 python, microsoft store에서 python 설치, vs code를 사용하는 python, windows의 pygame
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 076c62658431ba75bdbd7f385ced86f27fb2f7d0
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: f225932685e71cb2374249ad96efeac11184d000
+ms.sourcegitcommit: 3fafc6b6d548a03e6191fa95ebf9384c42396a30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174147"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97880546"
 ---
 # <a name="get-started-using-python-on-windows-for-beginners"></a>초보자를 위한 Windows에서 Python 사용 시작
 
@@ -23,7 +23,7 @@ ms.locfileid: "89174147"
 
 Python을 처음 접하는 초보자는 [Microsoft Store에서 Python 설치](https://www.microsoft.com/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab)를 권장합니다. Microsoft Store를 통해 설치하면 기본 Python3 인터프리터를 사용하지만, 자동 업데이트를 제공할 뿐 아니라 현재 사용자의 PATH 설정까지 처리합니다(관리자가 액세스할 필요 없음). 교육 환경에 속해 있거나 머신에서 사용 권한 또는 관리 액세스를 제한하는 조직에 소속된 경우에 특히 유용합니다.
 
-**웹 개발**에 Windows 기반 Python을 사용하는 경우 개발 환경에 다른 설정을 사용하는 것이 좋습니다. Windows에 직접 설치하는 대신, Linux용 Windows 하위 시스템을 통해 Python을 설치하고 사용하는 것이 좋습니다. 도움말은 [웹 개발을 위해 Windows에서 Python 사용 시작](./web-frameworks.md) 가이드를 참조하세요. 운영 체제에서 일반적인 작업을 자동화하는 데 관심이 있는 경우 [스크립팅 및 자동화를 위해 Windows에서 Python 사용 시작](./scripting.md) 가이드를 참조하세요. 고급 시나리오의 경우(예: Python의 설치 파일을 액세스/수정하거나, 이진 파일을 복사하거나, Python DLL을 직접 사용해야 하는 시나리오) [python.org](https://www.python.org/downloads/)에서 특정 Python 릴리스를 직접 다운로드하거나 Anaconda, Jython, PyPy, WinPython, IronPython 등과 같은 [대체 구현](https://www.python.org/download/alternatives)을 설치하는 것이 좋습니다. 대체 구현을 선택하는 특별한 이유가 있는 고급 Python 프로그래머인 경우에만 이를 추천합니다.
+**웹 개발** 에 Windows 기반 Python을 사용하는 경우 개발 환경에 다른 설정을 사용하는 것이 좋습니다. Windows에 직접 설치하는 대신, Linux용 Windows 하위 시스템을 통해 Python을 설치하고 사용하는 것이 좋습니다. 도움말은 [웹 개발을 위해 Windows에서 Python 사용 시작](./web-frameworks.md) 가이드를 참조하세요. 운영 체제에서 일반적인 작업을 자동화하는 데 관심이 있는 경우 [스크립팅 및 자동화를 위해 Windows에서 Python 사용 시작](./scripting.md) 가이드를 참조하세요. 고급 시나리오의 경우(예: Python의 설치 파일을 액세스/수정하거나, 이진 파일을 복사하거나, Python DLL을 직접 사용해야 하는 시나리오) [python.org](https://www.python.org/downloads/)에서 특정 Python 릴리스를 직접 다운로드하거나 Anaconda, Jython, PyPy, WinPython, IronPython 등과 같은 [대체 구현](https://www.python.org/download/alternatives)을 설치하는 것이 좋습니다. 대체 구현을 선택하는 특별한 이유가 있는 고급 Python 프로그래머인 경우에만 이를 추천합니다.
 
 ## <a name="install-python"></a>Python 설치
 
@@ -31,11 +31,11 @@ Microsoft Store를 사용하여 Python을 설치하는 방법은 다음과 같�
 
 1. **시작** 메뉴(왼쪽 아래 Windows 아이콘)로 이동하여 "Microsoft Store"를 입력하고, 링크를 선택하여 스토어를 엽니다.
 
-2. 스토어가 열리면 오른쪽 위 메뉴에서 **검색**을 선택하고 "Python"을 입력합니다. 앱 아래의 결과에서 "Python 3.7"을 엽니다. **가져오기**를 선택합니다.
+2. 스토어가 열리면 오른쪽 위 메뉴에서 **검색** 을 선택하고 "Python"을 입력합니다. [앱] 아래의 결과에서 "Python 3.9"를 엽니다. **가져오기** 를 선택합니다.
 
 3. Python에서 다운로드 및 설치 프로세스를 완료하면 **시작** 메뉴(왼쪽 아래 Windows 아이콘)를 사용하여 Windows PowerShell을 엽니다. PowerShell이 열리면 `Python --version`을 입력하여 머신에 Python3가 설치되었는지 확인합니다.
 
-4. Python의 Microsoft Store 설치에는 표준 패키지 관리자인 **pip**가 포함되어 있습니다. pip를 사용하면 Python 표준 라이브러리에 포함되지 않은 추가 패키지를 설치하고 관리할 수 있습니다. 패키지의 설치 및 관리에 사용할 수 있는 pip도 있는지 확인하려면 `pip --version`을 입력합니다.
+4. Python의 Microsoft Store 설치에는 표준 패키지 관리자인 **pip** 가 포함되어 있습니다. pip를 사용하면 Python 표준 라이브러리에 포함되지 않은 추가 패키지를 설치하고 관리할 수 있습니다. 패키지의 설치 및 관리에 사용할 수 있는 pip도 있는지 확인하려면 `pip --version`을 입력합니다.
 
 ## <a name="install-visual-studio-code"></a>Visual Studio Code 설치
 
@@ -45,13 +45,13 @@ VS Code에는 Windows 명령 프롬프트, PowerShell 또는 원하는 도구를
 
 1. VS Code를 설치하려면 Windows용 VS Code를 다운로드하여 설치합니다([https://code.visualstudio.com](https://code.visualstudio.com)).
 
-2. VS Code가 설치되면 Python 확장도 설치해야 합니다. Python 확장을 설치하려면 [VS Code Marketplace 링크](https://marketplace.visualstudio.com/items?itemName=ms-python.python)를 선택하거나 VS Code를 열고 확장 메뉴(Ctrl+Shift+X)에서 **Python**을 검색합니다.
+2. VS Code가 설치되면 Python 확장도 설치해야 합니다. Python 확장을 설치하려면 [VS Code Marketplace 링크](https://marketplace.visualstudio.com/items?itemName=ms-python.python)를 선택하거나 VS Code를 열고 확장 메뉴(Ctrl+Shift+X)에서 **Python** 을 검색합니다.
 
-3. Python은 해석형 언어이며, Python 코드를 실행하려면 어떤 인터프리터를 사용할 것인지 VS Code에 알려주어야 합니다. 다른 항목을 선택해야 하는 특별한 이유가 없다면 Python 3.7를 사용하는 것이 좋습니다. Python 확장을 설치했으면 **명령 팔레트**를 열고(Ctrl+Shift+P) **Python: 인터프리터 선택** 명령을 입력하기 시작한 다음, 명령을 선택하여 Python 3 인터프리터를 선택합니다. 사용 가능한 경우 아래쪽 상태 표시줄에서 **Python 환경 선택** 옵션을 사용할 수도 있습니다(선택한 인터프리터가 이미 표시될 수 있음). 이 명령은 가상 환경을 포함하여 VS Code가 자동으로 찾을 수 있는 사용 가능한 인터프리터 목록을 표시합니다. 원하는 인터프리터가 보이지 않으면 [Python 환경 구성](https://code.visualstudio.com/docs/python/environments)을 참조하세요.
+3. Python은 해석형 언어이며, Python 코드를 실행하려면 어떤 인터프리터를 사용할 것인지 VS Code에 알려주어야 합니다. 다른 항목을 선택해야 하는 특별한 이유가 없다면 Python 3.7를 사용하는 것이 좋습니다. Python 확장을 설치했으면 **명령 팔레트** 를 열고(Ctrl+Shift+P) **Python: 인터프리터 선택** 명령을 입력하기 시작한 다음, 명령을 선택하여 Python 3 인터프리터를 선택합니다. 사용 가능한 경우 아래쪽 상태 표시줄에서 **Python 환경 선택** 옵션을 사용할 수도 있습니다(선택한 인터프리터가 이미 표시될 수 있음). 이 명령은 가상 환경을 포함하여 VS Code가 자동으로 찾을 수 있는 사용 가능한 인터프리터 목록을 표시합니다. 원하는 인터프리터가 보이지 않으면 [Python 환경 구성](https://code.visualstudio.com/docs/python/environments)을 참조하세요.
 
     ![VS Code에서 Python 인터프리터 선택](../images/interpreterselection.gif)
 
-4. VS Code에서 터미널을 열려면 **보기** > **터미널**을 선택하거나 바로 가기 키 **Ctrl+`** (백틱 문자 사용)을 사용합니다. 기본 터미널은 PowerShell입니다.
+4. VS Code에서 터미널을 열려면 **보기** > **터미널** 을 선택하거나 바로 가기 키 **Ctrl+`** (백틱 문자 사용)을 사용합니다. 기본 터미널은 PowerShell입니다.
 
 5. VS Code 터미널 내에서 간단하게 `python` 명령을 입력하여 Python을 엽니다.
 
@@ -109,7 +109,7 @@ VS Code 팀에서 Python을 사용하여 Hello World 프로그램을 만들고, 
     code .
     ```
 
-2. VS Code가 열리고 왼쪽 **탐색기** 창에 새 *hello* 폴더를 표시되면 **Ctrl+`** (백틱 문자 사용) 키를 누르거나 **보기** > **터미널**을 선택하여 VS Code의 아래쪽 패널에서 명령줄 창을 엽니다. 폴더에서 VS Code를 시작하면 해당 폴더는 "작업 영역"이 됩니다. VS Code는 해당 작업 영역과 관련된 설정을 .vscode/settings.json으로 저장하며, 이 설정은 전역적으로 저장되는 사용자 설정과는 별개입니다.
+2. VS Code가 열리고 왼쪽 **탐색기** 창에 새 *hello* 폴더를 표시되면 **Ctrl+`** (백틱 문자 사용) 키를 누르거나 **보기** > **터미널** 을 선택하여 VS Code의 아래쪽 패널에서 명령줄 창을 엽니다. 폴더에서 VS Code를 시작하면 해당 폴더는 "작업 영역"이 됩니다. VS Code는 해당 작업 영역과 관련된 설정을 .vscode/settings.json으로 저장하며, 이 설정은 전역적으로 저장되는 사용자 설정과는 별개입니다.
 
 3. VS Code 문서의 [Python Hello World 소스 코드 파일 만들기](https://code.visualstudio.com/docs/python/python-tutorial#_create-a-python-hello-world-source-code-file) 자습서를 계속 진행합니다.
 

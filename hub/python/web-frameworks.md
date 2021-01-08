@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Python, Windows 10, Microsoft, Windows의 Python, WSL을 사용하는 Python 웹, Linux용 Windows 하위 시스템을 사용하는 Python 웹앱, Windows에서 Python 웹 개발, Windows의 Flask 앱, Windows의 Django 앱, Python 웹, Windows에서 Flask 웹 개발, Windows에서 Django 웹 개발, Python을 사용한 Windows 웹 개발, VS Code Python 웹 개발, Remote - WSL 확장, Ubuntu, WSL, venv, pip, Microsoft Python 확장, Windows에서 Python 실행, Windows에서 Python 사용, Windows에서 Python으로 빌드
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 187195133dd614818d3c68473cc53b71a0b32333
-ms.sourcegitcommit: 27552ed7d3d889f50d8e01776a24b8d486a8d97c
+ms.openlocfilehash: 3b5ed80b746d0aa1441bf77e6468101deee320a6
+ms.sourcegitcommit: 3fafc6b6d548a03e6191fa95ebf9384c42396a30
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91958746"
+ms.lasthandoff: 01/05/2021
+ms.locfileid: "97880556"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>웹 개발을 위해 Windows에서 Python 사용 시작
 
@@ -64,26 +64,26 @@ VS Code를 사용하여 [IntelliSense](https://code.visualstudio.com/docs/editor
 
 ## <a name="install-python-pip-and-venv"></a>Python, pip 및 venv 설치
 
-Ubuntu 18.04 LTS는 Python 3.6이 이미 설치된 상태로 제공되지만, 다른 Python 설치에서 제공할 것으로 예상되는 일부 모듈은 제공되지 않습니다. Python용 표준 패키지 관리자인 **pip** 및 간단한 가상 환경을 만들고 관리하는 데 사용되는 표준 모듈인 **venv**도 설치해야 합니다.  
+Ubuntu 18.04 LTS는 Python 3.6이 이미 설치된 상태로 제공되지만, 다른 Python 설치에서 제공할 것으로 예상되는 일부 모듈은 제공되지 않습니다. Python용 표준 패키지 관리자인 **pip** 및 간단한 가상 환경을 만들고 관리하는 데 사용되는 표준 모듈인 **venv** 도 설치해야 합니다.  
 
 1. Ubuntu 터미널을 열고 `python3 --version`을 입력하여 Python3이 이미 설치되어 있는지 확인합니다. 그러면 Python 버전 번호가 반환됩니다. Python 버전을 업데이트해야 하는 경우 먼저 `sudo apt update && sudo apt upgrade`를 입력하여 Ubuntu 버전을 업데이트한 다음, `sudo apt upgrade python3`을 사용하여 Python을 업데이트합니다.
 
-2. `sudo apt install python3-pip`를 입력하여 **pip**를 설치합니다. pip를 사용하면 Python 표준 라이브러리에 포함되지 않은 추가 패키지를 설치하고 관리할 수 있습니다.
+2. `sudo apt install python3-pip`를 입력하여 **pip** 를 설치합니다. pip를 사용하면 Python 표준 라이브러리에 포함되지 않은 추가 패키지를 설치하고 관리할 수 있습니다.
 
-3. `sudo apt install python3-venv`를 입력하여 **venv**를 설치합니다.
+3. `sudo apt install python3-venv`를 입력하여 **venv** 를 설치합니다.
 
 ## <a name="create-a-virtual-environment"></a>가상 환경 만들기
 
 Python 개발 프로젝트에는 가상 환경을 사용하는 것이 좋습니다. 가상 환경을 만들면 프로젝트 도구를 격리하고 버전이 다른 프로젝트의 도구와 충돌하지 않도록 방지할 수 있습니다. 예를 들어 Django 1.2 웹 프레임워크가 필요한 이전 웹 프로젝트를 유지 관리할 수 있지만, Django 2.2를 사용하면 흥미로운 새 프로젝트가 제공됩니다. 가상 환경 외부에서 Django를 전역적으로 업데이트하면 나중에 일부 버전 관리 문제가 발생할 수 있습니다. 가상 환경에서는 실수로 인한 버전 충돌 방지 외에도 관리자 권한 없이 패키지를 설치하고 관리할 수 있습니다.
 
-1. 터미널을 열고, *HelloWorld* 프로젝트 폴더 내에서 `python3 -m venv .venv` 명령을 사용하여 **.venv**라는 가상 환경을 만듭니다.
+1. 터미널을 열고, *HelloWorld* 프로젝트 폴더 내에서 `python3 -m venv .venv` 명령을 사용하여 **.venv** 라는 가상 환경을 만듭니다.
 
 2. 가상 환경을 활성화하려면 `source .venv/bin/activate`를 입력합니다. 정상적으로 작동하면 명령 프롬프트 앞에 **(.venv)** 가 표시됩니다. 이제 코드를 작성하고 패키지를 설치할 수 있는 자체 포함 환경이 준비되었습니다. 가상 환경 작업이 완료되면 `deactivate` 명령을 입력하여 가상 환경을 비활성화합니다.
 
     ![가상 환경 만들기](../images/wsl-venv.png)
 
 > [!TIP]
-> 프로젝트를 만들려는 디렉터리 내에 가상 환경을 만드는 것이 좋습니다. 각 프로젝트에는 별도의 자체 디렉터리가 있어야 하므로 각 디렉터리마다 고유한 가상 환경이 있습니다. 따라서 고유한 이름을 지정할 필요가 없습니다. Python 규칙에 따라 **.venv** 이름을 사용하는 것이 좋습니다. 프로젝트 디렉터리에 설치하면 pipenv와 같은 일부 도구에도 기본적으로 이 이름이 설정됩니다. **.env**는 환경 변수 정의 파일과 충돌하므로 사용하지 않으려고 합니다. 일반적으로 디렉터리가 있음을 지속적으로 알려주는 `ls`가 필요하지 않으므로 점으로 구분되지 않는 이름을 사용하지 않는 것이 좋습니다. 또한 **.venv**를 .gitignore 파일에 추가하는 것이 좋습니다. ([GitHub의 Python용 기본 gitignore 템플릿](https://github.com/github/gitignore/blob/50e42aa1064d004a5c99eaa72a2d8054a0d8de55/Python.gitignore#L99-L106)을 참조하세요.) VS Code의 가상 환경 작업에 대한 자세한 내용은 [VS Code에서 Python 환경 사용](https://code.visualstudio.com/docs/python/environments)을 참조하세요.
+> 프로젝트를 만들려는 디렉터리 내에 가상 환경을 만드는 것이 좋습니다. 각 프로젝트에는 별도의 자체 디렉터리가 있어야 하므로 각 디렉터리마다 고유한 가상 환경이 있습니다. 따라서 고유한 이름을 지정할 필요가 없습니다. Python 규칙에 따라 **.venv** 이름을 사용하는 것이 좋습니다. 프로젝트 디렉터리에 설치하면 pipenv와 같은 일부 도구에도 기본적으로 이 이름이 설정됩니다. **.env** 는 환경 변수 정의 파일과 충돌하므로 사용하지 않으려고 합니다. 일반적으로 디렉터리가 있음을 지속적으로 알려주는 `ls`가 필요하지 않으므로 점으로 구분되지 않는 이름을 사용하지 않는 것이 좋습니다. 또한 **.venv** 를 .gitignore 파일에 추가하는 것이 좋습니다. ([GitHub의 Python용 기본 gitignore 템플릿](https://github.com/github/gitignore/blob/50e42aa1064d004a5c99eaa72a2d8054a0d8de55/Python.gitignore#L99-L106)을 참조하세요.) VS Code의 가상 환경 작업에 대한 자세한 내용은 [VS Code에서 Python 환경 사용](https://code.visualstudio.com/docs/python/environments)을 참조하세요.
 
 ## <a name="open-a-wsl---remote-window"></a>Remote - WSL 창 열기
 
@@ -91,13 +91,13 @@ VS Code는 이전에 설치된 Remote - WSL 확장을 사용하여 Linux 하위 
 
 1. `code .`를 입력하여 Ubuntu 터미널에서 VS Code의 프로젝트 폴더를 엽니다("."는 현재 폴더를 열도록 VS Code에 지시함).
 
-2. Windows Defender에서 [보안 경고]가 팝업됩니다. 그러면 "액세스 허용"을 선택합니다. VS Code가 열리면 왼쪽 아래 모서리에 [원격 연결 호스트] 표시기가 표시되어 **WSL: Ubuntu-18.04**에서 편집하고 있음을 알 수 있습니다.
+2. Windows Defender에서 [보안 경고]가 팝업됩니다. 그러면 "액세스 허용"을 선택합니다. VS Code가 열리면 왼쪽 아래 모서리에 [원격 연결 호스트] 표시기가 표시되어 **WSL: Ubuntu-18.04** 에서 편집하고 있음을 알 수 있습니다.
 
     ![VS Code 원격 연결 호스트 표시기](../images/wsl-remote-extension.png)
 
 3. Ubuntu 터미널을 닫습니다. 앞으로 이동하면 VS Code에 통합된 WSL 터미널을 사용할 수 있습니다.
 
-4. **Ctrl+`** (백틱 문자 사용)을 누르거나 **보기** > **터미널**을 차례로 선택하여 VS Code에서 WSL 터미널을 엽니다. 그러면 Ubuntu 터미널에서 만든 프로젝트 폴더 경로에 열려 있는 Bash(WSL) 명령줄이 열립니다.
+4. **Ctrl+`** (백틱 문자 사용)을 누르거나 **보기** > **터미널** 을 차례로 선택하여 VS Code에서 WSL 터미널을 엽니다. 그러면 Ubuntu 터미널에서 만든 프로젝트 폴더 경로에 열려 있는 Bash(WSL) 명령줄이 열립니다.
 
     ![WSL 터미널을 사용하는 VS Code](../images/vscode-bash-remote.png)
 
@@ -105,9 +105,9 @@ VS Code는 이전에 설치된 Remote - WSL 확장을 사용하여 Linux 하위 
 
 Remote - WSL용 VS Code 확장을 설치해야 합니다. VS Code에 이미 로컬로 설치된 확장은 자동으로 사용할 수 없습니다. [자세한 정보를 알아보세요](https://code.visualstudio.com/docs/remote/wsl#_managing-extensions).
 
-1. **Ctrl+Shift+X**를 입력하거나 메뉴에서 **보기** > **확장**으로 이동하여 VS Code 확장 창을 엽니다.
+1. **Ctrl+Shift+X** 를 입력하거나 메뉴에서 **보기** > **확장** 으로 이동하여 VS Code 확장 창을 엽니다.
 
-2. 위쪽의 **마켓플레이스에서 확장 검색** 상자에  **Python**을 입력합니다.
+2. 위쪽의 **마켓플레이스에서 확장 검색** 상자에  **Python** 을 입력합니다.
 
 3. **Python (ms-python.python) by Microsoft** 확장을 찾아 녹색 **설치** 단추를 선택합니다.
 
@@ -119,7 +119,7 @@ Python은 해석된 언어이며 다양한 유형의 인터프리터(Python2, An
 
 간단한 Python 프로그램을 테스트용으로 만들어 실행하고, 올바른 Python 인터프리터를 선택했는지 확인합니다.
 
-1. **Ctrl+Shift+E**를 입력하거나 메뉴에서 **보기** > **탐색기**로 차례로 이동하여 VS Code 파일 탐색기 창을 엽니다.
+1. **Ctrl+Shift+E** 를 입력하거나 메뉴에서 **보기** > **탐색기** 로 차례로 이동하여 VS Code 파일 탐색기 창을 엽니다.
 
 2. 아직 열려 있지 않은 경우 **Ctrl+Shift+`** 을 입력하여 통합 WSL 터미널을 열고, **HelloWorld** Python 프로젝트 선택되어 있는지 확인합니다.
 
@@ -135,7 +135,7 @@ Python은 해석된 언어이며 다양한 유형의 인터프리터(Python2, An
     print("Hello World")
     ```
 
-6. 방금 만든 Python "Hello World" 프로그램을 실행하려면 VS Code 탐색기 창에서 **test.py** 파일을 선택한 다음, 마우스 오른쪽 단추로 해당 파일을 클릭하여 옵션 메뉴를 표시합니다. **터미널에서 Python 파일 실행**을 선택합니다. 또는 통합 WSL 터미널 창에서 `python test.py`를 입력하여 "Hello World" 프로그램을 실행합니다. Python 인터프리터의 터미널 창에서 "Hello World"를 출력합니다.
+6. 방금 만든 Python "Hello World" 프로그램을 실행하려면 VS Code 탐색기 창에서 **test.py** 파일을 선택한 다음, 마우스 오른쪽 단추로 해당 파일을 클릭하여 옵션 메뉴를 표시합니다. **터미널에서 Python 파일 실행** 을 선택합니다. 또는 통합 WSL 터미널 창에서 `python test.py`를 입력하여 "Hello World" 프로그램을 실행합니다. Python 인터프리터의 터미널 창에서 "Hello World"를 출력합니다.
 
 축하합니다. Python 프로그램을 만들고 실행하도록 모두 설정되었습니다! 이제 가장 인기 있는 두 개의 Python 웹 프레임워크(Flask 및 Django)를 사용하여 Hello World 앱을 만들어 보겠습니다.
 
@@ -163,14 +163,14 @@ Python은 해석된 언어이며 다양한 유형의 인터프리터(Python2, An
 
     ![활성화된 가상 환경](../images/virtual-environment.png)
 
-10. **app.py**에서 Flask를 가져오고 Flask 개체의 인스턴스를 만드는 코드를 추가합니다.
+10. **app.py** 에서 Flask를 가져오고 Flask 개체의 인스턴스를 만드는 코드를 추가합니다.
 
     ```python
     from flask import Flask
     app = Flask(__name__)
     ```
 
-11. **app.py**에서 콘텐츠를 반환하는 함수도 추가합니다. 이 경우 간단한 문자열입니다. Flask의 **app.route** 데코레이터를 사용하여 "/" URL 경로를 해당 함수에 매핑합니다.
+11. **app.py** 에서 콘텐츠를 반환하는 함수도 추가합니다. 이 경우 간단한 문자열입니다. Flask의 **app.route** 데코레이터를 사용하여 "/" URL 경로를 해당 함수에 매핑합니다.
 
     ```python
     @app.route("/")
@@ -189,7 +189,7 @@ Python은 해석된 언어이며 다양한 유형의 인터프리터(Python2, An
     python3 -m flask run
     ```
 
-    그러면 Flask 개발 서버가 실행됩니다. 개발 서버는 기본적으로 **app.py**를 찾습니다. Flask를 실행하면 다음과 비슷한 출력이 표시됩니다.
+    그러면 Flask 개발 서버가 실행됩니다. 개발 서버는 기본적으로 **app.py** 를 찾습니다. Flask를 실행하면 다음과 비슷한 출력이 표시됩니다.
 
     ```bash
     (env) user@USER:/mnt/c/Projects/HelloWorld$ python3 -m flask run
@@ -200,9 +200,9 @@ Python은 해석된 언어이며 다양한 유형의 인터프리터(Python2, An
      * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
     ```
 
-14. 기본 웹 브라우저를 렌더링된 페이지로 엽니다. 터미널에서 **Ctrl+클릭**을 사용하여 http://127.0.0.1:5000/ URL을 클릭합니다. 브라우저에서 다음 메시지가 표시됩니다.
+14. 기본 웹 브라우저를 렌더링된 페이지로 엽니다. 터미널에서 **Ctrl+클릭** 을 사용하여 http://127.0.0.1:5000/ URL을 클릭합니다. 브라우저에서 다음 메시지가 표시됩니다.
 
-    ![Hello, Flask!](../images/hello-flask.png)
+    ![Hello World! I'm using Flask.](../images/hello-flask.png)
 
 15. "/"와 같은 URL을 방문하는 경우 HTTP 요청을 보여 주는 메시지가 디버그 터미널에 표시되는지 확인합니다.
 
@@ -210,10 +210,10 @@ Python은 해석된 언어이며 다양한 유형의 인터프리터(Python2, An
     127.0.0.1 - - [19/Jun/2019 13:36:56] "GET / HTTP/1.1" 200 -
     ```
 
-16. 터미널에서 **Ctrl+C**를 사용하여 앱을 중지합니다.
+16. 터미널에서 **Ctrl+C** 를 사용하여 앱을 중지합니다.
 
 > [!TIP]
-> **app.py**가 아닌 다른 파일 이름(예: **program.py**)을 사용하려면 **FLASK_APP**이라는 환경 변수를 정의하고 해당 값을 선택한 파일로 설정합니다. 그러면 Flask의 개발 서버에서 기본 **app.py** 파일 대신 **FLASK_APP** 값을 사용합니다. 자세한 내용은 [Flask 명령줄 인터페이스 설명서](http://flask.pocoo.org/docs/1.0/cli/)를 참조하세요.
+> **app.py** 가 아닌 다른 파일 이름(예: **program.py**)을 사용하려면 **FLASK_APP** 이라는 환경 변수를 정의하고 해당 값을 선택한 파일로 설정합니다. 그러면 Flask의 개발 서버에서 기본 **app.py** 파일 대신 **FLASK_APP** 값을 사용합니다. 자세한 내용은 [Flask 명령줄 인터페이스 설명서](http://flask.pocoo.org/docs/1.0/cli/)를 참조하세요.
 
 축하합니다. Visual Studio Code 및 Linux용 Windows 하위 시스템을 사용하여 Flask 웹 애플리케이션을 만들었습니다! VS Code 및 Flask를 사용하는 방법에 대한 자세한 자습서는 [Visual Studio Code의 Flask 자습서](https://code.visualstudio.com/docs/python/tutorial-flask)를 참조하세요.
 

@@ -5,12 +5,12 @@ keywords: XAML, UWP, 시작
 ms.date: 08/20/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 6919a2dc15aac7c5e589f2c0355f9c1cc13bfc7a
-ms.sourcegitcommit: 40b890c7b862f333879887cc22faff560c49eae6
+ms.openlocfilehash: e9db25c822d524ec36c6e512e132e49a69a2bd7d
+ms.sourcegitcommit: 7aa0e1108fd1a19ebc5632acbc9f66ea9af2b321
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97598814"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97691523"
 ---
 # <a name="tutorial-create-adaptive-layouts"></a>자습서: 적응형 레이아웃 만들기
 
@@ -266,10 +266,7 @@ ms.locfileid: "97598814"
 
 이제 이 실습을 완료했으므로, 여러분은 혼자 더 많은 실습을 수행할 수 있는 충분한 적응형 레이아웃 지식을 얻었습니다. 더 큰 문제를 해결하려면 Surface Hub와 같은 더 큰 화면 크기에 맞게 레이아웃을 최적화해보세요. Surface Hub 레이아웃을 테스트하려면 [Visual Studio를 사용하여 Surface Hub 앱 테스트](../../debug-test-perf/test-surface-hub-apps-using-visual-studio.md)를 참조하세요.
 
-문제가 있는 경우 [XAML을 사용한 반응형 레이아웃](../layout/layouts-with-xaml.md) 섹션에서 더 많은 지침을 찾을 수 있습니다.
-
-+ [시각적 상태 및 상태 트리거](../layout/layouts-with-xaml.md#adaptive-layouts-with-visual-states-and-state-triggers)
-+ [맞춤형 레이아웃](../layout/layouts-with-xaml.md#tailored-layouts)
+문제가 발생하는 경우 [XAML을 사용한 반응형 레이아웃](../layout/layouts-with-xaml.md) 섹션에서 더 많은 지침을 확인할 수 있습니다.
 
 또는 초기 사진 편집 앱의 빌드 방법에 대해 자세히 알아보려면 XAML [사용자 인터페이스](../basics/xaml-basics-ui.md) 및 [데이터 바인딩](../../data-binding/xaml-basics-data-binding.md)의 이 자습서를 확인하세요.
 
