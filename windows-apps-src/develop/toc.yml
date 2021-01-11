@@ -310,17 +310,15 @@
         - name: Windows Device Portal
           href: ../debug-test-perf/device-portal.md
           items:
-            - name: 데스크톱 디바이스 포털
+            - name: Windows Device Portal for Desktop
               href: ../debug-test-perf/device-portal-desktop.md
-            - name: 모바일용 디바이스 포털
+            - name: Windows Device Portal for Mobile
               href: ../debug-test-perf/device-portal-mobile.md
-            - name: Hololens용 디바이스 포털
-              href: ../debug-test-perf/device-portal-hololens.md
-            - name: 디바이스 포털 핵심 API
+            - name: Windows Device Portal 코어 REST API
               href: ../debug-test-perf/device-portal-api-core.md
-            - name: 디바이스 포털용 사용자 지정 플러그 인 작성
+            - name: Windows Device Portal용 사용자 지정 플러그 인 작성
               href: ../debug-test-perf/device-portal-plugin.md
-            - name: 사용자 지정 SSL 인증서로 디바이스 포털 프로비전
+            - name: 사용자 지정 SSL 인증서로 Windows Device Portal 프로비저닝
               href: ../debug-test-perf/device-portal-ssl.md
         - name: Windows 앱 인증 키트
           href: ../debug-test-perf/windows-app-certification-kit.md
