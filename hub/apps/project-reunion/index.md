@@ -2,17 +2,17 @@
 description: 프로젝트 리유니언, 개발자에게 제공되는 혜택, 현재 개발자에게 준비된 사항 및 피드백 제공 방법에 대해 알아보세요.
 title: 프로젝트 리유니언
 ms.topic: article
-ms.date: 11/17/2020
+ms.date: 01/07/2021
 keywords: windows win32, 데스크톱 개발, 프로젝트 리유니언
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d5969afacc0f811e3a5c40488f45bb5b421c4b3
-ms.sourcegitcommit: cddc595969c658ce30fbc94ded92db4a8ad1bf66
+ms.openlocfilehash: de1115281859ba322a03e3bab7a8d0e4ef71440d
+ms.sourcegitcommit: 044c75ea0c6fb3463a0150acdae1ff867dc05f29
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97349364"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97972127"
 ---
 # <a name="build-windows-apps-with-project-reunion-prerelease"></a>프로젝트 리유니언을 사용하여 Windows 앱 빌드(시험판)
 
@@ -61,11 +61,12 @@ Windows API가 새로운 OS 버전으로 계속 발전함에 따라 개발자는
 
 1. 개발용 컴퓨터에 Windows 10, 버전 1809(빌드 17763) 이상의 OS가 설치되어 있는지 확인합니다.
 
-2. [Visual Studio 2019, 버전 16.9 Preview 2(또는 그 이상)](https://visualstudio.microsoft.com/vs/preview/)를 설치합니다. Visual Studio를 설치할 때 다음 워크로드를 포함해야 합니다.
-    - .NET 데스크톱 개발
-    - 유니버설 Windows 플랫폼 개발
-    - C++를 사용한 데스크톱 개발
-    - 유니버설 Windows 플랫폼 워크로드의 선택적 구성 요소인 **C++(v142) 유니버설 Windows 플랫폼 도구**(설치 관리자의 오른쪽 창에 있는 **유니버설 Windows 플랫폼 개발** 섹션의 **설치 세부 정보** 참조)
+2. [Visual Studio 2019, 버전 16.9 Preview 2(또는 그 이상)](https://visualstudio.microsoft.com/vs/preview/)를 설치합니다. Visual Studio 설치 관리자에서 다음 항목이 선택되어 있는지 확인하세요.
+    - **워크로드** 탭에서 다음 워크로드가 선택되어 있는지 확인합니다.
+        - **.NET 데스크톱 개발**
+        - **C++를 사용한 데스크톱 개발**
+        - **유니버설 Windows 플랫폼 개발**(또한 **설치 세부 정보** 창에서 이 워크로드에 대해 선택적 **C++ (v142) 유니버설 Windows 플랫폼 도구** 구성 요소도 선택되어 있는지 확인)
+    - **개별 구성 요소** 탭의 **SDK, 라이브러리 및 프레임워크** 섹션에서 **Windows 10 SDK(10.0.19041.0)** 가 선택되어 있는지 확인합니다.
 
 3. Visual Studio Marketplace에서 최신 버전의 [C++/WinRT Visual Studio 확장(VSIX)](https://marketplace.visualstudio.com/items?itemName=CppWinRTTeam.cppwinrt101804264)을 설치합니다.
 
