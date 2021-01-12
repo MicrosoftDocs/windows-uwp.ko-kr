@@ -6,18 +6,18 @@ ms.date: 11/29/2017
 ms.topic: article
 keywords: Windows 10, uwp, 수익 창출, 참여, 프로모션, Microsoft Store 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: f2516a1708948f0322d197bf4fdd524ede6ba0b0
-ms.sourcegitcommit: 5d84d8fe60e83647fa363b710916cf8b92c6e331
+ms.openlocfilehash: 29dcc02375358c7f16f38748ca92dbaeaf3ebdb7
+ms.sourcegitcommit: afc4ff2c89f148d32073ab1cc42063ccdc573a8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91878546"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104704"
 ---
 # <a name="monetization-engagement-and-store-services"></a>수익 창출, 참여 및 Microsoft Store 서비스
 
 Windows SDK, Microsoft Advertising SDK, Microsoft Store Services SDK 및 Microsoft Store는 앱에서 더 큰 수익을 창출하고 사용자 참여를 통해 고객을 확보할 수 있게 해주는 다양한 기능을 제공합니다. 이 섹션의 항목에서는 이러한 기능을 앱에 빌드하는 방법을 보여 줍니다.
 
-Microsoft Store에서 청구하는 수수료 및 앱으로 번 돈을 지급 받는 방법에 대한 자세한 내용은 [지급 받기](../publish/getting-paid-apps.md)를 참조하세요.
+Microsoft Store에서 청구하는 수수료 및 앱으로 번 돈을 지급 받는 방법에 대한 자세한 내용은 [지급 받기](/partner-center/marketplace-get-paid)를 참조하세요.
 
 ## <a name="choose-a-pricing-model"></a>가격 모델 선택
 
@@ -126,7 +126,7 @@ Microsoft Store에서 청구하는 수수료 및 앱으로 번 돈을 지급 받
 
 이러한 보고서를 사용하여 Microsoft Store에서 앱이 기능하는 방식을 지속적으로 감시합니다.
 
-- [지급 요약](../publish/payout-summary.md)
+- [지급 요약](/partner-center/payout-statement)
 - [구입 보고서](../publish/acquisitions-report.md)
 - [추가 기능 구입 보고서](../publish/add-on-acquisitions-report.md)
 - [광고 성과 보고서](../publish/advertising-performance-report.md)

@@ -4,12 +4,12 @@ description: Microsoft PowerToys는 Windows 10을 사용자 지정하기 위한 
 ms.date: 12/02/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 1f441c7ef9fc4268b35c041f1100cb7f116318a5
-ms.sourcegitcommit: 5dac88ad541b71ebe85b78951e6b357a3db176cc
+ms.openlocfilehash: 5e7e88e8ff179ebbb63aa7369c22149b645c9838
+ms.sourcegitcommit: afc4ff2c89f148d32073ab1cc42063ccdc573a8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97611887"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104584"
 ---
 # <a name="microsoft-powertoys-utilities-to-customize-windows-10"></a>Microsoft PowerToys: Windows 10을 사용자 지정하는 유틸리티
 
@@ -149,7 +149,7 @@ PowerToys는 여러분의 기여를 환영합니다. PowerToys 개발 팀은 사
 
 - [기술 사양](https://codeburst.io/on-writing-tech-specs-6404c9791159) 작성
 - [디자인 개념 또는 권장 사항](https://www.microsoft.com/design/inclusive/) 제출
-- [문서에 기고](https://docs.microsoft.com/contribute/)
+- [문서에 기고](/contribute/)
 - [소스 코드](https://github.com/microsoft/PowerToys/tree/master/src)의 버그 식별 및 해결
 - [새 기능 및 PowerToy 유틸리티 코딩](https://github.com/microsoft/PowerToys/tree/master/doc/devdocs)
 
