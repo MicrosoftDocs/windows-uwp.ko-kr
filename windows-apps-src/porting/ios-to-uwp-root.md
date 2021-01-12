@@ -7,16 +7,16 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: ef0f712a87f0b2aea7fdb2204691e9b439315b44
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 2a420ae0d34548e4e0e1e14f820d191b4d27f54a
+ms.sourcegitcommit: afc4ff2c89f148d32073ab1cc42063ccdc573a8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89155387"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104494"
 ---
 # <a name="move-from-ios-to-uwp"></a>iOS에서 UWP로 이동
 
-Windows 10 및 유니버설 Windows 플랫폼 (UWP)를 포함 하도록 사용자 기반을 확장 하는 방법에 대 한 자세한 내용은 iOS 개발자에 게 도움이 되는 다양 한 도구가 있습니다. 수행할 수 있는 방법은 작업 중인 앱의 유형 (게임, 라이프 스타일, 엔터프라이즈 등) 및 개발 프로세스에 있는 정도에 따라 달라 집니다. 예를 들어 OpenGL 또는 Cocos2D에 크게 의존 하는 완료 된 게임 또는 거의 완료 된 게임은 [iOS 용 Windows 브리지](https://developer.microsoft.com/windows/bridges/ios)를 사용 하는 것이 적합 한 반면, 소규모 비즈니스에 대 한 플랫폼 간 앱을 계획 하는 경우 [xamarin.ios](/xamarin/xamarin-forms/)를 사용 하는 것을 고려해 야 합니다. Unity와 같은 플랫폼 간 도구에서 앱을 작성 한 경우 [Windows에 게시](https://blogs.unity3d.com/2015/09/09/windows-10-universal-apps-in-unity-5-2/) 하는 것은 매우 간단 합니다.
+Windows 10 및 유니버설 Windows 플랫폼 (UWP)를 포함 하도록 사용자 기반을 확장 하는 방법에 대 한 자세한 내용은 iOS 개발자에 게 도움이 되는 다양 한 도구가 있습니다. 수행할 수 있는 방법은 작업 중인 앱의 유형 (게임, 라이프 스타일, 엔터프라이즈 등) 및 개발 프로세스에 있는 정도에 따라 달라 집니다. 예를 들어 OpenGL 또는 Cocos2D에 크게 의존 하는 완료 된 게임 또는 거의 완료 된 게임은 [iOS 용 Windows 브리지](https://github.com/microsoft/WinObjC)를 사용 하는 것이 적합 한 반면, 소규모 비즈니스에 대 한 플랫폼 간 앱을 계획 하는 경우 [xamarin.ios](/xamarin/xamarin-forms/)를 사용 하는 것을 고려해 야 합니다. Unity와 같은 플랫폼 간 도구에서 앱을 작성 한 경우 [Windows에 게시](https://blogs.unity3d.com/2015/09/09/windows-10-universal-apps-in-unity-5-2/) 하는 것은 매우 간단 합니다.
 
 ## <a name="why-windows"></a>Windows?
 
@@ -24,7 +24,7 @@ Windows 10 및 유니버설 Windows 플랫폼 (UWP)를 포함 하도록 사용�
 
 > [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/How-to-Convert-your-iOS-app-to-Windows/player]
 
-| 항목 | Description |
+| 항목 | 설명 |
 |-------|-------------|
 | [iOS 및 UWP 앱 개발 방법 선택](selecting-an-approach-to-ios-and-uwp-app-development.md) | 플랫폼 간 앱을 개발할 때 선택할 수 있는 항목은 무엇 인가요? |
 | [iOS 개발자용 UWP 시작](getting-started-with-uwp-for-ios-developers.md) | Windows 10 용 개발을 고려 하는 iOS 개발자 라면 이러한 문서를 시작 하는 것이 좋습니다. |

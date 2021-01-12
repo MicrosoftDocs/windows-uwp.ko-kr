@@ -5,12 +5,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 가격 책정, 앱 가격, 앱 가격, 판매 앱, 가격 변동, 사용자 지정 가격, 가격, 가격, 비용, 재정의 기본 가격, 자유 형식 가격, 자유형
 ms.localizationpriority: medium
-ms.openlocfilehash: 86c9241f1bbded555486f75e2b6e7e02f611c593
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: a01e5ea295889dfc6c288cfe899750729a816601
+ms.sourcegitcommit: afc4ff2c89f148d32073ab1cc42063ccdc573a8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93030296"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104414"
 ---
 # <a name="set-and-schedule-app-pricing"></a>앱 가격 설정 및 예약
 
@@ -32,10 +32,10 @@ ms.locfileid: "93030296"
 
 **가격 책정** 섹션에서 **변환 테이블 보기** 를 클릭 하 여 모든 통화의 해당 가격을 확인 합니다. 또한 각 가격 책정 계층과 연결 된 ID 번호를 표시 합니다 .이 ID는 [Microsoft Store 제출 API](../monetize/manage-app-submissions.md#price-tiers) 를 사용 하 여 가격을 입력 하는 경우에 필요 합니다. **다운로드** 를 클릭 하 여 가격 책정 계층 테이블의 복사본을 .csv 파일로 다운로드할 수 있습니다.
 
-선택한 가격 책정 계층에는 고객이 비용을 지불 해야 하는 판매 또는 부가 가치 세금이 포함 될 수 있습니다. 선택한 시장에서 앱의 세금 영향에 대 한 자세한 내용은 [유료 앱에 대 한 세금 세부 정보](tax-details-for-paid-apps.md)를 참조 하세요. 또한 [특정 시장의 가격 고려 사항을](define-market-selection.md#price-considerations-for-specific-markets)검토 해야 합니다.
+선택한 가격 책정 계층에는 고객이 비용을 지불 해야 하는 판매 또는 부가 가치 세금이 포함 될 수 있습니다. 선택한 시장에서 앱의 세금 영향에 대 한 자세한 내용은 [유료 앱에 대 한 세금 세부 정보](/partner-center/tax-details-marketplace)를 참조 하세요. 또한 [특정 시장의 가격 고려 사항을](define-market-selection.md#price-considerations-for-specific-markets)검토 해야 합니다.
 
 > [!NOTE]
-> **이 제품을 사용할 수 있지만, 표시 유형 섹션의 스토어에서 검색 안 함** 을 선택 하는 [Visibility](choose-visibility-options.md#discoverability) 경우 **획득 중지** 옵션을 선택 하면 제출에 대 한 가격을 설정할 수 없습니다. 프로 모션 코드를 사용 하 여 무료로 앱을 가져오는 경우를 제외 하 고는 앱을 가져올 수 없습니다.
+> **이 제품을 사용할 수 있지만, 표시 유형 섹션의 스토어에서 검색 안 함** 을 선택 하는 [](choose-visibility-options.md#discoverability) 경우 **획득 중지** 옵션을 선택 하면 제출에 대 한 가격을 설정할 수 없습니다. 프로 모션 코드를 사용 하 여 무료로 앱을 가져오는 경우를 제외 하 고는 앱을 가져올 수 없습니다.
 
 ## <a name="schedule-price-changes"></a>가격 변경 일정
 
@@ -83,8 +83,3 @@ ms.locfileid: "93030296"
 
 > [!NOTE]
 > **가격은 가격 책정** 섹션 내의 여러 시장 그룹에 속할 수 없습니다.
-
-
-
-
-

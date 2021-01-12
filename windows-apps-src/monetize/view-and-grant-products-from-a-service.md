@@ -6,12 +6,12 @@ ms.date: 08/01/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store collection API, Microsoft Store 구매 API, 제품 보기, 제품 부여
 ms.localizationpriority: medium
-ms.openlocfilehash: 700749c45c563be0bb78de557cac3550767846bd
-ms.sourcegitcommit: fc7fb82121a00e552eaebafba42e5f8e1623c58a
+ms.openlocfilehash: 1447a8f7a689b3405ac1ebb8807c1c68b81294db
+ms.sourcegitcommit: ad33b2b191c7e62dc68a46bd349a87ff8ca7cef8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97978578"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98108926"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>서비스에서 제품 권한 관리
 
@@ -33,7 +33,6 @@ ms.locfileid: "97978578"
 2.  [AZURE AD 응용 프로그램 ID를 파트너 센터의 앱과 연결](#step-2)합니다.
 3.  서비스에서 게시자 id를 나타내는 [AZURE AD 액세스 토큰을 만듭니다](#step-3) .
 4.  클라이언트 Windows 앱에서 현재 사용자의 id를 나타내는 [MICROSOFT STORE id 키를 만들고](#step-4) 이 키를 서비스에 다시 전달 합니다.
-5.  필요한 Azure AD 액세스 토큰 및 Microsoft Store ID 키가 있으면 [서비스에서 Microsoft Store COLLECTION api 또는 PURCHASE api를 호출](#step-5)합니다.
 
 이 종단 간 프로세스는 다른 작업을 수행 하는 두 가지 소프트웨어 구성 요소를 포함 합니다.
 
@@ -182,29 +181,6 @@ Microsoft Store collection API 또는 purchase API에서 메서드를 호출 하
 다음 다이어그램에서는 Microsoft Store ID 키를 만드는 과정을 보여 줍니다.
 
   ![Windows 스토어 ID 키 만들기](images/b2b-1.png)
-
-<span id="step-5"/>
-
-## <a name="step-5-call-the-microsoft-store-collection-api-or-purchase-api-from-your-service"></a>5 단계: 서비스에서 Microsoft Store collection API 또는 구매 API 호출
-
-서비스에서 특정 사용자의 제품 소유권 정보에 액세스할 수 있도록 하는 Microsoft Store ID 키가 있으면, 서비스는 다음 지침에 따라 Microsoft Store collection API 또는 purchase API를 호출할 수 있습니다.
-
-* [제품에 대한 쿼리](query-for-products.md)
-* [소모성 제품을 처리됨으로 보고](report-consumable-products-as-fulfilled.md)
-* [무료 제품에 대한 권한 부여](grant-free-products.md)
-* [사용자의 구독 가져오기](get-subscriptions-for-a-user.md)
-* [사용자의 구독 청구 상태 변경](change-the-billing-state-of-a-subscription-for-a-user.md)
-
-각 시나리오에 대해 다음 정보를 API에 전달 합니다.
-
--   요청 헤더에서 대상 URI 값을 포함 하는 Azure AD 액세스 토큰을 전달 합니다 `https://onestore.microsoft.com` . 이 토큰은 [3 단계에서](#step-3)만든 토큰 중 하나입니다. 이 토큰은 게시자 id를 나타냅니다.
--   요청 본문에서 응용 프로그램의 클라이언트 쪽 코드에서 [4 단계의 이전에](#step-4) 검색 한 Microsoft Store ID 키를 전달 합니다. 이 키는 액세스 하려는 제품 소유권 정보를 가진 사용자의 id를 나타냅니다.
-
-### <a name="diagram"></a>다이어그램
-
-다음 다이어그램에서는 서비스에서 Microsoft Store collection API 또는 purchase API의 메서드를 호출 하는 과정을 설명 합니다.
-
-  ![호출 컬렉션 또는 구매 API](images/b2b-2.png)
 
 ## <a name="claims-in-a-microsoft-store-id-key"></a>Microsoft Store ID 키의 클레임
 

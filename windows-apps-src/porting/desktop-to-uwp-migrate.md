@@ -5,12 +5,12 @@ ms.date: 10/03/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e27333c87b596948afcb430eb1cf1ef4998e851
-ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
+ms.openlocfilehash: fef8499ca10f65c2eeeb9cc37bc96b482db8ad24
+ms.sourcegitcommit: afc4ff2c89f148d32073ab1cc42063ccdc573a8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97860446"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104634"
 ---
 # <a name="move-from-a-desktop-application-to-uwp"></a>데스크톱 응용 프로그램에서 UWP로 이동
 
@@ -20,7 +20,7 @@ ms.locfileid: "97860446"
 
 MSIX 패키지에서 데스크톱 응용 프로그램을 패키지 하 여 더 많은 Windows 10 기능에 액세스할 수 있습니다. MSIX는 UWP, WPF, Windows Forms 및 Win32 앱을 비롯한 모든 Windows 앱에 유니버설 패키징 환경을 제공하는 최신 Windows 앱 패키지 형식입니다. MSIX 패키지에 데스크톱 Windows 앱을 패키지하면 강력한 설치 및 업데이트 환경, 유연한 기능 시스템을 포함하는 관리형 보안 모듈, Microsoft Store, 엔터프라이즈 관리 및 여러 사용자 지정 모델에 대한 지원 기능에 액세스할 수 있습니다. 소스 코드가 있는지 또는 기존 설치 관리자 파일 (예: MSI 또는 App-v 설치 관리자)만 있는 경우 응용 프로그램을 패키지할 수 있습니다. 응용 프로그램을 패키지 한 후 패키지 확장 및 기타 UWP 구성 요소와 같은 UWP 기능을 통합할 수 있습니다.
 
-자세한 내용은 패키지 [데스크톱 응용 프로그램 (데스크톱 브리지)](/windows/msix/desktop/desktop-to-uwp-root) 및 [패키지 Id가 필요한 기능](/windows/apps/desktop/modernize/modernize-packaged-apps)을 참조 하세요.
+자세한 내용은 [코드에서 MSIX 패키지 빌드](/windows/msix/desktop/desktop-to-uwp-root) 및 [패키지 Id가 필요한 기능](/windows/apps/desktop/modernize/modernize-packaged-apps)을 참조 하세요.
 
 ## <a name="use-windows-runtime-apis"></a>Windows 런타임 Api 사용
 

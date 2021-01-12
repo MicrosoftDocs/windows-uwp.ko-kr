@@ -6,12 +6,12 @@ ms.date: 02/18/2020
 ms.topic: article
 keywords: windows 10, uwp, 광고, 광고, 배너, ad 컨트롤, 중간
 ms.localizationpriority: medium
-ms.openlocfilehash: c12d79b97010826b05bf42a9de46780dd2f93756
-ms.sourcegitcommit: 53c00939b20d4b0a294936df3d395adb0c13e231
+ms.openlocfilehash: 3b4c49c08deb793614bacb0e30136dd4bd8cdfb3
+ms.sourcegitcommit: afc4ff2c89f148d32073ab1cc42063ccdc573a8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933124"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104654"
 ---
 # <a name="display-ads-in-your-app-with-the-microsoft-advertising-sdk"></a>Microsoft Advertising SDK를 사용하여 앱에 광고 표시
 
@@ -46,7 +46,7 @@ Microsoft Advertising SDK를 사용 하 여 Windows 10 용 유니버설 Windows 
     <a href="native-ads.md">네이티브 광고</a>
     </td>
 <td align="left"><img src="images/api-reference.png" alt="API ref icon" /></td>
-<td align="left"><b>관련 자료</b><br/><br/>
+<td align="left"><b>다른 리소스</b><br/><br/>
     <a href="set-up-ad-units-in-your-app.md">앱에서 ad 단위 설정</a>
     <br/>
     <a href="best-practices-for-ads-in-apps.md">모범 사례</a>
@@ -103,7 +103,7 @@ UWP 앱에서 ad 중재 사용을 시작 하려면 ad 장치에 대 한 [ad 중�
 
 광고를 사용 하 여 앱 개발을 마친 후에는 [업데이트 된 앱](../publish/app-submissions.md) 을 파트너 센터에서 제출 하 여 스토어에서 사용할 수 있도록 할 수 있습니다. 광고를 표시 하는 앱은 [앱 개발자 계약의](/legal/windows/agreements/app-developer-agreement)Microsoft Store 정책 및 공시물 E의 [섹션 10.10](/legal/windows/agreements/store-policies#1010-advertising-conduct-and-content) 에 지정 된 추가 요구 사항을 충족 해야 합니다.
 
-앱을 게시 하 고 스토어에서 사용할 수 있게 되 면 파트너 센터에서 [광고 성능 보고서](../publish/advertising-performance-report.md) 를 검토 하 고 중재 설정을 변경 하 여 광고의 성능을 최적화할 수 있습니다. 광고 수익은 [지급 요약](../publish/payout-summary.md)에 포함 되어 있습니다.
+앱을 게시 하 고 스토어에서 사용할 수 있게 되 면 파트너 센터에서 [광고 성능 보고서](../publish/advertising-performance-report.md) 를 검토 하 고 중재 설정을 변경 하 여 광고의 성능을 최적화할 수 있습니다. 광고 수익은 [지급 요약](/partner-center/payout-statement)에 포함 되어 있습니다.
 
 <span id="additional-help" />
 
@@ -111,9 +111,9 @@ UWP 앱에서 ad 중재 사용을 시작 하려면 ad 장치에 대 한 [ad 중�
 
 Microsoft Advertising SDK를 사용 하 여 추가 도움말을 보려면 다음 리소스를 사용 하세요.
 
-|  Task    | 리소스 |               
+|  작업    | 리소스 |               
 |----------|-------|
-| 버그 보고 또는 광고에 대 한 보조 지원 받기     | [지원 페이지](https://developer.microsoft.com/windows/support) 를 방문 하 여 **앱 광고-앱**을 선택 합니다.        |
+| 버그 보고 또는 광고에 대 한 보조 지원 받기     | [지원 페이지](https://developer.microsoft.com/windows/support) 를 방문 하 여 **앱 광고-앱** 을 선택 합니다.        |
 | 커뮤니티 지원 받기     | [포럼](https://social.msdn.microsoft.com/forums/windowsapps/en-US/home?category=windowsapps)을 방문 하세요.       |
 | 앱에 배너 및 중간 광고를 추가 하는 방법을 보여 주는 샘플 프로젝트를 다운로드 합니다.     | [GitHub의 광고 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/Advertising)을 참조 하세요.       |
 | Windows 앱용 최신 수익 창출 기회에 대한 자세한 정보     | [앱 수익 창출을](https://developer.microsoft.com/store/monetize)방문 하세요.        |

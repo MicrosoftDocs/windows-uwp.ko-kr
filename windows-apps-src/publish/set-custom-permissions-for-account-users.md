@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.topic: article
 keywords: windows 10, uwp, 사용자 역할, 사용자 권한, 사용자 지정 역할, 사용자 액세스, 사용자 지정 권한, 표준 역할
 ms.localizationpriority: medium
-ms.openlocfilehash: e18c7bcffe7249f6c191fc456422e0dd0c7300ef
-ms.sourcegitcommit: 48702934676ae366fd46b7d952396c5e2fb2cbbe
+ms.openlocfilehash: bdf46b681c7ae2bce18bab464ac75984f784fc7b
+ms.sourcegitcommit: afc4ff2c89f148d32073ab1cc42063ccdc573a8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97927806"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104644"
 ---
 # <a name="set-roles-or-custom-permissions-for-account-users"></a>계정 사용자에 대 한 역할 또는 사용자 지정 권한 설정
 
@@ -46,7 +46,7 @@ ms.locfileid: "97927806"
 | Manager              | 세금 및 지급 설정 변경을 제외 하 고 계정에 대 한 완전 한 액세스 권한이 있습니다. 파트너 센터에서 사용자를 관리 하는 작업이 포함 되지만, Azure AD 테 넌 트에서 사용자를 만들고 삭제 하는 기능은 Azure AD의 계정 권한에 따라 달라 집니다. 즉, 사용자에 게 관리자 역할이 할당 되어 있지만 조직의 Azure AD에서 전역 관리자 권한이 없는 경우, 사용자는 새 사용자를 만들거나 디렉터리에서 사용자를 삭제할 수 없습니다 (사용자의 파트너 센터 역할을 변경할 수 있지만). <p> 파트너 센터 계정이 둘 이상의 Azure AD 테 넌 트와 연결 된 경우 관리자는 해당 테 넌 트에 대 한 전역 관리자 권한이 있는 계정으로 해당 사용자와 동일한 테 넌 트에 로그인 하지 않는 한 사용자에 대 한 전체 세부 정보 (이름, 성, 암호 복구 전자 메일 및 Azure AD 전역 관리자 인지 여부)를 볼 수 없습니다. 그러나 파트너 센터 계정과 연결 된 모든 테 넌 트에서 사용자를 추가 하 고 제거할 수 있습니다. |
 | 개발자            | 는 패키지를 업로드 하 고 앱과 추가 기능을 제출 하며, 원격 분석 세부 정보에 대 한 [사용 현황 보고서](usage-report.md) 를 볼 수 있습니다. [장치 간 환경](https://developer.microsoft.com/windows/project-rome) 기능에 액세스할 수 있습니다. 재무 정보 또는 계정 설정을 볼 수 없습니다.   |
 | 비즈니스 참여자 | [상태](health-report.md) 및 [사용](usage-report.md) 보고서를 볼 수 있습니다. 제품을 만들거나 제출 하거나, 계정 설정을 변경 하거나, 재무 정보를 볼 수 없습니다.   |
-| 재무 참여자  | [지급 보고서](payout-summary.md), 재무 정보 및 획득 보고서를 볼 수 있습니다. 앱, 추가 기능 또는 계정 설정을 변경할 수 없습니다.    |
+| 재무 참여자  | [지급 보고서](/partner-center/payout-statement), 재무 정보 및 획득 보고서를 볼 수 있습니다. 앱, 추가 기능 또는 계정 설정을 변경할 수 없습니다.    |
 | 마케터             | [고객 리뷰에 응답](respond-to-customer-reviews.md) 하 고 비 재무 [분석 보고서](analytics.md)를 볼 수 있습니다. 앱, 추가 기능 또는 계정 설정을 변경할 수 없습니다.      |
 
 아래 표에는 이러한 각 역할과 계정 소유자에 게 제공 되는 특정 기능 중 일부가 나와 있습니다.
@@ -120,12 +120,12 @@ ms.locfileid: "97927806"
 <tr><td align="left">    <b>새 앱</b>                            </td><td align="left">  새 앱 만들기 페이지를 볼 수 있지만 실제로 계정에 새 앱을 만들 수는 없습니다.    </td><td align="left">  새 앱 이름을 예약 하 여 계정에 <a href="create-your-app-by-reserving-a-name.md">새 앱을 만들</a> 수 있으며, 제출을 만들고 스토어에 앱을 제출할 수 있습니다.     </td></tr>
 <tr><td align="left">    <b>새 번들</b>&nbsp;*                       </td><td align="left">  새 번들 만들기 페이지를 볼 수 있지만 실제로 계정에 새 번들을 만들 수는 없습니다.     </td><td align="left">  제품의 새 번들을 만들 수 있습니다.          </td></tr>
 <tr><td align="left">    <b>파트너 서비스</b>&nbsp;*                  </td><td align="left">  XToken을 검색하는 서비스를 설치하기 위한 인증서를 볼 수 있습니다.     </td><td align="left">  는 서비스에 설치 하 여 XTokens을 검색 하는 인증서를 관리 하 고 볼 수 있습니다.       </td></tr>
-<tr><td align="left">    <b>지급 계정</b>                      </td><td align="left">  <b>계정 설정</b>에서 <a href="setting-up-your-payout-account-and-tax-forms.md#payout-account">지급 계정 정보</a> 를 볼 수 있습니다.     </td><td align="left">  <b>계정 설정</b>에서 <a href="setting-up-your-payout-account-and-tax-forms.md#payout-account">지급 계정 정보</a> 를 편집 하 고 볼 수 있습니다.       </td></tr>
-<tr><td align="left">    <b>지급 요약</b>                      </td><td align="left">  <a href="payout-summary.md">지급 요약</a> 을 확인 하 여 지급 보고 정보에 액세스 하 고 다운로드할 수 있습니다.       </td><td align="left">  <a href="payout-summary.md">지급 요약</a> 을 확인 하 여 지급 보고 정보에 액세스 하 고 다운로드할 수 있습니다.   </td></tr>
+<tr><td align="left">    <b>지급 계정</b>                      </td><td align="left">  <b>계정 설정</b>에서 <a href="/partner-center/set-up-your-payout-account#payout-account">지급 계정 정보</a> 를 볼 수 있습니다.     </td><td align="left">  <b>계정 설정</b>에서 <a href="/partner-center/set-up-your-payout-account#payout-account">지급 계정 정보</a> 를 편집 하 고 볼 수 있습니다.       </td></tr>
+<tr><td align="left">    <b>지급 요약</b>                      </td><td align="left">  <a href="/partner-center/payout-statement">지급 요약</a> 을 확인 하 여 지급 보고 정보에 액세스 하 고 다운로드할 수 있습니다.       </td><td align="left">  <a href="/partner-center/payout-statement">지급 요약</a> 을 확인 하 여 지급 보고 정보에 액세스 하 고 다운로드할 수 있습니다.   </td></tr>
 <tr><td align="left">    <b>신뢰 당사자</b>&nbsp;*                   </td><td align="left">  신뢰 당사자가 XTokens를 검색할 수 있습니다.    </td><td align="left">  는 신뢰 당사자를 관리 하 고 확인 하 여 XTokens를 검색할 수 있습니다.     </td></tr>
 <tr><td align="left">    <b>샌드박스</b>&nbsp;*                         </td><td align="left">  는 <b>샌드박스</b> 페이지에 액세스 하 고 계정 및 해당 샌드박스에 대해 적용 가능한 모든 구성에서 샌드박스를 볼 수 있습니다. 적절 한 제품 수준 사용 권한이 부여 되지 않은 경우 각 샌드박스에 대 한 제품 및 제출을 볼 수 없습니다. </td><td align="left">  <b>샌드박스 페이지에</b> 액세스 하 고, 샌드박스를 만들고 삭제 하 고 구성을 관리 하는 등 계정에서 샌드박스를 보고 관리할 수 있습니다. 적절 한 제품 수준 사용 권한이 부여 되지 않은 경우 각 샌드박스에 대 한 제품 및 제출을 볼 수 없습니다.    </td></tr>
 <tr><td align="left">    <b>매장 판매 이벤트</b>&nbsp;*                            </td><td align="left">  해당 없음    </td><td align="left">  매장 판매 이벤트에 제품을 자동으로 포함 하는 옵션을 구성할 수 있습니다.     </td></tr>
-<tr><td align="left">    <b>세금 프로필</b>                         </td><td align="left">  <b>계정 설정</b>에서 <a href="setting-up-your-payout-account-and-tax-forms.md#tax-forms">세금 프로필 정보 및 양식을</a> 볼 수 있습니다.     </td><td align="left">  <b>계정 설정</b>에서 세금 양식을 작성 하 고 <a href="setting-up-your-payout-account-and-tax-forms.md#tax-forms">세금 프로필 정보</a> 를 업데이트할 수 있습니다.     </td></tr>
+<tr><td align="left">    <b>세금 프로필</b>                         </td><td align="left">  <b>계정 설정</b>에서 <a href="/partner-center/set-up-your-payout-account#tax-forms">세금 프로필 정보 및 양식을</a> 볼 수 있습니다.     </td><td align="left">  <b>계정 설정</b>에서 세금 양식을 작성 하 고 <a href="/partner-center/set-up-your-payout-account#tax-forms">세금 프로필 정보</a> 를 업데이트할 수 있습니다.     </td></tr>
 <tr><td align="left">    <b>테스트 계정</b>&nbsp;*                     </td><td align="left">  Xbox Live 구성을 테스트 하기 위한 계정을 볼 수 있습니다.      </td><td align="left">  Xbox Live 구성을 테스트 하기 위한 계정을 만들고, 관리 하 고, 볼 수 있습니다.      </td></tr>
 <tr><td align="left">    <b>Xbox 장치</b>                        </td><td align="left">  계정 <b>설정</b> 섹션에서 계정에 대해 사용 하도록 설정 된 Xbox development 콘솔을 볼 수 있습니다.       </td><td align="left">  <b>계정 설정</b> 섹션에서 계정에 대해 사용 하도록 설정 된 Xbox development 콘솔을 추가, 제거 및 볼 수 있습니다.     </td></tr>
     </tbody>

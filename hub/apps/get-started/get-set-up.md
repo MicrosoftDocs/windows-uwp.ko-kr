@@ -6,12 +6,12 @@ ms.date: 1/8/2021
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 928b8fa82e4a06f82f0e85ca34ab838562b08435
-ms.sourcegitcommit: 30d1a27fd78d198cec5c50af5621f9e65c7b965e
+ms.openlocfilehash: bb64345ff14d26a14095feb8065b250598aa78f0
+ms.sourcegitcommit: afc4ff2c89f148d32073ab1cc42063ccdc573a8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98043072"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104554"
 ---
 # <a name="get-set-up"></a>설정
 
@@ -53,12 +53,12 @@ Visual Studio에 대한 도움이 필요하십니까? [Visual Studio 시작](htt
 
 -   개발자 계정을 가져오려면 [등록](sign-up.md) 페이지로 이동 합니다.
 
-## <a name="whats-next"></a>다음 작업
+## <a name="whats-next"></a>새로운 기능
 
 도구를 설치하고 개발을 위해 디바이스를 활성화했으면 Windows 10 앱 만들기를 시작하는 방법에 대한 지침을 확인합니다.
 
 -   [플랫폼 선택](../desktop/choose-your-platform.md)
--   [코딩 시작](https://docs.microsoft.com/windows/uwp/get-started/create-uwp-apps)
+-   [코딩 시작](/windows/uwp/get-started/create-uwp-apps)
 
 ## <a name="windows-development-setup-scripts"></a>Windows 개발 설정 스크립트
 

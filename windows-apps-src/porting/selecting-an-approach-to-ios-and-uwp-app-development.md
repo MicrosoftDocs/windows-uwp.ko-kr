@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 83a316a729fc1c2042dde5541e2b187bf8903188
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b7a8920b13b7e28947138a000fd46165abcb58b7
+ms.sourcegitcommit: afc4ff2c89f148d32073ab1cc42063ccdc573a8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171187"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104684"
 ---
 # <a name="selecting-an-approach-to-ios-and-uwp-app-development"></a>iOS 및 UWP 앱 개발 방법 선택
 
@@ -48,7 +48,7 @@ Windows 및 iOS는 매우 다른 beasts 것 처럼 보일 수 있지만, 두 플
 
 -   [IOS 용 Windows 브리지](https://github.com/Microsoft/WinObjC)
 
-    Project Islandwood 라고도 하는이 도구는 Visual Studio로 직접 Xcode 프로젝트를 가져올 수 있는 개발이 가능한 개발 도구입니다. Visual Studio 내에서 목표-C 코드를 작성 하 고 디버그할 수 있습니다. 프로젝트에서 그래픽의 코코스와 같은 라이브러리를 사용 하는 경우 앱을 신속 하 게 이식 하는 데 유용한 방법을 찾을 수 있습니다.
+    이는 Xcode 프로젝트를 Visual Studio로 직접 가져올 수 있는 개발이 가능한 개발 도구입니다. Visual Studio 내에서 목표-C 코드를 작성 하 고 디버그할 수 있습니다. 프로젝트에서 그래픽의 코코스와 같은 라이브러리를 사용 하는 경우 앱을 신속 하 게 이식 하는 데 유용한 방법을 찾을 수 있습니다.
 
 -   C + + 코드의 용도를 변경 합니다.
 
