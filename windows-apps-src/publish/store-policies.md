@@ -6,12 +6,12 @@ ms.topic: article
 keywords: Microsoft Store 정책 계약
 ms.localizationpriority: high
 ms.assetid: F02A720E-2899-4863-8945-9AB99158BCA1
-ms.openlocfilehash: fc7a9ebd3ebe9ce86f4c44e7e13ea25d5a01240e
-ms.sourcegitcommit: 5dac88ad541b71ebe85b78951e6b357a3db176cc
+ms.openlocfilehash: 7d9679b591b64f804ae9c84badc5849cac28de99
+ms.sourcegitcommit: afc4ff2c89f148d32073ab1cc42063ccdc573a8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97611461"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104664"
 ---
 # <a name="microsoft-store-policies"></a>Microsoft Store 정책
 
@@ -24,7 +24,7 @@ ms.locfileid: "97611461"
 > 본 계약의 최근 변경된 내용은 [변경 기록](store-policies-change-history.md) 섹션에 요약되어 있습니다.
 
 > [!NOTE]
-> **2020년 12월 16일 정책 업데이트 공지**: [Xbox Live Creators 프로그램](https://www.xbox.com/developers/creators-program/)을 통해 개발된 콘솔을 대상으로 하는 게임 제품의 경우 XBL 서비스와 통합하기 위한 요구 사항이 더 이상 적용되지 않습니다. 특정 정책([정책 10.13.1](https://docs.microsoft.com/windows/uwp/publish/store-policies#1013-gaming-and-xbox))은 다음에 스토어 정책 문서를 업데이트할 때 이 변경 내용을 반영하도록 업데이트되지만, 이 공지에 따라 XBL Creators 프로그램에는 정책이 더 이상 적용되지 않습니다. 
+> **2020년 12월 16일 정책 업데이트 공지**: [Xbox Live Creators 프로그램](https://www.xbox.com/developers/creators-program/)을 통해 개발된 콘솔을 대상으로 하는 게임 제품의 경우 XBL 서비스와 통합하기 위한 요구 사항이 더 이상 적용되지 않습니다. 특정 정책([정책 10.13.1](#1013-gaming-and-xbox))은 다음에 스토어 정책 문서를 업데이트할 때 이 변경 내용을 반영하도록 업데이트되지만, 이 공지에 따라 XBL Creators 프로그램에는 정책이 더 이상 적용되지 않습니다. 
 
 Microsoft Store<sup>1</sup>용 제품 개발에 관심을 가져주셔서 감사합니다. "제품"은 앱, 게임, 제목, 제품 내에서 판매 및 제공되는 모든 추가 콘텐츠를 포함하지만 이에 국한되지 않는 제출된 모든 형식의 콘텐츠를 의미합니다. Microsoft는 전 세계 고객에게 다양한 제품 카탈로그를 제공하기 위해 노력하고 있습니다. Microsoft Store 있는 제품은 인증 표준을 충족하고 고객에게 실로 유용하고 멋진 경험을 제공하며 Microsoft Store에 적합한 콘텐츠를 제공해야 합니다.
 
