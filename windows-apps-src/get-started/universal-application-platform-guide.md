@@ -7,12 +7,12 @@ ms.topic: article
 ms.custom: contperf-fy21q1
 keywords: windows 10, uwp, 유니버설
 ms.localizationpriority: medium
-ms.openlocfilehash: 6871512e26b4c1f960034a5e97d88ade0b211094
-ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
+ms.openlocfilehash: e0d6991f261a9ee207a7e36f3dc5ad6a145f3b12
+ms.sourcegitcommit: afc4ff2c89f148d32073ab1cc42063ccdc573a8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97860424"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104674"
 ---
 # <a name="whats-a-universal-windows-platform-uwp-app"></a>UWP(유니버설 Windows 플랫폼) 앱이란?
 
@@ -144,7 +144,7 @@ Microsoft의 디자인 시스템을 Fluent라고 합니다. Fluent Design System
 
 [파트너 센터](https://partner.microsoft.com/dashboard)에서는 모든 Windows 디바이스용 앱을 한곳에서 관리하고 제출할 수 있습니다. Microsoft Store에서 게시할 앱을 제출하는 방법을 알아보려면 [Windows 앱 및 게임 게시](../publish/index.md)를 참조하세요.
 
-새 기능 덕분에 프로세스는 간소화되고 더 세부적으로 제어할 수 있습니다. 자세한 [분석 보고서](../publish/analytics.md), 결합된 [지급 세부 정보](../publish/payout-summary.md), [앱을 홍보하고 고객 참여를 유도](../publish/attract-customers-and-promote-your-apps.md)하는 방법 등을 알아볼 수 있습니다.
+새 기능 덕분에 프로세스는 간소화되고 더 세부적으로 제어할 수 있습니다. 자세한 [분석 보고서](../publish/analytics.md), 결합된 [지급 세부 정보](/partner-center/payout-statement), [앱을 홍보하고 고객 참여를 유도](../publish/attract-customers-and-promote-your-apps.md)하는 방법 등을 알아볼 수 있습니다.
 
 자세한 소개 자료를 보려면 [Windows 10 디바이스용 Windows 앱 빌드 소개](/archive/msdn-magazine/2015/may/windows-10-an-introduction-to-building-windows-apps-for-windows-10-devices)를 참조하세요.
 

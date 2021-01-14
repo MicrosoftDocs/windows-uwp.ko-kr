@@ -6,12 +6,12 @@ ms.date: 06/05/2019
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: c937a0cacd0dc198c3ad2bd979850efafcb2aa05
-ms.sourcegitcommit: aa444aff3371f73243c2544cf6afaf8e58875ee9
+ms.openlocfilehash: b3a46d04cec817dfcacb9c2bab8433a3eb4e363b
+ms.sourcegitcommit: afc4ff2c89f148d32073ab1cc42063ccdc573a8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93298261"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104694"
 ---
 # <a name="httpclient"></a>HttpClient
 
@@ -27,7 +27,7 @@ ms.locfileid: "93298261"
 
 [  **Windows.Web.Http**](/uwp/api/Windows.Web.Http) 네임스페이스와 관련 [**Windows.Web.Http.Headers**](/uwp/api/Windows.Web.Http.Headers) 및 [**Windows.Web.Http.Filters**](/uwp/api/Windows.Web.Http.Filters) 네임스페이스의 클래스는 HTTP 클라이언트 역할을 수행하여 기본 GET 요청을 수행하거나 아래에 나열된 고급 HTTP 기능을 구현하는 UWP(유니버설 Windows 플랫폼) 앱의 프로그래밍 인터페이스를 제공합니다.
 
--   일반적인 동사에 대한 메서드( **DELETE** , **GET** , **PUT** 및 **POST** ) 이러한 각 요청은 비동기 작업으로 전송됩니다.
+-   일반적인 동사에 대한 메서드(**DELETE**, **GET**, **PUT** 및 **POST**) 이러한 각 요청은 비동기 작업으로 전송됩니다.
 
 -   일반적인 인증 설정 및 패턴에 대한 지원
 
@@ -45,7 +45,7 @@ ms.locfileid: "93298261"
 
 -   [**HttpBufferContent**](/uwp/api/Windows.Web.Http.HttpBufferContent). 콘텐츠를 버퍼로
 -   [**HttpFormUrlEncodedContent**](/uwp/api/Windows.Web.Http.HttpFormUrlEncodedContent). 콘텐츠를 **application/x-www-form-urlencoded** MIME 형식으로 인코드된 이름/값 튜플로
--   [**HttpMultipartContent**](/uwp/api/Windows.Web.Http.HttpMultipartContent). * *multipart/\** MIME 형식의 콘텐츠.
+-   [**HttpMultipartContent**](/uwp/api/Windows.Web.Http.HttpMultipartContent). **multipart/\** MIME 형식의 콘텐츠.
 -   [_ *HttpMultipartFormDataContent**](/uwp/api/Windows.Web.Http.HttpMultipartFormDataContent). **multipart/form-data** MIME 형식으로 인코딩된 콘텐츠
 -   [**HttpStreamContent**](/uwp/api/Windows.Web.Http.HttpStreamContent). 콘텐츠를 스트림으로(내부 형식은 HTTP GET 메서드가 데이터를 받고 HTTP POST 메서드가 데이터를 업로드하는 데 사용됨)
 -   [**HttpStringContent**](/uwp/api/Windows.Web.Http.HttpStringContent). 콘텐츠를 문자열로
@@ -337,12 +337,12 @@ C++에는 URI에 대한 문자열을 시도 및 구문 분석할 메서드가 �
 
 [  **Windows.Web.Http**](/uwp/api/Windows.Web.Http)에는 편의 기능이 부족합니다. 따라서 이 네임스페이스에서 [**HttpClient**](/uwp/api/Windows.Web.Http.HttpClient) 및 다른 클래스를 사용하는 앱은 **HRESULT** 값을 사용해야 합니다.
 
-[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)를 사용하는 앱에서 [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 구조체는 앱을 실행하는 동안 발생한 예외를 나타냅니다. [winrt::hresult_error::code](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresult_errorcode-function) 함수는 특정 예외에 할당된 **HRESULT** 를 반환합니다. [winrt::hresult_error::message](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresult_errormessage-function) 함수는 **HRESULT** 값과 연결된 시스템 제공 문자열을 반환합니다. 자세한 내용은 [C++/WinRT를 통한 오류 처리](/windows/uwp/cpp-and-winrt-apis/error-handling)를 참조하세요.
+[C++/WinRT](../cpp-and-winrt-apis/index.md)를 사용하는 앱에서 [**winrt::hresult_error**](/uwp/cpp-ref-for-winrt/error-handling/hresult-error) 구조체는 앱을 실행하는 동안 발생한 예외를 나타냅니다. [winrt::hresult_error::code](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresult_errorcode-function) 함수는 특정 예외에 할당된 **HRESULT** 를 반환합니다. [winrt::hresult_error::message](/uwp/cpp-ref-for-winrt/error-handling/hresult-error#hresult_errormessage-function) 함수는 **HRESULT** 값과 연결된 시스템 제공 문자열을 반환합니다. 자세한 내용은 [C++/WinRT를 통한 오류 처리](../cpp-and-winrt-apis/error-handling.md)를 참조하세요.
 
 가능한 **HRESULT** 값은 *Winerror.h* 헤더 파일에 나열되어 있습니다. 앱은 특정 **HRESULT** 값을 필터링하여 예외의 원인에 따라 앱 동작을 수정할 수 있습니다.
 
 C#, VB.NET에서 .NET Framework 4.5를 사용하는 앱에서 [System.Exception](/dotnet/api/system.exception)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [System.Exception.HResult](/dotnet/api/system.exception.hresult#System_Exception_HResult) 속성은 특정 예외에 할당된 **HRESULT** 를 반환합니다. [System.Exception.Message](/dotnet/api/system.exception.message#System_Exception_Message) 속성은 예외를 설명하는 메시지를 반환합니다.
 
-C++/CX는 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)로 대체되었습니다. 하지만 C++/CX를 사용하는 앱에서 [Platform::Exception](/cpp/cppcx/platform-exception-class)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [Platform::Exception::HResult](/cpp/cppcx/platform-exception-class#hresult) 속성은 특정 예외에 할당된 **HRESULT** 를 반환합니다. [Platform::Exception::Message](/cpp/cppcx/platform-exception-class#message) 속성은 **HRESULT** 값과 연결된 시스템 제공 문자열을 반환합니다.
+C++/CX는 [C++/WinRT](../cpp-and-winrt-apis/index.md)로 대체되었습니다. 하지만 C++/CX를 사용하는 앱에서 [Platform::Exception](/cpp/cppcx/platform-exception-class)은 앱 실행 중 예외가 발생하는 경우의 오류를 나타냅니다. [Platform::Exception::HResult](/cpp/cppcx/platform-exception-class#hresult) 속성은 특정 예외에 할당된 **HRESULT** 를 반환합니다. [Platform::Exception::Message](/cpp/cppcx/platform-exception-class#message) 속성은 **HRESULT** 값과 연결된 시스템 제공 문자열을 반환합니다.
 
 대부분의 매개 변수 유효성 검사 오류에서 반환되는 **HRESULT** 는 **E\_INVALIDARG** 입니다. 일부 잘못된 메서드 호출의 경우 반환되는 **HRESULT** 는 **E\_ILLEGAL\_METHOD\_CALL** 입니다.

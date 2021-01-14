@@ -6,19 +6,19 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 강한, 약한, 참조
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: 9ca3ae231a70b69f9f41bb1077b875dca798eb05
-ms.sourcegitcommit: e6a7749f9ddc0fe165b68506b0be465d4ca51ab6
+ms.openlocfilehash: 46b62c202d090a7760445b3e07bca073d2636c66
+ms.sourcegitcommit: afc4ff2c89f148d32073ab1cc42063ccdc573a8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96935985"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104484"
 ---
 # <a name="strong-and-weak-references-in-cwinrt"></a>C++/WinRT의 강한 참조 및 약한 참조
 
 Windows 런타임은 참조 계산 시스템입니다. 이러한 시스템에서는 강한 참조, 약한 참조, 강하지도 약하지도 않은 참조(예: 암시적 *this* 포인터)의 중요성 및 차이점을 아는 것이 중요합니다. 이 항목에서 확인할 수 있듯이, 이러한 참조를 올바르게 관리하는 방법을 알고 있는지 여부에 따라 원활하게 실행되는 시스템과 예기치 않게 작동이 중단되는 시스템 같이 완전히 다른 결과가 나타날 수 있습니다. 언어 프로젝션을 심층 지원하는 도우미 함수를 제공함으로써, [C++/WinRT](./intro-to-using-cpp-with-winrt.md)는 보다 복잡한 시스템을 간편하고 정확하게 빌드할 수 있도록 도와줍니다.
 
 > [!NOTE]
-> 몇 가지 예외만 제외하고 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)에서 사용하거나 작성한 Windows 런타임 유형에 대해 약한 참조 지원이 기본적으로 설정됩니다. **Windows.UI.Composition** 및 **Windows.Devices.Input.PenDevice** 는 예외의 예입니다. &mdash;즉, 이러한 유형에 대해 약한 참조 지원이 설정되지 *않은* 네임스페이스입니다. 또한 [자동 취소 대리자를 등록하지 못하는 경우](/windows/uwp/cpp-and-winrt-apis/handle-events#if-your-auto-revoke-delegate-fails-to-register)를 참조하세요.
+> 몇 가지 예외만 제외하고 [C++/WinRT](./index.md)에서 사용하거나 작성한 Windows 런타임 유형에 대해 약한 참조 지원이 기본적으로 설정됩니다. **Windows.UI.Composition** 및 **Windows.Devices.Input.PenDevice** 는 예외의 예입니다. &mdash;즉, 이러한 유형에 대해 약한 참조 지원이 설정되지 *않은* 네임스페이스입니다. 또한 [자동 취소 대리자를 등록하지 못하는 경우](./handle-events.md#if-your-auto-revoke-delegate-fails-to-register)를 참조하세요.
 > 
 > 형식을 작성하는 경우 이 항목의 [C++/WinRT의 약한 참조](#weak-references-in-cwinrt) 섹션을 참조하세요.
 
