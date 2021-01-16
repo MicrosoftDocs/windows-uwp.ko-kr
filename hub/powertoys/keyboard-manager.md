@@ -4,12 +4,12 @@ description: 사용자가 키보드에서 키를 다시 정의할 수 있도록 
 ms.date: 12/02/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: eb17cd5a7ad76728e6b063f76369c8d194a5e12c
-ms.sourcegitcommit: 1a997d7e0100e58886150f9fba33d7b205f41df1
+ms.openlocfilehash: a8ffd782a1b23d1e439be0462300ebdf20593913
+ms.sourcegitcommit: 375cf20e0583335805ec246d65819dc1674a2e32
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865468"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241003"
 ---
 # <a name="keyboard-manager-utility"></a>키보드 관리자 유틸리티
 
@@ -33,7 +33,7 @@ Powertoy 키보드 관리자를 사용 하 여 키보드에서 키를 다시 정
 
 ## <a name="settings"></a>설정
 
-키보드 관리자를 사용 하 여 매핑을 만들려면 다음 옵션을 사용할 수 있습니다.
+키보드 관리자를 사용 하 여 매핑을 만들려면 Powertoy 설정을 열어야 합니다. Windows 시작 메뉴에서 Powertoy 앱을 검색 하면 Powertoy 설정 창이 열립니다. Powertoy 설정 내에서 키보드 관리자 탭에 다음 옵션이 표시 됩니다.
 
 - <kbd>키 다시 매핑</kbd> 을 선택 하 여 키보드 설정 다시 매핑 창을 시작 합니다.
 - <kbd>바로 가기 다시 매핑</kbd> 을 선택 하 여 바로 가기 다시 매핑 설정 창을 시작 합니다.
