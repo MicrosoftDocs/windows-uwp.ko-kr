@@ -4,21 +4,21 @@ description: 하나 이상의 설치 된 패키지에 대 한 배포 정보를 �
 ms.localizationpriority: medium
 ms.topic: article
 ms.date: 02/08/2017
-ms.openlocfilehash: 5260125625ced6c258a683bcfb9b552e57d07f06
-ms.sourcegitcommit: 8e0e4cac79554e86dc7f035c4b32cb1f229142b0
+ms.openlocfilehash: 2819b21e12d25aca941808e1feeb8a7539750a91
+ms.sourcegitcommit: b0a82c2a132212eb5fb72b67f0789cac1014642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88943003"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98254228"
 ---
 # <a name="requests-deployment-information-for-one-or-more-installed-packages"></a>하나 이상의 설치 된 패키지에 대 한 배포 정보를 요청 합니다.
 
 **요청**
 
-방법      | 요청 URI
-:------     | :------
-POST | /ext/app/deployinfo
-<br />
+| 방법 | 요청 URI |
+|--------|-------------|
+| POST | /ext/app/deployinfo |
+
 **URI 매개 변수**
 
  - 없음
@@ -35,7 +35,7 @@ POST | /ext/app/deployinfo
   * PackageFullName-정보를 요청 하는 패키지의 이름입니다.
   * OverlayFolder-이 기능을 사용 하는 경우 오버레이 폴더 경로에 대 한 선택적 경로입니다.
 
-###<a name="response"></a>응답
+### <a name="response"></a>응답
 
 **응답 본문**
 
@@ -53,12 +53,11 @@ POST | /ext/app/deployinfo
 
 이 API는 다음과 같은 예상 상태 코드를 포함 합니다.
 
-HTTP 상태 코드      | Description
-:------     | :-----
-200 | Success
-4XX | 오류 코드
-5XX | 오류 코드
-<br />
+| HTTP 상태 코드 | Description |
+|------------------|-------------|
+| 200 | Success |
+| 4XX | 오류 코드 |
+| 5XX | 오류 코드 |
 
 **사용 가능한 장치 패밀리**
 

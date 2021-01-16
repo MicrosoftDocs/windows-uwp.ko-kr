@@ -1,30 +1,31 @@
 ---
 title: 장치 포털 컨트롤러 API 참조
-description: 연결된 실제 컨트롤러 수를 얻고 프로그래밍 방식으로 이를 끄는 방법을 알아봅니다.
+description: 연결 된 실제 컨트롤러의 수를 가져와서 프로그래밍 방식으로 해제 하는 방법을 알아봅니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 8b5061f9193d78d4ff23f5fa707b0bea67a10f98
-ms.sourcegitcommit: b034650b684a767274d5d88746faeea373c8e34f
+ms.openlocfilehash: 535846d7dbeb2d29328b5c5d01b06d4449a53790
+ms.sourcegitcommit: b0a82c2a132212eb5fb72b67f0789cac1014642f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57657008"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98254188"
 ---
-# <a name="controller-api-reference"></a>컨트롤러 API 참조   
-연결된 실제 컨트롤러 수를 얻고 REST API를 사용하여 이를 끌 수 있습니다.
+# <a name="controller-api-reference"></a>컨트롤러 API 참조
 
-## <a name="determine-the-number-of-attached-physical-controllers"></a>연결될 실제 컨트롤러 수 결정
+이 REST API 사용 하 여 연결 된 실제 컨트롤러의 수를 확보 하 고 해제할 수 있습니다.
+
+## <a name="determine-the-number-of-attached-physical-controllers"></a>연결 된 실제 컨트롤러 수 결정
 
 **요청**
 
-다음 요청을 사용하여 장치에 연결된 실제 컨트롤러의 수를 확인할 수 있습니다.
+다음 요청을 사용 하 여 장치에서 연결 된 실제 컨트롤러의 수를 확인할 수 있습니다.
 
-메서드      | 요청 URI
-:------     | :-----
-GET | /ext/remoteinput/controllers
-<br />
+방법 | 요청 URI |
+-------|-------------|
+| GET | /ext/remoteinput/controllers |
+
 **URI 매개 변수**
 
 - 없음
@@ -37,30 +38,30 @@ GET | /ext/remoteinput/controllers
 
 - 없음
 
-**응답**   
+**Response**   
 
-- 연결된 실제 컨트롤러의 수를 지정하는 JSON 숫자 속성 ConnectedControllerCount.
+- 연결 된 실제 컨트롤러의 수를 지정 하는 JSON number 속성 ConnectedControllerCount.
 
 **상태 코드**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+이 API는 다음과 같은 예상 상태 코드를 포함 합니다.
 
-HTTP 상태 코드      | 설명
-:------     | :-----
-200 | 성공
-4XX | 오류 코드
-5XX | 오류 코드
+| HTTP 상태 코드 | Description |
+|------------------|-------------|
+| 200 | Success |
+| 4XX | 오류 코드 |
+| 5XX | 오류 코드 |
 
-## <a name="disconnect-all-physical-controllers-on-the-devkit"></a>devkit에서 모든 실제 컨트롤러 분리
+## <a name="disconnect-all-physical-controllers-on-the-devkit"></a>Devkit의 모든 물리적 컨트롤러 연결 끊기
 
 **요청**
 
-다음 요청을 사용하여 디바이스에서 모든 실제 컨트롤러의 연결을 끊을 수 있습니다.
+다음 요청을 사용 하 여 장치에서 모든 물리적 컨트롤러의 연결을 끊을 수 있습니다.
 
-메서드      | 요청 URI
-:------     | :-----
-DELETE | /ext/remoteinput/controllers
-<br />
+| 방법 | 요청 URI |
+|--------|-------------|
+| Delete | /ext/remoteinput/controllers |
+
 **URI 매개 변수**
 
 - 없음
@@ -73,21 +74,20 @@ DELETE | /ext/remoteinput/controllers
 
 - 없음
 
-**응답**   
+**Response**   
 
 - 없음 
 
 **상태 코드**
 
-이 API에서 예상되는 상태 코드는 다음과 같습니다.
+이 API는 다음과 같은 예상 상태 코드를 포함 합니다.
 
-HTTP 상태 코드      | 설명
-:------     | :-----
-204 | 컨트롤러 연결 끊기에 대한 요청이 성공했습니다.
-4XX | 오류 코드
-5XX | 오류 코드
+| HTTP 상태 코드 | Description |
+|------------------|-------------|
+| 204 | 컨트롤러의 연결을 끊는 요청이 성공 했습니다. |
+| 4XX | 오류 코드 |
+| 5XX | 오류 코드 |
 
-<br />
 **사용 가능한 장치 패밀리**
 
 * Windows Xbox
