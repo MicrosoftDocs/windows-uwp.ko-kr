@@ -5,12 +5,12 @@ ms.date: 05/19/2020
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C#, WinRT, cswinrt, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: ef6fad694dd45e80d462f6a0c5c73ac5539fe16a
-ms.sourcegitcommit: c063d0d130944558afa20181dd294ffe7a187a3f
+ms.openlocfilehash: 0704a7e9c731c6f60c59615b964b51e0ded242c2
+ms.sourcegitcommit: 1022e8819e75484ca0cd94f8baf4f4d11900e0e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97090687"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98206092"
 ---
 # <a name="cwinrt"></a>C#/WinRT
 
@@ -38,7 +38,7 @@ Interop 어셈블리를 NuGet 패키지로 만들어 배포하는 방법을 보�
 
 ### <a name="invoke-cswinrtexe"></a>cswinrt.exe 호출
 
-프로젝트에서 cswinrt.exe를 호출하려면 최신 [C#/WinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CsWinRT/)를 설치합니다. 그런 다음, **C# 라이브러리** 프로젝트에서 C#/WinRT 관련 프로젝트 속성을 설정하여 interop 어셈블리를 생성할 수 있습니다. 다음 프로젝트 조각에서는 **cswinrt** 를 간단히 호출하여 Contoso 네임스페이스의 형식에 대한 프로젝션 원본을 생성하는 방법을 보여 줍니다. 그런 다음, 이러한 원본이 프로젝트 빌드에 포함됩니다.
+프로젝트에서 cswinrt.exe를 호출하려면 최신 [C#/WinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CsWinRT/)를 설치합니다. 그런 다음, **C# 클래스 라이브러리(.NET Core)** 프로젝트에서 C#/WinRT 관련 프로젝트 속성을 설정하여 interop 어셈블리를 생성할 수 있습니다. 다음 프로젝트 조각에서는 **cswinrt** 를 간단히 호출하여 Contoso 네임스페이스의 형식에 대한 프로젝션 원본을 생성하는 방법을 보여 줍니다. 그런 다음, 이러한 원본이 프로젝트 빌드에 포함됩니다.
 
 ```xml
 <PropertyGroup>
@@ -90,7 +90,25 @@ C#/WinRT는 위에서 설명한 대로 Windows에서 형식을 활성화하지 �
 
 C#/WinRT는 [LoadLibrary 대체 검색 순서](/windows/win32/dlls/dynamic-link-library-search-order#alternate-search-order-for-desktop-applications)를 사용하여 구현 DLL을 찾습니다. 이 대체 동작을 사용하는 앱은 구현 DLL을 앱 모듈과 함께 패키지해야 합니다.
 
-## <a name="common-errors-with-net-5"></a>.NET 5+의 일반적인 오류
+## <a name="common-errors-and-troubleshooting"></a>일반 오류 및 문제 해결
+
+- 오류: "Windows 메타데이터가 제공되거나 검색되지 않았습니다."
+
+  `<CsWinRTWindowsMetadata>` 프로젝트 속성을 사용하여 Windows 메타데이터를 지정할 수 있습니다. 예를 들면 다음과 같습니다.
+  ```xml
+  <CsWinRTWindowsMetadata>10.0.19041.0</CsWinRTWindowsMetadata>
+  ```
+  
+- 오류 CS0246: 'Windows' 유형 또는 네임스페이스 이름을 찾을 수 없습니다. using 지시문 또는 어셈블리 참조가 누락되었습니까?와 같은 오류가 표시되는 경우
+
+  이 오류를 해결하려면 특정 Windows 버전을 대상으로 하는 `<TargetFramework>` 속성을 편집합니다. 예를 들면 다음과 같습니다.
+  ```xml
+  <TargetFramework>net5.0-windows10.0.19041.0</TargetFramework>
+  ```
+  `<TargetFramework>` 속성을 지정하는 방법에 대한 자세한 내용은 [Windows 런타임 API 호출](/windows/apps/desktop/modernize/desktop-to-uwp-enhance)에 대한 문서를 참조하세요.
+
+
+### <a name="net-sdk-versioning-errors"></a>.NET SDK 버전 관리 오류
 
 해당 종속성보다 이전의 .NET SDK 버전으로 빌드된 프로젝트에서 다음 오류 또는 경고가 발생할 수 있습니다.
 
