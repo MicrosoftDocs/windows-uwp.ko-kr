@@ -1,27 +1,27 @@
 ---
 ms.assetid: 82ab5fc9-3a7f-4d9e-9882-077ccfdd0ec9
-title: 장치 포털용 사용자 지정 플러그 인 작성
+title: Windows Device Portal용 사용자 지정 플러그 인 작성
 description: Windows 장치 포털을 사용하여 웹 페이지를 호스팅하고 진단 정보를 제공하는 UWP 앱을 작성하는 방법을 알아보세요.
-ms.date: 07/06/2020
+ms.date: 01/08/2021
 ms.topic: article
 keywords: windows 10, uwp, 장치 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: f66650291e2966d6a3a6ac2b5d794006382d2fbf
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c01cc48f78abba95b99dc05e1372640241d9af49
+ms.sourcegitcommit: 02d220ef0ec0ecd7ed733086ba164ee9653d9602
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89170027"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98056006"
 ---
-# <a name="write-a-custom-plugin-for-device-portal"></a>디바이스 포털용 사용자 지정 플러그 인 작성
+# <a name="write-a-custom-plugin-for-windows-device-portal"></a>Windows Device Portal용 사용자 지정 플러그 인 작성
 
-Windows 장치 포털을 사용하여 웹 페이지를 호스팅하고 진단 정보를 제공하는 UWP 앱을 작성하는 방법을 알아보세요.
+WDP(Windows 장치 포털)를 사용하여 웹 페이지를 호스팅하고 진단 정보를 제공하는 UWP 앱을 작성하는 방법을 알아보세요.
 
 Windows 10 크리에이터스 업데이트(버전 1703, 빌드 15063)부터는 장치 포털을 사용하여 앱의 진단 인터페이스를 호스팅할 수 있습니다. 이 문서에서는 [애플리케이션 패키지 매니패스트](/uwp/schemas/appxpackage/appx-package-manifest) 변경, [장치 포털 서비스](./device-portal.md)에 대한 앱의 연결 설정, 수신 요청 처리 등 앱에 대한 DevicePortalProvider를 만들기 위해 필요한 세 가지 요소에 대해 설명합니다.
 
 ## <a name="create-a-new-uwp-app-project"></a>새 UWP앱 프로젝트 만들기
 
-Microsoft Visual Studio에서는 UWP 앱 프로젝트를 만듭니다. **파일 > 새로 만들기 > 프로젝트**로 이동하여 **C#에 대한 비어 있는 앱(Windows 유니버설)** 을 선택하고, **다음**을 클릭합니다. **새 프로젝트 구성** 대화 상자에서 프로젝트 이름을 "DevicePortalProvider"로 지정하고 **만들기**를 클릭합니다. 이 앱은 앱 서비스를 포함하는 앱이 됩니다. Visual Studio를 업데이트하거나 최신 [Windows SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk/)를 설치해야 할 수도 있습니다.
+Microsoft Visual Studio에서는 UWP 앱 프로젝트를 만듭니다. **파일 > 새로 만들기 > 프로젝트** 로 이동하여 **C#에 대한 비어 있는 앱(Windows 유니버설)** 을 선택하고, **다음** 을 클릭합니다. **새 프로젝트 구성** 대화 상자에서 프로젝트 이름을 "DevicePortalProvider"로 지정하고 **만들기** 를 클릭합니다. 이 앱은 앱 서비스를 포함하는 앱이 됩니다. Visual Studio를 업데이트하거나 최신 [Windows SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk/)를 설치해야 할 수도 있습니다.
 
 ## <a name="add-the-deviceportalprovider-extension-to-your-application-package-manifest"></a>애플리케이션 패키지 매니패스트에 devicePortalProvider 확장 추가
 
@@ -172,7 +172,7 @@ if (req.RequestUri.LocalPath.ToLower().Contains("/www/")) {
 ![정적 콘텐츠 파일 복사 구성](images/device-portal/plugin-file-copying.png)
 
 ## <a name="using-existing-device-portal-resources-and-apis"></a>기존 장치 포털 리소스 및 API 사용
-장치 포털 공급자에서 제공하는 정적 콘텐츠는 핵심 장치 포털 서비스와 동일한 포트에 제공됩니다.  즉, 장치 포털에 포함된 기존 JS 및 CSS를 HTML의 `<link>` 및 `<script>` 태그에서 참조할 수 있습니다. 일반적으로 편리한 webbRest 개체에 모든 핵심 장치 포털 REST API를 래핑하는 *rest.js* 및 장치 포털 UI의 나머지 부분에 맞게 콘텐츠의 스타일을 조정할 수 있는 *common.css* 파일을 사용하는 것이 좋습니다. 이러한 작업의 예는 이 샘플에 포함된 *index.html* 페이지에서 볼 수 있습니다. *rest.js*를 사용하여 장치 포털에서 디바이스 이름 및 실행 프로세스를 검색합니다. 
+장치 포털 공급자에서 제공하는 정적 콘텐츠는 핵심 장치 포털 서비스와 동일한 포트에 제공됩니다.  즉, 장치 포털에 포함된 기존 JS 및 CSS를 HTML의 `<link>` 및 `<script>` 태그에서 참조할 수 있습니다. 일반적으로 편리한 webbRest 개체에 모든 핵심 장치 포털 REST API를 래핑하는 *rest.js* 및 장치 포털 UI의 나머지 부분에 맞게 콘텐츠의 스타일을 조정할 수 있는 *common.css* 파일을 사용하는 것이 좋습니다. 이러한 작업의 예는 이 샘플에 포함된 *index.html* 페이지에서 볼 수 있습니다. *rest.js* 를 사용하여 장치 포털에서 디바이스 이름 및 실행 프로세스를 검색합니다. 
 
 ![장치 포털 플러그 인 출력](images/device-portal/plugin-output.png)
  

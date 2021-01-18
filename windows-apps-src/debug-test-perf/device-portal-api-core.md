@@ -1,22 +1,22 @@
 ---
 ms.assetid: bfabd3d5-dd56-4917-9572-f3ba0de4f8c0
-title: 디바이스 포털 핵심 API 참조
+title: Windows 장치 포털 핵심 REST API 참조
 description: 데이터에 액세스하고 디바이스를 프로그래밍 방식으로 제어하는 데 사용할 수 있는 Windows Device Portal 핵심 REST API에 대해 알아봅니다.
 ms.custom: 19H1
-ms.date: 04/19/2019
+ms.date: 01/08/2021
 ms.topic: article
-keywords: windows 10, uwp, 장치 포털
+keywords: windows 10, uwp, 장치 포털, REST
 ms.localizationpriority: medium
-ms.openlocfilehash: c8615620e09d6f00881c1bb229d98f876a95978c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 33e914d124520b8f4eacd120c191ed63715a3168
+ms.sourcegitcommit: 02d220ef0ec0ecd7ed733086ba164ee9653d9602
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173617"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98056056"
 ---
-# <a name="device-portal-core-api-reference"></a>디바이스 포털 핵심 API 참조
+# <a name="windows-device-portal-core-rest-api-reference"></a>Windows 장치 포털 핵심 REST API 참조
 
-모든 장치 포털의 기능은 개발자가 직접 액세스 리소스를 호출하고 디바이스를 프로그래밍 방식으로 컨트롤할 수 있는 REST API를 기반으로 구축되어 있습니다.
+모든 WDP(Windows 장치 포털)의 기능은 개발자가 직접 액세스 리소스를 호출하고 디바이스를 프로그래밍 방식으로 컨트롤할 수 있는 REST API를 기반으로 구축되어 있습니다.
 
 ## <a name="app-deployment"></a>앱 배포
 
@@ -534,7 +534,7 @@ ms.locfileid: "89173617"
     },...
 ]}
 ```
-이 시스템의 오디오에 디바이스를 사용할 수 있는 경우 *AudioConnectionStatus* 필드가 표시됩니다. (정책 및 선택적 구성 요소에 따라 달라질 수 있습니다.) *AudioConnectionStatus*는 "Connected" 또는 "Disconnected"입니다.
+이 시스템의 오디오에 디바이스를 사용할 수 있는 경우 *AudioConnectionStatus* 필드가 표시됩니다. (정책 및 선택적 구성 요소에 따라 달라질 수 있습니다.) *AudioConnectionStatus* 는 "Connected" 또는 "Disconnected"입니다.
 
 ---
 ### <a name="get-a-list-of-available-bluetooth-devices"></a>사용 가능한 Bluetooth 디바이스 목록 가져오기
@@ -1375,7 +1375,7 @@ ms.locfileid: "89173617"
 | autoreboot   | (**선택**) True 또는 false입니다. 실패 또는 잠긴 후 시스템을 자동으로 다시 시작하는지 여부를 나타냅니다. |
 | dumptype   | (**선택**) 덤프 유형입니다. 지원되는 값은 [CrashDumpType 열거](/previous-versions/azure/reference/dn802457(v=azure.100))를 참조하세요.|
 | maxdumpcount   | (**선택**) 저장할 최대 덤프 수입니다. |
-| overwrite   | (**선택**) True 또는 false입니다. *maxdumpcount*에 의해 지정된 덤프 카운터 한도에 도달한 경우 이전 덤프를 덮어쓸지 여부를 나타냅니다. |
+| overwrite   | (**선택**) True 또는 false입니다. *maxdumpcount* 에 의해 지정된 덤프 카운터 한도에 도달한 경우 이전 덤프를 덮어쓸지 여부를 나타냅니다. |
 
 **요청 헤더**
 
@@ -1457,7 +1457,7 @@ ms.locfileid: "89173617"
 
 | 명령 | 설명 |
 | :----- | :----- |
-| provider *{guid}* enable *{level}* | 지정된 수준에서 *{guid}* (괄호 없음)로 표시된 공급자를 사용하도록 설정합니다. 여기서 *{level}* 은 1(가장 대략적인 정보)부터 5(자세한 정보)까지의 **int**입니다. |
+| provider *{guid}* enable *{level}* | 지정된 수준에서 *{guid}* (괄호 없음)로 표시된 공급자를 사용하도록 설정합니다. 여기서 *{level}* 은 1(가장 대략적인 정보)부터 5(자세한 정보)까지의 **int** 입니다. |
 | provider *{guid}* disable | *{guid}* (괄호 없음)로 표시된 공급자를 사용하지 않도록 설정합니다. |
 
 이 응답은 서버에서 클라이언트로 전송됩니다. 텍스트로 전송되며 JSON을 구문 분석하여 다음 형식을 가져옵니다.
@@ -2841,7 +2841,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | URI 매개 변수 | 설명 |
 | :---          | :--- |
 | 패키지   | (**필수**) 중지하려는 앱 패키지의 전체 이름입니다. 이 값은 hex64로 인코드되어야 합니다. |
-| forcestop   | (**선택**) 값 **yes**는 시스템이 모든 프로세스를 강제로 중지함을 나타냅니다. |
+| forcestop   | (**선택**) 값 **yes** 는 시스템이 모든 프로세스를 강제로 중지함을 나타냅니다. |
 
 **요청 헤더**
 
@@ -3028,10 +3028,10 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | :---          | :--- |
 | AdapterName | (**필수**) 네트워크 인터페이스 GUID입니다. |
 | IP 주소 | 설정할 고정 IP 주소입니다. |
-| SubnetMask | (*IPAddress*가 null이 아닌 경우 **필수**) 정적 서브넷 마스크입니다. |
-| DefaultGateway | (*IPAddress*가 null이 아닌 경우 **필수**) 정적 기본 게이트웨이입니다. |
-| PrimaryDNS | (*IPAddress*가 null이 아닌 경우 **필수**) 설정할 기본 DNS입니다. |
-| SecondayDNS | (*PrimaryDNS*가 null이 아닌 경우 **필수**) 설정할 정적 보조 DNS입니다. |
+| SubnetMask | (*IPAddress* 가 null이 아닌 경우 **필수**) 정적 서브넷 마스크입니다. |
+| DefaultGateway | (*IPAddress* 가 null이 아닌 경우 **필수**) 정적 기본 게이트웨이입니다. |
+| PrimaryDNS | (*IPAddress* 가 null이 아닌 경우 **필수**) 설정할 기본 DNS입니다. |
+| SecondayDNS | (*PrimaryDNS* 가 null이 아닌 경우 **필수**) 설정할 정적 보조 DNS입니다. |
 
 명확하게 하기 위해 인터페이스를 DHCP로 설정하려면 다음과 같이 네트워크의 `AdapterName`만 직렬화합니다.
 
@@ -3163,7 +3163,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 
 **응답**
 
-제공된 *interface*에서 찾은 무선 네트워크 목록입니다. 여기에 포함된 네트워크 세부 정보 형식은 다음과 같습니다.
+제공된 *interface* 에서 찾은 무선 네트워크 목록입니다. 여기에 포함된 네트워크 세부 정보 형식은 다음과 같습니다.
 
 ```json
 {"AvailableNetworks": [
@@ -3224,9 +3224,9 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | :------          | :------ |
 | 인터페이스   | (**필수**) 네트워크 연결에 사용할 네트워크 인터페이스에 대한 GUID입니다. |
 | op   | (**필수**) 수행할 작업을 나타냅니다. 가능한 값은 connect 또는 disconnect입니다.|
-| ssid   | ( ***op* == connect**인 경우 필수) 연결할 SSID입니다. |
+| ssid   | ( ***op* == connect** 인 경우 필수) 연결할 SSID입니다. |
 | 키   | ( ***op* == connect이고 네트워크에 인증이 필요한 경우 필수**) 공유 키입니다. |
-| createprofile | (**필수**) 디바이스에서 네트워크에 대한 프로필을 만듭니다.  이렇게 하면 다음부터 디바이스에서 네트워크에 자동 연결합니다. **예** 또는 **아니요**일 수 있습니다. |
+| createprofile | (**필수**) 디바이스에서 네트워크에 대한 프로필을 만듭니다.  이렇게 하면 다음부터 디바이스에서 네트워크에 자동 연결합니다. **예** 또는 **아니요** 일 수 있습니다. |
 
 **요청 헤더**
 
@@ -3326,7 +3326,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
 | 사용자   | (**필수**) 보고서와 연결된 사용자 이름입니다. |
-| 형식   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
+| 형식   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived** 가 될 수 있습니다. |
 | 이름   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. |
 | file   | (**필수**) 보고서에서 다운로드할 파일의 이름입니다. Base64 인코드되어야 합니다. |
 
@@ -3378,7 +3378,7 @@ DeviceType은 "Windows.Xbox", "Windows.Desktop" 등과 같이 표시됩니다.
 | URI 매개 변수 | 설명 |
 | :------          | :------ |
 | 사용자   | (**필수**) 보고서와 연결된 사용자입니다. |
-| 형식   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived**가 될 수 있습니다. |
+| 형식   | (**필수**) 보고서의 유형입니다. **queried** 또는 **archived** 가 될 수 있습니다. |
 | 이름   | (**필수**) 보고서의 이름입니다. Base64 인코드되어야 합니다. |
 
 **요청 헤더**
@@ -4216,7 +4216,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | URI 매개 변수 | 설명 |
 | :------     | :----- |
-| knownfolderid | (**필수**) 원하는 파일 목록이 있는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. |
+| knownfolderid | (**필수**) 원하는 파일 목록이 있는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData** 를 사용합니다. |
 | packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
 | 경로 | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
 
@@ -4276,7 +4276,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | URI 매개 변수 | 설명 |
 | :------     | :----- |
-| knownfolderid | (**필수**) 파일을 다운로드하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. |
+| knownfolderid | (**필수**) 파일을 다운로드하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData** 를 사용합니다. |
 | 파일 이름 | (**필수**) 다운로드할 파일의 이름입니다. |
 | packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 패키지 전체 이름입니다. |
 | 경로 | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
@@ -4326,7 +4326,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | URI 매개 변수 | 설명 |
 | :------     | :----- |
-| knownfolderid | (**필수**) 파일이 위치한 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. |
+| knownfolderid | (**필수**) 파일이 위치한 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData** 를 사용합니다. |
 | 파일 이름 | (**필수**) 이름을 변경할 원래 파일의 이름입니다. |
 | newfilename | (**필수**) 파일의 새 이름입니다.|
 | packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
@@ -4378,7 +4378,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | URI 매개 변수 | 설명 |
 | :------     | :----- |
-| knownfolderid | (**필수**) 파일을 삭제하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. |
+| knownfolderid | (**필수**) 파일을 삭제하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData** 를 사용합니다. |
 | 파일 이름 | (**필수**) 삭제할 파일의 이름입니다. |
 | packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
 | 경로 | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
@@ -4429,7 +4429,7 @@ DNS-SD 알림에 태그를 추가합니다.
 
 | URI 매개 변수 | 설명 |
 | :------     | :----- |
-| knownfolderid | (**필수**) 파일을 업로드하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData**를 사용합니다. |
+| knownfolderid | (**필수**) 파일을 업로드하려는 최상위 디렉터리입니다. 테스트용으로 로드된 앱에 액세스하려면 **LocalAppData** 를 사용합니다. |
 | packagefullname | ( ***knownfolderid* == LocalAppData인 경우 필수**) 관심 있는 앱의 패키지 전체 이름입니다. |
 | 경로 | (**선택**) 위에서 지정된 폴더 또는 패키지 내의 하위 디렉터리입니다. |
 

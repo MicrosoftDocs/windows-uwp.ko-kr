@@ -10,12 +10,12 @@ design-contact: kimsea
 dev-contact: ranjeshj
 ms.custom: 20H2
 ms.localizationpriority: medium
-ms.openlocfilehash: 422d2cb0874abe2fbe767a75d718cd1f0637ccee
-ms.sourcegitcommit: b99fe39126fbb457c3690312641f57d22ba7c8b6
+ms.openlocfilehash: f790e4ed1d16ac42c95f9a835a3b9cc7f3598190
+ms.sourcegitcommit: afc4ff2c89f148d32073ab1cc42063ccdc573a8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96604960"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104544"
 ---
 # <a name="infobar"></a>InfoBar
 InfoBar 컨트롤은 사용자에게 눈에 잘 띄지만 방해가 되지 않는 앱 전체의 상태 메시지를 표시하기 위한 것입니다. 표시되는 메시지 유형뿐만 아니라 사용자 고유의 동작 호출 또는 하이퍼링크 단추를 포함하는 옵션을 쉽게 표시할 수 있는 심각도 수준이 내장되어 있습니다. InfoBar는 다른 UI 콘텐츠와 인라인되어 있기 때문에 사용자가 컨트롤을 항상 표시하거나 닫을 수 있는 옵션이 있습니다. 
@@ -182,7 +182,7 @@ public MainPage()
 
 ### <a name="add-an-action-button"></a>작업 단추 추가
 
-[ButtonBase](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Primitives.ButtonBase)를 상속하는 고유의 단추를 정의하고 ActionButton 속성에서 이를 설정하여 작업 단추를 추가할 수 있습니다. 사용자 지정 스타일은 일관성과 접근성을 위해 [Button](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Button) 및 [HyperlinkButton](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton) 유형의 작업 단추에 적용됩니다. ActionButton 속성 외에도 사용자 지정 콘텐츠를 통해 작업 단추를 추가할 수 있으며 메시지 아래에 나타납니다.
+[ButtonBase](/uwp/api/Windows.UI.Xaml.Controls.Primitives.ButtonBase)를 상속하는 고유의 단추를 정의하고 ActionButton 속성에서 이를 설정하여 작업 단추를 추가할 수 있습니다. 사용자 지정 스타일은 일관성과 접근성을 위해 [Button](/uwp/api/Windows.UI.Xaml.Controls.Button) 및 [HyperlinkButton](/uwp/api/Windows.UI.Xaml.Controls.HyperlinkButton) 유형의 작업 단추에 적용됩니다. ActionButton 속성 외에도 사용자 지정 콘텐츠를 통해 작업 단추를 추가할 수 있으며 메시지 아래에 나타납니다.
 
 
 ```xaml
@@ -240,7 +240,7 @@ Content 속성을 사용하여 XAML 콘텐츠를 InfoBar에 추가할 수 있습
     Message="Your documents are being saved to the cloud"
     IsClosable="False">
     <muxc:InfoBar.Content>
-        <ProgressBar IsIndeterminate="True" Margin="0,0,0,6"/>
+        <muxc:ProgressBar IsIndeterminate="True" Margin="0,0,0,6" MaxWidth="200"/>
     </muxc:InfoBar.Content>
 </muxc:InfoBar>
 ```
@@ -249,13 +249,14 @@ Content 속성을 사용하여 XAML 콘텐츠를 InfoBar에 추가할 수 있습
 
 ### <a name="lightweight-styling"></a>경량 스타일 지정
 
-기본 스타일 및 ControlTemplate를 수정하여 컨트롤에 고유한 모양을 제공할 수 있습니다. 자세한 내용은 [스타일링 컨트롤](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-styles) 문서의 [경량 스타일 지정 섹션](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/xaml-styles#lightweight-styling)을 참조하세요.
+기본 스타일 및 ControlTemplate를 수정하여 컨트롤에 고유한 모양을 제공할 수 있습니다. 사용 가능한 테마 리소스 목록은 InfoBar API 문서의 [컨트롤 스타일 및 템플릿](/windows/winui/api/microsoft.ui.xaml.controls.infobar#control-style-and-template) 섹션을 참조하세요.
+자세한 내용은 [스타일링 컨트롤](./xaml-styles.md) 문서의 [경량 스타일 지정 섹션](./xaml-styles.md#lightweight-styling)을 참조하세요. 
 
-예를 들어, 다음은 페이지의 InfoBar에서 제목 표시줄 글꼴 크기가 22pt가 되도록 합니다.
+예를 들어 다음은 특정 페이지에서 모든 정보성 InfoBar의 배경색을 파란색으로 설정합니다.
 
 ```xaml
 <Page.Resources>
-    <x:Double x:Key="InfoBarTitleFontSize">22</x:Double>
+    <x:SolidColorBrush x:Key="InfoBarInformationalSeverityBackgroundBrush" Color="LightBlue"></x:SolidColorBrush>
 </Page.Resources>
 ```
 ### <a name="canceling-close"></a>닫기 취소

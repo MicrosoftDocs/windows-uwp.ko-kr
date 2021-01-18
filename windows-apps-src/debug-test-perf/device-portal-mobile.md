@@ -1,19 +1,19 @@
 ---
 ms.assetid: 5c34c78e-9ff7-477b-87f6-a31367cd3f8b
-title: 모바일용 디바이스 포털
+title: Windows Device Portal for Mobile
 description: Windows Device Portal에서 모바일 디바이스를 원격으로 구성 및 관리하는 방법에 대해 알아봅니다.
-ms.date: 02/08/2017
+ms.date: 01/08/2021
 ms.topic: article
 keywords: windows 10, uwp, 디바이스 포털
 ms.localizationpriority: medium
-ms.openlocfilehash: 29a6f85dfb13e47617138e401c8444cb5b5f6809
-ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
+ms.openlocfilehash: b661c1b8249f4244049a19ecb3ccab865218aab2
+ms.sourcegitcommit: 02d220ef0ec0ecd7ed733086ba164ee9653d9602
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94339581"
+ms.lasthandoff: 01/09/2021
+ms.locfileid: "98055996"
 ---
-# <a name="device-portal-for-mobile"></a>모바일용 디바이스 포털
+# <a name="windows-device-portal-for-mobile"></a>Windows Device Portal for Mobile
 
 Windows 10 버전 1511부터 추가적인 개발자 기능을 모바일 디바이스 패밀리에 사용할 수 있습니다. 이러한 기능은 개발자 모드를 디바이스에서 사용하는 경우에만 사용됩니다.
 
@@ -21,11 +21,11 @@ Windows 10 버전 1511부터 추가적인 개발자 기능을 모바일 디바�
 
 ![디바이스 검색 및 장치 포털 설정의 스크린샷.](images/device-portal/mob-dev-mode-options.png)
 
-## <a name="set-up-device-portal-on-windows-phone"></a>Windows Phone에서 디바이스 포털 설정
+## <a name="set-up-windows-device-portal-on-windows-phone"></a>Windows Phone에서 Windows 장치 포털 설정
 
 ### <a name="turn-on-device-discovery-and-pairing"></a>디바이스 검색 및 페어링 켜기
 
-Device Portal에 연결하려면 휴대폰 설정에서 디바이스 검색 및 Device Portal을 사용하도록 설정해야 합니다. 이렇게 하면 휴대폰을 PC 또는 다른 Windows 10 디바이스와 페어링할 수 있습니다. 두 디바이스는 유선 또는 무선으로 연결하여 동일한 네트워크 서브넷에 연결되거나 USB로 연결되어야 합니다.
+WDP(Windows 장치 포털)에 연결하려면 휴대폰 설정에서 디바이스 검색 및 장치 포털을 사용하도록 설정해야 합니다. 이렇게 하면 휴대폰을 PC 또는 다른 Windows 10 디바이스와 페어링할 수 있습니다. 두 디바이스는 유선 또는 무선으로 연결하여 동일한 네트워크 서브넷에 연결되거나 USB로 연결되어야 합니다.
 
 처음으로 디바이스 포털에 연결할 때 대/소문자가 구분된 6개의 문자로 된 보안 코드를 입력해야 합니다. 이렇게 하면 휴대폰에 액세스할 수 있으며 공격자로부터 보안을 유지할 수 있습니다. 휴대폰의 페어링 단추를 눌러 코드를 생성하고 표시한 다음 브라우저의 텍스트 상자에 6개의 문자를 입력합니다.
 
