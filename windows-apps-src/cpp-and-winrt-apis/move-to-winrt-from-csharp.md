@@ -5,14 +5,17 @@ ms.date: 07/15/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, 프로젝션, 이식, 마이그레이션, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: 353ca9922bc633efa5f53b2c3a3f4d7a4cad5986
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: f107de951c527b9ca4405d1f22870389a219f441
+ms.sourcegitcommit: 2e691ec4998467c8c5525031a00f0213dcce3b6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750619"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98193205"
 ---
 # <a name="move-to-cwinrt-from-c"></a>C#에서 C++/WinRT로 이동
+
+> [!TIP]
+> 이전에 이 항목을 읽었으며 특정 작업을 염두에 두고 다시 읽는 경우 이 항목의 [수행하는 작업을 기준으로 콘텐츠 찾기](#find-content-based-on-the-task-youre-performing) 섹션으로 건너뛸 수 있습니다.
 
 이 항목에서는 [C#](/visualstudio/get-started/csharp) 프로젝트의 소스 코드를 [C++/WinRT](./intro-to-using-cpp-with-winrt.md)의 해당 소스 코드로 이식하는 데 관련된 기술 세부 정보를 포괄적으로 분류합니다.
 
@@ -24,12 +27,28 @@ UWP(유니버설 Windows 플랫폼) 앱 샘플 중 하나를 이식하는 방법
 
 필요한 이식 변경의 종류에 따라 4가지 범주로 그룹화할 수 있습니다.
 
-- [**언어 프로젝션 이식**](#changes-that-involve-the-language-projection). WinRT(Windows 런타임)는 다양한 프로그래밍 언어로 *프로젝션*됩니다. 이러한 언어 프로젝션 각각은 문제의 프로그래밍 언어에 자연스러운 느낌을 주도록 설계되었습니다. C#의 경우 일부 Windows 런타임 형식이 .NET 형식으로 프로젝션됩니다. 예를 들어 [**System.Collections.Generic.IReadOnlyList\<T\>** ](/dotnet/api/system.collections.generic.ireadonlylist-1)를 [**Windows.Foundation.Collections.IVectorView\<T\>** ](/uwp/api/windows.foundation.collections.ivectorview-1)로 다시 변환할 수 있습니다. 또한 C#에서 일부 Windows 런타임 작업은 편리한 C# 언어 기능으로 프로젝션됩니다. 예를 들어 C#에서 `+=` 연산자 구문을 사용하여 이벤트 처리 대리자를 등록합니다. 이에 따라 이러한 언어 기능을 수행되는 기본 작업(이 예에서는 이벤트 등록)으로 다시 변환할 수 있습니다.
+- [**언어 프로젝션 이식**](#changes-that-involve-the-language-projection). WinRT(Windows 런타임)는 다양한 프로그래밍 언어로 *프로젝션* 됩니다. 이러한 언어 프로젝션 각각은 문제의 프로그래밍 언어에 자연스러운 느낌을 주도록 설계되었습니다. C#의 경우 일부 Windows 런타임 형식이 .NET 형식으로 프로젝션됩니다. 예를 들어 [**System.Collections.Generic.IReadOnlyList\<T\>**](/dotnet/api/system.collections.generic.ireadonlylist-1)를 [**Windows.Foundation.Collections.IVectorView\<T\>**](/uwp/api/windows.foundation.collections.ivectorview-1)로 다시 변환할 수 있습니다. 또한 C#에서 일부 Windows 런타임 작업은 편리한 C# 언어 기능으로 프로젝션됩니다. 예를 들어 C#에서 `+=` 연산자 구문을 사용하여 이벤트 처리 대리자를 등록합니다. 이에 따라 이러한 언어 기능을 수행되는 기본 작업(이 예에서는 이벤트 등록)으로 다시 변환할 수 있습니다.
 - [**언어 구문 이식**](#changes-that-involve-the-language-syntax). 이러한 변경 중 대부분은 한 기호를 다른 기호로 바꾸는 간단한 기계적 변환입니다. 예를 들어 점(`.`)을 이중 콜론(`::`)으로 변경합니다.
 - [**언어 프로시저 이식**](#changes-that-involve-procedures-within-the-language). 이러한 변경 중 일부는 단순하고 반복적인 변경일 수 있습니다(예: `myObject.MyProperty`에서 `myObject.MyProperty()`로). 다른 변경은 더 심층적으로 변경해야 합니다(예: **System.Text.StringBuilder** 사용과 관련된 프로시저를 **std::wostringstream** 사용과 관련된 프로시저로 이식).
 - [**C++/WinRT와 관련된 이식 관련 작업**](#porting-related-tasks-that-are-specific-to-cwinrt). Windows 런타임의 특정 세부 정보는 C# 내부에서 암시적으로 처리됩니다. 이러한 세부 정보는 C++/WinRT에서 명시적으로 수행됩니다. 예를 들어 `.idl` 파일을 사용하여 런타임 클래스를 정의합니다.
 
-이 항목의 나머지 부분은 이러한 분류에 따라 구성되어 있습니다.
+이 항목에서 다음에 나오는 작업 기반 인덱스 이후의 나머지 섹션은 위의 분류에 따라 구조화됩니다.
+
+## <a name="find-content-based-on-the-task-youre-performing"></a>수행하는 작업을 기준으로 콘텐츠 찾기
+
+| 작업 | Content |
+| - | - |
+|Windows 런타임 구성 요소(WRC) 작성|특정 기능(또는 특정 API)은 C++에서만 사용할 수 있습니다. 해당 기능을 C++/WinRT WRC의 한 요소로 포함시킨 다음, C# 앱 등에서 WRC를 사용할 수 있습니다. [C++/WinRT를 사용한 Windows 런타임 구성 요소](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt) 및 [Windows 런타임 구성 요소에서 런타임 클래스를 작성하는 경우](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-authoring-a-runtime-class-in-a-windows-runtime-component)를 참조하세요.|
+|비동기 메서드 포팅|C++/WinRT 런타임 클래스에서 비동기 메서드의 첫 번째 줄을 `auto lifetime = get_strong();`으로 지정하는 것이 좋습니다([클래스 멤버 코루틴의 *이* 포인터에 안전하게 액세스](/windows/uwp/cpp-and-winrt-apis/weak-references#safely-accessing-the-this-pointer-in-a-class-member-coroutine) 참조).<br><br>`Task`에서 포팅. <a href="#id_async_action">비동기 작업</a>을 참조하세요.<br>`Task<T>`에서 포팅. <a href="#id_async_operation">비동기 연산</a>을 참조하세요.<br>`async void`에서 포팅. <a href="#id_fire_and_forget">Fire-and-forget 메서드</a>를 참조하세요.|
+|클래스 포팅|먼저 클래스가 런타임 클래스여야 하는지, 아니면 일반 클래스여도 되는지 결정해야 합니다. 이를 결정하는 데 도움이 되는 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)의 맨 첫 부분을 참조하세요. 그런 다음, 아래의 세 행을 참조하세요.|
+|런타임 클래스 포팅|C++ 앱 외부의 기능을 공유하는 클래스 또는 XAML 데이터 바인딩에서 사용되는 클래스를 공유하는 클래스. [Windows 런타임 구성 요소에서 런타임 클래스를 작성하는 경우](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-authoring-a-runtime-class-in-a-windows-runtime-component) 또는 [XAML UI에서 참조할 런타임 클래스를 작성하는 경우](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-authoring-a-runtime-class-to-be-referenced-in-your-xaml-ui)를 참조하세요.<br><br>이러한 링크에는 자세한 설명이 나와 있지만 런타임 클래스는 IDL로 선언되어야 합니다. 프로젝트에 이미 IDL 파일이 포함되어 있는 경우(예: `Project.idl`) 해당 파일에 새 런타임 클래스를 선언하는 것이 좋습니다. IDL에서는 앱 외부에서 사용되거나 XAML에서 사용되는 모든 메서드 및 데이터 멤버를 선언합니다. IDL 파일을 업데이트한 후 다시 빌드하고 프로젝트의 `Generated Files` 폴더에 생성된 스텁 파일(`.h` 및 `.cpp`)을 확인합니다(**솔루션 탐색기** 에서는 프로젝트 노드를 선택한 상태에서 **모든 파일 표시** 를 활성화합니다). 스텁 파일을 프로젝트에 이미 있는 파일과 비교하여 파일을 추가하거나 필요한 경우 함수 시그니처를 추가/업데이트합니다. 스텁 파일 구문은 항상 올바르지만 빌드 오류를 최소화하기 위해 사용하는 것이 좋습니다. 프로젝트의 스텁이 스텁 파일의 스텁과 일치하면 C# 코드를 포팅하여 계속해서 구현할 수 있습니다. |
+|일반 클래스 포팅|런타임 클래스를 작성하지 [않는 경우](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class)를 참조하세요.|
+|작성자 IDL|[Microsoft 인터페이스 정의 언어 3.0 소개](/uwp/midl-3/intro)<br>[XAML UI에서 참조할 런타임 클래스를 작성하는 경우](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-authoring-a-runtime-class-to-be-referenced-in-your-xaml-ui)<br>[XAML 태그에서 개체 사용](/windows/uwp/cpp-and-winrt-apis/binding-property#consuming-objects-from-xaml-markup)<br>[IDL에서 런타임 클래스 정의](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp#define-your-runtime-classes-in-idl)|
+|컬렉션 포팅|[C++/WinRT로 작성된 컬렉션](/windows/uwp/cpp-and-winrt-apis/collections)<br>[XAML 태그에서 데이터 원본을 사용할 수 있도록 만들기](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp#making-a-data-source-available-to-xaml-markup)<br><a href="#id_associative_container">결합형 컨테이너</a><br><a href="#id_vector_member_access">벡터 멤버 액세스</a>|
+|이벤트 포팅|<a href="#id_event_handler_delegate_as_class_member">클래스 멤버인 이벤트 처리기 대리자</a><br><a href="#id_revoke_event_handler_delegate">해지 이벤트 처리기 대리자</a>|
+|메서드 포팅|C#에서: `private async void SampleButton_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e) { ... }`<br>C++/WinRT `.h` 파일로: `fire_and_forget SampleButton_Tapped(IInspectable const&, RoutedEventArgs const&);`<br>C++/WinRT `.cpp` 파일로: `fire_and_forget OcrFileImage::SampleButton_Tapped(IInspectable const&, RoutedEventArgs const&) {...}`<br>|
+|문자열 포팅|[C++/WinRT의 문자열 처리](/windows/uwp/cpp-and-winrt-apis/strings)<br>[ToString](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp#tostring)<br>[문자열 작성](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp#string-building)<br>[문자열 boxing 및 unboxing](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp#boxing-and-unboxing-a-string)|
+|형식 변환(형식 캐스팅)|C#: `o.ToString()`<br>C++/WinRT: `to_hstring(static_cast<int>(o))`<br>또한 [ToString](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp#tostring)도 참조하세요.<br><br>C#: `(Value)o`<br>C++/WinRT: `unbox_value<Value>(o)`<br>unboxing에 실패하는 경우 throw됩니다. 또한 [boxing 및 unboxing](/windows/uwp/cpp-and-winrt-apis/boxing)도 참조하세요.<br><br>C#: `o as Value? ?? fallback`<br>C++/WinRT: `unbox_value_or<Value>(o, fallback)`<br>unboxing에 실패하는 경우 fallback을 반환합니다. 또한 [boxing 및 unboxing](/windows/uwp/cpp-and-winrt-apis/boxing)도 참조하세요.<br><br>C#: `(Class)o`<br>C++/WinRT: `o.as<Class>()`<br>변환이 실패할 경우 throw됩니다.<br><br>C#: `o as Class`<br>C++/WinRT: `o.try_as<Class>()`<br>변환이 실패할 경우 null을 반환합니다.|
 
 ## <a name="changes-that-involve-the-language-projection"></a>언어 프로젝션과 관련된 변경 내용
 
@@ -39,12 +58,12 @@ UWP(유니버설 Windows 플랫폼) 앱 샘플 중 하나를 이식하는 방법
 |프로젝션 네임스페이스|`using System;`|`using namespace Windows::Foundation;`||
 ||`using System.Collections.Generic;`|`using namespace Windows::Foundation::Collections;`||
 |컬렉션 크기|`collection.Count`|`collection.Size()`|[**BuildClipboardFormatsOutputString** 메서드 이식](./clipboard-to-winrt-from-csharp.md#buildclipboardformatsoutputstring)|
-|일반적인 컬렉션 형식|[**IList\<T\>** ](/dotnet/api/system.collections.generic.ilist-1) 및 요소를 추가하는 **Add**.|[**IVector\<T\>** ](/uwp/api/windows.foundation.collections.ivector-1) 및 요소를 추가하는 **Append**. 모든 곳에서 **std::vector**를 사용하는 경우 **push_back**을 사용하여 요소를 추가합니다.||
-|읽기 전용 컬렉션 형식|[**IReadOnlyList\<T\>** ](/dotnet/api/system.collections.generic.ireadonlylist-1)|[**IVectorView\<T\>** ](/uwp/api/windows.foundation.collections.ivectorview-1)|[**BuildClipboardFormatsOutputString** 메서드 이식](./clipboard-to-winrt-from-csharp.md#buildclipboardformatsoutputstring)|
-|클래스 멤버인 이벤트 처리기 대리자|`myObject.EventName += Handler;`|`token = myObject.EventName({ get_weak(), &Class::Handler });`|[**EnableClipboardContentChangedNotifications** 메서드 이식](./clipboard-to-winrt-from-csharp.md#enableclipboardcontentchangednotifications)|
-|해지 이벤트 처리기 대리자|`myObject.EventName -= Handler;`|`myObject.EventName(token);`|[**EnableClipboardContentChangedNotifications** 메서드 이식](./clipboard-to-winrt-from-csharp.md#enableclipboardcontentchangednotifications)|
-|결합형 컨테이너|[**IDictionary\<K, V\>** ](/dotnet/api/system.collections.generic.idictionary-2)|[**IMap\<K, V\>** ](/uwp/api/windows.foundation.collections.imap-2)||
-|벡터 멤버 액세스|`x = v[i];`<br>`v[i] = x;`|`x = v.GetAt(i);`<br>`v.SetAt(i, x);`||
+|일반적인 컬렉션 형식|[**IList\<T\>**](/dotnet/api/system.collections.generic.ilist-1) 및 요소를 추가하는 **Add**.|[**IVector\<T\>**](/uwp/api/windows.foundation.collections.ivector-1) 및 요소를 추가하는 **Append**. 모든 곳에서 **std::vector** 를 사용하는 경우 **push_back** 을 사용하여 요소를 추가합니다.||
+|읽기 전용 컬렉션 형식|[**IReadOnlyList\<T\>**](/dotnet/api/system.collections.generic.ireadonlylist-1)|[**IVectorView\<T\>**](/uwp/api/windows.foundation.collections.ivectorview-1)|[**BuildClipboardFormatsOutputString** 메서드 이식](./clipboard-to-winrt-from-csharp.md#buildclipboardformatsoutputstring)|
+|<a name="id_event_handler_delegate_as_class_member"></a>클래스 멤버인 이벤트 처리기 대리자|`myObject.EventName += Handler;`|`token = myObject.EventName({ get_weak(), &Class::Handler });`|[**EnableClipboardContentChangedNotifications** 메서드 이식](./clipboard-to-winrt-from-csharp.md#enableclipboardcontentchangednotifications)|
+|<a name="id_revoke_event_handler_delegate"></a>해지 이벤트 처리기 대리자|`myObject.EventName -= Handler;`|`myObject.EventName(token);`|[**EnableClipboardContentChangedNotifications** 메서드 이식](./clipboard-to-winrt-from-csharp.md#enableclipboardcontentchangednotifications)|
+|<a name="id_associative_container"></a>결합형 컨테이너|[**IDictionary\<K, V\>**](/dotnet/api/system.collections.generic.idictionary-2)|[**IMap\<K, V\>**](/uwp/api/windows.foundation.collections.imap-2)||
+|<a name="id_vector_member_access"></a>벡터 멤버 액세스|`x = v[i];`<br>`v[i] = x;`|`x = v.GetAt(i);`<br>`v.SetAt(i, x);`||
 
 ### <a name="registerrevoke-an-event-handler"></a>이벤트 처리기 등록/해지
 
@@ -58,7 +77,7 @@ C++/WinRT에는 [C++/WinRT의 대리자를 사용한 이벤트 처리](./handle-
 <Button x:Name="OpenButton" Click="OpenButton_Click" />
 ```
 
-C#에서 **OpenButton_Click** 메서드는 private일 수 있으며, XAML은 여전히 *OpenButton*에서 발생한 [**ButtonBase.Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트에 연결할 수 있습니다.
+C#에서 **OpenButton_Click** 메서드는 private일 수 있으며, XAML은 여전히 *OpenButton* 에서 발생한 [**ButtonBase.Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트에 연결할 수 있습니다.
 
 C++/WinRT에서 *XAML 태그에 등록하려면* **OpenButton_Click** 메서드가 [구현 형식](./author-apis.md)에서 public이어야 합니다. 이벤트 처리기를 명령형 코드에만 등록하는 경우 이벤트 처리기는 public일 필요가 없습니다.
 
@@ -74,7 +93,7 @@ namespace winrt::MyProject::implementation
 };
 ```
 
-또는 등록 XAML 페이지를 구현 형식의 friend로 만들고, **OpenButton_Click**을 private으로 만들 수 있습니다.
+또는 등록 XAML 페이지를 구현 형식의 friend로 만들고, **OpenButton_Click** 을 private으로 만들 수 있습니다.
 
 ```cppwinrt
 namespace winrt::MyProject::implementation
@@ -90,7 +109,7 @@ namespace winrt::MyProject::implementation
 };
 ```
 
-한 가지 마지막 시나리오는 *바인드*를 태그에서 이벤트 처리기로 이식할 C# 프로젝트입니다(이 시나리오에 대한 자세한 배경은 [x:Bind의 함수](../data-binding/function-bindings.md) 참조).
+한 가지 마지막 시나리오는 *바인드* 를 태그에서 이벤트 처리기로 이식할 C# 프로젝트입니다(이 시나리오에 대한 자세한 배경은 [x:Bind의 함수](../data-binding/function-bindings.md) 참조).
 
 ```xaml
 <Button x:Name="OpenButton" Click="{x:Bind OpenButton_Click}" />
@@ -103,7 +122,7 @@ void OpenButton_Click(Object sender, Windows.UI.Xaml.RoutedEventArgs e);
 ```
 
 > [!NOTE]
-> 이를 [Fire and forget](./concurrency-2.md#fire-and-forget)으로 *구현*하더라도 함수를 `void`로 선언합니다.
+> 이를 [Fire and forget](./concurrency-2.md#fire-and-forget)으로 *구현* 하더라도 함수를 `void`로 선언합니다.
 
 ## <a name="changes-that-involve-the-language-syntax"></a>언어 구문과 관련된 변경 내용
 
@@ -111,9 +130,9 @@ void OpenButton_Click(Object sender, Windows.UI.Xaml.RoutedEventArgs e);
 | -------- | -- | --------- | -------- |
 |액세스 한정자|`public \<member\>`|`public:`<br>&nbsp;&nbsp;&nbsp;&nbsp;`\<member\>`|[**Button_Click** 메서드 이식](./clipboard-to-winrt-from-csharp.md#button_click)|
 |데이터 멤버 액세스|`this.variable`|`this->variable`||
-|비동기 작업|`async Task ...`|`IAsyncAction ...`||
-|비동기 연산|`async Task<T> ...`|`IAsyncOperation<T> ...`||
-|fire-and-forget 메서드(비동기 함축)|`async void ...`|`winrt::fire_and_forget ...`|[**CopyButton_Click** 메서드 이식](./clipboard-to-winrt-from-csharp.md#copybutton_click)|
+|<a name="id_async_action"></a>비동기 작업|`async Task ...`|`IAsyncAction ...`| [**IAsyncAction** 인터페이스](/uwp/api/windows.foundation.iasyncaction), [C++/WinRT로 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency) |
+|<a name="id_async_operation"></a>비동기 연산|`async Task<T> ...`|`IAsyncOperation<T> ...`| [**IAsyncOperation** 인터페이스](/uwp/api/windows.foundation.iasyncoperation), [C++/WinRT로 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency) |
+|<a name="id_fire_and_forget"></a>fire-and-forget 메서드(비동기 함축)|`async void ...`|`winrt::fire_and_forget ...`|[**CopyButton_Click** 메서드 포팅](./clipboard-to-winrt-from-csharp.md#copybutton_click), [Fire and forget](/windows/uwp/cpp-and-winrt-apis/concurrency-2#fire-and-forget)|
 |열거형 상수 액세스|`E.Value`|`E::Value`|[**DisplayChangedFormats** 메서드 이식](./clipboard-to-winrt-from-csharp.md#displaychangedformats)|
 |협조적 대기|`await ...`|`co_await ...`|[**CopyButton_Click** 메서드 이식](./clipboard-to-winrt-from-csharp.md#copybutton_click)|
 |프로젝션된 형식 컬렉션(프라이빗 필드)|`private List<MyRuntimeClass> myRuntimeClasses = new List<MyRuntimeClass>();`|`std::vector`<br>`<MyNamespace::MyRuntimeClass>`<br>`m_myRuntimeClasses;`||
@@ -170,7 +189,7 @@ C# 정적 필드는 C++/WinRT 정적 접근자 및/또는 변경자 함수가 �
 |ToString()|`myObject.ToString()`|`winrt::to_hstring(myObject)`|[ToString()](#tostring)|
 |언어 문자열을 Windows 런타임 문자열로 변환|해당 없음|`winrt::hstring{ s }`||
 |문자열 작성|`StringBuilder builder;`<br>`builder.Append(...);`|`std::wostringstream builder;`<br>`builder << ...;`|[문자열 작성](#string-building)|
-|문자열 보간|`$"{i++}) {s.Title}"`|[**winrt::to_hstring**](/uwp/cpp-ref-for-winrt/to-hstring) 및/또는 [**winrt::hstring::operator+** ](/uwp/cpp-ref-for-winrt/hstring#operator-concatenation-operator)|[**OnNavigatedTo** 메서드 이식](./clipboard-to-winrt-from-csharp.md#onnavigatedto)|
+|문자열 보간|`$"{i++}) {s.Title}"`|[**winrt::to_hstring**](/uwp/cpp-ref-for-winrt/to-hstring) 및/또는 [**winrt::hstring::operator+**](/uwp/cpp-ref-for-winrt/hstring#operator-concatenation-operator)|[**OnNavigatedTo** 메서드 이식](./clipboard-to-winrt-from-csharp.md#onnavigatedto)|
 |비교할 빈 문자열|**System.String.Empty**|[**winrt::hstring::empty**](/uwp/cpp-ref-for-winrt/hstring#hstringempty-function)|[**UpdateStatus** 메서드 이식](./clipboard-to-winrt-from-csharp.md#updatestatus)|
 |빈 문자열 만들기|`var myEmptyString = String.Empty;`|`winrt::hstring myEmptyString{ L"" };`||
 |사전 작업|`map[k] = v; // replaces any existing`<br>`v = map[k]; // throws if not present`<br>`map.ContainsKey(k)`|`map.Insert(k, v); // replaces any existing`<br>`v = map.Lookup(k); // throws if not present`<br>`map.HasKey(k)`||
@@ -229,7 +248,7 @@ auto s{ std::to_wstring(i) }; // s is a std::wstring with value L"2".
 | C# | `string result = "hello, " + intValue.ToString();`<br>`string result = $"hello, {intValue}";` | `string result = "status: " + status.ToString();`<br>`string result = $"status: {status}";` |
 | C++/WinRT | `hstring result = L"hello, " + to_hstring(intValue);` | `// must define overload (see below)`<br>`hstring result = L"status: " + to_hstring(status);` |
 
-열거형을 문자열화하는 경우 **winrt::to_hstring**의 구현을 제공해야 합니다.
+열거형을 문자열화하는 경우 **winrt::to_hstring** 의 구현을 제공해야 합니다.
 
 ```cppwinrt
 namespace winrt
@@ -258,7 +277,7 @@ Most recent status is <Run Text="{x:Bind LatestOperation.Status}"/>.
 </TextBlock>
 ```
 
-이러한 바인딩은 bound 속성의 **winrt::to_hstring**을 수행합니다. 두 번째 예제(**StatusEnum**)의 경우 **winrt::to_hstring**에 대한 사용자 고유의 오버로드를 제공해야 합니다. 그렇지 않으면 컴파일러 오류가 발생합니다.
+이러한 바인딩은 bound 속성의 **winrt::to_hstring** 을 수행합니다. 두 번째 예제(**StatusEnum**)의 경우 **winrt::to_hstring** 에 대한 사용자 고유의 오버로드를 제공해야 합니다. 그렇지 않으면 컴파일러 오류가 발생합니다.
 
 [**Footer_Click** 메서드 이식](./clipboard-to-winrt-from-csharp.md#footer_click)도 참조하세요.
 
@@ -346,7 +365,7 @@ C++/CX 및 C#에서는 값 형식에 대한 null 포인터를 unboxing하려고 
 
 문자열은 어떤 방식에서는 값 형식이고, 다른 방식에서는 참조 형식입니다. C# 및 C++/WinRT는 문자열을 다르게 처리합니다.
 
-[**HSTRING**](/windows/win32/winrt/hstring) ABI 형식은 참조 횟수가 계산되는 문자열에 대한 포인터입니다. 그러나 [**IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable)에서 파생되지 않으므로 기술적으로는 *개체*가 아닙니다. 또한 null **HSTRING**은 빈 문자열을 나타냅니다. **IInspectable**에서 파생되지 않은 것에 대한 boxing은 [**IReference\<T\>** ](/uwp/api/windows.foundation.ireference_t_) 안에 래핑하여 수행되며, Windows 런타임에서 표준 구현을 [**PropertyValue**](/uwp/api/windows.foundation.propertyvalue) 개체 형식으로 제공합니다(사용자 지정 형식은 [**PropertyType::OtherType**](/uwp/api/windows.foundation.propertytype)으로 보고됨).
+[**HSTRING**](/windows/win32/winrt/hstring) ABI 형식은 참조 횟수가 계산되는 문자열에 대한 포인터입니다. 그러나 [**IInspectable**](/windows/win32/api/inspectable/nn-inspectable-iinspectable)에서 파생되지 않으므로 기술적으로는 *개체* 가 아닙니다. 또한 null **HSTRING** 은 빈 문자열을 나타냅니다. **IInspectable** 에서 파생되지 않은 것에 대한 boxing은 [**IReference\<T\>**](/uwp/api/windows.foundation.ireference_t_) 안에 래핑하여 수행되며, Windows 런타임에서 표준 구현을 [**PropertyValue**](/uwp/api/windows.foundation.propertyvalue) 개체 형식으로 제공합니다(사용자 지정 형식은 [**PropertyType::OtherType**](/uwp/api/windows.foundation.propertytype)으로 보고됨).
 
 C#은 Windows 런타임 문자열을 참조 형식으로 나타내는 반면, C++/WinRT는 문자열을 값 형식으로 프로젝션합니다. 즉, boxing된 null 문자열은 해당 문자열을 가져온 방식에 따라 다르게 표현될 수 있습니다.
 
@@ -354,7 +373,7 @@ C#은 Windows 런타임 문자열을 참조 형식으로 나타내는 반면, C+
 |-|-|-|
 | 선언 | `object o;`<br>`string s;` | `IInspectable o;`<br>`hstring s;` |
 | 문자열 형식 범주 | 참조 형식 | 값 유형 |
-| null **HSTRING**에서 프로젝션하는 형식 | `""` | `hstring{}` |
+| null **HSTRING** 에서 프로젝션하는 형식 | `""` | `hstring{}` |
 | null 및 `""`가 동일한가요? | 아니요 | 예 |
 | null의 유효성 | `s = null;`<br>`s.Length`에서 NullReferenceException 발생 | `s = hstring{};`<br>`s.size() == 0`(유효) |
 | 개체에 null 문자열을 할당하는 경우 | `o = (string)null;`<br>`o == null` | `o = box_value(hstring{});`<br>`o != nullptr` |
@@ -441,7 +460,7 @@ XAML 데이터 바인딩을 수행하려면 항목 원본에서 **[IIterable](/u
 - **IVector\<IInspectable\>**
 - **IBindableIterable**(요소를 반복하여 프라이빗 컬렉션에 저장)
 
-**IVector\<T\>** 와 같은 제네릭 인터페이스는 런타임에 검색할 수 없습니다. 각 **IVector\<T\>** 에는 **T**의 함수인 다른 IID(인터페이스 식별자)가 있습니다. 모든 개발자는 임의로 **T** 집합을 확장할 수 있으므로 XAML 바인딩 코드는 쿼리할 전체 집합을 알 수 없습니다. **IEnumerable\<T\>** 를 구현하는 모든 CLR 개체에서 **IEnumerable**을 자동으로 구현하므로 이 제한은 C#에서 문제가 되지 않습니다. ABI 수준에서는 **IObservableVector\<T\>** 를 구현하는 모든 개체에서 **IObservableVector\<IInspectable\>** 를 자동으로 구현한다는 것을 의미합니다.
+**IVector\<T\>** 와 같은 제네릭 인터페이스는 런타임에 검색할 수 없습니다. 각 **IVector\<T\>** 에는 **T** 의 함수인 다른 IID(인터페이스 식별자)가 있습니다. 모든 개발자는 임의로 **T** 집합을 확장할 수 있으므로 XAML 바인딩 코드는 쿼리할 전체 집합을 알 수 없습니다. **IEnumerable\<T\>** 를 구현하는 모든 CLR 개체에서 **IEnumerable** 을 자동으로 구현하므로 이 제한은 C#에서 문제가 되지 않습니다. ABI 수준에서는 **IObservableVector\<T\>** 를 구현하는 모든 개체에서 **IObservableVector\<IInspectable\>** 를 자동으로 구현한다는 것을 의미합니다.
 
 C++/WinRT는 이러한 보장을 제공하지 않습니다. C++/WinRT 런타임 클래스에서 **IObservableVector\<T\>** 를 구현하는 경우 **IObservableVector\<IInspectable\>** 의 구현도 어떻게든 제공된다고 가정할 수 없습니다.
 
@@ -481,7 +500,7 @@ private:
 ...
 ```
 
-*m_bookSkus*의 개체에 액세스해야 하는 경우 해당 개체를 **Bookstore::BookSku**로 다시 QI해야 합니다.
+*m_bookSkus* 의 개체에 액세스해야 하는 경우 해당 개체를 **Bookstore::BookSku** 로 다시 QI해야 합니다.
 
 ```cppwinrt
 Widget MyPage::BookstoreViewModel(winrt::hstring title)
@@ -497,7 +516,7 @@ Widget MyPage::BookstoreViewModel(winrt::hstring title)
 
 ### <a name="derived-classes"></a>파생 클래스
 
-런타임 클래스에서 파생하려면 기본 클래스를 *구성*할 수 있어야 합니다. C#에서는 클래스를 구성할 수 있게 하는 특별한 단계를 수행할 필요가 없지만, C++/WinRT는 이를 수행합니다. [unsealed 키워드](/uwp/midl-3/intro#base-classes)를 사용하여 클래스를 기본 클래스로 사용할 수 있도록 지정합니다.
+런타임 클래스에서 파생하려면 기본 클래스를 *구성* 할 수 있어야 합니다. C#에서는 클래스를 구성할 수 있게 하는 특별한 단계를 수행할 필요가 없지만, C++/WinRT는 이를 수행합니다. [unsealed 키워드](/uwp/midl-3/intro#base-classes)를 사용하여 클래스를 기본 클래스로 사용할 수 있도록 지정합니다.
 
 ```idl
 unsealed runtimeclass BasePage : Windows.UI.Xaml.Controls.Page
