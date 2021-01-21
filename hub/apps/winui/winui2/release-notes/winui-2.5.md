@@ -2,13 +2,13 @@
 title: WinUI 2.5 릴리스 정보
 description: 새로운 기능 및 버그 수정이 포함된 WinUI 2.5 릴리스에 대한 정보입니다.
 ms.date: 12/01/2020
-ms.topic: reference
-ms.openlocfilehash: 1fe64ea547b3e8966ea0ec085e77225a3a1895df
-ms.sourcegitcommit: e252ccb4a76c4883c7073083d73007957202b84d
+ms.topic: article
+ms.openlocfilehash: 63cd87caff4425d3a5e29852d84c33e09c68ab84
+ms.sourcegitcommit: 617344ae1a1f5b580c938b61e910d99120b73626
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97657670"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620846"
 ---
 # <a name="windows-ui-library-25"></a>Windows UI 라이브러리 2.5
 

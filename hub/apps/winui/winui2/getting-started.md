@@ -1,15 +1,15 @@
 ---
 title: Windows UI 라이브러리 시작
 description: Windows UI 라이브러리를 설치하고 사용하는 방법입니다.
-ms.topic: reference
+ms.topic: article
 ms.date: 07/15/2020
 keywords: Windows 10, UWP, 도구 키트 SDK
-ms.openlocfilehash: 670254b8ca9ba8641e9adf1410aef918be73f705
-ms.sourcegitcommit: b99fe39126fbb457c3690312641f57d22ba7c8b6
+ms.openlocfilehash: 939da99d7fce59a9f242fe0ce8ed203a3f52eab6
+ms.sourcegitcommit: 617344ae1a1f5b580c938b61e910d99120b73626
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96603840"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620854"
 ---
 # <a name="getting-started-with-the-windows-ui-2x-library"></a>Windows UI 2.x 라이브러리 시작
 

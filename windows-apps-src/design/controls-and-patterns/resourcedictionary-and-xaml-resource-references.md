@@ -9,17 +9,18 @@ label: ResourceDictionary and XAML resource references
 template: detail.hbs
 ms.date: 09/24/2020
 ms.topic: conceptual
+ms.custom: contperf-fy21q1
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 198da0517b5bc1a4d14851e2a2d2aecd072d1de5
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: 93d2c7e3381315d370969b7d5789e92b649012b4
+ms.sourcegitcommit: c0da06081d6b9a0386e61facdf68b28f606367b2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93030166"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98577555"
 ---
 # <a name="resourcedictionary-and-xaml-resource-references"></a>ResourceDictionary 및 XAML 리소스 참조
 
@@ -503,14 +504,14 @@ C\# 또는 Microsoft Visual Basic 코드에서 인덱서([Item](/dotnet/api/syst
 
 병합된 리소스 사전은 런타임에 병합된 사전을 참조하는 기본 리소스 사전의 인덱스 범위에 포함됩니다. 다시 말해 기본 사전의 **Item** 또는 [Lookup](/uwp/api/windows.ui.xaml.resourcedictionary.lookup)을 사용하여 병합된 사전에 실제로 정의된 모든 개체를 찾을 수 있습니다. 이 경우 조회 동작은 구문 분석 시 XAML 조회 동작을 모방합니다. 각각 동일한 키가 있는 개체가 여러 개 병합된 사전에 있는 경우 마지막으로 추가된 사전의 개체가 반환됩니다.
 
-**Add** (C\# 또는 Visual Basic) 또는 [Insert](/uwp/api/windows.ui.xaml.resourcedictionary.insert)(C++/CX)를 호출하여 기존 [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 항목을 추가할 수 있습니다. 즉시 실행 리소스 또는 앱 리소스에 항목을 추가할 수 있습니다. 이러한 API 호출에는 키가 필요하며 이를 통해 **ResourceDictionary** 의 각 항목에 키가 있어야 한다는 요구 사항이 충족됩니다. 그러나 런타임에 **ResourceDictionary** 에 추가하는 항목은 XAML 리소스 참조와 관련이 없습니다. XAML 리소스 참조에 대한 필수 조회는 앱 로드 시 XAML이 처음으로 구문 분석되거나 테마 변경이 검색될 때 발생합니다. 런타임에 컬렉션에 추가된 리소스는 당시에 사용할 수 없으며, **ResourceDictionary** 를 변경해도 여기서 이미 검색된 리소스는 그 값을 변경하더라도 무효화되지 않습니다.
+**Add**(C\# 또는 Visual Basic) 또는 [Insert](/uwp/api/windows.ui.xaml.resourcedictionary.insert)(C++/CX)를 호출하여 기존 [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 항목을 추가할 수 있습니다. 즉시 실행 리소스 또는 앱 리소스에 항목을 추가할 수 있습니다. 이러한 API 호출에는 키가 필요하며 이를 통해 **ResourceDictionary** 의 각 항목에 키가 있어야 한다는 요구 사항이 충족됩니다. 그러나 런타임에 **ResourceDictionary** 에 추가하는 항목은 XAML 리소스 참조와 관련이 없습니다. XAML 리소스 참조에 대한 필수 조회는 앱 로드 시 XAML이 처음으로 구문 분석되거나 테마 변경이 검색될 때 발생합니다. 런타임에 컬렉션에 추가된 리소스는 당시에 사용할 수 없으며, **ResourceDictionary** 를 변경해도 여기서 이미 검색된 리소스는 그 값을 변경하더라도 무효화되지 않습니다.
 
 런타임에 [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary)에서 항목을 제거하거나 항목의 일부 또는 전부를 복사할 수 있으며 다른 작업을 수행할 수도 있습니다. **ResourceDictionary** 멤버 목록은 사용 가능한 API를 나타냅니다. **ResourceDictionary** 에 기본 컬렉션 인터페이스를 지원하는 예상 API가 있으므로 C\# 또는 Visual Basic 및 C++/CX 사용 여부에 따라 해당 API 옵션이 달라집니다.
 
 ## <a name="resourcedictionary-and-localization"></a>ResourceDictionary 및 지역화
 
 
-처음에는 지역화될 문자열이 XAML [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 포함되어 있을 수 있습니다. 이 경우 **ResourceDictionary** 가 아닌 프로젝트 리소스로 이러한 문자열을 저장합니다. XAML에서 문자열을 제거하지 않고 소유 요소에 [x:Uid 지시문](../../xaml-platform/x-uid-directive.md) 값을 제공합니다. 그런 다음 리소스 파일에서 리소스를 정의합니다. 리소스 이름을 *XUIDValue*. *PropertyName* 형식으로 입력하고 지역화되어야 하는 문자열의 리소스 값을 입력합니다.
+처음에는 지역화될 문자열이 XAML [ResourceDictionary](/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 포함되어 있을 수 있습니다. 이 경우 **ResourceDictionary** 가 아닌 프로젝트 리소스로 이러한 문자열을 저장합니다. XAML에서 문자열을 제거하지 않고 소유 요소에 [x:Uid 지시문](../../xaml-platform/x-uid-directive.md) 값을 제공합니다. 그런 다음 리소스 파일에서 리소스를 정의합니다. 리소스 이름을 *XUIDValue*.*PropertyName* 형식으로 입력하고 지역화되어야 하는 문자열의 리소스 값을 입력합니다.
 
 ## <a name="custom-resource-lookup"></a>사용자 지정 리소스 조회
 
