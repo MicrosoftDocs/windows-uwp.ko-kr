@@ -2,13 +2,13 @@
 title: WinUI 릴리스 정보
 description: WinUI 릴리스 정보 색인입니다.
 ms.date: 07/15/2020
-ms.topic: reference
-ms.openlocfilehash: 7038a61e0bf7047c49295b8c4482e92f113f647d
-ms.sourcegitcommit: 03308873eafd0f768e1c518f4d1cc4e4fe0b70b7
+ms.topic: article
+ms.openlocfilehash: b2e337065df48cadd54332b9d22bda963fbc4a29
+ms.sourcegitcommit: 617344ae1a1f5b580c938b61e910d99120b73626
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96606018"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620830"
 ---
 # <a name="windows-ui-library-2x-release-notes"></a>Windows UI 라이브러리 2.x 릴리스 정보
 
