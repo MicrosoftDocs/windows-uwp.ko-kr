@@ -2,16 +2,16 @@
 ms.assetid: B071F6BC-49D3-4E74-98EA-0461A1A55EFB
 description: 앱 및 추가 기능의 카탈로그가 있는 경우 Microsoft Store collection API 및 Microsoft Store 구매 API를 사용 하 여 서비스에서 이러한 제품에 대 한 소유권 정보에 액세스할 수 있습니다.
 title: 서비스에서 제품 권한 관리
-ms.date: 08/01/2018
+ms.date: 01/21/2021
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store collection API, Microsoft Store 구매 API, 제품 보기, 제품 부여
 ms.localizationpriority: medium
-ms.openlocfilehash: 1447a8f7a689b3405ac1ebb8807c1c68b81294db
-ms.sourcegitcommit: ad33b2b191c7e62dc68a46bd349a87ff8ca7cef8
+ms.openlocfilehash: 7674a9b966510d914850e1fc8b2c8ca531f64a20
+ms.sourcegitcommit: 069f5ab4be85a7d638fc2a426afaed824e5dfeae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98108926"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98668737"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>서비스에서 제품 권한 관리
 
@@ -45,9 +45,6 @@ ms.locfileid: "98108926"
 
 Microsoft Store collection API 또는 구매 API를 사용 하려면 먼저 Azure AD 웹 응용 프로그램을 만들고 응용 프로그램의 테 넌 트 ID와 응용 프로그램 ID를 검색 한 다음 키를 생성 해야 합니다. Azure AD 웹 응용 프로그램은 Microsoft Store collection API 또는 purchase API를 호출 하려는 서비스를 나타냅니다. API를 호출 하는 데 필요한 Azure AD 액세스 토큰을 생성 하려면 테 넌 트 ID, 응용 프로그램 ID 및 키가 필요 합니다.
 
-> [!NOTE]
-> 이 섹션의 작업은 한 번만 수행 하면 됩니다. Azure AD 응용 프로그램 매니페스트를 업데이트 하 고 테 넌 트 ID, 응용 프로그램 ID 및 클라이언트 암호를 갖고 있는 경우 언제 든 지 새 Azure AD 액세스 토큰을 만들어야 하는 값을 다시 사용할 수 있습니다.
-
 1.  아직 수행 하지 않은 경우 [Azure Active Directory와 응용 프로그램 통합](/azure/active-directory/develop/active-directory-integrating-applications) 의 지침에 따라 Azure AD에 **웹 앱/** a p i 응용 프로그램을 등록 합니다.
     > [!NOTE]
     > 응용 프로그램을 등록 하는 경우 응용 프로그램에 대 한 키 ( *클라이언트 암호* 라고도 함)를 검색할 수 있도록 응용 프로그램 유형으로 **웹 앱/** a p i를 선택 해야 합니다. Microsoft Store collection API 또는 purchase API를 호출 하려면 이후 단계에서 Azure AD에서 액세스 토큰을 요청할 때 클라이언트 암호를 제공 해야 합니다.
@@ -55,19 +52,6 @@ Microsoft Store collection API 또는 구매 API를 사용 하려면 먼저 Azur
 2.  [Azure 관리 포털](https://portal.azure.com/)에서 **Azure Active Directory** 로 이동 합니다. 디렉터리를 선택 하 고 왼쪽 탐색 창에서 **앱 등록** 을 클릭 한 다음 응용 프로그램을 선택 합니다.
 3.  응용 프로그램의 기본 등록 페이지로 이동 합니다. 이 페이지에서 나중에 사용 하기 위해 **응용 프로그램 ID** 값을 복사 합니다.
 4.  나중에 필요 하 게 될 키를 만듭니다 (모두 *클라이언트 비밀* 이라고 함). 왼쪽 창에서 **설정** 을 클릭 한 다음 **키** 를 클릭 합니다. 이 페이지에서 [키를 만드는](/azure/active-directory/develop/active-directory-integrating-applications#to-add-application-credentials-or-permissions-to-access-web-apis)단계를 완료 합니다. 나중에 사용 하기 위해이 키를 복사 합니다.
-5.  [응용 프로그램 매니페스트에](/azure/active-directory/develop/active-directory-application-manifest)필요한 대상 그룹 uri를 몇 개 추가 합니다. 왼쪽 창에서 **매니페스트** 를 클릭합니다. **편집** 을 클릭 하 고 `"identifierUris"` 섹션을 다음 텍스트로 바꾼 후 **저장** 을 클릭 합니다.
-
-    ```json
-    "accessTokenAcceptedVersion": 1,
-    "identifierUris": [
-        "https://onestore.microsoft.com",
-        "https://onestore.microsoft.com/b2b/keys/create/collections",
-        "https://onestore.microsoft.com/b2b/keys/create/purchase"
-        ],
-    "signInAudience": "AzureADMyOrg",
-    ```
-
-    이러한 문자열은 응용 프로그램에서 지 원하는 대상을 나타냅니다. 이후 단계에서는 이러한 각 대상 값에 연결 된 Azure AD 액세스 토큰을 만듭니다.
 
 <span id="step-2"/>
 
@@ -76,7 +60,7 @@ Microsoft Store collection API 또는 구매 API를 사용 하려면 먼저 Azur
 Microsoft Store collection API 또는 구매 API를 사용 하 여 앱 또는 추가 기능에 대 한 소유권 및 구매를 구성 하려면 먼저 Azure AD 응용 프로그램 ID를 파트너 센터의 앱 (또는 추가 기능을 포함 하는 앱)에 연결 해야 합니다.
 
 > [!NOTE]
-> 이 작업은 한 번만 수행 하면 됩니다.
+> 이 작업은 한 번만 수행 하면 됩니다. 테 넌 트 ID, 응용 프로그램 ID 및 클라이언트 암호를 만든 후에는 새 Azure AD 액세스 토큰을 만들어야 할 때마다 이러한 값을 다시 사용할 수 있습니다.
 
 1.  [파트너 센터](https://partner.microsoft.com/dashboard) 에 로그인 하 고 앱을 선택 합니다.
 2.  **서비스** &gt; **제품 컬렉션 및 구매** 페이지로 이동 하 여 사용 가능한 **클라이언트 id** 필드 중 하나에 Azure AD 응용 프로그램 id를 입력 합니다.
@@ -94,7 +78,7 @@ Microsoft Store ID 키를 검색 하거나 Microsoft Store collection API 또는
 
 ### <a name="understanding-the-different-tokens-and-audience-uris"></a>다른 토큰 및 대상 Uri 이해
 
-Microsoft Store collection API 또는 purchase API에서 호출 하려는 방법에 따라 두 개 또는 세 개의 다른 토큰을 만들어야 합니다. 각 액세스 토큰은 다른 대상 URI와 연결 됩니다 (이전에 `"identifierUris"` AZURE AD 응용 프로그램 매니페스트의 섹션에 추가한 uri와 동일).
+Microsoft Store collection API 또는 purchase API에서 호출 하려는 방법에 따라 두 개 또는 세 개의 다른 토큰을 만들어야 합니다. 각 액세스 토큰은 다른 대상 URI와 연결 됩니다.
 
   * 모든 경우에 대상 URI를 사용 하 여 토큰을 만들어야 합니다 `https://onestore.microsoft.com` . 이후 단계에서이 토큰을 Microsoft Store collection API 또는 purchase API의 메서드 **인증** 헤더에 전달 합니다.
       > [!IMPORTANT]
