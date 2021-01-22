@@ -3,12 +3,12 @@ title: WinUI 3 Preview 3(2020년 11월)
 description: WinUI 3 Preview 3 릴리스에 대한 개요입니다.
 ms.date: 11/17/2020
 ms.topic: article
-ms.openlocfilehash: 69855aea647b608d9253e4f71b6d7d38917def61
-ms.sourcegitcommit: a4ca8ba143862411cd1104515cfeb98f1bcdb780
+ms.openlocfilehash: cbda5dc7ea58111ef40c0b9f92aef192bd61e422
+ms.sourcegitcommit: 617344ae1a1f5b580c938b61e910d99120b73626
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96857424"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620838"
 ---
 # <a name="windows-ui-library-3-preview-3-november-2020"></a>Windows UI 라이브러리 3 Preview 3(2020년 11월)
 
@@ -37,9 +37,11 @@ WinUI 3 Preview 3에는 WinUI 기반 사용자 인터페이스를 사용하여 �
 2. [Visual Studio 2019 버전 16.9 Preview](https://visualstudio.microsoft.com/vs/preview/)를 설치합니다.
 
     Visual Studio를 설치할 때 다음 워크로드를 포함해야 합니다.
-    - .NET 데스크톱 개발(.NET 5도 설치됨)
     - 유니버설 Windows 플랫폼 개발
 
+    .NET 앱을 빌드하려면 다음 워크로드도 포함해야 합니다.
+    - .NET 데스크톱 개발(.NET 5도 설치됨)
+    
     C++ 앱을 빌드하려면 다음 워크로드도 포함해야 합니다.
     - C++를 사용한 데스크톱 개발
     - 유니버설 Windows 플랫폼 워크로드용 선택적 *C++(v142) 유니버설 Windows 플랫폼 도구* 구성 요소(오른쪽 창에 있는 "유니버설 Windows 플랫폼 개발" 섹션의 "설치 세부 정보" 참조)
