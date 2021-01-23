@@ -7,12 +7,12 @@ manager: jken
 ms.topic: article
 keywords: windows, pwa, android, cordova,가 나 ic, phonegap, 하이브리드 웹 앱의 android
 ms.date: 04/28/2020
-ms.openlocfilehash: 482fd02ed7b5d978d81ec52309006034f70b7e47
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 4559e795b4a9737bf68129790029f6f9136b4f81
+ms.sourcegitcommit: 99f5544d9642c87a16e3bd21f76c2fcbc97c20d2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89163987"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "98743596"
 ---
 # <a name="get-started-developing-a-pwa-or-hybrid-web-app-for-android"></a>Android 용 PWA 또는 하이브리드 웹 앱 개발 시작
 
@@ -49,13 +49,13 @@ PWAs와 하이브리드 웹 앱은 네이티브 Android 앱과 매우 유사 합
 
 Cordova의 인기 배포판에는 다음 두 가지가 있습니다.
 
-- [PhoneGap](https://phonegap.com/)
+- [PhoneGap](https://blog.phonegap.com/update-for-customers-using-phonegap-and-phonegap-build-cc701c77502c): Adobe에서 지원이 중단 되었습니다.
 
 - [Ionic](https://ionicframework.com/)
 
 ## <a name="adobe-phonegap"></a>Adobe PhoneGap
 
-[PhoneGap](https://phonegap.com/): [명령줄](http://docs.phonegap.com/getting-started/1-install-phonegap/cli/), [데스크톱 앱](https://phonegap.com/products#desktop-app-section), [PhoneGap 빌드](https://build.phonegap.com/)등의 추가 도구를 사용 하 여 Cordova를 지 원하는 adobe에서 지원 되는 프레임 워크 이며, 로컬 컴퓨터에 네이티브 sdk를 설치할 필요 없이 네이티브 앱을 빌드하는 Adobe 서버에 코드를 업로드할 수 있게 해 주는 서비스입니다. 이를 통해 Windows 컴퓨터를 사용 하 여 iOS 앱을 빌드하는 등의 작업을 수행할 수 있습니다.
+최근 지원이 중단 되었습니다. 자세한 내용은 [Adobe의이 블로그 게시물](https://blog.phonegap.com/update-for-customers-using-phonegap-and-phonegap-build-cc701c77502c)을 참조 하세요.
 
 ### <a name="install-phonegap"></a>PhoneGap 설치
 
@@ -120,7 +120,7 @@ ionic serve
 
 ## <a name="create-a-new-project-with-ionic-capacitor-and-angular"></a>새 프로젝트를 만듭니다.
 
-명령줄에서 다음을 입력 하 여 기능을 설치 합니다.
+명령줄에서 다음을 입력 하 여 Cordova-Res를 설치 합니다.
 
 ```bash
 npm install -g @ionic/cli native-run cordova-res
