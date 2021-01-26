@@ -6,12 +6,12 @@ ms.date: 07/10/2017
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 코드 예제, python
 ms.localizationpriority: medium
-ms.openlocfilehash: f551a7de85e493f4fbc1a027fb3ab9c3ca2dd598
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: 3fd29164dd91199b1557496985577ea956893250
+ms.sourcegitcommit: 7e8dfd83b181fe720b4074cb42adc908e1ba5e44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89363866"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98811258"
 ---
 # <a name="python-sample-submissions-for-apps-add-ons-and-flights"></a>Python 샘플: 앱, 추가 기능 및 플라이트 제출
 
@@ -57,7 +57,7 @@ ms.locfileid: "89363866"
 1. 시작 하기 위해이 예제는 [지정 된 앱에 대 한 데이터를 가져옵니다](get-an-app.md).
 2. 그런 다음 [앱에 대 한 보류 중인 제출](delete-an-app-submission.md)(있는 경우)을 삭제 합니다.
 3. 그런 다음 [앱에 대 한 새 제출을 만듭니다](create-an-app-submission.md) . 새 제출은 마지막으로 게시 된 제출의 복사본입니다.
-4. 새 제출에 대 한 일부 세부 정보를 변경 하 고 Azure Blob storage에 제출할 새 패키지를 업로드 합니다.
+4. 새 전송에 대 한 일부 세부 정보를 변경 하 고 Azure Blob Storage 전송에 대 한 새 패키지를 업로드 합니다.
 5. 그런 다음 [업데이트를 업데이트](update-an-app-submission.md) 한 후 파트너 센터에 새 제출을 [커밋합니다](commit-an-app-submission.md) .
 6. 마지막으로, 전송이 성공적으로 커밋될 때까지 [새 제출의 상태](get-status-for-an-app-submission.md) 를 주기적으로 확인 합니다.
 
@@ -72,7 +72,7 @@ ms.locfileid: "89363866"
 1. 시작 하기 위해이 예제에서는 [지정 된 추가 기능에 대 한 데이터를 가져옵니다](get-an-add-on.md).
 2. 그런 다음 [추가 기능에 대 한 보류 중인 제출을 삭제](delete-an-add-on-submission.md)합니다 (있는 경우).
 3. 그런 다음 [추가 기능에 대 한 새 제출을 만듭니다](create-an-add-on-submission.md) . 새 제출은 마지막으로 게시 된 제출의 복사본입니다.
-4. Azure Blob storage에 제출할 수 있는 아이콘을 포함 하는 ZIP 보관 파일을 업로드 합니다. 자세한 내용은 [추가 기능 제출 만들기](manage-add-on-submissions.md#create-an-add-on-submission)에서 ZIP 보관 파일을 Azure Blob 저장소에 업로드 하는 방법에 대 한 관련 지침을 참조 하세요.
+4. Azure Blob Storage 전송에 대 한 아이콘을 포함 하는 ZIP 보관 파일을 업로드 합니다. 자세한 내용은 [추가 기능 제출 만들기](manage-add-on-submissions.md#create-an-add-on-submission)의 AZURE BLOB STORAGE에 ZIP 보관 파일 업로드와 관련 된 지침을 참조 하세요.
 5. 그런 다음 [업데이트를 업데이트](update-an-add-on-submission.md) 한 후 파트너 센터에 새 제출을 [커밋합니다](commit-an-add-on-submission.md) .
 6. 마지막으로, 전송이 성공적으로 커밋될 때까지 [새 제출의 상태](get-status-for-an-add-on-submission.md) 를 주기적으로 확인 합니다.
 
@@ -87,7 +87,7 @@ ms.locfileid: "89363866"
 1. 시작 하기 위해이 예제에서는 [지정 된 패키지 항공편에 대 한 데이터를 가져옵니다](get-a-flight.md).
 2. 그런 다음, [패키지 비행에 대해 보류 중인 제출](delete-a-flight-submission.md)(있는 경우)을 삭제 합니다.
 3. 그런 다음 [패키지 항공편에 대 한 새 제출을 만듭니다](create-a-flight-submission.md) (새 제출은 마지막으로 게시 된 제출의 복사본).
-4. Azure Blob storage에 제출할 새 패키지를 업로드 합니다. 자세한 내용은 [패키지 비행 전송 만들기](manage-flight-submissions.md#create-a-package-flight-submission)에서 ZIP 보관 파일을 Azure Blob 저장소에 업로드 하는 방법에 대 한 관련 지침을 참조 하세요.
+4. Azure Blob Storage 전송에 대 한 새 패키지를 업로드 합니다. 자세한 내용은 [패키지 비행 전송 만들기](manage-flight-submissions.md#create-a-package-flight-submission)에서 AZURE BLOB STORAGE에 ZIP 보관 파일 업로드와 관련 된 지침을 참조 하세요.
 5. 그런 다음 [업데이트를 업데이트](update-a-flight-submission.md) 한 후 파트너 센터에 새 제출을 [커밋합니다](commit-a-flight-submission.md) .
 6. 마지막으로, 전송이 성공적으로 커밋될 때까지 [새 제출의 상태](get-status-for-a-flight-submission.md) 를 주기적으로 확인 합니다.
 

@@ -5,12 +5,12 @@ ms.date: 10/16/2020
 ms.topic: article
 keywords: windows 10, uwp, 애니메이션
 ms.localizationpriority: medium
-ms.openlocfilehash: 75adcd2f762fd4314d7b852811760d523ef522aa
-ms.sourcegitcommit: fe21402578a1f434769866dd3c78aac63dbea5ea
+ms.openlocfilehash: 29fdffd2ab5c871fe2e455e8811615a96368259a
+ms.sourcegitcommit: 7e8dfd83b181fe720b4074cb42adc908e1ba5e44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92152415"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98811239"
 ---
 # <a name="relation-based-animations"></a>관계 기반 애니메이션
 
@@ -79,7 +79,7 @@ KeyFrameAnimation.InsertExpressionKeyFrame(Single, ExpressionNode)
 
 그러나 Expressionanimations과 달리 Expressionanimations Key프레임 애니메이션을 시작할 때 한 번만 평가 됩니다. ExpressionAnimation은 문자열 (Expressionanimation를 사용 하는 경우 Expressionanimation) 대신 키 프레임의 값으로 전달 하지 않습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 이제 식 사용 예를 살펴보겠습니다. 특히 Windows UI 샘플 갤러리의 PropertySet 샘플을 살펴보겠습니다. 파란색 구슬의 궤도 동작 동작을 관리 하는 식을 살펴보겠습니다.
 
@@ -95,7 +95,7 @@ KeyFrameAnimation.InsertExpressionKeyFrame(Single, ExpressionNode)
 
 이 수식에서는 PropertySet에서 참조 해야 하는 두 가지 속성이 있습니다. 하나는 centerpoint 오프셋이 고 다른 하나는 회전입니다.
 
-```
+```csharp
 var propSetCenterPoint =
 _propertySet.GetReference().GetVector3Property("CenterPointOffset");
 
@@ -105,7 +105,7 @@ var propSetRotation = _propertySet.GetReference().GetScalarProperty("Rotation");
 
 다음으로 실제 orbiting 회전에 대해 계정을 지정 하는 Vector3 구성 요소를 정의 해야 합니다.
 
-```
+```csharp
 var orbitRotation = EF.Vector3(
     EF.Cos(EF.ToRadians(propSetRotation)) * 150,
     EF.Sin(EF.ToRadians(propSetRotation)) * 75, 0);
@@ -118,7 +118,7 @@ var orbitRotation = EF.Vector3(
 
 마지막으로, 이러한 구성 요소를 함께 결합 하 고 빨강 해골의 위치를 참조 하 여 수학적 관계를 정의 합니다.
 
-```
+```csharp
 var orbitExpression = redSprite.GetReference().Offset + propSetCenterPoint + orbitRotation;
 blueSprite.StartAnimation("Offset", orbitExpression);
 ```
@@ -127,7 +127,7 @@ blueSprite.StartAnimation("Offset", orbitExpression);
 
 이 경우 이전에 작성 한 식을 수정 합니다. CompositionObject에 대 한 참조를 "가져오는" 대신 이름을 사용 하 여 참조를 만든 다음 다른 값을 할당 합니다.
 
-```
+```csharp
 var orbitExpression = ExpressionValues.Reference.CreateVisualReference("orbitRoundVisual");
 orbitExpression.SetReferenceParameter("orbitRoundVisual", redSprite);
 blueSprite.StartAnimation("Offset", orbitExpression);
@@ -138,13 +138,13 @@ greenSprite.StartAnimation("Offset", orbitExpression);
 
 공용 API를 통해 문자열을 사용 하 여 식을 정의한 경우 코드는 다음과 같습니다.
 
-```
-ExpressionAnimation expressionAnimation =
-compositor.CreateExpressionAnimation("visual.Offset + " +
-"propertySet.CenterPointOffset + " +
-"Vector3(cos(ToRadians(propertySet.Rotation)) * 150," + "sin(ToRadians(propertySet.Rotation)) * 75, 0)");
- var propSetCenterPoint = _propertySet.GetReference().GetVector3Property("CenterPointOffset");
- var propSetRotation = _propertySet.GetReference().GetScalarProperty("Rotation");
+```csharp
+ExpressionAnimation expressionAnimation = compositor.CreateExpressionAnimation("visual.Offset + " +
+    "propertySet.CenterPointOffset + " +
+    "Vector3(cos(ToRadians(propertySet.Rotation)) * 150," + "sin(ToRadians(propertySet.Rotation)) * 75, 0)");
+    
+var propSetCenterPoint = _propertySet.GetReference().GetVector3Property("CenterPointOffset");
+var propSetRotation = _propertySet.GetReference().GetScalarProperty("Rotation");
 expressionAnimation.SetReferenceParameter("propertySet", _propertySet);
 expressionAnimation.SetReferenceParameter("visual", redSprite);
 ```

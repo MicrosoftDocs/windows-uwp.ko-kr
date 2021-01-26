@@ -6,12 +6,12 @@ ms.date: 08/03/2017
 ms.topic: article
 keywords: 'windows 10, uwp, Microsoft Store 제출 API, 코드 예제, C #'
 ms.localizationpriority: medium
-ms.openlocfilehash: ac16d6932a2f20e701d7446ac8c21c316cfe5d4a
-ms.sourcegitcommit: c3ca68e87eb06971826087af59adb33e490ce7da
+ms.openlocfilehash: c1f5704963dd1d6d6ad786a48c63ecfcd789aff9
+ms.sourcegitcommit: 7e8dfd83b181fe720b4074cb42adc908e1ba5e44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89364126"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98811303"
 ---
 # <a name="c-sample-submissions-for-apps-add-ons-and-flights"></a>C \# 샘플: 앱, 추가 기능 및 항공편에 대 한 전송
 
@@ -24,7 +24,7 @@ ms.locfileid: "89364126"
 
 각 예제를 검토 하 여 보여 주는 작업에 대 한 자세한 내용을 보거나이 문서의 모든 코드 예제를 콘솔 응용 프로그램에 빌드할 수 있습니다. 예제를 빌드하려면 Visual Studio에서 **DeveloperApiCSharpSample** 라는 c # 콘솔 응용 프로그램을 만들고, 각 예제를 프로젝트의 개별 코드 파일에 복사 하 고, 프로젝트를 빌드합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 조건
 
 이러한 예제에서는 다음 라이브러리를 사용 합니다.
 
@@ -59,7 +59,7 @@ ms.locfileid: "89364126"
 1. 시작 하기 위해 메서드는 [지정 된 앱에 대 한 데이터를 가져옵니다](get-an-app.md).
 2. 그런 다음 [앱에 대 한 보류 중인 제출](delete-an-app-submission.md)(있는 경우)을 삭제 합니다.
 3. 그런 다음 [앱에 대 한 새 제출을 만듭니다](create-an-app-submission.md) . 새 제출은 마지막으로 게시 된 제출의 복사본입니다.
-4. 새 제출에 대 한 일부 세부 정보를 변경 하 고 Azure Blob storage에 제출할 새 패키지를 업로드 합니다.
+4. 새 전송에 대 한 일부 세부 정보를 변경 하 고 Azure Blob Storage 전송에 대 한 새 패키지를 업로드 합니다.
 5. 그런 다음 [업데이트를 업데이트](update-an-app-submission.md) 한 후 파트너 센터에 새 제출을 [커밋합니다](commit-an-app-submission.md) .
 6. 마지막으로, 전송이 성공적으로 커밋될 때까지 [새 제출의 상태](get-status-for-an-app-submission.md) 를 주기적으로 확인 합니다.
 
@@ -74,7 +74,7 @@ ms.locfileid: "89364126"
 
 1. 시작 하기 위해 메서드는 [새 추가 기능을 만듭니다](create-an-add-on.md).
 2. 그런 다음 [추가 기능에 대 한 새 제출을 만듭니다](create-an-add-on-submission.md).
-3. Azure Blob storage에 제출할 수 있는 아이콘을 포함 하는 ZIP 보관 파일을 업로드 합니다.
+3. Azure Blob Storage 전송에 대 한 아이콘을 포함 하는 ZIP 보관 파일을 업로드 합니다.
 4. 그런 다음 [파트너 센터에 새 제출을 커밋합니다](commit-an-add-on-submission.md).
 5. 마지막으로, 전송이 성공적으로 커밋될 때까지 [새 제출의 상태](get-status-for-an-add-on-submission.md) 를 주기적으로 확인 합니다.
 
@@ -105,7 +105,7 @@ ms.locfileid: "89364126"
 1. 시작 하기 위해 메서드는 [지정 된 패키지 항공편에 대 한 데이터를 가져옵니다](get-a-flight.md).
 2. 그런 다음, [패키지 비행에 대해 보류 중인 제출](delete-a-flight-submission.md)(있는 경우)을 삭제 합니다.
 3. 그런 다음 [패키지 항공편에 대 한 새 제출을 만듭니다](create-a-flight-submission.md) (새 제출은 마지막으로 게시 된 제출의 복사본).
-4. Azure Blob storage에 제출할 새 패키지를 업로드 합니다.
+4. Azure Blob Storage 전송에 대 한 새 패키지를 업로드 합니다.
 5. 그런 다음 [업데이트를 업데이트](update-a-flight-submission.md) 한 후 파트너 센터에 새 제출을 [커밋합니다](commit-a-flight-submission.md) .
 6. 마지막으로, 전송이 성공적으로 커밋될 때까지 [새 제출의 상태](get-status-for-a-flight-submission.md) 를 주기적으로 확인 합니다.
 
@@ -119,7 +119,7 @@ ms.locfileid: "89364126"
 ```IngestionClient```클래스는 샘플 앱의 다른 메서드에서 다음 작업을 수행 하는 데 사용 하는 도우미 메서드를 제공 합니다.
 
 * Microsoft Store 제출 API에서 메서드를 호출 하는 데 사용할 수 있는 [AZURE AD 액세스 토큰을 가져옵니다](create-and-manage-submissions-using-windows-store-services.md#obtain-an-azure-ad-access-token) . 토큰을 가져온 후에는 토큰이 만료 되기 전에 Microsoft Store 제출 API에 대 한 호출에서이 토큰을 사용 하는 데 60 분이 소요 됩니다. 토큰이 만료 된 후 새 토큰을 생성할 수 있습니다.
-* 앱에 대 한 새 자산이 나 Azure Blob 저장소에 대 한 추가 기능 제출을 포함 하는 ZIP 보관 파일을 업로드 합니다. 앱에 대 한 Azure Blob storage 및 추가 기능 제출을 위해 ZIP 보관 파일을 업로드 하는 방법에 대 한 자세한 내용은 [앱 제출 만들기](manage-app-submissions.md#create-an-app-submission) 및 [추가 기능 제출 만들기](manage-add-on-submissions.md#create-an-add-on-submission)의 관련 지침을 참조 하세요.
+* Azure Blob Storage에 대 한 앱 또는 추가 기능 제출에 대 한 새 자산을 포함 하는 ZIP 보관 파일을 업로드 합니다. 앱 및 추가 기능 제출에 대 한 Azure Blob Storage에 ZIP 보관 파일을 업로드 하는 방법에 대 한 자세한 내용은 [앱 제출 만들기](manage-app-submissions.md#create-an-app-submission) 및 [추가 기능 등록 만들기](manage-add-on-submissions.md#create-an-add-on-submission)의 관련 지침을 참조 하세요.
 * Microsoft Store 제출 API에 대 한 HTTP 요청을 처리 합니다.
 
 > [!div class="tabbedCodeSnippets"]

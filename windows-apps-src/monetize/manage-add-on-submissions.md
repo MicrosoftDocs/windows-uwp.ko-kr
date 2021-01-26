@@ -6,12 +6,12 @@ ms.date: 04/17/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 추가 기능 제출, 앱 내 제품, IAP
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b5926fbd55c215eccf3517454c972edc86f3dfd
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 16c9fa0f4fa4b7b6ac3ec8e0fb005b80ab1b7872
+ms.sourcegitcommit: 7e8dfd83b181fe720b4074cb42adc908e1ba5e44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164577"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98811309"
 ---
 # <a name="manage-add-on-submissions"></a>추가 기능 제출 관리
 
@@ -34,7 +34,7 @@ Microsoft Store 제출 API는 앱에 대 한 추가 기능 (앱 내 제품이 �
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">메서드</th>
+<th align="left">방법</th>
 <th align="left">URI</th>
 <th align="left">설명</th>
 </tr>
@@ -66,7 +66,7 @@ Microsoft Store 제출 API는 앱에 대 한 추가 기능 (앱 내 제품이 �
 <td align="left"><a href="commit-an-add-on-submission.md">신규 또는 업데이트 된 추가 기능 제출을 커밋합니다.</a></td>
 </tr>
 <tr>
-<td align="left">Delete</td>
+<td align="left">DELETE</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions/{submissionId}</td>
 <td align="left"><a href="delete-an-add-on-submission.md">추가 기능 제출 삭제</a></td>
 </tr>
@@ -89,10 +89,10 @@ Microsoft Store 제출 API는 앱에 대 한 추가 기능 (앱 내 제품이 �
     POST https://manage.devcenter.microsoft.com/v1.0/my/inappproducts/{id}/submissions
     ```
 
-    응답 본문에는 새 제출의 ID, Azure Blob storage에 제출을 위한 추가 기능 아이콘을 업로드 하기 위한 SAS (공유 액세스 서명) URI, 새 전송에 대 한 모든 데이터 (예: 목록 및 가격 정보)를 포함 하는 [추가 기능 제출](#add-on-submission-object) 리소스가 포함 되어 있습니다.
+    응답 본문에는 새 제출의 ID, Azure Blob Storage에 제출할 추가 기능 아이콘을 업로드 하기 위한 SAS (공유 액세스 서명) URI, 새 전송에 대 한 모든 데이터 (예: 목록 및 가격 정보)를 포함 하는 [추가 기능 제출](#add-on-submission-object) 리소스가 포함 되어 있습니다.
 
     > [!NOTE]
-    > SAS URI는 계정 키를 요구 하지 않고 Azure storage의 보안 리소스에 대 한 액세스를 제공 합니다. SAS Uri 및 Azure Blob storage에서의 사용에 대 한 배경 정보는 [공유 액세스 서명, 1 부: sas 모델](/azure/storage/common/storage-sas-overview) 및 [공유 액세스 서명 이해, 2 부: Blob 저장소를 사용 하 여 sas 만들기 및 사용](/azure/storage/common/storage-sas-overview)을 참조 하세요.
+    > SAS URI는 계정 키를 요구 하지 않고 Azure storage의 보안 리소스에 대 한 액세스를 제공 합니다. SAS Uri와 Azure Blob Storage에 대 한 자세한 내용은 [공유 액세스 서명, 1 부: sas 모델](/azure/storage/common/storage-sas-overview) 및 [공유 액세스 서명 이해, 2 부: Blob 저장소를 사용 하 여 sas 만들기 및 사용](/azure/storage/common/storage-sas-overview)을 참조 하세요.
 
 4. 제출에 대 한 새 아이콘을 추가 하는 경우 [아이콘을 준비](../publish/create-add-on-store-listings.md) 하 고 ZIP 보관 파일에 추가 합니다.
 
@@ -104,13 +104,13 @@ Microsoft Store 제출 API는 앱에 대 한 추가 기능 (앱 내 제품이 �
       > [!NOTE]
       > 제출에 대 한 새 아이콘을 추가 하는 경우 ZIP 보관 파일에 있는 이러한 파일의 이름 및 상대 경로를 참조 하도록 제출 데이터를 업데이트 해야 합니다.
 
-4. 제출에 대 한 새 아이콘을 추가 하는 경우 이전에 호출한 POST 메서드의 응답 본문에 제공 된 SAS URI를 사용 하 여 ZIP 보관 파일을 [Azure Blob storage](/azure/storage/storage-introduction#blob-storage) 에 업로드 합니다. 다음과 같은 다양 한 플랫폼에서이 작업을 수행 하는 데 사용할 수 있는 다양 한 Azure 라이브러리가 있습니다.
+4. 제출에 대 한 새 아이콘을 추가 하는 경우 이전에 호출한 POST 메서드의 응답 본문에 제공 된 SAS URI를 사용 하 여 [Azure Blob Storage](/azure/storage/storage-introduction#blob-storage) 에 ZIP 보관 파일을 업로드 합니다. 다음과 같은 다양 한 플랫폼에서이 작업을 수행 하는 데 사용할 수 있는 다양 한 Azure 라이브러리가 있습니다.
 
     * [.NET용 Azure Storage 클라이언트 라이브러리](/azure/storage/storage-dotnet-how-to-use-blobs)
     * [Java용 Azure Storage SDK](/azure/storage/storage-java-how-to-use-blob-storage)
     * [Python 용 Azure Storage SDK](/azure/storage/storage-python-how-to-use-blob-storage)
 
-    다음 c # 코드 예제에서는 .NET 용 Azure Storage 클라이언트 라이브러리에서 [Cloudblockblob](/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob) 클래스를 사용 하 여 ZIP 보관 파일을 Azure Blob storage에 업로드 하는 방법을 보여 줍니다. 이 예에서는 ZIP 보관 파일이 스트림 개체에 이미 기록 된 것으로 가정 합니다.
+    다음 c # 코드 예제에서는 .NET 용 Azure Storage 클라이언트 라이브러리에서 [Cloudblockblob](/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob) 클래스를 사용 하 여 AZURE BLOB STORAGE에 ZIP 보관 파일을 업로드 하는 방법을 보여 줍니다. 이 예에서는 ZIP 보관 파일이 스트림 개체에 이미 기록 된 것으로 가정 합니다.
 
     ```csharp
     string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -236,11 +236,11 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 | lifetime           | 문자열  |  추가 기능에 대 한 수명입니다. 다음 값 중 하나일 수 있습니다. <ul><li>영구</li><li>OneDay</li><li>ThreeDays</li><li>FiveDays</li><li>OneWeek</li><li>TwoWeeks</li><li>OneMonth</li><li>TwoMonths</li><li>ThreeMonths</li><li>SixMonths</li><li>OneYear</li></ul> |
 | 목록           | 개체  |  키/값 쌍의 사전입니다. 여기서 각 키는 두 문자로 된 ISO 3166-1 알파 2 국가 코드이 고 각 값은 추가 기능에 대 한 나열 정보를 포함 하는 [목록 리소스](#listing-object) 입니다.  |
 | 가격 책정           | 개체  | 추가 기능에 대 한 가격 책정 정보를 포함 하는 [가격 책정 리소스](#pricing-object) 입니다.   |
-| targetPublishMode           | 문자열  | 제출에 대 한 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>설명서</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | 문자열  | 제출에 대 한 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>직접 실행</li><li>수동</li><li>SpecificDate</li></ul> |
 | Target버전           | 문자열  | *TargetSpecificDate mode* 가로 설정 된 경우 ISO 8601 형식의 제출에 대 한 게시 날짜입니다.  |
-| 태그           | 문자열  |  추가 기능에 대 한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data) 입니다 (이전에는이 정보를 *태그*라고 함).   |
+| tag           | 문자열  |  추가 기능에 대 한 [사용자 지정 개발자 데이터](../publish/enter-add-on-properties.md#custom-developer-data) 입니다 (이전에는이 정보를 *태그* 라고 함).   |
 | 표시 여부  | 문자열  |  추가 기능에 대 한 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>숨김</li><li>공용</li><li>프라이빗</li><li>NotSet</li></ul>  |
-| 상태  | 문자열  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>취소됨</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>게시</li><li>게시 날짜</li><li>이상 실패</li><li>바꾸면</li><li>PreProcessingFailed</li><li>인증</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
+| 상태  | 문자열  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>취소됨</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>게시</li><li>게시 날짜</li><li>이상 실패</li><li>바꾸면</li><li>PreProcessingFailed</li><li>인증</li><li>CertificationFailed</li><li>해제</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | 개체  |  오류에 대 한 정보를 포함 하 여 제출 상태에 대 한 추가 정보를 포함 하는 [상태 세부 정보 리소스](#status-details-object) 입니다. |
 | fileUploadUrl           | 문자열  | 제출할 패키지를 업로드 하기 위한 SAS (공유 액세스 서명) URI입니다. 제출할 새 패키지를 추가 하는 경우 패키지를 포함 하는 ZIP 보관 파일을이 URI에 업로드 합니다. 자세한 내용은 [추가 기능 제출 만들기](#create-an-add-on-submission)를 참조 하세요.  |
 | friendlyName  | 문자열  |  파트너 센터에 표시 된 것 처럼 전송의 이름입니다. 이 값은 제출을 만들 때 생성 됩니다.  |
@@ -263,7 +263,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스는 추가 기능 목록에 대 한 아이콘 데이터를 포함 합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description     |
+| 값           | 형식    | 설명     |
 |-----------------|---------|------|
 |  fileName               |    문자열     |   제출을 위해 업로드 한 ZIP 보관 파일에 있는 아이콘 파일의 이름입니다. 아이콘은 정확히 300 x 300 픽셀을 측정 하는 .png 파일 이어야 합니다.   |     
 |  fileStatus               |   문자열      |  아이콘 파일의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>PendingUpload</li><li>업로드됨</li><li>PendingDelete</li></ul>   |
@@ -274,12 +274,12 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스에는 추가 기능에 대 한 가격 정보가 포함 되어 있습니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description    |
+| 값           | 형식    | 설명    |
 |-----------------|---------|------|
 |  marketSpecificPricings               |    개체     |  키/값 쌍의 사전입니다. 여기서 각 키는 두 문자로 된 ISO 3166-1 알파 2 국가 코드이 고 각 값은 [가격 책정 계층](#price-tiers)입니다. 이러한 항목은 [특정 시장에서 추가 기능에 대 한 사용자 지정 가격](../publish/set-add-on-pricing-and-availability.md)을 나타냅니다. 이 사전의 모든 항목은 지정 된 시장에 대해 *priceId* 값으로 지정 된 기본 가격을 재정의 합니다.     |     
 |  sales               |   array      |  **사용 되지 않습니다**. 추가 기능에 대 한 판매 정보를 포함 하는 [판매 리소스](#sale-object) 의 배열입니다.     |     
 |  priceId               |   문자열      |  추가 기능에 대 한 [기본 가격](../publish/set-add-on-pricing-and-availability.md) 을 지정 하는 [가격 책정 계층](#price-tiers) 입니다.    |    
-|  isAdvancedPricingModel               |   boolean      |  **True**이면 개발자 계정에서 99 usd부터 1999.99 usd 까지의 확장 된 가격 책정 계층 집합에 액세스할 수 있습니다. **False**이면 개발자 계정에서 99 usd에서 999.99 usd 까지의 원래 가격 책정 계층에 액세스할 수 있습니다. 여러 계층에 대 한 자세한 내용은 가격 책정 [계층](#price-tiers)을 참조 하세요.<br/><br/>**Note** &nbsp; 참고 &nbsp; 이 필드는 읽기 전용입니다.   |
+|  isAdvancedPricingModel               |   boolean      |  **True** 이면 개발자 계정에서 99 usd부터 1999.99 usd 까지의 확장 된 가격 책정 계층 집합에 액세스할 수 있습니다. **False** 이면 개발자 계정에서 99 usd에서 999.99 usd 까지의 원래 가격 책정 계층에 액세스할 수 있습니다. 여러 계층에 대 한 자세한 내용은 가격 책정 [계층](#price-tiers)을 참조 하세요.<br/><br/> &nbsp; 참고 &nbsp; 이 필드는 읽기 전용입니다.   |
 
 
 <span id="sale-object" />
@@ -295,7 +295,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description           |
+| 값           | 형식    | 설명           |
 |-----------------|---------|------|
 |  name               |    문자열     |   판매의 이름입니다.    |     
 |  basePriceId               |   문자열      |  판매의 기본 가격에 사용할 [가격 계층](#price-tiers) 입니다.    |     
@@ -309,7 +309,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스는 제출 상태에 대 한 추가 정보를 포함 합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description       |
+| 값           | 형식    | 설명       |
 |-----------------|---------|------|
 |  오류               |    개체     |   제출에 대 한 오류 정보를 포함 하는 [상태 정보 리소스](#status-detail-object) 의 배열입니다.   |     
 |  경고               |   개체      | 제출에 대 한 경고 세부 정보를 포함 하는 [상태 정보 리소스](#status-detail-object) 의 배열입니다.     |
@@ -332,7 +332,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스는 제출에 대 한 인증 보고서 데이터에 대 한 액세스를 제공 합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description               |
+| 값           | 형식    | 설명               |
 |-----------------|---------|------|
 |     date            |    문자열     |  보고서가 생성 된 날짜와 시간 (ISO 8601 형식)입니다.    |
 |     reportUrl            |    문자열     |  보고서에 액세스할 수 있는 URL입니다.    |
@@ -347,12 +347,12 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 다음 값은 추가 기능 제출에 대 한 [가격 책정 리소스](#pricing-object) 리소스에서 사용 가능한 가격 책정 계층을 나타냅니다.
 
-| 값           | Description       |
+| 값           | 설명       |
 |-----------------|------|
 |  기준               |   가격 책정 계층이 설정 되지 않았습니다. 추가 기능에 대 한 기본 가격을 사용 합니다.      |     
 |  NotAvailable              |   지정 된 영역에서 추가 기능을 사용할 수 없습니다.    |     
-|  Free              |   추가 기능은 무료입니다.    |    
-|  계층*xxxx*               |   **계층<em>xxxx</em>** 형식의 추가 기능에 대 한 가격 책정 계층을 지정 하는 문자열입니다. 현재 지원 되는 가격 책정 계층 범위는 다음과 같습니다.<br/><br/><ul><li>[가격 책정 리소스](#pricing-object) 의 *isAdvancedPricingModel* 값이 **true**이면 계정에 사용할 수 있는 가격 책정 계층 값은 **Tier1012**  -  **Tier1424**입니다.</li><li>[가격 책정 리소스](#pricing-object) 의 *isAdvancedPricingModel* 값이 **false**이면 계정에 사용할 수 있는 가격 책정 계층 값은 **Tier2**  -  **Tier96**입니다.</li></ul>각 계층과 관련 된 시장 관련 가격을 비롯 하 여 개발자 계정에 사용할 수 있는 가격 책정 계층의 전체 표를 보려면 파트너 센터에서 앱 서브 미션에 대 한 **가격 책정 및 가용성** 페이지로 이동 하 고 **시장 및 사용자 지정 가격** 섹션에서 **테이블 보기** 링크를 클릭 합니다 (일부 개발자 계정의 경우이 링크는 **가격 책정** 섹션에 있음).     |
+|  무료              |   추가 기능은 무료입니다.    |    
+|  계층 *xxxx*               |   **계층 <em>xxxx</em>** 형식의 추가 기능에 대 한 가격 책정 계층을 지정 하는 문자열입니다. 현재 지원 되는 가격 책정 계층 범위는 다음과 같습니다.<br/><br/><ul><li>[가격 책정 리소스](#pricing-object) 의 *isAdvancedPricingModel* 값이 **true** 이면 계정에 사용할 수 있는 가격 책정 계층 값은 **Tier1012**  -  **Tier1424** 입니다.</li><li>[가격 책정 리소스](#pricing-object) 의 *isAdvancedPricingModel* 값이 **false** 이면 계정에 사용할 수 있는 가격 책정 계층 값은 **Tier2**  -  **Tier96** 입니다.</li></ul>각 계층과 관련 된 시장 관련 가격을 비롯 하 여 개발자 계정에 사용할 수 있는 가격 책정 계층의 전체 표를 보려면 파트너 센터에서 앱 서브 미션에 대 한 **가격 책정 및 가용성** 페이지로 이동 하 고 **시장 및 사용자 지정 가격** 섹션에서 **테이블 보기** 링크를 클릭 합니다 (일부 개발자 계정의 경우이 링크는 **가격 책정** 섹션에 있음).     |
 
 <span id="submission-status-code" />
 
@@ -360,7 +360,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 다음 값은 제출의 상태 코드를 나타냅니다.
 
-| 값           |  Description      |
+| 값           |  설명      |
 |-----------------|---------------|
 |  없음            |     코드를 지정 하지 않았습니다.         |     
 |      InvalidArchive        |     패키지를 포함 하는 ZIP 보관 파일이 잘못 되었거나 보관 파일 형식을 인식할 수 없습니다.  |

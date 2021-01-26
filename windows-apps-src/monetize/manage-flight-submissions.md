@@ -6,12 +6,12 @@ ms.date: 04/16/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 비행 서브 미션
 ms.localizationpriority: medium
-ms.openlocfilehash: 46af08512970798be52187013e40335b6ee1561b
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: a5c8a8c83420830c5ec20c9586c46d54a02a5238
+ms.sourcegitcommit: 7e8dfd83b181fe720b4074cb42adc908e1ba5e44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164527"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98811269"
 ---
 # <a name="manage-package-flight-submissions"></a>패키지 플라이트 제출 관리
 
@@ -34,7 +34,7 @@ Microsoft Store 제출 API는 점진적 패키지 롤아웃을 비롯 하 여 �
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">메서드</th>
+<th align="left">방법</th>
 <th align="left">URI</th>
 <th align="left">설명</th>
 </tr>
@@ -66,7 +66,7 @@ Microsoft Store 제출 API는 점진적 패키지 롤아웃을 비롯 하 여 �
 <td align="left"><a href="commit-a-flight-submission.md">신규 또는 업데이트 된 패키지 비행 전송 커밋</a></td>
 </tr>
 <tr>
-<td align="left">Delete</td>
+<td align="left">DELETE</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions/{submissionId}</td>
 <td align="left"><a href="delete-a-flight-submission.md">패키지 플라이트 제출 삭제</a></td>
 </tr>
@@ -89,10 +89,10 @@ Microsoft Store 제출 API는 점진적 패키지 롤아웃을 비롯 하 여 �
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/flights/{flightId}/submissions
     ```
 
-    응답 본문에는 새 제출의 ID, Azure Blob storage에 제출할 패키지를 업로드 하기 위한 SAS (공유 액세스 서명) URI, 모든 목록 및 가격 정보를 포함 하 여 새 전송에 대 한 데이터를 포함 하는 [비행 전송](#flight-submission-object) 리소스가 포함 되어 있습니다.
+    응답 본문에는 새 제출의 ID, Azure Blob Storage에 제출할 패키지를 업로드 하기 위한 SAS (공유 액세스 서명) URI, 모든 목록 및 가격 정보를 포함 하 여 새 전송에 대 한 데이터를 포함 하는 [비행 전송](#flight-submission-object) 리소스가 포함 되어 있습니다.
 
     > [!NOTE]
-    > SAS URI는 계정 키를 요구 하지 않고 Azure storage의 보안 리소스에 대 한 액세스를 제공 합니다. SAS Uri 및 Azure Blob storage에서의 사용에 대 한 배경 정보는 [공유 액세스 서명, 1 부: sas 모델](/azure/storage/common/storage-sas-overview) 및 [공유 액세스 서명 이해, 2 부: Blob 저장소를 사용 하 여 sas 만들기 및 사용](/azure/storage/common/storage-sas-overview)을 참조 하세요.
+    > SAS URI는 계정 키를 요구 하지 않고 Azure storage의 보안 리소스에 대 한 액세스를 제공 합니다. SAS Uri와 Azure Blob Storage에 대 한 자세한 내용은 [공유 액세스 서명, 1 부: sas 모델](/azure/storage/common/storage-sas-overview) 및 [공유 액세스 서명 이해, 2 부: Blob 저장소를 사용 하 여 sas 만들기 및 사용](/azure/storage/common/storage-sas-overview)을 참조 하세요.
 
 4. 제출에 대한 새 패키지를 추가하는 경우 [패키지를 준비](../publish/app-package-requirements.md)하고 ZIP 보관 파일에 추가합니다.
 
@@ -104,13 +104,13 @@ Microsoft Store 제출 API는 점진적 패키지 롤아웃을 비롯 하 여 �
       > [!NOTE]
       > 제출할 새 패키지를 추가 하는 경우 ZIP 보관 파일에 있는 이러한 파일의 이름 및 상대 경로를 참조 하도록 제출 데이터를 업데이트 해야 합니다.
 
-4. 제출할 새 패키지를 추가 하는 경우 이전에 호출한 POST 메서드의 응답 본문에 제공 된 SAS URI를 사용 하 여 ZIP 보관 파일을 [Azure Blob storage](/azure/storage/storage-introduction#blob-storage) 에 업로드 합니다. 다음과 같은 다양 한 플랫폼에서이 작업을 수행 하는 데 사용할 수 있는 다양 한 Azure 라이브러리가 있습니다.
+4. 제출할 새 패키지를 추가 하는 경우 이전에 호출한 POST 메서드의 응답 본문에 제공 된 SAS URI를 사용 하 여 [Azure Blob Storage](/azure/storage/storage-introduction#blob-storage) 에 ZIP 보관 파일을 업로드 합니다. 다음과 같은 다양 한 플랫폼에서이 작업을 수행 하는 데 사용할 수 있는 다양 한 Azure 라이브러리가 있습니다.
 
     * [.NET용 Azure Storage 클라이언트 라이브러리](/azure/storage/storage-dotnet-how-to-use-blobs)
     * [Java용 Azure Storage SDK](/azure/storage/storage-java-how-to-use-blob-storage)
     * [Python 용 Azure Storage SDK](/azure/storage/storage-python-how-to-use-blob-storage)
 
-    다음 c # 코드 예제에서는 .NET 용 Azure Storage 클라이언트 라이브러리에서 [Cloudblockblob](/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob) 클래스를 사용 하 여 ZIP 보관 파일을 Azure Blob storage에 업로드 하는 방법을 보여 줍니다. 이 예에서는 ZIP 보관 파일이 스트림 개체에 이미 기록 된 것으로 가정 합니다.
+    다음 c # 코드 예제에서는 .NET 용 Azure Storage 클라이언트 라이브러리에서 [Cloudblockblob](/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob) 클래스를 사용 하 여 AZURE BLOB STORAGE에 ZIP 보관 파일을 업로드 하는 방법을 보여 줍니다. 이 예에서는 ZIP 보관 파일이 스트림 개체에 이미 기록 된 것으로 가정 합니다.
 
     ```csharp
     string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -173,7 +173,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">메서드</th>
+<th align="left">방법</th>
 <th align="left">URI</th>
 <th align="left">설명</th>
 </tr>
@@ -259,12 +259,12 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 |------------|--------|------------------------------|
 | id            | 문자열  | 제출 ID입니다.  |
 | flightId           | 문자열  |  제출이 연결된 패키지 플라이트의 ID입니다.  |  
-| 상태           | 문자열  | 제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>취소됨</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>게시</li><li>게시 날짜</li><li>이상 실패</li><li>바꾸면</li><li>PreProcessingFailed</li><li>인증</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>   |
+| 상태           | 문자열  | 제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>취소됨</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>게시</li><li>게시 날짜</li><li>이상 실패</li><li>바꾸면</li><li>PreProcessingFailed</li><li>인증</li><li>CertificationFailed</li><li>해제</li><li>ReleaseFailed</li></ul>   |
 | statusDetails           | 개체  |  오류에 대 한 정보를 포함 하 여 제출 상태에 대 한 추가 정보를 포함 하는 [상태 세부 정보 리소스](#status-details-object) 입니다.  |
 | flightPackages           | array  | 제출의 각 패키지에 대 한 세부 정보를 제공 하는 [비행 패키지 리소스](#flight-package-object) 를 포함 합니다.   |
 | packageDeliveryOptions    | 개체  | 전송에 대 한 점진적 패키지 롤아웃 및 필수 업데이트 설정을 포함 하는 [패키지 배달 옵션 리소스](#package-delivery-options-object) 입니다.   |
 | fileUploadUrl           | 문자열  | 제출할 패키지를 업로드 하기 위한 SAS (공유 액세스 서명) URI입니다. 제출할 새 패키지를 추가 하는 경우 패키지를 포함 하는 ZIP 보관 파일을이 URI에 업로드 합니다. 자세한 내용은 [패키지 비행 제출 만들기](#create-a-package-flight-submission)를 참조 하세요.  |
-| targetPublishMode           | 문자열  | 제출에 대 한 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>설명서</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | 문자열  | 제출에 대 한 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>직접 실행</li><li>수동</li><li>SpecificDate</li></ul> |
 | Target버전           | 문자열  | *TargetSpecificDate mode* 가로 설정 된 경우 ISO 8601 형식의 제출에 대 한 게시 날짜입니다.  |
 | 메모 For인증           | 문자열  |  테스트 계정 자격 증명과 기능에 액세스 하 고 확인 하는 단계와 같은 인증 테스터에 대 한 추가 정보를 제공 합니다. 자세한 내용은 [인증에 대 한 참고 사항](../publish/notes-for-certification.md)을 참조 하세요. |
 
@@ -274,7 +274,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스는 제출 상태에 대 한 추가 정보를 포함 합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description                   |
+| 값           | 형식    | 설명                   |
 |-----------------|---------|------|
 |  오류               |    개체     |   제출에 대 한 오류 정보를 포함 하는 [상태 정보 리소스](#status-detail-object) 의 배열입니다.   |     
 |  경고               |   개체      | 제출에 대 한 경고 세부 정보를 포함 하는 [상태 정보 리소스](#status-detail-object) 의 배열입니다.     |
@@ -299,7 +299,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스는 제출에 대 한 인증 보고서 데이터에 대 한 액세스를 제공 합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description         |
+| 값           | 형식    | 설명         |
 |-----------------|---------|------|
 |     date            |    문자열     |  보고서가 생성 된 날짜와 시간 (ISO 8601 형식)입니다.    |
 |     reportUrl            |    문자열     |  보고서에 액세스할 수 있는 URL입니다.    |
@@ -331,9 +331,9 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 이 리소스의 값은 다음과 같습니다.
 
 > [!NOTE]
-> [패키지 비행 전송 방법 업데이트](update-a-flight-submission.md) 메서드를 호출 하는 경우 요청 본문에이 개체의 *fileName*, *fileStatus,* *,가 중*및 *ram* 값만 필요 합니다. 다른 값은 파트너 센터에서 채워집니다.
+> [패키지 비행 전송 방법 업데이트](update-a-flight-submission.md) 메서드를 호출 하는 경우 요청 본문에이 개체의 *fileName*, *fileStatus,* *,가 중* 및 *ram* 값만 필요 합니다. 다른 값은 파트너 센터에서 채워집니다.
 
-| 값           | 형식    | Description              |
+| 값           | 형식    | 설명              |
 |-----------------|---------|------|
 | fileName   |   문자열      |  패키지의 이름입니다.    |  
 | fileStatus    | 문자열    |  패키지의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>PendingUpload</li><li>업로드됨</li><li>PendingDelete</li></ul>    |  
@@ -369,7 +369,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description        |
+| 값           | 형식    | 설명        |
 |-----------------|---------|------|
 | packageRollout   |   개체      |   제출에 대 한 점진적 패키지 롤아웃 설정을 포함 하는 [패키지 롤아웃 리소스](#package-rollout-object) 입니다.    |  
 | isMandatoryUpdate    | boolean    |  이 제출의 패키지를 자동 설치 앱 업데이트에 대 한 필수로 처리할지 여부를 나타냅니다. 자동 설치 앱 업데이트에 대 한 필수 패키지에 대 한 자세한 내용은 [앱에 대 한 패키지 업데이트 다운로드 및 설치](../packaging/self-install-package-updates.md)를 참조 하세요.    |  
@@ -381,7 +381,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스에는 제출에 대 한 점진적 [패키지 롤아웃 설정이](#manage-gradual-package-rollout) 포함 되어 있습니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description        |
+| 값           | 형식    | 설명        |
 |-----------------|---------|------|
 | isPackageRollout   |   boolean      |  제출할 때 점진적 패키지 롤아웃이 사용 되는지 여부를 나타냅니다.    |  
 | packageRolloutPercentage    | float    |  점진적 롤아웃에서 패키지를 수신 하는 사용자의 백분율입니다.    |  

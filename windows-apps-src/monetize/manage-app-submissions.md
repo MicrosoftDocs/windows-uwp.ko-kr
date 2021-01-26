@@ -6,12 +6,12 @@ ms.date: 04/30/2018
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store 제출 API, 앱 서브 미션
 ms.localizationpriority: medium
-ms.openlocfilehash: de612607da2192af3358c94874e0896557ca6d08
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 00820f00360575f0a335d37aa0859b94648709e3
+ms.sourcegitcommit: 7e8dfd83b181fe720b4074cb42adc908e1ba5e44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89171367"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98811276"
 ---
 # <a name="manage-app-submissions"></a>앱 제출 관리
 
@@ -38,7 +38,7 @@ Microsoft Store 제출 API는 점진적 패키지 롤아웃을 비롯 하 여 �
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">메서드</th>
+<th align="left">방법</th>
 <th align="left">URI</th>
 <th align="left">설명</th>
 </tr>
@@ -70,7 +70,7 @@ Microsoft Store 제출 API는 점진적 패키지 롤아웃을 비롯 하 여 �
 <td align="left"><a href="commit-an-app-submission.md">신규 또는 업데이트 된 앱 제출을 커밋합니다.</a></td>
 </tr>
 <tr>
-<td align="left">Delete</td>
+<td align="left">DELETE</td>
 <td align="left">https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions/{submissionId}</td>
 <td align="left"><a href="delete-an-app-submission.md">앱 제출 삭제</a></td>
 </tr>
@@ -95,10 +95,10 @@ Microsoft Store 제출 API는 점진적 패키지 롤아웃을 비롯 하 여 �
     POST https://manage.devcenter.microsoft.com/v1.0/my/applications/{applicationId}/submissions
     ```
 
-    응답 본문에는 새 제출의 ID, Azure Blob storage에 전송 하기 위한 모든 관련 파일을 업로드 하기 위한 SAS (공유 액세스 서명) URI (예: 앱 패키지, 목록 이미지 및 트레일러 파일) 및 새 전송에 대 한 모든 데이터 (예: 목록 및 가격 정보)를 포함 하는 [앱 제출](#app-submission-object) 리소스가 포함 되어 있습니다.
+    응답 본문에는 새 제출의 ID, Azure Blob Storage 전송에 대 한 모든 관련 파일을 업로드 하기 위한 SAS (공유 액세스 서명) URI (예: 앱 패키지, 목록 이미지 및 트레일러 파일)와 새 전송에 대 한 모든 데이터 (예: 목록 및 가격 정보)를 포함 하는 [앱 제출](#app-submission-object) 리소스가 포함 되어 있습니다.
 
     > [!NOTE]
-    > SAS URI는 계정 키를 요구 하지 않고 Azure storage의 보안 리소스에 대 한 액세스를 제공 합니다. SAS Uri 및 Azure Blob storage에서의 사용에 대 한 배경 정보는 [공유 액세스 서명, 1 부: sas 모델](/azure/storage/common/storage-sas-overview) 및 [공유 액세스 서명 이해, 2 부: Blob 저장소를 사용 하 여 sas 만들기 및 사용](/azure/storage/common/storage-sas-overview)을 참조 하세요.
+    > SAS URI는 계정 키를 요구 하지 않고 Azure storage의 보안 리소스에 대 한 액세스를 제공 합니다. SAS Uri와 Azure Blob Storage에 대 한 자세한 내용은 [공유 액세스 서명, 1 부: sas 모델](/azure/storage/common/storage-sas-overview) 및 [공유 액세스 서명 이해, 2 부: Blob 저장소를 사용 하 여 sas 만들기 및 사용](/azure/storage/common/storage-sas-overview)을 참조 하세요.
 
 4. 제출에 대 한 새 패키지, 목록 이미지 또는 트레일러 파일을 추가 하는 경우 [앱 패키지를 준비](../publish/app-package-requirements.md) 하 고 [앱 스크린샷, 이미지 및 트레일러를 준비](../publish/app-screenshots-and-images.md)합니다. 이러한 모든 파일을 ZIP 보관 파일에 추가 합니다.
 
@@ -110,13 +110,13 @@ Microsoft Store 제출 API는 점진적 패키지 롤아웃을 비롯 하 여 �
       > [!NOTE]
       > 제출에 대 한 새 파일을 추가 하는 경우 ZIP 보관 파일에 있는 이러한 파일의 이름 및 상대 경로를 참조 하도록 제출 데이터를 업데이트 해야 합니다.
 
-4. 전송에 대 한 새 패키지, 목록 이미지 또는 트레일러 파일을 추가 하는 경우 앞에서 호출한 POST 메서드의 응답 본문에 제공 된 SAS URI를 사용 하 여 ZIP 보관 파일을 [Azure Blob 저장소](/azure/storage/storage-introduction#blob-storage) 에 업로드 합니다. 다음과 같은 다양 한 플랫폼에서이 작업을 수행 하는 데 사용할 수 있는 다양 한 Azure 라이브러리가 있습니다.
+4. 전송에 대 한 새 패키지, 목록 이미지 또는 트레일러 파일을 추가 하는 경우 이전에 호출한 POST 메서드의 응답 본문에 제공 된 SAS URI를 사용 하 여 [Azure Blob Storage](/azure/storage/storage-introduction#blob-storage) 에 ZIP 보관 파일을 업로드 합니다. 다음과 같은 다양 한 플랫폼에서이 작업을 수행 하는 데 사용할 수 있는 다양 한 Azure 라이브러리가 있습니다.
 
     * [.NET용 Azure Storage 클라이언트 라이브러리](/azure/storage/storage-dotnet-how-to-use-blobs)
     * [Java용 Azure Storage SDK](/azure/storage/storage-java-how-to-use-blob-storage)
     * [Python 용 Azure Storage SDK](/azure/storage/storage-python-how-to-use-blob-storage)
 
-    다음 c # 코드 예제에서는 .NET 용 Azure Storage 클라이언트 라이브러리에서 [Cloudblockblob](/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob) 클래스를 사용 하 여 ZIP 보관 파일을 Azure Blob storage에 업로드 하는 방법을 보여 줍니다. 이 예에서는 ZIP 보관 파일이 스트림 개체에 이미 기록 된 것으로 가정 합니다.
+    다음 c # 코드 예제에서는 .NET 용 Azure Storage 클라이언트 라이브러리에서 [Cloudblockblob](/dotnet/api/microsoft.windowsazure.storage.blob.cloudblockblob) 클래스를 사용 하 여 AZURE BLOB STORAGE에 ZIP 보관 파일을 업로드 하는 방법을 보여 줍니다. 이 예에서는 ZIP 보관 파일이 스트림 개체에 이미 기록 된 것으로 가정 합니다.
 
     ```csharp
     string sasUrl = "https://productingestionbin1.blob.core.windows.net/ingestion/26920f66-b592-4439-9a9d-fb0f014902ec?sv=2014-02-14&sr=b&sig=usAN0kNFNnYE2tGQBI%2BARQWejX1Guiz7hdFtRhyK%2Bog%3D&se=2016-06-17T20:45:51Z&sp=rwl";
@@ -150,7 +150,7 @@ Microsoft Store 제출 API는 점진적 패키지 롤아웃을 비롯 하 여 �
 앱 제출을 위한 점진적 패키지 출시를 프로그래밍 방식으로 사용 하도록 설정 하려면 Microsoft Store 제출 API의 메서드를 사용 하 여이 프로세스를 수행 합니다.
 
   1. [앱 제출을 만들거나](create-an-app-submission.md) [기존 앱 제출을 가져옵니다](get-an-app-submission.md).
-  2. 응답 데이터에서 [packageRollout](#package-rollout-object) 리소스를 찾은 다음 *isPackageRollout* 필드를 **True**로 설정 하 고 *packageRolloutPercentage* 필드를 업데이트 된 패키지를 가져와야 하는 앱 고객의 백분율로 설정 합니다.
+  2. 응답 데이터에서 [packageRollout](#package-rollout-object) 리소스를 찾은 다음 *isPackageRollout* 필드를 **True** 로 설정 하 고 *packageRolloutPercentage* 필드를 업데이트 된 패키지를 가져와야 하는 앱 고객의 백분율로 설정 합니다.
   3. 업데이트 된 앱 제출 데이터를 [앱 전송 업데이트](update-an-app-submission.md) 방법으로 전달 합니다.
 
 앱 제출을 위한 점진적 패키지 출시를 사용 하도록 설정한 후에는 다음 방법을 사용 하 여 점진적 출시를 프로그래밍 방식으로 가져오기, 업데이트, 중지 또는 종료할 수 있습니다.
@@ -163,7 +163,7 @@ Microsoft Store 제출 API는 점진적 패키지 롤아웃을 비롯 하 여 �
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">메서드</th>
+<th align="left">방법</th>
 <th align="left">URI</th>
 <th align="left">설명</th>
 </tr>
@@ -338,13 +338,13 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 | 값      | 형식   | Description      |
 |------------|--------|-------------------|
 | id            | 문자열  | 제출 ID입니다. 이 ID는 [앱 제출을 만들고](create-an-app-submission.md) [모든 앱을 가져오고](get-all-apps.md) [앱을 가져오는](get-an-app.md)요청에 대 한 응답 데이터에서 사용할 수 있습니다. 파트너 센터에서 만든 제출의 경우이 ID는 파트너 센터의 제출 페이지에 대 한 URL 에서도 사용할 수 있습니다.  |
-| applicationCategory           | 문자열  |   앱에 대 한 [범주 및/또는 하위](../publish/category-and-subcategory-table.md) 범주를 지정 하는 문자열입니다. 범주와 하위 범주는 **BooksAndReference_EReader**와 같이 밑줄 ' _ ' 문자를 사용 하 여 단일 문자열로 결합 됩니다.      |  
+| applicationCategory           | 문자열  |   앱에 대 한 [범주 및/또는 하위](../publish/category-and-subcategory-table.md) 범주를 지정 하는 문자열입니다. 범주와 하위 범주는 **BooksAndReference_EReader** 와 같이 밑줄 ' _ ' 문자를 사용 하 여 단일 문자열로 결합 됩니다.      |  
 | 가격 책정           |  개체  | 앱에 대 한 가격 정보를 포함 하는 [가격 책정 리소스](#pricing-object) 입니다.        |   
 | 표시 여부           |  문자열  |  앱의 표시 여부입니다. 다음 값 중 하나일 수 있습니다. <ul><li>숨김</li><li>공용</li><li>프라이빗</li><li>NotSet</li></ul>       |   
-| targetPublishMode           | 문자열  | 제출에 대 한 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>즉시</li><li>설명서</li><li>SpecificDate</li></ul> |
+| targetPublishMode           | 문자열  | 제출에 대 한 게시 모드입니다. 다음 값 중 하나일 수 있습니다. <ul><li>직접 실행</li><li>수동</li><li>SpecificDate</li></ul> |
 | Target버전           | 문자열  | *TargetSpecificDate mode* 가로 설정 된 경우 ISO 8601 형식의 제출에 대 한 게시 날짜입니다.  |  
 | 목록           |   개체  |  키/값 쌍의 사전입니다. 여기서 각 키는 국가 코드이 고 각 값은 앱에 대 한 목록 정보를 포함 하는 [목록 리소스](#listing-object) 입니다.       |   
-| hardwarePreferences           |  array  |   앱에 대 한 [하드웨어 기본 설정을](../publish/enter-app-properties.md) 정의 하는 문자열 배열입니다. 다음 값 중 하나일 수 있습니다. <ul><li>터치</li><li>키보드</li><li>마우스</li><li>카메라</li><li>NfcHce</li><li>Reader</li><li>BluetoothLE</li><li>Telephony</li></ul>     |   
+| hardwarePreferences           |  array  |   앱에 대 한 [하드웨어 기본 설정을](../publish/enter-app-properties.md) 정의 하는 문자열 배열입니다. 다음 값 중 하나일 수 있습니다. <ul><li>터치</li><li>Keyboard</li><li>마우스</li><li>카메라</li><li>NfcHce</li><li>Reader</li><li>BluetoothLE</li><li>Telephony</li></ul>     |   
 | 자동 Backup사용           |  boolean  |   Windows에서 OneDrive에 자동 백업에 앱의 데이터를 포함할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](../publish/product-declarations.md)을 참조 하세요.   |   
 | canInstallOnRemovableMedia           |  boolean  |   고객이 이동식 저장소에 앱을 설치할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](../publish/product-declarations.md)을 참조 하세요.     |   
 | isGameDvrEnabled           |  boolean |   앱에 게임 DVR이 사용 되는지 여부를 나타냅니다.    |   
@@ -352,7 +352,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 | hasExternalInAppProducts           |     boolean          |   앱을 통해 사용자가 Microsoft Store 상거래 시스템 외부에서 구매할 수 있는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](../publish/product-declarations.md)을 참조 하세요.     |   
 | meetAccessibilityGuidelines           |    boolean           |  앱이 내게 필요한 옵션 지침을 충족 하는지 테스트 되었는지 여부를 나타냅니다. 자세한 내용은 [앱 선언](../publish/product-declarations.md)을 참조 하세요.      |   
 | 메모 For인증           |  문자열  |   앱에 대 한 [인증에 대 한 정보를](../publish/notes-for-certification.md) 포함 합니다.    |    
-| 상태           |   문자열  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>취소됨</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>게시</li><li>게시 날짜</li><li>이상 실패</li><li>바꾸면</li><li>PreProcessingFailed</li><li>인증</li><li>CertificationFailed</li><li>Release</li><li>ReleaseFailed</li></ul>      |    
+| 상태           |   문자열  |  제출의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>취소됨</li><li>PendingCommit</li><li>CommitStarted</li><li>CommitFailed</li><li>PendingPublication</li><li>게시</li><li>게시 날짜</li><li>이상 실패</li><li>바꾸면</li><li>PreProcessingFailed</li><li>인증</li><li>CertificationFailed</li><li>해제</li><li>ReleaseFailed</li></ul>      |    
 | statusDetails           |   개체  | 오류에 대 한 정보를 포함 하 여 제출 상태에 대 한 추가 정보를 포함 하는 [상태 세부 정보 리소스](#status-details-object) 입니다.       |    
 | fileUploadUrl           |   문자열  | 제출할 패키지를 업로드 하기 위한 SAS (공유 액세스 서명) URI입니다. 제출에 대 한 새 패키지, 목록 이미지 또는 트레일러 파일을 추가 하는 경우 패키지 및 이미지를 포함 하는 ZIP 보관 파일을이 URI에 업로드 합니다. 자세한 내용은 [앱 제출 만들기](#create-an-app-submission)를 참조 하세요.       |    
 | applicationPackages           |   array  | 제출의 각 패키지에 대 한 세부 정보를 제공 하는 [응용 프로그램 패키지 리소스](#application-package-object) 의 배열입니다. |    
@@ -370,13 +370,13 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스에는 앱에 대 한 가격 정보가 포함 되어 있습니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description        |
+| 값           | 형식    | 설명        |
 |-----------------|---------|------|
 |  trialPeriod               |    문자열     |  앱의 평가 기간을 지정 하는 문자열입니다. 다음 값 중 하나일 수 있습니다. <ul><li>NoFreeTrial</li><li>OneDay</li><li>TrialNeverExpires</li><li>SevenDays</li><li>FifteenDays</li><li>ThirtyDays</li></ul>    |
 |  marketSpecificPricings               |    개체     |  키/값 쌍의 사전입니다. 여기서 각 키는 두 문자로 된 ISO 3166-1 알파 2 국가 코드이 고 각 값은 [가격 책정 계층](#price-tiers)입니다. 이러한 항목은 [특정 시장의 앱에 대 한 사용자 지정 가격](../publish/define-market-selection.md)을 나타냅니다. 이 사전의 모든 항목은 지정 된 시장에 대해 *priceId* 값으로 지정 된 기본 가격을 재정의 합니다.      |     
 |  sales               |   array      |  **사용 되지 않습니다**. 앱에 대 한 판매 정보를 포함 하는 [판매 리소스](#sale-object) 의 배열입니다.   |     
 |  priceId               |   문자열      |  앱에 대 한 [기본 가격](../publish/define-market-selection.md) 을 지정 하는 [가격 책정 계층](#price-tiers) 입니다.   |     
-|  isAdvancedPricingModel               |   boolean      |  **True**이면 개발자 계정에서 99 usd부터 1999.99 usd 까지의 확장 된 가격 책정 계층 집합에 액세스할 수 있습니다. **False**이면 개발자 계정에서 99 usd에서 999.99 usd 까지의 원래 가격 책정 계층에 액세스할 수 있습니다. 여러 계층에 대 한 자세한 내용은 가격 책정 [계층](#price-tiers)을 참조 하세요.<br/><br/>**Note** &nbsp; 참고 &nbsp; 이 필드는 읽기 전용입니다.   |
+|  isAdvancedPricingModel               |   boolean      |  **True** 이면 개발자 계정에서 99 usd부터 1999.99 usd 까지의 확장 된 가격 책정 계층 집합에 액세스할 수 있습니다. **False** 이면 개발자 계정에서 99 usd에서 999.99 usd 까지의 원래 가격 책정 계층에 액세스할 수 있습니다. 여러 계층에 대 한 자세한 내용은 가격 책정 [계층](#price-tiers)을 참조 하세요.<br/><br/> &nbsp; 참고 &nbsp; 이 필드는 읽기 전용입니다.   |
 
 
 <span id="sale-object" />
@@ -392,7 +392,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description    |
+| 값           | 형식    | 설명    |
 |-----------------|---------|------|
 |  name               |    문자열     |   판매의 이름입니다.    |     
 |  basePriceId               |   문자열      |  판매의 기본 가격에 사용할 [가격 계층](#price-tiers) 입니다.    |     
@@ -407,7 +407,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스에는 앱에 대 한 나열 정보가 포함 되어 있습니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description                  |
+| 값           | 형식    | 설명                  |
 |-----------------|---------|------|
 |  baseListing               |   개체      |  모든 플랫폼에 대 한 기본 목록 정보를 정의 하는 앱에 대 한 [기본 목록](#base-listing-object) 정보입니다.   |     
 |  platformOverrides               | 개체 |   각 키가 목록 정보를 재정의할 플랫폼을 식별 하는 문자열이 고, 각 값은 지정 된 플랫폼에 대해 재정의할 목록 정보를 지정 하는 [기본 목록](#base-listing-object) 리소스 (description에서 제목의 값만 포함) 인 키 및 값 쌍의 사전입니다. 키에는 다음 값을 사용할 수 있습니다. <ul><li>Unknown</li><li>Package.windows80.appxmanifest</li><li>Windows81</li><li>WindowsPhone71</li><li>WindowsPhone80</li><li>WindowsPhone81</li></ul>     |      |     
@@ -418,7 +418,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스는 앱에 대 한 기본 목록 정보를 포함 합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description       |
+| 값           | 형식    | 설명       |
 |-----------------|---------|------|
 |  copyrightAndTrademarkInfo                |   문자열      |  선택적 [저작권 및/또는 상표 정보](../publish/create-app-store-listings.md)입니다.  |
 |  키워드                |  array       |  앱이 검색 결과에 표시 되는 데 도움이 되는 [키워드](../publish/create-app-store-listings.md) 의 배열입니다.    |
@@ -445,7 +445,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스에는 앱 목록에 대 한 이미지 및 아이콘 데이터가 포함 되어 있습니다. 앱 목록에 대 한 이미지와 아이콘에 대 한 자세한 내용은 [앱 스크린샷 및 이미지](../publish/app-screenshots-and-images.md)를 참조 하세요. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description           |
+| 값           | 형식    | 설명           |
 |-----------------|---------|------|
 |  fileName               |    문자열     |   제출을 위해 업로드 한 ZIP 보관 파일에 있는 이미지 파일의 이름입니다.    |     
 |  fileStatus               |   문자열      |  이미지 파일의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>PendingUpload</li><li>업로드됨</li><li>PendingDelete</li></ul>   |
@@ -486,7 +486,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description        |
+| 값           | 형식    | 설명        |
 |-----------------|---------|------|
 |  장르               |    array     |  게임 장르를 설명 하는 다음 문자열 중 하나 이상으로 이루어진 배열입니다. <ul><li>Games_ActionAndAdventure</li><li>Games_CardAndBoard</li><li>Games_Casino</li><li>Games_Educational</li><li>Games_FamilyAndKids</li><li>Games_Fighting</li><li>Games_Music</li><li>Games_Platformer</li><li>Games_PuzzleAndTrivia</li><li>Games_RacingAndFlying</li><li>Games_RolePlaying</li><li>Games_Shooter</li><li>Games_Simulation</li><li>Games_Sports</li><li>Games_Strategy</li><li>Games_Word</li></ul>    |
 |  isLocalMultiplayer               |    boolean     |  게임에서 로컬 여럿이 지원 되는지 여부를 나타냅니다.      |     
@@ -510,7 +510,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스는 제출 상태에 대 한 추가 정보를 포함 합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description         |
+| 값           | 형식    | 설명         |
 |-----------------|---------|------|
 |  오류               |    개체     |   제출에 대 한 오류 정보를 포함 하는 [상태 정보 리소스](#status-detail-object) 의 배열입니다.    |     
 |  경고               |   개체      | 제출에 대 한 경고 세부 정보를 포함 하는 [상태 정보 리소스](#status-detail-object) 의 배열입니다.      |
@@ -565,9 +565,9 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 이 리소스의 값은 다음과 같습니다.  
 
 > [!NOTE]
-> [앱 전송 업데이트](update-an-app-submission.md) 메서드를 호출 하는 경우 요청 본문에이 개체의 *fileName*, *fileStatus,* *,가 중*및 *ram* 값만 필요 합니다. 다른 값은 파트너 센터에서 채워집니다.
+> [앱 전송 업데이트](update-an-app-submission.md) 메서드를 호출 하는 경우 요청 본문에이 개체의 *fileName*, *fileStatus,* *,가 중* 및 *ram* 값만 필요 합니다. 다른 값은 파트너 센터에서 채워집니다.
 
-| 값           | 형식    | Description                   |
+| 값           | 형식    | 설명                   |
 |-----------------|---------|------|
 | fileName   |   문자열      |  패키지의 이름입니다.    |  
 | fileStatus    | 문자열    |  패키지의 상태입니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>PendingUpload</li><li>업로드됨</li><li>PendingDelete</li></ul>    |  
@@ -578,7 +578,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 | capabilities    |  array   |  패키지에 필요한 기능 배열입니다. 기능에 대 한 자세한 내용은 [앱 기능 선언](../packaging/app-capability-declarations.md)을 참조 하세요.   |     
 | 이상 버전    |  문자열   |  앱 패키지에서 지 원하는 최소 DirectX 버전입니다. 이는 Windows 8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 OS 버전을 대상으로 하는 앱의 경우이 값은 [앱 전송 업데이트](update-an-app-submission.md) 메서드를 호출할 때 표시 되어야 하지만 지정한 값은 무시 됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>DirectX93</li><li>DirectX100</li></ul>   |     
 | 이상 및 Ram    | 문자열    |  앱 패키지에 필요한 최소 RAM입니다. 이는 Windows 8.x를 대상으로 하는 앱에 대해서만 설정할 수 있습니다. 다른 OS 버전을 대상으로 하는 앱의 경우이 값은 [앱 전송 업데이트](update-an-app-submission.md) 메서드를 호출할 때 표시 되어야 하지만 지정한 값은 무시 됩니다. 다음 값 중 하나일 수 있습니다. <ul><li>없음</li><li>Memory2GB</li></ul>   |       
-| targetDeviceFamilies    | array    |  패키지가 대상으로 하는 장치 패밀리를 나타내는 문자열의 배열입니다. 이 값은 Windows 10을 대상으로 하는 패키지에만 사용 됩니다. 이전 릴리스를 대상으로 하는 패키지의 경우이 값의 값은 **None**입니다. 다음 장치 패밀리 문자열은 현재 Windows 10 패키지에 대해 지원 됩니다 *{0}* . 여기서은 10.0.10240.0, 10.0.10586.0 또는 10.0.14393.0와 같은 windows 10 버전 문자열입니다. <ul><li>Windows. Universal min version *{0}*</li><li>Windows 데스크톱 최소 버전 *{0}*</li><li>Windows. Mobile 최소 버전 *{0}*</li><li>Windows Xbox 최소 버전 *{0}*</li><li>Holographic min 버전 *{0}*</li></ul>   |    
+| targetDeviceFamilies    | array    |  패키지가 대상으로 하는 장치 패밀리를 나타내는 문자열의 배열입니다. 이 값은 Windows 10을 대상으로 하는 패키지에만 사용 됩니다. 이전 릴리스를 대상으로 하는 패키지의 경우이 값의 값은 **None** 입니다. 다음 장치 패밀리 문자열은 현재 Windows 10 패키지에 대해 지원 됩니다 *{0}* . 여기서은 10.0.10240.0, 10.0.10586.0 또는 10.0.14393.0와 같은 windows 10 버전 문자열입니다. <ul><li>Windows. Universal min version *{0}*</li><li>Windows 데스크톱 최소 버전 *{0}*</li><li>Windows. Mobile 최소 버전 *{0}*</li><li>Windows Xbox 최소 버전 *{0}*</li><li>Holographic min 버전 *{0}*</li></ul>   |    
 
 <span/>
 
@@ -588,7 +588,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스는 제출에 대 한 인증 보고서 데이터에 대 한 액세스를 제공 합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description             |
+| 값           | 형식    | 설명             |
 |-----------------|---------|------|
 |     date            |    문자열     |  보고서가 생성 된 날짜와 시간 (ISO 8601 형식)입니다.    |
 |     reportUrl            |    문자열     |  보고서에 액세스할 수 있는 URL입니다.    |
@@ -617,7 +617,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description        |
+| 값           | 형식    | 설명        |
 |-----------------|---------|------|
 | packageRollout   |   개체      |  제출에 대 한 점진적 패키지 롤아웃 설정을 포함 하는 [패키지 롤아웃 리소스](#package-rollout-object) 입니다.   |  
 | isMandatoryUpdate    | boolean    |  이 제출의 패키지를 자동 설치 앱 업데이트에 대 한 필수로 처리할지 여부를 나타냅니다. 자동 설치 앱 업데이트에 대 한 필수 패키지에 대 한 자세한 내용은 [앱에 대 한 패키지 업데이트 다운로드 및 설치](../packaging/self-install-package-updates.md)를 참조 하세요.    |  
@@ -629,7 +629,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스에는 제출에 대 한 점진적 [패키지 롤아웃 설정이](#manage-gradual-package-rollout) 포함 되어 있습니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description        |
+| 값           | 형식    | 설명        |
 |-----------------|---------|------|
 | isPackageRollout   |   boolean      |  제출할 때 점진적 패키지 롤아웃이 사용 되는지 여부를 나타냅니다.    |  
 | packageRolloutPercentage    | float    |  점진적 롤아웃에서 패키지를 수신 하는 사용자의 백분율입니다.    |  
@@ -689,7 +689,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스는 [트레일러 리소스](#trailer-object)에 정의 된 트레일러에 대 한 추가 로캘별 자산을 포함 합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description        |
+| 값           | 형식    | 설명        |
 |-----------------|---------|------|
 | title   |   문자열      |  트레일러의 지역화 된 제목입니다. 사용자가 전체 화면 모드에서 트레일러를 재생 하면 제목이 표시 됩니다.     |  
 | imageList    | array    |   트레일러에 대 한 미리 보기 이미지를 제공 하는 [이미지](#image-for-trailer-object) 리소스 하나를 포함 하는 배열입니다. 이 배열에는 [이미지](#image-for-trailer-object) 리소스를 하나만 포함할 수 있습니다.  |   
@@ -701,7 +701,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 이 리소스는 트레일러의 미리 보기 이미지를 설명 합니다. 이 리소스의 값은 다음과 같습니다.
 
-| 값           | 형식    | Description           |
+| 값           | 형식    | 설명           |
 |-----------------|---------|------|
 |  fileName               |    문자열     |   제출을 위해 업로드 한 ZIP 보관 파일에 있는 미리 보기 이미지 파일의 이름입니다.    |     
 |  id  |  문자열  | 미리 보기 이미지의 ID입니다. 이 값은 파트너 센터에서 제공 합니다.  |
@@ -719,12 +719,12 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 다음 값은 앱 전송에 대 한 [가격 책정 리소스](#pricing-object) 리소스에서 사용 가능한 가격 계층을 나타냅니다.
 
-| 값           | Description        |
+| 값           | 설명        |
 |-----------------|------|
 |  기준               |   가격 책정 계층이 설정 되지 않았습니다. 앱에 대 한 기본 가격을 사용 합니다.      |     
 |  NotAvailable              |   지정 된 지역에서 앱을 사용할 수 없습니다.    |     
-|  Free              |   앱은 무료입니다.    |    
-|  계층*xxx*               |   **계층<em>xxxx</em>** 형식의 앱에 대 한 가격 책정 계층을 지정 하는 문자열입니다. 현재 지원 되는 가격 책정 계층 범위는 다음과 같습니다.<br/><br/><ul><li>[가격 책정 리소스](#pricing-object) 의 *isAdvancedPricingModel* 값이 **true**이면 계정에 사용할 수 있는 가격 책정 계층 값은 **Tier1012**  -  **Tier1424**입니다.</li><li>[가격 책정 리소스](#pricing-object) 의 *isAdvancedPricingModel* 값이 **false**이면 계정에 사용할 수 있는 가격 책정 계층 값은 **Tier2**  -  **Tier96**입니다.</li></ul>각 계층과 관련 된 시장 관련 가격을 비롯 하 여 개발자 계정에 사용할 수 있는 가격 책정 계층의 전체 표를 보려면 파트너 센터에서 앱 서브 미션에 대 한 **가격 책정 및 가용성** 페이지로 이동 하 고 **시장 및 사용자 지정 가격** 섹션에서 **테이블 보기** 링크를 클릭 합니다 (일부 개발자 계정의 경우이 링크는 **가격 책정** 섹션에 있음).    |
+|  무료              |   앱은 무료입니다.    |    
+|  계층 *xxx*               |   **계층 <em>xxxx</em>** 형식의 앱에 대 한 가격 책정 계층을 지정 하는 문자열입니다. 현재 지원 되는 가격 책정 계층 범위는 다음과 같습니다.<br/><br/><ul><li>[가격 책정 리소스](#pricing-object) 의 *isAdvancedPricingModel* 값이 **true** 이면 계정에 사용할 수 있는 가격 책정 계층 값은 **Tier1012**  -  **Tier1424** 입니다.</li><li>[가격 책정 리소스](#pricing-object) 의 *isAdvancedPricingModel* 값이 **false** 이면 계정에 사용할 수 있는 가격 책정 계층 값은 **Tier2**  -  **Tier96** 입니다.</li></ul>각 계층과 관련 된 시장 관련 가격을 비롯 하 여 개발자 계정에 사용할 수 있는 가격 책정 계층의 전체 표를 보려면 파트너 센터에서 앱 서브 미션에 대 한 **가격 책정 및 가용성** 페이지로 이동 하 고 **시장 및 사용자 지정 가격** 섹션에서 **테이블 보기** 링크를 클릭 합니다 (일부 개발자 계정의 경우이 링크는 **가격 책정** 섹션에 있음).    |
 
 
 <span id="enterprise-licensing" />
@@ -737,7 +737,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 > 제출 API를 통해 앱 전송에 대 한 조직 라이선스 옵션을 구성할 수 있지만이 API를 사용 하 여 비즈니스에 대 한 [Microsoft Store 및 교육용 Microsoft Store를 통해 대량 구매](../publish/organizational-licensing.md)에 대 한 제출을 게시할 수는 없습니다. 비즈니스 및 교육용 Microsoft Store에 대 한 Microsoft Store에 제출을 게시 하려면 파트너 센터를 사용 해야 합니다.
 
 
-| 값           |  Description      |
+| 값           |  설명      |
 |-----------------|---------------|
 | 없음            |     스토어 관리 (온라인) 볼륨 라이선스를 사용 하는 기업에서 앱을 사용할 수 있도록 설정 하지 마세요.         |     
 | 온라인        |     스토어 관리 (온라인) 볼륨 라이선스를 사용 하는 기업에서 앱을 사용할 수 있도록 설정 합니다.  |
@@ -750,7 +750,7 @@ Microsoft Store 제출 API를 직접 호출 하는 대신 API를 기반으로 �
 
 다음 값은 제출의 상태 코드를 나타냅니다.
 
-| 값           |  Description      |
+| 값           |  설명      |
 |-----------------|---------------|
 | 없음            |     코드를 지정 하지 않았습니다.         |     
 | InvalidArchive        |     패키지를 포함 하는 ZIP 보관 파일이 잘못 되었거나 보관 파일 형식을 인식할 수 없습니다.  |

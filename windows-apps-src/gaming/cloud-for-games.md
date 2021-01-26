@@ -6,12 +6,12 @@ ms.date: 03/27/2018
 ms.topic: article
 keywords: windows 10, uwp, 게임, 클라우드 서비스
 ms.localizationpriority: medium
-ms.openlocfilehash: ca575975b27a71798b7cad1cac0cc83ec870d756
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9252e6c2b47e51f51f7cb3cd28f49de08478019d
+ms.sourcegitcommit: 7e8dfd83b181fe720b4074cb42adc908e1ba5e44
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89173177"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98811253"
 ---
 #  <a name="using-cloud-services-for-uwp-games"></a>UWP 게임에 클라우드 서비스 사용
 
@@ -48,8 +48,8 @@ Windows 10의 UWP (유니버설 Windows 플랫폼)는 Microsoft 장치에서 게
     <col width="30%" />
     </colgroup>
     <tr class="header" align="left">
-        <th>개발자</th>
-        <th>Description</th>
+        <th>Developer</th>
+        <th>설명</th>
         <th>주요 게임 시나리오</th>
         <th>자세한 정보</th>
     </tr>
@@ -112,7 +112,7 @@ Windows 10의 UWP (유니버설 Windows 플랫폼)는 Microsoft 장치에서 게
     </tr>
     <tr>
         <td><a href="http://www.crimecoast.com/">픽셀 분</a></td>
-        <td>Unity 게임 엔진과 Azure를 사용 하는 픽셀 분 분의 개발 된 <b>범죄</b> <b>범죄 해안</b> 은 Android, IOS 및 Windows 플랫폼에서 사용할 수 있는 소셜 전략 게임입니다. Azure Blob storage, 관리 되는 Azure Redis Cache, 부하 분산 된 IIS Vm의 배열 및 Microsoft Notification hubs가 게임에 사용 되었습니다. 5000 동시 플레이어와의 크기 조정 및 처리 플레이어를 관리 하는 방법을 알아봅니다.
+        <td>Unity 게임 엔진과 Azure를 사용 하는 픽셀 분 분의 개발 된 <b>범죄</b> <b>범죄 해안</b> 은 Android, IOS 및 Windows 플랫폼에서 사용할 수 있는 소셜 전략 게임입니다. Azure Blob Storage, 관리 되는 Azure Redis Cache, 부하 분산 된 IIS Vm의 배열 및 Microsoft Notification hubs가 게임에 사용 되었습니다. 5000 동시 플레이어와의 크기 조정 및 처리 플레이어를 관리 하는 방법을 알아봅니다.
         </td>
         <td>
             <ul>
@@ -150,7 +150,7 @@ Windows 10의 UWP (유니버설 Windows 플랫폼)는 Microsoft 장치에서 게
 
     PaaS (Platform as a Service)는 IaaS와 유사 하지만 서버, 저장소, 네트워킹 등의 인프라 관리도 포함 합니다. 따라서 물리적 서버 및 데이터 센터 인프라를 구매 하지 않고 소프트웨어 라이선스, 기본 응용 프로그램 인프라, 미들웨어, 개발 도구 또는 기타 리소스를 구입 하 고 관리할 필요가 없습니다.
 
-* [SaaS(Software as a Service)](https://azure.microsoft.com/overview/what-is-saas/)
+* [SaaS (Software as a Service)](https://azure.microsoft.com/overview/what-is-saas/)
 
     SaaS(Software as a Service)를 도입하면 사용자가 인터넷을 통해 클라우드 기반 앱에 연결하여 사용할 수 있습니다. 클라우드 서비스 공급자 로부터 종 량 제 방식으로 구매 하는 완전 한 소프트웨어 솔루션을 제공 합니다.  일반적인 예로는 전자 메일, 일정 및 office 도구 (예: Office 앱 Microsoft 365)가 있습니다. 조직의 앱 사용을 임대 하 고 사용자가 일반적으로 웹 브라우저를 사용 하 여 인터넷을 통해 연결 합니다. 모든 기본 인프라, 미들웨어, 앱 소프트웨어 및 앱 데이터는 서비스 공급자의 데이터 센터에 있습니다. 서비스 공급자는 하드웨어 및 소프트웨어를 관리 하 고 적절 한 서비스 계약을 사용 하 여 게임과 데이터의 가용성과 보안도 보장 합니다. SaaS를 통해 조직은 최소의 사전 투자 비용으로 신속하게 앱을 시작하고 실행할 수 있습니다.
 
@@ -182,7 +182,7 @@ Windows 10의 UWP (유니버설 Windows 플랫폼)는 Microsoft 장치에서 게
 | 게임 데이터 수집 및 분석| 관계형 데이터베이스와 비관계형 데이터베이스 모두에서 데이터의 대규모 병렬 처리 | [Azure Data Warehouse](https://azure.microsoft.com/services/sql-data-warehouse/)| 엔터프라이즈 클래스 기능이 포함 된 탄력적 데이터 웨어하우스 as a service   |
 | 사용자를 참여 하 여 사용량 및 보존 향상| 모든 백 엔드에서 대상 푸시 알림을 전달 하 여 관심을 생성 하 고 특정 게임 작업을 권장 합니다. | [Azure Notification Hubs](https://azure.microsoft.com/services/notification-hubs/)| &mdash;IOS, Android, Windows, Kindle, Baidu의 모든 주요 플랫폼에서 수백만 개의 모바일 장치에 연결 하는 빠른 브로드캐스트 푸시 모든 백 엔드 &mdash; 클라우드 또는 온-프레미스에서 게임을 호스트할 수 있습니다.|
 | 콘텐츠를 보호 하는 동안 로컬 및 전 세계의 대상에 미디어 콘텐츠 스트리밍| 모든 장치에서 브로드캐스트 품질 게임 트레일러 및 시네마 클립을 조사할 수 있습니다.| [Azure Media Services](https://azure.microsoft.com/services/media-services/)| Content Delivery Network 기능이 통합 된 주문형 및 라이브 비디오 스트리밍. 모든 재생 요구에 한 명의 플레이어를 사용 하 여 콘텐츠 보호 및 암호화를 포함 합니다.| 
-| 모바일 앱 개발, 배포 및 베타 테스트 | 모바일 앱을 테스트 하 고 배포 합니다. 앱 성능 및 사용자 환경 관리 | [HockeyApp](https://azure.microsoft.com/services/hockeyapp/)| 응용 프로그램 배포 및 사용자 피드백 플랫폼과 충돌 보고 및 사용자 메트릭을 통합 합니다. Android, Cordova, iOS, OS X, Unity, Windows 및 Xamarin 앱을 지원 합니다. 또한 [Visual Studio Mobile Center](https://visualstudio.microsoft.com/app-center/) &mdash; 풍부한 분석, 충돌 보고, 푸시 알림, 앱 배포 등을 결합 하는 앱에 대 한 Visual Studio 모바일 센터 업무 제어를 고려해 야 합니다. |
+| 모바일 앱 개발, 배포 및 베타 테스트 | 모바일 앱을 테스트 하 고 배포 합니다. 앱 성능 및 사용자 환경 관리 | [HockeyApp](https://azure.microsoft.com/services/hockeyapp/)| 응용 프로그램 배포 및 사용자 피드백 플랫폼과 충돌 보고 및 사용자 메트릭을 통합 합니다. Android, Cordova, iOS, OS X, Unity, Windows 및 Xamarin 앱을 지원 합니다. 또한 [](https://visualstudio.microsoft.com/app-center/) &mdash; 풍부한 분석, 충돌 보고, 푸시 알림, 앱 배포 등을 결합 하는 앱에 대 한 Visual Studio 모바일 센터 업무 제어를 고려해 야 합니다. |
 | 마케팅 캠페인을 만들어 사용량 및 보존 향상  | 대상 플레이어에 게 푸시 알림을 보내 관심을 생성 하 고 데이터 분석에 따라 특정 게임 작업을 권장 합니다. | [Mobile engagement](https://azure.microsoft.com/services/mobile-engagement/) -2018 년 3 월에 사용 중지 되며 현재 기존 고객 에게만 제공 됩니다. |  IOS, Android, Windows, Windows Phone 등 모든 주요 플랫폼에서 게임 플레이 시간 및 사용자 보존 향상 |
 
 
@@ -228,6 +228,6 @@ Sdk를 사용 하 여 모바일, PC 또는 콘솔 게임에이 솔루션을 통�
 * [ID@Xbox](https://www.xbox.com/Developers/id)
 
 
- 
+ 
 
- 
+ 
