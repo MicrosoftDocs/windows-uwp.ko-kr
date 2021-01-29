@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 773ff1da19116a088d52a11dfc3180ea271efe82
-ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
+ms.openlocfilehash: a1d931e98f21160badb7a8c2603a580c2adfd682
+ms.sourcegitcommit: d51c3dd64d58c7fa9513ba20e736905f12df2a9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94339721"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98988745"
 ---
 # <a name="walkthrough-of-creating-a-c-or-visual-basic-windows-runtime-component-and-calling-it-from-javascript"></a>C# 또는 Visual Basic Windows 런타임 구성 요소를 만들고 JavaScript에서 호출하는 연습
 
@@ -34,12 +34,15 @@ Visual Studio를 사용 하면 c # 또는 Visual Basic를 사용 하 여 작성 
 - Windows 10
 - [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/)
 
+> [!NOTE]
+> JavaScript를 사용 하는 UWP (유니버설 Windows 플랫폼) 프로젝트는 Visual Studio 2019에서 지원 되지 않습니다. [JavaScript 및 TypeScript In Visual Studio 2019을](/visualstudio/javascript/javascript-in-vs-2019#projects)참조 하세요. 이 항목과 함께 수행 하려면 Visual Studio 2017을 사용 하는 것이 좋습니다. [Visual Studio 2017의 JavaScript를](/visualstudio/javascript/javascript-in-vs-2017)참조 하세요.
+
 ## <a name="creating-a-simple-windows-runtime-class"></a>간단한 Windows 런타임 클래스 만들기
 
 이 섹션에서는 JavaScript UWP 응용 프로그램을 만들고 Visual Basic 또는 c # Windows 런타임 구성 요소 프로젝트를 솔루션에 추가 합니다. Windows 런타임 형식을 정의 하 고 JavaScript에서 형식의 인스턴스를 만든 다음 정적 멤버와 인스턴스 멤버를 호출 하는 방법을 보여 줍니다. 구성 요소에 포커스를 유지 하기 위해 예제 앱의 시각적 표시는 의도적으로 낮은 키입니다.
 
-1. Visual Studio에서 새 JavaScript 프로젝트를 만듭니다. 메뉴 모음에서 **파일, 새로 만들기, 프로젝트** 를 선택 합니다. **새 프로젝트** 대화 상자의 **설치 된 템플릿** 섹션에서 **JavaScript** 를 선택한 다음 **Windows** , **유니버설** 을 차례로 선택 합니다. Windows를 사용할 수 없는 경우 Windows 8 이상을 사용 하 고 있는지 확인 합니다. **빈 응용 프로그램** 템플릿을 선택 하 고 프로젝트 이름으로 sampleapp.exe을 입력 합니다.
-2.  구성 요소 프로젝트 만들기: 솔루션 탐색기에서 Sampleapp.exe 솔루션에 대 한 바로 가기 메뉴를 열고 **추가** 를 선택한 다음 **새 프로젝트** 를 선택 하 여 새 c # 또는 Visual Basic 프로젝트를 솔루션에 추가 합니다. **새 프로젝트 추가** 대화 상자의 **설치 된 템플릿** 섹션에서 **Visual Basic** 또는 **Visual c #** 을 선택 하 고 **Windows** , **유니버설** 을 차례로 선택 합니다. **Windows 런타임 구성 요소** 템플릿을 선택 하 고 프로젝트 이름으로 **SampleComponent** 을 입력 합니다.
+1. Visual Studio에서 새 JavaScript 프로젝트를 만듭니다. 메뉴 모음에서 **파일, 새로 만들기, 프로젝트** 를 선택 합니다. **새 프로젝트** 대화 상자의 **설치 된 템플릿** 섹션에서 **JavaScript** 를 선택한 다음 **Windows**, **유니버설** 을 차례로 선택 합니다. Windows를 사용할 수 없는 경우 Windows 8 이상을 사용 하 고 있는지 확인 합니다. **빈 응용 프로그램** 템플릿을 선택 하 고 프로젝트 이름으로 sampleapp.exe을 입력 합니다.
+2.  구성 요소 프로젝트 만들기: 솔루션 탐색기에서 Sampleapp.exe 솔루션에 대 한 바로 가기 메뉴를 열고 **추가** 를 선택한 다음 **새 프로젝트** 를 선택 하 여 새 c # 또는 Visual Basic 프로젝트를 솔루션에 추가 합니다. **새 프로젝트 추가** 대화 상자의 **설치 된 템플릿** 섹션에서 **Visual Basic** 또는 **Visual c #** 을 선택 하 고 **Windows**, **유니버설** 을 차례로 선택 합니다. **Windows 런타임 구성 요소** 템플릿을 선택 하 고 프로젝트 이름으로 **SampleComponent** 을 입력 합니다.
 3.  클래스의 이름을 **Example** 로 변경 합니다. 기본적으로 클래스는 **public sealed** 로 표시 되어 있습니다 (Visual Basic의 **public NotInheritable** ). 구성 요소에서 노출 하는 모든 Windows 런타임 클래스는 sealed 여야 합니다.
 4.  클래스에 두 개의 간단한 멤버를 추가 하 고 **정적** 메서드 (Visual Basic의 **공유** 메서드)와 인스턴스 속성을 추가 합니다.
 

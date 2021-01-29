@@ -6,12 +6,12 @@ ms.date: 05/14/2018
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: bfd8fdccc62dc45928085c53fa3f5b32fe9db98c
-ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
+ms.openlocfilehash: 155fd01b16f93ac8419282e5b2256f7e8a939a7f
+ms.sourcegitcommit: d51c3dd64d58c7fa9513ba20e736905f12df2a9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97860161"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98988755"
 ---
 # <a name="walkthrough-of-creating-a-ccx-windows-runtime-component-and-calling-it-from-javascript-or-c"></a>C++/CX Windows 런타임 구성 요소를 만들고 JavaScript 또는 C#에서 호출하는 연습
 
@@ -272,7 +272,7 @@ IAsyncActionWithProgress<double>^ Class1::GetPrimesUnordered(int first, int last
 C # 클라이언트를 만들려는 경우이 섹션을 건너뛸 수 있습니다.
 
 > [!NOTE]
-> UWP (유니버설 Windows 플랫폼) 프로젝트는 Visual Studio 2019에서 지원 되지 않습니다. [JavaScript 및 TypeScript In Visual Studio 2019을](/visualstudio/javascript/javascript-in-vs-2019#projects)참조 하세요. 이 섹션과 함께 수행 하려면 Visual Studio 2017을 사용 하는 것이 좋습니다. [Visual Studio 2017의 JavaScript를](/visualstudio/javascript/javascript-in-vs-2017)참조 하세요.
+> JavaScript를 사용 하는 UWP (유니버설 Windows 플랫폼) 프로젝트는 Visual Studio 2019에서 지원 되지 않습니다. [JavaScript 및 TypeScript In Visual Studio 2019을](/visualstudio/javascript/javascript-in-vs-2019#projects)참조 하세요. 이 섹션과 함께 수행 하려면 Visual Studio 2017을 사용 하는 것이 좋습니다. [Visual Studio 2017의 JavaScript를](/visualstudio/javascript/javascript-in-vs-2017)참조 하세요.
 
 ### <a name="to-create-a-javascript-project"></a>JavaScript 프로젝트를 만들려면
 1. 솔루션 탐색기 (Visual Studio 2017의 경우 위의 **참고 사항** 참조), 솔루션 노드에 대 한 바로 가기 메뉴를 열고 **추가, 새 프로젝트를** 차례로 선택 합니다.

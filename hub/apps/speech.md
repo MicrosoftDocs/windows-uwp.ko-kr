@@ -6,12 +6,12 @@ ms.date: 09/12/2019
 keywords: Windows 10의 음성, 음성, 음성, 대화, win32 음성 앱, UWP speech 앱, WPF speech apps, WinForms speech apps
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
-ms.openlocfilehash: d810f08a2db60309e4528167bcb4bddc95d850c6
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: d157d33316925db6112ab892e13b2c849cfcaa5d
+ms.sourcegitcommit: d51c3dd64d58c7fa9513ba20e736905f12df2a9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174157"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98988705"
 ---
 # <a name="speech-voice-and-conversation-in-windows-10"></a>Windows 10의 음성, 음성 및 대화
 
@@ -72,13 +72,15 @@ ms.locfileid: "89174157"
 
       **Azure 음성 서비스**
 
-      Azure speech services를 사용 하 여 액세스할 수 있는 웹 사이트를 디자인, 빌드 및 테스트 합니다.
+      음성 처리를 앱 및 서비스에 통합 합니다.
 
-      [음성 텍스트 변환](https://azure.microsoft.com/services/cognitive-services/speech-to-text/)
+      [음성 텍스트](https://azure.microsoft.com/services/cognitive-services/speech-to-text/)
 
       [텍스트 음성 변환](https://azure.microsoft.com/services/cognitive-services/text-to-speech/)
       
       [음성 번역](https://azure.microsoft.com/services/cognitive-services/speech-translation/)
+
+      [화자 인식](https://azure.microsoft.com/en-us/services/cognitive-services/speaker-recognition/)
 
       [음성 우선 가상 도우미](/azure/cognitive-services/speech-service/voice-first-virtual-assistants)
    :::column-end:::
@@ -87,16 +89,21 @@ ms.locfileid: "89174157"
    :::column span="2":::
       **레거시 기능**
 
-      Microsoft 음성 기술의 레거시, 사용 되지 않는 버전 및/또는 지원 되지 않는 버전입니다.
+      Microsoft 음성 및 대화 기술의 레거시, 사용 되지 않는 버전 및/또는 지원 되지 않는 버전입니다.
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column:::
+      [Cortana 스킬 키트](/cortana/skills/)
+
+      Cortana를 Microsoft 365에 깊이 포함 하 여 최신 생산성 환경을 전환 하는 목표의 일환으로, 소비자 (개발자 플랫폼) 및이 플랫폼에서 빌드된 모든 기술을 사용 하는 데 사용 되는 Cortana 스킬 키트를 사용 하지 않습니다.
+   :::column-end:::
+   :::column:::
+
       [Microsoft 에이전트](/windows/win32/lwef/microsoft-agent)
 
       [Microsoft Speech SASDK (Software Development Kit) 버전 1.0](https://www.microsoft.com/download/details.aspx?id=2200)
-   :::column-end:::
-   :::column:::
+
       [SAPI (Microsoft Speech API) 5.3](/previous-versions/windows/desktop/ms723627(v=vs.85))
 
       [SAPI (Microsoft Speech API) 5.4](/previous-versions/windows/desktop/ee125663(v=vs.85))
