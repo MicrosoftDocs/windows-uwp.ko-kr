@@ -8,16 +8,16 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: b88f65ba45a2b8a79d822eba525733550f965372
-ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
+ms.openlocfilehash: 91b5e975c40b7c9642cd452b3c67045c7be1127d
+ms.sourcegitcommit: 069f5ab4be85a7d638fc2a426afaed824e5dfeae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97860172"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98668717"
 ---
 # <a name="integrate-your-desktop-app-with-windows-10-and-uwp"></a>데스크톱 앱을 Windows 10 및 UWP와 통합
 
-데스크톱 앱에 [패키지 ID](modernize-packaged-apps.md)가 있는 경우 [패키지 매니페스트](/uwp/schemas/appxpackage/uapmanifestschema/schema-root)의 미리 정의된 확장을 사용하여 앱을 Windows 10과 통합할 수 있습니다.
+데스크톱 앱에 [패키지 ID](modernize-packaged-apps.md)가 있는 경우 [패키지 매니페스트의 미리 정의된 확장](/uwp/schemas/appxpackage/uapmanifestschema/extensions)을 사용하여 앱을 Windows 10과 통합할 수 있습니다.
 
 예를 들어 확장을 사용하여 방화벽 예외를 만들거나, 앱을 파일 형식의 기본 애플리케이션으로 설정하거나, 시작 타일이 앱을 가리키도록 지정할 수 있습니다. 확장을 사용하려면 앱의 패키지 매니페스트 파일에 약간의 XML을 추가하기만 하면 됩니다. 코드는 필요 없습니다.
 

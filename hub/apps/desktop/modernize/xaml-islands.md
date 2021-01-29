@@ -8,23 +8,23 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 752b02f4bbf6faaca1fd04007c85cfe41f6c28f9
-ms.sourcegitcommit: b8d0e2c6186ab28fe07eddeec372fb2814bd4a55
+ms.openlocfilehash: b8cb2670c09c5a93d2edd67e3f338a33eeb488ad
+ms.sourcegitcommit: b4c782b2403da83a6e0b5b7416cc4dc835b068d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671552"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98922756"
 ---
 # <a name="host-winrt-xaml-controls-in-desktop-apps-xaml-islands"></a>데스크톱 앱에서 WinRT XAML 컨트롤 호스팅(XAML Islands)
 
-Windows 10 버전 1903부터 *XAML Islands*라는 기능을 사용하여 UWP 이외의 데스크톱 애플리케이션에서 WinRT XAML 컨트롤을 호스팅할 수 있습니다. 이 기능을 사용하면 WinRT XAML 컨트롤을 통해서만 사용할 수 있는 최신 Windows 10 UI 기능을 사용하여 기존 WPF, Windows Forms 및 C++ Win32 애플리케이션의 모양, 느낌 및 기능을 향상시킬 수 있습니다. 즉, [Windows Ink](/windows/uwp/design/input/pen-and-stylus-interactions)와 같은 UWP 기능과 [Fluent Design 시스템](/windows/uwp/design/fluent-design-system/index)을 지원하는 컨트롤을 기존 WPF, Windows Forms 및 C++ Win32 애플리케이션에서 사용할 수 있습니다.
+Windows 10 버전 1903부터 *XAML Islands* 라는 기능을 사용하여 UWP 이외의 데스크톱 애플리케이션에서 WinRT XAML 컨트롤을 호스팅할 수 있습니다. 이 기능을 사용하면 WinRT XAML 컨트롤을 통해서만 사용할 수 있는 최신 Windows 10 UI 기능을 사용하여 기존 WPF, Windows Forms 및 C++ Win32 애플리케이션의 모양, 느낌 및 기능을 향상시킬 수 있습니다. 즉, [Windows Ink](/windows/uwp/design/input/pen-and-stylus-interactions)와 같은 UWP 기능과 [Fluent Design 시스템](/windows/uwp/design/fluent-design-system/index)을 지원하는 컨트롤을 기존 WPF, Windows Forms 및 C++ Win32 애플리케이션에서 사용할 수 있습니다.
 
 다음을 포함하여 [Windows.UI.Xaml.UIElement](/uwp/api/windows.ui.xaml.uielement)에서 파생되는 모든 WinRT XAML 컨트롤을 호스팅할 수 있습니다.
 
 * Windows SDK 또는 WinUI 2.x 라이브러리에서 제공하는 모든 자사 WinRT XAML 컨트롤
 * 사용자 지정 WinRT XAML 컨트롤(예: 함께 작동하는 여러 WinRT XAML 컨트롤로 구성된 사용자 컨트롤). 애플리케이션을 사용하여 컴파일할 수 있도록 사용자 지정 컨트롤에 대한 소스 코드가 있어야 합니다.
 
-기본적으로 XAML Island는 *UWP XAML 호스팅 API*를 사용하여 생성됩니다. 이 API는 Windows 10, 버전 1903 SDK에 도입된 몇 가지 Windows 런타임 클래스 및 COM 인터페이스로 구성됩니다. 또한 내부적으로 UWP XAML 호스팅 API를 사용하고 WPF 및 Windows Forms 앱을 보다 편리하게 개발할 수 있는 환경을 제공하는 [Windows 커뮤니티 도구 키트](/windows/uwpcommunitytoolkit/)에 XAML Island .NET 컨트롤 세트가 제공됩니다.
+기본적으로 XAML Island는 *UWP XAML 호스팅 API* 를 사용하여 생성됩니다. 이 API는 Windows 10, 버전 1903 SDK에 도입된 몇 가지 Windows 런타임 클래스 및 COM 인터페이스로 구성됩니다. 또한 내부적으로 UWP XAML 호스팅 API를 사용하고 WPF 및 Windows Forms 앱을 보다 편리하게 개발할 수 있는 환경을 제공하는 [Windows 커뮤니티 도구 키트](/windows/uwpcommunitytoolkit/)에 XAML Island .NET 컨트롤 세트가 제공됩니다.
 
 XAML Island를 사용하는 방법은 애플리케이션 유형 및 호스팅하려는 WinRT XAML 컨트롤 형식에 따라 달라집니다.
 
@@ -40,12 +40,12 @@ XAML Islands의 런타임 요구 사항은 다음과 같습니다.
 
 ## <a name="wpf-and-windows-forms-applications"></a>WPF 및 Windows Forms 애플리케이션
 
+> [!NOTE]
+> XAML Islands를 사용하여 WinRT XAML 컨트롤을 호스팅하는 것은 현재 .NET Core 3.x를 대상으로 하는 WPF 및 Windows Forms 앱에서만 지원됩니다. .NET 5를 대상으로 하는 앱 또는 .NET Framework 버전을 대상으로 하는 앱에서는 아직 XAML Islands가 지원되지 않습니다.
+
 WPF 및 Windows Forms 애플리케이션은 Windows 커뮤니티 도구 키트에 제공되는 XAML Island .NET 컨트롤을 사용하는 것이 좋습니다. 이러한 컨트롤은 해당 WinRT XAML 컨트롤의 속성, 메서드 및 이벤트를 모방하거나 이에 대한 액세스를 제공하는 개체 모델을 제공합니다. 또한 키보드 탐색 및 레이아웃 변경과 같은 동작을 처리합니다.
 
-WPF 및 Windows Forms 애플리케이션용 XAML Island 컨트롤 세트는 두 가지가 있으며, *래핑된 컨트롤*과 *호스트 컨트롤*입니다. 
-
-> [!NOTE]
-> XAML Islands를 사용하여 WinRT XAML 컨트롤을 호스팅하는 것은 .NET Core 3.x를 대상으로 하는 WPF 및 Windows Forms 앱에서만 지원됩니다. XAML Islands는 .NET Framework를 대상으로 하는 앱에서 지원되지 않습니다.
+WPF 및 Windows Forms 애플리케이션용 XAML Island 컨트롤 세트는 두 가지가 있으며, *래핑된 컨트롤* 과 *호스트 컨트롤* 입니다. 
 
 ### <a name="wrapped-controls"></a>래핑된 컨트롤
 
@@ -104,7 +104,7 @@ Windows 커뮤니티 도구 키트는 WPF 및 Windows Forms 애플리케이션�
 
 ## <a name="c-win32-applications"></a>C++ Win32 애플리케이션
 
-XAML Island .NET 컨트롤은 C++ Win32 애플리케이션에서 지원되지 않습니다. 이러한 애플리케이션은 Windows 10 SDK(버전 1903 이상)에서 제공하는 *UWP XAML 호스팅 API*를 대신 사용해야 합니다.
+XAML Island .NET 컨트롤은 C++ Win32 애플리케이션에서 지원되지 않습니다. 이러한 애플리케이션은 Windows 10 SDK(버전 1903 이상)에서 제공하는 *UWP XAML 호스팅 API* 를 대신 사용해야 합니다.
 
 UWP XAML 호스팅 API는 C++ Win32 애플리케이션을 통해 [Windows.UI.Xaml.UIElement](/uwp/api/windows.ui.xaml.uielement)에서 파생되는 모든 WinRT XAML 컨트롤을 호스팅하는 데 사용할 수 있는 몇 가지 Windows 런타임 클래스 및 COM 인터페이스로 구성됩니다. 연결된 창 핸들(HWND)이 있는 애플리케이션의 모든 UI 요소에서 WinRT XAML 컨트롤을 호스팅할 수 있습니다. 이 API에 대한 자세한 내용은 다음 문서를 참조하세요.
 

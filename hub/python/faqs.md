@@ -8,24 +8,45 @@ ms.topic: article
 keywords: python, windows 10, microsoft, pip, py.exe, 파일 경로, PYTHONPATH, python 배포, python 패키징
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 4504e7550d19d2cc713284abebed43b6305b5dbd
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c1cada0fef5968846100f66bb41b3dd70ea5b59a
+ms.sourcegitcommit: 8040760f5520bd1732c39aedc68144c4496319df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89174127"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98691308"
 ---
 # <a name="frequently-asked-questions-about-using-python-on-windows"></a>Windows에서 Python 사용에 대한 질문과 대답입니다.
 
-## <a name="why-cant-i-pip-install-a-certain-package"></a>특정 패키지를 "pip 설치"할 수 없는 이유는 무엇입니까?
+## <a name="trouble-installing-a-package-with-pip-install"></a>pip install을 사용하여 패키지를 설치할 수 없는 문제
 
 설치가 실패하는 여러 이유가 있으며, 대부분은 패키지 개발자에게 문의하는 것이 가장 좋은 방법입니다.
 
-문제가 발생하는 가장 일반적인 원인은 수정할 권한이 없는 위치에 설치하려고 시도하는 것입니다. 예를 들어 기본 설치 위치는 관리 권한이 필요할 수 있지만, 기본적으로 Python은 관리 권한을 갖고 있지 않습니다. 가장 좋은 해결 방법은 가상 환경을 만들고 거기에 설치하는 것입니다.
+문제가 발생하는 가장 일반적인 원인은 수정할 권한이 없는 위치에 설치하려고 시도하는 것입니다. 예를 들어 기본 설치 위치는 관리 권한이 필요할 수 있지만, 기본적으로 Python은 관리 권한을 갖고 있지 않습니다. 가장 좋은 해결 방법은 [가상 환경](./web-frameworks.md#create-a-virtual-environment)을 만들고 거기에 설치하는 것입니다.
 
 일부 패키지에는 C 또는 C++ 컴파일러를 설치해야 하는 네이티브 코드가 포함되어 있습니다. 일반적으로 패키지 개발자는 미리 컴파일된 버전을 게시해야 하지만, 게시하지 않는 경우도 자주 있습니다. [Build Tools for Visual Studio를 설치](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)하고 C++ 옵션을 선택하면 이러한 패키지 중 일부가 작동하기도 하지만, 대부분은 패키지 개발자에게 문의해야 합니다.
 
 [StackOverflow의 설명을 따르세요](https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows/12476379).
+
+### <a name="trouble-installing-pip-with-wsl"></a>WSL로 pip를 설치할 수 없는 문제
+
+Linux용 Windows 하위 시스템(WSL 또는 WSL2)에서 pip를 사용하여 Flask 같은 패키지를 설치할 때(예: `python3 -m pip install flask`) 다음과 같은 오류가 발생할 수 있습니다.
+
+```bash
+WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None))
+after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection
+object at 0x7f655471da30>: Failed to establish a new connection: [Errno -3]
+Temporary failure in name resolution')': /simple/flask/
+```
+
+이 문제를 조사할 때 미궁에 빠질 수 있으며, WSL linux 배포판에서 특별히 잘 해결되는 것은 아닙니다. (경고: WSL에서 `resolv.conf` 파일을 편집하지 마세요. 이 파일은 바로 가기 링크이며 이 파일을 수정하면 상황이 더 복잡해집니다.) 애프터마켓 방화벽을 실행하지 않는 한, 가능성이 높은 해결 방법은 간단하게 pip를 다시 설치하는 것입니다.
+
+```bash
+sudo apt -y purge python3-pip
+sudo python3 -m pip uninstall pip
+sudo apt -y install python3-pip --fix-missing
+```
+
+* *[GitHub의 WSL 제품 리포지토리](https://github.com/microsoft/WSL/issues/4020)에서 자세히 알아보세요. 문서에 [이 문제를 올려 주신](https://github.com/MicrosoftDocs/windows-uwp/issues/2679) 사용자 커뮤니티에 감사하다는 말씀을 드립니다.*
 
 ## <a name="what-is-pyexe"></a>py.exe란?
 

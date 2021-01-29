@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, python 시스템 관리, python 파일 자동화, windows에서 python 스크립트, windows에서 python 설정, windows의 python 개발자 환경, windows의 python 개발 환경, powershell을 사용하는 python, 파일 시스템 작업을 위한 python 스크립트
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: d465d46a0524345a45dff9b1cc7c425e4cb468a4
-ms.sourcegitcommit: c2e4bbe46c7b37be1390cdf3fa0f56670f9d34e9
+ms.openlocfilehash: a8f13243f3501b2af42d38c13bff580be2e5b42a
+ms.sourcegitcommit: 8040760f5520bd1732c39aedc68144c4496319df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92253670"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98691328"
 ---
 # <a name="get-started-using-python-on-windows-for-scripting-and-automation"></a>스크립팅 및 자동화를 위해 Windows에서 Python 사용 시작
 
@@ -26,7 +26,7 @@ ms.locfileid: "92253670"
 
 Python을 사용하여 파일 시스템 작업을 수행하는 스크립트를 작성할 때 [Microsoft Store에서 Python을 설치](https://www.microsoft.com/p/python-37/9nj46sx7x90p?activetab=pivot:overviewtab)하는 것이 좋습니다. Microsoft Store를 통해 설치하면 기본 Python3 인터프리터를 사용하지만, 자동 업데이트를 제공할 뿐 아니라 현재 사용자의 PATH 설정까지 처리합니다(관리자가 액세스할 필요 없음).
 
-Windows에서 **웹 개발**에 Python을 사용하는 경우 Linux용 Windows 하위 시스템을 사용하는 다른 설치 프로그램을 이용하는 것이 좋습니다. 자세한 설명은 [웹 개발을 위해 Windows에서 Python 사용 시작](./web-frameworks.md) 가이드를 참조하세요. Python을 처음 접하는 경우 [초보자를 위한 Windows에서 Python 사용 시작](./beginners.md) 가이드를 참조하세요. 고급 시나리오의 경우(예: Python의 설치 파일을 액세스/수정하거나, 이진 파일을 복사하거나, Python DLL을 직접 사용해야 하는 시나리오) [python.org](https://www.python.org/downloads/)에서 특정 Python 릴리스를 직접 다운로드하거나 Anaconda, Jython, PyPy, WinPython, IronPython 등과 같은 [대체 구현](https://www.python.org/download/alternatives)을 설치하는 것이 좋습니다. 대체 구현을 선택하는 특별한 이유가 있는 고급 Python 프로그래머인 경우에만 이를 추천합니다.
+Windows에서 **웹 개발** 에 Python을 사용하는 경우 Linux용 Windows 하위 시스템을 사용하는 다른 설치 프로그램을 이용하는 것이 좋습니다. 자세한 설명은 [웹 개발을 위해 Windows에서 Python 사용 시작](./web-frameworks.md) 가이드를 참조하세요. Python을 처음 접하는 경우 [초보자를 위한 Windows에서 Python 사용 시작](./beginners.md) 가이드를 참조하세요. 고급 시나리오의 경우(예: Python의 설치 파일을 액세스/수정하거나, 이진 파일을 복사하거나, Python DLL을 직접 사용해야 하는 시나리오) [python.org](https://www.python.org/downloads/)에서 특정 Python 릴리스를 직접 다운로드하거나 Anaconda, Jython, PyPy, WinPython, IronPython 등과 같은 [대체 구현](https://www.python.org/download/alternatives)을 설치하는 것이 좋습니다. 대체 구현을 선택하는 특별한 이유가 있는 고급 Python 프로그래머인 경우에만 이를 추천합니다.
 
 ## <a name="install-python"></a>Python 설치
 
@@ -34,11 +34,11 @@ Microsoft Store를 사용하여 Python을 설치하는 방법은 다음과 같�
 
 1. **시작** 메뉴(왼쪽 아래 Windows 아이콘)로 이동하여 "Microsoft Store"를 입력하고, 링크를 선택하여 스토어를 엽니다.
 
-2. 스토어가 열리면 오른쪽 위 메뉴에서 **검색**을 선택하고 "Python"을 입력합니다. 앱 아래의 결과에서 "Python 3.7"을 엽니다. **가져오기**를 선택합니다.
+2. 스토어가 열리면 오른쪽 위 메뉴에서 **검색** 을 선택하고 "Python"을 입력합니다. 앱 아래의 결과에서 "Python 3.7"을 엽니다. **가져오기** 를 선택합니다.
 
 3. Python에서 다운로드 및 설치 프로세스를 완료하면 **시작** 메뉴(왼쪽 아래 Windows 아이콘)를 사용하여 Windows PowerShell을 엽니다. PowerShell이 열리면 `Python --version`을 입력하여 머신에 Python3가 설치되었는지 확인합니다.
 
-4. Python의 Microsoft Store 설치에는 표준 패키지 관리자인 **pip**가 포함되어 있습니다. pip를 사용하면 Python 표준 라이브러리에 포함되지 않은 추가 패키지를 설치하고 관리할 수 있습니다. 패키지의 설치 및 관리에 사용할 수 있는 pip도 있는지 확인하려면 `pip --version`을 입력합니다.
+4. Python의 Microsoft Store 설치에는 표준 패키지 관리자인 **pip** 가 포함되어 있습니다. pip를 사용하면 Python 표준 라이브러리에 포함되지 않은 추가 패키지를 설치하고 관리할 수 있습니다. 패키지의 설치 및 관리에 사용할 수 있는 pip도 있는지 확인하려면 `pip --version`을 입력합니다.
 
 ## <a name="install-visual-studio-code"></a>Visual Studio Code 설치
 
@@ -50,9 +50,9 @@ Windows용 VS Code를 다운로드하고 설치 지침([https://code.visualstudi
 
 VS Code 지원 기능을 활용하려면 Microsoft Python 확장을 설치해야 합니다. [자세한 정보를 알아보세요](https://code.visualstudio.com/docs/languages/python).
 
-1. **Ctrl+Shift+X**를 입력하거나 메뉴에서 **보기** > **확장**으로 이동하여 VS Code 확장 창을 엽니다.
+1. **Ctrl+Shift+X** 를 입력하거나 메뉴에서 **보기** > **확장** 으로 이동하여 VS Code 확장 창을 엽니다.
 
-2. 위쪽의 **마켓플레이스에서 확장 검색** 상자에  **Python**을 입력합니다.
+2. 위쪽의 **마켓플레이스에서 확장 검색** 상자에  **Python** 을 입력합니다.
 
 3. **Python (ms-python.python) by Microsoft** 확장을 찾아 녹색 **설치** 단추를 선택합니다.
 
@@ -60,10 +60,10 @@ VS Code 지원 기능을 활용하려면 Microsoft Python 확장을 설치해야
 
 VS Code에는 PowerShell을 사용하여 Python 명령줄을 열고 코드 편집기와 명령줄 간에 원활한 워크플로를 설정할 수 있는 [기본 제공 터미널](https://code.visualstudio.com/docs/editor/integrated-terminal)이 포함되어 있습니다.
 
-1. VS Code에서 터미널을 열고, **보기** > **터미널**을 선택하거나 바로 가기 키 **Ctrl+`** (백틱 문자 사용)을 사용합니다.
+1. VS Code에서 터미널을 열고, **보기** > **터미널** 을 선택하거나 바로 가기 키 **Ctrl+`** (백틱 문자 사용)을 사용합니다.
 
     > [!NOTE]
-    > 기본 터미널은 PowerShell이지만, 변경해야 하는 경우 **Ctrl+Shift+P**를 사용하여 팔레트 명령을 입력합니다. **터미널: 기본 셸 선택**을 입력하면 PowerShell, 명령 프롬프트, WSL 등을 포함하고 있는 터미널 옵션 목록이 표시됩니다. 사용할 옵션을 선택하고, **Ctrl+Shift+`** (백틱 사용)을 입력하여 새 터미널을 만듭니다.
+    > 기본 터미널은 PowerShell이지만, 변경해야 하는 경우 **Ctrl+Shift+P** 를 사용하여 팔레트 명령을 입력합니다. **터미널: 기본 셸 선택** 을 입력하면 PowerShell, 명령 프롬프트, WSL 등을 포함하고 있는 터미널 옵션 목록이 표시됩니다. 사용할 옵션을 선택하고, **Ctrl+Shift+`** (백틱 사용)을 입력하여 새 터미널을 만듭니다.
 
 2. VS Code 터미널 내에서 `python`을 입력하여 Python을 엽니다.
 
@@ -114,14 +114,14 @@ Python 코드를 다른 사람과 협업할 생각이거나 GitHub 같은 오픈
 
 6. `code .`를 입력하여 VS Code에서 프로젝트를 엽니다.
 
-7. **Ctrl+Shift+E**를 입력하여(또는 메뉴를 사용하여 **보기** > **탐색기**로 이동) VS Code 파일 탐색기 창을 열고 방금 만든 list-directory-contents.py 파일을 선택합니다. Microsoft Python 확장은 Python 인터프리터를 자동으로 로드합니다. VS Code 창의 아래쪽에서 로드된 인터프리터를 확인할 수 있습니다.
+7. **Ctrl+Shift+E** 를 입력하여(또는 메뉴를 사용하여 **보기** > **탐색기** 로 이동) VS Code 파일 탐색기 창을 열고 방금 만든 list-directory-contents.py 파일을 선택합니다. Microsoft Python 확장은 Python 인터프리터를 자동으로 로드합니다. VS Code 창의 아래쪽에서 로드된 인터프리터를 확인할 수 있습니다.
 
     > [!NOTE]
-    > Python은 해석형 언어입니다. 즉, 가상 머신으로 작동하면서 물리적 컴퓨터를 에뮬레이션합니다. 사용할 수 있는 Python 인터프리터 유형으로는 Python 2, Python 3, Anaconda, PyPy 등이 있습니다. Python 코드를 실행하고 Python IntelliSense를 가져오려면 어떤 인터프리터를 사용할 것인지 VS Code에 알려주어야 합니다. 다른 인터프리터를 선택해야 하는 특별한 이유가 없는 한, VS Code에서 기본적으로 선택하는 인터프리터(이 예제에서는 Python 3)를 사용하는 것이 좋습니다. Python 인터프리터를 변경하려면 VS Code 창의 아래쪽에 있는 파란색 표시줄에 현재 표시된 인터프리터를 선택하거나, **명령 팔레트**를 열고(Ctrl+Shift+P) **Python: 인터프리터 선택** 명령을 입력합니다. 그러면 현재 설치된 Python 인터프리터 목록이 표시됩니다. [Python 환경 구성에 대해 자세히 알아보세요](https://code.visualstudio.com/docs/python/environments).
+    > Python은 해석형 언어입니다. 즉, 가상 머신으로 작동하면서 물리적 컴퓨터를 에뮬레이션합니다. 사용할 수 있는 Python 인터프리터 유형으로는 Python 2, Python 3, Anaconda, PyPy 등이 있습니다. Python 코드를 실행하고 Python IntelliSense를 가져오려면 어떤 인터프리터를 사용할 것인지 VS Code에 알려주어야 합니다. 다른 인터프리터를 선택해야 하는 특별한 이유가 없는 한, VS Code에서 기본적으로 선택하는 인터프리터(이 예제에서는 Python 3)를 사용하는 것이 좋습니다. Python 인터프리터를 변경하려면 VS Code 창의 아래쪽에 있는 파란색 표시줄에 현재 표시된 인터프리터를 선택하거나, **명령 팔레트** 를 열고(Ctrl+Shift+P) **Python: 인터프리터 선택** 명령을 입력합니다. 그러면 현재 설치된 Python 인터프리터 목록이 표시됩니다. [Python 환경 구성에 대해 자세히 알아보세요](https://code.visualstudio.com/docs/python/environments).
 
     ![VS Code에서 Python 인터프리터 선택](../images/interpreterselection.gif)
 
-8. 다음 코드를 list-directory-contents.py 파일에 붙여넣고 **저장**을 선택합니다.
+8. 다음 코드를 list-directory-contents.py 파일에 붙여넣고 **저장** 을 선택합니다.
 
     ```python
     import os
@@ -176,6 +176,9 @@ Python 코드를 다른 사람과 협업할 생각이거나 GitHub 같은 오픈
 
 축하합니다! 방금 만든 디렉터리와 파일을 읽고 Python을 사용하여 디렉터리 구조를 표시한 다음, 자체 텍스트 파일에 출력하는 자동화된 시스템 관리 스크립트가 완성되었습니다.
 
+> [!NOTE]
+> Microsoft Store에서 Python 3를 설치할 수 없는 경우 이 [이슈](https://github.com/MicrosoftDocs/windows-uwp/issues/2901)에서 이 샘플 스크립트의 경로 처리 방법에 대한 예제를 참조하세요.
+
 ## <a name="example-script-to-modify-all-files-in-a-directory"></a>디렉터리의 모든 파일을 수정하는 예제 스크립트
 
 이 예제에서는 방금 만든 파일과 디렉터리를 사용하며, 파일 이름 앞부분에 파일이 마지막으로 수정된 날짜를 추가하여 각 파일의 이름을 바꿉니다.
@@ -210,7 +213,7 @@ Python 코드를 다른 사람과 협업할 생각이거나 GitHub 같은 오픈
 
 3. update-filenames.py 스크립트를 실행하여 테스트(`python3 update-filenames.py`)한 다음, list-directory-contents.py 스크립트를 다시 실행합니다(`python3 list-directory-contents.py`).
 
-4. 다음과 비슷한 출력이 표시됩니다.
+4. 결과는 다음과 같습니다.
 
     ```powershell
     Renaming: ..\food\fruits\banana.txt to: ..\food\fruits\2019-07-18 12.24.46.385185_banana.txt

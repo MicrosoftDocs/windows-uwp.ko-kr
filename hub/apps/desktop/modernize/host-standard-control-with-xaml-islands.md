@@ -8,16 +8,16 @@ ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: a8f5b141e5726d19651aeafeb9b6d432e20c2f47
-ms.sourcegitcommit: b8d0e2c6186ab28fe07eddeec372fb2814bd4a55
+ms.openlocfilehash: 4d98877fb0d48d2c3c677af5f2b89d9fd65c05f1
+ms.sourcegitcommit: b4c782b2403da83a6e0b5b7416cc4dc835b068d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671532"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98922753"
 ---
 # <a name="host-a-standard-winrt-xaml-control-in-a-wpf-app-using-xaml-islands"></a>XAML Islands를 사용하여 WPF 앱에서 표준 WinRT XAML 컨트롤 호스팅
 
-이 문서에서는 [XAML Islands](xaml-islands.md)를 사용하여 WPF 앱에서 표준 WinRT XAML 컨트롤(즉, Windows SDK에서 제공하는 자사 WinRT XAML 컨트롤)을 호스팅하는 두 가지 방법을 보여 줍니다.
+이 문서에서는 [XAML Islands](xaml-islands.md)를 사용하여 .NET Core 3.1을 대상으로 하는 WPF 앱에서 표준 WinRT XAML 컨트롤(즉, Windows SDK에서 제공하는 자사 WinRT XAML 컨트롤)을 호스팅하는 두 가지 방법을 보여줍니다.
 
 * Windows 커뮤니티 도구 키트의 [래핑된 컨트롤](xaml-islands.md#wrapped-controls)을 사용하여 UWP [InkCanvas](/uwp/api/Windows.UI.Xaml.Controls.InkCanvas) 및 [InkToolbar](/uwp/api/windows.ui.xaml.controls.inktoolbar) 컨트롤을 호스트하는 방법을 보여 줍니다. 이러한 컨트롤은 유용한 WinRT XAML 컨트롤에 대한 작은 세트의 인터페이스 및 기능을 래핑합니다. WPF 또는 Windows Forms 프로젝트의 디자인 화면에 이러한 컨트롤을 바로 추가하고 디자이너에서 다른 WPF 또는 Windows Forms 컨트롤처럼 사용할 수 있습니다.
 
@@ -25,11 +25,14 @@ ms.locfileid: "91671532"
 
 이 문서에서는 WPF 앱에서 WinRT XAML 컨트롤을 호스팅하는 방법을 보여 주지만, 이 프로세스는 Windows Forms 앱과 비슷합니다.
 
+> [!NOTE]
+> XAML Islands를 사용하여 WinRT XAML 컨트롤을 호스팅하는 것은 현재 .NET Core 3.x를 대상으로 하는 WPF 및 Windows Forms 앱에서만 지원됩니다. .NET 5를 대상으로 하는 앱 또는 .NET Framework 버전을 대상으로 하는 앱에서는 아직 XAML Islands가 지원되지 않습니다.
+
 ## <a name="required-components"></a>필수 구성 요소
 
 WPF(또는 Windows Forms) 앱에서 WinRT XAML 컨트롤을 호스팅하려면 솔루션에 다음 구성 요소가 필요합니다. 이 문서에서는 이러한 각 구성 요소를 만드는 방법에 대한 지침을 제공합니다.
 
-* **앱에 대한 프로젝트 및 소스 코드**. [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 WinRT XAML 컨트롤을 호스팅하는 것은 .NET Core 3.x를 대상으로 하는 앱에서 지원됩니다.
+* **앱에 대한 프로젝트 및 소스 코드**. [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤을 사용하여 WinRT XAML 컨트롤을 호스팅하는 것은 현재 .NET Core 3.x를 대상으로 하는 앱에서만 지원됩니다.
 
 * **XamlApplication에서 파생되는 루트 Application 클래스를 정의하는 UWP 앱 프로젝트**. WPF 또는 Windows Forms 프로젝트는 사용자 지정 UWP XAML 컨트롤을 검색하고 로드할 수 있도록 Windows 커뮤니티 도구 키트에서 제공하는 [Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication](https://github.com/windows-toolkit/Microsoft.Toolkit.Win32/tree/master/Microsoft.Toolkit.Win32.UI.XamlApplication) 클래스의 인스턴스에 액세스할 수 있어야 합니다. 이 작업을 수행하는 권장 방법은 WPF 또는 Windows Forms 앱에 대한 솔루션의 일부인 별도의 UWP 앱 프로젝트에서 이 개체를 정의하는 것입니다. 
 
@@ -47,20 +50,20 @@ WPF(또는 Windows Forms) 앱에서 WinRT XAML 컨트롤을 호스팅하려면 �
 
 2. [패키지 참조](/nuget/consume-packages/package-references-in-project-files)를 사용하도록 설정합니다.
 
-    1. Visual Studio에서 **도구 -> NuGet 패키지 관리자 -> 패키지 관리자 설정**을 클릭합니다.
-    2. **기본 패키지 관리 형식**에 대해 **PackageReference**를 선택했는지 확인합니다.
+    1. Visual Studio에서 **도구 -> NuGet 패키지 관리자 -> 패키지 관리자 설정** 을 클릭합니다.
+    2. **기본 패키지 관리 형식** 에 대해 **PackageReference** 를 선택했는지 확인합니다.
 
-3. **솔루션 탐색기**에서 WPF 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
+3. **솔루션 탐색기** 에서 WPF 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리** 를 선택합니다.
 
 4. **찾아보기** 탭을 선택하고, [Microsoft.Toolkit.Wpf.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls) 패키지를 검색하여 안정적인 최신 버전을 설치합니다. 이 패키지는 래핑된 WPF용 WinRT XAML 컨트롤([InkCanvas](/windows/communitytoolkit/controls/wpf-winforms/inkcanvas) 및 [InkToolbar](/windows/communitytoolkit/controls/wpf-winforms/inktoolbar)과 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤 포함)을 사용하는 데 필요한 모든 요소를 제공합니다.
     > [!NOTE]
     > Windows Forms 앱은 [Microsoft.Toolkit.Forms.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Forms.UI.Controls) 패키지를 사용해야 합니다.
 
-5. x86 또는 x64와 같은 특정 플랫폼을 대상으로 하도록 솔루션을 구성합니다. 대부분의 XAML Islands 시나리오는 **모든 CPU**를 대상으로 하는 프로젝트에서 지원되지 않습니다.
+5. x86 또는 x64와 같은 특정 플랫폼을 대상으로 하도록 솔루션을 구성합니다. 대부분의 XAML Islands 시나리오는 **모든 CPU** 를 대상으로 하는 프로젝트에서 지원되지 않습니다.
 
-    1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **속성** -> **구성 속성** -> **Configuration Manager**를 선택합니다. 
-    2. **활성 솔루션 플랫폼**에서 **새로 만들기**를 선택합니다. 
-    3. **새 솔루션 플랫폼** 대화 상자에서 **x64** 또는 **x86**을 선택하고 **확인**을 누릅니다. 
+    1. **솔루션 탐색기** 에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **속성** -> **구성 속성** -> **Configuration Manager** 를 선택합니다. 
+    2. **활성 솔루션 플랫폼** 에서 **새로 만들기** 를 선택합니다. 
+    3. **새 솔루션 플랫폼** 대화 상자에서 **x64** 또는 **x86** 을 선택하고 **확인** 을 누릅니다. 
     4. 열기 대화 상자를 닫습니다.
 
 ## <a name="define-a-xamlapplication-class-in-a-uwp-app-project"></a>UWP 앱 프로젝트에서 XamlApplication 클래스 정의
@@ -70,7 +73,7 @@ WPF(또는 Windows Forms) 앱에서 WinRT XAML 컨트롤을 호스팅하려면 �
 > [!NOTE]
 > 이 단계는 자사 WinRT XAML 컨트롤을 호스팅하는 데 필요하지 않지만, 사용자 지정 WinRT XAML 컨트롤을 호스팅하는 것을 포함하여 모든 범위의 XAML Island 시나리오를 지원하려면 `XamlApplication` 개체가 앱에 필요합니다. 따라서 XAML Islands를 사용하는 모든 솔루션에서 항상 `XamlApplication` 개체를 정의하는 것이 좋습니다.
 
-1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 프로젝트**를 선택합니다.
+1. **솔루션 탐색기** 에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 프로젝트** 를 선택합니다.
 2. 솔루션에 **빈 앱(유니버설 Windows)** 프로젝트를 추가합니다. 대상 버전 및 최소 버전이 모두 **Windows 10 버전 1903(빌드 18362)** 이상 릴리스로 설정되어 있는지 확인합니다.
 3. UWP 앱 프로젝트에서 [Microsoft.Toolkit.Win32.UI.XamlApplication](https://www.nuget.org/packages/Microsoft.Toolkit.Win32.UI.XamlApplication) NuGet 패키지(안정적인 최신 버전)를 설치합니다.
 4. **App.xaml** 파일을 열고 이 파일의 내용을 다음 XAML로 바꿉니다. `MyUWPApp`을 UWP 앱 프로젝트의 네임스페이스로 바꿉니다.
@@ -107,7 +110,7 @@ WPF(또는 Windows Forms) 앱에서 WinRT XAML 컨트롤을 호스팅하려면 �
 
 1. WPF 프로젝트 파일에서 호환되는 프레임워크 버전을 지정합니다. 
 
-    1. **솔루션 탐색기**에서 WPF 프로젝트 노드를 두 번 클릭하여 편집기에서 프로젝트 파일을 엽니다.
+    1. **솔루션 탐색기** 에서 WPF 프로젝트 노드를 두 번 클릭하여 편집기에서 프로젝트 파일을 엽니다.
     2. 첫 번째 **PropertyGroup** 요소에서 다음 자식 요소를 추가합니다. 필요에 따라 UWP 프로젝트의 대상 및 최소 OS 빌드와 일치하도록 값의 `19041` 부분을 변경합니다.
 
         ```xml
@@ -126,13 +129,13 @@ WPF(또는 Windows Forms) 앱에서 WinRT XAML 컨트롤을 호스팅하려면 �
         </PropertyGroup>
         ```
 
-2. **솔루션 탐색기**의 WPF 프로젝트 아래에서 마우스 오른쪽 단추로 **종속성** 노드를 클릭하고, UWP 앱 프로젝트에 대한 참조를 추가합니다.
+2. **솔루션 탐색기** 의 WPF 프로젝트 아래에서 마우스 오른쪽 단추로 **종속성** 노드를 클릭하고, UWP 앱 프로젝트에 대한 참조를 추가합니다.
 
 ## <a name="instantiate-the-xamlapplication-object-in-the-entry-point-of-your-wpf-app"></a>WPF 앱의 진입점에서 XamlApplication 개체 인스턴스화
 
 다음으로, WPF 앱의 진입점에 코드를 추가하여 UWP 프로젝트에서 방금 정의한 `App` 클래스(현재 `XamlApplication`에서 파생되는 클래스)의 인스턴스를 만듭니다.
 
-1. WPF 프로젝트에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 항목**을 선택하고 **클래스**를 선택합니다. 클래스 이름을 **Program**으로 지정하고 **추가**를 클릭합니다.
+1. WPF 프로젝트에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **추가** -> **새 항목** 을 선택하고 **클래스** 를 선택합니다. 클래스 이름을 **Program** 으로 지정하고 **추가** 를 클릭합니다.
 
 2. 생성된 `Program` 클래스를 다음 코드로 바꾸고 파일을 저장합니다. `MyUWPApp`을 UWP 앱 프로젝트의 네임스페이스로 바꾸고 `MyWPFApp`을 WPF 앱 프로젝트의 네임스페이스로 바꿉니다.
 
@@ -152,7 +155,7 @@ WPF(또는 Windows Forms) 앱에서 WinRT XAML 컨트롤을 호스팅하려면 �
     }
     ```
 
-3. 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
+3. 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택합니다.
 
 4. 속성의 **애플리케이션** 탭에서 **시작 개체** 드롭다운을 클릭하고 이전 단계에서 추가한 `Program` 클래스의 정규화된 이름을 선택합니다. 
     > [!NOTE]
@@ -202,7 +205,7 @@ WPF(또는 Windows Forms) 앱에서 WinRT XAML 컨트롤을 호스팅하려면 �
     ```
 
     > [!NOTE]
-    > **도구 상자**의 **Windows 커뮤니티 도구 키트** 섹션에서 디자이너로 이러한 컨트롤 및 기타 래핑된 컨트롤을 끌어 창에 추가할 수도 있습니다.
+    > **도구 상자** 의 **Windows 커뮤니티 도구 키트** 섹션에서 디자이너로 이러한 컨트롤 및 기타 래핑된 컨트롤을 끌어 창에 추가할 수도 있습니다.
 
 4. **MainWindow.xaml** 파일을 저장합니다.
 
@@ -233,7 +236,7 @@ WPF(또는 Windows Forms) 앱에서 WinRT XAML 컨트롤을 호스팅하려면 �
 > [!NOTE]
 > [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤은 [Microsoft.Toolkit.Wpf.UI.XamlHost](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.XamlHost) 패키지에서 제공됩니다. 이 패키지는 이전에 설치한 [Microsoft.Toolkit.Wpf.UI.Controls](https://www.nuget.org/packages/Microsoft.Toolkit.Wpf.UI.Controls) 패키지에 포함되어 있습니다.
 
-1. **솔루션 탐색기**에서 **MainWindow.xaml** 파일을 엽니다.
+1. **솔루션 탐색기** 에서 **MainWindow.xaml** 파일을 엽니다.
 
 2. XAML 파일의 위쪽에 있는 **Window** 요소에 다음 특성을 추가합니다. 이 특성은 [WindowsXamlHost](/windows/communitytoolkit/controls/wpf-winforms/windowsxamlhost) 컨트롤에 대한 XAML 네임스페이스를 참조합니다.
 
@@ -317,19 +320,22 @@ WPF(또는 Windows Forms) 앱에서 WinRT XAML 컨트롤을 호스팅하려면 �
 > [!NOTE]
 > 배포를 위해 [MSIX 패키지](/windows/msix)에 애플리케이션을 패키지하지 않도록 선택하는 경우 앱을 실행하는 컴퓨터에 [Visual C++ Runtime](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)이 설치되어 있어야 합니다.
 
-1. 새 [Windows 애플리케이션 패키징 프로젝트](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 솔루션에 추가합니다. 프로젝트를 만들 때 **대상 버전**과 **최소 버전**을 모두**Windows 10 버전 1903(10.0; 빌드 18362)** 으로 선택합니다.
+1. 새 [Windows 애플리케이션 패키징 프로젝트](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net)를 솔루션에 추가합니다. 프로젝트를 만들 때 UWP 프로젝트에 대해 선택한 것과 동일한 **대상 버전** 및 **최소 버전** 을 선택합니다.
 
-2. 패키징 프로젝트에서 **애플리케이션** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다. 프로젝트 목록에서 솔루션의 WPF 프로젝트를 선택하고 **확인**을 클릭합니다.
+2. 패키징 프로젝트에서 **애플리케이션** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가** 를 선택합니다. 프로젝트 목록에서 솔루션의 WPF 프로젝트를 선택하고 **확인** 을 클릭합니다.
+
+    > [!NOTE]
+    > Microsoft Store에 앱을 게시하려면 패키징 프로젝트에서 UWP 프로젝트에 대한 참조를 추가해야 합니다.
 
 3. x86 또는 x64와 같은 특정 플랫폼을 대상으로 하도록 솔루션을 구성합니다. Windows 애플리케이션 패키징 프로젝트를 사용하여 MSIX 패키지에 WPF 앱을 빌드하는 데 필요합니다.
 
-    1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **속성** -> **구성 속성** -> **Configuration Manager**를 선택합니다.
-    2. **활성 솔루션 플랫폼**에서 **x64** 또는 **x86**을 선택합니다.
-    3. WPF 프로젝트의 행에서 **플랫폼** 열의 **새로 만들기**를 선택합니다.
-    4. **새 솔루션 플랫폼** 대화 상자에서 **x64** 또는 **x86**(**활성 솔루션 플랫폼**에 대해 선택한 것과 동일한 플랫폼)을 선택하고 **확인**을 클릭합니다.
+    1. **솔루션 탐색기** 에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **속성** -> **구성 속성** -> **Configuration Manager** 를 선택합니다.
+    2. **활성 솔루션 플랫폼** 에서 **x64** 또는 **x86** 을 선택합니다.
+    3. WPF 프로젝트의 행에서 **플랫폼** 열의 **새로 만들기** 를 선택합니다.
+    4. **새 솔루션 플랫폼** 대화 상자에서 **x64** 또는 **x86**(**활성 솔루션 플랫폼** 에 대해 선택한 것과 동일한 플랫폼)을 선택하고 **확인** 을 클릭합니다.
     5. 열기 대화 상자를 닫습니다.
 
-5. 패키징 프로젝트를 빌드하고 실행합니다. WPF가 실행되고 UWP 사용자 지정 컨트롤이 예상대로 표시되는지 확인합니다.
+5. 패키징 프로젝트를 빌드하고 실행합니다. WPF가 실행되고 UWP 컨트롤이 예상대로 표시되는지 확인합니다.
 
 ## <a name="related-topics"></a>관련 항목
 

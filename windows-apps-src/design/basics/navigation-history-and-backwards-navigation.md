@@ -7,22 +7,28 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 17303da53e7822be2e4984e6b852664c63c0919c
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+dev_langs:
+- csharp
+- cppwinrt
+ms.openlocfilehash: 269d3b9f256016cb0d10441dc394eb4783ef6ec9
+ms.sourcegitcommit: 9bd23e0e08ed834accebde4db96fc87f921d983d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93030996"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98949132"
 ---
 # <a name="navigation-history-and-backwards-navigation-for-windows-apps"></a>Windows 앱을 위한 탐색 기록 및 뒤로 탐색
 
-> **중요 API** : [BackRequested 이벤트](/uwp/api/Windows.UI.Core.SystemNavigationManager.BackRequested), [SystemNavigationManager 클래스](/uwp/api/Windows.UI.Core.SystemNavigationManager), [OnNavigatedTo](/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)
+> **중요 API**: [BackRequested 이벤트](/uwp/api/Windows.UI.Core.SystemNavigationManager.BackRequested), [SystemNavigationManager 클래스](/uwp/api/Windows.UI.Core.SystemNavigationManager), [OnNavigatedTo](/uwp/api/windows.ui.xaml.controls.page.onnavigatedto)
 
 Windows 앱은 앱 내에서 그리고 디바이스에 따라 앱 간에 사용자의 탐색 기록을 탐색할 수 있도록 일관적인 뒤로 탐색 시스템을 제공합니다.
 
-앱에 뒤로 탐색 기능을 구현하려면 앱 UI 왼쪽 위 모서리에 [뒤로 단추](#back-button)를 배치합니다. 앱에서 [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤을 사용하는 경우 [NavigationView의 기본 뒤로 단추](../controls-and-patterns/navigationview.md#backwards-navigation)를 사용할 수 있습니다.
+앱에 뒤로 탐색 기능을 구현하려면 앱 UI 왼쪽 위 모서리에 뒤로 단추를 배치합니다. 사용자는 뒤로 단추를 누르면 앱의 탐색 기록에서 이전 위치로 이동될 것으로 예상합니다. 탐색 기록에 추가할 탐색 동작과 뒤로 단추 누르기에 응답하는 방식은 사용자가 결정해야 합니다.
 
-사용자는 뒤로 단추를 누르면 앱의 탐색 기록에서 이전 위치로 이동될 것으로 예상합니다. 탐색 기록에 추가할 탐색 동작과 뒤로 단추 누르기에 응답하는 방식은 사용자가 결정해야 합니다.
+여러 페이지가 있는 대부분의 앱에서는 [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤을 사용하여 앱에 대한 탐색 프레임워크를 제공하는 것이 좋습니다. 이 컨트롤은 다양한 화면 크기에 맞게 조정되고 ‘위쪽’ 및 ‘왼쪽’ 탐색 스타일을 둘 다 지원합니다.  앱에서 `NavigationView` 컨트롤을 사용하는 경우 [NavigationView의 기본 뒤로 단추](../controls-and-patterns/navigationview.md#backwards-navigation)를 사용할 수 있습니다.
+
+> [!NOTE]
+> `NavigationView` 컨트롤을 사용하지 않고 탐색을 구현하는 경우 이 문서의 지침과 예제를 사용해야 합니다. `NavigationView`를 사용하는 경우 이 정보는 유용한 배경 지식을 제공하지만, [NavigationView](../controls-and-patterns/navigationview.md) 문서에 제공된 구체적인 지침과 예제를 사용해야 합니다.
 
 ## <a name="back-button"></a>뒤로 단추
 
@@ -38,7 +44,10 @@ Windows 앱은 앱 내에서 그리고 디바이스에 따라 앱 간에 사용�
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Button Style="{StaticResource NavigationBackButtonNormalStyle}"/>
+        <Button x:Name="BackButton"
+                Style="{StaticResource NavigationBackButtonNormalStyle}"
+                IsEnabled="{x:Bind Frame.CanGoBack, Mode=OneWay}" 
+                ToolTipService.ToolTip="Back"/>
 
     </Grid>
 </Page>
@@ -58,7 +67,11 @@ Windows 앱은 앱 내에서 그리고 디바이스에 따라 앱 간에 사용�
         
         <CommandBar>
             <CommandBar.Content>
-                <Button Style="{StaticResource NavigationBackButtonNormalStyle}" VerticalAlignment="Top"/>
+                <Button x:Name="BackButton"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        IsEnabled="{x:Bind Frame.CanGoBack, Mode=OneWay}" 
+                        ToolTipService.ToolTip="Back" 
+                        VerticalAlignment="Top"/>
             </CommandBar.Content>
         
             <AppBarButton Icon="Delete" Label="Delete"/>
@@ -68,19 +81,50 @@ Windows 앱은 앱 내에서 그리고 디바이스에 따라 앱 간에 사용�
 </Page>
 ```
 
-앱의 이동 UI 요소를 최소화 하려면 백스택에 아무 것도 없을 때 사용할 수 없는 뒤로 단추를 표시하세요. 하지만 앱에 백스택이 없어야 하는 경우에는 뒤로 단추를 표시할 필요가 없습니다.
+UI 요소가 앱 내부를 돌아다니는 일을 최소화하려면 백스택에 아무 것도 없을 때 비활성화된 뒤로 단추를 표시하세요(`IsEnabled="{x:Bind Frame.CanGoBack, Mode=OneWay}"`). 하지만 앱에 백스택이 없는 것이 분명한 경우에는 뒤로 단추를 표시할 필요가 없습니다.
 
 ![뒤로 단추 상태](images/back-nav/BackDisabled.png)
 
-## <a name="code-example"></a>코드 예제
+## <a name="optimize-for-different-devices-and-inputs"></a>다양한 디바이스 및 입력에 맞게 최적화
 
-다음 코드 예제에서는 뒤로 단추로 뒤로 탐색 동작을 구현하는 방법을 설명합니다. 이 코드는 단추 [**Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.Click) 이벤트에 응답하고, 새 페이지 탐색 시 호출되는 [**OnNavigatedTo**](/uwp/api/windows.ui.xaml.controls.page.onnavigatedto#Windows_UI_Xaml_Controls_Page_OnNavigatedTo_Windows_UI_Xaml_Navigation_NavigationEventArgs_)의 단추 표시를 활성화/비활성화합니다. 또한 이 코드 예제는 [**BackRequested**](/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) 이벤트에 대한 수신기를 등록하여 하드웨어 및 소프트웨어 시스템 뒤로 키의 입력을 처리합니다.
+이 역방향 탐색 디자인 지침은 모든 디바이스에 적용되지만, 다양한 폼 팩터 및 입력 방법을 최적화할 때 사용자에게 도움이 됩니다.
+
+UI를 최적화하는 방법은 다음과 같습니다.
+
+- **데스크톱/허브**: 앱 UI 왼쪽 위 모서리에 인-앱 단추를 구현합니다.
+- **[태블릿 모드](https://support.microsoft.com/windows/use-your-pc-like-a-tablet-4fbfcca5-f058-814a-4f80-a12e703d7c34)** : 태블릿에 하드웨어 또는 소프트웨어 뒤로 단추가 있을 수 있지만, 확실하게 알 수 있도록 인-앱 뒤로 단추를 구현하는 것이 좋습니다.
+- **Xbox/TV**: UI가 불필요하게 복잡해지지 않도록 뒤로 단추를 구현하지 않습니다. 대신 뒤로 탐색에 게임패드의 B 버튼을 사용합니다.
+
+앱이 Xbox에서 실행되는 경우 단추 표시 여부를 전환하는 [Xbox의 사용자 지정 시각적 트리거를 만듭니다](../devices/designing-for-tv.md#custom-visual-state-trigger-for-xbox). [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤을 사용할 경우 앱이 Xbox에서 실행되면 이 컨트롤이 자동으로 뒤로 단추를 토글합니다.
+
+뒤로 탐색을 위한 가장 일반적인 입력을 지원하려면 뒤로 단추 클릭 외에도 다음 이벤트를 처리하는 것이 좋습니다.
+
+| 이벤트 | 입력 |
+| --- | --- |
+| [CoreDispatcher.AcceleratorKeyActivated](/uwp/api/windows.ui.core.coredispatcher.acceleratorkeyactivated) | Alt+왼쪽 화살표,<br/>VirtualKey.GoBack |
+| [SystemNavigationManager.BackRequested](/api/windows.ui.core.systemnavigationmanager.backrequested) | 게임 패드 B 단추,<br/>태블릿 모드 뒤로 단추,<br/>하드웨어 뒤로 버튼 |
+| [CoreWindow.PointerPressed](/uwp/api/windows.ui.core.corewindow.pointerpressed) | VirtualKey.XButton1<br/>(예: 일부 마우스의 뒤로 단추) |
+
+## <a name="code-examples"></a>코드 예제
+
+이 섹션에서는 다양한 입력을 사용하여 뒤로 탐색을 처리하는 방법을 보여줍니다.
+
+### <a name="back-button-and-back-navigation"></a>뒤로 단추 및 뒤로 탐색
+
+최소한 뒤로 단추 `Click` 이벤트를 처리하고 뒤로 탐색을 수행하는 코드를 제공해야 합니다. 또한 백스택이 비어 있는 경우 뒤로 단추를 사용하지 않도록 설정해야 합니다.
+
+다음 코드 예제에서는 뒤로 단추를 사용하여 뒤로 탐색 동작을 구현하는 방법을 보여줍니다. 이 코드는 단추 [클릭](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.Click) 이벤트에 응답하여 탐색합니다. 뒤로 단추는 새 페이지를 탐색할 때 호출되는 [OnNavigatedTo](/uwp/api/windows.ui.xaml.controls.page.onnavigatedto) 메서드에서 사용하거나 사용하지 않도록 설정됩니다.
+
+이 코드는 `MainPage`에 대한 것이지만, 뒤로 탐색을 지원하는 각 페이지에 이 코드를 추가합니다. 중복을 방지하려면 `App.xaml` 코드 숨김 페이지의 `App` 클래스에 탐색 관련 코드를 넣으면 됩니다.
 
 ```xaml
 <!-- MainPage.xaml -->
 <Page x:Class="AppName.MainPage">
 ...
-<Button x:Name="BackButton" Click="Back_Click" Style="{StaticResource NavigationBackButtonNormalStyle}"/>
+        <Button x:Name="BackButton" Click="BackButton_Click"
+                Style="{StaticResource NavigationBackButtonNormalStyle}"
+                IsEnabled="{x:Bind Frame.CanGoBack, Mode=OneWay}" 
+                ToolTipService.ToolTip="Back"/>
 ...
 <Page/>
 ```
@@ -89,138 +133,15 @@ Windows 앱은 앱 내에서 그리고 디바이스에 따라 앱 간에 사용�
 
 ```csharp
 // MainPage.xaml.cs
-public MainPage()
+private void BackButton_Click(object sender, RoutedEventArgs e)
 {
-    KeyboardAccelerator GoBack = new KeyboardAccelerator();
-    GoBack.Key = VirtualKey.GoBack;
-    GoBack.Invoked += BackInvoked;
-    KeyboardAccelerator AltLeft = new KeyboardAccelerator();
-    AltLeft.Key = VirtualKey.Left;
-    AltLeft.Invoked += BackInvoked;
-    this.KeyboardAccelerators.Add(GoBack);
-    this.KeyboardAccelerators.Add(AltLeft);
-    // ALT routes here
-    AltLeft.Modifiers = VirtualKeyModifiers.Menu;
+    ((App)Application.Current).TryGoBack();
 }
 
-protected override void OnNavigatedTo(NavigationEventArgs e)
-{
-    BackButton.IsEnabled = this.Frame.CanGoBack;
-}
-
-private void Back_Click(object sender, RoutedEventArgs e)
-{
-    On_BackRequested();
-}
-
-// Handles system-level BackRequested events and page-level back button Click events
-private bool On_BackRequested()
-{
-    if (this.Frame.CanGoBack)
-    {
-        this.Frame.GoBack();
-        return true;
-    }
-    return false;
-}
-
-private void BackInvoked (KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
-{
-    On_BackRequested();
-    args.Handled = true;
-}
-```
-
-```cppwinrt
-// MainPage.cpp
-#include "pch.h"
-#include "MainPage.h"
-
-#include "winrt/Windows.System.h"
-#include "winrt/Windows.UI.Xaml.Controls.h"
-#include "winrt/Windows.UI.Xaml.Input.h"
-#include "winrt/Windows.UI.Xaml.Navigation.h"
-
-using namespace winrt;
-using namespace Windows::Foundation;
-using namespace Windows::UI::Xaml;
-
-namespace winrt::PageNavTest::implementation
-{
-    MainPage::MainPage()
-    {
-        InitializeComponent();
-
-        Windows::UI::Xaml::Input::KeyboardAccelerator goBack;
-        goBack.Key(Windows::System::VirtualKey::GoBack);
-        goBack.Invoked({ this, &MainPage::BackInvoked });
-        Windows::UI::Xaml::Input::KeyboardAccelerator altLeft;
-        altLeft.Key(Windows::System::VirtualKey::Left);
-        altLeft.Invoked({ this, &MainPage::BackInvoked });
-        KeyboardAccelerators().Append(goBack);
-        KeyboardAccelerators().Append(altLeft);
-        // ALT routes here.
-        altLeft.Modifiers(Windows::System::VirtualKeyModifiers::Menu);
-    }
-
-    void MainPage::OnNavigatedTo(Windows::UI::Xaml::Navigation::NavigationEventArgs const& e)
-    {
-        BackButton().IsEnabled(Frame().CanGoBack());
-    }
-
-    void MainPage::Back_Click(IInspectable const&, RoutedEventArgs const&)
-    {
-        On_BackRequested();
-    }
-
-    // Handles system-level BackRequested events and page-level back button Click events.
-    bool MainPage::On_BackRequested()
-    {
-        if (Frame().CanGoBack())
-        {
-            Frame().GoBack();
-            return true;
-        }
-        return false;
-    }
-
-    void MainPage::BackInvoked(Windows::UI::Xaml::Input::KeyboardAccelerator const& sender,
-        Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs const& args)
-    {
-        args.Handled(On_BackRequested());
-    }
-}
-```
-
-위에서는 단일 페이지의 뒤로 탐색을 처리했습니다. 뒤로 탐색에서 특정 페이지를 제외하려는 경우 또는 페이지를 표시하기 전에 페이지 수준 코드를 실행하려는 경우에는 각 페이지에서 탐색을 처리하면 됩니다.
-
-전체 앱의 뒤로 탐색을 처리하려면 `App.xaml` 코드 숨김 파일에서 [**BackRequested**](/uwp/api/windows.ui.core.systemnavigationmanager.BackRequested) 이벤트에 대한 글로벌 수신기를 등록합니다.
-
-App.xaml 코드 숨김:
-
-```csharp
 // App.xaml.cs
-Windows.UI.Core.SystemNavigationManager.GetForCurrentView().BackRequested += App_BackRequested;
-Frame rootFrame = Window.Current.Content as Frame;
-rootFrame.PointerPressed += On_PointerPressed;
-
-private void App_BackRequested(object sender, Windows.UI.Core.BackRequestedEventArgs e)
-{
-    e.Handled = On_BackRequested();
-}
-
-private void On_PointerPressed(object sender, PointerRoutedEventArgs e)
-{
-    bool isXButton1Pressed =
-        e.GetCurrentPoint(sender as UIElement).Properties.PointerUpdateKind == PointerUpdateKind.XButton1Pressed;
-
-    if (isXButton1Pressed)
-    {
-        e.Handled = On_BackRequested();
-    }
-}
-
-private bool On_BackRequested()
+//
+// Add this method to the App class.
+public bool TryGoBack()
 {
     Frame rootFrame = Window.Current.Content as Frame;
     if (rootFrame.CanGoBack)
@@ -233,85 +154,634 @@ private bool On_BackRequested()
 ```
 
 ```cppwinrt
-// App.cpp
-#include <winrt/Windows.UI.Core.h>
+// MainPage.h
+namespace winrt::AppName::implementation
+{
+    struct MainPage : MainPageT<MainPage>
+    {
+        MainPage();
+ 
+        void MainPage::BackButton_Click(IInspectable const&, RoutedEventArgs const&)
+        {
+            m_navigationHelper->TryGoBack();
+        }
+    };
+}
+
+// App.h
+#include "winrt/Windows.UI.Core.h"
+#include "winrt/Windows.System.h"
 #include "winrt/Windows.UI.Input.h"
 #include "winrt/Windows.UI.Xaml.Input.h"
-
-#include "App.h"
-#include "MainPage.h"
-
+ 
 using namespace winrt;
-...
+using namespace Windows::Foundation;
+using namespace Windows::UI::Core;
+using namespace Windows::UI::Input;
+using namespace Windows::UI::Xaml;
+using namespace Windows::UI::Xaml::Controls;
 
-    Windows::UI::Core::SystemNavigationManager::GetForCurrentView().BackRequested({ this, &App::App_BackRequested });
-    Frame rootFrame{ nullptr };
-    auto content = Window::Current().Content();
-    if (content)
-    {
-        rootFrame = content.try_as<Frame>();
-    }
-    rootFrame.PointerPressed({ this, &App::On_PointerPressed });
-...
-
-void App::App_BackRequested(IInspectable const& /* sender */, Windows::UI::Core::BackRequestedEventArgs const& e)
+struct App : AppT<App>
 {
-    e.Handled(On_BackRequested());
+    App();
+
+    // ...
+
+    // Perform back navigation if possible.
+    bool TryGoBack()
+    {
+        Frame rootFrame{ nullptr };
+        auto content = Window::Current().Content();
+        if (content)
+        {
+            rootFrame = content.try_as<Frame>();
+            if (rootFrame.CanGoBack())
+            {
+                rootFrame.GoBack();
+                return true;
+            }
+        }
+        return false;
+    }
+};
+```
+
+### <a name="support-access-keys"></a>액세스 키 지원
+
+키보드 지원은 기술, 능력, 기대치가 각기 다른 사용자들이 애플리케이션을 원활하게 조작하기 위한 필수 요소입니다. 앞으로 및 뒤로 탐색을 사용하는 사용자는 두 가지 탐색 기능을 기대하므로 앞으로 및 뒤로 탐색을 위한 액셀러레이터 키를 모두 지원하는 것이 좋습니다. 자세한 내용은 [키보드 조작](..\input\keyboard-interactions.md) 및 [키보드 액셀러레이터](..\input\keyboard-accelerators.md)를 참조하세요.
+
+앞으로 및 뒤로 탐색을 위한 일반적인 액셀러레이터 키는 Alt+오른쪽 화살표(앞으로) 및 Alt+왼쪽 화살표(뒤로)입니다. 이러한 키를 탐색에 지원하려면 [CoreDispatcher. AcceleratorKeyActivated](/uwp/api/windows.ui.core.coredispatcher.acceleratorkeyactivated) 이벤트를 처리합니다. 페이지의 요소가 아니라 창에 직접 있는 이벤트를 처리하므로 포커스가 어느 요소에 있든 상관없이 앱이 액셀러레이터 키에 응답합니다.
+
+다음과 같이 액셀러레이터 키 및 앞으로 탐색을 지원하기 위해 `App` 클래스에 코드를 추가합니다. (뒤로 단추를 지원하는 이전 코드가 이미 추가된 것으로 가정합니다.) 코드 예제 섹션의 끝 부분에서 모든 `App` 코드를 함께 볼 수 있습니다.
+
+```csharp
+// App.xaml.cs
+// Add event handler in OnLaunced.
+protected override void OnLaunched(LaunchActivatedEventArgs e)
+{
+    // ...
+    // Do not repeat app initialization when the Window already has content,
+    // just ensure that the window is active
+    if (rootFrame == null)
+    {
+        // ...
+        // rootFrame.NavigationFailed += OnNavigationFailed;
+
+        // Add support for accelerator keys. 
+        // Listen to the window directly so the app responds
+        // to accelerator keys regardless of which element has focus.
+        Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated +=
+            CoreDispatcher_AcceleratorKeyActivated;
+
+        // ...
+
+    }
 }
 
-void App::On_PointerPressed(IInspectable const& sender, Windows::UI::Xaml::Input::PointerRoutedEventArgs const& e)
-{
-    bool isXButton1Pressed =
-        e.GetCurrentPoint(sender.as<UIElement>()).Properties().PointerUpdateKind() == Windows::UI::Input::PointerUpdateKind::XButton1Pressed;
+// ...
 
-    if (isXButton1Pressed)
-    {
-        e.Handled(On_BackRequested());
-    }
-}
-
-// Handles system-level BackRequested events.
-bool App::On_BackRequested()
+// Add this code after the TryGoBack method added previously.
+// Perform forward navigation if possible.
+private bool TryGoForward()
 {
-    if (Frame().CanGoBack())
+    Frame rootFrame = Window.Current.Content as Frame;
+    if (rootFrame.CanGoForward)
     {
-        Frame().GoBack();
+        rootFrame.GoForward();
         return true;
     }
     return false;
 }
+
+// Invoked on every keystroke, including system keys such as Alt key combinations.
+// Used to detect keyboard navigation between pages even when the page itself
+// doesn't have focus.
+private void CoreDispatcher_AcceleratorKeyActivated(CoreDispatcher sender, AcceleratorKeyEventArgs e)
+{
+    // When Alt+Left are pressed navigate back.
+    // When Alt+Right are pressed navigate forward.
+    if (e.EventType == CoreAcceleratorKeyEventType.SystemKeyDown
+        && (e.VirtualKey == VirtualKey.Left || e.VirtualKey == VirtualKey.Right)
+        && e.KeyStatus.IsMenuKeyDown == true
+        && !e.Handled)
+    {
+        if (e.VirtualKey == VirtualKey.Left)
+        {
+            e.Handled = TryGoBack();
+        }
+        else if (e.VirtualKey == VirtualKey.Right)
+        {
+            e.Handled = TryGoForward();
+        }
+    }
+}
 ```
 
-## <a name="optimizing-for-different-device-and-form-factors"></a>여러 디바이스와 폼 팩터에 맞게 최적화
+```cppwinrt
+// App.cpp
+void App::OnLaunched(LaunchActivatedEventArgs const& e)
+{
+    // ...
+    // Do not repeat app initialization when the Window already has content,
+    // just ensure that the window is active
+    if (rootFrame == nullptr)
+    {
+        // ...
+        // rootFrame.NavigationFailed({ this, &App::OnNavigationFailed });
 
-이 뒤로 탐색 디자인 지침을 모든 디바이스에 적용할 수 있지만, 디바이스와 폼 팩터를 최적화하는 것이 좋습니다. 최적화 역시 여러 셸에서 지원하는 하드웨어 뒤로 단추에 따라 달라집니다.
+        // Add support for accelerator keys. 
+        // Listen to the window directly so the app responds
+        // to accelerator keys regardless of which element has focus.
+        Window::Current().CoreWindow().Dispatcher().
+            AcceleratorKeyActivated({ this, &App::CoreDispatcher_AcceleratorKeyActivated });
 
-- **휴대폰/태블릿** : 휴대폰과 태블릿에는 항상 하드웨어 또는 소프트웨어 뒤로 단추가 있지만, 확실하게 알 수 있도록 인-앱 단추를 구현하는 것이 좋습니다.
-- **데스크톱/허브** : 앱 UI 왼쪽 위 모서리에 인-앱 단추를 구현합니다.
-- **Xbox/TV** : UI가 불필요하게 복잡해지지 않도록 뒤로 단추를 구현하지 않습니다. 대신 뒤로 탐색에 게임패드의 B 버튼을 사용합니다.
+        // ...
+    }
+}
 
-앱이 여러 디바이스에서 실행되는 경우 단추 표시 여부를 전환하는 [사용자 지정 트리거를 Xbox](../devices/designing-for-tv.md#custom-visual-state-trigger-for-xbox)를 대상으로 만듭니다. NavigationView 컨트롤은 앱이 Xbox에서 실행되는 경우 자동으로 뒤로 단추를 토글합니다. 
+// App.h
+struct App : AppT<App>
+{
+    App();
 
-뒤로 탐색에 다음 입력을 지원하는 것이 좋습니다. (일부 입력은 시스템 BackRequested에서 지원하지 않기 때문에 별도의 이벤트로 처리해야 합니다.).
+    // ...
+    // Add this code after the TryGoBack method added previously.
 
-| 입력 | 이벤트 |
-| --- | --- |
-| Windows-Backspace 키 | BackRequested |
-| 하드웨어 뒤로 버튼 | BackRequested |
-| 셸 태블릿 모드 뒤로 단추 | BackRequested |
-| VirtualKey.XButton1 | PointerPressed |
-| VirtualKey.GoBack | KeyboardAccelerator.BackInvoked |
-| Alt+LeftArrow 키 | KeyboardAccelerator.BackInvoked |
+private:
+    // Perform forward navigation if possible.
+    bool TryGoForward()
+    {
+        Frame rootFrame{ nullptr };
+        auto content = Window::Current().Content();
+        if (content)
+        {
+            rootFrame = content.try_as<Frame>();
+            if (rootFrame.CanGoForward())
+            {
+                rootFrame.GoForward();
+                return true;
+            }
+        }
+        return false;
+    }
+ 
+ 
+    // Invoked on every keystroke, including system keys such as Alt key combinations.
+    // Used to detect keyboard navigation between pages even when the page itself
+    // doesn't have focus.
+    void CoreDispatcher_AcceleratorKeyActivated(CoreDispatcher const& /* sender */, AcceleratorKeyEventArgs const& e)
+    {
+        // When Alt+Left are pressed navigate back.
+        // When Alt+Right are pressed navigate forward.
+        if (e.EventType() == CoreAcceleratorKeyEventType::SystemKeyDown
+            && (e.VirtualKey() == Windows::System::VirtualKey::Left || e.VirtualKey() == Windows::System::VirtualKey::Right)
+            && e.KeyStatus().IsMenuKeyDown
+            && !e.Handled())
+        {
+            if (e.VirtualKey() == Windows::System::VirtualKey::Left)
+            {
+                e.Handled(TryGoBack());
+            }
+            else if (e.VirtualKey() == Windows::System::VirtualKey::Right)
+            {
+                e.Handled(TryGoForward());
+            }
+        }
+    }
+};
+```
 
-위에 제공된 코드 예제에서는 이러한 입력을 처리하는 방법을 보여줍니다.
+### <a name="handle-system-back-requests"></a>시스템 뒤로 요청 처리
 
-## <a name="system-back-behavior-for-backward-compatibilities"></a>이전 버전과의 호환성을 위한 시스템 뒤로 동작
+Windows 디바이스는 시스템에서 뒤로 탐색 요청을 앱에 전달할 수 있는 다양한 방법을 제공합니다. 대표적인 방법으로 게임 패드의 B 단추, Windows 키 + 백스페이스 키 바로 가기 또는 태블릿 모드의 시스템 뒤로 단추가 있으며, 사용 가능한 정확한 옵션은 디바이스에 따라 다릅니다.
 
-이전에는 UWP 앱이 뒤로 탐색을 지원하기 위해 [AppViewBackButtonVisibility](/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 사용했습니다. 이전 버전과의 호환성을 위해 API는 계속 지원되지만, [AppViewBackButtonVisibility](/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 사용하는 것은 더 이상 권장하지 않습니다. 대신 앱에서 자체적인 인-앱 뒤로 단추를 구현해야 합니다.
+[SystemNavigationManager.BackRequested](/api/windows.ui.core.systemnavigationmanager.backrequested) 이벤트의 수신기를 등록하면 하드웨어 및 소프트웨어 시스템 뒤로 키의 시스템 제공 뒤로 요청을 지원할 수 있습니다.
 
-앱에서 [AppViewBackButtonVisibility](/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 계속 사용하는 경우 시스템 UI는 제목 표시줄 내부에 시스템 뒤로 단추를 렌더링합니다. (뒤로 단추의 모양과 사용자 상호 작용은 이전 빌드와 달라진 것이 없습니다.)
+다음은 시스템 제공 뒤로 요청을 지원하기 위해 `App` 클래스에 추가되는 코드입니다. (뒤로 단추를 지원하는 이전 코드가 이미 추가된 것으로 가정합니다.) 코드 예제 섹션의 끝 부분에서 모든 `App` 코드를 함께 볼 수 있습니다.
+
+```csharp
+// App.xaml.cs
+// Add event handler in OnLaunced.
+protected override void OnLaunched(LaunchActivatedEventArgs e)
+{
+    // ...
+    // Do not repeat app initialization when the Window already has content,
+    // just ensure that the window is active
+    if (rootFrame == null)
+    {
+        // ...
+        // Add support for accelerator keys. 
+        // ... (Previously added code.)
+
+        // Add support for system back requests. 
+        SystemNavigationManager.GetForCurrentView().BackRequested 
+            += System_BackRequested;
+
+        // ...
+
+    }
+}
+
+// ...
+// Handle system back requests.
+private void System_BackRequested(object sender, BackRequestedEventArgs e)
+{
+    if (!e.Handled)
+    {
+        e.Handled = TryGoBack();
+    }
+}
+```
+
+```cppwinrt
+// App.cpp
+void App::OnLaunched(LaunchActivatedEventArgs const& e)
+{
+    // ...
+    // Do not repeat app initialization when the Window already has content,
+    // just ensure that the window is active
+    if (rootFrame == nullptr)
+    {
+        // ...
+        // Add support for accelerator keys. 
+        // ... (Previously added code.)
+
+        // Add support for system back requests. 
+        SystemNavigationManager::GetForCurrentView().
+            BackRequested({ this, &App::System_BackRequested });
+
+        // ...
+    }
+}
+
+// App.h
+struct App : AppT<App>
+{
+    App();
+
+    // ...
+
+private:
+    // ...
+
+    // Handle system back requests.
+    void System_BackRequested(IInspectable const& /* sender */, BackRequestedEventArgs const& e)
+    {
+        if (!e.Handled())
+        {
+            e.Handled(TryGoBack());
+        }
+    }
+};
+```
+
+#### <a name="system-back-behavior-for-backward-compatibility"></a>이전 버전과의 호환성을 위한 시스템 뒤로 동작
+
+이전에는 UWP 앱에서 뒤로 탐색을 위한 시스템 뒤로 단추를 표시하거나 숨기기 위해 [SystemNavigationManager.AppViewBackButtonVisibility](/uwp/api/windows.ui.core.systemnavigationmanager.appviewbackbuttonvisibility)를 사용했습니다. (이 단추는 [SystemNavigationManager.BackRequested](/api/windows.ui.core.systemnavigationmanager.backrequested) 이벤트를 발생시킵니다.) 이전 버전과의 호환성을 위해 API는 계속 지원되지만, `AppViewBackButtonVisibility`에서 표시하는 단추를 사용하는 것은 더 이상 권장하지 않습니다. 그 대신, 이 문서에 설명된 대로 개발자 고유의 인-앱 뒤로 단추를 제공해야 합니다.
+
+[AppViewBackButtonVisibility](/uwp/api/windows.ui.core.appviewbackbuttonvisibility)를 계속 사용하는 경우 시스템 UI는 제목 표시줄 내부에 시스템 뒤로 단추를 렌더링합니다. (뒤로 단추의 모양과 사용자 상호 작용은 이전 빌드와 달라진 것이 없습니다.)
 
 ![제목 표시줄 뒤로 단추](images/nav-back-pc.png)
+
+### <a name="handle-mouse-navigation-buttons"></a>마우스 탐색 단추 처리
+
+일부 마우스는 앞으로 및 뒤로 탐색을 위한 하드웨어 탐색 단추를 제공합니다. [CoreWindow.PointerPressed](/uwp/api/windows.ui.core.corewindow.pointerpressed) 이벤트를 처리하고 [IsXButton1Pressed](/uwp/api/windows.ui.input.pointerpointproperties.isxbutton1pressed)(뒤로) 또는 [IsXButton2Pressed](/uwp/api/windows.ui.input.pointerpointproperties.isxbutton2pressed)(앞으로)를 확인하여 이러한 마우스 단추를 지원할 수 있습니다.
+
+다음은 마우스 단추 탐색을 지원하기 위해 `App` 클래스에 추가되는 코드입니다. (뒤로 단추를 지원하는 이전 코드가 이미 추가된 것으로 가정합니다.) 코드 예제 섹션의 끝 부분에서 모든 `App` 코드를 함께 볼 수 있습니다.
+
+```csharp
+// App.xaml.cs
+// Add event handler in OnLaunced.
+protected override void OnLaunched(LaunchActivatedEventArgs e)
+{
+    // ...
+    // Do not repeat app initialization when the Window already has content,
+    // just ensure that the window is active
+    if (rootFrame == null)
+    {
+        // ...
+        // Add support for system back requests. 
+        // ... (Previously added code.)
+
+        // Add support for mouse navigation buttons. 
+        Window.Current.CoreWindow.PointerPressed += CoreWindow_PointerPressed;
+
+        // ...
+
+    }
+}
+
+// ...
+
+// Handle mouse back button.
+private void CoreWindow_PointerPressed(CoreWindow sender, PointerEventArgs e)
+{
+    // For this event, e.Handled arrives as 'true', so invert the value.
+    if (e.CurrentPoint.Properties.IsXButton1Pressed
+        && e.Handled)
+    {
+        e.Handled = !TryGoBack();
+    }
+    else if (e.CurrentPoint.Properties.IsXButton2Pressed
+            && e.Handled)
+    {
+        e.Handled = !TryGoForward();
+    }
+}
+```
+
+```cppwinrt
+// App.cpp
+void App::OnLaunched(LaunchActivatedEventArgs const& e)
+{
+    // ...
+    // Do not repeat app initialization when the Window already has content,
+    // just ensure that the window is active
+    if (rootFrame == nullptr)
+    {
+        // ...
+        // Add support for system back requests. 
+        // ... (Previously added code.)
+
+        // Add support for mouse navigation buttons. 
+        Window::Current().CoreWindow().
+            PointerPressed({ this, &App::CoreWindow_PointerPressed });
+
+        // ...
+    }
+}
+
+// App.h
+struct App : AppT<App>
+{
+    App();
+
+    // ...
+
+private:
+    // ...
+
+    // Handle mouse forward and back buttons.
+    void CoreWindow_PointerPressed(CoreWindow const& /* sender */, PointerEventArgs const& e)
+    {
+        // For this event, e.Handled arrives as 'true', so invert the value. 
+        if (e.CurrentPoint().Properties().IsXButton1Pressed()
+            && e.Handled())
+        {
+            e.Handled(!TryGoBack());
+        }
+        else if (e.CurrentPoint().Properties().IsXButton2Pressed()
+            && e.Handled())
+        {
+            e.Handled(!TryGoForward());
+        }
+    }
+};
+```
+
+### <a name="all-code-added-to-app-class"></a>App 클래스에 추가된 모든 코드
+ 
+```csharp
+// App.xaml.cs
+//
+// (Add event handlers in OnLaunched override.)
+protected override void OnLaunched(LaunchActivatedEventArgs e)
+{
+    // ...
+    // Do not repeat app initialization when the Window already has content,
+    // just ensure that the window is active
+    if (rootFrame == null)
+    {
+        // ...
+        // rootFrame.NavigationFailed += OnNavigationFailed;
+
+        // Add support for accelerator keys. 
+        // Listen to the window directly so the app responds
+        // to accelerator keys regardless of which element has focus.
+        Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated +=
+            CoreDispatcher_AcceleratorKeyActivated;
+
+        // Add support for system back requests. 
+        SystemNavigationManager.GetForCurrentView().BackRequested 
+            += System_BackRequested;
+
+        // Add support for mouse navigation buttons. 
+        Window.Current.CoreWindow.PointerPressed += CoreWindow_PointerPressed;
+
+        // ...
+
+    }
+}
+
+// ...
+
+// (Add these methods to the App class.)
+public bool TryGoBack()
+{
+    Frame rootFrame = Window.Current.Content as Frame;
+    if (rootFrame.CanGoBack)
+    {
+        rootFrame.GoBack();
+        return true;
+    }
+    return false;
+}
+
+// Perform forward navigation if possible.
+private bool TryGoForward()
+{
+    Frame rootFrame = Window.Current.Content as Frame;
+    if (rootFrame.CanGoForward)
+    {
+        rootFrame.GoForward();
+        return true;
+    }
+    return false;
+}
+
+// Invoked on every keystroke, including system keys such as Alt key combinations.
+// Used to detect keyboard navigation between pages even when the page itself
+// doesn't have focus.
+private void CoreDispatcher_AcceleratorKeyActivated(CoreDispatcher sender, AcceleratorKeyEventArgs e)
+{
+    // When Alt+Left are pressed navigate back.
+    // When Alt+Right are pressed navigate forward.
+    if (e.EventType == CoreAcceleratorKeyEventType.SystemKeyDown
+        && (e.VirtualKey == VirtualKey.Left || e.VirtualKey == VirtualKey.Right)
+        && e.KeyStatus.IsMenuKeyDown == true
+        && !e.Handled)
+    {
+        if (e.VirtualKey == VirtualKey.Left)
+        {
+            e.Handled = TryGoBack();
+        }
+        else if (e.VirtualKey == VirtualKey.Right)
+        {
+            e.Handled = TryGoForward();
+        }
+    }
+}
+
+// Handle system back requests.
+private void System_BackRequested(object sender, BackRequestedEventArgs e)
+{
+    if (!e.Handled)
+    {
+        e.Handled = TryGoBack();
+    }
+}
+
+// Handle mouse back button.
+private void CoreWindow_PointerPressed(CoreWindow sender, PointerEventArgs e)
+{
+    // For this event, e.Handled arrives as 'true', so invert the value.
+    if (e.CurrentPoint.Properties.IsXButton1Pressed
+        && e.Handled)
+    {
+        e.Handled = !TryGoBack();
+    }
+    else if (e.CurrentPoint.Properties.IsXButton2Pressed
+            && e.Handled)
+    {
+        e.Handled = !TryGoForward();
+    }
+}
+
+
+```
+
+```cppwinrt
+// App.cpp
+void App::OnLaunched(LaunchActivatedEventArgs const& e)
+{
+    // ...
+    // Do not repeat app initialization when the Window already has content,
+    // just ensure that the window is active
+    if (rootFrame == nullptr)
+    {
+        // ...
+        // rootFrame.NavigationFailed({ this, &App::OnNavigationFailed });
+
+        // Add support for accelerator keys. 
+        // Listen to the window directly so the app responds
+        // to accelerator keys regardless of which element has focus.
+        Window::Current().CoreWindow().Dispatcher().
+            AcceleratorKeyActivated({ this, &App::CoreDispatcher_AcceleratorKeyActivated });
+
+        // Add support for system back requests. 
+        SystemNavigationManager::GetForCurrentView().
+            BackRequested({ this, &App::System_BackRequested });
+
+        // Add support for mouse navigation buttons. 
+        Window::Current().CoreWindow().
+            PointerPressed({ this, &App::CoreWindow_PointerPressed });
+
+        // ...
+    }
+}
+
+// App.h
+#include "winrt/Windows.UI.Core.h"
+#include "winrt/Windows.System.h"
+#include "winrt/Windows.UI.Input.h"
+#include "winrt/Windows.UI.Xaml.Input.h"
+ 
+using namespace winrt;
+using namespace Windows::Foundation;
+using namespace Windows::UI::Core;
+using namespace Windows::UI::Input;
+using namespace Windows::UI::Xaml;
+using namespace Windows::UI::Xaml::Controls;
+
+struct App : AppT<App>
+{
+    App();
+
+    // ...
+
+    // Perform back navigation if possible.
+    bool TryGoBack()
+    {
+        Frame rootFrame{ nullptr };
+        auto content = Window::Current().Content();
+        if (content)
+        {
+            rootFrame = content.try_as<Frame>();
+            if (rootFrame.CanGoBack())
+            {
+                rootFrame.GoBack();
+                return true;
+            }
+        }
+        return false;
+    }
+private:
+    // Perform forward navigation if possible.
+    bool TryGoForward()
+    {
+        Frame rootFrame{ nullptr };
+        auto content = Window::Current().Content();
+        if (content)
+        {
+            rootFrame = content.try_as<Frame>();
+            if (rootFrame.CanGoForward())
+            {
+                rootFrame.GoForward();
+                return true;
+            }
+        }
+        return false;
+    }
+  
+    // Invoked on every keystroke, including system keys such as Alt key combinations.
+    // Used to detect keyboard navigation between pages even when the page itself
+    // doesn't have focus.
+    void CoreDispatcher_AcceleratorKeyActivated(CoreDispatcher const& /* sender */, AcceleratorKeyEventArgs const& e)
+    {
+        // When Alt+Left are pressed navigate back.
+        // When Alt+Right are pressed navigate forward.
+        if (e.EventType() == CoreAcceleratorKeyEventType::SystemKeyDown
+            && (e.VirtualKey() == Windows::System::VirtualKey::Left || e.VirtualKey() == Windows::System::VirtualKey::Right)
+            && e.KeyStatus().IsMenuKeyDown
+            && !e.Handled())
+        {
+            if (e.VirtualKey() == Windows::System::VirtualKey::Left)
+            {
+                e.Handled(TryGoBack());
+            }
+            else if (e.VirtualKey() == Windows::System::VirtualKey::Right)
+            {
+                e.Handled(TryGoForward());
+            }
+        }
+    }
+
+    // Handle system back requests.
+    void System_BackRequested(IInspectable const& /* sender */, BackRequestedEventArgs const& e)
+    {
+        if (!e.Handled())
+        {
+            e.Handled(TryGoBack());
+        }
+    }
+
+    // Handle mouse forward and back buttons.
+    void CoreWindow_PointerPressed(CoreWindow const& /* sender */, PointerEventArgs const& e)
+    {
+        // For this event, e.Handled arrives as 'true', so invert the value. 
+        if (e.CurrentPoint().Properties().IsXButton1Pressed()
+            && e.Handled())
+        {
+            e.Handled(!TryGoBack());
+        }
+        else if (e.CurrentPoint().Properties().IsXButton2Pressed()
+            && e.Handled())
+        {
+            e.Handled(!TryGoForward());
+        }
+    }
+};
+```
 
 ## <a name="guidelines-for-custom-back-navigation-behavior"></a>사용자 지정 뒤로 탐색 동작 지침
 
