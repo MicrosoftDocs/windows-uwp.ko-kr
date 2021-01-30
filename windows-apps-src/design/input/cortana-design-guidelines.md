@@ -8,12 +8,12 @@ ms.date: 01/27/2021
 ms.topic: article
 keywords: cortana, 디자인
 ms.localizationpriority: medium
-ms.openlocfilehash: 008a2612b808f1ca9dac5d55fd4472f23d39cef3
-ms.sourcegitcommit: d51c3dd64d58c7fa9513ba20e736905f12df2a9a
+ms.openlocfilehash: 0d1f27c2e70ce8bf9d77f07dd0871cf09a441bdc
+ms.sourcegitcommit: d7efd35c1749f695aebbc0db99d8b62b70fb72da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "99041550"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99057574"
 ---
 # <a name="cortana-design-guidelines"></a>Cortana 디자인 지침
 
@@ -26,7 +26,7 @@ ms.locfileid: "99041550"
 
 사용자는 **cortana** 를 사용 하 여 프로세스를 간단 하 고 가능한 한 간단 하 게 만들 수 있는 반면 **cortana** 는 앱이 작업을 수행 하는 것을 명시적으로 사용할 수도 있습니다.
 
-여기에 나와 있는 **놀이 Works** 라는 여행 계획 및 관리 앱을 사용  하 여 설명 하는 다양 한 개념 및 기능을 보여 줍니다.
+여기에 나와 있는 **놀이 Works** 라는 여행 계획 및 관리 앱을 사용  하 여 설명 하는 다양 한 개념 및 기능을 보여 줍니다. 자세한 내용은 [Cortana 음성 명령 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619899)을 참조 하세요.
 
 :::image type="content" source="images/cortana/cortana-overview.png" alt-text="Cortana 캔버스의 스크린샷":::
 
@@ -179,9 +179,9 @@ Cortana 템플릿에 대 한 자세한 정보는 [VoiceCommandContentTileType](/
 
 ### <a name="handoff"></a>전달
 
-:::image type="content" source="images/cortana/cortana-backgroundapp-result.png" alt-text="종단 간 cortana 캔버스의 스크린샷-핸드 오프를 사용 하지 않는 adventureworks 취소 여행":::(핸드 오프를 사용 *하지 않는 "여행 취소")* 을 사용 하 여 종료 cortana 백그라운드 앱 흐름
+핸드 오프를 제공 하지 않는 *여행 adventureworks "예정 된 여행"* :::image type="content" source="images/cortana/cortana-backgroundapp-result.png" alt-text="없이 adventureworks를 사용 하 여 종단 간 cortana 백그라운드 앱 흐름에 대 한 Cortana 캔버스의 스크린샷":::
 
-:::image type="content" source="images/cortana/cortana-backgroundapp-progress-result.png" alt-text="종단 간 cortana 캔버스의 스크린샷-핸드 오프 전달 화면에서 adventureworks 취소 여행 사용":::adventureworks *"여행 취소"*
+:::image type="content" source="images/cortana/cortana-backgroundapp-progress-result.png" alt-text="종단 간 cortana 캔버스의 스크린샷 스크린샷을 사용 하 여 향후 전달":::*adventureworks "예정 된 여행" 여행 화면*
 
 앱에서 응답 하 고 사용자가 추가 정보를 요구 하지 않는 것 보다 작은 작업은 완료 화면을 표시 하는 것 외에 **Cortana** 의 추가 참여가 없어도 완료할 수 있습니다.
 
@@ -350,4 +350,6 @@ GUI와 TTS 문자열은 동일할 수 있지만 반드시 같을 필요는 없�
 
 ## <a name="related-articles"></a>관련된 문서
 
-[Windows 앱에서 Cortana 상호 작용](cortana-interactions.md)
+- [Windows 앱에서 Cortana 상호 작용](cortana-interactions.md)
+- [VCD 요소 및 특성 v 1.2](/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2)
+- [Cortana 음성 명령 샘플](https://go.microsoft.com/fwlink/p/?LinkID=619899)
