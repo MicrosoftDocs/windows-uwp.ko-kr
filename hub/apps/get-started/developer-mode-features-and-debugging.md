@@ -5,12 +5,12 @@ keywords: 개발자 라이선스 Visual Studio 시작, 개발자 라이선스 �
 ms.date: 10/13/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a8e42b9f35866f07a07122043ced803045bf99d6
-ms.sourcegitcommit: 56e9cab45d1c6e54841d61fdf23044fa01f50c43
+ms.openlocfilehash: 85c64cd4baed7be9edde0dfc008ab90c1d537ca4
+ms.sourcegitcommit: d0eef123b167dc63f482a9f4432a237c1c6212db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92011920"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077231"
 ---
 # <a name="developer-mode-features-and-debugging"></a>개발자 모드 기능 및 디버깅
 
@@ -28,12 +28,13 @@ ms.locfileid: "92011920"
 
 디바이스 포털에 대한 자세한 내용은 [Windows Device Portal 개요](/windows/uwp/debug-test-perf/device-portal.md)를 참조하세요.
 
+
 디바이스별 설치 지침은 다음을 참조하세요.
-- [데스크톱 디바이스 포털](/windows/uwp/debug-test-perf/device-portal-desktop.md)
+- [데스크톱 디바이스 포털](/windows/uwp/debug-test-perf/device-portal-desktop)
 - [HoloLens용 디바이스 포털](/windows/mixed-reality/using-the-windows-device-portal)
-- [IoT용 디바이스 포털](/windows/iot-core/manage-your-device/DevicePortal)
-- [모바일용 디바이스 포털](/windows/uwp/debug-test-perf/device-portal-mobile.md)
-- [Xbox용 디바이스 포털](/windows/xbox-apps/device-portal-xbox.md)
+- [IoT용 디바이스 포털](/windows/iot-core/manage-your-device/deviceportal)
+- [모바일용 디바이스 포털](/windows/uwp/debug-test-perf/device-portal-mobile)
+- [Xbox용 디바이스 포털](/windows/uwp/xbox-apps/device-portal-xbox)
 
 개발자 모드 또는 디바이스 포털을 사용하도록 설정하는 데 문제가 있는 경우 [알려진 문제](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) 포럼에서 이 문제에 대한 해결 방법을 찾아보거나 [개발자 모드 패키지 설치 실패](#failure-to-install-developer-mode-package)를 방문하여 추가 세부 정보를 살펴보고 개발자 모드 패키지의 차단을 해제하려면 어떤 WSUS KB를 허용해야 하는지 확인하세요.
 
@@ -51,7 +52,7 @@ ms.locfileid: "92011920"
 -   모바일 디바이스 패밀리에서: 필요한 인증서가 이미 설치되어 있는 경우 파일을 탭하여 이메일로 전송되거나 SD 카드에 있는 .appx를 설치할 수 있습니다.
 
 
-**앱 테스트용 로드**를 사용하면 신뢰할 수 있는 인증서가 없는 디바이스에 앱을 설치할 수 없으므로 개발자 모드보다 안전합니다.
+**앱 테스트용 로드** 를 사용하면 신뢰할 수 있는 인증서가 없는 디바이스에 앱을 설치할 수 없으므로 개발자 모드보다 안전합니다.
 
 > [!NOTE]
 > 앱을 테스트용으로 로드하는 경우에도 여전히 신뢰할 수 있는 소스의 앱만을 설치해야 합니다. Microsoft Store에서 인증되지 않은 테스트용 로드 앱을 설치할 경우 이러한 앱을 테스트용으로 로드하는 데 필요한 모든 권한을 확보했으며 이러한 앱을 설치하고 실행하여 발생할 수 있는 피해에 대해 전적으로 책임을 진다는 점에 동의하는 것입니다. 이 [개인정보처리방침](https://privacy.microsoft.com/privacystatement)의 Windows &gt; Microsoft Store 섹션을 참조하세요.
@@ -81,7 +82,7 @@ Windows에서 사용되는 기존 SSH 서버는 아직 프로토콜과 호환되
 
 ### <a name="optimizations-for-windows-explorer-remote-desktop-and-powershell-desktop-only"></a>Windows 탐색기, 원격 데스크톱 및 PowerShell에 최적화(데스크톱에만 해당)
 
- 데스크톱 디바이스 패밀리의 **개발자용** 설정 페이지에는 개발 작업을 위해 PC를 최적화하는 데 사용할 수 있는 설정에 대한 바로 가기가 있습니다. 각 설정에서 확인란을 선택하고 **적용**을 클릭하거나 **설정 표시** 링크를 클릭하여 해당 옵션의 설정 페이지를 열 수 있습니다.
+ 데스크톱 디바이스 패밀리의 **개발자용** 설정 페이지에는 개발 작업을 위해 PC를 최적화하는 데 사용할 수 있는 설정에 대한 바로 가기가 있습니다. 각 설정에서 확인란을 선택하고 **적용** 을 클릭하거나 **설정 표시** 링크를 클릭하여 해당 옵션의 설정 페이지를 열 수 있습니다.
 
 
 ## <a name="notes"></a>참고
@@ -93,12 +94,12 @@ Windows 10 PC에서 Windows 10 디바이스로 앱을 배포할 수 있도록 �
 -   [디바이스 포털](/windows/uwp/debug-test-perf/device-portal.md)을 사용하면 브라우저에서 Windows 10, 버전 1511 이상을 실행하는 모바일 디바이스로 배포할 수 있습니다. Device Portal의 **[앱](/windows/uwp/debug-test-perf/device-portal.md#apps-manager)** 페이지를 사용하여 앱 패키지(.appx)를 업로드하고 디바이스에 설치할 수 있습니다.
 
 ## <a name="failure-to-install-developer-mode-package"></a>개발자 모드 패키지 설치 실패
-경우에 따라 네트워크 또는 관리 문제로 인해 개발자 모드가 제대로 설치되지 않습니다. 이 PC에 **원격**으로 배포하려면, 다시 말해서 브라우저 또는 디바이스 검색에서 디바이스 포털을 사용하여 SSH를 설정하려면 개발자 모드 패키지가 필요하지만 로컬 배포에는 필요하지 않습니다.  이러한 문제가 발생하더라도 Visual Studio를 사용하여 앱을 로컬로 배포하거나 이 디바이스에서 다른 디바이스로 배포할 수 있습니다.
+경우에 따라 네트워크 또는 관리 문제로 인해 개발자 모드가 제대로 설치되지 않습니다. 이 PC에 **원격** 으로 배포하려면, 다시 말해서 브라우저 또는 디바이스 검색에서 디바이스 포털을 사용하여 SSH를 설정하려면 개발자 모드 패키지가 필요하지만 로컬 배포에는 필요하지 않습니다.  이러한 문제가 발생하더라도 Visual Studio를 사용하여 앱을 로컬로 배포하거나 이 디바이스에서 다른 디바이스로 배포할 수 있습니다.
 
 [알려진 문제](https://social.msdn.microsoft.com/Forums/en-US/home?forum=Win10SDKToolsIssues&sort=relevancedesc&brandIgnore=True&searchTerm=%22device+portal%22) 포럼을 참조하여 이러한 문제에 대한 해결 방법 등을 찾을 수 있습니다.
 
 > [!NOTE]
-> 개발자 모드가 제대로 설치되지 않으면 피드백 요청을 제출하는 것이 좋습니다. **피드백 허브** 앱에서 **새 피드백 추가**를 선택하고 **개발자 플랫폼** 범주와 **개발자 모드** 하위 범주를 선택합니다. 피드백을 제출하면 발생한 문제를 Microsoft에서 해결하는 데 도움이 됩니다.
+> 개발자 모드가 제대로 설치되지 않으면 피드백 요청을 제출하는 것이 좋습니다. **피드백 허브** 앱에서 **새 피드백 추가** 를 선택하고 **개발자 플랫폼** 범주와 **개발자 모드** 하위 범주를 선택합니다. 피드백을 제출하면 발생한 문제를 Microsoft에서 해결하는 데 도움이 됩니다.
 
 ### <a name="failed-to-locate-the-package"></a>패키지 찾기 실패
 
@@ -137,7 +138,7 @@ Windows 10 Home을 설치한 경우가 아니라면 gpedit.msc를 사용하여 �
 
 **gpedit를 사용하여 디바이스를 사용하도록 설정**
 
-1.  **Gpedit.msc**를 실행합니다.
+1.  **Gpedit.msc** 를 실행합니다.
 2.  로컬 컴퓨터 정책 &gt; 컴퓨터 구성 &gt; 관리 템플릿 &gt; Windows 구성 요소 &gt; 앱 패키지 배포로 이동합니다.
 3.  테스트용 로드를 사용하도록 설정하려면 다음을 사용하도록 정책을 편집합니다.
 
@@ -154,7 +155,7 @@ Windows 10 Home을 설치한 경우가 아니라면 gpedit.msc를 사용하여 �
 
 **regedit를 사용하여 디바이스를 사용하도록 설정**
 
-1.  **regedit**를 실행합니다.
+1.  **regedit** 를 실행합니다.
 2.  테스트용 로드를 사용하도록 설정하려면 이 DWORD 값을 1로 설정합니다.
 
     -   `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock\AllowAllTrustedApps`
