@@ -499,19 +499,19 @@
       href: input/cortana-interactions.md
       items:
         - name: 디자인 지침
-          href: /cortana/voice-commands/voicecommand-design-guidelines
+          href: input/cortana-design-guidelines.md
         - name: 포그라운드 앱 활성화
-          href: /cortana/voice-commands/launch-a-foreground-app-with-voice-commands-in-cortana
+          href: input/cortana-launch-a-foreground-app-with-voice-commands.md
         - name: VCD 구 목록 수정
-          href: /cortana/voice-commands/dynamically-modify-voice-command-definition-vcd-phrase-lists
+          href: input/cortana-dynamically-modify-voice-command-definition-vcd-phrase-lists.md
         - name: 백그라운드 앱 시작
-          href: /cortana/voice-commands/launch-a-background-app-with-voice-commands-in-cortana
+          href: input/cortana-launch-a-background-app-with-voice-commands.md
         - name: 백그라운드 앱 조작
-          href: /cortana/voice-commands/interact-with-a-background-app-in-cortana
+          href: input/cortana-interact-with-a-background-app.md
         - name: 백그라운드 앱에서 딥 링크
-          href: /cortana/voice-commands/deep-link-into-your-app-from-cortana
+          href: input/cortana-deep-link-into-your-app.md
         - name: 자연어 음성 명령 지원
-          href: /cortana/voice-commands/support-natural-language-voice-commands-in-cortana
+          href: input/cortana-support-natural-language-voice-commands.md
     - name: 여러 입력
       href: input/multiple-input-design-guidelines.md
     - name: 입력 주입
