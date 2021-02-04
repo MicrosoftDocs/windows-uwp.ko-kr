@@ -4,12 +4,12 @@ description: 효율적인 레이아웃으로 창을 정렬 하 고 맞추기 위
 ms.date: 12/02/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 00b849e19d3ae8fcf76e1f2a63dc1915353aad30
-ms.sourcegitcommit: 5dac88ad541b71ebe85b78951e6b357a3db176cc
+ms.openlocfilehash: b1f417307c173e868284254c0a1721e4e6ef5536
+ms.sourcegitcommit: 382ae62f9d9bf980399a3f654e40ef4f85eae328
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97612324"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99534447"
 ---
 # <a name="fancyzones-utility"></a>FancyZones 유틸리티
 
@@ -17,7 +17,7 @@ FancyZones는 워크플로 속도를 개선 하 고 레이아웃을 신속 하 �
 
 ![FancyZones 스크린샷](../images/pt-fancy-zones2.png)
 
-## <a name="getting-started"></a>시작
+## <a name="getting-started"></a>시작하기
 
 ### <a name="enable"></a>사용
 
@@ -35,17 +35,17 @@ Powertoy 설정 메뉴의 단추를 사용 하거나 Win을 눌러 영역 편집
 
 ## <a name="choose-your-layout-layout-editor"></a>레이아웃 선택 (레이아웃 편집기)
 
-영역 편집기는 처음 시작 될 때 모니터에 있는 창의 수를 기준으로 조정할 수 있는 레이아웃 목록을 제공 합니다. 레이아웃을 선택 하면 모니터의 해당 레이아웃 미리 보기가 표시 됩니다. 적용을 선택 하면 해당 레이아웃을 모니터로 설정 합니다.  
+영역 편집기는 처음 시작 될 때 모니터에 있는 창의 수를 기준으로 조정할 수 있는 레이아웃 목록을 제공 합니다. 레이아웃을 선택 하면 모니터의 해당 레이아웃 미리 보기가 표시 됩니다. 선택한 레이아웃이 자동으로 적용 됩니다.  
 
 ![FancyZones 선택 스크린샷](../images/pt-fancyzones-picker.png)
 
-여러 표시를 사용 하는 경우 편집기에서 사용 가능한 모니터를 검색 하 여 사용자가 선택할 수 있도록 해당 모니터를 표시 합니다. 그러면 선택한 모니터가 적용 될 때 선택한 레이아웃의 대상이 됩니다.
+여러 표시를 사용 하는 경우 편집기에서 사용 가능한 모니터를 검색 하 여 사용자가 선택할 수 있도록 해당 모니터를 표시 합니다. 그러면 선택한 모니터가 선택한 레이아웃의 대상이 됩니다.
 
 ![FancyZones 선택기 다중 모니터](../images/pt-fancyzones-multimon.png)
 
 ### <a name="space-around-zones"></a>영역 주변 공간
 
-**영역 주위의 공간 표시** 확인란을 사용 하 여 각 Fccyzone 창에서 테두리 또는 여백 정렬을 결정할 수 있습니다. **영역 주위의 공간** 필드를 사용 하 여 테두리의 너비에 대 한 사용자 지정 값을 설정할 수 있습니다.
+**영역 주위의 공간 표시** 토글을 사용 하 여 각 Fccyzone 창에서 테두리 또는 여백 정렬을 결정할 수 있습니다. **영역 주위의 공간** 필드를 사용 하 여 테두리의 너비에 대 한 사용자 지정 값을 설정할 수 있습니다.
 
 **인접 영역을 강조 표시 하는 거리** 를 사용 하면 함께 물릴 때까지 Fccyzone 창 사이의 공간 크기에 대 한 사용자 지정 값을 설정 하 고 함께 병합할 수 있도록 둘 다 강조 표시할 수 있습니다.
 
@@ -55,19 +55,19 @@ Powertoy 설정 메뉴의 단추를 사용 하거나 Win을 눌러 영역 편집
 
 ### <a name="creating-a-custom-layout"></a>사용자 지정 레이아웃 만들기
 
-영역 편집기는 사용자 지정 레이아웃 만들기 및 저장도 지원 합니다. 영역 편집기의 상단 메뉴에서 **템플릿** 옆의 **사용자 지정** 탭을 선택 합니다.
+영역 편집기는 사용자 지정 레이아웃 만들기 및 저장도 지원 합니다. 오른쪽 아래에서 **+ 새 레이아웃 만들기** 단추를 선택 합니다.
   
-사용자 지정 영역 레이아웃을 만드는 두 가지 방법으로 창 레이아웃 및 테이블 레이아웃을 사용할 수 있습니다. 이러한 모델은 가감 및 subtractive 모델으로 간주할 수도 있습니다.  
+사용자 지정 영역 레이아웃을 만드는 방법에는 **모눈** 레이아웃 및 **캔버스** 레이아웃의 두 가지가 있습니다. 이러한 모델은 subtractive 및 가산적 모델으로 간주할 수도 있습니다.  
 
-가산 창 레이아웃 모델은 빈 레이아웃으로 시작 하 고 windows와 비슷하게 끌어서 크기를 조정할 수 있는 영역 추가를 지원 합니다.
-
-![FancyZones 창 편집기 모드](../images/pt-fancyzones-windoweditor.png)
-
-Subtractive 테이블 레이아웃 모델은 테이블 레이아웃으로 시작 하 고 영역을 분할 및 병합 한 다음 영역 사이에서 제본용 여백을 조정 하 여 영역을 만들 수 있습니다.
+Subtractive **그리드** 모델은 3 개의 열 그리드로 시작 하 고 영역을 분할 및 병합 하 고 필요에 따라 영역 간의 여백을 조정 하 여 영역을 만들 수 있도록 합니다.
 
 두 영역을 병합 하려면 마우스 왼쪽 단추를 선택 하 고 두 번째 영역이 선택 될 때까지 마우스를 끌고 단추를 놓으면 팝업 메뉴가 표시 됩니다.
 
-![FancyZones 테이블 편집기 모드](../images/pt-fancyzones-tableeditor.png)
+![FancyZones 테이블 편집기 모드](../images/pt-fancyzones-grideditor.png)
+
+덧셈 **캔버스** 모델은 빈 레이아웃으로 시작 하 고 windows와 비슷하게 끌어서 크기를 조정할 수 있는 영역 추가를 지원 합니다.
+
+![FancyZones 창 편집기 모드](../images/pt-fancyzones-canvaseditor.png)
 
 ## <a name="snapping-a-window-to-two-or-more-zones"></a>둘 이상의 영역에 창 맞추기
 
@@ -90,7 +90,7 @@ FancyZones는 Windows 10을 재정의 `Win ⊞ + Shift + Arrow` 하 여 창을 �
 
 ## <a name="settings"></a>설정
 
-| 설정 | Description |
+| Setting | 설명 |
 | --------- | ------------- |
 | 영역 편집기 바로 가기 키 구성 | 기본 바로 가기 키를 변경 하려면 텍스트 상자를 클릭 하 고 (텍스트를 선택 하거나 삭제할 필요가 없음) 키보드에서 원하는 키 조합을 누릅니다. |
 | 드래그 하는 동안 Shift 키를 누르고 영역 활성화 | 끌기를 사용 하도록 설정 하는 동안 shift 키를 누르면 끌기 및 수동 맞춤 모드에서 자동 맞춤 모드를 전환 합니다. |

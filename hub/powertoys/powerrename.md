@@ -4,12 +4,12 @@ description: 파일의 대량 이름을 바꾸기 위한 windows 셸 확장
 ms.date: 12/02/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 39e06685b6948ed3d3935c69a8b4dafeb9ecc2ea
-ms.sourcegitcommit: 8040760f5520bd1732c39aedc68144c4496319df
+ms.openlocfilehash: 3c751624c93fec5996885c766e73b5ab1849fd4c
+ms.sourcegitcommit: 382ae62f9d9bf980399a3f654e40ef4f85eae328
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98691338"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99534392"
 ---
 # <a name="powerrename-utility"></a>PowerRename 유틸리티
 
@@ -44,6 +44,8 @@ Windows 파일 탐색기에서 일부 파일을 선택한 후 마우스 오른�
 ### <a name="options---use-regular-expressions"></a>옵션-정규식 사용
 
 이 확인란을 선택 하면 검색 값이 [정규식](https://wikipedia.org/wiki/Regular_expression) (regex)로 해석 됩니다. Replace 값에는 regex 변수가 포함 될 수도 있습니다 (아래 예제 참조).  선택 하지 않으면 검색 값이 일반 텍스트로 해석 되어 Replace 필드의 텍스트로 바뀝니다.
+
+`Use Boost library`확장 regex 기능의 설정 메뉴에 있는 옵션에 대 한 자세한 내용은 [정규식 섹션](#regular-expressions)을 참조 하십시오.
 
 ### <a name="options---case-sensitive"></a>옵션-대/소문자 구분
 
@@ -139,11 +141,13 @@ Windows 파일 탐색기에서 일부 파일을 선택한 후 마우스 오른�
 
 **참고:** 정규식을 사용 하는 동안 "모든 항목 일치"를 확인 하는 것이 좋습니다.
 
+표준 라이브러리 대신 [부스트 라이브러리](https://www.boost.org/doc/libs/1_74_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) 를 사용 하려면 `Use Boost library` powertoy 설정에서 옵션을 선택 합니다. 표준 라이브러리에서 지원 하지 않는와 같은 확장 된 기능을 사용할 수 있습니다 `[lookbehind](https://www.boost.org/doc/libs/1_74_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html#boost_regex.syntax.perl_syntax.lookbehind)` .
+
 ### <a name="examples-of-regular-expressions"></a>정규식의 예
 
 #### <a name="simple-matching-examples"></a>간단한 일치 예제
 
-| 검색 대상       | Description                                           |
+| 검색 대상       | 설명                                           |
 | ---------------- | ------------- |
 | `^`              | 파일 이름 시작 부분 일치                   |
 | `$`              | 파일 이름의 끝을 찾습니다.                         |
@@ -158,12 +162,13 @@ Windows 파일 탐색기에서 일부 파일을 선택한 후 마우스 오른�
 
 *변수를 사용 하는 경우 "모든 항목 일치" 옵션을 사용 하도록 설정 해야 합니다.*
 
-| 검색 대상   | 바꿀 항목    | Description                                |
+| 검색 대상   | 바꿀 항목    | 설명                                |
 | ------------ | --------------- |--------------------------------------------|
 | `(.*).png`   | `foo_$1.png`   | \_기존 파일 이름 앞에 "foo"를 추가할 수 있습니다. |
 | `(.*).png`   | `$1_foo.png`   | \_기존 파일 이름에 "foo"를 추가 합니다.  |
 | `(.*)`       | `$1.txt`        | 기존 파일 이름에 ".txt" 확장명을 추가 합니다. |
 | `(^\w+\.$)|(^\w+$)` | `$2.txt` | 확장명이 없는 경우에만 기존 파일 이름에 ".txt" 확장명을 추가 합니다. |
+|  `(\d\d)-(\d\d)-(\d\d\d\d)` | `$3-$2-$1` | 파일 이름에서 이동 번호: "29-03-2020"는 "2020-03-29"이 됩니다. |
 
 ### <a name="additional-resources-for-learning-regular-expressions"></a>정규식 학습을 위한 추가 리소스
 

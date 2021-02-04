@@ -4,16 +4,16 @@ description: 성능을 저하 시 키 지 않고 몇 가지 추가 기능을 포
 ms.date: 12/02/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 9be1d54946ec2286d95dbe7d4518a631efd471e9
-ms.sourcegitcommit: 46a7e9db64e17a645ee6e888f62a9b04632c56af
+ms.openlocfilehash: 126c38cd98f0d8ff1102c7f53f14cb95ec7e38c5
+ms.sourcegitcommit: 382ae62f9d9bf980399a3f654e40ef4f85eae328
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97618532"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99534402"
 ---
 # <a name="powertoys-run-utility"></a>Powertoy Run 유틸리티
 
-Powertoy Run은 성능을 저하 시 키 지 않고 몇 가지 추가 기능을 포함 하는 고급 사용자를 위한 빠른 시작 관리자입니다. 오픈 소스 이며 추가 플러그인 용 모듈식입니다.
+Powertoy Run은 성능을 저하 시 키 지 않고 몇 가지 추가 기능을 포함 하는 고급 사용자를 위한 빠른 시작 관리자입니다. 오픈 소스이며 추가 플러그 인을 위한 모듈식입니다.
 
 Powertoy 실행을 사용 하려면 <kbd>Alt</kbd> + <kbd>Space</kbd> 를 선택 하 고 입력을 시작 합니다.
 
@@ -75,6 +75,22 @@ Powertoy 설정 메뉴에서 다음 실행 옵션을 사용할 수 있습니다.
   | `//` | Url만. `//docs.microsoft.com`기본 브라우저가 이동 하는 예https://docs.microsoft.com |
   | `<` | 실행 중인 프로세스만 `<outlook`Outlook을 포함 하는 모든 프로세스를 찾는 예제 |
   | `>` | Shell 명령만. `>ping localhost`Ping 쿼리를 수행 하는 예제 |
+  | `:` | 레지스트리 키만 `:hkcu`HKEY_CURRENT_USER 레지스트리 키를 검색 하는 예제 |
+  | `!` | Windows 서비스만 해당 됩니다. `!alu`시작 또는 중지할 응용 프로그램 계층 게이트웨이 서비스를 검색 하는 예제 |
+
+## <a name="system-commands"></a>시스템 명령
+
+Powertoy v 0.31 및 on에는 이제 실행할 수 있는 시스템 수준 작업이 있습니다.
+
+  | **작업 키**   |   **작업** |
+  | ------------------ | ---------------------------------------------------------------------------------|
+  | `Shutdown` | 컴퓨터를 종료 합니다. |
+  | `Restart` | 컴퓨터를 다시 시작 합니다. |
+  | `Sign Out` | 현재 사용자를 로그 아웃 합니다. |
+  | `Lock` | 컴퓨터를 잠급니다. |
+  | `Sleep` | 컴퓨터를 중지 합니다. |
+  | `Hibernate` | 컴퓨터의 절전 모드를 |
+  | `Empty Recycle Bin` | 휴지통을 비웁니다. |
 
 ## <a name="indexer-settings"></a>인덱서 설정
 
