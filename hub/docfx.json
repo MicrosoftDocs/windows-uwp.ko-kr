@@ -23,6 +23,9 @@
       "Search.Product": "eADQiWindows 10XVcnh",
       "uhfHeaderId": "MSDocsHeader-WinDevCenter",
       "breadcrumb_path": "/windows/breadcrumbs/toc.json",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/windows-uwp",
+      "feedback_product_url": "https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app",
       "extendBreadcrumb": false,
       "_op_documentIdPathDepotMapping": {
         "./": {
@@ -45,7 +48,8 @@
         "nodejs/**.md": "dev-environment",
         "android/**.md": "dev-environment",
         "dev-environment/**.md": "dev-environment",
-        "package-manager/**.md": "dev-environment"
+        "package-manager/**.md": "dev-environment",
+        "powertoys/**.md": "dev-environment"
       },
       "ms.technology":
       {
@@ -54,8 +58,9 @@
         "apps/trace-processing/**.md": "",
         "python/**.md": "windows-python",
         "nodejs/**.md": "windows-nodejs",
-        "android/**.md": "windows-nodejs",
-        "package-manager/**.md": ""
+       "android/**.md": "windows-android",
+        "powertoys/**.md": "powertoys",
+        "package-manager/**.md": "package-manager"
       },	 
       
      "author":
