@@ -1,34 +1,33 @@
 ---
-Description: 미디어 플레이어는 동영상, 오디오 및 이미지를 감상하는 데 사용합니다.
+description: 미디어 재생에는 인라인 또는 전용 전체 화면 환경을 통해 비디오와 오디오를 보고 듣는 것이 포함됩니다.
 title: 미디어 플레이어
 ms.assetid: 9AABB5DE-1D81-4791-AB47-7F058F64C491
 dev.assetid: AF2F2008-9B53-430C-BBC3-8888F631B0B0
-label: Media player
+label: Media playback controls
 template: detail.hbs
 ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: e7f575f22a56c7c97700e1949494848402d239c6
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: a1471eb468e85bb1c4706c5432e38e501c4c1469
+ms.sourcegitcommit: 382ae62f9d9bf980399a3f654e40ef4f85eae328
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218713"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99534412"
 ---
-# <a name="media-player"></a>미디어 플레이어
+# <a name="media-players"></a>미디어 플레이어
 
+미디어 재생에는 인라인(페이지에 포함되거나 다른 컨트롤 그룹과 함께 포함) 또는 전용 전체 화면 환경을 통해 비디오와 오디오를 보고 듣는 것이 포함됩니다.
 
-
-미디어 플레이어는 비디오 및 오디오를 감상하는 데 사용합니다. 미디어는 인라인(페이지에 포함되거나 다른 컨트롤의 그룹으로 포함)으로 또는 전용 전체 화면 보기로 재생할 수 있습니다. 플레이어의 단추 집합을 수정하고 컨트롤 막대의 배경을 변경하고 보기에 적합하게 레이아웃을 조정할 수 있습니다. 하지만 일반적으로 사용자는 기본 컨트롤 집합(재생/일시 중지, 뒤로 건너뛰기, 앞으로 건너뛰기)을 기대합니다.
+사용자는 재생/일시 중지, 뒤로 건너뛰기, 앞으로 건너뛰기와 같은 기본 컨트롤을 기대하며, 개발자는 이러한 기본 컨트롤(미디어 플레이어의 단추, 컨트롤 막대의 배경, 컨트롤 정렬 또는 레이아웃 포함)을 필요한 대로 수정할 수 있습니다.
 
 ![전송 컨트롤이 포함된 미디어 플레이어 요소](images/controls/mtc_double_video_inprod.png)
 
 > **중요 API**: [MediaPlayerElement 클래스](/uwp/api/windows.ui.xaml.controls.mediaplayerelement), [MediaTransportControls 클래스](/uwp/api/windows.ui.xaml.controls.mediatransportcontrols)
 
-
-> [!NOTE]
-> **MediaPlayerElement**는 Windows 10, 버전 1607 이상에서만 사용 가능합니다. 이전 버전의 Windows 10 앱을 개발하는 경우 [MediaElement](/uwp/api/Windows.UI.Xaml.Controls.MediaElement)를 대신 사용해야 합니다. 이 페이지에 있는 모든 권장 사항은 MediaElement에도 적용됩니다.
+> [!Important]
+> **MediaPlayerElement** 는 Windows 10, 버전 1607 이상에서만 사용 가능합니다. 이전 버전의 Windows 10 앱을 개발하는 경우 [MediaElement](/uwp/api/Windows.UI.Xaml.Controls.MediaElement) 컨트롤을 대신 사용해야 합니다. 여기에 표시된 모든 권장 사항은 MediaElement에도 적용됩니다.
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -57,7 +56,7 @@ Windows 10 시작 앱의 미디어 플레이어입니다.
 ## <a name="create-a-media-player"></a>미디어 플레이어 만들기
 XAML에서 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement) 개체를 만들어 앱에 미디어를 추가하고 [Source](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source)를 오디오 또는 비디오 파일을 가리키는 [MediaSource](/uwp/api/windows.media.core.mediasource)로 설정합니다.
 
-이 XAML은 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement)를 만들고 [Source](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) 속성을 앱에 로컬인 비디오 파일의 URI로 설정합니다. **MediaPlayerElement**는 페이지가 로드되면 재생을 시작합니다. 미디어가 바로 시작되지 않게 하려면 [AutoPlay](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.autoplay) 속성을 **false**로 설정하면 됩니다.
+이 XAML은 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement)를 만들고 [Source](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) 속성을 앱에 로컬인 비디오 파일의 URI로 설정합니다. **MediaPlayerElement** 는 페이지가 로드되면 재생을 시작합니다. 미디어가 바로 시작되지 않게 하려면 [AutoPlay](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.autoplay) 속성을 **false** 로 설정하면 됩니다.
 
 ```xaml
 <MediaPlayerElement x:Name="mediaSimple"
@@ -65,7 +64,7 @@ XAML에서 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerele
                     Width="400" AutoPlay="True"/>
 ```
 
-이 XAML은 기본 제공 전송 컨트롤이 사용되고 [AutoPlay](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.autoplay) 속성이 **false**로 설정된 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement)를 만듭니다.
+이 XAML은 기본 제공 전송 컨트롤이 사용되고 [AutoPlay](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.autoplay) 속성이 **false** 로 설정된 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement)를 만듭니다.
 
 
 ```xaml
@@ -77,7 +76,7 @@ XAML에서 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerele
 ```
 
 ### <a name="media-transport-controls"></a>미디어 전송 컨트롤
-[MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement)는 재생, 중지, 일시 중지, 볼륨, 음소거, 검색/진행률, 선택 자막 및 오디오 트랙을 처리하는 전송 컨트롤을 기본적으로 제공합니다. 이러한 컨트롤을 사용하도록 설정하려면 [AreTransportControlsEnabled](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.AreTransportControlsEnabled)를 **true**로 설정합니다. 이러한 컨트롤을 사용하지 않도록 설정하려면 **AreTransportControlsEnabled**를 **false**로 설정합니다. 전송 컨트롤은 [MediaTransportControls](/uwp/api/Windows.UI.Xaml.Controls.MediaTransportControls) 클래스로 표현됩니다. 전송 컨트롤을 그대로 사용할 수도 있고 다양한 방법으로 사용자 지정할 수도 있습니다. 자세한 내용은 [MediaTransportControls](/uwp/api/Windows.UI.Xaml.Controls.MediaTransportControls) 클래스 참조 및 [사용자 지정 전송 컨트롤 만들기](custom-transport-controls.md)를 참조하세요.
+[MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement)는 재생, 중지, 일시 중지, 볼륨, 음소거, 검색/진행률, 선택 자막 및 오디오 트랙을 처리하는 전송 컨트롤을 기본적으로 제공합니다. 이러한 컨트롤을 사용하도록 설정하려면 [AreTransportControlsEnabled](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.AreTransportControlsEnabled)를 **true** 로 설정합니다. 이러한 컨트롤을 사용하지 않도록 설정하려면 **AreTransportControlsEnabled** 를 **false** 로 설정합니다. 전송 컨트롤은 [MediaTransportControls](/uwp/api/Windows.UI.Xaml.Controls.MediaTransportControls) 클래스로 표현됩니다. 전송 컨트롤을 그대로 사용할 수도 있고 다양한 방법으로 사용자 지정할 수도 있습니다. 자세한 내용은 [MediaTransportControls](/uwp/api/Windows.UI.Xaml.Controls.MediaTransportControls) 클래스 참조 및 [사용자 지정 전송 컨트롤 만들기](custom-transport-controls.md)를 참조하세요.
 
 전송 컨트롤은 단일 행 및 이중 행 레이아웃을 지원합니다. 첫 번째 예제는 미디어 타임라인의 왼쪽에 재생/일시 중지 단추가 있는 단일 행 레이아웃입니다. 이 레이아웃은 인라인 미디어 재생과 작은 화면에 가장 적합합니다.
 
@@ -97,9 +96,9 @@ XAML에서 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerele
 ### <a name="set-the-media-source"></a>미디어 원본 설정
 네트워크의 파일 또는 앱에 포함된 파일을 재생하려면 [Source](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) 속성을 파일의 경로와 함께 [MediaSource](/uwp/api/windows.media.core.mediasource)로 설정합니다.
 
-**팁**  인터넷에서 파일을 열려면 앱의 매니페스트(Package.appxmanifest)에서 **Internet (Client)** 기능을 선언해야 합니다. 접근 권한 값 선언에 대한 자세한 내용은 [앱 접근 권한 값 선언](../../packaging/app-capability-declarations.md)을 참조하세요.
+**팁**  인터넷에서 파일을 열려면 앱의 매니페스트(Package.appxmanifest)에서 **Internet (Client)** 기능을 선언해야 합니다. 접근 권한 값 선언에 대한 자세한 내용은 [앱 접근 권한 값 선언](../../packaging/app-capability-declarations.md)을 참조하세요.
 
- 
+ 
 
 다음 코드는 XAML로 정의된 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source)의 [Source](/uwp/api/windows.ui.xaml.controls.mediaplayerelement) 속성을 [TextBox](/uwp/api/Windows.UI.Xaml.Controls.TextBox)에 입력한 파일의 경로로 설정하려고 시도합니다.
 
@@ -143,9 +142,9 @@ private void LoadMediaFromString(string path)
 }
 ```
 
-미디어 원본을 앱에 포함된 미디어 파일로 설정하려면 경로 앞에 **ms-appx:///** 를 붙여 [Uri](/uwp/api/windows.foundation.uri)를 초기화한 다음, 이 Uri로 [MediaSource](/uwp/api/windows.media.core.mediasource)를 만들고 [Source](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source)를 이 Uri로 설정합니다. 예를 들어 **Videos** 하위 폴더에 있는 **video1.mp4** 파일의 경우 경로는 **ms-appx:///Videos/video1.mp4**와 같습니다.
+미디어 원본을 앱에 포함된 미디어 파일로 설정하려면 경로 앞에 **ms-appx:///** 를 붙여 [Uri](/uwp/api/windows.foundation.uri)를 초기화한 다음, 이 Uri로 [MediaSource](/uwp/api/windows.media.core.mediasource)를 만들고 [Source](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source)를 이 Uri로 설정합니다. 예를 들어 **Videos** 하위 폴더에 있는 **video1.mp4** 파일의 경우 경로는 **ms-appx:///Videos/video1.mp4** 와 같습니다.
 
-다음 코드는 이전에 XAML로 정의된 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement)의 [Source](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) 속성을 **ms-appx:///Videos/video1.mp4**로 설정합니다.
+다음 코드는 이전에 XAML로 정의된 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement)의 [Source](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source) 속성을 **ms-appx:///Videos/video1.mp4** 로 설정합니다.
 
 ```csharp
 private void LoadEmbeddedAppFile()
@@ -177,7 +176,7 @@ private void LoadEmbeddedAppFile()
 
 1.  [FileOpenPicker](/uwp/api/Windows.Storage.Pickers.FileOpenPicker)를 호출하면 사용자가 미디어 파일을 선택할 수 있습니다.
 
-    [FileOpenPicker](/uwp/api/Windows.Storage.Pickers.FileOpenPicker) 클래스를 사용하여 미디어 파일을 선택합니다. [FileTypeFilter](/uwp/api/windows.storage.pickers.fileopenpicker.filetypefilter)를 설정하여 **FileOpenPicker**가 표시하는 파일 형식을 지정합니다. 파일 선택기를 실행하여 파일을 가져오려면 [PickSingleFileAsync](/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync)를 호출합니다.
+    [FileOpenPicker](/uwp/api/Windows.Storage.Pickers.FileOpenPicker) 클래스를 사용하여 미디어 파일을 선택합니다. [FileTypeFilter](/uwp/api/windows.storage.pickers.fileopenpicker.filetypefilter)를 설정하여 **FileOpenPicker** 가 표시하는 파일 형식을 지정합니다. 파일 선택기를 실행하여 파일을 가져오려면 [PickSingleFileAsync](/uwp/api/windows.storage.pickers.fileopenpicker.picksinglefileasync)를 호출합니다.
 
 2.  [MediaSource](/uwp/api/windows.media.core.mediasource)를 사용하여 선택한 미디어 파일을 [MediaPlayerElement.Source](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source)로 설정합니다.
 
@@ -220,9 +219,9 @@ async private System.Threading.Tasks.Task SetLocalMedia()
 ```
 
 ### <a name="set-the-poster-source"></a>포스터 원본 설정
-[PosterSource](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.PosterSource) 속성을 사용하여 미디어가 로드되기 전에 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement)에 시각적 표현을 제공할 수 있습니다. **PosterSource**는 미디어 대신 표시되는 이미지(예제: 스크린샷, 영화 포스터)입니다. **PosterSource**는 다음과 같은 경우에 표시됩니다.
+[PosterSource](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.PosterSource) 속성을 사용하여 미디어가 로드되기 전에 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement)에 시각적 표현을 제공할 수 있습니다. **PosterSource** 는 미디어 대신 표시되는 이미지(예제: 스크린샷, 영화 포스터)입니다. **PosterSource** 는 다음과 같은 경우에 표시됩니다.
 
--   유효한 원본이 설정되지 않은 경우. 예를 들어 [Source](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source)가 설정되지 않았거나, **Source**가 **Null**로 설정되어 있거나, 원본이 잘못된 경우(예: [MediaFailed](/uwp/api/windows.media.playback.mediaplayer.mediafailed) 이벤트가 발생한 경우)가 있습니다.
+-   유효한 원본이 설정되지 않은 경우. 예를 들어 [Source](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.source)가 설정되지 않았거나, **Source** 가 **Null** 로 설정되어 있거나, 원본이 잘못된 경우(예: [MediaFailed](/uwp/api/windows.media.playback.mediaplayer.mediafailed) 이벤트가 발생한 경우)가 있습니다.
 -   미디어를 로드하는 중. 예를 들어 유효한 원본이 설정되어 있지만 [MediaOpened](/uwp/api/windows.media.playback.mediaplayer.mediaopened) 이벤트가 아직 발생하지 않은 경우가 있습니다.
 -   미디어가 다른 디바이스로 스트리밍되는 경우
 -   미디어가 오디오 전용인 경우
@@ -307,7 +306,7 @@ private DisplayRequest appDisplayRequest = null;
 
 ### <a name="enable-full-window-video-rendering"></a>전체 창 동영상 렌더링을 사용하도록 설정
 
-전체 창 렌더링을 사용하거나 사용하지 않도록 설정하려면 [IsFullWindow](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.isfullwindow) 속성을 설정합니다. 앱에서 전체 창 렌더링을 프로그래밍 방식으로 설정하는 경우 수동으로 설정하는 대신 항상 **IsFullWindow**를 사용해야 합니다. **IsFullWindow**는 시스템 수준의 최적화가 수행되도록 하여 성능과 배터리 사용 시간을 향상합니다. 전체 창 렌더링이 제대로 설정되어 있지 않으면 이러한 최적화를 사용할 수 없습니다.
+전체 창 렌더링을 사용하거나 사용하지 않도록 설정하려면 [IsFullWindow](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.isfullwindow) 속성을 설정합니다. 앱에서 전체 창 렌더링을 프로그래밍 방식으로 설정하는 경우 수동으로 설정하는 대신 항상 **IsFullWindow** 를 사용해야 합니다. **IsFullWindow** 는 시스템 수준의 최적화가 수행되도록 하여 성능과 배터리 사용 시간을 향상합니다. 전체 창 렌더링이 제대로 설정되어 있지 않으면 이러한 최적화를 사용할 수 없습니다.
 
 다음은 전체 창 렌더링을 켜고 끄는 [AppBarButton](/uwp/api/Windows.UI.Xaml.Controls.AppBarButton)을 만드는 일부 코드입니다.
 
@@ -326,7 +325,7 @@ private void FullWindow_Click(object sender, object e)
 
 ### <a name="resize-and-stretch-video"></a>동영상 크기 조정 및 확대
 
-[Stretch](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.stretch) 속성을 사용하여 비디오 콘텐츠 및/또는 [PosterSource](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.postersource)가 컨테이너를 채우는 방식을 변경할 수 있습니다. 그러면 [Stretch](/uwp/api/Windows.UI.Xaml.Media.Stretch) 값에 따라 동영상 크기를 조정하고 확대합니다. **Stretch**의 상태는 여러 TV 세트의 사진 크기 설정과 비슷합니다. 이 속성을 단추에 연결하고 사용자가 더 선호하는 설정을 선택하도록 할 수 있습니다.
+[Stretch](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.stretch) 속성을 사용하여 비디오 콘텐츠 및/또는 [PosterSource](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.postersource)가 컨테이너를 채우는 방식을 변경할 수 있습니다. 그러면 [Stretch](/uwp/api/Windows.UI.Xaml.Media.Stretch) 값에 따라 동영상 크기를 조정하고 확대합니다. **Stretch** 의 상태는 여러 TV 세트의 사진 크기 설정과 비슷합니다. 이 속성을 단추에 연결하고 사용자가 더 선호하는 설정을 선택하도록 할 수 있습니다.
 
 -   [None](/uwp/api/Windows.UI.Xaml.Media.Stretch)은 원래 크기로 콘텐츠의 기본 해상도를 표시합니다.
 -   [Uniform](/uwp/api/Windows.UI.Xaml.Media.Stretch)은 가로 세로 비율 및 이미지 콘텐츠를 유지하면서 공간을 최대한 채웁니다. 이 경우 동영상 가장자리에 가로 또는 세로의 검은색 막대가 표시될 수 있습니다. 이 상태는 와이드스크린 모드와 비슷합니다.
@@ -368,9 +367,9 @@ private void PictureSize_Click(object sender, RoutedEventArgs e)
 
 ### <a name="enable-low-latency-playback"></a>짧은 대기 시간 재생을 사용하도록 설정
 
-[MediaPlayerElement.MediaPlayer](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.mediaplayer)에서 [RealTimePlayback](/uwp/api/windows.media.playback.mediaplayer.realtimeplayback) 속성을 **true**로 설정하면 미디어 플레이어 요소의 재생에 대한 초기 대기 시간을 줄일 수 있습니다. 이는 양방향 통신 앱에 중요하며 일부 게임 시나리오에 적용할 수 있습니다. 이 모드는 리소스를 더 많이 사용하고 전력 효율성이 떨어집니다.
+[MediaPlayerElement.MediaPlayer](/uwp/api/windows.ui.xaml.controls.mediaplayerelement.mediaplayer)에서 [RealTimePlayback](/uwp/api/windows.media.playback.mediaplayer.realtimeplayback) 속성을 **true** 로 설정하면 미디어 플레이어 요소의 재생에 대한 초기 대기 시간을 줄일 수 있습니다. 이는 양방향 통신 앱에 중요하며 일부 게임 시나리오에 적용할 수 있습니다. 이 모드는 리소스를 더 많이 사용하고 전력 효율성이 떨어집니다.
 
-이 예제에서는 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement)를 만들고 [RealTimePlayback](/uwp/api/windows.media.playback.mediaplayer.realtimeplayback)을 **true**로 설정합니다.
+이 예제에서는 [MediaPlayerElement](/uwp/api/windows.ui.xaml.controls.mediaplayerelement)를 만들고 [RealTimePlayback](/uwp/api/windows.media.playback.mediaplayer.realtimeplayback)을 **true** 로 설정합니다.
 
 
 ```csharp

@@ -8,12 +8,12 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 36397e64215bfe4b57aac32e9eccc94182495688
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: c84595a8d5aadfb22f84a5fe780e93b9518490dc
+ms.sourcegitcommit: 382ae62f9d9bf980399a3f654e40ef4f85eae328
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93033306"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99534482"
 ---
 # <a name="controls-by-function"></a>기능별 컨트롤
 
@@ -41,7 +41,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 ## <a name="appbars-and-commands"></a>앱 바 및 명령
 
 ### <a name="app-bar"></a>앱 바
-애플리케이션 관련 명령을 표시하는 도구 모음입니다. 명령 모음을 참조하세요.
+애플리케이션 관련 명령을 표시하는 도구 모음입니다. [명령 모음](#command-bar)을 참조하세요.
 
 참고자료: [AppBar](/uwp/api/Windows.UI.Xaml.Controls.AppBar) 
 
@@ -105,7 +105,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 디자인 및 방법: [단추 컨트롤 가이드](buttons.md) 
 
 ### <a name="hyperlink"></a>Hyperlink
-하이퍼링크 단추를 참조하세요.
+[하이퍼링크 단추](#hyperlink-button)를 참조하세요.
 
 ### <a name="hyperlink-button"></a>하이퍼링크 단추
 마크업 텍스트로 표시되고 브라우저에서 지정된 URI를 여는 단추입니다.
@@ -248,7 +248,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 ## <a name="flyouts"></a>플라이아웃
 
 ### <a name="context-menu"></a>상황에 맞는 메뉴
-메뉴 플라이아웃 및 팝업 메뉴를 참조하세요.
+[메뉴 플라이아웃](#menu-flyout) 및 [팝업 메뉴](#popup-menu)를 참조하세요.
 
 ### <a name="flyout"></a>플라이아웃
 사용자의 조작이 필요한 메시지를 표시합니다. 대화 상자와 달리 플라이아웃은 별도의 창을 만들지 않으며 다른 사용자 조작을 차단하지 않습니다.
@@ -416,7 +416,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 참고자료: [그리드](/uwp/api/Windows.UI.Xaml.Controls.Grid)
  
 ### <a name="panning-scroll-viewer"></a>이동 스크롤 뷰어
-스크롤 뷰어를 참조하세요.
+[스크롤 뷰어](#scroll-viewer)를 참조하세요.
 
 ### <a name="relativepanel"></a>RelativePanel
 서로 또는 부모 패널과 관련하여 자식 개체를 배치하고 정렬할 수 있는 패널입니다.
@@ -433,7 +433,7 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 참고자료: [RelativePanel](/uwp/api/Windows.UI.Xaml.Controls.RelativePanel)
 
 ### <a name="scroll-bar"></a>스크롤 막대
-스크롤 뷰어를 참조하세요. (ScrollBar는 ScrollViewer의 요소입니다. 일반적으로 독립 실행형 컨트롤로 사용하지 않습니다.
+[스크롤 뷰어](#scroll-viewer)를 참조하세요. (ScrollBar는 ScrollViewer의 요소입니다. 일반적으로 독립 실행형 컨트롤로 사용하지 않습니다.
 
 참고자료: [ScrollBar](/uwp/api/Windows.UI.Xaml.Controls.Primitives.ScrollBar)
  
@@ -511,23 +511,28 @@ Windows용 XAML UI 프레임워크는 UI 개발을 지원하는 광범위한 컨
 참고자료: [Viewbox](/uwp/api/Windows.UI.Xaml.Controls.Viewbox)
  
 ### <a name="zooming-scroll-viewer"></a>확대/축소 스크롤 뷰어
-스크롤 뷰어를 참조하세요.
+[스크롤 뷰어](#scroll-viewer)를 참조하세요.
 
 ## <a name="media-controls"></a>미디어 컨트롤
 
 ### <a name="audio"></a>오디오
-미디어 요소 참조
 
-### <a name="media-element"></a>미디어 요소
+[미디어 플레이어 요소](#media-player-element)를 참조하세요.
+
+### <a name="media-player-element"></a>미디어 플레이어 요소
+
 오디오 및 비디오 콘텐츠를 재생하는 컨트롤입니다.
 
 ```xaml
-<MediaElement x:Name="myMediaElement"/>
+<MediaPlayerElement x:Name="myMediaPlayerElement"/>
 ```
 
-참고자료: [MediaElement](/uwp/api/Windows.UI.Xaml.Controls.MediaElement) 
+> [!Important]
+> **MediaPlayerElement** 는 Windows 10, 버전 1607 이상에서만 사용 가능합니다. 이전 버전의 Windows 10 앱을 개발하는 경우 [MediaElement](/uwp/api/Windows.UI.Xaml.Controls.MediaElement) 컨트롤을 대신 사용해야 합니다.
 
-디자인 및 방법: [미디어 요소 컨트롤 가이드](media-playback.md)
+참고자료: [MediaPlayerElement](/uwp/api/Windows.UI.Xaml.Controls.MediaPlayerElement)
+
+디자인 및 방법: [미디어 재생](media-playback.md)
 
 ### <a name="mediatransportcontrols"></a>MediaTransportControls
 MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
@@ -540,12 +545,12 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 
 참고자료: [MediaTransportControls](/uwp/api/Windows.UI.Xaml.Controls.MediaTransportControls) 
 
-디자인 및 방법: [미디어 요소 컨트롤 가이드](media-playback.md) 
+디자인 및 방법: [미디어 재생](media-playback.md)
 
 샘플 코드: [미디어 전송 컨트롤 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlCustomMediaTransportControls)
 
 ### <a name="video"></a>비디오
-미디어 요소 참조
+[미디어 플레이어 요소](#media-player-element)를 참조하세요.
 
 ## <a name="navigation"></a>탐색
 
@@ -666,7 +671,7 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 샘플 코드: [AutoSuggestBox 마이그레이션 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlAutoSuggestBox)
 
 ### <a name="multi-line-text-box"></a>여러 줄 입력란
-텍스트 상자를 참조하세요.
+[텍스트 상자](#text-box)를 참조하세요.
 
 ### <a name="password-box"></a>비밀번호 상자
 암호를 입력하기 위한 컨트롤입니다.
@@ -698,13 +703,13 @@ MediaElement에 대한 재생 컨트롤을 제공하는 컨트롤입니다.
 샘플 코드: [XAML 텍스트 샘플](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%23%5D-Windows%208%20app%20samples/C%23/Windows%208%20app%20samples/XAML%20text%20display%20sample%20(Windows%208))
 
 ### <a name="search-box"></a>검색 상자
-자동 제안 상자를 참조하세요.
+[자동 제안 상자](#auto-suggest-box)를 참조하세요.
 
 ### <a name="single-line-text-box"></a>한 줄 입력란
-텍스트 상자를 참조하세요.
+[텍스트 상자](#text-box)를 참조하세요.
 
 ### <a name="static-textparagraph"></a>정적 텍스트/단락
-텍스트 블록을 참조하세요.
+[텍스트 블록](#text-block)을 참조하세요.
 
 ### <a name="text-block"></a>텍스트 블록
 텍스트를 표시하는 컨트롤입니다.

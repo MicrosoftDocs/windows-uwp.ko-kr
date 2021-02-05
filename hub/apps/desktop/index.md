@@ -2,17 +2,17 @@
 description: 새 앱에 적합한 앱 플랫폼을 선택하는 방법 및 Windows 10용 기존 앱을 현대화하는 방법을 비롯하여 Windows PC용 데스크톱 앱을 빌드하는 방법을 알아봅니다.
 title: Windows PC용 데스크톱 앱 빌드
 ms.topic: article
-ms.date: 9/10/2020
+ms.date: 02/03/2021
 keywords: windows win32, 데스크톱 개발
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 554869625c0db7a2a19dc7c01837e47029bd28e6
-ms.sourcegitcommit: cddc595969c658ce30fbc94ded92db4a8ad1bf66
+ms.openlocfilehash: 2518d838ca41e5ca2faa6dbd5697d64ea9257922
+ms.sourcegitcommit: 382ae62f9d9bf980399a3f654e40ef4f85eae328
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97214270"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99534372"
 ---
 # <a name="build-desktop-apps-for-windows-pcs"></a>Windows PC용 데스크톱 앱 빌드
 
@@ -64,11 +64,11 @@ Windows PC용 데스크톱 앱 빌드를 위한 주요 플랫폼에는 4가지�
 
 ### <a name="future-roadmap"></a>향후 로드맵
 
-앞으로 Windows UI(WinUI) 라이브러리 및 프로젝트 리뉴니언을 통해 Windows 앱 개발 플랫폼을 발전시킬 것입니다.
+앞으로 Windows UI 라이브러리(WinUI) 및 프로젝트 리뉴니언을 통해 Windows 앱 개발 플랫폼을 발전시킬 것입니다.
 
-* **WinUI** 는 Windows 10 앱에 대한 기본 UX(사용자 환경) 프레임워크입니다. WinUI는 하위 버전의 Windows 10을 대상으로 하는 UWP 앱을 위한 최신 버전 및 업데이트된 버전의 UWP 컨트롤을 제공하는 도구 키트로 시작되었습니다. WinUI는 대상 범위를 늘려 왔으며, WinUI 3(현재 미리 보기)부터 UWP, .NET 및 Win32에서 Windows 10 앱을 위한 최신 기본 UI(사용자 인터페이스) 플랫폼이 되었습니다. 
+* **WinUI** 는 Windows 10 앱에 대한 기본 UX(사용자 환경) 프레임워크입니다. WinUI는 하위 버전의 Windows 10을 대상으로 하는 UWP 앱을 위한 최신 버전 및 업데이트된 버전의 WinRT 컨트롤을 제공하는 도구 키트로 시작되었습니다. WinUI 3(미리 보기 상태)부터 WinUI는 UWP, .NET 및 Win32 앱 플랫폼에서 Windows 10 앱을 위한 최고의 기본 UI(사용자 인터페이스) 프레임워크가 될 수 있는 범위가 확대되고 있습니다.
 
-    자세한 내용은 [Windows UI(WinUI) 라이브러리](../winui/index.md)를 참조하세요.
+    자세한 내용은 [Windows UI 라이브러리(WinUI)](../winui/index.md)를 참조하세요.
 
 * **프로젝트 리뉴니언**(현재 미리 보기)은 Windows 앱 개발 플랫폼의 한 단계 발전을 나타내는 광범위한 새 개발자 구성 요소 및 도구 집합의 코드 이름입니다. 프로젝트 리유니언은 광범위한 대상 Windows 10 OS 버전 세트의 모든 앱에서 일관된 방식으로 사용할 수 있는 통합 API 및 도구 집합을 제공합니다. 프로젝트 리유니언은 기존 Windows 앱 플랫폼과 UWP, 네이티브 Win32, .NET과 같은 프레임워크를 개발자가 이러한 플랫폼에서 사용할 수 있는 공통 API 및 도구 집합으로 보완합니다. 
 

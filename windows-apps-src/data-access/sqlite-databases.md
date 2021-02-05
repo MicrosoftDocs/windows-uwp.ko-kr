@@ -5,12 +5,12 @@ ms.date: 06/26/2020
 ms.topic: article
 keywords: windows 10, uwp, SQLite, 데이터베이스
 ms.localizationpriority: medium
-ms.openlocfilehash: ba2bcf104bd1fee9657e83f7a20334522fa0450c
-ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
+ms.openlocfilehash: 045f327622c93d7d4c1653492e54b7939ee919a2
+ms.sourcegitcommit: d0eef123b167dc63f482a9f4432a237c1c6212db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97860207"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077251"
 ---
 # <a name="use-a-sqlite-database-in-a-uwp-app"></a>UWP 앱에서 SQLite 데이터베이스 사용
 SQLite를 사용하여 사용자의 디바이스에 있는 경량 데이터베이스에 데이터를 저장하고 검색할 수 있습니다. 이 가이드에서는 그 방법을 보여줍니다.
@@ -35,7 +35,7 @@ Microsoft가 빌드한 Entity Framework Core 또는 오픈 소스인 [SQLite 라
 
 EF(Entity Framework)는 도메인별 개체를 사용하여 관계형 데이터로 작업할 수 있는 개체 관계형 매퍼입니다. 다른 .NET 앱의 데이터에 이 프레임워크를 이미 사용하고 있다면, 코드를 UWP 앱으로 마이그레이션할 수 있습니다. 그러면 연결 문자열이 적절히 변경되어 작동합니다.
 
-자세한 내용은 [UWP(유니버설 Windows 플랫폼)에서 EF Core를 새 데이터베이스로 시작하기](/ef/core/get-started/uwp/getting-started)를 참조하세요.
+직접 시도해 보려면 [EF Core 시작](/ef/core/get-started/overview/first-app)을 참조하세요.
 
 ### <a name="sqlite-library"></a>SQLite 라이브러리
 

@@ -8,12 +8,12 @@ ms.date: 11/14/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f4736c598e18bc4f1225a7fa8e0488c3601420c
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: 9f00a056085b6b1f4315a19d223c21c7a4cd6638
+ms.sourcegitcommit: d0eef123b167dc63f482a9f4432a237c1c6212db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93031466"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077241"
 ---
 # <a name="store-and-retrieve-settings-and-other-app-data"></a>설정 및 기타 앱 데이터 저장 및 검색
 
@@ -31,12 +31,12 @@ ms.locfileid: "93031466"
 
 앱 설정에 사용할 수 있는 데이터 형식은 다음과 같습니다.
 
-- **UInt8** , **Int16** , **UInt16** , **Int32** , **UInt32** , **Int64** , **UInt64** , **Single** , **Double**
+- **UInt8**, **Int16**, **UInt16**, **Int32**, **UInt32**, **Int64**, **UInt64**, **Single**, **Double**
 - **Boolean**
-- **Char16** , **String**
+- **Char16**, **String**
 - [**DateTime**](/uwp/api/Windows.Foundation.DateTime), [**TimeSpan**](/uwp/api/Windows.Foundation.TimeSpan)
     - C#/.Net의 다음을 사용합니다. [**System.DateTimeOffset**](/dotnet/api/system.datetimeoffset?view=dotnet-uwp-10.0), [**System.TimeSpan**](/dotnet/api/system.timespan?view=dotnet-uwp-10.0)
-- **GUID** , [**Point**](/uwp/api/Windows.Foundation.Point), [**Size**](/uwp/api/Windows.Foundation.Size), [**Rect**](/uwp/api/Windows.Foundation.Rect)
+- **GUID**, [**Point**](/uwp/api/Windows.Foundation.Point), [**Size**](/uwp/api/Windows.Foundation.Size), [**Rect**](/uwp/api/Windows.Foundation.Rect)
 - [**ApplicationDataCompositeValue**](/uwp/api/Windows.Storage.ApplicationDataCompositeValue): 원자 단위로 직렬화 및 역직렬화해야 하는 관련 앱 설정의 세트입니다. 상호 의존적인 설정의 원자성 업데이트를 쉽게 처리하려면 복합 설정을 사용합니다. 시스템은 동시 액세스 및 로밍 중에 복합 설정의 무결성을 보장합니다. 복합 설정은 소량의 데이터에 최적화되어 있으며 대규모 데이터 집합에 사용할 경우에는 성능이 저하됩니다.
 
 ### <a name="files"></a>파일
@@ -152,6 +152,10 @@ async void ReadTimestamp()
 
 ## <a name="roaming-data"></a>데이터 로밍
 
+> [!WARNING]
+> Windows 10 버전 1909에서는 향후 업데이트에서 PSR(패키지 상태 로밍)이 제거될 것이라고 [발표되었습니다](/windows/deployment/planning/windows-10-deprecated-features). Microsoft 이외의 개발자는 PSR을 통해 디바이스의 로밍 데이터에 액세스할 수 있으며, UWP 애플리케이션 개발자는 Windows에 데이터를 쓰고 그 데이터를 해당 사용자의 다른 Windows 인스턴스와 동기화할 수 있습니다.
+> 
+>PSR을 대체하는 방법으로는 [Azure App Service](/azure/app-service/)를 권장합니다. Azure App Service는 광범위하게 지원되고 잘 문서화되어 있고 신뢰할 수 있으며 iOS, Android, 웹 등의 플랫폼 간/에코시스템 간 시나리오를 지원합니다.
 
 앱에서 로밍 데이터를 사용하는 경우 사용자는 손쉽게 앱의 앱 데이터를 여러 디바이스 간에 동기화 상태로 유지할 수 있습니다. 사용자가 여러 디바이스에 앱을 설치하는 경우, OS는 앱 데이터를 동기화 상태로 유지하여 사용자가 두 번째 디바이스에 앱을 설치할 때 수행해야 할 설치 작업이 줄어듭니다. 또한 로밍을 사용하면 목록 작성 같은 작업을 중단했다가 다른 디바이스에서 바로 이어서 진행할 수 있습니다. OS는 로밍 데이터가 업데이트되면 이를 클라우드로 복제하고, 앱이 설치된 다른 디바이스의 데이터와 동기화합니다.
 
@@ -160,6 +164,8 @@ OS에서는 각 앱이 로밍할 수 있는 앱 데이터의 크기를 제한합
 앱의 로밍 데이터는 사용자가 일부 디바이스에서 정해진 기간 내에 액세스하는 경우에는 클라우드에서 사용할 수 있습니다. 사용자가 이 기간보다 오래 앱을 실행하지 않으면 로밍 데이터는 클라우드에서 제거됩니다. 사용자가 앱을 제거하면 로밍 데이터는 클라우드에서 자동으로 제거되지 않고 보존됩니다. 사용자가 정해진 기간 내에 앱을 다시 설치하면 로밍 데이터는 클라우드에서 동기화됩니다.
 
 ### <a name="roaming-data-dos-and-donts"></a>로밍 데이터 권장 사항 및 금지 사항
+
+> [로밍 데이터](#roaming-data)에 대한 중요 정보를 참조하세요.
 
 - 로밍은 사용자 기본 설정 및 사용자 지정, 링크 및 작은 데이터 파일에 사용합니다. 예를 들어 로밍을 사용하여 모든 디바이스에서 사용자의 배경색 기본 설정을 유지할 수 있습니다.
 - 로밍을 사용하여 사용자가 여러 디바이스에서 작업을 계속할 수 있도록 합니다. 예를 들어 뷰어 앱에서 최근에 본 페이지나 임시 메일의 내용과 같은 앱 데이터를 로밍합니다.
@@ -173,23 +179,33 @@ OS에서는 각 앱이 로밍할 수 있는 앱 데이터의 크기를 제한합
 
 ### <a name="roaming-pre-requisites"></a>로밍 필수 조건
 
+> [로밍 데이터](#roaming-data)에 대한 중요 정보를 참조하세요.
+
 Microsoft 계정을 사용하여 디바이스에 로그온한 사용자는 누구나 로밍 앱 데이터를 활용할 수 있습니다. 그러나 사용자 및 그룹 정책 관리자는 언제든지 디바이스에서 로밍 앱 데이터를 전환할 수 있습니다. 사용자가 Microsoft 계정을 사용하지 않도록 선택하거나 데이터 로밍 기능을 사용하지 않도록 설정하면 앱은 계속 사용할 수 있지만 앱 데이터는 각 디바이스에 대해 로컬이 됩니다.
 
-[  **PasswordVault**](/uwp/api/Windows.Security.Credentials.PasswordVault)에 저장된 데이터는 사용자가 장치를 "신뢰할 수 있는 장치"로 지정한 경우에만 전환됩니다. 디바이스를 신뢰할 수 없으면 이 자격 증명 모음에 보관된 데이터가 로밍되지 않습니다.
+[**PasswordVault**](/uwp/api/Windows.Security.Credentials.PasswordVault)에 저장된 데이터는 사용자가 디바이스를 "신뢰할 수 있는 디바이스”로 지정한 경우에만 전환됩니다. 디바이스를 신뢰할 수 없으면 이 자격 증명 모음에 보관된 데이터가 로밍되지 않습니다.
 
 ### <a name="conflict-resolution"></a>충돌 해결
+
+> [로밍 데이터](#roaming-data)에 대한 중요 정보를 참조하세요.
 
 로밍 앱 데이터는 한 번에 둘 이상의 디바이스에서 동시에 사용할 수 없습니다. 두 디바이스에서 특정 데이터 단위가 변경되어 동기화 중에 충돌이 발생하면 시스템은 항상 마지막으로 기록된 값을 선호합니다. 따라서 앱은 최신 정보를 사용하게 됩니다. 데이터 단위가 설정 복합인 경우 충돌 해결은 여전히 설정 단위 수준에서 이루어집니다. 즉, 마지막으로 변경된 복합이 동기화됩니다.
 
 ### <a name="when-to-write-data"></a>데이터를 기록하는 시기
 
+> [로밍 데이터](#roaming-data)에 대한 중요 정보를 참조하세요.
+
 설정의 예상 수명에 따라 데이터는 다른 시간에 기록되어야 합니다. 가끔 또는 느리게 변경되는 앱 데이터는 즉시 기록되어야 합니다. 그러나 자주 변경되는 앱 데이터는 정기적으로(예: 5분마다 한 번씩), 그리고 앱이 일시 중단된 경우에만 기록되어야 합니다. 예를 들어 음악 앱에서는 새로운 곡이 재생되기 시작할 때마다 "현재 곡" 설정을 기록할 수 있지만 곡의 실제 위치는 일시 중단 시에만 기록해야 합니다.
 
 ### <a name="excessive-usage-protection"></a>과도한 사용 보호
 
+> [로밍 데이터](#roaming-data)에 대한 중요 정보를 참조하세요.
+
 시스템에 다양한 보호 메커니즘이 갖추어져 있어야 부적절한 리소스 사용을 방지할 수 있습니다. 앱 데이터가 예상대로 전환되지 않는 경우 디바이스가 일시적으로 제한된 상태이기 때문일 수 있습니다. 얼마간 기다리면 대개 이 문제가 자동으로 해결되며 별도의 작업이 필요하지 않습니다.
 
 ### <a name="versioning"></a>버전 관리
+
+> [로밍 데이터](#roaming-data)에 대한 중요 정보를 참조하세요.
 
 앱 데이터는 버전 관리를 사용하여 하나의 데이터 구조에서 다른 데이터 구조로 업그레이드될 수 있습니다. 버전 번호는 앱 번호와 다르며 마음대로 설정할 수 있습니다. 최신 데이터를 나타내는 더 낮은 데이터 버전 번호로 전환하려고 하면 원치 않는 혼란(데이터 손실 포함)이 발생할 수 있으므로 가능하면 증가하는 버전 번호를 사용하는 것이 가장 좋습니다.
 
@@ -197,14 +213,17 @@ Microsoft 계정을 사용하여 디바이스에 로그온한 사용자는 누�
 
 ### <a name="testing-and-tools"></a>테스트 및 도구
 
+> [로밍 데이터](#roaming-data)에 대한 중요 정보를 참조하세요.
+
 개발자는 로밍 앱 데이터의 동기화를 트리거하기 위해 디바이스를 잠글 수 있습니다. 앱 데이터가 특정 기간 내에 전환되지 않는 것 같으면 다음 항목을 확인하세요.
 
 - 로밍 데이터가 최대 크기를 초과하지 않습니다(자세한 내용은 [**RoamingStorageQuota**](/uwp/api/windows.storage.applicationdata.roamingstoragequota) 참조).
 - 파일이 올바로 닫히고 릴리스되었습니다.
 - 동일한 버전의 앱을 실행하는 디바이스가 2개 이상 있습니다.
 
-
 ### <a name="register-to-receive-notification-when-roaming-data-changes"></a>로밍 데이터가 변경되면 알림을 받도록 등록
+
+> [로밍 데이터](#roaming-data)에 대한 중요 정보를 참조하세요.
 
 로밍 앱 데이터를 사용하려면 설정을 읽고 쓸 수 있도록 로밍 데이터 변경을 등록하고 로밍 데이터 컨테이너를 검색해야 합니다.
 
@@ -237,6 +256,8 @@ Windows.Storage.ApplicationDataContainer roamingSettings =
 ```
 
 ### <a name="create-and-retrieve-roaming-settings"></a>로밍 설정 만들기 및 검색
+
+> [로밍 데이터](#roaming-data)에 대한 중요 정보를 참조하세요.
 
 앞 섹션에서 가져온 `roamingSettings` 컨테이너의 설정에 액세스하려면 [**ApplicationDataContainer.Values**](/uwp/api/windows.storage.applicationdatacontainer.values) 속성을 사용합니다. 다음 예제에서는 `exampleSetting`이라는 간단한 설정 및 `composite`라는 복합 값을 만듭니다.
 
@@ -282,6 +303,8 @@ else
 
 ### <a name="create-and-retrieve-roaming-files"></a>로밍 파일 만들기 및 검색
 
+> [로밍 데이터](#roaming-data)에 대한 중요 정보를 참조하세요.
+
 로밍 앱 데이터 저장소에서 파일을 만들고 업데이트하려면 [**Windows.Storage.StorageFolder.CreateFileAsync**](/uwp/api/windows.storage.storagefolder.createfileasync) 및 [**Windows.Storage.FileIO.WriteTextAsync**](/uwp/api/windows.storage.fileio.writetextasync) 같은 파일 API를 사용합니다. 이 예제에서는 `dataFile.txt`라는 파일을 `roamingFolder` 컨테이너에 만들고 현재 날짜와 시간을 이 파일에 기록합니다. [  **CreationCollisionOption**](/uwp/api/Windows.Storage.CreationCollisionOption) 열거형의 **ReplaceExisting** 값은 파일이 이미 있는 경우 파일을 바꾸어야 함을 나타냅니다.
 
 ```csharp
@@ -313,7 +336,6 @@ async void ReadTimestamp()
    }
 }
 ```
-
 
 ## <a name="temporary-app-data"></a>임시 앱 데이터
 
@@ -366,7 +388,7 @@ async void ReadTimestamp()
 ## <a name="organize-app-data-with-containers"></a>컨테이너를 사용하여 앱 데이터 구성
 
 
-앱 데이터 설정 및 파일을 정리하려면 디렉터리로 직접 작업하는 대신 컨테이너( [**ApplicationDataContainer**](/uwp/api/Windows.Storage.ApplicationDataContainer) 개체로 표현됨)를 만듭니다. 로컬, 로밍 및 임시 앱 데이터 저장소에 컨테이너를 추가할 수 있습니다. 컨테이너는 최대 32개 수준까지 중첩될 수 있습니다.
+앱 데이터 설정 및 파일을 정리하려면 디렉터리로 직접 작업하는 대신 컨테이너([**ApplicationDataContainer**](/uwp/api/Windows.Storage.ApplicationDataContainer) 개체로 표현됨)를 만듭니다. 로컬, 로밍 및 임시 앱 데이터 저장소에 컨테이너를 추가할 수 있습니다. 컨테이너는 최대 32개 수준까지 중첩될 수 있습니다.
 
 설정 컨테이너를 만들려면 [**ApplicationDataContainer.CreateContainer**](/uwp/api/windows.storage.applicationdatacontainer.createcontainer) 메서드를 호출합니다. 다음 예제에서는 `exampleContainer`라는 로컬 설정 컨테이너를 만들고 `exampleSetting`이라는 설정을 추가합니다. [  **ApplicationDataCreateDisposition**](/uwp/api/Windows.Storage.ApplicationDataCreateDisposition) 열거형의 **Always** 값은 컨테이너가 아직 없는 경우 컨테이너를 만들어야 함을 나타냅니다.
 
@@ -433,7 +455,7 @@ localSettings.DeleteContainer("exampleContainer");
 
 선택적으로, 앱에 대한 앱 데이터에 버전을 지정할 수 있습니다. 이렇게 하면 앱의 이전 버전과 호환성 문제를 일으키지 않고 앱 데이터의 형식을 변경하는 차기 앱 버전을 만들 수 있습니다. 앱은 데이터 저장소에서 앱 데이터의 버전을 확인하며, 그 버전이 앱 버전보다 낮을 경우 앱은 앱 데이터를 새 형식으로 업데이트하고 버전을 업데이트해야 합니다. 자세한 내용은 [**Application.Version**](/uwp/api/windows.storage.applicationdata.version) 속성 및 [**ApplicationData.SetVersionAsync**](/uwp/api/windows.storage.applicationdata.setversionasync) 메서드를 참조하세요.
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 * [**Windows.Storage.ApplicationData**](/uwp/api/Windows.Storage.ApplicationData)
 * [**Windows.Storage.ApplicationData.RoamingSettings**](/uwp/api/windows.storage.applicationdata.roamingsettings)

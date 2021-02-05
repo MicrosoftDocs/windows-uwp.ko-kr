@@ -1,19 +1,19 @@
 ---
 description: Windows 런타임 API를 사용하여 Windows 10 사용자용 데스크톱 애플리케이션을 개선하세요.
 title: 데스크톱 앱에서 Windows 런타임 API 호출
-ms.date: 08/20/2019
+ms.date: 01/28/2021
 ms.topic: article
 keywords: windows 10, uwp
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 ms.custom: 19H1
-ms.openlocfilehash: bf460b8c05f1dbb274aa9015e6b892339df9f634
-ms.sourcegitcommit: 21a76fc02ae261f609a2dbb7a56c5de25844c068
+ms.openlocfilehash: 2dc56597dccf00a15ffc672f60ca2e1f0936f14f
+ms.sourcegitcommit: 6f15cc14e0c4c13999c862664fa7a70de8730b74
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93381393"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98981872"
 ---
 # <a name="call-windows-runtime-apis-in-desktop-apps"></a>데스크톱 앱에서 Windows 런타임 API 호출
 
@@ -31,9 +31,9 @@ UWP(유니버설 Windows 플랫폼) API를 사용하여 Windows 10 사용자를 
 * 이전 버전 .NET의 경우 `Microsoft.Windows.SDK.Contracts` NuGet 패키지를 설치하여 프로젝트에 필요한 모든 참조를 추가할 수 있습니다. 이 옵션은 Windows 10, 버전 1803 이상을 대상으로 하는 프로젝트에서 지원됩니다.
 * 프로젝트가 .NET 5 Preview 8 이상 버전을 다중 대상으로 하는 경우 두 옵션을 모두 사용하도록 프로젝트 파일을 구성할 수 있습니다.
 
-### <a name="net-5-preview-8-and-later-use-the-target-framework-moniker-option"></a>.NET 5 Preview 8 이상: 대상 프레임워크 모니커 옵션 사용 
+### <a name="net-5-use-the-target-framework-moniker-option"></a>.NET 5: 대상 프레임워크 모니커 옵션 사용
 
-이 옵션은 .NET 5 Preview 8 이상 릴리스 및 대상 Windows 10, 버전 1809 이상 OS 릴리스를 사용하는 프로젝트에서만 지원됩니다. 이 시나리오 대한 자세한 배경 정보는 [이 블로그 게시물](https://blogs.windows.com/windowsdeveloper/2020/09/03/calling-windows-apis-in-net5/)을 참조하세요.
+이 옵션은 .NET 5 이상 릴리스 및 대상 Windows 10, 버전 1809 이상 OS 릴리스를 사용하는 프로젝트에서만 지원됩니다. 이 시나리오 대한 자세한 배경 정보는 [이 블로그 게시물](https://blogs.windows.com/windowsdeveloper/2020/09/03/calling-windows-apis-in-net5/)을 참조하세요.
 
 1. Visual Studio에서 프로젝트를 연 상태로 **솔루션 탐색기** 에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **프로젝트 파일 편집** 을 선택합니다. 프로젝트 파일은 다음과 유사하게 나타납니다.
 

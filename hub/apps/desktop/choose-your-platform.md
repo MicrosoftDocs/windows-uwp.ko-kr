@@ -3,17 +3,17 @@ description: 새 Windows 데스크톱 앱을 만들려는 경우 가장 먼저 �
 ms.assetid: 82705644-F1F0-40F3-99B1-7A97BFB32831
 title: Windows 앱 플랫폼 선택
 ms.topic: article
-ms.date: 11/04/2019
+ms.date: 02/03/2021
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
 keywords: windows win32, 데스크톱 개발
-ms.openlocfilehash: 51d799a4779f6d3ecee2119277b6c41485e0d377
-ms.sourcegitcommit: e1c182ea23da9b0bd9e89425f7f1a00baec81136
+ms.openlocfilehash: 62567b36d16e01fc6091f9514137c60dc352942a
+ms.sourcegitcommit: 382ae62f9d9bf980399a3f654e40ef4f85eae328
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "97826274"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99534382"
 ---
 # <a name="choose-your-windows-app-platform"></a>Windows 앱 플랫폼 선택
 
@@ -23,7 +23,7 @@ Windows PC에 대한 새 데스크톱 애플리케이션을 만들려는 경우 
 * [WPF](#wpf) 및 [Windows Forms](#windows-forms): 이러한 .NET 기반 플랫폼은 관리형 애플리케이션을 위한 공용 형식 시스템, API 및 애플리케이션 모델을 제공합니다.
 * [Win32](#win32): Windows 및 하드웨어에 직접 액세스해야 하는 기본 C/C++ Windows 애플리케이션을 위한 원본 플랫폼입니다. 따라서 Win32 API는 가장 높은 수준의 성능과 시스템 하드웨어에 대한 직접 액세스가 필요한 애플리케이션에 적합한 플랫폼입니다.
 
-각 플랫폼에는 클래식 Windows 데스크톱에서 실행되고 해당 환경의 기능을 최대한 활용하는 Word, Excel, Photoshop 등의 데스크톱 앱을 만들 수 있는 완전한 UI 프레임워크 및 UI 컨트롤 세트가 포함되어 있습니다. Windows 10에서 각 플랫폼은 [WinUI(Windows UI) 라이브러리](#windows-ui-library)를 사용하여 사용자 인터페이스를 만들 수 있습니다.
+각 플랫폼에는 클래식 Windows 데스크톱에서 실행되고 해당 환경의 기능을 최대한 활용하는 Word, Excel, Photoshop 등의 데스크톱 앱을 만들 수 있는 완전한 UI 프레임워크 및 UI 컨트롤 세트가 포함되어 있습니다. Windows 10에서 각 플랫폼은 [Windows UI(WinUI) 라이브러리](#use-the-windows-ui-library-with-windows-apps)를 사용하여 사용자 인터페이스를 만들 수 있습니다.
 
 이러한 플랫폼 중 일부는 몇 가지 공통적인 특성을 갖고 있으며 특정 유형의 애플리케이션에 더 적합합니다. 예를 들어 UWP 및 .NET은 Visual Studio와 긴밀하게 통합되었습니다. 이는 특히 개발자 생산성, 정교하고 사용자 지정 가능한 UI, 애플리케이션 보안 분야에서 다양한 이점을 제공합니다. 이러한 프레임워크는 UI를 신속하게 만들기 위한 비주얼 디자이너 및 UI 태그를 지원하므로 LOB(기간 업무) 애플리케이션에 특히 적합합니다.
 
@@ -93,24 +93,6 @@ C++와 함께 Win32 API를 사용하면 WinRT 및 .NET과 같은 관리형 런�
 * [API 참조](/windows/win32/apiindex/windows-api-list/)
 * [샘플](https://github.com/Microsoft/Windows-classic-samples)
 
-## <a name="windows-ui-library"></a>Windows UI Library
-
-Windows 10에서 각각의 주요 데스크톱 플랫폼은 [WinUI(Windows UI) 라이브러리](../winui/index.md)를 사용하여 사용자 인터페이스를 만들 수 있습니다. WinUI는 하위 버전의 Windows 10을 대상으로 하는 UWP 앱을 위한 최신 버전 및 업데이트된 버전의 UWP 컨트롤을 제공하는 도구 키트로 시작되었습니다. WinUI는 대상 범위를 늘려 왔으며, 이제는 UWP, .NET 및 Win32에서 Windows 10 앱에 사용되는 최신 기본 UI(사용자 인터페이스) 플랫폼으로 자리잡았습니다.
-
-데스크톱 앱에서 다음과 같은 방법으로 WinUI를 사용할 수 있습니다.
-
-* UWP 앱은 Windows SDK에서 제공하는 UWP 컨트롤 대신 WinUI 컨트롤을 사용할 수 있습니다.
-* [XAML Islands](modernize/xaml-islands.md)를 사용하도록 기존 WPF, Windows Forms 및 C++/Win32 앱을 업데이트하여 앱에서 WinUI 2.x 컨트롤을 호스트할 수 있습니다.
-* [WinUi 3.0](../winui/winui3/index.md)부터 [전적으로 WinUI 기반 UI를 사용하는 .NET 및 C++/Win32 앱을 만들 수 있습니다](../winui/winui3/get-started-winui3-for-desktop.md).
-
-## <a name="project-reunion-preview"></a>프로젝트 리유니언(미리 보기)
-
-프로젝트 리뉴니언은 Windows 앱 개발 플랫폼의 한 단계 발전을 나타내는 광범위한 새 개발자 구성 요소 및 도구 집합의 코드 이름입니다. 프로젝트 리유니언은 광범위한 대상 Windows 10 OS 버전 세트의 모든 앱에서 일관된 방식으로 사용할 수 있는 통합 API 및 도구 집합을 제공합니다. 프로젝트 리유니언은 기존 Windows 앱 플랫폼과 UWP, 네이티브 Win32, .NET과 같은 프레임워크를 개발자가 이러한 플랫폼에서 사용할 수 있는 공통 API 및 도구 집합으로 보완합니다.
-
-프로젝트 리유니언은 현재 조기 개발자 미리 보기를 사용할 수 있습니다. 개발 환경에서 이 릴리스를 사용해 보는 것이 좋습니다. 그러나 프로젝트 리유니언은 현재 릴리스와 최종 릴리스 사이에 여러 가지 면에서 변경될 것입니다. 프로젝트 리유니언은 프로덕션 환경에서 사용되는 앱을 지원하지 않습니다.
-
-자세한 내용은 [프로젝트 리유니언](../project-reunion/index.md) 및 [GitHub 리포지토리](https://github.com/microsoft/ProjectReunion/)를 참조하세요.
-
 ## <a name="platform-comparison-uwp-wpf-and-windows-forms"></a>플랫폼 비교: UWP, WPF 및 Windows Forms
 
 다음 표에서는 Windows Forms, WPF 및 UWP의 다양한 특성을 상세하게 비교합니다.
@@ -128,6 +110,22 @@ Windows 10에서 각각의 주요 데스크톱 플랫폼은 [WinUI(Windows UI) �
 <sup>1</sup> 해당 기능은 공개적으로 발표되었으며, Windows 10의 향후 릴리스에서 이 시나리오를 다룰 예정입니다.
 
 <sup>2</sup> 플랫폼에는 이 시나리오에 대한 고급 API 지원이 부족하지만, 개발자는 해결책을 통해 이 시나리오를 지원할 수 있습니다.
+
+## <a name="use-the-windows-ui-library-with-windows-apps"></a>Windows 앱에서 Windows UI 라이브러리 사용
+
+기본 Windows 앱 플랫폼을 보완하기 위해 앱에서 [Windows UI(WinUI) 라이브러리](../winui/index.md)를 사용할 수도 있습니다. WinUI는 하위 버전의 Windows 10을 대상으로 하는 UWP 앱을 위한 최신 버전 및 업데이트된 버전의 WinRT 컨트롤을 제공하는 도구 키트로 시작되었습니다. WinUI 3(미리 보기 상태)부터 WinUI는 UWP, .NET 및 Win32 앱 플랫폼에서 Windows 10 앱을 위한 최고의 기본 UI(사용자 인터페이스) 프레임워크가 될 수 있는 범위가 확대되고 있습니다.
+
+Windows 앱에서 다음과 같은 방법으로 WinUI를 사용할 수 있습니다.
+
+* [WinUI 2.x](../winui/winui2/index.md):
+  * UWP 앱은 Windows SDK에서 제공하는 WinRT 컨트롤 대신 WinUI 2.x 컨트롤을 사용할 수 있습니다. 이러한 WinUI 릴리스에는 Windows SDK의 기존 컨트롤이 업데이트된 버전과 새 컨트롤이 모두 포함되어 있습니다.
+  * 앱에서 WinUI 2.x 컨트롤을 호스트하도록 [XAML Islands](modernize/xaml-islands.md)를 사용하여 기존 WPF, Windows Forms 및 C++/Win32 앱을 업데이트할 수 있습니다.
+
+* [WinUI 3(미리 보기)](../winui/winui3/index.md):
+  * WinUI 3부터 완전한 WinUI 기반 UI를 사용하는 [.NET 및 C++/Win32 앱](../winui/winui3/get-started-winui3-for-desktop.md)과 [UWP 앱](../winui/winui3/get-started-winui3-for-uwp.md)을 만들 수 있습니다. 이 릴리스에는 이러한 앱을 만드는 데 필요한 모든 것을 제공하는 Visual Studio 프로젝트 템플릿이 포함되어 있습니다.
+
+> [!NOTE]
+> WinUI 3는 현재 미리 보기로 제공되며, 프로덕션 앱에 사용하면 안 됩니다.
 
 ## <a name="other-app-platforms"></a>다른 앱 플랫폼
 
