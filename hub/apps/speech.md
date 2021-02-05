@@ -6,12 +6,12 @@ ms.date: 09/12/2019
 keywords: Windows 10의 음성, 음성, 음성, 대화, win32 음성 앱, UWP speech 앱, WPF speech apps, WinForms speech apps
 ms.author: kbridge
 author: Karl-Bridge-Microsoft
-ms.openlocfilehash: d157d33316925db6112ab892e13b2c849cfcaa5d
-ms.sourcegitcommit: d51c3dd64d58c7fa9513ba20e736905f12df2a9a
+ms.openlocfilehash: 0051ecb0556b72f768c142f04c38f3f34b2dd334
+ms.sourcegitcommit: 99a3f996a57ecc5df7382fb46bc9b8ba75614a53
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98988705"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99579014"
 ---
 # <a name="speech-voice-and-conversation-in-windows-10"></a>Windows 10의 음성, 음성 및 대화
 
@@ -43,7 +43,8 @@ ms.locfileid: "98988705"
 
       [대화형 에이전트](/uwp/api/windows.applicationmodel.conversationalagent)
 
-      [Cortana 음성 명령](/cortana/voice-commands/vcd)
+      [Cortana 음성 명령](/cortana/voice-commands/vcd)<br>
+      (Windows 10에서는 지원 되지 않음 업데이트 이상 2020)
    :::column-end:::
    :::column:::
       ![Win32 플랫폼 앱](images/platform-win32.png)
@@ -74,7 +75,7 @@ ms.locfileid: "98988705"
 
       음성 처리를 앱 및 서비스에 통합 합니다.
 
-      [음성 텍스트](https://azure.microsoft.com/services/cognitive-services/speech-to-text/)
+      [음성 텍스트 변환](https://azure.microsoft.com/services/cognitive-services/speech-to-text/)
 
       [텍스트 음성 변환](https://azure.microsoft.com/services/cognitive-services/text-to-speech/)
       
@@ -96,7 +97,7 @@ ms.locfileid: "98988705"
    :::column:::
       [Cortana 스킬 키트](/cortana/skills/)
 
-      Cortana를 Microsoft 365에 깊이 포함 하 여 최신 생산성 환경을 전환 하는 목표의 일환으로, 소비자 (개발자 플랫폼) 및이 플랫폼에서 빌드된 모든 기술을 사용 하는 데 사용 되는 Cortana 스킬 키트를 사용 하지 않습니다.
+      Cortana를 [Microsoft 365](/microsoft-365/admin/misc/cortana-integration)에 긴밀 하 게 포함 하 여 최신 생산성 환경을 전환 하는 목표의 일환으로 Cortana Skills Kit 개발자 플랫폼과이 플랫폼에서 빌드된 모든 기술을 사용 중지 합니다.
    :::column-end:::
    :::column:::
 
