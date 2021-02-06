@@ -5,17 +5,19 @@ ms.assetid: e2c7eae3-6beb-4156-92a5-474bba53451e
 ms.date: 09/24/2019
 ms.topic: article
 keywords: 나
-ms.openlocfilehash: 9331a87eb6a7f2f8a09beb57f82540518993806a
-ms.sourcegitcommit: d7efd35c1749f695aebbc0db99d8b62b70fb72da
+ms.openlocfilehash: f1ed51107f41318cecf2d8fea73484713b4b837c
+ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99057865"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99606068"
 ---
 # <a name="activate-a-background-app-in-cortana-using-voice-commands"></a>음성 명령을 사용 하 여 Cortana에서 백그라운드 앱 활성화  
 
 >[!WARNING]
 > 이 기능은 Windows 10 5 월 2020 업데이트 (버전 2004, 코드명 "20H1")에서 더 이상 지원 되지 않습니다.
+>
+> Cortana에서 최신 생산성 환경을 변형 하는 방법에 대 한 [Microsoft 365 cortana](/microsoft-365/admin/misc/cortana-integration) 를 참조 하세요.
 
 **Cortana** 내에서 음성 명령을 사용 하 여 시스템 기능에 액세스 하는 것 외에도 실행 하는 작업 또는 명령을 지정 하는 음성 명령을 사용 하 여 앱의 기능 및 **기능을 백그라운드 작업으로 확장할 수** 있습니다. 앱이 백그라운드에서 음성 명령을 처리 하는 경우에는 포커스를 사용 하지 않습니다. 대신 **cortana** 캔버스 및 **cortana** 음성을 통해 모든 피드백과 결과를 반환 합니다.  
 
@@ -55,7 +57,7 @@ ms.locfileid: "99057865"
 5. **Cortana** 내 음성 명령에 대 한 적절 한 피드백을 표시 하 고 말합니다.  
 
 > [!TIP]
-> **전제 조건**
+> **필수 구성 요소**
 >
 > UWP (유니버설 Windows 플랫폼) 앱을 처음 개발 하는 경우 여기에 설명 된 기술에 익숙해질 수 있도록 다음 항목을 참조 하세요.
 >
@@ -671,7 +673,7 @@ App service에서 음성 명령을 처리 합니다.
 
 :::image type="content" source="images/cortana/cortana-backgroundapp-progress-result.png" alt-text="백그라운드에서 AdventureWorks 앱을 사용 하 여 진행률 및 결과 화면을 사용 하는 기본 쿼리 및 Cortana의 스크린샷":::
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [Windows 앱에서 Cortana 상호 작용](cortana-interactions.md)
 - [Cortana를 통해 음성 명령으로 포그라운드 앱 활성화](cortana-launch-a-foreground-app-with-voice-commands.md)

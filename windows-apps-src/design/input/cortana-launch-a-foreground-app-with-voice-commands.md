@@ -5,17 +5,19 @@ ms.assetid: e4bf3714-6f62-466f-9e7c-3b03ee86a117
 ms.date: 01/28/2021
 ms.topic: article
 keywords: 나
-ms.openlocfilehash: a9df2d107482234fa8783d92a1f4fbb075e7d505
-ms.sourcegitcommit: d7efd35c1749f695aebbc0db99d8b62b70fb72da
+ms.openlocfilehash: 6e4e1b30d7d6e259ff66cdccebeed325ded57c18
+ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99057788"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99606018"
 ---
 # <a name="activate-a-foreground-app-with-voice-commands-through-cortana"></a>Cortana를 통해 음성 명령으로 포그라운드 앱 활성화
 
 >[!WARNING]
 > 이 기능은 Windows 10 5 월 2020 업데이트 (버전 2004, 코드명 "20H1")에서 더 이상 지원 되지 않습니다.
+>
+> Cortana에서 최신 생산성 환경을 변형 하는 방법에 대 한 [Microsoft 365 cortana](/microsoft-365/admin/misc/cortana-integration) 를 참조 하세요.
 
 **Cortana** 내에서 음성 명령을 사용 하 여 시스템 기능에 액세스 하는 것 외에도 **cortana** 를 앱에서 기능 및 기능으로 확장할 수 있습니다. 음성 명령을 사용 하면 앱을 포그라운드 및 앱 내에서 실행 되는 작업 또는 명령에 대해 활성화할 수 있습니다.
 
@@ -53,7 +55,7 @@ ms.locfileid: "99057788"
 3. 음성 명령과 앱 내 탐색을 처리 하 고 명령 실행을 처리 합니다.
 
 > [!TIP]
-> **전제 조건**
+> **필수 구성 요소**
 >
 > UWP (유니버설 Windows 플랫폼) 앱을 처음 개발 하는 경우 여기에 설명 된 기술에 익숙해질 수 있도록 다음 항목을 참조 하세요.
 >
@@ -381,7 +383,7 @@ private string SemanticInterpretation(string interpretationKey, SpeechRecognitio
 }
 ```
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [Windows 앱에서 Cortana 상호 작용](cortana-interactions.md)
 - [음성 명령을 사용 하 여 Cortana에서 백그라운드 앱 활성화](cortana-launch-a-background-app-with-voice-commands.md)

@@ -8,17 +8,19 @@ keywords: Cortana, Cortana canvas, Cortana 디자인, 사용자 인터페이스,
 ms.date: 01/27/2021
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: ca9f77d10f6e22d4e244b102cb8b85e1f75113fc
-ms.sourcegitcommit: d7efd35c1749f695aebbc0db99d8b62b70fb72da
+ms.openlocfilehash: 6187022f4fcce254d142c61f1c2fe222c11bd8a5
+ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99057564"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99606048"
 ---
 # <a name="cortana-interactions-in-windows-apps"></a>Windows 앱에서 Cortana 상호 작용
 
 >[!WARNING]
 > 이 기능은 Windows 10 5 월 2020 업데이트 (버전 2004, 코드명 "20H1")에서 더 이상 지원 되지 않습니다.
+>
+> Cortana에서 최신 생산성 환경을 변형 하는 방법에 대 한 [Microsoft 365 cortana](/microsoft-365/admin/misc/cortana-integration) 를 참조 하세요.
 
 Windows 응용 프로그램에서 단일 작업을 시작 하 고 실행 하는 음성 명령으로 **Cortana** 의 기본 기능을 확장 합니다.
 
@@ -43,7 +45,7 @@ Windows 응용 프로그램을 빌드하는 개발자에 게 다양 한 Windows 
 
 사용자가 Cortana를 통해 **서비스** 와 상호 작용할 수 있도록 하는 기술을 추가 하 여 cortana를 확장 하려면 [cortana Skills 키트](/cortana/skills/) 를 참조 하세요. [사용 중단 **알림:** Microsoft 365에 맞게 cortana를 포함 하 여 최신 생산성 환경을 전환 하는 목표의 일환으로, 소비자 (개발자 플랫폼) 및이 플랫폼에서 빌드된 모든 기술을 사용 하지 않도록 설정 합니다.]
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [VCD 요소 및 특성 v 1.2](/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2)
 - [Cortana 디자인 지침](cortana-design-guidelines.md)

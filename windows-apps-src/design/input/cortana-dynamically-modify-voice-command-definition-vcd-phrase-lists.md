@@ -5,17 +5,19 @@ ms.assetid: b497145b-c7a0-454a-8329-6bc1228953bb
 ms.date: 01/28/2021
 ms.topic: article
 keywords: 나
-ms.openlocfilehash: 9f9e0aeb1cf23eb64df3104cf1f90e2b30d083ba
-ms.sourcegitcommit: d7efd35c1749f695aebbc0db99d8b62b70fb72da
+ms.openlocfilehash: 1f61a08e9eeb66371ed39b44eb39dacbc1bf3cf5
+ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99057812"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99606038"
 ---
 # <a name="dynamically-modify-cortana-vcd-phrase-lists"></a>Cortana VCD 문구 목록 동적 수정
 
 >[!WARNING]
 > 이 기능은 Windows 10 5 월 2020 업데이트 (버전 2004, 코드명 "20H1")에서 더 이상 지원 되지 않습니다.
+>
+> Cortana에서 최신 생산성 환경을 변형 하는 방법에 대 한 [Microsoft 365 cortana](/microsoft-365/admin/misc/cortana-integration) 를 참조 하세요.
 
 음성 인식 결과를 사용 하 여 런타임에 VCD (음성 명령 정의) 파일에서 지원 되는 구 (**Phraselist** 요소) 목록에 액세스 하 고 업데이트 합니다.
 
@@ -41,7 +43,7 @@ ms.locfileid: "99057812"
 **Phraselist** 및 기타 VCD 요소에 대 한 자세한 내용은 [**vcd 요소 및 특성 v 1.2**](/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2) 참조를 참조 하세요.
 
 > [!TIP]
-> **전제 조건**
+> **필수 구성 요소**
 >
 > UWP (유니버설 Windows 플랫폼) 앱을 처음 개발 하는 경우 여기에 설명 된 기술에 익숙해질 수 있도록 다음 항목을 참조 하세요.
 >
@@ -137,7 +139,7 @@ if (Windows.ApplicationModel.VoiceCommands.VoiceCommandDefinitionManager.
   </CommandSet>
 ```
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [Windows 앱에서 Cortana 상호 작용](cortana-interactions.md)
 - [VCD 요소 및 특성 v 1.2](/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2)

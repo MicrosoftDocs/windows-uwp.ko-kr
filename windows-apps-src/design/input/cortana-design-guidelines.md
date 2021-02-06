@@ -8,17 +8,19 @@ ms.date: 01/27/2021
 ms.topic: article
 keywords: cortana, 디자인
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d1f27c2e70ce8bf9d77f07dd0871cf09a441bdc
-ms.sourcegitcommit: d7efd35c1749f695aebbc0db99d8b62b70fb72da
+ms.openlocfilehash: b7711f9fd653bbd635582a0b2268a5eb0ed7417b
+ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99057574"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99606088"
 ---
 # <a name="cortana-design-guidelines"></a>Cortana 디자인 지침
 
 >[!WARNING]
 > 이 기능은 Windows 10 5 월 2020 업데이트 (버전 2004, 코드명 "20H1")에서 더 이상 지원 되지 않습니다.
+>
+> Cortana에서 최신 생산성 환경을 변형 하는 방법에 대 한 [Microsoft 365 cortana](/microsoft-365/admin/misc/cortana-integration) 를 참조 하세요.
 
 이러한 지침 및 권장 사항은 앱에서 **Cortana** 를 사용 하 여 사용자와 상호 작용 하 고 작업을 수행 하는 데 도움이 되는 방법을 설명 하 고 모든 상황을 명확 하 게 전달 하는 방법을 설명 합니다.
 
@@ -145,7 +147,7 @@ Cortana 캔버스에 표시 되는 결과 타일에 대 한 템플릿 집합이 
 
 다음은 지원 되는 템플릿 (예:)입니다.
 
-| 이름 | 예제 |
+| Name | 예제 |
 | --- | --- |
 | 제목만  | :::image type="content" source="images/cortana/voicecommandcontenttiletype-titleonly-small.png" alt-text="제목만 표시 하는 Cortana 캔버스의 스크린샷"::: |
 | 텍스트가 있는 제목 | :::image type="content" source="images/cortana/voicecommandcontenttiletype-titlewithtext-small.png" alt-text="텍스트를 사용 하 여 제목을 표시 하는 Cortana 캔버스의 스크린샷"::: |
@@ -338,7 +340,7 @@ GUI와 TTS 문자열은 동일할 수 있지만 반드시 같을 필요는 없�
 | 이전 턴에서 엔터티 표시/엔터티 읽기         | 이 여행을 취소 했습니다.                       | 이 여행을 취소 했습니다.               |
 | 이전 턴에서 엔터티를 표시 하지 않거나 엔터티를 읽지 않았습니다. | Vegas Tech 회의 여행을 취소 했습니다. | "Vegas Tech 컨퍼런스"를 취소 했습니다. |
 
-### <a name="error"></a>오류
+### <a name="error"></a>Error
 
 :::image type="content" source="images/cortana/e2e-canceltrip-error.png" alt-text="종단 간 cortana 캔버스의 스크린샷 adventureworks 취소 여행 오류":::*Adventureworks "여행 취소" 오류* 를 사용 하 여 종단 간 cortana 백그라운드 앱 흐름
 
@@ -348,7 +350,7 @@ GUI와 TTS 문자열은 동일할 수 있지만 반드시 같을 필요는 없�
 - **Cortana** 가 app service와 통신 하지 못합니다.
 - **Cortana** 가 5 초 동안 핸드 오프 화면 또는 진행률 화면을 표시 한 후 앱에서 화면을 제공 하지 못합니다.
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [Windows 앱에서 Cortana 상호 작용](cortana-interactions.md)
 - [VCD 요소 및 특성 v 1.2](/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2)

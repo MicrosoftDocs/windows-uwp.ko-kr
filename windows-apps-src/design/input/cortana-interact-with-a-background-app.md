@@ -5,17 +5,19 @@ ms.assetid: e42917dc-aece-4880-813f-80b897f9126c
 ms.date: 01/28/2021
 ms.topic: article
 keywords: 나
-ms.openlocfilehash: 111f945c548d34f614305e31c1c79ce9197f0925
-ms.sourcegitcommit: d7efd35c1749f695aebbc0db99d8b62b70fb72da
+ms.openlocfilehash: 835a2f60d2b86e5bef49195d4f937fa844f4d921
+ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99057796"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99606078"
 ---
 # <a name="interact-with-a-background-app-in-cortana"></a>Cortana에서 백그라운드 앱 조작
 
 >[!WARNING]
 > 이 기능은 Windows 10 5 월 2020 업데이트 (버전 2004, 코드명 "20H1")에서 더 이상 지원 되지 않습니다.
+>
+> Cortana에서 최신 생산성 환경을 변형 하는 방법에 대 한 [Microsoft 365 cortana](/microsoft-365/admin/misc/cortana-integration) 를 참조 하세요.
 
 음성 명령을 실행 하는 동안 **Cortana** 캔버스의 음성 및 텍스트 입력을 통해 백그라운드 앱과의 사용자 상호 작용을 사용 하도록 설정 합니다.
 
@@ -32,12 +34,12 @@ Cortana는 앱과 함께 전체 단계별 워크플로를 지원 합니다. 이 
 - 진행률
 - 확인
 - 명확성
-- 오류
+- Error
 
 ## <a name="composing-feedback-strings"></a>사용자 의견 문자열 작성
 
 > [!TIP]
-> **전제 조건**
+> **필수 구성 요소**
 >
 > UWP (유니버설 Windows 플랫폼) 앱을 처음 개발 하는 경우 여기에 설명 된 기술에 익숙해질 수 있도록 다음 항목을 참조 하세요.
 >
@@ -450,7 +452,7 @@ var userMessage = new VoiceCommandUserMessage();
     await voiceServiceConnection.ReportFailureAsync(response);
 ```
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [Windows 앱에서 Cortana 상호 작용](cortana-interactions.md)
 - [VCD 요소 및 특성 v 1.2](/uwp/schemas/voicecommands/voice-command-elements-and-attributes-1-2)

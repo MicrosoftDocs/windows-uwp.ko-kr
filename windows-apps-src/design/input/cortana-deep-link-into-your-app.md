@@ -5,17 +5,19 @@ ms.assetid: 6fe5fcc5-9ee4-4c04-92f4-7b1bf7ef5651
 ms.date: 01/28/2021
 ms.topic: article
 keywords: 나
-ms.openlocfilehash: 5d0f841ed653adac6770089a9ec9c1be0335e346
-ms.sourcegitcommit: d7efd35c1749f695aebbc0db99d8b62b70fb72da
+ms.openlocfilehash: d96e54604c5def61802a77625a6c18c556db909d
+ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99057883"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99606058"
 ---
 # <a name="deep-link-from-a-background-app-in-cortana-to-a-foreground-app"></a>Cortana의 백그라운드 앱에서 포그라운드 앱으로의 딥 링크
 
 >[!WARNING]
 > 이 기능은 Windows 10 5 월 2020 업데이트 (버전 2004, 코드명 "20H1")에서 더 이상 지원 되지 않습니다.
+>
+> Cortana에서 최신 생산성 환경을 변형 하는 방법에 대 한 [Microsoft 365 cortana](/microsoft-365/admin/misc/cortana-integration) 를 참조 하세요.
 
 앱을 특정 상태나 컨텍스트에서 포그라운드로 시작 하는 **Cortana** 의 백그라운드 앱에서 심층 링크를 제공 합니다.
 
@@ -255,7 +257,7 @@ if (args.Kind == ActivationKind.Protocol)
   }
 ```
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [Windows 앱에서 Cortana 상호 작용](cortana-interactions.md)
 - [Cortana 디자인 지침](cortana-design-guidelines.md)

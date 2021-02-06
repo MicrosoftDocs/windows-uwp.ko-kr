@@ -7,17 +7,19 @@ ms.assetid: c2959c1b-c2f2-4a8d-8f3e-79585f69afcf
 ms.date: 01/28/2021
 ms.topic: article
 keywords: 나
-ms.openlocfilehash: 94f3d6323649737f978128e442c95449bce94075
-ms.sourcegitcommit: d7efd35c1749f695aebbc0db99d8b62b70fb72da
+ms.openlocfilehash: 7716d4d623653c6b2d943135f2e2cf1ac9a40343
+ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99057789"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99605998"
 ---
 # <a name="support-natural-language-voice-commands-in-cortana"></a>Cortana에서 자연어 음성 명령을 지원 합니다.
 
 >[!WARNING]
 > 이 기능은 Windows 10 5 월 2020 업데이트 (버전 2004, 코드명 "20H1")에서 더 이상 지원 되지 않습니다.
+>
+> Cortana에서 최신 생산성 환경을 변형 하는 방법에 대 한 [Microsoft 365 cortana](/microsoft-365/admin/misc/cortana-integration) 를 참조 하세요.
 
 사용자가 명령의 어디에서 나 앱 이름을 말할 수 있는 보다 유연 하 고 자연 스러운 음성 명령으로 **Cortana** 를 확장 합니다.
 
@@ -38,7 +40,7 @@ ms.locfileid: "99057789"
 - 접미사-명령 문구 다음에
 
 > [!TIP]
-> **전제 조건**
+> **필수 구성 요소**
 >
 > 이 항목에서는 [음성 명령을 사용 하 여 Cortana에서 백그라운드 앱을 활성화 하는](cortana-launch-a-background-app-with-voice-commands.md)방법을 설명 합니다. 여기서는 **놀이 Works** 라는 여행 계획 및 관리 앱을 사용 하 여 기능을 시연 합니다.
 >
@@ -202,7 +204,7 @@ ms.locfileid: "99057789"
 </VoiceCommands>
 ```
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [Windows 앱에서 Cortana 상호 작용](cortana-interactions.md)
 - [Cortana 디자인 지침](cortana-design-guidelines.md)
