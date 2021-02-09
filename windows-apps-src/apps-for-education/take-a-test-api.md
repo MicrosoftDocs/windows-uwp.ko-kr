@@ -6,18 +6,22 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp, 교육
 ms.localizationpriority: medium
-ms.openlocfilehash: 29a5d2749531e12ef7ce9b44cd6598c38cd089db
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: d4ed3bf3062deac308b9ed39ff7be709bcee4af3
+ms.sourcegitcommit: 3be258523c5ee3666498d6a98ed2648b27b2907d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93031526"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99973103"
 ---
 # <a name="take-a-test-javascript-api"></a>테스트 JavaScript API를 사용 합니다.
 
 [테스트 수행](/education/windows/take-tests-in-windows-10) 은 한계가 테스트에 대 한 잠긴 온라인 평가를 렌더링 하는 브라우저 기반 UWP 앱으로, 교육자가 보안 테스트 환경을 제공 하는 방법이 아닌 평가 콘텐츠에 집중할 수 있게 해줍니다. 이를 위해 웹 응용 프로그램에서 활용할 수 있는 JavaScript API를 사용 합니다. 테스트 실행 API는 높은 한계가 일반 코어 테스트를 위한 [SBAC BROWSER api 표준을](https://www.smarterapp.org/documents/SecureBrowserRequirementsSpecifications_0-3.pdf) 지원 합니다.
 
 앱 자체에 대 한 자세한 내용은 [테스트 앱 사용 기술 참조](/education/windows/take-a-test-app-technical?f=255&MSPPError=-2147217396) 를 참조 하세요. 문제 해결 도움말 [은 Microsoft의 이벤트 뷰어를 사용 하 여 테스트 수행](troubleshooting.md)을 참조 하세요.
+
+> [!NOTE]
+> 이 문서에는 Microsoft에서 더 이상 사용 하지 않는 용어 블랙 리스트에 대 한 참조가 포함 되어 있습니다. 소프트웨어에서 용어가 제거되면 이 문서에서 해당 용어가 제거됩니다.
+
 
 ## <a name="reference-documentation"></a>참조 설명서
 다음 네임 스페이스에는 테스트 수행 Api가 있습니다. 모든 Api는 전역 개체에 따라 달라 집니다 `SecureBrowser` .
@@ -30,7 +34,7 @@ ms.locfileid: "93031526"
 
 보안 네임 스페이스를 사용 하 여 장치를 잠그고, 사용자 및 시스템 프로세스 목록을 확인 하 고, MAC 및 IP 주소를 가져오고, 캐시 된 웹 리소스를 지울 수 있습니다.
 
-| 메서드 | 설명   |
+| 메서드 | Description   |
 |--------|---------------|
 |[보안](#lockDown) | 테스트를 위해 장치를 잠급니다. |
 |[Is환경 보안](#isEnvironmentSecure) | 잠금 컨텍스트가 장치에 계속 적용 되는지 여부를 결정 합니다. |
