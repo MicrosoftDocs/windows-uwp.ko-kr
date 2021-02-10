@@ -78,8 +78,6 @@
       href: controls-and-patterns/controls-and-events-intro.md
     - name: 명령 소개
       href: controls-and-patterns/commanding.md
-    - name: 기능별 컨트롤 인덱스
-      href: controls-and-patterns/controls-by-function.md
     - name: 기본 입력
       items:
         - name: 단추
