@@ -825,7 +825,7 @@
           href: ../csharp-winrt/index.md
         - name: '연습: C++/WinRT 구성 요소에서 .NET 5.0 프로젝션 생성'
           href: ../csharp-winrt/net-projection-from-cppwinrt-component.md
-        - name: C#/WinRT 구성 요소를 만들고 C++/WinRT에서 사용
+        - name: '연습: C#/WinRT 구성 요소를 만들고 C++/WinRT에서 사용'
           href: ../csharp-winrt/create-windows-runtime-component-cswinrt.md
         - name: 구성 요소 오류 진단
           href: ../csharp-winrt/authoring-diagnostics.md
