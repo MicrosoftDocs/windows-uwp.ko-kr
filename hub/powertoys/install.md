@@ -4,12 +4,12 @@ description: 실행 파일 또는 패키지 관리자 (WinGet, Chocolatey, 혜�
 ms.date: 12/02/2020
 ms.topic: quickstart
 ms.localizationpriority: medium
-ms.openlocfilehash: 3effdd927b89a53b2ff92efeb422fb32293f98ba
-ms.sourcegitcommit: 447382282a6f549825480c2ff5b3cec9568d0e47
+ms.openlocfilehash: 7b6cf15e7d21eca9e24fcc2d81f9409b2cd94b6f
+ms.sourcegitcommit: 884318ec5118cade85a31f4d5644436614e9f272
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99624632"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100524989"
 ---
 # <a name="install-powertoys"></a>PowerToys 설치
 
@@ -78,6 +78,7 @@ choco upgrade powertoys
 [혜택](https://scoop.sh/)를 사용 하 여 powertoy를 설치 하려면 명령줄/PowerShell에서 다음 명령을 실행 합니다.
 
 ```powershell
+scoop bucket add extras
 scoop install powertoys
 ```
 
