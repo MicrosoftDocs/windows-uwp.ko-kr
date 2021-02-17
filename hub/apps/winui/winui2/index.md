@@ -5,12 +5,12 @@ ms.topic: article
 ms.date: 07/15/2020
 keywords: windows 10, uwp, 도구 키트 sdk, winui, Windows UI 라이브러리
 ms.custom: RS5
-ms.openlocfilehash: 92a546dcd177639b8c9bc7d2fd3dd6ca1fc7d3e5
-ms.sourcegitcommit: 67c4d4ecda4ffe5f1a233de5e8555ca2228e8489
+ms.openlocfilehash: 69e70431303d809ea7303d29a002c72a1c63480a
+ms.sourcegitcommit: 2b7f6fdb3c393f19a6ad448773126a053b860953
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94933118"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100334954"
 ---
 # <a name="windows-ui-library-2x"></a>Windows UI 라이브러리 2.x
 
@@ -21,7 +21,7 @@ Windows UI 라이브러리는 Windows 앱에 사용할 수 있는 공식 네이�
 이 라이브러리는 이전 버전의 Windows 10과 하위 수준 호환성을 유지하므로, 사용자에게 최신 OS가 없더라도 앱이 작동합니다.
 
 > [!NOTE]
-> Windows 10 UI 플랫폼에 대한 주요 업데이트인 [Windows UI 라이브러리 3 Preview 3(2020년 11월)](../winui3/index.md)을 확인하세요.
+> Windows 10 UI 플랫폼에 대한 주요 업데이트인 [Windows UI 라이브러리 3 Preview 4(2021년 2월)](../winui3/index.md)를 확인하세요.
 
 ## <a name="features"></a>기능
 

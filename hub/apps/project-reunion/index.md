@@ -7,12 +7,12 @@ keywords: windows win32, 데스크톱 개발, 프로젝트 리유니언
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: de1115281859ba322a03e3bab7a8d0e4ef71440d
-ms.sourcegitcommit: 044c75ea0c6fb3463a0150acdae1ff867dc05f29
+ms.openlocfilehash: e4b5507c36da520c7356b07857b8532162e05785
+ms.sourcegitcommit: 2b7f6fdb3c393f19a6ad448773126a053b860953
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97972127"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100335094"
 ---
 # <a name="build-windows-apps-with-project-reunion-prerelease"></a>프로젝트 리유니언을 사용하여 Windows 앱 빌드(시험판)
 
@@ -72,7 +72,7 @@ Windows API가 새로운 OS 버전으로 계속 발전함에 따라 개발자는
 
 4. **nuget.org** 에 사용하도록 설정된 NuGet 패키지 원본이 시스템에 있는지 확인합니다. 자세한 내용은 [일반적인 NuGet 구성](/nuget/consume-packages/configuring-nuget-behavior)을 참조하십시오.
 
-5. [WinUI 3 Preview 3 VSIX 패키지](https://aka.ms/winui3/preview3-download)를 다운로드하여 설치합니다. 이 단계는 WinUI 3을 사용하도록 이미 구성된 Hello World 및 MRT Core 샘플에만 필요합니다. VSIX 패키지를 Visual Studio에 추가하는 방법에 대한 지침은 [Visual Studio 확장 찾기 및 사용](/visualstudio/ide/finding-and-using-visual-studio-extensions#install-without-using-the-manage-extensions-dialog-box)을 참조하세요.
+5. [WinUI 3 Preview 4 VSIX 패키지](https://aka.ms/winui3/preview3-download)를 다운로드하여 설치합니다. 이 단계는 WinUI 3을 사용하도록 이미 구성된 Hello World 및 MRT Core 샘플에만 필요합니다. VSIX 패키지를 Visual Studio에 추가하는 방법에 대한 지침은 [Visual Studio 확장 찾기 및 사용](/visualstudio/ide/finding-and-using-visual-studio-extensions#install-without-using-the-manage-extensions-dialog-box)을 참조하세요.
 
 6. 다음 샘플을 복제하고 탐색합니다.
     - [DWriteCore 갤러리 샘플](https://github.com/microsoft/Project-Reunion-Samples/tree/main/DWriteCore/DWriteCoreGallery): 이 샘플 애플리케이션은 [DWriteCore](dwritecore.md) API를 보여줍니다.

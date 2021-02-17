@@ -64,6 +64,8 @@
                   href: desktop/modernize/modernize-packaged-apps.md
                 - name: 확장 패키지와 통합
                   href: desktop/modernize/desktop-to-uwp-extensions.md
+                - name: 패키지형 데스크톱 앱을 파일 탐색기와 통합
+                  href: desktop/modernize/integrate-packaged-app-with-file-explorer.md
                 - name: 패키지된 앱에 대한 활성화 정보 가져오기
                   href: desktop/modernize/get-activation-info-for-packaged-apps.md
                 - name: UWP 구성 요소를 사용하여 확장
@@ -90,7 +92,7 @@
       items:
         - name: 개요
           href: winui/index.md
-        - name: Windows UI 라이브러리 3 Preview 3
+        - name: Windows UI 라이브러리 3 Preview 4
           items:
             - name: 개요 및 릴리스 정보
               href: winui/winui3/index.md

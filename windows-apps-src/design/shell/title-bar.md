@@ -7,12 +7,12 @@ ms.topic: article
 keywords: windows 10, uwp, 제목 표시줄
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d8aa92ec320c18b1947cb9b3fa7777070e19726
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 5fdc3f6a38e6115e211eb5ea0644ad82df840301
+ms.sourcegitcommit: 06d59b59a95aad009acb947a0dac7432116bdb60
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220086"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100544643"
 ---
 # <a name="title-bar-customization"></a>제목 표시줄 사용자 지정
 
@@ -64,7 +64,7 @@ titleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.SeaGreen;
 ```
 
 > [!NOTE]
-> 이 코드는_App.xaml.cs_(응용 프로그램의 [onlaunched](/uwp/api/windows.ui.xaml.application.onlaunched) 메서드)에 배치 하거나, [창](/uwp/api/windows.ui.xaml.window.Activate)에 대 한 호출 후, 또는 앱의 첫 페이지에서 지정할 수 있습니다.
+> 이 코드는 _App.xaml.cs_(응용 프로그램의 [onlaunched](/uwp/api/windows.ui.xaml.application.onlaunched) 메서드)에 배치 하거나, [창](/uwp/api/windows.ui.xaml.window.Activate)에 대 한 호출 후, 또는 앱의 첫 페이지에서 지정할 수 있습니다.
 
 > [!TIP]
 > Windows 커뮤니티 도구 키트는 XAML에서 이러한 색 속성을 설정할 수 있도록 하는 확장을 제공 합니다. 자세한 내용은 [Windows 커뮤니티 도구 키트 설명서](/windows/uwpcommunitytoolkit/extensions/viewextensions)를 참조 하세요.
@@ -75,6 +75,7 @@ titleBar.ButtonInactiveBackgroundColor = Windows.UI.Colors.SeaGreen;
 - 단추 색 속성은 사용 시 시스템 뒤로 단추에 적용 됩니다. [탐색 기록 및 역방향 탐색을 참조](../basics/navigation-history-and-backwards-navigation.md)하세요.
 - Color 속성을 **null** 로 설정 하면이를 기본 시스템 색으로 다시 설정 합니다.
 - 투명 색은 설정할 수 없습니다. 색의 알파 채널이 무시 됩니다.
+- 예를 들어 색 필터 또는 고대비 모드와 같은 설정으로 인해 화면의 색은 선택 항목과 다를 수 있습니다. 중요 한 정보를 전달 하기 위해 색에만 의존해 서는 안 됩니다.
 
 Windows에서는 제목 표시줄에 선택한 [강조 색](../style/color.md#accent-color) 을 적용할 수 있는 옵션을 사용자에 게 제공 합니다. 제목 표시줄 색을 설정 하는 경우 모든 색을 명시적으로 설정 하는 것이 좋습니다. 이렇게 하면 사용자 정의 색 설정으로 인해 발생 하는 의도 하지 않은 색 조합이 발생 하지 않습니다.
 
@@ -82,9 +83,9 @@ Windows에서는 제목 표시줄에 선택한 [강조 색](../style/color.md#ac
 
 전체 제목 표시줄 사용자 지정을 옵트인 (opt in) 할 때 응용 프로그램의 클라이언트 영역이 제목 표시줄 영역을 포함 하 여 전체 창을 포함 하도록 확장 됩니다. 응용 프로그램 캔버스의 맨 위에 겹쳐서 표시 되는 캡션 단추를 제외 하 고 전체 창의 그리기 및 입력 처리를 담당 합니다.
 
-기본 제목 표시줄을 숨기고 콘텐츠를 제목 표시줄 영역으로 확장 하려면 [CoreApplicationViewTitleBar ExtendViewIntoTitleBar](/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar) 속성을 **true**로 설정 합니다.
+기본 제목 표시줄을 숨기고 콘텐츠를 제목 표시줄 영역으로 확장 하려면 [CoreApplicationViewTitleBar ExtendViewIntoTitleBar](/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar) 속성을 **true** 로 설정 합니다.
 
-이 예제에서는 CoreApplicationViewTitleBar를 가져오고 ExtendViewIntoTitleBar 속성을 **true**로 설정 하는 방법을 보여 줍니다. 앱의 [onlaunched](/uwp/api/windows.ui.xaml.application.onlaunched) 메서드 (_App.xaml.cs_) 또는 앱의 첫 페이지에서 수행할 수 있습니다.
+이 예제에서는 CoreApplicationViewTitleBar를 가져오고 ExtendViewIntoTitleBar 속성을 **true** 로 설정 하는 방법을 보여 줍니다. 앱의 [onlaunched](/uwp/api/windows.ui.xaml.application.onlaunched) 메서드 (_App.xaml.cs_) 또는 앱의 첫 페이지에서 수행할 수 있습니다.
 
 ```csharp
 // using Windows.ApplicationModel.Core;
@@ -95,7 +96,7 @@ coreTitleBar.ExtendViewIntoTitleBar = true;
 ```
 
 > [!TIP]
-> 이 설정은 앱을 닫았다가 다시 시작할 때 유지 됩니다. Visual Studio에서 ExtendViewIntoTitleBar를 **true**로 설정 하 고 기본으로 되돌리려면 명시적으로 **false** 로 설정 하 고 응용 프로그램을 실행 하 여 지속형 설정을 덮어써야 합니다.
+> 이 설정은 앱을 닫았다가 다시 시작할 때 유지 됩니다. Visual Studio에서 ExtendViewIntoTitleBar를 **true** 로 설정 하 고 기본으로 되돌리려면 명시적으로 **false** 로 설정 하 고 응용 프로그램을 실행 하 여 지속형 설정을 덮어써야 합니다.
 
 ### <a name="draggable-regions"></a>끌기 가능 영역
 
@@ -238,7 +239,7 @@ private void UpdateTitleBarLayout(CoreApplicationViewTitleBar coreTitleBar)
 
 ### <a name="transparency-in-caption-buttons"></a>캡션 단추의 투명도
 
-ExtendViewIntoTitleBar를 **true**로 설정 하면 캡션 단추의 배경을 투명 하 게 만들어 앱 배경을 통해 표시 되도록 할 수 있습니다. 일반적으로 배경을 색으로 설정 [합니다.](/uwp/api/windows.ui.colors.Transparent) 전체 투명도를 위해 투명 합니다. 부분 투명도의 경우 속성을 설정 하는 [색](/uwp/api/windows.ui.color) 에 대 한 알파 채널을 설정 합니다.
+ExtendViewIntoTitleBar를 **true** 로 설정 하면 캡션 단추의 배경을 투명 하 게 만들어 앱 배경을 통해 표시 되도록 할 수 있습니다. 일반적으로 배경을 색으로 설정 [합니다.](/uwp/api/windows.ui.colors.Transparent) 전체 투명도를 위해 투명 합니다. 부분 투명도의 경우 속성을 설정 하는 [색](/uwp/api/windows.ui.color) 에 대 한 알파 채널을 설정 합니다.
 
 이러한 ApplicationViewTitleBar 속성은 다음과 같이 투명 합니다.
 
@@ -249,11 +250,11 @@ ExtendViewIntoTitleBar를 **true**로 설정 하면 캡션 단추의 배경을 �
 
 단추 배경색은 닫기 단추 가리키기 및 누름 상태에 적용 되지 않습니다. 닫기 단추는 항상 해당 상태에 대 한 시스템 정의 색을 사용 합니다.
 
-다른 모든 색 속성은 알파 채널을 계속 무시 합니다. ExtendViewIntoTitleBar을 **false**로 설정 하면 모든 ApplicationViewTitleBar 색 속성에 대해 알파 채널이 항상 무시 됩니다.
+다른 모든 색 속성은 알파 채널을 계속 무시 합니다. ExtendViewIntoTitleBar을 **false** 로 설정 하면 모든 ApplicationViewTitleBar 색 속성에 대해 알파 채널이 항상 무시 됩니다.
 
 ### <a name="full-screen-and-tablet-mode"></a>전체 화면 및 태블릿 모드
 
-앱이 _전체 화면_ 또는 _태블릿 모드_에서 실행 되 면 시스템에서 제목 표시줄과 캡션 컨트롤 단추를 숨깁니다. 그러나 사용자는 제목 표시줄을 호출 하 여 앱 UI 위에 오버레이로 표시 되도록 할 수 있습니다.
+앱이 _전체 화면_ 또는 _태블릿 모드_ 에서 실행 되 면 시스템에서 제목 표시줄과 캡션 컨트롤 단추를 숨깁니다. 그러나 사용자는 제목 표시줄을 호출 하 여 앱 UI 위에 오버레이로 표시 되도록 할 수 있습니다.
 제목 표시줄이 숨겨지거나 호출 될 때 알리도록 [CoreApplicationViewTitleBar IsVisibleChanged](/uwp/api/windows.applicationmodel.core.coreapplicationviewtitlebar.IsVisibleChanged) 이벤트를 처리 하 고 필요에 따라 사용자 지정 제목 표시줄 콘텐츠를 표시 하거나 숨길 수 있습니다.
 
 이 예제에서는 이전에 표시 된 요소를 표시 하 고 숨기기 위해 IsVisibleChanged를 처리 하는 방법을 보여 줍니다 `AppTitleBar` .
@@ -388,7 +389,7 @@ private void CoreTitleBar_IsVisibleChanged(CoreApplicationViewTitleBar sender, o
 - 앱 캔버스의 위쪽 가장자리를 따라 끌 있는 영역을 정의 합니다. 시스템 제목 표시줄의 배치를 일치 하면 사용자가 보다 쉽게 찾을 수 있습니다.
 - 앱의 캔버스에서 시각적 제목 표시줄 (있는 경우)과 일치 하는 끌기 가능 영역을 정의 합니다.
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [아크릴](../style/acrylic.md)
 - [색상](../style/color.md)

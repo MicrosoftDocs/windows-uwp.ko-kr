@@ -3,12 +3,12 @@ title: WinUI 릴리스 정보
 description: WinUI 릴리스 정보 색인입니다.
 ms.date: 07/15/2020
 ms.topic: article
-ms.openlocfilehash: b2e337065df48cadd54332b9d22bda963fbc4a29
-ms.sourcegitcommit: 617344ae1a1f5b580c938b61e910d99120b73626
+ms.openlocfilehash: 0e115593065cc1fe4761bae5ab3cf2f1729cef8a
+ms.sourcegitcommit: 2b7f6fdb3c393f19a6ad448773126a053b860953
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98620830"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100334945"
 ---
 # <a name="windows-ui-library-2x-release-notes"></a>Windows UI 라이브러리 2.x 릴리스 정보
 
@@ -53,6 +53,6 @@ API 참조 문서는 [Windows UI 라이브러리 API](/windows/winui/api/)에 �
 | [2.1](winui-2.1.md) | 안정 | 2019년 4월 | [릴리스 정보](winui-2.1.md) | [GitHub](https://github.com/microsoft/microsoft-ui-xaml)의 **첫 번째 오픈 소스 릴리스** 입니다. [ItemsRepeater](winui-2.1.md#itemsrepeater), [AnimatedVisualPlayer](winui-2.1.md#animatedvisualplayer), [TeachingTip](winui-2.1.md#teachingtip), [RadioMenuFlyoutItem](winui-2.1.md#radiomenuflyoutitem), [CompactDensity](winui-2.1.md#compactdensity), [Shadows](winui-2.1.md#shadows)를 포함합니다. |
 | [2.0](winui-2.0.md) | 안정 | 2018년 10월 | [릴리스 정보](winui-2.0.md) | **초기 릴리스** 입니다. Windows UWP 앱용 공식 네이티브 Fluent 컨트롤 및 기능이 포함되어 있습니다.  |
 
-### <a name="windows-ui-library-3-preview-3-november-2020"></a>Windows UI 라이브러리 3 Preview 3(2020년 11월)
+### <a name="windows-ui-library-3-preview-4-february-2021"></a>Windows UI 라이브러리 3 Preview 4(2021년 2월)
 
-WinUI 3 초기 미리 보기를 사용하는 방법에 대한 내용은 [Windows UI 라이브러리 3 Preview 3(2020년 11월)](../../winui3/index.md)을 참조하세요.
+WinUI 3 초기 미리 보기를 사용하는 방법에 대한 내용은 [Windows UI 라이브러리 3 Preview 4(2021년 2월)](../../winui3/index.md)를 참조하세요.
