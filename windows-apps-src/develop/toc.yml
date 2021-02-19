@@ -819,6 +819,8 @@
           items:
             - name: 값 범주 및 참조
               href: ../cpp-and-winrt-apis/cpp-value-categories.md
+        - name: C++/WinRT 앱에서 사용할 C# Windows 런타임 구성 요소 작성
+          href: ../cpp-and-winrt-apis/use-csharp-component-from-cpp-winrt.md
     - name: C#/WinRT
       items:
         - name: 개요

@@ -6,12 +6,12 @@ ms.date: 10/02/2020
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 99bb68ff7d990b0b633df0c4efa2d8eafad759cd
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: e57a3fc5444a4afa2217cc128dabec76844ef549
+ms.sourcegitcommit: 71701f5ffc540951f86d6f77a52416c6d75fe305
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93031066"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100632674"
 ---
 # <a name="modernize-your-desktop-apps"></a>데스크톱 앱 현대화
 
@@ -28,8 +28,8 @@ Windows UI Library는 Windows 10 앱용 컨트롤 및 기타 사용자 인터페
 
 데스크톱 앱에서 다음과 같은 방법으로 WinUI를 사용할 수 있습니다.
 
-* [XAML Islands](xaml-islands.md)를 사용하도록 기존 WPF, Windows Forms 및 C++/Win32 앱을 업데이트하여 앱에서 WinUI 2.x 컨트롤을 호스트할 수 있습니다.
-* [WinUI 3.0 Preview 1](../../winui/winui3/index.md)부터 [전적으로 WinUI 기반 UI를 사용하는 .NET 및 C++/Win32 앱을 만들 수 있습니다](../../winui/winui3/get-started-winui3-for-desktop.md).
+* [XAML Islands](xaml-islands.md)를 사용하여 기존 WPF, Windows Forms 및 C++/Win32 앱을 업데이트하고 WinUI 2.x 컨트롤을 호스팅할 수 있습니다.
+* [WinUi 3.0](../../winui/winui3/index.md)(미리 보기)을 사용하여 완전한 WinUI 기반 사용자 인터페이스로 관리되는 [C#/.NET Core 및 네이티브 C++/Win32 데스크톱 앱](../../winui/winui3/get-started-winui3-for-desktop.md)을 만듭니다.
 
 [Windows UI(WinUI) 라이브러리](../../winui/index.md)를 참조하세요.
 
