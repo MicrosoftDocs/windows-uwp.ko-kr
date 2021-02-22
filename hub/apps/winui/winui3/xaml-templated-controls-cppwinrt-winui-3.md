@@ -8,12 +8,12 @@ ms.author: drewbat
 author: drewbatgit
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: d319374791eeb0a02b0291c66f25f55e31bcbc4b
-ms.sourcegitcommit: 6759309a3fbb6ede498c95c04c05f57a074ab070
+ms.openlocfilehash: 154177c8c909f0ea30f4fbe2323a0b28222eb932
+ms.sourcegitcommit: 2b7f6fdb3c393f19a6ad448773126a053b860953
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99069170"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100335005"
 ---
 # <a name="templated-xaml-controls-for-winui-3-apps-with-cwinrt"></a>C++/WinRT를 사용하는 WinUI 3 앱용 템플릿 기반 XAML 컨트롤
 

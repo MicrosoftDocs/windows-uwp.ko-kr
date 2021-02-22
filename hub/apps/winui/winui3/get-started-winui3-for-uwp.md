@@ -1,25 +1,25 @@
 ---
 description: 이 가이드에서는 WinUI 3 UI를 사용하여 UWP 앱 만들기를 시작하는 방법을 보여 줍니다.
 title: UWP 앱용 WinUI 3 시작
-ms.date: 11/17/2020
+ms.date: 02/09/2021
 ms.topic: article
 keywords: Windows 10, UWP, WinUI
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 5da4944b38fc764eb11bdc2f6daed0cab54ea445
-ms.sourcegitcommit: 4df27104a9e346d6b9fb43184812441fe5ea3437
+ms.openlocfilehash: d13acb2181160ec214070dc1276e844dc1f203ad
+ms.sourcegitcommit: 2b7f6fdb3c393f19a6ad448773126a053b860953
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96025139"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100334903"
 ---
 # <a name="get-started-with-winui-3-for-uwp-apps"></a>UWP 앱용 WinUI 3 시작
 
-WinUI 3 Preview 3에는 WinUI에서 완전하게 빌드된 사용자 인터페이스를 사용하여 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있는 새 프로젝트 템플릿이 포함됩니다. 이러한 프로젝트 템플릿을 사용하여 앱을 만들면 애플리케이션의 전체 사용자 인터페이스가 WinUI 3에서 제공하는 창, 컨트롤 및 스타일을 사용하여 구현됩니다. 지원되는 WinUI 3 프로젝트 템플릿의 전체 목록은 [WinUI 3용 프로젝트 템플릿](index.md#project-templates-for-winui-3)을 참조하세요.
+WinUI 3 Preview 4에는 WinUI에서 완전하게 빌드된 사용자 인터페이스를 사용하여 UWP(유니버설 Windows 플랫폼) 앱을 만들 수 있는 새 프로젝트 템플릿이 포함됩니다. 이러한 프로젝트 템플릿을 사용하여 앱을 만들면 애플리케이션의 전체 사용자 인터페이스가 WinUI 3에서 제공하는 창, 컨트롤 및 스타일을 사용하여 구현됩니다. 지원되는 WinUI 3 프로젝트 템플릿의 전체 목록은 [WinUI 3용 프로젝트 템플릿](index.md#project-templates-for-winui-3)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-이 문서에서 설명하는 UWP 프로젝트 템플릿용 WinUI 3을 사용하려면 개발 컴퓨터를 구성하고 [WinUI 3 Preview 3을 설치](index.md#install-winui-3-preview-3)합니다.
+이 문서에서 설명하는 UWP 프로젝트 템플릿용 WinUI 3을 사용하려면 개발 컴퓨터를 구성하고 [WinUI 3 Preview 4를 설치](index.md#install-winui-3-preview-4)합니다.
 
 ## <a name="create-a-winui-3-app-in-uwp-for-c"></a>C#용 "UWP의 WinUI 3 앱" 만들기
 
@@ -48,7 +48,7 @@ WinUI 3 Preview 3에는 WinUI에서 완전하게 빌드된 사용자 인터페�
 
 6. Visual Studio에서 다음 개체를 사용하여 **UWP의 WinUI** 프로젝트를 생성합니다.
 
-    - **_프로젝트 이름_(유니버설 Windows)** : 애플리케이션 코드를 포함합니다. 프로젝트 솔루션에 대한 기본 시작 프로젝트입니다.
+    - ***프로젝트 이름*(유니버설 Windows)** : 애플리케이션 코드를 포함합니다. 프로젝트 솔루션에 대한 기본 시작 프로젝트입니다.
 
     :::image type="content" source="images/WinUI-and-UWP/vs2019-project.png" alt-text="유니버설 Windows 솔루션이 강조 표시된 솔루션 탐색기 패널의 스크린샷.":::
 
@@ -68,7 +68,7 @@ WinUI 3 Preview 3에는 WinUI에서 완전하게 빌드된 사용자 인터페�
 
     :::image type="content" source="images/WinUI-and-UWP/vs2019-file-mainpage-xaml-cs.png" alt-text="Visual Studio 2019 - MainPage.xaml.cs 파일":::
 
-7. 새 항목을 앱 프로젝트에 추가하려면 **솔루션 탐색기** 에서 마우스 오른쪽 단추로 **_프로젝트 이름_(유니버설 Windows)** 프로젝트 노드를 클릭하고, **추가** -> **새 항목** 을 차례로 선택합니다. **새 항목 추가** 대화 상자에서 **WinUI** 탭을 선택하고, 추가하려는 항목을 선택한 다음, **추가** 를 클릭합니다. 사용 가능한 항목에 대한 자세한 내용은 [WinUI 3용 항목 템플릿](index.md#item-templates-for-winui-3)을 참조하세요.
+7. 새 항목을 앱 프로젝트에 추가하려면 **솔루션 탐색기** 에서 마우스 오른쪽 단추로 ***프로젝트 이름*(유니버설 Windows)** 프로젝트 노드를 클릭하고, **추가** -> **새 항목** 을 차례로 선택합니다. **새 항목 추가** 대화 상자에서 **WinUI** 탭을 선택하고, 추가하려는 항목을 선택한 다음, **추가** 를 클릭합니다. 사용 가능한 항목에 대한 자세한 내용은 [WinUI 3용 항목 템플릿](index.md#item-templates-for-winui-3)을 참조하세요.
 
     :::image type="content" source="images/WinUI-and-UWP/vs2019-add-new-item-dialog.png" alt-text="Visual Studio 2019 - 새 항목 추가 대화 상자":::
 
@@ -84,9 +84,9 @@ WinUI 3 Preview 3에는 WinUI에서 완전하게 빌드된 사용자 인터페�
 
 ## <a name="known-issues-and-limitations"></a>알려진 문제 및 제한 사항
 
-알려진 문제 및 제한 사항에 대한 목록은 [이 섹션](index.md#preview-3-limitations-and-known-issues)을 참조하세요.
+[Windows UI 라이브러리 3 Preview 4(2021년 2월)](index.md)의 [제한 사항 및 알려진 문제](index.md#limitations-and-known-issues) 섹션을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
-- [WinUI 3](index.md)
+- [Windows UI 라이브러리 3 Preview 4(2021년 2월)](index.md)
 - [첫 번째 앱 만들기](/windows/uwp/get-started/your-first-app)

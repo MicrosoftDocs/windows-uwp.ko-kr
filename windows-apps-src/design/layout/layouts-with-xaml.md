@@ -9,12 +9,12 @@ ms.custom: contperf-fy21q2
 dev_langs:
 - csharp
 - cppwinrt
-ms.openlocfilehash: 4c2ff55b0f89e913cd2093add37f008c38e9312f
-ms.sourcegitcommit: 7aa0e1108fd1a19ebc5632acbc9f66ea9af2b321
+ms.openlocfilehash: e2bc29acc63a5363891ad78b873db6c8311ac970
+ms.sourcegitcommit: 06d59b59a95aad009acb947a0dac7432116bdb60
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97691537"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100544653"
 ---
 # <a name="responsive-layouts-with-xaml"></a>XAML을 사용한 반응형 레이아웃
 
@@ -119,7 +119,7 @@ Grid에서 MinWidth/MaxWidth는 열 정의에 사용할 수도 있으며 MinHeig
 [**Grid**](/uwp/api/Windows.UI.Xaml.Controls.Grid) | **Grid** 는 자식 요소의 유동 크기 조정을 지원합니다. 코드나 시각적 상태를 사용하여 요소의 위치를 변경하고 재배치할 수 있습니다.<li>요소가 Grid.Row 및 Grid.Column 연결된 속성을 사용하여 행과 열에 배열됩니다.</li><li>연결 속성인 Grid.RowSpan 및 Grid.ColumnSpan을 사용하여 요소를 여러 행과 열에 걸쳐 표시할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 유지됩니다. 요소의 크기가 명시적으로 설정되지 않은 경우 늘어나서 그리드 셀의 사용 가능한 공간을 채웁니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다.</li>
 [**RelativePanel**](/uwp/api/Windows.UI.Xaml.Controls.RelativePanel) | <li>요소가 패널 가장자리 또는 중심과 서로를 기준으로 정렬됩니다.</li><li>패널 맞춤, 형제 맞춤 및 형제 위치를 제어하는 다양한 연결된 속성을 사용하여 요소의 위치가 지정됩니다. </li><li>맞춤에 대한 RelativePanel 연결된 속성으로 늘이기가 발생하지 않는 경우(예를 들어 요소가 패널의 오른쪽과 왼쪽 가장자리에 배열되는 경우) HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다. 요소의 크기가 명시적으로 설정되지 않아 늘어나지 않는 경우에는 콘텐츠에 맞게 조정됩니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다.</li>
 [**StackPanel**](/uwp/api/Windows.UI.Xaml.Controls.StackPanel) |<li>요소가 세로 또는 가로로 한 줄에 스택 형태로 쌓입니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 Orientation 속성의 반대 방향으로 유지됩니다. 요소의 크기가 명시적으로 설정되지 않은 경우 늘려서 사용 가능한 너비(또는 Orientation이 Horizontal인 경우에는 높이)를 채웁니다. Orientation 속성에서 지정된 방향으로 요소가 해당 콘텐츠에 맞게 크기가 조정됩니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 Orientation 속성에서 지정된 방향의 패널 범위에 의해 제한되지 않으므로 스크롤 가능한 콘텐츠가 패널 범위 이상으로 늘어나고 스크롤 막대는 표시하지 않습니다. 스크롤 막대를 표시하려면 자식 콘텐츠의 높이나 너비를 명시적으로 제한해야 합니다.</li>
-[**VariableSizedWrapGrid**](/uwp/api/Windows.UI.Xaml.Controls.VariableSizedWrapGrid) |<li>요소가 행이나 열 형태로 배열되며 MaximumRowsOrColumns 값에 도달할 경우 새 행이나 열로 자동 줄 바꿈됩니다.</li><li>요소를 행으로 배치할지 열로 배치할지 여부는 Orientation 속성을 통해 지정됩니다.</li><li>연결 속성인 VariableSizedWrapGrid.RowSpan 및 VariableSizedWrapGrid.ColumnSpan을 사용하여 요소를 여러 행과 열에 걸쳐 표시할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다. 요소의 크기는 ItemHeight 및 ItemWidth 속성에 지정된 대로 조정됩니다. 이러한 속성이 설정되지 않은 경우 첫 번째 셀의 항목이 해당 콘텐츠에 맞게 크기가 조정된 다음 다른 모든 셀은 이 크기를 상속합니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다.</li>
+[**VariableSizedWrapGrid**](/uwp/api/Windows.UI.Xaml.Controls.VariableSizedWrapGrid) |<li>요소가 행이나 열 형태로 배열되며 MaximumRowsOrColumns 값에 도달할 경우 새 행이나 열로 자동 줄 바꿈됩니다.</li><li>요소를 행으로 배치할지 열로 배치할지 여부는 Orientation 속성을 통해 지정됩니다.</li><li>연결 속성인 VariableSizedWrapGrid.RowSpan 및 VariableSizedWrapGrid.ColumnSpan을 사용하여 요소를 여러 행과 열에 걸쳐 표시할 수 있습니다.</li><li>HorizontalAlignment/VerticalAlignment에 대한 Stretch 값은 무시됩니다. 요소의 크기는 ItemHeight 및 ItemWidth 속성에 지정된 대로 조정됩니다. 이러한 속성을 설정하지 않으면 첫 번째 셀 크기의 값이 사용됩니다.</li><li>패널보다 더 큰 자식 콘텐츠는 시각적으로 잘립니다.</li><li>콘텐츠 크기가 패널 범위로 제한되므로 필요한 경우 스크롤 가능한 콘텐츠에 스크롤 막대가 표시됩니다.</li>
 
 이러한 패널에 대한 자세한 정보 및 예제는 [레이아웃 패널](layout-panels.md)과 [반응형 기술 샘플](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlResponsiveTechniques)을 참조하세요.
 

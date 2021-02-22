@@ -8,12 +8,12 @@ ms.assetid: 0a8cedac-172a-4efd-8b6b-67fd3667df34
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 91b5e975c40b7c9642cd452b3c67045c7be1127d
-ms.sourcegitcommit: 069f5ab4be85a7d638fc2a426afaed824e5dfeae
+ms.openlocfilehash: 9da6b1acf2ce27fa6b4ec6c1b4e4274a28491b8b
+ms.sourcegitcommit: 2b7f6fdb3c393f19a6ad448773126a053b860953
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98668717"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100335102"
 ---
 # <a name="integrate-your-desktop-app-with-windows-10-and-uwp"></a>데스크톱 앱을 Windows 10 및 UWP와 통합
 
@@ -157,7 +157,7 @@ ms.locfileid: "98668717"
 
 ### <a name="associate-your-packaged-application-with-a-set-of-file-types"></a>패키지된 애플리케이션을 파일 형식 세트와 연결
 
-패키지된 애플리케이션을 파일 형식 확장과 연결할 수 있습니다. 사용자가 파일을 마우스 오른쪽 단추로 클릭하고 **연결 프로그램** 옵션을 선택하면 애플리케이션이 제안 목록에 표시됩니다.
+패키지된 애플리케이션을 파일 형식 확장과 연결할 수 있습니다. 사용자가 파일 탐색기에서 파일을 마우스 오른쪽 단추로 클릭하고 **연결 프로그램** 옵션을 선택하면 해당 애플리케이션이 제안 목록에 표시됩니다. 이 확장 사용에 대한 자세한 내용은 [패키지형 데스크톱 앱을 파일 탐색기와 통합](integrate-packaged-app-with-file-explorer.md)을 참조하세요.
 
 #### <a name="xml-namespaces"></a>XML 네임스페이스
 
@@ -215,9 +215,7 @@ ms.locfileid: "98668717"
 
 ### <a name="add-options-to-the-context-menus-of-files-that-have-a-certain-file-type"></a>특정 형식의 파일 상황에 맞는 메뉴에 옵션 추가
 
-대부분의 경우 사용자는 파일을 마우스 오른쪽 단추로 클릭해서 엽니다. 사용자가 파일을 마우스 오른쪽 단추로 클릭하면 다양한 옵션이 표시됩니다.
-
-해당 메뉴에 옵션을 추가할 수 있습니다. 이러한 옵션은 인쇄, 편집, 파일 미리 보기처럼 파일과 상호 작용하는 방법을 사용자에게 제공합니다.
+이 확장을 사용하면 사용자가 파일 탐색기에서 파일을 마우스 오른쪽 단추로 클릭할 때 표시되는 상황에 맞는 메뉴에 옵션을 추가할 수 있습니다. 이러한 옵션은 인쇄, 편집, 파일 미리 보기처럼 파일과 상호 작용하는 방법을 사용자에게 제공합니다. 이 확장 사용에 대한 자세한 내용은 [패키지형 데스크톱 앱을 파일 탐색기와 통합](integrate-packaged-app-with-file-explorer.md)을 참조하세요.
 
 #### <a name="xml-namespaces"></a>XML 네임스페이스
 
@@ -433,7 +431,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 
 ```
 
-|이름 | Description |
+|이름 | 설명 |
 |-------|-------------|
 |범주 |항상 ``windows.loaderSearchPathOverride``입니다.
 |FolderPath | DLL 파일이 포함된 폴더의 경로입니다. 패키지의 루트 폴더와 관련된 경로를 지정합니다. 한 확장에서 최대 5개의 경로를 지정할 수 있습니다. 시스템이 패키지의 루트 폴더에서 파일을 검색하려는 경우 이러한 경로 중 하나에 대해 빈 문자열을 사용합니다. 중복 경로를 포함하지 않고, 경로에 선행 및 후행 슬래시 또는 백슬래시가 포함되지 않도록 해야 합니다. <br><br> 시스템은 하위 폴더를 검색하지 않으므로 시스템에서 로드하려는 DLL 파일을 포함하는 각 폴더를 명시적으로 나열해야 합니다.|
@@ -498,7 +496,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 
 전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
-|이름 |Description |
+|이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름은 파일 형식을 구성하고 그룹화하는 데 사용할 수 있습니다. 이름은 공백 없이 모두 소문자여야 합니다. |
@@ -573,7 +571,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 
 전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
-|이름 |Description |
+|이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름은 파일 형식을 구성하고 그룹화하는 데 사용할 수 있습니다. 이름은 공백 없이 모두 소문자여야 합니다. |
@@ -635,7 +633,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 
 전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
-|이름 |Description |
+|이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름은 파일 형식을 구성하고 그룹화하는 데 사용할 수 있습니다. 이름은 공백 없이 모두 소문자여야 합니다. |
@@ -700,7 +698,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 
 전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
-|이름 |Description |
+|이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름은 파일 형식을 구성하고 그룹화하는 데 사용할 수 있습니다. 이름은 공백 없이 모두 소문자여야 합니다. |
@@ -761,7 +759,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 
 전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-filetypeassociation)서 찾을 수 있습니다.
 
-|이름 |Description |
+|이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.fileTypeAssociation``입니다.
 |이름 |파일 형식 연결의 이름입니다. 이 이름은 파일 형식을 구성하고 그룹화하는 데 사용할 수 있습니다. 이름은 공백 없이 모두 소문자여야 합니다. |
@@ -917,7 +915,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 
 ```
 
-|이름 |Description |
+|이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.cloudfiles``입니다.
 |iconResource |클라우드 파일 공급자 서비스를 나타내는 아이콘입니다. 이 아이콘은 파일 탐색기의 탐색 창에 표시됩니다.  사용자가 이 아이콘을 선택하면 클라우드 서비스의 파일이 표시됩니다. |
@@ -987,7 +985,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 
 전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-uap-protocol)서 찾을 수 있습니다.
 
-|이름 |Description |
+|이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.protocol``입니다.
 |이름 |프로토콜의 이름입니다. |
@@ -1039,7 +1037,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 </uap3:Extension>
 ```
 
-|이름 |Description |
+|이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.appExecutionAlias``입니다.
 |실행 파일 |별칭이 호출될 때 시작할 실행 파일의 상대 경로입니다. |
@@ -1102,7 +1100,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
 </Extension>
 ```
 
-|이름 |Description |
+|이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.startupTask``입니다.|
 |실행 파일 |시작하려는 실행 파일의 상대 경로입니다. |
@@ -1157,7 +1155,7 @@ DLL 검색 순서에 포함된 패키지는 기본적으로 유효 경로를 포
   </AutoPlayHandler>
 ```
 
-|이름 |Description |
+|이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.autoPlayHandler``입니다.
 |ActionDisplayName |사용자가 PC에 연결하는 디바이스로 수행할 수 있는 작업을 나타내는 문자열(예: "파일 가져오기" 또는 "비디오 재생")입니다. |
@@ -1244,7 +1242,7 @@ XPS(XML Paper Specification) 형식으로 인쇄 데이터를 수신하려면 �
 
 전체 스키마 참조는 [여기](/uwp/schemas/appxpackage/uapmanifestschema/element-desktop2-appprinter)서 찾을 수 있습니다.
 
-|이름 |Description |
+|이름 |설명 |
 |-------|-------------|
 |범주 |항상 ``windows.appPrinter``입니다.
 |DisplayName |앱의 인쇄 대상 목록에 표시할 이름입니다. |

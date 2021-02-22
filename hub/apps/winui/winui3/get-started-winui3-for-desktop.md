@@ -1,27 +1,27 @@
 ---
 description: 이 가이드에서는 WinUI 3 UI를 사용하여 .NET 및 C++/Win32 데스크톱 앱 만들기를 시작하는 방법을 보여줍니다.
 title: 데스크톱 앱용 WinUI 3 시작
-ms.date: 11/17/2020
+ms.date: 02/09/2021
 ms.topic: article
 keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
 ms.custom: 19H1
-ms.openlocfilehash: 067e6a6798fbfc2633c3e356be64ecae0403cc6d
-ms.sourcegitcommit: 4df27104a9e346d6b9fb43184812441fe5ea3437
+ms.openlocfilehash: dcf3309f9b4a82019e867789bbeabb07c724ea0d
+ms.sourcegitcommit: 71701f5ffc540951f86d6f77a52416c6d75fe305
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96025159"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100632704"
 ---
 # <a name="get-started-with-winui-3-for-desktop-apps"></a>데스크톱 앱용 WinUI 3 시작
 
-WinUI 3 Preview 3에는 완전한 WinUI 기반 사용자 인터페이스를 사용하여 관리형 데스크톱 C#/.NET Core 및 네이티브 C++/Win32 데스크톱 앱을 만들 수 있도록 하는 새로운 프로젝트 템플릿이 포함됩니다. 이러한 프로젝트 템플릿을 사용하여 앱을 만들면 애플리케이션의 전체 사용자 인터페이스가 WinUI 3에서 제공하는 창, 컨트롤 및 기타 UI 유형을 사용하여 구현됩니다. 프로젝트 템플릿의 전체 목록은 [이 섹션](index.md#project-templates-for-winui-3)을 참조하세요.
+WinUI 3 Preview 4에는 완전한 WinUI 기반 사용자 인터페이스를 사용하여 관리형 C#/.NET Core 및 네이티브 C++/Win32 데스크톱 앱을 만들 수 있도록 하는 새로운 프로젝트 템플릿이 포함됩니다. 이러한 프로젝트 템플릿을 사용하여 앱을 만들면 애플리케이션의 전체 사용자 인터페이스가 WinUI 3에서 제공하는 창, 컨트롤 및 기타 UI 유형을 사용하여 구현됩니다. 프로젝트 템플릿의 전체 목록은 [이 섹션](index.md#project-templates-for-winui-3)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-이 문서에서 설명하는 데스크톱 프로젝트 템플릿에 WinUI 3을 사용하려면 개발 컴퓨터를 구성하고 [여기](index.md#install-winui-3-preview-3)의 지침에 따라 WinUI 3 Preview 3을 설치합니다.
+이 문서에서 설명하는 데스크톱 프로젝트 템플릿에 WinUI 3을 사용하려면 개발 컴퓨터를 구성하고 [여기](index.md#install-winui-3-preview-4)의 지침에 따라 WinUI 3 Preview 4를 설치합니다.
 
 ## <a name="create-a-winui-3-desktop-app-for-c-and-net-5"></a>C# 및 .NET 5용 WinUI 3 데스크톱 앱 만들기
 
@@ -113,8 +113,8 @@ WinUI 데스크톱 앱에서 여러 언어를 지원하고 패키지된 프로�
 
 ## <a name="known-issues-and-limitations"></a>알려진 문제 및 제한 사항
 
-알려진 문제 및 제한 사항에 대한 목록은 [이 섹션](index.md#preview-3-limitations-and-known-issues)을 참조하세요.
+[Windows UI 라이브러리 3 Preview 4(2021년 2월)](index.md)의 [제한 사항 및 알려진 문제](index.md#limitations-and-known-issues) 섹션을 참조하세요.
 
 ## <a name="related-topics"></a>관련 항목
 
-* [Windows UI 라이브러리 3](index.md)
+* [Windows UI 라이브러리 3 Preview 4(2021년 2월)](index.md)

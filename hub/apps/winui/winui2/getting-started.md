@@ -4,12 +4,12 @@ description: Windows UI 라이브러리를 설치하고 사용하는 방법입�
 ms.topic: article
 ms.date: 07/15/2020
 keywords: Windows 10, UWP, 도구 키트 SDK
-ms.openlocfilehash: 939da99d7fce59a9f242fe0ce8ed203a3f52eab6
-ms.sourcegitcommit: 617344ae1a1f5b580c938b61e910d99120b73626
+ms.openlocfilehash: 801c1f578c08df627264f542cbe1496d275afc0a
+ms.sourcegitcommit: 2b7f6fdb3c393f19a6ad448773126a053b860953
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98620854"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100334959"
 ---
 # <a name="getting-started-with-the-windows-ui-2x-library"></a>Windows UI 2.x 라이브러리 시작
 
@@ -18,7 +18,7 @@ ms.locfileid: "98620854"
 라이브러리는 신규 또는 기존 Visual Studio 프로젝트에 추가할 수 있는 NuGet 패키지로 제공됩니다.
 
 > [!NOTE]
-> WinUI 3 초기 미리 보기를 사용하는 방법에 대한 자세한 내용은 [Windows UI 라이브러리 3 Preview 3(2020년 11월)](../winui3/index.md)을 참조하세요.
+> WinUI 3 초기 미리 보기를 사용해 보는 방법에 대한 자세한 내용은 [Windows UI 라이브러리 3 Preview 4(2021년 2월)](../winui3/index.md)를 참조하세요.
 
 ## <a name="download-and-install-the-windows-ui-library"></a>Windows UI 라이브러리 다운로드 및 설치
 
@@ -29,44 +29,61 @@ ms.locfileid: "98620854"
     > [!IMPORTANT]
     > WinUI 2.5를 사용하려면 프로젝트 속성에서 TargetPlatformVersion을 10.0.18362.0 이상으로, TargetPlatformMinVersion을 10.0.15063.0 이상으로 설정해야 합니다.
 
-3. 솔루션 탐색기 창에서 마우스 오른쪽 단추로 프로젝트 이름을 클릭하고, **NuGet 패키지 관리** 를 선택합니다. **찾아보기** 탭을 선택하고, **Microsoft.UI.Xaml** 또는 **WinUI** 를 검색합니다. 그런 다음, 사용하려는 [Windows UI 라이브러리 NuGet 패키지](nuget-packages.md)를 선택합니다.
-**Microsoft.UI.Xaml** 패키지에는 모든 앱에 적합한 Fluent 컨트롤 및 기능이 포함되어 있습니다.  
-필요에 따라 "시험판 포함"을 선택하여 새 실험적 기능이 포함된 최신 시험판 버전을 확인할 수 있습니다.
+3. 솔루션 탐색기 창에서 마우스 오른쪽 단추로 프로젝트 이름을 클릭하고, **NuGet 패키지 관리** 를 선택합니다. 
 
-    ![프로젝트를 마우스 오른쪽 단추로 클릭하고 NuGet 패키지 관리 옵션이 강조 표시된 솔루션 탐색기 패널의 스크린샷.](images/ManageNugetPackages.png "NuGet 패키지 관리 이미지")
+    :::image type="content" source="images/ManageNugetPackages.png" alt-text="프로젝트를 마우스 오른쪽 단추로 클릭하고 NuGet 패키지 관리 옵션이 강조 표시된 솔루션 탐색기 패널의 스크린샷.":::<br/>*프로젝트를 마우스 오른쪽 단추로 클릭하고 NuGet 패키지 관리 옵션이 강조 표시된 솔루션 탐색기 패널*
 
-    ![검색 필드에 winui가 있는 찾아보기 탭을 보여주는 NuGet 패키지 관리자 대화 상자의 스크린샷.](images/NugetPackages.png)
+4. **NuGet 패키지 관리자** 에서 **찾아보기** 탭을 선택하고 **Microsoft.UI.Xaml** 또는 **WinUI** 를 검색합니다. 사용할 [Windows UI 라이브러리 NuGet 패키지](nuget-packages.md)를 선택합니다(**Microsoft.UI.Xaml** 패키지에는 모든 앱에 적합한 Fluent 컨트롤 및 기능이 포함되어 있음). 설치를 클릭합니다. 
 
-4. WinUI(Windows UI) 테마 리소스를 App.xaml 리소스에 추가합니다. 추가 애플리케이션 리소스가 있는지 여부에 따라 이를 수행하는 두 가지 방법이 있습니다.
+    "시험판 포함" 확인란을 선택하면 새로운 실험적 기능이 포함된 최신 시험판 버전을 볼 수 있습니다.
 
-    a. 다른 애플리케이션 리소스가 없으면 `<XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>`를 Application.Resources에 추가합니다.
+    :::image type="content" source="images/NugetPackages.png" alt-text="검색 필드에 winui를 입력하고 [시험판 포함] 확인란을 선택한 [찾아보기] 탭을 보여주는 NuGet 패키지 관리자 대화 상자의 스크린샷":::<br/>*검색 필드에 winui를 입력하고 [시험판 포함] 확인란을 선택한 [찾아보기] 탭을 보여주는 NuGet 패키지 관리자 대화 상자*
+
+5. WinUI(Windows UI) 테마 리소스를 App.xaml 파일에 추가합니다.
+
+    추가 애플리케이션 리소스가 있는지 여부에 따라 이를 수행하는 두 가지 방법이 있습니다.
+
+    a. 다른 애플리케이션 리소스가 필요 없는 경우 다음 예제와 같이 WinUI 리소스 요소 `<XamlControlsResources`를 추가합니다.
 
     ``` XAML
-    <Application>
+    <Application
+        x:Class="ExampleApp.App"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        RequestedTheme="Light">
+
         <Application.Resources>
             <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
         </Application.Resources>
+
     </Application>
     ```
 
-    b. 그렇지 않고 둘 이상의 애플리케이션 리소스 세트가 있는 경우 `<XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>`를 Application.Resources.MergedDictionaries에 추가합니다.
+    b. 애플리케이션 리소스가 여러 개 필요한 경우 다음과 같이 `<ResourceDictionary.MergedDictionaries>`에서 WinUI resources 요소 `<XamlControlsResources`를 추가합니다.
 
     ``` XAML
-    <Application>
+    <Application
+        x:Class="ExampleApp.App"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        RequestedTheme="Light">
+
         <Application.Resources>
             <ResourceDictionary>
                 <ResourceDictionary.MergedDictionaries>
                     <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                    <ResourceDictionary Source="/Styles/Styles.xaml"/>
                 </ResourceDictionary.MergedDictionaries>
             </ResourceDictionary>
         </Application.Resources>
+
     </Application>
     ```
 
     > [!IMPORTANT]
     > ResourceDictionary에 추가되는 리소스의 순서는 적용되는 순서에 영향을 줍니다. `XamlControlsResources` 사전은 많은 기본 리소스 키를 재정의하므로 앱의 다른 사용자 지정 스타일 또는 리소스를 재정의하지 않도록 먼저 `Application.Resources`에 추가해야 합니다. 리소스를 로드하는 방법에 대한 자세한 내용은 [ResourceDictionary 및 XAML 리소스 참조](/windows/uwp/design/controls-and-patterns/resourcedictionary-and-xaml-resource-references)를 참조하세요.
 
-5. 도구 키트에 대한 참조를 XAML 페이지 및 코드 숨김 페이지에 추가합니다.
+6. WinUI 패키지에 대한 참조를 XAML 페이지 및/또는 코드 숨김 페이지에 추가합니다.
 
     * XAML 페이지에서 참조를 페이지 위쪽에 추가합니다.
 

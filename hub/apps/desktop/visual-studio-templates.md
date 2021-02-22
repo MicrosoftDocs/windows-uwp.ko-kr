@@ -7,12 +7,12 @@ keywords: windows 10, uwp, windows forms, wpf, xaml island
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: high
-ms.openlocfilehash: f84bd251bbae9c3f1a1326ab3ac3c7cf0fce3938
-ms.sourcegitcommit: 75e1f49be211e8b4b3e825978d67625776f992f5
+ms.openlocfilehash: 7f288d301583c08b0fd4104802b643a7c31ad99f
+ms.sourcegitcommit: 2b7f6fdb3c393f19a6ad448773126a053b860953
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94691601"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100335109"
 ---
 # <a name="visual-studio-project-and-item-templates-for-windows-apps"></a>Windows 앱용 Visual Studio 프로젝트 및 항목 템플릿
 
@@ -25,7 +25,7 @@ Visual Studio 2019는 C\# 또는 C++를 사용하여 Windows 10 디바이스용 
 
 [WinUI(Windows UI) 라이브러리](../winui/index.md)는 데스크톱(.NET 및 네이티브 Win32)과 UWP 앱 플랫폼에서 Windows 앱을 위한 최신 네이티브 UI(사용자 인터페이스) 플랫폼입니다. [WinUI 3](../winui/winui3/index.md)(현재 개발자 미리 보기로 제공)은 WinUI의 최신 주요 버전이며, WinUI를 완전한 데스크톱 Windows 앱용 UX 프레임워크로 전환합니다.
 
-WinUI 3에는 Visual Studio 2019용 VSIX 패키지가 포함되어 있습니다. 이 패키지는 WinUI 기반 인터페이스를 사용하여 앱 빌드를 시작하는 데 도움이 되는 프로젝트와 항목 템플릿을 제공합니다. WinUI 3 VSIX 패키지 및 이 패키지에서 제공하는 프로젝트 템플릿에 대한 자세한 내용은 [이 섹션](../winui/winui3/index.md#install-winui-3-preview-3)을 참조하세요.
+WinUI 3에는 Visual Studio 2019용 VSIX 패키지가 포함되어 있습니다. 이 패키지는 WinUI 기반 인터페이스를 사용하여 앱 빌드를 시작하는 데 도움이 되는 프로젝트와 항목 템플릿을 제공합니다. WinUI 3 VSIX 패키지 및 이 패키지에서 제공하는 프로젝트 템플릿에 대한 자세한 내용은 [WinUI 3 Preview 4 설치](../winui/winui3/index.md#install-winui-3-preview-4)를 참조하세요.
 
 > [!IMPORTANT]
 > 관련 Visual Studio 템플릿을 포함한 WinUI 3은 현재 개발자 커뮤니티에서 초기에 평가하고 피드백을 수집하기 위한 개발자 미리 보기로 제공됩니다. 현재 프로덕션 앱에는 사용하면 안 됩니다.

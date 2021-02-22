@@ -5,12 +5,12 @@ ms.date: 06/01/2018
 ms.topic: article
 keywords: windows 10, uwp, device portal, 앱 관리자, 배포, sdk
 ms.localizationpriority: medium
-ms.openlocfilehash: 7006d32777e7b3ece5c5b6ed066bd23265b0bbb7
-ms.sourcegitcommit: aaa72ddeb01b074266f4cd51740eec8d1905d62d
+ms.openlocfilehash: 34302b421f51fcc9fdf408baabc178190c7ed335
+ms.sourcegitcommit: 2b7f6fdb3c393f19a6ad448773126a053b860953
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94339621"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "100334888"
 ---
 # <a name="deploy-an-app-through-loose-file-registration"></a>느슨한 파일 등록을 통해 앱 배포 
 
@@ -31,17 +31,17 @@ ms.locfileid: "94339621"
 
 ## <a name="how-to-register-a-loose-file-layout"></a>느슨한 파일 레이아웃을 등록하는 방법
 
-Windows는 로컬 및 원격 디바이스에서 느슨한 파일 레이아웃을 등록하기 위한 여러 개발자 도구를 제공합니다. `WinDeployAppCmd`(Windows SDK 도구), Windows Device Portal, PowerShell 및 [Visual Studio](./deploying-and-debugging-uwp-apps.md#register-layout-from-network) 중에서 선택할 수 있습니다. 다음에서는 이러한 도구를 사용하여 느슨한 파일을 등록하는 방법을 설명합니다. 그러나 먼저 다음 설치를 수행했는지 확인합니다.
+Windows는 로컬 및 원격 디바이스에서 느슨한 파일 레이아웃을 등록하기 위한 여러 개발자 도구를 제공합니다. `WinAppDeployCmd`(Windows SDK 도구), Windows Device Portal, PowerShell 및 [Visual Studio](./deploying-and-debugging-uwp-apps.md#register-layout-from-network) 중에서 선택할 수 있습니다. 다음에서는 이러한 도구를 사용하여 느슨한 파일을 등록하는 방법을 설명합니다. 그러나 먼저 다음 설치를 수행했는지 확인합니다.
 
 - 디바이스가 Windows 10 크리에이터 업데이트(빌드 14965) 이상에 있어야 합니다.
 - 모든 디바이스에서 [개발자 모드](/windows/apps/get-started/enable-your-device-for-development) 및 [디바이스 검색](/windows/apps/get-started/enable-your-device-for-development#device-discovery)을 사용하도록 설정해야 합니다.
 
 > [!IMPORTANT]
-> 느슨한 파일 등록은 네트워크 공유(SMB) 프로토콜을 지원하는 디바이스인 데스크톱 및 Xbox에서만 사용할 수 있습니다. 
+> 느슨한 파일 등록은 네트워크 공유(SMB) 프로토콜을 지원하는 데스크톱 및 Xbox 디바이스에서만 사용할 수 있습니다. 
 
-### <a name="register-with-windeployappcmd"></a>WinDeployAppCmd에 등록
+### <a name="register-with-winappdeploycmd"></a>WinAppDeployCmd에 등록
 
-Windows 10 크리에이터 업데이트(빌드 14965) 이상에 해당하는 SDK 도구를 사용하는 경우 명령 프롬프트에서 `WinDeployAppCmd` 명령을 사용할 수 있습니다.
+Windows 10 크리에이터 업데이트(빌드 14965) 이상에 해당하는 SDK 도구를 사용하는 경우 명령 프롬프트에서 `WinAppDeployCmd` 명령을 사용할 수 있습니다.
 
 ```cmd
 WinAppDeployCmd.exe registerfiles -remotedeploydir <Network Path> -ip <IP Address> -pin <target machine PIN>
