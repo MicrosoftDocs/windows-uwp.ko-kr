@@ -5,12 +5,12 @@ ms.date: 07/11/2020
 ms.topic: article
 keywords: windows 10, uwp, cppwinrt, C++/WinRT
 ms.localizationpriority: medium
-ms.openlocfilehash: bb6a76f2e8096d63907daf5ededdb6a22eb72a6c
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 706b0aceb203fe6a333c281dfd2b691eb35b65b2
+ms.sourcegitcommit: 98ca28fd0b5d306d35f3919fe9dd4d5a0222235e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89175207"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102029836"
 ---
 # <a name="create-a-hello-world-app-using-cwinrt"></a>C++/WinRT를 사용하여 "Hello, World!" 앱 만들기
 
@@ -30,7 +30,7 @@ XAML에 대한 소개는 [XAML 개요](../xaml-platform/xaml-overview.md)를 참
 
 첫 번째 앱은 "Hello, World!" 앱으로 대화형 작업, 레이아웃 및 스타일의 일부 기본 기능을 보여줍니다.
 
-먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **비어 있는 앱(C++/WinRT)** 프로젝트를 만들고 이름을 *HelloWorldCppWinRT*라고 지정합니다. **솔루션 및 프로젝트를 같은 디렉터리에 배치**를 선택하지 않아야 합니다. 일반적으로 사용 가능한 최신(미리 보기 아님) 버전의 Windows SDK를 대상으로 합니다.
+먼저 Microsoft Visual Studio에서 새 프로젝트를 만듭니다. **비어 있는 앱(C++/WinRT)** 프로젝트를 만들고 이름을 *HelloWorldCppWinRT* 라고 지정합니다. **솔루션 및 프로젝트를 같은 디렉터리에 배치** 를 선택하지 않아야 합니다. 일반적으로 사용 가능한 최신(미리 보기 아님) 버전의 Windows SDK를 대상으로 합니다.
 
 이 항목의 뒤쪽 섹션에서는 프로젝트(단, 다음까지 빌드하지 않음)를 빌드하게 됩니다.
 
@@ -43,7 +43,7 @@ XAML 태그 파일을 수정하여 UI 요소를 만들 수 있으며, 이러한 
 프로젝트 파일을 살펴보겠습니다.
 
 - `App.idl`, `App.xaml`, `App.h` 및 `App.cpp`. 이러한 파일은 앱의 진입점을 포함하는 [**Windows::UI::Xaml::Application**](/uwp/api/windows.ui.xaml.application) 클래스의 앱 특수화를 나타냅니다. `App.xaml`은 페이지 관련 태그를 포함하지 않지만, 여기서 사용자 인터페이스 요소 스타일과 모든 페이지에서 액세스할 수 있도록 만들려는 다른 요소를 추가할 수 있습니다. `.h` 및 `.cpp` 파일에는 다양한 애플리케이션 수명 주기 이벤트에 대한 처리기가 포함되어 있습니다. 일반적으로 앱이 시작될 때 앱을 초기화하고 앱이 일시 중단되거나 종료될 때 정리를 수행하는 사용자 지정 코드를 여기에 추가할 수 있습니다.
-- `MainPage.idl`, `MainPage.xaml`, `MainPage.h` 및 `MainPage.cpp`. 앱의 기본 주(시작) 페이지 형식에 대한 XAML 태그 및 구현인 **MainPage** 런타임 클래스를 포함합니다. **MainPage**에서는 탐색을 지원하지 않지만, 시작하는 데 필요한 몇 가지 기본 UI와 이벤트 처리기를 제공합니다.
+- `MainPage.idl`, `MainPage.xaml`, `MainPage.h` 및 `MainPage.cpp`. 앱의 기본 주(시작) 페이지 형식에 대한 XAML 태그 및 구현인 **MainPage** 런타임 클래스를 포함합니다. **MainPage** 에서는 탐색을 지원하지 않지만, 시작하는 데 필요한 몇 가지 기본 UI와 이벤트 처리기를 제공합니다.
 - `pch.h` 및 `pch.cpp` 이러한 파일은 프로젝트의 미리 컴파일된 헤더 파일을 나타냅니다. `pch.h`에서, 자주 변경되지 않는 헤더 파일을 포함한 다음, 프로젝트의 다른 파일에 `pch.h`를 포함합니다.
 
 ## <a name="a-first-look-at-the-code"></a>코드 개요
@@ -52,9 +52,9 @@ XAML 태그 파일을 수정하여 UI 요소를 만들 수 있으며, 이러한 
 
 아시다시피, C#으로 작성된 UWP(유니버설 Windows 플랫폼) 앱의 모든 클래스는 Windows 런타임 형식입니다. 그러나 C++/WinRT 애플리케이션에서 형식을 작성하는 경우 해당 형식이 Windows 런타임 형식인지, 아니면 일반 C++ 클래스/구조체/열거형인지 선택할 수 있습니다.
 
-프로젝트의 모든 XAML 페이지 형식은 Windows 런타임 형식이어야 합니다. 따라서 **MainPage**는 Windows 런타임 형식입니다. 특히 *런타임 클래스*입니다. XAML 페이지에서 사용하는 형식도 Windows 런타임 형식이어야 합니다. [Windows 런타임 구성 요소](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md)를 작성할 때 다른 앱에서 사용할 수 있는 형식을 작성하려면 Windows 런타임 형식을 작성해야 합니다. 그 외의 경우에는 일반 C++ 형식이어도 됩니다. 일반적으로 Windows 런타임 형식은 모든 Windows 런타임 언어를 통해 사용할 수 있습니다.
+프로젝트의 모든 XAML 페이지 형식은 Windows 런타임 형식이어야 합니다. 따라서 **MainPage** 는 Windows 런타임 형식입니다. 특히 *런타임 클래스* 입니다. XAML 페이지에서 사용하는 형식도 Windows 런타임 형식이어야 합니다. [Windows 런타임 구성 요소](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md)를 작성할 때 다른 앱에서 사용할 수 있는 형식을 작성하려면 Windows 런타임 형식을 작성해야 합니다. 그 외의 경우에는 일반 C++ 형식이어도 됩니다. 일반적으로 Windows 런타임 형식은 모든 Windows 런타임 언어를 통해 사용할 수 있습니다.
 
-형식이 Windows 런타임 형식이라는 것을 보여주는 좋은 증거 중 하나는 형식이 인터페이스 정의 언어(`.idl`) 파일 내부의 [MIDL(Microsoft Interface Definition Language)](/uwp/midl-3/)에 정의된다는 것입니다. **MainPage**를 예로 들어 살펴보겠습니다.
+형식이 Windows 런타임 형식이라는 것을 보여주는 좋은 증거 중 하나는 형식이 인터페이스 정의 언어(`.idl`) 파일 내부의 [MIDL(Microsoft Interface Definition Language)](/uwp/midl-3/)에 정의된다는 것입니다. **MainPage** 를 예로 들어 살펴보겠습니다.
 
 ```idl
 // MainPage.idl
@@ -100,9 +100,9 @@ namespace winrt::HelloWorldCppWinRT::factory_implementation
 
 ## <a name="step-1-modify-your-startup-page"></a>1단계. 시작 페이지 수정
 
-UI(사용자 인터페이스)를 형성하는 컨트롤을 작성할 수 있도록 **솔루션 탐색기**에서 `MainPage.xaml`을 엽니다.
+UI(사용자 인터페이스)를 형성하는 컨트롤을 작성할 수 있도록 **솔루션 탐색기** 에서 `MainPage.xaml`을 엽니다.
 
-이미 그 안에 있는 **StackPanel**및 해당 콘텐츠를 삭제합니다. 그 자리에 다음 XAML을 붙여넣습니다.
+이미 그 안에 있는 **StackPanel** 및 해당 콘텐츠를 삭제합니다. 그 자리에 다음 XAML을 붙여넣습니다.
 
 ```xaml
 <StackPanel x:Name="contentPanel" Margin="120,30,0,0">
@@ -118,7 +118,7 @@ UI(사용자 인터페이스)를 형성하는 컨트롤을 작성할 수 있도�
 
 이 새 [**StackPanel**](/uwp/api/Windows.UI.Xaml.Controls.StackPanel)에는 사용자 이름을 묻는 [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock), 사용자 이름을 수락하는 [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox), [**Button**](/uwp/api/Windows.UI.Xaml.Controls.Button) 및 또 다른 **TextBlock** 요소가 있습니다.
 
-*myButton*이라는 **단추**를 삭제했으므로, 코드에서 이 단추에 대한 참조를 제거해야 합니다. 따라서 `MainPage.cpp`에서 **MainPage::ClickHandler** 함수 내부의 코드 줄을 삭제합니다.
+*myButton* 이라는 **단추** 를 삭제했으므로, 코드에서 이 단추에 대한 참조를 제거해야 합니다. 따라서 `MainPage.cpp`에서 **MainPage::ClickHandler** 함수 내부의 코드 줄을 삭제합니다.
 
 이제 매우 간단한 유니버설 Windows 앱을 만들었습니다. UWP 앱의 모양을 확인하려면 앱을 빌드하고 실행합니다.
 
@@ -128,7 +128,7 @@ UI(사용자 인터페이스)를 형성하는 컨트롤을 작성할 수 있도�
 
 ## <a name="step-2-add-an-event-handler"></a>2단계. 이벤트 처리기 추가
 
-`MainPage.xaml`에서 *inputButton*이라는 **단추**를 찾고, 해당 [**ButtonBase::Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트에 대한 이벤트 처리기를 선언합니다. 이제 **Button**의 태그가 다음과 같이 표시됩니다.
+`MainPage.xaml`에서 *inputButton* 이라는 **단추** 를 찾고, 해당 [**ButtonBase::Click**](/uwp/api/windows.ui.xaml.controls.primitives.buttonbase.click) 이벤트에 대한 이벤트 처리기를 선언합니다. 이제 **Button** 의 태그가 다음과 같이 표시됩니다.
 
 ```xaml
 <Button x:Name="inputButton" Content="Say &quot;Hello&quot;" Click="inputButton_Click"/>
@@ -192,13 +192,13 @@ namespace winrt::HelloWorldCppWinRT::implementation
 
 이 섹션에서는 텍스트의 모양을 변경합니다(예를 들어 글꼴 크기를 더 크게 변경).
 
-`MainPage.xaml`에서 "이름을 입력하세요." **TextBlock**을 찾습니다. [**Style**](/uwp/api/windows.ui.xaml.style) 속성을 *BaseTextBlockStyle* 시스템 리소스 키의 참조로 설정합니다.
+`MainPage.xaml`에서 "이름을 입력하세요." **TextBlock** 을 찾습니다. [**Style**](/uwp/api/windows.ui.xaml.style) 속성을 *BaseTextBlockStyle* 시스템 리소스 키의 참조로 설정합니다.
 
 ```xaml
 <TextBlock Text="What's your name?" Style="{ThemeResource BaseTextBlockStyle}"/>
 ```
 
-*BaseTextBlockStyle*은 `\Program Files (x86)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\<version>\Generic\generic.xaml`의 [**ResourceDictionary**](/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 정의되는 리소스 키입니다. 해당 스타일을 사용하여 설정되는 속성 값은 다음과 같습니다.
+*BaseTextBlockStyle* 은 `\Program Files (x86)\Windows Kits\10\DesignTime\CommonConfiguration\Neutral\UAP\<version>\Generic\generic.xaml`의 [**ResourceDictionary**](/uwp/api/Windows.UI.Xaml.ResourceDictionary)에 정의되는 리소스 키입니다. 해당 스타일을 사용하여 설정되는 속성 값은 다음과 같습니다.
 
 ```xaml
 <Style x:Key="BaseTextBlockStyle" TargetType="TextBlock">
@@ -212,7 +212,7 @@ namespace winrt::HelloWorldCppWinRT::implementation
 </Style>
 ```
 
-또한 `MainPage.xaml`에서 `greetingOutput`이라는 **TextBlock**을 찾습니다. 마찬가지로 **Style** 속성을 *BaseTextBlockStyle*로 설정합니다. 지금 앱을 빌드하고 실행하면 두 텍스트 블록의 모양이 변경된 것을 볼 수 있습니다(예를 들어 글꼴 크기가 더 크게 변경됨).
+또한 `MainPage.xaml`에서 `greetingOutput`이라는 **TextBlock** 을 찾습니다. 마찬가지로 **Style** 속성을 *BaseTextBlockStyle* 로 설정합니다. 지금 앱을 빌드하고 실행하면 두 텍스트 블록의 모양이 변경된 것을 볼 수 있습니다(예를 들어 글꼴 크기가 더 크게 변경됨).
 
 ## <a name="step-4-have-the-ui-adapt-to-different-window-sizes"></a>4단계. UI를 다양한 창 크기에 맞게 조정
 
@@ -242,6 +242,7 @@ namespace winrt::HelloWorldCppWinRT::implementation
                 </VisualState.Setters>
             </VisualState>
         </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
     ...
 </StackPanel>
 ```
@@ -253,7 +254,7 @@ namespace winrt::HelloWorldCppWinRT::implementation
 두 번째 [**VisualState**](/uwp/api/Windows.UI.Xaml.VisualState), `narrowState`에는 해당 [**MinWindowWidth**](/uwp/api/windows.ui.xaml.adaptivetrigger.minwindowwidth) 속성이 0으로 설정된 [**AdaptiveTrigger**](/uwp/api/Windows.UI.Xaml.AdaptiveTrigger)가 있습니다. 창 너비가 0보다 크지만 641 DIP보다는 작은 경우에 이 상태가 적용됩니다. 정확히 641 DIP에서 `wideState`가 적용됩니다. `narrowState` 상태에서는 UI에 있는 컨트롤의 레이아웃 속성을 변경하도록 [**Setter**](/uwp/api/Windows.UI.Xaml.Setter) 개체를 정의합니다.
 
 - *contentPanel* 요소의 왼쪽 여백을 120에서 20으로 줄입니다.
-- *inputPanel* 요소의 [**Orientation**](/uwp/api/windows.ui.xaml.controls.stackpanel.orientation)을 **Horizontal**에서 **Vertical**로 변경합니다.
+- *inputPanel* 요소의 [**Orientation**](/uwp/api/windows.ui.xaml.controls.stackpanel.orientation)을 **Horizontal** 에서 **Vertical** 로 변경합니다.
 - 4 DIP의 상단 여백을 *inputButton* 요소에 추가합니다.
 
 ## <a name="summary"></a>요약

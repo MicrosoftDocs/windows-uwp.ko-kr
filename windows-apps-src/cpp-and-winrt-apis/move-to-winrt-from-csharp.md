@@ -5,12 +5,12 @@ ms.date: 07/15/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, cpp, WinRT, 프로젝션, 이식, 마이그레이션, C#
 ms.localizationpriority: medium
-ms.openlocfilehash: f107de951c527b9ca4405d1f22870389a219f441
-ms.sourcegitcommit: 2e691ec4998467c8c5525031a00f0213dcce3b6b
+ms.openlocfilehash: f4dbffbee1ecabf89d316fe0d497162c0b1f6312
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98193205"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101824407"
 ---
 # <a name="move-to-cwinrt-from-c"></a>C#에서 C++/WinRT로 이동
 
@@ -38,17 +38,17 @@ UWP(유니버설 Windows 플랫폼) 앱 샘플 중 하나를 이식하는 방법
 
 | 작업 | Content |
 | - | - |
-|Windows 런타임 구성 요소(WRC) 작성|특정 기능(또는 특정 API)은 C++에서만 사용할 수 있습니다. 해당 기능을 C++/WinRT WRC의 한 요소로 포함시킨 다음, C# 앱 등에서 WRC를 사용할 수 있습니다. [C++/WinRT를 사용한 Windows 런타임 구성 요소](/windows/uwp/winrt-components/create-a-windows-runtime-component-in-cppwinrt) 및 [Windows 런타임 구성 요소에서 런타임 클래스를 작성하는 경우](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-authoring-a-runtime-class-in-a-windows-runtime-component)를 참조하세요.|
-|비동기 메서드 포팅|C++/WinRT 런타임 클래스에서 비동기 메서드의 첫 번째 줄을 `auto lifetime = get_strong();`으로 지정하는 것이 좋습니다([클래스 멤버 코루틴의 *이* 포인터에 안전하게 액세스](/windows/uwp/cpp-and-winrt-apis/weak-references#safely-accessing-the-this-pointer-in-a-class-member-coroutine) 참조).<br><br>`Task`에서 포팅. <a href="#id_async_action">비동기 작업</a>을 참조하세요.<br>`Task<T>`에서 포팅. <a href="#id_async_operation">비동기 연산</a>을 참조하세요.<br>`async void`에서 포팅. <a href="#id_fire_and_forget">Fire-and-forget 메서드</a>를 참조하세요.|
-|클래스 포팅|먼저 클래스가 런타임 클래스여야 하는지, 아니면 일반 클래스여도 되는지 결정해야 합니다. 이를 결정하는 데 도움이 되는 [C++/WinRT를 통한 API 작성](/windows/uwp/cpp-and-winrt-apis/author-apis)의 맨 첫 부분을 참조하세요. 그런 다음, 아래의 세 행을 참조하세요.|
-|런타임 클래스 포팅|C++ 앱 외부의 기능을 공유하는 클래스 또는 XAML 데이터 바인딩에서 사용되는 클래스를 공유하는 클래스. [Windows 런타임 구성 요소에서 런타임 클래스를 작성하는 경우](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-authoring-a-runtime-class-in-a-windows-runtime-component) 또는 [XAML UI에서 참조할 런타임 클래스를 작성하는 경우](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-authoring-a-runtime-class-to-be-referenced-in-your-xaml-ui)를 참조하세요.<br><br>이러한 링크에는 자세한 설명이 나와 있지만 런타임 클래스는 IDL로 선언되어야 합니다. 프로젝트에 이미 IDL 파일이 포함되어 있는 경우(예: `Project.idl`) 해당 파일에 새 런타임 클래스를 선언하는 것이 좋습니다. IDL에서는 앱 외부에서 사용되거나 XAML에서 사용되는 모든 메서드 및 데이터 멤버를 선언합니다. IDL 파일을 업데이트한 후 다시 빌드하고 프로젝트의 `Generated Files` 폴더에 생성된 스텁 파일(`.h` 및 `.cpp`)을 확인합니다(**솔루션 탐색기** 에서는 프로젝트 노드를 선택한 상태에서 **모든 파일 표시** 를 활성화합니다). 스텁 파일을 프로젝트에 이미 있는 파일과 비교하여 파일을 추가하거나 필요한 경우 함수 시그니처를 추가/업데이트합니다. 스텁 파일 구문은 항상 올바르지만 빌드 오류를 최소화하기 위해 사용하는 것이 좋습니다. 프로젝트의 스텁이 스텁 파일의 스텁과 일치하면 C# 코드를 포팅하여 계속해서 구현할 수 있습니다. |
-|일반 클래스 포팅|런타임 클래스를 작성하지 [않는 경우](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-not-authoring-a-runtime-class)를 참조하세요.|
-|작성자 IDL|[Microsoft 인터페이스 정의 언어 3.0 소개](/uwp/midl-3/intro)<br>[XAML UI에서 참조할 런타임 클래스를 작성하는 경우](/windows/uwp/cpp-and-winrt-apis/author-apis#if-youre-authoring-a-runtime-class-to-be-referenced-in-your-xaml-ui)<br>[XAML 태그에서 개체 사용](/windows/uwp/cpp-and-winrt-apis/binding-property#consuming-objects-from-xaml-markup)<br>[IDL에서 런타임 클래스 정의](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp#define-your-runtime-classes-in-idl)|
-|컬렉션 포팅|[C++/WinRT로 작성된 컬렉션](/windows/uwp/cpp-and-winrt-apis/collections)<br>[XAML 태그에서 데이터 원본을 사용할 수 있도록 만들기](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp#making-a-data-source-available-to-xaml-markup)<br><a href="#id_associative_container">결합형 컨테이너</a><br><a href="#id_vector_member_access">벡터 멤버 액세스</a>|
+|Windows 런타임 구성 요소(WRC) 작성|특정 기능(또는 특정 API)은 C++에서만 사용할 수 있습니다. 해당 기능을 C++/WinRT WRC의 한 요소로 포함시킨 다음, C# 앱 등에서 WRC를 사용할 수 있습니다. [C++/WinRT를 사용한 Windows 런타임 구성 요소](../winrt-components/create-a-windows-runtime-component-in-cppwinrt.md) 및 [Windows 런타임 구성 요소에서 런타임 클래스를 작성하는 경우](./author-apis.md#if-youre-authoring-a-runtime-class-in-a-windows-runtime-component)를 참조하세요.|
+|비동기 메서드 포팅|C++/WinRT 런타임 클래스에서 비동기 메서드의 첫 번째 줄을 `auto lifetime = get_strong();`으로 지정하는 것이 좋습니다([클래스 멤버 코루틴의 *이* 포인터에 안전하게 액세스](./weak-references.md#safely-accessing-the-this-pointer-in-a-class-member-coroutine) 참조).<br><br>`Task`에서 포팅. <a href="#id_async_action">비동기 작업</a>을 참조하세요.<br>`Task<T>`에서 포팅. <a href="#id_async_operation">비동기 연산</a>을 참조하세요.<br>`async void`에서 포팅. <a href="#id_fire_and_forget">Fire-and-forget 메서드</a>를 참조하세요.|
+|클래스 포팅|먼저 클래스가 런타임 클래스여야 하는지, 아니면 일반 클래스여도 되는지 결정해야 합니다. 이를 결정하는 데 도움이 되는 [C++/WinRT를 통한 API 작성](./author-apis.md)의 맨 첫 부분을 참조하세요. 그런 다음, 아래의 세 행을 참조하세요.|
+|런타임 클래스 포팅|C++ 앱 외부의 기능을 공유하는 클래스 또는 XAML 데이터 바인딩에서 사용되는 클래스를 공유하는 클래스. [Windows 런타임 구성 요소에서 런타임 클래스를 작성하는 경우](./author-apis.md#if-youre-authoring-a-runtime-class-in-a-windows-runtime-component) 또는 [XAML UI에서 참조할 런타임 클래스를 작성하는 경우](./author-apis.md#if-youre-authoring-a-runtime-class-to-be-referenced-in-your-xaml-ui)를 참조하세요.<br><br>이러한 링크에는 자세한 설명이 나와 있지만 런타임 클래스는 IDL로 선언되어야 합니다. 프로젝트에 이미 IDL 파일이 포함되어 있는 경우(예: `Project.idl`) 해당 파일에 새 런타임 클래스를 선언하는 것이 좋습니다. IDL에서는 앱 외부에서 사용되거나 XAML에서 사용되는 모든 메서드 및 데이터 멤버를 선언합니다. IDL 파일을 업데이트한 후 다시 빌드하고 프로젝트의 `Generated Files` 폴더에 생성된 스텁 파일(`.h` 및 `.cpp`)을 확인합니다(**솔루션 탐색기** 에서는 프로젝트 노드를 선택한 상태에서 **모든 파일 표시** 를 활성화합니다). 스텁 파일을 프로젝트에 이미 있는 파일과 비교하여 파일을 추가하거나 필요한 경우 함수 시그니처를 추가/업데이트합니다. 스텁 파일 구문은 항상 올바르지만 빌드 오류를 최소화하기 위해 사용하는 것이 좋습니다. 프로젝트의 스텁이 스텁 파일의 스텁과 일치하면 C# 코드를 포팅하여 계속해서 구현할 수 있습니다. |
+|일반 클래스 포팅|런타임 클래스를 작성하지 [않는 경우](./author-apis.md#if-youre-not-authoring-a-runtime-class)를 참조하세요.|
+|작성자 IDL|[Microsoft 인터페이스 정의 언어 3.0 소개](/uwp/midl-3/intro)<br>[XAML UI에서 참조할 런타임 클래스를 작성하는 경우](./author-apis.md#if-youre-authoring-a-runtime-class-to-be-referenced-in-your-xaml-ui)<br>[XAML 태그에서 개체 사용](./binding-property.md#consuming-objects-from-xaml-markup)<br>[IDL에서 런타임 클래스 정의](#define-your-runtime-classes-in-idl)|
+|컬렉션 포팅|[C++/WinRT로 작성된 컬렉션](./collections.md)<br>[XAML 태그에서 데이터 원본을 사용할 수 있도록 만들기](#making-a-data-source-available-to-xaml-markup)<br><a href="#id_associative_container">결합형 컨테이너</a><br><a href="#id_vector_member_access">벡터 멤버 액세스</a>|
 |이벤트 포팅|<a href="#id_event_handler_delegate_as_class_member">클래스 멤버인 이벤트 처리기 대리자</a><br><a href="#id_revoke_event_handler_delegate">해지 이벤트 처리기 대리자</a>|
 |메서드 포팅|C#에서: `private async void SampleButton_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e) { ... }`<br>C++/WinRT `.h` 파일로: `fire_and_forget SampleButton_Tapped(IInspectable const&, RoutedEventArgs const&);`<br>C++/WinRT `.cpp` 파일로: `fire_and_forget OcrFileImage::SampleButton_Tapped(IInspectable const&, RoutedEventArgs const&) {...}`<br>|
-|문자열 포팅|[C++/WinRT의 문자열 처리](/windows/uwp/cpp-and-winrt-apis/strings)<br>[ToString](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp#tostring)<br>[문자열 작성](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp#string-building)<br>[문자열 boxing 및 unboxing](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp#boxing-and-unboxing-a-string)|
-|형식 변환(형식 캐스팅)|C#: `o.ToString()`<br>C++/WinRT: `to_hstring(static_cast<int>(o))`<br>또한 [ToString](/windows/uwp/cpp-and-winrt-apis/move-to-winrt-from-csharp#tostring)도 참조하세요.<br><br>C#: `(Value)o`<br>C++/WinRT: `unbox_value<Value>(o)`<br>unboxing에 실패하는 경우 throw됩니다. 또한 [boxing 및 unboxing](/windows/uwp/cpp-and-winrt-apis/boxing)도 참조하세요.<br><br>C#: `o as Value? ?? fallback`<br>C++/WinRT: `unbox_value_or<Value>(o, fallback)`<br>unboxing에 실패하는 경우 fallback을 반환합니다. 또한 [boxing 및 unboxing](/windows/uwp/cpp-and-winrt-apis/boxing)도 참조하세요.<br><br>C#: `(Class)o`<br>C++/WinRT: `o.as<Class>()`<br>변환이 실패할 경우 throw됩니다.<br><br>C#: `o as Class`<br>C++/WinRT: `o.try_as<Class>()`<br>변환이 실패할 경우 null을 반환합니다.|
+|문자열 포팅|[C++/WinRT의 문자열 처리](./strings.md)<br>[ToString](#tostring)<br>[문자열 작성](#string-building)<br>[문자열 boxing 및 unboxing](#boxing-and-unboxing-a-string)|
+|형식 변환(형식 캐스팅)|C#: `o.ToString()`<br>C++/WinRT: `to_hstring(static_cast<int>(o))`<br>또한 [ToString](#tostring)도 참조하세요.<br><br>C#: `(Value)o`<br>C++/WinRT: `unbox_value<Value>(o)`<br>unboxing에 실패하는 경우 throw됩니다. 또한 [boxing 및 unboxing](./boxing.md)도 참조하세요.<br><br>C#: `o as Value? ?? fallback`<br>C++/WinRT: `unbox_value_or<Value>(o, fallback)`<br>unboxing에 실패하는 경우 fallback을 반환합니다. 또한 [boxing 및 unboxing](./boxing.md)도 참조하세요.<br><br>C#: `(Class)o`<br>C++/WinRT: `o.as<Class>()`<br>변환이 실패할 경우 throw됩니다.<br><br>C#: `o as Class`<br>C++/WinRT: `o.try_as<Class>()`<br>변환이 실패할 경우 null을 반환합니다.|
 
 ## <a name="changes-that-involve-the-language-projection"></a>언어 프로젝션과 관련된 변경 내용
 
@@ -130,9 +130,9 @@ void OpenButton_Click(Object sender, Windows.UI.Xaml.RoutedEventArgs e);
 | -------- | -- | --------- | -------- |
 |액세스 한정자|`public \<member\>`|`public:`<br>&nbsp;&nbsp;&nbsp;&nbsp;`\<member\>`|[**Button_Click** 메서드 이식](./clipboard-to-winrt-from-csharp.md#button_click)|
 |데이터 멤버 액세스|`this.variable`|`this->variable`||
-|<a name="id_async_action"></a>비동기 작업|`async Task ...`|`IAsyncAction ...`| [**IAsyncAction** 인터페이스](/uwp/api/windows.foundation.iasyncaction), [C++/WinRT로 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency) |
-|<a name="id_async_operation"></a>비동기 연산|`async Task<T> ...`|`IAsyncOperation<T> ...`| [**IAsyncOperation** 인터페이스](/uwp/api/windows.foundation.iasyncoperation), [C++/WinRT로 동시성 및 비동기 작업](/windows/uwp/cpp-and-winrt-apis/concurrency) |
-|<a name="id_fire_and_forget"></a>fire-and-forget 메서드(비동기 함축)|`async void ...`|`winrt::fire_and_forget ...`|[**CopyButton_Click** 메서드 포팅](./clipboard-to-winrt-from-csharp.md#copybutton_click), [Fire and forget](/windows/uwp/cpp-and-winrt-apis/concurrency-2#fire-and-forget)|
+|<a name="id_async_action"></a>비동기 작업|`async Task ...`|`IAsyncAction ...`| [**IAsyncAction** 인터페이스](/uwp/api/windows.foundation.iasyncaction), [C++/WinRT로 동시성 및 비동기 작업](./concurrency.md) |
+|<a name="id_async_operation"></a>비동기 연산|`async Task<T> ...`|`IAsyncOperation<T> ...`| [**IAsyncOperation** 인터페이스](/uwp/api/windows.foundation.iasyncoperation), [C++/WinRT로 동시성 및 비동기 작업](./concurrency.md) |
+|<a name="id_fire_and_forget"></a>fire-and-forget 메서드(비동기 함축)|`async void ...`|`winrt::fire_and_forget ...`|[**CopyButton_Click** 메서드 포팅](./clipboard-to-winrt-from-csharp.md#copybutton_click), [Fire and forget](./concurrency-2.md#fire-and-forget)|
 |열거형 상수 액세스|`E.Value`|`E::Value`|[**DisplayChangedFormats** 메서드 이식](./clipboard-to-winrt-from-csharp.md#displaychangedformats)|
 |협조적 대기|`await ...`|`co_await ...`|[**CopyButton_Click** 메서드 이식](./clipboard-to-winrt-from-csharp.md#copybutton_click)|
 |프로젝션된 형식 컬렉션(프라이빗 필드)|`private List<MyRuntimeClass> myRuntimeClasses = new List<MyRuntimeClass>();`|`std::vector`<br>`<MyNamespace::MyRuntimeClass>`<br>`m_myRuntimeClasses;`||
