@@ -3,12 +3,12 @@ title: WinUI 3 Preview 4(2021년 2월)
 description: WinUI 3 Preview 4 릴리스에 대한 개요입니다.
 ms.date: 02/09/2021
 ms.topic: article
-ms.openlocfilehash: 7bbc5c4983f77080366942ecaf702e7e1f844886
-ms.sourcegitcommit: 884318ec5118cade85a31f4d5644436614e9f272
+ms.openlocfilehash: a6c74ac64e3384b5a1f5cdc466b4faf441f14445
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100524999"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101824087"
 ---
 # <a name="windows-ui-library-3-preview-4-february-2021"></a>Windows UI 라이브러리 3 Preview 4(2021년 2월)
 
@@ -262,36 +262,36 @@ WinUI 3 Preview 4는 Windows 10 2018년 4월 업데이트(버전 1803 - 빌드 1
 
 #### <a name="corewindow-applicationview-coreapplicationview-and-coredispatcher-in-desktop-apps"></a>데스크톱 앱의 CoreWindow, ApplicationView, CoreApplicationView 및 CoreDispatcher
 
-New in Preview4, [CoreWindow](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow), [ApplicationView](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationView), [CoreApplicationView](https://docs.microsoft.com/uwp/api/Windows.ApplicationModel.Core.CoreApplicationView)
-[CoreDispatcher](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreDispatcher) 및 해당 종속성은 데스크톱 앱에서 사용할 수 없습니다.
+New in Preview4, [CoreWindow](/uwp/api/Windows.UI.Core.CoreWindow), [ApplicationView](/uwp/api/Windows.UI.ViewManagement.ApplicationView), [CoreApplicationView](/uwp/api/Windows.ApplicationModel.Core.CoreApplicationView)
+[CoreDispatcher](/uwp/api/Windows.UI.Core.CoreDispatcher) 및 해당 종속성은 데스크톱 앱에서 사용할 수 없습니다.
 
-예를 들어 [Window.Dispatcher](https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Window.Dispatcher) 속성은 항상 null이지만, Window.DispatcherQueue 속성을 대안으로 사용할 수 있습니다.
+예를 들어 [Window.Dispatcher](/uwp/api/Windows.UI.Xaml.Window.Dispatcher) 속성은 항상 null이지만, Window.DispatcherQueue 속성을 대안으로 사용할 수 있습니다.
 
 이러한 API는 UWP 앱에서만 작동합니다.
 과거 미리 보기에서는 데스크톱 앱에서도 부분적으로 작동했지만 Preview4에서는 완전히 사용하지 않도록 설정되었습니다.
 이러한 API는 스레드당 창이 하나만 있고 WinUI3의 기능 중 하나가 여러 개를 사용할 수 있는 UWP 사례를 위해 설계되었습니다.
 
-이러한 API의 존재 여부에 내부적으로 의존하는 API가 있으므로 결과적으로 데스크톱 앱에서 지원되지 않습니다. 이러한 API에는 일반적으로 정적 `GetForCurrentView` 메서드가 있습니다. 예를 들어 [UIViewSettings.GetForCurrentView](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.UIViewSettings.GetForCurrentView)가 있습니다.
+이러한 API의 존재 여부에 내부적으로 의존하는 API가 있으므로 결과적으로 데스크톱 앱에서 지원되지 않습니다. 이러한 API에는 일반적으로 정적 `GetForCurrentView` 메서드가 있습니다. 예를 들어 [UIViewSettings.GetForCurrentView](/uwp/api/Windows.UI.ViewManagement.UIViewSettings.GetForCurrentView)가 있습니다.
 
 
 ### <a name="known-issues"></a>알려진 문제
 
 - Alt+F4는 데스크톱 앱 창을 닫지 않습니다.
 
-- [CoreWindow](https://docs.microsoft.com/uwp/api/windows.ui.core.corewindow)의 변경으로 인해, 다음 WinRT API가 더 이상 **데스크톱** 앱에서 예상대로 작동하지 않을 수 있습니다.
-  - [`ApplicationView`](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.applicationview) 및 관련된 모든 API가 더 이상 작동하지 않습니다.
-  - [`CoreApplicationView`](https://docs.microsoft.com/uwp/api/windows.applicationmodel.core.coreapplicationview) 및 관련된 모든 API가 더 이상 작동하지 않습니다.
-  - 모든 `GetForCurrentView` API가 지원되지 않을 수 있습니다(예: [`CoreInputView.GetForCurrentView`](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.Core.CoreInputView.GetForCurrentView)).
-  - [`CoreWindow.GetForCurrentThread`](https://docs.microsoft.com/uwp/api/Windows.UI.Core.CoreWindow.GetForCurrentThread)가 이제 null을 반환합니다.
+- [CoreWindow](/uwp/api/windows.ui.core.corewindow)의 변경으로 인해, 다음 WinRT API가 더 이상 **데스크톱** 앱에서 예상대로 작동하지 않을 수 있습니다.
+  - [`ApplicationView`](/uwp/api/windows.ui.viewmanagement.applicationview) 및 관련된 모든 API가 더 이상 작동하지 않습니다.
+  - [`CoreApplicationView`](/uwp/api/windows.applicationmodel.core.coreapplicationview) 및 관련된 모든 API가 더 이상 작동하지 않습니다.
+  - 모든 `GetForCurrentView` API가 지원되지 않을 수 있습니다(예: [`CoreInputView.GetForCurrentView`](/uwp/api/Windows.UI.ViewManagement.Core.CoreInputView.GetForCurrentView)).
+  - [`CoreWindow.GetForCurrentThread`](/uwp/api/Windows.UI.Core.CoreWindow.GetForCurrentThread)가 이제 null을 반환합니다.
 
-  WinUI 3 데스크톱 앱에서 WinRT API를 사용하는 방법에 대한 자세한 내용은 [데스크톱 앱에서 사용할 수 있는 Windows 런타임 API](https://docs.microsoft.com/windows/apps/desktop/modernize/desktop-to-uwp-supported-api
+  WinUI 3 데스크톱 앱에서 WinRT API를 사용하는 방법에 대한 자세한 내용은 [데스크톱 앱에서 사용할 수 있는 Windows 런타임 API](../../desktop/modernize/desktop-to-uwp-supported-api.md
 )를 참조하세요.
 
-- [UISettings.ColorValuesChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.uisettings.colorvalueschanged) 및 [AccessibilitySettings.HighContrastChanged 이벤트](https://docs.microsoft.com/uwp/api/windows.ui.viewmanagement.accessibilitysettings.highcontrastchanged)는 더 이상 데스크톱 앱에서 지원되지 않습니다. Windows 테마의 변경 사항을 감지하는 데 사용하는 경우 문제가 발생할 수 있습니다. 
+- [UISettings.ColorValuesChanged 이벤트](/uwp/api/windows.ui.viewmanagement.uisettings.colorvalueschanged) 및 [AccessibilitySettings.HighContrastChanged 이벤트](/uwp/api/windows.ui.viewmanagement.accessibilitysettings.highcontrastchanged)는 더 이상 데스크톱 앱에서 지원되지 않습니다. Windows 테마의 변경 사항을 감지하는 데 사용하는 경우 문제가 발생할 수 있습니다. 
 
 - 이 릴리스에는 몇 가지 실험적 API가 포함되어 있습니다. 팀에서 이를 철저히 테스트하지 않아 알 수 없는 문제가 있을 수 있습니다. 문제가 발생하면 리포지토리에서 [버그를 신고](https://github.com/microsoft/microsoft-ui-xaml/issues/new?assignees=&labels=&template=bug_report.md&title=)하세요. 
 
-- 이전에는 CompositionCapabilities 인스턴스를 가져오려면 [CompositionCapabilites.GetForCurrentView()](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositioncapabilities.getforcurrentview)를 호출했습니다. 그러나 이 호출에서 반환된 기능은 보기에 종속되지 *않았습니다*. 이 문제를 해결하고 반영하기 위해 이번 릴리스에서 GetForCurrentView() static을 삭제했으므로 이제 [CompositionCapabilties](https://docs.microsoft.com/uwp/api/windows.ui.composition.compositioncapabilities) 객체를 직접 만들 수 있습니다.
+- 이전에는 CompositionCapabilities 인스턴스를 가져오려면 [CompositionCapabilites.GetForCurrentView()](/uwp/api/windows.ui.composition.compositioncapabilities.getforcurrentview)를 호출했습니다. 그러나 이 호출에서 반환된 기능은 보기에 종속되지 *않았습니다*. 이 문제를 해결하고 반영하기 위해 이번 릴리스에서 GetForCurrentView() static을 삭제했으므로 이제 [CompositionCapabilties](/uwp/api/windows.ui.composition.compositioncapabilities) 객체를 직접 만들 수 있습니다.
 
 - C#UWP 앱의 경우:
 

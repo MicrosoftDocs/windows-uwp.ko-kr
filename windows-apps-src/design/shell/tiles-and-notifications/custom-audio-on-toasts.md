@@ -7,12 +7,12 @@ ms.date: 12/15/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림, 사용자 지정 오디오, 알림, 오디오, 소리
 ms.localizationpriority: medium
-ms.openlocfilehash: d2d32b9545cccfb25790d394aec028fd29904ca5
-ms.sourcegitcommit: 140bbbab0f863a7a1febee85f736b0412bff1ae7
+ms.openlocfilehash: 54f890ceb0031b4c244e387e1f7068615a2fedc1
+ms.sourcegitcommit: 98ca28fd0b5d306d35f3919fe9dd4d5a0222235e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984409"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102029826"
 ---
 # <a name="custom-audio-on-toasts"></a>알림을의 사용자 지정 오디오
 
@@ -76,7 +76,7 @@ if (supportsCustomAudio)
 
 ## <a name="send-the-notification"></a>알림 보내기
 
-오디오와 함께 알림을 보내는 것은 정기적인 알림을 보내는 것과 같습니다. 자세한 내용은 [로컬 알림 보내기](send-local-toast.md) 를 참조 하세요.
+오디오가 포함 된 알림을 보내는 것은 정기적인 알림을 보내는 것과 같습니다. 자세한 내용은 [로컬 알림 보내기](send-local-toast.md) 를 참조 하세요.
 
 
 ## <a name="related-topics"></a>관련 항목
