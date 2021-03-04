@@ -1,16 +1,16 @@
 ---
-title: Cortana VCD 문구 목록 동적 수정-Cortana UWP 디자인 및 개발
+title: Cortana VCD 문구 목록의 동적 수정 - Cortana UWP 디자인 및 개발
 description: 음성 인식 결과를 사용 하 여 런타임에 VCD (음성 명령 정의) 파일에서 지원 되는 구 (PhraseList 요소) 목록에 액세스 하 고 업데이트 합니다.
 ms.assetid: b497145b-c7a0-454a-8329-6bc1228953bb
 ms.date: 01/28/2021
 ms.topic: article
 keywords: 나
-ms.openlocfilehash: 1f61a08e9eeb66371ed39b44eb39dacbc1bf3cf5
-ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
+ms.openlocfilehash: 5c28330a975b66c2f04baba1d0df58b38d684356
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99606038"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101824417"
 ---
 # <a name="dynamically-modify-cortana-vcd-phrase-lists"></a>Cortana VCD 문구 목록 동적 수정
 
@@ -47,8 +47,8 @@ ms.locfileid: "99606038"
 >
 > UWP (유니버설 Windows 플랫폼) 앱을 처음 개발 하는 경우 여기에 설명 된 기술에 익숙해질 수 있도록 다음 항목을 참조 하세요.
 >
-> - [첫 번째 앱 만들기](/windows/uwp/get-started/your-first-app)
-> - [이벤트 및 라우트된 이벤트](/windows/uwp/xaml-platform/events-and-routed-events-overview) 를 사용 하 여 이벤트에 대해 알아보기 개요
+> - [첫 번째 앱 만들기](../../get-started/your-first-app.md)
+> - [이벤트 및 라우트된 이벤트](../../xaml-platform/events-and-routed-events-overview.md) 를 사용 하 여 이벤트에 대해 알아보기 개요
 >
 > **사용자 환경 지침**
 >

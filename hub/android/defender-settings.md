@@ -1,18 +1,18 @@
 ---
 title: Defender 설정을 업데이트 하 여 성능 속도 향상
-description: 지정 된 파일 형식 확인을 제외 하도록 Windows Defender 설정을 업데이트 하 여 성능 속도와 빌드 시간을 개선 하는 방법에 대해 알아봅니다.
+description: 지정 된 파일 형식 확인을 제외 하도록 Windows Defender 설정을 업데이트 하 여 전반적인 성능 속도 및 빌드 시간을 개선 하는 방법에 대 한 지침입니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
 keywords: android, windows, windows defender, 설정, 구성, 제외,% USERPROFILE%, devenv.exe, 성능, 속도, 빌드, gradle
 ms.date: 04/28/2020
-ms.openlocfilehash: 0437ffc263c618e52c7a3e4dc3256e9fcd502c8e
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: e762e595bf2b8aa9b8420d41f68d2890e7d5dfe0
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89154867"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823207"
 ---
 # <a name="update-windows-defender-settings-to-improve-performance"></a>성능 향상을 위한 Windows Defender 설정 업데이트
 
@@ -22,7 +22,7 @@ ms.locfileid: "89154867"
 
 Windows 10 버전 1703 이상에서 windows [Defender 바이러스 백신](/windows/security/threat-protection/windows-defender-antivirus/windows-defender-security-center-antivirus) 앱은 windows 보안의 일부입니다. Windows Defender는 바이러스, 랜 섬 웨어, 스파이웨어 및 기타 보안 위협에 대해 기본 제공 되는 실시간 보호를 통해 PC를 안전 하 게 유지 하는 것을 목표로 합니다.
 
-**그러나**Windows Defender의 실시간 보호를 사용 하면 Android 앱을 개발할 때 파일 시스템 액세스 및 빌드 속도가 크게 느려질 수 있습니다.
+**그러나** Windows Defender의 실시간 보호를 사용 하면 Android 앱을 개발할 때 파일 시스템 액세스 및 빌드 속도가 크게 느려질 수 있습니다.
 
 Android 빌드 프로세스 중에 많은 파일이 컴퓨터에 만들어집니다. 바이러스 백신 실시간 검사를 사용 하도록 설정 하면 바이러스 백신에서 해당 파일을 검색 하는 동안 새 파일이 만들어질 때마다 빌드 프로세스가 중단 됩니다.
 
@@ -40,7 +40,7 @@ Android 빌드 속도를 향상 시키려면 다음을 수행 하 여 [Windows D
 3. **바이러스 및 위협 방지** 선택
 4. **바이러스 & 위협 방지 설정** 에서 **설정 관리** 를 선택 합니다.
 5. **제외** 제목으로 스크롤하고 **제외 추가 또는 제거** 를 선택 합니다.
-6. **+ 제외 추가**를 선택 합니다. 그런 다음 추가 하려는 제외가 **파일**, **폴더**, **파일 형식**또는 **프로세스**인지 여부를 선택 해야 합니다.
+6. **+ 제외 추가** 를 선택 합니다. 그런 다음 추가 하려는 제외가 **파일**, **폴더**, **파일 형식** 또는 **프로세스** 인지 여부를 선택 해야 합니다.
 
 ![Windows Defender 제외 추가 스크린샷](../images/windows-defender-exclusions.png)
 

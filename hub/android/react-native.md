@@ -1,18 +1,18 @@
 ---
 title: Windows에서 Android 개발용 네이티브에 반응
-description: Windows에서 Xamarin Native를 사용 하 여 Android 앱 개발을 시작 하세요.
+description: Windows에서 기본 동작을 사용 하 여 Android 장치에서 작동 하는 플랫폼 간 앱을 만드는 방법에 대 한 단계별 가이드입니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
 keywords: android, windows, 기본, 에뮬레이터, azure, 번들러, metro, 터미널
 ms.date: 04/28/2020
-ms.openlocfilehash: 50c117154b103ca4e201f21bc643e7cbfa609b84
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 82bf078d6c29c8968ce3e0cc19ce4d6f803e6d71
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157717"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823227"
 ---
 # <a name="get-started-developing-for-android-using-react-native"></a>네이티브 응답을 사용 하 여 Android 개발 시작
 
@@ -30,7 +30,7 @@ ms.locfileid: "89157717"
 
 3. Java SDK 및 Android SDK에 대 한 환경 변수 경로를 만듭니다.
     - Windows 검색 메뉴에서 "시스템 환경 변수 편집"을 입력 하면 **시스템 속성** 창이 열립니다.
-    - **환경 변수 ...** 를 선택한 다음 **사용자 변수**에서 **새로 만들기 ...** 를 선택 합니다.
+    - **환경 변수 ...** 를 선택한 다음 **사용자 변수** 에서 **새로 만들기 ...** 를 선택 합니다.
     - 변수 이름 및 값 (경로)을 입력 합니다. Java 및 Android Sdk의 기본 경로는 다음과 같습니다. Java 및 Android Sdk를 설치할 특정 위치를 선택한 경우 변수 경로를 적절 하 게 업데이트 해야 합니다.
         - JAVA_HOME: C:\Program Files\Android\Android Studio\jre\jre
         - ANDROID_HOME: C:\Users\username\AppData\Local\Android\Sdk
@@ -50,7 +50,7 @@ ms.locfileid: "89157717"
     npm install -g expo-cli
     ```
 
-2. 주문형 o를 사용 하 여 iOS, Android 및 웹에서 실행 되는 반응 네이티브 앱을 만듭니다. 그런 다음 **공백**, **공백 (typescript)**, **탭** (반응 탐색을 사용 하는 예제 화면), **최소**또는 **최소 (typescript)** 를 포함 하는 프로젝트 템플릿을 선택 해야 합니다.
+2. 주문형 o를 사용 하 여 iOS, Android 및 웹에서 실행 되는 반응 네이티브 앱을 만듭니다. 그런 다음 **공백**, **공백 (typescript)**, **탭** (반응 탐색을 사용 하는 예제 화면), **최소** 또는 **최소 (typescript)** 를 포함 하는 프로젝트 템플릿을 선택 해야 합니다.
 
     ```powershell
     expo init my-new-app
@@ -73,13 +73,13 @@ ms.locfileid: "89157717"
 
     ![브라우저의 Metro 번들러 스크린샷](../images/metro-bundler.png)
 
-5. Android 장치에서 실행 되는 프로젝트를 보려면 먼저 Android 장치에 Google Play 스토어를 사용 하 여 주문형 [o 클라이언트 앱을 설치](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_US) 해야 합니다. 주문형 o 클라이언트 앱이 설치 되 면 장치에서 열고 **QR 코드 스캔**을 선택 합니다. QR 코드를 등록 한 후에는 장치 및 브라우저의 localhost에서 실행 되는 Metro 번들러 창 모두에서 패키지 빌드를 볼 수 있습니다.
+5. Android 장치에서 실행 되는 프로젝트를 보려면 먼저 Android 장치에 Google Play 스토어를 사용 하 여 주문형 [o 클라이언트 앱을 설치](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en_US) 해야 합니다. 주문형 o 클라이언트 앱이 설치 되 면 장치에서 열고 **QR 코드 스캔** 을 선택 합니다. QR 코드를 등록 한 후에는 장치 및 브라우저의 localhost에서 실행 되는 Metro 번들러 창 모두에서 패키지 빌드를 볼 수 있습니다.
 
-6. Android 에뮬레이터에서 실행 되는 프로젝트를 보려면 먼저 Android Studio를 열고 가상 장치를 만들고 시작 해야 합니다. **도구**  >  **Avd 관리자**  >  **[+ 가상 장치 만들기](https://developer.android.com/studio/run/managing-avds#createavd)**... 가상 장치를 만든 후에는 Android 가상 Device Manager의 **작업** 열 아래에서 시작 단추를 선택 하 여 장치 에뮬레이트를 시작 ▷. 가상 장치가 열리면 인터넷 브라우저 창에서 실행 되는 Metro 번들러 창으로 돌아가서 왼쪽 열에서 "Android 장치/에뮬레이터에서 실행"을 선택 합니다. Metro 번들러 "시뮬레이터를 여는 중 ..." 라는 팝업이 표시 됩니다. 그런 다음 에뮬레이트된 Android 장치에서 클라이언트 앱이 열린 것을 확인 하 고 JavaScript 번들 다운로드가 완료 되 면 반응 하는 네이티브 앱이 표시 되는 것을 볼 수 있습니다. 문제가 발생 하는 경우에 [는 Android 에뮬레이터 문서를](https://docs.expo.io/workflow/android-studio-emulator/)참조 하세요.
+6. Android 에뮬레이터에서 실행 되는 프로젝트를 보려면 먼저 Android Studio를 열고 가상 장치를 만들고 시작 해야 합니다. **도구**  >  **Avd 관리자**  >  **[+ 가상 장치 만들기](https://developer.android.com/studio/run/managing-avds#createavd)**... 가상 장치를 만든 후에는 Android 가상 장치 관리자의 **작업** 열 아래에서 시작 단추를 선택 하 여 장치 에뮬레이트를 시작 ▷. 가상 장치가 열리면 인터넷 브라우저 창에서 실행 되는 Metro 번들러 창으로 돌아가서 왼쪽 열에서 "Android 장치/에뮬레이터에서 실행"을 선택 합니다. Metro 번들러 "시뮬레이터를 여는 중 ..." 라는 팝업이 표시 됩니다. 그런 다음 에뮬레이트된 Android 장치에서 클라이언트 앱이 열린 것을 확인 하 고 JavaScript 번들 다운로드가 완료 되 면 반응 하는 네이티브 앱이 표시 되는 것을 볼 수 있습니다. 문제가 발생 하는 경우에 [는 Android 에뮬레이터 문서를](https://docs.expo.io/workflow/android-studio-emulator/)참조 하세요.
 
 7. 반응 하는 네이티브 프로젝트를 열어 앱에서 작업을 시작 합니다. 사용자의 장치 또는 Android Emulator에서 자동으로 실행 되는 앱에서 변경 내용이 자동으로 업데이트 되는 것을 볼 수 있습니다.
 
-8. 방문 페이지 보기 텍스트를 "Hello World!"로 변경해 보세요. 선택한 IDE에서이 작업을 수행할 수 있습니다. VS Code 또는 Android Studio 하는 것이 좋습니다. 방문 페이지 파일은 선택한 템플릿에 따라 달라 집니다. , 또는 일 수 있습니다 `App.js` `App.tsx` `HomeScreen.js` .
+8. 방문 페이지 보기 텍스트를 "헬로 월드!"로 변경해 보세요. 선택한 IDE에서이 작업을 수행할 수 있습니다. VS Code 또는 Android Studio 하는 것이 좋습니다. 방문 페이지 파일은 선택한 템플릿에 따라 달라 집니다. , 또는 일 수 있습니다 `App.js` `App.tsx` `HomeScreen.js` .
 
     ```typescript
     export default function App() {
@@ -107,7 +107,7 @@ ms.locfileid: "89157717"
 > [!TIP]
 > Windows 10 앱으로 실행 되도록 반응 하는 네이티브 앱에 대 한 지원을 추가 하려면 [windows 용 기본 응답 시작](https://microsoft.github.io/react-native-windows/docs/getting-started) 문서를 참조 하세요.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](/dual-screen/android/)
 

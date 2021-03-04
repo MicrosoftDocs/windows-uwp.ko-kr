@@ -1,16 +1,16 @@
 ---
-title: Cortana의 백그라운드 앱에서 전경 앱으로의 딥 링크-Cortana UWP 디자인 및 개발
+title: Cortana의 백그라운드 앱에서 포그라운드 앱으로 딥 링크 - Cortana UWP 디자인 및 개발
 description: 앱을 특정 상태나 컨텍스트에서 포그라운드로 시작 하는 **Cortana** 의 백그라운드 앱에서 심층 링크를 제공 합니다.
 ms.assetid: 6fe5fcc5-9ee4-4c04-92f4-7b1bf7ef5651
 ms.date: 01/28/2021
 ms.topic: article
 keywords: 나
-ms.openlocfilehash: d96e54604c5def61802a77625a6c18c556db909d
-ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
+ms.openlocfilehash: 5096e4897d5a75be70deaf272ec52c151c1ad871
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99606058"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823497"
 ---
 # <a name="deep-link-from-a-background-app-in-cortana-to-a-foreground-app"></a>Cortana의 백그라운드 앱에서 포그라운드 앱으로의 딥 링크
 
@@ -230,7 +230,7 @@ await  VoiceCommandServiceConnection.RequestAppLaunchAsync(response);
 
 ## <a name="protocol-contract"></a>프로토콜 계약
 
-응용 프로그램은 [**프로토콜**](/uwp/api/Windows.ApplicationModel.Activation.ActivationKind) 계약을 사용 하 여 URI (Uniform resource Identifier) 활성화를 통해 포그라운드로 시작 됩니다. 앱은 앱의 [**Onactivated**](/uwp/api/Windows.UI.Xaml.Application) 된 이벤트를 재정의 하 고 **ActivationKind** **프로토콜** 을 확인 해야 합니다. 자세한 내용은 [URI 활성화 처리](/windows/uwp/launch-resume/handle-uri-activation)를 참조 하세요.
+응용 프로그램은 [**프로토콜**](/uwp/api/Windows.ApplicationModel.Activation.ActivationKind) 계약을 사용 하 여 URI (Uniform resource Identifier) 활성화를 통해 포그라운드로 시작 됩니다. 앱은 앱의 [**Onactivated**](/uwp/api/Windows.UI.Xaml.Application) 된 이벤트를 재정의 하 고 **ActivationKind** **프로토콜** 을 확인 해야 합니다. 자세한 내용은 [URI 활성화 처리](../../launch-resume/handle-uri-activation.md)를 참조 하세요.
 
 여기서는 [**ProtocolActivatedEventArgs**](/uwp/api/Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs) 에서 제공 하는 URI를 디코딩하여 시작 인수에 액세스 합니다. 이 예제에서 [**Uri**](/uwp/api/Windows.ApplicationModel.Activation.ProtocolActivatedEventArgs) 는 "personalassistantlaunch:?로 설정 됩니다. LaunchContext = Las Vegas "입니다.
 

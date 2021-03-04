@@ -6,12 +6,12 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 62085377da89d64c8ba0799dc6bab13c17675f90
-ms.sourcegitcommit: 39fb8c0dff1b98ededca2f12e8ea7977c2eddbce
+ms.openlocfilehash: ba3a01487dd962ffb119d808ef951c891a8b9443
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91750679"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101824467"
 ---
 # <a name="porting-windows-runtime-8x-xaml-and-ui-to-uwp"></a>Windows 런타임 .x XAML 및 UI를 UWP로 포팅
 
@@ -88,7 +88,7 @@ ms.locfileid: "91750679"
 
 Windows 10에서 실행 되는 Universal 8.1 앱은 컨트롤에 대 한 8.1 모양 및 동작을 유지 합니다. 그러나 해당 앱을 Windows 10 앱에 이식할 때는 모양과 동작에서 알아야 할 몇 가지 차이점이 있습니다. 컨트롤의 아키텍처와 디자인은 기본적으로 Windows 10 앱에서 변경 되지 않으므로 대부분의 디자인 언어, 단순화 및 유용성 향상을 기반으로 합니다.
 
-**참고**    PointerOver 상태는 Windows 10 앱의 사용자 지정 스타일/템플릿과 관련 되 Windows 런타임 고, Windows Phone 스토어 앱에서는 제외 됩니다. 이러한 이유로 Windows 10 앱에 대해 지원 되는 시스템 리소스 키로 인해 앱을 Windows 10으로 포팅 하는 경우 Windows 런타임 8.x 앱에서 사용자 지정 스타일/템플릿을 다시 사용 하는 것이 좋습니다.
+**참고**   PointerOver 상태는 Windows 10 앱의 사용자 지정 스타일/템플릿과 관련 되 Windows 런타임 고, Windows Phone 스토어 앱에서는 제외 됩니다. 이러한 이유로 Windows 10 앱에 대해 지원 되는 시스템 리소스 키로 인해 앱을 Windows 10으로 포팅 하는 경우 Windows 런타임 8.x 앱에서 사용자 지정 스타일/템플릿을 다시 사용 하는 것이 좋습니다.
 사용자 지정 스타일/템플릿이 최신 시각적 상태 집합을 사용 하 고 있고 기본 스타일/템플릿에 대 한 성능 향상에서 애플리케이션을 빌드하고 하는 것을 확실히 하려면 새 Windows 10 기본 템플릿의 복사본을 편집 하 고 사용자 지정을 다시 적용 합니다. 성능 향상의 한 가지 예는 이전에 **ContentPresenter** 또는 Panel로 포함 된 모든 **테두리가** 제거 되었고 자식 요소가 이제 테두리를 렌더링 한다는 것입니다.
 
 다음은 컨트롤 변경에 대 한 몇 가지 구체적인 예입니다.
@@ -102,25 +102,25 @@ Windows 10에서 실행 되는 Universal 8.1 앱은 컨트롤에 대 한 8.1 모
 | [**CommandBar**](/uwp/api/Windows.UI.Xaml.Controls.AppBar) | Windows 10 앱에서 [**CommandBar**](/uwp/api/Windows.UI.Xaml.Controls.AppBar) 은 [**EdgeGesture**](/uwp/api/windows.ui.input.edgegesture.completed) 및 [**UIElement. righttapped**](/uwp/api/windows.ui.xaml.uielement.righttapped) 이벤트를 처리 하지 않습니다. 또한 누르기 나 살짝 밀기에도 응답 하지 않습니다. 이러한 이벤트를 처리 하 고 [**IsOpen**](/uwp/api/windows.ui.xaml.controls.appbar.isopen)을 설정 하는 옵션이 여전히 있습니다. |
 | [**DatePicker**](/uwp/api/Windows.UI.Xaml.Controls.DatePicker), [ **timepicker**](/uwp/api/Windows.UI.Xaml.Controls.TimePicker) | [**DatePicker**](/uwp/api/Windows.UI.Xaml.Controls.DatePicker) 및 [**timepicker**](/uwp/api/Windows.UI.Xaml.Controls.TimePicker)의 시각적 변경 내용으로 앱이 어떻게 보이는지 검토 합니다. 모바일 장치에서 실행 되는 Windows 10 앱의 경우 이러한 컨트롤은 더 이상 선택 페이지로 이동 하지 않고 해제 가능한 popup을 사용 합니다. |
 | [**DatePicker**](/uwp/api/Windows.UI.Xaml.Controls.DatePicker), [ **timepicker**](/uwp/api/Windows.UI.Xaml.Controls.TimePicker) | Windows 10 앱에서는 [**DatePicker**](/uwp/api/Windows.UI.Xaml.Controls.DatePicker) 또는 [**timepicker**](/uwp/api/Windows.UI.Xaml.Controls.TimePicker) 를 날아가기 내에 배치할 수 없습니다. 이러한 컨트롤이 팝업 컨트롤에 표시 되도록 하려면 [**Datepickerflyout 아웃**](/uwp/api/Windows.UI.Xaml.Controls.DatePickerFlyout) 및 [**timepickerflyout 아웃**](/uwp/api/Windows.UI.Xaml.Controls.TimePickerFlyout)을 사용할 수 있습니다. |
-| **GridView**, **ListView** | **Gridview** / **listview**의 경우 [gridview 및 ListView 변경 내용](#gridview-and-listview-changes)을 참조 하세요. |
+| **GridView**, **ListView** | **Gridview** / **listview** 의 경우 [gridview 및 ListView 변경 내용](#gridview-and-listview-changes)을 참조 하세요. |
 | [**허브**](/uwp/api/Windows.UI.Xaml.Controls.Hub) | Windows Phone 스토어 앱에서는 [**허브**](/uwp/api/Windows.UI.Xaml.Controls.Hub) 컨트롤이 마지막 섹션에서 첫 번째 섹션으로 래핑 됩니다. Windows 런타임 .x 앱 및 Windows 10 앱에서 허브 섹션은 래핑 되지 않습니다. |
 | [**허브**](/uwp/api/Windows.UI.Xaml.Controls.Hub) | Windows Phone 스토어 앱에서 허브 컨트롤의 배경 이미지 [**는 허브 섹션**](/uwp/api/Windows.UI.Xaml.Controls.Hub) 을 기준으로 시차에서 이동 합니다. Windows 런타임 8.x 앱 및 Windows 10 앱에서 시차는 사용 되지 않습니다. |
 | [**허브**](/uwp/api/Windows.UI.Xaml.Controls.Hub)  | 유니버설 8.1 앱에서 [**HubSection IsHeaderInteractive**](/uwp/api/windows.ui.xaml.controls.hubsection.isheaderinteractive) 속성은 섹션 헤더와 그 옆에 렌더링 되는 펼침 문자 모양을 대화형으로 만듭니다. Windows 10 앱에서 헤더 옆에 대화형 "참조" affordance 헤더 자체는 대화형이 아닙니다. **IsHeaderInteractive** 는 상호 작용이 허브를 발생 시키는 지 여부를 계속 결정 합니다 [**. 섹션 headerclick**](/uwp/api/windows.ui.xaml.controls.hub.sectionheaderclick) 이벤트 |
-| **은 windows.ui.popups.messagedialog** | **Messagedialog**를 사용 하는 경우 보다 유연한 [**contentdialog**](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)를 대신 사용 하는 것이 좋습니다. [XAML UI 기본](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) 샘플도 참조 하세요. |
+| **은 windows.ui.popups.messagedialog** | **Messagedialog** 를 사용 하는 경우 보다 유연한 [**contentdialog**](/uwp/api/Windows.UI.Xaml.Controls.ContentDialog)를 대신 사용 하는 것이 좋습니다. [XAML UI 기본](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/XamlUIBasics) 샘플도 참조 하세요. |
 | **Listpickerflyout 아웃** **, ...**  | **Listpickerflyout 아웃** **및가는 Windows** 10 앱에 대해 사용 되지 않습니다. 단일 선택 항목의 경우 [**Menuflyout 아웃**](/uwp/api/Windows.UI.Xaml.Controls.MenuFlyout)을 사용 합니다. 더 복잡 한 환경을 위해 [**플라이 아웃**](/uwp/api/Windows.UI.Xaml.Controls.Flyout)을 사용 합니다. |
 | [**PasswordBox**](/uwp/api/Windows.UI.Xaml.Controls.PasswordBox) | [**IsPasswordRevealButtonEnabled**](/uwp/api/windows.ui.xaml.controls.passwordbox.ispasswordrevealbuttonenabled) 속성은 Windows 10 앱에서 더 이상 사용 되지 않으며 설정 해도 아무런 영향을 주지 않습니다. 대신 [**PasswordRevealMode**](/uwp/api/windows.ui.xaml.controls.passwordbox.passwordrevealmode) 를 사용 합니다 .이는 기본적으로 **피킹 (peeking** )을 사용 합니다 (예 Windows 런타임: 8gb 앱). 또한 [암호 상자에 대 한 지침](../design/controls-and-patterns/password-box.md)을 참조 하세요. |
 | [**Pivot**](/uwp/api/Windows.UI.Xaml.Controls.Pivot) | 이제 [**피벗**](/uwp/api/Windows.UI.Xaml.Controls.Pivot) 컨트롤이 유니버설 이므로 모바일 장치에서 더 이상 사용할 수 없습니다. |
 | [**SearchBox**](/uwp/api/Windows.UI.Xaml.Controls.SearchBox) | [**Searchbox**](/uwp/api/windows.ui.xaml.controls.searchbox) 는 범용 장치 제품군에서 구현 되지만 모바일 장치에서는 완벽 하 게 작동 하지 않습니다. [AutoSuggestBox에서 사용 되지 않는 Searchbox](#searchbox-deprecated-in-favor-of-autosuggestbox)를 참조 하세요. |
-| **SemanticZoom** | **SemanticZoom**의 경우 [SemanticZoom changes](#semanticzoom-changes)를 참조 하세요. |
-| [**ScrollViewer**](/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)  | [**ScrollViewer**](/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) 의 일부 기본 속성이 변경 되었습니다. [**HorizontalScrollMode**](/uwp/api/windows.ui.xaml.controls.scrollviewer.horizontalscrollmode) 은 **auto**이 고 [**VerticalScrollMode**](/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollmode) 가 **Auto 이며 자동**확대 [**모드**](/uwp/api/windows.ui.xaml.controls.scrollviewer.zoommode) 를 **사용할 수**없습니다. 새 기본값이 응용 프로그램에 적합 하지 않은 경우 스타일에서 또는 컨트롤 자체의 로컬 값으로 변경할 수 있습니다.  |
-| [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) | Windows 런타임 8pt 앱에서 [**텍스트 상자**](/uwp/api/Windows.UI.Xaml.Controls.TextBox)에 대 한 맞춤법 검사는 기본적으로 해제 되어 있습니다. Windows Phone 스토어 앱 및 Windows 10 앱에서 기본적으로 설정 되어 있습니다. |
-| [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) | [**텍스트 상자**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) 에 대 한 기본 글꼴 크기가 11에서 15로 변경 되었습니다. |
-| [**TextBox**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) | [**TextReadingOrder**](/uwp/api/windows.ui.xaml.controls.textblock.textreadingorder) 의 기본값은 **기본값** 에서 **DetectFromContent**로 변경 되었습니다. 원치 않는 경우 **UseFlowDirection**를 사용 합니다. **기본값** 은 사용 되지 않습니다. |
+| **SemanticZoom** | **SemanticZoom** 의 경우 [SemanticZoom changes](#semanticzoom-changes)를 참조 하세요. |
+| [**ScrollViewer**](/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)  | [**ScrollViewer**](/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer) 의 일부 기본 속성이 변경 되었습니다. [**HorizontalScrollMode**](/uwp/api/windows.ui.xaml.controls.scrollviewer.horizontalscrollmode) 은 **auto** 이 고 [**VerticalScrollMode**](/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollmode) 가 **Auto 이며 자동** 확대 [**모드**](/uwp/api/windows.ui.xaml.controls.scrollviewer.zoommode) 를 **사용할 수** 없습니다. 새 기본값이 응용 프로그램에 적합 하지 않은 경우 스타일에서 또는 컨트롤 자체의 로컬 값으로 변경할 수 있습니다.  |
+| [**상자로**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) | Windows 런타임 8pt 앱에서 [**텍스트 상자**](/uwp/api/Windows.UI.Xaml.Controls.TextBox)에 대 한 맞춤법 검사는 기본적으로 해제 되어 있습니다. Windows Phone 스토어 앱 및 Windows 10 앱에서 기본적으로 설정 되어 있습니다. |
+| [**상자로**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) | [**텍스트 상자**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) 에 대 한 기본 글꼴 크기가 11에서 15로 변경 되었습니다. |
+| [**상자로**](/uwp/api/Windows.UI.Xaml.Controls.TextBox) | [**TextReadingOrder**](/uwp/api/windows.ui.xaml.controls.textblock.textreadingorder) 의 기본값은 **기본값** 에서 **DetectFromContent** 로 변경 되었습니다. 원치 않는 경우 **UseFlowDirection** 를 사용 합니다. **기본값** 은 사용 되지 않습니다. |
 | 다양 | 강조 색은 Windows Phone 스토어 앱 및 Windows 10 앱에 적용 되지만 Windows 런타임 8.x 앱에는 적용 되지 않습니다.  |
 
-UWP 앱 컨트롤에 대 한 자세한 내용은 [함수 별 컨트롤](../design/controls-and-patterns/controls-by-function.md), 컨트롤 [목록](../design/controls-and-patterns/index.md)및 [컨트롤에 대 한 지침](../design/controls-and-patterns/index.md)을 참조 하세요.
+UWP 앱 컨트롤에 대 한 자세한 내용은 [함수 별 컨트롤](../design/controls-and-patterns/index.md), 컨트롤 [목록](../design/controls-and-patterns/index.md)및 [컨트롤에 대 한 지침](../design/controls-and-patterns/index.md)을 참조 하세요.
 
-##  <a name="design-language-in-windows10"></a>Windows 10의 디자인 언어
+##  <a name="design-language-in-windows-10"></a>Windows 10의 디자인 언어
 
 유니버설 8.1 앱과 Windows 10 앱 간의 디자인 언어에는 약간의 중요 한 차이점이 있습니다. 모든 세부 정보는 [디자인](https://developer.microsoft.com/windows/apps/design)을 참조 하세요. 디자인 언어 변경에도 불구 하 고 설계 원칙은 일관 되 게 유지 됩니다. attentive, fiercely, 시각적 요소를 줄이고, 디지털 도메인에 대 한 인증에 집중 하는 것이 좋습니다. 특히 입력 체계와 함께 비주얼 계층 구조 사용 표에서 디자인 그리고 유체 애니메이션을 사용 하 여 환경을 만들 수 있습니다.
 
@@ -134,7 +134,7 @@ UWP 앱 컨트롤에 대 한 자세한 내용은 [함수 별 컨트롤](../desig
 
 앱이 모든 디스플레이에서 최상의 환경을 제공 하기 위해 각각 특정 배율 인수에 적합 한 크기의 범위로 각 비트맵 자산을 만드는 것이 좋습니다. 100% 규모, 200% 규모 및 400% 규모 (해당 우선 순위)로 자산을 제공 하면 대부분의 경우 중간 규모의 모든 요소에서 뛰어난 결과를 얻을 수 있습니다.
 
-**참고**    어떤 이유로 든, 여러 크기의 자산을 만들 수 없는 경우 100% 규모의 자산을 만들 수 있습니다. Microsoft Visual Studio에서 UWP 앱에 대 한 기본 프로젝트 템플릿은 브랜딩 자산 (타일 이미지 및 로고)을 한 크기로 제공 하지만 100% 눈금은 제공 하지 않습니다. 사용자 고유의 앱에 대 한 자산을 제작 하는 경우이 섹션의 지침에 따라 100%, 200% 및 400% 크기를 제공 하 고 자산 팩을 사용 합니다.
+**참고**  어떤 이유로 든, 여러 크기의 자산을 만들 수 없는 경우 100% 규모의 자산을 만들 수 있습니다. Microsoft Visual Studio에서 UWP 앱에 대 한 기본 프로젝트 템플릿은 브랜딩 자산 (타일 이미지 및 로고)을 한 크기로 제공 하지만 100% 눈금은 제공 하지 않습니다. 사용자 고유의 앱에 대 한 자산을 제작 하는 경우이 섹션의 지침에 따라 100%, 200% 및 400% 크기를 제공 하 고 자산 팩을 사용 합니다.
 
 복잡 한 아트 워크가 있는 경우 더 많은 크기의 자산을 제공 하는 것이 좋습니다. 벡터 아트를 사용 하 여 시작 하는 경우에는 규모에 관계 없이 고품질의 자산을 생성 하기가 비교적 쉽습니다.
 
@@ -146,21 +146,21 @@ UWP 앱 컨트롤에 대 한 자세한 내용은 [함수 별 컨트롤](../desig
 
 [**GridView**](/uwp/api/Windows.UI.Xaml.Controls.GridView) 의 기본 스타일 setter에 대해 몇 가지 변경 내용이 적용 되어 이전에는 기본적으로는 가로를 사용 하지 않고 컨트롤을 세로로 스크롤할 수 있습니다. 프로젝트에서 기본 스타일의 복사본을 편집한 경우 복사본에 이러한 변경 내용이 없으므로 수동으로 설정 해야 합니다. 다음은 변경 내용 목록입니다.
 
--   [**ScrollViewer.HorizontalScrollBarVisibility**](/uwp/api/windows.ui.xaml.controls.scrollviewer.horizontalscrollbarvisibility)에 대한 setter가 **Auto**에서 **Disabled**로 변경되었습니다.
+-   [**ScrollViewer.HorizontalScrollBarVisibility**](/uwp/api/windows.ui.xaml.controls.scrollviewer.horizontalscrollbarvisibility)에 대한 setter가 **Auto** 에서 **Disabled** 로 변경되었습니다.
 -   VerticalScrollBarVisibility의 setter가 ScrollViewer에서 **Auto** **로 변경** 되었습니다 [**.**](/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollbarvisibility)
--   [**ScrollViewer**](/uwp/api/windows.ui.xaml.controls.scrollviewer.horizontalscrollmode) 의 Setter가 **Enabled** 에서 **Disabled**로 변경 되었습니다.
+-   [**ScrollViewer**](/uwp/api/windows.ui.xaml.controls.scrollviewer.horizontalscrollmode) 의 Setter가 **Enabled** 에서 **Disabled** 로 변경 되었습니다.
 -   VerticalScrollMode의 setter가 **Disabled** 에서 [**ScrollViewer**](/uwp/api/windows.ui.xaml.controls.scrollviewer.verticalscrollmode) **로 변경 되었습니다.**
--   [**ItemsPanel**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel)의 Setter에서 ItemsWrapGrid의 값이 **세로** 에서 **가로로**변경 되었습니다 [**.**](/uwp/api/windows.ui.xaml.controls.itemswrapgrid.orientation)
+-   [**ItemsPanel**](/uwp/api/windows.ui.xaml.controls.itemscontrol.itemspanel)의 Setter에서 ItemsWrapGrid의 값이 **세로** 에서 **가로로** 변경 되었습니다 [**.**](/uwp/api/windows.ui.xaml.controls.itemswrapgrid.orientation)
 
-마지막 변경 내용 ( **방향**변경)이 모순 되는 경우 래핑 그리드에 대해 이야기 하 고 있다는 것을 명심 하세요. 가로 방향 줄 바꿈 그리드 (새 값)는 텍스트를 가로로 이동 하 고 페이지 끝에서 다음 줄로 나누는 쓰기 시스템과 유사 합니다. 세로 방향으로 스크롤 하는 것과 같은 텍스트 페이지입니다. 반대로 세로 방향 줄 바꿈 모눈 (이전 값)은 텍스트가 세로로 흐르는 쓰기 시스템과 유사 하므로 가로로 스크롤됩니다.
+마지막 변경 내용 ( **방향** 변경)이 모순 되는 경우 래핑 그리드에 대해 이야기 하 고 있다는 것을 명심 하세요. 가로 방향 줄 바꿈 그리드 (새 값)는 텍스트를 가로로 이동 하 고 페이지 끝에서 다음 줄로 나누는 쓰기 시스템과 유사 합니다. 세로 방향으로 스크롤 하는 것과 같은 텍스트 페이지입니다. 반대로 세로 방향 줄 바꿈 모눈 (이전 값)은 텍스트가 세로로 흐르는 쓰기 시스템과 유사 하므로 가로로 스크롤됩니다.
 
 Windows 10에서 변경 되거나 지원 되지 않는 [**GridView**](/uwp/api/Windows.UI.Xaml.Controls.GridView) 및 [**ListView**](/uwp/api/Windows.UI.Xaml.Controls.ListView) 의 측면은 다음과 같습니다.
 
 -   [**IsSwipeEnabled**](/uwp/api/windows.ui.xaml.controls.listviewbase.isswipeenabled) 속성 (Windows 런타임 .x 앱에만 해당)은 Windows 10 앱에 대해 지원 되지 않습니다. API는 여전히 존재 하지만이를 설정 해도 아무런 효과가 없습니다. 모든 이전 선택 제스처는 하향 살짝 밀기 (데이터가 검색 되지 않는 것으로 표시 됨)를 제외 하 고 마우스 오른쪽 단추를 클릭 하 여 (상황에 맞는 메뉴를 표시 하도록 예약 됨)에도 지원 됩니다.
 -   [**ReorderMode**](/uwp/api/windows.ui.xaml.controls.listviewbase.reordermode) 속성 (Windows Phone 스토어 앱에만 해당)은 Windows 10 앱에 대해 지원 되지 않습니다. API는 여전히 존재 하지만이를 설정 해도 아무런 효과가 없습니다. 대신 **GridView** 또는 **ListView** 에서 [**allowdrop**](/uwp/api/windows.ui.xaml.uielement.allowdrop) 및 [**CanReorderItems**](/uwp/api/windows.ui.xaml.controls.listviewbase.canreorderitems) 를 true로 설정 하면 사용자가 누르고 있음 (또는 클릭 후 끌기) 제스처를 사용 하 여 순서를 변경할 수 있습니다.
 -   Windows 10 용으로 개발 하는 경우 [**ListView**](/uwp/api/Windows.UI.Xaml.Controls.ListView) 및 [**GridView**](/uwp/api/Windows.UI.Xaml.Controls.GridView)에 대해 항목 컨테이너 스타일에서 [**GridViewItemPresenter**](/uwp/api/Windows.UI.Xaml.Controls.Primitives.GridViewItemPresenter) 대신 [**ListViewItemPresenter**](/uwp/api/Windows.UI.Xaml.Controls.Primitives.ListViewItemPresenter) 를 사용 합니다. 기본 항목 컨테이너 스타일의 복사본을 편집 하는 경우 올바른 형식을 얻게 됩니다.
--   Windows 10 앱에 대 한 선택 시각적 개체가 변경 되었습니다. [**SelectionMode**](/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode) 를 **Multiple**으로 설정 하면 기본적으로 각 항목에 대해 확인란이 렌더링 됩니다. **ListView** 항목의 기본 설정은 확인란이 항목 옆에 인라인으로 배치 됨을 의미 하며, 그 결과 항목의 나머지 부분이 차지 하는 공간은 약간 줄어들고 이동 됩니다. **GridView** 항목의 경우 확인란은 기본적으로 항목의 맨 위에 중첩 됩니다. 그러나 두 경우 모두, 아래 예제와 같이 [**Checkmode**](/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter.checkmode) 속성을 사용 하 여 확인란의 레이아웃 (인라인 또는 오버레이)과 항목 컨테이너 스타일 내의 [**ListViewItemPresenter**](/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter) 요소에 모두 ( [**selectioncheckmarkvisualenabled**](/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter.selectioncheckmarkvisualenabled) 속성 사용)를 표시할지 여부를 제어할 수 있습니다.
--   Windows 10에서 [**ContainerContentChanging**](/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging) 이벤트는 UI 가상화 중에 항목당 두 번 발생 합니다. 즉, 회수에 대해 한 번, 다시 사용 하기 위해 한 번 발생 합니다. [**InRecycleQueue**](/uwp/api/windows.ui.xaml.controls.containercontentchangingeventargs.inrecyclequeue) 의 값이 **true** 이 고 수행할 작업을 수행할 수 없는 경우, 동일한 항목이 다시 사용 될 때 다시 입력 된다는 보증을 사용 하 여 이벤트 처리기를 즉시 종료할 수 있습니다. 이때 **InRecycleQueue** 는 **false**가 됩니다.
+-   Windows 10 앱에 대 한 선택 시각적 개체가 변경 되었습니다. [**SelectionMode**](/uwp/api/windows.ui.xaml.controls.listviewbase.selectionmode) 를 **Multiple** 으로 설정 하면 기본적으로 각 항목에 대해 확인란이 렌더링 됩니다. **ListView** 항목의 기본 설정은 확인란이 항목 옆에 인라인으로 배치 됨을 의미 하며, 그 결과 항목의 나머지 부분이 차지 하는 공간은 약간 줄어들고 이동 됩니다. **GridView** 항목의 경우 확인란은 기본적으로 항목의 맨 위에 중첩 됩니다. 그러나 두 경우 모두, 아래 예제와 같이 [**Checkmode**](/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter.checkmode) 속성을 사용 하 여 확인란의 레이아웃 (인라인 또는 오버레이)과 항목 컨테이너 스타일 내의 [**ListViewItemPresenter**](/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter) 요소에 모두 ( [**selectioncheckmarkvisualenabled**](/uwp/api/windows.ui.xaml.controls.primitives.listviewitempresenter.selectioncheckmarkvisualenabled) 속성 사용)를 표시할지 여부를 제어할 수 있습니다.
+-   Windows 10에서 [**ContainerContentChanging**](/uwp/api/windows.ui.xaml.controls.listviewbase.containercontentchanging) 이벤트는 UI 가상화 중에 항목당 두 번 발생 합니다. 즉, 회수에 대해 한 번, 다시 사용 하기 위해 한 번 발생 합니다. [**InRecycleQueue**](/uwp/api/windows.ui.xaml.controls.containercontentchangingeventargs.inrecyclequeue) 의 값이 **true** 이 고 수행할 작업을 수행할 수 없는 경우, 동일한 항목이 다시 사용 될 때 다시 입력 된다는 보증을 사용 하 여 이벤트 처리기를 즉시 종료할 수 있습니다. 이때 **InRecycleQueue** 는 **false** 가 됩니다.
 
 ```xml
 <Style x:Key="CustomItemContainerStyle" TargetType="ListViewItem|GridViewItem">
@@ -196,7 +196,7 @@ Windows 10에서 변경 되거나 지원 되지 않는 [**GridView**](/uwp/api/W
 |                     | Pointer과잉 누름      |                   | 사용할 수 없습니다       |
 |                     | 사용 안 함                |                   | 사용할 수 없습니다       |
 |                     | 사용할 수 없습니다           |                   | PointerOverSelected |
-|                     | 사용할 수 없습니다           |                   | 선택함            |
+|                     | 사용할 수 없습니다           |                   | 선택됨            |
 |                     | 사용할 수 없습니다           |                   | PressedSelected     |
 | 사용할 수 없습니다       |                         | DisabledStates    |                     |
 |                     | 사용할 수 없습니다           |                   | 사용 안 함            |
@@ -214,7 +214,7 @@ Windows 10에서 변경 되거나 지원 되지 않는 [**GridView**](/uwp/api/W
 |                     | UnselectedPointerOver   |                   | 사용할 수 없습니다       |
 |                     | UnselectedSwiping 밀기       |                   | 사용할 수 없습니다       |
 |                     | 선택               |                   | 사용할 수 없습니다       |
-|                     | 선택함                |                   | 사용할 수 없습니다       |
+|                     | 선택됨                |                   | 사용할 수 없습니다       |
 |                     | SelectedSwiping 밀기         |                   | 사용할 수 없습니다       |
 |                     | SelectedUnfocused       |                   | 사용할 수 없습니다       |
 
@@ -235,7 +235,7 @@ Windows 10에서 변경 되거나 지원 되지 않는 [**GridView**](/uwp/api/W
 
 ## <a name="localization-and-globalization"></a>지역화 및 세계화
 
-UWP 앱 프로젝트에서 Universal 8.1 프로젝트의 리소스. resw 파일을 다시 사용할 수 있습니다. 파일을 복사한 후에는 프로젝트에 추가 하 고 **빌드 작업** 을 대상 **리소스로** 설정 하 고 **출력 디렉터리로 복사** 를 **복사 하지**않도록 설정 합니다. [**QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues) 항목에서는 장치 패밀리 리소스 선택 요소를 기준으로 장치 패밀리 특정 리소스를 로드 하는 방법을 설명 합니다.
+UWP 앱 프로젝트에서 Universal 8.1 프로젝트의 리소스. resw 파일을 다시 사용할 수 있습니다. 파일을 복사한 후에는 프로젝트에 추가 하 고 **빌드 작업** 을 대상 **리소스로** 설정 하 고 **출력 디렉터리로 복사** 를 **복사 하지** 않도록 설정 합니다. [**QualifierValues**](/uwp/api/windows.applicationmodel.resources.core.resourcecontext.qualifiervalues) 항목에서는 장치 패밀리 리소스 선택 요소를 기준으로 장치 패밀리 특정 리소스를 로드 하는 방법을 설명 합니다.
 
 ## <a name="play-to"></a>재생 대상
 
@@ -410,9 +410,9 @@ UWP 앱 프로젝트에서 Universal 8.1 프로젝트의 리소스. resw 파일�
 
 ## <a name="searchbox-deprecated-in-favor-of-autosuggestbox"></a>AutoSuggestBox의 경우에 사용 되지 않는 SearchBox
 
-[**Searchbox**](/uwp/api/windows.ui.xaml.controls.searchbox) 는 범용 장치 제품군에서 구현 되지만 모바일 장치에서는 완벽 하 게 작동 하지 않습니다. 유니버설 검색 환경에 [**AutoSuggestBox**](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox) 를 사용 합니다. **AutoSuggestBox**를 사용 하 여 일반적으로 검색 환경을 구현 하는 방법은 다음과 같습니다.
+[**Searchbox**](/uwp/api/windows.ui.xaml.controls.searchbox) 는 범용 장치 제품군에서 구현 되지만 모바일 장치에서는 완벽 하 게 작동 하지 않습니다. 유니버설 검색 환경에 [**AutoSuggestBox**](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox) 를 사용 합니다. **AutoSuggestBox** 를 사용 하 여 일반적으로 검색 환경을 구현 하는 방법은 다음과 같습니다.
 
-사용자가 입력을 시작 하면 **TextChanged** 이벤트가 발생 하 고 **userinput**의 이유가 발생 합니다. 그런 다음 제안 목록을 채우고 [**AutoSuggestBox**](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)의 **system.windows.controls.itemscontrol.itemssource** 를 설정 합니다. 사용자가 목록을 탐색할 때 **SuggestionChosen** 이벤트가 발생 합니다. **TextMemberDisplayPath**를 설정 하면 텍스트 상자가 지정 된 속성을 사용 하 여 자동으로 채워집니다. 사용자가 Enter 키를 사용 하 여 선택 항목을 제출 하면 **Querysubmitted** 이벤트가 발생 합니다 .이 경우 해당 제안에 대해 작업을 수행할 수 있습니다 .이 경우에는 지정 된 콘텐츠에 대 한 자세한 내용이 포함 된 다른 페이지로 이동 하는 경우가 많습니다. **SearchBoxQuerySubmittedEventArgs** 의 **LinguisticDetails** 및 **Language** 속성은 더 이상 지원 되지 않습니다 (해당 기능을 지 원하는 동일한 api가 있습니다). 및 **Keymodifiers** 는 더 이상 지원 되지 않습니다.
+사용자가 입력을 시작 하면 **TextChanged** 이벤트가 발생 하 고 **userinput** 의 이유가 발생 합니다. 그런 다음 제안 목록을 채우고 [**AutoSuggestBox**](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox)의 **system.windows.controls.itemscontrol.itemssource** 를 설정 합니다. 사용자가 목록을 탐색할 때 **SuggestionChosen** 이벤트가 발생 합니다. **TextMemberDisplayPath** 를 설정 하면 텍스트 상자가 지정 된 속성을 사용 하 여 자동으로 채워집니다. 사용자가 Enter 키를 사용 하 여 선택 항목을 제출 하면 **Querysubmitted** 이벤트가 발생 합니다 .이 경우 해당 제안에 대해 작업을 수행할 수 있습니다 .이 경우에는 지정 된 콘텐츠에 대 한 자세한 내용이 포함 된 다른 페이지로 이동 하는 경우가 많습니다. **SearchBoxQuerySubmittedEventArgs** 의 **LinguisticDetails** 및 **Language** 속성은 더 이상 지원 되지 않습니다 (해당 기능을 지 원하는 동일한 api가 있습니다). 및 **Keymodifiers** 는 더 이상 지원 되지 않습니다.
 
 [**AutoSuggestBox**](/uwp/api/Windows.UI.Xaml.Controls.AutoSuggestBox) 에는 ime (입력기)도 지원 됩니다. "찾기" 아이콘을 표시 하려는 경우에도이 작업을 수행할 수 있습니다 (아이콘과 상호 작용 하면 **Querysubmitted** 된 이벤트가 발생 함).
 

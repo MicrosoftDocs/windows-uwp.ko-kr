@@ -1,18 +1,18 @@
 ---
 title: Xamarin Android를 사용 하 여 간단한 Android 앱 만들기
-description: Xamarin Android를 사용 하 여 Android 앱을 작성 하기 시작 하는 방법
+description: Android 장치에서 작동 하는 플랫폼 간 앱을 만들기 위해 Windows에서 Xamarin.ios를 사용 하 여 시작 하는 방법에 대 한 단계별 가이드입니다.
 author: hickeys
 ms.author: hickeys
 manager: jken
 ms.topic: article
 keywords: android, windows, xamarin android, 자습서, xaml
 ms.date: 04/28/2020
-ms.openlocfilehash: c731b5f96243333e4a4ad150de499ac9459113bc
-ms.sourcegitcommit: 24b19e7ee06e5bb11a0dae334806741212490ee9
+ms.openlocfilehash: 3bcecf24fe6bb90dc2b94dfa62a5768481b298e5
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255208"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823177"
 ---
 # <a name="get-started-developing-for-android-using-xamarinandroid"></a>Xamarin Android를 사용 하 여 Android 용 개발 시작
 
@@ -24,7 +24,7 @@ ms.locfileid: "82255208"
 
 이 자습서를 사용 하려면 다음이 필요 합니다.
 
-- Windows 10
+- 윈도우 10
 - [Visual Studio 2019: Community, Professional 또는 Enterprise](https://visualstudio.microsoft.com/downloads/) (참고 참조)
 - Visual Studio 2019에 대 한 ".NET을 사용한 모바일 개발" 워크 로드
 
@@ -37,21 +37,21 @@ ms.locfileid: "82255208"
 
 Visual Studio를 시작합니다. 파일 > 새 > 프로젝트를 선택 하 여 새 프로젝트를 만듭니다.
 
-새 프로젝트 대화 상자에서 **Android 앱 (Xamarin)** 템플릿을 선택 하 고 **다음**을 클릭 합니다.
+새 프로젝트 대화 상자에서 **Android 앱 (Xamarin)** 템플릿을 선택 하 고 **다음** 을 클릭 합니다.
 
-프로젝트 이름을 **TimeChangerAndroid** 로 선택 하 고 **만들기**를 클릭 합니다.
+프로젝트 이름을 **TimeChangerAndroid** 로 선택 하 고 **만들기** 를 클릭 합니다.
 
-새 플랫폼 간 앱 대화 상자에서 비어 있는 **앱**을 선택 합니다. **최소 Android 버전**에서 **Android 5.0 (롤리팝)** 을 선택 합니다. **확인**을 클릭합니다.
+새 플랫폼 간 앱 대화 상자에서 비어 있는 **앱** 을 선택 합니다. **최소 Android 버전** 에서 **Android 5.0 (롤리팝)** 을 선택 합니다. **확인** 을 클릭합니다.
 
-Xamarin은 **TimeChangerAndroid**이라는 단일 프로젝트를 사용 하 여 새 솔루션을 만듭니다.
+Xamarin은 **TimeChangerAndroid** 이라는 단일 프로젝트를 사용 하 여 새 솔루션을 만듭니다.
 
 ## <a name="create-a-ui-with-xaml"></a>XAML을 사용 하 여 UI 만들기
 
-프로젝트의 **Resources\layout** 디렉터리에서 **activity_main**를 엽니다. 이 파일의 XML은 TimeChanger를 열 때 사용자에 게 표시 되는 첫 번째 화면을 정의 합니다.
+프로젝트의 **Resources\layout** 디렉터리에서 **activity_main.xml** 를 엽니다. 이 파일의 XML은 TimeChanger를 열 때 사용자에 게 표시 되는 첫 번째 화면을 정의 합니다.
 
 TimeChanger UI는 단순 합니다. 현재 시간을 표시 하 고 1 시간 단위로 시간을 조정 하는 단추를 포함 합니다. 세로를 사용 하 여 `LinearLayout` 단추 위에 있는 시간을 맞추고 가로를 사용 하 여 단추를 나란히 `LinearLayout` 정렬 합니다. 콘텐츠는 **android: 중력** 특성을 세로로 **가운데 맞춤** 으로 설정 하 여 화면 가운데에 배치 됩니다 `LinearLayout` .
 
-**Activity_main** 의 내용을 다음 코드로 바꿉니다.
+**activity_main.xml** 내용을 다음 코드로 바꿉니다.
 
 ```xml
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -89,7 +89,7 @@ TimeChanger UI는 단순 합니다. 현재 시간을 표시 하 고 1 시간 단
 
 ## <a name="add-logic-code-with-c"></a>C를 사용 하 여 논리 코드 추가 #
 
-**MainActivity.cs**를 엽니다. 이 파일에는 UI에 기능을 추가 하는 코드 숨김이 포함 되어 있습니다.
+**MainActivity.cs** 를 엽니다. 이 파일에는 UI에 기능을 추가 하는 코드 숨김이 포함 되어 있습니다.
 
 ### <a name="set-the-current-time"></a>현재 시간 설정
 
@@ -217,7 +217,7 @@ namespace TimeChangerAndroid
 }
 ```
 
-## <a name="run-your-app"></a>앱 실행
+## <a name="run-your-app"></a>앱을 실행합니다.
 
 앱을 실행 하려면 **F5** 키를 누르거나 디버그 > 디버깅 시작을 클릭 합니다. [디버거가 구성 된](emulator.md)방식에 따라 장치 또는 에뮬레이터에서 앱이 시작 됩니다.
 

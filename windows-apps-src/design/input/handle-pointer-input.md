@@ -8,12 +8,12 @@ keywords: 펜, 마우스, 터치 패드, 터치, 포인터, 입력, 사용자 �
 ms.date: 09/24/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: bae166c1671421c13302df0d2f85e505985d3f2e
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: 80360ef30b50229beda813ae211966f398744941
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93030746"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101824677"
 ---
 # <a name="handle-pointer-input"></a>포인터 입력 처리
 
@@ -21,7 +21,7 @@ Windows 응용 프로그램의 포인팅 장치 (예: 터치, 마우스, 펜/스
 
 > [!Important]
 > 명확 하 고 잘 정의 된 요구 사항이 있고 플랫폼 컨트롤에서 지 원하는 상호 작용이 시나리오를 지원 하지 않는 경우에만 사용자 지정 상호 작용을 만듭니다.  
-> Windows 응용 프로그램에서 상호 작용 환경을 사용자 지정 하는 경우 사용자는 일관성 있고 직관적 이며 검색 가능 하 게 될 것으로 간주 합니다. 이러한 이유로 [플랫폼 컨트롤](../controls-and-patterns/controls-by-function.md)에서 지 원하는 사용자 지정 상호 작용을 모델링 하는 것이 좋습니다. 플랫폼 컨트롤은 표준 상호 작용, 애니메이션 된 물리학 효과, 시각적 피드백 및 내게 필요한 옵션을 비롯 한 전체 Windows 앱 사용자 상호 작용 환경을 제공 합니다. 
+> Windows 응용 프로그램에서 상호 작용 환경을 사용자 지정 하는 경우 사용자는 일관성 있고 직관적 이며 검색 가능 하 게 될 것으로 간주 합니다. 이러한 이유로 [플랫폼 컨트롤](../controls-and-patterns/index.md)에서 지 원하는 사용자 지정 상호 작용을 모델링 하는 것이 좋습니다. 플랫폼 컨트롤은 표준 상호 작용, 애니메이션 된 물리학 효과, 시각적 피드백 및 내게 필요한 옵션을 비롯 한 전체 Windows 앱 사용자 상호 작용 환경을 제공 합니다. 
 
 ## <a name="important-apis"></a>중요 API
 - [Windows.Devices.Input](/uwp/api/Windows.Devices.Input)
@@ -53,7 +53,7 @@ Windows 앱은 다음과 같은 포인터 이벤트를 수신할 수 있습니�
 <thead>
 <tr class="header">
 <th align="left">이벤트</th>
-<th align="left">설명</th>
+<th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -132,7 +132,7 @@ Windows 앱은 다음과 같은 포인터 이벤트를 수신할 수 있습니�
 
 ### <a name="create-the-ui"></a>UI 만들기
 
-이 예제에서는 포인터 입력을 사용 [Rectangle](/uwp/api/windows.ui.xaml.shapes.rectangle) 하 `Target` 는 개체에 사각형 ()을 사용 합니다. 포인터 상태가 변경 되 면 대상의 색이 변경 됩니다.
+이 예제에서는 포인터 입력을 사용 [](/uwp/api/windows.ui.xaml.shapes.rectangle) 하 `Target` 는 개체에 사각형 ()을 사용 합니다. 포인터 상태가 변경 되 면 대상의 색이 변경 됩니다.
 
 각 포인터에 대 한 세부 정보는 포인터가 이동할 때 포인터 뒤에 오는 부동 [TextBlock](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 에 표시 됩니다. 포인터 이벤트 자체는 사각형 오른쪽의 [RichTextBlock](/uwp/api/Windows.UI.Xaml.Controls.RichTextBlock) 에 보고 됩니다.
 
@@ -570,7 +570,7 @@ private void Target_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
 
 ### <a name="get-pointer-properties"></a>포인터 속성 가져오기
 
-앞에서 설명한 것 처럼 PointerRoutedEventArgs의 [**Getcurrentpoint**](/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) 및 [**GetIntermediatePoints**](/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) 메서드를 통해 얻은 [**PointerRoutedEventArgs**](/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs)개체에서 대부분의 확장 된 포인터 정보를 가져와야 [**합니다.**](/uwp/api/Windows.UI.Input.PointerPoint) 다음 코드 조각에서는 방법을 보여 줍니다.
+앞에서 설명한 것 처럼 PointerRoutedEventArgs의 [**Getcurrentpoint**](/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getcurrentpoint) 및 [**GetIntermediatePoints**](/uwp/api/windows.ui.xaml.input.pointerroutedeventargs.getintermediatepoints) 메서드를 통해 얻은 [](/uwp/api/Windows.UI.Xaml.Input.PointerRoutedEventArgs)개체에서 대부분의 확장 된 포인터 정보를 가져와야 [**합니다.**](/uwp/api/Windows.UI.Input.PointerPoint) 다음 코드 조각에서는 방법을 보여 줍니다.
 
 -   먼저 각 포인터에 대 한 새 [**TextBlock**](/uwp/api/Windows.UI.Xaml.Controls.TextBlock) 을 만듭니다.
 
@@ -945,7 +945,7 @@ namespace UWP_Pointers
 
 마지막으로 MainPage.xaml.cs 코드 숨김으로 기본 포인터 이벤트 처리기를 정의 합니다. 이전 예제에서 기본 사항을 다룬 바와 같이 여기서는 코드를 재현 하지 않지만 [포인터 입력 샘플 (UserControl with animation)](https://github.com/MicrosoftDocs/windows-topic-specific-samples/archive/uwp-pointers-animation.zip)에서 작업 샘플을 다운로드할 수 있습니다.
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 ### <a name="topic-samples"></a>토픽 샘플
 

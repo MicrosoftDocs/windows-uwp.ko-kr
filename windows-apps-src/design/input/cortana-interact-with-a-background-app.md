@@ -1,16 +1,16 @@
 ---
-title: Cortana에서 백그라운드 앱과 상호 작용-Cortana UWP 디자인 및 개발
+title: Cortana에서 백그라운드 앱과 상호 작용 - Cortana UWP 디자인 및 개발
 description: 음성 명령을 실행 하는 동안 Cortana 캔버스의 음성 및 텍스트 입력을 통해 백그라운드 앱과의 사용자 상호 작용을 사용 하도록 설정 합니다.
 ms.assetid: e42917dc-aece-4880-813f-80b897f9126c
 ms.date: 01/28/2021
 ms.topic: article
 keywords: 나
-ms.openlocfilehash: 835a2f60d2b86e5bef49195d4f937fa844f4d921
-ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
+ms.openlocfilehash: 6e63d86d8d3764f8ca95dce4c1b8b7de437c95ec
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99606078"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101824497"
 ---
 # <a name="interact-with-a-background-app-in-cortana"></a>Cortana에서 백그라운드 앱 조작
 
@@ -43,8 +43,8 @@ Cortana는 앱과 함께 전체 단계별 워크플로를 지원 합니다. 이 
 >
 > UWP (유니버설 Windows 플랫폼) 앱을 처음 개발 하는 경우 여기에 설명 된 기술에 익숙해질 수 있도록 다음 항목을 참조 하세요.
 >
-> - [첫 번째 앱 만들기](/windows/uwp/get-started/your-first-app)
-> - [이벤트 및 라우트된 이벤트](/windows/uwp/xaml-platform/events-and-routed-events-overview) 를 사용 하 여 이벤트에 대해 알아보기 개요
+> - [첫 번째 앱 만들기](../../get-started/your-first-app.md)
+> - [이벤트 및 라우트된 이벤트](../../xaml-platform/events-and-routed-events-overview.md) 를 사용 하 여 이벤트에 대해 알아보기 개요
 >
 > **사용자 환경 지침**
 >

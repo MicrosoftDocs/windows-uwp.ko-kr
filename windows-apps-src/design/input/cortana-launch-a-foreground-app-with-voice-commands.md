@@ -1,16 +1,16 @@
 ---
-title: Cortana를 통해 음성 명령으로 포그라운드 앱 활성화-Cortana UWP 디자인 및 개발
+title: Cortana에서 음성 명령을 사용하여 포그라운드 앱 활성화 - Cortana UWP 디자인 및 개발
 description: 음성 명령을 사용 하 여 응용 프로그램을 포그라운드로 활성화 하 고 앱 내에서 작업 또는 명령을 실행 합니다.
 ms.assetid: e4bf3714-6f62-466f-9e7c-3b03ee86a117
 ms.date: 01/28/2021
 ms.topic: article
 keywords: 나
-ms.openlocfilehash: 6e4e1b30d7d6e259ff66cdccebeed325ded57c18
-ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
+ms.openlocfilehash: 4b17a93d950d48209637cedf89bb49759ba0cf1f
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99606018"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101824327"
 ---
 # <a name="activate-a-foreground-app-with-voice-commands-through-cortana"></a>Cortana를 통해 음성 명령으로 포그라운드 앱 활성화
 
@@ -59,8 +59,8 @@ ms.locfileid: "99606018"
 >
 > UWP (유니버설 Windows 플랫폼) 앱을 처음 개발 하는 경우 여기에 설명 된 기술에 익숙해질 수 있도록 다음 항목을 참조 하세요.
 >
-> - [첫 번째 앱 만들기](/windows/uwp/get-started/your-first-app)
-> - [이벤트 및 라우트된 이벤트](/windows/uwp/xaml-platform/events-and-routed-events-overview) 를 사용 하 여 이벤트에 대해 알아보기 개요
+> - [첫 번째 앱 만들기](../../get-started/your-first-app.md)
+> - [이벤트 및 라우트된 이벤트](../../xaml-platform/events-and-routed-events-overview.md) 를 사용 하 여 이벤트에 대해 알아보기 개요
 >
 > **사용자 환경 지침**
 >
@@ -90,7 +90,7 @@ ms.locfileid: "99606018"
 
 UWP 앱은 특정 설정 및 장치 기능 (고대비, 유효 픽셀, 로캘 등)에 따라 가장 적합 한 이미지를 자동으로 선택할 수 있습니다. 이미지를 제공 하기만 하면 응용 프로그램 프로젝트 내에서 다른 리소스 버전에 대 한 적절 한 명명 규칙 및 폴더 조직을 사용 하 게 됩니다. 권장 리소스 버전을 제공 하지 않으면 사용자의 기본 설정, 기능, 장치 유형 및 위치에 따라 접근성, 지역화 및 이미지 품질이 저하 될 수 있습니다.
 
-고대비 및 배율 인수에 대 한 이미지 리소스에 대 한 자세한 내용은 [타일 및 아이콘 자산에 대 한 지침](/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast)을 참조 하세요.
+고대비 및 배율 인수에 대 한 이미지 리소스에 대 한 자세한 내용은 [타일 및 아이콘 자산에 대 한 지침](../../app-resources/images-tailored-for-scale-theme-contrast.md)을 참조 하세요.
 
 한정자를 사용 하 여 리소스 이름을 표시 합니다. 리소스 한정자는 특정 버전의 리소스를 사용 해야 하는 컨텍스트를 식별 하는 폴더 및 파일 이름 한정자입니다.
 

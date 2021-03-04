@@ -1,18 +1,18 @@
 ---
 title: Windows에서의 Android 개발에 대 한 PWA 방법
-description: Windows에서 PWA 접근 방법을 사용 하 여 Android 앱 개발을 시작 하세요.
+description: Windows에서 하이브리드 웹 앱 또는 프로그레시브 (점진적 웹 앱) 만들기를 시작 하는 방법에 대 한 단계별 가이드입니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
 keywords: windows, pwa, android, cordova,가 나 ic, phonegap, 하이브리드 웹 앱의 android
 ms.date: 04/28/2020
-ms.openlocfilehash: 4559e795b4a9737bf68129790029f6f9136b4f81
-ms.sourcegitcommit: 99f5544d9642c87a16e3bd21f76c2fcbc97c20d2
+ms.openlocfilehash: 8115de0dedaa561c7a71621904d060ca62b5ac47
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "98743596"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823157"
 ---
 # <a name="get-started-developing-a-pwa-or-hybrid-web-app-for-android"></a>Android 용 PWA 또는 하이브리드 웹 앱 개발 시작
 
@@ -211,7 +211,7 @@ ionic cordova emulate android --list
 
 자세한 내용은 향상 된 Ic 문서에서 [Cordova 에뮬레이터](https://ionicframework.com/docs/cli/commands/cordova-emulate) 를 참조 하세요.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](/dual-screen/android/)
 

@@ -1,18 +1,18 @@
 ---
 title: Windows 기반 Android 개발 개요
-description: Windows에서 Android 용 개발을 시작 하는 데 도움이 되는 가이드입니다.
+description: 네이티브 Android 개발, 플랫폼 간 개발 및 Android 게임 개발을 포함 하 여 Windows에서 Android 개발을 시작 하세요.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
 keywords: windows의 android, xamarin android, 네이티브, cordova, phonegap, c + + android 게임, windows defender, 에뮬레이터에 반응
 ms.date: 04/28/2020
-ms.openlocfilehash: e215d9e08fcef7ddb1caae40bd8f3a83e183d197
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: b839972033c9edfad3524909345380e7fac9462e
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157707"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823167"
 ---
 # <a name="overview-of-android-development-on-windows"></a>Windows 기반 Android 개발 개요
 
@@ -41,7 +41,7 @@ Windows 운영 체제를 사용 하 여 Android 장치 앱을 개발 하기 위�
 
 플랫폼 간 프레임 워크는 가능한 한 네이티브 앱에 가까운 모양과 느낌을 목표로 하며, 기본적으로 개발 된 앱으로 원활 하 게 통합 되는 것이 아니므로 속도가 줄어들고 성능이 저하 될 수 있습니다. 또한 플랫폼 간 앱을 빌드하는 데 사용 되는 도구에는 각각의 서로 다른 장치 플랫폼에서 제공 하는 모든 기능이 포함 되지 않을 수 있으며, 잠재적으로 해결 방법이 필요 합니다.
 
-코드 베이스는 일반적으로 웹 서비스를 호출 하 고, 데이터베이스에 액세스 하 고, 하드웨어 기능을 호출 하 고, 상태를 관리 하기 위해 페이지, 단추 컨트롤, 레이블, 목록 등의 사용자 **인터페이스를 만들기**위해 **UI 코드로**구성 됩니다. 평균적으로이의 90%는 다시 사용 될 수 있지만 일반적으로 각 장치 플랫폼에 대 한 코드를 사용자 지정 해야 합니다. 이러한 일반화는 대부분 빌드 중인 앱의 유형에 따라 다르지만 결정 하는 데 도움이 될 수 있는 약간의 컨텍스트를 제공 합니다.  
+코드 베이스는 일반적으로 웹 서비스를 호출 하 고, 데이터베이스에 액세스 하 고, 하드웨어 기능을 호출 하 고, 상태를 관리 하기 위해 페이지, 단추 컨트롤, 레이블, 목록 등의 사용자 **인터페이스를 만들기** 위해 **UI 코드로** 구성 됩니다. 평균적으로이의 90%는 다시 사용 될 수 있지만 일반적으로 각 장치 플랫폼에 대 한 코드를 사용자 지정 해야 합니다. 이러한 일반화는 대부분 빌드 중인 앱의 유형에 따라 다르지만 결정 하는 데 도움이 될 수 있는 약간의 컨텍스트를 제공 합니다.  
 
 ## <a name="choosing-a-cross-platform-framework"></a>플랫폼 간 프레임 워크 선택
 
@@ -73,7 +73,7 @@ Windows 운영 체제를 사용 하 여 Android 장치 앱을 개발 하기 위�
 
 - UI 코드: HTML, CSS, JavaScript
 - 논리 코드: JavaScript
-- PWAs는 웹 앱과 네이티브 앱 기능을 모두 활용할 수 있도록 표준 패턴을 사용 하 여 빌드된 웹 앱입니다. 프레임 워크를 사용 하지 않고 빌드할 수 있지만 몇 가지 인기 있는 프레임 워크는 PhoneGap [ic](https://ionicframework.com/docs/intro) 및 [PhoneGap](https://phonegap.com/about/)입니다.
+- PWAs는 웹 앱과 네이티브 앱 기능을 모두 활용할 수 있도록 표준 패턴을 사용 하 여 빌드된 웹 앱입니다. 프레임 워크를 사용 하지 않고 빌드할 수 있지만 몇 가지 인기 있는 프레임 워크는 PhoneGap [ic](https://ionicframework.com/docs/intro) 및 [](https://phonegap.com/about/)입니다.
 - PWAs는 장치 (Android, iOS 또는 Windows)에 설치할 수 있으며, 서비스 근로자의 통합 덕분에 오프 라인으로 작업할 수 있습니다.
 - PWAs는 웹 URL만 사용 하 여 앱 스토어 없이 배포 및 설치할 수 있습니다. Microsoft Store 및 Google Play 스토어 PWAs를 나열할 수 있습니다. Apple 스토어는 현재 12.2 이상을 실행 하는 iOS 장치에 설치할 수 있지만 현재는 그렇지 않습니다.
 - 자세히 알아보려면 MDN의 [PWAs 소개를](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Introduction) 확인 하세요.

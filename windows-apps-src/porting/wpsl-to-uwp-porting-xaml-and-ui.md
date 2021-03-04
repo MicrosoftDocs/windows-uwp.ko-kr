@@ -6,14 +6,14 @@ ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 9a6f78d30b1366078f2094aa17ab15c65a050c43
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c421f071cb3e13e1ebb24b8d2cd9f8aec3341c2b
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89164347"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101824537"
 ---
-#  <a name="porting-windowsphone-silverlight-xaml-and-ui-to-uwp"></a>Windows Phone Silverlight XAML 및 UI를 UWP로 포팅
+#  <a name="porting-windows-phone-silverlight-xaml-and-ui-to-uwp"></a>Windows Phone Silverlight XAML 및 UI를 UWP로 포팅
 
 
 
@@ -68,7 +68,7 @@ UWP에서 "System" 접두사 선언을 생략 하 고 대신 (이미 선언 된)
     return new BitmapImage(new Uri(this.CoverImagePath, UriKind.Relative));
 ```
 
-**BitmapImage** 는 Silverlight Windows Phone의 BitmapImage 네임 스페이스에 있고 동일한 파일에 using 지시문을 사용 하면 위의 코드 조각에서와 같이 네임 스페이스 한정자 없이 **BitmapImage** 을 사용할 수 **있습니다.** 이와 같은 경우 Visual Studio에서 형식 이름 (**BitmapImage**)을 마우스 오른쪽 단추로 클릭 하 고 상황에 맞는 메뉴의 [ **확인** ] 명령을 사용 하 여 새 네임 스페이스 지시어를 파일에 추가할 수 있습니다. 이 경우 형식이 UWP에 있는 위치에 해당 하는 [**Windows.**](/uwp/api/Windows.UI.Xaml.Media.Imaging) x m l. x m l. x m l 네임 스페이스를 추가 합니다. 지시문을 사용 하 여 **Windows** 를 제거할 수 있습니다 .이는 위의 코드 조각에서와 같은 코드를 이식 하는 데 사용 됩니다. 완료 되 면 모든 Windows Phone Silverlight 네임 스페이스를 제거 합니다.
+**BitmapImage** 는 Silverlight Windows Phone의 BitmapImage 네임 스페이스에 있고 동일한 파일에 using 지시문을 사용 하면 위의 코드 조각에서와 같이 네임 스페이스 한정자 없이  을 사용할 수 **있습니다.** 이와 같은 경우 Visual Studio에서 형식 이름 (**BitmapImage**)을 마우스 오른쪽 단추로 클릭 하 고 상황에 맞는 메뉴의 [ **확인** ] 명령을 사용 하 여 새 네임 스페이스 지시어를 파일에 추가할 수 있습니다. 이 경우 형식이 UWP에 있는 위치에 해당 하는 [**Windows.**](/uwp/api/Windows.UI.Xaml.Media.Imaging) x m l. x m l. x m l 네임 스페이스를 추가 합니다. 지시문을 사용 하 여 **Windows** 를 제거할 수 있습니다 .이는 위의 코드 조각에서와 같은 코드를 이식 하는 데 사용 됩니다. 완료 되 면 모든 Windows Phone Silverlight 네임 스페이스를 제거 합니다.
 
 이전 네임 스페이스의 형식을 새 네임 스페이스의 동일한 형식에 매핑하는 경우와 같은 간단한 경우에는 Visual Studio의 **찾기 및 바꾸기** 명령을 사용 하 여 소스 코드를 대량으로 변경할 수 있습니다. **Resolve** 명령은 형식의 새 네임 스페이스를 검색 하는 좋은 방법입니다. 또 다른 예로 모든 "system.xml"을 "Windows. .Xaml"로 바꿀 수 있습니다. 이는 기본적으로 모든 using 지시문 및 해당 네임 스페이스를 참조 하는 정규화 된 형식 이름을 모두 이식 합니다.
 
@@ -152,7 +152,7 @@ Windows 10 앱에서는 한 가지 방법을 사용 하 여 뒤로 단추를 처
 -   UI 요소를 다른 UI 요소에 바인딩
 -   관찰 가능한 뷰 모델 작성 (즉, 속성 값이 변경 될 때 알림을 발생 시키고 명령의 가용성이 변경 되는 경우)
 
-이러한 모든 측면은 대체로 계속 지원 되지만 네임 스페이스 차이가 있습니다. 예를 들어 **system.componentmodel에 매핑되는** **INotifyPropertyChanged** , INotifyPropertyChanged 및 INotifyPropertyChanged [**Windows.UI.Xaml.Data.Binding**](/uwp/api/Windows.UI.Xaml.Data.Binding)에 매핑되는 [**Windows.UI.Xaml.Data.INotifyPropertyChanged**](/uwp/api/Windows.UI.Xaml.Data.INotifyPropertyChanged)및 **System.Collections.Specialized.INotifyPropertyChanged** 에 매핑됩니다.. x m l. x m l. x m l. x m l. x m l. [**INotifyCollectionChanged**](/uwp/api/Windows.UI.Xaml.Interop.INotifyCollectionChanged).
+이러한 모든 측면은 대체로 계속 지원 되지만 네임 스페이스 차이가 있습니다. 예를 들어 **system.componentmodel에 매핑되는** **INotifyPropertyChanged** , INotifyPropertyChanged 및 INotifyPropertyChanged [](/uwp/api/Windows.UI.Xaml.Data.Binding)에 매핑되는 [](/uwp/api/Windows.UI.Xaml.Data.INotifyPropertyChanged)및  에 매핑됩니다.. x m l. x m l. x m l. x m l. x m l. [**INotifyCollectionChanged**](/uwp/api/Windows.UI.Xaml.Interop.INotifyCollectionChanged).
 
 Windows Phone Silverlight 앱 바와 앱 바 단추는 UWP 앱에서 사용할 수 있는 것 처럼 바인딩할 수 없습니다. 앱 표시줄과 단추를 구성 하 고 속성 및 지역화 된 문자열에 바인딩한 다음 이벤트를 처리 하는 명령적 코드를 사용할 수 있습니다. 그렇다면 이제 속성 및 명령에 바인딩된 선언적 태그로 대체 하 고 정적 리소스 참조를 사용 하 여 명령적 코드를 이식 하는 옵션을 사용할 수 있습니다. 따라서 앱을 보다 안전 하 고 쉽게 관리할 수 있습니다. Visual Studio 또는 Blend for Visual Studio를 사용 하 여 다른 XAML 요소와 마찬가지로 UWP 앱 바 단추를 바인딩하고 스타일을 지정할 수 있습니다. UWP 앱에서 사용 하는 형식 이름은 [**CommandBar**](/uwp/api/Windows.UI.Xaml.Controls.CommandBar) 및 [**appbarbutton**](/uwp/api/Windows.UI.Xaml.Controls.AppBarButton)입니다.
 
@@ -174,7 +174,7 @@ UWP 앱의 바인딩 관련 기능에는 현재 다음과 같은 제한 사항�
     return new BitmapImage(new Uri(this.CoverImagePath, UriKind.Relative));
 ```
 
-UWP 앱에서는 ms appx [URI 체계](/previous-versions/windows/apps/jj655406(v=win.10))를 사용 합니다. 코드의 나머지 부분을 동일 하 게 유지할 수 있도록, **system.uri** 생성자의 다른 오버 로드를 사용 하 여 기본 uri에 MS appx uri 체계를 추가 하 고 나머지 경로를 해당 경로에 추가할 수 있습니다. 다음과 같습니다.
+UWP 앱에서는 ms appx [URI 체계](/previous-versions/windows/apps/jj655406(v=win.10))를 사용 합니다. 코드의 나머지 부분을 동일 하 게 유지할 수 있도록, **system.uri** 생성자의 다른 오버 로드를 사용 하 여 기본 uri에 MS appx uri 체계를 추가 하 고 나머지 경로를 해당 경로에 추가할 수 있습니다. 다음과 같이:
 
 ```csharp
     // this.BookCoverImagePath contains a path of the form "/Assets/CoverImages/one.png".
@@ -199,17 +199,17 @@ Windows Phone Silverlight 앱은 **Microsoft 휴대폰. controls** **네임 스�
 | 파노라마 | Windows Phone Silverlight 파노라마 컨트롤은 Windows 런타임 8gb 앱 및 허브 컨트롤에 대 한 지침에 [대 한 지침](../design/basics/navigation-basics.md) 에 매핑됩니다. <br/> 파노라마 컨트롤은 마지막 섹션에서 첫 번째 섹션으로 래핑하고 해당 배경 이미지는 섹션을 기준으로 시차에서 이동 합니다. [허브](/uwp/api/Windows.UI.Xaml.Controls.Hub) 섹션은 래핑되지 않으며 시차 사용 되지 않습니다. |
 | 피벗 | Windows Phone Silverlight 피벗 컨트롤과 동일한 UWP는 [Windows](/uwp/api/Windows.UI.Xaml.Controls.Pivot). x m l. x m l. x m l. x m l. x m l입니다. 모든 장치 제품군에서 사용할 수 있습니다. |
 
-**참고**    PointerOver 상태는 Windows 10 앱의 사용자 지정 스타일/템플릿과 관련이 있지만 Silverlight 앱 Windows Phone에서는 관련이 없습니다. 사용 중인 시스템 리소스 키, 사용 중인 시각적 상태 집합에 대 한 변경 및 Windows 10 기본 스타일/템플릿에 대 한 성능 향상을 비롯 하 여 기존 사용자 지정 스타일/템플릿이 Windows 10 앱에 적합 하지 않을 수 있는 다른 이유가 있습니다. Windows 10 용 컨트롤의 기본 템플릿 복사본을 새로 편집한 다음 스타일 및 템플릿 사용자 지정을 다시 적용 하는 것이 좋습니다.
+**참고**   PointerOver 상태는 Windows 10 앱의 사용자 지정 스타일/템플릿과 관련이 있지만 Silverlight 앱 Windows Phone에서는 관련이 없습니다. 사용 중인 시스템 리소스 키, 사용 중인 시각적 상태 집합에 대 한 변경 및 Windows 10 기본 스타일/템플릿에 대 한 성능 향상을 비롯 하 여 기존 사용자 지정 스타일/템플릿이 Windows 10 앱에 적합 하지 않을 수 있는 다른 이유가 있습니다. Windows 10 용 컨트롤의 기본 템플릿 복사본을 새로 편집한 다음 스타일 및 템플릿 사용자 지정을 다시 적용 하는 것이 좋습니다.
 
-UWP 컨트롤에 대 한 자세한 내용은 [함수 별 컨트롤](../design/controls-and-patterns/controls-by-function.md), 컨트롤 [목록](../design/controls-and-patterns/index.md)및 [컨트롤에 대 한 지침](../design/controls-and-patterns/index.md)을 참조 하세요.
+UWP 컨트롤에 대 한 자세한 내용은 [함수 별 컨트롤](../design/controls-and-patterns/index.md), 컨트롤 [목록](../design/controls-and-patterns/index.md)및 [컨트롤에 대 한 지침](../design/controls-and-patterns/index.md)을 참조 하세요.
 
-##  <a name="design-language-in-windows10"></a>Windows 10의 디자인 언어
+##  <a name="design-language-in-windows-10"></a>Windows 10의 디자인 언어
 
 Windows Phone Silverlight 앱과 Windows 10 앱 간의 디자인 언어에는 약간의 차이가 있습니다. 모든 세부 정보는 [디자인](https://developer.microsoft.com/windows/apps/design)을 참조 하세요. 디자인 언어 변경에도 불구 하 고 설계 원칙은 일관 되 게 유지 됩니다. attentive, fiercely, 시각적 요소를 줄이고, 디지털 도메인에 대 한 인증에 집중 하는 것이 좋습니다. 특히 입력 체계와 함께 비주얼 계층 구조 사용 표에서 디자인 그리고 유체 애니메이션을 사용 하 여 환경을 만들 수 있습니다.
 
 ## <a name="localization-and-globalization"></a>지역화 및 세계화
 
-지역화 된 문자열의 경우 UWP 앱 프로젝트의 Windows Phone Silverlight 프로젝트에서 .resx 파일을 다시 사용할 수 있습니다. 파일을 복사 하 여 프로젝트에 추가한 다음, 조회 메커니즘이 기본적으로 찾을 수 있도록 파일 이름을 Resources. resw로 바꿉니다. **빌드 작업** 을 작업 **리소스로** 설정 하 고 **출력 디렉터리로 복사** 를 **복사 하지**않습니다. 그런 다음 XAML 요소에 **x:Uid** 특성을 지정 하 여 태그에서 문자열을 사용할 수 있습니다. [빠른 시작: 문자열 리소스 사용](/previous-versions/windows/apps/hh965329(v=win.10))을 참조 하세요.
+지역화 된 문자열의 경우 UWP 앱 프로젝트의 Windows Phone Silverlight 프로젝트에서 .resx 파일을 다시 사용할 수 있습니다. 파일을 복사 하 여 프로젝트에 추가한 다음, 조회 메커니즘이 기본적으로 찾을 수 있도록 파일 이름을 Resources. resw로 바꿉니다. **빌드 작업** 을 작업 **리소스로** 설정 하 고 **출력 디렉터리로 복사** 를 **복사 하지** 않습니다. 그런 다음 XAML 요소에 **x:Uid** 특성을 지정 하 여 태그에서 문자열을 사용할 수 있습니다. [빠른 시작: 문자열 리소스 사용](/previous-versions/windows/apps/hh965329(v=win.10))을 참조 하세요.
 
 Windows Phone Silverlight 앱은 **CultureInfo** 클래스를 사용 하 여 앱의 세계화를 지원 합니다. UWP 앱은 런타임에 및 Visual Studio 디자인 화면에서 앱 리소스 (지역화, 크기 조정 및 테마)를 동적으로 로드할 수 있도록 하는 MRT.LOG (최신 리소스 기술)를 사용 합니다. 자세한 내용은 [파일, 데이터 및 세계화에 대 한 지침](../design/usability/index.md)을 참조 하세요.
 
@@ -221,7 +221,7 @@ UWP 미디어와 그래픽에 대 한 정보를 읽으면 Windows 디자인 원�
 
 Windows Phone Silverlight에는 다른 [**브러시**](/uwp/api/Windows.UI.Xaml.Media.Brush) 형식이 있지만 UWP에 없는 **RadialGradientBrush** 형식이 있습니다. 비트맵을 사용 하 여 비슷한 효과를 얻을 수 있는 경우도 있습니다. [Microsoft DirectX](/windows/desktop/directx) 및 XAML c + + UWP에서 Direct2D를 사용 하 여 [방사형 그라데이션 브러시를 만들](/windows/desktop/Direct2D/how-to-create-a-radial-gradient-brush) 수 있습니다.
 
-Windows Phone Silverlight에 **OpacityMask** 속성이 있지만이 속성은 UWP [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) 형식의 멤버가 아닙니다 (). 비트맵을 사용 하 여 비슷한 효과를 얻을 수 있는 경우도 있습니다. [Microsoft DirectX](/windows/desktop/directx) 및 XAML c + + UWP 앱에서 Direct2D를 사용 하 여 [불투명 마스크를 만들](/windows/desktop/Direct2D/opacity-masks-overview) 수 있습니다. 그러나 **OpacityMask** 의 일반적인 사용 사례는 밝은 테마와 어두운 테마 모두에 맞게 조정 되는 단일 비트맵을 사용 하는 것입니다. 벡터 그래픽의 경우 테마 인식 시스템 브러시 (예: 아래에 설명 된 원형 차트)를 사용할 수 있습니다. 그러나 테마 인식 비트맵 (예: 아래에 설명 된 확인 표시)을 만들려면 다른 방법이 필요 합니다.
+Windows Phone Silverlight에 **OpacityMask** 속성이 있지만이 속성은 UWP  [**UIElement**](/uwp/api/Windows.UI.Xaml.UIElement) 형식의 멤버가 아닙니다 (). 비트맵을 사용 하 여 비슷한 효과를 얻을 수 있는 경우도 있습니다. [Microsoft DirectX](/windows/desktop/directx) 및 XAML c + + UWP 앱에서 Direct2D를 사용 하 여 [불투명 마스크를 만들](/windows/desktop/Direct2D/opacity-masks-overview) 수 있습니다. 그러나 **OpacityMask** 의 일반적인 사용 사례는 밝은 테마와 어두운 테마 모두에 맞게 조정 되는 단일 비트맵을 사용 하는 것입니다. 벡터 그래픽의 경우 테마 인식 시스템 브러시 (예: 아래에 설명 된 원형 차트)를 사용할 수 있습니다. 그러나 테마 인식 비트맵 (예: 아래에 설명 된 확인 표시)을 만들려면 다른 방법이 필요 합니다.
 
 ![테마 인식 비트맵](images/wpsl-to-uwp-case-studies/wpsl-to-uwp-theme-aware-bitmap.png)
 
@@ -356,7 +356,7 @@ UWP 앱에 대 한 타일은 몇 가지 차이점이 있지만 Windows Phone Sil
 
 ## <a name="toasts"></a>알림을
 
-ScheduledToastNotification를 사용 하 여 알림 메시지를 표시 하는 코드는 [**To Notificationmanager**](/uwp/api/Windows.UI.Notifications.ToastNotificationManager), [**to **](/uwp/api/Windows.UI.Notifications.ToastNotifier) [**notification, to notification**](/uwp/api/Windows.UI.Notifications.ToastNotification)및/또는 [**ScheduledToastNotification**](/uwp/api/Windows.UI.Notifications.ScheduledToastNotification) 클래스를 사용 하도록 포팅 되어야 **합니다.** 모바일 장치에서 "알림"에 대 한 소비자 지향 용어는 "배너"입니다.
+ScheduledToastNotification를 사용 하 여 알림 메시지를 표시 하는 코드는 [**To Notificationmanager**](/uwp/api/Windows.UI.Notifications.ToastNotificationManager), [**to**](/uwp/api/Windows.UI.Notifications.ToastNotifier) [**notification, to notification**](/uwp/api/Windows.UI.Notifications.ToastNotification)및/또는 [](/uwp/api/Windows.UI.Notifications.ScheduledToastNotification) 클래스를 사용 하도록 포팅 되어야 **합니다.** 모바일 장치에서 "알림"에 대 한 소비자 지향 용어는 "배너"입니다.
 
 [타일, 배지 및 알림 작업](/previous-versions/windows/apps/hh868259(v=win.10))을 참조 하세요.
 
@@ -374,7 +374,7 @@ Windows 10 앱의 경우 모든 장치가 고정 된 유효 픽셀 수의 일부
 
 앱이 모든 디스플레이에서 최상의 환경을 제공 하기 위해 각각 특정 배율 인수에 적합 한 크기의 범위로 각 비트맵 자산을 만드는 것이 좋습니다. 100% 규모, 200% 규모 및 400% 규모 (해당 우선 순위)로 자산을 제공 하면 대부분의 경우 중간 규모의 모든 요소에서 뛰어난 결과를 얻을 수 있습니다.
 
-**참고**    어떤 이유로 든, 여러 크기의 자산을 만들 수 없는 경우 100% 규모의 자산을 만들 수 있습니다. Microsoft Visual Studio에서 UWP 앱에 대 한 기본 프로젝트 템플릿은 브랜딩 자산 (타일 이미지 및 로고)을 한 크기로 제공 하지만 100% 눈금은 제공 하지 않습니다. 사용자 고유의 앱에 대 한 자산을 제작 하는 경우이 섹션의 지침에 따라 100%, 200% 및 400% 크기를 제공 하 고 자산 팩을 사용 합니다.
+**참고**  어떤 이유로 든, 여러 크기의 자산을 만들 수 없는 경우 100% 규모의 자산을 만들 수 있습니다. Microsoft Visual Studio에서 UWP 앱에 대 한 기본 프로젝트 템플릿은 브랜딩 자산 (타일 이미지 및 로고)을 한 크기로 제공 하지만 100% 눈금은 제공 하지 않습니다. 사용자 고유의 앱에 대 한 자산을 제작 하는 경우이 섹션의 지침에 따라 100%, 200% 및 400% 크기를 제공 하 고 자산 팩을 사용 합니다.
 
 복잡 한 아트 워크가 있는 경우 더 많은 크기의 자산을 제공 하는 것이 좋습니다. 벡터 아트를 사용 하 여 시작 하는 경우에는 규모에 관계 없이 고품질의 자산을 생성 하기가 비교적 쉽습니다.
 

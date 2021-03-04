@@ -1,16 +1,16 @@
 ---
-title: 음성 명령을 사용 하 여 Cortana에서 백그라운드 앱 활성화 | Cortana UWP 디자인 및 개발
+title: Cortana에서 음성 명령을 사용하여 백그라운드 앱 활성화 | Cortana UWP 디자인 및 개발
 description: 음성 명령을 사용 하 여 앱의 기능 (백그라운드 작업으로)으로 Cortana를 확장 합니다.
 ms.assetid: e2c7eae3-6beb-4156-92a5-474bba53451e
 ms.date: 09/24/2019
 ms.topic: article
 keywords: 나
-ms.openlocfilehash: f1ed51107f41318cecf2d8fea73484713b4b837c
-ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
+ms.openlocfilehash: 987a8f4146e5f97c0338c6a8492ace050fbaa3d0
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99606068"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101824637"
 ---
 # <a name="activate-a-background-app-in-cortana-using-voice-commands"></a>음성 명령을 사용 하 여 Cortana에서 백그라운드 앱 활성화  
 
@@ -61,8 +61,8 @@ ms.locfileid: "99606068"
 >
 > UWP (유니버설 Windows 플랫폼) 앱을 처음 개발 하는 경우 여기에 설명 된 기술에 익숙해질 수 있도록 다음 항목을 참조 하세요.
 >
-> - [첫 번째 앱 만들기](/windows/uwp/get-started/your-first-app)
-> - [이벤트 및 라우트된 이벤트](/windows/uwp/xaml-platform/events-and-routed-events-overview) 를 사용 하 여 이벤트에 대해 알아보기 개요
+> - [첫 번째 앱 만들기](../../get-started/your-first-app.md)
+> - [이벤트 및 라우트된 이벤트](../../xaml-platform/events-and-routed-events-overview.md) 를 사용 하 여 이벤트에 대해 알아보기 개요
 >
 > **사용자 환경 지침**
 >
@@ -98,7 +98,7 @@ UWP 앱은 가장 적합 한 이미지를 자동으로 선택 해야 합니다. 
 - 디바이스 유형  
 - 위치  
 
-고대비 및 배율 인수에 대 한 이미지 리소스에 대 한 자세한 내용은 [msdn.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets](/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast)에 있는 타일 및 아이콘 자산에 대 한 지침을 참조 하세요.  
+고대비 및 배율 인수에 대 한 이미지 리소스에 대 한 자세한 내용은 [msdn.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets](../../app-resources/images-tailored-for-scale-theme-contrast.md)에 있는 타일 및 아이콘 자산에 대 한 지침을 참조 하세요.  
 
 한정자를 사용 하 여 리소스에 이름을 사용 해야 합니다. 리소스 한정자는 특정 버전의 리소스를 사용 해야 하는 컨텍스트를 식별 하는 폴더 및 파일 이름 한정자입니다.  
 

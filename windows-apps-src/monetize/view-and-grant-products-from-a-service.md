@@ -6,12 +6,12 @@ ms.date: 01/21/2021
 ms.topic: article
 keywords: windows 10, uwp, Microsoft Store collection API, Microsoft Store 구매 API, 제품 보기, 제품 부여
 ms.localizationpriority: medium
-ms.openlocfilehash: 7674a9b966510d914850e1fc8b2c8ca531f64a20
-ms.sourcegitcommit: 069f5ab4be85a7d638fc2a426afaed824e5dfeae
+ms.openlocfilehash: 4e58a3e601c1a9f3ff438342ccaa9ee4014a1450
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98668737"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101824427"
 ---
 # <a name="manage-product-entitlements-from-a-service"></a>서비스에서 제품 권한 관리
 
@@ -84,7 +84,7 @@ Microsoft Store collection API 또는 purchase API에서 호출 하려는 방법
       > [!IMPORTANT]
       > `https://onestore.microsoft.com`서비스 내에 안전 하 게 저장 된 액세스 토큰과 함께 대상 그룹을 사용 합니다. 서비스 외부의 사용자에 게 액세스 토큰을 노출 하면 서비스가 재생 공격에 취약 해질 수 있습니다.
 
-  * Microsoft Store collection API에서 메서드를 호출 하 여 [사용자가 소유한 제품을 쿼리하거나](query-for-products.md) 사용 [가능한 제품을 충족 된 것으로 보고](report-consumable-products-as-fulfilled.md)하려면 대상 URI를 사용 하 여 토큰을 만들어야 합니다 `https://onestore.microsoft.com/b2b/keys/create/collections` . 이후 단계에서는 Microsoft Store collection API에서 사용할 수 있는 Microsoft Store ID 키를 요청 하기 위해 Windows SDK의 클라이언트 메서드에이 토큰을 전달 합니다.
+  * Microsoft Store collection API에서 메서드를 호출 하 여 [사용자가 소유한 제품을 쿼리하거나](query-for-products.md) 사용 [가능한 제품을 충족 된 것으로 보고](report-consumable-products-as-fulfilled.md)하려면 대상 URI를 사용 하 여 토큰을 만들어야 합니다 `https://onestore.microsoft.com` . 이후 단계에서는 Microsoft Store collection API에서 사용할 수 있는 Microsoft Store ID 키를 요청 하기 위해 Windows SDK의 클라이언트 메서드에이 토큰을 전달 합니다.
 
   * Microsoft Store 구매 API에서 메서드를 호출 하 여 [사용자에 게 무료 제품을 부여](grant-free-products.md)하거나 사용자에 대 한 구독을 [가져오거나](get-subscriptions-for-a-user.md) [사용자에 대 한 구독의 청구 상태를 변경](change-the-billing-state-of-a-subscription-for-a-user.md)하려면 대상 URI를 사용 하 여 토큰을 만들어야 합니다 `https://onestore.microsoft.com/b2b/keys/create/purchase` . 이후 단계에서는 Microsoft Store 구매 API에서 사용할 수 있는 Microsoft Store ID 키를 요청 하기 위해 Windows SDK의 클라이언트 메서드에이 토큰을 전달 합니다.
 

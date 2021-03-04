@@ -1,5 +1,5 @@
 ---
-title: Cortana 디자인 지침-Cortana UWP 디자인 및 개발
+title: Cortana 디자인 지침 - Cortana UWP 디자인 및 개발
 description: 이러한 지침 및 권장 사항은 앱에서 Cortana를 사용 하 여 사용자와 상호 작용 하는 방법을 설명 합니다.
 ms.assetid: 332ccb95-0e56-410e-ab63-cc028fce4192
 label: Cortana
@@ -8,12 +8,12 @@ ms.date: 01/27/2021
 ms.topic: article
 keywords: cortana, 디자인
 ms.localizationpriority: medium
-ms.openlocfilehash: b7711f9fd653bbd635582a0b2268a5eb0ed7417b
-ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
+ms.openlocfilehash: ae5f1ce3c481e833ce80d0ebd52d64f6efba7e78
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99606088"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823277"
 ---
 # <a name="cortana-design-guidelines"></a>Cortana 디자인 지침
 
@@ -118,17 +118,17 @@ ms.locfileid: "99606088"
 
 긴 GUI 문자열을 사용 하지 않는 것이 좋습니다. **Cortana** 캔버스는 응답에 대해 3 개의 줄을 제공 하 고 그 보다 긴 문자열을 자릅니다.
 
-자세한 내용은 [세계화 및 지역화 섹션](/windows/uwp/design/globalizing/guidelines-and-checklist-for-globalizing-your-app)을 참조 하세요.
+자세한 내용은 [세계화 및 지역화 섹션](../globalizing/guidelines-and-checklist-for-globalizing-your-app.md)을 참조 하세요.
 
 ## <a name="image-resources-and-scaling"></a>이미지 리소스 및 크기 조정
 
 UWP (유니버설 Windows 플랫폼) 앱은 특정 설정 및 장치 기능 (고대비, 유효 픽셀, 로캘 등)에 따라 가장 적합 한 앱 로고 이미지를 자동으로 선택할 수 있습니다. 이미지를 제공 하기만 하면 응용 프로그램 프로젝트 내에서 다른 리소스 버전에 대 한 적절 한 명명 규칙 및 폴더 조직을 사용 하 게 됩니다. 권장 리소스 버전을 제공 하지 않으면 사용자의 기본 설정, 기능, 장치 유형 및 위치에 따라 접근성, 지역화 및 이미지 품질이 저하 될 수 있습니다.
 
-고대비 및 배율 인수에 대 한 이미지 리소스에 대 한 자세한 내용은 [타일 및 아이콘 자산에 대 한 지침](/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast)을 참조 하세요.
+고대비 및 배율 인수에 대 한 이미지 리소스에 대 한 자세한 내용은 [타일 및 아이콘 자산에 대 한 지침](../../app-resources/images-tailored-for-scale-theme-contrast.md)을 참조 하세요.
 
 한정자를 사용 하 여 리소스 이름을 표시 합니다. 리소스 한정자는 특정 버전의 리소스를 사용 해야 하는 컨텍스트를 식별 하는 폴더 및 파일 이름 한정자입니다.
 
-표준 명명 규칙은 "foldername/qualifiername-value \[ \_ qualifiername \] /filename.qualifiername-value \[ \_ qualifiername-value \] . ext"입니다. 예: images/100 사이의 \_contrast-white.png은 단순히 루트 폴더와 파일 이름: images/logo.png를 사용 하 여 코드에서 참조 됩니다. [언어 및 지역 관리](/windows/uwp/design/globalizing/manage-language-and-region) 및 [한정자를 사용 하 여 리소스 이름을 결정 하는 방법을](/previous-versions/windows/apps/hh965324(v=win.10))참조 하세요.
+표준 명명 규칙은 "foldername/qualifiername-value \[ \_ qualifiername \] /filename.qualifiername-value \[ \_ qualifiername-value \] . ext"입니다. 예: images/100 사이의 \_contrast-white.png은 단순히 루트 폴더와 파일 이름: images/logo.png를 사용 하 여 코드에서 참조 됩니다. [언어 및 지역 관리](../globalizing/manage-language-and-region.md) 및 [한정자를 사용 하 여 리소스 이름을 결정 하는 방법을](/previous-versions/windows/apps/hh965324(v=win.10))참조 하세요.
 
 현재 지역화 된 또는 여러 해결 리소스를 제공 하지 않는 경우에도 문자열 리소스 파일 (예: "en-us \\ 리소스. resw") 및 이미지 (예: "logo.scale-100.png")의 기본 배율 인수에 대 한 기본 언어를 표시 하는 것이 좋습니다. 그러나 최소 100, 200 및 400 배율 인수에 대 한 자산을 제공 하는 것이 좋습니다.
 
@@ -147,7 +147,7 @@ Cortana 캔버스에 표시 되는 결과 타일에 대 한 템플릿 집합이 
 
 다음은 지원 되는 템플릿 (예:)입니다.
 
-| Name | 예제 |
+| 속성 | 예제 |
 | --- | --- |
 | 제목만  | :::image type="content" source="images/cortana/voicecommandcontenttiletype-titleonly-small.png" alt-text="제목만 표시 하는 Cortana 캔버스의 스크린샷"::: |
 | 텍스트가 있는 제목 | :::image type="content" source="images/cortana/voicecommandcontenttiletype-titlewithtext-small.png" alt-text="텍스트를 사용 하 여 제목을 표시 하는 Cortana 캔버스의 스크린샷"::: |

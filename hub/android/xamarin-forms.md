@@ -1,18 +1,18 @@
 ---
 title: Xamarin.ios를 사용 하 여 간단한 Android 앱 만들기
-description: Xamarin을 사용 하 여 Android 앱을 작성 하기 시작 하는 방법
+description: Windows에서 Xamarin을 사용 하 여 Android 장치에서 작동 하는 플랫폼 간 앱을 만드는 방법에 대 한 단계별 가이드입니다.
 author: hickeys
 ms.author: hickeys
 manager: jken
 ms.topic: article
 keywords: android, windows, xamarin.ios, xaml, 자습서
 ms.date: 04/28/2020
-ms.openlocfilehash: a1426bfef9863227c1ac110bc295536786695df7
-ms.sourcegitcommit: 24b19e7ee06e5bb11a0dae334806741212490ee9
+ms.openlocfilehash: b1364d8ac19176ec25ee6d45664c7e765accfe1e
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82255197"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823197"
 ---
 # <a name="get-started-developing-for-android-using-xamarinforms"></a>Xamarin.ios를 사용 하 여 Android 용 개발 시작
 
@@ -37,17 +37,17 @@ ms.locfileid: "82255197"
 
 Visual Studio를 시작합니다. 파일 > 새 > 프로젝트를 클릭 하 여 새 프로젝트를 만듭니다.
 
-새 프로젝트 대화 상자에서 **모바일 앱 (xamarin.ios)** 템플릿을 선택 하 고 **다음**을 클릭 합니다.
+새 프로젝트 대화 상자에서 **모바일 앱 (xamarin.ios)** 템플릿을 선택 하 고 **다음** 을 클릭 합니다.
 
-프로젝트 이름을 **TimeChangerForms** 로 선택 하 고 **만들기**를 클릭 합니다.
+프로젝트 이름을 **TimeChangerForms** 로 선택 하 고 **만들기** 를 클릭 합니다.
 
-새 플랫폼 간 앱 대화 상자에서 **비어 있음**을 선택 합니다. 플랫폼 섹션에서 **Android** 를 선택 하 고 다른 모든 확인란의 선택을 취소 합니다. **확인**을 클릭합니다.
+새 플랫폼 간 앱 대화 상자에서 **비어 있음** 을 선택 합니다. 플랫폼 섹션에서 **Android** 를 선택 하 고 다른 모든 확인란의 선택을 취소 합니다. **확인** 을 클릭합니다.
 
 Xamarin은 **TimeChangerForms** 및 **TimeChangerForms** 의 두 프로젝트를 사용 하 여 새 솔루션을 만듭니다.
 
 ## <a name="create-a-ui-with-xaml"></a>XAML을 사용 하 여 UI 만들기
 
-**TimeChangerForms** 프로젝트를 확장 하 고 **mainpage**을 엽니다. 이 파일의 XAML은 TimeChanger를 열 때 사용자에 게 표시 되는 첫 번째 화면을 정의 합니다.
+**TimeChangerForms** 프로젝트를 확장 하 고 **mainpage** 을 엽니다. 이 파일의 XAML은 TimeChanger를 열 때 사용자에 게 표시 되는 첫 번째 화면을 정의 합니다.
 
 TimeChanger UI는 단순 합니다. 현재 시간을 표시 하 고 1 시간 단위로 시간을 조정 하는 단추를 포함 합니다. 세로 StackLayout을 사용 하 여 단추 위에 시간을 맞추고 가로 StackLayout을 사용 하 여 단추를 나란히 정렬 합니다. 세로 StackLayout의 **HorizontalOptions** 및 **VerticalOptions** 를 **"center andexpand"** 로 설정 하 여 콘텐츠를 화면 가운데에 맞춥니다.
 
@@ -87,11 +87,11 @@ MainPage의 내용을 다음 코드로 바꿉니다.
 
 ## <a name="add-logic-code-with-c"></a>C를 사용 하 여 논리 코드 추가 #
 
-솔루션 탐색기에서 MainPage을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 클릭 합니다. 이 파일에는 UI에 기능을 추가 하는 코드가 포함 되어 있습니다.
+솔루션 탐색기에서 MainPage을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기** 를 클릭 합니다. 이 파일에는 UI에 기능을 추가 하는 코드가 포함 되어 있습니다.
 
 ### <a name="set-the-current-time"></a>현재 시간 설정
 
-이 파일의 코드는 컨트롤의 **x:Name** 특성 값을 사용 하 여 XAML에 선언 된 컨트롤을 참조할 수 있습니다. 이 경우 현재 시간을 표시 하는 레이블이 호출 `time`됩니다.
+이 파일의 코드는 컨트롤의 **x:Name** 특성 값을 사용 하 여 XAML에 선언 된 컨트롤을 참조할 수 있습니다. 이 경우 현재 시간을 표시 하는 레이블이 호출 됩니다 `time` .
 
 주 스레드에서 UI 컨트롤을 업데이트 해야 합니다. 다른 스레드에서 변경한 내용이 화면에 표시 되 면 해당 컨트롤을 제대로 업데이트 하지 못할 수 있습니다. 이 코드는 항상 주 스레드에서 실행 되는 것이 보장 되지 않기 때문에 **BeginInvokeOnMainThread** 메서드를 사용 하 여 업데이트를 올바르게 표시 하는지 확인 합니다. 전체 UpdateTimeLabel 메서드는 다음과 같습니다.
 

@@ -1,5 +1,5 @@
 ---
-title: Cortana에서 보다 자연 스러운 음성 명령 지원-Cortana UWP 디자인 및 개발
+title: Cortana에서 보다 자연스러운 음성 명령 지원 - Cortana UWP 디자인 및 개발
 description: 사용자가 명령의 어디에서 나 앱 이름을 말할 수 있는 보다 유연 하 고 자연 스러운 음성 명령으로 Cortana를 확장 합니다.
 author: kbridge
 label: Conceptual
@@ -7,12 +7,12 @@ ms.assetid: c2959c1b-c2f2-4a8d-8f3e-79585f69afcf
 ms.date: 01/28/2021
 ms.topic: article
 keywords: 나
-ms.openlocfilehash: 7716d4d623653c6b2d943135f2e2cf1ac9a40343
-ms.sourcegitcommit: 8fe992f3a6d8f7975af4911ad88e855bee50083e
+ms.openlocfilehash: c6777a0c7ad9a8e2658b759e516b659bbd4eb9a9
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99605998"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101824507"
 ---
 # <a name="support-natural-language-voice-commands-in-cortana"></a>Cortana에서 자연어 음성 명령을 지원 합니다.
 
@@ -46,8 +46,8 @@ ms.locfileid: "99605998"
 >
 > UWP (유니버설 Windows 플랫폼) 앱을 처음 개발 하는 경우 여기에 설명 된 기술에 익숙해질 수 있도록 다음 항목을 참조 하세요.
 >
-> - [첫 번째 앱 만들기](/windows/uwp/get-started/your-first-app)
-> - [이벤트 및 라우트된 이벤트](/windows/uwp/xaml-platform/events-and-routed-events-overview) 를 사용 하 여 이벤트에 대해 알아보기 개요
+> - [첫 번째 앱 만들기](../../get-started/your-first-app.md)
+> - [이벤트 및 라우트된 이벤트](../../xaml-platform/events-and-routed-events-overview.md) 를 사용 하 여 이벤트에 대해 알아보기 개요
 >
 > **사용자 환경 지침**
 >
