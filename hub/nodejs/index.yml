@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Windows에서 Node.js를 사용하여 개발
-summary: Windows를 사용하여 Node.js로 개발을 시작하세요.
+summary: Windows에서 Node.js로 개발을 시작하세요. 개발 환경, 웹 프레임워크, 데이터베이스 및 컨테이너를 설정하는 리소스를 참조하세요.
 metadata:
   author: mattwojo
   description: Windows에서 Node.js로 개발을 시작하세요.
@@ -10,12 +10,12 @@ metadata:
   ms.prod: dev-environment
   ms.technology: windows-nodejs
   ms.topic: landing-page
-  ms.openlocfilehash: 862a1a13e8617ed055adee403b18674f4ed2aded
-  ms.sourcegitcommit: 7aa0e1108fd1a19ebc5632acbc9f66ea9af2b321
+  ms.openlocfilehash: 04ba800e1b2ac247ae158fbdcead6f53446c26c2
+  ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 12/18/2020
-  ms.locfileid: "97691505"
+  ms.lasthandoff: 03/04/2021
+  ms.locfileid: "101823587"
 landingContent:
 - title: Node.js 개발 환경 설정
   linkLists:

@@ -9,12 +9,12 @@ dev_langs:
 - vb
 keywords: windows 10, uwp, 화면 캡처
 ms.localizationpriority: medium
-ms.openlocfilehash: 26de7699f9f261bba6e02bc3664e335c46e4ac3d
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: be8d63a446c05998948327d7055b4385c5e88761
+ms.sourcegitcommit: 9842e0e5c369a52594336d2278af877ccf40b049
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91218666"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102196976"
 ---
 # <a name="screen-capture"></a>화면 캡처
 
@@ -31,9 +31,9 @@ Windows 10 버전 1803부터, [Windows Graphics. Capture](/uwp/api/windows.graph
 
 **Windows Graphics. Capture** 네임 스페이스에 있는 api는 응용 프로그램의 매니페스트에서 일반적인 기능을 선언 해야 합니다.
 
-1. **솔루션 탐색기**에서 **appxmanifest.xml** 을 엽니다.
+1. **솔루션 탐색기** 에서 **appxmanifest.xml** 을 엽니다.
 2. **기능** 탭을 선택합니다.
-3. **그래픽 캡처**를 확인 합니다.
+3. **그래픽 캡처** 를 확인 합니다.
 
 ![그래픽 캡처](images/screen-capture-1.png)
 
@@ -61,7 +61,7 @@ Public Sub OnInitialization()
 End Sub
 ```
 
-화면 캡처가 지원 되는지 확인 한 후에는 [GraphicsCapturePicker](/uwp/api/windows.graphics.capture.graphicscapturepicker) 클래스를 사용 하 여 시스템 선택 UI를 호출 합니다. 최종 사용자는이 UI를 사용 하 여 화면 캡처를 수행할 표시 또는 응용 프로그램 창을 선택 합니다. 선택은 **GraphicsCaptureSession**를 만드는 데 사용 되는 [GraphicsCaptureItem](/uwp/api/windows.graphics.capture.graphicscaptureitem) 를 반환 합니다.
+화면 캡처가 지원 되는지 확인 한 후에는 [GraphicsCapturePicker](/uwp/api/windows.graphics.capture.graphicscapturepicker) 클래스를 사용 하 여 시스템 선택 UI를 호출 합니다. 최종 사용자는이 UI를 사용 하 여 화면 캡처를 수행할 표시 또는 응용 프로그램 창을 선택 합니다. 선택은 **GraphicsCaptureSession** 를 만드는 데 사용 되는 [GraphicsCaptureItem](/uwp/api/windows.graphics.capture.graphicscaptureitem) 를 반환 합니다.
 
 ```csharp
 public async Task StartCaptureAsync()
@@ -115,7 +115,10 @@ Await window.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
 
 ## <a name="create-a-capture-frame-pool-and-capture-session"></a>캡처 프레임 풀 및 캡처 세션 만들기
 
-**GraphicsCaptureItem**를 사용 하 여 D3D 장치, 지원 되는 픽셀 형식 (**DXGI \_ 형식 \_ B8G8R8A8 \_ unorm**), 원하는 프레임 수 (임의 정수) 및 프레임 크기를 사용 하 여 [Direct3D11CaptureFramePool](/uwp/api/windows.graphics.capture.direct3d11captureframepool) 를 만듭니다. **GraphicsCaptureItem** 클래스의 **contentsize** 속성은 프레임 크기로 사용할 수 있습니다.
+**GraphicsCaptureItem** 를 사용 하 여 D3D 장치, 지원 되는 픽셀 형식 (**DXGI \_ 형식 \_ B8G8R8A8 \_ unorm**), 원하는 프레임 수 (임의 정수) 및 프레임 크기를 사용 하 여 [Direct3D11CaptureFramePool](/uwp/api/windows.graphics.capture.direct3d11captureframepool) 를 만듭니다. **GraphicsCaptureItem** 클래스의 **contentsize** 속성은 프레임 크기로 사용할 수 있습니다.
+
+> [!NOTE]
+> Windows HD 색을 사용 하는 시스템에서는 콘텐츠 픽셀 형식이 반드시 **DXGI \_ 형식 \_ B8G8R8A8 \_ unorm** 일 수 있습니다. HDR 콘텐츠를 캡처할 때 픽셀 과도 한 클리핑을 방지 하기 위해 (예: 캡처된 내용이 희미하게 표시 됨) 캡처 파이프라인의 모든 구성 요소 (예: [CanvasBitmap](https://microsoft.github.io/Win2D/html/T_Microsoft_Graphics_Canvas_CanvasBitmap.htm)와 같은 대상 대상)에 대해 **DXGI \_ 형식 \_ R16G16B16A16 \_ FLOAT** 를 사용 [하는 것](/uwp/api/windows.graphics.capture.direct3d11captureframepool)이 좋습니다. 필요에 따라 HDR 콘텐츠 형식에 저장 또는 HDR-SDR 톤 매핑과 같은 추가 처리가 필요할 수 있습니다. 이 문서에서는 SDR 콘텐츠 캡처에 대해 집중적으로 설명 합니다. 자세한 내용은 [높은 동적 범위 표시 및 고급 색을 사용 하는 DirectX 사용](/windows/win32/direct3darticles/high-dynamic-range)을 참조 하세요.
 
 ```csharp
 private GraphicsCaptureItem _item;
@@ -214,21 +217,21 @@ Private Sub FramePool_FrameArrived(sender As Direct3D11CaptureFramePool, args As
 End Sub
 ```
 
-**FrameArrived**에 가능 하면 UI 스레드를 사용 하지 않는 것이 좋습니다 .이 이벤트는 새 프레임을 사용할 수 있을 때마다 발생 하며이는 자주 발생 합니다. UI 스레드에 대해 **FrameArrived** 를 수신 하도록 선택 하는 경우 이벤트가 발생할 때마다 수행 하는 작업의 양을 염두에 둘 수 있습니다.
+**FrameArrived** 에 가능 하면 UI 스레드를 사용 하지 않는 것이 좋습니다 .이 이벤트는 새 프레임을 사용할 수 있을 때마다 발생 하며이는 자주 발생 합니다. UI 스레드에 대해 **FrameArrived** 를 수신 하도록 선택 하는 경우 이벤트가 발생할 때마다 수행 하는 작업의 양을 염두에 둘 수 있습니다.
 
 또는 필요한 모든 프레임을 가져올 때까지 **Direct3D11CaptureFramePool** 메서드를 사용 하 여 프레임을 수동으로 끌어올 수 있습니다.
 
-**Direct3D11CaptureFrame** 개체에는 **contentsize**, **Surface**및 **SystemRelativeTime**속성이 포함 됩니다. **SystemRelativeTime** 은 다른 미디어 요소를 동기화 하는 데 사용할 수 있는 qpc ([queryperformancecounter](/windows/desktop/api/profileapi/nf-profileapi-queryperformancecounter)) 시간입니다.
+**Direct3D11CaptureFrame** 개체에는 **contentsize**, **Surface** 및 **SystemRelativeTime** 속성이 포함 됩니다. **SystemRelativeTime** 은 다른 미디어 요소를 동기화 하는 데 사용할 수 있는 qpc ([queryperformancecounter](/windows/desktop/api/profileapi/nf-profileapi-queryperformancecounter)) 시간입니다.
 
 ## <a name="process-capture-frames"></a>프로세스 캡처 프레임
 
-**TryGetNextFrame**를 호출할 때 **Direct3D11CaptureFramePool** 의 각 프레임을 체크 아웃 하 고 **Direct3D11CaptureFrame** 개체의 수명에 따라 다시 체크 인 합니다. 네이티브 응용 프로그램의 경우 **Direct3D11CaptureFrame** 개체를 해제 하면 프레임 풀에 프레임을 다시 체크 인할 수 있습니다. 관리 되는 응용 프로그램의 경우 **Direct3D11CaptureFrame** (c + +에서**닫기** ) 메서드를 사용 하는 것이 좋습니다. **Direct3D11CaptureFrame** 는 c # 호출자의 [IDisposable](/dotnet/api/system.idisposable) 으로 프로젝션 된 [은 windows.foundation.iclosable](/uwp/api/Windows.Foundation.IClosable) 인터페이스를 구현 합니다.
+**TryGetNextFrame** 를 호출할 때 **Direct3D11CaptureFramePool** 의 각 프레임을 체크 아웃 하 고 **Direct3D11CaptureFrame** 개체의 수명에 따라 다시 체크 인 합니다. 네이티브 응용 프로그램의 경우 **Direct3D11CaptureFrame** 개체를 해제 하면 프레임 풀에 프레임을 다시 체크 인할 수 있습니다. 관리 되는 응용 프로그램의 경우 **Direct3D11CaptureFrame** (c + +에서 **닫기** ) 메서드를 사용 하는 것이 좋습니다. **Direct3D11CaptureFrame** 는 c # 호출자의 [IDisposable](/dotnet/api/system.idisposable) 으로 프로젝션 된 [은 windows.foundation.iclosable](/uwp/api/Windows.Foundation.IClosable) 인터페이스를 구현 합니다.
 
 응용 프로그램은 **Direct3D11CaptureFrame** 개체에 대 한 참조를 저장 해서는 안 되며, 프레임이 다시 체크 인 된 후에도 기본 Direct3D 화면에 대 한 참조를 저장 하지 않아야 합니다.
 
 프레임을 처리 하는 동안 응용 프로그램에서 **Direct3D11CaptureFramePool** 개체와 연결 된 동일한 장치에 대해 [ID3D11Multithread](/windows/desktop/api/d3d11_4/nn-d3d11_4-id3d11multithread) 잠금을 사용 하는 것이 좋습니다.
 
-기본 Direct3D 표면은 **Direct3D11CaptureFramePool**를 만들거나 다시 만들 때 항상 지정 된 크기가 됩니다. 내용이 프레임 보다 큰 경우 내용이 프레임 크기로 잘립니다. 내용이 프레임 보다 작으면 프레임의 나머지 부분에는 정의 되지 않은 데이터가 포함 됩니다. 응용 프로그램은 정의 되지 않은 콘텐츠가 표시 되지 않도록 **Direct3D11CaptureFrame** 의 **contentsize** 속성을 사용 하 여 하위 사각형을 복사 하는 것이 좋습니다.
+기본 Direct3D 표면은 **Direct3D11CaptureFramePool** 를 만들거나 다시 만들 때 항상 지정 된 크기가 됩니다. 내용이 프레임 보다 큰 경우 내용이 프레임 크기로 잘립니다. 내용이 프레임 보다 작으면 프레임의 나머지 부분에는 정의 되지 않은 데이터가 포함 됩니다. 응용 프로그램은 정의 되지 않은 콘텐츠가 표시 되지 않도록 **Direct3D11CaptureFrame** 의 **contentsize** 속성을 사용 하 여 하위 사각형을 복사 하는 것이 좋습니다.
 
 ## <a name="take-a-screenshot"></a>스크린샷을 찍습니다.
 
@@ -241,7 +244,7 @@ CanvasBitmap canvasBitmap = CanvasBitmap.CreateFromDirect3D11Surface(
     frame.Surface);
 ```
 
-**CanvasBitmap**을 만든 후에는 이미지 파일로 저장할 수 있습니다. 다음 예제에서는 사용자의 **저장 된 그림** 폴더에 PNG 파일로 저장 합니다.
+**CanvasBitmap** 을 만든 후에는 이미지 파일로 저장할 수 있습니다. 다음 예제에서는 사용자의 **저장 된 그림** 폴더에 PNG 파일로 저장 합니다.
 
 ```csharp
 StorageFolder pictureFolder = KnownFolders.SavedPictures;
@@ -255,13 +258,13 @@ using (var fileStream = await file.OpenAsync(FileAccessMode.ReadWrite))
 
 ## <a name="react-to-capture-item-resizing-or-device-lost"></a>캡처 항목 크기 조정 또는 장치 손실에 대응
 
-캡처 프로세스를 진행 하는 동안 응용 프로그램은 **Direct3D11CaptureFramePool**의 측면을 변경할 수 있습니다. 여기에는 새 Direct3D 장치를 제공 하거나, 프레임 버퍼의 크기를 변경 하거나, 풀 내의 버퍼 수를 변경 하는 작업이 포함 됩니다. 이러한 각 시나리오에서 **Direct3D11CaptureFramePool** 개체에 대 한 **다시 만들기** 메서드는 권장 도구입니다.
+캡처 프로세스를 진행 하는 동안 응용 프로그램은 **Direct3D11CaptureFramePool** 의 측면을 변경할 수 있습니다. 여기에는 새 Direct3D 장치를 제공 하거나, 프레임 버퍼의 크기를 변경 하거나, 풀 내의 버퍼 수를 변경 하는 작업이 포함 됩니다. 이러한 각 시나리오에서 **Direct3D11CaptureFramePool** 개체에 대 한 **다시 만들기** 메서드는 권장 도구입니다.
 
-**다시 만들기** 가 호출 되 면 기존 프레임은 모두 삭제 됩니다. 이는 기본 Direct3D 서피스가 응용 프로그램에서 더 이상 액세스할 수 없는 장치에 속한 프레임을 처리 하지 않도록 하기 위한 것입니다. 따라서 **다시 만들기**를 호출 하기 전에 보류 중인 모든 프레임을 처리 하는 것이 좋을 수 있습니다.
+**다시 만들기** 가 호출 되 면 기존 프레임은 모두 삭제 됩니다. 이는 기본 Direct3D 서피스가 응용 프로그램에서 더 이상 액세스할 수 없는 장치에 속한 프레임을 처리 하지 않도록 하기 위한 것입니다. 따라서 **다시 만들기** 를 호출 하기 전에 보류 중인 모든 프레임을 처리 하는 것이 좋을 수 있습니다.
 
 ## <a name="putting-it-all-together"></a>모든 항목 요약
 
-다음 코드 조각은 UWP 응용 프로그램에서 화면 캡처를 구현 하는 방법의 종단 간 예제입니다. 이 샘플에는 프런트 엔드에 두 개의 단추가 있습니다. 하나는 **Button_ClickAsync**호출 하 고 다른 하나는 **ScreenshotButton_ClickAsync**를 호출 합니다.
+다음 코드 조각은 UWP 응용 프로그램에서 화면 캡처를 구현 하는 방법의 종단 간 예제입니다. 이 샘플에는 프런트 엔드에 두 개의 단추가 있습니다. 하나는 **Button_ClickAsync** 호출 하 고 다른 하나는 **ScreenshotButton_ClickAsync** 를 호출 합니다.
 
 > [!NOTE]
 > 이 코드 조각은 2D 그래픽용 라이브러리인 [Win2D](https://microsoft.github.io/Win2D/html/Introduction.htm)를 사용 합니다. 프로젝트에 맞게 설정 하는 방법에 대 한 자세한 내용은 해당 설명서를 참조 하세요.
