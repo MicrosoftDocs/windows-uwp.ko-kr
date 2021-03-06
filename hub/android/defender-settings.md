@@ -1,18 +1,18 @@
 ---
-title: Defender 설정을 업데이트 하 여 성능 속도 향상
-description: 지정 된 파일 형식 확인을 제외 하도록 Windows Defender 설정을 업데이트 하 여 전반적인 성능 속도 및 빌드 시간을 개선 하는 방법에 대 한 지침입니다.
+title: Windows Defender 보안 설정
+description: 지정 된 파일 형식 확인을 제외 하도록 Windows Defender 설정을 업데이트 하 여 성능 속도와 빌드 시간을 개선 하는 방법에 대해 알아봅니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
 keywords: android, windows, windows defender, 설정, 구성, 제외,% USERPROFILE%, devenv.exe, 성능, 속도, 빌드, gradle
 ms.date: 04/28/2020
-ms.openlocfilehash: e762e595bf2b8aa9b8420d41f68d2890e7d5dfe0
-ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
+ms.openlocfilehash: f7b2a44f31bf4ec84a4c7f014a3a502350dca748
+ms.sourcegitcommit: bcdec8bda3106cd5588464531e582101d52dcc80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101823207"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102254303"
 ---
 # <a name="update-windows-defender-settings-to-improve-performance"></a>성능 향상을 위한 Windows Defender 설정 업데이트
 
@@ -66,7 +66,7 @@ Android Studio에 의해 설정 된 기본 위치를 사용 하지 않았거나 
 > [!Note]
 > Daniel Knoodle는 [Visual Studio 2017에 대 한 Windows Defender 제외](https://gist.github.com/dknoodle/5a66b8b8a3f2243f4ca5c855b323cb7b#file-windows-defender-exclusions-vs-2017-ps1-L10)를 추가 하는 권장 스크립트가 포함 된 GitHub 리포지토리를 설정 했습니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 - [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](/dual-screen/android/)
 

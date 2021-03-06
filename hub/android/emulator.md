@@ -1,5 +1,5 @@
 ---
-title: Windows에서 Android 장치 또는 에뮬레이터 실행
+title: Android 장치 또는 에뮬레이터에서 테스트
 description: Windows에서 Android 장치 또는 에뮬레이터에서 앱을 테스트 하 고 hyper-v 및 Windows 하이퍼바이저 플랫폼 (WHPX)으로 가상화를 사용 하도록 설정 합니다.
 author: mattwojo
 ms.author: mattwoj
@@ -7,12 +7,12 @@ manager: jken
 ms.topic: article
 keywords: android, windows, 에뮬레이터, 가상 장치, 장치 설정, 장치 사용, 개발자, 구성, 가상화, visual studio, hyper-v, intel, haxm, amd, Windows 하이퍼바이저 플랫폼, WHPX
 ms.date: 04/28/2020
-ms.openlocfilehash: 57e1d8d62ea7b3918c5e52724c11febcb9f03d72
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: 9e9d8cac14fd424ab653db2f5e1639a4c26e434a
+ms.sourcegitcommit: bcdec8bda3106cd5588464531e582101d52dcc80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89161557"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102254312"
 ---
 # <a name="test-on-an-android-device-or-emulator"></a>Android 장치 또는 에뮬레이터에서 테스트
 
@@ -28,11 +28,11 @@ Windows 컴퓨터의 실제 장치 또는 에뮬레이터를 사용 하 여 Andr
 
 1. USB 케이블로 Windows 개발 컴퓨터에 장치를 연결 합니다. USB 드라이버를 설치 하는 알림을 받을 수 있습니다.
 2. Android 장치에서 **설정** 화면을 엽니다.
-3. **휴대폰 정보**를 선택 합니다.
+3. **휴대폰 정보** 를 선택 합니다.
 4. **이제 개발자** 가 될 때까지 아래쪽으로 스크롤하고 **빌드 번호** 를 7 번 누릅니다. 탭합니다.
-5. 이전 화면으로 돌아가서 **System**을 선택 합니다.
-6. **고급**을 선택 하 고 아래쪽으로 스크롤한 다음 **개발자 옵션**을 탭 합니다.
-7. **개발자 옵션** 창에서 아래로 스크롤하여 **USB 디버깅**을 찾아서 사용 하도록 설정 합니다.
+5. 이전 화면으로 돌아가서 **System** 을 선택 합니다.
+6. **고급** 을 선택 하 고 아래쪽으로 스크롤한 다음 **개발자 옵션** 을 탭 합니다.
+7. **개발자 옵션** 창에서 아래로 스크롤하여 **USB 디버깅** 을 찾아서 사용 하도록 설정 합니다.
 
 이전 버전의 Android를 실행 하는 장치의 경우 [개발용 장치 설정](/xamarin/android/get-started/installation/set-up-device-for-development)을 참조 하세요.
 
@@ -61,7 +61,7 @@ Android emulator를 사용 하 여 가상 장치를 만들기 전에 Hyper-v 및
 > * 4GB의 메모리를 사용할 수 있습니다.
 > * SLAT (두 번째 수준 주소 변환)를 사용 하는 64 비트 Intel processor 또는 AMD Ryzen CPU가 있어야 합니다.
 > * Windows 10 build 1803 +를 실행 하 고 있습니다 ([빌드 # 확인](ms-settings:about)).
-> * 업데이트 된 그래픽 드라이버 (Device Manager > 디스플레이 어댑터 > 업데이트 드라이버)
+> * 업데이트 된 그래픽 드라이버 (장치 관리자 > 디스플레이 어댑터 > 업데이트 드라이버)
 >
 > 컴퓨터가이 조건에 맞지 않으면 [INTEL HAXM](https://github.com/intel/haxm/wiki/Installation-Instructions-on-Windows) 또는 [AMD 하이퍼바이저](https://github.com/google/android-emulator-hypervisor-driver-for-amd-processors)를 실행할 수 있습니다. 자세한 내용은 [에뮬레이터 성능에 대 한 하드웨어 가속](/xamarin/android/get-started/installation/android-emulator/hardware-acceleration) 또는 [Android Studio 에뮬레이터 설명서](https://developer.android.com/studio/run/emulator)문서를 참조 하세요.
 
@@ -71,7 +71,7 @@ Android emulator를 사용 하 여 가상 장치를 만들기 전에 Hyper-v 및
 
 2. Windows 검색 상자 (왼쪽 아래)에 "windows 기능"을 입력 합니다. 검색 결과에서 **Windows 기능 사용/사용 안 함** 을 선택 합니다.
 
-3. **Windows 기능** 목록이 표시 되 면를 스크롤하여 **Hyper-v** 찾기 (관리 도구 및 플랫폼 모두 포함)와 **Windows 하이퍼바이저 플랫폼**을 선택 하 고 확인란을 선택 하 고 **확인**을 선택 합니다.
+3. **Windows 기능** 목록이 표시 되 면를 스크롤하여 **Hyper-v** 찾기 (관리 도구 및 플랫폼 모두 포함)와 **Windows 하이퍼바이저 플랫폼** 을 선택 하 고 확인란을 선택 하 고 **확인** 을 선택 합니다.
 
 4. 메시지가 표시되면 컴퓨터를 다시 시작합니다.
 
@@ -98,9 +98,9 @@ Windows Pc에는 많은 [Android 에뮬레이터 옵션](https://www.androidauth
 
 ### <a name="install-android-emulator-with-visual-studio"></a>Visual Studio를 사용 하 여 Android emulator 설치
 
-1. 아직 설치 하지 않은 경우 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)을 다운로드 합니다. Visual Studio 설치 관리자를 사용 하 여 [작업을 수정](/visualstudio/install/modify-visual-studio?view=vs-2019#modify-workloads) 하 고 **.net 워크 로드를 사용한 모바일 개발**이 있는지 확인 합니다.
+1. 아직 설치 하지 않은 경우 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)을 다운로드 합니다. Visual Studio 설치 관리자를 사용 하 여 [작업을 수정](/visualstudio/install/modify-visual-studio?view=vs-2019#modify-workloads) 하 고 **.net 워크 로드를 사용한 모바일 개발** 이 있는지 확인 합니다.
 
-2. 새 프로젝트를 만듭니다. [Android Emulator를 설정한](/xamarin/android/get-started/installation/android-emulator/)후에는 [Android Device Manager](/xamarin/android/get-started/installation/android-emulator/device-manager?pivots=windows&tabs=windows#requirements) 를 사용 하 여 다양 한 Android 가상 장치를 만들고, 복제 하 고, 사용자 지정 하 고, 시작할 수 있습니다. 도구 메뉴에서 **도구**  >  **Android**  >  **Android Device Manager**를 사용 하 여 Android Device Manager를 시작 합니다.
+2. 새 프로젝트를 만듭니다. [Android Emulator를 설정한](/xamarin/android/get-started/installation/android-emulator/)후에는 [Android Device Manager](/xamarin/android/get-started/installation/android-emulator/device-manager?pivots=windows&tabs=windows#requirements) 를 사용 하 여 다양 한 Android 가상 장치를 만들고, 복제 하 고, 사용자 지정 하 고, 시작할 수 있습니다. 도구 메뉴에서 **도구**  >  **Android**  >  **Android Device Manager** 를 사용 하 여 Android Device Manager를 시작 합니다.
 
 3. Android Device Manager 열리면 **+ 새로** 만들기를 선택 하 여 새 장치를 만듭니다.
 
@@ -110,7 +110,7 @@ Windows Pc에는 많은 [Android 에뮬레이터 옵션](https://www.androidauth
 
     ![Visual Studio 시작 Android Emulator](../images/vs-target-device-menu.png)
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 - [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](/dual-screen/android/)
 

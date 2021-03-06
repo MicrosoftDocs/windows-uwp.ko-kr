@@ -1,18 +1,18 @@
 ---
-title: Xamarin Android를 사용 하 여 간단한 Android 앱 만들기
-description: Android 장치에서 작동 하는 플랫폼 간 앱을 만들기 위해 Windows에서 Xamarin.ios를 사용 하 여 시작 하는 방법에 대 한 단계별 가이드입니다.
+title: Xamarin Android를 사용 하 여 Android 앱 만들기
+description: Xamarin Android를 사용 하 여 Android 앱을 작성 하기 시작 하는 방법
 author: hickeys
 ms.author: hickeys
 manager: jken
 ms.topic: article
 keywords: android, windows, xamarin android, 자습서, xaml
 ms.date: 04/28/2020
-ms.openlocfilehash: 3bcecf24fe6bb90dc2b94dfa62a5768481b298e5
-ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
+ms.openlocfilehash: f14947564f08872ec1849d0d0b2f14218fb10322
+ms.sourcegitcommit: bcdec8bda3106cd5588464531e582101d52dcc80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101823177"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102254300"
 ---
 # <a name="get-started-developing-for-android-using-xamarinandroid"></a>Xamarin Android를 사용 하 여 Android 용 개발 시작
 
@@ -24,7 +24,7 @@ ms.locfileid: "101823177"
 
 이 자습서를 사용 하려면 다음이 필요 합니다.
 
-- 윈도우 10
+- Windows 10
 - [Visual Studio 2019: Community, Professional 또는 Enterprise](https://visualstudio.microsoft.com/downloads/) (참고 참조)
 - Visual Studio 2019에 대 한 ".NET을 사용한 모바일 개발" 워크 로드
 

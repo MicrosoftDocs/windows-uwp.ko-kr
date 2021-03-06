@@ -1,18 +1,18 @@
 ---
-title: Windows에서 Android 개발용 네이티브에 반응
-description: Windows에서 기본 동작을 사용 하 여 Android 장치에서 작동 하는 플랫폼 간 앱을 만드는 방법에 대 한 단계별 가이드입니다.
+title: Android 개발용 네이티브에 반응
+description: Windows에서 Xamarin Native를 사용 하 여 Android 앱 개발을 시작 하세요.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
 keywords: android, windows, 기본, 에뮬레이터, azure, 번들러, metro, 터미널
 ms.date: 04/28/2020
-ms.openlocfilehash: 82bf078d6c29c8968ce3e0cc19ce4d6f803e6d71
-ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
+ms.openlocfilehash: 099dc073e36ee153376f4247b5d7c0526c3a8646
+ms.sourcegitcommit: bcdec8bda3106cd5588464531e582101d52dcc80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101823227"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102254325"
 ---
 # <a name="get-started-developing-for-android-using-react-native"></a>네이티브 응답을 사용 하 여 Android 개발 시작
 
@@ -107,7 +107,7 @@ ms.locfileid: "101823227"
 > [!TIP]
 > Windows 10 앱으로 실행 되도록 반응 하는 네이티브 앱에 대 한 지원을 추가 하려면 [windows 용 기본 응답 시작](https://microsoft.github.io/react-native-windows/docs/getting-started) 문서를 참조 하세요.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 
 - [Android 용 이중 화면 앱 개발 및 Surface 듀오 장치 SDK 다운로드](/dual-screen/android/)
 

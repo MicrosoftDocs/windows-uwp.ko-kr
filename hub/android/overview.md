@@ -1,18 +1,18 @@
 ---
-title: Windows 기반 Android 개발 개요
-description: 네이티브 Android 개발, 플랫폼 간 개발 및 Android 게임 개발을 포함 하 여 Windows에서 Android 개발을 시작 하세요.
+title: Windows에서 Android 개발
+description: Windows에서 Android 용 개발을 시작 하는 데 도움이 되는 가이드입니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
 ms.topic: article
 keywords: windows의 android, xamarin android, 네이티브, cordova, phonegap, c + + android 게임, windows defender, 에뮬레이터에 반응
 ms.date: 04/28/2020
-ms.openlocfilehash: b839972033c9edfad3524909345380e7fac9462e
-ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
+ms.openlocfilehash: 315c32eb6219deafe2817ba8df36b4f9d1cb1dae
+ms.sourcegitcommit: bcdec8bda3106cd5588464531e582101d52dcc80
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101823167"
+ms.lasthandoff: 03/06/2021
+ms.locfileid: "102254282"
 ---
 # <a name="overview-of-android-development-on-windows"></a>Windows 기반 Android 개발 개요
 
