@@ -8,18 +8,18 @@ ms.date: 05/19/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: f2f3bf022210e5b5f329cb5824cb36708154b977
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: 3bab93eca2318d7253df5acb16d866ac81d8ae6c
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93034386"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101824437"
 ---
 # <a name="web-view"></a>웹 보기
 
 웹 보기 컨트롤은 Microsoft Edge 렌더링 엔진을 사용하여 웹 콘텐츠를 렌더링하는 보기를 앱에 포함합니다. 웹 보기 컨트롤에 하이퍼링크를 표시하고 사용할 수도 있습니다.
 
-> **중요 API** : [WebView 클래스](/uwp/api/Windows.UI.Xaml.Controls.WebView)
+> **중요 API**: [WebView 클래스](/uwp/api/Windows.UI.Xaml.Controls.WebView)
 
 ## <a name="is-this-the-right-control"></a>올바른 컨트롤인가요?
 
@@ -63,7 +63,7 @@ WebView는 Control 하위 클래스가 아니지만 키보드 입력 포커스�
 
 ### <a name="navigating-to-content"></a>콘텐츠로 이동
 
-웹 보기는 기본 탐색을 위한 API로 [GoBack](/uwp/api/windows.ui.xaml.controls.webview.goback), [GoForward](/uwp/api/windows.ui.xaml.controls.webview.goforward), [Stop](/uwp/api/windows.ui.xaml.controls.webview.stop), [Refresh](/uwp/api/windows.ui.xaml.controls.webview.refresh), [CanGoBack](/uwp/api/windows.ui.xaml.controls.webview.cangoback) 및 [CanGoForward](/uwp/api/windows.ui.xaml.controls.webview.cangoforward)를 제공합니다. 이러한 기능을 사용하여 일반적인 웹 검색 기능을 앱에 추가할 수 있습니다. 
+웹 보기는 [GoBack](/uwp/api/windows.ui.xaml.controls.webview.goback), [GoForward](/uwp/api/windows.ui.xaml.controls.webview.goforward), [Stop](/uwp/api/windows.ui.xaml.controls.webview.stop), [Refresh](/uwp/api/windows.ui.xaml.controls.webview.refresh), [CanGoBack](/uwp/api/windows.ui.xaml.controls.webview.cangoback), [CanGoForward](/uwp/api/windows.ui.xaml.controls.webview.cangoforward) 등 기본 탐색을 위한 여러 API를 제공합니다. 이러한 기능을 사용하여 일반적인 웹 검색 기능을 앱에 추가할 수 있습니다. 
 
 웹 보기의 초기 콘텐츠를 설정하려면 XAML에서 [Source](/uwp/api/windows.ui.xaml.controls.webview.source) 속성을 설정합니다. XAML 파서는 문자열을 [Uri](/uwp/api/Windows.Foundation.Uri)로 자동으로 변환합니다. 
 
@@ -88,7 +88,7 @@ webView1.Navigate("http://www.contoso.com");
 
 POST 요청과 HTTP 헤더가 포함된 URI로 이동하려면 [NavigateWithHttpRequestMessage](/uwp/api/windows.ui.xaml.controls.webview.navigatewithhttprequestmessage) 메서드를 사용합니다. 이 메서드는 [HttpRequestMessage.Method](/uwp/api/windows.web.http.httprequestmessage.method) 속성 값에 대해 [HttpMethod.Post](/uwp/api/windows.web.http.httpmethod.post) 및 [HttpMethod.Get](/uwp/api/windows.web.http.httpmethod.get)만 지원합니다. 
 
-앱의 [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder) 또는 [TemporaryFolder](/uwp/api/windows.storage.applicationdata.temporaryfolder) 데이터 저장소에서 압축 및 암호화되지 않은 콘텐츠를 로드하려면 [ms-appdata 체계](../../app-resources/uri-schemes.md)를 사용하는 **URI** 와 함께 **Navigate** 메서드를 사용합니다. 웹 보기에서 이 체계를 지원하려면 로컬 또는 임시 폴더 아래의 하위 폴더에 콘텐츠를 배치해야 합니다. 이렇게 하면 ms-appdata:///local/ *folder*/*file*.html 및 ms-appdata:///temp/ *folder*/*file*.html과 같은 URI로 이동할 수 있습니다. (압축 또는 암호화된 파일을 로드하려면 [NavigateToLocalStreamUri](/uwp/api/windows.ui.xaml.controls.webview.navigatetolocalstreamuri)를 참조하세요.) 
+앱의 [LocalFolder](/uwp/api/windows.storage.applicationdata.localfolder) 또는 [TemporaryFolder](/uwp/api/windows.storage.applicationdata.temporaryfolder) 데이터 저장소에서 압축 및 암호화되지 않은 콘텐츠를 로드하려면 [ms-appdata 체계](../../app-resources/uri-schemes.md)를 사용하는 **URI** 와 함께 **Navigate** 메서드를 사용합니다. 웹 보기에서 이 체계를 지원하려면 로컬 또는 임시 폴더 아래의 하위 폴더에 콘텐츠를 배치해야 합니다. 이렇게 하면 ms-appdata:///local/*folder*/*file*.html 및 ms-appdata:///temp/*folder*/*file*.html과 같은 URI로 이동할 수 있습니다. (압축 또는 암호화된 파일을 로드하려면 [NavigateToLocalStreamUri](/uwp/api/windows.ui.xaml.controls.webview.navigatetolocalstreamuri)를 참조하세요.) 
 
 이러한 각 첫 번째 수준 하위 폴더는 다른 첫 번째 수준 하위 폴더의 콘텐츠와 분리됩니다. 예를 들어 ms-appdata:///temp/folder1/file.html로 이동할 수 있지만, 이 파일에서 ms-appdata:///temp/folder2/file.html에 대한 링크를 사용할 수는 없습니다. 그러나 **ms-appx-web scheme** 을 사용하여 앱 패키지의 HTML 콘텐츠에 연결하고, **http** 및 **https** URI 체계를 사용하여 웹 콘텐츠에 연결할 수 있습니다.
 
@@ -106,7 +106,7 @@ webView1.Navigate("ms-appx-web:///help/about.html");
 
 ### <a name="responding-to-navigation-events"></a>탐색 이벤트에 응답
 
-웹 보기 컨트롤은 탐색 및 콘텐츠 로드 상태에 응답하는 데 사용할 수 있는 몇 가지 이벤트를 제공합니다. 이벤트는 다음과 같은 순서로 루트 웹 보기 콘텐츠에 대해 발생합니다. [NavigationStarting](/uwp/api/windows.ui.xaml.controls.webview.navigationstarting), [ContentLoading](/uwp/api/windows.ui.xaml.controls.webview.contentloading), [DOMContentLoaded](/uwp/api/windows.ui.xaml.controls.webview.domcontentloaded), [NavigationCompleted](/uwp/api/windows.ui.xaml.controls.webview.navigationcompleted)
+웹 보기 컨트롤은 탐색 및 콘텐츠 로드 상태에 응답하는 데 사용할 수 있는 몇 가지 이벤트를 제공합니다. 이벤트는 루트 웹 보기 콘텐츠에 대해 다음 순서로 발생합니다. [NavigationStarting](/uwp/api/windows.ui.xaml.controls.webview.navigationstarting), [ContentLoading](/uwp/api/windows.ui.xaml.controls.webview.contentloading), [DOMContentLoaded](/uwp/api/windows.ui.xaml.controls.webview.domcontentloaded), [NavigationCompleted](/uwp/api/windows.ui.xaml.controls.webview.navigationcompleted)
 
 
 **NavigationStarting** - 웹 보기가 새 콘텐츠로 이동하기 전에 발생합니다. WebViewNavigationStartingEventArgs.Cancel 속성을 true로 설정하여 이 이벤트 처리기에서 탐색을 취소할 수 있습니다. 

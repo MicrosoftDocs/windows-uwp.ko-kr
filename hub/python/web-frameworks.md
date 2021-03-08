@@ -1,6 +1,6 @@
 ---
 title: Windows에서 Python을 사용한 웹 개발
-description: Flask 및 Django와 같은 프레임워크 설정을 포함하여 Windows에서 웹 개발을 위해 Python 사용을 시작하는 방법입니다.
+description: Flask 및 Django와 같은 프레임워크 설정을 포함하여 Windows에서 웹 개발을 위해 Python을 사용하기 위한 단계별 가이드입니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Python, Windows 10, Microsoft, Windows의 Python, WSL을 사용하는 Python 웹, Linux용 Windows 하위 시스템을 사용하는 Python 웹앱, Windows에서 Python 웹 개발, Windows의 Flask 앱, Windows의 Django 앱, Python 웹, Windows에서 Flask 웹 개발, Windows에서 Django 웹 개발, Python을 사용한 Windows 웹 개발, VS Code Python 웹 개발, Remote - WSL 확장, Ubuntu, WSL, venv, pip, Microsoft Python 확장, Windows에서 Python 실행, Windows에서 Python 사용, Windows에서 Python으로 빌드
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: 3b5ed80b746d0aa1441bf77e6468101deee320a6
-ms.sourcegitcommit: 3fafc6b6d548a03e6191fa95ebf9384c42396a30
+ms.openlocfilehash: ae9084541656ababf9ace4207cbfa84e30f7417a
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97880556"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823627"
 ---
 # <a name="get-started-using-python-for-web-development-on-windows"></a>웹 개발을 위해 Windows에서 Python 사용 시작
 

@@ -1,6 +1,6 @@
 ---
 title: Mac(Unix)에서 Windows로 이동하도록 지원
-description: Mac(Unix)에서 Windows 개발 환경으로 전환하는 데 유용한 가이드로, 바로 가기 키 매핑과 Mac 및 Windows 간의 다른 개념에 대해 간단히 설명합니다.
+description: Mac(Unix)에서 바로 가기 키 매핑도 포함된 Windows 개발 환경으로 전환하는 데 도움이 되는 전체 가이드입니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Mac에서 Windows로, 바로 가기 키 매핑, Unix에서 Windows로 이동, Mac에서 Windows로 전환, MacBook에서 Surface로의 이동 지원, Macintosh 사용자용 Windows 사용 방법, Macintosh에서 Windows로 전환, 개발 환경으로의 변경 지원, Mac OS X에서 Windows로, Mac에서 PC로 이동 지원
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 1d94944037caf7cd909ea4799867f83bd4a6f887
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: c23bceecc09677dbecbda7b4e4065377c514cc0d
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89157587"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823947"
 ---
 # <a name="guide-for-changing-your-dev-environment-from-mac-to-windows"></a>개발 환경을 Mac에서 Windows로 변경하기 위한 가이드
 
@@ -89,7 +89,7 @@ Windows에는 다음과 같은 두 가지 기본 명령줄 셸이 있습니다.
 
 ### <a name="linux-shells"></a>Linux 셸
 
-이제 WSL(Linux용 Windows 하위 시스템)을 설치하여 Windows에서 Linux 셸을 실행할 수 있습니다. 즉, 어떤 Linux 배포판을 선택하든 Windows 내부에 바로 통합되므로 **bash**를 실행할 수 있습니다. WSL을 사용하면 Mac 사용자에게 가장 익숙한 환경이 제공됩니다. 예를 들어 기존 Windows Cmd 셸을 사용할 때처럼 **dir**을 사용하는 것이 아니라 **ls**를 사용하여 현재 디렉터리에 있는 파일을 나열합니다. WSL의 설치 및 사용에 대해 자세히 알아보려면 [Windows 10에 Linux용 Windows 하위 시스템 설치 가이드](/windows/wsl/install-win10)를 참조하세요. WSL을 사용하여 Windows에 설치할 수 있는 Linux 배포판은 다음과 같습니다.
+이제 WSL(Linux용 Windows 하위 시스템)을 설치하여 Windows에서 Linux 셸을 실행할 수 있습니다. 즉, 어떤 Linux 배포판을 선택하든 Windows 내부에 바로 통합되므로 **bash** 를 실행할 수 있습니다. WSL을 사용하면 Mac 사용자에게 가장 익숙한 환경이 제공됩니다. 예를 들어 기존 Windows Cmd 셸을 사용할 때처럼 **dir** 을 사용하는 것이 아니라 **ls** 를 사용하여 현재 디렉터리에 있는 파일을 나열합니다. WSL의 설치 및 사용에 대해 자세히 알아보려면 [Windows 10에 Linux용 Windows 하위 시스템 설치 가이드](/windows/wsl/install-win10)를 참조하세요. WSL을 사용하여 Windows에 설치할 수 있는 Linux 배포판은 다음과 같습니다.
 
 1. [Ubuntu 20.04 LTS](https://www.microsoft.com/store/apps/9n6svws3rx71)
 2. [Kali Linux](https://www.microsoft.com/store/apps/9PKR34TNCV07)

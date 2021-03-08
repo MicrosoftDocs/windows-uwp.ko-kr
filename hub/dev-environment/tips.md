@@ -1,6 +1,6 @@
 ---
 title: Windows 10에서 개발 워크플로를 개선하기 위한 팁
-description: Windows 10에서 개발 워크플로를 개선하기 위한 팁입니다.
+description: 성능을 향상시키고 개발 워크플로를 Windows 10에서 보다 효율적이고 즐겁게 만드는 데 도움이 되는 팁입니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Microsoft, Windows, 개발자, 팁, 성능, WSL
 ms.localizationpriority: medium
 ms.date: 07/24/2020
-ms.openlocfilehash: 7d02e3b46d6938532bbc7024e8840b976b2715a6
-ms.sourcegitcommit: 861c381a31e4a5fd75f94ca19952b2baaa2b72df
+ms.openlocfilehash: ef7ee52e778f49e35f68acb4ea02351d4208b3b7
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92171156"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823957"
 ---
 # <a name="tips-for-improving-performance-and-development-workflows"></a>성능 및 개발 워크플로를 개선하기 위한 팁
 

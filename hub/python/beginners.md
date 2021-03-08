@@ -1,6 +1,6 @@
 ---
 title: 초보자를 위한 Windows에서 Python 사용 시작
-description: Windows에서 Python을 처음 사용하는 분들이 쉽게 시작할 수 있도록 도와주는 가이드입니다.
+description: Windows 10을 사용하여 Python을 학습하는 데 관심이 있는 초보자를 위한 단계별 가이드입니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, python 학습, 초보자를 위한 windows 기반 python, microsoft store에서 python 설치, vs code를 사용하는 python, windows의 pygame
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: f225932685e71cb2374249ad96efeac11184d000
-ms.sourcegitcommit: 3fafc6b6d548a03e6191fa95ebf9384c42396a30
+ms.openlocfilehash: 614e78b3dc4295b52b58645f04a0c02007bff4d4
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97880546"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823617"
 ---
 # <a name="get-started-using-python-on-windows-for-beginners"></a>초보자를 위한 Windows에서 Python 사용 시작
 

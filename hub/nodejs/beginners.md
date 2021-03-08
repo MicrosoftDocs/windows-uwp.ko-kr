@@ -1,6 +1,6 @@
 ---
 title: 초보자를 위한 Windows에서 NodeJS 사용 시작
-description: 초보자가 Windows에서 Node.js 개발을 시작하는 데 도움이 되는 가이드입니다.
+description: 초보자가 Windows에서 Node.js 개발을 시작하는 데 도움이 되는 전체 가이드입니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: NodeJS, Node.js, windows 10, microsoft, nodejs 학습, windows 노드, 초보자를 위한 windows 노드, windows 노드로 개발, windows에서 nodejs로 개발
 ms.localizationpriority: medium
 ms.date: 09/19/2019
-ms.openlocfilehash: 5737316ae2de0520e5443f69cefaec25679a228f
-ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+ms.openlocfilehash: ab06ba36e2c77a105912a6a7b73abcdfa992c0ad
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89166637"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823897"
 ---
 # <a name="get-started-using-nodejs-on-windows-for-beginners"></a>초보자를 위한 Windows에서 Node.js 사용 시작
 
@@ -57,7 +57,7 @@ Node.js는 웹 애플리케이션을 만드는 데 주로 사용되는 JavaScrip
     console.log(msg);
     ```
 
-5. Node.js를 사용하여 "app.js" 파일을 실행하려면 **보기** > **터미널**을 선택하여(또는 Ctrl+'를 선택하고, 억음 문자 사용) VS Code 내에서 바로 터미널을 엽니다. 기본 터미널을 변경해야 하는 경우 드롭다운 메뉴를 선택하고 **기본 셸 선택**을 선택합니다.
+5. Node.js를 사용하여 "app.js" 파일을 실행하려면 **보기** > **터미널** 을 선택하여(또는 Ctrl+'를 선택하고, 억음 문자 사용) VS Code 내에서 바로 터미널을 엽니다. 기본 터미널을 변경해야 하는 경우 드롭다운 메뉴를 선택하고 **기본 셸 선택** 을 선택합니다.
 
 6. 터미널에서 `node app.js`를 입력합니다. 다음 메시지가 표시됩니다. "Hello World".
 
@@ -91,7 +91,7 @@ Express.js를 사용하여 프로젝트를 만들려면
    - `app.js`. 앱의 시작 지점입니다. 모든 항목을 로드하고 사용자 요청을 처리하기 시작합니다. 기본적으로 모든 부분을 결합하는 접착제 역할을 합니다.
    - `package.json`. 프로젝트 설명, 스크립트 관리자 및 앱 매니페스트를 포함합니다. 주로 앱의 종속성과 해당 버전을 추적하는 데 사용됩니다.
 
-5. 이제 HelloWorld Express 앱(`package.json` 파일에 정의된 대로 서버 실행과 같은 작업에 사용되는 패키지)을 빌드 및 실행하기 위해 Express에서 사용하는 종속성을 설치해야 합니다. VS Code 내에서 **보기** > **터미널**을 선택하여(또는 억음 악센트 문자를 사용하여 Ctrl+' 선택) 터미널을 열고 아직 'HelloWorld' 프로젝트 디렉터리에 있는지 확인합니다. 다음을 사용하여 Express 패키지 종속성을 설치합니다.
+5. 이제 HelloWorld Express 앱(`package.json` 파일에 정의된 대로 서버 실행과 같은 작업에 사용되는 패키지)을 빌드 및 실행하기 위해 Express에서 사용하는 종속성을 설치해야 합니다. VS Code 내에서 **보기** > **터미널** 을 선택하여(또는 억음 악센트 문자를 사용하여 Ctrl+' 선택) 터미널을 열고 아직 'HelloWorld' 프로젝트 디렉터리에 있는지 확인합니다. 다음을 사용하여 Express 패키지 종속성을 설치합니다.
 
 ```bash
 npm install
@@ -106,7 +106,7 @@ npx cross-env DEBUG=HelloWorld:* npm start
 > [!TIP]
 > 위 명령의 `DEBUG=myapp:*` 부분에서는 디버깅을 위해 로깅을 설정할 것을 Node.js에 지시합니다. 'myapp'을 앱 이름으로 바꾸어야 합니다. `package.json` 파일의 "name" 속성 아래에서 앱 이름을 찾을 수 있습니다. `npx cross-env`를 사용하면 터미널에서 `DEBUG` 환경 변수가 설정되지만 터미널에서 특정 방식으로 설정할 수도 있습니다. `npm start` 명령은 `package.json` 파일에서 스크립트를 실행하도록 npm에 지시합니다.
 
-7. 이제 웹 브라우저를 열고 **localhost:3000**으로 이동하여 실행 중인 앱을 볼 수 있습니다.
+7. 이제 웹 브라우저를 열고 **localhost:3000** 으로 이동하여 실행 중인 앱을 볼 수 있습니다.
 
    ![브라우저에서 실행 중인 Express 앱의 스크린샷](../images/express-app.png)
 

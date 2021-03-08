@@ -1,6 +1,6 @@
 ---
 title: Mac에서 Windows로 전환한 개발자 사례
-description: Mac에서 Windows 개발 컴퓨터로 변경한 개발자 사례입니다.
+description: Mac과 Windows 개발 환경 간에 전환한 다른 개발자의 경험담을 들어보세요.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Microsoft, Windows, 개발자, 사례, Mac에서 Windows로 전환, Mac에서 Windows로, WSL
 ms.localizationpriority: medium
 ms.date: 07/24/2020
-ms.openlocfilehash: 8b4cba6ae1267d6acb1034ba47648d5aa6e0a05a
-ms.sourcegitcommit: 5ba2524d237be82d3621551e48cac938fe81d2ea
+ms.openlocfilehash: 0141e3698b40b941cd78b60f28d862246cbc5d50
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87255035"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823977"
 ---
 # <a name="stories-from-developers-who-have-switched-from-mac-to-windows"></a>Mac에서 Windows로 전환한 개발자 사례
 

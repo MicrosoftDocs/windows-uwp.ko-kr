@@ -1,6 +1,6 @@
 ---
 title: 컨테이너를 사용하는 원격 개발을 위한 Docker 시작
-description: Windows 또는 WSL에서 Docker Desktop을 시작하는 방법에 대한 가이드입니다.
+description: Windows 또는 WSL에서 Docker Desktop을 시작하기 위한 전체 가이드입니다. Microsoft 및 다양한 Azure 서비스에서 제공하는 지원을 포함합니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -8,12 +8,12 @@ ms.topic: article
 ms.technology: windows-nodejs
 keywords: Microsoft, Windows, Docker, WSL, 원격 개발, 컨테이너, Docker Desktop, Windows 및 WSL
 ms.date: 09/24/2020
-ms.openlocfilehash: b3fc2509aa6a623bebd9f4566f3b8e75301251db
-ms.sourcegitcommit: c65f62bda57563f6196691e7b9c25cbf5a8b16e5
+ms.openlocfilehash: 09552a6a2a43e414c143ef0a51b6932fa2aaaf20
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91780585"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101824167"
 ---
 # <a name="overview-of-docker-remote-development-on-windows"></a>Windows의 Docker 원격 개발에 대한 개요
 

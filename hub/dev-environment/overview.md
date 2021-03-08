@@ -1,6 +1,6 @@
 ---
 title: Windows 10에서 개발 환경 설정
-description: Windows에서 개발 환경을 설정하고 선호하는 도구와 코드 언어를 설치하는 데 도움이 되는 가이드입니다. Python, NodeJS, VS Code, Git, Bash, Linux 도구 및 명령, Android Studio 등 무엇을 선택하든, Windows 터미널 및 WSL 같은 훌륭한 최신 도구를 사용할 수 있습니다.
+description: Windows에서 개발 환경을 설정하고 선호하는 도구와 코드 언어를 설치하는 데 도움이 되는 전체 가이드입니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -9,12 +9,12 @@ ms.technology: windows-nodejs
 keywords: Windows 설정, 개발 환경, 개발 도구, 개발 경로, Microsoft, Windows, 개발자, 팁, 성능, WSL, 터미널, nodejs, python
 ms.localizationpriority: medium
 ms.date: 07/24/2020
-ms.openlocfilehash: 578bc10b26dfe04384ca8e8174e36497c20896cb
-ms.sourcegitcommit: 48702934676ae366fd46b7d952396c5e2fb2cbbe
+ms.openlocfilehash: 58c68522fdb3ffe11c4e11dff48fb49faa79b830
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97927816"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101824037"
 ---
 # <a name="set-up-your-development-environment-on-windows-10"></a>Windows 10에서 개발 환경 설정
 
@@ -92,9 +92,9 @@ ms.locfileid: "97927816"
     :::column-end:::
     :::column:::
        [![PowerToys 아이콘](../images/powertoys.png)](https://github.com/microsoft/PowerToys)<br>
-        **[Windows PowerToys](../PowerToys/index.md)**<br>
+        **[Windows PowerToys](https://github.com/microsoft/PowerToys)**<br>
         이 고급 사용자 유틸리티 세트로 Windows 환경을 조정하고 간소화하여 생산성을 높일 수 있습니다.<br>
-        [PowerToys 설치](https://github.com/microsoft/PowerToys#installing-and-running-microsoft-powertoys)
+        [PowerToys(공개 미리 보기) 설치](https://github.com/microsoft/PowerToys#installing-and-running-microsoft-powertoys)
     :::column-end:::
 :::row-end:::
 :::row:::

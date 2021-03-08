@@ -1,6 +1,6 @@
 ---
 title: WSL 2에 NodeJS 설치
-description: WSL(Linux용 Windows 하위 시스템)에 Node.js 개발 환경을 설치하는 방법을 안내하는 가이드입니다.
+description: WSL(Linux용 Windows 하위 시스템)에 Node.js 개발 환경을 설정하는 데 도움이 되는 단계별 가이드입니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: NodeJS, Node.js, windows 10, microsoft, nodejs 학습, windows의 노드, wsl의 노드, windows 기반 linux의 노드, windows에 노드 설치, vs code를 사용하는 nodejs, windows에서 노드를 사용하여 개발, windows에서 nodejs를 사용하여 개발, WSL에 노드 설치, Linux용 Windows 하위 시스템의 NodeJS
 ms.localizationpriority: medium
 ms.date: 07/28/2020
-ms.openlocfilehash: 4e0477c91470d69f9ec5fd726079a1164e2cf276
-ms.sourcegitcommit: 3fafc6b6d548a03e6191fa95ebf9384c42396a30
+ms.openlocfilehash: 70a9e067cc69eb4f040e5f579883113cdeb2ef47
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97880536"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823647"
 ---
 # <a name="set-up-your-nodejs-development-environment-with-wsl-2"></a>WSL 2를 사용하여 Node.js 개발 환경 설치
 

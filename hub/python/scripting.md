@@ -1,6 +1,6 @@
 ---
 title: Windows에서 Python을 사용한 스크립팅 및 자동화
-description: Windows에서 스크립팅, 자동화 및 시스템 관리에 Python을 사용하는 방법을 설명합니다.
+description: Windows에서 스크립팅, 자동화 및 시스템 관리를 위해 Python을 사용하기 위한 단계별 가이드입니다.
 author: mattwojo
 ms.author: mattwoj
 manager: jken
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: python, windows 10, microsoft, python 시스템 관리, python 파일 자동화, windows에서 python 스크립트, windows에서 python 설정, windows의 python 개발자 환경, windows의 python 개발 환경, powershell을 사용하는 python, 파일 시스템 작업을 위한 python 스크립트
 ms.localizationpriority: medium
 ms.date: 07/19/2019
-ms.openlocfilehash: a8f13243f3501b2af42d38c13bff580be2e5b42a
-ms.sourcegitcommit: 8040760f5520bd1732c39aedc68144c4496319df
+ms.openlocfilehash: 8b6ce391d810fc26ab9964f39939ce8c5a9958e9
+ms.sourcegitcommit: 4ea59d5d18f79800410e1ebde28f97dd5e45eb26
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98691328"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101823577"
 ---
 # <a name="get-started-using-python-on-windows-for-scripting-and-automation"></a>스크립팅 및 자동화를 위해 Windows에서 Python 사용 시작
 

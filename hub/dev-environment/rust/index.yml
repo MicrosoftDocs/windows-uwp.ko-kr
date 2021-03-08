@@ -1,0 +1,53 @@
+### YamlMime:Landing
+title: Windows에서 Rust로 개발
+summary: 개발 환경 설정, Windows용 Rust 및 코드 예제를 포함하여 Windows를 통한 Rust 개발을 시작합니다.
+metadata:
+  author: stevewhims
+  description: 개발 환경 설정, Windows용 Rust 및 코드 예제를 포함하여 Windows를 통해 Rust 개발을 시작합니다.
+  manager: jken
+  ms.author: stwhi
+  ms.date: 03/04/2021
+  ms.prod: dev-environment
+  ms.technology: windows-rust
+  ms.topic: landing-page
+  ms.openlocfilehash: dddb2575da4215f2be7168581221a33b329cb3db
+  ms.sourcegitcommit: 85b9a5fc16f4486bc23b4ec8f4fae5ab6211a066
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 03/05/2021
+  ms.locfileid: "102194112"
+landingContent:
+- title: 개요
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Rust란 무엇인가?
+      url: ./overview.md
+    - text: Rust 개발 도구 집합/에코 시스템의 일부
+      url: ./overview.md#the-pieces-of-the-rust-development-toolsetecosystem
+    - text: Windows용 Rust 및 Windows 상자
+      url: ./rust-for-windows.md
+- title: 개발 환경 설정
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Windows에서 Rust에 대한 개발 환경 설정
+      url: ./setup.md
+- title: 자습서
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Hello, world! 자습서(VS Code가 있는 Rust)
+      url: ./setup.md#hello-world-tutorial-rust-with-vs-code
+    - text: RSS 리더 자습서(VS Code가 있는 Windows용 Rust)
+      url: ./rss-reader-rust-for-windows.md
+- title: 추가 자료
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Rust 웹 사이트
+      url: https://www.rust-lang.org/
+    - text: Windows API에 대한 Rust 설명서
+      url: https://microsoft.github.io/windows-docs-rs/doc/bindings/windows/
+    - text: 지뢰 찾기 샘플 앱
+      url: https://github.com/robmikh/minesweeper-rs
