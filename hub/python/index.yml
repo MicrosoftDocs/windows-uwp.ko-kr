@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Windows 기반의 Python 설명서
+title: Windows 10을 사용하여 Python 시작
 summary: 개발 환경 설정, 스크립팅 및 자동화, 웹앱 빌드, FAQ를 포함하여 Windows에서 Python으로 개발을 시작하세요.
 metadata:
   author: mattwojo
@@ -10,12 +10,12 @@ metadata:
   ms.prod: dev-environment
   ms.technology: windows-python
   ms.topic: landing-page
-  ms.openlocfilehash: 4f7d016a58f49efa28dae10f3f8d76e452522465
-  ms.sourcegitcommit: 7b2febddb3e8a17c9ab158abcdd2a59ce126661c
+  ms.openlocfilehash: 3a0299396e9ca9b3c665d977a1bca5e0b7f74a23
+  ms.sourcegitcommit: bcdec8bda3106cd5588464531e582101d52dcc80
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/31/2020
-  ms.locfileid: "89174117"
+  ms.lasthandoff: 03/06/2021
+  ms.locfileid: "102254483"
 landingContent:
 - title: 초보자를 위한 시작
   linkLists:

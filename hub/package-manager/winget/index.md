@@ -4,12 +4,12 @@ description: winget 명령줄 도구를 사용하면 개발자가 Windows 10 컴
 ms.date: 10/22/2020
 ms.topic: overview
 ms.localizationpriority: medium
-ms.openlocfilehash: 0dbd2aa76fa6a9b787e73c0bbd5ce7e56b5e6a4a
-ms.sourcegitcommit: c105eb358bf693d34dfdd7a44255af69c1d5a3cd
+ms.openlocfilehash: 39b48114242c8de1fad80bbf78860644b1c0dcd9
+ms.sourcegitcommit: 9842e0e5c369a52594336d2278af877ccf40b049
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434460"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102196986"
 ---
 # <a name="use-the-winget-tool-to-install-and-manage-applications"></a>winget 도구를 사용하여 애플리케이션 설치 및 관리
 
@@ -27,7 +27,7 @@ ms.locfileid: "92434460"
 
 * [Windows 참가자 플라이트 링](https://insider.windows.com)에 참여합니다.
 
-* [winget 리포지토리](https://github.com/microsoft/winget-cli)의 릴리스 폴더에 있는 Windows 데스크톱 앱 설치 관리자 패키지를 설치합니다.
+* [winget 리포지토리의 릴리스 페이지](https://github.com/microsoft/winget-cli/releases)에 있는 Windows 데스크톱 앱 설치 관리자 패키지를 설치합니다.
 
 > [!NOTE]
 > **winget** 도구를 사용하려면 Windows 10 버전 1709(10.0.16299) 또는 이후 버전의 Windows 10이 필요합니다.
@@ -46,8 +46,8 @@ ms.locfileid: "92434460"
 
 가장 일반적인 사용 시나리오 중 하나는 즐겨찾는 도구를 검색하여 설치하는 것입니다.
 
-1. 도구를 [검색](search.md)하려면 `winget search \<appname>`을 입력합니다.
-2. 원하는 도구를 사용할 수 있다고 확인되었으면 `winget install \<appname>`을 입력하여 도구를 [설치](install.md)할 수 있습니다. **winget** 도구에서 설치 관리자를 시작하여 애플리케이션을 PC에 설치합니다.
+1. 도구를 [검색](search.md)하려면 `winget search <appname>`을 입력합니다.
+2. 원하는 도구를 사용할 수 있다고 확인되었으면 `winget install <appname>`을 입력하여 도구를 [설치](install.md)할 수 있습니다. **winget** 도구에서 설치 관리자를 시작하여 애플리케이션을 PC에 설치합니다.
     ![winget 명령줄](images\install.png)
 
 3. **winget** 은 설치 및 검색 외에도 애플리케이션에 대한 [세부 정보 표시](show.md), [원본 변경](source.md) 및 [패키지 유효성 검사](validate.md)를 수행할 수 있는 여러 가지 다른 명령을 제공합니다. 전체 명령 목록을 가져오려면 `winget --help`를 입력합니다.
@@ -74,8 +74,8 @@ ms.locfileid: "92434460"
 | 옵션 | 설명 |
 |--------------|-------------|
 | **-v,--version** | 현재 버전의 winget을 반환합니다. |
-| **--info** |  info는 라이선스 및 개인정보처리방침에 대한 링크를 포함하여 winget에 대한 모든 세부 정보를 제공합니다. |
-| **-?, --help** |  추가 도움말 winget을 가져옵니다. |
+| **--info** |  라이선스 및 개인정보처리방침에 대한 링크를 포함하여 winget에 대한 모든 세부 정보를 제공합니다. |
+| **-?, --help** |  winget에 대한 추가 도움말을 표시합니다. |
 
 ## <a name="supported-installer-formats"></a>지원되는 설치 관리자 형식
 
@@ -87,7 +87,7 @@ ms.locfileid: "92434460"
 
 ## <a name="scripting-winget"></a>winget 스크립팅
 
-일괄 처리 스크립트 및 powershell 스크립트를 작성하여 여러 애플리케이션을 설치할 수 있습니다.
+일괄 처리 스크립트 및 PowerShell 스크립트를 작성하여 여러 애플리케이션을 설치할 수 있습니다.
 
 ``` CMD
 @echo off  
@@ -105,7 +105,7 @@ if %ERRORLEVEL% EQU 0 Echo Terminal installed successfully.   %ERRORLEVEL%
 
 ## <a name="missing-tools"></a>누락된 도구
 
-도구 또는 애플리케이션이 [커뮤니티 리포지토리](../package/repository.md)에 포함되어 있지 않은 경우입니다. 패키지를 [리포지토리](https://github.com/microsoft/winget-pkgs)에 제출하세요. 즐겨찾는 도구가 추가되면 본인과 다른 모든 사용자가 사용할 수 있습니다.
+[커뮤니티 리포지토리](../package/repository.md)에 도구나 애플리케이션이 포함되어 있지 않으면 [리포지토리](https://github.com/microsoft/winget-pkgs)에 패키지를 제출하세요. 즐겨찾는 도구가 추가되면 본인과 다른 모든 사용자가 사용할 수 있습니다.
 
 ## <a name="customize-winget-settings"></a>winget 설정 사용자 지정
 
