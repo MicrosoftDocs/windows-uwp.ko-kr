@@ -10,12 +10,12 @@ pm-contact: chigy
 design-contact: miguelrb
 doc-status: Draft
 ms.localizationpriority: medium
-ms.openlocfilehash: ee0c92ec81f7bbabc2218afbf263000a167d2057
-ms.sourcegitcommit: e81227399ba0f286e74e4977d757237829440a2e
+ms.openlocfilehash: 6f712dd8e845b3beb52981be4a17df128c48845d
+ms.sourcegitcommit: c5fdcc0779d4b657669948a4eda32ca3ccc7889b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96310211"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102784744"
 ---
 # <a name="keyboard-accelerators"></a>바로 가기 키
 
@@ -127,11 +127,11 @@ UI에서 적절 한 위치에 키보드 액셀러레이터 키를 지정 하 고
 ```
 
 ![도구 설명에 있는 키보드 액셀러레이터의 스크린샷](images/accelerators/accelerators_tooltip.png)  
-**_도구 설명에 설명 된 키보드 액셀러레이터_*
+***도구 설명에 설명 된 키보드 액셀러레이터***
 
 [UIElement](/uwp/api/windows.ui.xaml.uielement) 개체에는 사용자 지정 KeyboardAccelerator 개체를 지정 하 고 키보드 액셀러레이터 키에 대 한 키 입력을 정의 하는 [KeyboardAccelerator](/uwp/api/windows.ui.xaml.input.keyboardaccelerator) 컬렉션인 [KeyboardAccelerators](/uwp/api/windows.ui.xaml.uielement.KeyboardAccelerators)이 있습니다.
 
--   _ *[Key](/uwp/api/windows.ui.xaml.input.keyboardaccelerator.Key)**-키보드 액셀러레이터에 사용 되는 [virtualkey](/uwp/api/windows.system.virtualkey) 입니다.
+-   **[키](/uwp/api/windows.ui.xaml.input.keyboardaccelerator.Key)** -키보드 액셀러레이터에 사용 되는 [virtualkey](/uwp/api/windows.system.virtualkey) 입니다.
 
 -   **[한정자](/uwp/api/windows.ui.xaml.input.keyboardaccelerator.Modifiers)** -키보드 액셀러레이터에 사용 되는 [virtualkeymodifiers](/uwp/api/windows.system.virtualkeymodifiers) 입니다. 한정자를 설정 하지 않으면 기본값은 None입니다.
 
@@ -331,11 +331,11 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 
 앱 간 기능의 차이로 인해 항상 불가능 한 것은 아닙니다.
 
-| **편집** | **일반 키보드 액셀러레이터** |
+| **편집 중** | **일반 키보드 액셀러레이터** |
 | ------------- | ----------------------------------- |
 | 편집 모드 시작 | Ctrl+E |
 | 포커스가 있는 컨트롤 또는 창에서 모든 항목 선택 | Ctrl + A |
-| 검색 및 바꾸기 | Ctrl + H |
+| 검색 및 바꾸기 | Ctrl+H |
 | 실행 취소 | Ctrl + Z |
 | 다시 실행 | Ctrl + Y |
 | 선택 영역을 삭제 하 고 클립보드에 복사 합니다. | Ctrl + X |
@@ -466,7 +466,7 @@ Windows 응용 프로그램에서 바로 가기 키를 일관 되 게 만드는 
 </Button>
 ```
 
-경우에 따라 다른 요소 (일반적으로 컨테이너 개체)를 기준으로 도구 설명을 제공 해야 할 수도 있습니다. 예를 들어 피벗 머리글을 사용 하 여 피벗에 대 한 도구 설명을 표시 하는 피벗 컨트롤이 있습니다. 
+경우에 따라 다른 요소 (일반적으로 컨테이너 개체)를 기준으로 도구 설명을 제공 해야 할 수도 있습니다. 
 
 여기에서는 KeyboardAcceleratorPlacementTarget 속성을 사용 하 여 단추 대신 그리드 컨테이너가 있는 저장 단추의 키보드 액셀러레이터 키 조합을 표시 하는 방법을 보여 줍니다.
 
@@ -526,8 +526,8 @@ XAML에서 입력 버블링 파이프라인은 하나만 있는 것 처럼 키 �
 미리 보기 입력 이벤트는 다른 이벤트 보다 먼저 발생 합니다. 이러한 이벤트를 처리 하지 않으면 포커스가 있는 요소에 대 한 액셀러레이터 키가 실행 된 후 KeyDown 이벤트가 발생 합니다. 두 이벤트 모두 처리 될 때까지 버블링 됩니다.
 
 
-![키 이벤트 시퀀스 ](images/accelerators/accelerators_keyevents.png) 
-* **키 이벤트 시퀀스** 를 보여 주는 다이어그램 _
+![키 이벤트 시퀀스 ](images/accelerators/accelerators_keyevents.png)
+ ***키 이벤트 시퀀스*** 를 보여 주는 다이어그램
 
 이벤트 순서:
 
@@ -582,7 +582,8 @@ protected override void OnProcessKeyboardAccelerators(
 
 모든 키보드 액셀러레이터 키를 지역화 하는 것이 좋습니다. XAML 선언에서 표준 UWP 리소스 (. resw) 파일 및 x:Uid 특성을 사용 하 여이 작업을 수행할 수 있습니다. 이 예제에서 Windows 런타임는 리소스를 자동으로 로드 합니다.
 
-![Uwp 리소스 파일을 사용한 키보드 액셀러레이터 지역화 다이어그램 ](images/accelerators/accelerators_localization.png) _ *_uwp 리소스 파일이 있는 키보드 액셀러레이터 지역화_**
+![UWP 리소스를 사용한 키보드 액셀러레이터 지역화의 다이어그램 파일 ](images/accelerators/accelerators_localization.png)
+ ***키보드 가속기 uwp 리소스 파일을 사용한 지역화***
 
 ``` xaml
 <Button x:Uid="myButton" Click="OnSave">

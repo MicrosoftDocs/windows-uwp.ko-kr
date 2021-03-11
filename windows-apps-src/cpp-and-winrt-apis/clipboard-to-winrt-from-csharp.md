@@ -5,12 +5,12 @@ ms.date: 04/13/2020
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 이식, 마이그레이션, C#, 샘플, 클립보드, 사례, 연구
 ms.localizationpriority: medium
-ms.openlocfilehash: 5a7ec46b28a8ddf0b4accadb37b40e786ac8c47a
-ms.sourcegitcommit: 4df27104a9e346d6b9fb43184812441fe5ea3437
+ms.openlocfilehash: f862dd01e91d99e19fb6996921dbc20a33d714da
+ms.sourcegitcommit: 539b428bcf3d72c6bda211893df51f2a27ac5206
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "89170417"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102629371"
 ---
 # <a name="porting-the-clipboard-sample-to-cwinrt-from-cmdasha-case-study"></a>C#에서 클립보드 샘플을 C++/WinRT로 이식(사례 연구)
 
@@ -286,9 +286,9 @@ namespace winrt::SDKTemplate::implementation
 C++/WinRT 프로젝트를 빌드하기 전에 **Clipboard** 네임스페이스에 대한 선언 및 참조를 찾아 **SDKTemplate** 로 변경합니다.
 
 - `MainPage.xaml` 및 `App.xaml` 네임스페이스는 `x:Class` 및 `xmlns:local` 특성 값에 표시됩니다.
-- `App.idl`을 차례로 클릭합니다.
-- `App.h`을 차례로 클릭합니다.
-- `App.cpp`을 차례로 클릭합니다. 두 개의 `using namespace` 지시문(부분 문자열 `using namespace Clipboard` 검색)과 두 개의 **MainPage** 형식 한정자(`Clipboard::MainPage` 검색)가 있습니다. 이러한 항목은 변경해야 합니다.
+- `App.idl`.
+- `App.h`.
+- `App.cpp`. 두 개의 `using namespace` 지시문(부분 문자열 `using namespace Clipboard` 검색)과 두 개의 **MainPage** 형식 한정자(`Clipboard::MainPage` 검색)가 있습니다. 이러한 항목은 변경해야 합니다.
 
 **MainPage** 에서 이벤트 처리기를 제거했으므로 `MainPage.xaml`로 이동하여 태그에서 **Button** 요소를 삭제합니다.
 
@@ -778,7 +778,7 @@ using namespace Windows::UI::Notifications;
 - 힙이 아닌 스택에 C++/WinRT 개체를 생성합니다.
 - 속성 get 접근자에 대한 호출을 함수 호출 구문(`()`)으로 바꿉니다.
 
-컴파일러/링커 오류의 가장 일반적인 원인은 필요한 C++/WinRT Windows 네임스페이스 헤더 파일을 포함하지 않는 경우입니다. 한 가지 가능한 오류에 대한 자세한 내용은 [링커에서 “LNK2019: 확인되지 않은 외부 기호” 오류가 발생하는 이유는 무엇인가요?](./faq.md#why-is-the-linker-giving-me-a-lnk2019-unresolved-external-symbol-error)를 참조하세요.
+컴파일러/링커 오류의 가장 일반적인 원인은 필요한 C++/WinRT Windows 네임스페이스 헤더 파일을 포함하지 않는 경우입니다. 한 가지 가능한 오류에 대한 자세한 내용은 [링커에서 “LNK2019: 확인되지 않은 외부 기호” 오류가 발생하는 이유는 무엇인가요?](./faq.yml#why-is-the-linker-giving-me-a--lnk2019--unresolved-external-symbol--error-)를 참조하세요.
 
 연습 과정을 진행하면서 **DisplayToast** 를 직접 이식하려는 경우, 그 결과를 다운로드한 [클립보드 샘플](/samples/microsoft/windows-universal-samples/clipboard/) 소스 코드의 ZIP에서 C++/WinRT 버전의 코드와 비교할 수 있습니다.
 
@@ -1352,7 +1352,7 @@ if (imageReceived)
 }
 ```
 
-C++/WinRT 개체는 주로 명확한 종료가 없는 언어의 이점을 얻기 위해 **IClosable** 을 구현합니다. C++/WinRT에는 결정적 종료가 있으므로 C++/WinRT를 작성할 때 **IClosable::Close** 를 호출하지 않는 경우가 많습니다. 그러나 이를 호출하는 것이 유용한 경우가 있으며 이 경우가 그에 해당합니다. 여기서 *imageStream* 식별자는 기본 Windows Runtime 개체(이 경우 [**IRandomAccessStreamWithContentType**](/uwp/api/windows.storage.streams.irandomaccessstreamwithcontenttype)을 구현하는 개체)에 대한 참조 계수 래퍼입니다. *imageStream* 의 종료자(소멸자)가 바깥쪽 범위(중괄호) 끝 부분에서 실행된다고 확인할 수는 있지만 종료자가 **Close** 를 호출한다고 확신할 수는 없습니다. *imageStream* 이 다른 API에 전달되어 해당 API가 기본 Windows Runtime 개체의 참조 수에 계속 합산될 수 있기 때문입니다. 이 경우가 바로 **Close** 를 명시적으로 호출하면 좋은 경우입니다. 자세한 내용은 [사용하는 런타임 클래스에서 IClosable::Close를 호출해야 하나요?](./faq.md#do-i-need-to-call-iclosableclose-on-runtime-classes-that-i-consume)를 참조하세요.
+C++/WinRT 개체는 주로 명확한 종료가 없는 언어의 이점을 얻기 위해 **IClosable** 을 구현합니다. C++/WinRT에는 결정적 종료가 있으므로 C++/WinRT를 작성할 때 **IClosable::Close** 를 호출하지 않는 경우가 많습니다. 그러나 이를 호출하는 것이 유용한 경우가 있으며 이 경우가 그에 해당합니다. 여기서 *imageStream* 식별자는 기본 Windows Runtime 개체(이 경우 [**IRandomAccessStreamWithContentType**](/uwp/api/windows.storage.streams.irandomaccessstreamwithcontenttype)을 구현하는 개체)에 대한 참조 계수 래퍼입니다. *imageStream* 의 종료자(소멸자)가 바깥쪽 범위(중괄호) 끝 부분에서 실행된다고 확인할 수는 있지만 종료자가 **Close** 를 호출한다고 확신할 수는 없습니다. *imageStream* 이 다른 API에 전달되어 해당 API가 기본 Windows Runtime 개체의 참조 수에 계속 합산될 수 있기 때문입니다. 이 경우가 바로 **Close** 를 명시적으로 호출하면 좋은 경우입니다. 자세한 내용은 [사용하는 런타임 클래스에서 IClosable::Close를 호출해야 하나요?](./faq.yml#do-i-need-to-call-iclosable--close-on-runtime-classes-that-i-consume-)를 참조하세요.
 
 다음으로, **OnDeferredImageRequestedHandler** 이벤트 처리기에서 볼 수 있는 C# 식 `(uint)(imageDecoder.OrientedPixelWidth * 0.5)`를 살펴보겠습니다. 이 식은 `uint`에 `double`을 곱하여 `double`을 생성합니다. 그런 다음, 이를 `uint`로 캐스팅합니다. C++/WinRT에서 비슷한 모양의 C 스타일 캐스트(`(uint32_t)(imageDecoder.OrientedPixelWidth() * 0.5)`)를 *사용할 수는 있지만* 원하는 캐스트 종류를 정확하게 지정하는 것이 좋습니다. 이 경우 `static_cast<uint32_t>(imageDecoder.OrientedPixelWidth() * 0.5)`를 사용하여 이 작업을 수행합니다.
 

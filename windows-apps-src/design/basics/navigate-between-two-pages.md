@@ -13,18 +13,18 @@ dev_langs:
 - csharp
 - cppwinrt
 - cpp
-ms.openlocfilehash: d0945db420c2e20fa4b81a8f402f580762afe19c
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: bb65d36f545210363537bced272780a20308e292
+ms.sourcegitcommit: c5fdcc0779d4b657669948a4eda32ca3ccc7889b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93031456"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102784804"
 ---
 # <a name="implement-navigation-between-two-pages"></a>두 페이지 간의 탐색 구현
 
 앱에서 기본 피어 투 피어 탐색을 할 수 있도록 프레임과 페이지를 사용하는 방법을 알아봅니다. 
 
-> **중요 API** : [**Windows.UI.Xaml.Controls.Frame**](/uwp/api/Windows.UI.Xaml.Controls.Frame) 클래스, [**Windows.UI.Xaml.Controls.Page**](/uwp/api/Windows.UI.Xaml.Controls.Page) 클래스, [**Windows.UI.Xaml.Navigation**](/uwp/api/Windows.UI.Xaml.Navigation) 네임스페이스
+> **중요 API**: [**Windows.UI.Xaml.Controls.Frame**](/uwp/api/Windows.UI.Xaml.Controls.Frame) 클래스, [**Windows.UI.Xaml.Controls.Page**](/uwp/api/Windows.UI.Xaml.Controls.Page) 클래스, [**Windows.UI.Xaml.Navigation**](/uwp/api/Windows.UI.Xaml.Navigation) 네임스페이스
 
 ![피어 투 피어 탐색](images/peertopeer.png)
 
@@ -46,7 +46,7 @@ ms.locfileid: "93031456"
 1.  **솔루션 탐색기** 에서, **BlankApp** 프로젝트 노드를 마우스 오른쪽 단추로 클릭하여 바로 가기 메뉴를 엽니다.
 2.  바로 가기 메뉴에서 **추가** > **새 항목** 을 선택합니다.
 3.  **새 항목 추가** 대화 상자의 가운데 창에서 **빈 페이지** 를 선택합니다.
-4.  **이름** 입력란에 **Page1** (또는 **Page2** )을 입력하고 **추가** 단추를 누릅니다.
+4.  **이름** 입력란에 **Page1**(또는 **Page2**)을 입력하고 **추가** 단추를 누릅니다.
 5. 두 번째 페이지를 추가하려면 1-4단계를 반복하세요.
 
 이제 이 파일이 NavApp1 프로젝트의 일부로 나열됩니다.
@@ -422,7 +422,7 @@ void Page2::OnNavigatedTo(NavigationEventArgs^ e)
 
 페이지 콘텐츠 및 상태는 기본적으로 캐시되지 않으므로, 캐시 정보를 사용하고 싶다면 앱의 각 페이지에서 이를 사용하도록 설정해야 합니다.
 
-기본 피어 투 피어 예제에는 뒤로 단추가 없습니다( [뒤로 탐색](navigation-history-and-backwards-navigation.md)에서 설명). 그러나 `Page2`의 뒤로 단추를 클릭했다면 `Page1`의 **TextBox** (다른 모든 필드)가 기본값 상태로 설정될 것입니다. 이를 해결하는 한 가지 방법은 [**NavigationCacheMode**](/uwp/api/windows.ui.xaml.controls.page.navigationcachemode) 속성을 사용하여 페이지가 프레임의 페이지 캐시에 추가되도록 지정하는 것입니다. 
+기본 피어 투 피어 예제에는 뒤로 단추가 없습니다([뒤로 탐색](navigation-history-and-backwards-navigation.md)에서 설명). 그러나 `Page2`의 뒤로 단추를 클릭했다면 `Page1`의 **TextBox**(다른 모든 필드)가 기본값 상태로 설정될 것입니다. 이를 해결하는 한 가지 방법은 [**NavigationCacheMode**](/uwp/api/windows.ui.xaml.controls.page.navigationcachemode) 속성을 사용하여 페이지가 프레임의 페이지 캐시에 추가되도록 지정하는 것입니다. 
 
 `Page1` 생성자에서, **NavigationCacheMode** 를 **Enabled** 로 설정해 프레임 페이지 캐시가 초과하지 않는 한 페이지의 모든 콘텐츠와 상태 값을 보관할 수 있습니다. [**NavigationCacheMode**](/uwp/api/windows.ui.xaml.controls.page.navigationcachemode)를 [**Required**](/uwp/api/Windows.UI.Xaml.Navigation.NavigationCacheMode)로 설정하면, 프레임에서 캐시 저장되는 탐색 기록의 페이지 수를 지정하는 [**CacheSize**](/uwp/api/windows.ui.xaml.controls.frame.cachesize) 제한을 무시할 수 있습니다. 그러나 캐시 크기 제한은 디바이스의 메모리 제한에 따라 중요할 수 있습니다.
 
@@ -452,5 +452,4 @@ Page1::Page1()
 
 ## <a name="related-articles"></a>관련된 문서
 * [Windows 앱용 탐색 디자인 기본 사항](./navigation-basics.md)
-* [피벗](../controls-and-patterns/pivot.md)
 * [탐색 보기](../controls-and-patterns/navigationview.md)

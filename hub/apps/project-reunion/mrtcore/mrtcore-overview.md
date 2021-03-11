@@ -1,20 +1,20 @@
 ---
 description: MRT.LOG 핵심 구성 요소 개요 및 응용 프로그램 리소스를 로드 하는 방법 (프로젝트 리유니언)
-title: MRT.LOG Core 소개 (프로젝트 리유니언)
+title: 리소스 관리 MRT.LOG Core (프로젝트 리유니언)
 ms.topic: article
-ms.date: 12/11/2020
+ms.date: 03/09/2021
 keywords: MRT.LOG, MRTCore, pri, makepri, 리소스, 리소스 로드
 ms.author: hickeys
 author: hickeys
 ms.localizationpriority: medium
-ms.openlocfilehash: ce07491dcab2a11738bd5407e9094d8d780ea219
-ms.sourcegitcommit: 30d1a27fd78d198cec5c50af5621f9e65c7b965e
+ms.openlocfilehash: bde540ff99e763a2d5c622eba1d292f722008ef6
+ms.sourcegitcommit: 539b428bcf3d72c6bda211893df51f2a27ac5206
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98043062"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102629213"
 ---
-# <a name="introduction-to-mrt-core-project-reunion"></a>MRT.LOG Core 소개 (프로젝트 리유니언)
+# <a name="manage-resources-with-mrt-core-project-reunion"></a>MRT.LOG Core를 사용 하 여 리소스 관리 (프로젝트 리유니언)
 
 MRT.LOG Core는 [프로젝트 리유니언](../index.md)의 일부로 배포 되는 최신 Windows [리소스 관리 시스템](/windows/uwp/app-resources/resource-management-system) 의 간소화 된 버전입니다.
 
@@ -41,7 +41,7 @@ Resw 파일은 데이터만 포함 하므로 PE (이식 가능한 실행 파일)
 
 [ResourceManager](/windows/winui/api/microsoft.applicationmodel.resources.resourcemanager) 클래스는 열거 및 검사와 같은 리소스에 대 한 추가 정보를 제공 합니다. 이는 **Resourceloader** 클래스에서 제공 하는 것 이상으로 진행 됩니다.
 
-[ResourceCandidate](/windows/winui/api/microsoft.applicationmodel.resources.resourcecandidate) 개체는 단일 구체적 리소스 값과 해당 한정자 (예: 영어의 경우 "Hello World") 또는 "logo.scale-100.jpg"를 100 해상도와 관련 된 정규화 된 이미지 리소스로 나타냅니다.
+[ResourceCandidate](/windows/winui/api/microsoft.applicationmodel.resources.resourcecandidate) 개체는 단일 구체적 리소스 값과 해당 한정자 (예: 영어의 경우 "헬로 월드") 또는 "logo.scale-100.jpg"를 100 해상도와 관련 된 정규화 된 이미지 리소스로 나타냅니다.
 
 앱에 사용할 수 있는 리소스는 계층 컬렉션에 저장 되며,이는 [resourcemap](/windows/winui/api/microsoft.applicationmodel.resources.resourcemap) 를 사용 하 여 액세스할 수 있습니다. **ResourceManager** 클래스를 사용 하면 앱에서 사용 하는 다양 한 최상위 **resourcemap** 에 대 한 액세스를 제공 하며, 앱에 대 한 다양 한 패키지에 해당 합니다. [ResourceManager](/windows/winui/api/microsoft.applicationmodel.resources.resourcemanager.mainresourcemap) 는 현재 앱 패키지의 리소스 맵에 해당 하며 참조 된 프레임 워크 패키지를 제외 합니다. 각 **resourcemap** 패키지의 매니페스트에 지정 된 패키지 이름으로 이름이 지정 됩니다. **Resourcemap** 는 하위 트리가 있습니다 ( [resourcemap getsubtree](/windows/winui/api/microsoft.applicationmodel.resources.resourcemap.getsubtree)참조). 하위 트리는 일반적으로 리소스를 포함 하는 리소스 파일에 해당 합니다.
 

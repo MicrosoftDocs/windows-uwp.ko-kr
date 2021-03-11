@@ -9,12 +9,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f11cde619b783292e4880927c68b6ae8ff38323
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 7ad6c173596c4f716f58b64f51d9068b6a689905
+ms.sourcegitcommit: c5fdcc0779d4b657669948a4eda32ca3ccc7889b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91217187"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102784794"
 ---
 # <a name="gamepad-and-remote-control-interactions"></a>게임 패드 및 리모컨 조작
 
@@ -97,7 +97,7 @@ UWP는 기존 키보드 입력 동작을 게임 패드 및 원격 제어 입력�
 |-----------------------|---------------------------------------|
 | 화살표 키            | D-패드 (게임 패드에도 왼쪽 스틱)    |
 | 스페이스바              | A/Select 단추                       |
-| Enter                 | A/Select 단추                       |
+| Enter 키                 | A/Select 단추                       |
 | 이스케이프                | B/뒤로 단추 *                        |
 
 \*응용 프로그램에서 B 단추에 대 한 [KeyDown](/uwp/api/windows.ui.xaml.uielement.keydown) 또는 [KeyUp](/uwp/api/windows.ui.xaml.uielement.keyup) 이벤트를 처리 하지 않으면 [systemnavigationmanager. 요청](/uwp/api/windows.ui.core.systemnavigationmanager.backrequested) 된 이벤트가 발생 하 여 앱 내에서 다시 탐색이 발생 합니다. 그러나 다음 코드 조각과 같이이를 직접 구현 해야 합니다.
@@ -158,7 +158,7 @@ Xbox One의 Windows 앱은 **메뉴** 단추를 눌러 상황에 맞는 메뉴�
 | 상호 작용   | 키보드/마우스   | 게임 패드      | 기본 제공:  | 권장 사항: |
 |---------------|------------|--------------|----------------|------------------|
 | Page up/down  | Page up/down | 왼쪽/오른쪽 트리거 | [Calendarview](/uwp/api/Windows.UI.Xaml.Controls.CalendarView), [ListBox](/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer` , [Selector](/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [ComboBox](/uwp/api/Windows.UI.Xaml.Controls.ComboBox), [FlipView](/uwp/api/Windows.UI.Xaml.Controls.FlipView) | 세로 스크롤을 지 원하는 보기
-| 페이지 왼쪽/오른쪽 | 없음 | 왼쪽/오른쪽 범퍼 | [Pivot](/uwp/api/Windows.UI.Xaml.Controls.Pivot), [ListBox](/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer` , [Selector](/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [FlipView](/uwp/api/Windows.UI.Xaml.Controls.FlipView) | 가로 스크롤을 지 원하는 보기
+| 페이지 왼쪽/오른쪽 | 없음 | 왼쪽/오른쪽 범퍼 | [ListBox](/uwp/api/Windows.UI.Xaml.Controls.ListBox), [ListViewBase](/uwp/api/Windows.UI.Xaml.Controls.ListViewBase), [ListView](/uwp/api/Windows.UI.Xaml.Controls.ListView), `ScrollViewer` , [Selector](/uwp/api/Windows.UI.Xaml.Controls.Primitives.Selector), [LoopingSelector](/uwp/api/Windows.UI.Xaml.Controls.Primitives.LoopingSelector), [FlipView](/uwp/api/Windows.UI.Xaml.Controls.FlipView) | 가로 스크롤을 지 원하는 보기
 | 확대/축소        | Ctrl +/- | 왼쪽/오른쪽 트리거 | 없음 | `ScrollViewer`확대 및 축소를 지 원하는 뷰 |
 | 탐색 창 열기/닫기 | 없음 | 보기 | 없음 | 탐색 창 |
 | 검색 | 없음 | Y 단추 | 없음 | 앱의 기본 검색 기능에 대 한 바로 가기입니다. |
@@ -226,19 +226,19 @@ XY 포커스 탐색은 사용자가 위쪽, 아래쪽, 왼쪽 및 오른쪽으�
 
 ```xml
 <StackPanel>
-    <Button x:Name="MyBtnLeft"
+    <Button x:Name="MyBtnLeft"
             Content="Search" />
-    <Button x:Name="MyBtnRight"
+    <Button x:Name="MyBtnRight"
             Content="Delete"/>
-    <Button x:Name="MyBtnTop"
+    <Button x:Name="MyBtnTop"
             Content="Update" />
-    <Button x:Name="MyBtnDown"
+    <Button x:Name="MyBtnDown"
             Content="Undo" />
-    <Button Content="Home"  
+    <Button Content="Home"  
             XYFocusLeft="{x:Bind MyBtnLeft}"
-            XYFocusRight="{x:Bind MyBtnRight}"
-            XYFocusDown="{x:Bind MyBtnDown}"
-            XYFocusUp="{x:Bind MyBtnTop}" />
+            XYFocusRight="{x:Bind MyBtnRight}"
+            XYFocusDown="{x:Bind MyBtnDown}"
+            XYFocusUp="{x:Bind MyBtnTop}" />
 </StackPanel>
 ```
 
@@ -247,8 +247,8 @@ XY 포커스 탐색은 사용자가 위쪽, 아래쪽, 왼쪽 및 오른쪽으�
 포커스가 컨트롤에서 특정 방향으로 이동 하지 않도록 하려면 속성을 사용 `XYFocus*` 하 여 동일한 컨트롤을 가리킵니다.
 
 ```xml
-<Button Name="HomeButton"  
-        Content="Home"  
+<Button Name="HomeButton"  
+        Content="Home"  
         XYFocusLeft ="{x:Bind HomeButton}" />
 ```
 
@@ -329,7 +329,7 @@ XY 포커스 탐색은 사용자가 위쪽, 아래쪽, 왼쪽 및 오른쪽으�
 
 **포커스 참여 <a name="engagement"></a>**
 
-Engagement가 *필요한*경우 전체는 `ListView` 단일 포커스 대상이 됩니다. 사용자는 목록 내용을 무시 하 여 다음으로 포커스를 받을 수 있는 요소로 이동할 수 있습니다. 참여를 지 원하는 컨트롤 및이를 사용 하는 방법에 대 한 자세한 내용은 [포커스 참여](#focus-engagement)를 참조 하세요.
+Engagement가 *필요한* 경우 전체는 `ListView` 단일 포커스 대상이 됩니다. 사용자는 목록 내용을 무시 하 여 다음으로 포커스를 받을 수 있는 요소로 이동할 수 있습니다. 참여를 지 원하는 컨트롤 및이를 사용 하는 방법에 대 한 자세한 내용은 [포커스 참여](#focus-engagement)를 참조 하세요.
 
 ![부동산 앱: 한 번만 클릭 하 여 이전/다음 단추에 연결 하도록 engagement를 필수로 설정 합니다.](images/designing-for-tv/2d-focus-navigation-and-interaction-engagement.png)
 
@@ -355,7 +355,7 @@ XY 포커스 탐색은 한 번에 포커스를 받을 수 있는 UI 요소 하�
 
 이러한 시나리오에서는 전체 페이지 또는 페이지 내의 컨트롤에 대 한 포인터 (마우스 모드)를 요청 해야 합니다.
 예를 들어, 응용 프로그램은 컨트롤 내에서 마우스 모드를 사용 하는 컨트롤이 있는 페이지를 포함할 수 있으며, 그 밖의 경우에는 `WebView` XY 포커스를 탐색할 수 있습니다.
-포인터를 요청 하려면 **컨트롤이 나 페이지** 를 사용할 때 또는 **페이지에 포커스가**있는지 여부를 지정할 수 있습니다.
+포인터를 요청 하려면 **컨트롤이 나 페이지** 를 사용할 때 또는 **페이지에 포커스가** 있는지 여부를 지정할 수 있습니다.
 
 > [!NOTE]
 > 컨트롤이 포커스를 받을 때 포인터를 요청하는 기능은 지원되지 않습니다.
@@ -538,7 +538,7 @@ HTML/JavaScript에 대 한 샘플 코드를 비롯 한 자세한 내용은 [마�
 
 이러한 컨트롤과 약간 다른 것은 [ScrollViewer](/uwp/api/Windows.UI.Xaml.Controls.ScrollViewer)입니다. 포커스를 받을 수 있는 콘텐츠를 포함 하는가 있는 경우 `ScrollViewer` 기본적으로로 이동 하면 `ScrollViewer` 포커스를 받을 수 있는 요소를 이동할 수 있습니다. 에서와 마찬가지로 `ListView` 각 항목을 스크롤하여 외부 탐색 해야 합니다 `ScrollViewer` .
 
-에 포커스를 받을 `ScrollViewer` 수 있는 콘텐츠가 *없는* 경우 &mdash; 예를 들어 &mdash; `IsFocusEngagementEnabled="True"` 사용자가 `ScrollViewer` **A/Select** 단추를 사용 하 여에 참여할 수 있도록 설정할 수 있는 텍스트만 포함 되어 있습니다. 사용 된 후에는 **D-pad/왼쪽 스틱**를 사용 하 여 텍스트를 스크롤하고, **B/뒤로** 단추를 눌러 완료 되 면 분리 합니다.
+에 포커스를 받을 `ScrollViewer` 수 있는 콘텐츠가 *없는* 경우 &mdash; 예를 들어 &mdash; `IsFocusEngagementEnabled="True"` 사용자가 `ScrollViewer` **A/Select** 단추를 사용 하 여에 참여할 수 있도록 설정할 수 있는 텍스트만 포함 되어 있습니다. 사용 된 후에는 **D-pad/왼쪽 스틱** 를 사용 하 여 텍스트를 스크롤하고, **B/뒤로** 단추를 눌러 완료 되 면 분리 합니다.
 
 다른 방법으로에를 설정 하 여 `IsTabStop="True"` `ScrollViewer` 사용자가 컨트롤에 대 한 포커스를 설정 하지 않아도 되 고 내에 포커스 &mdash; 가능 요소가 없을 때 **D-패드/왼쪽 스틱을** 사용 하 여 스크롤할 수 있습니다 `ScrollViewer` .
 
@@ -548,14 +548,14 @@ HTML/JavaScript에 대 한 샘플 코드를 비롯 한 자세한 내용은 [마�
 
 | 제어               | 포커스 참여 기본값  |
 |-----------------------|---------------------------|
-| CalendarDatePicker    | 설정                        |
-| FlipView              | 꺼짐                       |
-| GridView              | 꺼짐                       |
-| ListBox               | 꺼짐                       |
-| ListView              | 꺼짐                       |
-| ScrollViewer          | 꺼짐                       |
-| SemanticZoom          | 꺼짐                       |
-| 슬라이더                | 설정                        |
+| CalendarDatePicker    | 켜기                        |
+| FlipView              | 끄기                       |
+| GridView              | 끄기                       |
+| ListBox               | 끄기                       |
+| ListView              | 끄기                       |
+| ScrollViewer          | 끄기                       |
+| SemanticZoom          | 끄기                       |
+| 슬라이더                | 켜기                        |
 
 다른 모든 Windows 컨트롤을 사용할 경우에는 동작이 나 시각적 변화가 발생 하지 않습니다 `IsFocusEngagementEnabled="True"` .
 
@@ -563,7 +563,7 @@ HTML/JavaScript에 대 한 샘플 코드를 비롯 한 자세한 내용은 [마�
 
 특정 장치 또는 환경에 맞게 최적화 된 Windows 응용 프로그램을 빌드할 수는 있지만,이 유니버설 Windows 플랫폼을 사용 하면 2 피트 및 10-환경 모두에서 장치 간에 성공적으로 사용할 수 있는 앱과 입력 장치 또는 사용자 기능에 상관 없이 앱을 빌드할 수도 있습니다. 이 문서의 권장 사항을 사용 하면 앱이 TV와 PC 둘 다에서 가능 하다는 것을 확인할 수 있습니다.
 
-## <a name="related-articles"></a>관련된 문서
+## <a name="related-articles"></a>관련 문서
 
 - [Xbox 및 TV용 디자인](../devices/designing-for-tv.md)
 - [Windows 앱 용 장치 입문](index.md)

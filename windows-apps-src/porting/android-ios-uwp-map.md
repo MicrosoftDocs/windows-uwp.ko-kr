@@ -1,17 +1,17 @@
 ---
-title: IOS, Android 및 Windows 10 간의 플랫폼 기능을 비교 합니다.
+title: iOS, Android 및 Windows 10 간의 플랫폼 기능 비교
 description: IOS, Android 및 Windows 10의 유니버설 Windows 플랫폼 (UWP) 간에 개발 개념 및 플랫폼 기능을 자세히 비교 하 여 확인 합니다.
 ms.date: 02/08/2017
 ms.topic: article
 keywords: windows 10, uwp
 ms.assetid: 082736c8-2ac3-41b3-b246-e705edc23f34
 ms.localizationpriority: medium
-ms.openlocfilehash: 21cb4c105cc4c95c3a14c4c5bd0049265682f91c
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: d15f0b1dccbdb165cb2bbcf39628e16859a42ed5
+ms.sourcegitcommit: c5fdcc0779d4b657669948a4eda32ca3ccc7889b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91220586"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102784734"
 ---
 # <a name="windows-apps-concept-mapping-for-android-and-ios-developers"></a>Android 및 iOS 개발자용 Windows 앱 개념 매핑
 
@@ -127,7 +127,7 @@ Android 또는 iOS 기술 및/또는 코드를 사용 하는 개발자 인 경�
 <td align="left"><strong>피어 탐색.</strong> <br><br>동일 하 게 계층적인 중요도의 페이지를 탐색 하는 방법을 사용자에 게 제시 합니다.</td>
 <td align="left"><strong>탭</strong>, <strong>살짝 밀기 보기</strong> 및 <strong>탐색 서랍</strong> 은 <strong>측면 탐색</strong>을 제공 합니다.</td>
 <td align="left"><strong>탭 모음 컨트롤러</strong>, <strong>분할 뷰 컨트롤러</strong> 및 <strong>페이지 보기 컨트롤러</strong> 를 사용 하면 동일한 계층 구조의 뷰 간을 탐색할 수 있습니다.</td>
-<td align="left"><strong><a href="/windows/uwp/controls-and-patterns/tabs-pivot">탭/피벗</a></strong>을 사용 하 여 콘텐츠 위에 링크/탭의 영구적 목록을 표시할 수 있습니다. <strong><a href="/windows/uwp/controls-and-patterns/split-view">탐색 창/분할 뷰에서</a></strong> 는 콘텐츠와 함께 링크 목록을 표시할 수 있습니다.<br/><br/><a href="/windows/uwp/layout/navigation-basics">탐색</a><br/><br/><a href="/windows/uwp/layout/navigate-between-two-pages">두 페이지 간 이동</a></td>
+<td align="left"><strong><a href="/windows/uwp/controls-and-patterns/navigationview">Navigationview</a></strong>를 사용 하 여 콘텐츠 위에 링크/탭의 영구적 목록을 표시할 수 있습니다. <strong><a href="/windows/uwp/controls-and-patterns/split-view">탐색 창/분할 뷰에서</a></strong> 는 콘텐츠와 함께 링크 목록을 표시할 수 있습니다.<br/><br/><a href="/windows/uwp/layout/navigation-basics">탐색</a><br/><br/><a href="/windows/uwp/layout/navigate-between-two-pages">두 페이지 간 이동</a></td>
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>계층적 탐색.</strong> <br><br>계층의 부모 및 자식 페이지 간을 이동 합니다.</td>
@@ -444,13 +444,13 @@ Android 또는 iOS 기술 및/또는 코드를 사용 하는 개발자 인 경�
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>다른 장치 기능을 지원 합니다.</strong> <br><br>고급 하드웨어 기능을 활용 하면서도 장치를 지원 하지 않는 장치를 지원 합니다.</td>
-<td align="left"><strong>Android 지원 라이브러리</strong> 를 앱과 함께 패키지 하 여 이전 버전의 android에서 최신 api를 사용할 수 있도록 할 수 있습니다. 런타임에 API 수준에 대 한 테스트는 <strong>SDK_INT</strong>을 사용 하 여 수행할 수 있습니다.</td>
+<td align="left"><strong>Android 지원 라이브러리</strong> 를 앱과 함께 패키지 하 여 이전 버전의 android에서 최신 api를 사용할 수 있도록 할 수 있습니다. <strong>Build.Version.SDK_INT</strong>를 사용 하 여 런타임 시 API 수준에 대 한 테스트를 수행할 수 있습니다.</td>
 <td align="left">표준 런타임 검사는 클래스의 존재 여부를 확인 하 고 <strong>respondsToSelector:</strong> 클래스의 메서드를 확인 하는 <strong>클래스</strong> 메서드와 같은 api를 사용할 수 있는지 확인 하는 데 사용 됩니다.</td>
 <td align="left"><strong><a href="/uwp/api/windows.foundation.metadata.apiinformation.isapicontractpresent">IsApiContractPresent</a></strong> 를 사용 하 여 지정 된 주 및 부 번호의 API 계약이 있는지를 식별할 수 있습니다. 또한 <strong><a href="/uwp/api/windows.foundation.metadata.apiinformation">Apiinformation API</a></strong> 를 사용 하 여 런타임에 형식 및 멤버의 존재 여부를 테스트 하 고, 있는 경우에만 해당 형식과 멤버를 호출할 수 있습니다.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="notifications">알림</h2>
+<h2 id="notifications">공지</h2>
 <table style="width:100%">
 <colgroup>
 <col width="20%" />
@@ -481,8 +481,8 @@ Android 또는 iOS 기술 및/또는 코드를 사용 하는 개발자 인 경�
 </tr>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>로컬 알림 예약</strong> <br><br>예약 된 시간에 앱에서 보낸 로컬 알림</td>
-<td align="left">알림과 작업은 <strong>Notificationcompat</strong> 를 사용 하 여 정의 되며, <strong>AlarmManager</strong> 및 <strong>BroadcastReceiver</strong>를 사용 하 여 앱 내에서 예약 하 고 처리할 수 있습니다.</td>
-<td align="left">로컬 알림은 <strong>UILocalNotification</strong> <b> scheduleLocalNotification:<strong>. |를 사용 하 여 예약 될 수 있습니다. ScheduledToastNotification를 사용 하 여 알림 메시지를 예약할 수 </strong> <a href="/uwp/api/Windows.UI.Notifications.ScheduledToastNotification">ScheduledToastNotification</a>있습니다<strong>. TileNotification 클래스를 사용 하 여 앱에서 타일 알림을 보내거나 </strong> <a href="/uwp/api/Windows.UI.Notifications.TileNotification">TileNotification class</a> <strong> <a href="/uwp/api/Windows.UI.Notifications.ScheduledTileNotification">ScheduledTileNotification</a>로 타일 알림을 예약할 수 있습니다.<br/><br/><a href="/windows/uwp/controls-and-patterns/tiles-and-notifications-adaptive-interactive-toasts">적응형 및 대화형 알림 메시지</a><br/><br/><a href="/windows/uwp/controls-and-patterns/tiles-and-notifications-sending-a-local-tile-notification">로컬 타일 알림 보내기</a> | | </strong>푸시 알림을 보내는 중입니다.</b> 푸시 알림 서버에서 전송 되 고 선택적으로 앱 내에서 처리 되는 알림입니다.</td>
+<td align="left">알림과 작업은 <strong>Notificationcompat</strong> 를 사용 하 여 정의 되며, <strong></strong> 및 <strong>BroadcastReceiver</strong>를 사용 하 여 앱 내에서 예약 하 고 처리할 수 있습니다.</td>
+<td align="left">로컬 알림은 <strong></strong> <b> scheduleLocalNotification:<strong>. |를 사용 하 여 예약 될 수 있습니다. ScheduledToastNotification를 사용 하 여 알림 메시지를 예약할 수 </strong> <a href="/uwp/api/Windows.UI.Notifications.ScheduledToastNotification"></a>있습니다<strong>. TileNotification 클래스를 사용 하 여 앱에서 타일 알림을 보내거나 </strong> <a href="/uwp/api/Windows.UI.Notifications.TileNotification"></a> <strong> <a href="/uwp/api/Windows.UI.Notifications.ScheduledTileNotification">ScheduledTileNotification</a>로 타일 알림을 예약할 수 있습니다.<br/><br/><a href="/windows/uwp/controls-and-patterns/tiles-and-notifications-adaptive-interactive-toasts">적응형 및 대화형 알림 메시지</a><br/><br/><a href="/windows/uwp/controls-and-patterns/tiles-and-notifications-sending-a-local-tile-notification">로컬 타일 알림 보내기</a> | | </strong>푸시 알림을 보내는 중입니다.</b> 푸시 알림 서버에서 전송 되 고 선택적으로 앱 내에서 처리 되는 알림입니다.</td>
 <td align="left"><strong>Google Cloud Messaging</strong> 는 Android에 대 한 푸시 알림 지원을 제공 합니다.</td>
 </tr>
 </tbody>
@@ -506,7 +506,7 @@ Android 또는 iOS 기술 및/또는 코드를 사용 하는 개발자 인 경�
 <tbody>
 <tr class="odd" style="background-color: #f2f2f2">
 <td align="left"><strong>미디어 캡처.</strong> <br><br>오디오 및 시각적 콘텐츠 기록</td>
-<td align="left">MediaStore와 같은 <strong>의도</strong> 를 사용 하면 기존 카메라 앱으로 미디어를 캡처할 수 ACTION_VIDEO_CAPTURE. <strong>Camera2</strong> 또는 <strong>카메라</strong> 라이브러리를 사용 하면 사용자 지정 카메라 인터페이스를 구현할 수 있습니다. <strong>Mediarecorder</strong> Api는 오디오를 캡처하는 데 사용할 수 있습니다.</td>
+<td align="left">MediaStore.ACTION_VIDEO_CAPTURE와 같은 <strong>의도</strong> 를 사용 하면 기존 카메라 앱으로 미디어를 캡처할 수 있습니다. <strong>Camera2</strong> 또는 <strong>카메라</strong> 라이브러리를 사용 하면 사용자 지정 카메라 인터페이스를 구현할 수 있습니다. <strong>Mediarecorder</strong> Api는 오디오를 캡처하는 데 사용할 수 있습니다.</td>
 <td align="left"><strong>Uiimagepickercontroller</strong> 를 사용 하면 시스템 UI로 비디오와 사진을 캡처할 수 있습니다. <strong>AVCaptureSession</strong> 와 같은 <strong>avfoundation</strong> 클래스는 카메라에 직접 액세스할 수 있습니다. <br/><strong>AVAudioRecorder</strong> 클래스는 오디오 녹음을 사용 하도록 설정 합니다.</td>
 <td align="left"><strong><a href="/uwp/api/Windows.Media.Capture.CameraCaptureUI">CameraCaptureUI 클래스</a></strong>를 사용 하 여 기본 제공 카메라 UI를 사용 하는 동안 사진과 비디오를 캡처할 수 있습니다. 낮은 수준에서 카메라와 상호 작용 하 고 <strong><a href="/uwp/api/Windows.Media.Capture.MediaCapture">MEDIACAPTURE API</a></strong>와 같은 <strong><a href="/uwp/api/Windows.Media.Capture">Windows</a></strong> 의 클래스를 사용 하 여 오디오를 캡처할 수 있습니다. <br/><br/><a href="/windows/uwp/audio-video-camera/capture-photos-and-video-with-cameracaptureui">CameraCaptureUI를 사용 하 여 사진 및 비디오 캡처</a><br/><br/><a href="/windows/uwp/audio-video-camera/capture-photos-and-video-with-mediacapture">MediaCapture를 사용 하 여 사진 및 비디오 캡처</a></td>
 </tr>

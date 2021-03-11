@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 소개
 ms.localizationpriority: medium
-ms.openlocfilehash: c4ce44b942f577e6b1a24a9a078b75cec77dfad4
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 15efa30eba6fd82150ce28b99d5c73e5e6f5001f
+ms.sourcegitcommit: 539b428bcf3d72c6bda211893df51f2a27ac5206
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219886"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102629321"
 ---
 # <a name="introduction-to-cwinrt"></a>C++/WinRT 소개
 &nbsp;
@@ -26,16 +26,16 @@ C++/WinRT는 Microsoft에서 추천하는 [C++/CX](/cpp/cppcx/visual-c-language-
 > [!IMPORTANT]
 > 알아 두어야 할 가장 중요한 몇 가지 C++/WinRT 정보는 [C++/WinRT에 대한 SDK 지원](#sdk-support-for-cwinrt) 섹션과 [C++/WinRT, XAML, VSIX 확장 및 NuGet 패키지에 대한 Visual Studio 지원](intro-to-using-cpp-with-winrt.md#visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package) 섹션에 설명되어 있습니다.
 
-또한 [C++/WinRT 샘플 앱은 어디에서 찾을 수 있나요?](./faq.md#where-can-i-find-cwinrt-sample-apps)도 참조하세요.
+또한 [C++/WinRT 샘플 앱은 어디에서 찾을 수 있나요?](./faq.yml#where-can-i-find-c---winrt-sample-apps-)도 참조하세요.
 
 ## <a name="language-projections"></a>언어 프로젝션
 Windows 런타임은 COM(구성 요소 개체 모델) API를 기반으로 하며, ‘언어 프로젝션’을 통해 액세스하도록 설계되었습니다.  프로젝션은 COM 세부 정보를 숨기며, 지정된 언어에 더욱 자연스러운 프로그래밍 환경을 제공합니다.
 
 ### <a name="the-cwinrt-language-projection-in-the-windows-runtime-api-reference-content"></a>Windows 런타임 API 참조 콘텐츠의 C++/WinRT 언어 프로젝션
-[Windows 런타임 API](/uwp/api/)를 검색할 때는 오른쪽 위에 있는 **언어** 콤보 상자를 클릭하고 **C++/WinRT**를 선택하여 C++/WinRT 언어 프로젝션에 표시되는 API 구문 블록을 확인합니다.
+[Windows 런타임 API](/uwp/api/)를 검색할 때는 오른쪽 위에 있는 **언어** 콤보 상자를 클릭하고 **C++/WinRT** 를 선택하여 C++/WinRT 언어 프로젝션에 표시되는 API 구문 블록을 확인합니다.
 
 ## <a name="visual-studio-support-for-cwinrt-xaml-the-vsix-extension-and-the-nuget-package"></a>C++/WinRT, XAML, VSIX 확장 및 NuGet 패키지에 대한 Visual Studio 지원
-Visual Studio 지원의 경우 Visual Studio 2019 또는 Visual Studio 2017(최소 15.6 버전, 15.7 이상 권장)이 필요합니다. Visual Studio Installer 내에서 **유니버설 Windows 플랫폼 개발** 워크로드를 설치합니다. **설치 세부 정보** > **유니버설 Windows 플랫폼 개발**에서 **C++(v14x) 유니버설 Windows 플랫폼 도구** 옵션을 확인합니다(아직 확인하지 않은 경우). 또한 Windows **설정** > **업데이트 \& 보안** > **개발자용**에서 **사이드로드 앱** 옵션 대신에 **개발자 모드** 옵션을 선택합니다.
+Visual Studio 지원의 경우 Visual Studio 2019 또는 Visual Studio 2017(최소 15.6 버전, 15.7 이상 권장)이 필요합니다. Visual Studio Installer 내에서 **유니버설 Windows 플랫폼 개발** 워크로드를 설치합니다. **설치 세부 정보** > **유니버설 Windows 플랫폼 개발** 에서 **C++(v14x) 유니버설 Windows 플랫폼 도구** 옵션을 확인합니다(아직 확인하지 않은 경우). 또한 Windows **설정** > **업데이트 \& 보안** > **개발자용** 에서 **사이드로드 앱** 옵션 대신에 **개발자 모드** 옵션을 선택합니다.
 
 Visual Studio 및 Windows SDK의 최신 버전을 사용하여 개발하는 것이 좋지만 10.0.17763.0(Windows 10 버전 1809) 이전에 Windows SDK와 함께 제공된 C++/WinRT 버전을 사용하는 경우, 위에서 언급한 Windows 네임스페이스 헤더를 사용하려면 10.0.17134.0(Windows 10 버전 1803)의 프로젝트에서 최소한의 Windows SDK 대상 버전이 필요합니다.
 
@@ -46,7 +46,7 @@ Visual Studio 및 Windows SDK의 최신 버전을 사용하여 개발하는 것�
 
 C++/WinRT에 대한 Visual Studio 프로젝트 템플릿은 아래 섹션에서 설명합니다. 최신 버전의 VSIX 확장이 설치된 C++/WinRT 프로젝트를 새로 만들면 이 프로젝트에서 자동으로 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/)를 설치합니다. **Microsoft.Windows.CppWinRT** NuGet 패키지는 C++/WinRT 빌드 지원(MSBuild 속성 및 대상)을 제공하므로, VSIX 확장은 설치되지 않고 NuGet 패키지만 설치된 개발 머신과 빌드 에이전트 사이에 프로젝트를 이식할 수 있습니다.
 
-또는 **Microsoft.Windows.CppWinRT** NuGet 패키지를 수동으로 설치하여 기존 프로젝트를 변환할 수 있습니다. 최신 버전의 VSIX 확장을 설치하거나 이 버전으로 업데이트한 후 Visual Studio에서 기존 프로젝트를 열고, **프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기**를 차례로 클릭하고, 검색 상자에서 **Microsoft.Windows.CppWinRT**를 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치**를 클릭하여 해당 프로젝트에 대한 패키지를 설치합니다. 패키지 추가를 마쳤으면 이제 `cppwinrt.exe` 도구 호출을 포함해 프로젝트에 대한 C++/WinRT MSBuild 지원을 가져옵니다.
+또는 **Microsoft.Windows.CppWinRT** NuGet 패키지를 수동으로 설치하여 기존 프로젝트를 변환할 수 있습니다. 최신 버전의 VSIX 확장을 설치하거나 이 버전으로 업데이트한 후 Visual Studio에서 기존 프로젝트를 열고, **프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기** 를 차례로 클릭하고, 검색 상자에서 **Microsoft.Windows.CppWinRT** 를 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치** 를 클릭하여 해당 프로젝트에 대한 패키지를 설치합니다. 패키지 추가를 마쳤으면 이제 `cppwinrt.exe` 도구 호출을 포함해 프로젝트에 대한 C++/WinRT MSBuild 지원을 가져옵니다.
 
 > [!IMPORTANT]
 > 1\.0.190128.4보다 이전 버전의 VSIX 확장을 사용하여 생성되거나 이 버전에서 작동하도록 업그레이드된 프로젝트가 있는 경우에는 [이전 버전의 VSIX 확장](#earlier-versions-of-the-vsix-extension)을 참조하세요. 이 섹션에는 최신 버전의 VSIX 확장을 사용하도록 업그레이드하기 위해 알고 있어야 하는 프로젝트 구성에 대한 중요한 정보가 포함됩니다.
@@ -56,7 +56,7 @@ C++/WinRT에 대한 Visual Studio 프로젝트 템플릿은 아래 섹션에서 
 - `co_await`를 사용하도록 설정하기 위해 [/await](/cpp/build/reference/await-enable-coroutine-support) 컴파일러 옵션을 추가합니다.
 - C++/WinRT codegen을 내보내도록 XAML 컴파일러에 지시합니다.
 - 또한 표준을 준수하도록 코드를 추가로 제한하는 **준수 모드: 예(/permissive-)** 를 설정하려고 합니다.
-- 알고 있어야 할 또 다른 프로젝트 속성은 **C/C++**  > **일반** > **경고를 오류로 처리**입니다. 이 속성은 필요에 따라 **예(/WX)** 또는 **아니요(/WX-)** 로 설정하세요. 간혹 `cppwinrt.exe` 도구에서 생성된 소스 파일은 구현이 추가될 때까지 경고를 생성하는 경우가 있습니다.
+- 알고 있어야 할 또 다른 프로젝트 속성은 **C/C++**  > **일반** > **경고를 오류로 처리** 입니다. 이 속성은 필요에 따라 **예(/WX)** 또는 **아니요(/WX-)** 로 설정하세요. 간혹 `cppwinrt.exe` 도구에서 생성된 소스 파일은 구현이 추가될 때까지 경고를 생성하는 경우가 있습니다.
 
 위에서 설명한 대로 시스템을 설정하면 Visual Studio에서 C ++/WinRT 프로젝트를 만들고 빌드하거나 열고 배포할 수 있습니다.
 
@@ -112,7 +112,7 @@ IDL 파일에서 구성 요소의 런타임 클래스와 기본 인터페이스,
 ...
 ```
 
-**Microsoft.Windows.CppWinRT** NuGet 패키지를 수동으로 설치하여 프로젝트를 업그레이드할 수 있습니다. 최신 버전의 VSIX 확장을 설치하거나 이 버전으로 업그레이드한 후 Visual Studio에서 프로젝트를 열고, **프로젝트**\>**NuGet 패키지 관리...** \> **찾아보기**를 차례로 클릭하고, 검색 상자에서 **Microsoft.Windows.CppWinRT**를 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치**를 클릭하여 프로젝트에 대한 패키지를 설치합니다.
+**Microsoft.Windows.CppWinRT** NuGet 패키지를 수동으로 설치하여 프로젝트를 업그레이드할 수 있습니다. 최신 버전의 VSIX 확장을 설치하거나 이 버전으로 업그레이드한 후 Visual Studio에서 프로젝트를 열고, **프로젝트**\>**NuGet 패키지 관리...** \> **찾아보기** 를 차례로 클릭하고, 검색 상자에서 **Microsoft.Windows.CppWinRT** 를 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치** 를 클릭하여 프로젝트에 대한 패키지를 설치합니다.
 
 ### <a name="created-with-or-upgraded-to-between-101810022-and-101901283"></a>1\.0.181002.2-1.0.190128.3 버전으로 생성되거나 해당 버전으로 업그레이드됨
 프로젝트가 1.0.181002.2-1.0.190128.3(포함) VSIX 확장 버전을 사용하여 생성된 경우 **Microsoft.Windows.CppWinRT** NuGet 패키지는 프로젝트 템플릿을 통해 자동으로 프로젝트에 설치되었습니다. 이 범위에 있는 VSIX 확장 버전을 사용하도록 이전 프로젝트를 업그레이드했을 수도 있습니다. 이 경우 이 범위의 VSIX 확장 버전에 빌드 지원이 계속 포함되므로 업그레이드된 프로젝트에는 **Microsoft.Windows.CppWinRT** NuGet 패키지가 설치되거나 설치되지 않았을 수 있습니다.
@@ -139,7 +139,7 @@ C++/WinRT 프로그래밍에서 일부 C++ 표준 라이브러리 데이터 형�
 [**winrt::com_array**](/uwp/cpp-ref-for-winrt/com-array)는 임의 시점에서 사용할 가능성이 높은 또 하나의 형식입니다. 하지만 [**winrt::array_view**](/uwp/cpp-ref-for-winrt/array-view) 같은 형식은 직접 사용할 가능성이 비교적 낮습니다. 혹은 사용하지 않도록 선택할 수도 있는데, 이때는 C++ 표준 라이브러리에 해당하는 형식이 표시되더라도 어떤 코드도 변경할 필요가 없습니다.
 
 > [!WARNING]
-> 그 밖에 C++/WinRT Windows 네임스페이스 헤더에 대해서 자세히 공부할 경우 마주칠 수 있는 형식들도 있습니다. 예제로는 **winrt::param::hstring**이 있지만 컬렉션 예제도 있습니다. 이는 오로지 입력 매개 변수의 바인딩을 최적화하기 위해서만 존재하며 크게 성능을 향상하고 관련 표준 C++ 형식 및 컨테이너를 위해 “단지 작동”하는 호출 패턴을 최대한 활용합니다. 이 형식은 대부분의 값을 추가하는 경우에 프로젝션에 의해서만 사용됩니다. 우수하게 최적화되었으며 일반적인 용도로 사용되지 않습니다. 직접 사용하려고 하지 마세요. 이 형식은 구현 형식이며 변경되기 쉬우므로 `winrt::impl` 네임스페이스에서 어떤 것도 사용해서는 안 됩니다. 표준 형식이나 [winrt 네임스페이스](/uwp/cpp-ref-for-winrt/winrt)의 형식을 계속 사용해야 합니다.
+> 그 밖에 C++/WinRT Windows 네임스페이스 헤더에 대해서 자세히 공부할 경우 마주칠 수 있는 형식들도 있습니다. 예제로는 **winrt::param::hstring** 이 있지만 컬렉션 예제도 있습니다. 이는 오로지 입력 매개 변수의 바인딩을 최적화하기 위해서만 존재하며 크게 성능을 향상하고 관련 표준 C++ 형식 및 컨테이너를 위해 “단지 작동”하는 호출 패턴을 최대한 활용합니다. 이 형식은 대부분의 값을 추가하는 경우에 프로젝션에 의해서만 사용됩니다. 우수하게 최적화되었으며 일반적인 용도로 사용되지 않습니다. 직접 사용하려고 하지 마세요. 이 형식은 구현 형식이며 변경되기 쉬우므로 `winrt::impl` 네임스페이스에서 어떤 것도 사용해서는 안 됩니다. 표준 형식이나 [winrt 네임스페이스](/uwp/cpp-ref-for-winrt/winrt)의 형식을 계속 사용해야 합니다.
 >
 > [매개 변수를 ABI 경계로 전달](./pass-parms-to-abi.md)도 참조하세요.
 

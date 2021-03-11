@@ -13,12 +13,12 @@ design-contact: jeffarn
 dev-contact: niallm
 doc-status: Published
 ms.localizationpriority: medium
-ms.openlocfilehash: c7ac5b8c34f007e18e04eb8299d9ccddd583ad29
-ms.sourcegitcommit: 9378b1b2c2a5ba6e774ae76b53d755cbc5215af2
+ms.openlocfilehash: 51dc59f9390e2f4bbbf8dda35ed8fad6de0135a4
+ms.sourcegitcommit: c5fdcc0779d4b657669948a4eda32ca3ccc7889b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97709652"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102784784"
 ---
 # <a name="designing-for-xbox-and-tv"></a>Xbox 및 TV용 디자인
 
@@ -427,14 +427,6 @@ DirectX 11 또는 DirectX 12를 사용 하 여 앱을 개발 하 고 UI 또는 �
 ## <a name="guidelines-for-ui-controls"></a>UI 컨트롤에 대 한 지침
 
 여러 장치에서 잘 작동 하는 몇 가지 UI 컨트롤이 있지만 TV에서 사용 하는 경우 몇 가지 사항을 고려해 야 합니다. 10 피트 환경을 설계할 때 이러한 컨트롤을 사용 하기 위한 몇 가지 모범 사례에 대해 알아보세요.
-
-### <a name="pivot-control"></a>피벗 컨트롤
-
-[피벗](/uwp/api/Windows.UI.Xaml.Controls.Pivot) 은 다른 머리글이 나 탭을 선택 하 여 앱 내에서 보기를 빠르게 탐색 합니다. 컨트롤은 어떤 머리글에 포커스가 있는지 밑줄을 사용 하 여 게임 패드/원격을 사용할 때 현재 선택 된 헤더를 보다 명확 하 게 합니다.
-
-![피벗 밑줄](images/designing-for-tv/pivot-underline.png)
-
-[IsHeaderItemsCarouselEnabled](/uwp/api/windows.ui.xaml.controls.pivot.isheaderitemscarouselenabledproperty) 속성을로 설정 하면 `true` 선택 된 피벗 머리글이 항상 첫 번째 위치로 이동 하는 것이 아니라 피벗이 항상 동일한 위치를 유지할 수 있습니다. TV와 같은 큰 화면 표시에서는 헤더 래핑이 사용자에게 방해가 될 수 있으므로 환경이 개선됩니다. 모든 피벗 머리글이 한 번에 화면에 맞지 않는 경우 고객이 다른 헤더를 볼 수 있도록 스크롤 막대가 있습니다. 그러나 최상의 환경을 제공 하기 위해 모든 것이 화면에 적합 한지 확인 해야 합니다. 자세한 내용은 [탭 및 피벗](../controls-and-patterns/pivot.md)을 참조 하세요.
 
 <a name="navigation-pane"></a>
 

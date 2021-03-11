@@ -5,12 +5,12 @@ ms.date: 09/24/2020
 ms.topic: article
 keywords: windows 10, uwp
 localizationpriority: medium
-ms.openlocfilehash: e4875e7d34f36104cb5ed64bb56ea289de2db92e
-ms.sourcegitcommit: 6cb20dca1cb60b4f6b894b95dcc2cc3a166165ad
+ms.openlocfilehash: 46d63a5f0bf929c391e9080e621023dc9eaafdd0
+ms.sourcegitcommit: c5fdcc0779d4b657669948a4eda32ca3ccc7889b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636573"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102784724"
 ---
 # <a name="page-layout"></a>페이지 레이아웃
 
@@ -51,7 +51,7 @@ Windows 앱에서 각 [**페이지**](/uwp/api/Windows.UI.Xaml.Controls.Page)에
 
 위쪽 탐색은 최상위 탐색 역할을 할 수도 있습니다. 왼쪽 탐색은 축소 가능하지만, 위쪽 탐색은 항상 표시됩니다. [NavigationView](../controls-and-patterns/navigationview.md) 컨트롤은 UWP의 위쪽 탐색 및 탭 패턴을 구현합니다.
 
-![위쪽 탐색](images/pivot-large.svg)
+:::image type="content" source="../controls-and-patterns/images/displaymode-top.png" alt-text="위쪽 탐색":::
 
 ## <a name="command-bar"></a>명령 모음
 

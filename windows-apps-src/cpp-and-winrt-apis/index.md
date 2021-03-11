@@ -5,12 +5,12 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: Windows 10, UWP, 표준, C++, CPP, WinRT, 프로젝션
 ms.localizationpriority: medium
-ms.openlocfilehash: b3ad3a204b2eb4b288e3d3c313a0832bea124de0
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 7812eca3263e266820f3624f88aad41b2d6e6ef5
+ms.sourcegitcommit: 539b428bcf3d72c6bda211893df51f2a27ac5206
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219896"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102629381"
 ---
 # <a name="cwinrt"></a>C++/WinRT
 
@@ -22,7 +22,7 @@ C++/WinRT는 아름답고 빠른 Windows용 코드를 작성하는 데 관심이
 &nbsp;
 > [!VIDEO https://www.youtube.com/embed/TLSul1XxppA]
 
-C++ 프로그래밍 언어는 엔터프라이즈 및 ISV(Independent Software Vendor) 부문 *모두*에서 높은 수준의 정확성, 품질 및 성능이 가치가 있는 애플리케이션에 사용합니다. 예를 들어 시스템 프로그래밍, 리소스가 제한된 포함 및 모바일 시스템, 게임 및 그래픽, 디바이스 드라이버, 산업/과학/의학 애플리케이션 등이 있습니다.
+C++ 프로그래밍 언어는 엔터프라이즈 및 ISV(Independent Software Vendor) 부문 *모두* 에서 높은 수준의 정확성, 품질 및 성능이 가치가 있는 애플리케이션에 사용합니다. 예를 들어 시스템 프로그래밍, 리소스가 제한된 포함 및 모바일 시스템, 게임 및 그래픽, 디바이스 드라이버, 산업/과학/의학 애플리케이션 등이 있습니다.
 
 언어적 관점에서 C++는 항상 형식이 풍부하고 가벼운 추상화를 작성하고 사용하는 것에 관련되어 있습니다. 하지만 원시 포인터, 원시 루프 및 C++98의 까다로운 메모리 할당 및 해제 이후로 언어가 급격하게 바뀌었습니다. 최신 C++(C++11 이후)는 아이디어, 단순성, 가독성 및 버그 발생에 대한 훨씬 낮은 가능성을 명확하게 표현하고 있습니다.
 
@@ -40,7 +40,7 @@ C++/WinRT로 포팅하는 방법에 대한 자세한 내용은 다음 리소스�
 - [WRL에서 C++/WinRT로 이동](./move-to-winrt-from-wrl.md)
 - [C#에서 C++/WinRT로 이동](./move-to-winrt-from-csharp.md)
 
-또한 [C++/WinRT 샘플 앱은 어디에서 찾을 수 있나요?](./faq.md#where-can-i-find-cwinrt-sample-apps)도 참조하세요.
+또한 [C++/WinRT 샘플 앱은 어디에서 찾을 수 있나요?](./faq.yml#where-can-i-find-c---winrt-sample-apps-)도 참조하세요.
 
 ### <a name="topics-about-cwinrt"></a>C++/WinRT 관련 항목
 
@@ -49,12 +49,12 @@ C++/WinRT로 포팅하는 방법에 대한 자세한 내용은 다음 리소스�
 | [C++/WinRT 소개](./intro-to-using-cpp-with-winrt.md) | Windows 런타임 API용 표준 C++ 언어 프로젝션인 C++/WinRT에 대한 소개입니다. |
 | [C++/WinRT 시작](./get-started.md) | C++/WinRT 사용 속도를 높이려면 이 항목에서 안내하는 단순한 코드 예제를 살펴봅니다. |
 | [C++/WinRT의 새로운 기능](./news.md) | C++/WinRT에서 새롭거나 변경된 기능입니다. |
-| [질문과 대답](./faq.md) | C++/WinRT를 통해 Windows 런타임 API를 작성하거나 사용하는 것과 관련하여 발생할 수 있는 질문에 대한 대답입니다. |
+| [질문과 대답](./faq.yml) | C++/WinRT를 통해 Windows 런타임 API를 작성하거나 사용하는 것과 관련하여 발생할 수 있는 질문에 대한 대답입니다. |
 | [문제 해결](./troubleshooting.md) | 이 항목에 나와 있는 문제 증상 및 해결 방법에 대한 표는 새 코드를 자르거나 기존 앱을 이식할지를 결정하는 데 도움이 될 수 있습니다. |
 | [Photo Editor C++/WinRT 샘플 애플리케이션](./photo-editor-sample.md) | Photo Editor는 C++/WinRT 언어 프로젝션을 통한 개발을 보여 주는 UWP 샘플 애플리케이션입니다. 샘플 애플리케이션을 사용하면 **사진** 라이브러리에서 사진을 검색한 다음, 다양한 사진 효과를 사용하여 선택한 이미지를 편집할 수 있습니다. | 
 | [문자열 처리](./strings.md) | C++/WinRT를 사용하면 표준 C++ 와이드 문자열 형식을 사용하여 Windows 런타임 API를 호출하거나, [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) 형식을 사용할 수 있습니다. |
 | [표준 C++ 데이터 형식 및 C++/WinRT](./std-cpp-data-types.md) | C++/WinRT를 사용하면 표준 C++ 데이터 형식을 사용하여 Windows 런타임 API를 호출할 수 있습니다. |
-| [스칼라 값을 IInspectable로 boxing 및 unboxing](./boxing.md) | 스칼라 값은 **IInspectable**이 필요한 함수에 전달되기 전에 참조 클래스 개체 내에 래핑되어야 합니다. 이 래핑 프로세스에 대해 값을 *boxing*한다고 합니다. |
+| [스칼라 값을 IInspectable로 boxing 및 unboxing](./boxing.md) | 스칼라 값은 **IInspectable** 이 필요한 함수에 전달되기 전에 참조 클래스 개체 내에 래핑되어야 합니다. 이 래핑 프로세스에 대해 값을 *boxing* 한다고 합니다. |
 | [C++/WinRT를 통한 API 사용](./consume-apis.md) | Windows, 타사 구성 요소 공급업체 또는 사용자 자신이 구현하는지 여부에 관계없이 C++/WinRT API를 사용하는 방법을 보여 줍니다. |
 | [C++/WinRT를 통한 API 작성](./author-apis.md) | **winrt::implements** 기본 구조체를 직접 또는 간접적으로 사용하여 C++/WinRT API를 작성하는 방법을 보여 줍니다. |
 | [C++/WinRT를 통한 오류 처리](./error-handling.md) | C++/WinRT를 사용하여 프로그래밍할 때 오류를 처리하기 위한 전략에 대해 설명합니다. |

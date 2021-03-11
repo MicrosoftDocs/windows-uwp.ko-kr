@@ -4,12 +4,12 @@ description: 둥근 모퉁이 원칙, 디자인 방법 및 사용자 지정 옵�
 ms.date: 10/08/2019
 ms.topic: article
 keywords: windows 10, uwp, 모퉁이 반경, 둥근 모양
-ms.openlocfilehash: 33432ac0083c0d6660d0669ea43805e0ae73f37e
-ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
+ms.openlocfilehash: 14abadb968e31c52e49d7597241eb017f5ebead7
+ms.sourcegitcommit: c5fdcc0779d4b657669948a4eda32ca3ccc7889b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97860195"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102784814"
 ---
 # <a name="corner-radius"></a>모퉁이 반경
 
@@ -94,7 +94,6 @@ WinUI 2.2 이상을 위한 NuGet 패키지를 설치하는 경우 WinUI 컨트�
 **컨트롤**
 
 - NavigationView 선택 표시기
-- Pivot 선택 표시기
 - ProgressBar
 - ScrollBar(`IndicatorMode=TouchIndicator` 경우)
 - 슬라이더

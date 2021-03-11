@@ -5,19 +5,19 @@ ms.date: 04/18/2019
 ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 가져오기, 시작하기, 시작
 ms.localizationpriority: medium
-ms.openlocfilehash: f38269acd9f1d6e2e830b51b3fcfa3a9014f2d7e
-ms.sourcegitcommit: eda7bbe9caa9d61126e11f0f1a98b12183df794d
+ms.openlocfilehash: 994ca6c28fab60528f9c533fad9587525c003e43
+ms.sourcegitcommit: 539b428bcf3d72c6bda211893df51f2a27ac5206
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91219906"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102629331"
 ---
 # <a name="get-started-with-cwinrt"></a>C++/WinRT 시작
 
 [C++/WinRT](./intro-to-using-cpp-with-winrt.md)를 빠르게 사용할 수 있도록, 이 항목에서는 새 **Windows 콘솔 애플리케이션(C++/WinRT)** 프로젝트를 기반으로 하는 간단한 코드 예제를 살펴보겠습니다. 이 항목에서는 [Windows 데스크톱 애플리케이션 프로젝트에 C++/WinRT 지원을 추가](#modify-a-windows-desktop-application-project-to-add-cwinrt-support)하는 방법도 보여 줍니다.
 
 > [!NOTE]
-> Visual Studio 및 Windows SDK의 최신 버전을 사용하여 개발하는 것이 좋지만, Visual Studio 2017(버전 15.8.0 이상)을 사용 중이고 Windows SDK 버전 10.0.17134.0(Windows 10 버전, 1803)을 대상으로 하는 경우 새로 만든 C++/WinRT 프로젝트가 컴파일되지 않고 “오류 C3861: ‘from_abi’: 식별자를 찾을 수 없음” 오류와 *base.h*에서 발생하는 기타 오류가 표시될 수 있습니다. 해결 방법으로, 보다 규칙에 맞는 Windows SDK 최신 버전을 대상으로 지정하거나, 프로젝트 속성 **C/C++**  > **언어** > **적합성 모드: 아니요**를 설정합니다. 또는 **추가 옵션** 아래의 프로젝트 속성 **C/C++**  > **언어** > **명령줄**에 **/permissive-** 가 표시되는 경우 삭제합니다.
+> Visual Studio 및 Windows SDK의 최신 버전을 사용하여 개발하는 것이 좋지만, Visual Studio 2017(버전 15.8.0 이상)을 사용 중이고 Windows SDK 버전 10.0.17134.0(Windows 10 버전, 1803)을 대상으로 하는 경우 새로 만든 C++/WinRT 프로젝트가 컴파일되지 않고 “오류 C3861: ‘from_abi’: 식별자를 찾을 수 없음” 오류와 *base.h* 에서 발생하는 기타 오류가 표시될 수 있습니다. 해결 방법으로, 보다 규칙에 맞는 Windows SDK 최신 버전을 대상으로 지정하거나, 프로젝트 속성 **C/C++**  > **언어** > **적합성 모드: 아니요** 를 설정합니다. 또는 **추가 옵션** 아래의 프로젝트 속성 **C/C++**  > **언어** > **명령줄** 에 **/permissive-** 가 표시되는 경우 삭제합니다.
 
 ## <a name="a-cwinrt-quick-start"></a>C++/WinRT 빠른 시작
 
@@ -100,20 +100,20 @@ SyndicationClient syndicationClient;
 SyndicationFeed syndicationFeed = syndicationClient.RetrieveFeedAsync(rssFeedUri).get();
 ```
 
-[**SyndicationClient::RetrieveFeedAsync**](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)는 비동기 Windows 런타임 함수의 예입니다. 이 코드 예제는 **RetrieveFeedAsync**에서 비동기 작업 개체를 받은 후 해당 개체에서 **get**을 호출하여 호출 스레드를 차단하고 결과(이 경우 배포 피드)를 기다립니다. 동시성에 대한 자세한 내용과 비차단 기술에 대해서는 [C++/WinRT를 통한 동시성 및 비동기 작업](concurrency.md)을 참조하세요.
+[**SyndicationClient::RetrieveFeedAsync**](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)는 비동기 Windows 런타임 함수의 예입니다. 이 코드 예제는 **RetrieveFeedAsync** 에서 비동기 작업 개체를 받은 후 해당 개체에서 **get** 을 호출하여 호출 스레드를 차단하고 결과(이 경우 배포 피드)를 기다립니다. 동시성에 대한 자세한 내용과 비차단 기술에 대해서는 [C++/WinRT를 통한 동시성 및 비동기 작업](concurrency.md)을 참조하세요.
 
 ```cppwinrt
 for (const SyndicationItem syndicationItem : syndicationFeed.Items()) { ... }
 ```
 
-[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items)는 **begin** 및 **end** 함수에서 반환된 반복기(또는 해당 상수, 역방향, 상수-역방향 변형)로 정의된 범위입니다. 따라서 범위 기반 `for` 문 또는 **std::for_each** 템플릿 함수를 사용하여 **Items**를 열거할 수 있습니다. 이처럼 Windows 런타임 컬렉션을 반복할 때마다 `#include <winrt/Windows.Foundation.Collections.h>`가 필요합니다.
+[**SyndicationFeed.Items**](/uwp/api/windows.web.syndication.syndicationfeed.items)는 **begin** 및 **end** 함수에서 반환된 반복기(또는 해당 상수, 역방향, 상수-역방향 변형)로 정의된 범위입니다. 따라서 범위 기반 `for` 문 또는 **std::for_each** 템플릿 함수를 사용하여 **Items** 를 열거할 수 있습니다. 이처럼 Windows 런타임 컬렉션을 반복할 때마다 `#include <winrt/Windows.Foundation.Collections.h>`가 필요합니다.
 
 ```cppwinrt
 winrt::hstring titleAsHstring = syndicationItem.Title().Text();
 std::wcout << titleAsHstring.c_str() << std::endl;
 ```
 
-피드의 제목 텍스트를 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) 개체로 가져옵니다(자세한 내용은 [C++/WinRT의 문자열 처리](strings.md) 참조). 그러면 C++ 표준 라이브러리 문자열과 함께 사용된 패턴을 반영하는 **hstring**이 **c_str** 함수를 통해 출력됩니다.
+피드의 제목 텍스트를 [**winrt::hstring**](/uwp/cpp-ref-for-winrt/hstring) 개체로 가져옵니다(자세한 내용은 [C++/WinRT의 문자열 처리](strings.md) 참조). 그러면 C++ 표준 라이브러리 문자열과 함께 사용된 패턴을 반영하는 **hstring** 이 **c_str** 함수를 통해 출력됩니다.
 
 이와 같이 C++/WinRT는 클래스와 유사한 최신 C++ 식(예: `syndicationItem.Title().Text()`)의 사용을 장려합니다. 이 기술은 기존 COM 프로그래밍과 확연히 다를 뿐만 아니라 보다 명확한 프로그래밍 스타일입니다. COM을 직접 초기화하거나 COM 포인터를 사용할 필요가 없습니다.
 
@@ -127,15 +127,15 @@ HRESULT 반환 코드를 처리할 필요도 없습니다. C++/WinRT는 자연�
 
 ### <a name="set-project-properties"></a>프로젝트 속성 설정
 
-**일반** \> **Windows SDK 버전** 프로젝트 속성으로 차례로 이동한 다음, **모든 구성** 및 **모든 플랫폼**을 선택합니다. **Windows SDK 버전**이 10.0.17134.0(Windows 10, 버전 1803) 이상으로 설정되어 있는지 확인합니다.
+**일반** \> **Windows SDK 버전** 프로젝트 속성으로 차례로 이동한 다음, **모든 구성** 및 **모든 플랫폼** 을 선택합니다. **Windows SDK 버전** 이 10.0.17134.0(Windows 10, 버전 1803) 이상으로 설정되어 있는지 확인합니다.
 
-[새 프로젝트가 컴파일되지 않는 이유는 무엇인가요?](./faq.md)의 영향을 받지 않는지 확인합니다.
+[새 프로젝트가 컴파일되지 않는 이유는 무엇인가요?](./faq.yml)의 영향을 받지 않는지 확인합니다.
 
-C++/WinRT는 C++17 표준의 기능을 사용하기 때문에 프로젝트 속성 **C/C++**  > **언어** > **C++ 언어 표준**을 ‘ISO C++17 표준(/std:c++17)’으로 설정합니다.
+C++/WinRT는 C++17 표준의 기능을 사용하기 때문에 프로젝트 속성 **C/C++**  > **언어** > **C++ 언어 표준** 을 ‘ISO C++17 표준(/std:c++17)’으로 설정합니다.
 
 ### <a name="the-precompiled-header"></a>미리 컴파일된 헤더
 
-기본 프로젝트 템플릿은 `framework.h` 또는 `stdafx.h`라는 미리 컴파일된 헤더를 자동으로 만듭니다. 헤더 이름을 `pch.h`로 바꿉니다. `stdafx.cpp` 파일이 있는 경우 파일 이름도 `pch.cpp`로 바꿉니다. 프로젝트 속성 **C/C++**  > **미리 컴파일된 헤더** > **미리 컴파일된 헤더**를 *만들기(/Yc)* 로 설정하고 **미리 컴파일된 헤더 파일**을 *pch.h*로 설정합니다.
+기본 프로젝트 템플릿은 `framework.h` 또는 `stdafx.h`라는 미리 컴파일된 헤더를 자동으로 만듭니다. 헤더 이름을 `pch.h`로 바꿉니다. `stdafx.cpp` 파일이 있는 경우 파일 이름도 `pch.cpp`로 바꿉니다. 프로젝트 속성 **C/C++**  > **미리 컴파일된 헤더** > **미리 컴파일된 헤더** 를 *만들기(/Yc)* 로 설정하고 **미리 컴파일된 헤더 파일** 을 *pch.h* 로 설정합니다.
 
 모든 `#include "framework.h"`(또는 `#include "stdafx.h"`)를 찾아서 `#include "pch.h"`로 바꿉니다.
 
@@ -151,7 +151,7 @@ C++/WinRT는 C++17 표준의 기능을 사용하기 때문에 프로젝트 속�
 
 C++/WinRT 언어 프로젝션은 [WindowsApp.lib](/uwp/win32-and-com/win32-apis) 상위 라이브러리에 대한 연결이 필요한 특정 Windows 런타임 프리(비멤버) 함수 및 진입점에 따라 달라집니다. 이 섹션에서는 링커를 충족하는 세 가지 방법을 설명합니다.
 
-첫 번째 옵션은 Visual Studio 프로젝트에 C++/WinRT MSBuild 속성과 대상을 모두 추가하는 것입니다. 이 작업을 수행하려면 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/)를 프로젝트에 설치합니다. Visual Studio에서 프로젝트를 열고, **프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기**를 차례로 클릭하고, 검색 상자에서 **Microsoft.Windows.CppWinRT**를 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치**를 클릭하여 해당 프로젝트에 대한 패키지를 설치합니다.
+첫 번째 옵션은 Visual Studio 프로젝트에 C++/WinRT MSBuild 속성과 대상을 모두 추가하는 것입니다. 이 작업을 수행하려면 [Microsoft.Windows.CppWinRT NuGet 패키지](https://www.nuget.org/packages/Microsoft.Windows.CppWinRT/)를 프로젝트에 설치합니다. Visual Studio에서 프로젝트를 열고, **프로젝트** \> **NuGet 패키지 관리...** \> **찾아보기** 를 차례로 클릭하고, 검색 상자에서 **Microsoft.Windows.CppWinRT** 를 입력하거나 붙여넣고, 검색 결과에서 해당 항목을 선택한 다음, **설치** 를 클릭하여 해당 프로젝트에 대한 패키지를 설치합니다.
 
 프로젝트 연결 설정을 사용하여 `WindowsApp.lib`를 명시적으로 연결할 수도 있습니다. 또는 다음과 같이 소스 코드(예: `pch.h`)에서 이 작업을 수행할 수 있습니다.
 
@@ -167,11 +167,11 @@ C++/WinRT를 사용하여 익숙해지고 이 설명서의 나머지 부분을 �
 
 ### <a name="consuming-windows-runtime-apis-and-types"></a>Windows 런타임 API 및 형식 사용
 
-즉 API를 *사용*하거나 *호출*합니다. 예를 들어 Bluetooth를 통한 통신, 비디오 스트리밍 및 표시, Windows 셸과의 통합 등을 수행하는 API를 호출합니다. C++/WinRT는 이 시나리오 범주를 완벽하고 단호하게 지원합니다. 자세한 내용은 [C++/WinRT를 통한 API 사용](./consume-apis.md)을 참조하세요.
+즉 API를 *사용* 하거나 *호출* 합니다. 예를 들어 Bluetooth를 통한 통신, 비디오 스트리밍 및 표시, Windows 셸과의 통합 등을 수행하는 API를 호출합니다. C++/WinRT는 이 시나리오 범주를 완벽하고 단호하게 지원합니다. 자세한 내용은 [C++/WinRT를 통한 API 사용](./consume-apis.md)을 참조하세요.
 
 ### <a name="authoring-windows-runtime-apis-and-types"></a>Windows 런타임 API 및 형식 작성
 
-즉 API 및 형식을 *생성*합니다. 예를 들어 위의 섹션에서 설명하는 종류의 API, 그래픽 API, 스토리지 및 파일 시스템 API, 네트워킹 API 등을 생성합니다. 자세한 내용은 [C++/WinRT를 통한 API 작성](./author-apis.md)을 참조하세요.
+즉 API 및 형식을 *생성* 합니다. 예를 들어 위의 섹션에서 설명하는 종류의 API, 그래픽 API, 스토리지 및 파일 시스템 API, 네트워킹 API 등을 생성합니다. 자세한 내용은 [C++/WinRT를 통한 API 작성](./author-apis.md)을 참조하세요.
 
 API를 구현하려면 먼저 IDL을 사용하여 해당 API의 모양을 정의해야 하므로 C++/WinRT를 사용하여 API를 작성하는 것이 이러한 API를 사용하는 것보다 더 중요합니다. 이러한 작업은 [XAML 컨트롤, C++/WinRT 속성에 바인딩](./binding-property.md)에서 연습할 수 있습니다.
 
@@ -183,7 +183,7 @@ XAML은 리플렉션을 제공하는 프로그래밍 언어에서 가장 효율�
 
 ## <a name="sample-apps-written-in-cwinrt"></a>C++/WinRT로 작성된 샘플 앱
 
-[C++/WinRT 샘플 앱은 어디서 찾을 수 있나요?](./faq.md#where-can-i-find-cwinrt-sample-apps)를 참조하세요.
+[C++/WinRT 샘플 앱은 어디서 찾을 수 있나요?](./faq.yml#where-can-i-find-c---winrt-sample-apps-)를 참조하세요.
 
 ## <a name="important-apis"></a>중요 API
 * [SyndicationClient::RetrieveFeedAsync 메서드](/uwp/api/windows.web.syndication.syndicationclient.retrievefeedasync)

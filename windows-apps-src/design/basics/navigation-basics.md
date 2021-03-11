@@ -10,12 +10,12 @@ ms.topic: article
 keywords: windows 10, uwp
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: ae88d30988ff2c3ccb4e7b32e1fefbf4d8bb9fde
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: c5dc119edefbdd3ef4dd155c9de9d2e69fee193b
+ms.sourcegitcommit: c5fdcc0779d4b657669948a4eda32ca3ccc7889b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93031126"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102784774"
 ---
 # <a name="navigation-design-basics-for-windows-apps"></a>Windows 앱용 탐색 디자인 기본 사항
 
@@ -204,22 +204,6 @@ ms.locfileid: "93031126"
 - 사용자가 탭을 동적으로 열고, 닫고, 다시 정렬할 수 있도록 하려고 합니다.
 - 한 번에 많은 수의 탭이 열려 있을 수 있습니다.
 - 사용자는 Microsoft Edge와 같은 웹 브라우저와 마찬가지로 탭을 사용하는 애플리케이션의 창 간에 탭을 쉽게 이동할 수 있습니다.
-
-:::row-end:::
-
-:::row:::
-    :::column:::
-         ![탭 및 피벗 이미지](images/nav/thumbnail-tabs-pivot.svg)
-    :::column-end:::
-        :::column span="2":::
-    [**Pivot**](../controls-and-patterns/pivot.md)
-    
-[탐색 보기](../controls-and-patterns/navigationview.md)와 비슷하지만 터치 및 약간 다른 탐색 동작을 추가로 지원합니다.
-    
-다음과 같은 경우 피벗을 사용합니다.
-- 앱에서 범주 간에 터치로 살짝 밀기를 허용하려는 경우
-- 탐색 옵션이 무한히 회전되게 하려는 경우
-- 범주 간 탐색 동작에 대한 광범위한 제어가 필요하지 않은 경우
 
 :::row-end:::
 

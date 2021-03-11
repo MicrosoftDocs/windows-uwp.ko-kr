@@ -6,12 +6,12 @@ ms.topic: article
 keywords: windows 10, uwp, 표준, c++, cpp, winrt, 프로젝션, 새로운 기능
 ms.localizationpriority: medium
 ms.custom: RS5
-ms.openlocfilehash: f5cfe5dc66df98e3dd4d4290023cac1874ae797a
-ms.sourcegitcommit: 4cafc1c55511741dd1e5bfe4496d9950a9b4de1b
+ms.openlocfilehash: f961fba5c4b5aca316da257ba66df17b504b3264
+ms.sourcegitcommit: 539b428bcf3d72c6bda211893df51f2a27ac5206
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97860284"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "102629351"
 ---
 # <a name="whats-new-in-cwinrt"></a>C++/WinRT의 새로운 기능
 
@@ -344,7 +344,7 @@ struct MainPage : PageT<MainPage>
 | C++/WinRT 런타임 클래스와 함께 [{바인딩}](../xaml-platform/binding-markup-extension.md) 태그 확장을 사용할 수 있습니다. | 자세한 내용과 코드 예제는 [데이터 바인딩 개요](../data-binding/data-binding-quickstart.md)를 참조하세요. |
 | 코루틴 취소 지원을 통해 취소 콜백을 등록할 수 있습니다. | 자세한 내용과 코드 예제는 [비동기 작업 취소 및 취소 콜백](concurrency-2.md#canceling-an-asynchronous-operation-and-cancellation-callbacks)을 참조하세요. |
 | 멤버 함수를 가리키는 대리자를 만들 때 처리기가 등록된 지점에서 원시 *this* 포인터 대신에 현재 개체에 대한 강력하거나 약한 참조를 설정할 수 있습니다. | 자세한 내용과 코드 예제는 [이벤트 처리 대리자를 사용하여 안전하게 *this* 포인터 액세스](weak-references.md#safely-accessing-the-this-pointer-with-an-event-handling-delegate) 섹션에서 **멤버 함수를 대리자로 사용하는 경우** 하위 섹션을 참조하세요. |
-| Visual Studio의 C++ 표준 규칙이 향상되어 처리되지 않았던 버그가 수정되었습니다. C++/WinRT의 표준 규칙의 유효성을 검사하기 위해 LLVM 및 Clang 도구 체인을 더 효율적으로 이용합니다. | [새 프로젝트가 컴파일되지 않는 이유는 무엇인가요? Visual Studio 2017(버전 15.8.0 이상) 및 SDK 버전 17134를 사용하고 있습니다.](faq.md#why-wont-my-new-project-compile-im-using-visual-studio-2017-version-1580-or-higher-and-sdk-version-17134)에 설명된 문제가 더 이상 발생하지 않습니다. |
+| Visual Studio의 C++ 표준 규칙이 향상되어 처리되지 않았던 버그가 수정되었습니다. C++/WinRT의 표준 규칙의 유효성을 검사하기 위해 LLVM 및 Clang 도구 체인을 더 효율적으로 이용합니다. | [새 프로젝트가 컴파일되지 않는 이유는 무엇인가요? Visual Studio 2017(버전 15.8.0 이상) 및 SDK 버전 17134를 사용하고 있습니다.](faq.yml#why-won-t-my-new-project-compile--i-m-using-visual-studio-2017--version-15-8-0-or-higher---and-sdk-version-17134)에 설명된 문제가 더 이상 발생하지 않습니다. |
 
 기타 변경 내용은 아래와 같습니다.
 
