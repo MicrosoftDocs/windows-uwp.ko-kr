@@ -4,12 +4,12 @@ description: 성능을 저하 시 키 지 않고 몇 가지 추가 기능을 포
 ms.date: 12/02/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 126c38cd98f0d8ff1102c7f53f14cb95ec7e38c5
-ms.sourcegitcommit: 382ae62f9d9bf980399a3f654e40ef4f85eae328
+ms.openlocfilehash: 5b6f86636cb5753d93422a5658e6ae661151d0f9
+ms.sourcegitcommit: eb203b55b1332d0ed135abccd50f3fc287f89a5a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99534402"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103193298"
 ---
 # <a name="powertoys-run-utility"></a>Powertoy Run 유틸리티
 
@@ -76,7 +76,7 @@ Powertoy 설정 메뉴에서 다음 실행 옵션을 사용할 수 있습니다.
   | `<` | 실행 중인 프로세스만 `<outlook`Outlook을 포함 하는 모든 프로세스를 찾는 예제 |
   | `>` | Shell 명령만. `>ping localhost`Ping 쿼리를 수행 하는 예제 |
   | `:` | 레지스트리 키만 `:hkcu`HKEY_CURRENT_USER 레지스트리 키를 검색 하는 예제 |
-  | `!` | Windows 서비스만 해당 됩니다. `!alu`시작 또는 중지할 응용 프로그램 계층 게이트웨이 서비스를 검색 하는 예제 |
+  | `!` | Windows 서비스만 해당 됩니다. `!alg`시작 또는 중지할 응용 프로그램 계층 게이트웨이 서비스를 검색 하는 예제 |
 
 ## <a name="system-commands"></a>시스템 명령
 
