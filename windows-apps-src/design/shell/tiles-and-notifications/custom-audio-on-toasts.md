@@ -7,12 +7,12 @@ ms.date: 12/15/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림, 사용자 지정 오디오, 알림, 오디오, 소리
 ms.localizationpriority: medium
-ms.openlocfilehash: 54f890ceb0031b4c244e387e1f7068615a2fedc1
-ms.sourcegitcommit: 98ca28fd0b5d306d35f3919fe9dd4d5a0222235e
+ms.openlocfilehash: 905292155dfc43a82c464edb651b2d176aeab960
+ms.sourcegitcommit: 5e718720d1032a7089dea46a7c5aefa6cda3385f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102029826"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103226127"
 ---
 # <a name="custom-audio-on-toasts"></a>알림을의 사용자 지정 오디오
 
@@ -27,11 +27,8 @@ NuGet의 [Microsoft Toolkit](https://www.nuget.org/packages/Microsoft.Toolkit.Uw
 
 ## <a name="add-namespace-declarations"></a>네임스페이스 선언 추가
 
-`Windows.UI.Notifications` 타일 및 알림 API를 포함 합니다. `Microsoft.Toolkit.Uwp.Notifications` 알림 라이브러리를 포함 합니다.
-
 ```csharp
 using Microsoft.Toolkit.Uwp.Notifications;
-using Windows.UI.Notifications;
 ```
 
 
@@ -61,7 +58,8 @@ if (supportsCustomAudio)
     contentBuilder.AddAudio(new Uri("ms-appx:///Assets/Audio/CustomToastAudio.m4a"));
 }
 
-// TODO: Send the toast
+// Send the toast
+contentBuilder.Show();
 ```
 
 지원 되는 오디오 파일 형식에는 다음이 포함 됩니다.
@@ -76,7 +74,7 @@ if (supportsCustomAudio)
 
 ## <a name="send-the-notification"></a>알림 보내기
 
-오디오가 포함 된 알림을 보내는 것은 정기적인 알림을 보내는 것과 같습니다. 자세한 내용은 [로컬 알림 보내기](send-local-toast.md) 를 참조 하세요.
+오디오가 포함 된 알림을 보내는 것은 일반 알림을 보내는 것과 같습니다 (Show 메서드만 호출). 자세한 내용은 [로컬 알림 보내기](send-local-toast.md) 를 참조 하세요.
 
 
 ## <a name="related-topics"></a>관련 항목

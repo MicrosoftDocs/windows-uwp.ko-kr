@@ -7,19 +7,19 @@ ms.date: 12/07/2017
 ms.topic: article
 keywords: windows 10, uwp, 알림, 헤더, 알림 헤더, 알림, 그룹 알림을, 동작 센터
 ms.localizationpriority: medium
-ms.openlocfilehash: 1afc354b15b7c916426ca3c0a7130b777c21e0cf
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: e0da8fbf4d4ad3575fb3e2eca9c738b6c34a01d5
+ms.sourcegitcommit: 5e718720d1032a7089dea46a7c5aefa6cda3385f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93033076"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103226137"
 ---
 # <a name="toast-headers"></a>알림 헤더
 
 알림에서 알림 헤더를 사용 하 여 관리 센터 내에서 관련 알림 집합을 시각적으로 그룹화 할 수 있습니다.
 
 > [!IMPORTANT]
-> **바탕 화면 작성자 업데이트 및 알림 라이브러리 1.4.0 필요** : 알림 헤더를 보려면 데스크톱 빌드 15063 이상을 실행 해야 합니다. 1.4.0 버전 이상의 [UWP Community Toolkit Notification NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) 를 사용 하 여 알림 콘텐츠에서 헤더를 생성 해야 합니다. 헤더는 데스크톱 에서만 지원 됩니다.
+> **바탕 화면 작성자 업데이트 및 알림 라이브러리 1.4.0 필요**: 알림 헤더를 보려면 데스크톱 빌드 15063 이상을 실행 해야 합니다. 1.4.0 버전 이상의 [UWP Community Toolkit Notification NuGet 라이브러리](https://www.nuget.org/packages/Microsoft.Toolkit.Uwp.Notifications/) 를 사용 하 여 알림 콘텐츠에서 헤더를 생성 해야 합니다. 헤더는 데스크톱 에서만 지원 됩니다.
 
 아래 표시 된 것 처럼이 그룹 대화는 단일 헤더 "캠핑!!"로 통합 됩니다. 대화의 각 개별 메시지는 동일한 알림 헤더를 공유 하는 별도의 알림 메시지입니다.
 
@@ -64,7 +64,7 @@ new ToastContentBuilder()
 요약 ...
 
 1. **Toa 내용** 에 **헤더** 추가
-2. 필요한 **Id** , **제목** 및 **인수** 속성을 할당 합니다.
+2. 필요한 **Id**, **제목** 및 **인수** 속성을 할당 합니다.
 3. 알림 보내기 ([자세한 정보](send-local-toast.md))
 4. 다른 알림에서 동일한 헤더 **Id** 를 사용 하 여 헤더에서 통합 합니다. **Id** 는 알림을 그룹화 해야 하는지 여부를 결정 하는 데 사용 되는 유일한 속성입니다. 즉, **제목** 및 **인수** 는 다를 수 있습니다. 그룹 내의 가장 최근 알림의 **제목과** **인수가** 사용 됩니다. 해당 알림이 제거 되 면 **제목** 및 **인수** 는 다음으로 가장 최근의 알림으로 돌아옵니다.
 
@@ -75,7 +75,7 @@ new ToastContentBuilder()
 
 따라서 앱은 알림 자체의 시작 인수와 마찬가지로 헤더에 **인수** 를 제공할 수 있습니다.
 
-활성화는 [일반적인 알림 활성화](send-local-toast.md#step-4-handling-activation)와 동일 하 게 처리 됩니다. 즉, 사용자가 알림 본문을 클릭 하거나 알림 단추를 클릭 하는 것 처럼 **onactivated** 된 메서드에서 이러한 인수를 검색할 수 있습니다 `App.xaml.cs` .
+활성화는 [일반적인 알림 활성화](send-local-toast.md#step-3-handling-activation)와 동일 하 게 처리 됩니다. 즉, 사용자가 알림 본문을 클릭 하거나 알림 단추를 클릭 하는 것 처럼 **onactivated** 된 메서드에서 이러한 인수를 검색할 수 있습니다 `App.xaml.cs` .
 
 ```csharp
 protected override void OnActivated(IActivatedEventArgs e)

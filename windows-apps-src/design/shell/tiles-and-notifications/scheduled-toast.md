@@ -7,12 +7,12 @@ ms.date: 04/09/2020
 ms.topic: article
 keywords: windows 10, uwp, 예약 된 알림, scheduledtoastnotification, 방법, 빠른 시작, 시작, 코드 샘플, 연습
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a138458634f0246d7e6bed9d6d65c2479dac3c9
-ms.sourcegitcommit: a3bbd3dd13be5d2f8a2793717adf4276840ee17d
+ms.openlocfilehash: 488972d4f7d84967299f0a097bd5bbb8e0599aee
+ms.sourcegitcommit: 5e718720d1032a7089dea46a7c5aefa6cda3385f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93030696"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103226107"
 ---
 # <a name="schedule-a-toast-notification"></a>알림 메시지 예약
 
@@ -23,10 +23,10 @@ ms.locfileid: "93030696"
 > [!IMPORTANT]
 > 데스크톱 응용 프로그램 (MSIX/sparse 패키지와 클래식 데스크톱 모두)에서는 알림을 보내고 활성화를 처리 하는 단계가 약간 다릅니다. 아래 지침을 따릅니다. 그러나를 `ToastNotificationManager` `DesktopNotificationManagerCompat` [데스크톱 앱](toast-desktop-apps.md) 설명서의 클래스로 바꿉니다.
 
-> **중요 한 api** : [ScheduledToastNotification 클래스](/uwp/api/Windows.UI.Notifications.ScheduledToastNotification)
+> **중요 한 api**: [ScheduledToastNotification 클래스](/uwp/api/Windows.UI.Notifications.ScheduledToastNotification)
 
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 
 이 항목을 완벽 하 게 이해 하려면 다음을 수행 하는 것이 좋습니다.
 
@@ -42,10 +42,7 @@ ms.locfileid: "93030696"
 
 ## <a name="step-2-add-namespace-declarations"></a>2 단계: 네임 스페이스 선언 추가
 
-`Windows.UI.Notifications` 알림 Api를 포함 합니다.
-
 ```csharp
-using Windows.UI.Notifications;
 using Microsoft.Toolkit.Uwp.Notifications; // Notifications library
 ```
 
@@ -55,20 +52,12 @@ using Microsoft.Toolkit.Uwp.Notifications; // Notifications library
 지금까지 학생 들에 대해 학생 들에 게 알려 주는 간단한 텍스트 기반 알림을 사용 합니다. 알림 및 일정을 생성 합니다!
 
 ```csharp
-// Construct the content
-var content = new ToastContentBuilder()
-    .AddToastActivationInfo("itemsDueToday", ToastActivationType.Foreground)
+// Construct the content and schedule the toast!
+new ToastContentBuilder()
+    .AddArgument("action", "viewItemsDueToday")
     .AddText("ASTR 170B1")
     .AddText("You have 3 items due today!");
-    .GetToastContent();
-
-    
-// Create the scheduled notification
-var toast = new ScheduledToastNotification(content.GetXml(), DateTime.Now.AddSeconds(5));
-
-
-// Add your scheduled toast to the schedule
-ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast);
+    .Schedule(DateTime.Now.AddSeconds(5));
 ```
 
 
@@ -81,8 +70,16 @@ ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast);
 태그 및 그룹 결합은 복합 기본 키로 작동 합니다. Group은 보다 일반적인 식별자로, "wallPosts", "messages", "friendRequests" 등의 그룹을 할당할 수 있습니다. 그런 다음 태그는 그룹 내에서 알림 자체를 고유 하 게 식별 해야 합니다. 일반 그룹을 사용 하면 [REMOVEGROUP API](/uwp/api/Windows.UI.Notifications.ToastNotificationHistory#Windows_UI_Notifications_ToastNotificationHistory_RemoveGroup_System_String_)를 사용 하 여 해당 그룹에서 모든 알림을 제거할 수 있습니다.
 
 ```csharp
-toast.Tag = "18365";
-toast.Group = "ASTR 170B1";
+// Construct the content and schedule the toast!
+new ToastContentBuilder()
+    .AddArgument("action", "viewItemsDueToday")
+    .AddText("ASTR 170B1")
+    .AddText("You have 3 items due today!");
+    .Schedule(DateTime.Now.AddSeconds(5), toast =>
+    {
+        toast.Tag = "18365";
+        toast.Group = "ASTR 170B1";
+    });
 ```
 
 
@@ -94,7 +91,7 @@ toast.Group = "ASTR 170B1";
 
 ```csharp
 // Create the toast notifier
-ToastNotifier notifier = ToastNotificationManager.CreateToastNotifier();
+ToastNotifierCompat notifier = ToastNotificationManagerCompat.CreateToastNotifier();
 
 // Get the list of scheduled toasts that haven't appeared yet
 IReadOnlyList<ScheduledToastNotification> scheduledToasts = notifier.GetScheduledToastNotifications();
@@ -107,6 +104,9 @@ if (toRemove != null)
     notifier.RemoveFromSchedule(toRemove);
 }
 ```
+
+> [!IMPORTANT]
+> Win32 비-m 6/스파스 앱은 위에 표시 된 대로 To Notificationmanager호환성 클래스를 사용 해야 합니다. To Notificationmanager 자체를 사용 하는 경우 요소를 찾을 수 없음 예외가 수신 됩니다. 모든 유형의 앱은 호환 클래스를 사용할 수 있으며 제대로 작동 합니다.
 
 
 ## <a name="activation-handling"></a>활성화 처리
