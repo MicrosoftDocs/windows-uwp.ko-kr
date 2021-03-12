@@ -752,7 +752,7 @@
         - name: 새로운 기능
           href: ../cpp-and-winrt-apis/news.md
         - name: 질문과 대답
-          href: ../cpp-and-winrt-apis/faq.md
+          href: ../cpp-and-winrt-apis/faq.yml
         - name: 문제 해결
           href: ../cpp-and-winrt-apis/troubleshooting.md
         - name: 사진 편집기 샘플 애플리케이션
