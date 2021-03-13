@@ -4,12 +4,12 @@ description: 성능을 저하 시 키 지 않고 몇 가지 추가 기능을 포
 ms.date: 12/02/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b6f86636cb5753d93422a5658e6ae661151d0f9
-ms.sourcegitcommit: eb203b55b1332d0ed135abccd50f3fc287f89a5a
+ms.openlocfilehash: ce71ac5f4667952be8beb790b0890aadd0d8eb54
+ms.sourcegitcommit: a1b251971f7ac574275d53bbe3e9ef4a3a9dc15c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/12/2021
-ms.locfileid: "103193298"
+ms.locfileid: "103417114"
 ---
 # <a name="powertoys-run-utility"></a>Powertoy Run 유틸리티
 
@@ -65,13 +65,13 @@ Powertoy 설정 메뉴에서 다음 실행 옵션을 사용할 수 있습니다.
 
 ## <a name="action-key"></a>작업 키
 
-이렇게 하면 Powertoy가 대상 플러그 인 으로만 실행 됩니다.
+이러한 기본 활성화 구는 Powertoy가 대상 플러그인 으로만 실행 되도록 합니다.
 
   | **작업 키** | **작업** |
   | --- | --- |
   | `=` | 계산기만 해당 합니다. 예제 `=2+2` |
   | `?` | 파일만 검색 합니다. `?road`찾기 위한 예`roadmap.txt` |
-  | `.` | 설치 된 앱 검색만 `.code`Visual Studio Code 가져오는 예제 |
+  | `.` | 설치 된 프로그램만 `.code`Visual Studio Code을 가져오는 예제입니다. 프로그램 시작에 매개 변수를 추가 하는 옵션은 [프로그램 매개 변수](#program-parameters) 를 참조 하세요. |
   | `//` | Url만. `//docs.microsoft.com`기본 브라우저가 이동 하는 예https://docs.microsoft.com |
   | `<` | 실행 중인 프로세스만 `<outlook`Outlook을 포함 하는 모든 프로세스를 찾는 예제 |
   | `>` | Shell 명령만. `>ping localhost`Ping 쿼리를 수행 하는 예제 |
@@ -80,7 +80,7 @@ Powertoy 설정 메뉴에서 다음 실행 옵션을 사용할 수 있습니다.
 
 ## <a name="system-commands"></a>시스템 명령
 
-Powertoy v 0.31 및 on에는 이제 실행할 수 있는 시스템 수준 작업이 있습니다.
+Powertoy Run은 실행할 수 있는 시스템 수준 작업 집합을 활성화 합니다.
 
   | **작업 키**   |   **작업** |
   | ------------------ | ---------------------------------------------------------------------------------|
@@ -92,13 +92,33 @@ Powertoy v 0.31 및 on에는 이제 실행할 수 있는 시스템 수준 작업
   | `Hibernate` | 컴퓨터의 절전 모드를 |
   | `Empty Recycle Bin` | 휴지통을 비웁니다. |
 
-## <a name="indexer-settings"></a>인덱서 설정
+## <a name="plugin-manager"></a>플러그 인 관리자
 
-모든 드라이브를 포함 하도록 인덱서 설정을 설정 하지 않은 경우 다음과 같은 경고가 표시 됩니다.
+Powertoy v 0.33 및 on을 사용 하는 경우, Powertoy 실행 설정 메뉴에는 현재 사용할 수 있는 여러 플러그 인을 활성화/비활성화할 수 있는 플러그 인 관리자가 포함 되어 있습니다. 섹션을 선택 하 고 확장 하 여 각 플러그 인에서 사용 하는 활성화 문구를 사용자 지정할 수 있습니다. 또한 플러그 인이 전역 결과에 표시 되는지 여부와 사용 가능한 경우 추가 플러그 인 옵션을 설정할 수 있습니다. 
+
+## <a name="program-parameters"></a>프로그램 매개 변수
+
+Powertoy v 0.33 이상에서 Powertoy Run 프로그램 플러그 인을 사용 하면 응용 프로그램을 시작할 때 프로그램 인수를 추가할 수 있습니다. 프로그램 인수는 프로그램의 명령줄 인터페이스에 정의 된 대로 필요한 형식 이어야 합니다.
+
+예를 들어 Visual Studio Code를 시작 하는 경우 다음을 사용 하 여 열 폴더를 지정할 수 있습니다.
+
+`Visual Studio Code -- C:\myFolder`
+
+또한 Visual Studio Code는 [명령줄 매개 변수](https://code.visualstudio.com/docs/editor/command-line)집합을 지원 하며, 예를 들어 파일 간의 차이점을 보기 위해 powertoy 실행에서 해당 인수를 사용할 수 있습니다.
+
+`Visual Studio Code -d C:\foo.txt C:\bar.txt` 
+
+프로그램 플러그 인의 "글로벌 결과에 포함" 옵션을 선택 하지 않은 경우에는 기본적으로 활성화 문구를 포함 하 여 `.` 플러그 인 동작을 호출 해야 합니다.
+
+`.Visual Studio Code -- C:\myFolder`
+
+## <a name="windows-search-settings"></a>Windows 검색 설정
+
+Windows Search 플러그 인이 모든 드라이브를 포함 하도록 설정 되지 않은 경우 다음과 같은 경고가 표시 됩니다.
 
 ![Powertoy 인덱서 실행 경고](../images/pt-run-warning.png)
 
-Powertoy 설정에서 경고를 해제 하거나 경고를 선택 하 여 인덱싱되는 드라이브를 확장할 수 있습니다. 이 경고를 선택 하면 Windows 10 설정 "Windows 검색" 옵션이 열립니다.
+Powertoy Run plugin manager options for Windows Search에서 경고를 해제 하거나 경고를 선택 하 여 인덱싱되는 드라이브를 확장할 수 있습니다. 경고를 선택 하면 Windows 10 설정 "Windows 검색" 옵션 메뉴가 열립니다.
 
 ![인덱싱 설정](../images/pt-run-indexing.png)
 

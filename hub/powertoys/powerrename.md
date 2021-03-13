@@ -4,12 +4,12 @@ description: 파일의 대량 이름을 바꾸기 위한 windows 셸 확장
 ms.date: 12/02/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c751624c93fec5996885c766e73b5ab1849fd4c
-ms.sourcegitcommit: 382ae62f9d9bf980399a3f654e40ef4f85eae328
+ms.openlocfilehash: 26eee9fcb954a0a97ba6f30fae8a9d09395403a3
+ms.sourcegitcommit: a1b251971f7ac574275d53bbe3e9ef4a3a9dc15c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99534392"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103417104"
 ---
 # <a name="powerrename-utility"></a>PowerRename 유틸리티
 
@@ -141,13 +141,13 @@ Windows 파일 탐색기에서 일부 파일을 선택한 후 마우스 오른�
 
 **참고:** 정규식을 사용 하는 동안 "모든 항목 일치"를 확인 하는 것이 좋습니다.
 
-표준 라이브러리 대신 [부스트 라이브러리](https://www.boost.org/doc/libs/1_74_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) 를 사용 하려면 `Use Boost library` powertoy 설정에서 옵션을 선택 합니다. 표준 라이브러리에서 지원 하지 않는와 같은 확장 된 기능을 사용할 수 있습니다 `[lookbehind](https://www.boost.org/doc/libs/1_74_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html#boost_regex.syntax.perl_syntax.lookbehind)` .
+표준 라이브러리 대신 [부스트 라이브러리](https://www.boost.org/doc/libs/1_74_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) 를 사용 하려면 `Use Boost library` powertoy 설정에서 옵션을 선택 합니다. 표준 라이브러리에서 지원 하지 않는 [좌측](https://www.boost.org/doc/libs/1_74_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html#boost_regex.syntax.perl_syntax.lookbehind)과 같은 확장 된 기능을 사용할 수 있습니다.
 
 ### <a name="examples-of-regular-expressions"></a>정규식의 예
 
 #### <a name="simple-matching-examples"></a>간단한 일치 예제
 
-| 검색 대상       | 설명                                           |
+| 검색 대상       | Description                                           |
 | ---------------- | ------------- |
 | `^`              | 파일 이름 시작 부분 일치                   |
 | `$`              | 파일 이름의 끝을 찾습니다.                         |
@@ -162,7 +162,7 @@ Windows 파일 탐색기에서 일부 파일을 선택한 후 마우스 오른�
 
 *변수를 사용 하는 경우 "모든 항목 일치" 옵션을 사용 하도록 설정 해야 합니다.*
 
-| 검색 대상   | 바꿀 항목    | 설명                                |
+| 검색 대상   | 바꿀 항목    | Description                                |
 | ------------ | --------------- |--------------------------------------------|
 | `(.*).png`   | `foo_$1.png`   | \_기존 파일 이름 앞에 "foo"를 추가할 수 있습니다. |
 | `(.*).png`   | `$1_foo.png`   | \_기존 파일 이름에 "foo"를 추가 합니다.  |

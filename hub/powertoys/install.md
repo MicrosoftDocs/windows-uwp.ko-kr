@@ -4,12 +4,12 @@ description: 실행 파일 또는 패키지 관리자 (WinGet, Chocolatey, 혜�
 ms.date: 12/02/2020
 ms.topic: quickstart
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b6cf15e7d21eca9e24fcc2d81f9409b2cd94b6f
-ms.sourcegitcommit: 884318ec5118cade85a31f4d5644436614e9f272
+ms.openlocfilehash: c7add819c201678ceca72814d36c585859972e23
+ms.sourcegitcommit: a1b251971f7ac574275d53bbe3e9ef4a3a9dc15c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "100524989"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103417054"
 ---
 # <a name="install-powertoys"></a>PowerToys 설치
 
@@ -89,3 +89,7 @@ scoop update powertoys
 ```
 
 설치/업데이트 하는 동안 문제가 발생 하는 경우 [GitHub의 혜택](https://github.com/lukesampson/scoop/issues)리포지토리에서 문제를 해결 하세요.
+
+## <a name="post-install"></a>설치 후
+
+Powertoy를 성공적으로 설치한 후에는 사용 가능한 각 유틸리티에 대 한 소개 지침과 함께 개요 창이 표시 됩니다.

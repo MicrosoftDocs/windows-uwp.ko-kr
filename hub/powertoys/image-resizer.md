@@ -4,12 +4,12 @@ description: 대량 이미지 크기 조정을 위한 Windows 셸 확장
 ms.date: 12/02/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 486eb90b8515ec8422e8a475c9f03ced070dafa1
-ms.sourcegitcommit: 46a7e9db64e17a645ee6e888f62a9b04632c56af
+ms.openlocfilehash: e417a70e34ae1e5fdba95e2838a6221b3236e1c6
+ms.sourcegitcommit: a1b251971f7ac574275d53bbe3e9ef4a3a9dc15c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97618589"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103417081"
 ---
 # <a name="image-resizer-utility"></a>Image 크기 조정 유틸리티
 
@@ -41,7 +41,6 @@ Powertoy Image 크기 조정 탭 내에서 다음 설정을 구성할 수 있습
 
 지정 된 크기의 너비와 높이는 현재 이미지의 방향 (세로/가로)과 일치 하도록 바꿀 수 있습니다. 항상 지정 된 너비와 높이를 사용 하려면 선택 취소: **그림의 방향을 무시** 합니다.
 
-![이미지 크기 조정 설정](../images/powertoys-resize-settings.gif)
 
 ### <a name="fallback-encoding"></a>대체 인코딩
 

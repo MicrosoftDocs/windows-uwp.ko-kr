@@ -4,12 +4,12 @@ description: 효율적인 레이아웃으로 창을 정렬 하 고 맞추기 위
 ms.date: 12/02/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: b1f417307c173e868284254c0a1721e4e6ef5536
-ms.sourcegitcommit: 382ae62f9d9bf980399a3f654e40ef4f85eae328
+ms.openlocfilehash: 4e297467f6681d3060e085ee4b60fe8c51f1ec21
+ms.sourcegitcommit: a1b251971f7ac574275d53bbe3e9ef4a3a9dc15c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "99534447"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103417131"
 ---
 # <a name="fancyzones-utility"></a>FancyZones 유틸리티
 
@@ -17,7 +17,7 @@ FancyZones는 워크플로 속도를 개선 하 고 레이아웃을 신속 하 �
 
 ![FancyZones 스크린샷](../images/pt-fancy-zones2.png)
 
-## <a name="getting-started"></a>시작하기
+## <a name="getting-started"></a>시작
 
 ### <a name="enable"></a>사용
 
@@ -27,7 +27,7 @@ FancyZones 사용을 시작 하려면 Powertoy 설정에서 유틸리티를 사�
 
 Powertoy 설정 메뉴의 단추를 사용 하거나 Win을 눌러 영역 편집기를 시작 <kbd></kbd> + <kbd>`</kbd> 합니다 (설정 대화 상자에서이 바로 가기는 변경 될 수 있음).  
 
-![FancyZones 설정 UI](../images/pt-fancyzones-settings1.png) 
+![FancyZones 설정 UI](../images/pt-fancyzones-settings.png) 
 
 ### <a name="elevated-permission-admin-apps"></a>상승 된 권한 관리 앱
 
@@ -90,7 +90,7 @@ FancyZones는 Windows 10을 재정의 `Win ⊞ + Shift + Arrow` 하 여 창을 �
 
 ## <a name="settings"></a>설정
 
-| Setting | 설명 |
+| Setting | Description |
 | --------- | ------------- |
 | 영역 편집기 바로 가기 키 구성 | 기본 바로 가기 키를 변경 하려면 텍스트 상자를 클릭 하 고 (텍스트를 선택 하거나 삭제할 필요가 없음) 키보드에서 원하는 키 조합을 누릅니다. |
 | 드래그 하는 동안 Shift 키를 누르고 영역 활성화 | 끌기를 사용 하도록 설정 하는 동안 shift 키를 누르면 끌기 및 수동 맞춤 모드에서 자동 맞춤 모드를 전환 합니다. |
