@@ -7,12 +7,12 @@ keywords: windows win32, 데스크톱 개발, 프로젝트 리유니언
 ms.author: mcleans
 author: mcleanbyron
 ms.localizationpriority: medium
-ms.openlocfilehash: 2354e7f42ab9c487275c66c9f709f8791ba5005e
-ms.sourcegitcommit: 539b428bcf3d72c6bda211893df51f2a27ac5206
+ms.openlocfilehash: 9e2e4bda8440a9a504cba78286de491236d6bd49
+ms.sourcegitcommit: 2a71bb5c56bed80f26fb67a47ae8f9198c431760
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "102629235"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103366238"
 ---
 # <a name="build-desktop-windows-apps-with-project-reunion-05-preview-march-2021"></a>프로젝트 리유니언 0.5 미리 보기(2021년 3월 출시 예정)를 사용하여 데스크톱 Windows 앱 빌드
 
@@ -59,7 +59,10 @@ Windows API가 새로운 OS 버전으로 계속 발전함에 따라 개발자는
 
 1. 개발용 컴퓨터에 Windows 10, 버전 1809(빌드 17763) 이상의 OS가 설치되어 있는지 확인합니다.
 
-2. 아직 [Visual Studio 2019 버전 16.10 미리 보기](https://visualstudio.microsoft.com/vs/preview/)(이상)를 설치하지 않은 경우 지금 설치합니다.
+2. 아직 [Visual Studio 2019 버전 16.10 미리 보기](https://visualstudio.microsoft.com/vs/preview/)(이상)를 설치하지 않은 경우 지금 설치합니다. 
+
+    > [!NOTE]
+    > Visual Studio 2019, 버전 16.9도 Project Reunion을 지원하지만 WinUI 3 도구 기능은 지원하지 않습니다. WinUI 3 도구 지원에 대한 자세한 내용은 Windows UI 라이브러리 3 - 프로젝트 Reunion 0.5 미리 보기(2021년 3월)를 참조하세요.
 
     Visual Studio를 설치할 때 다음 구성 요소를 포함해야 합니다.
     - **워크로드** 탭에서 **유니버설 Windows 플랫폼 개발** 을 선택합니다.

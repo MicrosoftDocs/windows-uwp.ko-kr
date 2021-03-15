@@ -316,16 +316,14 @@
           href: shell/tiles-and-notifications/toast-ux-guidance.md
         - name: 로컬 알림 메시지 보내기
           items:
-            - name: UWP 앱
+            - name: C# 앱
               href: shell/tiles-and-notifications/send-local-toast.md
-            - name: 데스크톱 앱
-              items:
-                - name: 개요
-                  href: shell/tiles-and-notifications/toast-desktop-apps.md
-                - name: C# 앱
-                  href: shell/tiles-and-notifications/send-local-toast-desktop.md
-                - name: C++ WRL 앱
-                  href: shell/tiles-and-notifications/send-local-toast-desktop-cpp-wrl.md
+            - name: C++ UWP 앱
+              href: shell/tiles-and-notifications/send-local-toast-cpp-uwp.md
+            - name: C++ WRL 앱
+              href: shell/tiles-and-notifications/send-local-toast-desktop-cpp-wrl.md
+            - name: 다른 앱
+              href: shell/tiles-and-notifications/send-local-toast-other-apps.md
         - name: 알림 콘텐츠
           items:
             - name: Content
@@ -540,7 +538,7 @@
   items:
     - name: 개요
       href: usability/index.md
-    - name: 액세스 가능성
+    - name: 내게 필요한 옵션
       href: accessibility/accessibility.md
       items:
         - name: 개요

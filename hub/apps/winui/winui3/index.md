@@ -3,12 +3,12 @@ title: WinUI 3 프로젝트 리유니언 0.5 미리 보기(2021년 3월 출시 �
 description: WinUI 3 프로젝트 리유니언 0.5 미리 보기의 개요를 설명합니다.
 ms.date: 03/08/2021
 ms.topic: article
-ms.openlocfilehash: 8e5dea7ee18fe305cd9550ab42d30c561b9d803e
-ms.sourcegitcommit: 539b428bcf3d72c6bda211893df51f2a27ac5206
+ms.openlocfilehash: de00c3fa2a9dba5eae3ceadc7e6ad16c10286f77
+ms.sourcegitcommit: 2a71bb5c56bed80f26fb67a47ae8f9198c431760
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "102629268"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "103366248"
 ---
 # <a name="windows-ui-library-3---project-reunion-05-preview-march-2021"></a>Windows UI 라이브러리 3 - 프로젝트 리유니언 0.5 미리 보기(2021년 3월 출시 예정)
 
@@ -94,14 +94,14 @@ WinUI 프로젝트에서 사용할 수 있는 항목 템플릿은 다음과 같�
 
 ### <a name="visual-studio-support"></a>Visual Studio 지원
 
-핫 다시 로드, 라이브 시각적 트리 및 라이브 속성 탐색기와 같은 WinUI 3에 추가된 최신 도구 기능을 활용하려면 최신 WinUI 3 미리 보기와 함께 최신 미리 보기 버전의 Visual Studio를 사용하고 [여기 지침](https://github.com/microsoft/microsoft-ui-xaml/issues/4140)에 설명된 대로 Visual Studio 미리 보기 기능의 WinUI 도구를 사용할 수 있도록 해야 합니다. 아래 표에서는 WinUI 3 - 프로젝트 리유니언 0.5 미리 보기와 이후 버전의 호환성을 보여줍니다.
+핫 다시 로드, 라이브 시각적 트리 및 라이브 속성 탐색기와 같은 WinUI 3에 추가된 최신 도구 기능을 활용하려면 최신 WinUI 3 미리 보기와 함께 최신 **미리 보기** 버전의 Visual Studio를 사용하고 [여기 지침](https://github.com/microsoft/microsoft-ui-xaml/issues/4140)에 설명된 대로 Visual Studio 미리 보기 기능의 WinUI 도구를 사용할 수 있도록 해야 합니다. 아래 표에서는 WinUI 3 - 프로젝트 리유니언 0.5 미리 보기와 이후 버전의 호환성을 보여줍니다.
 
 | VS 버전  | WinUI 3 - 프로젝트 리유니언 0.5 미리 보기  |
 |---|---|
 | 16.8 RTM  | 아니요   |
-| 16.9 Preview  | 예  | 
-| 16.9 RTM  | 아니요   |
-| 16.10 Preview  | 예   |
+| 16.9 Preview  | 예, 도구 포함  | 
+| 16.9 RTM  | 예, 도구 없음   |
+| 16.10 Preview  | 예, 도구 포함   |
 
 ## <a name="major-changes-introduced-in-this-release"></a>이 릴리스의 주요 변경 내용
 
